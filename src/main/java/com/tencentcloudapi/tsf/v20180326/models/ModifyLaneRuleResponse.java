@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyLaneRuleResponse extends AbstractModel {
 
     /**
-    * 操作状态
+    * 操作状态。成功：true，失败：false
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Result")
@@ -39,9 +39,9 @@ public class ModifyLaneRuleResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 操作状态
+     * Get 操作状态。成功：true，失败：false
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Result 操作状态
+     * @return Result 操作状态。成功：true，失败：false
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getResult() {
@@ -49,9 +49,9 @@ public class ModifyLaneRuleResponse extends AbstractModel {
     }
 
     /**
-     * Set 操作状态
+     * Set 操作状态。成功：true，失败：false
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Result 操作状态
+     * @param Result 操作状态。成功：true，失败：false
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResult(Boolean Result) {

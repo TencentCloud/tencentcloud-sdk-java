@@ -272,6 +272,14 @@ HYBRID_PAID:
     private ServiceEIP ServiceEIP;
 
     /**
+    * 服务端口，默认为8501
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ServicePort")
+    @Expose
+    private Long ServicePort;
+
+    /**
      * Get 期望运行的Pod数量，停止状态是0
 不同计费模式和调节模式下对应关系如下
 PREPAID 和 POSTPAID_BY_HOUR:
@@ -911,6 +919,26 @@ HYBRID_PAID:
         this.ServiceEIP = ServiceEIP;
     }
 
+    /**
+     * Get 服务端口，默认为8501
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ServicePort 服务端口，默认为8501
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getServicePort() {
+        return this.ServicePort;
+    }
+
+    /**
+     * Set 服务端口，默认为8501
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ServicePort 服务端口，默认为8501
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setServicePort(Long ServicePort) {
+        this.ServicePort = ServicePort;
+    }
+
     public ServiceInfo() {
     }
 
@@ -1021,6 +1049,9 @@ HYBRID_PAID:
         if (source.ServiceEIP != null) {
             this.ServiceEIP = new ServiceEIP(source.ServiceEIP);
         }
+        if (source.ServicePort != null) {
+            this.ServicePort = new Long(source.ServicePort);
+        }
     }
 
 
@@ -1058,6 +1089,7 @@ HYBRID_PAID:
         this.setParamObj(map, prefix + "InferCodeInfo.", this.InferCodeInfo);
         this.setParamSimple(map, prefix + "Command", this.Command);
         this.setParamObj(map, prefix + "ServiceEIP.", this.ServiceEIP);
+        this.setParamSimple(map, prefix + "ServicePort", this.ServicePort);
 
     }
 }

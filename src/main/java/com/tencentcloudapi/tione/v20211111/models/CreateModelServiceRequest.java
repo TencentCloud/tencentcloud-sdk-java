@@ -264,11 +264,18 @@ HYBRID_PAID:
     private ServiceEIP ServiceEIP;
 
     /**
-    * 服务的启动命令，以base64格式进行输入
+    * 服务的启动命令，以base64格式进行输入，与Command同时配置时，仅当前参数生效
     */
     @SerializedName("CommandBase64")
     @Expose
     private String CommandBase64;
+
+    /**
+    * 服务端口，仅在非内置镜像时生效，默认8501。不支持输入8501-8510,6006,9092
+    */
+    @SerializedName("ServicePort")
+    @Expose
+    private Long ServicePort;
 
     /**
      * Get 新增版本时需要填写 
@@ -859,19 +866,35 @@ HYBRID_PAID:
     }
 
     /**
-     * Get 服务的启动命令，以base64格式进行输入 
-     * @return CommandBase64 服务的启动命令，以base64格式进行输入
+     * Get 服务的启动命令，以base64格式进行输入，与Command同时配置时，仅当前参数生效 
+     * @return CommandBase64 服务的启动命令，以base64格式进行输入，与Command同时配置时，仅当前参数生效
      */
     public String getCommandBase64() {
         return this.CommandBase64;
     }
 
     /**
-     * Set 服务的启动命令，以base64格式进行输入
-     * @param CommandBase64 服务的启动命令，以base64格式进行输入
+     * Set 服务的启动命令，以base64格式进行输入，与Command同时配置时，仅当前参数生效
+     * @param CommandBase64 服务的启动命令，以base64格式进行输入，与Command同时配置时，仅当前参数生效
      */
     public void setCommandBase64(String CommandBase64) {
         this.CommandBase64 = CommandBase64;
+    }
+
+    /**
+     * Get 服务端口，仅在非内置镜像时生效，默认8501。不支持输入8501-8510,6006,9092 
+     * @return ServicePort 服务端口，仅在非内置镜像时生效，默认8501。不支持输入8501-8510,6006,9092
+     */
+    public Long getServicePort() {
+        return this.ServicePort;
+    }
+
+    /**
+     * Set 服务端口，仅在非内置镜像时生效，默认8501。不支持输入8501-8510,6006,9092
+     * @param ServicePort 服务端口，仅在非内置镜像时生效，默认8501。不支持输入8501-8510,6006,9092
+     */
+    public void setServicePort(Long ServicePort) {
+        this.ServicePort = ServicePort;
     }
 
     public CreateModelServiceRequest() {
@@ -987,6 +1010,9 @@ HYBRID_PAID:
         if (source.CommandBase64 != null) {
             this.CommandBase64 = new String(source.CommandBase64);
         }
+        if (source.ServicePort != null) {
+            this.ServicePort = new Long(source.ServicePort);
+        }
     }
 
 
@@ -1026,6 +1052,7 @@ HYBRID_PAID:
         this.setParamSimple(map, prefix + "Command", this.Command);
         this.setParamObj(map, prefix + "ServiceEIP.", this.ServiceEIP);
         this.setParamSimple(map, prefix + "CommandBase64", this.CommandBase64);
+        this.setParamSimple(map, prefix + "ServicePort", this.ServicePort);
 
     }
 }

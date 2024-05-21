@@ -1758,6 +1758,17 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     }
 
     /**
+     *禁用泳道规则
+     * @param req DisableLaneRuleRequest
+     * @return DisableLaneRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisableLaneRuleResponse DisableLaneRule(DisableLaneRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DisableLaneRule", DisableLaneRuleResponse.class);
+    }
+
+    /**
      *停用任务
      * @param req DisableTaskRequest
      * @return DisableTaskResponse
@@ -1832,6 +1843,17 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public DraftApiGroupResponse DraftApiGroup(DraftApiGroupRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DraftApiGroup", DraftApiGroupResponse.class);
+    }
+
+    /**
+     *启用泳道规则
+     * @param req EnableLaneRuleRequest
+     * @return EnableLaneRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public EnableLaneRuleResponse EnableLaneRule(EnableLaneRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "EnableLaneRule", EnableLaneRuleResponse.class);
     }
 
     /**

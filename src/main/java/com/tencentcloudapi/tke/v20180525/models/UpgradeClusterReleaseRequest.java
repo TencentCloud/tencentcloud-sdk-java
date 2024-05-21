@@ -66,7 +66,7 @@ public class UpgradeClusterReleaseRequest extends AbstractModel {
     private String ChartFrom;
 
     /**
-    * 制品版本( 从第三安装时，不传这个参数）
+    * 制品版本( 从第三方安装时，不传这个参数）
     */
     @SerializedName("ChartVersion")
     @Expose
@@ -101,7 +101,7 @@ public class UpgradeClusterReleaseRequest extends AbstractModel {
     private String ChartNamespace;
 
     /**
-    * 集群类型，支持传 tke, eks, tkeedge, exernal(注册集群）
+    * 集群类型，支持传 tke, eks, tkeedge, external(注册集群）
     */
     @SerializedName("ClusterType")
     @Expose
@@ -204,16 +204,16 @@ public class UpgradeClusterReleaseRequest extends AbstractModel {
     }
 
     /**
-     * Get 制品版本( 从第三安装时，不传这个参数） 
-     * @return ChartVersion 制品版本( 从第三安装时，不传这个参数）
+     * Get 制品版本( 从第三方安装时，不传这个参数） 
+     * @return ChartVersion 制品版本( 从第三方安装时，不传这个参数）
      */
     public String getChartVersion() {
         return this.ChartVersion;
     }
 
     /**
-     * Set 制品版本( 从第三安装时，不传这个参数）
-     * @param ChartVersion 制品版本( 从第三安装时，不传这个参数）
+     * Set 制品版本( 从第三方安装时，不传这个参数）
+     * @param ChartVersion 制品版本( 从第三方安装时，不传这个参数）
      */
     public void setChartVersion(String ChartVersion) {
         this.ChartVersion = ChartVersion;
@@ -284,16 +284,16 @@ public class UpgradeClusterReleaseRequest extends AbstractModel {
     }
 
     /**
-     * Get 集群类型，支持传 tke, eks, tkeedge, exernal(注册集群） 
-     * @return ClusterType 集群类型，支持传 tke, eks, tkeedge, exernal(注册集群）
+     * Get 集群类型，支持传 tke, eks, tkeedge, external(注册集群） 
+     * @return ClusterType 集群类型，支持传 tke, eks, tkeedge, external(注册集群）
      */
     public String getClusterType() {
         return this.ClusterType;
     }
 
     /**
-     * Set 集群类型，支持传 tke, eks, tkeedge, exernal(注册集群）
-     * @param ClusterType 集群类型，支持传 tke, eks, tkeedge, exernal(注册集群）
+     * Set 集群类型，支持传 tke, eks, tkeedge, external(注册集群）
+     * @param ClusterType 集群类型，支持传 tke, eks, tkeedge, external(注册集群）
      */
     public void setClusterType(String ClusterType) {
         this.ClusterType = ClusterType;

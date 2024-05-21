@@ -101,7 +101,7 @@ public class CreateClusterReleaseRequest extends AbstractModel {
     private String ChartNamespace;
 
     /**
-    * 集群类型，支持传 tke, eks, tkeedge, exernal(注册集群）
+    * 集群类型，支持传 tke, eks, tkeedge, external(注册集群）
     */
     @SerializedName("ClusterType")
     @Expose
@@ -284,16 +284,16 @@ public class CreateClusterReleaseRequest extends AbstractModel {
     }
 
     /**
-     * Get 集群类型，支持传 tke, eks, tkeedge, exernal(注册集群） 
-     * @return ClusterType 集群类型，支持传 tke, eks, tkeedge, exernal(注册集群）
+     * Get 集群类型，支持传 tke, eks, tkeedge, external(注册集群） 
+     * @return ClusterType 集群类型，支持传 tke, eks, tkeedge, external(注册集群）
      */
     public String getClusterType() {
         return this.ClusterType;
     }
 
     /**
-     * Set 集群类型，支持传 tke, eks, tkeedge, exernal(注册集群）
-     * @param ClusterType 集群类型，支持传 tke, eks, tkeedge, exernal(注册集群）
+     * Set 集群类型，支持传 tke, eks, tkeedge, external(注册集群）
+     * @param ClusterType 集群类型，支持传 tke, eks, tkeedge, external(注册集群）
      */
     public void setClusterType(String ClusterType) {
         this.ClusterType = ClusterType;

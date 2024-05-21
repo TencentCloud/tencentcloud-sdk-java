@@ -29,7 +29,7 @@ public class OriginInfo extends AbstractModel {
 <li>COS：腾讯云 COS 对象存储源站；</li>
 <li>AWS_S3：AWS S3 对象存储源站；</li>
 <li>ORIGIN_GROUP：源站组类型源站；</li>
- <li>VODEO：云点播（混合云版）；</li>
+ <li>VODEO：云点播-混合云版；</li>
 <li>SPACE：源站卸载，当前仅白名单开放；</li>
 <li>LB：负载均衡，当前仅白名单开放。</li>
     */
@@ -104,7 +104,7 @@ public class OriginInfo extends AbstractModel {
 <li>COS：腾讯云 COS 对象存储源站；</li>
 <li>AWS_S3：AWS S3 对象存储源站；</li>
 <li>ORIGIN_GROUP：源站组类型源站；</li>
- <li>VODEO：云点播（混合云版）；</li>
+ <li>VODEO：云点播-混合云版；</li>
 <li>SPACE：源站卸载，当前仅白名单开放；</li>
 <li>LB：负载均衡，当前仅白名单开放。</li> 
      * @return OriginType 源站类型，取值有：
@@ -112,7 +112,7 @@ public class OriginInfo extends AbstractModel {
 <li>COS：腾讯云 COS 对象存储源站；</li>
 <li>AWS_S3：AWS S3 对象存储源站；</li>
 <li>ORIGIN_GROUP：源站组类型源站；</li>
- <li>VODEO：云点播（混合云版）；</li>
+ <li>VODEO：云点播-混合云版；</li>
 <li>SPACE：源站卸载，当前仅白名单开放；</li>
 <li>LB：负载均衡，当前仅白名单开放。</li>
      */
@@ -126,7 +126,7 @@ public class OriginInfo extends AbstractModel {
 <li>COS：腾讯云 COS 对象存储源站；</li>
 <li>AWS_S3：AWS S3 对象存储源站；</li>
 <li>ORIGIN_GROUP：源站组类型源站；</li>
- <li>VODEO：云点播（混合云版）；</li>
+ <li>VODEO：云点播-混合云版；</li>
 <li>SPACE：源站卸载，当前仅白名单开放；</li>
 <li>LB：负载均衡，当前仅白名单开放。</li>
      * @param OriginType 源站类型，取值有：
@@ -134,7 +134,7 @@ public class OriginInfo extends AbstractModel {
 <li>COS：腾讯云 COS 对象存储源站；</li>
 <li>AWS_S3：AWS S3 对象存储源站；</li>
 <li>ORIGIN_GROUP：源站组类型源站；</li>
- <li>VODEO：云点播（混合云版）；</li>
+ <li>VODEO：云点播-混合云版；</li>
 <li>SPACE：源站卸载，当前仅白名单开放；</li>
 <li>LB：负载均衡，当前仅白名单开放。</li>
      */

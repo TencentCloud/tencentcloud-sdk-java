@@ -80,6 +80,20 @@ public class CreateStudioProductRequest extends AbstractModel {
     private String ProjectId;
 
     /**
+    * 平均传输速率
+    */
+    @SerializedName("Rate")
+    @Expose
+    private String Rate;
+
+    /**
+    * 期限
+    */
+    @SerializedName("Period")
+    @Expose
+    private String Period;
+
+    /**
      * Get 产品名称，名称不能和已经存在的产品名称重复。命名规则：[a-zA-Z0-9:_-]{1,32} 
      * @return ProductName 产品名称，名称不能和已经存在的产品名称重复。命名规则：[a-zA-Z0-9:_-]{1,32}
      */
@@ -207,6 +221,38 @@ public class CreateStudioProductRequest extends AbstractModel {
         this.ProjectId = ProjectId;
     }
 
+    /**
+     * Get 平均传输速率 
+     * @return Rate 平均传输速率
+     */
+    public String getRate() {
+        return this.Rate;
+    }
+
+    /**
+     * Set 平均传输速率
+     * @param Rate 平均传输速率
+     */
+    public void setRate(String Rate) {
+        this.Rate = Rate;
+    }
+
+    /**
+     * Get 期限 
+     * @return Period 期限
+     */
+    public String getPeriod() {
+        return this.Period;
+    }
+
+    /**
+     * Set 期限
+     * @param Period 期限
+     */
+    public void setPeriod(String Period) {
+        this.Period = Period;
+    }
+
     public CreateStudioProductRequest() {
     }
 
@@ -239,6 +285,12 @@ public class CreateStudioProductRequest extends AbstractModel {
         if (source.ProjectId != null) {
             this.ProjectId = new String(source.ProjectId);
         }
+        if (source.Rate != null) {
+            this.Rate = new String(source.Rate);
+        }
+        if (source.Period != null) {
+            this.Period = new String(source.Period);
+        }
     }
 
 
@@ -254,6 +306,8 @@ public class CreateStudioProductRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "DataProtocol", this.DataProtocol);
         this.setParamSimple(map, prefix + "ProductDesc", this.ProductDesc);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
+        this.setParamSimple(map, prefix + "Rate", this.Rate);
+        this.setParamSimple(map, prefix + "Period", this.Period);
 
     }
 }

@@ -163,6 +163,22 @@ wifi、wifi-ble、cellular、5g、lorawan、ble、ethernet、wifi-ethernet、els
     private Long DeviceCount;
 
     /**
+    * 平均传输速率
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Rate")
+    @Expose
+    private String Rate;
+
+    /**
+    * 有效期
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Period")
+    @Expose
+    private String Period;
+
+    /**
      * Get 产品ID 
      * @return ProductId 产品ID
      */
@@ -490,6 +506,46 @@ wifi、wifi-ble、cellular、5g、lorawan、ble、ethernet、wifi-ethernet、els
         this.DeviceCount = DeviceCount;
     }
 
+    /**
+     * Get 平均传输速率
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Rate 平均传输速率
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRate() {
+        return this.Rate;
+    }
+
+    /**
+     * Set 平均传输速率
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Rate 平均传输速率
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRate(String Rate) {
+        this.Rate = Rate;
+    }
+
+    /**
+     * Get 有效期
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Period 有效期
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPeriod() {
+        return this.Period;
+    }
+
+    /**
+     * Set 有效期
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Period 有效期
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPeriod(String Period) {
+        this.Period = Period;
+    }
+
     public ProductEntry() {
     }
 
@@ -555,6 +611,12 @@ wifi、wifi-ble、cellular、5g、lorawan、ble、ethernet、wifi-ethernet、els
         if (source.DeviceCount != null) {
             this.DeviceCount = new Long(source.DeviceCount);
         }
+        if (source.Rate != null) {
+            this.Rate = new String(source.Rate);
+        }
+        if (source.Period != null) {
+            this.Period = new String(source.Period);
+        }
     }
 
 
@@ -581,6 +643,8 @@ wifi、wifi-ble、cellular、5g、lorawan、ble、ethernet、wifi-ethernet、els
         this.setParamSimple(map, prefix + "CreatorNickName", this.CreatorNickName);
         this.setParamSimple(map, prefix + "BindStrategy", this.BindStrategy);
         this.setParamSimple(map, prefix + "DeviceCount", this.DeviceCount);
+        this.setParamSimple(map, prefix + "Rate", this.Rate);
+        this.setParamSimple(map, prefix + "Period", this.Period);
 
     }
 }
