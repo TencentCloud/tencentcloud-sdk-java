@@ -1425,6 +1425,17 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
+     *更新用户对设备的TweCall授权状态
+     * @param req UpdateDeviceTWeCallAuthorizeStatusRequest
+     * @return UpdateDeviceTWeCallAuthorizeStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateDeviceTWeCallAuthorizeStatusResponse UpdateDeviceTWeCallAuthorizeStatus(UpdateDeviceTWeCallAuthorizeStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateDeviceTWeCallAuthorizeStatus", UpdateDeviceTWeCallAuthorizeStatusResponse.class);
+    }
+
+    /**
      *批量禁用启用设备
      * @param req UpdateDevicesEnableStateRequest
      * @return UpdateDevicesEnableStateResponse

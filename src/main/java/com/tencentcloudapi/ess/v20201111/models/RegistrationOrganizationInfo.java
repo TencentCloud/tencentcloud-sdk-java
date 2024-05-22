@@ -60,14 +60,16 @@ public class RegistrationOrganizationInfo extends AbstractModel {
     * 组织机构超管姓名。
 在注册流程中，必须是超管本人进行操作。
 如果法人做为超管管理组织机构,超管姓名就是法人姓名
+如果入参中传递超管授权书PowerOfAttorneys，则此参数为必填参数。
     */
     @SerializedName("AdminName")
     @Expose
     private String AdminName;
 
     /**
-    * 组织机构超管姓名。
+    * 组织机构超管手机号。
 在注册流程中，这个手机号必须跟操作人在电子签注册的个人手机号一致。
+如果入参中传递超管授权书PowerOfAttorneys，则此参数为必填参数
     */
     @SerializedName("AdminMobile")
     @Expose
@@ -90,7 +92,8 @@ public class RegistrationOrganizationInfo extends AbstractModel {
     private Long [] AuthorizationTypes;
 
     /**
-    * 认证人身份证号
+    * 认证人身份证号，如果入参中传递超管授权书PowerOfAttorneys，则此参数为必填参数
+
     */
     @SerializedName("AdminIdCardNumber")
     @Expose
@@ -114,6 +117,18 @@ public class RegistrationOrganizationInfo extends AbstractModel {
     @SerializedName("BusinessLicense")
     @Expose
     private String BusinessLicense;
+
+    /**
+    * 授权书(PNG或JPG或PDF) base64格式, 大小不超过8M 。
+p.s. 如果上传授权书 ，需遵循以下条件
+1. 超管的信息（超管姓名，超管身份证，超管手机号）必须为必填参数。
+2. 超管的个人身份必须在电子签已经实名。
+2. 认证方式AuthorizationTypes必须只能是上传授权书方式 
+
+    */
+    @SerializedName("PowerOfAttorneys")
+    @Expose
+    private String [] PowerOfAttorneys;
 
     /**
      * Get 组织机构名称。
@@ -202,10 +217,12 @@ public class RegistrationOrganizationInfo extends AbstractModel {
     /**
      * Get 组织机构超管姓名。
 在注册流程中，必须是超管本人进行操作。
-如果法人做为超管管理组织机构,超管姓名就是法人姓名 
+如果法人做为超管管理组织机构,超管姓名就是法人姓名
+如果入参中传递超管授权书PowerOfAttorneys，则此参数为必填参数。 
      * @return AdminName 组织机构超管姓名。
 在注册流程中，必须是超管本人进行操作。
 如果法人做为超管管理组织机构,超管姓名就是法人姓名
+如果入参中传递超管授权书PowerOfAttorneys，则此参数为必填参数。
      */
     public String getAdminName() {
         return this.AdminName;
@@ -215,29 +232,35 @@ public class RegistrationOrganizationInfo extends AbstractModel {
      * Set 组织机构超管姓名。
 在注册流程中，必须是超管本人进行操作。
 如果法人做为超管管理组织机构,超管姓名就是法人姓名
+如果入参中传递超管授权书PowerOfAttorneys，则此参数为必填参数。
      * @param AdminName 组织机构超管姓名。
 在注册流程中，必须是超管本人进行操作。
 如果法人做为超管管理组织机构,超管姓名就是法人姓名
+如果入参中传递超管授权书PowerOfAttorneys，则此参数为必填参数。
      */
     public void setAdminName(String AdminName) {
         this.AdminName = AdminName;
     }
 
     /**
-     * Get 组织机构超管姓名。
-在注册流程中，这个手机号必须跟操作人在电子签注册的个人手机号一致。 
-     * @return AdminMobile 组织机构超管姓名。
+     * Get 组织机构超管手机号。
 在注册流程中，这个手机号必须跟操作人在电子签注册的个人手机号一致。
+如果入参中传递超管授权书PowerOfAttorneys，则此参数为必填参数 
+     * @return AdminMobile 组织机构超管手机号。
+在注册流程中，这个手机号必须跟操作人在电子签注册的个人手机号一致。
+如果入参中传递超管授权书PowerOfAttorneys，则此参数为必填参数
      */
     public String getAdminMobile() {
         return this.AdminMobile;
     }
 
     /**
-     * Set 组织机构超管姓名。
+     * Set 组织机构超管手机号。
 在注册流程中，这个手机号必须跟操作人在电子签注册的个人手机号一致。
-     * @param AdminMobile 组织机构超管姓名。
+如果入参中传递超管授权书PowerOfAttorneys，则此参数为必填参数
+     * @param AdminMobile 组织机构超管手机号。
 在注册流程中，这个手机号必须跟操作人在电子签注册的个人手机号一致。
+如果入参中传递超管授权书PowerOfAttorneys，则此参数为必填参数
      */
     public void setAdminMobile(String AdminMobile) {
         this.AdminMobile = AdminMobile;
@@ -296,16 +319,20 @@ public class RegistrationOrganizationInfo extends AbstractModel {
     }
 
     /**
-     * Get 认证人身份证号 
-     * @return AdminIdCardNumber 认证人身份证号
+     * Get 认证人身份证号，如果入参中传递超管授权书PowerOfAttorneys，则此参数为必填参数
+ 
+     * @return AdminIdCardNumber 认证人身份证号，如果入参中传递超管授权书PowerOfAttorneys，则此参数为必填参数
+
      */
     public String getAdminIdCardNumber() {
         return this.AdminIdCardNumber;
     }
 
     /**
-     * Set 认证人身份证号
-     * @param AdminIdCardNumber 认证人身份证号
+     * Set 认证人身份证号，如果入参中传递超管授权书PowerOfAttorneys，则此参数为必填参数
+
+     * @param AdminIdCardNumber 认证人身份证号，如果入参中传递超管授权书PowerOfAttorneys，则此参数为必填参数
+
      */
     public void setAdminIdCardNumber(String AdminIdCardNumber) {
         this.AdminIdCardNumber = AdminIdCardNumber;
@@ -363,6 +390,42 @@ public class RegistrationOrganizationInfo extends AbstractModel {
         this.BusinessLicense = BusinessLicense;
     }
 
+    /**
+     * Get 授权书(PNG或JPG或PDF) base64格式, 大小不超过8M 。
+p.s. 如果上传授权书 ，需遵循以下条件
+1. 超管的信息（超管姓名，超管身份证，超管手机号）必须为必填参数。
+2. 超管的个人身份必须在电子签已经实名。
+2. 认证方式AuthorizationTypes必须只能是上传授权书方式 
+ 
+     * @return PowerOfAttorneys 授权书(PNG或JPG或PDF) base64格式, 大小不超过8M 。
+p.s. 如果上传授权书 ，需遵循以下条件
+1. 超管的信息（超管姓名，超管身份证，超管手机号）必须为必填参数。
+2. 超管的个人身份必须在电子签已经实名。
+2. 认证方式AuthorizationTypes必须只能是上传授权书方式 
+
+     */
+    public String [] getPowerOfAttorneys() {
+        return this.PowerOfAttorneys;
+    }
+
+    /**
+     * Set 授权书(PNG或JPG或PDF) base64格式, 大小不超过8M 。
+p.s. 如果上传授权书 ，需遵循以下条件
+1. 超管的信息（超管姓名，超管身份证，超管手机号）必须为必填参数。
+2. 超管的个人身份必须在电子签已经实名。
+2. 认证方式AuthorizationTypes必须只能是上传授权书方式 
+
+     * @param PowerOfAttorneys 授权书(PNG或JPG或PDF) base64格式, 大小不超过8M 。
+p.s. 如果上传授权书 ，需遵循以下条件
+1. 超管的信息（超管姓名，超管身份证，超管手机号）必须为必填参数。
+2. 超管的个人身份必须在电子签已经实名。
+2. 认证方式AuthorizationTypes必须只能是上传授权书方式 
+
+     */
+    public void setPowerOfAttorneys(String [] PowerOfAttorneys) {
+        this.PowerOfAttorneys = PowerOfAttorneys;
+    }
+
     public RegistrationOrganizationInfo() {
     }
 
@@ -404,6 +467,12 @@ public class RegistrationOrganizationInfo extends AbstractModel {
         if (source.BusinessLicense != null) {
             this.BusinessLicense = new String(source.BusinessLicense);
         }
+        if (source.PowerOfAttorneys != null) {
+            this.PowerOfAttorneys = new String[source.PowerOfAttorneys.length];
+            for (int i = 0; i < source.PowerOfAttorneys.length; i++) {
+                this.PowerOfAttorneys[i] = new String(source.PowerOfAttorneys[i]);
+            }
+        }
     }
 
 
@@ -421,6 +490,7 @@ public class RegistrationOrganizationInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "AdminIdCardNumber", this.AdminIdCardNumber);
         this.setParamSimple(map, prefix + "AdminIdCardType", this.AdminIdCardType);
         this.setParamSimple(map, prefix + "BusinessLicense", this.BusinessLicense);
+        this.setParamArraySimple(map, prefix + "PowerOfAttorneys.", this.PowerOfAttorneys);
 
     }
 }

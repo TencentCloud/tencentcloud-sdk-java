@@ -32,6 +32,14 @@ public class LocalDisk extends AbstractModel {
     private String InstanceId;
 
     /**
+    * 本地路径
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LocalPath")
+    @Expose
+    private String LocalPath;
+
+    /**
      * Get 节点ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return InstanceId 节点ID
@@ -51,6 +59,26 @@ public class LocalDisk extends AbstractModel {
         this.InstanceId = InstanceId;
     }
 
+    /**
+     * Get 本地路径
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LocalPath 本地路径
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLocalPath() {
+        return this.LocalPath;
+    }
+
+    /**
+     * Set 本地路径
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LocalPath 本地路径
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLocalPath(String LocalPath) {
+        this.LocalPath = LocalPath;
+    }
+
     public LocalDisk() {
     }
 
@@ -62,6 +90,9 @@ public class LocalDisk extends AbstractModel {
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }
+        if (source.LocalPath != null) {
+            this.LocalPath = new String(source.LocalPath);
+        }
     }
 
 
@@ -70,6 +101,7 @@ public class LocalDisk extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "LocalPath", this.LocalPath);
 
     }
 }

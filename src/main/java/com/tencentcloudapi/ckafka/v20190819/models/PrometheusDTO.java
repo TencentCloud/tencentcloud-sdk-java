@@ -45,6 +45,14 @@ public class PrometheusDTO extends AbstractModel {
     private Long SourcePort;
 
     /**
+    * broker地址
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BrokerIp")
+    @Expose
+    private String BrokerIp;
+
+    /**
      * Get export类型（jmx_export\node_export） 
      * @return Type export类型（jmx_export\node_export）
      */
@@ -92,6 +100,26 @@ public class PrometheusDTO extends AbstractModel {
         this.SourcePort = SourcePort;
     }
 
+    /**
+     * Get broker地址
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BrokerIp broker地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getBrokerIp() {
+        return this.BrokerIp;
+    }
+
+    /**
+     * Set broker地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BrokerIp broker地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBrokerIp(String BrokerIp) {
+        this.BrokerIp = BrokerIp;
+    }
+
     public PrometheusDTO() {
     }
 
@@ -109,6 +137,9 @@ public class PrometheusDTO extends AbstractModel {
         if (source.SourcePort != null) {
             this.SourcePort = new Long(source.SourcePort);
         }
+        if (source.BrokerIp != null) {
+            this.BrokerIp = new String(source.BrokerIp);
+        }
     }
 
 
@@ -119,6 +150,7 @@ public class PrometheusDTO extends AbstractModel {
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "SourceIp", this.SourceIp);
         this.setParamSimple(map, prefix + "SourcePort", this.SourcePort);
+        this.setParamSimple(map, prefix + "BrokerIp", this.BrokerIp);
 
     }
 }

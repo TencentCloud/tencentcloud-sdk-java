@@ -50,28 +50,6 @@ public class TioneClient extends AbstractClient{
     }
 
     /**
-     *批量创建模型加速任务
-     * @param req CreateBatchModelAccTasksRequest
-     * @return CreateBatchModelAccTasksResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateBatchModelAccTasksResponse CreateBatchModelAccTasks(CreateBatchModelAccTasksRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "CreateBatchModelAccTasks", CreateBatchModelAccTasksResponse.class);
-    }
-
-    /**
-     *创建批量预测任务
-     * @param req CreateBatchTaskRequest
-     * @return CreateBatchTaskResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateBatchTaskResponse CreateBatchTask(CreateBatchTaskRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "CreateBatchTask", CreateBatchTaskResponse.class);
-    }
-
-    /**
      *创建数据集
      * @param req CreateDatasetRequest
      * @return CreateDatasetResponse
@@ -105,28 +83,6 @@ public class TioneClient extends AbstractClient{
     }
 
     /**
-     *保存镜像
-     * @param req CreateNotebookImageRequest
-     * @return CreateNotebookImageResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateNotebookImageResponse CreateNotebookImage(CreateNotebookImageRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "CreateNotebookImage", CreateNotebookImageResponse.class);
-    }
-
-    /**
-     *保存优化模型
-     * @param req CreateOptimizedModelRequest
-     * @return CreateOptimizedModelResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateOptimizedModelResponse CreateOptimizedModel(CreateOptimizedModelRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "CreateOptimizedModel", CreateOptimizedModelResponse.class);
-    }
-
-    /**
      *生成Notebook访问链接
      * @param req CreatePresignedNotebookUrlRequest
      * @return CreatePresignedNotebookUrlResponse
@@ -149,28 +105,6 @@ public class TioneClient extends AbstractClient{
     }
 
     /**
-     *创建模型训练任务
-     * @param req CreateTrainingTaskRequest
-     * @return CreateTrainingTaskResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateTrainingTaskResponse CreateTrainingTask(CreateTrainingTaskRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "CreateTrainingTask", CreateTrainingTaskResponse.class);
-    }
-
-    /**
-     *删除批量预测任务
-     * @param req DeleteBatchTaskRequest
-     * @return DeleteBatchTaskResponse
-     * @throws TencentCloudSDKException
-     */
-    public DeleteBatchTaskResponse DeleteBatchTask(DeleteBatchTaskRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DeleteBatchTask", DeleteBatchTaskResponse.class);
-    }
-
-    /**
      *删除数据集
      * @param req DeleteDatasetRequest
      * @return DeleteDatasetResponse
@@ -179,17 +113,6 @@ public class TioneClient extends AbstractClient{
     public DeleteDatasetResponse DeleteDataset(DeleteDatasetRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteDataset", DeleteDatasetResponse.class);
-    }
-
-    /**
-     *删除模型加速任务
-     * @param req DeleteModelAccelerateTaskRequest
-     * @return DeleteModelAccelerateTaskResponse
-     * @throws TencentCloudSDKException
-     */
-    public DeleteModelAccelerateTaskResponse DeleteModelAccelerateTask(DeleteModelAccelerateTaskRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DeleteModelAccelerateTask", DeleteModelAccelerateTaskResponse.class);
     }
 
     /**
@@ -226,17 +149,6 @@ public class TioneClient extends AbstractClient{
     }
 
     /**
-     *删除notebook镜像保存记录
-     * @param req DeleteNotebookImageRecordRequest
-     * @return DeleteNotebookImageRecordResponse
-     * @throws TencentCloudSDKException
-     */
-    public DeleteNotebookImageRecordResponse DeleteNotebookImageRecord(DeleteNotebookImageRecordRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DeleteNotebookImageRecord", DeleteNotebookImageRecordResponse.class);
-    }
-
-    /**
      *删除模型
      * @param req DeleteTrainingModelRequest
      * @return DeleteTrainingModelResponse
@@ -256,61 +168,6 @@ public class TioneClient extends AbstractClient{
     public DeleteTrainingModelVersionResponse DeleteTrainingModelVersion(DeleteTrainingModelVersionRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteTrainingModelVersion", DeleteTrainingModelVersionResponse.class);
-    }
-
-    /**
-     *删除训练任务
-     * @param req DeleteTrainingTaskRequest
-     * @return DeleteTrainingTaskResponse
-     * @throws TencentCloudSDKException
-     */
-    public DeleteTrainingTaskResponse DeleteTrainingTask(DeleteTrainingTaskRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DeleteTrainingTask", DeleteTrainingTaskResponse.class);
-    }
-
-    /**
-     *列举API
-     * @param req DescribeAPIConfigsRequest
-     * @return DescribeAPIConfigsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeAPIConfigsResponse DescribeAPIConfigs(DescribeAPIConfigsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeAPIConfigs", DescribeAPIConfigsResponse.class);
-    }
-
-    /**
-     *查询批量预测任务
-     * @param req DescribeBatchTaskRequest
-     * @return DescribeBatchTaskResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeBatchTaskResponse DescribeBatchTask(DescribeBatchTaskRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeBatchTask", DescribeBatchTaskResponse.class);
-    }
-
-    /**
-     *查询批量预测任务实例列表
-     * @param req DescribeBatchTaskInstancesRequest
-     * @return DescribeBatchTaskInstancesResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeBatchTaskInstancesResponse DescribeBatchTaskInstances(DescribeBatchTaskInstancesRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeBatchTaskInstances", DescribeBatchTaskInstancesResponse.class);
-    }
-
-    /**
-     *查询批量预测任务列表信息
-     * @param req DescribeBatchTasksRequest
-     * @return DescribeBatchTasksResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeBatchTasksResponse DescribeBatchTasks(DescribeBatchTasksRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeBatchTasks", DescribeBatchTasksResponse.class);
     }
 
     /**
@@ -347,28 +204,6 @@ public class TioneClient extends AbstractClient{
     }
 
     /**
-     *本接口(DescribeBillingSpecs)用于查询计费项列表
-     * @param req DescribeBillingSpecsRequest
-     * @return DescribeBillingSpecsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeBillingSpecsResponse DescribeBillingSpecs(DescribeBillingSpecsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeBillingSpecs", DescribeBillingSpecsResponse.class);
-    }
-
-    /**
-     *本接口(DescribeBillingSpecsPrice)用于查询按量计费计费项价格。
-     * @param req DescribeBillingSpecsPriceRequest
-     * @return DescribeBillingSpecsPriceResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeBillingSpecsPriceResponse DescribeBillingSpecsPrice(DescribeBillingSpecsPriceRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeBillingSpecsPrice", DescribeBillingSpecsPriceResponse.class);
-    }
-
-    /**
      *获取内置镜像列表
      * @param req DescribeBuildInImagesRequest
      * @return DescribeBuildInImagesResponse
@@ -377,28 +212,6 @@ public class TioneClient extends AbstractClient{
     public DescribeBuildInImagesResponse DescribeBuildInImages(DescribeBuildInImagesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeBuildInImages", DescribeBuildInImagesResponse.class);
-    }
-
-    /**
-     *查询结构化数据集详情
-     * @param req DescribeDatasetDetailStructuredRequest
-     * @return DescribeDatasetDetailStructuredResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeDatasetDetailStructuredResponse DescribeDatasetDetailStructured(DescribeDatasetDetailStructuredRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeDatasetDetailStructured", DescribeDatasetDetailStructuredResponse.class);
-    }
-
-    /**
-     *查询非结构化数据集详情
-     * @param req DescribeDatasetDetailUnstructuredRequest
-     * @return DescribeDatasetDetailUnstructuredResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeDatasetDetailUnstructuredResponse DescribeDatasetDetailUnstructured(DescribeDatasetDetailUnstructuredRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeDatasetDetailUnstructured", DescribeDatasetDetailUnstructuredResponse.class);
     }
 
     /**
@@ -413,17 +226,6 @@ public class TioneClient extends AbstractClient{
     }
 
     /**
-     *获取任务式建模训练任务，Notebook，在线服务和批量预测任务的事件API
-     * @param req DescribeEventsRequest
-     * @return DescribeEventsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeEventsResponse DescribeEvents(DescribeEventsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeEvents", DescribeEventsResponse.class);
-    }
-
-    /**
      *查询推理镜像模板
      * @param req DescribeInferTemplatesRequest
      * @return DescribeInferTemplatesResponse
@@ -435,39 +237,6 @@ public class TioneClient extends AbstractClient{
     }
 
     /**
-     *查询最近上报的训练自定义指标
-     * @param req DescribeLatestTrainingMetricsRequest
-     * @return DescribeLatestTrainingMetricsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeLatestTrainingMetricsResponse DescribeLatestTrainingMetrics(DescribeLatestTrainingMetricsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeLatestTrainingMetrics", DescribeLatestTrainingMetricsResponse.class);
-    }
-
-    /**
-     *获取任务式建模训练任务，Notebook，在线服务和批量预测任务的日志API
-     * @param req DescribeLogsRequest
-     * @return DescribeLogsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeLogsResponse DescribeLogs(DescribeLogsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeLogs", DescribeLogsResponse.class);
-    }
-
-    /**
-     *查询模型加速引擎版本列表
-     * @param req DescribeModelAccEngineVersionsRequest
-     * @return DescribeModelAccEngineVersionsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeModelAccEngineVersionsResponse DescribeModelAccEngineVersions(DescribeModelAccEngineVersionsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeModelAccEngineVersions", DescribeModelAccEngineVersionsResponse.class);
-    }
-
-    /**
      *查询模型优化任务详情
      * @param req DescribeModelAccelerateTaskRequest
      * @return DescribeModelAccelerateTaskResponse
@@ -476,17 +245,6 @@ public class TioneClient extends AbstractClient{
     public DescribeModelAccelerateTaskResponse DescribeModelAccelerateTask(DescribeModelAccelerateTaskRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeModelAccelerateTask", DescribeModelAccelerateTaskResponse.class);
-    }
-
-    /**
-     *查询模型加速任务列表
-     * @param req DescribeModelAccelerateTasksRequest
-     * @return DescribeModelAccelerateTasksResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeModelAccelerateTasksResponse DescribeModelAccelerateTasks(DescribeModelAccelerateTasksRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeModelAccelerateTasks", DescribeModelAccelerateTasksResponse.class);
     }
 
     /**
@@ -545,17 +303,6 @@ public class TioneClient extends AbstractClient{
     }
 
     /**
-     *展示服务的历史版本
-     * @param req DescribeModelServiceHistoryRequest
-     * @return DescribeModelServiceHistoryResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeModelServiceHistoryResponse DescribeModelServiceHistory(DescribeModelServiceHistoryRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeModelServiceHistory", DescribeModelServiceHistoryResponse.class);
-    }
-
-    /**
      *用于查询模型服务能否开启热更新
      * @param req DescribeModelServiceHotUpdatedRequest
      * @return DescribeModelServiceHotUpdatedResponse
@@ -564,17 +311,6 @@ public class TioneClient extends AbstractClient{
     public DescribeModelServiceHotUpdatedResponse DescribeModelServiceHotUpdated(DescribeModelServiceHotUpdatedRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeModelServiceHotUpdated", DescribeModelServiceHotUpdatedResponse.class);
-    }
-
-    /**
-     *查询多个服务
-     * @param req DescribeModelServicesRequest
-     * @return DescribeModelServicesResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeModelServicesResponse DescribeModelServices(DescribeModelServicesRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeModelServices", DescribeModelServicesResponse.class);
     }
 
     /**
@@ -589,28 +325,6 @@ public class TioneClient extends AbstractClient{
     }
 
     /**
-     *查询镜像kernel
-     * @param req DescribeNotebookImageKernelsRequest
-     * @return DescribeNotebookImageKernelsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeNotebookImageKernelsResponse DescribeNotebookImageKernels(DescribeNotebookImageKernelsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeNotebookImageKernels", DescribeNotebookImageKernelsResponse.class);
-    }
-
-    /**
-     *查看notebook镜像保存记录
-     * @param req DescribeNotebookImageRecordsRequest
-     * @return DescribeNotebookImageRecordsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeNotebookImageRecordsResponse DescribeNotebookImageRecords(DescribeNotebookImageRecordsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeNotebookImageRecords", DescribeNotebookImageRecordsResponse.class);
-    }
-
-    /**
      *Notebook列表
      * @param req DescribeNotebooksRequest
      * @return DescribeNotebooksResponse
@@ -619,28 +333,6 @@ public class TioneClient extends AbstractClient{
     public DescribeNotebooksResponse DescribeNotebooks(DescribeNotebooksRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeNotebooks", DescribeNotebooksResponse.class);
-    }
-
-    /**
-     *训练框架列表
-     * @param req DescribeTrainingFrameworksRequest
-     * @return DescribeTrainingFrameworksResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeTrainingFrameworksResponse DescribeTrainingFrameworks(DescribeTrainingFrameworksRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeTrainingFrameworks", DescribeTrainingFrameworksResponse.class);
-    }
-
-    /**
-     *查询训练自定义指标
-     * @param req DescribeTrainingMetricsRequest
-     * @return DescribeTrainingMetricsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeTrainingMetricsResponse DescribeTrainingMetrics(DescribeTrainingMetricsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeTrainingMetrics", DescribeTrainingMetricsResponse.class);
     }
 
     /**
@@ -663,17 +355,6 @@ public class TioneClient extends AbstractClient{
     public DescribeTrainingModelVersionsResponse DescribeTrainingModelVersions(DescribeTrainingModelVersionsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeTrainingModelVersions", DescribeTrainingModelVersionsResponse.class);
-    }
-
-    /**
-     *模型列表
-     * @param req DescribeTrainingModelsRequest
-     * @return DescribeTrainingModelsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeTrainingModelsResponse DescribeTrainingModels(DescribeTrainingModelsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeTrainingModels", DescribeTrainingModelsResponse.class);
     }
 
     /**
@@ -721,50 +402,6 @@ public class TioneClient extends AbstractClient{
     }
 
     /**
-     *增量更新在线推理服务的部分配置，不更新的配置项不需要传入
-     * @param req ModifyModelServicePartialConfigRequest
-     * @return ModifyModelServicePartialConfigResponse
-     * @throws TencentCloudSDKException
-     */
-    public ModifyModelServicePartialConfigResponse ModifyModelServicePartialConfig(ModifyModelServicePartialConfigRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "ModifyModelServicePartialConfig", ModifyModelServicePartialConfigResponse.class);
-    }
-
-    /**
-     *修改Notebook
-     * @param req ModifyNotebookRequest
-     * @return ModifyNotebookResponse
-     * @throws TencentCloudSDKException
-     */
-    public ModifyNotebookResponse ModifyNotebook(ModifyNotebookRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "ModifyNotebook", ModifyNotebookResponse.class);
-    }
-
-    /**
-     *修改Notebook标签
-     * @param req ModifyNotebookTagsRequest
-     * @return ModifyNotebookTagsResponse
-     * @throws TencentCloudSDKException
-     */
-    public ModifyNotebookTagsResponse ModifyNotebookTags(ModifyNotebookTagsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "ModifyNotebookTags", ModifyNotebookTagsResponse.class);
-    }
-
-    /**
-     *更新推理服务组流量分配
-     * @param req ModifyServiceGroupWeightsRequest
-     * @return ModifyServiceGroupWeightsResponse
-     * @throws TencentCloudSDKException
-     */
-    public ModifyServiceGroupWeightsResponse ModifyServiceGroupWeights(ModifyServiceGroupWeightsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "ModifyServiceGroupWeights", ModifyServiceGroupWeightsResponse.class);
-    }
-
-    /**
      *上报训练自定义指标
      * @param req PushTrainingMetricsRequest
      * @return PushTrainingMetricsResponse
@@ -773,17 +410,6 @@ public class TioneClient extends AbstractClient{
     public PushTrainingMetricsResponse PushTrainingMetrics(PushTrainingMetricsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "PushTrainingMetrics", PushTrainingMetricsResponse.class);
-    }
-
-    /**
-     *重启模型加速任务
-     * @param req RestartModelAccelerateTaskRequest
-     * @return RestartModelAccelerateTaskResponse
-     * @throws TencentCloudSDKException
-     */
-    public RestartModelAccelerateTaskResponse RestartModelAccelerateTask(RestartModelAccelerateTaskRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "RestartModelAccelerateTask", RestartModelAccelerateTaskResponse.class);
     }
 
     /**
@@ -809,39 +435,6 @@ public class TioneClient extends AbstractClient{
     }
 
     /**
-     *启动模型训练任务
-     * @param req StartTrainingTaskRequest
-     * @return StartTrainingTaskResponse
-     * @throws TencentCloudSDKException
-     */
-    public StartTrainingTaskResponse StartTrainingTask(StartTrainingTaskRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "StartTrainingTask", StartTrainingTaskResponse.class);
-    }
-
-    /**
-     *停止批量预测任务
-     * @param req StopBatchTaskRequest
-     * @return StopBatchTaskResponse
-     * @throws TencentCloudSDKException
-     */
-    public StopBatchTaskResponse StopBatchTask(StopBatchTaskRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "StopBatchTask", StopBatchTaskResponse.class);
-    }
-
-    /**
-     *停止保存镜像
-     * @param req StopCreatingImageRequest
-     * @return StopCreatingImageResponse
-     * @throws TencentCloudSDKException
-     */
-    public StopCreatingImageResponse StopCreatingImage(StopCreatingImageRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "StopCreatingImage", StopCreatingImageResponse.class);
-    }
-
-    /**
      *停止模型加速任务
      * @param req StopModelAccelerateTaskRequest
      * @return StopModelAccelerateTaskResponse
@@ -861,17 +454,6 @@ public class TioneClient extends AbstractClient{
     public StopNotebookResponse StopNotebook(StopNotebookRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "StopNotebook", StopNotebookResponse.class);
-    }
-
-    /**
-     *停止模型训练任务
-     * @param req StopTrainingTaskRequest
-     * @return StopTrainingTaskResponse
-     * @throws TencentCloudSDKException
-     */
-    public StopTrainingTaskResponse StopTrainingTask(StopTrainingTaskRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "StopTrainingTask", StopTrainingTaskResponse.class);
     }
 
 }
