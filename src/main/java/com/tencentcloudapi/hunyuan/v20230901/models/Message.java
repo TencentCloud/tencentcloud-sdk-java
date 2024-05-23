@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class Message extends AbstractModel {
 
     /**
-    * 角色
+    * 角色，可选值包括 system、user、assistant。
     */
     @SerializedName("Role")
     @Expose
@@ -38,16 +38,16 @@ public class Message extends AbstractModel {
     private String Content;
 
     /**
-     * Get 角色 
-     * @return Role 角色
+     * Get 角色，可选值包括 system、user、assistant。 
+     * @return Role 角色，可选值包括 system、user、assistant。
      */
     public String getRole() {
         return this.Role;
     }
 
     /**
-     * Set 角色
-     * @param Role 角色
+     * Set 角色，可选值包括 system、user、assistant。
+     * @param Role 角色，可选值包括 system、user、assistant。
      */
     public void setRole(String Role) {
         this.Role = Role;

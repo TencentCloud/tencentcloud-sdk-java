@@ -31,11 +31,7 @@ public class CreateRocketMQVipInstanceRequest extends AbstractModel {
     private String Name;
 
     /**
-    * 实例规格：
-基础型，rocket-vip-basic-1
-标准型，rocket-vip-basic-2
-高阶Ⅰ型，rocket-vip-basic-3
-高阶Ⅱ型，rocket-vip-basic-4
+    * 集群规格，支持规格有 1.通用型:rocket-vip-basic-0; 2.基础型:rocket-vip-basic-1; 3.标准型:rocket-vip-basic-2; 4.高阶Ⅰ型:rocket-vip-basic-3; 5.高阶Ⅱ型:rocket-vip-basic-4
     */
     @SerializedName("Spec")
     @Expose
@@ -128,32 +124,16 @@ public class CreateRocketMQVipInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get 实例规格：
-基础型，rocket-vip-basic-1
-标准型，rocket-vip-basic-2
-高阶Ⅰ型，rocket-vip-basic-3
-高阶Ⅱ型，rocket-vip-basic-4 
-     * @return Spec 实例规格：
-基础型，rocket-vip-basic-1
-标准型，rocket-vip-basic-2
-高阶Ⅰ型，rocket-vip-basic-3
-高阶Ⅱ型，rocket-vip-basic-4
+     * Get 集群规格，支持规格有 1.通用型:rocket-vip-basic-0; 2.基础型:rocket-vip-basic-1; 3.标准型:rocket-vip-basic-2; 4.高阶Ⅰ型:rocket-vip-basic-3; 5.高阶Ⅱ型:rocket-vip-basic-4 
+     * @return Spec 集群规格，支持规格有 1.通用型:rocket-vip-basic-0; 2.基础型:rocket-vip-basic-1; 3.标准型:rocket-vip-basic-2; 4.高阶Ⅰ型:rocket-vip-basic-3; 5.高阶Ⅱ型:rocket-vip-basic-4
      */
     public String getSpec() {
         return this.Spec;
     }
 
     /**
-     * Set 实例规格：
-基础型，rocket-vip-basic-1
-标准型，rocket-vip-basic-2
-高阶Ⅰ型，rocket-vip-basic-3
-高阶Ⅱ型，rocket-vip-basic-4
-     * @param Spec 实例规格：
-基础型，rocket-vip-basic-1
-标准型，rocket-vip-basic-2
-高阶Ⅰ型，rocket-vip-basic-3
-高阶Ⅱ型，rocket-vip-basic-4
+     * Set 集群规格，支持规格有 1.通用型:rocket-vip-basic-0; 2.基础型:rocket-vip-basic-1; 3.标准型:rocket-vip-basic-2; 4.高阶Ⅰ型:rocket-vip-basic-3; 5.高阶Ⅱ型:rocket-vip-basic-4
+     * @param Spec 集群规格，支持规格有 1.通用型:rocket-vip-basic-0; 2.基础型:rocket-vip-basic-1; 3.标准型:rocket-vip-basic-2; 4.高阶Ⅰ型:rocket-vip-basic-3; 5.高阶Ⅱ型:rocket-vip-basic-4
      */
     public void setSpec(String Spec) {
         this.Spec = Spec;

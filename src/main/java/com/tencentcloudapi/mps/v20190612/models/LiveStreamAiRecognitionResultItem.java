@@ -31,6 +31,7 @@ public class LiveStreamAiRecognitionResultItem extends AbstractModel {
 <li>AsrFullTextRecognition：语音全文识别，</li>
 <li>OcrFullTextRecognition：文本全文识别。</li>
 <li>TransTextRecognition：语音翻译。</li>
+<li>ObjectRecognition：目标检测。</li>
 <li>TagRecognition：精彩打点。</li>
     */
     @SerializedName("Type")
@@ -85,6 +86,13 @@ OcrFullTextRecognition 时有效。
     private LiveStreamTransTextRecognitionResult [] TransTextRecognitionResultSet;
 
     /**
+    * 目标检测结果，当Type为 ObjectRecognition 时有效。
+    */
+    @SerializedName("ObjectRecognitionResultSet")
+    @Expose
+    private LiveStreamObjectRecognitionResult [] ObjectRecognitionResultSet;
+
+    /**
     * 打点结果，当Type 为 TagRecognition 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -100,6 +108,7 @@ OcrFullTextRecognition 时有效。
 <li>AsrFullTextRecognition：语音全文识别，</li>
 <li>OcrFullTextRecognition：文本全文识别。</li>
 <li>TransTextRecognition：语音翻译。</li>
+<li>ObjectRecognition：目标检测。</li>
 <li>TagRecognition：精彩打点。</li> 
      * @return Type 结果的类型，取值范围：
 <li>FaceRecognition：人脸识别，</li>
@@ -108,6 +117,7 @@ OcrFullTextRecognition 时有效。
 <li>AsrFullTextRecognition：语音全文识别，</li>
 <li>OcrFullTextRecognition：文本全文识别。</li>
 <li>TransTextRecognition：语音翻译。</li>
+<li>ObjectRecognition：目标检测。</li>
 <li>TagRecognition：精彩打点。</li>
      */
     public String getType() {
@@ -122,6 +132,7 @@ OcrFullTextRecognition 时有效。
 <li>AsrFullTextRecognition：语音全文识别，</li>
 <li>OcrFullTextRecognition：文本全文识别。</li>
 <li>TransTextRecognition：语音翻译。</li>
+<li>ObjectRecognition：目标检测。</li>
 <li>TagRecognition：精彩打点。</li>
      * @param Type 结果的类型，取值范围：
 <li>FaceRecognition：人脸识别，</li>
@@ -130,6 +141,7 @@ OcrFullTextRecognition 时有效。
 <li>AsrFullTextRecognition：语音全文识别，</li>
 <li>OcrFullTextRecognition：文本全文识别。</li>
 <li>TransTextRecognition：语音翻译。</li>
+<li>ObjectRecognition：目标检测。</li>
 <li>TagRecognition：精彩打点。</li>
      */
     public void setType(String Type) {
@@ -253,6 +265,22 @@ OcrFullTextRecognition 时有效。
     }
 
     /**
+     * Get 目标检测结果，当Type为 ObjectRecognition 时有效。 
+     * @return ObjectRecognitionResultSet 目标检测结果，当Type为 ObjectRecognition 时有效。
+     */
+    public LiveStreamObjectRecognitionResult [] getObjectRecognitionResultSet() {
+        return this.ObjectRecognitionResultSet;
+    }
+
+    /**
+     * Set 目标检测结果，当Type为 ObjectRecognition 时有效。
+     * @param ObjectRecognitionResultSet 目标检测结果，当Type为 ObjectRecognition 时有效。
+     */
+    public void setObjectRecognitionResultSet(LiveStreamObjectRecognitionResult [] ObjectRecognitionResultSet) {
+        this.ObjectRecognitionResultSet = ObjectRecognitionResultSet;
+    }
+
+    /**
      * Get 打点结果，当Type 为 TagRecognition 时有效。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TagRecognitionResultSet 打点结果，当Type 为 TagRecognition 时有效。
@@ -319,6 +347,12 @@ OcrFullTextRecognition 时有效。
                 this.TransTextRecognitionResultSet[i] = new LiveStreamTransTextRecognitionResult(source.TransTextRecognitionResultSet[i]);
             }
         }
+        if (source.ObjectRecognitionResultSet != null) {
+            this.ObjectRecognitionResultSet = new LiveStreamObjectRecognitionResult[source.ObjectRecognitionResultSet.length];
+            for (int i = 0; i < source.ObjectRecognitionResultSet.length; i++) {
+                this.ObjectRecognitionResultSet[i] = new LiveStreamObjectRecognitionResult(source.ObjectRecognitionResultSet[i]);
+            }
+        }
         if (source.TagRecognitionResultSet != null) {
             this.TagRecognitionResultSet = new LiveStreamTagRecognitionResult[source.TagRecognitionResultSet.length];
             for (int i = 0; i < source.TagRecognitionResultSet.length; i++) {
@@ -339,6 +373,7 @@ OcrFullTextRecognition 时有效。
         this.setParamArrayObj(map, prefix + "AsrFullTextRecognitionResultSet.", this.AsrFullTextRecognitionResultSet);
         this.setParamArrayObj(map, prefix + "OcrFullTextRecognitionResultSet.", this.OcrFullTextRecognitionResultSet);
         this.setParamArrayObj(map, prefix + "TransTextRecognitionResultSet.", this.TransTextRecognitionResultSet);
+        this.setParamArrayObj(map, prefix + "ObjectRecognitionResultSet.", this.ObjectRecognitionResultSet);
         this.setParamArrayObj(map, prefix + "TagRecognitionResultSet.", this.TagRecognitionResultSet);
 
     }

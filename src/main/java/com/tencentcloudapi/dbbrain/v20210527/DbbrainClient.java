@@ -435,6 +435,17 @@ public class DbbrainClient extends AbstractClient{
     }
 
     /**
+     *查询redis大key分析任务列表。
+     * @param req DescribeRedisBigKeyAnalysisTasksRequest
+     * @return DescribeRedisBigKeyAnalysisTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRedisBigKeyAnalysisTasksResponse DescribeRedisBigKeyAnalysisTasks(DescribeRedisBigKeyAnalysisTasksRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRedisBigKeyAnalysisTasks", DescribeRedisBigKeyAnalysisTasksResponse.class);
+    }
+
+    /**
      *获取 Redis 实例所有 proxy 节点的实时会话详情列表。
      * @param req DescribeRedisProcessListRequest
      * @return DescribeRedisProcessListResponse
@@ -644,7 +655,7 @@ public class DbbrainClient extends AbstractClient{
     }
 
     /**
-     *修改实例巡检开关。
+     *修改实例的配置信息。
      * @param req ModifyDiagDBInstanceConfRequest
      * @return ModifyDiagDBInstanceConfResponse
      * @throws TencentCloudSDKException

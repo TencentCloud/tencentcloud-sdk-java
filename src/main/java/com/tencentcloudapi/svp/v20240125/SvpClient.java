@@ -49,4 +49,37 @@ public class SvpClient extends AbstractClient{
         return this.internalRequest(req, "CreateSavingPlanOrder", CreateSavingPlanOrderResponse.class);
     }
 
+    /**
+     *查询节省计划抵扣明细
+     * @param req DescribeSavingPlanDeductRequest
+     * @return DescribeSavingPlanDeductResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSavingPlanDeductResponse DescribeSavingPlanDeduct(DescribeSavingPlanDeductRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSavingPlanDeduct", DescribeSavingPlanDeductResponse.class);
+    }
+
+    /**
+     *查用当前用户明细节省计划总览查询时段内的使用情况
+     * @param req DescribeSavingPlanOverviewRequest
+     * @return DescribeSavingPlanOverviewResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSavingPlanOverviewResponse DescribeSavingPlanOverview(DescribeSavingPlanOverviewRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSavingPlanOverview", DescribeSavingPlanOverviewResponse.class);
+    }
+
+    /**
+     *查用当前用户明细节省计划查询时段内的使用情况
+     * @param req DescribeSavingPlanUsageRequest
+     * @return DescribeSavingPlanUsageResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSavingPlanUsageResponse DescribeSavingPlanUsage(DescribeSavingPlanUsageRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSavingPlanUsage", DescribeSavingPlanUsageResponse.class);
+    }
+
 }

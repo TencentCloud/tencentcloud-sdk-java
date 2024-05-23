@@ -38,6 +38,13 @@ public class ChannelCreatePrepareFlowResponse extends AbstractModel {
     private String PreviewFlowUrl;
 
     /**
+    * 发起的合同临时Id， 只有当点击进入链接，成功发起合同后， 此Id才有效
+    */
+    @SerializedName("FlowId")
+    @Expose
+    private String FlowId;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -77,6 +84,22 @@ public class ChannelCreatePrepareFlowResponse extends AbstractModel {
     }
 
     /**
+     * Get 发起的合同临时Id， 只有当点击进入链接，成功发起合同后， 此Id才有效 
+     * @return FlowId 发起的合同临时Id， 只有当点击进入链接，成功发起合同后， 此Id才有效
+     */
+    public String getFlowId() {
+        return this.FlowId;
+    }
+
+    /**
+     * Set 发起的合同临时Id， 只有当点击进入链接，成功发起合同后， 此Id才有效
+     * @param FlowId 发起的合同临时Id， 只有当点击进入链接，成功发起合同后， 此Id才有效
+     */
+    public void setFlowId(String FlowId) {
+        this.FlowId = FlowId;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -106,6 +129,9 @@ public class ChannelCreatePrepareFlowResponse extends AbstractModel {
         if (source.PreviewFlowUrl != null) {
             this.PreviewFlowUrl = new String(source.PreviewFlowUrl);
         }
+        if (source.FlowId != null) {
+            this.FlowId = new String(source.FlowId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -118,6 +144,7 @@ public class ChannelCreatePrepareFlowResponse extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "PrepareFlowUrl", this.PrepareFlowUrl);
         this.setParamSimple(map, prefix + "PreviewFlowUrl", this.PreviewFlowUrl);
+        this.setParamSimple(map, prefix + "FlowId", this.FlowId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

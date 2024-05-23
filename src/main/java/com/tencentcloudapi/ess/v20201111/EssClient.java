@@ -648,6 +648,23 @@ public class EssClient extends AbstractClient{
     }
 
     /**
+     *通过此接口，创建子企业激活记录，集团企业管理员可针对未激活的成员企业进行激活。
+激活子企业时请保证子企业 lisence 充足。
+这个操作与页面端激活成员企业操作类似
+![image](https://qcloudimg.tencent-cloud.cn/raw/c4e76fbac92e4ce451a03601c964793b.png)
+
+p.s.
+此接口只能用于激活，不能用于续期。
+     * @param req CreateIntegrationSubOrganizationActiveRecordRequest
+     * @return CreateIntegrationSubOrganizationActiveRecordResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateIntegrationSubOrganizationActiveRecordResponse CreateIntegrationSubOrganizationActiveRecord(CreateIntegrationSubOrganizationActiveRecordRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateIntegrationSubOrganizationActiveRecord", CreateIntegrationSubOrganizationActiveRecordResponse.class);
+    }
+
+    /**
      *此接口用于赋予员工指定的角色权限，如需解绑请使用 DeleteIntegrationRoleUsers 接口。
      * @param req CreateIntegrationUserRolesRequest
      * @return CreateIntegrationUserRolesResponse
@@ -712,6 +729,18 @@ public class EssClient extends AbstractClient{
     public CreateOrganizationBatchSignUrlResponse CreateOrganizationBatchSignUrl(CreateOrganizationBatchSignUrlRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateOrganizationBatchSignUrl", CreateOrganizationBatchSignUrlResponse.class);
+    }
+
+    /**
+     *生成集团加入链接，分享至子企业超管或者法人，子企业管理员可通过链接加入集团。
+注意:调用当前接口的企业 必须为集团企业。如何成为集团企业可以参考下面的文档[集团操作文档](https://qian.tencent.com/document/86707)
+     * @param req CreateOrganizationGroupInvitationLinkRequest
+     * @return CreateOrganizationGroupInvitationLinkResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateOrganizationGroupInvitationLinkResponse CreateOrganizationGroupInvitationLink(CreateOrganizationGroupInvitationLinkRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateOrganizationGroupInvitationLink", CreateOrganizationGroupInvitationLinkResponse.class);
     }
 
     /**

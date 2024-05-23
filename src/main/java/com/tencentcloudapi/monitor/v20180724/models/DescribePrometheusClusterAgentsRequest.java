@@ -45,6 +45,27 @@ public class DescribePrometheusClusterAgentsRequest extends AbstractModel {
     private Long Limit;
 
     /**
+    * 用于通过集群id过滤被绑定集群
+    */
+    @SerializedName("ClusterIds")
+    @Expose
+    private String [] ClusterIds;
+
+    /**
+    * 用于通过集群类型过滤被绑定集群
+    */
+    @SerializedName("ClusterTypes")
+    @Expose
+    private String [] ClusterTypes;
+
+    /**
+    * 用于通过名称搜索被绑定集群
+    */
+    @SerializedName("ClusterName")
+    @Expose
+    private String ClusterName;
+
+    /**
      * Get 实例id 
      * @return InstanceId 实例id
      */
@@ -92,6 +113,54 @@ public class DescribePrometheusClusterAgentsRequest extends AbstractModel {
         this.Limit = Limit;
     }
 
+    /**
+     * Get 用于通过集群id过滤被绑定集群 
+     * @return ClusterIds 用于通过集群id过滤被绑定集群
+     */
+    public String [] getClusterIds() {
+        return this.ClusterIds;
+    }
+
+    /**
+     * Set 用于通过集群id过滤被绑定集群
+     * @param ClusterIds 用于通过集群id过滤被绑定集群
+     */
+    public void setClusterIds(String [] ClusterIds) {
+        this.ClusterIds = ClusterIds;
+    }
+
+    /**
+     * Get 用于通过集群类型过滤被绑定集群 
+     * @return ClusterTypes 用于通过集群类型过滤被绑定集群
+     */
+    public String [] getClusterTypes() {
+        return this.ClusterTypes;
+    }
+
+    /**
+     * Set 用于通过集群类型过滤被绑定集群
+     * @param ClusterTypes 用于通过集群类型过滤被绑定集群
+     */
+    public void setClusterTypes(String [] ClusterTypes) {
+        this.ClusterTypes = ClusterTypes;
+    }
+
+    /**
+     * Get 用于通过名称搜索被绑定集群 
+     * @return ClusterName 用于通过名称搜索被绑定集群
+     */
+    public String getClusterName() {
+        return this.ClusterName;
+    }
+
+    /**
+     * Set 用于通过名称搜索被绑定集群
+     * @param ClusterName 用于通过名称搜索被绑定集群
+     */
+    public void setClusterName(String ClusterName) {
+        this.ClusterName = ClusterName;
+    }
+
     public DescribePrometheusClusterAgentsRequest() {
     }
 
@@ -109,6 +178,21 @@ public class DescribePrometheusClusterAgentsRequest extends AbstractModel {
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
+        if (source.ClusterIds != null) {
+            this.ClusterIds = new String[source.ClusterIds.length];
+            for (int i = 0; i < source.ClusterIds.length; i++) {
+                this.ClusterIds[i] = new String(source.ClusterIds[i]);
+            }
+        }
+        if (source.ClusterTypes != null) {
+            this.ClusterTypes = new String[source.ClusterTypes.length];
+            for (int i = 0; i < source.ClusterTypes.length; i++) {
+                this.ClusterTypes[i] = new String(source.ClusterTypes[i]);
+            }
+        }
+        if (source.ClusterName != null) {
+            this.ClusterName = new String(source.ClusterName);
+        }
     }
 
 
@@ -119,6 +203,9 @@ public class DescribePrometheusClusterAgentsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamArraySimple(map, prefix + "ClusterIds.", this.ClusterIds);
+        this.setParamArraySimple(map, prefix + "ClusterTypes.", this.ClusterTypes);
+        this.setParamSimple(map, prefix + "ClusterName", this.ClusterName);
 
     }
 }

@@ -54,6 +54,14 @@ public class InstanceConfs extends AbstractModel {
     private String ShardNum;
 
     /**
+    * 是否开启大key周期性分析，仅redis产品有效。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AnalysisTopKey")
+    @Expose
+    private String AnalysisTopKey;
+
+    /**
      * Get 数据库巡检开关, Yes/No。 
      * @return DailyInspection 数据库巡检开关, Yes/No。
      */
@@ -125,6 +133,26 @@ public class InstanceConfs extends AbstractModel {
         this.ShardNum = ShardNum;
     }
 
+    /**
+     * Get 是否开启大key周期性分析，仅redis产品有效。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AnalysisTopKey 是否开启大key周期性分析，仅redis产品有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAnalysisTopKey() {
+        return this.AnalysisTopKey;
+    }
+
+    /**
+     * Set 是否开启大key周期性分析，仅redis产品有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AnalysisTopKey 是否开启大key周期性分析，仅redis产品有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAnalysisTopKey(String AnalysisTopKey) {
+        this.AnalysisTopKey = AnalysisTopKey;
+    }
+
     public InstanceConfs() {
     }
 
@@ -148,6 +176,9 @@ public class InstanceConfs extends AbstractModel {
         if (source.ShardNum != null) {
             this.ShardNum = new String(source.ShardNum);
         }
+        if (source.AnalysisTopKey != null) {
+            this.AnalysisTopKey = new String(source.AnalysisTopKey);
+        }
     }
 
 
@@ -159,6 +190,7 @@ public class InstanceConfs extends AbstractModel {
         this.setParamSimple(map, prefix + "OverviewDisplay", this.OverviewDisplay);
         this.setParamArraySimple(map, prefix + "KeyDelimiters.", this.KeyDelimiters);
         this.setParamSimple(map, prefix + "ShardNum", this.ShardNum);
+        this.setParamSimple(map, prefix + "AnalysisTopKey", this.AnalysisTopKey);
 
     }
 }

@@ -50,6 +50,17 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *添加数据优化资源
+     * @param req AddOptimizerEnginesRequest
+     * @return AddOptimizerEnginesResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddOptimizerEnginesResponse AddOptimizerEngines(AddOptimizerEnginesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AddOptimizerEngines", AddOptimizerEnginesResponse.class);
+    }
+
+    /**
      *添加用户到工作组
      * @param req AddUsersToWorkGroupRequest
      * @return AddUsersToWorkGroupResponse
@@ -949,6 +960,17 @@ public class DlcClient extends AbstractClient{
     public DescribeTasksResponse DescribeTasks(DescribeTasksRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeTasks", DescribeTasksResponse.class);
+    }
+
+    /**
+     *该接口（DescribeTasksCostInfo）用于查询任务消耗
+     * @param req DescribeTasksCostInfoRequest
+     * @return DescribeTasksCostInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTasksCostInfoResponse DescribeTasksCostInfo(DescribeTasksCostInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTasksCostInfo", DescribeTasksCostInfoResponse.class);
     }
 
     /**
