@@ -27,6 +27,9 @@ public final class CommonRequest extends AbstractModel {
     }
 
     private void toMapFromObject(HashMap<String, String> map, String prefix, Object layer) {
+        if (layer == null)
+            return;
+
         if (layer instanceof List) {
             if (!prefix.isEmpty()) {
                 prefix += ".";

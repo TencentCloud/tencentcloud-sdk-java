@@ -7,6 +7,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.HashMap;
 
+import com.tencentcloudapi.common.CommonRequest;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -69,4 +70,23 @@ public class CommonClientTest {
       fail(e.toString());
     }
   }
+
+    @Test
+    public void testCommonRequestIgnoreNullValue() {
+        Credential cred = new Credential(
+                System.getenv("TENCENTCLOUD_SECRET_ID"),
+                System.getenv("TENCENTCLOUD_SECRET_KEY")
+        );
+        String reqJson = "{" +
+                "\"Filters\":[{\"Name\":\"zone\",\"NullKey\":null,\"Values\":[\"ap-guangzhou-1\"]}]" +
+                ",\"NullField\": null" +
+                "}";
+        CommonClient client = new CommonClient("cvm", "2017-03-12", cred, "ap-guangzhou");
+        CommonRequest cr = new CommonRequest(reqJson);
+        try {
+            client.commonRequest(cr, "DescribeInstances");
+        } catch (Exception e) {
+            fail(e.toString());
+        }
+    }
 }
