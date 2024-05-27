@@ -55,7 +55,6 @@ public class GetFileTranslateData extends AbstractModel {
 
     /**
     * 翻译进度
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Progress")
     @Expose
@@ -134,10 +133,8 @@ public class GetFileTranslateData extends AbstractModel {
     }
 
     /**
-     * Get 翻译进度
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 翻译进度 
      * @return Progress 翻译进度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getProgress() {
         return this.Progress;
@@ -145,9 +142,7 @@ public class GetFileTranslateData extends AbstractModel {
 
     /**
      * Set 翻译进度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Progress 翻译进度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProgress(Long Progress) {
         this.Progress = Progress;

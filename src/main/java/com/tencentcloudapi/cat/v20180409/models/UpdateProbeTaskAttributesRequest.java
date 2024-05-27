@@ -31,7 +31,7 @@ public class UpdateProbeTaskAttributesRequest extends AbstractModel {
     private String TaskId;
 
     /**
-    * 任务名
+    * 任务名，该参数为空时不作任何修改。
     */
     @SerializedName("Name")
     @Expose
@@ -54,16 +54,16 @@ public class UpdateProbeTaskAttributesRequest extends AbstractModel {
     }
 
     /**
-     * Get 任务名 
-     * @return Name 任务名
+     * Get 任务名，该参数为空时不作任何修改。 
+     * @return Name 任务名，该参数为空时不作任何修改。
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 任务名
-     * @param Name 任务名
+     * Set 任务名，该参数为空时不作任何修改。
+     * @param Name 任务名，该参数为空时不作任何修改。
      */
     public void setName(String Name) {
         this.Name = Name;

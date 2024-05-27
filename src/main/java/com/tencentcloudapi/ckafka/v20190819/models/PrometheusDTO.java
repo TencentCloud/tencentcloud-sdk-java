@@ -53,6 +53,22 @@ public class PrometheusDTO extends AbstractModel {
     private String BrokerIp;
 
     /**
+    * VPC ID信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VpcId")
+    @Expose
+    private String VpcId;
+
+    /**
+    * 子网ID信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SubnetId")
+    @Expose
+    private String SubnetId;
+
+    /**
      * Get export类型（jmx_export\node_export） 
      * @return Type export类型（jmx_export\node_export）
      */
@@ -120,6 +136,46 @@ public class PrometheusDTO extends AbstractModel {
         this.BrokerIp = BrokerIp;
     }
 
+    /**
+     * Get VPC ID信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VpcId VPC ID信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getVpcId() {
+        return this.VpcId;
+    }
+
+    /**
+     * Set VPC ID信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VpcId VPC ID信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVpcId(String VpcId) {
+        this.VpcId = VpcId;
+    }
+
+    /**
+     * Get 子网ID信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SubnetId 子网ID信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSubnetId() {
+        return this.SubnetId;
+    }
+
+    /**
+     * Set 子网ID信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SubnetId 子网ID信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSubnetId(String SubnetId) {
+        this.SubnetId = SubnetId;
+    }
+
     public PrometheusDTO() {
     }
 
@@ -140,6 +196,12 @@ public class PrometheusDTO extends AbstractModel {
         if (source.BrokerIp != null) {
             this.BrokerIp = new String(source.BrokerIp);
         }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
+        }
     }
 
 
@@ -151,6 +213,8 @@ public class PrometheusDTO extends AbstractModel {
         this.setParamSimple(map, prefix + "SourceIp", this.SourceIp);
         this.setParamSimple(map, prefix + "SourcePort", this.SourcePort);
         this.setParamSimple(map, prefix + "BrokerIp", this.BrokerIp);
+        this.setParamSimple(map, prefix + "VpcId", this.VpcId);
+        this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
 
     }
 }

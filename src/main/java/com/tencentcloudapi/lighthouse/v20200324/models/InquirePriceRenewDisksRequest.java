@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class InquirePriceRenewDisksRequest extends AbstractModel {
 
     /**
-    * 云硬盘ID列表。
+    * 云硬盘ID列表。每次批量请求云硬盘的上限为 1。可通过[DescribeDisks](https://cloud.tencent.com/document/product/1207/66093)接口返回值中的DiskId获取。
     */
     @SerializedName("DiskIds")
     @Expose
@@ -38,16 +38,16 @@ public class InquirePriceRenewDisksRequest extends AbstractModel {
     private RenewDiskChargePrepaid RenewDiskChargePrepaid;
 
     /**
-     * Get 云硬盘ID列表。 
-     * @return DiskIds 云硬盘ID列表。
+     * Get 云硬盘ID列表。每次批量请求云硬盘的上限为 1。可通过[DescribeDisks](https://cloud.tencent.com/document/product/1207/66093)接口返回值中的DiskId获取。 
+     * @return DiskIds 云硬盘ID列表。每次批量请求云硬盘的上限为 1。可通过[DescribeDisks](https://cloud.tencent.com/document/product/1207/66093)接口返回值中的DiskId获取。
      */
     public String [] getDiskIds() {
         return this.DiskIds;
     }
 
     /**
-     * Set 云硬盘ID列表。
-     * @param DiskIds 云硬盘ID列表。
+     * Set 云硬盘ID列表。每次批量请求云硬盘的上限为 1。可通过[DescribeDisks](https://cloud.tencent.com/document/product/1207/66093)接口返回值中的DiskId获取。
+     * @param DiskIds 云硬盘ID列表。每次批量请求云硬盘的上限为 1。可通过[DescribeDisks](https://cloud.tencent.com/document/product/1207/66093)接口返回值中的DiskId获取。
      */
     public void setDiskIds(String [] DiskIds) {
         this.DiskIds = DiskIds;

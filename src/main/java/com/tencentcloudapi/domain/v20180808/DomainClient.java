@@ -50,6 +50,17 @@ public class DomainClient extends AbstractClient{
     }
 
     /**
+     *该接口用于用户详情页出价请求
+     * @param req BidDetailPageRequest
+     * @return BidDetailPageResponse
+     * @throws TencentCloudSDKException
+     */
+    public BidDetailPageResponse BidDetailPage(BidDetailPageRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "BidDetailPage", BidDetailPageResponse.class);
+    }
+
+    /**
      *用户合作商预释放出价
      * @param req BidPreDomainsRequest
      * @return BidPreDomainsResponse
@@ -58,6 +69,17 @@ public class DomainClient extends AbstractClient{
     public BidPreDomainsResponse BidPreDomains(BidPreDomainsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "BidPreDomains", BidPreDomainsResponse.class);
+    }
+
+    /**
+     *用于出价界面出价请求
+     * @param req BiddingPreReleaseRequest
+     * @return BiddingPreReleaseResponse
+     * @throws TencentCloudSDKException
+     */
+    public BiddingPreReleaseResponse BiddingPreRelease(BiddingPreReleaseRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "BiddingPreRelease", BiddingPreReleaseResponse.class);
     }
 
     /**
@@ -138,6 +160,17 @@ public class DomainClient extends AbstractClient{
     }
 
     /**
+     *删除记录。
+     * @param req DeleteBiddingRequest
+     * @return DeleteBiddingResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteBiddingResponse DeleteBidding(DeleteBiddingRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteBidding", DeleteBiddingResponse.class);
+    }
+
+    /**
      *删除自定义DNS Host
      * @param req DeleteCustomDnsHostRequest
      * @return DeleteCustomDnsHostResponse
@@ -182,6 +215,17 @@ public class DomainClient extends AbstractClient{
     }
 
     /**
+     *用户控制台获取竞价列表
+     * @param req DescribeAuctionListRequest
+     * @return DescribeAuctionListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAuctionListResponse DescribeAuctionList(DescribeAuctionListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAuctionList", DescribeAuctionListResponse.class);
+    }
+
+    /**
      *本接口 ( DescribeBatchOperationLogDetails ) 用于获取批量操作日志详情。
      * @param req DescribeBatchOperationLogDetailsRequest
      * @return DescribeBatchOperationLogDetailsResponse
@@ -201,6 +245,72 @@ public class DomainClient extends AbstractClient{
     public DescribeBatchOperationLogsResponse DescribeBatchOperationLogs(DescribeBatchOperationLogsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeBatchOperationLogs", DescribeBatchOperationLogsResponse.class);
+    }
+
+    /**
+     *我预约的域名-预约详情。
+     * @param req DescribeBiddingAppointDetailRequest
+     * @return DescribeBiddingAppointDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBiddingAppointDetailResponse DescribeBiddingAppointDetail(DescribeBiddingAppointDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBiddingAppointDetail", DescribeBiddingAppointDetailResponse.class);
+    }
+
+    /**
+     *我预定的域名。
+     * @param req DescribeBiddingAppointListRequest
+     * @return DescribeBiddingAppointListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBiddingAppointListResponse DescribeBiddingAppointList(DescribeBiddingAppointListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBiddingAppointList", DescribeBiddingAppointListResponse.class);
+    }
+
+    /**
+     *我竞价的域名-竞价详情。
+     * @param req DescribeBiddingDetailRequest
+     * @return DescribeBiddingDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBiddingDetailResponse DescribeBiddingDetail(DescribeBiddingDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBiddingDetail", DescribeBiddingDetailResponse.class);
+    }
+
+    /**
+     *我竞价的域名。
+     * @param req DescribeBiddingListRequest
+     * @return DescribeBiddingListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBiddingListResponse DescribeBiddingList(DescribeBiddingListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBiddingList", DescribeBiddingListResponse.class);
+    }
+
+    /**
+     *我得标的域名-得标详情。
+     * @param req DescribeBiddingSuccessfulDetailRequest
+     * @return DescribeBiddingSuccessfulDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBiddingSuccessfulDetailResponse DescribeBiddingSuccessfulDetail(DescribeBiddingSuccessfulDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBiddingSuccessfulDetail", DescribeBiddingSuccessfulDetailResponse.class);
+    }
+
+    /**
+     *我得标的域名。
+     * @param req DescribeBiddingSuccessfulListRequest
+     * @return DescribeBiddingSuccessfulListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBiddingSuccessfulListResponse DescribeBiddingSuccessfulList(DescribeBiddingSuccessfulListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBiddingSuccessfulList", DescribeBiddingSuccessfulListResponse.class);
     }
 
     /**
@@ -259,6 +369,17 @@ public class DomainClient extends AbstractClient{
     }
 
     /**
+     *等待支付详情接口
+     * @param req DescribePayWaitDetailRequest
+     * @return DescribePayWaitDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePayWaitDetailResponse DescribePayWaitDetail(DescribePayWaitDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribePayWaitDetail", DescribePayWaitDetailResponse.class);
+    }
+
+    /**
      *本接口用于获取已验证的手机邮箱列表
      * @param req DescribePhoneEmailListRequest
      * @return DescribePhoneEmailListResponse
@@ -270,6 +391,17 @@ public class DomainClient extends AbstractClient{
     }
 
     /**
+     *用于预释放竞价列表数据查询
+     * @param req DescribePreAuctionListRequest
+     * @return DescribePreAuctionListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePreAuctionListResponse DescribePreAuctionList(DescribePreAuctionListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribePreAuctionList", DescribePreAuctionListResponse.class);
+    }
+
+    /**
      *用户服务商提前获取预释放域名数据，查询数据根据结束时间进行倒序。
      * @param req DescribePreDomainListRequest
      * @return DescribePreDomainListResponse
@@ -278,6 +410,17 @@ public class DomainClient extends AbstractClient{
     public DescribePreDomainListResponse DescribePreDomainList(DescribePreDomainListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribePreDomainList", DescribePreDomainListResponse.class);
+    }
+
+    /**
+     *接口用于预释放页面查询
+     * @param req DescribePreReleaseListRequest
+     * @return DescribePreReleaseListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePreReleaseListResponse DescribePreReleaseList(DescribePreReleaseListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribePreReleaseList", DescribePreReleaseListResponse.class);
     }
 
     /**
@@ -333,6 +476,17 @@ public class DomainClient extends AbstractClient{
     public DescribeTldListResponse DescribeTldList(DescribeTldListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeTldList", DescribeTldListResponse.class);
+    }
+
+    /**
+     *查询预释放未预约域名详情接口
+     * @param req DescribeUnPreDomainDetailRequest
+     * @return DescribeUnPreDomainDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUnPreDomainDetailResponse DescribeUnPreDomainDetail(DescribeUnPreDomainDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeUnPreDomainDetail", DescribeUnPreDomainDetailResponse.class);
     }
 
     /**

@@ -45,7 +45,7 @@ public class DescribePvListRequest extends AbstractModel {
     private String StartTime;
 
     /**
-    * 获取day：d，   获取min则不填
+    * 对PV指标的查询维度。获取day：d，   获取min则不填。
     */
     @SerializedName("Dimension")
     @Expose
@@ -100,16 +100,16 @@ public class DescribePvListRequest extends AbstractModel {
     }
 
     /**
-     * Get 获取day：d，   获取min则不填 
-     * @return Dimension 获取day：d，   获取min则不填
+     * Get 对PV指标的查询维度。获取day：d，   获取min则不填。 
+     * @return Dimension 对PV指标的查询维度。获取day：d，   获取min则不填。
      */
     public String getDimension() {
         return this.Dimension;
     }
 
     /**
-     * Set 获取day：d，   获取min则不填
-     * @param Dimension 获取day：d，   获取min则不填
+     * Set 对PV指标的查询维度。获取day：d，   获取min则不填。
+     * @param Dimension 对PV指标的查询维度。获取day：d，   获取min则不填。
      */
     public void setDimension(String Dimension) {
         this.Dimension = Dimension;

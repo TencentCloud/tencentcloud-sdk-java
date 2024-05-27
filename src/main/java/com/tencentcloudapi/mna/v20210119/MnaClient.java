@@ -160,6 +160,17 @@ public class MnaClient extends AbstractClient{
     }
 
     /**
+     *根据AppId查询用户设置的流量告警信息，包括阈值，回调url和key
+     * @param req GetFlowAlarmInfoRequest
+     * @return GetFlowAlarmInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetFlowAlarmInfoResponse GetFlowAlarmInfo(GetFlowAlarmInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetFlowAlarmInfo", GetFlowAlarmInfoResponse.class);
+    }
+
+    /**
      *获取流量包列表
      * @param req GetFlowPackagesRequest
      * @return GetFlowPackagesResponse
@@ -179,6 +190,17 @@ public class MnaClient extends AbstractClient{
     public GetFlowStatisticResponse GetFlowStatistic(GetFlowStatisticRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "GetFlowStatistic", GetFlowStatisticResponse.class);
+    }
+
+    /**
+     *获取指定分组，指定时间数据流量使用情况
+     * @param req GetFlowStatisticByGroupRequest
+     * @return GetFlowStatisticByGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetFlowStatisticByGroupResponse GetFlowStatisticByGroup(GetFlowStatisticByGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetFlowStatisticByGroup", GetFlowStatisticByGroupResponse.class);
     }
 
     /**

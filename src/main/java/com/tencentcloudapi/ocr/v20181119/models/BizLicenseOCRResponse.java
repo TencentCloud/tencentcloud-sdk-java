@@ -135,6 +135,48 @@ WARN_RESHOOT_CARD翻拍件告警
     private Float Angle;
 
     /**
+    * 是否有国徽。0为没有，1为有。
+    */
+    @SerializedName("NationalEmblem")
+    @Expose
+    private Boolean NationalEmblem;
+
+    /**
+    * 是否有二维码。0为没有，1为有。
+    */
+    @SerializedName("QRCode")
+    @Expose
+    private Boolean QRCode;
+
+    /**
+    * 是否有印章。0为没有，1为有。
+    */
+    @SerializedName("Seal")
+    @Expose
+    private Boolean Seal;
+
+    /**
+    * 标题
+    */
+    @SerializedName("Title")
+    @Expose
+    private String Title;
+
+    /**
+    * 编号
+    */
+    @SerializedName("SerialNumber")
+    @Expose
+    private String SerialNumber;
+
+    /**
+    * 登记机关
+    */
+    @SerializedName("RegistrationAuthority")
+    @Expose
+    private String RegistrationAuthority;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -406,6 +448,102 @@ WARN_RESHOOT_CARD翻拍件告警
     }
 
     /**
+     * Get 是否有国徽。0为没有，1为有。 
+     * @return NationalEmblem 是否有国徽。0为没有，1为有。
+     */
+    public Boolean getNationalEmblem() {
+        return this.NationalEmblem;
+    }
+
+    /**
+     * Set 是否有国徽。0为没有，1为有。
+     * @param NationalEmblem 是否有国徽。0为没有，1为有。
+     */
+    public void setNationalEmblem(Boolean NationalEmblem) {
+        this.NationalEmblem = NationalEmblem;
+    }
+
+    /**
+     * Get 是否有二维码。0为没有，1为有。 
+     * @return QRCode 是否有二维码。0为没有，1为有。
+     */
+    public Boolean getQRCode() {
+        return this.QRCode;
+    }
+
+    /**
+     * Set 是否有二维码。0为没有，1为有。
+     * @param QRCode 是否有二维码。0为没有，1为有。
+     */
+    public void setQRCode(Boolean QRCode) {
+        this.QRCode = QRCode;
+    }
+
+    /**
+     * Get 是否有印章。0为没有，1为有。 
+     * @return Seal 是否有印章。0为没有，1为有。
+     */
+    public Boolean getSeal() {
+        return this.Seal;
+    }
+
+    /**
+     * Set 是否有印章。0为没有，1为有。
+     * @param Seal 是否有印章。0为没有，1为有。
+     */
+    public void setSeal(Boolean Seal) {
+        this.Seal = Seal;
+    }
+
+    /**
+     * Get 标题 
+     * @return Title 标题
+     */
+    public String getTitle() {
+        return this.Title;
+    }
+
+    /**
+     * Set 标题
+     * @param Title 标题
+     */
+    public void setTitle(String Title) {
+        this.Title = Title;
+    }
+
+    /**
+     * Get 编号 
+     * @return SerialNumber 编号
+     */
+    public String getSerialNumber() {
+        return this.SerialNumber;
+    }
+
+    /**
+     * Set 编号
+     * @param SerialNumber 编号
+     */
+    public void setSerialNumber(String SerialNumber) {
+        this.SerialNumber = SerialNumber;
+    }
+
+    /**
+     * Get 登记机关 
+     * @return RegistrationAuthority 登记机关
+     */
+    public String getRegistrationAuthority() {
+        return this.RegistrationAuthority;
+    }
+
+    /**
+     * Set 登记机关
+     * @param RegistrationAuthority 登记机关
+     */
+    public void setRegistrationAuthority(String RegistrationAuthority) {
+        this.RegistrationAuthority = RegistrationAuthority;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -480,6 +618,24 @@ WARN_RESHOOT_CARD翻拍件告警
         if (source.Angle != null) {
             this.Angle = new Float(source.Angle);
         }
+        if (source.NationalEmblem != null) {
+            this.NationalEmblem = new Boolean(source.NationalEmblem);
+        }
+        if (source.QRCode != null) {
+            this.QRCode = new Boolean(source.QRCode);
+        }
+        if (source.Seal != null) {
+            this.Seal = new Boolean(source.Seal);
+        }
+        if (source.Title != null) {
+            this.Title = new String(source.Title);
+        }
+        if (source.SerialNumber != null) {
+            this.SerialNumber = new String(source.SerialNumber);
+        }
+        if (source.RegistrationAuthority != null) {
+            this.RegistrationAuthority = new String(source.RegistrationAuthority);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -505,6 +661,12 @@ WARN_RESHOOT_CARD翻拍件告警
         this.setParamSimple(map, prefix + "IsDuplication", this.IsDuplication);
         this.setParamSimple(map, prefix + "RegistrationDate", this.RegistrationDate);
         this.setParamSimple(map, prefix + "Angle", this.Angle);
+        this.setParamSimple(map, prefix + "NationalEmblem", this.NationalEmblem);
+        this.setParamSimple(map, prefix + "QRCode", this.QRCode);
+        this.setParamSimple(map, prefix + "Seal", this.Seal);
+        this.setParamSimple(map, prefix + "Title", this.Title);
+        this.setParamSimple(map, prefix + "SerialNumber", this.SerialNumber);
+        this.setParamSimple(map, prefix + "RegistrationAuthority", this.RegistrationAuthority);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

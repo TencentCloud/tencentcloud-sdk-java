@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeDisksRequest extends AbstractModel {
 
     /**
-    * 云硬盘ID列表。
+    * 云硬盘ID列表。每次批量请求云硬盘的上限为 100。
     */
     @SerializedName("DiskIds")
     @Expose
@@ -93,16 +93,16 @@ disk-state
     private String Order;
 
     /**
-     * Get 云硬盘ID列表。 
-     * @return DiskIds 云硬盘ID列表。
+     * Get 云硬盘ID列表。每次批量请求云硬盘的上限为 100。 
+     * @return DiskIds 云硬盘ID列表。每次批量请求云硬盘的上限为 100。
      */
     public String [] getDiskIds() {
         return this.DiskIds;
     }
 
     /**
-     * Set 云硬盘ID列表。
-     * @param DiskIds 云硬盘ID列表。
+     * Set 云硬盘ID列表。每次批量请求云硬盘的上限为 100。
+     * @param DiskIds 云硬盘ID列表。每次批量请求云硬盘的上限为 100。
      */
     public void setDiskIds(String [] DiskIds) {
         this.DiskIds = DiskIds;

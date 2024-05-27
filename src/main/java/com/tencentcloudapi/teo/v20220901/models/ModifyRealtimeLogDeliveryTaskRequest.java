@@ -92,6 +92,7 @@ public class ModifyRealtimeLogDeliveryTaskRequest extends AbstractModel {
 
     /**
     * 日志投递的输出格式。不填保持原有配置。
+特别地，当 TaskType 取值为 cls 时，LogFormat.FormatType 的值只能为 json，且 LogFormat 中其他参数将被忽略，建议不传 LogFormat。
     */
     @SerializedName("LogFormat")
     @Expose
@@ -272,8 +273,10 @@ public class ModifyRealtimeLogDeliveryTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get 日志投递的输出格式。不填保持原有配置。 
+     * Get 日志投递的输出格式。不填保持原有配置。
+特别地，当 TaskType 取值为 cls 时，LogFormat.FormatType 的值只能为 json，且 LogFormat 中其他参数将被忽略，建议不传 LogFormat。 
      * @return LogFormat 日志投递的输出格式。不填保持原有配置。
+特别地，当 TaskType 取值为 cls 时，LogFormat.FormatType 的值只能为 json，且 LogFormat 中其他参数将被忽略，建议不传 LogFormat。
      */
     public LogFormat getLogFormat() {
         return this.LogFormat;
@@ -281,7 +284,9 @@ public class ModifyRealtimeLogDeliveryTaskRequest extends AbstractModel {
 
     /**
      * Set 日志投递的输出格式。不填保持原有配置。
+特别地，当 TaskType 取值为 cls 时，LogFormat.FormatType 的值只能为 json，且 LogFormat 中其他参数将被忽略，建议不传 LogFormat。
      * @param LogFormat 日志投递的输出格式。不填保持原有配置。
+特别地，当 TaskType 取值为 cls 时，LogFormat.FormatType 的值只能为 json，且 LogFormat 中其他参数将被忽略，建议不传 LogFormat。
      */
     public void setLogFormat(LogFormat LogFormat) {
         this.LogFormat = LogFormat;
