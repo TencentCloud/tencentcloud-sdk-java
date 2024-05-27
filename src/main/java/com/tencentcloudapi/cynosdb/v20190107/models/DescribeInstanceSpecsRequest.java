@@ -39,6 +39,13 @@ public class DescribeInstanceSpecsRequest extends AbstractModel {
     private Boolean IncludeZoneStocks;
 
     /**
+    * 实例机器类型
+    */
+    @SerializedName("DeviceType")
+    @Expose
+    private String DeviceType;
+
+    /**
      * Get 数据库类型，取值范围: 
 <li> MYSQL </li> 
      * @return DbType 数据库类型，取值范围: 
@@ -74,6 +81,22 @@ public class DescribeInstanceSpecsRequest extends AbstractModel {
         this.IncludeZoneStocks = IncludeZoneStocks;
     }
 
+    /**
+     * Get 实例机器类型 
+     * @return DeviceType 实例机器类型
+     */
+    public String getDeviceType() {
+        return this.DeviceType;
+    }
+
+    /**
+     * Set 实例机器类型
+     * @param DeviceType 实例机器类型
+     */
+    public void setDeviceType(String DeviceType) {
+        this.DeviceType = DeviceType;
+    }
+
     public DescribeInstanceSpecsRequest() {
     }
 
@@ -88,6 +111,9 @@ public class DescribeInstanceSpecsRequest extends AbstractModel {
         if (source.IncludeZoneStocks != null) {
             this.IncludeZoneStocks = new Boolean(source.IncludeZoneStocks);
         }
+        if (source.DeviceType != null) {
+            this.DeviceType = new String(source.DeviceType);
+        }
     }
 
 
@@ -97,6 +123,7 @@ public class DescribeInstanceSpecsRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DbType", this.DbType);
         this.setParamSimple(map, prefix + "IncludeZoneStocks", this.IncludeZoneStocks);
+        this.setParamSimple(map, prefix + "DeviceType", this.DeviceType);
 
     }
 }

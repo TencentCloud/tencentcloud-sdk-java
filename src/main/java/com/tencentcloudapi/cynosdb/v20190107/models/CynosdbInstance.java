@@ -415,6 +415,14 @@ pause
     private InstanceAbility InstanceAbility;
 
     /**
+    * 实例机器类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DeviceType")
+    @Expose
+    private String DeviceType;
+
+    /**
      * Get 用户Uin 
      * @return Uin 用户Uin
      */
@@ -1330,6 +1338,26 @@ pause
         this.InstanceAbility = InstanceAbility;
     }
 
+    /**
+     * Get 实例机器类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DeviceType 实例机器类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDeviceType() {
+        return this.DeviceType;
+    }
+
+    /**
+     * Set 实例机器类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DeviceType 实例机器类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDeviceType(String DeviceType) {
+        this.DeviceType = DeviceType;
+    }
+
     public CynosdbInstance() {
     }
 
@@ -1515,6 +1543,9 @@ pause
         if (source.InstanceAbility != null) {
             this.InstanceAbility = new InstanceAbility(source.InstanceAbility);
         }
+        if (source.DeviceType != null) {
+            this.DeviceType = new String(source.DeviceType);
+        }
     }
 
 
@@ -1576,6 +1607,7 @@ pause
         this.setParamArrayObj(map, prefix + "ResourcePackages.", this.ResourcePackages);
         this.setParamSimple(map, prefix + "InstanceIndexMode", this.InstanceIndexMode);
         this.setParamObj(map, prefix + "InstanceAbility.", this.InstanceAbility);
+        this.setParamSimple(map, prefix + "DeviceType", this.DeviceType);
 
     }
 }

@@ -131,6 +131,14 @@ public class DspaInstance extends AbstractModel {
     private Long RenewFlag;
 
     /**
+    * 实例渠道
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Channel")
+    @Expose
+    private String Channel;
+
+    /**
      * Get DSPA实例ID。 
      * @return DspaId DSPA实例ID。
      */
@@ -378,6 +386,26 @@ public class DspaInstance extends AbstractModel {
         this.RenewFlag = RenewFlag;
     }
 
+    /**
+     * Get 实例渠道
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Channel 实例渠道
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getChannel() {
+        return this.Channel;
+    }
+
+    /**
+     * Set 实例渠道
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Channel 实例渠道
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setChannel(String Channel) {
+        this.Channel = Channel;
+    }
+
     public DspaInstance() {
     }
 
@@ -431,6 +459,9 @@ public class DspaInstance extends AbstractModel {
         if (source.RenewFlag != null) {
             this.RenewFlag = new Long(source.RenewFlag);
         }
+        if (source.Channel != null) {
+            this.Channel = new String(source.Channel);
+        }
     }
 
 
@@ -453,6 +484,7 @@ public class DspaInstance extends AbstractModel {
         this.setParamSimple(map, prefix + "CosTotalQuota", this.CosTotalQuota);
         this.setParamSimple(map, prefix + "CosQuotaUnit", this.CosQuotaUnit);
         this.setParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
+        this.setParamSimple(map, prefix + "Channel", this.Channel);
 
     }
 }

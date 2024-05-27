@@ -48,6 +48,14 @@ public class GooseFS extends AbstractModel {
     private String Path;
 
     /**
+    * GooseFS命名空间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NameSpace")
+    @Expose
+    private String NameSpace;
+
+    /**
      * Get goosefs实例id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Id goosefs实例id
@@ -107,6 +115,26 @@ public class GooseFS extends AbstractModel {
         this.Path = Path;
     }
 
+    /**
+     * Get GooseFS命名空间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NameSpace GooseFS命名空间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getNameSpace() {
+        return this.NameSpace;
+    }
+
+    /**
+     * Set GooseFS命名空间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NameSpace GooseFS命名空间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNameSpace(String NameSpace) {
+        this.NameSpace = NameSpace;
+    }
+
     public GooseFS() {
     }
 
@@ -124,6 +152,9 @@ public class GooseFS extends AbstractModel {
         if (source.Path != null) {
             this.Path = new String(source.Path);
         }
+        if (source.NameSpace != null) {
+            this.NameSpace = new String(source.NameSpace);
+        }
     }
 
 
@@ -134,6 +165,7 @@ public class GooseFS extends AbstractModel {
         this.setParamSimple(map, prefix + "Id", this.Id);
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "Path", this.Path);
+        this.setParamSimple(map, prefix + "NameSpace", this.NameSpace);
 
     }
 }

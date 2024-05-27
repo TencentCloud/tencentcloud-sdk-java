@@ -204,6 +204,17 @@ public class DbbrainClient extends AbstractClient{
     }
 
     /**
+     *删除Redis实例的大key分析任务。
+     * @param req DeleteRedisBigKeyAnalysisTasksRequest
+     * @return DeleteRedisBigKeyAnalysisTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteRedisBigKeyAnalysisTasksResponse DeleteRedisBigKeyAnalysisTasks(DeleteRedisBigKeyAnalysisTasksRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteRedisBigKeyAnalysisTasks", DeleteRedisBigKeyAnalysisTasksResponse.class);
+    }
+
+    /**
      *删除安全审计日志导出任务。
      * @param req DeleteSecurityAuditLogExportTasksRequest
      * @return DeleteSecurityAuditLogExportTasksResponse

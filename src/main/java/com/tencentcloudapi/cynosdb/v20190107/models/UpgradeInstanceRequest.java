@@ -52,6 +52,13 @@ public class UpgradeInstanceRequest extends AbstractModel {
     private String UpgradeType;
 
     /**
+    * 实例机器类型
+    */
+    @SerializedName("DeviceType")
+    @Expose
+    private String DeviceType;
+
+    /**
     * 该参数已废弃
     */
     @SerializedName("StorageLimit")
@@ -155,6 +162,22 @@ public class UpgradeInstanceRequest extends AbstractModel {
      */
     public void setUpgradeType(String UpgradeType) {
         this.UpgradeType = UpgradeType;
+    }
+
+    /**
+     * Get 实例机器类型 
+     * @return DeviceType 实例机器类型
+     */
+    public String getDeviceType() {
+        return this.DeviceType;
+    }
+
+    /**
+     * Set 实例机器类型
+     * @param DeviceType 实例机器类型
+     */
+    public void setDeviceType(String DeviceType) {
+        this.DeviceType = DeviceType;
     }
 
     /**
@@ -273,6 +296,9 @@ public class UpgradeInstanceRequest extends AbstractModel {
         if (source.UpgradeType != null) {
             this.UpgradeType = new String(source.UpgradeType);
         }
+        if (source.DeviceType != null) {
+            this.DeviceType = new String(source.DeviceType);
+        }
         if (source.StorageLimit != null) {
             this.StorageLimit = new Long(source.StorageLimit);
         }
@@ -302,6 +328,7 @@ public class UpgradeInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Cpu", this.Cpu);
         this.setParamSimple(map, prefix + "Memory", this.Memory);
         this.setParamSimple(map, prefix + "UpgradeType", this.UpgradeType);
+        this.setParamSimple(map, prefix + "DeviceType", this.DeviceType);
         this.setParamSimple(map, prefix + "StorageLimit", this.StorageLimit);
         this.setParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
         this.setParamSimple(map, prefix + "DbType", this.DbType);

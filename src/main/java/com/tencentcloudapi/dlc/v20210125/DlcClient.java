@@ -1161,6 +1161,17 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *本接口（ListTaskJobLogName）用于获取spark-jar日志名称列表
+     * @param req ListTaskJobLogNameRequest
+     * @return ListTaskJobLogNameResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListTaskJobLogNameResponse ListTaskJobLogName(ListTaskJobLogNameRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListTaskJobLogName", ListTaskJobLogNameResponse.class);
+    }
+
+    /**
      *元数据锁
      * @param req LockMetaDataRequest
      * @return LockMetaDataResponse

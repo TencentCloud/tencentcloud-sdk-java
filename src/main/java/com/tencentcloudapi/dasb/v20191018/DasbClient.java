@@ -116,6 +116,17 @@ public class DasbClient extends AbstractClient{
     }
 
     /**
+     *创建修改密码任务
+     * @param req CreateChangePwdTaskRequest
+     * @return CreateChangePwdTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateChangePwdTaskResponse CreateChangePwdTask(CreateChangePwdTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateChangePwdTask", CreateChangePwdTaskResponse.class);
+    }
+
+    /**
      *新建高危命令模板
      * @param req CreateCmdTemplateRequest
      * @return CreateCmdTemplateResponse
@@ -190,6 +201,17 @@ public class DasbClient extends AbstractClient{
     public DeleteAclsResponse DeleteAcls(DeleteAclsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteAcls", DeleteAclsResponse.class);
+    }
+
+    /**
+     *删除改密任务
+     * @param req DeleteChangePwdTaskRequest
+     * @return DeleteChangePwdTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteChangePwdTaskResponse DeleteChangePwdTask(DeleteChangePwdTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteChangePwdTask", DeleteChangePwdTaskResponse.class);
     }
 
     /**
@@ -311,6 +333,28 @@ public class DasbClient extends AbstractClient{
     public DescribeAssetSyncStatusResponse DescribeAssetSyncStatus(DescribeAssetSyncStatusRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeAssetSyncStatus", DescribeAssetSyncStatusResponse.class);
+    }
+
+    /**
+     *查询改密任务列表
+     * @param req DescribeChangePwdTaskRequest
+     * @return DescribeChangePwdTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeChangePwdTaskResponse DescribeChangePwdTask(DescribeChangePwdTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeChangePwdTask", DescribeChangePwdTaskResponse.class);
+    }
+
+    /**
+     *查询改密任务详情
+     * @param req DescribeChangePwdTaskDetailRequest
+     * @return DescribeChangePwdTaskDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeChangePwdTaskDetailResponse DescribeChangePwdTaskDetail(DescribeChangePwdTaskDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeChangePwdTaskDetail", DescribeChangePwdTaskDetailResponse.class);
     }
 
     /**
@@ -468,6 +512,17 @@ public class DasbClient extends AbstractClient{
     }
 
     /**
+     *更新修改密码任务
+     * @param req ModifyChangePwdTaskRequest
+     * @return ModifyChangePwdTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyChangePwdTaskResponse ModifyChangePwdTask(ModifyChangePwdTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyChangePwdTask", ModifyChangePwdTaskResponse.class);
+    }
+
+    /**
      *修改高危命令模板
      * @param req ModifyCmdTemplateRequest
      * @return ModifyCmdTemplateResponse
@@ -575,6 +630,17 @@ public class DasbClient extends AbstractClient{
     public ResetUserResponse ResetUser(ResetUserRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ResetUser", ResetUserResponse.class);
+    }
+
+    /**
+     *执行改密任务
+     * @param req RunChangePwdTaskRequest
+     * @return RunChangePwdTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public RunChangePwdTaskResponse RunChangePwdTask(RunChangePwdTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RunChangePwdTask", RunChangePwdTaskResponse.class);
     }
 
     /**

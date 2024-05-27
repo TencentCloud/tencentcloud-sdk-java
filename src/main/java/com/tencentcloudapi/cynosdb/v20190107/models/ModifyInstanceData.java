@@ -66,6 +66,22 @@ public class ModifyInstanceData extends AbstractModel {
     private Long OldStorageLimit;
 
     /**
+    * 变配前实例机器类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OldDeviceType")
+    @Expose
+    private String OldDeviceType;
+
+    /**
+    * 变配后实例机器类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DeviceType")
+    @Expose
+    private String DeviceType;
+
+    /**
     * 升级方式。升级完成后切换或维护时间内切换
     */
     @SerializedName("UpgradeType")
@@ -169,6 +185,46 @@ public class ModifyInstanceData extends AbstractModel {
     }
 
     /**
+     * Get 变配前实例机器类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OldDeviceType 变配前实例机器类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getOldDeviceType() {
+        return this.OldDeviceType;
+    }
+
+    /**
+     * Set 变配前实例机器类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OldDeviceType 变配前实例机器类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOldDeviceType(String OldDeviceType) {
+        this.OldDeviceType = OldDeviceType;
+    }
+
+    /**
+     * Get 变配后实例机器类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DeviceType 变配后实例机器类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDeviceType() {
+        return this.DeviceType;
+    }
+
+    /**
+     * Set 变配后实例机器类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DeviceType 变配后实例机器类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDeviceType(String DeviceType) {
+        this.DeviceType = DeviceType;
+    }
+
+    /**
      * Get 升级方式。升级完成后切换或维护时间内切换 
      * @return UpgradeType 升级方式。升级完成后切换或维护时间内切换
      */
@@ -210,6 +266,12 @@ public class ModifyInstanceData extends AbstractModel {
         if (source.OldStorageLimit != null) {
             this.OldStorageLimit = new Long(source.OldStorageLimit);
         }
+        if (source.OldDeviceType != null) {
+            this.OldDeviceType = new String(source.OldDeviceType);
+        }
+        if (source.DeviceType != null) {
+            this.DeviceType = new String(source.DeviceType);
+        }
         if (source.UpgradeType != null) {
             this.UpgradeType = new String(source.UpgradeType);
         }
@@ -226,6 +288,8 @@ public class ModifyInstanceData extends AbstractModel {
         this.setParamSimple(map, prefix + "OldCpu", this.OldCpu);
         this.setParamSimple(map, prefix + "OldMemory", this.OldMemory);
         this.setParamSimple(map, prefix + "OldStorageLimit", this.OldStorageLimit);
+        this.setParamSimple(map, prefix + "OldDeviceType", this.OldDeviceType);
+        this.setParamSimple(map, prefix + "DeviceType", this.DeviceType);
         this.setParamSimple(map, prefix + "UpgradeType", this.UpgradeType);
 
     }

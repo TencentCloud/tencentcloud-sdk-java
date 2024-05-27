@@ -52,6 +52,13 @@ public class AddInstancesRequest extends AbstractModel {
     private Long ReadOnlyCount;
 
     /**
+    * 实例机器类型
+    */
+    @SerializedName("DeviceType")
+    @Expose
+    private String DeviceType;
+
+    /**
     * 实例组ID，在已有RO组中新增实例时使用，不传则新增RO组。当前版本不建议传输该值。
     */
     @SerializedName("InstanceGrpId")
@@ -205,6 +212,22 @@ public class AddInstancesRequest extends AbstractModel {
      */
     public void setReadOnlyCount(Long ReadOnlyCount) {
         this.ReadOnlyCount = ReadOnlyCount;
+    }
+
+    /**
+     * Get 实例机器类型 
+     * @return DeviceType 实例机器类型
+     */
+    public String getDeviceType() {
+        return this.DeviceType;
+    }
+
+    /**
+     * Set 实例机器类型
+     * @param DeviceType 实例机器类型
+     */
+    public void setDeviceType(String DeviceType) {
+        this.DeviceType = DeviceType;
     }
 
     /**
@@ -443,6 +466,9 @@ public class AddInstancesRequest extends AbstractModel {
         if (source.ReadOnlyCount != null) {
             this.ReadOnlyCount = new Long(source.ReadOnlyCount);
         }
+        if (source.DeviceType != null) {
+            this.DeviceType = new String(source.DeviceType);
+        }
         if (source.InstanceGrpId != null) {
             this.InstanceGrpId = new String(source.InstanceGrpId);
         }
@@ -499,6 +525,7 @@ public class AddInstancesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Cpu", this.Cpu);
         this.setParamSimple(map, prefix + "Memory", this.Memory);
         this.setParamSimple(map, prefix + "ReadOnlyCount", this.ReadOnlyCount);
+        this.setParamSimple(map, prefix + "DeviceType", this.DeviceType);
         this.setParamSimple(map, prefix + "InstanceGrpId", this.InstanceGrpId);
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);

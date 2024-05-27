@@ -52,6 +52,13 @@ public class InquirePriceCreateRequest extends AbstractModel {
     private String StoragePayMode;
 
     /**
+    * 实例设备类型
+    */
+    @SerializedName("DeviceType")
+    @Expose
+    private String DeviceType;
+
+    /**
     * CPU核数，PREPAID与POSTPAID实例类型必传
     */
     @SerializedName("Cpu")
@@ -155,6 +162,22 @@ public class InquirePriceCreateRequest extends AbstractModel {
      */
     public void setStoragePayMode(String StoragePayMode) {
         this.StoragePayMode = StoragePayMode;
+    }
+
+    /**
+     * Get 实例设备类型 
+     * @return DeviceType 实例设备类型
+     */
+    public String getDeviceType() {
+        return this.DeviceType;
+    }
+
+    /**
+     * Set 实例设备类型
+     * @param DeviceType 实例设备类型
+     */
+    public void setDeviceType(String DeviceType) {
+        this.DeviceType = DeviceType;
     }
 
     /**
@@ -273,6 +296,9 @@ public class InquirePriceCreateRequest extends AbstractModel {
         if (source.StoragePayMode != null) {
             this.StoragePayMode = new String(source.StoragePayMode);
         }
+        if (source.DeviceType != null) {
+            this.DeviceType = new String(source.DeviceType);
+        }
         if (source.Cpu != null) {
             this.Cpu = new Long(source.Cpu);
         }
@@ -302,6 +328,7 @@ public class InquirePriceCreateRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "GoodsNum", this.GoodsNum);
         this.setParamSimple(map, prefix + "InstancePayMode", this.InstancePayMode);
         this.setParamSimple(map, prefix + "StoragePayMode", this.StoragePayMode);
+        this.setParamSimple(map, prefix + "DeviceType", this.DeviceType);
         this.setParamSimple(map, prefix + "Cpu", this.Cpu);
         this.setParamSimple(map, prefix + "Memory", this.Memory);
         this.setParamSimple(map, prefix + "Ccu", this.Ccu);

@@ -87,6 +87,13 @@ public class DescribeSlowQueryRecordsDownloadRequest extends AbstractModel {
     private String MemoryUsage;
 
     /**
+    * IsQuery条件
+    */
+    @SerializedName("IsQuery")
+    @Expose
+    private Long IsQuery;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -230,6 +237,22 @@ public class DescribeSlowQueryRecordsDownloadRequest extends AbstractModel {
         this.MemoryUsage = MemoryUsage;
     }
 
+    /**
+     * Get IsQuery条件 
+     * @return IsQuery IsQuery条件
+     */
+    public Long getIsQuery() {
+        return this.IsQuery;
+    }
+
+    /**
+     * Set IsQuery条件
+     * @param IsQuery IsQuery条件
+     */
+    public void setIsQuery(Long IsQuery) {
+        this.IsQuery = IsQuery;
+    }
+
     public DescribeSlowQueryRecordsDownloadRequest() {
     }
 
@@ -265,6 +288,9 @@ public class DescribeSlowQueryRecordsDownloadRequest extends AbstractModel {
         if (source.MemoryUsage != null) {
             this.MemoryUsage = new String(source.MemoryUsage);
         }
+        if (source.IsQuery != null) {
+            this.IsQuery = new Long(source.IsQuery);
+        }
     }
 
 
@@ -281,6 +307,7 @@ public class DescribeSlowQueryRecordsDownloadRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ReadRows", this.ReadRows);
         this.setParamSimple(map, prefix + "ResultBytes", this.ResultBytes);
         this.setParamSimple(map, prefix + "MemoryUsage", this.MemoryUsage);
+        this.setParamSimple(map, prefix + "IsQuery", this.IsQuery);
 
     }
 }

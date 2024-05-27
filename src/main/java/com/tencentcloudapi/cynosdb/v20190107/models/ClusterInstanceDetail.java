@@ -119,6 +119,22 @@ public class ClusterInstanceDetail extends AbstractModel {
     private String ServerlessStatus;
 
     /**
+    * 实例任务信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InstanceTasks")
+    @Expose
+    private ObjectTask [] InstanceTasks;
+
+    /**
+    * 实例机器类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InstanceDeviceType")
+    @Expose
+    private String InstanceDeviceType;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -342,6 +358,46 @@ public class ClusterInstanceDetail extends AbstractModel {
         this.ServerlessStatus = ServerlessStatus;
     }
 
+    /**
+     * Get 实例任务信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InstanceTasks 实例任务信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ObjectTask [] getInstanceTasks() {
+        return this.InstanceTasks;
+    }
+
+    /**
+     * Set 实例任务信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstanceTasks 实例任务信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInstanceTasks(ObjectTask [] InstanceTasks) {
+        this.InstanceTasks = InstanceTasks;
+    }
+
+    /**
+     * Get 实例机器类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InstanceDeviceType 实例机器类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getInstanceDeviceType() {
+        return this.InstanceDeviceType;
+    }
+
+    /**
+     * Set 实例机器类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstanceDeviceType 实例机器类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInstanceDeviceType(String InstanceDeviceType) {
+        this.InstanceDeviceType = InstanceDeviceType;
+    }
+
     public ClusterInstanceDetail() {
     }
 
@@ -392,6 +448,15 @@ public class ClusterInstanceDetail extends AbstractModel {
         if (source.ServerlessStatus != null) {
             this.ServerlessStatus = new String(source.ServerlessStatus);
         }
+        if (source.InstanceTasks != null) {
+            this.InstanceTasks = new ObjectTask[source.InstanceTasks.length];
+            for (int i = 0; i < source.InstanceTasks.length; i++) {
+                this.InstanceTasks[i] = new ObjectTask(source.InstanceTasks[i]);
+            }
+        }
+        if (source.InstanceDeviceType != null) {
+            this.InstanceDeviceType = new String(source.InstanceDeviceType);
+        }
     }
 
 
@@ -412,6 +477,8 @@ public class ClusterInstanceDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "MaintainDuration", this.MaintainDuration);
         this.setParamArraySimple(map, prefix + "MaintainWeekDays.", this.MaintainWeekDays);
         this.setParamSimple(map, prefix + "ServerlessStatus", this.ServerlessStatus);
+        this.setParamArrayObj(map, prefix + "InstanceTasks.", this.InstanceTasks);
+        this.setParamSimple(map, prefix + "InstanceDeviceType", this.InstanceDeviceType);
 
     }
 }

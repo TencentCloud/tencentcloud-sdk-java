@@ -38,13 +38,6 @@ public class RollbackToNewClusterRequest extends AbstractModel {
     private String OriginalClusterId;
 
     /**
-    * 集群名称，长度小于64个字符，每个字符取值范围：大/小写字母，数字，特殊符号（'-','_','.'）
-    */
-    @SerializedName("ClusterName")
-    @Expose
-    private String ClusterName;
-
-    /**
     * 所属VPC网络ID
     */
     @SerializedName("UniqVpcId")
@@ -59,11 +52,39 @@ public class RollbackToNewClusterRequest extends AbstractModel {
     private String UniqSubnetId;
 
     /**
+    * 集群名称，长度小于64个字符，每个字符取值范围：大/小写字母，数字，特殊符号（'-','_','.'）
+    */
+    @SerializedName("ClusterName")
+    @Expose
+    private String ClusterName;
+
+    /**
+    * 快照回档，表示snapshotId；时间点回档，表示queryId，为0，表示需要判断时间点是否有效
+    */
+    @SerializedName("RollbackId")
+    @Expose
+    private Long RollbackId;
+
+    /**
+    * 时间点回档，指定时间；快照回档，快照时间
+    */
+    @SerializedName("ExpectTime")
+    @Expose
+    private String ExpectTime;
+
+    /**
     * 是否自动选择代金券 1是 0否 默认为0
     */
     @SerializedName("AutoVoucher")
     @Expose
     private Long AutoVoucher;
+
+    /**
+    * 集群创建需要绑定的tag数组信息
+    */
+    @SerializedName("ResourceTags")
+    @Expose
+    private Tag [] ResourceTags;
 
     /**
     * Db类型
@@ -131,25 +152,11 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
     private ParamItem [] ClusterParams;
 
     /**
-    * 0-下单并支付 1-下单
-    */
-    @SerializedName("DealMode")
-    @Expose
-    private Long DealMode;
-
-    /**
     * 参数模板ID，可以通过查询参数模板信息DescribeParamTemplates获得参数模板ID
     */
     @SerializedName("ParamTemplateId")
     @Expose
     private Long ParamTemplateId;
-
-    /**
-    * 集群创建需要绑定的tag数组信息
-    */
-    @SerializedName("ResourceTags")
-    @Expose
-    private Tag [] ResourceTags;
 
     /**
     * 实例初始化配置信息，主要用于购买集群时选不同规格实例
@@ -159,18 +166,18 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
     private InstanceInitInfo [] InstanceInitInfos;
 
     /**
-    * 快照回档，表示snapshotId；时间点回档，表示queryId，为0，表示需要判断时间点是否有效
+    * 0-下单并支付 1-下单
     */
-    @SerializedName("RollbackId")
+    @SerializedName("DealMode")
     @Expose
-    private Long RollbackId;
+    private Long DealMode;
 
     /**
-    * 时间点回档，指定时间；快照回档，快照时间
+    * 计算节点付费模式：0-按量计费，1-预付费
     */
-    @SerializedName("ExpectTime")
+    @SerializedName("PayMode")
     @Expose
-    private String ExpectTime;
+    private Long PayMode;
 
     /**
      * Get 可用区 
@@ -202,22 +209,6 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
      */
     public void setOriginalClusterId(String OriginalClusterId) {
         this.OriginalClusterId = OriginalClusterId;
-    }
-
-    /**
-     * Get 集群名称，长度小于64个字符，每个字符取值范围：大/小写字母，数字，特殊符号（'-','_','.'） 
-     * @return ClusterName 集群名称，长度小于64个字符，每个字符取值范围：大/小写字母，数字，特殊符号（'-','_','.'）
-     */
-    public String getClusterName() {
-        return this.ClusterName;
-    }
-
-    /**
-     * Set 集群名称，长度小于64个字符，每个字符取值范围：大/小写字母，数字，特殊符号（'-','_','.'）
-     * @param ClusterName 集群名称，长度小于64个字符，每个字符取值范围：大/小写字母，数字，特殊符号（'-','_','.'）
-     */
-    public void setClusterName(String ClusterName) {
-        this.ClusterName = ClusterName;
     }
 
     /**
@@ -253,6 +244,54 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
     }
 
     /**
+     * Get 集群名称，长度小于64个字符，每个字符取值范围：大/小写字母，数字，特殊符号（'-','_','.'） 
+     * @return ClusterName 集群名称，长度小于64个字符，每个字符取值范围：大/小写字母，数字，特殊符号（'-','_','.'）
+     */
+    public String getClusterName() {
+        return this.ClusterName;
+    }
+
+    /**
+     * Set 集群名称，长度小于64个字符，每个字符取值范围：大/小写字母，数字，特殊符号（'-','_','.'）
+     * @param ClusterName 集群名称，长度小于64个字符，每个字符取值范围：大/小写字母，数字，特殊符号（'-','_','.'）
+     */
+    public void setClusterName(String ClusterName) {
+        this.ClusterName = ClusterName;
+    }
+
+    /**
+     * Get 快照回档，表示snapshotId；时间点回档，表示queryId，为0，表示需要判断时间点是否有效 
+     * @return RollbackId 快照回档，表示snapshotId；时间点回档，表示queryId，为0，表示需要判断时间点是否有效
+     */
+    public Long getRollbackId() {
+        return this.RollbackId;
+    }
+
+    /**
+     * Set 快照回档，表示snapshotId；时间点回档，表示queryId，为0，表示需要判断时间点是否有效
+     * @param RollbackId 快照回档，表示snapshotId；时间点回档，表示queryId，为0，表示需要判断时间点是否有效
+     */
+    public void setRollbackId(Long RollbackId) {
+        this.RollbackId = RollbackId;
+    }
+
+    /**
+     * Get 时间点回档，指定时间；快照回档，快照时间 
+     * @return ExpectTime 时间点回档，指定时间；快照回档，快照时间
+     */
+    public String getExpectTime() {
+        return this.ExpectTime;
+    }
+
+    /**
+     * Set 时间点回档，指定时间；快照回档，快照时间
+     * @param ExpectTime 时间点回档，指定时间；快照回档，快照时间
+     */
+    public void setExpectTime(String ExpectTime) {
+        this.ExpectTime = ExpectTime;
+    }
+
+    /**
      * Get 是否自动选择代金券 1是 0否 默认为0 
      * @return AutoVoucher 是否自动选择代金券 1是 0否 默认为0
      */
@@ -266,6 +305,22 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
      */
     public void setAutoVoucher(Long AutoVoucher) {
         this.AutoVoucher = AutoVoucher;
+    }
+
+    /**
+     * Get 集群创建需要绑定的tag数组信息 
+     * @return ResourceTags 集群创建需要绑定的tag数组信息
+     */
+    public Tag [] getResourceTags() {
+        return this.ResourceTags;
+    }
+
+    /**
+     * Set 集群创建需要绑定的tag数组信息
+     * @param ResourceTags 集群创建需要绑定的tag数组信息
+     */
+    public void setResourceTags(Tag [] ResourceTags) {
+        this.ResourceTags = ResourceTags;
     }
 
     /**
@@ -433,22 +488,6 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
     }
 
     /**
-     * Get 0-下单并支付 1-下单 
-     * @return DealMode 0-下单并支付 1-下单
-     */
-    public Long getDealMode() {
-        return this.DealMode;
-    }
-
-    /**
-     * Set 0-下单并支付 1-下单
-     * @param DealMode 0-下单并支付 1-下单
-     */
-    public void setDealMode(Long DealMode) {
-        this.DealMode = DealMode;
-    }
-
-    /**
      * Get 参数模板ID，可以通过查询参数模板信息DescribeParamTemplates获得参数模板ID 
      * @return ParamTemplateId 参数模板ID，可以通过查询参数模板信息DescribeParamTemplates获得参数模板ID
      */
@@ -462,22 +501,6 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
      */
     public void setParamTemplateId(Long ParamTemplateId) {
         this.ParamTemplateId = ParamTemplateId;
-    }
-
-    /**
-     * Get 集群创建需要绑定的tag数组信息 
-     * @return ResourceTags 集群创建需要绑定的tag数组信息
-     */
-    public Tag [] getResourceTags() {
-        return this.ResourceTags;
-    }
-
-    /**
-     * Set 集群创建需要绑定的tag数组信息
-     * @param ResourceTags 集群创建需要绑定的tag数组信息
-     */
-    public void setResourceTags(Tag [] ResourceTags) {
-        this.ResourceTags = ResourceTags;
     }
 
     /**
@@ -497,35 +520,35 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
     }
 
     /**
-     * Get 快照回档，表示snapshotId；时间点回档，表示queryId，为0，表示需要判断时间点是否有效 
-     * @return RollbackId 快照回档，表示snapshotId；时间点回档，表示queryId，为0，表示需要判断时间点是否有效
+     * Get 0-下单并支付 1-下单 
+     * @return DealMode 0-下单并支付 1-下单
      */
-    public Long getRollbackId() {
-        return this.RollbackId;
+    public Long getDealMode() {
+        return this.DealMode;
     }
 
     /**
-     * Set 快照回档，表示snapshotId；时间点回档，表示queryId，为0，表示需要判断时间点是否有效
-     * @param RollbackId 快照回档，表示snapshotId；时间点回档，表示queryId，为0，表示需要判断时间点是否有效
+     * Set 0-下单并支付 1-下单
+     * @param DealMode 0-下单并支付 1-下单
      */
-    public void setRollbackId(Long RollbackId) {
-        this.RollbackId = RollbackId;
+    public void setDealMode(Long DealMode) {
+        this.DealMode = DealMode;
     }
 
     /**
-     * Get 时间点回档，指定时间；快照回档，快照时间 
-     * @return ExpectTime 时间点回档，指定时间；快照回档，快照时间
+     * Get 计算节点付费模式：0-按量计费，1-预付费 
+     * @return PayMode 计算节点付费模式：0-按量计费，1-预付费
      */
-    public String getExpectTime() {
-        return this.ExpectTime;
+    public Long getPayMode() {
+        return this.PayMode;
     }
 
     /**
-     * Set 时间点回档，指定时间；快照回档，快照时间
-     * @param ExpectTime 时间点回档，指定时间；快照回档，快照时间
+     * Set 计算节点付费模式：0-按量计费，1-预付费
+     * @param PayMode 计算节点付费模式：0-按量计费，1-预付费
      */
-    public void setExpectTime(String ExpectTime) {
-        this.ExpectTime = ExpectTime;
+    public void setPayMode(Long PayMode) {
+        this.PayMode = PayMode;
     }
 
     public RollbackToNewClusterRequest() {
@@ -542,17 +565,29 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
         if (source.OriginalClusterId != null) {
             this.OriginalClusterId = new String(source.OriginalClusterId);
         }
-        if (source.ClusterName != null) {
-            this.ClusterName = new String(source.ClusterName);
-        }
         if (source.UniqVpcId != null) {
             this.UniqVpcId = new String(source.UniqVpcId);
         }
         if (source.UniqSubnetId != null) {
             this.UniqSubnetId = new String(source.UniqSubnetId);
         }
+        if (source.ClusterName != null) {
+            this.ClusterName = new String(source.ClusterName);
+        }
+        if (source.RollbackId != null) {
+            this.RollbackId = new Long(source.RollbackId);
+        }
+        if (source.ExpectTime != null) {
+            this.ExpectTime = new String(source.ExpectTime);
+        }
         if (source.AutoVoucher != null) {
             this.AutoVoucher = new Long(source.AutoVoucher);
+        }
+        if (source.ResourceTags != null) {
+            this.ResourceTags = new Tag[source.ResourceTags.length];
+            for (int i = 0; i < source.ResourceTags.length; i++) {
+                this.ResourceTags[i] = new Tag(source.ResourceTags[i]);
+            }
         }
         if (source.DbMode != null) {
             this.DbMode = new String(source.DbMode);
@@ -587,17 +622,8 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
                 this.ClusterParams[i] = new ParamItem(source.ClusterParams[i]);
             }
         }
-        if (source.DealMode != null) {
-            this.DealMode = new Long(source.DealMode);
-        }
         if (source.ParamTemplateId != null) {
             this.ParamTemplateId = new Long(source.ParamTemplateId);
-        }
-        if (source.ResourceTags != null) {
-            this.ResourceTags = new Tag[source.ResourceTags.length];
-            for (int i = 0; i < source.ResourceTags.length; i++) {
-                this.ResourceTags[i] = new Tag(source.ResourceTags[i]);
-            }
         }
         if (source.InstanceInitInfos != null) {
             this.InstanceInitInfos = new InstanceInitInfo[source.InstanceInitInfos.length];
@@ -605,11 +631,11 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
                 this.InstanceInitInfos[i] = new InstanceInitInfo(source.InstanceInitInfos[i]);
             }
         }
-        if (source.RollbackId != null) {
-            this.RollbackId = new Long(source.RollbackId);
+        if (source.DealMode != null) {
+            this.DealMode = new Long(source.DealMode);
         }
-        if (source.ExpectTime != null) {
-            this.ExpectTime = new String(source.ExpectTime);
+        if (source.PayMode != null) {
+            this.PayMode = new Long(source.PayMode);
         }
     }
 
@@ -620,10 +646,13 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamSimple(map, prefix + "OriginalClusterId", this.OriginalClusterId);
-        this.setParamSimple(map, prefix + "ClusterName", this.ClusterName);
         this.setParamSimple(map, prefix + "UniqVpcId", this.UniqVpcId);
         this.setParamSimple(map, prefix + "UniqSubnetId", this.UniqSubnetId);
+        this.setParamSimple(map, prefix + "ClusterName", this.ClusterName);
+        this.setParamSimple(map, prefix + "RollbackId", this.RollbackId);
+        this.setParamSimple(map, prefix + "ExpectTime", this.ExpectTime);
         this.setParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
+        this.setParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
         this.setParamSimple(map, prefix + "DbMode", this.DbMode);
         this.setParamSimple(map, prefix + "MinCpu", this.MinCpu);
         this.setParamSimple(map, prefix + "MaxCpu", this.MaxCpu);
@@ -632,12 +661,10 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
         this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
         this.setParamArraySimple(map, prefix + "AlarmPolicyIds.", this.AlarmPolicyIds);
         this.setParamArrayObj(map, prefix + "ClusterParams.", this.ClusterParams);
-        this.setParamSimple(map, prefix + "DealMode", this.DealMode);
         this.setParamSimple(map, prefix + "ParamTemplateId", this.ParamTemplateId);
-        this.setParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
         this.setParamArrayObj(map, prefix + "InstanceInitInfos.", this.InstanceInitInfos);
-        this.setParamSimple(map, prefix + "RollbackId", this.RollbackId);
-        this.setParamSimple(map, prefix + "ExpectTime", this.ExpectTime);
+        this.setParamSimple(map, prefix + "DealMode", this.DealMode);
+        this.setParamSimple(map, prefix + "PayMode", this.PayMode);
 
     }
 }

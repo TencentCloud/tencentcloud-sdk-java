@@ -39,6 +39,28 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
+     *激活
+     * @param req ActivateTWeCallLicenseRequest
+     * @return ActivateTWeCallLicenseResponse
+     * @throws TencentCloudSDKException
+     */
+    public ActivateTWeCallLicenseResponse ActivateTWeCallLicense(ActivateTWeCallLicenseRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ActivateTWeCallLicense", ActivateTWeCallLicenseResponse.class);
+    }
+
+    /**
+     *分配License
+     * @param req AssignTWeCallLicenseRequest
+     * @return AssignTWeCallLicenseResponse
+     * @throws TencentCloudSDKException
+     */
+    public AssignTWeCallLicenseResponse AssignTWeCallLicense(AssignTWeCallLicenseRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AssignTWeCallLicense", AssignTWeCallLicenseResponse.class);
+    }
+
+    /**
      *绑定云存用户
      * @param req BindCloudStorageUserRequest
      * @return BindCloudStorageUserResponse
@@ -91,6 +113,17 @@ public class IotexplorerClient extends AbstractClient{
     public CallDeviceActionSyncResponse CallDeviceActionSync(CallDeviceActionSyncRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CallDeviceActionSync", CallDeviceActionSyncResponse.class);
+    }
+
+    /**
+     *取消分配
+     * @param req CancelAssignTWeCallLicenseRequest
+     * @return CancelAssignTWeCallLicenseResponse
+     * @throws TencentCloudSDKException
+     */
+    public CancelAssignTWeCallLicenseResponse CancelAssignTWeCallLicense(CancelAssignTWeCallLicenseRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CancelAssignTWeCallLicense", CancelAssignTWeCallLicenseResponse.class);
     }
 
     /**
@@ -952,6 +985,17 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
+     *查询小程序列表
+     * @param req GetAuthMiniProgramAppListRequest
+     * @return GetAuthMiniProgramAppListResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetAuthMiniProgramAppListResponse GetAuthMiniProgramAppList(GetAuthMiniProgramAppListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetAuthMiniProgramAppList", GetAuthMiniProgramAppListResponse.class);
+    }
+
+    /**
      *列出量产数据列表信息。
      * @param req GetBatchProductionsListRequest
      * @return GetBatchProductionsListResponse
@@ -1070,6 +1114,28 @@ public class IotexplorerClient extends AbstractClient{
     public GetStudioProductListResponse GetStudioProductList(GetStudioProductListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "GetStudioProductList", GetStudioProductListResponse.class);
+    }
+
+    /**
+     *查询激活状态
+     * @param req GetTWeCallActiveStatusRequest
+     * @return GetTWeCallActiveStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetTWeCallActiveStatusResponse GetTWeCallActiveStatus(GetTWeCallActiveStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetTWeCallActiveStatus", GetTWeCallActiveStatusResponse.class);
+    }
+
+    /**
+     *查询TWeCall包列表
+     * @param req GetTWeCallPkgListRequest
+     * @return GetTWeCallPkgListResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetTWeCallPkgListResponse GetTWeCallPkgList(GetTWeCallPkgListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetTWeCallPkgList", GetTWeCallPkgListResponse.class);
     }
 
     /**
