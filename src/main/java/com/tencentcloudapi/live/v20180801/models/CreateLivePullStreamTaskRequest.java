@@ -264,6 +264,13 @@ PullVodPushLive -点播。
     private String BackupToUrl;
 
     /**
+    * 直播转码模板，使用云直播的转码功能进行转码后再转推出去。转码模板需在云直播控制台创建。
+    */
+    @SerializedName("TranscodeTemplateName")
+    @Expose
+    private String TranscodeTemplateName;
+
+    /**
      * Get 拉流源的类型：
 PullLivePushLive -直播，
 PullVodPushLive -点播，
@@ -947,6 +954,22 @@ PullVodPushLive -点播。
         this.BackupToUrl = BackupToUrl;
     }
 
+    /**
+     * Get 直播转码模板，使用云直播的转码功能进行转码后再转推出去。转码模板需在云直播控制台创建。 
+     * @return TranscodeTemplateName 直播转码模板，使用云直播的转码功能进行转码后再转推出去。转码模板需在云直播控制台创建。
+     */
+    public String getTranscodeTemplateName() {
+        return this.TranscodeTemplateName;
+    }
+
+    /**
+     * Set 直播转码模板，使用云直播的转码功能进行转码后再转推出去。转码模板需在云直播控制台创建。
+     * @param TranscodeTemplateName 直播转码模板，使用云直播的转码功能进行转码后再转推出去。转码模板需在云直播控制台创建。
+     */
+    public void setTranscodeTemplateName(String TranscodeTemplateName) {
+        this.TranscodeTemplateName = TranscodeTemplateName;
+    }
+
     public CreateLivePullStreamTaskRequest() {
     }
 
@@ -1033,6 +1056,9 @@ PullVodPushLive -点播。
         if (source.BackupToUrl != null) {
             this.BackupToUrl = new String(source.BackupToUrl);
         }
+        if (source.TranscodeTemplateName != null) {
+            this.TranscodeTemplateName = new String(source.TranscodeTemplateName);
+        }
     }
 
 
@@ -1063,6 +1089,7 @@ PullVodPushLive -点播。
         this.setParamSimple(map, prefix + "VodLocalMode", this.VodLocalMode);
         this.setParamSimple(map, prefix + "RecordTemplateId", this.RecordTemplateId);
         this.setParamSimple(map, prefix + "BackupToUrl", this.BackupToUrl);
+        this.setParamSimple(map, prefix + "TranscodeTemplateName", this.TranscodeTemplateName);
 
     }
 }

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeKeyPairsRequest extends AbstractModel {
 
     /**
-    * 密钥对 ID 列表。
+    * 密钥对 ID 列表，每次请求批量密钥对的上限为 100。
     */
     @SerializedName("KeyIds")
     @Expose
@@ -59,16 +59,16 @@ public class DescribeKeyPairsRequest extends AbstractModel {
     private Filter [] Filters;
 
     /**
-     * Get 密钥对 ID 列表。 
-     * @return KeyIds 密钥对 ID 列表。
+     * Get 密钥对 ID 列表，每次请求批量密钥对的上限为 100。 
+     * @return KeyIds 密钥对 ID 列表，每次请求批量密钥对的上限为 100。
      */
     public String [] getKeyIds() {
         return this.KeyIds;
     }
 
     /**
-     * Set 密钥对 ID 列表。
-     * @param KeyIds 密钥对 ID 列表。
+     * Set 密钥对 ID 列表，每次请求批量密钥对的上限为 100。
+     * @param KeyIds 密钥对 ID 列表，每次请求批量密钥对的上限为 100。
      */
     public void setKeyIds(String [] KeyIds) {
         this.KeyIds = KeyIds;

@@ -31,6 +31,14 @@ public class DescribeResourcesResponse extends AbstractModel {
     private Resource [] ResourceSet;
 
     /**
+    * 堡垒机资源数量
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TotalCount")
+    @Expose
+    private Long TotalCount;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -51,6 +59,26 @@ public class DescribeResourcesResponse extends AbstractModel {
      */
     public void setResourceSet(Resource [] ResourceSet) {
         this.ResourceSet = ResourceSet;
+    }
+
+    /**
+     * Get 堡垒机资源数量
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TotalCount 堡垒机资源数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getTotalCount() {
+        return this.TotalCount;
+    }
+
+    /**
+     * Set 堡垒机资源数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TotalCount 堡垒机资源数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
     }
 
     /**
@@ -83,6 +111,9 @@ public class DescribeResourcesResponse extends AbstractModel {
                 this.ResourceSet[i] = new Resource(source.ResourceSet[i]);
             }
         }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -94,6 +125,7 @@ public class DescribeResourcesResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "ResourceSet.", this.ResourceSet);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

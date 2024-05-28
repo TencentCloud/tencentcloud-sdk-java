@@ -102,6 +102,14 @@ public class DatasourceBaseInfo extends AbstractModel {
     private String ParamsString;
 
     /**
+    * 区分数据源类型自定义源还是系统源
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Category")
+    @Expose
+    private String Category;
+
+    /**
      * Get 若数据源列表为绑定数据库，则为db名称
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return DatabaseNames 若数据源列表为绑定数据库，则为db名称
@@ -293,6 +301,26 @@ public class DatasourceBaseInfo extends AbstractModel {
         this.ParamsString = ParamsString;
     }
 
+    /**
+     * Get 区分数据源类型自定义源还是系统源
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Category 区分数据源类型自定义源还是系统源
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCategory() {
+        return this.Category;
+    }
+
+    /**
+     * Set 区分数据源类型自定义源还是系统源
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Category 区分数据源类型自定义源还是系统源
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCategory(String Category) {
+        this.Category = Category;
+    }
+
     public DatasourceBaseInfo() {
     }
 
@@ -334,6 +362,9 @@ public class DatasourceBaseInfo extends AbstractModel {
         if (source.ParamsString != null) {
             this.ParamsString = new String(source.ParamsString);
         }
+        if (source.Category != null) {
+            this.Category = new String(source.Category);
+        }
     }
 
 
@@ -351,6 +382,7 @@ public class DatasourceBaseInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "Version", this.Version);
         this.setParamSimple(map, prefix + "ParamsString", this.ParamsString);
+        this.setParamSimple(map, prefix + "Category", this.Category);
 
     }
 }

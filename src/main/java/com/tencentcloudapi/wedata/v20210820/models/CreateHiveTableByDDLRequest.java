@@ -73,6 +73,13 @@ public class CreateHiveTableByDDLRequest extends AbstractModel {
     private String Incharge;
 
     /**
+    * schema名称
+    */
+    @SerializedName("SchemaName")
+    @Expose
+    private String SchemaName;
+
+    /**
      * Get 数据源ID 
      * @return DatasourceId 数据源ID
      */
@@ -184,6 +191,22 @@ public class CreateHiveTableByDDLRequest extends AbstractModel {
         this.Incharge = Incharge;
     }
 
+    /**
+     * Get schema名称 
+     * @return SchemaName schema名称
+     */
+    public String getSchemaName() {
+        return this.SchemaName;
+    }
+
+    /**
+     * Set schema名称
+     * @param SchemaName schema名称
+     */
+    public void setSchemaName(String SchemaName) {
+        this.SchemaName = SchemaName;
+    }
+
     public CreateHiveTableByDDLRequest() {
     }
 
@@ -213,6 +236,9 @@ public class CreateHiveTableByDDLRequest extends AbstractModel {
         if (source.Incharge != null) {
             this.Incharge = new String(source.Incharge);
         }
+        if (source.SchemaName != null) {
+            this.SchemaName = new String(source.SchemaName);
+        }
     }
 
 
@@ -227,6 +253,7 @@ public class CreateHiveTableByDDLRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "Incharge", this.Incharge);
+        this.setParamSimple(map, prefix + "SchemaName", this.SchemaName);
 
     }
 }

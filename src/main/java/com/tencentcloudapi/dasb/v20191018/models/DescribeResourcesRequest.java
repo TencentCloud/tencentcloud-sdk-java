@@ -45,6 +45,20 @@ public class DescribeResourcesRequest extends AbstractModel {
     private String [] ResourceIds;
 
     /**
+    * 每页条目数量
+    */
+    @SerializedName("Limit")
+    @Expose
+    private Long Limit;
+
+    /**
+    * 分页偏移位置
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
+
+    /**
      * Get 地域码, 如: ap-guangzhou 
      * @return ApCode 地域码, 如: ap-guangzhou
      */
@@ -92,6 +106,38 @@ public class DescribeResourcesRequest extends AbstractModel {
         this.ResourceIds = ResourceIds;
     }
 
+    /**
+     * Get 每页条目数量 
+     * @return Limit 每页条目数量
+     */
+    public Long getLimit() {
+        return this.Limit;
+    }
+
+    /**
+     * Set 每页条目数量
+     * @param Limit 每页条目数量
+     */
+    public void setLimit(Long Limit) {
+        this.Limit = Limit;
+    }
+
+    /**
+     * Get 分页偏移位置 
+     * @return Offset 分页偏移位置
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set 分页偏移位置
+     * @param Offset 分页偏移位置
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
+    }
+
     public DescribeResourcesRequest() {
     }
 
@@ -112,6 +158,12 @@ public class DescribeResourcesRequest extends AbstractModel {
                 this.ResourceIds[i] = new String(source.ResourceIds[i]);
             }
         }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
     }
 
 
@@ -122,6 +174,8 @@ public class DescribeResourcesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ApCode", this.ApCode);
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamArraySimple(map, prefix + "ResourceIds.", this.ResourceIds);
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
 
     }
 }

@@ -38,6 +38,13 @@ public class FreezeTasksByWorkflowIdsRequest extends AbstractModel {
     private String ProjectId;
 
     /**
+    * 是否终止已生成的实例
+    */
+    @SerializedName("KillInstance")
+    @Expose
+    private Boolean KillInstance;
+
+    /**
      * Get 工作流id列表 
      * @return WorkflowIds 工作流id列表
      */
@@ -69,6 +76,22 @@ public class FreezeTasksByWorkflowIdsRequest extends AbstractModel {
         this.ProjectId = ProjectId;
     }
 
+    /**
+     * Get 是否终止已生成的实例 
+     * @return KillInstance 是否终止已生成的实例
+     */
+    public Boolean getKillInstance() {
+        return this.KillInstance;
+    }
+
+    /**
+     * Set 是否终止已生成的实例
+     * @param KillInstance 是否终止已生成的实例
+     */
+    public void setKillInstance(Boolean KillInstance) {
+        this.KillInstance = KillInstance;
+    }
+
     public FreezeTasksByWorkflowIdsRequest() {
     }
 
@@ -86,6 +109,9 @@ public class FreezeTasksByWorkflowIdsRequest extends AbstractModel {
         if (source.ProjectId != null) {
             this.ProjectId = new String(source.ProjectId);
         }
+        if (source.KillInstance != null) {
+            this.KillInstance = new Boolean(source.KillInstance);
+        }
     }
 
 
@@ -95,6 +121,7 @@ public class FreezeTasksByWorkflowIdsRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "WorkflowIds.", this.WorkflowIds);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
+        this.setParamSimple(map, prefix + "KillInstance", this.KillInstance);
 
     }
 }

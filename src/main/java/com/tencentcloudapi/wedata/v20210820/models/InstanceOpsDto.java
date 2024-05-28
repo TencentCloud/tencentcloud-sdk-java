@@ -504,6 +504,22 @@ public class InstanceOpsDto extends AbstractModel {
     private Long RetryAttempts;
 
     /**
+    * 紧急去除的依赖父实例列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DeletedFatherList")
+    @Expose
+    private String [] DeletedFatherList;
+
+    /**
+    * 循环依赖关联的实例
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CirculateInstanceList")
+    @Expose
+    private InstanceOpsDto [] CirculateInstanceList;
+
+    /**
      * Get 任务ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TaskId 任务ID
@@ -1703,6 +1719,46 @@ public class InstanceOpsDto extends AbstractModel {
         this.RetryAttempts = RetryAttempts;
     }
 
+    /**
+     * Get 紧急去除的依赖父实例列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DeletedFatherList 紧急去除的依赖父实例列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getDeletedFatherList() {
+        return this.DeletedFatherList;
+    }
+
+    /**
+     * Set 紧急去除的依赖父实例列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DeletedFatherList 紧急去除的依赖父实例列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDeletedFatherList(String [] DeletedFatherList) {
+        this.DeletedFatherList = DeletedFatherList;
+    }
+
+    /**
+     * Get 循环依赖关联的实例
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CirculateInstanceList 循环依赖关联的实例
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public InstanceOpsDto [] getCirculateInstanceList() {
+        return this.CirculateInstanceList;
+    }
+
+    /**
+     * Set 循环依赖关联的实例
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CirculateInstanceList 循环依赖关联的实例
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCirculateInstanceList(InstanceOpsDto [] CirculateInstanceList) {
+        this.CirculateInstanceList = CirculateInstanceList;
+    }
+
     public InstanceOpsDto() {
     }
 
@@ -1894,6 +1950,18 @@ public class InstanceOpsDto extends AbstractModel {
         if (source.RetryAttempts != null) {
             this.RetryAttempts = new Long(source.RetryAttempts);
         }
+        if (source.DeletedFatherList != null) {
+            this.DeletedFatherList = new String[source.DeletedFatherList.length];
+            for (int i = 0; i < source.DeletedFatherList.length; i++) {
+                this.DeletedFatherList[i] = new String(source.DeletedFatherList[i]);
+            }
+        }
+        if (source.CirculateInstanceList != null) {
+            this.CirculateInstanceList = new InstanceOpsDto[source.CirculateInstanceList.length];
+            for (int i = 0; i < source.CirculateInstanceList.length; i++) {
+                this.CirculateInstanceList[i] = new InstanceOpsDto(source.CirculateInstanceList[i]);
+            }
+        }
     }
 
 
@@ -1961,6 +2029,8 @@ public class InstanceOpsDto extends AbstractModel {
         this.setParamSimple(map, prefix + "UserId", this.UserId);
         this.setParamObj(map, prefix + "InstanceLifeCycleOpsDto.", this.InstanceLifeCycleOpsDto);
         this.setParamSimple(map, prefix + "RetryAttempts", this.RetryAttempts);
+        this.setParamArraySimple(map, prefix + "DeletedFatherList.", this.DeletedFatherList);
+        this.setParamArrayObj(map, prefix + "CirculateInstanceList.", this.CirculateInstanceList);
 
     }
 }

@@ -38,6 +38,14 @@ public class OpsTaskCanvasInfoList extends AbstractModel {
     private OpsTaskLinkInfoDto [] LinksList;
 
     /**
+    * 画布循环依赖任务信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CirculateTaskList")
+    @Expose
+    private OpsTaskCanvasDto CirculateTaskList;
+
+    /**
      * Get 画布任务信息 
      * @return TasksList 画布任务信息
      */
@@ -69,6 +77,26 @@ public class OpsTaskCanvasInfoList extends AbstractModel {
         this.LinksList = LinksList;
     }
 
+    /**
+     * Get 画布循环依赖任务信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CirculateTaskList 画布循环依赖任务信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public OpsTaskCanvasDto getCirculateTaskList() {
+        return this.CirculateTaskList;
+    }
+
+    /**
+     * Set 画布循环依赖任务信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CirculateTaskList 画布循环依赖任务信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCirculateTaskList(OpsTaskCanvasDto CirculateTaskList) {
+        this.CirculateTaskList = CirculateTaskList;
+    }
+
     public OpsTaskCanvasInfoList() {
     }
 
@@ -89,6 +117,9 @@ public class OpsTaskCanvasInfoList extends AbstractModel {
                 this.LinksList[i] = new OpsTaskLinkInfoDto(source.LinksList[i]);
             }
         }
+        if (source.CirculateTaskList != null) {
+            this.CirculateTaskList = new OpsTaskCanvasDto(source.CirculateTaskList);
+        }
     }
 
 
@@ -98,6 +129,7 @@ public class OpsTaskCanvasInfoList extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "TasksList.", this.TasksList);
         this.setParamArrayObj(map, prefix + "LinksList.", this.LinksList);
+        this.setParamObj(map, prefix + "CirculateTaskList.", this.CirculateTaskList);
 
     }
 }

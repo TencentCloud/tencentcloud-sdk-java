@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AssociateInstancesKeyPairsRequest extends AbstractModel {
 
     /**
-    * 密钥对 ID 列表。每次请求批量密钥对的上限为 100。
+    * 密钥对 ID 列表，每次请求批量密钥对的上限为 100。可通过[DescribeKeyPairs](https://cloud.tencent.com/document/api/1207/55540)接口返回值中的KeyId获取。
     */
     @SerializedName("KeyIds")
     @Expose
@@ -38,16 +38,16 @@ public class AssociateInstancesKeyPairsRequest extends AbstractModel {
     private String [] InstanceIds;
 
     /**
-     * Get 密钥对 ID 列表。每次请求批量密钥对的上限为 100。 
-     * @return KeyIds 密钥对 ID 列表。每次请求批量密钥对的上限为 100。
+     * Get 密钥对 ID 列表，每次请求批量密钥对的上限为 100。可通过[DescribeKeyPairs](https://cloud.tencent.com/document/api/1207/55540)接口返回值中的KeyId获取。 
+     * @return KeyIds 密钥对 ID 列表，每次请求批量密钥对的上限为 100。可通过[DescribeKeyPairs](https://cloud.tencent.com/document/api/1207/55540)接口返回值中的KeyId获取。
      */
     public String [] getKeyIds() {
         return this.KeyIds;
     }
 
     /**
-     * Set 密钥对 ID 列表。每次请求批量密钥对的上限为 100。
-     * @param KeyIds 密钥对 ID 列表。每次请求批量密钥对的上限为 100。
+     * Set 密钥对 ID 列表，每次请求批量密钥对的上限为 100。可通过[DescribeKeyPairs](https://cloud.tencent.com/document/api/1207/55540)接口返回值中的KeyId获取。
+     * @param KeyIds 密钥对 ID 列表，每次请求批量密钥对的上限为 100。可通过[DescribeKeyPairs](https://cloud.tencent.com/document/api/1207/55540)接口返回值中的KeyId获取。
      */
     public void setKeyIds(String [] KeyIds) {
         this.KeyIds = KeyIds;

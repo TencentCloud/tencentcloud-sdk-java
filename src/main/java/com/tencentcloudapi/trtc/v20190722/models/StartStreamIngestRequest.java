@@ -76,14 +76,14 @@ public class StartStreamIngestRequest extends AbstractModel {
     private String PrivateMapKey;
 
     /**
-    * 视频编码参数。可选，如果不填，保持原始流的参数。
+    * 【本字段已废弃】视频编码参数。可选，如果不填，保持原始流的参数。
     */
     @SerializedName("VideoEncodeParams")
     @Expose
     private VideoEncodeParams VideoEncodeParams;
 
     /**
-    * 音频编码参数。可选，如果不填，保持原始流的参数。
+    * 【本字段已废弃】音频编码参数。可选，如果不填，保持原始流的参数。
     */
     @SerializedName("AudioEncodeParams")
     @Expose
@@ -228,32 +228,32 @@ public class StartStreamIngestRequest extends AbstractModel {
     }
 
     /**
-     * Get 视频编码参数。可选，如果不填，保持原始流的参数。 
-     * @return VideoEncodeParams 视频编码参数。可选，如果不填，保持原始流的参数。
+     * Get 【本字段已废弃】视频编码参数。可选，如果不填，保持原始流的参数。 
+     * @return VideoEncodeParams 【本字段已废弃】视频编码参数。可选，如果不填，保持原始流的参数。
      */
     public VideoEncodeParams getVideoEncodeParams() {
         return this.VideoEncodeParams;
     }
 
     /**
-     * Set 视频编码参数。可选，如果不填，保持原始流的参数。
-     * @param VideoEncodeParams 视频编码参数。可选，如果不填，保持原始流的参数。
+     * Set 【本字段已废弃】视频编码参数。可选，如果不填，保持原始流的参数。
+     * @param VideoEncodeParams 【本字段已废弃】视频编码参数。可选，如果不填，保持原始流的参数。
      */
     public void setVideoEncodeParams(VideoEncodeParams VideoEncodeParams) {
         this.VideoEncodeParams = VideoEncodeParams;
     }
 
     /**
-     * Get 音频编码参数。可选，如果不填，保持原始流的参数。 
-     * @return AudioEncodeParams 音频编码参数。可选，如果不填，保持原始流的参数。
+     * Get 【本字段已废弃】音频编码参数。可选，如果不填，保持原始流的参数。 
+     * @return AudioEncodeParams 【本字段已废弃】音频编码参数。可选，如果不填，保持原始流的参数。
      */
     public AudioEncodeParams getAudioEncodeParams() {
         return this.AudioEncodeParams;
     }
 
     /**
-     * Set 音频编码参数。可选，如果不填，保持原始流的参数。
-     * @param AudioEncodeParams 音频编码参数。可选，如果不填，保持原始流的参数。
+     * Set 【本字段已废弃】音频编码参数。可选，如果不填，保持原始流的参数。
+     * @param AudioEncodeParams 【本字段已废弃】音频编码参数。可选，如果不填，保持原始流的参数。
      */
     public void setAudioEncodeParams(AudioEncodeParams AudioEncodeParams) {
         this.AudioEncodeParams = AudioEncodeParams;

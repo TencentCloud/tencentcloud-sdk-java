@@ -38,6 +38,13 @@ public class BatchStopOpsTasksRequest extends AbstractModel {
     private String ProjectId;
 
     /**
+    * 是否终止已生成的实例
+    */
+    @SerializedName("KillInstance")
+    @Expose
+    private Boolean KillInstance;
+
+    /**
      * Get 批量停止任务的TaskId 
      * @return TaskIdList 批量停止任务的TaskId
      */
@@ -69,6 +76,22 @@ public class BatchStopOpsTasksRequest extends AbstractModel {
         this.ProjectId = ProjectId;
     }
 
+    /**
+     * Get 是否终止已生成的实例 
+     * @return KillInstance 是否终止已生成的实例
+     */
+    public Boolean getKillInstance() {
+        return this.KillInstance;
+    }
+
+    /**
+     * Set 是否终止已生成的实例
+     * @param KillInstance 是否终止已生成的实例
+     */
+    public void setKillInstance(Boolean KillInstance) {
+        this.KillInstance = KillInstance;
+    }
+
     public BatchStopOpsTasksRequest() {
     }
 
@@ -86,6 +109,9 @@ public class BatchStopOpsTasksRequest extends AbstractModel {
         if (source.ProjectId != null) {
             this.ProjectId = new String(source.ProjectId);
         }
+        if (source.KillInstance != null) {
+            this.KillInstance = new Boolean(source.KillInstance);
+        }
     }
 
 
@@ -95,6 +121,7 @@ public class BatchStopOpsTasksRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "TaskIdList.", this.TaskIdList);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
+        this.setParamSimple(map, prefix + "KillInstance", this.KillInstance);
 
     }
 }

@@ -35,7 +35,7 @@ public class CreateBatchSignUrlRequest extends AbstractModel {
     * 签署方经办人的姓名。
 经办人的姓名将用于身份认证和电子签名，请确保填写的姓名为签署方的真实姓名，而非昵称等代名。
 
-注：`请确保和合同中填入的一致`
+注：`请确保和合同中填入的一致`, `除动态签署人场景外，此参数必填`
     */
     @SerializedName("Name")
     @Expose
@@ -45,7 +45,7 @@ public class CreateBatchSignUrlRequest extends AbstractModel {
     * 手机号码， 支持国内手机号11位数字(无需加+86前缀或其他字符)。
 请确认手机号所有方为此业务通知方。
 
-注：`请确保和合同中填入的一致,  若无法保持一致，请确保在发起和生成批量签署链接时传入相同的参与方证件信息`
+注：`请确保和合同中填入的一致,  若无法保持一致，请确保在发起和生成批量签署链接时传入相同的参与方证件信息`，`除动态签署人场景外，此参数必填`
     */
     @SerializedName("Mobile")
     @Expose
@@ -61,7 +61,7 @@ public class CreateBatchSignUrlRequest extends AbstractModel {
 
     /**
     * 证件类型，支持以下类型
-<ul><li>ID_CARD : 居民身份证 (默认值)</li>
+<ul><li>ID_CARD : 中国大陆居民身份证 (默认值)</li>
 <li>HONGKONG_AND_MACAO : 港澳居民来往内地通行证</li>
 <li>HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)</li></ul>
 
@@ -158,11 +158,11 @@ public class CreateBatchSignUrlRequest extends AbstractModel {
      * Get 签署方经办人的姓名。
 经办人的姓名将用于身份认证和电子签名，请确保填写的姓名为签署方的真实姓名，而非昵称等代名。
 
-注：`请确保和合同中填入的一致` 
+注：`请确保和合同中填入的一致`, `除动态签署人场景外，此参数必填` 
      * @return Name 签署方经办人的姓名。
 经办人的姓名将用于身份认证和电子签名，请确保填写的姓名为签署方的真实姓名，而非昵称等代名。
 
-注：`请确保和合同中填入的一致`
+注：`请确保和合同中填入的一致`, `除动态签署人场景外，此参数必填`
      */
     public String getName() {
         return this.Name;
@@ -172,11 +172,11 @@ public class CreateBatchSignUrlRequest extends AbstractModel {
      * Set 签署方经办人的姓名。
 经办人的姓名将用于身份认证和电子签名，请确保填写的姓名为签署方的真实姓名，而非昵称等代名。
 
-注：`请确保和合同中填入的一致`
+注：`请确保和合同中填入的一致`, `除动态签署人场景外，此参数必填`
      * @param Name 签署方经办人的姓名。
 经办人的姓名将用于身份认证和电子签名，请确保填写的姓名为签署方的真实姓名，而非昵称等代名。
 
-注：`请确保和合同中填入的一致`
+注：`请确保和合同中填入的一致`, `除动态签署人场景外，此参数必填`
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -186,11 +186,11 @@ public class CreateBatchSignUrlRequest extends AbstractModel {
      * Get 手机号码， 支持国内手机号11位数字(无需加+86前缀或其他字符)。
 请确认手机号所有方为此业务通知方。
 
-注：`请确保和合同中填入的一致,  若无法保持一致，请确保在发起和生成批量签署链接时传入相同的参与方证件信息` 
+注：`请确保和合同中填入的一致,  若无法保持一致，请确保在发起和生成批量签署链接时传入相同的参与方证件信息`，`除动态签署人场景外，此参数必填` 
      * @return Mobile 手机号码， 支持国内手机号11位数字(无需加+86前缀或其他字符)。
 请确认手机号所有方为此业务通知方。
 
-注：`请确保和合同中填入的一致,  若无法保持一致，请确保在发起和生成批量签署链接时传入相同的参与方证件信息`
+注：`请确保和合同中填入的一致,  若无法保持一致，请确保在发起和生成批量签署链接时传入相同的参与方证件信息`，`除动态签署人场景外，此参数必填`
      */
     public String getMobile() {
         return this.Mobile;
@@ -200,11 +200,11 @@ public class CreateBatchSignUrlRequest extends AbstractModel {
      * Set 手机号码， 支持国内手机号11位数字(无需加+86前缀或其他字符)。
 请确认手机号所有方为此业务通知方。
 
-注：`请确保和合同中填入的一致,  若无法保持一致，请确保在发起和生成批量签署链接时传入相同的参与方证件信息`
+注：`请确保和合同中填入的一致,  若无法保持一致，请确保在发起和生成批量签署链接时传入相同的参与方证件信息`，`除动态签署人场景外，此参数必填`
      * @param Mobile 手机号码， 支持国内手机号11位数字(无需加+86前缀或其他字符)。
 请确认手机号所有方为此业务通知方。
 
-注：`请确保和合同中填入的一致,  若无法保持一致，请确保在发起和生成批量签署链接时传入相同的参与方证件信息`
+注：`请确保和合同中填入的一致,  若无法保持一致，请确保在发起和生成批量签署链接时传入相同的参与方证件信息`，`除动态签署人场景外，此参数必填`
      */
     public void setMobile(String Mobile) {
         this.Mobile = Mobile;
@@ -232,13 +232,13 @@ public class CreateBatchSignUrlRequest extends AbstractModel {
 
     /**
      * Get 证件类型，支持以下类型
-<ul><li>ID_CARD : 居民身份证 (默认值)</li>
+<ul><li>ID_CARD : 中国大陆居民身份证 (默认值)</li>
 <li>HONGKONG_AND_MACAO : 港澳居民来往内地通行证</li>
 <li>HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)</li></ul>
 
 注：`请确保和合同中填入的一致` 
      * @return IdCardType 证件类型，支持以下类型
-<ul><li>ID_CARD : 居民身份证 (默认值)</li>
+<ul><li>ID_CARD : 中国大陆居民身份证 (默认值)</li>
 <li>HONGKONG_AND_MACAO : 港澳居民来往内地通行证</li>
 <li>HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)</li></ul>
 
@@ -250,13 +250,13 @@ public class CreateBatchSignUrlRequest extends AbstractModel {
 
     /**
      * Set 证件类型，支持以下类型
-<ul><li>ID_CARD : 居民身份证 (默认值)</li>
+<ul><li>ID_CARD : 中国大陆居民身份证 (默认值)</li>
 <li>HONGKONG_AND_MACAO : 港澳居民来往内地通行证</li>
 <li>HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)</li></ul>
 
 注：`请确保和合同中填入的一致`
      * @param IdCardType 证件类型，支持以下类型
-<ul><li>ID_CARD : 居民身份证 (默认值)</li>
+<ul><li>ID_CARD : 中国大陆居民身份证 (默认值)</li>
 <li>HONGKONG_AND_MACAO : 港澳居民来往内地通行证</li>
 <li>HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)</li></ul>
 

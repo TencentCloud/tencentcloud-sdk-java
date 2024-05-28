@@ -292,6 +292,14 @@ PullVodPushLive -点播。
     private String BackupToUrl;
 
     /**
+    * 直播转码模板。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TranscodeTemplateName")
+    @Expose
+    private String TranscodeTemplateName;
+
+    /**
      * Get 拉流任务Id。 
      * @return TaskId 拉流任务Id。
      */
@@ -1015,6 +1023,26 @@ PullVodPushLive -点播。
         this.BackupToUrl = BackupToUrl;
     }
 
+    /**
+     * Get 直播转码模板。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TranscodeTemplateName 直播转码模板。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTranscodeTemplateName() {
+        return this.TranscodeTemplateName;
+    }
+
+    /**
+     * Set 直播转码模板。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TranscodeTemplateName 直播转码模板。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTranscodeTemplateName(String TranscodeTemplateName) {
+        this.TranscodeTemplateName = TranscodeTemplateName;
+    }
+
     public PullStreamTaskInfo() {
     }
 
@@ -1119,6 +1147,9 @@ PullVodPushLive -点播。
         if (source.BackupToUrl != null) {
             this.BackupToUrl = new String(source.BackupToUrl);
         }
+        if (source.TranscodeTemplateName != null) {
+            this.TranscodeTemplateName = new String(source.TranscodeTemplateName);
+        }
     }
 
 
@@ -1155,6 +1186,7 @@ PullVodPushLive -点播。
         this.setParamSimple(map, prefix + "VodLocalMode", this.VodLocalMode);
         this.setParamSimple(map, prefix + "RecordTemplateId", this.RecordTemplateId);
         this.setParamSimple(map, prefix + "BackupToUrl", this.BackupToUrl);
+        this.setParamSimple(map, prefix + "TranscodeTemplateName", this.TranscodeTemplateName);
 
     }
 }

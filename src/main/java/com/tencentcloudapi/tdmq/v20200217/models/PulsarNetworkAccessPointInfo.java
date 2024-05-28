@@ -76,6 +76,14 @@ public class PulsarNetworkAccessPointInfo extends AbstractModel {
     private Long OperationType;
 
     /**
+    * 接入点类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AccessPointsType")
+    @Expose
+    private String AccessPointsType;
+
+    /**
      * Get vpc的id，支撑网和公网接入点，该字段为空
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return VpcId vpc的id，支撑网和公网接入点，该字段为空
@@ -211,6 +219,26 @@ public class PulsarNetworkAccessPointInfo extends AbstractModel {
         this.OperationType = OperationType;
     }
 
+    /**
+     * Get 接入点类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AccessPointsType 接入点类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAccessPointsType() {
+        return this.AccessPointsType;
+    }
+
+    /**
+     * Set 接入点类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AccessPointsType 接入点类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAccessPointsType(String AccessPointsType) {
+        this.AccessPointsType = AccessPointsType;
+    }
+
     public PulsarNetworkAccessPointInfo() {
     }
 
@@ -237,6 +265,9 @@ public class PulsarNetworkAccessPointInfo extends AbstractModel {
         if (source.OperationType != null) {
             this.OperationType = new Long(source.OperationType);
         }
+        if (source.AccessPointsType != null) {
+            this.AccessPointsType = new String(source.AccessPointsType);
+        }
     }
 
 
@@ -250,6 +281,7 @@ public class PulsarNetworkAccessPointInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "RouteType", this.RouteType);
         this.setParamSimple(map, prefix + "OperationType", this.OperationType);
+        this.setParamSimple(map, prefix + "AccessPointsType", this.AccessPointsType);
 
     }
 }

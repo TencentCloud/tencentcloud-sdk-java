@@ -228,6 +228,14 @@ public class Resource extends AbstractModel {
     private String LogDeliveryArgs;
 
     /**
+    * 堡垒机资源LB
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ClbSet")
+    @Expose
+    private Clb [] ClbSet;
+
+    /**
      * Get 服务实例ID，如bh-saas-s3ed4r5e 
      * @return ResourceId 服务实例ID，如bh-saas-s3ed4r5e
      */
@@ -695,6 +703,26 @@ public class Resource extends AbstractModel {
         this.LogDeliveryArgs = LogDeliveryArgs;
     }
 
+    /**
+     * Get 堡垒机资源LB
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ClbSet 堡垒机资源LB
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Clb [] getClbSet() {
+        return this.ClbSet;
+    }
+
+    /**
+     * Set 堡垒机资源LB
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ClbSet 堡垒机资源LB
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setClbSet(Clb [] ClbSet) {
+        this.ClbSet = ClbSet;
+    }
+
     public Resource() {
     }
 
@@ -799,6 +827,12 @@ public class Resource extends AbstractModel {
         if (source.LogDeliveryArgs != null) {
             this.LogDeliveryArgs = new String(source.LogDeliveryArgs);
         }
+        if (source.ClbSet != null) {
+            this.ClbSet = new Clb[source.ClbSet.length];
+            for (int i = 0; i < source.ClbSet.length; i++) {
+                this.ClbSet[i] = new Clb(source.ClbSet[i]);
+            }
+        }
     }
 
 
@@ -835,6 +869,7 @@ public class Resource extends AbstractModel {
         this.setParamSimple(map, prefix + "PackageBandwidth", this.PackageBandwidth);
         this.setParamSimple(map, prefix + "PackageNode", this.PackageNode);
         this.setParamSimple(map, prefix + "LogDeliveryArgs", this.LogDeliveryArgs);
+        this.setParamArrayObj(map, prefix + "ClbSet.", this.ClbSet);
 
     }
 }

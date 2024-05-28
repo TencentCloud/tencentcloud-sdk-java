@@ -185,6 +185,20 @@ public class DescribeOperateOpsTasksRequest extends AbstractModel {
     private String KeyWord;
 
     /**
+    * 实例生成方式
+    */
+    @SerializedName("InitStrategy")
+    @Expose
+    private String InitStrategy;
+
+    /**
+    * 额外请求的资源类型
+    */
+    @SerializedName("RequestResourceTypes")
+    @Expose
+    private String [] RequestResourceTypes;
+
+    /**
      * Get 项目id 
      * @return ProjectId 项目id
      */
@@ -552,6 +566,38 @@ public class DescribeOperateOpsTasksRequest extends AbstractModel {
         this.KeyWord = KeyWord;
     }
 
+    /**
+     * Get 实例生成方式 
+     * @return InitStrategy 实例生成方式
+     */
+    public String getInitStrategy() {
+        return this.InitStrategy;
+    }
+
+    /**
+     * Set 实例生成方式
+     * @param InitStrategy 实例生成方式
+     */
+    public void setInitStrategy(String InitStrategy) {
+        this.InitStrategy = InitStrategy;
+    }
+
+    /**
+     * Get 额外请求的资源类型 
+     * @return RequestResourceTypes 额外请求的资源类型
+     */
+    public String [] getRequestResourceTypes() {
+        return this.RequestResourceTypes;
+    }
+
+    /**
+     * Set 额外请求的资源类型
+     * @param RequestResourceTypes 额外请求的资源类型
+     */
+    public void setRequestResourceTypes(String [] RequestResourceTypes) {
+        this.RequestResourceTypes = RequestResourceTypes;
+    }
+
     public DescribeOperateOpsTasksRequest() {
     }
 
@@ -632,6 +678,15 @@ public class DescribeOperateOpsTasksRequest extends AbstractModel {
         if (source.KeyWord != null) {
             this.KeyWord = new String(source.KeyWord);
         }
+        if (source.InitStrategy != null) {
+            this.InitStrategy = new String(source.InitStrategy);
+        }
+        if (source.RequestResourceTypes != null) {
+            this.RequestResourceTypes = new String[source.RequestResourceTypes.length];
+            for (int i = 0; i < source.RequestResourceTypes.length; i++) {
+                this.RequestResourceTypes[i] = new String(source.RequestResourceTypes[i]);
+            }
+        }
     }
 
 
@@ -662,6 +717,8 @@ public class DescribeOperateOpsTasksRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ExecutorGroupIdList", this.ExecutorGroupIdList);
         this.setParamArrayObj(map, prefix + "TaskTags.", this.TaskTags);
         this.setParamSimple(map, prefix + "KeyWord", this.KeyWord);
+        this.setParamSimple(map, prefix + "InitStrategy", this.InitStrategy);
+        this.setParamArraySimple(map, prefix + "RequestResourceTypes.", this.RequestResourceTypes);
 
     }
 }
