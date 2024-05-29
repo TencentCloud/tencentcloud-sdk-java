@@ -45,7 +45,7 @@ public class ReplicaGroup extends AbstractModel {
     private String ZoneId;
 
     /**
-    * 节点组类型，master为主节点，replica为副本节点
+    * 节点组类型，master为主节点，replica为副本节点。
     */
     @SerializedName("Role")
     @Expose
@@ -107,16 +107,16 @@ public class ReplicaGroup extends AbstractModel {
     }
 
     /**
-     * Get 节点组类型，master为主节点，replica为副本节点 
-     * @return Role 节点组类型，master为主节点，replica为副本节点
+     * Get 节点组类型，master为主节点，replica为副本节点。 
+     * @return Role 节点组类型，master为主节点，replica为副本节点。
      */
     public String getRole() {
         return this.Role;
     }
 
     /**
-     * Set 节点组类型，master为主节点，replica为副本节点
-     * @param Role 节点组类型，master为主节点，replica为副本节点
+     * Set 节点组类型，master为主节点，replica为副本节点。
+     * @param Role 节点组类型，master为主节点，replica为副本节点。
      */
     public void setRole(String Role) {
         this.Role = Role;

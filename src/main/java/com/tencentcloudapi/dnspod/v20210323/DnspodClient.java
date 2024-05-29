@@ -674,6 +674,17 @@ public class DnspodClient extends AbstractClient{
     }
 
     /**
+     *修改域名所属分组
+     * @param req ModifyDomainToGroupRequest
+     * @return ModifyDomainToGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDomainToGroupResponse ModifyDomainToGroup(ModifyDomainToGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDomainToGroup", ModifyDomainToGroupResponse.class);
+    }
+
+    /**
      *域名锁定解锁
      * @param req ModifyDomainUnlockRequest
      * @return ModifyDomainUnlockResponse

@@ -71,7 +71,7 @@ public class ProductConf extends AbstractModel {
     private Boolean Saleout;
 
     /**
-    * 产品引擎。包括：腾讯云 CKV与社区版 Redis。
+    * 产品引擎。Redis 或者 CKV。
     */
     @SerializedName("Engine")
     @Expose
@@ -269,16 +269,16 @@ public class ProductConf extends AbstractModel {
     }
 
     /**
-     * Get 产品引擎。包括：腾讯云 CKV与社区版 Redis。 
-     * @return Engine 产品引擎。包括：腾讯云 CKV与社区版 Redis。
+     * Get 产品引擎。Redis 或者 CKV。 
+     * @return Engine 产品引擎。Redis 或者 CKV。
      */
     public String getEngine() {
         return this.Engine;
     }
 
     /**
-     * Set 产品引擎。包括：腾讯云 CKV与社区版 Redis。
-     * @param Engine 产品引擎。包括：腾讯云 CKV与社区版 Redis。
+     * Set 产品引擎。Redis 或者 CKV。
+     * @param Engine 产品引擎。Redis 或者 CKV。
      */
     public void setEngine(String Engine) {
         this.Engine = Engine;

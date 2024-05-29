@@ -174,6 +174,30 @@ public class ScanLog extends AbstractModel {
     private String ProductName;
 
     /**
+    * 产品Logo
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProductLogo")
+    @Expose
+    private String ProductLogo;
+
+    /**
+    * 风险状态
+0: 未知, 1:通过, 2:失败/风险, 3:存疑
+    */
+    @SerializedName("Status")
+    @Expose
+    private Long Status;
+
+    /**
+    * 是否开启验证
+0:否, 1:是
+    */
+    @SerializedName("Verify")
+    @Expose
+    private Long Verify;
+
+    /**
      * Get 行ID 
      * @return LogId 行ID
      */
@@ -545,6 +569,66 @@ public class ScanLog extends AbstractModel {
         this.ProductName = ProductName;
     }
 
+    /**
+     * Get 产品Logo
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProductLogo 产品Logo
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getProductLogo() {
+        return this.ProductLogo;
+    }
+
+    /**
+     * Set 产品Logo
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProductLogo 产品Logo
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProductLogo(String ProductLogo) {
+        this.ProductLogo = ProductLogo;
+    }
+
+    /**
+     * Get 风险状态
+0: 未知, 1:通过, 2:失败/风险, 3:存疑 
+     * @return Status 风险状态
+0: 未知, 1:通过, 2:失败/风险, 3:存疑
+     */
+    public Long getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 风险状态
+0: 未知, 1:通过, 2:失败/风险, 3:存疑
+     * @param Status 风险状态
+0: 未知, 1:通过, 2:失败/风险, 3:存疑
+     */
+    public void setStatus(Long Status) {
+        this.Status = Status;
+    }
+
+    /**
+     * Get 是否开启验证
+0:否, 1:是 
+     * @return Verify 是否开启验证
+0:否, 1:是
+     */
+    public Long getVerify() {
+        return this.Verify;
+    }
+
+    /**
+     * Set 是否开启验证
+0:否, 1:是
+     * @param Verify 是否开启验证
+0:否, 1:是
+     */
+    public void setVerify(Long Verify) {
+        this.Verify = Verify;
+    }
+
     public ScanLog() {
     }
 
@@ -610,6 +694,15 @@ public class ScanLog extends AbstractModel {
         if (source.ProductName != null) {
             this.ProductName = new String(source.ProductName);
         }
+        if (source.ProductLogo != null) {
+            this.ProductLogo = new String(source.ProductLogo);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.Verify != null) {
+            this.Verify = new Long(source.Verify);
+        }
     }
 
 
@@ -636,6 +729,9 @@ public class ScanLog extends AbstractModel {
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "MerchantName", this.MerchantName);
         this.setParamSimple(map, prefix + "ProductName", this.ProductName);
+        this.setParamSimple(map, prefix + "ProductLogo", this.ProductLogo);
+        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "Verify", this.Verify);
 
     }
 }

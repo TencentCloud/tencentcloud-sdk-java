@@ -793,7 +793,6 @@ public class TcbClient extends AbstractClient{
 
     /**
      *查看安全网关
-
      * @param req DescribeWxGatewaysRequest
      * @return DescribeWxGatewaysResponse
      * @throws TencentCloudSDKException

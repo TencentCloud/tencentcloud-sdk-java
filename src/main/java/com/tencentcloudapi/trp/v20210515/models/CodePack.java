@@ -216,6 +216,46 @@ public class CodePack extends AbstractModel {
     private Long RelateType;
 
     /**
+    * 场景码
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SceneCode")
+    @Expose
+    private Long SceneCode;
+
+    /**
+    * 码规则
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CodeRule")
+    @Expose
+    private String CodeRule;
+
+    /**
+    * 已使用码数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UsedAmount")
+    @Expose
+    private Long UsedAmount;
+
+    /**
+    * 开始流水号
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SerialStart")
+    @Expose
+    private Long SerialStart;
+
+    /**
+    * 结束流水号
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SerialEnd")
+    @Expose
+    private Long SerialEnd;
+
+    /**
      * Get 码id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return PackId 码id
@@ -695,6 +735,106 @@ public class CodePack extends AbstractModel {
         this.RelateType = RelateType;
     }
 
+    /**
+     * Get 场景码
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SceneCode 场景码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getSceneCode() {
+        return this.SceneCode;
+    }
+
+    /**
+     * Set 场景码
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SceneCode 场景码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSceneCode(Long SceneCode) {
+        this.SceneCode = SceneCode;
+    }
+
+    /**
+     * Get 码规则
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CodeRule 码规则
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCodeRule() {
+        return this.CodeRule;
+    }
+
+    /**
+     * Set 码规则
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CodeRule 码规则
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCodeRule(String CodeRule) {
+        this.CodeRule = CodeRule;
+    }
+
+    /**
+     * Get 已使用码数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UsedAmount 已使用码数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getUsedAmount() {
+        return this.UsedAmount;
+    }
+
+    /**
+     * Set 已使用码数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UsedAmount 已使用码数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUsedAmount(Long UsedAmount) {
+        this.UsedAmount = UsedAmount;
+    }
+
+    /**
+     * Get 开始流水号
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SerialStart 开始流水号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getSerialStart() {
+        return this.SerialStart;
+    }
+
+    /**
+     * Set 开始流水号
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SerialStart 开始流水号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSerialStart(Long SerialStart) {
+        this.SerialStart = SerialStart;
+    }
+
+    /**
+     * Get 结束流水号
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SerialEnd 结束流水号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getSerialEnd() {
+        return this.SerialEnd;
+    }
+
+    /**
+     * Set 结束流水号
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SerialEnd 结束流水号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSerialEnd(Long SerialEnd) {
+        this.SerialEnd = SerialEnd;
+    }
+
     public CodePack() {
     }
 
@@ -778,6 +918,21 @@ public class CodePack extends AbstractModel {
         if (source.RelateType != null) {
             this.RelateType = new Long(source.RelateType);
         }
+        if (source.SceneCode != null) {
+            this.SceneCode = new Long(source.SceneCode);
+        }
+        if (source.CodeRule != null) {
+            this.CodeRule = new String(source.CodeRule);
+        }
+        if (source.UsedAmount != null) {
+            this.UsedAmount = new Long(source.UsedAmount);
+        }
+        if (source.SerialStart != null) {
+            this.SerialStart = new Long(source.SerialStart);
+        }
+        if (source.SerialEnd != null) {
+            this.SerialEnd = new Long(source.SerialEnd);
+        }
     }
 
 
@@ -809,6 +964,11 @@ public class CodePack extends AbstractModel {
         this.setParamSimple(map, prefix + "ProductSpecification", this.ProductSpecification);
         this.setParamSimple(map, prefix + "ProductId", this.ProductId);
         this.setParamSimple(map, prefix + "RelateType", this.RelateType);
+        this.setParamSimple(map, prefix + "SceneCode", this.SceneCode);
+        this.setParamSimple(map, prefix + "CodeRule", this.CodeRule);
+        this.setParamSimple(map, prefix + "UsedAmount", this.UsedAmount);
+        this.setParamSimple(map, prefix + "SerialStart", this.SerialStart);
+        this.setParamSimple(map, prefix + "SerialEnd", this.SerialEnd);
 
     }
 }

@@ -121,6 +121,14 @@ public class Metric extends AbstractModel {
     private Long [] Periods;
 
     /**
+    * 是否延迟指标
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsLatenessMetric")
+    @Expose
+    private Long IsLatenessMetric;
+
+    /**
      * Get 告警策略类型 
      * @return Namespace 告警策略类型
      */
@@ -352,6 +360,26 @@ public class Metric extends AbstractModel {
         this.Periods = Periods;
     }
 
+    /**
+     * Get 是否延迟指标
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsLatenessMetric 是否延迟指标
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getIsLatenessMetric() {
+        return this.IsLatenessMetric;
+    }
+
+    /**
+     * Set 是否延迟指标
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsLatenessMetric 是否延迟指标
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsLatenessMetric(Long IsLatenessMetric) {
+        this.IsLatenessMetric = IsLatenessMetric;
+    }
+
     public Metric() {
     }
 
@@ -408,6 +436,9 @@ public class Metric extends AbstractModel {
                 this.Periods[i] = new Long(source.Periods[i]);
             }
         }
+        if (source.IsLatenessMetric != null) {
+            this.IsLatenessMetric = new Long(source.IsLatenessMetric);
+        }
     }
 
 
@@ -428,6 +459,7 @@ public class Metric extends AbstractModel {
         this.setParamSimple(map, prefix + "ProductId", this.ProductId);
         this.setParamArrayObj(map, prefix + "Operators.", this.Operators);
         this.setParamArraySimple(map, prefix + "Periods.", this.Periods);
+        this.setParamSimple(map, prefix + "IsLatenessMetric", this.IsLatenessMetric);
 
     }
 }

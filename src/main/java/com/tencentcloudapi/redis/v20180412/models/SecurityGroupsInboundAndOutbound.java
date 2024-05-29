@@ -25,6 +25,8 @@ public class SecurityGroupsInboundAndOutbound extends AbstractModel {
 
     /**
     * 标识出入数据库的IP与端口是否被允许。
+- ACCEPT：允许。
+- DROP：不允许。
     */
     @SerializedName("Action")
     @Expose
@@ -52,8 +54,12 @@ public class SecurityGroupsInboundAndOutbound extends AbstractModel {
     private String Proto;
 
     /**
-     * Get 标识出入数据库的IP与端口是否被允许。 
+     * Get 标识出入数据库的IP与端口是否被允许。
+- ACCEPT：允许。
+- DROP：不允许。 
      * @return Action 标识出入数据库的IP与端口是否被允许。
+- ACCEPT：允许。
+- DROP：不允许。
      */
     public String getAction() {
         return this.Action;
@@ -61,7 +67,11 @@ public class SecurityGroupsInboundAndOutbound extends AbstractModel {
 
     /**
      * Set 标识出入数据库的IP与端口是否被允许。
+- ACCEPT：允许。
+- DROP：不允许。
      * @param Action 标识出入数据库的IP与端口是否被允许。
+- ACCEPT：允许。
+- DROP：不允许。
      */
     public void setAction(String Action) {
         this.Action = Action;

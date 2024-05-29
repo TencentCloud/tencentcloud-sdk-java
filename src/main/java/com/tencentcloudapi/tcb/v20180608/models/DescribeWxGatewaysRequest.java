@@ -31,6 +31,13 @@ public class DescribeWxGatewaysRequest extends AbstractModel {
     private String EnvId;
 
     /**
+    * 网关ID
+    */
+    @SerializedName("GatewayId")
+    @Expose
+    private String GatewayId;
+
+    /**
     * 服务名称，精确匹配
     */
     @SerializedName("GatewayName")
@@ -65,6 +72,22 @@ public class DescribeWxGatewaysRequest extends AbstractModel {
      */
     public void setEnvId(String EnvId) {
         this.EnvId = EnvId;
+    }
+
+    /**
+     * Get 网关ID 
+     * @return GatewayId 网关ID
+     */
+    public String getGatewayId() {
+        return this.GatewayId;
+    }
+
+    /**
+     * Set 网关ID
+     * @param GatewayId 网关ID
+     */
+    public void setGatewayId(String GatewayId) {
+        this.GatewayId = GatewayId;
     }
 
     /**
@@ -126,6 +149,9 @@ public class DescribeWxGatewaysRequest extends AbstractModel {
         if (source.EnvId != null) {
             this.EnvId = new String(source.EnvId);
         }
+        if (source.GatewayId != null) {
+            this.GatewayId = new String(source.GatewayId);
+        }
         if (source.GatewayName != null) {
             this.GatewayName = new String(source.GatewayName);
         }
@@ -143,6 +169,7 @@ public class DescribeWxGatewaysRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EnvId", this.EnvId);
+        this.setParamSimple(map, prefix + "GatewayId", this.GatewayId);
         this.setParamSimple(map, prefix + "GatewayName", this.GatewayName);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);

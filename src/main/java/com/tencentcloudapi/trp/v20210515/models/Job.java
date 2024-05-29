@@ -38,6 +38,14 @@ public class Job extends AbstractModel {
     private String Status;
 
     /**
+    * 任务错误信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ErrorMessage")
+    @Expose
+    private String ErrorMessage;
+
+    /**
      * Get 调度ID 
      * @return JobId 调度ID
      */
@@ -69,6 +77,26 @@ public class Job extends AbstractModel {
         this.Status = Status;
     }
 
+    /**
+     * Get 任务错误信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ErrorMessage 任务错误信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getErrorMessage() {
+        return this.ErrorMessage;
+    }
+
+    /**
+     * Set 任务错误信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ErrorMessage 任务错误信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setErrorMessage(String ErrorMessage) {
+        this.ErrorMessage = ErrorMessage;
+    }
+
     public Job() {
     }
 
@@ -83,6 +111,9 @@ public class Job extends AbstractModel {
         if (source.Status != null) {
             this.Status = new String(source.Status);
         }
+        if (source.ErrorMessage != null) {
+            this.ErrorMessage = new String(source.ErrorMessage);
+        }
     }
 
 
@@ -92,6 +123,7 @@ public class Job extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "JobId", this.JobId);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "ErrorMessage", this.ErrorMessage);
 
     }
 }

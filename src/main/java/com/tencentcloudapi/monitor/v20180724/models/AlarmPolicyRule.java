@@ -178,6 +178,14 @@ re=正则匹配
     private AlarmHierarchicalValue HierarchicalValue;
 
     /**
+    * 是否延迟指标
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsLatenessMetric")
+    @Expose
+    private Long IsLatenessMetric;
+
+    /**
      * Get 指标名或事件名，支持的指标可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询，支持的事件可以从 [DescribeAlarmEvents](https://cloud.tencent.com/document/product/248/51284) 查询 。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return MetricName 指标名或事件名，支持的指标可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询，支持的事件可以从 [DescribeAlarmEvents](https://cloud.tencent.com/document/product/248/51284) 查询 。
@@ -589,6 +597,26 @@ re=正则匹配
         this.HierarchicalValue = HierarchicalValue;
     }
 
+    /**
+     * Get 是否延迟指标
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsLatenessMetric 是否延迟指标
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getIsLatenessMetric() {
+        return this.IsLatenessMetric;
+    }
+
+    /**
+     * Set 是否延迟指标
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsLatenessMetric 是否延迟指标
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsLatenessMetric(Long IsLatenessMetric) {
+        this.IsLatenessMetric = IsLatenessMetric;
+    }
+
     public AlarmPolicyRule() {
     }
 
@@ -648,6 +676,9 @@ re=正则匹配
         if (source.HierarchicalValue != null) {
             this.HierarchicalValue = new AlarmHierarchicalValue(source.HierarchicalValue);
         }
+        if (source.IsLatenessMetric != null) {
+            this.IsLatenessMetric = new Long(source.IsLatenessMetric);
+        }
     }
 
 
@@ -672,6 +703,7 @@ re=正则匹配
         this.setParamSimple(map, prefix + "ValueMax", this.ValueMax);
         this.setParamSimple(map, prefix + "ValueMin", this.ValueMin);
         this.setParamObj(map, prefix + "HierarchicalValue.", this.HierarchicalValue);
+        this.setParamSimple(map, prefix + "IsLatenessMetric", this.IsLatenessMetric);
 
     }
 }

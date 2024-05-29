@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ReplaceFirewallTemplateRuleRequest extends AbstractModel {
 
     /**
-    * 防火墙模板ID。可通过 [DescribeFirewallTemplates](https://cloud.tencent.com/document/product/1207/96874) 的返回值 TemplateSet 获取。
+    * 防火墙模板ID。可通过 [DescribeFirewallTemplates](https://cloud.tencent.com/document/product/1207/96874) 接口返回值中的 TemplateId 获取。
     */
     @SerializedName("TemplateId")
     @Expose
     private String TemplateId;
 
     /**
-    * 防火墙模板规则ID。可通过 [DescribeFirewallTemplateRules](https://cloud.tencent.com/document/product/1207/96875) 的返回值 TemplateRuleSet 获取。
+    * 防火墙模板规则ID。可通过 [DescribeFirewallTemplateRules](https://cloud.tencent.com/document/product/1207/96875) 接口返回值中的 TemplateRuleId 获取。
     */
     @SerializedName("TemplateRuleId")
     @Expose
@@ -45,32 +45,32 @@ public class ReplaceFirewallTemplateRuleRequest extends AbstractModel {
     private FirewallRule TemplateRule;
 
     /**
-     * Get 防火墙模板ID。可通过 [DescribeFirewallTemplates](https://cloud.tencent.com/document/product/1207/96874) 的返回值 TemplateSet 获取。 
-     * @return TemplateId 防火墙模板ID。可通过 [DescribeFirewallTemplates](https://cloud.tencent.com/document/product/1207/96874) 的返回值 TemplateSet 获取。
+     * Get 防火墙模板ID。可通过 [DescribeFirewallTemplates](https://cloud.tencent.com/document/product/1207/96874) 接口返回值中的 TemplateId 获取。 
+     * @return TemplateId 防火墙模板ID。可通过 [DescribeFirewallTemplates](https://cloud.tencent.com/document/product/1207/96874) 接口返回值中的 TemplateId 获取。
      */
     public String getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set 防火墙模板ID。可通过 [DescribeFirewallTemplates](https://cloud.tencent.com/document/product/1207/96874) 的返回值 TemplateSet 获取。
-     * @param TemplateId 防火墙模板ID。可通过 [DescribeFirewallTemplates](https://cloud.tencent.com/document/product/1207/96874) 的返回值 TemplateSet 获取。
+     * Set 防火墙模板ID。可通过 [DescribeFirewallTemplates](https://cloud.tencent.com/document/product/1207/96874) 接口返回值中的 TemplateId 获取。
+     * @param TemplateId 防火墙模板ID。可通过 [DescribeFirewallTemplates](https://cloud.tencent.com/document/product/1207/96874) 接口返回值中的 TemplateId 获取。
      */
     public void setTemplateId(String TemplateId) {
         this.TemplateId = TemplateId;
     }
 
     /**
-     * Get 防火墙模板规则ID。可通过 [DescribeFirewallTemplateRules](https://cloud.tencent.com/document/product/1207/96875) 的返回值 TemplateRuleSet 获取。 
-     * @return TemplateRuleId 防火墙模板规则ID。可通过 [DescribeFirewallTemplateRules](https://cloud.tencent.com/document/product/1207/96875) 的返回值 TemplateRuleSet 获取。
+     * Get 防火墙模板规则ID。可通过 [DescribeFirewallTemplateRules](https://cloud.tencent.com/document/product/1207/96875) 接口返回值中的 TemplateRuleId 获取。 
+     * @return TemplateRuleId 防火墙模板规则ID。可通过 [DescribeFirewallTemplateRules](https://cloud.tencent.com/document/product/1207/96875) 接口返回值中的 TemplateRuleId 获取。
      */
     public String getTemplateRuleId() {
         return this.TemplateRuleId;
     }
 
     /**
-     * Set 防火墙模板规则ID。可通过 [DescribeFirewallTemplateRules](https://cloud.tencent.com/document/product/1207/96875) 的返回值 TemplateRuleSet 获取。
-     * @param TemplateRuleId 防火墙模板规则ID。可通过 [DescribeFirewallTemplateRules](https://cloud.tencent.com/document/product/1207/96875) 的返回值 TemplateRuleSet 获取。
+     * Set 防火墙模板规则ID。可通过 [DescribeFirewallTemplateRules](https://cloud.tencent.com/document/product/1207/96875) 接口返回值中的 TemplateRuleId 获取。
+     * @param TemplateRuleId 防火墙模板规则ID。可通过 [DescribeFirewallTemplateRules](https://cloud.tencent.com/document/product/1207/96875) 接口返回值中的 TemplateRuleId 获取。
      */
     public void setTemplateRuleId(String TemplateRuleId) {
         this.TemplateRuleId = TemplateRuleId;

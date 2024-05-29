@@ -110,6 +110,13 @@ public class CreateCustomPackRequest extends AbstractModel {
     private Long RelateType;
 
     /**
+    * 场景值
+    */
+    @SerializedName("SceneCode")
+    @Expose
+    private Long SceneCode;
+
+    /**
      * Get 商户ID 
      * @return MerchantId 商户ID
      */
@@ -309,6 +316,22 @@ public class CreateCustomPackRequest extends AbstractModel {
         this.RelateType = RelateType;
     }
 
+    /**
+     * Get 场景值 
+     * @return SceneCode 场景值
+     */
+    public Long getSceneCode() {
+        return this.SceneCode;
+    }
+
+    /**
+     * Set 场景值
+     * @param SceneCode 场景值
+     */
+    public void setSceneCode(Long SceneCode) {
+        this.SceneCode = SceneCode;
+    }
+
     public CreateCustomPackRequest() {
     }
 
@@ -359,6 +382,9 @@ public class CreateCustomPackRequest extends AbstractModel {
         if (source.RelateType != null) {
             this.RelateType = new Long(source.RelateType);
         }
+        if (source.SceneCode != null) {
+            this.SceneCode = new Long(source.SceneCode);
+        }
     }
 
 
@@ -378,6 +404,7 @@ public class CreateCustomPackRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SerialType", this.SerialType);
         this.setParamSimple(map, prefix + "ProductId", this.ProductId);
         this.setParamSimple(map, prefix + "RelateType", this.RelateType);
+        this.setParamSimple(map, prefix + "SceneCode", this.SceneCode);
 
     }
 }

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeModifyInstanceBundlesRequest extends AbstractModel {
 
     /**
-    * 实例 ID。
+    * 实例 ID。可通过 <a href="https://cloud.tencent.com/document/product/1207/47573">DescribeInstances</a> 接口返回值中的 InstanceId 获取。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -35,6 +35,7 @@ public class DescribeModifyInstanceBundlesRequest extends AbstractModel {
 <li>bundle-id</li>按照【套餐 ID】进行过滤。
 类型：String
 必选：否
+可通过<a href="https://cloud.tencent.com/document/product/1207/47575"> DescribeBundles </a>接口返回值中的 BundleId 获取。
 <li>support-platform-type</li>按照【系统类型】进行过滤。
 取值： LINUX_UNIX（Linux/Unix系统）；WINDOWS（Windows 系统）
 类型：String
@@ -68,16 +69,16 @@ public class DescribeModifyInstanceBundlesRequest extends AbstractModel {
     private Long Limit;
 
     /**
-     * Get 实例 ID。 
-     * @return InstanceId 实例 ID。
+     * Get 实例 ID。可通过 <a href="https://cloud.tencent.com/document/product/1207/47573">DescribeInstances</a> 接口返回值中的 InstanceId 获取。 
+     * @return InstanceId 实例 ID。可通过 <a href="https://cloud.tencent.com/document/product/1207/47573">DescribeInstances</a> 接口返回值中的 InstanceId 获取。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例 ID。
-     * @param InstanceId 实例 ID。
+     * Set 实例 ID。可通过 <a href="https://cloud.tencent.com/document/product/1207/47573">DescribeInstances</a> 接口返回值中的 InstanceId 获取。
+     * @param InstanceId 实例 ID。可通过 <a href="https://cloud.tencent.com/document/product/1207/47573">DescribeInstances</a> 接口返回值中的 InstanceId 获取。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -88,6 +89,7 @@ public class DescribeModifyInstanceBundlesRequest extends AbstractModel {
 <li>bundle-id</li>按照【套餐 ID】进行过滤。
 类型：String
 必选：否
+可通过<a href="https://cloud.tencent.com/document/product/1207/47575"> DescribeBundles </a>接口返回值中的 BundleId 获取。
 <li>support-platform-type</li>按照【系统类型】进行过滤。
 取值： LINUX_UNIX（Linux/Unix系统）；WINDOWS（Windows 系统）
 类型：String
@@ -105,6 +107,7 @@ public class DescribeModifyInstanceBundlesRequest extends AbstractModel {
 <li>bundle-id</li>按照【套餐 ID】进行过滤。
 类型：String
 必选：否
+可通过<a href="https://cloud.tencent.com/document/product/1207/47575"> DescribeBundles </a>接口返回值中的 BundleId 获取。
 <li>support-platform-type</li>按照【系统类型】进行过滤。
 取值： LINUX_UNIX（Linux/Unix系统）；WINDOWS（Windows 系统）
 类型：String
@@ -128,6 +131,7 @@ public class DescribeModifyInstanceBundlesRequest extends AbstractModel {
 <li>bundle-id</li>按照【套餐 ID】进行过滤。
 类型：String
 必选：否
+可通过<a href="https://cloud.tencent.com/document/product/1207/47575"> DescribeBundles </a>接口返回值中的 BundleId 获取。
 <li>support-platform-type</li>按照【系统类型】进行过滤。
 取值： LINUX_UNIX（Linux/Unix系统）；WINDOWS（Windows 系统）
 类型：String
@@ -145,6 +149,7 @@ public class DescribeModifyInstanceBundlesRequest extends AbstractModel {
 <li>bundle-id</li>按照【套餐 ID】进行过滤。
 类型：String
 必选：否
+可通过<a href="https://cloud.tencent.com/document/product/1207/47575"> DescribeBundles </a>接口返回值中的 BundleId 获取。
 <li>support-platform-type</li>按照【系统类型】进行过滤。
 取值： LINUX_UNIX（Linux/Unix系统）；WINDOWS（Windows 系统）
 类型：String

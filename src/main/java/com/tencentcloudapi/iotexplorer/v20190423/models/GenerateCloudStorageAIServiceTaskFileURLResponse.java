@@ -31,7 +31,7 @@ public class GenerateCloudStorageAIServiceTaskFileURLResponse extends AbstractMo
     private String FileURL;
 
     /**
-    * 过期时间 UNIX 时间戳
+    * 过期时间 UNIX 时间戳（最大不超过文件所属任务的过期时间）
     */
     @SerializedName("ExpireTime")
     @Expose
@@ -61,16 +61,16 @@ public class GenerateCloudStorageAIServiceTaskFileURLResponse extends AbstractMo
     }
 
     /**
-     * Get 过期时间 UNIX 时间戳 
-     * @return ExpireTime 过期时间 UNIX 时间戳
+     * Get 过期时间 UNIX 时间戳（最大不超过文件所属任务的过期时间） 
+     * @return ExpireTime 过期时间 UNIX 时间戳（最大不超过文件所属任务的过期时间）
      */
     public Long getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set 过期时间 UNIX 时间戳
-     * @param ExpireTime 过期时间 UNIX 时间戳
+     * Set 过期时间 UNIX 时间戳（最大不超过文件所属任务的过期时间）
+     * @param ExpireTime 过期时间 UNIX 时间戳（最大不超过文件所属任务的过期时间）
      */
     public void setExpireTime(Long ExpireTime) {
         this.ExpireTime = ExpireTime;

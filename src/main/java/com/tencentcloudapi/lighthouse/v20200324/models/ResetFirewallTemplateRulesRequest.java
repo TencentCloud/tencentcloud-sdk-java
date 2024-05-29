@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class ResetFirewallTemplateRulesRequest extends AbstractModel {
 
     /**
-    * 模板ID。
+    * 防火墙模板ID。可通过 [DescribeFirewallTemplates](https://cloud.tencent.com/document/product/1207/96874) 接口返回值中的 TemplateId	获取。
     */
     @SerializedName("TemplateId")
     @Expose
     private String TemplateId;
 
     /**
-    * 重置后的防火墙模板规则列表。
+    * 重置后的防火墙模板规则列表。每次请求批量防火墙规则的上限为 100。
     */
     @SerializedName("TemplateRules")
     @Expose
     private FirewallRule [] TemplateRules;
 
     /**
-     * Get 模板ID。 
-     * @return TemplateId 模板ID。
+     * Get 防火墙模板ID。可通过 [DescribeFirewallTemplates](https://cloud.tencent.com/document/product/1207/96874) 接口返回值中的 TemplateId	获取。 
+     * @return TemplateId 防火墙模板ID。可通过 [DescribeFirewallTemplates](https://cloud.tencent.com/document/product/1207/96874) 接口返回值中的 TemplateId	获取。
      */
     public String getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set 模板ID。
-     * @param TemplateId 模板ID。
+     * Set 防火墙模板ID。可通过 [DescribeFirewallTemplates](https://cloud.tencent.com/document/product/1207/96874) 接口返回值中的 TemplateId	获取。
+     * @param TemplateId 防火墙模板ID。可通过 [DescribeFirewallTemplates](https://cloud.tencent.com/document/product/1207/96874) 接口返回值中的 TemplateId	获取。
      */
     public void setTemplateId(String TemplateId) {
         this.TemplateId = TemplateId;
     }
 
     /**
-     * Get 重置后的防火墙模板规则列表。 
-     * @return TemplateRules 重置后的防火墙模板规则列表。
+     * Get 重置后的防火墙模板规则列表。每次请求批量防火墙规则的上限为 100。 
+     * @return TemplateRules 重置后的防火墙模板规则列表。每次请求批量防火墙规则的上限为 100。
      */
     public FirewallRule [] getTemplateRules() {
         return this.TemplateRules;
     }
 
     /**
-     * Set 重置后的防火墙模板规则列表。
-     * @param TemplateRules 重置后的防火墙模板规则列表。
+     * Set 重置后的防火墙模板规则列表。每次请求批量防火墙规则的上限为 100。
+     * @param TemplateRules 重置后的防火墙模板规则列表。每次请求批量防火墙规则的上限为 100。
      */
     public void setTemplateRules(FirewallRule [] TemplateRules) {
         this.TemplateRules = TemplateRules;

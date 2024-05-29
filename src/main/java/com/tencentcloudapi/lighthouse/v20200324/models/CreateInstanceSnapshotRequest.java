@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateInstanceSnapshotRequest extends AbstractModel {
 
     /**
-    * 需要创建快照的实例 ID。
+    * 需要创建快照的实例 ID。可通过 [DescribeInstances](https://cloud.tencent.com/document/product/1207/47573) 接口返回值中的 InstanceId	获取。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateInstanceSnapshotRequest extends AbstractModel {
     private String SnapshotName;
 
     /**
-     * Get 需要创建快照的实例 ID。 
-     * @return InstanceId 需要创建快照的实例 ID。
+     * Get 需要创建快照的实例 ID。可通过 [DescribeInstances](https://cloud.tencent.com/document/product/1207/47573) 接口返回值中的 InstanceId	获取。 
+     * @return InstanceId 需要创建快照的实例 ID。可通过 [DescribeInstances](https://cloud.tencent.com/document/product/1207/47573) 接口返回值中的 InstanceId	获取。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 需要创建快照的实例 ID。
-     * @param InstanceId 需要创建快照的实例 ID。
+     * Set 需要创建快照的实例 ID。可通过 [DescribeInstances](https://cloud.tencent.com/document/product/1207/47573) 接口返回值中的 InstanceId	获取。
+     * @param InstanceId 需要创建快照的实例 ID。可通过 [DescribeInstances](https://cloud.tencent.com/document/product/1207/47573) 接口返回值中的 InstanceId	获取。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

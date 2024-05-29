@@ -450,6 +450,14 @@ public class InstanceSet extends AbstractModel {
     private String UpgradeRedisVersion;
 
     /**
+    * 备份模式：- SecondLevelBackup   秒级备份- NormalLevelBackup    普通备份
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BackupMode")
+    @Expose
+    private String BackupMode;
+
+    /**
      * Get 实例名称。 
      * @return InstanceName 实例名称。
      */
@@ -1481,6 +1489,26 @@ public class InstanceSet extends AbstractModel {
         this.UpgradeRedisVersion = UpgradeRedisVersion;
     }
 
+    /**
+     * Get 备份模式：- SecondLevelBackup   秒级备份- NormalLevelBackup    普通备份
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BackupMode 备份模式：- SecondLevelBackup   秒级备份- NormalLevelBackup    普通备份
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getBackupMode() {
+        return this.BackupMode;
+    }
+
+    /**
+     * Set 备份模式：- SecondLevelBackup   秒级备份- NormalLevelBackup    普通备份
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BackupMode 备份模式：- SecondLevelBackup   秒级备份- NormalLevelBackup    普通备份
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBackupMode(String BackupMode) {
+        this.BackupMode = BackupMode;
+    }
+
     public InstanceSet() {
     }
 
@@ -1669,6 +1697,9 @@ public class InstanceSet extends AbstractModel {
         if (source.UpgradeRedisVersion != null) {
             this.UpgradeRedisVersion = new String(source.UpgradeRedisVersion);
         }
+        if (source.BackupMode != null) {
+            this.BackupMode = new String(source.BackupMode);
+        }
     }
 
 
@@ -1732,6 +1763,7 @@ public class InstanceSet extends AbstractModel {
         this.setParamSimple(map, prefix + "CurrentRedisVersion", this.CurrentRedisVersion);
         this.setParamSimple(map, prefix + "UpgradeProxyVersion", this.UpgradeProxyVersion);
         this.setParamSimple(map, prefix + "UpgradeRedisVersion", this.UpgradeRedisVersion);
+        this.setParamSimple(map, prefix + "BackupMode", this.BackupMode);
 
     }
 }

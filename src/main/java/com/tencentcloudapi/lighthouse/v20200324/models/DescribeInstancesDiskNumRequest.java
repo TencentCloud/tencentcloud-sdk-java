@@ -24,23 +24,28 @@ import java.util.HashMap;
 public class DescribeInstancesDiskNumRequest extends AbstractModel {
 
     /**
-    * 实例ID列表。
+    * 实例ID列表。每次请求批量实例的上限为 100。
+可通过 <a href="https://cloud.tencent.com/document/product/1207/47573">DescribeInstances</a> 接口返回值中的 InstanceId 获取。
     */
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
 
     /**
-     * Get 实例ID列表。 
-     * @return InstanceIds 实例ID列表。
+     * Get 实例ID列表。每次请求批量实例的上限为 100。
+可通过 <a href="https://cloud.tencent.com/document/product/1207/47573">DescribeInstances</a> 接口返回值中的 InstanceId 获取。 
+     * @return InstanceIds 实例ID列表。每次请求批量实例的上限为 100。
+可通过 <a href="https://cloud.tencent.com/document/product/1207/47573">DescribeInstances</a> 接口返回值中的 InstanceId 获取。
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set 实例ID列表。
-     * @param InstanceIds 实例ID列表。
+     * Set 实例ID列表。每次请求批量实例的上限为 100。
+可通过 <a href="https://cloud.tencent.com/document/product/1207/47573">DescribeInstances</a> 接口返回值中的 InstanceId 获取。
+     * @param InstanceIds 实例ID列表。每次请求批量实例的上限为 100。
+可通过 <a href="https://cloud.tencent.com/document/product/1207/47573">DescribeInstances</a> 接口返回值中的 InstanceId 获取。
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;

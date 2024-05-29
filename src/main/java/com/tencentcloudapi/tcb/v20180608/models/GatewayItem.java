@@ -39,6 +39,14 @@ public class GatewayItem extends AbstractModel {
     private Long AppId;
 
     /**
+    * WxAppId
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("WxAppId")
+    @Expose
+    private String WxAppId;
+
+    /**
     * 环境id
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -135,6 +143,22 @@ public class GatewayItem extends AbstractModel {
     private String Region;
 
     /**
+    * 是否可以续费
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CanRenew")
+    @Expose
+    private Boolean CanRenew;
+
+    /**
+    * 自动续费标志
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AutoRenewFlag")
+    @Expose
+    private Long AutoRenewFlag;
+
+    /**
     * 隔离时间
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -167,6 +191,14 @@ public class GatewayItem extends AbstractModel {
     private String UpdateTime;
 
     /**
+    * 是否可以降配
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CanDowngrade")
+    @Expose
+    private Boolean CanDowngrade;
+
+    /**
     * 允许未登录访问
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -181,6 +213,22 @@ public class GatewayItem extends AbstractModel {
     @SerializedName("VersionNumLimit")
     @Expose
     private Long VersionNumLimit;
+
+    /**
+    * Donut接入ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LongAccessId")
+    @Expose
+    private String LongAccessId;
+
+    /**
+    * Donut接入域名
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AccessDomain")
+    @Expose
+    private String AccessDomain;
 
     /**
      * Get 用户uin 
@@ -216,6 +264,26 @@ public class GatewayItem extends AbstractModel {
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
+    }
+
+    /**
+     * Get WxAppId
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WxAppId WxAppId
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getWxAppId() {
+        return this.WxAppId;
+    }
+
+    /**
+     * Set WxAppId
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WxAppId WxAppId
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWxAppId(String WxAppId) {
+        this.WxAppId = WxAppId;
     }
 
     /**
@@ -459,6 +527,46 @@ public class GatewayItem extends AbstractModel {
     }
 
     /**
+     * Get 是否可以续费
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CanRenew 是否可以续费
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getCanRenew() {
+        return this.CanRenew;
+    }
+
+    /**
+     * Set 是否可以续费
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CanRenew 是否可以续费
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCanRenew(Boolean CanRenew) {
+        this.CanRenew = CanRenew;
+    }
+
+    /**
+     * Get 自动续费标志
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AutoRenewFlag 自动续费标志
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getAutoRenewFlag() {
+        return this.AutoRenewFlag;
+    }
+
+    /**
+     * Set 自动续费标志
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AutoRenewFlag 自动续费标志
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAutoRenewFlag(Long AutoRenewFlag) {
+        this.AutoRenewFlag = AutoRenewFlag;
+    }
+
+    /**
      * Get 隔离时间
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return IsolateTime 隔离时间
@@ -539,6 +647,26 @@ public class GatewayItem extends AbstractModel {
     }
 
     /**
+     * Get 是否可以降配
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CanDowngrade 是否可以降配
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getCanDowngrade() {
+        return this.CanDowngrade;
+    }
+
+    /**
+     * Set 是否可以降配
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CanDowngrade 是否可以降配
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCanDowngrade(Boolean CanDowngrade) {
+        this.CanDowngrade = CanDowngrade;
+    }
+
+    /**
      * Get 允许未登录访问
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return AllowUncertified 允许未登录访问
@@ -578,6 +706,46 @@ public class GatewayItem extends AbstractModel {
         this.VersionNumLimit = VersionNumLimit;
     }
 
+    /**
+     * Get Donut接入ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LongAccessId Donut接入ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLongAccessId() {
+        return this.LongAccessId;
+    }
+
+    /**
+     * Set Donut接入ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LongAccessId Donut接入ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLongAccessId(String LongAccessId) {
+        this.LongAccessId = LongAccessId;
+    }
+
+    /**
+     * Get Donut接入域名
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AccessDomain Donut接入域名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAccessDomain() {
+        return this.AccessDomain;
+    }
+
+    /**
+     * Set Donut接入域名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AccessDomain Donut接入域名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAccessDomain(String AccessDomain) {
+        this.AccessDomain = AccessDomain;
+    }
+
     public GatewayItem() {
     }
 
@@ -591,6 +759,9 @@ public class GatewayItem extends AbstractModel {
         }
         if (source.AppId != null) {
             this.AppId = new Long(source.AppId);
+        }
+        if (source.WxAppId != null) {
+            this.WxAppId = new String(source.WxAppId);
         }
         if (source.EnvId != null) {
             this.EnvId = new String(source.EnvId);
@@ -631,6 +802,12 @@ public class GatewayItem extends AbstractModel {
         if (source.Region != null) {
             this.Region = new String(source.Region);
         }
+        if (source.CanRenew != null) {
+            this.CanRenew = new Boolean(source.CanRenew);
+        }
+        if (source.AutoRenewFlag != null) {
+            this.AutoRenewFlag = new Long(source.AutoRenewFlag);
+        }
         if (source.IsolateTime != null) {
             this.IsolateTime = new String(source.IsolateTime);
         }
@@ -643,11 +820,20 @@ public class GatewayItem extends AbstractModel {
         if (source.UpdateTime != null) {
             this.UpdateTime = new String(source.UpdateTime);
         }
+        if (source.CanDowngrade != null) {
+            this.CanDowngrade = new Boolean(source.CanDowngrade);
+        }
         if (source.AllowUncertified != null) {
             this.AllowUncertified = new Long(source.AllowUncertified);
         }
         if (source.VersionNumLimit != null) {
             this.VersionNumLimit = new Long(source.VersionNumLimit);
+        }
+        if (source.LongAccessId != null) {
+            this.LongAccessId = new String(source.LongAccessId);
+        }
+        if (source.AccessDomain != null) {
+            this.AccessDomain = new String(source.AccessDomain);
         }
     }
 
@@ -658,6 +844,7 @@ public class GatewayItem extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Uin", this.Uin);
         this.setParamSimple(map, prefix + "AppId", this.AppId);
+        this.setParamSimple(map, prefix + "WxAppId", this.WxAppId);
         this.setParamSimple(map, prefix + "EnvId", this.EnvId);
         this.setParamSimple(map, prefix + "GatewayId", this.GatewayId);
         this.setParamSimple(map, prefix + "GatewayName", this.GatewayName);
@@ -670,12 +857,17 @@ public class GatewayItem extends AbstractModel {
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "L5Addr", this.L5Addr);
         this.setParamSimple(map, prefix + "Region", this.Region);
+        this.setParamSimple(map, prefix + "CanRenew", this.CanRenew);
+        this.setParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
         this.setParamSimple(map, prefix + "IsolateTime", this.IsolateTime);
         this.setParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamSimple(map, prefix + "CanDowngrade", this.CanDowngrade);
         this.setParamSimple(map, prefix + "AllowUncertified", this.AllowUncertified);
         this.setParamSimple(map, prefix + "VersionNumLimit", this.VersionNumLimit);
+        this.setParamSimple(map, prefix + "LongAccessId", this.LongAccessId);
+        this.setParamSimple(map, prefix + "AccessDomain", this.AccessDomain);
 
     }
 }

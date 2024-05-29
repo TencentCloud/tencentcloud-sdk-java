@@ -66,7 +66,7 @@ public class ModifyInstanceAccountRequest extends AbstractModel {
     private String Privilege;
 
     /**
-    * true表示将主账号切换为免密账号，这里只适用于主账号，子账号不可免密
+    * true表示将主账号切换为免密账号，这里只适用于主账号，子账号不可免密。
     */
     @SerializedName("NoAuth")
     @Expose
@@ -169,16 +169,16 @@ public class ModifyInstanceAccountRequest extends AbstractModel {
     }
 
     /**
-     * Get true表示将主账号切换为免密账号，这里只适用于主账号，子账号不可免密 
-     * @return NoAuth true表示将主账号切换为免密账号，这里只适用于主账号，子账号不可免密
+     * Get true表示将主账号切换为免密账号，这里只适用于主账号，子账号不可免密。 
+     * @return NoAuth true表示将主账号切换为免密账号，这里只适用于主账号，子账号不可免密。
      */
     public Boolean getNoAuth() {
         return this.NoAuth;
     }
 
     /**
-     * Set true表示将主账号切换为免密账号，这里只适用于主账号，子账号不可免密
-     * @param NoAuth true表示将主账号切换为免密账号，这里只适用于主账号，子账号不可免密
+     * Set true表示将主账号切换为免密账号，这里只适用于主账号，子账号不可免密。
+     * @param NoAuth true表示将主账号切换为免密账号，这里只适用于主账号，子账号不可免密。
      */
     public void setNoAuth(Boolean NoAuth) {
         this.NoAuth = NoAuth;
