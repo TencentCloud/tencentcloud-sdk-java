@@ -139,6 +139,22 @@ public class Device extends AbstractModel {
     private String [] IpPortSet;
 
     /**
+    * 网络域Id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DomainId")
+    @Expose
+    private String DomainId;
+
+    /**
+    * 网络域名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DomainName")
+    @Expose
+    private String DomainName;
+
+    /**
      * Get 资产ID 
      * @return Id 资产ID
      */
@@ -406,6 +422,46 @@ public class Device extends AbstractModel {
         this.IpPortSet = IpPortSet;
     }
 
+    /**
+     * Get 网络域Id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DomainId 网络域Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDomainId() {
+        return this.DomainId;
+    }
+
+    /**
+     * Set 网络域Id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DomainId 网络域Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDomainId(String DomainId) {
+        this.DomainId = DomainId;
+    }
+
+    /**
+     * Get 网络域名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DomainName 网络域名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDomainName() {
+        return this.DomainName;
+    }
+
+    /**
+     * Set 网络域名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DomainName 网络域名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDomainName(String DomainName) {
+        this.DomainName = DomainName;
+    }
+
     public Device() {
     }
 
@@ -468,6 +524,12 @@ public class Device extends AbstractModel {
                 this.IpPortSet[i] = new String(source.IpPortSet[i]);
             }
         }
+        if (source.DomainId != null) {
+            this.DomainId = new String(source.DomainId);
+        }
+        if (source.DomainName != null) {
+            this.DomainName = new String(source.DomainName);
+        }
     }
 
 
@@ -491,6 +553,8 @@ public class Device extends AbstractModel {
         this.setParamObj(map, prefix + "Resource.", this.Resource);
         this.setParamObj(map, prefix + "Department.", this.Department);
         this.setParamArraySimple(map, prefix + "IpPortSet.", this.IpPortSet);
+        this.setParamSimple(map, prefix + "DomainId", this.DomainId);
+        this.setParamSimple(map, prefix + "DomainName", this.DomainName);
 
     }
 }

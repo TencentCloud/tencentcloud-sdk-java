@@ -32,7 +32,7 @@ public class UpsertIpAccessControlRequest extends AbstractModel {
     private String Domain;
 
     /**
-    * ip 参数列表，json数组由ip，source，note，action，valid_ts组成。ip对应配置的ip地址，source固定为custom值，note为注释，action值42为黑名单，40为白名单，valid_ts为有效日期，值为秒级时间戳（（如1680570420代表2023-04-04 09:07:00））
+    * IP 参数列表，json数组由IP，source，note，action，valid_ts组成。IP对应配置的IP地址，source固定为custom值，note为注释，action值42为黑名单，40为白名单，valid_ts为有效日期，值为秒级时间戳（（如1680570420代表2023-04-04 09:07:00））
     */
     @SerializedName("Items")
     @Expose
@@ -53,7 +53,7 @@ public class UpsertIpAccessControlRequest extends AbstractModel {
     private String Edition;
 
     /**
-    * 是否为多域名黑白名单，当为多域名的黑白名单时，取值为batch，否则为空
+    * 可选值为：batch（批量添加）、bot、cc、custom（非批量添加时的默认值）
     */
     @SerializedName("SourceType")
     @Expose
@@ -80,16 +80,16 @@ public class UpsertIpAccessControlRequest extends AbstractModel {
     }
 
     /**
-     * Get ip 参数列表，json数组由ip，source，note，action，valid_ts组成。ip对应配置的ip地址，source固定为custom值，note为注释，action值42为黑名单，40为白名单，valid_ts为有效日期，值为秒级时间戳（（如1680570420代表2023-04-04 09:07:00）） 
-     * @return Items ip 参数列表，json数组由ip，source，note，action，valid_ts组成。ip对应配置的ip地址，source固定为custom值，note为注释，action值42为黑名单，40为白名单，valid_ts为有效日期，值为秒级时间戳（（如1680570420代表2023-04-04 09:07:00））
+     * Get IP 参数列表，json数组由IP，source，note，action，valid_ts组成。IP对应配置的IP地址，source固定为custom值，note为注释，action值42为黑名单，40为白名单，valid_ts为有效日期，值为秒级时间戳（（如1680570420代表2023-04-04 09:07:00）） 
+     * @return Items IP 参数列表，json数组由IP，source，note，action，valid_ts组成。IP对应配置的IP地址，source固定为custom值，note为注释，action值42为黑名单，40为白名单，valid_ts为有效日期，值为秒级时间戳（（如1680570420代表2023-04-04 09:07:00））
      */
     public String [] getItems() {
         return this.Items;
     }
 
     /**
-     * Set ip 参数列表，json数组由ip，source，note，action，valid_ts组成。ip对应配置的ip地址，source固定为custom值，note为注释，action值42为黑名单，40为白名单，valid_ts为有效日期，值为秒级时间戳（（如1680570420代表2023-04-04 09:07:00））
-     * @param Items ip 参数列表，json数组由ip，source，note，action，valid_ts组成。ip对应配置的ip地址，source固定为custom值，note为注释，action值42为黑名单，40为白名单，valid_ts为有效日期，值为秒级时间戳（（如1680570420代表2023-04-04 09:07:00））
+     * Set IP 参数列表，json数组由IP，source，note，action，valid_ts组成。IP对应配置的IP地址，source固定为custom值，note为注释，action值42为黑名单，40为白名单，valid_ts为有效日期，值为秒级时间戳（（如1680570420代表2023-04-04 09:07:00））
+     * @param Items IP 参数列表，json数组由IP，source，note，action，valid_ts组成。IP对应配置的IP地址，source固定为custom值，note为注释，action值42为黑名单，40为白名单，valid_ts为有效日期，值为秒级时间戳（（如1680570420代表2023-04-04 09:07:00））
      */
     public void setItems(String [] Items) {
         this.Items = Items;
@@ -128,16 +128,16 @@ public class UpsertIpAccessControlRequest extends AbstractModel {
     }
 
     /**
-     * Get 是否为多域名黑白名单，当为多域名的黑白名单时，取值为batch，否则为空 
-     * @return SourceType 是否为多域名黑白名单，当为多域名的黑白名单时，取值为batch，否则为空
+     * Get 可选值为：batch（批量添加）、bot、cc、custom（非批量添加时的默认值） 
+     * @return SourceType 可选值为：batch（批量添加）、bot、cc、custom（非批量添加时的默认值）
      */
     public String getSourceType() {
         return this.SourceType;
     }
 
     /**
-     * Set 是否为多域名黑白名单，当为多域名的黑白名单时，取值为batch，否则为空
-     * @param SourceType 是否为多域名黑白名单，当为多域名的黑白名单时，取值为batch，否则为空
+     * Set 可选值为：batch（批量添加）、bot、cc、custom（非批量添加时的默认值）
+     * @param SourceType 可选值为：batch（批量添加）、bot、cc、custom（非批量添加时的默认值）
      */
     public void setSourceType(String SourceType) {
         this.SourceType = SourceType;

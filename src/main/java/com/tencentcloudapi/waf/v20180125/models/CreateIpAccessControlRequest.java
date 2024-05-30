@@ -67,7 +67,7 @@ public class CreateIpAccessControlRequest extends AbstractModel {
     private String Edition;
 
     /**
-    * 是否为批量防护IP黑白名单，当为批量防护IP黑白名单时，取值为batch，否则为空
+    * 可选值为：batch（批量添加）、bot、cc、custom（非批量添加时的默认值）
     */
     @SerializedName("SourceType")
     @Expose
@@ -181,16 +181,16 @@ public class CreateIpAccessControlRequest extends AbstractModel {
     }
 
     /**
-     * Get 是否为批量防护IP黑白名单，当为批量防护IP黑白名单时，取值为batch，否则为空 
-     * @return SourceType 是否为批量防护IP黑白名单，当为批量防护IP黑白名单时，取值为batch，否则为空
+     * Get 可选值为：batch（批量添加）、bot、cc、custom（非批量添加时的默认值） 
+     * @return SourceType 可选值为：batch（批量添加）、bot、cc、custom（非批量添加时的默认值）
      */
     public String getSourceType() {
         return this.SourceType;
     }
 
     /**
-     * Set 是否为批量防护IP黑白名单，当为批量防护IP黑白名单时，取值为batch，否则为空
-     * @param SourceType 是否为批量防护IP黑白名单，当为批量防护IP黑白名单时，取值为batch，否则为空
+     * Set 可选值为：batch（批量添加）、bot、cc、custom（非批量添加时的默认值）
+     * @param SourceType 可选值为：batch（批量添加）、bot、cc、custom（非批量添加时的默认值）
      */
     public void setSourceType(String SourceType) {
         this.SourceType = SourceType;

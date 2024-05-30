@@ -157,6 +157,14 @@ public class ClusterGroupSetItem extends AbstractModel {
     private Long PayMode;
 
     /**
+    * 弹性
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SubEks")
+    @Expose
+    private SubEks SubEks;
+
+    /**
      * Get clusterGroup 的 SerialId 
      * @return ClusterId clusterGroup 的 SerialId
      */
@@ -460,6 +468,26 @@ public class ClusterGroupSetItem extends AbstractModel {
         this.PayMode = PayMode;
     }
 
+    /**
+     * Get 弹性
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SubEks 弹性
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public SubEks getSubEks() {
+        return this.SubEks;
+    }
+
+    /**
+     * Set 弹性
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SubEks 弹性
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSubEks(SubEks SubEks) {
+        this.SubEks = SubEks;
+    }
+
     public ClusterGroupSetItem() {
     }
 
@@ -525,6 +553,9 @@ public class ClusterGroupSetItem extends AbstractModel {
         if (source.PayMode != null) {
             this.PayMode = new Long(source.PayMode);
         }
+        if (source.SubEks != null) {
+            this.SubEks = new SubEks(source.SubEks);
+        }
     }
 
 
@@ -551,6 +582,7 @@ public class ClusterGroupSetItem extends AbstractModel {
         this.setParamSimple(map, prefix + "FreeCu", this.FreeCu);
         this.setParamSimple(map, prefix + "RunningCu", this.RunningCu);
         this.setParamSimple(map, prefix + "PayMode", this.PayMode);
+        this.setParamObj(map, prefix + "SubEks.", this.SubEks);
 
     }
 }

@@ -318,6 +318,22 @@ public class InstanceInfo extends AbstractModel {
     private String LastQpsExceedTime;
 
     /**
+    * 小程序安全接入ID数量扩张包
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MiniExtendPkg")
+    @Expose
+    private MiniExtendPkg MiniExtendPkg;
+
+    /**
+    * 计费项
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BillingItem")
+    @Expose
+    private String BillingItem;
+
+    /**
      * Get 实例唯一ID 
      * @return InstanceId 实例唯一ID
      */
@@ -1037,6 +1053,46 @@ public class InstanceInfo extends AbstractModel {
         this.LastQpsExceedTime = LastQpsExceedTime;
     }
 
+    /**
+     * Get 小程序安全接入ID数量扩张包
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MiniExtendPkg 小程序安全接入ID数量扩张包
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public MiniExtendPkg getMiniExtendPkg() {
+        return this.MiniExtendPkg;
+    }
+
+    /**
+     * Set 小程序安全接入ID数量扩张包
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MiniExtendPkg 小程序安全接入ID数量扩张包
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMiniExtendPkg(MiniExtendPkg MiniExtendPkg) {
+        this.MiniExtendPkg = MiniExtendPkg;
+    }
+
+    /**
+     * Get 计费项
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BillingItem 计费项
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getBillingItem() {
+        return this.BillingItem;
+    }
+
+    /**
+     * Set 计费项
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BillingItem 计费项
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBillingItem(String BillingItem) {
+        this.BillingItem = BillingItem;
+    }
+
     public InstanceInfo() {
     }
 
@@ -1159,6 +1215,12 @@ public class InstanceInfo extends AbstractModel {
         if (source.LastQpsExceedTime != null) {
             this.LastQpsExceedTime = new String(source.LastQpsExceedTime);
         }
+        if (source.MiniExtendPkg != null) {
+            this.MiniExtendPkg = new MiniExtendPkg(source.MiniExtendPkg);
+        }
+        if (source.BillingItem != null) {
+            this.BillingItem = new String(source.BillingItem);
+        }
     }
 
 
@@ -1204,6 +1266,8 @@ public class InstanceInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "MiniQpsStandard", this.MiniQpsStandard);
         this.setParamSimple(map, prefix + "MiniMaxQPS", this.MiniMaxQPS);
         this.setParamSimple(map, prefix + "LastQpsExceedTime", this.LastQpsExceedTime);
+        this.setParamObj(map, prefix + "MiniExtendPkg.", this.MiniExtendPkg);
+        this.setParamSimple(map, prefix + "BillingItem", this.BillingItem);
 
     }
 }

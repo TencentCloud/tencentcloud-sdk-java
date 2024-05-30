@@ -45,6 +45,13 @@ public class DeleteCustomRuleRequest extends AbstractModel {
     private String Edition;
 
     /**
+    * 批量删除的规则列表
+    */
+    @SerializedName("DomainRuleIdList")
+    @Expose
+    private DomainRuleId [] DomainRuleIdList;
+
+    /**
      * Get 删除的域名 
      * @return Domain 删除的域名
      */
@@ -92,6 +99,22 @@ public class DeleteCustomRuleRequest extends AbstractModel {
         this.Edition = Edition;
     }
 
+    /**
+     * Get 批量删除的规则列表 
+     * @return DomainRuleIdList 批量删除的规则列表
+     */
+    public DomainRuleId [] getDomainRuleIdList() {
+        return this.DomainRuleIdList;
+    }
+
+    /**
+     * Set 批量删除的规则列表
+     * @param DomainRuleIdList 批量删除的规则列表
+     */
+    public void setDomainRuleIdList(DomainRuleId [] DomainRuleIdList) {
+        this.DomainRuleIdList = DomainRuleIdList;
+    }
+
     public DeleteCustomRuleRequest() {
     }
 
@@ -109,6 +132,12 @@ public class DeleteCustomRuleRequest extends AbstractModel {
         if (source.Edition != null) {
             this.Edition = new String(source.Edition);
         }
+        if (source.DomainRuleIdList != null) {
+            this.DomainRuleIdList = new DomainRuleId[source.DomainRuleIdList.length];
+            for (int i = 0; i < source.DomainRuleIdList.length; i++) {
+                this.DomainRuleIdList[i] = new DomainRuleId(source.DomainRuleIdList[i]);
+            }
+        }
     }
 
 
@@ -119,6 +148,7 @@ public class DeleteCustomRuleRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Domain", this.Domain);
         this.setParamSimple(map, prefix + "RuleId", this.RuleId);
         this.setParamSimple(map, prefix + "Edition", this.Edition);
+        this.setParamArrayObj(map, prefix + "DomainRuleIdList.", this.DomainRuleIdList);
 
     }
 }

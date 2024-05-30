@@ -188,6 +188,14 @@ public class UserRoleListDataUserRoleInfo extends AbstractModel {
     private Boolean InValidateAppRange;
 
     /**
+    * 用户openid
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AppOpenUserId")
+    @Expose
+    private String AppOpenUserId;
+
+    /**
      * Get 业务ID 
      * @return Id 业务ID
      */
@@ -591,6 +599,26 @@ public class UserRoleListDataUserRoleInfo extends AbstractModel {
         this.InValidateAppRange = InValidateAppRange;
     }
 
+    /**
+     * Get 用户openid
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AppOpenUserId 用户openid
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAppOpenUserId() {
+        return this.AppOpenUserId;
+    }
+
+    /**
+     * Set 用户openid
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AppOpenUserId 用户openid
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAppOpenUserId(String AppOpenUserId) {
+        this.AppOpenUserId = AppOpenUserId;
+    }
+
     public UserRoleListDataUserRoleInfo() {
     }
 
@@ -668,6 +696,9 @@ public class UserRoleListDataUserRoleInfo extends AbstractModel {
         if (source.InValidateAppRange != null) {
             this.InValidateAppRange = new Boolean(source.InValidateAppRange);
         }
+        if (source.AppOpenUserId != null) {
+            this.AppOpenUserId = new String(source.AppOpenUserId);
+        }
     }
 
 
@@ -696,6 +727,7 @@ public class UserRoleListDataUserRoleInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "AppUserAliasName", this.AppUserAliasName);
         this.setParamSimple(map, prefix + "AppUserName", this.AppUserName);
         this.setParamSimple(map, prefix + "InValidateAppRange", this.InValidateAppRange);
+        this.setParamSimple(map, prefix + "AppOpenUserId", this.AppOpenUserId);
 
     }
 }

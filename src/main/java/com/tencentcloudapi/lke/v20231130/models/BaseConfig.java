@@ -31,14 +31,14 @@ public class BaseConfig extends AbstractModel {
     private String Name;
 
     /**
-    * 机器人头像
+    * 应用头像
     */
     @SerializedName("Avatar")
     @Expose
     private String Avatar;
 
     /**
-    * 机器人描述
+    * 应用描述
     */
     @SerializedName("Desc")
     @Expose
@@ -61,32 +61,32 @@ public class BaseConfig extends AbstractModel {
     }
 
     /**
-     * Get 机器人头像 
-     * @return Avatar 机器人头像
+     * Get 应用头像 
+     * @return Avatar 应用头像
      */
     public String getAvatar() {
         return this.Avatar;
     }
 
     /**
-     * Set 机器人头像
-     * @param Avatar 机器人头像
+     * Set 应用头像
+     * @param Avatar 应用头像
      */
     public void setAvatar(String Avatar) {
         this.Avatar = Avatar;
     }
 
     /**
-     * Get 机器人描述 
-     * @return Desc 机器人描述
+     * Get 应用描述 
+     * @return Desc 应用描述
      */
     public String getDesc() {
         return this.Desc;
     }
 
     /**
-     * Set 机器人描述
-     * @param Desc 机器人描述
+     * Set 应用描述
+     * @param Desc 应用描述
      */
     public void setDesc(String Desc) {
         this.Desc = Desc;

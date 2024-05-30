@@ -52,6 +52,13 @@ public class ModifyCustomRuleStatusRequest extends AbstractModel {
     private String Edition;
 
     /**
+    * 规则id
+    */
+    @SerializedName("DomainRuleIdList")
+    @Expose
+    private DomainRuleId [] DomainRuleIdList;
+
+    /**
      * Get 域名 
      * @return Domain 域名
      */
@@ -115,6 +122,22 @@ public class ModifyCustomRuleStatusRequest extends AbstractModel {
         this.Edition = Edition;
     }
 
+    /**
+     * Get 规则id 
+     * @return DomainRuleIdList 规则id
+     */
+    public DomainRuleId [] getDomainRuleIdList() {
+        return this.DomainRuleIdList;
+    }
+
+    /**
+     * Set 规则id
+     * @param DomainRuleIdList 规则id
+     */
+    public void setDomainRuleIdList(DomainRuleId [] DomainRuleIdList) {
+        this.DomainRuleIdList = DomainRuleIdList;
+    }
+
     public ModifyCustomRuleStatusRequest() {
     }
 
@@ -135,6 +158,12 @@ public class ModifyCustomRuleStatusRequest extends AbstractModel {
         if (source.Edition != null) {
             this.Edition = new String(source.Edition);
         }
+        if (source.DomainRuleIdList != null) {
+            this.DomainRuleIdList = new DomainRuleId[source.DomainRuleIdList.length];
+            for (int i = 0; i < source.DomainRuleIdList.length; i++) {
+                this.DomainRuleIdList[i] = new DomainRuleId(source.DomainRuleIdList[i]);
+            }
+        }
     }
 
 
@@ -146,6 +175,7 @@ public class ModifyCustomRuleStatusRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "RuleId", this.RuleId);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "Edition", this.Edition);
+        this.setParamArrayObj(map, prefix + "DomainRuleIdList.", this.DomainRuleIdList);
 
     }
 }

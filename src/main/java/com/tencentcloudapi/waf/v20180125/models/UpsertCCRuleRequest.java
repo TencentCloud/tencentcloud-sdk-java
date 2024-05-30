@@ -143,6 +143,13 @@ public class UpsertCCRuleRequest extends AbstractModel {
     private Long RuleId;
 
     /**
+    * 规则创建时间
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private Long CreateTime;
+
+    /**
      * Get 域名 
      * @return Domain 域名
      */
@@ -414,6 +421,22 @@ public class UpsertCCRuleRequest extends AbstractModel {
         this.RuleId = RuleId;
     }
 
+    /**
+     * Get 规则创建时间 
+     * @return CreateTime 规则创建时间
+     */
+    public Long getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set 规则创建时间
+     * @param CreateTime 规则创建时间
+     */
+    public void setCreateTime(Long CreateTime) {
+        this.CreateTime = CreateTime;
+    }
+
     public UpsertCCRuleRequest() {
     }
 
@@ -476,6 +499,9 @@ public class UpsertCCRuleRequest extends AbstractModel {
         if (source.RuleId != null) {
             this.RuleId = new Long(source.RuleId);
         }
+        if (source.CreateTime != null) {
+            this.CreateTime = new Long(source.CreateTime);
+        }
     }
 
 
@@ -500,6 +526,7 @@ public class UpsertCCRuleRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "EventId", this.EventId);
         this.setParamArraySimple(map, prefix + "SessionApplied.", this.SessionApplied);
         this.setParamSimple(map, prefix + "RuleId", this.RuleId);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
 
     }
 }

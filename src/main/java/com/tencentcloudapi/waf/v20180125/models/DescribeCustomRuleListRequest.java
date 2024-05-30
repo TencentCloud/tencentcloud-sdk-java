@@ -66,6 +66,13 @@ public class DescribeCustomRuleListRequest extends AbstractModel {
     private String By;
 
     /**
+    * 查询的域名列表,访问控制页面不用传
+    */
+    @SerializedName("DomainList")
+    @Expose
+    private String [] DomainList;
+
+    /**
      * Get 域名 
      * @return Domain 域名
      */
@@ -161,6 +168,22 @@ public class DescribeCustomRuleListRequest extends AbstractModel {
         this.By = By;
     }
 
+    /**
+     * Get 查询的域名列表,访问控制页面不用传 
+     * @return DomainList 查询的域名列表,访问控制页面不用传
+     */
+    public String [] getDomainList() {
+        return this.DomainList;
+    }
+
+    /**
+     * Set 查询的域名列表,访问控制页面不用传
+     * @param DomainList 查询的域名列表,访问控制页面不用传
+     */
+    public void setDomainList(String [] DomainList) {
+        this.DomainList = DomainList;
+    }
+
     public DescribeCustomRuleListRequest() {
     }
 
@@ -190,6 +213,12 @@ public class DescribeCustomRuleListRequest extends AbstractModel {
         if (source.By != null) {
             this.By = new String(source.By);
         }
+        if (source.DomainList != null) {
+            this.DomainList = new String[source.DomainList.length];
+            for (int i = 0; i < source.DomainList.length; i++) {
+                this.DomainList[i] = new String(source.DomainList[i]);
+            }
+        }
     }
 
 
@@ -203,6 +232,7 @@ public class DescribeCustomRuleListRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "Order", this.Order);
         this.setParamSimple(map, prefix + "By", this.By);
+        this.setParamArraySimple(map, prefix + "DomainList.", this.DomainList);
 
     }
 }

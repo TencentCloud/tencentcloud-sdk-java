@@ -335,6 +335,30 @@ public class Cluster extends AbstractModel {
     private Long WebUIType;
 
     /**
+    * 2 独享集群
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Type")
+    @Expose
+    private Long Type;
+
+    /**
+    * 子eks集群
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SubEks")
+    @Expose
+    private SubEks SubEks;
+
+    /**
+    * 上级集群
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AgentSerialId")
+    @Expose
+    private String AgentSerialId;
+
+    /**
      * Get 集群 ID 
      * @return ClusterId 集群 ID
      */
@@ -1086,6 +1110,66 @@ public class Cluster extends AbstractModel {
         this.WebUIType = WebUIType;
     }
 
+    /**
+     * Get 2 独享集群
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Type 2 独享集群
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set 2 独享集群
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Type 2 独享集群
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setType(Long Type) {
+        this.Type = Type;
+    }
+
+    /**
+     * Get 子eks集群
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SubEks 子eks集群
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public SubEks getSubEks() {
+        return this.SubEks;
+    }
+
+    /**
+     * Set 子eks集群
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SubEks 子eks集群
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSubEks(SubEks SubEks) {
+        this.SubEks = SubEks;
+    }
+
+    /**
+     * Get 上级集群
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AgentSerialId 上级集群
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAgentSerialId() {
+        return this.AgentSerialId;
+    }
+
+    /**
+     * Set 上级集群
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AgentSerialId 上级集群
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAgentSerialId(String AgentSerialId) {
+        this.AgentSerialId = AgentSerialId;
+    }
+
     public Cluster() {
     }
 
@@ -1235,6 +1319,15 @@ public class Cluster extends AbstractModel {
         if (source.WebUIType != null) {
             this.WebUIType = new Long(source.WebUIType);
         }
+        if (source.Type != null) {
+            this.Type = new Long(source.Type);
+        }
+        if (source.SubEks != null) {
+            this.SubEks = new SubEks(source.SubEks);
+        }
+        if (source.AgentSerialId != null) {
+            this.AgentSerialId = new String(source.AgentSerialId);
+        }
     }
 
 
@@ -1283,6 +1376,9 @@ public class Cluster extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Orders.", this.Orders);
         this.setParamArrayObj(map, prefix + "SqlGateways.", this.SqlGateways);
         this.setParamSimple(map, prefix + "WebUIType", this.WebUIType);
+        this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamObj(map, prefix + "SubEks.", this.SubEks);
+        this.setParamSimple(map, prefix + "AgentSerialId", this.AgentSerialId);
 
     }
 }

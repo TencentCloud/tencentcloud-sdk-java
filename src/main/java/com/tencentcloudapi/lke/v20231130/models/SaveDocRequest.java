@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class SaveDocRequest extends AbstractModel {
 
     /**
-    * 机器人ID
+    * 应用ID
     */
     @SerializedName("BotBizId")
     @Expose
@@ -45,7 +45,7 @@ public class SaveDocRequest extends AbstractModel {
     private String FileType;
 
     /**
-    * cos路径
+    * 平台cos路径，与DescribeStorageCredential接口查询UploadPath参数保持一致
     */
     @SerializedName("CosUrl")
     @Expose
@@ -137,16 +137,16 @@ public class SaveDocRequest extends AbstractModel {
     private Long Opt;
 
     /**
-     * Get 机器人ID 
-     * @return BotBizId 机器人ID
+     * Get 应用ID 
+     * @return BotBizId 应用ID
      */
     public String getBotBizId() {
         return this.BotBizId;
     }
 
     /**
-     * Set 机器人ID
-     * @param BotBizId 机器人ID
+     * Set 应用ID
+     * @param BotBizId 应用ID
      */
     public void setBotBizId(String BotBizId) {
         this.BotBizId = BotBizId;
@@ -185,16 +185,16 @@ public class SaveDocRequest extends AbstractModel {
     }
 
     /**
-     * Get cos路径 
-     * @return CosUrl cos路径
+     * Get 平台cos路径，与DescribeStorageCredential接口查询UploadPath参数保持一致 
+     * @return CosUrl 平台cos路径，与DescribeStorageCredential接口查询UploadPath参数保持一致
      */
     public String getCosUrl() {
         return this.CosUrl;
     }
 
     /**
-     * Set cos路径
-     * @param CosUrl cos路径
+     * Set 平台cos路径，与DescribeStorageCredential接口查询UploadPath参数保持一致
+     * @param CosUrl 平台cos路径，与DescribeStorageCredential接口查询UploadPath参数保持一致
      */
     public void setCosUrl(String CosUrl) {
         this.CosUrl = CosUrl;

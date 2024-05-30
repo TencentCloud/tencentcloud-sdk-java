@@ -66,6 +66,14 @@ public class RuleList extends AbstractModel {
     private Long Status;
 
     /**
+    * 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private String CreateTime;
+
+    /**
      * Get 规则Id 
      * @return Id 规则Id
      */
@@ -161,6 +169,26 @@ public class RuleList extends AbstractModel {
         this.Status = Status;
     }
 
+    /**
+     * Get 创建时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CreateTime 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CreateTime 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCreateTime(String CreateTime) {
+        this.CreateTime = CreateTime;
+    }
+
     public RuleList() {
     }
 
@@ -190,6 +218,9 @@ public class RuleList extends AbstractModel {
         if (source.Status != null) {
             this.Status = new Long(source.Status);
         }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
     }
 
 
@@ -203,6 +234,7 @@ public class RuleList extends AbstractModel {
         this.setParamSimple(map, prefix + "Function", this.Function);
         this.setParamSimple(map, prefix + "Time", this.Time);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
 
     }
 }

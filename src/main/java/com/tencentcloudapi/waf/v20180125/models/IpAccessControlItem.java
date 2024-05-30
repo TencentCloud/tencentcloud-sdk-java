@@ -99,6 +99,14 @@ public class IpAccessControlItem extends AbstractModel {
     private String [] IpList;
 
     /**
+    * 规则创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private Long CreateTime;
+
+    /**
      * Get mongo表自增Id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Id mongo表自增Id
@@ -278,6 +286,26 @@ public class IpAccessControlItem extends AbstractModel {
         this.IpList = IpList;
     }
 
+    /**
+     * Get 规则创建时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CreateTime 规则创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set 规则创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CreateTime 规则创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCreateTime(Long CreateTime) {
+        this.CreateTime = CreateTime;
+    }
+
     public IpAccessControlItem() {
     }
 
@@ -319,6 +347,9 @@ public class IpAccessControlItem extends AbstractModel {
                 this.IpList[i] = new String(source.IpList[i]);
             }
         }
+        if (source.CreateTime != null) {
+            this.CreateTime = new Long(source.CreateTime);
+        }
     }
 
 
@@ -336,6 +367,7 @@ public class IpAccessControlItem extends AbstractModel {
         this.setParamSimple(map, prefix + "ValidStatus", this.ValidStatus);
         this.setParamSimple(map, prefix + "RuleId", this.RuleId);
         this.setParamArraySimple(map, prefix + "IpList.", this.IpList);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
 
     }
 }

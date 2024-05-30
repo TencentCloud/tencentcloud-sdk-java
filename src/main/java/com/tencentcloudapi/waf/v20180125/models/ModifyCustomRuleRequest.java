@@ -97,6 +97,41 @@ public class ModifyCustomRuleRequest extends AbstractModel {
     private Long ExpireTime;
 
     /**
+    * 定时任务类型
+    */
+    @SerializedName("JobType")
+    @Expose
+    private String JobType;
+
+    /**
+    * 定时任务配置
+    */
+    @SerializedName("JobDateTime")
+    @Expose
+    private JobDateTime JobDateTime;
+
+    /**
+    * 规则来源，判断是不是小程序的
+    */
+    @SerializedName("Source")
+    @Expose
+    private String Source;
+
+    /**
+    * 开关状态，小程序风控规则的时候传该值
+    */
+    @SerializedName("Status")
+    @Expose
+    private Long Status;
+
+    /**
+    * 拦截页面id
+    */
+    @SerializedName("PageId")
+    @Expose
+    private String PageId;
+
+    /**
      * Get 编辑的域名 
      * @return Domain 编辑的域名
      */
@@ -268,6 +303,86 @@ public class ModifyCustomRuleRequest extends AbstractModel {
         this.ExpireTime = ExpireTime;
     }
 
+    /**
+     * Get 定时任务类型 
+     * @return JobType 定时任务类型
+     */
+    public String getJobType() {
+        return this.JobType;
+    }
+
+    /**
+     * Set 定时任务类型
+     * @param JobType 定时任务类型
+     */
+    public void setJobType(String JobType) {
+        this.JobType = JobType;
+    }
+
+    /**
+     * Get 定时任务配置 
+     * @return JobDateTime 定时任务配置
+     */
+    public JobDateTime getJobDateTime() {
+        return this.JobDateTime;
+    }
+
+    /**
+     * Set 定时任务配置
+     * @param JobDateTime 定时任务配置
+     */
+    public void setJobDateTime(JobDateTime JobDateTime) {
+        this.JobDateTime = JobDateTime;
+    }
+
+    /**
+     * Get 规则来源，判断是不是小程序的 
+     * @return Source 规则来源，判断是不是小程序的
+     */
+    public String getSource() {
+        return this.Source;
+    }
+
+    /**
+     * Set 规则来源，判断是不是小程序的
+     * @param Source 规则来源，判断是不是小程序的
+     */
+    public void setSource(String Source) {
+        this.Source = Source;
+    }
+
+    /**
+     * Get 开关状态，小程序风控规则的时候传该值 
+     * @return Status 开关状态，小程序风控规则的时候传该值
+     */
+    public Long getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 开关状态，小程序风控规则的时候传该值
+     * @param Status 开关状态，小程序风控规则的时候传该值
+     */
+    public void setStatus(Long Status) {
+        this.Status = Status;
+    }
+
+    /**
+     * Get 拦截页面id 
+     * @return PageId 拦截页面id
+     */
+    public String getPageId() {
+        return this.PageId;
+    }
+
+    /**
+     * Set 拦截页面id
+     * @param PageId 拦截页面id
+     */
+    public void setPageId(String PageId) {
+        this.PageId = PageId;
+    }
+
     public ModifyCustomRuleRequest() {
     }
 
@@ -309,6 +424,21 @@ public class ModifyCustomRuleRequest extends AbstractModel {
         if (source.ExpireTime != null) {
             this.ExpireTime = new Long(source.ExpireTime);
         }
+        if (source.JobType != null) {
+            this.JobType = new String(source.JobType);
+        }
+        if (source.JobDateTime != null) {
+            this.JobDateTime = new JobDateTime(source.JobDateTime);
+        }
+        if (source.Source != null) {
+            this.Source = new String(source.Source);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.PageId != null) {
+            this.PageId = new String(source.PageId);
+        }
     }
 
 
@@ -326,6 +456,11 @@ public class ModifyCustomRuleRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Bypass", this.Bypass);
         this.setParamSimple(map, prefix + "SortId", this.SortId);
         this.setParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
+        this.setParamSimple(map, prefix + "JobType", this.JobType);
+        this.setParamObj(map, prefix + "JobDateTime.", this.JobDateTime);
+        this.setParamSimple(map, prefix + "Source", this.Source);
+        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "PageId", this.PageId);
 
     }
 }

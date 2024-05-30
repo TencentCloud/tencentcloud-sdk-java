@@ -236,6 +236,22 @@ public class Resource extends AbstractModel {
     private Clb [] ClbSet;
 
     /**
+    * 网络域个数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DomainCount")
+    @Expose
+    private Long DomainCount;
+
+    /**
+    * 已使用网络域个数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UsedDomainCount")
+    @Expose
+    private Long UsedDomainCount;
+
+    /**
      * Get 服务实例ID，如bh-saas-s3ed4r5e 
      * @return ResourceId 服务实例ID，如bh-saas-s3ed4r5e
      */
@@ -723,6 +739,46 @@ public class Resource extends AbstractModel {
         this.ClbSet = ClbSet;
     }
 
+    /**
+     * Get 网络域个数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DomainCount 网络域个数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getDomainCount() {
+        return this.DomainCount;
+    }
+
+    /**
+     * Set 网络域个数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DomainCount 网络域个数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDomainCount(Long DomainCount) {
+        this.DomainCount = DomainCount;
+    }
+
+    /**
+     * Get 已使用网络域个数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UsedDomainCount 已使用网络域个数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getUsedDomainCount() {
+        return this.UsedDomainCount;
+    }
+
+    /**
+     * Set 已使用网络域个数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UsedDomainCount 已使用网络域个数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUsedDomainCount(Long UsedDomainCount) {
+        this.UsedDomainCount = UsedDomainCount;
+    }
+
     public Resource() {
     }
 
@@ -833,6 +889,12 @@ public class Resource extends AbstractModel {
                 this.ClbSet[i] = new Clb(source.ClbSet[i]);
             }
         }
+        if (source.DomainCount != null) {
+            this.DomainCount = new Long(source.DomainCount);
+        }
+        if (source.UsedDomainCount != null) {
+            this.UsedDomainCount = new Long(source.UsedDomainCount);
+        }
     }
 
 
@@ -870,6 +932,8 @@ public class Resource extends AbstractModel {
         this.setParamSimple(map, prefix + "PackageNode", this.PackageNode);
         this.setParamSimple(map, prefix + "LogDeliveryArgs", this.LogDeliveryArgs);
         this.setParamArrayObj(map, prefix + "ClbSet.", this.ClbSet);
+        this.setParamSimple(map, prefix + "DomainCount", this.DomainCount);
+        this.setParamSimple(map, prefix + "UsedDomainCount", this.UsedDomainCount);
 
     }
 }

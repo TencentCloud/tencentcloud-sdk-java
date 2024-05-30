@@ -325,6 +325,13 @@ cdn-waf：CDN上的Web防护能力
     private Long ProxyBuffer;
 
     /**
+    * 0: 禁用拨测, 1: 启用拨测。默认启用拨测
+    */
+    @SerializedName("ProbeStatus")
+    @Expose
+    private Long ProbeStatus;
+
+    /**
      * Get 需要防护的域名 
      * @return Domain 需要防护的域名
      */
@@ -1084,6 +1091,22 @@ cdn-waf：CDN上的Web防护能力
         this.ProxyBuffer = ProxyBuffer;
     }
 
+    /**
+     * Get 0: 禁用拨测, 1: 启用拨测。默认启用拨测 
+     * @return ProbeStatus 0: 禁用拨测, 1: 启用拨测。默认启用拨测
+     */
+    public Long getProbeStatus() {
+        return this.ProbeStatus;
+    }
+
+    /**
+     * Set 0: 禁用拨测, 1: 启用拨测。默认启用拨测
+     * @param ProbeStatus 0: 禁用拨测, 1: 启用拨测。默认启用拨测
+     */
+    public void setProbeStatus(Long ProbeStatus) {
+        this.ProbeStatus = ProbeStatus;
+    }
+
     public AddSpartaProtectionRequest() {
     }
 
@@ -1221,6 +1244,9 @@ cdn-waf：CDN上的Web防护能力
         if (source.ProxyBuffer != null) {
             this.ProxyBuffer = new Long(source.ProxyBuffer);
         }
+        if (source.ProbeStatus != null) {
+            this.ProbeStatus = new Long(source.ProbeStatus);
+        }
     }
 
 
@@ -1265,6 +1291,7 @@ cdn-waf：CDN上的Web防护能力
         this.setParamSimple(map, prefix + "Note", this.Note);
         this.setParamSimple(map, prefix + "UpstreamHost", this.UpstreamHost);
         this.setParamSimple(map, prefix + "ProxyBuffer", this.ProxyBuffer);
+        this.setParamSimple(map, prefix + "ProbeStatus", this.ProbeStatus);
 
     }
 }

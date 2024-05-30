@@ -103,6 +103,13 @@ public class CreateAssetImageScanSettingRequest extends AbstractModel {
     private String ScanEndTime;
 
     /**
+    * 排除扫描的镜像
+    */
+    @SerializedName("ExcludeImages")
+    @Expose
+    private String [] ExcludeImages;
+
+    /**
      * Get 开关 
      * @return Enable 开关
      */
@@ -290,6 +297,22 @@ public class CreateAssetImageScanSettingRequest extends AbstractModel {
         this.ScanEndTime = ScanEndTime;
     }
 
+    /**
+     * Get 排除扫描的镜像 
+     * @return ExcludeImages 排除扫描的镜像
+     */
+    public String [] getExcludeImages() {
+        return this.ExcludeImages;
+    }
+
+    /**
+     * Set 排除扫描的镜像
+     * @param ExcludeImages 排除扫描的镜像
+     */
+    public void setExcludeImages(String [] ExcludeImages) {
+        this.ExcludeImages = ExcludeImages;
+    }
+
     public CreateAssetImageScanSettingRequest() {
     }
 
@@ -334,6 +357,12 @@ public class CreateAssetImageScanSettingRequest extends AbstractModel {
         if (source.ScanEndTime != null) {
             this.ScanEndTime = new String(source.ScanEndTime);
         }
+        if (source.ExcludeImages != null) {
+            this.ExcludeImages = new String[source.ExcludeImages.length];
+            for (int i = 0; i < source.ExcludeImages.length; i++) {
+                this.ExcludeImages[i] = new String(source.ExcludeImages[i]);
+            }
+        }
     }
 
 
@@ -352,6 +381,7 @@ public class CreateAssetImageScanSettingRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ContainerRunning", this.ContainerRunning);
         this.setParamSimple(map, prefix + "ScanScope", this.ScanScope);
         this.setParamSimple(map, prefix + "ScanEndTime", this.ScanEndTime);
+        this.setParamArraySimple(map, prefix + "ExcludeImages.", this.ExcludeImages);
 
     }
 }

@@ -75,6 +75,14 @@ public class DescribeAntiLeakageItem extends AbstractModel {
     private String Uri;
 
     /**
+    * 修改时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ModifyTime")
+    @Expose
+    private String ModifyTime;
+
+    /**
      * Get 规则ID 
      * @return RuleId 规则ID
      */
@@ -194,6 +202,26 @@ public class DescribeAntiLeakageItem extends AbstractModel {
         this.Uri = Uri;
     }
 
+    /**
+     * Get 修改时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ModifyTime 修改时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getModifyTime() {
+        return this.ModifyTime;
+    }
+
+    /**
+     * Set 修改时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ModifyTime 修改时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setModifyTime(String ModifyTime) {
+        this.ModifyTime = ModifyTime;
+    }
+
     public DescribeAntiLeakageItem() {
     }
 
@@ -226,6 +254,9 @@ public class DescribeAntiLeakageItem extends AbstractModel {
         if (source.Uri != null) {
             this.Uri = new String(source.Uri);
         }
+        if (source.ModifyTime != null) {
+            this.ModifyTime = new String(source.ModifyTime);
+        }
     }
 
 
@@ -240,6 +271,7 @@ public class DescribeAntiLeakageItem extends AbstractModel {
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamArrayObj(map, prefix + "Strategies.", this.Strategies);
         this.setParamSimple(map, prefix + "Uri", this.Uri);
+        this.setParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
 
     }
 }

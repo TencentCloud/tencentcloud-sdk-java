@@ -73,6 +73,20 @@ public class ModifyCustomWhiteRuleRequest extends AbstractModel {
     private Strategy [] Strategies;
 
     /**
+    * 定时任务类型
+    */
+    @SerializedName("JobType")
+    @Expose
+    private String JobType;
+
+    /**
+    * 定时任务配置
+    */
+    @SerializedName("JobDateTime")
+    @Expose
+    private JobDateTime JobDateTime;
+
+    /**
      * Get 编辑的域名 
      * @return Domain 编辑的域名
      */
@@ -184,6 +198,38 @@ public class ModifyCustomWhiteRuleRequest extends AbstractModel {
         this.Strategies = Strategies;
     }
 
+    /**
+     * Get 定时任务类型 
+     * @return JobType 定时任务类型
+     */
+    public String getJobType() {
+        return this.JobType;
+    }
+
+    /**
+     * Set 定时任务类型
+     * @param JobType 定时任务类型
+     */
+    public void setJobType(String JobType) {
+        this.JobType = JobType;
+    }
+
+    /**
+     * Get 定时任务配置 
+     * @return JobDateTime 定时任务配置
+     */
+    public JobDateTime getJobDateTime() {
+        return this.JobDateTime;
+    }
+
+    /**
+     * Set 定时任务配置
+     * @param JobDateTime 定时任务配置
+     */
+    public void setJobDateTime(JobDateTime JobDateTime) {
+        this.JobDateTime = JobDateTime;
+    }
+
     public ModifyCustomWhiteRuleRequest() {
     }
 
@@ -216,6 +262,12 @@ public class ModifyCustomWhiteRuleRequest extends AbstractModel {
                 this.Strategies[i] = new Strategy(source.Strategies[i]);
             }
         }
+        if (source.JobType != null) {
+            this.JobType = new String(source.JobType);
+        }
+        if (source.JobDateTime != null) {
+            this.JobDateTime = new JobDateTime(source.JobDateTime);
+        }
     }
 
 
@@ -230,6 +282,8 @@ public class ModifyCustomWhiteRuleRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SortId", this.SortId);
         this.setParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
         this.setParamArrayObj(map, prefix + "Strategies.", this.Strategies);
+        this.setParamSimple(map, prefix + "JobType", this.JobType);
+        this.setParamObj(map, prefix + "JobDateTime.", this.JobDateTime);
 
     }
 }

@@ -38,6 +38,13 @@ public class BindDeviceResourceRequest extends AbstractModel {
     private String ResourceId;
 
     /**
+    * 网络域ID
+    */
+    @SerializedName("DomainId")
+    @Expose
+    private String DomainId;
+
+    /**
      * Get 资产ID集合 
      * @return DeviceIdSet 资产ID集合
      */
@@ -69,6 +76,22 @@ public class BindDeviceResourceRequest extends AbstractModel {
         this.ResourceId = ResourceId;
     }
 
+    /**
+     * Get 网络域ID 
+     * @return DomainId 网络域ID
+     */
+    public String getDomainId() {
+        return this.DomainId;
+    }
+
+    /**
+     * Set 网络域ID
+     * @param DomainId 网络域ID
+     */
+    public void setDomainId(String DomainId) {
+        this.DomainId = DomainId;
+    }
+
     public BindDeviceResourceRequest() {
     }
 
@@ -86,6 +109,9 @@ public class BindDeviceResourceRequest extends AbstractModel {
         if (source.ResourceId != null) {
             this.ResourceId = new String(source.ResourceId);
         }
+        if (source.DomainId != null) {
+            this.DomainId = new String(source.DomainId);
+        }
     }
 
 
@@ -95,6 +121,7 @@ public class BindDeviceResourceRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "DeviceIdSet.", this.DeviceIdSet);
         this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
+        this.setParamSimple(map, prefix + "DomainId", this.DomainId);
 
     }
 }

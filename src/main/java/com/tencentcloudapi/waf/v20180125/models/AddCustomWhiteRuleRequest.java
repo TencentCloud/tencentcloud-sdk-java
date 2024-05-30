@@ -66,6 +66,20 @@ public class AddCustomWhiteRuleRequest extends AbstractModel {
     private String Bypass;
 
     /**
+    * 定时任务类型
+    */
+    @SerializedName("JobType")
+    @Expose
+    private String JobType;
+
+    /**
+    * 定时任务配置
+    */
+    @SerializedName("JobDateTime")
+    @Expose
+    private JobDateTime JobDateTime;
+
+    /**
      * Get 规则名称 
      * @return Name 规则名称
      */
@@ -161,6 +175,38 @@ public class AddCustomWhiteRuleRequest extends AbstractModel {
         this.Bypass = Bypass;
     }
 
+    /**
+     * Get 定时任务类型 
+     * @return JobType 定时任务类型
+     */
+    public String getJobType() {
+        return this.JobType;
+    }
+
+    /**
+     * Set 定时任务类型
+     * @param JobType 定时任务类型
+     */
+    public void setJobType(String JobType) {
+        this.JobType = JobType;
+    }
+
+    /**
+     * Get 定时任务配置 
+     * @return JobDateTime 定时任务配置
+     */
+    public JobDateTime getJobDateTime() {
+        return this.JobDateTime;
+    }
+
+    /**
+     * Set 定时任务配置
+     * @param JobDateTime 定时任务配置
+     */
+    public void setJobDateTime(JobDateTime JobDateTime) {
+        this.JobDateTime = JobDateTime;
+    }
+
     public AddCustomWhiteRuleRequest() {
     }
 
@@ -190,6 +236,12 @@ public class AddCustomWhiteRuleRequest extends AbstractModel {
         if (source.Bypass != null) {
             this.Bypass = new String(source.Bypass);
         }
+        if (source.JobType != null) {
+            this.JobType = new String(source.JobType);
+        }
+        if (source.JobDateTime != null) {
+            this.JobDateTime = new JobDateTime(source.JobDateTime);
+        }
     }
 
 
@@ -203,6 +255,8 @@ public class AddCustomWhiteRuleRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Strategies.", this.Strategies);
         this.setParamSimple(map, prefix + "Domain", this.Domain);
         this.setParamSimple(map, prefix + "Bypass", this.Bypass);
+        this.setParamSimple(map, prefix + "JobType", this.JobType);
+        this.setParamObj(map, prefix + "JobDateTime.", this.JobDateTime);
 
     }
 }

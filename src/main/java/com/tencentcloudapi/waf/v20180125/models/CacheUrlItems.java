@@ -66,6 +66,22 @@ public class CacheUrlItems extends AbstractModel {
     private Long Status;
 
     /**
+    * 修改时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ModifyTime")
+    @Expose
+    private String ModifyTime;
+
+    /**
+    * 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private String CreateTime;
+
+    /**
      * Get 标识 
      * @return Id 标识
      */
@@ -161,6 +177,46 @@ public class CacheUrlItems extends AbstractModel {
         this.Status = Status;
     }
 
+    /**
+     * Get 修改时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ModifyTime 修改时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getModifyTime() {
+        return this.ModifyTime;
+    }
+
+    /**
+     * Set 修改时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ModifyTime 修改时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setModifyTime(String ModifyTime) {
+        this.ModifyTime = ModifyTime;
+    }
+
+    /**
+     * Get 创建时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CreateTime 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CreateTime 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCreateTime(String CreateTime) {
+        this.CreateTime = CreateTime;
+    }
+
     public CacheUrlItems() {
     }
 
@@ -187,6 +243,12 @@ public class CacheUrlItems extends AbstractModel {
         if (source.Status != null) {
             this.Status = new Long(source.Status);
         }
+        if (source.ModifyTime != null) {
+            this.ModifyTime = new String(source.ModifyTime);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
     }
 
 
@@ -200,6 +262,8 @@ public class CacheUrlItems extends AbstractModel {
         this.setParamSimple(map, prefix + "Uri", this.Uri);
         this.setParamSimple(map, prefix + "Protocol", this.Protocol);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
 
     }
 }

@@ -98,6 +98,30 @@ public class UserDomainInfo extends AbstractModel {
     private String CloudType;
 
     /**
+    * 标记clbwaf类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AlbType")
+    @Expose
+    private String AlbType;
+
+    /**
+    * BOT开关状态
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BotStatus")
+    @Expose
+    private Long BotStatus;
+
+    /**
+    * API开关状态
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ApiStatus")
+    @Expose
+    private Long ApiStatus;
+
+    /**
      * Get 用户id 
      * @return Appid 用户id
      */
@@ -273,6 +297,66 @@ public class UserDomainInfo extends AbstractModel {
         this.CloudType = CloudType;
     }
 
+    /**
+     * Get 标记clbwaf类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AlbType 标记clbwaf类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAlbType() {
+        return this.AlbType;
+    }
+
+    /**
+     * Set 标记clbwaf类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AlbType 标记clbwaf类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAlbType(String AlbType) {
+        this.AlbType = AlbType;
+    }
+
+    /**
+     * Get BOT开关状态
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BotStatus BOT开关状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getBotStatus() {
+        return this.BotStatus;
+    }
+
+    /**
+     * Set BOT开关状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BotStatus BOT开关状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBotStatus(Long BotStatus) {
+        this.BotStatus = BotStatus;
+    }
+
+    /**
+     * Get API开关状态
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ApiStatus API开关状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getApiStatus() {
+        return this.ApiStatus;
+    }
+
+    /**
+     * Set API开关状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ApiStatus API开关状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setApiStatus(Long ApiStatus) {
+        this.ApiStatus = ApiStatus;
+    }
+
     public UserDomainInfo() {
     }
 
@@ -311,6 +395,15 @@ public class UserDomainInfo extends AbstractModel {
         if (source.CloudType != null) {
             this.CloudType = new String(source.CloudType);
         }
+        if (source.AlbType != null) {
+            this.AlbType = new String(source.AlbType);
+        }
+        if (source.BotStatus != null) {
+            this.BotStatus = new Long(source.BotStatus);
+        }
+        if (source.ApiStatus != null) {
+            this.ApiStatus = new Long(source.ApiStatus);
+        }
     }
 
 
@@ -328,6 +421,9 @@ public class UserDomainInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "WriteConfig", this.WriteConfig);
         this.setParamSimple(map, prefix + "Cls", this.Cls);
         this.setParamSimple(map, prefix + "CloudType", this.CloudType);
+        this.setParamSimple(map, prefix + "AlbType", this.AlbType);
+        this.setParamSimple(map, prefix + "BotStatus", this.BotStatus);
+        this.setParamSimple(map, prefix + "ApiStatus", this.ApiStatus);
 
     }
 }

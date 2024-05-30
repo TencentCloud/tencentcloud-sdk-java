@@ -62,6 +62,22 @@ public class UserInfo extends AbstractModel {
     private String AreaCode;
 
     /**
+    * 企微账号id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AppUserId")
+    @Expose
+    private String AppUserId;
+
+    /**
+    * 企微账号名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AppUserName")
+    @Expose
+    private String AppUserName;
+
+    /**
      * Get 用户ID 
      * @return UserId 用户ID
      */
@@ -153,6 +169,46 @@ public class UserInfo extends AbstractModel {
         this.AreaCode = AreaCode;
     }
 
+    /**
+     * Get 企微账号id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AppUserId 企微账号id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAppUserId() {
+        return this.AppUserId;
+    }
+
+    /**
+     * Set 企微账号id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AppUserId 企微账号id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAppUserId(String AppUserId) {
+        this.AppUserId = AppUserId;
+    }
+
+    /**
+     * Get 企微账号名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AppUserName 企微账号名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAppUserName() {
+        return this.AppUserName;
+    }
+
+    /**
+     * Set 企微账号名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AppUserName 企微账号名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAppUserName(String AppUserName) {
+        this.AppUserName = AppUserName;
+    }
+
     public UserInfo() {
     }
 
@@ -176,6 +232,12 @@ public class UserInfo extends AbstractModel {
         if (source.AreaCode != null) {
             this.AreaCode = new String(source.AreaCode);
         }
+        if (source.AppUserId != null) {
+            this.AppUserId = new String(source.AppUserId);
+        }
+        if (source.AppUserName != null) {
+            this.AppUserName = new String(source.AppUserName);
+        }
     }
 
 
@@ -188,6 +250,8 @@ public class UserInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Email", this.Email);
         this.setParamSimple(map, prefix + "PhoneNumber", this.PhoneNumber);
         this.setParamSimple(map, prefix + "AreaCode", this.AreaCode);
+        this.setParamSimple(map, prefix + "AppUserId", this.AppUserId);
+        this.setParamSimple(map, prefix + "AppUserName", this.AppUserName);
 
     }
 }

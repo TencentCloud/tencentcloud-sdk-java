@@ -283,7 +283,7 @@ public class WafClient extends AbstractClient{
     }
 
     /**
-     *Waf IP黑白名单Delete接口
+     *Waf IP黑白名单Delete接口（建议使用DeleteIpAccessControlV2来替换当前接口）
      * @param req DeleteIpAccessControlRequest
      * @return DeleteIpAccessControlResponse
      * @throws TencentCloudSDKException
@@ -1531,7 +1531,7 @@ public class WafClient extends AbstractClient{
     }
 
     /**
-     *Waf IP黑白名单Upsert接口
+     *Waf IP黑白名单Upsert接口（建议使用CreateIpAccessControl、ModifyIpAccessControl来替换当前接口）
      * @param req UpsertIpAccessControlRequest
      * @return UpsertIpAccessControlResponse
      * @throws TencentCloudSDKException

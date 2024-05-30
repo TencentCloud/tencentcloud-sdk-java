@@ -101,6 +101,14 @@ public class DescribeAssetImageScanSettingResponse extends AbstractModel {
     private String ScanEndTime;
 
     /**
+    * 排除的扫描镜像
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ExcludeImages")
+    @Expose
+    private String [] ExcludeImages;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -288,6 +296,26 @@ public class DescribeAssetImageScanSettingResponse extends AbstractModel {
     }
 
     /**
+     * Get 排除的扫描镜像
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ExcludeImages 排除的扫描镜像
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getExcludeImages() {
+        return this.ExcludeImages;
+    }
+
+    /**
+     * Set 排除的扫描镜像
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExcludeImages 排除的扫描镜像
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExcludeImages(String [] ExcludeImages) {
+        this.ExcludeImages = ExcludeImages;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -347,6 +375,12 @@ public class DescribeAssetImageScanSettingResponse extends AbstractModel {
         if (source.ScanEndTime != null) {
             this.ScanEndTime = new String(source.ScanEndTime);
         }
+        if (source.ExcludeImages != null) {
+            this.ExcludeImages = new String[source.ExcludeImages.length];
+            for (int i = 0; i < source.ExcludeImages.length; i++) {
+                this.ExcludeImages[i] = new String(source.ExcludeImages[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -368,6 +402,7 @@ public class DescribeAssetImageScanSettingResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "ContainerRunning", this.ContainerRunning);
         this.setParamSimple(map, prefix + "ScanScope", this.ScanScope);
         this.setParamSimple(map, prefix + "ScanEndTime", this.ScanEndTime);
+        this.setParamArraySimple(map, prefix + "ExcludeImages.", this.ExcludeImages);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

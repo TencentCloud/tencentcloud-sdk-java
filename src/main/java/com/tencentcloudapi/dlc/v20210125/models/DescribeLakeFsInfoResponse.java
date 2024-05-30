@@ -24,11 +24,39 @@ import java.util.HashMap;
 public class DescribeLakeFsInfoResponse extends AbstractModel {
 
     /**
+    * 托管存储信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LakeFsInfos")
+    @Expose
+    private LakeFsInfo [] LakeFsInfos;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 托管存储信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LakeFsInfos 托管存储信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public LakeFsInfo [] getLakeFsInfos() {
+        return this.LakeFsInfos;
+    }
+
+    /**
+     * Set 托管存储信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LakeFsInfos 托管存储信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLakeFsInfos(LakeFsInfo [] LakeFsInfos) {
+        this.LakeFsInfos = LakeFsInfos;
+    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -54,6 +82,12 @@ public class DescribeLakeFsInfoResponse extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeLakeFsInfoResponse(DescribeLakeFsInfoResponse source) {
+        if (source.LakeFsInfos != null) {
+            this.LakeFsInfos = new LakeFsInfo[source.LakeFsInfos.length];
+            for (int i = 0; i < source.LakeFsInfos.length; i++) {
+                this.LakeFsInfos[i] = new LakeFsInfo(source.LakeFsInfos[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -64,6 +98,7 @@ public class DescribeLakeFsInfoResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "LakeFsInfos.", this.LakeFsInfos);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

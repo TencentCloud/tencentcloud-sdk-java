@@ -24,11 +24,34 @@ import java.util.HashMap;
 public class ModifyCustomRuleResponse extends AbstractModel {
 
     /**
+    * 操作的状态码，如果所有的资源操作成功则返回的是成功的状态码，如果有资源操作失败则需要解析Message的内容来查看哪个资源失败
+    */
+    @SerializedName("Success")
+    @Expose
+    private ResponseCode Success;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 操作的状态码，如果所有的资源操作成功则返回的是成功的状态码，如果有资源操作失败则需要解析Message的内容来查看哪个资源失败 
+     * @return Success 操作的状态码，如果所有的资源操作成功则返回的是成功的状态码，如果有资源操作失败则需要解析Message的内容来查看哪个资源失败
+     */
+    public ResponseCode getSuccess() {
+        return this.Success;
+    }
+
+    /**
+     * Set 操作的状态码，如果所有的资源操作成功则返回的是成功的状态码，如果有资源操作失败则需要解析Message的内容来查看哪个资源失败
+     * @param Success 操作的状态码，如果所有的资源操作成功则返回的是成功的状态码，如果有资源操作失败则需要解析Message的内容来查看哪个资源失败
+     */
+    public void setSuccess(ResponseCode Success) {
+        this.Success = Success;
+    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -54,6 +77,9 @@ public class ModifyCustomRuleResponse extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ModifyCustomRuleResponse(ModifyCustomRuleResponse source) {
+        if (source.Success != null) {
+            this.Success = new ResponseCode(source.Success);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -64,6 +90,7 @@ public class ModifyCustomRuleResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamObj(map, prefix + "Success.", this.Success);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

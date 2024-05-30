@@ -115,6 +115,13 @@ public class UpdateImageRegistryTimingScanTaskRequest extends AbstractModel {
     private String [] Namespace;
 
     /**
+    * 排除的镜像资产id
+    */
+    @SerializedName("ExcludeImageAssetIds")
+    @Expose
+    private Long [] ExcludeImageAssetIds;
+
+    /**
      * Get 定时扫描周期 
      * @return ScanPeriod 定时扫描周期
      */
@@ -326,6 +333,22 @@ public class UpdateImageRegistryTimingScanTaskRequest extends AbstractModel {
         this.Namespace = Namespace;
     }
 
+    /**
+     * Get 排除的镜像资产id 
+     * @return ExcludeImageAssetIds 排除的镜像资产id
+     */
+    public Long [] getExcludeImageAssetIds() {
+        return this.ExcludeImageAssetIds;
+    }
+
+    /**
+     * Set 排除的镜像资产id
+     * @param ExcludeImageAssetIds 排除的镜像资产id
+     */
+    public void setExcludeImageAssetIds(Long [] ExcludeImageAssetIds) {
+        this.ExcludeImageAssetIds = ExcludeImageAssetIds;
+    }
+
     public UpdateImageRegistryTimingScanTaskRequest() {
     }
 
@@ -388,6 +411,12 @@ public class UpdateImageRegistryTimingScanTaskRequest extends AbstractModel {
                 this.Namespace[i] = new String(source.Namespace[i]);
             }
         }
+        if (source.ExcludeImageAssetIds != null) {
+            this.ExcludeImageAssetIds = new Long[source.ExcludeImageAssetIds.length];
+            for (int i = 0; i < source.ExcludeImageAssetIds.length; i++) {
+                this.ExcludeImageAssetIds[i] = new Long(source.ExcludeImageAssetIds[i]);
+            }
+        }
     }
 
 
@@ -408,6 +437,7 @@ public class UpdateImageRegistryTimingScanTaskRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ScanScope", this.ScanScope);
         this.setParamArraySimple(map, prefix + "RegistryType.", this.RegistryType);
         this.setParamArraySimple(map, prefix + "Namespace.", this.Namespace);
+        this.setParamArraySimple(map, prefix + "ExcludeImageAssetIds.", this.ExcludeImageAssetIds);
 
     }
 }

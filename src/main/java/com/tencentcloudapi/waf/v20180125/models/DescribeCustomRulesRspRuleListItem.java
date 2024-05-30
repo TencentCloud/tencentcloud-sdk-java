@@ -126,6 +126,54 @@ public class DescribeCustomRulesRspRuleListItem extends AbstractModel {
     private String Source;
 
     /**
+    * 定时任务类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("JobType")
+    @Expose
+    private String JobType;
+
+    /**
+    * 定时任务配置信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("JobDateTime")
+    @Expose
+    private JobDateTime JobDateTime;
+
+    /**
+    * 周期任务粒度
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CronType")
+    @Expose
+    private String CronType;
+
+    /**
+    * 自定义标签，风控规则用，用来表示是内置规则还是用户自定义的
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Label")
+    @Expose
+    private String Label;
+
+    /**
+    * 拦截页面id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PageId")
+    @Expose
+    private String PageId;
+
+    /**
+    * 域名
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Domain")
+    @Expose
+    private String Domain;
+
+    /**
      * Get 动作类型 
      * @return ActionType 动作类型
      */
@@ -365,6 +413,126 @@ public class DescribeCustomRulesRspRuleListItem extends AbstractModel {
         this.Source = Source;
     }
 
+    /**
+     * Get 定时任务类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return JobType 定时任务类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getJobType() {
+        return this.JobType;
+    }
+
+    /**
+     * Set 定时任务类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param JobType 定时任务类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setJobType(String JobType) {
+        this.JobType = JobType;
+    }
+
+    /**
+     * Get 定时任务配置信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return JobDateTime 定时任务配置信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public JobDateTime getJobDateTime() {
+        return this.JobDateTime;
+    }
+
+    /**
+     * Set 定时任务配置信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param JobDateTime 定时任务配置信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setJobDateTime(JobDateTime JobDateTime) {
+        this.JobDateTime = JobDateTime;
+    }
+
+    /**
+     * Get 周期任务粒度
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CronType 周期任务粒度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCronType() {
+        return this.CronType;
+    }
+
+    /**
+     * Set 周期任务粒度
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CronType 周期任务粒度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCronType(String CronType) {
+        this.CronType = CronType;
+    }
+
+    /**
+     * Get 自定义标签，风控规则用，用来表示是内置规则还是用户自定义的
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Label 自定义标签，风控规则用，用来表示是内置规则还是用户自定义的
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLabel() {
+        return this.Label;
+    }
+
+    /**
+     * Set 自定义标签，风控规则用，用来表示是内置规则还是用户自定义的
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Label 自定义标签，风控规则用，用来表示是内置规则还是用户自定义的
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLabel(String Label) {
+        this.Label = Label;
+    }
+
+    /**
+     * Get 拦截页面id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PageId 拦截页面id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPageId() {
+        return this.PageId;
+    }
+
+    /**
+     * Set 拦截页面id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PageId 拦截页面id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPageId(String PageId) {
+        this.PageId = PageId;
+    }
+
+    /**
+     * Get 域名
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Domain 域名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDomain() {
+        return this.Domain;
+    }
+
+    /**
+     * Set 域名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Domain 域名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDomain(String Domain) {
+        this.Domain = Domain;
+    }
+
     public DescribeCustomRulesRspRuleListItem() {
     }
 
@@ -418,6 +586,24 @@ public class DescribeCustomRulesRspRuleListItem extends AbstractModel {
         if (source.Source != null) {
             this.Source = new String(source.Source);
         }
+        if (source.JobType != null) {
+            this.JobType = new String(source.JobType);
+        }
+        if (source.JobDateTime != null) {
+            this.JobDateTime = new JobDateTime(source.JobDateTime);
+        }
+        if (source.CronType != null) {
+            this.CronType = new String(source.CronType);
+        }
+        if (source.Label != null) {
+            this.Label = new String(source.Label);
+        }
+        if (source.PageId != null) {
+            this.PageId = new String(source.PageId);
+        }
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
     }
 
 
@@ -439,6 +625,12 @@ public class DescribeCustomRulesRspRuleListItem extends AbstractModel {
         this.setParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
         this.setParamSimple(map, prefix + "ValidStatus", this.ValidStatus);
         this.setParamSimple(map, prefix + "Source", this.Source);
+        this.setParamSimple(map, prefix + "JobType", this.JobType);
+        this.setParamObj(map, prefix + "JobDateTime.", this.JobDateTime);
+        this.setParamSimple(map, prefix + "CronType", this.CronType);
+        this.setParamSimple(map, prefix + "Label", this.Label);
+        this.setParamSimple(map, prefix + "PageId", this.PageId);
+        this.setParamSimple(map, prefix + "Domain", this.Domain);
 
     }
 }

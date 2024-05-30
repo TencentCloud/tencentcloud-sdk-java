@@ -310,6 +310,13 @@ https：使用https协议回源
     private Long ProxyBuffer;
 
     /**
+    * 0: 禁用拨测, 1: 启用拨测。默认启用拨测
+    */
+    @SerializedName("ProbeStatus")
+    @Expose
+    private Long ProbeStatus;
+
+    /**
      * Get 域名 
      * @return Domain 域名
      */
@@ -1021,6 +1028,22 @@ https：使用https协议回源
         this.ProxyBuffer = ProxyBuffer;
     }
 
+    /**
+     * Get 0: 禁用拨测, 1: 启用拨测。默认启用拨测 
+     * @return ProbeStatus 0: 禁用拨测, 1: 启用拨测。默认启用拨测
+     */
+    public Long getProbeStatus() {
+        return this.ProbeStatus;
+    }
+
+    /**
+     * Set 0: 禁用拨测, 1: 启用拨测。默认启用拨测
+     * @param ProbeStatus 0: 禁用拨测, 1: 启用拨测。默认启用拨测
+     */
+    public void setProbeStatus(Long ProbeStatus) {
+        this.ProbeStatus = ProbeStatus;
+    }
+
     public ModifySpartaProtectionRequest() {
     }
 
@@ -1152,6 +1175,9 @@ https：使用https协议回源
         if (source.ProxyBuffer != null) {
             this.ProxyBuffer = new Long(source.ProxyBuffer);
         }
+        if (source.ProbeStatus != null) {
+            this.ProbeStatus = new Long(source.ProbeStatus);
+        }
     }
 
 
@@ -1195,6 +1221,7 @@ https：使用https协议回源
         this.setParamSimple(map, prefix + "Note", this.Note);
         this.setParamSimple(map, prefix + "UpstreamHost", this.UpstreamHost);
         this.setParamSimple(map, prefix + "ProxyBuffer", this.ProxyBuffer);
+        this.setParamSimple(map, prefix + "ProbeStatus", this.ProbeStatus);
 
     }
 }

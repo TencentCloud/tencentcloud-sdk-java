@@ -52,6 +52,13 @@ public class ModifyDeviceRequest extends AbstractModel {
     private String DepartmentId;
 
     /**
+    * 网络域Id
+    */
+    @SerializedName("DomainId")
+    @Expose
+    private String DomainId;
+
+    /**
      * Get 资产记录ID 
      * @return Id 资产记录ID
      */
@@ -115,6 +122,22 @@ public class ModifyDeviceRequest extends AbstractModel {
         this.DepartmentId = DepartmentId;
     }
 
+    /**
+     * Get 网络域Id 
+     * @return DomainId 网络域Id
+     */
+    public String getDomainId() {
+        return this.DomainId;
+    }
+
+    /**
+     * Set 网络域Id
+     * @param DomainId 网络域Id
+     */
+    public void setDomainId(String DomainId) {
+        this.DomainId = DomainId;
+    }
+
     public ModifyDeviceRequest() {
     }
 
@@ -138,6 +161,9 @@ public class ModifyDeviceRequest extends AbstractModel {
         if (source.DepartmentId != null) {
             this.DepartmentId = new String(source.DepartmentId);
         }
+        if (source.DomainId != null) {
+            this.DomainId = new String(source.DomainId);
+        }
     }
 
 
@@ -149,6 +175,7 @@ public class ModifyDeviceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Port", this.Port);
         this.setParamArraySimple(map, prefix + "GroupIdSet.", this.GroupIdSet);
         this.setParamSimple(map, prefix + "DepartmentId", this.DepartmentId);
+        this.setParamSimple(map, prefix + "DomainId", this.DomainId);
 
     }
 }

@@ -131,6 +131,14 @@ public class CCRuleItems extends AbstractModel {
     private Long [] SessionApplied;
 
     /**
+    * 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private Long CreateTime;
+
+    /**
      * Get 名字 
      * @return Name 名字
      */
@@ -378,6 +386,26 @@ public class CCRuleItems extends AbstractModel {
         this.SessionApplied = SessionApplied;
     }
 
+    /**
+     * Get 创建时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CreateTime 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CreateTime 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCreateTime(Long CreateTime) {
+        this.CreateTime = CreateTime;
+    }
+
     public CCRuleItems() {
     }
 
@@ -434,6 +462,9 @@ public class CCRuleItems extends AbstractModel {
                 this.SessionApplied[i] = new Long(source.SessionApplied[i]);
             }
         }
+        if (source.CreateTime != null) {
+            this.CreateTime = new Long(source.CreateTime);
+        }
     }
 
 
@@ -456,6 +487,7 @@ public class CCRuleItems extends AbstractModel {
         this.setParamSimple(map, prefix + "RuleId", this.RuleId);
         this.setParamSimple(map, prefix + "EventId", this.EventId);
         this.setParamArraySimple(map, prefix + "SessionApplied.", this.SessionApplied);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
 
     }
 }

@@ -121,6 +121,14 @@ public class DescribeImageRegistryTimingScanTaskResponse extends AbstractModel {
     private String [] Namespace;
 
     /**
+    * 排除的镜像资产id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ExcludeImageAssetIds")
+    @Expose
+    private Long [] ExcludeImageAssetIds;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -364,6 +372,26 @@ public class DescribeImageRegistryTimingScanTaskResponse extends AbstractModel {
     }
 
     /**
+     * Get 排除的镜像资产id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ExcludeImageAssetIds 排除的镜像资产id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long [] getExcludeImageAssetIds() {
+        return this.ExcludeImageAssetIds;
+    }
+
+    /**
+     * Set 排除的镜像资产id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExcludeImageAssetIds 排除的镜像资产id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExcludeImageAssetIds(Long [] ExcludeImageAssetIds) {
+        this.ExcludeImageAssetIds = ExcludeImageAssetIds;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -441,6 +469,12 @@ public class DescribeImageRegistryTimingScanTaskResponse extends AbstractModel {
                 this.Namespace[i] = new String(source.Namespace[i]);
             }
         }
+        if (source.ExcludeImageAssetIds != null) {
+            this.ExcludeImageAssetIds = new Long[source.ExcludeImageAssetIds.length];
+            for (int i = 0; i < source.ExcludeImageAssetIds.length; i++) {
+                this.ExcludeImageAssetIds[i] = new Long(source.ExcludeImageAssetIds[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -464,6 +498,7 @@ public class DescribeImageRegistryTimingScanTaskResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "ContainerRunning", this.ContainerRunning);
         this.setParamSimple(map, prefix + "ScanScope", this.ScanScope);
         this.setParamArraySimple(map, prefix + "Namespace.", this.Namespace);
+        this.setParamArraySimple(map, prefix + "ExcludeImageAssetIds.", this.ExcludeImageAssetIds);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
