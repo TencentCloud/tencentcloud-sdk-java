@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ActivateTWeCallLicenseRequest extends AbstractModel {
 
     /**
-    * voip类型
+    * TWecall类型： 1-家庭安防场景； 2-穿戴类场景； 3-生活娱乐场景； 4-对讲及其它场景
     */
     @SerializedName("PkgType")
     @Expose
@@ -45,16 +45,16 @@ public class ActivateTWeCallLicenseRequest extends AbstractModel {
     private TWeCallInfo [] DeviceList;
 
     /**
-     * Get voip类型 
-     * @return PkgType voip类型
+     * Get TWecall类型： 1-家庭安防场景； 2-穿戴类场景； 3-生活娱乐场景； 4-对讲及其它场景 
+     * @return PkgType TWecall类型： 1-家庭安防场景； 2-穿戴类场景； 3-生活娱乐场景； 4-对讲及其它场景
      */
     public Long getPkgType() {
         return this.PkgType;
     }
 
     /**
-     * Set voip类型
-     * @param PkgType voip类型
+     * Set TWecall类型： 1-家庭安防场景； 2-穿戴类场景； 3-生活娱乐场景； 4-对讲及其它场景
+     * @param PkgType TWecall类型： 1-家庭安防场景； 2-穿戴类场景； 3-生活娱乐场景； 4-对讲及其它场景
      */
     public void setPkgType(Long PkgType) {
         this.PkgType = PkgType;

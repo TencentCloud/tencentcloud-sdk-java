@@ -32,7 +32,7 @@ public class TWeCallInfo extends AbstractModel {
     private String ModelId;
 
     /**
-    * Sn信息
+    * Sn信息，SN格式：产品ID_设备名
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Sn")
@@ -68,9 +68,9 @@ public class TWeCallInfo extends AbstractModel {
     }
 
     /**
-     * Get Sn信息
+     * Get Sn信息，SN格式：产品ID_设备名
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Sn Sn信息
+     * @return Sn Sn信息，SN格式：产品ID_设备名
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSn() {
@@ -78,9 +78,9 @@ public class TWeCallInfo extends AbstractModel {
     }
 
     /**
-     * Set Sn信息
+     * Set Sn信息，SN格式：产品ID_设备名
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Sn Sn信息
+     * @param Sn Sn信息，SN格式：产品ID_设备名
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSn(String Sn) {

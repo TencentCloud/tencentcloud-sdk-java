@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeAITranscriptionResponse extends AbstractModel {
 
     /**
-    * 起始时间。
+    * 任务开始时间。
     */
     @SerializedName("StartTime")
     @Expose
@@ -32,10 +32,29 @@ public class DescribeAITranscriptionResponse extends AbstractModel {
 
     /**
     * 转录任务状态。
+有4个值：
+1、Idle表示任务未开始
+2、Preparing表示任务准备中
+3、InProgress表示任务正在运行
+4、Stopped表示任务已停止，正在清理资源中
     */
     @SerializedName("Status")
     @Expose
     private String Status;
+
+    /**
+    * 唯一标识一次任务。
+    */
+    @SerializedName("TaskId")
+    @Expose
+    private String TaskId;
+
+    /**
+    * 开启转录任务时填写的SessionId，如果没写则不返回。
+    */
+    @SerializedName("SessionId")
+    @Expose
+    private String SessionId;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -45,24 +64,34 @@ public class DescribeAITranscriptionResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 起始时间。 
-     * @return StartTime 起始时间。
+     * Get 任务开始时间。 
+     * @return StartTime 任务开始时间。
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 起始时间。
-     * @param StartTime 起始时间。
+     * Set 任务开始时间。
+     * @param StartTime 任务开始时间。
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 转录任务状态。 
+     * Get 转录任务状态。
+有4个值：
+1、Idle表示任务未开始
+2、Preparing表示任务准备中
+3、InProgress表示任务正在运行
+4、Stopped表示任务已停止，正在清理资源中 
      * @return Status 转录任务状态。
+有4个值：
+1、Idle表示任务未开始
+2、Preparing表示任务准备中
+3、InProgress表示任务正在运行
+4、Stopped表示任务已停止，正在清理资源中
      */
     public String getStatus() {
         return this.Status;
@@ -70,10 +99,52 @@ public class DescribeAITranscriptionResponse extends AbstractModel {
 
     /**
      * Set 转录任务状态。
+有4个值：
+1、Idle表示任务未开始
+2、Preparing表示任务准备中
+3、InProgress表示任务正在运行
+4、Stopped表示任务已停止，正在清理资源中
      * @param Status 转录任务状态。
+有4个值：
+1、Idle表示任务未开始
+2、Preparing表示任务准备中
+3、InProgress表示任务正在运行
+4、Stopped表示任务已停止，正在清理资源中
      */
     public void setStatus(String Status) {
         this.Status = Status;
+    }
+
+    /**
+     * Get 唯一标识一次任务。 
+     * @return TaskId 唯一标识一次任务。
+     */
+    public String getTaskId() {
+        return this.TaskId;
+    }
+
+    /**
+     * Set 唯一标识一次任务。
+     * @param TaskId 唯一标识一次任务。
+     */
+    public void setTaskId(String TaskId) {
+        this.TaskId = TaskId;
+    }
+
+    /**
+     * Get 开启转录任务时填写的SessionId，如果没写则不返回。 
+     * @return SessionId 开启转录任务时填写的SessionId，如果没写则不返回。
+     */
+    public String getSessionId() {
+        return this.SessionId;
+    }
+
+    /**
+     * Set 开启转录任务时填写的SessionId，如果没写则不返回。
+     * @param SessionId 开启转录任务时填写的SessionId，如果没写则不返回。
+     */
+    public void setSessionId(String SessionId) {
+        this.SessionId = SessionId;
     }
 
     /**
@@ -106,6 +177,12 @@ public class DescribeAITranscriptionResponse extends AbstractModel {
         if (source.Status != null) {
             this.Status = new String(source.Status);
         }
+        if (source.TaskId != null) {
+            this.TaskId = new String(source.TaskId);
+        }
+        if (source.SessionId != null) {
+            this.SessionId = new String(source.SessionId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -118,6 +195,8 @@ public class DescribeAITranscriptionResponse extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
+        this.setParamSimple(map, prefix + "SessionId", this.SessionId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -24,26 +24,87 @@ import java.util.HashMap;
 public class DescribeAITranscriptionRequest extends AbstractModel {
 
     /**
-    * 唯一标识AI转录任务。
+    * 查询任务状态，不使用时传入空字符串。
+有两种查询方式：
+1、只填写TaskId，这种方式使用TaskId来查询任务
+2、TaskId为空字符串，填写SdkAppId和SessionId，这种方式不需要使用TaskId查询任务
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-     * Get 唯一标识AI转录任务。 
-     * @return TaskId 唯一标识AI转录任务。
+    * TRTC的SdkAppId，和SessionId配合使用。
+    */
+    @SerializedName("SdkAppId")
+    @Expose
+    private Long SdkAppId;
+
+    /**
+    * 开启转录任务时传入的SessionId，和SdkAppId配合使用。
+    */
+    @SerializedName("SessionId")
+    @Expose
+    private String SessionId;
+
+    /**
+     * Get 查询任务状态，不使用时传入空字符串。
+有两种查询方式：
+1、只填写TaskId，这种方式使用TaskId来查询任务
+2、TaskId为空字符串，填写SdkAppId和SessionId，这种方式不需要使用TaskId查询任务 
+     * @return TaskId 查询任务状态，不使用时传入空字符串。
+有两种查询方式：
+1、只填写TaskId，这种方式使用TaskId来查询任务
+2、TaskId为空字符串，填写SdkAppId和SessionId，这种方式不需要使用TaskId查询任务
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 唯一标识AI转录任务。
-     * @param TaskId 唯一标识AI转录任务。
+     * Set 查询任务状态，不使用时传入空字符串。
+有两种查询方式：
+1、只填写TaskId，这种方式使用TaskId来查询任务
+2、TaskId为空字符串，填写SdkAppId和SessionId，这种方式不需要使用TaskId查询任务
+     * @param TaskId 查询任务状态，不使用时传入空字符串。
+有两种查询方式：
+1、只填写TaskId，这种方式使用TaskId来查询任务
+2、TaskId为空字符串，填写SdkAppId和SessionId，这种方式不需要使用TaskId查询任务
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
+    }
+
+    /**
+     * Get TRTC的SdkAppId，和SessionId配合使用。 
+     * @return SdkAppId TRTC的SdkAppId，和SessionId配合使用。
+     */
+    public Long getSdkAppId() {
+        return this.SdkAppId;
+    }
+
+    /**
+     * Set TRTC的SdkAppId，和SessionId配合使用。
+     * @param SdkAppId TRTC的SdkAppId，和SessionId配合使用。
+     */
+    public void setSdkAppId(Long SdkAppId) {
+        this.SdkAppId = SdkAppId;
+    }
+
+    /**
+     * Get 开启转录任务时传入的SessionId，和SdkAppId配合使用。 
+     * @return SessionId 开启转录任务时传入的SessionId，和SdkAppId配合使用。
+     */
+    public String getSessionId() {
+        return this.SessionId;
+    }
+
+    /**
+     * Set 开启转录任务时传入的SessionId，和SdkAppId配合使用。
+     * @param SessionId 开启转录任务时传入的SessionId，和SdkAppId配合使用。
+     */
+    public void setSessionId(String SessionId) {
+        this.SessionId = SessionId;
     }
 
     public DescribeAITranscriptionRequest() {
@@ -57,6 +118,12 @@ public class DescribeAITranscriptionRequest extends AbstractModel {
         if (source.TaskId != null) {
             this.TaskId = new String(source.TaskId);
         }
+        if (source.SdkAppId != null) {
+            this.SdkAppId = new Long(source.SdkAppId);
+        }
+        if (source.SessionId != null) {
+            this.SessionId = new String(source.SessionId);
+        }
     }
 
 
@@ -65,6 +132,8 @@ public class DescribeAITranscriptionRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
+        this.setParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
+        this.setParamSimple(map, prefix + "SessionId", this.SessionId);
 
     }
 }
