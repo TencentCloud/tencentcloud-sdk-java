@@ -88,6 +88,22 @@ public class DescribeProxySupportParamResponse extends AbstractModel {
     private Boolean SupportReadOnly;
 
     /**
+    * 是否自动均衡负载
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SupportAutoLoadBalance")
+    @Expose
+    private Boolean SupportAutoLoadBalance;
+
+    /**
+    * 是否支持接入模式
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SupportAccessMode")
+    @Expose
+    private Boolean SupportAccessMode;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -255,6 +271,46 @@ public class DescribeProxySupportParamResponse extends AbstractModel {
     }
 
     /**
+     * Get 是否自动均衡负载
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SupportAutoLoadBalance 是否自动均衡负载
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getSupportAutoLoadBalance() {
+        return this.SupportAutoLoadBalance;
+    }
+
+    /**
+     * Set 是否自动均衡负载
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SupportAutoLoadBalance 是否自动均衡负载
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSupportAutoLoadBalance(Boolean SupportAutoLoadBalance) {
+        this.SupportAutoLoadBalance = SupportAutoLoadBalance;
+    }
+
+    /**
+     * Get 是否支持接入模式
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SupportAccessMode 是否支持接入模式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getSupportAccessMode() {
+        return this.SupportAccessMode;
+    }
+
+    /**
+     * Set 是否支持接入模式
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SupportAccessMode 是否支持接入模式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSupportAccessMode(Boolean SupportAccessMode) {
+        this.SupportAccessMode = SupportAccessMode;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -302,6 +358,12 @@ public class DescribeProxySupportParamResponse extends AbstractModel {
         if (source.SupportReadOnly != null) {
             this.SupportReadOnly = new Boolean(source.SupportReadOnly);
         }
+        if (source.SupportAutoLoadBalance != null) {
+            this.SupportAutoLoadBalance = new Boolean(source.SupportAutoLoadBalance);
+        }
+        if (source.SupportAccessMode != null) {
+            this.SupportAccessMode = new Boolean(source.SupportAccessMode);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -320,6 +382,8 @@ public class DescribeProxySupportParamResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "SupportPoolMinVersion", this.SupportPoolMinVersion);
         this.setParamSimple(map, prefix + "SupportTransSplitMinVersion", this.SupportTransSplitMinVersion);
         this.setParamSimple(map, prefix + "SupportReadOnly", this.SupportReadOnly);
+        this.setParamSimple(map, prefix + "SupportAutoLoadBalance", this.SupportAutoLoadBalance);
+        this.setParamSimple(map, prefix + "SupportAccessMode", this.SupportAccessMode);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

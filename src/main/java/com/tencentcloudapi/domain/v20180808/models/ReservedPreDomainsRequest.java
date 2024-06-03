@@ -38,6 +38,20 @@ public class ReservedPreDomainsRequest extends AbstractModel {
     private String TemplateId;
 
     /**
+    * 结束后是否自动支付尾款，默认开启 传入1关闭
+    */
+    @SerializedName("IsAutoPay")
+    @Expose
+    private Long IsAutoPay;
+
+    /**
+    * 结束后是否自动进行梯度保证金扣除，默认开启 传入1关闭
+    */
+    @SerializedName("IsBidAutoPay")
+    @Expose
+    private Long IsBidAutoPay;
+
+    /**
      * Get 预约预释放域名列表 
      * @return DomainList 预约预释放域名列表
      */
@@ -69,6 +83,38 @@ public class ReservedPreDomainsRequest extends AbstractModel {
         this.TemplateId = TemplateId;
     }
 
+    /**
+     * Get 结束后是否自动支付尾款，默认开启 传入1关闭 
+     * @return IsAutoPay 结束后是否自动支付尾款，默认开启 传入1关闭
+     */
+    public Long getIsAutoPay() {
+        return this.IsAutoPay;
+    }
+
+    /**
+     * Set 结束后是否自动支付尾款，默认开启 传入1关闭
+     * @param IsAutoPay 结束后是否自动支付尾款，默认开启 传入1关闭
+     */
+    public void setIsAutoPay(Long IsAutoPay) {
+        this.IsAutoPay = IsAutoPay;
+    }
+
+    /**
+     * Get 结束后是否自动进行梯度保证金扣除，默认开启 传入1关闭 
+     * @return IsBidAutoPay 结束后是否自动进行梯度保证金扣除，默认开启 传入1关闭
+     */
+    public Long getIsBidAutoPay() {
+        return this.IsBidAutoPay;
+    }
+
+    /**
+     * Set 结束后是否自动进行梯度保证金扣除，默认开启 传入1关闭
+     * @param IsBidAutoPay 结束后是否自动进行梯度保证金扣除，默认开启 传入1关闭
+     */
+    public void setIsBidAutoPay(Long IsBidAutoPay) {
+        this.IsBidAutoPay = IsBidAutoPay;
+    }
+
     public ReservedPreDomainsRequest() {
     }
 
@@ -86,6 +132,12 @@ public class ReservedPreDomainsRequest extends AbstractModel {
         if (source.TemplateId != null) {
             this.TemplateId = new String(source.TemplateId);
         }
+        if (source.IsAutoPay != null) {
+            this.IsAutoPay = new Long(source.IsAutoPay);
+        }
+        if (source.IsBidAutoPay != null) {
+            this.IsBidAutoPay = new Long(source.IsBidAutoPay);
+        }
     }
 
 
@@ -95,6 +147,8 @@ public class ReservedPreDomainsRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "DomainList.", this.DomainList);
         this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
+        this.setParamSimple(map, prefix + "IsAutoPay", this.IsAutoPay);
+        this.setParamSimple(map, prefix + "IsBidAutoPay", this.IsBidAutoPay);
 
     }
 }

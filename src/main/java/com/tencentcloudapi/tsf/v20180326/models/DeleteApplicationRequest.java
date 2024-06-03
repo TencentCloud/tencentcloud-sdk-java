@@ -31,6 +31,13 @@ public class DeleteApplicationRequest extends AbstractModel {
     private String ApplicationId;
 
     /**
+    * 是否删除镜像仓库
+    */
+    @SerializedName("SyncDeleteImageRepository")
+    @Expose
+    private Boolean SyncDeleteImageRepository;
+
+    /**
      * Get 应用ID 
      * @return ApplicationId 应用ID
      */
@@ -46,6 +53,22 @@ public class DeleteApplicationRequest extends AbstractModel {
         this.ApplicationId = ApplicationId;
     }
 
+    /**
+     * Get 是否删除镜像仓库 
+     * @return SyncDeleteImageRepository 是否删除镜像仓库
+     */
+    public Boolean getSyncDeleteImageRepository() {
+        return this.SyncDeleteImageRepository;
+    }
+
+    /**
+     * Set 是否删除镜像仓库
+     * @param SyncDeleteImageRepository 是否删除镜像仓库
+     */
+    public void setSyncDeleteImageRepository(Boolean SyncDeleteImageRepository) {
+        this.SyncDeleteImageRepository = SyncDeleteImageRepository;
+    }
+
     public DeleteApplicationRequest() {
     }
 
@@ -57,6 +80,9 @@ public class DeleteApplicationRequest extends AbstractModel {
         if (source.ApplicationId != null) {
             this.ApplicationId = new String(source.ApplicationId);
         }
+        if (source.SyncDeleteImageRepository != null) {
+            this.SyncDeleteImageRepository = new Boolean(source.SyncDeleteImageRepository);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class DeleteApplicationRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
+        this.setParamSimple(map, prefix + "SyncDeleteImageRepository", this.SyncDeleteImageRepository);
 
     }
 }

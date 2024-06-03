@@ -38,6 +38,13 @@ public class UploadContentRequest extends AbstractModel {
     private String RequestFromSource;
 
     /**
+    * 项目id
+    */
+    @SerializedName("ProjectId")
+    @Expose
+    private String ProjectId;
+
+    /**
      * Get 脚本上传信息 
      * @return ScriptRequestInfo 脚本上传信息
      */
@@ -69,6 +76,22 @@ public class UploadContentRequest extends AbstractModel {
         this.RequestFromSource = RequestFromSource;
     }
 
+    /**
+     * Get 项目id 
+     * @return ProjectId 项目id
+     */
+    public String getProjectId() {
+        return this.ProjectId;
+    }
+
+    /**
+     * Set 项目id
+     * @param ProjectId 项目id
+     */
+    public void setProjectId(String ProjectId) {
+        this.ProjectId = ProjectId;
+    }
+
     public UploadContentRequest() {
     }
 
@@ -83,6 +106,9 @@ public class UploadContentRequest extends AbstractModel {
         if (source.RequestFromSource != null) {
             this.RequestFromSource = new String(source.RequestFromSource);
         }
+        if (source.ProjectId != null) {
+            this.ProjectId = new String(source.ProjectId);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class UploadContentRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "ScriptRequestInfo.", this.ScriptRequestInfo);
         this.setParamSimple(map, prefix + "RequestFromSource", this.RequestFromSource);
+        this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
 
     }
 }

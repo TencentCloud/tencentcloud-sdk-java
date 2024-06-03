@@ -80,6 +80,22 @@ public class ProxyInst extends AbstractModel {
     private String Zone;
 
     /**
+    * 实例节点ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InstNodeId")
+    @Expose
+    private String InstNodeId;
+
+    /**
+    * 节点角色
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InstNodeRole")
+    @Expose
+    private String InstNodeRole;
+
+    /**
      * Get 实例ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return InstanceId 实例ID
@@ -219,6 +235,46 @@ public class ProxyInst extends AbstractModel {
         this.Zone = Zone;
     }
 
+    /**
+     * Get 实例节点ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InstNodeId 实例节点ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getInstNodeId() {
+        return this.InstNodeId;
+    }
+
+    /**
+     * Set 实例节点ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstNodeId 实例节点ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInstNodeId(String InstNodeId) {
+        this.InstNodeId = InstNodeId;
+    }
+
+    /**
+     * Get 节点角色
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InstNodeRole 节点角色
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getInstNodeRole() {
+        return this.InstNodeRole;
+    }
+
+    /**
+     * Set 节点角色
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstNodeRole 节点角色
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInstNodeRole(String InstNodeRole) {
+        this.InstNodeRole = InstNodeRole;
+    }
+
     public ProxyInst() {
     }
 
@@ -248,6 +304,12 @@ public class ProxyInst extends AbstractModel {
         if (source.Zone != null) {
             this.Zone = new String(source.Zone);
         }
+        if (source.InstNodeId != null) {
+            this.InstNodeId = new String(source.InstNodeId);
+        }
+        if (source.InstNodeRole != null) {
+            this.InstNodeRole = new String(source.InstNodeRole);
+        }
     }
 
 
@@ -262,6 +324,8 @@ public class ProxyInst extends AbstractModel {
         this.setParamSimple(map, prefix + "Weight", this.Weight);
         this.setParamSimple(map, prefix + "Region", this.Region);
         this.setParamSimple(map, prefix + "Zone", this.Zone);
+        this.setParamSimple(map, prefix + "InstNodeId", this.InstNodeId);
+        this.setParamSimple(map, prefix + "InstNodeRole", this.InstNodeRole);
 
     }
 }

@@ -87,6 +87,13 @@ public class DescribeMicroservicesRequest extends AbstractModel {
     private String [] MicroserviceNameList;
 
     /**
+    * 注册中心实例id
+    */
+    @SerializedName("ConfigCenterInstanceId")
+    @Expose
+    private String ConfigCenterInstanceId;
+
+    /**
      * Get 命名空间ID 
      * @return NamespaceId 命名空间ID
      */
@@ -230,6 +237,22 @@ public class DescribeMicroservicesRequest extends AbstractModel {
         this.MicroserviceNameList = MicroserviceNameList;
     }
 
+    /**
+     * Get 注册中心实例id 
+     * @return ConfigCenterInstanceId 注册中心实例id
+     */
+    public String getConfigCenterInstanceId() {
+        return this.ConfigCenterInstanceId;
+    }
+
+    /**
+     * Set 注册中心实例id
+     * @param ConfigCenterInstanceId 注册中心实例id
+     */
+    public void setConfigCenterInstanceId(String ConfigCenterInstanceId) {
+        this.ConfigCenterInstanceId = ConfigCenterInstanceId;
+    }
+
     public DescribeMicroservicesRequest() {
     }
 
@@ -274,6 +297,9 @@ public class DescribeMicroservicesRequest extends AbstractModel {
                 this.MicroserviceNameList[i] = new String(source.MicroserviceNameList[i]);
             }
         }
+        if (source.ConfigCenterInstanceId != null) {
+            this.ConfigCenterInstanceId = new String(source.ConfigCenterInstanceId);
+        }
     }
 
 
@@ -290,6 +316,7 @@ public class DescribeMicroservicesRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "Status.", this.Status);
         this.setParamArraySimple(map, prefix + "MicroserviceIdList.", this.MicroserviceIdList);
         this.setParamArraySimple(map, prefix + "MicroserviceNameList.", this.MicroserviceNameList);
+        this.setParamSimple(map, prefix + "ConfigCenterInstanceId", this.ConfigCenterInstanceId);
 
     }
 }

@@ -172,6 +172,13 @@ public class DescribeListBGPInstancesRequest extends AbstractModel {
     private Long FilterTransRegionFlag;
 
     /**
+    * zoenid列表
+    */
+    @SerializedName("FilterZoneIdList")
+    @Expose
+    private Long [] FilterZoneIdList;
+
+    /**
      * Get 页起始偏移，取值为(页码-1)*一页条数 
      * @return Offset 页起始偏移，取值为(页码-1)*一页条数
      */
@@ -511,6 +518,22 @@ public class DescribeListBGPInstancesRequest extends AbstractModel {
         this.FilterTransRegionFlag = FilterTransRegionFlag;
     }
 
+    /**
+     * Get zoenid列表 
+     * @return FilterZoneIdList zoenid列表
+     */
+    public Long [] getFilterZoneIdList() {
+        return this.FilterZoneIdList;
+    }
+
+    /**
+     * Set zoenid列表
+     * @param FilterZoneIdList zoenid列表
+     */
+    public void setFilterZoneIdList(Long [] FilterZoneIdList) {
+        this.FilterZoneIdList = FilterZoneIdList;
+    }
+
     public DescribeListBGPInstancesRequest() {
     }
 
@@ -588,6 +611,12 @@ public class DescribeListBGPInstancesRequest extends AbstractModel {
         if (source.FilterTransRegionFlag != null) {
             this.FilterTransRegionFlag = new Long(source.FilterTransRegionFlag);
         }
+        if (source.FilterZoneIdList != null) {
+            this.FilterZoneIdList = new Long[source.FilterZoneIdList.length];
+            for (int i = 0; i < source.FilterZoneIdList.length; i++) {
+                this.FilterZoneIdList[i] = new Long(source.FilterZoneIdList[i]);
+            }
+        }
     }
 
 
@@ -616,6 +645,7 @@ public class DescribeListBGPInstancesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "FilterBasicPlusFlag", this.FilterBasicPlusFlag);
         this.setParamSimple(map, prefix + "FilterPlanCntFlag", this.FilterPlanCntFlag);
         this.setParamSimple(map, prefix + "FilterTransRegionFlag", this.FilterTransRegionFlag);
+        this.setParamArraySimple(map, prefix + "FilterZoneIdList.", this.FilterZoneIdList);
 
     }
 }

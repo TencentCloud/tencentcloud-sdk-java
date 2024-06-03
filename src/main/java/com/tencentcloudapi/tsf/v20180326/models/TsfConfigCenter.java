@@ -64,6 +64,22 @@ public class TsfConfigCenter extends AbstractModel {
     private String NamespaceId;
 
     /**
+    * 当前版本
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CurrentVersion")
+    @Expose
+    private String CurrentVersion;
+
+    /**
+    * 需要升级的版本
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TargetVersion")
+    @Expose
+    private String TargetVersion;
+
+    /**
      * Get 配置中心类型
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ConfigType 配置中心类型
@@ -163,6 +179,46 @@ public class TsfConfigCenter extends AbstractModel {
         this.NamespaceId = NamespaceId;
     }
 
+    /**
+     * Get 当前版本
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CurrentVersion 当前版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCurrentVersion() {
+        return this.CurrentVersion;
+    }
+
+    /**
+     * Set 当前版本
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CurrentVersion 当前版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCurrentVersion(String CurrentVersion) {
+        this.CurrentVersion = CurrentVersion;
+    }
+
+    /**
+     * Get 需要升级的版本
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TargetVersion 需要升级的版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTargetVersion() {
+        return this.TargetVersion;
+    }
+
+    /**
+     * Set 需要升级的版本
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TargetVersion 需要升级的版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTargetVersion(String TargetVersion) {
+        this.TargetVersion = TargetVersion;
+    }
+
     public TsfConfigCenter() {
     }
 
@@ -186,6 +242,12 @@ public class TsfConfigCenter extends AbstractModel {
         if (source.NamespaceId != null) {
             this.NamespaceId = new String(source.NamespaceId);
         }
+        if (source.CurrentVersion != null) {
+            this.CurrentVersion = new String(source.CurrentVersion);
+        }
+        if (source.TargetVersion != null) {
+            this.TargetVersion = new String(source.TargetVersion);
+        }
     }
 
 
@@ -198,6 +260,8 @@ public class TsfConfigCenter extends AbstractModel {
         this.setParamSimple(map, prefix + "ConfigCenterInstanceName", this.ConfigCenterInstanceName);
         this.setParamSimple(map, prefix + "RegionId", this.RegionId);
         this.setParamSimple(map, prefix + "NamespaceId", this.NamespaceId);
+        this.setParamSimple(map, prefix + "CurrentVersion", this.CurrentVersion);
+        this.setParamSimple(map, prefix + "TargetVersion", this.TargetVersion);
 
     }
 }

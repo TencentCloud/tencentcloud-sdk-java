@@ -1101,6 +1101,17 @@ public class WafClient extends AbstractClient{
     }
 
     /**
+     *api安全状态变更接口
+     * @param req ModifyApiSecEventChangeRequest
+     * @return ModifyApiSecEventChangeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyApiSecEventChangeResponse ModifyApiSecEventChange(ModifyApiSecEventChangeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyApiSecEventChange", ModifyApiSecEventChangeResponse.class);
+    }
+
+    /**
      *修改防护域名的地域封禁状态
      * @param req ModifyAreaBanStatusRequest
      * @return ModifyAreaBanStatusResponse

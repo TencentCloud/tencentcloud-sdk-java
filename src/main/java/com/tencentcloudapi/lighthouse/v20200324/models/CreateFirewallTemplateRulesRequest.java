@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateFirewallTemplateRulesRequest extends AbstractModel {
 
     /**
-    * 防火墙模板ID。
+    * 防火墙模板ID。可通过[DescribeFirewallTemplates](https://cloud.tencent.com/document/product/1207/96874)接口返回值字段TemplateSet获取。
     */
     @SerializedName("TemplateId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateFirewallTemplateRulesRequest extends AbstractModel {
     private FirewallRule [] TemplateRules;
 
     /**
-     * Get 防火墙模板ID。 
-     * @return TemplateId 防火墙模板ID。
+     * Get 防火墙模板ID。可通过[DescribeFirewallTemplates](https://cloud.tencent.com/document/product/1207/96874)接口返回值字段TemplateSet获取。 
+     * @return TemplateId 防火墙模板ID。可通过[DescribeFirewallTemplates](https://cloud.tencent.com/document/product/1207/96874)接口返回值字段TemplateSet获取。
      */
     public String getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set 防火墙模板ID。
-     * @param TemplateId 防火墙模板ID。
+     * Set 防火墙模板ID。可通过[DescribeFirewallTemplates](https://cloud.tencent.com/document/product/1207/96874)接口返回值字段TemplateSet获取。
+     * @param TemplateId 防火墙模板ID。可通过[DescribeFirewallTemplates](https://cloud.tencent.com/document/product/1207/96874)接口返回值字段TemplateSet获取。
      */
     public void setTemplateId(String TemplateId) {
         this.TemplateId = TemplateId;

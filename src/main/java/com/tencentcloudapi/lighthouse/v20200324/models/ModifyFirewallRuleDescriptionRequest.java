@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyFirewallRuleDescriptionRequest extends AbstractModel {
 
     /**
-    * 实例 ID。
+    * 实例ID。可通过 [DescribeInstances](https://cloud.tencent.com/document/api/1207/47573) 接口返回值中的 InstanceId 获取。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -45,16 +45,16 @@ public class ModifyFirewallRuleDescriptionRequest extends AbstractModel {
     private Long FirewallVersion;
 
     /**
-     * Get 实例 ID。 
-     * @return InstanceId 实例 ID。
+     * Get 实例ID。可通过 [DescribeInstances](https://cloud.tencent.com/document/api/1207/47573) 接口返回值中的 InstanceId 获取。 
+     * @return InstanceId 实例ID。可通过 [DescribeInstances](https://cloud.tencent.com/document/api/1207/47573) 接口返回值中的 InstanceId 获取。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例 ID。
-     * @param InstanceId 实例 ID。
+     * Set 实例ID。可通过 [DescribeInstances](https://cloud.tencent.com/document/api/1207/47573) 接口返回值中的 InstanceId 获取。
+     * @param InstanceId 实例ID。可通过 [DescribeInstances](https://cloud.tencent.com/document/api/1207/47573) 接口返回值中的 InstanceId 获取。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

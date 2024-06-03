@@ -192,6 +192,22 @@ public class KongUpstreamInfo extends AbstractModel {
     private Boolean ScfCamAuthEnable;
 
     /**
+    * 云函数是否开启Base64编码，默认为false
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ScfIsBase64Encoded")
+    @Expose
+    private Boolean ScfIsBase64Encoded;
+
+    /**
+    * 云函数是否开启响应集成，默认为false
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ScfIsIntegratedResponse")
+    @Expose
+    private Boolean ScfIsIntegratedResponse;
+
+    /**
      * Get IP或域名
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Host IP或域名
@@ -611,6 +627,46 @@ public class KongUpstreamInfo extends AbstractModel {
         this.ScfCamAuthEnable = ScfCamAuthEnable;
     }
 
+    /**
+     * Get 云函数是否开启Base64编码，默认为false
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ScfIsBase64Encoded 云函数是否开启Base64编码，默认为false
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getScfIsBase64Encoded() {
+        return this.ScfIsBase64Encoded;
+    }
+
+    /**
+     * Set 云函数是否开启Base64编码，默认为false
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ScfIsBase64Encoded 云函数是否开启Base64编码，默认为false
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setScfIsBase64Encoded(Boolean ScfIsBase64Encoded) {
+        this.ScfIsBase64Encoded = ScfIsBase64Encoded;
+    }
+
+    /**
+     * Get 云函数是否开启响应集成，默认为false
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ScfIsIntegratedResponse 云函数是否开启响应集成，默认为false
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getScfIsIntegratedResponse() {
+        return this.ScfIsIntegratedResponse;
+    }
+
+    /**
+     * Set 云函数是否开启响应集成，默认为false
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ScfIsIntegratedResponse 云函数是否开启响应集成，默认为false
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setScfIsIntegratedResponse(Boolean ScfIsIntegratedResponse) {
+        this.ScfIsIntegratedResponse = ScfIsIntegratedResponse;
+    }
+
     public KongUpstreamInfo() {
     }
 
@@ -685,6 +741,12 @@ public class KongUpstreamInfo extends AbstractModel {
         if (source.ScfCamAuthEnable != null) {
             this.ScfCamAuthEnable = new Boolean(source.ScfCamAuthEnable);
         }
+        if (source.ScfIsBase64Encoded != null) {
+            this.ScfIsBase64Encoded = new Boolean(source.ScfIsBase64Encoded);
+        }
+        if (source.ScfIsIntegratedResponse != null) {
+            this.ScfIsIntegratedResponse = new Boolean(source.ScfIsIntegratedResponse);
+        }
     }
 
 
@@ -713,6 +775,8 @@ public class KongUpstreamInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "RealSourceType", this.RealSourceType);
         this.setParamSimple(map, prefix + "HealthStatus", this.HealthStatus);
         this.setParamSimple(map, prefix + "ScfCamAuthEnable", this.ScfCamAuthEnable);
+        this.setParamSimple(map, prefix + "ScfIsBase64Encoded", this.ScfIsBase64Encoded);
+        this.setParamSimple(map, prefix + "ScfIsIntegratedResponse", this.ScfIsIntegratedResponse);
 
     }
 }

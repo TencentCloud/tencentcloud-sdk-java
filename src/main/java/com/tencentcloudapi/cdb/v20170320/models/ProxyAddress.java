@@ -148,6 +148,22 @@ public class ProxyAddress extends AbstractModel {
     private ProxyAllocation [] ProxyAllocation;
 
     /**
+    * 接入模式
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AccessMode")
+    @Expose
+    private String AccessMode;
+
+    /**
+    * 是否开启自动负载均衡
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AutoLoadBalance")
+    @Expose
+    private Boolean AutoLoadBalance;
+
+    /**
      * Get 代理组地址ID 
      * @return ProxyAddressId 代理组地址ID
      */
@@ -451,6 +467,46 @@ public class ProxyAddress extends AbstractModel {
         this.ProxyAllocation = ProxyAllocation;
     }
 
+    /**
+     * Get 接入模式
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AccessMode 接入模式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAccessMode() {
+        return this.AccessMode;
+    }
+
+    /**
+     * Set 接入模式
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AccessMode 接入模式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAccessMode(String AccessMode) {
+        this.AccessMode = AccessMode;
+    }
+
+    /**
+     * Get 是否开启自动负载均衡
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AutoLoadBalance 是否开启自动负载均衡
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getAutoLoadBalance() {
+        return this.AutoLoadBalance;
+    }
+
+    /**
+     * Set 是否开启自动负载均衡
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AutoLoadBalance 是否开启自动负载均衡
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAutoLoadBalance(Boolean AutoLoadBalance) {
+        this.AutoLoadBalance = AutoLoadBalance;
+    }
+
     public ProxyAddress() {
     }
 
@@ -510,6 +566,12 @@ public class ProxyAddress extends AbstractModel {
                 this.ProxyAllocation[i] = new ProxyAllocation(source.ProxyAllocation[i]);
             }
         }
+        if (source.AccessMode != null) {
+            this.AccessMode = new String(source.AccessMode);
+        }
+        if (source.AutoLoadBalance != null) {
+            this.AutoLoadBalance = new Boolean(source.AutoLoadBalance);
+        }
     }
 
 
@@ -533,6 +595,8 @@ public class ProxyAddress extends AbstractModel {
         this.setParamSimple(map, prefix + "ConnectionPool", this.ConnectionPool);
         this.setParamSimple(map, prefix + "Desc", this.Desc);
         this.setParamArrayObj(map, prefix + "ProxyAllocation.", this.ProxyAllocation);
+        this.setParamSimple(map, prefix + "AccessMode", this.AccessMode);
+        this.setParamSimple(map, prefix + "AutoLoadBalance", this.AutoLoadBalance);
 
     }
 }

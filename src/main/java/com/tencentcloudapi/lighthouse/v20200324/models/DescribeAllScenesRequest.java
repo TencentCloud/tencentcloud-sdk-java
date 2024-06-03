@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeAllScenesRequest extends AbstractModel {
 
     /**
-    * 使用场景ID列表。
+    * 使用场景ID列表。可通过[DescribeAllScenes](https://cloud.tencent.com/document/product/1207/83513)接口返回值中的SceneId获取。
     */
     @SerializedName("SceneIds")
     @Expose
@@ -45,16 +45,16 @@ public class DescribeAllScenesRequest extends AbstractModel {
     private Long Limit;
 
     /**
-     * Get 使用场景ID列表。 
-     * @return SceneIds 使用场景ID列表。
+     * Get 使用场景ID列表。可通过[DescribeAllScenes](https://cloud.tencent.com/document/product/1207/83513)接口返回值中的SceneId获取。 
+     * @return SceneIds 使用场景ID列表。可通过[DescribeAllScenes](https://cloud.tencent.com/document/product/1207/83513)接口返回值中的SceneId获取。
      */
     public String [] getSceneIds() {
         return this.SceneIds;
     }
 
     /**
-     * Set 使用场景ID列表。
-     * @param SceneIds 使用场景ID列表。
+     * Set 使用场景ID列表。可通过[DescribeAllScenes](https://cloud.tencent.com/document/product/1207/83513)接口返回值中的SceneId获取。
+     * @param SceneIds 使用场景ID列表。可通过[DescribeAllScenes](https://cloud.tencent.com/document/product/1207/83513)接口返回值中的SceneId获取。
      */
     public void setSceneIds(String [] SceneIds) {
         this.SceneIds = SceneIds;

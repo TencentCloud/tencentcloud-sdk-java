@@ -136,6 +136,16 @@ public class ConfigRelease extends AbstractModel {
     private TsfConfigCenter [] ConfigCenters;
 
     /**
+    * DUAL_STATUS_WRITE_REGISTRATION_ON 双写&&双注册开启
+
+DUAL_STATUS_WRITE_REGISTRATION_OFF 双写&&双注册关闭
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DaulStatus")
+    @Expose
+    private String DaulStatus;
+
+    /**
      * Get 配置项发布ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ConfigReleaseId 配置项发布ID
@@ -415,6 +425,34 @@ public class ConfigRelease extends AbstractModel {
         this.ConfigCenters = ConfigCenters;
     }
 
+    /**
+     * Get DUAL_STATUS_WRITE_REGISTRATION_ON 双写&&双注册开启
+
+DUAL_STATUS_WRITE_REGISTRATION_OFF 双写&&双注册关闭
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DaulStatus DUAL_STATUS_WRITE_REGISTRATION_ON 双写&&双注册开启
+
+DUAL_STATUS_WRITE_REGISTRATION_OFF 双写&&双注册关闭
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDaulStatus() {
+        return this.DaulStatus;
+    }
+
+    /**
+     * Set DUAL_STATUS_WRITE_REGISTRATION_ON 双写&&双注册开启
+
+DUAL_STATUS_WRITE_REGISTRATION_OFF 双写&&双注册关闭
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DaulStatus DUAL_STATUS_WRITE_REGISTRATION_ON 双写&&双注册开启
+
+DUAL_STATUS_WRITE_REGISTRATION_OFF 双写&&双注册关闭
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDaulStatus(String DaulStatus) {
+        this.DaulStatus = DaulStatus;
+    }
+
     public ConfigRelease() {
     }
 
@@ -468,6 +506,9 @@ public class ConfigRelease extends AbstractModel {
                 this.ConfigCenters[i] = new TsfConfigCenter(source.ConfigCenters[i]);
             }
         }
+        if (source.DaulStatus != null) {
+            this.DaulStatus = new String(source.DaulStatus);
+        }
     }
 
 
@@ -489,6 +530,7 @@ public class ConfigRelease extends AbstractModel {
         this.setParamSimple(map, prefix + "ReleaseDesc", this.ReleaseDesc);
         this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
         this.setParamArrayObj(map, prefix + "ConfigCenters.", this.ConfigCenters);
+        this.setParamSimple(map, prefix + "DaulStatus", this.DaulStatus);
 
     }
 }

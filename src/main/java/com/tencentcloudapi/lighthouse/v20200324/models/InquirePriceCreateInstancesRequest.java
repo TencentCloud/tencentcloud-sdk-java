@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class InquirePriceCreateInstancesRequest extends AbstractModel {
 
     /**
-    * 实例的套餐 ID。
+    * 实例的套餐 ID。可以通过调用[DescribeBundles](https://cloud.tencent.com/document/api/1207/47575)接口获取。
     */
     @SerializedName("BundleId")
     @Expose
@@ -52,16 +52,16 @@ public class InquirePriceCreateInstancesRequest extends AbstractModel {
     private String BlueprintId;
 
     /**
-     * Get 实例的套餐 ID。 
-     * @return BundleId 实例的套餐 ID。
+     * Get 实例的套餐 ID。可以通过调用[DescribeBundles](https://cloud.tencent.com/document/api/1207/47575)接口获取。 
+     * @return BundleId 实例的套餐 ID。可以通过调用[DescribeBundles](https://cloud.tencent.com/document/api/1207/47575)接口获取。
      */
     public String getBundleId() {
         return this.BundleId;
     }
 
     /**
-     * Set 实例的套餐 ID。
-     * @param BundleId 实例的套餐 ID。
+     * Set 实例的套餐 ID。可以通过调用[DescribeBundles](https://cloud.tencent.com/document/api/1207/47575)接口获取。
+     * @param BundleId 实例的套餐 ID。可以通过调用[DescribeBundles](https://cloud.tencent.com/document/api/1207/47575)接口获取。
      */
     public void setBundleId(String BundleId) {
         this.BundleId = BundleId;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeFirewallTemplatesRequest extends AbstractModel {
 
     /**
-    * 防火墙模板ID列表。
+    * 防火墙模板ID列表。可通过[DescribeFirewallTemplates](https://cloud.tencent.com/document/product/1207/96874)接口返回值字段TemplateSet获取。列表长度最大值为100。
     */
     @SerializedName("TemplateIds")
     @Expose
@@ -62,16 +62,16 @@ public class DescribeFirewallTemplatesRequest extends AbstractModel {
     private Long Limit;
 
     /**
-     * Get 防火墙模板ID列表。 
-     * @return TemplateIds 防火墙模板ID列表。
+     * Get 防火墙模板ID列表。可通过[DescribeFirewallTemplates](https://cloud.tencent.com/document/product/1207/96874)接口返回值字段TemplateSet获取。列表长度最大值为100。 
+     * @return TemplateIds 防火墙模板ID列表。可通过[DescribeFirewallTemplates](https://cloud.tencent.com/document/product/1207/96874)接口返回值字段TemplateSet获取。列表长度最大值为100。
      */
     public String [] getTemplateIds() {
         return this.TemplateIds;
     }
 
     /**
-     * Set 防火墙模板ID列表。
-     * @param TemplateIds 防火墙模板ID列表。
+     * Set 防火墙模板ID列表。可通过[DescribeFirewallTemplates](https://cloud.tencent.com/document/product/1207/96874)接口返回值字段TemplateSet获取。列表长度最大值为100。
+     * @param TemplateIds 防火墙模板ID列表。可通过[DescribeFirewallTemplates](https://cloud.tencent.com/document/product/1207/96874)接口返回值字段TemplateSet获取。列表长度最大值为100。
      */
     public void setTemplateIds(String [] TemplateIds) {
         this.TemplateIds = TemplateIds;

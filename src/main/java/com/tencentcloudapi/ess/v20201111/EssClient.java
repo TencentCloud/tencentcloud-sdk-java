@@ -946,6 +946,18 @@ p.s.
     }
 
     /**
+     *该接口会生成一个手机号变更的链接，用户可以通过该链接进入电子签系统进行手机号的变更。
+该接口支持员工和个人端手机号的变更。
+     * @param req CreateUserMobileChangeUrlRequest
+     * @return CreateUserMobileChangeUrlResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateUserMobileChangeUrlResponse CreateUserMobileChangeUrl(CreateUserMobileChangeUrlRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateUserMobileChangeUrl", CreateUserMobileChangeUrlResponse.class);
+    }
+
+    /**
      *客户可以主动调用生成实名链接去做C端用户实名，会对实名的用户进行打标记为调用链接客户的用户
 使用场景：
 用户集成场景

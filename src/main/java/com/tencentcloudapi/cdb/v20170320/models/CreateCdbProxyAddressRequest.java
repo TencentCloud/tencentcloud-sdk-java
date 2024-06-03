@@ -110,6 +110,7 @@ public class CreateCdbProxyAddressRequest extends AbstractModel {
 
     /**
     * 是否开启连接池
+注意：如需使用数据库代理连接池能力，MySQL 8.0 主实例的内核小版本要大于等于 MySQL 8.0 20230630。
     */
     @SerializedName("ConnectionPool")
     @Expose
@@ -149,6 +150,20 @@ public class CreateCdbProxyAddressRequest extends AbstractModel {
     @SerializedName("ConnectionPoolType")
     @Expose
     private String ConnectionPoolType;
+
+    /**
+    * 是否自适应负载均衡
+    */
+    @SerializedName("AutoLoadBalance")
+    @Expose
+    private Boolean AutoLoadBalance;
+
+    /**
+    * 接入模式
+    */
+    @SerializedName("AccessMode")
+    @Expose
+    private String AccessMode;
 
     /**
      * Get 代理组ID 
@@ -347,8 +362,10 @@ public class CreateCdbProxyAddressRequest extends AbstractModel {
     }
 
     /**
-     * Get 是否开启连接池 
+     * Get 是否开启连接池
+注意：如需使用数据库代理连接池能力，MySQL 8.0 主实例的内核小版本要大于等于 MySQL 8.0 20230630。 
      * @return ConnectionPool 是否开启连接池
+注意：如需使用数据库代理连接池能力，MySQL 8.0 主实例的内核小版本要大于等于 MySQL 8.0 20230630。
      */
     public Boolean getConnectionPool() {
         return this.ConnectionPool;
@@ -356,7 +373,9 @@ public class CreateCdbProxyAddressRequest extends AbstractModel {
 
     /**
      * Set 是否开启连接池
+注意：如需使用数据库代理连接池能力，MySQL 8.0 主实例的内核小版本要大于等于 MySQL 8.0 20230630。
      * @param ConnectionPool 是否开启连接池
+注意：如需使用数据库代理连接池能力，MySQL 8.0 主实例的内核小版本要大于等于 MySQL 8.0 20230630。
      */
     public void setConnectionPool(Boolean ConnectionPool) {
         this.ConnectionPool = ConnectionPool;
@@ -442,6 +461,38 @@ public class CreateCdbProxyAddressRequest extends AbstractModel {
         this.ConnectionPoolType = ConnectionPoolType;
     }
 
+    /**
+     * Get 是否自适应负载均衡 
+     * @return AutoLoadBalance 是否自适应负载均衡
+     */
+    public Boolean getAutoLoadBalance() {
+        return this.AutoLoadBalance;
+    }
+
+    /**
+     * Set 是否自适应负载均衡
+     * @param AutoLoadBalance 是否自适应负载均衡
+     */
+    public void setAutoLoadBalance(Boolean AutoLoadBalance) {
+        this.AutoLoadBalance = AutoLoadBalance;
+    }
+
+    /**
+     * Get 接入模式 
+     * @return AccessMode 接入模式
+     */
+    public String getAccessMode() {
+        return this.AccessMode;
+    }
+
+    /**
+     * Set 接入模式
+     * @param AccessMode 接入模式
+     */
+    public void setAccessMode(String AccessMode) {
+        this.AccessMode = AccessMode;
+    }
+
     public CreateCdbProxyAddressRequest() {
     }
 
@@ -510,6 +561,12 @@ public class CreateCdbProxyAddressRequest extends AbstractModel {
         if (source.ConnectionPoolType != null) {
             this.ConnectionPoolType = new String(source.ConnectionPoolType);
         }
+        if (source.AutoLoadBalance != null) {
+            this.AutoLoadBalance = new Boolean(source.AutoLoadBalance);
+        }
+        if (source.AccessMode != null) {
+            this.AccessMode = new String(source.AccessMode);
+        }
     }
 
 
@@ -535,6 +592,8 @@ public class CreateCdbProxyAddressRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "VPort", this.VPort);
         this.setParamArraySimple(map, prefix + "SecurityGroup.", this.SecurityGroup);
         this.setParamSimple(map, prefix + "ConnectionPoolType", this.ConnectionPoolType);
+        this.setParamSimple(map, prefix + "AutoLoadBalance", this.AutoLoadBalance);
+        this.setParamSimple(map, prefix + "AccessMode", this.AccessMode);
 
     }
 }

@@ -218,6 +218,14 @@ public class BGPInstance extends AbstractModel {
     private Long SuperPackFlag;
 
     /**
+    * 所属ZoneId
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ZoneId")
+    @Expose
+    private Long ZoneId;
+
+    /**
      * Get 资产实例的详细信息 
      * @return InstanceDetail 资产实例的详细信息
      */
@@ -693,6 +701,26 @@ public class BGPInstance extends AbstractModel {
         this.SuperPackFlag = SuperPackFlag;
     }
 
+    /**
+     * Get 所属ZoneId
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ZoneId 所属ZoneId
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getZoneId() {
+        return this.ZoneId;
+    }
+
+    /**
+     * Set 所属ZoneId
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ZoneId 所属ZoneId
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setZoneId(Long ZoneId) {
+        this.ZoneId = ZoneId;
+    }
+
     public BGPInstance() {
     }
 
@@ -782,6 +810,9 @@ public class BGPInstance extends AbstractModel {
         if (source.SuperPackFlag != null) {
             this.SuperPackFlag = new Long(source.SuperPackFlag);
         }
+        if (source.ZoneId != null) {
+            this.ZoneId = new Long(source.ZoneId);
+        }
     }
 
 
@@ -814,6 +845,7 @@ public class BGPInstance extends AbstractModel {
         this.setParamSimple(map, prefix + "PlanCntFlag", this.PlanCntFlag);
         this.setParamSimple(map, prefix + "TransRegionFlag", this.TransRegionFlag);
         this.setParamSimple(map, prefix + "SuperPackFlag", this.SuperPackFlag);
+        this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
 
     }
 }

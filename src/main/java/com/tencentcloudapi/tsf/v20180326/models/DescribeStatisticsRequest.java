@@ -52,7 +52,7 @@ public class DescribeStatisticsRequest extends AbstractModel {
     private Long Limit;
 
     /**
-    * 命名空间Id
+    * 命名空间Id,此字段，和 NamespaceIdList 或者 MetricDimensionValues 字段包含 namespaceId 维度信息。三者选其一。
     */
     @SerializedName("NamespaceId")
     @Expose
@@ -73,14 +73,14 @@ public class DescribeStatisticsRequest extends AbstractModel {
     private Long OrderType;
 
     /**
-    * 开始时间：年月日 时分秒2020-05-12 14:43:12
+    * 开始时间：年月日 时分秒2020-05-12 14:43:12， 不能为空
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * 开始时间：年月日 时分秒2020-05-12 14:43:12
+    * 开始时间：年月日 时分秒2020-05-12 14:43:12， 不能为空
     */
     @SerializedName("StartTime")
     @Expose
@@ -127,6 +127,13 @@ public class DescribeStatisticsRequest extends AbstractModel {
     @SerializedName("NamespaceIdList")
     @Expose
     private String [] NamespaceIdList;
+
+    /**
+    * 独占配置中心的ID
+    */
+    @SerializedName("ConfigCenterInstanceId")
+    @Expose
+    private String ConfigCenterInstanceId;
 
     /**
      * Get 类型：Interface、Service、Group、Instance、SQL、NoSQL 
@@ -193,16 +200,16 @@ public class DescribeStatisticsRequest extends AbstractModel {
     }
 
     /**
-     * Get 命名空间Id 
-     * @return NamespaceId 命名空间Id
+     * Get 命名空间Id,此字段，和 NamespaceIdList 或者 MetricDimensionValues 字段包含 namespaceId 维度信息。三者选其一。 
+     * @return NamespaceId 命名空间Id,此字段，和 NamespaceIdList 或者 MetricDimensionValues 字段包含 namespaceId 维度信息。三者选其一。
      */
     public String getNamespaceId() {
         return this.NamespaceId;
     }
 
     /**
-     * Set 命名空间Id
-     * @param NamespaceId 命名空间Id
+     * Set 命名空间Id,此字段，和 NamespaceIdList 或者 MetricDimensionValues 字段包含 namespaceId 维度信息。三者选其一。
+     * @param NamespaceId 命名空间Id,此字段，和 NamespaceIdList 或者 MetricDimensionValues 字段包含 namespaceId 维度信息。三者选其一。
      */
     public void setNamespaceId(String NamespaceId) {
         this.NamespaceId = NamespaceId;
@@ -241,32 +248,32 @@ public class DescribeStatisticsRequest extends AbstractModel {
     }
 
     /**
-     * Get 开始时间：年月日 时分秒2020-05-12 14:43:12 
-     * @return EndTime 开始时间：年月日 时分秒2020-05-12 14:43:12
+     * Get 开始时间：年月日 时分秒2020-05-12 14:43:12， 不能为空 
+     * @return EndTime 开始时间：年月日 时分秒2020-05-12 14:43:12， 不能为空
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 开始时间：年月日 时分秒2020-05-12 14:43:12
-     * @param EndTime 开始时间：年月日 时分秒2020-05-12 14:43:12
+     * Set 开始时间：年月日 时分秒2020-05-12 14:43:12， 不能为空
+     * @param EndTime 开始时间：年月日 时分秒2020-05-12 14:43:12， 不能为空
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 开始时间：年月日 时分秒2020-05-12 14:43:12 
-     * @return StartTime 开始时间：年月日 时分秒2020-05-12 14:43:12
+     * Get 开始时间：年月日 时分秒2020-05-12 14:43:12， 不能为空 
+     * @return StartTime 开始时间：年月日 时分秒2020-05-12 14:43:12， 不能为空
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 开始时间：年月日 时分秒2020-05-12 14:43:12
-     * @param StartTime 开始时间：年月日 时分秒2020-05-12 14:43:12
+     * Set 开始时间：年月日 时分秒2020-05-12 14:43:12， 不能为空
+     * @param StartTime 开始时间：年月日 时分秒2020-05-12 14:43:12， 不能为空
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
@@ -368,6 +375,22 @@ public class DescribeStatisticsRequest extends AbstractModel {
         this.NamespaceIdList = NamespaceIdList;
     }
 
+    /**
+     * Get 独占配置中心的ID 
+     * @return ConfigCenterInstanceId 独占配置中心的ID
+     */
+    public String getConfigCenterInstanceId() {
+        return this.ConfigCenterInstanceId;
+    }
+
+    /**
+     * Set 独占配置中心的ID
+     * @param ConfigCenterInstanceId 独占配置中心的ID
+     */
+    public void setConfigCenterInstanceId(String ConfigCenterInstanceId) {
+        this.ConfigCenterInstanceId = ConfigCenterInstanceId;
+    }
+
     public DescribeStatisticsRequest() {
     }
 
@@ -427,6 +450,9 @@ public class DescribeStatisticsRequest extends AbstractModel {
                 this.NamespaceIdList[i] = new String(source.NamespaceIdList[i]);
             }
         }
+        if (source.ConfigCenterInstanceId != null) {
+            this.ConfigCenterInstanceId = new String(source.ConfigCenterInstanceId);
+        }
     }
 
 
@@ -449,6 +475,7 @@ public class DescribeStatisticsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "BucketKey", this.BucketKey);
         this.setParamSimple(map, prefix + "DbName", this.DbName);
         this.setParamArraySimple(map, prefix + "NamespaceIdList.", this.NamespaceIdList);
+        this.setParamSimple(map, prefix + "ConfigCenterInstanceId", this.ConfigCenterInstanceId);
 
     }
 }

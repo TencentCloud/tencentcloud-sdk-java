@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class CreateDiskBackupRequest extends AbstractModel {
 
     /**
-    * 云硬盘 ID。当前只支持数据盘创建备份点。
+    * 云硬盘ID，可通过 [DescribeDisks](https://cloud.tencent.com/document/api/1207/66093) 接口返回值中的 DiskId 获取。 
     */
     @SerializedName("DiskId")
     @Expose
     private String DiskId;
 
     /**
-    * 云硬盘备份点名称，最大长度90。
+    * 云硬盘备份点名称，最大长度为 90 。
     */
     @SerializedName("DiskBackupName")
     @Expose
     private String DiskBackupName;
 
     /**
-     * Get 云硬盘 ID。当前只支持数据盘创建备份点。 
-     * @return DiskId 云硬盘 ID。当前只支持数据盘创建备份点。
+     * Get 云硬盘ID，可通过 [DescribeDisks](https://cloud.tencent.com/document/api/1207/66093) 接口返回值中的 DiskId 获取。  
+     * @return DiskId 云硬盘ID，可通过 [DescribeDisks](https://cloud.tencent.com/document/api/1207/66093) 接口返回值中的 DiskId 获取。 
      */
     public String getDiskId() {
         return this.DiskId;
     }
 
     /**
-     * Set 云硬盘 ID。当前只支持数据盘创建备份点。
-     * @param DiskId 云硬盘 ID。当前只支持数据盘创建备份点。
+     * Set 云硬盘ID，可通过 [DescribeDisks](https://cloud.tencent.com/document/api/1207/66093) 接口返回值中的 DiskId 获取。 
+     * @param DiskId 云硬盘ID，可通过 [DescribeDisks](https://cloud.tencent.com/document/api/1207/66093) 接口返回值中的 DiskId 获取。 
      */
     public void setDiskId(String DiskId) {
         this.DiskId = DiskId;
     }
 
     /**
-     * Get 云硬盘备份点名称，最大长度90。 
-     * @return DiskBackupName 云硬盘备份点名称，最大长度90。
+     * Get 云硬盘备份点名称，最大长度为 90 。 
+     * @return DiskBackupName 云硬盘备份点名称，最大长度为 90 。
      */
     public String getDiskBackupName() {
         return this.DiskBackupName;
     }
 
     /**
-     * Set 云硬盘备份点名称，最大长度90。
-     * @param DiskBackupName 云硬盘备份点名称，最大长度90。
+     * Set 云硬盘备份点名称，最大长度为 90 。
+     * @param DiskBackupName 云硬盘备份点名称，最大长度为 90 。
      */
     public void setDiskBackupName(String DiskBackupName) {
         this.DiskBackupName = DiskBackupName;

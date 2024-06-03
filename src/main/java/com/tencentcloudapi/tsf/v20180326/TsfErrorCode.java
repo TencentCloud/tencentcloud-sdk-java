@@ -9,6 +9,9 @@ public enum TsfErrorCode {
     // 应用查询失败。
      FAILEDOPERATION_APPLICATIONQUERYFAILED("FailedOperation.ApplicationQueryFailed"),
      
+    // TSF应用性能管理调用tsf-dcfg模块失败
+     FAILEDOPERATION_CALLTSFDCFGFAILED("FailedOperation.CallTsfDcfgFailed"),
+     
     // TSF云API请求调用失败。
      FAILEDOPERATION_CLOUDAPIPROXYERROR("FailedOperation.CloudApiProxyError"),
      
@@ -78,6 +81,9 @@ public enum TsfErrorCode {
     // TSF暂时不能响应请求。
      FAILEDOPERATION_DISPATCHCOMMONERROR("FailedOperation.DispatchCommonError"),
      
+    // 寻找独占配置中心相关指标异常
+     FAILEDOPERATION_FINDMETRICSEXCLUSIVEERROR("FailedOperation.FindMetricsExclusiveError"),
+     
     // 远端访问错误: %s。
      FAILEDOPERATION_GATEWAYREMOTECALLERROR("FailedOperation.GatewayRemoteCallError"),
      
@@ -86,6 +92,12 @@ public enum TsfErrorCode {
      
     // 部署组查询失败。
      FAILEDOPERATION_GROUPQUERYFAILD("FailedOperation.GroupQueryFaild"),
+     
+    // 镜像仓库已关联至部署组，请移除后重试
+     FAILEDOPERATION_IMAGEVALIDATEISUSED("FailedOperation.ImageValidateIsUsed"),
+     
+    // 禁止直接删除应用镜像仓库, 需要先删除下面的镜像tag
+     FAILEDOPERATION_IMAGEREPOREJECTDELERROR("FailedOperation.ImagerepoRejectDelError"),
      
     // tcr仓库绑定失败。
      FAILEDOPERATION_IMAGEREPOTCRBINDERROR("FailedOperation.ImagerepoTcrBindError"),

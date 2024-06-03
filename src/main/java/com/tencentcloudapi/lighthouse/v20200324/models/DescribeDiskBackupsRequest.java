@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeDiskBackupsRequest extends AbstractModel {
 
     /**
-    * 要查询云硬盘备份点的ID列表。参数不支持同时指定 DiskBackupIds 和 Filters。
+    * 查询的云硬盘备份点ID列表。最大支持 100 个。参数不支持同时指定 DiskBackupIds 和 Filters。
     */
     @SerializedName("DiskBackupIds")
     @Expose
@@ -41,7 +41,8 @@ public class DescribeDiskBackupsRequest extends AbstractModel {
 <li>disk-backup-state</li>按照【云硬盘备份点状态】进行过滤。
 类型：String
 必选：否
-取值：参考数据结构[DiskBackup](https://cloud.tencent.com/document/product/1207/47576#DiskBackup)下的DiskBackupState取值。
+取值：参考数据结构 
+<a href="https://cloud.tencent.com/document/product/1207/47576#DiskBackup">DescribeSnapshots</a> 下的DiskBackupState取值。
 <li>disk-usage</li>按照【云硬盘类型】进行过滤。
 类型：String
 必选：否
@@ -53,30 +54,30 @@ public class DescribeDiskBackupsRequest extends AbstractModel {
     private Filter [] Filters;
 
     /**
-    * 偏移量，默认为 0。
+    * 偏移量，默认为 0。关于`Offset`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/product/1207/47578)中的相关小节。
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 返回数量，默认为 20，最大值为 100。
+    * 返回数量，默认为 20，最大值为 100。关于`Limit`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/product/1207/47578)中的相关小节。
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get 要查询云硬盘备份点的ID列表。参数不支持同时指定 DiskBackupIds 和 Filters。 
-     * @return DiskBackupIds 要查询云硬盘备份点的ID列表。参数不支持同时指定 DiskBackupIds 和 Filters。
+     * Get 查询的云硬盘备份点ID列表。最大支持 100 个。参数不支持同时指定 DiskBackupIds 和 Filters。 
+     * @return DiskBackupIds 查询的云硬盘备份点ID列表。最大支持 100 个。参数不支持同时指定 DiskBackupIds 和 Filters。
      */
     public String [] getDiskBackupIds() {
         return this.DiskBackupIds;
     }
 
     /**
-     * Set 要查询云硬盘备份点的ID列表。参数不支持同时指定 DiskBackupIds 和 Filters。
-     * @param DiskBackupIds 要查询云硬盘备份点的ID列表。参数不支持同时指定 DiskBackupIds 和 Filters。
+     * Set 查询的云硬盘备份点ID列表。最大支持 100 个。参数不支持同时指定 DiskBackupIds 和 Filters。
+     * @param DiskBackupIds 查询的云硬盘备份点ID列表。最大支持 100 个。参数不支持同时指定 DiskBackupIds 和 Filters。
      */
     public void setDiskBackupIds(String [] DiskBackupIds) {
         this.DiskBackupIds = DiskBackupIds;
@@ -93,7 +94,8 @@ public class DescribeDiskBackupsRequest extends AbstractModel {
 <li>disk-backup-state</li>按照【云硬盘备份点状态】进行过滤。
 类型：String
 必选：否
-取值：参考数据结构[DiskBackup](https://cloud.tencent.com/document/product/1207/47576#DiskBackup)下的DiskBackupState取值。
+取值：参考数据结构 
+<a href="https://cloud.tencent.com/document/product/1207/47576#DiskBackup">DescribeSnapshots</a> 下的DiskBackupState取值。
 <li>disk-usage</li>按照【云硬盘类型】进行过滤。
 类型：String
 必选：否
@@ -109,7 +111,8 @@ public class DescribeDiskBackupsRequest extends AbstractModel {
 <li>disk-backup-state</li>按照【云硬盘备份点状态】进行过滤。
 类型：String
 必选：否
-取值：参考数据结构[DiskBackup](https://cloud.tencent.com/document/product/1207/47576#DiskBackup)下的DiskBackupState取值。
+取值：参考数据结构 
+<a href="https://cloud.tencent.com/document/product/1207/47576#DiskBackup">DescribeSnapshots</a> 下的DiskBackupState取值。
 <li>disk-usage</li>按照【云硬盘类型】进行过滤。
 类型：String
 必选：否
@@ -131,7 +134,8 @@ public class DescribeDiskBackupsRequest extends AbstractModel {
 <li>disk-backup-state</li>按照【云硬盘备份点状态】进行过滤。
 类型：String
 必选：否
-取值：参考数据结构[DiskBackup](https://cloud.tencent.com/document/product/1207/47576#DiskBackup)下的DiskBackupState取值。
+取值：参考数据结构 
+<a href="https://cloud.tencent.com/document/product/1207/47576#DiskBackup">DescribeSnapshots</a> 下的DiskBackupState取值。
 <li>disk-usage</li>按照【云硬盘类型】进行过滤。
 类型：String
 必选：否
@@ -147,7 +151,8 @@ public class DescribeDiskBackupsRequest extends AbstractModel {
 <li>disk-backup-state</li>按照【云硬盘备份点状态】进行过滤。
 类型：String
 必选：否
-取值：参考数据结构[DiskBackup](https://cloud.tencent.com/document/product/1207/47576#DiskBackup)下的DiskBackupState取值。
+取值：参考数据结构 
+<a href="https://cloud.tencent.com/document/product/1207/47576#DiskBackup">DescribeSnapshots</a> 下的DiskBackupState取值。
 <li>disk-usage</li>按照【云硬盘类型】进行过滤。
 类型：String
 必选：否
@@ -159,32 +164,32 @@ public class DescribeDiskBackupsRequest extends AbstractModel {
     }
 
     /**
-     * Get 偏移量，默认为 0。 
-     * @return Offset 偏移量，默认为 0。
+     * Get 偏移量，默认为 0。关于`Offset`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/product/1207/47578)中的相关小节。 
+     * @return Offset 偏移量，默认为 0。关于`Offset`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/product/1207/47578)中的相关小节。
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量，默认为 0。
-     * @param Offset 偏移量，默认为 0。
+     * Set 偏移量，默认为 0。关于`Offset`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/product/1207/47578)中的相关小节。
+     * @param Offset 偏移量，默认为 0。关于`Offset`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/product/1207/47578)中的相关小节。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 返回数量，默认为 20，最大值为 100。 
-     * @return Limit 返回数量，默认为 20，最大值为 100。
+     * Get 返回数量，默认为 20，最大值为 100。关于`Limit`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/product/1207/47578)中的相关小节。 
+     * @return Limit 返回数量，默认为 20，最大值为 100。关于`Limit`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/product/1207/47578)中的相关小节。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回数量，默认为 20，最大值为 100。
-     * @param Limit 返回数量，默认为 20，最大值为 100。
+     * Set 返回数量，默认为 20，最大值为 100。关于`Limit`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/product/1207/47578)中的相关小节。
+     * @param Limit 返回数量，默认为 20，最大值为 100。关于`Limit`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/product/1207/47578)中的相关小节。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

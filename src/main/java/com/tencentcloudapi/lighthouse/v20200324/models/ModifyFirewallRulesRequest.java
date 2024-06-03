@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ModifyFirewallRulesRequest extends AbstractModel {
 
     /**
-    * 实例 ID。
+    * 实例 ID。实例的ID可通过[DescribeInstances](https://cloud.tencent.com/document/product/1207/47573)接口返回值中的InstanceId获取。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 防火墙规则列表。
+    * 防火墙规则列表。列表长度最大值是100。
     */
     @SerializedName("FirewallRules")
     @Expose
@@ -45,32 +45,32 @@ public class ModifyFirewallRulesRequest extends AbstractModel {
     private Long FirewallVersion;
 
     /**
-     * Get 实例 ID。 
-     * @return InstanceId 实例 ID。
+     * Get 实例 ID。实例的ID可通过[DescribeInstances](https://cloud.tencent.com/document/product/1207/47573)接口返回值中的InstanceId获取。 
+     * @return InstanceId 实例 ID。实例的ID可通过[DescribeInstances](https://cloud.tencent.com/document/product/1207/47573)接口返回值中的InstanceId获取。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例 ID。
-     * @param InstanceId 实例 ID。
+     * Set 实例 ID。实例的ID可通过[DescribeInstances](https://cloud.tencent.com/document/product/1207/47573)接口返回值中的InstanceId获取。
+     * @param InstanceId 实例 ID。实例的ID可通过[DescribeInstances](https://cloud.tencent.com/document/product/1207/47573)接口返回值中的InstanceId获取。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 防火墙规则列表。 
-     * @return FirewallRules 防火墙规则列表。
+     * Get 防火墙规则列表。列表长度最大值是100。 
+     * @return FirewallRules 防火墙规则列表。列表长度最大值是100。
      */
     public FirewallRule [] getFirewallRules() {
         return this.FirewallRules;
     }
 
     /**
-     * Set 防火墙规则列表。
-     * @param FirewallRules 防火墙规则列表。
+     * Set 防火墙规则列表。列表长度最大值是100。
+     * @param FirewallRules 防火墙规则列表。列表长度最大值是100。
      */
     public void setFirewallRules(FirewallRule [] FirewallRules) {
         this.FirewallRules = FirewallRules;

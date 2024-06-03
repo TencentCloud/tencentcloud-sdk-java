@@ -24,46 +24,51 @@ import java.util.HashMap;
 public class DeleteFirewallTemplateRulesRequest extends AbstractModel {
 
     /**
-    * 防火墙模板ID。
+    * 防火墙模板ID。可通过[DescribeFirewallTemplates](https://cloud.tencent.com/document/product/1207/96874)接口返回值字段TemplateSet获取。
     */
     @SerializedName("TemplateId")
     @Expose
     private String TemplateId;
 
     /**
-    * 防火墙模板规则ID列表。
+    * 防火墙模板规则ID列表。可通过[DescribeFirewallTemplateRules](https://cloud.tencent.com/document/product/1207/96875)接口返回值字段TemplateRuleSet获取。
+
     */
     @SerializedName("TemplateRuleIds")
     @Expose
     private String [] TemplateRuleIds;
 
     /**
-     * Get 防火墙模板ID。 
-     * @return TemplateId 防火墙模板ID。
+     * Get 防火墙模板ID。可通过[DescribeFirewallTemplates](https://cloud.tencent.com/document/product/1207/96874)接口返回值字段TemplateSet获取。 
+     * @return TemplateId 防火墙模板ID。可通过[DescribeFirewallTemplates](https://cloud.tencent.com/document/product/1207/96874)接口返回值字段TemplateSet获取。
      */
     public String getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set 防火墙模板ID。
-     * @param TemplateId 防火墙模板ID。
+     * Set 防火墙模板ID。可通过[DescribeFirewallTemplates](https://cloud.tencent.com/document/product/1207/96874)接口返回值字段TemplateSet获取。
+     * @param TemplateId 防火墙模板ID。可通过[DescribeFirewallTemplates](https://cloud.tencent.com/document/product/1207/96874)接口返回值字段TemplateSet获取。
      */
     public void setTemplateId(String TemplateId) {
         this.TemplateId = TemplateId;
     }
 
     /**
-     * Get 防火墙模板规则ID列表。 
-     * @return TemplateRuleIds 防火墙模板规则ID列表。
+     * Get 防火墙模板规则ID列表。可通过[DescribeFirewallTemplateRules](https://cloud.tencent.com/document/product/1207/96875)接口返回值字段TemplateRuleSet获取。
+ 
+     * @return TemplateRuleIds 防火墙模板规则ID列表。可通过[DescribeFirewallTemplateRules](https://cloud.tencent.com/document/product/1207/96875)接口返回值字段TemplateRuleSet获取。
+
      */
     public String [] getTemplateRuleIds() {
         return this.TemplateRuleIds;
     }
 
     /**
-     * Set 防火墙模板规则ID列表。
-     * @param TemplateRuleIds 防火墙模板规则ID列表。
+     * Set 防火墙模板规则ID列表。可通过[DescribeFirewallTemplateRules](https://cloud.tencent.com/document/product/1207/96875)接口返回值字段TemplateRuleSet获取。
+
+     * @param TemplateRuleIds 防火墙模板规则ID列表。可通过[DescribeFirewallTemplateRules](https://cloud.tencent.com/document/product/1207/96875)接口返回值字段TemplateRuleSet获取。
+
      */
     public void setTemplateRuleIds(String [] TemplateRuleIds) {
         this.TemplateRuleIds = TemplateRuleIds;
