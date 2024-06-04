@@ -27,6 +27,7 @@ public class SetAudioParamCommandInput extends AbstractModel {
     * 音频类型，取值有：
 <li>Original：原唱</li>
 <li>Accompaniment：伴奏</li>
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -35,10 +36,12 @@ public class SetAudioParamCommandInput extends AbstractModel {
     /**
      * Get 音频类型，取值有：
 <li>Original：原唱</li>
-<li>Accompaniment：伴奏</li> 
+<li>Accompaniment：伴奏</li>
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Type 音频类型，取值有：
 <li>Original：原唱</li>
 <li>Accompaniment：伴奏</li>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
         return this.Type;
@@ -48,9 +51,11 @@ public class SetAudioParamCommandInput extends AbstractModel {
      * Set 音频类型，取值有：
 <li>Original：原唱</li>
 <li>Accompaniment：伴奏</li>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 音频类型，取值有：
 <li>Original：原唱</li>
 <li>Accompaniment：伴奏</li>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
         this.Type = Type;

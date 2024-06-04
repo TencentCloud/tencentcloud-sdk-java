@@ -29,6 +29,7 @@ public class SetPlayModeCommandInput extends AbstractModel {
 <li>Order：顺序播放</li>
 <li>RepeatSingle：单曲循环</li>
 <li>Shuffle：随机播放</li>
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PlayMode")
     @Expose
@@ -39,12 +40,14 @@ public class SetPlayModeCommandInput extends AbstractModel {
 <li>RepeatPlaylist：列表循环</li>
 <li>Order：顺序播放</li>
 <li>RepeatSingle：单曲循环</li>
-<li>Shuffle：随机播放</li> 
+<li>Shuffle：随机播放</li>
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return PlayMode 播放模式，取值有：
 <li>RepeatPlaylist：列表循环</li>
 <li>Order：顺序播放</li>
 <li>RepeatSingle：单曲循环</li>
 <li>Shuffle：随机播放</li>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPlayMode() {
         return this.PlayMode;
@@ -56,11 +59,13 @@ public class SetPlayModeCommandInput extends AbstractModel {
 <li>Order：顺序播放</li>
 <li>RepeatSingle：单曲循环</li>
 <li>Shuffle：随机播放</li>
+注意：此字段可能返回 null，表示取不到有效值。
      * @param PlayMode 播放模式，取值有：
 <li>RepeatPlaylist：列表循环</li>
 <li>Order：顺序播放</li>
 <li>RepeatSingle：单曲循环</li>
 <li>Shuffle：随机播放</li>
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPlayMode(String PlayMode) {
         this.PlayMode = PlayMode;

@@ -101,6 +101,14 @@ public class FirmwareInfo extends AbstractModel {
     private String CreatorNickName;
 
     /**
+    * 固件用户自定义配置信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UserDefined")
+    @Expose
+    private String UserDefined;
+
+    /**
      * Get 固件版本 
      * @return Version 固件版本
      */
@@ -288,6 +296,26 @@ public class FirmwareInfo extends AbstractModel {
         this.CreatorNickName = CreatorNickName;
     }
 
+    /**
+     * Get 固件用户自定义配置信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UserDefined 固件用户自定义配置信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getUserDefined() {
+        return this.UserDefined;
+    }
+
+    /**
+     * Set 固件用户自定义配置信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UserDefined 固件用户自定义配置信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUserDefined(String UserDefined) {
+        this.UserDefined = UserDefined;
+    }
+
     public FirmwareInfo() {
     }
 
@@ -326,6 +354,9 @@ public class FirmwareInfo extends AbstractModel {
         if (source.CreatorNickName != null) {
             this.CreatorNickName = new String(source.CreatorNickName);
         }
+        if (source.UserDefined != null) {
+            this.UserDefined = new String(source.UserDefined);
+        }
     }
 
 
@@ -343,6 +374,7 @@ public class FirmwareInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "FwType", this.FwType);
         this.setParamSimple(map, prefix + "CreateUserId", this.CreateUserId);
         this.setParamSimple(map, prefix + "CreatorNickName", this.CreatorNickName);
+        this.setParamSimple(map, prefix + "UserDefined", this.UserDefined);
 
     }
 }

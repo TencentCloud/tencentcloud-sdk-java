@@ -45,6 +45,13 @@ public class DescribeKTVMusicAccompanySegmentUrlVipRequest extends AbstractModel
     private String MusicId;
 
     /**
+    * 房间Id
+    */
+    @SerializedName("RoomId")
+    @Expose
+    private String RoomId;
+
+    /**
      * Get 应用名称 
      * @return AppName 应用名称
      */
@@ -92,6 +99,22 @@ public class DescribeKTVMusicAccompanySegmentUrlVipRequest extends AbstractModel
         this.MusicId = MusicId;
     }
 
+    /**
+     * Get 房间Id 
+     * @return RoomId 房间Id
+     */
+    public String getRoomId() {
+        return this.RoomId;
+    }
+
+    /**
+     * Set 房间Id
+     * @param RoomId 房间Id
+     */
+    public void setRoomId(String RoomId) {
+        this.RoomId = RoomId;
+    }
+
     public DescribeKTVMusicAccompanySegmentUrlVipRequest() {
     }
 
@@ -109,6 +132,9 @@ public class DescribeKTVMusicAccompanySegmentUrlVipRequest extends AbstractModel
         if (source.MusicId != null) {
             this.MusicId = new String(source.MusicId);
         }
+        if (source.RoomId != null) {
+            this.RoomId = new String(source.RoomId);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class DescribeKTVMusicAccompanySegmentUrlVipRequest extends AbstractModel
         this.setParamSimple(map, prefix + "AppName", this.AppName);
         this.setParamSimple(map, prefix + "UserId", this.UserId);
         this.setParamSimple(map, prefix + "MusicId", this.MusicId);
+        this.setParamSimple(map, prefix + "RoomId", this.RoomId);
 
     }
 }

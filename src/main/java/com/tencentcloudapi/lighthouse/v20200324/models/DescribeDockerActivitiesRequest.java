@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeDockerActivitiesRequest extends AbstractModel {
 
     /**
-    * 实例ID。
+    * 实例ID。可通过[DescribeInstances](https://cloud.tencent.com/document/product/1207/47573)接口返回值中的InstanceId获取。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Docker活动ID列表。
+    * Docker活动ID列表。可通过[DescribeDockerActivities](https://cloud.tencent.com/document/product/1207/95476)接口返回值中的ActivityId获取。
     */
     @SerializedName("ActivityIds")
     @Expose
@@ -66,32 +66,32 @@ public class DescribeDockerActivitiesRequest extends AbstractModel {
     private Long CreatedTimeEnd;
 
     /**
-     * Get 实例ID。 
-     * @return InstanceId 实例ID。
+     * Get 实例ID。可通过[DescribeInstances](https://cloud.tencent.com/document/product/1207/47573)接口返回值中的InstanceId获取。 
+     * @return InstanceId 实例ID。可通过[DescribeInstances](https://cloud.tencent.com/document/product/1207/47573)接口返回值中的InstanceId获取。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID。
-     * @param InstanceId 实例ID。
+     * Set 实例ID。可通过[DescribeInstances](https://cloud.tencent.com/document/product/1207/47573)接口返回值中的InstanceId获取。
+     * @param InstanceId 实例ID。可通过[DescribeInstances](https://cloud.tencent.com/document/product/1207/47573)接口返回值中的InstanceId获取。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Docker活动ID列表。 
-     * @return ActivityIds Docker活动ID列表。
+     * Get Docker活动ID列表。可通过[DescribeDockerActivities](https://cloud.tencent.com/document/product/1207/95476)接口返回值中的ActivityId获取。 
+     * @return ActivityIds Docker活动ID列表。可通过[DescribeDockerActivities](https://cloud.tencent.com/document/product/1207/95476)接口返回值中的ActivityId获取。
      */
     public String [] getActivityIds() {
         return this.ActivityIds;
     }
 
     /**
-     * Set Docker活动ID列表。
-     * @param ActivityIds Docker活动ID列表。
+     * Set Docker活动ID列表。可通过[DescribeDockerActivities](https://cloud.tencent.com/document/product/1207/95476)接口返回值中的ActivityId获取。
+     * @param ActivityIds Docker活动ID列表。可通过[DescribeDockerActivities](https://cloud.tencent.com/document/product/1207/95476)接口返回值中的ActivityId获取。
      */
     public void setActivityIds(String [] ActivityIds) {
         this.ActivityIds = ActivityIds;

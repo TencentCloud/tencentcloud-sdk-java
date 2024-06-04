@@ -359,6 +359,14 @@ public class Cluster extends AbstractModel {
     private String AgentSerialId;
 
     /**
+    * 资源类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ResourceType")
+    @Expose
+    private Long ResourceType;
+
+    /**
      * Get 集群 ID 
      * @return ClusterId 集群 ID
      */
@@ -1170,6 +1178,26 @@ public class Cluster extends AbstractModel {
         this.AgentSerialId = AgentSerialId;
     }
 
+    /**
+     * Get 资源类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ResourceType 资源类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getResourceType() {
+        return this.ResourceType;
+    }
+
+    /**
+     * Set 资源类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ResourceType 资源类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setResourceType(Long ResourceType) {
+        this.ResourceType = ResourceType;
+    }
+
     public Cluster() {
     }
 
@@ -1328,6 +1356,9 @@ public class Cluster extends AbstractModel {
         if (source.AgentSerialId != null) {
             this.AgentSerialId = new String(source.AgentSerialId);
         }
+        if (source.ResourceType != null) {
+            this.ResourceType = new Long(source.ResourceType);
+        }
     }
 
 
@@ -1379,6 +1410,7 @@ public class Cluster extends AbstractModel {
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamObj(map, prefix + "SubEks.", this.SubEks);
         this.setParamSimple(map, prefix + "AgentSerialId", this.AgentSerialId);
+        this.setParamSimple(map, prefix + "ResourceType", this.ResourceType);
 
     }
 }

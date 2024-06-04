@@ -87,7 +87,7 @@ public class DescribePreReleaseListRequest extends AbstractModel {
     private Long PageNumber;
 
     /**
-    * 没页显示数
+    * 每页显示数
     */
     @SerializedName("PageSize")
     @Expose
@@ -322,16 +322,16 @@ public class DescribePreReleaseListRequest extends AbstractModel {
     }
 
     /**
-     * Get 没页显示数 
-     * @return PageSize 没页显示数
+     * Get 每页显示数 
+     * @return PageSize 每页显示数
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set 没页显示数
-     * @param PageSize 没页显示数
+     * Set 每页显示数
+     * @param PageSize 每页显示数
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
