@@ -24,11 +24,7 @@ import java.util.HashMap;
 public class DescribeTaskDetailResponse extends AbstractModel {
 
     /**
-    * 任务类型，目前取值有：
-<li>WorkflowTask：视频工作流处理任务。</li>
-<li>EditMediaTask：视频编辑任务。</li>
-<li>LiveStreamProcessTask：直播流处理任务。</li>
-<li>ScheduleTask：编排处理任务。</li>
+    * 任务类型，目前取值有：<li>WorkflowTask：视频工作流处理任务。</li><li>EditMediaTask：视频编辑任务。</li><li>LiveStreamProcessTask：直播流处理任务。</li><li>ScheduleTask：编排处理任务。</li><li>EvaluationTask：评测任务。</li>
     */
     @SerializedName("TaskType")
     @Expose
@@ -149,32 +145,16 @@ public class DescribeTaskDetailResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 任务类型，目前取值有：
-<li>WorkflowTask：视频工作流处理任务。</li>
-<li>EditMediaTask：视频编辑任务。</li>
-<li>LiveStreamProcessTask：直播流处理任务。</li>
-<li>ScheduleTask：编排处理任务。</li> 
-     * @return TaskType 任务类型，目前取值有：
-<li>WorkflowTask：视频工作流处理任务。</li>
-<li>EditMediaTask：视频编辑任务。</li>
-<li>LiveStreamProcessTask：直播流处理任务。</li>
-<li>ScheduleTask：编排处理任务。</li>
+     * Get 任务类型，目前取值有：<li>WorkflowTask：视频工作流处理任务。</li><li>EditMediaTask：视频编辑任务。</li><li>LiveStreamProcessTask：直播流处理任务。</li><li>ScheduleTask：编排处理任务。</li><li>EvaluationTask：评测任务。</li> 
+     * @return TaskType 任务类型，目前取值有：<li>WorkflowTask：视频工作流处理任务。</li><li>EditMediaTask：视频编辑任务。</li><li>LiveStreamProcessTask：直播流处理任务。</li><li>ScheduleTask：编排处理任务。</li><li>EvaluationTask：评测任务。</li>
      */
     public String getTaskType() {
         return this.TaskType;
     }
 
     /**
-     * Set 任务类型，目前取值有：
-<li>WorkflowTask：视频工作流处理任务。</li>
-<li>EditMediaTask：视频编辑任务。</li>
-<li>LiveStreamProcessTask：直播流处理任务。</li>
-<li>ScheduleTask：编排处理任务。</li>
-     * @param TaskType 任务类型，目前取值有：
-<li>WorkflowTask：视频工作流处理任务。</li>
-<li>EditMediaTask：视频编辑任务。</li>
-<li>LiveStreamProcessTask：直播流处理任务。</li>
-<li>ScheduleTask：编排处理任务。</li>
+     * Set 任务类型，目前取值有：<li>WorkflowTask：视频工作流处理任务。</li><li>EditMediaTask：视频编辑任务。</li><li>LiveStreamProcessTask：直播流处理任务。</li><li>ScheduleTask：编排处理任务。</li><li>EvaluationTask：评测任务。</li>
+     * @param TaskType 任务类型，目前取值有：<li>WorkflowTask：视频工作流处理任务。</li><li>EditMediaTask：视频编辑任务。</li><li>LiveStreamProcessTask：直播流处理任务。</li><li>ScheduleTask：编排处理任务。</li><li>EvaluationTask：评测任务。</li>
      */
     public void setTaskType(String TaskType) {
         this.TaskType = TaskType;

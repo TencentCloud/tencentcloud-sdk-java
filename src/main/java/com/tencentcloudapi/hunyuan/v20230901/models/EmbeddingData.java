@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class EmbeddingData extends AbstractModel {
 
     /**
-    * embedding 信息。
+    * Embedding 信息，目前为 1024 维浮点数。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Embedding")
@@ -32,7 +32,7 @@ public class EmbeddingData extends AbstractModel {
     private Float [] Embedding;
 
     /**
-    * 下标。
+    * 下标，目前不支持批量，因此固定为 0。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Index")
@@ -40,7 +40,7 @@ public class EmbeddingData extends AbstractModel {
     private Long Index;
 
     /**
-    * embedding
+    * 目前固定为 "embedding"。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Object")
@@ -48,9 +48,9 @@ public class EmbeddingData extends AbstractModel {
     private String Object;
 
     /**
-     * Get embedding 信息。
+     * Get Embedding 信息，目前为 1024 维浮点数。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Embedding embedding 信息。
+     * @return Embedding Embedding 信息，目前为 1024 维浮点数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float [] getEmbedding() {
@@ -58,9 +58,9 @@ public class EmbeddingData extends AbstractModel {
     }
 
     /**
-     * Set embedding 信息。
+     * Set Embedding 信息，目前为 1024 维浮点数。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Embedding embedding 信息。
+     * @param Embedding Embedding 信息，目前为 1024 维浮点数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEmbedding(Float [] Embedding) {
@@ -68,9 +68,9 @@ public class EmbeddingData extends AbstractModel {
     }
 
     /**
-     * Get 下标。
+     * Get 下标，目前不支持批量，因此固定为 0。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Index 下标。
+     * @return Index 下标，目前不支持批量，因此固定为 0。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIndex() {
@@ -78,9 +78,9 @@ public class EmbeddingData extends AbstractModel {
     }
 
     /**
-     * Set 下标。
+     * Set 下标，目前不支持批量，因此固定为 0。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Index 下标。
+     * @param Index 下标，目前不支持批量，因此固定为 0。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIndex(Long Index) {
@@ -88,9 +88,9 @@ public class EmbeddingData extends AbstractModel {
     }
 
     /**
-     * Get embedding
+     * Get 目前固定为 "embedding"。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Object embedding
+     * @return Object 目前固定为 "embedding"。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getObject() {
@@ -98,9 +98,9 @@ public class EmbeddingData extends AbstractModel {
     }
 
     /**
-     * Set embedding
+     * Set 目前固定为 "embedding"。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Object embedding
+     * @param Object 目前固定为 "embedding"。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setObject(String Object) {

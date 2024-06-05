@@ -140,6 +140,14 @@ public class ParamDetail extends AbstractModel {
     private ModifiableInfo ModifiableInfo;
 
     /**
+    * 支持公式的参数的默认公式样式
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FuncPattern")
+    @Expose
+    private String FuncPattern;
+
+    /**
      * Get 参数名称 
      * @return ParamName 参数名称
      */
@@ -411,6 +419,26 @@ public class ParamDetail extends AbstractModel {
         this.ModifiableInfo = ModifiableInfo;
     }
 
+    /**
+     * Get 支持公式的参数的默认公式样式
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FuncPattern 支持公式的参数的默认公式样式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getFuncPattern() {
+        return this.FuncPattern;
+    }
+
+    /**
+     * Set 支持公式的参数的默认公式样式
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FuncPattern 支持公式的参数的默认公式样式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFuncPattern(String FuncPattern) {
+        this.FuncPattern = FuncPattern;
+    }
+
     public ParamDetail() {
     }
 
@@ -470,6 +498,9 @@ public class ParamDetail extends AbstractModel {
         if (source.ModifiableInfo != null) {
             this.ModifiableInfo = new ModifiableInfo(source.ModifiableInfo);
         }
+        if (source.FuncPattern != null) {
+            this.FuncPattern = new String(source.FuncPattern);
+        }
     }
 
 
@@ -493,6 +524,7 @@ public class ParamDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "IsFunc", this.IsFunc);
         this.setParamSimple(map, prefix + "Func", this.Func);
         this.setParamObj(map, prefix + "ModifiableInfo.", this.ModifiableInfo);
+        this.setParamSimple(map, prefix + "FuncPattern", this.FuncPattern);
 
     }
 }

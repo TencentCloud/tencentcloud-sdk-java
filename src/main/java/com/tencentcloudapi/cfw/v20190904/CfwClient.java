@@ -358,7 +358,9 @@ public class CfwClient extends AbstractClient{
     }
 
     /**
-     *删除防火墙实例
+     *接口废弃
+
+删除防火墙实例
      * @param req DeleteVpcInstanceRequest
      * @return DeleteVpcInstanceResponse
      * @throws TencentCloudSDKException
@@ -701,7 +703,7 @@ public class CfwClient extends AbstractClient{
     }
 
     /**
-     *DescribeSourceAsset-查询资产组全部资产信息
+     *DescribeSourceAsset-查询全部资产信息
      * @param req DescribeSourceAssetRequest
      * @return DescribeSourceAssetResponse
      * @throws TencentCloudSDKException

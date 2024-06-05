@@ -178,6 +178,14 @@ public class RuleTemplate extends AbstractModel {
     private Long [] DatasourceTypes;
 
     /**
+    * 创建人IdStr
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UserIdStr")
+    @Expose
+    private String UserIdStr;
+
+    /**
      * Get 规则模版ID 
      * @return RuleTemplateId 规则模版ID
      */
@@ -553,6 +561,26 @@ public class RuleTemplate extends AbstractModel {
         this.DatasourceTypes = DatasourceTypes;
     }
 
+    /**
+     * Get 创建人IdStr
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UserIdStr 创建人IdStr
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getUserIdStr() {
+        return this.UserIdStr;
+    }
+
+    /**
+     * Set 创建人IdStr
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UserIdStr 创建人IdStr
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUserIdStr(String UserIdStr) {
+        this.UserIdStr = UserIdStr;
+    }
+
     public RuleTemplate() {
     }
 
@@ -627,6 +655,9 @@ public class RuleTemplate extends AbstractModel {
                 this.DatasourceTypes[i] = new Long(source.DatasourceTypes[i]);
             }
         }
+        if (source.UserIdStr != null) {
+            this.UserIdStr = new String(source.UserIdStr);
+        }
     }
 
 
@@ -654,6 +685,7 @@ public class RuleTemplate extends AbstractModel {
         this.setParamSimple(map, prefix + "SubQualityDim", this.SubQualityDim);
         this.setParamObj(map, prefix + "ResolvedSqlExpression.", this.ResolvedSqlExpression);
         this.setParamArraySimple(map, prefix + "DatasourceTypes.", this.DatasourceTypes);
+        this.setParamSimple(map, prefix + "UserIdStr", this.UserIdStr);
 
     }
 }

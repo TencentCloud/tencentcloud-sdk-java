@@ -1150,6 +1150,17 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
+     *查询微信设备授权票据
+     * @param req GetWechatDeviceTicketRequest
+     * @return GetWechatDeviceTicketResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetWechatDeviceTicketResponse GetWechatDeviceTicket(GetWechatDeviceTicketRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetWechatDeviceTicket", GetWechatDeviceTicketResponse.class);
+    }
+
+    /**
      *继承云存用户
      * @param req InheritCloudStorageUserRequest
      * @return InheritCloudStorageUserResponse

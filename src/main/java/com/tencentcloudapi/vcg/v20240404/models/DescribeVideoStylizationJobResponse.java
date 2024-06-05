@@ -35,8 +35,8 @@ public class DescribeVideoStylizationJobResponse extends AbstractModel {
 JobInit:  "初始化中"
 JobModerationFailed: "审核失败",
 JobRunning: "处理中",
-JobFailed: "处理完成",
-JobSuccess: "处理失败"。
+JobFailed: "处理失败",
+JobSuccess: "处理完成"。
     */
     @SerializedName("StatusCode")
     @Expose
@@ -84,14 +84,14 @@ JobSuccess: "处理失败"。
 JobInit:  "初始化中"
 JobModerationFailed: "审核失败",
 JobRunning: "处理中",
-JobFailed: "处理完成",
-JobSuccess: "处理失败"。 
+JobFailed: "处理失败",
+JobSuccess: "处理完成"。 
      * @return StatusCode 任务状态码：
 JobInit:  "初始化中"
 JobModerationFailed: "审核失败",
 JobRunning: "处理中",
-JobFailed: "处理完成",
-JobSuccess: "处理失败"。
+JobFailed: "处理失败",
+JobSuccess: "处理完成"。
      */
     public String getStatusCode() {
         return this.StatusCode;
@@ -102,14 +102,14 @@ JobSuccess: "处理失败"。
 JobInit:  "初始化中"
 JobModerationFailed: "审核失败",
 JobRunning: "处理中",
-JobFailed: "处理完成",
-JobSuccess: "处理失败"。
+JobFailed: "处理失败",
+JobSuccess: "处理完成"。
      * @param StatusCode 任务状态码：
 JobInit:  "初始化中"
 JobModerationFailed: "审核失败",
 JobRunning: "处理中",
-JobFailed: "处理完成",
-JobSuccess: "处理失败"。
+JobFailed: "处理失败",
+JobSuccess: "处理完成"。
      */
     public void setStatusCode(String StatusCode) {
         this.StatusCode = StatusCode;

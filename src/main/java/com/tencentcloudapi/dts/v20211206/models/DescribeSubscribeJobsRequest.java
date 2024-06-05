@@ -45,6 +45,13 @@ public class DescribeSubscribeJobsRequest extends AbstractModel {
     private String InstanceId;
 
     /**
+    * 订阅的topicName
+    */
+    @SerializedName("Topic")
+    @Expose
+    private String Topic;
+
+    /**
     * 计费模式筛选，可能的值：0-包年包月，1-按量计费
     */
     @SerializedName("PayType")
@@ -146,6 +153,22 @@ public class DescribeSubscribeJobsRequest extends AbstractModel {
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
+    }
+
+    /**
+     * Get 订阅的topicName 
+     * @return Topic 订阅的topicName
+     */
+    public String getTopic() {
+        return this.Topic;
+    }
+
+    /**
+     * Set 订阅的topicName
+     * @param Topic 订阅的topicName
+     */
+    public void setTopic(String Topic) {
+        this.Topic = Topic;
     }
 
     /**
@@ -293,6 +316,9 @@ public class DescribeSubscribeJobsRequest extends AbstractModel {
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }
+        if (source.Topic != null) {
+            this.Topic = new String(source.Topic);
+        }
         if (source.PayType != null) {
             this.PayType = new Long(source.PayType);
         }
@@ -336,6 +362,7 @@ public class DescribeSubscribeJobsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SubscribeId", this.SubscribeId);
         this.setParamSimple(map, prefix + "SubscribeName", this.SubscribeName);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "Topic", this.Topic);
         this.setParamSimple(map, prefix + "PayType", this.PayType);
         this.setParamSimple(map, prefix + "Product", this.Product);
         this.setParamArraySimple(map, prefix + "Status.", this.Status);

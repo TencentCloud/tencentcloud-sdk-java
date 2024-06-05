@@ -50,6 +50,17 @@ public class TrpClient extends AbstractClient{
     }
 
     /**
+     *批量上链接口
+     * @param req CreateChainBatchRequest
+     * @return CreateChainBatchResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateChainBatchResponse CreateChainBatch(CreateChainBatchRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateChainBatch", CreateChainBatchResponse.class);
+    }
+
+    /**
      *新增批次
      * @param req CreateCodeBatchRequest
      * @return CreateCodeBatchResponse

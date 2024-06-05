@@ -149,6 +149,17 @@ public class CccClient extends AbstractClient{
     }
 
     /**
+     *创建关联 IVR 的会话，仅高级版支持，目前支持呼入和自动外呼两种 IVR 类型。收到请求后 TCCC 会先尝试呼通被叫，然后进入 IVR 流程。
+     * @param req CreateIVRSessionRequest
+     * @return CreateIVRSessionResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateIVRSessionResponse CreateIVRSession(CreateIVRSessionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateIVRSession", CreateIVRSessionResponse.class);
+    }
+
+    /**
      *创建预测式外呼任务
      * @param req CreatePredictiveDialingCampaignRequest
      * @return CreatePredictiveDialingCampaignResponse

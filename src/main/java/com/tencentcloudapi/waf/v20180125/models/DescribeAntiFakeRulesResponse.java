@@ -24,6 +24,13 @@ import java.util.HashMap;
 public class DescribeAntiFakeRulesResponse extends AbstractModel {
 
     /**
+    * 总数
+    */
+    @SerializedName("Total")
+    @Expose
+    private Long Total;
+
+    /**
     * 返回值
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -37,6 +44,22 @@ public class DescribeAntiFakeRulesResponse extends AbstractModel {
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 总数 
+     * @return Total 总数
+     */
+    public Long getTotal() {
+        return this.Total;
+    }
+
+    /**
+     * Set 总数
+     * @param Total 总数
+     */
+    public void setTotal(Long Total) {
+        this.Total = Total;
+    }
 
     /**
      * Get 返回值
@@ -82,6 +105,9 @@ public class DescribeAntiFakeRulesResponse extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeAntiFakeRulesResponse(DescribeAntiFakeRulesResponse source) {
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
+        }
         if (source.Data != null) {
             this.Data = new CacheUrlItems[source.Data.length];
             for (int i = 0; i < source.Data.length; i++) {
@@ -98,6 +124,7 @@ public class DescribeAntiFakeRulesResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Total", this.Total);
         this.setParamArrayObj(map, prefix + "Data.", this.Data);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 

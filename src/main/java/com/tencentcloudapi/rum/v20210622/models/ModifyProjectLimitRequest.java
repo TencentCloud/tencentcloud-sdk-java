@@ -31,7 +31,7 @@ public class ModifyProjectLimitRequest extends AbstractModel {
     private Long ProjectID;
 
     /**
-    * 项目接口
+    * 取值为[log speed performance webvitals pv event custom miniProgramData]其中之一
     */
     @SerializedName("ProjectInterface")
     @Expose
@@ -75,16 +75,16 @@ public class ModifyProjectLimitRequest extends AbstractModel {
     }
 
     /**
-     * Get 项目接口 
-     * @return ProjectInterface 项目接口
+     * Get 取值为[log speed performance webvitals pv event custom miniProgramData]其中之一 
+     * @return ProjectInterface 取值为[log speed performance webvitals pv event custom miniProgramData]其中之一
      */
     public String getProjectInterface() {
         return this.ProjectInterface;
     }
 
     /**
-     * Set 项目接口
-     * @param ProjectInterface 项目接口
+     * Set 取值为[log speed performance webvitals pv event custom miniProgramData]其中之一
+     * @param ProjectInterface 取值为[log speed performance webvitals pv event custom miniProgramData]其中之一
      */
     public void setProjectInterface(String ProjectInterface) {
         this.ProjectInterface = ProjectInterface;
