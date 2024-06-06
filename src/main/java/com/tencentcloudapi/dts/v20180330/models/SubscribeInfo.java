@@ -115,6 +115,14 @@ public class SubscribeInfo extends AbstractModel {
     private String ConsumeStartTime;
 
     /**
+    * 自动续费标识。0-不自动续费，1-自动续费
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AutoRenewFlag")
+    @Expose
+    private Long AutoRenewFlag;
+
+    /**
     * 数据订阅实例所属地域
     */
     @SerializedName("Region")
@@ -177,14 +185,6 @@ public class SubscribeInfo extends AbstractModel {
     @SerializedName("Tags")
     @Expose
     private TagItem [] Tags;
-
-    /**
-    * 自动续费标识。0-不自动续费，1-自动续费
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("AutoRenewFlag")
-    @Expose
-    private Long AutoRenewFlag;
 
     /**
     * 订阅实例版本；txdts-旧版数据订阅,kafka-kafka版本数据订阅
@@ -403,6 +403,26 @@ public class SubscribeInfo extends AbstractModel {
     }
 
     /**
+     * Get 自动续费标识。0-不自动续费，1-自动续费
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AutoRenewFlag 自动续费标识。0-不自动续费，1-自动续费
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getAutoRenewFlag() {
+        return this.AutoRenewFlag;
+    }
+
+    /**
+     * Set 自动续费标识。0-不自动续费，1-自动续费
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AutoRenewFlag 自动续费标识。0-不自动续费，1-自动续费
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAutoRenewFlag(Long AutoRenewFlag) {
+        this.AutoRenewFlag = AutoRenewFlag;
+    }
+
+    /**
      * Get 数据订阅实例所属地域 
      * @return Region 数据订阅实例所属地域
      */
@@ -551,26 +571,6 @@ public class SubscribeInfo extends AbstractModel {
     }
 
     /**
-     * Get 自动续费标识。0-不自动续费，1-自动续费
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AutoRenewFlag 自动续费标识。0-不自动续费，1-自动续费
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public Long getAutoRenewFlag() {
-        return this.AutoRenewFlag;
-    }
-
-    /**
-     * Set 自动续费标识。0-不自动续费，1-自动续费
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param AutoRenewFlag 自动续费标识。0-不自动续费，1-自动续费
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setAutoRenewFlag(Long AutoRenewFlag) {
-        this.AutoRenewFlag = AutoRenewFlag;
-    }
-
-    /**
      * Get 订阅实例版本；txdts-旧版数据订阅,kafka-kafka版本数据订阅
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return SubscribeVersion 订阅实例版本；txdts-旧版数据订阅,kafka-kafka版本数据订阅
@@ -637,6 +637,9 @@ public class SubscribeInfo extends AbstractModel {
         if (source.ConsumeStartTime != null) {
             this.ConsumeStartTime = new String(source.ConsumeStartTime);
         }
+        if (source.AutoRenewFlag != null) {
+            this.AutoRenewFlag = new Long(source.AutoRenewFlag);
+        }
         if (source.Region != null) {
             this.Region = new String(source.Region);
         }
@@ -667,9 +670,6 @@ public class SubscribeInfo extends AbstractModel {
                 this.Tags[i] = new TagItem(source.Tags[i]);
             }
         }
-        if (source.AutoRenewFlag != null) {
-            this.AutoRenewFlag = new Long(source.AutoRenewFlag);
-        }
         if (source.SubscribeVersion != null) {
             this.SubscribeVersion = new String(source.SubscribeVersion);
         }
@@ -693,6 +693,7 @@ public class SubscribeInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
         this.setParamSimple(map, prefix + "OfflineTime", this.OfflineTime);
         this.setParamSimple(map, prefix + "ConsumeStartTime", this.ConsumeStartTime);
+        this.setParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
         this.setParamSimple(map, prefix + "Region", this.Region);
         this.setParamSimple(map, prefix + "PayType", this.PayType);
         this.setParamSimple(map, prefix + "Vip", this.Vip);
@@ -702,7 +703,6 @@ public class SubscribeInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "SdkConsumedTime", this.SdkConsumedTime);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
-        this.setParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
         this.setParamSimple(map, prefix + "SubscribeVersion", this.SubscribeVersion);
 
     }

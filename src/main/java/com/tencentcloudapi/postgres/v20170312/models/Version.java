@@ -71,7 +71,7 @@ DEPRECATED：已弃用。
     private String Status;
 
     /**
-    * 该数据库版本（DBKernelVersion）可以升级到的版本号列表。
+    * 该数据库版本（DBKernelVersion）可以升级到的版本号列表。其中包含可升级的小版本号和可升级的大版本号（完整内核版本格式示例：v15.1_v1.6）。
     */
     @SerializedName("AvailableUpgradeTarget")
     @Expose
@@ -194,16 +194,16 @@ DEPRECATED：已弃用。
     }
 
     /**
-     * Get 该数据库版本（DBKernelVersion）可以升级到的版本号列表。 
-     * @return AvailableUpgradeTarget 该数据库版本（DBKernelVersion）可以升级到的版本号列表。
+     * Get 该数据库版本（DBKernelVersion）可以升级到的版本号列表。其中包含可升级的小版本号和可升级的大版本号（完整内核版本格式示例：v15.1_v1.6）。 
+     * @return AvailableUpgradeTarget 该数据库版本（DBKernelVersion）可以升级到的版本号列表。其中包含可升级的小版本号和可升级的大版本号（完整内核版本格式示例：v15.1_v1.6）。
      */
     public String [] getAvailableUpgradeTarget() {
         return this.AvailableUpgradeTarget;
     }
 
     /**
-     * Set 该数据库版本（DBKernelVersion）可以升级到的版本号列表。
-     * @param AvailableUpgradeTarget 该数据库版本（DBKernelVersion）可以升级到的版本号列表。
+     * Set 该数据库版本（DBKernelVersion）可以升级到的版本号列表。其中包含可升级的小版本号和可升级的大版本号（完整内核版本格式示例：v15.1_v1.6）。
+     * @param AvailableUpgradeTarget 该数据库版本（DBKernelVersion）可以升级到的版本号列表。其中包含可升级的小版本号和可升级的大版本号（完整内核版本格式示例：v15.1_v1.6）。
      */
     public void setAvailableUpgradeTarget(String [] AvailableUpgradeTarget) {
         this.AvailableUpgradeTarget = AvailableUpgradeTarget;

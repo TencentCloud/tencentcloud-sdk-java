@@ -25,6 +25,7 @@ public class SCFParams extends AbstractModel {
 
     /**
     * 批量投递最长等待时间
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BatchTimeout")
     @Expose
@@ -32,6 +33,7 @@ public class SCFParams extends AbstractModel {
 
     /**
     * 批量投递最大事件条数
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BatchEventCount")
     @Expose
@@ -39,14 +41,17 @@ public class SCFParams extends AbstractModel {
 
     /**
     * 开启批量投递使能
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnableBatchDelivery")
     @Expose
     private Boolean EnableBatchDelivery;
 
     /**
-     * Get 批量投递最长等待时间 
+     * Get 批量投递最长等待时间
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return BatchTimeout 批量投递最长等待时间
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBatchTimeout() {
         return this.BatchTimeout;
@@ -54,15 +59,19 @@ public class SCFParams extends AbstractModel {
 
     /**
      * Set 批量投递最长等待时间
+注意：此字段可能返回 null，表示取不到有效值。
      * @param BatchTimeout 批量投递最长等待时间
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBatchTimeout(Long BatchTimeout) {
         this.BatchTimeout = BatchTimeout;
     }
 
     /**
-     * Get 批量投递最大事件条数 
+     * Get 批量投递最大事件条数
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return BatchEventCount 批量投递最大事件条数
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBatchEventCount() {
         return this.BatchEventCount;
@@ -70,15 +79,19 @@ public class SCFParams extends AbstractModel {
 
     /**
      * Set 批量投递最大事件条数
+注意：此字段可能返回 null，表示取不到有效值。
      * @param BatchEventCount 批量投递最大事件条数
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBatchEventCount(Long BatchEventCount) {
         this.BatchEventCount = BatchEventCount;
     }
 
     /**
-     * Get 开启批量投递使能 
+     * Get 开启批量投递使能
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return EnableBatchDelivery 开启批量投递使能
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getEnableBatchDelivery() {
         return this.EnableBatchDelivery;
@@ -86,7 +99,9 @@ public class SCFParams extends AbstractModel {
 
     /**
      * Set 开启批量投递使能
+注意：此字段可能返回 null，表示取不到有效值。
      * @param EnableBatchDelivery 开启批量投递使能
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnableBatchDelivery(Boolean EnableBatchDelivery) {
         this.EnableBatchDelivery = EnableBatchDelivery;

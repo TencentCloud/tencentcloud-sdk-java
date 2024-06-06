@@ -237,6 +237,17 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *此接口（CreateCHDFSBindingProduct）用于创建元数据加速桶和产品绑定关系
+     * @param req CreateCHDFSBindingProductRequest
+     * @return CreateCHDFSBindingProductResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCHDFSBindingProductResponse CreateCHDFSBindingProduct(CreateCHDFSBindingProductRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateCHDFSBindingProduct", CreateCHDFSBindingProductResponse.class);
+    }
+
+    /**
      *DMS元数据创建库
      * @param req CreateDMSDatabaseRequest
      * @return CreateDMSDatabaseResponse
@@ -479,6 +490,17 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *此接口（DeleteCHDFSBindingProduct）用于删除元数据加速桶和产品绑定关系
+     * @param req DeleteCHDFSBindingProductRequest
+     * @return DeleteCHDFSBindingProductResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCHDFSBindingProductResponse DeleteCHDFSBindingProduct(DeleteCHDFSBindingProductRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteCHDFSBindingProduct", DeleteCHDFSBindingProductResponse.class);
+    }
+
+    /**
      *删除数据引擎
      * @param req DeleteDataEngineRequest
      * @return DeleteDataEngineResponse
@@ -523,6 +545,17 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *本接口（RegisterThirdPartyAccessUser）用于移除第三方平台访问
+     * @param req DeleteThirdPartyAccessUserRequest
+     * @return DeleteThirdPartyAccessUserResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteThirdPartyAccessUserResponse DeleteThirdPartyAccessUser(DeleteThirdPartyAccessUserRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteThirdPartyAccessUser", DeleteThirdPartyAccessUserResponse.class);
+    }
+
+    /**
      *删除用户
      * @param req DeleteUserRequest
      * @return DeleteUserResponse
@@ -564,6 +597,17 @@ public class DlcClient extends AbstractClient{
     public DescribeAdvancedStoreLocationResponse DescribeAdvancedStoreLocation(DescribeAdvancedStoreLocationRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeAdvancedStoreLocation", DescribeAdvancedStoreLocationResponse.class);
+    }
+
+    /**
+     *查询DLC Catalog授权列表
+     * @param req DescribeDLCCatalogAccessRequest
+     * @return DescribeDLCCatalogAccessResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDLCCatalogAccessResponse DescribeDLCCatalogAccess(DescribeDLCCatalogAccessRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDLCCatalogAccess", DescribeDLCCatalogAccessResponse.class);
     }
 
     /**
@@ -809,6 +853,17 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *此接口（DescribeOtherCHDFSBindingList）用于查询其他产品元数据加速桶绑定列表
+     * @param req DescribeOtherCHDFSBindingListRequest
+     * @return DescribeOtherCHDFSBindingListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeOtherCHDFSBindingListResponse DescribeOtherCHDFSBindingList(DescribeOtherCHDFSBindingListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeOtherCHDFSBindingList", DescribeOtherCHDFSBindingListResponse.class);
+    }
+
+    /**
      *查询结果下载任务
      * @param req DescribeResultDownloadRequest
      * @return DescribeResultDownloadResponse
@@ -897,6 +952,17 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeSubUserAccessPolicy）用于开通了第三方平台访问的用户，查询其子用户的访问策略
+     * @param req DescribeSubUserAccessPolicyRequest
+     * @return DescribeSubUserAccessPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSubUserAccessPolicyResponse DescribeSubUserAccessPolicy(DescribeSubUserAccessPolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSubUserAccessPolicy", DescribeSubUserAccessPolicyResponse.class);
+    }
+
+    /**
      *本接口（DescribeTable），用于查询单个表的详细信息。
      * @param req DescribeTableRequest
      * @return DescribeTableResponse
@@ -971,6 +1037,17 @@ public class DlcClient extends AbstractClient{
     public DescribeTasksCostInfoResponse DescribeTasksCostInfo(DescribeTasksCostInfoRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeTasksCostInfo", DescribeTasksCostInfoResponse.class);
+    }
+
+    /**
+     *本接口（RegisterThirdPartyAccessUser）查询开通第三方平台访问的用户信息
+     * @param req DescribeThirdPartyAccessUserRequest
+     * @return DescribeThirdPartyAccessUserResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeThirdPartyAccessUserResponse DescribeThirdPartyAccessUser(DescribeThirdPartyAccessUserRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeThirdPartyAccessUser", DescribeThirdPartyAccessUserResponse.class);
     }
 
     /**
@@ -1150,6 +1227,17 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *授权访问DLC Catalog
+     * @param req GrantDLCCatalogAccessRequest
+     * @return GrantDLCCatalogAccessResponse
+     * @throws TencentCloudSDKException
+     */
+    public GrantDLCCatalogAccessResponse GrantDLCCatalogAccess(GrantDLCCatalogAccessRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GrantDLCCatalogAccess", GrantDLCCatalogAccessResponse.class);
+    }
+
+    /**
      *本接口（ListTaskJobLogDetail）用于获取spark 作业任务日志详情
      * @param req ListTaskJobLogDetailRequest
      * @return ListTaskJobLogDetailResponse
@@ -1293,6 +1381,17 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *本接口（RegisterThirdPartyAccessUser）用于开通第三方平台访问
+     * @param req RegisterThirdPartyAccessUserRequest
+     * @return RegisterThirdPartyAccessUserResponse
+     * @throws TencentCloudSDKException
+     */
+    public RegisterThirdPartyAccessUserResponse RegisterThirdPartyAccessUser(RegisterThirdPartyAccessUserRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RegisterThirdPartyAccessUser", RegisterThirdPartyAccessUserResponse.class);
+    }
+
+    /**
      *续费数据引擎
      * @param req RenewDataEngineRequest
      * @return RenewDataEngineResponse
@@ -1323,6 +1422,17 @@ public class DlcClient extends AbstractClient{
     public RestartDataEngineResponse RestartDataEngine(RestartDataEngineRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "RestartDataEngine", RestartDataEngineResponse.class);
+    }
+
+    /**
+     *撤销DLC Catalog访问权限
+     * @param req RevokeDLCCatalogAccessRequest
+     * @return RevokeDLCCatalogAccessResponse
+     * @throws TencentCloudSDKException
+     */
+    public RevokeDLCCatalogAccessResponse RevokeDLCCatalogAccess(RevokeDLCCatalogAccessRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RevokeDLCCatalogAccess", RevokeDLCCatalogAccessResponse.class);
     }
 
     /**

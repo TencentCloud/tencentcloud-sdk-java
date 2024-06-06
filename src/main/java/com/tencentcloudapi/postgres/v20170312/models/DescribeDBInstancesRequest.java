@@ -28,8 +28,10 @@ public class DescribeDBInstancesRequest extends AbstractModel {
 db-instance-id：按照实例ID过滤，类型为string
 db-instance-name：按照实例名过滤，类型为string
 db-project-id：按照项目ID过滤，类型为integer
-db-pay-mode：按照付费模式过滤，类型为string
+db-pay-mode：按照实例付费模式过滤，类型为string
 db-tag-key：按照标签键过滤，类型为string
+db-private-ip： 按照实例私有网络IP过滤，类型为string
+db-public-address： 按照实例外网地址过滤，类型为string
     */
     @SerializedName("Filters")
     @Expose
@@ -68,14 +70,18 @@ db-tag-key：按照标签键过滤，类型为string
 db-instance-id：按照实例ID过滤，类型为string
 db-instance-name：按照实例名过滤，类型为string
 db-project-id：按照项目ID过滤，类型为integer
-db-pay-mode：按照付费模式过滤，类型为string
-db-tag-key：按照标签键过滤，类型为string 
+db-pay-mode：按照实例付费模式过滤，类型为string
+db-tag-key：按照标签键过滤，类型为string
+db-private-ip： 按照实例私有网络IP过滤，类型为string
+db-public-address： 按照实例外网地址过滤，类型为string 
      * @return Filters 按照一个或者多个过滤条件进行查询，目前支持的过滤条件有：
 db-instance-id：按照实例ID过滤，类型为string
 db-instance-name：按照实例名过滤，类型为string
 db-project-id：按照项目ID过滤，类型为integer
-db-pay-mode：按照付费模式过滤，类型为string
+db-pay-mode：按照实例付费模式过滤，类型为string
 db-tag-key：按照标签键过滤，类型为string
+db-private-ip： 按照实例私有网络IP过滤，类型为string
+db-public-address： 按照实例外网地址过滤，类型为string
      */
     public Filter [] getFilters() {
         return this.Filters;
@@ -86,14 +92,18 @@ db-tag-key：按照标签键过滤，类型为string
 db-instance-id：按照实例ID过滤，类型为string
 db-instance-name：按照实例名过滤，类型为string
 db-project-id：按照项目ID过滤，类型为integer
-db-pay-mode：按照付费模式过滤，类型为string
+db-pay-mode：按照实例付费模式过滤，类型为string
 db-tag-key：按照标签键过滤，类型为string
+db-private-ip： 按照实例私有网络IP过滤，类型为string
+db-public-address： 按照实例外网地址过滤，类型为string
      * @param Filters 按照一个或者多个过滤条件进行查询，目前支持的过滤条件有：
 db-instance-id：按照实例ID过滤，类型为string
 db-instance-name：按照实例名过滤，类型为string
 db-project-id：按照项目ID过滤，类型为integer
-db-pay-mode：按照付费模式过滤，类型为string
+db-pay-mode：按照实例付费模式过滤，类型为string
 db-tag-key：按照标签键过滤，类型为string
+db-private-ip： 按照实例私有网络IP过滤，类型为string
+db-public-address： 按照实例外网地址过滤，类型为string
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

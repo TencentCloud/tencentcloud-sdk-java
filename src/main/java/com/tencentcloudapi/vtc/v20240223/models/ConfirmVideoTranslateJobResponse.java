@@ -45,6 +45,20 @@ public class ConfirmVideoTranslateJobResponse extends AbstractModel {
     private String SessionId;
 
     /**
+    * 视频转译任务状态
+    */
+    @SerializedName("Status")
+    @Expose
+    private Long Status;
+
+    /**
+    * 视频转译任务信息
+    */
+    @SerializedName("Message")
+    @Expose
+    private String Message;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -100,6 +114,38 @@ public class ConfirmVideoTranslateJobResponse extends AbstractModel {
     }
 
     /**
+     * Get 视频转译任务状态 
+     * @return Status 视频转译任务状态
+     */
+    public Long getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 视频转译任务状态
+     * @param Status 视频转译任务状态
+     */
+    public void setStatus(Long Status) {
+        this.Status = Status;
+    }
+
+    /**
+     * Get 视频转译任务信息 
+     * @return Message 视频转译任务信息
+     */
+    public String getMessage() {
+        return this.Message;
+    }
+
+    /**
+     * Set 视频转译任务信息
+     * @param Message 视频转译任务信息
+     */
+    public void setMessage(String Message) {
+        this.Message = Message;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -132,6 +178,12 @@ public class ConfirmVideoTranslateJobResponse extends AbstractModel {
         if (source.SessionId != null) {
             this.SessionId = new String(source.SessionId);
         }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.Message != null) {
+            this.Message = new String(source.Message);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -145,6 +197,8 @@ public class ConfirmVideoTranslateJobResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "JobId", this.JobId);
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
+        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "Message", this.Message);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

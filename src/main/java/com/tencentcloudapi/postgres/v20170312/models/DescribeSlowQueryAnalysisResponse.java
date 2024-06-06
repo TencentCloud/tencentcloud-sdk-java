@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeSlowQueryAnalysisResponse extends AbstractModel {
 
     /**
-    * 查询总条数。
+    * 查询到的总条数，最大值为10000条。
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 慢SQL统计分析接口返回详情。
+    * 查询到的慢SQL统计分析详细信息集合。
     */
     @SerializedName("Detail")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeSlowQueryAnalysisResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 查询总条数。 
-     * @return TotalCount 查询总条数。
+     * Get 查询到的总条数，最大值为10000条。 
+     * @return TotalCount 查询到的总条数，最大值为10000条。
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 查询总条数。
-     * @param TotalCount 查询总条数。
+     * Set 查询到的总条数，最大值为10000条。
+     * @param TotalCount 查询到的总条数，最大值为10000条。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 慢SQL统计分析接口返回详情。 
-     * @return Detail 慢SQL统计分析接口返回详情。
+     * Get 查询到的慢SQL统计分析详细信息集合。 
+     * @return Detail 查询到的慢SQL统计分析详细信息集合。
      */
     public Detail getDetail() {
         return this.Detail;
     }
 
     /**
-     * Set 慢SQL统计分析接口返回详情。
-     * @param Detail 慢SQL统计分析接口返回详情。
+     * Set 查询到的慢SQL统计分析详细信息集合。
+     * @param Detail 查询到的慢SQL统计分析详细信息集合。
      */
     public void setDetail(Detail Detail) {
         this.Detail = Detail;

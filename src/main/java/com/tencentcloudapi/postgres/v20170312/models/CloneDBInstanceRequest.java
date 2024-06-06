@@ -46,8 +46,10 @@ public class CloneDBInstanceRequest extends AbstractModel {
 
     /**
     * 购买时长，单位：月。
-<li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36
-<li>后付费：只支持1
+
+- 预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36
+- 后付费：只支持1
+
     */
     @SerializedName("Period")
     @Expose
@@ -55,8 +57,10 @@ public class CloneDBInstanceRequest extends AbstractModel {
 
     /**
     * 续费标记：
-<li>0：手动续费
-<li>1：自动续费
+
+- 0：手动续费
+- 1：自动续费
+
 默认值：0
     */
     @SerializedName("AutoRenewFlag")
@@ -86,8 +90,10 @@ public class CloneDBInstanceRequest extends AbstractModel {
 
     /**
     * 实例计费类型，目前支持：
-<li>PREPAID：预付费，即包年包月
-<li>POSTPAID_BY_HOUR：后付费，即按量计费
+
+- PREPAID：预付费，即包年包月
+- POSTPAID_BY_HOUR：后付费，即按量计费
+
 默认值：PREPAID
     */
     @SerializedName("InstanceChargeType")
@@ -126,8 +132,10 @@ public class CloneDBInstanceRequest extends AbstractModel {
 
     /**
     * 是否自动使用代金券：
-<li>0：否
-<li>1：是
+
+- 0：否
+- 1：是
+
 默认值：0
     */
     @SerializedName("AutoVoucher")
@@ -164,8 +172,8 @@ public class CloneDBInstanceRequest extends AbstractModel {
 
     /**
     * 主从同步方式，支持： 
-<li>Semi-sync：半同步
-<li>Async：异步
+<li>Semi-sync：半同步</li>
+<li>Async：异步</li>
 主实例默认值：Semi-sync
 只读实例默认值：Async
     */
@@ -223,11 +231,15 @@ public class CloneDBInstanceRequest extends AbstractModel {
 
     /**
      * Get 购买时长，单位：月。
-<li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36
-<li>后付费：只支持1 
+
+- 预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36
+- 后付费：只支持1
+ 
      * @return Period 购买时长，单位：月。
-<li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36
-<li>后付费：只支持1
+
+- 预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36
+- 后付费：只支持1
+
      */
     public Long getPeriod() {
         return this.Period;
@@ -235,11 +247,15 @@ public class CloneDBInstanceRequest extends AbstractModel {
 
     /**
      * Set 购买时长，单位：月。
-<li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36
-<li>后付费：只支持1
+
+- 预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36
+- 后付费：只支持1
+
      * @param Period 购买时长，单位：月。
-<li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36
-<li>后付费：只支持1
+
+- 预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36
+- 后付费：只支持1
+
      */
     public void setPeriod(Long Period) {
         this.Period = Period;
@@ -247,12 +263,16 @@ public class CloneDBInstanceRequest extends AbstractModel {
 
     /**
      * Get 续费标记：
-<li>0：手动续费
-<li>1：自动续费
+
+- 0：手动续费
+- 1：自动续费
+
 默认值：0 
      * @return AutoRenewFlag 续费标记：
-<li>0：手动续费
-<li>1：自动续费
+
+- 0：手动续费
+- 1：自动续费
+
 默认值：0
      */
     public Long getAutoRenewFlag() {
@@ -261,12 +281,16 @@ public class CloneDBInstanceRequest extends AbstractModel {
 
     /**
      * Set 续费标记：
-<li>0：手动续费
-<li>1：自动续费
+
+- 0：手动续费
+- 1：自动续费
+
 默认值：0
      * @param AutoRenewFlag 续费标记：
-<li>0：手动续费
-<li>1：自动续费
+
+- 0：手动续费
+- 1：自动续费
+
 默认值：0
      */
     public void setAutoRenewFlag(Long AutoRenewFlag) {
@@ -323,12 +347,16 @@ public class CloneDBInstanceRequest extends AbstractModel {
 
     /**
      * Get 实例计费类型，目前支持：
-<li>PREPAID：预付费，即包年包月
-<li>POSTPAID_BY_HOUR：后付费，即按量计费
+
+- PREPAID：预付费，即包年包月
+- POSTPAID_BY_HOUR：后付费，即按量计费
+
 默认值：PREPAID 
      * @return InstanceChargeType 实例计费类型，目前支持：
-<li>PREPAID：预付费，即包年包月
-<li>POSTPAID_BY_HOUR：后付费，即按量计费
+
+- PREPAID：预付费，即包年包月
+- POSTPAID_BY_HOUR：后付费，即按量计费
+
 默认值：PREPAID
      */
     public String getInstanceChargeType() {
@@ -337,12 +365,16 @@ public class CloneDBInstanceRequest extends AbstractModel {
 
     /**
      * Set 实例计费类型，目前支持：
-<li>PREPAID：预付费，即包年包月
-<li>POSTPAID_BY_HOUR：后付费，即按量计费
+
+- PREPAID：预付费，即包年包月
+- POSTPAID_BY_HOUR：后付费，即按量计费
+
 默认值：PREPAID
      * @param InstanceChargeType 实例计费类型，目前支持：
-<li>PREPAID：预付费，即包年包月
-<li>POSTPAID_BY_HOUR：后付费，即按量计费
+
+- PREPAID：预付费，即包年包月
+- POSTPAID_BY_HOUR：后付费，即按量计费
+
 默认值：PREPAID
      */
     public void setInstanceChargeType(String InstanceChargeType) {
@@ -423,12 +455,16 @@ public class CloneDBInstanceRequest extends AbstractModel {
 
     /**
      * Get 是否自动使用代金券：
-<li>0：否
-<li>1：是
+
+- 0：否
+- 1：是
+
 默认值：0 
      * @return AutoVoucher 是否自动使用代金券：
-<li>0：否
-<li>1：是
+
+- 0：否
+- 1：是
+
 默认值：0
      */
     public Long getAutoVoucher() {
@@ -437,12 +473,16 @@ public class CloneDBInstanceRequest extends AbstractModel {
 
     /**
      * Set 是否自动使用代金券：
-<li>0：否
-<li>1：是
+
+- 0：否
+- 1：是
+
 默认值：0
      * @param AutoVoucher 是否自动使用代金券：
-<li>0：否
-<li>1：是
+
+- 0：否
+- 1：是
+
 默认值：0
      */
     public void setAutoVoucher(Long AutoVoucher) {
@@ -515,13 +555,13 @@ public class CloneDBInstanceRequest extends AbstractModel {
 
     /**
      * Get 主从同步方式，支持： 
-<li>Semi-sync：半同步
-<li>Async：异步
+<li>Semi-sync：半同步</li>
+<li>Async：异步</li>
 主实例默认值：Semi-sync
 只读实例默认值：Async 
      * @return SyncMode 主从同步方式，支持： 
-<li>Semi-sync：半同步
-<li>Async：异步
+<li>Semi-sync：半同步</li>
+<li>Async：异步</li>
 主实例默认值：Semi-sync
 只读实例默认值：Async
      */
@@ -531,13 +571,13 @@ public class CloneDBInstanceRequest extends AbstractModel {
 
     /**
      * Set 主从同步方式，支持： 
-<li>Semi-sync：半同步
-<li>Async：异步
+<li>Semi-sync：半同步</li>
+<li>Async：异步</li>
 主实例默认值：Semi-sync
 只读实例默认值：Async
      * @param SyncMode 主从同步方式，支持： 
-<li>Semi-sync：半同步
-<li>Async：异步
+<li>Semi-sync：半同步</li>
+<li>Async：异步</li>
 主实例默认值：Semi-sync
 只读实例默认值：Async
      */

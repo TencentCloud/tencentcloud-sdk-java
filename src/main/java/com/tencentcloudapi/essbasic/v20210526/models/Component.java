@@ -312,8 +312,8 @@ public class Component extends AbstractModel {
 <ul><li> <b>Middle</b> :居中</li>
 <li> <b>Below</b> :正下方</li>
 <li> <b>Right</b> :正右方</li>
-<li> <b>LowerRight</b> :右上角</li>
-<li> <b>UpperRight</b> :右下角。</li></ul>
+<li> <b>LowerRight</b> :右下角</li>
+<li> <b>UpperRight</b> :右上角。</li></ul>
 示例：如果设置Middle的关键字盖章，则印章的中心会和关键字的中心重合，如果设置Below，则印章在关键字的正下方
     */
     @SerializedName("RelativeLocation")
@@ -1235,15 +1235,15 @@ public class Component extends AbstractModel {
 <ul><li> <b>Middle</b> :居中</li>
 <li> <b>Below</b> :正下方</li>
 <li> <b>Right</b> :正右方</li>
-<li> <b>LowerRight</b> :右上角</li>
-<li> <b>UpperRight</b> :右下角。</li></ul>
+<li> <b>LowerRight</b> :右下角</li>
+<li> <b>UpperRight</b> :右上角。</li></ul>
 示例：如果设置Middle的关键字盖章，则印章的中心会和关键字的中心重合，如果设置Below，则印章在关键字的正下方 
      * @return RelativeLocation **如果控件是关键字定位方式**，关键字生成的区域的对齐方式， 可以设置下面的值
 <ul><li> <b>Middle</b> :居中</li>
 <li> <b>Below</b> :正下方</li>
 <li> <b>Right</b> :正右方</li>
-<li> <b>LowerRight</b> :右上角</li>
-<li> <b>UpperRight</b> :右下角。</li></ul>
+<li> <b>LowerRight</b> :右下角</li>
+<li> <b>UpperRight</b> :右上角。</li></ul>
 示例：如果设置Middle的关键字盖章，则印章的中心会和关键字的中心重合，如果设置Below，则印章在关键字的正下方
      */
     public String getRelativeLocation() {
@@ -1255,15 +1255,15 @@ public class Component extends AbstractModel {
 <ul><li> <b>Middle</b> :居中</li>
 <li> <b>Below</b> :正下方</li>
 <li> <b>Right</b> :正右方</li>
-<li> <b>LowerRight</b> :右上角</li>
-<li> <b>UpperRight</b> :右下角。</li></ul>
+<li> <b>LowerRight</b> :右下角</li>
+<li> <b>UpperRight</b> :右上角。</li></ul>
 示例：如果设置Middle的关键字盖章，则印章的中心会和关键字的中心重合，如果设置Below，则印章在关键字的正下方
      * @param RelativeLocation **如果控件是关键字定位方式**，关键字生成的区域的对齐方式， 可以设置下面的值
 <ul><li> <b>Middle</b> :居中</li>
 <li> <b>Below</b> :正下方</li>
 <li> <b>Right</b> :正右方</li>
-<li> <b>LowerRight</b> :右上角</li>
-<li> <b>UpperRight</b> :右下角。</li></ul>
+<li> <b>LowerRight</b> :右下角</li>
+<li> <b>UpperRight</b> :右上角。</li></ul>
 示例：如果设置Middle的关键字盖章，则印章的中心会和关键字的中心重合，如果设置Below，则印章在关键字的正下方
      */
     public void setRelativeLocation(String RelativeLocation) {

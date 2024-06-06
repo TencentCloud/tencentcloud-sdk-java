@@ -64,6 +64,14 @@ public class DescribeModelServiceCallInfoResponse extends AbstractModel {
     private IntranetCallInfo IntranetCallInfo;
 
     /**
+    * 基于新网关的服务调用信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ServiceCallInfoV2")
+    @Expose
+    private ServiceCallInfoV2 ServiceCallInfoV2;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -171,6 +179,26 @@ public class DescribeModelServiceCallInfoResponse extends AbstractModel {
     }
 
     /**
+     * Get 基于新网关的服务调用信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ServiceCallInfoV2 基于新网关的服务调用信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ServiceCallInfoV2 getServiceCallInfoV2() {
+        return this.ServiceCallInfoV2;
+    }
+
+    /**
+     * Set 基于新网关的服务调用信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ServiceCallInfoV2 基于新网关的服务调用信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setServiceCallInfoV2(ServiceCallInfoV2 ServiceCallInfoV2) {
+        this.ServiceCallInfoV2 = ServiceCallInfoV2;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -209,6 +237,9 @@ public class DescribeModelServiceCallInfoResponse extends AbstractModel {
         if (source.IntranetCallInfo != null) {
             this.IntranetCallInfo = new IntranetCallInfo(source.IntranetCallInfo);
         }
+        if (source.ServiceCallInfoV2 != null) {
+            this.ServiceCallInfoV2 = new ServiceCallInfoV2(source.ServiceCallInfoV2);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -224,6 +255,7 @@ public class DescribeModelServiceCallInfoResponse extends AbstractModel {
         this.setParamObj(map, prefix + "DefaultNginxGatewayCallInfo.", this.DefaultNginxGatewayCallInfo);
         this.setParamObj(map, prefix + "TJCallInfo.", this.TJCallInfo);
         this.setParamObj(map, prefix + "IntranetCallInfo.", this.IntranetCallInfo);
+        this.setParamObj(map, prefix + "ServiceCallInfoV2.", this.ServiceCallInfoV2);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

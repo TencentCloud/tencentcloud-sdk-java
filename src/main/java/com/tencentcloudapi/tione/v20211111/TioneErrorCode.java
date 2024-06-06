@@ -159,6 +159,9 @@ public enum TioneErrorCode {
     // 当前任务后台提交重试中，不允许操作停止，请稍后再试。
      FAILEDOPERATION_UNSUBMITNOTALLOWTOSTOP("FailedOperation.UnSubmitNotAllowToStop"),
      
+    // 无操作权限
+     FAILEDOPERATION_UNAUTHORIZEDOPERATION("FailedOperation.UnauthorizedOperation"),
+     
     // 解冻失败。
      FAILEDOPERATION_UNFREEZEBILLFAILED("FailedOperation.UnfreezeBillFailed"),
      
@@ -209,6 +212,9 @@ public enum TioneErrorCode {
      
     // 无效的接口。
      INVALIDPARAMETER_TGWINVALIDINTERFACE("InvalidParameter.TgwInvalidInterface"),
+     
+    // 不支持使用多个本地磁盘
+     INVALIDPARAMETER_UNSUPPORTEDMULTILOCALDISK("InvalidParameter.UnsupportedMultiLocalDisk"),
      
     // 请求参数校验失败。
      INVALIDPARAMETER_VALIDATEERROR("InvalidParameter.ValidateError"),
@@ -291,6 +297,9 @@ public enum TioneErrorCode {
     // 分页查询limit超出限制
      INVALIDPARAMETERVALUE_PAGELIMITEXCEEDED("InvalidParameterValue.PageLimitExceeded"),
      
+    // 本地盘路径不合法
+     INVALIDPARAMETERVALUE_PATHILLEGAL("InvalidParameterValue.PathIllegal"),
+     
     // 资源配置不合法
      INVALIDPARAMETERVALUE_RESOURCECONFIGILLEGAL("InvalidParameterValue.ResourceConfigIllegal"),
      
@@ -345,11 +354,17 @@ public enum TioneErrorCode {
     // 资源不足。
      RESOURCEINSUFFICIENT("ResourceInsufficient"),
      
+    // SSH端口资源耗尽
+     RESOURCEINSUFFICIENT_SSHPORTISCONSUMEDUP("ResourceInsufficient.SSHPortIsConsumedUp"),
+     
     // 资源不存在。
      RESOURCENOTFOUND("ResourceNotFound"),
      
     // 没有该模型。
      RESOURCENOTFOUND_NOMODEL("ResourceNotFound.NoModel"),
+     
+    // 资源组不存在
+     RESOURCENOTFOUND_RESOURCEGROUPNOTFOUND("ResourceNotFound.ResourceGroupNotFound"),
      
     // 资源不可用。
      RESOURCEUNAVAILABLE("ResourceUnavailable"),

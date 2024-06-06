@@ -228,6 +228,22 @@ public class OrganizationalFunction extends AbstractModel {
     private String Tag;
 
     /**
+    * 操作人 ID 列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OperatorUserIdsStr")
+    @Expose
+    private String [] OperatorUserIdsStr;
+
+    /**
+    * 公有云 Owner ID 列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OwnerUserIdsStr")
+    @Expose
+    private String [] OwnerUserIdsStr;
+
+    /**
      * Get 名称 
      * @return Name 名称
      */
@@ -731,6 +747,46 @@ public class OrganizationalFunction extends AbstractModel {
         this.Tag = Tag;
     }
 
+    /**
+     * Get 操作人 ID 列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OperatorUserIdsStr 操作人 ID 列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getOperatorUserIdsStr() {
+        return this.OperatorUserIdsStr;
+    }
+
+    /**
+     * Set 操作人 ID 列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OperatorUserIdsStr 操作人 ID 列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOperatorUserIdsStr(String [] OperatorUserIdsStr) {
+        this.OperatorUserIdsStr = OperatorUserIdsStr;
+    }
+
+    /**
+     * Get 公有云 Owner ID 列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OwnerUserIdsStr 公有云 Owner ID 列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getOwnerUserIdsStr() {
+        return this.OwnerUserIdsStr;
+    }
+
+    /**
+     * Set 公有云 Owner ID 列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OwnerUserIdsStr 公有云 Owner ID 列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOwnerUserIdsStr(String [] OwnerUserIdsStr) {
+        this.OwnerUserIdsStr = OwnerUserIdsStr;
+    }
+
     public OrganizationalFunction() {
     }
 
@@ -826,6 +882,18 @@ public class OrganizationalFunction extends AbstractModel {
         if (source.Tag != null) {
             this.Tag = new String(source.Tag);
         }
+        if (source.OperatorUserIdsStr != null) {
+            this.OperatorUserIdsStr = new String[source.OperatorUserIdsStr.length];
+            for (int i = 0; i < source.OperatorUserIdsStr.length; i++) {
+                this.OperatorUserIdsStr[i] = new String(source.OperatorUserIdsStr[i]);
+            }
+        }
+        if (source.OwnerUserIdsStr != null) {
+            this.OwnerUserIdsStr = new String[source.OwnerUserIdsStr.length];
+            for (int i = 0; i < source.OwnerUserIdsStr.length; i++) {
+                this.OwnerUserIdsStr[i] = new String(source.OwnerUserIdsStr[i]);
+            }
+        }
     }
 
 
@@ -859,6 +927,8 @@ public class OrganizationalFunction extends AbstractModel {
         this.setParamSimple(map, prefix + "OwnerName", this.OwnerName);
         this.setParamSimple(map, prefix + "SubmitTimestamp", this.SubmitTimestamp);
         this.setParamSimple(map, prefix + "Tag", this.Tag);
+        this.setParamArraySimple(map, prefix + "OperatorUserIdsStr.", this.OperatorUserIdsStr);
+        this.setParamArraySimple(map, prefix + "OwnerUserIdsStr.", this.OwnerUserIdsStr);
 
     }
 }

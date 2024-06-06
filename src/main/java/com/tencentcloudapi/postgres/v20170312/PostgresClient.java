@@ -117,8 +117,8 @@ public class PostgresClient extends AbstractClient{
 
     /**
      *本接口 (CreateInstances) 用于创建一个或者多个PostgreSQL实例，通过此接口创建的实例无需进行初始化，可直接使用。
-<li>实例创建成功后将自动开机启动，实例状态变为“运行中”。
-<li>预付费实例的购买会预先扣除本次实例购买所需金额，按小时后付费实例购买会预先冻结本次实例购买一小时内所需金额，在调用本接口前请确保账户余额充足。
+<li>实例创建成功后将自动开机启动，实例状态变为“运行中”。</li>
+<li>预付费实例的购买会预先扣除本次实例购买所需金额，按小时后付费实例购买会预先冻结本次实例购买一小时内所需金额，在调用本接口前请确保账户余额充足。</li>
      * @param req CreateInstancesRequest
      * @return CreateInstancesResponse
      * @throws TencentCloudSDKException
@@ -977,6 +977,17 @@ public class PostgresClient extends AbstractClient{
     public RestartDBInstanceResponse RestartDBInstance(RestartDBInstanceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "RestartDBInstance", RestartDBInstanceResponse.class);
+    }
+
+    /**
+     *根据备份集或恢复目标时间，在原实例上恢复数据库相关对象，例如数据库、表。
+     * @param req RestoreDBInstanceObjectsRequest
+     * @return RestoreDBInstanceObjectsResponse
+     * @throws TencentCloudSDKException
+     */
+    public RestoreDBInstanceObjectsResponse RestoreDBInstanceObjects(RestoreDBInstanceObjectsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RestoreDBInstanceObjects", RestoreDBInstanceObjectsResponse.class);
     }
 
     /**

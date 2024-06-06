@@ -31,49 +31,49 @@ public class DescribeSlowQueryAnalysisRequest extends AbstractModel {
     private String DBInstanceId;
 
     /**
-    * 查询起始时间戳，格式 “YYYY-MM-DD HH:mm:ss” ，日志保留时间默认为7天，起始时间不能超出保留时间范围。
+    * 查询起始时间，形如2018-01-01 00:00:00。日志保留时间默认为7天，起始时间不能超出保留时间范围。
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 查询结束时间戳，格式 “YYYY-MM-DD HH:mm:ss”。
+    * 查询结束时间，形如2018-01-01 00:00:00。
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * 根据数据库名进行筛选，可以为空。
+    * 数据库名字。	
     */
     @SerializedName("DatabaseName")
     @Expose
     private String DatabaseName;
 
     /**
-    * 排序维度。 可选参数，取值范围[CallNum,CostTime,AvgCostTime]。默认CallNum。
+    * 排序字段，取值范围[CallNum,CostTime,AvgCostTime]。默认值为CallNum。
     */
     @SerializedName("OrderBy")
     @Expose
     private String OrderBy;
 
     /**
-    * 排序类型。升序asc、降序desc。默认desc。
+    * 排序方式，包括升序：asc 降序：desc。默认值为desc。
     */
     @SerializedName("OrderByType")
     @Expose
     private String OrderByType;
 
     /**
-    * 分页大小。取值范围[1,100]。默认50。
+    * 每页显示数量，取值范围为1-100。默认值为50。	
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 分页偏移。取值范围[0,INF)。默认0。
+    * 数据偏移量，从0开始。默认值为0。
     */
     @SerializedName("Offset")
     @Expose
@@ -96,112 +96,112 @@ public class DescribeSlowQueryAnalysisRequest extends AbstractModel {
     }
 
     /**
-     * Get 查询起始时间戳，格式 “YYYY-MM-DD HH:mm:ss” ，日志保留时间默认为7天，起始时间不能超出保留时间范围。 
-     * @return StartTime 查询起始时间戳，格式 “YYYY-MM-DD HH:mm:ss” ，日志保留时间默认为7天，起始时间不能超出保留时间范围。
+     * Get 查询起始时间，形如2018-01-01 00:00:00。日志保留时间默认为7天，起始时间不能超出保留时间范围。 
+     * @return StartTime 查询起始时间，形如2018-01-01 00:00:00。日志保留时间默认为7天，起始时间不能超出保留时间范围。
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 查询起始时间戳，格式 “YYYY-MM-DD HH:mm:ss” ，日志保留时间默认为7天，起始时间不能超出保留时间范围。
-     * @param StartTime 查询起始时间戳，格式 “YYYY-MM-DD HH:mm:ss” ，日志保留时间默认为7天，起始时间不能超出保留时间范围。
+     * Set 查询起始时间，形如2018-01-01 00:00:00。日志保留时间默认为7天，起始时间不能超出保留时间范围。
+     * @param StartTime 查询起始时间，形如2018-01-01 00:00:00。日志保留时间默认为7天，起始时间不能超出保留时间范围。
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 查询结束时间戳，格式 “YYYY-MM-DD HH:mm:ss”。 
-     * @return EndTime 查询结束时间戳，格式 “YYYY-MM-DD HH:mm:ss”。
+     * Get 查询结束时间，形如2018-01-01 00:00:00。 
+     * @return EndTime 查询结束时间，形如2018-01-01 00:00:00。
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 查询结束时间戳，格式 “YYYY-MM-DD HH:mm:ss”。
-     * @param EndTime 查询结束时间戳，格式 “YYYY-MM-DD HH:mm:ss”。
+     * Set 查询结束时间，形如2018-01-01 00:00:00。
+     * @param EndTime 查询结束时间，形如2018-01-01 00:00:00。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 根据数据库名进行筛选，可以为空。 
-     * @return DatabaseName 根据数据库名进行筛选，可以为空。
+     * Get 数据库名字。	 
+     * @return DatabaseName 数据库名字。	
      */
     public String getDatabaseName() {
         return this.DatabaseName;
     }
 
     /**
-     * Set 根据数据库名进行筛选，可以为空。
-     * @param DatabaseName 根据数据库名进行筛选，可以为空。
+     * Set 数据库名字。	
+     * @param DatabaseName 数据库名字。	
      */
     public void setDatabaseName(String DatabaseName) {
         this.DatabaseName = DatabaseName;
     }
 
     /**
-     * Get 排序维度。 可选参数，取值范围[CallNum,CostTime,AvgCostTime]。默认CallNum。 
-     * @return OrderBy 排序维度。 可选参数，取值范围[CallNum,CostTime,AvgCostTime]。默认CallNum。
+     * Get 排序字段，取值范围[CallNum,CostTime,AvgCostTime]。默认值为CallNum。 
+     * @return OrderBy 排序字段，取值范围[CallNum,CostTime,AvgCostTime]。默认值为CallNum。
      */
     public String getOrderBy() {
         return this.OrderBy;
     }
 
     /**
-     * Set 排序维度。 可选参数，取值范围[CallNum,CostTime,AvgCostTime]。默认CallNum。
-     * @param OrderBy 排序维度。 可选参数，取值范围[CallNum,CostTime,AvgCostTime]。默认CallNum。
+     * Set 排序字段，取值范围[CallNum,CostTime,AvgCostTime]。默认值为CallNum。
+     * @param OrderBy 排序字段，取值范围[CallNum,CostTime,AvgCostTime]。默认值为CallNum。
      */
     public void setOrderBy(String OrderBy) {
         this.OrderBy = OrderBy;
     }
 
     /**
-     * Get 排序类型。升序asc、降序desc。默认desc。 
-     * @return OrderByType 排序类型。升序asc、降序desc。默认desc。
+     * Get 排序方式，包括升序：asc 降序：desc。默认值为desc。 
+     * @return OrderByType 排序方式，包括升序：asc 降序：desc。默认值为desc。
      */
     public String getOrderByType() {
         return this.OrderByType;
     }
 
     /**
-     * Set 排序类型。升序asc、降序desc。默认desc。
-     * @param OrderByType 排序类型。升序asc、降序desc。默认desc。
+     * Set 排序方式，包括升序：asc 降序：desc。默认值为desc。
+     * @param OrderByType 排序方式，包括升序：asc 降序：desc。默认值为desc。
      */
     public void setOrderByType(String OrderByType) {
         this.OrderByType = OrderByType;
     }
 
     /**
-     * Get 分页大小。取值范围[1,100]。默认50。 
-     * @return Limit 分页大小。取值范围[1,100]。默认50。
+     * Get 每页显示数量，取值范围为1-100。默认值为50。	 
+     * @return Limit 每页显示数量，取值范围为1-100。默认值为50。	
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 分页大小。取值范围[1,100]。默认50。
-     * @param Limit 分页大小。取值范围[1,100]。默认50。
+     * Set 每页显示数量，取值范围为1-100。默认值为50。	
+     * @param Limit 每页显示数量，取值范围为1-100。默认值为50。	
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 分页偏移。取值范围[0,INF)。默认0。 
-     * @return Offset 分页偏移。取值范围[0,INF)。默认0。
+     * Get 数据偏移量，从0开始。默认值为0。 
+     * @return Offset 数据偏移量，从0开始。默认值为0。
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页偏移。取值范围[0,INF)。默认0。
-     * @param Offset 分页偏移。取值范围[0,INF)。默认0。
+     * Set 数据偏移量，从0开始。默认值为0。
+     * @param Offset 数据偏移量，从0开始。默认值为0。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeSlowQueryListResponse extends AbstractModel {
 
     /**
-    * 选定时间范围内慢SQL总条数。
+    * 查询到的慢日志数量，最大值为10000条。	
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 指定时间范围内，慢SQL耗时分段分析。
+    * 查询到的慢日志耗时分段分析结果。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DurationAnalysis")
@@ -39,7 +39,7 @@ public class DescribeSlowQueryListResponse extends AbstractModel {
     private DurationAnalysis [] DurationAnalysis;
 
     /**
-    * 指定时间范围内 慢SQL流水。
+    * 查询到的慢日志详细信息集合。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RawSlowQueryList")
@@ -54,25 +54,25 @@ public class DescribeSlowQueryListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 选定时间范围内慢SQL总条数。 
-     * @return TotalCount 选定时间范围内慢SQL总条数。
+     * Get 查询到的慢日志数量，最大值为10000条。	 
+     * @return TotalCount 查询到的慢日志数量，最大值为10000条。	
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 选定时间范围内慢SQL总条数。
-     * @param TotalCount 选定时间范围内慢SQL总条数。
+     * Set 查询到的慢日志数量，最大值为10000条。	
+     * @param TotalCount 查询到的慢日志数量，最大值为10000条。	
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 指定时间范围内，慢SQL耗时分段分析。
+     * Get 查询到的慢日志耗时分段分析结果。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DurationAnalysis 指定时间范围内，慢SQL耗时分段分析。
+     * @return DurationAnalysis 查询到的慢日志耗时分段分析结果。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DurationAnalysis [] getDurationAnalysis() {
@@ -80,9 +80,9 @@ public class DescribeSlowQueryListResponse extends AbstractModel {
     }
 
     /**
-     * Set 指定时间范围内，慢SQL耗时分段分析。
+     * Set 查询到的慢日志耗时分段分析结果。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DurationAnalysis 指定时间范围内，慢SQL耗时分段分析。
+     * @param DurationAnalysis 查询到的慢日志耗时分段分析结果。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDurationAnalysis(DurationAnalysis [] DurationAnalysis) {
@@ -90,9 +90,9 @@ public class DescribeSlowQueryListResponse extends AbstractModel {
     }
 
     /**
-     * Get 指定时间范围内 慢SQL流水。
+     * Get 查询到的慢日志详细信息集合。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RawSlowQueryList 指定时间范围内 慢SQL流水。
+     * @return RawSlowQueryList 查询到的慢日志详细信息集合。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public RawSlowQuery [] getRawSlowQueryList() {
@@ -100,9 +100,9 @@ public class DescribeSlowQueryListResponse extends AbstractModel {
     }
 
     /**
-     * Set 指定时间范围内 慢SQL流水。
+     * Set 查询到的慢日志详细信息集合。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RawSlowQueryList 指定时间范围内 慢SQL流水。
+     * @param RawSlowQueryList 查询到的慢日志详细信息集合。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRawSlowQueryList(RawSlowQuery [] RawSlowQueryList) {

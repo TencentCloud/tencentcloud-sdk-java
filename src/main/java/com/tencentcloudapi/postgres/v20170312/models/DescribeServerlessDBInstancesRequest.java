@@ -24,7 +24,13 @@ import java.util.HashMap;
 public class DescribeServerlessDBInstancesRequest extends AbstractModel {
 
     /**
-    * 查询条件
+    * 查询条件。按照一个或者多个过滤条件进行查询，目前支持的过滤条件类型（name字段指定）有： 
+
+- db-instance-id：按照实例ID过滤，类型为string
+- db-instance-name：按照实例名过滤，类型为string
+- db-tag-key：按照实例的tag过滤，类型为string
+
+value字段指定该类型过滤条件下具体要过滤的实例ID/实例名/实例tag-key。
     */
     @SerializedName("Filter")
     @Expose
@@ -59,16 +65,40 @@ public class DescribeServerlessDBInstancesRequest extends AbstractModel {
     private String OrderByType;
 
     /**
-     * Get 查询条件 
-     * @return Filter 查询条件
+     * Get 查询条件。按照一个或者多个过滤条件进行查询，目前支持的过滤条件类型（name字段指定）有： 
+
+- db-instance-id：按照实例ID过滤，类型为string
+- db-instance-name：按照实例名过滤，类型为string
+- db-tag-key：按照实例的tag过滤，类型为string
+
+value字段指定该类型过滤条件下具体要过滤的实例ID/实例名/实例tag-key。 
+     * @return Filter 查询条件。按照一个或者多个过滤条件进行查询，目前支持的过滤条件类型（name字段指定）有： 
+
+- db-instance-id：按照实例ID过滤，类型为string
+- db-instance-name：按照实例名过滤，类型为string
+- db-tag-key：按照实例的tag过滤，类型为string
+
+value字段指定该类型过滤条件下具体要过滤的实例ID/实例名/实例tag-key。
      */
     public Filter [] getFilter() {
         return this.Filter;
     }
 
     /**
-     * Set 查询条件
-     * @param Filter 查询条件
+     * Set 查询条件。按照一个或者多个过滤条件进行查询，目前支持的过滤条件类型（name字段指定）有： 
+
+- db-instance-id：按照实例ID过滤，类型为string
+- db-instance-name：按照实例名过滤，类型为string
+- db-tag-key：按照实例的tag过滤，类型为string
+
+value字段指定该类型过滤条件下具体要过滤的实例ID/实例名/实例tag-key。
+     * @param Filter 查询条件。按照一个或者多个过滤条件进行查询，目前支持的过滤条件类型（name字段指定）有： 
+
+- db-instance-id：按照实例ID过滤，类型为string
+- db-instance-name：按照实例名过滤，类型为string
+- db-tag-key：按照实例的tag过滤，类型为string
+
+value字段指定该类型过滤条件下具体要过滤的实例ID/实例名/实例tag-key。
      */
     public void setFilter(Filter [] Filter) {
         this.Filter = Filter;
