@@ -24,11 +24,25 @@ import java.util.HashMap;
 public class DescribeBiddingSuccessfulListRequest extends AbstractModel {
 
     /**
+    * 页码
+    */
+    @SerializedName("PageNumber")
+    @Expose
+    private Long PageNumber;
+
+    /**
     * 每页数量
     */
     @SerializedName("PageSize")
     @Expose
     private Long PageSize;
+
+    /**
+    * 域名
+    */
+    @SerializedName("Domain")
+    @Expose
+    private String Domain;
 
     /**
     * 状态：5 等待支付 6 等待转移， 7 转移中，8 交易成功，11 尾款阶段持有者索回，12 已违约
@@ -52,6 +66,22 @@ public class DescribeBiddingSuccessfulListRequest extends AbstractModel {
     private String SortOrder;
 
     /**
+     * Get 页码 
+     * @return PageNumber 页码
+     */
+    public Long getPageNumber() {
+        return this.PageNumber;
+    }
+
+    /**
+     * Set 页码
+     * @param PageNumber 页码
+     */
+    public void setPageNumber(Long PageNumber) {
+        this.PageNumber = PageNumber;
+    }
+
+    /**
      * Get 每页数量 
      * @return PageSize 每页数量
      */
@@ -65,6 +95,22 @@ public class DescribeBiddingSuccessfulListRequest extends AbstractModel {
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
+    }
+
+    /**
+     * Get 域名 
+     * @return Domain 域名
+     */
+    public String getDomain() {
+        return this.Domain;
+    }
+
+    /**
+     * Set 域名
+     * @param Domain 域名
+     */
+    public void setDomain(String Domain) {
+        this.Domain = Domain;
     }
 
     /**
@@ -123,8 +169,14 @@ public class DescribeBiddingSuccessfulListRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeBiddingSuccessfulListRequest(DescribeBiddingSuccessfulListRequest source) {
+        if (source.PageNumber != null) {
+            this.PageNumber = new Long(source.PageNumber);
+        }
         if (source.PageSize != null) {
             this.PageSize = new Long(source.PageSize);
+        }
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
         }
         if (source.Status != null) {
             this.Status = new Long[source.Status.length];
@@ -145,7 +197,9 @@ public class DescribeBiddingSuccessfulListRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "PageNumber", this.PageNumber);
         this.setParamSimple(map, prefix + "PageSize", this.PageSize);
+        this.setParamSimple(map, prefix + "Domain", this.Domain);
         this.setParamArraySimple(map, prefix + "Status.", this.Status);
         this.setParamSimple(map, prefix + "SortField", this.SortField);
         this.setParamSimple(map, prefix + "SortOrder", this.SortOrder);

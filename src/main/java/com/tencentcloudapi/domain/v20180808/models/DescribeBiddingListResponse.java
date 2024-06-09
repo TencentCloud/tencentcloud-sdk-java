@@ -24,11 +24,57 @@ import java.util.HashMap;
 public class DescribeBiddingListResponse extends AbstractModel {
 
     /**
+    * 搜索结果条数
+    */
+    @SerializedName("Total")
+    @Expose
+    private Long Total;
+
+    /**
+    * 竞价列表
+    */
+    @SerializedName("BiddingList")
+    @Expose
+    private BiddingResult [] BiddingList;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 搜索结果条数 
+     * @return Total 搜索结果条数
+     */
+    public Long getTotal() {
+        return this.Total;
+    }
+
+    /**
+     * Set 搜索结果条数
+     * @param Total 搜索结果条数
+     */
+    public void setTotal(Long Total) {
+        this.Total = Total;
+    }
+
+    /**
+     * Get 竞价列表 
+     * @return BiddingList 竞价列表
+     */
+    public BiddingResult [] getBiddingList() {
+        return this.BiddingList;
+    }
+
+    /**
+     * Set 竞价列表
+     * @param BiddingList 竞价列表
+     */
+    public void setBiddingList(BiddingResult [] BiddingList) {
+        this.BiddingList = BiddingList;
+    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -54,6 +100,15 @@ public class DescribeBiddingListResponse extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeBiddingListResponse(DescribeBiddingListResponse source) {
+        if (source.Total != null) {
+            this.Total = new Long(source.Total);
+        }
+        if (source.BiddingList != null) {
+            this.BiddingList = new BiddingResult[source.BiddingList.length];
+            for (int i = 0; i < source.BiddingList.length; i++) {
+                this.BiddingList[i] = new BiddingResult(source.BiddingList[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -64,6 +119,8 @@ public class DescribeBiddingListResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Total", this.Total);
+        this.setParamArrayObj(map, prefix + "BiddingList.", this.BiddingList);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

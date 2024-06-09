@@ -24,6 +24,69 @@ import java.util.HashMap;
 public class DescribeBiddingAppointDetailResponse extends AbstractModel {
 
     /**
+    * 域名
+    */
+    @SerializedName("Domain")
+    @Expose
+    private String Domain;
+
+    /**
+    * 预约人数
+    */
+    @SerializedName("AppointNum")
+    @Expose
+    private Long AppointNum;
+
+    /**
+    * 预约开始时间
+    */
+    @SerializedName("AppointStartTime")
+    @Expose
+    private String AppointStartTime;
+
+    /**
+    * 预约结束时间
+    */
+    @SerializedName("AppointEndTime")
+    @Expose
+    private String AppointEndTime;
+
+    /**
+    *  注册时间
+    */
+    @SerializedName("RegTime")
+    @Expose
+    private String RegTime;
+
+    /**
+    * 过期时间
+    */
+    @SerializedName("ExpireTime")
+    @Expose
+    private String ExpireTime;
+
+    /**
+    * 删除时间
+    */
+    @SerializedName("DeleteTime")
+    @Expose
+    private String DeleteTime;
+
+    /**
+    * 当前价格
+    */
+    @SerializedName("AppointPrice")
+    @Expose
+    private Long AppointPrice;
+
+    /**
+    * 预约保证金
+    */
+    @SerializedName("AppointBondPrice")
+    @Expose
+    private Long AppointBondPrice;
+
+    /**
     *  1 已预约，2 竞价中，3 等待出价 4 等待支付 5 失败 6 转移中，7 转移成功 8 持有者索回
     */
     @SerializedName("Status")
@@ -44,6 +107,150 @@ yes：退回 no: 未退回
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 域名 
+     * @return Domain 域名
+     */
+    public String getDomain() {
+        return this.Domain;
+    }
+
+    /**
+     * Set 域名
+     * @param Domain 域名
+     */
+    public void setDomain(String Domain) {
+        this.Domain = Domain;
+    }
+
+    /**
+     * Get 预约人数 
+     * @return AppointNum 预约人数
+     */
+    public Long getAppointNum() {
+        return this.AppointNum;
+    }
+
+    /**
+     * Set 预约人数
+     * @param AppointNum 预约人数
+     */
+    public void setAppointNum(Long AppointNum) {
+        this.AppointNum = AppointNum;
+    }
+
+    /**
+     * Get 预约开始时间 
+     * @return AppointStartTime 预约开始时间
+     */
+    public String getAppointStartTime() {
+        return this.AppointStartTime;
+    }
+
+    /**
+     * Set 预约开始时间
+     * @param AppointStartTime 预约开始时间
+     */
+    public void setAppointStartTime(String AppointStartTime) {
+        this.AppointStartTime = AppointStartTime;
+    }
+
+    /**
+     * Get 预约结束时间 
+     * @return AppointEndTime 预约结束时间
+     */
+    public String getAppointEndTime() {
+        return this.AppointEndTime;
+    }
+
+    /**
+     * Set 预约结束时间
+     * @param AppointEndTime 预约结束时间
+     */
+    public void setAppointEndTime(String AppointEndTime) {
+        this.AppointEndTime = AppointEndTime;
+    }
+
+    /**
+     * Get  注册时间 
+     * @return RegTime  注册时间
+     */
+    public String getRegTime() {
+        return this.RegTime;
+    }
+
+    /**
+     * Set  注册时间
+     * @param RegTime  注册时间
+     */
+    public void setRegTime(String RegTime) {
+        this.RegTime = RegTime;
+    }
+
+    /**
+     * Get 过期时间 
+     * @return ExpireTime 过期时间
+     */
+    public String getExpireTime() {
+        return this.ExpireTime;
+    }
+
+    /**
+     * Set 过期时间
+     * @param ExpireTime 过期时间
+     */
+    public void setExpireTime(String ExpireTime) {
+        this.ExpireTime = ExpireTime;
+    }
+
+    /**
+     * Get 删除时间 
+     * @return DeleteTime 删除时间
+     */
+    public String getDeleteTime() {
+        return this.DeleteTime;
+    }
+
+    /**
+     * Set 删除时间
+     * @param DeleteTime 删除时间
+     */
+    public void setDeleteTime(String DeleteTime) {
+        this.DeleteTime = DeleteTime;
+    }
+
+    /**
+     * Get 当前价格 
+     * @return AppointPrice 当前价格
+     */
+    public Long getAppointPrice() {
+        return this.AppointPrice;
+    }
+
+    /**
+     * Set 当前价格
+     * @param AppointPrice 当前价格
+     */
+    public void setAppointPrice(Long AppointPrice) {
+        this.AppointPrice = AppointPrice;
+    }
+
+    /**
+     * Get 预约保证金 
+     * @return AppointBondPrice 预约保证金
+     */
+    public Long getAppointBondPrice() {
+        return this.AppointBondPrice;
+    }
+
+    /**
+     * Set 预约保证金
+     * @param AppointBondPrice 预约保证金
+     */
+    public void setAppointBondPrice(Long AppointBondPrice) {
+        this.AppointBondPrice = AppointBondPrice;
+    }
 
     /**
      * Get  1 已预约，2 竞价中，3 等待出价 4 等待支付 5 失败 6 转移中，7 转移成功 8 持有者索回 
@@ -105,6 +312,33 @@ yes：退回 no: 未退回
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeBiddingAppointDetailResponse(DescribeBiddingAppointDetailResponse source) {
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
+        if (source.AppointNum != null) {
+            this.AppointNum = new Long(source.AppointNum);
+        }
+        if (source.AppointStartTime != null) {
+            this.AppointStartTime = new String(source.AppointStartTime);
+        }
+        if (source.AppointEndTime != null) {
+            this.AppointEndTime = new String(source.AppointEndTime);
+        }
+        if (source.RegTime != null) {
+            this.RegTime = new String(source.RegTime);
+        }
+        if (source.ExpireTime != null) {
+            this.ExpireTime = new String(source.ExpireTime);
+        }
+        if (source.DeleteTime != null) {
+            this.DeleteTime = new String(source.DeleteTime);
+        }
+        if (source.AppointPrice != null) {
+            this.AppointPrice = new Long(source.AppointPrice);
+        }
+        if (source.AppointBondPrice != null) {
+            this.AppointBondPrice = new Long(source.AppointBondPrice);
+        }
         if (source.Status != null) {
             this.Status = new Long(source.Status);
         }
@@ -121,6 +355,15 @@ yes：退回 no: 未退回
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Domain", this.Domain);
+        this.setParamSimple(map, prefix + "AppointNum", this.AppointNum);
+        this.setParamSimple(map, prefix + "AppointStartTime", this.AppointStartTime);
+        this.setParamSimple(map, prefix + "AppointEndTime", this.AppointEndTime);
+        this.setParamSimple(map, prefix + "RegTime", this.RegTime);
+        this.setParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
+        this.setParamSimple(map, prefix + "DeleteTime", this.DeleteTime);
+        this.setParamSimple(map, prefix + "AppointPrice", this.AppointPrice);
+        this.setParamSimple(map, prefix + "AppointBondPrice", this.AppointBondPrice);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "BiddingBondRefund", this.BiddingBondRefund);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);

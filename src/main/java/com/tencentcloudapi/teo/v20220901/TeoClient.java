@@ -152,6 +152,17 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     }
 
     /**
+     *创建自定义错误页面。
+     * @param req CreateCustomizeErrorPageRequest
+     * @return CreateCustomizeErrorPageResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCustomizeErrorPageResponse CreateCustomizeErrorPage(CreateCustomizeErrorPageRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateCustomizeErrorPage", CreateCustomizeErrorPageResponse.class);
+    }
+
+    /**
      *用于创建四层代理实例。
      * @param req CreateL4ProxyRequest
      * @return CreateL4ProxyResponse
@@ -332,6 +343,17 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     public DeleteApplicationProxyRuleResponse DeleteApplicationProxyRule(DeleteApplicationProxyRuleRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteApplicationProxyRule", DeleteApplicationProxyRuleResponse.class);
+    }
+
+    /**
+     *删除自定义错误页面。
+     * @param req DeleteCustomErrorPageRequest
+     * @return DeleteCustomErrorPageResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCustomErrorPageResponse DeleteCustomErrorPage(DeleteCustomErrorPageRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteCustomErrorPage", DeleteCustomErrorPageResponse.class);
     }
 
     /**
@@ -519,6 +541,17 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     public DescribeContentQuotaResponse DescribeContentQuota(DescribeContentQuotaRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeContentQuota", DescribeContentQuotaResponse.class);
+    }
+
+    /**
+     *查询自定义错误页列表。
+     * @param req DescribeCustomErrorPagesRequest
+     * @return DescribeCustomErrorPagesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCustomErrorPagesResponse DescribeCustomErrorPages(DescribeCustomErrorPagesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCustomErrorPages", DescribeCustomErrorPagesResponse.class);
     }
 
     /**
@@ -995,6 +1028,17 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     public ModifyApplicationProxyStatusResponse ModifyApplicationProxyStatus(ModifyApplicationProxyStatusRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyApplicationProxyStatus", ModifyApplicationProxyStatusResponse.class);
+    }
+
+    /**
+     *修改自定义错误页面。
+     * @param req ModifyCustomErrorPageRequest
+     * @return ModifyCustomErrorPageResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCustomErrorPageResponse ModifyCustomErrorPage(ModifyCustomErrorPageRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyCustomErrorPage", ModifyCustomErrorPageResponse.class);
     }
 
     /**

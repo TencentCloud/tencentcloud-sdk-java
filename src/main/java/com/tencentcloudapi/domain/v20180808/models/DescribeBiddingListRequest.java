@@ -24,11 +24,25 @@ import java.util.HashMap;
 public class DescribeBiddingListRequest extends AbstractModel {
 
     /**
+    * 页码
+    */
+    @SerializedName("PageNumber")
+    @Expose
+    private Long PageNumber;
+
+    /**
     * 每页数量
     */
     @SerializedName("PageSize")
     @Expose
     private Long PageSize;
+
+    /**
+    * 域名
+    */
+    @SerializedName("Domain")
+    @Expose
+    private String Domain;
 
     /**
     * 2 竞价中  3 等待出价  4 交易失败  10 竞价阶段持有者赎回
@@ -53,6 +67,22 @@ BiddingPrice 我的价格
     private String SortOrder;
 
     /**
+     * Get 页码 
+     * @return PageNumber 页码
+     */
+    public Long getPageNumber() {
+        return this.PageNumber;
+    }
+
+    /**
+     * Set 页码
+     * @param PageNumber 页码
+     */
+    public void setPageNumber(Long PageNumber) {
+        this.PageNumber = PageNumber;
+    }
+
+    /**
      * Get 每页数量 
      * @return PageSize 每页数量
      */
@@ -66,6 +96,22 @@ BiddingPrice 我的价格
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
+    }
+
+    /**
+     * Get 域名 
+     * @return Domain 域名
+     */
+    public String getDomain() {
+        return this.Domain;
+    }
+
+    /**
+     * Set 域名
+     * @param Domain 域名
+     */
+    public void setDomain(String Domain) {
+        this.Domain = Domain;
     }
 
     /**
@@ -128,8 +174,14 @@ BiddingPrice 我的价格
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeBiddingListRequest(DescribeBiddingListRequest source) {
+        if (source.PageNumber != null) {
+            this.PageNumber = new Long(source.PageNumber);
+        }
         if (source.PageSize != null) {
             this.PageSize = new Long(source.PageSize);
+        }
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
         }
         if (source.Status != null) {
             this.Status = new Long[source.Status.length];
@@ -150,7 +202,9 @@ BiddingPrice 我的价格
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "PageNumber", this.PageNumber);
         this.setParamSimple(map, prefix + "PageSize", this.PageSize);
+        this.setParamSimple(map, prefix + "Domain", this.Domain);
         this.setParamArraySimple(map, prefix + "Status.", this.Status);
         this.setParamSimple(map, prefix + "SortField", this.SortField);
         this.setParamSimple(map, prefix + "SortOrder", this.SortOrder);

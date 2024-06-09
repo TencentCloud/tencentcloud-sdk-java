@@ -864,6 +864,17 @@ public class TseClient extends AbstractClient{
     }
 
     /**
+     *查询公网地址信息
+     * @param req DescribePublicAddressConfigRequest
+     * @return DescribePublicAddressConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePublicAddressConfigResponse DescribePublicAddressConfig(DescribePublicAddressConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribePublicAddressConfig", DescribePublicAddressConfigResponse.class);
+    }
+
+    /**
      *查询云原生API网关实例公网详情
      * @param req DescribePublicNetworkRequest
      * @return DescribePublicNetworkResponse

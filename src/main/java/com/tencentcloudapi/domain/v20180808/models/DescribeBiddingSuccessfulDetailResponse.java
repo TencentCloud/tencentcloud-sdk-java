@@ -24,11 +24,67 @@ import java.util.HashMap;
 public class DescribeBiddingSuccessfulDetailResponse extends AbstractModel {
 
     /**
+    * 域名
+    */
+    @SerializedName("Domain")
+    @Expose
+    private String Domain;
+
+    /**
+    * 得标时间
+    */
+    @SerializedName("SuccessfulTime")
+    @Expose
+    private String SuccessfulTime;
+
+    /**
+    * 得标价格
+    */
+    @SerializedName("SuccessfulPrice")
+    @Expose
+    private Float SuccessfulPrice;
+
+    /**
+    *  注册时间
+    */
+    @SerializedName("RegTime")
+    @Expose
+    private String RegTime;
+
+    /**
+    * 过期时间
+    */
+    @SerializedName("ExpireTime")
+    @Expose
+    private String ExpireTime;
+
+    /**
+    * 删除时间
+    */
+    @SerializedName("DeleteTime")
+    @Expose
+    private String DeleteTime;
+
+    /**
+    * 付款结束时间
+    */
+    @SerializedName("PayEndTime")
+    @Expose
+    private String PayEndTime;
+
+    /**
     * 保证金，是否退款，yes表示退款，no表示不退款
     */
     @SerializedName("BiddingBondRefund")
     @Expose
     private String BiddingBondRefund;
+
+    /**
+    * 保证金
+    */
+    @SerializedName("BiddingBondPrice")
+    @Expose
+    private Float BiddingBondPrice;
 
     /**
     * 状态：1 竞价中，2 待出价，3 竞价失败， 4 等待支付 5 等待转移， 6 转移中，7 交易成功，8 持有者索回，9 已违约
@@ -45,6 +101,118 @@ public class DescribeBiddingSuccessfulDetailResponse extends AbstractModel {
     private String RequestId;
 
     /**
+     * Get 域名 
+     * @return Domain 域名
+     */
+    public String getDomain() {
+        return this.Domain;
+    }
+
+    /**
+     * Set 域名
+     * @param Domain 域名
+     */
+    public void setDomain(String Domain) {
+        this.Domain = Domain;
+    }
+
+    /**
+     * Get 得标时间 
+     * @return SuccessfulTime 得标时间
+     */
+    public String getSuccessfulTime() {
+        return this.SuccessfulTime;
+    }
+
+    /**
+     * Set 得标时间
+     * @param SuccessfulTime 得标时间
+     */
+    public void setSuccessfulTime(String SuccessfulTime) {
+        this.SuccessfulTime = SuccessfulTime;
+    }
+
+    /**
+     * Get 得标价格 
+     * @return SuccessfulPrice 得标价格
+     */
+    public Float getSuccessfulPrice() {
+        return this.SuccessfulPrice;
+    }
+
+    /**
+     * Set 得标价格
+     * @param SuccessfulPrice 得标价格
+     */
+    public void setSuccessfulPrice(Float SuccessfulPrice) {
+        this.SuccessfulPrice = SuccessfulPrice;
+    }
+
+    /**
+     * Get  注册时间 
+     * @return RegTime  注册时间
+     */
+    public String getRegTime() {
+        return this.RegTime;
+    }
+
+    /**
+     * Set  注册时间
+     * @param RegTime  注册时间
+     */
+    public void setRegTime(String RegTime) {
+        this.RegTime = RegTime;
+    }
+
+    /**
+     * Get 过期时间 
+     * @return ExpireTime 过期时间
+     */
+    public String getExpireTime() {
+        return this.ExpireTime;
+    }
+
+    /**
+     * Set 过期时间
+     * @param ExpireTime 过期时间
+     */
+    public void setExpireTime(String ExpireTime) {
+        this.ExpireTime = ExpireTime;
+    }
+
+    /**
+     * Get 删除时间 
+     * @return DeleteTime 删除时间
+     */
+    public String getDeleteTime() {
+        return this.DeleteTime;
+    }
+
+    /**
+     * Set 删除时间
+     * @param DeleteTime 删除时间
+     */
+    public void setDeleteTime(String DeleteTime) {
+        this.DeleteTime = DeleteTime;
+    }
+
+    /**
+     * Get 付款结束时间 
+     * @return PayEndTime 付款结束时间
+     */
+    public String getPayEndTime() {
+        return this.PayEndTime;
+    }
+
+    /**
+     * Set 付款结束时间
+     * @param PayEndTime 付款结束时间
+     */
+    public void setPayEndTime(String PayEndTime) {
+        this.PayEndTime = PayEndTime;
+    }
+
+    /**
      * Get 保证金，是否退款，yes表示退款，no表示不退款 
      * @return BiddingBondRefund 保证金，是否退款，yes表示退款，no表示不退款
      */
@@ -58,6 +226,22 @@ public class DescribeBiddingSuccessfulDetailResponse extends AbstractModel {
      */
     public void setBiddingBondRefund(String BiddingBondRefund) {
         this.BiddingBondRefund = BiddingBondRefund;
+    }
+
+    /**
+     * Get 保证金 
+     * @return BiddingBondPrice 保证金
+     */
+    public Float getBiddingBondPrice() {
+        return this.BiddingBondPrice;
+    }
+
+    /**
+     * Set 保证金
+     * @param BiddingBondPrice 保证金
+     */
+    public void setBiddingBondPrice(Float BiddingBondPrice) {
+        this.BiddingBondPrice = BiddingBondPrice;
     }
 
     /**
@@ -100,8 +284,32 @@ public class DescribeBiddingSuccessfulDetailResponse extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeBiddingSuccessfulDetailResponse(DescribeBiddingSuccessfulDetailResponse source) {
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
+        if (source.SuccessfulTime != null) {
+            this.SuccessfulTime = new String(source.SuccessfulTime);
+        }
+        if (source.SuccessfulPrice != null) {
+            this.SuccessfulPrice = new Float(source.SuccessfulPrice);
+        }
+        if (source.RegTime != null) {
+            this.RegTime = new String(source.RegTime);
+        }
+        if (source.ExpireTime != null) {
+            this.ExpireTime = new String(source.ExpireTime);
+        }
+        if (source.DeleteTime != null) {
+            this.DeleteTime = new String(source.DeleteTime);
+        }
+        if (source.PayEndTime != null) {
+            this.PayEndTime = new String(source.PayEndTime);
+        }
         if (source.BiddingBondRefund != null) {
             this.BiddingBondRefund = new String(source.BiddingBondRefund);
+        }
+        if (source.BiddingBondPrice != null) {
+            this.BiddingBondPrice = new Float(source.BiddingBondPrice);
         }
         if (source.Status != null) {
             this.Status = new Long(source.Status);
@@ -116,7 +324,15 @@ public class DescribeBiddingSuccessfulDetailResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Domain", this.Domain);
+        this.setParamSimple(map, prefix + "SuccessfulTime", this.SuccessfulTime);
+        this.setParamSimple(map, prefix + "SuccessfulPrice", this.SuccessfulPrice);
+        this.setParamSimple(map, prefix + "RegTime", this.RegTime);
+        this.setParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
+        this.setParamSimple(map, prefix + "DeleteTime", this.DeleteTime);
+        this.setParamSimple(map, prefix + "PayEndTime", this.PayEndTime);
         this.setParamSimple(map, prefix + "BiddingBondRefund", this.BiddingBondRefund);
+        this.setParamSimple(map, prefix + "BiddingBondPrice", this.BiddingBondPrice);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 

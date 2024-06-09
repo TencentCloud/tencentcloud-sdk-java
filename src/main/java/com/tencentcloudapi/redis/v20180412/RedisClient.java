@@ -248,6 +248,17 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeBackupDetail）用于查询实例的备份信息详情。
+     * @param req DescribeBackupDetailRequest
+     * @return DescribeBackupDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBackupDetailResponse DescribeBackupDetail(DescribeBackupDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBackupDetail", DescribeBackupDetailResponse.class);
+    }
+
+    /**
      *本接口（DescribeBackupDownloadRestriction）用于查询当前地域数据库备份文件的下载地址。
      * @param req DescribeBackupDownloadRestrictionRequest
      * @return DescribeBackupDownloadRestrictionResponse

@@ -23,6 +23,29 @@ import java.util.HashMap;
 
 public class DescribeBiddingSuccessfulDetailRequest extends AbstractModel {
 
+    /**
+    * business_id
+    */
+    @SerializedName("BusinessID")
+    @Expose
+    private String BusinessID;
+
+    /**
+     * Get business_id 
+     * @return BusinessID business_id
+     */
+    public String getBusinessID() {
+        return this.BusinessID;
+    }
+
+    /**
+     * Set business_id
+     * @param BusinessID business_id
+     */
+    public void setBusinessID(String BusinessID) {
+        this.BusinessID = BusinessID;
+    }
+
     public DescribeBiddingSuccessfulDetailRequest() {
     }
 
@@ -31,6 +54,9 @@ public class DescribeBiddingSuccessfulDetailRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeBiddingSuccessfulDetailRequest(DescribeBiddingSuccessfulDetailRequest source) {
+        if (source.BusinessID != null) {
+            this.BusinessID = new String(source.BusinessID);
+        }
     }
 
 
@@ -38,6 +64,7 @@ public class DescribeBiddingSuccessfulDetailRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "BusinessID", this.BusinessID);
 
     }
 }

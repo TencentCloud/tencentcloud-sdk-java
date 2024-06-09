@@ -47,6 +47,14 @@ public class ScaleOutClusterResponse extends AbstractModel {
     private Long FlowId;
 
     /**
+    * 查询流程状态，流程额外信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TraceId")
+    @Expose
+    private String TraceId;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -110,6 +118,26 @@ public class ScaleOutClusterResponse extends AbstractModel {
     }
 
     /**
+     * Get 查询流程状态，流程额外信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TraceId 查询流程状态，流程额外信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTraceId() {
+        return this.TraceId;
+    }
+
+    /**
+     * Set 查询流程状态，流程额外信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TraceId 查询流程状态，流程额外信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTraceId(String TraceId) {
+        this.TraceId = TraceId;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -142,6 +170,9 @@ public class ScaleOutClusterResponse extends AbstractModel {
         if (source.FlowId != null) {
             this.FlowId = new Long(source.FlowId);
         }
+        if (source.TraceId != null) {
+            this.TraceId = new String(source.TraceId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -155,6 +186,7 @@ public class ScaleOutClusterResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "ClientToken", this.ClientToken);
         this.setParamSimple(map, prefix + "FlowId", this.FlowId);
+        this.setParamSimple(map, prefix + "TraceId", this.TraceId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
