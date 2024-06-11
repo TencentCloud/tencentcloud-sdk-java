@@ -40,7 +40,7 @@ public class StartWebRecordRequest extends AbstractModel {
     private Long MaxDurationLimit;
 
     /**
-    * 云存储相关的参数，目前支持腾讯云对象存储，不支持第三方云存储以及VOD
+    * 云存储相关的参数，目前支持腾讯云对象存储以及腾讯云云点播VOD，不支持第三方云存储
     */
     @SerializedName("StorageParams")
     @Expose
@@ -116,16 +116,16 @@ public class StartWebRecordRequest extends AbstractModel {
     }
 
     /**
-     * Get 云存储相关的参数，目前支持腾讯云对象存储，不支持第三方云存储以及VOD 
-     * @return StorageParams 云存储相关的参数，目前支持腾讯云对象存储，不支持第三方云存储以及VOD
+     * Get 云存储相关的参数，目前支持腾讯云对象存储以及腾讯云云点播VOD，不支持第三方云存储 
+     * @return StorageParams 云存储相关的参数，目前支持腾讯云对象存储以及腾讯云云点播VOD，不支持第三方云存储
      */
     public StorageParams getStorageParams() {
         return this.StorageParams;
     }
 
     /**
-     * Set 云存储相关的参数，目前支持腾讯云对象存储，不支持第三方云存储以及VOD
-     * @param StorageParams 云存储相关的参数，目前支持腾讯云对象存储，不支持第三方云存储以及VOD
+     * Set 云存储相关的参数，目前支持腾讯云对象存储以及腾讯云云点播VOD，不支持第三方云存储
+     * @param StorageParams 云存储相关的参数，目前支持腾讯云对象存储以及腾讯云云点播VOD，不支持第三方云存储
      */
     public void setStorageParams(StorageParams StorageParams) {
         this.StorageParams = StorageParams;

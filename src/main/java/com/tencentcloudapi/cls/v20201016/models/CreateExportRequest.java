@@ -81,6 +81,13 @@ public class CreateExportRequest extends AbstractModel {
     private Long SyntaxRule;
 
     /**
+    * 导出字段
+    */
+    @SerializedName("DerivedFields")
+    @Expose
+    private String [] DerivedFields;
+
+    /**
      * Get 日志主题ID 
      * @return TopicId 日志主题ID
      */
@@ -212,6 +219,22 @@ public class CreateExportRequest extends AbstractModel {
         this.SyntaxRule = SyntaxRule;
     }
 
+    /**
+     * Get 导出字段 
+     * @return DerivedFields 导出字段
+     */
+    public String [] getDerivedFields() {
+        return this.DerivedFields;
+    }
+
+    /**
+     * Set 导出字段
+     * @param DerivedFields 导出字段
+     */
+    public void setDerivedFields(String [] DerivedFields) {
+        this.DerivedFields = DerivedFields;
+    }
+
     public CreateExportRequest() {
     }
 
@@ -244,6 +267,12 @@ public class CreateExportRequest extends AbstractModel {
         if (source.SyntaxRule != null) {
             this.SyntaxRule = new Long(source.SyntaxRule);
         }
+        if (source.DerivedFields != null) {
+            this.DerivedFields = new String[source.DerivedFields.length];
+            for (int i = 0; i < source.DerivedFields.length; i++) {
+                this.DerivedFields[i] = new String(source.DerivedFields[i]);
+            }
+        }
     }
 
 
@@ -259,6 +288,7 @@ public class CreateExportRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Order", this.Order);
         this.setParamSimple(map, prefix + "Format", this.Format);
         this.setParamSimple(map, prefix + "SyntaxRule", this.SyntaxRule);
+        this.setParamArraySimple(map, prefix + "DerivedFields.", this.DerivedFields);
 
     }
 }

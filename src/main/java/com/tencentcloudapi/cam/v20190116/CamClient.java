@@ -94,6 +94,17 @@ public class CamClient extends AbstractClient{
     }
 
     /**
+     *获取数据流认证Token
+     * @param req BuildDataFlowAuthTokenRequest
+     * @return BuildDataFlowAuthTokenResponse
+     * @throws TencentCloudSDKException
+     */
+    public BuildDataFlowAuthTokenResponse BuildDataFlowAuthToken(BuildDataFlowAuthTokenRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "BuildDataFlowAuthToken", BuildDataFlowAuthTokenResponse.class);
+    }
+
+    /**
      *验证自定义多因子Token
      * @param req ConsumeCustomMFATokenRequest
      * @return ConsumeCustomMFATokenResponse

@@ -167,6 +167,14 @@ public class ProbeTask extends AbstractModel {
     private KeyValuePair [] TagInfoList;
 
     /**
+    * 是否为同步账号
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SubSyncFlag")
+    @Expose
+    private Long SubSyncFlag;
+
+    /**
      * Get 任务名
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Name 任务名
@@ -546,6 +554,26 @@ public class ProbeTask extends AbstractModel {
         this.TagInfoList = TagInfoList;
     }
 
+    /**
+     * Get 是否为同步账号
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SubSyncFlag 是否为同步账号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getSubSyncFlag() {
+        return this.SubSyncFlag;
+    }
+
+    /**
+     * Set 是否为同步账号
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SubSyncFlag 是否为同步账号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSubSyncFlag(Long SubSyncFlag) {
+        this.SubSyncFlag = SubSyncFlag;
+    }
+
     public ProbeTask() {
     }
 
@@ -608,6 +636,9 @@ public class ProbeTask extends AbstractModel {
                 this.TagInfoList[i] = new KeyValuePair(source.TagInfoList[i]);
             }
         }
+        if (source.SubSyncFlag != null) {
+            this.SubSyncFlag = new Long(source.SubSyncFlag);
+        }
     }
 
 
@@ -631,6 +662,7 @@ public class ProbeTask extends AbstractModel {
         this.setParamSimple(map, prefix + "Cron", this.Cron);
         this.setParamSimple(map, prefix + "CronState", this.CronState);
         this.setParamArrayObj(map, prefix + "TagInfoList.", this.TagInfoList);
+        this.setParamSimple(map, prefix + "SubSyncFlag", this.SubSyncFlag);
 
     }
 }

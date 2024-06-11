@@ -150,6 +150,17 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeBackupRules）用于获取实例自动备份配置信息。
+     * @param req DescribeBackupRulesRequest
+     * @return DescribeBackupRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBackupRulesResponse DescribeBackupRules(DescribeBackupRulesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBackupRules", DescribeBackupRulesResponse.class);
+    }
+
+    /**
      *本接口（DescribeClientConnections）用于查询实例客户端连接信息，包括连接 IP 和连接数量。
      * @param req DescribeClientConnectionsRequest
      * @return DescribeClientConnectionsResponse
@@ -268,6 +279,28 @@ public class MongodbClient extends AbstractClient{
     public DescribeSpecInfoResponse DescribeSpecInfo(DescribeSpecInfoRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeSpecInfo", DescribeSpecInfoResponse.class);
+    }
+
+    /**
+     *获取实例透明加密的开启状态
+     * @param req DescribeTransparentDataEncryptionStatusRequest
+     * @return DescribeTransparentDataEncryptionStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTransparentDataEncryptionStatusResponse DescribeTransparentDataEncryptionStatus(DescribeTransparentDataEncryptionStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTransparentDataEncryptionStatus", DescribeTransparentDataEncryptionStatusResponse.class);
+    }
+
+    /**
+     *本接口(EnableTransparentDataEncryption)用于开启云数据库 MongoDB 的透明加密能力。
+     * @param req EnableTransparentDataEncryptionRequest
+     * @return EnableTransparentDataEncryptionResponse
+     * @throws TencentCloudSDKException
+     */
+    public EnableTransparentDataEncryptionResponse EnableTransparentDataEncryption(EnableTransparentDataEncryptionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "EnableTransparentDataEncryption", EnableTransparentDataEncryptionResponse.class);
     }
 
     /**
@@ -434,6 +467,17 @@ public class MongodbClient extends AbstractClient{
     public SetAccountUserPrivilegeResponse SetAccountUserPrivilege(SetAccountUserPrivilegeRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "SetAccountUserPrivilege", SetAccountUserPrivilegeResponse.class);
+    }
+
+    /**
+     *本接口(SetBackupRules)用于设置 MongoDB 云数据库的自动备份规则。
+     * @param req SetBackupRulesRequest
+     * @return SetBackupRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public SetBackupRulesResponse SetBackupRules(SetBackupRulesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SetBackupRules", SetBackupRulesResponse.class);
     }
 
     /**

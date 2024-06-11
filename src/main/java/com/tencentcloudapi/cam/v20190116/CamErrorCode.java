@@ -9,6 +9,12 @@ public enum CamErrorCode {
     // 操作访问密钥错误。
      FAILEDOPERATION_ACCESSKEY("FailedOperation.Accesskey"),
      
+    // 生成AuthToken异常。
+     FAILEDOPERATION_BUILDAUTHTOKEN("FailedOperation.BuildAuthToken"),
+     
+    // 凭据操作失败。
+     FAILEDOPERATION_FLOWAUTHILLEGAL("FailedOperation.FlowAuthIllegal"),
+     
     // 集团策略不允许操作。
      FAILEDOPERATION_ORGANIZATIONPOLICYOPERATEERROR("FailedOperation.OrganizationPolicyOperateError"),
      
@@ -288,6 +294,9 @@ public enum CamErrorCode {
     // 用户账号超出了限制。
      REQUESTLIMITEXCEEDED_UINLIMITEXCEEDED("RequestLimitExceeded.UinLimitExceeded"),
      
+    // 未开启CAM数据流认证。
+     RESOURCENOTFOUND_DATAFLOWAUTHCLOSE("ResourceNotFound.DataFlowAuthClose"),
+     
     // 用户组不存在。
      RESOURCENOTFOUND_GROUPNOTEXIST("ResourceNotFound.GroupNotExist"),
      
@@ -305,6 +314,9 @@ public enum CamErrorCode {
      
     // 用户不存在。
      RESOURCENOTFOUND_USERNOTEXIST("ResourceNotFound.UserNotExist"),
+     
+    // 凭据信息异常。
+     RESOURCEUNAVAILABLE_FLOWAUTHSECET("ResourceUnavailable.FlowAuthSecet"),
      
     // 未授权操作。
      UNAUTHORIZEDOPERATION("UnauthorizedOperation"),
