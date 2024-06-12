@@ -52,6 +52,13 @@ public class GetWechatDeviceTicketRequest extends AbstractModel {
     private String ModelId;
 
     /**
+    * 小程序APPID
+    */
+    @SerializedName("MiniProgramAppId")
+    @Expose
+    private String MiniProgramAppId;
+
+    /**
      * Get 产品ID 
      * @return ProductId 产品ID
      */
@@ -115,6 +122,22 @@ public class GetWechatDeviceTicketRequest extends AbstractModel {
         this.ModelId = ModelId;
     }
 
+    /**
+     * Get 小程序APPID 
+     * @return MiniProgramAppId 小程序APPID
+     */
+    public String getMiniProgramAppId() {
+        return this.MiniProgramAppId;
+    }
+
+    /**
+     * Set 小程序APPID
+     * @param MiniProgramAppId 小程序APPID
+     */
+    public void setMiniProgramAppId(String MiniProgramAppId) {
+        this.MiniProgramAppId = MiniProgramAppId;
+    }
+
     public GetWechatDeviceTicketRequest() {
     }
 
@@ -135,6 +158,9 @@ public class GetWechatDeviceTicketRequest extends AbstractModel {
         if (source.ModelId != null) {
             this.ModelId = new String(source.ModelId);
         }
+        if (source.MiniProgramAppId != null) {
+            this.MiniProgramAppId = new String(source.MiniProgramAppId);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class GetWechatDeviceTicketRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "DeviceName", this.DeviceName);
         this.setParamSimple(map, prefix + "IsThirdApp", this.IsThirdApp);
         this.setParamSimple(map, prefix + "ModelId", this.ModelId);
+        this.setParamSimple(map, prefix + "MiniProgramAppId", this.MiniProgramAppId);
 
     }
 }

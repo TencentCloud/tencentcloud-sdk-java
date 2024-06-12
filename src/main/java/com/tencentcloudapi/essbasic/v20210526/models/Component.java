@@ -194,7 +194,13 @@ public class Component extends AbstractModel {
 <li> <b>IMG_ESIGN</b> : 图片印章(该类型支持用户在签署将上传的PNG格式的图片作为签名)</li></ul>
 <b>参考样例</b>：`{"ComponentTypeLimit": ["SYSTEM_ESIGN"]}`
 印章的对应关系参考下图
-![image](https://qcloudimg.tencent-cloud.cn/raw/ee0498856c060c065628a0c5ba780d6b.jpg)
+![image](https://qcloudimg.tencent-cloud.cn/raw/ee0498856c060c065628a0c5ba780d6b.jpg)<br><br>
+<font color="red">ComponentType为SIGN_SEAL 或者 SIGN_PAGING_SEAL类型时</font>，可以通过**ComponentTypeLimit**参数控制签署方签署时要使用的印章类型，支持指定以下印章类型
+<ul><li> <b>OFFICIAL</b> :  企业公章</li>
+<li> <b>CONTRACT</b> : 合同专用章</li>
+<li> <b>FINANCE</b> : 财务专用章</li>
+<li> <b>PERSONNEL</b> : 人事专用章</li></ul>
+<b>参考样例</b>：`{\"ComponentTypeLimit\":[\"PERSONNEL\",\"FINANCE\"]}` 表示改印章签署区,客户需使用人事专用章或财务专用章盖章签署。<br><br>
 
 <font color="red">ComponentType为SIGN_DATE时</font>，支持以下参数：
 <ul><li> <b>Font</b> :字符串类型目前只支持"黑体"、"宋体"，如果不填默认为"黑体"</li>
@@ -814,7 +820,13 @@ public class Component extends AbstractModel {
 <li> <b>IMG_ESIGN</b> : 图片印章(该类型支持用户在签署将上传的PNG格式的图片作为签名)</li></ul>
 <b>参考样例</b>：`{"ComponentTypeLimit": ["SYSTEM_ESIGN"]}`
 印章的对应关系参考下图
-![image](https://qcloudimg.tencent-cloud.cn/raw/ee0498856c060c065628a0c5ba780d6b.jpg)
+![image](https://qcloudimg.tencent-cloud.cn/raw/ee0498856c060c065628a0c5ba780d6b.jpg)<br><br>
+<font color="red">ComponentType为SIGN_SEAL 或者 SIGN_PAGING_SEAL类型时</font>，可以通过**ComponentTypeLimit**参数控制签署方签署时要使用的印章类型，支持指定以下印章类型
+<ul><li> <b>OFFICIAL</b> :  企业公章</li>
+<li> <b>CONTRACT</b> : 合同专用章</li>
+<li> <b>FINANCE</b> : 财务专用章</li>
+<li> <b>PERSONNEL</b> : 人事专用章</li></ul>
+<b>参考样例</b>：`{\"ComponentTypeLimit\":[\"PERSONNEL\",\"FINANCE\"]}` 表示改印章签署区,客户需使用人事专用章或财务专用章盖章签署。<br><br>
 
 <font color="red">ComponentType为SIGN_DATE时</font>，支持以下参数：
 <ul><li> <b>Font</b> :字符串类型目前只支持"黑体"、"宋体"，如果不填默认为"黑体"</li>
@@ -866,7 +878,13 @@ public class Component extends AbstractModel {
 <li> <b>IMG_ESIGN</b> : 图片印章(该类型支持用户在签署将上传的PNG格式的图片作为签名)</li></ul>
 <b>参考样例</b>：`{"ComponentTypeLimit": ["SYSTEM_ESIGN"]}`
 印章的对应关系参考下图
-![image](https://qcloudimg.tencent-cloud.cn/raw/ee0498856c060c065628a0c5ba780d6b.jpg)
+![image](https://qcloudimg.tencent-cloud.cn/raw/ee0498856c060c065628a0c5ba780d6b.jpg)<br><br>
+<font color="red">ComponentType为SIGN_SEAL 或者 SIGN_PAGING_SEAL类型时</font>，可以通过**ComponentTypeLimit**参数控制签署方签署时要使用的印章类型，支持指定以下印章类型
+<ul><li> <b>OFFICIAL</b> :  企业公章</li>
+<li> <b>CONTRACT</b> : 合同专用章</li>
+<li> <b>FINANCE</b> : 财务专用章</li>
+<li> <b>PERSONNEL</b> : 人事专用章</li></ul>
+<b>参考样例</b>：`{\"ComponentTypeLimit\":[\"PERSONNEL\",\"FINANCE\"]}` 表示改印章签署区,客户需使用人事专用章或财务专用章盖章签署。<br><br>
 
 <font color="red">ComponentType为SIGN_DATE时</font>，支持以下参数：
 <ul><li> <b>Font</b> :字符串类型目前只支持"黑体"、"宋体"，如果不填默认为"黑体"</li>
@@ -924,7 +942,13 @@ public class Component extends AbstractModel {
 <li> <b>IMG_ESIGN</b> : 图片印章(该类型支持用户在签署将上传的PNG格式的图片作为签名)</li></ul>
 <b>参考样例</b>：`{"ComponentTypeLimit": ["SYSTEM_ESIGN"]}`
 印章的对应关系参考下图
-![image](https://qcloudimg.tencent-cloud.cn/raw/ee0498856c060c065628a0c5ba780d6b.jpg)
+![image](https://qcloudimg.tencent-cloud.cn/raw/ee0498856c060c065628a0c5ba780d6b.jpg)<br><br>
+<font color="red">ComponentType为SIGN_SEAL 或者 SIGN_PAGING_SEAL类型时</font>，可以通过**ComponentTypeLimit**参数控制签署方签署时要使用的印章类型，支持指定以下印章类型
+<ul><li> <b>OFFICIAL</b> :  企业公章</li>
+<li> <b>CONTRACT</b> : 合同专用章</li>
+<li> <b>FINANCE</b> : 财务专用章</li>
+<li> <b>PERSONNEL</b> : 人事专用章</li></ul>
+<b>参考样例</b>：`{\"ComponentTypeLimit\":[\"PERSONNEL\",\"FINANCE\"]}` 表示改印章签署区,客户需使用人事专用章或财务专用章盖章签署。<br><br>
 
 <font color="red">ComponentType为SIGN_DATE时</font>，支持以下参数：
 <ul><li> <b>Font</b> :字符串类型目前只支持"黑体"、"宋体"，如果不填默认为"黑体"</li>
@@ -976,7 +1000,13 @@ public class Component extends AbstractModel {
 <li> <b>IMG_ESIGN</b> : 图片印章(该类型支持用户在签署将上传的PNG格式的图片作为签名)</li></ul>
 <b>参考样例</b>：`{"ComponentTypeLimit": ["SYSTEM_ESIGN"]}`
 印章的对应关系参考下图
-![image](https://qcloudimg.tencent-cloud.cn/raw/ee0498856c060c065628a0c5ba780d6b.jpg)
+![image](https://qcloudimg.tencent-cloud.cn/raw/ee0498856c060c065628a0c5ba780d6b.jpg)<br><br>
+<font color="red">ComponentType为SIGN_SEAL 或者 SIGN_PAGING_SEAL类型时</font>，可以通过**ComponentTypeLimit**参数控制签署方签署时要使用的印章类型，支持指定以下印章类型
+<ul><li> <b>OFFICIAL</b> :  企业公章</li>
+<li> <b>CONTRACT</b> : 合同专用章</li>
+<li> <b>FINANCE</b> : 财务专用章</li>
+<li> <b>PERSONNEL</b> : 人事专用章</li></ul>
+<b>参考样例</b>：`{\"ComponentTypeLimit\":[\"PERSONNEL\",\"FINANCE\"]}` 表示改印章签署区,客户需使用人事专用章或财务专用章盖章签署。<br><br>
 
 <font color="red">ComponentType为SIGN_DATE时</font>，支持以下参数：
 <ul><li> <b>Font</b> :字符串类型目前只支持"黑体"、"宋体"，如果不填默认为"黑体"</li>

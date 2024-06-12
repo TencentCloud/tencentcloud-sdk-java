@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeCustomDnsHostSetRequest extends AbstractModel {
 
     /**
-    * 域名实例ID
+    * 域名实例ID(域名基本信息或我的域名列表接口可获取)
     */
     @SerializedName("DomainId")
     @Expose
@@ -45,16 +45,16 @@ public class DescribeCustomDnsHostSetRequest extends AbstractModel {
     private Long Offset;
 
     /**
-     * Get 域名实例ID 
-     * @return DomainId 域名实例ID
+     * Get 域名实例ID(域名基本信息或我的域名列表接口可获取) 
+     * @return DomainId 域名实例ID(域名基本信息或我的域名列表接口可获取)
      */
     public String getDomainId() {
         return this.DomainId;
     }
 
     /**
-     * Set 域名实例ID
-     * @param DomainId 域名实例ID
+     * Set 域名实例ID(域名基本信息或我的域名列表接口可获取)
+     * @param DomainId 域名实例ID(域名基本信息或我的域名列表接口可获取)
      */
     public void setDomainId(String DomainId) {
         this.DomainId = DomainId;

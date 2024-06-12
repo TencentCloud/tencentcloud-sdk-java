@@ -80,7 +80,7 @@ public class CreateAutoCalloutTaskRequest extends AbstractModel {
     private Long NotAfter;
 
     /**
-    * 最大尝试次数
+    * 最大尝试次数，1-3 次
     */
     @SerializedName("Tries")
     @Expose
@@ -236,16 +236,16 @@ public class CreateAutoCalloutTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get 最大尝试次数 
-     * @return Tries 最大尝试次数
+     * Get 最大尝试次数，1-3 次 
+     * @return Tries 最大尝试次数，1-3 次
      */
     public Long getTries() {
         return this.Tries;
     }
 
     /**
-     * Set 最大尝试次数
-     * @param Tries 最大尝试次数
+     * Set 最大尝试次数，1-3 次
+     * @param Tries 最大尝试次数，1-3 次
      */
     public void setTries(Long Tries) {
         this.Tries = Tries;

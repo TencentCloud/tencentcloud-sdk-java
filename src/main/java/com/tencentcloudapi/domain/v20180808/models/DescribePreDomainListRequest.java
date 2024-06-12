@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribePreDomainListRequest extends AbstractModel {
 
     /**
-    * 页码
+    * 页码，默认为1
     */
     @SerializedName("Page")
     @Expose
     private Long Page;
 
     /**
-    * 条数
+    * 条数，默认为20
     */
     @SerializedName("Size")
     @Expose
@@ -52,32 +52,32 @@ public class DescribePreDomainListRequest extends AbstractModel {
     private String UpTime;
 
     /**
-     * Get 页码 
-     * @return Page 页码
+     * Get 页码，默认为1 
+     * @return Page 页码，默认为1
      */
     public Long getPage() {
         return this.Page;
     }
 
     /**
-     * Set 页码
-     * @param Page 页码
+     * Set 页码，默认为1
+     * @param Page 页码，默认为1
      */
     public void setPage(Long Page) {
         this.Page = Page;
     }
 
     /**
-     * Get 条数 
-     * @return Size 条数
+     * Get 条数，默认为20 
+     * @return Size 条数，默认为20
      */
     public Long getSize() {
         return this.Size;
     }
 
     /**
-     * Set 条数
-     * @param Size 条数
+     * Set 条数，默认为20
+     * @param Size 条数，默认为20
      */
     public void setSize(Long Size) {
         this.Size = Size;

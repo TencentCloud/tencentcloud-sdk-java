@@ -139,6 +139,17 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
+     *查询EMR任务运行详情状态
+     * @param req DescribeClusterFlowStatusDetailRequest
+     * @return DescribeClusterFlowStatusDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClusterFlowStatusDetailResponse DescribeClusterFlowStatusDetail(DescribeClusterFlowStatusDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeClusterFlowStatusDetail", DescribeClusterFlowStatusDetailResponse.class);
+    }
+
+    /**
      *查询集群节点信息
      * @param req DescribeClusterNodesRequest
      * @return DescribeClusterNodesResponse

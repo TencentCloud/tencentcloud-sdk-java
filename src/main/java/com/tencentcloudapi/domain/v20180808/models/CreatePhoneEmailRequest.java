@@ -38,7 +38,7 @@ public class CreatePhoneEmailRequest extends AbstractModel {
     private Long Type;
 
     /**
-    * 验证码
+    * 验证码(通过SendPhoneEmailCode发送到手机或邮箱的验证码)
     */
     @SerializedName("VerifyCode")
     @Expose
@@ -77,16 +77,16 @@ public class CreatePhoneEmailRequest extends AbstractModel {
     }
 
     /**
-     * Get 验证码 
-     * @return VerifyCode 验证码
+     * Get 验证码(通过SendPhoneEmailCode发送到手机或邮箱的验证码) 
+     * @return VerifyCode 验证码(通过SendPhoneEmailCode发送到手机或邮箱的验证码)
      */
     public String getVerifyCode() {
         return this.VerifyCode;
     }
 
     /**
-     * Set 验证码
-     * @param VerifyCode 验证码
+     * Set 验证码(通过SendPhoneEmailCode发送到手机或邮箱的验证码)
+     * @param VerifyCode 验证码(通过SendPhoneEmailCode发送到手机或邮箱的验证码)
      */
     public void setVerifyCode(String VerifyCode) {
         this.VerifyCode = VerifyCode;

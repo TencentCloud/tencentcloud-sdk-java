@@ -60,6 +60,13 @@ DataSourceType 数据源类型，不填默认过滤非自建的所有关系型�
     private Filter [] Filters;
 
     /**
+    * casbId
+    */
+    @SerializedName("CasbId")
+    @Expose
+    private String CasbId;
+
+    /**
      * Get DSPA实例Id，格式“dspa-xxxxxxxx” 
      * @return DspaId DSPA实例Id，格式“dspa-xxxxxxxx”
      */
@@ -155,6 +162,22 @@ DataSourceType 数据源类型，不填默认过滤非自建的所有关系型�
         this.Filters = Filters;
     }
 
+    /**
+     * Get casbId 
+     * @return CasbId casbId
+     */
+    public String getCasbId() {
+        return this.CasbId;
+    }
+
+    /**
+     * Set casbId
+     * @param CasbId casbId
+     */
+    public void setCasbId(String CasbId) {
+        this.CasbId = CasbId;
+    }
+
     public ExportAssetDetailDataRequest() {
     }
 
@@ -178,6 +201,9 @@ DataSourceType 数据源类型，不填默认过滤非自建的所有关系型�
                 this.Filters[i] = new Filter(source.Filters[i]);
             }
         }
+        if (source.CasbId != null) {
+            this.CasbId = new String(source.CasbId);
+        }
     }
 
 
@@ -189,6 +215,7 @@ DataSourceType 数据源类型，不填默认过滤非自建的所有关系型�
         this.setParamSimple(map, prefix + "ComplianceId", this.ComplianceId);
         this.setParamSimple(map, prefix + "MetaDataType", this.MetaDataType);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamSimple(map, prefix + "CasbId", this.CasbId);
 
     }
 }

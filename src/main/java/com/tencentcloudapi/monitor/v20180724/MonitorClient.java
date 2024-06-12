@@ -875,7 +875,7 @@ public class MonitorClient extends AbstractClient{
     }
 
     /**
-     *列出可安装的所有 Grafana 插件
+     *列出可安装的所有 Grafana 插件。
      * @param req DescribePluginOverviewsRequest
      * @return DescribePluginOverviewsResponse
      * @throws TencentCloudSDKException
@@ -1088,7 +1088,9 @@ public class MonitorClient extends AbstractClient{
     }
 
     /**
-     *拉取Prometheus聚合规则yaml列表
+     *DescribePrometheusRecordRules 接口可完全代替该接口。近30天仅有3次调用，且都是报错请求
+
+拉取Prometheus聚合规则yaml列表
      * @param req DescribePrometheusRecordRuleYamlRequest
      * @return DescribePrometheusRecordRuleYamlResponse
      * @throws TencentCloudSDKException
@@ -1165,7 +1167,7 @@ public class MonitorClient extends AbstractClient{
     }
 
     /**
-     *列出 Prometheus 服务可用区
+     *列出 Prometheus 服务可用区。
      * @param req DescribePrometheusZonesRequest
      * @return DescribePrometheusZonesResponse
      * @throws TencentCloudSDKException

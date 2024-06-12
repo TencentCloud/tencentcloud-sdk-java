@@ -433,6 +433,14 @@ public class NodeHardwareInfo extends AbstractModel {
     private String ServicesStatus;
 
     /**
+    * 备注
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Remark")
+    @Expose
+    private String Remark;
+
+    /**
      * Get 用户APPID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return AppId 用户APPID
@@ -1456,6 +1464,26 @@ public class NodeHardwareInfo extends AbstractModel {
         this.ServicesStatus = ServicesStatus;
     }
 
+    /**
+     * Get 备注
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Remark 备注
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRemark() {
+        return this.Remark;
+    }
+
+    /**
+     * Set 备注
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Remark 备注
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRemark(String Remark) {
+        this.Remark = Remark;
+    }
+
     public NodeHardwareInfo() {
     }
 
@@ -1623,6 +1651,9 @@ public class NodeHardwareInfo extends AbstractModel {
         if (source.ServicesStatus != null) {
             this.ServicesStatus = new String(source.ServicesStatus);
         }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
+        }
     }
 
 
@@ -1681,6 +1712,7 @@ public class NodeHardwareInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "DisableApiTermination", this.DisableApiTermination);
         this.setParamSimple(map, prefix + "TradeVersion", this.TradeVersion);
         this.setParamSimple(map, prefix + "ServicesStatus", this.ServicesStatus);
+        this.setParamSimple(map, prefix + "Remark", this.Remark);
 
     }
 }

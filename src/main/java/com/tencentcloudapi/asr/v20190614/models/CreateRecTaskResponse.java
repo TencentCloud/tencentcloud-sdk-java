@@ -24,7 +24,9 @@ import java.util.HashMap;
 public class CreateRecTaskResponse extends AbstractModel {
 
     /**
-    * 录音文件识别的请求返回结果，包含结果查询需要的TaskId
+    * 录音文件识别的请求返回结果，包含结果查询需要的TaskId。
+**注意：TaskId有效期为24小时，不同日期可能出现重复TaskId，请不要依赖TaskId作为您业务系统里的唯一ID。**
+
     */
     @SerializedName("Data")
     @Expose
@@ -38,16 +40,24 @@ public class CreateRecTaskResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 录音文件识别的请求返回结果，包含结果查询需要的TaskId 
-     * @return Data 录音文件识别的请求返回结果，包含结果查询需要的TaskId
+     * Get 录音文件识别的请求返回结果，包含结果查询需要的TaskId。
+**注意：TaskId有效期为24小时，不同日期可能出现重复TaskId，请不要依赖TaskId作为您业务系统里的唯一ID。**
+ 
+     * @return Data 录音文件识别的请求返回结果，包含结果查询需要的TaskId。
+**注意：TaskId有效期为24小时，不同日期可能出现重复TaskId，请不要依赖TaskId作为您业务系统里的唯一ID。**
+
      */
     public Task getData() {
         return this.Data;
     }
 
     /**
-     * Set 录音文件识别的请求返回结果，包含结果查询需要的TaskId
-     * @param Data 录音文件识别的请求返回结果，包含结果查询需要的TaskId
+     * Set 录音文件识别的请求返回结果，包含结果查询需要的TaskId。
+**注意：TaskId有效期为24小时，不同日期可能出现重复TaskId，请不要依赖TaskId作为您业务系统里的唯一ID。**
+
+     * @param Data 录音文件识别的请求返回结果，包含结果查询需要的TaskId。
+**注意：TaskId有效期为24小时，不同日期可能出现重复TaskId，请不要依赖TaskId作为您业务系统里的唯一ID。**
+
      */
     public void setData(Task Data) {
         this.Data = Data;

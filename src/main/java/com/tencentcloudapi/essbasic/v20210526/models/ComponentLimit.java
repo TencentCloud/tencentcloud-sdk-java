@@ -37,7 +37,14 @@ public class ComponentLimit extends AbstractModel {
     /**
     * 签署控件类型的值(可选)，用与限制签署时印章或者签名的选择范围
 
-1.当ComponentType 是 SIGN_SEAL 或者 SIGN_PAGING_SEAL 时可传入企业印章Id（支持多个）
+1.当ComponentType 是 SIGN_SEAL 或者 SIGN_PAGING_SEAL 时可传入企业印章Id（支持多个）或者以下印章类型
+
+<ul><li> <b>OFFICIAL</b> :  企业公章</li>
+<li> <b>CONTRACT</b> : 合同专用章</li>
+<li> <b>FINANCE</b> : 财务专用章</li>
+<li> <b>PERSONNEL</b> : 人事专用章</li></ul>
+
+注：`限制印章控件或骑缝章控件情况下,仅本企业签署方可以指定具体印章（通过传递ComponentValue,支持多个),他方企业签署人只能限制类型.若同时指定了印章类型和印章Id,以印章Id为主,印章类型会被忽略`
 
 2.当ComponentType 是 SIGN_SIGNATURE 时可传入以下类型（支持多个）
 
@@ -88,7 +95,14 @@ public class ComponentLimit extends AbstractModel {
     /**
      * Get 签署控件类型的值(可选)，用与限制签署时印章或者签名的选择范围
 
-1.当ComponentType 是 SIGN_SEAL 或者 SIGN_PAGING_SEAL 时可传入企业印章Id（支持多个）
+1.当ComponentType 是 SIGN_SEAL 或者 SIGN_PAGING_SEAL 时可传入企业印章Id（支持多个）或者以下印章类型
+
+<ul><li> <b>OFFICIAL</b> :  企业公章</li>
+<li> <b>CONTRACT</b> : 合同专用章</li>
+<li> <b>FINANCE</b> : 财务专用章</li>
+<li> <b>PERSONNEL</b> : 人事专用章</li></ul>
+
+注：`限制印章控件或骑缝章控件情况下,仅本企业签署方可以指定具体印章（通过传递ComponentValue,支持多个),他方企业签署人只能限制类型.若同时指定了印章类型和印章Id,以印章Id为主,印章类型会被忽略`
 
 2.当ComponentType 是 SIGN_SIGNATURE 时可传入以下类型（支持多个）
 
@@ -101,7 +115,14 @@ public class ComponentLimit extends AbstractModel {
 3.当ComponentType 是 SIGN_LEGAL_PERSON_SEAL 时无需传递此参数。 
      * @return ComponentValue 签署控件类型的值(可选)，用与限制签署时印章或者签名的选择范围
 
-1.当ComponentType 是 SIGN_SEAL 或者 SIGN_PAGING_SEAL 时可传入企业印章Id（支持多个）
+1.当ComponentType 是 SIGN_SEAL 或者 SIGN_PAGING_SEAL 时可传入企业印章Id（支持多个）或者以下印章类型
+
+<ul><li> <b>OFFICIAL</b> :  企业公章</li>
+<li> <b>CONTRACT</b> : 合同专用章</li>
+<li> <b>FINANCE</b> : 财务专用章</li>
+<li> <b>PERSONNEL</b> : 人事专用章</li></ul>
+
+注：`限制印章控件或骑缝章控件情况下,仅本企业签署方可以指定具体印章（通过传递ComponentValue,支持多个),他方企业签署人只能限制类型.若同时指定了印章类型和印章Id,以印章Id为主,印章类型会被忽略`
 
 2.当ComponentType 是 SIGN_SIGNATURE 时可传入以下类型（支持多个）
 
@@ -120,7 +141,14 @@ public class ComponentLimit extends AbstractModel {
     /**
      * Set 签署控件类型的值(可选)，用与限制签署时印章或者签名的选择范围
 
-1.当ComponentType 是 SIGN_SEAL 或者 SIGN_PAGING_SEAL 时可传入企业印章Id（支持多个）
+1.当ComponentType 是 SIGN_SEAL 或者 SIGN_PAGING_SEAL 时可传入企业印章Id（支持多个）或者以下印章类型
+
+<ul><li> <b>OFFICIAL</b> :  企业公章</li>
+<li> <b>CONTRACT</b> : 合同专用章</li>
+<li> <b>FINANCE</b> : 财务专用章</li>
+<li> <b>PERSONNEL</b> : 人事专用章</li></ul>
+
+注：`限制印章控件或骑缝章控件情况下,仅本企业签署方可以指定具体印章（通过传递ComponentValue,支持多个),他方企业签署人只能限制类型.若同时指定了印章类型和印章Id,以印章Id为主,印章类型会被忽略`
 
 2.当ComponentType 是 SIGN_SIGNATURE 时可传入以下类型（支持多个）
 
@@ -133,7 +161,14 @@ public class ComponentLimit extends AbstractModel {
 3.当ComponentType 是 SIGN_LEGAL_PERSON_SEAL 时无需传递此参数。
      * @param ComponentValue 签署控件类型的值(可选)，用与限制签署时印章或者签名的选择范围
 
-1.当ComponentType 是 SIGN_SEAL 或者 SIGN_PAGING_SEAL 时可传入企业印章Id（支持多个）
+1.当ComponentType 是 SIGN_SEAL 或者 SIGN_PAGING_SEAL 时可传入企业印章Id（支持多个）或者以下印章类型
+
+<ul><li> <b>OFFICIAL</b> :  企业公章</li>
+<li> <b>CONTRACT</b> : 合同专用章</li>
+<li> <b>FINANCE</b> : 财务专用章</li>
+<li> <b>PERSONNEL</b> : 人事专用章</li></ul>
+
+注：`限制印章控件或骑缝章控件情况下,仅本企业签署方可以指定具体印章（通过传递ComponentValue,支持多个),他方企业签署人只能限制类型.若同时指定了印章类型和印章Id,以印章Id为主,印章类型会被忽略`
 
 2.当ComponentType 是 SIGN_SIGNATURE 时可传入以下类型（支持多个）
 

@@ -546,7 +546,6 @@ public class DomainClient extends AbstractClient{
 
     /**
      *本接口 ( RenewDomainBatch ) 用于批量续费域名 。
-
      * @param req RenewDomainBatchRequest
      * @return RenewDomainBatchResponse
      * @throws TencentCloudSDKException

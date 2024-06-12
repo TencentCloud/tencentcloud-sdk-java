@@ -25,14 +25,17 @@ public class DescribeTaskStatusRequest extends AbstractModel {
 
     /**
     * 从CreateRecTask接口获取的TaskId，用于获取任务状态与结果。
+**注意：TaskId有效期为24小时，超过24小时的TaskId请不要再查询。**
     */
     @SerializedName("TaskId")
     @Expose
     private Long TaskId;
 
     /**
-     * Get 从CreateRecTask接口获取的TaskId，用于获取任务状态与结果。 
+     * Get 从CreateRecTask接口获取的TaskId，用于获取任务状态与结果。
+**注意：TaskId有效期为24小时，超过24小时的TaskId请不要再查询。** 
      * @return TaskId 从CreateRecTask接口获取的TaskId，用于获取任务状态与结果。
+**注意：TaskId有效期为24小时，超过24小时的TaskId请不要再查询。**
      */
     public Long getTaskId() {
         return this.TaskId;
@@ -40,7 +43,9 @@ public class DescribeTaskStatusRequest extends AbstractModel {
 
     /**
      * Set 从CreateRecTask接口获取的TaskId，用于获取任务状态与结果。
+**注意：TaskId有效期为24小时，超过24小时的TaskId请不要再查询。**
      * @param TaskId 从CreateRecTask接口获取的TaskId，用于获取任务状态与结果。
+**注意：TaskId有效期为24小时，超过24小时的TaskId请不要再查询。**
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;

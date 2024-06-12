@@ -31,7 +31,7 @@ public class BatchModifyDomainInfoRequest extends AbstractModel {
     private String [] Domains;
 
     /**
-    * 模板ID。
+    * 模板ID(可从模板列表接口获取)
     */
     @SerializedName("TemplateId")
     @Expose
@@ -63,16 +63,16 @@ false：关闭60天内禁止转移注册商锁定
     }
 
     /**
-     * Get 模板ID。 
-     * @return TemplateId 模板ID。
+     * Get 模板ID(可从模板列表接口获取) 
+     * @return TemplateId 模板ID(可从模板列表接口获取)
      */
     public String getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set 模板ID。
-     * @param TemplateId 模板ID。
+     * Set 模板ID(可从模板列表接口获取)
+     * @param TemplateId 模板ID(可从模板列表接口获取)
      */
     public void setTemplateId(String TemplateId) {
         this.TemplateId = TemplateId;

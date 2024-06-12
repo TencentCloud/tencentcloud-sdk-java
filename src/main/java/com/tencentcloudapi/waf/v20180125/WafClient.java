@@ -419,6 +419,17 @@ public class WafClient extends AbstractClient{
     }
 
     /**
+     *获取WAF地域封禁支持的地域列表
+     * @param req DescribeAreaBanSupportAreasRequest
+     * @return DescribeAreaBanSupportAreasResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAreaBanSupportAreasResponse DescribeAreaBanSupportAreas(DescribeAreaBanSupportAreasRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAreaBanSupportAreas", DescribeAreaBanSupportAreasResponse.class);
+    }
+
+    /**
      *攻击总览
      * @param req DescribeAttackOverviewRequest
      * @return DescribeAttackOverviewResponse
@@ -1109,6 +1120,17 @@ public class WafClient extends AbstractClient{
     public ModifyApiSecEventChangeResponse ModifyApiSecEventChange(ModifyApiSecEventChangeRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyApiSecEventChange", ModifyApiSecEventChangeResponse.class);
+    }
+
+    /**
+     *修改地域封禁中的地域信息
+     * @param req ModifyAreaBanAreasRequest
+     * @return ModifyAreaBanAreasResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAreaBanAreasResponse ModifyAreaBanAreas(ModifyAreaBanAreasRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyAreaBanAreas", ModifyAreaBanAreasResponse.class);
     }
 
     /**

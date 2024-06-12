@@ -24,23 +24,28 @@ import java.util.HashMap;
 public class Task extends AbstractModel {
 
     /**
-    * 任务ID，可通过此ID在轮询接口获取识别状态与结果。注意：TaskId数据类型为uint64
+    * 任务ID，可通过此ID在轮询接口获取识别状态与结果。TaskId数据类型为**uint64**。
+**注意：TaskId有效期为24小时，不同日期可能出现重复TaskId，请不要依赖TaskId作为您业务系统里的唯一ID。**
     */
     @SerializedName("TaskId")
     @Expose
     private Long TaskId;
 
     /**
-     * Get 任务ID，可通过此ID在轮询接口获取识别状态与结果。注意：TaskId数据类型为uint64 
-     * @return TaskId 任务ID，可通过此ID在轮询接口获取识别状态与结果。注意：TaskId数据类型为uint64
+     * Get 任务ID，可通过此ID在轮询接口获取识别状态与结果。TaskId数据类型为**uint64**。
+**注意：TaskId有效期为24小时，不同日期可能出现重复TaskId，请不要依赖TaskId作为您业务系统里的唯一ID。** 
+     * @return TaskId 任务ID，可通过此ID在轮询接口获取识别状态与结果。TaskId数据类型为**uint64**。
+**注意：TaskId有效期为24小时，不同日期可能出现重复TaskId，请不要依赖TaskId作为您业务系统里的唯一ID。**
      */
     public Long getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 任务ID，可通过此ID在轮询接口获取识别状态与结果。注意：TaskId数据类型为uint64
-     * @param TaskId 任务ID，可通过此ID在轮询接口获取识别状态与结果。注意：TaskId数据类型为uint64
+     * Set 任务ID，可通过此ID在轮询接口获取识别状态与结果。TaskId数据类型为**uint64**。
+**注意：TaskId有效期为24小时，不同日期可能出现重复TaskId，请不要依赖TaskId作为您业务系统里的唯一ID。**
+     * @param TaskId 任务ID，可通过此ID在轮询接口获取识别状态与结果。TaskId数据类型为**uint64**。
+**注意：TaskId有效期为24小时，不同日期可能出现重复TaskId，请不要依赖TaskId作为您业务系统里的唯一ID。**
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;
