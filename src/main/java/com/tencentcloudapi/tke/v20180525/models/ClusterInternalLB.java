@@ -25,6 +25,7 @@ public class ClusterInternalLB extends AbstractModel {
 
     /**
     * 是否开启内网访问LB
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Enabled")
     @Expose
@@ -32,14 +33,17 @@ public class ClusterInternalLB extends AbstractModel {
 
     /**
     * 内网访问LB关联的子网Id
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-     * Get 是否开启内网访问LB 
+     * Get 是否开启内网访问LB
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Enabled 是否开启内网访问LB
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getEnabled() {
         return this.Enabled;
@@ -47,15 +51,19 @@ public class ClusterInternalLB extends AbstractModel {
 
     /**
      * Set 是否开启内网访问LB
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Enabled 是否开启内网访问LB
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnabled(Boolean Enabled) {
         this.Enabled = Enabled;
     }
 
     /**
-     * Get 内网访问LB关联的子网Id 
+     * Get 内网访问LB关联的子网Id
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return SubnetId 内网访问LB关联的子网Id
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubnetId() {
         return this.SubnetId;
@@ -63,7 +71,9 @@ public class ClusterInternalLB extends AbstractModel {
 
     /**
      * Set 内网访问LB关联的子网Id
+注意：此字段可能返回 null，表示取不到有效值。
      * @param SubnetId 内网访问LB关联的子网Id
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;

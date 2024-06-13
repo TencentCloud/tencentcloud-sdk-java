@@ -132,7 +132,7 @@ public class DcClient extends AbstractClient{
     }
 
     /**
-     *用于查询专用通道列表。
+     *查询专用通道列表。
      * @param req DescribeDirectConnectTunnelsRequest
      * @return DescribeDirectConnectTunnelsResponse
      * @throws TencentCloudSDKException

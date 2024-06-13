@@ -45,6 +45,13 @@ public class UpdateShareUnitRequest extends AbstractModel {
     private String Description;
 
     /**
+    * 共享范围。取值：1-仅允许集团组织内共享 2-允许共享给任意账号，默认值：1
+    */
+    @SerializedName("ShareScope")
+    @Expose
+    private Long ShareScope;
+
+    /**
      * Get 共享单元ID。 
      * @return UnitId 共享单元ID。
      */
@@ -92,6 +99,22 @@ public class UpdateShareUnitRequest extends AbstractModel {
         this.Description = Description;
     }
 
+    /**
+     * Get 共享范围。取值：1-仅允许集团组织内共享 2-允许共享给任意账号，默认值：1 
+     * @return ShareScope 共享范围。取值：1-仅允许集团组织内共享 2-允许共享给任意账号，默认值：1
+     */
+    public Long getShareScope() {
+        return this.ShareScope;
+    }
+
+    /**
+     * Set 共享范围。取值：1-仅允许集团组织内共享 2-允许共享给任意账号，默认值：1
+     * @param ShareScope 共享范围。取值：1-仅允许集团组织内共享 2-允许共享给任意账号，默认值：1
+     */
+    public void setShareScope(Long ShareScope) {
+        this.ShareScope = ShareScope;
+    }
+
     public UpdateShareUnitRequest() {
     }
 
@@ -109,6 +132,9 @@ public class UpdateShareUnitRequest extends AbstractModel {
         if (source.Description != null) {
             this.Description = new String(source.Description);
         }
+        if (source.ShareScope != null) {
+            this.ShareScope = new Long(source.ShareScope);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class UpdateShareUnitRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "UnitId", this.UnitId);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "ShareScope", this.ShareScope);
 
     }
 }

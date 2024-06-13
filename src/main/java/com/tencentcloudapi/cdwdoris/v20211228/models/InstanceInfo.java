@@ -391,6 +391,22 @@ Modify 集群变更中；
     private String UserNetworkInfos;
 
     /**
+    * 是否启用冷热分层。0：未开启 1：已开启
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EnableCoolDown")
+    @Expose
+    private Long EnableCoolDown;
+
+    /**
+    * 冷热分层使用COS桶
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CoolDownBucket")
+    @Expose
+    private String CoolDownBucket;
+
+    /**
      * Get 集群实例ID, "cdw-xxxx" 字符串类型
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return InstanceId 集群实例ID, "cdw-xxxx" 字符串类型
@@ -1322,6 +1338,46 @@ Modify 集群变更中；
         this.UserNetworkInfos = UserNetworkInfos;
     }
 
+    /**
+     * Get 是否启用冷热分层。0：未开启 1：已开启
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EnableCoolDown 是否启用冷热分层。0：未开启 1：已开启
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getEnableCoolDown() {
+        return this.EnableCoolDown;
+    }
+
+    /**
+     * Set 是否启用冷热分层。0：未开启 1：已开启
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EnableCoolDown 是否启用冷热分层。0：未开启 1：已开启
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEnableCoolDown(Long EnableCoolDown) {
+        this.EnableCoolDown = EnableCoolDown;
+    }
+
+    /**
+     * Get 冷热分层使用COS桶
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CoolDownBucket 冷热分层使用COS桶
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCoolDownBucket() {
+        return this.CoolDownBucket;
+    }
+
+    /**
+     * Set 冷热分层使用COS桶
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CoolDownBucket 冷热分层使用COS桶
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCoolDownBucket(String CoolDownBucket) {
+        this.CoolDownBucket = CoolDownBucket;
+    }
+
     public InstanceInfo() {
     }
 
@@ -1474,6 +1530,12 @@ Modify 集群变更中；
         if (source.UserNetworkInfos != null) {
             this.UserNetworkInfos = new String(source.UserNetworkInfos);
         }
+        if (source.EnableCoolDown != null) {
+            this.EnableCoolDown = new Long(source.EnableCoolDown);
+        }
+        if (source.CoolDownBucket != null) {
+            this.CoolDownBucket = new String(source.CoolDownBucket);
+        }
     }
 
 
@@ -1526,6 +1588,8 @@ Modify 集群变更中；
         this.setParamArraySimple(map, prefix + "BindSGs.", this.BindSGs);
         this.setParamSimple(map, prefix + "EnableMultiZones", this.EnableMultiZones);
         this.setParamSimple(map, prefix + "UserNetworkInfos", this.UserNetworkInfos);
+        this.setParamSimple(map, prefix + "EnableCoolDown", this.EnableCoolDown);
+        this.setParamSimple(map, prefix + "CoolDownBucket", this.CoolDownBucket);
 
     }
 }

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeInstanceMonitorTookDistResponse extends AbstractModel {
 
     /**
-    * 时延分布信息
+    * 时延分布信息。
     */
     @SerializedName("Data")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeInstanceMonitorTookDistResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 时延分布信息 
-     * @return Data 时延分布信息
+     * Get 时延分布信息。 
+     * @return Data 时延分布信息。
      */
     public DelayDistribution [] getData() {
         return this.Data;
     }
 
     /**
-     * Set 时延分布信息
-     * @param Data 时延分布信息
+     * Set 时延分布信息。
+     * @param Data 时延分布信息。
      */
     public void setData(DelayDistribution [] Data) {
         this.Data = Data;

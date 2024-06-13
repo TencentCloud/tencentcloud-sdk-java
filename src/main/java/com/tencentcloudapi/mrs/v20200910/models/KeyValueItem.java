@@ -48,6 +48,14 @@ public class KeyValueItem extends AbstractModel {
     private PhysicalBaseItem Result;
 
     /**
+    * 数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Page")
+    @Expose
+    private Long Page;
+
+    /**
      * Get 类型
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Name 类型
@@ -107,6 +115,26 @@ public class KeyValueItem extends AbstractModel {
         this.Result = Result;
     }
 
+    /**
+     * Get 数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Page 数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getPage() {
+        return this.Page;
+    }
+
+    /**
+     * Set 数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Page 数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPage(Long Page) {
+        this.Page = Page;
+    }
+
     public KeyValueItem() {
     }
 
@@ -124,6 +152,9 @@ public class KeyValueItem extends AbstractModel {
         if (source.Result != null) {
             this.Result = new PhysicalBaseItem(source.Result);
         }
+        if (source.Page != null) {
+            this.Page = new Long(source.Page);
+        }
     }
 
 
@@ -134,6 +165,7 @@ public class KeyValueItem extends AbstractModel {
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamObj(map, prefix + "Item.", this.Item);
         this.setParamObj(map, prefix + "Result.", this.Result);
+        this.setParamSimple(map, prefix + "Page", this.Page);
 
     }
 }

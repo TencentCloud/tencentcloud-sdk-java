@@ -2382,7 +2382,7 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
-     *修改弹性集群名称等属性 
+     *修改弹性集群名称等属性
      * @param req UpdateEKSClusterRequest
      * @return UpdateEKSClusterResponse
      * @throws TencentCloudSDKException

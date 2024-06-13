@@ -88,6 +88,13 @@ public class ChannelDescribeOrganizationSealsRequest extends AbstractModel {
     private String [] SealTypes;
 
     /**
+    * 查询的印章状态列表。 <ul> <li>空，只查询启用状态的印章；</li> <li>ALL，查询所有状态的印章；</li> <li>CHECKING，查询待审核的印章；</li> <li>SUCCESS，查询启用状态的印章；</li> <li>FAIL，查询印章审核拒绝的印章；</li> <li>DISABLE，查询已停用的印章；</li> <li>STOPPED，查询已终止的印章；</li> <li>VOID，查询已作废的印章；</li> <li>INVALID，查询已失效的印章；</li> </ul>
+    */
+    @SerializedName("SealStatuses")
+    @Expose
+    private String [] SealStatuses;
+
+    /**
      * Get 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
 
 此接口下面信息必填。
@@ -271,6 +278,22 @@ public class ChannelDescribeOrganizationSealsRequest extends AbstractModel {
         this.SealTypes = SealTypes;
     }
 
+    /**
+     * Get 查询的印章状态列表。 <ul> <li>空，只查询启用状态的印章；</li> <li>ALL，查询所有状态的印章；</li> <li>CHECKING，查询待审核的印章；</li> <li>SUCCESS，查询启用状态的印章；</li> <li>FAIL，查询印章审核拒绝的印章；</li> <li>DISABLE，查询已停用的印章；</li> <li>STOPPED，查询已终止的印章；</li> <li>VOID，查询已作废的印章；</li> <li>INVALID，查询已失效的印章；</li> </ul> 
+     * @return SealStatuses 查询的印章状态列表。 <ul> <li>空，只查询启用状态的印章；</li> <li>ALL，查询所有状态的印章；</li> <li>CHECKING，查询待审核的印章；</li> <li>SUCCESS，查询启用状态的印章；</li> <li>FAIL，查询印章审核拒绝的印章；</li> <li>DISABLE，查询已停用的印章；</li> <li>STOPPED，查询已终止的印章；</li> <li>VOID，查询已作废的印章；</li> <li>INVALID，查询已失效的印章；</li> </ul>
+     */
+    public String [] getSealStatuses() {
+        return this.SealStatuses;
+    }
+
+    /**
+     * Set 查询的印章状态列表。 <ul> <li>空，只查询启用状态的印章；</li> <li>ALL，查询所有状态的印章；</li> <li>CHECKING，查询待审核的印章；</li> <li>SUCCESS，查询启用状态的印章；</li> <li>FAIL，查询印章审核拒绝的印章；</li> <li>DISABLE，查询已停用的印章；</li> <li>STOPPED，查询已终止的印章；</li> <li>VOID，查询已作废的印章；</li> <li>INVALID，查询已失效的印章；</li> </ul>
+     * @param SealStatuses 查询的印章状态列表。 <ul> <li>空，只查询启用状态的印章；</li> <li>ALL，查询所有状态的印章；</li> <li>CHECKING，查询待审核的印章；</li> <li>SUCCESS，查询启用状态的印章；</li> <li>FAIL，查询印章审核拒绝的印章；</li> <li>DISABLE，查询已停用的印章；</li> <li>STOPPED，查询已终止的印章；</li> <li>VOID，查询已作废的印章；</li> <li>INVALID，查询已失效的印章；</li> </ul>
+     */
+    public void setSealStatuses(String [] SealStatuses) {
+        this.SealStatuses = SealStatuses;
+    }
+
     public ChannelDescribeOrganizationSealsRequest() {
     }
 
@@ -300,6 +323,12 @@ public class ChannelDescribeOrganizationSealsRequest extends AbstractModel {
                 this.SealTypes[i] = new String(source.SealTypes[i]);
             }
         }
+        if (source.SealStatuses != null) {
+            this.SealStatuses = new String[source.SealStatuses.length];
+            for (int i = 0; i < source.SealStatuses.length; i++) {
+                this.SealStatuses[i] = new String(source.SealStatuses[i]);
+            }
+        }
     }
 
 
@@ -313,6 +342,7 @@ public class ChannelDescribeOrganizationSealsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "InfoType", this.InfoType);
         this.setParamSimple(map, prefix + "SealId", this.SealId);
         this.setParamArraySimple(map, prefix + "SealTypes.", this.SealTypes);
+        this.setParamArraySimple(map, prefix + "SealStatuses.", this.SealStatuses);
 
     }
 }

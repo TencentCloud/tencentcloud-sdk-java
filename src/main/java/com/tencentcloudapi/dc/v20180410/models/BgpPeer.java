@@ -25,6 +25,7 @@ public class BgpPeer extends AbstractModel {
 
     /**
     * 用户侧BGP ASN
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Asn")
     @Expose
@@ -32,14 +33,17 @@ public class BgpPeer extends AbstractModel {
 
     /**
     * 用户侧BGP密钥
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AuthKey")
     @Expose
     private String AuthKey;
 
     /**
-     * Get 用户侧BGP ASN 
+     * Get 用户侧BGP ASN
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Asn 用户侧BGP ASN
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAsn() {
         return this.Asn;
@@ -47,15 +51,19 @@ public class BgpPeer extends AbstractModel {
 
     /**
      * Set 用户侧BGP ASN
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Asn 用户侧BGP ASN
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAsn(Long Asn) {
         this.Asn = Asn;
     }
 
     /**
-     * Get 用户侧BGP密钥 
+     * Get 用户侧BGP密钥
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return AuthKey 用户侧BGP密钥
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAuthKey() {
         return this.AuthKey;
@@ -63,7 +71,9 @@ public class BgpPeer extends AbstractModel {
 
     /**
      * Set 用户侧BGP密钥
+注意：此字段可能返回 null，表示取不到有效值。
      * @param AuthKey 用户侧BGP密钥
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAuthKey(String AuthKey) {
         this.AuthKey = AuthKey;

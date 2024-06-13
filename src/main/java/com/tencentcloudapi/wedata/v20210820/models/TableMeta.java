@@ -449,6 +449,14 @@ TABLE, VIEW, MANAGED_TABLE(Hive管理表), EXTERNAL_TABLE(Hive外部表), VIRTUA
     private Long PartitionExpireDays;
 
     /**
+    * 表附属信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TableProperties")
+    @Expose
+    private TableMetaProperty [] TableProperties;
+
+    /**
      * Get 表的全局唯一ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TableId 表的全局唯一ID
@@ -1512,6 +1520,26 @@ TABLE, VIEW, MANAGED_TABLE(Hive管理表), EXTERNAL_TABLE(Hive外部表), VIRTUA
         this.PartitionExpireDays = PartitionExpireDays;
     }
 
+    /**
+     * Get 表附属信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TableProperties 表附属信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public TableMetaProperty [] getTableProperties() {
+        return this.TableProperties;
+    }
+
+    /**
+     * Set 表附属信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TableProperties 表附属信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTableProperties(TableMetaProperty [] TableProperties) {
+        this.TableProperties = TableProperties;
+    }
+
     public TableMeta() {
     }
 
@@ -1691,6 +1719,12 @@ TABLE, VIEW, MANAGED_TABLE(Hive管理表), EXTERNAL_TABLE(Hive外部表), VIRTUA
         if (source.PartitionExpireDays != null) {
             this.PartitionExpireDays = new Long(source.PartitionExpireDays);
         }
+        if (source.TableProperties != null) {
+            this.TableProperties = new TableMetaProperty[source.TableProperties.length];
+            for (int i = 0; i < source.TableProperties.length; i++) {
+                this.TableProperties[i] = new TableMetaProperty(source.TableProperties[i]);
+            }
+        }
     }
 
 
@@ -1751,6 +1785,7 @@ TABLE, VIEW, MANAGED_TABLE(Hive管理表), EXTERNAL_TABLE(Hive外部表), VIRTUA
         this.setParamSimple(map, prefix + "IsPartitionTable", this.IsPartitionTable);
         this.setParamArraySimple(map, prefix + "PartitionColumns.", this.PartitionColumns);
         this.setParamSimple(map, prefix + "PartitionExpireDays", this.PartitionExpireDays);
+        this.setParamArrayObj(map, prefix + "TableProperties.", this.TableProperties);
 
     }
 }

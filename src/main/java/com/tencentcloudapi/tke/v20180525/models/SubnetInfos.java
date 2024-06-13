@@ -45,14 +45,14 @@ public class SubnetInfos extends AbstractModel {
     private String [] SecurityGroups;
 
     /**
-    * 系统
+    * 系统，默认linux
     */
     @SerializedName("Os")
     @Expose
     private String Os;
 
     /**
-    * 硬件架构
+    * 硬件架构，默认amd64
     */
     @SerializedName("Arch")
     @Expose
@@ -107,32 +107,32 @@ public class SubnetInfos extends AbstractModel {
     }
 
     /**
-     * Get 系统 
-     * @return Os 系统
+     * Get 系统，默认linux 
+     * @return Os 系统，默认linux
      */
     public String getOs() {
         return this.Os;
     }
 
     /**
-     * Set 系统
-     * @param Os 系统
+     * Set 系统，默认linux
+     * @param Os 系统，默认linux
      */
     public void setOs(String Os) {
         this.Os = Os;
     }
 
     /**
-     * Get 硬件架构 
-     * @return Arch 硬件架构
+     * Get 硬件架构，默认amd64 
+     * @return Arch 硬件架构，默认amd64
      */
     public String getArch() {
         return this.Arch;
     }
 
     /**
-     * Set 硬件架构
-     * @param Arch 硬件架构
+     * Set 硬件架构，默认amd64
+     * @param Arch 硬件架构，默认amd64
      */
     public void setArch(String Arch) {
         this.Arch = Arch;

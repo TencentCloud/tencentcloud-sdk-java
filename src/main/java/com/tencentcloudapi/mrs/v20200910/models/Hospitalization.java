@@ -96,6 +96,14 @@ public class Hospitalization extends AbstractModel {
     private String AdmissionDiagnosis;
 
     /**
+    * 数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Page")
+    @Expose
+    private Long Page;
+
+    /**
      * Get 入院时间
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return AdmissionTime 入院时间
@@ -279,6 +287,26 @@ public class Hospitalization extends AbstractModel {
         this.AdmissionDiagnosis = AdmissionDiagnosis;
     }
 
+    /**
+     * Get 数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Page 数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getPage() {
+        return this.Page;
+    }
+
+    /**
+     * Set 数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Page 数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPage(Long Page) {
+        this.Page = Page;
+    }
+
     public Hospitalization() {
     }
 
@@ -314,6 +342,9 @@ public class Hospitalization extends AbstractModel {
         if (source.AdmissionDiagnosis != null) {
             this.AdmissionDiagnosis = new String(source.AdmissionDiagnosis);
         }
+        if (source.Page != null) {
+            this.Page = new Long(source.Page);
+        }
     }
 
 
@@ -330,6 +361,7 @@ public class Hospitalization extends AbstractModel {
         this.setParamSimple(map, prefix + "DischargeDiagnosis", this.DischargeDiagnosis);
         this.setParamSimple(map, prefix + "DischargeInstruction", this.DischargeInstruction);
         this.setParamSimple(map, prefix + "AdmissionDiagnosis", this.AdmissionDiagnosis);
+        this.setParamSimple(map, prefix + "Page", this.Page);
 
     }
 }

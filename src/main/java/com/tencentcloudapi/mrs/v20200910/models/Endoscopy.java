@@ -48,6 +48,14 @@ public class Endoscopy extends AbstractModel {
     private Summary Summary;
 
     /**
+    * 数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Page")
+    @Expose
+    private Long Page;
+
+    /**
      * Get 活检部位
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return BiopsyPart 活检部位
@@ -107,6 +115,26 @@ public class Endoscopy extends AbstractModel {
         this.Summary = Summary;
     }
 
+    /**
+     * Get 数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Page 数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getPage() {
+        return this.Page;
+    }
+
+    /**
+     * Set 数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Page 数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPage(Long Page) {
+        this.Page = Page;
+    }
+
     public Endoscopy() {
     }
 
@@ -124,6 +152,9 @@ public class Endoscopy extends AbstractModel {
         if (source.Summary != null) {
             this.Summary = new Summary(source.Summary);
         }
+        if (source.Page != null) {
+            this.Page = new Long(source.Page);
+        }
     }
 
 
@@ -134,6 +165,7 @@ public class Endoscopy extends AbstractModel {
         this.setParamObj(map, prefix + "BiopsyPart.", this.BiopsyPart);
         this.setParamObj(map, prefix + "Desc.", this.Desc);
         this.setParamObj(map, prefix + "Summary.", this.Summary);
+        this.setParamSimple(map, prefix + "Page", this.Page);
 
     }
 }

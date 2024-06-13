@@ -72,6 +72,14 @@ public class BloodPressureItem extends AbstractModel {
     private PhysicalBaseItem Location;
 
     /**
+    * 数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Page")
+    @Expose
+    private Long Page;
+
+    /**
      * Get 类型
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Name 类型
@@ -191,6 +199,26 @@ public class BloodPressureItem extends AbstractModel {
         this.Location = Location;
     }
 
+    /**
+     * Get 数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Page 数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getPage() {
+        return this.Page;
+    }
+
+    /**
+     * Set 数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Page 数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPage(Long Page) {
+        this.Page = Page;
+    }
+
     public BloodPressureItem() {
     }
 
@@ -217,6 +245,9 @@ public class BloodPressureItem extends AbstractModel {
         if (source.Location != null) {
             this.Location = new PhysicalBaseItem(source.Location);
         }
+        if (source.Page != null) {
+            this.Page = new Long(source.Page);
+        }
     }
 
 
@@ -230,6 +261,7 @@ public class BloodPressureItem extends AbstractModel {
         this.setParamObj(map, prefix + "Unit.", this.Unit);
         this.setParamObj(map, prefix + "Times.", this.Times);
         this.setParamObj(map, prefix + "Location.", this.Location);
+        this.setParamSimple(map, prefix + "Page", this.Page);
 
     }
 }

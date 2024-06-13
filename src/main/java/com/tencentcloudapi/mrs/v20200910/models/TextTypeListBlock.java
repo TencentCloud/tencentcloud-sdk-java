@@ -32,6 +32,14 @@ public class TextTypeListBlock extends AbstractModel {
     private TextType [] TextTypeList;
 
     /**
+    * 数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Page")
+    @Expose
+    private Long Page;
+
+    /**
      * Get 文本类型列表
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TextTypeList 文本类型列表
@@ -51,6 +59,26 @@ public class TextTypeListBlock extends AbstractModel {
         this.TextTypeList = TextTypeList;
     }
 
+    /**
+     * Get 数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Page 数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getPage() {
+        return this.Page;
+    }
+
+    /**
+     * Set 数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Page 数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPage(Long Page) {
+        this.Page = Page;
+    }
+
     public TextTypeListBlock() {
     }
 
@@ -65,6 +93,9 @@ public class TextTypeListBlock extends AbstractModel {
                 this.TextTypeList[i] = new TextType(source.TextTypeList[i]);
             }
         }
+        if (source.Page != null) {
+            this.Page = new Long(source.Page);
+        }
     }
 
 
@@ -73,6 +104,7 @@ public class TextTypeListBlock extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "TextTypeList.", this.TextTypeList);
+        this.setParamSimple(map, prefix + "Page", this.Page);
 
     }
 }

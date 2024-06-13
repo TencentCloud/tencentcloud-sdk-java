@@ -26,30 +26,30 @@ public class DescribeDirectConnectTunnelsRequest extends AbstractModel {
     /**
     * 过滤条件:
 参数不支持同时指定DirectConnectTunnelIds和Filters。
-<li> direct-connect-tunnel-name, 专用通道名称。</li>
-<li> direct-connect-tunnel-id, 专用通道实例ID，如dcx-abcdefgh。</li>
-<li>direct-connect-id, 物理专线实例ID，如，dc-abcdefgh。</li>
+direct-connect-tunnel-name, 专用通道名称。
+direct-connect-tunnel-id, 专用通道实例ID，如：dcx-abcdefgh。
+direct-connect-id, 物理专线实例ID，如：dc-abcdefgh。
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-    * 专用通道 ID数组
+    * 专用通道ID数组。
     */
     @SerializedName("DirectConnectTunnelIds")
     @Expose
     private String [] DirectConnectTunnelIds;
 
     /**
-    * 偏移量，默认为0
+    * 偏移量，默认为0。
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 返回数量，默认为20，最大值为100
+    * 返回数量，默认为20，最大值为100。
     */
     @SerializedName("Limit")
     @Expose
@@ -58,14 +58,14 @@ public class DescribeDirectConnectTunnelsRequest extends AbstractModel {
     /**
      * Get 过滤条件:
 参数不支持同时指定DirectConnectTunnelIds和Filters。
-<li> direct-connect-tunnel-name, 专用通道名称。</li>
-<li> direct-connect-tunnel-id, 专用通道实例ID，如dcx-abcdefgh。</li>
-<li>direct-connect-id, 物理专线实例ID，如，dc-abcdefgh。</li> 
+direct-connect-tunnel-name, 专用通道名称。
+direct-connect-tunnel-id, 专用通道实例ID，如：dcx-abcdefgh。
+direct-connect-id, 物理专线实例ID，如：dc-abcdefgh。 
      * @return Filters 过滤条件:
 参数不支持同时指定DirectConnectTunnelIds和Filters。
-<li> direct-connect-tunnel-name, 专用通道名称。</li>
-<li> direct-connect-tunnel-id, 专用通道实例ID，如dcx-abcdefgh。</li>
-<li>direct-connect-id, 物理专线实例ID，如，dc-abcdefgh。</li>
+direct-connect-tunnel-name, 专用通道名称。
+direct-connect-tunnel-id, 专用通道实例ID，如：dcx-abcdefgh。
+direct-connect-id, 物理专线实例ID，如：dc-abcdefgh。
      */
     public Filter [] getFilters() {
         return this.Filters;
@@ -74,62 +74,62 @@ public class DescribeDirectConnectTunnelsRequest extends AbstractModel {
     /**
      * Set 过滤条件:
 参数不支持同时指定DirectConnectTunnelIds和Filters。
-<li> direct-connect-tunnel-name, 专用通道名称。</li>
-<li> direct-connect-tunnel-id, 专用通道实例ID，如dcx-abcdefgh。</li>
-<li>direct-connect-id, 物理专线实例ID，如，dc-abcdefgh。</li>
+direct-connect-tunnel-name, 专用通道名称。
+direct-connect-tunnel-id, 专用通道实例ID，如：dcx-abcdefgh。
+direct-connect-id, 物理专线实例ID，如：dc-abcdefgh。
      * @param Filters 过滤条件:
 参数不支持同时指定DirectConnectTunnelIds和Filters。
-<li> direct-connect-tunnel-name, 专用通道名称。</li>
-<li> direct-connect-tunnel-id, 专用通道实例ID，如dcx-abcdefgh。</li>
-<li>direct-connect-id, 物理专线实例ID，如，dc-abcdefgh。</li>
+direct-connect-tunnel-name, 专用通道名称。
+direct-connect-tunnel-id, 专用通道实例ID，如：dcx-abcdefgh。
+direct-connect-id, 物理专线实例ID，如：dc-abcdefgh。
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get 专用通道 ID数组 
-     * @return DirectConnectTunnelIds 专用通道 ID数组
+     * Get 专用通道ID数组。 
+     * @return DirectConnectTunnelIds 专用通道ID数组。
      */
     public String [] getDirectConnectTunnelIds() {
         return this.DirectConnectTunnelIds;
     }
 
     /**
-     * Set 专用通道 ID数组
-     * @param DirectConnectTunnelIds 专用通道 ID数组
+     * Set 专用通道ID数组。
+     * @param DirectConnectTunnelIds 专用通道ID数组。
      */
     public void setDirectConnectTunnelIds(String [] DirectConnectTunnelIds) {
         this.DirectConnectTunnelIds = DirectConnectTunnelIds;
     }
 
     /**
-     * Get 偏移量，默认为0 
-     * @return Offset 偏移量，默认为0
+     * Get 偏移量，默认为0。 
+     * @return Offset 偏移量，默认为0。
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量，默认为0
-     * @param Offset 偏移量，默认为0
+     * Set 偏移量，默认为0。
+     * @param Offset 偏移量，默认为0。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 返回数量，默认为20，最大值为100 
-     * @return Limit 返回数量，默认为20，最大值为100
+     * Get 返回数量，默认为20，最大值为100。 
+     * @return Limit 返回数量，默认为20，最大值为100。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回数量，默认为20，最大值为100
-     * @param Limit 返回数量，默认为20，最大值为100
+     * Set 返回数量，默认为20，最大值为100。
+     * @param Limit 返回数量，默认为20，最大值为100。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

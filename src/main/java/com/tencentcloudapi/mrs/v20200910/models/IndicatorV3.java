@@ -48,6 +48,14 @@ public class IndicatorV3 extends AbstractModel {
     private TableIndicators [] TableIndicators;
 
     /**
+    * 数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Page")
+    @Expose
+    private Long Page;
+
+    /**
      * Get 检验报告V3结论
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TableIndictors 检验报告V3结论
@@ -111,6 +119,26 @@ public class IndicatorV3 extends AbstractModel {
         this.TableIndicators = TableIndicators;
     }
 
+    /**
+     * Get 数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Page 数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getPage() {
+        return this.Page;
+    }
+
+    /**
+     * Set 数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Page 数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPage(Long Page) {
+        this.Page = Page;
+    }
+
     public IndicatorV3() {
     }
 
@@ -134,6 +162,9 @@ public class IndicatorV3 extends AbstractModel {
                 this.TableIndicators[i] = new TableIndicators(source.TableIndicators[i]);
             }
         }
+        if (source.Page != null) {
+            this.Page = new Long(source.Page);
+        }
     }
 
 
@@ -144,6 +175,7 @@ public class IndicatorV3 extends AbstractModel {
         this.setParamArrayObj(map, prefix + "TableIndictors.", this.TableIndictors);
         this.setParamSimple(map, prefix + "Version", this.Version);
         this.setParamArrayObj(map, prefix + "TableIndicators.", this.TableIndicators);
+        this.setParamSimple(map, prefix + "Page", this.Page);
 
     }
 }

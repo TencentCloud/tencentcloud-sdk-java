@@ -40,6 +40,14 @@ public class CovidItemsInfo extends AbstractModel {
     private String Version;
 
     /**
+    * 数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Page")
+    @Expose
+    private Long Page;
+
+    /**
      * Get 核酸报告结论
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return CovidItems 核酸报告结论
@@ -79,6 +87,26 @@ public class CovidItemsInfo extends AbstractModel {
         this.Version = Version;
     }
 
+    /**
+     * Get 数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Page 数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getPage() {
+        return this.Page;
+    }
+
+    /**
+     * Set 数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Page 数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPage(Long Page) {
+        this.Page = Page;
+    }
+
     public CovidItemsInfo() {
     }
 
@@ -96,6 +124,9 @@ public class CovidItemsInfo extends AbstractModel {
         if (source.Version != null) {
             this.Version = new String(source.Version);
         }
+        if (source.Page != null) {
+            this.Page = new Long(source.Page);
+        }
     }
 
 
@@ -105,6 +136,7 @@ public class CovidItemsInfo extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "CovidItems.", this.CovidItems);
         this.setParamSimple(map, prefix + "Version", this.Version);
+        this.setParamSimple(map, prefix + "Page", this.Page);
 
     }
 }

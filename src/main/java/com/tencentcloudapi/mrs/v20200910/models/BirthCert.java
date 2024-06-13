@@ -56,6 +56,14 @@ public class BirthCert extends AbstractModel {
     private IssueInfo IssueInfo;
 
     /**
+    * 数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Page")
+    @Expose
+    private Long Page;
+
+    /**
      * Get 新生儿信息
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return NeonatalInfo 新生儿信息
@@ -135,6 +143,26 @@ public class BirthCert extends AbstractModel {
         this.IssueInfo = IssueInfo;
     }
 
+    /**
+     * Get 数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Page 数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getPage() {
+        return this.Page;
+    }
+
+    /**
+     * Set 数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Page 数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPage(Long Page) {
+        this.Page = Page;
+    }
+
     public BirthCert() {
     }
 
@@ -155,6 +183,9 @@ public class BirthCert extends AbstractModel {
         if (source.IssueInfo != null) {
             this.IssueInfo = new IssueInfo(source.IssueInfo);
         }
+        if (source.Page != null) {
+            this.Page = new Long(source.Page);
+        }
     }
 
 
@@ -166,6 +197,7 @@ public class BirthCert extends AbstractModel {
         this.setParamObj(map, prefix + "MotherInfo.", this.MotherInfo);
         this.setParamObj(map, prefix + "FatherInfo.", this.FatherInfo);
         this.setParamObj(map, prefix + "IssueInfo.", this.IssueInfo);
+        this.setParamSimple(map, prefix + "Page", this.Page);
 
     }
 }

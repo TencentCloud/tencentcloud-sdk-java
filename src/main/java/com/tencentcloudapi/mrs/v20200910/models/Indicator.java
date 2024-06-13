@@ -40,6 +40,14 @@ public class Indicator extends AbstractModel {
     private BlockTitle [] BlockTitle;
 
     /**
+    * 数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Page")
+    @Expose
+    private Long Page;
+
+    /**
      * Get 检验指标项
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Indicators 检验指标项
@@ -79,6 +87,26 @@ public class Indicator extends AbstractModel {
         this.BlockTitle = BlockTitle;
     }
 
+    /**
+     * Get 数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Page 数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getPage() {
+        return this.Page;
+    }
+
+    /**
+     * Set 数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Page 数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPage(Long Page) {
+        this.Page = Page;
+    }
+
     public Indicator() {
     }
 
@@ -99,6 +127,9 @@ public class Indicator extends AbstractModel {
                 this.BlockTitle[i] = new BlockTitle(source.BlockTitle[i]);
             }
         }
+        if (source.Page != null) {
+            this.Page = new Long(source.Page);
+        }
     }
 
 
@@ -108,6 +139,7 @@ public class Indicator extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Indicators.", this.Indicators);
         this.setParamArrayObj(map, prefix + "BlockTitle.", this.BlockTitle);
+        this.setParamSimple(map, prefix + "Page", this.Page);
 
     }
 }

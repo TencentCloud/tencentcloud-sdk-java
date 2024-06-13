@@ -53,6 +53,22 @@ public class SegmentRecognitionItem extends AbstractModel {
     private String SegmentUrl;
 
     /**
+    * 分段标题。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Title")
+    @Expose
+    private String Title;
+
+    /**
+    * 分段概要。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Summary")
+    @Expose
+    private String Summary;
+
+    /**
      * Get 置信度。 
      * @return Confidence 置信度。
      */
@@ -120,6 +136,46 @@ public class SegmentRecognitionItem extends AbstractModel {
         this.SegmentUrl = SegmentUrl;
     }
 
+    /**
+     * Get 分段标题。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Title 分段标题。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTitle() {
+        return this.Title;
+    }
+
+    /**
+     * Set 分段标题。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Title 分段标题。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTitle(String Title) {
+        this.Title = Title;
+    }
+
+    /**
+     * Get 分段概要。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Summary 分段概要。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSummary() {
+        return this.Summary;
+    }
+
+    /**
+     * Set 分段概要。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Summary 分段概要。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSummary(String Summary) {
+        this.Summary = Summary;
+    }
+
     public SegmentRecognitionItem() {
     }
 
@@ -140,6 +196,12 @@ public class SegmentRecognitionItem extends AbstractModel {
         if (source.SegmentUrl != null) {
             this.SegmentUrl = new String(source.SegmentUrl);
         }
+        if (source.Title != null) {
+            this.Title = new String(source.Title);
+        }
+        if (source.Summary != null) {
+            this.Summary = new String(source.Summary);
+        }
     }
 
 
@@ -151,6 +213,8 @@ public class SegmentRecognitionItem extends AbstractModel {
         this.setParamSimple(map, prefix + "StartTimeOffset", this.StartTimeOffset);
         this.setParamSimple(map, prefix + "EndTimeOffset", this.EndTimeOffset);
         this.setParamSimple(map, prefix + "SegmentUrl", this.SegmentUrl);
+        this.setParamSimple(map, prefix + "Title", this.Title);
+        this.setParamSimple(map, prefix + "Summary", this.Summary);
 
     }
 }

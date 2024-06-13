@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeInstanceMonitorHotKeyResponse extends AbstractModel {
 
     /**
-    * 热Key详细信息
+    * 热 Key 详细信息。
     */
     @SerializedName("Data")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeInstanceMonitorHotKeyResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 热Key详细信息 
-     * @return Data 热Key详细信息
+     * Get 热 Key 详细信息。 
+     * @return Data 热 Key 详细信息。
      */
     public HotKeyInfo [] getData() {
         return this.Data;
     }
 
     /**
-     * Set 热Key详细信息
-     * @param Data 热Key详细信息
+     * Set 热 Key 详细信息。
+     * @param Data 热 Key 详细信息。
      */
     public void setData(HotKeyInfo [] Data) {
         this.Data = Data;

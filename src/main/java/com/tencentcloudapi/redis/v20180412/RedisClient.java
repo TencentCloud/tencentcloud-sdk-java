@@ -402,7 +402,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *查询实例热Key
+     *本接口（DescribeInstanceMonitorHotKey）用于查询实例热Key。
      * @param req DescribeInstanceMonitorHotKeyRequest
      * @return DescribeInstanceMonitorHotKeyResponse
      * @throws TencentCloudSDKException

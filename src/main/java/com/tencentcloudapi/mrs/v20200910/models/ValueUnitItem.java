@@ -56,6 +56,14 @@ public class ValueUnitItem extends AbstractModel {
     private PhysicalBaseItem Unit;
 
     /**
+    * 数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Page")
+    @Expose
+    private Long Page;
+
+    /**
      * Get 类型
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Name 类型
@@ -135,6 +143,26 @@ public class ValueUnitItem extends AbstractModel {
         this.Unit = Unit;
     }
 
+    /**
+     * Get 数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Page 数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getPage() {
+        return this.Page;
+    }
+
+    /**
+     * Set 数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Page 数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPage(Long Page) {
+        this.Page = Page;
+    }
+
     public ValueUnitItem() {
     }
 
@@ -155,6 +183,9 @@ public class ValueUnitItem extends AbstractModel {
         if (source.Unit != null) {
             this.Unit = new PhysicalBaseItem(source.Unit);
         }
+        if (source.Page != null) {
+            this.Page = new Long(source.Page);
+        }
     }
 
 
@@ -166,6 +197,7 @@ public class ValueUnitItem extends AbstractModel {
         this.setParamObj(map, prefix + "Item.", this.Item);
         this.setParamObj(map, prefix + "Result.", this.Result);
         this.setParamObj(map, prefix + "Unit.", this.Unit);
+        this.setParamSimple(map, prefix + "Page", this.Page);
 
     }
 }

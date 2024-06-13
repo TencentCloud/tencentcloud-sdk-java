@@ -91,6 +91,14 @@ public class ManagerShareUnit extends AbstractModel {
     private Long ShareMemberNum;
 
     /**
+    * 共享范围。取值：1-仅允许集团组织内共享 2-允许共享给任意账号
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ShareScope")
+    @Expose
+    private Long ShareScope;
+
+    /**
      * Get 共享单元ID。 
      * @return UnitId 共享单元ID。
      */
@@ -250,6 +258,26 @@ public class ManagerShareUnit extends AbstractModel {
         this.ShareMemberNum = ShareMemberNum;
     }
 
+    /**
+     * Get 共享范围。取值：1-仅允许集团组织内共享 2-允许共享给任意账号
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ShareScope 共享范围。取值：1-仅允许集团组织内共享 2-允许共享给任意账号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getShareScope() {
+        return this.ShareScope;
+    }
+
+    /**
+     * Set 共享范围。取值：1-仅允许集团组织内共享 2-允许共享给任意账号
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ShareScope 共享范围。取值：1-仅允许集团组织内共享 2-允许共享给任意账号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setShareScope(Long ShareScope) {
+        this.ShareScope = ShareScope;
+    }
+
     public ManagerShareUnit() {
     }
 
@@ -285,6 +313,9 @@ public class ManagerShareUnit extends AbstractModel {
         if (source.ShareMemberNum != null) {
             this.ShareMemberNum = new Long(source.ShareMemberNum);
         }
+        if (source.ShareScope != null) {
+            this.ShareScope = new Long(source.ShareScope);
+        }
     }
 
 
@@ -301,6 +332,7 @@ public class ManagerShareUnit extends AbstractModel {
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "ShareResourceNum", this.ShareResourceNum);
         this.setParamSimple(map, prefix + "ShareMemberNum", this.ShareMemberNum);
+        this.setParamSimple(map, prefix + "ShareScope", this.ShareScope);
 
     }
 }

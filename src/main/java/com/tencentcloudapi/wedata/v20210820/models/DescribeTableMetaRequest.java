@@ -31,6 +31,20 @@ public class DescribeTableMetaRequest extends AbstractModel {
     private String TableId;
 
     /**
+    * 按名称查询的条件
+    */
+    @SerializedName("TableNameFilter")
+    @Expose
+    private TableNameFilter TableNameFilter;
+
+    /**
+    * 查询条件类型0按id，1按名称，默认为0
+    */
+    @SerializedName("TableFilterType")
+    @Expose
+    private Long TableFilterType;
+
+    /**
      * Get 表唯一id 
      * @return TableId 表唯一id
      */
@@ -46,6 +60,38 @@ public class DescribeTableMetaRequest extends AbstractModel {
         this.TableId = TableId;
     }
 
+    /**
+     * Get 按名称查询的条件 
+     * @return TableNameFilter 按名称查询的条件
+     */
+    public TableNameFilter getTableNameFilter() {
+        return this.TableNameFilter;
+    }
+
+    /**
+     * Set 按名称查询的条件
+     * @param TableNameFilter 按名称查询的条件
+     */
+    public void setTableNameFilter(TableNameFilter TableNameFilter) {
+        this.TableNameFilter = TableNameFilter;
+    }
+
+    /**
+     * Get 查询条件类型0按id，1按名称，默认为0 
+     * @return TableFilterType 查询条件类型0按id，1按名称，默认为0
+     */
+    public Long getTableFilterType() {
+        return this.TableFilterType;
+    }
+
+    /**
+     * Set 查询条件类型0按id，1按名称，默认为0
+     * @param TableFilterType 查询条件类型0按id，1按名称，默认为0
+     */
+    public void setTableFilterType(Long TableFilterType) {
+        this.TableFilterType = TableFilterType;
+    }
+
     public DescribeTableMetaRequest() {
     }
 
@@ -57,6 +103,12 @@ public class DescribeTableMetaRequest extends AbstractModel {
         if (source.TableId != null) {
             this.TableId = new String(source.TableId);
         }
+        if (source.TableNameFilter != null) {
+            this.TableNameFilter = new TableNameFilter(source.TableNameFilter);
+        }
+        if (source.TableFilterType != null) {
+            this.TableFilterType = new Long(source.TableFilterType);
+        }
     }
 
 
@@ -65,6 +117,8 @@ public class DescribeTableMetaRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TableId", this.TableId);
+        this.setParamObj(map, prefix + "TableNameFilter.", this.TableNameFilter);
+        this.setParamSimple(map, prefix + "TableFilterType", this.TableFilterType);
 
     }
 }

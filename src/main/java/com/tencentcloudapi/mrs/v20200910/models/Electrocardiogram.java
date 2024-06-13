@@ -40,6 +40,14 @@ public class Electrocardiogram extends AbstractModel {
     private EcgDiagnosis EcgDiagnosis;
 
     /**
+    * 数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Page")
+    @Expose
+    private Long Page;
+
+    /**
      * Get 心电图详情
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return EcgDescription 心电图详情
@@ -79,6 +87,26 @@ public class Electrocardiogram extends AbstractModel {
         this.EcgDiagnosis = EcgDiagnosis;
     }
 
+    /**
+     * Get 数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Page 数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getPage() {
+        return this.Page;
+    }
+
+    /**
+     * Set 数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Page 数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPage(Long Page) {
+        this.Page = Page;
+    }
+
     public Electrocardiogram() {
     }
 
@@ -93,6 +121,9 @@ public class Electrocardiogram extends AbstractModel {
         if (source.EcgDiagnosis != null) {
             this.EcgDiagnosis = new EcgDiagnosis(source.EcgDiagnosis);
         }
+        if (source.Page != null) {
+            this.Page = new Long(source.Page);
+        }
     }
 
 
@@ -102,6 +133,7 @@ public class Electrocardiogram extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "EcgDescription.", this.EcgDescription);
         this.setParamObj(map, prefix + "EcgDiagnosis.", this.EcgDiagnosis);
+        this.setParamSimple(map, prefix + "Page", this.Page);
 
     }
 }

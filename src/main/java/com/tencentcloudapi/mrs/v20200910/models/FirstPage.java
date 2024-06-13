@@ -64,6 +64,14 @@ public class FirstPage extends AbstractModel {
     private Fp2NdItem [] Fp2NdItems;
 
     /**
+    * 数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Page")
+    @Expose
+    private Long Page;
+
+    /**
      * Get 出入院诊断
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return DischargeDiagnosis 出入院诊断
@@ -163,6 +171,26 @@ public class FirstPage extends AbstractModel {
         this.Fp2NdItems = Fp2NdItems;
     }
 
+    /**
+     * Get 数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Page 数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getPage() {
+        return this.Page;
+    }
+
+    /**
+     * Set 数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Page 数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPage(Long Page) {
+        this.Page = Page;
+    }
+
     public FirstPage() {
     }
 
@@ -192,6 +220,9 @@ public class FirstPage extends AbstractModel {
                 this.Fp2NdItems[i] = new Fp2NdItem(source.Fp2NdItems[i]);
             }
         }
+        if (source.Page != null) {
+            this.Page = new Long(source.Page);
+        }
     }
 
 
@@ -204,6 +235,7 @@ public class FirstPage extends AbstractModel {
         this.setParamObj(map, prefix + "ClinicalDiagnosis.", this.ClinicalDiagnosis);
         this.setParamObj(map, prefix + "DamagePoi.", this.DamagePoi);
         this.setParamArrayObj(map, prefix + "Fp2NdItems.", this.Fp2NdItems);
+        this.setParamSimple(map, prefix + "Page", this.Page);
 
     }
 }

@@ -27,7 +27,8 @@ public class InputManageMarketingRisk extends AbstractModel {
     * 用户账号类型；默认开通QQOpenId、手机号MD5权限；如果需要使用微信OpenId入参，则需要"提交工单"或联系对接人进行资格审核，审核通过后方可正常使用微信开放账号。
 1：QQ开放账号
 2：微信开放账号
-10004：手机号MD5，中国大陆11位手机号进行MD5加密，取32位小写值。
+10004：手机号MD5，中国大陆11位手机号进行MD5加密，取32位小写值
+10005：手机号SHA256，中国大陆11位手机号进行SHA256加密，取64位小写值
     */
     @SerializedName("Account")
     @Expose
@@ -194,11 +195,13 @@ public class InputManageMarketingRisk extends AbstractModel {
      * Get 用户账号类型；默认开通QQOpenId、手机号MD5权限；如果需要使用微信OpenId入参，则需要"提交工单"或联系对接人进行资格审核，审核通过后方可正常使用微信开放账号。
 1：QQ开放账号
 2：微信开放账号
-10004：手机号MD5，中国大陆11位手机号进行MD5加密，取32位小写值。 
+10004：手机号MD5，中国大陆11位手机号进行MD5加密，取32位小写值
+10005：手机号SHA256，中国大陆11位手机号进行SHA256加密，取64位小写值 
      * @return Account 用户账号类型；默认开通QQOpenId、手机号MD5权限；如果需要使用微信OpenId入参，则需要"提交工单"或联系对接人进行资格审核，审核通过后方可正常使用微信开放账号。
 1：QQ开放账号
 2：微信开放账号
-10004：手机号MD5，中国大陆11位手机号进行MD5加密，取32位小写值。
+10004：手机号MD5，中国大陆11位手机号进行MD5加密，取32位小写值
+10005：手机号SHA256，中国大陆11位手机号进行SHA256加密，取64位小写值
      */
     public AccountInfo getAccount() {
         return this.Account;
@@ -208,11 +211,13 @@ public class InputManageMarketingRisk extends AbstractModel {
      * Set 用户账号类型；默认开通QQOpenId、手机号MD5权限；如果需要使用微信OpenId入参，则需要"提交工单"或联系对接人进行资格审核，审核通过后方可正常使用微信开放账号。
 1：QQ开放账号
 2：微信开放账号
-10004：手机号MD5，中国大陆11位手机号进行MD5加密，取32位小写值。
+10004：手机号MD5，中国大陆11位手机号进行MD5加密，取32位小写值
+10005：手机号SHA256，中国大陆11位手机号进行SHA256加密，取64位小写值
      * @param Account 用户账号类型；默认开通QQOpenId、手机号MD5权限；如果需要使用微信OpenId入参，则需要"提交工单"或联系对接人进行资格审核，审核通过后方可正常使用微信开放账号。
 1：QQ开放账号
 2：微信开放账号
-10004：手机号MD5，中国大陆11位手机号进行MD5加密，取32位小写值。
+10004：手机号MD5，中国大陆11位手机号进行MD5加密，取32位小写值
+10005：手机号SHA256，中国大陆11位手机号进行SHA256加密，取64位小写值
      */
     public void setAccount(AccountInfo Account) {
         this.Account = Account;

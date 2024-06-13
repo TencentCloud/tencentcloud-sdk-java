@@ -1633,6 +1633,9 @@ Agent参数中的OpenId 必须为审批者的openId，且链接必须由审批�
 HttpProfile httpProfile = new HttpProfile();
 httpProfile.setEndpoint("file.test.ess.tencent.cn");
 ```
+
+<font color="red">相关视频指引</font> <br>
+1. <a href="https://dyn.ess.tencent.cn/guide/apivideo/essbasic-UploadFiles.mp4" target="_blank">【上传文件代码】编写示例</a><br>
      * @param req UploadFilesRequest
      * @return UploadFilesResponse
      * @throws TencentCloudSDKException

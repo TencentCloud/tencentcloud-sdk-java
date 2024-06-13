@@ -129,6 +129,7 @@ public class HKIDCardOCRResponse extends AbstractModel {
 -9101 证件边框不完整告警
 -9102 证件复印件告警
 -9103 证件翻拍告警
+-9104 证件PS告警
 -9107 证件反光告警
 -9108 证件模糊告警
 -9109 告警能力未开通
@@ -405,6 +406,7 @@ public class HKIDCardOCRResponse extends AbstractModel {
 -9101 证件边框不完整告警
 -9102 证件复印件告警
 -9103 证件翻拍告警
+-9104 证件PS告警
 -9107 证件反光告警
 -9108 证件模糊告警
 -9109 告警能力未开通 
@@ -412,6 +414,7 @@ public class HKIDCardOCRResponse extends AbstractModel {
 -9101 证件边框不完整告警
 -9102 证件复印件告警
 -9103 证件翻拍告警
+-9104 证件PS告警
 -9107 证件反光告警
 -9108 证件模糊告警
 -9109 告警能力未开通
@@ -425,6 +428,7 @@ public class HKIDCardOCRResponse extends AbstractModel {
 -9101 证件边框不完整告警
 -9102 证件复印件告警
 -9103 证件翻拍告警
+-9104 证件PS告警
 -9107 证件反光告警
 -9108 证件模糊告警
 -9109 告警能力未开通
@@ -432,6 +436,7 @@ public class HKIDCardOCRResponse extends AbstractModel {
 -9101 证件边框不完整告警
 -9102 证件复印件告警
 -9103 证件翻拍告警
+-9104 证件PS告警
 -9107 证件反光告警
 -9108 证件模糊告警
 -9109 告警能力未开通

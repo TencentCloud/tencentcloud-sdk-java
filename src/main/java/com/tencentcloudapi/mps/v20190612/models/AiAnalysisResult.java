@@ -86,6 +86,14 @@ public class AiAnalysisResult extends AbstractModel {
     private AiAnalysisTaskDelLogoResult DeLogoTask;
 
     /**
+    * 视频内容分析拆条任务的查询结果，当任务类型为 SegmentRecognition 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SegmentTask")
+    @Expose
+    private AiAnalysisTaskSegmentResult SegmentTask;
+
+    /**
     * 视频内容分析片头片尾任务的查询结果，当任务类型为 HeadTailRecognition 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -266,6 +274,26 @@ public class AiAnalysisResult extends AbstractModel {
     }
 
     /**
+     * Get 视频内容分析拆条任务的查询结果，当任务类型为 SegmentRecognition 时有效。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SegmentTask 视频内容分析拆条任务的查询结果，当任务类型为 SegmentRecognition 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AiAnalysisTaskSegmentResult getSegmentTask() {
+        return this.SegmentTask;
+    }
+
+    /**
+     * Set 视频内容分析拆条任务的查询结果，当任务类型为 SegmentRecognition 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SegmentTask 视频内容分析拆条任务的查询结果，当任务类型为 SegmentRecognition 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSegmentTask(AiAnalysisTaskSegmentResult SegmentTask) {
+        this.SegmentTask = SegmentTask;
+    }
+
+    /**
      * Get 视频内容分析片头片尾任务的查询结果，当任务类型为 HeadTailRecognition 时有效。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return HeadTailTask 视频内容分析片头片尾任务的查询结果，当任务类型为 HeadTailRecognition 时有效。
@@ -334,6 +362,9 @@ public class AiAnalysisResult extends AbstractModel {
         if (source.DeLogoTask != null) {
             this.DeLogoTask = new AiAnalysisTaskDelLogoResult(source.DeLogoTask);
         }
+        if (source.SegmentTask != null) {
+            this.SegmentTask = new AiAnalysisTaskSegmentResult(source.SegmentTask);
+        }
         if (source.HeadTailTask != null) {
             this.HeadTailTask = new AiAnalysisTaskHeadTailResult(source.HeadTailTask);
         }
@@ -354,6 +385,7 @@ public class AiAnalysisResult extends AbstractModel {
         this.setParamObj(map, prefix + "FrameTagTask.", this.FrameTagTask);
         this.setParamObj(map, prefix + "HighlightTask.", this.HighlightTask);
         this.setParamObj(map, prefix + "DeLogoTask.", this.DeLogoTask);
+        this.setParamObj(map, prefix + "SegmentTask.", this.SegmentTask);
         this.setParamObj(map, prefix + "HeadTailTask.", this.HeadTailTask);
         this.setParamObj(map, prefix + "DescriptionTask.", this.DescriptionTask);
 

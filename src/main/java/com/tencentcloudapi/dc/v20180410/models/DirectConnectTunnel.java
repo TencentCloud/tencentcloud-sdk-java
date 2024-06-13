@@ -255,6 +255,14 @@ REJECTED:拒绝
     private String CloudAttachId;
 
     /**
+    * 是否共享通道
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ShareOrNot")
+    @Expose
+    private Long ShareOrNot;
+
+    /**
      * Get 专用通道ID 
      * @return DirectConnectTunnelId 专用通道ID
      */
@@ -818,6 +826,26 @@ REJECTED:拒绝
         this.CloudAttachId = CloudAttachId;
     }
 
+    /**
+     * Get 是否共享通道
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ShareOrNot 是否共享通道
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getShareOrNot() {
+        return this.ShareOrNot;
+    }
+
+    /**
+     * Set 是否共享通道
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ShareOrNot 是否共享通道
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setShareOrNot(Long ShareOrNot) {
+        this.ShareOrNot = ShareOrNot;
+    }
+
     public DirectConnectTunnel() {
     }
 
@@ -922,6 +950,9 @@ REJECTED:拒绝
         if (source.CloudAttachId != null) {
             this.CloudAttachId = new String(source.CloudAttachId);
         }
+        if (source.ShareOrNot != null) {
+            this.ShareOrNot = new Long(source.ShareOrNot);
+        }
     }
 
 
@@ -959,6 +990,7 @@ REJECTED:拒绝
         this.setParamSimple(map, prefix + "TencentBackupAddress", this.TencentBackupAddress);
         this.setParamSimple(map, prefix + "SignLaw", this.SignLaw);
         this.setParamSimple(map, prefix + "CloudAttachId", this.CloudAttachId);
+        this.setParamSimple(map, prefix + "ShareOrNot", this.ShareOrNot);
 
     }
 }

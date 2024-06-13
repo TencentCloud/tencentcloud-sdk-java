@@ -48,6 +48,14 @@ public class Check extends AbstractModel {
     private BlockTitle [] BlockTitle;
 
     /**
+    * 数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Page")
+    @Expose
+    private Long Page;
+
+    /**
      * Get 描述
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Desc 描述
@@ -107,6 +115,26 @@ public class Check extends AbstractModel {
         this.BlockTitle = BlockTitle;
     }
 
+    /**
+     * Get 数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Page 数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getPage() {
+        return this.Page;
+    }
+
+    /**
+     * Set 数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Page 数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPage(Long Page) {
+        this.Page = Page;
+    }
+
     public Check() {
     }
 
@@ -127,6 +155,9 @@ public class Check extends AbstractModel {
                 this.BlockTitle[i] = new BlockTitle(source.BlockTitle[i]);
             }
         }
+        if (source.Page != null) {
+            this.Page = new Long(source.Page);
+        }
     }
 
 
@@ -137,6 +168,7 @@ public class Check extends AbstractModel {
         this.setParamObj(map, prefix + "Desc.", this.Desc);
         this.setParamObj(map, prefix + "Summary.", this.Summary);
         this.setParamArrayObj(map, prefix + "BlockTitle.", this.BlockTitle);
+        this.setParamSimple(map, prefix + "Page", this.Page);
 
     }
 }

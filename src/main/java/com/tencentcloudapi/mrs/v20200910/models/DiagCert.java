@@ -40,6 +40,14 @@ public class DiagCert extends AbstractModel {
     private DiagCertItem [] Diagnosis;
 
     /**
+    * 数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Page")
+    @Expose
+    private Long Page;
+
+    /**
      * Get 建议
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Advice 建议
@@ -79,6 +87,26 @@ public class DiagCert extends AbstractModel {
         this.Diagnosis = Diagnosis;
     }
 
+    /**
+     * Get 数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Page 数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getPage() {
+        return this.Page;
+    }
+
+    /**
+     * Set 数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Page 数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPage(Long Page) {
+        this.Page = Page;
+    }
+
     public DiagCert() {
     }
 
@@ -96,6 +124,9 @@ public class DiagCert extends AbstractModel {
                 this.Diagnosis[i] = new DiagCertItem(source.Diagnosis[i]);
             }
         }
+        if (source.Page != null) {
+            this.Page = new Long(source.Page);
+        }
     }
 
 
@@ -105,6 +136,7 @@ public class DiagCert extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Advice.", this.Advice);
         this.setParamArrayObj(map, prefix + "Diagnosis.", this.Diagnosis);
+        this.setParamSimple(map, prefix + "Page", this.Page);
 
     }
 }

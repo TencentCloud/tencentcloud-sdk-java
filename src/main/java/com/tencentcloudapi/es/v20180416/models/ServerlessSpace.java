@@ -163,6 +163,14 @@ public class ServerlessSpace extends AbstractModel {
     private String KibanaLanguage;
 
     /**
+    * 0
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ClusterType")
+    @Expose
+    private Long ClusterType;
+
+    /**
      * Get Serverless索引空间ID 
      * @return SpaceId Serverless索引空间ID
      */
@@ -502,6 +510,26 @@ public class ServerlessSpace extends AbstractModel {
         this.KibanaLanguage = KibanaLanguage;
     }
 
+    /**
+     * Get 0
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ClusterType 0
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getClusterType() {
+        return this.ClusterType;
+    }
+
+    /**
+     * Set 0
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ClusterType 0
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setClusterType(Long ClusterType) {
+        this.ClusterType = ClusterType;
+    }
+
     public ServerlessSpace() {
     }
 
@@ -567,6 +595,9 @@ public class ServerlessSpace extends AbstractModel {
         if (source.KibanaLanguage != null) {
             this.KibanaLanguage = new String(source.KibanaLanguage);
         }
+        if (source.ClusterType != null) {
+            this.ClusterType = new Long(source.ClusterType);
+        }
     }
 
 
@@ -592,6 +623,7 @@ public class ServerlessSpace extends AbstractModel {
         this.setParamSimple(map, prefix + "EnableKibanaPrivateAccess", this.EnableKibanaPrivateAccess);
         this.setParamSimple(map, prefix + "AppId", this.AppId);
         this.setParamSimple(map, prefix + "KibanaLanguage", this.KibanaLanguage);
+        this.setParamSimple(map, prefix + "ClusterType", this.ClusterType);
 
     }
 }

@@ -136,6 +136,14 @@ public class PathologyV2 extends AbstractModel {
     private Molecular [] Molecular;
 
     /**
+    * 数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Page")
+    @Expose
+    private Long Page;
+
+    /**
      * Get 报告类型
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return PathologicalReportType 报告类型
@@ -415,6 +423,26 @@ public class PathologyV2 extends AbstractModel {
         this.Molecular = Molecular;
     }
 
+    /**
+     * Get 数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Page 数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getPage() {
+        return this.Page;
+    }
+
+    /**
+     * Set 数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Page 数据在原PDF文件中的第几页
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPage(Long Page) {
+        this.Page = Page;
+    }
+
     public PathologyV2() {
     }
 
@@ -480,6 +508,9 @@ public class PathologyV2 extends AbstractModel {
                 this.Molecular[i] = new Molecular(source.Molecular[i]);
             }
         }
+        if (source.Page != null) {
+            this.Page = new Long(source.Page);
+        }
     }
 
 
@@ -501,6 +532,7 @@ public class PathologyV2 extends AbstractModel {
         this.setParamObj(map, prefix + "SampleType.", this.SampleType);
         this.setParamArrayObj(map, prefix + "LymphSize.", this.LymphSize);
         this.setParamArrayObj(map, prefix + "Molecular.", this.Molecular);
+        this.setParamSimple(map, prefix + "Page", this.Page);
 
     }
 }

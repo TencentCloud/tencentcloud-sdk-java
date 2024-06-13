@@ -102,6 +102,13 @@ public class ChannelCreateEmbedWebUrlRequest extends AbstractModel {
     private String UserData;
 
     /**
+    * 个性化参数，用于控制页面展示内容
+    */
+    @SerializedName("Option")
+    @Expose
+    private EmbedUrlOption Option;
+
+    /**
      * Get 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
 
 此接口下面信息必填。
@@ -345,6 +352,22 @@ public class ChannelCreateEmbedWebUrlRequest extends AbstractModel {
         this.UserData = UserData;
     }
 
+    /**
+     * Get 个性化参数，用于控制页面展示内容 
+     * @return Option 个性化参数，用于控制页面展示内容
+     */
+    public EmbedUrlOption getOption() {
+        return this.Option;
+    }
+
+    /**
+     * Set 个性化参数，用于控制页面展示内容
+     * @param Option 个性化参数，用于控制页面展示内容
+     */
+    public void setOption(EmbedUrlOption Option) {
+        this.Option = Option;
+    }
+
     public ChannelCreateEmbedWebUrlRequest() {
     }
 
@@ -371,6 +394,9 @@ public class ChannelCreateEmbedWebUrlRequest extends AbstractModel {
         if (source.UserData != null) {
             this.UserData = new String(source.UserData);
         }
+        if (source.Option != null) {
+            this.Option = new EmbedUrlOption(source.Option);
+        }
     }
 
 
@@ -384,6 +410,7 @@ public class ChannelCreateEmbedWebUrlRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "HiddenComponents", this.HiddenComponents);
         this.setParamObj(map, prefix + "Operator.", this.Operator);
         this.setParamSimple(map, prefix + "UserData", this.UserData);
+        this.setParamObj(map, prefix + "Option.", this.Option);
 
     }
 }

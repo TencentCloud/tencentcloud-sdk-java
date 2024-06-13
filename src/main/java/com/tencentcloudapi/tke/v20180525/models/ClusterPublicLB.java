@@ -25,6 +25,7 @@ public class ClusterPublicLB extends AbstractModel {
 
     /**
     * 是否开启公网访问LB
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Enabled")
     @Expose
@@ -32,6 +33,7 @@ public class ClusterPublicLB extends AbstractModel {
 
     /**
     * 允许访问的来源CIDR列表
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AllowFromCidrs")
     @Expose
@@ -39,6 +41,7 @@ public class ClusterPublicLB extends AbstractModel {
 
     /**
     * 安全策略放通单个IP或CIDR(例如: "192.168.1.0/24",默认为拒绝所有)
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SecurityPolicies")
     @Expose
@@ -46,6 +49,7 @@ public class ClusterPublicLB extends AbstractModel {
 
     /**
     * 外网访问相关的扩展参数，格式为json
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExtraParam")
     @Expose
@@ -53,14 +57,17 @@ public class ClusterPublicLB extends AbstractModel {
 
     /**
     * 新内外网功能，需要传递安全组
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SecurityGroup")
     @Expose
     private String SecurityGroup;
 
     /**
-     * Get 是否开启公网访问LB 
+     * Get 是否开启公网访问LB
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Enabled 是否开启公网访问LB
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getEnabled() {
         return this.Enabled;
@@ -68,15 +75,19 @@ public class ClusterPublicLB extends AbstractModel {
 
     /**
      * Set 是否开启公网访问LB
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Enabled 是否开启公网访问LB
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnabled(Boolean Enabled) {
         this.Enabled = Enabled;
     }
 
     /**
-     * Get 允许访问的来源CIDR列表 
+     * Get 允许访问的来源CIDR列表
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return AllowFromCidrs 允许访问的来源CIDR列表
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getAllowFromCidrs() {
         return this.AllowFromCidrs;
@@ -84,15 +95,19 @@ public class ClusterPublicLB extends AbstractModel {
 
     /**
      * Set 允许访问的来源CIDR列表
+注意：此字段可能返回 null，表示取不到有效值。
      * @param AllowFromCidrs 允许访问的来源CIDR列表
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAllowFromCidrs(String [] AllowFromCidrs) {
         this.AllowFromCidrs = AllowFromCidrs;
     }
 
     /**
-     * Get 安全策略放通单个IP或CIDR(例如: "192.168.1.0/24",默认为拒绝所有) 
+     * Get 安全策略放通单个IP或CIDR(例如: "192.168.1.0/24",默认为拒绝所有)
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return SecurityPolicies 安全策略放通单个IP或CIDR(例如: "192.168.1.0/24",默认为拒绝所有)
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getSecurityPolicies() {
         return this.SecurityPolicies;
@@ -100,15 +115,19 @@ public class ClusterPublicLB extends AbstractModel {
 
     /**
      * Set 安全策略放通单个IP或CIDR(例如: "192.168.1.0/24",默认为拒绝所有)
+注意：此字段可能返回 null，表示取不到有效值。
      * @param SecurityPolicies 安全策略放通单个IP或CIDR(例如: "192.168.1.0/24",默认为拒绝所有)
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSecurityPolicies(String [] SecurityPolicies) {
         this.SecurityPolicies = SecurityPolicies;
     }
 
     /**
-     * Get 外网访问相关的扩展参数，格式为json 
+     * Get 外网访问相关的扩展参数，格式为json
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ExtraParam 外网访问相关的扩展参数，格式为json
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExtraParam() {
         return this.ExtraParam;
@@ -116,15 +135,19 @@ public class ClusterPublicLB extends AbstractModel {
 
     /**
      * Set 外网访问相关的扩展参数，格式为json
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ExtraParam 外网访问相关的扩展参数，格式为json
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExtraParam(String ExtraParam) {
         this.ExtraParam = ExtraParam;
     }
 
     /**
-     * Get 新内外网功能，需要传递安全组 
+     * Get 新内外网功能，需要传递安全组
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return SecurityGroup 新内外网功能，需要传递安全组
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSecurityGroup() {
         return this.SecurityGroup;
@@ -132,7 +155,9 @@ public class ClusterPublicLB extends AbstractModel {
 
     /**
      * Set 新内外网功能，需要传递安全组
+注意：此字段可能返回 null，表示取不到有效值。
      * @param SecurityGroup 新内外网功能，需要传递安全组
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSecurityGroup(String SecurityGroup) {
         this.SecurityGroup = SecurityGroup;

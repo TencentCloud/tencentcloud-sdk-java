@@ -62,8 +62,9 @@ public class WeChatAccountInfo extends AbstractModel {
     private String AssociateAccount;
 
     /**
-    * 账号绑定的MD5手机号，
-注释：只支持标准中国大陆11位手机号MD5加密后位的32位小写字符串。
+    * 账号绑定的MD5或SHA256加密的手机号。
+注释：支持标准中国大陆11位手机号MD5加密后位的32位小写字符串；
+     支持标准中国大陆11位手机号SHA256加密后位的64位小写字符串。
     */
     @SerializedName("MobilePhone")
     @Expose
@@ -169,20 +170,24 @@ public class WeChatAccountInfo extends AbstractModel {
     }
 
     /**
-     * Get 账号绑定的MD5手机号，
-注释：只支持标准中国大陆11位手机号MD5加密后位的32位小写字符串。 
-     * @return MobilePhone 账号绑定的MD5手机号，
-注释：只支持标准中国大陆11位手机号MD5加密后位的32位小写字符串。
+     * Get 账号绑定的MD5或SHA256加密的手机号。
+注释：支持标准中国大陆11位手机号MD5加密后位的32位小写字符串；
+     支持标准中国大陆11位手机号SHA256加密后位的64位小写字符串。 
+     * @return MobilePhone 账号绑定的MD5或SHA256加密的手机号。
+注释：支持标准中国大陆11位手机号MD5加密后位的32位小写字符串；
+     支持标准中国大陆11位手机号SHA256加密后位的64位小写字符串。
      */
     public String getMobilePhone() {
         return this.MobilePhone;
     }
 
     /**
-     * Set 账号绑定的MD5手机号，
-注释：只支持标准中国大陆11位手机号MD5加密后位的32位小写字符串。
-     * @param MobilePhone 账号绑定的MD5手机号，
-注释：只支持标准中国大陆11位手机号MD5加密后位的32位小写字符串。
+     * Set 账号绑定的MD5或SHA256加密的手机号。
+注释：支持标准中国大陆11位手机号MD5加密后位的32位小写字符串；
+     支持标准中国大陆11位手机号SHA256加密后位的64位小写字符串。
+     * @param MobilePhone 账号绑定的MD5或SHA256加密的手机号。
+注释：支持标准中国大陆11位手机号MD5加密后位的32位小写字符串；
+     支持标准中国大陆11位手机号SHA256加密后位的64位小写字符串。
      */
     public void setMobilePhone(String MobilePhone) {
         this.MobilePhone = MobilePhone;
