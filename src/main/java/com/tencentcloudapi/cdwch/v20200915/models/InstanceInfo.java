@@ -395,6 +395,30 @@ Modify 集群变更中；
     private Boolean HasEsIndex;
 
     /**
+    * true
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsSecondaryZone")
+    @Expose
+    private Boolean IsSecondaryZone;
+
+    /**
+    * desc
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SecondaryZoneInfo")
+    @Expose
+    private String SecondaryZoneInfo;
+
+    /**
+    * 是否clickhouse-keeper
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ClickHouseKeeper")
+    @Expose
+    private Boolean ClickHouseKeeper;
+
+    /**
      * Get 集群实例ID, "cdw-xxxx" 字符串类型
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return InstanceId 集群实例ID, "cdw-xxxx" 字符串类型
@@ -1326,6 +1350,66 @@ Modify 集群变更中；
         this.HasEsIndex = HasEsIndex;
     }
 
+    /**
+     * Get true
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsSecondaryZone true
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getIsSecondaryZone() {
+        return this.IsSecondaryZone;
+    }
+
+    /**
+     * Set true
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsSecondaryZone true
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsSecondaryZone(Boolean IsSecondaryZone) {
+        this.IsSecondaryZone = IsSecondaryZone;
+    }
+
+    /**
+     * Get desc
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SecondaryZoneInfo desc
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSecondaryZoneInfo() {
+        return this.SecondaryZoneInfo;
+    }
+
+    /**
+     * Set desc
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SecondaryZoneInfo desc
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSecondaryZoneInfo(String SecondaryZoneInfo) {
+        this.SecondaryZoneInfo = SecondaryZoneInfo;
+    }
+
+    /**
+     * Get 是否clickhouse-keeper
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ClickHouseKeeper 是否clickhouse-keeper
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getClickHouseKeeper() {
+        return this.ClickHouseKeeper;
+    }
+
+    /**
+     * Set 是否clickhouse-keeper
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ClickHouseKeeper 是否clickhouse-keeper
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setClickHouseKeeper(Boolean ClickHouseKeeper) {
+        this.ClickHouseKeeper = ClickHouseKeeper;
+    }
+
     public InstanceInfo() {
     }
 
@@ -1478,6 +1562,15 @@ Modify 集群变更中；
         if (source.HasEsIndex != null) {
             this.HasEsIndex = new Boolean(source.HasEsIndex);
         }
+        if (source.IsSecondaryZone != null) {
+            this.IsSecondaryZone = new Boolean(source.IsSecondaryZone);
+        }
+        if (source.SecondaryZoneInfo != null) {
+            this.SecondaryZoneInfo = new String(source.SecondaryZoneInfo);
+        }
+        if (source.ClickHouseKeeper != null) {
+            this.ClickHouseKeeper = new Boolean(source.ClickHouseKeeper);
+        }
     }
 
 
@@ -1531,6 +1624,9 @@ Modify 集群变更中；
         this.setParamSimple(map, prefix + "EsIndexUsername", this.EsIndexUsername);
         this.setParamSimple(map, prefix + "EsIndexPassword", this.EsIndexPassword);
         this.setParamSimple(map, prefix + "HasEsIndex", this.HasEsIndex);
+        this.setParamSimple(map, prefix + "IsSecondaryZone", this.IsSecondaryZone);
+        this.setParamSimple(map, prefix + "SecondaryZoneInfo", this.SecondaryZoneInfo);
+        this.setParamSimple(map, prefix + "ClickHouseKeeper", this.ClickHouseKeeper);
 
     }
 }

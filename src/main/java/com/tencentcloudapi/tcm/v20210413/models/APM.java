@@ -47,6 +47,14 @@ public class APM extends AbstractModel {
     private String InstanceId;
 
     /**
+    * 是否要删除APM实例
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NeedDelete")
+    @Expose
+    private Boolean NeedDelete;
+
+    /**
      * Get 是否启用 
      * @return Enable 是否启用
      */
@@ -102,6 +110,26 @@ public class APM extends AbstractModel {
         this.InstanceId = InstanceId;
     }
 
+    /**
+     * Get 是否要删除APM实例
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NeedDelete 是否要删除APM实例
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getNeedDelete() {
+        return this.NeedDelete;
+    }
+
+    /**
+     * Set 是否要删除APM实例
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NeedDelete 是否要删除APM实例
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNeedDelete(Boolean NeedDelete) {
+        this.NeedDelete = NeedDelete;
+    }
+
     public APM() {
     }
 
@@ -119,6 +147,9 @@ public class APM extends AbstractModel {
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }
+        if (source.NeedDelete != null) {
+            this.NeedDelete = new Boolean(source.NeedDelete);
+        }
     }
 
 
@@ -129,6 +160,7 @@ public class APM extends AbstractModel {
         this.setParamSimple(map, prefix + "Enable", this.Enable);
         this.setParamSimple(map, prefix + "Region", this.Region);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "NeedDelete", this.NeedDelete);
 
     }
 }

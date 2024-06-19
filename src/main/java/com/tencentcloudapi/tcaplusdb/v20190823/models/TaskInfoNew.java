@@ -94,6 +94,30 @@ public class TaskInfoNew extends AbstractModel {
     private String Content;
 
     /**
+    * 表格组ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TableGroupId")
+    @Expose
+    private String TableGroupId;
+
+    /**
+    * 表格组名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TableGroupName")
+    @Expose
+    private String TableGroupName;
+
+    /**
+    * 表名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TableName")
+    @Expose
+    private String TableName;
+
+    /**
      * Get 任务ID 
      * @return TaskId 任务ID
      */
@@ -253,6 +277,66 @@ public class TaskInfoNew extends AbstractModel {
         this.Content = Content;
     }
 
+    /**
+     * Get 表格组ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TableGroupId 表格组ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTableGroupId() {
+        return this.TableGroupId;
+    }
+
+    /**
+     * Set 表格组ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TableGroupId 表格组ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTableGroupId(String TableGroupId) {
+        this.TableGroupId = TableGroupId;
+    }
+
+    /**
+     * Get 表格组名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TableGroupName 表格组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTableGroupName() {
+        return this.TableGroupName;
+    }
+
+    /**
+     * Set 表格组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TableGroupName 表格组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTableGroupName(String TableGroupName) {
+        this.TableGroupName = TableGroupName;
+    }
+
+    /**
+     * Get 表名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TableName 表名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTableName() {
+        return this.TableName;
+    }
+
+    /**
+     * Set 表名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TableName 表名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTableName(String TableName) {
+        this.TableName = TableName;
+    }
+
     public TaskInfoNew() {
     }
 
@@ -291,6 +375,15 @@ public class TaskInfoNew extends AbstractModel {
         if (source.Content != null) {
             this.Content = new String(source.Content);
         }
+        if (source.TableGroupId != null) {
+            this.TableGroupId = new String(source.TableGroupId);
+        }
+        if (source.TableGroupName != null) {
+            this.TableGroupName = new String(source.TableGroupName);
+        }
+        if (source.TableName != null) {
+            this.TableName = new String(source.TableName);
+        }
     }
 
 
@@ -308,6 +401,9 @@ public class TaskInfoNew extends AbstractModel {
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "Operator", this.Operator);
         this.setParamSimple(map, prefix + "Content", this.Content);
+        this.setParamSimple(map, prefix + "TableGroupId", this.TableGroupId);
+        this.setParamSimple(map, prefix + "TableGroupName", this.TableGroupName);
+        this.setParamSimple(map, prefix + "TableName", this.TableName);
 
     }
 }

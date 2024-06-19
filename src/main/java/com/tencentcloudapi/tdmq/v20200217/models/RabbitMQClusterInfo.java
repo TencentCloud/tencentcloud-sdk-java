@@ -185,6 +185,14 @@ public class RabbitMQClusterInfo extends AbstractModel {
     private String ClusterVersion;
 
     /**
+    * 计费模式，0-后付费，1-预付费
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PayMode")
+    @Expose
+    private Long PayMode;
+
+    /**
      * Get 集群ID 
      * @return ClusterId 集群ID
      */
@@ -564,6 +572,26 @@ public class RabbitMQClusterInfo extends AbstractModel {
         this.ClusterVersion = ClusterVersion;
     }
 
+    /**
+     * Get 计费模式，0-后付费，1-预付费
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PayMode 计费模式，0-后付费，1-预付费
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getPayMode() {
+        return this.PayMode;
+    }
+
+    /**
+     * Set 计费模式，0-后付费，1-预付费
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PayMode 计费模式，0-后付费，1-预付费
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPayMode(Long PayMode) {
+        this.PayMode = PayMode;
+    }
+
     public RabbitMQClusterInfo() {
     }
 
@@ -644,6 +672,9 @@ public class RabbitMQClusterInfo extends AbstractModel {
         if (source.ClusterVersion != null) {
             this.ClusterVersion = new String(source.ClusterVersion);
         }
+        if (source.PayMode != null) {
+            this.PayMode = new Long(source.PayMode);
+        }
     }
 
 
@@ -673,6 +704,7 @@ public class RabbitMQClusterInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "MirrorQueuePolicyFlag", this.MirrorQueuePolicyFlag);
         this.setParamSimple(map, prefix + "MessageConsumeRate", this.MessageConsumeRate);
         this.setParamSimple(map, prefix + "ClusterVersion", this.ClusterVersion);
+        this.setParamSimple(map, prefix + "PayMode", this.PayMode);
 
     }
 }

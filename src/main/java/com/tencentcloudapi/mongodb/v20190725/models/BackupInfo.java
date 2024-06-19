@@ -91,6 +91,28 @@ public class BackupInfo extends AbstractModel {
     private Long BackupMethod;
 
     /**
+    * 备份记录id
+    */
+    @SerializedName("BackId")
+    @Expose
+    private Long BackId;
+
+    /**
+    * 备份删除时间
+    */
+    @SerializedName("DeleteTime")
+    @Expose
+    private String DeleteTime;
+
+    /**
+    * 异地备份地域
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BackupRegion")
+    @Expose
+    private String BackupRegion;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -250,6 +272,58 @@ public class BackupInfo extends AbstractModel {
         this.BackupMethod = BackupMethod;
     }
 
+    /**
+     * Get 备份记录id 
+     * @return BackId 备份记录id
+     */
+    public Long getBackId() {
+        return this.BackId;
+    }
+
+    /**
+     * Set 备份记录id
+     * @param BackId 备份记录id
+     */
+    public void setBackId(Long BackId) {
+        this.BackId = BackId;
+    }
+
+    /**
+     * Get 备份删除时间 
+     * @return DeleteTime 备份删除时间
+     */
+    public String getDeleteTime() {
+        return this.DeleteTime;
+    }
+
+    /**
+     * Set 备份删除时间
+     * @param DeleteTime 备份删除时间
+     */
+    public void setDeleteTime(String DeleteTime) {
+        this.DeleteTime = DeleteTime;
+    }
+
+    /**
+     * Get 异地备份地域
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BackupRegion 异地备份地域
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getBackupRegion() {
+        return this.BackupRegion;
+    }
+
+    /**
+     * Set 异地备份地域
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BackupRegion 异地备份地域
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBackupRegion(String BackupRegion) {
+        this.BackupRegion = BackupRegion;
+    }
+
     public BackupInfo() {
     }
 
@@ -285,6 +359,15 @@ public class BackupInfo extends AbstractModel {
         if (source.BackupMethod != null) {
             this.BackupMethod = new Long(source.BackupMethod);
         }
+        if (source.BackId != null) {
+            this.BackId = new Long(source.BackId);
+        }
+        if (source.DeleteTime != null) {
+            this.DeleteTime = new String(source.DeleteTime);
+        }
+        if (source.BackupRegion != null) {
+            this.BackupRegion = new String(source.BackupRegion);
+        }
     }
 
 
@@ -301,6 +384,9 @@ public class BackupInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "BackupMethod", this.BackupMethod);
+        this.setParamSimple(map, prefix + "BackId", this.BackId);
+        this.setParamSimple(map, prefix + "DeleteTime", this.DeleteTime);
+        this.setParamSimple(map, prefix + "BackupRegion", this.BackupRegion);
 
     }
 }

@@ -39,19 +39,6 @@ public class CdsClient extends AbstractClient{
     }
 
     /**
-     *这些接口是传统版堡垒机接口.数审未用到，堡垒机的已全部迁移到dasb下，cds这边预下线
-
-获取镜像列表
-     * @param req DescribeDasbImageIdsRequest
-     * @return DescribeDasbImageIdsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeDasbImageIdsResponse DescribeDasbImageIds(DescribeDasbImageIdsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeDasbImageIds", DescribeDasbImageIdsResponse.class);
-    }
-
-    /**
      *本接口 (DescribeDbauditInstanceType) 用于查询可售卖的产品规格列表。
      * @param req DescribeDbauditInstanceTypeRequest
      * @return DescribeDbauditInstanceTypeResponse

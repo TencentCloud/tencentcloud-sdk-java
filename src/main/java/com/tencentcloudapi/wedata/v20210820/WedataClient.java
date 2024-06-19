@@ -435,6 +435,17 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *编排空间-工作流-创建任务文件夹
+     * @param req CreateTaskFolderRequest
+     * @return CreateTaskFolderResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateTaskFolderResponse CreateTaskFolder(CreateTaskFolderRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateTaskFolder", CreateTaskFolderResponse.class);
+    }
+
+    /**
      *提交任务版本
      * @param req CreateTaskVersionDsRequest
      * @return CreateTaskVersionDsResponse
@@ -2198,6 +2209,17 @@ public class WedataClient extends AbstractClient{
     public ModifyWorkflowScheduleResponse ModifyWorkflowSchedule(ModifyWorkflowScheduleRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyWorkflowSchedule", ModifyWorkflowScheduleResponse.class);
+    }
+
+    /**
+     *编排空间-工作流-移动任务到工作流文件夹
+     * @param req MoveTasksToFolderRequest
+     * @return MoveTasksToFolderResponse
+     * @throws TencentCloudSDKException
+     */
+    public MoveTasksToFolderResponse MoveTasksToFolder(MoveTasksToFolderRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "MoveTasksToFolder", MoveTasksToFolderResponse.class);
     }
 
     /**

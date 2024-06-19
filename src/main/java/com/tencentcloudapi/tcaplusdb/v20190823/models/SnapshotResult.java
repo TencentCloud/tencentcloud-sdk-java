@@ -104,6 +104,14 @@ public class SnapshotResult extends AbstractModel {
     private Long SnapshotStatus;
 
     /**
+    * 申请单ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ApplicationId")
+    @Expose
+    private String ApplicationId;
+
+    /**
      * Get 表格所属表格组ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TableGroupId 表格所属表格组ID
@@ -303,6 +311,26 @@ public class SnapshotResult extends AbstractModel {
         this.SnapshotStatus = SnapshotStatus;
     }
 
+    /**
+     * Get 申请单ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ApplicationId 申请单ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getApplicationId() {
+        return this.ApplicationId;
+    }
+
+    /**
+     * Set 申请单ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ApplicationId 申请单ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setApplicationId(String ApplicationId) {
+        this.ApplicationId = ApplicationId;
+    }
+
     public SnapshotResult() {
     }
 
@@ -341,6 +369,9 @@ public class SnapshotResult extends AbstractModel {
         if (source.SnapshotStatus != null) {
             this.SnapshotStatus = new Long(source.SnapshotStatus);
         }
+        if (source.ApplicationId != null) {
+            this.ApplicationId = new String(source.ApplicationId);
+        }
     }
 
 
@@ -358,6 +389,7 @@ public class SnapshotResult extends AbstractModel {
         this.setParamSimple(map, prefix + "SnapshotCreateTime", this.SnapshotCreateTime);
         this.setParamSimple(map, prefix + "SnapshotSize", this.SnapshotSize);
         this.setParamSimple(map, prefix + "SnapshotStatus", this.SnapshotStatus);
+        this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
 
     }
 }

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cds.v20180420.models;
+package com.tencentcloudapi.redis.v20180412.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,16 +21,16 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDasbImageIdsRequest extends AbstractModel {
+public class DescribeInstanceSpecBandwidthRequest extends AbstractModel {
 
-    public DescribeDasbImageIdsRequest() {
+    public DescribeInstanceSpecBandwidthRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeDasbImageIdsRequest(DescribeDasbImageIdsRequest source) {
+    public DescribeInstanceSpecBandwidthRequest(DescribeInstanceSpecBandwidthRequest source) {
     }
 
 

@@ -110,6 +110,22 @@ OPEN：公网属性， INTERNAL：内网属性。
     private CrossRegionConfig CrossRegionConfig;
 
     /**
+    * 设置跨可用区容灾时的主可用区ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MasterZoneID")
+    @Expose
+    private String MasterZoneID;
+
+    /**
+    * 设置跨可用区容灾时的备可用区ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SlaveZoneID")
+    @Expose
+    private String SlaveZoneID;
+
+    /**
      * Get 负载均衡实例的网络类型：
 OPEN：公网属性， INTERNAL：内网属性。
 只读。 
@@ -321,6 +337,46 @@ OPEN：公网属性， INTERNAL：内网属性。
         this.CrossRegionConfig = CrossRegionConfig;
     }
 
+    /**
+     * Get 设置跨可用区容灾时的主可用区ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MasterZoneID 设置跨可用区容灾时的主可用区ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getMasterZoneID() {
+        return this.MasterZoneID;
+    }
+
+    /**
+     * Set 设置跨可用区容灾时的主可用区ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MasterZoneID 设置跨可用区容灾时的主可用区ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMasterZoneID(String MasterZoneID) {
+        this.MasterZoneID = MasterZoneID;
+    }
+
+    /**
+     * Get 设置跨可用区容灾时的备可用区ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SlaveZoneID 设置跨可用区容灾时的备可用区ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSlaveZoneID() {
+        return this.SlaveZoneID;
+    }
+
+    /**
+     * Set 设置跨可用区容灾时的备可用区ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SlaveZoneID 设置跨可用区容灾时的备可用区ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSlaveZoneID(String SlaveZoneID) {
+        this.SlaveZoneID = SlaveZoneID;
+    }
+
     public LoadBalancer() {
     }
 
@@ -365,6 +421,12 @@ OPEN：公网属性， INTERNAL：内网属性。
         if (source.CrossRegionConfig != null) {
             this.CrossRegionConfig = new CrossRegionConfig(source.CrossRegionConfig);
         }
+        if (source.MasterZoneID != null) {
+            this.MasterZoneID = new String(source.MasterZoneID);
+        }
+        if (source.SlaveZoneID != null) {
+            this.SlaveZoneID = new String(source.SlaveZoneID);
+        }
     }
 
 
@@ -383,6 +445,8 @@ OPEN：公网属性， INTERNAL：内网属性。
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamObj(map, prefix + "ExtensiveClusters.", this.ExtensiveClusters);
         this.setParamObj(map, prefix + "CrossRegionConfig.", this.CrossRegionConfig);
+        this.setParamSimple(map, prefix + "MasterZoneID", this.MasterZoneID);
+        this.setParamSimple(map, prefix + "SlaveZoneID", this.SlaveZoneID);
 
     }
 }

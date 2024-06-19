@@ -413,6 +413,17 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *获取漏洞展开详情
+     * @param req DescribeVULRiskDetailRequest
+     * @return DescribeVULRiskDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVULRiskDetailResponse DescribeVULRiskDetail(DescribeVULRiskDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeVULRiskDetail", DescribeVULRiskDetailResponse.class);
+    }
+
+    /**
      *获取vpc列表
      * @param req DescribeVpcAssetsRequest
      * @return DescribeVpcAssetsResponse
@@ -421,6 +432,17 @@ public class CsipClient extends AbstractClient{
     public DescribeVpcAssetsResponse DescribeVpcAssets(DescribeVpcAssetsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeVpcAssets", DescribeVpcAssetsResponse.class);
+    }
+
+    /**
+     *获取漏洞视角的漏洞风险列表
+     * @param req DescribeVulViewVulRiskListRequest
+     * @return DescribeVulViewVulRiskListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVulViewVulRiskListResponse DescribeVulViewVulRiskList(DescribeVulViewVulRiskListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeVulViewVulRiskList", DescribeVulViewVulRiskListResponse.class);
     }
 
     /**

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cds.v20180420.models;
+package com.tencentcloudapi.waf.v20180125.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,21 +21,15 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeDasbImageIdsResponse extends AbstractModel {
+public class DescribeAreaBanAreasResponse extends AbstractModel {
 
     /**
-    * 基础镜像ID
+    * 回包内容
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("BaseImageId")
+    @SerializedName("Data")
     @Expose
-    private String BaseImageId;
-
-    /**
-    * AI镜像ID
-    */
-    @SerializedName("AiImageId")
-    @Expose
-    private String AiImageId;
+    private DescribeAreaBanAreasRsp Data;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -45,35 +39,23 @@ public class DescribeDasbImageIdsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 基础镜像ID 
-     * @return BaseImageId 基础镜像ID
+     * Get 回包内容
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Data 回包内容
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getBaseImageId() {
-        return this.BaseImageId;
+    public DescribeAreaBanAreasRsp getData() {
+        return this.Data;
     }
 
     /**
-     * Set 基础镜像ID
-     * @param BaseImageId 基础镜像ID
+     * Set 回包内容
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Data 回包内容
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setBaseImageId(String BaseImageId) {
-        this.BaseImageId = BaseImageId;
-    }
-
-    /**
-     * Get AI镜像ID 
-     * @return AiImageId AI镜像ID
-     */
-    public String getAiImageId() {
-        return this.AiImageId;
-    }
-
-    /**
-     * Set AI镜像ID
-     * @param AiImageId AI镜像ID
-     */
-    public void setAiImageId(String AiImageId) {
-        this.AiImageId = AiImageId;
+    public void setData(DescribeAreaBanAreasRsp Data) {
+        this.Data = Data;
     }
 
     /**
@@ -92,19 +74,16 @@ public class DescribeDasbImageIdsResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public DescribeDasbImageIdsResponse() {
+    public DescribeAreaBanAreasResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeDasbImageIdsResponse(DescribeDasbImageIdsResponse source) {
-        if (source.BaseImageId != null) {
-            this.BaseImageId = new String(source.BaseImageId);
-        }
-        if (source.AiImageId != null) {
-            this.AiImageId = new String(source.AiImageId);
+    public DescribeAreaBanAreasResponse(DescribeAreaBanAreasResponse source) {
+        if (source.Data != null) {
+            this.Data = new DescribeAreaBanAreasRsp(source.Data);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -116,8 +95,7 @@ public class DescribeDasbImageIdsResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "BaseImageId", this.BaseImageId);
-        this.setParamSimple(map, prefix + "AiImageId", this.AiImageId);
+        this.setParamObj(map, prefix + "Data.", this.Data);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

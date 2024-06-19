@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DeleteImageCachesRequest extends AbstractModel {
 
     /**
-    * 镜像缓存Id数组
+    * 镜像缓存ID数组
     */
     @SerializedName("ImageCacheIds")
     @Expose
     private String [] ImageCacheIds;
 
     /**
-     * Get 镜像缓存Id数组 
-     * @return ImageCacheIds 镜像缓存Id数组
+     * Get 镜像缓存ID数组 
+     * @return ImageCacheIds 镜像缓存ID数组
      */
     public String [] getImageCacheIds() {
         return this.ImageCacheIds;
     }
 
     /**
-     * Set 镜像缓存Id数组
-     * @param ImageCacheIds 镜像缓存Id数组
+     * Set 镜像缓存ID数组
+     * @param ImageCacheIds 镜像缓存ID数组
      */
     public void setImageCacheIds(String [] ImageCacheIds) {
         this.ImageCacheIds = ImageCacheIds;

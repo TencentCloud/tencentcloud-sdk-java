@@ -31,7 +31,7 @@ public class DescribeSlowLogResponse extends AbstractModel {
     private Long TotalCount;
 
     /**
-    * 该参数存在命名不规范问题，建议用参数InstanceSlowLogDetail取代。慢查询详情。
+    * 已废弃，该参数存在命名不规范问题，后续用参数InstanceSlowLogDetail取代。慢查询详情。
     */
     @SerializedName("InstanceSlowlogDetail")
     @Expose
@@ -68,16 +68,16 @@ public class DescribeSlowLogResponse extends AbstractModel {
     }
 
     /**
-     * Get 该参数存在命名不规范问题，建议用参数InstanceSlowLogDetail取代。慢查询详情。 
-     * @return InstanceSlowlogDetail 该参数存在命名不规范问题，建议用参数InstanceSlowLogDetail取代。慢查询详情。
+     * Get 已废弃，该参数存在命名不规范问题，后续用参数InstanceSlowLogDetail取代。慢查询详情。 
+     * @return InstanceSlowlogDetail 已废弃，该参数存在命名不规范问题，后续用参数InstanceSlowLogDetail取代。慢查询详情。
      */
     public InstanceSlowlogDetail [] getInstanceSlowlogDetail() {
         return this.InstanceSlowlogDetail;
     }
 
     /**
-     * Set 该参数存在命名不规范问题，建议用参数InstanceSlowLogDetail取代。慢查询详情。
-     * @param InstanceSlowlogDetail 该参数存在命名不规范问题，建议用参数InstanceSlowLogDetail取代。慢查询详情。
+     * Set 已废弃，该参数存在命名不规范问题，后续用参数InstanceSlowLogDetail取代。慢查询详情。
+     * @param InstanceSlowlogDetail 已废弃，该参数存在命名不规范问题，后续用参数InstanceSlowLogDetail取代。慢查询详情。
      */
     public void setInstanceSlowlogDetail(InstanceSlowlogDetail [] InstanceSlowlogDetail) {
         this.InstanceSlowlogDetail = InstanceSlowlogDetail;

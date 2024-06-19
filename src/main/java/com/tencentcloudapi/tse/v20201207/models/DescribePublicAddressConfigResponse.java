@@ -24,11 +24,34 @@ import java.util.HashMap;
 public class DescribePublicAddressConfigResponse extends AbstractModel {
 
     /**
+    * 公网地址信息
+    */
+    @SerializedName("Result")
+    @Expose
+    private DescribePublicAddressConfigResult Result;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 公网地址信息 
+     * @return Result 公网地址信息
+     */
+    public DescribePublicAddressConfigResult getResult() {
+        return this.Result;
+    }
+
+    /**
+     * Set 公网地址信息
+     * @param Result 公网地址信息
+     */
+    public void setResult(DescribePublicAddressConfigResult Result) {
+        this.Result = Result;
+    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -54,6 +77,9 @@ public class DescribePublicAddressConfigResponse extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribePublicAddressConfigResponse(DescribePublicAddressConfigResponse source) {
+        if (source.Result != null) {
+            this.Result = new DescribePublicAddressConfigResult(source.Result);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -64,6 +90,7 @@ public class DescribePublicAddressConfigResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamObj(map, prefix + "Result.", this.Result);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

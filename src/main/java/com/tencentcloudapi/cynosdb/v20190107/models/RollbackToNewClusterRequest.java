@@ -180,6 +180,41 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
     private Long PayMode;
 
     /**
+    * 时间
+    */
+    @SerializedName("TimeSpan")
+    @Expose
+    private Long TimeSpan;
+
+    /**
+    * 单位
+    */
+    @SerializedName("TimeUnit")
+    @Expose
+    private String TimeUnit;
+
+    /**
+    * 回档库信息
+    */
+    @SerializedName("RollbackDatabases")
+    @Expose
+    private RollbackDatabase [] RollbackDatabases;
+
+    /**
+    * 回档表信息
+    */
+    @SerializedName("RollbackTables")
+    @Expose
+    private RollbackTable [] RollbackTables;
+
+    /**
+    * 原ro实例信息
+    */
+    @SerializedName("OriginalROInstanceList")
+    @Expose
+    private String [] OriginalROInstanceList;
+
+    /**
      * Get 可用区 
      * @return Zone 可用区
      */
@@ -551,6 +586,86 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
         this.PayMode = PayMode;
     }
 
+    /**
+     * Get 时间 
+     * @return TimeSpan 时间
+     */
+    public Long getTimeSpan() {
+        return this.TimeSpan;
+    }
+
+    /**
+     * Set 时间
+     * @param TimeSpan 时间
+     */
+    public void setTimeSpan(Long TimeSpan) {
+        this.TimeSpan = TimeSpan;
+    }
+
+    /**
+     * Get 单位 
+     * @return TimeUnit 单位
+     */
+    public String getTimeUnit() {
+        return this.TimeUnit;
+    }
+
+    /**
+     * Set 单位
+     * @param TimeUnit 单位
+     */
+    public void setTimeUnit(String TimeUnit) {
+        this.TimeUnit = TimeUnit;
+    }
+
+    /**
+     * Get 回档库信息 
+     * @return RollbackDatabases 回档库信息
+     */
+    public RollbackDatabase [] getRollbackDatabases() {
+        return this.RollbackDatabases;
+    }
+
+    /**
+     * Set 回档库信息
+     * @param RollbackDatabases 回档库信息
+     */
+    public void setRollbackDatabases(RollbackDatabase [] RollbackDatabases) {
+        this.RollbackDatabases = RollbackDatabases;
+    }
+
+    /**
+     * Get 回档表信息 
+     * @return RollbackTables 回档表信息
+     */
+    public RollbackTable [] getRollbackTables() {
+        return this.RollbackTables;
+    }
+
+    /**
+     * Set 回档表信息
+     * @param RollbackTables 回档表信息
+     */
+    public void setRollbackTables(RollbackTable [] RollbackTables) {
+        this.RollbackTables = RollbackTables;
+    }
+
+    /**
+     * Get 原ro实例信息 
+     * @return OriginalROInstanceList 原ro实例信息
+     */
+    public String [] getOriginalROInstanceList() {
+        return this.OriginalROInstanceList;
+    }
+
+    /**
+     * Set 原ro实例信息
+     * @param OriginalROInstanceList 原ro实例信息
+     */
+    public void setOriginalROInstanceList(String [] OriginalROInstanceList) {
+        this.OriginalROInstanceList = OriginalROInstanceList;
+    }
+
     public RollbackToNewClusterRequest() {
     }
 
@@ -637,6 +752,30 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
         if (source.PayMode != null) {
             this.PayMode = new Long(source.PayMode);
         }
+        if (source.TimeSpan != null) {
+            this.TimeSpan = new Long(source.TimeSpan);
+        }
+        if (source.TimeUnit != null) {
+            this.TimeUnit = new String(source.TimeUnit);
+        }
+        if (source.RollbackDatabases != null) {
+            this.RollbackDatabases = new RollbackDatabase[source.RollbackDatabases.length];
+            for (int i = 0; i < source.RollbackDatabases.length; i++) {
+                this.RollbackDatabases[i] = new RollbackDatabase(source.RollbackDatabases[i]);
+            }
+        }
+        if (source.RollbackTables != null) {
+            this.RollbackTables = new RollbackTable[source.RollbackTables.length];
+            for (int i = 0; i < source.RollbackTables.length; i++) {
+                this.RollbackTables[i] = new RollbackTable(source.RollbackTables[i]);
+            }
+        }
+        if (source.OriginalROInstanceList != null) {
+            this.OriginalROInstanceList = new String[source.OriginalROInstanceList.length];
+            for (int i = 0; i < source.OriginalROInstanceList.length; i++) {
+                this.OriginalROInstanceList[i] = new String(source.OriginalROInstanceList[i]);
+            }
+        }
     }
 
 
@@ -665,6 +804,11 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
         this.setParamArrayObj(map, prefix + "InstanceInitInfos.", this.InstanceInitInfos);
         this.setParamSimple(map, prefix + "DealMode", this.DealMode);
         this.setParamSimple(map, prefix + "PayMode", this.PayMode);
+        this.setParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
+        this.setParamSimple(map, prefix + "TimeUnit", this.TimeUnit);
+        this.setParamArrayObj(map, prefix + "RollbackDatabases.", this.RollbackDatabases);
+        this.setParamArrayObj(map, prefix + "RollbackTables.", this.RollbackTables);
+        this.setParamArraySimple(map, prefix + "OriginalROInstanceList.", this.OriginalROInstanceList);
 
     }
 }

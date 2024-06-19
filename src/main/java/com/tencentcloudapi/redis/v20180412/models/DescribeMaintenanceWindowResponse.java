@@ -24,14 +24,17 @@ import java.util.HashMap;
 public class DescribeMaintenanceWindowResponse extends AbstractModel {
 
     /**
-    * 维护时间窗起始时间，如：17:00
+    * 维护时间窗开始时间。取值范围为"00:00-23:00"的任意时间点，如03:24。
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 维护时间窗结束时间，如：19:00
+    * 维护时间窗结束时间。
+- 取值范围为"00:00-23:00"的任意时间点，如：04:24。
+- 维护时间持续时长最小为30分钟，最大为3小时。
+- 结束时间务必是基于开始时间向后的时间。
     */
     @SerializedName("EndTime")
     @Expose
@@ -45,32 +48,44 @@ public class DescribeMaintenanceWindowResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 维护时间窗起始时间，如：17:00 
-     * @return StartTime 维护时间窗起始时间，如：17:00
+     * Get 维护时间窗开始时间。取值范围为"00:00-23:00"的任意时间点，如03:24。 
+     * @return StartTime 维护时间窗开始时间。取值范围为"00:00-23:00"的任意时间点，如03:24。
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 维护时间窗起始时间，如：17:00
-     * @param StartTime 维护时间窗起始时间，如：17:00
+     * Set 维护时间窗开始时间。取值范围为"00:00-23:00"的任意时间点，如03:24。
+     * @param StartTime 维护时间窗开始时间。取值范围为"00:00-23:00"的任意时间点，如03:24。
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 维护时间窗结束时间，如：19:00 
-     * @return EndTime 维护时间窗结束时间，如：19:00
+     * Get 维护时间窗结束时间。
+- 取值范围为"00:00-23:00"的任意时间点，如：04:24。
+- 维护时间持续时长最小为30分钟，最大为3小时。
+- 结束时间务必是基于开始时间向后的时间。 
+     * @return EndTime 维护时间窗结束时间。
+- 取值范围为"00:00-23:00"的任意时间点，如：04:24。
+- 维护时间持续时长最小为30分钟，最大为3小时。
+- 结束时间务必是基于开始时间向后的时间。
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 维护时间窗结束时间，如：19:00
-     * @param EndTime 维护时间窗结束时间，如：19:00
+     * Set 维护时间窗结束时间。
+- 取值范围为"00:00-23:00"的任意时间点，如：04:24。
+- 维护时间持续时长最小为30分钟，最大为3小时。
+- 结束时间务必是基于开始时间向后的时间。
+     * @param EndTime 维护时间窗结束时间。
+- 取值范围为"00:00-23:00"的任意时间点，如：04:24。
+- 维护时间持续时长最小为30分钟，最大为3小时。
+- 结束时间务必是基于开始时间向后的时间。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

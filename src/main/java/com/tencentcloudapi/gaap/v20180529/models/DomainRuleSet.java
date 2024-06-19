@@ -209,6 +209,22 @@ public class DomainRuleSet extends AbstractModel {
     private Boolean IsDefaultServer;
 
     /**
+    * TLS套件包
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TLSCiphers")
+    @Expose
+    private String TLSCiphers;
+
+    /**
+    * TLS版本
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TLSSupportVersion")
+    @Expose
+    private String [] TLSSupportVersion;
+
+    /**
      * Get 转发规则域名。 
      * @return Domain 转发规则域名。
      */
@@ -684,6 +700,46 @@ public class DomainRuleSet extends AbstractModel {
         this.IsDefaultServer = IsDefaultServer;
     }
 
+    /**
+     * Get TLS套件包
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TLSCiphers TLS套件包
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTLSCiphers() {
+        return this.TLSCiphers;
+    }
+
+    /**
+     * Set TLS套件包
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TLSCiphers TLS套件包
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTLSCiphers(String TLSCiphers) {
+        this.TLSCiphers = TLSCiphers;
+    }
+
+    /**
+     * Get TLS版本
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TLSSupportVersion TLS版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getTLSSupportVersion() {
+        return this.TLSSupportVersion;
+    }
+
+    /**
+     * Set TLS版本
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TLSSupportVersion TLS版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTLSSupportVersion(String [] TLSSupportVersion) {
+        this.TLSSupportVersion = TLSSupportVersion;
+    }
+
     public DomainRuleSet() {
     }
 
@@ -767,6 +823,15 @@ public class DomainRuleSet extends AbstractModel {
         if (source.IsDefaultServer != null) {
             this.IsDefaultServer = new Boolean(source.IsDefaultServer);
         }
+        if (source.TLSCiphers != null) {
+            this.TLSCiphers = new String(source.TLSCiphers);
+        }
+        if (source.TLSSupportVersion != null) {
+            this.TLSSupportVersion = new String[source.TLSSupportVersion.length];
+            for (int i = 0; i < source.TLSSupportVersion.length; i++) {
+                this.TLSSupportVersion[i] = new String(source.TLSSupportVersion[i]);
+            }
+        }
     }
 
 
@@ -796,6 +861,8 @@ public class DomainRuleSet extends AbstractModel {
         this.setParamSimple(map, prefix + "BanStatus", this.BanStatus);
         this.setParamSimple(map, prefix + "Http3Supported", this.Http3Supported);
         this.setParamSimple(map, prefix + "IsDefaultServer", this.IsDefaultServer);
+        this.setParamSimple(map, prefix + "TLSCiphers", this.TLSCiphers);
+        this.setParamArraySimple(map, prefix + "TLSSupportVersion.", this.TLSSupportVersion);
 
     }
 }

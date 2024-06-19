@@ -96,7 +96,7 @@ public class BiddingResult extends AbstractModel {
     private Long BiddingNum;
 
     /**
-    * 1 已预约，2 竞价中，3 支付尾款 4 交割 5 交易失败 6 交易成功，7 已过期
+    * 2 竞价中  3 等待出价 4 竞价失败 10 竞价持有者赎回
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
@@ -284,9 +284,9 @@ public class BiddingResult extends AbstractModel {
     }
 
     /**
-     * Get 1 已预约，2 竞价中，3 支付尾款 4 交割 5 交易失败 6 交易成功，7 已过期
+     * Get 2 竞价中  3 等待出价 4 竞价失败 10 竞价持有者赎回
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Status 1 已预约，2 竞价中，3 支付尾款 4 交割 5 交易失败 6 交易成功，7 已过期
+     * @return Status 2 竞价中  3 等待出价 4 竞价失败 10 竞价持有者赎回
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
@@ -294,9 +294,9 @@ public class BiddingResult extends AbstractModel {
     }
 
     /**
-     * Set 1 已预约，2 竞价中，3 支付尾款 4 交割 5 交易失败 6 交易成功，7 已过期
+     * Set 2 竞价中  3 等待出价 4 竞价失败 10 竞价持有者赎回
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Status 1 已预约，2 竞价中，3 支付尾款 4 交割 5 交易失败 6 交易成功，7 已过期
+     * @param Status 2 竞价中  3 等待出价 4 竞价失败 10 竞价持有者赎回
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {

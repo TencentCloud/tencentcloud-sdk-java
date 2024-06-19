@@ -25,6 +25,7 @@ public class KafkaInfo extends AbstractModel {
 
     /**
     * Kafka address
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Address")
     @Expose
@@ -32,6 +33,7 @@ public class KafkaInfo extends AbstractModel {
 
     /**
     * Kafka topic
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Topic")
     @Expose
@@ -39,6 +41,7 @@ public class KafkaInfo extends AbstractModel {
 
     /**
     * kafka username
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("User")
     @Expose
@@ -46,6 +49,7 @@ public class KafkaInfo extends AbstractModel {
 
     /**
     * kafka password
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Password")
     @Expose
@@ -53,6 +57,7 @@ public class KafkaInfo extends AbstractModel {
 
     /**
     * ckafka实例
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Instance")
     @Expose
@@ -60,14 +65,17 @@ public class KafkaInfo extends AbstractModel {
 
     /**
     * 是否走VPC
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsVpc")
     @Expose
     private Long IsVpc;
 
     /**
-     * Get Kafka address 
+     * Get Kafka address
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Address Kafka address
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAddress() {
         return this.Address;
@@ -75,15 +83,19 @@ public class KafkaInfo extends AbstractModel {
 
     /**
      * Set Kafka address
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Address Kafka address
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAddress(String Address) {
         this.Address = Address;
     }
 
     /**
-     * Get Kafka topic 
+     * Get Kafka topic
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Topic Kafka topic
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTopic() {
         return this.Topic;
@@ -91,15 +103,19 @@ public class KafkaInfo extends AbstractModel {
 
     /**
      * Set Kafka topic
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Topic Kafka topic
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTopic(String Topic) {
         this.Topic = Topic;
     }
 
     /**
-     * Get kafka username 
+     * Get kafka username
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return User kafka username
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUser() {
         return this.User;
@@ -107,15 +123,19 @@ public class KafkaInfo extends AbstractModel {
 
     /**
      * Set kafka username
+注意：此字段可能返回 null，表示取不到有效值。
      * @param User kafka username
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUser(String User) {
         this.User = User;
     }
 
     /**
-     * Get kafka password 
+     * Get kafka password
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Password kafka password
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPassword() {
         return this.Password;
@@ -123,15 +143,19 @@ public class KafkaInfo extends AbstractModel {
 
     /**
      * Set kafka password
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Password kafka password
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPassword(String Password) {
         this.Password = Password;
     }
 
     /**
-     * Get ckafka实例 
+     * Get ckafka实例
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Instance ckafka实例
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstance() {
         return this.Instance;
@@ -139,15 +163,19 @@ public class KafkaInfo extends AbstractModel {
 
     /**
      * Set ckafka实例
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Instance ckafka实例
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstance(String Instance) {
         this.Instance = Instance;
     }
 
     /**
-     * Get 是否走VPC 
+     * Get 是否走VPC
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return IsVpc 是否走VPC
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsVpc() {
         return this.IsVpc;
@@ -155,7 +183,9 @@ public class KafkaInfo extends AbstractModel {
 
     /**
      * Set 是否走VPC
+注意：此字段可能返回 null，表示取不到有效值。
      * @param IsVpc 是否走VPC
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsVpc(Long IsVpc) {
         this.IsVpc = IsVpc;

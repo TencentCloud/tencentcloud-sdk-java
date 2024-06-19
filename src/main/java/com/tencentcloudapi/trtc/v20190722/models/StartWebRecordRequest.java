@@ -40,7 +40,7 @@ public class StartWebRecordRequest extends AbstractModel {
     private Long MaxDurationLimit;
 
     /**
-    * 云存储相关的参数，目前支持腾讯云对象存储以及腾讯云云点播VOD，不支持第三方云存储
+    * 【必填】云存储相关的参数，目前支持腾讯云对象存储以及腾讯云云点播VOD，不支持第三方云存储
     */
     @SerializedName("StorageParams")
     @Expose
@@ -54,7 +54,7 @@ public class StartWebRecordRequest extends AbstractModel {
     private WebRecordVideoParams WebRecordVideoParams;
 
     /**
-    * TRTC的SdkAppId
+    * 【必填】TRTC的SdkAppId
     */
     @SerializedName("SdkAppId")
     @Expose
@@ -116,16 +116,16 @@ public class StartWebRecordRequest extends AbstractModel {
     }
 
     /**
-     * Get 云存储相关的参数，目前支持腾讯云对象存储以及腾讯云云点播VOD，不支持第三方云存储 
-     * @return StorageParams 云存储相关的参数，目前支持腾讯云对象存储以及腾讯云云点播VOD，不支持第三方云存储
+     * Get 【必填】云存储相关的参数，目前支持腾讯云对象存储以及腾讯云云点播VOD，不支持第三方云存储 
+     * @return StorageParams 【必填】云存储相关的参数，目前支持腾讯云对象存储以及腾讯云云点播VOD，不支持第三方云存储
      */
     public StorageParams getStorageParams() {
         return this.StorageParams;
     }
 
     /**
-     * Set 云存储相关的参数，目前支持腾讯云对象存储以及腾讯云云点播VOD，不支持第三方云存储
-     * @param StorageParams 云存储相关的参数，目前支持腾讯云对象存储以及腾讯云云点播VOD，不支持第三方云存储
+     * Set 【必填】云存储相关的参数，目前支持腾讯云对象存储以及腾讯云云点播VOD，不支持第三方云存储
+     * @param StorageParams 【必填】云存储相关的参数，目前支持腾讯云对象存储以及腾讯云云点播VOD，不支持第三方云存储
      */
     public void setStorageParams(StorageParams StorageParams) {
         this.StorageParams = StorageParams;
@@ -148,16 +148,16 @@ public class StartWebRecordRequest extends AbstractModel {
     }
 
     /**
-     * Get TRTC的SdkAppId 
-     * @return SdkAppId TRTC的SdkAppId
+     * Get 【必填】TRTC的SdkAppId 
+     * @return SdkAppId 【必填】TRTC的SdkAppId
      */
     public Long getSdkAppId() {
         return this.SdkAppId;
     }
 
     /**
-     * Set TRTC的SdkAppId
-     * @param SdkAppId TRTC的SdkAppId
+     * Set 【必填】TRTC的SdkAppId
+     * @param SdkAppId 【必填】TRTC的SdkAppId
      */
     public void setSdkAppId(Long SdkAppId) {
         this.SdkAppId = SdkAppId;

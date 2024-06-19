@@ -94,7 +94,7 @@ public class DescribeBiddingDetailResponse extends AbstractModel {
     private Long BiddingBondPrice;
 
     /**
-    * 1 已预约，2 竞价中，3 支付尾款 4 交割 5 交易失败 6 交易成功，7 已过期
+    * 2 竞价中  3 等待出价 4 竞价失败 10 竞价持有者赎回
     */
     @SerializedName("Status")
     @Expose
@@ -289,16 +289,16 @@ public class DescribeBiddingDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get 1 已预约，2 竞价中，3 支付尾款 4 交割 5 交易失败 6 交易成功，7 已过期 
-     * @return Status 1 已预约，2 竞价中，3 支付尾款 4 交割 5 交易失败 6 交易成功，7 已过期
+     * Get 2 竞价中  3 等待出价 4 竞价失败 10 竞价持有者赎回 
+     * @return Status 2 竞价中  3 等待出价 4 竞价失败 10 竞价持有者赎回
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 1 已预约，2 竞价中，3 支付尾款 4 交割 5 交易失败 6 交易成功，7 已过期
-     * @param Status 1 已预约，2 竞价中，3 支付尾款 4 交割 5 交易失败 6 交易成功，7 已过期
+     * Set 2 竞价中  3 等待出价 4 竞价失败 10 竞价持有者赎回
+     * @param Status 2 竞价中  3 等待出价 4 竞价失败 10 竞价持有者赎回
      */
     public void setStatus(Long Status) {
         this.Status = Status;

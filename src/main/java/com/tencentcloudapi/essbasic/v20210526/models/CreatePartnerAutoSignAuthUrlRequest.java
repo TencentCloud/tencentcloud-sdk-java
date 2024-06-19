@@ -66,6 +66,18 @@ public class CreatePartnerAutoSignAuthUrlRequest extends AbstractModel {
     private Boolean PlatformAppAuthorization;
 
     /**
+    * 指定印章类型，指定后只能选择该类型的印章进行授权
+支持以下印章类型：
+- OFFICIAL : 企业公章
+- CONTRACT : 合同专用章
+- FINANCE : 财务专用章
+- PERSONNEL : 人事专用章
+    */
+    @SerializedName("SealTypes")
+    @Expose
+    private String [] SealTypes;
+
+    /**
      * Get 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
 
 此接口下面信息必填。
@@ -185,6 +197,42 @@ public class CreatePartnerAutoSignAuthUrlRequest extends AbstractModel {
         this.PlatformAppAuthorization = PlatformAppAuthorization;
     }
 
+    /**
+     * Get 指定印章类型，指定后只能选择该类型的印章进行授权
+支持以下印章类型：
+- OFFICIAL : 企业公章
+- CONTRACT : 合同专用章
+- FINANCE : 财务专用章
+- PERSONNEL : 人事专用章 
+     * @return SealTypes 指定印章类型，指定后只能选择该类型的印章进行授权
+支持以下印章类型：
+- OFFICIAL : 企业公章
+- CONTRACT : 合同专用章
+- FINANCE : 财务专用章
+- PERSONNEL : 人事专用章
+     */
+    public String [] getSealTypes() {
+        return this.SealTypes;
+    }
+
+    /**
+     * Set 指定印章类型，指定后只能选择该类型的印章进行授权
+支持以下印章类型：
+- OFFICIAL : 企业公章
+- CONTRACT : 合同专用章
+- FINANCE : 财务专用章
+- PERSONNEL : 人事专用章
+     * @param SealTypes 指定印章类型，指定后只能选择该类型的印章进行授权
+支持以下印章类型：
+- OFFICIAL : 企业公章
+- CONTRACT : 合同专用章
+- FINANCE : 财务专用章
+- PERSONNEL : 人事专用章
+     */
+    public void setSealTypes(String [] SealTypes) {
+        this.SealTypes = SealTypes;
+    }
+
     public CreatePartnerAutoSignAuthUrlRequest() {
     }
 
@@ -205,6 +253,12 @@ public class CreatePartnerAutoSignAuthUrlRequest extends AbstractModel {
         if (source.PlatformAppAuthorization != null) {
             this.PlatformAppAuthorization = new Boolean(source.PlatformAppAuthorization);
         }
+        if (source.SealTypes != null) {
+            this.SealTypes = new String[source.SealTypes.length];
+            for (int i = 0; i < source.SealTypes.length; i++) {
+                this.SealTypes[i] = new String(source.SealTypes[i]);
+            }
+        }
     }
 
 
@@ -216,6 +270,7 @@ public class CreatePartnerAutoSignAuthUrlRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "AuthorizedOrganizationId", this.AuthorizedOrganizationId);
         this.setParamSimple(map, prefix + "AuthorizedOrganizationName", this.AuthorizedOrganizationName);
         this.setParamSimple(map, prefix + "PlatformAppAuthorization", this.PlatformAppAuthorization);
+        this.setParamArraySimple(map, prefix + "SealTypes.", this.SealTypes);
 
     }
 }

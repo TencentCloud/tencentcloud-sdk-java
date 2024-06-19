@@ -288,6 +288,22 @@ public class SREInstance extends AbstractModel {
     private StorageOption [] StorageOption;
 
     /**
+    * Zookeeper的额外环境数据信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ZookeeperRegionInfo")
+    @Expose
+    private ZookeeperRegionInfo ZookeeperRegionInfo;
+
+    /**
+    * 部署架构
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DeployMode")
+    @Expose
+    private String DeployMode;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -935,6 +951,46 @@ public class SREInstance extends AbstractModel {
         this.StorageOption = StorageOption;
     }
 
+    /**
+     * Get Zookeeper的额外环境数据信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ZookeeperRegionInfo Zookeeper的额外环境数据信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ZookeeperRegionInfo getZookeeperRegionInfo() {
+        return this.ZookeeperRegionInfo;
+    }
+
+    /**
+     * Set Zookeeper的额外环境数据信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ZookeeperRegionInfo Zookeeper的额外环境数据信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setZookeeperRegionInfo(ZookeeperRegionInfo ZookeeperRegionInfo) {
+        this.ZookeeperRegionInfo = ZookeeperRegionInfo;
+    }
+
+    /**
+     * Get 部署架构
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DeployMode 部署架构
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDeployMode() {
+        return this.DeployMode;
+    }
+
+    /**
+     * Set 部署架构
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DeployMode 部署架构
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDeployMode(String DeployMode) {
+        this.DeployMode = DeployMode;
+    }
+
     public SREInstance() {
     }
 
@@ -1066,6 +1122,12 @@ public class SREInstance extends AbstractModel {
                 this.StorageOption[i] = new StorageOption(source.StorageOption[i]);
             }
         }
+        if (source.ZookeeperRegionInfo != null) {
+            this.ZookeeperRegionInfo = new ZookeeperRegionInfo(source.ZookeeperRegionInfo);
+        }
+        if (source.DeployMode != null) {
+            this.DeployMode = new String(source.DeployMode);
+        }
     }
 
 
@@ -1107,6 +1169,8 @@ public class SREInstance extends AbstractModel {
         this.setParamSimple(map, prefix + "FeatureVersion", this.FeatureVersion);
         this.setParamSimple(map, prefix + "EnableClientIntranet", this.EnableClientIntranet);
         this.setParamArrayObj(map, prefix + "StorageOption.", this.StorageOption);
+        this.setParamObj(map, prefix + "ZookeeperRegionInfo.", this.ZookeeperRegionInfo);
+        this.setParamSimple(map, prefix + "DeployMode", this.DeployMode);
 
     }
 }

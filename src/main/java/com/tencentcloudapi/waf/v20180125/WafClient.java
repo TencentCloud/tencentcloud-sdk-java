@@ -419,6 +419,17 @@ public class WafClient extends AbstractClient{
     }
 
     /**
+     *获取地域封禁配置包括地域封禁开关，设置封禁的地区信息
+     * @param req DescribeAreaBanAreasRequest
+     * @return DescribeAreaBanAreasResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAreaBanAreasResponse DescribeAreaBanAreas(DescribeAreaBanAreasRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAreaBanAreas", DescribeAreaBanAreasResponse.class);
+    }
+
+    /**
      *获取WAF地域封禁支持的地域列表
      * @param req DescribeAreaBanSupportAreasRequest
      * @return DescribeAreaBanSupportAreasResponse

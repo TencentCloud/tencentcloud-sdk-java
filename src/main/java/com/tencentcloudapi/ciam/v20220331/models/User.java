@@ -180,6 +180,14 @@ public class User extends AbstractModel {
     private String AlipayUserId;
 
     /**
+    * 企业微信的WeComUserId
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("WeComUserId")
+    @Expose
+    private String WeComUserId;
+
+    /**
     * 描述
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -732,6 +740,26 @@ public class User extends AbstractModel {
     }
 
     /**
+     * Get 企业微信的WeComUserId
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WeComUserId 企业微信的WeComUserId
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getWeComUserId() {
+        return this.WeComUserId;
+    }
+
+    /**
+     * Set 企业微信的WeComUserId
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WeComUserId 企业微信的WeComUserId
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWeComUserId(String WeComUserId) {
+        this.WeComUserId = WeComUserId;
+    }
+
+    /**
      * Get 描述
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Description 描述
@@ -1225,6 +1253,9 @@ public class User extends AbstractModel {
         if (source.AlipayUserId != null) {
             this.AlipayUserId = new String(source.AlipayUserId);
         }
+        if (source.WeComUserId != null) {
+            this.WeComUserId = new String(source.WeComUserId);
+        }
         if (source.Description != null) {
             this.Description = new String(source.Description);
         }
@@ -1315,6 +1346,7 @@ public class User extends AbstractModel {
         this.setParamSimple(map, prefix + "WechatOpenId", this.WechatOpenId);
         this.setParamSimple(map, prefix + "WechatUnionId", this.WechatUnionId);
         this.setParamSimple(map, prefix + "AlipayUserId", this.AlipayUserId);
+        this.setParamSimple(map, prefix + "WeComUserId", this.WeComUserId);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Locale", this.Locale);

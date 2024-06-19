@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class InquiryPriceRenewInstanceRequest extends AbstractModel {
 
     /**
-    * 购买时长，单位：月
+    * 包年包月实例的购买时长，单位：月。
     */
     @SerializedName("Period")
     @Expose
     private Long Period;
 
     /**
-    * 实例ID
+    * 指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-     * Get 购买时长，单位：月 
-     * @return Period 购买时长，单位：月
+     * Get 包年包月实例的购买时长，单位：月。 
+     * @return Period 包年包月实例的购买时长，单位：月。
      */
     public Long getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set 购买时长，单位：月
-     * @param Period 购买时长，单位：月
+     * Set 包年包月实例的购买时长，单位：月。
+     * @param Period 包年包月实例的购买时长，单位：月。
      */
     public void setPeriod(Long Period) {
         this.Period = Period;
     }
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+     * Get 指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。 
+     * @return InstanceId 指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set 指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
+     * @param InstanceId 指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

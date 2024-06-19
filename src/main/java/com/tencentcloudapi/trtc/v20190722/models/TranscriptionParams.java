@@ -110,7 +110,9 @@ https://cloud.tencent.com/document/product/269/31999#app-.E7.AE.A1.E7.90.86.E5.9
 https://cloud.tencent.com/document/product/269/31999#app-.E7.AE.A1.E7.90.86.E5.91.98)，如果填写，后台下发消息会使用IM通道，而不是TRTC自定义消息。 
      * @return IMAdminUserId IM[管理员账户](
 https://cloud.tencent.com/document/product/269/31999#app-.E7.AE.A1.E7.90.86.E5.91.98)，如果填写，后台下发消息会使用IM通道，而不是TRTC自定义消息。
+     * @deprecated
      */
+    @Deprecated
     public String getIMAdminUserId() {
         return this.IMAdminUserId;
     }
@@ -120,7 +122,9 @@ https://cloud.tencent.com/document/product/269/31999#app-.E7.AE.A1.E7.90.86.E5.9
 https://cloud.tencent.com/document/product/269/31999#app-.E7.AE.A1.E7.90.86.E5.91.98)，如果填写，后台下发消息会使用IM通道，而不是TRTC自定义消息。
      * @param IMAdminUserId IM[管理员账户](
 https://cloud.tencent.com/document/product/269/31999#app-.E7.AE.A1.E7.90.86.E5.91.98)，如果填写，后台下发消息会使用IM通道，而不是TRTC自定义消息。
+     * @deprecated
      */
+    @Deprecated
     public void setIMAdminUserId(String IMAdminUserId) {
         this.IMAdminUserId = IMAdminUserId;
     }
@@ -128,7 +132,9 @@ https://cloud.tencent.com/document/product/269/31999#app-.E7.AE.A1.E7.90.86.E5.9
     /**
      * Get IM管理员账户生成的签名，用于向特定群组发送消息。如果填写，后台下发消息会使用IM通道，而不是TRTC自定义消息。必须和IM管理员的UserId一起填写。 
      * @return IMAdminUserSig IM管理员账户生成的签名，用于向特定群组发送消息。如果填写，后台下发消息会使用IM通道，而不是TRTC自定义消息。必须和IM管理员的UserId一起填写。
+     * @deprecated
      */
+    @Deprecated
     public String getIMAdminUserSig() {
         return this.IMAdminUserSig;
     }
@@ -136,7 +142,9 @@ https://cloud.tencent.com/document/product/269/31999#app-.E7.AE.A1.E7.90.86.E5.9
     /**
      * Set IM管理员账户生成的签名，用于向特定群组发送消息。如果填写，后台下发消息会使用IM通道，而不是TRTC自定义消息。必须和IM管理员的UserId一起填写。
      * @param IMAdminUserSig IM管理员账户生成的签名，用于向特定群组发送消息。如果填写，后台下发消息会使用IM通道，而不是TRTC自定义消息。必须和IM管理员的UserId一起填写。
+     * @deprecated
      */
+    @Deprecated
     public void setIMAdminUserSig(String IMAdminUserSig) {
         this.IMAdminUserSig = IMAdminUserSig;
     }

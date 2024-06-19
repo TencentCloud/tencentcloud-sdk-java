@@ -45,7 +45,7 @@ public class DescribeBiddingListRequest extends AbstractModel {
     private String Domain;
 
     /**
-    * 2 竞价中  3 等待出价  4 交易失败  10 竞价阶段持有者赎回
+    * 2 竞价中  3 等待出价 4 竞价失败 10 竞价持有者赎回
     */
     @SerializedName("Status")
     @Expose
@@ -115,16 +115,16 @@ BiddingPrice 我的价格
     }
 
     /**
-     * Get 2 竞价中  3 等待出价  4 交易失败  10 竞价阶段持有者赎回 
-     * @return Status 2 竞价中  3 等待出价  4 交易失败  10 竞价阶段持有者赎回
+     * Get 2 竞价中  3 等待出价 4 竞价失败 10 竞价持有者赎回 
+     * @return Status 2 竞价中  3 等待出价 4 竞价失败 10 竞价持有者赎回
      */
     public Long [] getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 2 竞价中  3 等待出价  4 交易失败  10 竞价阶段持有者赎回
-     * @param Status 2 竞价中  3 等待出价  4 交易失败  10 竞价阶段持有者赎回
+     * Set 2 竞价中  3 等待出价 4 竞价失败 10 竞价持有者赎回
+     * @param Status 2 竞价中  3 等待出价 4 竞价失败 10 竞价持有者赎回
      */
     public void setStatus(Long [] Status) {
         this.Status = Status;

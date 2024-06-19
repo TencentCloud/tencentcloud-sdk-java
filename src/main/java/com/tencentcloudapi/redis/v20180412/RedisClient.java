@@ -314,6 +314,17 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
+     *查询全球复制支持地域信息
+     * @param req DescribeGlobalReplicationAreaRequest
+     * @return DescribeGlobalReplicationAreaResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeGlobalReplicationAreaResponse DescribeGlobalReplicationArea(DescribeGlobalReplicationAreaRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeGlobalReplicationArea", DescribeGlobalReplicationAreaResponse.class);
+    }
+
+    /**
      *本接口（DescribeInstanceAccount）用于查看实例子账号信息。
      * @param req DescribeInstanceAccountRequest
      * @return DescribeInstanceAccountResponse
@@ -512,6 +523,17 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeInstanceSpecBandwidth）用于查询或计算带宽规格。
+     * @param req DescribeInstanceSpecBandwidthRequest
+     * @return DescribeInstanceSpecBandwidthResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceSpecBandwidthResponse DescribeInstanceSpecBandwidth(DescribeInstanceSpecBandwidthRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeInstanceSpecBandwidth", DescribeInstanceSpecBandwidthResponse.class);
+    }
+
+    /**
      *本接口（DescribeInstanceSupportFeature）用于查询实例支持的功能特性。
      * @param req DescribeInstanceSupportFeatureRequest
      * @return DescribeInstanceSupportFeatureResponse
@@ -545,7 +567,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *查询实例维护时间窗，在实例需要进行版本升级或者架构升级的时候，会在维护时间窗时间内进行切换
+     *本接口（DescribeMaintenanceWindow）用于查询实例维护时间窗。在实例需要进行版本升级或者架构升级的时候，会在维护时间窗时间内进行切换
      * @param req DescribeMaintenanceWindowRequest
      * @return DescribeMaintenanceWindowResponse
      * @throws TencentCloudSDKException
@@ -630,6 +652,17 @@ public class RedisClient extends AbstractClient{
     public DescribeReplicationGroupResponse DescribeReplicationGroup(DescribeReplicationGroupRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeReplicationGroup", DescribeReplicationGroupResponse.class);
+    }
+
+    /**
+     *查询复制组信息
+     * @param req DescribeReplicationGroupInstanceRequest
+     * @return DescribeReplicationGroupInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeReplicationGroupInstanceResponse DescribeReplicationGroupInstance(DescribeReplicationGroupInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeReplicationGroupInstance", DescribeReplicationGroupInstanceResponse.class);
     }
 
     /**
@@ -754,7 +787,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *查询实例续费价格（包年包月）
+     *本接口（InquiryPriceRenewInstance）用于查询包年包月计费实例的续费价格。
      * @param req InquiryPriceRenewInstanceRequest
      * @return InquiryPriceRenewInstanceResponse
      * @throws TencentCloudSDKException
@@ -949,6 +982,17 @@ public class RedisClient extends AbstractClient{
     public ModifyParamTemplateResponse ModifyParamTemplate(ModifyParamTemplateRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyParamTemplate", ModifyParamTemplateResponse.class);
+    }
+
+    /**
+     *修改复制组信息
+     * @param req ModifyReplicationGroupRequest
+     * @return ModifyReplicationGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyReplicationGroupResponse ModifyReplicationGroup(ModifyReplicationGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyReplicationGroup", ModifyReplicationGroupResponse.class);
     }
 
     /**

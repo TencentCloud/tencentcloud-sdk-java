@@ -46,6 +46,14 @@ public class VpcInfo extends AbstractModel {
     private String IntranetAddress;
 
     /**
+    * 负载均衡均衡接入点子网ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LbSubnetId")
+    @Expose
+    private String LbSubnetId;
+
+    /**
      * Get Vpc Id 
      * @return VpcId Vpc Id
      */
@@ -97,6 +105,26 @@ public class VpcInfo extends AbstractModel {
         this.IntranetAddress = IntranetAddress;
     }
 
+    /**
+     * Get 负载均衡均衡接入点子网ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LbSubnetId 负载均衡均衡接入点子网ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLbSubnetId() {
+        return this.LbSubnetId;
+    }
+
+    /**
+     * Set 负载均衡均衡接入点子网ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LbSubnetId 负载均衡均衡接入点子网ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLbSubnetId(String LbSubnetId) {
+        this.LbSubnetId = LbSubnetId;
+    }
+
     public VpcInfo() {
     }
 
@@ -114,6 +142,9 @@ public class VpcInfo extends AbstractModel {
         if (source.IntranetAddress != null) {
             this.IntranetAddress = new String(source.IntranetAddress);
         }
+        if (source.LbSubnetId != null) {
+            this.LbSubnetId = new String(source.LbSubnetId);
+        }
     }
 
 
@@ -124,6 +155,7 @@ public class VpcInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
         this.setParamSimple(map, prefix + "IntranetAddress", this.IntranetAddress);
+        this.setParamSimple(map, prefix + "LbSubnetId", this.LbSubnetId);
 
     }
 }

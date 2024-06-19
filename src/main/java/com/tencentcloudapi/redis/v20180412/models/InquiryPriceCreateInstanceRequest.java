@@ -24,7 +24,16 @@ import java.util.HashMap;
 public class InquiryPriceCreateInstanceRequest extends AbstractModel {
 
     /**
-    * 实例类型：2 – Redis2.8内存版(标准架构)，3 – CKV 3.2内存版(标准架构)，4 – CKV 3.2内存版(集群架构)，6 – Redis4.0内存版(标准架构)，7 – Redis4.0内存版(集群架构)，8 – Redis5.0内存版(标准架构)，9 – Redis5.0内存版(集群架构)。
+    * 实例类型。
+- 2：Redis 2.8 内存版（标准架构）。
+- 6：Redis 4.0 内存版（标准架构）。
+- 7：Redis 4.0 内存版（集群架构）。
+- 8：Redis 5.0 内存版（标准架构）。
+- 9：Redis 5.0 内存版（集群架构）。
+- 15：Redis 6.2 内存版（标准架构）。
+- 16：Redis 6.2 内存版（集群架构）。
+- 17：Redis 7.0 内存版（标准架构）。
+- 18：Redis 7.0 内存版（集群架构）。
     */
     @SerializedName("TypeId")
     @Expose
@@ -53,7 +62,9 @@ TypeId为标准架构时，MemSize是实例总内存容量；TypeId为集群架�
     private Long Period;
 
     /**
-    * 付费方式:0-按量计费，1-包年包月。
+    * 付费方式。
+- 0：按量计费。
+- 1：包年包月。
     */
     @SerializedName("BillingMode")
     @Expose
@@ -67,21 +78,25 @@ TypeId为标准架构时，MemSize是实例总内存容量；TypeId为集群架�
     private Long ZoneId;
 
     /**
-    * 实例分片数量，Redis2.8标准架构、CKV标准架构和Redis2.8单机版、Redis4.0标准架构不需要填写。
+    * 实例分片数量。
+Redis2.8标准架构、CKV标准架构、Redis4.0标准架构无需填写。
     */
     @SerializedName("RedisShardNum")
     @Expose
     private Long RedisShardNum;
 
     /**
-    * 实例副本数量，Redis2.8标准架构、CKV标准架构和Redis2.8单机版不需要填写。
+    * 实例副本数量。
+Redis2.8标准架构、CKV标准架构无需填写。
     */
     @SerializedName("RedisReplicasNum")
     @Expose
     private Long RedisReplicasNum;
 
     /**
-    * 是否支持副本只读，Redis2.8标准架构、CKV标准架构和Redis2.8单机版不需要填写。
+    * 是否支持副本只读。Redis2.8标准架构、CKV标准架构无需填写。
+- true：无需支持副本只读。
+- false：需支持。
     */
     @SerializedName("ReplicasReadonly")
     @Expose
@@ -95,23 +110,62 @@ TypeId为标准架构时，MemSize是实例总内存容量；TypeId为集群架�
     private String ZoneName;
 
     /**
-    * "local"本地盘版，"cloud"云盘版，"cdc"独享集群版，如果不传默认询价为本地盘版本
+    * 部署方式。
+- local：本地盘版，默认为 local。
+- cloud：云盘版。
+- cdc：独享集群版。
     */
     @SerializedName("ProductVersion")
     @Expose
     private String ProductVersion;
 
     /**
-     * Get 实例类型：2 – Redis2.8内存版(标准架构)，3 – CKV 3.2内存版(标准架构)，4 – CKV 3.2内存版(集群架构)，6 – Redis4.0内存版(标准架构)，7 – Redis4.0内存版(集群架构)，8 – Redis5.0内存版(标准架构)，9 – Redis5.0内存版(集群架构)。 
-     * @return TypeId 实例类型：2 – Redis2.8内存版(标准架构)，3 – CKV 3.2内存版(标准架构)，4 – CKV 3.2内存版(集群架构)，6 – Redis4.0内存版(标准架构)，7 – Redis4.0内存版(集群架构)，8 – Redis5.0内存版(标准架构)，9 – Redis5.0内存版(集群架构)。
+     * Get 实例类型。
+- 2：Redis 2.8 内存版（标准架构）。
+- 6：Redis 4.0 内存版（标准架构）。
+- 7：Redis 4.0 内存版（集群架构）。
+- 8：Redis 5.0 内存版（标准架构）。
+- 9：Redis 5.0 内存版（集群架构）。
+- 15：Redis 6.2 内存版（标准架构）。
+- 16：Redis 6.2 内存版（集群架构）。
+- 17：Redis 7.0 内存版（标准架构）。
+- 18：Redis 7.0 内存版（集群架构）。 
+     * @return TypeId 实例类型。
+- 2：Redis 2.8 内存版（标准架构）。
+- 6：Redis 4.0 内存版（标准架构）。
+- 7：Redis 4.0 内存版（集群架构）。
+- 8：Redis 5.0 内存版（标准架构）。
+- 9：Redis 5.0 内存版（集群架构）。
+- 15：Redis 6.2 内存版（标准架构）。
+- 16：Redis 6.2 内存版（集群架构）。
+- 17：Redis 7.0 内存版（标准架构）。
+- 18：Redis 7.0 内存版（集群架构）。
      */
     public Long getTypeId() {
         return this.TypeId;
     }
 
     /**
-     * Set 实例类型：2 – Redis2.8内存版(标准架构)，3 – CKV 3.2内存版(标准架构)，4 – CKV 3.2内存版(集群架构)，6 – Redis4.0内存版(标准架构)，7 – Redis4.0内存版(集群架构)，8 – Redis5.0内存版(标准架构)，9 – Redis5.0内存版(集群架构)。
-     * @param TypeId 实例类型：2 – Redis2.8内存版(标准架构)，3 – CKV 3.2内存版(标准架构)，4 – CKV 3.2内存版(集群架构)，6 – Redis4.0内存版(标准架构)，7 – Redis4.0内存版(集群架构)，8 – Redis5.0内存版(标准架构)，9 – Redis5.0内存版(集群架构)。
+     * Set 实例类型。
+- 2：Redis 2.8 内存版（标准架构）。
+- 6：Redis 4.0 内存版（标准架构）。
+- 7：Redis 4.0 内存版（集群架构）。
+- 8：Redis 5.0 内存版（标准架构）。
+- 9：Redis 5.0 内存版（集群架构）。
+- 15：Redis 6.2 内存版（标准架构）。
+- 16：Redis 6.2 内存版（集群架构）。
+- 17：Redis 7.0 内存版（标准架构）。
+- 18：Redis 7.0 内存版（集群架构）。
+     * @param TypeId 实例类型。
+- 2：Redis 2.8 内存版（标准架构）。
+- 6：Redis 4.0 内存版（标准架构）。
+- 7：Redis 4.0 内存版（集群架构）。
+- 8：Redis 5.0 内存版（标准架构）。
+- 9：Redis 5.0 内存版（集群架构）。
+- 15：Redis 6.2 内存版（标准架构）。
+- 16：Redis 6.2 内存版（集群架构）。
+- 17：Redis 7.0 内存版（标准架构）。
+- 18：Redis 7.0 内存版（集群架构）。
      */
     public void setTypeId(Long TypeId) {
         this.TypeId = TypeId;
@@ -170,16 +224,24 @@ TypeId为标准架构时，MemSize是实例总内存容量；TypeId为集群架�
     }
 
     /**
-     * Get 付费方式:0-按量计费，1-包年包月。 
-     * @return BillingMode 付费方式:0-按量计费，1-包年包月。
+     * Get 付费方式。
+- 0：按量计费。
+- 1：包年包月。 
+     * @return BillingMode 付费方式。
+- 0：按量计费。
+- 1：包年包月。
      */
     public Long getBillingMode() {
         return this.BillingMode;
     }
 
     /**
-     * Set 付费方式:0-按量计费，1-包年包月。
-     * @param BillingMode 付费方式:0-按量计费，1-包年包月。
+     * Set 付费方式。
+- 0：按量计费。
+- 1：包年包月。
+     * @param BillingMode 付费方式。
+- 0：按量计费。
+- 1：包年包月。
      */
     public void setBillingMode(Long BillingMode) {
         this.BillingMode = BillingMode;
@@ -202,48 +264,64 @@ TypeId为标准架构时，MemSize是实例总内存容量；TypeId为集群架�
     }
 
     /**
-     * Get 实例分片数量，Redis2.8标准架构、CKV标准架构和Redis2.8单机版、Redis4.0标准架构不需要填写。 
-     * @return RedisShardNum 实例分片数量，Redis2.8标准架构、CKV标准架构和Redis2.8单机版、Redis4.0标准架构不需要填写。
+     * Get 实例分片数量。
+Redis2.8标准架构、CKV标准架构、Redis4.0标准架构无需填写。 
+     * @return RedisShardNum 实例分片数量。
+Redis2.8标准架构、CKV标准架构、Redis4.0标准架构无需填写。
      */
     public Long getRedisShardNum() {
         return this.RedisShardNum;
     }
 
     /**
-     * Set 实例分片数量，Redis2.8标准架构、CKV标准架构和Redis2.8单机版、Redis4.0标准架构不需要填写。
-     * @param RedisShardNum 实例分片数量，Redis2.8标准架构、CKV标准架构和Redis2.8单机版、Redis4.0标准架构不需要填写。
+     * Set 实例分片数量。
+Redis2.8标准架构、CKV标准架构、Redis4.0标准架构无需填写。
+     * @param RedisShardNum 实例分片数量。
+Redis2.8标准架构、CKV标准架构、Redis4.0标准架构无需填写。
      */
     public void setRedisShardNum(Long RedisShardNum) {
         this.RedisShardNum = RedisShardNum;
     }
 
     /**
-     * Get 实例副本数量，Redis2.8标准架构、CKV标准架构和Redis2.8单机版不需要填写。 
-     * @return RedisReplicasNum 实例副本数量，Redis2.8标准架构、CKV标准架构和Redis2.8单机版不需要填写。
+     * Get 实例副本数量。
+Redis2.8标准架构、CKV标准架构无需填写。 
+     * @return RedisReplicasNum 实例副本数量。
+Redis2.8标准架构、CKV标准架构无需填写。
      */
     public Long getRedisReplicasNum() {
         return this.RedisReplicasNum;
     }
 
     /**
-     * Set 实例副本数量，Redis2.8标准架构、CKV标准架构和Redis2.8单机版不需要填写。
-     * @param RedisReplicasNum 实例副本数量，Redis2.8标准架构、CKV标准架构和Redis2.8单机版不需要填写。
+     * Set 实例副本数量。
+Redis2.8标准架构、CKV标准架构无需填写。
+     * @param RedisReplicasNum 实例副本数量。
+Redis2.8标准架构、CKV标准架构无需填写。
      */
     public void setRedisReplicasNum(Long RedisReplicasNum) {
         this.RedisReplicasNum = RedisReplicasNum;
     }
 
     /**
-     * Get 是否支持副本只读，Redis2.8标准架构、CKV标准架构和Redis2.8单机版不需要填写。 
-     * @return ReplicasReadonly 是否支持副本只读，Redis2.8标准架构、CKV标准架构和Redis2.8单机版不需要填写。
+     * Get 是否支持副本只读。Redis2.8标准架构、CKV标准架构无需填写。
+- true：无需支持副本只读。
+- false：需支持。 
+     * @return ReplicasReadonly 是否支持副本只读。Redis2.8标准架构、CKV标准架构无需填写。
+- true：无需支持副本只读。
+- false：需支持。
      */
     public Boolean getReplicasReadonly() {
         return this.ReplicasReadonly;
     }
 
     /**
-     * Set 是否支持副本只读，Redis2.8标准架构、CKV标准架构和Redis2.8单机版不需要填写。
-     * @param ReplicasReadonly 是否支持副本只读，Redis2.8标准架构、CKV标准架构和Redis2.8单机版不需要填写。
+     * Set 是否支持副本只读。Redis2.8标准架构、CKV标准架构无需填写。
+- true：无需支持副本只读。
+- false：需支持。
+     * @param ReplicasReadonly 是否支持副本只读。Redis2.8标准架构、CKV标准架构无需填写。
+- true：无需支持副本只读。
+- false：需支持。
      */
     public void setReplicasReadonly(Boolean ReplicasReadonly) {
         this.ReplicasReadonly = ReplicasReadonly;
@@ -266,16 +344,28 @@ TypeId为标准架构时，MemSize是实例总内存容量；TypeId为集群架�
     }
 
     /**
-     * Get "local"本地盘版，"cloud"云盘版，"cdc"独享集群版，如果不传默认询价为本地盘版本 
-     * @return ProductVersion "local"本地盘版，"cloud"云盘版，"cdc"独享集群版，如果不传默认询价为本地盘版本
+     * Get 部署方式。
+- local：本地盘版，默认为 local。
+- cloud：云盘版。
+- cdc：独享集群版。 
+     * @return ProductVersion 部署方式。
+- local：本地盘版，默认为 local。
+- cloud：云盘版。
+- cdc：独享集群版。
      */
     public String getProductVersion() {
         return this.ProductVersion;
     }
 
     /**
-     * Set "local"本地盘版，"cloud"云盘版，"cdc"独享集群版，如果不传默认询价为本地盘版本
-     * @param ProductVersion "local"本地盘版，"cloud"云盘版，"cdc"独享集群版，如果不传默认询价为本地盘版本
+     * Set 部署方式。
+- local：本地盘版，默认为 local。
+- cloud：云盘版。
+- cdc：独享集群版。
+     * @param ProductVersion 部署方式。
+- local：本地盘版，默认为 local。
+- cloud：云盘版。
+- cdc：独享集群版。
      */
     public void setProductVersion(String ProductVersion) {
         this.ProductVersion = ProductVersion;
