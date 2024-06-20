@@ -91,6 +91,14 @@ public class CreateAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
     private Long PureAudio;
 
     /**
+    * hls 分片类型，可选值： <li>ts-segment：HLS+TS 切片</li> <li>ts-byterange：HLS+TS byte range</li> <li>mp4-segment：HLS+MP4 切片</li> <li>mp4-byterange：HLS+MP4 byte range</li> <li>ts-packed-audio：TS+Packed Audio</li> <li>mp4-packed-audio：MP4+Packed Audio</li> 默认值：ts-segment 
+注：自适应码流的hls分片格式已此字段为准
+    */
+    @SerializedName("SegmentType")
+    @Expose
+    private String SegmentType;
+
+    /**
      * Get 自适应转码格式，取值范围：
 <li>HLS，</li>
 <li>MPEG-DASH。</li> 
@@ -274,6 +282,26 @@ public class CreateAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
         this.PureAudio = PureAudio;
     }
 
+    /**
+     * Get hls 分片类型，可选值： <li>ts-segment：HLS+TS 切片</li> <li>ts-byterange：HLS+TS byte range</li> <li>mp4-segment：HLS+MP4 切片</li> <li>mp4-byterange：HLS+MP4 byte range</li> <li>ts-packed-audio：TS+Packed Audio</li> <li>mp4-packed-audio：MP4+Packed Audio</li> 默认值：ts-segment 
+注：自适应码流的hls分片格式已此字段为准 
+     * @return SegmentType hls 分片类型，可选值： <li>ts-segment：HLS+TS 切片</li> <li>ts-byterange：HLS+TS byte range</li> <li>mp4-segment：HLS+MP4 切片</li> <li>mp4-byterange：HLS+MP4 byte range</li> <li>ts-packed-audio：TS+Packed Audio</li> <li>mp4-packed-audio：MP4+Packed Audio</li> 默认值：ts-segment 
+注：自适应码流的hls分片格式已此字段为准
+     */
+    public String getSegmentType() {
+        return this.SegmentType;
+    }
+
+    /**
+     * Set hls 分片类型，可选值： <li>ts-segment：HLS+TS 切片</li> <li>ts-byterange：HLS+TS byte range</li> <li>mp4-segment：HLS+MP4 切片</li> <li>mp4-byterange：HLS+MP4 byte range</li> <li>ts-packed-audio：TS+Packed Audio</li> <li>mp4-packed-audio：MP4+Packed Audio</li> 默认值：ts-segment 
+注：自适应码流的hls分片格式已此字段为准
+     * @param SegmentType hls 分片类型，可选值： <li>ts-segment：HLS+TS 切片</li> <li>ts-byterange：HLS+TS byte range</li> <li>mp4-segment：HLS+MP4 切片</li> <li>mp4-byterange：HLS+MP4 byte range</li> <li>ts-packed-audio：TS+Packed Audio</li> <li>mp4-packed-audio：MP4+Packed Audio</li> 默认值：ts-segment 
+注：自适应码流的hls分片格式已此字段为准
+     */
+    public void setSegmentType(String SegmentType) {
+        this.SegmentType = SegmentType;
+    }
+
     public CreateAdaptiveDynamicStreamingTemplateRequest() {
     }
 
@@ -306,6 +334,9 @@ public class CreateAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
         if (source.PureAudio != null) {
             this.PureAudio = new Long(source.PureAudio);
         }
+        if (source.SegmentType != null) {
+            this.SegmentType = new String(source.SegmentType);
+        }
     }
 
 
@@ -320,6 +351,7 @@ public class CreateAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
         this.setParamSimple(map, prefix + "DisableHigherVideoResolution", this.DisableHigherVideoResolution);
         this.setParamSimple(map, prefix + "Comment", this.Comment);
         this.setParamSimple(map, prefix + "PureAudio", this.PureAudio);
+        this.setParamSimple(map, prefix + "SegmentType", this.SegmentType);
 
     }
 }

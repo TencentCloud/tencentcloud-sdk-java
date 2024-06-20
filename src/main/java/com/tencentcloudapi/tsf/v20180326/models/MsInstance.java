@@ -224,6 +224,14 @@ public class MsInstance extends AbstractModel {
     private String HiddenStatus;
 
     /**
+    * json格式的 meta 信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MetaJson")
+    @Expose
+    private String MetaJson;
+
+    /**
      * Get 机器实例ID信息
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return InstanceId 机器实例ID信息
@@ -723,6 +731,26 @@ public class MsInstance extends AbstractModel {
         this.HiddenStatus = HiddenStatus;
     }
 
+    /**
+     * Get json格式的 meta 信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MetaJson json格式的 meta 信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getMetaJson() {
+        return this.MetaJson;
+    }
+
+    /**
+     * Set json格式的 meta 信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MetaJson json格式的 meta 信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMetaJson(String MetaJson) {
+        this.MetaJson = MetaJson;
+    }
+
     public MsInstance() {
     }
 
@@ -806,6 +834,9 @@ public class MsInstance extends AbstractModel {
         if (source.HiddenStatus != null) {
             this.HiddenStatus = new String(source.HiddenStatus);
         }
+        if (source.MetaJson != null) {
+            this.MetaJson = new String(source.MetaJson);
+        }
     }
 
 
@@ -838,6 +869,7 @@ public class MsInstance extends AbstractModel {
         this.setParamSimple(map, prefix + "LastHeartbeatTime", this.LastHeartbeatTime);
         this.setParamSimple(map, prefix + "RegistrationId", this.RegistrationId);
         this.setParamSimple(map, prefix + "HiddenStatus", this.HiddenStatus);
+        this.setParamSimple(map, prefix + "MetaJson", this.MetaJson);
 
     }
 }

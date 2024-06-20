@@ -38,7 +38,7 @@ public class WebRecordVideoParams extends AbstractModel {
     private Long Height;
 
     /**
-    * 指定输出格式，可选hls,mp4
+    * 指定输出格式，可选hls,mp4。存储到云点播VOD时此参数无效，存储到VOD时请通过TencentVod（https://cloud.tencent.com/document/api/647/44055#TencentVod）内的MediaType设置。
 
     */
     @SerializedName("Format")
@@ -87,9 +87,9 @@ Hls 格式录制此参数不生效。
     }
 
     /**
-     * Get 指定输出格式，可选hls,mp4
+     * Get 指定输出格式，可选hls,mp4。存储到云点播VOD时此参数无效，存储到VOD时请通过TencentVod（https://cloud.tencent.com/document/api/647/44055#TencentVod）内的MediaType设置。
  
-     * @return Format 指定输出格式，可选hls,mp4
+     * @return Format 指定输出格式，可选hls,mp4。存储到云点播VOD时此参数无效，存储到VOD时请通过TencentVod（https://cloud.tencent.com/document/api/647/44055#TencentVod）内的MediaType设置。
 
      */
     public String getFormat() {
@@ -97,9 +97,9 @@ Hls 格式录制此参数不生效。
     }
 
     /**
-     * Set 指定输出格式，可选hls,mp4
+     * Set 指定输出格式，可选hls,mp4。存储到云点播VOD时此参数无效，存储到VOD时请通过TencentVod（https://cloud.tencent.com/document/api/647/44055#TencentVod）内的MediaType设置。
 
-     * @param Format 指定输出格式，可选hls,mp4
+     * @param Format 指定输出格式，可选hls,mp4。存储到云点播VOD时此参数无效，存储到VOD时请通过TencentVod（https://cloud.tencent.com/document/api/647/44055#TencentVod）内的MediaType设置。
 
      */
     public void setFormat(String Format) {

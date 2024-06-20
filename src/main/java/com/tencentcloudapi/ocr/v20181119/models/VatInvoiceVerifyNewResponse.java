@@ -67,6 +67,13 @@ public class VatInvoiceVerifyNewResponse extends AbstractModel {
     private ElectronicAirTransport ElectronicAirTransport;
 
     /**
+    * 财政发票详细字段信息
+    */
+    @SerializedName("FinancialBill")
+    @Expose
+    private FinancialBill FinancialBill;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -174,6 +181,22 @@ public class VatInvoiceVerifyNewResponse extends AbstractModel {
     }
 
     /**
+     * Get 财政发票详细字段信息 
+     * @return FinancialBill 财政发票详细字段信息
+     */
+    public FinancialBill getFinancialBill() {
+        return this.FinancialBill;
+    }
+
+    /**
+     * Set 财政发票详细字段信息
+     * @param FinancialBill 财政发票详细字段信息
+     */
+    public void setFinancialBill(FinancialBill FinancialBill) {
+        this.FinancialBill = FinancialBill;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -218,6 +241,9 @@ public class VatInvoiceVerifyNewResponse extends AbstractModel {
         if (source.ElectronicAirTransport != null) {
             this.ElectronicAirTransport = new ElectronicAirTransport(source.ElectronicAirTransport);
         }
+        if (source.FinancialBill != null) {
+            this.FinancialBill = new FinancialBill(source.FinancialBill);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -234,6 +260,7 @@ public class VatInvoiceVerifyNewResponse extends AbstractModel {
         this.setParamArrayObj(map, prefix + "PassInvoiceInfoList.", this.PassInvoiceInfoList);
         this.setParamObj(map, prefix + "ElectronicTrainTicket.", this.ElectronicTrainTicket);
         this.setParamObj(map, prefix + "ElectronicAirTransport.", this.ElectronicAirTransport);
+        this.setParamObj(map, prefix + "FinancialBill.", this.FinancialBill);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

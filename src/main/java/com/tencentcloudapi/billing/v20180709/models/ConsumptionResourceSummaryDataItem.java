@@ -323,6 +323,14 @@ public class ConsumptionResourceSummaryDataItem extends AbstractModel {
     private String ComponentConfig;
 
     /**
+    * 标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private String Tags;
+
+    /**
      * Get 资源ID 
      * @return ResourceId 资源ID
      */
@@ -1050,6 +1058,26 @@ public class ConsumptionResourceSummaryDataItem extends AbstractModel {
         this.ComponentConfig = ComponentConfig;
     }
 
+    /**
+     * Get 标签信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Tags 标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Tags 标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTags(String Tags) {
+        this.Tags = Tags;
+    }
+
     public ConsumptionResourceSummaryDataItem() {
     }
 
@@ -1175,6 +1203,9 @@ public class ConsumptionResourceSummaryDataItem extends AbstractModel {
         if (source.ComponentConfig != null) {
             this.ComponentConfig = new String(source.ComponentConfig);
         }
+        if (source.Tags != null) {
+            this.Tags = new String(source.Tags);
+        }
     }
 
 
@@ -1221,6 +1252,7 @@ public class ConsumptionResourceSummaryDataItem extends AbstractModel {
         this.setParamSimple(map, prefix + "PayTime", this.PayTime);
         this.setParamSimple(map, prefix + "ZoneName", this.ZoneName);
         this.setParamSimple(map, prefix + "ComponentConfig", this.ComponentConfig);
+        this.setParamSimple(map, prefix + "Tags", this.Tags);
 
     }
 }

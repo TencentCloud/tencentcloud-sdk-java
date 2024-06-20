@@ -1383,6 +1383,17 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *续费集群
+     * @param req RenewClustersRequest
+     * @return RenewClustersResponse
+     * @throws TencentCloudSDKException
+     */
+    public RenewClustersResponse RenewClusters(RenewClustersRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RenewClusters", RenewClustersResponse.class);
+    }
+
+    /**
      *本接口(ResetAccountPassword)用于修改数据库账号密码
      * @param req ResetAccountPasswordRequest
      * @return ResetAccountPasswordResponse

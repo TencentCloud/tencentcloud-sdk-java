@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.dts.v20180330.models;
+package com.tencentcloudapi.tdmq.v20200217.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,21 +21,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeRegionConfResponse extends AbstractModel {
-
-    /**
-    * 可售卖地域的数量
-    */
-    @SerializedName("TotalCount")
-    @Expose
-    private Long TotalCount;
-
-    /**
-    * 可售卖地域详情
-    */
-    @SerializedName("Items")
-    @Expose
-    private SubscribeRegionConf [] Items;
+public class DeleteRocketMQEnvironmentRolesResponse extends AbstractModel {
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -43,38 +29,6 @@ public class DescribeRegionConfResponse extends AbstractModel {
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get 可售卖地域的数量 
-     * @return TotalCount 可售卖地域的数量
-     */
-    public Long getTotalCount() {
-        return this.TotalCount;
-    }
-
-    /**
-     * Set 可售卖地域的数量
-     * @param TotalCount 可售卖地域的数量
-     */
-    public void setTotalCount(Long TotalCount) {
-        this.TotalCount = TotalCount;
-    }
-
-    /**
-     * Get 可售卖地域详情 
-     * @return Items 可售卖地域详情
-     */
-    public SubscribeRegionConf [] getItems() {
-        return this.Items;
-    }
-
-    /**
-     * Set 可售卖地域详情
-     * @param Items 可售卖地域详情
-     */
-    public void setItems(SubscribeRegionConf [] Items) {
-        this.Items = Items;
-    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -92,23 +46,14 @@ public class DescribeRegionConfResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public DescribeRegionConfResponse() {
+    public DeleteRocketMQEnvironmentRolesResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeRegionConfResponse(DescribeRegionConfResponse source) {
-        if (source.TotalCount != null) {
-            this.TotalCount = new Long(source.TotalCount);
-        }
-        if (source.Items != null) {
-            this.Items = new SubscribeRegionConf[source.Items.length];
-            for (int i = 0; i < source.Items.length; i++) {
-                this.Items[i] = new SubscribeRegionConf(source.Items[i]);
-            }
-        }
+    public DeleteRocketMQEnvironmentRolesResponse(DeleteRocketMQEnvironmentRolesResponse source) {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -119,8 +64,6 @@ public class DescribeRegionConfResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
-        this.setParamArrayObj(map, prefix + "Items.", this.Items);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

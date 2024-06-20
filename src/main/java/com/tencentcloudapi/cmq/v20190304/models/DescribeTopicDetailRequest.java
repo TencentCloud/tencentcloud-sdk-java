@@ -24,11 +24,11 @@ import java.util.HashMap;
 public class DescribeTopicDetailRequest extends AbstractModel {
 
     /**
-    * 分页时本页获取队列列表的起始位置。如果填写了该值，必须也要填写 limit 。该值缺省时，后台取默认值 0。
+    * 标签匹配。
     */
-    @SerializedName("Offset")
+    @SerializedName("TagKey")
     @Expose
-    private Long Offset;
+    private String TagKey;
 
     /**
     * 分页时本页获取队列的个数，如果不传递该参数，则该参数默认为20，最大值为50。
@@ -38,20 +38,6 @@ public class DescribeTopicDetailRequest extends AbstractModel {
     private Long Limit;
 
     /**
-    * 目前只支持过滤TopicName ， 且只能填一个过滤值。
-    */
-    @SerializedName("Filters")
-    @Expose
-    private Filter [] Filters;
-
-    /**
-    * 标签匹配。
-    */
-    @SerializedName("TagKey")
-    @Expose
-    private String TagKey;
-
-    /**
     * 精确匹配TopicName。
     */
     @SerializedName("TopicName")
@@ -59,19 +45,33 @@ public class DescribeTopicDetailRequest extends AbstractModel {
     private String TopicName;
 
     /**
-     * Get 分页时本页获取队列列表的起始位置。如果填写了该值，必须也要填写 limit 。该值缺省时，后台取默认值 0。 
-     * @return Offset 分页时本页获取队列列表的起始位置。如果填写了该值，必须也要填写 limit 。该值缺省时，后台取默认值 0。
+    * 目前只支持过滤TopicName ， 且只能填一个过滤值。
+    */
+    @SerializedName("Filters")
+    @Expose
+    private Filter [] Filters;
+
+    /**
+    * 分页时本页获取队列列表的起始位置。如果填写了该值，必须也要填写 limit 。该值缺省时，后台取默认值 0。
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
+
+    /**
+     * Get 标签匹配。 
+     * @return TagKey 标签匹配。
      */
-    public Long getOffset() {
-        return this.Offset;
+    public String getTagKey() {
+        return this.TagKey;
     }
 
     /**
-     * Set 分页时本页获取队列列表的起始位置。如果填写了该值，必须也要填写 limit 。该值缺省时，后台取默认值 0。
-     * @param Offset 分页时本页获取队列列表的起始位置。如果填写了该值，必须也要填写 limit 。该值缺省时，后台取默认值 0。
+     * Set 标签匹配。
+     * @param TagKey 标签匹配。
      */
-    public void setOffset(Long Offset) {
-        this.Offset = Offset;
+    public void setTagKey(String TagKey) {
+        this.TagKey = TagKey;
     }
 
     /**
@@ -91,6 +91,22 @@ public class DescribeTopicDetailRequest extends AbstractModel {
     }
 
     /**
+     * Get 精确匹配TopicName。 
+     * @return TopicName 精确匹配TopicName。
+     */
+    public String getTopicName() {
+        return this.TopicName;
+    }
+
+    /**
+     * Set 精确匹配TopicName。
+     * @param TopicName 精确匹配TopicName。
+     */
+    public void setTopicName(String TopicName) {
+        this.TopicName = TopicName;
+    }
+
+    /**
      * Get 目前只支持过滤TopicName ， 且只能填一个过滤值。 
      * @return Filters 目前只支持过滤TopicName ， 且只能填一个过滤值。
      */
@@ -107,35 +123,19 @@ public class DescribeTopicDetailRequest extends AbstractModel {
     }
 
     /**
-     * Get 标签匹配。 
-     * @return TagKey 标签匹配。
+     * Get 分页时本页获取队列列表的起始位置。如果填写了该值，必须也要填写 limit 。该值缺省时，后台取默认值 0。 
+     * @return Offset 分页时本页获取队列列表的起始位置。如果填写了该值，必须也要填写 limit 。该值缺省时，后台取默认值 0。
      */
-    public String getTagKey() {
-        return this.TagKey;
+    public Long getOffset() {
+        return this.Offset;
     }
 
     /**
-     * Set 标签匹配。
-     * @param TagKey 标签匹配。
+     * Set 分页时本页获取队列列表的起始位置。如果填写了该值，必须也要填写 limit 。该值缺省时，后台取默认值 0。
+     * @param Offset 分页时本页获取队列列表的起始位置。如果填写了该值，必须也要填写 limit 。该值缺省时，后台取默认值 0。
      */
-    public void setTagKey(String TagKey) {
-        this.TagKey = TagKey;
-    }
-
-    /**
-     * Get 精确匹配TopicName。 
-     * @return TopicName 精确匹配TopicName。
-     */
-    public String getTopicName() {
-        return this.TopicName;
-    }
-
-    /**
-     * Set 精确匹配TopicName。
-     * @param TopicName 精确匹配TopicName。
-     */
-    public void setTopicName(String TopicName) {
-        this.TopicName = TopicName;
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
     }
 
     public DescribeTopicDetailRequest() {
@@ -146,11 +146,14 @@ public class DescribeTopicDetailRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeTopicDetailRequest(DescribeTopicDetailRequest source) {
-        if (source.Offset != null) {
-            this.Offset = new Long(source.Offset);
+        if (source.TagKey != null) {
+            this.TagKey = new String(source.TagKey);
         }
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
+        }
+        if (source.TopicName != null) {
+            this.TopicName = new String(source.TopicName);
         }
         if (source.Filters != null) {
             this.Filters = new Filter[source.Filters.length];
@@ -158,11 +161,8 @@ public class DescribeTopicDetailRequest extends AbstractModel {
                 this.Filters[i] = new Filter(source.Filters[i]);
             }
         }
-        if (source.TagKey != null) {
-            this.TagKey = new String(source.TagKey);
-        }
-        if (source.TopicName != null) {
-            this.TopicName = new String(source.TopicName);
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
         }
     }
 
@@ -171,11 +171,11 @@ public class DescribeTopicDetailRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Offset", this.Offset);
-        this.setParamSimple(map, prefix + "Limit", this.Limit);
-        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "TagKey", this.TagKey);
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "TopicName", this.TopicName);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
 
     }
 }

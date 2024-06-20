@@ -195,6 +195,9 @@ public enum OrganizationErrorCode {
     // 共享地域不存在。
      FAILEDOPERATION_SHAREAREANOTEXIST("FailedOperation.ShareAreaNotExist"),
      
+    // 共享成员不存在。
+     FAILEDOPERATION_SHAREMEMBERNOTEXIST("FailedOperation.ShareMemberNotExist"),
+     
     // 成员正在使用共享资源。
      FAILEDOPERATION_SHARERESOURCEMEMBERINUSE("FailedOperation.ShareResourceMemberInUse"),
      

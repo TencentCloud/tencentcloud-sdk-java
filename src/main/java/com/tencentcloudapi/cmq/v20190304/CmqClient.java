@@ -139,7 +139,7 @@ public class CmqClient extends AbstractClient{
     }
 
     /**
-     *枚举队列
+     *枚举队列列表
      * @param req DescribeQueueDetailRequest
      * @return DescribeQueueDetailResponse
      * @throws TencentCloudSDKException
@@ -161,7 +161,7 @@ public class CmqClient extends AbstractClient{
     }
 
     /**
-     *查询主题详情 
+     *查询主题详情
      * @param req DescribeTopicDetailRequest
      * @return DescribeTopicDetailResponse
      * @throws TencentCloudSDKException

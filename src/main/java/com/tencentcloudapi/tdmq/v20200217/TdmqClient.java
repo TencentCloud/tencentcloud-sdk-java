@@ -193,6 +193,17 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
+     *创建环境角色授权
+     * @param req CreateRocketMQEnvironmentRoleRequest
+     * @return CreateRocketMQEnvironmentRoleResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateRocketMQEnvironmentRoleResponse CreateRocketMQEnvironmentRole(CreateRocketMQEnvironmentRoleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateRocketMQEnvironmentRole", CreateRocketMQEnvironmentRoleResponse.class);
+    }
+
+    /**
      *创建RocketMQ消费组
      * @param req CreateRocketMQGroupRequest
      * @return CreateRocketMQGroupResponse
@@ -212,6 +223,17 @@ public class TdmqClient extends AbstractClient{
     public CreateRocketMQNamespaceResponse CreateRocketMQNamespace(CreateRocketMQNamespaceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateRocketMQNamespace", CreateRocketMQNamespaceResponse.class);
+    }
+
+    /**
+     *创建角色
+     * @param req CreateRocketMQRoleRequest
+     * @return CreateRocketMQRoleResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateRocketMQRoleResponse CreateRocketMQRole(CreateRocketMQRoleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateRocketMQRole", CreateRocketMQRoleResponse.class);
     }
 
     /**
@@ -391,6 +413,17 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
+     *删除环境角色授权。
+     * @param req DeleteRocketMQEnvironmentRolesRequest
+     * @return DeleteRocketMQEnvironmentRolesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteRocketMQEnvironmentRolesResponse DeleteRocketMQEnvironmentRoles(DeleteRocketMQEnvironmentRolesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteRocketMQEnvironmentRoles", DeleteRocketMQEnvironmentRolesResponse.class);
+    }
+
+    /**
      *删除RocketMQ消费组
      * @param req DeleteRocketMQGroupRequest
      * @return DeleteRocketMQGroupResponse
@@ -410,6 +443,17 @@ public class TdmqClient extends AbstractClient{
     public DeleteRocketMQNamespaceResponse DeleteRocketMQNamespace(DeleteRocketMQNamespaceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteRocketMQNamespace", DeleteRocketMQNamespaceResponse.class);
+    }
+
+    /**
+     *删除角色，支持批量。
+     * @param req DeleteRocketMQRolesRequest
+     * @return DeleteRocketMQRolesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteRocketMQRolesResponse DeleteRocketMQRoles(DeleteRocketMQRolesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteRocketMQRoles", DeleteRocketMQRolesResponse.class);
     }
 
     /**
@@ -877,6 +921,17 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
+     *获取命名空间角色列表
+     * @param req DescribeRocketMQEnvironmentRolesRequest
+     * @return DescribeRocketMQEnvironmentRolesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRocketMQEnvironmentRolesResponse DescribeRocketMQEnvironmentRoles(DescribeRocketMQEnvironmentRolesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRocketMQEnvironmentRoles", DescribeRocketMQEnvironmentRolesResponse.class);
+    }
+
+    /**
      *获取RocketMQ消费组列表
      * @param req DescribeRocketMQGroupsRequest
      * @return DescribeRocketMQGroupsResponse
@@ -951,6 +1006,17 @@ public class TdmqClient extends AbstractClient{
     public DescribeRocketMQPublicAccessPointResponse DescribeRocketMQPublicAccessPoint(DescribeRocketMQPublicAccessPointRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeRocketMQPublicAccessPoint", DescribeRocketMQPublicAccessPointResponse.class);
+    }
+
+    /**
+     *获取角色列表
+     * @param req DescribeRocketMQRolesRequest
+     * @return DescribeRocketMQRolesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRocketMQRolesResponse DescribeRocketMQRoles(DescribeRocketMQRolesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRocketMQRoles", DescribeRocketMQRolesResponse.class);
     }
 
     /**
@@ -1262,6 +1328,17 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
+     *修改环境角色授权。
+     * @param req ModifyRocketMQEnvironmentRoleRequest
+     * @return ModifyRocketMQEnvironmentRoleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyRocketMQEnvironmentRoleResponse ModifyRocketMQEnvironmentRole(ModifyRocketMQEnvironmentRoleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyRocketMQEnvironmentRole", ModifyRocketMQEnvironmentRoleResponse.class);
+    }
+
+    /**
      *更新RocketMQ消费组信息
      * @param req ModifyRocketMQGroupRequest
      * @return ModifyRocketMQGroupResponse
@@ -1292,6 +1369,17 @@ public class TdmqClient extends AbstractClient{
     public ModifyRocketMQNamespaceResponse ModifyRocketMQNamespace(ModifyRocketMQNamespaceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyRocketMQNamespace", ModifyRocketMQNamespaceResponse.class);
+    }
+
+    /**
+     *角色修改
+     * @param req ModifyRocketMQRoleRequest
+     * @return ModifyRocketMQRoleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyRocketMQRoleResponse ModifyRocketMQRole(ModifyRocketMQRoleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyRocketMQRole", ModifyRocketMQRoleResponse.class);
     }
 
     /**

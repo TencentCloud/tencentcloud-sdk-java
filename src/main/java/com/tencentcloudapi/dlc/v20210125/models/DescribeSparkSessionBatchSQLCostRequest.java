@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.dts.v20180330.models;
+package com.tencentcloudapi.dlc.v20210125.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,16 +21,45 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeRegionConfRequest extends AbstractModel {
+public class DescribeSparkSessionBatchSQLCostRequest extends AbstractModel {
 
-    public DescribeRegionConfRequest() {
+    /**
+    * SparkSQL唯一标识
+    */
+    @SerializedName("BatchIds")
+    @Expose
+    private String [] BatchIds;
+
+    /**
+     * Get SparkSQL唯一标识 
+     * @return BatchIds SparkSQL唯一标识
+     */
+    public String [] getBatchIds() {
+        return this.BatchIds;
+    }
+
+    /**
+     * Set SparkSQL唯一标识
+     * @param BatchIds SparkSQL唯一标识
+     */
+    public void setBatchIds(String [] BatchIds) {
+        this.BatchIds = BatchIds;
+    }
+
+    public DescribeSparkSessionBatchSQLCostRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeRegionConfRequest(DescribeRegionConfRequest source) {
+    public DescribeSparkSessionBatchSQLCostRequest(DescribeSparkSessionBatchSQLCostRequest source) {
+        if (source.BatchIds != null) {
+            this.BatchIds = new String[source.BatchIds.length];
+            for (int i = 0; i < source.BatchIds.length; i++) {
+                this.BatchIds[i] = new String(source.BatchIds[i]);
+            }
+        }
     }
 
 
@@ -38,6 +67,7 @@ public class DescribeRegionConfRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArraySimple(map, prefix + "BatchIds.", this.BatchIds);
 
     }
 }

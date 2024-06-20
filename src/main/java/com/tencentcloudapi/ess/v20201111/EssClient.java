@@ -368,6 +368,27 @@ public class EssClient extends AbstractClient{
     }
 
     /**
+     *获取区块链存证报告查看链接/二维码接口
+
+适用场景：企业员工可以通过此接口生成合同区块链存证报告的查看链接/二维码，以供他人扫码打开腾讯电子签小程序查看。
+
+[点击查看区块链存证报告样式](https://qcloudimg.tencent-cloud.cn/raw/47d5e9c2ffa90ad4e27b3cd14095aa08.jpg)
+
+注：
+<ul><li>1. 二维码下载链接过期时间为5分钟，请尽快下载保存。二维码/短链的过期时间为<font color="red">7天</font>，超过有效期则不可用。</li>
+<li>2. 合同状态需为<font color="red">签署完成</font> 、<font color="red">已解除</font>才能生成报告查看二维码/短链。</li>
+<li>3. 调用接口时，需确保接口调用身份拥有此合同的访问数据权限或为合同参与方。</li>
+<li>4. 通过扫码或者点击链接，用户无需登录或者鉴权即可查看对应合同的区块链存证报告，请妥善保管好二维码或链接。</li></ul>
+     * @param req CreateFlowBlockchainEvidenceUrlRequest
+     * @return CreateFlowBlockchainEvidenceUrlResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateFlowBlockchainEvidenceUrlResponse CreateFlowBlockchainEvidenceUrl(CreateFlowBlockchainEvidenceUrlRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateFlowBlockchainEvidenceUrl", CreateFlowBlockchainEvidenceUrlResponse.class);
+    }
+
+    /**
      *此接口（CreateFlowByFiles）用来通过上传后的pdf资源编号来创建待签署的合同流程。<br/>
 适用场景：适用非制式的合同文件签署。一般开发者自己有完整的签署文件，可以通过该接口传入完整的PDF文件及流程信息生成待签署的合同流程。<br/>
 
@@ -677,6 +698,20 @@ p.s.
     public CreateIntegrationUserRolesResponse CreateIntegrationUserRoles(CreateIntegrationUserRolesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateIntegrationUserRoles", CreateIntegrationUserRolesResponse.class);
+    }
+
+    /**
+     *该接口用于获取创建法人章的二维码<br/>
+
+**注意**
+1. 该二维码**有效期为7天**，过期后将失效，可重新创建 。
+     * @param req CreateLegalSealQrCodeRequest
+     * @return CreateLegalSealQrCodeResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateLegalSealQrCodeResponse CreateLegalSealQrCode(CreateLegalSealQrCodeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateLegalSealQrCode", CreateLegalSealQrCodeResponse.class);
     }
 
     /**

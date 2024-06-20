@@ -24,11 +24,11 @@ import java.util.HashMap;
 public class DescribeQueueDetailRequest extends AbstractModel {
 
     /**
-    * 分页时本页获取队列列表的起始位置。如果填写了该值，必须也要填写 limit 。该值缺省时，后台取默认值 0
+    * 标签搜索
     */
-    @SerializedName("Offset")
+    @SerializedName("TagKey")
     @Expose
-    private Long Offset;
+    private String TagKey;
 
     /**
     * 分页时本页获取队列的个数，如果不传递该参数，则该参数默认为20，最大值为50。
@@ -38,20 +38,6 @@ public class DescribeQueueDetailRequest extends AbstractModel {
     private Long Limit;
 
     /**
-    * 筛选参数，目前支持QueueName筛选，且仅支持一个关键字
-    */
-    @SerializedName("Filters")
-    @Expose
-    private Filter [] Filters;
-
-    /**
-    * 标签搜索
-    */
-    @SerializedName("TagKey")
-    @Expose
-    private String TagKey;
-
-    /**
     * 精确匹配QueueName
     */
     @SerializedName("QueueName")
@@ -59,19 +45,33 @@ public class DescribeQueueDetailRequest extends AbstractModel {
     private String QueueName;
 
     /**
-     * Get 分页时本页获取队列列表的起始位置。如果填写了该值，必须也要填写 limit 。该值缺省时，后台取默认值 0 
-     * @return Offset 分页时本页获取队列列表的起始位置。如果填写了该值，必须也要填写 limit 。该值缺省时，后台取默认值 0
+    * 筛选参数，目前支持QueueName筛选，且仅支持一个关键字
+    */
+    @SerializedName("Filters")
+    @Expose
+    private Filter [] Filters;
+
+    /**
+    * 分页时本页获取队列列表的起始位置。如果填写了该值，必须也要填写 limit 。该值缺省时，后台取默认值 0
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
+
+    /**
+     * Get 标签搜索 
+     * @return TagKey 标签搜索
      */
-    public Long getOffset() {
-        return this.Offset;
+    public String getTagKey() {
+        return this.TagKey;
     }
 
     /**
-     * Set 分页时本页获取队列列表的起始位置。如果填写了该值，必须也要填写 limit 。该值缺省时，后台取默认值 0
-     * @param Offset 分页时本页获取队列列表的起始位置。如果填写了该值，必须也要填写 limit 。该值缺省时，后台取默认值 0
+     * Set 标签搜索
+     * @param TagKey 标签搜索
      */
-    public void setOffset(Long Offset) {
-        this.Offset = Offset;
+    public void setTagKey(String TagKey) {
+        this.TagKey = TagKey;
     }
 
     /**
@@ -91,6 +91,22 @@ public class DescribeQueueDetailRequest extends AbstractModel {
     }
 
     /**
+     * Get 精确匹配QueueName 
+     * @return QueueName 精确匹配QueueName
+     */
+    public String getQueueName() {
+        return this.QueueName;
+    }
+
+    /**
+     * Set 精确匹配QueueName
+     * @param QueueName 精确匹配QueueName
+     */
+    public void setQueueName(String QueueName) {
+        this.QueueName = QueueName;
+    }
+
+    /**
      * Get 筛选参数，目前支持QueueName筛选，且仅支持一个关键字 
      * @return Filters 筛选参数，目前支持QueueName筛选，且仅支持一个关键字
      */
@@ -107,35 +123,19 @@ public class DescribeQueueDetailRequest extends AbstractModel {
     }
 
     /**
-     * Get 标签搜索 
-     * @return TagKey 标签搜索
+     * Get 分页时本页获取队列列表的起始位置。如果填写了该值，必须也要填写 limit 。该值缺省时，后台取默认值 0 
+     * @return Offset 分页时本页获取队列列表的起始位置。如果填写了该值，必须也要填写 limit 。该值缺省时，后台取默认值 0
      */
-    public String getTagKey() {
-        return this.TagKey;
+    public Long getOffset() {
+        return this.Offset;
     }
 
     /**
-     * Set 标签搜索
-     * @param TagKey 标签搜索
+     * Set 分页时本页获取队列列表的起始位置。如果填写了该值，必须也要填写 limit 。该值缺省时，后台取默认值 0
+     * @param Offset 分页时本页获取队列列表的起始位置。如果填写了该值，必须也要填写 limit 。该值缺省时，后台取默认值 0
      */
-    public void setTagKey(String TagKey) {
-        this.TagKey = TagKey;
-    }
-
-    /**
-     * Get 精确匹配QueueName 
-     * @return QueueName 精确匹配QueueName
-     */
-    public String getQueueName() {
-        return this.QueueName;
-    }
-
-    /**
-     * Set 精确匹配QueueName
-     * @param QueueName 精确匹配QueueName
-     */
-    public void setQueueName(String QueueName) {
-        this.QueueName = QueueName;
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
     }
 
     public DescribeQueueDetailRequest() {
@@ -146,11 +146,14 @@ public class DescribeQueueDetailRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeQueueDetailRequest(DescribeQueueDetailRequest source) {
-        if (source.Offset != null) {
-            this.Offset = new Long(source.Offset);
+        if (source.TagKey != null) {
+            this.TagKey = new String(source.TagKey);
         }
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
+        }
+        if (source.QueueName != null) {
+            this.QueueName = new String(source.QueueName);
         }
         if (source.Filters != null) {
             this.Filters = new Filter[source.Filters.length];
@@ -158,11 +161,8 @@ public class DescribeQueueDetailRequest extends AbstractModel {
                 this.Filters[i] = new Filter(source.Filters[i]);
             }
         }
-        if (source.TagKey != null) {
-            this.TagKey = new String(source.TagKey);
-        }
-        if (source.QueueName != null) {
-            this.QueueName = new String(source.QueueName);
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
         }
     }
 
@@ -171,11 +171,11 @@ public class DescribeQueueDetailRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Offset", this.Offset);
-        this.setParamSimple(map, prefix + "Limit", this.Limit);
-        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "TagKey", this.TagKey);
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "QueueName", this.QueueName);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
 
     }
 }

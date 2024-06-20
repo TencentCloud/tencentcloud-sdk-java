@@ -930,6 +930,17 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeSparkSessionBatchSQLCost）用于查询Spark SQL批任务消耗
+     * @param req DescribeSparkSessionBatchSQLCostRequest
+     * @return DescribeSparkSessionBatchSQLCostResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSparkSessionBatchSQLCostResponse DescribeSparkSessionBatchSQLCost(DescribeSparkSessionBatchSQLCostRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSparkSessionBatchSQLCost", DescribeSparkSessionBatchSQLCostResponse.class);
+    }
+
+    /**
      *本接口（DescribeSparkSessionBatchSqlLog）用于查询Spark SQL批任务日志
      * @param req DescribeSparkSessionBatchSqlLogRequest
      * @return DescribeSparkSessionBatchSqlLogResponse

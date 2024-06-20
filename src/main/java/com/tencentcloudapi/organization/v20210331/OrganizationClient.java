@@ -39,6 +39,17 @@ public class OrganizationClient extends AbstractClient{
     }
 
     /**
+     *接受加入共享单元邀请。
+     * @param req AcceptJoinShareUnitInvitationRequest
+     * @return AcceptJoinShareUnitInvitationResponse
+     * @throws TencentCloudSDKException
+     */
+    public AcceptJoinShareUnitInvitationResponse AcceptJoinShareUnitInvitation(AcceptJoinShareUnitInvitationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AcceptJoinShareUnitInvitation", AcceptJoinShareUnitInvitationResponse.class);
+    }
+
+    /**
      *添加组织成员邮箱
      * @param req AddOrganizationMemberEmailRequest
      * @return AddOrganizationMemberEmailResponse
@@ -641,6 +652,17 @@ public class OrganizationClient extends AbstractClient{
     public QuitOrganizationResponse QuitOrganization(QuitOrganizationRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "QuitOrganization", QuitOrganizationResponse.class);
+    }
+
+    /**
+     *拒绝加入共享单元邀请。
+     * @param req RejectJoinShareUnitInvitationRequest
+     * @return RejectJoinShareUnitInvitationResponse
+     * @throws TencentCloudSDKException
+     */
+    public RejectJoinShareUnitInvitationResponse RejectJoinShareUnitInvitation(RejectJoinShareUnitInvitationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RejectJoinShareUnitInvitation", RejectJoinShareUnitInvitationResponse.class);
     }
 
     /**

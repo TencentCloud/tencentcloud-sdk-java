@@ -15,6 +15,9 @@ public enum MongodbErrorCode {
     // 当前实例已开启外网访问。
      FAILEDOPERATION_NOTALLOWMODIFYADDRAFTEROPENWANSERVICE("FailedOperation.NotAllowModifyAddrAfterOpenWanService"),
      
+    // 实例锁定中不允许操作。
+     FAILEDOPERATION_OPERATIONNOTALLOWEDININSTANCELOCKING("FailedOperation.OperationNotAllowedInInstanceLocking"),
+     
     // 内部错误。
      INTERNALERROR("InternalError"),
      
@@ -35,6 +38,9 @@ public enum MongodbErrorCode {
      
     // 无效Vip信息。
      INVALIDPARAMETER_INVALIDVIP("InvalidParameter.InvalidVip"),
+     
+    // 参数名有误
+     INVALIDPARAMETER_MODIFYMONGODBPARAMS("InvalidParameter.ModifyMongodbParams"),
      
     // 接口参数为空。
      INVALIDPARAMETER_PARAMETERSNIL("InvalidParameter.ParametersNil"),
@@ -83,6 +89,9 @@ public enum MongodbErrorCode {
      
     // 内存和磁盘必须同时升配或降配。
      INVALIDPARAMETERVALUE_MODIFYMODEERROR("InvalidParameterValue.ModifyModeError"),
+     
+    // 参数值有误。
+     INVALIDPARAMETERVALUE_MODIFYMONGODBPARAMS("InvalidParameterValue.ModifyMongodbParams"),
      
     // 实例版本错误。
      INVALIDPARAMETERVALUE_MONGOVERSIONERROR("InvalidParameterValue.MongoVersionError"),

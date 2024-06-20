@@ -24,76 +24,76 @@ import java.util.HashMap;
 public class EmbedUrlOption extends AbstractModel {
 
     /**
-    * 合同详情页面是否展示合同控件信息
-<br/>true:允许在合同详情页展示控件
-<br/>false:不允许在合同详情页展示控件
-<br/>默认false,在合同详情页不展示控件
+    * 合同详情预览，允许展示控件信息
+<ul>
+<li><b>true</b>：允许在合同详情页展示控件</li>
+<li><b>false</b>：（默认）不允许在合同详情页展示控件</li>
+</ul>
     */
     @SerializedName("ShowFlowDetailComponent")
     @Expose
     private Boolean ShowFlowDetailComponent;
 
     /**
-    * 模版预览页面是否展示空间信息
-<br/>true:允许在模版预览页展示控件
-<br/>false:不允许在模版预览页展示控件
-<br/>默认false,在模版预览页不展示控件
+    * 模板预览，允许展示模板控件信息
+<ul><li> <b>true</b> :允许在模板预览页展示控件</li>
+<li> <b>false</b> :（默认）不允许在模板预览页展示控件</li></ul>
     */
     @SerializedName("ShowTemplateComponent")
     @Expose
     private Boolean ShowTemplateComponent;
 
     /**
-     * Get 合同详情页面是否展示合同控件信息
-<br/>true:允许在合同详情页展示控件
-<br/>false:不允许在合同详情页展示控件
-<br/>默认false,在合同详情页不展示控件 
-     * @return ShowFlowDetailComponent 合同详情页面是否展示合同控件信息
-<br/>true:允许在合同详情页展示控件
-<br/>false:不允许在合同详情页展示控件
-<br/>默认false,在合同详情页不展示控件
+     * Get 合同详情预览，允许展示控件信息
+<ul>
+<li><b>true</b>：允许在合同详情页展示控件</li>
+<li><b>false</b>：（默认）不允许在合同详情页展示控件</li>
+</ul> 
+     * @return ShowFlowDetailComponent 合同详情预览，允许展示控件信息
+<ul>
+<li><b>true</b>：允许在合同详情页展示控件</li>
+<li><b>false</b>：（默认）不允许在合同详情页展示控件</li>
+</ul>
      */
     public Boolean getShowFlowDetailComponent() {
         return this.ShowFlowDetailComponent;
     }
 
     /**
-     * Set 合同详情页面是否展示合同控件信息
-<br/>true:允许在合同详情页展示控件
-<br/>false:不允许在合同详情页展示控件
-<br/>默认false,在合同详情页不展示控件
-     * @param ShowFlowDetailComponent 合同详情页面是否展示合同控件信息
-<br/>true:允许在合同详情页展示控件
-<br/>false:不允许在合同详情页展示控件
-<br/>默认false,在合同详情页不展示控件
+     * Set 合同详情预览，允许展示控件信息
+<ul>
+<li><b>true</b>：允许在合同详情页展示控件</li>
+<li><b>false</b>：（默认）不允许在合同详情页展示控件</li>
+</ul>
+     * @param ShowFlowDetailComponent 合同详情预览，允许展示控件信息
+<ul>
+<li><b>true</b>：允许在合同详情页展示控件</li>
+<li><b>false</b>：（默认）不允许在合同详情页展示控件</li>
+</ul>
      */
     public void setShowFlowDetailComponent(Boolean ShowFlowDetailComponent) {
         this.ShowFlowDetailComponent = ShowFlowDetailComponent;
     }
 
     /**
-     * Get 模版预览页面是否展示空间信息
-<br/>true:允许在模版预览页展示控件
-<br/>false:不允许在模版预览页展示控件
-<br/>默认false,在模版预览页不展示控件 
-     * @return ShowTemplateComponent 模版预览页面是否展示空间信息
-<br/>true:允许在模版预览页展示控件
-<br/>false:不允许在模版预览页展示控件
-<br/>默认false,在模版预览页不展示控件
+     * Get 模板预览，允许展示模板控件信息
+<ul><li> <b>true</b> :允许在模板预览页展示控件</li>
+<li> <b>false</b> :（默认）不允许在模板预览页展示控件</li></ul> 
+     * @return ShowTemplateComponent 模板预览，允许展示模板控件信息
+<ul><li> <b>true</b> :允许在模板预览页展示控件</li>
+<li> <b>false</b> :（默认）不允许在模板预览页展示控件</li></ul>
      */
     public Boolean getShowTemplateComponent() {
         return this.ShowTemplateComponent;
     }
 
     /**
-     * Set 模版预览页面是否展示空间信息
-<br/>true:允许在模版预览页展示控件
-<br/>false:不允许在模版预览页展示控件
-<br/>默认false,在模版预览页不展示控件
-     * @param ShowTemplateComponent 模版预览页面是否展示空间信息
-<br/>true:允许在模版预览页展示控件
-<br/>false:不允许在模版预览页展示控件
-<br/>默认false,在模版预览页不展示控件
+     * Set 模板预览，允许展示模板控件信息
+<ul><li> <b>true</b> :允许在模板预览页展示控件</li>
+<li> <b>false</b> :（默认）不允许在模板预览页展示控件</li></ul>
+     * @param ShowTemplateComponent 模板预览，允许展示模板控件信息
+<ul><li> <b>true</b> :允许在模板预览页展示控件</li>
+<li> <b>false</b> :（默认）不允许在模板预览页展示控件</li></ul>
      */
     public void setShowTemplateComponent(Boolean ShowTemplateComponent) {
         this.ShowTemplateComponent = ShowTemplateComponent;

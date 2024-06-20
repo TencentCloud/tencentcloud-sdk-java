@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeProjectInfoRequest extends AbstractModel {
 
     /**
-    * 目标项目ID
+    * 目标项目ID，必填参数
     */
     @SerializedName("ProjectId")
     @Expose
     private String ProjectId;
 
     /**
-     * Get 目标项目ID 
-     * @return ProjectId 目标项目ID
+     * Get 目标项目ID，必填参数 
+     * @return ProjectId 目标项目ID，必填参数
      */
     public String getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 目标项目ID
-     * @param ProjectId 目标项目ID
+     * Set 目标项目ID，必填参数
+     * @param ProjectId 目标项目ID，必填参数
      */
     public void setProjectId(String ProjectId) {
         this.ProjectId = ProjectId;

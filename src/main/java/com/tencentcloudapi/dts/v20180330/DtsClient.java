@@ -150,19 +150,6 @@ public class DtsClient extends AbstractClient{
     }
 
     /**
-     *接口不再使用
-
-本接口（DescribeRegionConf）用于查询可售卖订阅实例的地域
-     * @param req DescribeRegionConfRequest
-     * @return DescribeRegionConfResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeRegionConfResponse DescribeRegionConf(DescribeRegionConfRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeRegionConf", DescribeRegionConfResponse.class);
-    }
-
-    /**
      *本接口（DescribeSubscribeConf）用于查询订阅实例配置
      * @param req DescribeSubscribeConfRequest
      * @return DescribeSubscribeConfResponse

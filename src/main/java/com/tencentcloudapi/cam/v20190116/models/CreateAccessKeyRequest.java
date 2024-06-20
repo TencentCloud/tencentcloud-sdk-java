@@ -31,6 +31,13 @@ public class CreateAccessKeyRequest extends AbstractModel {
     private Long TargetUin;
 
     /**
+    * 密钥描述，长度在1到1024之间，可包含大小写字符，数字以及特殊字符：=,.@:/-。 正则为：[\w+=,.@:/-]*。
+    */
+    @SerializedName("Description")
+    @Expose
+    private String Description;
+
+    /**
      * Get 指定用户Uin，不填默认为当前用户创建访问密钥 
      * @return TargetUin 指定用户Uin，不填默认为当前用户创建访问密钥
      */
@@ -46,6 +53,22 @@ public class CreateAccessKeyRequest extends AbstractModel {
         this.TargetUin = TargetUin;
     }
 
+    /**
+     * Get 密钥描述，长度在1到1024之间，可包含大小写字符，数字以及特殊字符：=,.@:/-。 正则为：[\w+=,.@:/-]*。 
+     * @return Description 密钥描述，长度在1到1024之间，可包含大小写字符，数字以及特殊字符：=,.@:/-。 正则为：[\w+=,.@:/-]*。
+     */
+    public String getDescription() {
+        return this.Description;
+    }
+
+    /**
+     * Set 密钥描述，长度在1到1024之间，可包含大小写字符，数字以及特殊字符：=,.@:/-。 正则为：[\w+=,.@:/-]*。
+     * @param Description 密钥描述，长度在1到1024之间，可包含大小写字符，数字以及特殊字符：=,.@:/-。 正则为：[\w+=,.@:/-]*。
+     */
+    public void setDescription(String Description) {
+        this.Description = Description;
+    }
+
     public CreateAccessKeyRequest() {
     }
 
@@ -57,6 +80,9 @@ public class CreateAccessKeyRequest extends AbstractModel {
         if (source.TargetUin != null) {
             this.TargetUin = new Long(source.TargetUin);
         }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class CreateAccessKeyRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TargetUin", this.TargetUin);
+        this.setParamSimple(map, prefix + "Description", this.Description);
 
     }
 }

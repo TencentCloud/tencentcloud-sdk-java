@@ -415,6 +415,17 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
+     *本接口（ModifyInstanceParams）用于修改mongoDB实例的参数配置。
+     * @param req ModifyInstanceParamsRequest
+     * @return ModifyInstanceParamsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyInstanceParamsResponse ModifyInstanceParams(ModifyInstanceParamsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyInstanceParams", ModifyInstanceParamsResponse.class);
+    }
+
+    /**
      *本接口(OfflineIsolatedDBInstance)用于立即下线隔离状态的云数据库实例。进行操作的实例状态必须为隔离状态。
      * @param req OfflineIsolatedDBInstanceRequest
      * @return OfflineIsolatedDBInstanceResponse

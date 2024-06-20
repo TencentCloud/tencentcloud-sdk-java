@@ -27,9 +27,18 @@ public class VideoTemplateInfoForUpdate extends AbstractModel {
     * 视频流的编码格式，可选值：
 <li>h264：H.264 编码</li>
 <li>h265：H.265 编码</li>
+<li>h266：H.266 编码</li>
 <li>av1：AOMedia Video 1 编码</li>
+<li>vp8：VP8 编码</li>
+<li>vp9：VP9 编码</li>
+<li>mpeg2：MPEG2 编码</li>
+<li>dnxhd：DNxHD 编码</li>
 注意：目前 H.265 编码必须指定分辨率，并且需要在 640*480 以内。
-注意：av1 编码容器目前只支持 mp4 。
+
+注意：av1 编码容器目前只支持 mp4 ，webm，mkv，mov。
+注意：H.266 编码容器目前只支持 mp4 ，hls，ts，mov。
+注意：VP8、VP9编码容器目前只支持webm，mkv。
+注意：MPEG2、dnxhd 编码容器目前只支持mxf。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Codec")
@@ -37,8 +46,7 @@ public class VideoTemplateInfoForUpdate extends AbstractModel {
     private String Codec;
 
     /**
-    * 视频帧率，取值范围：[0, 120]，单位：Hz。
-当取值为 0，表示帧率和原始视频保持一致。
+    * 视频帧率，取值范围：[0, 120]，单位：Hz。 当取值为 0，表示帧率和原始视频保持一致。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Fps")
@@ -126,19 +134,50 @@ public class VideoTemplateInfoForUpdate extends AbstractModel {
     private Long ContentAdaptStream;
 
     /**
+    * hls 分片类型，可选值：
+<li>6：HLS+TS 切片</li>
+<li>2：HLS+TS byte range</li>
+<li>7：HLS+MP4 切片</li>
+<li>5：HLS+MP4 byte range</li>
+默认值：6
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SegmentType")
+    @Expose
+    private Long SegmentType;
+
+    /**
      * Get 视频流的编码格式，可选值：
 <li>h264：H.264 编码</li>
 <li>h265：H.265 编码</li>
+<li>h266：H.266 编码</li>
 <li>av1：AOMedia Video 1 编码</li>
+<li>vp8：VP8 编码</li>
+<li>vp9：VP9 编码</li>
+<li>mpeg2：MPEG2 编码</li>
+<li>dnxhd：DNxHD 编码</li>
 注意：目前 H.265 编码必须指定分辨率，并且需要在 640*480 以内。
-注意：av1 编码容器目前只支持 mp4 。
+
+注意：av1 编码容器目前只支持 mp4 ，webm，mkv，mov。
+注意：H.266 编码容器目前只支持 mp4 ，hls，ts，mov。
+注意：VP8、VP9编码容器目前只支持webm，mkv。
+注意：MPEG2、dnxhd 编码容器目前只支持mxf。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Codec 视频流的编码格式，可选值：
 <li>h264：H.264 编码</li>
 <li>h265：H.265 编码</li>
+<li>h266：H.266 编码</li>
 <li>av1：AOMedia Video 1 编码</li>
+<li>vp8：VP8 编码</li>
+<li>vp9：VP9 编码</li>
+<li>mpeg2：MPEG2 编码</li>
+<li>dnxhd：DNxHD 编码</li>
 注意：目前 H.265 编码必须指定分辨率，并且需要在 640*480 以内。
-注意：av1 编码容器目前只支持 mp4 。
+
+注意：av1 编码容器目前只支持 mp4 ，webm，mkv，mov。
+注意：H.266 编码容器目前只支持 mp4 ，hls，ts，mov。
+注意：VP8、VP9编码容器目前只支持webm，mkv。
+注意：MPEG2、dnxhd 编码容器目前只支持mxf。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCodec() {
@@ -149,16 +188,34 @@ public class VideoTemplateInfoForUpdate extends AbstractModel {
      * Set 视频流的编码格式，可选值：
 <li>h264：H.264 编码</li>
 <li>h265：H.265 编码</li>
+<li>h266：H.266 编码</li>
 <li>av1：AOMedia Video 1 编码</li>
+<li>vp8：VP8 编码</li>
+<li>vp9：VP9 编码</li>
+<li>mpeg2：MPEG2 编码</li>
+<li>dnxhd：DNxHD 编码</li>
 注意：目前 H.265 编码必须指定分辨率，并且需要在 640*480 以内。
-注意：av1 编码容器目前只支持 mp4 。
+
+注意：av1 编码容器目前只支持 mp4 ，webm，mkv，mov。
+注意：H.266 编码容器目前只支持 mp4 ，hls，ts，mov。
+注意：VP8、VP9编码容器目前只支持webm，mkv。
+注意：MPEG2、dnxhd 编码容器目前只支持mxf。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Codec 视频流的编码格式，可选值：
 <li>h264：H.264 编码</li>
 <li>h265：H.265 编码</li>
+<li>h266：H.266 编码</li>
 <li>av1：AOMedia Video 1 编码</li>
+<li>vp8：VP8 编码</li>
+<li>vp9：VP9 编码</li>
+<li>mpeg2：MPEG2 编码</li>
+<li>dnxhd：DNxHD 编码</li>
 注意：目前 H.265 编码必须指定分辨率，并且需要在 640*480 以内。
-注意：av1 编码容器目前只支持 mp4 。
+
+注意：av1 编码容器目前只支持 mp4 ，webm，mkv，mov。
+注意：H.266 编码容器目前只支持 mp4 ，hls，ts，mov。
+注意：VP8、VP9编码容器目前只支持webm，mkv。
+注意：MPEG2、dnxhd 编码容器目前只支持mxf。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCodec(String Codec) {
@@ -166,11 +223,9 @@ public class VideoTemplateInfoForUpdate extends AbstractModel {
     }
 
     /**
-     * Get 视频帧率，取值范围：[0, 120]，单位：Hz。
-当取值为 0，表示帧率和原始视频保持一致。
+     * Get 视频帧率，取值范围：[0, 120]，单位：Hz。 当取值为 0，表示帧率和原始视频保持一致。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Fps 视频帧率，取值范围：[0, 120]，单位：Hz。
-当取值为 0，表示帧率和原始视频保持一致。
+     * @return Fps 视频帧率，取值范围：[0, 120]，单位：Hz。 当取值为 0，表示帧率和原始视频保持一致。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFps() {
@@ -178,11 +233,9 @@ public class VideoTemplateInfoForUpdate extends AbstractModel {
     }
 
     /**
-     * Set 视频帧率，取值范围：[0, 120]，单位：Hz。
-当取值为 0，表示帧率和原始视频保持一致。
+     * Set 视频帧率，取值范围：[0, 120]，单位：Hz。 当取值为 0，表示帧率和原始视频保持一致。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Fps 视频帧率，取值范围：[0, 120]，单位：Hz。
-当取值为 0，表示帧率和原始视频保持一致。
+     * @param Fps 视频帧率，取值范围：[0, 120]，单位：Hz。 当取值为 0，表示帧率和原始视频保持一致。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFps(Long Fps) {
@@ -413,6 +466,46 @@ public class VideoTemplateInfoForUpdate extends AbstractModel {
         this.ContentAdaptStream = ContentAdaptStream;
     }
 
+    /**
+     * Get hls 分片类型，可选值：
+<li>6：HLS+TS 切片</li>
+<li>2：HLS+TS byte range</li>
+<li>7：HLS+MP4 切片</li>
+<li>5：HLS+MP4 byte range</li>
+默认值：6
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SegmentType hls 分片类型，可选值：
+<li>6：HLS+TS 切片</li>
+<li>2：HLS+TS byte range</li>
+<li>7：HLS+MP4 切片</li>
+<li>5：HLS+MP4 byte range</li>
+默认值：6
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getSegmentType() {
+        return this.SegmentType;
+    }
+
+    /**
+     * Set hls 分片类型，可选值：
+<li>6：HLS+TS 切片</li>
+<li>2：HLS+TS byte range</li>
+<li>7：HLS+MP4 切片</li>
+<li>5：HLS+MP4 byte range</li>
+默认值：6
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SegmentType hls 分片类型，可选值：
+<li>6：HLS+TS 切片</li>
+<li>2：HLS+TS byte range</li>
+<li>7：HLS+MP4 切片</li>
+<li>5：HLS+MP4 byte range</li>
+默认值：6
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSegmentType(Long SegmentType) {
+        this.SegmentType = SegmentType;
+    }
+
     public VideoTemplateInfoForUpdate() {
     }
 
@@ -451,6 +544,9 @@ public class VideoTemplateInfoForUpdate extends AbstractModel {
         if (source.ContentAdaptStream != null) {
             this.ContentAdaptStream = new Long(source.ContentAdaptStream);
         }
+        if (source.SegmentType != null) {
+            this.SegmentType = new Long(source.SegmentType);
+        }
     }
 
 
@@ -468,6 +564,7 @@ public class VideoTemplateInfoForUpdate extends AbstractModel {
         this.setParamSimple(map, prefix + "FillType", this.FillType);
         this.setParamSimple(map, prefix + "Vcrf", this.Vcrf);
         this.setParamSimple(map, prefix + "ContentAdaptStream", this.ContentAdaptStream);
+        this.setParamSimple(map, prefix + "SegmentType", this.SegmentType);
 
     }
 }

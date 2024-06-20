@@ -31,7 +31,7 @@ public class EmrListInstance extends AbstractModel {
     private String ClusterId;
 
     /**
-    * 状态描述
+    * 常见状态描述：集群生产中,集群运行中,集群创建中,集群已关闭,集群已删除
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StatusDesc")
@@ -150,7 +150,7 @@ public class EmrListInstance extends AbstractModel {
     private String Zone;
 
     /**
-    * 状态码
+    * 状态码, 取值为-2(集群已删除), -1(集群已关闭), 0(集群生产中), 2(集群运行中), 3(集群创建中)
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
@@ -278,9 +278,9 @@ public class EmrListInstance extends AbstractModel {
     }
 
     /**
-     * Get 状态描述
+     * Get 常见状态描述：集群生产中,集群运行中,集群创建中,集群已关闭,集群已删除
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return StatusDesc 状态描述
+     * @return StatusDesc 常见状态描述：集群生产中,集群运行中,集群创建中,集群已关闭,集群已删除
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatusDesc() {
@@ -288,9 +288,9 @@ public class EmrListInstance extends AbstractModel {
     }
 
     /**
-     * Set 状态描述
+     * Set 常见状态描述：集群生产中,集群运行中,集群创建中,集群已关闭,集群已删除
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param StatusDesc 状态描述
+     * @param StatusDesc 常见状态描述：集群生产中,集群运行中,集群创建中,集群已关闭,集群已删除
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatusDesc(String StatusDesc) {
@@ -562,9 +562,9 @@ public class EmrListInstance extends AbstractModel {
     }
 
     /**
-     * Get 状态码
+     * Get 状态码, 取值为-2(集群已删除), -1(集群已关闭), 0(集群生产中), 2(集群运行中), 3(集群创建中)
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Status 状态码
+     * @return Status 状态码, 取值为-2(集群已删除), -1(集群已关闭), 0(集群生产中), 2(集群运行中), 3(集群创建中)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
@@ -572,9 +572,9 @@ public class EmrListInstance extends AbstractModel {
     }
 
     /**
-     * Set 状态码
+     * Set 状态码, 取值为-2(集群已删除), -1(集群已关闭), 0(集群生产中), 2(集群运行中), 3(集群创建中)
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Status 状态码
+     * @param Status 状态码, 取值为-2(集群已删除), -1(集群已关闭), 0(集群生产中), 2(集群运行中), 3(集群创建中)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
