@@ -1868,7 +1868,7 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *实例诊断
+     *实例诊断，用于诊断 INITIAL、DEPENDENCE、ALLOCATED、LAUNCHED、EVENT_LISTENING、BEFORE_ASPECT、EXPIRED、FAILED状态的实例
      * @param req DiagnoseProRequest
      * @return DiagnoseProResponse
      * @throws TencentCloudSDKException

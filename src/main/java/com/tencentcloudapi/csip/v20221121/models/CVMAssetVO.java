@@ -528,6 +528,22 @@ public class CVMAssetVO extends AbstractModel {
     private Float AgentCpuPer;
 
     /**
+    * cvm真正所属的appid
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RealAppid")
+    @Expose
+    private Long RealAppid;
+
+    /**
+    * 云资产类型：0：腾讯云，1：aws，2：azure
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CloudType")
+    @Expose
+    private Long CloudType;
+
+    /**
      * Get 资产id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return AssetId 资产id
@@ -1787,6 +1803,46 @@ public class CVMAssetVO extends AbstractModel {
         this.AgentCpuPer = AgentCpuPer;
     }
 
+    /**
+     * Get cvm真正所属的appid
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RealAppid cvm真正所属的appid
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getRealAppid() {
+        return this.RealAppid;
+    }
+
+    /**
+     * Set cvm真正所属的appid
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RealAppid cvm真正所属的appid
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRealAppid(Long RealAppid) {
+        this.RealAppid = RealAppid;
+    }
+
+    /**
+     * Get 云资产类型：0：腾讯云，1：aws，2：azure
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CloudType 云资产类型：0：腾讯云，1：aws，2：azure
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getCloudType() {
+        return this.CloudType;
+    }
+
+    /**
+     * Set 云资产类型：0：腾讯云，1：aws，2：azure
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CloudType 云资产类型：0：腾讯云，1：aws，2：azure
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCloudType(Long CloudType) {
+        this.CloudType = CloudType;
+    }
+
     public CVMAssetVO() {
     }
 
@@ -1996,6 +2052,12 @@ public class CVMAssetVO extends AbstractModel {
         if (source.AgentCpuPer != null) {
             this.AgentCpuPer = new Float(source.AgentCpuPer);
         }
+        if (source.RealAppid != null) {
+            this.RealAppid = new Long(source.RealAppid);
+        }
+        if (source.CloudType != null) {
+            this.CloudType = new Long(source.CloudType);
+        }
     }
 
 
@@ -2066,6 +2128,8 @@ public class CVMAssetVO extends AbstractModel {
         this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
         this.setParamSimple(map, prefix + "AgentMemRss", this.AgentMemRss);
         this.setParamSimple(map, prefix + "AgentCpuPer", this.AgentCpuPer);
+        this.setParamSimple(map, prefix + "RealAppid", this.RealAppid);
+        this.setParamSimple(map, prefix + "CloudType", this.CloudType);
 
     }
 }

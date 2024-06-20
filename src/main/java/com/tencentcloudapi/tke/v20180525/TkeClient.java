@@ -1372,6 +1372,17 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *查询正在运行中Pod的计费信息。可以通过 Namespace 和 Name 来查询某个 Pod 的信息，也可以通过 Pod 的 Uid 批量查询。
+     * @param req DescribePodChargeInfoRequest
+     * @return DescribePodChargeInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePodChargeInfoResponse DescribePodChargeInfo(DescribePodChargeInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribePodChargeInfo", DescribePodChargeInfoResponse.class);
+    }
+
+    /**
      *查询各个规格的 Pod 的抵扣率
      * @param req DescribePodDeductionRateRequest
      * @return DescribePodDeductionRateResponse

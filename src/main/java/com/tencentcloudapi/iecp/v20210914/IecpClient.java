@@ -39,7 +39,9 @@ public class IecpClient extends AbstractClient{
     }
 
     /**
-     *从组件市场选中组件并添加到应用模板列表
+     *产品停售，预下线
+
+从组件市场选中组件并添加到应用模板列表
      * @param req ApplyMarketComponentRequest
      * @return ApplyMarketComponentResponse
      * @throws TencentCloudSDKException
@@ -61,7 +63,9 @@ public class IecpClient extends AbstractClient{
     }
 
     /**
-     *创建可视化创建应用模板
+     *产品停售，预下线
+
+创建可视化创建应用模板
      * @param req CreateApplicationVisualizationRequest
      * @return CreateApplicationVisualizationResponse
      * @throws TencentCloudSDKException
@@ -127,7 +131,9 @@ public class IecpClient extends AbstractClient{
     }
 
     /**
-     *可视化创建应用
+     *产品停售，预下线
+
+可视化创建应用
      * @param req CreateEdgeUnitApplicationVisualizationRequest
      * @return CreateEdgeUnitApplicationVisualizationResponse
      * @throws TencentCloudSDKException
@@ -138,7 +144,9 @@ public class IecpClient extends AbstractClient{
     }
 
     /**
-     *yaml方式创建应用
+     *产品停售，预下线
+
+yaml方式创建应用
      * @param req CreateEdgeUnitApplicationYamlRequest
      * @return CreateEdgeUnitApplicationYamlResponse
      * @throws TencentCloudSDKException
@@ -237,7 +245,9 @@ public class IecpClient extends AbstractClient{
     }
 
     /**
-     *删除应用模板
+     *产品停售，预下线
+
+删除应用模板
      * @param req DeleteApplicationsRequest
      * @return DeleteApplicationsResponse
      * @throws TencentCloudSDKException
@@ -292,7 +302,9 @@ public class IecpClient extends AbstractClient{
     }
 
     /**
-     *删除应用列表
+     *产品停售，预下线
+
+删除应用列表
      * @param req DeleteEdgeUnitApplicationsRequest
      * @return DeleteEdgeUnitApplicationsResponse
      * @throws TencentCloudSDKException
@@ -413,7 +425,9 @@ public class IecpClient extends AbstractClient{
     }
 
     /**
-     *获取应用模板可视化配置信息
+     *产品停售，预下线
+
+获取应用模板可视化配置信息
      * @param req DescribeApplicationVisualizationRequest
      * @return DescribeApplicationVisualizationResponse
      * @throws TencentCloudSDKException
@@ -424,7 +438,9 @@ public class IecpClient extends AbstractClient{
     }
 
     /**
-     *查询应用模板Yaml
+     *产品停售，预下线
+
+查询应用模板Yaml
      * @param req DescribeApplicationYamlRequest
      * @return DescribeApplicationYamlResponse
      * @throws TencentCloudSDKException
@@ -435,7 +451,9 @@ public class IecpClient extends AbstractClient{
     }
 
     /**
-     *检查应用模板的Yaml配置
+     *产品停售，预下线
+
+检查应用模板的Yaml配置
      * @param req DescribeApplicationYamlErrorRequest
      * @return DescribeApplicationYamlErrorResponse
      * @throws TencentCloudSDKException
@@ -446,7 +464,9 @@ public class IecpClient extends AbstractClient{
     }
 
     /**
-     *获取应用模板列表
+     *产品停售，预下线
+
+获取应用模板列表
      * @param req DescribeApplicationsRequest
      * @return DescribeApplicationsResponse
      * @throws TencentCloudSDKException
@@ -611,7 +631,9 @@ public class IecpClient extends AbstractClient{
     }
 
     /**
-     *获取应用事件列表
+     *产品停售，预下线
+
+获取应用事件列表
      * @param req DescribeEdgeUnitApplicationEventsRequest
      * @return DescribeEdgeUnitApplicationEventsResponse
      * @throws TencentCloudSDKException
@@ -622,7 +644,9 @@ public class IecpClient extends AbstractClient{
     }
 
     /**
-     *获取应用日志
+     *产品停售，预下线
+
+获取应用日志
      * @param req DescribeEdgeUnitApplicationLogsRequest
      * @return DescribeEdgeUnitApplicationLogsResponse
      * @throws TencentCloudSDKException
@@ -633,7 +657,9 @@ public class IecpClient extends AbstractClient{
     }
 
     /**
-     *获取应用容器状态
+     *产品停售，预下线
+
+获取应用容器状态
      * @param req DescribeEdgeUnitApplicationPodContainersRequest
      * @return DescribeEdgeUnitApplicationPodContainersResponse
      * @throws TencentCloudSDKException
@@ -644,7 +670,9 @@ public class IecpClient extends AbstractClient{
     }
 
     /**
-     *获取应用下Pod状态
+     *产品停售，预下线
+
+获取应用下Pod状态
      * @param req DescribeEdgeUnitApplicationPodsRequest
      * @return DescribeEdgeUnitApplicationPodsResponse
      * @throws TencentCloudSDKException
@@ -655,7 +683,9 @@ public class IecpClient extends AbstractClient{
     }
 
     /**
-     *获取单元可视化配置信息
+     *产品停售，预下线
+
+获取单元可视化配置信息
      * @param req DescribeEdgeUnitApplicationVisualizationRequest
      * @return DescribeEdgeUnitApplicationVisualizationResponse
      * @throws TencentCloudSDKException
@@ -666,7 +696,9 @@ public class IecpClient extends AbstractClient{
     }
 
     /**
-     *获取应用的Yaml配置
+     *产品停售，预下线
+
+获取应用的Yaml配置
      * @param req DescribeEdgeUnitApplicationYamlRequest
      * @return DescribeEdgeUnitApplicationYamlResponse
      * @throws TencentCloudSDKException
@@ -677,7 +709,9 @@ public class IecpClient extends AbstractClient{
     }
 
     /**
-     *检查单元应用的Yaml配置
+     *产品停售，预下线
+
+检查单元应用的Yaml配置
      * @param req DescribeEdgeUnitApplicationYamlErrorRequest
      * @return DescribeEdgeUnitApplicationYamlErrorResponse
      * @throws TencentCloudSDKException
@@ -699,7 +733,9 @@ public class IecpClient extends AbstractClient{
     }
 
     /**
-     *查询边缘集群详情
+     *产品停售，预下线
+
+查询边缘集群详情
      * @param req DescribeEdgeUnitCloudRequest
      * @return DescribeEdgeUnitCloudResponse
      * @throws TencentCloudSDKException
@@ -985,7 +1021,9 @@ public class IecpClient extends AbstractClient{
     }
 
     /**
-     *修改应用模板基本信息
+     *产品停售，预下线
+
+修改应用模板基本信息
      * @param req ModifyApplicationBasicInfoRequest
      * @return ModifyApplicationBasicInfoResponse
      * @throws TencentCloudSDKException
@@ -996,7 +1034,9 @@ public class IecpClient extends AbstractClient{
     }
 
     /**
-     *修改应用模板配置
+     *产品停售，预下线
+
+修改应用模板配置
      * @param req ModifyApplicationVisualizationRequest
      * @return ModifyApplicationVisualizationResponse
      * @throws TencentCloudSDKException

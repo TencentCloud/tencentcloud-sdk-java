@@ -305,6 +305,22 @@ public class AssetViewVULRiskData extends AbstractModel {
     private String VulRiskId;
 
     /**
+    * 新版漏洞id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TvdID")
+    @Expose
+    private String TvdID;
+
+    /**
+    * 是否可以一键体检，1-可以，0-不可以
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsOneClick")
+    @Expose
+    private Long IsOneClick;
+
+    /**
      * Get 影响资产 
      * @return AffectAsset 影响资产
      */
@@ -972,6 +988,46 @@ public class AssetViewVULRiskData extends AbstractModel {
         this.VulRiskId = VulRiskId;
     }
 
+    /**
+     * Get 新版漏洞id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TvdID 新版漏洞id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTvdID() {
+        return this.TvdID;
+    }
+
+    /**
+     * Set 新版漏洞id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TvdID 新版漏洞id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTvdID(String TvdID) {
+        this.TvdID = TvdID;
+    }
+
+    /**
+     * Get 是否可以一键体检，1-可以，0-不可以
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsOneClick 是否可以一键体检，1-可以，0-不可以
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getIsOneClick() {
+        return this.IsOneClick;
+    }
+
+    /**
+     * Set 是否可以一键体检，1-可以，0-不可以
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsOneClick 是否可以一键体检，1-可以，0-不可以
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsOneClick(Long IsOneClick) {
+        this.IsOneClick = IsOneClick;
+    }
+
     public AssetViewVULRiskData() {
     }
 
@@ -1097,6 +1153,12 @@ public class AssetViewVULRiskData extends AbstractModel {
         if (source.VulRiskId != null) {
             this.VulRiskId = new String(source.VulRiskId);
         }
+        if (source.TvdID != null) {
+            this.TvdID = new String(source.TvdID);
+        }
+        if (source.IsOneClick != null) {
+            this.IsOneClick = new Long(source.IsOneClick);
+        }
     }
 
 
@@ -1142,6 +1204,8 @@ public class AssetViewVULRiskData extends AbstractModel {
         this.setParamSimple(map, prefix + "HandleTaskId", this.HandleTaskId);
         this.setParamSimple(map, prefix + "EngineSource", this.EngineSource);
         this.setParamSimple(map, prefix + "VulRiskId", this.VulRiskId);
+        this.setParamSimple(map, prefix + "TvdID", this.TvdID);
+        this.setParamSimple(map, prefix + "IsOneClick", this.IsOneClick);
 
     }
 }

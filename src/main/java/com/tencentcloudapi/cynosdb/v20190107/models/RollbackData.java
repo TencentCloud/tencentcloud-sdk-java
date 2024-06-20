@@ -121,6 +121,14 @@ public class RollbackData extends AbstractModel {
     private String BackupFileName;
 
     /**
+    * 回档进程
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RollbackProcess")
+    @Expose
+    private RollbackProcessInfo RollbackProcess;
+
+    /**
      * Get 实例CPU 
      * @return Cpu 实例CPU
      */
@@ -352,6 +360,26 @@ public class RollbackData extends AbstractModel {
         this.BackupFileName = BackupFileName;
     }
 
+    /**
+     * Get 回档进程
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RollbackProcess 回档进程
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public RollbackProcessInfo getRollbackProcess() {
+        return this.RollbackProcess;
+    }
+
+    /**
+     * Set 回档进程
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RollbackProcess 回档进程
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRollbackProcess(RollbackProcessInfo RollbackProcess) {
+        this.RollbackProcess = RollbackProcess;
+    }
+
     public RollbackData() {
     }
 
@@ -405,6 +433,9 @@ public class RollbackData extends AbstractModel {
         if (source.BackupFileName != null) {
             this.BackupFileName = new String(source.BackupFileName);
         }
+        if (source.RollbackProcess != null) {
+            this.RollbackProcess = new RollbackProcessInfo(source.RollbackProcess);
+        }
     }
 
 
@@ -425,6 +456,7 @@ public class RollbackData extends AbstractModel {
         this.setParamArrayObj(map, prefix + "RollbackDatabases.", this.RollbackDatabases);
         this.setParamArrayObj(map, prefix + "RollbackTables.", this.RollbackTables);
         this.setParamSimple(map, prefix + "BackupFileName", this.BackupFileName);
+        this.setParamObj(map, prefix + "RollbackProcess.", this.RollbackProcess);
 
     }
 }

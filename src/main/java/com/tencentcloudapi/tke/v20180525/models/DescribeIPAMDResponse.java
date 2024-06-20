@@ -79,6 +79,14 @@ public class DescribeIPAMDResponse extends AbstractModel {
     private String ClaimExpiredDuration;
 
     /**
+    * 是否开启了中继网卡模式
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EnableTrunkingENI")
+    @Expose
+    private Boolean EnableTrunkingENI;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -222,6 +230,26 @@ public class DescribeIPAMDResponse extends AbstractModel {
     }
 
     /**
+     * Get 是否开启了中继网卡模式
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EnableTrunkingENI 是否开启了中继网卡模式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getEnableTrunkingENI() {
+        return this.EnableTrunkingENI;
+    }
+
+    /**
+     * Set 是否开启了中继网卡模式
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EnableTrunkingENI 是否开启了中继网卡模式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEnableTrunkingENI(Boolean EnableTrunkingENI) {
+        this.EnableTrunkingENI = EnableTrunkingENI;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -269,6 +297,9 @@ public class DescribeIPAMDResponse extends AbstractModel {
         if (source.ClaimExpiredDuration != null) {
             this.ClaimExpiredDuration = new String(source.ClaimExpiredDuration);
         }
+        if (source.EnableTrunkingENI != null) {
+            this.EnableTrunkingENI = new Boolean(source.EnableTrunkingENI);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -286,6 +317,7 @@ public class DescribeIPAMDResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "Reason", this.Reason);
         this.setParamArraySimple(map, prefix + "SubnetIds.", this.SubnetIds);
         this.setParamSimple(map, prefix + "ClaimExpiredDuration", this.ClaimExpiredDuration);
+        this.setParamSimple(map, prefix + "EnableTrunkingENI", this.EnableTrunkingENI);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

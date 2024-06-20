@@ -272,6 +272,14 @@ public class TaskAlarmInfo extends AbstractModel {
     private String LarkWebHooks;
 
     /**
+    * 钉钉群Hook地址，多个hook地址使用,隔开
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DingDingWebHooks")
+    @Expose
+    private String DingDingWebHooks;
+
+    /**
      * Get 任务ID 
      * @return TaskId 任务ID
      */
@@ -879,6 +887,26 @@ public class TaskAlarmInfo extends AbstractModel {
         this.LarkWebHooks = LarkWebHooks;
     }
 
+    /**
+     * Get 钉钉群Hook地址，多个hook地址使用,隔开
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DingDingWebHooks 钉钉群Hook地址，多个hook地址使用,隔开
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDingDingWebHooks() {
+        return this.DingDingWebHooks;
+    }
+
+    /**
+     * Set 钉钉群Hook地址，多个hook地址使用,隔开
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DingDingWebHooks 钉钉群Hook地址，多个hook地址使用,隔开
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDingDingWebHooks(String DingDingWebHooks) {
+        this.DingDingWebHooks = DingDingWebHooks;
+    }
+
     public TaskAlarmInfo() {
     }
 
@@ -992,6 +1020,9 @@ public class TaskAlarmInfo extends AbstractModel {
         if (source.LarkWebHooks != null) {
             this.LarkWebHooks = new String(source.LarkWebHooks);
         }
+        if (source.DingDingWebHooks != null) {
+            this.DingDingWebHooks = new String(source.DingDingWebHooks);
+        }
     }
 
 
@@ -1031,6 +1062,7 @@ public class TaskAlarmInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "LatestAlarmTime", this.LatestAlarmTime);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "LarkWebHooks", this.LarkWebHooks);
+        this.setParamSimple(map, prefix + "DingDingWebHooks", this.DingDingWebHooks);
 
     }
 }

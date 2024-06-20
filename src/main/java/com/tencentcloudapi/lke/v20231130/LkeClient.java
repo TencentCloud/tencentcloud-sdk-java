@@ -116,6 +116,17 @@ public class LkeClient extends AbstractClient{
     }
 
     /**
+     *文档解析，异步接口。
+     * @param req CreateReconstructDocumentFlowRequest
+     * @return CreateReconstructDocumentFlowResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateReconstructDocumentFlowResponse CreateReconstructDocumentFlow(CreateReconstructDocumentFlowRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateReconstructDocumentFlow", CreateReconstructDocumentFlowResponse.class);
+    }
+
+    /**
      *创建拒答问题
      * @param req CreateRejectedQuestionRequest
      * @return CreateRejectedQuestionResponse
@@ -422,6 +433,17 @@ public class LkeClient extends AbstractClient{
     public GetMsgRecordResponse GetMsgRecord(GetMsgRecordRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "GetMsgRecord", GetMsgRecordResponse.class);
+    }
+
+    /**
+     *获取文档解析任务执行结果
+     * @param req GetReconstructDocumentResultRequest
+     * @return GetReconstructDocumentResultResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetReconstructDocumentResultResponse GetReconstructDocumentResult(GetReconstructDocumentResultRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetReconstructDocumentResult", GetReconstructDocumentResultResponse.class);
     }
 
     /**
@@ -775,6 +797,17 @@ public class LkeClient extends AbstractClient{
     public RateMsgRecordResponse RateMsgRecord(RateMsgRecordRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "RateMsgRecord", RateMsgRecordResponse.class);
+    }
+
+    /**
+     *支持将图片或PDF文件转换成Markdown格式文件，可解析包括表格、公式、图片、标题、段落、页眉、页脚等内容元素，并将内容智能转换成阅读顺序。
+     * @param req ReconstructDocumentRequest
+     * @return ReconstructDocumentResponse
+     * @throws TencentCloudSDKException
+     */
+    public ReconstructDocumentResponse ReconstructDocument(ReconstructDocumentRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ReconstructDocument", ReconstructDocumentResponse.class);
     }
 
     /**

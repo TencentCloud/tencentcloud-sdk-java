@@ -1040,6 +1040,17 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *查看任务概览页
+     * @param req DescribeTasksOverviewRequest
+     * @return DescribeTasksOverviewResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTasksOverviewResponse DescribeTasksOverview(DescribeTasksOverviewRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTasksOverview", DescribeTasksOverviewResponse.class);
+    }
+
+    /**
      *本接口（RegisterThirdPartyAccessUser）查询开通第三方平台访问的用户信息
      * @param req DescribeThirdPartyAccessUserRequest
      * @return DescribeThirdPartyAccessUserResponse

@@ -31,6 +31,13 @@ public class CreateDomainAndIpRequest extends AbstractModel {
     private String [] Content;
 
     /**
+    * 集团账号的成员id
+    */
+    @SerializedName("MemberId")
+    @Expose
+    private String [] MemberId;
+
+    /**
     * 资产标签
     */
     @SerializedName("Tags")
@@ -51,6 +58,22 @@ public class CreateDomainAndIpRequest extends AbstractModel {
      */
     public void setContent(String [] Content) {
         this.Content = Content;
+    }
+
+    /**
+     * Get 集团账号的成员id 
+     * @return MemberId 集团账号的成员id
+     */
+    public String [] getMemberId() {
+        return this.MemberId;
+    }
+
+    /**
+     * Set 集团账号的成员id
+     * @param MemberId 集团账号的成员id
+     */
+    public void setMemberId(String [] MemberId) {
+        this.MemberId = MemberId;
     }
 
     /**
@@ -83,6 +106,12 @@ public class CreateDomainAndIpRequest extends AbstractModel {
                 this.Content[i] = new String(source.Content[i]);
             }
         }
+        if (source.MemberId != null) {
+            this.MemberId = new String[source.MemberId.length];
+            for (int i = 0; i < source.MemberId.length; i++) {
+                this.MemberId[i] = new String(source.MemberId[i]);
+            }
+        }
         if (source.Tags != null) {
             this.Tags = new AssetTag[source.Tags.length];
             for (int i = 0; i < source.Tags.length; i++) {
@@ -97,6 +126,7 @@ public class CreateDomainAndIpRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "Content.", this.Content);
+        this.setParamArraySimple(map, prefix + "MemberId.", this.MemberId);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }

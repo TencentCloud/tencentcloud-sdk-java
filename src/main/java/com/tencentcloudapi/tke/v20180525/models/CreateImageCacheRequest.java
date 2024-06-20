@@ -31,14 +31,14 @@ public class CreateImageCacheRequest extends AbstractModel {
     private String [] Images;
 
     /**
-    * 实例所属子网Id
+    * 实例所属子网 ID
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * 实例所属VPC Id
+    * 实例所属 VPC ID
     */
     @SerializedName("VpcId")
     @Expose
@@ -52,7 +52,7 @@ public class CreateImageCacheRequest extends AbstractModel {
     private String ImageCacheName;
 
     /**
-    * 安全组Id
+    * 安全组 ID
     */
     @SerializedName("SecurityGroupIds")
     @Expose
@@ -140,32 +140,32 @@ public class CreateImageCacheRequest extends AbstractModel {
     }
 
     /**
-     * Get 实例所属子网Id 
-     * @return SubnetId 实例所属子网Id
+     * Get 实例所属子网 ID 
+     * @return SubnetId 实例所属子网 ID
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 实例所属子网Id
-     * @param SubnetId 实例所属子网Id
+     * Set 实例所属子网 ID
+     * @param SubnetId 实例所属子网 ID
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get 实例所属VPC Id 
-     * @return VpcId 实例所属VPC Id
+     * Get 实例所属 VPC ID 
+     * @return VpcId 实例所属 VPC ID
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set 实例所属VPC Id
-     * @param VpcId 实例所属VPC Id
+     * Set 实例所属 VPC ID
+     * @param VpcId 实例所属 VPC ID
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
@@ -188,16 +188,16 @@ public class CreateImageCacheRequest extends AbstractModel {
     }
 
     /**
-     * Get 安全组Id 
-     * @return SecurityGroupIds 安全组Id
+     * Get 安全组 ID 
+     * @return SecurityGroupIds 安全组 ID
      */
     public String [] getSecurityGroupIds() {
         return this.SecurityGroupIds;
     }
 
     /**
-     * Set 安全组Id
-     * @param SecurityGroupIds 安全组Id
+     * Set 安全组 ID
+     * @param SecurityGroupIds 安全组 ID
      */
     public void setSecurityGroupIds(String [] SecurityGroupIds) {
         this.SecurityGroupIds = SecurityGroupIds;

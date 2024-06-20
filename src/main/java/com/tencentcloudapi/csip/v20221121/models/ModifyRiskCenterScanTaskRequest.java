@@ -101,6 +101,13 @@ public class ModifyRiskCenterScanTaskRequest extends AbstractModel {
     private Long TaskMode;
 
     /**
+    * 任务完成回调webhook地址
+    */
+    @SerializedName("FinishWebHook")
+    @Expose
+    private String FinishWebHook;
+
+    /**
      * Get 任务名称 
      * @return TaskName 任务名称
      */
@@ -276,6 +283,22 @@ public class ModifyRiskCenterScanTaskRequest extends AbstractModel {
         this.TaskMode = TaskMode;
     }
 
+    /**
+     * Get 任务完成回调webhook地址 
+     * @return FinishWebHook 任务完成回调webhook地址
+     */
+    public String getFinishWebHook() {
+        return this.FinishWebHook;
+    }
+
+    /**
+     * Set 任务完成回调webhook地址
+     * @param FinishWebHook 任务完成回调webhook地址
+     */
+    public void setFinishWebHook(String FinishWebHook) {
+        this.FinishWebHook = FinishWebHook;
+    }
+
     public ModifyRiskCenterScanTaskRequest() {
     }
 
@@ -329,6 +352,9 @@ public class ModifyRiskCenterScanTaskRequest extends AbstractModel {
         if (source.TaskMode != null) {
             this.TaskMode = new Long(source.TaskMode);
         }
+        if (source.FinishWebHook != null) {
+            this.FinishWebHook = new String(source.FinishWebHook);
+        }
     }
 
 
@@ -347,6 +373,7 @@ public class ModifyRiskCenterScanTaskRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "SelfDefiningAssets.", this.SelfDefiningAssets);
         this.setParamObj(map, prefix + "TaskAdvanceCFG.", this.TaskAdvanceCFG);
         this.setParamSimple(map, prefix + "TaskMode", this.TaskMode);
+        this.setParamSimple(map, prefix + "FinishWebHook", this.FinishWebHook);
 
     }
 }

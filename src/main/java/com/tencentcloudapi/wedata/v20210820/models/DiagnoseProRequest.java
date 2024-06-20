@@ -24,6 +24,20 @@ import java.util.HashMap;
 public class DiagnoseProRequest extends AbstractModel {
 
     /**
+    * 查询条件（当前接口TaskId和CurRunDate需要填充在该字段方可诊断）
+    */
+    @SerializedName("SearchCondition")
+    @Expose
+    private InstanceApiOpsRequest SearchCondition;
+
+    /**
+    * 项目id
+    */
+    @SerializedName("ProjectId")
+    @Expose
+    private String ProjectId;
+
+    /**
     * 实例列表
     */
     @SerializedName("Instances")
@@ -66,13 +80,6 @@ public class DiagnoseProRequest extends AbstractModel {
     private String SonInstanceType;
 
     /**
-    * 查询条件（当前接口TaskId和CurRunDate需要填充在该字段方可诊断）
-    */
-    @SerializedName("SearchCondition")
-    @Expose
-    private InstanceApiOpsRequest SearchCondition;
-
-    /**
     * 访问类型
     */
     @SerializedName("OptType")
@@ -92,13 +99,6 @@ public class DiagnoseProRequest extends AbstractModel {
     @SerializedName("OperatorId")
     @Expose
     private String OperatorId;
-
-    /**
-    * 项目id
-    */
-    @SerializedName("ProjectId")
-    @Expose
-    private String ProjectId;
 
     /**
     * 项目标志
@@ -148,6 +148,38 @@ public class DiagnoseProRequest extends AbstractModel {
     @SerializedName("IsCount")
     @Expose
     private Boolean IsCount;
+
+    /**
+     * Get 查询条件（当前接口TaskId和CurRunDate需要填充在该字段方可诊断） 
+     * @return SearchCondition 查询条件（当前接口TaskId和CurRunDate需要填充在该字段方可诊断）
+     */
+    public InstanceApiOpsRequest getSearchCondition() {
+        return this.SearchCondition;
+    }
+
+    /**
+     * Set 查询条件（当前接口TaskId和CurRunDate需要填充在该字段方可诊断）
+     * @param SearchCondition 查询条件（当前接口TaskId和CurRunDate需要填充在该字段方可诊断）
+     */
+    public void setSearchCondition(InstanceApiOpsRequest SearchCondition) {
+        this.SearchCondition = SearchCondition;
+    }
+
+    /**
+     * Get 项目id 
+     * @return ProjectId 项目id
+     */
+    public String getProjectId() {
+        return this.ProjectId;
+    }
+
+    /**
+     * Set 项目id
+     * @param ProjectId 项目id
+     */
+    public void setProjectId(String ProjectId) {
+        this.ProjectId = ProjectId;
+    }
 
     /**
      * Get 实例列表 
@@ -246,22 +278,6 @@ public class DiagnoseProRequest extends AbstractModel {
     }
 
     /**
-     * Get 查询条件（当前接口TaskId和CurRunDate需要填充在该字段方可诊断） 
-     * @return SearchCondition 查询条件（当前接口TaskId和CurRunDate需要填充在该字段方可诊断）
-     */
-    public InstanceApiOpsRequest getSearchCondition() {
-        return this.SearchCondition;
-    }
-
-    /**
-     * Set 查询条件（当前接口TaskId和CurRunDate需要填充在该字段方可诊断）
-     * @param SearchCondition 查询条件（当前接口TaskId和CurRunDate需要填充在该字段方可诊断）
-     */
-    public void setSearchCondition(InstanceApiOpsRequest SearchCondition) {
-        this.SearchCondition = SearchCondition;
-    }
-
-    /**
      * Get 访问类型 
      * @return OptType 访问类型
      */
@@ -307,22 +323,6 @@ public class DiagnoseProRequest extends AbstractModel {
      */
     public void setOperatorId(String OperatorId) {
         this.OperatorId = OperatorId;
-    }
-
-    /**
-     * Get 项目id 
-     * @return ProjectId 项目id
-     */
-    public String getProjectId() {
-        return this.ProjectId;
-    }
-
-    /**
-     * Set 项目id
-     * @param ProjectId 项目id
-     */
-    public void setProjectId(String ProjectId) {
-        this.ProjectId = ProjectId;
     }
 
     /**
@@ -445,6 +445,12 @@ public class DiagnoseProRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DiagnoseProRequest(DiagnoseProRequest source) {
+        if (source.SearchCondition != null) {
+            this.SearchCondition = new InstanceApiOpsRequest(source.SearchCondition);
+        }
+        if (source.ProjectId != null) {
+            this.ProjectId = new String(source.ProjectId);
+        }
         if (source.Instances != null) {
             this.Instances = new InstanceOpsDto[source.Instances.length];
             for (int i = 0; i < source.Instances.length; i++) {
@@ -466,9 +472,6 @@ public class DiagnoseProRequest extends AbstractModel {
         if (source.SonInstanceType != null) {
             this.SonInstanceType = new String(source.SonInstanceType);
         }
-        if (source.SearchCondition != null) {
-            this.SearchCondition = new InstanceApiOpsRequest(source.SearchCondition);
-        }
         if (source.OptType != null) {
             this.OptType = new String(source.OptType);
         }
@@ -477,9 +480,6 @@ public class DiagnoseProRequest extends AbstractModel {
         }
         if (source.OperatorId != null) {
             this.OperatorId = new String(source.OperatorId);
-        }
-        if (source.ProjectId != null) {
-            this.ProjectId = new String(source.ProjectId);
         }
         if (source.ProjectIdent != null) {
             this.ProjectIdent = new String(source.ProjectIdent);
@@ -509,17 +509,17 @@ public class DiagnoseProRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamObj(map, prefix + "SearchCondition.", this.SearchCondition);
+        this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamArrayObj(map, prefix + "Instances.", this.Instances);
         this.setParamSimple(map, prefix + "CheckFather", this.CheckFather);
         this.setParamSimple(map, prefix + "RerunType", this.RerunType);
         this.setParamSimple(map, prefix + "DependentWay", this.DependentWay);
         this.setParamSimple(map, prefix + "SkipEventListening", this.SkipEventListening);
         this.setParamSimple(map, prefix + "SonInstanceType", this.SonInstanceType);
-        this.setParamObj(map, prefix + "SearchCondition.", this.SearchCondition);
         this.setParamSimple(map, prefix + "OptType", this.OptType);
         this.setParamSimple(map, prefix + "OperatorName", this.OperatorName);
         this.setParamSimple(map, prefix + "OperatorId", this.OperatorId);
-        this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "ProjectIdent", this.ProjectIdent);
         this.setParamSimple(map, prefix + "ProjectName", this.ProjectName);
         this.setParamSimple(map, prefix + "PageIndex", this.PageIndex);

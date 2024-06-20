@@ -96,12 +96,20 @@ public class UpstreamHealthCheckConfig extends AbstractModel {
     private Long [] UnhealthyHttpStatuses;
 
     /**
-    * 健康检查屏蔽权重为0的节点
+    * 健康检查监控上报的数据屏蔽权重为0的节点
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IgnoreZeroWeightNodes")
     @Expose
     private Boolean IgnoreZeroWeightNodes;
+
+    /**
+    * 健康检查支持权重为0节点
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ZeroWeightHeathCheck")
+    @Expose
+    private Boolean ZeroWeightHeathCheck;
 
     /**
      * Get 开启主动健康检查
@@ -284,23 +292,47 @@ public class UpstreamHealthCheckConfig extends AbstractModel {
     }
 
     /**
-     * Get 健康检查屏蔽权重为0的节点
+     * Get 健康检查监控上报的数据屏蔽权重为0的节点
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IgnoreZeroWeightNodes 健康检查屏蔽权重为0的节点
+     * @return IgnoreZeroWeightNodes 健康检查监控上报的数据屏蔽权重为0的节点
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public Boolean getIgnoreZeroWeightNodes() {
         return this.IgnoreZeroWeightNodes;
     }
 
     /**
-     * Set 健康检查屏蔽权重为0的节点
+     * Set 健康检查监控上报的数据屏蔽权重为0的节点
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IgnoreZeroWeightNodes 健康检查屏蔽权重为0的节点
+     * @param IgnoreZeroWeightNodes 健康检查监控上报的数据屏蔽权重为0的节点
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public void setIgnoreZeroWeightNodes(Boolean IgnoreZeroWeightNodes) {
         this.IgnoreZeroWeightNodes = IgnoreZeroWeightNodes;
+    }
+
+    /**
+     * Get 健康检查支持权重为0节点
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ZeroWeightHeathCheck 健康检查支持权重为0节点
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getZeroWeightHeathCheck() {
+        return this.ZeroWeightHeathCheck;
+    }
+
+    /**
+     * Set 健康检查支持权重为0节点
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ZeroWeightHeathCheck 健康检查支持权重为0节点
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setZeroWeightHeathCheck(Boolean ZeroWeightHeathCheck) {
+        this.ZeroWeightHeathCheck = ZeroWeightHeathCheck;
     }
 
     public UpstreamHealthCheckConfig() {
@@ -347,6 +379,9 @@ public class UpstreamHealthCheckConfig extends AbstractModel {
         if (source.IgnoreZeroWeightNodes != null) {
             this.IgnoreZeroWeightNodes = new Boolean(source.IgnoreZeroWeightNodes);
         }
+        if (source.ZeroWeightHeathCheck != null) {
+            this.ZeroWeightHeathCheck = new Boolean(source.ZeroWeightHeathCheck);
+        }
     }
 
 
@@ -364,6 +399,7 @@ public class UpstreamHealthCheckConfig extends AbstractModel {
         this.setParamArraySimple(map, prefix + "HealthyHttpStatuses.", this.HealthyHttpStatuses);
         this.setParamArraySimple(map, prefix + "UnhealthyHttpStatuses.", this.UnhealthyHttpStatuses);
         this.setParamSimple(map, prefix + "IgnoreZeroWeightNodes", this.IgnoreZeroWeightNodes);
+        this.setParamSimple(map, prefix + "ZeroWeightHeathCheck", this.ZeroWeightHeathCheck);
 
     }
 }

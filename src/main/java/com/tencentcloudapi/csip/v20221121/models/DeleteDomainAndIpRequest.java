@@ -24,6 +24,13 @@ import java.util.HashMap;
 public class DeleteDomainAndIpRequest extends AbstractModel {
 
     /**
+    * 集团账号的成员id
+    */
+    @SerializedName("MemberId")
+    @Expose
+    private String [] MemberId;
+
+    /**
     * -
     */
     @SerializedName("Content")
@@ -57,6 +64,22 @@ public class DeleteDomainAndIpRequest extends AbstractModel {
     @SerializedName("Type")
     @Expose
     private String Type;
+
+    /**
+     * Get 集团账号的成员id 
+     * @return MemberId 集团账号的成员id
+     */
+    public String [] getMemberId() {
+        return this.MemberId;
+    }
+
+    /**
+     * Set 集团账号的成员id
+     * @param MemberId 集团账号的成员id
+     */
+    public void setMemberId(String [] MemberId) {
+        this.MemberId = MemberId;
+    }
 
     /**
      * Get - 
@@ -146,6 +169,12 @@ public class DeleteDomainAndIpRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DeleteDomainAndIpRequest(DeleteDomainAndIpRequest source) {
+        if (source.MemberId != null) {
+            this.MemberId = new String[source.MemberId.length];
+            for (int i = 0; i < source.MemberId.length; i++) {
+                this.MemberId[i] = new String(source.MemberId[i]);
+            }
+        }
         if (source.Content != null) {
             this.Content = new PublicIpDomainListKey[source.Content.length];
             for (int i = 0; i < source.Content.length; i++) {
@@ -174,6 +203,7 @@ public class DeleteDomainAndIpRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArraySimple(map, prefix + "MemberId.", this.MemberId);
         this.setParamArrayObj(map, prefix + "Content.", this.Content);
         this.setParamSimple(map, prefix + "RetainPath", this.RetainPath);
         this.setParamSimple(map, prefix + "IgnoreAsset", this.IgnoreAsset);

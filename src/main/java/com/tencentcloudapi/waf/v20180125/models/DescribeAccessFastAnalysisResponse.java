@@ -24,11 +24,62 @@ import java.util.HashMap;
 public class DescribeAccessFastAnalysisResponse extends AbstractModel {
 
     /**
+    * 注意：此字段可能返回 null，表示取不到有效值
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FieldValueRatioInfos")
+    @Expose
+    private AccessFieldValueRatioInfo [] FieldValueRatioInfos;
+
+    /**
+    * 日志条数
+    */
+    @SerializedName("TotalCount")
+    @Expose
+    private Long TotalCount;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 注意：此字段可能返回 null，表示取不到有效值
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FieldValueRatioInfos 注意：此字段可能返回 null，表示取不到有效值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AccessFieldValueRatioInfo [] getFieldValueRatioInfos() {
+        return this.FieldValueRatioInfos;
+    }
+
+    /**
+     * Set 注意：此字段可能返回 null，表示取不到有效值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FieldValueRatioInfos 注意：此字段可能返回 null，表示取不到有效值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFieldValueRatioInfos(AccessFieldValueRatioInfo [] FieldValueRatioInfos) {
+        this.FieldValueRatioInfos = FieldValueRatioInfos;
+    }
+
+    /**
+     * Get 日志条数 
+     * @return TotalCount 日志条数
+     */
+    public Long getTotalCount() {
+        return this.TotalCount;
+    }
+
+    /**
+     * Set 日志条数
+     * @param TotalCount 日志条数
+     */
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
+    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -54,6 +105,15 @@ public class DescribeAccessFastAnalysisResponse extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeAccessFastAnalysisResponse(DescribeAccessFastAnalysisResponse source) {
+        if (source.FieldValueRatioInfos != null) {
+            this.FieldValueRatioInfos = new AccessFieldValueRatioInfo[source.FieldValueRatioInfos.length];
+            for (int i = 0; i < source.FieldValueRatioInfos.length; i++) {
+                this.FieldValueRatioInfos[i] = new AccessFieldValueRatioInfo(source.FieldValueRatioInfos[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -64,6 +124,8 @@ public class DescribeAccessFastAnalysisResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "FieldValueRatioInfos.", this.FieldValueRatioInfos);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

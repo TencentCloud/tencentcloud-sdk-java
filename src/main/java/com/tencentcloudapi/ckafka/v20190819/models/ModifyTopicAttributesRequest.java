@@ -73,18 +73,18 @@ public class ModifyTopicAttributesRequest extends AbstractModel {
     private Long RetentionMs;
 
     /**
-    * Segment 分片滚动的时长，单位：ms，当前最小为86400000ms。
-    */
-    @SerializedName("SegmentMs")
-    @Expose
-    private Long SegmentMs;
-
-    /**
     * 主题消息最大值，单位为 Byte，最大值为12582912Byte（即12MB）。
     */
     @SerializedName("MaxMessageBytes")
     @Expose
     private Long MaxMessageBytes;
+
+    /**
+    * Segment 分片滚动的时长，单位：ms，当前最小为300000ms。
+    */
+    @SerializedName("SegmentMs")
+    @Expose
+    private Long SegmentMs;
 
     /**
     * 消息删除策略，可以选择delete 或者compact
@@ -262,22 +262,6 @@ public class ModifyTopicAttributesRequest extends AbstractModel {
     }
 
     /**
-     * Get Segment 分片滚动的时长，单位：ms，当前最小为86400000ms。 
-     * @return SegmentMs Segment 分片滚动的时长，单位：ms，当前最小为86400000ms。
-     */
-    public Long getSegmentMs() {
-        return this.SegmentMs;
-    }
-
-    /**
-     * Set Segment 分片滚动的时长，单位：ms，当前最小为86400000ms。
-     * @param SegmentMs Segment 分片滚动的时长，单位：ms，当前最小为86400000ms。
-     */
-    public void setSegmentMs(Long SegmentMs) {
-        this.SegmentMs = SegmentMs;
-    }
-
-    /**
      * Get 主题消息最大值，单位为 Byte，最大值为12582912Byte（即12MB）。 
      * @return MaxMessageBytes 主题消息最大值，单位为 Byte，最大值为12582912Byte（即12MB）。
      */
@@ -291,6 +275,22 @@ public class ModifyTopicAttributesRequest extends AbstractModel {
      */
     public void setMaxMessageBytes(Long MaxMessageBytes) {
         this.MaxMessageBytes = MaxMessageBytes;
+    }
+
+    /**
+     * Get Segment 分片滚动的时长，单位：ms，当前最小为300000ms。 
+     * @return SegmentMs Segment 分片滚动的时长，单位：ms，当前最小为300000ms。
+     */
+    public Long getSegmentMs() {
+        return this.SegmentMs;
+    }
+
+    /**
+     * Set Segment 分片滚动的时长，单位：ms，当前最小为300000ms。
+     * @param SegmentMs Segment 分片滚动的时长，单位：ms，当前最小为300000ms。
+     */
+    public void setSegmentMs(Long SegmentMs) {
+        this.SegmentMs = SegmentMs;
     }
 
     /**
@@ -466,11 +466,11 @@ public class ModifyTopicAttributesRequest extends AbstractModel {
         if (source.RetentionMs != null) {
             this.RetentionMs = new Long(source.RetentionMs);
         }
-        if (source.SegmentMs != null) {
-            this.SegmentMs = new Long(source.SegmentMs);
-        }
         if (source.MaxMessageBytes != null) {
             this.MaxMessageBytes = new Long(source.MaxMessageBytes);
+        }
+        if (source.SegmentMs != null) {
+            this.SegmentMs = new Long(source.SegmentMs);
         }
         if (source.CleanUpPolicy != null) {
             this.CleanUpPolicy = new String(source.CleanUpPolicy);
@@ -519,8 +519,8 @@ public class ModifyTopicAttributesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "MinInsyncReplicas", this.MinInsyncReplicas);
         this.setParamSimple(map, prefix + "UncleanLeaderElectionEnable", this.UncleanLeaderElectionEnable);
         this.setParamSimple(map, prefix + "RetentionMs", this.RetentionMs);
-        this.setParamSimple(map, prefix + "SegmentMs", this.SegmentMs);
         this.setParamSimple(map, prefix + "MaxMessageBytes", this.MaxMessageBytes);
+        this.setParamSimple(map, prefix + "SegmentMs", this.SegmentMs);
         this.setParamSimple(map, prefix + "CleanUpPolicy", this.CleanUpPolicy);
         this.setParamArraySimple(map, prefix + "IpWhiteList.", this.IpWhiteList);
         this.setParamSimple(map, prefix + "EnableAclRule", this.EnableAclRule);

@@ -214,7 +214,7 @@ public class VULViewVULRiskData extends AbstractModel {
     private Long AttackHeat;
 
     /**
-    * 是否必修漏洞1是，0不是
+    * 是否必修漏洞，1-是，0-不是
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsSuggest")
@@ -244,6 +244,22 @@ public class VULViewVULRiskData extends AbstractModel {
     @SerializedName("VulRiskId")
     @Expose
     private String VulRiskId;
+
+    /**
+    * 新版漏洞id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TvdID")
+    @Expose
+    private String TvdID;
+
+    /**
+    * 是否可以一键体检，1-可以，0-不可以
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsOneClick")
+    @Expose
+    private Long IsOneClick;
 
     /**
      * Get 端口 
@@ -694,9 +710,9 @@ public class VULViewVULRiskData extends AbstractModel {
     }
 
     /**
-     * Get 是否必修漏洞1是，0不是
+     * Get 是否必修漏洞，1-是，0-不是
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IsSuggest 是否必修漏洞1是，0不是
+     * @return IsSuggest 是否必修漏洞，1-是，0-不是
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsSuggest() {
@@ -704,9 +720,9 @@ public class VULViewVULRiskData extends AbstractModel {
     }
 
     /**
-     * Set 是否必修漏洞1是，0不是
+     * Set 是否必修漏洞，1-是，0-不是
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IsSuggest 是否必修漏洞1是，0不是
+     * @param IsSuggest 是否必修漏洞，1-是，0-不是
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsSuggest(Long IsSuggest) {
@@ -771,6 +787,46 @@ public class VULViewVULRiskData extends AbstractModel {
      */
     public void setVulRiskId(String VulRiskId) {
         this.VulRiskId = VulRiskId;
+    }
+
+    /**
+     * Get 新版漏洞id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TvdID 新版漏洞id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTvdID() {
+        return this.TvdID;
+    }
+
+    /**
+     * Set 新版漏洞id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TvdID 新版漏洞id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTvdID(String TvdID) {
+        this.TvdID = TvdID;
+    }
+
+    /**
+     * Get 是否可以一键体检，1-可以，0-不可以
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsOneClick 是否可以一键体检，1-可以，0-不可以
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getIsOneClick() {
+        return this.IsOneClick;
+    }
+
+    /**
+     * Set 是否可以一键体检，1-可以，0-不可以
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsOneClick 是否可以一键体检，1-可以，0-不可以
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsOneClick(Long IsOneClick) {
+        this.IsOneClick = IsOneClick;
     }
 
     public VULViewVULRiskData() {
@@ -874,6 +930,12 @@ public class VULViewVULRiskData extends AbstractModel {
         if (source.VulRiskId != null) {
             this.VulRiskId = new String(source.VulRiskId);
         }
+        if (source.TvdID != null) {
+            this.TvdID = new String(source.TvdID);
+        }
+        if (source.IsOneClick != null) {
+            this.IsOneClick = new Long(source.IsOneClick);
+        }
     }
 
 
@@ -911,6 +973,8 @@ public class VULViewVULRiskData extends AbstractModel {
         this.setParamSimple(map, prefix + "HandleTaskId", this.HandleTaskId);
         this.setParamSimple(map, prefix + "EngineSource", this.EngineSource);
         this.setParamSimple(map, prefix + "VulRiskId", this.VulRiskId);
+        this.setParamSimple(map, prefix + "TvdID", this.TvdID);
+        this.setParamSimple(map, prefix + "IsOneClick", this.IsOneClick);
 
     }
 }

@@ -94,6 +94,20 @@ public class DescribeSlowQueryRecordsDownloadRequest extends AbstractModel {
     private Long IsQuery;
 
     /**
+    * 数据库名称
+    */
+    @SerializedName("DbName")
+    @Expose
+    private String [] DbName;
+
+    /**
+    * catalog名称
+    */
+    @SerializedName("CatalogName")
+    @Expose
+    private String [] CatalogName;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -253,6 +267,38 @@ public class DescribeSlowQueryRecordsDownloadRequest extends AbstractModel {
         this.IsQuery = IsQuery;
     }
 
+    /**
+     * Get 数据库名称 
+     * @return DbName 数据库名称
+     */
+    public String [] getDbName() {
+        return this.DbName;
+    }
+
+    /**
+     * Set 数据库名称
+     * @param DbName 数据库名称
+     */
+    public void setDbName(String [] DbName) {
+        this.DbName = DbName;
+    }
+
+    /**
+     * Get catalog名称 
+     * @return CatalogName catalog名称
+     */
+    public String [] getCatalogName() {
+        return this.CatalogName;
+    }
+
+    /**
+     * Set catalog名称
+     * @param CatalogName catalog名称
+     */
+    public void setCatalogName(String [] CatalogName) {
+        this.CatalogName = CatalogName;
+    }
+
     public DescribeSlowQueryRecordsDownloadRequest() {
     }
 
@@ -291,6 +337,18 @@ public class DescribeSlowQueryRecordsDownloadRequest extends AbstractModel {
         if (source.IsQuery != null) {
             this.IsQuery = new Long(source.IsQuery);
         }
+        if (source.DbName != null) {
+            this.DbName = new String[source.DbName.length];
+            for (int i = 0; i < source.DbName.length; i++) {
+                this.DbName[i] = new String(source.DbName[i]);
+            }
+        }
+        if (source.CatalogName != null) {
+            this.CatalogName = new String[source.CatalogName.length];
+            for (int i = 0; i < source.CatalogName.length; i++) {
+                this.CatalogName[i] = new String(source.CatalogName[i]);
+            }
+        }
     }
 
 
@@ -308,6 +366,8 @@ public class DescribeSlowQueryRecordsDownloadRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ResultBytes", this.ResultBytes);
         this.setParamSimple(map, prefix + "MemoryUsage", this.MemoryUsage);
         this.setParamSimple(map, prefix + "IsQuery", this.IsQuery);
+        this.setParamArraySimple(map, prefix + "DbName.", this.DbName);
+        this.setParamArraySimple(map, prefix + "CatalogName.", this.CatalogName);
 
     }
 }

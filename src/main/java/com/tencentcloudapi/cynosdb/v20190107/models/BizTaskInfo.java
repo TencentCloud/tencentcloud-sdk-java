@@ -45,6 +45,14 @@ public class BizTaskInfo extends AbstractModel {
     private String ClusterId;
 
     /**
+    * 地域
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Region")
+    @Expose
+    private String Region;
+
+    /**
     * 任务创建时间
     */
     @SerializedName("CreateTime")
@@ -274,6 +282,15 @@ public class BizTaskInfo extends AbstractModel {
     private TaskMaintainInfo TaskMaintainInfo;
 
     /**
+    * 实例日志投递信息
+
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InstanceCLSDeliveryInfos")
+    @Expose
+    private InstanceCLSDeliveryInfo [] InstanceCLSDeliveryInfos;
+
+    /**
      * Get 任务id 
      * @return ID 任务id
      */
@@ -319,6 +336,26 @@ public class BizTaskInfo extends AbstractModel {
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
+    }
+
+    /**
+     * Get 地域
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Region 地域
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRegion() {
+        return this.Region;
+    }
+
+    /**
+     * Set 地域
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Region 地域
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRegion(String Region) {
+        this.Region = Region;
     }
 
     /**
@@ -869,6 +906,30 @@ public class BizTaskInfo extends AbstractModel {
         this.TaskMaintainInfo = TaskMaintainInfo;
     }
 
+    /**
+     * Get 实例日志投递信息
+
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InstanceCLSDeliveryInfos 实例日志投递信息
+
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public InstanceCLSDeliveryInfo [] getInstanceCLSDeliveryInfos() {
+        return this.InstanceCLSDeliveryInfos;
+    }
+
+    /**
+     * Set 实例日志投递信息
+
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstanceCLSDeliveryInfos 实例日志投递信息
+
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInstanceCLSDeliveryInfos(InstanceCLSDeliveryInfo [] InstanceCLSDeliveryInfos) {
+        this.InstanceCLSDeliveryInfos = InstanceCLSDeliveryInfos;
+    }
+
     public BizTaskInfo() {
     }
 
@@ -885,6 +946,9 @@ public class BizTaskInfo extends AbstractModel {
         }
         if (source.ClusterId != null) {
             this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
         }
         if (source.CreateTime != null) {
             this.CreateTime = new String(source.CreateTime);
@@ -982,6 +1046,12 @@ public class BizTaskInfo extends AbstractModel {
         if (source.TaskMaintainInfo != null) {
             this.TaskMaintainInfo = new TaskMaintainInfo(source.TaskMaintainInfo);
         }
+        if (source.InstanceCLSDeliveryInfos != null) {
+            this.InstanceCLSDeliveryInfos = new InstanceCLSDeliveryInfo[source.InstanceCLSDeliveryInfos.length];
+            for (int i = 0; i < source.InstanceCLSDeliveryInfos.length; i++) {
+                this.InstanceCLSDeliveryInfos[i] = new InstanceCLSDeliveryInfo(source.InstanceCLSDeliveryInfos[i]);
+            }
+        }
     }
 
 
@@ -992,6 +1062,7 @@ public class BizTaskInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "ID", this.ID);
         this.setParamSimple(map, prefix + "AppId", this.AppId);
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
+        this.setParamSimple(map, prefix + "Region", this.Region);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "DelayTime", this.DelayTime);
         this.setParamSimple(map, prefix + "ErrMsg", this.ErrMsg);
@@ -1023,6 +1094,7 @@ public class BizTaskInfo extends AbstractModel {
         this.setParamObj(map, prefix + "SwitchClusterLogBin.", this.SwitchClusterLogBin);
         this.setParamObj(map, prefix + "ModifyInstanceParamsData.", this.ModifyInstanceParamsData);
         this.setParamObj(map, prefix + "TaskMaintainInfo.", this.TaskMaintainInfo);
+        this.setParamArrayObj(map, prefix + "InstanceCLSDeliveryInfos.", this.InstanceCLSDeliveryInfos);
 
     }
 }

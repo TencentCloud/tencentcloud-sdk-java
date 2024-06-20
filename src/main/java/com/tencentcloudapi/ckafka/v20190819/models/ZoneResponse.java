@@ -115,6 +115,46 @@ public class ZoneResponse extends AbstractModel {
     private String PublicNetworkLimit;
 
     /**
+    * 请求ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RequestId")
+    @Expose
+    private String RequestId;
+
+    /**
+    * 版本
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Version")
+    @Expose
+    private String Version;
+
+    /**
+    * 分页offset
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
+
+    /**
+    * 分页limit
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Limit")
+    @Expose
+    private Long Limit;
+
+    /**
+    * 是否必须录入tag
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ForceCheckTag")
+    @Expose
+    private Boolean ForceCheckTag;
+
+    /**
      * Get zone列表 
      * @return ZoneList zone列表
      */
@@ -334,6 +374,106 @@ public class ZoneResponse extends AbstractModel {
         this.PublicNetworkLimit = PublicNetworkLimit;
     }
 
+    /**
+     * Get 请求ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RequestId 请求ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRequestId() {
+        return this.RequestId;
+    }
+
+    /**
+     * Set 请求ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RequestId 请求ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRequestId(String RequestId) {
+        this.RequestId = RequestId;
+    }
+
+    /**
+     * Get 版本
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Version 版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getVersion() {
+        return this.Version;
+    }
+
+    /**
+     * Set 版本
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Version 版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVersion(String Version) {
+        this.Version = Version;
+    }
+
+    /**
+     * Get 分页offset
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Offset 分页offset
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set 分页offset
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Offset 分页offset
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
+    }
+
+    /**
+     * Get 分页limit
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Limit 分页limit
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getLimit() {
+        return this.Limit;
+    }
+
+    /**
+     * Set 分页limit
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Limit 分页limit
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLimit(Long Limit) {
+        this.Limit = Limit;
+    }
+
+    /**
+     * Get 是否必须录入tag
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ForceCheckTag 是否必须录入tag
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getForceCheckTag() {
+        return this.ForceCheckTag;
+    }
+
+    /**
+     * Set 是否必须录入tag
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ForceCheckTag 是否必须录入tag
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setForceCheckTag(Boolean ForceCheckTag) {
+        this.ForceCheckTag = ForceCheckTag;
+    }
+
     public ZoneResponse() {
     }
 
@@ -384,6 +524,21 @@ public class ZoneResponse extends AbstractModel {
         if (source.PublicNetworkLimit != null) {
             this.PublicNetworkLimit = new String(source.PublicNetworkLimit);
         }
+        if (source.RequestId != null) {
+            this.RequestId = new String(source.RequestId);
+        }
+        if (source.Version != null) {
+            this.Version = new String(source.Version);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.ForceCheckTag != null) {
+            this.ForceCheckTag = new Boolean(source.ForceCheckTag);
+        }
     }
 
 
@@ -403,6 +558,11 @@ public class ZoneResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "Physical", this.Physical);
         this.setParamSimple(map, prefix + "PublicNetwork", this.PublicNetwork);
         this.setParamSimple(map, prefix + "PublicNetworkLimit", this.PublicNetworkLimit);
+        this.setParamSimple(map, prefix + "RequestId", this.RequestId);
+        this.setParamSimple(map, prefix + "Version", this.Version);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "ForceCheckTag", this.ForceCheckTag);
 
     }
 }

@@ -24,13 +24,6 @@ import java.util.HashMap;
 public class DescribeAccessFastAnalysisRequest extends AbstractModel {
 
     /**
-    * 客户要查询的日志主题ID，每个客户都有对应的一个主题
-    */
-    @SerializedName("TopicId")
-    @Expose
-    private String TopicId;
-
-    /**
     * 要查询的日志的起始时间，Unix时间戳，单位ms
     */
     @SerializedName("From")
@@ -59,6 +52,13 @@ public class DescribeAccessFastAnalysisRequest extends AbstractModel {
     private String FieldName;
 
     /**
+    * 客户要查询的日志主题ID，每个客户都有对应的一个主题
+    */
+    @SerializedName("TopicId")
+    @Expose
+    private String TopicId;
+
+    /**
     * 排序字段,升序asc,降序desc，默认降序desc 
     */
     @SerializedName("Sort")
@@ -71,22 +71,6 @@ public class DescribeAccessFastAnalysisRequest extends AbstractModel {
     @SerializedName("Count")
     @Expose
     private Long Count;
-
-    /**
-     * Get 客户要查询的日志主题ID，每个客户都有对应的一个主题 
-     * @return TopicId 客户要查询的日志主题ID，每个客户都有对应的一个主题
-     */
-    public String getTopicId() {
-        return this.TopicId;
-    }
-
-    /**
-     * Set 客户要查询的日志主题ID，每个客户都有对应的一个主题
-     * @param TopicId 客户要查询的日志主题ID，每个客户都有对应的一个主题
-     */
-    public void setTopicId(String TopicId) {
-        this.TopicId = TopicId;
-    }
 
     /**
      * Get 要查询的日志的起始时间，Unix时间戳，单位ms 
@@ -153,6 +137,26 @@ public class DescribeAccessFastAnalysisRequest extends AbstractModel {
     }
 
     /**
+     * Get 客户要查询的日志主题ID，每个客户都有对应的一个主题 
+     * @return TopicId 客户要查询的日志主题ID，每个客户都有对应的一个主题
+     * @deprecated
+     */
+    @Deprecated
+    public String getTopicId() {
+        return this.TopicId;
+    }
+
+    /**
+     * Set 客户要查询的日志主题ID，每个客户都有对应的一个主题
+     * @param TopicId 客户要查询的日志主题ID，每个客户都有对应的一个主题
+     * @deprecated
+     */
+    @Deprecated
+    public void setTopicId(String TopicId) {
+        this.TopicId = TopicId;
+    }
+
+    /**
      * Get 排序字段,升序asc,降序desc，默认降序desc  
      * @return Sort 排序字段,升序asc,降序desc，默认降序desc 
      */
@@ -192,9 +196,6 @@ public class DescribeAccessFastAnalysisRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeAccessFastAnalysisRequest(DescribeAccessFastAnalysisRequest source) {
-        if (source.TopicId != null) {
-            this.TopicId = new String(source.TopicId);
-        }
         if (source.From != null) {
             this.From = new Long(source.From);
         }
@@ -206,6 +207,9 @@ public class DescribeAccessFastAnalysisRequest extends AbstractModel {
         }
         if (source.FieldName != null) {
             this.FieldName = new String(source.FieldName);
+        }
+        if (source.TopicId != null) {
+            this.TopicId = new String(source.TopicId);
         }
         if (source.Sort != null) {
             this.Sort = new String(source.Sort);
@@ -220,11 +224,11 @@ public class DescribeAccessFastAnalysisRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TopicId", this.TopicId);
         this.setParamSimple(map, prefix + "From", this.From);
         this.setParamSimple(map, prefix + "To", this.To);
         this.setParamSimple(map, prefix + "Query", this.Query);
         this.setParamSimple(map, prefix + "FieldName", this.FieldName);
+        this.setParamSimple(map, prefix + "TopicId", this.TopicId);
         this.setParamSimple(map, prefix + "Sort", this.Sort);
         this.setParamSimple(map, prefix + "Count", this.Count);
 
