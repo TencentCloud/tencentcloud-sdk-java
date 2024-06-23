@@ -31,7 +31,7 @@ public class IsTransferIntentRequest extends AbstractModel {
     private String Content;
 
     /**
-    * 机器人appKey
+    * 应用appKey
     */
     @SerializedName("BotAppKey")
     @Expose
@@ -54,16 +54,16 @@ public class IsTransferIntentRequest extends AbstractModel {
     }
 
     /**
-     * Get 机器人appKey 
-     * @return BotAppKey 机器人appKey
+     * Get 应用appKey 
+     * @return BotAppKey 应用appKey
      */
     public String getBotAppKey() {
         return this.BotAppKey;
     }
 
     /**
-     * Set 机器人appKey
-     * @param BotAppKey 机器人appKey
+     * Set 应用appKey
+     * @param BotAppKey 应用appKey
      */
     public void setBotAppKey(String BotAppKey) {
         this.BotAppKey = BotAppKey;

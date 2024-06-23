@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeRobotBizIDByAppKeyRequest extends AbstractModel {
 
     /**
-    * 机器人appkey
+    * 应用appkey
     */
     @SerializedName("AppKey")
     @Expose
     private String AppKey;
 
     /**
-     * Get 机器人appkey 
-     * @return AppKey 机器人appkey
+     * Get 应用appkey 
+     * @return AppKey 应用appkey
      */
     public String getAppKey() {
         return this.AppKey;
     }
 
     /**
-     * Set 机器人appkey
-     * @param AppKey 机器人appkey
+     * Set 应用appkey
+     * @param AppKey 应用appkey
      */
     public void setAppKey(String AppKey) {
         this.AppKey = AppKey;

@@ -31,7 +31,7 @@ public class GetWsTokenRequest extends AbstractModel {
     private Long Type;
 
     /**
-    * 机器人AppKey
+    * 应用AppKey
     */
     @SerializedName("BotAppKey")
     @Expose
@@ -68,16 +68,16 @@ public class GetWsTokenRequest extends AbstractModel {
     }
 
     /**
-     * Get 机器人AppKey 
-     * @return BotAppKey 机器人AppKey
+     * Get 应用AppKey 
+     * @return BotAppKey 应用AppKey
      */
     public String getBotAppKey() {
         return this.BotAppKey;
     }
 
     /**
-     * Set 机器人AppKey
-     * @param BotAppKey 机器人AppKey
+     * Set 应用AppKey
+     * @param BotAppKey 应用AppKey
      */
     public void setBotAppKey(String BotAppKey) {
         this.BotAppKey = BotAppKey;

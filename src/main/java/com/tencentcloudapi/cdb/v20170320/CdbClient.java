@@ -985,6 +985,17 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
+     *本接口(DescribeInstanceUpgradeType)用于查询数据库实例升级类型。
+     * @param req DescribeInstanceUpgradeTypeRequest
+     * @return DescribeInstanceUpgradeTypeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceUpgradeTypeResponse DescribeInstanceUpgradeType(DescribeInstanceUpgradeTypeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeInstanceUpgradeType", DescribeInstanceUpgradeTypeResponse.class);
+    }
+
+    /**
      *该接口用于查询实例本地binlog保留策略。
      * @param req DescribeLocalBinlogConfigRequest
      * @return DescribeLocalBinlogConfigResponse

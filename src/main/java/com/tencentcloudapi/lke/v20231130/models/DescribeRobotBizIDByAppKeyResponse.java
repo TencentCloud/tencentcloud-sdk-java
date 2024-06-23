@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeRobotBizIDByAppKeyResponse extends AbstractModel {
 
     /**
-    * 机器人业务ID
+    * 应用业务ID
     */
     @SerializedName("BotBizId")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeRobotBizIDByAppKeyResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 机器人业务ID 
-     * @return BotBizId 机器人业务ID
+     * Get 应用业务ID 
+     * @return BotBizId 应用业务ID
      */
     public String getBotBizId() {
         return this.BotBizId;
     }
 
     /**
-     * Set 机器人业务ID
-     * @param BotBizId 机器人业务ID
+     * Set 应用业务ID
+     * @param BotBizId 应用业务ID
      */
     public void setBotBizId(String BotBizId) {
         this.BotBizId = BotBizId;

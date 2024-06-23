@@ -38,7 +38,7 @@ public class GetReconstructDocumentResultResponse extends AbstractModel {
     private String DocumentRecognizeResultUrl;
 
     /**
-    * 还原失败的页
+    * 文档解析失败的页码
     */
     @SerializedName("FailedPages")
     @Expose
@@ -84,16 +84,16 @@ public class GetReconstructDocumentResultResponse extends AbstractModel {
     }
 
     /**
-     * Get 还原失败的页 
-     * @return FailedPages 还原失败的页
+     * Get 文档解析失败的页码 
+     * @return FailedPages 文档解析失败的页码
      */
     public ReconstructDocumentFailedPage [] getFailedPages() {
         return this.FailedPages;
     }
 
     /**
-     * Set 还原失败的页
-     * @param FailedPages 还原失败的页
+     * Set 文档解析失败的页码
+     * @param FailedPages 文档解析失败的页码
      */
     public void setFailedPages(ReconstructDocumentFailedPage [] FailedPages) {
         this.FailedPages = FailedPages;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class Highlight extends AbstractModel {
 
     /**
-    * 高亮启始位置
+    * 高亮起始位置
 
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -51,10 +51,10 @@ public class Highlight extends AbstractModel {
     private String Text;
 
     /**
-     * Get 高亮启始位置
+     * Get 高亮起始位置
 
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return StartPos 高亮启始位置
+     * @return StartPos 高亮起始位置
 
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -63,10 +63,10 @@ public class Highlight extends AbstractModel {
     }
 
     /**
-     * Set 高亮启始位置
+     * Set 高亮起始位置
 
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param StartPos 高亮启始位置
+     * @param StartPos 高亮起始位置
 
 注意：此字段可能返回 null，表示取不到有效值。
      */

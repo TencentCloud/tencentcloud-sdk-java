@@ -87,7 +87,7 @@ public class DescribeStorageCredentialResponse extends AbstractModel {
     private String ImagePath;
 
     /**
-    * 上传存储目录
+    * 上传存储路径，到具体文件
     */
     @SerializedName("UploadPath")
     @Expose
@@ -245,16 +245,16 @@ public class DescribeStorageCredentialResponse extends AbstractModel {
     }
 
     /**
-     * Get 上传存储目录 
-     * @return UploadPath 上传存储目录
+     * Get 上传存储路径，到具体文件 
+     * @return UploadPath 上传存储路径，到具体文件
      */
     public String getUploadPath() {
         return this.UploadPath;
     }
 
     /**
-     * Set 上传存储目录
-     * @param UploadPath 上传存储目录
+     * Set 上传存储路径，到具体文件
+     * @param UploadPath 上传存储路径，到具体文件
      */
     public void setUploadPath(String UploadPath) {
         this.UploadPath = UploadPath;

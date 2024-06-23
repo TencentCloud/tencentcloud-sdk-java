@@ -31,6 +31,21 @@ public class GetWsTokenResponse extends AbstractModel {
     private String Token;
 
     /**
+    * 余额; 余额大于 0 时表示有效.
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Balance")
+    @Expose
+    private Float Balance;
+
+    /**
+    * 对话窗输入字符限制
+    */
+    @SerializedName("InputLenLimit")
+    @Expose
+    private Long InputLenLimit;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -51,6 +66,42 @@ public class GetWsTokenResponse extends AbstractModel {
      */
     public void setToken(String Token) {
         this.Token = Token;
+    }
+
+    /**
+     * Get 余额; 余额大于 0 时表示有效.
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Balance 余额; 余额大于 0 时表示有效.
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float getBalance() {
+        return this.Balance;
+    }
+
+    /**
+     * Set 余额; 余额大于 0 时表示有效.
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Balance 余额; 余额大于 0 时表示有效.
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBalance(Float Balance) {
+        this.Balance = Balance;
+    }
+
+    /**
+     * Get 对话窗输入字符限制 
+     * @return InputLenLimit 对话窗输入字符限制
+     */
+    public Long getInputLenLimit() {
+        return this.InputLenLimit;
+    }
+
+    /**
+     * Set 对话窗输入字符限制
+     * @param InputLenLimit 对话窗输入字符限制
+     */
+    public void setInputLenLimit(Long InputLenLimit) {
+        this.InputLenLimit = InputLenLimit;
     }
 
     /**
@@ -80,6 +131,12 @@ public class GetWsTokenResponse extends AbstractModel {
         if (source.Token != null) {
             this.Token = new String(source.Token);
         }
+        if (source.Balance != null) {
+            this.Balance = new Float(source.Balance);
+        }
+        if (source.InputLenLimit != null) {
+            this.InputLenLimit = new Long(source.InputLenLimit);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -91,6 +148,8 @@ public class GetWsTokenResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Token", this.Token);
+        this.setParamSimple(map, prefix + "Balance", this.Balance);
+        this.setParamSimple(map, prefix + "InputLenLimit", this.InputLenLimit);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

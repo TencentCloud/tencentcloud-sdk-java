@@ -48,7 +48,7 @@ public class UnsatisfiedReply extends AbstractModel {
     private String Question;
 
     /**
-    * 机器人回复
+    * 应用回复
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Answer")
@@ -124,9 +124,9 @@ public class UnsatisfiedReply extends AbstractModel {
     }
 
     /**
-     * Get 机器人回复
+     * Get 应用回复
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Answer 机器人回复
+     * @return Answer 应用回复
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAnswer() {
@@ -134,9 +134,9 @@ public class UnsatisfiedReply extends AbstractModel {
     }
 
     /**
-     * Set 机器人回复
+     * Set 应用回复
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Answer 机器人回复
+     * @param Answer 应用回复
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAnswer(String Answer) {

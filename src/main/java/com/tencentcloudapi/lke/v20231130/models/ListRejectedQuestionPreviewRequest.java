@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ListRejectedQuestionPreviewRequest extends AbstractModel {
 
     /**
-    * 机器人ID
+    * 应用ID
     */
     @SerializedName("BotBizId")
     @Expose
@@ -80,16 +80,16 @@ public class ListRejectedQuestionPreviewRequest extends AbstractModel {
     private String EndTime;
 
     /**
-     * Get 机器人ID 
-     * @return BotBizId 机器人ID
+     * Get 应用ID 
+     * @return BotBizId 应用ID
      */
     public String getBotBizId() {
         return this.BotBizId;
     }
 
     /**
-     * Set 机器人ID
-     * @param BotBizId 机器人ID
+     * Set 应用ID
+     * @param BotBizId 应用ID
      */
     public void setBotBizId(String BotBizId) {
         this.BotBizId = BotBizId;

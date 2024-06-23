@@ -230,7 +230,9 @@ public class StartStreamIngestRequest extends AbstractModel {
     /**
      * Get 【本字段已废弃】视频编码参数。可选，如果不填，保持原始流的参数。 
      * @return VideoEncodeParams 【本字段已废弃】视频编码参数。可选，如果不填，保持原始流的参数。
+     * @deprecated
      */
+    @Deprecated
     public VideoEncodeParams getVideoEncodeParams() {
         return this.VideoEncodeParams;
     }
@@ -238,7 +240,9 @@ public class StartStreamIngestRequest extends AbstractModel {
     /**
      * Set 【本字段已废弃】视频编码参数。可选，如果不填，保持原始流的参数。
      * @param VideoEncodeParams 【本字段已废弃】视频编码参数。可选，如果不填，保持原始流的参数。
+     * @deprecated
      */
+    @Deprecated
     public void setVideoEncodeParams(VideoEncodeParams VideoEncodeParams) {
         this.VideoEncodeParams = VideoEncodeParams;
     }
@@ -246,7 +250,9 @@ public class StartStreamIngestRequest extends AbstractModel {
     /**
      * Get 【本字段已废弃】音频编码参数。可选，如果不填，保持原始流的参数。 
      * @return AudioEncodeParams 【本字段已废弃】音频编码参数。可选，如果不填，保持原始流的参数。
+     * @deprecated
      */
+    @Deprecated
     public AudioEncodeParams getAudioEncodeParams() {
         return this.AudioEncodeParams;
     }
@@ -254,7 +260,9 @@ public class StartStreamIngestRequest extends AbstractModel {
     /**
      * Set 【本字段已废弃】音频编码参数。可选，如果不填，保持原始流的参数。
      * @param AudioEncodeParams 【本字段已废弃】音频编码参数。可选，如果不填，保持原始流的参数。
+     * @deprecated
      */
+    @Deprecated
     public void setAudioEncodeParams(AudioEncodeParams AudioEncodeParams) {
         this.AudioEncodeParams = AudioEncodeParams;
     }
@@ -262,7 +270,9 @@ public class StartStreamIngestRequest extends AbstractModel {
     /**
      * Get 【本字段已废弃，请使用 StreamUrl 字段】源流URL，支持一个地址。 
      * @return SourceUrl 【本字段已废弃，请使用 StreamUrl 字段】源流URL，支持一个地址。
+     * @deprecated
      */
+    @Deprecated
     public String [] getSourceUrl() {
         return this.SourceUrl;
     }
@@ -270,7 +280,9 @@ public class StartStreamIngestRequest extends AbstractModel {
     /**
      * Set 【本字段已废弃，请使用 StreamUrl 字段】源流URL，支持一个地址。
      * @param SourceUrl 【本字段已废弃，请使用 StreamUrl 字段】源流URL，支持一个地址。
+     * @deprecated
      */
+    @Deprecated
     public void setSourceUrl(String [] SourceUrl) {
         this.SourceUrl = SourceUrl;
     }

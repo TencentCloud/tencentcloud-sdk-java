@@ -116,7 +116,10 @@ public class LkeClient extends AbstractClient{
     }
 
     /**
-     *文档解析，异步接口。
+     *本接口为异步接口的发起请求接口，用于发起文档解析任务。
+文档解析支持将图片或PDF文件转换成Markdown格式文件，可解析包括表格、公式、图片、标题、段落、页眉、页脚等内容元素，并将内容智能转换成阅读顺序。
+
+体验期间单账号限制qps仅为1，若有正式接入需要请与产研团队沟通开放。
      * @param req CreateReconstructDocumentFlowRequest
      * @return CreateReconstructDocumentFlowResponse
      * @throws TencentCloudSDKException
@@ -171,7 +174,7 @@ public class LkeClient extends AbstractClient{
     }
 
     /**
-     *创建企业
+     *删除文档
      * @param req DeleteDocRequest
      * @return DeleteDocResponse
      * @throws TencentCloudSDKException
@@ -303,7 +306,7 @@ public class LkeClient extends AbstractClient{
     }
 
     /**
-     *通过appKey获取机器人业务ID
+     *通过appKey获取应用业务ID
      * @param req DescribeRobotBizIDByAppKeyRequest
      * @return DescribeRobotBizIDByAppKeyResponse
      * @throws TencentCloudSDKException
@@ -436,7 +439,7 @@ public class LkeClient extends AbstractClient{
     }
 
     /**
-     *获取文档解析任务执行结果
+     *本接口为异步接口的查询结果接口，用于获取文档解析处理结果。
      * @param req GetReconstructDocumentResultRequest
      * @return GetReconstructDocumentResultResponse
      * @throws TencentCloudSDKException
@@ -755,7 +758,8 @@ public class LkeClient extends AbstractClient{
     }
 
     /**
-     *解析拆分文档。该接口需开通文档解析原子能力后调用。文档解析原子能力内测中，如有需要请联系架构师或 [联系客服](https://cloud.tencent.com/act/event/Online_service)  。
+     *接口即将下线，请切换使用新接口：[文档解析](https://cloud.tencent.com/document/product/1759/107504)
+解析拆分文档。该接口需开通文档解析原子能力后调用。文档解析原子能力内测中，如有需要请联系架构师或 [联系客服](https://cloud.tencent.com/act/event/Online_service)  。
      * @param req ParseDocRequest
      * @return ParseDocResponse
      * @throws TencentCloudSDKException
@@ -801,6 +805,8 @@ public class LkeClient extends AbstractClient{
 
     /**
      *支持将图片或PDF文件转换成Markdown格式文件，可解析包括表格、公式、图片、标题、段落、页眉、页脚等内容元素，并将内容智能转换成阅读顺序。
+
+体验期间单账号限制qps仅为1，若有正式接入需要请与产研团队沟通开放。
      * @param req ReconstructDocumentRequest
      * @return ReconstructDocumentResponse
      * @throws TencentCloudSDKException

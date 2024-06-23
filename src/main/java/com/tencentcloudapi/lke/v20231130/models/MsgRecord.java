@@ -154,6 +154,20 @@ public class MsgRecord extends AbstractModel {
 
     /**
     * 回复方式
+1:大模型直接回复;
+2:保守回复, 未知问题回复;
+3:拒答问题回复;
+4:敏感回复;
+5:问答对直接回复, 已采纳问答对优先回复;
+6:欢迎语回复;
+7:并发超限回复;
+8:全局干预知识;
+9:任务流程过程回复, 当历史记录中 task_flow.type = 0 时, 为大模型回复;
+10:任务流程答案回复;
+11:搜索引擎回复;
+12:知识润色后回复;
+13:图片理解回复;
+14:实时文档回复;
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReplyMethod")
@@ -175,6 +189,14 @@ public class MsgRecord extends AbstractModel {
     @SerializedName("TaskFlow")
     @Expose
     private TaskFlowInfo TaskFlow;
+
+    /**
+    * 用户传入的文件信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FileInfos")
+    @Expose
+    private FileInfo [] FileInfos;
 
     /**
      * Get 内容 
@@ -478,8 +500,36 @@ public class MsgRecord extends AbstractModel {
 
     /**
      * Get 回复方式
+1:大模型直接回复;
+2:保守回复, 未知问题回复;
+3:拒答问题回复;
+4:敏感回复;
+5:问答对直接回复, 已采纳问答对优先回复;
+6:欢迎语回复;
+7:并发超限回复;
+8:全局干预知识;
+9:任务流程过程回复, 当历史记录中 task_flow.type = 0 时, 为大模型回复;
+10:任务流程答案回复;
+11:搜索引擎回复;
+12:知识润色后回复;
+13:图片理解回复;
+14:实时文档回复;
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ReplyMethod 回复方式
+1:大模型直接回复;
+2:保守回复, 未知问题回复;
+3:拒答问题回复;
+4:敏感回复;
+5:问答对直接回复, 已采纳问答对优先回复;
+6:欢迎语回复;
+7:并发超限回复;
+8:全局干预知识;
+9:任务流程过程回复, 当历史记录中 task_flow.type = 0 时, 为大模型回复;
+10:任务流程答案回复;
+11:搜索引擎回复;
+12:知识润色后回复;
+13:图片理解回复;
+14:实时文档回复;
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getReplyMethod() {
@@ -488,8 +538,36 @@ public class MsgRecord extends AbstractModel {
 
     /**
      * Set 回复方式
+1:大模型直接回复;
+2:保守回复, 未知问题回复;
+3:拒答问题回复;
+4:敏感回复;
+5:问答对直接回复, 已采纳问答对优先回复;
+6:欢迎语回复;
+7:并发超限回复;
+8:全局干预知识;
+9:任务流程过程回复, 当历史记录中 task_flow.type = 0 时, 为大模型回复;
+10:任务流程答案回复;
+11:搜索引擎回复;
+12:知识润色后回复;
+13:图片理解回复;
+14:实时文档回复;
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ReplyMethod 回复方式
+1:大模型直接回复;
+2:保守回复, 未知问题回复;
+3:拒答问题回复;
+4:敏感回复;
+5:问答对直接回复, 已采纳问答对优先回复;
+6:欢迎语回复;
+7:并发超限回复;
+8:全局干预知识;
+9:任务流程过程回复, 当历史记录中 task_flow.type = 0 时, 为大模型回复;
+10:任务流程答案回复;
+11:搜索引擎回复;
+12:知识润色后回复;
+13:图片理解回复;
+14:实时文档回复;
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReplyMethod(Long ReplyMethod) {
@@ -534,6 +612,26 @@ public class MsgRecord extends AbstractModel {
      */
     public void setTaskFlow(TaskFlowInfo TaskFlow) {
         this.TaskFlow = TaskFlow;
+    }
+
+    /**
+     * Get 用户传入的文件信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FileInfos 用户传入的文件信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public FileInfo [] getFileInfos() {
+        return this.FileInfos;
+    }
+
+    /**
+     * Set 用户传入的文件信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FileInfos 用户传入的文件信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFileInfos(FileInfo [] FileInfos) {
+        this.FileInfos = FileInfos;
     }
 
     public MsgRecord() {
@@ -619,6 +717,12 @@ public class MsgRecord extends AbstractModel {
         if (source.TaskFlow != null) {
             this.TaskFlow = new TaskFlowInfo(source.TaskFlow);
         }
+        if (source.FileInfos != null) {
+            this.FileInfos = new FileInfo[source.FileInfos.length];
+            for (int i = 0; i < source.FileInfos.length; i++) {
+                this.FileInfos[i] = new FileInfo(source.FileInfos[i]);
+            }
+        }
     }
 
 
@@ -647,6 +751,7 @@ public class MsgRecord extends AbstractModel {
         this.setParamSimple(map, prefix + "ReplyMethod", this.ReplyMethod);
         this.setParamArraySimple(map, prefix + "OptionCards.", this.OptionCards);
         this.setParamObj(map, prefix + "TaskFlow.", this.TaskFlow);
+        this.setParamArrayObj(map, prefix + "FileInfos.", this.FileInfos);
 
     }
 }

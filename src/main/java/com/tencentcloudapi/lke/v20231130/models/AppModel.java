@@ -56,6 +56,14 @@ public class AppModel extends AbstractModel {
     private String AliasName;
 
     /**
+    * token余量
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TokenBalance")
+    @Expose
+    private Float TokenBalance;
+
+    /**
      * Get 模型名称
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Name 模型名称
@@ -135,6 +143,26 @@ public class AppModel extends AbstractModel {
         this.AliasName = AliasName;
     }
 
+    /**
+     * Get token余量
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TokenBalance token余量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float getTokenBalance() {
+        return this.TokenBalance;
+    }
+
+    /**
+     * Set token余量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TokenBalance token余量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTokenBalance(Float TokenBalance) {
+        this.TokenBalance = TokenBalance;
+    }
+
     public AppModel() {
     }
 
@@ -155,6 +183,9 @@ public class AppModel extends AbstractModel {
         if (source.AliasName != null) {
             this.AliasName = new String(source.AliasName);
         }
+        if (source.TokenBalance != null) {
+            this.TokenBalance = new Float(source.TokenBalance);
+        }
     }
 
 
@@ -166,6 +197,7 @@ public class AppModel extends AbstractModel {
         this.setParamSimple(map, prefix + "Desc", this.Desc);
         this.setParamSimple(map, prefix + "ContextLimit", this.ContextLimit);
         this.setParamSimple(map, prefix + "AliasName", this.AliasName);
+        this.setParamSimple(map, prefix + "TokenBalance", this.TokenBalance);
 
     }
 }

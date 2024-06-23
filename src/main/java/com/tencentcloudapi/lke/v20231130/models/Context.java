@@ -64,6 +64,14 @@ public class Context extends AbstractModel {
     private String Content;
 
     /**
+    * 文档信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FileInfos")
+    @Expose
+    private MsgFileInfo [] FileInfos;
+
+    /**
      * Get 消息记录ID信息
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return RecordBizId 消息记录ID信息
@@ -163,6 +171,26 @@ public class Context extends AbstractModel {
         this.Content = Content;
     }
 
+    /**
+     * Get 文档信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FileInfos 文档信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public MsgFileInfo [] getFileInfos() {
+        return this.FileInfos;
+    }
+
+    /**
+     * Set 文档信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FileInfos 文档信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFileInfos(MsgFileInfo [] FileInfos) {
+        this.FileInfos = FileInfos;
+    }
+
     public Context() {
     }
 
@@ -186,6 +214,12 @@ public class Context extends AbstractModel {
         if (source.Content != null) {
             this.Content = new String(source.Content);
         }
+        if (source.FileInfos != null) {
+            this.FileInfos = new MsgFileInfo[source.FileInfos.length];
+            for (int i = 0; i < source.FileInfos.length; i++) {
+                this.FileInfos[i] = new MsgFileInfo(source.FileInfos[i]);
+            }
+        }
     }
 
 
@@ -198,6 +232,7 @@ public class Context extends AbstractModel {
         this.setParamSimple(map, prefix + "NickName", this.NickName);
         this.setParamSimple(map, prefix + "Avatar", this.Avatar);
         this.setParamSimple(map, prefix + "Content", this.Content);
+        this.setParamArrayObj(map, prefix + "FileInfos.", this.FileInfos);
 
     }
 }

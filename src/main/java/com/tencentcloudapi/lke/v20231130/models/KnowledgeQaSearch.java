@@ -80,6 +80,14 @@ public class KnowledgeQaSearch extends AbstractModel {
     private Long DocTopN;
 
     /**
+    * 检索置信度，针对文档和问答有效，最小0.01，最大0.99
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Confidence")
+    @Expose
+    private Float Confidence;
+
+    /**
      * Get 知识来源 doc：文档，qa：问答  taskflow：业务流程，search：搜索增强
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Type 知识来源 doc：文档，qa：问答  taskflow：业务流程，search：搜索增强
@@ -219,6 +227,26 @@ public class KnowledgeQaSearch extends AbstractModel {
         this.DocTopN = DocTopN;
     }
 
+    /**
+     * Get 检索置信度，针对文档和问答有效，最小0.01，最大0.99
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Confidence 检索置信度，针对文档和问答有效，最小0.01，最大0.99
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float getConfidence() {
+        return this.Confidence;
+    }
+
+    /**
+     * Set 检索置信度，针对文档和问答有效，最小0.01，最大0.99
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Confidence 检索置信度，针对文档和问答有效，最小0.01，最大0.99
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setConfidence(Float Confidence) {
+        this.Confidence = Confidence;
+    }
+
     public KnowledgeQaSearch() {
     }
 
@@ -248,6 +276,9 @@ public class KnowledgeQaSearch extends AbstractModel {
         if (source.DocTopN != null) {
             this.DocTopN = new Long(source.DocTopN);
         }
+        if (source.Confidence != null) {
+            this.Confidence = new Float(source.Confidence);
+        }
     }
 
 
@@ -262,6 +293,7 @@ public class KnowledgeQaSearch extends AbstractModel {
         this.setParamSimple(map, prefix + "IsEnabled", this.IsEnabled);
         this.setParamSimple(map, prefix + "QaTopN", this.QaTopN);
         this.setParamSimple(map, prefix + "DocTopN", this.DocTopN);
+        this.setParamSimple(map, prefix + "Confidence", this.Confidence);
 
     }
 }

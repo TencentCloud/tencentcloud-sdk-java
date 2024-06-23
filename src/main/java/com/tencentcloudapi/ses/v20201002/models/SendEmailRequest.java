@@ -104,6 +104,20 @@ public class SendEmailRequest extends AbstractModel {
     private Long TriggerType;
 
     /**
+    * smtp头中的Message-Id字段
+    */
+    @SerializedName("SmtpMessageId")
+    @Expose
+    private String SmtpMessageId;
+
+    /**
+    * smtp头中可以设置的其它字段
+    */
+    @SerializedName("SmtpHeaders")
+    @Expose
+    private String SmtpHeaders;
+
+    /**
      * Get 发件人邮箱地址。不使用别名时请直接填写发件人邮箱地址，例如：noreply@mail.qcloud.com
 如需填写发件人别名时，请按照如下方式（注意别名与邮箱地址之间必须使用一个空格隔开）：别名+一个空格+<邮箱地址> 
      * @return FromEmailAddress 发件人邮箱地址。不使用别名时请直接填写发件人邮箱地址，例如：noreply@mail.qcloud.com
@@ -291,6 +305,38 @@ public class SendEmailRequest extends AbstractModel {
         this.TriggerType = TriggerType;
     }
 
+    /**
+     * Get smtp头中的Message-Id字段 
+     * @return SmtpMessageId smtp头中的Message-Id字段
+     */
+    public String getSmtpMessageId() {
+        return this.SmtpMessageId;
+    }
+
+    /**
+     * Set smtp头中的Message-Id字段
+     * @param SmtpMessageId smtp头中的Message-Id字段
+     */
+    public void setSmtpMessageId(String SmtpMessageId) {
+        this.SmtpMessageId = SmtpMessageId;
+    }
+
+    /**
+     * Get smtp头中可以设置的其它字段 
+     * @return SmtpHeaders smtp头中可以设置的其它字段
+     */
+    public String getSmtpHeaders() {
+        return this.SmtpHeaders;
+    }
+
+    /**
+     * Set smtp头中可以设置的其它字段
+     * @param SmtpHeaders smtp头中可以设置的其它字段
+     */
+    public void setSmtpHeaders(String SmtpHeaders) {
+        this.SmtpHeaders = SmtpHeaders;
+    }
+
     public SendEmailRequest() {
     }
 
@@ -344,6 +390,12 @@ public class SendEmailRequest extends AbstractModel {
         if (source.TriggerType != null) {
             this.TriggerType = new Long(source.TriggerType);
         }
+        if (source.SmtpMessageId != null) {
+            this.SmtpMessageId = new String(source.SmtpMessageId);
+        }
+        if (source.SmtpHeaders != null) {
+            this.SmtpHeaders = new String(source.SmtpHeaders);
+        }
     }
 
 
@@ -362,6 +414,8 @@ public class SendEmailRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Attachments.", this.Attachments);
         this.setParamSimple(map, prefix + "Unsubscribe", this.Unsubscribe);
         this.setParamSimple(map, prefix + "TriggerType", this.TriggerType);
+        this.setParamSimple(map, prefix + "SmtpMessageId", this.SmtpMessageId);
+        this.setParamSimple(map, prefix + "SmtpHeaders", this.SmtpHeaders);
 
     }
 }

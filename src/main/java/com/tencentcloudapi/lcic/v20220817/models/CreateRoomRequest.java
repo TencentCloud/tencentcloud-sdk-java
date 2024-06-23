@@ -204,7 +204,7 @@ video 纯视频
     private Long EndDelayTime;
 
     /**
-    * 直播类型：0 常规（默认）1 伪直播
+    * 直播类型：0 常规（默认）1 伪直播 2 RTMP推流直播
     */
     @SerializedName("LiveType")
     @Expose
@@ -218,7 +218,7 @@ video 纯视频
     private String RecordLiveUrl;
 
     /**
-    * 是否自动开始上课：0 不自动上课（默认） 1 自动上课 live_type=1的时候有效
+    * 是否自动开始上课：0 不自动上课（默认） 1 自动上课 live_type=1或2的时候有效
     */
     @SerializedName("EnableAutoStart")
     @Expose
@@ -690,16 +690,16 @@ video 纯视频
     }
 
     /**
-     * Get 直播类型：0 常规（默认）1 伪直播 
-     * @return LiveType 直播类型：0 常规（默认）1 伪直播
+     * Get 直播类型：0 常规（默认）1 伪直播 2 RTMP推流直播 
+     * @return LiveType 直播类型：0 常规（默认）1 伪直播 2 RTMP推流直播
      */
     public Long getLiveType() {
         return this.LiveType;
     }
 
     /**
-     * Set 直播类型：0 常规（默认）1 伪直播
-     * @param LiveType 直播类型：0 常规（默认）1 伪直播
+     * Set 直播类型：0 常规（默认）1 伪直播 2 RTMP推流直播
+     * @param LiveType 直播类型：0 常规（默认）1 伪直播 2 RTMP推流直播
      */
     public void setLiveType(Long LiveType) {
         this.LiveType = LiveType;
@@ -722,16 +722,16 @@ video 纯视频
     }
 
     /**
-     * Get 是否自动开始上课：0 不自动上课（默认） 1 自动上课 live_type=1的时候有效 
-     * @return EnableAutoStart 是否自动开始上课：0 不自动上课（默认） 1 自动上课 live_type=1的时候有效
+     * Get 是否自动开始上课：0 不自动上课（默认） 1 自动上课 live_type=1或2的时候有效 
+     * @return EnableAutoStart 是否自动开始上课：0 不自动上课（默认） 1 自动上课 live_type=1或2的时候有效
      */
     public Long getEnableAutoStart() {
         return this.EnableAutoStart;
     }
 
     /**
-     * Set 是否自动开始上课：0 不自动上课（默认） 1 自动上课 live_type=1的时候有效
-     * @param EnableAutoStart 是否自动开始上课：0 不自动上课（默认） 1 自动上课 live_type=1的时候有效
+     * Set 是否自动开始上课：0 不自动上课（默认） 1 自动上课 live_type=1或2的时候有效
+     * @param EnableAutoStart 是否自动开始上课：0 不自动上课（默认） 1 自动上课 live_type=1或2的时候有效
      */
     public void setEnableAutoStart(Long EnableAutoStart) {
         this.EnableAutoStart = EnableAutoStart;

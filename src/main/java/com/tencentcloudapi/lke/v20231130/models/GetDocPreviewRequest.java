@@ -31,11 +31,18 @@ public class GetDocPreviewRequest extends AbstractModel {
     private String DocBizId;
 
     /**
-    * 机器人ID
+    * 应用ID
     */
     @SerializedName("BotBizId")
     @Expose
     private String BotBizId;
+
+    /**
+    * 存储类型: offline:离线文件，realtime:实时文件；为空默认为offline
+    */
+    @SerializedName("TypeKey")
+    @Expose
+    private String TypeKey;
 
     /**
      * Get 文档业务ID 
@@ -54,19 +61,35 @@ public class GetDocPreviewRequest extends AbstractModel {
     }
 
     /**
-     * Get 机器人ID 
-     * @return BotBizId 机器人ID
+     * Get 应用ID 
+     * @return BotBizId 应用ID
      */
     public String getBotBizId() {
         return this.BotBizId;
     }
 
     /**
-     * Set 机器人ID
-     * @param BotBizId 机器人ID
+     * Set 应用ID
+     * @param BotBizId 应用ID
      */
     public void setBotBizId(String BotBizId) {
         this.BotBizId = BotBizId;
+    }
+
+    /**
+     * Get 存储类型: offline:离线文件，realtime:实时文件；为空默认为offline 
+     * @return TypeKey 存储类型: offline:离线文件，realtime:实时文件；为空默认为offline
+     */
+    public String getTypeKey() {
+        return this.TypeKey;
+    }
+
+    /**
+     * Set 存储类型: offline:离线文件，realtime:实时文件；为空默认为offline
+     * @param TypeKey 存储类型: offline:离线文件，realtime:实时文件；为空默认为offline
+     */
+    public void setTypeKey(String TypeKey) {
+        this.TypeKey = TypeKey;
     }
 
     public GetDocPreviewRequest() {
@@ -83,6 +106,9 @@ public class GetDocPreviewRequest extends AbstractModel {
         if (source.BotBizId != null) {
             this.BotBizId = new String(source.BotBizId);
         }
+        if (source.TypeKey != null) {
+            this.TypeKey = new String(source.TypeKey);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class GetDocPreviewRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DocBizId", this.DocBizId);
         this.setParamSimple(map, prefix + "BotBizId", this.BotBizId);
+        this.setParamSimple(map, prefix + "TypeKey", this.TypeKey);
 
     }
 }

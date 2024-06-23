@@ -24,72 +24,95 @@ import java.util.HashMap;
 public class DescribeStorageCredentialRequest extends AbstractModel {
 
     /**
-    * 机器人ID
+    * 应用ID
     */
     @SerializedName("BotBizId")
     @Expose
     private String BotBizId;
 
     /**
-    * 文件类型
+    * 文件类型,正常的文件名类型后缀，例如 xlsx、pdf、 docx、png 等
     */
     @SerializedName("FileType")
     @Expose
     private String FileType;
 
     /**
-    * 权限场景，是否公有权限
+    * IsPublic为空用于上传文件时选择场景，当上传为图片文件是IsPublic为true，上传文档文件时场景IsPublic为false
     */
     @SerializedName("IsPublic")
     @Expose
     private Boolean IsPublic;
 
     /**
-     * Get 机器人ID 
-     * @return BotBizId 机器人ID
+    * 存储类型: offline:离线文件，realtime:实时文件；为空默认为offline
+    */
+    @SerializedName("TypeKey")
+    @Expose
+    private String TypeKey;
+
+    /**
+     * Get 应用ID 
+     * @return BotBizId 应用ID
      */
     public String getBotBizId() {
         return this.BotBizId;
     }
 
     /**
-     * Set 机器人ID
-     * @param BotBizId 机器人ID
+     * Set 应用ID
+     * @param BotBizId 应用ID
      */
     public void setBotBizId(String BotBizId) {
         this.BotBizId = BotBizId;
     }
 
     /**
-     * Get 文件类型 
-     * @return FileType 文件类型
+     * Get 文件类型,正常的文件名类型后缀，例如 xlsx、pdf、 docx、png 等 
+     * @return FileType 文件类型,正常的文件名类型后缀，例如 xlsx、pdf、 docx、png 等
      */
     public String getFileType() {
         return this.FileType;
     }
 
     /**
-     * Set 文件类型
-     * @param FileType 文件类型
+     * Set 文件类型,正常的文件名类型后缀，例如 xlsx、pdf、 docx、png 等
+     * @param FileType 文件类型,正常的文件名类型后缀，例如 xlsx、pdf、 docx、png 等
      */
     public void setFileType(String FileType) {
         this.FileType = FileType;
     }
 
     /**
-     * Get 权限场景，是否公有权限 
-     * @return IsPublic 权限场景，是否公有权限
+     * Get IsPublic为空用于上传文件时选择场景，当上传为图片文件是IsPublic为true，上传文档文件时场景IsPublic为false 
+     * @return IsPublic IsPublic为空用于上传文件时选择场景，当上传为图片文件是IsPublic为true，上传文档文件时场景IsPublic为false
      */
     public Boolean getIsPublic() {
         return this.IsPublic;
     }
 
     /**
-     * Set 权限场景，是否公有权限
-     * @param IsPublic 权限场景，是否公有权限
+     * Set IsPublic为空用于上传文件时选择场景，当上传为图片文件是IsPublic为true，上传文档文件时场景IsPublic为false
+     * @param IsPublic IsPublic为空用于上传文件时选择场景，当上传为图片文件是IsPublic为true，上传文档文件时场景IsPublic为false
      */
     public void setIsPublic(Boolean IsPublic) {
         this.IsPublic = IsPublic;
+    }
+
+    /**
+     * Get 存储类型: offline:离线文件，realtime:实时文件；为空默认为offline 
+     * @return TypeKey 存储类型: offline:离线文件，realtime:实时文件；为空默认为offline
+     */
+    public String getTypeKey() {
+        return this.TypeKey;
+    }
+
+    /**
+     * Set 存储类型: offline:离线文件，realtime:实时文件；为空默认为offline
+     * @param TypeKey 存储类型: offline:离线文件，realtime:实时文件；为空默认为offline
+     */
+    public void setTypeKey(String TypeKey) {
+        this.TypeKey = TypeKey;
     }
 
     public DescribeStorageCredentialRequest() {
@@ -109,6 +132,9 @@ public class DescribeStorageCredentialRequest extends AbstractModel {
         if (source.IsPublic != null) {
             this.IsPublic = new Boolean(source.IsPublic);
         }
+        if (source.TypeKey != null) {
+            this.TypeKey = new String(source.TypeKey);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class DescribeStorageCredentialRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "BotBizId", this.BotBizId);
         this.setParamSimple(map, prefix + "FileType", this.FileType);
         this.setParamSimple(map, prefix + "IsPublic", this.IsPublic);
+        this.setParamSimple(map, prefix + "TypeKey", this.TypeKey);
 
     }
 }
