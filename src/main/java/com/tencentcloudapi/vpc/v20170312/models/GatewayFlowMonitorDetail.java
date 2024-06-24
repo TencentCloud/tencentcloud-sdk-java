@@ -59,6 +59,20 @@ public class GatewayFlowMonitorDetail extends AbstractModel {
     private Long OutTraffic;
 
     /**
+    * 并发连接数。仅标准型nat支持此参数。
+    */
+    @SerializedName("ConcurrentConnectionCount")
+    @Expose
+    private Long ConcurrentConnectionCount;
+
+    /**
+    * 新建连接速率。仅标准型nat支持此参数。
+    */
+    @SerializedName("NewConnectionRate")
+    @Expose
+    private Long NewConnectionRate;
+
+    /**
      * Get 来源`IP`。 
      * @return PrivateIpAddress 来源`IP`。
      */
@@ -138,6 +152,38 @@ public class GatewayFlowMonitorDetail extends AbstractModel {
         this.OutTraffic = OutTraffic;
     }
 
+    /**
+     * Get 并发连接数。仅标准型nat支持此参数。 
+     * @return ConcurrentConnectionCount 并发连接数。仅标准型nat支持此参数。
+     */
+    public Long getConcurrentConnectionCount() {
+        return this.ConcurrentConnectionCount;
+    }
+
+    /**
+     * Set 并发连接数。仅标准型nat支持此参数。
+     * @param ConcurrentConnectionCount 并发连接数。仅标准型nat支持此参数。
+     */
+    public void setConcurrentConnectionCount(Long ConcurrentConnectionCount) {
+        this.ConcurrentConnectionCount = ConcurrentConnectionCount;
+    }
+
+    /**
+     * Get 新建连接速率。仅标准型nat支持此参数。 
+     * @return NewConnectionRate 新建连接速率。仅标准型nat支持此参数。
+     */
+    public Long getNewConnectionRate() {
+        return this.NewConnectionRate;
+    }
+
+    /**
+     * Set 新建连接速率。仅标准型nat支持此参数。
+     * @param NewConnectionRate 新建连接速率。仅标准型nat支持此参数。
+     */
+    public void setNewConnectionRate(Long NewConnectionRate) {
+        this.NewConnectionRate = NewConnectionRate;
+    }
+
     public GatewayFlowMonitorDetail() {
     }
 
@@ -161,6 +207,12 @@ public class GatewayFlowMonitorDetail extends AbstractModel {
         if (source.OutTraffic != null) {
             this.OutTraffic = new Long(source.OutTraffic);
         }
+        if (source.ConcurrentConnectionCount != null) {
+            this.ConcurrentConnectionCount = new Long(source.ConcurrentConnectionCount);
+        }
+        if (source.NewConnectionRate != null) {
+            this.NewConnectionRate = new Long(source.NewConnectionRate);
+        }
     }
 
 
@@ -173,6 +225,8 @@ public class GatewayFlowMonitorDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "OutPkg", this.OutPkg);
         this.setParamSimple(map, prefix + "InTraffic", this.InTraffic);
         this.setParamSimple(map, prefix + "OutTraffic", this.OutTraffic);
+        this.setParamSimple(map, prefix + "ConcurrentConnectionCount", this.ConcurrentConnectionCount);
+        this.setParamSimple(map, prefix + "NewConnectionRate", this.NewConnectionRate);
 
     }
 }

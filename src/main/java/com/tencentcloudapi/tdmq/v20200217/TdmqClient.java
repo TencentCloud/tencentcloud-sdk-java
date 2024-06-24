@@ -778,6 +778,17 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
+     *查询RabbitMQ exchange 列表
+     * @param req DescribeRabbitMQExchangesRequest
+     * @return DescribeRabbitMQExchangesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRabbitMQExchangesResponse DescribeRabbitMQExchanges(DescribeRabbitMQExchangesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRabbitMQExchanges", DescribeRabbitMQExchangesResponse.class);
+    }
+
+    /**
      *RabbitMQ专享版查询节点列表
      * @param req DescribeRabbitMQNodeListRequest
      * @return DescribeRabbitMQNodeListResponse

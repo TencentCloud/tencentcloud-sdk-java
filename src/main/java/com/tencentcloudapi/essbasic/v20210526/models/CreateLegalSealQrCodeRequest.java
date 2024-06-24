@@ -108,7 +108,9 @@ public class CreateLegalSealQrCodeRequest extends AbstractModel {
     /**
      * Get 操作人信息 
      * @return Operator 操作人信息
+     * @deprecated
      */
+    @Deprecated
     public UserInfo getOperator() {
         return this.Operator;
     }
@@ -116,7 +118,9 @@ public class CreateLegalSealQrCodeRequest extends AbstractModel {
     /**
      * Set 操作人信息
      * @param Operator 操作人信息
+     * @deprecated
      */
+    @Deprecated
     public void setOperator(UserInfo Operator) {
         this.Operator = Operator;
     }
@@ -124,7 +128,9 @@ public class CreateLegalSealQrCodeRequest extends AbstractModel {
     /**
      * Get 企业信息 
      * @return Organization 企业信息
+     * @deprecated
      */
+    @Deprecated
     public OrganizationInfo getOrganization() {
         return this.Organization;
     }
@@ -132,7 +138,9 @@ public class CreateLegalSealQrCodeRequest extends AbstractModel {
     /**
      * Set 企业信息
      * @param Organization 企业信息
+     * @deprecated
      */
+    @Deprecated
     public void setOrganization(OrganizationInfo Organization) {
         this.Organization = Organization;
     }

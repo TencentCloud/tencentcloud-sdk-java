@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class WaterMarkImage extends AbstractModel {
 
     /**
-    * 下载的url地址， 只支持jpg， png，大小限制不超过5M。
+    * 下载的url地址， 只支持jpg, png, jpeg，大小限制不超过5M。注意，url必须携带格式后缀，url内只支持特定的字符串, 范围是a-z A-Z 0-9 '-', '.', '_', '~', ':', '/', '?', '#', '[', ']' '@', '!', '&', '(', ')', '*', '+', ',', '%', '='
     */
     @SerializedName("WaterMarkUrl")
     @Expose
@@ -59,16 +59,16 @@ public class WaterMarkImage extends AbstractModel {
     private Long Height;
 
     /**
-     * Get 下载的url地址， 只支持jpg， png，大小限制不超过5M。 
-     * @return WaterMarkUrl 下载的url地址， 只支持jpg， png，大小限制不超过5M。
+     * Get 下载的url地址， 只支持jpg, png, jpeg，大小限制不超过5M。注意，url必须携带格式后缀，url内只支持特定的字符串, 范围是a-z A-Z 0-9 '-', '.', '_', '~', ':', '/', '?', '#', '[', ']' '@', '!', '&', '(', ')', '*', '+', ',', '%', '=' 
+     * @return WaterMarkUrl 下载的url地址， 只支持jpg, png, jpeg，大小限制不超过5M。注意，url必须携带格式后缀，url内只支持特定的字符串, 范围是a-z A-Z 0-9 '-', '.', '_', '~', ':', '/', '?', '#', '[', ']' '@', '!', '&', '(', ')', '*', '+', ',', '%', '='
      */
     public String getWaterMarkUrl() {
         return this.WaterMarkUrl;
     }
 
     /**
-     * Set 下载的url地址， 只支持jpg， png，大小限制不超过5M。
-     * @param WaterMarkUrl 下载的url地址， 只支持jpg， png，大小限制不超过5M。
+     * Set 下载的url地址， 只支持jpg, png, jpeg，大小限制不超过5M。注意，url必须携带格式后缀，url内只支持特定的字符串, 范围是a-z A-Z 0-9 '-', '.', '_', '~', ':', '/', '?', '#', '[', ']' '@', '!', '&', '(', ')', '*', '+', ',', '%', '='
+     * @param WaterMarkUrl 下载的url地址， 只支持jpg, png, jpeg，大小限制不超过5M。注意，url必须携带格式后缀，url内只支持特定的字符串, 范围是a-z A-Z 0-9 '-', '.', '_', '~', ':', '/', '?', '#', '[', ']' '@', '!', '&', '(', ')', '*', '+', ',', '%', '='
      */
     public void setWaterMarkUrl(String WaterMarkUrl) {
         this.WaterMarkUrl = WaterMarkUrl;

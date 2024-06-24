@@ -710,6 +710,17 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *查询引擎规格详情
+     * @param req DescribeDataEnginesScaleDetailRequest
+     * @return DescribeDataEnginesScaleDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDataEnginesScaleDetailResponse DescribeDataEnginesScaleDetail(DescribeDataEnginesScaleDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDataEnginesScaleDetail", DescribeDataEnginesScaleDetailResponse.class);
+    }
+
+    /**
      *本接口（DescribeDatabases）用于查询数据库列表。
      * @param req DescribeDatabasesRequest
      * @return DescribeDatabasesResponse

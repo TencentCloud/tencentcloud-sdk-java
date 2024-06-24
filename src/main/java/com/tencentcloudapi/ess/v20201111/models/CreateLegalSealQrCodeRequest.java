@@ -89,7 +89,9 @@ public class CreateLegalSealQrCodeRequest extends AbstractModel {
     /**
      * Get 机构信息，暂未开放 
      * @return Organization 机构信息，暂未开放
+     * @deprecated
      */
+    @Deprecated
     public OrganizationInfo getOrganization() {
         return this.Organization;
     }
@@ -97,7 +99,9 @@ public class CreateLegalSealQrCodeRequest extends AbstractModel {
     /**
      * Set 机构信息，暂未开放
      * @param Organization 机构信息，暂未开放
+     * @deprecated
      */
+    @Deprecated
     public void setOrganization(OrganizationInfo Organization) {
         this.Organization = Organization;
     }

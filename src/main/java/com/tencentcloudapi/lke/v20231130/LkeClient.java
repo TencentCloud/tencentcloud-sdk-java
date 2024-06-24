@@ -61,6 +61,17 @@ public class LkeClient extends AbstractClient{
     }
 
     /**
+     *接口支持图片和PDF转可编辑word格式文件，将文件中的图片、文本、表格等元素识别，并根据位置进行还原。
+     * @param req ConvertDocumentRequest
+     * @return ConvertDocumentResponse
+     * @throws TencentCloudSDKException
+     */
+    public ConvertDocumentResponse ConvertDocument(ConvertDocumentRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ConvertDocument", ConvertDocumentResponse.class);
+    }
+
+    /**
      *创建知识引擎应用。
      * @param req CreateAppRequest
      * @return CreateAppResponse
@@ -383,6 +394,17 @@ public class LkeClient extends AbstractClient{
     }
 
     /**
+     *回答类型数据统计
+     * @param req GetAnswerTypeDataCountRequest
+     * @return GetAnswerTypeDataCountResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetAnswerTypeDataCountResponse GetAnswerTypeDataCount(GetAnswerTypeDataCountRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetAnswerTypeDataCount", GetAnswerTypeDataCountResponse.class);
+    }
+
+    /**
      *获取模型列表
      * @param req GetAppKnowledgeCountRequest
      * @return GetAppKnowledgeCountResponse
@@ -425,6 +447,17 @@ public class LkeClient extends AbstractClient{
     public GetEmbeddingResponse GetEmbedding(GetEmbeddingRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "GetEmbedding", GetEmbeddingResponse.class);
+    }
+
+    /**
+     *点赞点踩数据统计
+     * @param req GetLikeDataCountRequest
+     * @return GetLikeDataCountResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetLikeDataCountResponse GetLikeDataCount(GetLikeDataCountRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetLikeDataCount", GetLikeDataCountResponse.class);
     }
 
     /**

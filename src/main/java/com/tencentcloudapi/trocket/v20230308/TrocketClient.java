@@ -427,6 +427,17 @@ public class TrocketClient extends AbstractClient{
     }
 
     /**
+     *查询产品售卖规格，针对 RocketMQ 5.x 集群。
+     * @param req DescribeProductSKUsRequest
+     * @return DescribeProductSKUsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeProductSKUsResponse DescribeProductSKUs(DescribeProductSKUsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeProductSKUs", DescribeProductSKUsResponse.class);
+    }
+
+    /**
      *查询角色列表，Filter参数使用说明如下：
 
 1. RoleName，角色名称模糊搜索

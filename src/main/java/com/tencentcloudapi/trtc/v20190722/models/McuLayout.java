@@ -124,6 +124,21 @@ public class McuLayout extends AbstractModel {
     private McuBackgroundCustomRender BackgroundCustomRender;
 
     /**
+    * 子背景色生效模式，默认值为0表示均不生效。
+bit0:占位图缩放是否生效。
+bit1:上行流缩放是否生效。
+您可以将相应bit位置1启动生效，例如：
+0(00)表示子背景色不生效。
+1(01)表示子背景色只在占位图缩放时生效。
+2(10)表示子背景色只在上行流缩放时生效。
+3(11)表示子背景色在占位图缩放和上行流缩放时均生效。
+
+    */
+    @SerializedName("BackGroundColorMode")
+    @Expose
+    private Long BackGroundColorMode;
+
+    /**
      * Get 用户媒体流参数。不填时腾讯云后台按照上行主播的进房顺序自动填充。 
      * @return UserMediaStream 用户媒体流参数。不填时腾讯云后台按照上行主播的进房顺序自动填充。
      */
@@ -367,6 +382,54 @@ public class McuLayout extends AbstractModel {
         this.BackgroundCustomRender = BackgroundCustomRender;
     }
 
+    /**
+     * Get 子背景色生效模式，默认值为0表示均不生效。
+bit0:占位图缩放是否生效。
+bit1:上行流缩放是否生效。
+您可以将相应bit位置1启动生效，例如：
+0(00)表示子背景色不生效。
+1(01)表示子背景色只在占位图缩放时生效。
+2(10)表示子背景色只在上行流缩放时生效。
+3(11)表示子背景色在占位图缩放和上行流缩放时均生效。
+ 
+     * @return BackGroundColorMode 子背景色生效模式，默认值为0表示均不生效。
+bit0:占位图缩放是否生效。
+bit1:上行流缩放是否生效。
+您可以将相应bit位置1启动生效，例如：
+0(00)表示子背景色不生效。
+1(01)表示子背景色只在占位图缩放时生效。
+2(10)表示子背景色只在上行流缩放时生效。
+3(11)表示子背景色在占位图缩放和上行流缩放时均生效。
+
+     */
+    public Long getBackGroundColorMode() {
+        return this.BackGroundColorMode;
+    }
+
+    /**
+     * Set 子背景色生效模式，默认值为0表示均不生效。
+bit0:占位图缩放是否生效。
+bit1:上行流缩放是否生效。
+您可以将相应bit位置1启动生效，例如：
+0(00)表示子背景色不生效。
+1(01)表示子背景色只在占位图缩放时生效。
+2(10)表示子背景色只在上行流缩放时生效。
+3(11)表示子背景色在占位图缩放和上行流缩放时均生效。
+
+     * @param BackGroundColorMode 子背景色生效模式，默认值为0表示均不生效。
+bit0:占位图缩放是否生效。
+bit1:上行流缩放是否生效。
+您可以将相应bit位置1启动生效，例如：
+0(00)表示子背景色不生效。
+1(01)表示子背景色只在占位图缩放时生效。
+2(10)表示子背景色只在上行流缩放时生效。
+3(11)表示子背景色在占位图缩放和上行流缩放时均生效。
+
+     */
+    public void setBackGroundColorMode(Long BackGroundColorMode) {
+        this.BackGroundColorMode = BackGroundColorMode;
+    }
+
     public McuLayout() {
     }
 
@@ -414,6 +477,9 @@ public class McuLayout extends AbstractModel {
         if (source.BackgroundCustomRender != null) {
             this.BackgroundCustomRender = new McuBackgroundCustomRender(source.BackgroundCustomRender);
         }
+        if (source.BackGroundColorMode != null) {
+            this.BackGroundColorMode = new Long(source.BackGroundColorMode);
+        }
     }
 
 
@@ -434,6 +500,7 @@ public class McuLayout extends AbstractModel {
         this.setParamSimple(map, prefix + "BackgroundRenderMode", this.BackgroundRenderMode);
         this.setParamSimple(map, prefix + "TransparentUrl", this.TransparentUrl);
         this.setParamObj(map, prefix + "BackgroundCustomRender.", this.BackgroundCustomRender);
+        this.setParamSimple(map, prefix + "BackGroundColorMode", this.BackGroundColorMode);
 
     }
 }

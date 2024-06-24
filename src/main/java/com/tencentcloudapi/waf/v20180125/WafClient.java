@@ -61,6 +61,17 @@ public class WafClient extends AbstractClient{
     }
 
     /**
+     *添加地域封禁中的地域信息
+     * @param req AddAreaBanAreasRequest
+     * @return AddAreaBanAreasResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddAreaBanAreasResponse AddAreaBanAreas(AddAreaBanAreasRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AddAreaBanAreas", AddAreaBanAreasResponse.class);
+    }
+
+    /**
      *供用户控制台调用，增加Tiga规则引擎白名单。
      * @param req AddAttackWhiteRuleRequest
      * @return AddAttackWhiteRuleResponse
