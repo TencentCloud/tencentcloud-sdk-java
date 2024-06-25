@@ -39,6 +39,17 @@ public class IoaClient extends AbstractClient{
     }
 
     /**
+     *以分页的方式查询账户目录列表,私有化调用path为：/capi/Assets/DescribeAccountGroups
+     * @param req DescribeAccountGroupsRequest
+     * @return DescribeAccountGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAccountGroupsResponse DescribeAccountGroups(DescribeAccountGroupsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAccountGroups", DescribeAccountGroupsResponse.class);
+    }
+
+    /**
      *查询满足条件的终端数据详情，私有化调用path为：/capi/Assets/Device/DescribeDevices
      * @param req DescribeDevicesRequest
      * @return DescribeDevicesResponse
@@ -47,6 +58,28 @@ public class IoaClient extends AbstractClient{
     public DescribeDevicesResponse DescribeDevices(DescribeDevicesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeDevices", DescribeDevicesResponse.class);
+    }
+
+    /**
+     *获取账号列表，支持分页，模糊搜索，私有化调用path为：/capi/Assets/Account/DescribeLocalAccounts
+     * @param req DescribeLocalAccountsRequest
+     * @return DescribeLocalAccountsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLocalAccountsResponse DescribeLocalAccounts(DescribeLocalAccountsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLocalAccounts", DescribeLocalAccountsResponse.class);
+    }
+
+    /**
+     *查询账户根分组详情，私有化调用path为：capi/Assets/DescribeRootAccountGroup
+     * @param req DescribeRootAccountGroupRequest
+     * @return DescribeRootAccountGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRootAccountGroupResponse DescribeRootAccountGroup(DescribeRootAccountGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRootAccountGroup", DescribeRootAccountGroupResponse.class);
     }
 
 }

@@ -45,6 +45,13 @@ public class PrometheusAgentInfo extends AbstractModel {
     private String Describe;
 
     /**
+    * 集群所在地域
+    */
+    @SerializedName("Region")
+    @Expose
+    private String Region;
+
+    /**
      * Get 集群类型 
      * @return ClusterType 集群类型
      */
@@ -92,6 +99,22 @@ public class PrometheusAgentInfo extends AbstractModel {
         this.Describe = Describe;
     }
 
+    /**
+     * Get 集群所在地域 
+     * @return Region 集群所在地域
+     */
+    public String getRegion() {
+        return this.Region;
+    }
+
+    /**
+     * Set 集群所在地域
+     * @param Region 集群所在地域
+     */
+    public void setRegion(String Region) {
+        this.Region = Region;
+    }
+
     public PrometheusAgentInfo() {
     }
 
@@ -109,6 +132,9 @@ public class PrometheusAgentInfo extends AbstractModel {
         if (source.Describe != null) {
             this.Describe = new String(source.Describe);
         }
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class PrometheusAgentInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "ClusterType", this.ClusterType);
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "Describe", this.Describe);
+        this.setParamSimple(map, prefix + "Region", this.Region);
 
     }
 }

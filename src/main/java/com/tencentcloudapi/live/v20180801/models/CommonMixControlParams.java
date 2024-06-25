@@ -48,6 +48,14 @@ public class CommonMixControlParams extends AbstractModel {
     private Long PassInputSei;
 
     /**
+    * 取值范围[0,1]
+填1时，图片输入中的透明通道生效。
+    */
+    @SerializedName("UsePictureTransparent")
+    @Expose
+    private Long UsePictureTransparent;
+
+    /**
      * Get 取值范围[0,1]。
 填1时，当参数中图层分辨率参数与视频实际分辨率不一致时，自动从视频中按图层设置的分辨率比例进行裁剪。 
      * @return UseMixCropCenter 取值范围[0,1]。
@@ -107,6 +115,26 @@ public class CommonMixControlParams extends AbstractModel {
         this.PassInputSei = PassInputSei;
     }
 
+    /**
+     * Get 取值范围[0,1]
+填1时，图片输入中的透明通道生效。 
+     * @return UsePictureTransparent 取值范围[0,1]
+填1时，图片输入中的透明通道生效。
+     */
+    public Long getUsePictureTransparent() {
+        return this.UsePictureTransparent;
+    }
+
+    /**
+     * Set 取值范围[0,1]
+填1时，图片输入中的透明通道生效。
+     * @param UsePictureTransparent 取值范围[0,1]
+填1时，图片输入中的透明通道生效。
+     */
+    public void setUsePictureTransparent(Long UsePictureTransparent) {
+        this.UsePictureTransparent = UsePictureTransparent;
+    }
+
     public CommonMixControlParams() {
     }
 
@@ -124,6 +152,9 @@ public class CommonMixControlParams extends AbstractModel {
         if (source.PassInputSei != null) {
             this.PassInputSei = new Long(source.PassInputSei);
         }
+        if (source.UsePictureTransparent != null) {
+            this.UsePictureTransparent = new Long(source.UsePictureTransparent);
+        }
     }
 
 
@@ -134,6 +165,7 @@ public class CommonMixControlParams extends AbstractModel {
         this.setParamSimple(map, prefix + "UseMixCropCenter", this.UseMixCropCenter);
         this.setParamSimple(map, prefix + "AllowCopy", this.AllowCopy);
         this.setParamSimple(map, prefix + "PassInputSei", this.PassInputSei);
+        this.setParamSimple(map, prefix + "UsePictureTransparent", this.UsePictureTransparent);
 
     }
 }

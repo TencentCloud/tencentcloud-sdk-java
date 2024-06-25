@@ -31,7 +31,7 @@ public class CreateDMSTableRequest extends AbstractModel {
     private Asset Asset;
 
     /**
-    * 表类型
+    * 表类型：EXTERNAL_TABLE, VIRTUAL_VIEW, MATERIALIZED_VIEW
     */
     @SerializedName("Type")
     @Expose
@@ -152,16 +152,16 @@ public class CreateDMSTableRequest extends AbstractModel {
     }
 
     /**
-     * Get 表类型 
-     * @return Type 表类型
+     * Get 表类型：EXTERNAL_TABLE, VIRTUAL_VIEW, MATERIALIZED_VIEW 
+     * @return Type 表类型：EXTERNAL_TABLE, VIRTUAL_VIEW, MATERIALIZED_VIEW
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 表类型
-     * @param Type 表类型
+     * Set 表类型：EXTERNAL_TABLE, VIRTUAL_VIEW, MATERIALIZED_VIEW
+     * @param Type 表类型：EXTERNAL_TABLE, VIRTUAL_VIEW, MATERIALIZED_VIEW
      */
     public void setType(String Type) {
         this.Type = Type;

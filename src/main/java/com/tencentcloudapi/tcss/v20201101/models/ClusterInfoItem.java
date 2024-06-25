@@ -73,7 +73,7 @@ public class ClusterInfoItem extends AbstractModel {
     private String Region;
 
     /**
-    * 监控组件的状态，为Defender_Uninstall、Defender_Normal、Defender_Error、Defender_Installing
+    * 防护状态: 已防护: Defended 未防护: UnDefended
     */
     @SerializedName("DefenderStatus")
     @Expose
@@ -212,12 +212,26 @@ public class ClusterInfoItem extends AbstractModel {
     private Long UnInstallAgentNodeCount;
 
     /**
-    * 计费核数
+    * 计费核数(弹性计费核数+普通计费核数)
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ChargeCoresCnt")
     @Expose
     private Long ChargeCoresCnt;
+
+    /**
+    * master 地址列表
+    */
+    @SerializedName("MasterAddresses")
+    @Expose
+    private String [] MasterAddresses;
+
+    /**
+    * 核数
+    */
+    @SerializedName("CoresCnt")
+    @Expose
+    private Long CoresCnt;
 
     /**
      * Get 集群id 
@@ -332,16 +346,16 @@ public class ClusterInfoItem extends AbstractModel {
     }
 
     /**
-     * Get 监控组件的状态，为Defender_Uninstall、Defender_Normal、Defender_Error、Defender_Installing 
-     * @return DefenderStatus 监控组件的状态，为Defender_Uninstall、Defender_Normal、Defender_Error、Defender_Installing
+     * Get 防护状态: 已防护: Defended 未防护: UnDefended 
+     * @return DefenderStatus 防护状态: 已防护: Defended 未防护: UnDefended
      */
     public String getDefenderStatus() {
         return this.DefenderStatus;
     }
 
     /**
-     * Set 监控组件的状态，为Defender_Uninstall、Defender_Normal、Defender_Error、Defender_Installing
-     * @param DefenderStatus 监控组件的状态，为Defender_Uninstall、Defender_Normal、Defender_Error、Defender_Installing
+     * Set 防护状态: 已防护: Defended 未防护: UnDefended
+     * @param DefenderStatus 防护状态: 已防护: Defended 未防护: UnDefended
      */
     public void setDefenderStatus(String DefenderStatus) {
         this.DefenderStatus = DefenderStatus;
@@ -672,9 +686,9 @@ public class ClusterInfoItem extends AbstractModel {
     }
 
     /**
-     * Get 计费核数
+     * Get 计费核数(弹性计费核数+普通计费核数)
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ChargeCoresCnt 计费核数
+     * @return ChargeCoresCnt 计费核数(弹性计费核数+普通计费核数)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getChargeCoresCnt() {
@@ -682,13 +696,45 @@ public class ClusterInfoItem extends AbstractModel {
     }
 
     /**
-     * Set 计费核数
+     * Set 计费核数(弹性计费核数+普通计费核数)
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ChargeCoresCnt 计费核数
+     * @param ChargeCoresCnt 计费核数(弹性计费核数+普通计费核数)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setChargeCoresCnt(Long ChargeCoresCnt) {
         this.ChargeCoresCnt = ChargeCoresCnt;
+    }
+
+    /**
+     * Get master 地址列表 
+     * @return MasterAddresses master 地址列表
+     */
+    public String [] getMasterAddresses() {
+        return this.MasterAddresses;
+    }
+
+    /**
+     * Set master 地址列表
+     * @param MasterAddresses master 地址列表
+     */
+    public void setMasterAddresses(String [] MasterAddresses) {
+        this.MasterAddresses = MasterAddresses;
+    }
+
+    /**
+     * Get 核数 
+     * @return CoresCnt 核数
+     */
+    public Long getCoresCnt() {
+        return this.CoresCnt;
+    }
+
+    /**
+     * Set 核数
+     * @param CoresCnt 核数
+     */
+    public void setCoresCnt(Long CoresCnt) {
+        this.CoresCnt = CoresCnt;
     }
 
     public ClusterInfoItem() {
@@ -777,6 +823,15 @@ public class ClusterInfoItem extends AbstractModel {
         if (source.ChargeCoresCnt != null) {
             this.ChargeCoresCnt = new Long(source.ChargeCoresCnt);
         }
+        if (source.MasterAddresses != null) {
+            this.MasterAddresses = new String[source.MasterAddresses.length];
+            for (int i = 0; i < source.MasterAddresses.length; i++) {
+                this.MasterAddresses[i] = new String(source.MasterAddresses[i]);
+            }
+        }
+        if (source.CoresCnt != null) {
+            this.CoresCnt = new Long(source.CoresCnt);
+        }
     }
 
 
@@ -810,6 +865,8 @@ public class ClusterInfoItem extends AbstractModel {
         this.setParamSimple(map, prefix + "OffLineNodeCount", this.OffLineNodeCount);
         this.setParamSimple(map, prefix + "UnInstallAgentNodeCount", this.UnInstallAgentNodeCount);
         this.setParamSimple(map, prefix + "ChargeCoresCnt", this.ChargeCoresCnt);
+        this.setParamArraySimple(map, prefix + "MasterAddresses.", this.MasterAddresses);
+        this.setParamSimple(map, prefix + "CoresCnt", this.CoresCnt);
 
     }
 }

@@ -31,12 +31,26 @@ public class DescribePurchaseStateInfoResponse extends AbstractModel {
     private Long State;
 
     /**
-    * 总核数
+    * 总资源核数 = 总防护核数 + 未防护核数
+    */
+    @SerializedName("AllCoresCnt")
+    @Expose
+    private Long AllCoresCnt;
+
+    /**
+    * 总防护核数 =已购核数+ 试用赠送核数 +弹性计费核数
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CoresCnt")
     @Expose
     private Long CoresCnt;
+
+    /**
+    * 未防护核数(未开启防护资源核数)
+    */
+    @SerializedName("UndefendCoresCnt")
+    @Expose
+    private Long UndefendCoresCnt;
 
     /**
     * 已购买核数
@@ -45,6 +59,21 @@ public class DescribePurchaseStateInfoResponse extends AbstractModel {
     @SerializedName("AuthorizedCoresCnt")
     @Expose
     private Long AuthorizedCoresCnt;
+
+    /**
+    * 试用赠送专业版核心数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("GivenAuthorizedCoresCnt")
+    @Expose
+    private Long GivenAuthorizedCoresCnt;
+
+    /**
+    * 当前弹性计费核数数量
+    */
+    @SerializedName("CurrentFlexibleCoresCnt")
+    @Expose
+    private Long CurrentFlexibleCoresCnt;
 
     /**
     * 镜像数
@@ -63,20 +92,20 @@ public class DescribePurchaseStateInfoResponse extends AbstractModel {
     private Long AuthorizedImageCnt;
 
     /**
-    * 已购买镜像授权数
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("PurchasedAuthorizedCnt")
-    @Expose
-    private Long PurchasedAuthorizedCnt;
-
-    /**
     * 过期时间
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExpirationTime")
     @Expose
     private String ExpirationTime;
+
+    /**
+    * 已购买镜像授权数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PurchasedAuthorizedCnt")
+    @Expose
+    private Long PurchasedAuthorizedCnt;
 
     /**
     * 0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费(用户设置)
@@ -120,6 +149,34 @@ State为4时，有效值为: ISOLATE(隔离) DESTROED(已销毁)
     private String InquireKey;
 
     /**
+    * 防护策略
+    */
+    @SerializedName("DefendPolicy")
+    @Expose
+    private String DefendPolicy;
+
+    /**
+    * 弹性计费核数上限
+    */
+    @SerializedName("FlexibleCoresLimit")
+    @Expose
+    private Long FlexibleCoresLimit;
+
+    /**
+    * 已防护集群核数
+    */
+    @SerializedName("DefendClusterCoresCnt")
+    @Expose
+    private Long DefendClusterCoresCnt;
+
+    /**
+    * 已防护主机核数
+    */
+    @SerializedName("DefendHostCoresCnt")
+    @Expose
+    private Long DefendHostCoresCnt;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -143,9 +200,25 @@ State为4时，有效值为: ISOLATE(隔离) DESTROED(已销毁)
     }
 
     /**
-     * Get 总核数
+     * Get 总资源核数 = 总防护核数 + 未防护核数 
+     * @return AllCoresCnt 总资源核数 = 总防护核数 + 未防护核数
+     */
+    public Long getAllCoresCnt() {
+        return this.AllCoresCnt;
+    }
+
+    /**
+     * Set 总资源核数 = 总防护核数 + 未防护核数
+     * @param AllCoresCnt 总资源核数 = 总防护核数 + 未防护核数
+     */
+    public void setAllCoresCnt(Long AllCoresCnt) {
+        this.AllCoresCnt = AllCoresCnt;
+    }
+
+    /**
+     * Get 总防护核数 =已购核数+ 试用赠送核数 +弹性计费核数
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CoresCnt 总核数
+     * @return CoresCnt 总防护核数 =已购核数+ 试用赠送核数 +弹性计费核数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCoresCnt() {
@@ -153,13 +226,29 @@ State为4时，有效值为: ISOLATE(隔离) DESTROED(已销毁)
     }
 
     /**
-     * Set 总核数
+     * Set 总防护核数 =已购核数+ 试用赠送核数 +弹性计费核数
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CoresCnt 总核数
+     * @param CoresCnt 总防护核数 =已购核数+ 试用赠送核数 +弹性计费核数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCoresCnt(Long CoresCnt) {
         this.CoresCnt = CoresCnt;
+    }
+
+    /**
+     * Get 未防护核数(未开启防护资源核数) 
+     * @return UndefendCoresCnt 未防护核数(未开启防护资源核数)
+     */
+    public Long getUndefendCoresCnt() {
+        return this.UndefendCoresCnt;
+    }
+
+    /**
+     * Set 未防护核数(未开启防护资源核数)
+     * @param UndefendCoresCnt 未防护核数(未开启防护资源核数)
+     */
+    public void setUndefendCoresCnt(Long UndefendCoresCnt) {
+        this.UndefendCoresCnt = UndefendCoresCnt;
     }
 
     /**
@@ -180,6 +269,42 @@ State为4时，有效值为: ISOLATE(隔离) DESTROED(已销毁)
      */
     public void setAuthorizedCoresCnt(Long AuthorizedCoresCnt) {
         this.AuthorizedCoresCnt = AuthorizedCoresCnt;
+    }
+
+    /**
+     * Get 试用赠送专业版核心数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return GivenAuthorizedCoresCnt 试用赠送专业版核心数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getGivenAuthorizedCoresCnt() {
+        return this.GivenAuthorizedCoresCnt;
+    }
+
+    /**
+     * Set 试用赠送专业版核心数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param GivenAuthorizedCoresCnt 试用赠送专业版核心数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setGivenAuthorizedCoresCnt(Long GivenAuthorizedCoresCnt) {
+        this.GivenAuthorizedCoresCnt = GivenAuthorizedCoresCnt;
+    }
+
+    /**
+     * Get 当前弹性计费核数数量 
+     * @return CurrentFlexibleCoresCnt 当前弹性计费核数数量
+     */
+    public Long getCurrentFlexibleCoresCnt() {
+        return this.CurrentFlexibleCoresCnt;
+    }
+
+    /**
+     * Set 当前弹性计费核数数量
+     * @param CurrentFlexibleCoresCnt 当前弹性计费核数数量
+     */
+    public void setCurrentFlexibleCoresCnt(Long CurrentFlexibleCoresCnt) {
+        this.CurrentFlexibleCoresCnt = CurrentFlexibleCoresCnt;
     }
 
     /**
@@ -223,26 +348,6 @@ State为4时，有效值为: ISOLATE(隔离) DESTROED(已销毁)
     }
 
     /**
-     * Get 已购买镜像授权数
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PurchasedAuthorizedCnt 已购买镜像授权数
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public Long getPurchasedAuthorizedCnt() {
-        return this.PurchasedAuthorizedCnt;
-    }
-
-    /**
-     * Set 已购买镜像授权数
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param PurchasedAuthorizedCnt 已购买镜像授权数
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setPurchasedAuthorizedCnt(Long PurchasedAuthorizedCnt) {
-        this.PurchasedAuthorizedCnt = PurchasedAuthorizedCnt;
-    }
-
-    /**
      * Get 过期时间
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ExpirationTime 过期时间
@@ -260,6 +365,26 @@ State为4时，有效值为: ISOLATE(隔离) DESTROED(已销毁)
      */
     public void setExpirationTime(String ExpirationTime) {
         this.ExpirationTime = ExpirationTime;
+    }
+
+    /**
+     * Get 已购买镜像授权数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PurchasedAuthorizedCnt 已购买镜像授权数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getPurchasedAuthorizedCnt() {
+        return this.PurchasedAuthorizedCnt;
+    }
+
+    /**
+     * Set 已购买镜像授权数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PurchasedAuthorizedCnt 已购买镜像授权数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPurchasedAuthorizedCnt(Long PurchasedAuthorizedCnt) {
+        this.PurchasedAuthorizedCnt = PurchasedAuthorizedCnt;
     }
 
     /**
@@ -367,6 +492,70 @@ State为4时，有效值为: ISOLATE(隔离) DESTROED(已销毁)
     }
 
     /**
+     * Get 防护策略 
+     * @return DefendPolicy 防护策略
+     */
+    public String getDefendPolicy() {
+        return this.DefendPolicy;
+    }
+
+    /**
+     * Set 防护策略
+     * @param DefendPolicy 防护策略
+     */
+    public void setDefendPolicy(String DefendPolicy) {
+        this.DefendPolicy = DefendPolicy;
+    }
+
+    /**
+     * Get 弹性计费核数上限 
+     * @return FlexibleCoresLimit 弹性计费核数上限
+     */
+    public Long getFlexibleCoresLimit() {
+        return this.FlexibleCoresLimit;
+    }
+
+    /**
+     * Set 弹性计费核数上限
+     * @param FlexibleCoresLimit 弹性计费核数上限
+     */
+    public void setFlexibleCoresLimit(Long FlexibleCoresLimit) {
+        this.FlexibleCoresLimit = FlexibleCoresLimit;
+    }
+
+    /**
+     * Get 已防护集群核数 
+     * @return DefendClusterCoresCnt 已防护集群核数
+     */
+    public Long getDefendClusterCoresCnt() {
+        return this.DefendClusterCoresCnt;
+    }
+
+    /**
+     * Set 已防护集群核数
+     * @param DefendClusterCoresCnt 已防护集群核数
+     */
+    public void setDefendClusterCoresCnt(Long DefendClusterCoresCnt) {
+        this.DefendClusterCoresCnt = DefendClusterCoresCnt;
+    }
+
+    /**
+     * Get 已防护主机核数 
+     * @return DefendHostCoresCnt 已防护主机核数
+     */
+    public Long getDefendHostCoresCnt() {
+        return this.DefendHostCoresCnt;
+    }
+
+    /**
+     * Set 已防护主机核数
+     * @param DefendHostCoresCnt 已防护主机核数
+     */
+    public void setDefendHostCoresCnt(Long DefendHostCoresCnt) {
+        this.DefendHostCoresCnt = DefendHostCoresCnt;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -393,11 +582,23 @@ State为4时，有效值为: ISOLATE(隔离) DESTROED(已销毁)
         if (source.State != null) {
             this.State = new Long(source.State);
         }
+        if (source.AllCoresCnt != null) {
+            this.AllCoresCnt = new Long(source.AllCoresCnt);
+        }
         if (source.CoresCnt != null) {
             this.CoresCnt = new Long(source.CoresCnt);
         }
+        if (source.UndefendCoresCnt != null) {
+            this.UndefendCoresCnt = new Long(source.UndefendCoresCnt);
+        }
         if (source.AuthorizedCoresCnt != null) {
             this.AuthorizedCoresCnt = new Long(source.AuthorizedCoresCnt);
+        }
+        if (source.GivenAuthorizedCoresCnt != null) {
+            this.GivenAuthorizedCoresCnt = new Long(source.GivenAuthorizedCoresCnt);
+        }
+        if (source.CurrentFlexibleCoresCnt != null) {
+            this.CurrentFlexibleCoresCnt = new Long(source.CurrentFlexibleCoresCnt);
         }
         if (source.ImageCnt != null) {
             this.ImageCnt = new Long(source.ImageCnt);
@@ -405,11 +606,11 @@ State为4时，有效值为: ISOLATE(隔离) DESTROED(已销毁)
         if (source.AuthorizedImageCnt != null) {
             this.AuthorizedImageCnt = new Long(source.AuthorizedImageCnt);
         }
-        if (source.PurchasedAuthorizedCnt != null) {
-            this.PurchasedAuthorizedCnt = new Long(source.PurchasedAuthorizedCnt);
-        }
         if (source.ExpirationTime != null) {
             this.ExpirationTime = new String(source.ExpirationTime);
+        }
+        if (source.PurchasedAuthorizedCnt != null) {
+            this.PurchasedAuthorizedCnt = new Long(source.PurchasedAuthorizedCnt);
         }
         if (source.AutomaticRenewal != null) {
             this.AutomaticRenewal = new Long(source.AutomaticRenewal);
@@ -426,6 +627,18 @@ State为4时，有效值为: ISOLATE(隔离) DESTROED(已销毁)
         if (source.InquireKey != null) {
             this.InquireKey = new String(source.InquireKey);
         }
+        if (source.DefendPolicy != null) {
+            this.DefendPolicy = new String(source.DefendPolicy);
+        }
+        if (source.FlexibleCoresLimit != null) {
+            this.FlexibleCoresLimit = new Long(source.FlexibleCoresLimit);
+        }
+        if (source.DefendClusterCoresCnt != null) {
+            this.DefendClusterCoresCnt = new Long(source.DefendClusterCoresCnt);
+        }
+        if (source.DefendHostCoresCnt != null) {
+            this.DefendHostCoresCnt = new Long(source.DefendHostCoresCnt);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -437,17 +650,25 @@ State为4时，有效值为: ISOLATE(隔离) DESTROED(已销毁)
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "State", this.State);
+        this.setParamSimple(map, prefix + "AllCoresCnt", this.AllCoresCnt);
         this.setParamSimple(map, prefix + "CoresCnt", this.CoresCnt);
+        this.setParamSimple(map, prefix + "UndefendCoresCnt", this.UndefendCoresCnt);
         this.setParamSimple(map, prefix + "AuthorizedCoresCnt", this.AuthorizedCoresCnt);
+        this.setParamSimple(map, prefix + "GivenAuthorizedCoresCnt", this.GivenAuthorizedCoresCnt);
+        this.setParamSimple(map, prefix + "CurrentFlexibleCoresCnt", this.CurrentFlexibleCoresCnt);
         this.setParamSimple(map, prefix + "ImageCnt", this.ImageCnt);
         this.setParamSimple(map, prefix + "AuthorizedImageCnt", this.AuthorizedImageCnt);
-        this.setParamSimple(map, prefix + "PurchasedAuthorizedCnt", this.PurchasedAuthorizedCnt);
         this.setParamSimple(map, prefix + "ExpirationTime", this.ExpirationTime);
+        this.setParamSimple(map, prefix + "PurchasedAuthorizedCnt", this.PurchasedAuthorizedCnt);
         this.setParamSimple(map, prefix + "AutomaticRenewal", this.AutomaticRenewal);
         this.setParamSimple(map, prefix + "GivenAuthorizedCnt", this.GivenAuthorizedCnt);
         this.setParamSimple(map, prefix + "BeginTime", this.BeginTime);
         this.setParamSimple(map, prefix + "SubState", this.SubState);
         this.setParamSimple(map, prefix + "InquireKey", this.InquireKey);
+        this.setParamSimple(map, prefix + "DefendPolicy", this.DefendPolicy);
+        this.setParamSimple(map, prefix + "FlexibleCoresLimit", this.FlexibleCoresLimit);
+        this.setParamSimple(map, prefix + "DefendClusterCoresCnt", this.DefendClusterCoresCnt);
+        this.setParamSimple(map, prefix + "DefendHostCoresCnt", this.DefendHostCoresCnt);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

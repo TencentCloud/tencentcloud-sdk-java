@@ -127,6 +127,17 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
+     *本接口（CheckFirmwareUpdate）用于查询设备可升级固件版本
+     * @param req CheckFirmwareUpdateRequest
+     * @return CheckFirmwareUpdateResponse
+     * @throws TencentCloudSDKException
+     */
+    public CheckFirmwareUpdateResponse CheckFirmwareUpdate(CheckFirmwareUpdateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CheckFirmwareUpdate", CheckFirmwareUpdateResponse.class);
+    }
+
+    /**
      *根据设备产品ID、设备名称，设置控制设备的属性数据。
      * @param req ControlDeviceDataRequest
      * @return ControlDeviceDataResponse
@@ -754,6 +765,17 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeFirmwareUpdateStatus）用于查询设备固件升级状态及进度。
+     * @param req DescribeFirmwareUpdateStatusRequest
+     * @return DescribeFirmwareUpdateStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeFirmwareUpdateStatusResponse DescribeFirmwareUpdateStatus(DescribeFirmwareUpdateStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeFirmwareUpdateStatus", DescribeFirmwareUpdateStatusResponse.class);
+    }
+
+    /**
      *获取网关绑定的子设备列表
      * @param req DescribeGatewayBindDevicesRequest
      * @return DescribeGatewayBindDevicesResponse
@@ -1378,6 +1400,17 @@ public class IotexplorerClient extends AbstractClient{
     public PublishBroadcastMessageResponse PublishBroadcastMessage(PublishBroadcastMessageRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "PublishBroadcastMessage", PublishBroadcastMessageResponse.class);
+    }
+
+    /**
+     *本接口（PublishFirmwareUpdateMessage）用于用户确认升级后，云端向设备发起固件升级请求。
+     * @param req PublishFirmwareUpdateMessageRequest
+     * @return PublishFirmwareUpdateMessageResponse
+     * @throws TencentCloudSDKException
+     */
+    public PublishFirmwareUpdateMessageResponse PublishFirmwareUpdateMessage(PublishFirmwareUpdateMessageRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "PublishFirmwareUpdateMessage", PublishFirmwareUpdateMessageResponse.class);
     }
 
     /**

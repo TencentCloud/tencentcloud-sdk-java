@@ -178,6 +178,14 @@ public class AuditLog extends AbstractModel {
     private LogRuleTemplateInfo [] TemplateInfo;
 
     /**
+    * 事务ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TrxId")
+    @Expose
+    private Long TrxId;
+
+    /**
      * Get 影响行数。 
      * @return AffectRows 影响行数。
      */
@@ -541,6 +549,26 @@ public class AuditLog extends AbstractModel {
         this.TemplateInfo = TemplateInfo;
     }
 
+    /**
+     * Get 事务ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TrxId 事务ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getTrxId() {
+        return this.TrxId;
+    }
+
+    /**
+     * Set 事务ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TrxId 事务ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTrxId(Long TrxId) {
+        this.TrxId = TrxId;
+    }
+
     public AuditLog() {
     }
 
@@ -615,6 +643,9 @@ public class AuditLog extends AbstractModel {
                 this.TemplateInfo[i] = new LogRuleTemplateInfo(source.TemplateInfo[i]);
             }
         }
+        if (source.TrxId != null) {
+            this.TrxId = new Long(source.TrxId);
+        }
     }
 
 
@@ -643,6 +674,7 @@ public class AuditLog extends AbstractModel {
         this.setParamSimple(map, prefix + "TrxLivingTime", this.TrxLivingTime);
         this.setParamSimple(map, prefix + "NsTime", this.NsTime);
         this.setParamArrayObj(map, prefix + "TemplateInfo.", this.TemplateInfo);
+        this.setParamSimple(map, prefix + "TrxId", this.TrxId);
 
     }
 }

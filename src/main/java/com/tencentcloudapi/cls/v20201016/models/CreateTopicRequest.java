@@ -105,6 +105,13 @@ public class CreateTopicRequest extends AbstractModel {
     private Boolean IsWebTracking;
 
     /**
+    * 日志主题扩展信息
+    */
+    @SerializedName("Extends")
+    @Expose
+    private TopicExtendInfo Extends;
+
+    /**
      * Get 日志集ID 
      * @return LogsetId 日志集ID
      */
@@ -296,6 +303,22 @@ public class CreateTopicRequest extends AbstractModel {
         this.IsWebTracking = IsWebTracking;
     }
 
+    /**
+     * Get 日志主题扩展信息 
+     * @return Extends 日志主题扩展信息
+     */
+    public TopicExtendInfo getExtends() {
+        return this.Extends;
+    }
+
+    /**
+     * Set 日志主题扩展信息
+     * @param Extends 日志主题扩展信息
+     */
+    public void setExtends(TopicExtendInfo Extends) {
+        this.Extends = Extends;
+    }
+
     public CreateTopicRequest() {
     }
 
@@ -340,6 +363,9 @@ public class CreateTopicRequest extends AbstractModel {
         if (source.IsWebTracking != null) {
             this.IsWebTracking = new Boolean(source.IsWebTracking);
         }
+        if (source.Extends != null) {
+            this.Extends = new TopicExtendInfo(source.Extends);
+        }
     }
 
 
@@ -358,6 +384,7 @@ public class CreateTopicRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Describes", this.Describes);
         this.setParamSimple(map, prefix + "HotPeriod", this.HotPeriod);
         this.setParamSimple(map, prefix + "IsWebTracking", this.IsWebTracking);
+        this.setParamObj(map, prefix + "Extends.", this.Extends);
 
     }
 }

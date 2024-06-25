@@ -139,6 +139,14 @@ public class AgentAuditedClient extends AbstractModel {
     private String Mail;
 
     /**
+    * 交易类型:交易类型 1-原类型 2-代理型  3-代采型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TransactionType")
+    @Expose
+    private String TransactionType;
+
+    /**
      * Get 代理商账号ID 
      * @return Uin 代理商账号ID
      */
@@ -406,6 +414,26 @@ public class AgentAuditedClient extends AbstractModel {
         this.Mail = Mail;
     }
 
+    /**
+     * Get 交易类型:交易类型 1-原类型 2-代理型  3-代采型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TransactionType 交易类型:交易类型 1-原类型 2-代理型  3-代采型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTransactionType() {
+        return this.TransactionType;
+    }
+
+    /**
+     * Set 交易类型:交易类型 1-原类型 2-代理型  3-代采型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TransactionType 交易类型:交易类型 1-原类型 2-代理型  3-代采型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTransactionType(String TransactionType) {
+        this.TransactionType = TransactionType;
+    }
+
     public AgentAuditedClient() {
     }
 
@@ -462,6 +490,9 @@ public class AgentAuditedClient extends AbstractModel {
         if (source.Mail != null) {
             this.Mail = new String(source.Mail);
         }
+        if (source.TransactionType != null) {
+            this.TransactionType = new String(source.TransactionType);
+        }
     }
 
 
@@ -485,6 +516,7 @@ public class AgentAuditedClient extends AbstractModel {
         this.setParamSimple(map, prefix + "SalesUin", this.SalesUin);
         this.setParamSimple(map, prefix + "SalesName", this.SalesName);
         this.setParamSimple(map, prefix + "Mail", this.Mail);
+        this.setParamSimple(map, prefix + "TransactionType", this.TransactionType);
 
     }
 }

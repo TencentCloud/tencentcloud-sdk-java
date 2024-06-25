@@ -182,6 +182,13 @@ public class HostInfo extends AbstractModel {
     private String DefendStatus;
 
     /**
+    * 核数
+    */
+    @SerializedName("CoresCnt")
+    @Expose
+    private Long CoresCnt;
+
+    /**
      * Get 主机id 
      * @return HostID 主机id
      */
@@ -549,6 +556,22 @@ public class HostInfo extends AbstractModel {
         this.DefendStatus = DefendStatus;
     }
 
+    /**
+     * Get 核数 
+     * @return CoresCnt 核数
+     */
+    public Long getCoresCnt() {
+        return this.CoresCnt;
+    }
+
+    /**
+     * Set 核数
+     * @param CoresCnt 核数
+     */
+    public void setCoresCnt(Long CoresCnt) {
+        this.CoresCnt = CoresCnt;
+    }
+
     public HostInfo() {
     }
 
@@ -626,6 +649,9 @@ public class HostInfo extends AbstractModel {
         if (source.DefendStatus != null) {
             this.DefendStatus = new String(source.DefendStatus);
         }
+        if (source.CoresCnt != null) {
+            this.CoresCnt = new Long(source.CoresCnt);
+        }
     }
 
 
@@ -655,6 +681,7 @@ public class HostInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "ClusterAccessedStatus", this.ClusterAccessedStatus);
         this.setParamSimple(map, prefix + "ChargeCoresCnt", this.ChargeCoresCnt);
         this.setParamSimple(map, prefix + "DefendStatus", this.DefendStatus);
+        this.setParamSimple(map, prefix + "CoresCnt", this.CoresCnt);
 
     }
 }

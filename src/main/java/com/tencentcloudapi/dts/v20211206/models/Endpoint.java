@@ -40,7 +40,7 @@ public class Endpoint extends AbstractModel {
     private String Role;
 
     /**
-    * 数据库内核类型，tdsql中用于区分不同内核：percona,mariadb,mysql
+    * 数据库内核类型，tdsql中用于区分不同内核：percona,mariadb,mysql。注意TDSQL-C MySQL、TDSQL PostgreSQL无需填写此项值。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DbKernel")
@@ -296,9 +296,9 @@ public class Endpoint extends AbstractModel {
     }
 
     /**
-     * Get 数据库内核类型，tdsql中用于区分不同内核：percona,mariadb,mysql
+     * Get 数据库内核类型，tdsql中用于区分不同内核：percona,mariadb,mysql。注意TDSQL-C MySQL、TDSQL PostgreSQL无需填写此项值。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DbKernel 数据库内核类型，tdsql中用于区分不同内核：percona,mariadb,mysql
+     * @return DbKernel 数据库内核类型，tdsql中用于区分不同内核：percona,mariadb,mysql。注意TDSQL-C MySQL、TDSQL PostgreSQL无需填写此项值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDbKernel() {
@@ -306,9 +306,9 @@ public class Endpoint extends AbstractModel {
     }
 
     /**
-     * Set 数据库内核类型，tdsql中用于区分不同内核：percona,mariadb,mysql
+     * Set 数据库内核类型，tdsql中用于区分不同内核：percona,mariadb,mysql。注意TDSQL-C MySQL、TDSQL PostgreSQL无需填写此项值。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DbKernel 数据库内核类型，tdsql中用于区分不同内核：percona,mariadb,mysql
+     * @param DbKernel 数据库内核类型，tdsql中用于区分不同内核：percona,mariadb,mysql。注意TDSQL-C MySQL、TDSQL PostgreSQL无需填写此项值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDbKernel(String DbKernel) {

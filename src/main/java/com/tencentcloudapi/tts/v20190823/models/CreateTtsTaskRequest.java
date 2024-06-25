@@ -31,7 +31,7 @@ public class CreateTtsTaskRequest extends AbstractModel {
     private String Text;
 
     /**
-    * 音量大小，范围：[0，10]，分别对应11个等级的音量，默认为0，代表正常音量。没有静音选项。
+    * 音量大小，范围：[-10，10]，分别对应11个等级的音量，默认为0，代表正常音量。没有静音选项。
     */
     @SerializedName("Volume")
     @Expose
@@ -138,16 +138,16 @@ public class CreateTtsTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get 音量大小，范围：[0，10]，分别对应11个等级的音量，默认为0，代表正常音量。没有静音选项。 
-     * @return Volume 音量大小，范围：[0，10]，分别对应11个等级的音量，默认为0，代表正常音量。没有静音选项。
+     * Get 音量大小，范围：[-10，10]，分别对应11个等级的音量，默认为0，代表正常音量。没有静音选项。 
+     * @return Volume 音量大小，范围：[-10，10]，分别对应11个等级的音量，默认为0，代表正常音量。没有静音选项。
      */
     public Float getVolume() {
         return this.Volume;
     }
 
     /**
-     * Set 音量大小，范围：[0，10]，分别对应11个等级的音量，默认为0，代表正常音量。没有静音选项。
-     * @param Volume 音量大小，范围：[0，10]，分别对应11个等级的音量，默认为0，代表正常音量。没有静音选项。
+     * Set 音量大小，范围：[-10，10]，分别对应11个等级的音量，默认为0，代表正常音量。没有静音选项。
+     * @param Volume 音量大小，范围：[-10，10]，分别对应11个等级的音量，默认为0，代表正常音量。没有静音选项。
      */
     public void setVolume(Float Volume) {
         this.Volume = Volume;

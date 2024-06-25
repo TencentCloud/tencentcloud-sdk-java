@@ -2491,4 +2491,15 @@ public class WedataClient extends AbstractClient{
         return this.internalRequest(req, "UploadContent", UploadContentResponse.class);
     }
 
+    /**
+     *资源管理-上传资源
+     * @param req UploadResourceRequest
+     * @return UploadResourceResponse
+     * @throws TencentCloudSDKException
+     */
+    public UploadResourceResponse UploadResource(UploadResourceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UploadResource", UploadResourceResponse.class);
+    }
+
 }

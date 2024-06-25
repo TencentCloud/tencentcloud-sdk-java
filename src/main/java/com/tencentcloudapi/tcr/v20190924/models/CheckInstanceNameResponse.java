@@ -31,6 +31,14 @@ public class CheckInstanceNameResponse extends AbstractModel {
     private Boolean IsValidated;
 
     /**
+    * 1: Illegal（名子非法）, 2:Reserved（名字保留）, 3:Existed（名字已存在）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DetailCode")
+    @Expose
+    private Long DetailCode;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -51,6 +59,26 @@ public class CheckInstanceNameResponse extends AbstractModel {
      */
     public void setIsValidated(Boolean IsValidated) {
         this.IsValidated = IsValidated;
+    }
+
+    /**
+     * Get 1: Illegal（名子非法）, 2:Reserved（名字保留）, 3:Existed（名字已存在）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DetailCode 1: Illegal（名子非法）, 2:Reserved（名字保留）, 3:Existed（名字已存在）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getDetailCode() {
+        return this.DetailCode;
+    }
+
+    /**
+     * Set 1: Illegal（名子非法）, 2:Reserved（名字保留）, 3:Existed（名字已存在）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DetailCode 1: Illegal（名子非法）, 2:Reserved（名字保留）, 3:Existed（名字已存在）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDetailCode(Long DetailCode) {
+        this.DetailCode = DetailCode;
     }
 
     /**
@@ -80,6 +108,9 @@ public class CheckInstanceNameResponse extends AbstractModel {
         if (source.IsValidated != null) {
             this.IsValidated = new Boolean(source.IsValidated);
         }
+        if (source.DetailCode != null) {
+            this.DetailCode = new Long(source.DetailCode);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -91,6 +122,7 @@ public class CheckInstanceNameResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "IsValidated", this.IsValidated);
+        this.setParamSimple(map, prefix + "DetailCode", this.DetailCode);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -361,19 +361,6 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
-     *ModifyEventAttackStatus 接口替代
-
-删除网络攻击日志
-     * @param req DeleteAttackLogsRequest
-     * @return DeleteAttackLogsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DeleteAttackLogsResponse DeleteAttackLogs(DeleteAttackLogsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DeleteAttackLogs", DeleteAttackLogsResponse.class);
-    }
-
-    /**
      *删除阻断白名单列表
      * @param req DeleteBanWhiteListRequest
      * @return DeleteBanWhiteListResponse

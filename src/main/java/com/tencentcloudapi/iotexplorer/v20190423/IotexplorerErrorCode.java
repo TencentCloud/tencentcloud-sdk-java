@@ -228,6 +228,9 @@ public enum IotexplorerErrorCode {
     // 消息类型非法。
      INVALIDPARAMETERVALUE_MSGTYPEINVALID("InvalidParameterValue.MsgTypeInvalid"),
      
+    // 无权限。
+     INVALIDPARAMETERVALUE_NOPERMISSION("InvalidParameterValue.NoPermission"),
+     
     // 操作不支持。
      INVALIDPARAMETERVALUE_OPERATIONDENIED("InvalidParameterValue.OperationDenied"),
      
