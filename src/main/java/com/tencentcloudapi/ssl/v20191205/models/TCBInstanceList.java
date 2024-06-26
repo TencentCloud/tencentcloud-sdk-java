@@ -39,6 +39,14 @@ public class TCBInstanceList extends AbstractModel {
     private TCBEnvironments [] Environments;
 
     /**
+    * 是否查询异常
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Error")
+    @Expose
+    private String Error;
+
+    /**
      * Get 地域 
      * @return Region 地域
      */
@@ -74,6 +82,26 @@ public class TCBInstanceList extends AbstractModel {
         this.Environments = Environments;
     }
 
+    /**
+     * Get 是否查询异常
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Error 是否查询异常
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getError() {
+        return this.Error;
+    }
+
+    /**
+     * Set 是否查询异常
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Error 是否查询异常
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setError(String Error) {
+        this.Error = Error;
+    }
+
     public TCBInstanceList() {
     }
 
@@ -91,6 +119,9 @@ public class TCBInstanceList extends AbstractModel {
                 this.Environments[i] = new TCBEnvironments(source.Environments[i]);
             }
         }
+        if (source.Error != null) {
+            this.Error = new String(source.Error);
+        }
     }
 
 
@@ -100,6 +131,7 @@ public class TCBInstanceList extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Region", this.Region);
         this.setParamArrayObj(map, prefix + "Environments.", this.Environments);
+        this.setParamSimple(map, prefix + "Error", this.Error);
 
     }
 }

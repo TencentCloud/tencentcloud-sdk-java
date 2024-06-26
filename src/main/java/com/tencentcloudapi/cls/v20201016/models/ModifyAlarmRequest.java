@@ -77,7 +77,7 @@ public class ModifyAlarmRequest extends AbstractModel {
     private MultiCondition [] MultiConditions;
 
     /**
-    * 持续周期。持续满足触发条件TriggerCount个周期后，再进行告警；最小值为1，最大值为10。
+    * 持续周期。持续满足触发条件TriggerCount个周期后，再进行告警；最小值为1，最大值为2000。
     */
     @SerializedName("TriggerCount")
     @Expose
@@ -320,16 +320,16 @@ Classifications元素的Value长度不能超过200个字符。
     }
 
     /**
-     * Get 持续周期。持续满足触发条件TriggerCount个周期后，再进行告警；最小值为1，最大值为10。 
-     * @return TriggerCount 持续周期。持续满足触发条件TriggerCount个周期后，再进行告警；最小值为1，最大值为10。
+     * Get 持续周期。持续满足触发条件TriggerCount个周期后，再进行告警；最小值为1，最大值为2000。 
+     * @return TriggerCount 持续周期。持续满足触发条件TriggerCount个周期后，再进行告警；最小值为1，最大值为2000。
      */
     public Long getTriggerCount() {
         return this.TriggerCount;
     }
 
     /**
-     * Set 持续周期。持续满足触发条件TriggerCount个周期后，再进行告警；最小值为1，最大值为10。
-     * @param TriggerCount 持续周期。持续满足触发条件TriggerCount个周期后，再进行告警；最小值为1，最大值为10。
+     * Set 持续周期。持续满足触发条件TriggerCount个周期后，再进行告警；最小值为1，最大值为2000。
+     * @param TriggerCount 持续周期。持续满足触发条件TriggerCount个周期后，再进行告警；最小值为1，最大值为2000。
      */
     public void setTriggerCount(Long TriggerCount) {
         this.TriggerCount = TriggerCount;

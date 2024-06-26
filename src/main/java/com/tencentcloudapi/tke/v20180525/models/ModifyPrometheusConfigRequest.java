@@ -66,6 +66,13 @@ public class ModifyPrometheusConfigRequest extends AbstractModel {
     private PrometheusConfigItem [] RawJobs;
 
     /**
+    * Probes 配置
+    */
+    @SerializedName("Probes")
+    @Expose
+    private PrometheusConfigItem [] Probes;
+
+    /**
      * Get 实例id 
      * @return InstanceId 实例id
      */
@@ -161,6 +168,22 @@ public class ModifyPrometheusConfigRequest extends AbstractModel {
         this.RawJobs = RawJobs;
     }
 
+    /**
+     * Get Probes 配置 
+     * @return Probes Probes 配置
+     */
+    public PrometheusConfigItem [] getProbes() {
+        return this.Probes;
+    }
+
+    /**
+     * Set Probes 配置
+     * @param Probes Probes 配置
+     */
+    public void setProbes(PrometheusConfigItem [] Probes) {
+        this.Probes = Probes;
+    }
+
     public ModifyPrometheusConfigRequest() {
     }
 
@@ -196,6 +219,12 @@ public class ModifyPrometheusConfigRequest extends AbstractModel {
                 this.RawJobs[i] = new PrometheusConfigItem(source.RawJobs[i]);
             }
         }
+        if (source.Probes != null) {
+            this.Probes = new PrometheusConfigItem[source.Probes.length];
+            for (int i = 0; i < source.Probes.length; i++) {
+                this.Probes[i] = new PrometheusConfigItem(source.Probes[i]);
+            }
+        }
     }
 
 
@@ -209,6 +238,7 @@ public class ModifyPrometheusConfigRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "ServiceMonitors.", this.ServiceMonitors);
         this.setParamArrayObj(map, prefix + "PodMonitors.", this.PodMonitors);
         this.setParamArrayObj(map, prefix + "RawJobs.", this.RawJobs);
+        this.setParamArrayObj(map, prefix + "Probes.", this.Probes);
 
     }
 }

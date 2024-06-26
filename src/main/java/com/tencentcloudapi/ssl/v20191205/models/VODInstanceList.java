@@ -39,6 +39,14 @@ public class VODInstanceList extends AbstractModel {
     private Long TotalCount;
 
     /**
+    * 是否查询异常
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Error")
+    @Expose
+    private String Error;
+
+    /**
      * Get vod实例详情	
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return InstanceList vod实例详情	
@@ -74,6 +82,26 @@ public class VODInstanceList extends AbstractModel {
         this.TotalCount = TotalCount;
     }
 
+    /**
+     * Get 是否查询异常
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Error 是否查询异常
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getError() {
+        return this.Error;
+    }
+
+    /**
+     * Set 是否查询异常
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Error 是否查询异常
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setError(String Error) {
+        this.Error = Error;
+    }
+
     public VODInstanceList() {
     }
 
@@ -91,6 +119,9 @@ public class VODInstanceList extends AbstractModel {
         if (source.TotalCount != null) {
             this.TotalCount = new Long(source.TotalCount);
         }
+        if (source.Error != null) {
+            this.Error = new String(source.Error);
+        }
     }
 
 
@@ -100,6 +131,7 @@ public class VODInstanceList extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "InstanceList.", this.InstanceList);
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamSimple(map, prefix + "Error", this.Error);
 
     }
 }

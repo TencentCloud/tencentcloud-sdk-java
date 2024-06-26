@@ -168,6 +168,14 @@ HotPeriod=0为没有开启日志沉降。
     private Boolean IsWebTracking;
 
     /**
+    * 日志主题扩展信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Extends")
+    @Expose
+    private TopicExtendInfo Extends;
+
+    /**
      * Get 日志集ID 
      * @return LogsetId 日志集ID
      */
@@ -527,6 +535,26 @@ HotPeriod=0为没有开启日志沉降。
         this.IsWebTracking = IsWebTracking;
     }
 
+    /**
+     * Get 日志主题扩展信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Extends 日志主题扩展信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public TopicExtendInfo getExtends() {
+        return this.Extends;
+    }
+
+    /**
+     * Set 日志主题扩展信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Extends 日志主题扩展信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExtends(TopicExtendInfo Extends) {
+        this.Extends = Extends;
+    }
+
     public TopicInfo() {
     }
 
@@ -592,6 +620,9 @@ HotPeriod=0为没有开启日志沉降。
         if (source.IsWebTracking != null) {
             this.IsWebTracking = new Boolean(source.IsWebTracking);
         }
+        if (source.Extends != null) {
+            this.Extends = new TopicExtendInfo(source.Extends);
+        }
     }
 
 
@@ -617,6 +648,7 @@ HotPeriod=0为没有开启日志沉降。
         this.setParamSimple(map, prefix + "HotPeriod", this.HotPeriod);
         this.setParamSimple(map, prefix + "BizType", this.BizType);
         this.setParamSimple(map, prefix + "IsWebTracking", this.IsWebTracking);
+        this.setParamObj(map, prefix + "Extends.", this.Extends);
 
     }
 }

@@ -369,7 +369,7 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
-     *创建prometheus配置
+     *创建集群采集配置
      * @param req CreatePrometheusConfigRequest
      * @return CreatePrometheusConfigResponse
      * @throws TencentCloudSDKException
@@ -402,7 +402,7 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
-     *以Yaml的方式创建聚合规则
+     *创建聚合规则yaml方式
      * @param req CreatePrometheusRecordRuleYamlRequest
      * @return CreatePrometheusRecordRuleYamlResponse
      * @throws TencentCloudSDKException
@@ -688,7 +688,7 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
-     *删除Prometheus配置，如果目标不存在，将返回成功
+     *删除集群采集配置
      * @param req DeletePrometheusConfigRequest
      * @return DeletePrometheusConfigResponse
      * @throws TencentCloudSDKException
@@ -699,7 +699,7 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
-     *删除聚合实例
+     *删除聚合规则
      * @param req DeletePrometheusRecordRuleYamlRequest
      * @return DeletePrometheusRecordRuleYamlResponse
      * @throws TencentCloudSDKException
@@ -1482,7 +1482,7 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
-     *拉取Prometheus配置
+     *获取集群采集配置
      * @param req DescribePrometheusConfigRequest
      * @return DescribePrometheusConfigResponse
      * @throws TencentCloudSDKException
@@ -2153,7 +2153,7 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
-     *修改prometheus配置，如果配置项不存在，则会新增
+     *修改集群采集配置
      * @param req ModifyPrometheusConfigRequest
      * @return ModifyPrometheusConfigResponse
      * @throws TencentCloudSDKException
@@ -2175,7 +2175,7 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
-     *通过yaml的方式修改Prometheus聚合实例
+     *修改聚合规则yaml方式
      * @param req ModifyPrometheusRecordRuleYamlRequest
      * @return ModifyPrometheusRecordRuleYamlResponse
      * @throws TencentCloudSDKException

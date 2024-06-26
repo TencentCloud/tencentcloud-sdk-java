@@ -38,6 +38,13 @@ public class ReservedPreDomainsResponse extends AbstractModel {
     private FailReservedDomainInfo [] FailDomainList;
 
     /**
+    * 域名预定成功详情
+    */
+    @SerializedName("SucDomains")
+    @Expose
+    private SucDomainInfo [] SucDomains;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -77,6 +84,22 @@ public class ReservedPreDomainsResponse extends AbstractModel {
     }
 
     /**
+     * Get 域名预定成功详情 
+     * @return SucDomains 域名预定成功详情
+     */
+    public SucDomainInfo [] getSucDomains() {
+        return this.SucDomains;
+    }
+
+    /**
+     * Set 域名预定成功详情
+     * @param SucDomains 域名预定成功详情
+     */
+    public void setSucDomains(SucDomainInfo [] SucDomains) {
+        this.SucDomains = SucDomains;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -112,6 +135,12 @@ public class ReservedPreDomainsResponse extends AbstractModel {
                 this.FailDomainList[i] = new FailReservedDomainInfo(source.FailDomainList[i]);
             }
         }
+        if (source.SucDomains != null) {
+            this.SucDomains = new SucDomainInfo[source.SucDomains.length];
+            for (int i = 0; i < source.SucDomains.length; i++) {
+                this.SucDomains[i] = new SucDomainInfo(source.SucDomains[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -124,6 +153,7 @@ public class ReservedPreDomainsResponse extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "SucDomainList.", this.SucDomainList);
         this.setParamArrayObj(map, prefix + "FailDomainList.", this.FailDomainList);
+        this.setParamArrayObj(map, prefix + "SucDomains.", this.SucDomains);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

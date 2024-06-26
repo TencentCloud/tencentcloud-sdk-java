@@ -52,6 +52,14 @@ public class CloudStorageEvent extends AbstractModel {
     private String EventId;
 
     /**
+    * 事件录像上传状态，Finished: 全部上传成功 Partial: 部分上传成功 Failed: 上传失败	
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UploadStatus")
+    @Expose
+    private String UploadStatus;
+
+    /**
      * Get 事件起始时间（Unix 时间戳，秒级 
      * @return StartTime 事件起始时间（Unix 时间戳，秒级
      */
@@ -115,6 +123,26 @@ public class CloudStorageEvent extends AbstractModel {
         this.EventId = EventId;
     }
 
+    /**
+     * Get 事件录像上传状态，Finished: 全部上传成功 Partial: 部分上传成功 Failed: 上传失败	
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UploadStatus 事件录像上传状态，Finished: 全部上传成功 Partial: 部分上传成功 Failed: 上传失败	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getUploadStatus() {
+        return this.UploadStatus;
+    }
+
+    /**
+     * Set 事件录像上传状态，Finished: 全部上传成功 Partial: 部分上传成功 Failed: 上传失败	
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UploadStatus 事件录像上传状态，Finished: 全部上传成功 Partial: 部分上传成功 Failed: 上传失败	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUploadStatus(String UploadStatus) {
+        this.UploadStatus = UploadStatus;
+    }
+
     public CloudStorageEvent() {
     }
 
@@ -135,6 +163,9 @@ public class CloudStorageEvent extends AbstractModel {
         if (source.EventId != null) {
             this.EventId = new String(source.EventId);
         }
+        if (source.UploadStatus != null) {
+            this.UploadStatus = new String(source.UploadStatus);
+        }
     }
 
 
@@ -146,6 +177,7 @@ public class CloudStorageEvent extends AbstractModel {
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "Thumbnail", this.Thumbnail);
         this.setParamSimple(map, prefix + "EventId", this.EventId);
+        this.setParamSimple(map, prefix + "UploadStatus", this.UploadStatus);
 
     }
 }

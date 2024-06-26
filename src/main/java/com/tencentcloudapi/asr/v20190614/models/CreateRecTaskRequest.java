@@ -290,6 +290,31 @@ public class CreateRecTaskRequest extends AbstractModel {
     private String Extra;
 
     /**
+    * 临时热词表：该参数用于提升识别准确率。
+
+- 单个热词限制："热词|权重"，单个热词不超过30个字符（最多10个汉字），权重[1-11]或者100，如：“腾讯云|5” 或“ASR|11”；
+
+- 临时热词表限制：多个热词用英文逗号分割，最多支持128个热词，如：“腾讯云|10,语音识别|5,ASR|11”；
+
+- 参数 hotword_id（热词表） 与 hotword_list（临时热词表） 区别：
+
+    - hotword_id：热词表。需要先在控制台或接口创建热词表，获得对应hotword_id传入参数来使用热词功能；
+
+    - hotword_list：临时热词表。每次请求时直接传入临时热词表来使用热词功能，云端不保留临时热词表。适用于有极大量热词需求的用户；
+
+注意：
+
+- 如果同时传入了 hotword_id 和 hotword_list，会优先使用 hotword_list；
+
+- 热词权重设置为11时，当前热词将升级为超级热词，建议仅将重要且必须生效的热词设置到11，设置过多权重为11的热词将影响整体字准率。
+
+- 热词权重设置为100时，当前热词开启热词增强同音替换功能（仅支持8k_zh,16k_zh），举例：热词配置“蜜制|100”时，与“蜜制”同拼音（mizhi）的“秘制”的识别结果会被强制替换成“蜜制”。因此建议客户根据自己的实际情况开启该功能。建议仅将重要且必须生效的热词设置到100，设置过多权重为100的热词将影响整体字准率。
+    */
+    @SerializedName("HotwordList")
+    @Expose
+    private String HotwordList;
+
+    /**
      * Get 引擎模型类型
 识别引擎采用分级计费方案，标记为“大模型版”的引擎适用大模型计费方案，[点击这里](https://cloud.tencent.com/document/product/1093/35686) 查看产品计费说明
 
@@ -1105,6 +1130,94 @@ public class CreateRecTaskRequest extends AbstractModel {
         this.Extra = Extra;
     }
 
+    /**
+     * Get 临时热词表：该参数用于提升识别准确率。
+
+- 单个热词限制："热词|权重"，单个热词不超过30个字符（最多10个汉字），权重[1-11]或者100，如：“腾讯云|5” 或“ASR|11”；
+
+- 临时热词表限制：多个热词用英文逗号分割，最多支持128个热词，如：“腾讯云|10,语音识别|5,ASR|11”；
+
+- 参数 hotword_id（热词表） 与 hotword_list（临时热词表） 区别：
+
+    - hotword_id：热词表。需要先在控制台或接口创建热词表，获得对应hotword_id传入参数来使用热词功能；
+
+    - hotword_list：临时热词表。每次请求时直接传入临时热词表来使用热词功能，云端不保留临时热词表。适用于有极大量热词需求的用户；
+
+注意：
+
+- 如果同时传入了 hotword_id 和 hotword_list，会优先使用 hotword_list；
+
+- 热词权重设置为11时，当前热词将升级为超级热词，建议仅将重要且必须生效的热词设置到11，设置过多权重为11的热词将影响整体字准率。
+
+- 热词权重设置为100时，当前热词开启热词增强同音替换功能（仅支持8k_zh,16k_zh），举例：热词配置“蜜制|100”时，与“蜜制”同拼音（mizhi）的“秘制”的识别结果会被强制替换成“蜜制”。因此建议客户根据自己的实际情况开启该功能。建议仅将重要且必须生效的热词设置到100，设置过多权重为100的热词将影响整体字准率。 
+     * @return HotwordList 临时热词表：该参数用于提升识别准确率。
+
+- 单个热词限制："热词|权重"，单个热词不超过30个字符（最多10个汉字），权重[1-11]或者100，如：“腾讯云|5” 或“ASR|11”；
+
+- 临时热词表限制：多个热词用英文逗号分割，最多支持128个热词，如：“腾讯云|10,语音识别|5,ASR|11”；
+
+- 参数 hotword_id（热词表） 与 hotword_list（临时热词表） 区别：
+
+    - hotword_id：热词表。需要先在控制台或接口创建热词表，获得对应hotword_id传入参数来使用热词功能；
+
+    - hotword_list：临时热词表。每次请求时直接传入临时热词表来使用热词功能，云端不保留临时热词表。适用于有极大量热词需求的用户；
+
+注意：
+
+- 如果同时传入了 hotword_id 和 hotword_list，会优先使用 hotword_list；
+
+- 热词权重设置为11时，当前热词将升级为超级热词，建议仅将重要且必须生效的热词设置到11，设置过多权重为11的热词将影响整体字准率。
+
+- 热词权重设置为100时，当前热词开启热词增强同音替换功能（仅支持8k_zh,16k_zh），举例：热词配置“蜜制|100”时，与“蜜制”同拼音（mizhi）的“秘制”的识别结果会被强制替换成“蜜制”。因此建议客户根据自己的实际情况开启该功能。建议仅将重要且必须生效的热词设置到100，设置过多权重为100的热词将影响整体字准率。
+     */
+    public String getHotwordList() {
+        return this.HotwordList;
+    }
+
+    /**
+     * Set 临时热词表：该参数用于提升识别准确率。
+
+- 单个热词限制："热词|权重"，单个热词不超过30个字符（最多10个汉字），权重[1-11]或者100，如：“腾讯云|5” 或“ASR|11”；
+
+- 临时热词表限制：多个热词用英文逗号分割，最多支持128个热词，如：“腾讯云|10,语音识别|5,ASR|11”；
+
+- 参数 hotword_id（热词表） 与 hotword_list（临时热词表） 区别：
+
+    - hotword_id：热词表。需要先在控制台或接口创建热词表，获得对应hotword_id传入参数来使用热词功能；
+
+    - hotword_list：临时热词表。每次请求时直接传入临时热词表来使用热词功能，云端不保留临时热词表。适用于有极大量热词需求的用户；
+
+注意：
+
+- 如果同时传入了 hotword_id 和 hotword_list，会优先使用 hotword_list；
+
+- 热词权重设置为11时，当前热词将升级为超级热词，建议仅将重要且必须生效的热词设置到11，设置过多权重为11的热词将影响整体字准率。
+
+- 热词权重设置为100时，当前热词开启热词增强同音替换功能（仅支持8k_zh,16k_zh），举例：热词配置“蜜制|100”时，与“蜜制”同拼音（mizhi）的“秘制”的识别结果会被强制替换成“蜜制”。因此建议客户根据自己的实际情况开启该功能。建议仅将重要且必须生效的热词设置到100，设置过多权重为100的热词将影响整体字准率。
+     * @param HotwordList 临时热词表：该参数用于提升识别准确率。
+
+- 单个热词限制："热词|权重"，单个热词不超过30个字符（最多10个汉字），权重[1-11]或者100，如：“腾讯云|5” 或“ASR|11”；
+
+- 临时热词表限制：多个热词用英文逗号分割，最多支持128个热词，如：“腾讯云|10,语音识别|5,ASR|11”；
+
+- 参数 hotword_id（热词表） 与 hotword_list（临时热词表） 区别：
+
+    - hotword_id：热词表。需要先在控制台或接口创建热词表，获得对应hotword_id传入参数来使用热词功能；
+
+    - hotword_list：临时热词表。每次请求时直接传入临时热词表来使用热词功能，云端不保留临时热词表。适用于有极大量热词需求的用户；
+
+注意：
+
+- 如果同时传入了 hotword_id 和 hotword_list，会优先使用 hotword_list；
+
+- 热词权重设置为11时，当前热词将升级为超级热词，建议仅将重要且必须生效的热词设置到11，设置过多权重为11的热词将影响整体字准率。
+
+- 热词权重设置为100时，当前热词开启热词增强同音替换功能（仅支持8k_zh,16k_zh），举例：热词配置“蜜制|100”时，与“蜜制”同拼音（mizhi）的“秘制”的识别结果会被强制替换成“蜜制”。因此建议客户根据自己的实际情况开启该功能。建议仅将重要且必须生效的热词设置到100，设置过多权重为100的热词将影响整体字准率。
+     */
+    public void setHotwordList(String HotwordList) {
+        this.HotwordList = HotwordList;
+    }
+
     public CreateRecTaskRequest() {
     }
 
@@ -1176,6 +1289,9 @@ public class CreateRecTaskRequest extends AbstractModel {
         if (source.Extra != null) {
             this.Extra = new String(source.Extra);
         }
+        if (source.HotwordList != null) {
+            this.HotwordList = new String(source.HotwordList);
+        }
     }
 
 
@@ -1204,6 +1320,7 @@ public class CreateRecTaskRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "FilterModal", this.FilterModal);
         this.setParamSimple(map, prefix + "SentenceMaxLength", this.SentenceMaxLength);
         this.setParamSimple(map, prefix + "Extra", this.Extra);
+        this.setParamSimple(map, prefix + "HotwordList", this.HotwordList);
 
     }
 }

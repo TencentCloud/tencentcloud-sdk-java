@@ -126,6 +126,14 @@ public class DescribeCertificateBindResourceTaskDetailResponse extends AbstractM
     private TSEInstanceList [] TSE;
 
     /**
+    * 关联的COS资源详情
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("COS")
+    @Expose
+    private COSInstanceList [] COS;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -385,6 +393,26 @@ public class DescribeCertificateBindResourceTaskDetailResponse extends AbstractM
     }
 
     /**
+     * Get 关联的COS资源详情
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return COS 关联的COS资源详情
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public COSInstanceList [] getCOS() {
+        return this.COS;
+    }
+
+    /**
+     * Set 关联的COS资源详情
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param COS 关联的COS资源详情
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCOS(COSInstanceList [] COS) {
+        this.COS = COS;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -480,6 +508,12 @@ public class DescribeCertificateBindResourceTaskDetailResponse extends AbstractM
                 this.TSE[i] = new TSEInstanceList(source.TSE[i]);
             }
         }
+        if (source.COS != null) {
+            this.COS = new COSInstanceList[source.COS.length];
+            for (int i = 0; i < source.COS.length; i++) {
+                this.COS[i] = new COSInstanceList(source.COS[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -503,6 +537,7 @@ public class DescribeCertificateBindResourceTaskDetailResponse extends AbstractM
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "CacheTime", this.CacheTime);
         this.setParamArrayObj(map, prefix + "TSE.", this.TSE);
+        this.setParamArrayObj(map, prefix + "COS.", this.COS);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

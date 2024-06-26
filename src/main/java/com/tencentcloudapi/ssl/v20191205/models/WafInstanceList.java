@@ -46,6 +46,14 @@ public class WafInstanceList extends AbstractModel {
     private Long TotalCount;
 
     /**
+    * 是否查询异常
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Error")
+    @Expose
+    private String Error;
+
+    /**
      * Get 地域 
      * @return Region 地域
      */
@@ -97,6 +105,26 @@ public class WafInstanceList extends AbstractModel {
         this.TotalCount = TotalCount;
     }
 
+    /**
+     * Get 是否查询异常
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Error 是否查询异常
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getError() {
+        return this.Error;
+    }
+
+    /**
+     * Set 是否查询异常
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Error 是否查询异常
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setError(String Error) {
+        this.Error = Error;
+    }
+
     public WafInstanceList() {
     }
 
@@ -117,6 +145,9 @@ public class WafInstanceList extends AbstractModel {
         if (source.TotalCount != null) {
             this.TotalCount = new Long(source.TotalCount);
         }
+        if (source.Error != null) {
+            this.Error = new String(source.Error);
+        }
     }
 
 
@@ -127,6 +158,7 @@ public class WafInstanceList extends AbstractModel {
         this.setParamSimple(map, prefix + "Region", this.Region);
         this.setParamArrayObj(map, prefix + "InstanceList.", this.InstanceList);
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamSimple(map, prefix + "Error", this.Error);
 
     }
 }

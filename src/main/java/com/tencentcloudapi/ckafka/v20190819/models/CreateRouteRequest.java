@@ -31,7 +31,7 @@ public class CreateRouteRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * 路由网络类型(3:vpc路由;4:标准版支撑路由;7:专业版支撑路由)
+    * 路由网络类型(3:vpc路由;7:内部支撑路由)
     */
     @SerializedName("VipType")
     @Expose
@@ -103,16 +103,16 @@ public class CreateRouteRequest extends AbstractModel {
     }
 
     /**
-     * Get 路由网络类型(3:vpc路由;4:标准版支撑路由;7:专业版支撑路由) 
-     * @return VipType 路由网络类型(3:vpc路由;4:标准版支撑路由;7:专业版支撑路由)
+     * Get 路由网络类型(3:vpc路由;7:内部支撑路由) 
+     * @return VipType 路由网络类型(3:vpc路由;7:内部支撑路由)
      */
     public Long getVipType() {
         return this.VipType;
     }
 
     /**
-     * Set 路由网络类型(3:vpc路由;4:标准版支撑路由;7:专业版支撑路由)
-     * @param VipType 路由网络类型(3:vpc路由;4:标准版支撑路由;7:专业版支撑路由)
+     * Set 路由网络类型(3:vpc路由;7:内部支撑路由)
+     * @param VipType 路由网络类型(3:vpc路由;7:内部支撑路由)
      */
     public void setVipType(Long VipType) {
         this.VipType = VipType;

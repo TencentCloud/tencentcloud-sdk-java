@@ -31,7 +31,7 @@ public class CreateFlowBlockchainEvidenceUrlResponse extends AbstractModel {
     private String QrCode;
 
     /**
-    * 查看短链，可直接点击短链查看报告。
+    * 查看短链，可直接点击短链查看证书。
     */
     @SerializedName("Url")
     @Expose
@@ -68,16 +68,16 @@ public class CreateFlowBlockchainEvidenceUrlResponse extends AbstractModel {
     }
 
     /**
-     * Get 查看短链，可直接点击短链查看报告。 
-     * @return Url 查看短链，可直接点击短链查看报告。
+     * Get 查看短链，可直接点击短链查看证书。 
+     * @return Url 查看短链，可直接点击短链查看证书。
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set 查看短链，可直接点击短链查看报告。
-     * @param Url 查看短链，可直接点击短链查看报告。
+     * Set 查看短链，可直接点击短链查看证书。
+     * @param Url 查看短链，可直接点击短链查看证书。
      */
     public void setUrl(String Url) {
         this.Url = Url;

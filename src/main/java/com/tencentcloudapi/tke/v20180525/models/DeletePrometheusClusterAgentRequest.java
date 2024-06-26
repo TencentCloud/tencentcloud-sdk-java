@@ -38,6 +38,13 @@ public class DeletePrometheusClusterAgentRequest extends AbstractModel {
     private String InstanceId;
 
     /**
+    * 在7天可回收期间，强制解除绑定
+    */
+    @SerializedName("Force")
+    @Expose
+    private Boolean Force;
+
+    /**
      * Get agent列表 
      * @return Agents agent列表
      */
@@ -69,6 +76,22 @@ public class DeletePrometheusClusterAgentRequest extends AbstractModel {
         this.InstanceId = InstanceId;
     }
 
+    /**
+     * Get 在7天可回收期间，强制解除绑定 
+     * @return Force 在7天可回收期间，强制解除绑定
+     */
+    public Boolean getForce() {
+        return this.Force;
+    }
+
+    /**
+     * Set 在7天可回收期间，强制解除绑定
+     * @param Force 在7天可回收期间，强制解除绑定
+     */
+    public void setForce(Boolean Force) {
+        this.Force = Force;
+    }
+
     public DeletePrometheusClusterAgentRequest() {
     }
 
@@ -86,6 +109,9 @@ public class DeletePrometheusClusterAgentRequest extends AbstractModel {
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }
+        if (source.Force != null) {
+            this.Force = new Boolean(source.Force);
+        }
     }
 
 
@@ -95,6 +121,7 @@ public class DeletePrometheusClusterAgentRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Agents.", this.Agents);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "Force", this.Force);
 
     }
 }

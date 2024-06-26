@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class MonitorTime extends AbstractModel {
 
     /**
-    * 执行周期， 可选值：Period；Fixed。
+    * 执行周期， 可选值：`Period`、`Fixed`。
 
 - Period：固定频率
 - Fixed：固定时间
@@ -35,17 +35,18 @@ public class MonitorTime extends AbstractModel {
 
     /**
     * 执行的周期，或者定制执行的时间节点。单位为分钟，取值范围为1~1440。
+当type为`Period`,`Fixed`时，time字段生效。
     */
     @SerializedName("Time")
     @Expose
     private Long Time;
 
     /**
-     * Get 执行周期， 可选值：Period；Fixed。
+     * Get 执行周期， 可选值：`Period`、`Fixed`。
 
 - Period：固定频率
 - Fixed：固定时间 
-     * @return Type 执行周期， 可选值：Period；Fixed。
+     * @return Type 执行周期， 可选值：`Period`、`Fixed`。
 
 - Period：固定频率
 - Fixed：固定时间
@@ -55,11 +56,11 @@ public class MonitorTime extends AbstractModel {
     }
 
     /**
-     * Set 执行周期， 可选值：Period；Fixed。
+     * Set 执行周期， 可选值：`Period`、`Fixed`。
 
 - Period：固定频率
 - Fixed：固定时间
-     * @param Type 执行周期， 可选值：Period；Fixed。
+     * @param Type 执行周期， 可选值：`Period`、`Fixed`。
 
 - Period：固定频率
 - Fixed：固定时间
@@ -69,8 +70,10 @@ public class MonitorTime extends AbstractModel {
     }
 
     /**
-     * Get 执行的周期，或者定制执行的时间节点。单位为分钟，取值范围为1~1440。 
+     * Get 执行的周期，或者定制执行的时间节点。单位为分钟，取值范围为1~1440。
+当type为`Period`,`Fixed`时，time字段生效。 
      * @return Time 执行的周期，或者定制执行的时间节点。单位为分钟，取值范围为1~1440。
+当type为`Period`,`Fixed`时，time字段生效。
      */
     public Long getTime() {
         return this.Time;
@@ -78,7 +81,9 @@ public class MonitorTime extends AbstractModel {
 
     /**
      * Set 执行的周期，或者定制执行的时间节点。单位为分钟，取值范围为1~1440。
+当type为`Period`,`Fixed`时，time字段生效。
      * @param Time 执行的周期，或者定制执行的时间节点。单位为分钟，取值范围为1~1440。
+当type为`Period`,`Fixed`时，time字段生效。
      */
     public void setTime(Long Time) {
         this.Time = Time;

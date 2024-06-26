@@ -39,6 +39,14 @@ public class CdnInstanceList extends AbstractModel {
     private CdnInstanceDetail [] InstanceList;
 
     /**
+    * 是否查询异常
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Error")
+    @Expose
+    private String Error;
+
+    /**
      * Get 该地域下CDN域名总数	 
      * @return TotalCount 该地域下CDN域名总数	
      */
@@ -74,6 +82,26 @@ public class CdnInstanceList extends AbstractModel {
         this.InstanceList = InstanceList;
     }
 
+    /**
+     * Get 是否查询异常
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Error 是否查询异常
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getError() {
+        return this.Error;
+    }
+
+    /**
+     * Set 是否查询异常
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Error 是否查询异常
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setError(String Error) {
+        this.Error = Error;
+    }
+
     public CdnInstanceList() {
     }
 
@@ -91,6 +119,9 @@ public class CdnInstanceList extends AbstractModel {
                 this.InstanceList[i] = new CdnInstanceDetail(source.InstanceList[i]);
             }
         }
+        if (source.Error != null) {
+            this.Error = new String(source.Error);
+        }
     }
 
 
@@ -100,6 +131,7 @@ public class CdnInstanceList extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamArrayObj(map, prefix + "InstanceList.", this.InstanceList);
+        this.setParamSimple(map, prefix + "Error", this.Error);
 
     }
 }

@@ -97,6 +97,13 @@ public class ModifyTopicRequest extends AbstractModel {
     private Boolean IsWebTracking;
 
     /**
+    * 日志主题扩展信息
+    */
+    @SerializedName("Extends")
+    @Expose
+    private TopicExtendInfo Extends;
+
+    /**
     * 日志主题分区数量
     */
     @SerializedName("PartitionCount")
@@ -276,6 +283,22 @@ public class ModifyTopicRequest extends AbstractModel {
     }
 
     /**
+     * Get 日志主题扩展信息 
+     * @return Extends 日志主题扩展信息
+     */
+    public TopicExtendInfo getExtends() {
+        return this.Extends;
+    }
+
+    /**
+     * Set 日志主题扩展信息
+     * @param Extends 日志主题扩展信息
+     */
+    public void setExtends(TopicExtendInfo Extends) {
+        this.Extends = Extends;
+    }
+
+    /**
      * Get 日志主题分区数量 
      * @return PartitionCount 日志主题分区数量
      */
@@ -332,6 +355,9 @@ public class ModifyTopicRequest extends AbstractModel {
         if (source.IsWebTracking != null) {
             this.IsWebTracking = new Boolean(source.IsWebTracking);
         }
+        if (source.Extends != null) {
+            this.Extends = new TopicExtendInfo(source.Extends);
+        }
         if (source.PartitionCount != null) {
             this.PartitionCount = new Long(source.PartitionCount);
         }
@@ -352,6 +378,7 @@ public class ModifyTopicRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Describes", this.Describes);
         this.setParamSimple(map, prefix + "HotPeriod", this.HotPeriod);
         this.setParamSimple(map, prefix + "IsWebTracking", this.IsWebTracking);
+        this.setParamObj(map, prefix + "Extends.", this.Extends);
         this.setParamSimple(map, prefix + "PartitionCount", this.PartitionCount);
 
     }

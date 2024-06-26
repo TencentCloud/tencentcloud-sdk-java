@@ -39,6 +39,14 @@ public class LiveInstanceList extends AbstractModel {
     private LiveInstanceDetail [] InstanceList;
 
     /**
+    * 是否查询异常
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Error")
+    @Expose
+    private String Error;
+
+    /**
      * Get 该地域下live实例总数	 
      * @return TotalCount 该地域下live实例总数	
      */
@@ -74,6 +82,26 @@ public class LiveInstanceList extends AbstractModel {
         this.InstanceList = InstanceList;
     }
 
+    /**
+     * Get 是否查询异常
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Error 是否查询异常
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getError() {
+        return this.Error;
+    }
+
+    /**
+     * Set 是否查询异常
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Error 是否查询异常
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setError(String Error) {
+        this.Error = Error;
+    }
+
     public LiveInstanceList() {
     }
 
@@ -91,6 +119,9 @@ public class LiveInstanceList extends AbstractModel {
                 this.InstanceList[i] = new LiveInstanceDetail(source.InstanceList[i]);
             }
         }
+        if (source.Error != null) {
+            this.Error = new String(source.Error);
+        }
     }
 
 
@@ -100,6 +131,7 @@ public class LiveInstanceList extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamArrayObj(map, prefix + "InstanceList.", this.InstanceList);
+        this.setParamSimple(map, prefix + "Error", this.Error);
 
     }
 }

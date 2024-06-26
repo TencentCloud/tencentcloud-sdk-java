@@ -171,7 +171,7 @@ public class CkafkaClient extends AbstractClient{
     }
 
     /**
-     *创建Datahub主题
+     *创建DIP主题
      * @param req CreateDatahubTopicRequest
      * @return CreateDatahubTopicResponse
      * @throws TencentCloudSDKException
@@ -325,7 +325,7 @@ public class CkafkaClient extends AbstractClient{
     }
 
     /**
-     *删除Datahub任务
+     *删除Dip任务
      * @param req DeleteDatahubTaskRequest
      * @return DeleteDatahubTaskResponse
      * @throws TencentCloudSDKException
@@ -545,7 +545,7 @@ public class CkafkaClient extends AbstractClient{
     }
 
     /**
-     *获取Datahub主题属性
+     *获取DIP主题属性
      * @param req DescribeDatahubTopicRequest
      * @return DescribeDatahubTopicResponse
      * @throws TencentCloudSDKException
@@ -865,7 +865,7 @@ public class CkafkaClient extends AbstractClient{
     }
 
     /**
-     *修改Datahub主题属性
+     *修改DIP主题属性
      * @param req ModifyDatahubTopicRequest
      * @return ModifyDatahubTopicResponse
      * @throws TencentCloudSDKException
