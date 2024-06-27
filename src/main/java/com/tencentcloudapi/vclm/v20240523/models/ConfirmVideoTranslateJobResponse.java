@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cwp.v20180228.models;
+package com.tencentcloudapi.vclm.v20240523.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,21 +21,42 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ExportAttackLogsResponse extends AbstractModel {
+public class ConfirmVideoTranslateJobResponse extends AbstractModel {
 
     /**
-    * 已废弃
+    * 视频翻译任务 ID
     */
-    @SerializedName("DownloadUrl")
+    @SerializedName("JobId")
     @Expose
-    private String DownloadUrl;
+    private String JobId;
 
     /**
-    * 任务ID,需要到接口“异步导出任务”ExportTasks获取DownloadUrl下载地址
+    * 音频转换任务 ID
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
+
+    /**
+    * 音频翻译结果确认 session	
+    */
+    @SerializedName("SessionId")
+    @Expose
+    private String SessionId;
+
+    /**
+    * 视频转译任务状态	
+    */
+    @SerializedName("Status")
+    @Expose
+    private Long Status;
+
+    /**
+    * 视频转译任务信息	
+    */
+    @SerializedName("Message")
+    @Expose
+    private String Message;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -45,35 +66,83 @@ public class ExportAttackLogsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 已废弃 
-     * @return DownloadUrl 已废弃
+     * Get 视频翻译任务 ID 
+     * @return JobId 视频翻译任务 ID
      */
-    public String getDownloadUrl() {
-        return this.DownloadUrl;
+    public String getJobId() {
+        return this.JobId;
     }
 
     /**
-     * Set 已废弃
-     * @param DownloadUrl 已废弃
+     * Set 视频翻译任务 ID
+     * @param JobId 视频翻译任务 ID
      */
-    public void setDownloadUrl(String DownloadUrl) {
-        this.DownloadUrl = DownloadUrl;
+    public void setJobId(String JobId) {
+        this.JobId = JobId;
     }
 
     /**
-     * Get 任务ID,需要到接口“异步导出任务”ExportTasks获取DownloadUrl下载地址 
-     * @return TaskId 任务ID,需要到接口“异步导出任务”ExportTasks获取DownloadUrl下载地址
+     * Get 音频转换任务 ID 
+     * @return TaskId 音频转换任务 ID
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 任务ID,需要到接口“异步导出任务”ExportTasks获取DownloadUrl下载地址
-     * @param TaskId 任务ID,需要到接口“异步导出任务”ExportTasks获取DownloadUrl下载地址
+     * Set 音频转换任务 ID
+     * @param TaskId 音频转换任务 ID
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
+    }
+
+    /**
+     * Get 音频翻译结果确认 session	 
+     * @return SessionId 音频翻译结果确认 session	
+     */
+    public String getSessionId() {
+        return this.SessionId;
+    }
+
+    /**
+     * Set 音频翻译结果确认 session	
+     * @param SessionId 音频翻译结果确认 session	
+     */
+    public void setSessionId(String SessionId) {
+        this.SessionId = SessionId;
+    }
+
+    /**
+     * Get 视频转译任务状态	 
+     * @return Status 视频转译任务状态	
+     */
+    public Long getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 视频转译任务状态	
+     * @param Status 视频转译任务状态	
+     */
+    public void setStatus(Long Status) {
+        this.Status = Status;
+    }
+
+    /**
+     * Get 视频转译任务信息	 
+     * @return Message 视频转译任务信息	
+     */
+    public String getMessage() {
+        return this.Message;
+    }
+
+    /**
+     * Set 视频转译任务信息	
+     * @param Message 视频转译任务信息	
+     */
+    public void setMessage(String Message) {
+        this.Message = Message;
     }
 
     /**
@@ -92,19 +161,28 @@ public class ExportAttackLogsResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public ExportAttackLogsResponse() {
+    public ConfirmVideoTranslateJobResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ExportAttackLogsResponse(ExportAttackLogsResponse source) {
-        if (source.DownloadUrl != null) {
-            this.DownloadUrl = new String(source.DownloadUrl);
+    public ConfirmVideoTranslateJobResponse(ConfirmVideoTranslateJobResponse source) {
+        if (source.JobId != null) {
+            this.JobId = new String(source.JobId);
         }
         if (source.TaskId != null) {
             this.TaskId = new String(source.TaskId);
+        }
+        if (source.SessionId != null) {
+            this.SessionId = new String(source.SessionId);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.Message != null) {
+            this.Message = new String(source.Message);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -116,8 +194,11 @@ public class ExportAttackLogsResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "DownloadUrl", this.DownloadUrl);
+        this.setParamSimple(map, prefix + "JobId", this.JobId);
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
+        this.setParamSimple(map, prefix + "SessionId", this.SessionId);
+        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "Message", this.Message);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

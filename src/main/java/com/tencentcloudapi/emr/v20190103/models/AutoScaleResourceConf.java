@@ -76,6 +76,78 @@ public class AutoScaleResourceConf extends AbstractModel {
     private Boolean GraceDownFlag;
 
     /**
+    * "CVM"表示规格全部使用CVM相关类型，"POD"表示规格使用容器相关类型,默认为"CVM"。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HardwareType")
+    @Expose
+    private String HardwareType;
+
+    /**
+    * "POSTPAY"表示只使用按量计费，"SPOT_FIRST"表示竞价实例优先，只有HardwareType为"HOST"时支持竞价实例优先，"POD"只支持纯按量计费。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PayMode")
+    @Expose
+    private String PayMode;
+
+    /**
+    * 竞价实例优先的场景下，按量计费资源数量的最低百分比，整数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PostPayPercentMin")
+    @Expose
+    private Long PostPayPercentMin;
+
+    /**
+    * 预设资源类型为HOST时，支持勾选“资源不足时切换POD”；支持取消勾选；默认不勾选（0），勾选（1)
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ChangeToPod")
+    @Expose
+    private Long ChangeToPod;
+
+    /**
+    * 伸缩组名
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("GroupName")
+    @Expose
+    private String GroupName;
+
+    /**
+    * 标签
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("YarnNodeLabel")
+    @Expose
+    private String YarnNodeLabel;
+
+    /**
+    * 伸缩组状态
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("GroupStatus")
+    @Expose
+    private Long GroupStatus;
+
+    /**
+    * 并行伸缩 0关闭；1开启
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Parallel")
+    @Expose
+    private Long Parallel;
+
+    /**
+    * 是否支持MNode
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EnableMNode")
+    @Expose
+    private Long EnableMNode;
+
+    /**
      * Get 配置ID。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Id 配置ID。
@@ -199,6 +271,186 @@ public class AutoScaleResourceConf extends AbstractModel {
         this.GraceDownFlag = GraceDownFlag;
     }
 
+    /**
+     * Get "CVM"表示规格全部使用CVM相关类型，"POD"表示规格使用容器相关类型,默认为"CVM"。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return HardwareType "CVM"表示规格全部使用CVM相关类型，"POD"表示规格使用容器相关类型,默认为"CVM"。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getHardwareType() {
+        return this.HardwareType;
+    }
+
+    /**
+     * Set "CVM"表示规格全部使用CVM相关类型，"POD"表示规格使用容器相关类型,默认为"CVM"。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HardwareType "CVM"表示规格全部使用CVM相关类型，"POD"表示规格使用容器相关类型,默认为"CVM"。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHardwareType(String HardwareType) {
+        this.HardwareType = HardwareType;
+    }
+
+    /**
+     * Get "POSTPAY"表示只使用按量计费，"SPOT_FIRST"表示竞价实例优先，只有HardwareType为"HOST"时支持竞价实例优先，"POD"只支持纯按量计费。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PayMode "POSTPAY"表示只使用按量计费，"SPOT_FIRST"表示竞价实例优先，只有HardwareType为"HOST"时支持竞价实例优先，"POD"只支持纯按量计费。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPayMode() {
+        return this.PayMode;
+    }
+
+    /**
+     * Set "POSTPAY"表示只使用按量计费，"SPOT_FIRST"表示竞价实例优先，只有HardwareType为"HOST"时支持竞价实例优先，"POD"只支持纯按量计费。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PayMode "POSTPAY"表示只使用按量计费，"SPOT_FIRST"表示竞价实例优先，只有HardwareType为"HOST"时支持竞价实例优先，"POD"只支持纯按量计费。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPayMode(String PayMode) {
+        this.PayMode = PayMode;
+    }
+
+    /**
+     * Get 竞价实例优先的场景下，按量计费资源数量的最低百分比，整数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PostPayPercentMin 竞价实例优先的场景下，按量计费资源数量的最低百分比，整数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getPostPayPercentMin() {
+        return this.PostPayPercentMin;
+    }
+
+    /**
+     * Set 竞价实例优先的场景下，按量计费资源数量的最低百分比，整数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PostPayPercentMin 竞价实例优先的场景下，按量计费资源数量的最低百分比，整数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPostPayPercentMin(Long PostPayPercentMin) {
+        this.PostPayPercentMin = PostPayPercentMin;
+    }
+
+    /**
+     * Get 预设资源类型为HOST时，支持勾选“资源不足时切换POD”；支持取消勾选；默认不勾选（0），勾选（1)
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ChangeToPod 预设资源类型为HOST时，支持勾选“资源不足时切换POD”；支持取消勾选；默认不勾选（0），勾选（1)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getChangeToPod() {
+        return this.ChangeToPod;
+    }
+
+    /**
+     * Set 预设资源类型为HOST时，支持勾选“资源不足时切换POD”；支持取消勾选；默认不勾选（0），勾选（1)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ChangeToPod 预设资源类型为HOST时，支持勾选“资源不足时切换POD”；支持取消勾选；默认不勾选（0），勾选（1)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setChangeToPod(Long ChangeToPod) {
+        this.ChangeToPod = ChangeToPod;
+    }
+
+    /**
+     * Get 伸缩组名
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return GroupName 伸缩组名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getGroupName() {
+        return this.GroupName;
+    }
+
+    /**
+     * Set 伸缩组名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param GroupName 伸缩组名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setGroupName(String GroupName) {
+        this.GroupName = GroupName;
+    }
+
+    /**
+     * Get 标签
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return YarnNodeLabel 标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getYarnNodeLabel() {
+        return this.YarnNodeLabel;
+    }
+
+    /**
+     * Set 标签
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param YarnNodeLabel 标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setYarnNodeLabel(String YarnNodeLabel) {
+        this.YarnNodeLabel = YarnNodeLabel;
+    }
+
+    /**
+     * Get 伸缩组状态
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return GroupStatus 伸缩组状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getGroupStatus() {
+        return this.GroupStatus;
+    }
+
+    /**
+     * Set 伸缩组状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param GroupStatus 伸缩组状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setGroupStatus(Long GroupStatus) {
+        this.GroupStatus = GroupStatus;
+    }
+
+    /**
+     * Get 并行伸缩 0关闭；1开启
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Parallel 并行伸缩 0关闭；1开启
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getParallel() {
+        return this.Parallel;
+    }
+
+    /**
+     * Set 并行伸缩 0关闭；1开启
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Parallel 并行伸缩 0关闭；1开启
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setParallel(Long Parallel) {
+        this.Parallel = Parallel;
+    }
+
+    /**
+     * Get 是否支持MNode
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EnableMNode 是否支持MNode
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getEnableMNode() {
+        return this.EnableMNode;
+    }
+
+    /**
+     * Set 是否支持MNode
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EnableMNode 是否支持MNode
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEnableMNode(Long EnableMNode) {
+        this.EnableMNode = EnableMNode;
+    }
+
     public AutoScaleResourceConf() {
     }
 
@@ -228,6 +480,33 @@ public class AutoScaleResourceConf extends AbstractModel {
         if (source.GraceDownFlag != null) {
             this.GraceDownFlag = new Boolean(source.GraceDownFlag);
         }
+        if (source.HardwareType != null) {
+            this.HardwareType = new String(source.HardwareType);
+        }
+        if (source.PayMode != null) {
+            this.PayMode = new String(source.PayMode);
+        }
+        if (source.PostPayPercentMin != null) {
+            this.PostPayPercentMin = new Long(source.PostPayPercentMin);
+        }
+        if (source.ChangeToPod != null) {
+            this.ChangeToPod = new Long(source.ChangeToPod);
+        }
+        if (source.GroupName != null) {
+            this.GroupName = new String(source.GroupName);
+        }
+        if (source.YarnNodeLabel != null) {
+            this.YarnNodeLabel = new String(source.YarnNodeLabel);
+        }
+        if (source.GroupStatus != null) {
+            this.GroupStatus = new Long(source.GroupStatus);
+        }
+        if (source.Parallel != null) {
+            this.Parallel = new Long(source.Parallel);
+        }
+        if (source.EnableMNode != null) {
+            this.EnableMNode = new Long(source.EnableMNode);
+        }
     }
 
 
@@ -242,6 +521,15 @@ public class AutoScaleResourceConf extends AbstractModel {
         this.setParamSimple(map, prefix + "StrategyType", this.StrategyType);
         this.setParamSimple(map, prefix + "NextTimeCanScale", this.NextTimeCanScale);
         this.setParamSimple(map, prefix + "GraceDownFlag", this.GraceDownFlag);
+        this.setParamSimple(map, prefix + "HardwareType", this.HardwareType);
+        this.setParamSimple(map, prefix + "PayMode", this.PayMode);
+        this.setParamSimple(map, prefix + "PostPayPercentMin", this.PostPayPercentMin);
+        this.setParamSimple(map, prefix + "ChangeToPod", this.ChangeToPod);
+        this.setParamSimple(map, prefix + "GroupName", this.GroupName);
+        this.setParamSimple(map, prefix + "YarnNodeLabel", this.YarnNodeLabel);
+        this.setParamSimple(map, prefix + "GroupStatus", this.GroupStatus);
+        this.setParamSimple(map, prefix + "Parallel", this.Parallel);
+        this.setParamSimple(map, prefix + "EnableMNode", this.EnableMNode);
 
     }
 }

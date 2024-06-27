@@ -4256,19 +4256,6 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
-     *ExportAttackEvents接口替代
-
-导出网络攻击日志
-     * @param req ExportAttackLogsRequest
-     * @return ExportAttackLogsResponse
-     * @throws TencentCloudSDKException
-     */
-    public ExportAttackLogsResponse ExportAttackLogs(ExportAttackLogsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "ExportAttackLogs", ExportAttackLogsResponse.class);
-    }
-
-    /**
      *导出基线影响主机列表
      * @param req ExportBaselineEffectHostListRequest
      * @return ExportBaselineEffectHostListResponse

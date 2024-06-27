@@ -98,7 +98,7 @@ public class WorkflowTask extends AbstractModel {
     private AiRecognitionResult [] AiRecognitionResultSet;
 
     /**
-    * 视频质检任务的执行状态与结果。
+    * 媒体质检任务的执行状态与结果。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AiQualityControlTaskResult")
@@ -282,9 +282,9 @@ public class WorkflowTask extends AbstractModel {
     }
 
     /**
-     * Get 视频质检任务的执行状态与结果。
+     * Get 媒体质检任务的执行状态与结果。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AiQualityControlTaskResult 视频质检任务的执行状态与结果。
+     * @return AiQualityControlTaskResult 媒体质检任务的执行状态与结果。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ScheduleQualityControlTaskResult getAiQualityControlTaskResult() {
@@ -292,9 +292,9 @@ public class WorkflowTask extends AbstractModel {
     }
 
     /**
-     * Set 视频质检任务的执行状态与结果。
+     * Set 媒体质检任务的执行状态与结果。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AiQualityControlTaskResult 视频质检任务的执行状态与结果。
+     * @param AiQualityControlTaskResult 媒体质检任务的执行状态与结果。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAiQualityControlTaskResult(ScheduleQualityControlTaskResult AiQualityControlTaskResult) {

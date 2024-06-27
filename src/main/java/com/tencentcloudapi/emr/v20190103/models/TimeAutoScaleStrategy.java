@@ -56,7 +56,7 @@ public class TimeAutoScaleStrategy extends AbstractModel {
     private Long ScaleNum;
 
     /**
-    * 规则状态，1表示有效，2表示无效，3表示暂停。
+    * 规则状态，1表示有效，2表示无效，3表示暂停。必须填写
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StrategyStatus")
@@ -156,7 +156,7 @@ public class TimeAutoScaleStrategy extends AbstractModel {
     private Long MaxUse;
 
     /**
-    * 节点部署服务列表。
+    * 节点部署服务列表。部署服务仅填写HDFS、YARN。[组件名对应的映射关系表](https://cloud.tencent.com/document/product/589/98760)
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SoftDeployInfo")
@@ -268,9 +268,9 @@ public class TimeAutoScaleStrategy extends AbstractModel {
     }
 
     /**
-     * Get 规则状态，1表示有效，2表示无效，3表示暂停。
+     * Get 规则状态，1表示有效，2表示无效，3表示暂停。必须填写
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return StrategyStatus 规则状态，1表示有效，2表示无效，3表示暂停。
+     * @return StrategyStatus 规则状态，1表示有效，2表示无效，3表示暂停。必须填写
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStrategyStatus() {
@@ -278,9 +278,9 @@ public class TimeAutoScaleStrategy extends AbstractModel {
     }
 
     /**
-     * Set 规则状态，1表示有效，2表示无效，3表示暂停。
+     * Set 规则状态，1表示有效，2表示无效，3表示暂停。必须填写
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param StrategyStatus 规则状态，1表示有效，2表示无效，3表示暂停。
+     * @param StrategyStatus 规则状态，1表示有效，2表示无效，3表示暂停。必须填写
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStrategyStatus(Long StrategyStatus) {
@@ -524,9 +524,9 @@ public class TimeAutoScaleStrategy extends AbstractModel {
     }
 
     /**
-     * Get 节点部署服务列表。
+     * Get 节点部署服务列表。部署服务仅填写HDFS、YARN。[组件名对应的映射关系表](https://cloud.tencent.com/document/product/589/98760)
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SoftDeployInfo 节点部署服务列表。
+     * @return SoftDeployInfo 节点部署服务列表。部署服务仅填写HDFS、YARN。[组件名对应的映射关系表](https://cloud.tencent.com/document/product/589/98760)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long [] getSoftDeployInfo() {
@@ -534,9 +534,9 @@ public class TimeAutoScaleStrategy extends AbstractModel {
     }
 
     /**
-     * Set 节点部署服务列表。
+     * Set 节点部署服务列表。部署服务仅填写HDFS、YARN。[组件名对应的映射关系表](https://cloud.tencent.com/document/product/589/98760)
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SoftDeployInfo 节点部署服务列表。
+     * @param SoftDeployInfo 节点部署服务列表。部署服务仅填写HDFS、YARN。[组件名对应的映射关系表](https://cloud.tencent.com/document/product/589/98760)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSoftDeployInfo(Long [] SoftDeployInfo) {

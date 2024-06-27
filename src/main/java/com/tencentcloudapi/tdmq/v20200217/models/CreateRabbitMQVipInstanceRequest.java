@@ -80,7 +80,7 @@ public class CreateRabbitMQVipInstanceRequest extends AbstractModel {
     private Boolean EnableCreateDefaultHaMirrorQueue;
 
     /**
-    * 自动续费,不传默认为true
+    * 预付费使用。自动续费,不传默认为true
     */
     @SerializedName("AutoRenewFlag")
     @Expose
@@ -92,6 +92,41 @@ public class CreateRabbitMQVipInstanceRequest extends AbstractModel {
     @SerializedName("TimeSpan")
     @Expose
     private Long TimeSpan;
+
+    /**
+    * 付费方式，0 为后付费，即按量计费；1 为预付费，即包年包月。默认包年包月
+    */
+    @SerializedName("PayMode")
+    @Expose
+    private Long PayMode;
+
+    /**
+    * 集群版本，不传默认为 3.8.30，可选值为 3.8.30 和 3.11.8
+    */
+    @SerializedName("ClusterVersion")
+    @Expose
+    private String ClusterVersion;
+
+    /**
+    * 是否国际站请求，默认 false
+    */
+    @SerializedName("IsIntl")
+    @Expose
+    private Boolean IsIntl;
+
+    /**
+    * 资源标签列表
+    */
+    @SerializedName("ResourceTags")
+    @Expose
+    private Tag [] ResourceTags;
+
+    /**
+    * 公网带宽大小，单位 M
+    */
+    @SerializedName("Bandwidth")
+    @Expose
+    private Long Bandwidth;
 
     /**
      * Get 可用区 
@@ -222,16 +257,16 @@ public class CreateRabbitMQVipInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get 自动续费,不传默认为true 
-     * @return AutoRenewFlag 自动续费,不传默认为true
+     * Get 预付费使用。自动续费,不传默认为true 
+     * @return AutoRenewFlag 预付费使用。自动续费,不传默认为true
      */
     public Boolean getAutoRenewFlag() {
         return this.AutoRenewFlag;
     }
 
     /**
-     * Set 自动续费,不传默认为true
-     * @param AutoRenewFlag 自动续费,不传默认为true
+     * Set 预付费使用。自动续费,不传默认为true
+     * @param AutoRenewFlag 预付费使用。自动续费,不传默认为true
      */
     public void setAutoRenewFlag(Boolean AutoRenewFlag) {
         this.AutoRenewFlag = AutoRenewFlag;
@@ -251,6 +286,86 @@ public class CreateRabbitMQVipInstanceRequest extends AbstractModel {
      */
     public void setTimeSpan(Long TimeSpan) {
         this.TimeSpan = TimeSpan;
+    }
+
+    /**
+     * Get 付费方式，0 为后付费，即按量计费；1 为预付费，即包年包月。默认包年包月 
+     * @return PayMode 付费方式，0 为后付费，即按量计费；1 为预付费，即包年包月。默认包年包月
+     */
+    public Long getPayMode() {
+        return this.PayMode;
+    }
+
+    /**
+     * Set 付费方式，0 为后付费，即按量计费；1 为预付费，即包年包月。默认包年包月
+     * @param PayMode 付费方式，0 为后付费，即按量计费；1 为预付费，即包年包月。默认包年包月
+     */
+    public void setPayMode(Long PayMode) {
+        this.PayMode = PayMode;
+    }
+
+    /**
+     * Get 集群版本，不传默认为 3.8.30，可选值为 3.8.30 和 3.11.8 
+     * @return ClusterVersion 集群版本，不传默认为 3.8.30，可选值为 3.8.30 和 3.11.8
+     */
+    public String getClusterVersion() {
+        return this.ClusterVersion;
+    }
+
+    /**
+     * Set 集群版本，不传默认为 3.8.30，可选值为 3.8.30 和 3.11.8
+     * @param ClusterVersion 集群版本，不传默认为 3.8.30，可选值为 3.8.30 和 3.11.8
+     */
+    public void setClusterVersion(String ClusterVersion) {
+        this.ClusterVersion = ClusterVersion;
+    }
+
+    /**
+     * Get 是否国际站请求，默认 false 
+     * @return IsIntl 是否国际站请求，默认 false
+     */
+    public Boolean getIsIntl() {
+        return this.IsIntl;
+    }
+
+    /**
+     * Set 是否国际站请求，默认 false
+     * @param IsIntl 是否国际站请求，默认 false
+     */
+    public void setIsIntl(Boolean IsIntl) {
+        this.IsIntl = IsIntl;
+    }
+
+    /**
+     * Get 资源标签列表 
+     * @return ResourceTags 资源标签列表
+     */
+    public Tag [] getResourceTags() {
+        return this.ResourceTags;
+    }
+
+    /**
+     * Set 资源标签列表
+     * @param ResourceTags 资源标签列表
+     */
+    public void setResourceTags(Tag [] ResourceTags) {
+        this.ResourceTags = ResourceTags;
+    }
+
+    /**
+     * Get 公网带宽大小，单位 M 
+     * @return Bandwidth 公网带宽大小，单位 M
+     */
+    public Long getBandwidth() {
+        return this.Bandwidth;
+    }
+
+    /**
+     * Set 公网带宽大小，单位 M
+     * @param Bandwidth 公网带宽大小，单位 M
+     */
+    public void setBandwidth(Long Bandwidth) {
+        this.Bandwidth = Bandwidth;
     }
 
     public CreateRabbitMQVipInstanceRequest() {
@@ -294,6 +409,24 @@ public class CreateRabbitMQVipInstanceRequest extends AbstractModel {
         if (source.TimeSpan != null) {
             this.TimeSpan = new Long(source.TimeSpan);
         }
+        if (source.PayMode != null) {
+            this.PayMode = new Long(source.PayMode);
+        }
+        if (source.ClusterVersion != null) {
+            this.ClusterVersion = new String(source.ClusterVersion);
+        }
+        if (source.IsIntl != null) {
+            this.IsIntl = new Boolean(source.IsIntl);
+        }
+        if (source.ResourceTags != null) {
+            this.ResourceTags = new Tag[source.ResourceTags.length];
+            for (int i = 0; i < source.ResourceTags.length; i++) {
+                this.ResourceTags[i] = new Tag(source.ResourceTags[i]);
+            }
+        }
+        if (source.Bandwidth != null) {
+            this.Bandwidth = new Long(source.Bandwidth);
+        }
     }
 
 
@@ -311,6 +444,11 @@ public class CreateRabbitMQVipInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "EnableCreateDefaultHaMirrorQueue", this.EnableCreateDefaultHaMirrorQueue);
         this.setParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
         this.setParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
+        this.setParamSimple(map, prefix + "PayMode", this.PayMode);
+        this.setParamSimple(map, prefix + "ClusterVersion", this.ClusterVersion);
+        this.setParamSimple(map, prefix + "IsIntl", this.IsIntl);
+        this.setParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
+        this.setParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
 
     }
 }

@@ -31,11 +31,18 @@ public class AddMetricScaleStrategyRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * 1表示按负载规则扩容，2表示按时间规则扩容。
+    * 1表示按负载规则扩容，2表示按时间规则扩容。必须填写，并且和下面的规则策略匹配
     */
     @SerializedName("StrategyType")
     @Expose
     private Long StrategyType;
+
+    /**
+    * 按负载扩容的规则。
+    */
+    @SerializedName("LoadAutoScaleStrategy")
+    @Expose
+    private LoadAutoScaleStrategy LoadAutoScaleStrategy;
 
     /**
     * 按时间扩缩容的规则。
@@ -61,19 +68,35 @@ public class AddMetricScaleStrategyRequest extends AbstractModel {
     }
 
     /**
-     * Get 1表示按负载规则扩容，2表示按时间规则扩容。 
-     * @return StrategyType 1表示按负载规则扩容，2表示按时间规则扩容。
+     * Get 1表示按负载规则扩容，2表示按时间规则扩容。必须填写，并且和下面的规则策略匹配 
+     * @return StrategyType 1表示按负载规则扩容，2表示按时间规则扩容。必须填写，并且和下面的规则策略匹配
      */
     public Long getStrategyType() {
         return this.StrategyType;
     }
 
     /**
-     * Set 1表示按负载规则扩容，2表示按时间规则扩容。
-     * @param StrategyType 1表示按负载规则扩容，2表示按时间规则扩容。
+     * Set 1表示按负载规则扩容，2表示按时间规则扩容。必须填写，并且和下面的规则策略匹配
+     * @param StrategyType 1表示按负载规则扩容，2表示按时间规则扩容。必须填写，并且和下面的规则策略匹配
      */
     public void setStrategyType(Long StrategyType) {
         this.StrategyType = StrategyType;
+    }
+
+    /**
+     * Get 按负载扩容的规则。 
+     * @return LoadAutoScaleStrategy 按负载扩容的规则。
+     */
+    public LoadAutoScaleStrategy getLoadAutoScaleStrategy() {
+        return this.LoadAutoScaleStrategy;
+    }
+
+    /**
+     * Set 按负载扩容的规则。
+     * @param LoadAutoScaleStrategy 按负载扩容的规则。
+     */
+    public void setLoadAutoScaleStrategy(LoadAutoScaleStrategy LoadAutoScaleStrategy) {
+        this.LoadAutoScaleStrategy = LoadAutoScaleStrategy;
     }
 
     /**
@@ -106,6 +129,9 @@ public class AddMetricScaleStrategyRequest extends AbstractModel {
         if (source.StrategyType != null) {
             this.StrategyType = new Long(source.StrategyType);
         }
+        if (source.LoadAutoScaleStrategy != null) {
+            this.LoadAutoScaleStrategy = new LoadAutoScaleStrategy(source.LoadAutoScaleStrategy);
+        }
         if (source.TimeAutoScaleStrategy != null) {
             this.TimeAutoScaleStrategy = new TimeAutoScaleStrategy(source.TimeAutoScaleStrategy);
         }
@@ -118,6 +144,7 @@ public class AddMetricScaleStrategyRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "StrategyType", this.StrategyType);
+        this.setParamObj(map, prefix + "LoadAutoScaleStrategy.", this.LoadAutoScaleStrategy);
         this.setParamObj(map, prefix + "TimeAutoScaleStrategy.", this.TimeAutoScaleStrategy);
 
     }

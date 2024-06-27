@@ -224,6 +224,22 @@ public class InstanceInfo extends AbstractModel {
     private String WanAddress;
 
     /**
+    * 隔离时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsolateAt")
+    @Expose
+    private String IsolateAt;
+
+    /**
+    * 是否自动续费。0: 不自动续费(可以支持特权不停服)；1:自动续费；2:到期不续费.
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AutoRenew")
+    @Expose
+    private Long AutoRenew;
+
+    /**
      * Get 实例ID。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return InstanceId 实例ID。
@@ -723,6 +739,46 @@ public class InstanceInfo extends AbstractModel {
         this.WanAddress = WanAddress;
     }
 
+    /**
+     * Get 隔离时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsolateAt 隔离时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getIsolateAt() {
+        return this.IsolateAt;
+    }
+
+    /**
+     * Set 隔离时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsolateAt 隔离时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsolateAt(String IsolateAt) {
+        this.IsolateAt = IsolateAt;
+    }
+
+    /**
+     * Get 是否自动续费。0: 不自动续费(可以支持特权不停服)；1:自动续费；2:到期不续费.
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AutoRenew 是否自动续费。0: 不自动续费(可以支持特权不停服)；1:自动续费；2:到期不续费.
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getAutoRenew() {
+        return this.AutoRenew;
+    }
+
+    /**
+     * Set 是否自动续费。0: 不自动续费(可以支持特权不停服)；1:自动续费；2:到期不续费.
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AutoRenew 是否自动续费。0: 不自动续费(可以支持特权不停服)；1:自动续费；2:到期不续费.
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAutoRenew(Long AutoRenew) {
+        this.AutoRenew = AutoRenew;
+    }
+
     public InstanceInfo() {
     }
 
@@ -812,6 +868,12 @@ public class InstanceInfo extends AbstractModel {
         if (source.WanAddress != null) {
             this.WanAddress = new String(source.WanAddress);
         }
+        if (source.IsolateAt != null) {
+            this.IsolateAt = new String(source.IsolateAt);
+        }
+        if (source.AutoRenew != null) {
+            this.AutoRenew = new Long(source.AutoRenew);
+        }
     }
 
 
@@ -844,6 +906,8 @@ public class InstanceInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "ExpiredAt", this.ExpiredAt);
         this.setParamSimple(map, prefix + "IsNoExpired", this.IsNoExpired);
         this.setParamSimple(map, prefix + "WanAddress", this.WanAddress);
+        this.setParamSimple(map, prefix + "IsolateAt", this.IsolateAt);
+        this.setParamSimple(map, prefix + "AutoRenew", this.AutoRenew);
 
     }
 }

@@ -156,6 +156,14 @@ public class RabbitMQVipInstance extends AbstractModel {
     private VpcEndpointInfo [] Vpcs;
 
     /**
+    * 创建时间，毫秒为单位
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private Long CreateTime;
+
+    /**
      * Get 实例id 
      * @return InstanceId 实例id
      */
@@ -467,6 +475,26 @@ public class RabbitMQVipInstance extends AbstractModel {
         this.Vpcs = Vpcs;
     }
 
+    /**
+     * Get 创建时间，毫秒为单位
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CreateTime 创建时间，毫秒为单位
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set 创建时间，毫秒为单位
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CreateTime 创建时间，毫秒为单位
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCreateTime(Long CreateTime) {
+        this.CreateTime = CreateTime;
+    }
+
     public RabbitMQVipInstance() {
     }
 
@@ -532,6 +560,9 @@ public class RabbitMQVipInstance extends AbstractModel {
                 this.Vpcs[i] = new VpcEndpointInfo(source.Vpcs[i]);
             }
         }
+        if (source.CreateTime != null) {
+            this.CreateTime = new Long(source.CreateTime);
+        }
     }
 
 
@@ -557,6 +588,7 @@ public class RabbitMQVipInstance extends AbstractModel {
         this.setParamSimple(map, prefix + "ClusterStatus", this.ClusterStatus);
         this.setParamSimple(map, prefix + "PublicAccessEndpoint", this.PublicAccessEndpoint);
         this.setParamArrayObj(map, prefix + "Vpcs.", this.Vpcs);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
 
     }
 }

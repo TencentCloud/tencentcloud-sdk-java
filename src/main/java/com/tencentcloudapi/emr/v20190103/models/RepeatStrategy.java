@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class RepeatStrategy extends AbstractModel {
 
     /**
-    * 取值范围"DAY","DOW","DOM","NONE"，分别表示按天重复、按周重复、按月重复和一次执行。
+    * 取值范围"DAY","DOW","DOM","NONE"，分别表示按天重复、按周重复、按月重复和一次执行。必须填写
     */
     @SerializedName("RepeatType")
     @Expose
@@ -63,7 +63,7 @@ public class RepeatStrategy extends AbstractModel {
     private NotRepeatStrategy NotRepeat;
 
     /**
-    * 规则过期时间，超过该时间后，规则将自动置为暂停状态，形式为"2020-07-23 00:00:00"。
+    * 规则过期时间，超过该时间后，规则将自动置为暂停状态，形式为"2020-07-23 00:00:00"。必须填写
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Expire")
@@ -71,16 +71,16 @@ public class RepeatStrategy extends AbstractModel {
     private String Expire;
 
     /**
-     * Get 取值范围"DAY","DOW","DOM","NONE"，分别表示按天重复、按周重复、按月重复和一次执行。 
-     * @return RepeatType 取值范围"DAY","DOW","DOM","NONE"，分别表示按天重复、按周重复、按月重复和一次执行。
+     * Get 取值范围"DAY","DOW","DOM","NONE"，分别表示按天重复、按周重复、按月重复和一次执行。必须填写 
+     * @return RepeatType 取值范围"DAY","DOW","DOM","NONE"，分别表示按天重复、按周重复、按月重复和一次执行。必须填写
      */
     public String getRepeatType() {
         return this.RepeatType;
     }
 
     /**
-     * Set 取值范围"DAY","DOW","DOM","NONE"，分别表示按天重复、按周重复、按月重复和一次执行。
-     * @param RepeatType 取值范围"DAY","DOW","DOM","NONE"，分别表示按天重复、按周重复、按月重复和一次执行。
+     * Set 取值范围"DAY","DOW","DOM","NONE"，分别表示按天重复、按周重复、按月重复和一次执行。必须填写
+     * @param RepeatType 取值范围"DAY","DOW","DOM","NONE"，分别表示按天重复、按周重复、按月重复和一次执行。必须填写
      */
     public void setRepeatType(String RepeatType) {
         this.RepeatType = RepeatType;
@@ -167,9 +167,9 @@ public class RepeatStrategy extends AbstractModel {
     }
 
     /**
-     * Get 规则过期时间，超过该时间后，规则将自动置为暂停状态，形式为"2020-07-23 00:00:00"。
+     * Get 规则过期时间，超过该时间后，规则将自动置为暂停状态，形式为"2020-07-23 00:00:00"。必须填写
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Expire 规则过期时间，超过该时间后，规则将自动置为暂停状态，形式为"2020-07-23 00:00:00"。
+     * @return Expire 规则过期时间，超过该时间后，规则将自动置为暂停状态，形式为"2020-07-23 00:00:00"。必须填写
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExpire() {
@@ -177,9 +177,9 @@ public class RepeatStrategy extends AbstractModel {
     }
 
     /**
-     * Set 规则过期时间，超过该时间后，规则将自动置为暂停状态，形式为"2020-07-23 00:00:00"。
+     * Set 规则过期时间，超过该时间后，规则将自动置为暂停状态，形式为"2020-07-23 00:00:00"。必须填写
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Expire 规则过期时间，超过该时间后，规则将自动置为暂停状态，形式为"2020-07-23 00:00:00"。
+     * @param Expire 规则过期时间，超过该时间后，规则将自动置为暂停状态，形式为"2020-07-23 00:00:00"。必须填写
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExpire(String Expire) {

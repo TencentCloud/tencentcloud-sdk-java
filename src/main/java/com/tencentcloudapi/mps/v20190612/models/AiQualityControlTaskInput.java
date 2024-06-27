@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AiQualityControlTaskInput extends AbstractModel {
 
     /**
-    * 视频质检模板 ID 。暂时可以直接使用 预设模板ID 10，后面控制台支持用户配置自定义模板。
+    * 媒体质检模板 ID 。暂时可以直接使用 预设模板ID 10，后面控制台支持用户配置自定义模板。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Definition")
@@ -40,9 +40,9 @@ public class AiQualityControlTaskInput extends AbstractModel {
     private String ChannelExtPara;
 
     /**
-     * Get 视频质检模板 ID 。暂时可以直接使用 预设模板ID 10，后面控制台支持用户配置自定义模板。
+     * Get 媒体质检模板 ID 。暂时可以直接使用 预设模板ID 10，后面控制台支持用户配置自定义模板。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Definition 视频质检模板 ID 。暂时可以直接使用 预设模板ID 10，后面控制台支持用户配置自定义模板。
+     * @return Definition 媒体质检模板 ID 。暂时可以直接使用 预设模板ID 10，后面控制台支持用户配置自定义模板。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDefinition() {
@@ -50,9 +50,9 @@ public class AiQualityControlTaskInput extends AbstractModel {
     }
 
     /**
-     * Set 视频质检模板 ID 。暂时可以直接使用 预设模板ID 10，后面控制台支持用户配置自定义模板。
+     * Set 媒体质检模板 ID 。暂时可以直接使用 预设模板ID 10，后面控制台支持用户配置自定义模板。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Definition 视频质检模板 ID 。暂时可以直接使用 预设模板ID 10，后面控制台支持用户配置自定义模板。
+     * @param Definition 媒体质检模板 ID 。暂时可以直接使用 预设模板ID 10，后面控制台支持用户配置自定义模板。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDefinition(Long Definition) {

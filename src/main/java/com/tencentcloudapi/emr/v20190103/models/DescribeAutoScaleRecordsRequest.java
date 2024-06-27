@@ -52,6 +52,13 @@ public class DescribeAutoScaleRecordsRequest extends AbstractModel {
     private Long Limit;
 
     /**
+    * 表示是自动(0)还是托管伸缩(1)
+    */
+    @SerializedName("RecordSource")
+    @Expose
+    private Long RecordSource;
+
+    /**
      * Get 实例ID。 
      * @return InstanceId 实例ID。
      */
@@ -115,6 +122,22 @@ public class DescribeAutoScaleRecordsRequest extends AbstractModel {
         this.Limit = Limit;
     }
 
+    /**
+     * Get 表示是自动(0)还是托管伸缩(1) 
+     * @return RecordSource 表示是自动(0)还是托管伸缩(1)
+     */
+    public Long getRecordSource() {
+        return this.RecordSource;
+    }
+
+    /**
+     * Set 表示是自动(0)还是托管伸缩(1)
+     * @param RecordSource 表示是自动(0)还是托管伸缩(1)
+     */
+    public void setRecordSource(Long RecordSource) {
+        this.RecordSource = RecordSource;
+    }
+
     public DescribeAutoScaleRecordsRequest() {
     }
 
@@ -138,6 +161,9 @@ public class DescribeAutoScaleRecordsRequest extends AbstractModel {
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
+        if (source.RecordSource != null) {
+            this.RecordSource = new Long(source.RecordSource);
+        }
     }
 
 
@@ -149,6 +175,7 @@ public class DescribeAutoScaleRecordsRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "RecordSource", this.RecordSource);
 
     }
 }

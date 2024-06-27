@@ -35,7 +35,7 @@ public class VideoTemplateInfo extends AbstractModel {
 <li>dnxhd：DNxHD 编码</li>
 注意：目前 H.265 编码必须指定分辨率，并且需要在 640*480 以内。
 
-注意：av1 编码容器目前只支持 mp4 ，webm，mkv，mov。
+注意：av1 编码容器目前只支持 mp4 ，webm，mkv。
 注意：H.266 编码容器目前只支持 mp4 ，hls，ts，mov。
 注意：VP8、VP9编码容器目前只支持webm，mkv。
 注意：MPEG2、dnxhd 编码容器目前只支持mxf。
@@ -45,8 +45,7 @@ public class VideoTemplateInfo extends AbstractModel {
     private String Codec;
 
     /**
-    * 视频帧率，取值范围：[0, 120]，单位：Hz。 当取值为 0，表示帧率和原始视频保持一致。
-注意：自适应码率时取值范围是 [0, 60]
+    * 视频帧率，取值范围：[0, 120]，单位：Hz。 当取值为 0，表示帧率和原始视频保持一致。 注意：自适应码率时取值范围是 [0, 60]
     */
     @SerializedName("Fps")
     @Expose
@@ -127,11 +126,11 @@ public class VideoTemplateInfo extends AbstractModel {
 
     /**
     * hls 分片类型，可选值 ：
-<li>6：HLS+TS 切片</li>
+<li>0：HLS+TS 切片</li>
 <li>2：HLS+TS byte range</li>
 <li>7：HLS+MP4 切片</li>
 <li>5：HLS+MP4 byte range</li>
-默认值：6
+默认值：0
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SegmentType")
@@ -150,7 +149,7 @@ public class VideoTemplateInfo extends AbstractModel {
 <li>dnxhd：DNxHD 编码</li>
 注意：目前 H.265 编码必须指定分辨率，并且需要在 640*480 以内。
 
-注意：av1 编码容器目前只支持 mp4 ，webm，mkv，mov。
+注意：av1 编码容器目前只支持 mp4 ，webm，mkv。
 注意：H.266 编码容器目前只支持 mp4 ，hls，ts，mov。
 注意：VP8、VP9编码容器目前只支持webm，mkv。
 注意：MPEG2、dnxhd 编码容器目前只支持mxf。 
@@ -165,7 +164,7 @@ public class VideoTemplateInfo extends AbstractModel {
 <li>dnxhd：DNxHD 编码</li>
 注意：目前 H.265 编码必须指定分辨率，并且需要在 640*480 以内。
 
-注意：av1 编码容器目前只支持 mp4 ，webm，mkv，mov。
+注意：av1 编码容器目前只支持 mp4 ，webm，mkv。
 注意：H.266 编码容器目前只支持 mp4 ，hls，ts，mov。
 注意：VP8、VP9编码容器目前只支持webm，mkv。
 注意：MPEG2、dnxhd 编码容器目前只支持mxf。
@@ -186,7 +185,7 @@ public class VideoTemplateInfo extends AbstractModel {
 <li>dnxhd：DNxHD 编码</li>
 注意：目前 H.265 编码必须指定分辨率，并且需要在 640*480 以内。
 
-注意：av1 编码容器目前只支持 mp4 ，webm，mkv，mov。
+注意：av1 编码容器目前只支持 mp4 ，webm，mkv。
 注意：H.266 编码容器目前只支持 mp4 ，hls，ts，mov。
 注意：VP8、VP9编码容器目前只支持webm，mkv。
 注意：MPEG2、dnxhd 编码容器目前只支持mxf。
@@ -201,7 +200,7 @@ public class VideoTemplateInfo extends AbstractModel {
 <li>dnxhd：DNxHD 编码</li>
 注意：目前 H.265 编码必须指定分辨率，并且需要在 640*480 以内。
 
-注意：av1 编码容器目前只支持 mp4 ，webm，mkv，mov。
+注意：av1 编码容器目前只支持 mp4 ，webm，mkv。
 注意：H.266 编码容器目前只支持 mp4 ，hls，ts，mov。
 注意：VP8、VP9编码容器目前只支持webm，mkv。
 注意：MPEG2、dnxhd 编码容器目前只支持mxf。
@@ -211,20 +210,16 @@ public class VideoTemplateInfo extends AbstractModel {
     }
 
     /**
-     * Get 视频帧率，取值范围：[0, 120]，单位：Hz。 当取值为 0，表示帧率和原始视频保持一致。
-注意：自适应码率时取值范围是 [0, 60] 
-     * @return Fps 视频帧率，取值范围：[0, 120]，单位：Hz。 当取值为 0，表示帧率和原始视频保持一致。
-注意：自适应码率时取值范围是 [0, 60]
+     * Get 视频帧率，取值范围：[0, 120]，单位：Hz。 当取值为 0，表示帧率和原始视频保持一致。 注意：自适应码率时取值范围是 [0, 60] 
+     * @return Fps 视频帧率，取值范围：[0, 120]，单位：Hz。 当取值为 0，表示帧率和原始视频保持一致。 注意：自适应码率时取值范围是 [0, 60]
      */
     public Long getFps() {
         return this.Fps;
     }
 
     /**
-     * Set 视频帧率，取值范围：[0, 120]，单位：Hz。 当取值为 0，表示帧率和原始视频保持一致。
-注意：自适应码率时取值范围是 [0, 60]
-     * @param Fps 视频帧率，取值范围：[0, 120]，单位：Hz。 当取值为 0，表示帧率和原始视频保持一致。
-注意：自适应码率时取值范围是 [0, 60]
+     * Set 视频帧率，取值范围：[0, 120]，单位：Hz。 当取值为 0，表示帧率和原始视频保持一致。 注意：自适应码率时取值范围是 [0, 60]
+     * @param Fps 视频帧率，取值范围：[0, 120]，单位：Hz。 当取值为 0，表示帧率和原始视频保持一致。 注意：自适应码率时取值范围是 [0, 60]
      */
     public void setFps(Long Fps) {
         this.Fps = Fps;
@@ -440,18 +435,18 @@ public class VideoTemplateInfo extends AbstractModel {
 
     /**
      * Get hls 分片类型，可选值 ：
-<li>6：HLS+TS 切片</li>
+<li>0：HLS+TS 切片</li>
 <li>2：HLS+TS byte range</li>
 <li>7：HLS+MP4 切片</li>
 <li>5：HLS+MP4 byte range</li>
-默认值：6
+默认值：0
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return SegmentType hls 分片类型，可选值 ：
-<li>6：HLS+TS 切片</li>
+<li>0：HLS+TS 切片</li>
 <li>2：HLS+TS byte range</li>
 <li>7：HLS+MP4 切片</li>
 <li>5：HLS+MP4 byte range</li>
-默认值：6
+默认值：0
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSegmentType() {
@@ -460,18 +455,18 @@ public class VideoTemplateInfo extends AbstractModel {
 
     /**
      * Set hls 分片类型，可选值 ：
-<li>6：HLS+TS 切片</li>
+<li>0：HLS+TS 切片</li>
 <li>2：HLS+TS byte range</li>
 <li>7：HLS+MP4 切片</li>
 <li>5：HLS+MP4 byte range</li>
-默认值：6
+默认值：0
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SegmentType hls 分片类型，可选值 ：
-<li>6：HLS+TS 切片</li>
+<li>0：HLS+TS 切片</li>
 <li>2：HLS+TS byte range</li>
 <li>7：HLS+MP4 切片</li>
 <li>5：HLS+MP4 byte range</li>
-默认值：6
+默认值：0
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSegmentType(Long SegmentType) {

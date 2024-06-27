@@ -80,6 +80,25 @@ public class AlarmTargetInfo extends AbstractModel {
     private Long EndTimeOffset;
 
     /**
+    * 检索语法规则，默认值为0。
+0：Lucene语法，1：CQL语法。
+详细说明参见<a href="https://cloud.tencent.com/document/product/614/47044#RetrievesConditionalRules" target="_blank">检索条件语法规则</a>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SyntaxRule")
+    @Expose
+    private Long SyntaxRule;
+
+    /**
+    * 主题类型。
+0: 日志主题，1: 指标主题
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BizType")
+    @Expose
+    private Long BizType;
+
+    /**
      * Get 日志集ID。 
      * @return LogsetId 日志集ID。
      */
@@ -207,6 +226,58 @@ public class AlarmTargetInfo extends AbstractModel {
         this.EndTimeOffset = EndTimeOffset;
     }
 
+    /**
+     * Get 检索语法规则，默认值为0。
+0：Lucene语法，1：CQL语法。
+详细说明参见<a href="https://cloud.tencent.com/document/product/614/47044#RetrievesConditionalRules" target="_blank">检索条件语法规则</a>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SyntaxRule 检索语法规则，默认值为0。
+0：Lucene语法，1：CQL语法。
+详细说明参见<a href="https://cloud.tencent.com/document/product/614/47044#RetrievesConditionalRules" target="_blank">检索条件语法规则</a>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getSyntaxRule() {
+        return this.SyntaxRule;
+    }
+
+    /**
+     * Set 检索语法规则，默认值为0。
+0：Lucene语法，1：CQL语法。
+详细说明参见<a href="https://cloud.tencent.com/document/product/614/47044#RetrievesConditionalRules" target="_blank">检索条件语法规则</a>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SyntaxRule 检索语法规则，默认值为0。
+0：Lucene语法，1：CQL语法。
+详细说明参见<a href="https://cloud.tencent.com/document/product/614/47044#RetrievesConditionalRules" target="_blank">检索条件语法规则</a>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSyntaxRule(Long SyntaxRule) {
+        this.SyntaxRule = SyntaxRule;
+    }
+
+    /**
+     * Get 主题类型。
+0: 日志主题，1: 指标主题
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BizType 主题类型。
+0: 日志主题，1: 指标主题
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getBizType() {
+        return this.BizType;
+    }
+
+    /**
+     * Set 主题类型。
+0: 日志主题，1: 指标主题
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BizType 主题类型。
+0: 日志主题，1: 指标主题
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBizType(Long BizType) {
+        this.BizType = BizType;
+    }
+
     public AlarmTargetInfo() {
     }
 
@@ -239,6 +310,12 @@ public class AlarmTargetInfo extends AbstractModel {
         if (source.EndTimeOffset != null) {
             this.EndTimeOffset = new Long(source.EndTimeOffset);
         }
+        if (source.SyntaxRule != null) {
+            this.SyntaxRule = new Long(source.SyntaxRule);
+        }
+        if (source.BizType != null) {
+            this.BizType = new Long(source.BizType);
+        }
     }
 
 
@@ -254,6 +331,8 @@ public class AlarmTargetInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Number", this.Number);
         this.setParamSimple(map, prefix + "StartTimeOffset", this.StartTimeOffset);
         this.setParamSimple(map, prefix + "EndTimeOffset", this.EndTimeOffset);
+        this.setParamSimple(map, prefix + "SyntaxRule", this.SyntaxRule);
+        this.setParamSimple(map, prefix + "BizType", this.BizType);
 
     }
 }

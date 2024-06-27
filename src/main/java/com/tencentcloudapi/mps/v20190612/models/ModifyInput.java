@@ -118,6 +118,13 @@ public class ModifyInput extends AbstractModel {
     private String [] SecurityGroupIds;
 
     /**
+    * 可用区，非必填，最多支持输入两个可用区，对于需改接口，只要第二个可用区会参与到资源分配。如果input开启容灾或者涉及RTSP_PULL协议切换时有效(会重新分配地址)。	
+    */
+    @SerializedName("Zones")
+    @Expose
+    private String [] Zones;
+
+    /**
      * Get 输入Id。 
      * @return InputId 输入Id。
      */
@@ -337,6 +344,22 @@ public class ModifyInput extends AbstractModel {
         this.SecurityGroupIds = SecurityGroupIds;
     }
 
+    /**
+     * Get 可用区，非必填，最多支持输入两个可用区，对于需改接口，只要第二个可用区会参与到资源分配。如果input开启容灾或者涉及RTSP_PULL协议切换时有效(会重新分配地址)。	 
+     * @return Zones 可用区，非必填，最多支持输入两个可用区，对于需改接口，只要第二个可用区会参与到资源分配。如果input开启容灾或者涉及RTSP_PULL协议切换时有效(会重新分配地址)。	
+     */
+    public String [] getZones() {
+        return this.Zones;
+    }
+
+    /**
+     * Set 可用区，非必填，最多支持输入两个可用区，对于需改接口，只要第二个可用区会参与到资源分配。如果input开启容灾或者涉及RTSP_PULL协议切换时有效(会重新分配地址)。	
+     * @param Zones 可用区，非必填，最多支持输入两个可用区，对于需改接口，只要第二个可用区会参与到资源分配。如果input开启容灾或者涉及RTSP_PULL协议切换时有效(会重新分配地址)。	
+     */
+    public void setZones(String [] Zones) {
+        this.Zones = Zones;
+    }
+
     public ModifyInput() {
     }
 
@@ -390,6 +413,12 @@ public class ModifyInput extends AbstractModel {
                 this.SecurityGroupIds[i] = new String(source.SecurityGroupIds[i]);
             }
         }
+        if (source.Zones != null) {
+            this.Zones = new String[source.Zones.length];
+            for (int i = 0; i < source.Zones.length; i++) {
+                this.Zones[i] = new String(source.Zones[i]);
+            }
+        }
     }
 
 
@@ -410,6 +439,7 @@ public class ModifyInput extends AbstractModel {
         this.setParamObj(map, prefix + "HLSPullSettings.", this.HLSPullSettings);
         this.setParamObj(map, prefix + "ResilientStream.", this.ResilientStream);
         this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
+        this.setParamArraySimple(map, prefix + "Zones.", this.Zones);
 
     }
 }

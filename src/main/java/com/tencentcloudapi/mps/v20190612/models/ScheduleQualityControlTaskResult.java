@@ -52,14 +52,14 @@ public class ScheduleQualityControlTaskResult extends AbstractModel {
     private String Message;
 
     /**
-    * 质检任务的输入。
+    * 媒体质检任务的输入。
     */
     @SerializedName("Input")
     @Expose
     private AiQualityControlTaskInput Input;
 
     /**
-    * 质检任务的输出。
+    * 媒体质检任务的输出。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Output")
@@ -131,25 +131,25 @@ public class ScheduleQualityControlTaskResult extends AbstractModel {
     }
 
     /**
-     * Get 质检任务的输入。 
-     * @return Input 质检任务的输入。
+     * Get 媒体质检任务的输入。 
+     * @return Input 媒体质检任务的输入。
      */
     public AiQualityControlTaskInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set 质检任务的输入。
-     * @param Input 质检任务的输入。
+     * Set 媒体质检任务的输入。
+     * @param Input 媒体质检任务的输入。
      */
     public void setInput(AiQualityControlTaskInput Input) {
         this.Input = Input;
     }
 
     /**
-     * Get 质检任务的输出。
+     * Get 媒体质检任务的输出。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Output 质检任务的输出。
+     * @return Output 媒体质检任务的输出。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public QualityControlData getOutput() {
@@ -157,9 +157,9 @@ public class ScheduleQualityControlTaskResult extends AbstractModel {
     }
 
     /**
-     * Set 质检任务的输出。
+     * Set 媒体质检任务的输出。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Output 质检任务的输出。
+     * @param Output 媒体质检任务的输出。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutput(QualityControlData Output) {

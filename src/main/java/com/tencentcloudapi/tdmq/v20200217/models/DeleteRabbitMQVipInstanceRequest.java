@@ -31,6 +31,13 @@ public class DeleteRabbitMQVipInstanceRequest extends AbstractModel {
     private String InstanceId;
 
     /**
+    * 是否国际站请求，默认 false
+    */
+    @SerializedName("IsIntl")
+    @Expose
+    private Boolean IsIntl;
+
+    /**
      * Get 实例Id 
      * @return InstanceId 实例Id
      */
@@ -46,6 +53,22 @@ public class DeleteRabbitMQVipInstanceRequest extends AbstractModel {
         this.InstanceId = InstanceId;
     }
 
+    /**
+     * Get 是否国际站请求，默认 false 
+     * @return IsIntl 是否国际站请求，默认 false
+     */
+    public Boolean getIsIntl() {
+        return this.IsIntl;
+    }
+
+    /**
+     * Set 是否国际站请求，默认 false
+     * @param IsIntl 是否国际站请求，默认 false
+     */
+    public void setIsIntl(Boolean IsIntl) {
+        this.IsIntl = IsIntl;
+    }
+
     public DeleteRabbitMQVipInstanceRequest() {
     }
 
@@ -57,6 +80,9 @@ public class DeleteRabbitMQVipInstanceRequest extends AbstractModel {
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }
+        if (source.IsIntl != null) {
+            this.IsIntl = new Boolean(source.IsIntl);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class DeleteRabbitMQVipInstanceRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "IsIntl", this.IsIntl);
 
     }
 }

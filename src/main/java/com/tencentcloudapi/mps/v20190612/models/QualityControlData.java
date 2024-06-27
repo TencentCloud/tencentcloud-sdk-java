@@ -48,7 +48,7 @@ public class QualityControlData extends AbstractModel {
     private Long QualityEvaluationScore;
 
     /**
-    * 质检检出异常项。
+    * 内容质检检出异常项。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("QualityControlResultSet")
@@ -116,9 +116,9 @@ public class QualityControlData extends AbstractModel {
     }
 
     /**
-     * Get 质检检出异常项。
+     * Get 内容质检检出异常项。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return QualityControlResultSet 质检检出异常项。
+     * @return QualityControlResultSet 内容质检检出异常项。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public QualityControlResult [] getQualityControlResultSet() {
@@ -126,9 +126,9 @@ public class QualityControlData extends AbstractModel {
     }
 
     /**
-     * Set 质检检出异常项。
+     * Set 内容质检检出异常项。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param QualityControlResultSet 质检检出异常项。
+     * @param QualityControlResultSet 内容质检检出异常项。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQualityControlResultSet(QualityControlResult [] QualityControlResultSet) {

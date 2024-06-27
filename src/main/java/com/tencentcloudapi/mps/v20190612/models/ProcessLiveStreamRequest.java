@@ -73,7 +73,7 @@ public class ProcessLiveStreamRequest extends AbstractModel {
     private AiAnalysisTaskInput AiAnalysisTask;
 
     /**
-    * 视频内容质检类型任务参数。
+    * 媒体质检类型任务参数。
     */
     @SerializedName("AiQualityControlTask")
     @Expose
@@ -217,16 +217,16 @@ public class ProcessLiveStreamRequest extends AbstractModel {
     }
 
     /**
-     * Get 视频内容质检类型任务参数。 
-     * @return AiQualityControlTask 视频内容质检类型任务参数。
+     * Get 媒体质检类型任务参数。 
+     * @return AiQualityControlTask 媒体质检类型任务参数。
      */
     public AiQualityControlTaskInput getAiQualityControlTask() {
         return this.AiQualityControlTask;
     }
 
     /**
-     * Set 视频内容质检类型任务参数。
-     * @param AiQualityControlTask 视频内容质检类型任务参数。
+     * Set 媒体质检类型任务参数。
+     * @param AiQualityControlTask 媒体质检类型任务参数。
      */
     public void setAiQualityControlTask(AiQualityControlTaskInput AiQualityControlTask) {
         this.AiQualityControlTask = AiQualityControlTask;

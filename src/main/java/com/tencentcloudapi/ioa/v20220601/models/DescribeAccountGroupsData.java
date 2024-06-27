@@ -24,36 +24,20 @@ import java.util.HashMap;
 public class DescribeAccountGroupsData extends AbstractModel {
 
     /**
-    * 创建时间
+    * 名称path
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Itime")
+    @SerializedName("NamePath")
     @Expose
-    private String Itime;
+    private String NamePath;
 
     /**
-    * 账户组名称
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("Name")
-    @Expose
-    private String Name;
-
-    /**
-    * id patch数组
+    * id patch数组(只支持32位)
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IdPathArr")
     @Expose
     private Long [] IdPathArr;
-
-    /**
-    * 该分组下用户总数
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("UserTotal")
-    @Expose
-    private Long UserTotal;
 
     /**
     * 扩展信息
@@ -64,12 +48,44 @@ public class DescribeAccountGroupsData extends AbstractModel {
     private String ExtraInfo;
 
     /**
-    * 导入类型
+    * 最后更新时间
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("ImportType")
+    @SerializedName("Utime")
     @Expose
-    private String ImportType;
+    private String Utime;
+
+    /**
+    * 父id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ParentId")
+    @Expose
+    private Long ParentId;
+
+    /**
+    * 组织id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OrgId")
+    @Expose
+    private String OrgId;
+
+    /**
+    * 账户组名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Name")
+    @Expose
+    private String Name;
+
+    /**
+    * id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Id")
+    @Expose
+    private Long Id;
 
     /**
     * 描述
@@ -88,44 +104,20 @@ public class DescribeAccountGroupsData extends AbstractModel {
     private Long Source;
 
     /**
-    * miniIAM id
+    * id path
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("MiniIamId")
+    @SerializedName("IdPath")
     @Expose
-    private String MiniIamId;
+    private String IdPath;
 
     /**
-    * 组织id
+    * 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("OrgId")
+    @SerializedName("Itime")
     @Expose
-    private String OrgId;
-
-    /**
-    * 是否该账户的直接权限
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("ReadOnly")
-    @Expose
-    private Boolean ReadOnly;
-
-    /**
-    * 父id
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("ParentId")
-    @Expose
-    private Long ParentId;
-
-    /**
-    * 名称path
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("NamePath")
-    @Expose
-    private String NamePath;
+    private String Itime;
 
     /**
     * 父组织id
@@ -136,20 +128,28 @@ public class DescribeAccountGroupsData extends AbstractModel {
     private String ParentOrgId;
 
     /**
-    * id path
+    * 导入类型
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("IdPath")
+    @SerializedName("ImportType")
     @Expose
-    private String IdPath;
+    private String ImportType;
 
     /**
-    * 自增id
+    * miniIAM id
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Id")
+    @SerializedName("MiniIamId")
     @Expose
-    private Long Id;
+    private String MiniIamId;
+
+    /**
+    * 该分组下用户总数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UserTotal")
+    @Expose
+    private Long UserTotal;
 
     /**
     * 是否叶子节点
@@ -160,57 +160,53 @@ public class DescribeAccountGroupsData extends AbstractModel {
     private Boolean IsLeaf;
 
     /**
-    * 最后更新时间
+    * 是否该账户的直接权限
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("Utime")
+    @SerializedName("ReadOnly")
     @Expose
-    private String Utime;
+    private Boolean ReadOnly;
 
     /**
-     * Get 创建时间
+    * 最新一次同步任务的结果
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LatestSyncResult")
+    @Expose
+    private String LatestSyncResult;
+
+    /**
+    * 最新一次同步任务的结束时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LatestSyncTime")
+    @Expose
+    private String LatestSyncTime;
+
+    /**
+     * Get 名称path
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Itime 创建时间
+     * @return NamePath 名称path
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getItime() {
-        return this.Itime;
+    public String getNamePath() {
+        return this.NamePath;
     }
 
     /**
-     * Set 创建时间
+     * Set 名称path
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Itime 创建时间
+     * @param NamePath 名称path
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setItime(String Itime) {
-        this.Itime = Itime;
+    public void setNamePath(String NamePath) {
+        this.NamePath = NamePath;
     }
 
     /**
-     * Get 账户组名称
+     * Get id patch数组(只支持32位)
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Name 账户组名称
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getName() {
-        return this.Name;
-    }
-
-    /**
-     * Set 账户组名称
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Name 账户组名称
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setName(String Name) {
-        this.Name = Name;
-    }
-
-    /**
-     * Get id patch数组
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IdPathArr id patch数组
+     * @return IdPathArr id patch数组(只支持32位)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long [] getIdPathArr() {
@@ -218,33 +214,13 @@ public class DescribeAccountGroupsData extends AbstractModel {
     }
 
     /**
-     * Set id patch数组
+     * Set id patch数组(只支持32位)
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IdPathArr id patch数组
+     * @param IdPathArr id patch数组(只支持32位)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIdPathArr(Long [] IdPathArr) {
         this.IdPathArr = IdPathArr;
-    }
-
-    /**
-     * Get 该分组下用户总数
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UserTotal 该分组下用户总数
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public Long getUserTotal() {
-        return this.UserTotal;
-    }
-
-    /**
-     * Set 该分组下用户总数
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param UserTotal 该分组下用户总数
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setUserTotal(Long UserTotal) {
-        this.UserTotal = UserTotal;
     }
 
     /**
@@ -268,23 +244,103 @@ public class DescribeAccountGroupsData extends AbstractModel {
     }
 
     /**
-     * Get 导入类型
+     * Get 最后更新时间
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ImportType 导入类型
+     * @return Utime 最后更新时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getImportType() {
-        return this.ImportType;
+    public String getUtime() {
+        return this.Utime;
     }
 
     /**
-     * Set 导入类型
+     * Set 最后更新时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ImportType 导入类型
+     * @param Utime 最后更新时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setImportType(String ImportType) {
-        this.ImportType = ImportType;
+    public void setUtime(String Utime) {
+        this.Utime = Utime;
+    }
+
+    /**
+     * Get 父id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ParentId 父id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getParentId() {
+        return this.ParentId;
+    }
+
+    /**
+     * Set 父id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ParentId 父id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setParentId(Long ParentId) {
+        this.ParentId = ParentId;
+    }
+
+    /**
+     * Get 组织id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OrgId 组织id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getOrgId() {
+        return this.OrgId;
+    }
+
+    /**
+     * Set 组织id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OrgId 组织id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOrgId(String OrgId) {
+        this.OrgId = OrgId;
+    }
+
+    /**
+     * Get 账户组名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Name 账户组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getName() {
+        return this.Name;
+    }
+
+    /**
+     * Set 账户组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Name 账户组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setName(String Name) {
+        this.Name = Name;
+    }
+
+    /**
+     * Get id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Id id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getId() {
+        return this.Id;
+    }
+
+    /**
+     * Set id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Id id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setId(Long Id) {
+        this.Id = Id;
     }
 
     /**
@@ -328,103 +384,43 @@ public class DescribeAccountGroupsData extends AbstractModel {
     }
 
     /**
-     * Get miniIAM id
+     * Get id path
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MiniIamId miniIAM id
+     * @return IdPath id path
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getMiniIamId() {
-        return this.MiniIamId;
+    public String getIdPath() {
+        return this.IdPath;
     }
 
     /**
-     * Set miniIAM id
+     * Set id path
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MiniIamId miniIAM id
+     * @param IdPath id path
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setMiniIamId(String MiniIamId) {
-        this.MiniIamId = MiniIamId;
+    public void setIdPath(String IdPath) {
+        this.IdPath = IdPath;
     }
 
     /**
-     * Get 组织id
+     * Get 创建时间
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OrgId 组织id
+     * @return Itime 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getOrgId() {
-        return this.OrgId;
+    public String getItime() {
+        return this.Itime;
     }
 
     /**
-     * Set 组织id
+     * Set 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OrgId 组织id
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setOrgId(String OrgId) {
-        this.OrgId = OrgId;
-    }
-
-    /**
-     * Get 是否该账户的直接权限
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ReadOnly 是否该账户的直接权限
+     * @param Itime 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Boolean getReadOnly() {
-        return this.ReadOnly;
-    }
-
-    /**
-     * Set 是否该账户的直接权限
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param ReadOnly 是否该账户的直接权限
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setReadOnly(Boolean ReadOnly) {
-        this.ReadOnly = ReadOnly;
-    }
-
-    /**
-     * Get 父id
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ParentId 父id
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public Long getParentId() {
-        return this.ParentId;
-    }
-
-    /**
-     * Set 父id
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param ParentId 父id
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setParentId(Long ParentId) {
-        this.ParentId = ParentId;
-    }
-
-    /**
-     * Get 名称path
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return NamePath 名称path
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getNamePath() {
-        return this.NamePath;
-    }
-
-    /**
-     * Set 名称path
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param NamePath 名称path
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setNamePath(String NamePath) {
-        this.NamePath = NamePath;
+    public void setItime(String Itime) {
+        this.Itime = Itime;
     }
 
     /**
@@ -448,43 +444,63 @@ public class DescribeAccountGroupsData extends AbstractModel {
     }
 
     /**
-     * Get id path
+     * Get 导入类型
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IdPath id path
+     * @return ImportType 导入类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getIdPath() {
-        return this.IdPath;
+    public String getImportType() {
+        return this.ImportType;
     }
 
     /**
-     * Set id path
+     * Set 导入类型
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IdPath id path
+     * @param ImportType 导入类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setIdPath(String IdPath) {
-        this.IdPath = IdPath;
+    public void setImportType(String ImportType) {
+        this.ImportType = ImportType;
     }
 
     /**
-     * Get 自增id
+     * Get miniIAM id
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Id 自增id
+     * @return MiniIamId miniIAM id
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getId() {
-        return this.Id;
+    public String getMiniIamId() {
+        return this.MiniIamId;
     }
 
     /**
-     * Set 自增id
+     * Set miniIAM id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Id 自增id
+     * @param MiniIamId miniIAM id
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setId(Long Id) {
-        this.Id = Id;
+    public void setMiniIamId(String MiniIamId) {
+        this.MiniIamId = MiniIamId;
+    }
+
+    /**
+     * Get 该分组下用户总数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UserTotal 该分组下用户总数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getUserTotal() {
+        return this.UserTotal;
+    }
+
+    /**
+     * Set 该分组下用户总数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UserTotal 该分组下用户总数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUserTotal(Long UserTotal) {
+        this.UserTotal = UserTotal;
     }
 
     /**
@@ -508,23 +524,63 @@ public class DescribeAccountGroupsData extends AbstractModel {
     }
 
     /**
-     * Get 最后更新时间
+     * Get 是否该账户的直接权限
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Utime 最后更新时间
+     * @return ReadOnly 是否该账户的直接权限
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getUtime() {
-        return this.Utime;
+    public Boolean getReadOnly() {
+        return this.ReadOnly;
     }
 
     /**
-     * Set 最后更新时间
+     * Set 是否该账户的直接权限
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Utime 最后更新时间
+     * @param ReadOnly 是否该账户的直接权限
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setUtime(String Utime) {
-        this.Utime = Utime;
+    public void setReadOnly(Boolean ReadOnly) {
+        this.ReadOnly = ReadOnly;
+    }
+
+    /**
+     * Get 最新一次同步任务的结果
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LatestSyncResult 最新一次同步任务的结果
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLatestSyncResult() {
+        return this.LatestSyncResult;
+    }
+
+    /**
+     * Set 最新一次同步任务的结果
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LatestSyncResult 最新一次同步任务的结果
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLatestSyncResult(String LatestSyncResult) {
+        this.LatestSyncResult = LatestSyncResult;
+    }
+
+    /**
+     * Get 最新一次同步任务的结束时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LatestSyncTime 最新一次同步任务的结束时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLatestSyncTime() {
+        return this.LatestSyncTime;
+    }
+
+    /**
+     * Set 最新一次同步任务的结束时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LatestSyncTime 最新一次同步任务的结束时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLatestSyncTime(String LatestSyncTime) {
+        this.LatestSyncTime = LatestSyncTime;
     }
 
     public DescribeAccountGroupsData() {
@@ -535,11 +591,8 @@ public class DescribeAccountGroupsData extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeAccountGroupsData(DescribeAccountGroupsData source) {
-        if (source.Itime != null) {
-            this.Itime = new String(source.Itime);
-        }
-        if (source.Name != null) {
-            this.Name = new String(source.Name);
+        if (source.NamePath != null) {
+            this.NamePath = new String(source.NamePath);
         }
         if (source.IdPathArr != null) {
             this.IdPathArr = new Long[source.IdPathArr.length];
@@ -547,14 +600,23 @@ public class DescribeAccountGroupsData extends AbstractModel {
                 this.IdPathArr[i] = new Long(source.IdPathArr[i]);
             }
         }
-        if (source.UserTotal != null) {
-            this.UserTotal = new Long(source.UserTotal);
-        }
         if (source.ExtraInfo != null) {
             this.ExtraInfo = new String(source.ExtraInfo);
         }
-        if (source.ImportType != null) {
-            this.ImportType = new String(source.ImportType);
+        if (source.Utime != null) {
+            this.Utime = new String(source.Utime);
+        }
+        if (source.ParentId != null) {
+            this.ParentId = new Long(source.ParentId);
+        }
+        if (source.OrgId != null) {
+            this.OrgId = new String(source.OrgId);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Id != null) {
+            this.Id = new Long(source.Id);
         }
         if (source.Description != null) {
             this.Description = new String(source.Description);
@@ -562,35 +624,35 @@ public class DescribeAccountGroupsData extends AbstractModel {
         if (source.Source != null) {
             this.Source = new Long(source.Source);
         }
-        if (source.MiniIamId != null) {
-            this.MiniIamId = new String(source.MiniIamId);
+        if (source.IdPath != null) {
+            this.IdPath = new String(source.IdPath);
         }
-        if (source.OrgId != null) {
-            this.OrgId = new String(source.OrgId);
-        }
-        if (source.ReadOnly != null) {
-            this.ReadOnly = new Boolean(source.ReadOnly);
-        }
-        if (source.ParentId != null) {
-            this.ParentId = new Long(source.ParentId);
-        }
-        if (source.NamePath != null) {
-            this.NamePath = new String(source.NamePath);
+        if (source.Itime != null) {
+            this.Itime = new String(source.Itime);
         }
         if (source.ParentOrgId != null) {
             this.ParentOrgId = new String(source.ParentOrgId);
         }
-        if (source.IdPath != null) {
-            this.IdPath = new String(source.IdPath);
+        if (source.ImportType != null) {
+            this.ImportType = new String(source.ImportType);
         }
-        if (source.Id != null) {
-            this.Id = new Long(source.Id);
+        if (source.MiniIamId != null) {
+            this.MiniIamId = new String(source.MiniIamId);
+        }
+        if (source.UserTotal != null) {
+            this.UserTotal = new Long(source.UserTotal);
         }
         if (source.IsLeaf != null) {
             this.IsLeaf = new Boolean(source.IsLeaf);
         }
-        if (source.Utime != null) {
-            this.Utime = new String(source.Utime);
+        if (source.ReadOnly != null) {
+            this.ReadOnly = new Boolean(source.ReadOnly);
+        }
+        if (source.LatestSyncResult != null) {
+            this.LatestSyncResult = new String(source.LatestSyncResult);
+        }
+        if (source.LatestSyncTime != null) {
+            this.LatestSyncTime = new String(source.LatestSyncTime);
         }
     }
 
@@ -599,24 +661,26 @@ public class DescribeAccountGroupsData extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Itime", this.Itime);
-        this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "NamePath", this.NamePath);
         this.setParamArraySimple(map, prefix + "IdPathArr.", this.IdPathArr);
-        this.setParamSimple(map, prefix + "UserTotal", this.UserTotal);
         this.setParamSimple(map, prefix + "ExtraInfo", this.ExtraInfo);
-        this.setParamSimple(map, prefix + "ImportType", this.ImportType);
+        this.setParamSimple(map, prefix + "Utime", this.Utime);
+        this.setParamSimple(map, prefix + "ParentId", this.ParentId);
+        this.setParamSimple(map, prefix + "OrgId", this.OrgId);
+        this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "Id", this.Id);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "Source", this.Source);
-        this.setParamSimple(map, prefix + "MiniIamId", this.MiniIamId);
-        this.setParamSimple(map, prefix + "OrgId", this.OrgId);
-        this.setParamSimple(map, prefix + "ReadOnly", this.ReadOnly);
-        this.setParamSimple(map, prefix + "ParentId", this.ParentId);
-        this.setParamSimple(map, prefix + "NamePath", this.NamePath);
-        this.setParamSimple(map, prefix + "ParentOrgId", this.ParentOrgId);
         this.setParamSimple(map, prefix + "IdPath", this.IdPath);
-        this.setParamSimple(map, prefix + "Id", this.Id);
+        this.setParamSimple(map, prefix + "Itime", this.Itime);
+        this.setParamSimple(map, prefix + "ParentOrgId", this.ParentOrgId);
+        this.setParamSimple(map, prefix + "ImportType", this.ImportType);
+        this.setParamSimple(map, prefix + "MiniIamId", this.MiniIamId);
+        this.setParamSimple(map, prefix + "UserTotal", this.UserTotal);
         this.setParamSimple(map, prefix + "IsLeaf", this.IsLeaf);
-        this.setParamSimple(map, prefix + "Utime", this.Utime);
+        this.setParamSimple(map, prefix + "ReadOnly", this.ReadOnly);
+        this.setParamSimple(map, prefix + "LatestSyncResult", this.LatestSyncResult);
+        this.setParamSimple(map, prefix + "LatestSyncTime", this.LatestSyncTime);
 
     }
 }

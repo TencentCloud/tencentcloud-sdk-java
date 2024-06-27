@@ -39,6 +39,18 @@ public class AiartClient extends AbstractClient{
     }
 
     /**
+     *百变头像接口将根据输入的人像照片，生成风格百变的头像。
+百变头像默认提供1个并发任务数，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后才能开始处理下一个任务。
+     * @param req GenerateAvatarRequest
+     * @return GenerateAvatarResponse
+     * @throws TencentCloudSDKException
+     */
+    public GenerateAvatarResponse GenerateAvatar(GenerateAvatarRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GenerateAvatar", GenerateAvatarResponse.class);
+    }
+
+    /**
      *图像风格化（图生图）接口提供生成式的图生图风格转化能力，将根据输入的图像及文本描述，智能生成风格转化后的图像。建议避免输入人像过小、姿势复杂、人数较多的人像图片。
 图像风格化（图生图）默认提供3个并发任务数，代表最多能同时处理3个已提交的任务，上一个任务处理完毕后才能开始处理下一个任务。
      * @param req ImageToImageRequest

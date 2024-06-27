@@ -88,7 +88,7 @@ public class ProcessMediaRequest extends AbstractModel {
     private AiRecognitionTaskInput AiRecognitionTask;
 
     /**
-    * 视频质检类型任务参数。
+    * 媒体质检类型任务参数。
     */
     @SerializedName("AiQualityControlTask")
     @Expose
@@ -109,7 +109,7 @@ public class ProcessMediaRequest extends AbstractModel {
     private Long TasksPriority;
 
     /**
-    * 用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
+    * 用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不传该参数或者参数为空字符串则本次请求不做去重操作。
     */
     @SerializedName("SessionId")
     @Expose
@@ -292,16 +292,16 @@ public class ProcessMediaRequest extends AbstractModel {
     }
 
     /**
-     * Get 视频质检类型任务参数。 
-     * @return AiQualityControlTask 视频质检类型任务参数。
+     * Get 媒体质检类型任务参数。 
+     * @return AiQualityControlTask 媒体质检类型任务参数。
      */
     public AiQualityControlTaskInput getAiQualityControlTask() {
         return this.AiQualityControlTask;
     }
 
     /**
-     * Set 视频质检类型任务参数。
-     * @param AiQualityControlTask 视频质检类型任务参数。
+     * Set 媒体质检类型任务参数。
+     * @param AiQualityControlTask 媒体质检类型任务参数。
      */
     public void setAiQualityControlTask(AiQualityControlTaskInput AiQualityControlTask) {
         this.AiQualityControlTask = AiQualityControlTask;
@@ -340,16 +340,16 @@ public class ProcessMediaRequest extends AbstractModel {
     }
 
     /**
-     * Get 用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。 
-     * @return SessionId 用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
+     * Get 用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不传该参数或者参数为空字符串则本次请求不做去重操作。 
+     * @return SessionId 用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不传该参数或者参数为空字符串则本次请求不做去重操作。
      */
     public String getSessionId() {
         return this.SessionId;
     }
 
     /**
-     * Set 用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
-     * @param SessionId 用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
+     * Set 用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不传该参数或者参数为空字符串则本次请求不做去重操作。
+     * @param SessionId 用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不传该参数或者参数为空字符串则本次请求不做去重操作。
      */
     public void setSessionId(String SessionId) {
         this.SessionId = SessionId;

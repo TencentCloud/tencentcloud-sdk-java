@@ -38,6 +38,13 @@ public class ModifyAutoScaleStrategyRequest extends AbstractModel {
     private Long StrategyType;
 
     /**
+    * 按负载扩缩容的指标。
+    */
+    @SerializedName("LoadAutoScaleStrategies")
+    @Expose
+    private LoadAutoScaleStrategy [] LoadAutoScaleStrategies;
+
+    /**
     * 按时间扩缩容的规则。
     */
     @SerializedName("TimeAutoScaleStrategies")
@@ -81,6 +88,22 @@ public class ModifyAutoScaleStrategyRequest extends AbstractModel {
      */
     public void setStrategyType(Long StrategyType) {
         this.StrategyType = StrategyType;
+    }
+
+    /**
+     * Get 按负载扩缩容的指标。 
+     * @return LoadAutoScaleStrategies 按负载扩缩容的指标。
+     */
+    public LoadAutoScaleStrategy [] getLoadAutoScaleStrategies() {
+        return this.LoadAutoScaleStrategies;
+    }
+
+    /**
+     * Set 按负载扩缩容的指标。
+     * @param LoadAutoScaleStrategies 按负载扩缩容的指标。
+     */
+    public void setLoadAutoScaleStrategies(LoadAutoScaleStrategy [] LoadAutoScaleStrategies) {
+        this.LoadAutoScaleStrategies = LoadAutoScaleStrategies;
     }
 
     /**
@@ -129,6 +152,12 @@ public class ModifyAutoScaleStrategyRequest extends AbstractModel {
         if (source.StrategyType != null) {
             this.StrategyType = new Long(source.StrategyType);
         }
+        if (source.LoadAutoScaleStrategies != null) {
+            this.LoadAutoScaleStrategies = new LoadAutoScaleStrategy[source.LoadAutoScaleStrategies.length];
+            for (int i = 0; i < source.LoadAutoScaleStrategies.length; i++) {
+                this.LoadAutoScaleStrategies[i] = new LoadAutoScaleStrategy(source.LoadAutoScaleStrategies[i]);
+            }
+        }
         if (source.TimeAutoScaleStrategies != null) {
             this.TimeAutoScaleStrategies = new TimeAutoScaleStrategy[source.TimeAutoScaleStrategies.length];
             for (int i = 0; i < source.TimeAutoScaleStrategies.length; i++) {
@@ -147,6 +176,7 @@ public class ModifyAutoScaleStrategyRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "StrategyType", this.StrategyType);
+        this.setParamArrayObj(map, prefix + "LoadAutoScaleStrategies.", this.LoadAutoScaleStrategies);
         this.setParamArrayObj(map, prefix + "TimeAutoScaleStrategies.", this.TimeAutoScaleStrategies);
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);
 

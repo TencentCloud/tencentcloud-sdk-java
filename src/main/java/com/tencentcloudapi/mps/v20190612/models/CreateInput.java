@@ -108,6 +108,13 @@ public class CreateInput extends AbstractModel {
     private String [] SecurityGroupIds;
 
     /**
+    * 可用区，非必填，如果开启容灾必须输入两个不同的可用区，否则最多只允许输入一个可用区。	
+    */
+    @SerializedName("Zones")
+    @Expose
+    private String [] Zones;
+
+    /**
      * Get 输入名称，可填大小写、数字和下划线，长度为[1, 32]。 
      * @return InputName 输入名称，可填大小写、数字和下划线，长度为[1, 32]。
      */
@@ -299,6 +306,22 @@ public class CreateInput extends AbstractModel {
         this.SecurityGroupIds = SecurityGroupIds;
     }
 
+    /**
+     * Get 可用区，非必填，如果开启容灾必须输入两个不同的可用区，否则最多只允许输入一个可用区。	 
+     * @return Zones 可用区，非必填，如果开启容灾必须输入两个不同的可用区，否则最多只允许输入一个可用区。	
+     */
+    public String [] getZones() {
+        return this.Zones;
+    }
+
+    /**
+     * Set 可用区，非必填，如果开启容灾必须输入两个不同的可用区，否则最多只允许输入一个可用区。	
+     * @param Zones 可用区，非必填，如果开启容灾必须输入两个不同的可用区，否则最多只允许输入一个可用区。	
+     */
+    public void setZones(String [] Zones) {
+        this.Zones = Zones;
+    }
+
     public CreateInput() {
     }
 
@@ -349,6 +372,12 @@ public class CreateInput extends AbstractModel {
                 this.SecurityGroupIds[i] = new String(source.SecurityGroupIds[i]);
             }
         }
+        if (source.Zones != null) {
+            this.Zones = new String[source.Zones.length];
+            for (int i = 0; i < source.Zones.length; i++) {
+                this.Zones[i] = new String(source.Zones[i]);
+            }
+        }
     }
 
 
@@ -368,6 +397,7 @@ public class CreateInput extends AbstractModel {
         this.setParamObj(map, prefix + "HLSPullSettings.", this.HLSPullSettings);
         this.setParamObj(map, prefix + "ResilientStream.", this.ResilientStream);
         this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
+        this.setParamArraySimple(map, prefix + "Zones.", this.Zones);
 
     }
 }

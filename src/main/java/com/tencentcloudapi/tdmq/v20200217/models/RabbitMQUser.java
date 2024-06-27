@@ -82,6 +82,22 @@ public class RabbitMQUser extends AbstractModel {
     private String Type;
 
     /**
+    * 单个用户最大可用连接数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MaxConnections")
+    @Expose
+    private Long MaxConnections;
+
+    /**
+    * 单个用户最大可用通道数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MaxChannels")
+    @Expose
+    private Long MaxChannels;
+
+    /**
      * Get 集群实例Id 
      * @return InstanceId 集群实例Id
      */
@@ -217,6 +233,46 @@ public class RabbitMQUser extends AbstractModel {
         this.Type = Type;
     }
 
+    /**
+     * Get 单个用户最大可用连接数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MaxConnections 单个用户最大可用连接数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getMaxConnections() {
+        return this.MaxConnections;
+    }
+
+    /**
+     * Set 单个用户最大可用连接数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MaxConnections 单个用户最大可用连接数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMaxConnections(Long MaxConnections) {
+        this.MaxConnections = MaxConnections;
+    }
+
+    /**
+     * Get 单个用户最大可用通道数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MaxChannels 单个用户最大可用通道数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getMaxChannels() {
+        return this.MaxChannels;
+    }
+
+    /**
+     * Set 单个用户最大可用通道数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MaxChannels 单个用户最大可用通道数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMaxChannels(Long MaxChannels) {
+        this.MaxChannels = MaxChannels;
+    }
+
     public RabbitMQUser() {
     }
 
@@ -252,6 +308,12 @@ public class RabbitMQUser extends AbstractModel {
         if (source.Type != null) {
             this.Type = new String(source.Type);
         }
+        if (source.MaxConnections != null) {
+            this.MaxConnections = new Long(source.MaxConnections);
+        }
+        if (source.MaxChannels != null) {
+            this.MaxChannels = new Long(source.MaxChannels);
+        }
     }
 
 
@@ -267,6 +329,8 @@ public class RabbitMQUser extends AbstractModel {
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
         this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "MaxConnections", this.MaxConnections);
+        this.setParamSimple(map, prefix + "MaxChannels", this.MaxChannels);
 
     }
 }

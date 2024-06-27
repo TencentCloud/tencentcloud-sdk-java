@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DeviceDetail extends AbstractModel {
 
     /**
-    * 设备ID(只支持32位)
+    * 设备ID
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
@@ -32,7 +32,7 @@ public class DeviceDetail extends AbstractModel {
     private Long Id;
 
     /**
-    * 设备唯一标识符
+    * 设备唯一标识码，在ioa中每个设备有唯一标识码
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Mid")
@@ -48,7 +48,7 @@ public class DeviceDetail extends AbstractModel {
     private String Name;
 
     /**
-    * 设备所在分组ID(只支持32位)
+    * 设备所在分组ID
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupId")
@@ -56,7 +56,7 @@ public class DeviceDetail extends AbstractModel {
     private Long GroupId;
 
     /**
-    * OS平台(只支持32位)
+    * OS平台，0：Windows 、1： Linux、 2：macOS 、4： Android、 5: iOS。默认是0
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OsType")
@@ -72,7 +72,7 @@ public class DeviceDetail extends AbstractModel {
     private String Ip;
 
     /**
-    * 在线状态 2 在线 0，1 离线(只支持32位)
+    * 在线状态，2：在线、0或者1:离线
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OnlineStatus")
@@ -112,7 +112,7 @@ public class DeviceDetail extends AbstractModel {
     private String ConnActiveTime;
 
     /**
-    * 设备是否加锁 1 锁定 0 2 非锁定(只支持32位)
+    * 设备是否加锁 ，1：锁定 0或者2：未锁定。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Locked")
@@ -160,7 +160,7 @@ public class DeviceDetail extends AbstractModel {
     private Long CriticalVulListCount;
 
     /**
-    * 设备名 和Name相同，保留参数
+    * 设备名，和Name相同
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ComputerName")
@@ -184,7 +184,7 @@ public class DeviceDetail extends AbstractModel {
     private String MacAddr;
 
     /**
-    * 漏洞数(只支持32位)
+    * 漏洞数
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VulCount")
@@ -192,7 +192,7 @@ public class DeviceDetail extends AbstractModel {
     private Long VulCount;
 
     /**
-    * 病毒风险数(只支持32位)
+    * 病毒风险数
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RiskCount")
@@ -248,7 +248,7 @@ public class DeviceDetail extends AbstractModel {
     private String UserName;
 
     /**
-    * 防火墙状态(只支持32位)
+    * 防火墙状态，不等于0表示开启
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FirewallStatus")
@@ -280,7 +280,7 @@ public class DeviceDetail extends AbstractModel {
     private String NGNStrategyVer;
 
     /**
-    * 最近登录账号
+    * 最近登录账户的账号
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IOAUserName")
@@ -352,7 +352,7 @@ public class DeviceDetail extends AbstractModel {
     private String AccountGroupName;
 
     /**
-    * 登录账号姓名
+    * 最近登录账户的姓名
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AccountName")
@@ -368,9 +368,9 @@ public class DeviceDetail extends AbstractModel {
     private Long AccountGroupId;
 
     /**
-     * Get 设备ID(只支持32位)
+     * Get 设备ID
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Id 设备ID(只支持32位)
+     * @return Id 设备ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getId() {
@@ -378,9 +378,9 @@ public class DeviceDetail extends AbstractModel {
     }
 
     /**
-     * Set 设备ID(只支持32位)
+     * Set 设备ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Id 设备ID(只支持32位)
+     * @param Id 设备ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(Long Id) {
@@ -388,9 +388,9 @@ public class DeviceDetail extends AbstractModel {
     }
 
     /**
-     * Get 设备唯一标识符
+     * Get 设备唯一标识码，在ioa中每个设备有唯一标识码
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Mid 设备唯一标识符
+     * @return Mid 设备唯一标识码，在ioa中每个设备有唯一标识码
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMid() {
@@ -398,9 +398,9 @@ public class DeviceDetail extends AbstractModel {
     }
 
     /**
-     * Set 设备唯一标识符
+     * Set 设备唯一标识码，在ioa中每个设备有唯一标识码
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Mid 设备唯一标识符
+     * @param Mid 设备唯一标识码，在ioa中每个设备有唯一标识码
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMid(String Mid) {
@@ -428,9 +428,9 @@ public class DeviceDetail extends AbstractModel {
     }
 
     /**
-     * Get 设备所在分组ID(只支持32位)
+     * Get 设备所在分组ID
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return GroupId 设备所在分组ID(只支持32位)
+     * @return GroupId 设备所在分组ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getGroupId() {
@@ -438,9 +438,9 @@ public class DeviceDetail extends AbstractModel {
     }
 
     /**
-     * Set 设备所在分组ID(只支持32位)
+     * Set 设备所在分组ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param GroupId 设备所在分组ID(只支持32位)
+     * @param GroupId 设备所在分组ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupId(Long GroupId) {
@@ -448,9 +448,9 @@ public class DeviceDetail extends AbstractModel {
     }
 
     /**
-     * Get OS平台(只支持32位)
+     * Get OS平台，0：Windows 、1： Linux、 2：macOS 、4： Android、 5: iOS。默认是0
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OsType OS平台(只支持32位)
+     * @return OsType OS平台，0：Windows 、1： Linux、 2：macOS 、4： Android、 5: iOS。默认是0
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getOsType() {
@@ -458,9 +458,9 @@ public class DeviceDetail extends AbstractModel {
     }
 
     /**
-     * Set OS平台(只支持32位)
+     * Set OS平台，0：Windows 、1： Linux、 2：macOS 、4： Android、 5: iOS。默认是0
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OsType OS平台(只支持32位)
+     * @param OsType OS平台，0：Windows 、1： Linux、 2：macOS 、4： Android、 5: iOS。默认是0
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOsType(Long OsType) {
@@ -488,9 +488,9 @@ public class DeviceDetail extends AbstractModel {
     }
 
     /**
-     * Get 在线状态 2 在线 0，1 离线(只支持32位)
+     * Get 在线状态，2：在线、0或者1:离线
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OnlineStatus 在线状态 2 在线 0，1 离线(只支持32位)
+     * @return OnlineStatus 在线状态，2：在线、0或者1:离线
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getOnlineStatus() {
@@ -498,9 +498,9 @@ public class DeviceDetail extends AbstractModel {
     }
 
     /**
-     * Set 在线状态 2 在线 0，1 离线(只支持32位)
+     * Set 在线状态，2：在线、0或者1:离线
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OnlineStatus 在线状态 2 在线 0，1 离线(只支持32位)
+     * @param OnlineStatus 在线状态，2：在线、0或者1:离线
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOnlineStatus(Long OnlineStatus) {
@@ -588,9 +588,9 @@ public class DeviceDetail extends AbstractModel {
     }
 
     /**
-     * Get 设备是否加锁 1 锁定 0 2 非锁定(只支持32位)
+     * Get 设备是否加锁 ，1：锁定 0或者2：未锁定。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Locked 设备是否加锁 1 锁定 0 2 非锁定(只支持32位)
+     * @return Locked 设备是否加锁 ，1：锁定 0或者2：未锁定。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLocked() {
@@ -598,9 +598,9 @@ public class DeviceDetail extends AbstractModel {
     }
 
     /**
-     * Set 设备是否加锁 1 锁定 0 2 非锁定(只支持32位)
+     * Set 设备是否加锁 ，1：锁定 0或者2：未锁定。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Locked 设备是否加锁 1 锁定 0 2 非锁定(只支持32位)
+     * @param Locked 设备是否加锁 ，1：锁定 0或者2：未锁定。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLocked(Long Locked) {
@@ -708,9 +708,9 @@ public class DeviceDetail extends AbstractModel {
     }
 
     /**
-     * Get 设备名 和Name相同，保留参数
+     * Get 设备名，和Name相同
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ComputerName 设备名 和Name相同，保留参数
+     * @return ComputerName 设备名，和Name相同
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getComputerName() {
@@ -718,9 +718,9 @@ public class DeviceDetail extends AbstractModel {
     }
 
     /**
-     * Set 设备名 和Name相同，保留参数
+     * Set 设备名，和Name相同
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ComputerName 设备名 和Name相同，保留参数
+     * @param ComputerName 设备名，和Name相同
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setComputerName(String ComputerName) {
@@ -768,9 +768,9 @@ public class DeviceDetail extends AbstractModel {
     }
 
     /**
-     * Get 漏洞数(只支持32位)
+     * Get 漏洞数
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return VulCount 漏洞数(只支持32位)
+     * @return VulCount 漏洞数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getVulCount() {
@@ -778,9 +778,9 @@ public class DeviceDetail extends AbstractModel {
     }
 
     /**
-     * Set 漏洞数(只支持32位)
+     * Set 漏洞数
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param VulCount 漏洞数(只支持32位)
+     * @param VulCount 漏洞数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVulCount(Long VulCount) {
@@ -788,9 +788,9 @@ public class DeviceDetail extends AbstractModel {
     }
 
     /**
-     * Get 病毒风险数(只支持32位)
+     * Get 病毒风险数
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RiskCount 病毒风险数(只支持32位)
+     * @return RiskCount 病毒风险数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRiskCount() {
@@ -798,9 +798,9 @@ public class DeviceDetail extends AbstractModel {
     }
 
     /**
-     * Set 病毒风险数(只支持32位)
+     * Set 病毒风险数
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RiskCount 病毒风险数(只支持32位)
+     * @param RiskCount 病毒风险数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRiskCount(Long RiskCount) {
@@ -928,9 +928,9 @@ public class DeviceDetail extends AbstractModel {
     }
 
     /**
-     * Get 防火墙状态(只支持32位)
+     * Get 防火墙状态，不等于0表示开启
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FirewallStatus 防火墙状态(只支持32位)
+     * @return FirewallStatus 防火墙状态，不等于0表示开启
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFirewallStatus() {
@@ -938,9 +938,9 @@ public class DeviceDetail extends AbstractModel {
     }
 
     /**
-     * Set 防火墙状态(只支持32位)
+     * Set 防火墙状态，不等于0表示开启
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FirewallStatus 防火墙状态(只支持32位)
+     * @param FirewallStatus 防火墙状态，不等于0表示开启
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFirewallStatus(Long FirewallStatus) {
@@ -1008,9 +1008,9 @@ public class DeviceDetail extends AbstractModel {
     }
 
     /**
-     * Get 最近登录账号
+     * Get 最近登录账户的账号
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IOAUserName 最近登录账号
+     * @return IOAUserName 最近登录账户的账号
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIOAUserName() {
@@ -1018,9 +1018,9 @@ public class DeviceDetail extends AbstractModel {
     }
 
     /**
-     * Set 最近登录账号
+     * Set 最近登录账户的账号
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IOAUserName 最近登录账号
+     * @param IOAUserName 最近登录账户的账号
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIOAUserName(String IOAUserName) {
@@ -1188,9 +1188,9 @@ public class DeviceDetail extends AbstractModel {
     }
 
     /**
-     * Get 登录账号姓名
+     * Get 最近登录账户的姓名
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AccountName 登录账号姓名
+     * @return AccountName 最近登录账户的姓名
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAccountName() {
@@ -1198,9 +1198,9 @@ public class DeviceDetail extends AbstractModel {
     }
 
     /**
-     * Set 登录账号姓名
+     * Set 最近登录账户的姓名
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AccountName 登录账号姓名
+     * @param AccountName 最近登录账户的姓名
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAccountName(String AccountName) {

@@ -24,6 +24,14 @@ import java.util.HashMap;
 public class DescribeAutoScaleStrategiesResponse extends AbstractModel {
 
     /**
+    * 按负载伸缩规则
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LoadAutoScaleStrategies")
+    @Expose
+    private LoadAutoScaleStrategy [] LoadAutoScaleStrategies;
+
+    /**
     * 按时间伸缩规则
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -37,6 +45,26 @@ public class DescribeAutoScaleStrategiesResponse extends AbstractModel {
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 按负载伸缩规则
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LoadAutoScaleStrategies 按负载伸缩规则
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public LoadAutoScaleStrategy [] getLoadAutoScaleStrategies() {
+        return this.LoadAutoScaleStrategies;
+    }
+
+    /**
+     * Set 按负载伸缩规则
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LoadAutoScaleStrategies 按负载伸缩规则
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLoadAutoScaleStrategies(LoadAutoScaleStrategy [] LoadAutoScaleStrategies) {
+        this.LoadAutoScaleStrategies = LoadAutoScaleStrategies;
+    }
 
     /**
      * Get 按时间伸缩规则
@@ -82,6 +110,12 @@ public class DescribeAutoScaleStrategiesResponse extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeAutoScaleStrategiesResponse(DescribeAutoScaleStrategiesResponse source) {
+        if (source.LoadAutoScaleStrategies != null) {
+            this.LoadAutoScaleStrategies = new LoadAutoScaleStrategy[source.LoadAutoScaleStrategies.length];
+            for (int i = 0; i < source.LoadAutoScaleStrategies.length; i++) {
+                this.LoadAutoScaleStrategies[i] = new LoadAutoScaleStrategy(source.LoadAutoScaleStrategies[i]);
+            }
+        }
         if (source.TimeBasedAutoScaleStrategies != null) {
             this.TimeBasedAutoScaleStrategies = new TimeAutoScaleStrategy[source.TimeBasedAutoScaleStrategies.length];
             for (int i = 0; i < source.TimeBasedAutoScaleStrategies.length; i++) {
@@ -98,6 +132,7 @@ public class DescribeAutoScaleStrategiesResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "LoadAutoScaleStrategies.", this.LoadAutoScaleStrategies);
         this.setParamArrayObj(map, prefix + "TimeBasedAutoScaleStrategies.", this.TimeBasedAutoScaleStrategies);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 

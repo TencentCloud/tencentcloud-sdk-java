@@ -149,6 +149,17 @@ public class SslClient extends AbstractClient{
     }
 
     /**
+     *批量删除证书，删除证书前支持查询证书是否关联了腾讯云云资源 （需自定义配置参数，参数名称：IsSync）
+     * @param req DeleteCertificatesRequest
+     * @return DeleteCertificatesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCertificatesResponse DeleteCertificates(DeleteCertificatesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteCertificates", DeleteCertificatesResponse.class);
+    }
+
+    /**
      *删除管理人
      * @param req DeleteManagerRequest
      * @return DeleteManagerResponse

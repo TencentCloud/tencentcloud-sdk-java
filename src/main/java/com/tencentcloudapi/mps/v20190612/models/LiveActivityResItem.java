@@ -32,6 +32,14 @@ public class LiveActivityResItem extends AbstractModel {
     private LiveScheduleLiveRecordTaskResult LiveRecordTask;
 
     /**
+    * 媒体质检任务输出
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LiveQualityControlTask")
+    @Expose
+    private ScheduleQualityControlTaskResult LiveQualityControlTask;
+
+    /**
      * Get 直播录制任务输出
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return LiveRecordTask 直播录制任务输出
@@ -51,6 +59,26 @@ public class LiveActivityResItem extends AbstractModel {
         this.LiveRecordTask = LiveRecordTask;
     }
 
+    /**
+     * Get 媒体质检任务输出
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LiveQualityControlTask 媒体质检任务输出
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ScheduleQualityControlTaskResult getLiveQualityControlTask() {
+        return this.LiveQualityControlTask;
+    }
+
+    /**
+     * Set 媒体质检任务输出
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LiveQualityControlTask 媒体质检任务输出
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLiveQualityControlTask(ScheduleQualityControlTaskResult LiveQualityControlTask) {
+        this.LiveQualityControlTask = LiveQualityControlTask;
+    }
+
     public LiveActivityResItem() {
     }
 
@@ -62,6 +90,9 @@ public class LiveActivityResItem extends AbstractModel {
         if (source.LiveRecordTask != null) {
             this.LiveRecordTask = new LiveScheduleLiveRecordTaskResult(source.LiveRecordTask);
         }
+        if (source.LiveQualityControlTask != null) {
+            this.LiveQualityControlTask = new ScheduleQualityControlTaskResult(source.LiveQualityControlTask);
+        }
     }
 
 
@@ -70,6 +101,7 @@ public class LiveActivityResItem extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "LiveRecordTask.", this.LiveRecordTask);
+        this.setParamObj(map, prefix + "LiveQualityControlTask.", this.LiveQualityControlTask);
 
     }
 }
