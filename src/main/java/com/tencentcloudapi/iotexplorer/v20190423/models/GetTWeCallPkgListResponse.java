@@ -38,6 +38,14 @@ public class GetTWeCallPkgListResponse extends AbstractModel {
     private Long Total;
 
     /**
+    * 分类统计
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TWeCallCategoryPkgList")
+    @Expose
+    private TWeCallCategoryPkgInfo [] TWeCallCategoryPkgList;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -77,6 +85,26 @@ public class GetTWeCallPkgListResponse extends AbstractModel {
     }
 
     /**
+     * Get 分类统计
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TWeCallCategoryPkgList 分类统计
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public TWeCallCategoryPkgInfo [] getTWeCallCategoryPkgList() {
+        return this.TWeCallCategoryPkgList;
+    }
+
+    /**
+     * Set 分类统计
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TWeCallCategoryPkgList 分类统计
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTWeCallCategoryPkgList(TWeCallCategoryPkgInfo [] TWeCallCategoryPkgList) {
+        this.TWeCallCategoryPkgList = TWeCallCategoryPkgList;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -109,6 +137,12 @@ public class GetTWeCallPkgListResponse extends AbstractModel {
         if (source.Total != null) {
             this.Total = new Long(source.Total);
         }
+        if (source.TWeCallCategoryPkgList != null) {
+            this.TWeCallCategoryPkgList = new TWeCallCategoryPkgInfo[source.TWeCallCategoryPkgList.length];
+            for (int i = 0; i < source.TWeCallCategoryPkgList.length; i++) {
+                this.TWeCallCategoryPkgList[i] = new TWeCallCategoryPkgInfo(source.TWeCallCategoryPkgList[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -121,6 +155,7 @@ public class GetTWeCallPkgListResponse extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "TWeCallPkgList.", this.TWeCallPkgList);
         this.setParamSimple(map, prefix + "Total", this.Total);
+        this.setParamArrayObj(map, prefix + "TWeCallCategoryPkgList.", this.TWeCallCategoryPkgList);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

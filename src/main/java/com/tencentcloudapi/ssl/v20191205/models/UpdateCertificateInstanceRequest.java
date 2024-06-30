@@ -31,7 +31,7 @@ public class UpdateCertificateInstanceRequest extends AbstractModel {
     private String OldCertificateId;
 
     /**
-    * 需要部署的资源类型，参数值可选（小写）：clb、cdn、waf、live、ddos、teo、apigateway、vod、tke、tcb、tse
+    * 需要部署的资源类型，参数值可选（小写）：clb、cdn、waf、live、ddos、teo、apigateway、vod、tke、tcb、tse、cos
     */
     @SerializedName("ResourceTypes")
     @Expose
@@ -124,16 +124,16 @@ public class UpdateCertificateInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get 需要部署的资源类型，参数值可选（小写）：clb、cdn、waf、live、ddos、teo、apigateway、vod、tke、tcb、tse 
-     * @return ResourceTypes 需要部署的资源类型，参数值可选（小写）：clb、cdn、waf、live、ddos、teo、apigateway、vod、tke、tcb、tse
+     * Get 需要部署的资源类型，参数值可选（小写）：clb、cdn、waf、live、ddos、teo、apigateway、vod、tke、tcb、tse、cos 
+     * @return ResourceTypes 需要部署的资源类型，参数值可选（小写）：clb、cdn、waf、live、ddos、teo、apigateway、vod、tke、tcb、tse、cos
      */
     public String [] getResourceTypes() {
         return this.ResourceTypes;
     }
 
     /**
-     * Set 需要部署的资源类型，参数值可选（小写）：clb、cdn、waf、live、ddos、teo、apigateway、vod、tke、tcb、tse
-     * @param ResourceTypes 需要部署的资源类型，参数值可选（小写）：clb、cdn、waf、live、ddos、teo、apigateway、vod、tke、tcb、tse
+     * Set 需要部署的资源类型，参数值可选（小写）：clb、cdn、waf、live、ddos、teo、apigateway、vod、tke、tcb、tse、cos
+     * @param ResourceTypes 需要部署的资源类型，参数值可选（小写）：clb、cdn、waf、live、ddos、teo、apigateway、vod、tke、tcb、tse、cos
      */
     public void setResourceTypes(String [] ResourceTypes) {
         this.ResourceTypes = ResourceTypes;

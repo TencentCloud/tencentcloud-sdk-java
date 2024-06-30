@@ -64,6 +64,13 @@ public class StartStopServiceOrMonitorRequest extends AbstractModel {
     private StopParams StopParams;
 
     /**
+    * 当OpType为<li>StopMonitor</li>才有用，true表示进入维护模式但是仍然监控进程但是不拉起进程
+    */
+    @SerializedName("KeepMonitorButNotRecoverProcess")
+    @Expose
+    private Boolean KeepMonitorButNotRecoverProcess;
+
+    /**
      * Get 集群ID 
      * @return InstanceId 集群ID
      */
@@ -163,6 +170,22 @@ public class StartStopServiceOrMonitorRequest extends AbstractModel {
         this.StopParams = StopParams;
     }
 
+    /**
+     * Get 当OpType为<li>StopMonitor</li>才有用，true表示进入维护模式但是仍然监控进程但是不拉起进程 
+     * @return KeepMonitorButNotRecoverProcess 当OpType为<li>StopMonitor</li>才有用，true表示进入维护模式但是仍然监控进程但是不拉起进程
+     */
+    public Boolean getKeepMonitorButNotRecoverProcess() {
+        return this.KeepMonitorButNotRecoverProcess;
+    }
+
+    /**
+     * Set 当OpType为<li>StopMonitor</li>才有用，true表示进入维护模式但是仍然监控进程但是不拉起进程
+     * @param KeepMonitorButNotRecoverProcess 当OpType为<li>StopMonitor</li>才有用，true表示进入维护模式但是仍然监控进程但是不拉起进程
+     */
+    public void setKeepMonitorButNotRecoverProcess(Boolean KeepMonitorButNotRecoverProcess) {
+        this.KeepMonitorButNotRecoverProcess = KeepMonitorButNotRecoverProcess;
+    }
+
     public StartStopServiceOrMonitorRequest() {
     }
 
@@ -186,6 +209,9 @@ public class StartStopServiceOrMonitorRequest extends AbstractModel {
         if (source.StopParams != null) {
             this.StopParams = new StopParams(source.StopParams);
         }
+        if (source.KeepMonitorButNotRecoverProcess != null) {
+            this.KeepMonitorButNotRecoverProcess = new Boolean(source.KeepMonitorButNotRecoverProcess);
+        }
     }
 
 
@@ -198,6 +224,7 @@ public class StartStopServiceOrMonitorRequest extends AbstractModel {
         this.setParamObj(map, prefix + "OpScope.", this.OpScope);
         this.setParamObj(map, prefix + "StrategyConfig.", this.StrategyConfig);
         this.setParamObj(map, prefix + "StopParams.", this.StopParams);
+        this.setParamSimple(map, prefix + "KeepMonitorButNotRecoverProcess", this.KeepMonitorButNotRecoverProcess);
 
     }
 }

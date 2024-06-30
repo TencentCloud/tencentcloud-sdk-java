@@ -116,7 +116,7 @@ public class SslClient extends AbstractClient{
     }
 
     /**
-     *创建证书绑定关联云资源异步任务， 该接口用于查询证书关联云资源。 若证书ID已存在查询云资源任务，则结果返回该任务ID。关联云资源类型，支持以下云资源：clb、cdn、waf、live、vod、ddos、tke、apigateway、tcb、teo（edgeOne）。查询关联云资源结果使用DescribeCertificateBindResourceTaskResult接口
+     *创建证书绑定关联云资源异步任务， 该接口用于查询证书关联云资源。 若证书ID已存在查询云资源任务，则结果返回该任务ID。关联云资源类型，支持以下云资源：clb、cdn、waf、live、vod、ddos、tke、apigateway、tcb、teo（edgeOne）、cos。查询关联云资源结果使用DescribeCertificateBindResourceTaskResult接口
      * @param req CreateCertificateBindResourceSyncTaskRequest
      * @return CreateCertificateBindResourceSyncTaskResponse
      * @throws TencentCloudSDKException
@@ -226,7 +226,7 @@ public class SslClient extends AbstractClient{
     }
 
     /**
-     *查询CreateCertificateBindResourceSyncTask任务结果， 返回证书关联云资源异步任务结果， 支持以下云资源：clb、cdn、waf、live、vod、ddos、tke、apigateway、tcb、teo（edgeOne）
+     *查询CreateCertificateBindResourceSyncTask任务结果， 返回证书关联云资源异步任务结果， 支持以下云资源：clb、cdn、waf、live、vod、ddos、tke、apigateway、tcb、teo（edgeOne）、cos
      * @param req DescribeCertificateBindResourceTaskResultRequest
      * @return DescribeCertificateBindResourceTaskResultResponse
      * @throws TencentCloudSDKException

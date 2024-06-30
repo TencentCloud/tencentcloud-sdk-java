@@ -24,7 +24,10 @@ import java.util.HashMap;
 public class CreateLegalSealQrCodeResponse extends AbstractModel {
 
     /**
-    * 二维码图片base64值
+    * 二维码图片base64值，二维码有效期7天（604800秒）
+
+二维码图片的样式如下图：
+![image](https://qcloudimg.tencent-cloud.cn/raw/7ec2478761158a35a9c623882839a5df.png)
     */
     @SerializedName("QrcodeBase64")
     @Expose
@@ -38,16 +41,28 @@ public class CreateLegalSealQrCodeResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 二维码图片base64值 
-     * @return QrcodeBase64 二维码图片base64值
+     * Get 二维码图片base64值，二维码有效期7天（604800秒）
+
+二维码图片的样式如下图：
+![image](https://qcloudimg.tencent-cloud.cn/raw/7ec2478761158a35a9c623882839a5df.png) 
+     * @return QrcodeBase64 二维码图片base64值，二维码有效期7天（604800秒）
+
+二维码图片的样式如下图：
+![image](https://qcloudimg.tencent-cloud.cn/raw/7ec2478761158a35a9c623882839a5df.png)
      */
     public String getQrcodeBase64() {
         return this.QrcodeBase64;
     }
 
     /**
-     * Set 二维码图片base64值
-     * @param QrcodeBase64 二维码图片base64值
+     * Set 二维码图片base64值，二维码有效期7天（604800秒）
+
+二维码图片的样式如下图：
+![image](https://qcloudimg.tencent-cloud.cn/raw/7ec2478761158a35a9c623882839a5df.png)
+     * @param QrcodeBase64 二维码图片base64值，二维码有效期7天（604800秒）
+
+二维码图片的样式如下图：
+![image](https://qcloudimg.tencent-cloud.cn/raw/7ec2478761158a35a9c623882839a5df.png)
      */
     public void setQrcodeBase64(String QrcodeBase64) {
         this.QrcodeBase64 = QrcodeBase64;

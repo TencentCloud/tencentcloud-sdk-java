@@ -50,6 +50,17 @@ public class SesClient extends AbstractClient{
     }
 
     /**
+     *添加自定义黑名单
+     * @param req CreateCustomBlacklistRequest
+     * @return CreateCustomBlacklistResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCustomBlacklistResponse CreateCustomBlacklist(CreateCustomBlacklistRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateCustomBlacklist", CreateCustomBlacklistResponse.class);
+    }
+
+    /**
      *在验证了发信域名之后，您需要一个发信地址来发送邮件。例如发信域名是mail.qcloud.com，那么发信地址可以为 service@mail.qcloud.com。如果您想要收件人在收件箱列表中显示您的别名，例如"腾讯云邮件通知"。那么发信地址为： 别名 空格 尖括号 邮箱地址。请注意中间需要有空格
      * @param req CreateEmailAddressRequest
      * @return CreateEmailAddressResponse
@@ -125,6 +136,17 @@ public class SesClient extends AbstractClient{
     public DeleteBlackListResponse DeleteBlackList(DeleteBlackListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteBlackList", DeleteBlackListResponse.class);
+    }
+
+    /**
+     *删除自定义黑名单邮箱地址
+     * @param req DeleteCustomBlackListRequest
+     * @return DeleteCustomBlackListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCustomBlackListResponse DeleteCustomBlackList(DeleteCustomBlackListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteCustomBlackList", DeleteCustomBlackListResponse.class);
     }
 
     /**
@@ -227,6 +249,17 @@ public class SesClient extends AbstractClient{
     }
 
     /**
+     *获取自定义黑名单列表
+     * @param req ListCustomBlacklistRequest
+     * @return ListCustomBlacklistResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListCustomBlacklistResponse ListCustomBlacklist(ListCustomBlacklistRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListCustomBlacklist", ListCustomBlacklistResponse.class);
+    }
+
+    /**
      *获取发信地址列表
      * @param req ListEmailAddressRequest
      * @return ListEmailAddressResponse
@@ -301,6 +334,17 @@ public class SesClient extends AbstractClient{
     public SendEmailResponse SendEmail(SendEmailRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "SendEmail", SendEmailResponse.class);
+    }
+
+    /**
+     *更新自定义黑名单
+     * @param req UpdateCustomBlackListRequest
+     * @return UpdateCustomBlackListResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateCustomBlackListResponse UpdateCustomBlackList(UpdateCustomBlackListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateCustomBlackList", UpdateCustomBlackListResponse.class);
     }
 
     /**

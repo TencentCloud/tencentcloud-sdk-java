@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ChannelDescribeOrganizationSealsResponse extends AbstractModel {
 
     /**
-    * 在设置了SealId时返回0或1，没有设置时返回公司的总印章数量，可能比返回的印章数组数量多
+    * 在设定了SealId时，返回值为0或1；若未设定SealId，则返回公司的总印章数量
     */
     @SerializedName("TotalCount")
     @Expose
@@ -45,16 +45,16 @@ public class ChannelDescribeOrganizationSealsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 在设置了SealId时返回0或1，没有设置时返回公司的总印章数量，可能比返回的印章数组数量多 
-     * @return TotalCount 在设置了SealId时返回0或1，没有设置时返回公司的总印章数量，可能比返回的印章数组数量多
+     * Get 在设定了SealId时，返回值为0或1；若未设定SealId，则返回公司的总印章数量 
+     * @return TotalCount 在设定了SealId时，返回值为0或1；若未设定SealId，则返回公司的总印章数量
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 在设置了SealId时返回0或1，没有设置时返回公司的总印章数量，可能比返回的印章数组数量多
-     * @param TotalCount 在设置了SealId时返回0或1，没有设置时返回公司的总印章数量，可能比返回的印章数组数量多
+     * Set 在设定了SealId时，返回值为0或1；若未设定SealId，则返回公司的总印章数量
+     * @param TotalCount 在设定了SealId时，返回值为0或1；若未设定SealId，则返回公司的总印章数量
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

@@ -39,7 +39,7 @@ public class ChannelDescribeOrganizationSealsRequest extends AbstractModel {
     private Agent Agent;
 
     /**
-    * 返回最大数量，最大为100
+    * 指定分页每页返回的数据条数，单页最大支持 100。
     */
     @SerializedName("Limit")
     @Expose
@@ -53,18 +53,16 @@ public class ChannelDescribeOrganizationSealsRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * 查询信息类型
-支持的值如下：
-<ul><li>0-默认，不返回授权用户信息</li>
-<li>1-返回授权用户信息</li>
-</ul>
+    * 查询授权用户信息类型，取值如下：
+
+<ul> <li><b>0</b>：（默认）不返回授权用户信息</li> <li><b>1</b>：返回授权用户的信息</li> </ul>
     */
     @SerializedName("InfoType")
     @Expose
     private Long InfoType;
 
     /**
-    * 印章id（没有输入返回所有）
+    * 印章id，是否查询特定的印章（没有输入返回所有）
 
 注:  `没有输入返回所有记录，最大返回100条。`
     */
@@ -74,7 +72,7 @@ public class ChannelDescribeOrganizationSealsRequest extends AbstractModel {
 
     /**
     * 电子印章类型 , 可选类型如下: 
-<ul><li>**OFFICIAL**: (默认)公章</li>
+<ul><li>**OFFICIAL**: 公章</li>
 <li>**CONTRACT**: 合同专用章;</li>
 <li>**FINANCE**: 财务专用章;</li>
 <li>**PERSONNEL**: 人事专用章</li>
@@ -88,7 +86,10 @@ public class ChannelDescribeOrganizationSealsRequest extends AbstractModel {
     private String [] SealTypes;
 
     /**
-    * 查询的印章状态列表。 <ul> <li>空，只查询启用状态的印章；</li> <li>ALL，查询所有状态的印章；</li> <li>CHECKING，查询待审核的印章；</li> <li>SUCCESS，查询启用状态的印章；</li> <li>FAIL，查询印章审核拒绝的印章；</li> <li>DISABLE，查询已停用的印章；</li> <li>STOPPED，查询已终止的印章；</li> <li>VOID，查询已作废的印章；</li> <li>INVALID，查询已失效的印章；</li> </ul>
+    * 
+需查询的印章状态列表。
+
+<ul> <li>空，()仅查询启用状态的印章；</li> <li><strong>ALL</strong>，查询所有状态的印章；</li> <li><strong>CHECKING</strong>，查询待审核的印章；</li> <li><strong>SUCCESS</strong>，查询启用状态的印章；</li> <li><strong>FAIL</strong>，查询印章审核拒绝的印章；</li> <li><strong>DISABLE</strong>，查询已停用的印章；</li> <li><strong>STOPPED</strong>，查询已终止的印章；</li> <li><strong>VOID</strong>，查询已作废的印章；</li> <li><strong>INVALID</strong>，查询已失效的印章。</li> </ul>
     */
     @SerializedName("SealStatuses")
     @Expose
@@ -143,16 +144,16 @@ public class ChannelDescribeOrganizationSealsRequest extends AbstractModel {
     }
 
     /**
-     * Get 返回最大数量，最大为100 
-     * @return Limit 返回最大数量，最大为100
+     * Get 指定分页每页返回的数据条数，单页最大支持 100。 
+     * @return Limit 指定分页每页返回的数据条数，单页最大支持 100。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回最大数量，最大为100
-     * @param Limit 返回最大数量，最大为100
+     * Set 指定分页每页返回的数据条数，单页最大支持 100。
+     * @param Limit 指定分页每页返回的数据条数，单页最大支持 100。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
@@ -175,42 +176,34 @@ public class ChannelDescribeOrganizationSealsRequest extends AbstractModel {
     }
 
     /**
-     * Get 查询信息类型
-支持的值如下：
-<ul><li>0-默认，不返回授权用户信息</li>
-<li>1-返回授权用户信息</li>
-</ul> 
-     * @return InfoType 查询信息类型
-支持的值如下：
-<ul><li>0-默认，不返回授权用户信息</li>
-<li>1-返回授权用户信息</li>
-</ul>
+     * Get 查询授权用户信息类型，取值如下：
+
+<ul> <li><b>0</b>：（默认）不返回授权用户信息</li> <li><b>1</b>：返回授权用户的信息</li> </ul> 
+     * @return InfoType 查询授权用户信息类型，取值如下：
+
+<ul> <li><b>0</b>：（默认）不返回授权用户信息</li> <li><b>1</b>：返回授权用户的信息</li> </ul>
      */
     public Long getInfoType() {
         return this.InfoType;
     }
 
     /**
-     * Set 查询信息类型
-支持的值如下：
-<ul><li>0-默认，不返回授权用户信息</li>
-<li>1-返回授权用户信息</li>
-</ul>
-     * @param InfoType 查询信息类型
-支持的值如下：
-<ul><li>0-默认，不返回授权用户信息</li>
-<li>1-返回授权用户信息</li>
-</ul>
+     * Set 查询授权用户信息类型，取值如下：
+
+<ul> <li><b>0</b>：（默认）不返回授权用户信息</li> <li><b>1</b>：返回授权用户的信息</li> </ul>
+     * @param InfoType 查询授权用户信息类型，取值如下：
+
+<ul> <li><b>0</b>：（默认）不返回授权用户信息</li> <li><b>1</b>：返回授权用户的信息</li> </ul>
      */
     public void setInfoType(Long InfoType) {
         this.InfoType = InfoType;
     }
 
     /**
-     * Get 印章id（没有输入返回所有）
+     * Get 印章id，是否查询特定的印章（没有输入返回所有）
 
 注:  `没有输入返回所有记录，最大返回100条。` 
-     * @return SealId 印章id（没有输入返回所有）
+     * @return SealId 印章id，是否查询特定的印章（没有输入返回所有）
 
 注:  `没有输入返回所有记录，最大返回100条。`
      */
@@ -219,10 +212,10 @@ public class ChannelDescribeOrganizationSealsRequest extends AbstractModel {
     }
 
     /**
-     * Set 印章id（没有输入返回所有）
+     * Set 印章id，是否查询特定的印章（没有输入返回所有）
 
 注:  `没有输入返回所有记录，最大返回100条。`
-     * @param SealId 印章id（没有输入返回所有）
+     * @param SealId 印章id，是否查询特定的印章（没有输入返回所有）
 
 注:  `没有输入返回所有记录，最大返回100条。`
      */
@@ -232,7 +225,7 @@ public class ChannelDescribeOrganizationSealsRequest extends AbstractModel {
 
     /**
      * Get 电子印章类型 , 可选类型如下: 
-<ul><li>**OFFICIAL**: (默认)公章</li>
+<ul><li>**OFFICIAL**: 公章</li>
 <li>**CONTRACT**: 合同专用章;</li>
 <li>**FINANCE**: 财务专用章;</li>
 <li>**PERSONNEL**: 人事专用章</li>
@@ -241,7 +234,7 @@ public class ChannelDescribeOrganizationSealsRequest extends AbstractModel {
 
 注:  `为空时查询所有类型的印章。` 
      * @return SealTypes 电子印章类型 , 可选类型如下: 
-<ul><li>**OFFICIAL**: (默认)公章</li>
+<ul><li>**OFFICIAL**: 公章</li>
 <li>**CONTRACT**: 合同专用章;</li>
 <li>**FINANCE**: 财务专用章;</li>
 <li>**PERSONNEL**: 人事专用章</li>
@@ -256,7 +249,7 @@ public class ChannelDescribeOrganizationSealsRequest extends AbstractModel {
 
     /**
      * Set 电子印章类型 , 可选类型如下: 
-<ul><li>**OFFICIAL**: (默认)公章</li>
+<ul><li>**OFFICIAL**: 公章</li>
 <li>**CONTRACT**: 合同专用章;</li>
 <li>**FINANCE**: 财务专用章;</li>
 <li>**PERSONNEL**: 人事专用章</li>
@@ -265,7 +258,7 @@ public class ChannelDescribeOrganizationSealsRequest extends AbstractModel {
 
 注:  `为空时查询所有类型的印章。`
      * @param SealTypes 电子印章类型 , 可选类型如下: 
-<ul><li>**OFFICIAL**: (默认)公章</li>
+<ul><li>**OFFICIAL**: 公章</li>
 <li>**CONTRACT**: 合同专用章;</li>
 <li>**FINANCE**: 财务专用章;</li>
 <li>**PERSONNEL**: 人事专用章</li>
@@ -279,16 +272,28 @@ public class ChannelDescribeOrganizationSealsRequest extends AbstractModel {
     }
 
     /**
-     * Get 查询的印章状态列表。 <ul> <li>空，只查询启用状态的印章；</li> <li>ALL，查询所有状态的印章；</li> <li>CHECKING，查询待审核的印章；</li> <li>SUCCESS，查询启用状态的印章；</li> <li>FAIL，查询印章审核拒绝的印章；</li> <li>DISABLE，查询已停用的印章；</li> <li>STOPPED，查询已终止的印章；</li> <li>VOID，查询已作废的印章；</li> <li>INVALID，查询已失效的印章；</li> </ul> 
-     * @return SealStatuses 查询的印章状态列表。 <ul> <li>空，只查询启用状态的印章；</li> <li>ALL，查询所有状态的印章；</li> <li>CHECKING，查询待审核的印章；</li> <li>SUCCESS，查询启用状态的印章；</li> <li>FAIL，查询印章审核拒绝的印章；</li> <li>DISABLE，查询已停用的印章；</li> <li>STOPPED，查询已终止的印章；</li> <li>VOID，查询已作废的印章；</li> <li>INVALID，查询已失效的印章；</li> </ul>
+     * Get 
+需查询的印章状态列表。
+
+<ul> <li>空，()仅查询启用状态的印章；</li> <li><strong>ALL</strong>，查询所有状态的印章；</li> <li><strong>CHECKING</strong>，查询待审核的印章；</li> <li><strong>SUCCESS</strong>，查询启用状态的印章；</li> <li><strong>FAIL</strong>，查询印章审核拒绝的印章；</li> <li><strong>DISABLE</strong>，查询已停用的印章；</li> <li><strong>STOPPED</strong>，查询已终止的印章；</li> <li><strong>VOID</strong>，查询已作废的印章；</li> <li><strong>INVALID</strong>，查询已失效的印章。</li> </ul> 
+     * @return SealStatuses 
+需查询的印章状态列表。
+
+<ul> <li>空，()仅查询启用状态的印章；</li> <li><strong>ALL</strong>，查询所有状态的印章；</li> <li><strong>CHECKING</strong>，查询待审核的印章；</li> <li><strong>SUCCESS</strong>，查询启用状态的印章；</li> <li><strong>FAIL</strong>，查询印章审核拒绝的印章；</li> <li><strong>DISABLE</strong>，查询已停用的印章；</li> <li><strong>STOPPED</strong>，查询已终止的印章；</li> <li><strong>VOID</strong>，查询已作废的印章；</li> <li><strong>INVALID</strong>，查询已失效的印章。</li> </ul>
      */
     public String [] getSealStatuses() {
         return this.SealStatuses;
     }
 
     /**
-     * Set 查询的印章状态列表。 <ul> <li>空，只查询启用状态的印章；</li> <li>ALL，查询所有状态的印章；</li> <li>CHECKING，查询待审核的印章；</li> <li>SUCCESS，查询启用状态的印章；</li> <li>FAIL，查询印章审核拒绝的印章；</li> <li>DISABLE，查询已停用的印章；</li> <li>STOPPED，查询已终止的印章；</li> <li>VOID，查询已作废的印章；</li> <li>INVALID，查询已失效的印章；</li> </ul>
-     * @param SealStatuses 查询的印章状态列表。 <ul> <li>空，只查询启用状态的印章；</li> <li>ALL，查询所有状态的印章；</li> <li>CHECKING，查询待审核的印章；</li> <li>SUCCESS，查询启用状态的印章；</li> <li>FAIL，查询印章审核拒绝的印章；</li> <li>DISABLE，查询已停用的印章；</li> <li>STOPPED，查询已终止的印章；</li> <li>VOID，查询已作废的印章；</li> <li>INVALID，查询已失效的印章；</li> </ul>
+     * Set 
+需查询的印章状态列表。
+
+<ul> <li>空，()仅查询启用状态的印章；</li> <li><strong>ALL</strong>，查询所有状态的印章；</li> <li><strong>CHECKING</strong>，查询待审核的印章；</li> <li><strong>SUCCESS</strong>，查询启用状态的印章；</li> <li><strong>FAIL</strong>，查询印章审核拒绝的印章；</li> <li><strong>DISABLE</strong>，查询已停用的印章；</li> <li><strong>STOPPED</strong>，查询已终止的印章；</li> <li><strong>VOID</strong>，查询已作废的印章；</li> <li><strong>INVALID</strong>，查询已失效的印章。</li> </ul>
+     * @param SealStatuses 
+需查询的印章状态列表。
+
+<ul> <li>空，()仅查询启用状态的印章；</li> <li><strong>ALL</strong>，查询所有状态的印章；</li> <li><strong>CHECKING</strong>，查询待审核的印章；</li> <li><strong>SUCCESS</strong>，查询启用状态的印章；</li> <li><strong>FAIL</strong>，查询印章审核拒绝的印章；</li> <li><strong>DISABLE</strong>，查询已停用的印章；</li> <li><strong>STOPPED</strong>，查询已终止的印章；</li> <li><strong>VOID</strong>，查询已作废的印章；</li> <li><strong>INVALID</strong>，查询已失效的印章。</li> </ul>
      */
     public void setSealStatuses(String [] SealStatuses) {
         this.SealStatuses = SealStatuses;
