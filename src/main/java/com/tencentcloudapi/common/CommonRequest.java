@@ -46,7 +46,7 @@ public final class CommonRequest extends AbstractModel {
                 toMapFromObject(map, prefix + key, val);
             }
         } else {
-            map.put(prefix, layer.toString());
+            map.put(prefix, (layer == null ? null : layer.toString()));
         }
     }
 }
