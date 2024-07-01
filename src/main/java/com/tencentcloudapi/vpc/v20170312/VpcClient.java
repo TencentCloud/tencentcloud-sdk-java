@@ -675,6 +675,50 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
+     *本接口（CreatePrivateNatGateway）用于创建私网NAT网关。
+     * @param req CreatePrivateNatGatewayRequest
+     * @return CreatePrivateNatGatewayResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreatePrivateNatGatewayResponse CreatePrivateNatGateway(CreatePrivateNatGatewayRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreatePrivateNatGateway", CreatePrivateNatGatewayResponse.class);
+    }
+
+    /**
+     *本接口（CreatePrivateNatGatewayDestinationIpPortTranslationNatRule）用于创建私网NAT网关目的端口转换规则
+     * @param req CreatePrivateNatGatewayDestinationIpPortTranslationNatRuleRequest
+     * @return CreatePrivateNatGatewayDestinationIpPortTranslationNatRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreatePrivateNatGatewayDestinationIpPortTranslationNatRuleResponse CreatePrivateNatGatewayDestinationIpPortTranslationNatRule(CreatePrivateNatGatewayDestinationIpPortTranslationNatRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreatePrivateNatGatewayDestinationIpPortTranslationNatRule", CreatePrivateNatGatewayDestinationIpPortTranslationNatRuleResponse.class);
+    }
+
+    /**
+     *本接口（ CreatePrivateNatGatewayTranslationAclRule）用于创建私网NAT网关源端转换访问控制规则
+     * @param req CreatePrivateNatGatewayTranslationAclRuleRequest
+     * @return CreatePrivateNatGatewayTranslationAclRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreatePrivateNatGatewayTranslationAclRuleResponse CreatePrivateNatGatewayTranslationAclRule(CreatePrivateNatGatewayTranslationAclRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreatePrivateNatGatewayTranslationAclRule", CreatePrivateNatGatewayTranslationAclRuleResponse.class);
+    }
+
+    /**
+     *本接口（CreatePrivateNatGatewayTranslationNatRule）用于创建私网NAT网关源端转换规则。
+     * @param req CreatePrivateNatGatewayTranslationNatRuleRequest
+     * @return CreatePrivateNatGatewayTranslationNatRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreatePrivateNatGatewayTranslationNatRuleResponse CreatePrivateNatGatewayTranslationNatRule(CreatePrivateNatGatewayTranslationNatRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreatePrivateNatGatewayTranslationNatRule", CreatePrivateNatGatewayTranslationNatRuleResponse.class);
+    }
+
+    /**
      *本接口(CreateRouteTable)用于创建路由表。
 * 创建了VPC后，系统会创建一个默认路由表，所有新建的子网都会关联到默认路由表。默认情况下您可以直接使用默认路由表来管理您的路由策略。当您的路由策略较多时，您可以调用创建路由表接口创建更多路由表管理您的路由策略。
 * 创建路由表同时可以绑定标签, 应答里的标签列表代表添加成功的标签。
@@ -1205,6 +1249,50 @@ public class VpcClient extends AbstractClient{
     public DeleteNetworkInterfaceResponse DeleteNetworkInterface(DeleteNetworkInterfaceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteNetworkInterface", DeleteNetworkInterfaceResponse.class);
+    }
+
+    /**
+     *本接口（DeletePrivateNatGateway）用于删除私网NAT网关。
+     * @param req DeletePrivateNatGatewayRequest
+     * @return DeletePrivateNatGatewayResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeletePrivateNatGatewayResponse DeletePrivateNatGateway(DeletePrivateNatGatewayRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeletePrivateNatGateway", DeletePrivateNatGatewayResponse.class);
+    }
+
+    /**
+     *本接口（DeletePrivateNatGatewayDestinationIpPortTranslationNatRule）用于删除私网NAT网关目的端口转换规则
+     * @param req DeletePrivateNatGatewayDestinationIpPortTranslationNatRuleRequest
+     * @return DeletePrivateNatGatewayDestinationIpPortTranslationNatRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeletePrivateNatGatewayDestinationIpPortTranslationNatRuleResponse DeletePrivateNatGatewayDestinationIpPortTranslationNatRule(DeletePrivateNatGatewayDestinationIpPortTranslationNatRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeletePrivateNatGatewayDestinationIpPortTranslationNatRule", DeletePrivateNatGatewayDestinationIpPortTranslationNatRuleResponse.class);
+    }
+
+    /**
+     *本接口（DeletePrivateNatGatewayTranslationAclRule）用于删除私网NAT网关源端转换访问控制规则
+     * @param req DeletePrivateNatGatewayTranslationAclRuleRequest
+     * @return DeletePrivateNatGatewayTranslationAclRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeletePrivateNatGatewayTranslationAclRuleResponse DeletePrivateNatGatewayTranslationAclRule(DeletePrivateNatGatewayTranslationAclRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeletePrivateNatGatewayTranslationAclRule", DeletePrivateNatGatewayTranslationAclRuleResponse.class);
+    }
+
+    /**
+     *本接口（DeletePrivateNatGatewayTranslationNatRule）用于删除私网NAT网关源端转换规则
+     * @param req DeletePrivateNatGatewayTranslationNatRuleRequest
+     * @return DeletePrivateNatGatewayTranslationNatRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeletePrivateNatGatewayTranslationNatRuleResponse DeletePrivateNatGatewayTranslationNatRule(DeletePrivateNatGatewayTranslationNatRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeletePrivateNatGatewayTranslationNatRule", DeletePrivateNatGatewayTranslationNatRuleResponse.class);
     }
 
     /**
@@ -1940,6 +2028,72 @@ public class VpcClient extends AbstractClient{
     public DescribeNetworkInterfacesResponse DescribeNetworkInterfaces(DescribeNetworkInterfacesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeNetworkInterfaces", DescribeNetworkInterfacesResponse.class);
+    }
+
+    /**
+     *本接口（DescribePrivateNatGatewayDestinationIpPortTranslationNatRules）用于查询私网NAT网关目的端口转换规则
+     * @param req DescribePrivateNatGatewayDestinationIpPortTranslationNatRulesRequest
+     * @return DescribePrivateNatGatewayDestinationIpPortTranslationNatRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePrivateNatGatewayDestinationIpPortTranslationNatRulesResponse DescribePrivateNatGatewayDestinationIpPortTranslationNatRules(DescribePrivateNatGatewayDestinationIpPortTranslationNatRulesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribePrivateNatGatewayDestinationIpPortTranslationNatRules", DescribePrivateNatGatewayDestinationIpPortTranslationNatRulesResponse.class);
+    }
+
+    /**
+     *本接口（DescribePrivateNatGatewayLimits）用于查询可创建的私网NAT网关配额数量
+     * @param req DescribePrivateNatGatewayLimitsRequest
+     * @return DescribePrivateNatGatewayLimitsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePrivateNatGatewayLimitsResponse DescribePrivateNatGatewayLimits(DescribePrivateNatGatewayLimitsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribePrivateNatGatewayLimits", DescribePrivateNatGatewayLimitsResponse.class);
+    }
+
+    /**
+     *本接口（DescribePrivateNatGatewayRegions）用于查询查询私网NAT网关可支持地域
+     * @param req DescribePrivateNatGatewayRegionsRequest
+     * @return DescribePrivateNatGatewayRegionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePrivateNatGatewayRegionsResponse DescribePrivateNatGatewayRegions(DescribePrivateNatGatewayRegionsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribePrivateNatGatewayRegions", DescribePrivateNatGatewayRegionsResponse.class);
+    }
+
+    /**
+     *本接口（DescribePrivateNatGatewayTranslationAclRules）用于查询私网NAT网关源端转换访问控制规则
+     * @param req DescribePrivateNatGatewayTranslationAclRulesRequest
+     * @return DescribePrivateNatGatewayTranslationAclRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePrivateNatGatewayTranslationAclRulesResponse DescribePrivateNatGatewayTranslationAclRules(DescribePrivateNatGatewayTranslationAclRulesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribePrivateNatGatewayTranslationAclRules", DescribePrivateNatGatewayTranslationAclRulesResponse.class);
+    }
+
+    /**
+     *本接口（DescribePrivateNatGatewayTranslationNatRules）用于查询私网NAT网关源端转换规则
+     * @param req DescribePrivateNatGatewayTranslationNatRulesRequest
+     * @return DescribePrivateNatGatewayTranslationNatRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePrivateNatGatewayTranslationNatRulesResponse DescribePrivateNatGatewayTranslationNatRules(DescribePrivateNatGatewayTranslationNatRulesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribePrivateNatGatewayTranslationNatRules", DescribePrivateNatGatewayTranslationNatRulesResponse.class);
+    }
+
+    /**
+     *本接口（DescribePrivateNatGateways）用于查询私网NAT网关
+     * @param req DescribePrivateNatGatewaysRequest
+     * @return DescribePrivateNatGatewaysResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePrivateNatGatewaysResponse DescribePrivateNatGateways(DescribePrivateNatGatewaysRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribePrivateNatGateways", DescribePrivateNatGatewaysResponse.class);
     }
 
     /**
@@ -3198,6 +3352,50 @@ LimitTypes取值范围：
     public ModifyPrivateIpAddressesAttributeResponse ModifyPrivateIpAddressesAttribute(ModifyPrivateIpAddressesAttributeRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyPrivateIpAddressesAttribute", ModifyPrivateIpAddressesAttributeResponse.class);
+    }
+
+    /**
+     *本接口（ModifyPrivateNatGatewayAttribute）用于修改私网NAT网关属性
+     * @param req ModifyPrivateNatGatewayAttributeRequest
+     * @return ModifyPrivateNatGatewayAttributeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyPrivateNatGatewayAttributeResponse ModifyPrivateNatGatewayAttribute(ModifyPrivateNatGatewayAttributeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyPrivateNatGatewayAttribute", ModifyPrivateNatGatewayAttributeResponse.class);
+    }
+
+    /**
+     *本接口（ModifyPrivateNatGatewayDestinationIpPortTranslationNatRule）用于修改私网NAT网关目的端口转换规则
+     * @param req ModifyPrivateNatGatewayDestinationIpPortTranslationNatRuleRequest
+     * @return ModifyPrivateNatGatewayDestinationIpPortTranslationNatRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyPrivateNatGatewayDestinationIpPortTranslationNatRuleResponse ModifyPrivateNatGatewayDestinationIpPortTranslationNatRule(ModifyPrivateNatGatewayDestinationIpPortTranslationNatRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyPrivateNatGatewayDestinationIpPortTranslationNatRule", ModifyPrivateNatGatewayDestinationIpPortTranslationNatRuleResponse.class);
+    }
+
+    /**
+     *本接口（ModifyPrivateNatGatewayTranslationAclRule）用于修改私网NAT网关源端转换访问控制规则
+     * @param req ModifyPrivateNatGatewayTranslationAclRuleRequest
+     * @return ModifyPrivateNatGatewayTranslationAclRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyPrivateNatGatewayTranslationAclRuleResponse ModifyPrivateNatGatewayTranslationAclRule(ModifyPrivateNatGatewayTranslationAclRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyPrivateNatGatewayTranslationAclRule", ModifyPrivateNatGatewayTranslationAclRuleResponse.class);
+    }
+
+    /**
+     *本接口（ModifyPrivateNatGatewayTranslationNatRule）用于修改私网NAT网关源端转换规则
+     * @param req ModifyPrivateNatGatewayTranslationNatRuleRequest
+     * @return ModifyPrivateNatGatewayTranslationNatRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyPrivateNatGatewayTranslationNatRuleResponse ModifyPrivateNatGatewayTranslationNatRule(ModifyPrivateNatGatewayTranslationNatRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyPrivateNatGatewayTranslationNatRule", ModifyPrivateNatGatewayTranslationNatRuleResponse.class);
     }
 
     /**

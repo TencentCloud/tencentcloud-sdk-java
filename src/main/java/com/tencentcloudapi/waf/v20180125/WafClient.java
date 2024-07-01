@@ -1068,17 +1068,6 @@ public class WafClient extends AbstractClient{
     }
 
     /**
-     *本接口用于修改访问日志保存期限等字段信息
-     * @param req ModifyAccessPeriodRequest
-     * @return ModifyAccessPeriodResponse
-     * @throws TencentCloudSDKException
-     */
-    public ModifyAccessPeriodResponse ModifyAccessPeriod(ModifyAccessPeriodRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "ModifyAccessPeriod", ModifyAccessPeriodResponse.class);
-    }
-
-    /**
      *编辑防篡改url
      * @param req ModifyAntiFakeUrlRequest
      * @return ModifyAntiFakeUrlResponse

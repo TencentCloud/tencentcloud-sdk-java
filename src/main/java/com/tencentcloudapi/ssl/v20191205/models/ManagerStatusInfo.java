@@ -23,6 +23,118 @@ import java.util.HashMap;
 
 public class ManagerStatusInfo extends AbstractModel {
 
+    /**
+    * 审核类型，枚举值：ov,ev,cs,ev_cs
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Type")
+    @Expose
+    private String Type;
+
+    /**
+    * 审核状态，枚举值：pending,completed,invalid,submitted,expiring,expired
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Status")
+    @Expose
+    private String Status;
+
+    /**
+    * 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private String CreateTime;
+
+    /**
+    * 过期时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ExpireTime")
+    @Expose
+    private String ExpireTime;
+
+    /**
+     * Get 审核类型，枚举值：ov,ev,cs,ev_cs
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Type 审核类型，枚举值：ov,ev,cs,ev_cs
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set 审核类型，枚举值：ov,ev,cs,ev_cs
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Type 审核类型，枚举值：ov,ev,cs,ev_cs
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setType(String Type) {
+        this.Type = Type;
+    }
+
+    /**
+     * Get 审核状态，枚举值：pending,completed,invalid,submitted,expiring,expired
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Status 审核状态，枚举值：pending,completed,invalid,submitted,expiring,expired
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 审核状态，枚举值：pending,completed,invalid,submitted,expiring,expired
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Status 审核状态，枚举值：pending,completed,invalid,submitted,expiring,expired
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStatus(String Status) {
+        this.Status = Status;
+    }
+
+    /**
+     * Get 创建时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CreateTime 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CreateTime 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCreateTime(String CreateTime) {
+        this.CreateTime = CreateTime;
+    }
+
+    /**
+     * Get 过期时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ExpireTime 过期时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getExpireTime() {
+        return this.ExpireTime;
+    }
+
+    /**
+     * Set 过期时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExpireTime 过期时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExpireTime(String ExpireTime) {
+        this.ExpireTime = ExpireTime;
+    }
+
     public ManagerStatusInfo() {
     }
 
@@ -31,6 +143,18 @@ public class ManagerStatusInfo extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ManagerStatusInfo(ManagerStatusInfo source) {
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.ExpireTime != null) {
+            this.ExpireTime = new String(source.ExpireTime);
+        }
     }
 
 
@@ -38,6 +162,10 @@ public class ManagerStatusInfo extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
 
     }
 }

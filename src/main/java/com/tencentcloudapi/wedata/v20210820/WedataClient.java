@@ -897,6 +897,28 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *获取值班日历
+     * @param req DescribeDutyScheduleDetailsRequest
+     * @return DescribeDutyScheduleDetailsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDutyScheduleDetailsResponse DescribeDutyScheduleDetails(DescribeDutyScheduleDetailsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDutyScheduleDetails", DescribeDutyScheduleDetailsResponse.class);
+    }
+
+    /**
+     *获取值班表列表
+     * @param req DescribeDutyScheduleListRequest
+     * @return DescribeDutyScheduleListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDutyScheduleListResponse DescribeDutyScheduleList(DescribeDutyScheduleListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDutyScheduleList", DescribeDutyScheduleListResponse.class);
+    }
+
+    /**
      *根据项目ID和事件名称查看事件详情
      * @param req DescribeEventRequest
      * @return DescribeEventResponse

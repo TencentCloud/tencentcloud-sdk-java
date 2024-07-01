@@ -63,7 +63,9 @@ public class DescribeManagerDetailRequest extends AbstractModel {
     /**
      * Get 分页每页数量 
      * @return Limit 分页每页数量
+     * @deprecated
      */
+    @Deprecated
     public Long getLimit() {
         return this.Limit;
     }
@@ -71,7 +73,9 @@ public class DescribeManagerDetailRequest extends AbstractModel {
     /**
      * Set 分页每页数量
      * @param Limit 分页每页数量
+     * @deprecated
      */
+    @Deprecated
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
@@ -79,7 +83,9 @@ public class DescribeManagerDetailRequest extends AbstractModel {
     /**
      * Get 分页偏移量 
      * @return Offset 分页偏移量
+     * @deprecated
      */
+    @Deprecated
     public Long getOffset() {
         return this.Offset;
     }
@@ -87,7 +93,9 @@ public class DescribeManagerDetailRequest extends AbstractModel {
     /**
      * Set 分页偏移量
      * @param Offset 分页偏移量
+     * @deprecated
      */
+    @Deprecated
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }

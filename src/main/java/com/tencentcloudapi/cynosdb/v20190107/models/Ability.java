@@ -62,6 +62,22 @@ public class Ability extends AbstractModel {
     private String IsSupportManualSnapshot;
 
     /**
+    * 是否支持透明数据加密
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsSupportTransparentDataEncryption")
+    @Expose
+    private String IsSupportTransparentDataEncryption;
+
+    /**
+    * 不支持透明数据加密原因
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NoSupportTransparentDataEncryptionReason")
+    @Expose
+    private String NoSupportTransparentDataEncryptionReason;
+
+    /**
      * Get 是否支持从可用区 
      * @return IsSupportSlaveZone 是否支持从可用区
      */
@@ -153,6 +169,46 @@ public class Ability extends AbstractModel {
         this.IsSupportManualSnapshot = IsSupportManualSnapshot;
     }
 
+    /**
+     * Get 是否支持透明数据加密
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsSupportTransparentDataEncryption 是否支持透明数据加密
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getIsSupportTransparentDataEncryption() {
+        return this.IsSupportTransparentDataEncryption;
+    }
+
+    /**
+     * Set 是否支持透明数据加密
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsSupportTransparentDataEncryption 是否支持透明数据加密
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsSupportTransparentDataEncryption(String IsSupportTransparentDataEncryption) {
+        this.IsSupportTransparentDataEncryption = IsSupportTransparentDataEncryption;
+    }
+
+    /**
+     * Get 不支持透明数据加密原因
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NoSupportTransparentDataEncryptionReason 不支持透明数据加密原因
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getNoSupportTransparentDataEncryptionReason() {
+        return this.NoSupportTransparentDataEncryptionReason;
+    }
+
+    /**
+     * Set 不支持透明数据加密原因
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NoSupportTransparentDataEncryptionReason 不支持透明数据加密原因
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNoSupportTransparentDataEncryptionReason(String NoSupportTransparentDataEncryptionReason) {
+        this.NoSupportTransparentDataEncryptionReason = NoSupportTransparentDataEncryptionReason;
+    }
+
     public Ability() {
     }
 
@@ -176,6 +232,12 @@ public class Ability extends AbstractModel {
         if (source.IsSupportManualSnapshot != null) {
             this.IsSupportManualSnapshot = new String(source.IsSupportManualSnapshot);
         }
+        if (source.IsSupportTransparentDataEncryption != null) {
+            this.IsSupportTransparentDataEncryption = new String(source.IsSupportTransparentDataEncryption);
+        }
+        if (source.NoSupportTransparentDataEncryptionReason != null) {
+            this.NoSupportTransparentDataEncryptionReason = new String(source.NoSupportTransparentDataEncryptionReason);
+        }
     }
 
 
@@ -188,6 +250,8 @@ public class Ability extends AbstractModel {
         this.setParamSimple(map, prefix + "IsSupportRo", this.IsSupportRo);
         this.setParamSimple(map, prefix + "NonsupportRoReason", this.NonsupportRoReason);
         this.setParamSimple(map, prefix + "IsSupportManualSnapshot", this.IsSupportManualSnapshot);
+        this.setParamSimple(map, prefix + "IsSupportTransparentDataEncryption", this.IsSupportTransparentDataEncryption);
+        this.setParamSimple(map, prefix + "NoSupportTransparentDataEncryptionReason", this.NoSupportTransparentDataEncryptionReason);
 
     }
 }

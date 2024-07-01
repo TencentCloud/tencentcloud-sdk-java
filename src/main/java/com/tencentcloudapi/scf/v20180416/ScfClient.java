@@ -310,7 +310,7 @@ public class ScfClient extends AbstractClient{
     }
 
     /**
-     * SCF同步调用函数接口
+     *SCF同步调用函数接口。
      * @param req InvokeFunctionRequest
      * @return InvokeFunctionResponse
      * @throws TencentCloudSDKException

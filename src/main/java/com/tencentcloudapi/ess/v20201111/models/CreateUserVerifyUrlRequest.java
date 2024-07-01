@@ -60,6 +60,17 @@ public class CreateUserVerifyUrlRequest extends AbstractModel {
     private String Mobile;
 
     /**
+    * 实名完之后的跳转链接，最大长度1000个字符。
+链接类型请参考 <a href="https://qian.tencent.com/developers/company/openqianh5" target="_blank">跳转电子签H5</a>。
+
+注：此参数仅支持 Endpoint 为 <font color="red">H5 或 H5_SHORT_URL </font>的时候传递
+
+    */
+    @SerializedName("JumpUrl")
+    @Expose
+    private String JumpUrl;
+
+    /**
     * 要跳转的链接类型
 
 - HTTP：
@@ -71,7 +82,13 @@ public class CreateUserVerifyUrlRequest extends AbstractModel {
 - APP：
 第三方APP或小程序跳转电子签小程序的path, APP或者小程序跳转适合此类型
 
-如果不传递，默认值是 APP
+- H5：
+跳转电子签H5实名页面的长链
+
+- H5_SHORT_URL：
+跳转电子签H5实名页面的短链
+
+注：如果不传递，默认值是 <font color="red"> APP </font>
     */
     @SerializedName("Endpoint")
     @Expose
@@ -82,7 +99,7 @@ public class CreateUserVerifyUrlRequest extends AbstractModel {
 <ul><li>false：否, 实名完成不会自动跳转回来(默认)</li><li>true：是, 实名完成会自动跳转回来</li></ul>
 
 注: 
-1. 该参数<font color="red">只针对APP类型（电子签小程序跳转贵方小程序）场景</font> 的实名链接有效
+1. 该参数<font color="red">只针对APP类型（第三方APP或小程序跳转电子签小程序）场景</font> 的实名链接有效
 2. <font color="red">手机应用APP 或 微信小程序需要监控界面的返回走后序逻辑</font>, 微信小程序的文档可以参考[这个](https://developers.weixin.qq.com/miniprogram/dev/reference/api/App.html#onShow-Object-object)
 3. <font color="red">电子签小程序跳转贵方APP，不支持自动跳转，必需用户手动点击完成按钮（微信的限制）</font> 
     */
@@ -182,6 +199,38 @@ public class CreateUserVerifyUrlRequest extends AbstractModel {
     }
 
     /**
+     * Get 实名完之后的跳转链接，最大长度1000个字符。
+链接类型请参考 <a href="https://qian.tencent.com/developers/company/openqianh5" target="_blank">跳转电子签H5</a>。
+
+注：此参数仅支持 Endpoint 为 <font color="red">H5 或 H5_SHORT_URL </font>的时候传递
+ 
+     * @return JumpUrl 实名完之后的跳转链接，最大长度1000个字符。
+链接类型请参考 <a href="https://qian.tencent.com/developers/company/openqianh5" target="_blank">跳转电子签H5</a>。
+
+注：此参数仅支持 Endpoint 为 <font color="red">H5 或 H5_SHORT_URL </font>的时候传递
+
+     */
+    public String getJumpUrl() {
+        return this.JumpUrl;
+    }
+
+    /**
+     * Set 实名完之后的跳转链接，最大长度1000个字符。
+链接类型请参考 <a href="https://qian.tencent.com/developers/company/openqianh5" target="_blank">跳转电子签H5</a>。
+
+注：此参数仅支持 Endpoint 为 <font color="red">H5 或 H5_SHORT_URL </font>的时候传递
+
+     * @param JumpUrl 实名完之后的跳转链接，最大长度1000个字符。
+链接类型请参考 <a href="https://qian.tencent.com/developers/company/openqianh5" target="_blank">跳转电子签H5</a>。
+
+注：此参数仅支持 Endpoint 为 <font color="red">H5 或 H5_SHORT_URL </font>的时候传递
+
+     */
+    public void setJumpUrl(String JumpUrl) {
+        this.JumpUrl = JumpUrl;
+    }
+
+    /**
      * Get 要跳转的链接类型
 
 - HTTP：
@@ -193,7 +242,13 @@ public class CreateUserVerifyUrlRequest extends AbstractModel {
 - APP：
 第三方APP或小程序跳转电子签小程序的path, APP或者小程序跳转适合此类型
 
-如果不传递，默认值是 APP 
+- H5：
+跳转电子签H5实名页面的长链
+
+- H5_SHORT_URL：
+跳转电子签H5实名页面的短链
+
+注：如果不传递，默认值是 <font color="red"> APP </font> 
      * @return Endpoint 要跳转的链接类型
 
 - HTTP：
@@ -205,7 +260,13 @@ public class CreateUserVerifyUrlRequest extends AbstractModel {
 - APP：
 第三方APP或小程序跳转电子签小程序的path, APP或者小程序跳转适合此类型
 
-如果不传递，默认值是 APP
+- H5：
+跳转电子签H5实名页面的长链
+
+- H5_SHORT_URL：
+跳转电子签H5实名页面的短链
+
+注：如果不传递，默认值是 <font color="red"> APP </font>
      */
     public String getEndpoint() {
         return this.Endpoint;
@@ -223,7 +284,13 @@ public class CreateUserVerifyUrlRequest extends AbstractModel {
 - APP：
 第三方APP或小程序跳转电子签小程序的path, APP或者小程序跳转适合此类型
 
-如果不传递，默认值是 APP
+- H5：
+跳转电子签H5实名页面的长链
+
+- H5_SHORT_URL：
+跳转电子签H5实名页面的短链
+
+注：如果不传递，默认值是 <font color="red"> APP </font>
      * @param Endpoint 要跳转的链接类型
 
 - HTTP：
@@ -235,7 +302,13 @@ public class CreateUserVerifyUrlRequest extends AbstractModel {
 - APP：
 第三方APP或小程序跳转电子签小程序的path, APP或者小程序跳转适合此类型
 
-如果不传递，默认值是 APP
+- H5：
+跳转电子签H5实名页面的长链
+
+- H5_SHORT_URL：
+跳转电子签H5实名页面的短链
+
+注：如果不传递，默认值是 <font color="red"> APP </font>
      */
     public void setEndpoint(String Endpoint) {
         this.Endpoint = Endpoint;
@@ -246,14 +319,14 @@ public class CreateUserVerifyUrlRequest extends AbstractModel {
 <ul><li>false：否, 实名完成不会自动跳转回来(默认)</li><li>true：是, 实名完成会自动跳转回来</li></ul>
 
 注: 
-1. 该参数<font color="red">只针对APP类型（电子签小程序跳转贵方小程序）场景</font> 的实名链接有效
+1. 该参数<font color="red">只针对APP类型（第三方APP或小程序跳转电子签小程序）场景</font> 的实名链接有效
 2. <font color="red">手机应用APP 或 微信小程序需要监控界面的返回走后序逻辑</font>, 微信小程序的文档可以参考[这个](https://developers.weixin.qq.com/miniprogram/dev/reference/api/App.html#onShow-Object-object)
 3. <font color="red">电子签小程序跳转贵方APP，不支持自动跳转，必需用户手动点击完成按钮（微信的限制）</font>  
      * @return AutoJumpBack 签署完成后是否自动回跳
 <ul><li>false：否, 实名完成不会自动跳转回来(默认)</li><li>true：是, 实名完成会自动跳转回来</li></ul>
 
 注: 
-1. 该参数<font color="red">只针对APP类型（电子签小程序跳转贵方小程序）场景</font> 的实名链接有效
+1. 该参数<font color="red">只针对APP类型（第三方APP或小程序跳转电子签小程序）场景</font> 的实名链接有效
 2. <font color="red">手机应用APP 或 微信小程序需要监控界面的返回走后序逻辑</font>, 微信小程序的文档可以参考[这个](https://developers.weixin.qq.com/miniprogram/dev/reference/api/App.html#onShow-Object-object)
 3. <font color="red">电子签小程序跳转贵方APP，不支持自动跳转，必需用户手动点击完成按钮（微信的限制）</font> 
      */
@@ -266,14 +339,14 @@ public class CreateUserVerifyUrlRequest extends AbstractModel {
 <ul><li>false：否, 实名完成不会自动跳转回来(默认)</li><li>true：是, 实名完成会自动跳转回来</li></ul>
 
 注: 
-1. 该参数<font color="red">只针对APP类型（电子签小程序跳转贵方小程序）场景</font> 的实名链接有效
+1. 该参数<font color="red">只针对APP类型（第三方APP或小程序跳转电子签小程序）场景</font> 的实名链接有效
 2. <font color="red">手机应用APP 或 微信小程序需要监控界面的返回走后序逻辑</font>, 微信小程序的文档可以参考[这个](https://developers.weixin.qq.com/miniprogram/dev/reference/api/App.html#onShow-Object-object)
 3. <font color="red">电子签小程序跳转贵方APP，不支持自动跳转，必需用户手动点击完成按钮（微信的限制）</font> 
      * @param AutoJumpBack 签署完成后是否自动回跳
 <ul><li>false：否, 实名完成不会自动跳转回来(默认)</li><li>true：是, 实名完成会自动跳转回来</li></ul>
 
 注: 
-1. 该参数<font color="red">只针对APP类型（电子签小程序跳转贵方小程序）场景</font> 的实名链接有效
+1. 该参数<font color="red">只针对APP类型（第三方APP或小程序跳转电子签小程序）场景</font> 的实名链接有效
 2. <font color="red">手机应用APP 或 微信小程序需要监控界面的返回走后序逻辑</font>, 微信小程序的文档可以参考[这个](https://developers.weixin.qq.com/miniprogram/dev/reference/api/App.html#onShow-Object-object)
 3. <font color="red">电子签小程序跳转贵方APP，不支持自动跳转，必需用户手动点击完成按钮（微信的限制）</font> 
      */
@@ -320,6 +393,9 @@ public class CreateUserVerifyUrlRequest extends AbstractModel {
         if (source.Mobile != null) {
             this.Mobile = new String(source.Mobile);
         }
+        if (source.JumpUrl != null) {
+            this.JumpUrl = new String(source.JumpUrl);
+        }
         if (source.Endpoint != null) {
             this.Endpoint = new String(source.Endpoint);
         }
@@ -341,6 +417,7 @@ public class CreateUserVerifyUrlRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "IdCardNumber", this.IdCardNumber);
         this.setParamSimple(map, prefix + "IdCardType", this.IdCardType);
         this.setParamSimple(map, prefix + "Mobile", this.Mobile);
+        this.setParamSimple(map, prefix + "JumpUrl", this.JumpUrl);
         this.setParamSimple(map, prefix + "Endpoint", this.Endpoint);
         this.setParamSimple(map, prefix + "AutoJumpBack", this.AutoJumpBack);
         this.setParamSimple(map, prefix + "UserData", this.UserData);

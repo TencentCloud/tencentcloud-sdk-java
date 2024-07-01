@@ -101,6 +101,15 @@ public class CynosdbInstanceDetail extends AbstractModel {
     private String StatusDesc;
 
     /**
+    * serverless实例状态, 可能值：
+resume
+pause
+    */
+    @SerializedName("ServerlessStatus")
+    @Expose
+    private String ServerlessStatus;
+
+    /**
     * 数据库类型
     */
     @SerializedName("DbType")
@@ -253,15 +262,6 @@ public class CynosdbInstanceDetail extends AbstractModel {
     @SerializedName("MaxCpu")
     @Expose
     private Float MaxCpu;
-
-    /**
-    * serverless实例状态, 可能值：
-resume
-pause
-    */
-    @SerializedName("ServerlessStatus")
-    @Expose
-    private String ServerlessStatus;
 
     /**
      * Get 用户Uin 
@@ -437,6 +437,30 @@ pause
      */
     public void setStatusDesc(String StatusDesc) {
         this.StatusDesc = StatusDesc;
+    }
+
+    /**
+     * Get serverless实例状态, 可能值：
+resume
+pause 
+     * @return ServerlessStatus serverless实例状态, 可能值：
+resume
+pause
+     */
+    public String getServerlessStatus() {
+        return this.ServerlessStatus;
+    }
+
+    /**
+     * Set serverless实例状态, 可能值：
+resume
+pause
+     * @param ServerlessStatus serverless实例状态, 可能值：
+resume
+pause
+     */
+    public void setServerlessStatus(String ServerlessStatus) {
+        this.ServerlessStatus = ServerlessStatus;
     }
 
     /**
@@ -791,30 +815,6 @@ pause
         this.MaxCpu = MaxCpu;
     }
 
-    /**
-     * Get serverless实例状态, 可能值：
-resume
-pause 
-     * @return ServerlessStatus serverless实例状态, 可能值：
-resume
-pause
-     */
-    public String getServerlessStatus() {
-        return this.ServerlessStatus;
-    }
-
-    /**
-     * Set serverless实例状态, 可能值：
-resume
-pause
-     * @param ServerlessStatus serverless实例状态, 可能值：
-resume
-pause
-     */
-    public void setServerlessStatus(String ServerlessStatus) {
-        this.ServerlessStatus = ServerlessStatus;
-    }
-
     public CynosdbInstanceDetail() {
     }
 
@@ -855,6 +855,9 @@ pause
         }
         if (source.StatusDesc != null) {
             this.StatusDesc = new String(source.StatusDesc);
+        }
+        if (source.ServerlessStatus != null) {
+            this.ServerlessStatus = new String(source.ServerlessStatus);
         }
         if (source.DbType != null) {
             this.DbType = new String(source.DbType);
@@ -922,9 +925,6 @@ pause
         if (source.MaxCpu != null) {
             this.MaxCpu = new Float(source.MaxCpu);
         }
-        if (source.ServerlessStatus != null) {
-            this.ServerlessStatus = new String(source.ServerlessStatus);
-        }
     }
 
 
@@ -943,6 +943,7 @@ pause
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "StatusDesc", this.StatusDesc);
+        this.setParamSimple(map, prefix + "ServerlessStatus", this.ServerlessStatus);
         this.setParamSimple(map, prefix + "DbType", this.DbType);
         this.setParamSimple(map, prefix + "DbVersion", this.DbVersion);
         this.setParamSimple(map, prefix + "Cpu", this.Cpu);
@@ -965,7 +966,6 @@ pause
         this.setParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
         this.setParamSimple(map, prefix + "MinCpu", this.MinCpu);
         this.setParamSimple(map, prefix + "MaxCpu", this.MaxCpu);
-        this.setParamSimple(map, prefix + "ServerlessStatus", this.ServerlessStatus);
 
     }
 }
