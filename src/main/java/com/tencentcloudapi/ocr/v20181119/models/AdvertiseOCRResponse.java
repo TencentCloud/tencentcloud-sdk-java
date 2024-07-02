@@ -31,6 +31,13 @@ public class AdvertiseOCRResponse extends AbstractModel {
     private AdvertiseTextDetection [] TextDetections;
 
     /**
+    * 图片分辨率信息，单位 px
+    */
+    @SerializedName("ImageSize")
+    @Expose
+    private ImageSize ImageSize;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -51,6 +58,22 @@ public class AdvertiseOCRResponse extends AbstractModel {
      */
     public void setTextDetections(AdvertiseTextDetection [] TextDetections) {
         this.TextDetections = TextDetections;
+    }
+
+    /**
+     * Get 图片分辨率信息，单位 px 
+     * @return ImageSize 图片分辨率信息，单位 px
+     */
+    public ImageSize getImageSize() {
+        return this.ImageSize;
+    }
+
+    /**
+     * Set 图片分辨率信息，单位 px
+     * @param ImageSize 图片分辨率信息，单位 px
+     */
+    public void setImageSize(ImageSize ImageSize) {
+        this.ImageSize = ImageSize;
     }
 
     /**
@@ -83,6 +106,9 @@ public class AdvertiseOCRResponse extends AbstractModel {
                 this.TextDetections[i] = new AdvertiseTextDetection(source.TextDetections[i]);
             }
         }
+        if (source.ImageSize != null) {
+            this.ImageSize = new ImageSize(source.ImageSize);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -94,6 +120,7 @@ public class AdvertiseOCRResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "TextDetections.", this.TextDetections);
+        this.setParamObj(map, prefix + "ImageSize.", this.ImageSize);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

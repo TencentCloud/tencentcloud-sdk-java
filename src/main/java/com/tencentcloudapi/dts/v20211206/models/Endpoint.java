@@ -256,6 +256,14 @@ public class Endpoint extends AbstractModel {
     private String ChildInstanceType;
 
     /**
+    * tdsql的分片id。如节点类型为set必填。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SetId")
+    @Expose
+    private String SetId;
+
+    /**
      * Get 地域英文名，如：ap-guangzhou
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Region 地域英文名，如：ap-guangzhou
@@ -835,6 +843,26 @@ public class Endpoint extends AbstractModel {
         this.ChildInstanceType = ChildInstanceType;
     }
 
+    /**
+     * Get tdsql的分片id。如节点类型为set必填。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SetId tdsql的分片id。如节点类型为set必填。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSetId() {
+        return this.SetId;
+    }
+
+    /**
+     * Set tdsql的分片id。如节点类型为set必填。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SetId tdsql的分片id。如节点类型为set必填。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSetId(String SetId) {
+        this.SetId = SetId;
+    }
+
     public Endpoint() {
     }
 
@@ -930,6 +958,9 @@ public class Endpoint extends AbstractModel {
         if (source.ChildInstanceType != null) {
             this.ChildInstanceType = new String(source.ChildInstanceType);
         }
+        if (source.SetId != null) {
+            this.SetId = new String(source.SetId);
+        }
     }
 
 
@@ -966,6 +997,7 @@ public class Endpoint extends AbstractModel {
         this.setParamSimple(map, prefix + "CcnOwnerUin", this.CcnOwnerUin);
         this.setParamSimple(map, prefix + "ChildInstanceId", this.ChildInstanceId);
         this.setParamSimple(map, prefix + "ChildInstanceType", this.ChildInstanceType);
+        this.setParamSimple(map, prefix + "SetId", this.SetId);
 
     }
 }

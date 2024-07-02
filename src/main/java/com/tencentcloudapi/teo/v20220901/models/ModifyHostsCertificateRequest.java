@@ -38,17 +38,18 @@ public class ModifyHostsCertificateRequest extends AbstractModel {
     private String [] Hosts;
 
     /**
-    * 配置证书的模式，取值有：
-<li>disable：不配置证书；</li>
-<li>eofreecert：配置 EdgeOne 免费证书；</li>
-<li>sslcert：配置 SSL 证书。</li>不填时默认取值为 disable。
+    * 配置服务端证书的模式，取值有：
+<li>disable：不配置服务端证书；</li>
+<li>eofreecert：配置 EdgeOne 免费服务端证书；</li>
+<li>sslcert：配置 SSL 托管服务端证书；</li>
+不填写表示服务端证书保持原有配置。
     */
     @SerializedName("Mode")
     @Expose
     private String Mode;
 
     /**
-    * SSL 证书配置，本参数仅在 mode = sslcert 时生效，传入对应证书的 CertId 即可。您可以前往 [SSL 证书列表](https://console.cloud.tencent.com/certoverview) 查看 CertId。
+    * SSL 证书配置，本参数仅在 mode 为 sslcert 时生效，传入对应证书的 CertId 即可。您可以前往 [SSL 证书列表](https://console.cloud.tencent.com/certoverview) 查看 CertId。
     */
     @SerializedName("ServerCertInfo")
     @Expose
@@ -63,6 +64,14 @@ public class ModifyHostsCertificateRequest extends AbstractModel {
     @SerializedName("ApplyType")
     @Expose
     private String ApplyType;
+
+    /**
+    * 边缘双向认证配置。
+不填写表示边缘双向认证保持原有配置。
+    */
+    @SerializedName("ClientCertInfo")
+    @Expose
+    private MutualTLS ClientCertInfo;
 
     /**
      * Get 站点 ID。 
@@ -97,44 +106,48 @@ public class ModifyHostsCertificateRequest extends AbstractModel {
     }
 
     /**
-     * Get 配置证书的模式，取值有：
-<li>disable：不配置证书；</li>
-<li>eofreecert：配置 EdgeOne 免费证书；</li>
-<li>sslcert：配置 SSL 证书。</li>不填时默认取值为 disable。 
-     * @return Mode 配置证书的模式，取值有：
-<li>disable：不配置证书；</li>
-<li>eofreecert：配置 EdgeOne 免费证书；</li>
-<li>sslcert：配置 SSL 证书。</li>不填时默认取值为 disable。
+     * Get 配置服务端证书的模式，取值有：
+<li>disable：不配置服务端证书；</li>
+<li>eofreecert：配置 EdgeOne 免费服务端证书；</li>
+<li>sslcert：配置 SSL 托管服务端证书；</li>
+不填写表示服务端证书保持原有配置。 
+     * @return Mode 配置服务端证书的模式，取值有：
+<li>disable：不配置服务端证书；</li>
+<li>eofreecert：配置 EdgeOne 免费服务端证书；</li>
+<li>sslcert：配置 SSL 托管服务端证书；</li>
+不填写表示服务端证书保持原有配置。
      */
     public String getMode() {
         return this.Mode;
     }
 
     /**
-     * Set 配置证书的模式，取值有：
-<li>disable：不配置证书；</li>
-<li>eofreecert：配置 EdgeOne 免费证书；</li>
-<li>sslcert：配置 SSL 证书。</li>不填时默认取值为 disable。
-     * @param Mode 配置证书的模式，取值有：
-<li>disable：不配置证书；</li>
-<li>eofreecert：配置 EdgeOne 免费证书；</li>
-<li>sslcert：配置 SSL 证书。</li>不填时默认取值为 disable。
+     * Set 配置服务端证书的模式，取值有：
+<li>disable：不配置服务端证书；</li>
+<li>eofreecert：配置 EdgeOne 免费服务端证书；</li>
+<li>sslcert：配置 SSL 托管服务端证书；</li>
+不填写表示服务端证书保持原有配置。
+     * @param Mode 配置服务端证书的模式，取值有：
+<li>disable：不配置服务端证书；</li>
+<li>eofreecert：配置 EdgeOne 免费服务端证书；</li>
+<li>sslcert：配置 SSL 托管服务端证书；</li>
+不填写表示服务端证书保持原有配置。
      */
     public void setMode(String Mode) {
         this.Mode = Mode;
     }
 
     /**
-     * Get SSL 证书配置，本参数仅在 mode = sslcert 时生效，传入对应证书的 CertId 即可。您可以前往 [SSL 证书列表](https://console.cloud.tencent.com/certoverview) 查看 CertId。 
-     * @return ServerCertInfo SSL 证书配置，本参数仅在 mode = sslcert 时生效，传入对应证书的 CertId 即可。您可以前往 [SSL 证书列表](https://console.cloud.tencent.com/certoverview) 查看 CertId。
+     * Get SSL 证书配置，本参数仅在 mode 为 sslcert 时生效，传入对应证书的 CertId 即可。您可以前往 [SSL 证书列表](https://console.cloud.tencent.com/certoverview) 查看 CertId。 
+     * @return ServerCertInfo SSL 证书配置，本参数仅在 mode 为 sslcert 时生效，传入对应证书的 CertId 即可。您可以前往 [SSL 证书列表](https://console.cloud.tencent.com/certoverview) 查看 CertId。
      */
     public ServerCertInfo [] getServerCertInfo() {
         return this.ServerCertInfo;
     }
 
     /**
-     * Set SSL 证书配置，本参数仅在 mode = sslcert 时生效，传入对应证书的 CertId 即可。您可以前往 [SSL 证书列表](https://console.cloud.tencent.com/certoverview) 查看 CertId。
-     * @param ServerCertInfo SSL 证书配置，本参数仅在 mode = sslcert 时生效，传入对应证书的 CertId 即可。您可以前往 [SSL 证书列表](https://console.cloud.tencent.com/certoverview) 查看 CertId。
+     * Set SSL 证书配置，本参数仅在 mode 为 sslcert 时生效，传入对应证书的 CertId 即可。您可以前往 [SSL 证书列表](https://console.cloud.tencent.com/certoverview) 查看 CertId。
+     * @param ServerCertInfo SSL 证书配置，本参数仅在 mode 为 sslcert 时生效，传入对应证书的 CertId 即可。您可以前往 [SSL 证书列表](https://console.cloud.tencent.com/certoverview) 查看 CertId。
      */
     public void setServerCertInfo(ServerCertInfo [] ServerCertInfo) {
         this.ServerCertInfo = ServerCertInfo;
@@ -172,6 +185,26 @@ public class ModifyHostsCertificateRequest extends AbstractModel {
         this.ApplyType = ApplyType;
     }
 
+    /**
+     * Get 边缘双向认证配置。
+不填写表示边缘双向认证保持原有配置。 
+     * @return ClientCertInfo 边缘双向认证配置。
+不填写表示边缘双向认证保持原有配置。
+     */
+    public MutualTLS getClientCertInfo() {
+        return this.ClientCertInfo;
+    }
+
+    /**
+     * Set 边缘双向认证配置。
+不填写表示边缘双向认证保持原有配置。
+     * @param ClientCertInfo 边缘双向认证配置。
+不填写表示边缘双向认证保持原有配置。
+     */
+    public void setClientCertInfo(MutualTLS ClientCertInfo) {
+        this.ClientCertInfo = ClientCertInfo;
+    }
+
     public ModifyHostsCertificateRequest() {
     }
 
@@ -201,6 +234,9 @@ public class ModifyHostsCertificateRequest extends AbstractModel {
         if (source.ApplyType != null) {
             this.ApplyType = new String(source.ApplyType);
         }
+        if (source.ClientCertInfo != null) {
+            this.ClientCertInfo = new MutualTLS(source.ClientCertInfo);
+        }
     }
 
 
@@ -213,6 +249,7 @@ public class ModifyHostsCertificateRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Mode", this.Mode);
         this.setParamArrayObj(map, prefix + "ServerCertInfo.", this.ServerCertInfo);
         this.setParamSimple(map, prefix + "ApplyType", this.ApplyType);
+        this.setParamObj(map, prefix + "ClientCertInfo.", this.ClientCertInfo);
 
     }
 }

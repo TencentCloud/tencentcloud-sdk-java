@@ -59,7 +59,7 @@ public class WebsiteRisk extends AbstractModel {
     private Long Status;
 
     /**
-    * 资产唯一id
+    * ID,处理风险使用
     */
     @SerializedName("Id")
     @Expose
@@ -239,16 +239,16 @@ public class WebsiteRisk extends AbstractModel {
     }
 
     /**
-     * Get 资产唯一id 
-     * @return Id 资产唯一id
+     * Get ID,处理风险使用 
+     * @return Id ID,处理风险使用
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set 资产唯一id
-     * @param Id 资产唯一id
+     * Set ID,处理风险使用
+     * @param Id ID,处理风险使用
      */
     public void setId(String Id) {
         this.Id = Id;

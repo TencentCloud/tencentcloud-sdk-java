@@ -78,6 +78,14 @@ public class RabbitMQVirtualHostInfo extends AbstractModel {
     private RabbitMQVirtualHostStatistics VirtualHostStatistics;
 
     /**
+    * 消息轨迹开关,true打开,false关闭
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TraceFlag")
+    @Expose
+    private Boolean TraceFlag;
+
+    /**
     * vhost状态，与原生控制台对应，有running、partial、stopped、unknown
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -250,6 +258,26 @@ public class RabbitMQVirtualHostInfo extends AbstractModel {
     }
 
     /**
+     * Get 消息轨迹开关,true打开,false关闭
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TraceFlag 消息轨迹开关,true打开,false关闭
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getTraceFlag() {
+        return this.TraceFlag;
+    }
+
+    /**
+     * Set 消息轨迹开关,true打开,false关闭
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TraceFlag 消息轨迹开关,true打开,false关闭
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTraceFlag(Boolean TraceFlag) {
+        this.TraceFlag = TraceFlag;
+    }
+
+    /**
      * Get vhost状态，与原生控制台对应，有running、partial、stopped、unknown
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Status vhost状态，与原生控制台对应，有running、partial、stopped、unknown
@@ -381,6 +409,9 @@ public class RabbitMQVirtualHostInfo extends AbstractModel {
         if (source.VirtualHostStatistics != null) {
             this.VirtualHostStatistics = new RabbitMQVirtualHostStatistics(source.VirtualHostStatistics);
         }
+        if (source.TraceFlag != null) {
+            this.TraceFlag = new Boolean(source.TraceFlag);
+        }
         if (source.Status != null) {
             this.Status = new String(source.Status);
         }
@@ -410,6 +441,7 @@ public class RabbitMQVirtualHostInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
         this.setParamObj(map, prefix + "VirtualHostStatistics.", this.VirtualHostStatistics);
+        this.setParamSimple(map, prefix + "TraceFlag", this.TraceFlag);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "MessageHeapCount", this.MessageHeapCount);
         this.setParamSimple(map, prefix + "MessageRateIn", this.MessageRateIn);

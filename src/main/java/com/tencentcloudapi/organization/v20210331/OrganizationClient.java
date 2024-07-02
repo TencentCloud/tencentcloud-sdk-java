@@ -270,7 +270,7 @@ public class OrganizationClient extends AbstractClient{
     }
 
     /**
-     *批量删除企业组织成员
+     *从组织中移除成员账号，不会删除账号。
      * @param req DeleteOrganizationMembersRequest
      * @return DeleteOrganizationMembersResponse
      * @throws TencentCloudSDKException

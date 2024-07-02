@@ -80,7 +80,7 @@ public class AssetViewWeakPassRisk extends AbstractModel {
     private Long Status;
 
     /**
-    * 资产唯一id
+    * ID，处理风险使用
     */
     @SerializedName("Id")
     @Expose
@@ -166,7 +166,7 @@ public class AssetViewWeakPassRisk extends AbstractModel {
     private String Fix;
 
     /**
-    * 负载
+    * 证明
     */
     @SerializedName("Payload")
     @Expose
@@ -301,16 +301,16 @@ public class AssetViewWeakPassRisk extends AbstractModel {
     }
 
     /**
-     * Get 资产唯一id 
-     * @return Id 资产唯一id
+     * Get ID，处理风险使用 
+     * @return Id ID，处理风险使用
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set 资产唯一id
-     * @param Id 资产唯一id
+     * Set ID，处理风险使用
+     * @param Id ID，处理风险使用
      */
     public void setId(String Id) {
         this.Id = Id;
@@ -501,16 +501,16 @@ public class AssetViewWeakPassRisk extends AbstractModel {
     }
 
     /**
-     * Get 负载 
-     * @return Payload 负载
+     * Get 证明 
+     * @return Payload 证明
      */
     public String getPayload() {
         return this.Payload;
     }
 
     /**
-     * Set 负载
-     * @param Payload 负载
+     * Set 证明
+     * @param Payload 证明
      */
     public void setPayload(String Payload) {
         this.Payload = Payload;

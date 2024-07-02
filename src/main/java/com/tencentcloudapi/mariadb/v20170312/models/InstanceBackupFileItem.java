@@ -102,6 +102,13 @@ public class InstanceBackupFileItem extends AbstractModel {
     private String EndTime;
 
     /**
+    * 对象的存储类型，枚举值：STANDARD（标准存储）、ARCHIVE（归档存储）。
+    */
+    @SerializedName("StorageClass")
+    @Expose
+    private String StorageClass;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -281,6 +288,22 @@ public class InstanceBackupFileItem extends AbstractModel {
         this.EndTime = EndTime;
     }
 
+    /**
+     * Get 对象的存储类型，枚举值：STANDARD（标准存储）、ARCHIVE（归档存储）。 
+     * @return StorageClass 对象的存储类型，枚举值：STANDARD（标准存储）、ARCHIVE（归档存储）。
+     */
+    public String getStorageClass() {
+        return this.StorageClass;
+    }
+
+    /**
+     * Set 对象的存储类型，枚举值：STANDARD（标准存储）、ARCHIVE（归档存储）。
+     * @param StorageClass 对象的存储类型，枚举值：STANDARD（标准存储）、ARCHIVE（归档存储）。
+     */
+    public void setStorageClass(String StorageClass) {
+        this.StorageClass = StorageClass;
+    }
+
     public InstanceBackupFileItem() {
     }
 
@@ -322,6 +345,9 @@ public class InstanceBackupFileItem extends AbstractModel {
         if (source.EndTime != null) {
             this.EndTime = new String(source.EndTime);
         }
+        if (source.StorageClass != null) {
+            this.StorageClass = new String(source.StorageClass);
+        }
     }
 
 
@@ -340,6 +366,7 @@ public class InstanceBackupFileItem extends AbstractModel {
         this.setParamSimple(map, prefix + "ManualBackup", this.ManualBackup);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
+        this.setParamSimple(map, prefix + "StorageClass", this.StorageClass);
 
     }
 }

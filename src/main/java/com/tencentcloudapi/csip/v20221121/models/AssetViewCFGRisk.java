@@ -108,7 +108,7 @@ public class AssetViewCFGRisk extends AbstractModel {
     private Long Status;
 
     /**
-    * -
+    * 相关规范
     */
     @SerializedName("CFGSTD")
     @Expose
@@ -358,16 +358,16 @@ public class AssetViewCFGRisk extends AbstractModel {
     }
 
     /**
-     * Get - 
-     * @return CFGSTD -
+     * Get 相关规范 
+     * @return CFGSTD 相关规范
      */
     public String getCFGSTD() {
         return this.CFGSTD;
     }
 
     /**
-     * Set -
-     * @param CFGSTD -
+     * Set 相关规范
+     * @param CFGSTD 相关规范
      */
     public void setCFGSTD(String CFGSTD) {
         this.CFGSTD = CFGSTD;

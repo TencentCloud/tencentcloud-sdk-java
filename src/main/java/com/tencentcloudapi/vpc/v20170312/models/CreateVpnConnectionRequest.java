@@ -158,6 +158,13 @@ CCN VPN 形的通道 可以不传VPCID
     private BgpConfig BgpConfig;
 
     /**
+    * 健康检查NQA配置。
+    */
+    @SerializedName("HealthCheckConfig")
+    @Expose
+    private HealthCheckConfig HealthCheckConfig;
+
+    /**
      * Get VPN网关实例ID。 
      * @return VpnGatewayId VPN网关实例ID。
      */
@@ -465,6 +472,22 @@ CCN VPN 形的通道 可以不传VPCID
         this.BgpConfig = BgpConfig;
     }
 
+    /**
+     * Get 健康检查NQA配置。 
+     * @return HealthCheckConfig 健康检查NQA配置。
+     */
+    public HealthCheckConfig getHealthCheckConfig() {
+        return this.HealthCheckConfig;
+    }
+
+    /**
+     * Set 健康检查NQA配置。
+     * @param HealthCheckConfig 健康检查NQA配置。
+     */
+    public void setHealthCheckConfig(HealthCheckConfig HealthCheckConfig) {
+        this.HealthCheckConfig = HealthCheckConfig;
+    }
+
     public CreateVpnConnectionRequest() {
     }
 
@@ -536,6 +559,9 @@ CCN VPN 形的通道 可以不传VPCID
         if (source.BgpConfig != null) {
             this.BgpConfig = new BgpConfig(source.BgpConfig);
         }
+        if (source.HealthCheckConfig != null) {
+            this.HealthCheckConfig = new HealthCheckConfig(source.HealthCheckConfig);
+        }
     }
 
 
@@ -562,6 +588,7 @@ CCN VPN 形的通道 可以不传VPCID
         this.setParamSimple(map, prefix + "DpdAction", this.DpdAction);
         this.setParamObj(map, prefix + "Route.", this.Route);
         this.setParamObj(map, prefix + "BgpConfig.", this.BgpConfig);
+        this.setParamObj(map, prefix + "HealthCheckConfig.", this.HealthCheckConfig);
 
     }
 }

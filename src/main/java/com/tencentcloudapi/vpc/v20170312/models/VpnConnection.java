@@ -204,6 +204,14 @@ public class VpnConnection extends AbstractModel {
     private BgpConfigAndAsn BgpConfig;
 
     /**
+    * Nqa配置信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HealthCheckConfig")
+    @Expose
+    private HealthCheckConfig HealthCheckConfig;
+
+    /**
      * Get 通道实例ID。 
      * @return VpnConnectionId 通道实例ID。
      */
@@ -623,6 +631,26 @@ public class VpnConnection extends AbstractModel {
         this.BgpConfig = BgpConfig;
     }
 
+    /**
+     * Get Nqa配置信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return HealthCheckConfig Nqa配置信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public HealthCheckConfig getHealthCheckConfig() {
+        return this.HealthCheckConfig;
+    }
+
+    /**
+     * Set Nqa配置信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HealthCheckConfig Nqa配置信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHealthCheckConfig(HealthCheckConfig HealthCheckConfig) {
+        this.HealthCheckConfig = HealthCheckConfig;
+    }
+
     public VpnConnection() {
     }
 
@@ -712,6 +740,9 @@ public class VpnConnection extends AbstractModel {
         if (source.BgpConfig != null) {
             this.BgpConfig = new BgpConfigAndAsn(source.BgpConfig);
         }
+        if (source.HealthCheckConfig != null) {
+            this.HealthCheckConfig = new HealthCheckConfig(source.HealthCheckConfig);
+        }
     }
 
 
@@ -744,6 +775,7 @@ public class VpnConnection extends AbstractModel {
         this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
         this.setParamSimple(map, prefix + "NegotiationType", this.NegotiationType);
         this.setParamObj(map, prefix + "BgpConfig.", this.BgpConfig);
+        this.setParamObj(map, prefix + "HealthCheckConfig.", this.HealthCheckConfig);
 
     }
 }

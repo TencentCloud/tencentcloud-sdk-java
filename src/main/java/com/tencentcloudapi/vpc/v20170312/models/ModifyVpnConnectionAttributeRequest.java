@@ -122,6 +122,13 @@ public class ModifyVpnConnectionAttributeRequest extends AbstractModel {
     private String CustomerGatewayId;
 
     /**
+    * 健康检查配置
+    */
+    @SerializedName("HealthCheckConfig")
+    @Expose
+    private HealthCheckConfig HealthCheckConfig;
+
+    /**
      * Get VPN通道实例ID。形如：vpnx-f49l6u0z。 
      * @return VpnConnectionId VPN通道实例ID。形如：vpnx-f49l6u0z。
      */
@@ -345,6 +352,22 @@ public class ModifyVpnConnectionAttributeRequest extends AbstractModel {
         this.CustomerGatewayId = CustomerGatewayId;
     }
 
+    /**
+     * Get 健康检查配置 
+     * @return HealthCheckConfig 健康检查配置
+     */
+    public HealthCheckConfig getHealthCheckConfig() {
+        return this.HealthCheckConfig;
+    }
+
+    /**
+     * Set 健康检查配置
+     * @param HealthCheckConfig 健康检查配置
+     */
+    public void setHealthCheckConfig(HealthCheckConfig HealthCheckConfig) {
+        this.HealthCheckConfig = HealthCheckConfig;
+    }
+
     public ModifyVpnConnectionAttributeRequest() {
     }
 
@@ -398,6 +421,9 @@ public class ModifyVpnConnectionAttributeRequest extends AbstractModel {
         if (source.CustomerGatewayId != null) {
             this.CustomerGatewayId = new String(source.CustomerGatewayId);
         }
+        if (source.HealthCheckConfig != null) {
+            this.HealthCheckConfig = new HealthCheckConfig(source.HealthCheckConfig);
+        }
     }
 
 
@@ -419,6 +445,7 @@ public class ModifyVpnConnectionAttributeRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "DpdTimeout", this.DpdTimeout);
         this.setParamSimple(map, prefix + "DpdAction", this.DpdAction);
         this.setParamSimple(map, prefix + "CustomerGatewayId", this.CustomerGatewayId);
+        this.setParamObj(map, prefix + "HealthCheckConfig.", this.HealthCheckConfig);
 
     }
 }

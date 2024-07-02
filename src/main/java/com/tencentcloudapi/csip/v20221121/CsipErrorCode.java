@@ -12,8 +12,14 @@ public enum CsipErrorCode {
     // 内部错误。
      INTERNALERROR("InternalError"),
      
+    // 无效的过滤器
+     INVALIDFILTER("InvalidFilter"),
+     
     // 参数错误。
      INVALIDPARAMETER("InvalidParameter"),
+     
+    // Decrypt error
+     INVALIDPARAMETER_DECRYPTERROR("InvalidParameter.DecryptError"),
      
     // 参数取值错误。
      INVALIDPARAMETERVALUE("InvalidParameterValue"),
@@ -26,6 +32,9 @@ public enum CsipErrorCode {
      
     // 操作被拒绝。
      OPERATIONDENIED("OperationDenied"),
+     
+    // 地域错误
+     REGIONERROR("RegionError"),
      
     // 请求的次数超过了频率限制。
      REQUESTLIMITEXCEEDED("RequestLimitExceeded"),
@@ -47,6 +56,12 @@ public enum CsipErrorCode {
      
     // 未授权操作。
      UNAUTHORIZEDOPERATION("UnauthorizedOperation"),
+     
+    // 未授权操作“操作审计”产品
+     UNAUTHORIZEDOPERATION_CLOUDAUDIT("UnauthorizedOperation.CloudAudit"),
+     
+    // 未授权操作“对象存储”产品
+     UNAUTHORIZEDOPERATION_COS("UnauthorizedOperation.Cos"),
      
     // 未知参数错误。
      UNKNOWNPARAMETER("UnknownParameter"),

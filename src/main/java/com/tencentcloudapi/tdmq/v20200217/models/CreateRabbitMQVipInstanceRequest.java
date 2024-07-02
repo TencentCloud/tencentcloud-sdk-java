@@ -129,6 +129,13 @@ public class CreateRabbitMQVipInstanceRequest extends AbstractModel {
     private Long Bandwidth;
 
     /**
+    * 是否打开公网接入，不传默认为false
+    */
+    @SerializedName("EnablePublicAccess")
+    @Expose
+    private Boolean EnablePublicAccess;
+
+    /**
      * Get 可用区 
      * @return ZoneIds 可用区
      */
@@ -368,6 +375,22 @@ public class CreateRabbitMQVipInstanceRequest extends AbstractModel {
         this.Bandwidth = Bandwidth;
     }
 
+    /**
+     * Get 是否打开公网接入，不传默认为false 
+     * @return EnablePublicAccess 是否打开公网接入，不传默认为false
+     */
+    public Boolean getEnablePublicAccess() {
+        return this.EnablePublicAccess;
+    }
+
+    /**
+     * Set 是否打开公网接入，不传默认为false
+     * @param EnablePublicAccess 是否打开公网接入，不传默认为false
+     */
+    public void setEnablePublicAccess(Boolean EnablePublicAccess) {
+        this.EnablePublicAccess = EnablePublicAccess;
+    }
+
     public CreateRabbitMQVipInstanceRequest() {
     }
 
@@ -427,6 +450,9 @@ public class CreateRabbitMQVipInstanceRequest extends AbstractModel {
         if (source.Bandwidth != null) {
             this.Bandwidth = new Long(source.Bandwidth);
         }
+        if (source.EnablePublicAccess != null) {
+            this.EnablePublicAccess = new Boolean(source.EnablePublicAccess);
+        }
     }
 
 
@@ -449,6 +475,7 @@ public class CreateRabbitMQVipInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "IsIntl", this.IsIntl);
         this.setParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
         this.setParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
+        this.setParamSimple(map, prefix + "EnablePublicAccess", this.EnablePublicAccess);
 
     }
 }

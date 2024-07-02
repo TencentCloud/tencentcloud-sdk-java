@@ -31,7 +31,7 @@ public class DeleteDomainAndIpRequest extends AbstractModel {
     private String [] MemberId;
 
     /**
-    * -
+    * 资产
     */
     @SerializedName("Content")
     @Expose
@@ -82,16 +82,16 @@ public class DeleteDomainAndIpRequest extends AbstractModel {
     }
 
     /**
-     * Get - 
-     * @return Content -
+     * Get 资产 
+     * @return Content 资产
      */
     public PublicIpDomainListKey [] getContent() {
         return this.Content;
     }
 
     /**
-     * Set -
-     * @param Content -
+     * Set 资产
+     * @param Content 资产
      */
     public void setContent(PublicIpDomainListKey [] Content) {
         this.Content = Content;

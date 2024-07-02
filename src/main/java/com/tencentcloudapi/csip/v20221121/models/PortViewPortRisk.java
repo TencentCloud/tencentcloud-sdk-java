@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class PortViewPortRisk extends AbstractModel {
 
     /**
-    * 影响资产
+    * 未处理数量
     */
     @SerializedName("NoHandleCount")
     @Expose
@@ -80,21 +80,21 @@ public class PortViewPortRisk extends AbstractModel {
     private Long Suggestion;
 
     /**
-    * 状态，0未处理、1已处置、2已忽略
+    * 影响资产数量
     */
     @SerializedName("AffectAssetCount")
     @Expose
     private String AffectAssetCount;
 
     /**
-    * 资产唯一id
+    * ID
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-    * 资产子类型
+    * 识别来源
     */
     @SerializedName("From")
     @Expose
@@ -138,16 +138,16 @@ public class PortViewPortRisk extends AbstractModel {
     private String Service;
 
     /**
-     * Get 影响资产 
-     * @return NoHandleCount 影响资产
+     * Get 未处理数量 
+     * @return NoHandleCount 未处理数量
      */
     public Long getNoHandleCount() {
         return this.NoHandleCount;
     }
 
     /**
-     * Set 影响资产
-     * @param NoHandleCount 影响资产
+     * Set 未处理数量
+     * @param NoHandleCount 未处理数量
      */
     public void setNoHandleCount(Long NoHandleCount) {
         this.NoHandleCount = NoHandleCount;
@@ -266,48 +266,48 @@ public class PortViewPortRisk extends AbstractModel {
     }
 
     /**
-     * Get 状态，0未处理、1已处置、2已忽略 
-     * @return AffectAssetCount 状态，0未处理、1已处置、2已忽略
+     * Get 影响资产数量 
+     * @return AffectAssetCount 影响资产数量
      */
     public String getAffectAssetCount() {
         return this.AffectAssetCount;
     }
 
     /**
-     * Set 状态，0未处理、1已处置、2已忽略
-     * @param AffectAssetCount 状态，0未处理、1已处置、2已忽略
+     * Set 影响资产数量
+     * @param AffectAssetCount 影响资产数量
      */
     public void setAffectAssetCount(String AffectAssetCount) {
         this.AffectAssetCount = AffectAssetCount;
     }
 
     /**
-     * Get 资产唯一id 
-     * @return Id 资产唯一id
+     * Get ID 
+     * @return Id ID
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set 资产唯一id
-     * @param Id 资产唯一id
+     * Set ID
+     * @param Id ID
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 资产子类型 
-     * @return From 资产子类型
+     * Get 识别来源 
+     * @return From 识别来源
      */
     public String getFrom() {
         return this.From;
     }
 
     /**
-     * Set 资产子类型
-     * @param From 资产子类型
+     * Set 识别来源
+     * @param From 识别来源
      */
     public void setFrom(String From) {
         this.From = From;

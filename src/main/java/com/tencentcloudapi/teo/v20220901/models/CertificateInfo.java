@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CertificateInfo extends AbstractModel {
 
     /**
-    * 服务器证书 ID。
+    * 证书 ID。
     */
     @SerializedName("CertId")
     @Expose
@@ -81,16 +81,16 @@ public class CertificateInfo extends AbstractModel {
     private String Status;
 
     /**
-     * Get 服务器证书 ID。 
-     * @return CertId 服务器证书 ID。
+     * Get 证书 ID。 
+     * @return CertId 证书 ID。
      */
     public String getCertId() {
         return this.CertId;
     }
 
     /**
-     * Set 服务器证书 ID。
-     * @param CertId 服务器证书 ID。
+     * Set 证书 ID。
+     * @param CertId 证书 ID。
      */
     public void setCertId(String CertId) {
         this.CertId = CertId;

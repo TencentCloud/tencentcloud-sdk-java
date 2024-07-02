@@ -31,12 +31,19 @@ public class AccelerationDomainCertificate extends AbstractModel {
     private String Mode;
 
     /**
-    * 证书列表。
+    * 服务端证书列表。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("List")
     @Expose
     private CertificateInfo [] List;
+
+    /**
+    * 边缘双向认证配置。
+    */
+    @SerializedName("ClientCertInfo")
+    @Expose
+    private MutualTLS ClientCertInfo;
 
     /**
      * Get 配置证书的模式，取值有： <li>disable：不配置证书；</li> <li>eofreecert：配置 EdgeOne 免费证书；</li> <li>sslcert：配置 SSL 证书。</li> 
@@ -55,9 +62,9 @@ public class AccelerationDomainCertificate extends AbstractModel {
     }
 
     /**
-     * Get 证书列表。
+     * Get 服务端证书列表。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return List 证书列表。
+     * @return List 服务端证书列表。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public CertificateInfo [] getList() {
@@ -65,13 +72,29 @@ public class AccelerationDomainCertificate extends AbstractModel {
     }
 
     /**
-     * Set 证书列表。
+     * Set 服务端证书列表。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param List 证书列表。
+     * @param List 服务端证书列表。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setList(CertificateInfo [] List) {
         this.List = List;
+    }
+
+    /**
+     * Get 边缘双向认证配置。 
+     * @return ClientCertInfo 边缘双向认证配置。
+     */
+    public MutualTLS getClientCertInfo() {
+        return this.ClientCertInfo;
+    }
+
+    /**
+     * Set 边缘双向认证配置。
+     * @param ClientCertInfo 边缘双向认证配置。
+     */
+    public void setClientCertInfo(MutualTLS ClientCertInfo) {
+        this.ClientCertInfo = ClientCertInfo;
     }
 
     public AccelerationDomainCertificate() {
@@ -91,6 +114,9 @@ public class AccelerationDomainCertificate extends AbstractModel {
                 this.List[i] = new CertificateInfo(source.List[i]);
             }
         }
+        if (source.ClientCertInfo != null) {
+            this.ClientCertInfo = new MutualTLS(source.ClientCertInfo);
+        }
     }
 
 
@@ -100,6 +126,7 @@ public class AccelerationDomainCertificate extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Mode", this.Mode);
         this.setParamArrayObj(map, prefix + "List.", this.List);
+        this.setParamObj(map, prefix + "ClientCertInfo.", this.ClientCertInfo);
 
     }
 }

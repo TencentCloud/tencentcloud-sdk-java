@@ -1174,4 +1174,15 @@ public class GaapClient extends AbstractClient{
         return this.internalRequest(req, "SetAuthentication", SetAuthenticationResponse.class);
     }
 
+    /**
+     *设置监听器TLS配置
+     * @param req SetTlsVersionRequest
+     * @return SetTlsVersionResponse
+     * @throws TencentCloudSDKException
+     */
+    public SetTlsVersionResponse SetTlsVersion(SetTlsVersionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SetTlsVersion", SetTlsVersionResponse.class);
+    }
+
 }

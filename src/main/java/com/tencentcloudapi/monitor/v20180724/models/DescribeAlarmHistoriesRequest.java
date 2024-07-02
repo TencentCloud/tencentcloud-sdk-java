@@ -159,6 +159,13 @@ public class DescribeAlarmHistoriesRequest extends AbstractModel {
     private String [] AlarmLevels;
 
     /**
+    * 收敛历史的唯一id
+    */
+    @SerializedName("ConvergenceHistoryIDs")
+    @Expose
+    private String [] ConvergenceHistoryIDs;
+
+    /**
      * Get 固定值，为"monitor" 
      * @return Module 固定值，为"monitor"
      */
@@ -470,6 +477,22 @@ public class DescribeAlarmHistoriesRequest extends AbstractModel {
         this.AlarmLevels = AlarmLevels;
     }
 
+    /**
+     * Get 收敛历史的唯一id 
+     * @return ConvergenceHistoryIDs 收敛历史的唯一id
+     */
+    public String [] getConvergenceHistoryIDs() {
+        return this.ConvergenceHistoryIDs;
+    }
+
+    /**
+     * Set 收敛历史的唯一id
+     * @param ConvergenceHistoryIDs 收敛历史的唯一id
+     */
+    public void setConvergenceHistoryIDs(String [] ConvergenceHistoryIDs) {
+        this.ConvergenceHistoryIDs = ConvergenceHistoryIDs;
+    }
+
     public DescribeAlarmHistoriesRequest() {
     }
 
@@ -565,6 +588,12 @@ public class DescribeAlarmHistoriesRequest extends AbstractModel {
                 this.AlarmLevels[i] = new String(source.AlarmLevels[i]);
             }
         }
+        if (source.ConvergenceHistoryIDs != null) {
+            this.ConvergenceHistoryIDs = new String[source.ConvergenceHistoryIDs.length];
+            for (int i = 0; i < source.ConvergenceHistoryIDs.length; i++) {
+                this.ConvergenceHistoryIDs[i] = new String(source.ConvergenceHistoryIDs[i]);
+            }
+        }
     }
 
 
@@ -591,6 +620,7 @@ public class DescribeAlarmHistoriesRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "ReceiverGroups.", this.ReceiverGroups);
         this.setParamArraySimple(map, prefix + "PolicyIds.", this.PolicyIds);
         this.setParamArraySimple(map, prefix + "AlarmLevels.", this.AlarmLevels);
+        this.setParamArraySimple(map, prefix + "ConvergenceHistoryIDs.", this.ConvergenceHistoryIDs);
 
     }
 }
