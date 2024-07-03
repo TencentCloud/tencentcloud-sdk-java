@@ -31,28 +31,30 @@ public class ZoneCapacityConf extends AbstractModel {
     private String ZoneId;
 
     /**
-    * 可用区名称
+    * 可用区名称。
     */
     @SerializedName("ZoneName")
     @Expose
     private String ZoneName;
 
     /**
-    * 可用区是否售罄
+    * 可用区是否售罄。
     */
     @SerializedName("IsSaleout")
     @Expose
     private Boolean IsSaleout;
 
     /**
-    * 是否为默认可用区
+    * 是否为默认可用区。
     */
     @SerializedName("IsDefault")
     @Expose
     private Boolean IsDefault;
 
     /**
-    * 网络类型：basenet -- 基础网络；vpcnet -- VPC网络
+    * 网络类型。
+- basenet：基础网络。
+- vpcnet -- VPC网络。
     */
     @SerializedName("NetWorkType")
     @Expose
@@ -89,64 +91,72 @@ public class ZoneCapacityConf extends AbstractModel {
     }
 
     /**
-     * Get 可用区名称 
-     * @return ZoneName 可用区名称
+     * Get 可用区名称。 
+     * @return ZoneName 可用区名称。
      */
     public String getZoneName() {
         return this.ZoneName;
     }
 
     /**
-     * Set 可用区名称
-     * @param ZoneName 可用区名称
+     * Set 可用区名称。
+     * @param ZoneName 可用区名称。
      */
     public void setZoneName(String ZoneName) {
         this.ZoneName = ZoneName;
     }
 
     /**
-     * Get 可用区是否售罄 
-     * @return IsSaleout 可用区是否售罄
+     * Get 可用区是否售罄。 
+     * @return IsSaleout 可用区是否售罄。
      */
     public Boolean getIsSaleout() {
         return this.IsSaleout;
     }
 
     /**
-     * Set 可用区是否售罄
-     * @param IsSaleout 可用区是否售罄
+     * Set 可用区是否售罄。
+     * @param IsSaleout 可用区是否售罄。
      */
     public void setIsSaleout(Boolean IsSaleout) {
         this.IsSaleout = IsSaleout;
     }
 
     /**
-     * Get 是否为默认可用区 
-     * @return IsDefault 是否为默认可用区
+     * Get 是否为默认可用区。 
+     * @return IsDefault 是否为默认可用区。
      */
     public Boolean getIsDefault() {
         return this.IsDefault;
     }
 
     /**
-     * Set 是否为默认可用区
-     * @param IsDefault 是否为默认可用区
+     * Set 是否为默认可用区。
+     * @param IsDefault 是否为默认可用区。
      */
     public void setIsDefault(Boolean IsDefault) {
         this.IsDefault = IsDefault;
     }
 
     /**
-     * Get 网络类型：basenet -- 基础网络；vpcnet -- VPC网络 
-     * @return NetWorkType 网络类型：basenet -- 基础网络；vpcnet -- VPC网络
+     * Get 网络类型。
+- basenet：基础网络。
+- vpcnet -- VPC网络。 
+     * @return NetWorkType 网络类型。
+- basenet：基础网络。
+- vpcnet -- VPC网络。
      */
     public String [] getNetWorkType() {
         return this.NetWorkType;
     }
 
     /**
-     * Set 网络类型：basenet -- 基础网络；vpcnet -- VPC网络
-     * @param NetWorkType 网络类型：basenet -- 基础网络；vpcnet -- VPC网络
+     * Set 网络类型。
+- basenet：基础网络。
+- vpcnet -- VPC网络。
+     * @param NetWorkType 网络类型。
+- basenet：基础网络。
+- vpcnet -- VPC网络。
      */
     public void setNetWorkType(String [] NetWorkType) {
         this.NetWorkType = NetWorkType;

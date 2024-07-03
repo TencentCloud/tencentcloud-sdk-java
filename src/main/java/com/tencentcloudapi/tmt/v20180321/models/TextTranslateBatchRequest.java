@@ -90,6 +90,20 @@ hi：印地语
     private String [] SourceTextList;
 
     /**
+    * 需要使用的术语库列表
+    */
+    @SerializedName("TermRepoIDList")
+    @Expose
+    private String [] TermRepoIDList;
+
+    /**
+    * 需要使用的例句库列表
+    */
+    @SerializedName("SentRepoIDList")
+    @Expose
+    private String [] SentRepoIDList;
+
+    /**
      * Get 源语言，支持： 
 auto：自动识别（识别为一种语言）
 zh：简体中文
@@ -305,6 +319,38 @@ hi：印地语
         this.SourceTextList = SourceTextList;
     }
 
+    /**
+     * Get 需要使用的术语库列表 
+     * @return TermRepoIDList 需要使用的术语库列表
+     */
+    public String [] getTermRepoIDList() {
+        return this.TermRepoIDList;
+    }
+
+    /**
+     * Set 需要使用的术语库列表
+     * @param TermRepoIDList 需要使用的术语库列表
+     */
+    public void setTermRepoIDList(String [] TermRepoIDList) {
+        this.TermRepoIDList = TermRepoIDList;
+    }
+
+    /**
+     * Get 需要使用的例句库列表 
+     * @return SentRepoIDList 需要使用的例句库列表
+     */
+    public String [] getSentRepoIDList() {
+        return this.SentRepoIDList;
+    }
+
+    /**
+     * Set 需要使用的例句库列表
+     * @param SentRepoIDList 需要使用的例句库列表
+     */
+    public void setSentRepoIDList(String [] SentRepoIDList) {
+        this.SentRepoIDList = SentRepoIDList;
+    }
+
     public TextTranslateBatchRequest() {
     }
 
@@ -328,6 +374,18 @@ hi：印地语
                 this.SourceTextList[i] = new String(source.SourceTextList[i]);
             }
         }
+        if (source.TermRepoIDList != null) {
+            this.TermRepoIDList = new String[source.TermRepoIDList.length];
+            for (int i = 0; i < source.TermRepoIDList.length; i++) {
+                this.TermRepoIDList[i] = new String(source.TermRepoIDList[i]);
+            }
+        }
+        if (source.SentRepoIDList != null) {
+            this.SentRepoIDList = new String[source.SentRepoIDList.length];
+            for (int i = 0; i < source.SentRepoIDList.length; i++) {
+                this.SentRepoIDList[i] = new String(source.SentRepoIDList[i]);
+            }
+        }
     }
 
 
@@ -339,6 +397,8 @@ hi：印地语
         this.setParamSimple(map, prefix + "Target", this.Target);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamArraySimple(map, prefix + "SourceTextList.", this.SourceTextList);
+        this.setParamArraySimple(map, prefix + "TermRepoIDList.", this.TermRepoIDList);
+        this.setParamArraySimple(map, prefix + "SentRepoIDList.", this.SentRepoIDList);
 
     }
 }

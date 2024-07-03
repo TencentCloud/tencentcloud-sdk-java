@@ -24,46 +24,66 @@ import java.util.HashMap;
 public class DescribeInstanceMonitorTopNCmdRequest extends AbstractModel {
 
     /**
-    * 实例Id
+    * 实例 ID。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 时间范围：1——实时，2——近30分钟，3——近6小时，4——近24小时
+    * 时间范围。
+- 1：实时。
+- 2：近30分钟。
+- 3：近6小时。
+- 4：近24小时。
     */
     @SerializedName("SpanType")
     @Expose
     private Long SpanType;
 
     /**
-     * Get 实例Id 
-     * @return InstanceId 实例Id
+     * Get 实例 ID。 
+     * @return InstanceId 实例 ID。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例Id
-     * @param InstanceId 实例Id
+     * Set 实例 ID。
+     * @param InstanceId 实例 ID。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 时间范围：1——实时，2——近30分钟，3——近6小时，4——近24小时 
-     * @return SpanType 时间范围：1——实时，2——近30分钟，3——近6小时，4——近24小时
+     * Get 时间范围。
+- 1：实时。
+- 2：近30分钟。
+- 3：近6小时。
+- 4：近24小时。 
+     * @return SpanType 时间范围。
+- 1：实时。
+- 2：近30分钟。
+- 3：近6小时。
+- 4：近24小时。
      */
     public Long getSpanType() {
         return this.SpanType;
     }
 
     /**
-     * Set 时间范围：1——实时，2——近30分钟，3——近6小时，4——近24小时
-     * @param SpanType 时间范围：1——实时，2——近30分钟，3——近6小时，4——近24小时
+     * Set 时间范围。
+- 1：实时。
+- 2：近30分钟。
+- 3：近6小时。
+- 4：近24小时。
+     * @param SpanType 时间范围。
+- 1：实时。
+- 2：近30分钟。
+- 3：近6小时。
+- 4：近24小时。
      */
     public void setSpanType(Long SpanType) {
         this.SpanType = SpanType;

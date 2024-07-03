@@ -145,6 +145,46 @@ public class ClbObject extends AbstractModel {
     private String Region;
 
     /**
+    * 代理状态: 0:不开启,1:以XFF的第一个IP地址作为客户端IP,2:以remote_addr作为客户端IP,3:从指定的头部字段获取客户端IP，字段通过IpHeaders字段给出
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Proxy")
+    @Expose
+    private Long Proxy;
+
+    /**
+    * 指定获取客户端IP的头部字段列表。IsCdn为3时有效
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IpHeaders")
+    @Expose
+    private String [] IpHeaders;
+
+    /**
+    * bot防护开关
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BotStatus")
+    @Expose
+    private Long BotStatus;
+
+    /**
+    * api防护开关
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ApiStatus")
+    @Expose
+    private Long ApiStatus;
+
+    /**
+    * 对象接入模式，0表示镜像模式，1表示清洗模式，2表示体检模式，默认为清洗模式
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ObjectFlowMode")
+    @Expose
+    private Long ObjectFlowMode;
+
+    /**
      * Get 对象ID 
      * @return ObjectId 对象ID
      */
@@ -424,6 +464,106 @@ public class ClbObject extends AbstractModel {
         this.Region = Region;
     }
 
+    /**
+     * Get 代理状态: 0:不开启,1:以XFF的第一个IP地址作为客户端IP,2:以remote_addr作为客户端IP,3:从指定的头部字段获取客户端IP，字段通过IpHeaders字段给出
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Proxy 代理状态: 0:不开启,1:以XFF的第一个IP地址作为客户端IP,2:以remote_addr作为客户端IP,3:从指定的头部字段获取客户端IP，字段通过IpHeaders字段给出
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getProxy() {
+        return this.Proxy;
+    }
+
+    /**
+     * Set 代理状态: 0:不开启,1:以XFF的第一个IP地址作为客户端IP,2:以remote_addr作为客户端IP,3:从指定的头部字段获取客户端IP，字段通过IpHeaders字段给出
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Proxy 代理状态: 0:不开启,1:以XFF的第一个IP地址作为客户端IP,2:以remote_addr作为客户端IP,3:从指定的头部字段获取客户端IP，字段通过IpHeaders字段给出
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProxy(Long Proxy) {
+        this.Proxy = Proxy;
+    }
+
+    /**
+     * Get 指定获取客户端IP的头部字段列表。IsCdn为3时有效
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IpHeaders 指定获取客户端IP的头部字段列表。IsCdn为3时有效
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getIpHeaders() {
+        return this.IpHeaders;
+    }
+
+    /**
+     * Set 指定获取客户端IP的头部字段列表。IsCdn为3时有效
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IpHeaders 指定获取客户端IP的头部字段列表。IsCdn为3时有效
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIpHeaders(String [] IpHeaders) {
+        this.IpHeaders = IpHeaders;
+    }
+
+    /**
+     * Get bot防护开关
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BotStatus bot防护开关
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getBotStatus() {
+        return this.BotStatus;
+    }
+
+    /**
+     * Set bot防护开关
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BotStatus bot防护开关
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBotStatus(Long BotStatus) {
+        this.BotStatus = BotStatus;
+    }
+
+    /**
+     * Get api防护开关
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ApiStatus api防护开关
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getApiStatus() {
+        return this.ApiStatus;
+    }
+
+    /**
+     * Set api防护开关
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ApiStatus api防护开关
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setApiStatus(Long ApiStatus) {
+        this.ApiStatus = ApiStatus;
+    }
+
+    /**
+     * Get 对象接入模式，0表示镜像模式，1表示清洗模式，2表示体检模式，默认为清洗模式
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ObjectFlowMode 对象接入模式，0表示镜像模式，1表示清洗模式，2表示体检模式，默认为清洗模式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getObjectFlowMode() {
+        return this.ObjectFlowMode;
+    }
+
+    /**
+     * Set 对象接入模式，0表示镜像模式，1表示清洗模式，2表示体检模式，默认为清洗模式
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ObjectFlowMode 对象接入模式，0表示镜像模式，1表示清洗模式，2表示体检模式，默认为清洗模式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setObjectFlowMode(Long ObjectFlowMode) {
+        this.ObjectFlowMode = ObjectFlowMode;
+    }
+
     public ClbObject() {
     }
 
@@ -492,6 +632,24 @@ public class ClbObject extends AbstractModel {
         if (source.Region != null) {
             this.Region = new String(source.Region);
         }
+        if (source.Proxy != null) {
+            this.Proxy = new Long(source.Proxy);
+        }
+        if (source.IpHeaders != null) {
+            this.IpHeaders = new String[source.IpHeaders.length];
+            for (int i = 0; i < source.IpHeaders.length; i++) {
+                this.IpHeaders[i] = new String(source.IpHeaders[i]);
+            }
+        }
+        if (source.BotStatus != null) {
+            this.BotStatus = new Long(source.BotStatus);
+        }
+        if (source.ApiStatus != null) {
+            this.ApiStatus = new Long(source.ApiStatus);
+        }
+        if (source.ObjectFlowMode != null) {
+            this.ObjectFlowMode = new Long(source.ObjectFlowMode);
+        }
     }
 
 
@@ -516,6 +674,11 @@ public class ClbObject extends AbstractModel {
         this.setParamSimple(map, prefix + "PostCKafkaStatus", this.PostCKafkaStatus);
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "Region", this.Region);
+        this.setParamSimple(map, prefix + "Proxy", this.Proxy);
+        this.setParamArraySimple(map, prefix + "IpHeaders.", this.IpHeaders);
+        this.setParamSimple(map, prefix + "BotStatus", this.BotStatus);
+        this.setParamSimple(map, prefix + "ApiStatus", this.ApiStatus);
+        this.setParamSimple(map, prefix + "ObjectFlowMode", this.ObjectFlowMode);
 
     }
 }

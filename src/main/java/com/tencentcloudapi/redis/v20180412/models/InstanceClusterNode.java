@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class InstanceClusterNode extends AbstractModel {
 
     /**
-    * 节点名称。
+    * 节点组名称。
     */
     @SerializedName("Name")
     @Expose
@@ -122,16 +122,16 @@ public class InstanceClusterNode extends AbstractModel {
     private Float StorageSlope;
 
     /**
-     * Get 节点名称。 
-     * @return Name 节点名称。
+     * Get 节点组名称。 
+     * @return Name 节点组名称。
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 节点名称。
-     * @param Name 节点名称。
+     * Set 节点组名称。
+     * @param Name 节点组名称。
      */
     public void setName(String Name) {
         this.Name = Name;

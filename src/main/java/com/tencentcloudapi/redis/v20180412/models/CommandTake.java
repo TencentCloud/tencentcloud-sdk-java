@@ -31,7 +31,7 @@ public class CommandTake extends AbstractModel {
     private String Cmd;
 
     /**
-    * 耗时时长。
+    * 耗时时长。单位：ms。
     */
     @SerializedName("Took")
     @Expose
@@ -54,16 +54,16 @@ public class CommandTake extends AbstractModel {
     }
 
     /**
-     * Get 耗时时长。 
-     * @return Took 耗时时长。
+     * Get 耗时时长。单位：ms。 
+     * @return Took 耗时时长。单位：ms。
      */
     public Long getTook() {
         return this.Took;
     }
 
     /**
-     * Set 耗时时长。
-     * @param Took 耗时时长。
+     * Set 耗时时长。单位：ms。
+     * @param Took 耗时时长。单位：ms。
      */
     public void setTook(Long Took) {
         this.Took = Took;
