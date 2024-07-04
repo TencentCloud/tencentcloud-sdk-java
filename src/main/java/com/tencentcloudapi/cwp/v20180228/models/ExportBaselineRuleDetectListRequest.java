@@ -24,9 +24,7 @@ import java.util.HashMap;
 public class ExportBaselineRuleDetectListRequest extends AbstractModel {
 
     /**
-    * <li>RuleName - string - 是否必填：否 - 规则名称</i>
-<li>IsPassed - int - 是否必填：否 - 是否通过</li>
-<li>RiskTier - int - 是否必填：否 - 风险等级</li>
+    * <li>RuleName - string - 是否必填：否 - 规则名称</li><li>IsPassed - int - 是否必填：否 - 是否通过</li><li>RiskTier - int - 是否必填：否 - 风险等级</li>
     */
     @SerializedName("Filters")
     @Expose
@@ -40,24 +38,23 @@ public class ExportBaselineRuleDetectListRequest extends AbstractModel {
     private Long ExportAll;
 
     /**
-     * Get <li>RuleName - string - 是否必填：否 - 规则名称</i>
-<li>IsPassed - int - 是否必填：否 - 是否通过</li>
-<li>RiskTier - int - 是否必填：否 - 风险等级</li> 
-     * @return Filters <li>RuleName - string - 是否必填：否 - 规则名称</i>
-<li>IsPassed - int - 是否必填：否 - 是否通过</li>
-<li>RiskTier - int - 是否必填：否 - 风险等级</li>
+    * 0:导出界面展示；1:导出全部结果事件
+    */
+    @SerializedName("IsExportDetail")
+    @Expose
+    private Long IsExportDetail;
+
+    /**
+     * Get <li>RuleName - string - 是否必填：否 - 规则名称</li><li>IsPassed - int - 是否必填：否 - 是否通过</li><li>RiskTier - int - 是否必填：否 - 风险等级</li> 
+     * @return Filters <li>RuleName - string - 是否必填：否 - 规则名称</li><li>IsPassed - int - 是否必填：否 - 是否通过</li><li>RiskTier - int - 是否必填：否 - 风险等级</li>
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set <li>RuleName - string - 是否必填：否 - 规则名称</i>
-<li>IsPassed - int - 是否必填：否 - 是否通过</li>
-<li>RiskTier - int - 是否必填：否 - 风险等级</li>
-     * @param Filters <li>RuleName - string - 是否必填：否 - 规则名称</i>
-<li>IsPassed - int - 是否必填：否 - 是否通过</li>
-<li>RiskTier - int - 是否必填：否 - 风险等级</li>
+     * Set <li>RuleName - string - 是否必填：否 - 规则名称</li><li>IsPassed - int - 是否必填：否 - 是否通过</li><li>RiskTier - int - 是否必填：否 - 风险等级</li>
+     * @param Filters <li>RuleName - string - 是否必填：否 - 规则名称</li><li>IsPassed - int - 是否必填：否 - 是否通过</li><li>RiskTier - int - 是否必填：否 - 风险等级</li>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
@@ -79,6 +76,22 @@ public class ExportBaselineRuleDetectListRequest extends AbstractModel {
         this.ExportAll = ExportAll;
     }
 
+    /**
+     * Get 0:导出界面展示；1:导出全部结果事件 
+     * @return IsExportDetail 0:导出界面展示；1:导出全部结果事件
+     */
+    public Long getIsExportDetail() {
+        return this.IsExportDetail;
+    }
+
+    /**
+     * Set 0:导出界面展示；1:导出全部结果事件
+     * @param IsExportDetail 0:导出界面展示；1:导出全部结果事件
+     */
+    public void setIsExportDetail(Long IsExportDetail) {
+        this.IsExportDetail = IsExportDetail;
+    }
+
     public ExportBaselineRuleDetectListRequest() {
     }
 
@@ -96,6 +109,9 @@ public class ExportBaselineRuleDetectListRequest extends AbstractModel {
         if (source.ExportAll != null) {
             this.ExportAll = new Long(source.ExportAll);
         }
+        if (source.IsExportDetail != null) {
+            this.IsExportDetail = new Long(source.IsExportDetail);
+        }
     }
 
 
@@ -105,6 +121,7 @@ public class ExportBaselineRuleDetectListRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "ExportAll", this.ExportAll);
+        this.setParamSimple(map, prefix + "IsExportDetail", this.IsExportDetail);
 
     }
 }

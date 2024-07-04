@@ -24,20 +24,6 @@ import java.util.HashMap;
 public class DescribeInstanceListRequest extends AbstractModel {
 
     /**
-    * 查询起始位置
-    */
-    @SerializedName("Offset")
-    @Expose
-    private Long Offset;
-
-    /**
-    * 查询结果限制数量
-    */
-    @SerializedName("Limit")
-    @Expose
-    private Long Limit;
-
-    /**
     * 查询条件列表
     */
     @SerializedName("Filters")
@@ -52,36 +38,18 @@ public class DescribeInstanceListRequest extends AbstractModel {
     private TagFilter [] TagFilters;
 
     /**
-     * Get 查询起始位置 
-     * @return Offset 查询起始位置
-     */
-    public Long getOffset() {
-        return this.Offset;
-    }
+    * 查询起始位置
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
 
     /**
-     * Set 查询起始位置
-     * @param Offset 查询起始位置
-     */
-    public void setOffset(Long Offset) {
-        this.Offset = Offset;
-    }
-
-    /**
-     * Get 查询结果限制数量 
-     * @return Limit 查询结果限制数量
-     */
-    public Long getLimit() {
-        return this.Limit;
-    }
-
-    /**
-     * Set 查询结果限制数量
-     * @param Limit 查询结果限制数量
-     */
-    public void setLimit(Long Limit) {
-        this.Limit = Limit;
-    }
+    * 查询结果限制数量
+    */
+    @SerializedName("Limit")
+    @Expose
+    private Long Limit;
 
     /**
      * Get 查询条件列表 
@@ -115,6 +83,38 @@ public class DescribeInstanceListRequest extends AbstractModel {
         this.TagFilters = TagFilters;
     }
 
+    /**
+     * Get 查询起始位置 
+     * @return Offset 查询起始位置
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set 查询起始位置
+     * @param Offset 查询起始位置
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
+    }
+
+    /**
+     * Get 查询结果限制数量 
+     * @return Limit 查询结果限制数量
+     */
+    public Long getLimit() {
+        return this.Limit;
+    }
+
+    /**
+     * Set 查询结果限制数量
+     * @param Limit 查询结果限制数量
+     */
+    public void setLimit(Long Limit) {
+        this.Limit = Limit;
+    }
+
     public DescribeInstanceListRequest() {
     }
 
@@ -123,12 +123,6 @@ public class DescribeInstanceListRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeInstanceListRequest(DescribeInstanceListRequest source) {
-        if (source.Offset != null) {
-            this.Offset = new Long(source.Offset);
-        }
-        if (source.Limit != null) {
-            this.Limit = new Long(source.Limit);
-        }
         if (source.Filters != null) {
             this.Filters = new Filter[source.Filters.length];
             for (int i = 0; i < source.Filters.length; i++) {
@@ -141,6 +135,12 @@ public class DescribeInstanceListRequest extends AbstractModel {
                 this.TagFilters[i] = new TagFilter(source.TagFilters[i]);
             }
         }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
     }
 
 
@@ -148,10 +148,10 @@ public class DescribeInstanceListRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Offset", this.Offset);
-        this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamArrayObj(map, prefix + "TagFilters.", this.TagFilters);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
 
     }
 }

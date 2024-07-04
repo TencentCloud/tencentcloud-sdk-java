@@ -31,39 +31,46 @@ public class AccountInfo extends AbstractModel {
     private String DBInstanceId;
 
     /**
-    * 帐号
+    * 账号
     */
     @SerializedName("UserName")
     @Expose
     private String UserName;
 
     /**
-    * 帐号备注
+    * 账号备注
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-    * 帐号状态。 1-创建中，2-正常，3-修改中，4-密码重置中，-1-删除中
+    * 账号状态。 1-创建中，2-正常，3-修改中，4-密码重置中，5-锁定中，-1-删除中
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 帐号创建时间
+    * 账号创建时间
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 帐号最后一次更新时间
+    * 账号最后一次更新时间
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
+
+    /**
+    * 账号类型
+    */
+    @SerializedName("UserType")
+    @Expose
+    private String UserType;
 
     /**
      * Get 实例ID，形如postgres-lnp6j617 
@@ -82,83 +89,99 @@ public class AccountInfo extends AbstractModel {
     }
 
     /**
-     * Get 帐号 
-     * @return UserName 帐号
+     * Get 账号 
+     * @return UserName 账号
      */
     public String getUserName() {
         return this.UserName;
     }
 
     /**
-     * Set 帐号
-     * @param UserName 帐号
+     * Set 账号
+     * @param UserName 账号
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;
     }
 
     /**
-     * Get 帐号备注 
-     * @return Remark 帐号备注
+     * Get 账号备注 
+     * @return Remark 账号备注
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set 帐号备注
-     * @param Remark 帐号备注
+     * Set 账号备注
+     * @param Remark 账号备注
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get 帐号状态。 1-创建中，2-正常，3-修改中，4-密码重置中，-1-删除中 
-     * @return Status 帐号状态。 1-创建中，2-正常，3-修改中，4-密码重置中，-1-删除中
+     * Get 账号状态。 1-创建中，2-正常，3-修改中，4-密码重置中，5-锁定中，-1-删除中 
+     * @return Status 账号状态。 1-创建中，2-正常，3-修改中，4-密码重置中，5-锁定中，-1-删除中
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 帐号状态。 1-创建中，2-正常，3-修改中，4-密码重置中，-1-删除中
-     * @param Status 帐号状态。 1-创建中，2-正常，3-修改中，4-密码重置中，-1-删除中
+     * Set 账号状态。 1-创建中，2-正常，3-修改中，4-密码重置中，5-锁定中，-1-删除中
+     * @param Status 账号状态。 1-创建中，2-正常，3-修改中，4-密码重置中，5-锁定中，-1-删除中
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 帐号创建时间 
-     * @return CreateTime 帐号创建时间
+     * Get 账号创建时间 
+     * @return CreateTime 账号创建时间
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 帐号创建时间
-     * @param CreateTime 帐号创建时间
+     * Set 账号创建时间
+     * @param CreateTime 账号创建时间
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 帐号最后一次更新时间 
-     * @return UpdateTime 帐号最后一次更新时间
+     * Get 账号最后一次更新时间 
+     * @return UpdateTime 账号最后一次更新时间
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 帐号最后一次更新时间
-     * @param UpdateTime 帐号最后一次更新时间
+     * Set 账号最后一次更新时间
+     * @param UpdateTime 账号最后一次更新时间
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
+    }
+
+    /**
+     * Get 账号类型 
+     * @return UserType 账号类型
+     */
+    public String getUserType() {
+        return this.UserType;
+    }
+
+    /**
+     * Set 账号类型
+     * @param UserType 账号类型
+     */
+    public void setUserType(String UserType) {
+        this.UserType = UserType;
     }
 
     public AccountInfo() {
@@ -187,6 +210,9 @@ public class AccountInfo extends AbstractModel {
         if (source.UpdateTime != null) {
             this.UpdateTime = new String(source.UpdateTime);
         }
+        if (source.UserType != null) {
+            this.UserType = new String(source.UserType);
+        }
     }
 
 
@@ -200,6 +226,7 @@ public class AccountInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamSimple(map, prefix + "UserType", this.UserType);
 
     }
 }

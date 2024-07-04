@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class DeliverTypeDetails extends AbstractModel {
 
     /**
-    * 安全模块类型 1: 入侵检测 2: 漏洞管理 3: 基线管理 4: 高级防御 5:客户端相关 6: 资产指纹
+    * 安全模块类型 1: 入侵检测 2: 漏洞管理 3: 基线管理 4: 高级防御 5:客户端相关 6: 资产指纹 7 主机列表 8 客户端上报
     */
     @SerializedName("SecurityType")
     @Expose
     private Long SecurityType;
 
     /**
-    * 安全模块下的日志类型，http://tapd.woa.com/Teneyes/markdown_wikis/show/#1210131751002328905
+    * 安全模块下的日志类型
     */
     @SerializedName("LogType")
     @Expose
     private Long [] LogType;
 
     /**
-    * kafka topic id
+    * 主题ID
     */
     @SerializedName("TopicId")
     @Expose
     private String TopicId;
 
     /**
-    * kafka topic name
+    * 主题名
     */
     @SerializedName("TopicName")
     @Expose
@@ -73,71 +73,92 @@ public class DeliverTypeDetails extends AbstractModel {
     private String ErrInfo;
 
     /**
-    * 最近一次状态上报时间戳，s
+    * 最近一次状态上报时间戳
     */
     @SerializedName("StatusTime")
     @Expose
     private Long StatusTime;
 
     /**
-     * Get 安全模块类型 1: 入侵检测 2: 漏洞管理 3: 基线管理 4: 高级防御 5:客户端相关 6: 资产指纹 
-     * @return SecurityType 安全模块类型 1: 入侵检测 2: 漏洞管理 3: 基线管理 4: 高级防御 5:客户端相关 6: 资产指纹
+    * 日志集名
+    */
+    @SerializedName("LogName")
+    @Expose
+    private String LogName;
+
+    /**
+    * 日志集ID
+    */
+    @SerializedName("LogSetId")
+    @Expose
+    private String LogSetId;
+
+    /**
+    * 日志集所在地域
+    */
+    @SerializedName("Region")
+    @Expose
+    private String Region;
+
+    /**
+     * Get 安全模块类型 1: 入侵检测 2: 漏洞管理 3: 基线管理 4: 高级防御 5:客户端相关 6: 资产指纹 7 主机列表 8 客户端上报 
+     * @return SecurityType 安全模块类型 1: 入侵检测 2: 漏洞管理 3: 基线管理 4: 高级防御 5:客户端相关 6: 资产指纹 7 主机列表 8 客户端上报
      */
     public Long getSecurityType() {
         return this.SecurityType;
     }
 
     /**
-     * Set 安全模块类型 1: 入侵检测 2: 漏洞管理 3: 基线管理 4: 高级防御 5:客户端相关 6: 资产指纹
-     * @param SecurityType 安全模块类型 1: 入侵检测 2: 漏洞管理 3: 基线管理 4: 高级防御 5:客户端相关 6: 资产指纹
+     * Set 安全模块类型 1: 入侵检测 2: 漏洞管理 3: 基线管理 4: 高级防御 5:客户端相关 6: 资产指纹 7 主机列表 8 客户端上报
+     * @param SecurityType 安全模块类型 1: 入侵检测 2: 漏洞管理 3: 基线管理 4: 高级防御 5:客户端相关 6: 资产指纹 7 主机列表 8 客户端上报
      */
     public void setSecurityType(Long SecurityType) {
         this.SecurityType = SecurityType;
     }
 
     /**
-     * Get 安全模块下的日志类型，http://tapd.woa.com/Teneyes/markdown_wikis/show/#1210131751002328905 
-     * @return LogType 安全模块下的日志类型，http://tapd.woa.com/Teneyes/markdown_wikis/show/#1210131751002328905
+     * Get 安全模块下的日志类型 
+     * @return LogType 安全模块下的日志类型
      */
     public Long [] getLogType() {
         return this.LogType;
     }
 
     /**
-     * Set 安全模块下的日志类型，http://tapd.woa.com/Teneyes/markdown_wikis/show/#1210131751002328905
-     * @param LogType 安全模块下的日志类型，http://tapd.woa.com/Teneyes/markdown_wikis/show/#1210131751002328905
+     * Set 安全模块下的日志类型
+     * @param LogType 安全模块下的日志类型
      */
     public void setLogType(Long [] LogType) {
         this.LogType = LogType;
     }
 
     /**
-     * Get kafka topic id 
-     * @return TopicId kafka topic id
+     * Get 主题ID 
+     * @return TopicId 主题ID
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set kafka topic id
-     * @param TopicId kafka topic id
+     * Set 主题ID
+     * @param TopicId 主题ID
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
     }
 
     /**
-     * Get kafka topic name 
-     * @return TopicName kafka topic name
+     * Get 主题名 
+     * @return TopicName 主题名
      */
     public String getTopicName() {
         return this.TopicName;
     }
 
     /**
-     * Set kafka topic name
-     * @param TopicName kafka topic name
+     * Set 主题名
+     * @param TopicName 主题名
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;
@@ -192,19 +213,67 @@ public class DeliverTypeDetails extends AbstractModel {
     }
 
     /**
-     * Get 最近一次状态上报时间戳，s 
-     * @return StatusTime 最近一次状态上报时间戳，s
+     * Get 最近一次状态上报时间戳 
+     * @return StatusTime 最近一次状态上报时间戳
      */
     public Long getStatusTime() {
         return this.StatusTime;
     }
 
     /**
-     * Set 最近一次状态上报时间戳，s
-     * @param StatusTime 最近一次状态上报时间戳，s
+     * Set 最近一次状态上报时间戳
+     * @param StatusTime 最近一次状态上报时间戳
      */
     public void setStatusTime(Long StatusTime) {
         this.StatusTime = StatusTime;
+    }
+
+    /**
+     * Get 日志集名 
+     * @return LogName 日志集名
+     */
+    public String getLogName() {
+        return this.LogName;
+    }
+
+    /**
+     * Set 日志集名
+     * @param LogName 日志集名
+     */
+    public void setLogName(String LogName) {
+        this.LogName = LogName;
+    }
+
+    /**
+     * Get 日志集ID 
+     * @return LogSetId 日志集ID
+     */
+    public String getLogSetId() {
+        return this.LogSetId;
+    }
+
+    /**
+     * Set 日志集ID
+     * @param LogSetId 日志集ID
+     */
+    public void setLogSetId(String LogSetId) {
+        this.LogSetId = LogSetId;
+    }
+
+    /**
+     * Get 日志集所在地域 
+     * @return Region 日志集所在地域
+     */
+    public String getRegion() {
+        return this.Region;
+    }
+
+    /**
+     * Set 日志集所在地域
+     * @param Region 日志集所在地域
+     */
+    public void setRegion(String Region) {
+        this.Region = Region;
     }
 
     public DeliverTypeDetails() {
@@ -242,6 +311,15 @@ public class DeliverTypeDetails extends AbstractModel {
         if (source.StatusTime != null) {
             this.StatusTime = new Long(source.StatusTime);
         }
+        if (source.LogName != null) {
+            this.LogName = new String(source.LogName);
+        }
+        if (source.LogSetId != null) {
+            this.LogSetId = new String(source.LogSetId);
+        }
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
     }
 
 
@@ -257,6 +335,9 @@ public class DeliverTypeDetails extends AbstractModel {
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "ErrInfo", this.ErrInfo);
         this.setParamSimple(map, prefix + "StatusTime", this.StatusTime);
+        this.setParamSimple(map, prefix + "LogName", this.LogName);
+        this.setParamSimple(map, prefix + "LogSetId", this.LogSetId);
+        this.setParamSimple(map, prefix + "Region", this.Region);
 
     }
 }

@@ -31,7 +31,7 @@ public class DescribeAccountsRequest extends AbstractModel {
     private String DBInstanceId;
 
     /**
-    * 分页返回，每页最大返回数目，默认10，取值范围为1-100
+    * 分页返回，每页最大返回数目，默认20，取值范围为1-100
     */
     @SerializedName("Limit")
     @Expose
@@ -45,7 +45,7 @@ public class DescribeAccountsRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * 返回数据按照创建时间或者用户名排序。取值只能为createTime或者name。createTime-按照创建时间排序；name-按照用户名排序
+    * 返回数据按照创建时间或者用户名排序。取值支持createTime、name、updateTime。createTime-按照创建时间排序；name-按照用户名排序; updateTime-按照更新时间排序。
     */
     @SerializedName("OrderBy")
     @Expose
@@ -75,16 +75,16 @@ public class DescribeAccountsRequest extends AbstractModel {
     }
 
     /**
-     * Get 分页返回，每页最大返回数目，默认10，取值范围为1-100 
-     * @return Limit 分页返回，每页最大返回数目，默认10，取值范围为1-100
+     * Get 分页返回，每页最大返回数目，默认20，取值范围为1-100 
+     * @return Limit 分页返回，每页最大返回数目，默认20，取值范围为1-100
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 分页返回，每页最大返回数目，默认10，取值范围为1-100
-     * @param Limit 分页返回，每页最大返回数目，默认10，取值范围为1-100
+     * Set 分页返回，每页最大返回数目，默认20，取值范围为1-100
+     * @param Limit 分页返回，每页最大返回数目，默认20，取值范围为1-100
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
@@ -107,16 +107,16 @@ public class DescribeAccountsRequest extends AbstractModel {
     }
 
     /**
-     * Get 返回数据按照创建时间或者用户名排序。取值只能为createTime或者name。createTime-按照创建时间排序；name-按照用户名排序 
-     * @return OrderBy 返回数据按照创建时间或者用户名排序。取值只能为createTime或者name。createTime-按照创建时间排序；name-按照用户名排序
+     * Get 返回数据按照创建时间或者用户名排序。取值支持createTime、name、updateTime。createTime-按照创建时间排序；name-按照用户名排序; updateTime-按照更新时间排序。 
+     * @return OrderBy 返回数据按照创建时间或者用户名排序。取值支持createTime、name、updateTime。createTime-按照创建时间排序；name-按照用户名排序; updateTime-按照更新时间排序。
      */
     public String getOrderBy() {
         return this.OrderBy;
     }
 
     /**
-     * Set 返回数据按照创建时间或者用户名排序。取值只能为createTime或者name。createTime-按照创建时间排序；name-按照用户名排序
-     * @param OrderBy 返回数据按照创建时间或者用户名排序。取值只能为createTime或者name。createTime-按照创建时间排序；name-按照用户名排序
+     * Set 返回数据按照创建时间或者用户名排序。取值支持createTime、name、updateTime。createTime-按照创建时间排序；name-按照用户名排序; updateTime-按照更新时间排序。
+     * @param OrderBy 返回数据按照创建时间或者用户名排序。取值支持createTime、name、updateTime。createTime-按照创建时间排序；name-按照用户名排序; updateTime-按照更新时间排序。
      */
     public void setOrderBy(String OrderBy) {
         this.OrderBy = OrderBy;

@@ -31,6 +31,54 @@ public class DescribeMachinesRequest extends AbstractModel {
     private String GroupId;
 
     /**
+    * ip
+- 按照【ip】进行过滤。
+- 类型：String
+- 必选：否
+
+instance
+- 按照【instance】进行过滤。
+- 类型：String
+- 必选：否
+
+version
+- 按照【LogListener版本】进行过滤。
+- 类型：String
+- 必选：否
+
+status
+- 按照【状态】进行过滤。
+- 类型：String
+- 必选：否
+- 可选值：0：离线，1：正常
+
+offlineTime
+- 按照【机器离线时间】进行过滤。
+- 类型：String
+- 必选：否
+- - 可选值：0：无离线时间，12：12小时内，24：一天内，48：两天内，99：两天前
+
+每次请求的Filters的上限为10，Filter.Values的上限为100。
+    */
+    @SerializedName("Filters")
+    @Expose
+    private Filter [] Filters;
+
+    /**
+    * 分页的偏移量。
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
+
+    /**
+    * 分页单页限制数目。最大支持100
+    */
+    @SerializedName("Limit")
+    @Expose
+    private Long Limit;
+
+    /**
      * Get 查询的机器组ID 
      * @return GroupId 查询的机器组ID
      */
@@ -46,6 +94,162 @@ public class DescribeMachinesRequest extends AbstractModel {
         this.GroupId = GroupId;
     }
 
+    /**
+     * Get ip
+- 按照【ip】进行过滤。
+- 类型：String
+- 必选：否
+
+instance
+- 按照【instance】进行过滤。
+- 类型：String
+- 必选：否
+
+version
+- 按照【LogListener版本】进行过滤。
+- 类型：String
+- 必选：否
+
+status
+- 按照【状态】进行过滤。
+- 类型：String
+- 必选：否
+- 可选值：0：离线，1：正常
+
+offlineTime
+- 按照【机器离线时间】进行过滤。
+- 类型：String
+- 必选：否
+- - 可选值：0：无离线时间，12：12小时内，24：一天内，48：两天内，99：两天前
+
+每次请求的Filters的上限为10，Filter.Values的上限为100。 
+     * @return Filters ip
+- 按照【ip】进行过滤。
+- 类型：String
+- 必选：否
+
+instance
+- 按照【instance】进行过滤。
+- 类型：String
+- 必选：否
+
+version
+- 按照【LogListener版本】进行过滤。
+- 类型：String
+- 必选：否
+
+status
+- 按照【状态】进行过滤。
+- 类型：String
+- 必选：否
+- 可选值：0：离线，1：正常
+
+offlineTime
+- 按照【机器离线时间】进行过滤。
+- 类型：String
+- 必选：否
+- - 可选值：0：无离线时间，12：12小时内，24：一天内，48：两天内，99：两天前
+
+每次请求的Filters的上限为10，Filter.Values的上限为100。
+     */
+    public Filter [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * Set ip
+- 按照【ip】进行过滤。
+- 类型：String
+- 必选：否
+
+instance
+- 按照【instance】进行过滤。
+- 类型：String
+- 必选：否
+
+version
+- 按照【LogListener版本】进行过滤。
+- 类型：String
+- 必选：否
+
+status
+- 按照【状态】进行过滤。
+- 类型：String
+- 必选：否
+- 可选值：0：离线，1：正常
+
+offlineTime
+- 按照【机器离线时间】进行过滤。
+- 类型：String
+- 必选：否
+- - 可选值：0：无离线时间，12：12小时内，24：一天内，48：两天内，99：两天前
+
+每次请求的Filters的上限为10，Filter.Values的上限为100。
+     * @param Filters ip
+- 按照【ip】进行过滤。
+- 类型：String
+- 必选：否
+
+instance
+- 按照【instance】进行过滤。
+- 类型：String
+- 必选：否
+
+version
+- 按照【LogListener版本】进行过滤。
+- 类型：String
+- 必选：否
+
+status
+- 按照【状态】进行过滤。
+- 类型：String
+- 必选：否
+- 可选值：0：离线，1：正常
+
+offlineTime
+- 按照【机器离线时间】进行过滤。
+- 类型：String
+- 必选：否
+- - 可选值：0：无离线时间，12：12小时内，24：一天内，48：两天内，99：两天前
+
+每次请求的Filters的上限为10，Filter.Values的上限为100。
+     */
+    public void setFilters(Filter [] Filters) {
+        this.Filters = Filters;
+    }
+
+    /**
+     * Get 分页的偏移量。 
+     * @return Offset 分页的偏移量。
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set 分页的偏移量。
+     * @param Offset 分页的偏移量。
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
+    }
+
+    /**
+     * Get 分页单页限制数目。最大支持100 
+     * @return Limit 分页单页限制数目。最大支持100
+     */
+    public Long getLimit() {
+        return this.Limit;
+    }
+
+    /**
+     * Set 分页单页限制数目。最大支持100
+     * @param Limit 分页单页限制数目。最大支持100
+     */
+    public void setLimit(Long Limit) {
+        this.Limit = Limit;
+    }
+
     public DescribeMachinesRequest() {
     }
 
@@ -57,6 +261,18 @@ public class DescribeMachinesRequest extends AbstractModel {
         if (source.GroupId != null) {
             this.GroupId = new String(source.GroupId);
         }
+        if (source.Filters != null) {
+            this.Filters = new Filter[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new Filter(source.Filters[i]);
+            }
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
     }
 
 
@@ -65,6 +281,9 @@ public class DescribeMachinesRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
 
     }
 }

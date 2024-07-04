@@ -38,6 +38,17 @@ public class Delta extends AbstractModel {
     private String Content;
 
     /**
+    * 模型生成的工具调用，仅 hunyuan-functioncall 模型支持
+说明：
+对于每一次的输出值应该以Id为标识对Type、Name、Arguments字段进行合并。
+
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ToolCalls")
+    @Expose
+    private ToolCall [] ToolCalls;
+
+    /**
      * Get 角色名称。 
      * @return Role 角色名称。
      */
@@ -69,6 +80,38 @@ public class Delta extends AbstractModel {
         this.Content = Content;
     }
 
+    /**
+     * Get 模型生成的工具调用，仅 hunyuan-functioncall 模型支持
+说明：
+对于每一次的输出值应该以Id为标识对Type、Name、Arguments字段进行合并。
+
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ToolCalls 模型生成的工具调用，仅 hunyuan-functioncall 模型支持
+说明：
+对于每一次的输出值应该以Id为标识对Type、Name、Arguments字段进行合并。
+
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ToolCall [] getToolCalls() {
+        return this.ToolCalls;
+    }
+
+    /**
+     * Set 模型生成的工具调用，仅 hunyuan-functioncall 模型支持
+说明：
+对于每一次的输出值应该以Id为标识对Type、Name、Arguments字段进行合并。
+
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ToolCalls 模型生成的工具调用，仅 hunyuan-functioncall 模型支持
+说明：
+对于每一次的输出值应该以Id为标识对Type、Name、Arguments字段进行合并。
+
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setToolCalls(ToolCall [] ToolCalls) {
+        this.ToolCalls = ToolCalls;
+    }
+
     public Delta() {
     }
 
@@ -83,6 +126,12 @@ public class Delta extends AbstractModel {
         if (source.Content != null) {
             this.Content = new String(source.Content);
         }
+        if (source.ToolCalls != null) {
+            this.ToolCalls = new ToolCall[source.ToolCalls.length];
+            for (int i = 0; i < source.ToolCalls.length; i++) {
+                this.ToolCalls[i] = new ToolCall(source.ToolCalls[i]);
+            }
+        }
     }
 
 
@@ -92,6 +141,7 @@ public class Delta extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Role", this.Role);
         this.setParamSimple(map, prefix + "Content", this.Content);
+        this.setParamArrayObj(map, prefix + "ToolCalls.", this.ToolCalls);
 
     }
 }

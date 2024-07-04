@@ -61,6 +61,14 @@ public class ClbListenerRule extends AbstractModel {
     private String [] NoMatchDomains;
 
     /**
+    * 规则绑定的路径
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Url")
+    @Expose
+    private String Url;
+
+    /**
      * Get 规则ID 
      * @return LocationId 规则ID
      */
@@ -148,6 +156,26 @@ public class ClbListenerRule extends AbstractModel {
         this.NoMatchDomains = NoMatchDomains;
     }
 
+    /**
+     * Get 规则绑定的路径
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Url 规则绑定的路径
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getUrl() {
+        return this.Url;
+    }
+
+    /**
+     * Set 规则绑定的路径
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Url 规则绑定的路径
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUrl(String Url) {
+        this.Url = Url;
+    }
+
     public ClbListenerRule() {
     }
 
@@ -174,6 +202,9 @@ public class ClbListenerRule extends AbstractModel {
                 this.NoMatchDomains[i] = new String(source.NoMatchDomains[i]);
             }
         }
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
+        }
     }
 
 
@@ -186,6 +217,7 @@ public class ClbListenerRule extends AbstractModel {
         this.setParamSimple(map, prefix + "IsMatch", this.IsMatch);
         this.setParamObj(map, prefix + "Certificate.", this.Certificate);
         this.setParamArraySimple(map, prefix + "NoMatchDomains.", this.NoMatchDomains);
+        this.setParamSimple(map, prefix + "Url", this.Url);
 
     }
 }

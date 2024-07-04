@@ -193,6 +193,14 @@ public class UpdateRecordDetail extends AbstractModel {
     private String TCBType;
 
     /**
+    * 监听器Url(clb专属)
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Url")
+    @Expose
+    private String Url;
+
+    /**
      * Get 详情记录id 
      * @return Id 详情记录id
      */
@@ -604,6 +612,26 @@ public class UpdateRecordDetail extends AbstractModel {
         this.TCBType = TCBType;
     }
 
+    /**
+     * Get 监听器Url(clb专属)
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Url 监听器Url(clb专属)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getUrl() {
+        return this.Url;
+    }
+
+    /**
+     * Set 监听器Url(clb专属)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Url 监听器Url(clb专属)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUrl(String Url) {
+        this.Url = Url;
+    }
+
     public UpdateRecordDetail() {
     }
 
@@ -681,6 +709,9 @@ public class UpdateRecordDetail extends AbstractModel {
         if (source.TCBType != null) {
             this.TCBType = new String(source.TCBType);
         }
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
+        }
     }
 
 
@@ -710,6 +741,7 @@ public class UpdateRecordDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "SecretName", this.SecretName);
         this.setParamSimple(map, prefix + "EnvId", this.EnvId);
         this.setParamSimple(map, prefix + "TCBType", this.TCBType);
+        this.setParamSimple(map, prefix + "Url", this.Url);
 
     }
 }

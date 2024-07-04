@@ -62,6 +62,38 @@ public class ApproveUser extends AbstractModel {
     private Scf Scf;
 
     /**
+    * 审批状态 （取值范围 0:待审批  1:审批通过  2:拒绝  6:其他人已审批）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ApproveStatus")
+    @Expose
+    private Long ApproveStatus;
+
+    /**
+    * 审批意见
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ApproveMsg")
+    @Expose
+    private String ApproveMsg;
+
+    /**
+    * 审批时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ApproveTime")
+    @Expose
+    private String ApproveTime;
+
+    /**
+    * 审批组名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ApproveGroup")
+    @Expose
+    private String ApproveGroup;
+
+    /**
      * Get 用户uin 
      * @return Uin 用户uin
      */
@@ -153,6 +185,86 @@ public class ApproveUser extends AbstractModel {
         this.Scf = Scf;
     }
 
+    /**
+     * Get 审批状态 （取值范围 0:待审批  1:审批通过  2:拒绝  6:其他人已审批）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ApproveStatus 审批状态 （取值范围 0:待审批  1:审批通过  2:拒绝  6:其他人已审批）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getApproveStatus() {
+        return this.ApproveStatus;
+    }
+
+    /**
+     * Set 审批状态 （取值范围 0:待审批  1:审批通过  2:拒绝  6:其他人已审批）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ApproveStatus 审批状态 （取值范围 0:待审批  1:审批通过  2:拒绝  6:其他人已审批）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setApproveStatus(Long ApproveStatus) {
+        this.ApproveStatus = ApproveStatus;
+    }
+
+    /**
+     * Get 审批意见
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ApproveMsg 审批意见
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getApproveMsg() {
+        return this.ApproveMsg;
+    }
+
+    /**
+     * Set 审批意见
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ApproveMsg 审批意见
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setApproveMsg(String ApproveMsg) {
+        this.ApproveMsg = ApproveMsg;
+    }
+
+    /**
+     * Get 审批时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ApproveTime 审批时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getApproveTime() {
+        return this.ApproveTime;
+    }
+
+    /**
+     * Set 审批时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ApproveTime 审批时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setApproveTime(String ApproveTime) {
+        this.ApproveTime = ApproveTime;
+    }
+
+    /**
+     * Get 审批组名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ApproveGroup 审批组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getApproveGroup() {
+        return this.ApproveGroup;
+    }
+
+    /**
+     * Set 审批组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ApproveGroup 审批组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setApproveGroup(String ApproveGroup) {
+        this.ApproveGroup = ApproveGroup;
+    }
+
     public ApproveUser() {
     }
 
@@ -176,6 +288,18 @@ public class ApproveUser extends AbstractModel {
         if (source.Scf != null) {
             this.Scf = new Scf(source.Scf);
         }
+        if (source.ApproveStatus != null) {
+            this.ApproveStatus = new Long(source.ApproveStatus);
+        }
+        if (source.ApproveMsg != null) {
+            this.ApproveMsg = new String(source.ApproveMsg);
+        }
+        if (source.ApproveTime != null) {
+            this.ApproveTime = new String(source.ApproveTime);
+        }
+        if (source.ApproveGroup != null) {
+            this.ApproveGroup = new String(source.ApproveGroup);
+        }
     }
 
 
@@ -188,6 +312,10 @@ public class ApproveUser extends AbstractModel {
         this.setParamSimple(map, prefix + "Desc", this.Desc);
         this.setParamSimple(map, prefix + "Nick", this.Nick);
         this.setParamObj(map, prefix + "Scf.", this.Scf);
+        this.setParamSimple(map, prefix + "ApproveStatus", this.ApproveStatus);
+        this.setParamSimple(map, prefix + "ApproveMsg", this.ApproveMsg);
+        this.setParamSimple(map, prefix + "ApproveTime", this.ApproveTime);
+        this.setParamSimple(map, prefix + "ApproveGroup", this.ApproveGroup);
 
     }
 }

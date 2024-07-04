@@ -24,11 +24,7 @@ import java.util.HashMap;
 public class ExportBaselineHostDetectListRequest extends AbstractModel {
 
     /**
-    * <li>HostTag - string - 是否必填：否 - 主机标签</i>
-<li>ItemId - int64 - 是否必填：否 - 项Id</i>
-<li>RuleId - int64 - 是否必填：否 - 规则Id</li>
-<li>IsPassed - int - 是否必填：否 - 是否通过</li>
-<li>RiskTier - int - 是否必填：否 - 风险等级</li>
+    * <li>HostTag - string - 是否必填：否 - 主机标签</li><li>ItemId - int64 - 是否必填：否 - 项Id</li><li>RuleId - int64 - 是否必填：否 - 规则Id</li><li>IsPassed - int - 是否必填：否 - 是否通过</li><li>RiskTier - int - 是否必填：否 - 风险等级</li>
     */
     @SerializedName("Filters")
     @Expose
@@ -42,32 +38,23 @@ public class ExportBaselineHostDetectListRequest extends AbstractModel {
     private Long ExportAll;
 
     /**
-     * Get <li>HostTag - string - 是否必填：否 - 主机标签</i>
-<li>ItemId - int64 - 是否必填：否 - 项Id</i>
-<li>RuleId - int64 - 是否必填：否 - 规则Id</li>
-<li>IsPassed - int - 是否必填：否 - 是否通过</li>
-<li>RiskTier - int - 是否必填：否 - 风险等级</li> 
-     * @return Filters <li>HostTag - string - 是否必填：否 - 主机标签</i>
-<li>ItemId - int64 - 是否必填：否 - 项Id</i>
-<li>RuleId - int64 - 是否必填：否 - 规则Id</li>
-<li>IsPassed - int - 是否必填：否 - 是否通过</li>
-<li>RiskTier - int - 是否必填：否 - 风险等级</li>
+    * 0:导出界面展示；1:导出全部结果事件
+    */
+    @SerializedName("IsExportDetail")
+    @Expose
+    private Long IsExportDetail;
+
+    /**
+     * Get <li>HostTag - string - 是否必填：否 - 主机标签</li><li>ItemId - int64 - 是否必填：否 - 项Id</li><li>RuleId - int64 - 是否必填：否 - 规则Id</li><li>IsPassed - int - 是否必填：否 - 是否通过</li><li>RiskTier - int - 是否必填：否 - 风险等级</li> 
+     * @return Filters <li>HostTag - string - 是否必填：否 - 主机标签</li><li>ItemId - int64 - 是否必填：否 - 项Id</li><li>RuleId - int64 - 是否必填：否 - 规则Id</li><li>IsPassed - int - 是否必填：否 - 是否通过</li><li>RiskTier - int - 是否必填：否 - 风险等级</li>
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set <li>HostTag - string - 是否必填：否 - 主机标签</i>
-<li>ItemId - int64 - 是否必填：否 - 项Id</i>
-<li>RuleId - int64 - 是否必填：否 - 规则Id</li>
-<li>IsPassed - int - 是否必填：否 - 是否通过</li>
-<li>RiskTier - int - 是否必填：否 - 风险等级</li>
-     * @param Filters <li>HostTag - string - 是否必填：否 - 主机标签</i>
-<li>ItemId - int64 - 是否必填：否 - 项Id</i>
-<li>RuleId - int64 - 是否必填：否 - 规则Id</li>
-<li>IsPassed - int - 是否必填：否 - 是否通过</li>
-<li>RiskTier - int - 是否必填：否 - 风险等级</li>
+     * Set <li>HostTag - string - 是否必填：否 - 主机标签</li><li>ItemId - int64 - 是否必填：否 - 项Id</li><li>RuleId - int64 - 是否必填：否 - 规则Id</li><li>IsPassed - int - 是否必填：否 - 是否通过</li><li>RiskTier - int - 是否必填：否 - 风险等级</li>
+     * @param Filters <li>HostTag - string - 是否必填：否 - 主机标签</li><li>ItemId - int64 - 是否必填：否 - 项Id</li><li>RuleId - int64 - 是否必填：否 - 规则Id</li><li>IsPassed - int - 是否必填：否 - 是否通过</li><li>RiskTier - int - 是否必填：否 - 风险等级</li>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
@@ -89,6 +76,22 @@ public class ExportBaselineHostDetectListRequest extends AbstractModel {
         this.ExportAll = ExportAll;
     }
 
+    /**
+     * Get 0:导出界面展示；1:导出全部结果事件 
+     * @return IsExportDetail 0:导出界面展示；1:导出全部结果事件
+     */
+    public Long getIsExportDetail() {
+        return this.IsExportDetail;
+    }
+
+    /**
+     * Set 0:导出界面展示；1:导出全部结果事件
+     * @param IsExportDetail 0:导出界面展示；1:导出全部结果事件
+     */
+    public void setIsExportDetail(Long IsExportDetail) {
+        this.IsExportDetail = IsExportDetail;
+    }
+
     public ExportBaselineHostDetectListRequest() {
     }
 
@@ -106,6 +109,9 @@ public class ExportBaselineHostDetectListRequest extends AbstractModel {
         if (source.ExportAll != null) {
             this.ExportAll = new Long(source.ExportAll);
         }
+        if (source.IsExportDetail != null) {
+            this.IsExportDetail = new Long(source.IsExportDetail);
+        }
     }
 
 
@@ -115,6 +121,7 @@ public class ExportBaselineHostDetectListRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "ExportAll", this.ExportAll);
+        this.setParamSimple(map, prefix + "IsExportDetail", this.IsExportDetail);
 
     }
 }

@@ -62,8 +62,8 @@ public class RecognizeGeneralTextImageWarnRequest extends AbstractModel {
 
     /**
     * 支持的模板类型
-- General 通用告警
-- LicensePlate 车牌告警
+- General 通用告警（支持所有类型告警）
+- LicensePlate 车牌告警（支持翻拍告警）
     */
     @SerializedName("Type")
     @Expose
@@ -171,11 +171,11 @@ public class RecognizeGeneralTextImageWarnRequest extends AbstractModel {
 
     /**
      * Get 支持的模板类型
-- General 通用告警
-- LicensePlate 车牌告警 
+- General 通用告警（支持所有类型告警）
+- LicensePlate 车牌告警（支持翻拍告警） 
      * @return Type 支持的模板类型
-- General 通用告警
-- LicensePlate 车牌告警
+- General 通用告警（支持所有类型告警）
+- LicensePlate 车牌告警（支持翻拍告警）
      */
     public String getType() {
         return this.Type;
@@ -183,11 +183,11 @@ public class RecognizeGeneralTextImageWarnRequest extends AbstractModel {
 
     /**
      * Set 支持的模板类型
-- General 通用告警
-- LicensePlate 车牌告警
+- General 通用告警（支持所有类型告警）
+- LicensePlate 车牌告警（支持翻拍告警）
      * @param Type 支持的模板类型
-- General 通用告警
-- LicensePlate 车牌告警
+- General 通用告警（支持所有类型告警）
+- LicensePlate 车牌告警（支持翻拍告警）
      */
     public void setType(String Type) {
         this.Type = Type;

@@ -24,11 +24,39 @@ import java.util.HashMap;
 public class ActivateTWeCallLicenseResponse extends AbstractModel {
 
     /**
+    * 设备激活返回数据
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DeviceList")
+    @Expose
+    private DeviceActiveResult [] DeviceList;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 设备激活返回数据
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DeviceList 设备激活返回数据
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public DeviceActiveResult [] getDeviceList() {
+        return this.DeviceList;
+    }
+
+    /**
+     * Set 设备激活返回数据
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DeviceList 设备激活返回数据
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDeviceList(DeviceActiveResult [] DeviceList) {
+        this.DeviceList = DeviceList;
+    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -54,6 +82,12 @@ public class ActivateTWeCallLicenseResponse extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ActivateTWeCallLicenseResponse(ActivateTWeCallLicenseResponse source) {
+        if (source.DeviceList != null) {
+            this.DeviceList = new DeviceActiveResult[source.DeviceList.length];
+            for (int i = 0; i < source.DeviceList.length; i++) {
+                this.DeviceList[i] = new DeviceActiveResult(source.DeviceList[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -64,6 +98,7 @@ public class ActivateTWeCallLicenseResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "DeviceList.", this.DeviceList);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

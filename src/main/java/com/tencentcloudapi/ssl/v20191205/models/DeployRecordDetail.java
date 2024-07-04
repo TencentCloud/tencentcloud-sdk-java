@@ -182,6 +182,14 @@ public class DeployRecordDetail extends AbstractModel {
     private String Region;
 
     /**
+    * 部署CLB监听器的Url
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Url")
+    @Expose
+    private String [] Url;
+
+    /**
      * Get 部署记录详情ID 
      * @return Id 部署记录详情ID
      */
@@ -561,6 +569,26 @@ public class DeployRecordDetail extends AbstractModel {
         this.Region = Region;
     }
 
+    /**
+     * Get 部署CLB监听器的Url
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Url 部署CLB监听器的Url
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getUrl() {
+        return this.Url;
+    }
+
+    /**
+     * Set 部署CLB监听器的Url
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Url 部署CLB监听器的Url
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUrl(String [] Url) {
+        this.Url = Url;
+    }
+
     public DeployRecordDetail() {
     }
 
@@ -635,6 +663,12 @@ public class DeployRecordDetail extends AbstractModel {
         if (source.Region != null) {
             this.Region = new String(source.Region);
         }
+        if (source.Url != null) {
+            this.Url = new String[source.Url.length];
+            for (int i = 0; i < source.Url.length; i++) {
+                this.Url[i] = new String(source.Url[i]);
+            }
+        }
     }
 
 
@@ -663,6 +697,7 @@ public class DeployRecordDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "EnvId", this.EnvId);
         this.setParamSimple(map, prefix + "TCBType", this.TCBType);
         this.setParamSimple(map, prefix + "Region", this.Region);
+        this.setParamArraySimple(map, prefix + "Url.", this.Url);
 
     }
 }

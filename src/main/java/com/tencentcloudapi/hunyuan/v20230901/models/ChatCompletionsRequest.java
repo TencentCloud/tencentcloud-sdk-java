@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ChatCompletionsRequest extends AbstractModel {
 
     /**
-    * 模型名称，可选值包括 hunyuan-lite、hunyuan-standard、hunyuan-standard-256K、hunyuan-pro。
+    * 模型名称，可选值包括 hunyuan-lite、hunyuan-standard、hunyuan-standard-256K、hunyuan-pro、 hunyuan-code、 hunyuan-role、 hunyuan-functioncall、 hunyuan-vision。
 各模型介绍请阅读 [产品概述](https://cloud.tencent.com/document/product/1729/104753) 中的说明。
 
 注意：
@@ -38,8 +38,8 @@ public class ChatCompletionsRequest extends AbstractModel {
     * 聊天上下文信息。
 说明：
 1. 长度最多为 40，按对话时间从旧到新在数组中排列。
-2. Message.Role 可选值：system、user、assistant。
-其中，system 角色可选，如存在则必须位于列表的最开始。user 和 assistant 需交替出现（一问一答），以 user 提问开始和结束，且 Content 不能为空。Role 的顺序示例：[system（可选） user assistant user assistant user ...]。
+2. Message.Role 可选值：system、user、assistant、 tool。
+其中，system 角色可选，如存在则必须位于列表的最开始。user（tool） 和 assistant 需交替出现（一问一答），以 user 提问开始，user（tool）提问结束，且 Content 不能为空。Role 的顺序示例：[system（可选） user assistant user assistant user ...]。
 3. Messages 中 Content 总长度不能超过模型输入长度上限（可参考 [产品概述](https://cloud.tencent.com/document/product/1729/104753) 文档），超过则会截断最前面的内容，只保留尾部内容。
     */
     @SerializedName("Messages")
@@ -111,12 +111,37 @@ public class ChatCompletionsRequest extends AbstractModel {
     private Boolean EnableEnhancement;
 
     /**
-     * Get 模型名称，可选值包括 hunyuan-lite、hunyuan-standard、hunyuan-standard-256K、hunyuan-pro。
+    * 可调用的工具列表，仅对 hunyuan-functioncall 模型生效。
+    */
+    @SerializedName("Tools")
+    @Expose
+    private Tool [] Tools;
+
+    /**
+    * 工具使用选项，可选值包括 none、auto、custom。
+说明：
+1. 仅对 hunyuan-functioncall 模型生效。
+2. none：不调用工具；auto：模型自行选择生成回复或调用工具；custom：强制模型调用指定的工具。
+3. 未设置时，默认值为auto
+    */
+    @SerializedName("ToolChoice")
+    @Expose
+    private String ToolChoice;
+
+    /**
+    * 强制模型调用指定的工具，当参数ToolChoice为custom时，此参数为必填
+    */
+    @SerializedName("CustomTool")
+    @Expose
+    private Tool CustomTool;
+
+    /**
+     * Get 模型名称，可选值包括 hunyuan-lite、hunyuan-standard、hunyuan-standard-256K、hunyuan-pro、 hunyuan-code、 hunyuan-role、 hunyuan-functioncall、 hunyuan-vision。
 各模型介绍请阅读 [产品概述](https://cloud.tencent.com/document/product/1729/104753) 中的说明。
 
 注意：
 不同的模型计费不同，请根据 [购买指南](https://cloud.tencent.com/document/product/1729/97731) 按需调用。 
-     * @return Model 模型名称，可选值包括 hunyuan-lite、hunyuan-standard、hunyuan-standard-256K、hunyuan-pro。
+     * @return Model 模型名称，可选值包括 hunyuan-lite、hunyuan-standard、hunyuan-standard-256K、hunyuan-pro、 hunyuan-code、 hunyuan-role、 hunyuan-functioncall、 hunyuan-vision。
 各模型介绍请阅读 [产品概述](https://cloud.tencent.com/document/product/1729/104753) 中的说明。
 
 注意：
@@ -127,12 +152,12 @@ public class ChatCompletionsRequest extends AbstractModel {
     }
 
     /**
-     * Set 模型名称，可选值包括 hunyuan-lite、hunyuan-standard、hunyuan-standard-256K、hunyuan-pro。
+     * Set 模型名称，可选值包括 hunyuan-lite、hunyuan-standard、hunyuan-standard-256K、hunyuan-pro、 hunyuan-code、 hunyuan-role、 hunyuan-functioncall、 hunyuan-vision。
 各模型介绍请阅读 [产品概述](https://cloud.tencent.com/document/product/1729/104753) 中的说明。
 
 注意：
 不同的模型计费不同，请根据 [购买指南](https://cloud.tencent.com/document/product/1729/97731) 按需调用。
-     * @param Model 模型名称，可选值包括 hunyuan-lite、hunyuan-standard、hunyuan-standard-256K、hunyuan-pro。
+     * @param Model 模型名称，可选值包括 hunyuan-lite、hunyuan-standard、hunyuan-standard-256K、hunyuan-pro、 hunyuan-code、 hunyuan-role、 hunyuan-functioncall、 hunyuan-vision。
 各模型介绍请阅读 [产品概述](https://cloud.tencent.com/document/product/1729/104753) 中的说明。
 
 注意：
@@ -146,14 +171,14 @@ public class ChatCompletionsRequest extends AbstractModel {
      * Get 聊天上下文信息。
 说明：
 1. 长度最多为 40，按对话时间从旧到新在数组中排列。
-2. Message.Role 可选值：system、user、assistant。
-其中，system 角色可选，如存在则必须位于列表的最开始。user 和 assistant 需交替出现（一问一答），以 user 提问开始和结束，且 Content 不能为空。Role 的顺序示例：[system（可选） user assistant user assistant user ...]。
+2. Message.Role 可选值：system、user、assistant、 tool。
+其中，system 角色可选，如存在则必须位于列表的最开始。user（tool） 和 assistant 需交替出现（一问一答），以 user 提问开始，user（tool）提问结束，且 Content 不能为空。Role 的顺序示例：[system（可选） user assistant user assistant user ...]。
 3. Messages 中 Content 总长度不能超过模型输入长度上限（可参考 [产品概述](https://cloud.tencent.com/document/product/1729/104753) 文档），超过则会截断最前面的内容，只保留尾部内容。 
      * @return Messages 聊天上下文信息。
 说明：
 1. 长度最多为 40，按对话时间从旧到新在数组中排列。
-2. Message.Role 可选值：system、user、assistant。
-其中，system 角色可选，如存在则必须位于列表的最开始。user 和 assistant 需交替出现（一问一答），以 user 提问开始和结束，且 Content 不能为空。Role 的顺序示例：[system（可选） user assistant user assistant user ...]。
+2. Message.Role 可选值：system、user、assistant、 tool。
+其中，system 角色可选，如存在则必须位于列表的最开始。user（tool） 和 assistant 需交替出现（一问一答），以 user 提问开始，user（tool）提问结束，且 Content 不能为空。Role 的顺序示例：[system（可选） user assistant user assistant user ...]。
 3. Messages 中 Content 总长度不能超过模型输入长度上限（可参考 [产品概述](https://cloud.tencent.com/document/product/1729/104753) 文档），超过则会截断最前面的内容，只保留尾部内容。
      */
     public Message [] getMessages() {
@@ -164,14 +189,14 @@ public class ChatCompletionsRequest extends AbstractModel {
      * Set 聊天上下文信息。
 说明：
 1. 长度最多为 40，按对话时间从旧到新在数组中排列。
-2. Message.Role 可选值：system、user、assistant。
-其中，system 角色可选，如存在则必须位于列表的最开始。user 和 assistant 需交替出现（一问一答），以 user 提问开始和结束，且 Content 不能为空。Role 的顺序示例：[system（可选） user assistant user assistant user ...]。
+2. Message.Role 可选值：system、user、assistant、 tool。
+其中，system 角色可选，如存在则必须位于列表的最开始。user（tool） 和 assistant 需交替出现（一问一答），以 user 提问开始，user（tool）提问结束，且 Content 不能为空。Role 的顺序示例：[system（可选） user assistant user assistant user ...]。
 3. Messages 中 Content 总长度不能超过模型输入长度上限（可参考 [产品概述](https://cloud.tencent.com/document/product/1729/104753) 文档），超过则会截断最前面的内容，只保留尾部内容。
      * @param Messages 聊天上下文信息。
 说明：
 1. 长度最多为 40，按对话时间从旧到新在数组中排列。
-2. Message.Role 可选值：system、user、assistant。
-其中，system 角色可选，如存在则必须位于列表的最开始。user 和 assistant 需交替出现（一问一答），以 user 提问开始和结束，且 Content 不能为空。Role 的顺序示例：[system（可选） user assistant user assistant user ...]。
+2. Message.Role 可选值：system、user、assistant、 tool。
+其中，system 角色可选，如存在则必须位于列表的最开始。user（tool） 和 assistant 需交替出现（一问一答），以 user 提问开始，user（tool）提问结束，且 Content 不能为空。Role 的顺序示例：[system（可选） user assistant user assistant user ...]。
 3. Messages 中 Content 总长度不能超过模型输入长度上限（可参考 [产品概述](https://cloud.tencent.com/document/product/1729/104753) 文档），超过则会截断最前面的内容，只保留尾部内容。
      */
     public void setMessages(Message [] Messages) {
@@ -374,6 +399,70 @@ public class ChatCompletionsRequest extends AbstractModel {
         this.EnableEnhancement = EnableEnhancement;
     }
 
+    /**
+     * Get 可调用的工具列表，仅对 hunyuan-functioncall 模型生效。 
+     * @return Tools 可调用的工具列表，仅对 hunyuan-functioncall 模型生效。
+     */
+    public Tool [] getTools() {
+        return this.Tools;
+    }
+
+    /**
+     * Set 可调用的工具列表，仅对 hunyuan-functioncall 模型生效。
+     * @param Tools 可调用的工具列表，仅对 hunyuan-functioncall 模型生效。
+     */
+    public void setTools(Tool [] Tools) {
+        this.Tools = Tools;
+    }
+
+    /**
+     * Get 工具使用选项，可选值包括 none、auto、custom。
+说明：
+1. 仅对 hunyuan-functioncall 模型生效。
+2. none：不调用工具；auto：模型自行选择生成回复或调用工具；custom：强制模型调用指定的工具。
+3. 未设置时，默认值为auto 
+     * @return ToolChoice 工具使用选项，可选值包括 none、auto、custom。
+说明：
+1. 仅对 hunyuan-functioncall 模型生效。
+2. none：不调用工具；auto：模型自行选择生成回复或调用工具；custom：强制模型调用指定的工具。
+3. 未设置时，默认值为auto
+     */
+    public String getToolChoice() {
+        return this.ToolChoice;
+    }
+
+    /**
+     * Set 工具使用选项，可选值包括 none、auto、custom。
+说明：
+1. 仅对 hunyuan-functioncall 模型生效。
+2. none：不调用工具；auto：模型自行选择生成回复或调用工具；custom：强制模型调用指定的工具。
+3. 未设置时，默认值为auto
+     * @param ToolChoice 工具使用选项，可选值包括 none、auto、custom。
+说明：
+1. 仅对 hunyuan-functioncall 模型生效。
+2. none：不调用工具；auto：模型自行选择生成回复或调用工具；custom：强制模型调用指定的工具。
+3. 未设置时，默认值为auto
+     */
+    public void setToolChoice(String ToolChoice) {
+        this.ToolChoice = ToolChoice;
+    }
+
+    /**
+     * Get 强制模型调用指定的工具，当参数ToolChoice为custom时，此参数为必填 
+     * @return CustomTool 强制模型调用指定的工具，当参数ToolChoice为custom时，此参数为必填
+     */
+    public Tool getCustomTool() {
+        return this.CustomTool;
+    }
+
+    /**
+     * Set 强制模型调用指定的工具，当参数ToolChoice为custom时，此参数为必填
+     * @param CustomTool 强制模型调用指定的工具，当参数ToolChoice为custom时，此参数为必填
+     */
+    public void setCustomTool(Tool CustomTool) {
+        this.CustomTool = CustomTool;
+    }
+
     public ChatCompletionsRequest() {
     }
 
@@ -406,6 +495,18 @@ public class ChatCompletionsRequest extends AbstractModel {
         if (source.EnableEnhancement != null) {
             this.EnableEnhancement = new Boolean(source.EnableEnhancement);
         }
+        if (source.Tools != null) {
+            this.Tools = new Tool[source.Tools.length];
+            for (int i = 0; i < source.Tools.length; i++) {
+                this.Tools[i] = new Tool(source.Tools[i]);
+            }
+        }
+        if (source.ToolChoice != null) {
+            this.ToolChoice = new String(source.ToolChoice);
+        }
+        if (source.CustomTool != null) {
+            this.CustomTool = new Tool(source.CustomTool);
+        }
     }
 
 
@@ -420,6 +521,9 @@ public class ChatCompletionsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "TopP", this.TopP);
         this.setParamSimple(map, prefix + "Temperature", this.Temperature);
         this.setParamSimple(map, prefix + "EnableEnhancement", this.EnableEnhancement);
+        this.setParamArrayObj(map, prefix + "Tools.", this.Tools);
+        this.setParamSimple(map, prefix + "ToolChoice", this.ToolChoice);
+        this.setParamObj(map, prefix + "CustomTool.", this.CustomTool);
 
     }
 }

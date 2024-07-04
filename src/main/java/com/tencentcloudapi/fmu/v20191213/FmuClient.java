@@ -50,7 +50,9 @@ public class FmuClient extends AbstractClient{
     }
 
     /**
-     *视频美颜(此接口目前已下线)
+     *产品不再维护，准备下线。
+
+视频美颜(此接口目前已下线)
      * @param req BeautifyVideoRequest
      * @return BeautifyVideoResponse
      * @throws TencentCloudSDKException
@@ -61,7 +63,9 @@ public class FmuClient extends AbstractClient{
     }
 
     /**
-     *撤销视频美颜任务请求
+     *产品不再维护，准备下线。
+
+撤销视频美颜任务请求
      * @param req CancelBeautifyVideoJobRequest
      * @return CancelBeautifyVideoJobResponse
      * @throws TencentCloudSDKException
@@ -108,7 +112,9 @@ public class FmuClient extends AbstractClient{
     }
 
     /**
-     *查询视频美颜处理进度
+     *产品不再维护，准备下线。
+
+查询视频美颜处理进度
      * @param req QueryBeautifyVideoJobRequest
      * @return QueryBeautifyVideoJobResponse
      * @throws TencentCloudSDKException

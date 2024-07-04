@@ -173,6 +173,14 @@ PREPAID，包年包月
     private Long MaxMessageDelay;
 
     /**
+    * 是否自动续费
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RenewFlag")
+    @Expose
+    private Long RenewFlag;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -552,6 +560,26 @@ PREPAID，包年包月
         this.MaxMessageDelay = MaxMessageDelay;
     }
 
+    /**
+     * Get 是否自动续费
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RenewFlag 是否自动续费
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getRenewFlag() {
+        return this.RenewFlag;
+    }
+
+    /**
+     * Set 是否自动续费
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RenewFlag 是否自动续费
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRenewFlag(Long RenewFlag) {
+        this.RenewFlag = RenewFlag;
+    }
+
     public InstanceItem() {
     }
 
@@ -617,6 +645,9 @@ PREPAID，包年包月
         if (source.MaxMessageDelay != null) {
             this.MaxMessageDelay = new Long(source.MaxMessageDelay);
         }
+        if (source.RenewFlag != null) {
+            this.RenewFlag = new Long(source.RenewFlag);
+        }
     }
 
 
@@ -642,6 +673,7 @@ PREPAID，包年包月
         this.setParamSimple(map, prefix + "ScaledTpsLimit", this.ScaledTpsLimit);
         this.setParamSimple(map, prefix + "MessageRetention", this.MessageRetention);
         this.setParamSimple(map, prefix + "MaxMessageDelay", this.MaxMessageDelay);
+        this.setParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
 
     }
 }

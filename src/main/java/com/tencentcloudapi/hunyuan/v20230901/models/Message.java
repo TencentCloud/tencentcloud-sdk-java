@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class Message extends AbstractModel {
 
     /**
-    * 角色，可选值包括 system、user、assistant。
+    * 角色，可选值包括 system、user、assistant、 tool。
     */
     @SerializedName("Role")
     @Expose
@@ -38,16 +38,40 @@ public class Message extends AbstractModel {
     private String Content;
 
     /**
-     * Get 角色，可选值包括 system、user、assistant。 
-     * @return Role 角色，可选值包括 system、user、assistant。
+    * 多种类型内容（目前支持图片和文本），仅 hunyuan-vision 模型支持
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Contents")
+    @Expose
+    private Content [] Contents;
+
+    /**
+    * 当role为tool时传入，标识具体的函数调用
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ToolCallId")
+    @Expose
+    private String ToolCallId;
+
+    /**
+    * 模型生成的工具调用，仅 hunyuan-functioncall 模型支持
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ToolCalls")
+    @Expose
+    private ToolCall [] ToolCalls;
+
+    /**
+     * Get 角色，可选值包括 system、user、assistant、 tool。 
+     * @return Role 角色，可选值包括 system、user、assistant、 tool。
      */
     public String getRole() {
         return this.Role;
     }
 
     /**
-     * Set 角色，可选值包括 system、user、assistant。
-     * @param Role 角色，可选值包括 system、user、assistant。
+     * Set 角色，可选值包括 system、user、assistant、 tool。
+     * @param Role 角色，可选值包括 system、user、assistant、 tool。
      */
     public void setRole(String Role) {
         this.Role = Role;
@@ -69,6 +93,66 @@ public class Message extends AbstractModel {
         this.Content = Content;
     }
 
+    /**
+     * Get 多种类型内容（目前支持图片和文本），仅 hunyuan-vision 模型支持
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Contents 多种类型内容（目前支持图片和文本），仅 hunyuan-vision 模型支持
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Content [] getContents() {
+        return this.Contents;
+    }
+
+    /**
+     * Set 多种类型内容（目前支持图片和文本），仅 hunyuan-vision 模型支持
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Contents 多种类型内容（目前支持图片和文本），仅 hunyuan-vision 模型支持
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setContents(Content [] Contents) {
+        this.Contents = Contents;
+    }
+
+    /**
+     * Get 当role为tool时传入，标识具体的函数调用
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ToolCallId 当role为tool时传入，标识具体的函数调用
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getToolCallId() {
+        return this.ToolCallId;
+    }
+
+    /**
+     * Set 当role为tool时传入，标识具体的函数调用
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ToolCallId 当role为tool时传入，标识具体的函数调用
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setToolCallId(String ToolCallId) {
+        this.ToolCallId = ToolCallId;
+    }
+
+    /**
+     * Get 模型生成的工具调用，仅 hunyuan-functioncall 模型支持
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ToolCalls 模型生成的工具调用，仅 hunyuan-functioncall 模型支持
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ToolCall [] getToolCalls() {
+        return this.ToolCalls;
+    }
+
+    /**
+     * Set 模型生成的工具调用，仅 hunyuan-functioncall 模型支持
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ToolCalls 模型生成的工具调用，仅 hunyuan-functioncall 模型支持
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setToolCalls(ToolCall [] ToolCalls) {
+        this.ToolCalls = ToolCalls;
+    }
+
     public Message() {
     }
 
@@ -83,6 +167,21 @@ public class Message extends AbstractModel {
         if (source.Content != null) {
             this.Content = new String(source.Content);
         }
+        if (source.Contents != null) {
+            this.Contents = new Content[source.Contents.length];
+            for (int i = 0; i < source.Contents.length; i++) {
+                this.Contents[i] = new Content(source.Contents[i]);
+            }
+        }
+        if (source.ToolCallId != null) {
+            this.ToolCallId = new String(source.ToolCallId);
+        }
+        if (source.ToolCalls != null) {
+            this.ToolCalls = new ToolCall[source.ToolCalls.length];
+            for (int i = 0; i < source.ToolCalls.length; i++) {
+                this.ToolCalls[i] = new ToolCall(source.ToolCalls[i]);
+            }
+        }
     }
 
 
@@ -92,6 +191,9 @@ public class Message extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Role", this.Role);
         this.setParamSimple(map, prefix + "Content", this.Content);
+        this.setParamArrayObj(map, prefix + "Contents.", this.Contents);
+        this.setParamSimple(map, prefix + "ToolCallId", this.ToolCallId);
+        this.setParamArrayObj(map, prefix + "ToolCalls.", this.ToolCalls);
 
     }
 }
