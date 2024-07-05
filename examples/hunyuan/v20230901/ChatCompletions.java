@@ -7,12 +7,12 @@ import com.tencentcloudapi.common.SSEResponseModel;
 import com.tencentcloudapi.common.exception.TencentCloudSDKException;
 import com.tencentcloudapi.common.profile.ClientProfile;
 import com.tencentcloudapi.hunyuan.v20230901.HunyuanClient;
-import com.tencentcloudapi.hunyuan.v20230901.models.ChatStdRequest;
-import com.tencentcloudapi.hunyuan.v20230901.models.ChatStdResponse;
+import com.tencentcloudapi.hunyuan.v20230901.models.ChatCompletionsRequest;
+import com.tencentcloudapi.hunyuan.v20230901.models.ChatCompletionsResponse;
 import com.tencentcloudapi.hunyuan.v20230901.models.Choice;
 import com.tencentcloudapi.hunyuan.v20230901.models.Message;
 
-public class ChatStd {
+public class ChatCompletions {
     public static void main(String[] args) {
         try {
             Credential cred = new Credential(
@@ -23,7 +23,7 @@ public class ChatStd {
             ClientProfile clientProfile = new ClientProfile();
             HunyuanClient client = new HunyuanClient(cred, "ap-guangzhou", clientProfile);
 
-            ChatStdRequest req = new ChatStdRequest();
+            ChatCompletionsRequest req = new ChatCompletionsRequest();
             Message msg = new Message();
             msg.setRole("user");
             msg.setContent("你好, 可以讲个笑话吗");
@@ -31,16 +31,16 @@ public class ChatStd {
                     msg
             });
 
-            // hunyuan ChatStd/ChatPro 同时支持 stream 和非 stream 的情况
+            // hunyuan ChatCompletions/ChatPro 同时支持 stream 和非 stream 的情况
             req.setStream(true);
 
-            ChatStdResponse resp = client.ChatStd(req);
+            ChatCompletionsResponse resp = client.ChatCompletions(req);
 
             if (req.getStream()) {
                 // stream 示例
                 Gson gson = new GsonBuilder().excludeFieldsWithoutExposeAnnotation().create();
                 for (SSEResponseModel.SSE e : resp) {
-                    ChatStdResponse eventModel = gson.fromJson(e.Data, ChatStdResponse.class);
+                    ChatCompletionsResponse eventModel = gson.fromJson(e.Data, ChatCompletionsResponse.class);
                     Choice[] choices = eventModel.getChoices();
                     if (choices.length > 0) {
                         System.out.println(choices[0].getDelta().getContent());
