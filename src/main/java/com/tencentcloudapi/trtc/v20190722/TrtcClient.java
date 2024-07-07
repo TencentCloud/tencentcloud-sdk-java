@@ -860,7 +860,9 @@ ver：可以忽略。
     }
 
     /**
-     *对转录的文本进行总结。
+     *接口不再支持
+
+对转录的文本进行总结。
      * @param req SummarizeTranscriptionRequest
      * @return SummarizeTranscriptionResponse
      * @throws TencentCloudSDKException

@@ -419,6 +419,22 @@ public class DataEngineInfo extends AbstractModel {
     private Long EngineResourceUsedCU;
 
     /**
+    * 引擎的访问信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AccessInfos")
+    @Expose
+    private AccessInfo [] AccessInfos;
+
+    /**
+    * 引擎所在网络名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EngineNetworkName")
+    @Expose
+    private String EngineNetworkName;
+
+    /**
      * Get DataEngine名称 
      * @return DataEngineName DataEngine名称
      */
@@ -1386,6 +1402,46 @@ public class DataEngineInfo extends AbstractModel {
         this.EngineResourceUsedCU = EngineResourceUsedCU;
     }
 
+    /**
+     * Get 引擎的访问信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AccessInfos 引擎的访问信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AccessInfo [] getAccessInfos() {
+        return this.AccessInfos;
+    }
+
+    /**
+     * Set 引擎的访问信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AccessInfos 引擎的访问信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAccessInfos(AccessInfo [] AccessInfos) {
+        this.AccessInfos = AccessInfos;
+    }
+
+    /**
+     * Get 引擎所在网络名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EngineNetworkName 引擎所在网络名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getEngineNetworkName() {
+        return this.EngineNetworkName;
+    }
+
+    /**
+     * Set 引擎所在网络名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EngineNetworkName 引擎所在网络名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEngineNetworkName(String EngineNetworkName) {
+        this.EngineNetworkName = EngineNetworkName;
+    }
+
     public DataEngineInfo() {
     }
 
@@ -1556,6 +1612,15 @@ public class DataEngineInfo extends AbstractModel {
         if (source.EngineResourceUsedCU != null) {
             this.EngineResourceUsedCU = new Long(source.EngineResourceUsedCU);
         }
+        if (source.AccessInfos != null) {
+            this.AccessInfos = new AccessInfo[source.AccessInfos.length];
+            for (int i = 0; i < source.AccessInfos.length; i++) {
+                this.AccessInfos[i] = new AccessInfo(source.AccessInfos[i]);
+            }
+        }
+        if (source.EngineNetworkName != null) {
+            this.EngineNetworkName = new String(source.EngineNetworkName);
+        }
     }
 
 
@@ -1614,6 +1679,8 @@ public class DataEngineInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "EngineNetworkId", this.EngineNetworkId);
         this.setParamSimple(map, prefix + "EngineResourceGroupCount", this.EngineResourceGroupCount);
         this.setParamSimple(map, prefix + "EngineResourceUsedCU", this.EngineResourceUsedCU);
+        this.setParamArrayObj(map, prefix + "AccessInfos.", this.AccessInfos);
+        this.setParamSimple(map, prefix + "EngineNetworkName", this.EngineNetworkName);
 
     }
 }

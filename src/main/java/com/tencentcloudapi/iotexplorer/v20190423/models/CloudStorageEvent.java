@@ -60,6 +60,14 @@ public class CloudStorageEvent extends AbstractModel {
     private String UploadStatus;
 
     /**
+    * 事件自定义数据	
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Data")
+    @Expose
+    private String Data;
+
+    /**
      * Get 事件起始时间（Unix 时间戳，秒级 
      * @return StartTime 事件起始时间（Unix 时间戳，秒级
      */
@@ -143,6 +151,26 @@ public class CloudStorageEvent extends AbstractModel {
         this.UploadStatus = UploadStatus;
     }
 
+    /**
+     * Get 事件自定义数据	
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Data 事件自定义数据	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getData() {
+        return this.Data;
+    }
+
+    /**
+     * Set 事件自定义数据	
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Data 事件自定义数据	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setData(String Data) {
+        this.Data = Data;
+    }
+
     public CloudStorageEvent() {
     }
 
@@ -166,6 +194,9 @@ public class CloudStorageEvent extends AbstractModel {
         if (source.UploadStatus != null) {
             this.UploadStatus = new String(source.UploadStatus);
         }
+        if (source.Data != null) {
+            this.Data = new String(source.Data);
+        }
     }
 
 
@@ -178,6 +209,7 @@ public class CloudStorageEvent extends AbstractModel {
         this.setParamSimple(map, prefix + "Thumbnail", this.Thumbnail);
         this.setParamSimple(map, prefix + "EventId", this.EventId);
         this.setParamSimple(map, prefix + "UploadStatus", this.UploadStatus);
+        this.setParamSimple(map, prefix + "Data", this.Data);
 
     }
 }

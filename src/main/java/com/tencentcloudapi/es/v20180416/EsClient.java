@@ -314,6 +314,17 @@ public class EsClient extends AbstractClient{
     }
 
     /**
+     *获取serverless实例对应指标，获取space维度时不需要传入indexid，获取index时不需要传入spaceid
+     * @param req DescribeServerlessMetricsRequest
+     * @return DescribeServerlessMetricsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeServerlessMetricsResponse DescribeServerlessMetrics(DescribeServerlessMetricsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeServerlessMetrics", DescribeServerlessMetricsResponse.class);
+    }
+
+    /**
      *查看Serverless空间子用户
      * @param req DescribeServerlessSpaceUserRequest
      * @return DescribeServerlessSpaceUserResponse

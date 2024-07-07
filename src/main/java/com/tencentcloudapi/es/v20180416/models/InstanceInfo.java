@@ -689,6 +689,14 @@ RENEW_FLAG_DEFAULT：不自动续费
     private String NetConnectScheme;
 
     /**
+    * 置放群组相关参数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DisasterRecoverGroupAffinity")
+    @Expose
+    private Long DisasterRecoverGroupAffinity;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -2304,6 +2312,26 @@ RENEW_FLAG_DEFAULT：不自动续费
         this.NetConnectScheme = NetConnectScheme;
     }
 
+    /**
+     * Get 置放群组相关参数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DisasterRecoverGroupAffinity 置放群组相关参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getDisasterRecoverGroupAffinity() {
+        return this.DisasterRecoverGroupAffinity;
+    }
+
+    /**
+     * Set 置放群组相关参数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DisasterRecoverGroupAffinity 置放群组相关参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDisasterRecoverGroupAffinity(Long DisasterRecoverGroupAffinity) {
+        this.DisasterRecoverGroupAffinity = DisasterRecoverGroupAffinity;
+    }
+
     public InstanceInfo() {
     }
 
@@ -2594,6 +2622,9 @@ RENEW_FLAG_DEFAULT：不自动续费
         if (source.NetConnectScheme != null) {
             this.NetConnectScheme = new String(source.NetConnectScheme);
         }
+        if (source.DisasterRecoverGroupAffinity != null) {
+            this.DisasterRecoverGroupAffinity = new Long(source.DisasterRecoverGroupAffinity);
+        }
     }
 
 
@@ -2688,6 +2719,7 @@ RENEW_FLAG_DEFAULT：不自动续费
         this.setParamSimple(map, prefix + "CustomKibanaPrivateUrl", this.CustomKibanaPrivateUrl);
         this.setParamArrayObj(map, prefix + "OutboundPublicAcls.", this.OutboundPublicAcls);
         this.setParamSimple(map, prefix + "NetConnectScheme", this.NetConnectScheme);
+        this.setParamSimple(map, prefix + "DisasterRecoverGroupAffinity", this.DisasterRecoverGroupAffinity);
 
     }
 }

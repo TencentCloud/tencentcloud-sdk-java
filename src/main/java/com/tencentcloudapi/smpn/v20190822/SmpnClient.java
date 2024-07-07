@@ -39,7 +39,9 @@ public class SmpnClient extends AbstractClient{
     }
 
     /**
-     *企业号码认证
+     *不在使用的API
+
+企业号码认证
      * @param req CreateSmpnEpaRequest
      * @return CreateSmpnEpaResponse
      * @throws TencentCloudSDKException
@@ -50,7 +52,9 @@ public class SmpnClient extends AbstractClient{
     }
 
     /**
-     *查询号码的标记和标记次数
+     *不在使用的API
+
+查询号码的标记和标记次数
      * @param req DescribeSmpnChpRequest
      * @return DescribeSmpnChpResponse
      * @throws TencentCloudSDKException
@@ -61,7 +65,9 @@ public class SmpnClient extends AbstractClient{
     }
 
     /**
-     *虚假号码识别
+     *不在使用的API
+
+虚假号码识别
      * @param req DescribeSmpnFnrRequest
      * @return DescribeSmpnFnrResponse
      * @throws TencentCloudSDKException
@@ -72,7 +78,9 @@ public class SmpnClient extends AbstractClient{
     }
 
     /**
-     *号码营销监控
+     *不在使用的API
+
+号码营销监控
      * @param req DescribeSmpnMhmRequest
      * @return DescribeSmpnMhmResponse
      * @throws TencentCloudSDKException
@@ -83,7 +91,9 @@ public class SmpnClient extends AbstractClient{
     }
 
     /**
-     *查询号码恶意标记等级
+     *不在使用的API
+
+查询号码恶意标记等级
      * @param req DescribeSmpnMrlRequest
      * @return DescribeSmpnMrlResponse
      * @throws TencentCloudSDKException

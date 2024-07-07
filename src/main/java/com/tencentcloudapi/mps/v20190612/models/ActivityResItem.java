@@ -96,6 +96,14 @@ public class ActivityResItem extends AbstractModel {
     private ScheduleAnalysisTaskResult AnalysisTask;
 
     /**
+    * 媒体质检任务输出
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("QualityControlTask")
+    @Expose
+    private ScheduleQualityControlTaskResult QualityControlTask;
+
+    /**
      * Get 转码任务输出
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TranscodeTask 转码任务输出
@@ -275,6 +283,26 @@ public class ActivityResItem extends AbstractModel {
         this.AnalysisTask = AnalysisTask;
     }
 
+    /**
+     * Get 媒体质检任务输出
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return QualityControlTask 媒体质检任务输出
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ScheduleQualityControlTaskResult getQualityControlTask() {
+        return this.QualityControlTask;
+    }
+
+    /**
+     * Set 媒体质检任务输出
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param QualityControlTask 媒体质检任务输出
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setQualityControlTask(ScheduleQualityControlTaskResult QualityControlTask) {
+        this.QualityControlTask = QualityControlTask;
+    }
+
     public ActivityResItem() {
     }
 
@@ -310,6 +338,9 @@ public class ActivityResItem extends AbstractModel {
         if (source.AnalysisTask != null) {
             this.AnalysisTask = new ScheduleAnalysisTaskResult(source.AnalysisTask);
         }
+        if (source.QualityControlTask != null) {
+            this.QualityControlTask = new ScheduleQualityControlTaskResult(source.QualityControlTask);
+        }
     }
 
 
@@ -326,6 +357,7 @@ public class ActivityResItem extends AbstractModel {
         this.setParamObj(map, prefix + "RecognitionTask.", this.RecognitionTask);
         this.setParamObj(map, prefix + "ReviewTask.", this.ReviewTask);
         this.setParamObj(map, prefix + "AnalysisTask.", this.AnalysisTask);
+        this.setParamObj(map, prefix + "QualityControlTask.", this.QualityControlTask);
 
     }
 }

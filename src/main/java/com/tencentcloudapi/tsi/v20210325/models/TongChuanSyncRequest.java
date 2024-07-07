@@ -73,7 +73,7 @@ public class TongChuanSyncRequest extends AbstractModel {
     private Long IsEnd;
 
     /**
-    * 翻译时机，0 -不翻译 1 - 句子结束时翻译，2 - 句子实时翻译
+    * 翻译时机，0-不翻译 2-句子实时翻译
     */
     @SerializedName("TranslateTime")
     @Expose
@@ -199,16 +199,16 @@ public class TongChuanSyncRequest extends AbstractModel {
     }
 
     /**
-     * Get 翻译时机，0 -不翻译 1 - 句子结束时翻译，2 - 句子实时翻译 
-     * @return TranslateTime 翻译时机，0 -不翻译 1 - 句子结束时翻译，2 - 句子实时翻译
+     * Get 翻译时机，0-不翻译 2-句子实时翻译 
+     * @return TranslateTime 翻译时机，0-不翻译 2-句子实时翻译
      */
     public Long getTranslateTime() {
         return this.TranslateTime;
     }
 
     /**
-     * Set 翻译时机，0 -不翻译 1 - 句子结束时翻译，2 - 句子实时翻译
-     * @param TranslateTime 翻译时机，0 -不翻译 1 - 句子结束时翻译，2 - 句子实时翻译
+     * Set 翻译时机，0-不翻译 2-句子实时翻译
+     * @param TranslateTime 翻译时机，0-不翻译 2-句子实时翻译
      */
     public void setTranslateTime(Long TranslateTime) {
         this.TranslateTime = TranslateTime;

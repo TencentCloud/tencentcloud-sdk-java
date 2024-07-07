@@ -96,6 +96,14 @@ public class ActivityPara extends AbstractModel {
     private AiRecognitionTaskInput AiRecognitionTask;
 
     /**
+    * 媒体质检任务
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("QualityControlTask")
+    @Expose
+    private AiQualityControlTaskInput QualityControlTask;
+
+    /**
      * Get 视频转码任务
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TranscodeTask 视频转码任务
@@ -275,6 +283,26 @@ public class ActivityPara extends AbstractModel {
         this.AiRecognitionTask = AiRecognitionTask;
     }
 
+    /**
+     * Get 媒体质检任务
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return QualityControlTask 媒体质检任务
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AiQualityControlTaskInput getQualityControlTask() {
+        return this.QualityControlTask;
+    }
+
+    /**
+     * Set 媒体质检任务
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param QualityControlTask 媒体质检任务
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setQualityControlTask(AiQualityControlTaskInput QualityControlTask) {
+        this.QualityControlTask = QualityControlTask;
+    }
+
     public ActivityPara() {
     }
 
@@ -310,6 +338,9 @@ public class ActivityPara extends AbstractModel {
         if (source.AiRecognitionTask != null) {
             this.AiRecognitionTask = new AiRecognitionTaskInput(source.AiRecognitionTask);
         }
+        if (source.QualityControlTask != null) {
+            this.QualityControlTask = new AiQualityControlTaskInput(source.QualityControlTask);
+        }
     }
 
 
@@ -326,6 +357,7 @@ public class ActivityPara extends AbstractModel {
         this.setParamObj(map, prefix + "AiContentReviewTask.", this.AiContentReviewTask);
         this.setParamObj(map, prefix + "AiAnalysisTask.", this.AiAnalysisTask);
         this.setParamObj(map, prefix + "AiRecognitionTask.", this.AiRecognitionTask);
+        this.setParamObj(map, prefix + "QualityControlTask.", this.QualityControlTask);
 
     }
 }

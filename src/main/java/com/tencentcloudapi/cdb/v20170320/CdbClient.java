@@ -366,6 +366,17 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
+     *开启密码轮转
+     * @param req CreateRotationPasswordRequest
+     * @return CreateRotationPasswordResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateRotationPasswordResponse CreateRotationPassword(CreateRotationPasswordRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateRotationPassword", CreateRotationPasswordResponse.class);
+    }
+
+    /**
      *本接口(DeleteAccounts)用于删除云数据库的账户。
      * @param req DeleteAccountsRequest
      * @return DeleteAccountsResponse
@@ -462,6 +473,17 @@ public class CdbClient extends AbstractClient{
     public DeleteParamTemplateResponse DeleteParamTemplate(DeleteParamTemplateRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteParamTemplate", DeleteParamTemplateResponse.class);
+    }
+
+    /**
+     *关闭实例账户密码轮转
+     * @param req DeleteRotationPasswordRequest
+     * @return DeleteRotationPasswordResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteRotationPasswordResponse DeleteRotationPassword(DeleteRotationPasswordRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteRotationPassword", DeleteRotationPasswordResponse.class);
     }
 
     /**
@@ -1708,6 +1730,17 @@ public class CdbClient extends AbstractClient{
     public RenewDBInstanceResponse RenewDBInstance(RenewDBInstanceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "RenewDBInstance", RenewDBInstanceResponse.class);
+    }
+
+    /**
+     *手动刷新轮转密码
+     * @param req ResetPasswordRequest
+     * @return ResetPasswordResponse
+     * @throws TencentCloudSDKException
+     */
+    public ResetPasswordResponse ResetPassword(ResetPasswordRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ResetPassword", ResetPasswordResponse.class);
     }
 
     /**

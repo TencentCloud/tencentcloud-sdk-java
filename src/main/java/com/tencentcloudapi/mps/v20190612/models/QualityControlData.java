@@ -56,6 +56,14 @@ public class QualityControlData extends AbstractModel {
     private QualityControlResult [] QualityControlResultSet;
 
     /**
+    * 格式诊断检出异常项
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ContainerDiagnoseResultSet")
+    @Expose
+    private ContainerDiagnoseResultItem [] ContainerDiagnoseResultSet;
+
+    /**
      * Get 为true时表示视频无音频轨。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return NoAudio 为true时表示视频无音频轨。
@@ -135,6 +143,26 @@ public class QualityControlData extends AbstractModel {
         this.QualityControlResultSet = QualityControlResultSet;
     }
 
+    /**
+     * Get 格式诊断检出异常项
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ContainerDiagnoseResultSet 格式诊断检出异常项
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ContainerDiagnoseResultItem [] getContainerDiagnoseResultSet() {
+        return this.ContainerDiagnoseResultSet;
+    }
+
+    /**
+     * Set 格式诊断检出异常项
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ContainerDiagnoseResultSet 格式诊断检出异常项
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setContainerDiagnoseResultSet(ContainerDiagnoseResultItem [] ContainerDiagnoseResultSet) {
+        this.ContainerDiagnoseResultSet = ContainerDiagnoseResultSet;
+    }
+
     public QualityControlData() {
     }
 
@@ -158,6 +186,12 @@ public class QualityControlData extends AbstractModel {
                 this.QualityControlResultSet[i] = new QualityControlResult(source.QualityControlResultSet[i]);
             }
         }
+        if (source.ContainerDiagnoseResultSet != null) {
+            this.ContainerDiagnoseResultSet = new ContainerDiagnoseResultItem[source.ContainerDiagnoseResultSet.length];
+            for (int i = 0; i < source.ContainerDiagnoseResultSet.length; i++) {
+                this.ContainerDiagnoseResultSet[i] = new ContainerDiagnoseResultItem(source.ContainerDiagnoseResultSet[i]);
+            }
+        }
     }
 
 
@@ -169,6 +203,7 @@ public class QualityControlData extends AbstractModel {
         this.setParamSimple(map, prefix + "NoVideo", this.NoVideo);
         this.setParamSimple(map, prefix + "QualityEvaluationScore", this.QualityEvaluationScore);
         this.setParamArrayObj(map, prefix + "QualityControlResultSet.", this.QualityControlResultSet);
+        this.setParamArrayObj(map, prefix + "ContainerDiagnoseResultSet.", this.ContainerDiagnoseResultSet);
 
     }
 }

@@ -149,6 +149,17 @@ public class MpsClient extends AbstractClient{
     }
 
     /**
+     *创建媒体质检模板，数量上限：50。
+     * @param req CreateQualityControlTemplateRequest
+     * @return CreateQualityControlTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateQualityControlTemplateResponse CreateQualityControlTemplate(CreateQualityControlTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateQualityControlTemplate", CreateQualityControlTemplateResponse.class);
+    }
+
+    /**
      *创建用户自定义采样截图模板，数量上限：16。
      * @param req CreateSampleSnapshotTemplateRequest
      * @return CreateSampleSnapshotTemplateResponse
@@ -371,6 +382,17 @@ public class MpsClient extends AbstractClient{
     }
 
     /**
+     *删除媒体质检模板
+     * @param req DeleteQualityControlTemplateRequest
+     * @return DeleteQualityControlTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteQualityControlTemplateResponse DeleteQualityControlTemplate(DeleteQualityControlTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteQualityControlTemplate", DeleteQualityControlTemplateResponse.class);
+    }
+
+    /**
      *删除用户自定义采样截图模板。
      * @param req DeleteSampleSnapshotTemplateRequest
      * @return DeleteSampleSnapshotTemplateResponse
@@ -566,6 +588,17 @@ public class MpsClient extends AbstractClient{
     public DescribePersonSamplesResponse DescribePersonSamples(DescribePersonSamplesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribePersonSamples", DescribePersonSamplesResponse.class);
+    }
+
+    /**
+     *查询用户自定义媒体质检模板，支持根据条件，分页查询。
+     * @param req DescribeQualityControlTemplatesRequest
+     * @return DescribeQualityControlTemplatesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeQualityControlTemplatesResponse DescribeQualityControlTemplates(DescribeQualityControlTemplatesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeQualityControlTemplates", DescribeQualityControlTemplatesResponse.class);
     }
 
     /**
@@ -969,6 +1002,17 @@ public class MpsClient extends AbstractClient{
     public ModifyPersonSampleResponse ModifyPersonSample(ModifyPersonSampleRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyPersonSample", ModifyPersonSampleResponse.class);
+    }
+
+    /**
+     *修改媒体质检模板。
+     * @param req ModifyQualityControlTemplateRequest
+     * @return ModifyQualityControlTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyQualityControlTemplateResponse ModifyQualityControlTemplate(ModifyQualityControlTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyQualityControlTemplate", ModifyQualityControlTemplateResponse.class);
     }
 
     /**

@@ -277,6 +277,13 @@ public class CreateInstanceRequest extends AbstractModel {
     private String CdcId;
 
     /**
+    * 置放群组亲和度，范围[0,10]，0表示不开启
+    */
+    @SerializedName("DisasterRecoverGroupAffinity")
+    @Expose
+    private Long DisasterRecoverGroupAffinity;
+
+    /**
      * Get 可用区 
      * @return Zone 可用区
      */
@@ -868,6 +875,22 @@ public class CreateInstanceRequest extends AbstractModel {
         this.CdcId = CdcId;
     }
 
+    /**
+     * Get 置放群组亲和度，范围[0,10]，0表示不开启 
+     * @return DisasterRecoverGroupAffinity 置放群组亲和度，范围[0,10]，0表示不开启
+     */
+    public Long getDisasterRecoverGroupAffinity() {
+        return this.DisasterRecoverGroupAffinity;
+    }
+
+    /**
+     * Set 置放群组亲和度，范围[0,10]，0表示不开启
+     * @param DisasterRecoverGroupAffinity 置放群组亲和度，范围[0,10]，0表示不开启
+     */
+    public void setDisasterRecoverGroupAffinity(Long DisasterRecoverGroupAffinity) {
+        this.DisasterRecoverGroupAffinity = DisasterRecoverGroupAffinity;
+    }
+
     public CreateInstanceRequest() {
     }
 
@@ -993,6 +1016,9 @@ public class CreateInstanceRequest extends AbstractModel {
         if (source.CdcId != null) {
             this.CdcId = new String(source.CdcId);
         }
+        if (source.DisasterRecoverGroupAffinity != null) {
+            this.DisasterRecoverGroupAffinity = new Long(source.DisasterRecoverGroupAffinity);
+        }
     }
 
 
@@ -1035,6 +1061,7 @@ public class CreateInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "DiskEnhance", this.DiskEnhance);
         this.setParamSimple(map, prefix + "EnableDiagnose", this.EnableDiagnose);
         this.setParamSimple(map, prefix + "CdcId", this.CdcId);
+        this.setParamSimple(map, prefix + "DisasterRecoverGroupAffinity", this.DisasterRecoverGroupAffinity);
 
     }
 }
