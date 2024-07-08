@@ -32,6 +32,7 @@ public class Staff extends AbstractModel {
 
     /**
     * 显示的员工名
+注意：2024-07-08 及之后创建的应用号，该字段返回的是打码信息
     */
     @SerializedName("DisplayName")
     @Expose
@@ -39,6 +40,7 @@ public class Staff extends AbstractModel {
 
     /**
     * 员工手机号
+注意：2024-07-08 及之后创建的应用号，该字段返回的是打码信息
     */
     @SerializedName("Mobile")
     @Expose
@@ -121,8 +123,10 @@ public class Staff extends AbstractModel {
     }
 
     /**
-     * Get 显示的员工名 
+     * Get 显示的员工名
+注意：2024-07-08 及之后创建的应用号，该字段返回的是打码信息 
      * @return DisplayName 显示的员工名
+注意：2024-07-08 及之后创建的应用号，该字段返回的是打码信息
      */
     public String getDisplayName() {
         return this.DisplayName;
@@ -130,15 +134,19 @@ public class Staff extends AbstractModel {
 
     /**
      * Set 显示的员工名
+注意：2024-07-08 及之后创建的应用号，该字段返回的是打码信息
      * @param DisplayName 显示的员工名
+注意：2024-07-08 及之后创建的应用号，该字段返回的是打码信息
      */
     public void setDisplayName(String DisplayName) {
         this.DisplayName = DisplayName;
     }
 
     /**
-     * Get 员工手机号 
+     * Get 员工手机号
+注意：2024-07-08 及之后创建的应用号，该字段返回的是打码信息 
      * @return Mobile 员工手机号
+注意：2024-07-08 及之后创建的应用号，该字段返回的是打码信息
      */
     public String getMobile() {
         return this.Mobile;
@@ -146,7 +154,9 @@ public class Staff extends AbstractModel {
 
     /**
      * Set 员工手机号
+注意：2024-07-08 及之后创建的应用号，该字段返回的是打码信息
      * @param Mobile 员工手机号
+注意：2024-07-08 及之后创建的应用号，该字段返回的是打码信息
      */
     public void setMobile(String Mobile) {
         this.Mobile = Mobile;

@@ -38,6 +38,14 @@ public class CreateFlowBlockchainEvidenceUrlRequest extends AbstractModel {
     private String FlowId;
 
     /**
+    * 链接/二维码的有效截止时间，格式为unix时间戳。最长不超过 2099年12月31日（4102415999）。
+默认值为有效期为当前时间后7天。
+    */
+    @SerializedName("ExpiredOn")
+    @Expose
+    private Long ExpiredOn;
+
+    /**
      * Get 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。  此接口下面信息必填。 <ul> <li>渠道应用标识:  Agent.AppId</li> <li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li> <li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li> </ul> 
      * @return Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。  此接口下面信息必填。 <ul> <li>渠道应用标识:  Agent.AppId</li> <li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li> <li>第三方平台子客企业中的员工标识: Agent. ProxyOperator.OpenId</li> </ul>
      */
@@ -69,6 +77,26 @@ public class CreateFlowBlockchainEvidenceUrlRequest extends AbstractModel {
         this.FlowId = FlowId;
     }
 
+    /**
+     * Get 链接/二维码的有效截止时间，格式为unix时间戳。最长不超过 2099年12月31日（4102415999）。
+默认值为有效期为当前时间后7天。 
+     * @return ExpiredOn 链接/二维码的有效截止时间，格式为unix时间戳。最长不超过 2099年12月31日（4102415999）。
+默认值为有效期为当前时间后7天。
+     */
+    public Long getExpiredOn() {
+        return this.ExpiredOn;
+    }
+
+    /**
+     * Set 链接/二维码的有效截止时间，格式为unix时间戳。最长不超过 2099年12月31日（4102415999）。
+默认值为有效期为当前时间后7天。
+     * @param ExpiredOn 链接/二维码的有效截止时间，格式为unix时间戳。最长不超过 2099年12月31日（4102415999）。
+默认值为有效期为当前时间后7天。
+     */
+    public void setExpiredOn(Long ExpiredOn) {
+        this.ExpiredOn = ExpiredOn;
+    }
+
     public CreateFlowBlockchainEvidenceUrlRequest() {
     }
 
@@ -83,6 +111,9 @@ public class CreateFlowBlockchainEvidenceUrlRequest extends AbstractModel {
         if (source.FlowId != null) {
             this.FlowId = new String(source.FlowId);
         }
+        if (source.ExpiredOn != null) {
+            this.ExpiredOn = new Long(source.ExpiredOn);
+        }
     }
 
 
@@ -92,6 +123,7 @@ public class CreateFlowBlockchainEvidenceUrlRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Agent.", this.Agent);
         this.setParamSimple(map, prefix + "FlowId", this.FlowId);
+        this.setParamSimple(map, prefix + "ExpiredOn", this.ExpiredOn);
 
     }
 }

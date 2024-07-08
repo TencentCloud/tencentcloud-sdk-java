@@ -40,6 +40,14 @@ public class ServerlessIndexOptionsField extends AbstractModel {
     private String TimestampField;
 
     /**
+    * 标准存储时长
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SinkCycleAge")
+    @Expose
+    private String SinkCycleAge;
+
+    /**
      * Get 过期时间
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ExpireMaxAge 过期时间
@@ -79,6 +87,26 @@ public class ServerlessIndexOptionsField extends AbstractModel {
         this.TimestampField = TimestampField;
     }
 
+    /**
+     * Get 标准存储时长
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SinkCycleAge 标准存储时长
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSinkCycleAge() {
+        return this.SinkCycleAge;
+    }
+
+    /**
+     * Set 标准存储时长
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SinkCycleAge 标准存储时长
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSinkCycleAge(String SinkCycleAge) {
+        this.SinkCycleAge = SinkCycleAge;
+    }
+
     public ServerlessIndexOptionsField() {
     }
 
@@ -93,6 +121,9 @@ public class ServerlessIndexOptionsField extends AbstractModel {
         if (source.TimestampField != null) {
             this.TimestampField = new String(source.TimestampField);
         }
+        if (source.SinkCycleAge != null) {
+            this.SinkCycleAge = new String(source.SinkCycleAge);
+        }
     }
 
 
@@ -102,6 +133,7 @@ public class ServerlessIndexOptionsField extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ExpireMaxAge", this.ExpireMaxAge);
         this.setParamSimple(map, prefix + "TimestampField", this.TimestampField);
+        this.setParamSimple(map, prefix + "SinkCycleAge", this.SinkCycleAge);
 
     }
 }

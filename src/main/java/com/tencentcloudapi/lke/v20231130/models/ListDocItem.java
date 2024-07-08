@@ -241,6 +241,14 @@ public class ListDocItem extends AbstractModel {
     private String ExpireEnd;
 
     /**
+    * 是否允许重试，0：否，1：是
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsAllowRetry")
+    @Expose
+    private Boolean IsAllowRetry;
+
+    /**
      * Get 文档ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return DocBizId 文档ID
@@ -784,6 +792,26 @@ public class ListDocItem extends AbstractModel {
         this.ExpireEnd = ExpireEnd;
     }
 
+    /**
+     * Get 是否允许重试，0：否，1：是
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsAllowRetry 是否允许重试，0：否，1：是
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getIsAllowRetry() {
+        return this.IsAllowRetry;
+    }
+
+    /**
+     * Set 是否允许重试，0：否，1：是
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsAllowRetry 是否允许重试，0：否，1：是
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsAllowRetry(Boolean IsAllowRetry) {
+        this.IsAllowRetry = IsAllowRetry;
+    }
+
     public ListDocItem() {
     }
 
@@ -876,6 +904,9 @@ public class ListDocItem extends AbstractModel {
         if (source.ExpireEnd != null) {
             this.ExpireEnd = new String(source.ExpireEnd);
         }
+        if (source.IsAllowRetry != null) {
+            this.IsAllowRetry = new Boolean(source.IsAllowRetry);
+        }
     }
 
 
@@ -910,6 +941,7 @@ public class ListDocItem extends AbstractModel {
         this.setParamSimple(map, prefix + "WebUrl", this.WebUrl);
         this.setParamSimple(map, prefix + "ExpireStart", this.ExpireStart);
         this.setParamSimple(map, prefix + "ExpireEnd", this.ExpireEnd);
+        this.setParamSimple(map, prefix + "IsAllowRetry", this.IsAllowRetry);
 
     }
 }

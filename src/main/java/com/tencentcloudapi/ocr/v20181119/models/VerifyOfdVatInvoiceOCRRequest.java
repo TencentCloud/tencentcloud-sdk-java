@@ -39,6 +39,13 @@ OfdFileUrl 和 OfdFileBase64 必传其一，若两者都传，只解析OfdFileBa
     private String OfdFileBase64;
 
     /**
+    * 需要识别的OFD发票页面的对应页码，默认值为1。 示例值：1
+    */
+    @SerializedName("OfdPageNumber")
+    @Expose
+    private Long OfdPageNumber;
+
+    /**
      * Get OFD文件的 Url 地址。 
      * @return OfdFileUrl OFD文件的 Url 地址。
      */
@@ -74,6 +81,22 @@ OfdFileUrl 和 OfdFileBase64 必传其一，若两者都传，只解析OfdFileBa
         this.OfdFileBase64 = OfdFileBase64;
     }
 
+    /**
+     * Get 需要识别的OFD发票页面的对应页码，默认值为1。 示例值：1 
+     * @return OfdPageNumber 需要识别的OFD发票页面的对应页码，默认值为1。 示例值：1
+     */
+    public Long getOfdPageNumber() {
+        return this.OfdPageNumber;
+    }
+
+    /**
+     * Set 需要识别的OFD发票页面的对应页码，默认值为1。 示例值：1
+     * @param OfdPageNumber 需要识别的OFD发票页面的对应页码，默认值为1。 示例值：1
+     */
+    public void setOfdPageNumber(Long OfdPageNumber) {
+        this.OfdPageNumber = OfdPageNumber;
+    }
+
     public VerifyOfdVatInvoiceOCRRequest() {
     }
 
@@ -88,6 +111,9 @@ OfdFileUrl 和 OfdFileBase64 必传其一，若两者都传，只解析OfdFileBa
         if (source.OfdFileBase64 != null) {
             this.OfdFileBase64 = new String(source.OfdFileBase64);
         }
+        if (source.OfdPageNumber != null) {
+            this.OfdPageNumber = new Long(source.OfdPageNumber);
+        }
     }
 
 
@@ -97,6 +123,7 @@ OfdFileUrl 和 OfdFileBase64 必传其一，若两者都传，只解析OfdFileBa
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "OfdFileUrl", this.OfdFileUrl);
         this.setParamSimple(map, prefix + "OfdFileBase64", this.OfdFileBase64);
+        this.setParamSimple(map, prefix + "OfdPageNumber", this.OfdPageNumber);
 
     }
 }

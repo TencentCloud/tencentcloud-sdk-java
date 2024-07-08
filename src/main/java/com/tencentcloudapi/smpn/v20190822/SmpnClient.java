@@ -41,19 +41,6 @@ public class SmpnClient extends AbstractClient{
     /**
      *不在使用的API
 
-企业号码认证
-     * @param req CreateSmpnEpaRequest
-     * @return CreateSmpnEpaResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateSmpnEpaResponse CreateSmpnEpa(CreateSmpnEpaRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "CreateSmpnEpa", CreateSmpnEpaResponse.class);
-    }
-
-    /**
-     *不在使用的API
-
 查询号码的标记和标记次数
      * @param req DescribeSmpnChpRequest
      * @return DescribeSmpnChpResponse
@@ -75,32 +62,6 @@ public class SmpnClient extends AbstractClient{
     public DescribeSmpnFnrResponse DescribeSmpnFnr(DescribeSmpnFnrRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeSmpnFnr", DescribeSmpnFnrResponse.class);
-    }
-
-    /**
-     *不在使用的API
-
-号码营销监控
-     * @param req DescribeSmpnMhmRequest
-     * @return DescribeSmpnMhmResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeSmpnMhmResponse DescribeSmpnMhm(DescribeSmpnMhmRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeSmpnMhm", DescribeSmpnMhmResponse.class);
-    }
-
-    /**
-     *不在使用的API
-
-查询号码恶意标记等级
-     * @param req DescribeSmpnMrlRequest
-     * @return DescribeSmpnMrlResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeSmpnMrlResponse DescribeSmpnMrl(DescribeSmpnMrlRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeSmpnMrl", DescribeSmpnMrlResponse.class);
     }
 
 }

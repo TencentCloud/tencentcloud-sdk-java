@@ -49,6 +49,14 @@ public class CreateFlowBlockchainEvidenceUrlRequest extends AbstractModel {
     private Agent Agent;
 
     /**
+    * 链接/二维码的有效截止时间，格式为unix时间戳。最长不超过 2099年12月31日（4102415999）。
+默认值为有效期为当前时间后7天。
+    */
+    @SerializedName("ExpiredOn")
+    @Expose
+    private Long ExpiredOn;
+
+    /**
      * Get 执行本接口操作的员工信息。
 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。` 
      * @return Operator 执行本接口操作的员工信息。
@@ -112,6 +120,26 @@ public class CreateFlowBlockchainEvidenceUrlRequest extends AbstractModel {
         this.Agent = Agent;
     }
 
+    /**
+     * Get 链接/二维码的有效截止时间，格式为unix时间戳。最长不超过 2099年12月31日（4102415999）。
+默认值为有效期为当前时间后7天。 
+     * @return ExpiredOn 链接/二维码的有效截止时间，格式为unix时间戳。最长不超过 2099年12月31日（4102415999）。
+默认值为有效期为当前时间后7天。
+     */
+    public Long getExpiredOn() {
+        return this.ExpiredOn;
+    }
+
+    /**
+     * Set 链接/二维码的有效截止时间，格式为unix时间戳。最长不超过 2099年12月31日（4102415999）。
+默认值为有效期为当前时间后7天。
+     * @param ExpiredOn 链接/二维码的有效截止时间，格式为unix时间戳。最长不超过 2099年12月31日（4102415999）。
+默认值为有效期为当前时间后7天。
+     */
+    public void setExpiredOn(Long ExpiredOn) {
+        this.ExpiredOn = ExpiredOn;
+    }
+
     public CreateFlowBlockchainEvidenceUrlRequest() {
     }
 
@@ -129,6 +157,9 @@ public class CreateFlowBlockchainEvidenceUrlRequest extends AbstractModel {
         if (source.Agent != null) {
             this.Agent = new Agent(source.Agent);
         }
+        if (source.ExpiredOn != null) {
+            this.ExpiredOn = new Long(source.ExpiredOn);
+        }
     }
 
 
@@ -139,6 +170,7 @@ public class CreateFlowBlockchainEvidenceUrlRequest extends AbstractModel {
         this.setParamObj(map, prefix + "Operator.", this.Operator);
         this.setParamSimple(map, prefix + "FlowId", this.FlowId);
         this.setParamObj(map, prefix + "Agent.", this.Agent);
+        this.setParamSimple(map, prefix + "ExpiredOn", this.ExpiredOn);
 
     }
 }

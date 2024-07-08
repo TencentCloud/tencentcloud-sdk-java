@@ -3,9 +3,6 @@ public enum SmpnErrorCode {
     // 内部请求超时。
      INTERNALERROR_TIMEOUT("InternalError.Timeout"),
      
-    // 错误的名称。
-     INVALIDPARAMETER_NAME("InvalidParameter.Name"),
-     
     // 号码格式错误。
      INVALIDPARAMETER_PHONENUMBER("InvalidParameter.PhoneNumber"),
      

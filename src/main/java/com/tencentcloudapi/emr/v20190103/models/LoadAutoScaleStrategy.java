@@ -64,7 +64,7 @@ public class LoadAutoScaleStrategy extends AbstractModel {
     private Long ScaleNum;
 
     /**
-    * 扩缩容负载指标。
+    * 扩缩容负载指标。注:不推荐使用此属性，和LoadMetricsConditions属性配置互斥，配置了LoadMetricsConditions，这个属性不生效。请优先使用LoadMetricsConditions属性支持多指标。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LoadMetrics")
@@ -72,7 +72,7 @@ public class LoadAutoScaleStrategy extends AbstractModel {
     private String LoadMetrics;
 
     /**
-    * 规则元数据记录ID。
+    * 规则元数据记录ID。注:不推荐使用此属性，和LoadMetricsConditions属性配置互斥，配置了LoadMetricsConditions，这个属性不生效。请优先使用LoadMetricsConditions属性支持多指标。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MetricId")
@@ -80,7 +80,7 @@ public class LoadAutoScaleStrategy extends AbstractModel {
     private Long MetricId;
 
     /**
-    * 规则统计周期，提供300s,600s,900s
+    * 规则统计周期，提供300s,600s,900s。注:不推荐使用此属性，和LoadMetricsConditions属性配置互斥，配置了LoadMetricsConditions，这个属性不生效。请优先使用LoadMetricsConditions属性支持多指标。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StatisticPeriod")
@@ -96,14 +96,14 @@ public class LoadAutoScaleStrategy extends AbstractModel {
     private Long ProcessMethod;
 
     /**
-    * 触发次数，当连续触发超过TriggerThreshold次后才开始扩缩容。
+    * 触发次数，当连续触发超过TriggerThreshold次后才开始扩缩容。注:不推荐使用此属性，和LoadMetricsConditions属性配置互斥，配置了LoadMetricsConditions，这个属性不生效。请优先使用LoadMetricsConditions属性支持多指标。
     */
     @SerializedName("TriggerThreshold")
     @Expose
     private Long TriggerThreshold;
 
     /**
-    * 条件触发数组。
+    * 条件触发数组。注:不推荐使用此属性，和LoadMetricsConditions属性配置互斥，配置了LoadMetricsConditions，这个属性不生效。请优先使用LoadMetricsConditions属性支持多指标。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TriggerConditions")
@@ -292,9 +292,9 @@ public class LoadAutoScaleStrategy extends AbstractModel {
     }
 
     /**
-     * Get 扩缩容负载指标。
+     * Get 扩缩容负载指标。注:不推荐使用此属性，和LoadMetricsConditions属性配置互斥，配置了LoadMetricsConditions，这个属性不生效。请优先使用LoadMetricsConditions属性支持多指标。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LoadMetrics 扩缩容负载指标。
+     * @return LoadMetrics 扩缩容负载指标。注:不推荐使用此属性，和LoadMetricsConditions属性配置互斥，配置了LoadMetricsConditions，这个属性不生效。请优先使用LoadMetricsConditions属性支持多指标。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLoadMetrics() {
@@ -302,9 +302,9 @@ public class LoadAutoScaleStrategy extends AbstractModel {
     }
 
     /**
-     * Set 扩缩容负载指标。
+     * Set 扩缩容负载指标。注:不推荐使用此属性，和LoadMetricsConditions属性配置互斥，配置了LoadMetricsConditions，这个属性不生效。请优先使用LoadMetricsConditions属性支持多指标。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LoadMetrics 扩缩容负载指标。
+     * @param LoadMetrics 扩缩容负载指标。注:不推荐使用此属性，和LoadMetricsConditions属性配置互斥，配置了LoadMetricsConditions，这个属性不生效。请优先使用LoadMetricsConditions属性支持多指标。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLoadMetrics(String LoadMetrics) {
@@ -312,9 +312,9 @@ public class LoadAutoScaleStrategy extends AbstractModel {
     }
 
     /**
-     * Get 规则元数据记录ID。
+     * Get 规则元数据记录ID。注:不推荐使用此属性，和LoadMetricsConditions属性配置互斥，配置了LoadMetricsConditions，这个属性不生效。请优先使用LoadMetricsConditions属性支持多指标。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MetricId 规则元数据记录ID。
+     * @return MetricId 规则元数据记录ID。注:不推荐使用此属性，和LoadMetricsConditions属性配置互斥，配置了LoadMetricsConditions，这个属性不生效。请优先使用LoadMetricsConditions属性支持多指标。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMetricId() {
@@ -322,9 +322,9 @@ public class LoadAutoScaleStrategy extends AbstractModel {
     }
 
     /**
-     * Set 规则元数据记录ID。
+     * Set 规则元数据记录ID。注:不推荐使用此属性，和LoadMetricsConditions属性配置互斥，配置了LoadMetricsConditions，这个属性不生效。请优先使用LoadMetricsConditions属性支持多指标。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MetricId 规则元数据记录ID。
+     * @param MetricId 规则元数据记录ID。注:不推荐使用此属性，和LoadMetricsConditions属性配置互斥，配置了LoadMetricsConditions，这个属性不生效。请优先使用LoadMetricsConditions属性支持多指标。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMetricId(Long MetricId) {
@@ -332,9 +332,9 @@ public class LoadAutoScaleStrategy extends AbstractModel {
     }
 
     /**
-     * Get 规则统计周期，提供300s,600s,900s
+     * Get 规则统计周期，提供300s,600s,900s。注:不推荐使用此属性，和LoadMetricsConditions属性配置互斥，配置了LoadMetricsConditions，这个属性不生效。请优先使用LoadMetricsConditions属性支持多指标。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return StatisticPeriod 规则统计周期，提供300s,600s,900s
+     * @return StatisticPeriod 规则统计周期，提供300s,600s,900s。注:不推荐使用此属性，和LoadMetricsConditions属性配置互斥，配置了LoadMetricsConditions，这个属性不生效。请优先使用LoadMetricsConditions属性支持多指标。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatisticPeriod() {
@@ -342,9 +342,9 @@ public class LoadAutoScaleStrategy extends AbstractModel {
     }
 
     /**
-     * Set 规则统计周期，提供300s,600s,900s
+     * Set 规则统计周期，提供300s,600s,900s。注:不推荐使用此属性，和LoadMetricsConditions属性配置互斥，配置了LoadMetricsConditions，这个属性不生效。请优先使用LoadMetricsConditions属性支持多指标。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param StatisticPeriod 规则统计周期，提供300s,600s,900s
+     * @param StatisticPeriod 规则统计周期，提供300s,600s,900s。注:不推荐使用此属性，和LoadMetricsConditions属性配置互斥，配置了LoadMetricsConditions，这个属性不生效。请优先使用LoadMetricsConditions属性支持多指标。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatisticPeriod(Long StatisticPeriod) {
@@ -372,25 +372,25 @@ public class LoadAutoScaleStrategy extends AbstractModel {
     }
 
     /**
-     * Get 触发次数，当连续触发超过TriggerThreshold次后才开始扩缩容。 
-     * @return TriggerThreshold 触发次数，当连续触发超过TriggerThreshold次后才开始扩缩容。
+     * Get 触发次数，当连续触发超过TriggerThreshold次后才开始扩缩容。注:不推荐使用此属性，和LoadMetricsConditions属性配置互斥，配置了LoadMetricsConditions，这个属性不生效。请优先使用LoadMetricsConditions属性支持多指标。 
+     * @return TriggerThreshold 触发次数，当连续触发超过TriggerThreshold次后才开始扩缩容。注:不推荐使用此属性，和LoadMetricsConditions属性配置互斥，配置了LoadMetricsConditions，这个属性不生效。请优先使用LoadMetricsConditions属性支持多指标。
      */
     public Long getTriggerThreshold() {
         return this.TriggerThreshold;
     }
 
     /**
-     * Set 触发次数，当连续触发超过TriggerThreshold次后才开始扩缩容。
-     * @param TriggerThreshold 触发次数，当连续触发超过TriggerThreshold次后才开始扩缩容。
+     * Set 触发次数，当连续触发超过TriggerThreshold次后才开始扩缩容。注:不推荐使用此属性，和LoadMetricsConditions属性配置互斥，配置了LoadMetricsConditions，这个属性不生效。请优先使用LoadMetricsConditions属性支持多指标。
+     * @param TriggerThreshold 触发次数，当连续触发超过TriggerThreshold次后才开始扩缩容。注:不推荐使用此属性，和LoadMetricsConditions属性配置互斥，配置了LoadMetricsConditions，这个属性不生效。请优先使用LoadMetricsConditions属性支持多指标。
      */
     public void setTriggerThreshold(Long TriggerThreshold) {
         this.TriggerThreshold = TriggerThreshold;
     }
 
     /**
-     * Get 条件触发数组。
+     * Get 条件触发数组。注:不推荐使用此属性，和LoadMetricsConditions属性配置互斥，配置了LoadMetricsConditions，这个属性不生效。请优先使用LoadMetricsConditions属性支持多指标。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TriggerConditions 条件触发数组。
+     * @return TriggerConditions 条件触发数组。注:不推荐使用此属性，和LoadMetricsConditions属性配置互斥，配置了LoadMetricsConditions，这个属性不生效。请优先使用LoadMetricsConditions属性支持多指标。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public TriggerConditions getTriggerConditions() {
@@ -398,9 +398,9 @@ public class LoadAutoScaleStrategy extends AbstractModel {
     }
 
     /**
-     * Set 条件触发数组。
+     * Set 条件触发数组。注:不推荐使用此属性，和LoadMetricsConditions属性配置互斥，配置了LoadMetricsConditions，这个属性不生效。请优先使用LoadMetricsConditions属性支持多指标。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TriggerConditions 条件触发数组。
+     * @param TriggerConditions 条件触发数组。注:不推荐使用此属性，和LoadMetricsConditions属性配置互斥，配置了LoadMetricsConditions，这个属性不生效。请优先使用LoadMetricsConditions属性支持多指标。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTriggerConditions(TriggerConditions TriggerConditions) {

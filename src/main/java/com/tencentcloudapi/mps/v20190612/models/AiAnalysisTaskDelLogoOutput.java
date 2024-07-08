@@ -38,6 +38,22 @@ public class AiAnalysisTaskDelLogoOutput extends AbstractModel {
     private TaskOutputStorage OutputStorage;
 
     /**
+    * 基于画面提取的字幕文件路径。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OriginSubtitlePath")
+    @Expose
+    private String OriginSubtitlePath;
+
+    /**
+    * 基于画面提取的字幕翻译文件路径。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TranslateSubtitlePath")
+    @Expose
+    private String TranslateSubtitlePath;
+
+    /**
      * Get 擦除后文件的路径。 
      * @return Path 擦除后文件的路径。
      */
@@ -69,6 +85,46 @@ public class AiAnalysisTaskDelLogoOutput extends AbstractModel {
         this.OutputStorage = OutputStorage;
     }
 
+    /**
+     * Get 基于画面提取的字幕文件路径。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OriginSubtitlePath 基于画面提取的字幕文件路径。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getOriginSubtitlePath() {
+        return this.OriginSubtitlePath;
+    }
+
+    /**
+     * Set 基于画面提取的字幕文件路径。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OriginSubtitlePath 基于画面提取的字幕文件路径。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOriginSubtitlePath(String OriginSubtitlePath) {
+        this.OriginSubtitlePath = OriginSubtitlePath;
+    }
+
+    /**
+     * Get 基于画面提取的字幕翻译文件路径。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TranslateSubtitlePath 基于画面提取的字幕翻译文件路径。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTranslateSubtitlePath() {
+        return this.TranslateSubtitlePath;
+    }
+
+    /**
+     * Set 基于画面提取的字幕翻译文件路径。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TranslateSubtitlePath 基于画面提取的字幕翻译文件路径。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTranslateSubtitlePath(String TranslateSubtitlePath) {
+        this.TranslateSubtitlePath = TranslateSubtitlePath;
+    }
+
     public AiAnalysisTaskDelLogoOutput() {
     }
 
@@ -83,6 +139,12 @@ public class AiAnalysisTaskDelLogoOutput extends AbstractModel {
         if (source.OutputStorage != null) {
             this.OutputStorage = new TaskOutputStorage(source.OutputStorage);
         }
+        if (source.OriginSubtitlePath != null) {
+            this.OriginSubtitlePath = new String(source.OriginSubtitlePath);
+        }
+        if (source.TranslateSubtitlePath != null) {
+            this.TranslateSubtitlePath = new String(source.TranslateSubtitlePath);
+        }
     }
 
 
@@ -92,6 +154,8 @@ public class AiAnalysisTaskDelLogoOutput extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Path", this.Path);
         this.setParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
+        this.setParamSimple(map, prefix + "OriginSubtitlePath", this.OriginSubtitlePath);
+        this.setParamSimple(map, prefix + "TranslateSubtitlePath", this.TranslateSubtitlePath);
 
     }
 }

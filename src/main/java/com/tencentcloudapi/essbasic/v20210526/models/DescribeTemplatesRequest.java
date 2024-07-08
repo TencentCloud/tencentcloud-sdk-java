@@ -60,7 +60,7 @@ public class DescribeTemplatesRequest extends AbstractModel {
     private Long ContentType;
 
     /**
-    * 合同模板ID数组，每一个合同模板ID为32位字符串,  最多支持200个模板的批量查询。
+    * 合同模板ID数组，每一个合同模板ID为32位字符串,  最多支持100个模板的批量查询。
 
 注意: 
 1.` 此参数TemplateIds与TemplateId互为独立，若两者均传入，以TemplateId为准。`
@@ -78,7 +78,7 @@ public class DescribeTemplatesRequest extends AbstractModel {
     /**
     * 指定每页返回的数据条数，和Offset参数配合使用。
 
-注：`1.默认值为20，单页做大值为200。`
+注：`1.默认值为20，单页做大值为100。`
     */
     @SerializedName("Limit")
     @Expose
@@ -261,7 +261,7 @@ public class DescribeTemplatesRequest extends AbstractModel {
     }
 
     /**
-     * Get 合同模板ID数组，每一个合同模板ID为32位字符串,  最多支持200个模板的批量查询。
+     * Get 合同模板ID数组，每一个合同模板ID为32位字符串,  最多支持100个模板的批量查询。
 
 注意: 
 1.` 此参数TemplateIds与TemplateId互为独立，若两者均传入，以TemplateId为准。`
@@ -271,7 +271,7 @@ public class DescribeTemplatesRequest extends AbstractModel {
 
 [点击查看模板Id在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/e988be12bf28a89b4716aed4502c2e02.png)
  
-     * @return TemplateIds 合同模板ID数组，每一个合同模板ID为32位字符串,  最多支持200个模板的批量查询。
+     * @return TemplateIds 合同模板ID数组，每一个合同模板ID为32位字符串,  最多支持100个模板的批量查询。
 
 注意: 
 1.` 此参数TemplateIds与TemplateId互为独立，若两者均传入，以TemplateId为准。`
@@ -287,7 +287,7 @@ public class DescribeTemplatesRequest extends AbstractModel {
     }
 
     /**
-     * Set 合同模板ID数组，每一个合同模板ID为32位字符串,  最多支持200个模板的批量查询。
+     * Set 合同模板ID数组，每一个合同模板ID为32位字符串,  最多支持100个模板的批量查询。
 
 注意: 
 1.` 此参数TemplateIds与TemplateId互为独立，若两者均传入，以TemplateId为准。`
@@ -297,7 +297,7 @@ public class DescribeTemplatesRequest extends AbstractModel {
 
 [点击查看模板Id在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/e988be12bf28a89b4716aed4502c2e02.png)
 
-     * @param TemplateIds 合同模板ID数组，每一个合同模板ID为32位字符串,  最多支持200个模板的批量查询。
+     * @param TemplateIds 合同模板ID数组，每一个合同模板ID为32位字符串,  最多支持100个模板的批量查询。
 
 注意: 
 1.` 此参数TemplateIds与TemplateId互为独立，若两者均传入，以TemplateId为准。`
@@ -315,10 +315,10 @@ public class DescribeTemplatesRequest extends AbstractModel {
     /**
      * Get 指定每页返回的数据条数，和Offset参数配合使用。
 
-注：`1.默认值为20，单页做大值为200。` 
+注：`1.默认值为20，单页做大值为100。` 
      * @return Limit 指定每页返回的数据条数，和Offset参数配合使用。
 
-注：`1.默认值为20，单页做大值为200。`
+注：`1.默认值为20，单页做大值为100。`
      */
     public Long getLimit() {
         return this.Limit;
@@ -327,10 +327,10 @@ public class DescribeTemplatesRequest extends AbstractModel {
     /**
      * Set 指定每页返回的数据条数，和Offset参数配合使用。
 
-注：`1.默认值为20，单页做大值为200。`
+注：`1.默认值为20，单页做大值为100。`
      * @param Limit 指定每页返回的数据条数，和Offset参数配合使用。
 
-注：`1.默认值为20，单页做大值为200。`
+注：`1.默认值为20，单页做大值为100。`
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
