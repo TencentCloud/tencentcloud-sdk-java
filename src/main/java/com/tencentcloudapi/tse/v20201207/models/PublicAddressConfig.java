@@ -64,6 +64,14 @@ public class PublicAddressConfig extends AbstractModel {
     private String NetworkId;
 
     /**
+    * 公网负载均衡描述
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Description")
+    @Expose
+    private String Description;
+
+    /**
      * Get 公网 ip
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Vip 公网 ip
@@ -163,6 +171,26 @@ public class PublicAddressConfig extends AbstractModel {
         this.NetworkId = NetworkId;
     }
 
+    /**
+     * Get 公网负载均衡描述
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Description 公网负载均衡描述
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDescription() {
+        return this.Description;
+    }
+
+    /**
+     * Set 公网负载均衡描述
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Description 公网负载均衡描述
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDescription(String Description) {
+        this.Description = Description;
+    }
+
     public PublicAddressConfig() {
     }
 
@@ -186,6 +214,9 @@ public class PublicAddressConfig extends AbstractModel {
         if (source.NetworkId != null) {
             this.NetworkId = new String(source.NetworkId);
         }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
     }
 
 
@@ -198,6 +229,7 @@ public class PublicAddressConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);
         this.setParamSimple(map, prefix + "GroupName", this.GroupName);
         this.setParamSimple(map, prefix + "NetworkId", this.NetworkId);
+        this.setParamSimple(map, prefix + "Description", this.Description);
 
     }
 }

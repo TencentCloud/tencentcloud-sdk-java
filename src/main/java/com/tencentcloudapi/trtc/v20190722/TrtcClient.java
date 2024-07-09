@@ -94,6 +94,17 @@ public class TrtcClient extends AbstractClient{
     }
 
     /**
+     *查询AI对话任务状态。
+     * @param req DescribeAIConversationRequest
+     * @return DescribeAIConversationResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAIConversationResponse DescribeAIConversation(DescribeAIConversationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAIConversation", DescribeAIConversationResponse.class);
+    }
+
+    /**
      *查询AI转录任务状态。
      * @param req DescribeAITranscriptionRequest
      * @return DescribeAITranscriptionResponse
@@ -549,6 +560,17 @@ xa0
     }
 
     /**
+     *启动一个任务，机器人将进入TRTC房间，与指定成员进行AI对话
+     * @param req StartAIConversationRequest
+     * @return StartAIConversationResponse
+     * @throws TencentCloudSDKException
+     */
+    public StartAIConversationResponse StartAIConversation(StartAIConversationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "StartAIConversation", StartAIConversationResponse.class);
+    }
+
+    /**
      *这个接口调用后，后台会启动转录机器人，实时进行语音识别并下发字幕和转录消息。
 转录机器人支持两种拉流方式，通过TranscriptionMode字段控制：
 - 拉取全房间的流。
@@ -791,6 +813,17 @@ ver：可以忽略。
     public StartWebRecordResponse StartWebRecord(StartWebRecordRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "StartWebRecord", StartWebRecordResponse.class);
+    }
+
+    /**
+     *停止AI对话任务
+     * @param req StopAIConversationRequest
+     * @return StopAIConversationResponse
+     * @throws TencentCloudSDKException
+     */
+    public StopAIConversationResponse StopAIConversation(StopAIConversationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "StopAIConversation", StopAIConversationResponse.class);
     }
 
     /**

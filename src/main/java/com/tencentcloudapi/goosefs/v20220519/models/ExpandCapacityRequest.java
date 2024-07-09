@@ -38,6 +38,13 @@ public class ExpandCapacityRequest extends AbstractModel {
     private Long ExpandedCapacity;
 
     /**
+    * 容量修改类型：add/sub
+    */
+    @SerializedName("ModifyType")
+    @Expose
+    private String ModifyType;
+
+    /**
      * Get 文件系统ID 
      * @return FileSystemId 文件系统ID
      */
@@ -69,6 +76,22 @@ public class ExpandCapacityRequest extends AbstractModel {
         this.ExpandedCapacity = ExpandedCapacity;
     }
 
+    /**
+     * Get 容量修改类型：add/sub 
+     * @return ModifyType 容量修改类型：add/sub
+     */
+    public String getModifyType() {
+        return this.ModifyType;
+    }
+
+    /**
+     * Set 容量修改类型：add/sub
+     * @param ModifyType 容量修改类型：add/sub
+     */
+    public void setModifyType(String ModifyType) {
+        this.ModifyType = ModifyType;
+    }
+
     public ExpandCapacityRequest() {
     }
 
@@ -83,6 +106,9 @@ public class ExpandCapacityRequest extends AbstractModel {
         if (source.ExpandedCapacity != null) {
             this.ExpandedCapacity = new Long(source.ExpandedCapacity);
         }
+        if (source.ModifyType != null) {
+            this.ModifyType = new String(source.ModifyType);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class ExpandCapacityRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FileSystemId", this.FileSystemId);
         this.setParamSimple(map, prefix + "ExpandedCapacity", this.ExpandedCapacity);
+        this.setParamSimple(map, prefix + "ModifyType", this.ModifyType);
 
     }
 }

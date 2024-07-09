@@ -38,6 +38,13 @@ public class DescribeReleaseFileSignRequest extends AbstractModel {
     private Long FileType;
 
     /**
+    * 获取临时签名的bucket是国内站还是国际站（1表示国际站，其它表示国内站）
+    */
+    @SerializedName("Site")
+    @Expose
+    private Long Site;
+
+    /**
      * Get 超时时间，不填默认是 5 分钟 
      * @return Timeout 超时时间，不填默认是 5 分钟
      */
@@ -69,6 +76,22 @@ public class DescribeReleaseFileSignRequest extends AbstractModel {
         this.FileType = FileType;
     }
 
+    /**
+     * Get 获取临时签名的bucket是国内站还是国际站（1表示国际站，其它表示国内站） 
+     * @return Site 获取临时签名的bucket是国内站还是国际站（1表示国际站，其它表示国内站）
+     */
+    public Long getSite() {
+        return this.Site;
+    }
+
+    /**
+     * Set 获取临时签名的bucket是国内站还是国际站（1表示国际站，其它表示国内站）
+     * @param Site 获取临时签名的bucket是国内站还是国际站（1表示国际站，其它表示国内站）
+     */
+    public void setSite(Long Site) {
+        this.Site = Site;
+    }
+
     public DescribeReleaseFileSignRequest() {
     }
 
@@ -83,6 +106,9 @@ public class DescribeReleaseFileSignRequest extends AbstractModel {
         if (source.FileType != null) {
             this.FileType = new Long(source.FileType);
         }
+        if (source.Site != null) {
+            this.Site = new Long(source.Site);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class DescribeReleaseFileSignRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Timeout", this.Timeout);
         this.setParamSimple(map, prefix + "FileType", this.FileType);
+        this.setParamSimple(map, prefix + "Site", this.Site);
 
     }
 }

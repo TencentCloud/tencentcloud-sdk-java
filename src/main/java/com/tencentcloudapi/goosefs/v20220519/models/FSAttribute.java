@@ -110,6 +110,14 @@ public class FSAttribute extends AbstractModel {
     private String ModifyTime;
 
     /**
+    * 文件系统付费信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ChargeAttribute")
+    @Expose
+    private ChargeAttribute ChargeAttribute;
+
+    /**
      * Get 文件系统类型, 可填goosefs和goosefsx 
      * @return Type 文件系统类型, 可填goosefs和goosefsx
      */
@@ -309,6 +317,26 @@ public class FSAttribute extends AbstractModel {
         this.ModifyTime = ModifyTime;
     }
 
+    /**
+     * Get 文件系统付费信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ChargeAttribute 文件系统付费信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ChargeAttribute getChargeAttribute() {
+        return this.ChargeAttribute;
+    }
+
+    /**
+     * Set 文件系统付费信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ChargeAttribute 文件系统付费信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setChargeAttribute(ChargeAttribute ChargeAttribute) {
+        this.ChargeAttribute = ChargeAttribute;
+    }
+
     public FSAttribute() {
     }
 
@@ -356,6 +384,9 @@ public class FSAttribute extends AbstractModel {
         if (source.ModifyTime != null) {
             this.ModifyTime = new String(source.ModifyTime);
         }
+        if (source.ChargeAttribute != null) {
+            this.ChargeAttribute = new ChargeAttribute(source.ChargeAttribute);
+        }
     }
 
 
@@ -375,6 +406,7 @@ public class FSAttribute extends AbstractModel {
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamArrayObj(map, prefix + "Tag.", this.Tag);
         this.setParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
+        this.setParamObj(map, prefix + "ChargeAttribute.", this.ChargeAttribute);
 
     }
 }

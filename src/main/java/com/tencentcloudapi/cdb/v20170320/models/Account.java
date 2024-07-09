@@ -25,6 +25,7 @@ public class Account extends AbstractModel {
 
     /**
     * 新账户的名称
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("User")
     @Expose
@@ -32,14 +33,17 @@ public class Account extends AbstractModel {
 
     /**
     * 新账户的域名
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Host")
     @Expose
     private String Host;
 
     /**
-     * Get 新账户的名称 
+     * Get 新账户的名称
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return User 新账户的名称
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUser() {
         return this.User;
@@ -47,15 +51,19 @@ public class Account extends AbstractModel {
 
     /**
      * Set 新账户的名称
+注意：此字段可能返回 null，表示取不到有效值。
      * @param User 新账户的名称
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUser(String User) {
         this.User = User;
     }
 
     /**
-     * Get 新账户的域名 
+     * Get 新账户的域名
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Host 新账户的域名
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHost() {
         return this.Host;
@@ -63,7 +71,9 @@ public class Account extends AbstractModel {
 
     /**
      * Set 新账户的域名
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Host 新账户的域名
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHost(String Host) {
         this.Host = Host;

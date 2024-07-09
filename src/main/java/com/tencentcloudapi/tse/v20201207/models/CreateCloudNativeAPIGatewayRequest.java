@@ -129,6 +129,13 @@ public class CreateCloudNativeAPIGatewayRequest extends AbstractModel {
     private InternetConfig InternetConfig;
 
     /**
+    * 关联的prometheus ID
+    */
+    @SerializedName("PromId")
+    @Expose
+    private String PromId;
+
+    /**
      * Get 云原生API网关名字, 最多支持60个字符。 
      * @return Name 云原生API网关名字, 最多支持60个字符。
      */
@@ -380,6 +387,22 @@ public class CreateCloudNativeAPIGatewayRequest extends AbstractModel {
         this.InternetConfig = InternetConfig;
     }
 
+    /**
+     * Get 关联的prometheus ID 
+     * @return PromId 关联的prometheus ID
+     */
+    public String getPromId() {
+        return this.PromId;
+    }
+
+    /**
+     * Set 关联的prometheus ID
+     * @param PromId 关联的prometheus ID
+     */
+    public void setPromId(String PromId) {
+        this.PromId = PromId;
+    }
+
     public CreateCloudNativeAPIGatewayRequest() {
     }
 
@@ -433,6 +456,9 @@ public class CreateCloudNativeAPIGatewayRequest extends AbstractModel {
         if (source.InternetConfig != null) {
             this.InternetConfig = new InternetConfig(source.InternetConfig);
         }
+        if (source.PromId != null) {
+            this.PromId = new String(source.PromId);
+        }
     }
 
 
@@ -454,6 +480,7 @@ public class CreateCloudNativeAPIGatewayRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "IngressClassName", this.IngressClassName);
         this.setParamSimple(map, prefix + "TradeType", this.TradeType);
         this.setParamObj(map, prefix + "InternetConfig.", this.InternetConfig);
+        this.setParamSimple(map, prefix + "PromId", this.PromId);
 
     }
 }

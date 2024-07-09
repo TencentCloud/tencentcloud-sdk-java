@@ -92,6 +92,14 @@ public class MappedBucket extends AbstractModel {
     private String BucketRegion;
 
     /**
+    * 自定义Endpoint
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Endpoint")
+    @Expose
+    private String Endpoint;
+
+    /**
      * Get 对象存储Bucket名 
      * @return BucketName 对象存储Bucket名
      */
@@ -267,6 +275,26 @@ public class MappedBucket extends AbstractModel {
         this.BucketRegion = BucketRegion;
     }
 
+    /**
+     * Get 自定义Endpoint
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Endpoint 自定义Endpoint
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getEndpoint() {
+        return this.Endpoint;
+    }
+
+    /**
+     * Set 自定义Endpoint
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Endpoint 自定义Endpoint
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEndpoint(String Endpoint) {
+        this.Endpoint = Endpoint;
+    }
+
     public MappedBucket() {
     }
 
@@ -302,6 +330,9 @@ public class MappedBucket extends AbstractModel {
         if (source.BucketRegion != null) {
             this.BucketRegion = new String(source.BucketRegion);
         }
+        if (source.Endpoint != null) {
+            this.Endpoint = new String(source.Endpoint);
+        }
     }
 
 
@@ -317,6 +348,7 @@ public class MappedBucket extends AbstractModel {
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "AccelerateFlag", this.AccelerateFlag);
         this.setParamSimple(map, prefix + "BucketRegion", this.BucketRegion);
+        this.setParamSimple(map, prefix + "Endpoint", this.Endpoint);
 
     }
 }

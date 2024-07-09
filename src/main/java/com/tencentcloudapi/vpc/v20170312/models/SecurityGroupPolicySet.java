@@ -48,6 +48,14 @@ public class SecurityGroupPolicySet extends AbstractModel {
     private SecurityGroupPolicy [] Ingress;
 
     /**
+    * 安全组策略条目统计。只用于出参。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PolicyStatistics")
+    @Expose
+    private PolicyStatistics PolicyStatistics;
+
+    /**
      * Get 安全组规则当前版本。用户每次更新安全规则版本会自动加1，防止更新的路由规则已过期，不填不考虑冲突。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Version 安全组规则当前版本。用户每次更新安全规则版本会自动加1，防止更新的路由规则已过期，不填不考虑冲突。
@@ -107,6 +115,26 @@ public class SecurityGroupPolicySet extends AbstractModel {
         this.Ingress = Ingress;
     }
 
+    /**
+     * Get 安全组策略条目统计。只用于出参。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PolicyStatistics 安全组策略条目统计。只用于出参。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public PolicyStatistics getPolicyStatistics() {
+        return this.PolicyStatistics;
+    }
+
+    /**
+     * Set 安全组策略条目统计。只用于出参。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PolicyStatistics 安全组策略条目统计。只用于出参。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPolicyStatistics(PolicyStatistics PolicyStatistics) {
+        this.PolicyStatistics = PolicyStatistics;
+    }
+
     public SecurityGroupPolicySet() {
     }
 
@@ -130,6 +158,9 @@ public class SecurityGroupPolicySet extends AbstractModel {
                 this.Ingress[i] = new SecurityGroupPolicy(source.Ingress[i]);
             }
         }
+        if (source.PolicyStatistics != null) {
+            this.PolicyStatistics = new PolicyStatistics(source.PolicyStatistics);
+        }
     }
 
 
@@ -140,6 +171,7 @@ public class SecurityGroupPolicySet extends AbstractModel {
         this.setParamSimple(map, prefix + "Version", this.Version);
         this.setParamArrayObj(map, prefix + "Egress.", this.Egress);
         this.setParamArrayObj(map, prefix + "Ingress.", this.Ingress);
+        this.setParamObj(map, prefix + "PolicyStatistics.", this.PolicyStatistics);
 
     }
 }

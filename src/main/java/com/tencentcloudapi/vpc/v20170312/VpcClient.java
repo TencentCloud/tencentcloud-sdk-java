@@ -3607,6 +3607,17 @@ LimitTypes取值范围：
     }
 
     /**
+     *更新SslVpnClient证书
+     * @param req ModifyVpnGatewaySslClientCertRequest
+     * @return ModifyVpnGatewaySslClientCertResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyVpnGatewaySslClientCertResponse ModifyVpnGatewaySslClientCert(ModifyVpnGatewaySslClientCertRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyVpnGatewaySslClientCert", ModifyVpnGatewaySslClientCertResponse.class);
+    }
+
+    /**
      *本接口用于修改 SSL-VPN 服务端属性
      * @param req ModifyVpnGatewaySslServerRequest
      * @return ModifyVpnGatewaySslServerResponse
