@@ -24,6 +24,7 @@ public class ChatCompletions {
             HunyuanClient client = new HunyuanClient(cred, "ap-guangzhou", clientProfile);
 
             ChatCompletionsRequest req = new ChatCompletionsRequest();
+            req.setModel("hunyuan-standard")
             Message msg = new Message();
             msg.setRole("user");
             msg.setContent("你好, 可以讲个笑话吗");
