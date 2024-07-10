@@ -121,7 +121,7 @@ AnycastEIP是否用于绑定负载均衡。
     private String AddressName;
 
     /**
-    * 静态单线IP网络出口，默认值：center_egress1
+    * 网络出口，当前仅支持精品BGP、静态单线，这2种IP 地址类型的指定出口传入，默认值：center_egress1，其它可选值：center_egress2、center_egress3
     */
     @SerializedName("Egress")
     @Expose
@@ -398,16 +398,16 @@ AnycastEIP是否用于绑定负载均衡。
     }
 
     /**
-     * Get 静态单线IP网络出口，默认值：center_egress1 
-     * @return Egress 静态单线IP网络出口，默认值：center_egress1
+     * Get 网络出口，当前仅支持精品BGP、静态单线，这2种IP 地址类型的指定出口传入，默认值：center_egress1，其它可选值：center_egress2、center_egress3 
+     * @return Egress 网络出口，当前仅支持精品BGP、静态单线，这2种IP 地址类型的指定出口传入，默认值：center_egress1，其它可选值：center_egress2、center_egress3
      */
     public String getEgress() {
         return this.Egress;
     }
 
     /**
-     * Set 静态单线IP网络出口，默认值：center_egress1
-     * @param Egress 静态单线IP网络出口，默认值：center_egress1
+     * Set 网络出口，当前仅支持精品BGP、静态单线，这2种IP 地址类型的指定出口传入，默认值：center_egress1，其它可选值：center_egress2、center_egress3
+     * @param Egress 网络出口，当前仅支持精品BGP、静态单线，这2种IP 地址类型的指定出口传入，默认值：center_egress1，其它可选值：center_egress2、center_egress3
      */
     public void setEgress(String Egress) {
         this.Egress = Egress;

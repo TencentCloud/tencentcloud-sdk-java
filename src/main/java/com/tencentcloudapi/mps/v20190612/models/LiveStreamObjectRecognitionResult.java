@@ -59,6 +59,14 @@ public class LiveStreamObjectRecognitionResult extends AbstractModel {
     private Long [] AreaCoordSet;
 
     /**
+    * 截图链接。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Url")
+    @Expose
+    private String Url;
+
+    /**
      * Get 识别的物体名称。 
      * @return Name 识别的物体名称。
      */
@@ -138,6 +146,26 @@ public class LiveStreamObjectRecognitionResult extends AbstractModel {
         this.AreaCoordSet = AreaCoordSet;
     }
 
+    /**
+     * Get 截图链接。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Url 截图链接。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getUrl() {
+        return this.Url;
+    }
+
+    /**
+     * Set 截图链接。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Url 截图链接。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUrl(String Url) {
+        this.Url = Url;
+    }
+
     public LiveStreamObjectRecognitionResult() {
     }
 
@@ -164,6 +192,9 @@ public class LiveStreamObjectRecognitionResult extends AbstractModel {
                 this.AreaCoordSet[i] = new Long(source.AreaCoordSet[i]);
             }
         }
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
+        }
     }
 
 
@@ -176,6 +207,7 @@ public class LiveStreamObjectRecognitionResult extends AbstractModel {
         this.setParamSimple(map, prefix + "EndPtsOffset", this.EndPtsOffset);
         this.setParamSimple(map, prefix + "Confidence", this.Confidence);
         this.setParamArraySimple(map, prefix + "AreaCoordSet.", this.AreaCoordSet);
+        this.setParamSimple(map, prefix + "Url", this.Url);
 
     }
 }

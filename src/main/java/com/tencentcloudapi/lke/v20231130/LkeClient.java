@@ -328,6 +328,17 @@ public class LkeClient extends AbstractClient{
     }
 
     /**
+     *获取片段详情
+     * @param req DescribeSegmentsRequest
+     * @return DescribeSegmentsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSegmentsResponse DescribeSegments(DescribeSegmentsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSegments", DescribeSegmentsResponse.class);
+    }
+
+    /**
      *获取文件上传临时密钥
      * @param req DescribeStorageCredentialRequest
      * @return DescribeStorageCredentialResponse

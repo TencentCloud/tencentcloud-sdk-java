@@ -68,6 +68,14 @@ public class LiveStreamTaskNotifyConfig extends AbstractModel {
     private String NotifyUrl;
 
     /**
+    * 用于生成回调签名的 Key。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NotifyKey")
+    @Expose
+    private String NotifyKey;
+
+    /**
      * Get 通知类型，默认CMQ，指定URL时HTTP回调推送到 NotifyUrl 指定的地址。
 
 <font color="red"> 注：不填或为空时默认 CMQ，如需采用其他类型需填写对应类型值。 </font> 
@@ -171,6 +179,26 @@ public class LiveStreamTaskNotifyConfig extends AbstractModel {
         this.NotifyUrl = NotifyUrl;
     }
 
+    /**
+     * Get 用于生成回调签名的 Key。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NotifyKey 用于生成回调签名的 Key。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getNotifyKey() {
+        return this.NotifyKey;
+    }
+
+    /**
+     * Set 用于生成回调签名的 Key。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NotifyKey 用于生成回调签名的 Key。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNotifyKey(String NotifyKey) {
+        this.NotifyKey = NotifyKey;
+    }
+
     public LiveStreamTaskNotifyConfig() {
     }
 
@@ -197,6 +225,9 @@ public class LiveStreamTaskNotifyConfig extends AbstractModel {
         if (source.NotifyUrl != null) {
             this.NotifyUrl = new String(source.NotifyUrl);
         }
+        if (source.NotifyKey != null) {
+            this.NotifyKey = new String(source.NotifyKey);
+        }
     }
 
 
@@ -210,6 +241,7 @@ public class LiveStreamTaskNotifyConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "QueueName", this.QueueName);
         this.setParamSimple(map, prefix + "TopicName", this.TopicName);
         this.setParamSimple(map, prefix + "NotifyUrl", this.NotifyUrl);
+        this.setParamSimple(map, prefix + "NotifyKey", this.NotifyKey);
 
     }
 }

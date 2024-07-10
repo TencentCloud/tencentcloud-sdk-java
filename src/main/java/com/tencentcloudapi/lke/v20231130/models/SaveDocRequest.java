@@ -130,7 +130,7 @@ public class SaveDocRequest extends AbstractModel {
     private Boolean IsRefer;
 
     /**
-    * 文档操作类型：1：批量导入；2:文档导入
+    * 文档操作类型：1：批量导入（批量导入问答对）；2:文档导入（正常导入单个文档）
     */
     @SerializedName("Opt")
     @Expose
@@ -381,16 +381,16 @@ public class SaveDocRequest extends AbstractModel {
     }
 
     /**
-     * Get 文档操作类型：1：批量导入；2:文档导入 
-     * @return Opt 文档操作类型：1：批量导入；2:文档导入
+     * Get 文档操作类型：1：批量导入（批量导入问答对）；2:文档导入（正常导入单个文档） 
+     * @return Opt 文档操作类型：1：批量导入（批量导入问答对）；2:文档导入（正常导入单个文档）
      */
     public Long getOpt() {
         return this.Opt;
     }
 
     /**
-     * Set 文档操作类型：1：批量导入；2:文档导入
-     * @param Opt 文档操作类型：1：批量导入；2:文档导入
+     * Set 文档操作类型：1：批量导入（批量导入问答对）；2:文档导入（正常导入单个文档）
+     * @param Opt 文档操作类型：1：批量导入（批量导入问答对）；2:文档导入（正常导入单个文档）
      */
     public void setOpt(Long Opt) {
         this.Opt = Opt;

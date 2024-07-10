@@ -61,6 +61,17 @@ public class MnaClient extends AbstractClient{
     }
 
     /**
+     *新建分组
+     * @param req AddGroupRequest
+     * @return AddGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddGroupResponse AddGroup(AddGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AddGroup", AddGroupResponse.class);
+    }
+
+    /**
      *添加硬件设备，生成未激活的硬件设备，可支持批量添加
      * @param req AddHardwareRequest
      * @return AddHardwareResponse
@@ -102,6 +113,17 @@ public class MnaClient extends AbstractClient{
     public DeleteDeviceResponse DeleteDevice(DeleteDeviceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteDevice", DeleteDeviceResponse.class);
+    }
+
+    /**
+     *删除分组
+     * @param req DeleteGroupRequest
+     * @return DeleteGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteGroupResponse DeleteGroup(DeleteGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteGroup", DeleteGroupResponse.class);
     }
 
     /**
@@ -204,6 +226,39 @@ public class MnaClient extends AbstractClient{
     }
 
     /**
+     *获取指定区域，指定时间点数据流量使用情况
+     * @param req GetFlowStatisticByRegionRequest
+     * @return GetFlowStatisticByRegionResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetFlowStatisticByRegionResponse GetFlowStatisticByRegion(GetFlowStatisticByRegionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetFlowStatisticByRegion", GetFlowStatisticByRegionResponse.class);
+    }
+
+    /**
+     *查看分组详细信息
+     * @param req GetGroupDetailRequest
+     * @return GetGroupDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetGroupDetailResponse GetGroupDetail(GetGroupDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetGroupDetail", GetGroupDetailResponse.class);
+    }
+
+    /**
+     *获取分组列表
+     * @param req GetGroupListRequest
+     * @return GetGroupListResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetGroupListResponse GetGroupList(GetGroupListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetGroupList", GetGroupListResponse.class);
+    }
+
+    /**
      *获取厂商硬件列表
      * @param req GetHardwareListRequest
      * @return GetHardwareListResponse
@@ -270,6 +325,28 @@ public class MnaClient extends AbstractClient{
     }
 
     /**
+     *向已存在分组中添加设备
+     * @param req GroupAddDeviceRequest
+     * @return GroupAddDeviceResponse
+     * @throws TencentCloudSDKException
+     */
+    public GroupAddDeviceResponse GroupAddDevice(GroupAddDeviceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GroupAddDevice", GroupAddDeviceResponse.class);
+    }
+
+    /**
+     *删除分组中的设备
+     * @param req GroupDeleteDeviceRequest
+     * @return GroupDeleteDeviceResponse
+     * @throws TencentCloudSDKException
+     */
+    public GroupDeleteDeviceResponse GroupDeleteDevice(GroupDeleteDeviceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GroupDeleteDevice", GroupDeleteDeviceResponse.class);
+    }
+
+    /**
      *可开启/关闭流量包自动续费，不影响当前周期正在生效的流量包。
      * @param req ModifyPackageRenewFlagRequest
      * @return ModifyPackageRenewFlagResponse
@@ -292,6 +369,17 @@ public class MnaClient extends AbstractClient{
     }
 
     /**
+     *设置用户流量告警信息接口，通过该接口设置流量包告警阈值以及告警时回调的url和key
+     * @param req SetNotifyUrlRequest
+     * @return SetNotifyUrlResponse
+     * @throws TencentCloudSDKException
+     */
+    public SetNotifyUrlResponse SetNotifyUrl(SetNotifyUrlRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SetNotifyUrl", SetNotifyUrlResponse.class);
+    }
+
+    /**
      *更新设备信息
      * @param req UpdateDeviceRequest
      * @return UpdateDeviceResponse
@@ -300,6 +388,17 @@ public class MnaClient extends AbstractClient{
     public UpdateDeviceResponse UpdateDevice(UpdateDeviceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "UpdateDevice", UpdateDeviceResponse.class);
+    }
+
+    /**
+     *更新分组备注
+     * @param req UpdateGroupRequest
+     * @return UpdateGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateGroupResponse UpdateGroup(UpdateGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateGroup", UpdateGroupResponse.class);
     }
 
     /**

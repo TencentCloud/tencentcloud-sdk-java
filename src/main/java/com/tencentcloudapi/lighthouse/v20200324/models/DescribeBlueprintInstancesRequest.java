@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeBlueprintInstancesRequest extends AbstractModel {
 
     /**
-    * 实例 ID 列表，当前最多支持 1 个。
+    * 实例 ID 列表。可通过[DescribeInstances](https://cloud.tencent.com/document/api/1207/47573)接口返回值中的InstanceId获取。 当前最多支持1个。
     */
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
 
     /**
-     * Get 实例 ID 列表，当前最多支持 1 个。 
-     * @return InstanceIds 实例 ID 列表，当前最多支持 1 个。
+     * Get 实例 ID 列表。可通过[DescribeInstances](https://cloud.tencent.com/document/api/1207/47573)接口返回值中的InstanceId获取。 当前最多支持1个。 
+     * @return InstanceIds 实例 ID 列表。可通过[DescribeInstances](https://cloud.tencent.com/document/api/1207/47573)接口返回值中的InstanceId获取。 当前最多支持1个。
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set 实例 ID 列表，当前最多支持 1 个。
-     * @param InstanceIds 实例 ID 列表，当前最多支持 1 个。
+     * Set 实例 ID 列表。可通过[DescribeInstances](https://cloud.tencent.com/document/api/1207/47573)接口返回值中的InstanceId获取。 当前最多支持1个。
+     * @param InstanceIds 实例 ID 列表。可通过[DescribeInstances](https://cloud.tencent.com/document/api/1207/47573)接口返回值中的InstanceId获取。 当前最多支持1个。
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;

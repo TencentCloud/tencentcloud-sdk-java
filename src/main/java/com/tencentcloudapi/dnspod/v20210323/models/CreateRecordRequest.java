@@ -115,6 +115,13 @@ public class CreateRecordRequest extends AbstractModel {
     private String DnssecConflictMode;
 
     /**
+    * 记录分组 Id。可以通过接口 DescribeRecordGroupList 接口 GroupId 字段获取。
+    */
+    @SerializedName("GroupId")
+    @Expose
+    private Long GroupId;
+
+    /**
      * Get 域名 
      * @return Domain 域名
      */
@@ -322,6 +329,22 @@ public class CreateRecordRequest extends AbstractModel {
         this.DnssecConflictMode = DnssecConflictMode;
     }
 
+    /**
+     * Get 记录分组 Id。可以通过接口 DescribeRecordGroupList 接口 GroupId 字段获取。 
+     * @return GroupId 记录分组 Id。可以通过接口 DescribeRecordGroupList 接口 GroupId 字段获取。
+     */
+    public Long getGroupId() {
+        return this.GroupId;
+    }
+
+    /**
+     * Set 记录分组 Id。可以通过接口 DescribeRecordGroupList 接口 GroupId 字段获取。
+     * @param GroupId 记录分组 Id。可以通过接口 DescribeRecordGroupList 接口 GroupId 字段获取。
+     */
+    public void setGroupId(Long GroupId) {
+        this.GroupId = GroupId;
+    }
+
     public CreateRecordRequest() {
     }
 
@@ -369,6 +392,9 @@ public class CreateRecordRequest extends AbstractModel {
         if (source.DnssecConflictMode != null) {
             this.DnssecConflictMode = new String(source.DnssecConflictMode);
         }
+        if (source.GroupId != null) {
+            this.GroupId = new Long(source.GroupId);
+        }
     }
 
 
@@ -389,6 +415,7 @@ public class CreateRecordRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "DnssecConflictMode", this.DnssecConflictMode);
+        this.setParamSimple(map, prefix + "GroupId", this.GroupId);
 
     }
 }

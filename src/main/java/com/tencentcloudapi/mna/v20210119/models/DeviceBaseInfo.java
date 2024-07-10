@@ -98,6 +98,14 @@ public class DeviceBaseInfo extends AbstractModel {
     private String GroupName;
 
     /**
+    * 设备无流量包处理方式，0: 按量付费，1: 截断加速
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FlowTrunc")
+    @Expose
+    private Long FlowTrunc;
+
+    /**
      * Get 设备唯一ID 
      * @return DeviceId 设备唯一ID
      */
@@ -273,6 +281,26 @@ public class DeviceBaseInfo extends AbstractModel {
         this.GroupName = GroupName;
     }
 
+    /**
+     * Get 设备无流量包处理方式，0: 按量付费，1: 截断加速
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FlowTrunc 设备无流量包处理方式，0: 按量付费，1: 截断加速
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getFlowTrunc() {
+        return this.FlowTrunc;
+    }
+
+    /**
+     * Set 设备无流量包处理方式，0: 按量付费，1: 截断加速
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FlowTrunc 设备无流量包处理方式，0: 按量付费，1: 截断加速
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFlowTrunc(Long FlowTrunc) {
+        this.FlowTrunc = FlowTrunc;
+    }
+
     public DeviceBaseInfo() {
     }
 
@@ -311,6 +339,9 @@ public class DeviceBaseInfo extends AbstractModel {
         if (source.GroupName != null) {
             this.GroupName = new String(source.GroupName);
         }
+        if (source.FlowTrunc != null) {
+            this.FlowTrunc = new Long(source.FlowTrunc);
+        }
     }
 
 
@@ -328,6 +359,7 @@ public class DeviceBaseInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Payer", this.Payer);
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);
         this.setParamSimple(map, prefix + "GroupName", this.GroupName);
+        this.setParamSimple(map, prefix + "FlowTrunc", this.FlowTrunc);
 
     }
 }

@@ -98,6 +98,22 @@ public class ActivateHardware extends AbstractModel {
     private String GroupName;
 
     /**
+    * 设备无流量包处理方式，0: 按量付费，1: 截断加速
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FlowTrunc")
+    @Expose
+    private Long FlowTrunc;
+
+    /**
+    * 激活后的设备ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DeviceId")
+    @Expose
+    private String DeviceId;
+
+    /**
      * Get 厂商名称
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Vendor 厂商名称
@@ -285,6 +301,46 @@ public class ActivateHardware extends AbstractModel {
         this.GroupName = GroupName;
     }
 
+    /**
+     * Get 设备无流量包处理方式，0: 按量付费，1: 截断加速
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FlowTrunc 设备无流量包处理方式，0: 按量付费，1: 截断加速
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getFlowTrunc() {
+        return this.FlowTrunc;
+    }
+
+    /**
+     * Set 设备无流量包处理方式，0: 按量付费，1: 截断加速
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FlowTrunc 设备无流量包处理方式，0: 按量付费，1: 截断加速
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFlowTrunc(Long FlowTrunc) {
+        this.FlowTrunc = FlowTrunc;
+    }
+
+    /**
+     * Get 激活后的设备ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DeviceId 激活后的设备ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDeviceId() {
+        return this.DeviceId;
+    }
+
+    /**
+     * Set 激活后的设备ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DeviceId 激活后的设备ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDeviceId(String DeviceId) {
+        this.DeviceId = DeviceId;
+    }
+
     public ActivateHardware() {
     }
 
@@ -320,6 +376,12 @@ public class ActivateHardware extends AbstractModel {
         if (source.GroupName != null) {
             this.GroupName = new String(source.GroupName);
         }
+        if (source.FlowTrunc != null) {
+            this.FlowTrunc = new Long(source.FlowTrunc);
+        }
+        if (source.DeviceId != null) {
+            this.DeviceId = new String(source.DeviceId);
+        }
     }
 
 
@@ -336,6 +398,8 @@ public class ActivateHardware extends AbstractModel {
         this.setParamSimple(map, prefix + "LicensePayMode", this.LicensePayMode);
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);
         this.setParamSimple(map, prefix + "GroupName", this.GroupName);
+        this.setParamSimple(map, prefix + "FlowTrunc", this.FlowTrunc);
+        this.setParamSimple(map, prefix + "DeviceId", this.DeviceId);
 
     }
 }

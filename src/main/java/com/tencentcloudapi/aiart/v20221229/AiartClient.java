@@ -39,6 +39,19 @@ public class AiartClient extends AbstractClient{
     }
 
     /**
+     *上传正面全身模特照和服装平铺图，生成模特换装后的图片。
+生成的换装图片分辨率和模特照分辨率一致。
+模特换装默认提供1个并发任务数，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后才能开始处理下一个任务。
+     * @param req ChangeClothesRequest
+     * @return ChangeClothesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ChangeClothesResponse ChangeClothes(ChangeClothesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ChangeClothes", ChangeClothesResponse.class);
+    }
+
+    /**
      *百变头像接口将根据输入的人像照片，生成风格百变的头像。
 百变头像默认提供1个并发任务数，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后才能开始处理下一个任务。
      * @param req GenerateAvatarRequest

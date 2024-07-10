@@ -87,6 +87,13 @@ public class AddDeviceRequest extends AbstractModel {
     private String GroupId;
 
     /**
+    * 设备无流量包处理方式，0: 按量付费，1: 截断加速
+    */
+    @SerializedName("FlowTrunc")
+    @Expose
+    private Long FlowTrunc;
+
+    /**
      * Get 新建设备的名称 
      * @return DeviceName 新建设备的名称
      */
@@ -242,6 +249,22 @@ public class AddDeviceRequest extends AbstractModel {
         this.GroupId = GroupId;
     }
 
+    /**
+     * Get 设备无流量包处理方式，0: 按量付费，1: 截断加速 
+     * @return FlowTrunc 设备无流量包处理方式，0: 按量付费，1: 截断加速
+     */
+    public Long getFlowTrunc() {
+        return this.FlowTrunc;
+    }
+
+    /**
+     * Set 设备无流量包处理方式，0: 按量付费，1: 截断加速
+     * @param FlowTrunc 设备无流量包处理方式，0: 按量付费，1: 截断加速
+     */
+    public void setFlowTrunc(Long FlowTrunc) {
+        this.FlowTrunc = FlowTrunc;
+    }
+
     public AddDeviceRequest() {
     }
 
@@ -274,6 +297,9 @@ public class AddDeviceRequest extends AbstractModel {
         if (source.GroupId != null) {
             this.GroupId = new String(source.GroupId);
         }
+        if (source.FlowTrunc != null) {
+            this.FlowTrunc = new Long(source.FlowTrunc);
+        }
     }
 
 
@@ -289,6 +315,7 @@ public class AddDeviceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "LicensePayMode", this.LicensePayMode);
         this.setParamSimple(map, prefix + "GroupName", this.GroupName);
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);
+        this.setParamSimple(map, prefix + "FlowTrunc", this.FlowTrunc);
 
     }
 }

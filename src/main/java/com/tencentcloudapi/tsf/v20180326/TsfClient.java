@@ -369,6 +369,17 @@ public class TsfClient extends AbstractClient{
     }
 
     /**
+     *创建数据集
+     * @param req CreateProgramRequest
+     * @return CreateProgramResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateProgramResponse CreateProgram(CreateProgramRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateProgram", CreateProgramResponse.class);
+    }
+
+    /**
      *创建公共配置项
      * @param req CreatePublicConfigRequest
      * @return CreatePublicConfigResponse
@@ -2043,6 +2054,17 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     public ModifyPathRewriteResponse ModifyPathRewrite(ModifyPathRewriteRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyPathRewrite", ModifyPathRewriteResponse.class);
+    }
+
+    /**
+     *更新数据集
+     * @param req ModifyProgramRequest
+     * @return ModifyProgramResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyProgramResponse ModifyProgram(ModifyProgramRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyProgram", ModifyProgramResponse.class);
     }
 
     /**
