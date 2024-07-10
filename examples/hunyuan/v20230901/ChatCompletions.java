@@ -32,7 +32,7 @@ public class ChatCompletions {
                     msg
             });
 
-            // hunyuan ChatCompletions/ChatPro 同时支持 stream 和非 stream 的情况
+            // hunyuan ChatCompletions 同时支持 stream 和非 stream 的情况
             req.setStream(true);
 
             ChatCompletionsResponse resp = client.ChatCompletions(req);
