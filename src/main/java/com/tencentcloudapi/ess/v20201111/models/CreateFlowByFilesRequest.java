@@ -34,7 +34,7 @@ public class CreateFlowByFilesRequest extends AbstractModel {
     private UserInfo Operator;
 
     /**
-    * 合同流程的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
+    * 合同流程的名称（可自定义此名称），长度不能超过200个字符，只能由中文、字母、数字、中划线和下划线组成。
 
 该名称还将用于合同签署完成后的下载文件名。
     */
@@ -83,6 +83,7 @@ public class CreateFlowByFilesRequest extends AbstractModel {
 <li> 勾选框控件        </li>
 <li> 数字控件          </li>
 <li> 图片控件          </li>
+<li> 水印控件          </li>
 <li> 动态表格等填写控件</li></ul>
     */
     @SerializedName("Components")
@@ -262,10 +263,10 @@ public class CreateFlowByFilesRequest extends AbstractModel {
     }
 
     /**
-     * Get 合同流程的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
+     * Get 合同流程的名称（可自定义此名称），长度不能超过200个字符，只能由中文、字母、数字、中划线和下划线组成。
 
 该名称还将用于合同签署完成后的下载文件名。 
-     * @return FlowName 合同流程的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
+     * @return FlowName 合同流程的名称（可自定义此名称），长度不能超过200个字符，只能由中文、字母、数字、中划线和下划线组成。
 
 该名称还将用于合同签署完成后的下载文件名。
      */
@@ -274,10 +275,10 @@ public class CreateFlowByFilesRequest extends AbstractModel {
     }
 
     /**
-     * Set 合同流程的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
+     * Set 合同流程的名称（可自定义此名称），长度不能超过200个字符，只能由中文、字母、数字、中划线和下划线组成。
 
 该名称还将用于合同签署完成后的下载文件名。
-     * @param FlowName 合同流程的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
+     * @param FlowName 合同流程的名称（可自定义此名称），长度不能超过200个字符，只能由中文、字母、数字、中划线和下划线组成。
 
 该名称还将用于合同签署完成后的下载文件名。
      */
@@ -380,6 +381,7 @@ public class CreateFlowByFilesRequest extends AbstractModel {
 <li> 勾选框控件        </li>
 <li> 数字控件          </li>
 <li> 图片控件          </li>
+<li> 水印控件          </li>
 <li> 动态表格等填写控件</li></ul> 
      * @return Components 模板或者合同中的填写控件列表，列表中可支持下列多种填写控件，控件的详细定义参考开发者中心的Component结构体
 <ul><li> 单行文本控件      </li>
@@ -387,6 +389,7 @@ public class CreateFlowByFilesRequest extends AbstractModel {
 <li> 勾选框控件        </li>
 <li> 数字控件          </li>
 <li> 图片控件          </li>
+<li> 水印控件          </li>
 <li> 动态表格等填写控件</li></ul>
      */
     public Component [] getComponents() {
@@ -400,6 +403,7 @@ public class CreateFlowByFilesRequest extends AbstractModel {
 <li> 勾选框控件        </li>
 <li> 数字控件          </li>
 <li> 图片控件          </li>
+<li> 水印控件          </li>
 <li> 动态表格等填写控件</li></ul>
      * @param Components 模板或者合同中的填写控件列表，列表中可支持下列多种填写控件，控件的详细定义参考开发者中心的Component结构体
 <ul><li> 单行文本控件      </li>
@@ -407,6 +411,7 @@ public class CreateFlowByFilesRequest extends AbstractModel {
 <li> 勾选框控件        </li>
 <li> 数字控件          </li>
 <li> 图片控件          </li>
+<li> 水印控件          </li>
 <li> 动态表格等填写控件</li></ul>
      */
     public void setComponents(Component [] Components) {

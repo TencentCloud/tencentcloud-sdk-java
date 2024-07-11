@@ -24,32 +24,35 @@ import java.util.HashMap;
 public class CreateDBInstanceRequest extends AbstractModel {
 
     /**
-    * 指每个副本集内节点个数。具体售卖规格，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
+    * - 创建副本集实例，指每个副本集内主从节点数量。每个副本集所支持的的最大节点数与最小节点数，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
+- 创建分片集群实例，指每个分片的主从节点数量。每个分片所支持的最大节点数与最小节点数，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
     */
     @SerializedName("NodeNum")
     @Expose
     private Long NodeNum;
 
     /**
-    * 实例内存大小，单位：GB。
+    * 实例内存大小，单位：GB。具体售卖的内存规格，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
     */
     @SerializedName("Memory")
     @Expose
     private Long Memory;
 
     /**
-    * 实例硬盘大小，单位：GB。
+    * 实例硬盘大小，单位：GB。每一个 CPU 规格对应的最大磁盘与最小磁盘范围，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
     */
     @SerializedName("Volume")
     @Expose
     private Long Volume;
 
     /**
-    * 指版本信息。具体售卖规格，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
+    * 指版本信息。具体支持的版本信息 ，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
 - MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本。
 - MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本。
 - MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。
 - MONGO_44_WT：MongoDB 4.4 WiredTiger存储引擎版本。
+- MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
+- MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
     */
     @SerializedName("MongoVersion")
     @Expose
@@ -72,16 +75,17 @@ public class CreateDBInstanceRequest extends AbstractModel {
     private String Zone;
 
     /**
-    * 实例时长，单位：月，可选值包括 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]。
+    * 指定购买实例的购买时长。取值可选：[1,2,3,4,5,6,7,8,9,10,11,12,24,36]；单位：月。
+
     */
     @SerializedName("Period")
     @Expose
     private Long Period;
 
     /**
-    * 机器类型。
-- HIO：高IO型。
-- HIO10G：高IO万兆。
+    * 产品规格类型。
+- HIO10G：通用高HIO万兆型。
+- HCD：云盘版类型。
     */
     @SerializedName("MachineCode")
     @Expose
@@ -97,16 +101,17 @@ public class CreateDBInstanceRequest extends AbstractModel {
     private String ClusterType;
 
     /**
-    * 指副本集数量。
-- 创建副本集实例，该参数只能为1。
-- 创建分片实例，指分片的数量。具体售卖规格，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
+    * - 创建副本集实例，指副本集数量，该参数只能为1。
+- 创建分片集群实例，指分片的数量。请通过接口[DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567)查询分片数量的取值范围，其返回的数据结构SpecItems中的参数MinReplicateSetNum与MaxReplicateSetNum分别对应其最小值与最大值。
     */
     @SerializedName("ReplicateSetNum")
     @Expose
     private Long ReplicateSetNum;
 
     /**
-    * 项目ID。若不设置该参数，则为默认项目。
+    * 项目ID。
+- 若不设置该参数，则为默认项目。
+- 在 [MongoDB 控制台项目管理](https://console.cloud.tencent.com/project)页面，可获取项目ID。
     */
     @SerializedName("ProjectId")
     @Expose
@@ -142,7 +147,7 @@ public class CreateDBInstanceRequest extends AbstractModel {
 
     /**
     * 自动续费标记。
-- 0：不自动续费。默认为不自动续费。
+- 0：不自动续费。
 - 1：自动续费。
     */
     @SerializedName("AutoRenewFlag")
@@ -159,10 +164,7 @@ public class CreateDBInstanceRequest extends AbstractModel {
     private Long AutoVoucher;
 
     /**
-    * 实例类型。
-- 1：正式实例。
-- 3：只读实例。
-- 4：灾备实例。
+    * 实例类型。- 1：正式实例。- 3：只读实例。- 4：灾备实例。-5：整实例克隆，注意：克隆实例时，RestoreTime为必填项。
     */
     @SerializedName("Clone")
     @Expose
@@ -176,16 +178,14 @@ public class CreateDBInstanceRequest extends AbstractModel {
     private String Father;
 
     /**
-    * 安全组。
+    * 安全组 ID。 
     */
     @SerializedName("SecurityGroup")
     @Expose
     private String [] SecurityGroup;
 
     /**
-    * 克隆实例回档时间。
-- 若为克隆实例，则必须配置该参数。输入格式示例：2021-08-13 16:30:00。
-- 回档时间范围：仅能回档7天内时间点的数据。
+    * 克隆实例回档时间，当Clone取值为5或6时为必填。- 若为克隆实例，则必须配置该参数。输入格式示例：2021-08-13 16:30:00。- 回档时间范围：仅能回档7天内时间点的数据。
     */
     @SerializedName("RestoreTime")
     @Expose
@@ -210,21 +210,25 @@ public class CreateDBInstanceRequest extends AbstractModel {
     private String [] AvailabilityZoneList;
 
     /**
-    * Mongos CPU 核数，购买MongoDB 4.2 及以上WiredTiger存储引擎版本的分片集群时，必须填写。具体售卖规格，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
+    * Mongos CPU 核数，支持1、2、4、8、16。购买分片集群时，必须填写。
     */
     @SerializedName("MongosCpu")
     @Expose
     private Long MongosCpu;
 
     /**
-    * Mongos 内存大小。购买MongoDB 4.2 及以上WiredTiger存储引擎版本的分片集群时，必须填写。具体售卖规格，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
+    * Mongos 内存大小。
+-  购买分片集群时，必须填写。
+- 单位：GB，支持1核2GB、2核4GB、4核8GB、8核16GB、16核32GB。
     */
     @SerializedName("MongosMemory")
     @Expose
     private Long MongosMemory;
 
     /**
-    * Mongos 数量。购买MongoDB 4.2 及以上WiredTiger存储引擎版本的分片集群时，必须填写。具体售卖规格，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。为了保障高可用，取值范围为[3,32]。
+    * Mongos 数量。购买分片集群时，必须填写。
+- 单可用区部署实例，其数量范围为[3,32]。
+- 多可用区部署实例，其数量范围为[6,32]。
     */
     @SerializedName("MongosNodeNum")
     @Expose
@@ -238,7 +242,7 @@ public class CreateDBInstanceRequest extends AbstractModel {
     private Long ReadonlyNodeNum;
 
     /**
-    * 指只读节点所属可用区。跨可用区部署实例，参数**ReadonlyNodeNum**不为**0**时，必须配置该参数。
+    * 指只读节点所属可用区数组。跨可用区部署实例，参数**ReadonlyNodeNum**不为**0**时，必须配置该参数。
     */
     @SerializedName("ReadonlyNodeAvailabilityZoneList")
     @Expose
@@ -252,80 +256,92 @@ public class CreateDBInstanceRequest extends AbstractModel {
     private String HiddenZone;
 
     /**
-     * Get 指每个副本集内节点个数。具体售卖规格，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。 
-     * @return NodeNum 指每个副本集内节点个数。具体售卖规格，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
+     * Get - 创建副本集实例，指每个副本集内主从节点数量。每个副本集所支持的的最大节点数与最小节点数，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
+- 创建分片集群实例，指每个分片的主从节点数量。每个分片所支持的最大节点数与最小节点数，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。 
+     * @return NodeNum - 创建副本集实例，指每个副本集内主从节点数量。每个副本集所支持的的最大节点数与最小节点数，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
+- 创建分片集群实例，指每个分片的主从节点数量。每个分片所支持的最大节点数与最小节点数，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
      */
     public Long getNodeNum() {
         return this.NodeNum;
     }
 
     /**
-     * Set 指每个副本集内节点个数。具体售卖规格，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
-     * @param NodeNum 指每个副本集内节点个数。具体售卖规格，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
+     * Set - 创建副本集实例，指每个副本集内主从节点数量。每个副本集所支持的的最大节点数与最小节点数，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
+- 创建分片集群实例，指每个分片的主从节点数量。每个分片所支持的最大节点数与最小节点数，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
+     * @param NodeNum - 创建副本集实例，指每个副本集内主从节点数量。每个副本集所支持的的最大节点数与最小节点数，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
+- 创建分片集群实例，指每个分片的主从节点数量。每个分片所支持的最大节点数与最小节点数，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
      */
     public void setNodeNum(Long NodeNum) {
         this.NodeNum = NodeNum;
     }
 
     /**
-     * Get 实例内存大小，单位：GB。 
-     * @return Memory 实例内存大小，单位：GB。
+     * Get 实例内存大小，单位：GB。具体售卖的内存规格，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。 
+     * @return Memory 实例内存大小，单位：GB。具体售卖的内存规格，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
      */
     public Long getMemory() {
         return this.Memory;
     }
 
     /**
-     * Set 实例内存大小，单位：GB。
-     * @param Memory 实例内存大小，单位：GB。
+     * Set 实例内存大小，单位：GB。具体售卖的内存规格，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
+     * @param Memory 实例内存大小，单位：GB。具体售卖的内存规格，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
      */
     public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * Get 实例硬盘大小，单位：GB。 
-     * @return Volume 实例硬盘大小，单位：GB。
+     * Get 实例硬盘大小，单位：GB。每一个 CPU 规格对应的最大磁盘与最小磁盘范围，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。 
+     * @return Volume 实例硬盘大小，单位：GB。每一个 CPU 规格对应的最大磁盘与最小磁盘范围，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
      */
     public Long getVolume() {
         return this.Volume;
     }
 
     /**
-     * Set 实例硬盘大小，单位：GB。
-     * @param Volume 实例硬盘大小，单位：GB。
+     * Set 实例硬盘大小，单位：GB。每一个 CPU 规格对应的最大磁盘与最小磁盘范围，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
+     * @param Volume 实例硬盘大小，单位：GB。每一个 CPU 规格对应的最大磁盘与最小磁盘范围，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
      */
     public void setVolume(Long Volume) {
         this.Volume = Volume;
     }
 
     /**
-     * Get 指版本信息。具体售卖规格，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
-- MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本。
-- MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本。
-- MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。
-- MONGO_44_WT：MongoDB 4.4 WiredTiger存储引擎版本。 
-     * @return MongoVersion 指版本信息。具体售卖规格，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
+     * Get 指版本信息。具体支持的版本信息 ，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
 - MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本。
 - MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本。
 - MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。
 - MONGO_44_WT：MongoDB 4.4 WiredTiger存储引擎版本。
+- MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
+- MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。 
+     * @return MongoVersion 指版本信息。具体支持的版本信息 ，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
+- MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本。
+- MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本。
+- MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。
+- MONGO_44_WT：MongoDB 4.4 WiredTiger存储引擎版本。
+- MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
+- MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
      */
     public String getMongoVersion() {
         return this.MongoVersion;
     }
 
     /**
-     * Set 指版本信息。具体售卖规格，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
+     * Set 指版本信息。具体支持的版本信息 ，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
 - MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本。
 - MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本。
 - MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。
 - MONGO_44_WT：MongoDB 4.4 WiredTiger存储引擎版本。
-     * @param MongoVersion 指版本信息。具体售卖规格，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
+- MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
+- MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
+     * @param MongoVersion 指版本信息。具体支持的版本信息 ，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
 - MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本。
 - MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本。
 - MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。
 - MONGO_44_WT：MongoDB 4.4 WiredTiger存储引擎版本。
+- MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
+- MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
      */
     public void setMongoVersion(String MongoVersion) {
         this.MongoVersion = MongoVersion;
@@ -372,40 +388,44 @@ public class CreateDBInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get 实例时长，单位：月，可选值包括 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]。 
-     * @return Period 实例时长，单位：月，可选值包括 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]。
+     * Get 指定购买实例的购买时长。取值可选：[1,2,3,4,5,6,7,8,9,10,11,12,24,36]；单位：月。
+ 
+     * @return Period 指定购买实例的购买时长。取值可选：[1,2,3,4,5,6,7,8,9,10,11,12,24,36]；单位：月。
+
      */
     public Long getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set 实例时长，单位：月，可选值包括 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]。
-     * @param Period 实例时长，单位：月，可选值包括 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]。
+     * Set 指定购买实例的购买时长。取值可选：[1,2,3,4,5,6,7,8,9,10,11,12,24,36]；单位：月。
+
+     * @param Period 指定购买实例的购买时长。取值可选：[1,2,3,4,5,6,7,8,9,10,11,12,24,36]；单位：月。
+
      */
     public void setPeriod(Long Period) {
         this.Period = Period;
     }
 
     /**
-     * Get 机器类型。
-- HIO：高IO型。
-- HIO10G：高IO万兆。 
-     * @return MachineCode 机器类型。
-- HIO：高IO型。
-- HIO10G：高IO万兆。
+     * Get 产品规格类型。
+- HIO10G：通用高HIO万兆型。
+- HCD：云盘版类型。 
+     * @return MachineCode 产品规格类型。
+- HIO10G：通用高HIO万兆型。
+- HCD：云盘版类型。
      */
     public String getMachineCode() {
         return this.MachineCode;
     }
 
     /**
-     * Set 机器类型。
-- HIO：高IO型。
-- HIO10G：高IO万兆。
-     * @param MachineCode 机器类型。
-- HIO：高IO型。
-- HIO10G：高IO万兆。
+     * Set 产品规格类型。
+- HIO10G：通用高HIO万兆型。
+- HCD：云盘版类型。
+     * @param MachineCode 产品规格类型。
+- HIO10G：通用高HIO万兆型。
+- HCD：云盘版类型。
      */
     public void setMachineCode(String MachineCode) {
         this.MachineCode = MachineCode;
@@ -436,40 +456,44 @@ public class CreateDBInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get 指副本集数量。
-- 创建副本集实例，该参数只能为1。
-- 创建分片实例，指分片的数量。具体售卖规格，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。 
-     * @return ReplicateSetNum 指副本集数量。
-- 创建副本集实例，该参数只能为1。
-- 创建分片实例，指分片的数量。具体售卖规格，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
+     * Get - 创建副本集实例，指副本集数量，该参数只能为1。
+- 创建分片集群实例，指分片的数量。请通过接口[DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567)查询分片数量的取值范围，其返回的数据结构SpecItems中的参数MinReplicateSetNum与MaxReplicateSetNum分别对应其最小值与最大值。 
+     * @return ReplicateSetNum - 创建副本集实例，指副本集数量，该参数只能为1。
+- 创建分片集群实例，指分片的数量。请通过接口[DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567)查询分片数量的取值范围，其返回的数据结构SpecItems中的参数MinReplicateSetNum与MaxReplicateSetNum分别对应其最小值与最大值。
      */
     public Long getReplicateSetNum() {
         return this.ReplicateSetNum;
     }
 
     /**
-     * Set 指副本集数量。
-- 创建副本集实例，该参数只能为1。
-- 创建分片实例，指分片的数量。具体售卖规格，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
-     * @param ReplicateSetNum 指副本集数量。
-- 创建副本集实例，该参数只能为1。
-- 创建分片实例，指分片的数量。具体售卖规格，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
+     * Set - 创建副本集实例，指副本集数量，该参数只能为1。
+- 创建分片集群实例，指分片的数量。请通过接口[DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567)查询分片数量的取值范围，其返回的数据结构SpecItems中的参数MinReplicateSetNum与MaxReplicateSetNum分别对应其最小值与最大值。
+     * @param ReplicateSetNum - 创建副本集实例，指副本集数量，该参数只能为1。
+- 创建分片集群实例，指分片的数量。请通过接口[DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567)查询分片数量的取值范围，其返回的数据结构SpecItems中的参数MinReplicateSetNum与MaxReplicateSetNum分别对应其最小值与最大值。
      */
     public void setReplicateSetNum(Long ReplicateSetNum) {
         this.ReplicateSetNum = ReplicateSetNum;
     }
 
     /**
-     * Get 项目ID。若不设置该参数，则为默认项目。 
-     * @return ProjectId 项目ID。若不设置该参数，则为默认项目。
+     * Get 项目ID。
+- 若不设置该参数，则为默认项目。
+- 在 [MongoDB 控制台项目管理](https://console.cloud.tencent.com/project)页面，可获取项目ID。 
+     * @return ProjectId 项目ID。
+- 若不设置该参数，则为默认项目。
+- 在 [MongoDB 控制台项目管理](https://console.cloud.tencent.com/project)页面，可获取项目ID。
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 项目ID。若不设置该参数，则为默认项目。
-     * @param ProjectId 项目ID。若不设置该参数，则为默认项目。
+     * Set 项目ID。
+- 若不设置该参数，则为默认项目。
+- 在 [MongoDB 控制台项目管理](https://console.cloud.tencent.com/project)页面，可获取项目ID。
+     * @param ProjectId 项目ID。
+- 若不设置该参数，则为默认项目。
+- 在 [MongoDB 控制台项目管理](https://console.cloud.tencent.com/project)页面，可获取项目ID。
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
@@ -541,10 +565,10 @@ public class CreateDBInstanceRequest extends AbstractModel {
 
     /**
      * Get 自动续费标记。
-- 0：不自动续费。默认为不自动续费。
+- 0：不自动续费。
 - 1：自动续费。 
      * @return AutoRenewFlag 自动续费标记。
-- 0：不自动续费。默认为不自动续费。
+- 0：不自动续费。
 - 1：自动续费。
      */
     public Long getAutoRenewFlag() {
@@ -553,10 +577,10 @@ public class CreateDBInstanceRequest extends AbstractModel {
 
     /**
      * Set 自动续费标记。
-- 0：不自动续费。默认为不自动续费。
+- 0：不自动续费。
 - 1：自动续费。
      * @param AutoRenewFlag 自动续费标记。
-- 0：不自动续费。默认为不自动续费。
+- 0：不自动续费。
 - 1：自动续费。
      */
     public void setAutoRenewFlag(Long AutoRenewFlag) {
@@ -588,28 +612,16 @@ public class CreateDBInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get 实例类型。
-- 1：正式实例。
-- 3：只读实例。
-- 4：灾备实例。 
-     * @return Clone 实例类型。
-- 1：正式实例。
-- 3：只读实例。
-- 4：灾备实例。
+     * Get 实例类型。- 1：正式实例。- 3：只读实例。- 4：灾备实例。-5：整实例克隆，注意：克隆实例时，RestoreTime为必填项。 
+     * @return Clone 实例类型。- 1：正式实例。- 3：只读实例。- 4：灾备实例。-5：整实例克隆，注意：克隆实例时，RestoreTime为必填项。
      */
     public Long getClone() {
         return this.Clone;
     }
 
     /**
-     * Set 实例类型。
-- 1：正式实例。
-- 3：只读实例。
-- 4：灾备实例。
-     * @param Clone 实例类型。
-- 1：正式实例。
-- 3：只读实例。
-- 4：灾备实例。
+     * Set 实例类型。- 1：正式实例。- 3：只读实例。- 4：灾备实例。-5：整实例克隆，注意：克隆实例时，RestoreTime为必填项。
+     * @param Clone 实例类型。- 1：正式实例。- 3：只读实例。- 4：灾备实例。-5：整实例克隆，注意：克隆实例时，RestoreTime为必填项。
      */
     public void setClone(Long Clone) {
         this.Clone = Clone;
@@ -632,40 +644,32 @@ public class CreateDBInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get 安全组。 
-     * @return SecurityGroup 安全组。
+     * Get 安全组 ID。  
+     * @return SecurityGroup 安全组 ID。 
      */
     public String [] getSecurityGroup() {
         return this.SecurityGroup;
     }
 
     /**
-     * Set 安全组。
-     * @param SecurityGroup 安全组。
+     * Set 安全组 ID。 
+     * @param SecurityGroup 安全组 ID。 
      */
     public void setSecurityGroup(String [] SecurityGroup) {
         this.SecurityGroup = SecurityGroup;
     }
 
     /**
-     * Get 克隆实例回档时间。
-- 若为克隆实例，则必须配置该参数。输入格式示例：2021-08-13 16:30:00。
-- 回档时间范围：仅能回档7天内时间点的数据。 
-     * @return RestoreTime 克隆实例回档时间。
-- 若为克隆实例，则必须配置该参数。输入格式示例：2021-08-13 16:30:00。
-- 回档时间范围：仅能回档7天内时间点的数据。
+     * Get 克隆实例回档时间，当Clone取值为5或6时为必填。- 若为克隆实例，则必须配置该参数。输入格式示例：2021-08-13 16:30:00。- 回档时间范围：仅能回档7天内时间点的数据。 
+     * @return RestoreTime 克隆实例回档时间，当Clone取值为5或6时为必填。- 若为克隆实例，则必须配置该参数。输入格式示例：2021-08-13 16:30:00。- 回档时间范围：仅能回档7天内时间点的数据。
      */
     public String getRestoreTime() {
         return this.RestoreTime;
     }
 
     /**
-     * Set 克隆实例回档时间。
-- 若为克隆实例，则必须配置该参数。输入格式示例：2021-08-13 16:30:00。
-- 回档时间范围：仅能回档7天内时间点的数据。
-     * @param RestoreTime 克隆实例回档时间。
-- 若为克隆实例，则必须配置该参数。输入格式示例：2021-08-13 16:30:00。
-- 回档时间范围：仅能回档7天内时间点的数据。
+     * Set 克隆实例回档时间，当Clone取值为5或6时为必填。- 若为克隆实例，则必须配置该参数。输入格式示例：2021-08-13 16:30:00。- 回档时间范围：仅能回档7天内时间点的数据。
+     * @param RestoreTime 克隆实例回档时间，当Clone取值为5或6时为必填。- 若为克隆实例，则必须配置该参数。输入格式示例：2021-08-13 16:30:00。- 回档时间范围：仅能回档7天内时间点的数据。
      */
     public void setRestoreTime(String RestoreTime) {
         this.RestoreTime = RestoreTime;
@@ -720,48 +724,64 @@ public class CreateDBInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get Mongos CPU 核数，购买MongoDB 4.2 及以上WiredTiger存储引擎版本的分片集群时，必须填写。具体售卖规格，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。 
-     * @return MongosCpu Mongos CPU 核数，购买MongoDB 4.2 及以上WiredTiger存储引擎版本的分片集群时，必须填写。具体售卖规格，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
+     * Get Mongos CPU 核数，支持1、2、4、8、16。购买分片集群时，必须填写。 
+     * @return MongosCpu Mongos CPU 核数，支持1、2、4、8、16。购买分片集群时，必须填写。
      */
     public Long getMongosCpu() {
         return this.MongosCpu;
     }
 
     /**
-     * Set Mongos CPU 核数，购买MongoDB 4.2 及以上WiredTiger存储引擎版本的分片集群时，必须填写。具体售卖规格，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
-     * @param MongosCpu Mongos CPU 核数，购买MongoDB 4.2 及以上WiredTiger存储引擎版本的分片集群时，必须填写。具体售卖规格，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
+     * Set Mongos CPU 核数，支持1、2、4、8、16。购买分片集群时，必须填写。
+     * @param MongosCpu Mongos CPU 核数，支持1、2、4、8、16。购买分片集群时，必须填写。
      */
     public void setMongosCpu(Long MongosCpu) {
         this.MongosCpu = MongosCpu;
     }
 
     /**
-     * Get Mongos 内存大小。购买MongoDB 4.2 及以上WiredTiger存储引擎版本的分片集群时，必须填写。具体售卖规格，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。 
-     * @return MongosMemory Mongos 内存大小。购买MongoDB 4.2 及以上WiredTiger存储引擎版本的分片集群时，必须填写。具体售卖规格，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
+     * Get Mongos 内存大小。
+-  购买分片集群时，必须填写。
+- 单位：GB，支持1核2GB、2核4GB、4核8GB、8核16GB、16核32GB。 
+     * @return MongosMemory Mongos 内存大小。
+-  购买分片集群时，必须填写。
+- 单位：GB，支持1核2GB、2核4GB、4核8GB、8核16GB、16核32GB。
      */
     public Long getMongosMemory() {
         return this.MongosMemory;
     }
 
     /**
-     * Set Mongos 内存大小。购买MongoDB 4.2 及以上WiredTiger存储引擎版本的分片集群时，必须填写。具体售卖规格，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
-     * @param MongosMemory Mongos 内存大小。购买MongoDB 4.2 及以上WiredTiger存储引擎版本的分片集群时，必须填写。具体售卖规格，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
+     * Set Mongos 内存大小。
+-  购买分片集群时，必须填写。
+- 单位：GB，支持1核2GB、2核4GB、4核8GB、8核16GB、16核32GB。
+     * @param MongosMemory Mongos 内存大小。
+-  购买分片集群时，必须填写。
+- 单位：GB，支持1核2GB、2核4GB、4核8GB、8核16GB、16核32GB。
      */
     public void setMongosMemory(Long MongosMemory) {
         this.MongosMemory = MongosMemory;
     }
 
     /**
-     * Get Mongos 数量。购买MongoDB 4.2 及以上WiredTiger存储引擎版本的分片集群时，必须填写。具体售卖规格，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。为了保障高可用，取值范围为[3,32]。 
-     * @return MongosNodeNum Mongos 数量。购买MongoDB 4.2 及以上WiredTiger存储引擎版本的分片集群时，必须填写。具体售卖规格，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。为了保障高可用，取值范围为[3,32]。
+     * Get Mongos 数量。购买分片集群时，必须填写。
+- 单可用区部署实例，其数量范围为[3,32]。
+- 多可用区部署实例，其数量范围为[6,32]。 
+     * @return MongosNodeNum Mongos 数量。购买分片集群时，必须填写。
+- 单可用区部署实例，其数量范围为[3,32]。
+- 多可用区部署实例，其数量范围为[6,32]。
      */
     public Long getMongosNodeNum() {
         return this.MongosNodeNum;
     }
 
     /**
-     * Set Mongos 数量。购买MongoDB 4.2 及以上WiredTiger存储引擎版本的分片集群时，必须填写。具体售卖规格，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。为了保障高可用，取值范围为[3,32]。
-     * @param MongosNodeNum Mongos 数量。购买MongoDB 4.2 及以上WiredTiger存储引擎版本的分片集群时，必须填写。具体售卖规格，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。为了保障高可用，取值范围为[3,32]。
+     * Set Mongos 数量。购买分片集群时，必须填写。
+- 单可用区部署实例，其数量范围为[3,32]。
+- 多可用区部署实例，其数量范围为[6,32]。
+     * @param MongosNodeNum Mongos 数量。购买分片集群时，必须填写。
+- 单可用区部署实例，其数量范围为[3,32]。
+- 多可用区部署实例，其数量范围为[6,32]。
      */
     public void setMongosNodeNum(Long MongosNodeNum) {
         this.MongosNodeNum = MongosNodeNum;
@@ -784,16 +804,16 @@ public class CreateDBInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get 指只读节点所属可用区。跨可用区部署实例，参数**ReadonlyNodeNum**不为**0**时，必须配置该参数。 
-     * @return ReadonlyNodeAvailabilityZoneList 指只读节点所属可用区。跨可用区部署实例，参数**ReadonlyNodeNum**不为**0**时，必须配置该参数。
+     * Get 指只读节点所属可用区数组。跨可用区部署实例，参数**ReadonlyNodeNum**不为**0**时，必须配置该参数。 
+     * @return ReadonlyNodeAvailabilityZoneList 指只读节点所属可用区数组。跨可用区部署实例，参数**ReadonlyNodeNum**不为**0**时，必须配置该参数。
      */
     public String [] getReadonlyNodeAvailabilityZoneList() {
         return this.ReadonlyNodeAvailabilityZoneList;
     }
 
     /**
-     * Set 指只读节点所属可用区。跨可用区部署实例，参数**ReadonlyNodeNum**不为**0**时，必须配置该参数。
-     * @param ReadonlyNodeAvailabilityZoneList 指只读节点所属可用区。跨可用区部署实例，参数**ReadonlyNodeNum**不为**0**时，必须配置该参数。
+     * Set 指只读节点所属可用区数组。跨可用区部署实例，参数**ReadonlyNodeNum**不为**0**时，必须配置该参数。
+     * @param ReadonlyNodeAvailabilityZoneList 指只读节点所属可用区数组。跨可用区部署实例，参数**ReadonlyNodeNum**不为**0**时，必须配置该参数。
      */
     public void setReadonlyNodeAvailabilityZoneList(String [] ReadonlyNodeAvailabilityZoneList) {
         this.ReadonlyNodeAvailabilityZoneList = ReadonlyNodeAvailabilityZoneList;

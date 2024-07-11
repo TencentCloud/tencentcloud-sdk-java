@@ -45,7 +45,7 @@ public class CreatePrometheusMultiTenantInstancePostPayModeRequest extends Abstr
     private String SubnetId;
 
     /**
-    * 数据存储时间（单位天），限制值为15，30，45之一
+    * 数据存储时间（单位天），限制值为15, 30, 45, 90, 180, 365, 730之一
     */
     @SerializedName("DataRetentionTime")
     @Expose
@@ -121,16 +121,16 @@ public class CreatePrometheusMultiTenantInstancePostPayModeRequest extends Abstr
     }
 
     /**
-     * Get 数据存储时间（单位天），限制值为15，30，45之一 
-     * @return DataRetentionTime 数据存储时间（单位天），限制值为15，30，45之一
+     * Get 数据存储时间（单位天），限制值为15, 30, 45, 90, 180, 365, 730之一 
+     * @return DataRetentionTime 数据存储时间（单位天），限制值为15, 30, 45, 90, 180, 365, 730之一
      */
     public Long getDataRetentionTime() {
         return this.DataRetentionTime;
     }
 
     /**
-     * Set 数据存储时间（单位天），限制值为15，30，45之一
-     * @param DataRetentionTime 数据存储时间（单位天），限制值为15，30，45之一
+     * Set 数据存储时间（单位天），限制值为15, 30, 45, 90, 180, 365, 730之一
+     * @param DataRetentionTime 数据存储时间（单位天），限制值为15, 30, 45, 90, 180, 365, 730之一
      */
     public void setDataRetentionTime(Long DataRetentionTime) {
         this.DataRetentionTime = DataRetentionTime;

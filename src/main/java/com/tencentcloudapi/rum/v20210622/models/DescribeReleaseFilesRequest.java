@@ -38,6 +38,13 @@ public class DescribeReleaseFilesRequest extends AbstractModel {
     private String FileVersion;
 
     /**
+    * 查询过滤条件（根据sourcemap的文件名模糊匹配）
+    */
+    @SerializedName("FileName")
+    @Expose
+    private String FileName;
+
+    /**
      * Get 项目 id 
      * @return ProjectID 项目 id
      */
@@ -69,6 +76,22 @@ public class DescribeReleaseFilesRequest extends AbstractModel {
         this.FileVersion = FileVersion;
     }
 
+    /**
+     * Get 查询过滤条件（根据sourcemap的文件名模糊匹配） 
+     * @return FileName 查询过滤条件（根据sourcemap的文件名模糊匹配）
+     */
+    public String getFileName() {
+        return this.FileName;
+    }
+
+    /**
+     * Set 查询过滤条件（根据sourcemap的文件名模糊匹配）
+     * @param FileName 查询过滤条件（根据sourcemap的文件名模糊匹配）
+     */
+    public void setFileName(String FileName) {
+        this.FileName = FileName;
+    }
+
     public DescribeReleaseFilesRequest() {
     }
 
@@ -83,6 +106,9 @@ public class DescribeReleaseFilesRequest extends AbstractModel {
         if (source.FileVersion != null) {
             this.FileVersion = new String(source.FileVersion);
         }
+        if (source.FileName != null) {
+            this.FileName = new String(source.FileName);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class DescribeReleaseFilesRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProjectID", this.ProjectID);
         this.setParamSimple(map, prefix + "FileVersion", this.FileVersion);
+        this.setParamSimple(map, prefix + "FileName", this.FileName);
 
     }
 }

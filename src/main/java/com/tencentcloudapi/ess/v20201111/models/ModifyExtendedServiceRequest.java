@@ -34,6 +34,7 @@ public class ModifyExtendedServiceRequest extends AbstractModel {
     /**
     * 要管理的拓展服务类型。
 <ul><li>OPEN_SERVER_SIGN：企业自动签署</li>
+<li>AUTO_SIGN_CAN_FILL_IN：本企业自动签合同支持签前内容补充</li>
 <li>OVERSEA_SIGN：企业与港澳台居民签署合同</li>
 <li>AGE_LIMIT_EXPANSION：拓宽签署方年龄限制</li>
 <li>MOBILE_CHECK_APPROVER：个人签署方仅校验手机号</li>
@@ -41,7 +42,8 @@ public class ModifyExtendedServiceRequest extends AbstractModel {
 <li>ORGANIZATION_OCR_FALLBACK：正楷临摹签名失败后更换其他签名类型</li>
 <li>ORGANIZATION_FLOW_NOTIFY_TYPE：短信通知签署方</li>
 <li>HIDE_ONE_KEY_SIGN：个人签署方手动签字</li>
-<li>PAGING_SEAL：骑缝章</li>
+<li>ORGANIZATION_FLOW_EMAIL_NOTIFY：邮件通知签署方</li>
+<li>FLOW_APPROVAL：合同审批强制开启</li>
 <li>ORGANIZATION_FLOW_PASSWD_NOTIFY：签署密码开通引导</li></ul>
     */
     @SerializedName("ServiceType")
@@ -101,6 +103,7 @@ public class ModifyExtendedServiceRequest extends AbstractModel {
     /**
      * Get 要管理的拓展服务类型。
 <ul><li>OPEN_SERVER_SIGN：企业自动签署</li>
+<li>AUTO_SIGN_CAN_FILL_IN：本企业自动签合同支持签前内容补充</li>
 <li>OVERSEA_SIGN：企业与港澳台居民签署合同</li>
 <li>AGE_LIMIT_EXPANSION：拓宽签署方年龄限制</li>
 <li>MOBILE_CHECK_APPROVER：个人签署方仅校验手机号</li>
@@ -108,10 +111,12 @@ public class ModifyExtendedServiceRequest extends AbstractModel {
 <li>ORGANIZATION_OCR_FALLBACK：正楷临摹签名失败后更换其他签名类型</li>
 <li>ORGANIZATION_FLOW_NOTIFY_TYPE：短信通知签署方</li>
 <li>HIDE_ONE_KEY_SIGN：个人签署方手动签字</li>
-<li>PAGING_SEAL：骑缝章</li>
+<li>ORGANIZATION_FLOW_EMAIL_NOTIFY：邮件通知签署方</li>
+<li>FLOW_APPROVAL：合同审批强制开启</li>
 <li>ORGANIZATION_FLOW_PASSWD_NOTIFY：签署密码开通引导</li></ul> 
      * @return ServiceType 要管理的拓展服务类型。
 <ul><li>OPEN_SERVER_SIGN：企业自动签署</li>
+<li>AUTO_SIGN_CAN_FILL_IN：本企业自动签合同支持签前内容补充</li>
 <li>OVERSEA_SIGN：企业与港澳台居民签署合同</li>
 <li>AGE_LIMIT_EXPANSION：拓宽签署方年龄限制</li>
 <li>MOBILE_CHECK_APPROVER：个人签署方仅校验手机号</li>
@@ -119,7 +124,8 @@ public class ModifyExtendedServiceRequest extends AbstractModel {
 <li>ORGANIZATION_OCR_FALLBACK：正楷临摹签名失败后更换其他签名类型</li>
 <li>ORGANIZATION_FLOW_NOTIFY_TYPE：短信通知签署方</li>
 <li>HIDE_ONE_KEY_SIGN：个人签署方手动签字</li>
-<li>PAGING_SEAL：骑缝章</li>
+<li>ORGANIZATION_FLOW_EMAIL_NOTIFY：邮件通知签署方</li>
+<li>FLOW_APPROVAL：合同审批强制开启</li>
 <li>ORGANIZATION_FLOW_PASSWD_NOTIFY：签署密码开通引导</li></ul>
      */
     public String getServiceType() {
@@ -129,6 +135,7 @@ public class ModifyExtendedServiceRequest extends AbstractModel {
     /**
      * Set 要管理的拓展服务类型。
 <ul><li>OPEN_SERVER_SIGN：企业自动签署</li>
+<li>AUTO_SIGN_CAN_FILL_IN：本企业自动签合同支持签前内容补充</li>
 <li>OVERSEA_SIGN：企业与港澳台居民签署合同</li>
 <li>AGE_LIMIT_EXPANSION：拓宽签署方年龄限制</li>
 <li>MOBILE_CHECK_APPROVER：个人签署方仅校验手机号</li>
@@ -136,10 +143,12 @@ public class ModifyExtendedServiceRequest extends AbstractModel {
 <li>ORGANIZATION_OCR_FALLBACK：正楷临摹签名失败后更换其他签名类型</li>
 <li>ORGANIZATION_FLOW_NOTIFY_TYPE：短信通知签署方</li>
 <li>HIDE_ONE_KEY_SIGN：个人签署方手动签字</li>
-<li>PAGING_SEAL：骑缝章</li>
+<li>ORGANIZATION_FLOW_EMAIL_NOTIFY：邮件通知签署方</li>
+<li>FLOW_APPROVAL：合同审批强制开启</li>
 <li>ORGANIZATION_FLOW_PASSWD_NOTIFY：签署密码开通引导</li></ul>
      * @param ServiceType 要管理的拓展服务类型。
 <ul><li>OPEN_SERVER_SIGN：企业自动签署</li>
+<li>AUTO_SIGN_CAN_FILL_IN：本企业自动签合同支持签前内容补充</li>
 <li>OVERSEA_SIGN：企业与港澳台居民签署合同</li>
 <li>AGE_LIMIT_EXPANSION：拓宽签署方年龄限制</li>
 <li>MOBILE_CHECK_APPROVER：个人签署方仅校验手机号</li>
@@ -147,7 +156,8 @@ public class ModifyExtendedServiceRequest extends AbstractModel {
 <li>ORGANIZATION_OCR_FALLBACK：正楷临摹签名失败后更换其他签名类型</li>
 <li>ORGANIZATION_FLOW_NOTIFY_TYPE：短信通知签署方</li>
 <li>HIDE_ONE_KEY_SIGN：个人签署方手动签字</li>
-<li>PAGING_SEAL：骑缝章</li>
+<li>ORGANIZATION_FLOW_EMAIL_NOTIFY：邮件通知签署方</li>
+<li>FLOW_APPROVAL：合同审批强制开启</li>
 <li>ORGANIZATION_FLOW_PASSWD_NOTIFY：签署密码开通引导</li></ul>
      */
     public void setServiceType(String ServiceType) {

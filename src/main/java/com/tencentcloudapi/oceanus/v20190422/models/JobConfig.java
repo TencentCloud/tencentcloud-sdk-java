@@ -277,6 +277,14 @@ public class JobConfig extends AbstractModel {
     private String WorkspaceName;
 
     /**
+    * flink 版本
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FlinkVersion")
+    @Expose
+    private String FlinkVersion;
+
+    /**
      * Get 作业Id 
      * @return JobId 作业Id
      */
@@ -904,6 +912,26 @@ public class JobConfig extends AbstractModel {
         this.WorkspaceName = WorkspaceName;
     }
 
+    /**
+     * Get flink 版本
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FlinkVersion flink 版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getFlinkVersion() {
+        return this.FlinkVersion;
+    }
+
+    /**
+     * Set flink 版本
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FlinkVersion flink 版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFlinkVersion(String FlinkVersion) {
+        this.FlinkVersion = FlinkVersion;
+    }
+
     public JobConfig() {
     }
 
@@ -1017,6 +1045,9 @@ public class JobConfig extends AbstractModel {
         if (source.WorkspaceName != null) {
             this.WorkspaceName = new String(source.WorkspaceName);
         }
+        if (source.FlinkVersion != null) {
+            this.FlinkVersion = new String(source.FlinkVersion);
+        }
     }
 
 
@@ -1056,6 +1087,7 @@ public class JobConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "EsServerlessSpace", this.EsServerlessSpace);
         this.setParamSimple(map, prefix + "IndexName", this.IndexName);
         this.setParamSimple(map, prefix + "WorkspaceName", this.WorkspaceName);
+        this.setParamSimple(map, prefix + "FlinkVersion", this.FlinkVersion);
 
     }
 }

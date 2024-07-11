@@ -846,4 +846,15 @@ public class MariadbClient extends AbstractClient{
         return this.internalRequest(req, "UpgradeDedicatedDBInstance", UpgradeDedicatedDBInstanceResponse.class);
     }
 
+    /**
+     *升级MariaDB按量计费实例
+     * @param req UpgradeHourDBInstanceRequest
+     * @return UpgradeHourDBInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpgradeHourDBInstanceResponse UpgradeHourDBInstance(UpgradeHourDBInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpgradeHourDBInstance", UpgradeHourDBInstanceResponse.class);
+    }
+
 }

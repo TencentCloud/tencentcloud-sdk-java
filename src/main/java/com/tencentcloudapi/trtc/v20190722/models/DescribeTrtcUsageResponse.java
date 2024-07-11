@@ -31,7 +31,7 @@ public class DescribeTrtcUsageResponse extends AbstractModel {
     private String [] UsageKey;
 
     /**
-    * 各个时间点用量明细。
+    * 各个时间点用量明细，单位:分钟
     */
     @SerializedName("UsageList")
     @Expose
@@ -61,16 +61,16 @@ public class DescribeTrtcUsageResponse extends AbstractModel {
     }
 
     /**
-     * Get 各个时间点用量明细。 
-     * @return UsageList 各个时间点用量明细。
+     * Get 各个时间点用量明细，单位:分钟 
+     * @return UsageList 各个时间点用量明细，单位:分钟
      */
     public TrtcUsage [] getUsageList() {
         return this.UsageList;
     }
 
     /**
-     * Set 各个时间点用量明细。
-     * @param UsageList 各个时间点用量明细。
+     * Set 各个时间点用量明细，单位:分钟
+     * @param UsageList 各个时间点用量明细，单位:分钟
      */
     public void setUsageList(TrtcUsage [] UsageList) {
         this.UsageList = UsageList;

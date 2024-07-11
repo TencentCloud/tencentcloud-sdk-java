@@ -877,6 +877,17 @@ public class GaapClient extends AbstractClient{
     }
 
     /**
+     *查询异步任务执行状态
+     * @param req DescribeTaskStatusRequest
+     * @return DescribeTaskStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTaskStatusResponse DescribeTaskStatus(DescribeTaskStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTaskStatus", DescribeTaskStatusResponse.class);
+    }
+
+    /**
      *该接口（DescribeUDPListeners）用于查询单通道或者通道组下的UDP监听器信息
      * @param req DescribeUDPListenersRequest
      * @return DescribeUDPListenersResponse
