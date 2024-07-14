@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AddNodeList extends AbstractModel {
 
     /**
-    * 需要删除的节点角色。
+    * 需要新增的节点角色。
 - SECONDARY：Mongod 节点。
 - READONLY：只读节点。
 - MONGOS：Mongos 节点。
@@ -43,11 +43,11 @@ public class AddNodeList extends AbstractModel {
     private String Zone;
 
     /**
-     * Get 需要删除的节点角色。
+     * Get 需要新增的节点角色。
 - SECONDARY：Mongod 节点。
 - READONLY：只读节点。
 - MONGOS：Mongos 节点。 
-     * @return Role 需要删除的节点角色。
+     * @return Role 需要新增的节点角色。
 - SECONDARY：Mongod 节点。
 - READONLY：只读节点。
 - MONGOS：Mongos 节点。
@@ -57,11 +57,11 @@ public class AddNodeList extends AbstractModel {
     }
 
     /**
-     * Set 需要删除的节点角色。
+     * Set 需要新增的节点角色。
 - SECONDARY：Mongod 节点。
 - READONLY：只读节点。
 - MONGOS：Mongos 节点。
-     * @param Role 需要删除的节点角色。
+     * @param Role 需要新增的节点角色。
 - SECONDARY：Mongod 节点。
 - READONLY：只读节点。
 - MONGOS：Mongos 节点。

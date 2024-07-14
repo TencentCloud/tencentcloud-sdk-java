@@ -220,6 +220,13 @@ public class CreateJobConfigRequest extends AbstractModel {
     private String EsServerlessSpace;
 
     /**
+    * flink版本
+    */
+    @SerializedName("FlinkVersion")
+    @Expose
+    private String FlinkVersion;
+
+    /**
      * Get 作业Id 
      * @return JobId 作业Id
      */
@@ -667,6 +674,22 @@ public class CreateJobConfigRequest extends AbstractModel {
         this.EsServerlessSpace = EsServerlessSpace;
     }
 
+    /**
+     * Get flink版本 
+     * @return FlinkVersion flink版本
+     */
+    public String getFlinkVersion() {
+        return this.FlinkVersion;
+    }
+
+    /**
+     * Set flink版本
+     * @param FlinkVersion flink版本
+     */
+    public void setFlinkVersion(String FlinkVersion) {
+        this.FlinkVersion = FlinkVersion;
+    }
+
     public CreateJobConfigRequest() {
     }
 
@@ -768,6 +791,9 @@ public class CreateJobConfigRequest extends AbstractModel {
         if (source.EsServerlessSpace != null) {
             this.EsServerlessSpace = new String(source.EsServerlessSpace);
         }
+        if (source.FlinkVersion != null) {
+            this.FlinkVersion = new String(source.FlinkVersion);
+        }
     }
 
 
@@ -803,6 +829,7 @@ public class CreateJobConfigRequest extends AbstractModel {
         this.setParamObj(map, prefix + "JobGraph.", this.JobGraph);
         this.setParamSimple(map, prefix + "EsServerlessIndex", this.EsServerlessIndex);
         this.setParamSimple(map, prefix + "EsServerlessSpace", this.EsServerlessSpace);
+        this.setParamSimple(map, prefix + "FlinkVersion", this.FlinkVersion);
 
     }
 }

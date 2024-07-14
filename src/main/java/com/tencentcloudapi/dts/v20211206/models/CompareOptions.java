@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CompareOptions extends AbstractModel {
 
     /**
-    * 对比方式：dataCheck(完整数据对比)、sampleDataCheck(抽样数据对比)、rowsCount(行数对比)
+    * 对比方式：dataCheck(完整数据对比)、sampleDataCheck(抽样数据对比)、rowsCount(行数对比), 默认为dataCheck
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Method")
@@ -32,7 +32,7 @@ public class CompareOptions extends AbstractModel {
     private String Method;
 
     /**
-    * 抽样比例;范围0,100
+    * 抽样比例;范围0,100。默认为100
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SampleRate")
@@ -48,9 +48,9 @@ public class CompareOptions extends AbstractModel {
     private Long ThreadCount;
 
     /**
-     * Get 对比方式：dataCheck(完整数据对比)、sampleDataCheck(抽样数据对比)、rowsCount(行数对比)
+     * Get 对比方式：dataCheck(完整数据对比)、sampleDataCheck(抽样数据对比)、rowsCount(行数对比), 默认为dataCheck
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Method 对比方式：dataCheck(完整数据对比)、sampleDataCheck(抽样数据对比)、rowsCount(行数对比)
+     * @return Method 对比方式：dataCheck(完整数据对比)、sampleDataCheck(抽样数据对比)、rowsCount(行数对比), 默认为dataCheck
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMethod() {
@@ -58,9 +58,9 @@ public class CompareOptions extends AbstractModel {
     }
 
     /**
-     * Set 对比方式：dataCheck(完整数据对比)、sampleDataCheck(抽样数据对比)、rowsCount(行数对比)
+     * Set 对比方式：dataCheck(完整数据对比)、sampleDataCheck(抽样数据对比)、rowsCount(行数对比), 默认为dataCheck
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Method 对比方式：dataCheck(完整数据对比)、sampleDataCheck(抽样数据对比)、rowsCount(行数对比)
+     * @param Method 对比方式：dataCheck(完整数据对比)、sampleDataCheck(抽样数据对比)、rowsCount(行数对比), 默认为dataCheck
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMethod(String Method) {
@@ -68,9 +68,9 @@ public class CompareOptions extends AbstractModel {
     }
 
     /**
-     * Get 抽样比例;范围0,100
+     * Get 抽样比例;范围0,100。默认为100
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SampleRate 抽样比例;范围0,100
+     * @return SampleRate 抽样比例;范围0,100。默认为100
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSampleRate() {
@@ -78,9 +78,9 @@ public class CompareOptions extends AbstractModel {
     }
 
     /**
-     * Set 抽样比例;范围0,100
+     * Set 抽样比例;范围0,100。默认为100
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SampleRate 抽样比例;范围0,100
+     * @param SampleRate 抽样比例;范围0,100。默认为100
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSampleRate(Long SampleRate) {

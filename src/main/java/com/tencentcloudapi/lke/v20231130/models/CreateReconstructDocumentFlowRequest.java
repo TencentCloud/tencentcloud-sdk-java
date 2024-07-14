@@ -24,6 +24,13 @@ import java.util.HashMap;
 public class CreateReconstructDocumentFlowRequest extends AbstractModel {
 
     /**
+    * 文件类型。支持的文件类型：PDF、DOCX、DOC、XLS、XLSX、PPT、PPTX、PNG、JPG、JPEG、CSV
+    */
+    @SerializedName("FileType")
+    @Expose
+    private String FileType;
+
+    /**
     * 文件的 Base64 值。 支持的文件格式：PNG、JPG、JPEG、PDF。 支持的文件大小：所下载文件经Base64编码后不超过 8M。文件下载时间不超过 3 秒。 支持的图片像素：单边介于20-10000px之间。 文件的 FileUrl、FileBase64 必须提供一个，如果都提供，只使用 FileUrl。
     */
     @SerializedName("FileBase64")
@@ -57,6 +64,22 @@ public class CreateReconstructDocumentFlowRequest extends AbstractModel {
     @SerializedName("Config")
     @Expose
     private CreateReconstructDocumentFlowConfig Config;
+
+    /**
+     * Get 文件类型。支持的文件类型：PDF、DOCX、DOC、XLS、XLSX、PPT、PPTX、PNG、JPG、JPEG、CSV 
+     * @return FileType 文件类型。支持的文件类型：PDF、DOCX、DOC、XLS、XLSX、PPT、PPTX、PNG、JPG、JPEG、CSV
+     */
+    public String getFileType() {
+        return this.FileType;
+    }
+
+    /**
+     * Set 文件类型。支持的文件类型：PDF、DOCX、DOC、XLS、XLSX、PPT、PPTX、PNG、JPG、JPEG、CSV
+     * @param FileType 文件类型。支持的文件类型：PDF、DOCX、DOC、XLS、XLSX、PPT、PPTX、PNG、JPG、JPEG、CSV
+     */
+    public void setFileType(String FileType) {
+        this.FileType = FileType;
+    }
 
     /**
      * Get 文件的 Base64 值。 支持的文件格式：PNG、JPG、JPEG、PDF。 支持的文件大小：所下载文件经Base64编码后不超过 8M。文件下载时间不超过 3 秒。 支持的图片像素：单边介于20-10000px之间。 文件的 FileUrl、FileBase64 必须提供一个，如果都提供，只使用 FileUrl。 
@@ -146,6 +169,9 @@ public class CreateReconstructDocumentFlowRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreateReconstructDocumentFlowRequest(CreateReconstructDocumentFlowRequest source) {
+        if (source.FileType != null) {
+            this.FileType = new String(source.FileType);
+        }
         if (source.FileBase64 != null) {
             this.FileBase64 = new String(source.FileBase64);
         }
@@ -168,6 +194,7 @@ public class CreateReconstructDocumentFlowRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "FileType", this.FileType);
         this.setParamSimple(map, prefix + "FileBase64", this.FileBase64);
         this.setParamSimple(map, prefix + "FileUrl", this.FileUrl);
         this.setParamSimple(map, prefix + "FileStartPageNumber", this.FileStartPageNumber);

@@ -32,6 +32,14 @@ public class DescribeTopicRuleResponse extends AbstractModel {
     private TopicRule Rule;
 
     /**
+    * 规则绑定的标签
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CamTag")
+    @Expose
+    private CamTag [] CamTag;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -56,6 +64,26 @@ public class DescribeTopicRuleResponse extends AbstractModel {
      */
     public void setRule(TopicRule Rule) {
         this.Rule = Rule;
+    }
+
+    /**
+     * Get 规则绑定的标签
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CamTag 规则绑定的标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public CamTag [] getCamTag() {
+        return this.CamTag;
+    }
+
+    /**
+     * Set 规则绑定的标签
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CamTag 规则绑定的标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCamTag(CamTag [] CamTag) {
+        this.CamTag = CamTag;
     }
 
     /**
@@ -85,6 +113,12 @@ public class DescribeTopicRuleResponse extends AbstractModel {
         if (source.Rule != null) {
             this.Rule = new TopicRule(source.Rule);
         }
+        if (source.CamTag != null) {
+            this.CamTag = new CamTag[source.CamTag.length];
+            for (int i = 0; i < source.CamTag.length; i++) {
+                this.CamTag[i] = new CamTag(source.CamTag[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -96,6 +130,7 @@ public class DescribeTopicRuleResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Rule.", this.Rule);
+        this.setParamArrayObj(map, prefix + "CamTag.", this.CamTag);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

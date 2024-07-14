@@ -23,6 +23,29 @@ import java.util.HashMap;
 
 public class DescribeTaskStatusRequest extends AbstractModel {
 
+    /**
+    * 任务ID，值为异步接口返回的RequestId
+    */
+    @SerializedName("TaskId")
+    @Expose
+    private String TaskId;
+
+    /**
+     * Get 任务ID，值为异步接口返回的RequestId 
+     * @return TaskId 任务ID，值为异步接口返回的RequestId
+     */
+    public String getTaskId() {
+        return this.TaskId;
+    }
+
+    /**
+     * Set 任务ID，值为异步接口返回的RequestId
+     * @param TaskId 任务ID，值为异步接口返回的RequestId
+     */
+    public void setTaskId(String TaskId) {
+        this.TaskId = TaskId;
+    }
+
     public DescribeTaskStatusRequest() {
     }
 
@@ -31,6 +54,9 @@ public class DescribeTaskStatusRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeTaskStatusRequest(DescribeTaskStatusRequest source) {
+        if (source.TaskId != null) {
+            this.TaskId = new String(source.TaskId);
+        }
     }
 
 
@@ -38,6 +64,7 @@ public class DescribeTaskStatusRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
 
     }
 }

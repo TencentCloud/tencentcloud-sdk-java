@@ -25,7 +25,7 @@ public class RemoveNodeList extends AbstractModel {
 
     /**
     * 需要删除的节点角色。
-- SECONDARY：Mongod 节点。
+- SECONDARY：Mongod 从节点。
 - READONLY：只读节点。
 - MONGOS：Mongos 节点。
     */
@@ -54,11 +54,11 @@ public class RemoveNodeList extends AbstractModel {
 
     /**
      * Get 需要删除的节点角色。
-- SECONDARY：Mongod 节点。
+- SECONDARY：Mongod 从节点。
 - READONLY：只读节点。
 - MONGOS：Mongos 节点。 
      * @return Role 需要删除的节点角色。
-- SECONDARY：Mongod 节点。
+- SECONDARY：Mongod 从节点。
 - READONLY：只读节点。
 - MONGOS：Mongos 节点。
      */
@@ -68,11 +68,11 @@ public class RemoveNodeList extends AbstractModel {
 
     /**
      * Set 需要删除的节点角色。
-- SECONDARY：Mongod 节点。
+- SECONDARY：Mongod 从节点。
 - READONLY：只读节点。
 - MONGOS：Mongos 节点。
      * @param Role 需要删除的节点角色。
-- SECONDARY：Mongod 节点。
+- SECONDARY：Mongod 从节点。
 - READONLY：只读节点。
 - MONGOS：Mongos 节点。
      */
