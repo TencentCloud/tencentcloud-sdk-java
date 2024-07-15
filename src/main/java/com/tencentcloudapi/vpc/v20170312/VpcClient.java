@@ -232,6 +232,17 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
+     *本接口（AssociateInstancesToCcnRouteTable）用于将指定的云联网实例关联到指定的云联网路由表。
+     * @param req AssociateInstancesToCcnRouteTableRequest
+     * @return AssociateInstancesToCcnRouteTableResponse
+     * @throws TencentCloudSDKException
+     */
+    public AssociateInstancesToCcnRouteTableResponse AssociateInstancesToCcnRouteTable(AssociateInstancesToCcnRouteTableRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AssociateInstancesToCcnRouteTable", AssociateInstancesToCcnRouteTableResponse.class);
+    }
+
+    /**
      *本接口(AssociateNatGatewayAddress)用于NAT网关绑定弹性IP（EIP）。
      * @param req AssociateNatGatewayAddressRequest
      * @return AssociateNatGatewayAddressResponse
@@ -370,6 +381,17 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
+     *本接口（ClearRouteTableSelectionPolicies）用于清空指定云联网的路由表选择策略。
+     * @param req ClearRouteTableSelectionPoliciesRequest
+     * @return ClearRouteTableSelectionPoliciesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ClearRouteTableSelectionPoliciesResponse ClearRouteTableSelectionPolicies(ClearRouteTableSelectionPoliciesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ClearRouteTableSelectionPolicies", ClearRouteTableSelectionPoliciesResponse.class);
+    }
+
+    /**
      *本接口（CloneSecurityGroup）用于根据存量的安全组，克隆创建出同样规则配置的安全组。仅克隆安全组及其规则信息，不会克隆安全组标签信息。
      * @param req CloneSecurityGroupRequest
      * @return CloneSecurityGroupResponse
@@ -453,6 +475,17 @@ public class VpcClient extends AbstractClient{
     public CreateCcnResponse CreateCcn(CreateCcnRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateCcn", CreateCcnResponse.class);
+    }
+
+    /**
+     *本接口（CreateCcnRouteTables）用于给指定的云联网实例新建路由表。
+     * @param req CreateCcnRouteTablesRequest
+     * @return CreateCcnRouteTablesResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCcnRouteTablesResponse CreateCcnRouteTables(CreateCcnRouteTablesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateCcnRouteTables", CreateCcnRouteTablesResponse.class);
     }
 
     /**
@@ -1062,6 +1095,17 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
+     *本接口（DeleteCcnRouteTables）用于删除云联网路由表。
+     * @param req DeleteCcnRouteTablesRequest
+     * @return DeleteCcnRouteTablesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCcnRouteTablesResponse DeleteCcnRouteTables(DeleteCcnRouteTablesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteCcnRouteTables", DeleteCcnRouteTablesResponse.class);
+    }
+
+    /**
      *本接口（DeleteCustomerGateway）用于删除对端网关。
      * @param req DeleteCustomerGatewayRequest
      * @return DeleteCustomerGatewayResponse
@@ -1660,6 +1704,39 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
+     *本接口(DescribeCcnRouteTableBroadcastPolicys)用于查询指定云联网路由表的路由传播策略。
+     * @param req DescribeCcnRouteTableBroadcastPolicysRequest
+     * @return DescribeCcnRouteTableBroadcastPolicysResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCcnRouteTableBroadcastPolicysResponse DescribeCcnRouteTableBroadcastPolicys(DescribeCcnRouteTableBroadcastPolicysRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCcnRouteTableBroadcastPolicys", DescribeCcnRouteTableBroadcastPolicysResponse.class);
+    }
+
+    /**
+     *本接口(DescribeCcnRouteTableInputPolicys)用于查询指定云联网路由表的路由接收策略。
+     * @param req DescribeCcnRouteTableInputPolicysRequest
+     * @return DescribeCcnRouteTableInputPolicysResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCcnRouteTableInputPolicysResponse DescribeCcnRouteTableInputPolicys(DescribeCcnRouteTableInputPolicysRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCcnRouteTableInputPolicys", DescribeCcnRouteTableInputPolicysResponse.class);
+    }
+
+    /**
+     *该接口用于查询指定的云联网实例的路由表信息。
+     * @param req DescribeCcnRouteTablesRequest
+     * @return DescribeCcnRouteTablesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCcnRouteTablesResponse DescribeCcnRouteTables(DescribeCcnRouteTablesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCcnRouteTables", DescribeCcnRouteTablesResponse.class);
+    }
+
+    /**
      *本接口（DescribeCcnRoutes）用于查询已加入云联网（CCN）的路由。
      * @param req DescribeCcnRoutesRequest
      * @return DescribeCcnRoutesResponse
@@ -2116,6 +2193,28 @@ public class VpcClient extends AbstractClient{
     public DescribeRouteConflictsResponse DescribeRouteConflicts(DescribeRouteConflictsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeRouteConflicts", DescribeRouteConflictsResponse.class);
+    }
+
+    /**
+     *本接口（DescribeRouteTableAssociatedInstances）用于查询指定的云联网关联的实例所绑定的路由表信息。
+     * @param req DescribeRouteTableAssociatedInstancesRequest
+     * @return DescribeRouteTableAssociatedInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRouteTableAssociatedInstancesResponse DescribeRouteTableAssociatedInstances(DescribeRouteTableAssociatedInstancesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRouteTableAssociatedInstances", DescribeRouteTableAssociatedInstancesResponse.class);
+    }
+
+    /**
+     *本接口（DescribeRouteTableSelectionPolicies）用于查询云联网路由表选择策略。
+     * @param req DescribeRouteTableSelectionPoliciesRequest
+     * @return DescribeRouteTableSelectionPoliciesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRouteTableSelectionPoliciesResponse DescribeRouteTableSelectionPolicies(DescribeRouteTableSelectionPoliciesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRouteTableSelectionPolicies", DescribeRouteTableSelectionPoliciesResponse.class);
     }
 
     /**
@@ -3122,6 +3221,17 @@ LimitTypes取值范围：
     }
 
     /**
+     *该接口用于修改云联网路由表名称和备注。
+     * @param req ModifyCcnRouteTablesRequest
+     * @return ModifyCcnRouteTablesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCcnRouteTablesResponse ModifyCcnRouteTables(ModifyCcnRouteTablesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyCcnRouteTables", ModifyCcnRouteTablesResponse.class);
+    }
+
+    /**
      *本接口（ModifyCustomerGatewayAttribute）用于修改对端网关信息。
      * @param req ModifyCustomerGatewayAttributeRequest
      * @return ModifyCustomerGatewayAttributeResponse
@@ -3407,6 +3517,17 @@ LimitTypes取值范围：
     public ModifyRouteTableAttributeResponse ModifyRouteTableAttribute(ModifyRouteTableAttributeRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyRouteTableAttribute", ModifyRouteTableAttributeResponse.class);
+    }
+
+    /**
+     *该接口用于编辑云联网路由表选择策略
+     * @param req ModifyRouteTableSelectionPoliciesRequest
+     * @return ModifyRouteTableSelectionPoliciesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyRouteTableSelectionPoliciesResponse ModifyRouteTableSelectionPolicies(ModifyRouteTableSelectionPoliciesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyRouteTableSelectionPolicies", ModifyRouteTableSelectionPoliciesResponse.class);
     }
 
     /**
@@ -3740,6 +3861,63 @@ LimitTypes取值范围：
     public RenewVpnGatewayResponse RenewVpnGateway(RenewVpnGatewayRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "RenewVpnGateway", RenewVpnGatewayResponse.class);
+    }
+
+    /**
+     *本接口(ReplaceCcnRouteTableBroadcastPolicys)用于替换云联网路由表路由传播策略。
+> 特别注意：是全量覆盖，非增量添加
+
+**路由条件支持以下四种：**
+
+- 实例类型: `instance-type`，可选值：私有网络 `VPC`、专线网关 `DIRECTCONNECT`、专线网关 `VPNGW`
+- 实例ID: `instance-id`，例如：`dcg-8zljkrft`、`vpc-jdevjrup`，暂不支持 `Edge` 实例
+- 实例地域: `instance-region`，例如：`ap-guangzhou`<br />产品支持的所有地域列表可通过接口 [DescribeRegions](https://cloud.tencent.com/document/product/1596/77930) 查询，其中参数 `Product` 设置为 `ccn`
+- 路由前缀: `cidr-block`，例如：`10.1.0.0/16`
+
+
+**传播条件支持以下三种：**
+
+- 实例类型: `instance-type`，格式同路由条件
+- 实例ID: `instance-id`，格式同路由条件
+- 实例地域: `instance-region`，格式同路由条件
+
+
+**使用限制：**
+- 一条策略内的单个条件类型，最大支持设置 `25` 个条件值
+- 一张路由表，最大支持 `100` 条路由传播策略
+- 路由条件类型中，只有 `cidr-block` 类型支持模糊匹配和精确匹配两种，其它类型只支持精确匹配一种模式
+     * @param req ReplaceCcnRouteTableBroadcastPolicysRequest
+     * @return ReplaceCcnRouteTableBroadcastPolicysResponse
+     * @throws TencentCloudSDKException
+     */
+    public ReplaceCcnRouteTableBroadcastPolicysResponse ReplaceCcnRouteTableBroadcastPolicys(ReplaceCcnRouteTableBroadcastPolicysRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ReplaceCcnRouteTableBroadcastPolicys", ReplaceCcnRouteTableBroadcastPolicysResponse.class);
+    }
+
+    /**
+     *本接口(ReplaceRouteTableInputPolicys)用于替换云联网路由表路由接收策略。
+> 特别注意：是全量覆盖，非增量添加
+
+**路由条件支持以下四种：**
+
+- 实例类型: `instance-type`，可选值：私有网络 `VPC`、专线网关 `DIRECTCONNECT`、专线网关 `VPNGW`
+- 实例ID: `instance-id`，例如：`dcg-8zljkrft`、`vpc-jdevjrup`，暂不支持 `Edge` 实例
+- 实例地域: `instance-region`，例如：`ap-guangzhou`<br />产品支持的所有地域列表可通过接口 [DescribeRegions](https://cloud.tencent.com/document/product/1596/77930) 查询，其中参数 `Product` 设置为 `ccn`
+- 路由前缀: `cidr-block`，例如：`10.1.0.0/16`
+
+
+**使用限制：**
+- 一条策略内的单个条件类型，最大支持设置 `25` 个条件值
+- 一张路由表，最大支持 `100` 条路由接收策略
+- 路由条件类型中，只有 `cidr-block` 类型支持模糊匹配和精确匹配两种，其它类型只支持精确匹配一种模式
+     * @param req ReplaceCcnRouteTableInputPolicysRequest
+     * @return ReplaceCcnRouteTableInputPolicysResponse
+     * @throws TencentCloudSDKException
+     */
+    public ReplaceCcnRouteTableInputPolicysResponse ReplaceCcnRouteTableInputPolicys(ReplaceCcnRouteTableInputPolicysRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ReplaceCcnRouteTableInputPolicys", ReplaceCcnRouteTableInputPolicysResponse.class);
     }
 
     /**

@@ -295,6 +295,17 @@ public class CbsClient extends AbstractClient{
     }
 
     /**
+     *该接口用于查询用户快照使用概览，包括快照总容量、计费容量等信息。
+     * @param req DescribeSnapshotOverviewRequest
+     * @return DescribeSnapshotOverviewResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSnapshotOverviewResponse DescribeSnapshotOverview(DescribeSnapshotOverviewRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSnapshotOverview", DescribeSnapshotOverviewResponse.class);
+    }
+
+    /**
      *本接口（DescribeSnapshotSharePermission）用于查询快照的分享信息。
      * @param req DescribeSnapshotSharePermissionRequest
      * @return DescribeSnapshotSharePermissionResponse

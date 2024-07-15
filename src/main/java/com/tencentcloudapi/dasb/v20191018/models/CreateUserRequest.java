@@ -38,7 +38,7 @@ public class CreateUserRequest extends AbstractModel {
     private String RealName;
 
     /**
-    * 大陆手机号直接填写，如果是其他国家、地区号码， 按照"国家地区代码|手机号"的格式输入。如: "+852|xxxxxxxx"
+    * 按照"国家地区代码|手机号"的格式输入。如: "+86|xxxxxxxx"
     */
     @SerializedName("Phone")
     @Expose
@@ -128,16 +128,16 @@ public class CreateUserRequest extends AbstractModel {
     }
 
     /**
-     * Get 大陆手机号直接填写，如果是其他国家、地区号码， 按照"国家地区代码|手机号"的格式输入。如: "+852|xxxxxxxx" 
-     * @return Phone 大陆手机号直接填写，如果是其他国家、地区号码， 按照"国家地区代码|手机号"的格式输入。如: "+852|xxxxxxxx"
+     * Get 按照"国家地区代码|手机号"的格式输入。如: "+86|xxxxxxxx" 
+     * @return Phone 按照"国家地区代码|手机号"的格式输入。如: "+86|xxxxxxxx"
      */
     public String getPhone() {
         return this.Phone;
     }
 
     /**
-     * Set 大陆手机号直接填写，如果是其他国家、地区号码， 按照"国家地区代码|手机号"的格式输入。如: "+852|xxxxxxxx"
-     * @param Phone 大陆手机号直接填写，如果是其他国家、地区号码， 按照"国家地区代码|手机号"的格式输入。如: "+852|xxxxxxxx"
+     * Set 按照"国家地区代码|手机号"的格式输入。如: "+86|xxxxxxxx"
+     * @param Phone 按照"国家地区代码|手机号"的格式输入。如: "+86|xxxxxxxx"
      */
     public void setPhone(String Phone) {
         this.Phone = Phone;

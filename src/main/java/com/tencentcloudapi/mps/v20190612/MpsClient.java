@@ -248,7 +248,7 @@ public class MpsClient extends AbstractClient{
     }
 
     /**
-     *创建用户自定义转码模板，数量上限：1000。
+     *创建用户自定义转码模板，数量上限：1000
      * @param req CreateTranscodeTemplateRequest
      * @return CreateTranscodeTemplateResponse
      * @throws TencentCloudSDKException

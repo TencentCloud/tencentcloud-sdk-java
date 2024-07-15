@@ -219,6 +219,13 @@ OPEN：公网属性， INTERNAL：内网属性。
     private String Egress;
 
     /**
+    * 负载均衡实例的预付费相关属性
+    */
+    @SerializedName("LBChargePrepaid")
+    @Expose
+    private LBChargePrepaid LBChargePrepaid;
+
+    /**
      * Get 负载均衡实例的网络类型：
 OPEN：公网属性， INTERNAL：内网属性。 
      * @return LoadBalancerType 负载均衡实例的网络类型：
@@ -674,6 +681,22 @@ OPEN：公网属性， INTERNAL：内网属性。
         this.Egress = Egress;
     }
 
+    /**
+     * Get 负载均衡实例的预付费相关属性 
+     * @return LBChargePrepaid 负载均衡实例的预付费相关属性
+     */
+    public LBChargePrepaid getLBChargePrepaid() {
+        return this.LBChargePrepaid;
+    }
+
+    /**
+     * Set 负载均衡实例的预付费相关属性
+     * @param LBChargePrepaid 负载均衡实例的预付费相关属性
+     */
+    public void setLBChargePrepaid(LBChargePrepaid LBChargePrepaid) {
+        this.LBChargePrepaid = LBChargePrepaid;
+    }
+
     public CreateLoadBalancerRequest() {
     }
 
@@ -772,6 +795,9 @@ OPEN：公网属性， INTERNAL：内网属性。
         if (source.Egress != null) {
             this.Egress = new String(source.Egress);
         }
+        if (source.LBChargePrepaid != null) {
+            this.LBChargePrepaid = new LBChargePrepaid(source.LBChargePrepaid);
+        }
     }
 
 
@@ -806,6 +832,7 @@ OPEN：公网属性， INTERNAL：内网属性。
         this.setParamSimple(map, prefix + "LoadBalancerPassToTarget", this.LoadBalancerPassToTarget);
         this.setParamSimple(map, prefix + "DynamicVip", this.DynamicVip);
         this.setParamSimple(map, prefix + "Egress", this.Egress);
+        this.setParamObj(map, prefix + "LBChargePrepaid.", this.LBChargePrepaid);
 
     }
 }
