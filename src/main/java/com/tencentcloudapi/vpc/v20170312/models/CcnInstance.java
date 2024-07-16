@@ -64,6 +64,14 @@ public class CcnInstance extends AbstractModel {
     private String RouteTableId;
 
     /**
+    * 实例付费方式
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OrderType")
+    @Expose
+    private String OrderType;
+
+    /**
      * Get 关联实例ID。 
      * @return InstanceId 关联实例ID。
      */
@@ -163,6 +171,26 @@ public class CcnInstance extends AbstractModel {
         this.RouteTableId = RouteTableId;
     }
 
+    /**
+     * Get 实例付费方式
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OrderType 实例付费方式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getOrderType() {
+        return this.OrderType;
+    }
+
+    /**
+     * Set 实例付费方式
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OrderType 实例付费方式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOrderType(String OrderType) {
+        this.OrderType = OrderType;
+    }
+
     public CcnInstance() {
     }
 
@@ -186,6 +214,9 @@ public class CcnInstance extends AbstractModel {
         if (source.RouteTableId != null) {
             this.RouteTableId = new String(source.RouteTableId);
         }
+        if (source.OrderType != null) {
+            this.OrderType = new String(source.OrderType);
+        }
     }
 
 
@@ -198,6 +229,7 @@ public class CcnInstance extends AbstractModel {
         this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "RouteTableId", this.RouteTableId);
+        this.setParamSimple(map, prefix + "OrderType", this.OrderType);
 
     }
 }

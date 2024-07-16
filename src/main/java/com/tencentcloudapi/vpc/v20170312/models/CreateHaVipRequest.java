@@ -31,18 +31,18 @@ public class CreateHaVipRequest extends AbstractModel {
     private String VpcId;
 
     /**
-    * `HAVIP`所在子网`ID`。
-    */
-    @SerializedName("SubnetId")
-    @Expose
-    private String SubnetId;
-
-    /**
     * `HAVIP`名称。
     */
     @SerializedName("HaVipName")
     @Expose
     private String HaVipName;
+
+    /**
+    * `HAVIP`所在子网`ID`。
+    */
+    @SerializedName("SubnetId")
+    @Expose
+    private String SubnetId;
 
     /**
     * 指定虚拟IP地址，必须在`VPC`网段内且未被占用。不指定则自动分配。
@@ -57,6 +57,13 @@ public class CreateHaVipRequest extends AbstractModel {
     @SerializedName("NetworkInterfaceId")
     @Expose
     private String NetworkInterfaceId;
+
+    /**
+    * 是否开启`HAVIP`漂移时子机或网卡范围的校验。默认不开启。
+    */
+    @SerializedName("CheckAssociate")
+    @Expose
+    private Boolean CheckAssociate;
 
     /**
      * Get `HAVIP`所在私有网络`ID`。 
@@ -75,22 +82,6 @@ public class CreateHaVipRequest extends AbstractModel {
     }
 
     /**
-     * Get `HAVIP`所在子网`ID`。 
-     * @return SubnetId `HAVIP`所在子网`ID`。
-     */
-    public String getSubnetId() {
-        return this.SubnetId;
-    }
-
-    /**
-     * Set `HAVIP`所在子网`ID`。
-     * @param SubnetId `HAVIP`所在子网`ID`。
-     */
-    public void setSubnetId(String SubnetId) {
-        this.SubnetId = SubnetId;
-    }
-
-    /**
      * Get `HAVIP`名称。 
      * @return HaVipName `HAVIP`名称。
      */
@@ -104,6 +95,22 @@ public class CreateHaVipRequest extends AbstractModel {
      */
     public void setHaVipName(String HaVipName) {
         this.HaVipName = HaVipName;
+    }
+
+    /**
+     * Get `HAVIP`所在子网`ID`。 
+     * @return SubnetId `HAVIP`所在子网`ID`。
+     */
+    public String getSubnetId() {
+        return this.SubnetId;
+    }
+
+    /**
+     * Set `HAVIP`所在子网`ID`。
+     * @param SubnetId `HAVIP`所在子网`ID`。
+     */
+    public void setSubnetId(String SubnetId) {
+        this.SubnetId = SubnetId;
     }
 
     /**
@@ -138,6 +145,22 @@ public class CreateHaVipRequest extends AbstractModel {
         this.NetworkInterfaceId = NetworkInterfaceId;
     }
 
+    /**
+     * Get 是否开启`HAVIP`漂移时子机或网卡范围的校验。默认不开启。 
+     * @return CheckAssociate 是否开启`HAVIP`漂移时子机或网卡范围的校验。默认不开启。
+     */
+    public Boolean getCheckAssociate() {
+        return this.CheckAssociate;
+    }
+
+    /**
+     * Set 是否开启`HAVIP`漂移时子机或网卡范围的校验。默认不开启。
+     * @param CheckAssociate 是否开启`HAVIP`漂移时子机或网卡范围的校验。默认不开启。
+     */
+    public void setCheckAssociate(Boolean CheckAssociate) {
+        this.CheckAssociate = CheckAssociate;
+    }
+
     public CreateHaVipRequest() {
     }
 
@@ -149,17 +172,20 @@ public class CreateHaVipRequest extends AbstractModel {
         if (source.VpcId != null) {
             this.VpcId = new String(source.VpcId);
         }
-        if (source.SubnetId != null) {
-            this.SubnetId = new String(source.SubnetId);
-        }
         if (source.HaVipName != null) {
             this.HaVipName = new String(source.HaVipName);
+        }
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
         }
         if (source.Vip != null) {
             this.Vip = new String(source.Vip);
         }
         if (source.NetworkInterfaceId != null) {
             this.NetworkInterfaceId = new String(source.NetworkInterfaceId);
+        }
+        if (source.CheckAssociate != null) {
+            this.CheckAssociate = new Boolean(source.CheckAssociate);
         }
     }
 
@@ -169,10 +195,11 @@ public class CreateHaVipRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
-        this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
         this.setParamSimple(map, prefix + "HaVipName", this.HaVipName);
+        this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
         this.setParamSimple(map, prefix + "Vip", this.Vip);
         this.setParamSimple(map, prefix + "NetworkInterfaceId", this.NetworkInterfaceId);
+        this.setParamSimple(map, prefix + "CheckAssociate", this.CheckAssociate);
 
     }
 }

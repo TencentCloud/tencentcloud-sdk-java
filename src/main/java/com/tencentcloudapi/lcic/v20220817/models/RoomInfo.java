@@ -221,6 +221,13 @@ public class RoomInfo extends AbstractModel {
     private String RecordLang;
 
     /**
+    * 录制类型 0 仅录制混流（默认） ;1 录制混流+单流，该模式下除混流录制基础上，分别录制老师、台上学生的音视频流，每路录制都会产生相应的录制费用 。示例：0
+    */
+    @SerializedName("RecordStream")
+    @Expose
+    private Long RecordStream;
+
+    /**
      * Get 房间名称。 
      * @return Name 房间名称。
      */
@@ -676,6 +683,22 @@ public class RoomInfo extends AbstractModel {
         this.RecordLang = RecordLang;
     }
 
+    /**
+     * Get 录制类型 0 仅录制混流（默认） ;1 录制混流+单流，该模式下除混流录制基础上，分别录制老师、台上学生的音视频流，每路录制都会产生相应的录制费用 。示例：0 
+     * @return RecordStream 录制类型 0 仅录制混流（默认） ;1 录制混流+单流，该模式下除混流录制基础上，分别录制老师、台上学生的音视频流，每路录制都会产生相应的录制费用 。示例：0
+     */
+    public Long getRecordStream() {
+        return this.RecordStream;
+    }
+
+    /**
+     * Set 录制类型 0 仅录制混流（默认） ;1 录制混流+单流，该模式下除混流录制基础上，分别录制老师、台上学生的音视频流，每路录制都会产生相应的录制费用 。示例：0
+     * @param RecordStream 录制类型 0 仅录制混流（默认） ;1 录制混流+单流，该模式下除混流录制基础上，分别录制老师、台上学生的音视频流，每路录制都会产生相应的录制费用 。示例：0
+     */
+    public void setRecordStream(Long RecordStream) {
+        this.RecordStream = RecordStream;
+    }
+
     public RoomInfo() {
     }
 
@@ -771,6 +794,9 @@ public class RoomInfo extends AbstractModel {
         if (source.RecordLang != null) {
             this.RecordLang = new String(source.RecordLang);
         }
+        if (source.RecordStream != null) {
+            this.RecordStream = new Long(source.RecordStream);
+        }
     }
 
 
@@ -806,6 +832,7 @@ public class RoomInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "RecordBackground", this.RecordBackground);
         this.setParamSimple(map, prefix + "RecordScene", this.RecordScene);
         this.setParamSimple(map, prefix + "RecordLang", this.RecordLang);
+        this.setParamSimple(map, prefix + "RecordStream", this.RecordStream);
 
     }
 }

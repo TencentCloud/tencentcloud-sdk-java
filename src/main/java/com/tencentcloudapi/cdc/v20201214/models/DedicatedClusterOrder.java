@@ -173,6 +173,62 @@ public class DedicatedClusterOrder extends AbstractModel {
     private String OrderType;
 
     /**
+    * 验收状态
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CheckStatus")
+    @Expose
+    private String CheckStatus;
+
+    /**
+    * 交付预期时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DeliverExpectTime")
+    @Expose
+    private String DeliverExpectTime;
+
+    /**
+    * 交付实际完成时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DeliverFinishTime")
+    @Expose
+    private String DeliverFinishTime;
+
+    /**
+    * 验收预期时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CheckExpectTime")
+    @Expose
+    private String CheckExpectTime;
+
+    /**
+    * 验收实际完成时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CheckFinishTime")
+    @Expose
+    private String CheckFinishTime;
+
+    /**
+    * 订单SLA
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OrderSLA")
+    @Expose
+    private String OrderSLA;
+
+    /**
+    * 订单支付计划
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OrderPayPlan")
+    @Expose
+    private String OrderPayPlan;
+
+    /**
      * Get 专用集群id 
      * @return DedicatedClusterId 专用集群id
      */
@@ -528,6 +584,146 @@ public class DedicatedClusterOrder extends AbstractModel {
         this.OrderType = OrderType;
     }
 
+    /**
+     * Get 验收状态
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CheckStatus 验收状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCheckStatus() {
+        return this.CheckStatus;
+    }
+
+    /**
+     * Set 验收状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CheckStatus 验收状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCheckStatus(String CheckStatus) {
+        this.CheckStatus = CheckStatus;
+    }
+
+    /**
+     * Get 交付预期时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DeliverExpectTime 交付预期时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDeliverExpectTime() {
+        return this.DeliverExpectTime;
+    }
+
+    /**
+     * Set 交付预期时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DeliverExpectTime 交付预期时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDeliverExpectTime(String DeliverExpectTime) {
+        this.DeliverExpectTime = DeliverExpectTime;
+    }
+
+    /**
+     * Get 交付实际完成时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DeliverFinishTime 交付实际完成时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDeliverFinishTime() {
+        return this.DeliverFinishTime;
+    }
+
+    /**
+     * Set 交付实际完成时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DeliverFinishTime 交付实际完成时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDeliverFinishTime(String DeliverFinishTime) {
+        this.DeliverFinishTime = DeliverFinishTime;
+    }
+
+    /**
+     * Get 验收预期时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CheckExpectTime 验收预期时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCheckExpectTime() {
+        return this.CheckExpectTime;
+    }
+
+    /**
+     * Set 验收预期时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CheckExpectTime 验收预期时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCheckExpectTime(String CheckExpectTime) {
+        this.CheckExpectTime = CheckExpectTime;
+    }
+
+    /**
+     * Get 验收实际完成时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CheckFinishTime 验收实际完成时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCheckFinishTime() {
+        return this.CheckFinishTime;
+    }
+
+    /**
+     * Set 验收实际完成时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CheckFinishTime 验收实际完成时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCheckFinishTime(String CheckFinishTime) {
+        this.CheckFinishTime = CheckFinishTime;
+    }
+
+    /**
+     * Get 订单SLA
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OrderSLA 订单SLA
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getOrderSLA() {
+        return this.OrderSLA;
+    }
+
+    /**
+     * Set 订单SLA
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OrderSLA 订单SLA
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOrderSLA(String OrderSLA) {
+        this.OrderSLA = OrderSLA;
+    }
+
+    /**
+     * Get 订单支付计划
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OrderPayPlan 订单支付计划
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getOrderPayPlan() {
+        return this.OrderPayPlan;
+    }
+
+    /**
+     * Set 订单支付计划
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OrderPayPlan 订单支付计划
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOrderPayPlan(String OrderPayPlan) {
+        this.OrderPayPlan = OrderPayPlan;
+    }
+
     public DedicatedClusterOrder() {
     }
 
@@ -608,6 +804,27 @@ public class DedicatedClusterOrder extends AbstractModel {
         if (source.OrderType != null) {
             this.OrderType = new String(source.OrderType);
         }
+        if (source.CheckStatus != null) {
+            this.CheckStatus = new String(source.CheckStatus);
+        }
+        if (source.DeliverExpectTime != null) {
+            this.DeliverExpectTime = new String(source.DeliverExpectTime);
+        }
+        if (source.DeliverFinishTime != null) {
+            this.DeliverFinishTime = new String(source.DeliverFinishTime);
+        }
+        if (source.CheckExpectTime != null) {
+            this.CheckExpectTime = new String(source.CheckExpectTime);
+        }
+        if (source.CheckFinishTime != null) {
+            this.CheckFinishTime = new String(source.CheckFinishTime);
+        }
+        if (source.OrderSLA != null) {
+            this.OrderSLA = new String(source.OrderSLA);
+        }
+        if (source.OrderPayPlan != null) {
+            this.OrderPayPlan = new String(source.OrderPayPlan);
+        }
     }
 
 
@@ -635,6 +852,13 @@ public class DedicatedClusterOrder extends AbstractModel {
         this.setParamSimple(map, prefix + "TimeUnit", this.TimeUnit);
         this.setParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
         this.setParamSimple(map, prefix + "OrderType", this.OrderType);
+        this.setParamSimple(map, prefix + "CheckStatus", this.CheckStatus);
+        this.setParamSimple(map, prefix + "DeliverExpectTime", this.DeliverExpectTime);
+        this.setParamSimple(map, prefix + "DeliverFinishTime", this.DeliverFinishTime);
+        this.setParamSimple(map, prefix + "CheckExpectTime", this.CheckExpectTime);
+        this.setParamSimple(map, prefix + "CheckFinishTime", this.CheckFinishTime);
+        this.setParamSimple(map, prefix + "OrderSLA", this.OrderSLA);
+        this.setParamSimple(map, prefix + "OrderPayPlan", this.OrderPayPlan);
 
     }
 }

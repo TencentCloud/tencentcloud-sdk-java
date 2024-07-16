@@ -472,7 +472,7 @@ public class LkeClient extends AbstractClient{
     }
 
     /**
-     *获取推荐问题
+     *获取聊天历史请求
      * @param req GetMsgRecordRequest
      * @return GetMsgRecordResponse
      * @throws TencentCloudSDKException

@@ -31,13 +31,7 @@ public class DescribeHaVipsRequest extends AbstractModel {
     private String [] HaVipIds;
 
     /**
-    * 过滤条件，参数不支持同时指定`HaVipIds`和`Filters`。
-<li>havip-id - String - `HAVIP`唯一`ID`，形如：`havip-9o233uri`。</li>
-<li>havip-name - String - `HAVIP`名称。</li>
-<li>vpc-id - String - `HAVIP`所在私有网络`ID`。</li>
-<li>subnet-id - String - `HAVIP`所在子网`ID`。</li>
-<li>vip - String - `HAVIP`的地址`VIP`。</li>
-<li>address-ip - String - `HAVIP`绑定的弹性公网`IP`。</li>
+    * 过滤条件，参数不支持同时指定`HaVipIds`和`Filters`。<li>havip-id - String - `HAVIP`唯一`ID`，形如：`havip-9o233uri`。</li><li>havip-name - String - `HAVIP`名称。</li><li>vpc-id - String - `HAVIP`所在私有网络`ID`。</li><li>subnet-id - String - `HAVIP`所在子网`ID`。</li><li>vip - String - `HAVIP`的地址`VIP`。</li><li>address-ip - String - `HAVIP`绑定的弹性公网`IP`。</li><li>havip-association.instance-id - String - `HAVIP`绑定的子机或网卡。</li><li>havip-association.instance-type - String - `HAVIP`绑定的类型，取值:CVM, ENI。</li><li>check-associate - Bool - 是否开启HaVip飘移时校验绑定的子机或网卡。</li><li>cdc-id - String - CDC实例ID。</li>
     */
     @SerializedName("Filters")
     @Expose
@@ -76,40 +70,16 @@ public class DescribeHaVipsRequest extends AbstractModel {
     }
 
     /**
-     * Get 过滤条件，参数不支持同时指定`HaVipIds`和`Filters`。
-<li>havip-id - String - `HAVIP`唯一`ID`，形如：`havip-9o233uri`。</li>
-<li>havip-name - String - `HAVIP`名称。</li>
-<li>vpc-id - String - `HAVIP`所在私有网络`ID`。</li>
-<li>subnet-id - String - `HAVIP`所在子网`ID`。</li>
-<li>vip - String - `HAVIP`的地址`VIP`。</li>
-<li>address-ip - String - `HAVIP`绑定的弹性公网`IP`。</li> 
-     * @return Filters 过滤条件，参数不支持同时指定`HaVipIds`和`Filters`。
-<li>havip-id - String - `HAVIP`唯一`ID`，形如：`havip-9o233uri`。</li>
-<li>havip-name - String - `HAVIP`名称。</li>
-<li>vpc-id - String - `HAVIP`所在私有网络`ID`。</li>
-<li>subnet-id - String - `HAVIP`所在子网`ID`。</li>
-<li>vip - String - `HAVIP`的地址`VIP`。</li>
-<li>address-ip - String - `HAVIP`绑定的弹性公网`IP`。</li>
+     * Get 过滤条件，参数不支持同时指定`HaVipIds`和`Filters`。<li>havip-id - String - `HAVIP`唯一`ID`，形如：`havip-9o233uri`。</li><li>havip-name - String - `HAVIP`名称。</li><li>vpc-id - String - `HAVIP`所在私有网络`ID`。</li><li>subnet-id - String - `HAVIP`所在子网`ID`。</li><li>vip - String - `HAVIP`的地址`VIP`。</li><li>address-ip - String - `HAVIP`绑定的弹性公网`IP`。</li><li>havip-association.instance-id - String - `HAVIP`绑定的子机或网卡。</li><li>havip-association.instance-type - String - `HAVIP`绑定的类型，取值:CVM, ENI。</li><li>check-associate - Bool - 是否开启HaVip飘移时校验绑定的子机或网卡。</li><li>cdc-id - String - CDC实例ID。</li> 
+     * @return Filters 过滤条件，参数不支持同时指定`HaVipIds`和`Filters`。<li>havip-id - String - `HAVIP`唯一`ID`，形如：`havip-9o233uri`。</li><li>havip-name - String - `HAVIP`名称。</li><li>vpc-id - String - `HAVIP`所在私有网络`ID`。</li><li>subnet-id - String - `HAVIP`所在子网`ID`。</li><li>vip - String - `HAVIP`的地址`VIP`。</li><li>address-ip - String - `HAVIP`绑定的弹性公网`IP`。</li><li>havip-association.instance-id - String - `HAVIP`绑定的子机或网卡。</li><li>havip-association.instance-type - String - `HAVIP`绑定的类型，取值:CVM, ENI。</li><li>check-associate - Bool - 是否开启HaVip飘移时校验绑定的子机或网卡。</li><li>cdc-id - String - CDC实例ID。</li>
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤条件，参数不支持同时指定`HaVipIds`和`Filters`。
-<li>havip-id - String - `HAVIP`唯一`ID`，形如：`havip-9o233uri`。</li>
-<li>havip-name - String - `HAVIP`名称。</li>
-<li>vpc-id - String - `HAVIP`所在私有网络`ID`。</li>
-<li>subnet-id - String - `HAVIP`所在子网`ID`。</li>
-<li>vip - String - `HAVIP`的地址`VIP`。</li>
-<li>address-ip - String - `HAVIP`绑定的弹性公网`IP`。</li>
-     * @param Filters 过滤条件，参数不支持同时指定`HaVipIds`和`Filters`。
-<li>havip-id - String - `HAVIP`唯一`ID`，形如：`havip-9o233uri`。</li>
-<li>havip-name - String - `HAVIP`名称。</li>
-<li>vpc-id - String - `HAVIP`所在私有网络`ID`。</li>
-<li>subnet-id - String - `HAVIP`所在子网`ID`。</li>
-<li>vip - String - `HAVIP`的地址`VIP`。</li>
-<li>address-ip - String - `HAVIP`绑定的弹性公网`IP`。</li>
+     * Set 过滤条件，参数不支持同时指定`HaVipIds`和`Filters`。<li>havip-id - String - `HAVIP`唯一`ID`，形如：`havip-9o233uri`。</li><li>havip-name - String - `HAVIP`名称。</li><li>vpc-id - String - `HAVIP`所在私有网络`ID`。</li><li>subnet-id - String - `HAVIP`所在子网`ID`。</li><li>vip - String - `HAVIP`的地址`VIP`。</li><li>address-ip - String - `HAVIP`绑定的弹性公网`IP`。</li><li>havip-association.instance-id - String - `HAVIP`绑定的子机或网卡。</li><li>havip-association.instance-type - String - `HAVIP`绑定的类型，取值:CVM, ENI。</li><li>check-associate - Bool - 是否开启HaVip飘移时校验绑定的子机或网卡。</li><li>cdc-id - String - CDC实例ID。</li>
+     * @param Filters 过滤条件，参数不支持同时指定`HaVipIds`和`Filters`。<li>havip-id - String - `HAVIP`唯一`ID`，形如：`havip-9o233uri`。</li><li>havip-name - String - `HAVIP`名称。</li><li>vpc-id - String - `HAVIP`所在私有网络`ID`。</li><li>subnet-id - String - `HAVIP`所在子网`ID`。</li><li>vip - String - `HAVIP`的地址`VIP`。</li><li>address-ip - String - `HAVIP`绑定的弹性公网`IP`。</li><li>havip-association.instance-id - String - `HAVIP`绑定的子机或网卡。</li><li>havip-association.instance-type - String - `HAVIP`绑定的类型，取值:CVM, ENI。</li><li>check-associate - Bool - 是否开启HaVip飘移时校验绑定的子机或网卡。</li><li>cdc-id - String - CDC实例ID。</li>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

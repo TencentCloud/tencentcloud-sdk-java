@@ -1097,6 +1097,17 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
+     *获取Topic生产详情列表
+     * @param req DescribeRocketMQTopicStatsRequest
+     * @return DescribeRocketMQTopicStatsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRocketMQTopicStatsResponse DescribeRocketMQTopicStats(DescribeRocketMQTopicStatsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRocketMQTopicStats", DescribeRocketMQTopicStatsResponse.class);
+    }
+
+    /**
      *获取RocketMQ主题列表
      * @param req DescribeRocketMQTopicsRequest
      * @return DescribeRocketMQTopicsResponse
@@ -1105,6 +1116,17 @@ public class TdmqClient extends AbstractClient{
     public DescribeRocketMQTopicsResponse DescribeRocketMQTopics(DescribeRocketMQTopicsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeRocketMQTopics", DescribeRocketMQTopicsResponse.class);
+    }
+
+    /**
+     *获取指定消费组下订阅的主题列表
+     * @param req DescribeRocketMQTopicsByGroupRequest
+     * @return DescribeRocketMQTopicsByGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRocketMQTopicsByGroupResponse DescribeRocketMQTopicsByGroup(DescribeRocketMQTopicsByGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRocketMQTopicsByGroup", DescribeRocketMQTopicsByGroupResponse.class);
     }
 
     /**
@@ -1358,6 +1380,17 @@ public class TdmqClient extends AbstractClient{
     public ModifyRocketMQGroupResponse ModifyRocketMQGroup(ModifyRocketMQGroupRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyRocketMQGroup", ModifyRocketMQGroupResponse.class);
+    }
+
+    /**
+     *修改RocketMQ专享实例
+     * @param req ModifyRocketMQInstanceRequest
+     * @return ModifyRocketMQInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyRocketMQInstanceResponse ModifyRocketMQInstance(ModifyRocketMQInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyRocketMQInstance", ModifyRocketMQInstanceResponse.class);
     }
 
     /**

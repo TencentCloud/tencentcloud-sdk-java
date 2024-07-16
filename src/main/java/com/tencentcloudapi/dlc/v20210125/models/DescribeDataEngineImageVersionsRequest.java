@@ -24,26 +24,72 @@ import java.util.HashMap;
 public class DescribeDataEngineImageVersionsRequest extends AbstractModel {
 
     /**
-    * 引擎类型：SQL、SparkBatch、StandardSpark、StandardPresto
+    * 引擎类型：SparkSQL、PrestoSQL、SparkBatch、StandardSpark、StandardPresto
     */
     @SerializedName("EngineType")
     @Expose
     private String EngineType;
 
     /**
-     * Get 引擎类型：SQL、SparkBatch、StandardSpark、StandardPresto 
-     * @return EngineType 引擎类型：SQL、SparkBatch、StandardSpark、StandardPresto
+    * 排序字段: InsertTime（插入时间，默认），UpdateTime（更新时间）
+    */
+    @SerializedName("Sort")
+    @Expose
+    private String Sort;
+
+    /**
+    * 排序方式：false（降序，默认），true（升序）
+    */
+    @SerializedName("Asc")
+    @Expose
+    private Boolean Asc;
+
+    /**
+     * Get 引擎类型：SparkSQL、PrestoSQL、SparkBatch、StandardSpark、StandardPresto 
+     * @return EngineType 引擎类型：SparkSQL、PrestoSQL、SparkBatch、StandardSpark、StandardPresto
      */
     public String getEngineType() {
         return this.EngineType;
     }
 
     /**
-     * Set 引擎类型：SQL、SparkBatch、StandardSpark、StandardPresto
-     * @param EngineType 引擎类型：SQL、SparkBatch、StandardSpark、StandardPresto
+     * Set 引擎类型：SparkSQL、PrestoSQL、SparkBatch、StandardSpark、StandardPresto
+     * @param EngineType 引擎类型：SparkSQL、PrestoSQL、SparkBatch、StandardSpark、StandardPresto
      */
     public void setEngineType(String EngineType) {
         this.EngineType = EngineType;
+    }
+
+    /**
+     * Get 排序字段: InsertTime（插入时间，默认），UpdateTime（更新时间） 
+     * @return Sort 排序字段: InsertTime（插入时间，默认），UpdateTime（更新时间）
+     */
+    public String getSort() {
+        return this.Sort;
+    }
+
+    /**
+     * Set 排序字段: InsertTime（插入时间，默认），UpdateTime（更新时间）
+     * @param Sort 排序字段: InsertTime（插入时间，默认），UpdateTime（更新时间）
+     */
+    public void setSort(String Sort) {
+        this.Sort = Sort;
+    }
+
+    /**
+     * Get 排序方式：false（降序，默认），true（升序） 
+     * @return Asc 排序方式：false（降序，默认），true（升序）
+     */
+    public Boolean getAsc() {
+        return this.Asc;
+    }
+
+    /**
+     * Set 排序方式：false（降序，默认），true（升序）
+     * @param Asc 排序方式：false（降序，默认），true（升序）
+     */
+    public void setAsc(Boolean Asc) {
+        this.Asc = Asc;
     }
 
     public DescribeDataEngineImageVersionsRequest() {
@@ -57,6 +103,12 @@ public class DescribeDataEngineImageVersionsRequest extends AbstractModel {
         if (source.EngineType != null) {
             this.EngineType = new String(source.EngineType);
         }
+        if (source.Sort != null) {
+            this.Sort = new String(source.Sort);
+        }
+        if (source.Asc != null) {
+            this.Asc = new Boolean(source.Asc);
+        }
     }
 
 
@@ -65,6 +117,8 @@ public class DescribeDataEngineImageVersionsRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EngineType", this.EngineType);
+        this.setParamSimple(map, prefix + "Sort", this.Sort);
+        this.setParamSimple(map, prefix + "Asc", this.Asc);
 
     }
 }

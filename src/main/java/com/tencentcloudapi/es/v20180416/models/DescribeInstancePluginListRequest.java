@@ -45,7 +45,7 @@ public class DescribeInstancePluginListRequest extends AbstractModel {
     private Long Limit;
 
     /**
-    * 排序字段<li>1：插件名 pluginName
+    * 排序字段<li>1：插件名 pluginName</li>
     */
     @SerializedName("OrderBy")
     @Expose
@@ -114,16 +114,16 @@ public class DescribeInstancePluginListRequest extends AbstractModel {
     }
 
     /**
-     * Get 排序字段<li>1：插件名 pluginName 
-     * @return OrderBy 排序字段<li>1：插件名 pluginName
+     * Get 排序字段<li>1：插件名 pluginName</li> 
+     * @return OrderBy 排序字段<li>1：插件名 pluginName</li>
      */
     public String getOrderBy() {
         return this.OrderBy;
     }
 
     /**
-     * Set 排序字段<li>1：插件名 pluginName
-     * @param OrderBy 排序字段<li>1：插件名 pluginName
+     * Set 排序字段<li>1：插件名 pluginName</li>
+     * @param OrderBy 排序字段<li>1：插件名 pluginName</li>
      */
     public void setOrderBy(String OrderBy) {
         this.OrderBy = OrderBy;

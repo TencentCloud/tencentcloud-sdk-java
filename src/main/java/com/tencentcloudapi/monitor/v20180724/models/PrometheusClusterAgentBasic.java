@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class PrometheusClusterAgentBasic extends AbstractModel {
 
     /**
-    * 集群ID
+    * 地域
     */
     @SerializedName("Region")
     @Expose
@@ -87,16 +87,16 @@ public class PrometheusClusterAgentBasic extends AbstractModel {
     private Boolean OpenDefaultRecord;
 
     /**
-     * Get 集群ID 
-     * @return Region 集群ID
+     * Get 地域 
+     * @return Region 地域
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set 集群ID
-     * @param Region 集群ID
+     * Set 地域
+     * @param Region 地域
      */
     public void setRegion(String Region) {
         this.Region = Region;

@@ -103,6 +103,30 @@ public class HaVip extends AbstractModel {
     private String Business;
 
     /**
+    * `HAVIP`的飘移范围。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HaVipAssociationSet")
+    @Expose
+    private HaVipAssociation [] HaVipAssociationSet;
+
+    /**
+    * 是否开启`HAVIP`的飘移范围校验。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CheckAssociate")
+    @Expose
+    private Boolean CheckAssociate;
+
+    /**
+    * HAVIP 刷新时间。该参数只作为出参数。以下场景会触发 FlushTime 被刷新：1）子机发出免费 ARP 触发 HAVIP 漂移；2）手动HAVIP解绑网卡; 没有更新时默认值：0000-00-00 00:00:00
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FlushedTime")
+    @Expose
+    private String FlushedTime;
+
+    /**
      * Get `HAVIP`的`ID`，是`HAVIP`的唯一标识。 
      * @return HaVipId `HAVIP`的`ID`，是`HAVIP`的唯一标识。
      */
@@ -286,6 +310,66 @@ public class HaVip extends AbstractModel {
         this.Business = Business;
     }
 
+    /**
+     * Get `HAVIP`的飘移范围。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return HaVipAssociationSet `HAVIP`的飘移范围。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public HaVipAssociation [] getHaVipAssociationSet() {
+        return this.HaVipAssociationSet;
+    }
+
+    /**
+     * Set `HAVIP`的飘移范围。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HaVipAssociationSet `HAVIP`的飘移范围。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHaVipAssociationSet(HaVipAssociation [] HaVipAssociationSet) {
+        this.HaVipAssociationSet = HaVipAssociationSet;
+    }
+
+    /**
+     * Get 是否开启`HAVIP`的飘移范围校验。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CheckAssociate 是否开启`HAVIP`的飘移范围校验。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getCheckAssociate() {
+        return this.CheckAssociate;
+    }
+
+    /**
+     * Set 是否开启`HAVIP`的飘移范围校验。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CheckAssociate 是否开启`HAVIP`的飘移范围校验。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCheckAssociate(Boolean CheckAssociate) {
+        this.CheckAssociate = CheckAssociate;
+    }
+
+    /**
+     * Get HAVIP 刷新时间。该参数只作为出参数。以下场景会触发 FlushTime 被刷新：1）子机发出免费 ARP 触发 HAVIP 漂移；2）手动HAVIP解绑网卡; 没有更新时默认值：0000-00-00 00:00:00
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FlushedTime HAVIP 刷新时间。该参数只作为出参数。以下场景会触发 FlushTime 被刷新：1）子机发出免费 ARP 触发 HAVIP 漂移；2）手动HAVIP解绑网卡; 没有更新时默认值：0000-00-00 00:00:00
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getFlushedTime() {
+        return this.FlushedTime;
+    }
+
+    /**
+     * Set HAVIP 刷新时间。该参数只作为出参数。以下场景会触发 FlushTime 被刷新：1）子机发出免费 ARP 触发 HAVIP 漂移；2）手动HAVIP解绑网卡; 没有更新时默认值：0000-00-00 00:00:00
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FlushedTime HAVIP 刷新时间。该参数只作为出参数。以下场景会触发 FlushTime 被刷新：1）子机发出免费 ARP 触发 HAVIP 漂移；2）手动HAVIP解绑网卡; 没有更新时默认值：0000-00-00 00:00:00
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFlushedTime(String FlushedTime) {
+        this.FlushedTime = FlushedTime;
+    }
+
     public HaVip() {
     }
 
@@ -327,6 +411,18 @@ public class HaVip extends AbstractModel {
         if (source.Business != null) {
             this.Business = new String(source.Business);
         }
+        if (source.HaVipAssociationSet != null) {
+            this.HaVipAssociationSet = new HaVipAssociation[source.HaVipAssociationSet.length];
+            for (int i = 0; i < source.HaVipAssociationSet.length; i++) {
+                this.HaVipAssociationSet[i] = new HaVipAssociation(source.HaVipAssociationSet[i]);
+            }
+        }
+        if (source.CheckAssociate != null) {
+            this.CheckAssociate = new Boolean(source.CheckAssociate);
+        }
+        if (source.FlushedTime != null) {
+            this.FlushedTime = new String(source.FlushedTime);
+        }
     }
 
 
@@ -345,6 +441,9 @@ public class HaVip extends AbstractModel {
         this.setParamSimple(map, prefix + "State", this.State);
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
         this.setParamSimple(map, prefix + "Business", this.Business);
+        this.setParamArrayObj(map, prefix + "HaVipAssociationSet.", this.HaVipAssociationSet);
+        this.setParamSimple(map, prefix + "CheckAssociate", this.CheckAssociate);
+        this.setParamSimple(map, prefix + "FlushedTime", this.FlushedTime);
 
     }
 }

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribePrometheusInstanceUsageRequest extends AbstractModel {
 
     /**
-    * 按照一个或者多个实例ID查询。实例ID形如：prom-xxxxxxxx。请求的实例的上限为100。
+    * 按照一个或者多个实例ID查询。实例ID形如：prom-xxxxxxxx。
     */
     @SerializedName("InstanceIds")
     @Expose
@@ -45,16 +45,16 @@ public class DescribePrometheusInstanceUsageRequest extends AbstractModel {
     private String EndCalcDate;
 
     /**
-     * Get 按照一个或者多个实例ID查询。实例ID形如：prom-xxxxxxxx。请求的实例的上限为100。 
-     * @return InstanceIds 按照一个或者多个实例ID查询。实例ID形如：prom-xxxxxxxx。请求的实例的上限为100。
+     * Get 按照一个或者多个实例ID查询。实例ID形如：prom-xxxxxxxx。 
+     * @return InstanceIds 按照一个或者多个实例ID查询。实例ID形如：prom-xxxxxxxx。
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set 按照一个或者多个实例ID查询。实例ID形如：prom-xxxxxxxx。请求的实例的上限为100。
-     * @param InstanceIds 按照一个或者多个实例ID查询。实例ID形如：prom-xxxxxxxx。请求的实例的上限为100。
+     * Set 按照一个或者多个实例ID查询。实例ID形如：prom-xxxxxxxx。
+     * @param InstanceIds 按照一个或者多个实例ID查询。实例ID形如：prom-xxxxxxxx。
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;

@@ -32,6 +32,8 @@ public class UpdatePrometheusAgentStatusRequest extends AbstractModel {
 
     /**
     * Agent ID 列表，例如：agent-abcd1234，可在控制台 Agent 管理中获取
+
+示例值：["agent-abcd1234"]
     */
     @SerializedName("AgentIds")
     @Expose
@@ -63,8 +65,12 @@ public class UpdatePrometheusAgentStatusRequest extends AbstractModel {
     }
 
     /**
-     * Get Agent ID 列表，例如：agent-abcd1234，可在控制台 Agent 管理中获取 
+     * Get Agent ID 列表，例如：agent-abcd1234，可在控制台 Agent 管理中获取
+
+示例值：["agent-abcd1234"] 
      * @return AgentIds Agent ID 列表，例如：agent-abcd1234，可在控制台 Agent 管理中获取
+
+示例值：["agent-abcd1234"]
      */
     public String [] getAgentIds() {
         return this.AgentIds;
@@ -72,7 +78,11 @@ public class UpdatePrometheusAgentStatusRequest extends AbstractModel {
 
     /**
      * Set Agent ID 列表，例如：agent-abcd1234，可在控制台 Agent 管理中获取
+
+示例值：["agent-abcd1234"]
      * @param AgentIds Agent ID 列表，例如：agent-abcd1234，可在控制台 Agent 管理中获取
+
+示例值：["agent-abcd1234"]
      */
     public void setAgentIds(String [] AgentIds) {
         this.AgentIds = AgentIds;

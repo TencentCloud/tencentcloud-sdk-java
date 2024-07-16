@@ -38,7 +38,7 @@ public class ModifyPrometheusInstanceAttributesRequest extends AbstractModel {
     private String InstanceName;
 
     /**
-    * 存储时长（取值为 15、30、45。此参数不适用于包年包月实例）
+    * 数据存储时间（单位天），限制值为15, 30, 45, 90, 180, 365, 730之一
     */
     @SerializedName("DataRetentionTime")
     @Expose
@@ -77,16 +77,16 @@ public class ModifyPrometheusInstanceAttributesRequest extends AbstractModel {
     }
 
     /**
-     * Get 存储时长（取值为 15、30、45。此参数不适用于包年包月实例） 
-     * @return DataRetentionTime 存储时长（取值为 15、30、45。此参数不适用于包年包月实例）
+     * Get 数据存储时间（单位天），限制值为15, 30, 45, 90, 180, 365, 730之一 
+     * @return DataRetentionTime 数据存储时间（单位天），限制值为15, 30, 45, 90, 180, 365, 730之一
      */
     public Long getDataRetentionTime() {
         return this.DataRetentionTime;
     }
 
     /**
-     * Set 存储时长（取值为 15、30、45。此参数不适用于包年包月实例）
-     * @param DataRetentionTime 存储时长（取值为 15、30、45。此参数不适用于包年包月实例）
+     * Set 数据存储时间（单位天），限制值为15, 30, 45, 90, 180, 365, 730之一
+     * @param DataRetentionTime 数据存储时间（单位天），限制值为15, 30, 45, 90, 180, 365, 730之一
      */
     public void setDataRetentionTime(Long DataRetentionTime) {
         this.DataRetentionTime = DataRetentionTime;

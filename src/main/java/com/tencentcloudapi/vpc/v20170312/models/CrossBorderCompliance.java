@@ -178,6 +178,22 @@ public class CrossBorderCompliance extends AbstractModel {
     private String CreatedTime;
 
     /**
+    * 法定代表人身份证号。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LegalPersonId")
+    @Expose
+    private String LegalPersonId;
+
+    /**
+    * 法定代表人身份证。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LegalPersonIdCard")
+    @Expose
+    private String LegalPersonIdCard;
+
+    /**
      * Get 服务商，可选值：`UNICOM`。 
      * @return ServiceProvider 服务商，可选值：`UNICOM`。
      */
@@ -529,6 +545,46 @@ public class CrossBorderCompliance extends AbstractModel {
         this.CreatedTime = CreatedTime;
     }
 
+    /**
+     * Get 法定代表人身份证号。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LegalPersonId 法定代表人身份证号。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLegalPersonId() {
+        return this.LegalPersonId;
+    }
+
+    /**
+     * Set 法定代表人身份证号。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LegalPersonId 法定代表人身份证号。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLegalPersonId(String LegalPersonId) {
+        this.LegalPersonId = LegalPersonId;
+    }
+
+    /**
+     * Get 法定代表人身份证。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LegalPersonIdCard 法定代表人身份证。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLegalPersonIdCard() {
+        return this.LegalPersonIdCard;
+    }
+
+    /**
+     * Set 法定代表人身份证。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LegalPersonIdCard 法定代表人身份证。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLegalPersonIdCard(String LegalPersonIdCard) {
+        this.LegalPersonIdCard = LegalPersonIdCard;
+    }
+
     public CrossBorderCompliance() {
     }
 
@@ -603,6 +659,12 @@ public class CrossBorderCompliance extends AbstractModel {
         if (source.CreatedTime != null) {
             this.CreatedTime = new String(source.CreatedTime);
         }
+        if (source.LegalPersonId != null) {
+            this.LegalPersonId = new String(source.LegalPersonId);
+        }
+        if (source.LegalPersonIdCard != null) {
+            this.LegalPersonIdCard = new String(source.LegalPersonIdCard);
+        }
     }
 
 
@@ -632,6 +694,8 @@ public class CrossBorderCompliance extends AbstractModel {
         this.setParamSimple(map, prefix + "ServiceEndDate", this.ServiceEndDate);
         this.setParamSimple(map, prefix + "State", this.State);
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
+        this.setParamSimple(map, prefix + "LegalPersonId", this.LegalPersonId);
+        this.setParamSimple(map, prefix + "LegalPersonIdCard", this.LegalPersonIdCard);
 
     }
 }
