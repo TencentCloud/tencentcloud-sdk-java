@@ -53,7 +53,7 @@ public class DescribePrometheusTargetsTMPRequest extends AbstractModel {
     private Filter [] Filters;
 
     /**
-    * targets偏移量，默认为0
+    * targets分页偏移量，默认为0
     */
     @SerializedName("Offset")
     @Expose
@@ -135,16 +135,16 @@ public class DescribePrometheusTargetsTMPRequest extends AbstractModel {
     }
 
     /**
-     * Get targets偏移量，默认为0 
-     * @return Offset targets偏移量，默认为0
+     * Get targets分页偏移量，默认为0 
+     * @return Offset targets分页偏移量，默认为0
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set targets偏移量，默认为0
-     * @param Offset targets偏移量，默认为0
+     * Set targets分页偏移量，默认为0
+     * @param Offset targets分页偏移量，默认为0
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

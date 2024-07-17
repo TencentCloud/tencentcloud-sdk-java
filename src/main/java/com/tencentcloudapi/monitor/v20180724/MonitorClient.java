@@ -1433,7 +1433,7 @@ public class MonitorClient extends AbstractClient{
     }
 
     /**
-     *修改prometheus配置，如果配置项不存在，则会新增
+     *修改prometheus采集配置
      * @param req ModifyPrometheusConfigRequest
      * @return ModifyPrometheusConfigResponse
      * @throws TencentCloudSDKException

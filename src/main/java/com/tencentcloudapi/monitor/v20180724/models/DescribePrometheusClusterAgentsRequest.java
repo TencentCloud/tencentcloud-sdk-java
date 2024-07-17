@@ -31,14 +31,14 @@ public class DescribePrometheusClusterAgentsRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * 用于分页
+    * 偏移量，默认为0。
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 用于分页
+    * 返回数量，默认为20，最大值为100。
     */
     @SerializedName("Limit")
     @Expose
@@ -82,32 +82,32 @@ public class DescribePrometheusClusterAgentsRequest extends AbstractModel {
     }
 
     /**
-     * Get 用于分页 
-     * @return Offset 用于分页
+     * Get 偏移量，默认为0。 
+     * @return Offset 偏移量，默认为0。
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 用于分页
-     * @param Offset 用于分页
+     * Set 偏移量，默认为0。
+     * @param Offset 偏移量，默认为0。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 用于分页 
-     * @return Limit 用于分页
+     * Get 返回数量，默认为20，最大值为100。 
+     * @return Limit 返回数量，默认为20，最大值为100。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 用于分页
-     * @param Limit 用于分页
+     * Set 返回数量，默认为20，最大值为100。
+     * @param Limit 返回数量，默认为20，最大值为100。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

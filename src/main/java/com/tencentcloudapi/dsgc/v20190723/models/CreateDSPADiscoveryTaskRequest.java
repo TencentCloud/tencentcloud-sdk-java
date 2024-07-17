@@ -123,6 +123,27 @@ selfbuilt-db 表示自建数据库
     private String TimingStartTime;
 
     /**
+    * random-随机，asc生序，desc降序
+    */
+    @SerializedName("Order")
+    @Expose
+    private String Order;
+
+    /**
+    * 抽样的条数，范围30-1000
+    */
+    @SerializedName("Rows")
+    @Expose
+    private Long Rows;
+
+    /**
+    * 抽样的排序字段
+    */
+    @SerializedName("GlobalOrderField")
+    @Expose
+    private String GlobalOrderField;
+
+    /**
      * Get DSPA实例ID 
      * @return DspaId DSPA实例ID
      */
@@ -362,6 +383,54 @@ selfbuilt-db 表示自建数据库
         this.TimingStartTime = TimingStartTime;
     }
 
+    /**
+     * Get random-随机，asc生序，desc降序 
+     * @return Order random-随机，asc生序，desc降序
+     */
+    public String getOrder() {
+        return this.Order;
+    }
+
+    /**
+     * Set random-随机，asc生序，desc降序
+     * @param Order random-随机，asc生序，desc降序
+     */
+    public void setOrder(String Order) {
+        this.Order = Order;
+    }
+
+    /**
+     * Get 抽样的条数，范围30-1000 
+     * @return Rows 抽样的条数，范围30-1000
+     */
+    public Long getRows() {
+        return this.Rows;
+    }
+
+    /**
+     * Set 抽样的条数，范围30-1000
+     * @param Rows 抽样的条数，范围30-1000
+     */
+    public void setRows(Long Rows) {
+        this.Rows = Rows;
+    }
+
+    /**
+     * Get 抽样的排序字段 
+     * @return GlobalOrderField 抽样的排序字段
+     */
+    public String getGlobalOrderField() {
+        return this.GlobalOrderField;
+    }
+
+    /**
+     * Set 抽样的排序字段
+     * @param GlobalOrderField 抽样的排序字段
+     */
+    public void setGlobalOrderField(String GlobalOrderField) {
+        this.GlobalOrderField = GlobalOrderField;
+    }
+
     public CreateDSPADiscoveryTaskRequest() {
     }
 
@@ -412,6 +481,15 @@ selfbuilt-db 表示自建数据库
         if (source.TimingStartTime != null) {
             this.TimingStartTime = new String(source.TimingStartTime);
         }
+        if (source.Order != null) {
+            this.Order = new String(source.Order);
+        }
+        if (source.Rows != null) {
+            this.Rows = new Long(source.Rows);
+        }
+        if (source.GlobalOrderField != null) {
+            this.GlobalOrderField = new String(source.GlobalOrderField);
+        }
     }
 
 
@@ -432,6 +510,9 @@ selfbuilt-db 表示自建数据库
         this.setParamSimple(map, prefix + "Condition", this.Condition);
         this.setParamArraySimple(map, prefix + "ComplianceGroupIds.", this.ComplianceGroupIds);
         this.setParamSimple(map, prefix + "TimingStartTime", this.TimingStartTime);
+        this.setParamSimple(map, prefix + "Order", this.Order);
+        this.setParamSimple(map, prefix + "Rows", this.Rows);
+        this.setParamSimple(map, prefix + "GlobalOrderField", this.GlobalOrderField);
 
     }
 }

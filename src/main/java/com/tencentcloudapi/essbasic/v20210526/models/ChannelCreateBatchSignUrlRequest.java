@@ -42,7 +42,7 @@ public class ChannelCreateBatchSignUrlRequest extends AbstractModel {
     * 签署方经办人的姓名。
 经办人的姓名将用于身份认证和电子签名，请确保填写的姓名为签署方的真实姓名，而非昵称等代名。
 
-注：`请确保和合同中填入的一致`，`除动态签署人场景外，此参数必填`
+注：`请确保和合同中填入的一致`，`除动态签署人或子客员工经办人场景外，此参数必填`
     */
     @SerializedName("Name")
     @Expose
@@ -52,7 +52,7 @@ public class ChannelCreateBatchSignUrlRequest extends AbstractModel {
     * 手机号码， 支持国内手机号11位数字(无需加+86前缀或其他字符)。
 请确认手机号所有方为此业务通知方。
 
-注：`请确保和合同中填入的一致,  若无法保持一致，请确保在发起和生成批量签署链接时传入相同的参与方证件信息`，`除动态签署人场景外，此参数必填`
+注：`请确保和合同中填入的一致,  若无法保持一致，请确保在发起和生成批量签署链接时传入相同的参与方证件信息`，`除动态签署人或子客员工经办人场景外，此参数必填`
     */
     @SerializedName("Mobile")
     @Expose
@@ -110,14 +110,14 @@ public class ChannelCreateBatchSignUrlRequest extends AbstractModel {
     private String [] FlowIds;
 
     /**
-    * 目标签署人的企业名称，签署人如果是企业员工身份，需要传此参数。
+    * SaaS平台企业员工签署方的企业名称。目标签署人如果为saas应用企业员工身份，此参数必填。
 
 注：
 <ul>
 <li>请确认该名称与企业营业执照中注册的名称一致。</li>
 <li>如果名称中包含英文括号()，请使用中文括号（）代替。</li>
 <li>请确保此企业已完成腾讯电子签企业认证。</li>
-<li>暂时仅支持给`自建应用集成企业` 生成员工批签链接，不支持子客企业。</li>
+<li>**若为子客企业员工，请使用OpenId，OrganizationOpenId参数，此参数留空即可**</li>
 </ul>
     */
     @SerializedName("OrganizationName")
@@ -141,6 +141,26 @@ public class ChannelCreateBatchSignUrlRequest extends AbstractModel {
     @SerializedName("FlowBatchUrlInfo")
     @Expose
     private FlowBatchUrlInfo FlowBatchUrlInfo;
+
+    /**
+    * 第三方平台子客企业员工的标识OpenId，批签合同经办人为子客员工的情况下为必填。
+
+注：
+<ul>
+<li>传入的OpenId对应员工在此子客企业下必须已经实名</li>
+<li>传递了此参数可以无需传递Name，Mobile，IdCardNumber，IdCardType参数。系统会根据员工OpenId自动拉取实名信息。</li>
+</ul>
+    */
+    @SerializedName("OpenId")
+    @Expose
+    private String OpenId;
+
+    /**
+    * 第三方平台子客企业的企业的标识, 即OrganizationOpenId，批签合同经办人为子客企业员工是为必填。
+    */
+    @SerializedName("OrganizationOpenId")
+    @Expose
+    private String OrganizationOpenId;
 
     /**
      * Get 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
@@ -194,11 +214,11 @@ public class ChannelCreateBatchSignUrlRequest extends AbstractModel {
      * Get 签署方经办人的姓名。
 经办人的姓名将用于身份认证和电子签名，请确保填写的姓名为签署方的真实姓名，而非昵称等代名。
 
-注：`请确保和合同中填入的一致`，`除动态签署人场景外，此参数必填` 
+注：`请确保和合同中填入的一致`，`除动态签署人或子客员工经办人场景外，此参数必填` 
      * @return Name 签署方经办人的姓名。
 经办人的姓名将用于身份认证和电子签名，请确保填写的姓名为签署方的真实姓名，而非昵称等代名。
 
-注：`请确保和合同中填入的一致`，`除动态签署人场景外，此参数必填`
+注：`请确保和合同中填入的一致`，`除动态签署人或子客员工经办人场景外，此参数必填`
      */
     public String getName() {
         return this.Name;
@@ -208,11 +228,11 @@ public class ChannelCreateBatchSignUrlRequest extends AbstractModel {
      * Set 签署方经办人的姓名。
 经办人的姓名将用于身份认证和电子签名，请确保填写的姓名为签署方的真实姓名，而非昵称等代名。
 
-注：`请确保和合同中填入的一致`，`除动态签署人场景外，此参数必填`
+注：`请确保和合同中填入的一致`，`除动态签署人或子客员工经办人场景外，此参数必填`
      * @param Name 签署方经办人的姓名。
 经办人的姓名将用于身份认证和电子签名，请确保填写的姓名为签署方的真实姓名，而非昵称等代名。
 
-注：`请确保和合同中填入的一致`，`除动态签署人场景外，此参数必填`
+注：`请确保和合同中填入的一致`，`除动态签署人或子客员工经办人场景外，此参数必填`
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -222,11 +242,11 @@ public class ChannelCreateBatchSignUrlRequest extends AbstractModel {
      * Get 手机号码， 支持国内手机号11位数字(无需加+86前缀或其他字符)。
 请确认手机号所有方为此业务通知方。
 
-注：`请确保和合同中填入的一致,  若无法保持一致，请确保在发起和生成批量签署链接时传入相同的参与方证件信息`，`除动态签署人场景外，此参数必填` 
+注：`请确保和合同中填入的一致,  若无法保持一致，请确保在发起和生成批量签署链接时传入相同的参与方证件信息`，`除动态签署人或子客员工经办人场景外，此参数必填` 
      * @return Mobile 手机号码， 支持国内手机号11位数字(无需加+86前缀或其他字符)。
 请确认手机号所有方为此业务通知方。
 
-注：`请确保和合同中填入的一致,  若无法保持一致，请确保在发起和生成批量签署链接时传入相同的参与方证件信息`，`除动态签署人场景外，此参数必填`
+注：`请确保和合同中填入的一致,  若无法保持一致，请确保在发起和生成批量签署链接时传入相同的参与方证件信息`，`除动态签署人或子客员工经办人场景外，此参数必填`
      */
     public String getMobile() {
         return this.Mobile;
@@ -236,11 +256,11 @@ public class ChannelCreateBatchSignUrlRequest extends AbstractModel {
      * Set 手机号码， 支持国内手机号11位数字(无需加+86前缀或其他字符)。
 请确认手机号所有方为此业务通知方。
 
-注：`请确保和合同中填入的一致,  若无法保持一致，请确保在发起和生成批量签署链接时传入相同的参与方证件信息`，`除动态签署人场景外，此参数必填`
+注：`请确保和合同中填入的一致,  若无法保持一致，请确保在发起和生成批量签署链接时传入相同的参与方证件信息`，`除动态签署人或子客员工经办人场景外，此参数必填`
      * @param Mobile 手机号码， 支持国内手机号11位数字(无需加+86前缀或其他字符)。
 请确认手机号所有方为此业务通知方。
 
-注：`请确保和合同中填入的一致,  若无法保持一致，请确保在发起和生成批量签署链接时传入相同的参与方证件信息`，`除动态签署人场景外，此参数必填`
+注：`请确保和合同中填入的一致,  若无法保持一致，请确保在发起和生成批量签署链接时传入相同的参与方证件信息`，`除动态签署人或子客员工经办人场景外，此参数必填`
      */
     public void setMobile(String Mobile) {
         this.Mobile = Mobile;
@@ -391,23 +411,23 @@ public class ChannelCreateBatchSignUrlRequest extends AbstractModel {
     }
 
     /**
-     * Get 目标签署人的企业名称，签署人如果是企业员工身份，需要传此参数。
+     * Get SaaS平台企业员工签署方的企业名称。目标签署人如果为saas应用企业员工身份，此参数必填。
 
 注：
 <ul>
 <li>请确认该名称与企业营业执照中注册的名称一致。</li>
 <li>如果名称中包含英文括号()，请使用中文括号（）代替。</li>
 <li>请确保此企业已完成腾讯电子签企业认证。</li>
-<li>暂时仅支持给`自建应用集成企业` 生成员工批签链接，不支持子客企业。</li>
+<li>**若为子客企业员工，请使用OpenId，OrganizationOpenId参数，此参数留空即可**</li>
 </ul> 
-     * @return OrganizationName 目标签署人的企业名称，签署人如果是企业员工身份，需要传此参数。
+     * @return OrganizationName SaaS平台企业员工签署方的企业名称。目标签署人如果为saas应用企业员工身份，此参数必填。
 
 注：
 <ul>
 <li>请确认该名称与企业营业执照中注册的名称一致。</li>
 <li>如果名称中包含英文括号()，请使用中文括号（）代替。</li>
 <li>请确保此企业已完成腾讯电子签企业认证。</li>
-<li>暂时仅支持给`自建应用集成企业` 生成员工批签链接，不支持子客企业。</li>
+<li>**若为子客企业员工，请使用OpenId，OrganizationOpenId参数，此参数留空即可**</li>
 </ul>
      */
     public String getOrganizationName() {
@@ -415,23 +435,23 @@ public class ChannelCreateBatchSignUrlRequest extends AbstractModel {
     }
 
     /**
-     * Set 目标签署人的企业名称，签署人如果是企业员工身份，需要传此参数。
+     * Set SaaS平台企业员工签署方的企业名称。目标签署人如果为saas应用企业员工身份，此参数必填。
 
 注：
 <ul>
 <li>请确认该名称与企业营业执照中注册的名称一致。</li>
 <li>如果名称中包含英文括号()，请使用中文括号（）代替。</li>
 <li>请确保此企业已完成腾讯电子签企业认证。</li>
-<li>暂时仅支持给`自建应用集成企业` 生成员工批签链接，不支持子客企业。</li>
+<li>**若为子客企业员工，请使用OpenId，OrganizationOpenId参数，此参数留空即可**</li>
 </ul>
-     * @param OrganizationName 目标签署人的企业名称，签署人如果是企业员工身份，需要传此参数。
+     * @param OrganizationName SaaS平台企业员工签署方的企业名称。目标签署人如果为saas应用企业员工身份，此参数必填。
 
 注：
 <ul>
 <li>请确认该名称与企业营业执照中注册的名称一致。</li>
 <li>如果名称中包含英文括号()，请使用中文括号（）代替。</li>
 <li>请确保此企业已完成腾讯电子签企业认证。</li>
-<li>暂时仅支持给`自建应用集成企业` 生成员工批签链接，不支持子客企业。</li>
+<li>**若为子客企业员工，请使用OpenId，OrganizationOpenId参数，此参数留空即可**</li>
 </ul>
      */
     public void setOrganizationName(String OrganizationName) {
@@ -486,6 +506,62 @@ public class ChannelCreateBatchSignUrlRequest extends AbstractModel {
         this.FlowBatchUrlInfo = FlowBatchUrlInfo;
     }
 
+    /**
+     * Get 第三方平台子客企业员工的标识OpenId，批签合同经办人为子客员工的情况下为必填。
+
+注：
+<ul>
+<li>传入的OpenId对应员工在此子客企业下必须已经实名</li>
+<li>传递了此参数可以无需传递Name，Mobile，IdCardNumber，IdCardType参数。系统会根据员工OpenId自动拉取实名信息。</li>
+</ul> 
+     * @return OpenId 第三方平台子客企业员工的标识OpenId，批签合同经办人为子客员工的情况下为必填。
+
+注：
+<ul>
+<li>传入的OpenId对应员工在此子客企业下必须已经实名</li>
+<li>传递了此参数可以无需传递Name，Mobile，IdCardNumber，IdCardType参数。系统会根据员工OpenId自动拉取实名信息。</li>
+</ul>
+     */
+    public String getOpenId() {
+        return this.OpenId;
+    }
+
+    /**
+     * Set 第三方平台子客企业员工的标识OpenId，批签合同经办人为子客员工的情况下为必填。
+
+注：
+<ul>
+<li>传入的OpenId对应员工在此子客企业下必须已经实名</li>
+<li>传递了此参数可以无需传递Name，Mobile，IdCardNumber，IdCardType参数。系统会根据员工OpenId自动拉取实名信息。</li>
+</ul>
+     * @param OpenId 第三方平台子客企业员工的标识OpenId，批签合同经办人为子客员工的情况下为必填。
+
+注：
+<ul>
+<li>传入的OpenId对应员工在此子客企业下必须已经实名</li>
+<li>传递了此参数可以无需传递Name，Mobile，IdCardNumber，IdCardType参数。系统会根据员工OpenId自动拉取实名信息。</li>
+</ul>
+     */
+    public void setOpenId(String OpenId) {
+        this.OpenId = OpenId;
+    }
+
+    /**
+     * Get 第三方平台子客企业的企业的标识, 即OrganizationOpenId，批签合同经办人为子客企业员工是为必填。 
+     * @return OrganizationOpenId 第三方平台子客企业的企业的标识, 即OrganizationOpenId，批签合同经办人为子客企业员工是为必填。
+     */
+    public String getOrganizationOpenId() {
+        return this.OrganizationOpenId;
+    }
+
+    /**
+     * Set 第三方平台子客企业的企业的标识, 即OrganizationOpenId，批签合同经办人为子客企业员工是为必填。
+     * @param OrganizationOpenId 第三方平台子客企业的企业的标识, 即OrganizationOpenId，批签合同经办人为子客企业员工是为必填。
+     */
+    public void setOrganizationOpenId(String OrganizationOpenId) {
+        this.OrganizationOpenId = OrganizationOpenId;
+    }
+
     public ChannelCreateBatchSignUrlRequest() {
     }
 
@@ -530,6 +606,12 @@ public class ChannelCreateBatchSignUrlRequest extends AbstractModel {
         if (source.FlowBatchUrlInfo != null) {
             this.FlowBatchUrlInfo = new FlowBatchUrlInfo(source.FlowBatchUrlInfo);
         }
+        if (source.OpenId != null) {
+            this.OpenId = new String(source.OpenId);
+        }
+        if (source.OrganizationOpenId != null) {
+            this.OrganizationOpenId = new String(source.OrganizationOpenId);
+        }
     }
 
 
@@ -548,6 +630,8 @@ public class ChannelCreateBatchSignUrlRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "OrganizationName", this.OrganizationName);
         this.setParamSimple(map, prefix + "JumpToDetail", this.JumpToDetail);
         this.setParamObj(map, prefix + "FlowBatchUrlInfo.", this.FlowBatchUrlInfo);
+        this.setParamSimple(map, prefix + "OpenId", this.OpenId);
+        this.setParamSimple(map, prefix + "OrganizationOpenId", this.OrganizationOpenId);
 
     }
 }

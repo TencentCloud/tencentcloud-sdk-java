@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribePrometheusInstancesOverviewRequest extends AbstractModel {
 
     /**
-    * 用于分页
+    * 分页偏移量，默认为0
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 用于分页
+    * 返回数量，默认为20，最大值为100
     */
     @SerializedName("Limit")
     @Expose
@@ -47,32 +47,32 @@ Name: 通过实例名称来过滤
     private Filter [] Filters;
 
     /**
-     * Get 用于分页 
-     * @return Offset 用于分页
+     * Get 分页偏移量，默认为0 
+     * @return Offset 分页偏移量，默认为0
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 用于分页
-     * @param Offset 用于分页
+     * Set 分页偏移量，默认为0
+     * @param Offset 分页偏移量，默认为0
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 用于分页 
-     * @return Limit 用于分页
+     * Get 返回数量，默认为20，最大值为100 
+     * @return Limit 返回数量，默认为20，最大值为100
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 用于分页
-     * @param Limit 用于分页
+     * Set 返回数量，默认为20，最大值为100
+     * @param Limit 返回数量，默认为20，最大值为100
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

@@ -56,38 +56,7 @@ public class UpdateServiceDiscoveryRequest extends AbstractModel {
     private Long Type;
 
     /**
-    * 服务发现配置信息，YAML 格式
-
-示例值：
-
-```
-apiVersion: monitoring.coreos.com/v1
-kind: ServiceMonitor
-metadata:
-  name: go-demo    # 填写一个唯一名称
-  namespace: cm-prometheus  # namespace固定，不要修改
-spec:
-  endpoints:
-  - interval: 30s
-    # 填写service yaml中Prometheus Exporter对应的Port的Name
-    port: 2112
-    # 填写Prometheus Exporter对应的Path的值，不填默认/metrics
-    path: /metrics
-    relabelings:
-    # ** 必须要有一个 label 为 application，这里假设 k8s 有一个 label 为 app，
-    # 我们通过 relabel 的 replace 动作把它替换成了 application
-    - action: replace
-      sourceLabels:  [__meta_kubernetes_pod_label_app]
-      targetLabel: application
-  # 选择要监控service所在的namespace
-  namespaceSelector:
-    matchNames:
-    - golang-demo
-    # 填写要监控service的Label值，以定位目标service
-  selector:
-    matchLabels:
-      app: golang-app-demo
-```
+    * 服务发现配置信息，YAML 格式，[具体YAML参数内容请参考](https://cloud.tencent.com/document/product/1416/55995#service-monitor)
     */
     @SerializedName("Yaml")
     @Expose
@@ -174,140 +143,16 @@ spec:
     }
 
     /**
-     * Get 服务发现配置信息，YAML 格式
-
-示例值：
-
-```
-apiVersion: monitoring.coreos.com/v1
-kind: ServiceMonitor
-metadata:
-  name: go-demo    # 填写一个唯一名称
-  namespace: cm-prometheus  # namespace固定，不要修改
-spec:
-  endpoints:
-  - interval: 30s
-    # 填写service yaml中Prometheus Exporter对应的Port的Name
-    port: 2112
-    # 填写Prometheus Exporter对应的Path的值，不填默认/metrics
-    path: /metrics
-    relabelings:
-    # ** 必须要有一个 label 为 application，这里假设 k8s 有一个 label 为 app，
-    # 我们通过 relabel 的 replace 动作把它替换成了 application
-    - action: replace
-      sourceLabels:  [__meta_kubernetes_pod_label_app]
-      targetLabel: application
-  # 选择要监控service所在的namespace
-  namespaceSelector:
-    matchNames:
-    - golang-demo
-    # 填写要监控service的Label值，以定位目标service
-  selector:
-    matchLabels:
-      app: golang-app-demo
-``` 
-     * @return Yaml 服务发现配置信息，YAML 格式
-
-示例值：
-
-```
-apiVersion: monitoring.coreos.com/v1
-kind: ServiceMonitor
-metadata:
-  name: go-demo    # 填写一个唯一名称
-  namespace: cm-prometheus  # namespace固定，不要修改
-spec:
-  endpoints:
-  - interval: 30s
-    # 填写service yaml中Prometheus Exporter对应的Port的Name
-    port: 2112
-    # 填写Prometheus Exporter对应的Path的值，不填默认/metrics
-    path: /metrics
-    relabelings:
-    # ** 必须要有一个 label 为 application，这里假设 k8s 有一个 label 为 app，
-    # 我们通过 relabel 的 replace 动作把它替换成了 application
-    - action: replace
-      sourceLabels:  [__meta_kubernetes_pod_label_app]
-      targetLabel: application
-  # 选择要监控service所在的namespace
-  namespaceSelector:
-    matchNames:
-    - golang-demo
-    # 填写要监控service的Label值，以定位目标service
-  selector:
-    matchLabels:
-      app: golang-app-demo
-```
+     * Get 服务发现配置信息，YAML 格式，[具体YAML参数内容请参考](https://cloud.tencent.com/document/product/1416/55995#service-monitor) 
+     * @return Yaml 服务发现配置信息，YAML 格式，[具体YAML参数内容请参考](https://cloud.tencent.com/document/product/1416/55995#service-monitor)
      */
     public String getYaml() {
         return this.Yaml;
     }
 
     /**
-     * Set 服务发现配置信息，YAML 格式
-
-示例值：
-
-```
-apiVersion: monitoring.coreos.com/v1
-kind: ServiceMonitor
-metadata:
-  name: go-demo    # 填写一个唯一名称
-  namespace: cm-prometheus  # namespace固定，不要修改
-spec:
-  endpoints:
-  - interval: 30s
-    # 填写service yaml中Prometheus Exporter对应的Port的Name
-    port: 2112
-    # 填写Prometheus Exporter对应的Path的值，不填默认/metrics
-    path: /metrics
-    relabelings:
-    # ** 必须要有一个 label 为 application，这里假设 k8s 有一个 label 为 app，
-    # 我们通过 relabel 的 replace 动作把它替换成了 application
-    - action: replace
-      sourceLabels:  [__meta_kubernetes_pod_label_app]
-      targetLabel: application
-  # 选择要监控service所在的namespace
-  namespaceSelector:
-    matchNames:
-    - golang-demo
-    # 填写要监控service的Label值，以定位目标service
-  selector:
-    matchLabels:
-      app: golang-app-demo
-```
-     * @param Yaml 服务发现配置信息，YAML 格式
-
-示例值：
-
-```
-apiVersion: monitoring.coreos.com/v1
-kind: ServiceMonitor
-metadata:
-  name: go-demo    # 填写一个唯一名称
-  namespace: cm-prometheus  # namespace固定，不要修改
-spec:
-  endpoints:
-  - interval: 30s
-    # 填写service yaml中Prometheus Exporter对应的Port的Name
-    port: 2112
-    # 填写Prometheus Exporter对应的Path的值，不填默认/metrics
-    path: /metrics
-    relabelings:
-    # ** 必须要有一个 label 为 application，这里假设 k8s 有一个 label 为 app，
-    # 我们通过 relabel 的 replace 动作把它替换成了 application
-    - action: replace
-      sourceLabels:  [__meta_kubernetes_pod_label_app]
-      targetLabel: application
-  # 选择要监控service所在的namespace
-  namespaceSelector:
-    matchNames:
-    - golang-demo
-    # 填写要监控service的Label值，以定位目标service
-  selector:
-    matchLabels:
-      app: golang-app-demo
-```
+     * Set 服务发现配置信息，YAML 格式，[具体YAML参数内容请参考](https://cloud.tencent.com/document/product/1416/55995#service-monitor)
+     * @param Yaml 服务发现配置信息，YAML 格式，[具体YAML参数内容请参考](https://cloud.tencent.com/document/product/1416/55995#service-monitor)
      */
     public void setYaml(String Yaml) {
         this.Yaml = Yaml;

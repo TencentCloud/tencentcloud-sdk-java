@@ -35,7 +35,7 @@ ID 按templateId过滤
     private Filter [] Filters;
 
     /**
-    * 分页偏移
+    * 分页偏移量，默认为0
     */
     @SerializedName("Offset")
     @Expose
@@ -81,16 +81,16 @@ ID 按templateId过滤
     }
 
     /**
-     * Get 分页偏移 
-     * @return Offset 分页偏移
+     * Get 分页偏移量，默认为0 
+     * @return Offset 分页偏移量，默认为0
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页偏移
-     * @param Offset 分页偏移
+     * Set 分页偏移量，默认为0
+     * @param Offset 分页偏移量，默认为0
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

@@ -38,6 +38,20 @@ public class DescribeDSPATaskResultDataSampleRequest extends AbstractModel {
     private Long FieldResultId;
 
     /**
+    * 排序方式
+    */
+    @SerializedName("Order")
+    @Expose
+    private String Order;
+
+    /**
+    * 排序字段
+    */
+    @SerializedName("OrderField")
+    @Expose
+    private String OrderField;
+
+    /**
      * Get DSPA实例ID 
      * @return DspaId DSPA实例ID
      */
@@ -69,6 +83,38 @@ public class DescribeDSPATaskResultDataSampleRequest extends AbstractModel {
         this.FieldResultId = FieldResultId;
     }
 
+    /**
+     * Get 排序方式 
+     * @return Order 排序方式
+     */
+    public String getOrder() {
+        return this.Order;
+    }
+
+    /**
+     * Set 排序方式
+     * @param Order 排序方式
+     */
+    public void setOrder(String Order) {
+        this.Order = Order;
+    }
+
+    /**
+     * Get 排序字段 
+     * @return OrderField 排序字段
+     */
+    public String getOrderField() {
+        return this.OrderField;
+    }
+
+    /**
+     * Set 排序字段
+     * @param OrderField 排序字段
+     */
+    public void setOrderField(String OrderField) {
+        this.OrderField = OrderField;
+    }
+
     public DescribeDSPATaskResultDataSampleRequest() {
     }
 
@@ -83,6 +129,12 @@ public class DescribeDSPATaskResultDataSampleRequest extends AbstractModel {
         if (source.FieldResultId != null) {
             this.FieldResultId = new Long(source.FieldResultId);
         }
+        if (source.Order != null) {
+            this.Order = new String(source.Order);
+        }
+        if (source.OrderField != null) {
+            this.OrderField = new String(source.OrderField);
+        }
     }
 
 
@@ -92,6 +144,8 @@ public class DescribeDSPATaskResultDataSampleRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DspaId", this.DspaId);
         this.setParamSimple(map, prefix + "FieldResultId", this.FieldResultId);
+        this.setParamSimple(map, prefix + "Order", this.Order);
+        this.setParamSimple(map, prefix + "OrderField", this.OrderField);
 
     }
 }
