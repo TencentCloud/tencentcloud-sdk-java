@@ -35,6 +35,7 @@ public class CheckIdNameDateResponse extends AbstractModel {
 -5: 身份信息无效
 -6: 证件库服务异常
 -7: 证件库中无此身份证记录
+-8: 认证次数超过当日限制，请次日重试
     */
     @SerializedName("Result")
     @Expose
@@ -65,7 +66,8 @@ public class CheckIdNameDateResponse extends AbstractModel {
 -4: 非法有效期（长度、格式等不正确）
 -5: 身份信息无效
 -6: 证件库服务异常
--7: 证件库中无此身份证记录 
+-7: 证件库中无此身份证记录
+-8: 认证次数超过当日限制，请次日重试 
      * @return Result 认证结果码，收费情况如下。
 收费结果码：
 0: 一致
@@ -77,6 +79,7 @@ public class CheckIdNameDateResponse extends AbstractModel {
 -5: 身份信息无效
 -6: 证件库服务异常
 -7: 证件库中无此身份证记录
+-8: 认证次数超过当日限制，请次日重试
      */
     public String getResult() {
         return this.Result;
@@ -94,6 +97,7 @@ public class CheckIdNameDateResponse extends AbstractModel {
 -5: 身份信息无效
 -6: 证件库服务异常
 -7: 证件库中无此身份证记录
+-8: 认证次数超过当日限制，请次日重试
      * @param Result 认证结果码，收费情况如下。
 收费结果码：
 0: 一致
@@ -105,6 +109,7 @@ public class CheckIdNameDateResponse extends AbstractModel {
 -5: 身份信息无效
 -6: 证件库服务异常
 -7: 证件库中无此身份证记录
+-8: 认证次数超过当日限制，请次日重试
      */
     public void setResult(String Result) {
         this.Result = Result;

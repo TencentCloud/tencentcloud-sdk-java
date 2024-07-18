@@ -62,7 +62,7 @@ public class StartStreamIngestRequest extends AbstractModel {
     private String UserSig;
 
     /**
-    * 源流URL。历史原因本字段【必填】。如果是视频流，分辨率请保持不变。
+    * 源流URL【必填】。如果是视频流，分辨率请保持不变。
     */
     @SerializedName("StreamUrl")
     @Expose
@@ -196,16 +196,16 @@ public class StartStreamIngestRequest extends AbstractModel {
     }
 
     /**
-     * Get 源流URL。历史原因本字段【必填】。如果是视频流，分辨率请保持不变。 
-     * @return StreamUrl 源流URL。历史原因本字段【必填】。如果是视频流，分辨率请保持不变。
+     * Get 源流URL【必填】。如果是视频流，分辨率请保持不变。 
+     * @return StreamUrl 源流URL【必填】。如果是视频流，分辨率请保持不变。
      */
     public String getStreamUrl() {
         return this.StreamUrl;
     }
 
     /**
-     * Set 源流URL。历史原因本字段【必填】。如果是视频流，分辨率请保持不变。
-     * @param StreamUrl 源流URL。历史原因本字段【必填】。如果是视频流，分辨率请保持不变。
+     * Set 源流URL【必填】。如果是视频流，分辨率请保持不变。
+     * @param StreamUrl 源流URL【必填】。如果是视频流，分辨率请保持不变。
      */
     public void setStreamUrl(String StreamUrl) {
         this.StreamUrl = StreamUrl;

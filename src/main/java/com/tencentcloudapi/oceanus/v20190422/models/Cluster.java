@@ -367,6 +367,14 @@ public class Cluster extends AbstractModel {
     private Long ResourceType;
 
     /**
+    * 集群类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BillingResourceMode")
+    @Expose
+    private String BillingResourceMode;
+
+    /**
      * Get 集群 ID 
      * @return ClusterId 集群 ID
      */
@@ -1198,6 +1206,26 @@ public class Cluster extends AbstractModel {
         this.ResourceType = ResourceType;
     }
 
+    /**
+     * Get 集群类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BillingResourceMode 集群类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getBillingResourceMode() {
+        return this.BillingResourceMode;
+    }
+
+    /**
+     * Set 集群类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BillingResourceMode 集群类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBillingResourceMode(String BillingResourceMode) {
+        this.BillingResourceMode = BillingResourceMode;
+    }
+
     public Cluster() {
     }
 
@@ -1359,6 +1387,9 @@ public class Cluster extends AbstractModel {
         if (source.ResourceType != null) {
             this.ResourceType = new Long(source.ResourceType);
         }
+        if (source.BillingResourceMode != null) {
+            this.BillingResourceMode = new String(source.BillingResourceMode);
+        }
     }
 
 
@@ -1411,6 +1442,7 @@ public class Cluster extends AbstractModel {
         this.setParamObj(map, prefix + "SubEks.", this.SubEks);
         this.setParamSimple(map, prefix + "AgentSerialId", this.AgentSerialId);
         this.setParamSimple(map, prefix + "ResourceType", this.ResourceType);
+        this.setParamSimple(map, prefix + "BillingResourceMode", this.BillingResourceMode);
 
     }
 }

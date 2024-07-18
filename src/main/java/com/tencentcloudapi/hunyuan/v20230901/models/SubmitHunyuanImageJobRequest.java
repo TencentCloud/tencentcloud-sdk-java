@@ -24,7 +24,9 @@ import java.util.HashMap;
 public class SubmitHunyuanImageJobRequest extends AbstractModel {
 
     /**
-    * 文本描述。 算法将根据输入的文本智能生成与之相关的图像。 不能为空，推荐使用中文。最多可传100个 utf-8 字符。
+    * 文本描述。 
+算法将根据输入的文本智能生成与之相关的图像。 
+不能为空，推荐使用中文。最多可传1024个 utf-8 字符。
     */
     @SerializedName("Prompt")
     @Expose
@@ -69,16 +71,24 @@ public class SubmitHunyuanImageJobRequest extends AbstractModel {
     private Long Revise;
 
     /**
-     * Get 文本描述。 算法将根据输入的文本智能生成与之相关的图像。 不能为空，推荐使用中文。最多可传100个 utf-8 字符。 
-     * @return Prompt 文本描述。 算法将根据输入的文本智能生成与之相关的图像。 不能为空，推荐使用中文。最多可传100个 utf-8 字符。
+     * Get 文本描述。 
+算法将根据输入的文本智能生成与之相关的图像。 
+不能为空，推荐使用中文。最多可传1024个 utf-8 字符。 
+     * @return Prompt 文本描述。 
+算法将根据输入的文本智能生成与之相关的图像。 
+不能为空，推荐使用中文。最多可传1024个 utf-8 字符。
      */
     public String getPrompt() {
         return this.Prompt;
     }
 
     /**
-     * Set 文本描述。 算法将根据输入的文本智能生成与之相关的图像。 不能为空，推荐使用中文。最多可传100个 utf-8 字符。
-     * @param Prompt 文本描述。 算法将根据输入的文本智能生成与之相关的图像。 不能为空，推荐使用中文。最多可传100个 utf-8 字符。
+     * Set 文本描述。 
+算法将根据输入的文本智能生成与之相关的图像。 
+不能为空，推荐使用中文。最多可传1024个 utf-8 字符。
+     * @param Prompt 文本描述。 
+算法将根据输入的文本智能生成与之相关的图像。 
+不能为空，推荐使用中文。最多可传1024个 utf-8 字符。
      */
     public void setPrompt(String Prompt) {
         this.Prompt = Prompt;

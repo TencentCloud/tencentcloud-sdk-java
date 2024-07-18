@@ -165,6 +165,14 @@ public class ClusterGroupSetItem extends AbstractModel {
     private SubEks SubEks;
 
     /**
+    * 默认 "" 包销模式 "exclusiveSale"
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BillingResourceMode")
+    @Expose
+    private String BillingResourceMode;
+
+    /**
      * Get clusterGroup 的 SerialId 
      * @return ClusterId clusterGroup 的 SerialId
      */
@@ -488,6 +496,26 @@ public class ClusterGroupSetItem extends AbstractModel {
         this.SubEks = SubEks;
     }
 
+    /**
+     * Get 默认 "" 包销模式 "exclusiveSale"
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BillingResourceMode 默认 "" 包销模式 "exclusiveSale"
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getBillingResourceMode() {
+        return this.BillingResourceMode;
+    }
+
+    /**
+     * Set 默认 "" 包销模式 "exclusiveSale"
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BillingResourceMode 默认 "" 包销模式 "exclusiveSale"
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBillingResourceMode(String BillingResourceMode) {
+        this.BillingResourceMode = BillingResourceMode;
+    }
+
     public ClusterGroupSetItem() {
     }
 
@@ -556,6 +584,9 @@ public class ClusterGroupSetItem extends AbstractModel {
         if (source.SubEks != null) {
             this.SubEks = new SubEks(source.SubEks);
         }
+        if (source.BillingResourceMode != null) {
+            this.BillingResourceMode = new String(source.BillingResourceMode);
+        }
     }
 
 
@@ -583,6 +614,7 @@ public class ClusterGroupSetItem extends AbstractModel {
         this.setParamSimple(map, prefix + "RunningCu", this.RunningCu);
         this.setParamSimple(map, prefix + "PayMode", this.PayMode);
         this.setParamObj(map, prefix + "SubEks.", this.SubEks);
+        this.setParamSimple(map, prefix + "BillingResourceMode", this.BillingResourceMode);
 
     }
 }

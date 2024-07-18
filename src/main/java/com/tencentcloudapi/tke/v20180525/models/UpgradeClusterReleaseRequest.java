@@ -59,7 +59,7 @@ public class UpgradeClusterReleaseRequest extends AbstractModel {
     private ReleaseValues Values;
 
     /**
-    * 制品来源，范围：tke-market 或 other默认值：tke-market。
+    * 制品来源，范围：tke-market 或 other 默认值：tke-market，示例值：tke-market
     */
     @SerializedName("ChartFrom")
     @Expose
@@ -94,7 +94,7 @@ public class UpgradeClusterReleaseRequest extends AbstractModel {
     private String Password;
 
     /**
-    * 制品命名空间
+    * 制品命名空间，ChartFrom为tke-market时ChartNamespace不为空，值为DescribeProducts接口反馈的Namespace
     */
     @SerializedName("ChartNamespace")
     @Expose
@@ -188,16 +188,16 @@ public class UpgradeClusterReleaseRequest extends AbstractModel {
     }
 
     /**
-     * Get 制品来源，范围：tke-market 或 other默认值：tke-market。 
-     * @return ChartFrom 制品来源，范围：tke-market 或 other默认值：tke-market。
+     * Get 制品来源，范围：tke-market 或 other 默认值：tke-market，示例值：tke-market 
+     * @return ChartFrom 制品来源，范围：tke-market 或 other 默认值：tke-market，示例值：tke-market
      */
     public String getChartFrom() {
         return this.ChartFrom;
     }
 
     /**
-     * Set 制品来源，范围：tke-market 或 other默认值：tke-market。
-     * @param ChartFrom 制品来源，范围：tke-market 或 other默认值：tke-market。
+     * Set 制品来源，范围：tke-market 或 other 默认值：tke-market，示例值：tke-market
+     * @param ChartFrom 制品来源，范围：tke-market 或 other 默认值：tke-market，示例值：tke-market
      */
     public void setChartFrom(String ChartFrom) {
         this.ChartFrom = ChartFrom;
@@ -268,16 +268,16 @@ public class UpgradeClusterReleaseRequest extends AbstractModel {
     }
 
     /**
-     * Get 制品命名空间 
-     * @return ChartNamespace 制品命名空间
+     * Get 制品命名空间，ChartFrom为tke-market时ChartNamespace不为空，值为DescribeProducts接口反馈的Namespace 
+     * @return ChartNamespace 制品命名空间，ChartFrom为tke-market时ChartNamespace不为空，值为DescribeProducts接口反馈的Namespace
      */
     public String getChartNamespace() {
         return this.ChartNamespace;
     }
 
     /**
-     * Set 制品命名空间
-     * @param ChartNamespace 制品命名空间
+     * Set 制品命名空间，ChartFrom为tke-market时ChartNamespace不为空，值为DescribeProducts接口反馈的Namespace
+     * @param ChartNamespace 制品命名空间，ChartFrom为tke-market时ChartNamespace不为空，值为DescribeProducts接口反馈的Namespace
      */
     public void setChartNamespace(String ChartNamespace) {
         this.ChartNamespace = ChartNamespace;

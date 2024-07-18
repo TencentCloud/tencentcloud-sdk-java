@@ -34,6 +34,7 @@ public class PhoneVerificationResponse extends AbstractModel {
 -8: 姓名校验不通过
 -9: 没有记录
 -11: 验证中心服务繁忙
+-12: 认证次数超过当日限制，请次日重试
     */
     @SerializedName("Result")
     @Expose
@@ -84,7 +85,8 @@ OtherMismatch：其他不一致；
 -7: 身份证号码有误
 -8: 姓名校验不通过
 -9: 没有记录
--11: 验证中心服务繁忙 
+-11: 验证中心服务繁忙
+-12: 认证次数超过当日限制，请次日重试 
      * @return Result 认证结果码:
 收费结果码
 0: 三要素信息一致
@@ -95,6 +97,7 @@ OtherMismatch：其他不一致；
 -8: 姓名校验不通过
 -9: 没有记录
 -11: 验证中心服务繁忙
+-12: 认证次数超过当日限制，请次日重试
      */
     public String getResult() {
         return this.Result;
@@ -111,6 +114,7 @@ OtherMismatch：其他不一致；
 -8: 姓名校验不通过
 -9: 没有记录
 -11: 验证中心服务繁忙
+-12: 认证次数超过当日限制，请次日重试
      * @param Result 认证结果码:
 收费结果码
 0: 三要素信息一致
@@ -121,6 +125,7 @@ OtherMismatch：其他不一致；
 -8: 姓名校验不通过
 -9: 没有记录
 -11: 验证中心服务繁忙
+-12: 认证次数超过当日限制，请次日重试
      */
     public void setResult(String Result) {
         this.Result = Result;
