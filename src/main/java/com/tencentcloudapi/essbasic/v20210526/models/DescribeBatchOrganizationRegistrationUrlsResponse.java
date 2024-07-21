@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeBatchOrganizationRegistrationUrlsResponse extends AbstractModel {
 
     /**
-    * 企业批量注册链接信息
+    * 子企业注册认证的的链接列表
     */
     @SerializedName("OrganizationAuthUrls")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeBatchOrganizationRegistrationUrlsResponse extends AbstractM
     private String RequestId;
 
     /**
-     * Get 企业批量注册链接信息 
-     * @return OrganizationAuthUrls 企业批量注册链接信息
+     * Get 子企业注册认证的的链接列表 
+     * @return OrganizationAuthUrls 子企业注册认证的的链接列表
      */
     public OrganizationAuthUrl [] getOrganizationAuthUrls() {
         return this.OrganizationAuthUrls;
     }
 
     /**
-     * Set 企业批量注册链接信息
-     * @param OrganizationAuthUrls 企业批量注册链接信息
+     * Set 子企业注册认证的的链接列表
+     * @param OrganizationAuthUrls 子企业注册认证的的链接列表
      */
     public void setOrganizationAuthUrls(OrganizationAuthUrl [] OrganizationAuthUrls) {
         this.OrganizationAuthUrls = OrganizationAuthUrls;

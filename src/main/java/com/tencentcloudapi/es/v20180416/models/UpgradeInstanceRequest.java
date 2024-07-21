@@ -87,6 +87,20 @@ public class UpgradeInstanceRequest extends AbstractModel {
     private Long CvmDelayOnlineTime;
 
     /**
+    * 分片迁移并发数
+    */
+    @SerializedName("ShardAllocationConcurrents")
+    @Expose
+    private Long ShardAllocationConcurrents;
+
+    /**
+    * 分片迁移并发速度
+    */
+    @SerializedName("ShardAllocationBytes")
+    @Expose
+    private Long ShardAllocationBytes;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -230,6 +244,38 @@ public class UpgradeInstanceRequest extends AbstractModel {
         this.CvmDelayOnlineTime = CvmDelayOnlineTime;
     }
 
+    /**
+     * Get 分片迁移并发数 
+     * @return ShardAllocationConcurrents 分片迁移并发数
+     */
+    public Long getShardAllocationConcurrents() {
+        return this.ShardAllocationConcurrents;
+    }
+
+    /**
+     * Set 分片迁移并发数
+     * @param ShardAllocationConcurrents 分片迁移并发数
+     */
+    public void setShardAllocationConcurrents(Long ShardAllocationConcurrents) {
+        this.ShardAllocationConcurrents = ShardAllocationConcurrents;
+    }
+
+    /**
+     * Get 分片迁移并发速度 
+     * @return ShardAllocationBytes 分片迁移并发速度
+     */
+    public Long getShardAllocationBytes() {
+        return this.ShardAllocationBytes;
+    }
+
+    /**
+     * Set 分片迁移并发速度
+     * @param ShardAllocationBytes 分片迁移并发速度
+     */
+    public void setShardAllocationBytes(Long ShardAllocationBytes) {
+        this.ShardAllocationBytes = ShardAllocationBytes;
+    }
+
     public UpgradeInstanceRequest() {
     }
 
@@ -265,6 +311,12 @@ public class UpgradeInstanceRequest extends AbstractModel {
         if (source.CvmDelayOnlineTime != null) {
             this.CvmDelayOnlineTime = new Long(source.CvmDelayOnlineTime);
         }
+        if (source.ShardAllocationConcurrents != null) {
+            this.ShardAllocationConcurrents = new Long(source.ShardAllocationConcurrents);
+        }
+        if (source.ShardAllocationBytes != null) {
+            this.ShardAllocationBytes = new Long(source.ShardAllocationBytes);
+        }
     }
 
 
@@ -281,6 +333,8 @@ public class UpgradeInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "CosBackup", this.CosBackup);
         this.setParamSimple(map, prefix + "SkipCheckForceRestart", this.SkipCheckForceRestart);
         this.setParamSimple(map, prefix + "CvmDelayOnlineTime", this.CvmDelayOnlineTime);
+        this.setParamSimple(map, prefix + "ShardAllocationConcurrents", this.ShardAllocationConcurrents);
+        this.setParamSimple(map, prefix + "ShardAllocationBytes", this.ShardAllocationBytes);
 
     }
 }

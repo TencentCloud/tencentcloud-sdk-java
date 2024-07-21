@@ -43,8 +43,7 @@ public class TextToImageLiteRequest extends AbstractModel {
 
     /**
     * 绘画风格。
-请在 [智能文生图风格列表](https://cloud.tencent.com/document/product/1668/86249) 中选择期望的风格，传入风格编号。
-推荐使用且只使用一种风格。不传默认使用201（日系动漫风格）。
+请在 [文生图轻量版风格列表](https://cloud.tencent.com/document/product/1729/108992) 中选择期望的风格，传入风格编号。不传默认使用201（日系动漫风格）。
     */
     @SerializedName("Style")
     @Expose
@@ -126,11 +125,9 @@ public class TextToImageLiteRequest extends AbstractModel {
 
     /**
      * Get 绘画风格。
-请在 [智能文生图风格列表](https://cloud.tencent.com/document/product/1668/86249) 中选择期望的风格，传入风格编号。
-推荐使用且只使用一种风格。不传默认使用201（日系动漫风格）。 
+请在 [文生图轻量版风格列表](https://cloud.tencent.com/document/product/1729/108992) 中选择期望的风格，传入风格编号。不传默认使用201（日系动漫风格）。 
      * @return Style 绘画风格。
-请在 [智能文生图风格列表](https://cloud.tencent.com/document/product/1668/86249) 中选择期望的风格，传入风格编号。
-推荐使用且只使用一种风格。不传默认使用201（日系动漫风格）。
+请在 [文生图轻量版风格列表](https://cloud.tencent.com/document/product/1729/108992) 中选择期望的风格，传入风格编号。不传默认使用201（日系动漫风格）。
      */
     public String getStyle() {
         return this.Style;
@@ -138,11 +135,9 @@ public class TextToImageLiteRequest extends AbstractModel {
 
     /**
      * Set 绘画风格。
-请在 [智能文生图风格列表](https://cloud.tencent.com/document/product/1668/86249) 中选择期望的风格，传入风格编号。
-推荐使用且只使用一种风格。不传默认使用201（日系动漫风格）。
+请在 [文生图轻量版风格列表](https://cloud.tencent.com/document/product/1729/108992) 中选择期望的风格，传入风格编号。不传默认使用201（日系动漫风格）。
      * @param Style 绘画风格。
-请在 [智能文生图风格列表](https://cloud.tencent.com/document/product/1668/86249) 中选择期望的风格，传入风格编号。
-推荐使用且只使用一种风格。不传默认使用201（日系动漫风格）。
+请在 [文生图轻量版风格列表](https://cloud.tencent.com/document/product/1729/108992) 中选择期望的风格，传入风格编号。不传默认使用201（日系动漫风格）。
      */
     public void setStyle(String Style) {
         this.Style = Style;

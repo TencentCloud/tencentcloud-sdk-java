@@ -83,6 +83,17 @@ public class MnaClient extends AbstractClient{
     }
 
     /**
+     *新建互通规则
+     * @param req AddL3ConnRequest
+     * @return AddL3ConnResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddL3ConnResponse AddL3Conn(AddL3ConnRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AddL3Conn", AddL3ConnResponse.class);
+    }
+
+    /**
      *通过此接口设置和更新预置密钥
      * @param req CreateEncryptedKeyRequest
      * @return CreateEncryptedKeyResponse
@@ -124,6 +135,17 @@ public class MnaClient extends AbstractClient{
     public DeleteGroupResponse DeleteGroup(DeleteGroupRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteGroup", DeleteGroupResponse.class);
+    }
+
+    /**
+     *删除互通规则
+     * @param req DeleteL3ConnRequest
+     * @return DeleteL3ConnResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteL3ConnResponse DeleteL3Conn(DeleteL3ConnRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteL3Conn", DeleteL3ConnResponse.class);
     }
 
     /**
@@ -270,6 +292,17 @@ public class MnaClient extends AbstractClient{
     }
 
     /**
+     *获取互通规则列表
+     * @param req GetL3ConnListRequest
+     * @return GetL3ConnListResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetL3ConnListResponse GetL3ConnList(GetL3ConnListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetL3ConnList", GetL3ConnListResponse.class);
+    }
+
+    /**
      *批量获取设备流量统计曲线
      * @param req GetMultiFlowStatisticRequest
      * @return GetMultiFlowStatisticResponse
@@ -410,6 +443,39 @@ public class MnaClient extends AbstractClient{
     public UpdateHardwareResponse UpdateHardware(UpdateHardwareRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "UpdateHardware", UpdateHardwareResponse.class);
+    }
+
+    /**
+     *更新互通规则CIDR
+     * @param req UpdateL3CidrRequest
+     * @return UpdateL3CidrResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateL3CidrResponse UpdateL3Cidr(UpdateL3CidrRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateL3Cidr", UpdateL3CidrResponse.class);
+    }
+
+    /**
+     *更新互通规则备注
+     * @param req UpdateL3ConnRequest
+     * @return UpdateL3ConnResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateL3ConnResponse UpdateL3Conn(UpdateL3ConnRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateL3Conn", UpdateL3ConnResponse.class);
+    }
+
+    /**
+     *更新互通规则开关
+     * @param req UpdateL3SwitchRequest
+     * @return UpdateL3SwitchResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateL3SwitchResponse UpdateL3Switch(UpdateL3SwitchRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateL3Switch", UpdateL3SwitchResponse.class);
     }
 
 }

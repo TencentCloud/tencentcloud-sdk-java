@@ -673,6 +673,28 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
     }
 
     /**
+     *进入救援模式
+     * @param req EnterRescueModeRequest
+     * @return EnterRescueModeResponse
+     * @throws TencentCloudSDKException
+     */
+    public EnterRescueModeResponse EnterRescueMode(EnterRescueModeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "EnterRescueMode", EnterRescueModeResponse.class);
+    }
+
+    /**
+     *退出救援模式
+     * @param req ExitRescueModeRequest
+     * @return ExitRescueModeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ExitRescueModeResponse ExitRescueMode(ExitRescueModeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ExitRescueMode", ExitRescueModeResponse.class);
+    }
+
+    /**
      *提供导出自定义镜像到指定COS存储桶的能力
      * @param req ExportImagesRequest
      * @return ExportImagesResponse

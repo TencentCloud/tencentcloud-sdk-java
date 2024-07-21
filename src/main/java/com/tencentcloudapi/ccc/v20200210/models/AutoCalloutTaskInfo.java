@@ -67,7 +67,12 @@ public class AutoCalloutTaskInfo extends AbstractModel {
     private Long IvrId;
 
     /**
-    * 任务状态0初始 1运行中 2已完成 3结束中 4已结束
+    * 任务状态：
+0初始：任务创建，呼叫未开始
+1运行中
+2 已完成：任务中所有呼叫完成
+3结束中：任务到期，但仍有部分呼叫未结束
+4已结束：任务到期终止
     */
     @SerializedName("State")
     @Expose
@@ -181,16 +186,36 @@ public class AutoCalloutTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 任务状态0初始 1运行中 2已完成 3结束中 4已结束 
-     * @return State 任务状态0初始 1运行中 2已完成 3结束中 4已结束
+     * Get 任务状态：
+0初始：任务创建，呼叫未开始
+1运行中
+2 已完成：任务中所有呼叫完成
+3结束中：任务到期，但仍有部分呼叫未结束
+4已结束：任务到期终止 
+     * @return State 任务状态：
+0初始：任务创建，呼叫未开始
+1运行中
+2 已完成：任务中所有呼叫完成
+3结束中：任务到期，但仍有部分呼叫未结束
+4已结束：任务到期终止
      */
     public Long getState() {
         return this.State;
     }
 
     /**
-     * Set 任务状态0初始 1运行中 2已完成 3结束中 4已结束
-     * @param State 任务状态0初始 1运行中 2已完成 3结束中 4已结束
+     * Set 任务状态：
+0初始：任务创建，呼叫未开始
+1运行中
+2 已完成：任务中所有呼叫完成
+3结束中：任务到期，但仍有部分呼叫未结束
+4已结束：任务到期终止
+     * @param State 任务状态：
+0初始：任务创建，呼叫未开始
+1运行中
+2 已完成：任务中所有呼叫完成
+3结束中：任务到期，但仍有部分呼叫未结束
+4已结束：任务到期终止
      */
     public void setState(Long State) {
         this.State = State;

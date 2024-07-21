@@ -70,7 +70,7 @@ public class InstanceBind extends AbstractModel {
     */
     @SerializedName("InstanceRegion")
     @Expose
-    private String [] InstanceRegion;
+    private String InstanceRegion;
 
     /**
     * 实例所属的账户uin。
@@ -195,7 +195,7 @@ public class InstanceBind extends AbstractModel {
      * Get 实例所在地域。 
      * @return InstanceRegion 实例所在地域。
      */
-    public String [] getInstanceRegion() {
+    public String getInstanceRegion() {
         return this.InstanceRegion;
     }
 
@@ -203,7 +203,7 @@ public class InstanceBind extends AbstractModel {
      * Set 实例所在地域。
      * @param InstanceRegion 实例所在地域。
      */
-    public void setInstanceRegion(String [] InstanceRegion) {
+    public void setInstanceRegion(String InstanceRegion) {
         this.InstanceRegion = InstanceRegion;
     }
 
@@ -302,10 +302,7 @@ public class InstanceBind extends AbstractModel {
             this.InstanceName = new String(source.InstanceName);
         }
         if (source.InstanceRegion != null) {
-            this.InstanceRegion = new String[source.InstanceRegion.length];
-            for (int i = 0; i < source.InstanceRegion.length; i++) {
-                this.InstanceRegion[i] = new String(source.InstanceRegion[i]);
-            }
+            this.InstanceRegion = new String(source.InstanceRegion);
         }
         if (source.InstanceUin != null) {
             this.InstanceUin = new String(source.InstanceUin);
@@ -326,7 +323,7 @@ public class InstanceBind extends AbstractModel {
         this.setParamSimple(map, prefix + "InstanceBindTime", this.InstanceBindTime);
         this.setParamSimple(map, prefix + "RouteTableId", this.RouteTableId);
         this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);
-        this.setParamArraySimple(map, prefix + "InstanceRegion.", this.InstanceRegion);
+        this.setParamSimple(map, prefix + "InstanceRegion", this.InstanceRegion);
         this.setParamSimple(map, prefix + "InstanceUin", this.InstanceUin);
         this.setParamSimple(map, prefix + "State", this.State);
 

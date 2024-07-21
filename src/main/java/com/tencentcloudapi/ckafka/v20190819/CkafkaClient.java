@@ -920,6 +920,17 @@ public class CkafkaClient extends AbstractClient{
     }
 
     /**
+     *设置自动化运维属性
+     * @param req ModifyRoutineMaintenanceTaskRequest
+     * @return ModifyRoutineMaintenanceTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyRoutineMaintenanceTaskResponse ModifyRoutineMaintenanceTask(ModifyRoutineMaintenanceTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyRoutineMaintenanceTask", ModifyRoutineMaintenanceTaskResponse.class);
+    }
+
+    /**
      *本接口用于修改主题属性。
      * @param req ModifyTopicAttributesRequest
      * @return ModifyTopicAttributesResponse

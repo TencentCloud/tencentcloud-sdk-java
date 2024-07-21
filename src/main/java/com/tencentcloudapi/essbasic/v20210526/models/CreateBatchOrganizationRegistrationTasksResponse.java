@@ -24,19 +24,20 @@ import java.util.HashMap;
 public class CreateBatchOrganizationRegistrationTasksResponse extends AbstractModel {
 
     /**
-    * 生成注册链接的任务Id，
-根据这个id， 调用DescribeBatchOrganizationRegistrationUrls 获取生成的链接，进入认证流程
-若存在其中任意一条链接错误，则返回具体的错误描述, 不会返回TaskId
+    * 生成注册链接的任务ID，后序根据这个任务ID， 调用<a href="https://qian.tencent.com/developers/partnerApis/accounts/DescribeBatchOrganizationRegistrationUrls" target="_blank">查询子企业批量认证链接</a>获取生成的链接，发给对应的客户使用。
+
+注：`如果有错误，则不会返回任务ID`
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * 批量生成企业认证链接的详细错误信息，
-顺序与输入参数保持一致。
-若企业认证均成功生成，则不返回错误信息；
-若存在任何错误，则返回具体的错误描述。
+    * 批量生成企业认证链接的详细错误信息，顺序与输入参数子企业列表顺序一致。
+<ul>
+<li>如果所有企业认证链接都成功生成，将不返回错误信息</li>
+<li>如果存在任何错误，将返回具体的错误描述。（没有错误的企业返回空字符串）</li>
+</ul>
     */
     @SerializedName("ErrorMessages")
     @Expose
@@ -50,52 +51,56 @@ public class CreateBatchOrganizationRegistrationTasksResponse extends AbstractMo
     private String RequestId;
 
     /**
-     * Get 生成注册链接的任务Id，
-根据这个id， 调用DescribeBatchOrganizationRegistrationUrls 获取生成的链接，进入认证流程
-若存在其中任意一条链接错误，则返回具体的错误描述, 不会返回TaskId 
-     * @return TaskId 生成注册链接的任务Id，
-根据这个id， 调用DescribeBatchOrganizationRegistrationUrls 获取生成的链接，进入认证流程
-若存在其中任意一条链接错误，则返回具体的错误描述, 不会返回TaskId
+     * Get 生成注册链接的任务ID，后序根据这个任务ID， 调用<a href="https://qian.tencent.com/developers/partnerApis/accounts/DescribeBatchOrganizationRegistrationUrls" target="_blank">查询子企业批量认证链接</a>获取生成的链接，发给对应的客户使用。
+
+注：`如果有错误，则不会返回任务ID` 
+     * @return TaskId 生成注册链接的任务ID，后序根据这个任务ID， 调用<a href="https://qian.tencent.com/developers/partnerApis/accounts/DescribeBatchOrganizationRegistrationUrls" target="_blank">查询子企业批量认证链接</a>获取生成的链接，发给对应的客户使用。
+
+注：`如果有错误，则不会返回任务ID`
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 生成注册链接的任务Id，
-根据这个id， 调用DescribeBatchOrganizationRegistrationUrls 获取生成的链接，进入认证流程
-若存在其中任意一条链接错误，则返回具体的错误描述, 不会返回TaskId
-     * @param TaskId 生成注册链接的任务Id，
-根据这个id， 调用DescribeBatchOrganizationRegistrationUrls 获取生成的链接，进入认证流程
-若存在其中任意一条链接错误，则返回具体的错误描述, 不会返回TaskId
+     * Set 生成注册链接的任务ID，后序根据这个任务ID， 调用<a href="https://qian.tencent.com/developers/partnerApis/accounts/DescribeBatchOrganizationRegistrationUrls" target="_blank">查询子企业批量认证链接</a>获取生成的链接，发给对应的客户使用。
+
+注：`如果有错误，则不会返回任务ID`
+     * @param TaskId 生成注册链接的任务ID，后序根据这个任务ID， 调用<a href="https://qian.tencent.com/developers/partnerApis/accounts/DescribeBatchOrganizationRegistrationUrls" target="_blank">查询子企业批量认证链接</a>获取生成的链接，发给对应的客户使用。
+
+注：`如果有错误，则不会返回任务ID`
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get 批量生成企业认证链接的详细错误信息，
-顺序与输入参数保持一致。
-若企业认证均成功生成，则不返回错误信息；
-若存在任何错误，则返回具体的错误描述。 
-     * @return ErrorMessages 批量生成企业认证链接的详细错误信息，
-顺序与输入参数保持一致。
-若企业认证均成功生成，则不返回错误信息；
-若存在任何错误，则返回具体的错误描述。
+     * Get 批量生成企业认证链接的详细错误信息，顺序与输入参数子企业列表顺序一致。
+<ul>
+<li>如果所有企业认证链接都成功生成，将不返回错误信息</li>
+<li>如果存在任何错误，将返回具体的错误描述。（没有错误的企业返回空字符串）</li>
+</ul> 
+     * @return ErrorMessages 批量生成企业认证链接的详细错误信息，顺序与输入参数子企业列表顺序一致。
+<ul>
+<li>如果所有企业认证链接都成功生成，将不返回错误信息</li>
+<li>如果存在任何错误，将返回具体的错误描述。（没有错误的企业返回空字符串）</li>
+</ul>
      */
     public String [] getErrorMessages() {
         return this.ErrorMessages;
     }
 
     /**
-     * Set 批量生成企业认证链接的详细错误信息，
-顺序与输入参数保持一致。
-若企业认证均成功生成，则不返回错误信息；
-若存在任何错误，则返回具体的错误描述。
-     * @param ErrorMessages 批量生成企业认证链接的详细错误信息，
-顺序与输入参数保持一致。
-若企业认证均成功生成，则不返回错误信息；
-若存在任何错误，则返回具体的错误描述。
+     * Set 批量生成企业认证链接的详细错误信息，顺序与输入参数子企业列表顺序一致。
+<ul>
+<li>如果所有企业认证链接都成功生成，将不返回错误信息</li>
+<li>如果存在任何错误，将返回具体的错误描述。（没有错误的企业返回空字符串）</li>
+</ul>
+     * @param ErrorMessages 批量生成企业认证链接的详细错误信息，顺序与输入参数子企业列表顺序一致。
+<ul>
+<li>如果所有企业认证链接都成功生成，将不返回错误信息</li>
+<li>如果存在任何错误，将返回具体的错误描述。（没有错误的企业返回空字符串）</li>
+</ul>
      */
     public void setErrorMessages(String [] ErrorMessages) {
         this.ErrorMessages = ErrorMessages;

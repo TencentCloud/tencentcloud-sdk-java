@@ -136,6 +136,13 @@ public class ChatCompletionsRequest extends AbstractModel {
     private Tool CustomTool;
 
     /**
+    * 默认是false，在值为true且命中搜索时，接口会返回SearchInfo
+    */
+    @SerializedName("SearchInfo")
+    @Expose
+    private Boolean SearchInfo;
+
+    /**
      * Get 模型名称，可选值包括 hunyuan-lite、hunyuan-standard、hunyuan-standard-256K、hunyuan-pro、 hunyuan-code、 hunyuan-role、 hunyuan-functioncall、 hunyuan-vision。
 各模型介绍请阅读 [产品概述](https://cloud.tencent.com/document/product/1729/104753) 中的说明。
 
@@ -463,6 +470,22 @@ public class ChatCompletionsRequest extends AbstractModel {
         this.CustomTool = CustomTool;
     }
 
+    /**
+     * Get 默认是false，在值为true且命中搜索时，接口会返回SearchInfo 
+     * @return SearchInfo 默认是false，在值为true且命中搜索时，接口会返回SearchInfo
+     */
+    public Boolean getSearchInfo() {
+        return this.SearchInfo;
+    }
+
+    /**
+     * Set 默认是false，在值为true且命中搜索时，接口会返回SearchInfo
+     * @param SearchInfo 默认是false，在值为true且命中搜索时，接口会返回SearchInfo
+     */
+    public void setSearchInfo(Boolean SearchInfo) {
+        this.SearchInfo = SearchInfo;
+    }
+
     public ChatCompletionsRequest() {
     }
 
@@ -507,6 +530,9 @@ public class ChatCompletionsRequest extends AbstractModel {
         if (source.CustomTool != null) {
             this.CustomTool = new Tool(source.CustomTool);
         }
+        if (source.SearchInfo != null) {
+            this.SearchInfo = new Boolean(source.SearchInfo);
+        }
     }
 
 
@@ -524,6 +550,7 @@ public class ChatCompletionsRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Tools.", this.Tools);
         this.setParamSimple(map, prefix + "ToolChoice", this.ToolChoice);
         this.setParamObj(map, prefix + "CustomTool.", this.CustomTool);
+        this.setParamSimple(map, prefix + "SearchInfo", this.SearchInfo);
 
     }
 }

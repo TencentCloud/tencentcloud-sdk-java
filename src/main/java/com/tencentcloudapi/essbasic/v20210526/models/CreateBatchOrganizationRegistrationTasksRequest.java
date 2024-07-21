@@ -39,8 +39,7 @@ public class CreateBatchOrganizationRegistrationTasksRequest extends AbstractMod
     private Agent Agent;
 
     /**
-    * 当前应用下子客的组织机构注册信息。
-一次最多支持10条认证流
+    * 当前应用下子企业的组织机构注册信息。最多支持查询10子企业。
     */
     @SerializedName("RegistrationOrganizations")
     @Expose
@@ -54,7 +53,7 @@ public class CreateBatchOrganizationRegistrationTasksRequest extends AbstractMod
 <li>**APP**：第三方APP或小程序跳转电子签小程序链接, 一般用于贵方小程序或者APP跳转过来,  打开后进入腾讯电子签小程序</li>
 <li>**H5**：第三方H5跳转到电子签H5长链接, 一般用于贵方H5跳转过来,  打开后进入腾讯电子签H5页面</li>
 <li>**SHORT_H5**：第三方H5跳转到电子签H5短链接, 一般用于贵方H5跳转过来,  打开后进入腾讯电子签H5页面</li></ul>
-示例值：PC
+
 
     */
     @SerializedName("Endpoint")
@@ -110,20 +109,16 @@ public class CreateBatchOrganizationRegistrationTasksRequest extends AbstractMod
     }
 
     /**
-     * Get 当前应用下子客的组织机构注册信息。
-一次最多支持10条认证流 
-     * @return RegistrationOrganizations 当前应用下子客的组织机构注册信息。
-一次最多支持10条认证流
+     * Get 当前应用下子企业的组织机构注册信息。最多支持查询10子企业。 
+     * @return RegistrationOrganizations 当前应用下子企业的组织机构注册信息。最多支持查询10子企业。
      */
     public RegistrationOrganizationInfo [] getRegistrationOrganizations() {
         return this.RegistrationOrganizations;
     }
 
     /**
-     * Set 当前应用下子客的组织机构注册信息。
-一次最多支持10条认证流
-     * @param RegistrationOrganizations 当前应用下子客的组织机构注册信息。
-一次最多支持10条认证流
+     * Set 当前应用下子企业的组织机构注册信息。最多支持查询10子企业。
+     * @param RegistrationOrganizations 当前应用下子企业的组织机构注册信息。最多支持查询10子企业。
      */
     public void setRegistrationOrganizations(RegistrationOrganizationInfo [] RegistrationOrganizations) {
         this.RegistrationOrganizations = RegistrationOrganizations;
@@ -137,7 +132,7 @@ public class CreateBatchOrganizationRegistrationTasksRequest extends AbstractMod
 <li>**APP**：第三方APP或小程序跳转电子签小程序链接, 一般用于贵方小程序或者APP跳转过来,  打开后进入腾讯电子签小程序</li>
 <li>**H5**：第三方H5跳转到电子签H5长链接, 一般用于贵方H5跳转过来,  打开后进入腾讯电子签H5页面</li>
 <li>**SHORT_H5**：第三方H5跳转到电子签H5短链接, 一般用于贵方H5跳转过来,  打开后进入腾讯电子签H5页面</li></ul>
-示例值：PC
+
  
      * @return Endpoint 生成链接的类型：
 <ul><li>**PC**：(默认)web控制台链接, 需要在PC浏览器中打开</li>
@@ -146,7 +141,7 @@ public class CreateBatchOrganizationRegistrationTasksRequest extends AbstractMod
 <li>**APP**：第三方APP或小程序跳转电子签小程序链接, 一般用于贵方小程序或者APP跳转过来,  打开后进入腾讯电子签小程序</li>
 <li>**H5**：第三方H5跳转到电子签H5长链接, 一般用于贵方H5跳转过来,  打开后进入腾讯电子签H5页面</li>
 <li>**SHORT_H5**：第三方H5跳转到电子签H5短链接, 一般用于贵方H5跳转过来,  打开后进入腾讯电子签H5页面</li></ul>
-示例值：PC
+
 
      */
     public String getEndpoint() {
@@ -161,7 +156,7 @@ public class CreateBatchOrganizationRegistrationTasksRequest extends AbstractMod
 <li>**APP**：第三方APP或小程序跳转电子签小程序链接, 一般用于贵方小程序或者APP跳转过来,  打开后进入腾讯电子签小程序</li>
 <li>**H5**：第三方H5跳转到电子签H5长链接, 一般用于贵方H5跳转过来,  打开后进入腾讯电子签H5页面</li>
 <li>**SHORT_H5**：第三方H5跳转到电子签H5短链接, 一般用于贵方H5跳转过来,  打开后进入腾讯电子签H5页面</li></ul>
-示例值：PC
+
 
      * @param Endpoint 生成链接的类型：
 <ul><li>**PC**：(默认)web控制台链接, 需要在PC浏览器中打开</li>
@@ -170,7 +165,7 @@ public class CreateBatchOrganizationRegistrationTasksRequest extends AbstractMod
 <li>**APP**：第三方APP或小程序跳转电子签小程序链接, 一般用于贵方小程序或者APP跳转过来,  打开后进入腾讯电子签小程序</li>
 <li>**H5**：第三方H5跳转到电子签H5长链接, 一般用于贵方H5跳转过来,  打开后进入腾讯电子签H5页面</li>
 <li>**SHORT_H5**：第三方H5跳转到电子签H5短链接, 一般用于贵方H5跳转过来,  打开后进入腾讯电子签H5页面</li></ul>
-示例值：PC
+
 
      */
     public void setEndpoint(String Endpoint) {

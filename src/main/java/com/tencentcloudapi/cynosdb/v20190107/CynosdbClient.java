@@ -921,6 +921,17 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *资源包使用明细导出
+     * @param req ExportResourcePackageDeductDetailsRequest
+     * @return ExportResourcePackageDeductDetailsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ExportResourcePackageDeductDetailsResponse ExportResourcePackageDeductDetails(ExportResourcePackageDeductDetailsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ExportResourcePackageDeductDetails", ExportResourcePackageDeductDetailsResponse.class);
+    }
+
+    /**
      *批量授权账号权限
      * @param req GrantAccountPrivilegesRequest
      * @return GrantAccountPrivilegesResponse
@@ -1248,6 +1259,17 @@ public class CynosdbClient extends AbstractClient{
     public ModifyResourcePackageNameResponse ModifyResourcePackageName(ModifyResourcePackageNameRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyResourcePackageName", ModifyResourcePackageNameResponse.class);
+    }
+
+    /**
+     *修改已绑定资源包抵扣优先级
+     * @param req ModifyResourcePackagesDeductionPriorityRequest
+     * @return ModifyResourcePackagesDeductionPriorityResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyResourcePackagesDeductionPriorityResponse ModifyResourcePackagesDeductionPriority(ModifyResourcePackagesDeductionPriorityRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyResourcePackagesDeductionPriority", ModifyResourcePackagesDeductionPriorityResponse.class);
     }
 
     /**
