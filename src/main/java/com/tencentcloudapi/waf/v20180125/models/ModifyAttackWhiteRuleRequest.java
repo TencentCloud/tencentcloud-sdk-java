@@ -66,6 +66,27 @@ public class ModifyAttackWhiteRuleRequest extends AbstractModel {
     private String [] SignatureIds;
 
     /**
+    * 加白的大类规则ID
+    */
+    @SerializedName("TypeIds")
+    @Expose
+    private String [] TypeIds;
+
+    /**
+    * 0表示按照特定规则ID加白, 1表示按照规则类型加白
+    */
+    @SerializedName("Mode")
+    @Expose
+    private Long Mode;
+
+    /**
+    * 规则名
+    */
+    @SerializedName("Name")
+    @Expose
+    private String Name;
+
+    /**
      * Get 规则序号 
      * @return RuleId 规则序号
      */
@@ -161,6 +182,54 @@ public class ModifyAttackWhiteRuleRequest extends AbstractModel {
         this.SignatureIds = SignatureIds;
     }
 
+    /**
+     * Get 加白的大类规则ID 
+     * @return TypeIds 加白的大类规则ID
+     */
+    public String [] getTypeIds() {
+        return this.TypeIds;
+    }
+
+    /**
+     * Set 加白的大类规则ID
+     * @param TypeIds 加白的大类规则ID
+     */
+    public void setTypeIds(String [] TypeIds) {
+        this.TypeIds = TypeIds;
+    }
+
+    /**
+     * Get 0表示按照特定规则ID加白, 1表示按照规则类型加白 
+     * @return Mode 0表示按照特定规则ID加白, 1表示按照规则类型加白
+     */
+    public Long getMode() {
+        return this.Mode;
+    }
+
+    /**
+     * Set 0表示按照特定规则ID加白, 1表示按照规则类型加白
+     * @param Mode 0表示按照特定规则ID加白, 1表示按照规则类型加白
+     */
+    public void setMode(Long Mode) {
+        this.Mode = Mode;
+    }
+
+    /**
+     * Get 规则名 
+     * @return Name 规则名
+     */
+    public String getName() {
+        return this.Name;
+    }
+
+    /**
+     * Set 规则名
+     * @param Name 规则名
+     */
+    public void setName(String Name) {
+        this.Name = Name;
+    }
+
     public ModifyAttackWhiteRuleRequest() {
     }
 
@@ -193,6 +262,18 @@ public class ModifyAttackWhiteRuleRequest extends AbstractModel {
                 this.SignatureIds[i] = new String(source.SignatureIds[i]);
             }
         }
+        if (source.TypeIds != null) {
+            this.TypeIds = new String[source.TypeIds.length];
+            for (int i = 0; i < source.TypeIds.length; i++) {
+                this.TypeIds[i] = new String(source.TypeIds[i]);
+            }
+        }
+        if (source.Mode != null) {
+            this.Mode = new Long(source.Mode);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
     }
 
 
@@ -206,6 +287,9 @@ public class ModifyAttackWhiteRuleRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Rules.", this.Rules);
         this.setParamSimple(map, prefix + "SignatureId", this.SignatureId);
         this.setParamArraySimple(map, prefix + "SignatureIds.", this.SignatureIds);
+        this.setParamArraySimple(map, prefix + "TypeIds.", this.TypeIds);
+        this.setParamSimple(map, prefix + "Mode", this.Mode);
+        this.setParamSimple(map, prefix + "Name", this.Name);
 
     }
 }

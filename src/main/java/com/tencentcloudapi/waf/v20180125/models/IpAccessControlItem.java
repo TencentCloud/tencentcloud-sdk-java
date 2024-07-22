@@ -107,6 +107,30 @@ public class IpAccessControlItem extends AbstractModel {
     private Long CreateTime;
 
     /**
+    * 定时任务类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("JobType")
+    @Expose
+    private String JobType;
+
+    /**
+    * 周期任务类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CronType")
+    @Expose
+    private String CronType;
+
+    /**
+    * 定时任务配置详情
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("JobDateTime")
+    @Expose
+    private JobDateTime JobDateTime;
+
+    /**
      * Get mongo表自增Id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Id mongo表自增Id
@@ -306,6 +330,66 @@ public class IpAccessControlItem extends AbstractModel {
         this.CreateTime = CreateTime;
     }
 
+    /**
+     * Get 定时任务类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return JobType 定时任务类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getJobType() {
+        return this.JobType;
+    }
+
+    /**
+     * Set 定时任务类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param JobType 定时任务类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setJobType(String JobType) {
+        this.JobType = JobType;
+    }
+
+    /**
+     * Get 周期任务类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CronType 周期任务类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCronType() {
+        return this.CronType;
+    }
+
+    /**
+     * Set 周期任务类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CronType 周期任务类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCronType(String CronType) {
+        this.CronType = CronType;
+    }
+
+    /**
+     * Get 定时任务配置详情
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return JobDateTime 定时任务配置详情
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public JobDateTime getJobDateTime() {
+        return this.JobDateTime;
+    }
+
+    /**
+     * Set 定时任务配置详情
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param JobDateTime 定时任务配置详情
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setJobDateTime(JobDateTime JobDateTime) {
+        this.JobDateTime = JobDateTime;
+    }
+
     public IpAccessControlItem() {
     }
 
@@ -350,6 +434,15 @@ public class IpAccessControlItem extends AbstractModel {
         if (source.CreateTime != null) {
             this.CreateTime = new Long(source.CreateTime);
         }
+        if (source.JobType != null) {
+            this.JobType = new String(source.JobType);
+        }
+        if (source.CronType != null) {
+            this.CronType = new String(source.CronType);
+        }
+        if (source.JobDateTime != null) {
+            this.JobDateTime = new JobDateTime(source.JobDateTime);
+        }
     }
 
 
@@ -368,6 +461,9 @@ public class IpAccessControlItem extends AbstractModel {
         this.setParamSimple(map, prefix + "RuleId", this.RuleId);
         this.setParamArraySimple(map, prefix + "IpList.", this.IpList);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "JobType", this.JobType);
+        this.setParamSimple(map, prefix + "CronType", this.CronType);
+        this.setParamObj(map, prefix + "JobDateTime.", this.JobDateTime);
 
     }
 }

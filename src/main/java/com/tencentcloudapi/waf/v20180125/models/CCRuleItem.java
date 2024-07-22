@@ -109,6 +109,46 @@ public class CCRuleItem extends AbstractModel {
     private String OptionsArr;
 
     /**
+    * url长度
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Length")
+    @Expose
+    private Long Length;
+
+    /**
+    * 规则ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RuleId")
+    @Expose
+    private Long RuleId;
+
+    /**
+    * 事件id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EventId")
+    @Expose
+    private String EventId;
+
+    /**
+    * 关联的Session规则
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SessionApplied")
+    @Expose
+    private Long [] SessionApplied;
+
+    /**
+    * 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private Long CreateTime;
+
+    /**
      * Get 动作 
      * @return ActionType 动作
      */
@@ -304,6 +344,106 @@ public class CCRuleItem extends AbstractModel {
         this.OptionsArr = OptionsArr;
     }
 
+    /**
+     * Get url长度
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Length url长度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getLength() {
+        return this.Length;
+    }
+
+    /**
+     * Set url长度
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Length url长度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLength(Long Length) {
+        this.Length = Length;
+    }
+
+    /**
+     * Get 规则ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RuleId 规则ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getRuleId() {
+        return this.RuleId;
+    }
+
+    /**
+     * Set 规则ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RuleId 规则ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRuleId(Long RuleId) {
+        this.RuleId = RuleId;
+    }
+
+    /**
+     * Get 事件id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EventId 事件id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getEventId() {
+        return this.EventId;
+    }
+
+    /**
+     * Set 事件id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EventId 事件id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEventId(String EventId) {
+        this.EventId = EventId;
+    }
+
+    /**
+     * Get 关联的Session规则
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SessionApplied 关联的Session规则
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long [] getSessionApplied() {
+        return this.SessionApplied;
+    }
+
+    /**
+     * Set 关联的Session规则
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SessionApplied 关联的Session规则
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSessionApplied(Long [] SessionApplied) {
+        this.SessionApplied = SessionApplied;
+    }
+
+    /**
+     * Get 创建时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CreateTime 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CreateTime 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCreateTime(Long CreateTime) {
+        this.CreateTime = CreateTime;
+    }
+
     public CCRuleItem() {
     }
 
@@ -348,6 +488,24 @@ public class CCRuleItem extends AbstractModel {
         if (source.OptionsArr != null) {
             this.OptionsArr = new String(source.OptionsArr);
         }
+        if (source.Length != null) {
+            this.Length = new Long(source.Length);
+        }
+        if (source.RuleId != null) {
+            this.RuleId = new Long(source.RuleId);
+        }
+        if (source.EventId != null) {
+            this.EventId = new String(source.EventId);
+        }
+        if (source.SessionApplied != null) {
+            this.SessionApplied = new Long[source.SessionApplied.length];
+            for (int i = 0; i < source.SessionApplied.length; i++) {
+                this.SessionApplied[i] = new Long(source.SessionApplied[i]);
+            }
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new Long(source.CreateTime);
+        }
     }
 
 
@@ -367,6 +525,11 @@ public class CCRuleItem extends AbstractModel {
         this.setParamSimple(map, prefix + "Url", this.Url);
         this.setParamSimple(map, prefix + "ValidTime", this.ValidTime);
         this.setParamSimple(map, prefix + "OptionsArr", this.OptionsArr);
+        this.setParamSimple(map, prefix + "Length", this.Length);
+        this.setParamSimple(map, prefix + "RuleId", this.RuleId);
+        this.setParamSimple(map, prefix + "EventId", this.EventId);
+        this.setParamArraySimple(map, prefix + "SessionApplied.", this.SessionApplied);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
 
     }
 }

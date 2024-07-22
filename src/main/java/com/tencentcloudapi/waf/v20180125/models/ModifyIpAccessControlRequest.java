@@ -88,6 +88,20 @@ public class ModifyIpAccessControlRequest extends AbstractModel {
     private String Note;
 
     /**
+    * 定时配置类型
+    */
+    @SerializedName("JobType")
+    @Expose
+    private String JobType;
+
+    /**
+    * 定时配置详情
+    */
+    @SerializedName("JobDateTime")
+    @Expose
+    private JobDateTime JobDateTime;
+
+    /**
      * Get 具体域名如：test.qcloudwaf.com
 全局域名为：global 
      * @return Domain 具体域名如：test.qcloudwaf.com
@@ -235,6 +249,38 @@ public class ModifyIpAccessControlRequest extends AbstractModel {
         this.Note = Note;
     }
 
+    /**
+     * Get 定时配置类型 
+     * @return JobType 定时配置类型
+     */
+    public String getJobType() {
+        return this.JobType;
+    }
+
+    /**
+     * Set 定时配置类型
+     * @param JobType 定时配置类型
+     */
+    public void setJobType(String JobType) {
+        this.JobType = JobType;
+    }
+
+    /**
+     * Get 定时配置详情 
+     * @return JobDateTime 定时配置详情
+     */
+    public JobDateTime getJobDateTime() {
+        return this.JobDateTime;
+    }
+
+    /**
+     * Set 定时配置详情
+     * @param JobDateTime 定时配置详情
+     */
+    public void setJobDateTime(JobDateTime JobDateTime) {
+        this.JobDateTime = JobDateTime;
+    }
+
     public ModifyIpAccessControlRequest() {
     }
 
@@ -273,6 +319,12 @@ public class ModifyIpAccessControlRequest extends AbstractModel {
         if (source.Note != null) {
             this.Note = new String(source.Note);
         }
+        if (source.JobType != null) {
+            this.JobType = new String(source.JobType);
+        }
+        if (source.JobDateTime != null) {
+            this.JobDateTime = new JobDateTime(source.JobDateTime);
+        }
     }
 
 
@@ -289,6 +341,8 @@ public class ModifyIpAccessControlRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Edition", this.Edition);
         this.setParamSimple(map, prefix + "SourceType", this.SourceType);
         this.setParamSimple(map, prefix + "Note", this.Note);
+        this.setParamSimple(map, prefix + "JobType", this.JobType);
+        this.setParamObj(map, prefix + "JobDateTime.", this.JobDateTime);
 
     }
 }

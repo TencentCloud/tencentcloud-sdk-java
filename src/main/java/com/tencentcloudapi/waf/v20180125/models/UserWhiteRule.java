@@ -52,6 +52,14 @@ public class UserWhiteRule extends AbstractModel {
     private String MatchField;
 
     /**
+    * 匹配参数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MatchParams")
+    @Expose
+    private String MatchParams;
+
+    /**
     * 匹配方法
     */
     @SerializedName("MatchMethod")
@@ -78,6 +86,62 @@ public class UserWhiteRule extends AbstractModel {
     @SerializedName("ModifyTime")
     @Expose
     private String ModifyTime;
+
+    /**
+    * 规则ID列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SignatureIds")
+    @Expose
+    private String [] SignatureIds;
+
+    /**
+    * 大类规则ID列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TypeIds")
+    @Expose
+    private String [] TypeIds;
+
+    /**
+    * 大类规则ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TypeId")
+    @Expose
+    private String TypeId;
+
+    /**
+    * 0:按照特定规则ID加白, 1:按照规则类型加白
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Mode")
+    @Expose
+    private Long Mode;
+
+    /**
+    * 规则名
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Name")
+    @Expose
+    private String Name;
+
+    /**
+    * 匹配规则列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MatchInfo")
+    @Expose
+    private UserWhiteRuleItem [] MatchInfo;
+
+    /**
+    * MatchInfo字符串
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MatchInfoStr")
+    @Expose
+    private String MatchInfoStr;
 
     /**
      * Get 白名单的id 
@@ -144,6 +208,26 @@ public class UserWhiteRule extends AbstractModel {
     }
 
     /**
+     * Get 匹配参数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MatchParams 匹配参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getMatchParams() {
+        return this.MatchParams;
+    }
+
+    /**
+     * Set 匹配参数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MatchParams 匹配参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMatchParams(String MatchParams) {
+        this.MatchParams = MatchParams;
+    }
+
+    /**
      * Get 匹配方法 
      * @return MatchMethod 匹配方法
      */
@@ -207,6 +291,146 @@ public class UserWhiteRule extends AbstractModel {
         this.ModifyTime = ModifyTime;
     }
 
+    /**
+     * Get 规则ID列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SignatureIds 规则ID列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getSignatureIds() {
+        return this.SignatureIds;
+    }
+
+    /**
+     * Set 规则ID列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SignatureIds 规则ID列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSignatureIds(String [] SignatureIds) {
+        this.SignatureIds = SignatureIds;
+    }
+
+    /**
+     * Get 大类规则ID列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TypeIds 大类规则ID列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getTypeIds() {
+        return this.TypeIds;
+    }
+
+    /**
+     * Set 大类规则ID列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TypeIds 大类规则ID列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTypeIds(String [] TypeIds) {
+        this.TypeIds = TypeIds;
+    }
+
+    /**
+     * Get 大类规则ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TypeId 大类规则ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTypeId() {
+        return this.TypeId;
+    }
+
+    /**
+     * Set 大类规则ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TypeId 大类规则ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTypeId(String TypeId) {
+        this.TypeId = TypeId;
+    }
+
+    /**
+     * Get 0:按照特定规则ID加白, 1:按照规则类型加白
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Mode 0:按照特定规则ID加白, 1:按照规则类型加白
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getMode() {
+        return this.Mode;
+    }
+
+    /**
+     * Set 0:按照特定规则ID加白, 1:按照规则类型加白
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Mode 0:按照特定规则ID加白, 1:按照规则类型加白
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMode(Long Mode) {
+        this.Mode = Mode;
+    }
+
+    /**
+     * Get 规则名
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Name 规则名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getName() {
+        return this.Name;
+    }
+
+    /**
+     * Set 规则名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Name 规则名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setName(String Name) {
+        this.Name = Name;
+    }
+
+    /**
+     * Get 匹配规则列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MatchInfo 匹配规则列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public UserWhiteRuleItem [] getMatchInfo() {
+        return this.MatchInfo;
+    }
+
+    /**
+     * Set 匹配规则列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MatchInfo 匹配规则列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMatchInfo(UserWhiteRuleItem [] MatchInfo) {
+        this.MatchInfo = MatchInfo;
+    }
+
+    /**
+     * Get MatchInfo字符串
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MatchInfoStr MatchInfo字符串
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getMatchInfoStr() {
+        return this.MatchInfoStr;
+    }
+
+    /**
+     * Set MatchInfo字符串
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MatchInfoStr MatchInfo字符串
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMatchInfoStr(String MatchInfoStr) {
+        this.MatchInfoStr = MatchInfoStr;
+    }
+
     public UserWhiteRule() {
     }
 
@@ -227,6 +451,9 @@ public class UserWhiteRule extends AbstractModel {
         if (source.MatchField != null) {
             this.MatchField = new String(source.MatchField);
         }
+        if (source.MatchParams != null) {
+            this.MatchParams = new String(source.MatchParams);
+        }
         if (source.MatchMethod != null) {
             this.MatchMethod = new String(source.MatchMethod);
         }
@@ -239,6 +466,36 @@ public class UserWhiteRule extends AbstractModel {
         if (source.ModifyTime != null) {
             this.ModifyTime = new String(source.ModifyTime);
         }
+        if (source.SignatureIds != null) {
+            this.SignatureIds = new String[source.SignatureIds.length];
+            for (int i = 0; i < source.SignatureIds.length; i++) {
+                this.SignatureIds[i] = new String(source.SignatureIds[i]);
+            }
+        }
+        if (source.TypeIds != null) {
+            this.TypeIds = new String[source.TypeIds.length];
+            for (int i = 0; i < source.TypeIds.length; i++) {
+                this.TypeIds[i] = new String(source.TypeIds[i]);
+            }
+        }
+        if (source.TypeId != null) {
+            this.TypeId = new String(source.TypeId);
+        }
+        if (source.Mode != null) {
+            this.Mode = new Long(source.Mode);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.MatchInfo != null) {
+            this.MatchInfo = new UserWhiteRuleItem[source.MatchInfo.length];
+            for (int i = 0; i < source.MatchInfo.length; i++) {
+                this.MatchInfo[i] = new UserWhiteRuleItem(source.MatchInfo[i]);
+            }
+        }
+        if (source.MatchInfoStr != null) {
+            this.MatchInfoStr = new String(source.MatchInfoStr);
+        }
     }
 
 
@@ -250,10 +507,18 @@ public class UserWhiteRule extends AbstractModel {
         this.setParamSimple(map, prefix + "SignatureId", this.SignatureId);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "MatchField", this.MatchField);
+        this.setParamSimple(map, prefix + "MatchParams", this.MatchParams);
         this.setParamSimple(map, prefix + "MatchMethod", this.MatchMethod);
         this.setParamSimple(map, prefix + "MatchContent", this.MatchContent);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
+        this.setParamArraySimple(map, prefix + "SignatureIds.", this.SignatureIds);
+        this.setParamArraySimple(map, prefix + "TypeIds.", this.TypeIds);
+        this.setParamSimple(map, prefix + "TypeId", this.TypeId);
+        this.setParamSimple(map, prefix + "Mode", this.Mode);
+        this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamArrayObj(map, prefix + "MatchInfo.", this.MatchInfo);
+        this.setParamSimple(map, prefix + "MatchInfoStr", this.MatchInfoStr);
 
     }
 }

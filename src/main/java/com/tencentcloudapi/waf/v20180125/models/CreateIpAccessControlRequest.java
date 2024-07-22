@@ -67,7 +67,7 @@ public class CreateIpAccessControlRequest extends AbstractModel {
     private String Edition;
 
     /**
-    * 可选值为：batch（批量添加）、bot、cc、custom（非批量添加时的默认值）
+    * 可选值为：batch（批量添加）、bot（BOT流量分析中的BOT详情列表中添加时）、cc（在攻击日志列表中对攻击类型为CC的IP添加时）、custom（非批量添加时的默认值）
     */
     @SerializedName("SourceType")
     @Expose
@@ -79,6 +79,20 @@ public class CreateIpAccessControlRequest extends AbstractModel {
     @SerializedName("Note")
     @Expose
     private String Note;
+
+    /**
+    * 定时配置类型
+    */
+    @SerializedName("JobType")
+    @Expose
+    private String JobType;
+
+    /**
+    * 定时配置详情
+    */
+    @SerializedName("JobDateTime")
+    @Expose
+    private JobDateTime JobDateTime;
 
     /**
      * Get 具体域名如：test.qcloudwaf.com
@@ -181,16 +195,16 @@ public class CreateIpAccessControlRequest extends AbstractModel {
     }
 
     /**
-     * Get 可选值为：batch（批量添加）、bot、cc、custom（非批量添加时的默认值） 
-     * @return SourceType 可选值为：batch（批量添加）、bot、cc、custom（非批量添加时的默认值）
+     * Get 可选值为：batch（批量添加）、bot（BOT流量分析中的BOT详情列表中添加时）、cc（在攻击日志列表中对攻击类型为CC的IP添加时）、custom（非批量添加时的默认值） 
+     * @return SourceType 可选值为：batch（批量添加）、bot（BOT流量分析中的BOT详情列表中添加时）、cc（在攻击日志列表中对攻击类型为CC的IP添加时）、custom（非批量添加时的默认值）
      */
     public String getSourceType() {
         return this.SourceType;
     }
 
     /**
-     * Set 可选值为：batch（批量添加）、bot、cc、custom（非批量添加时的默认值）
-     * @param SourceType 可选值为：batch（批量添加）、bot、cc、custom（非批量添加时的默认值）
+     * Set 可选值为：batch（批量添加）、bot（BOT流量分析中的BOT详情列表中添加时）、cc（在攻击日志列表中对攻击类型为CC的IP添加时）、custom（非批量添加时的默认值）
+     * @param SourceType 可选值为：batch（批量添加）、bot（BOT流量分析中的BOT详情列表中添加时）、cc（在攻击日志列表中对攻击类型为CC的IP添加时）、custom（非批量添加时的默认值）
      */
     public void setSourceType(String SourceType) {
         this.SourceType = SourceType;
@@ -210,6 +224,38 @@ public class CreateIpAccessControlRequest extends AbstractModel {
      */
     public void setNote(String Note) {
         this.Note = Note;
+    }
+
+    /**
+     * Get 定时配置类型 
+     * @return JobType 定时配置类型
+     */
+    public String getJobType() {
+        return this.JobType;
+    }
+
+    /**
+     * Set 定时配置类型
+     * @param JobType 定时配置类型
+     */
+    public void setJobType(String JobType) {
+        this.JobType = JobType;
+    }
+
+    /**
+     * Get 定时配置详情 
+     * @return JobDateTime 定时配置详情
+     */
+    public JobDateTime getJobDateTime() {
+        return this.JobDateTime;
+    }
+
+    /**
+     * Set 定时配置详情
+     * @param JobDateTime 定时配置详情
+     */
+    public void setJobDateTime(JobDateTime JobDateTime) {
+        this.JobDateTime = JobDateTime;
     }
 
     public CreateIpAccessControlRequest() {
@@ -247,6 +293,12 @@ public class CreateIpAccessControlRequest extends AbstractModel {
         if (source.Note != null) {
             this.Note = new String(source.Note);
         }
+        if (source.JobType != null) {
+            this.JobType = new String(source.JobType);
+        }
+        if (source.JobDateTime != null) {
+            this.JobDateTime = new JobDateTime(source.JobDateTime);
+        }
     }
 
 
@@ -262,6 +314,8 @@ public class CreateIpAccessControlRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Edition", this.Edition);
         this.setParamSimple(map, prefix + "SourceType", this.SourceType);
         this.setParamSimple(map, prefix + "Note", this.Note);
+        this.setParamSimple(map, prefix + "JobType", this.JobType);
+        this.setParamObj(map, prefix + "JobDateTime.", this.JobDateTime);
 
     }
 }

@@ -712,7 +712,7 @@ public class TcrClient extends AbstractClient{
     }
 
     /**
-     *查询所有实例命名空间列表
+     *查询所有有实例命名空间列表
      * @param req DescribeInstanceAllNamespacesRequest
      * @return DescribeInstanceAllNamespacesResponse
      * @throws TencentCloudSDKException
@@ -943,7 +943,7 @@ public class TcrClient extends AbstractClient{
     }
 
     /**
-     *查询版本保留规则
+     *查询镜像版本保留规则
      * @param req DescribeTagRetentionRulesRequest
      * @return DescribeTagRetentionRulesResponse
      * @throws TencentCloudSDKException

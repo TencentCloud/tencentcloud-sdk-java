@@ -94,7 +94,7 @@ public class InstanceDetail extends AbstractModel {
     private String SubnetId;
 
     /**
-    * 实例状态，可能的返回值：0-待初始化，1-流程处理中，2-运行中，-2-实例已过期。
+    * 实例状态，可能的返回值：0-创建中，1-流程处理中，2-运行中，-2-实例已过期。
     */
     @SerializedName("Status")
     @Expose
@@ -522,16 +522,16 @@ public class InstanceDetail extends AbstractModel {
     }
 
     /**
-     * Get 实例状态，可能的返回值：0-待初始化，1-流程处理中，2-运行中，-2-实例已过期。 
-     * @return Status 实例状态，可能的返回值：0-待初始化，1-流程处理中，2-运行中，-2-实例已过期。
+     * Get 实例状态，可能的返回值：0-创建中，1-流程处理中，2-运行中，-2-实例已过期。 
+     * @return Status 实例状态，可能的返回值：0-创建中，1-流程处理中，2-运行中，-2-实例已过期。
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 实例状态，可能的返回值：0-待初始化，1-流程处理中，2-运行中，-2-实例已过期。
-     * @param Status 实例状态，可能的返回值：0-待初始化，1-流程处理中，2-运行中，-2-实例已过期。
+     * Set 实例状态，可能的返回值：0-创建中，1-流程处理中，2-运行中，-2-实例已过期。
+     * @param Status 实例状态，可能的返回值：0-创建中，1-流程处理中，2-运行中，-2-实例已过期。
      */
     public void setStatus(Long Status) {
         this.Status = Status;

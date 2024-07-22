@@ -42,6 +42,16 @@ UNIQUE，入参所填的 InstanceName 相当于实例名前缀，AS 和 CVM 会�
     private String InstanceNameStyle;
 
     /**
+    * 云服务器实例名后缀。字符长度为[1,105]，且与 InstanceName 的长度和不能超过107。
+
+假设后缀名称为 suffix，原实例名为 test.0，最终实例名为 test.0.suffix。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InstanceNameSuffix")
+    @Expose
+    private String InstanceNameSuffix;
+
+    /**
      * Get 云服务器的实例名。字符长度为[2, 108]。 
      * @return InstanceName 云服务器的实例名。字符长度为[2, 108]。
      */
@@ -89,6 +99,34 @@ UNIQUE，入参所填的 InstanceName 相当于实例名前缀，AS 和 CVM 会�
         this.InstanceNameStyle = InstanceNameStyle;
     }
 
+    /**
+     * Get 云服务器实例名后缀。字符长度为[1,105]，且与 InstanceName 的长度和不能超过107。
+
+假设后缀名称为 suffix，原实例名为 test.0，最终实例名为 test.0.suffix。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InstanceNameSuffix 云服务器实例名后缀。字符长度为[1,105]，且与 InstanceName 的长度和不能超过107。
+
+假设后缀名称为 suffix，原实例名为 test.0，最终实例名为 test.0.suffix。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getInstanceNameSuffix() {
+        return this.InstanceNameSuffix;
+    }
+
+    /**
+     * Set 云服务器实例名后缀。字符长度为[1,105]，且与 InstanceName 的长度和不能超过107。
+
+假设后缀名称为 suffix，原实例名为 test.0，最终实例名为 test.0.suffix。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstanceNameSuffix 云服务器实例名后缀。字符长度为[1,105]，且与 InstanceName 的长度和不能超过107。
+
+假设后缀名称为 suffix，原实例名为 test.0，最终实例名为 test.0.suffix。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInstanceNameSuffix(String InstanceNameSuffix) {
+        this.InstanceNameSuffix = InstanceNameSuffix;
+    }
+
     public InstanceNameSettings() {
     }
 
@@ -103,6 +141,9 @@ UNIQUE，入参所填的 InstanceName 相当于实例名前缀，AS 和 CVM 会�
         if (source.InstanceNameStyle != null) {
             this.InstanceNameStyle = new String(source.InstanceNameStyle);
         }
+        if (source.InstanceNameSuffix != null) {
+            this.InstanceNameSuffix = new String(source.InstanceNameSuffix);
+        }
     }
 
 
@@ -112,6 +153,7 @@ UNIQUE，入参所填的 InstanceName 相当于实例名前缀，AS 和 CVM 会�
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);
         this.setParamSimple(map, prefix + "InstanceNameStyle", this.InstanceNameStyle);
+        this.setParamSimple(map, prefix + "InstanceNameSuffix", this.InstanceNameSuffix);
 
     }
 }

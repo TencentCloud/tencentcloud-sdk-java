@@ -45,6 +45,14 @@ public class UserWhiteRuleItem extends AbstractModel {
     private String MatchContent;
 
     /**
+    * 匹配参数名
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MatchParams")
+    @Expose
+    private String MatchParams;
+
+    /**
      * Get 匹配域 
      * @return MatchField 匹配域
      */
@@ -92,6 +100,26 @@ public class UserWhiteRuleItem extends AbstractModel {
         this.MatchContent = MatchContent;
     }
 
+    /**
+     * Get 匹配参数名
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MatchParams 匹配参数名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getMatchParams() {
+        return this.MatchParams;
+    }
+
+    /**
+     * Set 匹配参数名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MatchParams 匹配参数名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMatchParams(String MatchParams) {
+        this.MatchParams = MatchParams;
+    }
+
     public UserWhiteRuleItem() {
     }
 
@@ -109,6 +137,9 @@ public class UserWhiteRuleItem extends AbstractModel {
         if (source.MatchContent != null) {
             this.MatchContent = new String(source.MatchContent);
         }
+        if (source.MatchParams != null) {
+            this.MatchParams = new String(source.MatchParams);
+        }
     }
 
 
@@ -119,6 +150,7 @@ public class UserWhiteRuleItem extends AbstractModel {
         this.setParamSimple(map, prefix + "MatchField", this.MatchField);
         this.setParamSimple(map, prefix + "MatchMethod", this.MatchMethod);
         this.setParamSimple(map, prefix + "MatchContent", this.MatchContent);
+        this.setParamSimple(map, prefix + "MatchParams", this.MatchParams);
 
     }
 }

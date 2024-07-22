@@ -41,7 +41,8 @@ public class ListTasksRequest extends AbstractModel {
     * 默认不根据该字段进行筛选，否则根据设备操作类型进行筛选，目前值有：BatchDeleteUserDevice，BatchDisableDevice，BatchEnableDevice，
 BatchUpgradeDevice，
 BatchResetDevice,
-BatchRebootDevice
+BatchRebootDevice,
+BatchRefreshDeviceChannel
     */
     @SerializedName("Operation")
     @Expose
@@ -104,11 +105,13 @@ BatchRebootDevice
      * Get 默认不根据该字段进行筛选，否则根据设备操作类型进行筛选，目前值有：BatchDeleteUserDevice，BatchDisableDevice，BatchEnableDevice，
 BatchUpgradeDevice，
 BatchResetDevice,
-BatchRebootDevice 
+BatchRebootDevice,
+BatchRefreshDeviceChannel 
      * @return Operation 默认不根据该字段进行筛选，否则根据设备操作类型进行筛选，目前值有：BatchDeleteUserDevice，BatchDisableDevice，BatchEnableDevice，
 BatchUpgradeDevice，
 BatchResetDevice,
-BatchRebootDevice
+BatchRebootDevice,
+BatchRefreshDeviceChannel
      */
     public String getOperation() {
         return this.Operation;
@@ -118,11 +121,13 @@ BatchRebootDevice
      * Set 默认不根据该字段进行筛选，否则根据设备操作类型进行筛选，目前值有：BatchDeleteUserDevice，BatchDisableDevice，BatchEnableDevice，
 BatchUpgradeDevice，
 BatchResetDevice,
-BatchRebootDevice
+BatchRebootDevice,
+BatchRefreshDeviceChannel
      * @param Operation 默认不根据该字段进行筛选，否则根据设备操作类型进行筛选，目前值有：BatchDeleteUserDevice，BatchDisableDevice，BatchEnableDevice，
 BatchUpgradeDevice，
 BatchResetDevice,
-BatchRebootDevice
+BatchRebootDevice,
+BatchRefreshDeviceChannel
      */
     public void setOperation(String Operation) {
         this.Operation = Operation;

@@ -150,6 +150,13 @@ public class UpsertCCRuleRequest extends AbstractModel {
     private Long CreateTime;
 
     /**
+    * url长度
+    */
+    @SerializedName("Length")
+    @Expose
+    private Long Length;
+
+    /**
      * Get 域名 
      * @return Domain 域名
      */
@@ -437,6 +444,22 @@ public class UpsertCCRuleRequest extends AbstractModel {
         this.CreateTime = CreateTime;
     }
 
+    /**
+     * Get url长度 
+     * @return Length url长度
+     */
+    public Long getLength() {
+        return this.Length;
+    }
+
+    /**
+     * Set url长度
+     * @param Length url长度
+     */
+    public void setLength(Long Length) {
+        this.Length = Length;
+    }
+
     public UpsertCCRuleRequest() {
     }
 
@@ -502,6 +525,9 @@ public class UpsertCCRuleRequest extends AbstractModel {
         if (source.CreateTime != null) {
             this.CreateTime = new Long(source.CreateTime);
         }
+        if (source.Length != null) {
+            this.Length = new Long(source.Length);
+        }
     }
 
 
@@ -527,6 +553,7 @@ public class UpsertCCRuleRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "SessionApplied.", this.SessionApplied);
         this.setParamSimple(map, prefix + "RuleId", this.RuleId);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "Length", this.Length);
 
     }
 }

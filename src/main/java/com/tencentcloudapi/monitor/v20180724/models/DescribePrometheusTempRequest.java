@@ -24,11 +24,15 @@ import java.util.HashMap;
 public class DescribePrometheusTempRequest extends AbstractModel {
 
     /**
-    * 模糊过滤条件，支持
-Level 按模板级别过滤
-Name 按名称过滤
-Describe 按描述过滤
-ID 按templateId过滤
+    * 仅支持按Name, Values字段过滤:
+* Name = Name
+  按照给定的模板名称列表匹配
+* Name = ID
+  按照给定的模板ID列表匹配
+* Name = Describe
+  按照给定的模板描述列表匹配
+* Name = Level
+  按照给定的模板维度(instance, cluster)列表匹配
     */
     @SerializedName("Filters")
     @Expose
@@ -42,39 +46,55 @@ ID 按templateId过滤
     private Long Offset;
 
     /**
-    * 总数限制
+    * 分页返回数量，默认为20，最大值为100
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get 模糊过滤条件，支持
-Level 按模板级别过滤
-Name 按名称过滤
-Describe 按描述过滤
-ID 按templateId过滤 
-     * @return Filters 模糊过滤条件，支持
-Level 按模板级别过滤
-Name 按名称过滤
-Describe 按描述过滤
-ID 按templateId过滤
+     * Get 仅支持按Name, Values字段过滤:
+* Name = Name
+  按照给定的模板名称列表匹配
+* Name = ID
+  按照给定的模板ID列表匹配
+* Name = Describe
+  按照给定的模板描述列表匹配
+* Name = Level
+  按照给定的模板维度(instance, cluster)列表匹配 
+     * @return Filters 仅支持按Name, Values字段过滤:
+* Name = Name
+  按照给定的模板名称列表匹配
+* Name = ID
+  按照给定的模板ID列表匹配
+* Name = Describe
+  按照给定的模板描述列表匹配
+* Name = Level
+  按照给定的模板维度(instance, cluster)列表匹配
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 模糊过滤条件，支持
-Level 按模板级别过滤
-Name 按名称过滤
-Describe 按描述过滤
-ID 按templateId过滤
-     * @param Filters 模糊过滤条件，支持
-Level 按模板级别过滤
-Name 按名称过滤
-Describe 按描述过滤
-ID 按templateId过滤
+     * Set 仅支持按Name, Values字段过滤:
+* Name = Name
+  按照给定的模板名称列表匹配
+* Name = ID
+  按照给定的模板ID列表匹配
+* Name = Describe
+  按照给定的模板描述列表匹配
+* Name = Level
+  按照给定的模板维度(instance, cluster)列表匹配
+     * @param Filters 仅支持按Name, Values字段过滤:
+* Name = Name
+  按照给定的模板名称列表匹配
+* Name = ID
+  按照给定的模板ID列表匹配
+* Name = Describe
+  按照给定的模板描述列表匹配
+* Name = Level
+  按照给定的模板维度(instance, cluster)列表匹配
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
@@ -97,16 +117,16 @@ ID 按templateId过滤
     }
 
     /**
-     * Get 总数限制 
-     * @return Limit 总数限制
+     * Get 分页返回数量，默认为20，最大值为100 
+     * @return Limit 分页返回数量，默认为20，最大值为100
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 总数限制
-     * @param Limit 总数限制
+     * Set 分页返回数量，默认为20，最大值为100
+     * @param Limit 分页返回数量，默认为20，最大值为100
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

@@ -45,7 +45,7 @@ public class DescribeAttackWhiteRuleRequest extends AbstractModel {
     private Long Limit;
 
     /**
-    * 排序字段，支持user_id, signature_id, modify_time
+    * 排序的字段，支持user_id, signature_id, modify_time
     */
     @SerializedName("By")
     @Expose
@@ -114,16 +114,16 @@ public class DescribeAttackWhiteRuleRequest extends AbstractModel {
     }
 
     /**
-     * Get 排序字段，支持user_id, signature_id, modify_time 
-     * @return By 排序字段，支持user_id, signature_id, modify_time
+     * Get 排序的字段，支持user_id, signature_id, modify_time 
+     * @return By 排序的字段，支持user_id, signature_id, modify_time
      */
     public String getBy() {
         return this.By;
     }
 
     /**
-     * Set 排序字段，支持user_id, signature_id, modify_time
-     * @param By 排序字段，支持user_id, signature_id, modify_time
+     * Set 排序的字段，支持user_id, signature_id, modify_time
+     * @param By 排序的字段，支持user_id, signature_id, modify_time
      */
     public void setBy(String By) {
         this.By = By;

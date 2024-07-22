@@ -29,7 +29,7 @@ public class SearchResult extends AbstractModel {
     */
     @SerializedName("Index")
     @Expose
-    private String Index;
+    private Long Index;
 
     /**
     * 搜索引文标题
@@ -53,7 +53,7 @@ public class SearchResult extends AbstractModel {
      * @return Index 搜索引文序号
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getIndex() {
+    public Long getIndex() {
         return this.Index;
     }
 
@@ -63,7 +63,7 @@ public class SearchResult extends AbstractModel {
      * @param Index 搜索引文序号
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setIndex(String Index) {
+    public void setIndex(Long Index) {
         this.Index = Index;
     }
 
@@ -116,7 +116,7 @@ public class SearchResult extends AbstractModel {
      */
     public SearchResult(SearchResult source) {
         if (source.Index != null) {
-            this.Index = new String(source.Index);
+            this.Index = new Long(source.Index);
         }
         if (source.Title != null) {
             this.Title = new String(source.Title);

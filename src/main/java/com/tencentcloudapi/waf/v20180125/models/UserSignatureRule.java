@@ -101,6 +101,14 @@ public class UserSignatureRule extends AbstractModel {
     private Long Reason;
 
     /**
+    * 1: 高危 2:中危 3:低危
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RiskLevel")
+    @Expose
+    private Long RiskLevel;
+
+    /**
      * Get 特征ID 
      * @return ID 特征ID
      */
@@ -276,6 +284,26 @@ public class UserSignatureRule extends AbstractModel {
         this.Reason = Reason;
     }
 
+    /**
+     * Get 1: 高危 2:中危 3:低危
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RiskLevel 1: 高危 2:中危 3:低危
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getRiskLevel() {
+        return this.RiskLevel;
+    }
+
+    /**
+     * Set 1: 高危 2:中危 3:低危
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RiskLevel 1: 高危 2:中危 3:低危
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRiskLevel(Long RiskLevel) {
+        this.RiskLevel = RiskLevel;
+    }
+
     public UserSignatureRule() {
     }
 
@@ -317,6 +345,9 @@ public class UserSignatureRule extends AbstractModel {
         if (source.Reason != null) {
             this.Reason = new Long(source.Reason);
         }
+        if (source.RiskLevel != null) {
+            this.RiskLevel = new Long(source.RiskLevel);
+        }
     }
 
 
@@ -335,6 +366,7 @@ public class UserSignatureRule extends AbstractModel {
         this.setParamSimple(map, prefix + "SubClassName", this.SubClassName);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "Reason", this.Reason);
+        this.setParamSimple(map, prefix + "RiskLevel", this.RiskLevel);
 
     }
 }

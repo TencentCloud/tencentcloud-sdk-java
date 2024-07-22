@@ -80,7 +80,7 @@ public class DescribeIpAccessControlRequest extends AbstractModel {
     private Long OffSet;
 
     /**
-    * 每页返回的数量
+    * 每页返回的数量，默认为20
     */
     @SerializedName("Limit")
     @Expose
@@ -134,6 +134,13 @@ public class DescribeIpAccessControlRequest extends AbstractModel {
     @SerializedName("RuleId")
     @Expose
     private Long RuleId;
+
+    /**
+    * 定时任务类型筛选0 1 2 3 4
+    */
+    @SerializedName("TimerType")
+    @Expose
+    private Long TimerType;
 
     /**
      * Get 域名 
@@ -272,16 +279,16 @@ public class DescribeIpAccessControlRequest extends AbstractModel {
     }
 
     /**
-     * Get 每页返回的数量 
-     * @return Limit 每页返回的数量
+     * Get 每页返回的数量，默认为20 
+     * @return Limit 每页返回的数量，默认为20
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 每页返回的数量
-     * @param Limit 每页返回的数量
+     * Set 每页返回的数量，默认为20
+     * @param Limit 每页返回的数量，默认为20
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
@@ -399,6 +406,22 @@ public class DescribeIpAccessControlRequest extends AbstractModel {
         this.RuleId = RuleId;
     }
 
+    /**
+     * Get 定时任务类型筛选0 1 2 3 4 
+     * @return TimerType 定时任务类型筛选0 1 2 3 4
+     */
+    public Long getTimerType() {
+        return this.TimerType;
+    }
+
+    /**
+     * Set 定时任务类型筛选0 1 2 3 4
+     * @param TimerType 定时任务类型筛选0 1 2 3 4
+     */
+    public void setTimerType(Long TimerType) {
+        this.TimerType = TimerType;
+    }
+
     public DescribeIpAccessControlRequest() {
     }
 
@@ -455,6 +478,9 @@ public class DescribeIpAccessControlRequest extends AbstractModel {
         if (source.RuleId != null) {
             this.RuleId = new Long(source.RuleId);
         }
+        if (source.TimerType != null) {
+            this.TimerType = new Long(source.TimerType);
+        }
     }
 
 
@@ -478,6 +504,7 @@ public class DescribeIpAccessControlRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ValidTimeStampMin", this.ValidTimeStampMin);
         this.setParamSimple(map, prefix + "ValidTimeStampMax", this.ValidTimeStampMax);
         this.setParamSimple(map, prefix + "RuleId", this.RuleId);
+        this.setParamSimple(map, prefix + "TimerType", this.TimerType);
 
     }
 }

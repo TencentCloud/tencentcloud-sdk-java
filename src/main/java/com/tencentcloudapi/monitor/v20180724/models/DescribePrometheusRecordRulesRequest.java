@@ -24,92 +24,117 @@ import java.util.HashMap;
 public class DescribePrometheusRecordRulesRequest extends AbstractModel {
 
     /**
-    * 实例id
+    * 实例ID
+
+示例值：prom-343kafd34
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 分页
+    * 偏移量，默认为0。 示例值：1
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 分页
+    * 返回数量，默认为20，最大值为100。
+示例值：1
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 过滤
+    * 仅支持按Name, Values字段过滤:
+- Name = Name
+  按照给定的预聚合名称列表匹配
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-     * Get 实例id 
-     * @return InstanceId 实例id
+     * Get 实例ID
+
+示例值：prom-343kafd34 
+     * @return InstanceId 实例ID
+
+示例值：prom-343kafd34
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例id
-     * @param InstanceId 实例id
+     * Set 实例ID
+
+示例值：prom-343kafd34
+     * @param InstanceId 实例ID
+
+示例值：prom-343kafd34
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 分页 
-     * @return Offset 分页
+     * Get 偏移量，默认为0。 示例值：1 
+     * @return Offset 偏移量，默认为0。 示例值：1
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页
-     * @param Offset 分页
+     * Set 偏移量，默认为0。 示例值：1
+     * @param Offset 偏移量，默认为0。 示例值：1
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 分页 
-     * @return Limit 分页
+     * Get 返回数量，默认为20，最大值为100。
+示例值：1 
+     * @return Limit 返回数量，默认为20，最大值为100。
+示例值：1
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 分页
-     * @param Limit 分页
+     * Set 返回数量，默认为20，最大值为100。
+示例值：1
+     * @param Limit 返回数量，默认为20，最大值为100。
+示例值：1
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 过滤 
-     * @return Filters 过滤
+     * Get 仅支持按Name, Values字段过滤:
+- Name = Name
+  按照给定的预聚合名称列表匹配 
+     * @return Filters 仅支持按Name, Values字段过滤:
+- Name = Name
+  按照给定的预聚合名称列表匹配
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤
-     * @param Filters 过滤
+     * Set 仅支持按Name, Values字段过滤:
+- Name = Name
+  按照给定的预聚合名称列表匹配
+     * @param Filters 仅支持按Name, Values字段过滤:
+- Name = Name
+  按照给定的预聚合名称列表匹配
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

@@ -31,6 +31,13 @@ public class DeleteImageRequest extends AbstractModel {
     private String RegistryId;
 
     /**
+    * 命名空间名称
+    */
+    @SerializedName("NamespaceName")
+    @Expose
+    private String NamespaceName;
+
+    /**
     * 镜像仓库名称
     */
     @SerializedName("RepositoryName")
@@ -43,13 +50,6 @@ public class DeleteImageRequest extends AbstractModel {
     @SerializedName("ImageVersion")
     @Expose
     private String ImageVersion;
-
-    /**
-    * 命名空间名称
-    */
-    @SerializedName("NamespaceName")
-    @Expose
-    private String NamespaceName;
 
     /**
      * Get 实例Id 
@@ -65,6 +65,22 @@ public class DeleteImageRequest extends AbstractModel {
      */
     public void setRegistryId(String RegistryId) {
         this.RegistryId = RegistryId;
+    }
+
+    /**
+     * Get 命名空间名称 
+     * @return NamespaceName 命名空间名称
+     */
+    public String getNamespaceName() {
+        return this.NamespaceName;
+    }
+
+    /**
+     * Set 命名空间名称
+     * @param NamespaceName 命名空间名称
+     */
+    public void setNamespaceName(String NamespaceName) {
+        this.NamespaceName = NamespaceName;
     }
 
     /**
@@ -99,22 +115,6 @@ public class DeleteImageRequest extends AbstractModel {
         this.ImageVersion = ImageVersion;
     }
 
-    /**
-     * Get 命名空间名称 
-     * @return NamespaceName 命名空间名称
-     */
-    public String getNamespaceName() {
-        return this.NamespaceName;
-    }
-
-    /**
-     * Set 命名空间名称
-     * @param NamespaceName 命名空间名称
-     */
-    public void setNamespaceName(String NamespaceName) {
-        this.NamespaceName = NamespaceName;
-    }
-
     public DeleteImageRequest() {
     }
 
@@ -126,14 +126,14 @@ public class DeleteImageRequest extends AbstractModel {
         if (source.RegistryId != null) {
             this.RegistryId = new String(source.RegistryId);
         }
+        if (source.NamespaceName != null) {
+            this.NamespaceName = new String(source.NamespaceName);
+        }
         if (source.RepositoryName != null) {
             this.RepositoryName = new String(source.RepositoryName);
         }
         if (source.ImageVersion != null) {
             this.ImageVersion = new String(source.ImageVersion);
-        }
-        if (source.NamespaceName != null) {
-            this.NamespaceName = new String(source.NamespaceName);
         }
     }
 
@@ -143,9 +143,9 @@ public class DeleteImageRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RegistryId", this.RegistryId);
+        this.setParamSimple(map, prefix + "NamespaceName", this.NamespaceName);
         this.setParamSimple(map, prefix + "RepositoryName", this.RepositoryName);
         this.setParamSimple(map, prefix + "ImageVersion", this.ImageVersion);
-        this.setParamSimple(map, prefix + "NamespaceName", this.NamespaceName);
 
     }
 }

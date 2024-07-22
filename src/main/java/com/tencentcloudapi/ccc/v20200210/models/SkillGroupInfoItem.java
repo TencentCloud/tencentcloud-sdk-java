@@ -85,6 +85,14 @@ public class SkillGroupInfoItem extends AbstractModel {
     private Long SkillGroupType;
 
     /**
+    * 技能组内线号码
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Alias")
+    @Expose
+    private String Alias;
+
+    /**
      * Get 技能组ID 
      * @return SkillGroupId 技能组ID
      */
@@ -232,6 +240,26 @@ public class SkillGroupInfoItem extends AbstractModel {
         this.SkillGroupType = SkillGroupType;
     }
 
+    /**
+     * Get 技能组内线号码
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Alias 技能组内线号码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAlias() {
+        return this.Alias;
+    }
+
+    /**
+     * Set 技能组内线号码
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Alias 技能组内线号码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAlias(String Alias) {
+        this.Alias = Alias;
+    }
+
     public SkillGroupInfoItem() {
     }
 
@@ -264,6 +292,9 @@ public class SkillGroupInfoItem extends AbstractModel {
         if (source.SkillGroupType != null) {
             this.SkillGroupType = new Long(source.SkillGroupType);
         }
+        if (source.Alias != null) {
+            this.Alias = new String(source.Alias);
+        }
     }
 
 
@@ -279,6 +310,7 @@ public class SkillGroupInfoItem extends AbstractModel {
         this.setParamSimple(map, prefix + "MaxConcurrency", this.MaxConcurrency);
         this.setParamSimple(map, prefix + "LastModifyTimestamp", this.LastModifyTimestamp);
         this.setParamSimple(map, prefix + "SkillGroupType", this.SkillGroupType);
+        this.setParamSimple(map, prefix + "Alias", this.Alias);
 
     }
 }

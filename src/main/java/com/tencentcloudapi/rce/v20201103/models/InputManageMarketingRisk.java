@@ -192,6 +192,13 @@ public class InputManageMarketingRisk extends AbstractModel {
     private String Platform;
 
     /**
+    * 数据授权信息。
+    */
+    @SerializedName("DataAuthorization")
+    @Expose
+    private DataAuthorizationInfo DataAuthorization;
+
+    /**
      * Get 用户账号类型；默认开通QQOpenId、手机号MD5权限；如果需要使用微信OpenId入参，则需要"提交工单"或联系对接人进行资格审核，审核通过后方可正常使用微信开放账号。
 1：QQ开放账号
 2：微信开放账号
@@ -599,6 +606,22 @@ public class InputManageMarketingRisk extends AbstractModel {
         this.Platform = Platform;
     }
 
+    /**
+     * Get 数据授权信息。 
+     * @return DataAuthorization 数据授权信息。
+     */
+    public DataAuthorizationInfo getDataAuthorization() {
+        return this.DataAuthorization;
+    }
+
+    /**
+     * Set 数据授权信息。
+     * @param DataAuthorization 数据授权信息。
+     */
+    public void setDataAuthorization(DataAuthorizationInfo DataAuthorization) {
+        this.DataAuthorization = DataAuthorization;
+    }
+
     public InputManageMarketingRisk() {
     }
 
@@ -676,6 +699,9 @@ public class InputManageMarketingRisk extends AbstractModel {
         if (source.Platform != null) {
             this.Platform = new String(source.Platform);
         }
+        if (source.DataAuthorization != null) {
+            this.DataAuthorization = new DataAuthorizationInfo(source.DataAuthorization);
+        }
     }
 
 
@@ -705,6 +731,7 @@ public class InputManageMarketingRisk extends AbstractModel {
         this.setParamObj(map, prefix + "Sponsor.", this.Sponsor);
         this.setParamObj(map, prefix + "OnlineScam.", this.OnlineScam);
         this.setParamSimple(map, prefix + "Platform", this.Platform);
+        this.setParamObj(map, prefix + "DataAuthorization.", this.DataAuthorization);
 
     }
 }

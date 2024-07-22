@@ -38,7 +38,7 @@ public class DescribeIpHitItemsRequest extends AbstractModel {
     private Long Count;
 
     /**
-    * 类别
+    * 类别，ip封禁传值auto_deny
     */
     @SerializedName("Category")
     @Expose
@@ -154,16 +154,16 @@ public class DescribeIpHitItemsRequest extends AbstractModel {
     }
 
     /**
-     * Get 类别 
-     * @return Category 类别
+     * Get 类别，ip封禁传值auto_deny 
+     * @return Category 类别，ip封禁传值auto_deny
      */
     public String getCategory() {
         return this.Category;
     }
 
     /**
-     * Set 类别
-     * @param Category 类别
+     * Set 类别，ip封禁传值auto_deny
+     * @param Category 类别，ip封禁传值auto_deny
      */
     public void setCategory(String Category) {
         this.Category = Category;

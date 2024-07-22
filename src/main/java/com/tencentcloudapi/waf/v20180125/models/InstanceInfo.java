@@ -334,6 +334,14 @@ public class InstanceInfo extends AbstractModel {
     private String BillingItem;
 
     /**
+    * 实例延期释放标识
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FreeDelayFlag")
+    @Expose
+    private Long FreeDelayFlag;
+
+    /**
      * Get 实例唯一ID 
      * @return InstanceId 实例唯一ID
      */
@@ -1093,6 +1101,26 @@ public class InstanceInfo extends AbstractModel {
         this.BillingItem = BillingItem;
     }
 
+    /**
+     * Get 实例延期释放标识
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FreeDelayFlag 实例延期释放标识
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getFreeDelayFlag() {
+        return this.FreeDelayFlag;
+    }
+
+    /**
+     * Set 实例延期释放标识
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FreeDelayFlag 实例延期释放标识
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFreeDelayFlag(Long FreeDelayFlag) {
+        this.FreeDelayFlag = FreeDelayFlag;
+    }
+
     public InstanceInfo() {
     }
 
@@ -1221,6 +1249,9 @@ public class InstanceInfo extends AbstractModel {
         if (source.BillingItem != null) {
             this.BillingItem = new String(source.BillingItem);
         }
+        if (source.FreeDelayFlag != null) {
+            this.FreeDelayFlag = new Long(source.FreeDelayFlag);
+        }
     }
 
 
@@ -1268,6 +1299,7 @@ public class InstanceInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "LastQpsExceedTime", this.LastQpsExceedTime);
         this.setParamObj(map, prefix + "MiniExtendPkg.", this.MiniExtendPkg);
         this.setParamSimple(map, prefix + "BillingItem", this.BillingItem);
+        this.setParamSimple(map, prefix + "FreeDelayFlag", this.FreeDelayFlag);
 
     }
 }

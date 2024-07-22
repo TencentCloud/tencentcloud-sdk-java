@@ -83,6 +83,17 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
+     *此接口用于创建数据账号，返回的Oid为账号唯一标识。与数据库系统表pg_roles中记录的oid一致。
+     * @param req CreateAccountRequest
+     * @return CreateAccountResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAccountResponse CreateAccount(CreateAccountRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateAccount", CreateAccountResponse.class);
+    }
+
+    /**
      *本接口（CreateBaseBackup）用于创建实例的数据备份。
      * @param req CreateBaseBackupRequest
      * @return CreateBaseBackupResponse
@@ -184,6 +195,17 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
+     *此接口用于删除数据库账号，需要同时输入Oid与UserName，避免误删。
+     * @param req DeleteAccountRequest
+     * @return DeleteAccountResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAccountResponse DeleteAccount(DeleteAccountRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteAccount", DeleteAccountResponse.class);
+    }
+
+    /**
      *本接口（DeleteBaseBackup）用于删除实例指定数据备份。
      * @param req DeleteBaseBackupRequest
      * @return DeleteBaseBackupResponse
@@ -258,6 +280,17 @@ public class PostgresClient extends AbstractClient{
     public DeleteServerlessDBInstanceResponse DeleteServerlessDBInstance(DeleteServerlessDBInstanceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteServerlessDBInstance", DeleteServerlessDBInstanceResponse.class);
+    }
+
+    /**
+     *查询数据库账号对某数据库对象拥有的权限列表。
+     * @param req DescribeAccountPrivilegesRequest
+     * @return DescribeAccountPrivilegesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAccountPrivilegesResponse DescribeAccountPrivileges(DescribeAccountPrivilegesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAccountPrivileges", DescribeAccountPrivilegesResponse.class);
     }
 
     /**
@@ -480,6 +513,17 @@ public class PostgresClient extends AbstractClient{
     public DescribeDBXlogsResponse DescribeDBXlogs(DescribeDBXlogsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeDBXlogs", DescribeDBXlogsResponse.class);
+    }
+
+    /**
+     *本接口用于查询数据库对象列表。例如查询test数据库下的模式列表。
+     * @param req DescribeDatabaseObjectsRequest
+     * @return DescribeDatabaseObjectsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDatabaseObjectsResponse DescribeDatabaseObjects(DescribeDatabaseObjectsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDatabaseObjects", DescribeDatabaseObjectsResponse.class);
     }
 
     /**
@@ -722,6 +766,28 @@ public class PostgresClient extends AbstractClient{
     public IsolateDBInstancesResponse IsolateDBInstances(IsolateDBInstancesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "IsolateDBInstances", IsolateDBInstancesResponse.class);
+    }
+
+    /**
+     *此接口用于锁定数据库账号，锁定后账号当前连接会断开，并且无法建立新连接。
+     * @param req LockAccountRequest
+     * @return LockAccountResponse
+     * @throws TencentCloudSDKException
+     */
+    public LockAccountResponse LockAccount(LockAccountRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "LockAccount", LockAccountResponse.class);
+    }
+
+    /**
+     *修改某账号对某数据库对象的权限、修改账号类型。
+     * @param req ModifyAccountPrivilegesRequest
+     * @return ModifyAccountPrivilegesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAccountPrivilegesResponse ModifyAccountPrivileges(ModifyAccountPrivilegesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyAccountPrivileges", ModifyAccountPrivilegesResponse.class);
     }
 
     /**
@@ -1013,6 +1079,17 @@ public class PostgresClient extends AbstractClient{
     public SwitchDBInstancePrimaryResponse SwitchDBInstancePrimary(SwitchDBInstancePrimaryRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "SwitchDBInstancePrimary", SwitchDBInstancePrimaryResponse.class);
+    }
+
+    /**
+     *解除数据库账号的锁定，解锁后账号可以登陆数据库。
+     * @param req UnlockAccountRequest
+     * @return UnlockAccountResponse
+     * @throws TencentCloudSDKException
+     */
+    public UnlockAccountResponse UnlockAccount(UnlockAccountRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UnlockAccount", UnlockAccountResponse.class);
     }
 
     /**

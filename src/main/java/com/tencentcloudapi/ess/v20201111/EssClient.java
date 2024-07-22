@@ -857,6 +857,24 @@ p.s.
     }
 
     /**
+     *创建他方自动签授权链接，通过该链接可进入小程序进行合作方企业的自动签授权，若当前企业未开通企业自动签，通过该链接会先引导开通本企业自动签。
+该接口效果同控制台： 企业设置-> 扩展服务 -> 企业自动签署 -> 合作企业方授权
+
+
+
+注: 
+1. <font color='red'>所在企业的超管、法人才有权限调用此接口</font>(Operator.UserId 需要传递超管或者法人的UserId)
+2. 已经在授权中或者授权成功的企业，无法重复授权
+     * @param req CreatePartnerAutoSignAuthUrlRequest
+     * @return CreatePartnerAutoSignAuthUrlResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreatePartnerAutoSignAuthUrlResponse CreatePartnerAutoSignAuthUrl(CreatePartnerAutoSignAuthUrlRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreatePartnerAutoSignAuthUrl", CreatePartnerAutoSignAuthUrlResponse.class);
+    }
+
+    /**
      *获取个人用户认证证书图片下载URL
 
 个人用户认证证书图片样式如下图

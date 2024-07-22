@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class ModifyPrometheusAlertPolicyRequest extends AbstractModel {
 
     /**
-    * 实例id
+    * Prometheus 实例 ID
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 告警配置
+    * 告警配置，[具体参考](https://cloud.tencent.com/document/api/248/30354#PrometheusAlertPolicyItem)
     */
     @SerializedName("AlertRule")
     @Expose
     private PrometheusAlertPolicyItem AlertRule;
 
     /**
-     * Get 实例id 
-     * @return InstanceId 实例id
+     * Get Prometheus 实例 ID 
+     * @return InstanceId Prometheus 实例 ID
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例id
-     * @param InstanceId 实例id
+     * Set Prometheus 实例 ID
+     * @param InstanceId Prometheus 实例 ID
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 告警配置 
-     * @return AlertRule 告警配置
+     * Get 告警配置，[具体参考](https://cloud.tencent.com/document/api/248/30354#PrometheusAlertPolicyItem) 
+     * @return AlertRule 告警配置，[具体参考](https://cloud.tencent.com/document/api/248/30354#PrometheusAlertPolicyItem)
      */
     public PrometheusAlertPolicyItem getAlertRule() {
         return this.AlertRule;
     }
 
     /**
-     * Set 告警配置
-     * @param AlertRule 告警配置
+     * Set 告警配置，[具体参考](https://cloud.tencent.com/document/api/248/30354#PrometheusAlertPolicyItem)
+     * @param AlertRule 告警配置，[具体参考](https://cloud.tencent.com/document/api/248/30354#PrometheusAlertPolicyItem)
      */
     public void setAlertRule(PrometheusAlertPolicyItem AlertRule) {
         this.AlertRule = AlertRule;

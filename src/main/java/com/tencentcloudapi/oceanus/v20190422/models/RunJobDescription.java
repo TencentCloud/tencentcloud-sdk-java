@@ -82,6 +82,13 @@ public class RunJobDescription extends AbstractModel {
     private Long CustomTimestamp;
 
     /**
+    * timestamp; latest-offset;  earliest-offset; 任选一种
+    */
+    @SerializedName("KafkaScanMode")
+    @Expose
+    private String KafkaScanMode;
+
+    /**
      * Get 作业Id 
      * @return JobId 作业Id
      */
@@ -217,6 +224,22 @@ public class RunJobDescription extends AbstractModel {
         this.CustomTimestamp = CustomTimestamp;
     }
 
+    /**
+     * Get timestamp; latest-offset;  earliest-offset; 任选一种 
+     * @return KafkaScanMode timestamp; latest-offset;  earliest-offset; 任选一种
+     */
+    public String getKafkaScanMode() {
+        return this.KafkaScanMode;
+    }
+
+    /**
+     * Set timestamp; latest-offset;  earliest-offset; 任选一种
+     * @param KafkaScanMode timestamp; latest-offset;  earliest-offset; 任选一种
+     */
+    public void setKafkaScanMode(String KafkaScanMode) {
+        this.KafkaScanMode = KafkaScanMode;
+    }
+
     public RunJobDescription() {
     }
 
@@ -249,6 +272,9 @@ public class RunJobDescription extends AbstractModel {
         if (source.CustomTimestamp != null) {
             this.CustomTimestamp = new Long(source.CustomTimestamp);
         }
+        if (source.KafkaScanMode != null) {
+            this.KafkaScanMode = new String(source.KafkaScanMode);
+        }
     }
 
 
@@ -264,6 +290,7 @@ public class RunJobDescription extends AbstractModel {
         this.setParamSimple(map, prefix + "SavepointId", this.SavepointId);
         this.setParamSimple(map, prefix + "UseOldSystemConnector", this.UseOldSystemConnector);
         this.setParamSimple(map, prefix + "CustomTimestamp", this.CustomTimestamp);
+        this.setParamSimple(map, prefix + "KafkaScanMode", this.KafkaScanMode);
 
     }
 }
