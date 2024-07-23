@@ -40,7 +40,7 @@ public class NodeOverview extends AbstractModel {
     private String Zone;
 
     /**
-    * 节点状态。<br><li>SUBMITTED：已完成提交。<br><li>CREATING：创建中。<br><li>CREATED：完成创建。<br><li>INITING：初始化中。<br><li>INIT_FAILED：初始化失败。<br><li>RUNNING：运行中。<br><li>DELETING：销毁中。
+    * 节点状态。<li>SUBMITTED：已完成提交。</li><li>CREATING：创建中。</li><li>CREATED：完成创建。</li><li>INITING：初始化中。</li><li>INIT_FAILED：初始化失败。</li><li>RUNNING：运行中。</li><li>DELETING：销毁中。</li>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NodeState")
@@ -64,7 +64,7 @@ public class NodeOverview extends AbstractModel {
     private String QueueName;
 
     /**
-    * 节点角色。<br><li>Manager：管控节点。<br><li>Compute：计算节点。<br><li>Login：登录节点。<br><li>ManagerBackup：备用管控节点。
+    * 节点角色。<li>Manager：管控节点。</li><li>Compute：计算节点。</li><li>Login：登录节点。</li><li>ManagerBackup：备用管控节点。</li>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NodeRole")
@@ -72,12 +72,20 @@ public class NodeOverview extends AbstractModel {
     private String NodeRole;
 
     /**
-    * 节点类型。<br><li>STATIC：静态节点。<br><li>DYNAMIC：弹性节点。
+    * 节点类型。<li>STATIC：静态节点。</li><li>DYNAMIC：弹性节点。</li>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NodeType")
     @Expose
     private String NodeType;
+
+    /**
+    * thpc集群节点id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NodeId")
+    @Expose
+    private String NodeId;
 
     /**
      * Get 节点实例ID。
@@ -120,9 +128,9 @@ public class NodeOverview extends AbstractModel {
     }
 
     /**
-     * Get 节点状态。<br><li>SUBMITTED：已完成提交。<br><li>CREATING：创建中。<br><li>CREATED：完成创建。<br><li>INITING：初始化中。<br><li>INIT_FAILED：初始化失败。<br><li>RUNNING：运行中。<br><li>DELETING：销毁中。
+     * Get 节点状态。<li>SUBMITTED：已完成提交。</li><li>CREATING：创建中。</li><li>CREATED：完成创建。</li><li>INITING：初始化中。</li><li>INIT_FAILED：初始化失败。</li><li>RUNNING：运行中。</li><li>DELETING：销毁中。</li>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return NodeState 节点状态。<br><li>SUBMITTED：已完成提交。<br><li>CREATING：创建中。<br><li>CREATED：完成创建。<br><li>INITING：初始化中。<br><li>INIT_FAILED：初始化失败。<br><li>RUNNING：运行中。<br><li>DELETING：销毁中。
+     * @return NodeState 节点状态。<li>SUBMITTED：已完成提交。</li><li>CREATING：创建中。</li><li>CREATED：完成创建。</li><li>INITING：初始化中。</li><li>INIT_FAILED：初始化失败。</li><li>RUNNING：运行中。</li><li>DELETING：销毁中。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNodeState() {
@@ -130,9 +138,9 @@ public class NodeOverview extends AbstractModel {
     }
 
     /**
-     * Set 节点状态。<br><li>SUBMITTED：已完成提交。<br><li>CREATING：创建中。<br><li>CREATED：完成创建。<br><li>INITING：初始化中。<br><li>INIT_FAILED：初始化失败。<br><li>RUNNING：运行中。<br><li>DELETING：销毁中。
+     * Set 节点状态。<li>SUBMITTED：已完成提交。</li><li>CREATING：创建中。</li><li>CREATED：完成创建。</li><li>INITING：初始化中。</li><li>INIT_FAILED：初始化失败。</li><li>RUNNING：运行中。</li><li>DELETING：销毁中。</li>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param NodeState 节点状态。<br><li>SUBMITTED：已完成提交。<br><li>CREATING：创建中。<br><li>CREATED：完成创建。<br><li>INITING：初始化中。<br><li>INIT_FAILED：初始化失败。<br><li>RUNNING：运行中。<br><li>DELETING：销毁中。
+     * @param NodeState 节点状态。<li>SUBMITTED：已完成提交。</li><li>CREATING：创建中。</li><li>CREATED：完成创建。</li><li>INITING：初始化中。</li><li>INIT_FAILED：初始化失败。</li><li>RUNNING：运行中。</li><li>DELETING：销毁中。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNodeState(String NodeState) {
@@ -180,9 +188,9 @@ public class NodeOverview extends AbstractModel {
     }
 
     /**
-     * Get 节点角色。<br><li>Manager：管控节点。<br><li>Compute：计算节点。<br><li>Login：登录节点。<br><li>ManagerBackup：备用管控节点。
+     * Get 节点角色。<li>Manager：管控节点。</li><li>Compute：计算节点。</li><li>Login：登录节点。</li><li>ManagerBackup：备用管控节点。</li>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return NodeRole 节点角色。<br><li>Manager：管控节点。<br><li>Compute：计算节点。<br><li>Login：登录节点。<br><li>ManagerBackup：备用管控节点。
+     * @return NodeRole 节点角色。<li>Manager：管控节点。</li><li>Compute：计算节点。</li><li>Login：登录节点。</li><li>ManagerBackup：备用管控节点。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNodeRole() {
@@ -190,9 +198,9 @@ public class NodeOverview extends AbstractModel {
     }
 
     /**
-     * Set 节点角色。<br><li>Manager：管控节点。<br><li>Compute：计算节点。<br><li>Login：登录节点。<br><li>ManagerBackup：备用管控节点。
+     * Set 节点角色。<li>Manager：管控节点。</li><li>Compute：计算节点。</li><li>Login：登录节点。</li><li>ManagerBackup：备用管控节点。</li>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param NodeRole 节点角色。<br><li>Manager：管控节点。<br><li>Compute：计算节点。<br><li>Login：登录节点。<br><li>ManagerBackup：备用管控节点。
+     * @param NodeRole 节点角色。<li>Manager：管控节点。</li><li>Compute：计算节点。</li><li>Login：登录节点。</li><li>ManagerBackup：备用管控节点。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNodeRole(String NodeRole) {
@@ -200,9 +208,9 @@ public class NodeOverview extends AbstractModel {
     }
 
     /**
-     * Get 节点类型。<br><li>STATIC：静态节点。<br><li>DYNAMIC：弹性节点。
+     * Get 节点类型。<li>STATIC：静态节点。</li><li>DYNAMIC：弹性节点。</li>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return NodeType 节点类型。<br><li>STATIC：静态节点。<br><li>DYNAMIC：弹性节点。
+     * @return NodeType 节点类型。<li>STATIC：静态节点。</li><li>DYNAMIC：弹性节点。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNodeType() {
@@ -210,13 +218,33 @@ public class NodeOverview extends AbstractModel {
     }
 
     /**
-     * Set 节点类型。<br><li>STATIC：静态节点。<br><li>DYNAMIC：弹性节点。
+     * Set 节点类型。<li>STATIC：静态节点。</li><li>DYNAMIC：弹性节点。</li>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param NodeType 节点类型。<br><li>STATIC：静态节点。<br><li>DYNAMIC：弹性节点。
+     * @param NodeType 节点类型。<li>STATIC：静态节点。</li><li>DYNAMIC：弹性节点。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNodeType(String NodeType) {
         this.NodeType = NodeType;
+    }
+
+    /**
+     * Get thpc集群节点id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NodeId thpc集群节点id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getNodeId() {
+        return this.NodeId;
+    }
+
+    /**
+     * Set thpc集群节点id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NodeId thpc集群节点id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNodeId(String NodeId) {
+        this.NodeId = NodeId;
     }
 
     public NodeOverview() {
@@ -248,6 +276,9 @@ public class NodeOverview extends AbstractModel {
         if (source.NodeType != null) {
             this.NodeType = new String(source.NodeType);
         }
+        if (source.NodeId != null) {
+            this.NodeId = new String(source.NodeId);
+        }
     }
 
 
@@ -262,6 +293,7 @@ public class NodeOverview extends AbstractModel {
         this.setParamSimple(map, prefix + "QueueName", this.QueueName);
         this.setParamSimple(map, prefix + "NodeRole", this.NodeRole);
         this.setParamSimple(map, prefix + "NodeType", this.NodeType);
+        this.setParamSimple(map, prefix + "NodeId", this.NodeId);
 
     }
 }

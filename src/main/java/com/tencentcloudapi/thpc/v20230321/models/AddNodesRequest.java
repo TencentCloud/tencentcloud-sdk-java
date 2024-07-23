@@ -59,7 +59,7 @@ public class AddNodesRequest extends AbstractModel {
     private String ImageId;
 
     /**
-    * 节点[计费类型](https://cloud.tencent.com/document/product/213/2180)。<br><li>PREPAID：预付费，即包年包月<br><li>POSTPAID_BY_HOUR：按小时后付费<br><li>SPOTPAID：竞价付费<br>默认值：POSTPAID_BY_HOUR。
+    * 节点[计费类型](https://cloud.tencent.com/document/product/213/2180)。<br><li>PREPAID：预付费，即包年包月</li><li>POSTPAID_BY_HOUR：按小时后付费</li><li>SPOTPAID：竞价付费</li>默认值：POSTPAID_BY_HOUR。
     */
     @SerializedName("InstanceChargeType")
     @Expose
@@ -73,7 +73,7 @@ public class AddNodesRequest extends AbstractModel {
     private InstanceChargePrepaid InstanceChargePrepaid;
 
     /**
-    * 节点机型。不同实例机型指定了不同的资源规格。<br><li>具体取值可通过调用接口[DescribeInstanceTypeConfigs](https://cloud.tencent.com/document/api/213/15749)来获得最新的规格表或参见[实例规格](https://cloud.tencent.com/document/product/213/11518)描述。
+    * 节点机型。不同实例机型指定了不同的资源规格。<br><li>具体取值可通过调用接口[DescribeInstanceTypeConfigs](https://cloud.tencent.com/document/api/213/15749)来获得最新的规格表或参见[实例规格](https://cloud.tencent.com/document/product/213/11518)描述。</li>
     */
     @SerializedName("InstanceType")
     @Expose
@@ -131,7 +131,7 @@ public class AddNodesRequest extends AbstractModel {
     private String ClientToken;
 
     /**
-    * 队列名称。不指定则为默认队列。<li>SLURM默认队列为：compute。<li>SGE默认队列为：all.q。
+    * 队列名称。不指定则为默认队列。<li>SLURM默认队列为：compute。</li><li>SGE默认队列为：all.q。</li>
 
     */
     @SerializedName("QueueName")
@@ -139,7 +139,7 @@ public class AddNodesRequest extends AbstractModel {
     private String QueueName;
 
     /**
-    * 添加节点角色。默认值：Compute<br><li>Compute：计算节点。<br><li>Login：登录节点。
+    * 添加节点角色。默认值：Compute<br><li>Compute：计算节点。</li><li>Login：登录节点。</li>
     */
     @SerializedName("NodeRole")
     @Expose
@@ -157,7 +157,7 @@ false（默认）：发送正常请求，通过检查后直接创建实例
     private Boolean DryRun;
 
     /**
-    * 添加节点类型。默认取值：STATIC。<li>STATIC：静态节点，不会参与弹性伸缩流程。<li>DYNAMIC：弹性节点，会被弹性缩容的节点。管控节点和登录节点不支持此参数。
+    * 添加节点类型。默认取值：STATIC。<li>STATIC：静态节点，不会参与弹性伸缩流程。</li><li>DYNAMIC：弹性节点，会被弹性缩容的节点。管控节点和登录节点不支持此参数。</li>
     */
     @SerializedName("NodeType")
     @Expose
@@ -169,6 +169,13 @@ false（默认）：发送正常请求，通过检查后直接创建实例
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
+
+    /**
+    * 要新增节点的资源类型。<li>CVM：CVM实例类型资源</li><li>WORKSPACE：工作空间类型实例资源</li>默认值：CVM。
+    */
+    @SerializedName("ResourceType")
+    @Expose
+    private String ResourceType;
 
     /**
      * Get 集群中实例所在的位置。 
@@ -251,16 +258,16 @@ false（默认）：发送正常请求，通过检查后直接创建实例
     }
 
     /**
-     * Get 节点[计费类型](https://cloud.tencent.com/document/product/213/2180)。<br><li>PREPAID：预付费，即包年包月<br><li>POSTPAID_BY_HOUR：按小时后付费<br><li>SPOTPAID：竞价付费<br>默认值：POSTPAID_BY_HOUR。 
-     * @return InstanceChargeType 节点[计费类型](https://cloud.tencent.com/document/product/213/2180)。<br><li>PREPAID：预付费，即包年包月<br><li>POSTPAID_BY_HOUR：按小时后付费<br><li>SPOTPAID：竞价付费<br>默认值：POSTPAID_BY_HOUR。
+     * Get 节点[计费类型](https://cloud.tencent.com/document/product/213/2180)。<br><li>PREPAID：预付费，即包年包月</li><li>POSTPAID_BY_HOUR：按小时后付费</li><li>SPOTPAID：竞价付费</li>默认值：POSTPAID_BY_HOUR。 
+     * @return InstanceChargeType 节点[计费类型](https://cloud.tencent.com/document/product/213/2180)。<br><li>PREPAID：预付费，即包年包月</li><li>POSTPAID_BY_HOUR：按小时后付费</li><li>SPOTPAID：竞价付费</li>默认值：POSTPAID_BY_HOUR。
      */
     public String getInstanceChargeType() {
         return this.InstanceChargeType;
     }
 
     /**
-     * Set 节点[计费类型](https://cloud.tencent.com/document/product/213/2180)。<br><li>PREPAID：预付费，即包年包月<br><li>POSTPAID_BY_HOUR：按小时后付费<br><li>SPOTPAID：竞价付费<br>默认值：POSTPAID_BY_HOUR。
-     * @param InstanceChargeType 节点[计费类型](https://cloud.tencent.com/document/product/213/2180)。<br><li>PREPAID：预付费，即包年包月<br><li>POSTPAID_BY_HOUR：按小时后付费<br><li>SPOTPAID：竞价付费<br>默认值：POSTPAID_BY_HOUR。
+     * Set 节点[计费类型](https://cloud.tencent.com/document/product/213/2180)。<br><li>PREPAID：预付费，即包年包月</li><li>POSTPAID_BY_HOUR：按小时后付费</li><li>SPOTPAID：竞价付费</li>默认值：POSTPAID_BY_HOUR。
+     * @param InstanceChargeType 节点[计费类型](https://cloud.tencent.com/document/product/213/2180)。<br><li>PREPAID：预付费，即包年包月</li><li>POSTPAID_BY_HOUR：按小时后付费</li><li>SPOTPAID：竞价付费</li>默认值：POSTPAID_BY_HOUR。
      */
     public void setInstanceChargeType(String InstanceChargeType) {
         this.InstanceChargeType = InstanceChargeType;
@@ -283,16 +290,16 @@ false（默认）：发送正常请求，通过检查后直接创建实例
     }
 
     /**
-     * Get 节点机型。不同实例机型指定了不同的资源规格。<br><li>具体取值可通过调用接口[DescribeInstanceTypeConfigs](https://cloud.tencent.com/document/api/213/15749)来获得最新的规格表或参见[实例规格](https://cloud.tencent.com/document/product/213/11518)描述。 
-     * @return InstanceType 节点机型。不同实例机型指定了不同的资源规格。<br><li>具体取值可通过调用接口[DescribeInstanceTypeConfigs](https://cloud.tencent.com/document/api/213/15749)来获得最新的规格表或参见[实例规格](https://cloud.tencent.com/document/product/213/11518)描述。
+     * Get 节点机型。不同实例机型指定了不同的资源规格。<br><li>具体取值可通过调用接口[DescribeInstanceTypeConfigs](https://cloud.tencent.com/document/api/213/15749)来获得最新的规格表或参见[实例规格](https://cloud.tencent.com/document/product/213/11518)描述。</li> 
+     * @return InstanceType 节点机型。不同实例机型指定了不同的资源规格。<br><li>具体取值可通过调用接口[DescribeInstanceTypeConfigs](https://cloud.tencent.com/document/api/213/15749)来获得最新的规格表或参见[实例规格](https://cloud.tencent.com/document/product/213/11518)描述。</li>
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set 节点机型。不同实例机型指定了不同的资源规格。<br><li>具体取值可通过调用接口[DescribeInstanceTypeConfigs](https://cloud.tencent.com/document/api/213/15749)来获得最新的规格表或参见[实例规格](https://cloud.tencent.com/document/product/213/11518)描述。
-     * @param InstanceType 节点机型。不同实例机型指定了不同的资源规格。<br><li>具体取值可通过调用接口[DescribeInstanceTypeConfigs](https://cloud.tencent.com/document/api/213/15749)来获得最新的规格表或参见[实例规格](https://cloud.tencent.com/document/product/213/11518)描述。
+     * Set 节点机型。不同实例机型指定了不同的资源规格。<br><li>具体取值可通过调用接口[DescribeInstanceTypeConfigs](https://cloud.tencent.com/document/api/213/15749)来获得最新的规格表或参见[实例规格](https://cloud.tencent.com/document/product/213/11518)描述。</li>
+     * @param InstanceType 节点机型。不同实例机型指定了不同的资源规格。<br><li>具体取值可通过调用接口[DescribeInstanceTypeConfigs](https://cloud.tencent.com/document/api/213/15749)来获得最新的规格表或参见[实例规格](https://cloud.tencent.com/document/product/213/11518)描述。</li>
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
@@ -419,9 +426,9 @@ false（默认）：发送正常请求，通过检查后直接创建实例
     }
 
     /**
-     * Get 队列名称。不指定则为默认队列。<li>SLURM默认队列为：compute。<li>SGE默认队列为：all.q。
+     * Get 队列名称。不指定则为默认队列。<li>SLURM默认队列为：compute。</li><li>SGE默认队列为：all.q。</li>
  
-     * @return QueueName 队列名称。不指定则为默认队列。<li>SLURM默认队列为：compute。<li>SGE默认队列为：all.q。
+     * @return QueueName 队列名称。不指定则为默认队列。<li>SLURM默认队列为：compute。</li><li>SGE默认队列为：all.q。</li>
 
      */
     public String getQueueName() {
@@ -429,9 +436,9 @@ false（默认）：发送正常请求，通过检查后直接创建实例
     }
 
     /**
-     * Set 队列名称。不指定则为默认队列。<li>SLURM默认队列为：compute。<li>SGE默认队列为：all.q。
+     * Set 队列名称。不指定则为默认队列。<li>SLURM默认队列为：compute。</li><li>SGE默认队列为：all.q。</li>
 
-     * @param QueueName 队列名称。不指定则为默认队列。<li>SLURM默认队列为：compute。<li>SGE默认队列为：all.q。
+     * @param QueueName 队列名称。不指定则为默认队列。<li>SLURM默认队列为：compute。</li><li>SGE默认队列为：all.q。</li>
 
      */
     public void setQueueName(String QueueName) {
@@ -439,16 +446,16 @@ false（默认）：发送正常请求，通过检查后直接创建实例
     }
 
     /**
-     * Get 添加节点角色。默认值：Compute<br><li>Compute：计算节点。<br><li>Login：登录节点。 
-     * @return NodeRole 添加节点角色。默认值：Compute<br><li>Compute：计算节点。<br><li>Login：登录节点。
+     * Get 添加节点角色。默认值：Compute<br><li>Compute：计算节点。</li><li>Login：登录节点。</li> 
+     * @return NodeRole 添加节点角色。默认值：Compute<br><li>Compute：计算节点。</li><li>Login：登录节点。</li>
      */
     public String getNodeRole() {
         return this.NodeRole;
     }
 
     /**
-     * Set 添加节点角色。默认值：Compute<br><li>Compute：计算节点。<br><li>Login：登录节点。
-     * @param NodeRole 添加节点角色。默认值：Compute<br><li>Compute：计算节点。<br><li>Login：登录节点。
+     * Set 添加节点角色。默认值：Compute<br><li>Compute：计算节点。</li><li>Login：登录节点。</li>
+     * @param NodeRole 添加节点角色。默认值：Compute<br><li>Compute：计算节点。</li><li>Login：登录节点。</li>
      */
     public void setNodeRole(String NodeRole) {
         this.NodeRole = NodeRole;
@@ -487,16 +494,16 @@ false（默认）：发送正常请求，通过检查后直接创建实例
     }
 
     /**
-     * Get 添加节点类型。默认取值：STATIC。<li>STATIC：静态节点，不会参与弹性伸缩流程。<li>DYNAMIC：弹性节点，会被弹性缩容的节点。管控节点和登录节点不支持此参数。 
-     * @return NodeType 添加节点类型。默认取值：STATIC。<li>STATIC：静态节点，不会参与弹性伸缩流程。<li>DYNAMIC：弹性节点，会被弹性缩容的节点。管控节点和登录节点不支持此参数。
+     * Get 添加节点类型。默认取值：STATIC。<li>STATIC：静态节点，不会参与弹性伸缩流程。</li><li>DYNAMIC：弹性节点，会被弹性缩容的节点。管控节点和登录节点不支持此参数。</li> 
+     * @return NodeType 添加节点类型。默认取值：STATIC。<li>STATIC：静态节点，不会参与弹性伸缩流程。</li><li>DYNAMIC：弹性节点，会被弹性缩容的节点。管控节点和登录节点不支持此参数。</li>
      */
     public String getNodeType() {
         return this.NodeType;
     }
 
     /**
-     * Set 添加节点类型。默认取值：STATIC。<li>STATIC：静态节点，不会参与弹性伸缩流程。<li>DYNAMIC：弹性节点，会被弹性缩容的节点。管控节点和登录节点不支持此参数。
-     * @param NodeType 添加节点类型。默认取值：STATIC。<li>STATIC：静态节点，不会参与弹性伸缩流程。<li>DYNAMIC：弹性节点，会被弹性缩容的节点。管控节点和登录节点不支持此参数。
+     * Set 添加节点类型。默认取值：STATIC。<li>STATIC：静态节点，不会参与弹性伸缩流程。</li><li>DYNAMIC：弹性节点，会被弹性缩容的节点。管控节点和登录节点不支持此参数。</li>
+     * @param NodeType 添加节点类型。默认取值：STATIC。<li>STATIC：静态节点，不会参与弹性伸缩流程。</li><li>DYNAMIC：弹性节点，会被弹性缩容的节点。管控节点和登录节点不支持此参数。</li>
      */
     public void setNodeType(String NodeType) {
         this.NodeType = NodeType;
@@ -516,6 +523,22 @@ false（默认）：发送正常请求，通过检查后直接创建实例
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
+    }
+
+    /**
+     * Get 要新增节点的资源类型。<li>CVM：CVM实例类型资源</li><li>WORKSPACE：工作空间类型实例资源</li>默认值：CVM。 
+     * @return ResourceType 要新增节点的资源类型。<li>CVM：CVM实例类型资源</li><li>WORKSPACE：工作空间类型实例资源</li>默认值：CVM。
+     */
+    public String getResourceType() {
+        return this.ResourceType;
+    }
+
+    /**
+     * Set 要新增节点的资源类型。<li>CVM：CVM实例类型资源</li><li>WORKSPACE：工作空间类型实例资源</li>默认值：CVM。
+     * @param ResourceType 要新增节点的资源类型。<li>CVM：CVM实例类型资源</li><li>WORKSPACE：工作空间类型实例资源</li>默认值：CVM。
+     */
+    public void setResourceType(String ResourceType) {
+        this.ResourceType = ResourceType;
     }
 
     public AddNodesRequest() {
@@ -592,6 +615,9 @@ false（默认）：发送正常请求，通过检查后直接创建实例
         if (source.ProjectId != null) {
             this.ProjectId = new Long(source.ProjectId);
         }
+        if (source.ResourceType != null) {
+            this.ResourceType = new String(source.ResourceType);
+        }
     }
 
 
@@ -619,6 +645,7 @@ false（默认）：发送正常请求，通过检查后直接创建实例
         this.setParamSimple(map, prefix + "DryRun", this.DryRun);
         this.setParamSimple(map, prefix + "NodeType", this.NodeType);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
+        this.setParamSimple(map, prefix + "ResourceType", this.ResourceType);
 
     }
 }

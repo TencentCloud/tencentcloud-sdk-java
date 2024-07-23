@@ -407,6 +407,14 @@ Modify 集群变更中；
     private String CoolDownBucket;
 
     /**
+    * 实例扩展信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Details")
+    @Expose
+    private InstanceDetail Details;
+
+    /**
      * Get 集群实例ID, "cdw-xxxx" 字符串类型
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return InstanceId 集群实例ID, "cdw-xxxx" 字符串类型
@@ -1378,6 +1386,26 @@ Modify 集群变更中；
         this.CoolDownBucket = CoolDownBucket;
     }
 
+    /**
+     * Get 实例扩展信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Details 实例扩展信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public InstanceDetail getDetails() {
+        return this.Details;
+    }
+
+    /**
+     * Set 实例扩展信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Details 实例扩展信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDetails(InstanceDetail Details) {
+        this.Details = Details;
+    }
+
     public InstanceInfo() {
     }
 
@@ -1536,6 +1564,9 @@ Modify 集群变更中；
         if (source.CoolDownBucket != null) {
             this.CoolDownBucket = new String(source.CoolDownBucket);
         }
+        if (source.Details != null) {
+            this.Details = new InstanceDetail(source.Details);
+        }
     }
 
 
@@ -1590,6 +1621,7 @@ Modify 集群变更中；
         this.setParamSimple(map, prefix + "UserNetworkInfos", this.UserNetworkInfos);
         this.setParamSimple(map, prefix + "EnableCoolDown", this.EnableCoolDown);
         this.setParamSimple(map, prefix + "CoolDownBucket", this.CoolDownBucket);
+        this.setParamObj(map, prefix + "Details.", this.Details);
 
     }
 }

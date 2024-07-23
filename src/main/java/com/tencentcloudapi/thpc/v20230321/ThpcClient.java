@@ -74,6 +74,17 @@ public class ThpcClient extends AbstractClient{
     }
 
     /**
+     *本接口 (AttachNodes) 用于绑定一个或者多个计算节点指定资源到指定集群中。
+     * @param req AttachNodesRequest
+     * @return AttachNodesResponse
+     * @throws TencentCloudSDKException
+     */
+    public AttachNodesResponse AttachNodes(AttachNodesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AttachNodes", AttachNodesResponse.class);
+    }
+
+    /**
      *本接口 (CreateCluster) 用于创建并启动集群。
 
 * 本接口为异步接口， 当创建集群请求下发成功后会返回一个集群`ID`和一个`RequestId`，此时创建集群操作并未立即完成。在此期间集群的状态将会处于“PENDING”或者“INITING”，集群创建结果可以通过调用 [DescribeClusters](https://cloud.tencent.com/document/product/1527/72100)  接口查询，如果集群状态(ClusterStatus)变为“RUNNING(运行中)”，则代表集群创建成功，“ INIT_FAILED”代表集群创建失败。
@@ -208,6 +219,17 @@ public class ThpcClient extends AbstractClient{
     public DescribeQueuesResponse DescribeQueues(DescribeQueuesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeQueues", DescribeQueuesResponse.class);
+    }
+
+    /**
+     *本接口 (DetachNodes) 用于将一个或者多个计算节点从集群中移除，但是不销毁指定计算资源。
+     * @param req DetachNodesRequest
+     * @return DetachNodesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DetachNodesResponse DetachNodes(DetachNodesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DetachNodes", DetachNodesResponse.class);
     }
 
     /**

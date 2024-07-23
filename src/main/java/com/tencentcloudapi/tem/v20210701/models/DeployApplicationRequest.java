@@ -133,7 +133,11 @@ public class DeployApplicationRequest extends AbstractModel {
     private String DeployVersion;
 
     /**
-    * 包名。使用 JAR 包或者 WAR 包部署的时候必填。
+    * 传入内容为 /jar包名字 的形式。也就是在 jar包名字前增加一个/。
+
+如上传的 jar 包名字为 demo-1.0.0.jar，那么这里传入内容为：/demo-1.0.0.jar
+
+注：jar 包需要通过 tem 页面上传过，tem 后端才能拉到该 jar 包。
     */
     @SerializedName("PkgName")
     @Expose
@@ -353,6 +357,20 @@ public class DeployApplicationRequest extends AbstractModel {
     @SerializedName("RepoType")
     @Expose
     private Long RepoType;
+
+    /**
+    * 启动后执行的脚本，base64 编码
+    */
+    @SerializedName("PostStartEncoded")
+    @Expose
+    private String PostStartEncoded;
+
+    /**
+    * 停止前执行的脚本，base64 编码
+    */
+    @SerializedName("PreStopEncoded")
+    @Expose
+    private String PreStopEncoded;
 
     /**
      * Get 应用ID 
@@ -611,16 +629,32 @@ public class DeployApplicationRequest extends AbstractModel {
     }
 
     /**
-     * Get 包名。使用 JAR 包或者 WAR 包部署的时候必填。 
-     * @return PkgName 包名。使用 JAR 包或者 WAR 包部署的时候必填。
+     * Get 传入内容为 /jar包名字 的形式。也就是在 jar包名字前增加一个/。
+
+如上传的 jar 包名字为 demo-1.0.0.jar，那么这里传入内容为：/demo-1.0.0.jar
+
+注：jar 包需要通过 tem 页面上传过，tem 后端才能拉到该 jar 包。 
+     * @return PkgName 传入内容为 /jar包名字 的形式。也就是在 jar包名字前增加一个/。
+
+如上传的 jar 包名字为 demo-1.0.0.jar，那么这里传入内容为：/demo-1.0.0.jar
+
+注：jar 包需要通过 tem 页面上传过，tem 后端才能拉到该 jar 包。
      */
     public String getPkgName() {
         return this.PkgName;
     }
 
     /**
-     * Set 包名。使用 JAR 包或者 WAR 包部署的时候必填。
-     * @param PkgName 包名。使用 JAR 包或者 WAR 包部署的时候必填。
+     * Set 传入内容为 /jar包名字 的形式。也就是在 jar包名字前增加一个/。
+
+如上传的 jar 包名字为 demo-1.0.0.jar，那么这里传入内容为：/demo-1.0.0.jar
+
+注：jar 包需要通过 tem 页面上传过，tem 后端才能拉到该 jar 包。
+     * @param PkgName 传入内容为 /jar包名字 的形式。也就是在 jar包名字前增加一个/。
+
+如上传的 jar 包名字为 demo-1.0.0.jar，那么这里传入内容为：/demo-1.0.0.jar
+
+注：jar 包需要通过 tem 页面上传过，tem 后端才能拉到该 jar 包。
      */
     public void setPkgName(String PkgName) {
         this.PkgName = PkgName;
@@ -1138,6 +1172,38 @@ public class DeployApplicationRequest extends AbstractModel {
         this.RepoType = RepoType;
     }
 
+    /**
+     * Get 启动后执行的脚本，base64 编码 
+     * @return PostStartEncoded 启动后执行的脚本，base64 编码
+     */
+    public String getPostStartEncoded() {
+        return this.PostStartEncoded;
+    }
+
+    /**
+     * Set 启动后执行的脚本，base64 编码
+     * @param PostStartEncoded 启动后执行的脚本，base64 编码
+     */
+    public void setPostStartEncoded(String PostStartEncoded) {
+        this.PostStartEncoded = PostStartEncoded;
+    }
+
+    /**
+     * Get 停止前执行的脚本，base64 编码 
+     * @return PreStopEncoded 停止前执行的脚本，base64 编码
+     */
+    public String getPreStopEncoded() {
+        return this.PreStopEncoded;
+    }
+
+    /**
+     * Set 停止前执行的脚本，base64 编码
+     * @param PreStopEncoded 停止前执行的脚本，base64 编码
+     */
+    public void setPreStopEncoded(String PreStopEncoded) {
+        this.PreStopEncoded = PreStopEncoded;
+    }
+
     public DeployApplicationRequest() {
     }
 
@@ -1308,6 +1374,12 @@ public class DeployApplicationRequest extends AbstractModel {
         if (source.RepoType != null) {
             this.RepoType = new Long(source.RepoType);
         }
+        if (source.PostStartEncoded != null) {
+            this.PostStartEncoded = new String(source.PostStartEncoded);
+        }
+        if (source.PreStopEncoded != null) {
+            this.PreStopEncoded = new String(source.PreStopEncoded);
+        }
     }
 
 
@@ -1360,6 +1432,8 @@ public class DeployApplicationRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "TcrInstanceId", this.TcrInstanceId);
         this.setParamSimple(map, prefix + "RepoServer", this.RepoServer);
         this.setParamSimple(map, prefix + "RepoType", this.RepoType);
+        this.setParamSimple(map, prefix + "PostStartEncoded", this.PostStartEncoded);
+        this.setParamSimple(map, prefix + "PreStopEncoded", this.PreStopEncoded);
 
     }
 }

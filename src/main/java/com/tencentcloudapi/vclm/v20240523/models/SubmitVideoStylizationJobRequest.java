@@ -43,6 +43,15 @@ public class SubmitVideoStylizationJobRequest extends AbstractModel {
     private String VideoUrl;
 
     /**
+    * 风格化强度 可选参数["low","medium","high"] 
+"low":风格化强度弱,"medium":"风格化强度中等","high":"风格化强度强" 
+默认为medium
+    */
+    @SerializedName("StyleStrength")
+    @Expose
+    private String StyleStrength;
+
+    /**
      * Get 风格ID，取值说明：2d_anime 2D动漫；3d_cartoon 3D卡通；3d_china 3D国潮；pixel_art	像素风。 
      * @return StyleId 风格ID，取值说明：2d_anime 2D动漫；3d_cartoon 3D卡通；3d_china 3D国潮；pixel_art	像素风。
      */
@@ -94,6 +103,30 @@ public class SubmitVideoStylizationJobRequest extends AbstractModel {
         this.VideoUrl = VideoUrl;
     }
 
+    /**
+     * Get 风格化强度 可选参数["low","medium","high"] 
+"low":风格化强度弱,"medium":"风格化强度中等","high":"风格化强度强" 
+默认为medium 
+     * @return StyleStrength 风格化强度 可选参数["low","medium","high"] 
+"low":风格化强度弱,"medium":"风格化强度中等","high":"风格化强度强" 
+默认为medium
+     */
+    public String getStyleStrength() {
+        return this.StyleStrength;
+    }
+
+    /**
+     * Set 风格化强度 可选参数["low","medium","high"] 
+"low":风格化强度弱,"medium":"风格化强度中等","high":"风格化强度强" 
+默认为medium
+     * @param StyleStrength 风格化强度 可选参数["low","medium","high"] 
+"low":风格化强度弱,"medium":"风格化强度中等","high":"风格化强度强" 
+默认为medium
+     */
+    public void setStyleStrength(String StyleStrength) {
+        this.StyleStrength = StyleStrength;
+    }
+
     public SubmitVideoStylizationJobRequest() {
     }
 
@@ -108,6 +141,9 @@ public class SubmitVideoStylizationJobRequest extends AbstractModel {
         if (source.VideoUrl != null) {
             this.VideoUrl = new String(source.VideoUrl);
         }
+        if (source.StyleStrength != null) {
+            this.StyleStrength = new String(source.StyleStrength);
+        }
     }
 
 
@@ -117,6 +153,7 @@ public class SubmitVideoStylizationJobRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "StyleId", this.StyleId);
         this.setParamSimple(map, prefix + "VideoUrl", this.VideoUrl);
+        this.setParamSimple(map, prefix + "StyleStrength", this.StyleStrength);
 
     }
 }

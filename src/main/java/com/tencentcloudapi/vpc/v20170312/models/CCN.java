@@ -135,6 +135,46 @@ public class CCN extends AbstractModel {
     private Boolean RouteBroadcastPolicyFlag;
 
     /**
+    * 是否开启等价路由功能。`False` 未开启，`True` 开启。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RouteECMPFlag")
+    @Expose
+    private Boolean RouteECMPFlag;
+
+    /**
+    * 是否开启路由重叠功能。`False` 未开启，`True` 开启。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RouteOverlapFlag")
+    @Expose
+    private Boolean RouteOverlapFlag;
+
+    /**
+    * 是否开启QOS。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TrafficMarkingPolicyFlag")
+    @Expose
+    private Boolean TrafficMarkingPolicyFlag;
+
+    /**
+    * 是否开启路由表选择策略。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RouteSelectPolicyFlag")
+    @Expose
+    private Boolean RouteSelectPolicyFlag;
+
+    /**
+    * 是否开启二层云联网通道。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DirectConnectAccelerateChannelFlag")
+    @Expose
+    private Boolean DirectConnectAccelerateChannelFlag;
+
+    /**
      * Get 云联网唯一ID 
      * @return CcnId 云联网唯一ID
      */
@@ -398,6 +438,106 @@ public class CCN extends AbstractModel {
         this.RouteBroadcastPolicyFlag = RouteBroadcastPolicyFlag;
     }
 
+    /**
+     * Get 是否开启等价路由功能。`False` 未开启，`True` 开启。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RouteECMPFlag 是否开启等价路由功能。`False` 未开启，`True` 开启。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getRouteECMPFlag() {
+        return this.RouteECMPFlag;
+    }
+
+    /**
+     * Set 是否开启等价路由功能。`False` 未开启，`True` 开启。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RouteECMPFlag 是否开启等价路由功能。`False` 未开启，`True` 开启。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRouteECMPFlag(Boolean RouteECMPFlag) {
+        this.RouteECMPFlag = RouteECMPFlag;
+    }
+
+    /**
+     * Get 是否开启路由重叠功能。`False` 未开启，`True` 开启。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RouteOverlapFlag 是否开启路由重叠功能。`False` 未开启，`True` 开启。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getRouteOverlapFlag() {
+        return this.RouteOverlapFlag;
+    }
+
+    /**
+     * Set 是否开启路由重叠功能。`False` 未开启，`True` 开启。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RouteOverlapFlag 是否开启路由重叠功能。`False` 未开启，`True` 开启。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRouteOverlapFlag(Boolean RouteOverlapFlag) {
+        this.RouteOverlapFlag = RouteOverlapFlag;
+    }
+
+    /**
+     * Get 是否开启QOS。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TrafficMarkingPolicyFlag 是否开启QOS。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getTrafficMarkingPolicyFlag() {
+        return this.TrafficMarkingPolicyFlag;
+    }
+
+    /**
+     * Set 是否开启QOS。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TrafficMarkingPolicyFlag 是否开启QOS。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTrafficMarkingPolicyFlag(Boolean TrafficMarkingPolicyFlag) {
+        this.TrafficMarkingPolicyFlag = TrafficMarkingPolicyFlag;
+    }
+
+    /**
+     * Get 是否开启路由表选择策略。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RouteSelectPolicyFlag 是否开启路由表选择策略。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getRouteSelectPolicyFlag() {
+        return this.RouteSelectPolicyFlag;
+    }
+
+    /**
+     * Set 是否开启路由表选择策略。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RouteSelectPolicyFlag 是否开启路由表选择策略。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRouteSelectPolicyFlag(Boolean RouteSelectPolicyFlag) {
+        this.RouteSelectPolicyFlag = RouteSelectPolicyFlag;
+    }
+
+    /**
+     * Get 是否开启二层云联网通道。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DirectConnectAccelerateChannelFlag 是否开启二层云联网通道。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getDirectConnectAccelerateChannelFlag() {
+        return this.DirectConnectAccelerateChannelFlag;
+    }
+
+    /**
+     * Set 是否开启二层云联网通道。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DirectConnectAccelerateChannelFlag 是否开启二层云联网通道。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDirectConnectAccelerateChannelFlag(Boolean DirectConnectAccelerateChannelFlag) {
+        this.DirectConnectAccelerateChannelFlag = DirectConnectAccelerateChannelFlag;
+    }
+
     public CCN() {
     }
 
@@ -454,6 +594,21 @@ public class CCN extends AbstractModel {
         if (source.RouteBroadcastPolicyFlag != null) {
             this.RouteBroadcastPolicyFlag = new Boolean(source.RouteBroadcastPolicyFlag);
         }
+        if (source.RouteECMPFlag != null) {
+            this.RouteECMPFlag = new Boolean(source.RouteECMPFlag);
+        }
+        if (source.RouteOverlapFlag != null) {
+            this.RouteOverlapFlag = new Boolean(source.RouteOverlapFlag);
+        }
+        if (source.TrafficMarkingPolicyFlag != null) {
+            this.TrafficMarkingPolicyFlag = new Boolean(source.TrafficMarkingPolicyFlag);
+        }
+        if (source.RouteSelectPolicyFlag != null) {
+            this.RouteSelectPolicyFlag = new Boolean(source.RouteSelectPolicyFlag);
+        }
+        if (source.DirectConnectAccelerateChannelFlag != null) {
+            this.DirectConnectAccelerateChannelFlag = new Boolean(source.DirectConnectAccelerateChannelFlag);
+        }
     }
 
 
@@ -476,6 +631,11 @@ public class CCN extends AbstractModel {
         this.setParamSimple(map, prefix + "RouteTableFlag", this.RouteTableFlag);
         this.setParamSimple(map, prefix + "IsSecurityLock", this.IsSecurityLock);
         this.setParamSimple(map, prefix + "RouteBroadcastPolicyFlag", this.RouteBroadcastPolicyFlag);
+        this.setParamSimple(map, prefix + "RouteECMPFlag", this.RouteECMPFlag);
+        this.setParamSimple(map, prefix + "RouteOverlapFlag", this.RouteOverlapFlag);
+        this.setParamSimple(map, prefix + "TrafficMarkingPolicyFlag", this.TrafficMarkingPolicyFlag);
+        this.setParamSimple(map, prefix + "RouteSelectPolicyFlag", this.RouteSelectPolicyFlag);
+        this.setParamSimple(map, prefix + "DirectConnectAccelerateChannelFlag", this.DirectConnectAccelerateChannelFlag);
 
     }
 }

@@ -106,6 +106,18 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
+     *本接口(CreateDBInstanceParamTpl)用于创建云数据库MongoDB实例的参数模板
+**说明：CreateDBInstanceParamTpl API正在公测中，在此期间，该接口仅对公测用户开放**
+     * @param req CreateDBInstanceParamTplRequest
+     * @return CreateDBInstanceParamTplResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDBInstanceParamTplResponse CreateDBInstanceParamTpl(CreateDBInstanceParamTplRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateDBInstanceParamTpl", CreateDBInstanceParamTplResponse.class);
+    }
+
+    /**
      *本接口（DeleteAccountUser）用于删除实例的自定义账号。
      * @param req DeleteAccountUserRequest
      * @return DeleteAccountUserResponse
@@ -216,6 +228,30 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
+     *本接口(DescribeDBInstanceParamTpl )用于查询当前账号下所有MongoDB数据库参数模板
+**说明：DescribeDBInstanceParamTpl  API正在公测中，在此期间，该接口仅对公测用户开放**
+     * @param req DescribeDBInstanceParamTplRequest
+     * @return DescribeDBInstanceParamTplResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBInstanceParamTplResponse DescribeDBInstanceParamTpl(DescribeDBInstanceParamTplRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDBInstanceParamTpl", DescribeDBInstanceParamTplResponse.class);
+    }
+
+    /**
+     *本接口(DescribeDBInstanceParamTplDetail )用于查询MongoDB云数据库实例的参数模板详情。
+**说明：DescribeDBInstanceParamTplDetail  API正在公测中，在此期间，该接口仅对公测用户开放**
+     * @param req DescribeDBInstanceParamTplDetailRequest
+     * @return DescribeDBInstanceParamTplDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBInstanceParamTplDetailResponse DescribeDBInstanceParamTplDetail(DescribeDBInstanceParamTplDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDBInstanceParamTplDetail", DescribeDBInstanceParamTplDetailResponse.class);
+    }
+
+    /**
      *本接口（DescribeDBInstances）用于查询云数据库实例列表，支持通过项目ID、实例ID、实例状态等过滤条件来筛选主实例、灾备实例和只读实例信息列表。
      * @param req DescribeDBInstancesRequest
      * @return DescribeDBInstancesResponse
@@ -290,6 +326,18 @@ public class MongodbClient extends AbstractClient{
     public DescribeTransparentDataEncryptionStatusResponse DescribeTransparentDataEncryptionStatus(DescribeTransparentDataEncryptionStatusRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeTransparentDataEncryptionStatus", DescribeTransparentDataEncryptionStatusResponse.class);
+    }
+
+    /**
+     *本接口(DropDBInstanceParamTpl )用于删除云数据库MongoDB实例的参数模板
+**说明：DropDBInstanceParamTpl  API正在公测中，在此期间，该接口仅对公测用户开放**
+     * @param req DropDBInstanceParamTplRequest
+     * @return DropDBInstanceParamTplResponse
+     * @throws TencentCloudSDKException
+     */
+    public DropDBInstanceParamTplResponse DropDBInstanceParamTpl(DropDBInstanceParamTplRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DropDBInstanceParamTpl", DropDBInstanceParamTplResponse.class);
     }
 
     /**
@@ -390,6 +438,18 @@ public class MongodbClient extends AbstractClient{
     public ModifyDBInstanceNetworkAddressResponse ModifyDBInstanceNetworkAddress(ModifyDBInstanceNetworkAddressRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyDBInstanceNetworkAddress", ModifyDBInstanceNetworkAddressResponse.class);
+    }
+
+    /**
+     *本接口(ModifyDBInstanceParamTpl )用于修改MongoDB云数据库实例的参数模板。
+**说明：ModifyDBInstanceParamTpl  API正在公测中，在此期间，该接口仅对公测用户开放**
+     * @param req ModifyDBInstanceParamTplRequest
+     * @return ModifyDBInstanceParamTplResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDBInstanceParamTplResponse ModifyDBInstanceParamTpl(ModifyDBInstanceParamTplRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDBInstanceParamTpl", ModifyDBInstanceParamTplResponse.class);
     }
 
     /**

@@ -160,6 +160,14 @@ public class RuleGroupExecStrategy extends AbstractModel {
     private String [] TriggerTypes;
 
     /**
+    * DLC资源组
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DlcGroupName")
+    @Expose
+    private String DlcGroupName;
+
+    /**
      * Get 规则组Id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return RuleGroupId 规则组Id
@@ -499,6 +507,26 @@ public class RuleGroupExecStrategy extends AbstractModel {
         this.TriggerTypes = TriggerTypes;
     }
 
+    /**
+     * Get DLC资源组
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DlcGroupName DLC资源组
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDlcGroupName() {
+        return this.DlcGroupName;
+    }
+
+    /**
+     * Set DLC资源组
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DlcGroupName DLC资源组
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDlcGroupName(String DlcGroupName) {
+        this.DlcGroupName = DlcGroupName;
+    }
+
     public RuleGroupExecStrategy() {
     }
 
@@ -564,6 +592,9 @@ public class RuleGroupExecStrategy extends AbstractModel {
                 this.TriggerTypes[i] = new String(source.TriggerTypes[i]);
             }
         }
+        if (source.DlcGroupName != null) {
+            this.DlcGroupName = new String(source.DlcGroupName);
+        }
     }
 
 
@@ -588,6 +619,7 @@ public class RuleGroupExecStrategy extends AbstractModel {
         this.setParamSimple(map, prefix + "RuleId", this.RuleId);
         this.setParamSimple(map, prefix + "RuleName", this.RuleName);
         this.setParamArraySimple(map, prefix + "TriggerTypes.", this.TriggerTypes);
+        this.setParamSimple(map, prefix + "DlcGroupName", this.DlcGroupName);
 
     }
 }

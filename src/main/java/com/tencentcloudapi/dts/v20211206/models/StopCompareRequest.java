@@ -38,6 +38,13 @@ public class StopCompareRequest extends AbstractModel {
     private String CompareTaskId;
 
     /**
+    * 是否强制停止。如果填true，同步任务增量阶段会跳过一致性校验产生的binlog，达到快速恢复任务的效果
+    */
+    @SerializedName("ForceStop")
+    @Expose
+    private Boolean ForceStop;
+
+    /**
      * Get 迁移任务 Id 
      * @return JobId 迁移任务 Id
      */
@@ -69,6 +76,22 @@ public class StopCompareRequest extends AbstractModel {
         this.CompareTaskId = CompareTaskId;
     }
 
+    /**
+     * Get 是否强制停止。如果填true，同步任务增量阶段会跳过一致性校验产生的binlog，达到快速恢复任务的效果 
+     * @return ForceStop 是否强制停止。如果填true，同步任务增量阶段会跳过一致性校验产生的binlog，达到快速恢复任务的效果
+     */
+    public Boolean getForceStop() {
+        return this.ForceStop;
+    }
+
+    /**
+     * Set 是否强制停止。如果填true，同步任务增量阶段会跳过一致性校验产生的binlog，达到快速恢复任务的效果
+     * @param ForceStop 是否强制停止。如果填true，同步任务增量阶段会跳过一致性校验产生的binlog，达到快速恢复任务的效果
+     */
+    public void setForceStop(Boolean ForceStop) {
+        this.ForceStop = ForceStop;
+    }
+
     public StopCompareRequest() {
     }
 
@@ -83,6 +106,9 @@ public class StopCompareRequest extends AbstractModel {
         if (source.CompareTaskId != null) {
             this.CompareTaskId = new String(source.CompareTaskId);
         }
+        if (source.ForceStop != null) {
+            this.ForceStop = new Boolean(source.ForceStop);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class StopCompareRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "JobId", this.JobId);
         this.setParamSimple(map, prefix + "CompareTaskId", this.CompareTaskId);
+        this.setParamSimple(map, prefix + "ForceStop", this.ForceStop);
 
     }
 }

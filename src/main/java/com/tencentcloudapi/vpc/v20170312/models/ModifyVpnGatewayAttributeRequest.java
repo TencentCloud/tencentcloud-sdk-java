@@ -52,6 +52,13 @@ public class ModifyVpnGatewayAttributeRequest extends AbstractModel {
     private Long BgpAsn;
 
     /**
+    * 服务端最大连接数个数。
+    */
+    @SerializedName("MaxConnection")
+    @Expose
+    private Long MaxConnection;
+
+    /**
      * Get VPN网关实例ID。 
      * @return VpnGatewayId VPN网关实例ID。
      */
@@ -115,6 +122,22 @@ public class ModifyVpnGatewayAttributeRequest extends AbstractModel {
         this.BgpAsn = BgpAsn;
     }
 
+    /**
+     * Get 服务端最大连接数个数。 
+     * @return MaxConnection 服务端最大连接数个数。
+     */
+    public Long getMaxConnection() {
+        return this.MaxConnection;
+    }
+
+    /**
+     * Set 服务端最大连接数个数。
+     * @param MaxConnection 服务端最大连接数个数。
+     */
+    public void setMaxConnection(Long MaxConnection) {
+        this.MaxConnection = MaxConnection;
+    }
+
     public ModifyVpnGatewayAttributeRequest() {
     }
 
@@ -135,6 +158,9 @@ public class ModifyVpnGatewayAttributeRequest extends AbstractModel {
         if (source.BgpAsn != null) {
             this.BgpAsn = new Long(source.BgpAsn);
         }
+        if (source.MaxConnection != null) {
+            this.MaxConnection = new Long(source.MaxConnection);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class ModifyVpnGatewayAttributeRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "VpnGatewayName", this.VpnGatewayName);
         this.setParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
         this.setParamSimple(map, prefix + "BgpAsn", this.BgpAsn);
+        this.setParamSimple(map, prefix + "MaxConnection", this.MaxConnection);
 
     }
 }

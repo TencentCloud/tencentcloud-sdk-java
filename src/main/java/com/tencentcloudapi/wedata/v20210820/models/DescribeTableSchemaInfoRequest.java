@@ -66,6 +66,13 @@ public class DescribeTableSchemaInfoRequest extends AbstractModel {
     private String SchemaName;
 
     /**
+    * 项目空间ID
+    */
+    @SerializedName("ProjectId")
+    @Expose
+    private String ProjectId;
+
+    /**
      * Get 表名称 
      * @return Name 表名称
      */
@@ -161,6 +168,22 @@ public class DescribeTableSchemaInfoRequest extends AbstractModel {
         this.SchemaName = SchemaName;
     }
 
+    /**
+     * Get 项目空间ID 
+     * @return ProjectId 项目空间ID
+     */
+    public String getProjectId() {
+        return this.ProjectId;
+    }
+
+    /**
+     * Set 项目空间ID
+     * @param ProjectId 项目空间ID
+     */
+    public void setProjectId(String ProjectId) {
+        this.ProjectId = ProjectId;
+    }
+
     public DescribeTableSchemaInfoRequest() {
     }
 
@@ -187,6 +210,9 @@ public class DescribeTableSchemaInfoRequest extends AbstractModel {
         if (source.SchemaName != null) {
             this.SchemaName = new String(source.SchemaName);
         }
+        if (source.ProjectId != null) {
+            this.ProjectId = new String(source.ProjectId);
+        }
     }
 
 
@@ -200,6 +226,7 @@ public class DescribeTableSchemaInfoRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "DatasourceId", this.DatasourceId);
         this.setParamSimple(map, prefix + "ConnectionType", this.ConnectionType);
         this.setParamSimple(map, prefix + "SchemaName", this.SchemaName);
+        this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
 
     }
 }

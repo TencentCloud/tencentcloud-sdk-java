@@ -196,7 +196,7 @@ timeRollback，时间点回档
 
     /**
     * 包年包月购买是否自动续费，默认为0。
-0标识默认续费方式，1表示自动续费，2表示手不自动续费。
+0标识默认续费方式，1表示自动续费，2表示不自动续费。
     */
     @SerializedName("AutoRenewFlag")
     @Expose
@@ -742,9 +742,9 @@ timeRollback，时间点回档
 
     /**
      * Get 包年包月购买是否自动续费，默认为0。
-0标识默认续费方式，1表示自动续费，2表示手不自动续费。 
+0标识默认续费方式，1表示自动续费，2表示不自动续费。 
      * @return AutoRenewFlag 包年包月购买是否自动续费，默认为0。
-0标识默认续费方式，1表示自动续费，2表示手不自动续费。
+0标识默认续费方式，1表示自动续费，2表示不自动续费。
      */
     public Long getAutoRenewFlag() {
         return this.AutoRenewFlag;
@@ -752,9 +752,9 @@ timeRollback，时间点回档
 
     /**
      * Set 包年包月购买是否自动续费，默认为0。
-0标识默认续费方式，1表示自动续费，2表示手不自动续费。
+0标识默认续费方式，1表示自动续费，2表示不自动续费。
      * @param AutoRenewFlag 包年包月购买是否自动续费，默认为0。
-0标识默认续费方式，1表示自动续费，2表示手不自动续费。
+0标识默认续费方式，1表示自动续费，2表示不自动续费。
      */
     public void setAutoRenewFlag(Long AutoRenewFlag) {
         this.AutoRenewFlag = AutoRenewFlag;

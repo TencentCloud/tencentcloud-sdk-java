@@ -164,6 +164,13 @@ public class NativeNodePoolInfo extends AbstractModel {
     private Long Replicas;
 
     /**
+    * 就绪 Machine 个数
+    */
+    @SerializedName("ReadyReplicas")
+    @Expose
+    private Long ReadyReplicas;
+
+    /**
     * 公网带宽设置
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -524,6 +531,22 @@ public class NativeNodePoolInfo extends AbstractModel {
     }
 
     /**
+     * Get 就绪 Machine 个数 
+     * @return ReadyReplicas 就绪 Machine 个数
+     */
+    public Long getReadyReplicas() {
+        return this.ReadyReplicas;
+    }
+
+    /**
+     * Set 就绪 Machine 个数
+     * @param ReadyReplicas 就绪 Machine 个数
+     */
+    public void setReadyReplicas(Long ReadyReplicas) {
+        this.ReadyReplicas = ReadyReplicas;
+    }
+
+    /**
      * Get 公网带宽设置
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return InternetAccessible 公网带宽设置
@@ -640,6 +663,9 @@ public class NativeNodePoolInfo extends AbstractModel {
         if (source.Replicas != null) {
             this.Replicas = new Long(source.Replicas);
         }
+        if (source.ReadyReplicas != null) {
+            this.ReadyReplicas = new Long(source.ReadyReplicas);
+        }
         if (source.InternetAccessible != null) {
             this.InternetAccessible = new InternetAccessible(source.InternetAccessible);
         }
@@ -674,6 +700,7 @@ public class NativeNodePoolInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "EnableAutoscaling", this.EnableAutoscaling);
         this.setParamArraySimple(map, prefix + "InstanceTypes.", this.InstanceTypes);
         this.setParamSimple(map, prefix + "Replicas", this.Replicas);
+        this.setParamSimple(map, prefix + "ReadyReplicas", this.ReadyReplicas);
         this.setParamObj(map, prefix + "InternetAccessible.", this.InternetAccessible);
         this.setParamArrayObj(map, prefix + "DataDisks.", this.DataDisks);
 
