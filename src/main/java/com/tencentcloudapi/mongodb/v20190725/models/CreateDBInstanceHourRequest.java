@@ -235,6 +235,13 @@ public class CreateDBInstanceHourRequest extends AbstractModel {
     private String HiddenZone;
 
     /**
+    * 参数模板 ID。参数模板是一组 MongoDB 的参数并为预设置了参数值的集合，将一组有相同诉求的参数及值 存为模板，在创建实例时，可直接引用参数值到新实例。合理使用参数模板，可以提高MongoDB数据库的效率。模板列表从 DescribeDBInstanceParamTpl 接口获取，注意模板支持的版本。
+    */
+    @SerializedName("ParamTemplateId")
+    @Expose
+    private String ParamTemplateId;
+
+    /**
      * Get 实例内存大小，单位：GB。具体售卖的内存规格，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。 
      * @return Memory 实例内存大小，单位：GB。具体售卖的内存规格，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
      */
@@ -766,6 +773,22 @@ public class CreateDBInstanceHourRequest extends AbstractModel {
         this.HiddenZone = HiddenZone;
     }
 
+    /**
+     * Get 参数模板 ID。参数模板是一组 MongoDB 的参数并为预设置了参数值的集合，将一组有相同诉求的参数及值 存为模板，在创建实例时，可直接引用参数值到新实例。合理使用参数模板，可以提高MongoDB数据库的效率。模板列表从 DescribeDBInstanceParamTpl 接口获取，注意模板支持的版本。 
+     * @return ParamTemplateId 参数模板 ID。参数模板是一组 MongoDB 的参数并为预设置了参数值的集合，将一组有相同诉求的参数及值 存为模板，在创建实例时，可直接引用参数值到新实例。合理使用参数模板，可以提高MongoDB数据库的效率。模板列表从 DescribeDBInstanceParamTpl 接口获取，注意模板支持的版本。
+     */
+    public String getParamTemplateId() {
+        return this.ParamTemplateId;
+    }
+
+    /**
+     * Set 参数模板 ID。参数模板是一组 MongoDB 的参数并为预设置了参数值的集合，将一组有相同诉求的参数及值 存为模板，在创建实例时，可直接引用参数值到新实例。合理使用参数模板，可以提高MongoDB数据库的效率。模板列表从 DescribeDBInstanceParamTpl 接口获取，注意模板支持的版本。
+     * @param ParamTemplateId 参数模板 ID。参数模板是一组 MongoDB 的参数并为预设置了参数值的集合，将一组有相同诉求的参数及值 存为模板，在创建实例时，可直接引用参数值到新实例。合理使用参数模板，可以提高MongoDB数据库的效率。模板列表从 DescribeDBInstanceParamTpl 接口获取，注意模板支持的版本。
+     */
+    public void setParamTemplateId(String ParamTemplateId) {
+        this.ParamTemplateId = ParamTemplateId;
+    }
+
     public CreateDBInstanceHourRequest() {
     }
 
@@ -864,6 +887,9 @@ public class CreateDBInstanceHourRequest extends AbstractModel {
         if (source.HiddenZone != null) {
             this.HiddenZone = new String(source.HiddenZone);
         }
+        if (source.ParamTemplateId != null) {
+            this.ParamTemplateId = new String(source.ParamTemplateId);
+        }
     }
 
 
@@ -897,6 +923,7 @@ public class CreateDBInstanceHourRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ReadonlyNodeNum", this.ReadonlyNodeNum);
         this.setParamArraySimple(map, prefix + "ReadonlyNodeAvailabilityZoneList.", this.ReadonlyNodeAvailabilityZoneList);
         this.setParamSimple(map, prefix + "HiddenZone", this.HiddenZone);
+        this.setParamSimple(map, prefix + "ParamTemplateId", this.ParamTemplateId);
 
     }
 }

@@ -31,7 +31,7 @@ public class NetworkAclEntry extends AbstractModel {
     private String Protocol;
 
     /**
-    * 端口(all, 单个port,  range)。当Protocol为ALL或ICMP时，不能指定Port。
+    * 端口(all, 单个port,  range)。当Protocol为ALL或ICMP时，不能指定Port。使用-指定端口范围，如：10-20。
     */
     @SerializedName("Port")
     @Expose
@@ -112,16 +112,16 @@ public class NetworkAclEntry extends AbstractModel {
     }
 
     /**
-     * Get 端口(all, 单个port,  range)。当Protocol为ALL或ICMP时，不能指定Port。 
-     * @return Port 端口(all, 单个port,  range)。当Protocol为ALL或ICMP时，不能指定Port。
+     * Get 端口(all, 单个port,  range)。当Protocol为ALL或ICMP时，不能指定Port。使用-指定端口范围，如：10-20。 
+     * @return Port 端口(all, 单个port,  range)。当Protocol为ALL或ICMP时，不能指定Port。使用-指定端口范围，如：10-20。
      */
     public String getPort() {
         return this.Port;
     }
 
     /**
-     * Set 端口(all, 单个port,  range)。当Protocol为ALL或ICMP时，不能指定Port。
-     * @param Port 端口(all, 单个port,  range)。当Protocol为ALL或ICMP时，不能指定Port。
+     * Set 端口(all, 单个port,  range)。当Protocol为ALL或ICMP时，不能指定Port。使用-指定端口范围，如：10-20。
+     * @param Port 端口(all, 单个port,  range)。当Protocol为ALL或ICMP时，不能指定Port。使用-指定端口范围，如：10-20。
      */
     public void setPort(String Port) {
         this.Port = Port;

@@ -45,10 +45,7 @@ public class ModifySpartaProtectionRequest extends AbstractModel {
     private String InstanceID;
 
     /**
-    * 必填项。证书类型。
-0：仅配置HTTP监听端口，没有证书
-1：证书来源为自有证书
-2：证书来源为托管证书
+    * 证书类型。0：仅配置HTTP监听端口，没有证书1：证书来源为自有证书2：证书来源为托管证书
     */
     @SerializedName("CertType")
     @Expose
@@ -76,11 +73,7 @@ public class ModifySpartaProtectionRequest extends AbstractModel {
     private String SSLId;
 
     /**
-    * 必填项。waf前是否部署有七层代理服务。
-0：没有部署代理服务
-1：有部署代理服务，waf将使用XFF获取客户端IP
-2：有部署代理服务，waf将使用remote_addr获取客户端IP
-3：有部署代理服务，waf将使用ip_headers中的自定义header获取客户端IP
+    * waf前是否部署有七层代理服务。0：没有部署代理服务1：有部署代理服务，waf将使用XFF获取客户端IP2：有部署代理服务，waf将使用remote_addr获取客户端IP3：有部署代理服务，waf将使用ip_headers中的自定义header获取客户端IP
     */
     @SerializedName("IsCdn")
     @Expose
@@ -103,18 +96,14 @@ https：使用https协议回源
     private String HttpsUpstreamPort;
 
     /**
-    * 必填项。是否开启HTTP强制跳转到HTTPS。
-0：不强制跳转
-1：开启强制跳转
+    * 是否开启HTTP强制跳转到HTTPS。0：不强制跳转1：开启强制跳转
     */
     @SerializedName("HttpsRewrite")
     @Expose
     private Long HttpsRewrite;
 
     /**
-    * 必填项。回源类型。
-0：通过IP回源
-1：通过域名回源
+    * 回源类型。0：通过IP回源1：通过域名回源
     */
     @SerializedName("UpstreamType")
     @Expose
@@ -135,28 +124,21 @@ https：使用https协议回源
     private String [] SrcList;
 
     /**
-    * 必填项。是否开启HTTP2，需要开启HTTPS协议支持。
-0：关闭
-1：开启
+    * 是否开启HTTP2，需要开启HTTPS协议支持。0：关闭1：开启
     */
     @SerializedName("IsHttp2")
     @Expose
     private Long IsHttp2;
 
     /**
-    * 必填项。是否开启WebSocket支持。
-0：关闭
-1：开启
+    * 是否开启WebSocket支持。0：关闭1：开启
     */
     @SerializedName("IsWebsocket")
     @Expose
     private Long IsWebsocket;
 
     /**
-    * 必填项。回源负载均衡策略。
-0：轮询
-1：IP hash
-2：加权轮询
+    * 回源负载均衡策略。0：轮询1：IP hash2：加权轮询
     */
     @SerializedName("LoadBalance")
     @Expose
@@ -177,23 +159,21 @@ https：使用https协议回源
     private String Edition;
 
     /**
-    * 必填项。端口信息，可通过DescribeDomains接口获取具体参数信息。
+    * 端口信息，可通过DescribeDomains接口获取具体参数信息。
     */
     @SerializedName("Ports")
     @Expose
     private SpartaProtectionPort [] Ports;
 
     /**
-    * 必填项。是否开启长连接。
-0： 短连接
-1： 长连接
+    * 是否开启长连接。0： 短连接1： 长连接
     */
     @SerializedName("IsKeepAlive")
     @Expose
     private String IsKeepAlive;
 
     /**
-    * 必填项，待废弃。目前填0即可。anycast IP类型开关： 0 普通IP 1 Anycast IP
+    * 待废弃。目前填0即可。anycast IP类型开关： 0 普通IP 1 Anycast IP
     */
     @SerializedName("Anycast")
     @Expose
@@ -207,9 +187,7 @@ https：使用https协议回源
     private Long [] Weights;
 
     /**
-    * 必填项，是否开启主动健康检测。
-0：不开启
-1：开启
+    * 是否开启主动健康检测。0：不开启1：开启
     */
     @SerializedName("ActiveCheck")
     @Expose
@@ -230,11 +208,7 @@ https：使用https协议回源
     private Long [] Ciphers;
 
     /**
-    * 必填项。加密套件模板。
-0：不支持选择，使用默认模板  
-1：通用型模板 
-2：安全型模板
-3：自定义模板
+    * 加密套件模板。0：不支持选择，使用默认模板  1：通用型模板 2：安全型模板3：自定义模板
     */
     @SerializedName("CipherTemplate")
     @Expose
@@ -280,9 +254,7 @@ https：使用https协议回源
     private String [] IpHeaders;
 
     /**
-    * 必填项。是否开启XFF重置。
-0：关闭
-1：开启
+    * 是否开启XFF重置。0：关闭1：开启
     */
     @SerializedName("XFFReset")
     @Expose
@@ -365,28 +337,16 @@ https：使用https协议回源
     }
 
     /**
-     * Get 必填项。证书类型。
-0：仅配置HTTP监听端口，没有证书
-1：证书来源为自有证书
-2：证书来源为托管证书 
-     * @return CertType 必填项。证书类型。
-0：仅配置HTTP监听端口，没有证书
-1：证书来源为自有证书
-2：证书来源为托管证书
+     * Get 证书类型。0：仅配置HTTP监听端口，没有证书1：证书来源为自有证书2：证书来源为托管证书 
+     * @return CertType 证书类型。0：仅配置HTTP监听端口，没有证书1：证书来源为自有证书2：证书来源为托管证书
      */
     public Long getCertType() {
         return this.CertType;
     }
 
     /**
-     * Set 必填项。证书类型。
-0：仅配置HTTP监听端口，没有证书
-1：证书来源为自有证书
-2：证书来源为托管证书
-     * @param CertType 必填项。证书类型。
-0：仅配置HTTP监听端口，没有证书
-1：证书来源为自有证书
-2：证书来源为托管证书
+     * Set 证书类型。0：仅配置HTTP监听端口，没有证书1：证书来源为自有证书2：证书来源为托管证书
+     * @param CertType 证书类型。0：仅配置HTTP监听端口，没有证书1：证书来源为自有证书2：证书来源为托管证书
      */
     public void setCertType(Long CertType) {
         this.CertType = CertType;
@@ -441,32 +401,16 @@ https：使用https协议回源
     }
 
     /**
-     * Get 必填项。waf前是否部署有七层代理服务。
-0：没有部署代理服务
-1：有部署代理服务，waf将使用XFF获取客户端IP
-2：有部署代理服务，waf将使用remote_addr获取客户端IP
-3：有部署代理服务，waf将使用ip_headers中的自定义header获取客户端IP 
-     * @return IsCdn 必填项。waf前是否部署有七层代理服务。
-0：没有部署代理服务
-1：有部署代理服务，waf将使用XFF获取客户端IP
-2：有部署代理服务，waf将使用remote_addr获取客户端IP
-3：有部署代理服务，waf将使用ip_headers中的自定义header获取客户端IP
+     * Get waf前是否部署有七层代理服务。0：没有部署代理服务1：有部署代理服务，waf将使用XFF获取客户端IP2：有部署代理服务，waf将使用remote_addr获取客户端IP3：有部署代理服务，waf将使用ip_headers中的自定义header获取客户端IP 
+     * @return IsCdn waf前是否部署有七层代理服务。0：没有部署代理服务1：有部署代理服务，waf将使用XFF获取客户端IP2：有部署代理服务，waf将使用remote_addr获取客户端IP3：有部署代理服务，waf将使用ip_headers中的自定义header获取客户端IP
      */
     public Long getIsCdn() {
         return this.IsCdn;
     }
 
     /**
-     * Set 必填项。waf前是否部署有七层代理服务。
-0：没有部署代理服务
-1：有部署代理服务，waf将使用XFF获取客户端IP
-2：有部署代理服务，waf将使用remote_addr获取客户端IP
-3：有部署代理服务，waf将使用ip_headers中的自定义header获取客户端IP
-     * @param IsCdn 必填项。waf前是否部署有七层代理服务。
-0：没有部署代理服务
-1：有部署代理服务，waf将使用XFF获取客户端IP
-2：有部署代理服务，waf将使用remote_addr获取客户端IP
-3：有部署代理服务，waf将使用ip_headers中的自定义header获取客户端IP
+     * Set waf前是否部署有七层代理服务。0：没有部署代理服务1：有部署代理服务，waf将使用XFF获取客户端IP2：有部署代理服务，waf将使用remote_addr获取客户端IP3：有部署代理服务，waf将使用ip_headers中的自定义header获取客户端IP
+     * @param IsCdn waf前是否部署有七层代理服务。0：没有部署代理服务1：有部署代理服务，waf将使用XFF获取客户端IP2：有部署代理服务，waf将使用remote_addr获取客户端IP3：有部署代理服务，waf将使用ip_headers中的自定义header获取客户端IP
      */
     public void setIsCdn(Long IsCdn) {
         this.IsCdn = IsCdn;
@@ -513,48 +457,32 @@ https：使用https协议回源
     }
 
     /**
-     * Get 必填项。是否开启HTTP强制跳转到HTTPS。
-0：不强制跳转
-1：开启强制跳转 
-     * @return HttpsRewrite 必填项。是否开启HTTP强制跳转到HTTPS。
-0：不强制跳转
-1：开启强制跳转
+     * Get 是否开启HTTP强制跳转到HTTPS。0：不强制跳转1：开启强制跳转 
+     * @return HttpsRewrite 是否开启HTTP强制跳转到HTTPS。0：不强制跳转1：开启强制跳转
      */
     public Long getHttpsRewrite() {
         return this.HttpsRewrite;
     }
 
     /**
-     * Set 必填项。是否开启HTTP强制跳转到HTTPS。
-0：不强制跳转
-1：开启强制跳转
-     * @param HttpsRewrite 必填项。是否开启HTTP强制跳转到HTTPS。
-0：不强制跳转
-1：开启强制跳转
+     * Set 是否开启HTTP强制跳转到HTTPS。0：不强制跳转1：开启强制跳转
+     * @param HttpsRewrite 是否开启HTTP强制跳转到HTTPS。0：不强制跳转1：开启强制跳转
      */
     public void setHttpsRewrite(Long HttpsRewrite) {
         this.HttpsRewrite = HttpsRewrite;
     }
 
     /**
-     * Get 必填项。回源类型。
-0：通过IP回源
-1：通过域名回源 
-     * @return UpstreamType 必填项。回源类型。
-0：通过IP回源
-1：通过域名回源
+     * Get 回源类型。0：通过IP回源1：通过域名回源 
+     * @return UpstreamType 回源类型。0：通过IP回源1：通过域名回源
      */
     public Long getUpstreamType() {
         return this.UpstreamType;
     }
 
     /**
-     * Set 必填项。回源类型。
-0：通过IP回源
-1：通过域名回源
-     * @param UpstreamType 必填项。回源类型。
-0：通过IP回源
-1：通过域名回源
+     * Set 回源类型。0：通过IP回源1：通过域名回源
+     * @param UpstreamType 回源类型。0：通过IP回源1：通过域名回源
      */
     public void setUpstreamType(Long UpstreamType) {
         this.UpstreamType = UpstreamType;
@@ -593,76 +521,48 @@ https：使用https协议回源
     }
 
     /**
-     * Get 必填项。是否开启HTTP2，需要开启HTTPS协议支持。
-0：关闭
-1：开启 
-     * @return IsHttp2 必填项。是否开启HTTP2，需要开启HTTPS协议支持。
-0：关闭
-1：开启
+     * Get 是否开启HTTP2，需要开启HTTPS协议支持。0：关闭1：开启 
+     * @return IsHttp2 是否开启HTTP2，需要开启HTTPS协议支持。0：关闭1：开启
      */
     public Long getIsHttp2() {
         return this.IsHttp2;
     }
 
     /**
-     * Set 必填项。是否开启HTTP2，需要开启HTTPS协议支持。
-0：关闭
-1：开启
-     * @param IsHttp2 必填项。是否开启HTTP2，需要开启HTTPS协议支持。
-0：关闭
-1：开启
+     * Set 是否开启HTTP2，需要开启HTTPS协议支持。0：关闭1：开启
+     * @param IsHttp2 是否开启HTTP2，需要开启HTTPS协议支持。0：关闭1：开启
      */
     public void setIsHttp2(Long IsHttp2) {
         this.IsHttp2 = IsHttp2;
     }
 
     /**
-     * Get 必填项。是否开启WebSocket支持。
-0：关闭
-1：开启 
-     * @return IsWebsocket 必填项。是否开启WebSocket支持。
-0：关闭
-1：开启
+     * Get 是否开启WebSocket支持。0：关闭1：开启 
+     * @return IsWebsocket 是否开启WebSocket支持。0：关闭1：开启
      */
     public Long getIsWebsocket() {
         return this.IsWebsocket;
     }
 
     /**
-     * Set 必填项。是否开启WebSocket支持。
-0：关闭
-1：开启
-     * @param IsWebsocket 必填项。是否开启WebSocket支持。
-0：关闭
-1：开启
+     * Set 是否开启WebSocket支持。0：关闭1：开启
+     * @param IsWebsocket 是否开启WebSocket支持。0：关闭1：开启
      */
     public void setIsWebsocket(Long IsWebsocket) {
         this.IsWebsocket = IsWebsocket;
     }
 
     /**
-     * Get 必填项。回源负载均衡策略。
-0：轮询
-1：IP hash
-2：加权轮询 
-     * @return LoadBalance 必填项。回源负载均衡策略。
-0：轮询
-1：IP hash
-2：加权轮询
+     * Get 回源负载均衡策略。0：轮询1：IP hash2：加权轮询 
+     * @return LoadBalance 回源负载均衡策略。0：轮询1：IP hash2：加权轮询
      */
     public Long getLoadBalance() {
         return this.LoadBalance;
     }
 
     /**
-     * Set 必填项。回源负载均衡策略。
-0：轮询
-1：IP hash
-2：加权轮询
-     * @param LoadBalance 必填项。回源负载均衡策略。
-0：轮询
-1：IP hash
-2：加权轮询
+     * Set 回源负载均衡策略。0：轮询1：IP hash2：加权轮询
+     * @param LoadBalance 回源负载均衡策略。0：轮询1：IP hash2：加权轮询
      */
     public void setLoadBalance(Long LoadBalance) {
         this.LoadBalance = LoadBalance;
@@ -701,56 +601,48 @@ https：使用https协议回源
     }
 
     /**
-     * Get 必填项。端口信息，可通过DescribeDomains接口获取具体参数信息。 
-     * @return Ports 必填项。端口信息，可通过DescribeDomains接口获取具体参数信息。
+     * Get 端口信息，可通过DescribeDomains接口获取具体参数信息。 
+     * @return Ports 端口信息，可通过DescribeDomains接口获取具体参数信息。
      */
     public SpartaProtectionPort [] getPorts() {
         return this.Ports;
     }
 
     /**
-     * Set 必填项。端口信息，可通过DescribeDomains接口获取具体参数信息。
-     * @param Ports 必填项。端口信息，可通过DescribeDomains接口获取具体参数信息。
+     * Set 端口信息，可通过DescribeDomains接口获取具体参数信息。
+     * @param Ports 端口信息，可通过DescribeDomains接口获取具体参数信息。
      */
     public void setPorts(SpartaProtectionPort [] Ports) {
         this.Ports = Ports;
     }
 
     /**
-     * Get 必填项。是否开启长连接。
-0： 短连接
-1： 长连接 
-     * @return IsKeepAlive 必填项。是否开启长连接。
-0： 短连接
-1： 长连接
+     * Get 是否开启长连接。0： 短连接1： 长连接 
+     * @return IsKeepAlive 是否开启长连接。0： 短连接1： 长连接
      */
     public String getIsKeepAlive() {
         return this.IsKeepAlive;
     }
 
     /**
-     * Set 必填项。是否开启长连接。
-0： 短连接
-1： 长连接
-     * @param IsKeepAlive 必填项。是否开启长连接。
-0： 短连接
-1： 长连接
+     * Set 是否开启长连接。0： 短连接1： 长连接
+     * @param IsKeepAlive 是否开启长连接。0： 短连接1： 长连接
      */
     public void setIsKeepAlive(String IsKeepAlive) {
         this.IsKeepAlive = IsKeepAlive;
     }
 
     /**
-     * Get 必填项，待废弃。目前填0即可。anycast IP类型开关： 0 普通IP 1 Anycast IP 
-     * @return Anycast 必填项，待废弃。目前填0即可。anycast IP类型开关： 0 普通IP 1 Anycast IP
+     * Get 待废弃。目前填0即可。anycast IP类型开关： 0 普通IP 1 Anycast IP 
+     * @return Anycast 待废弃。目前填0即可。anycast IP类型开关： 0 普通IP 1 Anycast IP
      */
     public Long getAnycast() {
         return this.Anycast;
     }
 
     /**
-     * Set 必填项，待废弃。目前填0即可。anycast IP类型开关： 0 普通IP 1 Anycast IP
-     * @param Anycast 必填项，待废弃。目前填0即可。anycast IP类型开关： 0 普通IP 1 Anycast IP
+     * Set 待废弃。目前填0即可。anycast IP类型开关： 0 普通IP 1 Anycast IP
+     * @param Anycast 待废弃。目前填0即可。anycast IP类型开关： 0 普通IP 1 Anycast IP
      */
     public void setAnycast(Long Anycast) {
         this.Anycast = Anycast;
@@ -773,24 +665,16 @@ https：使用https协议回源
     }
 
     /**
-     * Get 必填项，是否开启主动健康检测。
-0：不开启
-1：开启 
-     * @return ActiveCheck 必填项，是否开启主动健康检测。
-0：不开启
-1：开启
+     * Get 是否开启主动健康检测。0：不开启1：开启 
+     * @return ActiveCheck 是否开启主动健康检测。0：不开启1：开启
      */
     public Long getActiveCheck() {
         return this.ActiveCheck;
     }
 
     /**
-     * Set 必填项，是否开启主动健康检测。
-0：不开启
-1：开启
-     * @param ActiveCheck 必填项，是否开启主动健康检测。
-0：不开启
-1：开启
+     * Set 是否开启主动健康检测。0：不开启1：开启
+     * @param ActiveCheck 是否开启主动健康检测。0：不开启1：开启
      */
     public void setActiveCheck(Long ActiveCheck) {
         this.ActiveCheck = ActiveCheck;
@@ -829,32 +713,16 @@ https：使用https协议回源
     }
 
     /**
-     * Get 必填项。加密套件模板。
-0：不支持选择，使用默认模板  
-1：通用型模板 
-2：安全型模板
-3：自定义模板 
-     * @return CipherTemplate 必填项。加密套件模板。
-0：不支持选择，使用默认模板  
-1：通用型模板 
-2：安全型模板
-3：自定义模板
+     * Get 加密套件模板。0：不支持选择，使用默认模板  1：通用型模板 2：安全型模板3：自定义模板 
+     * @return CipherTemplate 加密套件模板。0：不支持选择，使用默认模板  1：通用型模板 2：安全型模板3：自定义模板
      */
     public Long getCipherTemplate() {
         return this.CipherTemplate;
     }
 
     /**
-     * Set 必填项。加密套件模板。
-0：不支持选择，使用默认模板  
-1：通用型模板 
-2：安全型模板
-3：自定义模板
-     * @param CipherTemplate 必填项。加密套件模板。
-0：不支持选择，使用默认模板  
-1：通用型模板 
-2：安全型模板
-3：自定义模板
+     * Set 加密套件模板。0：不支持选择，使用默认模板  1：通用型模板 2：安全型模板3：自定义模板
+     * @param CipherTemplate 加密套件模板。0：不支持选择，使用默认模板  1：通用型模板 2：安全型模板3：自定义模板
      */
     public void setCipherTemplate(Long CipherTemplate) {
         this.CipherTemplate = CipherTemplate;
@@ -957,24 +825,16 @@ https：使用https协议回源
     }
 
     /**
-     * Get 必填项。是否开启XFF重置。
-0：关闭
-1：开启 
-     * @return XFFReset 必填项。是否开启XFF重置。
-0：关闭
-1：开启
+     * Get 是否开启XFF重置。0：关闭1：开启 
+     * @return XFFReset 是否开启XFF重置。0：关闭1：开启
      */
     public Long getXFFReset() {
         return this.XFFReset;
     }
 
     /**
-     * Set 必填项。是否开启XFF重置。
-0：关闭
-1：开启
-     * @param XFFReset 必填项。是否开启XFF重置。
-0：关闭
-1：开启
+     * Set 是否开启XFF重置。0：关闭1：开启
+     * @param XFFReset 是否开启XFF重置。0：关闭1：开启
      */
     public void setXFFReset(Long XFFReset) {
         this.XFFReset = XFFReset;

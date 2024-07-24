@@ -24,16 +24,14 @@ import java.util.HashMap;
 public class DescribePrometheusRecordRulesRequest extends AbstractModel {
 
     /**
-    * 实例ID
-
-示例值：prom-343kafd34
+    * Prometheus 实例 ID
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 偏移量，默认为0。 示例值：1
+    * 偏移量，默认为0。
     */
     @SerializedName("Offset")
     @Expose
@@ -41,66 +39,53 @@ public class DescribePrometheusRecordRulesRequest extends AbstractModel {
 
     /**
     * 返回数量，默认为20，最大值为100。
-示例值：1
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 仅支持按Name, Values字段过滤:
-- Name = Name
-  按照给定的预聚合名称列表匹配
+    * 仅支持按Name, Values字段过滤。
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-     * Get 实例ID
-
-示例值：prom-343kafd34 
-     * @return InstanceId 实例ID
-
-示例值：prom-343kafd34
+     * Get Prometheus 实例 ID 
+     * @return InstanceId Prometheus 实例 ID
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-
-示例值：prom-343kafd34
-     * @param InstanceId 实例ID
-
-示例值：prom-343kafd34
+     * Set Prometheus 实例 ID
+     * @param InstanceId Prometheus 实例 ID
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 偏移量，默认为0。 示例值：1 
-     * @return Offset 偏移量，默认为0。 示例值：1
+     * Get 偏移量，默认为0。 
+     * @return Offset 偏移量，默认为0。
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量，默认为0。 示例值：1
-     * @param Offset 偏移量，默认为0。 示例值：1
+     * Set 偏移量，默认为0。
+     * @param Offset 偏移量，默认为0。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 返回数量，默认为20，最大值为100。
-示例值：1 
+     * Get 返回数量，默认为20，最大值为100。 
      * @return Limit 返回数量，默认为20，最大值为100。
-示例值：1
      */
     public Long getLimit() {
         return this.Limit;
@@ -108,33 +93,23 @@ public class DescribePrometheusRecordRulesRequest extends AbstractModel {
 
     /**
      * Set 返回数量，默认为20，最大值为100。
-示例值：1
      * @param Limit 返回数量，默认为20，最大值为100。
-示例值：1
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 仅支持按Name, Values字段过滤:
-- Name = Name
-  按照给定的预聚合名称列表匹配 
-     * @return Filters 仅支持按Name, Values字段过滤:
-- Name = Name
-  按照给定的预聚合名称列表匹配
+     * Get 仅支持按Name, Values字段过滤。 
+     * @return Filters 仅支持按Name, Values字段过滤。
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 仅支持按Name, Values字段过滤:
-- Name = Name
-  按照给定的预聚合名称列表匹配
-     * @param Filters 仅支持按Name, Values字段过滤:
-- Name = Name
-  按照给定的预聚合名称列表匹配
+     * Set 仅支持按Name, Values字段过滤。
+     * @param Filters 仅支持按Name, Values字段过滤。
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

@@ -31,7 +31,7 @@ public class DeleteStaffRequest extends AbstractModel {
     private Long SdkAppId;
 
     /**
-    * 待删除客服邮箱列表
+    * 待删除客服邮箱列表，一次最大支持200个。
     */
     @SerializedName("StaffList")
     @Expose
@@ -54,16 +54,16 @@ public class DeleteStaffRequest extends AbstractModel {
     }
 
     /**
-     * Get 待删除客服邮箱列表 
-     * @return StaffList 待删除客服邮箱列表
+     * Get 待删除客服邮箱列表，一次最大支持200个。 
+     * @return StaffList 待删除客服邮箱列表，一次最大支持200个。
      */
     public String [] getStaffList() {
         return this.StaffList;
     }
 
     /**
-     * Set 待删除客服邮箱列表
-     * @param StaffList 待删除客服邮箱列表
+     * Set 待删除客服邮箱列表，一次最大支持200个。
+     * @param StaffList 待删除客服邮箱列表，一次最大支持200个。
      */
     public void setStaffList(String [] StaffList) {
         this.StaffList = StaffList;

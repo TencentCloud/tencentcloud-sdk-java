@@ -244,6 +244,14 @@ public class OrganizationalFunction extends AbstractModel {
     private String [] OwnerUserIdsStr;
 
     /**
+    * 数据库环境
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EnvType")
+    @Expose
+    private String EnvType;
+
+    /**
      * Get 名称 
      * @return Name 名称
      */
@@ -787,6 +795,26 @@ public class OrganizationalFunction extends AbstractModel {
         this.OwnerUserIdsStr = OwnerUserIdsStr;
     }
 
+    /**
+     * Get 数据库环境
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EnvType 数据库环境
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getEnvType() {
+        return this.EnvType;
+    }
+
+    /**
+     * Set 数据库环境
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EnvType 数据库环境
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEnvType(String EnvType) {
+        this.EnvType = EnvType;
+    }
+
     public OrganizationalFunction() {
     }
 
@@ -894,6 +922,9 @@ public class OrganizationalFunction extends AbstractModel {
                 this.OwnerUserIdsStr[i] = new String(source.OwnerUserIdsStr[i]);
             }
         }
+        if (source.EnvType != null) {
+            this.EnvType = new String(source.EnvType);
+        }
     }
 
 
@@ -929,6 +960,7 @@ public class OrganizationalFunction extends AbstractModel {
         this.setParamSimple(map, prefix + "Tag", this.Tag);
         this.setParamArraySimple(map, prefix + "OperatorUserIdsStr.", this.OperatorUserIdsStr);
         this.setParamArraySimple(map, prefix + "OwnerUserIdsStr.", this.OwnerUserIdsStr);
+        this.setParamSimple(map, prefix + "EnvType", this.EnvType);
 
     }
 }

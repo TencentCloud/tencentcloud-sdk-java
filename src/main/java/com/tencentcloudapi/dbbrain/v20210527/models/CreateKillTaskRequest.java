@@ -66,6 +66,13 @@ public class CreateKillTaskRequest extends AbstractModel {
     private String Info;
 
     /**
+    * 任务过滤条件，支持多个关键字匹配，与Info参数互斥。
+    */
+    @SerializedName("Infos")
+    @Expose
+    private String [] Infos;
+
+    /**
     * 任务过滤条件，用户类型。
     */
     @SerializedName("User")
@@ -183,6 +190,22 @@ public class CreateKillTaskRequest extends AbstractModel {
     }
 
     /**
+     * Get 任务过滤条件，支持多个关键字匹配，与Info参数互斥。 
+     * @return Infos 任务过滤条件，支持多个关键字匹配，与Info参数互斥。
+     */
+    public String [] getInfos() {
+        return this.Infos;
+    }
+
+    /**
+     * Set 任务过滤条件，支持多个关键字匹配，与Info参数互斥。
+     * @param Infos 任务过滤条件，支持多个关键字匹配，与Info参数互斥。
+     */
+    public void setInfos(String [] Infos) {
+        this.Infos = Infos;
+    }
+
+    /**
      * Get 任务过滤条件，用户类型。 
      * @return User 任务过滤条件，用户类型。
      */
@@ -256,6 +279,12 @@ public class CreateKillTaskRequest extends AbstractModel {
         if (source.Info != null) {
             this.Info = new String(source.Info);
         }
+        if (source.Infos != null) {
+            this.Infos = new String[source.Infos.length];
+            for (int i = 0; i < source.Infos.length; i++) {
+                this.Infos[i] = new String(source.Infos[i]);
+            }
+        }
         if (source.User != null) {
             this.User = new String(source.User);
         }
@@ -278,6 +307,7 @@ public class CreateKillTaskRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "DB", this.DB);
         this.setParamSimple(map, prefix + "Command", this.Command);
         this.setParamSimple(map, prefix + "Info", this.Info);
+        this.setParamArraySimple(map, prefix + "Infos.", this.Infos);
         this.setParamSimple(map, prefix + "User", this.User);
         this.setParamSimple(map, prefix + "Time", this.Time);
         this.setParamSimple(map, prefix + "Product", this.Product);

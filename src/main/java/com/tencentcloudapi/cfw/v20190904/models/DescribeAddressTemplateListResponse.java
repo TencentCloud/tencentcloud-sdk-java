@@ -66,6 +66,20 @@ public class DescribeAddressTemplateListResponse extends AbstractModel {
     private Long PortTemplateCount;
 
     /**
+    * 已使用的地址模版数
+    */
+    @SerializedName("UsedTemplateCount")
+    @Expose
+    private Long UsedTemplateCount;
+
+    /**
+    * 地址模版配额数量
+    */
+    @SerializedName("TemplateQuotaCount")
+    @Expose
+    private Long TemplateQuotaCount;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -169,6 +183,38 @@ public class DescribeAddressTemplateListResponse extends AbstractModel {
     }
 
     /**
+     * Get 已使用的地址模版数 
+     * @return UsedTemplateCount 已使用的地址模版数
+     */
+    public Long getUsedTemplateCount() {
+        return this.UsedTemplateCount;
+    }
+
+    /**
+     * Set 已使用的地址模版数
+     * @param UsedTemplateCount 已使用的地址模版数
+     */
+    public void setUsedTemplateCount(Long UsedTemplateCount) {
+        this.UsedTemplateCount = UsedTemplateCount;
+    }
+
+    /**
+     * Get 地址模版配额数量 
+     * @return TemplateQuotaCount 地址模版配额数量
+     */
+    public Long getTemplateQuotaCount() {
+        return this.TemplateQuotaCount;
+    }
+
+    /**
+     * Set 地址模版配额数量
+     * @param TemplateQuotaCount 地址模版配额数量
+     */
+    public void setTemplateQuotaCount(Long TemplateQuotaCount) {
+        this.TemplateQuotaCount = TemplateQuotaCount;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -216,6 +262,12 @@ public class DescribeAddressTemplateListResponse extends AbstractModel {
         if (source.PortTemplateCount != null) {
             this.PortTemplateCount = new Long(source.PortTemplateCount);
         }
+        if (source.UsedTemplateCount != null) {
+            this.UsedTemplateCount = new Long(source.UsedTemplateCount);
+        }
+        if (source.TemplateQuotaCount != null) {
+            this.TemplateQuotaCount = new Long(source.TemplateQuotaCount);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -232,6 +284,8 @@ public class DescribeAddressTemplateListResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "IpTemplateCount", this.IpTemplateCount);
         this.setParamSimple(map, prefix + "DomainTemplateCount", this.DomainTemplateCount);
         this.setParamSimple(map, prefix + "PortTemplateCount", this.PortTemplateCount);
+        this.setParamSimple(map, prefix + "UsedTemplateCount", this.UsedTemplateCount);
+        this.setParamSimple(map, prefix + "TemplateQuotaCount", this.TemplateQuotaCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

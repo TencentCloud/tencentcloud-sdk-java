@@ -530,6 +530,17 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
+     *本接口用于重启数据库节点。
+     * @param req RestartNodesRequest
+     * @return RestartNodesResponse
+     * @throws TencentCloudSDKException
+     */
+    public RestartNodesResponse RestartNodes(RestartNodesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RestartNodes", RestartNodesResponse.class);
+    }
+
+    /**
      *本接口（SetAccountUserPrivilege）用于设置实例的账号权限。
      * @param req SetAccountUserPrivilegeRequest
      * @return SetAccountUserPrivilegeResponse

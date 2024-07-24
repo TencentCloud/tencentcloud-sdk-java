@@ -52,6 +52,14 @@ public class DescribeLogsResponse extends AbstractModel {
     private String ReturnMsg;
 
     /**
+    * 七层协议，NTA日志有效
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AppProtocolList")
+    @Expose
+    private String [] AppProtocolList;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -123,6 +131,26 @@ public class DescribeLogsResponse extends AbstractModel {
     }
 
     /**
+     * Get 七层协议，NTA日志有效
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AppProtocolList 七层协议，NTA日志有效
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getAppProtocolList() {
+        return this.AppProtocolList;
+    }
+
+    /**
+     * Set 七层协议，NTA日志有效
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AppProtocolList 七层协议，NTA日志有效
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAppProtocolList(String [] AppProtocolList) {
+        this.AppProtocolList = AppProtocolList;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -158,6 +186,12 @@ public class DescribeLogsResponse extends AbstractModel {
         if (source.ReturnMsg != null) {
             this.ReturnMsg = new String(source.ReturnMsg);
         }
+        if (source.AppProtocolList != null) {
+            this.AppProtocolList = new String[source.AppProtocolList.length];
+            for (int i = 0; i < source.AppProtocolList.length; i++) {
+                this.AppProtocolList[i] = new String(source.AppProtocolList[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -172,6 +206,7 @@ public class DescribeLogsResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "Total", this.Total);
         this.setParamSimple(map, prefix + "ReturnCode", this.ReturnCode);
         this.setParamSimple(map, prefix + "ReturnMsg", this.ReturnMsg);
+        this.setParamArraySimple(map, prefix + "AppProtocolList.", this.AppProtocolList);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

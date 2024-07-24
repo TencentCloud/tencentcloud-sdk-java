@@ -256,6 +256,13 @@ public class CreateDBInstanceRequest extends AbstractModel {
     private String HiddenZone;
 
     /**
+    * 参数模板 ID。参数模板是一组 MongoDB 的参数并为预设置了参数值的集合，将一组有相同诉求的参数及值 存为模板，在创建实例时，可直接引用参数值到新实例。合理使用参数模板，可以提高MongoDB数据库的效率。模板列表从 DescribeDBInstanceParamTpl 接口获取，注意模板支持的版本及实例类型。
+    */
+    @SerializedName("ParamTemplateId")
+    @Expose
+    private String ParamTemplateId;
+
+    /**
      * Get - 创建副本集实例，指每个副本集内主从节点数量。每个副本集所支持的最大节点数与最小节点数，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
 - 创建分片集群实例，指每个分片的主从节点数量。每个分片所支持的最大节点数与最小节点数，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。 
      * @return NodeNum - 创建副本集实例，指每个副本集内主从节点数量。每个副本集所支持的最大节点数与最小节点数，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
@@ -835,6 +842,22 @@ public class CreateDBInstanceRequest extends AbstractModel {
         this.HiddenZone = HiddenZone;
     }
 
+    /**
+     * Get 参数模板 ID。参数模板是一组 MongoDB 的参数并为预设置了参数值的集合，将一组有相同诉求的参数及值 存为模板，在创建实例时，可直接引用参数值到新实例。合理使用参数模板，可以提高MongoDB数据库的效率。模板列表从 DescribeDBInstanceParamTpl 接口获取，注意模板支持的版本及实例类型。 
+     * @return ParamTemplateId 参数模板 ID。参数模板是一组 MongoDB 的参数并为预设置了参数值的集合，将一组有相同诉求的参数及值 存为模板，在创建实例时，可直接引用参数值到新实例。合理使用参数模板，可以提高MongoDB数据库的效率。模板列表从 DescribeDBInstanceParamTpl 接口获取，注意模板支持的版本及实例类型。
+     */
+    public String getParamTemplateId() {
+        return this.ParamTemplateId;
+    }
+
+    /**
+     * Set 参数模板 ID。参数模板是一组 MongoDB 的参数并为预设置了参数值的集合，将一组有相同诉求的参数及值 存为模板，在创建实例时，可直接引用参数值到新实例。合理使用参数模板，可以提高MongoDB数据库的效率。模板列表从 DescribeDBInstanceParamTpl 接口获取，注意模板支持的版本及实例类型。
+     * @param ParamTemplateId 参数模板 ID。参数模板是一组 MongoDB 的参数并为预设置了参数值的集合，将一组有相同诉求的参数及值 存为模板，在创建实例时，可直接引用参数值到新实例。合理使用参数模板，可以提高MongoDB数据库的效率。模板列表从 DescribeDBInstanceParamTpl 接口获取，注意模板支持的版本及实例类型。
+     */
+    public void setParamTemplateId(String ParamTemplateId) {
+        this.ParamTemplateId = ParamTemplateId;
+    }
+
     public CreateDBInstanceRequest() {
     }
 
@@ -942,6 +965,9 @@ public class CreateDBInstanceRequest extends AbstractModel {
         if (source.HiddenZone != null) {
             this.HiddenZone = new String(source.HiddenZone);
         }
+        if (source.ParamTemplateId != null) {
+            this.ParamTemplateId = new String(source.ParamTemplateId);
+        }
     }
 
 
@@ -978,6 +1004,7 @@ public class CreateDBInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ReadonlyNodeNum", this.ReadonlyNodeNum);
         this.setParamArraySimple(map, prefix + "ReadonlyNodeAvailabilityZoneList.", this.ReadonlyNodeAvailabilityZoneList);
         this.setParamSimple(map, prefix + "HiddenZone", this.HiddenZone);
+        this.setParamSimple(map, prefix + "ParamTemplateId", this.ParamTemplateId);
 
     }
 }

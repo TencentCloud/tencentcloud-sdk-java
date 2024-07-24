@@ -45,6 +45,13 @@ public class PermitOCRRequest extends AbstractModel {
     private String ImageUrl;
 
     /**
+    * 是否返回头像照片，默认为 false
+    */
+    @SerializedName("CropPortrait")
+    @Expose
+    private Boolean CropPortrait;
+
+    /**
      * Get 图片的 Base64 值。
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
 支持的图片大小：所下载图片经Base64编码后不超过 7M。图片下载时间不超过 3 秒。
@@ -104,6 +111,22 @@ public class PermitOCRRequest extends AbstractModel {
         this.ImageUrl = ImageUrl;
     }
 
+    /**
+     * Get 是否返回头像照片，默认为 false 
+     * @return CropPortrait 是否返回头像照片，默认为 false
+     */
+    public Boolean getCropPortrait() {
+        return this.CropPortrait;
+    }
+
+    /**
+     * Set 是否返回头像照片，默认为 false
+     * @param CropPortrait 是否返回头像照片，默认为 false
+     */
+    public void setCropPortrait(Boolean CropPortrait) {
+        this.CropPortrait = CropPortrait;
+    }
+
     public PermitOCRRequest() {
     }
 
@@ -118,6 +141,9 @@ public class PermitOCRRequest extends AbstractModel {
         if (source.ImageUrl != null) {
             this.ImageUrl = new String(source.ImageUrl);
         }
+        if (source.CropPortrait != null) {
+            this.CropPortrait = new Boolean(source.CropPortrait);
+        }
     }
 
 
@@ -127,6 +153,7 @@ public class PermitOCRRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
         this.setParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
+        this.setParamSimple(map, prefix + "CropPortrait", this.CropPortrait);
 
     }
 }
