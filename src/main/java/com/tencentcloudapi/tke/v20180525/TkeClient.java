@@ -1647,6 +1647,17 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *查询各种规格类型的预留券使用率
+     * @param req DescribeReservedInstanceUtilizationRateRequest
+     * @return DescribeReservedInstanceUtilizationRateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeReservedInstanceUtilizationRateResponse DescribeReservedInstanceUtilizationRate(DescribeReservedInstanceUtilizationRateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeReservedInstanceUtilizationRate", DescribeReservedInstanceUtilizationRateResponse.class);
+    }
+
+    /**
      *查询预留实例列表
      * @param req DescribeReservedInstancesRequest
      * @return DescribeReservedInstancesResponse

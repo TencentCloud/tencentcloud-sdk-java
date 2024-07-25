@@ -94,6 +94,14 @@ public class InstanceCLSDeliveryInfo extends AbstractModel {
     private String Status;
 
     /**
+    * 日志类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LogType")
+    @Expose
+    private String LogType;
+
+    /**
      * Get 实例id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return InstanceId 实例id
@@ -277,6 +285,26 @@ public class InstanceCLSDeliveryInfo extends AbstractModel {
         this.Status = Status;
     }
 
+    /**
+     * Get 日志类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LogType 日志类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLogType() {
+        return this.LogType;
+    }
+
+    /**
+     * Set 日志类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LogType 日志类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLogType(String LogType) {
+        this.LogType = LogType;
+    }
+
     public InstanceCLSDeliveryInfo() {
     }
 
@@ -309,6 +337,9 @@ public class InstanceCLSDeliveryInfo extends AbstractModel {
         if (source.Status != null) {
             this.Status = new String(source.Status);
         }
+        if (source.LogType != null) {
+            this.LogType = new String(source.LogType);
+        }
     }
 
 
@@ -324,6 +355,7 @@ public class InstanceCLSDeliveryInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "GroupName", this.GroupName);
         this.setParamSimple(map, prefix + "Region", this.Region);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "LogType", this.LogType);
 
     }
 }

@@ -110,6 +110,13 @@ public class CreateProbeTasksRequest extends AbstractModel {
     private Long NodeIpType;
 
     /**
+    * 供应商子账户同步标志
+    */
+    @SerializedName("SubSyncFlag")
+    @Expose
+    private Long SubSyncFlag;
+
+    /**
      * Get 批量任务名-地址 
      * @return BatchTasks 批量任务名-地址
      */
@@ -309,6 +316,22 @@ public class CreateProbeTasksRequest extends AbstractModel {
         this.NodeIpType = NodeIpType;
     }
 
+    /**
+     * Get 供应商子账户同步标志 
+     * @return SubSyncFlag 供应商子账户同步标志
+     */
+    public Long getSubSyncFlag() {
+        return this.SubSyncFlag;
+    }
+
+    /**
+     * Set 供应商子账户同步标志
+     * @param SubSyncFlag 供应商子账户同步标志
+     */
+    public void setSubSyncFlag(Long SubSyncFlag) {
+        this.SubSyncFlag = SubSyncFlag;
+    }
+
     public CreateProbeTasksRequest() {
     }
 
@@ -362,6 +385,9 @@ public class CreateProbeTasksRequest extends AbstractModel {
         if (source.NodeIpType != null) {
             this.NodeIpType = new Long(source.NodeIpType);
         }
+        if (source.SubSyncFlag != null) {
+            this.SubSyncFlag = new Long(source.SubSyncFlag);
+        }
     }
 
 
@@ -381,6 +407,7 @@ public class CreateProbeTasksRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "PluginSource", this.PluginSource);
         this.setParamSimple(map, prefix + "ClientNum", this.ClientNum);
         this.setParamSimple(map, prefix + "NodeIpType", this.NodeIpType);
+        this.setParamSimple(map, prefix + "SubSyncFlag", this.SubSyncFlag);
 
     }
 }

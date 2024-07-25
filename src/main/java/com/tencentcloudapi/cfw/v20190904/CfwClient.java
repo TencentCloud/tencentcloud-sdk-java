@@ -593,6 +593,17 @@ public class CfwClient extends AbstractClient{
     }
 
     /**
+     *查询Nat防火墙Dnat规则
+     * @param req DescribeNatFwDnatRuleRequest
+     * @return DescribeNatFwDnatRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeNatFwDnatRuleResponse DescribeNatFwDnatRule(DescribeNatFwDnatRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeNatFwDnatRule", DescribeNatFwDnatRuleResponse.class);
+    }
+
+    /**
      *获取当前用户接入nat防火墙的所有子网数及natfw实例个数
      * @param req DescribeNatFwInfoCountRequest
      * @return DescribeNatFwInfoCountResponse

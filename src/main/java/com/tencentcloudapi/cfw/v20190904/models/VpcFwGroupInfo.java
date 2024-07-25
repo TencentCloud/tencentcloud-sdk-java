@@ -120,6 +120,22 @@ public class VpcFwGroupInfo extends AbstractModel {
     private String CrossUserMode;
 
     /**
+    * 云联网模式下，当前实例是否需要开启重叠路由开关，1：需要开启，0：不需要开启
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NeedSwitchCcnOverlap")
+    @Expose
+    private Long NeedSwitchCcnOverlap;
+
+    /**
+    * 云联网模式下，实例关联的云联网id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CcnId")
+    @Expose
+    private String CcnId;
+
+    /**
      * Get 防火墙(组)ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return FwGroupId 防火墙(组)ID
@@ -359,6 +375,46 @@ public class VpcFwGroupInfo extends AbstractModel {
         this.CrossUserMode = CrossUserMode;
     }
 
+    /**
+     * Get 云联网模式下，当前实例是否需要开启重叠路由开关，1：需要开启，0：不需要开启
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NeedSwitchCcnOverlap 云联网模式下，当前实例是否需要开启重叠路由开关，1：需要开启，0：不需要开启
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getNeedSwitchCcnOverlap() {
+        return this.NeedSwitchCcnOverlap;
+    }
+
+    /**
+     * Set 云联网模式下，当前实例是否需要开启重叠路由开关，1：需要开启，0：不需要开启
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NeedSwitchCcnOverlap 云联网模式下，当前实例是否需要开启重叠路由开关，1：需要开启，0：不需要开启
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNeedSwitchCcnOverlap(Long NeedSwitchCcnOverlap) {
+        this.NeedSwitchCcnOverlap = NeedSwitchCcnOverlap;
+    }
+
+    /**
+     * Get 云联网模式下，实例关联的云联网id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CcnId 云联网模式下，实例关联的云联网id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCcnId() {
+        return this.CcnId;
+    }
+
+    /**
+     * Set 云联网模式下，实例关联的云联网id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CcnId 云联网模式下，实例关联的云联网id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCcnId(String CcnId) {
+        this.CcnId = CcnId;
+    }
+
     public VpcFwGroupInfo() {
     }
 
@@ -409,6 +465,12 @@ public class VpcFwGroupInfo extends AbstractModel {
         if (source.CrossUserMode != null) {
             this.CrossUserMode = new String(source.CrossUserMode);
         }
+        if (source.NeedSwitchCcnOverlap != null) {
+            this.NeedSwitchCcnOverlap = new Long(source.NeedSwitchCcnOverlap);
+        }
+        if (source.CcnId != null) {
+            this.CcnId = new String(source.CcnId);
+        }
     }
 
 
@@ -428,6 +490,8 @@ public class VpcFwGroupInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "CdcId", this.CdcId);
         this.setParamSimple(map, prefix + "CdcName", this.CdcName);
         this.setParamSimple(map, prefix + "CrossUserMode", this.CrossUserMode);
+        this.setParamSimple(map, prefix + "NeedSwitchCcnOverlap", this.NeedSwitchCcnOverlap);
+        this.setParamSimple(map, prefix + "CcnId", this.CcnId);
 
     }
 }

@@ -105,6 +105,14 @@ public class ImageResultsResultDetail extends AbstractModel {
     private String SubLabelCode;
 
     /**
+    * 该字段用于返回恶意标签下对应的子标签的检测结果，如：*Porn-SexBehavior*等子标签。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SubLabel")
+    @Expose
+    private String SubLabel;
+
+    /**
      * Get 该字段用于返回调用视频审核接口时传入的TaskInput参数中的任务名称，方便任务的识别与管理。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Name 该字段用于返回调用视频审核接口时传入的TaskInput参数中的任务名称，方便任务的识别与管理。
@@ -308,6 +316,26 @@ public class ImageResultsResultDetail extends AbstractModel {
         this.SubLabelCode = SubLabelCode;
     }
 
+    /**
+     * Get 该字段用于返回恶意标签下对应的子标签的检测结果，如：*Porn-SexBehavior*等子标签。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SubLabel 该字段用于返回恶意标签下对应的子标签的检测结果，如：*Porn-SexBehavior*等子标签。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSubLabel() {
+        return this.SubLabel;
+    }
+
+    /**
+     * Set 该字段用于返回恶意标签下对应的子标签的检测结果，如：*Porn-SexBehavior*等子标签。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SubLabel 该字段用于返回恶意标签下对应的子标签的检测结果，如：*Porn-SexBehavior*等子标签。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSubLabel(String SubLabel) {
+        this.SubLabel = SubLabel;
+    }
+
     public ImageResultsResultDetail() {
     }
 
@@ -349,6 +377,9 @@ public class ImageResultsResultDetail extends AbstractModel {
         if (source.SubLabelCode != null) {
             this.SubLabelCode = new String(source.SubLabelCode);
         }
+        if (source.SubLabel != null) {
+            this.SubLabel = new String(source.SubLabel);
+        }
     }
 
 
@@ -366,6 +397,7 @@ public class ImageResultsResultDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "Suggestion", this.Suggestion);
         this.setParamSimple(map, prefix + "Score", this.Score);
         this.setParamSimple(map, prefix + "SubLabelCode", this.SubLabelCode);
+        this.setParamSimple(map, prefix + "SubLabel", this.SubLabel);
 
     }
 }

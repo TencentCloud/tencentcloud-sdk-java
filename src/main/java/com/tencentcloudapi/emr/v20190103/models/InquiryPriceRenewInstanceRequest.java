@@ -38,13 +38,6 @@ public class InquiryPriceRenewInstanceRequest extends AbstractModel {
     private String [] ResourceIds;
 
     /**
-    * 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
-    */
-    @SerializedName("Placement")
-    @Expose
-    private Placement Placement;
-
-    /**
     * 实例计费模式。此处只支持取值为1，表示包年包月。
     */
     @SerializedName("PayMode")
@@ -66,6 +59,13 @@ public class InquiryPriceRenewInstanceRequest extends AbstractModel {
     @SerializedName("Currency")
     @Expose
     private String Currency;
+
+    /**
+    * 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
+    */
+    @SerializedName("Placement")
+    @Expose
+    private Placement Placement;
 
     /**
     * 是否按量转包年包月。0：否，1：是。
@@ -104,22 +104,6 @@ public class InquiryPriceRenewInstanceRequest extends AbstractModel {
      */
     public void setResourceIds(String [] ResourceIds) {
         this.ResourceIds = ResourceIds;
-    }
-
-    /**
-     * Get 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。 
-     * @return Placement 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
-     */
-    public Placement getPlacement() {
-        return this.Placement;
-    }
-
-    /**
-     * Set 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
-     * @param Placement 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
-     */
-    public void setPlacement(Placement Placement) {
-        this.Placement = Placement;
     }
 
     /**
@@ -179,6 +163,22 @@ public class InquiryPriceRenewInstanceRequest extends AbstractModel {
     }
 
     /**
+     * Get 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。 
+     * @return Placement 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
+     */
+    public Placement getPlacement() {
+        return this.Placement;
+    }
+
+    /**
+     * Set 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
+     * @param Placement 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
+     */
+    public void setPlacement(Placement Placement) {
+        this.Placement = Placement;
+    }
+
+    /**
      * Get 是否按量转包年包月。0：否，1：是。 
      * @return ModifyPayMode 是否按量转包年包月。0：否，1：是。
      */
@@ -211,9 +211,6 @@ public class InquiryPriceRenewInstanceRequest extends AbstractModel {
                 this.ResourceIds[i] = new String(source.ResourceIds[i]);
             }
         }
-        if (source.Placement != null) {
-            this.Placement = new Placement(source.Placement);
-        }
         if (source.PayMode != null) {
             this.PayMode = new Long(source.PayMode);
         }
@@ -222,6 +219,9 @@ public class InquiryPriceRenewInstanceRequest extends AbstractModel {
         }
         if (source.Currency != null) {
             this.Currency = new String(source.Currency);
+        }
+        if (source.Placement != null) {
+            this.Placement = new Placement(source.Placement);
         }
         if (source.ModifyPayMode != null) {
             this.ModifyPayMode = new Long(source.ModifyPayMode);
@@ -235,10 +235,10 @@ public class InquiryPriceRenewInstanceRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
         this.setParamArraySimple(map, prefix + "ResourceIds.", this.ResourceIds);
-        this.setParamObj(map, prefix + "Placement.", this.Placement);
         this.setParamSimple(map, prefix + "PayMode", this.PayMode);
         this.setParamSimple(map, prefix + "TimeUnit", this.TimeUnit);
         this.setParamSimple(map, prefix + "Currency", this.Currency);
+        this.setParamObj(map, prefix + "Placement.", this.Placement);
         this.setParamSimple(map, prefix + "ModifyPayMode", this.ModifyPayMode);
 
     }

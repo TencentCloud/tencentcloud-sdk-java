@@ -65,7 +65,7 @@ public class AudioResult extends AbstractModel {
     private String Text;
 
     /**
-    * 该字段用于返回音频片段存储的链接地址，该地址有效期为1天。
+    * 该字段用于返回审核结果的访问链接（URL）。<br>备注：链接默认有效期为12小时。如果您需要更长时效的链接，请使用[COS预签名](https://cloud.tencent.com/document/product/1265/104001)功能更新签名时效。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Url")
@@ -122,6 +122,27 @@ public class AudioResult extends AbstractModel {
     @SerializedName("RecognitionResults")
     @Expose
     private RecognitionResult [] RecognitionResults;
+
+    /**
+    * 说话人结果
+    */
+    @SerializedName("SpeakerResults")
+    @Expose
+    private SpeakerResults [] SpeakerResults;
+
+    /**
+    * 歌曲识别结果
+    */
+    @SerializedName("LabelResults")
+    @Expose
+    private LabelResults [] LabelResults;
+
+    /**
+    * 出行结果
+    */
+    @SerializedName("TravelResults")
+    @Expose
+    private TravelResults [] TravelResults;
 
     /**
      * Get 该字段用于返回审核内容是否命中审核模型；取值：0（**未命中**）、1（**命中**）。
@@ -228,9 +249,9 @@ public class AudioResult extends AbstractModel {
     }
 
     /**
-     * Get 该字段用于返回音频片段存储的链接地址，该地址有效期为1天。
+     * Get 该字段用于返回审核结果的访问链接（URL）。<br>备注：链接默认有效期为12小时。如果您需要更长时效的链接，请使用[COS预签名](https://cloud.tencent.com/document/product/1265/104001)功能更新签名时效。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Url 该字段用于返回音频片段存储的链接地址，该地址有效期为1天。
+     * @return Url 该字段用于返回审核结果的访问链接（URL）。<br>备注：链接默认有效期为12小时。如果您需要更长时效的链接，请使用[COS预签名](https://cloud.tencent.com/document/product/1265/104001)功能更新签名时效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUrl() {
@@ -238,9 +259,9 @@ public class AudioResult extends AbstractModel {
     }
 
     /**
-     * Set 该字段用于返回音频片段存储的链接地址，该地址有效期为1天。
+     * Set 该字段用于返回审核结果的访问链接（URL）。<br>备注：链接默认有效期为12小时。如果您需要更长时效的链接，请使用[COS预签名](https://cloud.tencent.com/document/product/1265/104001)功能更新签名时效。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Url 该字段用于返回音频片段存储的链接地址，该地址有效期为1天。
+     * @param Url 该字段用于返回审核结果的访问链接（URL）。<br>备注：链接默认有效期为12小时。如果您需要更长时效的链接，请使用[COS预签名](https://cloud.tencent.com/document/product/1265/104001)功能更新签名时效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUrl(String Url) {
@@ -367,6 +388,54 @@ public class AudioResult extends AbstractModel {
         this.RecognitionResults = RecognitionResults;
     }
 
+    /**
+     * Get 说话人结果 
+     * @return SpeakerResults 说话人结果
+     */
+    public SpeakerResults [] getSpeakerResults() {
+        return this.SpeakerResults;
+    }
+
+    /**
+     * Set 说话人结果
+     * @param SpeakerResults 说话人结果
+     */
+    public void setSpeakerResults(SpeakerResults [] SpeakerResults) {
+        this.SpeakerResults = SpeakerResults;
+    }
+
+    /**
+     * Get 歌曲识别结果 
+     * @return LabelResults 歌曲识别结果
+     */
+    public LabelResults [] getLabelResults() {
+        return this.LabelResults;
+    }
+
+    /**
+     * Set 歌曲识别结果
+     * @param LabelResults 歌曲识别结果
+     */
+    public void setLabelResults(LabelResults [] LabelResults) {
+        this.LabelResults = LabelResults;
+    }
+
+    /**
+     * Get 出行结果 
+     * @return TravelResults 出行结果
+     */
+    public TravelResults [] getTravelResults() {
+        return this.TravelResults;
+    }
+
+    /**
+     * Set 出行结果
+     * @param TravelResults 出行结果
+     */
+    public void setTravelResults(TravelResults [] TravelResults) {
+        this.TravelResults = TravelResults;
+    }
+
     public AudioResult() {
     }
 
@@ -426,6 +495,24 @@ public class AudioResult extends AbstractModel {
                 this.RecognitionResults[i] = new RecognitionResult(source.RecognitionResults[i]);
             }
         }
+        if (source.SpeakerResults != null) {
+            this.SpeakerResults = new SpeakerResults[source.SpeakerResults.length];
+            for (int i = 0; i < source.SpeakerResults.length; i++) {
+                this.SpeakerResults[i] = new SpeakerResults(source.SpeakerResults[i]);
+            }
+        }
+        if (source.LabelResults != null) {
+            this.LabelResults = new LabelResults[source.LabelResults.length];
+            for (int i = 0; i < source.LabelResults.length; i++) {
+                this.LabelResults[i] = new LabelResults(source.LabelResults[i]);
+            }
+        }
+        if (source.TravelResults != null) {
+            this.TravelResults = new TravelResults[source.TravelResults.length];
+            for (int i = 0; i < source.TravelResults.length; i++) {
+                this.TravelResults[i] = new TravelResults(source.TravelResults[i]);
+            }
+        }
     }
 
 
@@ -446,6 +533,9 @@ public class AudioResult extends AbstractModel {
         this.setParamArrayObj(map, prefix + "LanguageResults.", this.LanguageResults);
         this.setParamSimple(map, prefix + "SubLabel", this.SubLabel);
         this.setParamArrayObj(map, prefix + "RecognitionResults.", this.RecognitionResults);
+        this.setParamArrayObj(map, prefix + "SpeakerResults.", this.SpeakerResults);
+        this.setParamArrayObj(map, prefix + "LabelResults.", this.LabelResults);
+        this.setParamArrayObj(map, prefix + "TravelResults.", this.TravelResults);
 
     }
 }

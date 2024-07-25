@@ -38,7 +38,7 @@ public class CreateEmbedTokenRequest extends AbstractModel {
     private Long PageId;
 
     /**
-    * page表示嵌出页面，panel表嵌出整个看板
+    * page表示嵌出页面，panel表示嵌出整个看板
     */
     @SerializedName("Scope")
     @Expose
@@ -158,16 +158,16 @@ Operator 目前支持
     }
 
     /**
-     * Get page表示嵌出页面，panel表嵌出整个看板 
-     * @return Scope page表示嵌出页面，panel表嵌出整个看板
+     * Get page表示嵌出页面，panel表示嵌出整个看板 
+     * @return Scope page表示嵌出页面，panel表示嵌出整个看板
      */
     public String getScope() {
         return this.Scope;
     }
 
     /**
-     * Set page表示嵌出页面，panel表嵌出整个看板
-     * @param Scope page表示嵌出页面，panel表嵌出整个看板
+     * Set page表示嵌出页面，panel表示嵌出整个看板
+     * @param Scope page表示嵌出页面，panel表示嵌出整个看板
      */
     public void setScope(String Scope) {
         this.Scope = Scope;

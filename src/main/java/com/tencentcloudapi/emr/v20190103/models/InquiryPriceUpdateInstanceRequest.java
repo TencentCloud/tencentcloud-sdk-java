@@ -42,13 +42,6 @@ public class InquiryPriceUpdateInstanceRequest extends AbstractModel {
     private Long TimeSpan;
 
     /**
-    * 节点变配的目标配置。
-    */
-    @SerializedName("UpdateSpec")
-    @Expose
-    private UpdateInstanceSettings UpdateSpec;
-
-    /**
     * 实例计费模式。取值范围：
 <li>0：表示按量计费。</li>
 <li>1：表示包年包月。</li>
@@ -56,6 +49,13 @@ public class InquiryPriceUpdateInstanceRequest extends AbstractModel {
     @SerializedName("PayMode")
     @Expose
     private Long PayMode;
+
+    /**
+    * 节点变配的目标配置。
+    */
+    @SerializedName("UpdateSpec")
+    @Expose
+    private UpdateInstanceSettings UpdateSpec;
 
     /**
     * 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
@@ -128,22 +128,6 @@ public class InquiryPriceUpdateInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get 节点变配的目标配置。 
-     * @return UpdateSpec 节点变配的目标配置。
-     */
-    public UpdateInstanceSettings getUpdateSpec() {
-        return this.UpdateSpec;
-    }
-
-    /**
-     * Set 节点变配的目标配置。
-     * @param UpdateSpec 节点变配的目标配置。
-     */
-    public void setUpdateSpec(UpdateInstanceSettings UpdateSpec) {
-        this.UpdateSpec = UpdateSpec;
-    }
-
-    /**
      * Get 实例计费模式。取值范围：
 <li>0：表示按量计费。</li>
 <li>1：表示包年包月。</li> 
@@ -165,6 +149,22 @@ public class InquiryPriceUpdateInstanceRequest extends AbstractModel {
      */
     public void setPayMode(Long PayMode) {
         this.PayMode = PayMode;
+    }
+
+    /**
+     * Get 节点变配的目标配置。 
+     * @return UpdateSpec 节点变配的目标配置。
+     */
+    public UpdateInstanceSettings getUpdateSpec() {
+        return this.UpdateSpec;
+    }
+
+    /**
+     * Set 节点变配的目标配置。
+     * @param UpdateSpec 节点变配的目标配置。
+     */
+    public void setUpdateSpec(UpdateInstanceSettings UpdateSpec) {
+        this.UpdateSpec = UpdateSpec;
     }
 
     /**
@@ -233,11 +233,11 @@ public class InquiryPriceUpdateInstanceRequest extends AbstractModel {
         if (source.TimeSpan != null) {
             this.TimeSpan = new Long(source.TimeSpan);
         }
-        if (source.UpdateSpec != null) {
-            this.UpdateSpec = new UpdateInstanceSettings(source.UpdateSpec);
-        }
         if (source.PayMode != null) {
             this.PayMode = new Long(source.PayMode);
+        }
+        if (source.UpdateSpec != null) {
+            this.UpdateSpec = new UpdateInstanceSettings(source.UpdateSpec);
         }
         if (source.Placement != null) {
             this.Placement = new Placement(source.Placement);
@@ -260,8 +260,8 @@ public class InquiryPriceUpdateInstanceRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TimeUnit", this.TimeUnit);
         this.setParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
-        this.setParamObj(map, prefix + "UpdateSpec.", this.UpdateSpec);
         this.setParamSimple(map, prefix + "PayMode", this.PayMode);
+        this.setParamObj(map, prefix + "UpdateSpec.", this.UpdateSpec);
         this.setParamObj(map, prefix + "Placement.", this.Placement);
         this.setParamSimple(map, prefix + "Currency", this.Currency);
         this.setParamArraySimple(map, prefix + "ResourceIdList.", this.ResourceIdList);

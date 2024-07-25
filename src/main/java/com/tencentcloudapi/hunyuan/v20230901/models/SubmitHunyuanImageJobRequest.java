@@ -50,6 +50,33 @@ public class SubmitHunyuanImageJobRequest extends AbstractModel {
     private String Resolution;
 
     /**
+    * 图片生成数量。
+支持1 ~ 4张，默认生成1张。
+    */
+    @SerializedName("Num")
+    @Expose
+    private Long Num;
+
+    /**
+    * 随机种子，默认随机。
+不传：随机种子生成。
+正数：固定种子生成。
+    */
+    @SerializedName("Seed")
+    @Expose
+    private Long Seed;
+
+    /**
+    * prompt 扩写开关。1为开启，0为关闭，不传默认开启。
+开启扩写后，将自动扩写原始输入的 prompt 并使用扩写后的 prompt 生成图片，返回生成图片结果时将一并返回扩写后的 prompt 文本。
+如果关闭扩写，将直接使用原始输入的 prompt 生成图片。
+建议开启，在多数场景下可提升生成图片效果、丰富生成图片细节。
+    */
+    @SerializedName("Revise")
+    @Expose
+    private Long Revise;
+
+    /**
     * 为生成结果图添加显式水印标识的开关，默认为1。  
 1：添加。  
 0：不添加。  
@@ -61,14 +88,12 @@ public class SubmitHunyuanImageJobRequest extends AbstractModel {
     private Long LogoAdd;
 
     /**
-    * prompt 扩写开关。1为开启，0为关闭，不传默认开启。
-开启扩写后，将自动扩写原始输入的 prompt 并使用扩写后的 prompt 生成图片，返回生成图片结果时将一并返回扩写后的 prompt 文本。
-如果关闭扩写，将直接使用原始输入的 prompt 生成图片。
-建议开启，在多数场景下可提升生成图片效果、丰富生成图片细节。
+    * 标识内容设置。
+默认在生成结果图右下角添加“图片由 AI 生成”字样，您可根据自身需要替换为其他的标识图片。
     */
-    @SerializedName("Revise")
+    @SerializedName("LogoParam")
     @Expose
-    private Long Revise;
+    private LogoParam LogoParam;
 
     /**
      * Get 文本描述。 
@@ -139,6 +164,78 @@ public class SubmitHunyuanImageJobRequest extends AbstractModel {
     }
 
     /**
+     * Get 图片生成数量。
+支持1 ~ 4张，默认生成1张。 
+     * @return Num 图片生成数量。
+支持1 ~ 4张，默认生成1张。
+     */
+    public Long getNum() {
+        return this.Num;
+    }
+
+    /**
+     * Set 图片生成数量。
+支持1 ~ 4张，默认生成1张。
+     * @param Num 图片生成数量。
+支持1 ~ 4张，默认生成1张。
+     */
+    public void setNum(Long Num) {
+        this.Num = Num;
+    }
+
+    /**
+     * Get 随机种子，默认随机。
+不传：随机种子生成。
+正数：固定种子生成。 
+     * @return Seed 随机种子，默认随机。
+不传：随机种子生成。
+正数：固定种子生成。
+     */
+    public Long getSeed() {
+        return this.Seed;
+    }
+
+    /**
+     * Set 随机种子，默认随机。
+不传：随机种子生成。
+正数：固定种子生成。
+     * @param Seed 随机种子，默认随机。
+不传：随机种子生成。
+正数：固定种子生成。
+     */
+    public void setSeed(Long Seed) {
+        this.Seed = Seed;
+    }
+
+    /**
+     * Get prompt 扩写开关。1为开启，0为关闭，不传默认开启。
+开启扩写后，将自动扩写原始输入的 prompt 并使用扩写后的 prompt 生成图片，返回生成图片结果时将一并返回扩写后的 prompt 文本。
+如果关闭扩写，将直接使用原始输入的 prompt 生成图片。
+建议开启，在多数场景下可提升生成图片效果、丰富生成图片细节。 
+     * @return Revise prompt 扩写开关。1为开启，0为关闭，不传默认开启。
+开启扩写后，将自动扩写原始输入的 prompt 并使用扩写后的 prompt 生成图片，返回生成图片结果时将一并返回扩写后的 prompt 文本。
+如果关闭扩写，将直接使用原始输入的 prompt 生成图片。
+建议开启，在多数场景下可提升生成图片效果、丰富生成图片细节。
+     */
+    public Long getRevise() {
+        return this.Revise;
+    }
+
+    /**
+     * Set prompt 扩写开关。1为开启，0为关闭，不传默认开启。
+开启扩写后，将自动扩写原始输入的 prompt 并使用扩写后的 prompt 生成图片，返回生成图片结果时将一并返回扩写后的 prompt 文本。
+如果关闭扩写，将直接使用原始输入的 prompt 生成图片。
+建议开启，在多数场景下可提升生成图片效果、丰富生成图片细节。
+     * @param Revise prompt 扩写开关。1为开启，0为关闭，不传默认开启。
+开启扩写后，将自动扩写原始输入的 prompt 并使用扩写后的 prompt 生成图片，返回生成图片结果时将一并返回扩写后的 prompt 文本。
+如果关闭扩写，将直接使用原始输入的 prompt 生成图片。
+建议开启，在多数场景下可提升生成图片效果、丰富生成图片细节。
+     */
+    public void setRevise(Long Revise) {
+        this.Revise = Revise;
+    }
+
+    /**
      * Get 为生成结果图添加显式水印标识的开关，默认为1。  
 1：添加。  
 0：不添加。  
@@ -171,31 +268,23 @@ public class SubmitHunyuanImageJobRequest extends AbstractModel {
     }
 
     /**
-     * Get prompt 扩写开关。1为开启，0为关闭，不传默认开启。
-开启扩写后，将自动扩写原始输入的 prompt 并使用扩写后的 prompt 生成图片，返回生成图片结果时将一并返回扩写后的 prompt 文本。
-如果关闭扩写，将直接使用原始输入的 prompt 生成图片。
-建议开启，在多数场景下可提升生成图片效果、丰富生成图片细节。 
-     * @return Revise prompt 扩写开关。1为开启，0为关闭，不传默认开启。
-开启扩写后，将自动扩写原始输入的 prompt 并使用扩写后的 prompt 生成图片，返回生成图片结果时将一并返回扩写后的 prompt 文本。
-如果关闭扩写，将直接使用原始输入的 prompt 生成图片。
-建议开启，在多数场景下可提升生成图片效果、丰富生成图片细节。
+     * Get 标识内容设置。
+默认在生成结果图右下角添加“图片由 AI 生成”字样，您可根据自身需要替换为其他的标识图片。 
+     * @return LogoParam 标识内容设置。
+默认在生成结果图右下角添加“图片由 AI 生成”字样，您可根据自身需要替换为其他的标识图片。
      */
-    public Long getRevise() {
-        return this.Revise;
+    public LogoParam getLogoParam() {
+        return this.LogoParam;
     }
 
     /**
-     * Set prompt 扩写开关。1为开启，0为关闭，不传默认开启。
-开启扩写后，将自动扩写原始输入的 prompt 并使用扩写后的 prompt 生成图片，返回生成图片结果时将一并返回扩写后的 prompt 文本。
-如果关闭扩写，将直接使用原始输入的 prompt 生成图片。
-建议开启，在多数场景下可提升生成图片效果、丰富生成图片细节。
-     * @param Revise prompt 扩写开关。1为开启，0为关闭，不传默认开启。
-开启扩写后，将自动扩写原始输入的 prompt 并使用扩写后的 prompt 生成图片，返回生成图片结果时将一并返回扩写后的 prompt 文本。
-如果关闭扩写，将直接使用原始输入的 prompt 生成图片。
-建议开启，在多数场景下可提升生成图片效果、丰富生成图片细节。
+     * Set 标识内容设置。
+默认在生成结果图右下角添加“图片由 AI 生成”字样，您可根据自身需要替换为其他的标识图片。
+     * @param LogoParam 标识内容设置。
+默认在生成结果图右下角添加“图片由 AI 生成”字样，您可根据自身需要替换为其他的标识图片。
      */
-    public void setRevise(Long Revise) {
-        this.Revise = Revise;
+    public void setLogoParam(LogoParam LogoParam) {
+        this.LogoParam = LogoParam;
     }
 
     public SubmitHunyuanImageJobRequest() {
@@ -215,11 +304,20 @@ public class SubmitHunyuanImageJobRequest extends AbstractModel {
         if (source.Resolution != null) {
             this.Resolution = new String(source.Resolution);
         }
-        if (source.LogoAdd != null) {
-            this.LogoAdd = new Long(source.LogoAdd);
+        if (source.Num != null) {
+            this.Num = new Long(source.Num);
+        }
+        if (source.Seed != null) {
+            this.Seed = new Long(source.Seed);
         }
         if (source.Revise != null) {
             this.Revise = new Long(source.Revise);
+        }
+        if (source.LogoAdd != null) {
+            this.LogoAdd = new Long(source.LogoAdd);
+        }
+        if (source.LogoParam != null) {
+            this.LogoParam = new LogoParam(source.LogoParam);
         }
     }
 
@@ -231,8 +329,11 @@ public class SubmitHunyuanImageJobRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Prompt", this.Prompt);
         this.setParamSimple(map, prefix + "Style", this.Style);
         this.setParamSimple(map, prefix + "Resolution", this.Resolution);
-        this.setParamSimple(map, prefix + "LogoAdd", this.LogoAdd);
+        this.setParamSimple(map, prefix + "Num", this.Num);
+        this.setParamSimple(map, prefix + "Seed", this.Seed);
         this.setParamSimple(map, prefix + "Revise", this.Revise);
+        this.setParamSimple(map, prefix + "LogoAdd", this.LogoAdd);
+        this.setParamObj(map, prefix + "LogoParam.", this.LogoParam);
 
     }
 }

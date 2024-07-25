@@ -38,6 +38,20 @@ public class DeleteCLSDeliveryRequest extends AbstractModel {
     private String [] CLSTopicIds;
 
     /**
+    * 日志类型
+    */
+    @SerializedName("LogType")
+    @Expose
+    private String LogType;
+
+    /**
+    * 是否维护时间运行
+    */
+    @SerializedName("IsInMaintainPeriod")
+    @Expose
+    private String IsInMaintainPeriod;
+
+    /**
      * Get 实例id 
      * @return InstanceId 实例id
      */
@@ -69,6 +83,38 @@ public class DeleteCLSDeliveryRequest extends AbstractModel {
         this.CLSTopicIds = CLSTopicIds;
     }
 
+    /**
+     * Get 日志类型 
+     * @return LogType 日志类型
+     */
+    public String getLogType() {
+        return this.LogType;
+    }
+
+    /**
+     * Set 日志类型
+     * @param LogType 日志类型
+     */
+    public void setLogType(String LogType) {
+        this.LogType = LogType;
+    }
+
+    /**
+     * Get 是否维护时间运行 
+     * @return IsInMaintainPeriod 是否维护时间运行
+     */
+    public String getIsInMaintainPeriod() {
+        return this.IsInMaintainPeriod;
+    }
+
+    /**
+     * Set 是否维护时间运行
+     * @param IsInMaintainPeriod 是否维护时间运行
+     */
+    public void setIsInMaintainPeriod(String IsInMaintainPeriod) {
+        this.IsInMaintainPeriod = IsInMaintainPeriod;
+    }
+
     public DeleteCLSDeliveryRequest() {
     }
 
@@ -86,6 +132,12 @@ public class DeleteCLSDeliveryRequest extends AbstractModel {
                 this.CLSTopicIds[i] = new String(source.CLSTopicIds[i]);
             }
         }
+        if (source.LogType != null) {
+            this.LogType = new String(source.LogType);
+        }
+        if (source.IsInMaintainPeriod != null) {
+            this.IsInMaintainPeriod = new String(source.IsInMaintainPeriod);
+        }
     }
 
 
@@ -95,6 +147,8 @@ public class DeleteCLSDeliveryRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamArraySimple(map, prefix + "CLSTopicIds.", this.CLSTopicIds);
+        this.setParamSimple(map, prefix + "LogType", this.LogType);
+        this.setParamSimple(map, prefix + "IsInMaintainPeriod", this.IsInMaintainPeriod);
 
     }
 }

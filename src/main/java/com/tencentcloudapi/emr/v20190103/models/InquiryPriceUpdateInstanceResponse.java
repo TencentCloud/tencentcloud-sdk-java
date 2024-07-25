@@ -66,6 +66,14 @@ public class InquiryPriceUpdateInstanceResponse extends AbstractModel {
     private PriceDetail [] PriceDetail;
 
     /**
+    * 新配置价格
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NewConfigPrice")
+    @Expose
+    private PriceResult NewConfigPrice;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -181,6 +189,26 @@ public class InquiryPriceUpdateInstanceResponse extends AbstractModel {
     }
 
     /**
+     * Get 新配置价格
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NewConfigPrice 新配置价格
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public PriceResult getNewConfigPrice() {
+        return this.NewConfigPrice;
+    }
+
+    /**
+     * Set 新配置价格
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NewConfigPrice 新配置价格
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNewConfigPrice(PriceResult NewConfigPrice) {
+        this.NewConfigPrice = NewConfigPrice;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -222,6 +250,9 @@ public class InquiryPriceUpdateInstanceResponse extends AbstractModel {
                 this.PriceDetail[i] = new PriceDetail(source.PriceDetail[i]);
             }
         }
+        if (source.NewConfigPrice != null) {
+            this.NewConfigPrice = new PriceResult(source.NewConfigPrice);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -237,6 +268,7 @@ public class InquiryPriceUpdateInstanceResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "TimeUnit", this.TimeUnit);
         this.setParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
         this.setParamArrayObj(map, prefix + "PriceDetail.", this.PriceDetail);
+        this.setParamObj(map, prefix + "NewConfigPrice.", this.NewConfigPrice);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -110,6 +110,14 @@ public class TaskData extends AbstractModel {
     private String UpdatedAt;
 
     /**
+    * 任务信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InputInfo")
+    @Expose
+    private InputInfo InputInfo;
+
+    /**
      * Get 该字段用于返回音频审核任务数据所对应的数据ID，方便后续查询和管理审核任务。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return DataId 该字段用于返回音频审核任务数据所对应的数据ID，方便后续查询和管理审核任务。
@@ -321,6 +329,26 @@ public class TaskData extends AbstractModel {
         this.UpdatedAt = UpdatedAt;
     }
 
+    /**
+     * Get 任务信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InputInfo 任务信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public InputInfo getInputInfo() {
+        return this.InputInfo;
+    }
+
+    /**
+     * Set 任务信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InputInfo 任务信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInputInfo(InputInfo InputInfo) {
+        this.InputInfo = InputInfo;
+    }
+
     public TaskData() {
     }
 
@@ -365,6 +393,9 @@ public class TaskData extends AbstractModel {
         if (source.UpdatedAt != null) {
             this.UpdatedAt = new String(source.UpdatedAt);
         }
+        if (source.InputInfo != null) {
+            this.InputInfo = new InputInfo(source.InputInfo);
+        }
     }
 
 
@@ -383,6 +414,7 @@ public class TaskData extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Labels.", this.Labels);
         this.setParamSimple(map, prefix + "CreatedAt", this.CreatedAt);
         this.setParamSimple(map, prefix + "UpdatedAt", this.UpdatedAt);
+        this.setParamObj(map, prefix + "InputInfo.", this.InputInfo);
 
     }
 }

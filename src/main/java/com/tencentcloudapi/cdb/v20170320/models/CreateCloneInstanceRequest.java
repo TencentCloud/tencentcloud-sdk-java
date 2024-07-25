@@ -129,7 +129,7 @@ public class CreateCloneInstanceRequest extends AbstractModel {
     private String BackupZone;
 
     /**
-    * 克隆实例类型。支持值包括： "UNIVERSAL" - 通用型实例， "EXCLUSIVE" - 独享型实例。 不指定则默认为通用型。
+    * 克隆实例类型。支持值包括："UNIVERSAL" - 通用型实例，"EXCLUSIVE" - 独享型实例，"CLOUD_NATIVE_CLUSTER" - 集群版标准型，"CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - 集群版加强型。不指定则默认为通用型。
     */
     @SerializedName("DeviceType")
     @Expose
@@ -183,6 +183,13 @@ public class CreateCloneInstanceRequest extends AbstractModel {
     @SerializedName("Period")
     @Expose
     private Long Period;
+
+    /**
+    * 集群版节点拓扑配置。
+    */
+    @SerializedName("ClusterTopology")
+    @Expose
+    private ClusterTopology ClusterTopology;
 
     /**
      * Get 克隆源实例Id。 
@@ -425,16 +432,16 @@ public class CreateCloneInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get 克隆实例类型。支持值包括： "UNIVERSAL" - 通用型实例， "EXCLUSIVE" - 独享型实例。 不指定则默认为通用型。 
-     * @return DeviceType 克隆实例类型。支持值包括： "UNIVERSAL" - 通用型实例， "EXCLUSIVE" - 独享型实例。 不指定则默认为通用型。
+     * Get 克隆实例类型。支持值包括："UNIVERSAL" - 通用型实例，"EXCLUSIVE" - 独享型实例，"CLOUD_NATIVE_CLUSTER" - 集群版标准型，"CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - 集群版加强型。不指定则默认为通用型。 
+     * @return DeviceType 克隆实例类型。支持值包括："UNIVERSAL" - 通用型实例，"EXCLUSIVE" - 独享型实例，"CLOUD_NATIVE_CLUSTER" - 集群版标准型，"CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - 集群版加强型。不指定则默认为通用型。
      */
     public String getDeviceType() {
         return this.DeviceType;
     }
 
     /**
-     * Set 克隆实例类型。支持值包括： "UNIVERSAL" - 通用型实例， "EXCLUSIVE" - 独享型实例。 不指定则默认为通用型。
-     * @param DeviceType 克隆实例类型。支持值包括： "UNIVERSAL" - 通用型实例， "EXCLUSIVE" - 独享型实例。 不指定则默认为通用型。
+     * Set 克隆实例类型。支持值包括："UNIVERSAL" - 通用型实例，"EXCLUSIVE" - 独享型实例，"CLOUD_NATIVE_CLUSTER" - 集群版标准型，"CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - 集群版加强型。不指定则默认为通用型。
+     * @param DeviceType 克隆实例类型。支持值包括："UNIVERSAL" - 通用型实例，"EXCLUSIVE" - 独享型实例，"CLOUD_NATIVE_CLUSTER" - 集群版标准型，"CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - 集群版加强型。不指定则默认为通用型。
      */
     public void setDeviceType(String DeviceType) {
         this.DeviceType = DeviceType;
@@ -552,6 +559,22 @@ public class CreateCloneInstanceRequest extends AbstractModel {
         this.Period = Period;
     }
 
+    /**
+     * Get 集群版节点拓扑配置。 
+     * @return ClusterTopology 集群版节点拓扑配置。
+     */
+    public ClusterTopology getClusterTopology() {
+        return this.ClusterTopology;
+    }
+
+    /**
+     * Set 集群版节点拓扑配置。
+     * @param ClusterTopology 集群版节点拓扑配置。
+     */
+    public void setClusterTopology(ClusterTopology ClusterTopology) {
+        this.ClusterTopology = ClusterTopology;
+    }
+
     public CreateCloneInstanceRequest() {
     }
 
@@ -635,6 +658,9 @@ public class CreateCloneInstanceRequest extends AbstractModel {
         if (source.Period != null) {
             this.Period = new Long(source.Period);
         }
+        if (source.ClusterTopology != null) {
+            this.ClusterTopology = new ClusterTopology(source.ClusterTopology);
+        }
     }
 
 
@@ -665,6 +691,7 @@ public class CreateCloneInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "PayType", this.PayType);
         this.setParamSimple(map, prefix + "Period", this.Period);
+        this.setParamObj(map, prefix + "ClusterTopology.", this.ClusterTopology);
 
     }
 }

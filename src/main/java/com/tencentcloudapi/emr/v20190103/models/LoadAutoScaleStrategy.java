@@ -64,51 +64,12 @@ public class LoadAutoScaleStrategy extends AbstractModel {
     private Long ScaleNum;
 
     /**
-    * 扩缩容负载指标。注:不推荐使用此属性，和LoadMetricsConditions属性配置互斥，配置了LoadMetricsConditions，这个属性不生效。请优先使用LoadMetricsConditions属性支持多指标。
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("LoadMetrics")
-    @Expose
-    private String LoadMetrics;
-
-    /**
-    * 规则元数据记录ID。注:不推荐使用此属性，和LoadMetricsConditions属性配置互斥，配置了LoadMetricsConditions，这个属性不生效。请优先使用LoadMetricsConditions属性支持多指标。
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("MetricId")
-    @Expose
-    private Long MetricId;
-
-    /**
-    * 规则统计周期，提供300s,600s,900s。注:不推荐使用此属性，和LoadMetricsConditions属性配置互斥，配置了LoadMetricsConditions，这个属性不生效。请优先使用LoadMetricsConditions属性支持多指标。
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("StatisticPeriod")
-    @Expose
-    private Long StatisticPeriod;
-
-    /**
     * 指标处理方法，1表示MAX，2表示MIN，3表示AVG。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProcessMethod")
     @Expose
     private Long ProcessMethod;
-
-    /**
-    * 触发次数，当连续触发超过TriggerThreshold次后才开始扩缩容。注:不推荐使用此属性，和LoadMetricsConditions属性配置互斥，配置了LoadMetricsConditions，这个属性不生效。请优先使用LoadMetricsConditions属性支持多指标。
-    */
-    @SerializedName("TriggerThreshold")
-    @Expose
-    private Long TriggerThreshold;
-
-    /**
-    * 条件触发数组。注:不推荐使用此属性，和LoadMetricsConditions属性配置互斥，配置了LoadMetricsConditions，这个属性不生效。请优先使用LoadMetricsConditions属性支持多指标。
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("TriggerConditions")
-    @Expose
-    private TriggerConditions TriggerConditions;
 
     /**
     * 规则优先级，添加时无效，默认为自增。
@@ -292,66 +253,6 @@ public class LoadAutoScaleStrategy extends AbstractModel {
     }
 
     /**
-     * Get 扩缩容负载指标。注:不推荐使用此属性，和LoadMetricsConditions属性配置互斥，配置了LoadMetricsConditions，这个属性不生效。请优先使用LoadMetricsConditions属性支持多指标。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LoadMetrics 扩缩容负载指标。注:不推荐使用此属性，和LoadMetricsConditions属性配置互斥，配置了LoadMetricsConditions，这个属性不生效。请优先使用LoadMetricsConditions属性支持多指标。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getLoadMetrics() {
-        return this.LoadMetrics;
-    }
-
-    /**
-     * Set 扩缩容负载指标。注:不推荐使用此属性，和LoadMetricsConditions属性配置互斥，配置了LoadMetricsConditions，这个属性不生效。请优先使用LoadMetricsConditions属性支持多指标。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param LoadMetrics 扩缩容负载指标。注:不推荐使用此属性，和LoadMetricsConditions属性配置互斥，配置了LoadMetricsConditions，这个属性不生效。请优先使用LoadMetricsConditions属性支持多指标。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setLoadMetrics(String LoadMetrics) {
-        this.LoadMetrics = LoadMetrics;
-    }
-
-    /**
-     * Get 规则元数据记录ID。注:不推荐使用此属性，和LoadMetricsConditions属性配置互斥，配置了LoadMetricsConditions，这个属性不生效。请优先使用LoadMetricsConditions属性支持多指标。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MetricId 规则元数据记录ID。注:不推荐使用此属性，和LoadMetricsConditions属性配置互斥，配置了LoadMetricsConditions，这个属性不生效。请优先使用LoadMetricsConditions属性支持多指标。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public Long getMetricId() {
-        return this.MetricId;
-    }
-
-    /**
-     * Set 规则元数据记录ID。注:不推荐使用此属性，和LoadMetricsConditions属性配置互斥，配置了LoadMetricsConditions，这个属性不生效。请优先使用LoadMetricsConditions属性支持多指标。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param MetricId 规则元数据记录ID。注:不推荐使用此属性，和LoadMetricsConditions属性配置互斥，配置了LoadMetricsConditions，这个属性不生效。请优先使用LoadMetricsConditions属性支持多指标。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setMetricId(Long MetricId) {
-        this.MetricId = MetricId;
-    }
-
-    /**
-     * Get 规则统计周期，提供300s,600s,900s。注:不推荐使用此属性，和LoadMetricsConditions属性配置互斥，配置了LoadMetricsConditions，这个属性不生效。请优先使用LoadMetricsConditions属性支持多指标。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return StatisticPeriod 规则统计周期，提供300s,600s,900s。注:不推荐使用此属性，和LoadMetricsConditions属性配置互斥，配置了LoadMetricsConditions，这个属性不生效。请优先使用LoadMetricsConditions属性支持多指标。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public Long getStatisticPeriod() {
-        return this.StatisticPeriod;
-    }
-
-    /**
-     * Set 规则统计周期，提供300s,600s,900s。注:不推荐使用此属性，和LoadMetricsConditions属性配置互斥，配置了LoadMetricsConditions，这个属性不生效。请优先使用LoadMetricsConditions属性支持多指标。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param StatisticPeriod 规则统计周期，提供300s,600s,900s。注:不推荐使用此属性，和LoadMetricsConditions属性配置互斥，配置了LoadMetricsConditions，这个属性不生效。请优先使用LoadMetricsConditions属性支持多指标。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setStatisticPeriod(Long StatisticPeriod) {
-        this.StatisticPeriod = StatisticPeriod;
-    }
-
-    /**
      * Get 指标处理方法，1表示MAX，2表示MIN，3表示AVG。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ProcessMethod 指标处理方法，1表示MAX，2表示MIN，3表示AVG。
@@ -369,42 +270,6 @@ public class LoadAutoScaleStrategy extends AbstractModel {
      */
     public void setProcessMethod(Long ProcessMethod) {
         this.ProcessMethod = ProcessMethod;
-    }
-
-    /**
-     * Get 触发次数，当连续触发超过TriggerThreshold次后才开始扩缩容。注:不推荐使用此属性，和LoadMetricsConditions属性配置互斥，配置了LoadMetricsConditions，这个属性不生效。请优先使用LoadMetricsConditions属性支持多指标。 
-     * @return TriggerThreshold 触发次数，当连续触发超过TriggerThreshold次后才开始扩缩容。注:不推荐使用此属性，和LoadMetricsConditions属性配置互斥，配置了LoadMetricsConditions，这个属性不生效。请优先使用LoadMetricsConditions属性支持多指标。
-     */
-    public Long getTriggerThreshold() {
-        return this.TriggerThreshold;
-    }
-
-    /**
-     * Set 触发次数，当连续触发超过TriggerThreshold次后才开始扩缩容。注:不推荐使用此属性，和LoadMetricsConditions属性配置互斥，配置了LoadMetricsConditions，这个属性不生效。请优先使用LoadMetricsConditions属性支持多指标。
-     * @param TriggerThreshold 触发次数，当连续触发超过TriggerThreshold次后才开始扩缩容。注:不推荐使用此属性，和LoadMetricsConditions属性配置互斥，配置了LoadMetricsConditions，这个属性不生效。请优先使用LoadMetricsConditions属性支持多指标。
-     */
-    public void setTriggerThreshold(Long TriggerThreshold) {
-        this.TriggerThreshold = TriggerThreshold;
-    }
-
-    /**
-     * Get 条件触发数组。注:不推荐使用此属性，和LoadMetricsConditions属性配置互斥，配置了LoadMetricsConditions，这个属性不生效。请优先使用LoadMetricsConditions属性支持多指标。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TriggerConditions 条件触发数组。注:不推荐使用此属性，和LoadMetricsConditions属性配置互斥，配置了LoadMetricsConditions，这个属性不生效。请优先使用LoadMetricsConditions属性支持多指标。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public TriggerConditions getTriggerConditions() {
-        return this.TriggerConditions;
-    }
-
-    /**
-     * Set 条件触发数组。注:不推荐使用此属性，和LoadMetricsConditions属性配置互斥，配置了LoadMetricsConditions，这个属性不生效。请优先使用LoadMetricsConditions属性支持多指标。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param TriggerConditions 条件触发数组。注:不推荐使用此属性，和LoadMetricsConditions属性配置互斥，配置了LoadMetricsConditions，这个属性不生效。请优先使用LoadMetricsConditions属性支持多指标。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setTriggerConditions(TriggerConditions TriggerConditions) {
-        this.TriggerConditions = TriggerConditions;
     }
 
     /**
@@ -634,23 +499,8 @@ public class LoadAutoScaleStrategy extends AbstractModel {
         if (source.ScaleNum != null) {
             this.ScaleNum = new Long(source.ScaleNum);
         }
-        if (source.LoadMetrics != null) {
-            this.LoadMetrics = new String(source.LoadMetrics);
-        }
-        if (source.MetricId != null) {
-            this.MetricId = new Long(source.MetricId);
-        }
-        if (source.StatisticPeriod != null) {
-            this.StatisticPeriod = new Long(source.StatisticPeriod);
-        }
         if (source.ProcessMethod != null) {
             this.ProcessMethod = new Long(source.ProcessMethod);
-        }
-        if (source.TriggerThreshold != null) {
-            this.TriggerThreshold = new Long(source.TriggerThreshold);
-        }
-        if (source.TriggerConditions != null) {
-            this.TriggerConditions = new TriggerConditions(source.TriggerConditions);
         }
         if (source.Priority != null) {
             this.Priority = new Long(source.Priority);
@@ -697,12 +547,7 @@ public class LoadAutoScaleStrategy extends AbstractModel {
         this.setParamSimple(map, prefix + "CalmDownTime", this.CalmDownTime);
         this.setParamSimple(map, prefix + "ScaleAction", this.ScaleAction);
         this.setParamSimple(map, prefix + "ScaleNum", this.ScaleNum);
-        this.setParamSimple(map, prefix + "LoadMetrics", this.LoadMetrics);
-        this.setParamSimple(map, prefix + "MetricId", this.MetricId);
-        this.setParamSimple(map, prefix + "StatisticPeriod", this.StatisticPeriod);
         this.setParamSimple(map, prefix + "ProcessMethod", this.ProcessMethod);
-        this.setParamSimple(map, prefix + "TriggerThreshold", this.TriggerThreshold);
-        this.setParamObj(map, prefix + "TriggerConditions.", this.TriggerConditions);
         this.setParamSimple(map, prefix + "Priority", this.Priority);
         this.setParamSimple(map, prefix + "StrategyStatus", this.StrategyStatus);
         this.setParamSimple(map, prefix + "YarnNodeLabel", this.YarnNodeLabel);

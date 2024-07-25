@@ -38,6 +38,22 @@ public class ImageSegments extends AbstractModel {
     private ImageResult Result;
 
     /**
+    * 该字段用于返回视频片段的具体截帧审核时间。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CreatedAt")
+    @Expose
+    private String CreatedAt;
+
+    /**
+    * 该字段用于返回视频片段的截帧时间，单位为豪秒。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OffsetusTime")
+    @Expose
+    private String OffsetusTime;
+
+    /**
      * Get 该字段用于返回视频片段的截帧时间，单位为秒。对于点播文件，该参数代表对应截取图片相对于视频的偏移时间，如0（代表不偏移），5（视频开始后5秒），10（视频开始后10秒）；对于直播文件，该参数则返回对应图片的Unix时间戳，如：1594650717。 
      * @return OffsetTime 该字段用于返回视频片段的截帧时间，单位为秒。对于点播文件，该参数代表对应截取图片相对于视频的偏移时间，如0（代表不偏移），5（视频开始后5秒），10（视频开始后10秒）；对于直播文件，该参数则返回对应图片的Unix时间戳，如：1594650717。
      */
@@ -69,6 +85,46 @@ public class ImageSegments extends AbstractModel {
         this.Result = Result;
     }
 
+    /**
+     * Get 该字段用于返回视频片段的具体截帧审核时间。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CreatedAt 该字段用于返回视频片段的具体截帧审核时间。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCreatedAt() {
+        return this.CreatedAt;
+    }
+
+    /**
+     * Set 该字段用于返回视频片段的具体截帧审核时间。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CreatedAt 该字段用于返回视频片段的具体截帧审核时间。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCreatedAt(String CreatedAt) {
+        this.CreatedAt = CreatedAt;
+    }
+
+    /**
+     * Get 该字段用于返回视频片段的截帧时间，单位为豪秒。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OffsetusTime 该字段用于返回视频片段的截帧时间，单位为豪秒。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getOffsetusTime() {
+        return this.OffsetusTime;
+    }
+
+    /**
+     * Set 该字段用于返回视频片段的截帧时间，单位为豪秒。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OffsetusTime 该字段用于返回视频片段的截帧时间，单位为豪秒。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOffsetusTime(String OffsetusTime) {
+        this.OffsetusTime = OffsetusTime;
+    }
+
     public ImageSegments() {
     }
 
@@ -83,6 +139,12 @@ public class ImageSegments extends AbstractModel {
         if (source.Result != null) {
             this.Result = new ImageResult(source.Result);
         }
+        if (source.CreatedAt != null) {
+            this.CreatedAt = new String(source.CreatedAt);
+        }
+        if (source.OffsetusTime != null) {
+            this.OffsetusTime = new String(source.OffsetusTime);
+        }
     }
 
 
@@ -92,6 +154,8 @@ public class ImageSegments extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "OffsetTime", this.OffsetTime);
         this.setParamObj(map, prefix + "Result.", this.Result);
+        this.setParamSimple(map, prefix + "CreatedAt", this.CreatedAt);
+        this.setParamSimple(map, prefix + "OffsetusTime", this.OffsetusTime);
 
     }
 }

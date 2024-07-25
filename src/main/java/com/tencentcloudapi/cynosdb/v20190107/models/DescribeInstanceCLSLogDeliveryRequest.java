@@ -31,6 +31,13 @@ public class DescribeInstanceCLSLogDeliveryRequest extends AbstractModel {
     private String InstanceId;
 
     /**
+    * 日志类型
+    */
+    @SerializedName("LogType")
+    @Expose
+    private String LogType;
+
+    /**
      * Get 实例id 
      * @return InstanceId 实例id
      */
@@ -46,6 +53,22 @@ public class DescribeInstanceCLSLogDeliveryRequest extends AbstractModel {
         this.InstanceId = InstanceId;
     }
 
+    /**
+     * Get 日志类型 
+     * @return LogType 日志类型
+     */
+    public String getLogType() {
+        return this.LogType;
+    }
+
+    /**
+     * Set 日志类型
+     * @param LogType 日志类型
+     */
+    public void setLogType(String LogType) {
+        this.LogType = LogType;
+    }
+
     public DescribeInstanceCLSLogDeliveryRequest() {
     }
 
@@ -57,6 +80,9 @@ public class DescribeInstanceCLSLogDeliveryRequest extends AbstractModel {
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }
+        if (source.LogType != null) {
+            this.LogType = new String(source.LogType);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class DescribeInstanceCLSLogDeliveryRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "LogType", this.LogType);
 
     }
 }

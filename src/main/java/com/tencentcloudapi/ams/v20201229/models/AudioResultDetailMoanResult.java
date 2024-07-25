@@ -145,7 +145,9 @@ public class AudioResultDetailMoanResult extends AbstractModel {
     /**
      * Get *内测中，敬请期待* 
      * @return SubLabelCode *内测中，敬请期待*
+     * @deprecated
      */
+    @Deprecated
     public String getSubLabelCode() {
         return this.SubLabelCode;
     }
@@ -153,7 +155,9 @@ public class AudioResultDetailMoanResult extends AbstractModel {
     /**
      * Set *内测中，敬请期待*
      * @param SubLabelCode *内测中，敬请期待*
+     * @deprecated
      */
+    @Deprecated
     public void setSubLabelCode(String SubLabelCode) {
         this.SubLabelCode = SubLabelCode;
     }
