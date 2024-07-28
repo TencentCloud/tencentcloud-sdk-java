@@ -78,6 +78,13 @@ public class CreatePartnerAutoSignAuthUrlRequest extends AbstractModel {
     private String [] SealTypes;
 
     /**
+    * 他方授权给我方：- false：我方授权他方，AuthorizedOrganizationName代表【被授权方】企业名称- true：他方授权我方，AuthorizedOrganizationName代表【授权方】企业名称
+    */
+    @SerializedName("AuthToMe")
+    @Expose
+    private Boolean AuthToMe;
+
+    /**
      * Get 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
 
 此接口下面信息必填。
@@ -233,6 +240,22 @@ public class CreatePartnerAutoSignAuthUrlRequest extends AbstractModel {
         this.SealTypes = SealTypes;
     }
 
+    /**
+     * Get 他方授权给我方：- false：我方授权他方，AuthorizedOrganizationName代表【被授权方】企业名称- true：他方授权我方，AuthorizedOrganizationName代表【授权方】企业名称 
+     * @return AuthToMe 他方授权给我方：- false：我方授权他方，AuthorizedOrganizationName代表【被授权方】企业名称- true：他方授权我方，AuthorizedOrganizationName代表【授权方】企业名称
+     */
+    public Boolean getAuthToMe() {
+        return this.AuthToMe;
+    }
+
+    /**
+     * Set 他方授权给我方：- false：我方授权他方，AuthorizedOrganizationName代表【被授权方】企业名称- true：他方授权我方，AuthorizedOrganizationName代表【授权方】企业名称
+     * @param AuthToMe 他方授权给我方：- false：我方授权他方，AuthorizedOrganizationName代表【被授权方】企业名称- true：他方授权我方，AuthorizedOrganizationName代表【授权方】企业名称
+     */
+    public void setAuthToMe(Boolean AuthToMe) {
+        this.AuthToMe = AuthToMe;
+    }
+
     public CreatePartnerAutoSignAuthUrlRequest() {
     }
 
@@ -259,6 +282,9 @@ public class CreatePartnerAutoSignAuthUrlRequest extends AbstractModel {
                 this.SealTypes[i] = new String(source.SealTypes[i]);
             }
         }
+        if (source.AuthToMe != null) {
+            this.AuthToMe = new Boolean(source.AuthToMe);
+        }
     }
 
 
@@ -271,6 +297,7 @@ public class CreatePartnerAutoSignAuthUrlRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "AuthorizedOrganizationName", this.AuthorizedOrganizationName);
         this.setParamSimple(map, prefix + "PlatformAppAuthorization", this.PlatformAppAuthorization);
         this.setParamArraySimple(map, prefix + "SealTypes.", this.SealTypes);
+        this.setParamSimple(map, prefix + "AuthToMe", this.AuthToMe);
 
     }
 }

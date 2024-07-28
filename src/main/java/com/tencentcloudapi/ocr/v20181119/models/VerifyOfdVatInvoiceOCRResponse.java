@@ -163,6 +163,13 @@ public class VerifyOfdVatInvoiceOCRResponse extends AbstractModel {
     private RailwayTicketInfo RailwayTicketInfo;
 
     /**
+    * 发票标题
+    */
+    @SerializedName("InvoiceTitle")
+    @Expose
+    private String InvoiceTitle;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -498,6 +505,22 @@ public class VerifyOfdVatInvoiceOCRResponse extends AbstractModel {
     }
 
     /**
+     * Get 发票标题 
+     * @return InvoiceTitle 发票标题
+     */
+    public String getInvoiceTitle() {
+        return this.InvoiceTitle;
+    }
+
+    /**
+     * Set 发票标题
+     * @param InvoiceTitle 发票标题
+     */
+    public void setInvoiceTitle(String InvoiceTitle) {
+        this.InvoiceTitle = InvoiceTitle;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -581,6 +604,9 @@ public class VerifyOfdVatInvoiceOCRResponse extends AbstractModel {
         if (source.RailwayTicketInfo != null) {
             this.RailwayTicketInfo = new RailwayTicketInfo(source.RailwayTicketInfo);
         }
+        if (source.InvoiceTitle != null) {
+            this.InvoiceTitle = new String(source.InvoiceTitle);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -610,6 +636,7 @@ public class VerifyOfdVatInvoiceOCRResponse extends AbstractModel {
         this.setParamArrayObj(map, prefix + "GoodsInfos.", this.GoodsInfos);
         this.setParamObj(map, prefix + "AirTicketInfo.", this.AirTicketInfo);
         this.setParamObj(map, prefix + "RailwayTicketInfo.", this.RailwayTicketInfo);
+        this.setParamSimple(map, prefix + "InvoiceTitle", this.InvoiceTitle);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

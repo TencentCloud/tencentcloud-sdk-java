@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class GetWsTokenResponse extends AbstractModel {
 
     /**
-    * token值
+    * token值（有效期60s）
     */
     @SerializedName("Token")
     @Expose
     private String Token;
 
     /**
-    * 余额; 余额大于 0 时表示有效.
+    * 余额; 余额大于 0 时表示有效
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Balance")
@@ -53,25 +53,25 @@ public class GetWsTokenResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get token值 
-     * @return Token token值
+     * Get token值（有效期60s） 
+     * @return Token token值（有效期60s）
      */
     public String getToken() {
         return this.Token;
     }
 
     /**
-     * Set token值
-     * @param Token token值
+     * Set token值（有效期60s）
+     * @param Token token值（有效期60s）
      */
     public void setToken(String Token) {
         this.Token = Token;
     }
 
     /**
-     * Get 余额; 余额大于 0 时表示有效.
+     * Get 余额; 余额大于 0 时表示有效
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Balance 余额; 余额大于 0 时表示有效.
+     * @return Balance 余额; 余额大于 0 时表示有效
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getBalance() {
@@ -79,9 +79,9 @@ public class GetWsTokenResponse extends AbstractModel {
     }
 
     /**
-     * Set 余额; 余额大于 0 时表示有效.
+     * Set 余额; 余额大于 0 时表示有效
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Balance 余额; 余额大于 0 时表示有效.
+     * @param Balance 余额; 余额大于 0 时表示有效
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBalance(Float Balance) {

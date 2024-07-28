@@ -31,21 +31,21 @@ public class GetWsTokenRequest extends AbstractModel {
     private Long Type;
 
     /**
-    * 应用AppKey
+    * 应用AppKey（应用发布后在应用页面[发布管理]-[调用信息]-[API管理]处获取）
     */
     @SerializedName("BotAppKey")
     @Expose
     private String BotAppKey;
 
     /**
-    * 坐席ID
+    * 访客ID（外部输入，建议唯一，标识当前接入会话的用户）
     */
     @SerializedName("VisitorBizId")
     @Expose
     private String VisitorBizId;
 
     /**
-    * 坐席标签
+    * 知识标签（用于知识库中知识的检索过滤）
     */
     @SerializedName("VisitorLabels")
     @Expose
@@ -68,48 +68,48 @@ public class GetWsTokenRequest extends AbstractModel {
     }
 
     /**
-     * Get 应用AppKey 
-     * @return BotAppKey 应用AppKey
+     * Get 应用AppKey（应用发布后在应用页面[发布管理]-[调用信息]-[API管理]处获取） 
+     * @return BotAppKey 应用AppKey（应用发布后在应用页面[发布管理]-[调用信息]-[API管理]处获取）
      */
     public String getBotAppKey() {
         return this.BotAppKey;
     }
 
     /**
-     * Set 应用AppKey
-     * @param BotAppKey 应用AppKey
+     * Set 应用AppKey（应用发布后在应用页面[发布管理]-[调用信息]-[API管理]处获取）
+     * @param BotAppKey 应用AppKey（应用发布后在应用页面[发布管理]-[调用信息]-[API管理]处获取）
      */
     public void setBotAppKey(String BotAppKey) {
         this.BotAppKey = BotAppKey;
     }
 
     /**
-     * Get 坐席ID 
-     * @return VisitorBizId 坐席ID
+     * Get 访客ID（外部输入，建议唯一，标识当前接入会话的用户） 
+     * @return VisitorBizId 访客ID（外部输入，建议唯一，标识当前接入会话的用户）
      */
     public String getVisitorBizId() {
         return this.VisitorBizId;
     }
 
     /**
-     * Set 坐席ID
-     * @param VisitorBizId 坐席ID
+     * Set 访客ID（外部输入，建议唯一，标识当前接入会话的用户）
+     * @param VisitorBizId 访客ID（外部输入，建议唯一，标识当前接入会话的用户）
      */
     public void setVisitorBizId(String VisitorBizId) {
         this.VisitorBizId = VisitorBizId;
     }
 
     /**
-     * Get 坐席标签 
-     * @return VisitorLabels 坐席标签
+     * Get 知识标签（用于知识库中知识的检索过滤） 
+     * @return VisitorLabels 知识标签（用于知识库中知识的检索过滤）
      */
     public GetWsTokenReq_Label [] getVisitorLabels() {
         return this.VisitorLabels;
     }
 
     /**
-     * Set 坐席标签
-     * @param VisitorLabels 坐席标签
+     * Set 知识标签（用于知识库中知识的检索过滤）
+     * @param VisitorLabels 知识标签（用于知识库中知识的检索过滤）
      */
     public void setVisitorLabels(GetWsTokenReq_Label [] VisitorLabels) {
         this.VisitorLabels = VisitorLabels;

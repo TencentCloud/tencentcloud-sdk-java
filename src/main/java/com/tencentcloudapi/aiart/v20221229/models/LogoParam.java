@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class LogoParam extends AbstractModel {
 
     /**
-    * 水印url
+    * 水印 Url
     */
     @SerializedName("LogoUrl")
     @Expose
     private String LogoUrl;
 
     /**
-    * 水印base64，url和base64二选一传入
+    * 水印 Base64，Url 和 Base64 二选一传入，如果都提供以 Url 为准
     */
     @SerializedName("LogoImage")
     @Expose
     private String LogoImage;
 
     /**
-    * 水印图片位于融合结果图中的坐标，将按照坐标对标识图片进行位置和大小的拉伸匹配
+    * 水印图片位于生成结果图中的坐标，将按照坐标对标识图片进行位置和大小的拉伸匹配
     */
     @SerializedName("LogoRect")
     @Expose
     private LogoRect LogoRect;
 
     /**
-     * Get 水印url 
-     * @return LogoUrl 水印url
+     * Get 水印 Url 
+     * @return LogoUrl 水印 Url
      */
     public String getLogoUrl() {
         return this.LogoUrl;
     }
 
     /**
-     * Set 水印url
-     * @param LogoUrl 水印url
+     * Set 水印 Url
+     * @param LogoUrl 水印 Url
      */
     public void setLogoUrl(String LogoUrl) {
         this.LogoUrl = LogoUrl;
     }
 
     /**
-     * Get 水印base64，url和base64二选一传入 
-     * @return LogoImage 水印base64，url和base64二选一传入
+     * Get 水印 Base64，Url 和 Base64 二选一传入，如果都提供以 Url 为准 
+     * @return LogoImage 水印 Base64，Url 和 Base64 二选一传入，如果都提供以 Url 为准
      */
     public String getLogoImage() {
         return this.LogoImage;
     }
 
     /**
-     * Set 水印base64，url和base64二选一传入
-     * @param LogoImage 水印base64，url和base64二选一传入
+     * Set 水印 Base64，Url 和 Base64 二选一传入，如果都提供以 Url 为准
+     * @param LogoImage 水印 Base64，Url 和 Base64 二选一传入，如果都提供以 Url 为准
      */
     public void setLogoImage(String LogoImage) {
         this.LogoImage = LogoImage;
     }
 
     /**
-     * Get 水印图片位于融合结果图中的坐标，将按照坐标对标识图片进行位置和大小的拉伸匹配 
-     * @return LogoRect 水印图片位于融合结果图中的坐标，将按照坐标对标识图片进行位置和大小的拉伸匹配
+     * Get 水印图片位于生成结果图中的坐标，将按照坐标对标识图片进行位置和大小的拉伸匹配 
+     * @return LogoRect 水印图片位于生成结果图中的坐标，将按照坐标对标识图片进行位置和大小的拉伸匹配
      */
     public LogoRect getLogoRect() {
         return this.LogoRect;
     }
 
     /**
-     * Set 水印图片位于融合结果图中的坐标，将按照坐标对标识图片进行位置和大小的拉伸匹配
-     * @param LogoRect 水印图片位于融合结果图中的坐标，将按照坐标对标识图片进行位置和大小的拉伸匹配
+     * Set 水印图片位于生成结果图中的坐标，将按照坐标对标识图片进行位置和大小的拉伸匹配
+     * @param LogoRect 水印图片位于生成结果图中的坐标，将按照坐标对标识图片进行位置和大小的拉伸匹配
      */
     public void setLogoRect(LogoRect LogoRect) {
         this.LogoRect = LogoRect;

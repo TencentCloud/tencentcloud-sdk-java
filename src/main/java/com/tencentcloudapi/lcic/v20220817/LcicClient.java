@@ -702,4 +702,15 @@ public class LcicClient extends AbstractClient{
         return this.internalRequest(req, "UnbindDocumentFromRoom", UnbindDocumentFromRoomResponse.class);
     }
 
+    /**
+     *解禁从房间里面踢出的用户
+     * @param req UnblockKickedUserRequest
+     * @return UnblockKickedUserResponse
+     * @throws TencentCloudSDKException
+     */
+    public UnblockKickedUserResponse UnblockKickedUser(UnblockKickedUserRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UnblockKickedUser", UnblockKickedUserResponse.class);
+    }
+
 }

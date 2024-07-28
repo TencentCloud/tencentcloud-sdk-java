@@ -61,6 +61,18 @@ public class VclmClient extends AbstractClient{
     }
 
     /**
+     *用于查询图片唱演任务。
+支持提交音频和图片生成唱演视频，满足社交娱乐、互动营销等场景的需求。
+     * @param req DescribePortraitSingJobRequest
+     * @return DescribePortraitSingJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePortraitSingJobResponse DescribePortraitSingJob(DescribePortraitSingJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribePortraitSingJob", DescribePortraitSingJobResponse.class);
+    }
+
+    /**
      *用于查询视频风格化任务。视频风格化支持将输入视频生成特定风格的视频。生成后的视频画面风格多样、流畅自然，能够满足社交娱乐、互动营销、视频素材制作等场景的需求。
      * @param req DescribeVideoStylizationJobRequest
      * @return DescribeVideoStylizationJobResponse
@@ -91,6 +103,18 @@ public class VclmClient extends AbstractClient{
     public SubmitImageAnimateJobResponse SubmitImageAnimateJob(SubmitImageAnimateJobRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "SubmitImageAnimateJob", SubmitImageAnimateJobResponse.class);
+    }
+
+    /**
+     *用于提交图片唱演任务。
+支持提交音频和图片生成唱演视频，满足社交娱乐、互动营销等场景的需求。
+     * @param req SubmitPortraitSingJobRequest
+     * @return SubmitPortraitSingJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public SubmitPortraitSingJobResponse SubmitPortraitSingJob(SubmitPortraitSingJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SubmitPortraitSingJob", SubmitPortraitSingJobResponse.class);
     }
 
     /**

@@ -39,6 +39,17 @@ public class CfgClient extends AbstractClient{
     }
 
     /**
+     *从动作创建演练
+     * @param req CreateTaskFromActionRequest
+     * @return CreateTaskFromActionResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateTaskFromActionResponse CreateTaskFromAction(CreateTaskFromActionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateTaskFromAction", CreateTaskFromActionResponse.class);
+    }
+
+    /**
      *从经验库创建演练
      * @param req CreateTaskFromTemplateRequest
      * @return CreateTaskFromTemplateResponse
@@ -58,6 +69,39 @@ public class CfgClient extends AbstractClient{
     public DeleteTaskResponse DeleteTask(DeleteTaskRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteTask", DeleteTaskResponse.class);
+    }
+
+    /**
+     *根据动作ID获取动作栏位动态配置参数信息，里面包含动作自有和通用两部分参数。
+     * @param req DescribeActionFieldConfigListRequest
+     * @return DescribeActionFieldConfigListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeActionFieldConfigListResponse DescribeActionFieldConfigList(DescribeActionFieldConfigListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeActionFieldConfigList", DescribeActionFieldConfigListResponse.class);
+    }
+
+    /**
+     *获取混沌演练平台的动作库列表
+     * @param req DescribeActionLibraryListRequest
+     * @return DescribeActionLibraryListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeActionLibraryListResponse DescribeActionLibraryList(DescribeActionLibraryListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeActionLibraryList", DescribeActionLibraryListResponse.class);
+    }
+
+    /**
+     *查询对象类型列表
+     * @param req DescribeObjectTypeListRequest
+     * @return DescribeObjectTypeListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeObjectTypeListResponse DescribeObjectTypeList(DescribeObjectTypeListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeObjectTypeList", DescribeObjectTypeListResponse.class);
     }
 
     /**
