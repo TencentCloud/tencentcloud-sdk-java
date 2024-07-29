@@ -163,6 +163,14 @@ public class BashEvent extends AbstractModel {
     private String RegexBashCmd;
 
     /**
+    * 主机HostName
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HostName")
+    @Expose
+    private String HostName;
+
+    /**
      * Get 数据ID 
      * @return Id 数据ID
      */
@@ -490,6 +498,26 @@ public class BashEvent extends AbstractModel {
         this.RegexBashCmd = RegexBashCmd;
     }
 
+    /**
+     * Get 主机HostName
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return HostName 主机HostName
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getHostName() {
+        return this.HostName;
+    }
+
+    /**
+     * Set 主机HostName
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HostName 主机HostName
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHostName(String HostName) {
+        this.HostName = HostName;
+    }
+
     public BashEvent() {
     }
 
@@ -555,6 +583,9 @@ public class BashEvent extends AbstractModel {
         if (source.RegexBashCmd != null) {
             this.RegexBashCmd = new String(source.RegexBashCmd);
         }
+        if (source.HostName != null) {
+            this.HostName = new String(source.HostName);
+        }
     }
 
 
@@ -581,6 +612,7 @@ public class BashEvent extends AbstractModel {
         this.setParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
         this.setParamSimple(map, prefix + "RuleCategory", this.RuleCategory);
         this.setParamSimple(map, prefix + "RegexBashCmd", this.RegexBashCmd);
+        this.setParamSimple(map, prefix + "HostName", this.HostName);
 
     }
 }

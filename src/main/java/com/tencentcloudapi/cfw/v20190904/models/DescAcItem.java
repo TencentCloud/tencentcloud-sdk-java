@@ -270,6 +270,14 @@ public class DescAcItem extends AbstractModel {
     private String TargetName;
 
     /**
+    * 规则最近命中时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LastHitTime")
+    @Expose
+    private String LastHitTime;
+
+    /**
      * Get 访问源
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return SourceContent 访问源
@@ -881,6 +889,26 @@ public class DescAcItem extends AbstractModel {
         this.TargetName = TargetName;
     }
 
+    /**
+     * Get 规则最近命中时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LastHitTime 规则最近命中时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLastHitTime() {
+        return this.LastHitTime;
+    }
+
+    /**
+     * Set 规则最近命中时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LastHitTime 规则最近命中时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLastHitTime(String LastHitTime) {
+        this.LastHitTime = LastHitTime;
+    }
+
     public DescAcItem() {
     }
 
@@ -985,6 +1013,9 @@ public class DescAcItem extends AbstractModel {
         if (source.TargetName != null) {
             this.TargetName = new String(source.TargetName);
         }
+        if (source.LastHitTime != null) {
+            this.LastHitTime = new String(source.LastHitTime);
+        }
     }
 
 
@@ -1023,6 +1054,7 @@ public class DescAcItem extends AbstractModel {
         this.setParamSimple(map, prefix + "ParamTemplateId", this.ParamTemplateId);
         this.setParamSimple(map, prefix + "SourceName", this.SourceName);
         this.setParamSimple(map, prefix + "TargetName", this.TargetName);
+        this.setParamSimple(map, prefix + "LastHitTime", this.LastHitTime);
 
     }
 }

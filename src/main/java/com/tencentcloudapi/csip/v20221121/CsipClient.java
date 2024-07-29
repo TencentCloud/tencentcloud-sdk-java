@@ -116,6 +116,17 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *云防资产中心统计数据
+     * @param req DescribeCFWAssetStatisticsRequest
+     * @return DescribeCFWAssetStatisticsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCFWAssetStatisticsResponse DescribeCFWAssetStatistics(DescribeCFWAssetStatisticsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCFWAssetStatistics", DescribeCFWAssetStatisticsResponse.class);
+    }
+
+    /**
      *cvm详情
      * @param req DescribeCVMAssetInfoRequest
      * @return DescribeCVMAssetInfoResponse

@@ -24,25 +24,25 @@ import java.util.HashMap;
 public class DescribeCloudStorageAIServiceResponse extends AbstractModel {
 
     /**
-    * 启用状态
+    * 视频分析启用状态
     */
     @SerializedName("Enabled")
     @Expose
     private Boolean Enabled;
 
     /**
-    * 视频分析区域
-    */
-    @SerializedName("ROI")
-    @Expose
-    private String ROI;
-
-    /**
-    * 云存 AI 服务的配置参数
+    * 视频分析配置参数
     */
     @SerializedName("Config")
     @Expose
     private String Config;
+
+    /**
+    * 视频分析识别区域
+    */
+    @SerializedName("ROI")
+    @Expose
+    private String ROI;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -52,51 +52,51 @@ public class DescribeCloudStorageAIServiceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 启用状态 
-     * @return Enabled 启用状态
+     * Get 视频分析启用状态 
+     * @return Enabled 视频分析启用状态
      */
     public Boolean getEnabled() {
         return this.Enabled;
     }
 
     /**
-     * Set 启用状态
-     * @param Enabled 启用状态
+     * Set 视频分析启用状态
+     * @param Enabled 视频分析启用状态
      */
     public void setEnabled(Boolean Enabled) {
         this.Enabled = Enabled;
     }
 
     /**
-     * Get 视频分析区域 
-     * @return ROI 视频分析区域
-     */
-    public String getROI() {
-        return this.ROI;
-    }
-
-    /**
-     * Set 视频分析区域
-     * @param ROI 视频分析区域
-     */
-    public void setROI(String ROI) {
-        this.ROI = ROI;
-    }
-
-    /**
-     * Get 云存 AI 服务的配置参数 
-     * @return Config 云存 AI 服务的配置参数
+     * Get 视频分析配置参数 
+     * @return Config 视频分析配置参数
      */
     public String getConfig() {
         return this.Config;
     }
 
     /**
-     * Set 云存 AI 服务的配置参数
-     * @param Config 云存 AI 服务的配置参数
+     * Set 视频分析配置参数
+     * @param Config 视频分析配置参数
      */
     public void setConfig(String Config) {
         this.Config = Config;
+    }
+
+    /**
+     * Get 视频分析识别区域 
+     * @return ROI 视频分析识别区域
+     */
+    public String getROI() {
+        return this.ROI;
+    }
+
+    /**
+     * Set 视频分析识别区域
+     * @param ROI 视频分析识别区域
+     */
+    public void setROI(String ROI) {
+        this.ROI = ROI;
     }
 
     /**
@@ -126,11 +126,11 @@ public class DescribeCloudStorageAIServiceResponse extends AbstractModel {
         if (source.Enabled != null) {
             this.Enabled = new Boolean(source.Enabled);
         }
-        if (source.ROI != null) {
-            this.ROI = new String(source.ROI);
-        }
         if (source.Config != null) {
             this.Config = new String(source.Config);
+        }
+        if (source.ROI != null) {
+            this.ROI = new String(source.ROI);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -143,8 +143,8 @@ public class DescribeCloudStorageAIServiceResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Enabled", this.Enabled);
-        this.setParamSimple(map, prefix + "ROI", this.ROI);
         this.setParamSimple(map, prefix + "Config", this.Config);
+        this.setParamSimple(map, prefix + "ROI", this.ROI);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

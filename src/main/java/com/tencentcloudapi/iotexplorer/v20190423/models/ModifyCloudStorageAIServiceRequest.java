@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyCloudStorageAIServiceRequest extends AbstractModel {
 
     /**
-    * 产品ID
+    * 产品 ID
     */
     @SerializedName("ProductId")
     @Expose
@@ -39,7 +39,7 @@ public class ModifyCloudStorageAIServiceRequest extends AbstractModel {
 
     /**
     * 云存 AI 服务类型。可选值：
-- `PackageDetect`：包裹检测
+- `RealtimeObjectDetect`：目标检测
 - `Highlight`：视频浓缩
     */
     @SerializedName("ServiceType")
@@ -47,37 +47,37 @@ public class ModifyCloudStorageAIServiceRequest extends AbstractModel {
     private String ServiceType;
 
     /**
-    * 启用状态
+    * 视频分析启用状态
     */
     @SerializedName("Enabled")
     @Expose
     private Boolean Enabled;
 
     /**
-    * 视频分析区域
+    * 视频分析识别区域
     */
     @SerializedName("ROI")
     @Expose
     private String ROI;
 
     /**
-    * 云存 AI 服务的配置参数
+    * 视频分析配置参数
     */
     @SerializedName("Config")
     @Expose
     private String Config;
 
     /**
-     * Get 产品ID 
-     * @return ProductId 产品ID
+     * Get 产品 ID 
+     * @return ProductId 产品 ID
      */
     public String getProductId() {
         return this.ProductId;
     }
 
     /**
-     * Set 产品ID
-     * @param ProductId 产品ID
+     * Set 产品 ID
+     * @param ProductId 产品 ID
      */
     public void setProductId(String ProductId) {
         this.ProductId = ProductId;
@@ -101,10 +101,10 @@ public class ModifyCloudStorageAIServiceRequest extends AbstractModel {
 
     /**
      * Get 云存 AI 服务类型。可选值：
-- `PackageDetect`：包裹检测
+- `RealtimeObjectDetect`：目标检测
 - `Highlight`：视频浓缩 
      * @return ServiceType 云存 AI 服务类型。可选值：
-- `PackageDetect`：包裹检测
+- `RealtimeObjectDetect`：目标检测
 - `Highlight`：视频浓缩
      */
     public String getServiceType() {
@@ -113,10 +113,10 @@ public class ModifyCloudStorageAIServiceRequest extends AbstractModel {
 
     /**
      * Set 云存 AI 服务类型。可选值：
-- `PackageDetect`：包裹检测
+- `RealtimeObjectDetect`：目标检测
 - `Highlight`：视频浓缩
      * @param ServiceType 云存 AI 服务类型。可选值：
-- `PackageDetect`：包裹检测
+- `RealtimeObjectDetect`：目标检测
 - `Highlight`：视频浓缩
      */
     public void setServiceType(String ServiceType) {
@@ -124,48 +124,48 @@ public class ModifyCloudStorageAIServiceRequest extends AbstractModel {
     }
 
     /**
-     * Get 启用状态 
-     * @return Enabled 启用状态
+     * Get 视频分析启用状态 
+     * @return Enabled 视频分析启用状态
      */
     public Boolean getEnabled() {
         return this.Enabled;
     }
 
     /**
-     * Set 启用状态
-     * @param Enabled 启用状态
+     * Set 视频分析启用状态
+     * @param Enabled 视频分析启用状态
      */
     public void setEnabled(Boolean Enabled) {
         this.Enabled = Enabled;
     }
 
     /**
-     * Get 视频分析区域 
-     * @return ROI 视频分析区域
+     * Get 视频分析识别区域 
+     * @return ROI 视频分析识别区域
      */
     public String getROI() {
         return this.ROI;
     }
 
     /**
-     * Set 视频分析区域
-     * @param ROI 视频分析区域
+     * Set 视频分析识别区域
+     * @param ROI 视频分析识别区域
      */
     public void setROI(String ROI) {
         this.ROI = ROI;
     }
 
     /**
-     * Get 云存 AI 服务的配置参数 
-     * @return Config 云存 AI 服务的配置参数
+     * Get 视频分析配置参数 
+     * @return Config 视频分析配置参数
      */
     public String getConfig() {
         return this.Config;
     }
 
     /**
-     * Set 云存 AI 服务的配置参数
-     * @param Config 云存 AI 服务的配置参数
+     * Set 视频分析配置参数
+     * @param Config 视频分析配置参数
      */
     public void setConfig(String Config) {
         this.Config = Config;

@@ -115,6 +115,14 @@ public class DataTransformTaskInfo extends AbstractModel {
     private String EtlContent;
 
     /**
+    * 数据加工类型。0：标准加工任务；1：前置加工任务。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DataTransformType")
+    @Expose
+    private Long DataTransformType;
+
+    /**
      * Get 数据加工任务名称 
      * @return Name 数据加工任务名称
      */
@@ -322,6 +330,26 @@ public class DataTransformTaskInfo extends AbstractModel {
         this.EtlContent = EtlContent;
     }
 
+    /**
+     * Get 数据加工类型。0：标准加工任务；1：前置加工任务。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DataTransformType 数据加工类型。0：标准加工任务；1：前置加工任务。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getDataTransformType() {
+        return this.DataTransformType;
+    }
+
+    /**
+     * Set 数据加工类型。0：标准加工任务；1：前置加工任务。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DataTransformType 数据加工类型。0：标准加工任务；1：前置加工任务。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDataTransformType(Long DataTransformType) {
+        this.DataTransformType = DataTransformType;
+    }
+
     public DataTransformTaskInfo() {
     }
 
@@ -372,6 +400,9 @@ public class DataTransformTaskInfo extends AbstractModel {
         if (source.EtlContent != null) {
             this.EtlContent = new String(source.EtlContent);
         }
+        if (source.DataTransformType != null) {
+            this.DataTransformType = new Long(source.DataTransformType);
+        }
     }
 
 
@@ -392,6 +423,7 @@ public class DataTransformTaskInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "LogsetId", this.LogsetId);
         this.setParamArrayObj(map, prefix + "DstResources.", this.DstResources);
         this.setParamSimple(map, prefix + "EtlContent", this.EtlContent);
+        this.setParamSimple(map, prefix + "DataTransformType", this.DataTransformType);
 
     }
 }

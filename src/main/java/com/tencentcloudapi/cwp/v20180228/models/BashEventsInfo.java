@@ -212,6 +212,14 @@ public class BashEventsInfo extends AbstractModel {
     private String Pid;
 
     /**
+    * 数据来源
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DetectBy")
+    @Expose
+    private String DetectBy;
+
+    /**
      * Get 数据ID 
      * @return Id 数据ID
      */
@@ -663,6 +671,26 @@ public class BashEventsInfo extends AbstractModel {
         this.Pid = Pid;
     }
 
+    /**
+     * Get 数据来源
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DetectBy 数据来源
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDetectBy() {
+        return this.DetectBy;
+    }
+
+    /**
+     * Set 数据来源
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DetectBy 数据来源
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDetectBy(String DetectBy) {
+        this.DetectBy = DetectBy;
+    }
+
     public BashEventsInfo() {
     }
 
@@ -752,6 +780,9 @@ public class BashEventsInfo extends AbstractModel {
         if (source.Pid != null) {
             this.Pid = new String(source.Pid);
         }
+        if (source.DetectBy != null) {
+            this.DetectBy = new String(source.DetectBy);
+        }
     }
 
 
@@ -784,6 +815,7 @@ public class BashEventsInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "MachineStatus", this.MachineStatus);
         this.setParamSimple(map, prefix + "User", this.User);
         this.setParamSimple(map, prefix + "Pid", this.Pid);
+        this.setParamSimple(map, prefix + "DetectBy", this.DetectBy);
 
     }
 }

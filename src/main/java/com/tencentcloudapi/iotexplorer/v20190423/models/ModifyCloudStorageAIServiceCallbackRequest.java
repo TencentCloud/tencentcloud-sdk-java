@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyCloudStorageAIServiceCallbackRequest extends AbstractModel {
 
     /**
-    * 产品ID
+    * 产品 ID
     */
     @SerializedName("ProductId")
     @Expose
@@ -53,16 +53,16 @@ public class ModifyCloudStorageAIServiceCallbackRequest extends AbstractModel {
     private String CallbackToken;
 
     /**
-     * Get 产品ID 
-     * @return ProductId 产品ID
+     * Get 产品 ID 
+     * @return ProductId 产品 ID
      */
     public String getProductId() {
         return this.ProductId;
     }
 
     /**
-     * Set 产品ID
-     * @param ProductId 产品ID
+     * Set 产品 ID
+     * @param ProductId 产品 ID
      */
     public void setProductId(String ProductId) {
         this.ProductId = ProductId;

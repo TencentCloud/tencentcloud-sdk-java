@@ -66,14 +66,14 @@ public class DescribeAddressTemplateListResponse extends AbstractModel {
     private Long PortTemplateCount;
 
     /**
-    * 已使用的地址模版数
+    * 已使用的地址模板数
     */
     @SerializedName("UsedTemplateCount")
     @Expose
     private Long UsedTemplateCount;
 
     /**
-    * 地址模版配额数量
+    * 地址模板配额数量
     */
     @SerializedName("TemplateQuotaCount")
     @Expose
@@ -183,32 +183,32 @@ public class DescribeAddressTemplateListResponse extends AbstractModel {
     }
 
     /**
-     * Get 已使用的地址模版数 
-     * @return UsedTemplateCount 已使用的地址模版数
+     * Get 已使用的地址模板数 
+     * @return UsedTemplateCount 已使用的地址模板数
      */
     public Long getUsedTemplateCount() {
         return this.UsedTemplateCount;
     }
 
     /**
-     * Set 已使用的地址模版数
-     * @param UsedTemplateCount 已使用的地址模版数
+     * Set 已使用的地址模板数
+     * @param UsedTemplateCount 已使用的地址模板数
      */
     public void setUsedTemplateCount(Long UsedTemplateCount) {
         this.UsedTemplateCount = UsedTemplateCount;
     }
 
     /**
-     * Get 地址模版配额数量 
-     * @return TemplateQuotaCount 地址模版配额数量
+     * Get 地址模板配额数量 
+     * @return TemplateQuotaCount 地址模板配额数量
      */
     public Long getTemplateQuotaCount() {
         return this.TemplateQuotaCount;
     }
 
     /**
-     * Set 地址模版配额数量
-     * @param TemplateQuotaCount 地址模版配额数量
+     * Set 地址模板配额数量
+     * @param TemplateQuotaCount 地址模板配额数量
      */
     public void setTemplateQuotaCount(Long TemplateQuotaCount) {
         this.TemplateQuotaCount = TemplateQuotaCount;

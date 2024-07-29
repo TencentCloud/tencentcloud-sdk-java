@@ -39,7 +39,7 @@ public class DescribeCloudStorageAIServiceTasksRequest extends AbstractModel {
 
     /**
     * 云存 AI 服务类型。可选值：
-- `PackageDetect`：包裹检测
+- `RealtimeObjectDetect`：目标检测
 - `Highlight`：视频浓缩
     */
     @SerializedName("ServiceType")
@@ -73,14 +73,14 @@ public class DescribeCloudStorageAIServiceTasksRequest extends AbstractModel {
     private Long Status;
 
     /**
-    * 用户ID
+    * 用户 ID
     */
     @SerializedName("UserId")
     @Expose
     private String UserId;
 
     /**
-    * 通道ID 非NVR设备则不填 NVR设备则必填 默认为无
+    * 通道 ID
     */
     @SerializedName("ChannelId")
     @Expose
@@ -120,10 +120,10 @@ public class DescribeCloudStorageAIServiceTasksRequest extends AbstractModel {
 
     /**
      * Get 云存 AI 服务类型。可选值：
-- `PackageDetect`：包裹检测
+- `RealtimeObjectDetect`：目标检测
 - `Highlight`：视频浓缩 
      * @return ServiceType 云存 AI 服务类型。可选值：
-- `PackageDetect`：包裹检测
+- `RealtimeObjectDetect`：目标检测
 - `Highlight`：视频浓缩
      */
     public String getServiceType() {
@@ -132,10 +132,10 @@ public class DescribeCloudStorageAIServiceTasksRequest extends AbstractModel {
 
     /**
      * Set 云存 AI 服务类型。可选值：
-- `PackageDetect`：包裹检测
+- `RealtimeObjectDetect`：目标检测
 - `Highlight`：视频浓缩
      * @param ServiceType 云存 AI 服务类型。可选值：
-- `PackageDetect`：包裹检测
+- `RealtimeObjectDetect`：目标检测
 - `Highlight`：视频浓缩
      */
     public void setServiceType(String ServiceType) {
@@ -211,32 +211,32 @@ public class DescribeCloudStorageAIServiceTasksRequest extends AbstractModel {
     }
 
     /**
-     * Get 用户ID 
-     * @return UserId 用户ID
+     * Get 用户 ID 
+     * @return UserId 用户 ID
      */
     public String getUserId() {
         return this.UserId;
     }
 
     /**
-     * Set 用户ID
-     * @param UserId 用户ID
+     * Set 用户 ID
+     * @param UserId 用户 ID
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;
     }
 
     /**
-     * Get 通道ID 非NVR设备则不填 NVR设备则必填 默认为无 
-     * @return ChannelId 通道ID 非NVR设备则不填 NVR设备则必填 默认为无
+     * Get 通道 ID 
+     * @return ChannelId 通道 ID
      */
     public Long getChannelId() {
         return this.ChannelId;
     }
 
     /**
-     * Set 通道ID 非NVR设备则不填 NVR设备则必填 默认为无
-     * @param ChannelId 通道ID 非NVR设备则不填 NVR设备则必填 默认为无
+     * Set 通道 ID
+     * @param ChannelId 通道 ID
      */
     public void setChannelId(Long ChannelId) {
         this.ChannelId = ChannelId;

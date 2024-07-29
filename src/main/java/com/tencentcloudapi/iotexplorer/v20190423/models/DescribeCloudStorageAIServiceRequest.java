@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeCloudStorageAIServiceRequest extends AbstractModel {
 
     /**
-    * 产品ID
+    * 产品 ID
     */
     @SerializedName("ProductId")
     @Expose
@@ -39,8 +39,7 @@ public class DescribeCloudStorageAIServiceRequest extends AbstractModel {
 
     /**
     * 云存 AI 服务类型。可选值：
-
-- `PackageDetect`：包裹检测
+- `RealtimeObjectDetect`：目标检测
 - `Highlight`：视频浓缩
     */
     @SerializedName("ServiceType")
@@ -48,16 +47,16 @@ public class DescribeCloudStorageAIServiceRequest extends AbstractModel {
     private String ServiceType;
 
     /**
-     * Get 产品ID 
-     * @return ProductId 产品ID
+     * Get 产品 ID 
+     * @return ProductId 产品 ID
      */
     public String getProductId() {
         return this.ProductId;
     }
 
     /**
-     * Set 产品ID
-     * @param ProductId 产品ID
+     * Set 产品 ID
+     * @param ProductId 产品 ID
      */
     public void setProductId(String ProductId) {
         this.ProductId = ProductId;
@@ -81,12 +80,10 @@ public class DescribeCloudStorageAIServiceRequest extends AbstractModel {
 
     /**
      * Get 云存 AI 服务类型。可选值：
-
-- `PackageDetect`：包裹检测
+- `RealtimeObjectDetect`：目标检测
 - `Highlight`：视频浓缩 
      * @return ServiceType 云存 AI 服务类型。可选值：
-
-- `PackageDetect`：包裹检测
+- `RealtimeObjectDetect`：目标检测
 - `Highlight`：视频浓缩
      */
     public String getServiceType() {
@@ -95,12 +92,10 @@ public class DescribeCloudStorageAIServiceRequest extends AbstractModel {
 
     /**
      * Set 云存 AI 服务类型。可选值：
-
-- `PackageDetect`：包裹检测
+- `RealtimeObjectDetect`：目标检测
 - `Highlight`：视频浓缩
      * @param ServiceType 云存 AI 服务类型。可选值：
-
-- `PackageDetect`：包裹检测
+- `RealtimeObjectDetect`：目标检测
 - `Highlight`：视频浓缩
      */
     public void setServiceType(String ServiceType) {
