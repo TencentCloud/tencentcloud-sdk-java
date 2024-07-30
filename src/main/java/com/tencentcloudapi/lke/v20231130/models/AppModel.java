@@ -64,6 +64,30 @@ public class AppModel extends AbstractModel {
     private Float TokenBalance;
 
     /**
+    * 是否使用上下文指代轮次
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsUseContext")
+    @Expose
+    private Boolean IsUseContext;
+
+    /**
+    * 上下文记忆轮数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HistoryLimit")
+    @Expose
+    private Long HistoryLimit;
+
+    /**
+    * 使用类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UsageType")
+    @Expose
+    private String UsageType;
+
+    /**
      * Get 模型名称
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Name 模型名称
@@ -163,6 +187,66 @@ public class AppModel extends AbstractModel {
         this.TokenBalance = TokenBalance;
     }
 
+    /**
+     * Get 是否使用上下文指代轮次
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsUseContext 是否使用上下文指代轮次
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getIsUseContext() {
+        return this.IsUseContext;
+    }
+
+    /**
+     * Set 是否使用上下文指代轮次
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsUseContext 是否使用上下文指代轮次
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsUseContext(Boolean IsUseContext) {
+        this.IsUseContext = IsUseContext;
+    }
+
+    /**
+     * Get 上下文记忆轮数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return HistoryLimit 上下文记忆轮数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getHistoryLimit() {
+        return this.HistoryLimit;
+    }
+
+    /**
+     * Set 上下文记忆轮数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HistoryLimit 上下文记忆轮数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHistoryLimit(Long HistoryLimit) {
+        this.HistoryLimit = HistoryLimit;
+    }
+
+    /**
+     * Get 使用类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UsageType 使用类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getUsageType() {
+        return this.UsageType;
+    }
+
+    /**
+     * Set 使用类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UsageType 使用类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUsageType(String UsageType) {
+        this.UsageType = UsageType;
+    }
+
     public AppModel() {
     }
 
@@ -186,6 +270,15 @@ public class AppModel extends AbstractModel {
         if (source.TokenBalance != null) {
             this.TokenBalance = new Float(source.TokenBalance);
         }
+        if (source.IsUseContext != null) {
+            this.IsUseContext = new Boolean(source.IsUseContext);
+        }
+        if (source.HistoryLimit != null) {
+            this.HistoryLimit = new Long(source.HistoryLimit);
+        }
+        if (source.UsageType != null) {
+            this.UsageType = new String(source.UsageType);
+        }
     }
 
 
@@ -198,6 +291,9 @@ public class AppModel extends AbstractModel {
         this.setParamSimple(map, prefix + "ContextLimit", this.ContextLimit);
         this.setParamSimple(map, prefix + "AliasName", this.AliasName);
         this.setParamSimple(map, prefix + "TokenBalance", this.TokenBalance);
+        this.setParamSimple(map, prefix + "IsUseContext", this.IsUseContext);
+        this.setParamSimple(map, prefix + "HistoryLimit", this.HistoryLimit);
+        this.setParamSimple(map, prefix + "UsageType", this.UsageType);
 
     }
 }

@@ -568,7 +568,10 @@ public enum OrganizationErrorCode {
      UNSUPPORTEDOPERATION_PAYEREXISTACCOUNTLEVELDISCOUNTINHERIT("UnsupportedOperation.PayerExistAccountLevelDiscountInherit"),
      
     // 存在二级经销商子客，不支持代付费。
-     UNSUPPORTEDOPERATION_SECONDARYDISTRIBUTORSUBCLIENTEXISTED("UnsupportedOperation.SecondaryDistributorSubClientExisted");
+     UNSUPPORTEDOPERATION_SECONDARYDISTRIBUTORSUBCLIENTEXISTED("UnsupportedOperation.SecondaryDistributorSubClientExisted"),
+     
+    // 不支持共享给其他组织成员。
+     UNSUPPORTEDOPERATION_SHARINGTOOTHERORGANIZATIONMEMBER("UnsupportedOperation.SharingToOtherOrganizationMember");
      
     private String value;
     private OrganizationErrorCode (String value){

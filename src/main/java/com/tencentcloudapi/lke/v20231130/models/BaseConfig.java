@@ -31,7 +31,10 @@ public class BaseConfig extends AbstractModel {
     private String Name;
 
     /**
-    * 应用头像
+    * 应用头像url，在CreateApp和ModifyApp中作为入参必填。
+作为入参传入说明：
+1. 传入的url图片限制为jpeg和png，大小限制为500KB，url链接需允许head请求。
+2. 如果用户没有对象存储，可使用“获取文件上传临时密钥”(DescribeStorageCredential)接口，获取cos临时密钥和上传路径，自行上传头像至cos中并获取访问链接。
     */
     @SerializedName("Avatar")
     @Expose
@@ -61,16 +64,28 @@ public class BaseConfig extends AbstractModel {
     }
 
     /**
-     * Get 应用头像 
-     * @return Avatar 应用头像
+     * Get 应用头像url，在CreateApp和ModifyApp中作为入参必填。
+作为入参传入说明：
+1. 传入的url图片限制为jpeg和png，大小限制为500KB，url链接需允许head请求。
+2. 如果用户没有对象存储，可使用“获取文件上传临时密钥”(DescribeStorageCredential)接口，获取cos临时密钥和上传路径，自行上传头像至cos中并获取访问链接。 
+     * @return Avatar 应用头像url，在CreateApp和ModifyApp中作为入参必填。
+作为入参传入说明：
+1. 传入的url图片限制为jpeg和png，大小限制为500KB，url链接需允许head请求。
+2. 如果用户没有对象存储，可使用“获取文件上传临时密钥”(DescribeStorageCredential)接口，获取cos临时密钥和上传路径，自行上传头像至cos中并获取访问链接。
      */
     public String getAvatar() {
         return this.Avatar;
     }
 
     /**
-     * Set 应用头像
-     * @param Avatar 应用头像
+     * Set 应用头像url，在CreateApp和ModifyApp中作为入参必填。
+作为入参传入说明：
+1. 传入的url图片限制为jpeg和png，大小限制为500KB，url链接需允许head请求。
+2. 如果用户没有对象存储，可使用“获取文件上传临时密钥”(DescribeStorageCredential)接口，获取cos临时密钥和上传路径，自行上传头像至cos中并获取访问链接。
+     * @param Avatar 应用头像url，在CreateApp和ModifyApp中作为入参必填。
+作为入参传入说明：
+1. 传入的url图片限制为jpeg和png，大小限制为500KB，url链接需允许head请求。
+2. 如果用户没有对象存储，可使用“获取文件上传临时密钥”(DescribeStorageCredential)接口，获取cos临时密钥和上传路径，自行上传头像至cos中并获取访问链接。
      */
     public void setAvatar(String Avatar) {
         this.Avatar = Avatar;

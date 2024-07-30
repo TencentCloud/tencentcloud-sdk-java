@@ -24,18 +24,18 @@ import java.util.HashMap;
 public class DescribeContainerGroupsRequest extends AbstractModel {
 
     /**
+    * 分组所属应用ID。
+    */
+    @SerializedName("ApplicationId")
+    @Expose
+    private String ApplicationId;
+
+    /**
     * 搜索字段，模糊搜索groupName字段
     */
     @SerializedName("SearchWord")
     @Expose
     private String SearchWord;
-
-    /**
-    * 分组所属应用ID。必填
-    */
-    @SerializedName("ApplicationId")
-    @Expose
-    private String ApplicationId;
 
     /**
     * 排序字段，默认为 createTime字段，支持id， name， createTime
@@ -80,6 +80,22 @@ public class DescribeContainerGroupsRequest extends AbstractModel {
     private String NamespaceId;
 
     /**
+     * Get 分组所属应用ID。 
+     * @return ApplicationId 分组所属应用ID。
+     */
+    public String getApplicationId() {
+        return this.ApplicationId;
+    }
+
+    /**
+     * Set 分组所属应用ID。
+     * @param ApplicationId 分组所属应用ID。
+     */
+    public void setApplicationId(String ApplicationId) {
+        this.ApplicationId = ApplicationId;
+    }
+
+    /**
      * Get 搜索字段，模糊搜索groupName字段 
      * @return SearchWord 搜索字段，模糊搜索groupName字段
      */
@@ -93,22 +109,6 @@ public class DescribeContainerGroupsRequest extends AbstractModel {
      */
     public void setSearchWord(String SearchWord) {
         this.SearchWord = SearchWord;
-    }
-
-    /**
-     * Get 分组所属应用ID。必填 
-     * @return ApplicationId 分组所属应用ID。必填
-     */
-    public String getApplicationId() {
-        return this.ApplicationId;
-    }
-
-    /**
-     * Set 分组所属应用ID。必填
-     * @param ApplicationId 分组所属应用ID。必填
-     */
-    public void setApplicationId(String ApplicationId) {
-        this.ApplicationId = ApplicationId;
     }
 
     /**
@@ -215,11 +215,11 @@ public class DescribeContainerGroupsRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeContainerGroupsRequest(DescribeContainerGroupsRequest source) {
-        if (source.SearchWord != null) {
-            this.SearchWord = new String(source.SearchWord);
-        }
         if (source.ApplicationId != null) {
             this.ApplicationId = new String(source.ApplicationId);
+        }
+        if (source.SearchWord != null) {
+            this.SearchWord = new String(source.SearchWord);
         }
         if (source.OrderBy != null) {
             this.OrderBy = new String(source.OrderBy);
@@ -246,8 +246,8 @@ public class DescribeContainerGroupsRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "SearchWord", this.SearchWord);
         this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
+        this.setParamSimple(map, prefix + "SearchWord", this.SearchWord);
         this.setParamSimple(map, prefix + "OrderBy", this.OrderBy);
         this.setParamSimple(map, prefix + "OrderType", this.OrderType);
         this.setParamSimple(map, prefix + "Offset", this.Offset);

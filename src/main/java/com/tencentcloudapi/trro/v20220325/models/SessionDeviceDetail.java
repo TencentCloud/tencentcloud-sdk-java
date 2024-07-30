@@ -146,7 +146,7 @@ public class SessionDeviceDetail extends AbstractModel {
     private Long [] DecodeCost;
 
     /**
-    * 渲染耗时，单位：ms
+    * 【已废弃，使用RenderCost】
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RenderConst")
@@ -216,6 +216,86 @@ public class SessionDeviceDetail extends AbstractModel {
     @SerializedName("CaptureCost")
     @Expose
     private Long [] CaptureCost;
+
+    /**
+    * 渲染耗时，单位：ms
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RenderCost")
+    @Expose
+    private Long [] RenderCost;
+
+    /**
+    * 配置宽度
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ConfigWidth")
+    @Expose
+    private Long ConfigWidth;
+
+    /**
+    * 配置高度
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ConfigHeight")
+    @Expose
+    private Long ConfigHeight;
+
+    /**
+    * 平均帧间隔
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FrameDelta")
+    @Expose
+    private Long [] FrameDelta;
+
+    /**
+    * 最大帧间隔
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MaxFrameDelta")
+    @Expose
+    private Long [] MaxFrameDelta;
+
+    /**
+    * 总码率评估,单位：kbps
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TotalBitrateEstimate")
+    @Expose
+    private Long [] TotalBitrateEstimate;
+
+    /**
+    * 帧间隔大于100ms的卡顿时长
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Lag100Duration")
+    @Expose
+    private Long [] Lag100Duration;
+
+    /**
+    * 帧间隔大于150ms的卡顿时长
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Lag150Duration")
+    @Expose
+    private Long [] Lag150Duration;
+
+    /**
+    * 是否开启多网：0 单网，1 多网
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MultiMode")
+    @Expose
+    private Long MultiMode;
+
+    /**
+    * 多网卡信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MultiNet")
+    @Expose
+    private MultiNet [] MultiNet;
 
     /**
      * Get 设备类型：field或remote 
@@ -502,21 +582,25 @@ public class SessionDeviceDetail extends AbstractModel {
     }
 
     /**
-     * Get 渲染耗时，单位：ms
+     * Get 【已废弃，使用RenderCost】
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RenderConst 渲染耗时，单位：ms
+     * @return RenderConst 【已废弃，使用RenderCost】
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public Long [] getRenderConst() {
         return this.RenderConst;
     }
 
     /**
-     * Set 渲染耗时，单位：ms
+     * Set 【已废弃，使用RenderCost】
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RenderConst 渲染耗时，单位：ms
+     * @param RenderConst 【已废弃，使用RenderCost】
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public void setRenderConst(Long [] RenderConst) {
         this.RenderConst = RenderConst;
     }
@@ -681,6 +765,206 @@ public class SessionDeviceDetail extends AbstractModel {
         this.CaptureCost = CaptureCost;
     }
 
+    /**
+     * Get 渲染耗时，单位：ms
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RenderCost 渲染耗时，单位：ms
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long [] getRenderCost() {
+        return this.RenderCost;
+    }
+
+    /**
+     * Set 渲染耗时，单位：ms
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RenderCost 渲染耗时，单位：ms
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRenderCost(Long [] RenderCost) {
+        this.RenderCost = RenderCost;
+    }
+
+    /**
+     * Get 配置宽度
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ConfigWidth 配置宽度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getConfigWidth() {
+        return this.ConfigWidth;
+    }
+
+    /**
+     * Set 配置宽度
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ConfigWidth 配置宽度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setConfigWidth(Long ConfigWidth) {
+        this.ConfigWidth = ConfigWidth;
+    }
+
+    /**
+     * Get 配置高度
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ConfigHeight 配置高度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getConfigHeight() {
+        return this.ConfigHeight;
+    }
+
+    /**
+     * Set 配置高度
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ConfigHeight 配置高度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setConfigHeight(Long ConfigHeight) {
+        this.ConfigHeight = ConfigHeight;
+    }
+
+    /**
+     * Get 平均帧间隔
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FrameDelta 平均帧间隔
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long [] getFrameDelta() {
+        return this.FrameDelta;
+    }
+
+    /**
+     * Set 平均帧间隔
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FrameDelta 平均帧间隔
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFrameDelta(Long [] FrameDelta) {
+        this.FrameDelta = FrameDelta;
+    }
+
+    /**
+     * Get 最大帧间隔
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MaxFrameDelta 最大帧间隔
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long [] getMaxFrameDelta() {
+        return this.MaxFrameDelta;
+    }
+
+    /**
+     * Set 最大帧间隔
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MaxFrameDelta 最大帧间隔
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMaxFrameDelta(Long [] MaxFrameDelta) {
+        this.MaxFrameDelta = MaxFrameDelta;
+    }
+
+    /**
+     * Get 总码率评估,单位：kbps
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TotalBitrateEstimate 总码率评估,单位：kbps
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long [] getTotalBitrateEstimate() {
+        return this.TotalBitrateEstimate;
+    }
+
+    /**
+     * Set 总码率评估,单位：kbps
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TotalBitrateEstimate 总码率评估,单位：kbps
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTotalBitrateEstimate(Long [] TotalBitrateEstimate) {
+        this.TotalBitrateEstimate = TotalBitrateEstimate;
+    }
+
+    /**
+     * Get 帧间隔大于100ms的卡顿时长
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Lag100Duration 帧间隔大于100ms的卡顿时长
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long [] getLag100Duration() {
+        return this.Lag100Duration;
+    }
+
+    /**
+     * Set 帧间隔大于100ms的卡顿时长
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Lag100Duration 帧间隔大于100ms的卡顿时长
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLag100Duration(Long [] Lag100Duration) {
+        this.Lag100Duration = Lag100Duration;
+    }
+
+    /**
+     * Get 帧间隔大于150ms的卡顿时长
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Lag150Duration 帧间隔大于150ms的卡顿时长
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long [] getLag150Duration() {
+        return this.Lag150Duration;
+    }
+
+    /**
+     * Set 帧间隔大于150ms的卡顿时长
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Lag150Duration 帧间隔大于150ms的卡顿时长
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLag150Duration(Long [] Lag150Duration) {
+        this.Lag150Duration = Lag150Duration;
+    }
+
+    /**
+     * Get 是否开启多网：0 单网，1 多网
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MultiMode 是否开启多网：0 单网，1 多网
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getMultiMode() {
+        return this.MultiMode;
+    }
+
+    /**
+     * Set 是否开启多网：0 单网，1 多网
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MultiMode 是否开启多网：0 单网，1 多网
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMultiMode(Long MultiMode) {
+        this.MultiMode = MultiMode;
+    }
+
+    /**
+     * Get 多网卡信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MultiNet 多网卡信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public MultiNet [] getMultiNet() {
+        return this.MultiNet;
+    }
+
+    /**
+     * Set 多网卡信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MultiNet 多网卡信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMultiNet(MultiNet [] MultiNet) {
+        this.MultiNet = MultiNet;
+    }
+
     public SessionDeviceDetail() {
     }
 
@@ -815,6 +1099,57 @@ public class SessionDeviceDetail extends AbstractModel {
                 this.CaptureCost[i] = new Long(source.CaptureCost[i]);
             }
         }
+        if (source.RenderCost != null) {
+            this.RenderCost = new Long[source.RenderCost.length];
+            for (int i = 0; i < source.RenderCost.length; i++) {
+                this.RenderCost[i] = new Long(source.RenderCost[i]);
+            }
+        }
+        if (source.ConfigWidth != null) {
+            this.ConfigWidth = new Long(source.ConfigWidth);
+        }
+        if (source.ConfigHeight != null) {
+            this.ConfigHeight = new Long(source.ConfigHeight);
+        }
+        if (source.FrameDelta != null) {
+            this.FrameDelta = new Long[source.FrameDelta.length];
+            for (int i = 0; i < source.FrameDelta.length; i++) {
+                this.FrameDelta[i] = new Long(source.FrameDelta[i]);
+            }
+        }
+        if (source.MaxFrameDelta != null) {
+            this.MaxFrameDelta = new Long[source.MaxFrameDelta.length];
+            for (int i = 0; i < source.MaxFrameDelta.length; i++) {
+                this.MaxFrameDelta[i] = new Long(source.MaxFrameDelta[i]);
+            }
+        }
+        if (source.TotalBitrateEstimate != null) {
+            this.TotalBitrateEstimate = new Long[source.TotalBitrateEstimate.length];
+            for (int i = 0; i < source.TotalBitrateEstimate.length; i++) {
+                this.TotalBitrateEstimate[i] = new Long(source.TotalBitrateEstimate[i]);
+            }
+        }
+        if (source.Lag100Duration != null) {
+            this.Lag100Duration = new Long[source.Lag100Duration.length];
+            for (int i = 0; i < source.Lag100Duration.length; i++) {
+                this.Lag100Duration[i] = new Long(source.Lag100Duration[i]);
+            }
+        }
+        if (source.Lag150Duration != null) {
+            this.Lag150Duration = new Long[source.Lag150Duration.length];
+            for (int i = 0; i < source.Lag150Duration.length; i++) {
+                this.Lag150Duration[i] = new Long(source.Lag150Duration[i]);
+            }
+        }
+        if (source.MultiMode != null) {
+            this.MultiMode = new Long(source.MultiMode);
+        }
+        if (source.MultiNet != null) {
+            this.MultiNet = new MultiNet[source.MultiNet.length];
+            for (int i = 0; i < source.MultiNet.length; i++) {
+                this.MultiNet[i] = new MultiNet(source.MultiNet[i]);
+            }
+        }
     }
 
 
@@ -848,6 +1183,16 @@ public class SessionDeviceDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "Height", this.Height);
         this.setParamArraySimple(map, prefix + "EncodeCost.", this.EncodeCost);
         this.setParamArraySimple(map, prefix + "CaptureCost.", this.CaptureCost);
+        this.setParamArraySimple(map, prefix + "RenderCost.", this.RenderCost);
+        this.setParamSimple(map, prefix + "ConfigWidth", this.ConfigWidth);
+        this.setParamSimple(map, prefix + "ConfigHeight", this.ConfigHeight);
+        this.setParamArraySimple(map, prefix + "FrameDelta.", this.FrameDelta);
+        this.setParamArraySimple(map, prefix + "MaxFrameDelta.", this.MaxFrameDelta);
+        this.setParamArraySimple(map, prefix + "TotalBitrateEstimate.", this.TotalBitrateEstimate);
+        this.setParamArraySimple(map, prefix + "Lag100Duration.", this.Lag100Duration);
+        this.setParamArraySimple(map, prefix + "Lag150Duration.", this.Lag150Duration);
+        this.setParamSimple(map, prefix + "MultiMode", this.MultiMode);
+        this.setParamArrayObj(map, prefix + "MultiNet.", this.MultiNet);
 
     }
 }

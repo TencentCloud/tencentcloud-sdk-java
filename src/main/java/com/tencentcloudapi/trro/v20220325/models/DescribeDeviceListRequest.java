@@ -59,6 +59,13 @@ public class DescribeDeviceListRequest extends AbstractModel {
     private Long PageNumber;
 
     /**
+    * 设备状态筛选，不填默认为不过滤。取值：["ready","connected","online"]，online代表ready或connected
+    */
+    @SerializedName("DeviceStatus")
+    @Expose
+    private String DeviceStatus;
+
+    /**
      * Get 设备所属项目ID 
      * @return ProjectId 设备所属项目ID
      */
@@ -138,6 +145,22 @@ public class DescribeDeviceListRequest extends AbstractModel {
         this.PageNumber = PageNumber;
     }
 
+    /**
+     * Get 设备状态筛选，不填默认为不过滤。取值：["ready","connected","online"]，online代表ready或connected 
+     * @return DeviceStatus 设备状态筛选，不填默认为不过滤。取值：["ready","connected","online"]，online代表ready或connected
+     */
+    public String getDeviceStatus() {
+        return this.DeviceStatus;
+    }
+
+    /**
+     * Set 设备状态筛选，不填默认为不过滤。取值：["ready","connected","online"]，online代表ready或connected
+     * @param DeviceStatus 设备状态筛选，不填默认为不过滤。取值：["ready","connected","online"]，online代表ready或connected
+     */
+    public void setDeviceStatus(String DeviceStatus) {
+        this.DeviceStatus = DeviceStatus;
+    }
+
     public DescribeDeviceListRequest() {
     }
 
@@ -161,6 +184,9 @@ public class DescribeDeviceListRequest extends AbstractModel {
         if (source.PageNumber != null) {
             this.PageNumber = new Long(source.PageNumber);
         }
+        if (source.DeviceStatus != null) {
+            this.DeviceStatus = new String(source.DeviceStatus);
+        }
     }
 
 
@@ -173,6 +199,7 @@ public class DescribeDeviceListRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SearchWords", this.SearchWords);
         this.setParamSimple(map, prefix + "PageSize", this.PageSize);
         this.setParamSimple(map, prefix + "PageNumber", this.PageNumber);
+        this.setParamSimple(map, prefix + "DeviceStatus", this.DeviceStatus);
 
     }
 }

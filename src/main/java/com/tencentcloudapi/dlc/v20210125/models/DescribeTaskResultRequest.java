@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeTaskResultRequest extends AbstractModel {
 
     /**
-    * 任务唯一ID
+    * 任务唯一ID，仅支持30天内的任务
     */
     @SerializedName("TaskId")
     @Expose
@@ -52,16 +52,16 @@ public class DescribeTaskResultRequest extends AbstractModel {
     private Boolean IsTransformDataType;
 
     /**
-     * Get 任务唯一ID 
-     * @return TaskId 任务唯一ID
+     * Get 任务唯一ID，仅支持30天内的任务 
+     * @return TaskId 任务唯一ID，仅支持30天内的任务
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 任务唯一ID
-     * @param TaskId 任务唯一ID
+     * Set 任务唯一ID，仅支持30天内的任务
+     * @param TaskId 任务唯一ID，仅支持30天内的任务
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

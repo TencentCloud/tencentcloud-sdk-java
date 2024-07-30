@@ -88,6 +88,14 @@ public class KnowledgeQaSearch extends AbstractModel {
     private Float Confidence;
 
     /**
+    * 资源状态 1：资源可用；2：资源已用尽
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ResourceStatus")
+    @Expose
+    private Long ResourceStatus;
+
+    /**
      * Get 知识来源 doc：文档，qa：问答  taskflow：业务流程，search：搜索增强
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Type 知识来源 doc：文档，qa：问答  taskflow：业务流程，search：搜索增强
@@ -247,6 +255,26 @@ public class KnowledgeQaSearch extends AbstractModel {
         this.Confidence = Confidence;
     }
 
+    /**
+     * Get 资源状态 1：资源可用；2：资源已用尽
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ResourceStatus 资源状态 1：资源可用；2：资源已用尽
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getResourceStatus() {
+        return this.ResourceStatus;
+    }
+
+    /**
+     * Set 资源状态 1：资源可用；2：资源已用尽
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ResourceStatus 资源状态 1：资源可用；2：资源已用尽
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setResourceStatus(Long ResourceStatus) {
+        this.ResourceStatus = ResourceStatus;
+    }
+
     public KnowledgeQaSearch() {
     }
 
@@ -279,6 +307,9 @@ public class KnowledgeQaSearch extends AbstractModel {
         if (source.Confidence != null) {
             this.Confidence = new Float(source.Confidence);
         }
+        if (source.ResourceStatus != null) {
+            this.ResourceStatus = new Long(source.ResourceStatus);
+        }
     }
 
 
@@ -294,6 +325,7 @@ public class KnowledgeQaSearch extends AbstractModel {
         this.setParamSimple(map, prefix + "QaTopN", this.QaTopN);
         this.setParamSimple(map, prefix + "DocTopN", this.DocTopN);
         this.setParamSimple(map, prefix + "Confidence", this.Confidence);
+        this.setParamSimple(map, prefix + "ResourceStatus", this.ResourceStatus);
 
     }
 }

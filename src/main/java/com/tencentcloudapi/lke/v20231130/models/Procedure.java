@@ -56,6 +56,22 @@ public class Procedure extends AbstractModel {
     private Long Count;
 
     /**
+    * 调试信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Debugging")
+    @Expose
+    private ProcedureDebugging Debugging;
+
+    /**
+    * 计费资源状态，1：可用，2：不可用
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ResourceStatus")
+    @Expose
+    private Long ResourceStatus;
+
+    /**
      * Get 执行过程英语名
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Name 执行过程英语名
@@ -135,6 +151,46 @@ public class Procedure extends AbstractModel {
         this.Count = Count;
     }
 
+    /**
+     * Get 调试信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Debugging 调试信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ProcedureDebugging getDebugging() {
+        return this.Debugging;
+    }
+
+    /**
+     * Set 调试信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Debugging 调试信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDebugging(ProcedureDebugging Debugging) {
+        this.Debugging = Debugging;
+    }
+
+    /**
+     * Get 计费资源状态，1：可用，2：不可用
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ResourceStatus 计费资源状态，1：可用，2：不可用
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getResourceStatus() {
+        return this.ResourceStatus;
+    }
+
+    /**
+     * Set 计费资源状态，1：可用，2：不可用
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ResourceStatus 计费资源状态，1：可用，2：不可用
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setResourceStatus(Long ResourceStatus) {
+        this.ResourceStatus = ResourceStatus;
+    }
+
     public Procedure() {
     }
 
@@ -155,6 +211,12 @@ public class Procedure extends AbstractModel {
         if (source.Count != null) {
             this.Count = new Long(source.Count);
         }
+        if (source.Debugging != null) {
+            this.Debugging = new ProcedureDebugging(source.Debugging);
+        }
+        if (source.ResourceStatus != null) {
+            this.ResourceStatus = new Long(source.ResourceStatus);
+        }
     }
 
 
@@ -166,6 +228,8 @@ public class Procedure extends AbstractModel {
         this.setParamSimple(map, prefix + "Title", this.Title);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "Count", this.Count);
+        this.setParamObj(map, prefix + "Debugging.", this.Debugging);
+        this.setParamSimple(map, prefix + "ResourceStatus", this.ResourceStatus);
 
     }
 }

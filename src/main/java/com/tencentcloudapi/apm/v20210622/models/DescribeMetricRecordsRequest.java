@@ -115,6 +115,13 @@ public class DescribeMetricRecordsRequest extends AbstractModel {
     private Filter [] OrFilters;
 
     /**
+    * 数据来源
+    */
+    @SerializedName("Type")
+    @Expose
+    private String Type;
+
+    /**
      * Get 过滤条件 
      * @return Filters 过滤条件
      */
@@ -322,6 +329,22 @@ public class DescribeMetricRecordsRequest extends AbstractModel {
         this.OrFilters = OrFilters;
     }
 
+    /**
+     * Get 数据来源 
+     * @return Type 数据来源
+     */
+    public String getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set 数据来源
+     * @param Type 数据来源
+     */
+    public void setType(String Type) {
+        this.Type = Type;
+    }
+
     public DescribeMetricRecordsRequest() {
     }
 
@@ -381,6 +404,9 @@ public class DescribeMetricRecordsRequest extends AbstractModel {
                 this.OrFilters[i] = new Filter(source.OrFilters[i]);
             }
         }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
     }
 
 
@@ -401,6 +427,7 @@ public class DescribeMetricRecordsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "PageIndex", this.PageIndex);
         this.setParamSimple(map, prefix + "PageSize", this.PageSize);
         this.setParamArrayObj(map, prefix + "OrFilters.", this.OrFilters);
+        this.setParamSimple(map, prefix + "Type", this.Type);
 
     }
 }

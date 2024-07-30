@@ -31,6 +31,13 @@ public class BaseFlowInfo extends AbstractModel {
     private String FlowName;
 
     /**
+    * 合同流程的签署截止时间，格式为Unix标准时间戳（秒），如果在签署截止时间前未完成签署，则合同状态会变为已过期，导致合同作废。
+    */
+    @SerializedName("Deadline")
+    @Expose
+    private Long Deadline;
+
+    /**
     * 合同流程的类别分类（可自定义名称，如销售合同/入职合同等），最大长度为200个字符，仅限中文、字母、数字和下划线组成。
     */
     @SerializedName("FlowType")
@@ -43,13 +50,6 @@ public class BaseFlowInfo extends AbstractModel {
     @SerializedName("FlowDescription")
     @Expose
     private String FlowDescription;
-
-    /**
-    * 合同流程的签署截止时间，格式为Unix标准时间戳（秒），如果在签署截止时间前未完成签署，则合同状态会变为已过期，导致合同作废。
-    */
-    @SerializedName("Deadline")
-    @Expose
-    private Long Deadline;
 
     /**
     * 合同流程的签署顺序类型：
@@ -139,6 +139,22 @@ public class BaseFlowInfo extends AbstractModel {
     }
 
     /**
+     * Get 合同流程的签署截止时间，格式为Unix标准时间戳（秒），如果在签署截止时间前未完成签署，则合同状态会变为已过期，导致合同作废。 
+     * @return Deadline 合同流程的签署截止时间，格式为Unix标准时间戳（秒），如果在签署截止时间前未完成签署，则合同状态会变为已过期，导致合同作废。
+     */
+    public Long getDeadline() {
+        return this.Deadline;
+    }
+
+    /**
+     * Set 合同流程的签署截止时间，格式为Unix标准时间戳（秒），如果在签署截止时间前未完成签署，则合同状态会变为已过期，导致合同作废。
+     * @param Deadline 合同流程的签署截止时间，格式为Unix标准时间戳（秒），如果在签署截止时间前未完成签署，则合同状态会变为已过期，导致合同作废。
+     */
+    public void setDeadline(Long Deadline) {
+        this.Deadline = Deadline;
+    }
+
+    /**
      * Get 合同流程的类别分类（可自定义名称，如销售合同/入职合同等），最大长度为200个字符，仅限中文、字母、数字和下划线组成。 
      * @return FlowType 合同流程的类别分类（可自定义名称，如销售合同/入职合同等），最大长度为200个字符，仅限中文、字母、数字和下划线组成。
      */
@@ -168,22 +184,6 @@ public class BaseFlowInfo extends AbstractModel {
      */
     public void setFlowDescription(String FlowDescription) {
         this.FlowDescription = FlowDescription;
-    }
-
-    /**
-     * Get 合同流程的签署截止时间，格式为Unix标准时间戳（秒），如果在签署截止时间前未完成签署，则合同状态会变为已过期，导致合同作废。 
-     * @return Deadline 合同流程的签署截止时间，格式为Unix标准时间戳（秒），如果在签署截止时间前未完成签署，则合同状态会变为已过期，导致合同作废。
-     */
-    public Long getDeadline() {
-        return this.Deadline;
-    }
-
-    /**
-     * Set 合同流程的签署截止时间，格式为Unix标准时间戳（秒），如果在签署截止时间前未完成签署，则合同状态会变为已过期，导致合同作废。
-     * @param Deadline 合同流程的签署截止时间，格式为Unix标准时间戳（秒），如果在签署截止时间前未完成签署，则合同状态会变为已过期，导致合同作废。
-     */
-    public void setDeadline(Long Deadline) {
-        this.Deadline = Deadline;
     }
 
     /**
@@ -385,14 +385,14 @@ public class BaseFlowInfo extends AbstractModel {
         if (source.FlowName != null) {
             this.FlowName = new String(source.FlowName);
         }
+        if (source.Deadline != null) {
+            this.Deadline = new Long(source.Deadline);
+        }
         if (source.FlowType != null) {
             this.FlowType = new String(source.FlowType);
         }
         if (source.FlowDescription != null) {
             this.FlowDescription = new String(source.FlowDescription);
-        }
-        if (source.Deadline != null) {
-            this.Deadline = new Long(source.Deadline);
         }
         if (source.Unordered != null) {
             this.Unordered = new Boolean(source.Unordered);
@@ -435,9 +435,9 @@ public class BaseFlowInfo extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FlowName", this.FlowName);
+        this.setParamSimple(map, prefix + "Deadline", this.Deadline);
         this.setParamSimple(map, prefix + "FlowType", this.FlowType);
         this.setParamSimple(map, prefix + "FlowDescription", this.FlowDescription);
-        this.setParamSimple(map, prefix + "Deadline", this.Deadline);
         this.setParamSimple(map, prefix + "Unordered", this.Unordered);
         this.setParamSimple(map, prefix + "IntelligentStatus", this.IntelligentStatus);
         this.setParamArrayObj(map, prefix + "FormFields.", this.FormFields);

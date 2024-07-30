@@ -72,6 +72,14 @@ public class KnowledgeQaOutput extends AbstractModel {
     private String [] QuestionClarifyKeywords;
 
     /**
+    * 是否打开推荐问题开关
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UseRecommended")
+    @Expose
+    private Boolean UseRecommended;
+
+    /**
      * Get 输出方式 1：流式 2：非流式
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Method 输出方式 1：流式 2：非流式
@@ -191,6 +199,26 @@ public class KnowledgeQaOutput extends AbstractModel {
         this.QuestionClarifyKeywords = QuestionClarifyKeywords;
     }
 
+    /**
+     * Get 是否打开推荐问题开关
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UseRecommended 是否打开推荐问题开关
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getUseRecommended() {
+        return this.UseRecommended;
+    }
+
+    /**
+     * Set 是否打开推荐问题开关
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UseRecommended 是否打开推荐问题开关
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUseRecommended(Boolean UseRecommended) {
+        this.UseRecommended = UseRecommended;
+    }
+
     public KnowledgeQaOutput() {
     }
 
@@ -220,6 +248,9 @@ public class KnowledgeQaOutput extends AbstractModel {
                 this.QuestionClarifyKeywords[i] = new String(source.QuestionClarifyKeywords[i]);
             }
         }
+        if (source.UseRecommended != null) {
+            this.UseRecommended = new Boolean(source.UseRecommended);
+        }
     }
 
 
@@ -233,6 +264,7 @@ public class KnowledgeQaOutput extends AbstractModel {
         this.setParamSimple(map, prefix + "ShowQuestionClarify", this.ShowQuestionClarify);
         this.setParamSimple(map, prefix + "UseQuestionClarify", this.UseQuestionClarify);
         this.setParamArraySimple(map, prefix + "QuestionClarifyKeywords.", this.QuestionClarifyKeywords);
+        this.setParamSimple(map, prefix + "UseRecommended", this.UseRecommended);
 
     }
 }

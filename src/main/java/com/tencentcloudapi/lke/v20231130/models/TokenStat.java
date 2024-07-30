@@ -112,6 +112,14 @@ public class TokenStat extends AbstractModel {
     private Procedure [] Procedures;
 
     /**
+    * 执行过程信息TraceId
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TraceId")
+    @Expose
+    private String TraceId;
+
+    /**
      * Get 会话 ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return SessionId 会话 ID
@@ -331,6 +339,26 @@ public class TokenStat extends AbstractModel {
         this.Procedures = Procedures;
     }
 
+    /**
+     * Get 执行过程信息TraceId
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TraceId 执行过程信息TraceId
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTraceId() {
+        return this.TraceId;
+    }
+
+    /**
+     * Set 执行过程信息TraceId
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TraceId 执行过程信息TraceId
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTraceId(String TraceId) {
+        this.TraceId = TraceId;
+    }
+
     public TokenStat() {
     }
 
@@ -375,6 +403,9 @@ public class TokenStat extends AbstractModel {
                 this.Procedures[i] = new Procedure(source.Procedures[i]);
             }
         }
+        if (source.TraceId != null) {
+            this.TraceId = new String(source.TraceId);
+        }
     }
 
 
@@ -393,6 +424,7 @@ public class TokenStat extends AbstractModel {
         this.setParamSimple(map, prefix + "Elapsed", this.Elapsed);
         this.setParamSimple(map, prefix + "TokenCount", this.TokenCount);
         this.setParamArrayObj(map, prefix + "Procedures.", this.Procedures);
+        this.setParamSimple(map, prefix + "TraceId", this.TraceId);
 
     }
 }

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeAuctionListRequest extends AbstractModel {
 
     /**
-    * 业务ID
+    * 业务ID，通过接口DescribeBiddingList返回结果中获取
     */
     @SerializedName("BusinessId")
     @Expose
@@ -45,16 +45,16 @@ public class DescribeAuctionListRequest extends AbstractModel {
     private Long OffSet;
 
     /**
-     * Get 业务ID 
-     * @return BusinessId 业务ID
+     * Get 业务ID，通过接口DescribeBiddingList返回结果中获取 
+     * @return BusinessId 业务ID，通过接口DescribeBiddingList返回结果中获取
      */
     public String getBusinessId() {
         return this.BusinessId;
     }
 
     /**
-     * Set 业务ID
-     * @param BusinessId 业务ID
+     * Set 业务ID，通过接口DescribeBiddingList返回结果中获取
+     * @param BusinessId 业务ID，通过接口DescribeBiddingList返回结果中获取
      */
     public void setBusinessId(String BusinessId) {
         this.BusinessId = BusinessId;

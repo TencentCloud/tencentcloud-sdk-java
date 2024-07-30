@@ -48,6 +48,22 @@ public class ModelInfo extends AbstractModel {
     private String AliasName;
 
     /**
+    * 资源状态 1：资源可用；2：资源已用尽
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ResourceStatus")
+    @Expose
+    private Long ResourceStatus;
+
+    /**
+    * 提示词内容字符限制
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PromptWordsLimit")
+    @Expose
+    private String PromptWordsLimit;
+
+    /**
      * Get 模型名称
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ModelName 模型名称
@@ -107,6 +123,46 @@ public class ModelInfo extends AbstractModel {
         this.AliasName = AliasName;
     }
 
+    /**
+     * Get 资源状态 1：资源可用；2：资源已用尽
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ResourceStatus 资源状态 1：资源可用；2：资源已用尽
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getResourceStatus() {
+        return this.ResourceStatus;
+    }
+
+    /**
+     * Set 资源状态 1：资源可用；2：资源已用尽
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ResourceStatus 资源状态 1：资源可用；2：资源已用尽
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setResourceStatus(Long ResourceStatus) {
+        this.ResourceStatus = ResourceStatus;
+    }
+
+    /**
+     * Get 提示词内容字符限制
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PromptWordsLimit 提示词内容字符限制
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPromptWordsLimit() {
+        return this.PromptWordsLimit;
+    }
+
+    /**
+     * Set 提示词内容字符限制
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PromptWordsLimit 提示词内容字符限制
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPromptWordsLimit(String PromptWordsLimit) {
+        this.PromptWordsLimit = PromptWordsLimit;
+    }
+
     public ModelInfo() {
     }
 
@@ -124,6 +180,12 @@ public class ModelInfo extends AbstractModel {
         if (source.AliasName != null) {
             this.AliasName = new String(source.AliasName);
         }
+        if (source.ResourceStatus != null) {
+            this.ResourceStatus = new Long(source.ResourceStatus);
+        }
+        if (source.PromptWordsLimit != null) {
+            this.PromptWordsLimit = new String(source.PromptWordsLimit);
+        }
     }
 
 
@@ -134,6 +196,8 @@ public class ModelInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "ModelName", this.ModelName);
         this.setParamSimple(map, prefix + "ModelDesc", this.ModelDesc);
         this.setParamSimple(map, prefix + "AliasName", this.AliasName);
+        this.setParamSimple(map, prefix + "ResourceStatus", this.ResourceStatus);
+        this.setParamSimple(map, prefix + "PromptWordsLimit", this.PromptWordsLimit);
 
     }
 }
