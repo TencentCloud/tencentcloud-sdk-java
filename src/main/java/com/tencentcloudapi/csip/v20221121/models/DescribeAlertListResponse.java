@@ -45,6 +45,20 @@ public class DescribeAlertListResponse extends AbstractModel {
     private Long TotalCount;
 
     /**
+    * 0：succeed 1：timeout
+    */
+    @SerializedName("ReturnCode")
+    @Expose
+    private Long ReturnCode;
+
+    /**
+    * 返回状态信息
+    */
+    @SerializedName("ReturnMsg")
+    @Expose
+    private String ReturnMsg;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -100,6 +114,38 @@ public class DescribeAlertListResponse extends AbstractModel {
     }
 
     /**
+     * Get 0：succeed 1：timeout 
+     * @return ReturnCode 0：succeed 1：timeout
+     */
+    public Long getReturnCode() {
+        return this.ReturnCode;
+    }
+
+    /**
+     * Set 0：succeed 1：timeout
+     * @param ReturnCode 0：succeed 1：timeout
+     */
+    public void setReturnCode(Long ReturnCode) {
+        this.ReturnCode = ReturnCode;
+    }
+
+    /**
+     * Get 返回状态信息 
+     * @return ReturnMsg 返回状态信息
+     */
+    public String getReturnMsg() {
+        return this.ReturnMsg;
+    }
+
+    /**
+     * Set 返回状态信息
+     * @param ReturnMsg 返回状态信息
+     */
+    public void setReturnMsg(String ReturnMsg) {
+        this.ReturnMsg = ReturnMsg;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -138,6 +184,12 @@ public class DescribeAlertListResponse extends AbstractModel {
         if (source.TotalCount != null) {
             this.TotalCount = new Long(source.TotalCount);
         }
+        if (source.ReturnCode != null) {
+            this.ReturnCode = new Long(source.ReturnCode);
+        }
+        if (source.ReturnMsg != null) {
+            this.ReturnMsg = new String(source.ReturnMsg);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -151,6 +203,8 @@ public class DescribeAlertListResponse extends AbstractModel {
         this.setParamArrayObj(map, prefix + "AlertList.", this.AlertList);
         this.setParamArrayObj(map, prefix + "AlertTypeCount.", this.AlertTypeCount);
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamSimple(map, prefix + "ReturnCode", this.ReturnCode);
+        this.setParamSimple(map, prefix + "ReturnMsg", this.ReturnMsg);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -31,7 +31,7 @@ public class SetUserQuotaRequest extends AbstractModel {
     private String FileSystemId;
 
     /**
-    * 指定配额类型，包括Uid、Gid
+    * 指定配额类型，包括Uid、Gid，Dir，分别代表用户配额，用户组配额，目录配额
     */
     @SerializedName("UserType")
     @Expose
@@ -45,18 +45,25 @@ public class SetUserQuotaRequest extends AbstractModel {
     private String UserId;
 
     /**
-    * 容量硬限制，单位GiB
+    * 容量硬限制，单位GiB。设置范围10-10000000。
     */
     @SerializedName("CapacityHardLimit")
     @Expose
     private Long CapacityHardLimit;
 
     /**
-    * 文件硬限制，单位个
+    * 文件硬限制，单位个。设置范围1000-100000000
     */
     @SerializedName("FileHardLimit")
     @Expose
     private Long FileHardLimit;
+
+    /**
+    * 需设置目录配额的目录绝对路径，不同目录不可存在包含关系
+    */
+    @SerializedName("DirectoryPath")
+    @Expose
+    private String DirectoryPath;
 
     /**
      * Get 文件系统 ID 
@@ -75,16 +82,16 @@ public class SetUserQuotaRequest extends AbstractModel {
     }
 
     /**
-     * Get 指定配额类型，包括Uid、Gid 
-     * @return UserType 指定配额类型，包括Uid、Gid
+     * Get 指定配额类型，包括Uid、Gid，Dir，分别代表用户配额，用户组配额，目录配额 
+     * @return UserType 指定配额类型，包括Uid、Gid，Dir，分别代表用户配额，用户组配额，目录配额
      */
     public String getUserType() {
         return this.UserType;
     }
 
     /**
-     * Set 指定配额类型，包括Uid、Gid
-     * @param UserType 指定配额类型，包括Uid、Gid
+     * Set 指定配额类型，包括Uid、Gid，Dir，分别代表用户配额，用户组配额，目录配额
+     * @param UserType 指定配额类型，包括Uid、Gid，Dir，分别代表用户配额，用户组配额，目录配额
      */
     public void setUserType(String UserType) {
         this.UserType = UserType;
@@ -107,35 +114,51 @@ public class SetUserQuotaRequest extends AbstractModel {
     }
 
     /**
-     * Get 容量硬限制，单位GiB 
-     * @return CapacityHardLimit 容量硬限制，单位GiB
+     * Get 容量硬限制，单位GiB。设置范围10-10000000。 
+     * @return CapacityHardLimit 容量硬限制，单位GiB。设置范围10-10000000。
      */
     public Long getCapacityHardLimit() {
         return this.CapacityHardLimit;
     }
 
     /**
-     * Set 容量硬限制，单位GiB
-     * @param CapacityHardLimit 容量硬限制，单位GiB
+     * Set 容量硬限制，单位GiB。设置范围10-10000000。
+     * @param CapacityHardLimit 容量硬限制，单位GiB。设置范围10-10000000。
      */
     public void setCapacityHardLimit(Long CapacityHardLimit) {
         this.CapacityHardLimit = CapacityHardLimit;
     }
 
     /**
-     * Get 文件硬限制，单位个 
-     * @return FileHardLimit 文件硬限制，单位个
+     * Get 文件硬限制，单位个。设置范围1000-100000000 
+     * @return FileHardLimit 文件硬限制，单位个。设置范围1000-100000000
      */
     public Long getFileHardLimit() {
         return this.FileHardLimit;
     }
 
     /**
-     * Set 文件硬限制，单位个
-     * @param FileHardLimit 文件硬限制，单位个
+     * Set 文件硬限制，单位个。设置范围1000-100000000
+     * @param FileHardLimit 文件硬限制，单位个。设置范围1000-100000000
      */
     public void setFileHardLimit(Long FileHardLimit) {
         this.FileHardLimit = FileHardLimit;
+    }
+
+    /**
+     * Get 需设置目录配额的目录绝对路径，不同目录不可存在包含关系 
+     * @return DirectoryPath 需设置目录配额的目录绝对路径，不同目录不可存在包含关系
+     */
+    public String getDirectoryPath() {
+        return this.DirectoryPath;
+    }
+
+    /**
+     * Set 需设置目录配额的目录绝对路径，不同目录不可存在包含关系
+     * @param DirectoryPath 需设置目录配额的目录绝对路径，不同目录不可存在包含关系
+     */
+    public void setDirectoryPath(String DirectoryPath) {
+        this.DirectoryPath = DirectoryPath;
     }
 
     public SetUserQuotaRequest() {
@@ -161,6 +184,9 @@ public class SetUserQuotaRequest extends AbstractModel {
         if (source.FileHardLimit != null) {
             this.FileHardLimit = new Long(source.FileHardLimit);
         }
+        if (source.DirectoryPath != null) {
+            this.DirectoryPath = new String(source.DirectoryPath);
+        }
     }
 
 
@@ -173,6 +199,7 @@ public class SetUserQuotaRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "UserId", this.UserId);
         this.setParamSimple(map, prefix + "CapacityHardLimit", this.CapacityHardLimit);
         this.setParamSimple(map, prefix + "FileHardLimit", this.FileHardLimit);
+        this.setParamSimple(map, prefix + "DirectoryPath", this.DirectoryPath);
 
     }
 }

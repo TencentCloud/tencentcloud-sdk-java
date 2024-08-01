@@ -31,7 +31,7 @@ public class DeleteUserQuotaRequest extends AbstractModel {
     private String FileSystemId;
 
     /**
-    * 指定配额类型，包括Uid、Gid
+    * 指定配额类型，包括Uid、Gid、Dir
     */
     @SerializedName("UserType")
     @Expose
@@ -43,6 +43,13 @@ public class DeleteUserQuotaRequest extends AbstractModel {
     @SerializedName("UserId")
     @Expose
     private String UserId;
+
+    /**
+    * 设置目录配额的目录的绝对路径
+    */
+    @SerializedName("DirectoryPath")
+    @Expose
+    private String DirectoryPath;
 
     /**
      * Get 文件系统 ID 
@@ -61,16 +68,16 @@ public class DeleteUserQuotaRequest extends AbstractModel {
     }
 
     /**
-     * Get 指定配额类型，包括Uid、Gid 
-     * @return UserType 指定配额类型，包括Uid、Gid
+     * Get 指定配额类型，包括Uid、Gid、Dir 
+     * @return UserType 指定配额类型，包括Uid、Gid、Dir
      */
     public String getUserType() {
         return this.UserType;
     }
 
     /**
-     * Set 指定配额类型，包括Uid、Gid
-     * @param UserType 指定配额类型，包括Uid、Gid
+     * Set 指定配额类型，包括Uid、Gid、Dir
+     * @param UserType 指定配额类型，包括Uid、Gid、Dir
      */
     public void setUserType(String UserType) {
         this.UserType = UserType;
@@ -92,6 +99,22 @@ public class DeleteUserQuotaRequest extends AbstractModel {
         this.UserId = UserId;
     }
 
+    /**
+     * Get 设置目录配额的目录的绝对路径 
+     * @return DirectoryPath 设置目录配额的目录的绝对路径
+     */
+    public String getDirectoryPath() {
+        return this.DirectoryPath;
+    }
+
+    /**
+     * Set 设置目录配额的目录的绝对路径
+     * @param DirectoryPath 设置目录配额的目录的绝对路径
+     */
+    public void setDirectoryPath(String DirectoryPath) {
+        this.DirectoryPath = DirectoryPath;
+    }
+
     public DeleteUserQuotaRequest() {
     }
 
@@ -109,6 +132,9 @@ public class DeleteUserQuotaRequest extends AbstractModel {
         if (source.UserId != null) {
             this.UserId = new String(source.UserId);
         }
+        if (source.DirectoryPath != null) {
+            this.DirectoryPath = new String(source.DirectoryPath);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class DeleteUserQuotaRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "FileSystemId", this.FileSystemId);
         this.setParamSimple(map, prefix + "UserType", this.UserType);
         this.setParamSimple(map, prefix + "UserId", this.UserId);
+        this.setParamSimple(map, prefix + "DirectoryPath", this.DirectoryPath);
 
     }
 }

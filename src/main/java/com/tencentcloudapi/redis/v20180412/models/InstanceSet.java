@@ -420,6 +420,30 @@ public class InstanceSet extends AbstractModel {
     private String PolarisServer;
 
     /**
+    * CDC Redis集群ID。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RedisClusterId")
+    @Expose
+    private String RedisClusterId;
+
+    /**
+    * CDC 集群ID。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DedicatedClusterId")
+    @Expose
+    private String DedicatedClusterId;
+
+    /**
+    * 产品版本。<ul><li>local：本地盘。</li><li>cloud：云盘版。</li><li>cdc：CDC 集群版本。</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProductVersion")
+    @Expose
+    private String ProductVersion;
+
+    /**
     * 实例当前Proxy版本。
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -1420,6 +1444,66 @@ public class InstanceSet extends AbstractModel {
     }
 
     /**
+     * Get CDC Redis集群ID。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RedisClusterId CDC Redis集群ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRedisClusterId() {
+        return this.RedisClusterId;
+    }
+
+    /**
+     * Set CDC Redis集群ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RedisClusterId CDC Redis集群ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRedisClusterId(String RedisClusterId) {
+        this.RedisClusterId = RedisClusterId;
+    }
+
+    /**
+     * Get CDC 集群ID。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DedicatedClusterId CDC 集群ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDedicatedClusterId() {
+        return this.DedicatedClusterId;
+    }
+
+    /**
+     * Set CDC 集群ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DedicatedClusterId CDC 集群ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDedicatedClusterId(String DedicatedClusterId) {
+        this.DedicatedClusterId = DedicatedClusterId;
+    }
+
+    /**
+     * Get 产品版本。<ul><li>local：本地盘。</li><li>cloud：云盘版。</li><li>cdc：CDC 集群版本。</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProductVersion 产品版本。<ul><li>local：本地盘。</li><li>cloud：云盘版。</li><li>cdc：CDC 集群版本。</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getProductVersion() {
+        return this.ProductVersion;
+    }
+
+    /**
+     * Set 产品版本。<ul><li>local：本地盘。</li><li>cloud：云盘版。</li><li>cdc：CDC 集群版本。</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProductVersion 产品版本。<ul><li>local：本地盘。</li><li>cloud：云盘版。</li><li>cdc：CDC 集群版本。</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProductVersion(String ProductVersion) {
+        this.ProductVersion = ProductVersion;
+    }
+
+    /**
      * Get 实例当前Proxy版本。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return CurrentProxyVersion 实例当前Proxy版本。
@@ -1695,6 +1779,15 @@ public class InstanceSet extends AbstractModel {
         if (source.PolarisServer != null) {
             this.PolarisServer = new String(source.PolarisServer);
         }
+        if (source.RedisClusterId != null) {
+            this.RedisClusterId = new String(source.RedisClusterId);
+        }
+        if (source.DedicatedClusterId != null) {
+            this.DedicatedClusterId = new String(source.DedicatedClusterId);
+        }
+        if (source.ProductVersion != null) {
+            this.ProductVersion = new String(source.ProductVersion);
+        }
         if (source.CurrentProxyVersion != null) {
             this.CurrentProxyVersion = new String(source.CurrentProxyVersion);
         }
@@ -1769,6 +1862,9 @@ public class InstanceSet extends AbstractModel {
         this.setParamSimple(map, prefix + "Region", this.Region);
         this.setParamSimple(map, prefix + "WanAddress", this.WanAddress);
         this.setParamSimple(map, prefix + "PolarisServer", this.PolarisServer);
+        this.setParamSimple(map, prefix + "RedisClusterId", this.RedisClusterId);
+        this.setParamSimple(map, prefix + "DedicatedClusterId", this.DedicatedClusterId);
+        this.setParamSimple(map, prefix + "ProductVersion", this.ProductVersion);
         this.setParamSimple(map, prefix + "CurrentProxyVersion", this.CurrentProxyVersion);
         this.setParamSimple(map, prefix + "CurrentRedisVersion", this.CurrentRedisVersion);
         this.setParamSimple(map, prefix + "UpgradeProxyVersion", this.UpgradeProxyVersion);

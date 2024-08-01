@@ -32,6 +32,14 @@ public class ReplaceBackgroundRequest extends AbstractModel {
     private String ProductUrl;
 
     /**
+    * 对新背景的文本描述。
+最多支持256个 utf-8 字符，支持中、英文。
+    */
+    @SerializedName("Prompt")
+    @Expose
+    private String Prompt;
+
+    /**
     * 商品 Mask 图 Url，要求背景透明，保留商品主体。
 如果不传，将自动使用内置的商品分割算法得到 Mask。
 支持自定义上传 Mask，如果该参数不为空，则以实际上传的数据为准。
@@ -40,14 +48,6 @@ public class ReplaceBackgroundRequest extends AbstractModel {
     @SerializedName("MaskUrl")
     @Expose
     private String MaskUrl;
-
-    /**
-    * 对新背景的文本描述。
-最多支持256个 utf-8 字符，支持中、英文。
-    */
-    @SerializedName("Prompt")
-    @Expose
-    private String Prompt;
 
     /**
     * 替换背景后生成的商品图分辨率。
@@ -106,6 +106,26 @@ public class ReplaceBackgroundRequest extends AbstractModel {
     }
 
     /**
+     * Get 对新背景的文本描述。
+最多支持256个 utf-8 字符，支持中、英文。 
+     * @return Prompt 对新背景的文本描述。
+最多支持256个 utf-8 字符，支持中、英文。
+     */
+    public String getPrompt() {
+        return this.Prompt;
+    }
+
+    /**
+     * Set 对新背景的文本描述。
+最多支持256个 utf-8 字符，支持中、英文。
+     * @param Prompt 对新背景的文本描述。
+最多支持256个 utf-8 字符，支持中、英文。
+     */
+    public void setPrompt(String Prompt) {
+        this.Prompt = Prompt;
+    }
+
+    /**
      * Get 商品 Mask 图 Url，要求背景透明，保留商品主体。
 如果不传，将自动使用内置的商品分割算法得到 Mask。
 支持自定义上传 Mask，如果该参数不为空，则以实际上传的数据为准。
@@ -131,26 +151,6 @@ public class ReplaceBackgroundRequest extends AbstractModel {
      */
     public void setMaskUrl(String MaskUrl) {
         this.MaskUrl = MaskUrl;
-    }
-
-    /**
-     * Get 对新背景的文本描述。
-最多支持256个 utf-8 字符，支持中、英文。 
-     * @return Prompt 对新背景的文本描述。
-最多支持256个 utf-8 字符，支持中、英文。
-     */
-    public String getPrompt() {
-        return this.Prompt;
-    }
-
-    /**
-     * Set 对新背景的文本描述。
-最多支持256个 utf-8 字符，支持中、英文。
-     * @param Prompt 对新背景的文本描述。
-最多支持256个 utf-8 字符，支持中、英文。
-     */
-    public void setPrompt(String Prompt) {
-        this.Prompt = Prompt;
     }
 
     /**
@@ -260,11 +260,11 @@ public class ReplaceBackgroundRequest extends AbstractModel {
         if (source.ProductUrl != null) {
             this.ProductUrl = new String(source.ProductUrl);
         }
-        if (source.MaskUrl != null) {
-            this.MaskUrl = new String(source.MaskUrl);
-        }
         if (source.Prompt != null) {
             this.Prompt = new String(source.Prompt);
+        }
+        if (source.MaskUrl != null) {
+            this.MaskUrl = new String(source.MaskUrl);
         }
         if (source.Resolution != null) {
             this.Resolution = new String(source.Resolution);
@@ -286,8 +286,8 @@ public class ReplaceBackgroundRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProductUrl", this.ProductUrl);
-        this.setParamSimple(map, prefix + "MaskUrl", this.MaskUrl);
         this.setParamSimple(map, prefix + "Prompt", this.Prompt);
+        this.setParamSimple(map, prefix + "MaskUrl", this.MaskUrl);
         this.setParamSimple(map, prefix + "Resolution", this.Resolution);
         this.setParamSimple(map, prefix + "LogoAdd", this.LogoAdd);
         this.setParamObj(map, prefix + "LogoParam.", this.LogoParam);

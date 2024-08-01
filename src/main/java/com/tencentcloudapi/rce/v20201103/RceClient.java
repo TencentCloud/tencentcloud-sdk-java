@@ -39,6 +39,83 @@ public class RceClient extends AbstractClient{
     }
 
     /**
+     *创建黑白名单列表的数据 包含列表名称 列表名单类型id 关联场景id 数据类型id 记录状态 备注 数据来源 手动输入数据或cos文件key
+     * @param req CreateNameListRequest
+     * @return CreateNameListResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateNameListResponse CreateNameList(CreateNameListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateNameList", CreateNameListResponse.class);
+    }
+
+    /**
+     *修改黑白名单状态 关闭 开启 删除
+     * @param req DeleteNameListRequest
+     * @return DeleteNameListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteNameListResponse DeleteNameList(DeleteNameListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteNameList", DeleteNameListResponse.class);
+    }
+
+    /**
+     *删除黑白名单数据
+     * @param req DeleteNameListDataRequest
+     * @return DeleteNameListDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteNameListDataResponse DeleteNameListData(DeleteNameListDataRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteNameListData", DeleteNameListDataResponse.class);
+    }
+
+    /**
+     *列表展示黑白名单列表数据, 包含列表名称, 名单类型, 数据类型, 数据来源, 描述, 状态等
+     * @param req DescribeNameListRequest
+     * @return DescribeNameListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeNameListResponse DescribeNameList(DescribeNameListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeNameList", DescribeNameListResponse.class);
+    }
+
+    /**
+     *黑白名单详情数据展示 名单id 客户appid uin 数据内容 开始时间和结束时间 状态 描述
+     * @param req DescribeNameListDataListRequest
+     * @return DescribeNameListDataListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeNameListDataListResponse DescribeNameListDataList(DescribeNameListDataListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeNameListDataList", DescribeNameListDataListResponse.class);
+    }
+
+    /**
+     *查询黑白名单列表详情
+     * @param req DescribeNameListDetailRequest
+     * @return DescribeNameListDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeNameListDetailResponse DescribeNameListDetail(DescribeNameListDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeNameListDetail", DescribeNameListDetailResponse.class);
+    }
+
+    /**
+     *新增黑白名单详情数据 手动导入或批量导入
+     * @param req ImportNameListDataRequest
+     * @return ImportNameListDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public ImportNameListDataResponse ImportNameListData(ImportNameListDataRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ImportNameListData", ImportNameListDataResponse.class);
+    }
+
+    /**
      *全栈式风控引擎（RiskControlEngine，RCE）是基于人工智能技术和腾讯20年风控实战沉淀，依托腾讯海量业务构建的风控引擎，以轻量级的 SaaS 服务方式接入，帮助您快速解决注册、登录、营销活动等关键场景遇到的欺诈问题，实时防御黑灰产作恶。
      * @param req ManageMarketingRiskRequest
      * @return ManageMarketingRiskResponse
@@ -47,6 +124,28 @@ public class RceClient extends AbstractClient{
     public ManageMarketingRiskResponse ManageMarketingRisk(ManageMarketingRiskRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ManageMarketingRisk", ManageMarketingRiskResponse.class);
+    }
+
+    /**
+     *修改列表数据 列表名称 列表类型 数据类型 状态 备注
+     * @param req ModifyNameListRequest
+     * @return ModifyNameListResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyNameListResponse ModifyNameList(ModifyNameListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyNameList", ModifyNameListResponse.class);
+    }
+
+    /**
+     *修改黑白名单列表详情 详情内容 开始和结束时间 状态 备注等
+     * @param req ModifyNameListDataRequest
+     * @return ModifyNameListDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyNameListDataResponse ModifyNameListData(ModifyNameListDataRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyNameListData", ModifyNameListDataResponse.class);
     }
 
 }

@@ -12,8 +12,14 @@ public enum IotexplorerErrorCode {
     // 广播任务正在执行。
      FAILEDOPERATION_BROADCASTTASKISRUNNING("FailedOperation.BroadcastTaskIsRunning"),
      
+    // 云存 AI 套餐生效时长不能超过当前云存套餐生效时长
+     FAILEDOPERATION_CLOUDSTORAGEAIPACKAGEEXPIRETIMEEXCEEDED("FailedOperation.CloudStorageAIPackageExpireTimeExceeded"),
+     
     // 产品未开通视频AI分析服务
      FAILEDOPERATION_CLOUDSTORAGEAISERVICENOTENABLED("FailedOperation.CloudStorageAIServiceNotEnabled"),
+     
+    // 需先开通云存套餐
+     FAILEDOPERATION_CLOUDSTORAGEPACKAGEREQUIRED("FailedOperation.CloudStoragePackageRequired"),
      
     // 设备已经被禁用。
      FAILEDOPERATION_DEVICEALREADYDISABLED("FailedOperation.DeviceAlreadyDisabled"),
@@ -125,6 +131,9 @@ public enum IotexplorerErrorCode {
      
     // 检查第三方URL超时或失败。
      INVALIDPARAMETERVALUE_CHECKFORWARDURLFAIL("InvalidParameterValue.CheckForwardURLFail"),
+     
+    // 指定的云存 AI 套餐不存在
+     INVALIDPARAMETERVALUE_CLOUDSTORAGEAIPACKAGEIDNOTEXIST("InvalidParameterValue.CloudStorageAIPackageIdNotExist"),
      
     // 创建的设备名已存在。
      INVALIDPARAMETERVALUE_DEVICEALREADYEXIST("InvalidParameterValue.DeviceAlreadyExist"),
@@ -479,6 +488,12 @@ public enum IotexplorerErrorCode {
      
     // 存在重复的绑定关系。
      UNSUPPORTEDOPERATION_CANNOTREBINDFAMILY("UnsupportedOperation.CannotReBindFamily"),
+     
+    // 云存套餐与云存 AI 套餐时长不匹配
+     UNSUPPORTEDOPERATION_CLOUDSTORAGEPACKAGETIMEMISMATCH("UnsupportedOperation.CloudStoragePackageTimeMismatch"),
+     
+    // 云存套餐与云存 AI 套餐类型不匹配
+     UNSUPPORTEDOPERATION_CLOUDSTORAGEPACKAGETYPEMISMATCH("UnsupportedOperation.CloudStoragePackageTypeMismatch"),
      
     // 创建的设备已经存在。
      UNSUPPORTEDOPERATION_DEVICEDUPKEYEXIST("UnsupportedOperation.DeviceDupKeyExist"),

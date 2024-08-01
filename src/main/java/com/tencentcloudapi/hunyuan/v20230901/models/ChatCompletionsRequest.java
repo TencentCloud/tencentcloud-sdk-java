@@ -143,6 +143,17 @@ public class ChatCompletionsRequest extends AbstractModel {
     private Boolean SearchInfo;
 
     /**
+    * 搜索引文角标开关。
+说明：
+1. 配合EnableEnhancement和SearchInfo参数使用。打开后，回答中命中搜索的结果会在片段后增加角标标志，对应SearchInfo列表中的链接。
+2. false：开关关闭，true：开关打开。
+3. 未传值时默认开关关闭（false）。
+    */
+    @SerializedName("Citation")
+    @Expose
+    private Boolean Citation;
+
+    /**
      * Get 模型名称，可选值包括 hunyuan-lite、hunyuan-standard、hunyuan-standard-256K、hunyuan-pro、 hunyuan-code、 hunyuan-role、 hunyuan-functioncall、 hunyuan-vision。
 各模型介绍请阅读 [产品概述](https://cloud.tencent.com/document/product/1729/104753) 中的说明。
 
@@ -486,6 +497,38 @@ public class ChatCompletionsRequest extends AbstractModel {
         this.SearchInfo = SearchInfo;
     }
 
+    /**
+     * Get 搜索引文角标开关。
+说明：
+1. 配合EnableEnhancement和SearchInfo参数使用。打开后，回答中命中搜索的结果会在片段后增加角标标志，对应SearchInfo列表中的链接。
+2. false：开关关闭，true：开关打开。
+3. 未传值时默认开关关闭（false）。 
+     * @return Citation 搜索引文角标开关。
+说明：
+1. 配合EnableEnhancement和SearchInfo参数使用。打开后，回答中命中搜索的结果会在片段后增加角标标志，对应SearchInfo列表中的链接。
+2. false：开关关闭，true：开关打开。
+3. 未传值时默认开关关闭（false）。
+     */
+    public Boolean getCitation() {
+        return this.Citation;
+    }
+
+    /**
+     * Set 搜索引文角标开关。
+说明：
+1. 配合EnableEnhancement和SearchInfo参数使用。打开后，回答中命中搜索的结果会在片段后增加角标标志，对应SearchInfo列表中的链接。
+2. false：开关关闭，true：开关打开。
+3. 未传值时默认开关关闭（false）。
+     * @param Citation 搜索引文角标开关。
+说明：
+1. 配合EnableEnhancement和SearchInfo参数使用。打开后，回答中命中搜索的结果会在片段后增加角标标志，对应SearchInfo列表中的链接。
+2. false：开关关闭，true：开关打开。
+3. 未传值时默认开关关闭（false）。
+     */
+    public void setCitation(Boolean Citation) {
+        this.Citation = Citation;
+    }
+
     public ChatCompletionsRequest() {
     }
 
@@ -533,6 +576,9 @@ public class ChatCompletionsRequest extends AbstractModel {
         if (source.SearchInfo != null) {
             this.SearchInfo = new Boolean(source.SearchInfo);
         }
+        if (source.Citation != null) {
+            this.Citation = new Boolean(source.Citation);
+        }
     }
 
 
@@ -551,6 +597,7 @@ public class ChatCompletionsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ToolChoice", this.ToolChoice);
         this.setParamObj(map, prefix + "CustomTool.", this.CustomTool);
         this.setParamSimple(map, prefix + "SearchInfo", this.SearchInfo);
+        this.setParamSimple(map, prefix + "Citation", this.Citation);
 
     }
 }

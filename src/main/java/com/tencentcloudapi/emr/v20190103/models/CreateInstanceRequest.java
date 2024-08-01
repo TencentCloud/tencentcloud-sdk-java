@@ -287,6 +287,13 @@ Hadoop-Hbase
     private MultiZoneSetting [] MultiZoneSettings;
 
     /**
+    * cos桶路径，创建StarRocks存算分离集群时用到
+    */
+    @SerializedName("CosBucket")
+    @Expose
+    private String CosBucket;
+
+    /**
      * Get 产品ID，不同产品ID表示不同的EMR产品版本。取值范围：
 51:表示STARROCKS-V1.4.0
 54:表示STARROCKS-V2.0.0
@@ -954,6 +961,22 @@ Hadoop-Hbase
         this.MultiZoneSettings = MultiZoneSettings;
     }
 
+    /**
+     * Get cos桶路径，创建StarRocks存算分离集群时用到 
+     * @return CosBucket cos桶路径，创建StarRocks存算分离集群时用到
+     */
+    public String getCosBucket() {
+        return this.CosBucket;
+    }
+
+    /**
+     * Set cos桶路径，创建StarRocks存算分离集群时用到
+     * @param CosBucket cos桶路径，创建StarRocks存算分离集群时用到
+     */
+    public void setCosBucket(String CosBucket) {
+        this.CosBucket = CosBucket;
+    }
+
     public CreateInstanceRequest() {
     }
 
@@ -1076,6 +1099,9 @@ Hadoop-Hbase
                 this.MultiZoneSettings[i] = new MultiZoneSetting(source.MultiZoneSettings[i]);
             }
         }
+        if (source.CosBucket != null) {
+            this.CosBucket = new String(source.CosBucket);
+        }
     }
 
 
@@ -1115,6 +1141,7 @@ Hadoop-Hbase
         this.setParamSimple(map, prefix + "VersionID", this.VersionID);
         this.setParamSimple(map, prefix + "MultiZone", this.MultiZone);
         this.setParamArrayObj(map, prefix + "MultiZoneSettings.", this.MultiZoneSettings);
+        this.setParamSimple(map, prefix + "CosBucket", this.CosBucket);
 
     }
 }

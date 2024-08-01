@@ -47,6 +47,15 @@ public class TranslateConfigureInfo extends AbstractModel {
     private String DestinationLanguage;
 
     /**
+    * 生成的字幕文件格式，填空字符串表示不生成字幕文件，可选值：
+<li>vtt：生成 WebVTT 字幕文件。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SubtitleFormat")
+    @Expose
+    private String SubtitleFormat;
+
+    /**
      * Get 语音翻译任务开关，可选值：
 <li>ON：开启智能语音翻译任务；</li>
 <li>OFF：关闭智能语音翻译任务。</li> 
@@ -102,6 +111,30 @@ public class TranslateConfigureInfo extends AbstractModel {
         this.DestinationLanguage = DestinationLanguage;
     }
 
+    /**
+     * Get 生成的字幕文件格式，填空字符串表示不生成字幕文件，可选值：
+<li>vtt：生成 WebVTT 字幕文件。</li>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SubtitleFormat 生成的字幕文件格式，填空字符串表示不生成字幕文件，可选值：
+<li>vtt：生成 WebVTT 字幕文件。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSubtitleFormat() {
+        return this.SubtitleFormat;
+    }
+
+    /**
+     * Set 生成的字幕文件格式，填空字符串表示不生成字幕文件，可选值：
+<li>vtt：生成 WebVTT 字幕文件。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SubtitleFormat 生成的字幕文件格式，填空字符串表示不生成字幕文件，可选值：
+<li>vtt：生成 WebVTT 字幕文件。</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSubtitleFormat(String SubtitleFormat) {
+        this.SubtitleFormat = SubtitleFormat;
+    }
+
     public TranslateConfigureInfo() {
     }
 
@@ -119,6 +152,9 @@ public class TranslateConfigureInfo extends AbstractModel {
         if (source.DestinationLanguage != null) {
             this.DestinationLanguage = new String(source.DestinationLanguage);
         }
+        if (source.SubtitleFormat != null) {
+            this.SubtitleFormat = new String(source.SubtitleFormat);
+        }
     }
 
 
@@ -129,6 +165,7 @@ public class TranslateConfigureInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Switch", this.Switch);
         this.setParamSimple(map, prefix + "SourceLanguage", this.SourceLanguage);
         this.setParamSimple(map, prefix + "DestinationLanguage", this.DestinationLanguage);
+        this.setParamSimple(map, prefix + "SubtitleFormat", this.SubtitleFormat);
 
     }
 }

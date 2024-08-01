@@ -46,7 +46,7 @@ public class ChatCompletionsResponse extends SSEResponseModel {
     private String Note;
 
     /**
-    * 本轮对话的 ID。
+    * 本次请求的 RequestId。
     */
     @SerializedName("Id")
     @Expose
@@ -142,16 +142,16 @@ public class ChatCompletionsResponse extends SSEResponseModel {
     }
 
     /**
-     * Get 本轮对话的 ID。 
-     * @return Id 本轮对话的 ID。
+     * Get 本次请求的 RequestId。 
+     * @return Id 本次请求的 RequestId。
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set 本轮对话的 ID。
-     * @param Id 本轮对话的 ID。
+     * Set 本次请求的 RequestId。
+     * @param Id 本次请求的 RequestId。
      */
     public void setId(String Id) {
         this.Id = Id;

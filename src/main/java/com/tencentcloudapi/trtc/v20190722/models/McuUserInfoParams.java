@@ -31,6 +31,14 @@ public class McuUserInfoParams extends AbstractModel {
     private MixUserInfo UserInfo;
 
     /**
+    * 混音的音量调整：取值范围是0到100，100为原始上行音量，不填默认为100，值越小则音量越低。
+注：该参数只在音量白名单下配置生效，其他场景配置无效。
+    */
+    @SerializedName("SoundLevel")
+    @Expose
+    private Long SoundLevel;
+
+    /**
      * Get 用户参数。 
      * @return UserInfo 用户参数。
      */
@@ -46,6 +54,26 @@ public class McuUserInfoParams extends AbstractModel {
         this.UserInfo = UserInfo;
     }
 
+    /**
+     * Get 混音的音量调整：取值范围是0到100，100为原始上行音量，不填默认为100，值越小则音量越低。
+注：该参数只在音量白名单下配置生效，其他场景配置无效。 
+     * @return SoundLevel 混音的音量调整：取值范围是0到100，100为原始上行音量，不填默认为100，值越小则音量越低。
+注：该参数只在音量白名单下配置生效，其他场景配置无效。
+     */
+    public Long getSoundLevel() {
+        return this.SoundLevel;
+    }
+
+    /**
+     * Set 混音的音量调整：取值范围是0到100，100为原始上行音量，不填默认为100，值越小则音量越低。
+注：该参数只在音量白名单下配置生效，其他场景配置无效。
+     * @param SoundLevel 混音的音量调整：取值范围是0到100，100为原始上行音量，不填默认为100，值越小则音量越低。
+注：该参数只在音量白名单下配置生效，其他场景配置无效。
+     */
+    public void setSoundLevel(Long SoundLevel) {
+        this.SoundLevel = SoundLevel;
+    }
+
     public McuUserInfoParams() {
     }
 
@@ -57,6 +85,9 @@ public class McuUserInfoParams extends AbstractModel {
         if (source.UserInfo != null) {
             this.UserInfo = new MixUserInfo(source.UserInfo);
         }
+        if (source.SoundLevel != null) {
+            this.SoundLevel = new Long(source.SoundLevel);
+        }
     }
 
 
@@ -65,6 +96,7 @@ public class McuUserInfoParams extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "UserInfo.", this.UserInfo);
+        this.setParamSimple(map, prefix + "SoundLevel", this.SoundLevel);
 
     }
 }

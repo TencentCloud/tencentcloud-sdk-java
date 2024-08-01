@@ -39,6 +39,28 @@ public class CdwdorisClient extends AbstractClient{
     }
 
     /**
+     *取消对应的备份实例任务
+     * @param req CancelBackupJobRequest
+     * @return CancelBackupJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public CancelBackupJobResponse CancelBackupJob(CancelBackupJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CancelBackupJob", CancelBackupJobResponse.class);
+    }
+
+    /**
+     *创建或者修改备份策略
+     * @param req CreateBackUpScheduleRequest
+     * @return CreateBackUpScheduleResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateBackUpScheduleResponse CreateBackUpSchedule(CreateBackUpScheduleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateBackUpSchedule", CreateBackUpScheduleResponse.class);
+    }
+
+    /**
      *通过API创建集群
      * @param req CreateInstanceNewRequest
      * @return CreateInstanceNewResponse
@@ -61,6 +83,17 @@ public class CdwdorisClient extends AbstractClient{
     }
 
     /**
+     *删除备份数据
+     * @param req DeleteBackUpDataRequest
+     * @return DeleteBackUpDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteBackUpDataResponse DeleteBackUpData(DeleteBackUpDataRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteBackUpData", DeleteBackUpDataResponse.class);
+    }
+
+    /**
      *删除资源组
      * @param req DeleteWorkloadGroupRequest
      * @return DeleteWorkloadGroupResponse
@@ -72,6 +105,72 @@ public class CdwdorisClient extends AbstractClient{
     }
 
     /**
+     *集群列表页上显示地域信息及各个地域的集群总数
+     * @param req DescribeAreaRegionRequest
+     * @return DescribeAreaRegionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAreaRegionResponse DescribeAreaRegion(DescribeAreaRegionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAreaRegion", DescribeAreaRegionResponse.class);
+    }
+
+    /**
+     *查询备份实例列表
+     * @param req DescribeBackUpJobRequest
+     * @return DescribeBackUpJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBackUpJobResponse DescribeBackUpJob(DescribeBackUpJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBackUpJob", DescribeBackUpJobResponse.class);
+    }
+
+    /**
+     *查询备份任务详情
+     * @param req DescribeBackUpJobDetailRequest
+     * @return DescribeBackUpJobDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBackUpJobDetailResponse DescribeBackUpJobDetail(DescribeBackUpJobDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBackUpJobDetail", DescribeBackUpJobDetailResponse.class);
+    }
+
+    /**
+     *获取备份、迁移的调度任务信息
+     * @param req DescribeBackUpSchedulesRequest
+     * @return DescribeBackUpSchedulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBackUpSchedulesResponse DescribeBackUpSchedules(DescribeBackUpSchedulesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBackUpSchedules", DescribeBackUpSchedulesResponse.class);
+    }
+
+    /**
+     *获取可备份表信息
+     * @param req DescribeBackUpTablesRequest
+     * @return DescribeBackUpTablesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBackUpTablesResponse DescribeBackUpTables(DescribeBackUpTablesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBackUpTables", DescribeBackUpTablesResponse.class);
+    }
+
+    /**
+     *查询备份任务进度详情
+     * @param req DescribeBackUpTaskDetailRequest
+     * @return DescribeBackUpTaskDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBackUpTaskDetailResponse DescribeBackUpTaskDetail(DescribeBackUpTaskDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBackUpTaskDetail", DescribeBackUpTaskDetailResponse.class);
+    }
+
+    /**
      *获取集群的最新的几个配置文件（config.xml、metrika.xml、user.xml）的内容，显示给用户
      * @param req DescribeClusterConfigsRequest
      * @return DescribeClusterConfigsResponse
@@ -80,6 +179,17 @@ public class CdwdorisClient extends AbstractClient{
     public DescribeClusterConfigsResponse DescribeClusterConfigs(DescribeClusterConfigsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeClusterConfigs", DescribeClusterConfigsResponse.class);
+    }
+
+    /**
+     *获取集群配置文件修改历史
+     * @param req DescribeClusterConfigsHistoryRequest
+     * @return DescribeClusterConfigsHistoryResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClusterConfigsHistoryResponse DescribeClusterConfigsHistory(DescribeClusterConfigsHistoryRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeClusterConfigsHistory", DescribeClusterConfigsHistoryResponse.class);
     }
 
     /**
@@ -105,6 +215,39 @@ public class CdwdorisClient extends AbstractClient{
     }
 
     /**
+     *数据库审计数据库、用户等
+     * @param req DescribeDatabaseAuditResourceRequest
+     * @return DescribeDatabaseAuditResourceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDatabaseAuditResourceResponse DescribeDatabaseAuditResource(DescribeDatabaseAuditResourceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDatabaseAuditResource", DescribeDatabaseAuditResourceResponse.class);
+    }
+
+    /**
+     *查询sql工作区历史运行记录
+     * @param req DescribeDmsSqlHistoryRequest
+     * @return DescribeDmsSqlHistoryResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDmsSqlHistoryResponse DescribeDmsSqlHistory(DescribeDmsSqlHistoryRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDmsSqlHistory", DescribeDmsSqlHistoryResponse.class);
+    }
+
+    /**
+     *展示监控指标文件
+     * @param req DescribeDorisMetricFilesRequest
+     * @return DescribeDorisMetricFilesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDorisMetricFilesResponse DescribeDorisMetricFiles(DescribeDorisMetricFilesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDorisMetricFiles", DescribeDorisMetricFilesResponse.class);
+    }
+
+    /**
      *获取联合身份临时访问凭证
      * @param req DescribeFederationTokenRequest
      * @return DescribeFederationTokenResponse
@@ -113,6 +256,17 @@ public class CdwdorisClient extends AbstractClient{
     public DescribeFederationTokenResponse DescribeFederationToken(DescribeFederationTokenRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeFederationToken", DescribeFederationTokenResponse.class);
+    }
+
+    /**
+     *查询前端内容
+     * @param req DescribeFrontEndRequest
+     * @return DescribeFrontEndResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeFrontEndResponse DescribeFrontEnd(DescribeFrontEndRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeFrontEnd", DescribeFrontEndResponse.class);
     }
 
     /**
@@ -160,6 +314,28 @@ public class CdwdorisClient extends AbstractClient{
     }
 
     /**
+     *获取集群节点角色
+     * @param req DescribeInstanceNodesRoleRequest
+     * @return DescribeInstanceNodesRoleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceNodesRoleResponse DescribeInstanceNodesRole(DescribeInstanceNodesRoleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeInstanceNodesRole", DescribeInstanceNodesRoleResponse.class);
+    }
+
+    /**
+     *在集群详情页面，拉取该集群的操作
+     * @param req DescribeInstanceOperationsRequest
+     * @return DescribeInstanceOperationsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceOperationsResponse DescribeInstanceOperations(DescribeInstanceOperationsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeInstanceOperations", DescribeInstanceOperationsResponse.class);
+    }
+
+    /**
      *集群详情页中显示集群状态、流程进度等
      * @param req DescribeInstanceStateRequest
      * @return DescribeInstanceStateResponse
@@ -190,6 +366,17 @@ public class CdwdorisClient extends AbstractClient{
     public DescribeInstancesResponse DescribeInstances(DescribeInstancesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeInstances", DescribeInstancesResponse.class);
+    }
+
+    /**
+     *集群健康检查
+     * @param req DescribeInstancesHealthStateRequest
+     * @return DescribeInstancesHealthStateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstancesHealthStateResponse DescribeInstancesHealthState(DescribeInstancesHealthStateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeInstancesHealthState", DescribeInstancesHealthStateResponse.class);
     }
 
     /**
@@ -245,6 +432,17 @@ public class CdwdorisClient extends AbstractClient{
     public DescribeSlowQueryRecordsDownloadResponse DescribeSlowQueryRecordsDownload(DescribeSlowQueryRecordsDownloadRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeSlowQueryRecordsDownload", DescribeSlowQueryRecordsDownloadResponse.class);
+    }
+
+    /**
+     *购买页拉取集群的数据节点和zookeeper节点的规格列表
+     * @param req DescribeSpecRequest
+     * @return DescribeSpecResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSpecResponse DescribeSpec(DescribeSpecRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSpec", DescribeSpecResponse.class);
     }
 
     /**
@@ -325,6 +523,17 @@ public class CdwdorisClient extends AbstractClient{
     }
 
     /**
+     *修改节点状态
+     * @param req ModifyNodeStatusRequest
+     * @return ModifyNodeStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyNodeStatusResponse ModifyNodeStatus(ModifyNodeStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyNodeStatus", ModifyNodeStatusResponse.class);
+    }
+
+    /**
      *更改安全组
      * @param req ModifySecurityGroupsRequest
      * @return ModifySecurityGroupsResponse
@@ -380,6 +589,28 @@ public class CdwdorisClient extends AbstractClient{
     }
 
     /**
+     *开启或者关闭策略
+     * @param req OpenBackUpRequest
+     * @return OpenBackUpResponse
+     * @throws TencentCloudSDKException
+     */
+    public OpenBackUpResponse OpenBackUp(OpenBackUpRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "OpenBackUp", OpenBackUpResponse.class);
+    }
+
+    /**
+     *备份恢复
+     * @param req RecoverBackUpJobRequest
+     * @return RecoverBackUpJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public RecoverBackUpJobResponse RecoverBackUpJob(RecoverBackUpJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RecoverBackUpJob", RecoverBackUpJobResponse.class);
+    }
+
+    /**
      *集群缩容
      * @param req ReduceInstanceRequest
      * @return ReduceInstanceResponse
@@ -399,6 +630,17 @@ public class CdwdorisClient extends AbstractClient{
     public ResizeDiskResponse ResizeDisk(ResizeDiskRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ResizeDisk", ResizeDiskResponse.class);
+    }
+
+    /**
+     *重启集群让配置文件生效
+     * @param req RestartClusterForConfigsRequest
+     * @return RestartClusterForConfigsResponse
+     * @throws TencentCloudSDKException
+     */
+    public RestartClusterForConfigsResponse RestartClusterForConfigs(RestartClusterForConfigsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RestartClusterForConfigs", RestartClusterForConfigsResponse.class);
     }
 
     /**

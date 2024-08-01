@@ -644,6 +644,28 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
+     *查询Redis独享集群概览信息
+     * @param req DescribeRedisClusterOverviewRequest
+     * @return DescribeRedisClusterOverviewResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRedisClusterOverviewResponse DescribeRedisClusterOverview(DescribeRedisClusterOverviewRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRedisClusterOverview", DescribeRedisClusterOverviewResponse.class);
+    }
+
+    /**
+     *查询Redis独享集群列表
+     * @param req DescribeRedisClustersRequest
+     * @return DescribeRedisClustersResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRedisClustersResponse DescribeRedisClusters(DescribeRedisClustersRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRedisClusters", DescribeRedisClustersResponse.class);
+    }
+
+    /**
      *本接口（DescribeReplicationGroup）用于查询复制组。
      * @param req DescribeReplicationGroupRequest
      * @return DescribeReplicationGroupResponse

@@ -253,6 +253,20 @@ video 纯视频
     private String RecordLang;
 
     /**
+    * 录制类型 0 仅录制混流（默认） ;1 录制混流+单流，该模式下除混流录制基础上，分别录制老师、台上学生的音视频流，每路录制都会产生相应的录制费用 。示例：0
+    */
+    @SerializedName("RecordStream")
+    @Expose
+    private Long RecordStream;
+
+    /**
+    * 录制模板。房间子类型为视频+白板（SubType=videodoc）时默认为3，房间子类型为纯视频（SubType=video）时默认为0。录制模板枚举值参考：https://cloud.tencent.com/document/product/1639/89744
+    */
+    @SerializedName("RecordLayout")
+    @Expose
+    private Long RecordLayout;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -816,6 +830,38 @@ video 纯视频
     }
 
     /**
+     * Get 录制类型 0 仅录制混流（默认） ;1 录制混流+单流，该模式下除混流录制基础上，分别录制老师、台上学生的音视频流，每路录制都会产生相应的录制费用 。示例：0 
+     * @return RecordStream 录制类型 0 仅录制混流（默认） ;1 录制混流+单流，该模式下除混流录制基础上，分别录制老师、台上学生的音视频流，每路录制都会产生相应的录制费用 。示例：0
+     */
+    public Long getRecordStream() {
+        return this.RecordStream;
+    }
+
+    /**
+     * Set 录制类型 0 仅录制混流（默认） ;1 录制混流+单流，该模式下除混流录制基础上，分别录制老师、台上学生的音视频流，每路录制都会产生相应的录制费用 。示例：0
+     * @param RecordStream 录制类型 0 仅录制混流（默认） ;1 录制混流+单流，该模式下除混流录制基础上，分别录制老师、台上学生的音视频流，每路录制都会产生相应的录制费用 。示例：0
+     */
+    public void setRecordStream(Long RecordStream) {
+        this.RecordStream = RecordStream;
+    }
+
+    /**
+     * Get 录制模板。房间子类型为视频+白板（SubType=videodoc）时默认为3，房间子类型为纯视频（SubType=video）时默认为0。录制模板枚举值参考：https://cloud.tencent.com/document/product/1639/89744 
+     * @return RecordLayout 录制模板。房间子类型为视频+白板（SubType=videodoc）时默认为3，房间子类型为纯视频（SubType=video）时默认为0。录制模板枚举值参考：https://cloud.tencent.com/document/product/1639/89744
+     */
+    public Long getRecordLayout() {
+        return this.RecordLayout;
+    }
+
+    /**
+     * Set 录制模板。房间子类型为视频+白板（SubType=videodoc）时默认为3，房间子类型为纯视频（SubType=video）时默认为0。录制模板枚举值参考：https://cloud.tencent.com/document/product/1639/89744
+     * @param RecordLayout 录制模板。房间子类型为视频+白板（SubType=videodoc）时默认为3，房间子类型为纯视频（SubType=video）时默认为0。录制模板枚举值参考：https://cloud.tencent.com/document/product/1639/89744
+     */
+    public void setRecordLayout(Long RecordLayout) {
+        this.RecordLayout = RecordLayout;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -932,6 +978,12 @@ video 纯视频
         if (source.RecordLang != null) {
             this.RecordLang = new String(source.RecordLang);
         }
+        if (source.RecordStream != null) {
+            this.RecordStream = new Long(source.RecordStream);
+        }
+        if (source.RecordLayout != null) {
+            this.RecordLayout = new Long(source.RecordLayout);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -972,6 +1024,8 @@ video 纯视频
         this.setParamSimple(map, prefix + "RTMPStreamingURL", this.RTMPStreamingURL);
         this.setParamSimple(map, prefix + "RecordScene", this.RecordScene);
         this.setParamSimple(map, prefix + "RecordLang", this.RecordLang);
+        this.setParamSimple(map, prefix + "RecordStream", this.RecordStream);
+        this.setParamSimple(map, prefix + "RecordLayout", this.RecordLayout);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

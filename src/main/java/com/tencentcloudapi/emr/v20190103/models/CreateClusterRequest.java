@@ -183,6 +183,13 @@ public class CreateClusterRequest extends AbstractModel {
     private ZoneResourceConfiguration [] ZoneResourceConfiguration;
 
     /**
+    * cos桶路径，创建StarRocks存算分离集群时用到
+    */
+    @SerializedName("CosBucket")
+    @Expose
+    private String CosBucket;
+
+    /**
      * Get EMR产品版本名称如EMR-V2.3.0 表示2.3.0版本的EMR， 当前支持产品版本名称查询：[产品版本名称](https://cloud.tencent.com/document/product/589/66338) 
      * @return ProductVersion EMR产品版本名称如EMR-V2.3.0 表示2.3.0版本的EMR， 当前支持产品版本名称查询：[产品版本名称](https://cloud.tencent.com/document/product/589/66338)
      */
@@ -578,6 +585,22 @@ public class CreateClusterRequest extends AbstractModel {
         this.ZoneResourceConfiguration = ZoneResourceConfiguration;
     }
 
+    /**
+     * Get cos桶路径，创建StarRocks存算分离集群时用到 
+     * @return CosBucket cos桶路径，创建StarRocks存算分离集群时用到
+     */
+    public String getCosBucket() {
+        return this.CosBucket;
+    }
+
+    /**
+     * Set cos桶路径，创建StarRocks存算分离集群时用到
+     * @param CosBucket cos桶路径，创建StarRocks存算分离集群时用到
+     */
+    public void setCosBucket(String CosBucket) {
+        this.CosBucket = CosBucket;
+    }
+
     public CreateClusterRequest() {
     }
 
@@ -664,6 +687,9 @@ public class CreateClusterRequest extends AbstractModel {
                 this.ZoneResourceConfiguration[i] = new ZoneResourceConfiguration(source.ZoneResourceConfiguration[i]);
             }
         }
+        if (source.CosBucket != null) {
+            this.CosBucket = new String(source.CosBucket);
+        }
     }
 
 
@@ -691,6 +717,7 @@ public class CreateClusterRequest extends AbstractModel {
         this.setParamObj(map, prefix + "MetaDBInfo.", this.MetaDBInfo);
         this.setParamArrayObj(map, prefix + "DependService.", this.DependService);
         this.setParamArrayObj(map, prefix + "ZoneResourceConfiguration.", this.ZoneResourceConfiguration);
+        this.setParamSimple(map, prefix + "CosBucket", this.CosBucket);
 
     }
 }

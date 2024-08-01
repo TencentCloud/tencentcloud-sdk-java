@@ -66,7 +66,7 @@ public class ModifyAlarmNoticeRequest extends AbstractModel {
     private UserNotice [] UserNotices;
 
     /**
-    * 回调通知 最多3个
+    * 回调通知 最多6个
     */
     @SerializedName("URLNotices")
     @Expose
@@ -183,16 +183,16 @@ public class ModifyAlarmNoticeRequest extends AbstractModel {
     }
 
     /**
-     * Get 回调通知 最多3个 
-     * @return URLNotices 回调通知 最多3个
+     * Get 回调通知 最多6个 
+     * @return URLNotices 回调通知 最多6个
      */
     public URLNotice [] getURLNotices() {
         return this.URLNotices;
     }
 
     /**
-     * Set 回调通知 最多3个
-     * @param URLNotices 回调通知 最多3个
+     * Set 回调通知 最多6个
+     * @param URLNotices 回调通知 最多6个
      */
     public void setURLNotices(URLNotice [] URLNotices) {
         this.URLNotices = URLNotices;

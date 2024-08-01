@@ -160,6 +160,17 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
+     *开通设备云存AI分析服务
+     * @param req CreateCloudStorageAIServiceRequest
+     * @return CreateCloudStorageAIServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCloudStorageAIServiceResponse CreateCloudStorageAIService(CreateCloudStorageAIServiceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateCloudStorageAIService", CreateCloudStorageAIServiceResponse.class);
+    }
+
+    /**
      *创建设备
      * @param req CreateDeviceRequest
      * @return CreateDeviceResponse
@@ -1466,6 +1477,17 @@ public class IotexplorerClient extends AbstractClient{
     public ResetCloudStorageResponse ResetCloudStorage(ResetCloudStorageRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ResetCloudStorage", ResetCloudStorageResponse.class);
+    }
+
+    /**
+     *重置指定设备的云存 AI 服务
+     * @param req ResetCloudStorageAIServiceRequest
+     * @return ResetCloudStorageAIServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ResetCloudStorageAIServiceResponse ResetCloudStorageAIService(ResetCloudStorageAIServiceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ResetCloudStorageAIService", ResetCloudStorageAIServiceResponse.class);
     }
 
     /**

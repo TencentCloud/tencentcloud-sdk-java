@@ -48,6 +48,14 @@ public class KongActiveHealthCheck extends AbstractModel {
     private String HttpPath;
 
     /**
+    * GET HTTP 请求的超时时间，单位：秒。默认 60。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Timeout")
+    @Expose
+    private Float Timeout;
+
+    /**
      * Get 主动健康检查健康探测间隔，单位：秒，0表示不开启
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return HealthyInterval 主动健康检查健康探测间隔，单位：秒，0表示不开启
@@ -107,6 +115,26 @@ public class KongActiveHealthCheck extends AbstractModel {
         this.HttpPath = HttpPath;
     }
 
+    /**
+     * Get GET HTTP 请求的超时时间，单位：秒。默认 60。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Timeout GET HTTP 请求的超时时间，单位：秒。默认 60。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float getTimeout() {
+        return this.Timeout;
+    }
+
+    /**
+     * Set GET HTTP 请求的超时时间，单位：秒。默认 60。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Timeout GET HTTP 请求的超时时间，单位：秒。默认 60。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTimeout(Float Timeout) {
+        this.Timeout = Timeout;
+    }
+
     public KongActiveHealthCheck() {
     }
 
@@ -124,6 +152,9 @@ public class KongActiveHealthCheck extends AbstractModel {
         if (source.HttpPath != null) {
             this.HttpPath = new String(source.HttpPath);
         }
+        if (source.Timeout != null) {
+            this.Timeout = new Float(source.Timeout);
+        }
     }
 
 
@@ -134,6 +165,7 @@ public class KongActiveHealthCheck extends AbstractModel {
         this.setParamSimple(map, prefix + "HealthyInterval", this.HealthyInterval);
         this.setParamSimple(map, prefix + "UnHealthyInterval", this.UnHealthyInterval);
         this.setParamSimple(map, prefix + "HttpPath", this.HttpPath);
+        this.setParamSimple(map, prefix + "Timeout", this.Timeout);
 
     }
 }

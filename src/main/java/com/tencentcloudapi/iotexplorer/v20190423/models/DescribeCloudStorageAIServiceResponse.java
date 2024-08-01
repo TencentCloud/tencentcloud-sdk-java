@@ -24,6 +24,45 @@ import java.util.HashMap;
 public class DescribeCloudStorageAIServiceResponse extends AbstractModel {
 
     /**
+    * 云存 AI 套餐类型。可能取值：
+
+- `1`：全时套餐
+- `2`：事件套餐
+- `3`：低功耗套餐
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Type")
+    @Expose
+    private Long Type;
+
+    /**
+    * 云存 AI 套餐生效状态。可能取值：
+
+- `0`：未开通或已过期
+- `1`：生效中
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Status")
+    @Expose
+    private Long Status;
+
+    /**
+    * 云存 AI 套餐过期时间 UNIX 时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ExpireTime")
+    @Expose
+    private Long ExpireTime;
+
+    /**
+    * 用户 ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UserId")
+    @Expose
+    private String UserId;
+
+    /**
     * 视频分析启用状态
     */
     @SerializedName("Enabled")
@@ -50,6 +89,114 @@ public class DescribeCloudStorageAIServiceResponse extends AbstractModel {
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 云存 AI 套餐类型。可能取值：
+
+- `1`：全时套餐
+- `2`：事件套餐
+- `3`：低功耗套餐
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Type 云存 AI 套餐类型。可能取值：
+
+- `1`：全时套餐
+- `2`：事件套餐
+- `3`：低功耗套餐
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set 云存 AI 套餐类型。可能取值：
+
+- `1`：全时套餐
+- `2`：事件套餐
+- `3`：低功耗套餐
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Type 云存 AI 套餐类型。可能取值：
+
+- `1`：全时套餐
+- `2`：事件套餐
+- `3`：低功耗套餐
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setType(Long Type) {
+        this.Type = Type;
+    }
+
+    /**
+     * Get 云存 AI 套餐生效状态。可能取值：
+
+- `0`：未开通或已过期
+- `1`：生效中
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Status 云存 AI 套餐生效状态。可能取值：
+
+- `0`：未开通或已过期
+- `1`：生效中
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 云存 AI 套餐生效状态。可能取值：
+
+- `0`：未开通或已过期
+- `1`：生效中
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Status 云存 AI 套餐生效状态。可能取值：
+
+- `0`：未开通或已过期
+- `1`：生效中
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStatus(Long Status) {
+        this.Status = Status;
+    }
+
+    /**
+     * Get 云存 AI 套餐过期时间 UNIX 时间戳
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ExpireTime 云存 AI 套餐过期时间 UNIX 时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getExpireTime() {
+        return this.ExpireTime;
+    }
+
+    /**
+     * Set 云存 AI 套餐过期时间 UNIX 时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExpireTime 云存 AI 套餐过期时间 UNIX 时间戳
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExpireTime(Long ExpireTime) {
+        this.ExpireTime = ExpireTime;
+    }
+
+    /**
+     * Get 用户 ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UserId 用户 ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getUserId() {
+        return this.UserId;
+    }
+
+    /**
+     * Set 用户 ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UserId 用户 ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUserId(String UserId) {
+        this.UserId = UserId;
+    }
 
     /**
      * Get 视频分析启用状态 
@@ -123,6 +270,18 @@ public class DescribeCloudStorageAIServiceResponse extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeCloudStorageAIServiceResponse(DescribeCloudStorageAIServiceResponse source) {
+        if (source.Type != null) {
+            this.Type = new Long(source.Type);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.ExpireTime != null) {
+            this.ExpireTime = new Long(source.ExpireTime);
+        }
+        if (source.UserId != null) {
+            this.UserId = new String(source.UserId);
+        }
         if (source.Enabled != null) {
             this.Enabled = new Boolean(source.Enabled);
         }
@@ -142,6 +301,10 @@ public class DescribeCloudStorageAIServiceResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
+        this.setParamSimple(map, prefix + "UserId", this.UserId);
         this.setParamSimple(map, prefix + "Enabled", this.Enabled);
         this.setParamSimple(map, prefix + "Config", this.Config);
         this.setParamSimple(map, prefix + "ROI", this.ROI);

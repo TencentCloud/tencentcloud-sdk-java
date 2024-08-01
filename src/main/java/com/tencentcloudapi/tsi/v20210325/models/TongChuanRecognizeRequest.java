@@ -31,14 +31,24 @@ public class TongChuanRecognizeRequest extends AbstractModel {
     private String SessionUuid;
 
     /**
-    * 音频中的语言类型，支持语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
+    * 源语言，支持：
+zh：中文
+en：英语
+ja：日语
+ko：韩语
+yue：粤语
     */
     @SerializedName("Source")
     @Expose
     private String Source;
 
     /**
-    * 翻译目标语言类型，支持的语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
+    * 目标语言，各源语言的目标语言支持列表如下
+<li>zh（中文）：en（英语）、ja（日语）、ko（韩语）、yue（粤语）</li>
+<li>en（英语）：zh（中文）</li>
+<li>ja（日语）：zh（中文）</li>
+<li>ko（韩语）：zh（中文）</li>
+<li>yue（粤语）：zh（中文）</li>
     */
     @SerializedName("Target")
     @Expose
@@ -103,32 +113,72 @@ public class TongChuanRecognizeRequest extends AbstractModel {
     }
 
     /**
-     * Get 音频中的语言类型，支持语言列表<li> zh : 中文 </li> <li> en : 英文 </li> 
-     * @return Source 音频中的语言类型，支持语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
+     * Get 源语言，支持：
+zh：中文
+en：英语
+ja：日语
+ko：韩语
+yue：粤语 
+     * @return Source 源语言，支持：
+zh：中文
+en：英语
+ja：日语
+ko：韩语
+yue：粤语
      */
     public String getSource() {
         return this.Source;
     }
 
     /**
-     * Set 音频中的语言类型，支持语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
-     * @param Source 音频中的语言类型，支持语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
+     * Set 源语言，支持：
+zh：中文
+en：英语
+ja：日语
+ko：韩语
+yue：粤语
+     * @param Source 源语言，支持：
+zh：中文
+en：英语
+ja：日语
+ko：韩语
+yue：粤语
      */
     public void setSource(String Source) {
         this.Source = Source;
     }
 
     /**
-     * Get 翻译目标语言类型，支持的语言列表<li> zh : 中文 </li> <li> en : 英文 </li> 
-     * @return Target 翻译目标语言类型，支持的语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
+     * Get 目标语言，各源语言的目标语言支持列表如下
+<li>zh（中文）：en（英语）、ja（日语）、ko（韩语）、yue（粤语）</li>
+<li>en（英语）：zh（中文）</li>
+<li>ja（日语）：zh（中文）</li>
+<li>ko（韩语）：zh（中文）</li>
+<li>yue（粤语）：zh（中文）</li> 
+     * @return Target 目标语言，各源语言的目标语言支持列表如下
+<li>zh（中文）：en（英语）、ja（日语）、ko（韩语）、yue（粤语）</li>
+<li>en（英语）：zh（中文）</li>
+<li>ja（日语）：zh（中文）</li>
+<li>ko（韩语）：zh（中文）</li>
+<li>yue（粤语）：zh（中文）</li>
      */
     public String getTarget() {
         return this.Target;
     }
 
     /**
-     * Set 翻译目标语言类型，支持的语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
-     * @param Target 翻译目标语言类型，支持的语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
+     * Set 目标语言，各源语言的目标语言支持列表如下
+<li>zh（中文）：en（英语）、ja（日语）、ko（韩语）、yue（粤语）</li>
+<li>en（英语）：zh（中文）</li>
+<li>ja（日语）：zh（中文）</li>
+<li>ko（韩语）：zh（中文）</li>
+<li>yue（粤语）：zh（中文）</li>
+     * @param Target 目标语言，各源语言的目标语言支持列表如下
+<li>zh（中文）：en（英语）、ja（日语）、ko（韩语）、yue（粤语）</li>
+<li>en（英语）：zh（中文）</li>
+<li>ja（日语）：zh（中文）</li>
+<li>ko（韩语）：zh（中文）</li>
+<li>yue（粤语）：zh（中文）</li>
      */
     public void setTarget(String Target) {
         this.Target = Target;

@@ -600,6 +600,17 @@ public class OrganizationClient extends AbstractClient{
     }
 
     /**
+     *获取集团服务设置列表
+     * @param req ListOrganizationServiceRequest
+     * @return ListOrganizationServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListOrganizationServiceResponse ListOrganizationService(ListOrganizationServiceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListOrganizationService", ListOrganizationServiceResponse.class);
+    }
+
+    /**
      *本接口（ListPolicies）可用于查询查看策略列表数据
      * @param req ListPoliciesRequest
      * @return ListPoliciesResponse
