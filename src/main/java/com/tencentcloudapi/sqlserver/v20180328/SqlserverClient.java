@@ -259,6 +259,17 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
+     *本接口(CutXEvents)用于手动切割阻塞日志和死锁日志。
+     * @param req CutXEventsRequest
+     * @return CutXEventsResponse
+     * @throws TencentCloudSDKException
+     */
+    public CutXEventsResponse CutXEvents(CutXEventsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CutXEvents", CutXEventsResponse.class);
+    }
+
+    /**
      *本接口（DeleteAccount）用于删除实例账号。
      * @param req DeleteAccountRequest
      * @return DeleteAccountResponse

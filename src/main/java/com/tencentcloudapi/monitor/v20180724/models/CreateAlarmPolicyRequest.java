@@ -31,7 +31,7 @@ public class CreateAlarmPolicyRequest extends AbstractModel {
     private String Module;
 
     /**
-    * 策略名称，不超过20字符
+    * 策略名称，不超过60字符
     */
     @SerializedName("PolicyName")
     @Expose
@@ -173,16 +173,16 @@ public class CreateAlarmPolicyRequest extends AbstractModel {
     }
 
     /**
-     * Get 策略名称，不超过20字符 
-     * @return PolicyName 策略名称，不超过20字符
+     * Get 策略名称，不超过60字符 
+     * @return PolicyName 策略名称，不超过60字符
      */
     public String getPolicyName() {
         return this.PolicyName;
     }
 
     /**
-     * Set 策略名称，不超过20字符
-     * @param PolicyName 策略名称，不超过20字符
+     * Set 策略名称，不超过60字符
+     * @param PolicyName 策略名称，不超过60字符
      */
     public void setPolicyName(String PolicyName) {
         this.PolicyName = PolicyName;
