@@ -32,6 +32,8 @@ public class CreateCloudRecordingRequest extends AbstractModel {
 
     /**
     * TRTC的[RoomId](https://cloud.tencent.com/document/product/647/46351#roomid)，录制的TRTC房间所对应的RoomId。
+注：房间号类型默认为整型，若房间号类型为字符串，请通过RoomIdType指定。
+
     */
     @SerializedName("RoomId")
     @Expose
@@ -121,8 +123,12 @@ public class CreateCloudRecordingRequest extends AbstractModel {
     }
 
     /**
-     * Get TRTC的[RoomId](https://cloud.tencent.com/document/product/647/46351#roomid)，录制的TRTC房间所对应的RoomId。 
+     * Get TRTC的[RoomId](https://cloud.tencent.com/document/product/647/46351#roomid)，录制的TRTC房间所对应的RoomId。
+注：房间号类型默认为整型，若房间号类型为字符串，请通过RoomIdType指定。
+ 
      * @return RoomId TRTC的[RoomId](https://cloud.tencent.com/document/product/647/46351#roomid)，录制的TRTC房间所对应的RoomId。
+注：房间号类型默认为整型，若房间号类型为字符串，请通过RoomIdType指定。
+
      */
     public String getRoomId() {
         return this.RoomId;
@@ -130,7 +136,11 @@ public class CreateCloudRecordingRequest extends AbstractModel {
 
     /**
      * Set TRTC的[RoomId](https://cloud.tencent.com/document/product/647/46351#roomid)，录制的TRTC房间所对应的RoomId。
+注：房间号类型默认为整型，若房间号类型为字符串，请通过RoomIdType指定。
+
      * @param RoomId TRTC的[RoomId](https://cloud.tencent.com/document/product/647/46351#roomid)，录制的TRTC房间所对应的RoomId。
+注：房间号类型默认为整型，若房间号类型为字符串，请通过RoomIdType指定。
+
      */
     public void setRoomId(String RoomId) {
         this.RoomId = RoomId;

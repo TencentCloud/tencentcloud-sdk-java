@@ -75,6 +75,46 @@ public class PrivateNatGateway extends AbstractModel {
     private Tag [] TagSet;
 
     /**
+    * 专线网关唯一`ID`
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DirectConnectGatewayIds")
+    @Expose
+    private String [] DirectConnectGatewayIds;
+
+    /**
+    * 私网网关类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NatType")
+    @Expose
+    private String NatType;
+
+    /**
+    * 私网NAT跨域信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CrossDomainInfo")
+    @Expose
+    private PrivateNatCrossDomainInfo CrossDomainInfo;
+
+    /**
+    * 是否VPC型私网网关
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VpcType")
+    @Expose
+    private Boolean VpcType;
+
+    /**
+    * 跨域私网NAT关联的云联网ID	
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CcnId")
+    @Expose
+    private String CcnId;
+
+    /**
      * Get 私网网关`ID`。 
      * @return NatGatewayId 私网网关`ID`。
      */
@@ -194,6 +234,106 @@ public class PrivateNatGateway extends AbstractModel {
         this.TagSet = TagSet;
     }
 
+    /**
+     * Get 专线网关唯一`ID`
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DirectConnectGatewayIds 专线网关唯一`ID`
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getDirectConnectGatewayIds() {
+        return this.DirectConnectGatewayIds;
+    }
+
+    /**
+     * Set 专线网关唯一`ID`
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DirectConnectGatewayIds 专线网关唯一`ID`
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDirectConnectGatewayIds(String [] DirectConnectGatewayIds) {
+        this.DirectConnectGatewayIds = DirectConnectGatewayIds;
+    }
+
+    /**
+     * Get 私网网关类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NatType 私网网关类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getNatType() {
+        return this.NatType;
+    }
+
+    /**
+     * Set 私网网关类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NatType 私网网关类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNatType(String NatType) {
+        this.NatType = NatType;
+    }
+
+    /**
+     * Get 私网NAT跨域信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CrossDomainInfo 私网NAT跨域信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public PrivateNatCrossDomainInfo getCrossDomainInfo() {
+        return this.CrossDomainInfo;
+    }
+
+    /**
+     * Set 私网NAT跨域信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CrossDomainInfo 私网NAT跨域信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCrossDomainInfo(PrivateNatCrossDomainInfo CrossDomainInfo) {
+        this.CrossDomainInfo = CrossDomainInfo;
+    }
+
+    /**
+     * Get 是否VPC型私网网关
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VpcType 是否VPC型私网网关
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getVpcType() {
+        return this.VpcType;
+    }
+
+    /**
+     * Set 是否VPC型私网网关
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VpcType 是否VPC型私网网关
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVpcType(Boolean VpcType) {
+        this.VpcType = VpcType;
+    }
+
+    /**
+     * Get 跨域私网NAT关联的云联网ID	
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CcnId 跨域私网NAT关联的云联网ID	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCcnId() {
+        return this.CcnId;
+    }
+
+    /**
+     * Set 跨域私网NAT关联的云联网ID	
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CcnId 跨域私网NAT关联的云联网ID	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCcnId(String CcnId) {
+        this.CcnId = CcnId;
+    }
+
     public PrivateNatGateway() {
     }
 
@@ -226,6 +366,24 @@ public class PrivateNatGateway extends AbstractModel {
                 this.TagSet[i] = new Tag(source.TagSet[i]);
             }
         }
+        if (source.DirectConnectGatewayIds != null) {
+            this.DirectConnectGatewayIds = new String[source.DirectConnectGatewayIds.length];
+            for (int i = 0; i < source.DirectConnectGatewayIds.length; i++) {
+                this.DirectConnectGatewayIds[i] = new String(source.DirectConnectGatewayIds[i]);
+            }
+        }
+        if (source.NatType != null) {
+            this.NatType = new String(source.NatType);
+        }
+        if (source.CrossDomainInfo != null) {
+            this.CrossDomainInfo = new PrivateNatCrossDomainInfo(source.CrossDomainInfo);
+        }
+        if (source.VpcType != null) {
+            this.VpcType = new Boolean(source.VpcType);
+        }
+        if (source.CcnId != null) {
+            this.CcnId = new String(source.CcnId);
+        }
     }
 
 
@@ -240,6 +398,11 @@ public class PrivateNatGateway extends AbstractModel {
         this.setParamSimple(map, prefix + "CrossDomain", this.CrossDomain);
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
         this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
+        this.setParamArraySimple(map, prefix + "DirectConnectGatewayIds.", this.DirectConnectGatewayIds);
+        this.setParamSimple(map, prefix + "NatType", this.NatType);
+        this.setParamObj(map, prefix + "CrossDomainInfo.", this.CrossDomainInfo);
+        this.setParamSimple(map, prefix + "VpcType", this.VpcType);
+        this.setParamSimple(map, prefix + "CcnId", this.CcnId);
 
     }
 }

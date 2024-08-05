@@ -216,6 +216,9 @@ public enum LighthouseErrorCode {
     // 镜像不允许共享至不同站点的账号。
      INVALIDPARAMETERVALUE_ACCOUNTIDINVALIDACCOUNTAREA("InvalidParameterValue.AccountIdInvalidAccountArea"),
      
+    // 账号为当前用户。
+     INVALIDPARAMETERVALUE_ACCOUNTIDSAMEWITHUIN("InvalidParameterValue.AccountIdSameWithUin"),
+     
     // 账号ID不存在。
      INVALIDPARAMETERVALUE_ACCOUNTIDSNOTEXIST("InvalidParameterValue.AccountIdsNotExist"),
      

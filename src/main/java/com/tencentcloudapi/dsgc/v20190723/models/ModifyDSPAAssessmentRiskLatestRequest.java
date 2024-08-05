@@ -31,18 +31,18 @@ public class ModifyDSPAAssessmentRiskLatestRequest extends AbstractModel {
     private String DspaId;
 
     /**
-    * 最新风险项Id
-    */
-    @SerializedName("RiskLatestTableId")
-    @Expose
-    private Long RiskLatestTableId;
-
-    /**
     * 风险状态（waiting:待处理，processing:处理中，finished:已处理，ignored:已忽略）
     */
     @SerializedName("Status")
     @Expose
     private String Status;
+
+    /**
+    * 最新风险项Id
+    */
+    @SerializedName("RiskLatestTableId")
+    @Expose
+    private Long RiskLatestTableId;
 
     /**
     * 备注
@@ -82,6 +82,22 @@ public class ModifyDSPAAssessmentRiskLatestRequest extends AbstractModel {
     }
 
     /**
+     * Get 风险状态（waiting:待处理，processing:处理中，finished:已处理，ignored:已忽略） 
+     * @return Status 风险状态（waiting:待处理，processing:处理中，finished:已处理，ignored:已忽略）
+     */
+    public String getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 风险状态（waiting:待处理，processing:处理中，finished:已处理，ignored:已忽略）
+     * @param Status 风险状态（waiting:待处理，processing:处理中，finished:已处理，ignored:已忽略）
+     */
+    public void setStatus(String Status) {
+        this.Status = Status;
+    }
+
+    /**
      * Get 最新风险项Id 
      * @return RiskLatestTableId 最新风险项Id
      * @deprecated
@@ -99,22 +115,6 @@ public class ModifyDSPAAssessmentRiskLatestRequest extends AbstractModel {
     @Deprecated
     public void setRiskLatestTableId(Long RiskLatestTableId) {
         this.RiskLatestTableId = RiskLatestTableId;
-    }
-
-    /**
-     * Get 风险状态（waiting:待处理，processing:处理中，finished:已处理，ignored:已忽略） 
-     * @return Status 风险状态（waiting:待处理，processing:处理中，finished:已处理，ignored:已忽略）
-     */
-    public String getStatus() {
-        return this.Status;
-    }
-
-    /**
-     * Set 风险状态（waiting:待处理，processing:处理中，finished:已处理，ignored:已忽略）
-     * @param Status 风险状态（waiting:待处理，processing:处理中，finished:已处理，ignored:已忽略）
-     */
-    public void setStatus(String Status) {
-        this.Status = Status;
     }
 
     /**
@@ -176,11 +176,11 @@ public class ModifyDSPAAssessmentRiskLatestRequest extends AbstractModel {
         if (source.DspaId != null) {
             this.DspaId = new String(source.DspaId);
         }
-        if (source.RiskLatestTableId != null) {
-            this.RiskLatestTableId = new Long(source.RiskLatestTableId);
-        }
         if (source.Status != null) {
             this.Status = new String(source.Status);
+        }
+        if (source.RiskLatestTableId != null) {
+            this.RiskLatestTableId = new Long(source.RiskLatestTableId);
         }
         if (source.Note != null) {
             this.Note = new String(source.Note);
@@ -202,8 +202,8 @@ public class ModifyDSPAAssessmentRiskLatestRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DspaId", this.DspaId);
-        this.setParamSimple(map, prefix + "RiskLatestTableId", this.RiskLatestTableId);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "RiskLatestTableId", this.RiskLatestTableId);
         this.setParamSimple(map, prefix + "Note", this.Note);
         this.setParamSimple(map, prefix + "ProcessPeople", this.ProcessPeople);
         this.setParamArraySimple(map, prefix + "BathRiskIdList.", this.BathRiskIdList);

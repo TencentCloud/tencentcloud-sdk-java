@@ -157,7 +157,7 @@ public class DspaUserResourceMeta extends AbstractModel {
     private String ResourceAuthAccount;
 
     /**
-    * x
+    * 实例类型
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceType")
@@ -165,7 +165,7 @@ public class DspaUserResourceMeta extends AbstractModel {
     private String InstanceType;
 
     /**
-    * x
+    * 实例值
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceValue")
@@ -477,9 +477,9 @@ public class DspaUserResourceMeta extends AbstractModel {
     }
 
     /**
-     * Get x
+     * Get 实例类型
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InstanceType x
+     * @return InstanceType 实例类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceType() {
@@ -487,9 +487,9 @@ public class DspaUserResourceMeta extends AbstractModel {
     }
 
     /**
-     * Set x
+     * Set 实例类型
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InstanceType x
+     * @param InstanceType 实例类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceType(String InstanceType) {
@@ -497,9 +497,9 @@ public class DspaUserResourceMeta extends AbstractModel {
     }
 
     /**
-     * Get x
+     * Get 实例值
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InstanceValue x
+     * @return InstanceValue 实例值
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceValue() {
@@ -507,9 +507,9 @@ public class DspaUserResourceMeta extends AbstractModel {
     }
 
     /**
-     * Set x
+     * Set 实例值
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InstanceValue x
+     * @param InstanceValue 实例值
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceValue(String InstanceValue) {
