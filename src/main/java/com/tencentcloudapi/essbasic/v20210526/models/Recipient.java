@@ -109,7 +109,9 @@ false-否
 <ul><li> 1 :人脸认证</li>
 <li> 2 :签署密码</li>
 <li> 3 :运营商三要素认证</li>
-<li> 4 :UKey认证</li></ul>
+<li> 4 :UKey认证</li>
+<li> 5 :设备指纹识别</li>
+<li> 6 :设备面容识别</li></ul>
     */
     @SerializedName("ApproverSignTypes")
     @Expose
@@ -324,12 +326,16 @@ false-否
 <ul><li> 1 :人脸认证</li>
 <li> 2 :签署密码</li>
 <li> 3 :运营商三要素认证</li>
-<li> 4 :UKey认证</li></ul> 
+<li> 4 :UKey认证</li>
+<li> 5 :设备指纹识别</li>
+<li> 6 :设备面容识别</li></ul> 
      * @return ApproverSignTypes 签署人进行合同签署时的认证方式，支持的类型如下:
 <ul><li> 1 :人脸认证</li>
 <li> 2 :签署密码</li>
 <li> 3 :运营商三要素认证</li>
-<li> 4 :UKey认证</li></ul>
+<li> 4 :UKey认证</li>
+<li> 5 :设备指纹识别</li>
+<li> 6 :设备面容识别</li></ul>
      */
     public Long [] getApproverSignTypes() {
         return this.ApproverSignTypes;
@@ -340,12 +346,16 @@ false-否
 <ul><li> 1 :人脸认证</li>
 <li> 2 :签署密码</li>
 <li> 3 :运营商三要素认证</li>
-<li> 4 :UKey认证</li></ul>
+<li> 4 :UKey认证</li>
+<li> 5 :设备指纹识别</li>
+<li> 6 :设备面容识别</li></ul>
      * @param ApproverSignTypes 签署人进行合同签署时的认证方式，支持的类型如下:
 <ul><li> 1 :人脸认证</li>
 <li> 2 :签署密码</li>
 <li> 3 :运营商三要素认证</li>
-<li> 4 :UKey认证</li></ul>
+<li> 4 :UKey认证</li>
+<li> 5 :设备指纹识别</li>
+<li> 6 :设备面容识别</li></ul>
      */
     public void setApproverSignTypes(Long [] ApproverSignTypes) {
         this.ApproverSignTypes = ApproverSignTypes;

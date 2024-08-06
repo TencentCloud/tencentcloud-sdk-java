@@ -48,6 +48,14 @@ public class RuleExecConfig extends AbstractModel {
     private String EngineType;
 
     /**
+    * DLC执行引擎资源组
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DlcGroupName")
+    @Expose
+    private String DlcGroupName;
+
+    /**
      * Get 计算队列名称
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return QueueName 计算队列名称
@@ -107,6 +115,26 @@ public class RuleExecConfig extends AbstractModel {
         this.EngineType = EngineType;
     }
 
+    /**
+     * Get DLC执行引擎资源组
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DlcGroupName DLC执行引擎资源组
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDlcGroupName() {
+        return this.DlcGroupName;
+    }
+
+    /**
+     * Set DLC执行引擎资源组
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DlcGroupName DLC执行引擎资源组
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDlcGroupName(String DlcGroupName) {
+        this.DlcGroupName = DlcGroupName;
+    }
+
     public RuleExecConfig() {
     }
 
@@ -124,6 +152,9 @@ public class RuleExecConfig extends AbstractModel {
         if (source.EngineType != null) {
             this.EngineType = new String(source.EngineType);
         }
+        if (source.DlcGroupName != null) {
+            this.DlcGroupName = new String(source.DlcGroupName);
+        }
     }
 
 
@@ -134,6 +165,7 @@ public class RuleExecConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "QueueName", this.QueueName);
         this.setParamSimple(map, prefix + "ExecutorGroupId", this.ExecutorGroupId);
         this.setParamSimple(map, prefix + "EngineType", this.EngineType);
+        this.setParamSimple(map, prefix + "DlcGroupName", this.DlcGroupName);
 
     }
 }

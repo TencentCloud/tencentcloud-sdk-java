@@ -188,6 +188,27 @@ public class CreateOpsMakePlanRequest extends AbstractModel {
     private String IntegrationResourceGroupName;
 
     /**
+    * 补录扩展属性
+    */
+    @SerializedName("MakeExtList")
+    @Expose
+    private StrToStrMap [] MakeExtList;
+
+    /**
+    * 补录扩展属性
+    */
+    @SerializedName("SameSelfWorkflowDependType")
+    @Expose
+    private Boolean SameSelfWorkflowDependType;
+
+    /**
+    * 补录扩展属性
+    */
+    @SerializedName("SelfWorkflowDependency")
+    @Expose
+    private String SelfWorkflowDependency;
+
+    /**
      * Get 项目id 
      * @return ProjectId 项目id
      */
@@ -567,6 +588,54 @@ public class CreateOpsMakePlanRequest extends AbstractModel {
         this.IntegrationResourceGroupName = IntegrationResourceGroupName;
     }
 
+    /**
+     * Get 补录扩展属性 
+     * @return MakeExtList 补录扩展属性
+     */
+    public StrToStrMap [] getMakeExtList() {
+        return this.MakeExtList;
+    }
+
+    /**
+     * Set 补录扩展属性
+     * @param MakeExtList 补录扩展属性
+     */
+    public void setMakeExtList(StrToStrMap [] MakeExtList) {
+        this.MakeExtList = MakeExtList;
+    }
+
+    /**
+     * Get 补录扩展属性 
+     * @return SameSelfWorkflowDependType 补录扩展属性
+     */
+    public Boolean getSameSelfWorkflowDependType() {
+        return this.SameSelfWorkflowDependType;
+    }
+
+    /**
+     * Set 补录扩展属性
+     * @param SameSelfWorkflowDependType 补录扩展属性
+     */
+    public void setSameSelfWorkflowDependType(Boolean SameSelfWorkflowDependType) {
+        this.SameSelfWorkflowDependType = SameSelfWorkflowDependType;
+    }
+
+    /**
+     * Get 补录扩展属性 
+     * @return SelfWorkflowDependency 补录扩展属性
+     */
+    public String getSelfWorkflowDependency() {
+        return this.SelfWorkflowDependency;
+    }
+
+    /**
+     * Set 补录扩展属性
+     * @param SelfWorkflowDependency 补录扩展属性
+     */
+    public void setSelfWorkflowDependency(String SelfWorkflowDependency) {
+        this.SelfWorkflowDependency = SelfWorkflowDependency;
+    }
+
     public CreateOpsMakePlanRequest() {
     }
 
@@ -653,6 +722,18 @@ public class CreateOpsMakePlanRequest extends AbstractModel {
         if (source.IntegrationResourceGroupName != null) {
             this.IntegrationResourceGroupName = new String(source.IntegrationResourceGroupName);
         }
+        if (source.MakeExtList != null) {
+            this.MakeExtList = new StrToStrMap[source.MakeExtList.length];
+            for (int i = 0; i < source.MakeExtList.length; i++) {
+                this.MakeExtList[i] = new StrToStrMap(source.MakeExtList[i]);
+            }
+        }
+        if (source.SameSelfWorkflowDependType != null) {
+            this.SameSelfWorkflowDependType = new Boolean(source.SameSelfWorkflowDependType);
+        }
+        if (source.SelfWorkflowDependency != null) {
+            this.SelfWorkflowDependency = new String(source.SelfWorkflowDependency);
+        }
     }
 
 
@@ -683,6 +764,9 @@ public class CreateOpsMakePlanRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "IntegrationResourceGroup", this.IntegrationResourceGroup);
         this.setParamSimple(map, prefix + "SchedulerResourceGroupName", this.SchedulerResourceGroupName);
         this.setParamSimple(map, prefix + "IntegrationResourceGroupName", this.IntegrationResourceGroupName);
+        this.setParamArrayObj(map, prefix + "MakeExtList.", this.MakeExtList);
+        this.setParamSimple(map, prefix + "SameSelfWorkflowDependType", this.SameSelfWorkflowDependType);
+        this.setParamSimple(map, prefix + "SelfWorkflowDependency", this.SelfWorkflowDependency);
 
     }
 }

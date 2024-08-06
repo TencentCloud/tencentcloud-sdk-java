@@ -96,6 +96,22 @@ public class DatabaseInfo extends AbstractModel {
     private Long DsEnvType;
 
     /**
+    * EMR引擎部署方式：CVM/TKE
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ClusterDeployType")
+    @Expose
+    private String ClusterDeployType;
+
+    /**
+    * 模式名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SchemaName")
+    @Expose
+    private String SchemaName;
+
+    /**
      * Get 数据源名称
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return DatasourceName 数据源名称
@@ -275,6 +291,46 @@ public class DatabaseInfo extends AbstractModel {
         this.DsEnvType = DsEnvType;
     }
 
+    /**
+     * Get EMR引擎部署方式：CVM/TKE
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ClusterDeployType EMR引擎部署方式：CVM/TKE
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getClusterDeployType() {
+        return this.ClusterDeployType;
+    }
+
+    /**
+     * Set EMR引擎部署方式：CVM/TKE
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ClusterDeployType EMR引擎部署方式：CVM/TKE
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setClusterDeployType(String ClusterDeployType) {
+        this.ClusterDeployType = ClusterDeployType;
+    }
+
+    /**
+     * Get 模式名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SchemaName 模式名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSchemaName() {
+        return this.SchemaName;
+    }
+
+    /**
+     * Set 模式名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SchemaName 模式名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSchemaName(String SchemaName) {
+        this.SchemaName = SchemaName;
+    }
+
     public DatabaseInfo() {
     }
 
@@ -310,6 +366,12 @@ public class DatabaseInfo extends AbstractModel {
         if (source.DsEnvType != null) {
             this.DsEnvType = new Long(source.DsEnvType);
         }
+        if (source.ClusterDeployType != null) {
+            this.ClusterDeployType = new String(source.ClusterDeployType);
+        }
+        if (source.SchemaName != null) {
+            this.SchemaName = new String(source.SchemaName);
+        }
     }
 
 
@@ -326,6 +388,8 @@ public class DatabaseInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "OriginDatabaseName", this.OriginDatabaseName);
         this.setParamSimple(map, prefix + "OriginSchemaName", this.OriginSchemaName);
         this.setParamSimple(map, prefix + "DsEnvType", this.DsEnvType);
+        this.setParamSimple(map, prefix + "ClusterDeployType", this.ClusterDeployType);
+        this.setParamSimple(map, prefix + "SchemaName", this.SchemaName);
 
     }
 }

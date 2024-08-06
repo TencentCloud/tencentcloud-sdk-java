@@ -45,7 +45,7 @@ public class DescribeCommonDBInstancesRequest extends AbstractModel {
     private Long PayMode;
 
     /**
-    * 实例ID过滤信息列表
+    * 实例ID过滤信息列表，数组最大长度限制为100
     */
     @SerializedName("InstanceIds")
     @Expose
@@ -163,16 +163,16 @@ public class DescribeCommonDBInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get 实例ID过滤信息列表 
-     * @return InstanceIds 实例ID过滤信息列表
+     * Get 实例ID过滤信息列表，数组最大长度限制为100 
+     * @return InstanceIds 实例ID过滤信息列表，数组最大长度限制为100
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set 实例ID过滤信息列表
-     * @param InstanceIds 实例ID过滤信息列表
+     * Set 实例ID过滤信息列表，数组最大长度限制为100
+     * @param InstanceIds 实例ID过滤信息列表，数组最大长度限制为100
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;

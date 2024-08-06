@@ -23,6 +23,39 @@ import java.util.HashMap;
 
 public class GetVRSVoiceTypesRequest extends AbstractModel {
 
+    /**
+    * 复刻类型。
+0 - 除快速声音复刻外其他复刻类型（默认）；
+5 - 一句话声音复刻。
+    */
+    @SerializedName("TaskType")
+    @Expose
+    private Long TaskType;
+
+    /**
+     * Get 复刻类型。
+0 - 除快速声音复刻外其他复刻类型（默认）；
+5 - 一句话声音复刻。 
+     * @return TaskType 复刻类型。
+0 - 除快速声音复刻外其他复刻类型（默认）；
+5 - 一句话声音复刻。
+     */
+    public Long getTaskType() {
+        return this.TaskType;
+    }
+
+    /**
+     * Set 复刻类型。
+0 - 除快速声音复刻外其他复刻类型（默认）；
+5 - 一句话声音复刻。
+     * @param TaskType 复刻类型。
+0 - 除快速声音复刻外其他复刻类型（默认）；
+5 - 一句话声音复刻。
+     */
+    public void setTaskType(Long TaskType) {
+        this.TaskType = TaskType;
+    }
+
     public GetVRSVoiceTypesRequest() {
     }
 
@@ -31,6 +64,9 @@ public class GetVRSVoiceTypesRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public GetVRSVoiceTypesRequest(GetVRSVoiceTypesRequest source) {
+        if (source.TaskType != null) {
+            this.TaskType = new Long(source.TaskType);
+        }
     }
 
 
@@ -38,6 +74,7 @@ public class GetVRSVoiceTypesRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "TaskType", this.TaskType);
 
     }
 }

@@ -59,6 +59,13 @@ public class DescribeOpsMakePlanInstancesRequest extends AbstractModel {
     private Long PageSize;
 
     /**
+    * 实例状态列表
+    */
+    @SerializedName("StateList")
+    @Expose
+    private Long [] StateList;
+
+    /**
      * Get 项目ID 
      * @return ProjectId 项目ID
      */
@@ -138,6 +145,22 @@ public class DescribeOpsMakePlanInstancesRequest extends AbstractModel {
         this.PageSize = PageSize;
     }
 
+    /**
+     * Get 实例状态列表 
+     * @return StateList 实例状态列表
+     */
+    public Long [] getStateList() {
+        return this.StateList;
+    }
+
+    /**
+     * Set 实例状态列表
+     * @param StateList 实例状态列表
+     */
+    public void setStateList(Long [] StateList) {
+        this.StateList = StateList;
+    }
+
     public DescribeOpsMakePlanInstancesRequest() {
     }
 
@@ -161,6 +184,12 @@ public class DescribeOpsMakePlanInstancesRequest extends AbstractModel {
         if (source.PageSize != null) {
             this.PageSize = new Long(source.PageSize);
         }
+        if (source.StateList != null) {
+            this.StateList = new Long[source.StateList.length];
+            for (int i = 0; i < source.StateList.length; i++) {
+                this.StateList[i] = new Long(source.StateList[i]);
+            }
+        }
     }
 
 
@@ -173,6 +202,7 @@ public class DescribeOpsMakePlanInstancesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "PageNumber", this.PageNumber);
         this.setParamSimple(map, prefix + "PageSize", this.PageSize);
+        this.setParamArraySimple(map, prefix + "StateList.", this.StateList);
 
     }
 }

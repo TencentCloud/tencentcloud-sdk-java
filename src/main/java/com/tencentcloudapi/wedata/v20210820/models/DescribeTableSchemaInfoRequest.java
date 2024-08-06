@@ -73,6 +73,27 @@ public class DescribeTableSchemaInfoRequest extends AbstractModel {
     private String ProjectId;
 
     /**
+    * 环境信息
+    */
+    @SerializedName("Env")
+    @Expose
+    private String Env;
+
+    /**
+    * 空间模式
+    */
+    @SerializedName("Model")
+    @Expose
+    private String Model;
+
+    /**
+    * 开发态的datasourceId
+    */
+    @SerializedName("DevDatasourceId")
+    @Expose
+    private String DevDatasourceId;
+
+    /**
      * Get 表名称 
      * @return Name 表名称
      */
@@ -184,6 +205,54 @@ public class DescribeTableSchemaInfoRequest extends AbstractModel {
         this.ProjectId = ProjectId;
     }
 
+    /**
+     * Get 环境信息 
+     * @return Env 环境信息
+     */
+    public String getEnv() {
+        return this.Env;
+    }
+
+    /**
+     * Set 环境信息
+     * @param Env 环境信息
+     */
+    public void setEnv(String Env) {
+        this.Env = Env;
+    }
+
+    /**
+     * Get 空间模式 
+     * @return Model 空间模式
+     */
+    public String getModel() {
+        return this.Model;
+    }
+
+    /**
+     * Set 空间模式
+     * @param Model 空间模式
+     */
+    public void setModel(String Model) {
+        this.Model = Model;
+    }
+
+    /**
+     * Get 开发态的datasourceId 
+     * @return DevDatasourceId 开发态的datasourceId
+     */
+    public String getDevDatasourceId() {
+        return this.DevDatasourceId;
+    }
+
+    /**
+     * Set 开发态的datasourceId
+     * @param DevDatasourceId 开发态的datasourceId
+     */
+    public void setDevDatasourceId(String DevDatasourceId) {
+        this.DevDatasourceId = DevDatasourceId;
+    }
+
     public DescribeTableSchemaInfoRequest() {
     }
 
@@ -213,6 +282,15 @@ public class DescribeTableSchemaInfoRequest extends AbstractModel {
         if (source.ProjectId != null) {
             this.ProjectId = new String(source.ProjectId);
         }
+        if (source.Env != null) {
+            this.Env = new String(source.Env);
+        }
+        if (source.Model != null) {
+            this.Model = new String(source.Model);
+        }
+        if (source.DevDatasourceId != null) {
+            this.DevDatasourceId = new String(source.DevDatasourceId);
+        }
     }
 
 
@@ -227,6 +305,9 @@ public class DescribeTableSchemaInfoRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ConnectionType", this.ConnectionType);
         this.setParamSimple(map, prefix + "SchemaName", this.SchemaName);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
+        this.setParamSimple(map, prefix + "Env", this.Env);
+        this.setParamSimple(map, prefix + "Model", this.Model);
+        this.setParamSimple(map, prefix + "DevDatasourceId", this.DevDatasourceId);
 
     }
 }

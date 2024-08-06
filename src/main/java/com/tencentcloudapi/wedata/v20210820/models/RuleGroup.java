@@ -128,6 +128,14 @@ public class RuleGroup extends AbstractModel {
     private String DatabaseName;
 
     /**
+    * 模式名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SchemaName")
+    @Expose
+    private String SchemaName;
+
+    /**
     * 是否有权限
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -198,6 +206,14 @@ public class RuleGroup extends AbstractModel {
     @SerializedName("DsEnvType")
     @Expose
     private Long DsEnvType;
+
+    /**
+    * EMR集群部署方式：CVM/TKE
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ClusterDeployType")
+    @Expose
+    private String ClusterDeployType;
 
     /**
      * Get 规则组Id
@@ -460,6 +476,26 @@ public class RuleGroup extends AbstractModel {
     }
 
     /**
+     * Get 模式名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SchemaName 模式名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSchemaName() {
+        return this.SchemaName;
+    }
+
+    /**
+     * Set 模式名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SchemaName 模式名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSchemaName(String SchemaName) {
+        this.SchemaName = SchemaName;
+    }
+
+    /**
      * Get 是否有权限
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Permission 是否有权限
@@ -639,6 +675,26 @@ public class RuleGroup extends AbstractModel {
         this.DsEnvType = DsEnvType;
     }
 
+    /**
+     * Get EMR集群部署方式：CVM/TKE
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ClusterDeployType EMR集群部署方式：CVM/TKE
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getClusterDeployType() {
+        return this.ClusterDeployType;
+    }
+
+    /**
+     * Set EMR集群部署方式：CVM/TKE
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ClusterDeployType EMR集群部署方式：CVM/TKE
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setClusterDeployType(String ClusterDeployType) {
+        this.ClusterDeployType = ClusterDeployType;
+    }
+
     public RuleGroup() {
     }
 
@@ -686,6 +742,9 @@ public class RuleGroup extends AbstractModel {
         if (source.DatabaseName != null) {
             this.DatabaseName = new String(source.DatabaseName);
         }
+        if (source.SchemaName != null) {
+            this.SchemaName = new String(source.SchemaName);
+        }
         if (source.Permission != null) {
             this.Permission = new Boolean(source.Permission);
         }
@@ -713,6 +772,9 @@ public class RuleGroup extends AbstractModel {
         if (source.DsEnvType != null) {
             this.DsEnvType = new Long(source.DsEnvType);
         }
+        if (source.ClusterDeployType != null) {
+            this.ClusterDeployType = new String(source.ClusterDeployType);
+        }
     }
 
 
@@ -733,6 +795,7 @@ public class RuleGroup extends AbstractModel {
         this.setParamObj(map, prefix + "Subscription.", this.Subscription);
         this.setParamSimple(map, prefix + "DatabaseId", this.DatabaseId);
         this.setParamSimple(map, prefix + "DatabaseName", this.DatabaseName);
+        this.setParamSimple(map, prefix + "SchemaName", this.SchemaName);
         this.setParamSimple(map, prefix + "Permission", this.Permission);
         this.setParamSimple(map, prefix + "RuleCount", this.RuleCount);
         this.setParamSimple(map, prefix + "MonitorStatus", this.MonitorStatus);
@@ -742,6 +805,7 @@ public class RuleGroup extends AbstractModel {
         this.setParamSimple(map, prefix + "StrategyConfig", this.StrategyConfig);
         this.setParamSimple(map, prefix + "SubscribeConfig", this.SubscribeConfig);
         this.setParamSimple(map, prefix + "DsEnvType", this.DsEnvType);
+        this.setParamSimple(map, prefix + "ClusterDeployType", this.ClusterDeployType);
 
     }
 }

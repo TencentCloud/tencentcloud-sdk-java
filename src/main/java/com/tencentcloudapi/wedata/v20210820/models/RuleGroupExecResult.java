@@ -152,6 +152,46 @@ public class RuleGroupExecResult extends AbstractModel {
     private RuleExecResult [] RuleExecResultVOList;
 
     /**
+    * 数据库名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DatabaseName")
+    @Expose
+    private String DatabaseName;
+
+    /**
+    * 本地规则表id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RuleGroupTableId")
+    @Expose
+    private String RuleGroupTableId;
+
+    /**
+    * 集群部署类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ClusterDeployType")
+    @Expose
+    private String ClusterDeployType;
+
+    /**
+    * 实例id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
+    * 数据库所属环境，0.未定义，1.生产 2.开发
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DsEnvType")
+    @Expose
+    private String DsEnvType;
+
+    /**
      * Get 规则组执行ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return RuleGroupExecId 规则组执行ID
@@ -471,6 +511,106 @@ public class RuleGroupExecResult extends AbstractModel {
         this.RuleExecResultVOList = RuleExecResultVOList;
     }
 
+    /**
+     * Get 数据库名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DatabaseName 数据库名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDatabaseName() {
+        return this.DatabaseName;
+    }
+
+    /**
+     * Set 数据库名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DatabaseName 数据库名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDatabaseName(String DatabaseName) {
+        this.DatabaseName = DatabaseName;
+    }
+
+    /**
+     * Get 本地规则表id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RuleGroupTableId 本地规则表id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRuleGroupTableId() {
+        return this.RuleGroupTableId;
+    }
+
+    /**
+     * Set 本地规则表id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RuleGroupTableId 本地规则表id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRuleGroupTableId(String RuleGroupTableId) {
+        this.RuleGroupTableId = RuleGroupTableId;
+    }
+
+    /**
+     * Get 集群部署类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ClusterDeployType 集群部署类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getClusterDeployType() {
+        return this.ClusterDeployType;
+    }
+
+    /**
+     * Set 集群部署类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ClusterDeployType 集群部署类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setClusterDeployType(String ClusterDeployType) {
+        this.ClusterDeployType = ClusterDeployType;
+    }
+
+    /**
+     * Get 实例id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InstanceId 实例id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set 实例id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstanceId 实例id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
+    /**
+     * Get 数据库所属环境，0.未定义，1.生产 2.开发
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DsEnvType 数据库所属环境，0.未定义，1.生产 2.开发
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDsEnvType() {
+        return this.DsEnvType;
+    }
+
+    /**
+     * Set 数据库所属环境，0.未定义，1.生产 2.开发
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DsEnvType 数据库所属环境，0.未定义，1.生产 2.开发
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDsEnvType(String DsEnvType) {
+        this.DsEnvType = DsEnvType;
+    }
+
     public RuleGroupExecResult() {
     }
 
@@ -530,6 +670,21 @@ public class RuleGroupExecResult extends AbstractModel {
                 this.RuleExecResultVOList[i] = new RuleExecResult(source.RuleExecResultVOList[i]);
             }
         }
+        if (source.DatabaseName != null) {
+            this.DatabaseName = new String(source.DatabaseName);
+        }
+        if (source.RuleGroupTableId != null) {
+            this.RuleGroupTableId = new String(source.RuleGroupTableId);
+        }
+        if (source.ClusterDeployType != null) {
+            this.ClusterDeployType = new String(source.ClusterDeployType);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.DsEnvType != null) {
+            this.DsEnvType = new String(source.DsEnvType);
+        }
     }
 
 
@@ -553,6 +708,11 @@ public class RuleGroupExecResult extends AbstractModel {
         this.setParamSimple(map, prefix + "ExecDetail", this.ExecDetail);
         this.setParamSimple(map, prefix + "EngineType", this.EngineType);
         this.setParamArrayObj(map, prefix + "RuleExecResultVOList.", this.RuleExecResultVOList);
+        this.setParamSimple(map, prefix + "DatabaseName", this.DatabaseName);
+        this.setParamSimple(map, prefix + "RuleGroupTableId", this.RuleGroupTableId);
+        this.setParamSimple(map, prefix + "ClusterDeployType", this.ClusterDeployType);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "DsEnvType", this.DsEnvType);
 
     }
 }

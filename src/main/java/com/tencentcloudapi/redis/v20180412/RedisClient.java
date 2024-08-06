@@ -1128,7 +1128,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *变更实例配置
+     *本接口（UpgradeInstance）用于变更实例的配置规格。
      * @param req UpgradeInstanceRequest
      * @return UpgradeInstanceResponse
      * @throws TencentCloudSDKException

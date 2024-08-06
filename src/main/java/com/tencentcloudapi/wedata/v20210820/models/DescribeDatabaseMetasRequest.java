@@ -38,6 +38,20 @@ public class DescribeDatabaseMetasRequest extends AbstractModel {
     private OrderField [] OrderFields;
 
     /**
+    * pagesize
+    */
+    @SerializedName("PageSize")
+    @Expose
+    private Long PageSize;
+
+    /**
+    * pageNumber
+    */
+    @SerializedName("PageNumber")
+    @Expose
+    private Long PageNumber;
+
+    /**
      * Get 过滤字段，projectIds/msTypes/createTime/modifiedTime 
      * @return Filters 过滤字段，projectIds/msTypes/createTime/modifiedTime
      */
@@ -69,6 +83,38 @@ public class DescribeDatabaseMetasRequest extends AbstractModel {
         this.OrderFields = OrderFields;
     }
 
+    /**
+     * Get pagesize 
+     * @return PageSize pagesize
+     */
+    public Long getPageSize() {
+        return this.PageSize;
+    }
+
+    /**
+     * Set pagesize
+     * @param PageSize pagesize
+     */
+    public void setPageSize(Long PageSize) {
+        this.PageSize = PageSize;
+    }
+
+    /**
+     * Get pageNumber 
+     * @return PageNumber pageNumber
+     */
+    public Long getPageNumber() {
+        return this.PageNumber;
+    }
+
+    /**
+     * Set pageNumber
+     * @param PageNumber pageNumber
+     */
+    public void setPageNumber(Long PageNumber) {
+        this.PageNumber = PageNumber;
+    }
+
     public DescribeDatabaseMetasRequest() {
     }
 
@@ -89,6 +135,12 @@ public class DescribeDatabaseMetasRequest extends AbstractModel {
                 this.OrderFields[i] = new OrderField(source.OrderFields[i]);
             }
         }
+        if (source.PageSize != null) {
+            this.PageSize = new Long(source.PageSize);
+        }
+        if (source.PageNumber != null) {
+            this.PageNumber = new Long(source.PageNumber);
+        }
     }
 
 
@@ -98,6 +150,8 @@ public class DescribeDatabaseMetasRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamArrayObj(map, prefix + "OrderFields.", this.OrderFields);
+        this.setParamSimple(map, prefix + "PageSize", this.PageSize);
+        this.setParamSimple(map, prefix + "PageNumber", this.PageNumber);
 
     }
 }

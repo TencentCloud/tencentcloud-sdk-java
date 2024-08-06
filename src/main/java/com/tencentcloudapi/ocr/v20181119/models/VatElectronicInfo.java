@@ -136,6 +136,13 @@ public class VatElectronicInfo extends AbstractModel {
     private VatElectronicItemInfo [] VatElectronicItems;
 
     /**
+    * 业务类型标志
+    */
+    @SerializedName("ServiceTypeLabel")
+    @Expose
+    private String ServiceTypeLabel;
+
+    /**
      * Get 发票名称 
      * @return Title 发票名称
      */
@@ -391,6 +398,22 @@ public class VatElectronicInfo extends AbstractModel {
         this.VatElectronicItems = VatElectronicItems;
     }
 
+    /**
+     * Get 业务类型标志 
+     * @return ServiceTypeLabel 业务类型标志
+     */
+    public String getServiceTypeLabel() {
+        return this.ServiceTypeLabel;
+    }
+
+    /**
+     * Set 业务类型标志
+     * @param ServiceTypeLabel 业务类型标志
+     */
+    public void setServiceTypeLabel(String ServiceTypeLabel) {
+        this.ServiceTypeLabel = ServiceTypeLabel;
+    }
+
     public VatElectronicInfo() {
     }
 
@@ -450,6 +473,9 @@ public class VatElectronicInfo extends AbstractModel {
                 this.VatElectronicItems[i] = new VatElectronicItemInfo(source.VatElectronicItems[i]);
             }
         }
+        if (source.ServiceTypeLabel != null) {
+            this.ServiceTypeLabel = new String(source.ServiceTypeLabel);
+        }
     }
 
 
@@ -473,6 +499,7 @@ public class VatElectronicInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "SubTotal", this.SubTotal);
         this.setParamSimple(map, prefix + "SubTax", this.SubTax);
         this.setParamArrayObj(map, prefix + "VatElectronicItems.", this.VatElectronicItems);
+        this.setParamSimple(map, prefix + "ServiceTypeLabel", this.ServiceTypeLabel);
 
     }
 }

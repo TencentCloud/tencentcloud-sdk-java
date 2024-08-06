@@ -34,20 +34,22 @@ public class DescribeParamTemplatesRequest extends AbstractModel {
 - 9：Redis 5.0 内存版（集群架构）。
 - 15：Redis 6.2 内存版（标准架构）。
 - 16：Redis 6.2 内存版（集群架构）。
+- 17：Redis 7.0 内存版（标准架构）。
+- 18：Redis 7.0 内存版（集群架构）。
     */
     @SerializedName("ProductTypes")
     @Expose
     private Long [] ProductTypes;
 
     /**
-    * 模板名称数组。
+    * 模板名称数组。数组最大长度限制为50
     */
     @SerializedName("TemplateNames")
     @Expose
     private String [] TemplateNames;
 
     /**
-    * 模板ID数组。
+    * 模板ID数组。数组最大长度限制为50
     */
     @SerializedName("TemplateIds")
     @Expose
@@ -63,7 +65,9 @@ public class DescribeParamTemplatesRequest extends AbstractModel {
 - 8：Redis 5.0 内存版（标准架构）。
 - 9：Redis 5.0 内存版（集群架构）。
 - 15：Redis 6.2 内存版（标准架构）。
-- 16：Redis 6.2 内存版（集群架构）。 
+- 16：Redis 6.2 内存版（集群架构）。
+- 17：Redis 7.0 内存版（标准架构）。
+- 18：Redis 7.0 内存版（集群架构）。 
      * @return ProductTypes 产品类型数组。
 - 2：Redis 2.8 内存版（标准架构）。
 - 3：CKV 3.2 内存版（标准架构）。
@@ -74,6 +78,8 @@ public class DescribeParamTemplatesRequest extends AbstractModel {
 - 9：Redis 5.0 内存版（集群架构）。
 - 15：Redis 6.2 内存版（标准架构）。
 - 16：Redis 6.2 内存版（集群架构）。
+- 17：Redis 7.0 内存版（标准架构）。
+- 18：Redis 7.0 内存版（集群架构）。
      */
     public Long [] getProductTypes() {
         return this.ProductTypes;
@@ -90,6 +96,8 @@ public class DescribeParamTemplatesRequest extends AbstractModel {
 - 9：Redis 5.0 内存版（集群架构）。
 - 15：Redis 6.2 内存版（标准架构）。
 - 16：Redis 6.2 内存版（集群架构）。
+- 17：Redis 7.0 内存版（标准架构）。
+- 18：Redis 7.0 内存版（集群架构）。
      * @param ProductTypes 产品类型数组。
 - 2：Redis 2.8 内存版（标准架构）。
 - 3：CKV 3.2 内存版（标准架构）。
@@ -100,38 +108,40 @@ public class DescribeParamTemplatesRequest extends AbstractModel {
 - 9：Redis 5.0 内存版（集群架构）。
 - 15：Redis 6.2 内存版（标准架构）。
 - 16：Redis 6.2 内存版（集群架构）。
+- 17：Redis 7.0 内存版（标准架构）。
+- 18：Redis 7.0 内存版（集群架构）。
      */
     public void setProductTypes(Long [] ProductTypes) {
         this.ProductTypes = ProductTypes;
     }
 
     /**
-     * Get 模板名称数组。 
-     * @return TemplateNames 模板名称数组。
+     * Get 模板名称数组。数组最大长度限制为50 
+     * @return TemplateNames 模板名称数组。数组最大长度限制为50
      */
     public String [] getTemplateNames() {
         return this.TemplateNames;
     }
 
     /**
-     * Set 模板名称数组。
-     * @param TemplateNames 模板名称数组。
+     * Set 模板名称数组。数组最大长度限制为50
+     * @param TemplateNames 模板名称数组。数组最大长度限制为50
      */
     public void setTemplateNames(String [] TemplateNames) {
         this.TemplateNames = TemplateNames;
     }
 
     /**
-     * Get 模板ID数组。 
-     * @return TemplateIds 模板ID数组。
+     * Get 模板ID数组。数组最大长度限制为50 
+     * @return TemplateIds 模板ID数组。数组最大长度限制为50
      */
     public String [] getTemplateIds() {
         return this.TemplateIds;
     }
 
     /**
-     * Set 模板ID数组。
-     * @param TemplateIds 模板ID数组。
+     * Set 模板ID数组。数组最大长度限制为50
+     * @param TemplateIds 模板ID数组。数组最大长度限制为50
      */
     public void setTemplateIds(String [] TemplateIds) {
         this.TemplateIds = TemplateIds;

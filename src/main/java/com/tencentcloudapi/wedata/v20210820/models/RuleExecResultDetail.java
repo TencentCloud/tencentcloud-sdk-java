@@ -104,6 +104,14 @@ public class RuleExecResultDetail extends AbstractModel {
     private Long DatasourceType;
 
     /**
+    * 集群部署类型，CVM/TKE
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ClusterDeployType")
+    @Expose
+    private String ClusterDeployType;
+
+    /**
      * Get 数据源id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return DatasourceId 数据源id
@@ -303,6 +311,26 @@ public class RuleExecResultDetail extends AbstractModel {
         this.DatasourceType = DatasourceType;
     }
 
+    /**
+     * Get 集群部署类型，CVM/TKE
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ClusterDeployType 集群部署类型，CVM/TKE
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getClusterDeployType() {
+        return this.ClusterDeployType;
+    }
+
+    /**
+     * Set 集群部署类型，CVM/TKE
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ClusterDeployType 集群部署类型，CVM/TKE
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setClusterDeployType(String ClusterDeployType) {
+        this.ClusterDeployType = ClusterDeployType;
+    }
+
     public RuleExecResultDetail() {
     }
 
@@ -341,6 +369,9 @@ public class RuleExecResultDetail extends AbstractModel {
         if (source.DatasourceType != null) {
             this.DatasourceType = new Long(source.DatasourceType);
         }
+        if (source.ClusterDeployType != null) {
+            this.ClusterDeployType = new String(source.ClusterDeployType);
+        }
     }
 
 
@@ -358,6 +389,7 @@ public class RuleExecResultDetail extends AbstractModel {
         this.setParamObj(map, prefix + "RuleExecResult.", this.RuleExecResult);
         this.setParamSimple(map, prefix + "TableOwnerUserId", this.TableOwnerUserId);
         this.setParamSimple(map, prefix + "DatasourceType", this.DatasourceType);
+        this.setParamSimple(map, prefix + "ClusterDeployType", this.ClusterDeployType);
 
     }
 }

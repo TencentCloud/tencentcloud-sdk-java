@@ -185,6 +185,27 @@ public class ModifyRuleRequest extends AbstractModel {
     private Long [] SourceEngineTypes;
 
     /**
+    * 目标库名
+    */
+    @SerializedName("TargetDatabaseName")
+    @Expose
+    private String TargetDatabaseName;
+
+    /**
+    * 目标模式名
+    */
+    @SerializedName("TargetSchemaName")
+    @Expose
+    private String TargetSchemaName;
+
+    /**
+    * 目标表名
+    */
+    @SerializedName("TargetTableName")
+    @Expose
+    private String TargetTableName;
+
+    /**
      * Get 项目Id 
      * @return ProjectId 项目Id
      */
@@ -552,6 +573,54 @@ public class ModifyRuleRequest extends AbstractModel {
         this.SourceEngineTypes = SourceEngineTypes;
     }
 
+    /**
+     * Get 目标库名 
+     * @return TargetDatabaseName 目标库名
+     */
+    public String getTargetDatabaseName() {
+        return this.TargetDatabaseName;
+    }
+
+    /**
+     * Set 目标库名
+     * @param TargetDatabaseName 目标库名
+     */
+    public void setTargetDatabaseName(String TargetDatabaseName) {
+        this.TargetDatabaseName = TargetDatabaseName;
+    }
+
+    /**
+     * Get 目标模式名 
+     * @return TargetSchemaName 目标模式名
+     */
+    public String getTargetSchemaName() {
+        return this.TargetSchemaName;
+    }
+
+    /**
+     * Set 目标模式名
+     * @param TargetSchemaName 目标模式名
+     */
+    public void setTargetSchemaName(String TargetSchemaName) {
+        this.TargetSchemaName = TargetSchemaName;
+    }
+
+    /**
+     * Get 目标表名 
+     * @return TargetTableName 目标表名
+     */
+    public String getTargetTableName() {
+        return this.TargetTableName;
+    }
+
+    /**
+     * Set 目标表名
+     * @param TargetTableName 目标表名
+     */
+    public void setTargetTableName(String TargetTableName) {
+        this.TargetTableName = TargetTableName;
+    }
+
     public ModifyRuleRequest() {
     }
 
@@ -632,6 +701,15 @@ public class ModifyRuleRequest extends AbstractModel {
                 this.SourceEngineTypes[i] = new Long(source.SourceEngineTypes[i]);
             }
         }
+        if (source.TargetDatabaseName != null) {
+            this.TargetDatabaseName = new String(source.TargetDatabaseName);
+        }
+        if (source.TargetSchemaName != null) {
+            this.TargetSchemaName = new String(source.TargetSchemaName);
+        }
+        if (source.TargetTableName != null) {
+            this.TargetTableName = new String(source.TargetTableName);
+        }
     }
 
 
@@ -662,6 +740,9 @@ public class ModifyRuleRequest extends AbstractModel {
         this.setParamObj(map, prefix + "FieldConfig.", this.FieldConfig);
         this.setParamSimple(map, prefix + "TargetObjectValue", this.TargetObjectValue);
         this.setParamArraySimple(map, prefix + "SourceEngineTypes.", this.SourceEngineTypes);
+        this.setParamSimple(map, prefix + "TargetDatabaseName", this.TargetDatabaseName);
+        this.setParamSimple(map, prefix + "TargetSchemaName", this.TargetSchemaName);
+        this.setParamSimple(map, prefix + "TargetTableName", this.TargetTableName);
 
     }
 }

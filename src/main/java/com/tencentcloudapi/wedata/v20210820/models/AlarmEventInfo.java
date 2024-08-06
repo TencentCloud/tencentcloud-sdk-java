@@ -223,6 +223,14 @@ public class AlarmEventInfo extends AbstractModel {
     private Float Threshold;
 
     /**
+    * 告警原因
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AlarmReason")
+    @Expose
+    private String AlarmReason;
+
+    /**
      * Get 告警ID 
      * @return AlarmId 告警ID
      */
@@ -706,6 +714,26 @@ public class AlarmEventInfo extends AbstractModel {
         this.Threshold = Threshold;
     }
 
+    /**
+     * Get 告警原因
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AlarmReason 告警原因
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAlarmReason() {
+        return this.AlarmReason;
+    }
+
+    /**
+     * Set 告警原因
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AlarmReason 告警原因
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAlarmReason(String AlarmReason) {
+        this.AlarmReason = AlarmReason;
+    }
+
     public AlarmEventInfo() {
     }
 
@@ -792,6 +820,9 @@ public class AlarmEventInfo extends AbstractModel {
         if (source.Threshold != null) {
             this.Threshold = new Float(source.Threshold);
         }
+        if (source.AlarmReason != null) {
+            this.AlarmReason = new String(source.AlarmReason);
+        }
     }
 
 
@@ -825,6 +856,7 @@ public class AlarmEventInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "MonitorObjectId", this.MonitorObjectId);
         this.setParamSimple(map, prefix + "MonitorObjectName", this.MonitorObjectName);
         this.setParamSimple(map, prefix + "Threshold", this.Threshold);
+        this.setParamSimple(map, prefix + "AlarmReason", this.AlarmReason);
 
     }
 }

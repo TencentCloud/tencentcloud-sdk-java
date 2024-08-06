@@ -87,6 +87,13 @@ public class DescribeFraudUltimateRequest extends AbstractModel {
     private String QQOpenId;
 
     /**
+    * 数据授权信息
+    */
+    @SerializedName("DataAuthorization")
+    @Expose
+    private DataAuthorizationInfo DataAuthorization;
+
+    /**
      * Get 客户端通过SDK获取的设备Token 
      * @return DeviceToken 客户端通过SDK获取的设备Token
      */
@@ -230,6 +237,22 @@ public class DescribeFraudUltimateRequest extends AbstractModel {
         this.QQOpenId = QQOpenId;
     }
 
+    /**
+     * Get 数据授权信息 
+     * @return DataAuthorization 数据授权信息
+     */
+    public DataAuthorizationInfo getDataAuthorization() {
+        return this.DataAuthorization;
+    }
+
+    /**
+     * Set 数据授权信息
+     * @param DataAuthorization 数据授权信息
+     */
+    public void setDataAuthorization(DataAuthorizationInfo DataAuthorization) {
+        this.DataAuthorization = DataAuthorization;
+    }
+
     public DescribeFraudUltimateRequest() {
     }
 
@@ -265,6 +288,9 @@ public class DescribeFraudUltimateRequest extends AbstractModel {
         if (source.QQOpenId != null) {
             this.QQOpenId = new String(source.QQOpenId);
         }
+        if (source.DataAuthorization != null) {
+            this.DataAuthorization = new DataAuthorizationInfo(source.DataAuthorization);
+        }
     }
 
 
@@ -281,6 +307,7 @@ public class DescribeFraudUltimateRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "PhoneNumber", this.PhoneNumber);
         this.setParamSimple(map, prefix + "ClientIP", this.ClientIP);
         this.setParamSimple(map, prefix + "QQOpenId", this.QQOpenId);
+        this.setParamObj(map, prefix + "DataAuthorization.", this.DataAuthorization);
 
     }
 }

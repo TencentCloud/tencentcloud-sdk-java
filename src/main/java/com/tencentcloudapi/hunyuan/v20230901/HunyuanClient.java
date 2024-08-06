@@ -39,6 +39,17 @@ public class HunyuanClient extends AbstractClient{
     }
 
     /**
+     *开通服务
+     * @param req ActivateServiceRequest
+     * @return ActivateServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ActivateServiceResponse ActivateService(ActivateServiceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ActivateService", ActivateServiceResponse.class);
+    }
+
+    /**
      *腾讯混元大模型是由腾讯研发的大语言模型，具备强大的中文创作能力，复杂语境下的逻辑推理能力，以及可靠的任务执行能力。本接口支持流式或非流式调用，当使用流式调用时为 SSE 协议。
 
  1. 本接口暂不支持返回图片内容。
@@ -88,6 +99,17 @@ public class HunyuanClient extends AbstractClient{
     public QueryHunyuanImageJobResponse QueryHunyuanImageJob(QueryHunyuanImageJobRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "QueryHunyuanImageJob", QueryHunyuanImageJobResponse.class);
+    }
+
+    /**
+     *设置付费模式
+     * @param req SetPayModeRequest
+     * @return SetPayModeResponse
+     * @throws TencentCloudSDKException
+     */
+    public SetPayModeResponse SetPayMode(SetPayModeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SetPayMode", SetPayModeResponse.class);
     }
 
     /**

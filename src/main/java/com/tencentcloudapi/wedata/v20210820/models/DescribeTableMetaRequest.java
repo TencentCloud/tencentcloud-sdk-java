@@ -45,6 +45,13 @@ public class DescribeTableMetaRequest extends AbstractModel {
     private Long TableFilterType;
 
     /**
+    * 查询字段列表
+    */
+    @SerializedName("SearchNames")
+    @Expose
+    private String [] SearchNames;
+
+    /**
      * Get 表唯一id 
      * @return TableId 表唯一id
      */
@@ -92,6 +99,22 @@ public class DescribeTableMetaRequest extends AbstractModel {
         this.TableFilterType = TableFilterType;
     }
 
+    /**
+     * Get 查询字段列表 
+     * @return SearchNames 查询字段列表
+     */
+    public String [] getSearchNames() {
+        return this.SearchNames;
+    }
+
+    /**
+     * Set 查询字段列表
+     * @param SearchNames 查询字段列表
+     */
+    public void setSearchNames(String [] SearchNames) {
+        this.SearchNames = SearchNames;
+    }
+
     public DescribeTableMetaRequest() {
     }
 
@@ -109,6 +132,12 @@ public class DescribeTableMetaRequest extends AbstractModel {
         if (source.TableFilterType != null) {
             this.TableFilterType = new Long(source.TableFilterType);
         }
+        if (source.SearchNames != null) {
+            this.SearchNames = new String[source.SearchNames.length];
+            for (int i = 0; i < source.SearchNames.length; i++) {
+                this.SearchNames[i] = new String(source.SearchNames[i]);
+            }
+        }
     }
 
 
@@ -119,6 +148,7 @@ public class DescribeTableMetaRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "TableId", this.TableId);
         this.setParamObj(map, prefix + "TableNameFilter.", this.TableNameFilter);
         this.setParamSimple(map, prefix + "TableFilterType", this.TableFilterType);
+        this.setParamArraySimple(map, prefix + "SearchNames.", this.SearchNames);
 
     }
 }

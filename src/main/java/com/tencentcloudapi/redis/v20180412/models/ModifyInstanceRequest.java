@@ -31,7 +31,7 @@ public class ModifyInstanceRequest extends AbstractModel {
     private String Operation;
 
     /**
-    * 实例Id
+    * 实例Id，每次请求的实例的上限为10。
     */
     @SerializedName("InstanceIds")
     @Expose
@@ -96,16 +96,16 @@ public class ModifyInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get 实例Id 
-     * @return InstanceIds 实例Id
+     * Get 实例Id，每次请求的实例的上限为10。 
+     * @return InstanceIds 实例Id，每次请求的实例的上限为10。
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set 实例Id
-     * @param InstanceIds 实例Id
+     * Set 实例Id，每次请求的实例的上限为10。
+     * @param InstanceIds 实例Id，每次请求的实例的上限为10。
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;

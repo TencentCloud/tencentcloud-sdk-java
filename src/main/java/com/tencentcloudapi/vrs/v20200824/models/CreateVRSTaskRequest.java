@@ -58,7 +58,7 @@ public class CreateVRSTaskRequest extends AbstractModel {
     private Long VoiceLanguage;
 
     /**
-    * 音频ID集合
+    * 音频ID集合。（一句话声音复刻仅需填写一个音质检测接口返回的AudioId）
     */
     @SerializedName("AudioIdList")
     @Expose
@@ -96,14 +96,16 @@ public class CreateVRSTaskRequest extends AbstractModel {
     private Long ModelType;
 
     /**
-    * 复刻类型。 0 - 轻量版声音复刻（默认）。
+    * 复刻类型。
+0 - 轻量版声音复刻（默认）；
+5 - 一句话声音复刻。
     */
     @SerializedName("TaskType")
     @Expose
     private Long TaskType;
 
     /**
-    * 校验音频ID。
+    * 校验音频ID。（仅基础版声音复刻使用）
     */
     @SerializedName("VPRAudioId")
     @Expose
@@ -198,16 +200,16 @@ public class CreateVRSTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get 音频ID集合 
-     * @return AudioIdList 音频ID集合
+     * Get 音频ID集合。（一句话声音复刻仅需填写一个音质检测接口返回的AudioId） 
+     * @return AudioIdList 音频ID集合。（一句话声音复刻仅需填写一个音质检测接口返回的AudioId）
      */
     public String [] getAudioIdList() {
         return this.AudioIdList;
     }
 
     /**
-     * Set 音频ID集合
-     * @param AudioIdList 音频ID集合
+     * Set 音频ID集合。（一句话声音复刻仅需填写一个音质检测接口返回的AudioId）
+     * @param AudioIdList 音频ID集合。（一句话声音复刻仅需填写一个音质检测接口返回的AudioId）
      */
     public void setAudioIdList(String [] AudioIdList) {
         this.AudioIdList = AudioIdList;
@@ -290,32 +292,40 @@ public class CreateVRSTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get 复刻类型。 0 - 轻量版声音复刻（默认）。 
-     * @return TaskType 复刻类型。 0 - 轻量版声音复刻（默认）。
+     * Get 复刻类型。
+0 - 轻量版声音复刻（默认）；
+5 - 一句话声音复刻。 
+     * @return TaskType 复刻类型。
+0 - 轻量版声音复刻（默认）；
+5 - 一句话声音复刻。
      */
     public Long getTaskType() {
         return this.TaskType;
     }
 
     /**
-     * Set 复刻类型。 0 - 轻量版声音复刻（默认）。
-     * @param TaskType 复刻类型。 0 - 轻量版声音复刻（默认）。
+     * Set 复刻类型。
+0 - 轻量版声音复刻（默认）；
+5 - 一句话声音复刻。
+     * @param TaskType 复刻类型。
+0 - 轻量版声音复刻（默认）；
+5 - 一句话声音复刻。
      */
     public void setTaskType(Long TaskType) {
         this.TaskType = TaskType;
     }
 
     /**
-     * Get 校验音频ID。 
-     * @return VPRAudioId 校验音频ID。
+     * Get 校验音频ID。（仅基础版声音复刻使用） 
+     * @return VPRAudioId 校验音频ID。（仅基础版声音复刻使用）
      */
     public String getVPRAudioId() {
         return this.VPRAudioId;
     }
 
     /**
-     * Set 校验音频ID。
-     * @param VPRAudioId 校验音频ID。
+     * Set 校验音频ID。（仅基础版声音复刻使用）
+     * @param VPRAudioId 校验音频ID。（仅基础版声音复刻使用）
      */
     public void setVPRAudioId(String VPRAudioId) {
         this.VPRAudioId = VPRAudioId;

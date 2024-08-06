@@ -32,6 +32,22 @@ public class DescribeTableMetaResponse extends AbstractModel {
     private TableMeta TableMeta;
 
     /**
+    * 生命周期信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LifecycleInfo")
+    @Expose
+    private LifecycleInfo LifecycleInfo;
+
+    /**
+    * 标签
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TagVoteSumList")
+    @Expose
+    private TagVoteSum TagVoteSumList;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -56,6 +72,46 @@ public class DescribeTableMetaResponse extends AbstractModel {
      */
     public void setTableMeta(TableMeta TableMeta) {
         this.TableMeta = TableMeta;
+    }
+
+    /**
+     * Get 生命周期信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LifecycleInfo 生命周期信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public LifecycleInfo getLifecycleInfo() {
+        return this.LifecycleInfo;
+    }
+
+    /**
+     * Set 生命周期信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LifecycleInfo 生命周期信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLifecycleInfo(LifecycleInfo LifecycleInfo) {
+        this.LifecycleInfo = LifecycleInfo;
+    }
+
+    /**
+     * Get 标签
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TagVoteSumList 标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public TagVoteSum getTagVoteSumList() {
+        return this.TagVoteSumList;
+    }
+
+    /**
+     * Set 标签
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TagVoteSumList 标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTagVoteSumList(TagVoteSum TagVoteSumList) {
+        this.TagVoteSumList = TagVoteSumList;
     }
 
     /**
@@ -85,6 +141,12 @@ public class DescribeTableMetaResponse extends AbstractModel {
         if (source.TableMeta != null) {
             this.TableMeta = new TableMeta(source.TableMeta);
         }
+        if (source.LifecycleInfo != null) {
+            this.LifecycleInfo = new LifecycleInfo(source.LifecycleInfo);
+        }
+        if (source.TagVoteSumList != null) {
+            this.TagVoteSumList = new TagVoteSum(source.TagVoteSumList);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -96,6 +158,8 @@ public class DescribeTableMetaResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "TableMeta.", this.TableMeta);
+        this.setParamObj(map, prefix + "LifecycleInfo.", this.LifecycleInfo);
+        this.setParamObj(map, prefix + "TagVoteSumList.", this.TagVoteSumList);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

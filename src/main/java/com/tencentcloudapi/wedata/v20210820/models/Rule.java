@@ -384,6 +384,30 @@ public class Rule extends AbstractModel {
     private Long DsEnvType;
 
     /**
+    * 数据源类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DatasourceType")
+    @Expose
+    private Long DatasourceType;
+
+    /**
+    * 模式名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SchemaName")
+    @Expose
+    private String SchemaName;
+
+    /**
+    * 目标模式名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TargetSchemaName")
+    @Expose
+    private String TargetSchemaName;
+
+    /**
      * Get 规则ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return RuleId 规则ID
@@ -1283,6 +1307,66 @@ public class Rule extends AbstractModel {
         this.DsEnvType = DsEnvType;
     }
 
+    /**
+     * Get 数据源类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DatasourceType 数据源类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getDatasourceType() {
+        return this.DatasourceType;
+    }
+
+    /**
+     * Set 数据源类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DatasourceType 数据源类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDatasourceType(Long DatasourceType) {
+        this.DatasourceType = DatasourceType;
+    }
+
+    /**
+     * Get 模式名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SchemaName 模式名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSchemaName() {
+        return this.SchemaName;
+    }
+
+    /**
+     * Set 模式名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SchemaName 模式名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSchemaName(String SchemaName) {
+        this.SchemaName = SchemaName;
+    }
+
+    /**
+     * Get 目标模式名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TargetSchemaName 目标模式名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTargetSchemaName() {
+        return this.TargetSchemaName;
+    }
+
+    /**
+     * Set 目标模式名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TargetSchemaName 目标模式名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTargetSchemaName(String TargetSchemaName) {
+        this.TargetSchemaName = TargetSchemaName;
+    }
+
     public Rule() {
     }
 
@@ -1429,6 +1513,15 @@ public class Rule extends AbstractModel {
         if (source.DsEnvType != null) {
             this.DsEnvType = new Long(source.DsEnvType);
         }
+        if (source.DatasourceType != null) {
+            this.DatasourceType = new Long(source.DatasourceType);
+        }
+        if (source.SchemaName != null) {
+            this.SchemaName = new String(source.SchemaName);
+        }
+        if (source.TargetSchemaName != null) {
+            this.TargetSchemaName = new String(source.TargetSchemaName);
+        }
     }
 
 
@@ -1481,6 +1574,9 @@ public class Rule extends AbstractModel {
         this.setParamSimple(map, prefix + "MonitorStatus", this.MonitorStatus);
         this.setParamSimple(map, prefix + "TriggerCondition", this.TriggerCondition);
         this.setParamSimple(map, prefix + "DsEnvType", this.DsEnvType);
+        this.setParamSimple(map, prefix + "DatasourceType", this.DatasourceType);
+        this.setParamSimple(map, prefix + "SchemaName", this.SchemaName);
+        this.setParamSimple(map, prefix + "TargetSchemaName", this.TargetSchemaName);
 
     }
 }

@@ -457,6 +457,22 @@ TABLE, VIEW, MANAGED_TABLE(Hive管理表), EXTERNAL_TABLE(Hive外部表), VIRTUA
     private TableMetaProperty [] TableProperties;
 
     /**
+    * 环境，取值 prod或者 dev
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Environment")
+    @Expose
+    private String Environment;
+
+    /**
+    * 数据库模式
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Schema")
+    @Expose
+    private String Schema;
+
+    /**
      * Get 表的全局唯一ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TableId 表的全局唯一ID
@@ -1540,6 +1556,46 @@ TABLE, VIEW, MANAGED_TABLE(Hive管理表), EXTERNAL_TABLE(Hive外部表), VIRTUA
         this.TableProperties = TableProperties;
     }
 
+    /**
+     * Get 环境，取值 prod或者 dev
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Environment 环境，取值 prod或者 dev
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getEnvironment() {
+        return this.Environment;
+    }
+
+    /**
+     * Set 环境，取值 prod或者 dev
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Environment 环境，取值 prod或者 dev
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEnvironment(String Environment) {
+        this.Environment = Environment;
+    }
+
+    /**
+     * Get 数据库模式
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Schema 数据库模式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSchema() {
+        return this.Schema;
+    }
+
+    /**
+     * Set 数据库模式
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Schema 数据库模式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSchema(String Schema) {
+        this.Schema = Schema;
+    }
+
     public TableMeta() {
     }
 
@@ -1725,6 +1781,12 @@ TABLE, VIEW, MANAGED_TABLE(Hive管理表), EXTERNAL_TABLE(Hive外部表), VIRTUA
                 this.TableProperties[i] = new TableMetaProperty(source.TableProperties[i]);
             }
         }
+        if (source.Environment != null) {
+            this.Environment = new String(source.Environment);
+        }
+        if (source.Schema != null) {
+            this.Schema = new String(source.Schema);
+        }
     }
 
 
@@ -1786,6 +1848,8 @@ TABLE, VIEW, MANAGED_TABLE(Hive管理表), EXTERNAL_TABLE(Hive外部表), VIRTUA
         this.setParamArraySimple(map, prefix + "PartitionColumns.", this.PartitionColumns);
         this.setParamSimple(map, prefix + "PartitionExpireDays", this.PartitionExpireDays);
         this.setParamArrayObj(map, prefix + "TableProperties.", this.TableProperties);
+        this.setParamSimple(map, prefix + "Environment", this.Environment);
+        this.setParamSimple(map, prefix + "Schema", this.Schema);
 
     }
 }

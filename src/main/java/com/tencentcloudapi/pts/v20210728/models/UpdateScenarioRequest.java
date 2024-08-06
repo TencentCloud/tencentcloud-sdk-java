@@ -31,7 +31,7 @@ public class UpdateScenarioRequest extends AbstractModel {
     private String ScenarioId;
 
     /**
-    * 场景名
+    * 场景名；调用该接口时，请将 Scenario 中不需要修改的字段保持原样也作为接口的入参，否则场景可能会不可用。
     */
     @SerializedName("Name")
     @Expose
@@ -194,16 +194,16 @@ public class UpdateScenarioRequest extends AbstractModel {
     }
 
     /**
-     * Get 场景名 
-     * @return Name 场景名
+     * Get 场景名；调用该接口时，请将 Scenario 中不需要修改的字段保持原样也作为接口的入参，否则场景可能会不可用。 
+     * @return Name 场景名；调用该接口时，请将 Scenario 中不需要修改的字段保持原样也作为接口的入参，否则场景可能会不可用。
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 场景名
-     * @param Name 场景名
+     * Set 场景名；调用该接口时，请将 Scenario 中不需要修改的字段保持原样也作为接口的入参，否则场景可能会不可用。
+     * @param Name 场景名；调用该接口时，请将 Scenario 中不需要修改的字段保持原样也作为接口的入参，否则场景可能会不可用。
      */
     public void setName(String Name) {
         this.Name = Name;

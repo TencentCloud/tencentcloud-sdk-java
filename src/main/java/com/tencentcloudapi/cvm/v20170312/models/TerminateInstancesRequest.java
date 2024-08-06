@@ -32,6 +32,7 @@ public class TerminateInstancesRequest extends AbstractModel {
 
     /**
     * 释放实例挂载的包年包月数据盘。true表示销毁实例同时释放包年包月数据盘，false表示只销毁实例。
+默认值：false
     */
     @SerializedName("ReleasePrepaidDataDisks")
     @Expose
@@ -54,8 +55,10 @@ public class TerminateInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get 释放实例挂载的包年包月数据盘。true表示销毁实例同时释放包年包月数据盘，false表示只销毁实例。 
+     * Get 释放实例挂载的包年包月数据盘。true表示销毁实例同时释放包年包月数据盘，false表示只销毁实例。
+默认值：false 
      * @return ReleasePrepaidDataDisks 释放实例挂载的包年包月数据盘。true表示销毁实例同时释放包年包月数据盘，false表示只销毁实例。
+默认值：false
      */
     public Boolean getReleasePrepaidDataDisks() {
         return this.ReleasePrepaidDataDisks;
@@ -63,7 +66,9 @@ public class TerminateInstancesRequest extends AbstractModel {
 
     /**
      * Set 释放实例挂载的包年包月数据盘。true表示销毁实例同时释放包年包月数据盘，false表示只销毁实例。
+默认值：false
      * @param ReleasePrepaidDataDisks 释放实例挂载的包年包月数据盘。true表示销毁实例同时释放包年包月数据盘，false表示只销毁实例。
+默认值：false
      */
     public void setReleasePrepaidDataDisks(Boolean ReleasePrepaidDataDisks) {
         this.ReleasePrepaidDataDisks = ReleasePrepaidDataDisks;

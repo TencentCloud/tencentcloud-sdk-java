@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class VoiceTypeInfo extends AbstractModel {
 
     /**
-    * 音色id
+    * 音色id。（若为一句话复刻时，该值为固定值“200000000”）
     */
     @SerializedName("VoiceType")
     @Expose
@@ -73,16 +73,33 @@ public class VoiceTypeInfo extends AbstractModel {
     private Boolean IsDeployed;
 
     /**
-     * Get 音色id 
-     * @return VoiceType 音色id
+    * 任务过期时间。（当复刻类型为一句话复刻时展示）
+
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ExpireTime")
+    @Expose
+    private String ExpireTime;
+
+    /**
+    * 快速复刻音色ID。（当复刻类型为一句话复刻时展示）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FastVoiceType")
+    @Expose
+    private String FastVoiceType;
+
+    /**
+     * Get 音色id。（若为一句话复刻时，该值为固定值“200000000”） 
+     * @return VoiceType 音色id。（若为一句话复刻时，该值为固定值“200000000”）
      */
     public Long getVoiceType() {
         return this.VoiceType;
     }
 
     /**
-     * Set 音色id
-     * @param VoiceType 音色id
+     * Set 音色id。（若为一句话复刻时，该值为固定值“200000000”）
+     * @param VoiceType 音色id。（若为一句话复刻时，该值为固定值“200000000”）
      */
     public void setVoiceType(Long VoiceType) {
         this.VoiceType = VoiceType;
@@ -184,6 +201,50 @@ public class VoiceTypeInfo extends AbstractModel {
         this.IsDeployed = IsDeployed;
     }
 
+    /**
+     * Get 任务过期时间。（当复刻类型为一句话复刻时展示）
+
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ExpireTime 任务过期时间。（当复刻类型为一句话复刻时展示）
+
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getExpireTime() {
+        return this.ExpireTime;
+    }
+
+    /**
+     * Set 任务过期时间。（当复刻类型为一句话复刻时展示）
+
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExpireTime 任务过期时间。（当复刻类型为一句话复刻时展示）
+
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExpireTime(String ExpireTime) {
+        this.ExpireTime = ExpireTime;
+    }
+
+    /**
+     * Get 快速复刻音色ID。（当复刻类型为一句话复刻时展示）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FastVoiceType 快速复刻音色ID。（当复刻类型为一句话复刻时展示）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getFastVoiceType() {
+        return this.FastVoiceType;
+    }
+
+    /**
+     * Set 快速复刻音色ID。（当复刻类型为一句话复刻时展示）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FastVoiceType 快速复刻音色ID。（当复刻类型为一句话复刻时展示）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFastVoiceType(String FastVoiceType) {
+        this.FastVoiceType = FastVoiceType;
+    }
+
     public VoiceTypeInfo() {
     }
 
@@ -213,6 +274,12 @@ public class VoiceTypeInfo extends AbstractModel {
         if (source.IsDeployed != null) {
             this.IsDeployed = new Boolean(source.IsDeployed);
         }
+        if (source.ExpireTime != null) {
+            this.ExpireTime = new String(source.ExpireTime);
+        }
+        if (source.FastVoiceType != null) {
+            this.FastVoiceType = new String(source.FastVoiceType);
+        }
     }
 
 
@@ -227,6 +294,8 @@ public class VoiceTypeInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "TaskID", this.TaskID);
         this.setParamSimple(map, prefix + "DateCreated", this.DateCreated);
         this.setParamSimple(map, prefix + "IsDeployed", this.IsDeployed);
+        this.setParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
+        this.setParamSimple(map, prefix + "FastVoiceType", this.FastVoiceType);
 
     }
 }

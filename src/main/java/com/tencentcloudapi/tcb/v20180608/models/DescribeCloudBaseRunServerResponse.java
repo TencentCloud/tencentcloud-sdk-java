@@ -80,6 +80,14 @@ public class DescribeCloudBaseRunServerResponse extends AbstractModel {
     private String SourceType;
 
     /**
+    * 服务标签, function: 托管函数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Tag")
+    @Expose
+    private String Tag;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -227,6 +235,26 @@ public class DescribeCloudBaseRunServerResponse extends AbstractModel {
     }
 
     /**
+     * Get 服务标签, function: 托管函数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Tag 服务标签, function: 托管函数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTag() {
+        return this.Tag;
+    }
+
+    /**
+     * Set 服务标签, function: 托管函数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Tag 服务标签, function: 托管函数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTag(String Tag) {
+        this.Tag = Tag;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -274,6 +302,9 @@ public class DescribeCloudBaseRunServerResponse extends AbstractModel {
         if (source.SourceType != null) {
             this.SourceType = new String(source.SourceType);
         }
+        if (source.Tag != null) {
+            this.Tag = new String(source.Tag);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -291,6 +322,7 @@ public class DescribeCloudBaseRunServerResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "ImageRepo", this.ImageRepo);
         this.setParamSimple(map, prefix + "TrafficType", this.TrafficType);
         this.setParamSimple(map, prefix + "SourceType", this.SourceType);
+        this.setParamSimple(map, prefix + "Tag", this.Tag);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

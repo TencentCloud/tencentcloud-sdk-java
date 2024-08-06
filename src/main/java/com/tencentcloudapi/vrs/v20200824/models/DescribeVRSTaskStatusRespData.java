@@ -48,7 +48,7 @@ public class DescribeVRSTaskStatusRespData extends AbstractModel {
     private String StatusStr;
 
     /**
-    * 音色id。
+    * 音色id。（若为一句话复刻时，该值为固定值“200000000”）
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VoiceType")
@@ -62,6 +62,22 @@ public class DescribeVRSTaskStatusRespData extends AbstractModel {
     @SerializedName("ErrorMsg")
     @Expose
     private String ErrorMsg;
+
+    /**
+    * 任务过期时间。（当复刻类型为一句话复刻时展示）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ExpireTime")
+    @Expose
+    private String ExpireTime;
+
+    /**
+    * 快速复刻音色ID。（当复刻类型为一句话复刻时展示）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FastVoiceType")
+    @Expose
+    private String FastVoiceType;
 
     /**
      * Get 任务ID
@@ -124,9 +140,9 @@ public class DescribeVRSTaskStatusRespData extends AbstractModel {
     }
 
     /**
-     * Get 音色id。
+     * Get 音色id。（若为一句话复刻时，该值为固定值“200000000”）
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return VoiceType 音色id。
+     * @return VoiceType 音色id。（若为一句话复刻时，该值为固定值“200000000”）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getVoiceType() {
@@ -134,9 +150,9 @@ public class DescribeVRSTaskStatusRespData extends AbstractModel {
     }
 
     /**
-     * Set 音色id。
+     * Set 音色id。（若为一句话复刻时，该值为固定值“200000000”）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param VoiceType 音色id。
+     * @param VoiceType 音色id。（若为一句话复刻时，该值为固定值“200000000”）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVoiceType(Long VoiceType) {
@@ -163,6 +179,46 @@ public class DescribeVRSTaskStatusRespData extends AbstractModel {
         this.ErrorMsg = ErrorMsg;
     }
 
+    /**
+     * Get 任务过期时间。（当复刻类型为一句话复刻时展示）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ExpireTime 任务过期时间。（当复刻类型为一句话复刻时展示）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getExpireTime() {
+        return this.ExpireTime;
+    }
+
+    /**
+     * Set 任务过期时间。（当复刻类型为一句话复刻时展示）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExpireTime 任务过期时间。（当复刻类型为一句话复刻时展示）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExpireTime(String ExpireTime) {
+        this.ExpireTime = ExpireTime;
+    }
+
+    /**
+     * Get 快速复刻音色ID。（当复刻类型为一句话复刻时展示）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FastVoiceType 快速复刻音色ID。（当复刻类型为一句话复刻时展示）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getFastVoiceType() {
+        return this.FastVoiceType;
+    }
+
+    /**
+     * Set 快速复刻音色ID。（当复刻类型为一句话复刻时展示）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FastVoiceType 快速复刻音色ID。（当复刻类型为一句话复刻时展示）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFastVoiceType(String FastVoiceType) {
+        this.FastVoiceType = FastVoiceType;
+    }
+
     public DescribeVRSTaskStatusRespData() {
     }
 
@@ -186,6 +242,12 @@ public class DescribeVRSTaskStatusRespData extends AbstractModel {
         if (source.ErrorMsg != null) {
             this.ErrorMsg = new String(source.ErrorMsg);
         }
+        if (source.ExpireTime != null) {
+            this.ExpireTime = new String(source.ExpireTime);
+        }
+        if (source.FastVoiceType != null) {
+            this.FastVoiceType = new String(source.FastVoiceType);
+        }
     }
 
 
@@ -198,6 +260,8 @@ public class DescribeVRSTaskStatusRespData extends AbstractModel {
         this.setParamSimple(map, prefix + "StatusStr", this.StatusStr);
         this.setParamSimple(map, prefix + "VoiceType", this.VoiceType);
         this.setParamSimple(map, prefix + "ErrorMsg", this.ErrorMsg);
+        this.setParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
+        this.setParamSimple(map, prefix + "FastVoiceType", this.FastVoiceType);
 
     }
 }

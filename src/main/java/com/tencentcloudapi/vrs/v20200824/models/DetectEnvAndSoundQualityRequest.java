@@ -52,13 +52,23 @@ public class DetectEnvAndSoundQualityRequest extends AbstractModel {
     private String Codec;
 
     /**
-    * 音频采样率：
-
-16000：16k（默认）
+    * 音频采样率。
+16000：16k（默认）；
+24000：24k（仅一句话声音复刻支持）；
+48000：48k（仅一句话声音复刻支持）。
     */
     @SerializedName("SampleRate")
     @Expose
     private Long SampleRate;
+
+    /**
+    * 复刻类型。
+0 - 轻量版声音复刻（默认）;
+5 - 一句话声音复刻。
+    */
+    @SerializedName("TaskType")
+    @Expose
+    private Long TaskType;
 
     /**
      * Get 标注文本信息 ID 
@@ -125,27 +135,55 @@ public class DetectEnvAndSoundQualityRequest extends AbstractModel {
     }
 
     /**
-     * Get 音频采样率：
-
-16000：16k（默认） 
-     * @return SampleRate 音频采样率：
-
-16000：16k（默认）
+     * Get 音频采样率。
+16000：16k（默认）；
+24000：24k（仅一句话声音复刻支持）；
+48000：48k（仅一句话声音复刻支持）。 
+     * @return SampleRate 音频采样率。
+16000：16k（默认）；
+24000：24k（仅一句话声音复刻支持）；
+48000：48k（仅一句话声音复刻支持）。
      */
     public Long getSampleRate() {
         return this.SampleRate;
     }
 
     /**
-     * Set 音频采样率：
-
-16000：16k（默认）
-     * @param SampleRate 音频采样率：
-
-16000：16k（默认）
+     * Set 音频采样率。
+16000：16k（默认）；
+24000：24k（仅一句话声音复刻支持）；
+48000：48k（仅一句话声音复刻支持）。
+     * @param SampleRate 音频采样率。
+16000：16k（默认）；
+24000：24k（仅一句话声音复刻支持）；
+48000：48k（仅一句话声音复刻支持）。
      */
     public void setSampleRate(Long SampleRate) {
         this.SampleRate = SampleRate;
+    }
+
+    /**
+     * Get 复刻类型。
+0 - 轻量版声音复刻（默认）;
+5 - 一句话声音复刻。 
+     * @return TaskType 复刻类型。
+0 - 轻量版声音复刻（默认）;
+5 - 一句话声音复刻。
+     */
+    public Long getTaskType() {
+        return this.TaskType;
+    }
+
+    /**
+     * Set 复刻类型。
+0 - 轻量版声音复刻（默认）;
+5 - 一句话声音复刻。
+     * @param TaskType 复刻类型。
+0 - 轻量版声音复刻（默认）;
+5 - 一句话声音复刻。
+     */
+    public void setTaskType(Long TaskType) {
+        this.TaskType = TaskType;
     }
 
     public DetectEnvAndSoundQualityRequest() {
@@ -171,6 +209,9 @@ public class DetectEnvAndSoundQualityRequest extends AbstractModel {
         if (source.SampleRate != null) {
             this.SampleRate = new Long(source.SampleRate);
         }
+        if (source.TaskType != null) {
+            this.TaskType = new Long(source.TaskType);
+        }
     }
 
 
@@ -183,6 +224,7 @@ public class DetectEnvAndSoundQualityRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "TypeId", this.TypeId);
         this.setParamSimple(map, prefix + "Codec", this.Codec);
         this.setParamSimple(map, prefix + "SampleRate", this.SampleRate);
+        this.setParamSimple(map, prefix + "TaskType", this.TaskType);
 
     }
 }
