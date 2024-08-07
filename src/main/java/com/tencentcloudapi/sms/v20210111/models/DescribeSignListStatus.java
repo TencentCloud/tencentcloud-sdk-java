@@ -38,8 +38,7 @@ public class DescribeSignListStatus extends AbstractModel {
     private Long International;
 
     /**
-    * 申请签名状态，其中0表示审核通过，1表示审核中。
--1：表示审核未通过或审核失败。
+    * 申请签名状态，其中0表示审核通过且已生效，1表示审核中，2表示审核通过待生效，-1表示审核未通过或审核失败。
     */
     @SerializedName("StatusCode")
     @Expose
@@ -99,20 +98,16 @@ public class DescribeSignListStatus extends AbstractModel {
     }
 
     /**
-     * Get 申请签名状态，其中0表示审核通过，1表示审核中。
--1：表示审核未通过或审核失败。 
-     * @return StatusCode 申请签名状态，其中0表示审核通过，1表示审核中。
--1：表示审核未通过或审核失败。
+     * Get 申请签名状态，其中0表示审核通过且已生效，1表示审核中，2表示审核通过待生效，-1表示审核未通过或审核失败。 
+     * @return StatusCode 申请签名状态，其中0表示审核通过且已生效，1表示审核中，2表示审核通过待生效，-1表示审核未通过或审核失败。
      */
     public Long getStatusCode() {
         return this.StatusCode;
     }
 
     /**
-     * Set 申请签名状态，其中0表示审核通过，1表示审核中。
--1：表示审核未通过或审核失败。
-     * @param StatusCode 申请签名状态，其中0表示审核通过，1表示审核中。
--1：表示审核未通过或审核失败。
+     * Set 申请签名状态，其中0表示审核通过且已生效，1表示审核中，2表示审核通过待生效，-1表示审核未通过或审核失败。
+     * @param StatusCode 申请签名状态，其中0表示审核通过且已生效，1表示审核中，2表示审核通过待生效，-1表示审核未通过或审核失败。
      */
     public void setStatusCode(Long StatusCode) {
         this.StatusCode = StatusCode;

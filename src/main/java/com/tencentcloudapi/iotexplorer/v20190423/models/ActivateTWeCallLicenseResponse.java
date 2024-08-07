@@ -32,6 +32,22 @@ public class ActivateTWeCallLicenseResponse extends AbstractModel {
     private DeviceActiveResult [] DeviceList;
 
     /**
+    * 设备激活失败返回数据
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FailureList")
+    @Expose
+    private DeviceActiveResult [] FailureList;
+
+    /**
+    * 设备激活成功返回数据
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SuccessList")
+    @Expose
+    private DeviceActiveResult [] SuccessList;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -56,6 +72,46 @@ public class ActivateTWeCallLicenseResponse extends AbstractModel {
      */
     public void setDeviceList(DeviceActiveResult [] DeviceList) {
         this.DeviceList = DeviceList;
+    }
+
+    /**
+     * Get 设备激活失败返回数据
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FailureList 设备激活失败返回数据
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public DeviceActiveResult [] getFailureList() {
+        return this.FailureList;
+    }
+
+    /**
+     * Set 设备激活失败返回数据
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FailureList 设备激活失败返回数据
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFailureList(DeviceActiveResult [] FailureList) {
+        this.FailureList = FailureList;
+    }
+
+    /**
+     * Get 设备激活成功返回数据
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SuccessList 设备激活成功返回数据
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public DeviceActiveResult [] getSuccessList() {
+        return this.SuccessList;
+    }
+
+    /**
+     * Set 设备激活成功返回数据
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SuccessList 设备激活成功返回数据
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSuccessList(DeviceActiveResult [] SuccessList) {
+        this.SuccessList = SuccessList;
     }
 
     /**
@@ -88,6 +144,18 @@ public class ActivateTWeCallLicenseResponse extends AbstractModel {
                 this.DeviceList[i] = new DeviceActiveResult(source.DeviceList[i]);
             }
         }
+        if (source.FailureList != null) {
+            this.FailureList = new DeviceActiveResult[source.FailureList.length];
+            for (int i = 0; i < source.FailureList.length; i++) {
+                this.FailureList[i] = new DeviceActiveResult(source.FailureList[i]);
+            }
+        }
+        if (source.SuccessList != null) {
+            this.SuccessList = new DeviceActiveResult[source.SuccessList.length];
+            for (int i = 0; i < source.SuccessList.length; i++) {
+                this.SuccessList[i] = new DeviceActiveResult(source.SuccessList[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -99,6 +167,8 @@ public class ActivateTWeCallLicenseResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "DeviceList.", this.DeviceList);
+        this.setParamArrayObj(map, prefix + "FailureList.", this.FailureList);
+        this.setParamArrayObj(map, prefix + "SuccessList.", this.SuccessList);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

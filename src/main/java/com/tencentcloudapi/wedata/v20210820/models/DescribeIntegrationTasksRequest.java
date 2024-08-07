@@ -45,7 +45,7 @@ public class DescribeIntegrationTasksRequest extends AbstractModel {
     private Long PageSize;
 
     /**
-    * 查询filter
+    * 查询filter;默认查询任务的开发态，如需查询生产态任务需添加{"Values":["true"],"Name":"ProductionState"};如需查询查询任务状态需要查询生产态任务列表
     */
     @SerializedName("Filters")
     @Expose
@@ -128,16 +128,16 @@ public class DescribeIntegrationTasksRequest extends AbstractModel {
     }
 
     /**
-     * Get 查询filter 
-     * @return Filters 查询filter
+     * Get 查询filter;默认查询任务的开发态，如需查询生产态任务需添加{"Values":["true"],"Name":"ProductionState"};如需查询查询任务状态需要查询生产态任务列表 
+     * @return Filters 查询filter;默认查询任务的开发态，如需查询生产态任务需添加{"Values":["true"],"Name":"ProductionState"};如需查询查询任务状态需要查询生产态任务列表
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 查询filter
-     * @param Filters 查询filter
+     * Set 查询filter;默认查询任务的开发态，如需查询生产态任务需添加{"Values":["true"],"Name":"ProductionState"};如需查询查询任务状态需要查询生产态任务列表
+     * @param Filters 查询filter;默认查询任务的开发态，如需查询生产态任务需添加{"Values":["true"],"Name":"ProductionState"};如需查询查询任务状态需要查询生产态任务列表
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

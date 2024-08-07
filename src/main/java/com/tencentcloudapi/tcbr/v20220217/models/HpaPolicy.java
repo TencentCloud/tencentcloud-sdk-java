@@ -25,6 +25,7 @@ public class HpaPolicy extends AbstractModel {
 
     /**
     * 扩缩容类型
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PolicyType")
     @Expose
@@ -32,14 +33,17 @@ public class HpaPolicy extends AbstractModel {
 
     /**
     * 扩缩容阈值
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PolicyThreshold")
     @Expose
     private Long PolicyThreshold;
 
     /**
-     * Get 扩缩容类型 
+     * Get 扩缩容类型
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return PolicyType 扩缩容类型
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPolicyType() {
         return this.PolicyType;
@@ -47,15 +51,19 @@ public class HpaPolicy extends AbstractModel {
 
     /**
      * Set 扩缩容类型
+注意：此字段可能返回 null，表示取不到有效值。
      * @param PolicyType 扩缩容类型
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPolicyType(String PolicyType) {
         this.PolicyType = PolicyType;
     }
 
     /**
-     * Get 扩缩容阈值 
+     * Get 扩缩容阈值
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return PolicyThreshold 扩缩容阈值
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPolicyThreshold() {
         return this.PolicyThreshold;
@@ -63,7 +71,9 @@ public class HpaPolicy extends AbstractModel {
 
     /**
      * Set 扩缩容阈值
+注意：此字段可能返回 null，表示取不到有效值。
      * @param PolicyThreshold 扩缩容阈值
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPolicyThreshold(Long PolicyThreshold) {
         this.PolicyThreshold = PolicyThreshold;

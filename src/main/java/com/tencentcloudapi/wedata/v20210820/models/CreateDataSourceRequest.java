@@ -157,6 +157,13 @@ public class CreateDataSourceRequest extends AbstractModel {
     private String DevelopmentParams;
 
     /**
+    * 新建数据源的项目ID
+    */
+    @SerializedName("ProjectId")
+    @Expose
+    private String ProjectId;
+
+    /**
      * Get 数据源名称，在相同SpaceName下，数据源名称不能为空 
      * @return Name 数据源名称，在相同SpaceName下，数据源名称不能为空
      */
@@ -460,6 +467,22 @@ public class CreateDataSourceRequest extends AbstractModel {
         this.DevelopmentParams = DevelopmentParams;
     }
 
+    /**
+     * Get 新建数据源的项目ID 
+     * @return ProjectId 新建数据源的项目ID
+     */
+    public String getProjectId() {
+        return this.ProjectId;
+    }
+
+    /**
+     * Set 新建数据源的项目ID
+     * @param ProjectId 新建数据源的项目ID
+     */
+    public void setProjectId(String ProjectId) {
+        this.ProjectId = ProjectId;
+    }
+
     public CreateDataSourceRequest() {
     }
 
@@ -525,6 +548,9 @@ public class CreateDataSourceRequest extends AbstractModel {
         if (source.DevelopmentParams != null) {
             this.DevelopmentParams = new String(source.DevelopmentParams);
         }
+        if (source.ProjectId != null) {
+            this.ProjectId = new String(source.ProjectId);
+        }
     }
 
 
@@ -551,6 +577,7 @@ public class CreateDataSourceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "COSRegion", this.COSRegion);
         this.setParamSimple(map, prefix + "ConnectResult", this.ConnectResult);
         this.setParamSimple(map, prefix + "DevelopmentParams", this.DevelopmentParams);
+        this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
 
     }
 }

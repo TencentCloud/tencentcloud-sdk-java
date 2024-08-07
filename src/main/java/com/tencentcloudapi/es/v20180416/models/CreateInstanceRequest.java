@@ -284,6 +284,13 @@ public class CreateInstanceRequest extends AbstractModel {
     private Long DisasterRecoverGroupAffinity;
 
     /**
+    * 子产品ID枚举值： 开源版："sp_es_io2"， 基础版："sp_es_basic"，白金版："sp_es_platinum"，企业版："sp_es_enterprise"，CDC白金版："sp_es_cdc_platinum"，日志增强版："sp_es_enlogging"，tsearch："sp_tsearch_io2"，logstash："sp_es_logstash" ，可以为空，为空的时候后台取LicenseType映射该字段
+    */
+    @SerializedName("SubProductCode")
+    @Expose
+    private String SubProductCode;
+
+    /**
      * Get 可用区 
      * @return Zone 可用区
      */
@@ -891,6 +898,22 @@ public class CreateInstanceRequest extends AbstractModel {
         this.DisasterRecoverGroupAffinity = DisasterRecoverGroupAffinity;
     }
 
+    /**
+     * Get 子产品ID枚举值： 开源版："sp_es_io2"， 基础版："sp_es_basic"，白金版："sp_es_platinum"，企业版："sp_es_enterprise"，CDC白金版："sp_es_cdc_platinum"，日志增强版："sp_es_enlogging"，tsearch："sp_tsearch_io2"，logstash："sp_es_logstash" ，可以为空，为空的时候后台取LicenseType映射该字段 
+     * @return SubProductCode 子产品ID枚举值： 开源版："sp_es_io2"， 基础版："sp_es_basic"，白金版："sp_es_platinum"，企业版："sp_es_enterprise"，CDC白金版："sp_es_cdc_platinum"，日志增强版："sp_es_enlogging"，tsearch："sp_tsearch_io2"，logstash："sp_es_logstash" ，可以为空，为空的时候后台取LicenseType映射该字段
+     */
+    public String getSubProductCode() {
+        return this.SubProductCode;
+    }
+
+    /**
+     * Set 子产品ID枚举值： 开源版："sp_es_io2"， 基础版："sp_es_basic"，白金版："sp_es_platinum"，企业版："sp_es_enterprise"，CDC白金版："sp_es_cdc_platinum"，日志增强版："sp_es_enlogging"，tsearch："sp_tsearch_io2"，logstash："sp_es_logstash" ，可以为空，为空的时候后台取LicenseType映射该字段
+     * @param SubProductCode 子产品ID枚举值： 开源版："sp_es_io2"， 基础版："sp_es_basic"，白金版："sp_es_platinum"，企业版："sp_es_enterprise"，CDC白金版："sp_es_cdc_platinum"，日志增强版："sp_es_enlogging"，tsearch："sp_tsearch_io2"，logstash："sp_es_logstash" ，可以为空，为空的时候后台取LicenseType映射该字段
+     */
+    public void setSubProductCode(String SubProductCode) {
+        this.SubProductCode = SubProductCode;
+    }
+
     public CreateInstanceRequest() {
     }
 
@@ -1019,6 +1042,9 @@ public class CreateInstanceRequest extends AbstractModel {
         if (source.DisasterRecoverGroupAffinity != null) {
             this.DisasterRecoverGroupAffinity = new Long(source.DisasterRecoverGroupAffinity);
         }
+        if (source.SubProductCode != null) {
+            this.SubProductCode = new String(source.SubProductCode);
+        }
     }
 
 
@@ -1062,6 +1088,7 @@ public class CreateInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "EnableDiagnose", this.EnableDiagnose);
         this.setParamSimple(map, prefix + "CdcId", this.CdcId);
         this.setParamSimple(map, prefix + "DisasterRecoverGroupAffinity", this.DisasterRecoverGroupAffinity);
+        this.setParamSimple(map, prefix + "SubProductCode", this.SubProductCode);
 
     }
 }

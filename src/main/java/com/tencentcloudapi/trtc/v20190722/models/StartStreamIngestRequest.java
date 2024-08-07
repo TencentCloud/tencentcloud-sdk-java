@@ -104,6 +104,30 @@ public class StartStreamIngestRequest extends AbstractModel {
     private Long SeekSecond;
 
     /**
+    * 开启自动旁路推流，请确认控制台已经开启该功能。
+    */
+    @SerializedName("AutoPush")
+    @Expose
+    private Boolean AutoPush;
+
+    /**
+    * 循环播放次数, 取值范围[-1, 1000],  默认1次。
+ - 0 无效值
+ - -1 循环播放, 需要主动调用停止接口或设置MaxDuration
+
+    */
+    @SerializedName("RepeatNum")
+    @Expose
+    private Long RepeatNum;
+
+    /**
+    * 循环播放最大时长,仅支持RepeatNum设置-1时生效，取值范围[1, 10080]，单位分钟。
+    */
+    @SerializedName("MaxDuration")
+    @Expose
+    private Long MaxDuration;
+
+    /**
      * Get TRTC的[SdkAppId](https://cloud.tencent.com/document/product/647/46351#sdkappid)，和TRTC的房间所对应的SdkAppId相同。 
      * @return SdkAppId TRTC的[SdkAppId](https://cloud.tencent.com/document/product/647/46351#sdkappid)，和TRTC的房间所对应的SdkAppId相同。
      */
@@ -303,6 +327,66 @@ public class StartStreamIngestRequest extends AbstractModel {
         this.SeekSecond = SeekSecond;
     }
 
+    /**
+     * Get 开启自动旁路推流，请确认控制台已经开启该功能。 
+     * @return AutoPush 开启自动旁路推流，请确认控制台已经开启该功能。
+     */
+    public Boolean getAutoPush() {
+        return this.AutoPush;
+    }
+
+    /**
+     * Set 开启自动旁路推流，请确认控制台已经开启该功能。
+     * @param AutoPush 开启自动旁路推流，请确认控制台已经开启该功能。
+     */
+    public void setAutoPush(Boolean AutoPush) {
+        this.AutoPush = AutoPush;
+    }
+
+    /**
+     * Get 循环播放次数, 取值范围[-1, 1000],  默认1次。
+ - 0 无效值
+ - -1 循环播放, 需要主动调用停止接口或设置MaxDuration
+ 
+     * @return RepeatNum 循环播放次数, 取值范围[-1, 1000],  默认1次。
+ - 0 无效值
+ - -1 循环播放, 需要主动调用停止接口或设置MaxDuration
+
+     */
+    public Long getRepeatNum() {
+        return this.RepeatNum;
+    }
+
+    /**
+     * Set 循环播放次数, 取值范围[-1, 1000],  默认1次。
+ - 0 无效值
+ - -1 循环播放, 需要主动调用停止接口或设置MaxDuration
+
+     * @param RepeatNum 循环播放次数, 取值范围[-1, 1000],  默认1次。
+ - 0 无效值
+ - -1 循环播放, 需要主动调用停止接口或设置MaxDuration
+
+     */
+    public void setRepeatNum(Long RepeatNum) {
+        this.RepeatNum = RepeatNum;
+    }
+
+    /**
+     * Get 循环播放最大时长,仅支持RepeatNum设置-1时生效，取值范围[1, 10080]，单位分钟。 
+     * @return MaxDuration 循环播放最大时长,仅支持RepeatNum设置-1时生效，取值范围[1, 10080]，单位分钟。
+     */
+    public Long getMaxDuration() {
+        return this.MaxDuration;
+    }
+
+    /**
+     * Set 循环播放最大时长,仅支持RepeatNum设置-1时生效，取值范围[1, 10080]，单位分钟。
+     * @param MaxDuration 循环播放最大时长,仅支持RepeatNum设置-1时生效，取值范围[1, 10080]，单位分钟。
+     */
+    public void setMaxDuration(Long MaxDuration) {
+        this.MaxDuration = MaxDuration;
+    }
+
     public StartStreamIngestRequest() {
     }
 
@@ -347,6 +431,15 @@ public class StartStreamIngestRequest extends AbstractModel {
         if (source.SeekSecond != null) {
             this.SeekSecond = new Long(source.SeekSecond);
         }
+        if (source.AutoPush != null) {
+            this.AutoPush = new Boolean(source.AutoPush);
+        }
+        if (source.RepeatNum != null) {
+            this.RepeatNum = new Long(source.RepeatNum);
+        }
+        if (source.MaxDuration != null) {
+            this.MaxDuration = new Long(source.MaxDuration);
+        }
     }
 
 
@@ -365,6 +458,9 @@ public class StartStreamIngestRequest extends AbstractModel {
         this.setParamObj(map, prefix + "AudioEncodeParams.", this.AudioEncodeParams);
         this.setParamArraySimple(map, prefix + "SourceUrl.", this.SourceUrl);
         this.setParamSimple(map, prefix + "SeekSecond", this.SeekSecond);
+        this.setParamSimple(map, prefix + "AutoPush", this.AutoPush);
+        this.setParamSimple(map, prefix + "RepeatNum", this.RepeatNum);
+        this.setParamSimple(map, prefix + "MaxDuration", this.MaxDuration);
 
     }
 }

@@ -45,7 +45,7 @@ public class StartAIConversationRequest extends AbstractModel {
     private AgentConfig AgentConfig;
 
     /**
-    * 调用方传入的唯一Id，服务端用来去重。
+    * 调用方传入的唯一Id，可用于客户侧防止重复发起任务以及可以通过该字段查询任务状态。
     */
     @SerializedName("SessionId")
     @Expose
@@ -131,16 +131,16 @@ public class StartAIConversationRequest extends AbstractModel {
     }
 
     /**
-     * Get 调用方传入的唯一Id，服务端用来去重。 
-     * @return SessionId 调用方传入的唯一Id，服务端用来去重。
+     * Get 调用方传入的唯一Id，可用于客户侧防止重复发起任务以及可以通过该字段查询任务状态。 
+     * @return SessionId 调用方传入的唯一Id，可用于客户侧防止重复发起任务以及可以通过该字段查询任务状态。
      */
     public String getSessionId() {
         return this.SessionId;
     }
 
     /**
-     * Set 调用方传入的唯一Id，服务端用来去重。
-     * @param SessionId 调用方传入的唯一Id，服务端用来去重。
+     * Set 调用方传入的唯一Id，可用于客户侧防止重复发起任务以及可以通过该字段查询任务状态。
+     * @param SessionId 调用方传入的唯一Id，可用于客户侧防止重复发起任务以及可以通过该字段查询任务状态。
      */
     public void setSessionId(String SessionId) {
         this.SessionId = SessionId;

@@ -38,6 +38,20 @@ public class UpdateDataEngineConfigRequest extends AbstractModel {
     private String DataEngineConfigCommand;
 
     /**
+    * 是否使用lakefs作为结果存储
+    */
+    @SerializedName("UseLakeFs")
+    @Expose
+    private Boolean UseLakeFs;
+
+    /**
+    * 用户自定义结果路径
+    */
+    @SerializedName("CustomResultPath")
+    @Expose
+    private String CustomResultPath;
+
+    /**
      * Get 引擎ID 
      * @return DataEngineIds 引擎ID
      */
@@ -69,6 +83,38 @@ public class UpdateDataEngineConfigRequest extends AbstractModel {
         this.DataEngineConfigCommand = DataEngineConfigCommand;
     }
 
+    /**
+     * Get 是否使用lakefs作为结果存储 
+     * @return UseLakeFs 是否使用lakefs作为结果存储
+     */
+    public Boolean getUseLakeFs() {
+        return this.UseLakeFs;
+    }
+
+    /**
+     * Set 是否使用lakefs作为结果存储
+     * @param UseLakeFs 是否使用lakefs作为结果存储
+     */
+    public void setUseLakeFs(Boolean UseLakeFs) {
+        this.UseLakeFs = UseLakeFs;
+    }
+
+    /**
+     * Get 用户自定义结果路径 
+     * @return CustomResultPath 用户自定义结果路径
+     */
+    public String getCustomResultPath() {
+        return this.CustomResultPath;
+    }
+
+    /**
+     * Set 用户自定义结果路径
+     * @param CustomResultPath 用户自定义结果路径
+     */
+    public void setCustomResultPath(String CustomResultPath) {
+        this.CustomResultPath = CustomResultPath;
+    }
+
     public UpdateDataEngineConfigRequest() {
     }
 
@@ -86,6 +132,12 @@ public class UpdateDataEngineConfigRequest extends AbstractModel {
         if (source.DataEngineConfigCommand != null) {
             this.DataEngineConfigCommand = new String(source.DataEngineConfigCommand);
         }
+        if (source.UseLakeFs != null) {
+            this.UseLakeFs = new Boolean(source.UseLakeFs);
+        }
+        if (source.CustomResultPath != null) {
+            this.CustomResultPath = new String(source.CustomResultPath);
+        }
     }
 
 
@@ -95,6 +147,8 @@ public class UpdateDataEngineConfigRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "DataEngineIds.", this.DataEngineIds);
         this.setParamSimple(map, prefix + "DataEngineConfigCommand", this.DataEngineConfigCommand);
+        this.setParamSimple(map, prefix + "UseLakeFs", this.UseLakeFs);
+        this.setParamSimple(map, prefix + "CustomResultPath", this.CustomResultPath);
 
     }
 }

@@ -48,6 +48,14 @@ public class DeviceActiveResult extends AbstractModel {
     private Long ErrCode;
 
     /**
+    * 过期时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ExpireTime")
+    @Expose
+    private Long ExpireTime;
+
+    /**
      * Get 模版ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ModelId 模版ID
@@ -107,6 +115,26 @@ public class DeviceActiveResult extends AbstractModel {
         this.ErrCode = ErrCode;
     }
 
+    /**
+     * Get 过期时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ExpireTime 过期时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getExpireTime() {
+        return this.ExpireTime;
+    }
+
+    /**
+     * Set 过期时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExpireTime 过期时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExpireTime(Long ExpireTime) {
+        this.ExpireTime = ExpireTime;
+    }
+
     public DeviceActiveResult() {
     }
 
@@ -124,6 +152,9 @@ public class DeviceActiveResult extends AbstractModel {
         if (source.ErrCode != null) {
             this.ErrCode = new Long(source.ErrCode);
         }
+        if (source.ExpireTime != null) {
+            this.ExpireTime = new Long(source.ExpireTime);
+        }
     }
 
 
@@ -134,6 +165,7 @@ public class DeviceActiveResult extends AbstractModel {
         this.setParamSimple(map, prefix + "ModelId", this.ModelId);
         this.setParamSimple(map, prefix + "Sn", this.Sn);
         this.setParamSimple(map, prefix + "ErrCode", this.ErrCode);
+        this.setParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
 
     }
 }

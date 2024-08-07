@@ -38,7 +38,7 @@ public class DescribeAIConversationResponse extends AbstractModel {
     private String Status;
 
     /**
-    * 唯一标识一次任务。
+    * 任务的唯一标识，在启动任务时生成
     */
     @SerializedName("TaskId")
     @Expose
@@ -91,16 +91,16 @@ public class DescribeAIConversationResponse extends AbstractModel {
     }
 
     /**
-     * Get 唯一标识一次任务。 
-     * @return TaskId 唯一标识一次任务。
+     * Get 任务的唯一标识，在启动任务时生成 
+     * @return TaskId 任务的唯一标识，在启动任务时生成
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 唯一标识一次任务。
-     * @param TaskId 唯一标识一次任务。
+     * Set 任务的唯一标识，在启动任务时生成
+     * @param TaskId 任务的唯一标识，在启动任务时生成
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

@@ -38,6 +38,13 @@ public class ServerPushText extends AbstractModel {
     private Boolean Interrupt;
 
     /**
+    * 播报完文本后，是否自动关闭对话任务
+    */
+    @SerializedName("StopAfterPlay")
+    @Expose
+    private Boolean StopAfterPlay;
+
+    /**
      * Get 服务端推送播报文本 
      * @return Text 服务端推送播报文本
      */
@@ -69,6 +76,22 @@ public class ServerPushText extends AbstractModel {
         this.Interrupt = Interrupt;
     }
 
+    /**
+     * Get 播报完文本后，是否自动关闭对话任务 
+     * @return StopAfterPlay 播报完文本后，是否自动关闭对话任务
+     */
+    public Boolean getStopAfterPlay() {
+        return this.StopAfterPlay;
+    }
+
+    /**
+     * Set 播报完文本后，是否自动关闭对话任务
+     * @param StopAfterPlay 播报完文本后，是否自动关闭对话任务
+     */
+    public void setStopAfterPlay(Boolean StopAfterPlay) {
+        this.StopAfterPlay = StopAfterPlay;
+    }
+
     public ServerPushText() {
     }
 
@@ -83,6 +106,9 @@ public class ServerPushText extends AbstractModel {
         if (source.Interrupt != null) {
             this.Interrupt = new Boolean(source.Interrupt);
         }
+        if (source.StopAfterPlay != null) {
+            this.StopAfterPlay = new Boolean(source.StopAfterPlay);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class ServerPushText extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Text", this.Text);
         this.setParamSimple(map, prefix + "Interrupt", this.Interrupt);
+        this.setParamSimple(map, prefix + "StopAfterPlay", this.StopAfterPlay);
 
     }
 }

@@ -134,6 +134,14 @@ public class ManagerInfo extends AbstractModel {
     private ManagerStatusInfo [] StatusInfo;
 
     /**
+    * 标签
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tags [] Tags;
+
+    /**
      * Get 状态: audit: 审核中 ok: 审核通过 invalid: 失效 expiring: 即将过期 expired: 已过期 
      * @return Status 状态: audit: 审核中 ok: 审核通过 invalid: 失效 expiring: 即将过期 expired: 已过期
      */
@@ -393,6 +401,26 @@ public class ManagerInfo extends AbstractModel {
         this.StatusInfo = StatusInfo;
     }
 
+    /**
+     * Get 标签
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Tags 标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Tags [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 标签
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Tags 标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTags(Tags [] Tags) {
+        this.Tags = Tags;
+    }
+
     public ManagerInfo() {
     }
 
@@ -449,6 +477,12 @@ public class ManagerInfo extends AbstractModel {
                 this.StatusInfo[i] = new ManagerStatusInfo(source.StatusInfo[i]);
             }
         }
+        if (source.Tags != null) {
+            this.Tags = new Tags[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tags(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -471,6 +505,7 @@ public class ManagerInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "SubmitAuditTime", this.SubmitAuditTime);
         this.setParamSimple(map, prefix + "VerifyTime", this.VerifyTime);
         this.setParamArrayObj(map, prefix + "StatusInfo.", this.StatusInfo);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

@@ -89,6 +89,14 @@ public class CompanyInfo extends AbstractModel {
     private String IdNumber;
 
     /**
+    * 标签
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tags [] Tags;
+
+    /**
      * Get 公司名称 
      * @return CompanyName 公司名称
      */
@@ -240,6 +248,26 @@ public class CompanyInfo extends AbstractModel {
         this.IdNumber = IdNumber;
     }
 
+    /**
+     * Get 标签
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Tags 标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Tags [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 标签
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Tags 标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTags(Tags [] Tags) {
+        this.Tags = Tags;
+    }
+
     public CompanyInfo() {
     }
 
@@ -275,6 +303,12 @@ public class CompanyInfo extends AbstractModel {
         if (source.IdNumber != null) {
             this.IdNumber = new String(source.IdNumber);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tags[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tags(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -291,6 +325,7 @@ public class CompanyInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "CompanyPhone", this.CompanyPhone);
         this.setParamSimple(map, prefix + "IdType", this.IdType);
         this.setParamSimple(map, prefix + "IdNumber", this.IdNumber);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

@@ -63,6 +63,14 @@ public class ClearLaunchConfigurationAttributesRequest extends AbstractModel {
     private Boolean ClearDisasterRecoverGroupIds;
 
     /**
+    * 是否清空实例标签列表，非必填，默认为 false。
+填 true 代表清空实例标签列表，清空后基于此新创建的云主机将不会绑定列表中的标签。
+    */
+    @SerializedName("ClearInstanceTags")
+    @Expose
+    private Boolean ClearInstanceTags;
+
+    /**
      * Get 启动配置ID。 
      * @return LaunchConfigurationId 启动配置ID。
      */
@@ -158,6 +166,26 @@ public class ClearLaunchConfigurationAttributesRequest extends AbstractModel {
         this.ClearDisasterRecoverGroupIds = ClearDisasterRecoverGroupIds;
     }
 
+    /**
+     * Get 是否清空实例标签列表，非必填，默认为 false。
+填 true 代表清空实例标签列表，清空后基于此新创建的云主机将不会绑定列表中的标签。 
+     * @return ClearInstanceTags 是否清空实例标签列表，非必填，默认为 false。
+填 true 代表清空实例标签列表，清空后基于此新创建的云主机将不会绑定列表中的标签。
+     */
+    public Boolean getClearInstanceTags() {
+        return this.ClearInstanceTags;
+    }
+
+    /**
+     * Set 是否清空实例标签列表，非必填，默认为 false。
+填 true 代表清空实例标签列表，清空后基于此新创建的云主机将不会绑定列表中的标签。
+     * @param ClearInstanceTags 是否清空实例标签列表，非必填，默认为 false。
+填 true 代表清空实例标签列表，清空后基于此新创建的云主机将不会绑定列表中的标签。
+     */
+    public void setClearInstanceTags(Boolean ClearInstanceTags) {
+        this.ClearInstanceTags = ClearInstanceTags;
+    }
+
     public ClearLaunchConfigurationAttributesRequest() {
     }
 
@@ -181,6 +209,9 @@ public class ClearLaunchConfigurationAttributesRequest extends AbstractModel {
         if (source.ClearDisasterRecoverGroupIds != null) {
             this.ClearDisasterRecoverGroupIds = new Boolean(source.ClearDisasterRecoverGroupIds);
         }
+        if (source.ClearInstanceTags != null) {
+            this.ClearInstanceTags = new Boolean(source.ClearInstanceTags);
+        }
     }
 
 
@@ -193,6 +224,7 @@ public class ClearLaunchConfigurationAttributesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ClearHostNameSettings", this.ClearHostNameSettings);
         this.setParamSimple(map, prefix + "ClearInstanceNameSettings", this.ClearInstanceNameSettings);
         this.setParamSimple(map, prefix + "ClearDisasterRecoverGroupIds", this.ClearDisasterRecoverGroupIds);
+        this.setParamSimple(map, prefix + "ClearInstanceTags", this.ClearInstanceTags);
 
     }
 }

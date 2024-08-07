@@ -48,12 +48,20 @@ public class AgentConfig extends AbstractModel {
     private String TargetUserId;
 
     /**
-    * 房间内推流用户全部退出后超过MaxIdleTime秒，后台自动关闭任务，默认值是60s。
+    * 房间内超过MaxIdleTime 没有推流，后台自动关闭任务，默认值是60s。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxIdleTime")
     @Expose
     private Long MaxIdleTime;
+
+    /**
+    * 机器人的欢迎语
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("WelcomeMessage")
+    @Expose
+    private String WelcomeMessage;
 
     /**
      * Get 机器人的UserId，用于进房发起任务。【注意】这个UserId不能与当前房间内的主播观众[UserId](https://cloud.tencent.com/document/product/647/46351#userid)重复。如果一个房间发起多个任务时，机器人的UserId也不能相互重复，否则会中断前一个任务。需要保证机器人UserId在房间内唯一。
@@ -116,9 +124,9 @@ public class AgentConfig extends AbstractModel {
     }
 
     /**
-     * Get 房间内推流用户全部退出后超过MaxIdleTime秒，后台自动关闭任务，默认值是60s。
+     * Get 房间内超过MaxIdleTime 没有推流，后台自动关闭任务，默认值是60s。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MaxIdleTime 房间内推流用户全部退出后超过MaxIdleTime秒，后台自动关闭任务，默认值是60s。
+     * @return MaxIdleTime 房间内超过MaxIdleTime 没有推流，后台自动关闭任务，默认值是60s。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaxIdleTime() {
@@ -126,13 +134,33 @@ public class AgentConfig extends AbstractModel {
     }
 
     /**
-     * Set 房间内推流用户全部退出后超过MaxIdleTime秒，后台自动关闭任务，默认值是60s。
+     * Set 房间内超过MaxIdleTime 没有推流，后台自动关闭任务，默认值是60s。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MaxIdleTime 房间内推流用户全部退出后超过MaxIdleTime秒，后台自动关闭任务，默认值是60s。
+     * @param MaxIdleTime 房间内超过MaxIdleTime 没有推流，后台自动关闭任务，默认值是60s。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxIdleTime(Long MaxIdleTime) {
         this.MaxIdleTime = MaxIdleTime;
+    }
+
+    /**
+     * Get 机器人的欢迎语
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WelcomeMessage 机器人的欢迎语
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getWelcomeMessage() {
+        return this.WelcomeMessage;
+    }
+
+    /**
+     * Set 机器人的欢迎语
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WelcomeMessage 机器人的欢迎语
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWelcomeMessage(String WelcomeMessage) {
+        this.WelcomeMessage = WelcomeMessage;
     }
 
     public AgentConfig() {
@@ -155,6 +183,9 @@ public class AgentConfig extends AbstractModel {
         if (source.MaxIdleTime != null) {
             this.MaxIdleTime = new Long(source.MaxIdleTime);
         }
+        if (source.WelcomeMessage != null) {
+            this.WelcomeMessage = new String(source.WelcomeMessage);
+        }
     }
 
 
@@ -166,6 +197,7 @@ public class AgentConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "UserSig", this.UserSig);
         this.setParamSimple(map, prefix + "TargetUserId", this.TargetUserId);
         this.setParamSimple(map, prefix + "MaxIdleTime", this.MaxIdleTime);
+        this.setParamSimple(map, prefix + "WelcomeMessage", this.WelcomeMessage);
 
     }
 }

@@ -164,6 +164,14 @@ public class ServerBaseConfig extends AbstractModel {
     private String LogParseType;
 
     /**
+    * 服务标签, function: 函数托管
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Tag")
+    @Expose
+    private String Tag;
+
+    /**
      * Get 环境 Id 
      * @return EnvId 环境 Id
      */
@@ -483,6 +491,26 @@ public class ServerBaseConfig extends AbstractModel {
         this.LogParseType = LogParseType;
     }
 
+    /**
+     * Get 服务标签, function: 函数托管
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Tag 服务标签, function: 函数托管
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTag() {
+        return this.Tag;
+    }
+
+    /**
+     * Set 服务标签, function: 函数托管
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Tag 服务标签, function: 函数托管
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTag(String Tag) {
+        this.Tag = Tag;
+    }
+
     public ServerBaseConfig() {
     }
 
@@ -557,6 +585,9 @@ public class ServerBaseConfig extends AbstractModel {
         if (source.LogParseType != null) {
             this.LogParseType = new String(source.LogParseType);
         }
+        if (source.Tag != null) {
+            this.Tag = new String(source.Tag);
+        }
     }
 
 
@@ -584,6 +615,7 @@ public class ServerBaseConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "LogSetId", this.LogSetId);
         this.setParamSimple(map, prefix + "LogTopicId", this.LogTopicId);
         this.setParamSimple(map, prefix + "LogParseType", this.LogParseType);
+        this.setParamSimple(map, prefix + "Tag", this.Tag);
 
     }
 }
