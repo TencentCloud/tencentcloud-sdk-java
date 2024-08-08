@@ -168,6 +168,16 @@ RESULT_FAILED: 未通过
     private String AuditProcedure;
 
     /**
+    * 是否开启
+<li>0 关闭</li>
+<li>1 开启</li>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsEnable")
+    @Expose
+    private Long IsEnable;
+
+    /**
      * Get 为客户分配的唯一的检测项的ID。 
      * @return CustomerPolicyItemId 为客户分配的唯一的检测项的ID。
      */
@@ -527,6 +537,34 @@ RESULT_FAILED: 未通过
         this.AuditProcedure = AuditProcedure;
     }
 
+    /**
+     * Get 是否开启
+<li>0 关闭</li>
+<li>1 开启</li>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsEnable 是否开启
+<li>0 关闭</li>
+<li>1 开启</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getIsEnable() {
+        return this.IsEnable;
+    }
+
+    /**
+     * Set 是否开启
+<li>0 关闭</li>
+<li>1 开启</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsEnable 是否开启
+<li>0 关闭</li>
+<li>1 开启</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsEnable(Long IsEnable) {
+        this.IsEnable = IsEnable;
+    }
+
     public CompliancePolicyItemSummary() {
     }
 
@@ -589,6 +627,9 @@ RESULT_FAILED: 未通过
         if (source.AuditProcedure != null) {
             this.AuditProcedure = new String(source.AuditProcedure);
         }
+        if (source.IsEnable != null) {
+            this.IsEnable = new Long(source.IsEnable);
+        }
     }
 
 
@@ -614,6 +655,7 @@ RESULT_FAILED: 未通过
         this.setParamSimple(map, prefix + "ApplicableVersion", this.ApplicableVersion);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "AuditProcedure", this.AuditProcedure);
+        this.setParamSimple(map, prefix + "IsEnable", this.IsEnable);
 
     }
 }

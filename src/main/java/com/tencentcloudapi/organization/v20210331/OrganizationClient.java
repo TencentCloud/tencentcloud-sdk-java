@@ -149,6 +149,17 @@ public class OrganizationClient extends AbstractClient{
     }
 
     /**
+     *添加集团服务委派管理员
+     * @param req CreateOrgServiceAssignRequest
+     * @return CreateOrgServiceAssignResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateOrgServiceAssignResponse CreateOrgServiceAssign(CreateOrgServiceAssignRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateOrgServiceAssign", CreateOrgServiceAssignResponse.class);
+    }
+
+    /**
      *创建企业组织
      * @param req CreateOrganizationRequest
      * @return CreateOrganizationResponse
@@ -234,6 +245,17 @@ public class OrganizationClient extends AbstractClient{
     public DeleteAccountResponse DeleteAccount(DeleteAccountRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteAccount", DeleteAccountResponse.class);
+    }
+
+    /**
+     *删除集团服务委派管理员
+     * @param req DeleteOrgServiceAssignRequest
+     * @return DeleteOrgServiceAssignResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteOrgServiceAssignResponse DeleteOrgServiceAssign(DeleteOrgServiceAssignRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteOrgServiceAssign", DeleteOrgServiceAssignResponse.class);
     }
 
     /**
@@ -586,6 +608,17 @@ public class OrganizationClient extends AbstractClient{
     public ListNonCompliantResourceResponse ListNonCompliantResource(ListNonCompliantResourceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ListNonCompliantResource", ListNonCompliantResourceResponse.class);
+    }
+
+    /**
+     *获取集团服务委派管理员列表
+     * @param req ListOrgServiceAssignMemberRequest
+     * @return ListOrgServiceAssignMemberResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListOrgServiceAssignMemberResponse ListOrgServiceAssignMember(ListOrgServiceAssignMemberRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListOrgServiceAssignMember", ListOrgServiceAssignMemberResponse.class);
     }
 
     /**

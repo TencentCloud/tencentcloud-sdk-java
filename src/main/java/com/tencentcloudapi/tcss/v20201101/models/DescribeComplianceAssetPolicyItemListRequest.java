@@ -46,11 +46,18 @@ public class DescribeComplianceAssetPolicyItemListRequest extends AbstractModel 
 
     /**
     * 过滤器列表。Name字段支持
-RiskLevel
+RiskLevel， AppId
     */
     @SerializedName("Filters")
     @Expose
     private ComplianceFilters [] Filters;
+
+    /**
+    * 资产类型 <li>ASSET_CONTAINER Docker容器</li> <li>ASSET_IMAGE Docker镜像</li> <li>ASSET_HOST Docker主机</li> <li>ASSET_K8S Kubernetes</li> <li>ASSET_CONTAINERD Containerd主机</li> <li>ASSET_CONTAINERD_CONTAINER Containerd容器</li>
+    */
+    @SerializedName("AssetType")
+    @Expose
+    private String AssetType;
 
     /**
      * Get 客户资产的ID。 
@@ -102,9 +109,9 @@ RiskLevel
 
     /**
      * Get 过滤器列表。Name字段支持
-RiskLevel 
+RiskLevel， AppId 
      * @return Filters 过滤器列表。Name字段支持
-RiskLevel
+RiskLevel， AppId
      */
     public ComplianceFilters [] getFilters() {
         return this.Filters;
@@ -112,12 +119,28 @@ RiskLevel
 
     /**
      * Set 过滤器列表。Name字段支持
-RiskLevel
+RiskLevel， AppId
      * @param Filters 过滤器列表。Name字段支持
-RiskLevel
+RiskLevel， AppId
      */
     public void setFilters(ComplianceFilters [] Filters) {
         this.Filters = Filters;
+    }
+
+    /**
+     * Get 资产类型 <li>ASSET_CONTAINER Docker容器</li> <li>ASSET_IMAGE Docker镜像</li> <li>ASSET_HOST Docker主机</li> <li>ASSET_K8S Kubernetes</li> <li>ASSET_CONTAINERD Containerd主机</li> <li>ASSET_CONTAINERD_CONTAINER Containerd容器</li> 
+     * @return AssetType 资产类型 <li>ASSET_CONTAINER Docker容器</li> <li>ASSET_IMAGE Docker镜像</li> <li>ASSET_HOST Docker主机</li> <li>ASSET_K8S Kubernetes</li> <li>ASSET_CONTAINERD Containerd主机</li> <li>ASSET_CONTAINERD_CONTAINER Containerd容器</li>
+     */
+    public String getAssetType() {
+        return this.AssetType;
+    }
+
+    /**
+     * Set 资产类型 <li>ASSET_CONTAINER Docker容器</li> <li>ASSET_IMAGE Docker镜像</li> <li>ASSET_HOST Docker主机</li> <li>ASSET_K8S Kubernetes</li> <li>ASSET_CONTAINERD Containerd主机</li> <li>ASSET_CONTAINERD_CONTAINER Containerd容器</li>
+     * @param AssetType 资产类型 <li>ASSET_CONTAINER Docker容器</li> <li>ASSET_IMAGE Docker镜像</li> <li>ASSET_HOST Docker主机</li> <li>ASSET_K8S Kubernetes</li> <li>ASSET_CONTAINERD Containerd主机</li> <li>ASSET_CONTAINERD_CONTAINER Containerd容器</li>
+     */
+    public void setAssetType(String AssetType) {
+        this.AssetType = AssetType;
     }
 
     public DescribeComplianceAssetPolicyItemListRequest() {
@@ -143,6 +166,9 @@ RiskLevel
                 this.Filters[i] = new ComplianceFilters(source.Filters[i]);
             }
         }
+        if (source.AssetType != null) {
+            this.AssetType = new String(source.AssetType);
+        }
     }
 
 
@@ -154,6 +180,7 @@ RiskLevel
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamSimple(map, prefix + "AssetType", this.AssetType);
 
     }
 }

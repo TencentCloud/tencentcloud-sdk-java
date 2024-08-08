@@ -38,6 +38,13 @@ public class ScanComplianceAssetsByPolicyItemRequest extends AbstractModel {
     private Long [] CustomerAssetIdSet;
 
     /**
+    * 扫描资产类型 <li>ASSET_CONTAINER Docker容器</li> <li>ASSET_IMAGE Docker镜像</li> <li>ASSET_HOST Docker主机</li> <li>ASSET_K8S Kubernetes</li> <li>ASSET_CONTAINERD Containerd主机</li> <li>ASSET_CONTAINERD_CONTAINER Containerd容器</li>
+    */
+    @SerializedName("AssetType")
+    @Expose
+    private String AssetType;
+
+    /**
      * Get 指定的检测项的ID 
      * @return CustomerPolicyItemId 指定的检测项的ID
      */
@@ -69,6 +76,22 @@ public class ScanComplianceAssetsByPolicyItemRequest extends AbstractModel {
         this.CustomerAssetIdSet = CustomerAssetIdSet;
     }
 
+    /**
+     * Get 扫描资产类型 <li>ASSET_CONTAINER Docker容器</li> <li>ASSET_IMAGE Docker镜像</li> <li>ASSET_HOST Docker主机</li> <li>ASSET_K8S Kubernetes</li> <li>ASSET_CONTAINERD Containerd主机</li> <li>ASSET_CONTAINERD_CONTAINER Containerd容器</li> 
+     * @return AssetType 扫描资产类型 <li>ASSET_CONTAINER Docker容器</li> <li>ASSET_IMAGE Docker镜像</li> <li>ASSET_HOST Docker主机</li> <li>ASSET_K8S Kubernetes</li> <li>ASSET_CONTAINERD Containerd主机</li> <li>ASSET_CONTAINERD_CONTAINER Containerd容器</li>
+     */
+    public String getAssetType() {
+        return this.AssetType;
+    }
+
+    /**
+     * Set 扫描资产类型 <li>ASSET_CONTAINER Docker容器</li> <li>ASSET_IMAGE Docker镜像</li> <li>ASSET_HOST Docker主机</li> <li>ASSET_K8S Kubernetes</li> <li>ASSET_CONTAINERD Containerd主机</li> <li>ASSET_CONTAINERD_CONTAINER Containerd容器</li>
+     * @param AssetType 扫描资产类型 <li>ASSET_CONTAINER Docker容器</li> <li>ASSET_IMAGE Docker镜像</li> <li>ASSET_HOST Docker主机</li> <li>ASSET_K8S Kubernetes</li> <li>ASSET_CONTAINERD Containerd主机</li> <li>ASSET_CONTAINERD_CONTAINER Containerd容器</li>
+     */
+    public void setAssetType(String AssetType) {
+        this.AssetType = AssetType;
+    }
+
     public ScanComplianceAssetsByPolicyItemRequest() {
     }
 
@@ -86,6 +109,9 @@ public class ScanComplianceAssetsByPolicyItemRequest extends AbstractModel {
                 this.CustomerAssetIdSet[i] = new Long(source.CustomerAssetIdSet[i]);
             }
         }
+        if (source.AssetType != null) {
+            this.AssetType = new String(source.AssetType);
+        }
     }
 
 
@@ -95,6 +121,7 @@ public class ScanComplianceAssetsByPolicyItemRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CustomerPolicyItemId", this.CustomerPolicyItemId);
         this.setParamArraySimple(map, prefix + "CustomerAssetIdSet.", this.CustomerAssetIdSet);
+        this.setParamSimple(map, prefix + "AssetType", this.AssetType);
 
     }
 }

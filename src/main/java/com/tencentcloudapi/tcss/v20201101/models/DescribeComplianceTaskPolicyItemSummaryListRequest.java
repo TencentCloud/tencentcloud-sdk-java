@@ -53,10 +53,7 @@ ASSET_K8S, K8S资产
     private Long Limit;
 
     /**
-    * 过滤条件。
-Name - String
-Name 可取值：ItemType, StandardId,  RiskLevel。
-当为K8S资产时，还可取ClusterName。
+    * 过滤条件 <li>Name      string 检测项名字</li> <li>ItemType  string 检测项类型</li> <li>RiskLevel string 威胁等级</li> <li>IsOpen    int    是否开启</li>
     */
     @SerializedName("Filters")
     @Expose
@@ -143,28 +140,16 @@ ASSET_K8S, K8S资产
     }
 
     /**
-     * Get 过滤条件。
-Name - String
-Name 可取值：ItemType, StandardId,  RiskLevel。
-当为K8S资产时，还可取ClusterName。 
-     * @return Filters 过滤条件。
-Name - String
-Name 可取值：ItemType, StandardId,  RiskLevel。
-当为K8S资产时，还可取ClusterName。
+     * Get 过滤条件 <li>Name      string 检测项名字</li> <li>ItemType  string 检测项类型</li> <li>RiskLevel string 威胁等级</li> <li>IsOpen    int    是否开启</li> 
+     * @return Filters 过滤条件 <li>Name      string 检测项名字</li> <li>ItemType  string 检测项类型</li> <li>RiskLevel string 威胁等级</li> <li>IsOpen    int    是否开启</li>
      */
     public ComplianceFilters [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤条件。
-Name - String
-Name 可取值：ItemType, StandardId,  RiskLevel。
-当为K8S资产时，还可取ClusterName。
-     * @param Filters 过滤条件。
-Name - String
-Name 可取值：ItemType, StandardId,  RiskLevel。
-当为K8S资产时，还可取ClusterName。
+     * Set 过滤条件 <li>Name      string 检测项名字</li> <li>ItemType  string 检测项类型</li> <li>RiskLevel string 威胁等级</li> <li>IsOpen    int    是否开启</li>
+     * @param Filters 过滤条件 <li>Name      string 检测项名字</li> <li>ItemType  string 检测项类型</li> <li>RiskLevel string 威胁等级</li> <li>IsOpen    int    是否开启</li>
      */
     public void setFilters(ComplianceFilters [] Filters) {
         this.Filters = Filters;

@@ -38,6 +38,13 @@ public class DeleteComplianceAssetPolicySetFromWhitelistRequest extends Abstract
     private Long [] CustomerPolicyItemIdSet;
 
     /**
+    * 扫描资产类型 <li>ASSET_CONTAINER Docker容器</li> <li>ASSET_IMAGE Docker镜像</li> <li>ASSET_HOST Docker主机</li> <li>ASSET_K8S Kubernetes</li> <li>ASSET_CONTAINERD Containerd主机</li> <li>ASSET_CONTAINERD_CONTAINER Containerd容器</li>
+    */
+    @SerializedName("AssetType")
+    @Expose
+    private String AssetType;
+
+    /**
      * Get 资产ID 
      * @return AssetItemId 资产ID
      */
@@ -69,6 +76,22 @@ public class DeleteComplianceAssetPolicySetFromWhitelistRequest extends Abstract
         this.CustomerPolicyItemIdSet = CustomerPolicyItemIdSet;
     }
 
+    /**
+     * Get 扫描资产类型 <li>ASSET_CONTAINER Docker容器</li> <li>ASSET_IMAGE Docker镜像</li> <li>ASSET_HOST Docker主机</li> <li>ASSET_K8S Kubernetes</li> <li>ASSET_CONTAINERD Containerd主机</li> <li>ASSET_CONTAINERD_CONTAINER Containerd容器</li> 
+     * @return AssetType 扫描资产类型 <li>ASSET_CONTAINER Docker容器</li> <li>ASSET_IMAGE Docker镜像</li> <li>ASSET_HOST Docker主机</li> <li>ASSET_K8S Kubernetes</li> <li>ASSET_CONTAINERD Containerd主机</li> <li>ASSET_CONTAINERD_CONTAINER Containerd容器</li>
+     */
+    public String getAssetType() {
+        return this.AssetType;
+    }
+
+    /**
+     * Set 扫描资产类型 <li>ASSET_CONTAINER Docker容器</li> <li>ASSET_IMAGE Docker镜像</li> <li>ASSET_HOST Docker主机</li> <li>ASSET_K8S Kubernetes</li> <li>ASSET_CONTAINERD Containerd主机</li> <li>ASSET_CONTAINERD_CONTAINER Containerd容器</li>
+     * @param AssetType 扫描资产类型 <li>ASSET_CONTAINER Docker容器</li> <li>ASSET_IMAGE Docker镜像</li> <li>ASSET_HOST Docker主机</li> <li>ASSET_K8S Kubernetes</li> <li>ASSET_CONTAINERD Containerd主机</li> <li>ASSET_CONTAINERD_CONTAINER Containerd容器</li>
+     */
+    public void setAssetType(String AssetType) {
+        this.AssetType = AssetType;
+    }
+
     public DeleteComplianceAssetPolicySetFromWhitelistRequest() {
     }
 
@@ -86,6 +109,9 @@ public class DeleteComplianceAssetPolicySetFromWhitelistRequest extends Abstract
                 this.CustomerPolicyItemIdSet[i] = new Long(source.CustomerPolicyItemIdSet[i]);
             }
         }
+        if (source.AssetType != null) {
+            this.AssetType = new String(source.AssetType);
+        }
     }
 
 
@@ -95,6 +121,7 @@ public class DeleteComplianceAssetPolicySetFromWhitelistRequest extends Abstract
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AssetItemId", this.AssetItemId);
         this.setParamArraySimple(map, prefix + "CustomerPolicyItemIdSet.", this.CustomerPolicyItemIdSet);
+        this.setParamSimple(map, prefix + "AssetType", this.AssetType);
 
     }
 }

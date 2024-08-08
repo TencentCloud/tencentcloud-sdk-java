@@ -69,6 +69,14 @@ Dress：连衣裙
     private Long LogoAdd;
 
     /**
+    * 标识内容设置。
+默认在生成结果图右下角添加“图片由 AI 生成”字样，您可根据自身需要替换为其他的标识图片。
+    */
+    @SerializedName("LogoParam")
+    @Expose
+    private LogoParam LogoParam;
+
+    /**
     * 返回图像方式（base64 或 url) ，二选一，默认为 base64。url 有效期为1小时。
 生成图分辨率较大时建议选择 url，使用 base64 可能因图片过大导致返回失败。
     */
@@ -209,6 +217,26 @@ Dress：连衣裙
     }
 
     /**
+     * Get 标识内容设置。
+默认在生成结果图右下角添加“图片由 AI 生成”字样，您可根据自身需要替换为其他的标识图片。 
+     * @return LogoParam 标识内容设置。
+默认在生成结果图右下角添加“图片由 AI 生成”字样，您可根据自身需要替换为其他的标识图片。
+     */
+    public LogoParam getLogoParam() {
+        return this.LogoParam;
+    }
+
+    /**
+     * Set 标识内容设置。
+默认在生成结果图右下角添加“图片由 AI 生成”字样，您可根据自身需要替换为其他的标识图片。
+     * @param LogoParam 标识内容设置。
+默认在生成结果图右下角添加“图片由 AI 生成”字样，您可根据自身需要替换为其他的标识图片。
+     */
+    public void setLogoParam(LogoParam LogoParam) {
+        this.LogoParam = LogoParam;
+    }
+
+    /**
      * Get 返回图像方式（base64 或 url) ，二选一，默认为 base64。url 有效期为1小时。
 生成图分辨率较大时建议选择 url，使用 base64 可能因图片过大导致返回失败。 
      * @return RspImgType 返回图像方式（base64 或 url) ，二选一，默认为 base64。url 有效期为1小时。
@@ -248,6 +276,9 @@ Dress：连衣裙
         if (source.LogoAdd != null) {
             this.LogoAdd = new Long(source.LogoAdd);
         }
+        if (source.LogoParam != null) {
+            this.LogoParam = new LogoParam(source.LogoParam);
+        }
         if (source.RspImgType != null) {
             this.RspImgType = new String(source.RspImgType);
         }
@@ -262,6 +293,7 @@ Dress：连衣裙
         this.setParamSimple(map, prefix + "ClothesUrl", this.ClothesUrl);
         this.setParamSimple(map, prefix + "ClothesType", this.ClothesType);
         this.setParamSimple(map, prefix + "LogoAdd", this.LogoAdd);
+        this.setParamObj(map, prefix + "LogoParam.", this.LogoParam);
         this.setParamSimple(map, prefix + "RspImgType", this.RspImgType);
 
     }

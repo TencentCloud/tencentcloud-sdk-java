@@ -240,6 +240,17 @@ public class TrocketClient extends AbstractClient{
     }
 
     /**
+     *查询指定消费组堆积数。
+     * @param req DescribeConsumerLagRequest
+     * @return DescribeConsumerLagResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeConsumerLagResponse DescribeConsumerLag(DescribeConsumerLagRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeConsumerLag", DescribeConsumerLagResponse.class);
+    }
+
+    /**
      *获取实例列表，Filters参数使用说明如下：
 1. InstanceName, 名称模糊查询
 2. InstanceId，实例ID查询

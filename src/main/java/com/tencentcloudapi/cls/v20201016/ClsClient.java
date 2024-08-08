@@ -149,6 +149,17 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
+     *创建控制台分享
+     * @param req CreateConsoleSharingRequest
+     * @return CreateConsoleSharingResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateConsoleSharingResponse CreateConsoleSharing(CreateConsoleSharingRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateConsoleSharing", CreateConsoleSharingResponse.class);
+    }
+
+    /**
      *本接口用于创建投递CKafka任务
      * @param req CreateConsumerRequest
      * @return CreateConsumerResponse
@@ -358,6 +369,17 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
+     *删除控制台分享
+     * @param req DeleteConsoleSharingRequest
+     * @return DeleteConsoleSharingResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteConsoleSharingResponse DeleteConsoleSharing(DeleteConsoleSharingRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteConsoleSharing", DeleteConsoleSharingResponse.class);
+    }
+
+    /**
      *本接口用于删除投递配置
      * @param req DeleteConsumerRequest
      * @return DeleteConsumerResponse
@@ -564,6 +586,17 @@ public class ClsClient extends AbstractClient{
     public DescribeConfigsResponse DescribeConfigs(DescribeConfigsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeConfigs", DescribeConfigsResponse.class);
+    }
+
+    /**
+     *批量查询控制台分享列表
+     * @param req DescribeConsoleSharingListRequest
+     * @return DescribeConsoleSharingListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeConsoleSharingListResponse DescribeConsoleSharingList(DescribeConsoleSharingListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeConsoleSharingList", DescribeConsoleSharingListResponse.class);
     }
 
     /**
@@ -862,6 +895,17 @@ API返回数据包最大49MB，建议启用 gzip 压缩（HTTP Request Header Ac
     public ModifyConfigExtraResponse ModifyConfigExtra(ModifyConfigExtraRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyConfigExtra", ModifyConfigExtraResponse.class);
+    }
+
+    /**
+     *修改控制台分享，目前仅允许修改有效期
+     * @param req ModifyConsoleSharingRequest
+     * @return ModifyConsoleSharingResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyConsoleSharingResponse ModifyConsoleSharing(ModifyConsoleSharingRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyConsoleSharing", ModifyConsoleSharingResponse.class);
     }
 
     /**

@@ -31,6 +31,13 @@ public class DescribeComplianceAssetDetailInfoRequest extends AbstractModel {
     private Long CustomerAssetId;
 
     /**
+    * 资产类型 <li>ASSET_CONTAINER Docker容器</li> <li>ASSET_IMAGE Docker镜像</li> <li>ASSET_HOST Docker主机</li> <li>ASSET_K8S Kubernetes</li> <li>ASSET_CONTAINERD Containerd主机</li> <li>ASSET_CONTAINERD_CONTAINER Containerd容器</li>
+    */
+    @SerializedName("AssetType")
+    @Expose
+    private String AssetType;
+
+    /**
      * Get 客户资产ID。 
      * @return CustomerAssetId 客户资产ID。
      */
@@ -46,6 +53,22 @@ public class DescribeComplianceAssetDetailInfoRequest extends AbstractModel {
         this.CustomerAssetId = CustomerAssetId;
     }
 
+    /**
+     * Get 资产类型 <li>ASSET_CONTAINER Docker容器</li> <li>ASSET_IMAGE Docker镜像</li> <li>ASSET_HOST Docker主机</li> <li>ASSET_K8S Kubernetes</li> <li>ASSET_CONTAINERD Containerd主机</li> <li>ASSET_CONTAINERD_CONTAINER Containerd容器</li> 
+     * @return AssetType 资产类型 <li>ASSET_CONTAINER Docker容器</li> <li>ASSET_IMAGE Docker镜像</li> <li>ASSET_HOST Docker主机</li> <li>ASSET_K8S Kubernetes</li> <li>ASSET_CONTAINERD Containerd主机</li> <li>ASSET_CONTAINERD_CONTAINER Containerd容器</li>
+     */
+    public String getAssetType() {
+        return this.AssetType;
+    }
+
+    /**
+     * Set 资产类型 <li>ASSET_CONTAINER Docker容器</li> <li>ASSET_IMAGE Docker镜像</li> <li>ASSET_HOST Docker主机</li> <li>ASSET_K8S Kubernetes</li> <li>ASSET_CONTAINERD Containerd主机</li> <li>ASSET_CONTAINERD_CONTAINER Containerd容器</li>
+     * @param AssetType 资产类型 <li>ASSET_CONTAINER Docker容器</li> <li>ASSET_IMAGE Docker镜像</li> <li>ASSET_HOST Docker主机</li> <li>ASSET_K8S Kubernetes</li> <li>ASSET_CONTAINERD Containerd主机</li> <li>ASSET_CONTAINERD_CONTAINER Containerd容器</li>
+     */
+    public void setAssetType(String AssetType) {
+        this.AssetType = AssetType;
+    }
+
     public DescribeComplianceAssetDetailInfoRequest() {
     }
 
@@ -57,6 +80,9 @@ public class DescribeComplianceAssetDetailInfoRequest extends AbstractModel {
         if (source.CustomerAssetId != null) {
             this.CustomerAssetId = new Long(source.CustomerAssetId);
         }
+        if (source.AssetType != null) {
+            this.AssetType = new String(source.AssetType);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class DescribeComplianceAssetDetailInfoRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CustomerAssetId", this.CustomerAssetId);
+        this.setParamSimple(map, prefix + "AssetType", this.AssetType);
 
     }
 }

@@ -179,6 +179,30 @@ CHECK_FAILED, 检测失败
     private Long IgnoredPolicyItemCount;
 
     /**
+    * 总检测项数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TotalPolicyItemCount")
+    @Expose
+    private Long TotalPolicyItemCount;
+
+    /**
+    * 检测主机数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DetectHostCount")
+    @Expose
+    private Long DetectHostCount;
+
+    /**
+    * 当前任务剩余时间，单位秒
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LeftTime")
+    @Expose
+    private Long LeftTime;
+
+    /**
      * Get 资产类别。 
      * @return AssetType 资产类别。
      */
@@ -558,6 +582,66 @@ CHECK_FAILED, 检测失败
         this.IgnoredPolicyItemCount = IgnoredPolicyItemCount;
     }
 
+    /**
+     * Get 总检测项数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TotalPolicyItemCount 总检测项数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getTotalPolicyItemCount() {
+        return this.TotalPolicyItemCount;
+    }
+
+    /**
+     * Set 总检测项数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TotalPolicyItemCount 总检测项数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTotalPolicyItemCount(Long TotalPolicyItemCount) {
+        this.TotalPolicyItemCount = TotalPolicyItemCount;
+    }
+
+    /**
+     * Get 检测主机数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DetectHostCount 检测主机数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getDetectHostCount() {
+        return this.DetectHostCount;
+    }
+
+    /**
+     * Set 检测主机数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DetectHostCount 检测主机数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDetectHostCount(Long DetectHostCount) {
+        this.DetectHostCount = DetectHostCount;
+    }
+
+    /**
+     * Get 当前任务剩余时间，单位秒
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LeftTime 当前任务剩余时间，单位秒
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getLeftTime() {
+        return this.LeftTime;
+    }
+
+    /**
+     * Set 当前任务剩余时间，单位秒
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LeftTime 当前任务剩余时间，单位秒
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLeftTime(Long LeftTime) {
+        this.LeftTime = LeftTime;
+    }
+
     public ComplianceAssetSummary() {
     }
 
@@ -626,6 +710,15 @@ CHECK_FAILED, 检测失败
         if (source.IgnoredPolicyItemCount != null) {
             this.IgnoredPolicyItemCount = new Long(source.IgnoredPolicyItemCount);
         }
+        if (source.TotalPolicyItemCount != null) {
+            this.TotalPolicyItemCount = new Long(source.TotalPolicyItemCount);
+        }
+        if (source.DetectHostCount != null) {
+            this.DetectHostCount = new Long(source.DetectHostCount);
+        }
+        if (source.LeftTime != null) {
+            this.LeftTime = new Long(source.LeftTime);
+        }
     }
 
 
@@ -653,6 +746,9 @@ CHECK_FAILED, 检测失败
         this.setParamObj(map, prefix + "PeriodRule.", this.PeriodRule);
         this.setParamSimple(map, prefix + "OpenPolicyItemCount", this.OpenPolicyItemCount);
         this.setParamSimple(map, prefix + "IgnoredPolicyItemCount", this.IgnoredPolicyItemCount);
+        this.setParamSimple(map, prefix + "TotalPolicyItemCount", this.TotalPolicyItemCount);
+        this.setParamSimple(map, prefix + "DetectHostCount", this.DetectHostCount);
+        this.setParamSimple(map, prefix + "LeftTime", this.LeftTime);
 
     }
 }
