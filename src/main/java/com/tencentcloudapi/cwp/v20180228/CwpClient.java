@@ -182,7 +182,9 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
-     *云护航服务使用完成后，该接口可以确认收货
+     *云护航计费产品已下线
+
+云护航服务使用完成后，该接口可以确认收货
      * @param req CreateCloudProtectServiceOrderRecordRequest
      * @return CreateCloudProtectServiceOrderRecordResponse
      * @throws TencentCloudSDKException
@@ -5199,6 +5201,17 @@ public class CwpClient extends AbstractClient{
     public ModifyRansomDefenseStrategyStatusResponse ModifyRansomDefenseStrategyStatus(ModifyRansomDefenseStrategyStatusRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyRansomDefenseStrategyStatus", ModifyRansomDefenseStrategyStatusResponse.class);
+    }
+
+    /**
+     *编辑反弹Shell规则（支持多服务器选择）
+     * @param req ModifyReverseShellRulesAggregationRequest
+     * @return ModifyReverseShellRulesAggregationResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyReverseShellRulesAggregationResponse ModifyReverseShellRulesAggregation(ModifyReverseShellRulesAggregationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyReverseShellRulesAggregation", ModifyReverseShellRulesAggregationResponse.class);
     }
 
     /**

@@ -31,6 +31,14 @@ public class EditMediaTEHDConfig extends AbstractModel {
     private String Type;
 
     /**
+    * 视频码率上限，当 Type 指定了极速高清类型时有效。
+不填或填0表示不设视频码率上限。
+    */
+    @SerializedName("MaxVideoBitrate")
+    @Expose
+    private Long MaxVideoBitrate;
+
+    /**
      * Get 极速高清类型，可选值：<li>TEHD-100 表示极速高清-100;</li> <li>OFF 表示关闭极速高清。</li>不填表示 OFF。 
      * @return Type 极速高清类型，可选值：<li>TEHD-100 表示极速高清-100;</li> <li>OFF 表示关闭极速高清。</li>不填表示 OFF。
      */
@@ -46,6 +54,26 @@ public class EditMediaTEHDConfig extends AbstractModel {
         this.Type = Type;
     }
 
+    /**
+     * Get 视频码率上限，当 Type 指定了极速高清类型时有效。
+不填或填0表示不设视频码率上限。 
+     * @return MaxVideoBitrate 视频码率上限，当 Type 指定了极速高清类型时有效。
+不填或填0表示不设视频码率上限。
+     */
+    public Long getMaxVideoBitrate() {
+        return this.MaxVideoBitrate;
+    }
+
+    /**
+     * Set 视频码率上限，当 Type 指定了极速高清类型时有效。
+不填或填0表示不设视频码率上限。
+     * @param MaxVideoBitrate 视频码率上限，当 Type 指定了极速高清类型时有效。
+不填或填0表示不设视频码率上限。
+     */
+    public void setMaxVideoBitrate(Long MaxVideoBitrate) {
+        this.MaxVideoBitrate = MaxVideoBitrate;
+    }
+
     public EditMediaTEHDConfig() {
     }
 
@@ -57,6 +85,9 @@ public class EditMediaTEHDConfig extends AbstractModel {
         if (source.Type != null) {
             this.Type = new String(source.Type);
         }
+        if (source.MaxVideoBitrate != null) {
+            this.MaxVideoBitrate = new Long(source.MaxVideoBitrate);
+        }
     }
 
 
@@ -65,6 +96,7 @@ public class EditMediaTEHDConfig extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "MaxVideoBitrate", this.MaxVideoBitrate);
 
     }
 }

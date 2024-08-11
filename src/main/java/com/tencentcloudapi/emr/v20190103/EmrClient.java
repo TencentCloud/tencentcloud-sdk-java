@@ -293,6 +293,17 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
+     *查询服务进程信息
+     * @param req DescribeServiceNodeInfosRequest
+     * @return DescribeServiceNodeInfosResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeServiceNodeInfosResponse DescribeServiceNodeInfos(DescribeServiceNodeInfosRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeServiceNodeInfos", DescribeServiceNodeInfosResponse.class);
+    }
+
+    /**
      *获取trino查询结果
      * @param req DescribeTrinoQueryInfoRequest
      * @return DescribeTrinoQueryInfoResponse
@@ -324,6 +335,17 @@ public class EmrClient extends AbstractClient{
     public DescribeYarnApplicationsResponse DescribeYarnApplications(DescribeYarnApplicationsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeYarnApplications", DescribeYarnApplicationsResponse.class);
+    }
+
+    /**
+     *查看yarn资源调度的调度历史
+     * @param req DescribeYarnScheduleHistoryRequest
+     * @return DescribeYarnScheduleHistoryResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeYarnScheduleHistoryResponse DescribeYarnScheduleHistory(DescribeYarnScheduleHistoryRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeYarnScheduleHistory", DescribeYarnScheduleHistoryResponse.class);
     }
 
     /**
@@ -445,6 +467,17 @@ public class EmrClient extends AbstractClient{
     public ModifyUserManagerPwdResponse ModifyUserManagerPwd(ModifyUserManagerPwdRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyUserManagerPwd", ModifyUserManagerPwdResponse.class);
+    }
+
+    /**
+     *部署生效
+     * @param req ModifyYarnDeployRequest
+     * @return ModifyYarnDeployResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyYarnDeployResponse ModifyYarnDeploy(ModifyYarnDeployRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyYarnDeploy", ModifyYarnDeployResponse.class);
     }
 
     /**

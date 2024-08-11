@@ -37,7 +37,8 @@ public class DescribeDevicesRequest extends AbstractModel {
     private Condition Condition;
 
     /**
-    * 私有化默认分组id-名称-操作系统
+    * 【和GroupIds必须有一个填写】设备分组id（需要和OsType匹配）
+id-名称-操作系统
 1	全网终端	Win
 2	未分组终端	Win
 30000000	服务器	Win
@@ -57,14 +58,14 @@ public class DescribeDevicesRequest extends AbstractModel {
     private Long GroupId;
 
     /**
-    * 系统类型（0: win，1：linux，2: mac，3: win_srv，4：android，5：ios   默认值0）
+    * 【必填】操作系统类型（0: win，1：linux，2: mac，3: win_srv，4：android，5：ios   默认值0），需要和GroupId或者GroupIds匹配
     */
     @SerializedName("OsType")
     @Expose
     private Long OsType;
 
     /**
-    * 在线状态 2 在线 0，1 离线
+    * 在线状态 （2表示在线，0或者1表示离线）
     */
     @SerializedName("OnlineStatus")
     @Expose
@@ -85,14 +86,14 @@ public class DescribeDevicesRequest extends AbstractModel {
     private Sort Sort;
 
     /**
-    * 获取第几页--兼容旧接口,参数同Condition(只支持32位)
+    * 获取第几页--兼容旧接口,参数同Condition
     */
     @SerializedName("PageNum")
     @Expose
     private Long PageNum;
 
     /**
-    * 每页获取数--兼容旧接口,参数同Condition(只支持32位)
+    * 每页获取数--兼容旧接口,参数同Condition
     */
     @SerializedName("PageSize")
     @Expose
@@ -146,7 +147,8 @@ public class DescribeDevicesRequest extends AbstractModel {
     }
 
     /**
-     * Get 私有化默认分组id-名称-操作系统
+     * Get 【和GroupIds必须有一个填写】设备分组id（需要和OsType匹配）
+id-名称-操作系统
 1	全网终端	Win
 2	未分组终端	Win
 30000000	服务器	Win
@@ -160,7 +162,8 @@ public class DescribeDevicesRequest extends AbstractModel {
 40000402	未分组终端	Android
 40000501	全网终端	iOS
 40000502	未分组终端	iOS 
-     * @return GroupId 私有化默认分组id-名称-操作系统
+     * @return GroupId 【和GroupIds必须有一个填写】设备分组id（需要和OsType匹配）
+id-名称-操作系统
 1	全网终端	Win
 2	未分组终端	Win
 30000000	服务器	Win
@@ -180,7 +183,8 @@ public class DescribeDevicesRequest extends AbstractModel {
     }
 
     /**
-     * Set 私有化默认分组id-名称-操作系统
+     * Set 【和GroupIds必须有一个填写】设备分组id（需要和OsType匹配）
+id-名称-操作系统
 1	全网终端	Win
 2	未分组终端	Win
 30000000	服务器	Win
@@ -194,7 +198,8 @@ public class DescribeDevicesRequest extends AbstractModel {
 40000402	未分组终端	Android
 40000501	全网终端	iOS
 40000502	未分组终端	iOS
-     * @param GroupId 私有化默认分组id-名称-操作系统
+     * @param GroupId 【和GroupIds必须有一个填写】设备分组id（需要和OsType匹配）
+id-名称-操作系统
 1	全网终端	Win
 2	未分组终端	Win
 30000000	服务器	Win
@@ -214,32 +219,32 @@ public class DescribeDevicesRequest extends AbstractModel {
     }
 
     /**
-     * Get 系统类型（0: win，1：linux，2: mac，3: win_srv，4：android，5：ios   默认值0） 
-     * @return OsType 系统类型（0: win，1：linux，2: mac，3: win_srv，4：android，5：ios   默认值0）
+     * Get 【必填】操作系统类型（0: win，1：linux，2: mac，3: win_srv，4：android，5：ios   默认值0），需要和GroupId或者GroupIds匹配 
+     * @return OsType 【必填】操作系统类型（0: win，1：linux，2: mac，3: win_srv，4：android，5：ios   默认值0），需要和GroupId或者GroupIds匹配
      */
     public Long getOsType() {
         return this.OsType;
     }
 
     /**
-     * Set 系统类型（0: win，1：linux，2: mac，3: win_srv，4：android，5：ios   默认值0）
-     * @param OsType 系统类型（0: win，1：linux，2: mac，3: win_srv，4：android，5：ios   默认值0）
+     * Set 【必填】操作系统类型（0: win，1：linux，2: mac，3: win_srv，4：android，5：ios   默认值0），需要和GroupId或者GroupIds匹配
+     * @param OsType 【必填】操作系统类型（0: win，1：linux，2: mac，3: win_srv，4：android，5：ios   默认值0），需要和GroupId或者GroupIds匹配
      */
     public void setOsType(Long OsType) {
         this.OsType = OsType;
     }
 
     /**
-     * Get 在线状态 2 在线 0，1 离线 
-     * @return OnlineStatus 在线状态 2 在线 0，1 离线
+     * Get 在线状态 （2表示在线，0或者1表示离线） 
+     * @return OnlineStatus 在线状态 （2表示在线，0或者1表示离线）
      */
     public Long getOnlineStatus() {
         return this.OnlineStatus;
     }
 
     /**
-     * Set 在线状态 2 在线 0，1 离线
-     * @param OnlineStatus 在线状态 2 在线 0，1 离线
+     * Set 在线状态 （2表示在线，0或者1表示离线）
+     * @param OnlineStatus 在线状态 （2表示在线，0或者1表示离线）
      */
     public void setOnlineStatus(Long OnlineStatus) {
         this.OnlineStatus = OnlineStatus;
@@ -278,32 +283,32 @@ public class DescribeDevicesRequest extends AbstractModel {
     }
 
     /**
-     * Get 获取第几页--兼容旧接口,参数同Condition(只支持32位) 
-     * @return PageNum 获取第几页--兼容旧接口,参数同Condition(只支持32位)
+     * Get 获取第几页--兼容旧接口,参数同Condition 
+     * @return PageNum 获取第几页--兼容旧接口,参数同Condition
      */
     public Long getPageNum() {
         return this.PageNum;
     }
 
     /**
-     * Set 获取第几页--兼容旧接口,参数同Condition(只支持32位)
-     * @param PageNum 获取第几页--兼容旧接口,参数同Condition(只支持32位)
+     * Set 获取第几页--兼容旧接口,参数同Condition
+     * @param PageNum 获取第几页--兼容旧接口,参数同Condition
      */
     public void setPageNum(Long PageNum) {
         this.PageNum = PageNum;
     }
 
     /**
-     * Get 每页获取数--兼容旧接口,参数同Condition(只支持32位) 
-     * @return PageSize 每页获取数--兼容旧接口,参数同Condition(只支持32位)
+     * Get 每页获取数--兼容旧接口,参数同Condition 
+     * @return PageSize 每页获取数--兼容旧接口,参数同Condition
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set 每页获取数--兼容旧接口,参数同Condition(只支持32位)
-     * @param PageSize 每页获取数--兼容旧接口,参数同Condition(只支持32位)
+     * Set 每页获取数--兼容旧接口,参数同Condition
+     * @param PageSize 每页获取数--兼容旧接口,参数同Condition
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;

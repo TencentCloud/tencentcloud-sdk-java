@@ -50,6 +50,28 @@ public class SmhClient extends AbstractClient{
     }
 
     /**
+     *新建用户。
+     * @param req CreateUserRequest
+     * @return CreateUserResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateUserResponse CreateUser(CreateUserRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateUser", CreateUserResponse.class);
+    }
+
+    /**
+     *设置用户生命周期。如果指定的用户已经设置了生命周期，重复调用此接口将覆盖已有的设置。也可用于清除指定用户的生命周期。
+     * @param req CreateUserLifecycleRequest
+     * @return CreateUserLifecycleResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateUserLifecycleResponse CreateUserLifecycle(CreateUserLifecycleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateUserLifecycle", CreateUserLifecycleResponse.class);
+    }
+
+    /**
      *删除 PaaS 服务媒体库
      * @param req DeleteLibraryRequest
      * @return DeleteLibraryResponse
@@ -58,6 +80,17 @@ public class SmhClient extends AbstractClient{
     public DeleteLibraryResponse DeleteLibrary(DeleteLibraryRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteLibrary", DeleteLibraryResponse.class);
+    }
+
+    /**
+     *一次删除多个用户。
+     * @param req DeleteUserRequest
+     * @return DeleteUserResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteUserResponse DeleteUser(DeleteUserRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteUser", DeleteUserResponse.class);
     }
 
     /**
@@ -116,6 +149,17 @@ public class SmhClient extends AbstractClient{
     }
 
     /**
+     *查询用户生命周期。
+     * @param req DescribeUserLifecycleRequest
+     * @return DescribeUserLifecycleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUserLifecycleResponse DescribeUserLifecycle(DescribeUserLifecycleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeUserLifecycle", DescribeUserLifecycleResponse.class);
+    }
+
+    /**
      *修改 PaaS 服务媒体库配置项
      * @param req ModifyLibraryRequest
      * @return ModifyLibraryResponse
@@ -124,6 +168,17 @@ public class SmhClient extends AbstractClient{
     public ModifyLibraryResponse ModifyLibrary(ModifyLibraryRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyLibrary", ModifyLibraryResponse.class);
+    }
+
+    /**
+     *更新用户信息。
+     * @param req ModifyUserRequest
+     * @return ModifyUserResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyUserResponse ModifyUser(ModifyUserRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyUser", ModifyUserResponse.class);
     }
 
     /**

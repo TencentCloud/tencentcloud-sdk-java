@@ -596,7 +596,6 @@ TRTC AI对话功能内置语音转文本能力，同时提供通道服务，即�
     "type": "subtitle",
     "userid": "xxx",
     "text": "xxx",
-    "translation_text": "xxx",
     "start_time": "00:00:02",
     "end_time": "00:00:05"
 }`
@@ -604,7 +603,6 @@ TRTC AI对话功能内置语音转文本能力，同时提供通道服务，即�
 - type是subtitle，表示这是实时字幕消息。
 - userid表示是哪个用户说的话。
 - text是语音识别出的文本。
-- translation_text是text翻译后的文本，如果不启用翻译，则是空字符串。
 - start_time和end_time表示该字幕消息从任务开启后的开始和结束时间。
 
 转录消息具体格式如下：
@@ -612,7 +610,6 @@ TRTC AI对话功能内置语音转文本能力，同时提供通道服务，即�
     "type": "transcription",
     "userid": "xxx",
     "text": "xxx",
-    "translation_text": "xx",
     "start_time": "00:00:02",
     "end_time": "00:00:05"
 }`

@@ -74,16 +74,6 @@ public class SearchLogRequest extends AbstractModel {
     private MultiTopicSearchInformation [] Topics;
 
     /**
-    * 表示单次查询返回的原始日志条数，默认为100，最大值为1000，获取后续日志需使用Context参数
-注意：
-* 仅当检索分析语句(Query)不包含SQL时有效
-* SQL结果条数指定方式参考<a href="https://cloud.tencent.com/document/product/614/58977" target="_blank">SQL LIMIT语法</a>
-    */
-    @SerializedName("Limit")
-    @Expose
-    private Long Limit;
-
-    /**
     * 原始日志是否按时间排序返回；可选值：asc(升序)、desc(降序)，默认为 desc
 注意：
 * 仅当检索分析语句(Query)不包含SQL时有效
@@ -92,6 +82,31 @@ public class SearchLogRequest extends AbstractModel {
     @SerializedName("Sort")
     @Expose
     private String Sort;
+
+    /**
+    * 表示单次查询返回的原始日志条数，默认为100，最大值为1000。
+注意：
+* 仅当检索分析语句(Query)不包含SQL时有效
+* SQL结果条数指定方式参考<a href="https://cloud.tencent.com/document/product/614/58977" target="_blank">SQL LIMIT语法</a>
+
+可通过两种方式获取后续更多日志：
+* Context:透传上次接口返回的Context值，获取后续更多日志，总计最多可获取1万条原始日志
+* Offset:偏移量，表示从第几行开始返回原始日志，无日志条数限制
+    */
+    @SerializedName("Limit")
+    @Expose
+    private Long Limit;
+
+    /**
+    * 查询原始日志的偏移量，表示从第几行开始返回原始日志，默认为0。 
+注意：
+* 仅当检索分析语句(Query)不包含SQL时有效
+* 不能与Context参数同时使用
+* 仅适用于单日志主题检索
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
 
     /**
     * 透传上次接口返回的Context值，可获取后续更多日志，总计最多可获取1万条原始日志，过期时间1小时。
@@ -253,34 +268,6 @@ public class SearchLogRequest extends AbstractModel {
     }
 
     /**
-     * Get 表示单次查询返回的原始日志条数，默认为100，最大值为1000，获取后续日志需使用Context参数
-注意：
-* 仅当检索分析语句(Query)不包含SQL时有效
-* SQL结果条数指定方式参考<a href="https://cloud.tencent.com/document/product/614/58977" target="_blank">SQL LIMIT语法</a> 
-     * @return Limit 表示单次查询返回的原始日志条数，默认为100，最大值为1000，获取后续日志需使用Context参数
-注意：
-* 仅当检索分析语句(Query)不包含SQL时有效
-* SQL结果条数指定方式参考<a href="https://cloud.tencent.com/document/product/614/58977" target="_blank">SQL LIMIT语法</a>
-     */
-    public Long getLimit() {
-        return this.Limit;
-    }
-
-    /**
-     * Set 表示单次查询返回的原始日志条数，默认为100，最大值为1000，获取后续日志需使用Context参数
-注意：
-* 仅当检索分析语句(Query)不包含SQL时有效
-* SQL结果条数指定方式参考<a href="https://cloud.tencent.com/document/product/614/58977" target="_blank">SQL LIMIT语法</a>
-     * @param Limit 表示单次查询返回的原始日志条数，默认为100，最大值为1000，获取后续日志需使用Context参数
-注意：
-* 仅当检索分析语句(Query)不包含SQL时有效
-* SQL结果条数指定方式参考<a href="https://cloud.tencent.com/document/product/614/58977" target="_blank">SQL LIMIT语法</a>
-     */
-    public void setLimit(Long Limit) {
-        this.Limit = Limit;
-    }
-
-    /**
      * Get 原始日志是否按时间排序返回；可选值：asc(升序)、desc(降序)，默认为 desc
 注意：
 * 仅当检索分析语句(Query)不包含SQL时有效
@@ -306,6 +293,82 @@ public class SearchLogRequest extends AbstractModel {
      */
     public void setSort(String Sort) {
         this.Sort = Sort;
+    }
+
+    /**
+     * Get 表示单次查询返回的原始日志条数，默认为100，最大值为1000。
+注意：
+* 仅当检索分析语句(Query)不包含SQL时有效
+* SQL结果条数指定方式参考<a href="https://cloud.tencent.com/document/product/614/58977" target="_blank">SQL LIMIT语法</a>
+
+可通过两种方式获取后续更多日志：
+* Context:透传上次接口返回的Context值，获取后续更多日志，总计最多可获取1万条原始日志
+* Offset:偏移量，表示从第几行开始返回原始日志，无日志条数限制 
+     * @return Limit 表示单次查询返回的原始日志条数，默认为100，最大值为1000。
+注意：
+* 仅当检索分析语句(Query)不包含SQL时有效
+* SQL结果条数指定方式参考<a href="https://cloud.tencent.com/document/product/614/58977" target="_blank">SQL LIMIT语法</a>
+
+可通过两种方式获取后续更多日志：
+* Context:透传上次接口返回的Context值，获取后续更多日志，总计最多可获取1万条原始日志
+* Offset:偏移量，表示从第几行开始返回原始日志，无日志条数限制
+     */
+    public Long getLimit() {
+        return this.Limit;
+    }
+
+    /**
+     * Set 表示单次查询返回的原始日志条数，默认为100，最大值为1000。
+注意：
+* 仅当检索分析语句(Query)不包含SQL时有效
+* SQL结果条数指定方式参考<a href="https://cloud.tencent.com/document/product/614/58977" target="_blank">SQL LIMIT语法</a>
+
+可通过两种方式获取后续更多日志：
+* Context:透传上次接口返回的Context值，获取后续更多日志，总计最多可获取1万条原始日志
+* Offset:偏移量，表示从第几行开始返回原始日志，无日志条数限制
+     * @param Limit 表示单次查询返回的原始日志条数，默认为100，最大值为1000。
+注意：
+* 仅当检索分析语句(Query)不包含SQL时有效
+* SQL结果条数指定方式参考<a href="https://cloud.tencent.com/document/product/614/58977" target="_blank">SQL LIMIT语法</a>
+
+可通过两种方式获取后续更多日志：
+* Context:透传上次接口返回的Context值，获取后续更多日志，总计最多可获取1万条原始日志
+* Offset:偏移量，表示从第几行开始返回原始日志，无日志条数限制
+     */
+    public void setLimit(Long Limit) {
+        this.Limit = Limit;
+    }
+
+    /**
+     * Get 查询原始日志的偏移量，表示从第几行开始返回原始日志，默认为0。 
+注意：
+* 仅当检索分析语句(Query)不包含SQL时有效
+* 不能与Context参数同时使用
+* 仅适用于单日志主题检索 
+     * @return Offset 查询原始日志的偏移量，表示从第几行开始返回原始日志，默认为0。 
+注意：
+* 仅当检索分析语句(Query)不包含SQL时有效
+* 不能与Context参数同时使用
+* 仅适用于单日志主题检索
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set 查询原始日志的偏移量，表示从第几行开始返回原始日志，默认为0。 
+注意：
+* 仅当检索分析语句(Query)不包含SQL时有效
+* 不能与Context参数同时使用
+* 仅适用于单日志主题检索
+     * @param Offset 查询原始日志的偏移量，表示从第几行开始返回原始日志，默认为0。 
+注意：
+* 仅当检索分析语句(Query)不包含SQL时有效
+* 不能与Context参数同时使用
+* 仅适用于单日志主题检索
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
     }
 
     /**
@@ -425,11 +488,14 @@ public class SearchLogRequest extends AbstractModel {
                 this.Topics[i] = new MultiTopicSearchInformation(source.Topics[i]);
             }
         }
+        if (source.Sort != null) {
+            this.Sort = new String(source.Sort);
+        }
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
-        if (source.Sort != null) {
-            this.Sort = new String(source.Sort);
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
         }
         if (source.Context != null) {
             this.Context = new String(source.Context);
@@ -453,8 +519,9 @@ public class SearchLogRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SyntaxRule", this.SyntaxRule);
         this.setParamSimple(map, prefix + "TopicId", this.TopicId);
         this.setParamArrayObj(map, prefix + "Topics.", this.Topics);
-        this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Sort", this.Sort);
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Context", this.Context);
         this.setParamSimple(map, prefix + "SamplingRate", this.SamplingRate);
         this.setParamSimple(map, prefix + "UseNewAnalysis", this.UseNewAnalysis);

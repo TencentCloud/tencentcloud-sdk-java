@@ -54,7 +54,6 @@ public class RecognizeConfig extends AbstractModel {
 
 注意：
 如果缺少满足您需求的语言，请联系我们技术人员。
-示例值：zh
     */
     @SerializedName("Language")
     @Expose
@@ -69,39 +68,14 @@ public class RecognizeConfig extends AbstractModel {
     private String [] AlternativeLanguage;
 
     /**
-    * 使用的模型，目前支持tencent和google，默认是tencent。
+    * 目前已不支持
     */
     @SerializedName("Model")
     @Expose
     private String Model;
 
     /**
-    * 翻译功能支持的语言，如果填写，则会启用翻译，不填则只会使用语音识别。
-注：文本翻译功能需要购买「语音转文本时长包」解锁或领取包月套餐-体验版解。
-目前全量支持的语言如下，等号左面是语言英文名，右面是Language字段需要填写的值，该值遵循[ISO639](https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes)：
-Chinese = "zh"
-Chinese_TW = "zh-TW"
-English = "en"
-Vietnamese = "vi"
-Japanese = "ja"
-Korean = "ko"
-Indonesia = "id"
-Thai = "th"
-Portuguese = "pt"
-Turkish = "tr"
-Arabic = "ar"
-Spanish = "es"
-Hindi = "hi"
-French = "fr"
-Malay = "ms"
-Filipino = "fil"
-German = "de"
-Italian = "it"
-Russian = "ru"
-
-注意：
-如果缺少满足您需求的语言，请联系我们技术人员。
-示例值：en
+    * 目前已不支持
     */
     @SerializedName("TranslationLanguage")
     @Expose
@@ -137,8 +111,7 @@ Russian = "ru"
 - Russian = "ru" # 俄语
 
 注意：
-如果缺少满足您需求的语言，请联系我们技术人员。
-示例值：zh 
+如果缺少满足您需求的语言，请联系我们技术人员。 
      * @return Language 语音转文字支持识别的语言，默认是"zh" 中文
 目前全量支持的语言如下，等号左面是语言英文名，右面是Language字段需要填写的值，该值遵循[ISO639](https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes)：
 可通过购买「语音转文本时长包」解锁或领取包月套餐体验版解锁此功能。
@@ -169,7 +142,6 @@ Russian = "ru"
 
 注意：
 如果缺少满足您需求的语言，请联系我们技术人员。
-示例值：zh
      */
     public String getLanguage() {
         return this.Language;
@@ -206,7 +178,6 @@ Russian = "ru"
 
 注意：
 如果缺少满足您需求的语言，请联系我们技术人员。
-示例值：zh
      * @param Language 语音转文字支持识别的语言，默认是"zh" 中文
 目前全量支持的语言如下，等号左面是语言英文名，右面是Language字段需要填写的值，该值遵循[ISO639](https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes)：
 可通过购买「语音转文本时长包」解锁或领取包月套餐体验版解锁此功能。
@@ -237,7 +208,6 @@ Russian = "ru"
 
 注意：
 如果缺少满足您需求的语言，请联系我们技术人员。
-示例值：zh
      */
     public void setLanguage(String Language) {
         this.Language = Language;
@@ -264,8 +234,8 @@ Russian = "ru"
     }
 
     /**
-     * Get 使用的模型，目前支持tencent和google，默认是tencent。 
-     * @return Model 使用的模型，目前支持tencent和google，默认是tencent。
+     * Get 目前已不支持 
+     * @return Model 目前已不支持
      * @deprecated
      */
     @Deprecated
@@ -274,8 +244,8 @@ Russian = "ru"
     }
 
     /**
-     * Set 使用的模型，目前支持tencent和google，默认是tencent。
-     * @param Model 使用的模型，目前支持tencent和google，默认是tencent。
+     * Set 目前已不支持
+     * @param Model 目前已不支持
      * @deprecated
      */
     @Deprecated
@@ -284,117 +254,21 @@ Russian = "ru"
     }
 
     /**
-     * Get 翻译功能支持的语言，如果填写，则会启用翻译，不填则只会使用语音识别。
-注：文本翻译功能需要购买「语音转文本时长包」解锁或领取包月套餐-体验版解。
-目前全量支持的语言如下，等号左面是语言英文名，右面是Language字段需要填写的值，该值遵循[ISO639](https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes)：
-Chinese = "zh"
-Chinese_TW = "zh-TW"
-English = "en"
-Vietnamese = "vi"
-Japanese = "ja"
-Korean = "ko"
-Indonesia = "id"
-Thai = "th"
-Portuguese = "pt"
-Turkish = "tr"
-Arabic = "ar"
-Spanish = "es"
-Hindi = "hi"
-French = "fr"
-Malay = "ms"
-Filipino = "fil"
-German = "de"
-Italian = "it"
-Russian = "ru"
-
-注意：
-如果缺少满足您需求的语言，请联系我们技术人员。
-示例值：en 
-     * @return TranslationLanguage 翻译功能支持的语言，如果填写，则会启用翻译，不填则只会使用语音识别。
-注：文本翻译功能需要购买「语音转文本时长包」解锁或领取包月套餐-体验版解。
-目前全量支持的语言如下，等号左面是语言英文名，右面是Language字段需要填写的值，该值遵循[ISO639](https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes)：
-Chinese = "zh"
-Chinese_TW = "zh-TW"
-English = "en"
-Vietnamese = "vi"
-Japanese = "ja"
-Korean = "ko"
-Indonesia = "id"
-Thai = "th"
-Portuguese = "pt"
-Turkish = "tr"
-Arabic = "ar"
-Spanish = "es"
-Hindi = "hi"
-French = "fr"
-Malay = "ms"
-Filipino = "fil"
-German = "de"
-Italian = "it"
-Russian = "ru"
-
-注意：
-如果缺少满足您需求的语言，请联系我们技术人员。
-示例值：en
+     * Get 目前已不支持 
+     * @return TranslationLanguage 目前已不支持
+     * @deprecated
      */
+    @Deprecated
     public String getTranslationLanguage() {
         return this.TranslationLanguage;
     }
 
     /**
-     * Set 翻译功能支持的语言，如果填写，则会启用翻译，不填则只会使用语音识别。
-注：文本翻译功能需要购买「语音转文本时长包」解锁或领取包月套餐-体验版解。
-目前全量支持的语言如下，等号左面是语言英文名，右面是Language字段需要填写的值，该值遵循[ISO639](https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes)：
-Chinese = "zh"
-Chinese_TW = "zh-TW"
-English = "en"
-Vietnamese = "vi"
-Japanese = "ja"
-Korean = "ko"
-Indonesia = "id"
-Thai = "th"
-Portuguese = "pt"
-Turkish = "tr"
-Arabic = "ar"
-Spanish = "es"
-Hindi = "hi"
-French = "fr"
-Malay = "ms"
-Filipino = "fil"
-German = "de"
-Italian = "it"
-Russian = "ru"
-
-注意：
-如果缺少满足您需求的语言，请联系我们技术人员。
-示例值：en
-     * @param TranslationLanguage 翻译功能支持的语言，如果填写，则会启用翻译，不填则只会使用语音识别。
-注：文本翻译功能需要购买「语音转文本时长包」解锁或领取包月套餐-体验版解。
-目前全量支持的语言如下，等号左面是语言英文名，右面是Language字段需要填写的值，该值遵循[ISO639](https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes)：
-Chinese = "zh"
-Chinese_TW = "zh-TW"
-English = "en"
-Vietnamese = "vi"
-Japanese = "ja"
-Korean = "ko"
-Indonesia = "id"
-Thai = "th"
-Portuguese = "pt"
-Turkish = "tr"
-Arabic = "ar"
-Spanish = "es"
-Hindi = "hi"
-French = "fr"
-Malay = "ms"
-Filipino = "fil"
-German = "de"
-Italian = "it"
-Russian = "ru"
-
-注意：
-如果缺少满足您需求的语言，请联系我们技术人员。
-示例值：en
+     * Set 目前已不支持
+     * @param TranslationLanguage 目前已不支持
+     * @deprecated
      */
+    @Deprecated
     public void setTranslationLanguage(String TranslationLanguage) {
         this.TranslationLanguage = TranslationLanguage;
     }
