@@ -1958,7 +1958,9 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
-     *查询云护航服务订单列表
+     *云护航计费产品已下线
+
+查询云护航服务订单列表
      * @param req DescribeCloudProtectServiceOrderListRequest
      * @return DescribeCloudProtectServiceOrderListResponse
      * @throws TencentCloudSDKException

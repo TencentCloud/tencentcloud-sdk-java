@@ -175,6 +175,14 @@ public class CCN extends AbstractModel {
     private Boolean DirectConnectAccelerateChannelFlag;
 
     /**
+    * 是否支持ipv6路由表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Ipv6Flag")
+    @Expose
+    private String Ipv6Flag;
+
+    /**
      * Get 云联网唯一ID 
      * @return CcnId 云联网唯一ID
      */
@@ -538,6 +546,26 @@ public class CCN extends AbstractModel {
         this.DirectConnectAccelerateChannelFlag = DirectConnectAccelerateChannelFlag;
     }
 
+    /**
+     * Get 是否支持ipv6路由表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Ipv6Flag 是否支持ipv6路由表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getIpv6Flag() {
+        return this.Ipv6Flag;
+    }
+
+    /**
+     * Set 是否支持ipv6路由表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Ipv6Flag 是否支持ipv6路由表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIpv6Flag(String Ipv6Flag) {
+        this.Ipv6Flag = Ipv6Flag;
+    }
+
     public CCN() {
     }
 
@@ -609,6 +637,9 @@ public class CCN extends AbstractModel {
         if (source.DirectConnectAccelerateChannelFlag != null) {
             this.DirectConnectAccelerateChannelFlag = new Boolean(source.DirectConnectAccelerateChannelFlag);
         }
+        if (source.Ipv6Flag != null) {
+            this.Ipv6Flag = new String(source.Ipv6Flag);
+        }
     }
 
 
@@ -636,6 +667,7 @@ public class CCN extends AbstractModel {
         this.setParamSimple(map, prefix + "TrafficMarkingPolicyFlag", this.TrafficMarkingPolicyFlag);
         this.setParamSimple(map, prefix + "RouteSelectPolicyFlag", this.RouteSelectPolicyFlag);
         this.setParamSimple(map, prefix + "DirectConnectAccelerateChannelFlag", this.DirectConnectAccelerateChannelFlag);
+        this.setParamSimple(map, prefix + "Ipv6Flag", this.Ipv6Flag);
 
     }
 }

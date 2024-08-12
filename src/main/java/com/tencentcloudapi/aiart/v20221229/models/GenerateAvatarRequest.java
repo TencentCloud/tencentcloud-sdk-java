@@ -33,7 +33,6 @@ public class GenerateAvatarRequest extends AbstractModel {
 
     /**
     * 输入图 Base64 数据。
-算法将根据输入的图片，结合文本描述智能生成与之相关的图像。
 Base64 和 Url 必须提供一个，如果都提供以 Url 为准。
 图片限制：单边分辨率小于5000，转成 Base64 字符串后小于 6MB，格式支持 jpg、jpeg、png、bmp、tiff、webp。
     */
@@ -43,7 +42,6 @@ Base64 和 Url 必须提供一个，如果都提供以 Url 为准。
 
     /**
     * 输入图 Url。
-算法将根据输入的图片，结合文本描述智能生成与之相关的图像。
 Base64 和 Url 必须提供一个，如果都提供以 Url 为准。
 图片限制：单边分辨率小于5000，转成 Base64 字符串后小于 6MB，格式支持 jpg、jpeg、png、bmp、tiff、webp。
     */
@@ -111,11 +109,9 @@ Base64 和 Url 必须提供一个，如果都提供以 Url 为准。
 
     /**
      * Get 输入图 Base64 数据。
-算法将根据输入的图片，结合文本描述智能生成与之相关的图像。
 Base64 和 Url 必须提供一个，如果都提供以 Url 为准。
 图片限制：单边分辨率小于5000，转成 Base64 字符串后小于 6MB，格式支持 jpg、jpeg、png、bmp、tiff、webp。 
      * @return InputImage 输入图 Base64 数据。
-算法将根据输入的图片，结合文本描述智能生成与之相关的图像。
 Base64 和 Url 必须提供一个，如果都提供以 Url 为准。
 图片限制：单边分辨率小于5000，转成 Base64 字符串后小于 6MB，格式支持 jpg、jpeg、png、bmp、tiff、webp。
      */
@@ -125,11 +121,9 @@ Base64 和 Url 必须提供一个，如果都提供以 Url 为准。
 
     /**
      * Set 输入图 Base64 数据。
-算法将根据输入的图片，结合文本描述智能生成与之相关的图像。
 Base64 和 Url 必须提供一个，如果都提供以 Url 为准。
 图片限制：单边分辨率小于5000，转成 Base64 字符串后小于 6MB，格式支持 jpg、jpeg、png、bmp、tiff、webp。
      * @param InputImage 输入图 Base64 数据。
-算法将根据输入的图片，结合文本描述智能生成与之相关的图像。
 Base64 和 Url 必须提供一个，如果都提供以 Url 为准。
 图片限制：单边分辨率小于5000，转成 Base64 字符串后小于 6MB，格式支持 jpg、jpeg、png、bmp、tiff、webp。
      */
@@ -139,11 +133,9 @@ Base64 和 Url 必须提供一个，如果都提供以 Url 为准。
 
     /**
      * Get 输入图 Url。
-算法将根据输入的图片，结合文本描述智能生成与之相关的图像。
 Base64 和 Url 必须提供一个，如果都提供以 Url 为准。
 图片限制：单边分辨率小于5000，转成 Base64 字符串后小于 6MB，格式支持 jpg、jpeg、png、bmp、tiff、webp。 
      * @return InputUrl 输入图 Url。
-算法将根据输入的图片，结合文本描述智能生成与之相关的图像。
 Base64 和 Url 必须提供一个，如果都提供以 Url 为准。
 图片限制：单边分辨率小于5000，转成 Base64 字符串后小于 6MB，格式支持 jpg、jpeg、png、bmp、tiff、webp。
      */
@@ -153,11 +145,9 @@ Base64 和 Url 必须提供一个，如果都提供以 Url 为准。
 
     /**
      * Set 输入图 Url。
-算法将根据输入的图片，结合文本描述智能生成与之相关的图像。
 Base64 和 Url 必须提供一个，如果都提供以 Url 为准。
 图片限制：单边分辨率小于5000，转成 Base64 字符串后小于 6MB，格式支持 jpg、jpeg、png、bmp、tiff、webp。
      * @param InputUrl 输入图 Url。
-算法将根据输入的图片，结合文本描述智能生成与之相关的图像。
 Base64 和 Url 必须提供一个，如果都提供以 Url 为准。
 图片限制：单边分辨率小于5000，转成 Base64 字符串后小于 6MB，格式支持 jpg、jpeg、png、bmp、tiff、webp。
      */

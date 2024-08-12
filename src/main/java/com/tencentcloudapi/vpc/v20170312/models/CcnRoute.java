@@ -115,6 +115,22 @@ public class CcnRoute extends AbstractModel {
     private String InstanceExtraName;
 
     /**
+    * 实例类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AliasType")
+    @Expose
+    private String AliasType;
+
+    /**
+    * 实例id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AliasInstanceId")
+    @Expose
+    private String AliasInstanceId;
+
+    /**
      * Get 路由策略ID 
      * @return RouteId 路由策略ID
      */
@@ -322,6 +338,46 @@ public class CcnRoute extends AbstractModel {
         this.InstanceExtraName = InstanceExtraName;
     }
 
+    /**
+     * Get 实例类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AliasType 实例类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAliasType() {
+        return this.AliasType;
+    }
+
+    /**
+     * Set 实例类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AliasType 实例类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAliasType(String AliasType) {
+        this.AliasType = AliasType;
+    }
+
+    /**
+     * Get 实例id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AliasInstanceId 实例id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAliasInstanceId() {
+        return this.AliasInstanceId;
+    }
+
+    /**
+     * Set 实例id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AliasInstanceId 实例id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAliasInstanceId(String AliasInstanceId) {
+        this.AliasInstanceId = AliasInstanceId;
+    }
+
     public CcnRoute() {
     }
 
@@ -369,6 +425,12 @@ public class CcnRoute extends AbstractModel {
         if (source.InstanceExtraName != null) {
             this.InstanceExtraName = new String(source.InstanceExtraName);
         }
+        if (source.AliasType != null) {
+            this.AliasType = new String(source.AliasType);
+        }
+        if (source.AliasInstanceId != null) {
+            this.AliasInstanceId = new String(source.AliasInstanceId);
+        }
     }
 
 
@@ -389,6 +451,8 @@ public class CcnRoute extends AbstractModel {
         this.setParamSimple(map, prefix + "IsBgp", this.IsBgp);
         this.setParamSimple(map, prefix + "RoutePriority", this.RoutePriority);
         this.setParamSimple(map, prefix + "InstanceExtraName", this.InstanceExtraName);
+        this.setParamSimple(map, prefix + "AliasType", this.AliasType);
+        this.setParamSimple(map, prefix + "AliasInstanceId", this.AliasInstanceId);
 
     }
 }
