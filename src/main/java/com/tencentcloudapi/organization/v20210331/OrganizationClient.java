@@ -50,6 +50,17 @@ public class OrganizationClient extends AbstractClient{
     }
 
     /**
+     *添加SAML签名证书
+     * @param req AddExternalSAMLIdPCertificateRequest
+     * @return AddExternalSAMLIdPCertificateResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddExternalSAMLIdPCertificateResponse AddExternalSAMLIdPCertificate(AddExternalSAMLIdPCertificateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AddExternalSAMLIdPCertificate", AddExternalSAMLIdPCertificateResponse.class);
+    }
+
+    /**
      *添加组织成员邮箱
      * @param req AddOrganizationMemberEmailRequest
      * @return AddOrganizationMemberEmailResponse
@@ -69,6 +80,17 @@ public class OrganizationClient extends AbstractClient{
     public AddOrganizationNodeResponse AddOrganizationNode(AddOrganizationNodeRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "AddOrganizationNode", AddOrganizationNodeResponse.class);
+    }
+
+    /**
+     *为权限配置添加策略
+     * @param req AddPermissionPolicyToRoleConfigurationRequest
+     * @return AddPermissionPolicyToRoleConfigurationResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddPermissionPolicyToRoleConfigurationResponse AddPermissionPolicyToRoleConfiguration(AddPermissionPolicyToRoleConfigurationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AddPermissionPolicyToRoleConfiguration", AddPermissionPolicyToRoleConfigurationResponse.class);
     }
 
     /**
@@ -102,6 +124,17 @@ public class OrganizationClient extends AbstractClient{
     public AddShareUnitResourcesResponse AddShareUnitResources(AddShareUnitResourcesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "AddShareUnitResources", AddShareUnitResourcesResponse.class);
+    }
+
+    /**
+     *为用户组添加用户
+     * @param req AddUserToGroupRequest
+     * @return AddUserToGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddUserToGroupResponse AddUserToGroup(AddUserToGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AddUserToGroup", AddUserToGroupResponse.class);
     }
 
     /**
@@ -146,6 +179,28 @@ public class OrganizationClient extends AbstractClient{
     public CheckAccountDeleteResponse CheckAccountDelete(CheckAccountDeleteRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CheckAccountDelete", CheckAccountDeleteResponse.class);
+    }
+
+    /**
+     *清空SAML身份提供商配置信息
+     * @param req ClearExternalSAMLIdentityProviderRequest
+     * @return ClearExternalSAMLIdentityProviderResponse
+     * @throws TencentCloudSDKException
+     */
+    public ClearExternalSAMLIdentityProviderResponse ClearExternalSAMLIdentityProvider(ClearExternalSAMLIdentityProviderRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ClearExternalSAMLIdentityProvider", ClearExternalSAMLIdentityProviderResponse.class);
+    }
+
+    /**
+     *创建用户组
+     * @param req CreateGroupRequest
+     * @return CreateGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateGroupResponse CreateGroup(CreateGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateGroup", CreateGroupResponse.class);
     }
 
     /**
@@ -237,6 +292,50 @@ public class OrganizationClient extends AbstractClient{
     }
 
     /**
+     *在成员账号上授权
+     * @param req CreateRoleAssignmentRequest
+     * @return CreateRoleAssignmentResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateRoleAssignmentResponse CreateRoleAssignment(CreateRoleAssignmentRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateRoleAssignment", CreateRoleAssignmentResponse.class);
+    }
+
+    /**
+     *创建权限配置
+     * @param req CreateRoleConfigurationRequest
+     * @return CreateRoleConfigurationResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateRoleConfigurationResponse CreateRoleConfiguration(CreateRoleConfigurationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateRoleConfiguration", CreateRoleConfigurationResponse.class);
+    }
+
+    /**
+     *创建用户
+     * @param req CreateUserRequest
+     * @return CreateUserResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateUserResponse CreateUser(CreateUserRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateUser", CreateUserResponse.class);
+    }
+
+    /**
+     *创建子用户同步任务
+     * @param req CreateUserSyncProvisioningRequest
+     * @return CreateUserSyncProvisioningResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateUserSyncProvisioningResponse CreateUserSyncProvisioning(CreateUserSyncProvisioningRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateUserSyncProvisioning", CreateUserSyncProvisioningResponse.class);
+    }
+
+    /**
      *删除成员账号
      * @param req DeleteAccountRequest
      * @return DeleteAccountResponse
@@ -245,6 +344,17 @@ public class OrganizationClient extends AbstractClient{
     public DeleteAccountResponse DeleteAccount(DeleteAccountRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteAccount", DeleteAccountResponse.class);
+    }
+
+    /**
+     *删除用户组
+     * @param req DeleteGroupRequest
+     * @return DeleteGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteGroupResponse DeleteGroup(DeleteGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteGroup", DeleteGroupResponse.class);
     }
 
     /**
@@ -336,6 +446,28 @@ public class OrganizationClient extends AbstractClient{
     }
 
     /**
+     *移除成员账号上的授权
+     * @param req DeleteRoleAssignmentRequest
+     * @return DeleteRoleAssignmentResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteRoleAssignmentResponse DeleteRoleAssignment(DeleteRoleAssignmentRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteRoleAssignment", DeleteRoleAssignmentResponse.class);
+    }
+
+    /**
+     *删除权限配置信息
+     * @param req DeleteRoleConfigurationRequest
+     * @return DeleteRoleConfigurationResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteRoleConfigurationResponse DeleteRoleConfiguration(DeleteRoleConfigurationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteRoleConfiguration", DeleteRoleConfigurationResponse.class);
+    }
+
+    /**
      *删除共享单元。
      * @param req DeleteShareUnitRequest
      * @return DeleteShareUnitResponse
@@ -369,6 +501,28 @@ public class OrganizationClient extends AbstractClient{
     }
 
     /**
+     *删除用户
+     * @param req DeleteUserRequest
+     * @return DeleteUserResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteUserResponse DeleteUser(DeleteUserRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteUser", DeleteUserResponse.class);
+    }
+
+    /**
+     *删除子用户同步任务
+     * @param req DeleteUserSyncProvisioningRequest
+     * @return DeleteUserSyncProvisioningResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteUserSyncProvisioningResponse DeleteUserSyncProvisioning(DeleteUserSyncProvisioningRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteUserSyncProvisioning", DeleteUserSyncProvisioningResponse.class);
+    }
+
+    /**
      *查询目标关联的有效策略
      * @param req DescribeEffectivePolicyRequest
      * @return DescribeEffectivePolicyResponse
@@ -377,6 +531,17 @@ public class OrganizationClient extends AbstractClient{
     public DescribeEffectivePolicyResponse DescribeEffectivePolicy(DescribeEffectivePolicyRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeEffectivePolicy", DescribeEffectivePolicyResponse.class);
+    }
+
+    /**
+     *获取cam身份中心服务信息
+     * @param req DescribeIdentityCenterRequest
+     * @return DescribeIdentityCenterResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeIdentityCenterResponse DescribeIdentityCenter(DescribeIdentityCenterRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeIdentityCenter", DescribeIdentityCenterResponse.class);
     }
 
     /**
@@ -589,6 +754,17 @@ public class OrganizationClient extends AbstractClient{
     }
 
     /**
+     *解除权限配置在成员账号上的部署
+     * @param req DismantleRoleConfigurationRequest
+     * @return DismantleRoleConfigurationResponse
+     * @throws TencentCloudSDKException
+     */
+    public DismantleRoleConfigurationResponse DismantleRoleConfiguration(DismantleRoleConfigurationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DismantleRoleConfiguration", DismantleRoleConfigurationResponse.class);
+    }
+
+    /**
      *启用策略类型
      * @param req EnablePolicyTypeRequest
      * @return EnablePolicyTypeResponse
@@ -597,6 +773,149 @@ public class OrganizationClient extends AbstractClient{
     public EnablePolicyTypeResponse EnablePolicyType(EnablePolicyTypeRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "EnablePolicyType", EnablePolicyTypeResponse.class);
+    }
+
+    /**
+     *查询SAML身份提供商配置信息
+     * @param req GetExternalSAMLIdentityProviderRequest
+     * @return GetExternalSAMLIdentityProviderResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetExternalSAMLIdentityProviderResponse GetExternalSAMLIdentityProvider(GetExternalSAMLIdentityProviderRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetExternalSAMLIdentityProvider", GetExternalSAMLIdentityProviderResponse.class);
+    }
+
+    /**
+     *查询用户组信息
+     * @param req GetGroupRequest
+     * @return GetGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetGroupResponse GetGroup(GetGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetGroup", GetGroupResponse.class);
+    }
+
+    /**
+     *查询用户同步异步任务的状态
+     * @param req GetProvisioningTaskStatusRequest
+     * @return GetProvisioningTaskStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetProvisioningTaskStatusResponse GetProvisioningTaskStatus(GetProvisioningTaskStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetProvisioningTaskStatus", GetProvisioningTaskStatusResponse.class);
+    }
+
+    /**
+     *查询权限配置信息
+     * @param req GetRoleConfigurationRequest
+     * @return GetRoleConfigurationResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetRoleConfigurationResponse GetRoleConfiguration(GetRoleConfigurationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetRoleConfiguration", GetRoleConfigurationResponse.class);
+    }
+
+    /**
+     *查询异步任务的状态
+     * @param req GetTaskStatusRequest
+     * @return GetTaskStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetTaskStatusResponse GetTaskStatus(GetTaskStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetTaskStatus", GetTaskStatusResponse.class);
+    }
+
+    /**
+     *查询用户信息
+     * @param req GetUserRequest
+     * @return GetUserResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetUserResponse GetUser(GetUserRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetUser", GetUserResponse.class);
+    }
+
+    /**
+     *查询CAM用户同步
+     * @param req GetUserSyncProvisioningRequest
+     * @return GetUserSyncProvisioningResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetUserSyncProvisioningResponse GetUserSyncProvisioning(GetUserSyncProvisioningRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetUserSyncProvisioning", GetUserSyncProvisioningResponse.class);
+    }
+
+    /**
+     *查询SAML服务提供商配置信息
+     * @param req GetZoneSAMLServiceProviderInfoRequest
+     * @return GetZoneSAMLServiceProviderInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetZoneSAMLServiceProviderInfoResponse GetZoneSAMLServiceProviderInfo(GetZoneSAMLServiceProviderInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetZoneSAMLServiceProviderInfo", GetZoneSAMLServiceProviderInfoResponse.class);
+    }
+
+    /**
+     *查询空间的统计信息
+     * @param req GetZoneStatisticsRequest
+     * @return GetZoneStatisticsResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetZoneStatisticsResponse GetZoneStatistics(GetZoneStatisticsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetZoneStatistics", GetZoneStatisticsResponse.class);
+    }
+
+    /**
+     *查询SAML签名证书列表
+     * @param req ListExternalSAMLIdPCertificatesRequest
+     * @return ListExternalSAMLIdPCertificatesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListExternalSAMLIdPCertificatesResponse ListExternalSAMLIdPCertificates(ListExternalSAMLIdPCertificatesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListExternalSAMLIdPCertificates", ListExternalSAMLIdPCertificatesResponse.class);
+    }
+
+    /**
+     *查询用户组中的用户列表
+     * @param req ListGroupMembersRequest
+     * @return ListGroupMembersResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListGroupMembersResponse ListGroupMembers(ListGroupMembersRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListGroupMembers", ListGroupMembersResponse.class);
+    }
+
+    /**
+     *查询用户组列表
+     * @param req ListGroupsRequest
+     * @return ListGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListGroupsResponse ListGroups(ListGroupsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListGroups", ListGroupsResponse.class);
+    }
+
+    /**
+     *查询用户加入的用户组
+     * @param req ListJoinedGroupsForUserRequest
+     * @return ListJoinedGroupsForUserResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListJoinedGroupsForUserResponse ListJoinedGroupsForUser(ListJoinedGroupsForUserRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListJoinedGroupsForUser", ListJoinedGroupsForUserResponse.class);
     }
 
     /**
@@ -644,6 +963,17 @@ public class OrganizationClient extends AbstractClient{
     }
 
     /**
+     *获取权限配置中的策略列表
+     * @param req ListPermissionPoliciesInRoleConfigurationRequest
+     * @return ListPermissionPoliciesInRoleConfigurationResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListPermissionPoliciesInRoleConfigurationResponse ListPermissionPoliciesInRoleConfiguration(ListPermissionPoliciesInRoleConfigurationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListPermissionPoliciesInRoleConfiguration", ListPermissionPoliciesInRoleConfigurationResponse.class);
+    }
+
+    /**
      *本接口（ListPolicies）可用于查询查看策略列表数据
      * @param req ListPoliciesRequest
      * @return ListPoliciesResponse
@@ -666,6 +996,39 @@ public class OrganizationClient extends AbstractClient{
     }
 
     /**
+     *查询授权列表
+     * @param req ListRoleAssignmentsRequest
+     * @return ListRoleAssignmentsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListRoleAssignmentsResponse ListRoleAssignments(ListRoleAssignmentsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListRoleAssignments", ListRoleAssignmentsResponse.class);
+    }
+
+    /**
+     *查询权限配置部署列表
+     * @param req ListRoleConfigurationProvisioningsRequest
+     * @return ListRoleConfigurationProvisioningsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListRoleConfigurationProvisioningsResponse ListRoleConfigurationProvisionings(ListRoleConfigurationProvisioningsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListRoleConfigurationProvisionings", ListRoleConfigurationProvisioningsResponse.class);
+    }
+
+    /**
+     *查询权限配置列表
+     * @param req ListRoleConfigurationsRequest
+     * @return ListRoleConfigurationsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListRoleConfigurationsResponse ListRoleConfigurations(ListRoleConfigurationsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListRoleConfigurations", ListRoleConfigurationsResponse.class);
+    }
+
+    /**
      *本接口（ListTargetsForPolicy）查询某个指定策略关联的目标列表
      * @param req ListTargetsForPolicyRequest
      * @return ListTargetsForPolicyResponse
@@ -677,6 +1040,39 @@ public class OrganizationClient extends AbstractClient{
     }
 
     /**
+     *查询异步任务列表
+     * @param req ListTasksRequest
+     * @return ListTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListTasksResponse ListTasks(ListTasksRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListTasks", ListTasksResponse.class);
+    }
+
+    /**
+     *查询CAM用户同步列表
+     * @param req ListUserSyncProvisioningsRequest
+     * @return ListUserSyncProvisioningsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListUserSyncProvisioningsResponse ListUserSyncProvisionings(ListUserSyncProvisioningsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListUserSyncProvisionings", ListUserSyncProvisioningsResponse.class);
+    }
+
+    /**
+     *查询用户列表
+     * @param req ListUsersRequest
+     * @return ListUsersResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListUsersResponse ListUsers(ListUsersRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListUsers", ListUsersResponse.class);
+    }
+
+    /**
      *移动成员到指定企业组织节点
      * @param req MoveOrganizationNodeMembersRequest
      * @return MoveOrganizationNodeMembersResponse
@@ -685,6 +1081,28 @@ public class OrganizationClient extends AbstractClient{
     public MoveOrganizationNodeMembersResponse MoveOrganizationNodeMembers(MoveOrganizationNodeMembersRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "MoveOrganizationNodeMembers", MoveOrganizationNodeMembersResponse.class);
+    }
+
+    /**
+     *开通CIC服务
+     * @param req OpenIdentityCenterRequest
+     * @return OpenIdentityCenterResponse
+     * @throws TencentCloudSDKException
+     */
+    public OpenIdentityCenterResponse OpenIdentityCenter(OpenIdentityCenterRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "OpenIdentityCenter", OpenIdentityCenterResponse.class);
+    }
+
+    /**
+     *将权限配置部署到成员账号上
+     * @param req ProvisionRoleConfigurationRequest
+     * @return ProvisionRoleConfigurationResponse
+     * @throws TencentCloudSDKException
+     */
+    public ProvisionRoleConfigurationResponse ProvisionRoleConfiguration(ProvisionRoleConfigurationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ProvisionRoleConfiguration", ProvisionRoleConfigurationResponse.class);
     }
 
     /**
@@ -707,6 +1125,61 @@ public class OrganizationClient extends AbstractClient{
     public RejectJoinShareUnitInvitationResponse RejectJoinShareUnitInvitation(RejectJoinShareUnitInvitationRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "RejectJoinShareUnitInvitation", RejectJoinShareUnitInvitationResponse.class);
+    }
+
+    /**
+     *移除SAML签名证书
+     * @param req RemoveExternalSAMLIdPCertificateRequest
+     * @return RemoveExternalSAMLIdPCertificateResponse
+     * @throws TencentCloudSDKException
+     */
+    public RemoveExternalSAMLIdPCertificateResponse RemoveExternalSAMLIdPCertificate(RemoveExternalSAMLIdPCertificateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RemoveExternalSAMLIdPCertificate", RemoveExternalSAMLIdPCertificateResponse.class);
+    }
+
+    /**
+     *为权限配置移除策略
+     * @param req RemovePermissionPolicyFromRoleConfigurationRequest
+     * @return RemovePermissionPolicyFromRoleConfigurationResponse
+     * @throws TencentCloudSDKException
+     */
+    public RemovePermissionPolicyFromRoleConfigurationResponse RemovePermissionPolicyFromRoleConfiguration(RemovePermissionPolicyFromRoleConfigurationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RemovePermissionPolicyFromRoleConfiguration", RemovePermissionPolicyFromRoleConfigurationResponse.class);
+    }
+
+    /**
+     *从用户组中移除用户
+     * @param req RemoveUserFromGroupRequest
+     * @return RemoveUserFromGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public RemoveUserFromGroupResponse RemoveUserFromGroup(RemoveUserFromGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RemoveUserFromGroup", RemoveUserFromGroupResponse.class);
+    }
+
+    /**
+     *配置SAML身份提供商信息
+     * @param req SetExternalSAMLIdentityProviderRequest
+     * @return SetExternalSAMLIdentityProviderResponse
+     * @throws TencentCloudSDKException
+     */
+    public SetExternalSAMLIdentityProviderResponse SetExternalSAMLIdentityProvider(SetExternalSAMLIdentityProviderRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SetExternalSAMLIdentityProvider", SetExternalSAMLIdentityProviderResponse.class);
+    }
+
+    /**
+     *修改用户组信息
+     * @param req UpdateGroupRequest
+     * @return UpdateGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateGroupResponse UpdateGroup(UpdateGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateGroup", UpdateGroupResponse.class);
     }
 
     /**
@@ -765,6 +1238,17 @@ public class OrganizationClient extends AbstractClient{
     }
 
     /**
+     *修改权限配置信息
+     * @param req UpdateRoleConfigurationRequest
+     * @return UpdateRoleConfigurationResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateRoleConfigurationResponse UpdateRoleConfiguration(UpdateRoleConfigurationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateRoleConfiguration", UpdateRoleConfigurationResponse.class);
+    }
+
+    /**
      *更新共享单元。
      * @param req UpdateShareUnitRequest
      * @return UpdateShareUnitResponse
@@ -773,6 +1257,50 @@ public class OrganizationClient extends AbstractClient{
     public UpdateShareUnitResponse UpdateShareUnit(UpdateShareUnitRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "UpdateShareUnit", UpdateShareUnitResponse.class);
+    }
+
+    /**
+     *修改用户信息
+     * @param req UpdateUserRequest
+     * @return UpdateUserResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateUserResponse UpdateUser(UpdateUserRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateUser", UpdateUserResponse.class);
+    }
+
+    /**
+     *修改用户状态
+     * @param req UpdateUserStatusRequest
+     * @return UpdateUserStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateUserStatusResponse UpdateUserStatus(UpdateUserStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateUserStatus", UpdateUserStatusResponse.class);
+    }
+
+    /**
+     *创建子用户同步任务
+     * @param req UpdateUserSyncProvisioningRequest
+     * @return UpdateUserSyncProvisioningResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateUserSyncProvisioningResponse UpdateUserSyncProvisioning(UpdateUserSyncProvisioningRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateUserSyncProvisioning", UpdateUserSyncProvisioningResponse.class);
+    }
+
+    /**
+     *更新用户空间名
+     * @param req UpdateZoneRequest
+     * @return UpdateZoneResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateZoneResponse UpdateZone(UpdateZoneRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateZone", UpdateZoneResponse.class);
     }
 
 }

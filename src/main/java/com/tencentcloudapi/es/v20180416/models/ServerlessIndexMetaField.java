@@ -159,6 +159,14 @@ public class ServerlessIndexMetaField extends AbstractModel {
     private TagInfo [] TagList;
 
     /**
+    * 3782478.47
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IndexTraffic")
+    @Expose
+    private Float IndexTraffic;
+
+    /**
      * Get 索引所属集群APP ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return AppId 索引所属集群APP ID
@@ -494,6 +502,26 @@ public class ServerlessIndexMetaField extends AbstractModel {
         this.TagList = TagList;
     }
 
+    /**
+     * Get 3782478.47
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IndexTraffic 3782478.47
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float getIndexTraffic() {
+        return this.IndexTraffic;
+    }
+
+    /**
+     * Set 3782478.47
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IndexTraffic 3782478.47
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIndexTraffic(Float IndexTraffic) {
+        this.IndexTraffic = IndexTraffic;
+    }
+
     public ServerlessIndexMetaField() {
     }
 
@@ -556,6 +584,9 @@ public class ServerlessIndexMetaField extends AbstractModel {
                 this.TagList[i] = new TagInfo(source.TagList[i]);
             }
         }
+        if (source.IndexTraffic != null) {
+            this.IndexTraffic = new Float(source.IndexTraffic);
+        }
     }
 
 
@@ -580,6 +611,7 @@ public class ServerlessIndexMetaField extends AbstractModel {
         this.setParamSimple(map, prefix + "SpaceName", this.SpaceName);
         this.setParamSimple(map, prefix + "StorageType", this.StorageType);
         this.setParamArrayObj(map, prefix + "TagList.", this.TagList);
+        this.setParamSimple(map, prefix + "IndexTraffic", this.IndexTraffic);
 
     }
 }

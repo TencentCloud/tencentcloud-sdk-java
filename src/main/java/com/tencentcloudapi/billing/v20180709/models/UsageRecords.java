@@ -46,6 +46,37 @@ public class UsageRecords extends AbstractModel {
     private UsageDetails [] UsageDetails;
 
     /**
+    * 付费模式
+    */
+    @SerializedName("PayMode")
+    @Expose
+    private String PayMode;
+
+    /**
+    * 查询的券id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VoucherId")
+    @Expose
+    private String VoucherId;
+
+    /**
+    * 交易场景：（adjust：调账、common：正常交易场景）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PayScene")
+    @Expose
+    private String PayScene;
+
+    /**
+    * 唯一id,对应交易:预付费的dealName,调账/后付费的outTradeNo
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SeqId")
+    @Expose
+    private String SeqId;
+
+    /**
      * Get 使用金额（微分） 
      * @return UsedAmount 使用金额（微分）
      */
@@ -97,6 +128,82 @@ public class UsageRecords extends AbstractModel {
         this.UsageDetails = UsageDetails;
     }
 
+    /**
+     * Get 付费模式 
+     * @return PayMode 付费模式
+     */
+    public String getPayMode() {
+        return this.PayMode;
+    }
+
+    /**
+     * Set 付费模式
+     * @param PayMode 付费模式
+     */
+    public void setPayMode(String PayMode) {
+        this.PayMode = PayMode;
+    }
+
+    /**
+     * Get 查询的券id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VoucherId 查询的券id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getVoucherId() {
+        return this.VoucherId;
+    }
+
+    /**
+     * Set 查询的券id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VoucherId 查询的券id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVoucherId(String VoucherId) {
+        this.VoucherId = VoucherId;
+    }
+
+    /**
+     * Get 交易场景：（adjust：调账、common：正常交易场景）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PayScene 交易场景：（adjust：调账、common：正常交易场景）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPayScene() {
+        return this.PayScene;
+    }
+
+    /**
+     * Set 交易场景：（adjust：调账、common：正常交易场景）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PayScene 交易场景：（adjust：调账、common：正常交易场景）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPayScene(String PayScene) {
+        this.PayScene = PayScene;
+    }
+
+    /**
+     * Get 唯一id,对应交易:预付费的dealName,调账/后付费的outTradeNo
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SeqId 唯一id,对应交易:预付费的dealName,调账/后付费的outTradeNo
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSeqId() {
+        return this.SeqId;
+    }
+
+    /**
+     * Set 唯一id,对应交易:预付费的dealName,调账/后付费的outTradeNo
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SeqId 唯一id,对应交易:预付费的dealName,调账/后付费的outTradeNo
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSeqId(String SeqId) {
+        this.SeqId = SeqId;
+    }
+
     public UsageRecords() {
     }
 
@@ -117,6 +224,18 @@ public class UsageRecords extends AbstractModel {
                 this.UsageDetails[i] = new UsageDetails(source.UsageDetails[i]);
             }
         }
+        if (source.PayMode != null) {
+            this.PayMode = new String(source.PayMode);
+        }
+        if (source.VoucherId != null) {
+            this.VoucherId = new String(source.VoucherId);
+        }
+        if (source.PayScene != null) {
+            this.PayScene = new String(source.PayScene);
+        }
+        if (source.SeqId != null) {
+            this.SeqId = new String(source.SeqId);
+        }
     }
 
 
@@ -127,6 +246,10 @@ public class UsageRecords extends AbstractModel {
         this.setParamSimple(map, prefix + "UsedAmount", this.UsedAmount);
         this.setParamSimple(map, prefix + "UsedTime", this.UsedTime);
         this.setParamArrayObj(map, prefix + "UsageDetails.", this.UsageDetails);
+        this.setParamSimple(map, prefix + "PayMode", this.PayMode);
+        this.setParamSimple(map, prefix + "VoucherId", this.VoucherId);
+        this.setParamSimple(map, prefix + "PayScene", this.PayScene);
+        this.setParamSimple(map, prefix + "SeqId", this.SeqId);
 
     }
 }

@@ -24,483 +24,598 @@ import java.util.HashMap;
 public class SpecItem extends AbstractModel {
 
     /**
-    * 规格信息标识
+    * 规格信息标识。格式如：mongo.HIO10G.128g。由节点类型、规格类型、内存规格三部分组成。
+- 节点类型，如下所示。
+  - mongo：Mongod 节点。
+ - mongos：Mongos 节点。
+ - cfgstr：Configserver 节点。
+- 规格类型，如下所示。
+ - HIO10G：通用高HIO万兆型。
+ - HCD：云盘版类型。
+- 内存规格，如下所示：
+ - 支持4、8、16、32、64、128、240、512。
+ - 单位g：表示GB。128g则表示128GB。
     */
     @SerializedName("SpecCode")
     @Expose
     private String SpecCode;
 
     /**
-    * 规格有效标志，取值：0-停止售卖，1-开放售卖
+    * 售卖规格有效标志，取值范围如下：
+- 0：停止售卖，
+- 1：开放售卖。
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 计算资源规格，单位为CPU核心数
+    * 计算资源规格，CPU核数。
     */
     @SerializedName("Cpu")
     @Expose
     private Long Cpu;
 
     /**
-    * 内存规格，单位为MB
+    * 内存规格，单位为：MB。
     */
     @SerializedName("Memory")
     @Expose
     private Long Memory;
 
     /**
-    * 默认磁盘规格，单位MB
+    * 默认磁盘规格，单位为：MB。
     */
     @SerializedName("DefaultStorage")
     @Expose
     private Long DefaultStorage;
 
     /**
-    * 最大磁盘规格，单位MB
+    * 最大磁盘规格，单位为：MB。
     */
     @SerializedName("MaxStorage")
     @Expose
     private Long MaxStorage;
 
     /**
-    * 最小磁盘规格，单位MB
+    * 最小磁盘规格，单位为：MB。
     */
     @SerializedName("MinStorage")
     @Expose
     private Long MinStorage;
 
     /**
-    * 可承载qps信息
+    * 指每秒最大请求次数，单位为：次/秒。
     */
     @SerializedName("Qps")
     @Expose
     private Long Qps;
 
     /**
-    * 连接数限制
+    * 规格所支持的最大连接数限制。
     */
     @SerializedName("Conns")
     @Expose
     private Long Conns;
 
     /**
-    * 实例mongodb版本信息
+    * 实例存储引擎版本信息。
+- MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本。
+- MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本。
+- MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。
+- MONGO_44_WT：MongoDB 4.4 WiredTiger存储引擎版本。
+- MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
+- MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
     */
     @SerializedName("MongoVersionCode")
     @Expose
     private String MongoVersionCode;
 
     /**
-    * 实例mongodb版本号
+    * 实例版本对应的数字版本。
     */
     @SerializedName("MongoVersionValue")
     @Expose
     private Long MongoVersionValue;
 
     /**
-    * 实例mongodb版本号（短）
+    * 实例版本信息。支持：3.6、4.2、4.4、5.0、6.0。
+
     */
     @SerializedName("Version")
     @Expose
     private String Version;
 
     /**
-    * 存储引擎
+    * 存储引擎。
     */
     @SerializedName("EngineName")
     @Expose
     private String EngineName;
 
     /**
-    * 集群类型，取值：1-分片集群，0-副本集集群
+    * 集群类型，取值如下：
+- 1：分片集群。
+- 0：副本集集群。
     */
     @SerializedName("ClusterType")
     @Expose
     private Long ClusterType;
 
     /**
-    * 最小副本集从节点数
+    * 每个副本集最小节点数。
     */
     @SerializedName("MinNodeNum")
     @Expose
     private Long MinNodeNum;
 
     /**
-    * 最大副本集从节点数
+    * 每个副本集最大节点数。
     */
     @SerializedName("MaxNodeNum")
     @Expose
     private Long MaxNodeNum;
 
     /**
-    * 最小分片数
+    * 最小分片数。
     */
     @SerializedName("MinReplicateSetNum")
     @Expose
     private Long MinReplicateSetNum;
 
     /**
-    * 最大分片数
+    * 最大分片数。
     */
     @SerializedName("MaxReplicateSetNum")
     @Expose
     private Long MaxReplicateSetNum;
 
     /**
-    * 最小分片从节点数
+    * 每个分片最小节点数。
     */
     @SerializedName("MinReplicateSetNodeNum")
     @Expose
     private Long MinReplicateSetNodeNum;
 
     /**
-    * 最大分片从节点数
+    * 每个分片最大节点数。
     */
     @SerializedName("MaxReplicateSetNodeNum")
     @Expose
     private Long MaxReplicateSetNodeNum;
 
     /**
-    * 机器类型，取值：0-HIO，4-HIO10G
+    * 集群的规格类型，取值范围如下：
+- HIO10G：通用高HIO万兆型。
+- HCD：云盘版类型。
     */
     @SerializedName("MachineType")
     @Expose
     private String MachineType;
 
     /**
-     * Get 规格信息标识 
-     * @return SpecCode 规格信息标识
+     * Get 规格信息标识。格式如：mongo.HIO10G.128g。由节点类型、规格类型、内存规格三部分组成。
+- 节点类型，如下所示。
+  - mongo：Mongod 节点。
+ - mongos：Mongos 节点。
+ - cfgstr：Configserver 节点。
+- 规格类型，如下所示。
+ - HIO10G：通用高HIO万兆型。
+ - HCD：云盘版类型。
+- 内存规格，如下所示：
+ - 支持4、8、16、32、64、128、240、512。
+ - 单位g：表示GB。128g则表示128GB。 
+     * @return SpecCode 规格信息标识。格式如：mongo.HIO10G.128g。由节点类型、规格类型、内存规格三部分组成。
+- 节点类型，如下所示。
+  - mongo：Mongod 节点。
+ - mongos：Mongos 节点。
+ - cfgstr：Configserver 节点。
+- 规格类型，如下所示。
+ - HIO10G：通用高HIO万兆型。
+ - HCD：云盘版类型。
+- 内存规格，如下所示：
+ - 支持4、8、16、32、64、128、240、512。
+ - 单位g：表示GB。128g则表示128GB。
      */
     public String getSpecCode() {
         return this.SpecCode;
     }
 
     /**
-     * Set 规格信息标识
-     * @param SpecCode 规格信息标识
+     * Set 规格信息标识。格式如：mongo.HIO10G.128g。由节点类型、规格类型、内存规格三部分组成。
+- 节点类型，如下所示。
+  - mongo：Mongod 节点。
+ - mongos：Mongos 节点。
+ - cfgstr：Configserver 节点。
+- 规格类型，如下所示。
+ - HIO10G：通用高HIO万兆型。
+ - HCD：云盘版类型。
+- 内存规格，如下所示：
+ - 支持4、8、16、32、64、128、240、512。
+ - 单位g：表示GB。128g则表示128GB。
+     * @param SpecCode 规格信息标识。格式如：mongo.HIO10G.128g。由节点类型、规格类型、内存规格三部分组成。
+- 节点类型，如下所示。
+  - mongo：Mongod 节点。
+ - mongos：Mongos 节点。
+ - cfgstr：Configserver 节点。
+- 规格类型，如下所示。
+ - HIO10G：通用高HIO万兆型。
+ - HCD：云盘版类型。
+- 内存规格，如下所示：
+ - 支持4、8、16、32、64、128、240、512。
+ - 单位g：表示GB。128g则表示128GB。
      */
     public void setSpecCode(String SpecCode) {
         this.SpecCode = SpecCode;
     }
 
     /**
-     * Get 规格有效标志，取值：0-停止售卖，1-开放售卖 
-     * @return Status 规格有效标志，取值：0-停止售卖，1-开放售卖
+     * Get 售卖规格有效标志，取值范围如下：
+- 0：停止售卖，
+- 1：开放售卖。 
+     * @return Status 售卖规格有效标志，取值范围如下：
+- 0：停止售卖，
+- 1：开放售卖。
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 规格有效标志，取值：0-停止售卖，1-开放售卖
-     * @param Status 规格有效标志，取值：0-停止售卖，1-开放售卖
+     * Set 售卖规格有效标志，取值范围如下：
+- 0：停止售卖，
+- 1：开放售卖。
+     * @param Status 售卖规格有效标志，取值范围如下：
+- 0：停止售卖，
+- 1：开放售卖。
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 计算资源规格，单位为CPU核心数 
-     * @return Cpu 计算资源规格，单位为CPU核心数
+     * Get 计算资源规格，CPU核数。 
+     * @return Cpu 计算资源规格，CPU核数。
      */
     public Long getCpu() {
         return this.Cpu;
     }
 
     /**
-     * Set 计算资源规格，单位为CPU核心数
-     * @param Cpu 计算资源规格，单位为CPU核心数
+     * Set 计算资源规格，CPU核数。
+     * @param Cpu 计算资源规格，CPU核数。
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;
     }
 
     /**
-     * Get 内存规格，单位为MB 
-     * @return Memory 内存规格，单位为MB
+     * Get 内存规格，单位为：MB。 
+     * @return Memory 内存规格，单位为：MB。
      */
     public Long getMemory() {
         return this.Memory;
     }
 
     /**
-     * Set 内存规格，单位为MB
-     * @param Memory 内存规格，单位为MB
+     * Set 内存规格，单位为：MB。
+     * @param Memory 内存规格，单位为：MB。
      */
     public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * Get 默认磁盘规格，单位MB 
-     * @return DefaultStorage 默认磁盘规格，单位MB
+     * Get 默认磁盘规格，单位为：MB。 
+     * @return DefaultStorage 默认磁盘规格，单位为：MB。
      */
     public Long getDefaultStorage() {
         return this.DefaultStorage;
     }
 
     /**
-     * Set 默认磁盘规格，单位MB
-     * @param DefaultStorage 默认磁盘规格，单位MB
+     * Set 默认磁盘规格，单位为：MB。
+     * @param DefaultStorage 默认磁盘规格，单位为：MB。
      */
     public void setDefaultStorage(Long DefaultStorage) {
         this.DefaultStorage = DefaultStorage;
     }
 
     /**
-     * Get 最大磁盘规格，单位MB 
-     * @return MaxStorage 最大磁盘规格，单位MB
+     * Get 最大磁盘规格，单位为：MB。 
+     * @return MaxStorage 最大磁盘规格，单位为：MB。
      */
     public Long getMaxStorage() {
         return this.MaxStorage;
     }
 
     /**
-     * Set 最大磁盘规格，单位MB
-     * @param MaxStorage 最大磁盘规格，单位MB
+     * Set 最大磁盘规格，单位为：MB。
+     * @param MaxStorage 最大磁盘规格，单位为：MB。
      */
     public void setMaxStorage(Long MaxStorage) {
         this.MaxStorage = MaxStorage;
     }
 
     /**
-     * Get 最小磁盘规格，单位MB 
-     * @return MinStorage 最小磁盘规格，单位MB
+     * Get 最小磁盘规格，单位为：MB。 
+     * @return MinStorage 最小磁盘规格，单位为：MB。
      */
     public Long getMinStorage() {
         return this.MinStorage;
     }
 
     /**
-     * Set 最小磁盘规格，单位MB
-     * @param MinStorage 最小磁盘规格，单位MB
+     * Set 最小磁盘规格，单位为：MB。
+     * @param MinStorage 最小磁盘规格，单位为：MB。
      */
     public void setMinStorage(Long MinStorage) {
         this.MinStorage = MinStorage;
     }
 
     /**
-     * Get 可承载qps信息 
-     * @return Qps 可承载qps信息
+     * Get 指每秒最大请求次数，单位为：次/秒。 
+     * @return Qps 指每秒最大请求次数，单位为：次/秒。
      */
     public Long getQps() {
         return this.Qps;
     }
 
     /**
-     * Set 可承载qps信息
-     * @param Qps 可承载qps信息
+     * Set 指每秒最大请求次数，单位为：次/秒。
+     * @param Qps 指每秒最大请求次数，单位为：次/秒。
      */
     public void setQps(Long Qps) {
         this.Qps = Qps;
     }
 
     /**
-     * Get 连接数限制 
-     * @return Conns 连接数限制
+     * Get 规格所支持的最大连接数限制。 
+     * @return Conns 规格所支持的最大连接数限制。
      */
     public Long getConns() {
         return this.Conns;
     }
 
     /**
-     * Set 连接数限制
-     * @param Conns 连接数限制
+     * Set 规格所支持的最大连接数限制。
+     * @param Conns 规格所支持的最大连接数限制。
      */
     public void setConns(Long Conns) {
         this.Conns = Conns;
     }
 
     /**
-     * Get 实例mongodb版本信息 
-     * @return MongoVersionCode 实例mongodb版本信息
+     * Get 实例存储引擎版本信息。
+- MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本。
+- MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本。
+- MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。
+- MONGO_44_WT：MongoDB 4.4 WiredTiger存储引擎版本。
+- MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
+- MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。 
+     * @return MongoVersionCode 实例存储引擎版本信息。
+- MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本。
+- MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本。
+- MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。
+- MONGO_44_WT：MongoDB 4.4 WiredTiger存储引擎版本。
+- MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
+- MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
      */
     public String getMongoVersionCode() {
         return this.MongoVersionCode;
     }
 
     /**
-     * Set 实例mongodb版本信息
-     * @param MongoVersionCode 实例mongodb版本信息
+     * Set 实例存储引擎版本信息。
+- MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本。
+- MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本。
+- MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。
+- MONGO_44_WT：MongoDB 4.4 WiredTiger存储引擎版本。
+- MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
+- MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
+     * @param MongoVersionCode 实例存储引擎版本信息。
+- MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本。
+- MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本。
+- MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。
+- MONGO_44_WT：MongoDB 4.4 WiredTiger存储引擎版本。
+- MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
+- MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
      */
     public void setMongoVersionCode(String MongoVersionCode) {
         this.MongoVersionCode = MongoVersionCode;
     }
 
     /**
-     * Get 实例mongodb版本号 
-     * @return MongoVersionValue 实例mongodb版本号
+     * Get 实例版本对应的数字版本。 
+     * @return MongoVersionValue 实例版本对应的数字版本。
      */
     public Long getMongoVersionValue() {
         return this.MongoVersionValue;
     }
 
     /**
-     * Set 实例mongodb版本号
-     * @param MongoVersionValue 实例mongodb版本号
+     * Set 实例版本对应的数字版本。
+     * @param MongoVersionValue 实例版本对应的数字版本。
      */
     public void setMongoVersionValue(Long MongoVersionValue) {
         this.MongoVersionValue = MongoVersionValue;
     }
 
     /**
-     * Get 实例mongodb版本号（短） 
-     * @return Version 实例mongodb版本号（短）
+     * Get 实例版本信息。支持：3.6、4.2、4.4、5.0、6.0。
+ 
+     * @return Version 实例版本信息。支持：3.6、4.2、4.4、5.0、6.0。
+
      */
     public String getVersion() {
         return this.Version;
     }
 
     /**
-     * Set 实例mongodb版本号（短）
-     * @param Version 实例mongodb版本号（短）
+     * Set 实例版本信息。支持：3.6、4.2、4.4、5.0、6.0。
+
+     * @param Version 实例版本信息。支持：3.6、4.2、4.4、5.0、6.0。
+
      */
     public void setVersion(String Version) {
         this.Version = Version;
     }
 
     /**
-     * Get 存储引擎 
-     * @return EngineName 存储引擎
+     * Get 存储引擎。 
+     * @return EngineName 存储引擎。
      */
     public String getEngineName() {
         return this.EngineName;
     }
 
     /**
-     * Set 存储引擎
-     * @param EngineName 存储引擎
+     * Set 存储引擎。
+     * @param EngineName 存储引擎。
      */
     public void setEngineName(String EngineName) {
         this.EngineName = EngineName;
     }
 
     /**
-     * Get 集群类型，取值：1-分片集群，0-副本集集群 
-     * @return ClusterType 集群类型，取值：1-分片集群，0-副本集集群
+     * Get 集群类型，取值如下：
+- 1：分片集群。
+- 0：副本集集群。 
+     * @return ClusterType 集群类型，取值如下：
+- 1：分片集群。
+- 0：副本集集群。
      */
     public Long getClusterType() {
         return this.ClusterType;
     }
 
     /**
-     * Set 集群类型，取值：1-分片集群，0-副本集集群
-     * @param ClusterType 集群类型，取值：1-分片集群，0-副本集集群
+     * Set 集群类型，取值如下：
+- 1：分片集群。
+- 0：副本集集群。
+     * @param ClusterType 集群类型，取值如下：
+- 1：分片集群。
+- 0：副本集集群。
      */
     public void setClusterType(Long ClusterType) {
         this.ClusterType = ClusterType;
     }
 
     /**
-     * Get 最小副本集从节点数 
-     * @return MinNodeNum 最小副本集从节点数
+     * Get 每个副本集最小节点数。 
+     * @return MinNodeNum 每个副本集最小节点数。
      */
     public Long getMinNodeNum() {
         return this.MinNodeNum;
     }
 
     /**
-     * Set 最小副本集从节点数
-     * @param MinNodeNum 最小副本集从节点数
+     * Set 每个副本集最小节点数。
+     * @param MinNodeNum 每个副本集最小节点数。
      */
     public void setMinNodeNum(Long MinNodeNum) {
         this.MinNodeNum = MinNodeNum;
     }
 
     /**
-     * Get 最大副本集从节点数 
-     * @return MaxNodeNum 最大副本集从节点数
+     * Get 每个副本集最大节点数。 
+     * @return MaxNodeNum 每个副本集最大节点数。
      */
     public Long getMaxNodeNum() {
         return this.MaxNodeNum;
     }
 
     /**
-     * Set 最大副本集从节点数
-     * @param MaxNodeNum 最大副本集从节点数
+     * Set 每个副本集最大节点数。
+     * @param MaxNodeNum 每个副本集最大节点数。
      */
     public void setMaxNodeNum(Long MaxNodeNum) {
         this.MaxNodeNum = MaxNodeNum;
     }
 
     /**
-     * Get 最小分片数 
-     * @return MinReplicateSetNum 最小分片数
+     * Get 最小分片数。 
+     * @return MinReplicateSetNum 最小分片数。
      */
     public Long getMinReplicateSetNum() {
         return this.MinReplicateSetNum;
     }
 
     /**
-     * Set 最小分片数
-     * @param MinReplicateSetNum 最小分片数
+     * Set 最小分片数。
+     * @param MinReplicateSetNum 最小分片数。
      */
     public void setMinReplicateSetNum(Long MinReplicateSetNum) {
         this.MinReplicateSetNum = MinReplicateSetNum;
     }
 
     /**
-     * Get 最大分片数 
-     * @return MaxReplicateSetNum 最大分片数
+     * Get 最大分片数。 
+     * @return MaxReplicateSetNum 最大分片数。
      */
     public Long getMaxReplicateSetNum() {
         return this.MaxReplicateSetNum;
     }
 
     /**
-     * Set 最大分片数
-     * @param MaxReplicateSetNum 最大分片数
+     * Set 最大分片数。
+     * @param MaxReplicateSetNum 最大分片数。
      */
     public void setMaxReplicateSetNum(Long MaxReplicateSetNum) {
         this.MaxReplicateSetNum = MaxReplicateSetNum;
     }
 
     /**
-     * Get 最小分片从节点数 
-     * @return MinReplicateSetNodeNum 最小分片从节点数
+     * Get 每个分片最小节点数。 
+     * @return MinReplicateSetNodeNum 每个分片最小节点数。
      */
     public Long getMinReplicateSetNodeNum() {
         return this.MinReplicateSetNodeNum;
     }
 
     /**
-     * Set 最小分片从节点数
-     * @param MinReplicateSetNodeNum 最小分片从节点数
+     * Set 每个分片最小节点数。
+     * @param MinReplicateSetNodeNum 每个分片最小节点数。
      */
     public void setMinReplicateSetNodeNum(Long MinReplicateSetNodeNum) {
         this.MinReplicateSetNodeNum = MinReplicateSetNodeNum;
     }
 
     /**
-     * Get 最大分片从节点数 
-     * @return MaxReplicateSetNodeNum 最大分片从节点数
+     * Get 每个分片最大节点数。 
+     * @return MaxReplicateSetNodeNum 每个分片最大节点数。
      */
     public Long getMaxReplicateSetNodeNum() {
         return this.MaxReplicateSetNodeNum;
     }
 
     /**
-     * Set 最大分片从节点数
-     * @param MaxReplicateSetNodeNum 最大分片从节点数
+     * Set 每个分片最大节点数。
+     * @param MaxReplicateSetNodeNum 每个分片最大节点数。
      */
     public void setMaxReplicateSetNodeNum(Long MaxReplicateSetNodeNum) {
         this.MaxReplicateSetNodeNum = MaxReplicateSetNodeNum;
     }
 
     /**
-     * Get 机器类型，取值：0-HIO，4-HIO10G 
-     * @return MachineType 机器类型，取值：0-HIO，4-HIO10G
+     * Get 集群的规格类型，取值范围如下：
+- HIO10G：通用高HIO万兆型。
+- HCD：云盘版类型。 
+     * @return MachineType 集群的规格类型，取值范围如下：
+- HIO10G：通用高HIO万兆型。
+- HCD：云盘版类型。
      */
     public String getMachineType() {
         return this.MachineType;
     }
 
     /**
-     * Set 机器类型，取值：0-HIO，4-HIO10G
-     * @param MachineType 机器类型，取值：0-HIO，4-HIO10G
+     * Set 集群的规格类型，取值范围如下：
+- HIO10G：通用高HIO万兆型。
+- HCD：云盘版类型。
+     * @param MachineType 集群的规格类型，取值范围如下：
+- HIO10G：通用高HIO万兆型。
+- HCD：云盘版类型。
      */
     public void setMachineType(String MachineType) {
         this.MachineType = MachineType;

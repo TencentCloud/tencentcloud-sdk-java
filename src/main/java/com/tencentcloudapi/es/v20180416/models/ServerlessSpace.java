@@ -171,6 +171,14 @@ public class ServerlessSpace extends AbstractModel {
     private Long ClusterType;
 
     /**
+    * key:value
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TagList")
+    @Expose
+    private TagInfo [] TagList;
+
+    /**
      * Get Serverless索引空间ID 
      * @return SpaceId Serverless索引空间ID
      */
@@ -530,6 +538,26 @@ public class ServerlessSpace extends AbstractModel {
         this.ClusterType = ClusterType;
     }
 
+    /**
+     * Get key:value
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TagList key:value
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public TagInfo [] getTagList() {
+        return this.TagList;
+    }
+
+    /**
+     * Set key:value
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TagList key:value
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTagList(TagInfo [] TagList) {
+        this.TagList = TagList;
+    }
+
     public ServerlessSpace() {
     }
 
@@ -598,6 +626,12 @@ public class ServerlessSpace extends AbstractModel {
         if (source.ClusterType != null) {
             this.ClusterType = new Long(source.ClusterType);
         }
+        if (source.TagList != null) {
+            this.TagList = new TagInfo[source.TagList.length];
+            for (int i = 0; i < source.TagList.length; i++) {
+                this.TagList[i] = new TagInfo(source.TagList[i]);
+            }
+        }
     }
 
 
@@ -624,6 +658,7 @@ public class ServerlessSpace extends AbstractModel {
         this.setParamSimple(map, prefix + "AppId", this.AppId);
         this.setParamSimple(map, prefix + "KibanaLanguage", this.KibanaLanguage);
         this.setParamSimple(map, prefix + "ClusterType", this.ClusterType);
+        this.setParamArrayObj(map, prefix + "TagList.", this.TagList);
 
     }
 }

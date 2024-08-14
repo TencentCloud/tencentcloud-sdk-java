@@ -253,6 +253,17 @@ RegionState 为 AVAILABLE，代表该地域的 TAT 后台服务已经可用；�
     }
 
     /**
+     *此接口用于查询场景详情。
+     * @param req DescribeScenesRequest
+     * @return DescribeScenesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeScenesResponse DescribeScenes(DescribeScenesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeScenes", DescribeScenesResponse.class);
+    }
+
+    /**
      *此接口用于停止执行器。
      * @param req DisableInvokerRequest
      * @return DisableInvokerResponse

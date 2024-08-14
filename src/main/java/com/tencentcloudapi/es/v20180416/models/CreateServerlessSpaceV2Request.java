@@ -59,6 +59,13 @@ public class CreateServerlessSpaceV2Request extends AbstractModel {
     private Long ZoneId;
 
     /**
+    * 标签信息
+    */
+    @SerializedName("TagList")
+    @Expose
+    private TagInfo [] TagList;
+
+    /**
      * Get vpc信息 
      * @return VpcInfo vpc信息
      */
@@ -138,6 +145,22 @@ public class CreateServerlessSpaceV2Request extends AbstractModel {
         this.ZoneId = ZoneId;
     }
 
+    /**
+     * Get 标签信息 
+     * @return TagList 标签信息
+     */
+    public TagInfo [] getTagList() {
+        return this.TagList;
+    }
+
+    /**
+     * Set 标签信息
+     * @param TagList 标签信息
+     */
+    public void setTagList(TagInfo [] TagList) {
+        this.TagList = TagList;
+    }
+
     public CreateServerlessSpaceV2Request() {
     }
 
@@ -167,6 +190,12 @@ public class CreateServerlessSpaceV2Request extends AbstractModel {
         if (source.ZoneId != null) {
             this.ZoneId = new Long(source.ZoneId);
         }
+        if (source.TagList != null) {
+            this.TagList = new TagInfo[source.TagList.length];
+            for (int i = 0; i < source.TagList.length; i++) {
+                this.TagList[i] = new TagInfo(source.TagList[i]);
+            }
+        }
     }
 
 
@@ -179,6 +208,7 @@ public class CreateServerlessSpaceV2Request extends AbstractModel {
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamArraySimple(map, prefix + "KibanaWhiteIpList.", this.KibanaWhiteIpList);
         this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
+        this.setParamArrayObj(map, prefix + "TagList.", this.TagList);
 
     }
 }

@@ -38,11 +38,18 @@ public class DescribeServerlessMetricsRequest extends AbstractModel {
     private String IndexId;
 
     /**
-    * 指标类型，暂时只支持Storage
+    * 指标类型，暂时只支持Storage(存储大小),AllMetric(所有存储指标：索引流量、存储大小、文档数量、读请求和写请求)
     */
     @SerializedName("MetricType")
     @Expose
     private String [] MetricType;
+
+    /**
+    * 时间长度类型DurationType(1: 3小时, 2: 昨天1天,3: 今日0点到现在)
+    */
+    @SerializedName("DurationType")
+    @Expose
+    private Long DurationType;
 
     /**
      * Get space空间id 
@@ -77,19 +84,35 @@ public class DescribeServerlessMetricsRequest extends AbstractModel {
     }
 
     /**
-     * Get 指标类型，暂时只支持Storage 
-     * @return MetricType 指标类型，暂时只支持Storage
+     * Get 指标类型，暂时只支持Storage(存储大小),AllMetric(所有存储指标：索引流量、存储大小、文档数量、读请求和写请求) 
+     * @return MetricType 指标类型，暂时只支持Storage(存储大小),AllMetric(所有存储指标：索引流量、存储大小、文档数量、读请求和写请求)
      */
     public String [] getMetricType() {
         return this.MetricType;
     }
 
     /**
-     * Set 指标类型，暂时只支持Storage
-     * @param MetricType 指标类型，暂时只支持Storage
+     * Set 指标类型，暂时只支持Storage(存储大小),AllMetric(所有存储指标：索引流量、存储大小、文档数量、读请求和写请求)
+     * @param MetricType 指标类型，暂时只支持Storage(存储大小),AllMetric(所有存储指标：索引流量、存储大小、文档数量、读请求和写请求)
      */
     public void setMetricType(String [] MetricType) {
         this.MetricType = MetricType;
+    }
+
+    /**
+     * Get 时间长度类型DurationType(1: 3小时, 2: 昨天1天,3: 今日0点到现在) 
+     * @return DurationType 时间长度类型DurationType(1: 3小时, 2: 昨天1天,3: 今日0点到现在)
+     */
+    public Long getDurationType() {
+        return this.DurationType;
+    }
+
+    /**
+     * Set 时间长度类型DurationType(1: 3小时, 2: 昨天1天,3: 今日0点到现在)
+     * @param DurationType 时间长度类型DurationType(1: 3小时, 2: 昨天1天,3: 今日0点到现在)
+     */
+    public void setDurationType(Long DurationType) {
+        this.DurationType = DurationType;
     }
 
     public DescribeServerlessMetricsRequest() {
@@ -112,6 +135,9 @@ public class DescribeServerlessMetricsRequest extends AbstractModel {
                 this.MetricType[i] = new String(source.MetricType[i]);
             }
         }
+        if (source.DurationType != null) {
+            this.DurationType = new Long(source.DurationType);
+        }
     }
 
 
@@ -122,6 +148,7 @@ public class DescribeServerlessMetricsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SpaceId", this.SpaceId);
         this.setParamSimple(map, prefix + "IndexId", this.IndexId);
         this.setParamArraySimple(map, prefix + "MetricType.", this.MetricType);
+        this.setParamSimple(map, prefix + "DurationType", this.DurationType);
 
     }
 }

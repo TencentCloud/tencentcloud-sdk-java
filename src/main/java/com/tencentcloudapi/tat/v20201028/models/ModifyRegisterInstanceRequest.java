@@ -31,7 +31,7 @@ public class ModifyRegisterInstanceRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * 实例名。
+    * 实例名称。有效长度为 1～60 字符。
     */
     @SerializedName("InstanceName")
     @Expose
@@ -54,16 +54,16 @@ public class ModifyRegisterInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get 实例名。 
-     * @return InstanceName 实例名。
+     * Get 实例名称。有效长度为 1～60 字符。 
+     * @return InstanceName 实例名称。有效长度为 1～60 字符。
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set 实例名。
-     * @param InstanceName 实例名。
+     * Set 实例名称。有效长度为 1～60 字符。
+     * @param InstanceName 实例名称。有效长度为 1～60 字符。
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;

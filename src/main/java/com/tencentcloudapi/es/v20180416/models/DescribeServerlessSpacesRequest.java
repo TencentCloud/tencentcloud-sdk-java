@@ -73,6 +73,13 @@ public class DescribeServerlessSpacesRequest extends AbstractModel {
     private Long Limit;
 
     /**
+    * 标签信息
+    */
+    @SerializedName("TagList")
+    @Expose
+    private TagInfo [] TagList;
+
+    /**
      * Get 过滤的空间ID 
      * @return SpaceIds 过滤的空间ID
      */
@@ -184,6 +191,22 @@ public class DescribeServerlessSpacesRequest extends AbstractModel {
         this.Limit = Limit;
     }
 
+    /**
+     * Get 标签信息 
+     * @return TagList 标签信息
+     */
+    public TagInfo [] getTagList() {
+        return this.TagList;
+    }
+
+    /**
+     * Set 标签信息
+     * @param TagList 标签信息
+     */
+    public void setTagList(TagInfo [] TagList) {
+        this.TagList = TagList;
+    }
+
     public DescribeServerlessSpacesRequest() {
     }
 
@@ -222,6 +245,12 @@ public class DescribeServerlessSpacesRequest extends AbstractModel {
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
+        if (source.TagList != null) {
+            this.TagList = new TagInfo[source.TagList.length];
+            for (int i = 0; i < source.TagList.length; i++) {
+                this.TagList[i] = new TagInfo(source.TagList[i]);
+            }
+        }
     }
 
 
@@ -236,6 +265,7 @@ public class DescribeServerlessSpacesRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "VpcIds.", this.VpcIds);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamArrayObj(map, prefix + "TagList.", this.TagList);
 
     }
 }

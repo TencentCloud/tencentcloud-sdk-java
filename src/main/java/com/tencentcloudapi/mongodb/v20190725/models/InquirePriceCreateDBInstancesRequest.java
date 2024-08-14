@@ -31,8 +31,8 @@ public class InquirePriceCreateDBInstancesRequest extends AbstractModel {
     private String Zone;
 
     /**
-    * 每个分片的主从节点数量。
-取值范围：请通过接口[DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567)查询，其返回的数据结构SpecItems中的参数MinNodeNum与MaxNodeNum分别对应其最小值与最大值。
+    * - 创建副本集实例，指每个副本集内主从节点数量。每个副本集所支持的的最大节点数与最小节点数，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
+- 创建分片集群实例，指每个分片的主从节点数量。每个分片所支持的最大节点数与最小节点数，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
     */
     @SerializedName("NodeNum")
     @Expose
@@ -58,22 +58,21 @@ public class InquirePriceCreateDBInstancesRequest extends AbstractModel {
 
     /**
     * 实例版本信息。具体支持的版本，请通过接口[DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567)查询，其返回的数据结构SpecItems中的参数MongoVersionCode为实例所支持的版本信息。版本信息与版本号对应关系如下：
-- MONGO_3_WT：MongoDB 3.2 WiredTiger存储引擎版本。
-- MONGO_3_ROCKS：MongoDB 3.2 RocksDB存储引擎版本。
 - MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本。
 - MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本。
 - MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。
 - MONGO_44_WT：MongoDB 4.4 WiredTiger存储引擎版本。
 - MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
+- MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
     */
     @SerializedName("MongoVersion")
     @Expose
     private String MongoVersion;
 
     /**
-    * 机器类型。
-- HIO：高IO型。
-- HIO10G：高IO万兆型。
+    * 产品规格类型。
+- HIO10G：通用高HIO万兆型。
+- HCD：云盘版。
     */
     @SerializedName("MachineCode")
     @Expose
@@ -90,24 +89,21 @@ public class InquirePriceCreateDBInstancesRequest extends AbstractModel {
     * 实例类型。
 - REPLSET：副本集。
 - SHARD：分片集群。
-- STANDALONE：单节点。
     */
     @SerializedName("ClusterType")
     @Expose
     private String ClusterType;
 
     /**
-    * 副本集个数。
-- 创建副本集实例时，该参数固定设置为1。
-- 创建分片集群时，指分片数量，请通过接口[DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567)查询，其返回的数据结构SpecItems中的参数MinReplicateSetNum与MaxReplicateSetNum分别对应其最小值与最大值。
-- 若为单节点实例，该参数固定设置为0。
+    * - 创建副本集实例，指副本集数量，该参数只能为1。
+- 创建分片集群实例，指分片的数量。请通过接口[DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567)查询分片数量的取值范围，其返回的数据结构SpecItems中的参数MinReplicateSetNum与MaxReplicateSetNum分别对应其最小值与最大值。
     */
     @SerializedName("ReplicateSetNum")
     @Expose
     private Long ReplicateSetNum;
 
     /**
-    * - 选择包年包月计费模式，即 <b>InstanceChargeType </b>设定为<b>PREPAID</b>时，需设定购买实例的时长。该参数取值可选：[1,2,3,4,5,6,7,8,9,10,11,12,24,36]；单位：月。
+    * - 选择包年包月计费模式，即 <b>InstanceChargeType </b>设定为<b>PREPAID</b>时，必须设置该参数，指定购买实例的购买时长。取值可选：[1,2,3,4,5,6,7,8,9,10,11,12,24,36]；单位：月。
 -选择按量计费，即 <b>InstanceChargeType</b> 设定为 **POSTPAID_BY_HOUR** 时，该参数仅可配置为 1。
     */
     @SerializedName("Period")
@@ -124,42 +120,42 @@ public class InquirePriceCreateDBInstancesRequest extends AbstractModel {
     private String InstanceChargeType;
 
     /**
-    * 分片实例询价必填参数，指 Mongos CPU核数，取值范围为[1,16]。
+    * Mongos CPU 核数，支持1、2、4、8、16。购买分片集群时，必须填写。注意为空时取默认取值为2C。
     */
     @SerializedName("MongosCpu")
     @Expose
     private Long MongosCpu;
 
     /**
-    * 分片实例询价必填参数，指 Mongos 内存，取值范围为[2,32]，单位：GB。
+    * Mongos 内存大小。-  购买分片集群时，必须填写。- 单位：GB，支持1核2GB、2核4GB、4核8GB、8核16GB、16核32GB。注意为空时取默认取值为4G。
     */
     @SerializedName("MongosMemory")
     @Expose
     private Long MongosMemory;
 
     /**
-    * 分片实例询价必填参数，指 Mongos 个数，取值范围为[3,32]。
+    * 指 Mongos 个数，取值范围为[3,32]。若为分片集群实例询价，则该参数必须设置。注意为空时取默认取值为3个节点。
     */
     @SerializedName("MongosNum")
     @Expose
     private Long MongosNum;
 
     /**
-    * 分片实例询价必填参数，指 ConfigServer CPU核数，取值为1，单位：GB。
+    * 指 ConfigServer CPU核数，取值为1，单位：GB。若为分片集群实例询价，该参数必须设置。
     */
     @SerializedName("ConfigServerCpu")
     @Expose
     private Long ConfigServerCpu;
 
     /**
-    * 分片实例询价必填参数，指 ConfigServer 内存大小，取值为2，单位：GB。
+    * 指 ConfigServer 内存大小，取值为2，单位：GB。若为分片集群实例询价，则该参数必须设置。
     */
     @SerializedName("ConfigServerMemory")
     @Expose
     private Long ConfigServerMemory;
 
     /**
-    * 分片实例询价必填参数，指 ConfigServer 磁盘大小，取值为 20，单位：GB。
+    * 指 ConfigServer 磁盘大小，取值为 20，单位：GB。若为分片集群实例询价，则该参数必须设置。
     */
     @SerializedName("ConfigServerVolume")
     @Expose
@@ -182,20 +178,20 @@ public class InquirePriceCreateDBInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get 每个分片的主从节点数量。
-取值范围：请通过接口[DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567)查询，其返回的数据结构SpecItems中的参数MinNodeNum与MaxNodeNum分别对应其最小值与最大值。 
-     * @return NodeNum 每个分片的主从节点数量。
-取值范围：请通过接口[DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567)查询，其返回的数据结构SpecItems中的参数MinNodeNum与MaxNodeNum分别对应其最小值与最大值。
+     * Get - 创建副本集实例，指每个副本集内主从节点数量。每个副本集所支持的的最大节点数与最小节点数，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
+- 创建分片集群实例，指每个分片的主从节点数量。每个分片所支持的最大节点数与最小节点数，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。 
+     * @return NodeNum - 创建副本集实例，指每个副本集内主从节点数量。每个副本集所支持的的最大节点数与最小节点数，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
+- 创建分片集群实例，指每个分片的主从节点数量。每个分片所支持的最大节点数与最小节点数，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
      */
     public Long getNodeNum() {
         return this.NodeNum;
     }
 
     /**
-     * Set 每个分片的主从节点数量。
-取值范围：请通过接口[DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567)查询，其返回的数据结构SpecItems中的参数MinNodeNum与MaxNodeNum分别对应其最小值与最大值。
-     * @param NodeNum 每个分片的主从节点数量。
-取值范围：请通过接口[DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567)查询，其返回的数据结构SpecItems中的参数MinNodeNum与MaxNodeNum分别对应其最小值与最大值。
+     * Set - 创建副本集实例，指每个副本集内主从节点数量。每个副本集所支持的的最大节点数与最小节点数，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
+- 创建分片集群实例，指每个分片的主从节点数量。每个分片所支持的最大节点数与最小节点数，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
+     * @param NodeNum - 创建副本集实例，指每个副本集内主从节点数量。每个副本集所支持的的最大节点数与最小节点数，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
+- 创建分片集群实例，指每个分片的主从节点数量。每个分片所支持的最大节点数与最小节点数，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。
      */
     public void setNodeNum(Long NodeNum) {
         this.NodeNum = NodeNum;
@@ -251,21 +247,19 @@ public class InquirePriceCreateDBInstancesRequest extends AbstractModel {
 
     /**
      * Get 实例版本信息。具体支持的版本，请通过接口[DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567)查询，其返回的数据结构SpecItems中的参数MongoVersionCode为实例所支持的版本信息。版本信息与版本号对应关系如下：
-- MONGO_3_WT：MongoDB 3.2 WiredTiger存储引擎版本。
-- MONGO_3_ROCKS：MongoDB 3.2 RocksDB存储引擎版本。
-- MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本。
-- MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本。
-- MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。
-- MONGO_44_WT：MongoDB 4.4 WiredTiger存储引擎版本。
-- MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。 
-     * @return MongoVersion 实例版本信息。具体支持的版本，请通过接口[DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567)查询，其返回的数据结构SpecItems中的参数MongoVersionCode为实例所支持的版本信息。版本信息与版本号对应关系如下：
-- MONGO_3_WT：MongoDB 3.2 WiredTiger存储引擎版本。
-- MONGO_3_ROCKS：MongoDB 3.2 RocksDB存储引擎版本。
 - MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本。
 - MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本。
 - MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。
 - MONGO_44_WT：MongoDB 4.4 WiredTiger存储引擎版本。
 - MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
+- MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。 
+     * @return MongoVersion 实例版本信息。具体支持的版本，请通过接口[DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567)查询，其返回的数据结构SpecItems中的参数MongoVersionCode为实例所支持的版本信息。版本信息与版本号对应关系如下：
+- MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本。
+- MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本。
+- MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。
+- MONGO_44_WT：MongoDB 4.4 WiredTiger存储引擎版本。
+- MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
+- MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
      */
     public String getMongoVersion() {
         return this.MongoVersion;
@@ -273,45 +267,43 @@ public class InquirePriceCreateDBInstancesRequest extends AbstractModel {
 
     /**
      * Set 实例版本信息。具体支持的版本，请通过接口[DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567)查询，其返回的数据结构SpecItems中的参数MongoVersionCode为实例所支持的版本信息。版本信息与版本号对应关系如下：
-- MONGO_3_WT：MongoDB 3.2 WiredTiger存储引擎版本。
-- MONGO_3_ROCKS：MongoDB 3.2 RocksDB存储引擎版本。
 - MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本。
 - MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本。
 - MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。
 - MONGO_44_WT：MongoDB 4.4 WiredTiger存储引擎版本。
 - MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
+- MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
      * @param MongoVersion 实例版本信息。具体支持的版本，请通过接口[DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567)查询，其返回的数据结构SpecItems中的参数MongoVersionCode为实例所支持的版本信息。版本信息与版本号对应关系如下：
-- MONGO_3_WT：MongoDB 3.2 WiredTiger存储引擎版本。
-- MONGO_3_ROCKS：MongoDB 3.2 RocksDB存储引擎版本。
 - MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本。
 - MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本。
 - MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。
 - MONGO_44_WT：MongoDB 4.4 WiredTiger存储引擎版本。
 - MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。
+- MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
      */
     public void setMongoVersion(String MongoVersion) {
         this.MongoVersion = MongoVersion;
     }
 
     /**
-     * Get 机器类型。
-- HIO：高IO型。
-- HIO10G：高IO万兆型。 
-     * @return MachineCode 机器类型。
-- HIO：高IO型。
-- HIO10G：高IO万兆型。
+     * Get 产品规格类型。
+- HIO10G：通用高HIO万兆型。
+- HCD：云盘版。 
+     * @return MachineCode 产品规格类型。
+- HIO10G：通用高HIO万兆型。
+- HCD：云盘版。
      */
     public String getMachineCode() {
         return this.MachineCode;
     }
 
     /**
-     * Set 机器类型。
-- HIO：高IO型。
-- HIO10G：高IO万兆型。
-     * @param MachineCode 机器类型。
-- HIO：高IO型。
-- HIO10G：高IO万兆型。
+     * Set 产品规格类型。
+- HIO10G：通用高HIO万兆型。
+- HCD：云盘版。
+     * @param MachineCode 产品规格类型。
+- HIO10G：通用高HIO万兆型。
+- HCD：云盘版。
      */
     public void setMachineCode(String MachineCode) {
         this.MachineCode = MachineCode;
@@ -336,12 +328,10 @@ public class InquirePriceCreateDBInstancesRequest extends AbstractModel {
     /**
      * Get 实例类型。
 - REPLSET：副本集。
-- SHARD：分片集群。
-- STANDALONE：单节点。 
+- SHARD：分片集群。 
      * @return ClusterType 实例类型。
 - REPLSET：副本集。
 - SHARD：分片集群。
-- STANDALONE：单节点。
      */
     public String getClusterType() {
         return this.ClusterType;
@@ -351,48 +341,38 @@ public class InquirePriceCreateDBInstancesRequest extends AbstractModel {
      * Set 实例类型。
 - REPLSET：副本集。
 - SHARD：分片集群。
-- STANDALONE：单节点。
      * @param ClusterType 实例类型。
 - REPLSET：副本集。
 - SHARD：分片集群。
-- STANDALONE：单节点。
      */
     public void setClusterType(String ClusterType) {
         this.ClusterType = ClusterType;
     }
 
     /**
-     * Get 副本集个数。
-- 创建副本集实例时，该参数固定设置为1。
-- 创建分片集群时，指分片数量，请通过接口[DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567)查询，其返回的数据结构SpecItems中的参数MinReplicateSetNum与MaxReplicateSetNum分别对应其最小值与最大值。
-- 若为单节点实例，该参数固定设置为0。 
-     * @return ReplicateSetNum 副本集个数。
-- 创建副本集实例时，该参数固定设置为1。
-- 创建分片集群时，指分片数量，请通过接口[DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567)查询，其返回的数据结构SpecItems中的参数MinReplicateSetNum与MaxReplicateSetNum分别对应其最小值与最大值。
-- 若为单节点实例，该参数固定设置为0。
+     * Get - 创建副本集实例，指副本集数量，该参数只能为1。
+- 创建分片集群实例，指分片的数量。请通过接口[DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567)查询分片数量的取值范围，其返回的数据结构SpecItems中的参数MinReplicateSetNum与MaxReplicateSetNum分别对应其最小值与最大值。 
+     * @return ReplicateSetNum - 创建副本集实例，指副本集数量，该参数只能为1。
+- 创建分片集群实例，指分片的数量。请通过接口[DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567)查询分片数量的取值范围，其返回的数据结构SpecItems中的参数MinReplicateSetNum与MaxReplicateSetNum分别对应其最小值与最大值。
      */
     public Long getReplicateSetNum() {
         return this.ReplicateSetNum;
     }
 
     /**
-     * Set 副本集个数。
-- 创建副本集实例时，该参数固定设置为1。
-- 创建分片集群时，指分片数量，请通过接口[DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567)查询，其返回的数据结构SpecItems中的参数MinReplicateSetNum与MaxReplicateSetNum分别对应其最小值与最大值。
-- 若为单节点实例，该参数固定设置为0。
-     * @param ReplicateSetNum 副本集个数。
-- 创建副本集实例时，该参数固定设置为1。
-- 创建分片集群时，指分片数量，请通过接口[DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567)查询，其返回的数据结构SpecItems中的参数MinReplicateSetNum与MaxReplicateSetNum分别对应其最小值与最大值。
-- 若为单节点实例，该参数固定设置为0。
+     * Set - 创建副本集实例，指副本集数量，该参数只能为1。
+- 创建分片集群实例，指分片的数量。请通过接口[DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567)查询分片数量的取值范围，其返回的数据结构SpecItems中的参数MinReplicateSetNum与MaxReplicateSetNum分别对应其最小值与最大值。
+     * @param ReplicateSetNum - 创建副本集实例，指副本集数量，该参数只能为1。
+- 创建分片集群实例，指分片的数量。请通过接口[DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567)查询分片数量的取值范围，其返回的数据结构SpecItems中的参数MinReplicateSetNum与MaxReplicateSetNum分别对应其最小值与最大值。
      */
     public void setReplicateSetNum(Long ReplicateSetNum) {
         this.ReplicateSetNum = ReplicateSetNum;
     }
 
     /**
-     * Get - 选择包年包月计费模式，即 <b>InstanceChargeType </b>设定为<b>PREPAID</b>时，需设定购买实例的时长。该参数取值可选：[1,2,3,4,5,6,7,8,9,10,11,12,24,36]；单位：月。
+     * Get - 选择包年包月计费模式，即 <b>InstanceChargeType </b>设定为<b>PREPAID</b>时，必须设置该参数，指定购买实例的购买时长。取值可选：[1,2,3,4,5,6,7,8,9,10,11,12,24,36]；单位：月。
 -选择按量计费，即 <b>InstanceChargeType</b> 设定为 **POSTPAID_BY_HOUR** 时，该参数仅可配置为 1。 
-     * @return Period - 选择包年包月计费模式，即 <b>InstanceChargeType </b>设定为<b>PREPAID</b>时，需设定购买实例的时长。该参数取值可选：[1,2,3,4,5,6,7,8,9,10,11,12,24,36]；单位：月。
+     * @return Period - 选择包年包月计费模式，即 <b>InstanceChargeType </b>设定为<b>PREPAID</b>时，必须设置该参数，指定购买实例的购买时长。取值可选：[1,2,3,4,5,6,7,8,9,10,11,12,24,36]；单位：月。
 -选择按量计费，即 <b>InstanceChargeType</b> 设定为 **POSTPAID_BY_HOUR** 时，该参数仅可配置为 1。
      */
     public Long getPeriod() {
@@ -400,9 +380,9 @@ public class InquirePriceCreateDBInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Set - 选择包年包月计费模式，即 <b>InstanceChargeType </b>设定为<b>PREPAID</b>时，需设定购买实例的时长。该参数取值可选：[1,2,3,4,5,6,7,8,9,10,11,12,24,36]；单位：月。
+     * Set - 选择包年包月计费模式，即 <b>InstanceChargeType </b>设定为<b>PREPAID</b>时，必须设置该参数，指定购买实例的购买时长。取值可选：[1,2,3,4,5,6,7,8,9,10,11,12,24,36]；单位：月。
 -选择按量计费，即 <b>InstanceChargeType</b> 设定为 **POSTPAID_BY_HOUR** 时，该参数仅可配置为 1。
-     * @param Period - 选择包年包月计费模式，即 <b>InstanceChargeType </b>设定为<b>PREPAID</b>时，需设定购买实例的时长。该参数取值可选：[1,2,3,4,5,6,7,8,9,10,11,12,24,36]；单位：月。
+     * @param Period - 选择包年包月计费模式，即 <b>InstanceChargeType </b>设定为<b>PREPAID</b>时，必须设置该参数，指定购买实例的购买时长。取值可选：[1,2,3,4,5,6,7,8,9,10,11,12,24,36]；单位：月。
 -选择按量计费，即 <b>InstanceChargeType</b> 设定为 **POSTPAID_BY_HOUR** 时，该参数仅可配置为 1。
      */
     public void setPeriod(Long Period) {
@@ -434,96 +414,96 @@ public class InquirePriceCreateDBInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get 分片实例询价必填参数，指 Mongos CPU核数，取值范围为[1,16]。 
-     * @return MongosCpu 分片实例询价必填参数，指 Mongos CPU核数，取值范围为[1,16]。
+     * Get Mongos CPU 核数，支持1、2、4、8、16。购买分片集群时，必须填写。注意为空时取默认取值为2C。 
+     * @return MongosCpu Mongos CPU 核数，支持1、2、4、8、16。购买分片集群时，必须填写。注意为空时取默认取值为2C。
      */
     public Long getMongosCpu() {
         return this.MongosCpu;
     }
 
     /**
-     * Set 分片实例询价必填参数，指 Mongos CPU核数，取值范围为[1,16]。
-     * @param MongosCpu 分片实例询价必填参数，指 Mongos CPU核数，取值范围为[1,16]。
+     * Set Mongos CPU 核数，支持1、2、4、8、16。购买分片集群时，必须填写。注意为空时取默认取值为2C。
+     * @param MongosCpu Mongos CPU 核数，支持1、2、4、8、16。购买分片集群时，必须填写。注意为空时取默认取值为2C。
      */
     public void setMongosCpu(Long MongosCpu) {
         this.MongosCpu = MongosCpu;
     }
 
     /**
-     * Get 分片实例询价必填参数，指 Mongos 内存，取值范围为[2,32]，单位：GB。 
-     * @return MongosMemory 分片实例询价必填参数，指 Mongos 内存，取值范围为[2,32]，单位：GB。
+     * Get Mongos 内存大小。-  购买分片集群时，必须填写。- 单位：GB，支持1核2GB、2核4GB、4核8GB、8核16GB、16核32GB。注意为空时取默认取值为4G。 
+     * @return MongosMemory Mongos 内存大小。-  购买分片集群时，必须填写。- 单位：GB，支持1核2GB、2核4GB、4核8GB、8核16GB、16核32GB。注意为空时取默认取值为4G。
      */
     public Long getMongosMemory() {
         return this.MongosMemory;
     }
 
     /**
-     * Set 分片实例询价必填参数，指 Mongos 内存，取值范围为[2,32]，单位：GB。
-     * @param MongosMemory 分片实例询价必填参数，指 Mongos 内存，取值范围为[2,32]，单位：GB。
+     * Set Mongos 内存大小。-  购买分片集群时，必须填写。- 单位：GB，支持1核2GB、2核4GB、4核8GB、8核16GB、16核32GB。注意为空时取默认取值为4G。
+     * @param MongosMemory Mongos 内存大小。-  购买分片集群时，必须填写。- 单位：GB，支持1核2GB、2核4GB、4核8GB、8核16GB、16核32GB。注意为空时取默认取值为4G。
      */
     public void setMongosMemory(Long MongosMemory) {
         this.MongosMemory = MongosMemory;
     }
 
     /**
-     * Get 分片实例询价必填参数，指 Mongos 个数，取值范围为[3,32]。 
-     * @return MongosNum 分片实例询价必填参数，指 Mongos 个数，取值范围为[3,32]。
+     * Get 指 Mongos 个数，取值范围为[3,32]。若为分片集群实例询价，则该参数必须设置。注意为空时取默认取值为3个节点。 
+     * @return MongosNum 指 Mongos 个数，取值范围为[3,32]。若为分片集群实例询价，则该参数必须设置。注意为空时取默认取值为3个节点。
      */
     public Long getMongosNum() {
         return this.MongosNum;
     }
 
     /**
-     * Set 分片实例询价必填参数，指 Mongos 个数，取值范围为[3,32]。
-     * @param MongosNum 分片实例询价必填参数，指 Mongos 个数，取值范围为[3,32]。
+     * Set 指 Mongos 个数，取值范围为[3,32]。若为分片集群实例询价，则该参数必须设置。注意为空时取默认取值为3个节点。
+     * @param MongosNum 指 Mongos 个数，取值范围为[3,32]。若为分片集群实例询价，则该参数必须设置。注意为空时取默认取值为3个节点。
      */
     public void setMongosNum(Long MongosNum) {
         this.MongosNum = MongosNum;
     }
 
     /**
-     * Get 分片实例询价必填参数，指 ConfigServer CPU核数，取值为1，单位：GB。 
-     * @return ConfigServerCpu 分片实例询价必填参数，指 ConfigServer CPU核数，取值为1，单位：GB。
+     * Get 指 ConfigServer CPU核数，取值为1，单位：GB。若为分片集群实例询价，该参数必须设置。 
+     * @return ConfigServerCpu 指 ConfigServer CPU核数，取值为1，单位：GB。若为分片集群实例询价，该参数必须设置。
      */
     public Long getConfigServerCpu() {
         return this.ConfigServerCpu;
     }
 
     /**
-     * Set 分片实例询价必填参数，指 ConfigServer CPU核数，取值为1，单位：GB。
-     * @param ConfigServerCpu 分片实例询价必填参数，指 ConfigServer CPU核数，取值为1，单位：GB。
+     * Set 指 ConfigServer CPU核数，取值为1，单位：GB。若为分片集群实例询价，该参数必须设置。
+     * @param ConfigServerCpu 指 ConfigServer CPU核数，取值为1，单位：GB。若为分片集群实例询价，该参数必须设置。
      */
     public void setConfigServerCpu(Long ConfigServerCpu) {
         this.ConfigServerCpu = ConfigServerCpu;
     }
 
     /**
-     * Get 分片实例询价必填参数，指 ConfigServer 内存大小，取值为2，单位：GB。 
-     * @return ConfigServerMemory 分片实例询价必填参数，指 ConfigServer 内存大小，取值为2，单位：GB。
+     * Get 指 ConfigServer 内存大小，取值为2，单位：GB。若为分片集群实例询价，则该参数必须设置。 
+     * @return ConfigServerMemory 指 ConfigServer 内存大小，取值为2，单位：GB。若为分片集群实例询价，则该参数必须设置。
      */
     public Long getConfigServerMemory() {
         return this.ConfigServerMemory;
     }
 
     /**
-     * Set 分片实例询价必填参数，指 ConfigServer 内存大小，取值为2，单位：GB。
-     * @param ConfigServerMemory 分片实例询价必填参数，指 ConfigServer 内存大小，取值为2，单位：GB。
+     * Set 指 ConfigServer 内存大小，取值为2，单位：GB。若为分片集群实例询价，则该参数必须设置。
+     * @param ConfigServerMemory 指 ConfigServer 内存大小，取值为2，单位：GB。若为分片集群实例询价，则该参数必须设置。
      */
     public void setConfigServerMemory(Long ConfigServerMemory) {
         this.ConfigServerMemory = ConfigServerMemory;
     }
 
     /**
-     * Get 分片实例询价必填参数，指 ConfigServer 磁盘大小，取值为 20，单位：GB。 
-     * @return ConfigServerVolume 分片实例询价必填参数，指 ConfigServer 磁盘大小，取值为 20，单位：GB。
+     * Get 指 ConfigServer 磁盘大小，取值为 20，单位：GB。若为分片集群实例询价，则该参数必须设置。 
+     * @return ConfigServerVolume 指 ConfigServer 磁盘大小，取值为 20，单位：GB。若为分片集群实例询价，则该参数必须设置。
      */
     public Long getConfigServerVolume() {
         return this.ConfigServerVolume;
     }
 
     /**
-     * Set 分片实例询价必填参数，指 ConfigServer 磁盘大小，取值为 20，单位：GB。
-     * @param ConfigServerVolume 分片实例询价必填参数，指 ConfigServer 磁盘大小，取值为 20，单位：GB。
+     * Set 指 ConfigServer 磁盘大小，取值为 20，单位：GB。若为分片集群实例询价，则该参数必须设置。
+     * @param ConfigServerVolume 指 ConfigServer 磁盘大小，取值为 20，单位：GB。若为分片集群实例询价，则该参数必须设置。
      */
     public void setConfigServerVolume(Long ConfigServerVolume) {
         this.ConfigServerVolume = ConfigServerVolume;

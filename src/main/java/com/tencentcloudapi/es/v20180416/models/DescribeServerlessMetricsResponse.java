@@ -31,6 +31,34 @@ public class DescribeServerlessMetricsResponse extends AbstractModel {
     private Float Storage;
 
     /**
+    * IndexTraffic指标值，单位byte
+    */
+    @SerializedName("IndexTraffic")
+    @Expose
+    private Float IndexTraffic;
+
+    /**
+    * 读请求数，单位次数
+    */
+    @SerializedName("ReadReqTimes")
+    @Expose
+    private Long ReadReqTimes;
+
+    /**
+    * 写请求数，单位次数
+    */
+    @SerializedName("WriteReqTimes")
+    @Expose
+    private Long WriteReqTimes;
+
+    /**
+    * 文档数量，单位个数
+    */
+    @SerializedName("DocCount")
+    @Expose
+    private Long DocCount;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -51,6 +79,70 @@ public class DescribeServerlessMetricsResponse extends AbstractModel {
      */
     public void setStorage(Float Storage) {
         this.Storage = Storage;
+    }
+
+    /**
+     * Get IndexTraffic指标值，单位byte 
+     * @return IndexTraffic IndexTraffic指标值，单位byte
+     */
+    public Float getIndexTraffic() {
+        return this.IndexTraffic;
+    }
+
+    /**
+     * Set IndexTraffic指标值，单位byte
+     * @param IndexTraffic IndexTraffic指标值，单位byte
+     */
+    public void setIndexTraffic(Float IndexTraffic) {
+        this.IndexTraffic = IndexTraffic;
+    }
+
+    /**
+     * Get 读请求数，单位次数 
+     * @return ReadReqTimes 读请求数，单位次数
+     */
+    public Long getReadReqTimes() {
+        return this.ReadReqTimes;
+    }
+
+    /**
+     * Set 读请求数，单位次数
+     * @param ReadReqTimes 读请求数，单位次数
+     */
+    public void setReadReqTimes(Long ReadReqTimes) {
+        this.ReadReqTimes = ReadReqTimes;
+    }
+
+    /**
+     * Get 写请求数，单位次数 
+     * @return WriteReqTimes 写请求数，单位次数
+     */
+    public Long getWriteReqTimes() {
+        return this.WriteReqTimes;
+    }
+
+    /**
+     * Set 写请求数，单位次数
+     * @param WriteReqTimes 写请求数，单位次数
+     */
+    public void setWriteReqTimes(Long WriteReqTimes) {
+        this.WriteReqTimes = WriteReqTimes;
+    }
+
+    /**
+     * Get 文档数量，单位个数 
+     * @return DocCount 文档数量，单位个数
+     */
+    public Long getDocCount() {
+        return this.DocCount;
+    }
+
+    /**
+     * Set 文档数量，单位个数
+     * @param DocCount 文档数量，单位个数
+     */
+    public void setDocCount(Long DocCount) {
+        this.DocCount = DocCount;
     }
 
     /**
@@ -80,6 +172,18 @@ public class DescribeServerlessMetricsResponse extends AbstractModel {
         if (source.Storage != null) {
             this.Storage = new Float(source.Storage);
         }
+        if (source.IndexTraffic != null) {
+            this.IndexTraffic = new Float(source.IndexTraffic);
+        }
+        if (source.ReadReqTimes != null) {
+            this.ReadReqTimes = new Long(source.ReadReqTimes);
+        }
+        if (source.WriteReqTimes != null) {
+            this.WriteReqTimes = new Long(source.WriteReqTimes);
+        }
+        if (source.DocCount != null) {
+            this.DocCount = new Long(source.DocCount);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -91,6 +195,10 @@ public class DescribeServerlessMetricsResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Storage", this.Storage);
+        this.setParamSimple(map, prefix + "IndexTraffic", this.IndexTraffic);
+        this.setParamSimple(map, prefix + "ReadReqTimes", this.ReadReqTimes);
+        this.setParamSimple(map, prefix + "WriteReqTimes", this.WriteReqTimes);
+        this.setParamSimple(map, prefix + "DocCount", this.DocCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

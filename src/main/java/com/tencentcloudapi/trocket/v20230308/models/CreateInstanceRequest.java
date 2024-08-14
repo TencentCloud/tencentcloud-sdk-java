@@ -35,7 +35,7 @@ PLATINUM 铂金版
     private String InstanceType;
 
     /**
-    * 实例名称
+    * 集群名称
     */
     @SerializedName("Name")
     @Expose
@@ -63,21 +63,28 @@ PLATINUM 铂金版
     private Tag [] TagList;
 
     /**
-    * 实例绑定的VPC信息
+    * 集群绑定的VPC信息，必填
     */
     @SerializedName("VpcList")
     @Expose
     private VpcInfo [] VpcList;
 
     /**
-    * 是否开启公网
+    * 是否开启公网，默认值为false表示不开启
     */
     @SerializedName("EnablePublic")
     @Expose
     private Boolean EnablePublic;
 
     /**
-    * 公网带宽（单位：兆）
+    * 公网是否按流量计费，默认值为false表示不按流量计费
+    */
+    @SerializedName("BillingFlow")
+    @Expose
+    private Boolean BillingFlow;
+
+    /**
+    * 公网带宽（单位：兆），默认值为0。如果开启公网，该字段必须为大于0的正整数
     */
     @SerializedName("Bandwidth")
     @Expose
@@ -98,21 +105,21 @@ PLATINUM 铂金版
     private Long MessageRetention;
 
     /**
-    * 付费模式（0: 后付费；1: 预付费）
+    * 付费模式（0: 后付费；1: 预付费），默认值为0
     */
     @SerializedName("PayMode")
     @Expose
     private Long PayMode;
 
     /**
-    * 是否自动续费（0: 不自动续费；1: 自动续费）
+    * 是否自动续费（0: 不自动续费；1: 自动续费），默认值为0
     */
     @SerializedName("RenewFlag")
     @Expose
     private Long RenewFlag;
 
     /**
-    * 购买时长（单位：月）
+    * 购买时长（单位：月），默认值为1
     */
     @SerializedName("TimeSpan")
     @Expose
@@ -158,16 +165,16 @@ PLATINUM 铂金版
     }
 
     /**
-     * Get 实例名称 
-     * @return Name 实例名称
+     * Get 集群名称 
+     * @return Name 集群名称
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 实例名称
-     * @param Name 实例名称
+     * Set 集群名称
+     * @param Name 集群名称
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -222,48 +229,64 @@ PLATINUM 铂金版
     }
 
     /**
-     * Get 实例绑定的VPC信息 
-     * @return VpcList 实例绑定的VPC信息
+     * Get 集群绑定的VPC信息，必填 
+     * @return VpcList 集群绑定的VPC信息，必填
      */
     public VpcInfo [] getVpcList() {
         return this.VpcList;
     }
 
     /**
-     * Set 实例绑定的VPC信息
-     * @param VpcList 实例绑定的VPC信息
+     * Set 集群绑定的VPC信息，必填
+     * @param VpcList 集群绑定的VPC信息，必填
      */
     public void setVpcList(VpcInfo [] VpcList) {
         this.VpcList = VpcList;
     }
 
     /**
-     * Get 是否开启公网 
-     * @return EnablePublic 是否开启公网
+     * Get 是否开启公网，默认值为false表示不开启 
+     * @return EnablePublic 是否开启公网，默认值为false表示不开启
      */
     public Boolean getEnablePublic() {
         return this.EnablePublic;
     }
 
     /**
-     * Set 是否开启公网
-     * @param EnablePublic 是否开启公网
+     * Set 是否开启公网，默认值为false表示不开启
+     * @param EnablePublic 是否开启公网，默认值为false表示不开启
      */
     public void setEnablePublic(Boolean EnablePublic) {
         this.EnablePublic = EnablePublic;
     }
 
     /**
-     * Get 公网带宽（单位：兆） 
-     * @return Bandwidth 公网带宽（单位：兆）
+     * Get 公网是否按流量计费，默认值为false表示不按流量计费 
+     * @return BillingFlow 公网是否按流量计费，默认值为false表示不按流量计费
+     */
+    public Boolean getBillingFlow() {
+        return this.BillingFlow;
+    }
+
+    /**
+     * Set 公网是否按流量计费，默认值为false表示不按流量计费
+     * @param BillingFlow 公网是否按流量计费，默认值为false表示不按流量计费
+     */
+    public void setBillingFlow(Boolean BillingFlow) {
+        this.BillingFlow = BillingFlow;
+    }
+
+    /**
+     * Get 公网带宽（单位：兆），默认值为0。如果开启公网，该字段必须为大于0的正整数 
+     * @return Bandwidth 公网带宽（单位：兆），默认值为0。如果开启公网，该字段必须为大于0的正整数
      */
     public Long getBandwidth() {
         return this.Bandwidth;
     }
 
     /**
-     * Set 公网带宽（单位：兆）
-     * @param Bandwidth 公网带宽（单位：兆）
+     * Set 公网带宽（单位：兆），默认值为0。如果开启公网，该字段必须为大于0的正整数
+     * @param Bandwidth 公网带宽（单位：兆），默认值为0。如果开启公网，该字段必须为大于0的正整数
      */
     public void setBandwidth(Long Bandwidth) {
         this.Bandwidth = Bandwidth;
@@ -302,48 +325,48 @@ PLATINUM 铂金版
     }
 
     /**
-     * Get 付费模式（0: 后付费；1: 预付费） 
-     * @return PayMode 付费模式（0: 后付费；1: 预付费）
+     * Get 付费模式（0: 后付费；1: 预付费），默认值为0 
+     * @return PayMode 付费模式（0: 后付费；1: 预付费），默认值为0
      */
     public Long getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set 付费模式（0: 后付费；1: 预付费）
-     * @param PayMode 付费模式（0: 后付费；1: 预付费）
+     * Set 付费模式（0: 后付费；1: 预付费），默认值为0
+     * @param PayMode 付费模式（0: 后付费；1: 预付费），默认值为0
      */
     public void setPayMode(Long PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get 是否自动续费（0: 不自动续费；1: 自动续费） 
-     * @return RenewFlag 是否自动续费（0: 不自动续费；1: 自动续费）
+     * Get 是否自动续费（0: 不自动续费；1: 自动续费），默认值为0 
+     * @return RenewFlag 是否自动续费（0: 不自动续费；1: 自动续费），默认值为0
      */
     public Long getRenewFlag() {
         return this.RenewFlag;
     }
 
     /**
-     * Set 是否自动续费（0: 不自动续费；1: 自动续费）
-     * @param RenewFlag 是否自动续费（0: 不自动续费；1: 自动续费）
+     * Set 是否自动续费（0: 不自动续费；1: 自动续费），默认值为0
+     * @param RenewFlag 是否自动续费（0: 不自动续费；1: 自动续费），默认值为0
      */
     public void setRenewFlag(Long RenewFlag) {
         this.RenewFlag = RenewFlag;
     }
 
     /**
-     * Get 购买时长（单位：月） 
-     * @return TimeSpan 购买时长（单位：月）
+     * Get 购买时长（单位：月），默认值为1 
+     * @return TimeSpan 购买时长（单位：月），默认值为1
      */
     public Long getTimeSpan() {
         return this.TimeSpan;
     }
 
     /**
-     * Set 购买时长（单位：月）
-     * @param TimeSpan 购买时长（单位：月）
+     * Set 购买时长（单位：月），默认值为1
+     * @param TimeSpan 购买时长（单位：月），默认值为1
      */
     public void setTimeSpan(Long TimeSpan) {
         this.TimeSpan = TimeSpan;
@@ -400,6 +423,9 @@ PLATINUM 铂金版
         if (source.EnablePublic != null) {
             this.EnablePublic = new Boolean(source.EnablePublic);
         }
+        if (source.BillingFlow != null) {
+            this.BillingFlow = new Boolean(source.BillingFlow);
+        }
         if (source.Bandwidth != null) {
             this.Bandwidth = new Long(source.Bandwidth);
         }
@@ -438,6 +464,7 @@ PLATINUM 铂金版
         this.setParamArrayObj(map, prefix + "TagList.", this.TagList);
         this.setParamArrayObj(map, prefix + "VpcList.", this.VpcList);
         this.setParamSimple(map, prefix + "EnablePublic", this.EnablePublic);
+        this.setParamSimple(map, prefix + "BillingFlow", this.BillingFlow);
         this.setParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
         this.setParamArrayObj(map, prefix + "IpRules.", this.IpRules);
         this.setParamSimple(map, prefix + "MessageRetention", this.MessageRetention);

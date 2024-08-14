@@ -46,6 +46,7 @@ public class BankCardVerificationResponse extends AbstractModel {
 '-4': '银行卡号码有误'
 '-17': '验证中心服务繁忙'
 '-18': '验证次数超限，请次日重试'
+'-19': '该证件号暂不支持核验，当前仅支持二代身份证'	
     */
     @SerializedName("Result")
     @Expose
@@ -87,7 +88,8 @@ public class BankCardVerificationResponse extends AbstractModel {
 '-3': '身份证号码有误'
 '-4': '银行卡号码有误'
 '-17': '验证中心服务繁忙'
-'-18': '验证次数超限，请次日重试' 
+'-18': '验证次数超限，请次日重试'
+'-19': '该证件号暂不支持核验，当前仅支持二代身份证'	 
      * @return Result 认证结果码
 收费结果码：
 '0': '认证通过'
@@ -110,6 +112,7 @@ public class BankCardVerificationResponse extends AbstractModel {
 '-4': '银行卡号码有误'
 '-17': '验证中心服务繁忙'
 '-18': '验证次数超限，请次日重试'
+'-19': '该证件号暂不支持核验，当前仅支持二代身份证'	
      */
     public String getResult() {
         return this.Result;
@@ -138,6 +141,7 @@ public class BankCardVerificationResponse extends AbstractModel {
 '-4': '银行卡号码有误'
 '-17': '验证中心服务繁忙'
 '-18': '验证次数超限，请次日重试'
+'-19': '该证件号暂不支持核验，当前仅支持二代身份证'	
      * @param Result 认证结果码
 收费结果码：
 '0': '认证通过'
@@ -160,6 +164,7 @@ public class BankCardVerificationResponse extends AbstractModel {
 '-4': '银行卡号码有误'
 '-17': '验证中心服务繁忙'
 '-18': '验证次数超限，请次日重试'
+'-19': '该证件号暂不支持核验，当前仅支持二代身份证'	
      */
     public void setResult(String Result) {
         this.Result = Result;

@@ -55,7 +55,7 @@ public class GeneralBasicOCRRequest extends AbstractModel {
 zh：中英混合
 zh_rare：支持英文、数字、中文生僻字、繁体字，特殊符号等
 auto：自动
-mix：混合语种
+mix：多语言混排场景中,自动识别混合语言的文本
 jap：日语
 kor：韩语
 spa：西班牙语
@@ -172,7 +172,7 @@ ara：阿拉伯语
 zh：中英混合
 zh_rare：支持英文、数字、中文生僻字、繁体字，特殊符号等
 auto：自动
-mix：混合语种
+mix：多语言混排场景中,自动识别混合语言的文本
 jap：日语
 kor：韩语
 spa：西班牙语
@@ -198,7 +198,7 @@ ara：阿拉伯语
 zh：中英混合
 zh_rare：支持英文、数字、中文生僻字、繁体字，特殊符号等
 auto：自动
-mix：混合语种
+mix：多语言混排场景中,自动识别混合语言的文本
 jap：日语
 kor：韩语
 spa：西班牙语
@@ -230,7 +230,7 @@ ara：阿拉伯语
 zh：中英混合
 zh_rare：支持英文、数字、中文生僻字、繁体字，特殊符号等
 auto：自动
-mix：混合语种
+mix：多语言混排场景中,自动识别混合语言的文本
 jap：日语
 kor：韩语
 spa：西班牙语
@@ -256,7 +256,7 @@ ara：阿拉伯语
 zh：中英混合
 zh_rare：支持英文、数字、中文生僻字、繁体字，特殊符号等
 auto：自动
-mix：混合语种
+mix：多语言混排场景中,自动识别混合语言的文本
 jap：日语
 kor：韩语
 spa：西班牙语

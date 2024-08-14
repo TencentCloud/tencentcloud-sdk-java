@@ -68,6 +68,38 @@ AlreadyExists 已存在
     private String ImportStatus;
 
     /**
+    * 4.x的命名空间，出参使用
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NamespaceV4")
+    @Expose
+    private String NamespaceV4;
+
+    /**
+    * 4.x的消费组名，出参使用
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("GroupNameV4")
+    @Expose
+    private String GroupNameV4;
+
+    /**
+    * 4.x的完整命名空间，出参使用
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FullNamespaceV4")
+    @Expose
+    private String FullNamespaceV4;
+
+    /**
+    * 是否为顺序投递，5.0有效
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ConsumeMessageOrderly")
+    @Expose
+    private Boolean ConsumeMessageOrderly;
+
+    /**
      * Get 消费组名称
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return GroupName 消费组名称
@@ -183,6 +215,86 @@ AlreadyExists 已存在
         this.ImportStatus = ImportStatus;
     }
 
+    /**
+     * Get 4.x的命名空间，出参使用
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NamespaceV4 4.x的命名空间，出参使用
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getNamespaceV4() {
+        return this.NamespaceV4;
+    }
+
+    /**
+     * Set 4.x的命名空间，出参使用
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NamespaceV4 4.x的命名空间，出参使用
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNamespaceV4(String NamespaceV4) {
+        this.NamespaceV4 = NamespaceV4;
+    }
+
+    /**
+     * Get 4.x的消费组名，出参使用
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return GroupNameV4 4.x的消费组名，出参使用
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getGroupNameV4() {
+        return this.GroupNameV4;
+    }
+
+    /**
+     * Set 4.x的消费组名，出参使用
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param GroupNameV4 4.x的消费组名，出参使用
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setGroupNameV4(String GroupNameV4) {
+        this.GroupNameV4 = GroupNameV4;
+    }
+
+    /**
+     * Get 4.x的完整命名空间，出参使用
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FullNamespaceV4 4.x的完整命名空间，出参使用
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getFullNamespaceV4() {
+        return this.FullNamespaceV4;
+    }
+
+    /**
+     * Set 4.x的完整命名空间，出参使用
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FullNamespaceV4 4.x的完整命名空间，出参使用
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFullNamespaceV4(String FullNamespaceV4) {
+        this.FullNamespaceV4 = FullNamespaceV4;
+    }
+
+    /**
+     * Get 是否为顺序投递，5.0有效
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ConsumeMessageOrderly 是否为顺序投递，5.0有效
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getConsumeMessageOrderly() {
+        return this.ConsumeMessageOrderly;
+    }
+
+    /**
+     * Set 是否为顺序投递，5.0有效
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ConsumeMessageOrderly 是否为顺序投递，5.0有效
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setConsumeMessageOrderly(Boolean ConsumeMessageOrderly) {
+        this.ConsumeMessageOrderly = ConsumeMessageOrderly;
+    }
+
     public SourceClusterGroupConfig() {
     }
 
@@ -206,6 +318,18 @@ AlreadyExists 已存在
         if (source.ImportStatus != null) {
             this.ImportStatus = new String(source.ImportStatus);
         }
+        if (source.NamespaceV4 != null) {
+            this.NamespaceV4 = new String(source.NamespaceV4);
+        }
+        if (source.GroupNameV4 != null) {
+            this.GroupNameV4 = new String(source.GroupNameV4);
+        }
+        if (source.FullNamespaceV4 != null) {
+            this.FullNamespaceV4 = new String(source.FullNamespaceV4);
+        }
+        if (source.ConsumeMessageOrderly != null) {
+            this.ConsumeMessageOrderly = new Boolean(source.ConsumeMessageOrderly);
+        }
     }
 
 
@@ -218,6 +342,10 @@ AlreadyExists 已存在
         this.setParamSimple(map, prefix + "Imported", this.Imported);
         this.setParamSimple(map, prefix + "Namespace", this.Namespace);
         this.setParamSimple(map, prefix + "ImportStatus", this.ImportStatus);
+        this.setParamSimple(map, prefix + "NamespaceV4", this.NamespaceV4);
+        this.setParamSimple(map, prefix + "GroupNameV4", this.GroupNameV4);
+        this.setParamSimple(map, prefix + "FullNamespaceV4", this.FullNamespaceV4);
+        this.setParamSimple(map, prefix + "ConsumeMessageOrderly", this.ConsumeMessageOrderly);
 
     }
 }
