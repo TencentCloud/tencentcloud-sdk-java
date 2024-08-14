@@ -402,6 +402,17 @@ public class MnaClient extends AbstractClient{
     }
 
     /**
+     *购买一次性授权License
+     * @param req OrderPerLicenseRequest
+     * @return OrderPerLicenseResponse
+     * @throws TencentCloudSDKException
+     */
+    public OrderPerLicenseResponse OrderPerLicense(OrderPerLicenseRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "OrderPerLicense", OrderPerLicenseResponse.class);
+    }
+
+    /**
      *设置用户流量告警信息接口，通过该接口设置流量包告警阈值以及告警时回调的url和key
      * @param req SetNotifyUrlRequest
      * @return SetNotifyUrlResponse

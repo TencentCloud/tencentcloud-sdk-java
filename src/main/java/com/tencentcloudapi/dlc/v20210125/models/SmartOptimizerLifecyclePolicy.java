@@ -48,6 +48,22 @@ public class SmartOptimizerLifecyclePolicy extends AbstractModel {
     private Boolean DropTable;
 
     /**
+    * 过期字段
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ExpiredField")
+    @Expose
+    private String ExpiredField;
+
+    /**
+    * 过期字段格式
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ExpiredFieldFormat")
+    @Expose
+    private String ExpiredFieldFormat;
+
+    /**
      * Get 生命周期启用
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return LifecycleEnable 生命周期启用
@@ -107,6 +123,46 @@ public class SmartOptimizerLifecyclePolicy extends AbstractModel {
         this.DropTable = DropTable;
     }
 
+    /**
+     * Get 过期字段
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ExpiredField 过期字段
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getExpiredField() {
+        return this.ExpiredField;
+    }
+
+    /**
+     * Set 过期字段
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExpiredField 过期字段
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExpiredField(String ExpiredField) {
+        this.ExpiredField = ExpiredField;
+    }
+
+    /**
+     * Get 过期字段格式
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ExpiredFieldFormat 过期字段格式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getExpiredFieldFormat() {
+        return this.ExpiredFieldFormat;
+    }
+
+    /**
+     * Set 过期字段格式
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExpiredFieldFormat 过期字段格式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExpiredFieldFormat(String ExpiredFieldFormat) {
+        this.ExpiredFieldFormat = ExpiredFieldFormat;
+    }
+
     public SmartOptimizerLifecyclePolicy() {
     }
 
@@ -124,6 +180,12 @@ public class SmartOptimizerLifecyclePolicy extends AbstractModel {
         if (source.DropTable != null) {
             this.DropTable = new Boolean(source.DropTable);
         }
+        if (source.ExpiredField != null) {
+            this.ExpiredField = new String(source.ExpiredField);
+        }
+        if (source.ExpiredFieldFormat != null) {
+            this.ExpiredFieldFormat = new String(source.ExpiredFieldFormat);
+        }
     }
 
 
@@ -134,6 +196,8 @@ public class SmartOptimizerLifecyclePolicy extends AbstractModel {
         this.setParamSimple(map, prefix + "LifecycleEnable", this.LifecycleEnable);
         this.setParamSimple(map, prefix + "Expiration", this.Expiration);
         this.setParamSimple(map, prefix + "DropTable", this.DropTable);
+        this.setParamSimple(map, prefix + "ExpiredField", this.ExpiredField);
+        this.setParamSimple(map, prefix + "ExpiredFieldFormat", this.ExpiredFieldFormat);
 
     }
 }

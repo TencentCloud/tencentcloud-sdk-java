@@ -52,6 +52,38 @@ public class LakeFsInfo extends AbstractModel {
     private Long CreateTimeStamp;
 
     /**
+    * 是否是用户默认桶，0：默认桶，1：非默认桶
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DefaultBucket")
+    @Expose
+    private Long DefaultBucket;
+
+    /**
+    * 托管存储short name
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ShortName")
+    @Expose
+    private String ShortName;
+
+    /**
+    * 桶描述信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Description")
+    @Expose
+    private String Description;
+
+    /**
+    * 托管桶状态，当前取值为：creating、bind、readOnly、isolate
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Status")
+    @Expose
+    private String Status;
+
+    /**
      * Get 托管存储名称 
      * @return Name 托管存储名称
      */
@@ -115,6 +147,86 @@ public class LakeFsInfo extends AbstractModel {
         this.CreateTimeStamp = CreateTimeStamp;
     }
 
+    /**
+     * Get 是否是用户默认桶，0：默认桶，1：非默认桶
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DefaultBucket 是否是用户默认桶，0：默认桶，1：非默认桶
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getDefaultBucket() {
+        return this.DefaultBucket;
+    }
+
+    /**
+     * Set 是否是用户默认桶，0：默认桶，1：非默认桶
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DefaultBucket 是否是用户默认桶，0：默认桶，1：非默认桶
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDefaultBucket(Long DefaultBucket) {
+        this.DefaultBucket = DefaultBucket;
+    }
+
+    /**
+     * Get 托管存储short name
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ShortName 托管存储short name
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getShortName() {
+        return this.ShortName;
+    }
+
+    /**
+     * Set 托管存储short name
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ShortName 托管存储short name
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setShortName(String ShortName) {
+        this.ShortName = ShortName;
+    }
+
+    /**
+     * Get 桶描述信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Description 桶描述信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDescription() {
+        return this.Description;
+    }
+
+    /**
+     * Set 桶描述信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Description 桶描述信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDescription(String Description) {
+        this.Description = Description;
+    }
+
+    /**
+     * Get 托管桶状态，当前取值为：creating、bind、readOnly、isolate
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Status 托管桶状态，当前取值为：creating、bind、readOnly、isolate
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 托管桶状态，当前取值为：creating、bind、readOnly、isolate
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Status 托管桶状态，当前取值为：creating、bind、readOnly、isolate
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStatus(String Status) {
+        this.Status = Status;
+    }
+
     public LakeFsInfo() {
     }
 
@@ -135,6 +247,18 @@ public class LakeFsInfo extends AbstractModel {
         if (source.CreateTimeStamp != null) {
             this.CreateTimeStamp = new Long(source.CreateTimeStamp);
         }
+        if (source.DefaultBucket != null) {
+            this.DefaultBucket = new Long(source.DefaultBucket);
+        }
+        if (source.ShortName != null) {
+            this.ShortName = new String(source.ShortName);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
     }
 
 
@@ -146,6 +270,10 @@ public class LakeFsInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "SpaceUsedSize", this.SpaceUsedSize);
         this.setParamSimple(map, prefix + "CreateTimeStamp", this.CreateTimeStamp);
+        this.setParamSimple(map, prefix + "DefaultBucket", this.DefaultBucket);
+        this.setParamSimple(map, prefix + "ShortName", this.ShortName);
+        this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "Status", this.Status);
 
     }
 }

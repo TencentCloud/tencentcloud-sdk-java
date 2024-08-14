@@ -31,6 +31,13 @@ public class DescribeCNAMERequest extends AbstractModel {
     private String ClusterId;
 
     /**
+    * 域名类型，0:拉流域名 1:推流域名
+    */
+    @SerializedName("DomainType")
+    @Expose
+    private Long DomainType;
+
+    /**
      * Get 服务节点 ID（从查询域名可绑定服务节点接口DescribeDomainRegion中获取） 
      * @return ClusterId 服务节点 ID（从查询域名可绑定服务节点接口DescribeDomainRegion中获取）
      */
@@ -46,6 +53,22 @@ public class DescribeCNAMERequest extends AbstractModel {
         this.ClusterId = ClusterId;
     }
 
+    /**
+     * Get 域名类型，0:拉流域名 1:推流域名 
+     * @return DomainType 域名类型，0:拉流域名 1:推流域名
+     */
+    public Long getDomainType() {
+        return this.DomainType;
+    }
+
+    /**
+     * Set 域名类型，0:拉流域名 1:推流域名
+     * @param DomainType 域名类型，0:拉流域名 1:推流域名
+     */
+    public void setDomainType(Long DomainType) {
+        this.DomainType = DomainType;
+    }
+
     public DescribeCNAMERequest() {
     }
 
@@ -57,6 +80,9 @@ public class DescribeCNAMERequest extends AbstractModel {
         if (source.ClusterId != null) {
             this.ClusterId = new String(source.ClusterId);
         }
+        if (source.DomainType != null) {
+            this.DomainType = new Long(source.DomainType);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class DescribeCNAMERequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
+        this.setParamSimple(map, prefix + "DomainType", this.DomainType);
 
     }
 }

@@ -88,6 +88,14 @@ public class DescribeDomainData extends AbstractModel {
     private String CertId;
 
     /**
+    * 域名类型 0:拉流域名 1:推流域名
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DomainType")
+    @Expose
+    private Long DomainType;
+
+    /**
      * Get 域名ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Id 域名ID
@@ -247,6 +255,26 @@ public class DescribeDomainData extends AbstractModel {
         this.CertId = CertId;
     }
 
+    /**
+     * Get 域名类型 0:拉流域名 1:推流域名
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DomainType 域名类型 0:拉流域名 1:推流域名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getDomainType() {
+        return this.DomainType;
+    }
+
+    /**
+     * Set 域名类型 0:拉流域名 1:推流域名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DomainType 域名类型 0:拉流域名 1:推流域名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDomainType(Long DomainType) {
+        this.DomainType = DomainType;
+    }
+
     public DescribeDomainData() {
     }
 
@@ -279,6 +307,9 @@ public class DescribeDomainData extends AbstractModel {
         if (source.CertId != null) {
             this.CertId = new String(source.CertId);
         }
+        if (source.DomainType != null) {
+            this.DomainType = new Long(source.DomainType);
+        }
     }
 
 
@@ -294,6 +325,7 @@ public class DescribeDomainData extends AbstractModel {
         this.setParamSimple(map, prefix + "ClusterName", this.ClusterName);
         this.setParamSimple(map, prefix + "AppId", this.AppId);
         this.setParamSimple(map, prefix + "CertId", this.CertId);
+        this.setParamSimple(map, prefix + "DomainType", this.DomainType);
 
     }
 }

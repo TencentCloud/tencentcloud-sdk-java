@@ -57,6 +57,9 @@ public enum MnaErrorCode {
     // 相同加速间隔时间过短。
      OPERATIONDENIED_CREATEQOSEXCEEDLIMIT("OperationDenied.CreateQosExceedLimit"),
      
+    // 该设备未开启永久授权
+     OPERATIONDENIED_DEVICENOTFOUND("OperationDenied.DeviceNotFound"),
+     
     // SN已存在
      OPERATIONDENIED_DUPLICATESN("OperationDenied.DuplicateSN"),
      
@@ -83,6 +86,9 @@ public enum MnaErrorCode {
      
     // 无支付权限
      OPERATIONDENIED_NOTALLOWEDTOPAY("OperationDenied.NotAllowedToPay"),
+     
+    // 重复购买
+     OPERATIONDENIED_REPEATPURCHASE("OperationDenied.RepeatPurchase"),
      
     // 请求运营商加速超时。
      OPERATIONDENIED_REQUESTQOSTIMEOUT("OperationDenied.RequestQosTimeout"),

@@ -152,6 +152,13 @@ public class ChatCompletionsRequest extends AbstractModel {
     private Boolean Citation;
 
     /**
+    * 是否开启极速版搜索，默认false，不开启；在开启且命中搜索时，会启用极速版搜索，流式输出首字返回更快。
+    */
+    @SerializedName("EnableSpeedSearch")
+    @Expose
+    private Boolean EnableSpeedSearch;
+
+    /**
      * Get 模型名称，可选值包括 hunyuan-lite、hunyuan-standard、hunyuan-standard-256K、hunyuan-pro、 hunyuan-code、 hunyuan-role、 hunyuan-functioncall、 hunyuan-vision。
 各模型介绍请阅读 [产品概述](https://cloud.tencent.com/document/product/1729/104753) 中的说明。
 
@@ -519,6 +526,22 @@ public class ChatCompletionsRequest extends AbstractModel {
         this.Citation = Citation;
     }
 
+    /**
+     * Get 是否开启极速版搜索，默认false，不开启；在开启且命中搜索时，会启用极速版搜索，流式输出首字返回更快。 
+     * @return EnableSpeedSearch 是否开启极速版搜索，默认false，不开启；在开启且命中搜索时，会启用极速版搜索，流式输出首字返回更快。
+     */
+    public Boolean getEnableSpeedSearch() {
+        return this.EnableSpeedSearch;
+    }
+
+    /**
+     * Set 是否开启极速版搜索，默认false，不开启；在开启且命中搜索时，会启用极速版搜索，流式输出首字返回更快。
+     * @param EnableSpeedSearch 是否开启极速版搜索，默认false，不开启；在开启且命中搜索时，会启用极速版搜索，流式输出首字返回更快。
+     */
+    public void setEnableSpeedSearch(Boolean EnableSpeedSearch) {
+        this.EnableSpeedSearch = EnableSpeedSearch;
+    }
+
     public ChatCompletionsRequest() {
     }
 
@@ -569,6 +592,9 @@ public class ChatCompletionsRequest extends AbstractModel {
         if (source.Citation != null) {
             this.Citation = new Boolean(source.Citation);
         }
+        if (source.EnableSpeedSearch != null) {
+            this.EnableSpeedSearch = new Boolean(source.EnableSpeedSearch);
+        }
     }
 
 
@@ -588,6 +614,7 @@ public class ChatCompletionsRequest extends AbstractModel {
         this.setParamObj(map, prefix + "CustomTool.", this.CustomTool);
         this.setParamSimple(map, prefix + "SearchInfo", this.SearchInfo);
         this.setParamSimple(map, prefix + "Citation", this.Citation);
+        this.setParamSimple(map, prefix + "EnableSpeedSearch", this.EnableSpeedSearch);
 
     }
 }

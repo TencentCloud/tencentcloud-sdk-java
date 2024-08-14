@@ -118,6 +118,16 @@ false-否
     private Long [] ApproverSignTypes;
 
     /**
+    * 签署方是否可以转他人处理
+
+<ul><li> **false** : ( 默认)可以转他人处理</li>
+<li> **true** :不可以转他人处理</li></ul>
+    */
+    @SerializedName("NoTransfer")
+    @Expose
+    private Boolean NoTransfer;
+
+    /**
      * Get 合同参与方的角色ID 
      * @return RecipientId 合同参与方的角色ID
      */
@@ -361,6 +371,34 @@ false-否
         this.ApproverSignTypes = ApproverSignTypes;
     }
 
+    /**
+     * Get 签署方是否可以转他人处理
+
+<ul><li> **false** : ( 默认)可以转他人处理</li>
+<li> **true** :不可以转他人处理</li></ul> 
+     * @return NoTransfer 签署方是否可以转他人处理
+
+<ul><li> **false** : ( 默认)可以转他人处理</li>
+<li> **true** :不可以转他人处理</li></ul>
+     */
+    public Boolean getNoTransfer() {
+        return this.NoTransfer;
+    }
+
+    /**
+     * Set 签署方是否可以转他人处理
+
+<ul><li> **false** : ( 默认)可以转他人处理</li>
+<li> **true** :不可以转他人处理</li></ul>
+     * @param NoTransfer 签署方是否可以转他人处理
+
+<ul><li> **false** : ( 默认)可以转他人处理</li>
+<li> **true** :不可以转他人处理</li></ul>
+     */
+    public void setNoTransfer(Boolean NoTransfer) {
+        this.NoTransfer = NoTransfer;
+    }
+
     public Recipient() {
     }
 
@@ -408,6 +446,9 @@ false-否
                 this.ApproverSignTypes[i] = new Long(source.ApproverSignTypes[i]);
             }
         }
+        if (source.NoTransfer != null) {
+            this.NoTransfer = new Boolean(source.NoTransfer);
+        }
     }
 
 
@@ -426,6 +467,7 @@ false-否
         this.setParamSimple(map, prefix + "IsPromoter", this.IsPromoter);
         this.setParamArraySimple(map, prefix + "ApproverVerifyTypes.", this.ApproverVerifyTypes);
         this.setParamArraySimple(map, prefix + "ApproverSignTypes.", this.ApproverSignTypes);
+        this.setParamSimple(map, prefix + "NoTransfer", this.NoTransfer);
 
     }
 }

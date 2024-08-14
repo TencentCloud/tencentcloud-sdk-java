@@ -149,6 +149,22 @@ public class EssClient extends AbstractClient{
     }
 
     /**
+     *此接口用于获取企业批量认证链接-单链接包含多条认证流。
+
+前提条件：已调用 [CreateBatchOrganizationRegistrationTasks创建企业批量认证链接任务接口](https://qian.tencent.com/developers/companyApis/organizations/CreateBatchOrganizationRegistrationTasks) 和[查询企业批量认证链接DescribeBatchOrganizationRegistrationUrls](https://qian.tencent.com/developers/companyApis/organizations/DescribeBatchOrganizationRegistrationUrls) 确保认证任务已经完成。
+
+异步任务的处理完成时间视当前已提交的任务量、任务的复杂程度等因素决定，正常情况下 3~5 秒即可完成，但也可能需要更长的时间。
+此链接包含多条认证流程，使用该链接可以批量的对企业进行认证。
+     * @param req CreateBatchOrganizationAuthorizationUrlRequest
+     * @return CreateBatchOrganizationAuthorizationUrlResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateBatchOrganizationAuthorizationUrlResponse CreateBatchOrganizationAuthorizationUrl(CreateBatchOrganizationAuthorizationUrlRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateBatchOrganizationAuthorizationUrl", CreateBatchOrganizationAuthorizationUrlResponse.class);
+    }
+
+    /**
      *本接口（CreateBatchOrganizationRegistrationTasks）用于批量创建企业认证链接
 该接口为异步提交任务接口,需要跟查询企业批量认证链接(DescribeBatchOrganizationRegistrationUrls) 配合使用.
 

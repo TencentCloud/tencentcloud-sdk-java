@@ -249,6 +249,22 @@ public class DescribeDeviceData extends AbstractModel {
     private Long SubscribeSwitch;
 
     /**
+    * RTMP推流地址自定义appName
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AppName")
+    @Expose
+    private String AppName;
+
+    /**
+    * RTMP推流地址自定义streamName
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("StreamName")
+    @Expose
+    private String StreamName;
+
+    /**
      * Get 设备ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return DeviceId 设备ID
@@ -812,6 +828,46 @@ public class DescribeDeviceData extends AbstractModel {
         this.SubscribeSwitch = SubscribeSwitch;
     }
 
+    /**
+     * Get RTMP推流地址自定义appName
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AppName RTMP推流地址自定义appName
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAppName() {
+        return this.AppName;
+    }
+
+    /**
+     * Set RTMP推流地址自定义appName
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AppName RTMP推流地址自定义appName
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAppName(String AppName) {
+        this.AppName = AppName;
+    }
+
+    /**
+     * Get RTMP推流地址自定义streamName
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return StreamName RTMP推流地址自定义streamName
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getStreamName() {
+        return this.StreamName;
+    }
+
+    /**
+     * Set RTMP推流地址自定义streamName
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param StreamName RTMP推流地址自定义streamName
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStreamName(String StreamName) {
+        this.StreamName = StreamName;
+    }
+
     public DescribeDeviceData() {
     }
 
@@ -904,6 +960,12 @@ public class DescribeDeviceData extends AbstractModel {
         if (source.SubscribeSwitch != null) {
             this.SubscribeSwitch = new Long(source.SubscribeSwitch);
         }
+        if (source.AppName != null) {
+            this.AppName = new String(source.AppName);
+        }
+        if (source.StreamName != null) {
+            this.StreamName = new String(source.StreamName);
+        }
     }
 
 
@@ -939,6 +1001,8 @@ public class DescribeDeviceData extends AbstractModel {
         this.setParamSimple(map, prefix + "Manufacturer", this.Manufacturer);
         this.setParamSimple(map, prefix + "AudioSwitch", this.AudioSwitch);
         this.setParamSimple(map, prefix + "SubscribeSwitch", this.SubscribeSwitch);
+        this.setParamSimple(map, prefix + "AppName", this.AppName);
+        this.setParamSimple(map, prefix + "StreamName", this.StreamName);
 
     }
 }

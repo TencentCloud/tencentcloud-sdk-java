@@ -122,6 +122,20 @@ public class AddUserDeviceRequest extends AbstractModel {
     private String SNCode;
 
     /**
+    * RTMP推流地址自定义AppName（仅RTMP需要，支持英文、数字组合限制32个字符内）
+    */
+    @SerializedName("AppName")
+    @Expose
+    private String AppName;
+
+    /**
+    * RTMP推流地址自定义StreamName（仅RTMP需要，支持英文、数字组合限制32个字符内）
+    */
+    @SerializedName("StreamName")
+    @Expose
+    private String StreamName;
+
+    /**
      * Get 设备名称，仅支持中文、英文、数字、_、-，长度不超过32个字符；（设备名称无需全局唯一，可以重复） 
      * @return Name 设备名称，仅支持中文、英文、数字、_、-，长度不超过32个字符；（设备名称无需全局唯一，可以重复）
      */
@@ -345,6 +359,38 @@ public class AddUserDeviceRequest extends AbstractModel {
         this.SNCode = SNCode;
     }
 
+    /**
+     * Get RTMP推流地址自定义AppName（仅RTMP需要，支持英文、数字组合限制32个字符内） 
+     * @return AppName RTMP推流地址自定义AppName（仅RTMP需要，支持英文、数字组合限制32个字符内）
+     */
+    public String getAppName() {
+        return this.AppName;
+    }
+
+    /**
+     * Set RTMP推流地址自定义AppName（仅RTMP需要，支持英文、数字组合限制32个字符内）
+     * @param AppName RTMP推流地址自定义AppName（仅RTMP需要，支持英文、数字组合限制32个字符内）
+     */
+    public void setAppName(String AppName) {
+        this.AppName = AppName;
+    }
+
+    /**
+     * Get RTMP推流地址自定义StreamName（仅RTMP需要，支持英文、数字组合限制32个字符内） 
+     * @return StreamName RTMP推流地址自定义StreamName（仅RTMP需要，支持英文、数字组合限制32个字符内）
+     */
+    public String getStreamName() {
+        return this.StreamName;
+    }
+
+    /**
+     * Set RTMP推流地址自定义StreamName（仅RTMP需要，支持英文、数字组合限制32个字符内）
+     * @param StreamName RTMP推流地址自定义StreamName（仅RTMP需要，支持英文、数字组合限制32个字符内）
+     */
+    public void setStreamName(String StreamName) {
+        this.StreamName = StreamName;
+    }
+
     public AddUserDeviceRequest() {
     }
 
@@ -395,6 +441,12 @@ public class AddUserDeviceRequest extends AbstractModel {
         if (source.SNCode != null) {
             this.SNCode = new String(source.SNCode);
         }
+        if (source.AppName != null) {
+            this.AppName = new String(source.AppName);
+        }
+        if (source.StreamName != null) {
+            this.StreamName = new String(source.StreamName);
+        }
     }
 
 
@@ -416,6 +468,8 @@ public class AddUserDeviceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Port", this.Port);
         this.setParamSimple(map, prefix + "Username", this.Username);
         this.setParamSimple(map, prefix + "SNCode", this.SNCode);
+        this.setParamSimple(map, prefix + "AppName", this.AppName);
+        this.setParamSimple(map, prefix + "StreamName", this.StreamName);
 
     }
 }

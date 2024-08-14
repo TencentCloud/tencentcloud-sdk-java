@@ -64,6 +64,22 @@ public class AgentConfig extends AbstractModel {
     private String WelcomeMessage;
 
     /**
+    * 智能打断模式，默认为0，0表示服务端自动打断，1表示服务端不打断，由端上发送打断信令进行打断
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InterruptMode")
+    @Expose
+    private Long InterruptMode;
+
+    /**
+    * InterruptMode为0时使用，单位为毫秒，默认为500ms。表示服务端检测到持续InterruptSpeechDuration毫秒的人声则进行打断。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InterruptSpeechDuration")
+    @Expose
+    private Long InterruptSpeechDuration;
+
+    /**
      * Get 机器人的UserId，用于进房发起任务。【注意】这个UserId不能与当前房间内的主播观众[UserId](https://cloud.tencent.com/document/product/647/46351#userid)重复。如果一个房间发起多个任务时，机器人的UserId也不能相互重复，否则会中断前一个任务。需要保证机器人UserId在房间内唯一。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return UserId 机器人的UserId，用于进房发起任务。【注意】这个UserId不能与当前房间内的主播观众[UserId](https://cloud.tencent.com/document/product/647/46351#userid)重复。如果一个房间发起多个任务时，机器人的UserId也不能相互重复，否则会中断前一个任务。需要保证机器人UserId在房间内唯一。
@@ -163,6 +179,46 @@ public class AgentConfig extends AbstractModel {
         this.WelcomeMessage = WelcomeMessage;
     }
 
+    /**
+     * Get 智能打断模式，默认为0，0表示服务端自动打断，1表示服务端不打断，由端上发送打断信令进行打断
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InterruptMode 智能打断模式，默认为0，0表示服务端自动打断，1表示服务端不打断，由端上发送打断信令进行打断
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getInterruptMode() {
+        return this.InterruptMode;
+    }
+
+    /**
+     * Set 智能打断模式，默认为0，0表示服务端自动打断，1表示服务端不打断，由端上发送打断信令进行打断
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InterruptMode 智能打断模式，默认为0，0表示服务端自动打断，1表示服务端不打断，由端上发送打断信令进行打断
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInterruptMode(Long InterruptMode) {
+        this.InterruptMode = InterruptMode;
+    }
+
+    /**
+     * Get InterruptMode为0时使用，单位为毫秒，默认为500ms。表示服务端检测到持续InterruptSpeechDuration毫秒的人声则进行打断。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InterruptSpeechDuration InterruptMode为0时使用，单位为毫秒，默认为500ms。表示服务端检测到持续InterruptSpeechDuration毫秒的人声则进行打断。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getInterruptSpeechDuration() {
+        return this.InterruptSpeechDuration;
+    }
+
+    /**
+     * Set InterruptMode为0时使用，单位为毫秒，默认为500ms。表示服务端检测到持续InterruptSpeechDuration毫秒的人声则进行打断。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InterruptSpeechDuration InterruptMode为0时使用，单位为毫秒，默认为500ms。表示服务端检测到持续InterruptSpeechDuration毫秒的人声则进行打断。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInterruptSpeechDuration(Long InterruptSpeechDuration) {
+        this.InterruptSpeechDuration = InterruptSpeechDuration;
+    }
+
     public AgentConfig() {
     }
 
@@ -186,6 +242,12 @@ public class AgentConfig extends AbstractModel {
         if (source.WelcomeMessage != null) {
             this.WelcomeMessage = new String(source.WelcomeMessage);
         }
+        if (source.InterruptMode != null) {
+            this.InterruptMode = new Long(source.InterruptMode);
+        }
+        if (source.InterruptSpeechDuration != null) {
+            this.InterruptSpeechDuration = new Long(source.InterruptSpeechDuration);
+        }
     }
 
 
@@ -198,6 +260,8 @@ public class AgentConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "TargetUserId", this.TargetUserId);
         this.setParamSimple(map, prefix + "MaxIdleTime", this.MaxIdleTime);
         this.setParamSimple(map, prefix + "WelcomeMessage", this.WelcomeMessage);
+        this.setParamSimple(map, prefix + "InterruptMode", this.InterruptMode);
+        this.setParamSimple(map, prefix + "InterruptSpeechDuration", this.InterruptSpeechDuration);
 
     }
 }

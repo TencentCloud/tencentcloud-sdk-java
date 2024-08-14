@@ -23,6 +23,34 @@ import java.util.HashMap;
 
 public class SmartOptimizerWrittenPolicy extends AbstractModel {
 
+    /**
+    * none/enable/disable/default
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("WrittenEnable")
+    @Expose
+    private String WrittenEnable;
+
+    /**
+     * Get none/enable/disable/default
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WrittenEnable none/enable/disable/default
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getWrittenEnable() {
+        return this.WrittenEnable;
+    }
+
+    /**
+     * Set none/enable/disable/default
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WrittenEnable none/enable/disable/default
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWrittenEnable(String WrittenEnable) {
+        this.WrittenEnable = WrittenEnable;
+    }
+
     public SmartOptimizerWrittenPolicy() {
     }
 
@@ -31,6 +59,9 @@ public class SmartOptimizerWrittenPolicy extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public SmartOptimizerWrittenPolicy(SmartOptimizerWrittenPolicy source) {
+        if (source.WrittenEnable != null) {
+            this.WrittenEnable = new String(source.WrittenEnable);
+        }
     }
 
 
@@ -38,6 +69,7 @@ public class SmartOptimizerWrittenPolicy extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "WrittenEnable", this.WrittenEnable);
 
     }
 }
