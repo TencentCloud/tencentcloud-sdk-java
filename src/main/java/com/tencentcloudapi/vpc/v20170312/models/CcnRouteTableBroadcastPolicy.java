@@ -52,6 +52,38 @@ public class CcnRouteTableBroadcastPolicy extends AbstractModel {
     private String Description;
 
     /**
+    * as-path操作
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OperateAsPath")
+    @Expose
+    private String OperateAsPath;
+
+    /**
+    * as-path操作模式
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AsPathOperateMode")
+    @Expose
+    private String AsPathOperateMode;
+
+    /**
+    * community操作
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OperateCommunitySet")
+    @Expose
+    private String [] OperateCommunitySet;
+
+    /**
+    * community操作模式
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CommunityOperateMode")
+    @Expose
+    private String CommunityOperateMode;
+
+    /**
      * Get 路由条件 
      * @return RouteConditions 路由条件
      */
@@ -115,6 +147,86 @@ public class CcnRouteTableBroadcastPolicy extends AbstractModel {
         this.Description = Description;
     }
 
+    /**
+     * Get as-path操作
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OperateAsPath as-path操作
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getOperateAsPath() {
+        return this.OperateAsPath;
+    }
+
+    /**
+     * Set as-path操作
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OperateAsPath as-path操作
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOperateAsPath(String OperateAsPath) {
+        this.OperateAsPath = OperateAsPath;
+    }
+
+    /**
+     * Get as-path操作模式
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AsPathOperateMode as-path操作模式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAsPathOperateMode() {
+        return this.AsPathOperateMode;
+    }
+
+    /**
+     * Set as-path操作模式
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AsPathOperateMode as-path操作模式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAsPathOperateMode(String AsPathOperateMode) {
+        this.AsPathOperateMode = AsPathOperateMode;
+    }
+
+    /**
+     * Get community操作
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OperateCommunitySet community操作
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getOperateCommunitySet() {
+        return this.OperateCommunitySet;
+    }
+
+    /**
+     * Set community操作
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OperateCommunitySet community操作
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOperateCommunitySet(String [] OperateCommunitySet) {
+        this.OperateCommunitySet = OperateCommunitySet;
+    }
+
+    /**
+     * Get community操作模式
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CommunityOperateMode community操作模式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCommunityOperateMode() {
+        return this.CommunityOperateMode;
+    }
+
+    /**
+     * Set community操作模式
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CommunityOperateMode community操作模式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCommunityOperateMode(String CommunityOperateMode) {
+        this.CommunityOperateMode = CommunityOperateMode;
+    }
+
     public CcnRouteTableBroadcastPolicy() {
     }
 
@@ -141,6 +253,21 @@ public class CcnRouteTableBroadcastPolicy extends AbstractModel {
         if (source.Description != null) {
             this.Description = new String(source.Description);
         }
+        if (source.OperateAsPath != null) {
+            this.OperateAsPath = new String(source.OperateAsPath);
+        }
+        if (source.AsPathOperateMode != null) {
+            this.AsPathOperateMode = new String(source.AsPathOperateMode);
+        }
+        if (source.OperateCommunitySet != null) {
+            this.OperateCommunitySet = new String[source.OperateCommunitySet.length];
+            for (int i = 0; i < source.OperateCommunitySet.length; i++) {
+                this.OperateCommunitySet[i] = new String(source.OperateCommunitySet[i]);
+            }
+        }
+        if (source.CommunityOperateMode != null) {
+            this.CommunityOperateMode = new String(source.CommunityOperateMode);
+        }
     }
 
 
@@ -152,6 +279,10 @@ public class CcnRouteTableBroadcastPolicy extends AbstractModel {
         this.setParamArrayObj(map, prefix + "BroadcastConditions.", this.BroadcastConditions);
         this.setParamSimple(map, prefix + "Action", this.Action);
         this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "OperateAsPath", this.OperateAsPath);
+        this.setParamSimple(map, prefix + "AsPathOperateMode", this.AsPathOperateMode);
+        this.setParamArraySimple(map, prefix + "OperateCommunitySet.", this.OperateCommunitySet);
+        this.setParamSimple(map, prefix + "CommunityOperateMode", this.CommunityOperateMode);
 
     }
 }

@@ -38,6 +38,13 @@ public class CreateVulFixTaskQuuids extends AbstractModel {
     private String [] Quuids;
 
     /**
+    * 修复方式 0组件更新或者安装补丁,1禁用服务
+    */
+    @SerializedName("FixMethod")
+    @Expose
+    private Long FixMethod;
+
+    /**
      * Get 漏洞id 
      * @return VulId 漏洞id
      */
@@ -69,6 +76,22 @@ public class CreateVulFixTaskQuuids extends AbstractModel {
         this.Quuids = Quuids;
     }
 
+    /**
+     * Get 修复方式 0组件更新或者安装补丁,1禁用服务 
+     * @return FixMethod 修复方式 0组件更新或者安装补丁,1禁用服务
+     */
+    public Long getFixMethod() {
+        return this.FixMethod;
+    }
+
+    /**
+     * Set 修复方式 0组件更新或者安装补丁,1禁用服务
+     * @param FixMethod 修复方式 0组件更新或者安装补丁,1禁用服务
+     */
+    public void setFixMethod(Long FixMethod) {
+        this.FixMethod = FixMethod;
+    }
+
     public CreateVulFixTaskQuuids() {
     }
 
@@ -86,6 +109,9 @@ public class CreateVulFixTaskQuuids extends AbstractModel {
                 this.Quuids[i] = new String(source.Quuids[i]);
             }
         }
+        if (source.FixMethod != null) {
+            this.FixMethod = new Long(source.FixMethod);
+        }
     }
 
 
@@ -95,6 +121,7 @@ public class CreateVulFixTaskQuuids extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VulId", this.VulId);
         this.setParamArraySimple(map, prefix + "Quuids.", this.Quuids);
+        this.setParamSimple(map, prefix + "FixMethod", this.FixMethod);
 
     }
 }

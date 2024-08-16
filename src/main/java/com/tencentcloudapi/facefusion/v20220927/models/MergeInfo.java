@@ -24,14 +24,20 @@ import java.util.HashMap;
 public class MergeInfo extends AbstractModel {
 
     /**
-    * 输入图片base64
+    * 输入图片base64。
+●base64 和 url 必须提供一个，如果都提供以 url 为准。
+●素材图片限制：图片中面部尺寸大于34 * 34；图片尺寸大于64 * 64。（图片编码之后可能会大30%左右，建议合理控制图片大小）。
+●支持图片格式：支持jpg或png
     */
     @SerializedName("Image")
     @Expose
     private String Image;
 
     /**
-    * 输入图片url
+    * 输入图片url。
+●base64 和 url 必须提供一个，如果都提供以 url 为准。
+●素材图片限制：图片中面部尺寸大于34 * 34；图片尺寸大于64 * 64。（图片编码之后可能会大30%左右，建议合理控制图片大小）。
+●支持图片格式：支持jpg或png
     */
     @SerializedName("Url")
     @Expose
@@ -39,6 +45,7 @@ public class MergeInfo extends AbstractModel {
 
     /**
     * 上传的图片人脸位置信息（人脸框）
+Width、Height >= 30。
     */
     @SerializedName("InputImageFaceRect")
     @Expose
@@ -53,46 +60,73 @@ public class MergeInfo extends AbstractModel {
 
     /**
     * 模板中人脸位置信息(人脸框)，不填默认取最大人脸。此字段仅适用于图片融合自定义模板素材场景。
+Width、Height >= 30。
     */
     @SerializedName("TemplateFaceRect")
     @Expose
     private FaceRect TemplateFaceRect;
 
     /**
-     * Get 输入图片base64 
-     * @return Image 输入图片base64
+     * Get 输入图片base64。
+●base64 和 url 必须提供一个，如果都提供以 url 为准。
+●素材图片限制：图片中面部尺寸大于34 * 34；图片尺寸大于64 * 64。（图片编码之后可能会大30%左右，建议合理控制图片大小）。
+●支持图片格式：支持jpg或png 
+     * @return Image 输入图片base64。
+●base64 和 url 必须提供一个，如果都提供以 url 为准。
+●素材图片限制：图片中面部尺寸大于34 * 34；图片尺寸大于64 * 64。（图片编码之后可能会大30%左右，建议合理控制图片大小）。
+●支持图片格式：支持jpg或png
      */
     public String getImage() {
         return this.Image;
     }
 
     /**
-     * Set 输入图片base64
-     * @param Image 输入图片base64
+     * Set 输入图片base64。
+●base64 和 url 必须提供一个，如果都提供以 url 为准。
+●素材图片限制：图片中面部尺寸大于34 * 34；图片尺寸大于64 * 64。（图片编码之后可能会大30%左右，建议合理控制图片大小）。
+●支持图片格式：支持jpg或png
+     * @param Image 输入图片base64。
+●base64 和 url 必须提供一个，如果都提供以 url 为准。
+●素材图片限制：图片中面部尺寸大于34 * 34；图片尺寸大于64 * 64。（图片编码之后可能会大30%左右，建议合理控制图片大小）。
+●支持图片格式：支持jpg或png
      */
     public void setImage(String Image) {
         this.Image = Image;
     }
 
     /**
-     * Get 输入图片url 
-     * @return Url 输入图片url
+     * Get 输入图片url。
+●base64 和 url 必须提供一个，如果都提供以 url 为准。
+●素材图片限制：图片中面部尺寸大于34 * 34；图片尺寸大于64 * 64。（图片编码之后可能会大30%左右，建议合理控制图片大小）。
+●支持图片格式：支持jpg或png 
+     * @return Url 输入图片url。
+●base64 和 url 必须提供一个，如果都提供以 url 为准。
+●素材图片限制：图片中面部尺寸大于34 * 34；图片尺寸大于64 * 64。（图片编码之后可能会大30%左右，建议合理控制图片大小）。
+●支持图片格式：支持jpg或png
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set 输入图片url
-     * @param Url 输入图片url
+     * Set 输入图片url。
+●base64 和 url 必须提供一个，如果都提供以 url 为准。
+●素材图片限制：图片中面部尺寸大于34 * 34；图片尺寸大于64 * 64。（图片编码之后可能会大30%左右，建议合理控制图片大小）。
+●支持图片格式：支持jpg或png
+     * @param Url 输入图片url。
+●base64 和 url 必须提供一个，如果都提供以 url 为准。
+●素材图片限制：图片中面部尺寸大于34 * 34；图片尺寸大于64 * 64。（图片编码之后可能会大30%左右，建议合理控制图片大小）。
+●支持图片格式：支持jpg或png
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * Get 上传的图片人脸位置信息（人脸框） 
+     * Get 上传的图片人脸位置信息（人脸框）
+Width、Height >= 30。 
      * @return InputImageFaceRect 上传的图片人脸位置信息（人脸框）
+Width、Height >= 30。
      */
     public FaceRect getInputImageFaceRect() {
         return this.InputImageFaceRect;
@@ -100,7 +134,9 @@ public class MergeInfo extends AbstractModel {
 
     /**
      * Set 上传的图片人脸位置信息（人脸框）
+Width、Height >= 30。
      * @param InputImageFaceRect 上传的图片人脸位置信息（人脸框）
+Width、Height >= 30。
      */
     public void setInputImageFaceRect(FaceRect InputImageFaceRect) {
         this.InputImageFaceRect = InputImageFaceRect;
@@ -123,8 +159,10 @@ public class MergeInfo extends AbstractModel {
     }
 
     /**
-     * Get 模板中人脸位置信息(人脸框)，不填默认取最大人脸。此字段仅适用于图片融合自定义模板素材场景。 
+     * Get 模板中人脸位置信息(人脸框)，不填默认取最大人脸。此字段仅适用于图片融合自定义模板素材场景。
+Width、Height >= 30。 
      * @return TemplateFaceRect 模板中人脸位置信息(人脸框)，不填默认取最大人脸。此字段仅适用于图片融合自定义模板素材场景。
+Width、Height >= 30。
      */
     public FaceRect getTemplateFaceRect() {
         return this.TemplateFaceRect;
@@ -132,7 +170,9 @@ public class MergeInfo extends AbstractModel {
 
     /**
      * Set 模板中人脸位置信息(人脸框)，不填默认取最大人脸。此字段仅适用于图片融合自定义模板素材场景。
+Width、Height >= 30。
      * @param TemplateFaceRect 模板中人脸位置信息(人脸框)，不填默认取最大人脸。此字段仅适用于图片融合自定义模板素材场景。
+Width、Height >= 30。
      */
     public void setTemplateFaceRect(FaceRect TemplateFaceRect) {
         this.TemplateFaceRect = TemplateFaceRect;

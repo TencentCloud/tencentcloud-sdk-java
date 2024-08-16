@@ -59,6 +59,13 @@ public class ModifyStaffRequest extends AbstractModel {
     private String Nick;
 
     /**
+    * 座席工号
+    */
+    @SerializedName("StaffNo")
+    @Expose
+    private String StaffNo;
+
+    /**
     * 绑定技能组ID列表
     */
     @SerializedName("SkillGroupIds")
@@ -160,6 +167,22 @@ public class ModifyStaffRequest extends AbstractModel {
     }
 
     /**
+     * Get 座席工号 
+     * @return StaffNo 座席工号
+     */
+    public String getStaffNo() {
+        return this.StaffNo;
+    }
+
+    /**
+     * Set 座席工号
+     * @param StaffNo 座席工号
+     */
+    public void setStaffNo(String StaffNo) {
+        this.StaffNo = StaffNo;
+    }
+
+    /**
      * Get 绑定技能组ID列表 
      * @return SkillGroupIds 绑定技能组ID列表
      */
@@ -230,6 +253,9 @@ public class ModifyStaffRequest extends AbstractModel {
         if (source.Nick != null) {
             this.Nick = new String(source.Nick);
         }
+        if (source.StaffNo != null) {
+            this.StaffNo = new String(source.StaffNo);
+        }
         if (source.SkillGroupIds != null) {
             this.SkillGroupIds = new Long[source.SkillGroupIds.length];
             for (int i = 0; i < source.SkillGroupIds.length; i++) {
@@ -254,6 +280,7 @@ public class ModifyStaffRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Phone", this.Phone);
         this.setParamSimple(map, prefix + "Nick", this.Nick);
+        this.setParamSimple(map, prefix + "StaffNo", this.StaffNo);
         this.setParamArraySimple(map, prefix + "SkillGroupIds.", this.SkillGroupIds);
         this.setParamSimple(map, prefix + "UseMobileCallOut", this.UseMobileCallOut);
         this.setParamSimple(map, prefix + "UseMobileAccept", this.UseMobileAccept);

@@ -54,7 +54,7 @@ public class CloudStorageAIServiceTask extends AbstractModel {
     /**
     * 云存 AI 服务类型。可能取值：
 
-- `PackageDetect`：包裹检测
+- `RealtimeObjectDetect`：目标检测
 - `Highlight`：视频浓缩
     */
     @SerializedName("ServiceType")
@@ -109,6 +109,13 @@ public class CloudStorageAIServiceTask extends AbstractModel {
     @SerializedName("UpdateTime")
     @Expose
     private Long UpdateTime;
+
+    /**
+    * 自定义任务 ID
+    */
+    @SerializedName("CustomId")
+    @Expose
+    private String CustomId;
 
     /**
      * Get 云存 AI 服务任务 ID 
@@ -177,11 +184,11 @@ public class CloudStorageAIServiceTask extends AbstractModel {
     /**
      * Get 云存 AI 服务类型。可能取值：
 
-- `PackageDetect`：包裹检测
+- `RealtimeObjectDetect`：目标检测
 - `Highlight`：视频浓缩 
      * @return ServiceType 云存 AI 服务类型。可能取值：
 
-- `PackageDetect`：包裹检测
+- `RealtimeObjectDetect`：目标检测
 - `Highlight`：视频浓缩
      */
     public String getServiceType() {
@@ -191,11 +198,11 @@ public class CloudStorageAIServiceTask extends AbstractModel {
     /**
      * Set 云存 AI 服务类型。可能取值：
 
-- `PackageDetect`：包裹检测
+- `RealtimeObjectDetect`：目标检测
 - `Highlight`：视频浓缩
      * @param ServiceType 云存 AI 服务类型。可能取值：
 
-- `PackageDetect`：包裹检测
+- `RealtimeObjectDetect`：目标检测
 - `Highlight`：视频浓缩
      */
     public void setServiceType(String ServiceType) {
@@ -314,6 +321,22 @@ public class CloudStorageAIServiceTask extends AbstractModel {
         this.UpdateTime = UpdateTime;
     }
 
+    /**
+     * Get 自定义任务 ID 
+     * @return CustomId 自定义任务 ID
+     */
+    public String getCustomId() {
+        return this.CustomId;
+    }
+
+    /**
+     * Set 自定义任务 ID
+     * @param CustomId 自定义任务 ID
+     */
+    public void setCustomId(String CustomId) {
+        this.CustomId = CustomId;
+    }
+
     public CloudStorageAIServiceTask() {
     }
 
@@ -361,6 +384,9 @@ public class CloudStorageAIServiceTask extends AbstractModel {
         if (source.UpdateTime != null) {
             this.UpdateTime = new Long(source.UpdateTime);
         }
+        if (source.CustomId != null) {
+            this.CustomId = new String(source.CustomId);
+        }
     }
 
 
@@ -380,6 +406,7 @@ public class CloudStorageAIServiceTask extends AbstractModel {
         this.setParamArraySimple(map, prefix + "Files.", this.Files);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamSimple(map, prefix + "CustomId", this.CustomId);
 
     }
 }

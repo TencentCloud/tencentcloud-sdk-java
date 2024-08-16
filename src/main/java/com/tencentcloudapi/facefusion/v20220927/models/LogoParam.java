@@ -24,14 +24,16 @@ import java.util.HashMap;
 public class LogoParam extends AbstractModel {
 
     /**
-    * 标识图片位于融合结果图中的坐标，将按照坐标对标识图片进行位置和大小的拉伸匹配
+    * 标识图片位于融合结果图中的坐标，将按照坐标对标识图片进行位置和大小的拉伸匹配。
     */
     @SerializedName("LogoRect")
     @Expose
     private FaceRect LogoRect;
 
     /**
-    * 标识图片Url地址
+    * 标识图片Url地址。
+●base64 和 url 必须提供一个，如果都提供以 url 为准。
+●支持图片格式：支持jpg或png。
     */
     @SerializedName("LogoUrl")
     @Expose
@@ -39,46 +41,60 @@ public class LogoParam extends AbstractModel {
 
     /**
     * 标识图片base64
+●base64 和 url 必须提供一个，如果都提供以 url 为准。
+●支持图片格式：支持jpg或png。
     */
     @SerializedName("LogoImage")
     @Expose
     private String LogoImage;
 
     /**
-     * Get 标识图片位于融合结果图中的坐标，将按照坐标对标识图片进行位置和大小的拉伸匹配 
-     * @return LogoRect 标识图片位于融合结果图中的坐标，将按照坐标对标识图片进行位置和大小的拉伸匹配
+     * Get 标识图片位于融合结果图中的坐标，将按照坐标对标识图片进行位置和大小的拉伸匹配。 
+     * @return LogoRect 标识图片位于融合结果图中的坐标，将按照坐标对标识图片进行位置和大小的拉伸匹配。
      */
     public FaceRect getLogoRect() {
         return this.LogoRect;
     }
 
     /**
-     * Set 标识图片位于融合结果图中的坐标，将按照坐标对标识图片进行位置和大小的拉伸匹配
-     * @param LogoRect 标识图片位于融合结果图中的坐标，将按照坐标对标识图片进行位置和大小的拉伸匹配
+     * Set 标识图片位于融合结果图中的坐标，将按照坐标对标识图片进行位置和大小的拉伸匹配。
+     * @param LogoRect 标识图片位于融合结果图中的坐标，将按照坐标对标识图片进行位置和大小的拉伸匹配。
      */
     public void setLogoRect(FaceRect LogoRect) {
         this.LogoRect = LogoRect;
     }
 
     /**
-     * Get 标识图片Url地址 
-     * @return LogoUrl 标识图片Url地址
+     * Get 标识图片Url地址。
+●base64 和 url 必须提供一个，如果都提供以 url 为准。
+●支持图片格式：支持jpg或png。 
+     * @return LogoUrl 标识图片Url地址。
+●base64 和 url 必须提供一个，如果都提供以 url 为准。
+●支持图片格式：支持jpg或png。
      */
     public String getLogoUrl() {
         return this.LogoUrl;
     }
 
     /**
-     * Set 标识图片Url地址
-     * @param LogoUrl 标识图片Url地址
+     * Set 标识图片Url地址。
+●base64 和 url 必须提供一个，如果都提供以 url 为准。
+●支持图片格式：支持jpg或png。
+     * @param LogoUrl 标识图片Url地址。
+●base64 和 url 必须提供一个，如果都提供以 url 为准。
+●支持图片格式：支持jpg或png。
      */
     public void setLogoUrl(String LogoUrl) {
         this.LogoUrl = LogoUrl;
     }
 
     /**
-     * Get 标识图片base64 
+     * Get 标识图片base64
+●base64 和 url 必须提供一个，如果都提供以 url 为准。
+●支持图片格式：支持jpg或png。 
      * @return LogoImage 标识图片base64
+●base64 和 url 必须提供一个，如果都提供以 url 为准。
+●支持图片格式：支持jpg或png。
      */
     public String getLogoImage() {
         return this.LogoImage;
@@ -86,7 +102,11 @@ public class LogoParam extends AbstractModel {
 
     /**
      * Set 标识图片base64
+●base64 和 url 必须提供一个，如果都提供以 url 为准。
+●支持图片格式：支持jpg或png。
      * @param LogoImage 标识图片base64
+●base64 和 url 必须提供一个，如果都提供以 url 为准。
+●支持图片格式：支持jpg或png。
      */
     public void setLogoImage(String LogoImage) {
         this.LogoImage = LogoImage;

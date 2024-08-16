@@ -77,6 +77,24 @@ public class DescribeInstancesRequest extends AbstractModel {
     private Long Limit;
 
     /**
+    * 指定排序字段 。取值范围： "EXPIRED_TIME"：依据实例的到期时间排序。 
+ 不传入此字段时, 优先返回实例状态为“待回收”的实例, 其余实例以“创建时间”倒序返回。
+    */
+    @SerializedName("OrderField")
+    @Expose
+    private String OrderField;
+
+    /**
+    * 输出实例列表的排列顺序。取值范围：
+"ASC"：升序排列。
+"DESC"：降序排列。
+默认按升序排序。当传入该字段时，必须指定OrderField。
+    */
+    @SerializedName("Order")
+    @Expose
+    private String Order;
+
+    /**
      * Get 实例 ID 列表。每次请求批量实例的上限为 100。可通过[DescribeInstances](https://cloud.tencent.com/document/api/1207/47573)接口返回值中的InstanceId获取。 
      * @return InstanceIds 实例 ID 列表。每次请求批量实例的上限为 100。可通过[DescribeInstances](https://cloud.tencent.com/document/api/1207/47573)接口返回值中的InstanceId获取。
      */
@@ -240,6 +258,54 @@ public class DescribeInstancesRequest extends AbstractModel {
         this.Limit = Limit;
     }
 
+    /**
+     * Get 指定排序字段 。取值范围： "EXPIRED_TIME"：依据实例的到期时间排序。 
+ 不传入此字段时, 优先返回实例状态为“待回收”的实例, 其余实例以“创建时间”倒序返回。 
+     * @return OrderField 指定排序字段 。取值范围： "EXPIRED_TIME"：依据实例的到期时间排序。 
+ 不传入此字段时, 优先返回实例状态为“待回收”的实例, 其余实例以“创建时间”倒序返回。
+     */
+    public String getOrderField() {
+        return this.OrderField;
+    }
+
+    /**
+     * Set 指定排序字段 。取值范围： "EXPIRED_TIME"：依据实例的到期时间排序。 
+ 不传入此字段时, 优先返回实例状态为“待回收”的实例, 其余实例以“创建时间”倒序返回。
+     * @param OrderField 指定排序字段 。取值范围： "EXPIRED_TIME"：依据实例的到期时间排序。 
+ 不传入此字段时, 优先返回实例状态为“待回收”的实例, 其余实例以“创建时间”倒序返回。
+     */
+    public void setOrderField(String OrderField) {
+        this.OrderField = OrderField;
+    }
+
+    /**
+     * Get 输出实例列表的排列顺序。取值范围：
+"ASC"：升序排列。
+"DESC"：降序排列。
+默认按升序排序。当传入该字段时，必须指定OrderField。 
+     * @return Order 输出实例列表的排列顺序。取值范围：
+"ASC"：升序排列。
+"DESC"：降序排列。
+默认按升序排序。当传入该字段时，必须指定OrderField。
+     */
+    public String getOrder() {
+        return this.Order;
+    }
+
+    /**
+     * Set 输出实例列表的排列顺序。取值范围：
+"ASC"：升序排列。
+"DESC"：降序排列。
+默认按升序排序。当传入该字段时，必须指定OrderField。
+     * @param Order 输出实例列表的排列顺序。取值范围：
+"ASC"：升序排列。
+"DESC"：降序排列。
+默认按升序排序。当传入该字段时，必须指定OrderField。
+     */
+    public void setOrder(String Order) {
+        this.Order = Order;
+    }
+
     public DescribeInstancesRequest() {
     }
 
@@ -266,6 +332,12 @@ public class DescribeInstancesRequest extends AbstractModel {
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
+        if (source.OrderField != null) {
+            this.OrderField = new String(source.OrderField);
+        }
+        if (source.Order != null) {
+            this.Order = new String(source.Order);
+        }
     }
 
 
@@ -277,6 +349,8 @@ public class DescribeInstancesRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "OrderField", this.OrderField);
+        this.setParamSimple(map, prefix + "Order", this.Order);
 
     }
 }

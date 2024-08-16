@@ -130,6 +130,14 @@ public class TemplateGroupAction extends AbstractModel {
     private String ActionType;
 
     /**
+    * 动作风险等级，1:低风险 2:中风险 3:高风险
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ActionRisk")
+    @Expose
+    private String ActionRisk;
+
+    /**
      * Get 经验库分组动作ID 
      * @return TemplateGroupActionId 经验库分组动作ID
      */
@@ -385,6 +393,26 @@ public class TemplateGroupAction extends AbstractModel {
         this.ActionType = ActionType;
     }
 
+    /**
+     * Get 动作风险等级，1:低风险 2:中风险 3:高风险
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ActionRisk 动作风险等级，1:低风险 2:中风险 3:高风险
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getActionRisk() {
+        return this.ActionRisk;
+    }
+
+    /**
+     * Set 动作风险等级，1:低风险 2:中风险 3:高风险
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ActionRisk 动作风险等级，1:低风险 2:中风险 3:高风险
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setActionRisk(String ActionRisk) {
+        this.ActionRisk = ActionRisk;
+    }
+
     public TemplateGroupAction() {
     }
 
@@ -435,6 +463,9 @@ public class TemplateGroupAction extends AbstractModel {
         if (source.ActionType != null) {
             this.ActionType = new String(source.ActionType);
         }
+        if (source.ActionRisk != null) {
+            this.ActionRisk = new String(source.ActionRisk);
+        }
     }
 
 
@@ -456,6 +487,7 @@ public class TemplateGroupAction extends AbstractModel {
         this.setParamSimple(map, prefix + "ActionApiType", this.ActionApiType);
         this.setParamSimple(map, prefix + "ActionAttribute", this.ActionAttribute);
         this.setParamSimple(map, prefix + "ActionType", this.ActionType);
+        this.setParamSimple(map, prefix + "ActionRisk", this.ActionRisk);
 
     }
 }

@@ -25,6 +25,9 @@ public class MergeInfo extends AbstractModel {
 
     /**
     * 输入图片base64。
+●base64 和 url 必须提供一个，如果都提供以 url 为准。
+●素材图片限制：图片中面部尺寸大于34 * 34；图片尺寸大于64 * 64。（图片编码之后可能会大30%左右，建议合理控制图片大小）。
+●支持图片格式：支持jpg或png。
     */
     @SerializedName("Image")
     @Expose
@@ -32,7 +35,9 @@ public class MergeInfo extends AbstractModel {
 
     /**
     * 输入图片url。
-Url、Image必须提供一个，如果都提供，只使用 Url。
+●base64 和 url 必须提供一个，如果都提供以 url 为准。
+●素材图片限制：图片中面部尺寸大于34 * 34；图片尺寸大于64 * 64。（图片编码之后可能会大30%左右，建议合理控制图片大小）。
+●支持图片格式：支持jpg或png。
     */
     @SerializedName("Url")
     @Expose
@@ -40,6 +45,7 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
 
     /**
     * 输入图片人脸位置信息（人脸框）。不填默认取输入图中最大人脸。
+Width、Height >= 30。
     */
     @SerializedName("InputImageFaceRect")
     @Expose
@@ -53,8 +59,14 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
     private String TemplateFaceID;
 
     /**
-     * Get 输入图片base64。 
+     * Get 输入图片base64。
+●base64 和 url 必须提供一个，如果都提供以 url 为准。
+●素材图片限制：图片中面部尺寸大于34 * 34；图片尺寸大于64 * 64。（图片编码之后可能会大30%左右，建议合理控制图片大小）。
+●支持图片格式：支持jpg或png。 
      * @return Image 输入图片base64。
+●base64 和 url 必须提供一个，如果都提供以 url 为准。
+●素材图片限制：图片中面部尺寸大于34 * 34；图片尺寸大于64 * 64。（图片编码之后可能会大30%左右，建议合理控制图片大小）。
+●支持图片格式：支持jpg或png。
      */
     public String getImage() {
         return this.Image;
@@ -62,7 +74,13 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
 
     /**
      * Set 输入图片base64。
+●base64 和 url 必须提供一个，如果都提供以 url 为准。
+●素材图片限制：图片中面部尺寸大于34 * 34；图片尺寸大于64 * 64。（图片编码之后可能会大30%左右，建议合理控制图片大小）。
+●支持图片格式：支持jpg或png。
      * @param Image 输入图片base64。
+●base64 和 url 必须提供一个，如果都提供以 url 为准。
+●素材图片限制：图片中面部尺寸大于34 * 34；图片尺寸大于64 * 64。（图片编码之后可能会大30%左右，建议合理控制图片大小）。
+●支持图片格式：支持jpg或png。
      */
     public void setImage(String Image) {
         this.Image = Image;
@@ -70,9 +88,13 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
 
     /**
      * Get 输入图片url。
-Url、Image必须提供一个，如果都提供，只使用 Url。 
+●base64 和 url 必须提供一个，如果都提供以 url 为准。
+●素材图片限制：图片中面部尺寸大于34 * 34；图片尺寸大于64 * 64。（图片编码之后可能会大30%左右，建议合理控制图片大小）。
+●支持图片格式：支持jpg或png。 
      * @return Url 输入图片url。
-Url、Image必须提供一个，如果都提供，只使用 Url。
+●base64 和 url 必须提供一个，如果都提供以 url 为准。
+●素材图片限制：图片中面部尺寸大于34 * 34；图片尺寸大于64 * 64。（图片编码之后可能会大30%左右，建议合理控制图片大小）。
+●支持图片格式：支持jpg或png。
      */
     public String getUrl() {
         return this.Url;
@@ -80,17 +102,23 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
 
     /**
      * Set 输入图片url。
-Url、Image必须提供一个，如果都提供，只使用 Url。
+●base64 和 url 必须提供一个，如果都提供以 url 为准。
+●素材图片限制：图片中面部尺寸大于34 * 34；图片尺寸大于64 * 64。（图片编码之后可能会大30%左右，建议合理控制图片大小）。
+●支持图片格式：支持jpg或png。
      * @param Url 输入图片url。
-Url、Image必须提供一个，如果都提供，只使用 Url。
+●base64 和 url 必须提供一个，如果都提供以 url 为准。
+●素材图片限制：图片中面部尺寸大于34 * 34；图片尺寸大于64 * 64。（图片编码之后可能会大30%左右，建议合理控制图片大小）。
+●支持图片格式：支持jpg或png。
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * Get 输入图片人脸位置信息（人脸框）。不填默认取输入图中最大人脸。 
+     * Get 输入图片人脸位置信息（人脸框）。不填默认取输入图中最大人脸。
+Width、Height >= 30。 
      * @return InputImageFaceRect 输入图片人脸位置信息（人脸框）。不填默认取输入图中最大人脸。
+Width、Height >= 30。
      */
     public FaceRect getInputImageFaceRect() {
         return this.InputImageFaceRect;
@@ -98,7 +126,9 @@ Url、Image必须提供一个，如果都提供，只使用 Url。
 
     /**
      * Set 输入图片人脸位置信息（人脸框）。不填默认取输入图中最大人脸。
+Width、Height >= 30。
      * @param InputImageFaceRect 输入图片人脸位置信息（人脸框）。不填默认取输入图中最大人脸。
+Width、Height >= 30。
      */
     public void setInputImageFaceRect(FaceRect InputImageFaceRect) {
         this.InputImageFaceRect = InputImageFaceRect;

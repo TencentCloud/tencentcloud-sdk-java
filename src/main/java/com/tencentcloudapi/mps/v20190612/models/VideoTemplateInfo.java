@@ -45,15 +45,17 @@ public class VideoTemplateInfo extends AbstractModel {
     private String Codec;
 
     /**
-    * 视频帧率，取值范围：[0, 120]，单位：Hz。 当取值为 0，表示帧率和原始视频保持一致。
-注意：自适应码率时取值范围是 [0, 60]
+    * 视频帧率，取值范围：
+当FpsDenominator的值为空时，范围：[0, 120]，单位：Hz；
+当FpsDenominator的值不为空时，Fps/FpsDenominator的范围：[0,120]
+当取值为 0，表示帧率和原始视频保持一致。
     */
     @SerializedName("Fps")
     @Expose
     private Long Fps;
 
     /**
-    * 视频流的码率，取值范围：0 和 [128, 35000]，单位：kbps。
+    * 视频流的码率，取值范围：0 和 [128, 100000]，单位：kbps。
 当取值为 0，表示视频码率和原始视频保持一致。
     */
     @SerializedName("Bitrate")
@@ -139,6 +141,15 @@ public class VideoTemplateInfo extends AbstractModel {
     private Long SegmentType;
 
     /**
+    * 帧率分母部分
+注意：值必须大于0
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FpsDenominator")
+    @Expose
+    private Long FpsDenominator;
+
+    /**
      * Get 视频流的编码格式，可选值：
 <li>h264：H.264 编码</li>
 <li>h265：H.265 编码</li>
@@ -211,29 +222,37 @@ public class VideoTemplateInfo extends AbstractModel {
     }
 
     /**
-     * Get 视频帧率，取值范围：[0, 120]，单位：Hz。 当取值为 0，表示帧率和原始视频保持一致。
-注意：自适应码率时取值范围是 [0, 60] 
-     * @return Fps 视频帧率，取值范围：[0, 120]，单位：Hz。 当取值为 0，表示帧率和原始视频保持一致。
-注意：自适应码率时取值范围是 [0, 60]
+     * Get 视频帧率，取值范围：
+当FpsDenominator的值为空时，范围：[0, 120]，单位：Hz；
+当FpsDenominator的值不为空时，Fps/FpsDenominator的范围：[0,120]
+当取值为 0，表示帧率和原始视频保持一致。 
+     * @return Fps 视频帧率，取值范围：
+当FpsDenominator的值为空时，范围：[0, 120]，单位：Hz；
+当FpsDenominator的值不为空时，Fps/FpsDenominator的范围：[0,120]
+当取值为 0，表示帧率和原始视频保持一致。
      */
     public Long getFps() {
         return this.Fps;
     }
 
     /**
-     * Set 视频帧率，取值范围：[0, 120]，单位：Hz。 当取值为 0，表示帧率和原始视频保持一致。
-注意：自适应码率时取值范围是 [0, 60]
-     * @param Fps 视频帧率，取值范围：[0, 120]，单位：Hz。 当取值为 0，表示帧率和原始视频保持一致。
-注意：自适应码率时取值范围是 [0, 60]
+     * Set 视频帧率，取值范围：
+当FpsDenominator的值为空时，范围：[0, 120]，单位：Hz；
+当FpsDenominator的值不为空时，Fps/FpsDenominator的范围：[0,120]
+当取值为 0，表示帧率和原始视频保持一致。
+     * @param Fps 视频帧率，取值范围：
+当FpsDenominator的值为空时，范围：[0, 120]，单位：Hz；
+当FpsDenominator的值不为空时，Fps/FpsDenominator的范围：[0,120]
+当取值为 0，表示帧率和原始视频保持一致。
      */
     public void setFps(Long Fps) {
         this.Fps = Fps;
     }
 
     /**
-     * Get 视频流的码率，取值范围：0 和 [128, 35000]，单位：kbps。
+     * Get 视频流的码率，取值范围：0 和 [128, 100000]，单位：kbps。
 当取值为 0，表示视频码率和原始视频保持一致。 
-     * @return Bitrate 视频流的码率，取值范围：0 和 [128, 35000]，单位：kbps。
+     * @return Bitrate 视频流的码率，取值范围：0 和 [128, 100000]，单位：kbps。
 当取值为 0，表示视频码率和原始视频保持一致。
      */
     public Long getBitrate() {
@@ -241,9 +260,9 @@ public class VideoTemplateInfo extends AbstractModel {
     }
 
     /**
-     * Set 视频流的码率，取值范围：0 和 [128, 35000]，单位：kbps。
+     * Set 视频流的码率，取值范围：0 和 [128, 100000]，单位：kbps。
 当取值为 0，表示视频码率和原始视频保持一致。
-     * @param Bitrate 视频流的码率，取值范围：0 和 [128, 35000]，单位：kbps。
+     * @param Bitrate 视频流的码率，取值范围：0 和 [128, 100000]，单位：kbps。
 当取值为 0，表示视频码率和原始视频保持一致。
      */
     public void setBitrate(Long Bitrate) {
@@ -478,6 +497,30 @@ public class VideoTemplateInfo extends AbstractModel {
         this.SegmentType = SegmentType;
     }
 
+    /**
+     * Get 帧率分母部分
+注意：值必须大于0
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FpsDenominator 帧率分母部分
+注意：值必须大于0
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getFpsDenominator() {
+        return this.FpsDenominator;
+    }
+
+    /**
+     * Set 帧率分母部分
+注意：值必须大于0
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FpsDenominator 帧率分母部分
+注意：值必须大于0
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFpsDenominator(Long FpsDenominator) {
+        this.FpsDenominator = FpsDenominator;
+    }
+
     public VideoTemplateInfo() {
     }
 
@@ -516,6 +559,9 @@ public class VideoTemplateInfo extends AbstractModel {
         if (source.SegmentType != null) {
             this.SegmentType = new Long(source.SegmentType);
         }
+        if (source.FpsDenominator != null) {
+            this.FpsDenominator = new Long(source.FpsDenominator);
+        }
     }
 
 
@@ -533,6 +579,7 @@ public class VideoTemplateInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "FillType", this.FillType);
         this.setParamSimple(map, prefix + "Vcrf", this.Vcrf);
         this.setParamSimple(map, prefix + "SegmentType", this.SegmentType);
+        this.setParamSimple(map, prefix + "FpsDenominator", this.FpsDenominator);
 
     }
 }

@@ -6,6 +6,9 @@ public enum OcrErrorCode {
     // 身份证CardSide类型错误
      FAILEDOPERATION_CARDSIDEERROR("FailedOperation.CardSideError"),
      
+    // 图片分类失败
+     FAILEDOPERATION_CLASSIFYSTOREFAILED("FailedOperation.ClassifyStoreFailed"),
+     
     // 今日次数达到限制。
      FAILEDOPERATION_COUNTLIMITERROR("FailedOperation.CountLimitError"),
      
@@ -89,6 +92,9 @@ public enum OcrErrorCode {
      
     // 非护照。
      FAILEDOPERATION_NOPASSPORT("FailedOperation.NoPassport"),
+     
+    // 图片不属于门头照
+     FAILEDOPERATION_NOSTORELABEL("FailedOperation.NoStoreLabel"),
      
     // 上传的图片非行驶证
      FAILEDOPERATION_NOVEHICLELICENSEERROR("FailedOperation.NoVehicleLicenseError"),

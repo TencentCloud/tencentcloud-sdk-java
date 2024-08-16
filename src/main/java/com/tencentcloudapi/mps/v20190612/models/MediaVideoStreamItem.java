@@ -99,6 +99,22 @@ public class MediaVideoStreamItem extends AbstractModel {
     private String Codecs;
 
     /**
+    * 帧率分子部分
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FpsNumerator")
+    @Expose
+    private Long FpsNumerator;
+
+    /**
+    * 帧率分母部分
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FpsDenominator")
+    @Expose
+    private Long FpsDenominator;
+
+    /**
      * Get 视频流的码率，单位：bps。 
      * @return Bitrate 视频流的码率，单位：bps。
      */
@@ -278,6 +294,46 @@ public class MediaVideoStreamItem extends AbstractModel {
         this.Codecs = Codecs;
     }
 
+    /**
+     * Get 帧率分子部分
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FpsNumerator 帧率分子部分
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getFpsNumerator() {
+        return this.FpsNumerator;
+    }
+
+    /**
+     * Set 帧率分子部分
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FpsNumerator 帧率分子部分
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFpsNumerator(Long FpsNumerator) {
+        this.FpsNumerator = FpsNumerator;
+    }
+
+    /**
+     * Get 帧率分母部分
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FpsDenominator 帧率分母部分
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getFpsDenominator() {
+        return this.FpsDenominator;
+    }
+
+    /**
+     * Set 帧率分母部分
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FpsDenominator 帧率分母部分
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFpsDenominator(Long FpsDenominator) {
+        this.FpsDenominator = FpsDenominator;
+    }
+
     public MediaVideoStreamItem() {
     }
 
@@ -316,6 +372,12 @@ public class MediaVideoStreamItem extends AbstractModel {
         if (source.Codecs != null) {
             this.Codecs = new String(source.Codecs);
         }
+        if (source.FpsNumerator != null) {
+            this.FpsNumerator = new Long(source.FpsNumerator);
+        }
+        if (source.FpsDenominator != null) {
+            this.FpsDenominator = new Long(source.FpsDenominator);
+        }
     }
 
 
@@ -333,6 +395,8 @@ public class MediaVideoStreamItem extends AbstractModel {
         this.setParamSimple(map, prefix + "ColorTransfer", this.ColorTransfer);
         this.setParamSimple(map, prefix + "HdrType", this.HdrType);
         this.setParamSimple(map, prefix + "Codecs", this.Codecs);
+        this.setParamSimple(map, prefix + "FpsNumerator", this.FpsNumerator);
+        this.setParamSimple(map, prefix + "FpsDenominator", this.FpsDenominator);
 
     }
 }

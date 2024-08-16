@@ -56,6 +56,14 @@ public class CanFixVulInfo extends AbstractModel {
     private String [] FixTag;
 
     /**
+    * 漏洞分类1 web cms漏洞,2应用漏洞,4linux软件漏洞,5windows系统漏洞
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VulCategory")
+    @Expose
+    private Long VulCategory;
+
+    /**
      * Get 漏洞id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return VulId 漏洞id
@@ -135,6 +143,26 @@ public class CanFixVulInfo extends AbstractModel {
         this.FixTag = FixTag;
     }
 
+    /**
+     * Get 漏洞分类1 web cms漏洞,2应用漏洞,4linux软件漏洞,5windows系统漏洞
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VulCategory 漏洞分类1 web cms漏洞,2应用漏洞,4linux软件漏洞,5windows系统漏洞
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getVulCategory() {
+        return this.VulCategory;
+    }
+
+    /**
+     * Set 漏洞分类1 web cms漏洞,2应用漏洞,4linux软件漏洞,5windows系统漏洞
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VulCategory 漏洞分类1 web cms漏洞,2应用漏洞,4linux软件漏洞,5windows系统漏洞
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVulCategory(Long VulCategory) {
+        this.VulCategory = VulCategory;
+    }
+
     public CanFixVulInfo() {
     }
 
@@ -161,6 +189,9 @@ public class CanFixVulInfo extends AbstractModel {
                 this.FixTag[i] = new String(source.FixTag[i]);
             }
         }
+        if (source.VulCategory != null) {
+            this.VulCategory = new Long(source.VulCategory);
+        }
     }
 
 
@@ -172,6 +203,7 @@ public class CanFixVulInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "VulName", this.VulName);
         this.setParamArrayObj(map, prefix + "HostList.", this.HostList);
         this.setParamArraySimple(map, prefix + "FixTag.", this.FixTag);
+        this.setParamSimple(map, prefix + "VulCategory", this.VulCategory);
 
     }
 }

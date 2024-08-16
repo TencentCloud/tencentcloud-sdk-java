@@ -45,7 +45,7 @@ public class FuseFaceRequest extends AbstractModel {
     private String RspImgType;
 
     /**
-    * 用户人脸图片、素材模板图的人脸位置信息。
+    * 用户人脸图片、素材模板图的人脸位置信息。不能超过6个。
     */
     @SerializedName("MergeInfos")
     @Expose
@@ -142,16 +142,16 @@ public class FuseFaceRequest extends AbstractModel {
     }
 
     /**
-     * Get 用户人脸图片、素材模板图的人脸位置信息。 
-     * @return MergeInfos 用户人脸图片、素材模板图的人脸位置信息。
+     * Get 用户人脸图片、素材模板图的人脸位置信息。不能超过6个。 
+     * @return MergeInfos 用户人脸图片、素材模板图的人脸位置信息。不能超过6个。
      */
     public MergeInfo [] getMergeInfos() {
         return this.MergeInfos;
     }
 
     /**
-     * Set 用户人脸图片、素材模板图的人脸位置信息。
-     * @param MergeInfos 用户人脸图片、素材模板图的人脸位置信息。
+     * Set 用户人脸图片、素材模板图的人脸位置信息。不能超过6个。
+     * @param MergeInfos 用户人脸图片、素材模板图的人脸位置信息。不能超过6个。
      */
     public void setMergeInfos(MergeInfo [] MergeInfos) {
         this.MergeInfos = MergeInfos;

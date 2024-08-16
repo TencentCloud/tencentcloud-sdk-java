@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class ImageCodecParam extends AbstractModel {
 
     /**
-    * 元数据
+    * 元数据，个数不能大于1。
     */
     @SerializedName("MetaData")
     @Expose
     private MetaData [] MetaData;
 
     /**
-     * Get 元数据 
-     * @return MetaData 元数据
+     * Get 元数据，个数不能大于1。 
+     * @return MetaData 元数据，个数不能大于1。
      */
     public MetaData [] getMetaData() {
         return this.MetaData;
     }
 
     /**
-     * Set 元数据
-     * @param MetaData 元数据
+     * Set 元数据，个数不能大于1。
+     * @param MetaData 元数据，个数不能大于1。
      */
     public void setMetaData(MetaData [] MetaData) {
         this.MetaData = MetaData;

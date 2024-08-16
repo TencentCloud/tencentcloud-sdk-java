@@ -24,7 +24,12 @@ import java.util.HashMap;
 public class QrcodeResultsInfo extends AbstractModel {
 
     /**
-    * 类型（二维码、条形码）
+    * 类型包括
+二维码：QR_CODE
+一维码：EAN-13、EAN-8、EAN-2、UPC-A、UPC-E、CODE-39、CODE-93、CODE-128 
+PDF：PDF_417
+DataMatrix：DATA_MATRIX
+小程序码：WX_CODE
     */
     @SerializedName("TypeName")
     @Expose
@@ -45,16 +50,36 @@ public class QrcodeResultsInfo extends AbstractModel {
     private QrcodePositionObj Position;
 
     /**
-     * Get 类型（二维码、条形码） 
-     * @return TypeName 类型（二维码、条形码）
+     * Get 类型包括
+二维码：QR_CODE
+一维码：EAN-13、EAN-8、EAN-2、UPC-A、UPC-E、CODE-39、CODE-93、CODE-128 
+PDF：PDF_417
+DataMatrix：DATA_MATRIX
+小程序码：WX_CODE 
+     * @return TypeName 类型包括
+二维码：QR_CODE
+一维码：EAN-13、EAN-8、EAN-2、UPC-A、UPC-E、CODE-39、CODE-93、CODE-128 
+PDF：PDF_417
+DataMatrix：DATA_MATRIX
+小程序码：WX_CODE
      */
     public String getTypeName() {
         return this.TypeName;
     }
 
     /**
-     * Set 类型（二维码、条形码）
-     * @param TypeName 类型（二维码、条形码）
+     * Set 类型包括
+二维码：QR_CODE
+一维码：EAN-13、EAN-8、EAN-2、UPC-A、UPC-E、CODE-39、CODE-93、CODE-128 
+PDF：PDF_417
+DataMatrix：DATA_MATRIX
+小程序码：WX_CODE
+     * @param TypeName 类型包括
+二维码：QR_CODE
+一维码：EAN-13、EAN-8、EAN-2、UPC-A、UPC-E、CODE-39、CODE-93、CODE-128 
+PDF：PDF_417
+DataMatrix：DATA_MATRIX
+小程序码：WX_CODE
      */
     public void setTypeName(String TypeName) {
         this.TypeName = TypeName;

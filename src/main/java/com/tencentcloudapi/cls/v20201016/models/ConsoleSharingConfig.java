@@ -70,21 +70,21 @@ public class ConsoleSharingConfig extends AbstractModel {
     private String VerifyCode;
 
     /**
-    * 开始时间，支持绝对时间(13位时间戳字符串)/相对时间字符串
+    * 默认查询范围的开始时间点，支持绝对时间(13位Unix时间戳)或相对时间表达式
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 结束时间，支持绝对时间(13位时间戳字符串)/相对时间字符串
+    * 默认查询范围的结束时间点，支持绝对时间(13位Unix时间戳)或相对时间表达式。注意，结束时间点要大于开始时间点
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * 当StartTime/EndTime为相对时间时，基于NowTime计算绝对时间，默认为创建时间
+    * 仅当StartTime/EndTime为相对时间时使用，基于NowTime计算绝对时间，默认为创建时间
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NowTime")
@@ -92,7 +92,7 @@ public class ConsoleSharingConfig extends AbstractModel {
     private Long NowTime;
 
     /**
-    * params参数列表，当Type为2时支持
+    * 默认的检索分析语句，仅当Type为2时使用
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Params")
@@ -100,18 +100,26 @@ public class ConsoleSharingConfig extends AbstractModel {
     private ConsoleSharingParam [] Params;
 
     /**
-    * 是否允许访问者自行修改检索分析时间范围，默认不锁定
+    * 是否允许访问者自行修改检索分析时间范围。默认不锁定（false）
     */
     @SerializedName("IsLockTimeRange")
     @Expose
     private Boolean IsLockTimeRange;
 
     /**
-    * 是否允许访问者自行修改日志检索语句。在检索页分享中表示检索语句锁定状态；在仪表盘中表示过滤变量锁定状态
+    * 是否允许访问者自行修改日志检索语句。在检索页分享中表示检索语句锁定状态；在仪表盘中表示过滤变量锁定状态。默认不锁定（false）
     */
     @SerializedName("IsLockQuery")
     @Expose
     private Boolean IsLockQuery;
+
+    /**
+    * 检索页分享是否允许访问者下载日志，默认不允许（false）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsSupportLogExport")
+    @Expose
+    private Boolean IsSupportLogExport;
 
     /**
      * Get 分享链接名称 
@@ -226,41 +234,41 @@ public class ConsoleSharingConfig extends AbstractModel {
     }
 
     /**
-     * Get 开始时间，支持绝对时间(13位时间戳字符串)/相对时间字符串 
-     * @return StartTime 开始时间，支持绝对时间(13位时间戳字符串)/相对时间字符串
+     * Get 默认查询范围的开始时间点，支持绝对时间(13位Unix时间戳)或相对时间表达式 
+     * @return StartTime 默认查询范围的开始时间点，支持绝对时间(13位Unix时间戳)或相对时间表达式
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 开始时间，支持绝对时间(13位时间戳字符串)/相对时间字符串
-     * @param StartTime 开始时间，支持绝对时间(13位时间戳字符串)/相对时间字符串
+     * Set 默认查询范围的开始时间点，支持绝对时间(13位Unix时间戳)或相对时间表达式
+     * @param StartTime 默认查询范围的开始时间点，支持绝对时间(13位Unix时间戳)或相对时间表达式
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 结束时间，支持绝对时间(13位时间戳字符串)/相对时间字符串 
-     * @return EndTime 结束时间，支持绝对时间(13位时间戳字符串)/相对时间字符串
+     * Get 默认查询范围的结束时间点，支持绝对时间(13位Unix时间戳)或相对时间表达式。注意，结束时间点要大于开始时间点 
+     * @return EndTime 默认查询范围的结束时间点，支持绝对时间(13位Unix时间戳)或相对时间表达式。注意，结束时间点要大于开始时间点
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间，支持绝对时间(13位时间戳字符串)/相对时间字符串
-     * @param EndTime 结束时间，支持绝对时间(13位时间戳字符串)/相对时间字符串
+     * Set 默认查询范围的结束时间点，支持绝对时间(13位Unix时间戳)或相对时间表达式。注意，结束时间点要大于开始时间点
+     * @param EndTime 默认查询范围的结束时间点，支持绝对时间(13位Unix时间戳)或相对时间表达式。注意，结束时间点要大于开始时间点
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 当StartTime/EndTime为相对时间时，基于NowTime计算绝对时间，默认为创建时间
+     * Get 仅当StartTime/EndTime为相对时间时使用，基于NowTime计算绝对时间，默认为创建时间
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return NowTime 当StartTime/EndTime为相对时间时，基于NowTime计算绝对时间，默认为创建时间
+     * @return NowTime 仅当StartTime/EndTime为相对时间时使用，基于NowTime计算绝对时间，默认为创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getNowTime() {
@@ -268,9 +276,9 @@ public class ConsoleSharingConfig extends AbstractModel {
     }
 
     /**
-     * Set 当StartTime/EndTime为相对时间时，基于NowTime计算绝对时间，默认为创建时间
+     * Set 仅当StartTime/EndTime为相对时间时使用，基于NowTime计算绝对时间，默认为创建时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param NowTime 当StartTime/EndTime为相对时间时，基于NowTime计算绝对时间，默认为创建时间
+     * @param NowTime 仅当StartTime/EndTime为相对时间时使用，基于NowTime计算绝对时间，默认为创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNowTime(Long NowTime) {
@@ -278,9 +286,9 @@ public class ConsoleSharingConfig extends AbstractModel {
     }
 
     /**
-     * Get params参数列表，当Type为2时支持
+     * Get 默认的检索分析语句，仅当Type为2时使用
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Params params参数列表，当Type为2时支持
+     * @return Params 默认的检索分析语句，仅当Type为2时使用
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ConsoleSharingParam [] getParams() {
@@ -288,9 +296,9 @@ public class ConsoleSharingConfig extends AbstractModel {
     }
 
     /**
-     * Set params参数列表，当Type为2时支持
+     * Set 默认的检索分析语句，仅当Type为2时使用
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Params params参数列表，当Type为2时支持
+     * @param Params 默认的检索分析语句，仅当Type为2时使用
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setParams(ConsoleSharingParam [] Params) {
@@ -298,35 +306,55 @@ public class ConsoleSharingConfig extends AbstractModel {
     }
 
     /**
-     * Get 是否允许访问者自行修改检索分析时间范围，默认不锁定 
-     * @return IsLockTimeRange 是否允许访问者自行修改检索分析时间范围，默认不锁定
+     * Get 是否允许访问者自行修改检索分析时间范围。默认不锁定（false） 
+     * @return IsLockTimeRange 是否允许访问者自行修改检索分析时间范围。默认不锁定（false）
      */
     public Boolean getIsLockTimeRange() {
         return this.IsLockTimeRange;
     }
 
     /**
-     * Set 是否允许访问者自行修改检索分析时间范围，默认不锁定
-     * @param IsLockTimeRange 是否允许访问者自行修改检索分析时间范围，默认不锁定
+     * Set 是否允许访问者自行修改检索分析时间范围。默认不锁定（false）
+     * @param IsLockTimeRange 是否允许访问者自行修改检索分析时间范围。默认不锁定（false）
      */
     public void setIsLockTimeRange(Boolean IsLockTimeRange) {
         this.IsLockTimeRange = IsLockTimeRange;
     }
 
     /**
-     * Get 是否允许访问者自行修改日志检索语句。在检索页分享中表示检索语句锁定状态；在仪表盘中表示过滤变量锁定状态 
-     * @return IsLockQuery 是否允许访问者自行修改日志检索语句。在检索页分享中表示检索语句锁定状态；在仪表盘中表示过滤变量锁定状态
+     * Get 是否允许访问者自行修改日志检索语句。在检索页分享中表示检索语句锁定状态；在仪表盘中表示过滤变量锁定状态。默认不锁定（false） 
+     * @return IsLockQuery 是否允许访问者自行修改日志检索语句。在检索页分享中表示检索语句锁定状态；在仪表盘中表示过滤变量锁定状态。默认不锁定（false）
      */
     public Boolean getIsLockQuery() {
         return this.IsLockQuery;
     }
 
     /**
-     * Set 是否允许访问者自行修改日志检索语句。在检索页分享中表示检索语句锁定状态；在仪表盘中表示过滤变量锁定状态
-     * @param IsLockQuery 是否允许访问者自行修改日志检索语句。在检索页分享中表示检索语句锁定状态；在仪表盘中表示过滤变量锁定状态
+     * Set 是否允许访问者自行修改日志检索语句。在检索页分享中表示检索语句锁定状态；在仪表盘中表示过滤变量锁定状态。默认不锁定（false）
+     * @param IsLockQuery 是否允许访问者自行修改日志检索语句。在检索页分享中表示检索语句锁定状态；在仪表盘中表示过滤变量锁定状态。默认不锁定（false）
      */
     public void setIsLockQuery(Boolean IsLockQuery) {
         this.IsLockQuery = IsLockQuery;
+    }
+
+    /**
+     * Get 检索页分享是否允许访问者下载日志，默认不允许（false）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsSupportLogExport 检索页分享是否允许访问者下载日志，默认不允许（false）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getIsSupportLogExport() {
+        return this.IsSupportLogExport;
+    }
+
+    /**
+     * Set 检索页分享是否允许访问者下载日志，默认不允许（false）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsSupportLogExport 检索页分享是否允许访问者下载日志，默认不允许（false）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsSupportLogExport(Boolean IsSupportLogExport) {
+        this.IsSupportLogExport = IsSupportLogExport;
     }
 
     public ConsoleSharingConfig() {
@@ -379,6 +407,9 @@ public class ConsoleSharingConfig extends AbstractModel {
         if (source.IsLockQuery != null) {
             this.IsLockQuery = new Boolean(source.IsLockQuery);
         }
+        if (source.IsSupportLogExport != null) {
+            this.IsSupportLogExport = new Boolean(source.IsSupportLogExport);
+        }
     }
 
 
@@ -398,6 +429,7 @@ public class ConsoleSharingConfig extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Params.", this.Params);
         this.setParamSimple(map, prefix + "IsLockTimeRange", this.IsLockTimeRange);
         this.setParamSimple(map, prefix + "IsLockQuery", this.IsLockQuery);
+        this.setParamSimple(map, prefix + "IsSupportLogExport", this.IsSupportLogExport);
 
     }
 }

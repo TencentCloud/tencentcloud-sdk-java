@@ -59,6 +59,13 @@ public class SetRocketMQPublicAccessPointRequest extends AbstractModel {
     private PublicAccessRule [] Rules;
 
     /**
+    * 公网是否按流量计费
+    */
+    @SerializedName("BillingFlow")
+    @Expose
+    private Boolean BillingFlow;
+
+    /**
      * Get 集群ID，当前只支持专享集群 
      * @return InstanceId 集群ID，当前只支持专享集群
      */
@@ -138,6 +145,22 @@ public class SetRocketMQPublicAccessPointRequest extends AbstractModel {
         this.Rules = Rules;
     }
 
+    /**
+     * Get 公网是否按流量计费 
+     * @return BillingFlow 公网是否按流量计费
+     */
+    public Boolean getBillingFlow() {
+        return this.BillingFlow;
+    }
+
+    /**
+     * Set 公网是否按流量计费
+     * @param BillingFlow 公网是否按流量计费
+     */
+    public void setBillingFlow(Boolean BillingFlow) {
+        this.BillingFlow = BillingFlow;
+    }
+
     public SetRocketMQPublicAccessPointRequest() {
     }
 
@@ -164,6 +187,9 @@ public class SetRocketMQPublicAccessPointRequest extends AbstractModel {
                 this.Rules[i] = new PublicAccessRule(source.Rules[i]);
             }
         }
+        if (source.BillingFlow != null) {
+            this.BillingFlow = new Boolean(source.BillingFlow);
+        }
     }
 
 
@@ -176,6 +202,7 @@ public class SetRocketMQPublicAccessPointRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
         this.setParamSimple(map, prefix + "PayMode", this.PayMode);
         this.setParamArrayObj(map, prefix + "Rules.", this.Rules);
+        this.setParamSimple(map, prefix + "BillingFlow", this.BillingFlow);
 
     }
 }

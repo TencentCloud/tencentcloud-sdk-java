@@ -71,6 +71,14 @@ public class VulFixStatusInfo extends AbstractModel {
     private Long FixSuccessCnt;
 
     /**
+    * 修复方式 0组件更新或者安装补丁,1禁用服务
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FixMethod")
+    @Expose
+    private Long FixMethod;
+
+    /**
      * Get 漏洞id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return VulId 漏洞id
@@ -186,6 +194,26 @@ public class VulFixStatusInfo extends AbstractModel {
         this.FixSuccessCnt = FixSuccessCnt;
     }
 
+    /**
+     * Get 修复方式 0组件更新或者安装补丁,1禁用服务
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FixMethod 修复方式 0组件更新或者安装补丁,1禁用服务
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getFixMethod() {
+        return this.FixMethod;
+    }
+
+    /**
+     * Set 修复方式 0组件更新或者安装补丁,1禁用服务
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FixMethod 修复方式 0组件更新或者安装补丁,1禁用服务
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFixMethod(Long FixMethod) {
+        this.FixMethod = FixMethod;
+    }
+
     public VulFixStatusInfo() {
     }
 
@@ -215,6 +243,9 @@ public class VulFixStatusInfo extends AbstractModel {
         if (source.FixSuccessCnt != null) {
             this.FixSuccessCnt = new Long(source.FixSuccessCnt);
         }
+        if (source.FixMethod != null) {
+            this.FixMethod = new Long(source.FixMethod);
+        }
     }
 
 
@@ -228,6 +259,7 @@ public class VulFixStatusInfo extends AbstractModel {
         this.setParamArrayObj(map, prefix + "HostList.", this.HostList);
         this.setParamSimple(map, prefix + "FailCnt", this.FailCnt);
         this.setParamSimple(map, prefix + "FixSuccessCnt", this.FixSuccessCnt);
+        this.setParamSimple(map, prefix + "FixMethod", this.FixMethod);
 
     }
 }

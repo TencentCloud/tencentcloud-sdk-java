@@ -78,6 +78,14 @@ public class DescribeRocketMQPublicAccessPointResponse extends AbstractModel {
     private Long PayMode;
 
     /**
+    * 公网是否按流量计费
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BillingFlow")
+    @Expose
+    private Boolean BillingFlow;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -229,6 +237,26 @@ public class DescribeRocketMQPublicAccessPointResponse extends AbstractModel {
     }
 
     /**
+     * Get 公网是否按流量计费
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BillingFlow 公网是否按流量计费
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getBillingFlow() {
+        return this.BillingFlow;
+    }
+
+    /**
+     * Set 公网是否按流量计费
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BillingFlow 公网是否按流量计费
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBillingFlow(Boolean BillingFlow) {
+        this.BillingFlow = BillingFlow;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -273,6 +301,9 @@ public class DescribeRocketMQPublicAccessPointResponse extends AbstractModel {
         if (source.PayMode != null) {
             this.PayMode = new Long(source.PayMode);
         }
+        if (source.BillingFlow != null) {
+            this.BillingFlow = new Boolean(source.BillingFlow);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -289,6 +320,7 @@ public class DescribeRocketMQPublicAccessPointResponse extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Rules.", this.Rules);
         this.setParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
         this.setParamSimple(map, prefix + "PayMode", this.PayMode);
+        this.setParamSimple(map, prefix + "BillingFlow", this.BillingFlow);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

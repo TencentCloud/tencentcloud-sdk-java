@@ -29,7 +29,6 @@ public class DescribeCloudStorageAIServiceResponse extends AbstractModel {
 - `1`：全时套餐
 - `2`：事件套餐
 - `3`：低功耗套餐
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -40,7 +39,6 @@ public class DescribeCloudStorageAIServiceResponse extends AbstractModel {
 
 - `0`：未开通或已过期
 - `1`：生效中
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -48,7 +46,6 @@ public class DescribeCloudStorageAIServiceResponse extends AbstractModel {
 
     /**
     * 云存 AI 套餐过期时间 UNIX 时间戳
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExpireTime")
     @Expose
@@ -56,7 +53,6 @@ public class DescribeCloudStorageAIServiceResponse extends AbstractModel {
 
     /**
     * 用户 ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserId")
     @Expose
@@ -95,14 +91,12 @@ public class DescribeCloudStorageAIServiceResponse extends AbstractModel {
 
 - `1`：全时套餐
 - `2`：事件套餐
-- `3`：低功耗套餐
-注意：此字段可能返回 null，表示取不到有效值。 
+- `3`：低功耗套餐 
      * @return Type 云存 AI 套餐类型。可能取值：
 
 - `1`：全时套餐
 - `2`：事件套餐
 - `3`：低功耗套餐
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getType() {
         return this.Type;
@@ -114,13 +108,11 @@ public class DescribeCloudStorageAIServiceResponse extends AbstractModel {
 - `1`：全时套餐
 - `2`：事件套餐
 - `3`：低功耗套餐
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 云存 AI 套餐类型。可能取值：
 
 - `1`：全时套餐
 - `2`：事件套餐
 - `3`：低功耗套餐
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(Long Type) {
         this.Type = Type;
@@ -130,13 +122,11 @@ public class DescribeCloudStorageAIServiceResponse extends AbstractModel {
      * Get 云存 AI 套餐生效状态。可能取值：
 
 - `0`：未开通或已过期
-- `1`：生效中
-注意：此字段可能返回 null，表示取不到有效值。 
+- `1`：生效中 
      * @return Status 云存 AI 套餐生效状态。可能取值：
 
 - `0`：未开通或已过期
 - `1`：生效中
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
         return this.Status;
@@ -147,22 +137,18 @@ public class DescribeCloudStorageAIServiceResponse extends AbstractModel {
 
 - `0`：未开通或已过期
 - `1`：生效中
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 云存 AI 套餐生效状态。可能取值：
 
 - `0`：未开通或已过期
 - `1`：生效中
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 云存 AI 套餐过期时间 UNIX 时间戳
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 云存 AI 套餐过期时间 UNIX 时间戳 
      * @return ExpireTime 云存 AI 套餐过期时间 UNIX 时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getExpireTime() {
         return this.ExpireTime;
@@ -170,19 +156,15 @@ public class DescribeCloudStorageAIServiceResponse extends AbstractModel {
 
     /**
      * Set 云存 AI 套餐过期时间 UNIX 时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExpireTime 云存 AI 套餐过期时间 UNIX 时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExpireTime(Long ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 
     /**
-     * Get 用户 ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户 ID 
      * @return UserId 用户 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUserId() {
         return this.UserId;
@@ -190,9 +172,7 @@ public class DescribeCloudStorageAIServiceResponse extends AbstractModel {
 
     /**
      * Set 用户 ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UserId 用户 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;

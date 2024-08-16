@@ -46,7 +46,10 @@ public class VideoTemplateInfoForUpdate extends AbstractModel {
     private String Codec;
 
     /**
-    * 视频帧率，取值范围：[0, 120]，单位：Hz。 当取值为 0，表示帧率和原始视频保持一致。
+    * 视频帧率，取值范围：
+当FpsDenominator的值为空时，范围：[0, 120]，单位：Hz；
+当FpsDenominator的值不为空时，Fps/FpsDenominator的范围：[0,120]
+当取值为 0，表示帧率和原始视频保持一致。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Fps")
@@ -54,7 +57,7 @@ public class VideoTemplateInfoForUpdate extends AbstractModel {
     private Long Fps;
 
     /**
-    * 视频流的码率，取值范围：0 和 [128, 35000]，单位：kbps。
+    * 视频流的码率，取值范围：0 和 [128, 100000]，单位：kbps。
 当取值为 0，表示视频码率和原始视频保持一致。
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -147,6 +150,15 @@ public class VideoTemplateInfoForUpdate extends AbstractModel {
     private Long SegmentType;
 
     /**
+    * 帧率分母部分
+注意：值必须大于0
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FpsDenominator")
+    @Expose
+    private Long FpsDenominator;
+
+    /**
      * Get 视频流的编码格式，可选值：
 <li>h264：H.264 编码</li>
 <li>h265：H.265 编码</li>
@@ -223,9 +235,15 @@ public class VideoTemplateInfoForUpdate extends AbstractModel {
     }
 
     /**
-     * Get 视频帧率，取值范围：[0, 120]，单位：Hz。 当取值为 0，表示帧率和原始视频保持一致。
+     * Get 视频帧率，取值范围：
+当FpsDenominator的值为空时，范围：[0, 120]，单位：Hz；
+当FpsDenominator的值不为空时，Fps/FpsDenominator的范围：[0,120]
+当取值为 0，表示帧率和原始视频保持一致。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Fps 视频帧率，取值范围：[0, 120]，单位：Hz。 当取值为 0，表示帧率和原始视频保持一致。
+     * @return Fps 视频帧率，取值范围：
+当FpsDenominator的值为空时，范围：[0, 120]，单位：Hz；
+当FpsDenominator的值不为空时，Fps/FpsDenominator的范围：[0,120]
+当取值为 0，表示帧率和原始视频保持一致。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFps() {
@@ -233,9 +251,15 @@ public class VideoTemplateInfoForUpdate extends AbstractModel {
     }
 
     /**
-     * Set 视频帧率，取值范围：[0, 120]，单位：Hz。 当取值为 0，表示帧率和原始视频保持一致。
+     * Set 视频帧率，取值范围：
+当FpsDenominator的值为空时，范围：[0, 120]，单位：Hz；
+当FpsDenominator的值不为空时，Fps/FpsDenominator的范围：[0,120]
+当取值为 0，表示帧率和原始视频保持一致。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Fps 视频帧率，取值范围：[0, 120]，单位：Hz。 当取值为 0，表示帧率和原始视频保持一致。
+     * @param Fps 视频帧率，取值范围：
+当FpsDenominator的值为空时，范围：[0, 120]，单位：Hz；
+当FpsDenominator的值不为空时，Fps/FpsDenominator的范围：[0,120]
+当取值为 0，表示帧率和原始视频保持一致。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFps(Long Fps) {
@@ -243,10 +267,10 @@ public class VideoTemplateInfoForUpdate extends AbstractModel {
     }
 
     /**
-     * Get 视频流的码率，取值范围：0 和 [128, 35000]，单位：kbps。
+     * Get 视频流的码率，取值范围：0 和 [128, 100000]，单位：kbps。
 当取值为 0，表示视频码率和原始视频保持一致。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Bitrate 视频流的码率，取值范围：0 和 [128, 35000]，单位：kbps。
+     * @return Bitrate 视频流的码率，取值范围：0 和 [128, 100000]，单位：kbps。
 当取值为 0，表示视频码率和原始视频保持一致。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -255,10 +279,10 @@ public class VideoTemplateInfoForUpdate extends AbstractModel {
     }
 
     /**
-     * Set 视频流的码率，取值范围：0 和 [128, 35000]，单位：kbps。
+     * Set 视频流的码率，取值范围：0 和 [128, 100000]，单位：kbps。
 当取值为 0，表示视频码率和原始视频保持一致。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Bitrate 视频流的码率，取值范围：0 和 [128, 35000]，单位：kbps。
+     * @param Bitrate 视频流的码率，取值范围：0 和 [128, 100000]，单位：kbps。
 当取值为 0，表示视频码率和原始视频保持一致。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -506,6 +530,30 @@ public class VideoTemplateInfoForUpdate extends AbstractModel {
         this.SegmentType = SegmentType;
     }
 
+    /**
+     * Get 帧率分母部分
+注意：值必须大于0
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FpsDenominator 帧率分母部分
+注意：值必须大于0
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getFpsDenominator() {
+        return this.FpsDenominator;
+    }
+
+    /**
+     * Set 帧率分母部分
+注意：值必须大于0
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FpsDenominator 帧率分母部分
+注意：值必须大于0
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFpsDenominator(Long FpsDenominator) {
+        this.FpsDenominator = FpsDenominator;
+    }
+
     public VideoTemplateInfoForUpdate() {
     }
 
@@ -547,6 +595,9 @@ public class VideoTemplateInfoForUpdate extends AbstractModel {
         if (source.SegmentType != null) {
             this.SegmentType = new Long(source.SegmentType);
         }
+        if (source.FpsDenominator != null) {
+            this.FpsDenominator = new Long(source.FpsDenominator);
+        }
     }
 
 
@@ -565,6 +616,7 @@ public class VideoTemplateInfoForUpdate extends AbstractModel {
         this.setParamSimple(map, prefix + "Vcrf", this.Vcrf);
         this.setParamSimple(map, prefix + "ContentAdaptStream", this.ContentAdaptStream);
         this.setParamSimple(map, prefix + "SegmentType", this.SegmentType);
+        this.setParamSimple(map, prefix + "FpsDenominator", this.FpsDenominator);
 
     }
 }

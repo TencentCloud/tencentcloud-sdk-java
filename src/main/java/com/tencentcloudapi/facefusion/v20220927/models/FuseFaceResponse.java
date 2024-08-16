@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class FuseFaceResponse extends AbstractModel {
 
     /**
-    * RspImgType 为 url 时，返回结果的 url， RspImgType 为 base64 时返回 base64 数据。
+    * RspImgType 为 url 时，返回结果的 url（有效期7天）， RspImgType 为 base64 时返回 base64 数据。
     */
     @SerializedName("FusedImage")
     @Expose
@@ -38,16 +38,16 @@ public class FuseFaceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get RspImgType 为 url 时，返回结果的 url， RspImgType 为 base64 时返回 base64 数据。 
-     * @return FusedImage RspImgType 为 url 时，返回结果的 url， RspImgType 为 base64 时返回 base64 数据。
+     * Get RspImgType 为 url 时，返回结果的 url（有效期7天）， RspImgType 为 base64 时返回 base64 数据。 
+     * @return FusedImage RspImgType 为 url 时，返回结果的 url（有效期7天）， RspImgType 为 base64 时返回 base64 数据。
      */
     public String getFusedImage() {
         return this.FusedImage;
     }
 
     /**
-     * Set RspImgType 为 url 时，返回结果的 url， RspImgType 为 base64 时返回 base64 数据。
-     * @param FusedImage RspImgType 为 url 时，返回结果的 url， RspImgType 为 base64 时返回 base64 数据。
+     * Set RspImgType 为 url 时，返回结果的 url（有效期7天）， RspImgType 为 base64 时返回 base64 数据。
+     * @param FusedImage RspImgType 为 url 时，返回结果的 url（有效期7天）， RspImgType 为 base64 时返回 base64 数据。
      */
     public void setFusedImage(String FusedImage) {
         this.FusedImage = FusedImage;

@@ -23,6 +23,29 @@ import java.util.HashMap;
 
 public class DeleteDashboardSubscribeRequest extends AbstractModel {
 
+    /**
+    * 仪表盘订阅记录id。
+    */
+    @SerializedName("Id")
+    @Expose
+    private Long Id;
+
+    /**
+     * Get 仪表盘订阅记录id。 
+     * @return Id 仪表盘订阅记录id。
+     */
+    public Long getId() {
+        return this.Id;
+    }
+
+    /**
+     * Set 仪表盘订阅记录id。
+     * @param Id 仪表盘订阅记录id。
+     */
+    public void setId(Long Id) {
+        this.Id = Id;
+    }
+
     public DeleteDashboardSubscribeRequest() {
     }
 
@@ -31,6 +54,9 @@ public class DeleteDashboardSubscribeRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DeleteDashboardSubscribeRequest(DeleteDashboardSubscribeRequest source) {
+        if (source.Id != null) {
+            this.Id = new Long(source.Id);
+        }
     }
 
 
@@ -38,6 +64,7 @@ public class DeleteDashboardSubscribeRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Id", this.Id);
 
     }
 }

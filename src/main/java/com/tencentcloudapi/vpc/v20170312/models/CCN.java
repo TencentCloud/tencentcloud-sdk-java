@@ -183,6 +183,22 @@ public class CCN extends AbstractModel {
     private String Ipv6Flag;
 
     /**
+    * 是否支持路由表聚合策略
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MrtbAggregatePolicyFlag")
+    @Expose
+    private Boolean MrtbAggregatePolicyFlag;
+
+    /**
+    * 是否支持策略值
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MrtbPolicyValueFlag")
+    @Expose
+    private Boolean MrtbPolicyValueFlag;
+
+    /**
      * Get 云联网唯一ID 
      * @return CcnId 云联网唯一ID
      */
@@ -566,6 +582,46 @@ public class CCN extends AbstractModel {
         this.Ipv6Flag = Ipv6Flag;
     }
 
+    /**
+     * Get 是否支持路由表聚合策略
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MrtbAggregatePolicyFlag 是否支持路由表聚合策略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getMrtbAggregatePolicyFlag() {
+        return this.MrtbAggregatePolicyFlag;
+    }
+
+    /**
+     * Set 是否支持路由表聚合策略
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MrtbAggregatePolicyFlag 是否支持路由表聚合策略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMrtbAggregatePolicyFlag(Boolean MrtbAggregatePolicyFlag) {
+        this.MrtbAggregatePolicyFlag = MrtbAggregatePolicyFlag;
+    }
+
+    /**
+     * Get 是否支持策略值
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MrtbPolicyValueFlag 是否支持策略值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getMrtbPolicyValueFlag() {
+        return this.MrtbPolicyValueFlag;
+    }
+
+    /**
+     * Set 是否支持策略值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MrtbPolicyValueFlag 是否支持策略值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMrtbPolicyValueFlag(Boolean MrtbPolicyValueFlag) {
+        this.MrtbPolicyValueFlag = MrtbPolicyValueFlag;
+    }
+
     public CCN() {
     }
 
@@ -640,6 +696,12 @@ public class CCN extends AbstractModel {
         if (source.Ipv6Flag != null) {
             this.Ipv6Flag = new String(source.Ipv6Flag);
         }
+        if (source.MrtbAggregatePolicyFlag != null) {
+            this.MrtbAggregatePolicyFlag = new Boolean(source.MrtbAggregatePolicyFlag);
+        }
+        if (source.MrtbPolicyValueFlag != null) {
+            this.MrtbPolicyValueFlag = new Boolean(source.MrtbPolicyValueFlag);
+        }
     }
 
 
@@ -668,6 +730,8 @@ public class CCN extends AbstractModel {
         this.setParamSimple(map, prefix + "RouteSelectPolicyFlag", this.RouteSelectPolicyFlag);
         this.setParamSimple(map, prefix + "DirectConnectAccelerateChannelFlag", this.DirectConnectAccelerateChannelFlag);
         this.setParamSimple(map, prefix + "Ipv6Flag", this.Ipv6Flag);
+        this.setParamSimple(map, prefix + "MrtbAggregatePolicyFlag", this.MrtbAggregatePolicyFlag);
+        this.setParamSimple(map, prefix + "MrtbPolicyValueFlag", this.MrtbPolicyValueFlag);
 
     }
 }

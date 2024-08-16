@@ -45,6 +45,22 @@ public class CcnRouteTableInputPolicy extends AbstractModel {
     private String Description;
 
     /**
+    * as-path操作
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OperateAsPath")
+    @Expose
+    private String OperateAsPath;
+
+    /**
+    * as-path操作模式
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AsPathOperateMode")
+    @Expose
+    private String AsPathOperateMode;
+
+    /**
      * Get 路由条件。 
      * @return RouteConditions 路由条件。
      */
@@ -92,6 +108,46 @@ public class CcnRouteTableInputPolicy extends AbstractModel {
         this.Description = Description;
     }
 
+    /**
+     * Get as-path操作
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OperateAsPath as-path操作
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getOperateAsPath() {
+        return this.OperateAsPath;
+    }
+
+    /**
+     * Set as-path操作
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OperateAsPath as-path操作
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOperateAsPath(String OperateAsPath) {
+        this.OperateAsPath = OperateAsPath;
+    }
+
+    /**
+     * Get as-path操作模式
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AsPathOperateMode as-path操作模式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAsPathOperateMode() {
+        return this.AsPathOperateMode;
+    }
+
+    /**
+     * Set as-path操作模式
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AsPathOperateMode as-path操作模式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAsPathOperateMode(String AsPathOperateMode) {
+        this.AsPathOperateMode = AsPathOperateMode;
+    }
+
     public CcnRouteTableInputPolicy() {
     }
 
@@ -112,6 +168,12 @@ public class CcnRouteTableInputPolicy extends AbstractModel {
         if (source.Description != null) {
             this.Description = new String(source.Description);
         }
+        if (source.OperateAsPath != null) {
+            this.OperateAsPath = new String(source.OperateAsPath);
+        }
+        if (source.AsPathOperateMode != null) {
+            this.AsPathOperateMode = new String(source.AsPathOperateMode);
+        }
     }
 
 
@@ -122,6 +184,8 @@ public class CcnRouteTableInputPolicy extends AbstractModel {
         this.setParamArrayObj(map, prefix + "RouteConditions.", this.RouteConditions);
         this.setParamSimple(map, prefix + "Action", this.Action);
         this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "OperateAsPath", this.OperateAsPath);
+        this.setParamSimple(map, prefix + "AsPathOperateMode", this.AsPathOperateMode);
 
     }
 }
