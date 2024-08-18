@@ -51,6 +51,20 @@ Base64编码后的大小不超过8M，支持mp4、avi、flv格式。
     private Long FaceInputType;
 
     /**
+    * 是否需要对请求信息进行全包体加密； 支持的加密算法:AES-256-CBC、SM4-GCM； 有加密需求的用户可使用此参数，详情请点击左侧链接。
+    */
+    @SerializedName("Encryption")
+    @Expose
+    private Encryption Encryption;
+
+    /**
+    * 加密后的密文； 加密前的数据格式如下:{"FaceInput":"AAAAA","FaceInputType":1}
+    */
+    @SerializedName("EncryptedBody")
+    @Expose
+    private String EncryptedBody;
+
+    /**
      * Get 传入需要进行检测的带有人脸的图片或视频，使用base64编码的形式。
 
 图片的Base64值：
@@ -134,6 +148,38 @@ Base64编码后的大小不超过8M，支持mp4、avi、flv格式。
         this.FaceInputType = FaceInputType;
     }
 
+    /**
+     * Get 是否需要对请求信息进行全包体加密； 支持的加密算法:AES-256-CBC、SM4-GCM； 有加密需求的用户可使用此参数，详情请点击左侧链接。 
+     * @return Encryption 是否需要对请求信息进行全包体加密； 支持的加密算法:AES-256-CBC、SM4-GCM； 有加密需求的用户可使用此参数，详情请点击左侧链接。
+     */
+    public Encryption getEncryption() {
+        return this.Encryption;
+    }
+
+    /**
+     * Set 是否需要对请求信息进行全包体加密； 支持的加密算法:AES-256-CBC、SM4-GCM； 有加密需求的用户可使用此参数，详情请点击左侧链接。
+     * @param Encryption 是否需要对请求信息进行全包体加密； 支持的加密算法:AES-256-CBC、SM4-GCM； 有加密需求的用户可使用此参数，详情请点击左侧链接。
+     */
+    public void setEncryption(Encryption Encryption) {
+        this.Encryption = Encryption;
+    }
+
+    /**
+     * Get 加密后的密文； 加密前的数据格式如下:{"FaceInput":"AAAAA","FaceInputType":1} 
+     * @return EncryptedBody 加密后的密文； 加密前的数据格式如下:{"FaceInput":"AAAAA","FaceInputType":1}
+     */
+    public String getEncryptedBody() {
+        return this.EncryptedBody;
+    }
+
+    /**
+     * Set 加密后的密文； 加密前的数据格式如下:{"FaceInput":"AAAAA","FaceInputType":1}
+     * @param EncryptedBody 加密后的密文； 加密前的数据格式如下:{"FaceInput":"AAAAA","FaceInputType":1}
+     */
+    public void setEncryptedBody(String EncryptedBody) {
+        this.EncryptedBody = EncryptedBody;
+    }
+
     public DetectAIFakeFacesRequest() {
     }
 
@@ -148,6 +194,12 @@ Base64编码后的大小不超过8M，支持mp4、avi、flv格式。
         if (source.FaceInputType != null) {
             this.FaceInputType = new Long(source.FaceInputType);
         }
+        if (source.Encryption != null) {
+            this.Encryption = new Encryption(source.Encryption);
+        }
+        if (source.EncryptedBody != null) {
+            this.EncryptedBody = new String(source.EncryptedBody);
+        }
     }
 
 
@@ -157,6 +209,8 @@ Base64编码后的大小不超过8M，支持mp4、avi、flv格式。
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FaceInput", this.FaceInput);
         this.setParamSimple(map, prefix + "FaceInputType", this.FaceInputType);
+        this.setParamObj(map, prefix + "Encryption.", this.Encryption);
+        this.setParamSimple(map, prefix + "EncryptedBody", this.EncryptedBody);
 
     }
 }

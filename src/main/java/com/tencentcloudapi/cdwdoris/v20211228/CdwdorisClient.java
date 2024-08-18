@@ -457,6 +457,17 @@ public class CdwdorisClient extends AbstractClient{
     }
 
     /**
+     *获取指定数据源和库下的表列表
+     * @param req DescribeTableListRequest
+     * @return DescribeTableListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTableListResponse DescribeTableList(DescribeTableListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTableList", DescribeTableListResponse.class);
+    }
+
+    /**
      *获取当前集群各用户绑定的资源信息
      * @param req DescribeUserBindWorkloadGroupRequest
      * @return DescribeUserBindWorkloadGroupResponse

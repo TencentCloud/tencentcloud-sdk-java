@@ -31,7 +31,7 @@ public class AccountPrivilegeModifyInfo extends AbstractModel {
     private String UserName;
 
     /**
-    * 账号权限变更信息
+    * 账号权限变更信息。参数DBPrivileges和AccAllDB只能二选一
     */
     @SerializedName("DBPrivileges")
     @Expose
@@ -52,6 +52,13 @@ public class AccountPrivilegeModifyInfo extends AbstractModel {
     private String AccountType;
 
     /**
+    * 全量修改指定账号下的所有DB权限，只支持特殊权限账号和普通权限账号。参数DBPrivileges和AccAllDB只能二选一
+    */
+    @SerializedName("AccAllDB")
+    @Expose
+    private SelectAllDB AccAllDB;
+
+    /**
      * Get 数据库用户名 
      * @return UserName 数据库用户名
      */
@@ -68,16 +75,16 @@ public class AccountPrivilegeModifyInfo extends AbstractModel {
     }
 
     /**
-     * Get 账号权限变更信息 
-     * @return DBPrivileges 账号权限变更信息
+     * Get 账号权限变更信息。参数DBPrivileges和AccAllDB只能二选一 
+     * @return DBPrivileges 账号权限变更信息。参数DBPrivileges和AccAllDB只能二选一
      */
     public DBPrivilegeModifyInfo [] getDBPrivileges() {
         return this.DBPrivileges;
     }
 
     /**
-     * Set 账号权限变更信息
-     * @param DBPrivileges 账号权限变更信息
+     * Set 账号权限变更信息。参数DBPrivileges和AccAllDB只能二选一
+     * @param DBPrivileges 账号权限变更信息。参数DBPrivileges和AccAllDB只能二选一
      */
     public void setDBPrivileges(DBPrivilegeModifyInfo [] DBPrivileges) {
         this.DBPrivileges = DBPrivileges;
@@ -115,6 +122,22 @@ public class AccountPrivilegeModifyInfo extends AbstractModel {
         this.AccountType = AccountType;
     }
 
+    /**
+     * Get 全量修改指定账号下的所有DB权限，只支持特殊权限账号和普通权限账号。参数DBPrivileges和AccAllDB只能二选一 
+     * @return AccAllDB 全量修改指定账号下的所有DB权限，只支持特殊权限账号和普通权限账号。参数DBPrivileges和AccAllDB只能二选一
+     */
+    public SelectAllDB getAccAllDB() {
+        return this.AccAllDB;
+    }
+
+    /**
+     * Set 全量修改指定账号下的所有DB权限，只支持特殊权限账号和普通权限账号。参数DBPrivileges和AccAllDB只能二选一
+     * @param AccAllDB 全量修改指定账号下的所有DB权限，只支持特殊权限账号和普通权限账号。参数DBPrivileges和AccAllDB只能二选一
+     */
+    public void setAccAllDB(SelectAllDB AccAllDB) {
+        this.AccAllDB = AccAllDB;
+    }
+
     public AccountPrivilegeModifyInfo() {
     }
 
@@ -138,6 +161,9 @@ public class AccountPrivilegeModifyInfo extends AbstractModel {
         if (source.AccountType != null) {
             this.AccountType = new String(source.AccountType);
         }
+        if (source.AccAllDB != null) {
+            this.AccAllDB = new SelectAllDB(source.AccAllDB);
+        }
     }
 
 
@@ -149,6 +175,7 @@ public class AccountPrivilegeModifyInfo extends AbstractModel {
         this.setParamArrayObj(map, prefix + "DBPrivileges.", this.DBPrivileges);
         this.setParamSimple(map, prefix + "IsAdmin", this.IsAdmin);
         this.setParamSimple(map, prefix + "AccountType", this.AccountType);
+        this.setParamObj(map, prefix + "AccAllDB.", this.AccAllDB);
 
     }
 }

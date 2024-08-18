@@ -34,6 +34,21 @@ public class CreateReconstructDocumentFlowConfig extends AbstractModel {
     private String TableResultType;
 
     /**
+    * 智能文档解析返回结果的格式
+0：只返回全文MD；
+1：只返回每一页的OCR原始Json；
+2：只返回每一页的MD，
+3：返回全文MD + 每一页的OCR原始Json；
+4：返回全文MD + 每一页的MD，
+默认值为3（返回全文MD + 每一页的OCR原始Json）
+
+
+    */
+    @SerializedName("ResultType")
+    @Expose
+    private String ResultType;
+
+    /**
      * Get Markdown文件中表格返回的形式
 0，表格以MD形式返回
 1，表格以HTML形式返回
@@ -61,6 +76,54 @@ public class CreateReconstructDocumentFlowConfig extends AbstractModel {
         this.TableResultType = TableResultType;
     }
 
+    /**
+     * Get 智能文档解析返回结果的格式
+0：只返回全文MD；
+1：只返回每一页的OCR原始Json；
+2：只返回每一页的MD，
+3：返回全文MD + 每一页的OCR原始Json；
+4：返回全文MD + 每一页的MD，
+默认值为3（返回全文MD + 每一页的OCR原始Json）
+
+ 
+     * @return ResultType 智能文档解析返回结果的格式
+0：只返回全文MD；
+1：只返回每一页的OCR原始Json；
+2：只返回每一页的MD，
+3：返回全文MD + 每一页的OCR原始Json；
+4：返回全文MD + 每一页的MD，
+默认值为3（返回全文MD + 每一页的OCR原始Json）
+
+
+     */
+    public String getResultType() {
+        return this.ResultType;
+    }
+
+    /**
+     * Set 智能文档解析返回结果的格式
+0：只返回全文MD；
+1：只返回每一页的OCR原始Json；
+2：只返回每一页的MD，
+3：返回全文MD + 每一页的OCR原始Json；
+4：返回全文MD + 每一页的MD，
+默认值为3（返回全文MD + 每一页的OCR原始Json）
+
+
+     * @param ResultType 智能文档解析返回结果的格式
+0：只返回全文MD；
+1：只返回每一页的OCR原始Json；
+2：只返回每一页的MD，
+3：返回全文MD + 每一页的OCR原始Json；
+4：返回全文MD + 每一页的MD，
+默认值为3（返回全文MD + 每一页的OCR原始Json）
+
+
+     */
+    public void setResultType(String ResultType) {
+        this.ResultType = ResultType;
+    }
+
     public CreateReconstructDocumentFlowConfig() {
     }
 
@@ -72,6 +135,9 @@ public class CreateReconstructDocumentFlowConfig extends AbstractModel {
         if (source.TableResultType != null) {
             this.TableResultType = new String(source.TableResultType);
         }
+        if (source.ResultType != null) {
+            this.ResultType = new String(source.ResultType);
+        }
     }
 
 
@@ -80,6 +146,7 @@ public class CreateReconstructDocumentFlowConfig extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TableResultType", this.TableResultType);
+        this.setParamSimple(map, prefix + "ResultType", this.ResultType);
 
     }
 }

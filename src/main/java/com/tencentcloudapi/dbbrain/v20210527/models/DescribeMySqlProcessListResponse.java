@@ -31,6 +31,14 @@ public class DescribeMySqlProcessListResponse extends AbstractModel {
     private MySqlProcess [] ProcessList;
 
     /**
+    * sql会话统计信息。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Statistics")
+    @Expose
+    private StatisticInfo [] Statistics;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -51,6 +59,26 @@ public class DescribeMySqlProcessListResponse extends AbstractModel {
      */
     public void setProcessList(MySqlProcess [] ProcessList) {
         this.ProcessList = ProcessList;
+    }
+
+    /**
+     * Get sql会话统计信息。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Statistics sql会话统计信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public StatisticInfo [] getStatistics() {
+        return this.Statistics;
+    }
+
+    /**
+     * Set sql会话统计信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Statistics sql会话统计信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStatistics(StatisticInfo [] Statistics) {
+        this.Statistics = Statistics;
     }
 
     /**
@@ -83,6 +111,12 @@ public class DescribeMySqlProcessListResponse extends AbstractModel {
                 this.ProcessList[i] = new MySqlProcess(source.ProcessList[i]);
             }
         }
+        if (source.Statistics != null) {
+            this.Statistics = new StatisticInfo[source.Statistics.length];
+            for (int i = 0; i < source.Statistics.length; i++) {
+                this.Statistics[i] = new StatisticInfo(source.Statistics[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -94,6 +128,7 @@ public class DescribeMySqlProcessListResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "ProcessList.", this.ProcessList);
+        this.setParamArrayObj(map, prefix + "Statistics.", this.Statistics);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

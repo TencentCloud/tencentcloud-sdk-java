@@ -67,9 +67,7 @@ public class ModifyRoundPlayRequest extends AbstractModel {
     private String Desc;
 
     /**
-    * 播放状态，可选值：
-<li>Disabled：结束播放，结束后轮播任务不能再次启动。</li>
-
+    * 播放状态，可选值：<li>Disabled：停止播放。</li><li>Enabled：启播时长到达后启动播放。</li>
     */
     @SerializedName("Status")
     @Expose
@@ -185,24 +183,16 @@ public class ModifyRoundPlayRequest extends AbstractModel {
     }
 
     /**
-     * Get 播放状态，可选值：
-<li>Disabled：结束播放，结束后轮播任务不能再次启动。</li>
- 
-     * @return Status 播放状态，可选值：
-<li>Disabled：结束播放，结束后轮播任务不能再次启动。</li>
-
+     * Get 播放状态，可选值：<li>Disabled：停止播放。</li><li>Enabled：启播时长到达后启动播放。</li> 
+     * @return Status 播放状态，可选值：<li>Disabled：停止播放。</li><li>Enabled：启播时长到达后启动播放。</li>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 播放状态，可选值：
-<li>Disabled：结束播放，结束后轮播任务不能再次启动。</li>
-
-     * @param Status 播放状态，可选值：
-<li>Disabled：结束播放，结束后轮播任务不能再次启动。</li>
-
+     * Set 播放状态，可选值：<li>Disabled：停止播放。</li><li>Enabled：启播时长到达后启动播放。</li>
+     * @param Status 播放状态，可选值：<li>Disabled：停止播放。</li><li>Enabled：启播时长到达后启动播放。</li>
      */
     public void setStatus(String Status) {
         this.Status = Status;

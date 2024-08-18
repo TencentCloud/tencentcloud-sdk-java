@@ -46,6 +46,13 @@ public class OrganizationAuthUrl extends AbstractModel {
     private String ErrorMessage;
 
     /**
+    * 企业批量注册的唯一 Id， 此 Id 可以用在[创建企业批量认证链接-单链接](https://qian.tencent.com/developers/companyApis/organizations/CreateBatchOrganizationAuthorizationUrl)。
+    */
+    @SerializedName("SubTaskId")
+    @Expose
+    private String SubTaskId;
+
+    /**
      * Get 企业批量注册链接，根据Endpoint的不同设置，返回不同的链接地址。失效时间：7天
 跳转链接, 链接的有效期根据企业,员工状态和终端等有区别, 可以参考下表
 <table> <thead> <tr> <th>Endpoint</th> <th>示例</th> <th>链接有效期限</th> </tr> </thead>  <tbody>
@@ -109,6 +116,22 @@ public class OrganizationAuthUrl extends AbstractModel {
         this.ErrorMessage = ErrorMessage;
     }
 
+    /**
+     * Get 企业批量注册的唯一 Id， 此 Id 可以用在[创建企业批量认证链接-单链接](https://qian.tencent.com/developers/companyApis/organizations/CreateBatchOrganizationAuthorizationUrl)。 
+     * @return SubTaskId 企业批量注册的唯一 Id， 此 Id 可以用在[创建企业批量认证链接-单链接](https://qian.tencent.com/developers/companyApis/organizations/CreateBatchOrganizationAuthorizationUrl)。
+     */
+    public String getSubTaskId() {
+        return this.SubTaskId;
+    }
+
+    /**
+     * Set 企业批量注册的唯一 Id， 此 Id 可以用在[创建企业批量认证链接-单链接](https://qian.tencent.com/developers/companyApis/organizations/CreateBatchOrganizationAuthorizationUrl)。
+     * @param SubTaskId 企业批量注册的唯一 Id， 此 Id 可以用在[创建企业批量认证链接-单链接](https://qian.tencent.com/developers/companyApis/organizations/CreateBatchOrganizationAuthorizationUrl)。
+     */
+    public void setSubTaskId(String SubTaskId) {
+        this.SubTaskId = SubTaskId;
+    }
+
     public OrganizationAuthUrl() {
     }
 
@@ -123,6 +146,9 @@ public class OrganizationAuthUrl extends AbstractModel {
         if (source.ErrorMessage != null) {
             this.ErrorMessage = new String(source.ErrorMessage);
         }
+        if (source.SubTaskId != null) {
+            this.SubTaskId = new String(source.SubTaskId);
+        }
     }
 
 
@@ -132,6 +158,7 @@ public class OrganizationAuthUrl extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AuthUrl", this.AuthUrl);
         this.setParamSimple(map, prefix + "ErrorMessage", this.ErrorMessage);
+        this.setParamSimple(map, prefix + "SubTaskId", this.SubTaskId);
 
     }
 }

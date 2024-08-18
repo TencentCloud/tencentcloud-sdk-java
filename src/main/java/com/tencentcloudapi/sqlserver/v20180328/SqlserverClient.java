@@ -1326,6 +1326,17 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
+     *本接口（ModifyDatabasePrivilege）用于修改实例数据库权限。
+     * @param req ModifyDatabasePrivilegeRequest
+     * @return ModifyDatabasePrivilegeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDatabasePrivilegeResponse ModifyDatabasePrivilege(ModifyDatabasePrivilegeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDatabasePrivilege", ModifyDatabasePrivilegeResponse.class);
+    }
+
+    /**
      *本接口(ModifyDatabaseShrinkDMF)用于收缩数据库mdf(Shrink mdf)。
      * @param req ModifyDatabaseShrinkMDFRequest
      * @return ModifyDatabaseShrinkMDFResponse

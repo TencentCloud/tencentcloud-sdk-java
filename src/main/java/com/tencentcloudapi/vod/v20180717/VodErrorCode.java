@@ -444,6 +444,9 @@ public enum VodErrorCode {
     // 参数值错误：ReviewWallSwitch 参数取值非法。
      INVALIDPARAMETERVALUE_REVIEWWALLSWITCH("InvalidParameterValue.ReviewWallSwitch"),
      
+    // RoundPlaylist 参数长度错误。
+     INVALIDPARAMETERVALUE_ROUNDPLAYLIST("InvalidParameterValue.RoundPlaylist"),
+     
     // 参数值错误：RowCount。
      INVALIDPARAMETERVALUE_ROWCOUNT("InvalidParameterValue.RowCount"),
      
@@ -626,6 +629,15 @@ public enum VodErrorCode {
      
     // 超过限制值：新旧打点信息个数和超过限制值。
      LIMITEXCEEDED_KEYFRAMEDESCCOUNTREACHMAX("LimitExceeded.KeyFrameDescCountReachMax"),
+     
+    // 播放列表长度太大。
+     LIMITEXCEEDED_PLAYLIST("LimitExceeded.PlayList"),
+     
+    // 超过播单总数限制。
+     LIMITEXCEEDED_ROUNDPLAYS("LimitExceeded.RoundPlays"),
+     
+    // 运行中的播单超过最大数量。
+     LIMITEXCEEDED_RUNNINGROUNDPLAYS("LimitExceeded.RunningRoundPlays"),
      
     // 超过限制值：新旧标签个数和超过限制值。
      LIMITEXCEEDED_TAGCOUNTREACHMAX("LimitExceeded.TagCountReachMax"),
