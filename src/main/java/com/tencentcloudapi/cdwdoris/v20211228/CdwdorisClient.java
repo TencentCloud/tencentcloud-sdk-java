@@ -50,6 +50,17 @@ public class CdwdorisClient extends AbstractClient{
     }
 
     /**
+     *查询冷热分层生效变量和配置是否正确
+     * @param req CheckCoolDownWorkingVariableConfigCorrectRequest
+     * @return CheckCoolDownWorkingVariableConfigCorrectResponse
+     * @throws TencentCloudSDKException
+     */
+    public CheckCoolDownWorkingVariableConfigCorrectResponse CheckCoolDownWorkingVariableConfigCorrect(CheckCoolDownWorkingVariableConfigCorrectRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CheckCoolDownWorkingVariableConfigCorrect", CheckCoolDownWorkingVariableConfigCorrectResponse.class);
+    }
+
+    /**
      *创建或者修改备份策略
      * @param req CreateBackUpScheduleRequest
      * @return CreateBackUpScheduleResponse
@@ -58,6 +69,17 @@ public class CdwdorisClient extends AbstractClient{
     public CreateBackUpScheduleResponse CreateBackUpSchedule(CreateBackUpScheduleRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateBackUpSchedule", CreateBackUpScheduleResponse.class);
+    }
+
+    /**
+     *创建冷热分层策略
+     * @param req CreateCoolDownPolicyRequest
+     * @return CreateCoolDownPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCoolDownPolicyResponse CreateCoolDownPolicy(CreateCoolDownPolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateCoolDownPolicy", CreateCoolDownPolicyResponse.class);
     }
 
     /**
@@ -193,6 +215,39 @@ public class CdwdorisClient extends AbstractClient{
     }
 
     /**
+     *查询冷热分层backend节点信息列表
+     * @param req DescribeCoolDownBackendsRequest
+     * @return DescribeCoolDownBackendsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCoolDownBackendsResponse DescribeCoolDownBackends(DescribeCoolDownBackendsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCoolDownBackends", DescribeCoolDownBackendsResponse.class);
+    }
+
+    /**
+     *查询冷热分层策略列表
+     * @param req DescribeCoolDownPoliciesRequest
+     * @return DescribeCoolDownPoliciesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCoolDownPoliciesResponse DescribeCoolDownPolicies(DescribeCoolDownPoliciesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCoolDownPolicies", DescribeCoolDownPoliciesResponse.class);
+    }
+
+    /**
+     *查询冷热分层Table数据
+     * @param req DescribeCoolDownTableDataRequest
+     * @return DescribeCoolDownTableDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCoolDownTableDataResponse DescribeCoolDownTableData(DescribeCoolDownTableDataRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCoolDownTableData", DescribeCoolDownTableDataResponse.class);
+    }
+
+    /**
      *下载数据库审计日志
      * @param req DescribeDatabaseAuditDownloadRequest
      * @return DescribeDatabaseAuditDownloadResponse
@@ -212,72 +267,6 @@ public class CdwdorisClient extends AbstractClient{
     public DescribeDatabaseAuditRecordsResponse DescribeDatabaseAuditRecords(DescribeDatabaseAuditRecordsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeDatabaseAuditRecords", DescribeDatabaseAuditRecordsResponse.class);
-    }
-
-    /**
-     *数据库审计数据库、用户等
-     * @param req DescribeDatabaseAuditResourceRequest
-     * @return DescribeDatabaseAuditResourceResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeDatabaseAuditResourceResponse DescribeDatabaseAuditResource(DescribeDatabaseAuditResourceRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeDatabaseAuditResource", DescribeDatabaseAuditResourceResponse.class);
-    }
-
-    /**
-     *查询sql工作区历史运行记录
-     * @param req DescribeDmsSqlHistoryRequest
-     * @return DescribeDmsSqlHistoryResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeDmsSqlHistoryResponse DescribeDmsSqlHistory(DescribeDmsSqlHistoryRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeDmsSqlHistory", DescribeDmsSqlHistoryResponse.class);
-    }
-
-    /**
-     *展示监控指标文件
-     * @param req DescribeDorisMetricFilesRequest
-     * @return DescribeDorisMetricFilesResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeDorisMetricFilesResponse DescribeDorisMetricFiles(DescribeDorisMetricFilesRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeDorisMetricFiles", DescribeDorisMetricFilesResponse.class);
-    }
-
-    /**
-     *获取联合身份临时访问凭证
-     * @param req DescribeFederationTokenRequest
-     * @return DescribeFederationTokenResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeFederationTokenResponse DescribeFederationToken(DescribeFederationTokenRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeFederationToken", DescribeFederationTokenResponse.class);
-    }
-
-    /**
-     *查询前端内容
-     * @param req DescribeFrontEndRequest
-     * @return DescribeFrontEndResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeFrontEndResponse DescribeFrontEnd(DescribeFrontEndRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeFrontEnd", DescribeFrontEndResponse.class);
-    }
-
-    /**
-     *生成计费相关接口的GoodsDetail结构
-     * @param req DescribeGoodsDetailRequest
-     * @return DescribeGoodsDetailResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeGoodsDetailResponse DescribeGoodsDetail(DescribeGoodsDetailRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeGoodsDetail", DescribeGoodsDetailResponse.class);
     }
 
     /**
@@ -380,28 +369,6 @@ public class CdwdorisClient extends AbstractClient{
     }
 
     /**
-     *购买页获取地域及可用区列表、内核版本、网络规则等
-     * @param req DescribeRegionZoneRequest
-     * @return DescribeRegionZoneResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeRegionZoneResponse DescribeRegionZone(DescribeRegionZoneRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeRegionZone", DescribeRegionZoneResponse.class);
-    }
-
-    /**
-     *检查内核版本是否支持新的备份恢复语法
-     * @param req DescribeReplicaVersionRequest
-     * @return DescribeReplicaVersionResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeReplicaVersionResponse DescribeReplicaVersion(DescribeReplicaVersionRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeReplicaVersion", DescribeReplicaVersionResponse.class);
-    }
-
-    /**
      *查询恢复任务进度详情
      * @param req DescribeRestoreTaskDetailRequest
      * @return DescribeRestoreTaskDetailResponse
@@ -501,14 +468,14 @@ public class CdwdorisClient extends AbstractClient{
     }
 
     /**
-     *给已存在集群，配置日志服务
-     * @param req FitClsLogRequest
-     * @return FitClsLogResponse
+     *修改冷热分层策略
+     * @param req ModifyCoolDownPolicyRequest
+     * @return ModifyCoolDownPolicyResponse
      * @throws TencentCloudSDKException
      */
-    public FitClsLogResponse FitClsLog(FitClsLogRequest req) throws TencentCloudSDKException{
+    public ModifyCoolDownPolicyResponse ModifyCoolDownPolicy(ModifyCoolDownPolicyRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
-        return this.internalRequest(req, "FitClsLog", FitClsLogResponse.class);
+        return this.internalRequest(req, "ModifyCoolDownPolicy", ModifyCoolDownPolicyResponse.class);
     }
 
     /**
@@ -600,14 +567,25 @@ public class CdwdorisClient extends AbstractClient{
     }
 
     /**
-     *开启或者关闭策略
-     * @param req OpenBackUpRequest
-     * @return OpenBackUpResponse
+     *开始启用冷热分层
+     * @param req OpenCoolDownRequest
+     * @return OpenCoolDownResponse
      * @throws TencentCloudSDKException
      */
-    public OpenBackUpResponse OpenBackUp(OpenBackUpRequest req) throws TencentCloudSDKException{
+    public OpenCoolDownResponse OpenCoolDown(OpenCoolDownRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
-        return this.internalRequest(req, "OpenBackUp", OpenBackUpResponse.class);
+        return this.internalRequest(req, "OpenCoolDown", OpenCoolDownResponse.class);
+    }
+
+    /**
+     *开通、描述降冷策略接口
+     * @param req OpenCoolDownPolicyRequest
+     * @return OpenCoolDownPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public OpenCoolDownPolicyResponse OpenCoolDownPolicy(OpenCoolDownPolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "OpenCoolDownPolicy", OpenCoolDownPolicyResponse.class);
     }
 
     /**
@@ -685,6 +663,17 @@ public class CdwdorisClient extends AbstractClient{
     public ScaleUpInstanceResponse ScaleUpInstance(ScaleUpInstanceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ScaleUpInstance", ScaleUpInstanceResponse.class);
+    }
+
+    /**
+     *更新集群冷热分层信息
+     * @param req UpdateCoolDownRequest
+     * @return UpdateCoolDownResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateCoolDownResponse UpdateCoolDown(UpdateCoolDownRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateCoolDown", UpdateCoolDownResponse.class);
     }
 
 }

@@ -86,6 +86,22 @@ public class RoundPlayInfo extends AbstractModel {
     private String Url;
 
     /**
+    * 创建时间，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private String CreateTime;
+
+    /**
+    * 更新时间，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UpdateTime")
+    @Expose
+    private String UpdateTime;
+
+    /**
      * Get 轮播播单标识。 
      * @return RoundPlayId 轮播播单标识。
      */
@@ -237,6 +253,46 @@ public class RoundPlayInfo extends AbstractModel {
         this.Url = Url;
     }
 
+    /**
+     * Get 创建时间，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CreateTime 创建时间，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set 创建时间，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CreateTime 创建时间，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCreateTime(String CreateTime) {
+        this.CreateTime = CreateTime;
+    }
+
+    /**
+     * Get 更新时间，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UpdateTime 更新时间，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getUpdateTime() {
+        return this.UpdateTime;
+    }
+
+    /**
+     * Set 更新时间，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UpdateTime 更新时间，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUpdateTime(String UpdateTime) {
+        this.UpdateTime = UpdateTime;
+    }
+
     public RoundPlayInfo() {
     }
 
@@ -272,6 +328,12 @@ public class RoundPlayInfo extends AbstractModel {
         if (source.Url != null) {
             this.Url = new String(source.Url);
         }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
+        if (source.UpdateTime != null) {
+            this.UpdateTime = new String(source.UpdateTime);
+        }
     }
 
 
@@ -287,6 +349,8 @@ public class RoundPlayInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "PlayBackMode", this.PlayBackMode);
         this.setParamSimple(map, prefix + "Url", this.Url);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
 
     }
 }

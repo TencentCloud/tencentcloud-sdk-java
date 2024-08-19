@@ -115,6 +115,13 @@ public class InquiryPriceScaleOutInstanceRequest extends AbstractModel {
     private String ComputeResourceId;
 
     /**
+    * 扩容资源类型
+    */
+    @SerializedName("HardwareResourceType")
+    @Expose
+    private String HardwareResourceType;
+
+    /**
      * Get 扩容的时间单位。取值范围：
 <li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
 <li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li> 
@@ -334,6 +341,22 @@ public class InquiryPriceScaleOutInstanceRequest extends AbstractModel {
         this.ComputeResourceId = ComputeResourceId;
     }
 
+    /**
+     * Get 扩容资源类型 
+     * @return HardwareResourceType 扩容资源类型
+     */
+    public String getHardwareResourceType() {
+        return this.HardwareResourceType;
+    }
+
+    /**
+     * Set 扩容资源类型
+     * @param HardwareResourceType 扩容资源类型
+     */
+    public void setHardwareResourceType(String HardwareResourceType) {
+        this.HardwareResourceType = HardwareResourceType;
+    }
+
     public InquiryPriceScaleOutInstanceRequest() {
     }
 
@@ -378,6 +401,9 @@ public class InquiryPriceScaleOutInstanceRequest extends AbstractModel {
         if (source.ComputeResourceId != null) {
             this.ComputeResourceId = new String(source.ComputeResourceId);
         }
+        if (source.HardwareResourceType != null) {
+            this.HardwareResourceType = new String(source.HardwareResourceType);
+        }
     }
 
 
@@ -397,6 +423,7 @@ public class InquiryPriceScaleOutInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "MasterCount", this.MasterCount);
         this.setParamSimple(map, prefix + "ResourceBaseType", this.ResourceBaseType);
         this.setParamSimple(map, prefix + "ComputeResourceId", this.ComputeResourceId);
+        this.setParamSimple(map, prefix + "HardwareResourceType", this.HardwareResourceType);
 
     }
 }

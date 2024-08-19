@@ -24,8 +24,10 @@ import java.util.HashMap;
 public class Choice extends AbstractModel {
 
     /**
-    * 结束标志位，可能为 stop 或 sensitive。
-stop 表示输出正常结束，sensitive 只在开启流式输出审核时会出现，表示安全审核未通过。
+    * 结束标志位，可能为 stop、 sensitive或者tool_calls。
+stop 表示输出正常结束。
+sensitive 只在开启流式输出审核时会出现，表示安全审核未通过。
+tool_calls 标识函数调用。
     */
     @SerializedName("FinishReason")
     @Expose
@@ -48,20 +50,28 @@ stop 表示输出正常结束，sensitive 只在开启流式输出审核时会�
     private Message Message;
 
     /**
-     * Get 结束标志位，可能为 stop 或 sensitive。
-stop 表示输出正常结束，sensitive 只在开启流式输出审核时会出现，表示安全审核未通过。 
-     * @return FinishReason 结束标志位，可能为 stop 或 sensitive。
-stop 表示输出正常结束，sensitive 只在开启流式输出审核时会出现，表示安全审核未通过。
+     * Get 结束标志位，可能为 stop、 sensitive或者tool_calls。
+stop 表示输出正常结束。
+sensitive 只在开启流式输出审核时会出现，表示安全审核未通过。
+tool_calls 标识函数调用。 
+     * @return FinishReason 结束标志位，可能为 stop、 sensitive或者tool_calls。
+stop 表示输出正常结束。
+sensitive 只在开启流式输出审核时会出现，表示安全审核未通过。
+tool_calls 标识函数调用。
      */
     public String getFinishReason() {
         return this.FinishReason;
     }
 
     /**
-     * Set 结束标志位，可能为 stop 或 sensitive。
-stop 表示输出正常结束，sensitive 只在开启流式输出审核时会出现，表示安全审核未通过。
-     * @param FinishReason 结束标志位，可能为 stop 或 sensitive。
-stop 表示输出正常结束，sensitive 只在开启流式输出审核时会出现，表示安全审核未通过。
+     * Set 结束标志位，可能为 stop、 sensitive或者tool_calls。
+stop 表示输出正常结束。
+sensitive 只在开启流式输出审核时会出现，表示安全审核未通过。
+tool_calls 标识函数调用。
+     * @param FinishReason 结束标志位，可能为 stop、 sensitive或者tool_calls。
+stop 表示输出正常结束。
+sensitive 只在开启流式输出审核时会出现，表示安全审核未通过。
+tool_calls 标识函数调用。
      */
     public void setFinishReason(String FinishReason) {
         this.FinishReason = FinishReason;

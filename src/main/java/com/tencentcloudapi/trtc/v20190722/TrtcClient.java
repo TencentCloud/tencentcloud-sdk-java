@@ -840,4 +840,15 @@ MCU 混流转码费用，请参考文档：[云端混流转码计费说明](http
         return this.internalRequest(req, "UpdatePublishCdnStream", UpdatePublishCdnStreamResponse.class);
     }
 
+    /**
+     *更新输入在线媒体流任务的StreamUrl
+     * @param req UpdateStreamIngestRequest
+     * @return UpdateStreamIngestResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateStreamIngestResponse UpdateStreamIngest(UpdateStreamIngestRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateStreamIngest", UpdateStreamIngestResponse.class);
+    }
+
 }

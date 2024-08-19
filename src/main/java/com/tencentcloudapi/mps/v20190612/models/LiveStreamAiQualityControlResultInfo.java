@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class LiveStreamAiQualityControlResultInfo extends AbstractModel {
 
     /**
-    * 质检结果列表。
+    * 内容质检结果列表。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("QualityControlResults")
@@ -40,21 +40,41 @@ public class LiveStreamAiQualityControlResultInfo extends AbstractModel {
     private DiagnoseResult [] DiagnoseResults;
 
     /**
-     * Get 质检结果列表。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return QualityControlResults 质检结果列表。
+    * 内容质检结果列表。
 注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("QualityControlResultSet")
+    @Expose
+    private QualityControlResult [] QualityControlResultSet;
+
+    /**
+    * 格式诊断结果列表。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DiagnoseResultSet")
+    @Expose
+    private DiagnoseResult [] DiagnoseResultSet;
+
+    /**
+     * Get 内容质检结果列表。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return QualityControlResults 内容质检结果列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public QualityControlResult [] getQualityControlResults() {
         return this.QualityControlResults;
     }
 
     /**
-     * Set 质检结果列表。
+     * Set 内容质检结果列表。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param QualityControlResults 质检结果列表。
+     * @param QualityControlResults 内容质检结果列表。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public void setQualityControlResults(QualityControlResult [] QualityControlResults) {
         this.QualityControlResults = QualityControlResults;
     }
@@ -64,7 +84,9 @@ public class LiveStreamAiQualityControlResultInfo extends AbstractModel {
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return DiagnoseResults 格式诊断结果列表。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public DiagnoseResult [] getDiagnoseResults() {
         return this.DiagnoseResults;
     }
@@ -74,9 +96,51 @@ public class LiveStreamAiQualityControlResultInfo extends AbstractModel {
 注意：此字段可能返回 null，表示取不到有效值。
      * @param DiagnoseResults 格式诊断结果列表。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public void setDiagnoseResults(DiagnoseResult [] DiagnoseResults) {
         this.DiagnoseResults = DiagnoseResults;
+    }
+
+    /**
+     * Get 内容质检结果列表。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return QualityControlResultSet 内容质检结果列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public QualityControlResult [] getQualityControlResultSet() {
+        return this.QualityControlResultSet;
+    }
+
+    /**
+     * Set 内容质检结果列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param QualityControlResultSet 内容质检结果列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setQualityControlResultSet(QualityControlResult [] QualityControlResultSet) {
+        this.QualityControlResultSet = QualityControlResultSet;
+    }
+
+    /**
+     * Get 格式诊断结果列表。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DiagnoseResultSet 格式诊断结果列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public DiagnoseResult [] getDiagnoseResultSet() {
+        return this.DiagnoseResultSet;
+    }
+
+    /**
+     * Set 格式诊断结果列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DiagnoseResultSet 格式诊断结果列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDiagnoseResultSet(DiagnoseResult [] DiagnoseResultSet) {
+        this.DiagnoseResultSet = DiagnoseResultSet;
     }
 
     public LiveStreamAiQualityControlResultInfo() {
@@ -99,6 +163,18 @@ public class LiveStreamAiQualityControlResultInfo extends AbstractModel {
                 this.DiagnoseResults[i] = new DiagnoseResult(source.DiagnoseResults[i]);
             }
         }
+        if (source.QualityControlResultSet != null) {
+            this.QualityControlResultSet = new QualityControlResult[source.QualityControlResultSet.length];
+            for (int i = 0; i < source.QualityControlResultSet.length; i++) {
+                this.QualityControlResultSet[i] = new QualityControlResult(source.QualityControlResultSet[i]);
+            }
+        }
+        if (source.DiagnoseResultSet != null) {
+            this.DiagnoseResultSet = new DiagnoseResult[source.DiagnoseResultSet.length];
+            for (int i = 0; i < source.DiagnoseResultSet.length; i++) {
+                this.DiagnoseResultSet[i] = new DiagnoseResult(source.DiagnoseResultSet[i]);
+            }
+        }
     }
 
 
@@ -108,6 +184,8 @@ public class LiveStreamAiQualityControlResultInfo extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "QualityControlResults.", this.QualityControlResults);
         this.setParamArrayObj(map, prefix + "DiagnoseResults.", this.DiagnoseResults);
+        this.setParamArrayObj(map, prefix + "QualityControlResultSet.", this.QualityControlResultSet);
+        this.setParamArrayObj(map, prefix + "DiagnoseResultSet.", this.DiagnoseResultSet);
 
     }
 }

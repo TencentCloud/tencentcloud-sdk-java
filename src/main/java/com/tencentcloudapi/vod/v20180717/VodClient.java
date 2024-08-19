@@ -897,6 +897,17 @@ public class VodClient extends AbstractClient{
     }
 
     /**
+     *查询轮播当前播放列表。
+     * @param req DescribeCurrentPlaylistRequest
+     * @return DescribeCurrentPlaylistResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCurrentPlaylistResponse DescribeCurrentPlaylist(DescribeCurrentPlaylistRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCurrentPlaylist", DescribeCurrentPlaylistResponse.class);
+    }
+
+    /**
      *该接口用于查询指定日期范围内每天的播放统计数据。
 * 可以查询最近一年的播放统计数据。
 * 结束日期和起始日期的时间跨度最大为90天。
@@ -1483,6 +1494,17 @@ public class VodClient extends AbstractClient{
     }
 
     /**
+     *对 HLS 视频实现快速拼接和快速剪辑，生成新的 HLS 格式的媒体。
+     * @param req FastEditMediaRequest
+     * @return FastEditMediaResponse
+     * @throws TencentCloudSDKException
+     */
+    public FastEditMediaResponse FastEditMedia(FastEditMediaRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "FastEditMedia", FastEditMediaResponse.class);
+    }
+
+    /**
      ** 对媒体禁播后，除了点播控制台预览，其他场景访问视频各种资源的 URL（原始文件、转码输出文件、截图等）均会返回 403。
   禁播/解禁操作全网生效时间约 5~10 分钟。
      * @param req ForbidMediaDistributionRequest
@@ -1492,6 +1514,17 @@ public class VodClient extends AbstractClient{
     public ForbidMediaDistributionResponse ForbidMediaDistribution(ForbidMediaDistributionRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ForbidMediaDistribution", ForbidMediaDistributionResponse.class);
+    }
+
+    /**
+     *操作轮播当前播放列表。支持的操作有：<li> Insert：向当前播列表插入播放节目。</li><li> Delete：删除播列表中的播放节目。</li>
+     * @param req HandleCurrentPlaylistRequest
+     * @return HandleCurrentPlaylistResponse
+     * @throws TencentCloudSDKException
+     */
+    public HandleCurrentPlaylistResponse HandleCurrentPlaylist(HandleCurrentPlaylistRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "HandleCurrentPlaylist", HandleCurrentPlaylistResponse.class);
     }
 
     /**

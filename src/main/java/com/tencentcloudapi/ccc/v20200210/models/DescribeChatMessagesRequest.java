@@ -24,18 +24,18 @@ import java.util.HashMap;
 public class DescribeChatMessagesRequest extends AbstractModel {
 
     /**
-    * 实例 ID（废弃）
-    */
-    @SerializedName("InstanceId")
-    @Expose
-    private Long InstanceId;
-
-    /**
     * 应用 ID，可以查看 https://console.cloud.tencent.com/ccc
     */
     @SerializedName("SdkAppId")
     @Expose
     private Long SdkAppId;
+
+    /**
+    * 实例 ID（废弃）
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private Long InstanceId;
 
     /**
     * 服务记录ID（废弃）
@@ -73,6 +73,22 @@ public class DescribeChatMessagesRequest extends AbstractModel {
     private String SessionId;
 
     /**
+     * Get 应用 ID，可以查看 https://console.cloud.tencent.com/ccc 
+     * @return SdkAppId 应用 ID，可以查看 https://console.cloud.tencent.com/ccc
+     */
+    public Long getSdkAppId() {
+        return this.SdkAppId;
+    }
+
+    /**
+     * Set 应用 ID，可以查看 https://console.cloud.tencent.com/ccc
+     * @param SdkAppId 应用 ID，可以查看 https://console.cloud.tencent.com/ccc
+     */
+    public void setSdkAppId(Long SdkAppId) {
+        this.SdkAppId = SdkAppId;
+    }
+
+    /**
      * Get 实例 ID（废弃） 
      * @return InstanceId 实例 ID（废弃）
      * @deprecated
@@ -90,22 +106,6 @@ public class DescribeChatMessagesRequest extends AbstractModel {
     @Deprecated
     public void setInstanceId(Long InstanceId) {
         this.InstanceId = InstanceId;
-    }
-
-    /**
-     * Get 应用 ID，可以查看 https://console.cloud.tencent.com/ccc 
-     * @return SdkAppId 应用 ID，可以查看 https://console.cloud.tencent.com/ccc
-     */
-    public Long getSdkAppId() {
-        return this.SdkAppId;
-    }
-
-    /**
-     * Set 应用 ID，可以查看 https://console.cloud.tencent.com/ccc
-     * @param SdkAppId 应用 ID，可以查看 https://console.cloud.tencent.com/ccc
-     */
-    public void setSdkAppId(Long SdkAppId) {
-        this.SdkAppId = SdkAppId;
     }
 
     /**
@@ -200,11 +200,11 @@ public class DescribeChatMessagesRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeChatMessagesRequest(DescribeChatMessagesRequest source) {
-        if (source.InstanceId != null) {
-            this.InstanceId = new Long(source.InstanceId);
-        }
         if (source.SdkAppId != null) {
             this.SdkAppId = new Long(source.SdkAppId);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new Long(source.InstanceId);
         }
         if (source.CdrId != null) {
             this.CdrId = new String(source.CdrId);
@@ -228,8 +228,8 @@ public class DescribeChatMessagesRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "CdrId", this.CdrId);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);

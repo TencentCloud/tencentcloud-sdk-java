@@ -468,6 +468,17 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *该接口（DescribeBinlogConfig）用于查询binlog配置
+     * @param req DescribeBinlogConfigRequest
+     * @return DescribeBinlogConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBinlogConfigResponse DescribeBinlogConfig(DescribeBinlogConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBinlogConfig", DescribeBinlogConfigResponse.class);
+    }
+
+    /**
      *此接口（DescribeBinlogDownloadUrl）用于查询Binlog的下载地址。
      * @param req DescribeBinlogDownloadUrlRequest
      * @return DescribeBinlogDownloadUrlResponse
@@ -1072,6 +1083,17 @@ public class CynosdbClient extends AbstractClient{
     public ModifyBackupNameResponse ModifyBackupName(ModifyBackupNameRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyBackupName", ModifyBackupNameResponse.class);
+    }
+
+    /**
+     *该接口（ModifyBinlogConfig）用于修改Binlog配置
+     * @param req ModifyBinlogConfigRequest
+     * @return ModifyBinlogConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyBinlogConfigResponse ModifyBinlogConfig(ModifyBinlogConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyBinlogConfig", ModifyBinlogConfigResponse.class);
     }
 
     /**

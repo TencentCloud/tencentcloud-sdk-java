@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class SourceIpTranslationNatRule extends AbstractModel {
 
     /**
-    * 资源ID，如果ResourceType为USERDEFINED，可以为空
+    * 资源ID，如果ResourceType为USERDEFINED，可以为空字符串
     */
     @SerializedName("ResourceId")
     @Expose
@@ -91,16 +91,16 @@ public class SourceIpTranslationNatRule extends AbstractModel {
     private String CreatedTime;
 
     /**
-     * Get 资源ID，如果ResourceType为USERDEFINED，可以为空 
-     * @return ResourceId 资源ID，如果ResourceType为USERDEFINED，可以为空
+     * Get 资源ID，如果ResourceType为USERDEFINED，可以为空字符串 
+     * @return ResourceId 资源ID，如果ResourceType为USERDEFINED，可以为空字符串
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set 资源ID，如果ResourceType为USERDEFINED，可以为空
-     * @param ResourceId 资源ID，如果ResourceType为USERDEFINED，可以为空
+     * Set 资源ID，如果ResourceType为USERDEFINED，可以为空字符串
+     * @param ResourceId 资源ID，如果ResourceType为USERDEFINED，可以为空字符串
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;

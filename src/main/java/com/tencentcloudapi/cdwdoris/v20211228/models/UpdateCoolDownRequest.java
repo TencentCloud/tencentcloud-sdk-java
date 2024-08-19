@@ -1,0 +1,125 @@
+/*
+ * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package com.tencentcloudapi.cdwdoris.v20211228.models;
+
+import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
+import java.util.HashMap;
+
+public class UpdateCoolDownRequest extends AbstractModel {
+
+    /**
+    * 集群id
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
+    * 是否启用 0：不启用 1：启用
+    */
+    @SerializedName("Enable")
+    @Expose
+    private Long Enable;
+
+    /**
+    * 用户存放冷热分层数据Cos桶地址
+    */
+    @SerializedName("Bucket")
+    @Expose
+    private String Bucket;
+
+    /**
+     * Get 集群id 
+     * @return InstanceId 集群id
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set 集群id
+     * @param InstanceId 集群id
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
+    /**
+     * Get 是否启用 0：不启用 1：启用 
+     * @return Enable 是否启用 0：不启用 1：启用
+     */
+    public Long getEnable() {
+        return this.Enable;
+    }
+
+    /**
+     * Set 是否启用 0：不启用 1：启用
+     * @param Enable 是否启用 0：不启用 1：启用
+     */
+    public void setEnable(Long Enable) {
+        this.Enable = Enable;
+    }
+
+    /**
+     * Get 用户存放冷热分层数据Cos桶地址 
+     * @return Bucket 用户存放冷热分层数据Cos桶地址
+     */
+    public String getBucket() {
+        return this.Bucket;
+    }
+
+    /**
+     * Set 用户存放冷热分层数据Cos桶地址
+     * @param Bucket 用户存放冷热分层数据Cos桶地址
+     */
+    public void setBucket(String Bucket) {
+        this.Bucket = Bucket;
+    }
+
+    public UpdateCoolDownRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UpdateCoolDownRequest(UpdateCoolDownRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.Enable != null) {
+            this.Enable = new Long(source.Enable);
+        }
+        if (source.Bucket != null) {
+            this.Bucket = new String(source.Bucket);
+        }
+    }
+
+
+    /**
+     * Internal implementation, normal users should not use it.
+     */
+    public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "Enable", this.Enable);
+        this.setParamSimple(map, prefix + "Bucket", this.Bucket);
+
+    }
+}
+
