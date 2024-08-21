@@ -59,6 +59,13 @@ public class CreateDSPADiscoveryRuleRequest extends AbstractModel {
     private DspaDiscoveryCOSRules COSRules;
 
     /**
+    * 规则状态；0 不启用, 1 启用
+    */
+    @SerializedName("Status")
+    @Expose
+    private Long Status;
+
+    /**
      * Get DSPA实例ID 
      * @return DspaId DSPA实例ID
      */
@@ -138,6 +145,22 @@ public class CreateDSPADiscoveryRuleRequest extends AbstractModel {
         this.COSRules = COSRules;
     }
 
+    /**
+     * Get 规则状态；0 不启用, 1 启用 
+     * @return Status 规则状态；0 不启用, 1 启用
+     */
+    public Long getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 规则状态；0 不启用, 1 启用
+     * @param Status 规则状态；0 不启用, 1 启用
+     */
+    public void setStatus(Long Status) {
+        this.Status = Status;
+    }
+
     public CreateDSPADiscoveryRuleRequest() {
     }
 
@@ -161,6 +184,9 @@ public class CreateDSPADiscoveryRuleRequest extends AbstractModel {
         if (source.COSRules != null) {
             this.COSRules = new DspaDiscoveryCOSRules(source.COSRules);
         }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
     }
 
 
@@ -173,6 +199,7 @@ public class CreateDSPADiscoveryRuleRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamObj(map, prefix + "RDBRules.", this.RDBRules);
         this.setParamObj(map, prefix + "COSRules.", this.COSRules);
+        this.setParamSimple(map, prefix + "Status", this.Status);
 
     }
 }

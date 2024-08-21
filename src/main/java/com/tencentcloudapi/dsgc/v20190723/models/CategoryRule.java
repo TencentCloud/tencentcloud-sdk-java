@@ -82,6 +82,22 @@ public class CategoryRule extends AbstractModel {
     private String AliasRuleName;
 
     /**
+    * 各类分类分级规则数量
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RuleEffectItems")
+    @Expose
+    private RuleEffectItem [] RuleEffectItems;
+
+    /**
+    * 规则状态
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RuleStatus")
+    @Expose
+    private Long RuleStatus;
+
+    /**
      * Get 分类id 
      * @return CategoryId 分类id
      */
@@ -217,6 +233,46 @@ public class CategoryRule extends AbstractModel {
         this.AliasRuleName = AliasRuleName;
     }
 
+    /**
+     * Get 各类分类分级规则数量
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RuleEffectItems 各类分类分级规则数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public RuleEffectItem [] getRuleEffectItems() {
+        return this.RuleEffectItems;
+    }
+
+    /**
+     * Set 各类分类分级规则数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RuleEffectItems 各类分类分级规则数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRuleEffectItems(RuleEffectItem [] RuleEffectItems) {
+        this.RuleEffectItems = RuleEffectItems;
+    }
+
+    /**
+     * Get 规则状态
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RuleStatus 规则状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getRuleStatus() {
+        return this.RuleStatus;
+    }
+
+    /**
+     * Set 规则状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RuleStatus 规则状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRuleStatus(Long RuleStatus) {
+        this.RuleStatus = RuleStatus;
+    }
+
     public CategoryRule() {
     }
 
@@ -249,6 +305,15 @@ public class CategoryRule extends AbstractModel {
         if (source.AliasRuleName != null) {
             this.AliasRuleName = new String(source.AliasRuleName);
         }
+        if (source.RuleEffectItems != null) {
+            this.RuleEffectItems = new RuleEffectItem[source.RuleEffectItems.length];
+            for (int i = 0; i < source.RuleEffectItems.length; i++) {
+                this.RuleEffectItems[i] = new RuleEffectItem(source.RuleEffectItems[i]);
+            }
+        }
+        if (source.RuleStatus != null) {
+            this.RuleStatus = new Long(source.RuleStatus);
+        }
     }
 
 
@@ -264,6 +329,8 @@ public class CategoryRule extends AbstractModel {
         this.setParamSimple(map, prefix + "Id", this.Id);
         this.setParamSimple(map, prefix + "AliasRuleId", this.AliasRuleId);
         this.setParamSimple(map, prefix + "AliasRuleName", this.AliasRuleName);
+        this.setParamArrayObj(map, prefix + "RuleEffectItems.", this.RuleEffectItems);
+        this.setParamSimple(map, prefix + "RuleStatus", this.RuleStatus);
 
     }
 }

@@ -101,6 +101,13 @@ public class DescribeGovernanceInstancesRequest extends AbstractModel {
     private Long Limit;
 
     /**
+    * 地域
+    */
+    @SerializedName("Location")
+    @Expose
+    private Location Location;
+
+    /**
      * Get 实例所在的服务名。 
      * @return Service 实例所在的服务名。
      */
@@ -276,6 +283,22 @@ public class DescribeGovernanceInstancesRequest extends AbstractModel {
         this.Limit = Limit;
     }
 
+    /**
+     * Get 地域 
+     * @return Location 地域
+     */
+    public Location getLocation() {
+        return this.Location;
+    }
+
+    /**
+     * Set 地域
+     * @param Location 地域
+     */
+    public void setLocation(Location Location) {
+        this.Location = Location;
+    }
+
     public DescribeGovernanceInstancesRequest() {
     }
 
@@ -320,6 +343,9 @@ public class DescribeGovernanceInstancesRequest extends AbstractModel {
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
+        if (source.Location != null) {
+            this.Location = new Location(source.Location);
+        }
     }
 
 
@@ -338,6 +364,7 @@ public class DescribeGovernanceInstancesRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Metadatas.", this.Metadatas);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamObj(map, prefix + "Location.", this.Location);
 
     }
 }

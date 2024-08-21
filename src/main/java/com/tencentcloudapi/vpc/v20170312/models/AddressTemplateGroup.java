@@ -59,6 +59,14 @@ public class AddressTemplateGroup extends AbstractModel {
     private AddressTemplateItem [] AddressTemplateSet;
 
     /**
+    * 标签键值对。	
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TagSet")
+    @Expose
+    private Tag [] TagSet;
+
+    /**
      * Get IP地址模板集合名称。 
      * @return AddressTemplateGroupName IP地址模板集合名称。
      */
@@ -138,6 +146,26 @@ public class AddressTemplateGroup extends AbstractModel {
         this.AddressTemplateSet = AddressTemplateSet;
     }
 
+    /**
+     * Get 标签键值对。	
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TagSet 标签键值对。	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Tag [] getTagSet() {
+        return this.TagSet;
+    }
+
+    /**
+     * Set 标签键值对。	
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TagSet 标签键值对。	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTagSet(Tag [] TagSet) {
+        this.TagSet = TagSet;
+    }
+
     public AddressTemplateGroup() {
     }
 
@@ -167,6 +195,12 @@ public class AddressTemplateGroup extends AbstractModel {
                 this.AddressTemplateSet[i] = new AddressTemplateItem(source.AddressTemplateSet[i]);
             }
         }
+        if (source.TagSet != null) {
+            this.TagSet = new Tag[source.TagSet.length];
+            for (int i = 0; i < source.TagSet.length; i++) {
+                this.TagSet[i] = new Tag(source.TagSet[i]);
+            }
+        }
     }
 
 
@@ -179,6 +213,7 @@ public class AddressTemplateGroup extends AbstractModel {
         this.setParamArraySimple(map, prefix + "AddressTemplateIdSet.", this.AddressTemplateIdSet);
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
         this.setParamArrayObj(map, prefix + "AddressTemplateSet.", this.AddressTemplateSet);
+        this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
 
     }
 }

@@ -38,6 +38,13 @@ public class DescribeGovernanceInstancesResponse extends AbstractModel {
     private GovernanceInstance [] Content;
 
     /**
+    * 地域
+    */
+    @SerializedName("Location")
+    @Expose
+    private Location Location;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -77,6 +84,22 @@ public class DescribeGovernanceInstancesResponse extends AbstractModel {
     }
 
     /**
+     * Get 地域 
+     * @return Location 地域
+     */
+    public Location getLocation() {
+        return this.Location;
+    }
+
+    /**
+     * Set 地域
+     * @param Location 地域
+     */
+    public void setLocation(Location Location) {
+        this.Location = Location;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -109,6 +132,9 @@ public class DescribeGovernanceInstancesResponse extends AbstractModel {
                 this.Content[i] = new GovernanceInstance(source.Content[i]);
             }
         }
+        if (source.Location != null) {
+            this.Location = new Location(source.Location);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -121,6 +147,7 @@ public class DescribeGovernanceInstancesResponse extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamArrayObj(map, prefix + "Content.", this.Content);
+        this.setParamObj(map, prefix + "Location.", this.Location);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -38,21 +38,21 @@ public class UpdateRoleConfigurationRequest extends AbstractModel {
     private String RoleConfigurationId;
 
     /**
-    * 新的访问配置描述。  长度：最大 1024 个字符。
+    * 新的权限配置描述。  长度：最大 1024 个字符。
     */
     @SerializedName("NewDescription")
     @Expose
     private String NewDescription;
 
     /**
-    * 新的会话持续时间。  CIC 用户使用访问配置访问集团账号目标账号时，会话最多保持的时间。  单位：秒。  取值范围：900-43200（15 分钟-12 小时）。
+    * 新的会话持续时间。  CIC 用户使用权限配置访问集团账号目标账号时，会话最多保持的时间。  单位：秒。  取值范围：900-43200（15 分钟-12 小时）。
     */
     @SerializedName("NewSessionDuration")
     @Expose
     private Long NewSessionDuration;
 
     /**
-    * 新的初始访问页面。  CIC 用户使用访问配置访问集团账号目标账号时，初始访问的页面地址。  该页面必须是腾讯云控制台页面。
+    * 新的初始访问页面。  CIC 用户使用权限配置访问集团账号目标账号时，初始访问的页面地址。  该页面必须是腾讯云控制台页面。
     */
     @SerializedName("NewRelayState")
     @Expose
@@ -91,48 +91,48 @@ public class UpdateRoleConfigurationRequest extends AbstractModel {
     }
 
     /**
-     * Get 新的访问配置描述。  长度：最大 1024 个字符。 
-     * @return NewDescription 新的访问配置描述。  长度：最大 1024 个字符。
+     * Get 新的权限配置描述。  长度：最大 1024 个字符。 
+     * @return NewDescription 新的权限配置描述。  长度：最大 1024 个字符。
      */
     public String getNewDescription() {
         return this.NewDescription;
     }
 
     /**
-     * Set 新的访问配置描述。  长度：最大 1024 个字符。
-     * @param NewDescription 新的访问配置描述。  长度：最大 1024 个字符。
+     * Set 新的权限配置描述。  长度：最大 1024 个字符。
+     * @param NewDescription 新的权限配置描述。  长度：最大 1024 个字符。
      */
     public void setNewDescription(String NewDescription) {
         this.NewDescription = NewDescription;
     }
 
     /**
-     * Get 新的会话持续时间。  CIC 用户使用访问配置访问集团账号目标账号时，会话最多保持的时间。  单位：秒。  取值范围：900-43200（15 分钟-12 小时）。 
-     * @return NewSessionDuration 新的会话持续时间。  CIC 用户使用访问配置访问集团账号目标账号时，会话最多保持的时间。  单位：秒。  取值范围：900-43200（15 分钟-12 小时）。
+     * Get 新的会话持续时间。  CIC 用户使用权限配置访问集团账号目标账号时，会话最多保持的时间。  单位：秒。  取值范围：900-43200（15 分钟-12 小时）。 
+     * @return NewSessionDuration 新的会话持续时间。  CIC 用户使用权限配置访问集团账号目标账号时，会话最多保持的时间。  单位：秒。  取值范围：900-43200（15 分钟-12 小时）。
      */
     public Long getNewSessionDuration() {
         return this.NewSessionDuration;
     }
 
     /**
-     * Set 新的会话持续时间。  CIC 用户使用访问配置访问集团账号目标账号时，会话最多保持的时间。  单位：秒。  取值范围：900-43200（15 分钟-12 小时）。
-     * @param NewSessionDuration 新的会话持续时间。  CIC 用户使用访问配置访问集团账号目标账号时，会话最多保持的时间。  单位：秒。  取值范围：900-43200（15 分钟-12 小时）。
+     * Set 新的会话持续时间。  CIC 用户使用权限配置访问集团账号目标账号时，会话最多保持的时间。  单位：秒。  取值范围：900-43200（15 分钟-12 小时）。
+     * @param NewSessionDuration 新的会话持续时间。  CIC 用户使用权限配置访问集团账号目标账号时，会话最多保持的时间。  单位：秒。  取值范围：900-43200（15 分钟-12 小时）。
      */
     public void setNewSessionDuration(Long NewSessionDuration) {
         this.NewSessionDuration = NewSessionDuration;
     }
 
     /**
-     * Get 新的初始访问页面。  CIC 用户使用访问配置访问集团账号目标账号时，初始访问的页面地址。  该页面必须是腾讯云控制台页面。 
-     * @return NewRelayState 新的初始访问页面。  CIC 用户使用访问配置访问集团账号目标账号时，初始访问的页面地址。  该页面必须是腾讯云控制台页面。
+     * Get 新的初始访问页面。  CIC 用户使用权限配置访问集团账号目标账号时，初始访问的页面地址。  该页面必须是腾讯云控制台页面。 
+     * @return NewRelayState 新的初始访问页面。  CIC 用户使用权限配置访问集团账号目标账号时，初始访问的页面地址。  该页面必须是腾讯云控制台页面。
      */
     public String getNewRelayState() {
         return this.NewRelayState;
     }
 
     /**
-     * Set 新的初始访问页面。  CIC 用户使用访问配置访问集团账号目标账号时，初始访问的页面地址。  该页面必须是腾讯云控制台页面。
-     * @param NewRelayState 新的初始访问页面。  CIC 用户使用访问配置访问集团账号目标账号时，初始访问的页面地址。  该页面必须是腾讯云控制台页面。
+     * Set 新的初始访问页面。  CIC 用户使用权限配置访问集团账号目标账号时，初始访问的页面地址。  该页面必须是腾讯云控制台页面。
+     * @param NewRelayState 新的初始访问页面。  CIC 用户使用权限配置访问集团账号目标账号时，初始访问的页面地址。  该页面必须是腾讯云控制台页面。
      */
     public void setNewRelayState(String NewRelayState) {
         this.NewRelayState = NewRelayState;

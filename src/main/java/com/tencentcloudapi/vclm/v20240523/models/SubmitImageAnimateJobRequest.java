@@ -56,6 +56,13 @@ public class SubmitImageAnimateJobRequest extends AbstractModel {
     private Boolean EnableAudio;
 
     /**
+    * 是否检测输入图人体12个身体部位（头部、颈部、右肩、右肘、右腕、左肩、左肘、左腕、右髋、左髋,、左膝、右膝）。默认不检测。
+    */
+    @SerializedName("EnableBodyJoins")
+    @Expose
+    private Boolean EnableBodyJoins;
+
+    /**
      * Get 图片格式：支持PNG、JPG、JPEG格式；
 图片分辨率：长边分辨率不超过2056；
 图片大小：不超过10M；
@@ -135,6 +142,22 @@ public class SubmitImageAnimateJobRequest extends AbstractModel {
         this.EnableAudio = EnableAudio;
     }
 
+    /**
+     * Get 是否检测输入图人体12个身体部位（头部、颈部、右肩、右肘、右腕、左肩、左肘、左腕、右髋、左髋,、左膝、右膝）。默认不检测。 
+     * @return EnableBodyJoins 是否检测输入图人体12个身体部位（头部、颈部、右肩、右肘、右腕、左肩、左肘、左腕、右髋、左髋,、左膝、右膝）。默认不检测。
+     */
+    public Boolean getEnableBodyJoins() {
+        return this.EnableBodyJoins;
+    }
+
+    /**
+     * Set 是否检测输入图人体12个身体部位（头部、颈部、右肩、右肘、右腕、左肩、左肘、左腕、右髋、左髋,、左膝、右膝）。默认不检测。
+     * @param EnableBodyJoins 是否检测输入图人体12个身体部位（头部、颈部、右肩、右肘、右腕、左肩、左肘、左腕、右髋、左髋,、左膝、右膝）。默认不检测。
+     */
+    public void setEnableBodyJoins(Boolean EnableBodyJoins) {
+        this.EnableBodyJoins = EnableBodyJoins;
+    }
+
     public SubmitImageAnimateJobRequest() {
     }
 
@@ -155,6 +178,9 @@ public class SubmitImageAnimateJobRequest extends AbstractModel {
         if (source.EnableAudio != null) {
             this.EnableAudio = new Boolean(source.EnableAudio);
         }
+        if (source.EnableBodyJoins != null) {
+            this.EnableBodyJoins = new Boolean(source.EnableBodyJoins);
+        }
     }
 
 
@@ -166,6 +192,7 @@ public class SubmitImageAnimateJobRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
         this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
         this.setParamSimple(map, prefix + "EnableAudio", this.EnableAudio);
+        this.setParamSimple(map, prefix + "EnableBodyJoins", this.EnableBodyJoins);
 
     }
 }

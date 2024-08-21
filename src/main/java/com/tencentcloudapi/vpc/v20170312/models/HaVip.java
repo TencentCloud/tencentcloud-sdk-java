@@ -127,6 +127,14 @@ public class HaVip extends AbstractModel {
     private String FlushedTime;
 
     /**
+    * 标签键值对。	
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TagSet")
+    @Expose
+    private Tag [] TagSet;
+
+    /**
      * Get `HAVIP`的`ID`，是`HAVIP`的唯一标识。 
      * @return HaVipId `HAVIP`的`ID`，是`HAVIP`的唯一标识。
      */
@@ -370,6 +378,26 @@ public class HaVip extends AbstractModel {
         this.FlushedTime = FlushedTime;
     }
 
+    /**
+     * Get 标签键值对。	
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TagSet 标签键值对。	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Tag [] getTagSet() {
+        return this.TagSet;
+    }
+
+    /**
+     * Set 标签键值对。	
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TagSet 标签键值对。	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTagSet(Tag [] TagSet) {
+        this.TagSet = TagSet;
+    }
+
     public HaVip() {
     }
 
@@ -423,6 +451,12 @@ public class HaVip extends AbstractModel {
         if (source.FlushedTime != null) {
             this.FlushedTime = new String(source.FlushedTime);
         }
+        if (source.TagSet != null) {
+            this.TagSet = new Tag[source.TagSet.length];
+            for (int i = 0; i < source.TagSet.length; i++) {
+                this.TagSet[i] = new Tag(source.TagSet[i]);
+            }
+        }
     }
 
 
@@ -444,6 +478,7 @@ public class HaVip extends AbstractModel {
         this.setParamArrayObj(map, prefix + "HaVipAssociationSet.", this.HaVipAssociationSet);
         this.setParamSimple(map, prefix + "CheckAssociate", this.CheckAssociate);
         this.setParamSimple(map, prefix + "FlushedTime", this.FlushedTime);
+        this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
 
     }
 }

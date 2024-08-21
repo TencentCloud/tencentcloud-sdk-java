@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeInstanceDTSInstanceInfo extends AbstractModel {
 
     /**
-    * 地域ID
+    * 地域 ID。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RegionId")
@@ -32,7 +32,7 @@ public class DescribeInstanceDTSInstanceInfo extends AbstractModel {
     private Long RegionId;
 
     /**
-    * 实例ID
+    * 实例 ID。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceId")
@@ -40,7 +40,7 @@ public class DescribeInstanceDTSInstanceInfo extends AbstractModel {
     private String InstanceId;
 
     /**
-    * 仓库ID
+    * 仓库ID。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SetId")
@@ -48,7 +48,7 @@ public class DescribeInstanceDTSInstanceInfo extends AbstractModel {
     private Long SetId;
 
     /**
-    * 可用区ID
+    * 可用区ID。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ZoneId")
@@ -56,7 +56,7 @@ public class DescribeInstanceDTSInstanceInfo extends AbstractModel {
     private Long ZoneId;
 
     /**
-    * 实例类型
+    * 实例类型。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
@@ -64,7 +64,7 @@ public class DescribeInstanceDTSInstanceInfo extends AbstractModel {
     private Long Type;
 
     /**
-    * 实例名称
+    * 实例名称。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceName")
@@ -72,7 +72,7 @@ public class DescribeInstanceDTSInstanceInfo extends AbstractModel {
     private String InstanceName;
 
     /**
-    * 实例访问地址
+    * 实例访问地址。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Vip")
@@ -80,7 +80,7 @@ public class DescribeInstanceDTSInstanceInfo extends AbstractModel {
     private String Vip;
 
     /**
-    * 状态
+    * 状态。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
@@ -88,9 +88,9 @@ public class DescribeInstanceDTSInstanceInfo extends AbstractModel {
     private Long Status;
 
     /**
-     * Get 地域ID
+     * Get 地域 ID。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RegionId 地域ID
+     * @return RegionId 地域 ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRegionId() {
@@ -98,9 +98,9 @@ public class DescribeInstanceDTSInstanceInfo extends AbstractModel {
     }
 
     /**
-     * Set 地域ID
+     * Set 地域 ID。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RegionId 地域ID
+     * @param RegionId 地域 ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegionId(Long RegionId) {
@@ -108,9 +108,9 @@ public class DescribeInstanceDTSInstanceInfo extends AbstractModel {
     }
 
     /**
-     * Get 实例ID
+     * Get 实例 ID。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InstanceId 实例ID
+     * @return InstanceId 实例 ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceId() {
@@ -118,9 +118,9 @@ public class DescribeInstanceDTSInstanceInfo extends AbstractModel {
     }
 
     /**
-     * Set 实例ID
+     * Set 实例 ID。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InstanceId 实例ID
+     * @param InstanceId 实例 ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceId(String InstanceId) {
@@ -128,9 +128,9 @@ public class DescribeInstanceDTSInstanceInfo extends AbstractModel {
     }
 
     /**
-     * Get 仓库ID
+     * Get 仓库ID。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SetId 仓库ID
+     * @return SetId 仓库ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSetId() {
@@ -138,9 +138,9 @@ public class DescribeInstanceDTSInstanceInfo extends AbstractModel {
     }
 
     /**
-     * Set 仓库ID
+     * Set 仓库ID。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SetId 仓库ID
+     * @param SetId 仓库ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSetId(Long SetId) {
@@ -148,9 +148,9 @@ public class DescribeInstanceDTSInstanceInfo extends AbstractModel {
     }
 
     /**
-     * Get 可用区ID
+     * Get 可用区ID。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ZoneId 可用区ID
+     * @return ZoneId 可用区ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getZoneId() {
@@ -158,9 +158,9 @@ public class DescribeInstanceDTSInstanceInfo extends AbstractModel {
     }
 
     /**
-     * Set 可用区ID
+     * Set 可用区ID。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ZoneId 可用区ID
+     * @param ZoneId 可用区ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZoneId(Long ZoneId) {
@@ -168,9 +168,9 @@ public class DescribeInstanceDTSInstanceInfo extends AbstractModel {
     }
 
     /**
-     * Get 实例类型
+     * Get 实例类型。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Type 实例类型
+     * @return Type 实例类型。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getType() {
@@ -178,9 +178,9 @@ public class DescribeInstanceDTSInstanceInfo extends AbstractModel {
     }
 
     /**
-     * Set 实例类型
+     * Set 实例类型。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Type 实例类型
+     * @param Type 实例类型。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(Long Type) {
@@ -188,9 +188,9 @@ public class DescribeInstanceDTSInstanceInfo extends AbstractModel {
     }
 
     /**
-     * Get 实例名称
+     * Get 实例名称。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InstanceName 实例名称
+     * @return InstanceName 实例名称。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceName() {
@@ -198,9 +198,9 @@ public class DescribeInstanceDTSInstanceInfo extends AbstractModel {
     }
 
     /**
-     * Set 实例名称
+     * Set 实例名称。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InstanceName 实例名称
+     * @param InstanceName 实例名称。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceName(String InstanceName) {
@@ -208,9 +208,9 @@ public class DescribeInstanceDTSInstanceInfo extends AbstractModel {
     }
 
     /**
-     * Get 实例访问地址
+     * Get 实例访问地址。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Vip 实例访问地址
+     * @return Vip 实例访问地址。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVip() {
@@ -218,9 +218,9 @@ public class DescribeInstanceDTSInstanceInfo extends AbstractModel {
     }
 
     /**
-     * Set 实例访问地址
+     * Set 实例访问地址。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Vip 实例访问地址
+     * @param Vip 实例访问地址。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVip(String Vip) {
@@ -228,9 +228,9 @@ public class DescribeInstanceDTSInstanceInfo extends AbstractModel {
     }
 
     /**
-     * Get 状态
+     * Get 状态。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Status 状态
+     * @return Status 状态。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
@@ -238,9 +238,9 @@ public class DescribeInstanceDTSInstanceInfo extends AbstractModel {
     }
 
     /**
-     * Set 状态
+     * Set 状态。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Status 状态
+     * @param Status 状态。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {

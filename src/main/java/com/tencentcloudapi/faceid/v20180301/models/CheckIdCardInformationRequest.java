@@ -72,6 +72,20 @@ Config = {"CopyWarn":true,"ReshootWarn":true}
     private Boolean IsEncrypt;
 
     /**
+    * 是否需要对响应体加密
+    */
+    @SerializedName("IsEncryptResponse")
+    @Expose
+    private Boolean IsEncryptResponse;
+
+    /**
+    * 是否需要对返回中的敏感信息进行加密,需指定加密算法Algorithm、CBC加密的初始向量、加密后的对称密钥。
+    */
+    @SerializedName("Encryption")
+    @Expose
+    private Encryption Encryption;
+
+    /**
      * Get 身份证人像面的 Base64 值
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
 支持的图片大小：所下载图片经Base64编码后不超过 7M。
@@ -215,6 +229,38 @@ Config = {"CopyWarn":true,"ReshootWarn":true}
         this.IsEncrypt = IsEncrypt;
     }
 
+    /**
+     * Get 是否需要对响应体加密 
+     * @return IsEncryptResponse 是否需要对响应体加密
+     */
+    public Boolean getIsEncryptResponse() {
+        return this.IsEncryptResponse;
+    }
+
+    /**
+     * Set 是否需要对响应体加密
+     * @param IsEncryptResponse 是否需要对响应体加密
+     */
+    public void setIsEncryptResponse(Boolean IsEncryptResponse) {
+        this.IsEncryptResponse = IsEncryptResponse;
+    }
+
+    /**
+     * Get 是否需要对返回中的敏感信息进行加密,需指定加密算法Algorithm、CBC加密的初始向量、加密后的对称密钥。 
+     * @return Encryption 是否需要对返回中的敏感信息进行加密,需指定加密算法Algorithm、CBC加密的初始向量、加密后的对称密钥。
+     */
+    public Encryption getEncryption() {
+        return this.Encryption;
+    }
+
+    /**
+     * Set 是否需要对返回中的敏感信息进行加密,需指定加密算法Algorithm、CBC加密的初始向量、加密后的对称密钥。
+     * @param Encryption 是否需要对返回中的敏感信息进行加密,需指定加密算法Algorithm、CBC加密的初始向量、加密后的对称密钥。
+     */
+    public void setEncryption(Encryption Encryption) {
+        this.Encryption = Encryption;
+    }
+
     public CheckIdCardInformationRequest() {
     }
 
@@ -235,6 +281,12 @@ Config = {"CopyWarn":true,"ReshootWarn":true}
         if (source.IsEncrypt != null) {
             this.IsEncrypt = new Boolean(source.IsEncrypt);
         }
+        if (source.IsEncryptResponse != null) {
+            this.IsEncryptResponse = new Boolean(source.IsEncryptResponse);
+        }
+        if (source.Encryption != null) {
+            this.Encryption = new Encryption(source.Encryption);
+        }
     }
 
 
@@ -246,6 +298,8 @@ Config = {"CopyWarn":true,"ReshootWarn":true}
         this.setParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
         this.setParamSimple(map, prefix + "Config", this.Config);
         this.setParamSimple(map, prefix + "IsEncrypt", this.IsEncrypt);
+        this.setParamSimple(map, prefix + "IsEncryptResponse", this.IsEncryptResponse);
+        this.setParamObj(map, prefix + "Encryption.", this.Encryption);
 
     }
 }

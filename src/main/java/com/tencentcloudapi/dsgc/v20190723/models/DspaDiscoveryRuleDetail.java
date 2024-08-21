@@ -72,6 +72,14 @@ public class DspaDiscoveryRuleDetail extends AbstractModel {
     private DspaDiscoveryCOSRules COSRules;
 
     /**
+    * 0关闭，1开启
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Status")
+    @Expose
+    private Long Status;
+
+    /**
      * Get 规则ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return RuleId 规则ID
@@ -191,6 +199,26 @@ public class DspaDiscoveryRuleDetail extends AbstractModel {
         this.COSRules = COSRules;
     }
 
+    /**
+     * Get 0关闭，1开启
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Status 0关闭，1开启
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 0关闭，1开启
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Status 0关闭，1开启
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStatus(Long Status) {
+        this.Status = Status;
+    }
+
     public DspaDiscoveryRuleDetail() {
     }
 
@@ -217,6 +245,9 @@ public class DspaDiscoveryRuleDetail extends AbstractModel {
         if (source.COSRules != null) {
             this.COSRules = new DspaDiscoveryCOSRules(source.COSRules);
         }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
     }
 
 
@@ -230,6 +261,7 @@ public class DspaDiscoveryRuleDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "Source", this.Source);
         this.setParamObj(map, prefix + "RDBRules.", this.RDBRules);
         this.setParamObj(map, prefix + "COSRules.", this.COSRules);
+        this.setParamSimple(map, prefix + "Status", this.Status);
 
     }
 }

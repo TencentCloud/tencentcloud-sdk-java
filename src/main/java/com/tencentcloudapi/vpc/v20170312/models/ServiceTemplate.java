@@ -59,6 +59,14 @@ public class ServiceTemplate extends AbstractModel {
     private ServicesInfo [] ServiceExtraSet;
 
     /**
+    * 标签键值对。	
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TagSet")
+    @Expose
+    private Tag [] TagSet;
+
+    /**
      * Get 协议端口实例ID，例如：ppm-f5n1f8da。 
      * @return ServiceTemplateId 协议端口实例ID，例如：ppm-f5n1f8da。
      */
@@ -138,6 +146,26 @@ public class ServiceTemplate extends AbstractModel {
         this.ServiceExtraSet = ServiceExtraSet;
     }
 
+    /**
+     * Get 标签键值对。	
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TagSet 标签键值对。	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Tag [] getTagSet() {
+        return this.TagSet;
+    }
+
+    /**
+     * Set 标签键值对。	
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TagSet 标签键值对。	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTagSet(Tag [] TagSet) {
+        this.TagSet = TagSet;
+    }
+
     public ServiceTemplate() {
     }
 
@@ -167,6 +195,12 @@ public class ServiceTemplate extends AbstractModel {
                 this.ServiceExtraSet[i] = new ServicesInfo(source.ServiceExtraSet[i]);
             }
         }
+        if (source.TagSet != null) {
+            this.TagSet = new Tag[source.TagSet.length];
+            for (int i = 0; i < source.TagSet.length; i++) {
+                this.TagSet[i] = new Tag(source.TagSet[i]);
+            }
+        }
     }
 
 
@@ -179,6 +213,7 @@ public class ServiceTemplate extends AbstractModel {
         this.setParamArraySimple(map, prefix + "ServiceSet.", this.ServiceSet);
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
         this.setParamArrayObj(map, prefix + "ServiceExtraSet.", this.ServiceExtraSet);
+        this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
 
     }
 }

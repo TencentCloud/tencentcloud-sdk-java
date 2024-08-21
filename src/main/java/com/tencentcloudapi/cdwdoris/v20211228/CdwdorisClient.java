@@ -39,6 +39,17 @@ public class CdwdorisClient extends AbstractClient{
     }
 
     /**
+     *新增和修改用户接口
+     * @param req ActionAlterUserRequest
+     * @return ActionAlterUserResponse
+     * @throws TencentCloudSDKException
+     */
+    public ActionAlterUserResponse ActionAlterUser(ActionAlterUserRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ActionAlterUser", ActionAlterUserResponse.class);
+    }
+
+    /**
      *取消对应的备份实例任务
      * @param req CancelBackupJobRequest
      * @return CancelBackupJobResponse

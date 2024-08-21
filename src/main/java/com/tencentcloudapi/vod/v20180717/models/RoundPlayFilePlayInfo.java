@@ -53,7 +53,7 @@ public class RoundPlayFilePlayInfo extends AbstractModel {
     private Float Duration;
 
     /**
-    * 播放进度，单位为妙。
+    * 播放进度，单位为秒。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Progress")
@@ -129,9 +129,9 @@ public class RoundPlayFilePlayInfo extends AbstractModel {
     }
 
     /**
-     * Get 播放进度，单位为妙。
+     * Get 播放进度，单位为秒。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Progress 播放进度，单位为妙。
+     * @return Progress 播放进度，单位为秒。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getProgress() {
@@ -139,9 +139,9 @@ public class RoundPlayFilePlayInfo extends AbstractModel {
     }
 
     /**
-     * Set 播放进度，单位为妙。
+     * Set 播放进度，单位为秒。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Progress 播放进度，单位为妙。
+     * @param Progress 播放进度，单位为秒。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProgress(Float Progress) {

@@ -38,7 +38,7 @@ public class LocalGateway extends AbstractModel {
     private String VpcId;
 
     /**
-    * 本地网关实例ID
+    * 本地网关实例ID（计划弃用）
     */
     @SerializedName("UniqLocalGwId")
     @Expose
@@ -64,6 +64,21 @@ public class LocalGateway extends AbstractModel {
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
+
+    /**
+    * 标签键值对。	
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TagSet")
+    @Expose
+    private Tag [] TagSet;
+
+    /**
+    * 本地网关实例ID（计划起用）
+    */
+    @SerializedName("LocalGatewayId")
+    @Expose
+    private String LocalGatewayId;
 
     /**
      * Get CDC实例ID 
@@ -98,16 +113,16 @@ public class LocalGateway extends AbstractModel {
     }
 
     /**
-     * Get 本地网关实例ID 
-     * @return UniqLocalGwId 本地网关实例ID
+     * Get 本地网关实例ID（计划弃用） 
+     * @return UniqLocalGwId 本地网关实例ID（计划弃用）
      */
     public String getUniqLocalGwId() {
         return this.UniqLocalGwId;
     }
 
     /**
-     * Set 本地网关实例ID
-     * @param UniqLocalGwId 本地网关实例ID
+     * Set 本地网关实例ID（计划弃用）
+     * @param UniqLocalGwId 本地网关实例ID（计划弃用）
      */
     public void setUniqLocalGwId(String UniqLocalGwId) {
         this.UniqLocalGwId = UniqLocalGwId;
@@ -161,6 +176,42 @@ public class LocalGateway extends AbstractModel {
         this.CreateTime = CreateTime;
     }
 
+    /**
+     * Get 标签键值对。	
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TagSet 标签键值对。	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Tag [] getTagSet() {
+        return this.TagSet;
+    }
+
+    /**
+     * Set 标签键值对。	
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TagSet 标签键值对。	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTagSet(Tag [] TagSet) {
+        this.TagSet = TagSet;
+    }
+
+    /**
+     * Get 本地网关实例ID（计划起用） 
+     * @return LocalGatewayId 本地网关实例ID（计划起用）
+     */
+    public String getLocalGatewayId() {
+        return this.LocalGatewayId;
+    }
+
+    /**
+     * Set 本地网关实例ID（计划起用）
+     * @param LocalGatewayId 本地网关实例ID（计划起用）
+     */
+    public void setLocalGatewayId(String LocalGatewayId) {
+        this.LocalGatewayId = LocalGatewayId;
+    }
+
     public LocalGateway() {
     }
 
@@ -187,6 +238,15 @@ public class LocalGateway extends AbstractModel {
         if (source.CreateTime != null) {
             this.CreateTime = new String(source.CreateTime);
         }
+        if (source.TagSet != null) {
+            this.TagSet = new Tag[source.TagSet.length];
+            for (int i = 0; i < source.TagSet.length; i++) {
+                this.TagSet[i] = new Tag(source.TagSet[i]);
+            }
+        }
+        if (source.LocalGatewayId != null) {
+            this.LocalGatewayId = new String(source.LocalGatewayId);
+        }
     }
 
 
@@ -200,6 +260,8 @@ public class LocalGateway extends AbstractModel {
         this.setParamSimple(map, prefix + "LocalGatewayName", this.LocalGatewayName);
         this.setParamSimple(map, prefix + "LocalGwIp", this.LocalGwIp);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
+        this.setParamSimple(map, prefix + "LocalGatewayId", this.LocalGatewayId);
 
     }
 }

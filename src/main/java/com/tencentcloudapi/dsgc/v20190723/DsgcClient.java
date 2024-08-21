@@ -227,7 +227,6 @@ public class DsgcClient extends AbstractClient{
 
     /**
      *新增分类分级规则，单个用户最多允许创建200个规则。
-
      * @param req CreateDSPADiscoveryRuleRequest
      * @return CreateDSPADiscoveryRuleResponse
      * @throws TencentCloudSDKException

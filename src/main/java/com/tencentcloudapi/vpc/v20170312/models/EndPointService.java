@@ -119,6 +119,14 @@ public class EndPointService extends AbstractModel {
     private Long BusinessIpType;
 
     /**
+    * 标签键值对。	
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TagSet")
+    @Expose
+    private Tag [] TagSet;
+
+    /**
      * Get 终端节点服务ID 
      * @return EndPointServiceId 终端节点服务ID
      */
@@ -342,6 +350,26 @@ public class EndPointService extends AbstractModel {
         this.BusinessIpType = BusinessIpType;
     }
 
+    /**
+     * Get 标签键值对。	
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TagSet 标签键值对。	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Tag [] getTagSet() {
+        return this.TagSet;
+    }
+
+    /**
+     * Set 标签键值对。	
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TagSet 标签键值对。	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTagSet(Tag [] TagSet) {
+        this.TagSet = TagSet;
+    }
+
     public EndPointService() {
     }
 
@@ -392,6 +420,12 @@ public class EndPointService extends AbstractModel {
         if (source.BusinessIpType != null) {
             this.BusinessIpType = new Long(source.BusinessIpType);
         }
+        if (source.TagSet != null) {
+            this.TagSet = new Tag[source.TagSet.length];
+            for (int i = 0; i < source.TagSet.length; i++) {
+                this.TagSet[i] = new Tag(source.TagSet[i]);
+            }
+        }
     }
 
 
@@ -412,6 +446,7 @@ public class EndPointService extends AbstractModel {
         this.setParamSimple(map, prefix + "ServiceType", this.ServiceType);
         this.setParamSimple(map, prefix + "ServiceUin", this.ServiceUin);
         this.setParamSimple(map, prefix + "BusinessIpType", this.BusinessIpType);
+        this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
 
     }
 }

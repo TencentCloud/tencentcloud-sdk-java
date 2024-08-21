@@ -125,6 +125,13 @@ public class CheckIdCardInformationResponse extends AbstractModel {
     private Encryption Encryption;
 
     /**
+    * 加密后的数据
+    */
+    @SerializedName("EncryptedBody")
+    @Expose
+    private String EncryptedBody;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -380,6 +387,22 @@ public class CheckIdCardInformationResponse extends AbstractModel {
     }
 
     /**
+     * Get 加密后的数据 
+     * @return EncryptedBody 加密后的数据
+     */
+    public String getEncryptedBody() {
+        return this.EncryptedBody;
+    }
+
+    /**
+     * Set 加密后的数据
+     * @param EncryptedBody 加密后的数据
+     */
+    public void setEncryptedBody(String EncryptedBody) {
+        this.EncryptedBody = EncryptedBody;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -442,6 +465,9 @@ public class CheckIdCardInformationResponse extends AbstractModel {
         if (source.Encryption != null) {
             this.Encryption = new Encryption(source.Encryption);
         }
+        if (source.EncryptedBody != null) {
+            this.EncryptedBody = new String(source.EncryptedBody);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -465,6 +491,7 @@ public class CheckIdCardInformationResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "Warnings", this.Warnings);
         this.setParamSimple(map, prefix + "Quality", this.Quality);
         this.setParamObj(map, prefix + "Encryption.", this.Encryption);
+        this.setParamSimple(map, prefix + "EncryptedBody", this.EncryptedBody);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

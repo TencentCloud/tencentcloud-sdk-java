@@ -116,6 +116,14 @@ public class EndPoint extends AbstractModel {
     private String ServiceName;
 
     /**
+    * 标签键值对。	
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TagSet")
+    @Expose
+    private Tag [] TagSet;
+
+    /**
      * Get 终端节点ID。 
      * @return EndPointId 终端节点ID。
      */
@@ -327,6 +335,26 @@ public class EndPoint extends AbstractModel {
         this.ServiceName = ServiceName;
     }
 
+    /**
+     * Get 标签键值对。	
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TagSet 标签键值对。	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Tag [] getTagSet() {
+        return this.TagSet;
+    }
+
+    /**
+     * Set 标签键值对。	
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TagSet 标签键值对。	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTagSet(Tag [] TagSet) {
+        this.TagSet = TagSet;
+    }
+
     public EndPoint() {
     }
 
@@ -377,6 +405,12 @@ public class EndPoint extends AbstractModel {
         if (source.ServiceName != null) {
             this.ServiceName = new String(source.ServiceName);
         }
+        if (source.TagSet != null) {
+            this.TagSet = new Tag[source.TagSet.length];
+            for (int i = 0; i < source.TagSet.length; i++) {
+                this.TagSet[i] = new Tag(source.TagSet[i]);
+            }
+        }
     }
 
 
@@ -397,6 +431,7 @@ public class EndPoint extends AbstractModel {
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamArraySimple(map, prefix + "GroupSet.", this.GroupSet);
         this.setParamSimple(map, prefix + "ServiceName", this.ServiceName);
+        this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
 
     }
 }

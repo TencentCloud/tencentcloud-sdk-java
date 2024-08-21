@@ -31,28 +31,28 @@ public class CreateRoleConfigurationRequest extends AbstractModel {
     private String ZoneId;
 
     /**
-    * 访问配置名称。格式：包含英文字母、数字或短划线（-）。 长度：最大 128 个字符。
+    * 权限配置名称。格式：包含英文字母、数字或短划线（-）。 长度：最大 128 个字符。
     */
     @SerializedName("RoleConfigurationName")
     @Expose
     private String RoleConfigurationName;
 
     /**
-    * 访问配置的描述。 长度：最大 1024 个字符。
+    * 权限配置的描述。 长度：最大 1024 个字符。
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 会话持续时间。 CIC用户使用访问配置访问集团账号目标账号时，会话最多保持的时间。 单位：秒。 取值范围：900~43200（15 分钟~12 小时）。 默认值：3600（1 小时）。
+    * 会话持续时间。 CIC用户使用权限配置访问集团账号目标账号时，会话最多保持的时间。 单位：秒。 取值范围：900 ~ 43200（15 分钟~12 小时）。 默认值：3600（1 小时）。
     */
     @SerializedName("SessionDuration")
     @Expose
     private Long SessionDuration;
 
     /**
-    * 初始访问页面。 CIC用户使用访问配置访问集团账号目标账号时，初始访问的页面地址。 该页面必须是腾讯云控制台页面。默认为空，表示跳转到腾讯云控制台首页。
+    * 初始访问页面。 CIC用户使用权限配置访问集团账号目标账号时，初始访问的页面地址。 该页面必须是腾讯云控制台页面。默认为空，表示跳转到腾讯云控制台首页。
     */
     @SerializedName("RelayState")
     @Expose
@@ -75,64 +75,64 @@ public class CreateRoleConfigurationRequest extends AbstractModel {
     }
 
     /**
-     * Get 访问配置名称。格式：包含英文字母、数字或短划线（-）。 长度：最大 128 个字符。 
-     * @return RoleConfigurationName 访问配置名称。格式：包含英文字母、数字或短划线（-）。 长度：最大 128 个字符。
+     * Get 权限配置名称。格式：包含英文字母、数字或短划线（-）。 长度：最大 128 个字符。 
+     * @return RoleConfigurationName 权限配置名称。格式：包含英文字母、数字或短划线（-）。 长度：最大 128 个字符。
      */
     public String getRoleConfigurationName() {
         return this.RoleConfigurationName;
     }
 
     /**
-     * Set 访问配置名称。格式：包含英文字母、数字或短划线（-）。 长度：最大 128 个字符。
-     * @param RoleConfigurationName 访问配置名称。格式：包含英文字母、数字或短划线（-）。 长度：最大 128 个字符。
+     * Set 权限配置名称。格式：包含英文字母、数字或短划线（-）。 长度：最大 128 个字符。
+     * @param RoleConfigurationName 权限配置名称。格式：包含英文字母、数字或短划线（-）。 长度：最大 128 个字符。
      */
     public void setRoleConfigurationName(String RoleConfigurationName) {
         this.RoleConfigurationName = RoleConfigurationName;
     }
 
     /**
-     * Get 访问配置的描述。 长度：最大 1024 个字符。 
-     * @return Description 访问配置的描述。 长度：最大 1024 个字符。
+     * Get 权限配置的描述。 长度：最大 1024 个字符。 
+     * @return Description 权限配置的描述。 长度：最大 1024 个字符。
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 访问配置的描述。 长度：最大 1024 个字符。
-     * @param Description 访问配置的描述。 长度：最大 1024 个字符。
+     * Set 权限配置的描述。 长度：最大 1024 个字符。
+     * @param Description 权限配置的描述。 长度：最大 1024 个字符。
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 会话持续时间。 CIC用户使用访问配置访问集团账号目标账号时，会话最多保持的时间。 单位：秒。 取值范围：900~43200（15 分钟~12 小时）。 默认值：3600（1 小时）。 
-     * @return SessionDuration 会话持续时间。 CIC用户使用访问配置访问集团账号目标账号时，会话最多保持的时间。 单位：秒。 取值范围：900~43200（15 分钟~12 小时）。 默认值：3600（1 小时）。
+     * Get 会话持续时间。 CIC用户使用权限配置访问集团账号目标账号时，会话最多保持的时间。 单位：秒。 取值范围：900 ~ 43200（15 分钟~12 小时）。 默认值：3600（1 小时）。 
+     * @return SessionDuration 会话持续时间。 CIC用户使用权限配置访问集团账号目标账号时，会话最多保持的时间。 单位：秒。 取值范围：900 ~ 43200（15 分钟~12 小时）。 默认值：3600（1 小时）。
      */
     public Long getSessionDuration() {
         return this.SessionDuration;
     }
 
     /**
-     * Set 会话持续时间。 CIC用户使用访问配置访问集团账号目标账号时，会话最多保持的时间。 单位：秒。 取值范围：900~43200（15 分钟~12 小时）。 默认值：3600（1 小时）。
-     * @param SessionDuration 会话持续时间。 CIC用户使用访问配置访问集团账号目标账号时，会话最多保持的时间。 单位：秒。 取值范围：900~43200（15 分钟~12 小时）。 默认值：3600（1 小时）。
+     * Set 会话持续时间。 CIC用户使用权限配置访问集团账号目标账号时，会话最多保持的时间。 单位：秒。 取值范围：900 ~ 43200（15 分钟~12 小时）。 默认值：3600（1 小时）。
+     * @param SessionDuration 会话持续时间。 CIC用户使用权限配置访问集团账号目标账号时，会话最多保持的时间。 单位：秒。 取值范围：900 ~ 43200（15 分钟~12 小时）。 默认值：3600（1 小时）。
      */
     public void setSessionDuration(Long SessionDuration) {
         this.SessionDuration = SessionDuration;
     }
 
     /**
-     * Get 初始访问页面。 CIC用户使用访问配置访问集团账号目标账号时，初始访问的页面地址。 该页面必须是腾讯云控制台页面。默认为空，表示跳转到腾讯云控制台首页。 
-     * @return RelayState 初始访问页面。 CIC用户使用访问配置访问集团账号目标账号时，初始访问的页面地址。 该页面必须是腾讯云控制台页面。默认为空，表示跳转到腾讯云控制台首页。
+     * Get 初始访问页面。 CIC用户使用权限配置访问集团账号目标账号时，初始访问的页面地址。 该页面必须是腾讯云控制台页面。默认为空，表示跳转到腾讯云控制台首页。 
+     * @return RelayState 初始访问页面。 CIC用户使用权限配置访问集团账号目标账号时，初始访问的页面地址。 该页面必须是腾讯云控制台页面。默认为空，表示跳转到腾讯云控制台首页。
      */
     public String getRelayState() {
         return this.RelayState;
     }
 
     /**
-     * Set 初始访问页面。 CIC用户使用访问配置访问集团账号目标账号时，初始访问的页面地址。 该页面必须是腾讯云控制台页面。默认为空，表示跳转到腾讯云控制台首页。
-     * @param RelayState 初始访问页面。 CIC用户使用访问配置访问集团账号目标账号时，初始访问的页面地址。 该页面必须是腾讯云控制台页面。默认为空，表示跳转到腾讯云控制台首页。
+     * Set 初始访问页面。 CIC用户使用权限配置访问集团账号目标账号时，初始访问的页面地址。 该页面必须是腾讯云控制台页面。默认为空，表示跳转到腾讯云控制台首页。
+     * @param RelayState 初始访问页面。 CIC用户使用权限配置访问集团账号目标账号时，初始访问的页面地址。 该页面必须是腾讯云控制台页面。默认为空，表示跳转到腾讯云控制台首页。
      */
     public void setRelayState(String RelayState) {
         this.RelayState = RelayState;

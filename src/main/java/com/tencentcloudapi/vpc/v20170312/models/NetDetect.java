@@ -132,6 +132,14 @@ NONEXTHOP：无下一跳；
     private String CreateTime;
 
     /**
+    * 标签键值对。	
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TagSet")
+    @Expose
+    private Tag [] TagSet;
+
+    /**
      * Get `VPC`实例`ID`。形如：`vpc-12345678` 
      * @return VpcId `VPC`实例`ID`。形如：`vpc-12345678`
      */
@@ -407,6 +415,26 @@ NONEXTHOP：无下一跳；
         this.CreateTime = CreateTime;
     }
 
+    /**
+     * Get 标签键值对。	
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TagSet 标签键值对。	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Tag [] getTagSet() {
+        return this.TagSet;
+    }
+
+    /**
+     * Set 标签键值对。	
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TagSet 标签键值对。	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTagSet(Tag [] TagSet) {
+        this.TagSet = TagSet;
+    }
+
     public NetDetect() {
     }
 
@@ -460,6 +488,12 @@ NONEXTHOP：无下一跳；
         if (source.CreateTime != null) {
             this.CreateTime = new String(source.CreateTime);
         }
+        if (source.TagSet != null) {
+            this.TagSet = new Tag[source.TagSet.length];
+            for (int i = 0; i < source.TagSet.length; i++) {
+                this.TagSet[i] = new Tag(source.TagSet[i]);
+            }
+        }
     }
 
 
@@ -480,6 +514,7 @@ NONEXTHOP：无下一跳；
         this.setParamSimple(map, prefix + "NextHopName", this.NextHopName);
         this.setParamSimple(map, prefix + "NetDetectDescription", this.NetDetectDescription);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
 
     }
 }

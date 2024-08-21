@@ -415,6 +415,22 @@ Modify 集群变更中；
     private InstanceDetail Details;
 
     /**
+    * 是否启用DLC 0:关闭 1:开启
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EnableDlc")
+    @Expose
+    private Long EnableDlc;
+
+    /**
+    * 账户类型 0:普通用户 1:CAM用户
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AccountType")
+    @Expose
+    private Long AccountType;
+
+    /**
      * Get 集群实例ID, "cdw-xxxx" 字符串类型
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return InstanceId 集群实例ID, "cdw-xxxx" 字符串类型
@@ -1406,6 +1422,46 @@ Modify 集群变更中；
         this.Details = Details;
     }
 
+    /**
+     * Get 是否启用DLC 0:关闭 1:开启
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EnableDlc 是否启用DLC 0:关闭 1:开启
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getEnableDlc() {
+        return this.EnableDlc;
+    }
+
+    /**
+     * Set 是否启用DLC 0:关闭 1:开启
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EnableDlc 是否启用DLC 0:关闭 1:开启
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEnableDlc(Long EnableDlc) {
+        this.EnableDlc = EnableDlc;
+    }
+
+    /**
+     * Get 账户类型 0:普通用户 1:CAM用户
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AccountType 账户类型 0:普通用户 1:CAM用户
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getAccountType() {
+        return this.AccountType;
+    }
+
+    /**
+     * Set 账户类型 0:普通用户 1:CAM用户
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AccountType 账户类型 0:普通用户 1:CAM用户
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAccountType(Long AccountType) {
+        this.AccountType = AccountType;
+    }
+
     public InstanceInfo() {
     }
 
@@ -1567,6 +1623,12 @@ Modify 集群变更中；
         if (source.Details != null) {
             this.Details = new InstanceDetail(source.Details);
         }
+        if (source.EnableDlc != null) {
+            this.EnableDlc = new Long(source.EnableDlc);
+        }
+        if (source.AccountType != null) {
+            this.AccountType = new Long(source.AccountType);
+        }
     }
 
 
@@ -1622,6 +1684,8 @@ Modify 集群变更中；
         this.setParamSimple(map, prefix + "EnableCoolDown", this.EnableCoolDown);
         this.setParamSimple(map, prefix + "CoolDownBucket", this.CoolDownBucket);
         this.setParamObj(map, prefix + "Details.", this.Details);
+        this.setParamSimple(map, prefix + "EnableDlc", this.EnableDlc);
+        this.setParamSimple(map, prefix + "AccountType", this.AccountType);
 
     }
 }

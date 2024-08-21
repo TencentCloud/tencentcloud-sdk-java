@@ -534,7 +534,7 @@ public class OrganizationClient extends AbstractClient{
     }
 
     /**
-     *获取cam身份中心服务信息
+     *获取集团账号身份中心服务信息
      * @param req DescribeIdentityCenterRequest
      * @return DescribeIdentityCenterResponse
      * @throws TencentCloudSDKException
@@ -1084,7 +1084,7 @@ public class OrganizationClient extends AbstractClient{
     }
 
     /**
-     *开通CIC服务
+     *开通身份中心服务（CIC）
      * @param req OpenIdentityCenterRequest
      * @return OpenIdentityCenterResponse
      * @throws TencentCloudSDKException
