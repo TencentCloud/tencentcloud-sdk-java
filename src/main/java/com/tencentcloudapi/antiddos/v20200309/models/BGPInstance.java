@@ -194,7 +194,7 @@ public class BGPInstance extends AbstractModel {
     private Long BasicPlusFlag;
 
     /**
-    * 是否是商业模式优化-普惠版
+    * 是否标准版2.0 0: 包含标准版2.0 1: 只查询标准版2.0 2: 不查标准版2.0
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PlanCntFlag")
@@ -642,9 +642,9 @@ public class BGPInstance extends AbstractModel {
     }
 
     /**
-     * Get 是否是商业模式优化-普惠版
+     * Get 是否标准版2.0 0: 包含标准版2.0 1: 只查询标准版2.0 2: 不查标准版2.0
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PlanCntFlag 是否是商业模式优化-普惠版
+     * @return PlanCntFlag 是否标准版2.0 0: 包含标准版2.0 1: 只查询标准版2.0 2: 不查标准版2.0
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPlanCntFlag() {
@@ -652,9 +652,9 @@ public class BGPInstance extends AbstractModel {
     }
 
     /**
-     * Set 是否是商业模式优化-普惠版
+     * Set 是否标准版2.0 0: 包含标准版2.0 1: 只查询标准版2.0 2: 不查标准版2.0
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PlanCntFlag 是否是商业模式优化-普惠版
+     * @param PlanCntFlag 是否标准版2.0 0: 包含标准版2.0 1: 只查询标准版2.0 2: 不查标准版2.0
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPlanCntFlag(Long PlanCntFlag) {

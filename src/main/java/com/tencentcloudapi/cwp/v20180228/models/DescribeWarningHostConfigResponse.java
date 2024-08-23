@@ -63,6 +63,13 @@ public class DescribeWarningHostConfigResponse extends AbstractModel {
     private String [] ItemLabelIds;
 
     /**
+    * 需排除的机器列表
+    */
+    @SerializedName("ExcludedQuuids")
+    @Expose
+    private String [] ExcludedQuuids;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -166,6 +173,22 @@ public class DescribeWarningHostConfigResponse extends AbstractModel {
     }
 
     /**
+     * Get 需排除的机器列表 
+     * @return ExcludedQuuids 需排除的机器列表
+     */
+    public String [] getExcludedQuuids() {
+        return this.ExcludedQuuids;
+    }
+
+    /**
+     * Set 需排除的机器列表
+     * @param ExcludedQuuids 需排除的机器列表
+     */
+    public void setExcludedQuuids(String [] ExcludedQuuids) {
+        this.ExcludedQuuids = ExcludedQuuids;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -213,6 +236,12 @@ public class DescribeWarningHostConfigResponse extends AbstractModel {
                 this.ItemLabelIds[i] = new String(source.ItemLabelIds[i]);
             }
         }
+        if (source.ExcludedQuuids != null) {
+            this.ExcludedQuuids = new String[source.ExcludedQuuids.length];
+            for (int i = 0; i < source.ExcludedQuuids.length; i++) {
+                this.ExcludedQuuids[i] = new String(source.ExcludedQuuids[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -228,6 +257,7 @@ public class DescribeWarningHostConfigResponse extends AbstractModel {
         this.setParamArraySimple(map, prefix + "Quuids.", this.Quuids);
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamArraySimple(map, prefix + "ItemLabelIds.", this.ItemLabelIds);
+        this.setParamArraySimple(map, prefix + "ExcludedQuuids.", this.ExcludedQuuids);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

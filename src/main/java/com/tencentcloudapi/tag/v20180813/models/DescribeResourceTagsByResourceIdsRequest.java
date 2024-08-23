@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeResourceTagsByResourceIdsRequest extends AbstractModel {
 
     /**
-    * 业务类型
+    * 业务类型，示例 cvm 。资源所属业务名称（资源六段式中的第三段）
     */
     @SerializedName("ServiceType")
     @Expose
     private String ServiceType;
 
     /**
-    * 资源前缀
+    * 资源前缀，示例 instance
     */
     @SerializedName("ResourcePrefix")
     @Expose
@@ -45,7 +45,7 @@ public class DescribeResourceTagsByResourceIdsRequest extends AbstractModel {
     private String [] ResourceIds;
 
     /**
-    * 资源所在地域
+    * 资源所在地域，示例：ap-guangzhou 不区分地域的资源不需要传入该字段，区分地域的资源必填
     */
     @SerializedName("ResourceRegion")
     @Expose
@@ -73,32 +73,32 @@ public class DescribeResourceTagsByResourceIdsRequest extends AbstractModel {
     private String Category;
 
     /**
-     * Get 业务类型 
-     * @return ServiceType 业务类型
+     * Get 业务类型，示例 cvm 。资源所属业务名称（资源六段式中的第三段） 
+     * @return ServiceType 业务类型，示例 cvm 。资源所属业务名称（资源六段式中的第三段）
      */
     public String getServiceType() {
         return this.ServiceType;
     }
 
     /**
-     * Set 业务类型
-     * @param ServiceType 业务类型
+     * Set 业务类型，示例 cvm 。资源所属业务名称（资源六段式中的第三段）
+     * @param ServiceType 业务类型，示例 cvm 。资源所属业务名称（资源六段式中的第三段）
      */
     public void setServiceType(String ServiceType) {
         this.ServiceType = ServiceType;
     }
 
     /**
-     * Get 资源前缀 
-     * @return ResourcePrefix 资源前缀
+     * Get 资源前缀，示例 instance 
+     * @return ResourcePrefix 资源前缀，示例 instance
      */
     public String getResourcePrefix() {
         return this.ResourcePrefix;
     }
 
     /**
-     * Set 资源前缀
-     * @param ResourcePrefix 资源前缀
+     * Set 资源前缀，示例 instance
+     * @param ResourcePrefix 资源前缀，示例 instance
      */
     public void setResourcePrefix(String ResourcePrefix) {
         this.ResourcePrefix = ResourcePrefix;
@@ -121,16 +121,16 @@ public class DescribeResourceTagsByResourceIdsRequest extends AbstractModel {
     }
 
     /**
-     * Get 资源所在地域 
-     * @return ResourceRegion 资源所在地域
+     * Get 资源所在地域，示例：ap-guangzhou 不区分地域的资源不需要传入该字段，区分地域的资源必填 
+     * @return ResourceRegion 资源所在地域，示例：ap-guangzhou 不区分地域的资源不需要传入该字段，区分地域的资源必填
      */
     public String getResourceRegion() {
         return this.ResourceRegion;
     }
 
     /**
-     * Set 资源所在地域
-     * @param ResourceRegion 资源所在地域
+     * Set 资源所在地域，示例：ap-guangzhou 不区分地域的资源不需要传入该字段，区分地域的资源必填
+     * @param ResourceRegion 资源所在地域，示例：ap-guangzhou 不区分地域的资源不需要传入该字段，区分地域的资源必填
      */
     public void setResourceRegion(String ResourceRegion) {
         this.ResourceRegion = ResourceRegion;

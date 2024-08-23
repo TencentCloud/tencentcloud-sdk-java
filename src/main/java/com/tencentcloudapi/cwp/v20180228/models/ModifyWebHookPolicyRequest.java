@@ -87,6 +87,13 @@ public class ModifyWebHookPolicyRequest extends AbstractModel {
     private String [] Quuids;
 
     /**
+    * 需排除的机器列表	
+    */
+    @SerializedName("ExcludedQuuids")
+    @Expose
+    private String [] ExcludedQuuids;
+
+    /**
      * Get id 
      * @return Id id
      */
@@ -230,6 +237,22 @@ public class ModifyWebHookPolicyRequest extends AbstractModel {
         this.Quuids = Quuids;
     }
 
+    /**
+     * Get 需排除的机器列表	 
+     * @return ExcludedQuuids 需排除的机器列表	
+     */
+    public String [] getExcludedQuuids() {
+        return this.ExcludedQuuids;
+    }
+
+    /**
+     * Set 需排除的机器列表	
+     * @param ExcludedQuuids 需排除的机器列表	
+     */
+    public void setExcludedQuuids(String [] ExcludedQuuids) {
+        this.ExcludedQuuids = ExcludedQuuids;
+    }
+
     public ModifyWebHookPolicyRequest() {
     }
 
@@ -280,6 +303,12 @@ public class ModifyWebHookPolicyRequest extends AbstractModel {
                 this.Quuids[i] = new String(source.Quuids[i]);
             }
         }
+        if (source.ExcludedQuuids != null) {
+            this.ExcludedQuuids = new String[source.ExcludedQuuids.length];
+            for (int i = 0; i < source.ExcludedQuuids.length; i++) {
+                this.ExcludedQuuids[i] = new String(source.ExcludedQuuids[i]);
+            }
+        }
     }
 
 
@@ -296,6 +325,7 @@ public class ModifyWebHookPolicyRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "CustomFields.", this.CustomFields);
         this.setParamSimple(map, prefix + "IsDisabled", this.IsDisabled);
         this.setParamArraySimple(map, prefix + "Quuids.", this.Quuids);
+        this.setParamArraySimple(map, prefix + "ExcludedQuuids.", this.ExcludedQuuids);
 
     }
 }

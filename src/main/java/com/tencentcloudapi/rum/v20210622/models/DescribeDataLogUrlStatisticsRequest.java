@@ -171,6 +171,13 @@ public class DescribeDataLogUrlStatisticsRequest extends AbstractModel {
     private String Env;
 
     /**
+    * js异常信息
+    */
+    @SerializedName("ErrorMsg")
+    @Expose
+    private String ErrorMsg;
+
+    /**
      * Get 开始时间 
      * @return StartTime 开始时间
      */
@@ -506,6 +513,22 @@ public class DescribeDataLogUrlStatisticsRequest extends AbstractModel {
         this.Env = Env;
     }
 
+    /**
+     * Get js异常信息 
+     * @return ErrorMsg js异常信息
+     */
+    public String getErrorMsg() {
+        return this.ErrorMsg;
+    }
+
+    /**
+     * Set js异常信息
+     * @param ErrorMsg js异常信息
+     */
+    public void setErrorMsg(String ErrorMsg) {
+        this.ErrorMsg = ErrorMsg;
+    }
+
     public DescribeDataLogUrlStatisticsRequest() {
     }
 
@@ -577,6 +600,9 @@ public class DescribeDataLogUrlStatisticsRequest extends AbstractModel {
         if (source.Env != null) {
             this.Env = new String(source.Env);
         }
+        if (source.ErrorMsg != null) {
+            this.ErrorMsg = new String(source.ErrorMsg);
+        }
     }
 
 
@@ -605,6 +631,7 @@ public class DescribeDataLogUrlStatisticsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Os", this.Os);
         this.setParamSimple(map, prefix + "Browser", this.Browser);
         this.setParamSimple(map, prefix + "Env", this.Env);
+        this.setParamSimple(map, prefix + "ErrorMsg", this.ErrorMsg);
 
     }
 }

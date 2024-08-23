@@ -86,6 +86,13 @@ public class CreateDataTransformRequest extends AbstractModel {
     private PreviewLogStatistic [] PreviewLogStatistics;
 
     /**
+    * 数据加工类型。0：标准加工任务； 1：前置加工任务。前置加工任务将采集的日志处理完成后，再写入日志主题。
+    */
+    @SerializedName("DataTransformType")
+    @Expose
+    private Long DataTransformType;
+
+    /**
      * Get 任务类型. 1: 指定主题；2:动态创建。详情请参考[创建加工任务文档](https://cloud.tencent.com/document/product/614/63940)。 
      * @return FuncType 任务类型. 1: 指定主题；2:动态创建。详情请参考[创建加工任务文档](https://cloud.tencent.com/document/product/614/63940)。
      */
@@ -237,6 +244,22 @@ public class CreateDataTransformRequest extends AbstractModel {
         this.PreviewLogStatistics = PreviewLogStatistics;
     }
 
+    /**
+     * Get 数据加工类型。0：标准加工任务； 1：前置加工任务。前置加工任务将采集的日志处理完成后，再写入日志主题。 
+     * @return DataTransformType 数据加工类型。0：标准加工任务； 1：前置加工任务。前置加工任务将采集的日志处理完成后，再写入日志主题。
+     */
+    public Long getDataTransformType() {
+        return this.DataTransformType;
+    }
+
+    /**
+     * Set 数据加工类型。0：标准加工任务； 1：前置加工任务。前置加工任务将采集的日志处理完成后，再写入日志主题。
+     * @param DataTransformType 数据加工类型。0：标准加工任务； 1：前置加工任务。前置加工任务将采集的日志处理完成后，再写入日志主题。
+     */
+    public void setDataTransformType(Long DataTransformType) {
+        this.DataTransformType = DataTransformType;
+    }
+
     public CreateDataTransformRequest() {
     }
 
@@ -275,6 +298,9 @@ public class CreateDataTransformRequest extends AbstractModel {
                 this.PreviewLogStatistics[i] = new PreviewLogStatistic(source.PreviewLogStatistics[i]);
             }
         }
+        if (source.DataTransformType != null) {
+            this.DataTransformType = new Long(source.DataTransformType);
+        }
     }
 
 
@@ -290,6 +316,7 @@ public class CreateDataTransformRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "DstResources.", this.DstResources);
         this.setParamSimple(map, prefix + "EnableFlag", this.EnableFlag);
         this.setParamArrayObj(map, prefix + "PreviewLogStatistics.", this.PreviewLogStatistics);
+        this.setParamSimple(map, prefix + "DataTransformType", this.DataTransformType);
 
     }
 }

@@ -87,6 +87,13 @@ public class ScanVulSettingRequest extends AbstractModel {
     private String [] Uuids;
 
     /**
+    * 0版本比对，2版本比对+poc
+    */
+    @SerializedName("ScanMethod")
+    @Expose
+    private Long ScanMethod;
+
+    /**
      * Get 定期检测间隔时间（天） 
      * @return TimerInterval 定期检测间隔时间（天）
      */
@@ -230,6 +237,22 @@ public class ScanVulSettingRequest extends AbstractModel {
         this.Uuids = Uuids;
     }
 
+    /**
+     * Get 0版本比对，2版本比对+poc 
+     * @return ScanMethod 0版本比对，2版本比对+poc
+     */
+    public Long getScanMethod() {
+        return this.ScanMethod;
+    }
+
+    /**
+     * Set 0版本比对，2版本比对+poc
+     * @param ScanMethod 0版本比对，2版本比对+poc
+     */
+    public void setScanMethod(Long ScanMethod) {
+        this.ScanMethod = ScanMethod;
+    }
+
     public ScanVulSettingRequest() {
     }
 
@@ -274,6 +297,9 @@ public class ScanVulSettingRequest extends AbstractModel {
                 this.Uuids[i] = new String(source.Uuids[i]);
             }
         }
+        if (source.ScanMethod != null) {
+            this.ScanMethod = new Long(source.ScanMethod);
+        }
     }
 
 
@@ -290,6 +316,7 @@ public class ScanVulSettingRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "EnableScan", this.EnableScan);
         this.setParamArraySimple(map, prefix + "Uuids.", this.Uuids);
+        this.setParamSimple(map, prefix + "ScanMethod", this.ScanMethod);
 
     }
 }

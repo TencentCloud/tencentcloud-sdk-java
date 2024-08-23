@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AttachResourcesTagRequest extends AbstractModel {
 
     /**
-    * 业务的英文简称，即资源六段式第三段。资源六段式的描述方式参考：https://cloud.tencent.com/document/product/651/89122
+    * 业务类型，示例 cvm 。资源所属业务名称（资源六段式中的第三段）
     */
     @SerializedName("ServiceType")
     @Expose
@@ -59,23 +59,23 @@ public class AttachResourcesTagRequest extends AbstractModel {
     private String ResourceRegion;
 
     /**
-    * 资源前缀（资源六段式中最后一段"/"前面的部分），cos存储桶不需要传入该字段，其他云资源必填
+    * 资源前缀（资源六段式中最后一段"/"前面的部分，例如“qcs::ckafka:ap-shanghai:uin/123456789:ckafkaId/ckafka-o85jq584” 中资源前缀为ckafkaId），cos存储桶不需要传入该字段，其他云资源必填
     */
     @SerializedName("ResourcePrefix")
     @Expose
     private String ResourcePrefix;
 
     /**
-     * Get 业务的英文简称，即资源六段式第三段。资源六段式的描述方式参考：https://cloud.tencent.com/document/product/651/89122 
-     * @return ServiceType 业务的英文简称，即资源六段式第三段。资源六段式的描述方式参考：https://cloud.tencent.com/document/product/651/89122
+     * Get 业务类型，示例 cvm 。资源所属业务名称（资源六段式中的第三段） 
+     * @return ServiceType 业务类型，示例 cvm 。资源所属业务名称（资源六段式中的第三段）
      */
     public String getServiceType() {
         return this.ServiceType;
     }
 
     /**
-     * Set 业务的英文简称，即资源六段式第三段。资源六段式的描述方式参考：https://cloud.tencent.com/document/product/651/89122
-     * @param ServiceType 业务的英文简称，即资源六段式第三段。资源六段式的描述方式参考：https://cloud.tencent.com/document/product/651/89122
+     * Set 业务类型，示例 cvm 。资源所属业务名称（资源六段式中的第三段）
+     * @param ServiceType 业务类型，示例 cvm 。资源所属业务名称（资源六段式中的第三段）
      */
     public void setServiceType(String ServiceType) {
         this.ServiceType = ServiceType;
@@ -146,16 +146,16 @@ public class AttachResourcesTagRequest extends AbstractModel {
     }
 
     /**
-     * Get 资源前缀（资源六段式中最后一段"/"前面的部分），cos存储桶不需要传入该字段，其他云资源必填 
-     * @return ResourcePrefix 资源前缀（资源六段式中最后一段"/"前面的部分），cos存储桶不需要传入该字段，其他云资源必填
+     * Get 资源前缀（资源六段式中最后一段"/"前面的部分，例如“qcs::ckafka:ap-shanghai:uin/123456789:ckafkaId/ckafka-o85jq584” 中资源前缀为ckafkaId），cos存储桶不需要传入该字段，其他云资源必填 
+     * @return ResourcePrefix 资源前缀（资源六段式中最后一段"/"前面的部分，例如“qcs::ckafka:ap-shanghai:uin/123456789:ckafkaId/ckafka-o85jq584” 中资源前缀为ckafkaId），cos存储桶不需要传入该字段，其他云资源必填
      */
     public String getResourcePrefix() {
         return this.ResourcePrefix;
     }
 
     /**
-     * Set 资源前缀（资源六段式中最后一段"/"前面的部分），cos存储桶不需要传入该字段，其他云资源必填
-     * @param ResourcePrefix 资源前缀（资源六段式中最后一段"/"前面的部分），cos存储桶不需要传入该字段，其他云资源必填
+     * Set 资源前缀（资源六段式中最后一段"/"前面的部分，例如“qcs::ckafka:ap-shanghai:uin/123456789:ckafkaId/ckafka-o85jq584” 中资源前缀为ckafkaId），cos存储桶不需要传入该字段，其他云资源必填
+     * @param ResourcePrefix 资源前缀（资源六段式中最后一段"/"前面的部分，例如“qcs::ckafka:ap-shanghai:uin/123456789:ckafkaId/ckafka-o85jq584” 中资源前缀为ckafkaId），cos存储桶不需要传入该字段，其他云资源必填
      */
     public void setResourcePrefix(String ResourcePrefix) {
         this.ResourcePrefix = ResourcePrefix;

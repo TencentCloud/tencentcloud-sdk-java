@@ -368,6 +368,19 @@ public class TelCdrInfo extends AbstractModel {
     private String AsrUrl;
 
     /**
+    * AsrUrl的状态：Complete
+已完成;
+Processing
+正在生成中;
+NotExists
+无记录(未开启生成离线asr或者无套餐包)
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AsrStatus")
+    @Expose
+    private String AsrStatus;
+
+    /**
     * 录音转存第三方COS地址
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -1416,6 +1429,46 @@ public class TelCdrInfo extends AbstractModel {
     }
 
     /**
+     * Get AsrUrl的状态：Complete
+已完成;
+Processing
+正在生成中;
+NotExists
+无记录(未开启生成离线asr或者无套餐包)
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AsrStatus AsrUrl的状态：Complete
+已完成;
+Processing
+正在生成中;
+NotExists
+无记录(未开启生成离线asr或者无套餐包)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAsrStatus() {
+        return this.AsrStatus;
+    }
+
+    /**
+     * Set AsrUrl的状态：Complete
+已完成;
+Processing
+正在生成中;
+NotExists
+无记录(未开启生成离线asr或者无套餐包)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AsrStatus AsrUrl的状态：Complete
+已完成;
+Processing
+正在生成中;
+NotExists
+无记录(未开启生成离线asr或者无套餐包)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAsrStatus(String AsrStatus) {
+        this.AsrStatus = AsrStatus;
+    }
+
+    /**
      * Get 录音转存第三方COS地址
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return CustomRecordURL 录音转存第三方COS地址
@@ -1628,6 +1681,9 @@ public class TelCdrInfo extends AbstractModel {
         if (source.AsrUrl != null) {
             this.AsrUrl = new String(source.AsrUrl);
         }
+        if (source.AsrStatus != null) {
+            this.AsrStatus = new String(source.AsrStatus);
+        }
         if (source.CustomRecordURL != null) {
             this.CustomRecordURL = new String(source.CustomRecordURL);
         }
@@ -1687,6 +1743,7 @@ public class TelCdrInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "UUI", this.UUI);
         this.setParamArrayObj(map, prefix + "IVRKeyPressedEx.", this.IVRKeyPressedEx);
         this.setParamSimple(map, prefix + "AsrUrl", this.AsrUrl);
+        this.setParamSimple(map, prefix + "AsrStatus", this.AsrStatus);
         this.setParamSimple(map, prefix + "CustomRecordURL", this.CustomRecordURL);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "QueuedSkillGroupName", this.QueuedSkillGroupName);

@@ -87,6 +87,13 @@ public class DescribeBGPIPL7RulesRequest extends AbstractModel {
     private Boolean Export;
 
     /**
+    * 源站，模糊查询
+    */
+    @SerializedName("Source")
+    @Expose
+    private String Source;
+
+    /**
      * Get DDoS防护子产品代号（bgpip表示高防IP） 
      * @return Business DDoS防护子产品代号（bgpip表示高防IP）
      */
@@ -230,6 +237,22 @@ public class DescribeBGPIPL7RulesRequest extends AbstractModel {
         this.Export = Export;
     }
 
+    /**
+     * Get 源站，模糊查询 
+     * @return Source 源站，模糊查询
+     */
+    public String getSource() {
+        return this.Source;
+    }
+
+    /**
+     * Set 源站，模糊查询
+     * @param Source 源站，模糊查询
+     */
+    public void setSource(String Source) {
+        this.Source = Source;
+    }
+
     public DescribeBGPIPL7RulesRequest() {
     }
 
@@ -271,6 +294,9 @@ public class DescribeBGPIPL7RulesRequest extends AbstractModel {
         if (source.Export != null) {
             this.Export = new Boolean(source.Export);
         }
+        if (source.Source != null) {
+            this.Source = new String(source.Source);
+        }
     }
 
 
@@ -287,6 +313,7 @@ public class DescribeBGPIPL7RulesRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "ProtocolList.", this.ProtocolList);
         this.setParamSimple(map, prefix + "Cname", this.Cname);
         this.setParamSimple(map, prefix + "Export", this.Export);
+        this.setParamSimple(map, prefix + "Source", this.Source);
 
     }
 }

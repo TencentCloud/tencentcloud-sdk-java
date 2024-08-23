@@ -184,6 +184,15 @@ WARN_DRIVER_LICENSE_BORDER_INCOMPLETE 边框不完整告警
     private String BackPageCardCode;
 
     /**
+    * 驾驶证类型
+电子驾驶证：Electronic
+普通驾驶证：Normal
+    */
+    @SerializedName("DriverLicenseType")
+    @Expose
+    private String DriverLicenseType;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -580,6 +589,30 @@ WARN_DRIVER_LICENSE_BORDER_INCOMPLETE 边框不完整告警
     }
 
     /**
+     * Get 驾驶证类型
+电子驾驶证：Electronic
+普通驾驶证：Normal 
+     * @return DriverLicenseType 驾驶证类型
+电子驾驶证：Electronic
+普通驾驶证：Normal
+     */
+    public String getDriverLicenseType() {
+        return this.DriverLicenseType;
+    }
+
+    /**
+     * Set 驾驶证类型
+电子驾驶证：Electronic
+普通驾驶证：Normal
+     * @param DriverLicenseType 驾驶证类型
+电子驾驶证：Electronic
+普通驾驶证：Normal
+     */
+    public void setDriverLicenseType(String DriverLicenseType) {
+        this.DriverLicenseType = DriverLicenseType;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -672,6 +705,9 @@ WARN_DRIVER_LICENSE_BORDER_INCOMPLETE 边框不完整告警
         if (source.BackPageCardCode != null) {
             this.BackPageCardCode = new String(source.BackPageCardCode);
         }
+        if (source.DriverLicenseType != null) {
+            this.DriverLicenseType = new String(source.DriverLicenseType);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -703,6 +739,7 @@ WARN_DRIVER_LICENSE_BORDER_INCOMPLETE 边框不完整告警
         this.setParamSimple(map, prefix + "GenerateTime", this.GenerateTime);
         this.setParamSimple(map, prefix + "BackPageName", this.BackPageName);
         this.setParamSimple(map, prefix + "BackPageCardCode", this.BackPageCardCode);
+        this.setParamSimple(map, prefix + "DriverLicenseType", this.DriverLicenseType);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

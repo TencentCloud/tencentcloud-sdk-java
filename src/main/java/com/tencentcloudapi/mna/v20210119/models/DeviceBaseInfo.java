@@ -106,6 +106,22 @@ public class DeviceBaseInfo extends AbstractModel {
     private Long FlowTrunc;
 
     /**
+    * 设备sn
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Sn")
+    @Expose
+    private String Sn;
+
+    /**
+    * 厂商
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Vendor")
+    @Expose
+    private String Vendor;
+
+    /**
      * Get 设备唯一ID 
      * @return DeviceId 设备唯一ID
      */
@@ -301,6 +317,46 @@ public class DeviceBaseInfo extends AbstractModel {
         this.FlowTrunc = FlowTrunc;
     }
 
+    /**
+     * Get 设备sn
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Sn 设备sn
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSn() {
+        return this.Sn;
+    }
+
+    /**
+     * Set 设备sn
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Sn 设备sn
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSn(String Sn) {
+        this.Sn = Sn;
+    }
+
+    /**
+     * Get 厂商
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Vendor 厂商
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getVendor() {
+        return this.Vendor;
+    }
+
+    /**
+     * Set 厂商
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Vendor 厂商
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVendor(String Vendor) {
+        this.Vendor = Vendor;
+    }
+
     public DeviceBaseInfo() {
     }
 
@@ -342,6 +398,12 @@ public class DeviceBaseInfo extends AbstractModel {
         if (source.FlowTrunc != null) {
             this.FlowTrunc = new Long(source.FlowTrunc);
         }
+        if (source.Sn != null) {
+            this.Sn = new String(source.Sn);
+        }
+        if (source.Vendor != null) {
+            this.Vendor = new String(source.Vendor);
+        }
     }
 
 
@@ -360,6 +422,8 @@ public class DeviceBaseInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "GroupId", this.GroupId);
         this.setParamSimple(map, prefix + "GroupName", this.GroupName);
         this.setParamSimple(map, prefix + "FlowTrunc", this.FlowTrunc);
+        this.setParamSimple(map, prefix + "Sn", this.Sn);
+        this.setParamSimple(map, prefix + "Vendor", this.Vendor);
 
     }
 }

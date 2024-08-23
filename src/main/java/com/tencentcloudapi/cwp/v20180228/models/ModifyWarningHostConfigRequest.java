@@ -59,6 +59,13 @@ public class ModifyWarningHostConfigRequest extends AbstractModel {
     private String [] ItemLabelIds;
 
     /**
+    * 需排除的机器列表
+    */
+    @SerializedName("ExcludedQuuids")
+    @Expose
+    private String [] ExcludedQuuids;
+
+    /**
      * Get 告警类型 
      * @return Type 告警类型
      */
@@ -138,6 +145,22 @@ public class ModifyWarningHostConfigRequest extends AbstractModel {
         this.ItemLabelIds = ItemLabelIds;
     }
 
+    /**
+     * Get 需排除的机器列表 
+     * @return ExcludedQuuids 需排除的机器列表
+     */
+    public String [] getExcludedQuuids() {
+        return this.ExcludedQuuids;
+    }
+
+    /**
+     * Set 需排除的机器列表
+     * @param ExcludedQuuids 需排除的机器列表
+     */
+    public void setExcludedQuuids(String [] ExcludedQuuids) {
+        this.ExcludedQuuids = ExcludedQuuids;
+    }
+
     public ModifyWarningHostConfigRequest() {
     }
 
@@ -170,6 +193,12 @@ public class ModifyWarningHostConfigRequest extends AbstractModel {
                 this.ItemLabelIds[i] = new String(source.ItemLabelIds[i]);
             }
         }
+        if (source.ExcludedQuuids != null) {
+            this.ExcludedQuuids = new String[source.ExcludedQuuids.length];
+            for (int i = 0; i < source.ExcludedQuuids.length; i++) {
+                this.ExcludedQuuids[i] = new String(source.ExcludedQuuids[i]);
+            }
+        }
     }
 
 
@@ -182,6 +211,7 @@ public class ModifyWarningHostConfigRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "ItemLabels.", this.ItemLabels);
         this.setParamArraySimple(map, prefix + "Quuids.", this.Quuids);
         this.setParamArraySimple(map, prefix + "ItemLabelIds.", this.ItemLabelIds);
+        this.setParamArraySimple(map, prefix + "ExcludedQuuids.", this.ExcludedQuuids);
 
     }
 }

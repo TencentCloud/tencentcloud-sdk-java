@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ExtractTraceWatermarkTaskOutput extends AbstractModel {
 
     /**
-    * 播放者的 ID，以十六进制表示，共6位，该参数用于 [溯源水印](https://cloud.tencent.com/document/product/266/75789) 使用场景。
+    * 播放者的 ID，以十六进制表示，共6位。
     */
     @SerializedName("Uv")
     @Expose
@@ -38,16 +38,16 @@ public class ExtractTraceWatermarkTaskOutput extends AbstractModel {
     private String Uid;
 
     /**
-     * Get 播放者的 ID，以十六进制表示，共6位，该参数用于 [溯源水印](https://cloud.tencent.com/document/product/266/75789) 使用场景。 
-     * @return Uv 播放者的 ID，以十六进制表示，共6位，该参数用于 [溯源水印](https://cloud.tencent.com/document/product/266/75789) 使用场景。
+     * Get 播放者的 ID，以十六进制表示，共6位。 
+     * @return Uv 播放者的 ID，以十六进制表示，共6位。
      */
     public String getUv() {
         return this.Uv;
     }
 
     /**
-     * Set 播放者的 ID，以十六进制表示，共6位，该参数用于 [溯源水印](https://cloud.tencent.com/document/product/266/75789) 使用场景。
-     * @param Uv 播放者的 ID，以十六进制表示，共6位，该参数用于 [溯源水印](https://cloud.tencent.com/document/product/266/75789) 使用场景。
+     * Set 播放者的 ID，以十六进制表示，共6位。
+     * @param Uv 播放者的 ID，以十六进制表示，共6位。
      */
     public void setUv(String Uv) {
         this.Uv = Uv;

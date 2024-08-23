@@ -101,7 +101,7 @@ public class ActionLibraryListResult extends AbstractModel {
     private String ActionCommand;
 
     /**
-    * 动作类型( 0 -- tat   1 -- 云API）
+    * 动作类型（0 -- tat   1 -- 云API）
     */
     @SerializedName("ActionCommandType")
     @Expose
@@ -347,16 +347,16 @@ public class ActionLibraryListResult extends AbstractModel {
     }
 
     /**
-     * Get 动作类型( 0 -- tat   1 -- 云API） 
-     * @return ActionCommandType 动作类型( 0 -- tat   1 -- 云API）
+     * Get 动作类型（0 -- tat   1 -- 云API） 
+     * @return ActionCommandType 动作类型（0 -- tat   1 -- 云API）
      */
     public Long getActionCommandType() {
         return this.ActionCommandType;
     }
 
     /**
-     * Set 动作类型( 0 -- tat   1 -- 云API）
-     * @param ActionCommandType 动作类型( 0 -- tat   1 -- 云API）
+     * Set 动作类型（0 -- tat   1 -- 云API）
+     * @param ActionCommandType 动作类型（0 -- tat   1 -- 云API）
      */
     public void setActionCommandType(Long ActionCommandType) {
         this.ActionCommandType = ActionCommandType;

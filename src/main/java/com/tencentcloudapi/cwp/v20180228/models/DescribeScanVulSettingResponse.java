@@ -94,6 +94,13 @@ public class DescribeScanVulSettingResponse extends AbstractModel {
     private String [] Uuids;
 
     /**
+    * 0版本比对,2版本比对+poc
+    */
+    @SerializedName("ScanMethod")
+    @Expose
+    private Long ScanMethod;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -261,6 +268,22 @@ public class DescribeScanVulSettingResponse extends AbstractModel {
     }
 
     /**
+     * Get 0版本比对,2版本比对+poc 
+     * @return ScanMethod 0版本比对,2版本比对+poc
+     */
+    public Long getScanMethod() {
+        return this.ScanMethod;
+    }
+
+    /**
+     * Set 0版本比对,2版本比对+poc
+     * @param ScanMethod 0版本比对,2版本比对+poc
+     */
+    public void setScanMethod(Long ScanMethod) {
+        this.ScanMethod = ScanMethod;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -317,6 +340,9 @@ public class DescribeScanVulSettingResponse extends AbstractModel {
                 this.Uuids[i] = new String(source.Uuids[i]);
             }
         }
+        if (source.ScanMethod != null) {
+            this.ScanMethod = new Long(source.ScanMethod);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -337,6 +363,7 @@ public class DescribeScanVulSettingResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "ClickTimeout", this.ClickTimeout);
         this.setParamArraySimple(map, prefix + "Uuids.", this.Uuids);
+        this.setParamSimple(map, prefix + "ScanMethod", this.ScanMethod);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

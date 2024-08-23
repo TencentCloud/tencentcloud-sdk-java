@@ -38,7 +38,7 @@ public class DeleteBackUpDataRequest extends AbstractModel {
     private Long BackUpJobId;
 
     /**
-    * 是否删除所有数据
+    * 是否删除所有实例
     */
     @SerializedName("IsDeleteAll")
     @Expose
@@ -77,16 +77,16 @@ public class DeleteBackUpDataRequest extends AbstractModel {
     }
 
     /**
-     * Get 是否删除所有数据 
-     * @return IsDeleteAll 是否删除所有数据
+     * Get 是否删除所有实例 
+     * @return IsDeleteAll 是否删除所有实例
      */
     public Boolean getIsDeleteAll() {
         return this.IsDeleteAll;
     }
 
     /**
-     * Set 是否删除所有数据
-     * @param IsDeleteAll 是否删除所有数据
+     * Set 是否删除所有实例
+     * @param IsDeleteAll 是否删除所有实例
      */
     public void setIsDeleteAll(Boolean IsDeleteAll) {
         this.IsDeleteAll = IsDeleteAll;

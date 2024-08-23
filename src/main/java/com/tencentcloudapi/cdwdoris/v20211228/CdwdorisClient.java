@@ -424,7 +424,7 @@ public class CdwdorisClient extends AbstractClient{
     }
 
     /**
-     *针对驱动sql命令查询ck集群接口
+     *针对驱动sql命令查询集群接口
      * @param req DescribeSqlApisRequest
      * @return DescribeSqlApisResponse
      * @throws TencentCloudSDKException
@@ -476,6 +476,17 @@ public class CdwdorisClient extends AbstractClient{
     public DestroyInstanceResponse DestroyInstance(DestroyInstanceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DestroyInstance", DestroyInstanceResponse.class);
+    }
+
+    /**
+     *在集群配置页面修改集群配置文件接口，xml模式
+     * @param req ModifyClusterConfigsRequest
+     * @return ModifyClusterConfigsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyClusterConfigsResponse ModifyClusterConfigs(ModifyClusterConfigsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyClusterConfigs", ModifyClusterConfigsResponse.class);
     }
 
     /**

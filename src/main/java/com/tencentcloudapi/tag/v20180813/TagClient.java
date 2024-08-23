@@ -249,7 +249,6 @@ public class TagClient extends AbstractClient{
 
     /**
      *用于查询已建立的标签列表。
-
      * @param req DescribeTagsSeqRequest
      * @return DescribeTagsSeqResponse
      * @throws TencentCloudSDKException

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class NodeInfos extends AbstractModel {
 
     /**
-    * 节点在doris中明朝n
+    * 节点名称
     */
     @SerializedName("NodeName")
     @Expose
@@ -66,16 +66,16 @@ public class NodeInfos extends AbstractModel {
     private String LastRestartTime;
 
     /**
-     * Get 节点在doris中明朝n 
-     * @return NodeName 节点在doris中明朝n
+     * Get 节点名称 
+     * @return NodeName 节点名称
      */
     public String getNodeName() {
         return this.NodeName;
     }
 
     /**
-     * Set 节点在doris中明朝n
-     * @param NodeName 节点在doris中明朝n
+     * Set 节点名称
+     * @param NodeName 节点名称
      */
     public void setNodeName(String NodeName) {
         this.NodeName = NodeName;

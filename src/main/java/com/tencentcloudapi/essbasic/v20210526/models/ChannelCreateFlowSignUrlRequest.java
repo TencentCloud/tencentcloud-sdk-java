@@ -48,7 +48,9 @@ public class ChannelCreateFlowSignUrlRequest extends AbstractModel {
     private String FlowId;
 
     /**
-    * 流程签署人列表，其中结构体的Name，Mobile和ApproverType必传，企业签署人则还需传OrganizationName、OpenId、OrganizationOpenId，其他可不传。
+    * 流程签署人列表，其中结构体的ApproverType必传。
+若为个人签署方或saas企业签署方，则Name，Mobile必传。OrganizationName 传对应企业名称。
+若为子客企业签署方则需传OpenId、OrganizationOpenId，其他可不传。
 
 注:
 `1. 签署人只能有手写签名、时间类型、印章类型的签署控件和内容填写控件，其他类型的签署控件暂时未支持。`
@@ -165,12 +167,16 @@ public class ChannelCreateFlowSignUrlRequest extends AbstractModel {
     }
 
     /**
-     * Get 流程签署人列表，其中结构体的Name，Mobile和ApproverType必传，企业签署人则还需传OrganizationName、OpenId、OrganizationOpenId，其他可不传。
+     * Get 流程签署人列表，其中结构体的ApproverType必传。
+若为个人签署方或saas企业签署方，则Name，Mobile必传。OrganizationName 传对应企业名称。
+若为子客企业签署方则需传OpenId、OrganizationOpenId，其他可不传。
 
 注:
 `1. 签署人只能有手写签名、时间类型、印章类型的签署控件和内容填写控件，其他类型的签署控件暂时未支持。`
 `2. 生成发起方预览链接时，该字段（FlowApproverInfos）传空或者不传` 
-     * @return FlowApproverInfos 流程签署人列表，其中结构体的Name，Mobile和ApproverType必传，企业签署人则还需传OrganizationName、OpenId、OrganizationOpenId，其他可不传。
+     * @return FlowApproverInfos 流程签署人列表，其中结构体的ApproverType必传。
+若为个人签署方或saas企业签署方，则Name，Mobile必传。OrganizationName 传对应企业名称。
+若为子客企业签署方则需传OpenId、OrganizationOpenId，其他可不传。
 
 注:
 `1. 签署人只能有手写签名、时间类型、印章类型的签署控件和内容填写控件，其他类型的签署控件暂时未支持。`
@@ -181,12 +187,16 @@ public class ChannelCreateFlowSignUrlRequest extends AbstractModel {
     }
 
     /**
-     * Set 流程签署人列表，其中结构体的Name，Mobile和ApproverType必传，企业签署人则还需传OrganizationName、OpenId、OrganizationOpenId，其他可不传。
+     * Set 流程签署人列表，其中结构体的ApproverType必传。
+若为个人签署方或saas企业签署方，则Name，Mobile必传。OrganizationName 传对应企业名称。
+若为子客企业签署方则需传OpenId、OrganizationOpenId，其他可不传。
 
 注:
 `1. 签署人只能有手写签名、时间类型、印章类型的签署控件和内容填写控件，其他类型的签署控件暂时未支持。`
 `2. 生成发起方预览链接时，该字段（FlowApproverInfos）传空或者不传`
-     * @param FlowApproverInfos 流程签署人列表，其中结构体的Name，Mobile和ApproverType必传，企业签署人则还需传OrganizationName、OpenId、OrganizationOpenId，其他可不传。
+     * @param FlowApproverInfos 流程签署人列表，其中结构体的ApproverType必传。
+若为个人签署方或saas企业签署方，则Name，Mobile必传。OrganizationName 传对应企业名称。
+若为子客企业签署方则需传OpenId、OrganizationOpenId，其他可不传。
 
 注:
 `1. 签署人只能有手写签名、时间类型、印章类型的签署控件和内容填写控件，其他类型的签署控件暂时未支持。`

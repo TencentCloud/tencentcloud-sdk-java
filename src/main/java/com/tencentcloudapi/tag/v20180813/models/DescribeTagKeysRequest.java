@@ -45,7 +45,7 @@ public class DescribeTagKeysRequest extends AbstractModel {
     private Long Limit;
 
     /**
-    * 是否展现项目
+    * 是否展现项目。1:展示  0:不展示
     */
     @SerializedName("ShowProject")
     @Expose
@@ -107,16 +107,16 @@ public class DescribeTagKeysRequest extends AbstractModel {
     }
 
     /**
-     * Get 是否展现项目 
-     * @return ShowProject 是否展现项目
+     * Get 是否展现项目。1:展示  0:不展示 
+     * @return ShowProject 是否展现项目。1:展示  0:不展示
      */
     public Long getShowProject() {
         return this.ShowProject;
     }
 
     /**
-     * Set 是否展现项目
-     * @param ShowProject 是否展现项目
+     * Set 是否展现项目。1:展示  0:不展示
+     * @param ShowProject 是否展现项目。1:展示  0:不展示
      */
     public void setShowProject(Long ShowProject) {
         this.ShowProject = ShowProject;
