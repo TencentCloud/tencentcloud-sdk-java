@@ -135,6 +135,14 @@ public class ClusterInstanceDetail extends AbstractModel {
     private String InstanceDeviceType;
 
     /**
+    * 实例存储类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InstanceStorageType")
+    @Expose
+    private String InstanceStorageType;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -398,6 +406,26 @@ public class ClusterInstanceDetail extends AbstractModel {
         this.InstanceDeviceType = InstanceDeviceType;
     }
 
+    /**
+     * Get 实例存储类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InstanceStorageType 实例存储类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getInstanceStorageType() {
+        return this.InstanceStorageType;
+    }
+
+    /**
+     * Set 实例存储类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstanceStorageType 实例存储类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInstanceStorageType(String InstanceStorageType) {
+        this.InstanceStorageType = InstanceStorageType;
+    }
+
     public ClusterInstanceDetail() {
     }
 
@@ -457,6 +485,9 @@ public class ClusterInstanceDetail extends AbstractModel {
         if (source.InstanceDeviceType != null) {
             this.InstanceDeviceType = new String(source.InstanceDeviceType);
         }
+        if (source.InstanceStorageType != null) {
+            this.InstanceStorageType = new String(source.InstanceStorageType);
+        }
     }
 
 
@@ -479,6 +510,7 @@ public class ClusterInstanceDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "ServerlessStatus", this.ServerlessStatus);
         this.setParamArrayObj(map, prefix + "InstanceTasks.", this.InstanceTasks);
         this.setParamSimple(map, prefix + "InstanceDeviceType", this.InstanceDeviceType);
+        this.setParamSimple(map, prefix + "InstanceStorageType", this.InstanceStorageType);
 
     }
 }

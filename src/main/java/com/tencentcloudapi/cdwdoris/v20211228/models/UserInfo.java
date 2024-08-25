@@ -73,6 +73,13 @@ public class UserInfo extends AbstractModel {
     private String OldPwd;
 
     /**
+    * 绑定的子用户uin
+    */
+    @SerializedName("CamUin")
+    @Expose
+    private String CamUin;
+
+    /**
      * Get 集群实例id 
      * @return InstanceId 集群实例id
      */
@@ -184,6 +191,22 @@ public class UserInfo extends AbstractModel {
         this.OldPwd = OldPwd;
     }
 
+    /**
+     * Get 绑定的子用户uin 
+     * @return CamUin 绑定的子用户uin
+     */
+    public String getCamUin() {
+        return this.CamUin;
+    }
+
+    /**
+     * Set 绑定的子用户uin
+     * @param CamUin 绑定的子用户uin
+     */
+    public void setCamUin(String CamUin) {
+        this.CamUin = CamUin;
+    }
+
     public UserInfo() {
     }
 
@@ -213,6 +236,9 @@ public class UserInfo extends AbstractModel {
         if (source.OldPwd != null) {
             this.OldPwd = new String(source.OldPwd);
         }
+        if (source.CamUin != null) {
+            this.CamUin = new String(source.CamUin);
+        }
     }
 
 
@@ -227,6 +253,7 @@ public class UserInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "OldWhiteHost", this.OldWhiteHost);
         this.setParamSimple(map, prefix + "Describe", this.Describe);
         this.setParamSimple(map, prefix + "OldPwd", this.OldPwd);
+        this.setParamSimple(map, prefix + "CamUin", this.CamUin);
 
     }
 }

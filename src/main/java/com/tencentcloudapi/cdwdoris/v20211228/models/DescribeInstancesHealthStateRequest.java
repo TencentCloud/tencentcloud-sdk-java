@@ -31,7 +31,7 @@ public class DescribeInstancesHealthStateRequest extends AbstractModel {
     private String InstanceID;
 
     /**
-    * "" 或者  某个集群Id
+    * 为空：代表当前appId下所有集群 或者  某个集群Id
     */
     @SerializedName("Input")
     @Expose
@@ -58,16 +58,16 @@ public class DescribeInstancesHealthStateRequest extends AbstractModel {
     }
 
     /**
-     * Get "" 或者  某个集群Id 
-     * @return Input "" 或者  某个集群Id
+     * Get 为空：代表当前appId下所有集群 或者  某个集群Id 
+     * @return Input 为空：代表当前appId下所有集群 或者  某个集群Id
      */
     public String getInput() {
         return this.Input;
     }
 
     /**
-     * Set "" 或者  某个集群Id
-     * @param Input "" 或者  某个集群Id
+     * Set 为空：代表当前appId下所有集群 或者  某个集群Id
+     * @param Input 为空：代表当前appId下所有集群 或者  某个集群Id
      */
     public void setInput(String Input) {
         this.Input = Input;

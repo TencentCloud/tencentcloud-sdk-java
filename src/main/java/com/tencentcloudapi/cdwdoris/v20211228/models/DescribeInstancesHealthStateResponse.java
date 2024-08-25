@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeInstancesHealthStateResponse extends AbstractModel {
 
     /**
-    * 出参
+    * base64编码后的数据，包含了集群的健康信息
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
@@ -39,9 +39,9 @@ public class DescribeInstancesHealthStateResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 出参
+     * Get base64编码后的数据，包含了集群的健康信息
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Data 出参
+     * @return Data base64编码后的数据，包含了集群的健康信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getData() {
@@ -49,9 +49,9 @@ public class DescribeInstancesHealthStateResponse extends AbstractModel {
     }
 
     /**
-     * Set 出参
+     * Set base64编码后的数据，包含了集群的健康信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Data 出参
+     * @param Data base64编码后的数据，包含了集群的健康信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(String Data) {

@@ -32,14 +32,16 @@ public class ModifyDBInstanceSpecRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * 实例配置变更后的内存大小。- 单位：GB。- 内存和磁盘必须同时升配或同时降配，即 Memory 与 Volume 需同时配置变更。<br>注意：节点变更时，输入实例当前的内存配置。
+    * 实例配置变更后的内存大小。- 单位：GB。为空时，默认取实例当前的内存大小。<br>  注意：内存和磁盘必须同时升配或同时降配，即 Memory 与 Volume 需同时配置变更。
     */
     @SerializedName("Memory")
     @Expose
     private Long Memory;
 
     /**
-    * 实例配置变更后的硬盘大小，单位：GB。<ul><li>内存和磁盘必须同时升配或同时降配，即 Memory 与 Volume 需同时配置变更。</li><li>降配时，变更后的磁盘容量必须大于已用磁盘容量的1.2倍。</li></ul>  注意：节点变更时，输入实例当前的硬盘配置。
+    * 实例配置变更后的硬盘大小，单位：GB。为空时，默认取当前实例的磁盘大小。
+- 内存和磁盘必须同时升配或同时降配，即 Memory 与 Volume 需同时配置变更。
+- 降配时，变更后的磁盘容量必须大于已用磁盘容量的1.2倍。
     */
     @SerializedName("Volume")
     @Expose
@@ -57,14 +59,20 @@ public class ModifyDBInstanceSpecRequest extends AbstractModel {
     private Long OplogSize;
 
     /**
-    * 实例变更后的节点数。- 变更节点类型包含：mongod节点 或 readonly 节点，mongos节点变更无需填写。变更节点类型，请查询参数**AddNodeList**或**RemoveNodeList**指定的类型。- 副本集节点数：取值范围请通过云数据库的售卖规格 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 接口返回的参数**MinNodeNum**与 **MaxNodeNum**获取。- 分片集群每个分片节点数：取值范围请通过云数据库的售卖规格 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 接口返回的参数**MinReplicateSetNodeNum**与**MaxReplicateSetNodeNum**获取。
+    * 实例变更后mongod的节点数（不包含readonly节点数）。
+- 变更mongod CPU与内存规格时，该参数可以不配置或者输入当前 mongod(不包含readonly) 节点数量。
+-  变更 mongos CPU与内存规格时，该参数可以不配置或者输入当前 mongod(不包含readonly) 节点数量。
+-  节点变更时(全部类型)，该参数可不配置或输入变更后的 mongod(不包含readonl) 节点数量。
+-  副本集节点数：请确认节点数量取值范围，通过云数据库的售卖规格 [DescribeSpecInfo ](https://cloud.tencent.com/document/product/240/38565)接口返回的参数 MinNodeNum 与 MaxNodeNum 获取。
+-  分片集群每个分片节点数：请确认节点数量取值范围，通过云数据库的售卖规格 [DescribeSpecInfo ](https://cloud.tencent.com/document/product/240/38565)接口返回的参数 MinReplicateSetNodeNum 与 MaxReplicateSetNodeNum 获取。
     */
     @SerializedName("NodeNum")
     @Expose
     private Long NodeNum;
 
     /**
-    * 实例变更后的分片数。<ul><li>取值范围请通过云数据库的售卖规格 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 接口返回的参数**MinReplicateSetNum**与**MaxReplicateSetNum**获取。</li><li>该参数只能增加不能减少。</li></ul>
+    * 实例变更后的分片数。
+- 取值范围请通过云数据库的售卖规格[DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 接口返回的参数**MinReplicateSetNum**与**MaxReplicateSetNum**获取。- 该参数只能增加不能减少。
     */
     @SerializedName("ReplicateSetNum")
     @Expose
@@ -81,7 +89,7 @@ public class ModifyDBInstanceSpecRequest extends AbstractModel {
     private Long InMaintenance;
 
     /**
-    * 分片实例配置变更后的mongos内存大小。- 单位：GB。
+    * 分片实例配置变更后的mongos内存大小。单位：GB。
     */
     @SerializedName("MongosMemory")
     @Expose
@@ -122,32 +130,40 @@ public class ModifyDBInstanceSpecRequest extends AbstractModel {
     }
 
     /**
-     * Get 实例配置变更后的内存大小。- 单位：GB。- 内存和磁盘必须同时升配或同时降配，即 Memory 与 Volume 需同时配置变更。<br>注意：节点变更时，输入实例当前的内存配置。 
-     * @return Memory 实例配置变更后的内存大小。- 单位：GB。- 内存和磁盘必须同时升配或同时降配，即 Memory 与 Volume 需同时配置变更。<br>注意：节点变更时，输入实例当前的内存配置。
+     * Get 实例配置变更后的内存大小。- 单位：GB。为空时，默认取实例当前的内存大小。<br>  注意：内存和磁盘必须同时升配或同时降配，即 Memory 与 Volume 需同时配置变更。 
+     * @return Memory 实例配置变更后的内存大小。- 单位：GB。为空时，默认取实例当前的内存大小。<br>  注意：内存和磁盘必须同时升配或同时降配，即 Memory 与 Volume 需同时配置变更。
      */
     public Long getMemory() {
         return this.Memory;
     }
 
     /**
-     * Set 实例配置变更后的内存大小。- 单位：GB。- 内存和磁盘必须同时升配或同时降配，即 Memory 与 Volume 需同时配置变更。<br>注意：节点变更时，输入实例当前的内存配置。
-     * @param Memory 实例配置变更后的内存大小。- 单位：GB。- 内存和磁盘必须同时升配或同时降配，即 Memory 与 Volume 需同时配置变更。<br>注意：节点变更时，输入实例当前的内存配置。
+     * Set 实例配置变更后的内存大小。- 单位：GB。为空时，默认取实例当前的内存大小。<br>  注意：内存和磁盘必须同时升配或同时降配，即 Memory 与 Volume 需同时配置变更。
+     * @param Memory 实例配置变更后的内存大小。- 单位：GB。为空时，默认取实例当前的内存大小。<br>  注意：内存和磁盘必须同时升配或同时降配，即 Memory 与 Volume 需同时配置变更。
      */
     public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * Get 实例配置变更后的硬盘大小，单位：GB。<ul><li>内存和磁盘必须同时升配或同时降配，即 Memory 与 Volume 需同时配置变更。</li><li>降配时，变更后的磁盘容量必须大于已用磁盘容量的1.2倍。</li></ul>  注意：节点变更时，输入实例当前的硬盘配置。 
-     * @return Volume 实例配置变更后的硬盘大小，单位：GB。<ul><li>内存和磁盘必须同时升配或同时降配，即 Memory 与 Volume 需同时配置变更。</li><li>降配时，变更后的磁盘容量必须大于已用磁盘容量的1.2倍。</li></ul>  注意：节点变更时，输入实例当前的硬盘配置。
+     * Get 实例配置变更后的硬盘大小，单位：GB。为空时，默认取当前实例的磁盘大小。
+- 内存和磁盘必须同时升配或同时降配，即 Memory 与 Volume 需同时配置变更。
+- 降配时，变更后的磁盘容量必须大于已用磁盘容量的1.2倍。 
+     * @return Volume 实例配置变更后的硬盘大小，单位：GB。为空时，默认取当前实例的磁盘大小。
+- 内存和磁盘必须同时升配或同时降配，即 Memory 与 Volume 需同时配置变更。
+- 降配时，变更后的磁盘容量必须大于已用磁盘容量的1.2倍。
      */
     public Long getVolume() {
         return this.Volume;
     }
 
     /**
-     * Set 实例配置变更后的硬盘大小，单位：GB。<ul><li>内存和磁盘必须同时升配或同时降配，即 Memory 与 Volume 需同时配置变更。</li><li>降配时，变更后的磁盘容量必须大于已用磁盘容量的1.2倍。</li></ul>  注意：节点变更时，输入实例当前的硬盘配置。
-     * @param Volume 实例配置变更后的硬盘大小，单位：GB。<ul><li>内存和磁盘必须同时升配或同时降配，即 Memory 与 Volume 需同时配置变更。</li><li>降配时，变更后的磁盘容量必须大于已用磁盘容量的1.2倍。</li></ul>  注意：节点变更时，输入实例当前的硬盘配置。
+     * Set 实例配置变更后的硬盘大小，单位：GB。为空时，默认取当前实例的磁盘大小。
+- 内存和磁盘必须同时升配或同时降配，即 Memory 与 Volume 需同时配置变更。
+- 降配时，变更后的磁盘容量必须大于已用磁盘容量的1.2倍。
+     * @param Volume 实例配置变更后的硬盘大小，单位：GB。为空时，默认取当前实例的磁盘大小。
+- 内存和磁盘必须同时升配或同时降配，即 Memory 与 Volume 需同时配置变更。
+- 降配时，变更后的磁盘容量必须大于已用磁盘容量的1.2倍。
      */
     public void setVolume(Long Volume) {
         this.Volume = Volume;
@@ -186,32 +202,56 @@ public class ModifyDBInstanceSpecRequest extends AbstractModel {
     }
 
     /**
-     * Get 实例变更后的节点数。- 变更节点类型包含：mongod节点 或 readonly 节点，mongos节点变更无需填写。变更节点类型，请查询参数**AddNodeList**或**RemoveNodeList**指定的类型。- 副本集节点数：取值范围请通过云数据库的售卖规格 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 接口返回的参数**MinNodeNum**与 **MaxNodeNum**获取。- 分片集群每个分片节点数：取值范围请通过云数据库的售卖规格 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 接口返回的参数**MinReplicateSetNodeNum**与**MaxReplicateSetNodeNum**获取。 
-     * @return NodeNum 实例变更后的节点数。- 变更节点类型包含：mongod节点 或 readonly 节点，mongos节点变更无需填写。变更节点类型，请查询参数**AddNodeList**或**RemoveNodeList**指定的类型。- 副本集节点数：取值范围请通过云数据库的售卖规格 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 接口返回的参数**MinNodeNum**与 **MaxNodeNum**获取。- 分片集群每个分片节点数：取值范围请通过云数据库的售卖规格 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 接口返回的参数**MinReplicateSetNodeNum**与**MaxReplicateSetNodeNum**获取。
+     * Get 实例变更后mongod的节点数（不包含readonly节点数）。
+- 变更mongod CPU与内存规格时，该参数可以不配置或者输入当前 mongod(不包含readonly) 节点数量。
+-  变更 mongos CPU与内存规格时，该参数可以不配置或者输入当前 mongod(不包含readonly) 节点数量。
+-  节点变更时(全部类型)，该参数可不配置或输入变更后的 mongod(不包含readonl) 节点数量。
+-  副本集节点数：请确认节点数量取值范围，通过云数据库的售卖规格 [DescribeSpecInfo ](https://cloud.tencent.com/document/product/240/38565)接口返回的参数 MinNodeNum 与 MaxNodeNum 获取。
+-  分片集群每个分片节点数：请确认节点数量取值范围，通过云数据库的售卖规格 [DescribeSpecInfo ](https://cloud.tencent.com/document/product/240/38565)接口返回的参数 MinReplicateSetNodeNum 与 MaxReplicateSetNodeNum 获取。 
+     * @return NodeNum 实例变更后mongod的节点数（不包含readonly节点数）。
+- 变更mongod CPU与内存规格时，该参数可以不配置或者输入当前 mongod(不包含readonly) 节点数量。
+-  变更 mongos CPU与内存规格时，该参数可以不配置或者输入当前 mongod(不包含readonly) 节点数量。
+-  节点变更时(全部类型)，该参数可不配置或输入变更后的 mongod(不包含readonl) 节点数量。
+-  副本集节点数：请确认节点数量取值范围，通过云数据库的售卖规格 [DescribeSpecInfo ](https://cloud.tencent.com/document/product/240/38565)接口返回的参数 MinNodeNum 与 MaxNodeNum 获取。
+-  分片集群每个分片节点数：请确认节点数量取值范围，通过云数据库的售卖规格 [DescribeSpecInfo ](https://cloud.tencent.com/document/product/240/38565)接口返回的参数 MinReplicateSetNodeNum 与 MaxReplicateSetNodeNum 获取。
      */
     public Long getNodeNum() {
         return this.NodeNum;
     }
 
     /**
-     * Set 实例变更后的节点数。- 变更节点类型包含：mongod节点 或 readonly 节点，mongos节点变更无需填写。变更节点类型，请查询参数**AddNodeList**或**RemoveNodeList**指定的类型。- 副本集节点数：取值范围请通过云数据库的售卖规格 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 接口返回的参数**MinNodeNum**与 **MaxNodeNum**获取。- 分片集群每个分片节点数：取值范围请通过云数据库的售卖规格 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 接口返回的参数**MinReplicateSetNodeNum**与**MaxReplicateSetNodeNum**获取。
-     * @param NodeNum 实例变更后的节点数。- 变更节点类型包含：mongod节点 或 readonly 节点，mongos节点变更无需填写。变更节点类型，请查询参数**AddNodeList**或**RemoveNodeList**指定的类型。- 副本集节点数：取值范围请通过云数据库的售卖规格 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 接口返回的参数**MinNodeNum**与 **MaxNodeNum**获取。- 分片集群每个分片节点数：取值范围请通过云数据库的售卖规格 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 接口返回的参数**MinReplicateSetNodeNum**与**MaxReplicateSetNodeNum**获取。
+     * Set 实例变更后mongod的节点数（不包含readonly节点数）。
+- 变更mongod CPU与内存规格时，该参数可以不配置或者输入当前 mongod(不包含readonly) 节点数量。
+-  变更 mongos CPU与内存规格时，该参数可以不配置或者输入当前 mongod(不包含readonly) 节点数量。
+-  节点变更时(全部类型)，该参数可不配置或输入变更后的 mongod(不包含readonl) 节点数量。
+-  副本集节点数：请确认节点数量取值范围，通过云数据库的售卖规格 [DescribeSpecInfo ](https://cloud.tencent.com/document/product/240/38565)接口返回的参数 MinNodeNum 与 MaxNodeNum 获取。
+-  分片集群每个分片节点数：请确认节点数量取值范围，通过云数据库的售卖规格 [DescribeSpecInfo ](https://cloud.tencent.com/document/product/240/38565)接口返回的参数 MinReplicateSetNodeNum 与 MaxReplicateSetNodeNum 获取。
+     * @param NodeNum 实例变更后mongod的节点数（不包含readonly节点数）。
+- 变更mongod CPU与内存规格时，该参数可以不配置或者输入当前 mongod(不包含readonly) 节点数量。
+-  变更 mongos CPU与内存规格时，该参数可以不配置或者输入当前 mongod(不包含readonly) 节点数量。
+-  节点变更时(全部类型)，该参数可不配置或输入变更后的 mongod(不包含readonl) 节点数量。
+-  副本集节点数：请确认节点数量取值范围，通过云数据库的售卖规格 [DescribeSpecInfo ](https://cloud.tencent.com/document/product/240/38565)接口返回的参数 MinNodeNum 与 MaxNodeNum 获取。
+-  分片集群每个分片节点数：请确认节点数量取值范围，通过云数据库的售卖规格 [DescribeSpecInfo ](https://cloud.tencent.com/document/product/240/38565)接口返回的参数 MinReplicateSetNodeNum 与 MaxReplicateSetNodeNum 获取。
      */
     public void setNodeNum(Long NodeNum) {
         this.NodeNum = NodeNum;
     }
 
     /**
-     * Get 实例变更后的分片数。<ul><li>取值范围请通过云数据库的售卖规格 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 接口返回的参数**MinReplicateSetNum**与**MaxReplicateSetNum**获取。</li><li>该参数只能增加不能减少。</li></ul> 
-     * @return ReplicateSetNum 实例变更后的分片数。<ul><li>取值范围请通过云数据库的售卖规格 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 接口返回的参数**MinReplicateSetNum**与**MaxReplicateSetNum**获取。</li><li>该参数只能增加不能减少。</li></ul>
+     * Get 实例变更后的分片数。
+- 取值范围请通过云数据库的售卖规格[DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 接口返回的参数**MinReplicateSetNum**与**MaxReplicateSetNum**获取。- 该参数只能增加不能减少。 
+     * @return ReplicateSetNum 实例变更后的分片数。
+- 取值范围请通过云数据库的售卖规格[DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 接口返回的参数**MinReplicateSetNum**与**MaxReplicateSetNum**获取。- 该参数只能增加不能减少。
      */
     public Long getReplicateSetNum() {
         return this.ReplicateSetNum;
     }
 
     /**
-     * Set 实例变更后的分片数。<ul><li>取值范围请通过云数据库的售卖规格 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 接口返回的参数**MinReplicateSetNum**与**MaxReplicateSetNum**获取。</li><li>该参数只能增加不能减少。</li></ul>
-     * @param ReplicateSetNum 实例变更后的分片数。<ul><li>取值范围请通过云数据库的售卖规格 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 接口返回的参数**MinReplicateSetNum**与**MaxReplicateSetNum**获取。</li><li>该参数只能增加不能减少。</li></ul>
+     * Set 实例变更后的分片数。
+- 取值范围请通过云数据库的售卖规格[DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 接口返回的参数**MinReplicateSetNum**与**MaxReplicateSetNum**获取。- 该参数只能增加不能减少。
+     * @param ReplicateSetNum 实例变更后的分片数。
+- 取值范围请通过云数据库的售卖规格[DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 接口返回的参数**MinReplicateSetNum**与**MaxReplicateSetNum**获取。- 该参数只能增加不能减少。
      */
     public void setReplicateSetNum(Long ReplicateSetNum) {
         this.ReplicateSetNum = ReplicateSetNum;
@@ -246,16 +286,16 @@ public class ModifyDBInstanceSpecRequest extends AbstractModel {
     }
 
     /**
-     * Get 分片实例配置变更后的mongos内存大小。- 单位：GB。 
-     * @return MongosMemory 分片实例配置变更后的mongos内存大小。- 单位：GB。
+     * Get 分片实例配置变更后的mongos内存大小。单位：GB。 
+     * @return MongosMemory 分片实例配置变更后的mongos内存大小。单位：GB。
      */
     public String getMongosMemory() {
         return this.MongosMemory;
     }
 
     /**
-     * Set 分片实例配置变更后的mongos内存大小。- 单位：GB。
-     * @param MongosMemory 分片实例配置变更后的mongos内存大小。- 单位：GB。
+     * Set 分片实例配置变更后的mongos内存大小。单位：GB。
+     * @param MongosMemory 分片实例配置变更后的mongos内存大小。单位：GB。
      */
     public void setMongosMemory(String MongosMemory) {
         this.MongosMemory = MongosMemory;

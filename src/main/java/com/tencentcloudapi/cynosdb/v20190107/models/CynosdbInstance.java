@@ -423,6 +423,14 @@ pause
     private String DeviceType;
 
     /**
+    * 实例存储类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InstanceStorageType")
+    @Expose
+    private String InstanceStorageType;
+
+    /**
      * Get 用户Uin 
      * @return Uin 用户Uin
      */
@@ -1358,6 +1366,26 @@ pause
         this.DeviceType = DeviceType;
     }
 
+    /**
+     * Get 实例存储类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InstanceStorageType 实例存储类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getInstanceStorageType() {
+        return this.InstanceStorageType;
+    }
+
+    /**
+     * Set 实例存储类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstanceStorageType 实例存储类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInstanceStorageType(String InstanceStorageType) {
+        this.InstanceStorageType = InstanceStorageType;
+    }
+
     public CynosdbInstance() {
     }
 
@@ -1546,6 +1574,9 @@ pause
         if (source.DeviceType != null) {
             this.DeviceType = new String(source.DeviceType);
         }
+        if (source.InstanceStorageType != null) {
+            this.InstanceStorageType = new String(source.InstanceStorageType);
+        }
     }
 
 
@@ -1608,6 +1639,7 @@ pause
         this.setParamSimple(map, prefix + "InstanceIndexMode", this.InstanceIndexMode);
         this.setParamObj(map, prefix + "InstanceAbility.", this.InstanceAbility);
         this.setParamSimple(map, prefix + "DeviceType", this.DeviceType);
+        this.setParamSimple(map, prefix + "InstanceStorageType", this.InstanceStorageType);
 
     }
 }
