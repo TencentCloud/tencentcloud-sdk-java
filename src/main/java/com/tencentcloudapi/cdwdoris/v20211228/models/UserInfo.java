@@ -80,6 +80,13 @@ public class UserInfo extends AbstractModel {
     private String CamUin;
 
     /**
+    * ranger group id列表
+    */
+    @SerializedName("CamRangerGroupIds")
+    @Expose
+    private Long [] CamRangerGroupIds;
+
+    /**
      * Get 集群实例id 
      * @return InstanceId 集群实例id
      */
@@ -207,6 +214,22 @@ public class UserInfo extends AbstractModel {
         this.CamUin = CamUin;
     }
 
+    /**
+     * Get ranger group id列表 
+     * @return CamRangerGroupIds ranger group id列表
+     */
+    public Long [] getCamRangerGroupIds() {
+        return this.CamRangerGroupIds;
+    }
+
+    /**
+     * Set ranger group id列表
+     * @param CamRangerGroupIds ranger group id列表
+     */
+    public void setCamRangerGroupIds(Long [] CamRangerGroupIds) {
+        this.CamRangerGroupIds = CamRangerGroupIds;
+    }
+
     public UserInfo() {
     }
 
@@ -239,6 +262,12 @@ public class UserInfo extends AbstractModel {
         if (source.CamUin != null) {
             this.CamUin = new String(source.CamUin);
         }
+        if (source.CamRangerGroupIds != null) {
+            this.CamRangerGroupIds = new Long[source.CamRangerGroupIds.length];
+            for (int i = 0; i < source.CamRangerGroupIds.length; i++) {
+                this.CamRangerGroupIds[i] = new Long(source.CamRangerGroupIds[i]);
+            }
+        }
     }
 
 
@@ -254,6 +283,7 @@ public class UserInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Describe", this.Describe);
         this.setParamSimple(map, prefix + "OldPwd", this.OldPwd);
         this.setParamSimple(map, prefix + "CamUin", this.CamUin);
+        this.setParamArraySimple(map, prefix + "CamRangerGroupIds.", this.CamRangerGroupIds);
 
     }
 }

@@ -59,6 +59,13 @@ public class PublishLayerVersionRequest extends AbstractModel {
     private String LicenseInfo;
 
     /**
+    * 层Tag 参数，以键值对数组形式传入
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get 层名称，支持26个英文字母大小写、数字、连接符和下划线，第一个字符只能以字母开头，最后一个字符不能为连接符或者下划线，名称长度1-64 
      * @return LayerName 层名称，支持26个英文字母大小写、数字、连接符和下划线，第一个字符只能以字母开头，最后一个字符不能为连接符或者下划线，名称长度1-64
      */
@@ -138,6 +145,22 @@ public class PublishLayerVersionRequest extends AbstractModel {
         this.LicenseInfo = LicenseInfo;
     }
 
+    /**
+     * Get 层Tag 参数，以键值对数组形式传入 
+     * @return Tags 层Tag 参数，以键值对数组形式传入
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 层Tag 参数，以键值对数组形式传入
+     * @param Tags 层Tag 参数，以键值对数组形式传入
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public PublishLayerVersionRequest() {
     }
 
@@ -164,6 +187,12 @@ public class PublishLayerVersionRequest extends AbstractModel {
         if (source.LicenseInfo != null) {
             this.LicenseInfo = new String(source.LicenseInfo);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -176,6 +205,7 @@ public class PublishLayerVersionRequest extends AbstractModel {
         this.setParamObj(map, prefix + "Content.", this.Content);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "LicenseInfo", this.LicenseInfo);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

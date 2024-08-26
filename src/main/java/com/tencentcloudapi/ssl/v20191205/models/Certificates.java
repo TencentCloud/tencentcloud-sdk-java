@@ -449,6 +449,14 @@ public class Certificates extends AbstractModel {
     private SupportDownloadType SupportDownloadType;
 
     /**
+    * 证书吊销完成时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CertRevokedTime")
+    @Expose
+    private String CertRevokedTime;
+
+    /**
      * Get 用户 UIN。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return OwnerUin 用户 UIN。
@@ -1512,6 +1520,26 @@ public class Certificates extends AbstractModel {
         this.SupportDownloadType = SupportDownloadType;
     }
 
+    /**
+     * Get 证书吊销完成时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CertRevokedTime 证书吊销完成时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCertRevokedTime() {
+        return this.CertRevokedTime;
+    }
+
+    /**
+     * Set 证书吊销完成时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CertRevokedTime 证书吊销完成时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCertRevokedTime(String CertRevokedTime) {
+        this.CertRevokedTime = CertRevokedTime;
+    }
+
     public Certificates() {
     }
 
@@ -1700,6 +1728,9 @@ public class Certificates extends AbstractModel {
         if (source.SupportDownloadType != null) {
             this.SupportDownloadType = new SupportDownloadType(source.SupportDownloadType);
         }
+        if (source.CertRevokedTime != null) {
+            this.CertRevokedTime = new String(source.CertRevokedTime);
+        }
     }
 
 
@@ -1760,6 +1791,7 @@ public class Certificates extends AbstractModel {
         this.setParamSimple(map, prefix + "IsPackage", this.IsPackage);
         this.setParamSimple(map, prefix + "KeyPasswordCustomFlag", this.KeyPasswordCustomFlag);
         this.setParamObj(map, prefix + "SupportDownloadType.", this.SupportDownloadType);
+        this.setParamSimple(map, prefix + "CertRevokedTime", this.CertRevokedTime);
 
     }
 }

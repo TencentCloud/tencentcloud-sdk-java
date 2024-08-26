@@ -325,6 +325,13 @@ CLOSE 关闭
     private Long ShardAllocationBytes;
 
     /**
+    * 读写分离模式：-1-不开启，1-本地读写分离，2-远端读写分离
+    */
+    @SerializedName("ReadWriteMode")
+    @Expose
+    private Long ReadWriteMode;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -1048,6 +1055,22 @@ CLOSE 关闭
         this.ShardAllocationBytes = ShardAllocationBytes;
     }
 
+    /**
+     * Get 读写分离模式：-1-不开启，1-本地读写分离，2-远端读写分离 
+     * @return ReadWriteMode 读写分离模式：-1-不开启，1-本地读写分离，2-远端读写分离
+     */
+    public Long getReadWriteMode() {
+        return this.ReadWriteMode;
+    }
+
+    /**
+     * Set 读写分离模式：-1-不开启，1-本地读写分离，2-远端读写分离
+     * @param ReadWriteMode 读写分离模式：-1-不开启，1-本地读写分离，2-远端读写分离
+     */
+    public void setReadWriteMode(Long ReadWriteMode) {
+        this.ReadWriteMode = ReadWriteMode;
+    }
+
     public UpdateInstanceRequest() {
     }
 
@@ -1185,6 +1208,9 @@ CLOSE 关闭
         if (source.ShardAllocationBytes != null) {
             this.ShardAllocationBytes = new Long(source.ShardAllocationBytes);
         }
+        if (source.ReadWriteMode != null) {
+            this.ReadWriteMode = new Long(source.ReadWriteMode);
+        }
     }
 
 
@@ -1232,6 +1258,7 @@ CLOSE 关闭
         this.setParamSimple(map, prefix + "CvmDelayOnlineTime", this.CvmDelayOnlineTime);
         this.setParamSimple(map, prefix + "ShardAllocationConcurrents", this.ShardAllocationConcurrents);
         this.setParamSimple(map, prefix + "ShardAllocationBytes", this.ShardAllocationBytes);
+        this.setParamSimple(map, prefix + "ReadWriteMode", this.ReadWriteMode);
 
     }
 }

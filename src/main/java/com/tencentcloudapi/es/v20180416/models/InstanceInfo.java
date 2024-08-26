@@ -705,6 +705,22 @@ RENEW_FLAG_DEFAULT：不自动续费
     private String SubProductCode;
 
     /**
+    * 存算分离cos用量，单位M
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CosBucketStorageSize")
+    @Expose
+    private Long CosBucketStorageSize;
+
+    /**
+    * 读写分离模式：0-不开启，1-本地读写分离，2-远端读写分离
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ReadWriteMode")
+    @Expose
+    private Long ReadWriteMode;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -2360,6 +2376,46 @@ RENEW_FLAG_DEFAULT：不自动续费
         this.SubProductCode = SubProductCode;
     }
 
+    /**
+     * Get 存算分离cos用量，单位M
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CosBucketStorageSize 存算分离cos用量，单位M
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getCosBucketStorageSize() {
+        return this.CosBucketStorageSize;
+    }
+
+    /**
+     * Set 存算分离cos用量，单位M
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CosBucketStorageSize 存算分离cos用量，单位M
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCosBucketStorageSize(Long CosBucketStorageSize) {
+        this.CosBucketStorageSize = CosBucketStorageSize;
+    }
+
+    /**
+     * Get 读写分离模式：0-不开启，1-本地读写分离，2-远端读写分离
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ReadWriteMode 读写分离模式：0-不开启，1-本地读写分离，2-远端读写分离
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getReadWriteMode() {
+        return this.ReadWriteMode;
+    }
+
+    /**
+     * Set 读写分离模式：0-不开启，1-本地读写分离，2-远端读写分离
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ReadWriteMode 读写分离模式：0-不开启，1-本地读写分离，2-远端读写分离
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setReadWriteMode(Long ReadWriteMode) {
+        this.ReadWriteMode = ReadWriteMode;
+    }
+
     public InstanceInfo() {
     }
 
@@ -2656,6 +2712,12 @@ RENEW_FLAG_DEFAULT：不自动续费
         if (source.SubProductCode != null) {
             this.SubProductCode = new String(source.SubProductCode);
         }
+        if (source.CosBucketStorageSize != null) {
+            this.CosBucketStorageSize = new Long(source.CosBucketStorageSize);
+        }
+        if (source.ReadWriteMode != null) {
+            this.ReadWriteMode = new Long(source.ReadWriteMode);
+        }
     }
 
 
@@ -2752,6 +2814,8 @@ RENEW_FLAG_DEFAULT：不自动续费
         this.setParamSimple(map, prefix + "NetConnectScheme", this.NetConnectScheme);
         this.setParamSimple(map, prefix + "DisasterRecoverGroupAffinity", this.DisasterRecoverGroupAffinity);
         this.setParamSimple(map, prefix + "SubProductCode", this.SubProductCode);
+        this.setParamSimple(map, prefix + "CosBucketStorageSize", this.CosBucketStorageSize);
+        this.setParamSimple(map, prefix + "ReadWriteMode", this.ReadWriteMode);
 
     }
 }

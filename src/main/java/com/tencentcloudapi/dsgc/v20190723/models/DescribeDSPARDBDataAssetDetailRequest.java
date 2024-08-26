@@ -38,6 +38,20 @@ public class DescribeDSPARDBDataAssetDetailRequest extends AbstractModel {
     private Long ComplianceId;
 
     /**
+    * 偏移量，默认为0。
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
+
+    /**
+    * 返回数量，默认为20，最大值为100。
+    */
+    @SerializedName("Limit")
+    @Expose
+    private Long Limit;
+
+    /**
     * 可信分排序，ASC-升序
 DESC降序
     */
@@ -78,6 +92,38 @@ DESC降序
     }
 
     /**
+     * Get 偏移量，默认为0。 
+     * @return Offset 偏移量，默认为0。
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set 偏移量，默认为0。
+     * @param Offset 偏移量，默认为0。
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
+    }
+
+    /**
+     * Get 返回数量，默认为20，最大值为100。 
+     * @return Limit 返回数量，默认为20，最大值为100。
+     */
+    public Long getLimit() {
+        return this.Limit;
+    }
+
+    /**
+     * Set 返回数量，默认为20，最大值为100。
+     * @param Limit 返回数量，默认为20，最大值为100。
+     */
+    public void setLimit(Long Limit) {
+        this.Limit = Limit;
+    }
+
+    /**
      * Get 可信分排序，ASC-升序
 DESC降序 
      * @return CreditScore 可信分排序，ASC-升序
@@ -111,6 +157,12 @@ DESC降序
         if (source.ComplianceId != null) {
             this.ComplianceId = new Long(source.ComplianceId);
         }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
         if (source.CreditScore != null) {
             this.CreditScore = new String(source.CreditScore);
         }
@@ -123,6 +175,8 @@ DESC降序
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DspaId", this.DspaId);
         this.setParamSimple(map, prefix + "ComplianceId", this.ComplianceId);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "CreditScore", this.CreditScore);
 
     }

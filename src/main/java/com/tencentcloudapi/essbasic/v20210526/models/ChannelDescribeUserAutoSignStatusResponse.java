@@ -49,13 +49,18 @@ public class ChannelDescribeUserAutoSignStatusResponse extends AbstractModel {
     private Long LicenseTo;
 
     /**
-    * 设置用户开通自动签时是否绑定个人自动签账号许可。
-
-<ul><li>**0**: 使用个人自动签账号许可进行开通，个人自动签账号许可有效期1年，注: `不可解绑释放更换他人`</li></ul>
+    * 设置用户开通自动签时是否绑定个人自动签账号许可。<ul><li>**0**: 使用个人自动签账号许可进行开通，个人自动签账号许可有效期1年，注: `不可解绑释放更换他人`</li><li>**1**: 不绑定自动签账号许可开通，后续使用合同份额进行合同发起</li></ul>
     */
     @SerializedName("LicenseType")
     @Expose
     private Long LicenseType;
+
+    /**
+    * 用户开通自动签指定使用的印章，为空则未设置印章，需重新进入开通链接设置印章。
+    */
+    @SerializedName("SealId")
+    @Expose
+    private String SealId;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -129,27 +134,35 @@ public class ChannelDescribeUserAutoSignStatusResponse extends AbstractModel {
     }
 
     /**
-     * Get 设置用户开通自动签时是否绑定个人自动签账号许可。
-
-<ul><li>**0**: 使用个人自动签账号许可进行开通，个人自动签账号许可有效期1年，注: `不可解绑释放更换他人`</li></ul> 
-     * @return LicenseType 设置用户开通自动签时是否绑定个人自动签账号许可。
-
-<ul><li>**0**: 使用个人自动签账号许可进行开通，个人自动签账号许可有效期1年，注: `不可解绑释放更换他人`</li></ul>
+     * Get 设置用户开通自动签时是否绑定个人自动签账号许可。<ul><li>**0**: 使用个人自动签账号许可进行开通，个人自动签账号许可有效期1年，注: `不可解绑释放更换他人`</li><li>**1**: 不绑定自动签账号许可开通，后续使用合同份额进行合同发起</li></ul> 
+     * @return LicenseType 设置用户开通自动签时是否绑定个人自动签账号许可。<ul><li>**0**: 使用个人自动签账号许可进行开通，个人自动签账号许可有效期1年，注: `不可解绑释放更换他人`</li><li>**1**: 不绑定自动签账号许可开通，后续使用合同份额进行合同发起</li></ul>
      */
     public Long getLicenseType() {
         return this.LicenseType;
     }
 
     /**
-     * Set 设置用户开通自动签时是否绑定个人自动签账号许可。
-
-<ul><li>**0**: 使用个人自动签账号许可进行开通，个人自动签账号许可有效期1年，注: `不可解绑释放更换他人`</li></ul>
-     * @param LicenseType 设置用户开通自动签时是否绑定个人自动签账号许可。
-
-<ul><li>**0**: 使用个人自动签账号许可进行开通，个人自动签账号许可有效期1年，注: `不可解绑释放更换他人`</li></ul>
+     * Set 设置用户开通自动签时是否绑定个人自动签账号许可。<ul><li>**0**: 使用个人自动签账号许可进行开通，个人自动签账号许可有效期1年，注: `不可解绑释放更换他人`</li><li>**1**: 不绑定自动签账号许可开通，后续使用合同份额进行合同发起</li></ul>
+     * @param LicenseType 设置用户开通自动签时是否绑定个人自动签账号许可。<ul><li>**0**: 使用个人自动签账号许可进行开通，个人自动签账号许可有效期1年，注: `不可解绑释放更换他人`</li><li>**1**: 不绑定自动签账号许可开通，后续使用合同份额进行合同发起</li></ul>
      */
     public void setLicenseType(Long LicenseType) {
         this.LicenseType = LicenseType;
+    }
+
+    /**
+     * Get 用户开通自动签指定使用的印章，为空则未设置印章，需重新进入开通链接设置印章。 
+     * @return SealId 用户开通自动签指定使用的印章，为空则未设置印章，需重新进入开通链接设置印章。
+     */
+    public String getSealId() {
+        return this.SealId;
+    }
+
+    /**
+     * Set 用户开通自动签指定使用的印章，为空则未设置印章，需重新进入开通链接设置印章。
+     * @param SealId 用户开通自动签指定使用的印章，为空则未设置印章，需重新进入开通链接设置印章。
+     */
+    public void setSealId(String SealId) {
+        this.SealId = SealId;
     }
 
     /**
@@ -188,6 +201,9 @@ public class ChannelDescribeUserAutoSignStatusResponse extends AbstractModel {
         if (source.LicenseType != null) {
             this.LicenseType = new Long(source.LicenseType);
         }
+        if (source.SealId != null) {
+            this.SealId = new String(source.SealId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -202,6 +218,7 @@ public class ChannelDescribeUserAutoSignStatusResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "LicenseFrom", this.LicenseFrom);
         this.setParamSimple(map, prefix + "LicenseTo", this.LicenseTo);
         this.setParamSimple(map, prefix + "LicenseType", this.LicenseType);
+        this.setParamSimple(map, prefix + "SealId", this.SealId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

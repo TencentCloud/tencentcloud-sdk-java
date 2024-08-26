@@ -291,6 +291,13 @@ public class CreateInstanceRequest extends AbstractModel {
     private String SubProductCode;
 
     /**
+    * 读写分离模式：0-不开启，1-本地读写分离，2-远端读写分离
+    */
+    @SerializedName("ReadWriteMode")
+    @Expose
+    private Long ReadWriteMode;
+
+    /**
      * Get 可用区 
      * @return Zone 可用区
      */
@@ -914,6 +921,22 @@ public class CreateInstanceRequest extends AbstractModel {
         this.SubProductCode = SubProductCode;
     }
 
+    /**
+     * Get 读写分离模式：0-不开启，1-本地读写分离，2-远端读写分离 
+     * @return ReadWriteMode 读写分离模式：0-不开启，1-本地读写分离，2-远端读写分离
+     */
+    public Long getReadWriteMode() {
+        return this.ReadWriteMode;
+    }
+
+    /**
+     * Set 读写分离模式：0-不开启，1-本地读写分离，2-远端读写分离
+     * @param ReadWriteMode 读写分离模式：0-不开启，1-本地读写分离，2-远端读写分离
+     */
+    public void setReadWriteMode(Long ReadWriteMode) {
+        this.ReadWriteMode = ReadWriteMode;
+    }
+
     public CreateInstanceRequest() {
     }
 
@@ -1045,6 +1068,9 @@ public class CreateInstanceRequest extends AbstractModel {
         if (source.SubProductCode != null) {
             this.SubProductCode = new String(source.SubProductCode);
         }
+        if (source.ReadWriteMode != null) {
+            this.ReadWriteMode = new Long(source.ReadWriteMode);
+        }
     }
 
 
@@ -1089,6 +1115,7 @@ public class CreateInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "CdcId", this.CdcId);
         this.setParamSimple(map, prefix + "DisasterRecoverGroupAffinity", this.DisasterRecoverGroupAffinity);
         this.setParamSimple(map, prefix + "SubProductCode", this.SubProductCode);
+        this.setParamSimple(map, prefix + "ReadWriteMode", this.ReadWriteMode);
 
     }
 }

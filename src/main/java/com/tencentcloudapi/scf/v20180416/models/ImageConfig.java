@@ -78,10 +78,12 @@ public class ImageConfig extends AbstractModel {
     private Boolean ContainerImageAccelerate;
 
     /**
-    * 镜像函数端口设置
-默认值: 9000
--1: 无端口镜像函数
-其他: 取值范围 0 ~ 65535
+    * 镜像函数端口设置，可指定镜像类型
+Web Server镜像：9000
+Job 镜像：-1
+注意：此字段可能返回 null，表示取不到有效值。
+默认值：9000
+示例值：9000
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ImagePort")
@@ -221,15 +223,19 @@ public class ImageConfig extends AbstractModel {
     }
 
     /**
-     * Get 镜像函数端口设置
-默认值: 9000
--1: 无端口镜像函数
-其他: 取值范围 0 ~ 65535
+     * Get 镜像函数端口设置，可指定镜像类型
+Web Server镜像：9000
+Job 镜像：-1
+注意：此字段可能返回 null，表示取不到有效值。
+默认值：9000
+示例值：9000
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ImagePort 镜像函数端口设置
-默认值: 9000
--1: 无端口镜像函数
-其他: 取值范围 0 ~ 65535
+     * @return ImagePort 镜像函数端口设置，可指定镜像类型
+Web Server镜像：9000
+Job 镜像：-1
+注意：此字段可能返回 null，表示取不到有效值。
+默认值：9000
+示例值：9000
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getImagePort() {
@@ -237,15 +243,19 @@ public class ImageConfig extends AbstractModel {
     }
 
     /**
-     * Set 镜像函数端口设置
-默认值: 9000
--1: 无端口镜像函数
-其他: 取值范围 0 ~ 65535
+     * Set 镜像函数端口设置，可指定镜像类型
+Web Server镜像：9000
+Job 镜像：-1
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ImagePort 镜像函数端口设置
-默认值: 9000
--1: 无端口镜像函数
-其他: 取值范围 0 ~ 65535
+默认值：9000
+示例值：9000
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ImagePort 镜像函数端口设置，可指定镜像类型
+Web Server镜像：9000
+Job 镜像：-1
+注意：此字段可能返回 null，表示取不到有效值。
+默认值：9000
+示例值：9000
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setImagePort(Long ImagePort) {

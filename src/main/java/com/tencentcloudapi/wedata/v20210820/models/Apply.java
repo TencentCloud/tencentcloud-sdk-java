@@ -150,6 +150,14 @@ public class Apply extends AbstractModel {
     private String ApproveProjectName;
 
     /**
+    * 审批id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ApplyId")
+    @Expose
+    private String ApplyId;
+
+    /**
      * Get 申请人id 
      * @return ApplicantId 申请人id
      */
@@ -449,6 +457,26 @@ public class Apply extends AbstractModel {
         this.ApproveProjectName = ApproveProjectName;
     }
 
+    /**
+     * Get 审批id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ApplyId 审批id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getApplyId() {
+        return this.ApplyId;
+    }
+
+    /**
+     * Set 审批id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ApplyId 审批id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setApplyId(String ApplyId) {
+        this.ApplyId = ApplyId;
+    }
+
     public Apply() {
     }
 
@@ -508,6 +536,9 @@ public class Apply extends AbstractModel {
         if (source.ApproveProjectName != null) {
             this.ApproveProjectName = new String(source.ApproveProjectName);
         }
+        if (source.ApplyId != null) {
+            this.ApplyId = new String(source.ApplyId);
+        }
     }
 
 
@@ -532,6 +563,7 @@ public class Apply extends AbstractModel {
         this.setParamSimple(map, prefix + "ApproverId", this.ApproverId);
         this.setParamSimple(map, prefix + "ApproverName", this.ApproverName);
         this.setParamSimple(map, prefix + "ApproveProjectName", this.ApproveProjectName);
+        this.setParamSimple(map, prefix + "ApplyId", this.ApplyId);
 
     }
 }
