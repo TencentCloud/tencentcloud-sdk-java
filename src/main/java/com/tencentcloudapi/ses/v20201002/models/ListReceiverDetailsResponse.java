@@ -38,6 +38,20 @@ public class ListReceiverDetailsResponse extends AbstractModel {
     private ReceiverDetail [] Data;
 
     /**
+    * 有效邮件地址数
+    */
+    @SerializedName("ValidCount")
+    @Expose
+    private Long ValidCount;
+
+    /**
+    * 无效邮件地址数
+    */
+    @SerializedName("InvalidCount")
+    @Expose
+    private Long InvalidCount;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -77,6 +91,38 @@ public class ListReceiverDetailsResponse extends AbstractModel {
     }
 
     /**
+     * Get 有效邮件地址数 
+     * @return ValidCount 有效邮件地址数
+     */
+    public Long getValidCount() {
+        return this.ValidCount;
+    }
+
+    /**
+     * Set 有效邮件地址数
+     * @param ValidCount 有效邮件地址数
+     */
+    public void setValidCount(Long ValidCount) {
+        this.ValidCount = ValidCount;
+    }
+
+    /**
+     * Get 无效邮件地址数 
+     * @return InvalidCount 无效邮件地址数
+     */
+    public Long getInvalidCount() {
+        return this.InvalidCount;
+    }
+
+    /**
+     * Set 无效邮件地址数
+     * @param InvalidCount 无效邮件地址数
+     */
+    public void setInvalidCount(Long InvalidCount) {
+        this.InvalidCount = InvalidCount;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -109,6 +155,12 @@ public class ListReceiverDetailsResponse extends AbstractModel {
                 this.Data[i] = new ReceiverDetail(source.Data[i]);
             }
         }
+        if (source.ValidCount != null) {
+            this.ValidCount = new Long(source.ValidCount);
+        }
+        if (source.InvalidCount != null) {
+            this.InvalidCount = new Long(source.InvalidCount);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -121,6 +173,8 @@ public class ListReceiverDetailsResponse extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamArrayObj(map, prefix + "Data.", this.Data);
+        this.setParamSimple(map, prefix + "ValidCount", this.ValidCount);
+        this.setParamSimple(map, prefix + "InvalidCount", this.InvalidCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

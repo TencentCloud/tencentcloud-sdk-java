@@ -349,7 +349,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     private SnatIp [] SnatIps;
 
     /**
-    * 性能容量型规格。<ul><li> clb.c2.medium：标准型规格 </li><li> clb.c3.small：高阶型1规格 </li><li> clb.c3.medium：高阶型2规格 </li><li> clb.c4.small：超强型1规格 </li><li> clb.c4.medium：超强型2规格 </li><li> clb.c4.large：超强型3规格 </li><li> clb.c4.xlarge：超强型4规格 </li><li>null：共享型实例</li></ul>
+    * 性能容量型规格。<ul><li> clb.c1.small：简约型规格 </li><li> clb.c2.medium：标准型规格 </li><li> clb.c3.small：高阶型1规格 </li><li> clb.c3.medium：高阶型2规格 </li><li> clb.c4.small：超强型1规格 </li><li> clb.c4.medium：超强型2规格 </li><li> clb.c4.large：超强型3规格 </li><li> clb.c4.xlarge：超强型4规格 </li><li>""：非性能容量型实例</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SlaType")
@@ -459,6 +459,14 @@ OPEN：公网属性， INTERNAL：内网属性。
     @SerializedName("Egress")
     @Expose
     private String Egress;
+
+    /**
+    * 实例类型是否为独占型。1：独占型实例。0：非独占型实例。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Exclusive")
+    @Expose
+    private Long Exclusive;
 
     /**
      * Get 负载均衡实例 ID。 
@@ -1273,9 +1281,9 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * Get 性能容量型规格。<ul><li> clb.c2.medium：标准型规格 </li><li> clb.c3.small：高阶型1规格 </li><li> clb.c3.medium：高阶型2规格 </li><li> clb.c4.small：超强型1规格 </li><li> clb.c4.medium：超强型2规格 </li><li> clb.c4.large：超强型3规格 </li><li> clb.c4.xlarge：超强型4规格 </li><li>null：共享型实例</li></ul>
+     * Get 性能容量型规格。<ul><li> clb.c1.small：简约型规格 </li><li> clb.c2.medium：标准型规格 </li><li> clb.c3.small：高阶型1规格 </li><li> clb.c3.medium：高阶型2规格 </li><li> clb.c4.small：超强型1规格 </li><li> clb.c4.medium：超强型2规格 </li><li> clb.c4.large：超强型3规格 </li><li> clb.c4.xlarge：超强型4规格 </li><li>""：非性能容量型实例</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SlaType 性能容量型规格。<ul><li> clb.c2.medium：标准型规格 </li><li> clb.c3.small：高阶型1规格 </li><li> clb.c3.medium：高阶型2规格 </li><li> clb.c4.small：超强型1规格 </li><li> clb.c4.medium：超强型2规格 </li><li> clb.c4.large：超强型3规格 </li><li> clb.c4.xlarge：超强型4规格 </li><li>null：共享型实例</li></ul>
+     * @return SlaType 性能容量型规格。<ul><li> clb.c1.small：简约型规格 </li><li> clb.c2.medium：标准型规格 </li><li> clb.c3.small：高阶型1规格 </li><li> clb.c3.medium：高阶型2规格 </li><li> clb.c4.small：超强型1规格 </li><li> clb.c4.medium：超强型2规格 </li><li> clb.c4.large：超强型3规格 </li><li> clb.c4.xlarge：超强型4规格 </li><li>""：非性能容量型实例</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSlaType() {
@@ -1283,9 +1291,9 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * Set 性能容量型规格。<ul><li> clb.c2.medium：标准型规格 </li><li> clb.c3.small：高阶型1规格 </li><li> clb.c3.medium：高阶型2规格 </li><li> clb.c4.small：超强型1规格 </li><li> clb.c4.medium：超强型2规格 </li><li> clb.c4.large：超强型3规格 </li><li> clb.c4.xlarge：超强型4规格 </li><li>null：共享型实例</li></ul>
+     * Set 性能容量型规格。<ul><li> clb.c1.small：简约型规格 </li><li> clb.c2.medium：标准型规格 </li><li> clb.c3.small：高阶型1规格 </li><li> clb.c3.medium：高阶型2规格 </li><li> clb.c4.small：超强型1规格 </li><li> clb.c4.medium：超强型2规格 </li><li> clb.c4.large：超强型3规格 </li><li> clb.c4.xlarge：超强型4规格 </li><li>""：非性能容量型实例</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SlaType 性能容量型规格。<ul><li> clb.c2.medium：标准型规格 </li><li> clb.c3.small：高阶型1规格 </li><li> clb.c3.medium：高阶型2规格 </li><li> clb.c4.small：超强型1规格 </li><li> clb.c4.medium：超强型2规格 </li><li> clb.c4.large：超强型3规格 </li><li> clb.c4.xlarge：超强型4规格 </li><li>null：共享型实例</li></ul>
+     * @param SlaType 性能容量型规格。<ul><li> clb.c1.small：简约型规格 </li><li> clb.c2.medium：标准型规格 </li><li> clb.c3.small：高阶型1规格 </li><li> clb.c3.medium：高阶型2规格 </li><li> clb.c4.small：超强型1规格 </li><li> clb.c4.medium：超强型2规格 </li><li> clb.c4.large：超强型3规格 </li><li> clb.c4.xlarge：超强型4规格 </li><li>""：非性能容量型实例</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSlaType(String SlaType) {
@@ -1552,6 +1560,26 @@ OPEN：公网属性， INTERNAL：内网属性。
         this.Egress = Egress;
     }
 
+    /**
+     * Get 实例类型是否为独占型。1：独占型实例。0：非独占型实例。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Exclusive 实例类型是否为独占型。1：独占型实例。0：非独占型实例。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getExclusive() {
+        return this.Exclusive;
+    }
+
+    /**
+     * Set 实例类型是否为独占型。1：独占型实例。0：非独占型实例。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Exclusive 实例类型是否为独占型。1：独占型实例。0：非独占型实例。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExclusive(Long Exclusive) {
+        this.Exclusive = Exclusive;
+    }
+
     public LoadBalancer() {
     }
 
@@ -1749,6 +1777,9 @@ OPEN：公网属性， INTERNAL：内网属性。
         if (source.Egress != null) {
             this.Egress = new String(source.Egress);
         }
+        if (source.Exclusive != null) {
+            this.Exclusive = new Long(source.Exclusive);
+        }
     }
 
 
@@ -1811,6 +1842,7 @@ OPEN：公网属性， INTERNAL：内网属性。
         this.setParamArraySimple(map, prefix + "AttributeFlags.", this.AttributeFlags);
         this.setParamSimple(map, prefix + "LoadBalancerDomain", this.LoadBalancerDomain);
         this.setParamSimple(map, prefix + "Egress", this.Egress);
+        this.setParamSimple(map, prefix + "Exclusive", this.Exclusive);
 
     }
 }

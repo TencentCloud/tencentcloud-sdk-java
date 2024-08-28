@@ -68,6 +68,14 @@ public class ReceiverData extends AbstractModel {
     private String CreateTime;
 
     /**
+    * 无效收件人数量
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InvalidCount")
+    @Expose
+    private Long InvalidCount;
+
+    /**
      * Get 收件人列表ID 
      * @return ReceiverId 收件人列表ID
      */
@@ -171,6 +179,26 @@ public class ReceiverData extends AbstractModel {
         this.CreateTime = CreateTime;
     }
 
+    /**
+     * Get 无效收件人数量
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InvalidCount 无效收件人数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getInvalidCount() {
+        return this.InvalidCount;
+    }
+
+    /**
+     * Set 无效收件人数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InvalidCount 无效收件人数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInvalidCount(Long InvalidCount) {
+        this.InvalidCount = InvalidCount;
+    }
+
     public ReceiverData() {
     }
 
@@ -197,6 +225,9 @@ public class ReceiverData extends AbstractModel {
         if (source.CreateTime != null) {
             this.CreateTime = new String(source.CreateTime);
         }
+        if (source.InvalidCount != null) {
+            this.InvalidCount = new Long(source.InvalidCount);
+        }
     }
 
 
@@ -210,6 +241,7 @@ public class ReceiverData extends AbstractModel {
         this.setParamSimple(map, prefix + "Desc", this.Desc);
         this.setParamSimple(map, prefix + "ReceiversStatus", this.ReceiversStatus);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "InvalidCount", this.InvalidCount);
 
     }
 }

@@ -252,6 +252,14 @@ public class Resource extends AbstractModel {
     private Long UsedDomainCount;
 
     /**
+    * 0 非试用版，1 试用版
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Trial")
+    @Expose
+    private Long Trial;
+
+    /**
      * Get 服务实例ID，如bh-saas-s3ed4r5e 
      * @return ResourceId 服务实例ID，如bh-saas-s3ed4r5e
      */
@@ -779,6 +787,26 @@ public class Resource extends AbstractModel {
         this.UsedDomainCount = UsedDomainCount;
     }
 
+    /**
+     * Get 0 非试用版，1 试用版
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Trial 0 非试用版，1 试用版
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getTrial() {
+        return this.Trial;
+    }
+
+    /**
+     * Set 0 非试用版，1 试用版
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Trial 0 非试用版，1 试用版
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTrial(Long Trial) {
+        this.Trial = Trial;
+    }
+
     public Resource() {
     }
 
@@ -895,6 +923,9 @@ public class Resource extends AbstractModel {
         if (source.UsedDomainCount != null) {
             this.UsedDomainCount = new Long(source.UsedDomainCount);
         }
+        if (source.Trial != null) {
+            this.Trial = new Long(source.Trial);
+        }
     }
 
 
@@ -934,6 +965,7 @@ public class Resource extends AbstractModel {
         this.setParamArrayObj(map, prefix + "ClbSet.", this.ClbSet);
         this.setParamSimple(map, prefix + "DomainCount", this.DomainCount);
         this.setParamSimple(map, prefix + "UsedDomainCount", this.UsedDomainCount);
+        this.setParamSimple(map, prefix + "Trial", this.Trial);
 
     }
 }

@@ -1007,6 +1007,17 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
+     *该接口（DescribeInstanceUpgradeCheckJob）查询实例版本升级校验任务。
+     * @param req DescribeInstanceUpgradeCheckJobRequest
+     * @return DescribeInstanceUpgradeCheckJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceUpgradeCheckJobResponse DescribeInstanceUpgradeCheckJob(DescribeInstanceUpgradeCheckJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeInstanceUpgradeCheckJob", DescribeInstanceUpgradeCheckJobResponse.class);
+    }
+
+    /**
      *本接口(DescribeInstanceUpgradeType)用于查询数据库实例升级类型。
      * @param req DescribeInstanceUpgradeTypeRequest
      * @return DescribeInstanceUpgradeTypeResponse
@@ -1844,6 +1855,17 @@ public class CdbClient extends AbstractClient{
     public StopRollbackResponse StopRollback(StopRollbackRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "StopRollback", StopRollbackResponse.class);
+    }
+
+    /**
+     *该接口（SubmitInstanceUpgradeCheckJob）提交实例版本升级校验任务。
+     * @param req SubmitInstanceUpgradeCheckJobRequest
+     * @return SubmitInstanceUpgradeCheckJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public SubmitInstanceUpgradeCheckJobResponse SubmitInstanceUpgradeCheckJob(SubmitInstanceUpgradeCheckJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SubmitInstanceUpgradeCheckJob", SubmitInstanceUpgradeCheckJobResponse.class);
     }
 
     /**

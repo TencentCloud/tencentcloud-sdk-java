@@ -59,6 +59,13 @@ public class UpgradeDBInstanceEngineVersionRequest extends AbstractModel {
     private Long MaxDelayTime;
 
     /**
+    * 5.7升级8.0是否忽略关键字错误，取值范围[0,1]，1表示忽略，0表示不忽略
+    */
+    @SerializedName("IgnoreErrKeyword")
+    @Expose
+    private Long IgnoreErrKeyword;
+
+    /**
     * 版本升级支持指定参数
     */
     @SerializedName("ParamList")
@@ -146,6 +153,22 @@ public class UpgradeDBInstanceEngineVersionRequest extends AbstractModel {
     }
 
     /**
+     * Get 5.7升级8.0是否忽略关键字错误，取值范围[0,1]，1表示忽略，0表示不忽略 
+     * @return IgnoreErrKeyword 5.7升级8.0是否忽略关键字错误，取值范围[0,1]，1表示忽略，0表示不忽略
+     */
+    public Long getIgnoreErrKeyword() {
+        return this.IgnoreErrKeyword;
+    }
+
+    /**
+     * Set 5.7升级8.0是否忽略关键字错误，取值范围[0,1]，1表示忽略，0表示不忽略
+     * @param IgnoreErrKeyword 5.7升级8.0是否忽略关键字错误，取值范围[0,1]，1表示忽略，0表示不忽略
+     */
+    public void setIgnoreErrKeyword(Long IgnoreErrKeyword) {
+        this.IgnoreErrKeyword = IgnoreErrKeyword;
+    }
+
+    /**
      * Get 版本升级支持指定参数 
      * @return ParamList 版本升级支持指定参数
      */
@@ -184,6 +207,9 @@ public class UpgradeDBInstanceEngineVersionRequest extends AbstractModel {
         if (source.MaxDelayTime != null) {
             this.MaxDelayTime = new Long(source.MaxDelayTime);
         }
+        if (source.IgnoreErrKeyword != null) {
+            this.IgnoreErrKeyword = new Long(source.IgnoreErrKeyword);
+        }
         if (source.ParamList != null) {
             this.ParamList = new UpgradeEngineVersionParams[source.ParamList.length];
             for (int i = 0; i < source.ParamList.length; i++) {
@@ -202,6 +228,7 @@ public class UpgradeDBInstanceEngineVersionRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "WaitSwitch", this.WaitSwitch);
         this.setParamSimple(map, prefix + "UpgradeSubversion", this.UpgradeSubversion);
         this.setParamSimple(map, prefix + "MaxDelayTime", this.MaxDelayTime);
+        this.setParamSimple(map, prefix + "IgnoreErrKeyword", this.IgnoreErrKeyword);
         this.setParamArrayObj(map, prefix + "ParamList.", this.ParamList);
 
     }

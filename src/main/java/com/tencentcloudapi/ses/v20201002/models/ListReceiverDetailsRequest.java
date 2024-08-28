@@ -52,6 +52,27 @@ public class ListReceiverDetailsRequest extends AbstractModel {
     private String Email;
 
     /**
+    * 搜索开始时间
+    */
+    @SerializedName("CreateTimeBegin")
+    @Expose
+    private String CreateTimeBegin;
+
+    /**
+    * 搜索结束时间
+    */
+    @SerializedName("CreateTimeEnd")
+    @Expose
+    private String CreateTimeEnd;
+
+    /**
+    * 1:有效，2:无效
+    */
+    @SerializedName("Status")
+    @Expose
+    private Long Status;
+
+    /**
      * Get 收件人列表ID,CreateReceiver接口创建收件人列表时会返回该值 
      * @return ReceiverId 收件人列表ID,CreateReceiver接口创建收件人列表时会返回该值
      */
@@ -115,6 +136,54 @@ public class ListReceiverDetailsRequest extends AbstractModel {
         this.Email = Email;
     }
 
+    /**
+     * Get 搜索开始时间 
+     * @return CreateTimeBegin 搜索开始时间
+     */
+    public String getCreateTimeBegin() {
+        return this.CreateTimeBegin;
+    }
+
+    /**
+     * Set 搜索开始时间
+     * @param CreateTimeBegin 搜索开始时间
+     */
+    public void setCreateTimeBegin(String CreateTimeBegin) {
+        this.CreateTimeBegin = CreateTimeBegin;
+    }
+
+    /**
+     * Get 搜索结束时间 
+     * @return CreateTimeEnd 搜索结束时间
+     */
+    public String getCreateTimeEnd() {
+        return this.CreateTimeEnd;
+    }
+
+    /**
+     * Set 搜索结束时间
+     * @param CreateTimeEnd 搜索结束时间
+     */
+    public void setCreateTimeEnd(String CreateTimeEnd) {
+        this.CreateTimeEnd = CreateTimeEnd;
+    }
+
+    /**
+     * Get 1:有效，2:无效 
+     * @return Status 1:有效，2:无效
+     */
+    public Long getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 1:有效，2:无效
+     * @param Status 1:有效，2:无效
+     */
+    public void setStatus(Long Status) {
+        this.Status = Status;
+    }
+
     public ListReceiverDetailsRequest() {
     }
 
@@ -135,6 +204,15 @@ public class ListReceiverDetailsRequest extends AbstractModel {
         if (source.Email != null) {
             this.Email = new String(source.Email);
         }
+        if (source.CreateTimeBegin != null) {
+            this.CreateTimeBegin = new String(source.CreateTimeBegin);
+        }
+        if (source.CreateTimeEnd != null) {
+            this.CreateTimeEnd = new String(source.CreateTimeEnd);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
     }
 
 
@@ -146,6 +224,9 @@ public class ListReceiverDetailsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Email", this.Email);
+        this.setParamSimple(map, prefix + "CreateTimeBegin", this.CreateTimeBegin);
+        this.setParamSimple(map, prefix + "CreateTimeEnd", this.CreateTimeEnd);
+        this.setParamSimple(map, prefix + "Status", this.Status);
 
     }
 }
