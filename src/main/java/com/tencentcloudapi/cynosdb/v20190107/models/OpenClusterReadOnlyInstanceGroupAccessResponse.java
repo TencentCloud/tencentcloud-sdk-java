@@ -24,11 +24,34 @@ import java.util.HashMap;
 public class OpenClusterReadOnlyInstanceGroupAccessResponse extends AbstractModel {
 
     /**
+    * 开启流程ID
+    */
+    @SerializedName("FlowId")
+    @Expose
+    private String FlowId;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 开启流程ID 
+     * @return FlowId 开启流程ID
+     */
+    public String getFlowId() {
+        return this.FlowId;
+    }
+
+    /**
+     * Set 开启流程ID
+     * @param FlowId 开启流程ID
+     */
+    public void setFlowId(String FlowId) {
+        this.FlowId = FlowId;
+    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -54,6 +77,9 @@ public class OpenClusterReadOnlyInstanceGroupAccessResponse extends AbstractMode
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public OpenClusterReadOnlyInstanceGroupAccessResponse(OpenClusterReadOnlyInstanceGroupAccessResponse source) {
+        if (source.FlowId != null) {
+            this.FlowId = new String(source.FlowId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -64,6 +90,7 @@ public class OpenClusterReadOnlyInstanceGroupAccessResponse extends AbstractMode
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "FlowId", this.FlowId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -15,6 +15,9 @@ public enum WedataErrorCode {
     // 操作失败。
      FAILEDOPERATION("FailedOperation"),
      
+    // 连接超时
+     FAILEDOPERATION_CONNECTIONTIMEOUTERROR("FailedOperation.ConnectionTimeOutError"),
+     
     // 查询数据开发资源锁状态-当前用户不持有锁
      FAILEDOPERATION_NOLOCK("FailedOperation.NoLock"),
      
@@ -38,6 +41,9 @@ public enum WedataErrorCode {
      
     // 查询过滤条件参数错误。
      INVALIDPARAMETER_INVALIDFILTERPARAMETER("InvalidParameter.InvalidFilterParameter"),
+     
+    // 超出最大限额
+     INVALIDPARAMETER_MAXLIMITEXCEEDED("InvalidParameter.MaxLimitExceeded"),
      
     // 规则不存在。
      INVALIDPARAMETER_RULENOTEXIST("InvalidParameter.RuleNotExist"),

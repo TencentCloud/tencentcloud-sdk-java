@@ -544,6 +544,29 @@ public class CVMAssetVO extends AbstractModel {
     private Long CloudType;
 
     /**
+    * 主机防护状态枚举
+0：未安装
+1：基础版防护中
+2：普惠版防护中
+3：专业版防护中
+4：旗舰版防护中
+5：已离线
+6：已关机
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProtectStatus")
+    @Expose
+    private Long ProtectStatus;
+
+    /**
+    * 最后离线时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OfflineTime")
+    @Expose
+    private String OfflineTime;
+
+    /**
      * Get 资产id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return AssetId 资产id
@@ -1843,6 +1866,74 @@ public class CVMAssetVO extends AbstractModel {
         this.CloudType = CloudType;
     }
 
+    /**
+     * Get 主机防护状态枚举
+0：未安装
+1：基础版防护中
+2：普惠版防护中
+3：专业版防护中
+4：旗舰版防护中
+5：已离线
+6：已关机
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProtectStatus 主机防护状态枚举
+0：未安装
+1：基础版防护中
+2：普惠版防护中
+3：专业版防护中
+4：旗舰版防护中
+5：已离线
+6：已关机
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getProtectStatus() {
+        return this.ProtectStatus;
+    }
+
+    /**
+     * Set 主机防护状态枚举
+0：未安装
+1：基础版防护中
+2：普惠版防护中
+3：专业版防护中
+4：旗舰版防护中
+5：已离线
+6：已关机
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProtectStatus 主机防护状态枚举
+0：未安装
+1：基础版防护中
+2：普惠版防护中
+3：专业版防护中
+4：旗舰版防护中
+5：已离线
+6：已关机
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProtectStatus(Long ProtectStatus) {
+        this.ProtectStatus = ProtectStatus;
+    }
+
+    /**
+     * Get 最后离线时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OfflineTime 最后离线时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getOfflineTime() {
+        return this.OfflineTime;
+    }
+
+    /**
+     * Set 最后离线时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OfflineTime 最后离线时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOfflineTime(String OfflineTime) {
+        this.OfflineTime = OfflineTime;
+    }
+
     public CVMAssetVO() {
     }
 
@@ -2058,6 +2149,12 @@ public class CVMAssetVO extends AbstractModel {
         if (source.CloudType != null) {
             this.CloudType = new Long(source.CloudType);
         }
+        if (source.ProtectStatus != null) {
+            this.ProtectStatus = new Long(source.ProtectStatus);
+        }
+        if (source.OfflineTime != null) {
+            this.OfflineTime = new String(source.OfflineTime);
+        }
     }
 
 
@@ -2130,6 +2227,8 @@ public class CVMAssetVO extends AbstractModel {
         this.setParamSimple(map, prefix + "AgentCpuPer", this.AgentCpuPer);
         this.setParamSimple(map, prefix + "RealAppid", this.RealAppid);
         this.setParamSimple(map, prefix + "CloudType", this.CloudType);
+        this.setParamSimple(map, prefix + "ProtectStatus", this.ProtectStatus);
+        this.setParamSimple(map, prefix + "OfflineTime", this.OfflineTime);
 
     }
 }

@@ -365,6 +365,14 @@ public class InstanceInfo extends AbstractModel {
     private Long ExpandCpu;
 
     /**
+    * 实例集群版节点信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ClusterInfo")
+    @Expose
+    private ClusterInfo [] ClusterInfo;
+
+    /**
      * Get 外网状态，可能的返回值为：0-未开通外网；1-已开通外网；2-已关闭外网 
      * @return WanStatus 外网状态，可能的返回值为：0-未开通外网；1-已开通外网；2-已关闭外网
      */
@@ -1164,6 +1172,26 @@ public class InstanceInfo extends AbstractModel {
         this.ExpandCpu = ExpandCpu;
     }
 
+    /**
+     * Get 实例集群版节点信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ClusterInfo 实例集群版节点信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ClusterInfo [] getClusterInfo() {
+        return this.ClusterInfo;
+    }
+
+    /**
+     * Set 实例集群版节点信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ClusterInfo 实例集群版节点信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setClusterInfo(ClusterInfo [] ClusterInfo) {
+        this.ClusterInfo = ClusterInfo;
+    }
+
     public InstanceInfo() {
     }
 
@@ -1322,6 +1350,12 @@ public class InstanceInfo extends AbstractModel {
         if (source.ExpandCpu != null) {
             this.ExpandCpu = new Long(source.ExpandCpu);
         }
+        if (source.ClusterInfo != null) {
+            this.ClusterInfo = new ClusterInfo[source.ClusterInfo.length];
+            for (int i = 0; i < source.ClusterInfo.length; i++) {
+                this.ClusterInfo[i] = new ClusterInfo(source.ClusterInfo[i]);
+            }
+        }
     }
 
 
@@ -1376,6 +1410,7 @@ public class InstanceInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "MaxDelayTime", this.MaxDelayTime);
         this.setParamSimple(map, prefix + "DiskType", this.DiskType);
         this.setParamSimple(map, prefix + "ExpandCpu", this.ExpandCpu);
+        this.setParamArrayObj(map, prefix + "ClusterInfo.", this.ClusterInfo);
 
     }
 }

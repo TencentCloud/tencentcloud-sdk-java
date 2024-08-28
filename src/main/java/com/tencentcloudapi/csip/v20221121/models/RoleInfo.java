@@ -192,6 +192,22 @@ public class RoleInfo extends AbstractModel {
     private KeyValue [] FromLogAnalysisData;
 
     /**
+    * 容器名
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ContainerName")
+    @Expose
+    private String ContainerName;
+
+    /**
+    * 容器ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ContainerID")
+    @Expose
+    private String ContainerID;
+
+    /**
      * Get IP
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return IP IP
@@ -611,6 +627,46 @@ public class RoleInfo extends AbstractModel {
         this.FromLogAnalysisData = FromLogAnalysisData;
     }
 
+    /**
+     * Get 容器名
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ContainerName 容器名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getContainerName() {
+        return this.ContainerName;
+    }
+
+    /**
+     * Set 容器名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ContainerName 容器名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setContainerName(String ContainerName) {
+        this.ContainerName = ContainerName;
+    }
+
+    /**
+     * Get 容器ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ContainerID 容器ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getContainerID() {
+        return this.ContainerID;
+    }
+
+    /**
+     * Set 容器ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ContainerID 容器ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setContainerID(String ContainerID) {
+        this.ContainerID = ContainerID;
+    }
+
     public RoleInfo() {
     }
 
@@ -685,6 +741,12 @@ public class RoleInfo extends AbstractModel {
                 this.FromLogAnalysisData[i] = new KeyValue(source.FromLogAnalysisData[i]);
             }
         }
+        if (source.ContainerName != null) {
+            this.ContainerName = new String(source.ContainerName);
+        }
+        if (source.ContainerID != null) {
+            this.ContainerID = new String(source.ContainerID);
+        }
     }
 
 
@@ -713,6 +775,8 @@ public class RoleInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "FileName", this.FileName);
         this.setParamSimple(map, prefix + "AssetType", this.AssetType);
         this.setParamArrayObj(map, prefix + "FromLogAnalysisData.", this.FromLogAnalysisData);
+        this.setParamSimple(map, prefix + "ContainerName", this.ContainerName);
+        this.setParamSimple(map, prefix + "ContainerID", this.ContainerID);
 
     }
 }

@@ -45,6 +45,20 @@ public class DescribeSqlApisRequest extends AbstractModel {
     private String [] Catalogs;
 
     /**
+    * 数据库名
+    */
+    @SerializedName("DatabaseName")
+    @Expose
+    private String DatabaseName;
+
+    /**
+    * 表名
+    */
+    @SerializedName("TableName")
+    @Expose
+    private String TableName;
+
+    /**
      * Get 用户链接来自的 IP 
      * @return WhiteHost 用户链接来自的 IP
      */
@@ -92,6 +106,38 @@ public class DescribeSqlApisRequest extends AbstractModel {
         this.Catalogs = Catalogs;
     }
 
+    /**
+     * Get 数据库名 
+     * @return DatabaseName 数据库名
+     */
+    public String getDatabaseName() {
+        return this.DatabaseName;
+    }
+
+    /**
+     * Set 数据库名
+     * @param DatabaseName 数据库名
+     */
+    public void setDatabaseName(String DatabaseName) {
+        this.DatabaseName = DatabaseName;
+    }
+
+    /**
+     * Get 表名 
+     * @return TableName 表名
+     */
+    public String getTableName() {
+        return this.TableName;
+    }
+
+    /**
+     * Set 表名
+     * @param TableName 表名
+     */
+    public void setTableName(String TableName) {
+        this.TableName = TableName;
+    }
+
     public DescribeSqlApisRequest() {
     }
 
@@ -112,6 +158,12 @@ public class DescribeSqlApisRequest extends AbstractModel {
                 this.Catalogs[i] = new String(source.Catalogs[i]);
             }
         }
+        if (source.DatabaseName != null) {
+            this.DatabaseName = new String(source.DatabaseName);
+        }
+        if (source.TableName != null) {
+            this.TableName = new String(source.TableName);
+        }
     }
 
 
@@ -122,6 +174,8 @@ public class DescribeSqlApisRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "WhiteHost", this.WhiteHost);
         this.setParamSimple(map, prefix + "Catalog", this.Catalog);
         this.setParamArraySimple(map, prefix + "Catalogs.", this.Catalogs);
+        this.setParamSimple(map, prefix + "DatabaseName", this.DatabaseName);
+        this.setParamSimple(map, prefix + "TableName", this.TableName);
 
     }
 }

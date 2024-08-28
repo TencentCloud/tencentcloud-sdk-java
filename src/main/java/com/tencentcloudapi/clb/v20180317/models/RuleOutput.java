@@ -198,6 +198,14 @@ WRR、LEAST_CONN、IP_HASH分别表示按权重轮询、最小连接数、IP Has
     private BasicTargetGroupInfo [] TargetGroupList;
 
     /**
+    * OAuth配置状态信息。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OAuth")
+    @Expose
+    private OAuth OAuth;
+
+    /**
      * Get 转发规则的 ID 
      * @return LocationId 转发规则的 ID
      */
@@ -617,6 +625,26 @@ WRR、LEAST_CONN、IP_HASH分别表示按权重轮询、最小连接数、IP Has
         this.TargetGroupList = TargetGroupList;
     }
 
+    /**
+     * Get OAuth配置状态信息。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OAuth OAuth配置状态信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public OAuth getOAuth() {
+        return this.OAuth;
+    }
+
+    /**
+     * Set OAuth配置状态信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OAuth OAuth配置状态信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOAuth(OAuth OAuth) {
+        this.OAuth = OAuth;
+    }
+
     public RuleOutput() {
     }
 
@@ -700,6 +728,9 @@ WRR、LEAST_CONN、IP_HASH分别表示按权重轮询、最小连接数、IP Has
                 this.TargetGroupList[i] = new BasicTargetGroupInfo(source.TargetGroupList[i]);
             }
         }
+        if (source.OAuth != null) {
+            this.OAuth = new OAuth(source.OAuth);
+        }
     }
 
 
@@ -730,6 +761,7 @@ WRR、LEAST_CONN、IP_HASH分别表示按权重轮询、最小连接数、IP Has
         this.setParamSimple(map, prefix + "QuicStatus", this.QuicStatus);
         this.setParamArraySimple(map, prefix + "Domains.", this.Domains);
         this.setParamArrayObj(map, prefix + "TargetGroupList.", this.TargetGroupList);
+        this.setParamObj(map, prefix + "OAuth.", this.OAuth);
 
     }
 }

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.tms.v20201229.models;
+package com.tencentcloudapi.hunyuan.v20230901.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,41 +21,41 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AnswerQuestionRequest extends AbstractModel {
+public class QueryHunyuanImageChatJobRequest extends AbstractModel {
 
     /**
-    * 用户问题
+    * 任务 ID。
     */
-    @SerializedName("Question")
+    @SerializedName("JobId")
     @Expose
-    private String Question;
+    private String JobId;
 
     /**
-     * Get 用户问题 
-     * @return Question 用户问题
+     * Get 任务 ID。 
+     * @return JobId 任务 ID。
      */
-    public String getQuestion() {
-        return this.Question;
+    public String getJobId() {
+        return this.JobId;
     }
 
     /**
-     * Set 用户问题
-     * @param Question 用户问题
+     * Set 任务 ID。
+     * @param JobId 任务 ID。
      */
-    public void setQuestion(String Question) {
-        this.Question = Question;
+    public void setJobId(String JobId) {
+        this.JobId = JobId;
     }
 
-    public AnswerQuestionRequest() {
+    public QueryHunyuanImageChatJobRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public AnswerQuestionRequest(AnswerQuestionRequest source) {
-        if (source.Question != null) {
-            this.Question = new String(source.Question);
+    public QueryHunyuanImageChatJobRequest(QueryHunyuanImageChatJobRequest source) {
+        if (source.JobId != null) {
+            this.JobId = new String(source.JobId);
         }
     }
 
@@ -64,7 +64,7 @@ public class AnswerQuestionRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Question", this.Question);
+        this.setParamSimple(map, prefix + "JobId", this.JobId);
 
     }
 }

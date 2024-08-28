@@ -95,6 +95,13 @@ public class ModifyRuleRequest extends AbstractModel {
     private String TrpcFunc;
 
     /**
+    * OAuth配置信息。
+    */
+    @SerializedName("OAuth")
+    @Expose
+    private OAuth OAuth;
+
+    /**
      * Get 负载均衡实例 ID。 
      * @return LoadBalancerId 负载均衡实例 ID。
      */
@@ -258,6 +265,22 @@ public class ModifyRuleRequest extends AbstractModel {
         this.TrpcFunc = TrpcFunc;
     }
 
+    /**
+     * Get OAuth配置信息。 
+     * @return OAuth OAuth配置信息。
+     */
+    public OAuth getOAuth() {
+        return this.OAuth;
+    }
+
+    /**
+     * Set OAuth配置信息。
+     * @param OAuth OAuth配置信息。
+     */
+    public void setOAuth(OAuth OAuth) {
+        this.OAuth = OAuth;
+    }
+
     public ModifyRuleRequest() {
     }
 
@@ -296,6 +319,9 @@ public class ModifyRuleRequest extends AbstractModel {
         if (source.TrpcFunc != null) {
             this.TrpcFunc = new String(source.TrpcFunc);
         }
+        if (source.OAuth != null) {
+            this.OAuth = new OAuth(source.OAuth);
+        }
     }
 
 
@@ -313,6 +339,7 @@ public class ModifyRuleRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ForwardType", this.ForwardType);
         this.setParamSimple(map, prefix + "TrpcCallee", this.TrpcCallee);
         this.setParamSimple(map, prefix + "TrpcFunc", this.TrpcFunc);
+        this.setParamObj(map, prefix + "OAuth.", this.OAuth);
 
     }
 }

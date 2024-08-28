@@ -680,6 +680,54 @@ public class TaskOpsDto extends AbstractModel {
     private String ExecutorGroupName;
 
     /**
+    * 任务扩展信息(目前返沪离线同步的任务详情)
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TaskExtInfo")
+    @Expose
+    private String TaskExtInfo;
+
+    /**
+    * 任务绑定的事件信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EventListenerInfos")
+    @Expose
+    private AiOpsEventListenerDTO [] EventListenerInfos;
+
+    /**
+    * 脚本信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ScriptInfo")
+    @Expose
+    private AiopsScriptInfo ScriptInfo;
+
+    /**
+    * DLC资源配置
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DLCResourceConfig")
+    @Expose
+    private AiopsDLCResourceConfigDto DLCResourceConfig;
+
+    /**
+    * 父任务simple信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ParentTaskInfos")
+    @Expose
+    private AiopsSimpleTaskDto ParentTaskInfos;
+
+    /**
+    * 资源获取标识
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ExtResourceFlag")
+    @Expose
+    private ExtResourceFlagDto ExtResourceFlag;
+
+    /**
      * Get 任务ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TaskId 任务ID
@@ -2319,6 +2367,126 @@ public class TaskOpsDto extends AbstractModel {
         this.ExecutorGroupName = ExecutorGroupName;
     }
 
+    /**
+     * Get 任务扩展信息(目前返沪离线同步的任务详情)
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TaskExtInfo 任务扩展信息(目前返沪离线同步的任务详情)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTaskExtInfo() {
+        return this.TaskExtInfo;
+    }
+
+    /**
+     * Set 任务扩展信息(目前返沪离线同步的任务详情)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TaskExtInfo 任务扩展信息(目前返沪离线同步的任务详情)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTaskExtInfo(String TaskExtInfo) {
+        this.TaskExtInfo = TaskExtInfo;
+    }
+
+    /**
+     * Get 任务绑定的事件信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EventListenerInfos 任务绑定的事件信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AiOpsEventListenerDTO [] getEventListenerInfos() {
+        return this.EventListenerInfos;
+    }
+
+    /**
+     * Set 任务绑定的事件信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EventListenerInfos 任务绑定的事件信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEventListenerInfos(AiOpsEventListenerDTO [] EventListenerInfos) {
+        this.EventListenerInfos = EventListenerInfos;
+    }
+
+    /**
+     * Get 脚本信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ScriptInfo 脚本信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AiopsScriptInfo getScriptInfo() {
+        return this.ScriptInfo;
+    }
+
+    /**
+     * Set 脚本信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ScriptInfo 脚本信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setScriptInfo(AiopsScriptInfo ScriptInfo) {
+        this.ScriptInfo = ScriptInfo;
+    }
+
+    /**
+     * Get DLC资源配置
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DLCResourceConfig DLC资源配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AiopsDLCResourceConfigDto getDLCResourceConfig() {
+        return this.DLCResourceConfig;
+    }
+
+    /**
+     * Set DLC资源配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DLCResourceConfig DLC资源配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDLCResourceConfig(AiopsDLCResourceConfigDto DLCResourceConfig) {
+        this.DLCResourceConfig = DLCResourceConfig;
+    }
+
+    /**
+     * Get 父任务simple信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ParentTaskInfos 父任务simple信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AiopsSimpleTaskDto getParentTaskInfos() {
+        return this.ParentTaskInfos;
+    }
+
+    /**
+     * Set 父任务simple信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ParentTaskInfos 父任务simple信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setParentTaskInfos(AiopsSimpleTaskDto ParentTaskInfos) {
+        this.ParentTaskInfos = ParentTaskInfos;
+    }
+
+    /**
+     * Get 资源获取标识
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ExtResourceFlag 资源获取标识
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ExtResourceFlagDto getExtResourceFlag() {
+        return this.ExtResourceFlag;
+    }
+
+    /**
+     * Set 资源获取标识
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExtResourceFlag 资源获取标识
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExtResourceFlag(ExtResourceFlagDto ExtResourceFlag) {
+        this.ExtResourceFlag = ExtResourceFlag;
+    }
+
     public TaskOpsDto() {
     }
 
@@ -2573,6 +2741,27 @@ public class TaskOpsDto extends AbstractModel {
         if (source.ExecutorGroupName != null) {
             this.ExecutorGroupName = new String(source.ExecutorGroupName);
         }
+        if (source.TaskExtInfo != null) {
+            this.TaskExtInfo = new String(source.TaskExtInfo);
+        }
+        if (source.EventListenerInfos != null) {
+            this.EventListenerInfos = new AiOpsEventListenerDTO[source.EventListenerInfos.length];
+            for (int i = 0; i < source.EventListenerInfos.length; i++) {
+                this.EventListenerInfos[i] = new AiOpsEventListenerDTO(source.EventListenerInfos[i]);
+            }
+        }
+        if (source.ScriptInfo != null) {
+            this.ScriptInfo = new AiopsScriptInfo(source.ScriptInfo);
+        }
+        if (source.DLCResourceConfig != null) {
+            this.DLCResourceConfig = new AiopsDLCResourceConfigDto(source.DLCResourceConfig);
+        }
+        if (source.ParentTaskInfos != null) {
+            this.ParentTaskInfos = new AiopsSimpleTaskDto(source.ParentTaskInfos);
+        }
+        if (source.ExtResourceFlag != null) {
+            this.ExtResourceFlag = new ExtResourceFlagDto(source.ExtResourceFlag);
+        }
     }
 
 
@@ -2662,6 +2851,12 @@ public class TaskOpsDto extends AbstractModel {
         this.setParamSimple(map, prefix + "Submit", this.Submit);
         this.setParamSimple(map, prefix + "ExecutorGroupId", this.ExecutorGroupId);
         this.setParamSimple(map, prefix + "ExecutorGroupName", this.ExecutorGroupName);
+        this.setParamSimple(map, prefix + "TaskExtInfo", this.TaskExtInfo);
+        this.setParamArrayObj(map, prefix + "EventListenerInfos.", this.EventListenerInfos);
+        this.setParamObj(map, prefix + "ScriptInfo.", this.ScriptInfo);
+        this.setParamObj(map, prefix + "DLCResourceConfig.", this.DLCResourceConfig);
+        this.setParamObj(map, prefix + "ParentTaskInfos.", this.ParentTaskInfos);
+        this.setParamObj(map, prefix + "ExtResourceFlag.", this.ExtResourceFlag);
 
     }
 }

@@ -97,6 +97,14 @@ public class PulsarProClusterInfo extends AbstractModel {
     private String BillingLabelVersion;
 
     /**
+    * 实例到期时间戳，毫秒级精度。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ExpireTime")
+    @Expose
+    private Long ExpireTime;
+
+    /**
      * Get 集群Id。 
      * @return ClusterId 集群Id。
      */
@@ -268,6 +276,26 @@ public class PulsarProClusterInfo extends AbstractModel {
         this.BillingLabelVersion = BillingLabelVersion;
     }
 
+    /**
+     * Get 实例到期时间戳，毫秒级精度。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ExpireTime 实例到期时间戳，毫秒级精度。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getExpireTime() {
+        return this.ExpireTime;
+    }
+
+    /**
+     * Set 实例到期时间戳，毫秒级精度。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExpireTime 实例到期时间戳，毫秒级精度。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExpireTime(Long ExpireTime) {
+        this.ExpireTime = ExpireTime;
+    }
+
     public PulsarProClusterInfo() {
     }
 
@@ -309,6 +337,9 @@ public class PulsarProClusterInfo extends AbstractModel {
         if (source.BillingLabelVersion != null) {
             this.BillingLabelVersion = new String(source.BillingLabelVersion);
         }
+        if (source.ExpireTime != null) {
+            this.ExpireTime = new Long(source.ExpireTime);
+        }
     }
 
 
@@ -326,6 +357,7 @@ public class PulsarProClusterInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "MaxStorage", this.MaxStorage);
         this.setParamSimple(map, prefix + "CanEditRoute", this.CanEditRoute);
         this.setParamSimple(map, prefix + "BillingLabelVersion", this.BillingLabelVersion);
+        this.setParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
 
     }
 }

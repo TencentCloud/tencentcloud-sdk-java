@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class OpenReadOnlyInstanceExclusiveAccessRequest extends AbstractModel {
 
     /**
-    * 集群ID
+    * 请使用 集群信息描述（https://cloud.tencent.com/document/api/1003/48086） 获取 clusterId。
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * 需要开通独有访问的只读实例ID
+    * 请使用 集群信息描述（https://cloud.tencent.com/document/api/1003/48086） 获取 instanceId。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 指定的vpc ID
+    * 指定的vpc ID，请使用 查询私有网络列表（https://cloud.tencent.com/document/api/215/15778） 获取 vpc ID。
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 指定的子网ID
+    * 指定的子网 ID，如果设置了 vpc ID，则 SubnetId 必填，请使用 查询子网列表（https://cloud.tencent.com/document/api/215/15784）获取 SubnetId。
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * 端口
+    * 用户自定义的端口
     */
     @SerializedName("Port")
     @Expose
     private Long Port;
 
     /**
-    * 安全组
+    * 安全组ID，请使用 查看安全组（https://cloud.tencent.com/document/api/215/15808）获取 SecurityGroupId。
     */
     @SerializedName("SecurityGroupIds")
     @Expose
     private String [] SecurityGroupIds;
 
     /**
-     * Get 集群ID 
-     * @return ClusterId 集群ID
+     * Get 请使用 集群信息描述（https://cloud.tencent.com/document/api/1003/48086） 获取 clusterId。 
+     * @return ClusterId 请使用 集群信息描述（https://cloud.tencent.com/document/api/1003/48086） 获取 clusterId。
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群ID
-     * @param ClusterId 集群ID
+     * Set 请使用 集群信息描述（https://cloud.tencent.com/document/api/1003/48086） 获取 clusterId。
+     * @param ClusterId 请使用 集群信息描述（https://cloud.tencent.com/document/api/1003/48086） 获取 clusterId。
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 需要开通独有访问的只读实例ID 
-     * @return InstanceId 需要开通独有访问的只读实例ID
+     * Get 请使用 集群信息描述（https://cloud.tencent.com/document/api/1003/48086） 获取 instanceId。 
+     * @return InstanceId 请使用 集群信息描述（https://cloud.tencent.com/document/api/1003/48086） 获取 instanceId。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 需要开通独有访问的只读实例ID
-     * @param InstanceId 需要开通独有访问的只读实例ID
+     * Set 请使用 集群信息描述（https://cloud.tencent.com/document/api/1003/48086） 获取 instanceId。
+     * @param InstanceId 请使用 集群信息描述（https://cloud.tencent.com/document/api/1003/48086） 获取 instanceId。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 指定的vpc ID 
-     * @return VpcId 指定的vpc ID
+     * Get 指定的vpc ID，请使用 查询私有网络列表（https://cloud.tencent.com/document/api/215/15778） 获取 vpc ID。 
+     * @return VpcId 指定的vpc ID，请使用 查询私有网络列表（https://cloud.tencent.com/document/api/215/15778） 获取 vpc ID。
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set 指定的vpc ID
-     * @param VpcId 指定的vpc ID
+     * Set 指定的vpc ID，请使用 查询私有网络列表（https://cloud.tencent.com/document/api/215/15778） 获取 vpc ID。
+     * @param VpcId 指定的vpc ID，请使用 查询私有网络列表（https://cloud.tencent.com/document/api/215/15778） 获取 vpc ID。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 指定的子网ID 
-     * @return SubnetId 指定的子网ID
+     * Get 指定的子网 ID，如果设置了 vpc ID，则 SubnetId 必填，请使用 查询子网列表（https://cloud.tencent.com/document/api/215/15784）获取 SubnetId。 
+     * @return SubnetId 指定的子网 ID，如果设置了 vpc ID，则 SubnetId 必填，请使用 查询子网列表（https://cloud.tencent.com/document/api/215/15784）获取 SubnetId。
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 指定的子网ID
-     * @param SubnetId 指定的子网ID
+     * Set 指定的子网 ID，如果设置了 vpc ID，则 SubnetId 必填，请使用 查询子网列表（https://cloud.tencent.com/document/api/215/15784）获取 SubnetId。
+     * @param SubnetId 指定的子网 ID，如果设置了 vpc ID，则 SubnetId 必填，请使用 查询子网列表（https://cloud.tencent.com/document/api/215/15784）获取 SubnetId。
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get 端口 
-     * @return Port 端口
+     * Get 用户自定义的端口 
+     * @return Port 用户自定义的端口
      */
     public Long getPort() {
         return this.Port;
     }
 
     /**
-     * Set 端口
-     * @param Port 端口
+     * Set 用户自定义的端口
+     * @param Port 用户自定义的端口
      */
     public void setPort(Long Port) {
         this.Port = Port;
     }
 
     /**
-     * Get 安全组 
-     * @return SecurityGroupIds 安全组
+     * Get 安全组ID，请使用 查看安全组（https://cloud.tencent.com/document/api/215/15808）获取 SecurityGroupId。 
+     * @return SecurityGroupIds 安全组ID，请使用 查看安全组（https://cloud.tencent.com/document/api/215/15808）获取 SecurityGroupId。
      */
     public String [] getSecurityGroupIds() {
         return this.SecurityGroupIds;
     }
 
     /**
-     * Set 安全组
-     * @param SecurityGroupIds 安全组
+     * Set 安全组ID，请使用 查看安全组（https://cloud.tencent.com/document/api/215/15808）获取 SecurityGroupId。
+     * @param SecurityGroupIds 安全组ID，请使用 查看安全组（https://cloud.tencent.com/document/api/215/15808）获取 SecurityGroupId。
      */
     public void setSecurityGroupIds(String [] SecurityGroupIds) {
         this.SecurityGroupIds = SecurityGroupIds;

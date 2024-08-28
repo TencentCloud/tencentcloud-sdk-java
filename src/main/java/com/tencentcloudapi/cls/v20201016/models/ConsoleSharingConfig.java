@@ -45,7 +45,7 @@ public class ConsoleSharingConfig extends AbstractModel {
     private Long DurationMilliseconds;
 
     /**
-    * 允许访问的资源列表
+    * 允许访问的资源列表，目前仅支持一个Resource
     */
     @SerializedName("Resources")
     @Expose
@@ -170,16 +170,16 @@ public class ConsoleSharingConfig extends AbstractModel {
     }
 
     /**
-     * Get 允许访问的资源列表 
-     * @return Resources 允许访问的资源列表
+     * Get 允许访问的资源列表，目前仅支持一个Resource 
+     * @return Resources 允许访问的资源列表，目前仅支持一个Resource
      */
     public String [] getResources() {
         return this.Resources;
     }
 
     /**
-     * Set 允许访问的资源列表
-     * @param Resources 允许访问的资源列表
+     * Set 允许访问的资源列表，目前仅支持一个Resource
+     * @param Resources 允许访问的资源列表，目前仅支持一个Resource
      */
     public void setResources(String [] Resources) {
         this.Resources = Resources;

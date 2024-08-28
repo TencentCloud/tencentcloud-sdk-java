@@ -128,6 +128,14 @@ public class DescribeCVMAssetsResponse extends AbstractModel {
     private FilterDataObject [] PublicPrivateAttr;
 
     /**
+    * 主机防护状态
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProtectStatusList")
+    @Expose
+    private FilterDataObject [] ProtectStatusList;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -395,6 +403,26 @@ public class DescribeCVMAssetsResponse extends AbstractModel {
     }
 
     /**
+     * Get 主机防护状态
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProtectStatusList 主机防护状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public FilterDataObject [] getProtectStatusList() {
+        return this.ProtectStatusList;
+    }
+
+    /**
+     * Set 主机防护状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProtectStatusList 主机防护状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProtectStatusList(FilterDataObject [] ProtectStatusList) {
+        this.ProtectStatusList = ProtectStatusList;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -493,6 +521,12 @@ public class DescribeCVMAssetsResponse extends AbstractModel {
                 this.PublicPrivateAttr[i] = new FilterDataObject(source.PublicPrivateAttr[i]);
             }
         }
+        if (source.ProtectStatusList != null) {
+            this.ProtectStatusList = new FilterDataObject[source.ProtectStatusList.length];
+            for (int i = 0; i < source.ProtectStatusList.length; i++) {
+                this.ProtectStatusList[i] = new FilterDataObject(source.ProtectStatusList[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -516,6 +550,7 @@ public class DescribeCVMAssetsResponse extends AbstractModel {
         this.setParamArrayObj(map, prefix + "OsList.", this.OsList);
         this.setParamArrayObj(map, prefix + "AssetMapInstanceTypeList.", this.AssetMapInstanceTypeList);
         this.setParamArrayObj(map, prefix + "PublicPrivateAttr.", this.PublicPrivateAttr);
+        this.setParamArrayObj(map, prefix + "ProtectStatusList.", this.ProtectStatusList);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

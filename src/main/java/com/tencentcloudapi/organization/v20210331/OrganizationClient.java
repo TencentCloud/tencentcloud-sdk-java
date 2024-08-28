@@ -1161,6 +1161,17 @@ public class OrganizationClient extends AbstractClient{
     }
 
     /**
+     *重新发送成员绑定邮箱激活邮件
+     * @param req SendOrgMemberAccountBindEmailRequest
+     * @return SendOrgMemberAccountBindEmailResponse
+     * @throws TencentCloudSDKException
+     */
+    public SendOrgMemberAccountBindEmailResponse SendOrgMemberAccountBindEmail(SendOrgMemberAccountBindEmailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SendOrgMemberAccountBindEmail", SendOrgMemberAccountBindEmailResponse.class);
+    }
+
+    /**
      *配置SAML身份提供商信息
      * @param req SetExternalSAMLIdentityProviderRequest
      * @return SetExternalSAMLIdentityProviderResponse

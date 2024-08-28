@@ -38,7 +38,7 @@ public class AssignTWeCallLicenseRequest extends AbstractModel {
     private String MiniProgramAppId;
 
     /**
-    * License数
+    * License数，只支持50,500,1000,5000,10000,20000,50000
     */
     @SerializedName("DeductNum")
     @Expose
@@ -77,16 +77,16 @@ public class AssignTWeCallLicenseRequest extends AbstractModel {
     }
 
     /**
-     * Get License数 
-     * @return DeductNum License数
+     * Get License数，只支持50,500,1000,5000,10000,20000,50000 
+     * @return DeductNum License数，只支持50,500,1000,5000,10000,20000,50000
      */
     public Long getDeductNum() {
         return this.DeductNum;
     }
 
     /**
-     * Set License数
-     * @param DeductNum License数
+     * Set License数，只支持50,500,1000,5000,10000,20000,50000
+     * @param DeductNum License数，只支持50,500,1000,5000,10000,20000,50000
      */
     public void setDeductNum(Long DeductNum) {
         this.DeductNum = DeductNum;

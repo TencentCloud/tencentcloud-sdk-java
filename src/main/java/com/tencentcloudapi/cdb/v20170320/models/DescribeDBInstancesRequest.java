@@ -269,6 +269,13 @@ public class DescribeDBInstancesRequest extends AbstractModel {
     private String [] EngineTypes;
 
     /**
+    * 是否获取集群版实例节点信息，可填：true或false
+    */
+    @SerializedName("QueryClusterInfo")
+    @Expose
+    private Boolean QueryClusterInfo;
+
+    /**
      * Get 项目 ID。 
      * @return ProjectId 项目 ID。
      */
@@ -828,6 +835,22 @@ public class DescribeDBInstancesRequest extends AbstractModel {
         this.EngineTypes = EngineTypes;
     }
 
+    /**
+     * Get 是否获取集群版实例节点信息，可填：true或false 
+     * @return QueryClusterInfo 是否获取集群版实例节点信息，可填：true或false
+     */
+    public Boolean getQueryClusterInfo() {
+        return this.QueryClusterInfo;
+    }
+
+    /**
+     * Set 是否获取集群版实例节点信息，可填：true或false
+     * @param QueryClusterInfo 是否获取集群版实例节点信息，可填：true或false
+     */
+    public void setQueryClusterInfo(Boolean QueryClusterInfo) {
+        this.QueryClusterInfo = QueryClusterInfo;
+    }
+
     public DescribeDBInstancesRequest() {
     }
 
@@ -1007,6 +1030,9 @@ public class DescribeDBInstancesRequest extends AbstractModel {
                 this.EngineTypes[i] = new String(source.EngineTypes[i]);
             }
         }
+        if (source.QueryClusterInfo != null) {
+            this.QueryClusterInfo = new Boolean(source.QueryClusterInfo);
+        }
     }
 
 
@@ -1049,6 +1075,7 @@ public class DescribeDBInstancesRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "ProxyVips.", this.ProxyVips);
         this.setParamArraySimple(map, prefix + "ProxyIds.", this.ProxyIds);
         this.setParamArraySimple(map, prefix + "EngineTypes.", this.EngineTypes);
+        this.setParamSimple(map, prefix + "QueryClusterInfo", this.QueryClusterInfo);
 
     }
 }

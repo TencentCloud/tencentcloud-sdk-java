@@ -1,8 +1,5 @@
 package com.tencentcloudapi.tms.v20201229;
 public enum TmsErrorCode {
-    // 内部错误。
-     INTERNALERROR("InternalError"),
-     
     // 请求超时。
      INTERNALERROR_ERRTEXTTIMEOUT("InternalError.ErrTextTimeOut"),
      
@@ -14,9 +11,6 @@ public enum TmsErrorCode {
      
     // 文本类型错误，需要base64的文本。
      INVALIDPARAMETER_ERRTEXTCONTENTTYPE("InvalidParameter.ErrTextContentType"),
-     
-    // Question参数错误
-     INVALIDPARAMETER_INVALIDQUESTION("InvalidParameter.InvalidQuestion"),
      
     // InvalidParameter.ParameterError
      INVALIDPARAMETER_PARAMETERERROR("InvalidParameter.ParameterError"),

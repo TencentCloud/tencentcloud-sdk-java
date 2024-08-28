@@ -84,6 +84,14 @@ public class LayerVersionInfo extends AbstractModel {
     private String Stamp;
 
     /**
+    * 返回层绑定的标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get 版本适用的运行时
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return CompatibleRuntimes 版本适用的运行时
@@ -227,6 +235,26 @@ public class LayerVersionInfo extends AbstractModel {
         this.Stamp = Stamp;
     }
 
+    /**
+     * Get 返回层绑定的标签信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Tags 返回层绑定的标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 返回层绑定的标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Tags 返回层绑定的标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public LayerVersionInfo() {
     }
 
@@ -262,6 +290,12 @@ public class LayerVersionInfo extends AbstractModel {
         if (source.Stamp != null) {
             this.Stamp = new String(source.Stamp);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -277,6 +311,7 @@ public class LayerVersionInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "LayerName", this.LayerName);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "Stamp", this.Stamp);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

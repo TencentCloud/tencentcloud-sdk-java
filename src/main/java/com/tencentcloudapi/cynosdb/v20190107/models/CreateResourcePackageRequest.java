@@ -24,15 +24,14 @@ import java.util.HashMap;
 public class CreateResourcePackageRequest extends AbstractModel {
 
     /**
-    * 实例类型
+    * 实例类型，目前固定传cynosdb-serverless
     */
     @SerializedName("InstanceType")
     @Expose
     private String InstanceType;
 
     /**
-    * 资源包使用地域
-china-中国内地通用，overseas-港澳台及海外通用
+    * 资源包使用地域chineseMainland-中国内地通用，overseas-港澳台及海外通用
     */
     @SerializedName("PackageRegion")
     @Expose
@@ -82,36 +81,32 @@ base-基础版本，common-通用版本，enterprise-企业版本
     private String PackageName;
 
     /**
-     * Get 实例类型 
-     * @return InstanceType 实例类型
+     * Get 实例类型，目前固定传cynosdb-serverless 
+     * @return InstanceType 实例类型，目前固定传cynosdb-serverless
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set 实例类型
-     * @param InstanceType 实例类型
+     * Set 实例类型，目前固定传cynosdb-serverless
+     * @param InstanceType 实例类型，目前固定传cynosdb-serverless
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get 资源包使用地域
-china-中国内地通用，overseas-港澳台及海外通用 
-     * @return PackageRegion 资源包使用地域
-china-中国内地通用，overseas-港澳台及海外通用
+     * Get 资源包使用地域chineseMainland-中国内地通用，overseas-港澳台及海外通用 
+     * @return PackageRegion 资源包使用地域chineseMainland-中国内地通用，overseas-港澳台及海外通用
      */
     public String getPackageRegion() {
         return this.PackageRegion;
     }
 
     /**
-     * Set 资源包使用地域
-china-中国内地通用，overseas-港澳台及海外通用
-     * @param PackageRegion 资源包使用地域
-china-中国内地通用，overseas-港澳台及海外通用
+     * Set 资源包使用地域chineseMainland-中国内地通用，overseas-港澳台及海外通用
+     * @param PackageRegion 资源包使用地域chineseMainland-中国内地通用，overseas-港澳台及海外通用
      */
     public void setPackageRegion(String PackageRegion) {
         this.PackageRegion = PackageRegion;

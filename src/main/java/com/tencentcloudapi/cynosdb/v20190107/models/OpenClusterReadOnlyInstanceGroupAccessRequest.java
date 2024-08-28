@@ -23,6 +23,75 @@ import java.util.HashMap;
 
 public class OpenClusterReadOnlyInstanceGroupAccessRequest extends AbstractModel {
 
+    /**
+    * 集群ID
+    */
+    @SerializedName("ClusterId")
+    @Expose
+    private String ClusterId;
+
+    /**
+    * 端口
+    */
+    @SerializedName("Port")
+    @Expose
+    private String Port;
+
+    /**
+    * 安全组ID 
+    */
+    @SerializedName("SecurityGroupIds")
+    @Expose
+    private String [] SecurityGroupIds;
+
+    /**
+     * Get 集群ID 
+     * @return ClusterId 集群ID
+     */
+    public String getClusterId() {
+        return this.ClusterId;
+    }
+
+    /**
+     * Set 集群ID
+     * @param ClusterId 集群ID
+     */
+    public void setClusterId(String ClusterId) {
+        this.ClusterId = ClusterId;
+    }
+
+    /**
+     * Get 端口 
+     * @return Port 端口
+     */
+    public String getPort() {
+        return this.Port;
+    }
+
+    /**
+     * Set 端口
+     * @param Port 端口
+     */
+    public void setPort(String Port) {
+        this.Port = Port;
+    }
+
+    /**
+     * Get 安全组ID  
+     * @return SecurityGroupIds 安全组ID 
+     */
+    public String [] getSecurityGroupIds() {
+        return this.SecurityGroupIds;
+    }
+
+    /**
+     * Set 安全组ID 
+     * @param SecurityGroupIds 安全组ID 
+     */
+    public void setSecurityGroupIds(String [] SecurityGroupIds) {
+        this.SecurityGroupIds = SecurityGroupIds;
+    }
+
     public OpenClusterReadOnlyInstanceGroupAccessRequest() {
     }
 
@@ -31,6 +100,18 @@ public class OpenClusterReadOnlyInstanceGroupAccessRequest extends AbstractModel
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public OpenClusterReadOnlyInstanceGroupAccessRequest(OpenClusterReadOnlyInstanceGroupAccessRequest source) {
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.Port != null) {
+            this.Port = new String(source.Port);
+        }
+        if (source.SecurityGroupIds != null) {
+            this.SecurityGroupIds = new String[source.SecurityGroupIds.length];
+            for (int i = 0; i < source.SecurityGroupIds.length; i++) {
+                this.SecurityGroupIds[i] = new String(source.SecurityGroupIds[i]);
+            }
+        }
     }
 
 
@@ -38,6 +119,9 @@ public class OpenClusterReadOnlyInstanceGroupAccessRequest extends AbstractModel
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
+        this.setParamSimple(map, prefix + "Port", this.Port);
+        this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
 
     }
 }

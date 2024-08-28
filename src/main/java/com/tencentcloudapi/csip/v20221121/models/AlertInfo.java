@@ -250,6 +250,22 @@ CSIP:云安全中心
     private String RiskTreatment;
 
     /**
+    * 日志类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LogType")
+    @Expose
+    private String LogType;
+
+    /**
+    * 语句检索
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LogSearch")
+    @Expose
+    private String LogSearch;
+
+    /**
      * Get 告警ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ID 告警ID
@@ -829,6 +845,46 @@ CSIP:云安全中心
         this.RiskTreatment = RiskTreatment;
     }
 
+    /**
+     * Get 日志类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LogType 日志类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLogType() {
+        return this.LogType;
+    }
+
+    /**
+     * Set 日志类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LogType 日志类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLogType(String LogType) {
+        this.LogType = LogType;
+    }
+
+    /**
+     * Get 语句检索
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LogSearch 语句检索
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLogSearch() {
+        return this.LogSearch;
+    }
+
+    /**
+     * Set 语句检索
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LogSearch 语句检索
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLogSearch(String LogSearch) {
+        this.LogSearch = LogSearch;
+    }
+
     public AlertInfo() {
     }
 
@@ -918,6 +974,12 @@ CSIP:云安全中心
         if (source.RiskTreatment != null) {
             this.RiskTreatment = new String(source.RiskTreatment);
         }
+        if (source.LogType != null) {
+            this.LogType = new String(source.LogType);
+        }
+        if (source.LogSearch != null) {
+            this.LogSearch = new String(source.LogSearch);
+        }
     }
 
 
@@ -952,6 +1014,8 @@ CSIP:云安全中心
         this.setParamSimple(map, prefix + "Action", this.Action);
         this.setParamSimple(map, prefix + "RiskInvestigation", this.RiskInvestigation);
         this.setParamSimple(map, prefix + "RiskTreatment", this.RiskTreatment);
+        this.setParamSimple(map, prefix + "LogType", this.LogType);
+        this.setParamSimple(map, prefix + "LogSearch", this.LogSearch);
 
     }
 }

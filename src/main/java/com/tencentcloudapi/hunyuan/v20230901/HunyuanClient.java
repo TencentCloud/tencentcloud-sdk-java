@@ -88,6 +88,20 @@ public class HunyuanClient extends AbstractClient{
     }
 
     /**
+     *混元生图（多轮对话）接口基于混元大模型，将根据输入的文本描述生成图像，支持通过多轮对话的方式不断调整图像内容。分为提交任务和查询任务2个接口。
+提交任务：输入文本和前置对话 ID 等，提交一个混元生图多轮对话异步任务，获得任务 ID。
+查询任务：根据任务 ID 查询任务的处理状态、处理结果，任务处理完成后可获得在上一轮对话基础上继续生成的图像结果。
+混元生图（多轮对话）默认提供1个并发任务数，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后才能开始处理下一个任务。
+     * @param req QueryHunyuanImageChatJobRequest
+     * @return QueryHunyuanImageChatJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryHunyuanImageChatJobResponse QueryHunyuanImageChatJob(QueryHunyuanImageChatJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "QueryHunyuanImageChatJob", QueryHunyuanImageChatJobResponse.class);
+    }
+
+    /**
      *混元生图接口基于混元大模型，将根据输入的文本描述，智能生成与之相关的结果图。分为提交任务和查询任务2个接口。
 提交任务：输入文本等，提交一个混元生图异步任务，获得任务 ID。
 查询任务：根据任务 ID 查询任务的处理状态、处理结果，任务处理完成后可获得生成图像结果。
@@ -110,6 +124,20 @@ public class HunyuanClient extends AbstractClient{
     public SetPayModeResponse SetPayMode(SetPayModeRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "SetPayMode", SetPayModeResponse.class);
+    }
+
+    /**
+     *混元生图（多轮对话）接口基于混元大模型，将根据输入的文本描述生成图像，支持通过多轮对话的方式不断调整图像内容。分为提交任务和查询任务2个接口。
+提交任务：输入文本和前置对话 ID 等，提交一个混元生图多轮对话异步任务，获得任务 ID。
+查询任务：根据任务 ID 查询任务的处理状态、处理结果，任务处理完成后可获得在上一轮对话基础上继续生成的图像结果。
+混元生图（多轮对话）默认提供1个并发任务数，代表最多能同时处理1个已提交的任务，上一个任务处理完毕后才能开始处理下一个任务。
+     * @param req SubmitHunyuanImageChatJobRequest
+     * @return SubmitHunyuanImageChatJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public SubmitHunyuanImageChatJobResponse SubmitHunyuanImageChatJob(SubmitHunyuanImageChatJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SubmitHunyuanImageChatJob", SubmitHunyuanImageChatJobResponse.class);
     }
 
     /**

@@ -578,6 +578,174 @@ public class AlertExtraInfo extends AbstractModel {
     private String HitStrategy;
 
     /**
+    * 进程名
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProcessName")
+    @Expose
+    private String ProcessName;
+
+    /**
+    * PID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PID")
+    @Expose
+    private String PID;
+
+    /**
+    * 容器Pod名
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PodName")
+    @Expose
+    private String PodName;
+
+    /**
+    * 容器PodID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PodID")
+    @Expose
+    private String PodID;
+
+    /**
+    * Http响应
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Response")
+    @Expose
+    private String Response;
+
+    /**
+    * 系统调用
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SystemCall")
+    @Expose
+    private String SystemCall;
+
+    /**
+    * 操作类型verb
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Verb")
+    @Expose
+    private String Verb;
+
+    /**
+    * 日志ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LogID")
+    @Expose
+    private String LogID;
+
+    /**
+    * 变更内容
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Different")
+    @Expose
+    private String Different;
+
+    /**
+    * 事件类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EventType")
+    @Expose
+    private String EventType;
+
+    /**
+    * 事件描述
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Description")
+    @Expose
+    private String Description;
+
+    /**
+    * 目标地址(容器反弹shell)
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TargetAddress")
+    @Expose
+    private String TargetAddress;
+
+    /**
+    * 恶意请求域名(容器恶意外联)
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MaliciousRequestDomain")
+    @Expose
+    private String MaliciousRequestDomain;
+
+    /**
+    * 规则类型(容器K8sAPI异常请求)
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RuleType")
+    @Expose
+    private String RuleType;
+
+    /**
+    * 请求资源(容器K8sAPI异常请求)
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RequestURI")
+    @Expose
+    private String RequestURI;
+
+    /**
+    * 发起请求用户(容器K8sAPI异常请求)
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RequestUser")
+    @Expose
+    private String RequestUser;
+
+    /**
+    * 请求对象(容器K8sAPI异常请求)
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RequestObject")
+    @Expose
+    private String RequestObject;
+
+    /**
+    * 响应对象(容器K8sAPI异常请求)
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ResponseObject")
+    @Expose
+    private String ResponseObject;
+
+    /**
+    * 文件类型(容器文件篡改)
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FileType")
+    @Expose
+    private String FileType;
+
+    /**
+    * 标签特征(容器恶意外联)
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TIType")
+    @Expose
+    private String TIType;
+
+    /**
+    * 来源IP(容器K8sAPI异常请求)
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SourceIP")
+    @Expose
+    private String SourceIP;
+
+    /**
      * Get 相关攻击事件
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return RelateEvent 相关攻击事件
@@ -1965,6 +2133,426 @@ public class AlertExtraInfo extends AbstractModel {
         this.HitStrategy = HitStrategy;
     }
 
+    /**
+     * Get 进程名
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProcessName 进程名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getProcessName() {
+        return this.ProcessName;
+    }
+
+    /**
+     * Set 进程名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProcessName 进程名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProcessName(String ProcessName) {
+        this.ProcessName = ProcessName;
+    }
+
+    /**
+     * Get PID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PID PID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPID() {
+        return this.PID;
+    }
+
+    /**
+     * Set PID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PID PID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPID(String PID) {
+        this.PID = PID;
+    }
+
+    /**
+     * Get 容器Pod名
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PodName 容器Pod名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPodName() {
+        return this.PodName;
+    }
+
+    /**
+     * Set 容器Pod名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PodName 容器Pod名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPodName(String PodName) {
+        this.PodName = PodName;
+    }
+
+    /**
+     * Get 容器PodID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PodID 容器PodID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPodID() {
+        return this.PodID;
+    }
+
+    /**
+     * Set 容器PodID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PodID 容器PodID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPodID(String PodID) {
+        this.PodID = PodID;
+    }
+
+    /**
+     * Get Http响应
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Response Http响应
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getResponse() {
+        return this.Response;
+    }
+
+    /**
+     * Set Http响应
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Response Http响应
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setResponse(String Response) {
+        this.Response = Response;
+    }
+
+    /**
+     * Get 系统调用
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SystemCall 系统调用
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSystemCall() {
+        return this.SystemCall;
+    }
+
+    /**
+     * Set 系统调用
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SystemCall 系统调用
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSystemCall(String SystemCall) {
+        this.SystemCall = SystemCall;
+    }
+
+    /**
+     * Get 操作类型verb
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Verb 操作类型verb
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getVerb() {
+        return this.Verb;
+    }
+
+    /**
+     * Set 操作类型verb
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Verb 操作类型verb
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVerb(String Verb) {
+        this.Verb = Verb;
+    }
+
+    /**
+     * Get 日志ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LogID 日志ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLogID() {
+        return this.LogID;
+    }
+
+    /**
+     * Set 日志ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LogID 日志ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLogID(String LogID) {
+        this.LogID = LogID;
+    }
+
+    /**
+     * Get 变更内容
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Different 变更内容
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDifferent() {
+        return this.Different;
+    }
+
+    /**
+     * Set 变更内容
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Different 变更内容
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDifferent(String Different) {
+        this.Different = Different;
+    }
+
+    /**
+     * Get 事件类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EventType 事件类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getEventType() {
+        return this.EventType;
+    }
+
+    /**
+     * Set 事件类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EventType 事件类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEventType(String EventType) {
+        this.EventType = EventType;
+    }
+
+    /**
+     * Get 事件描述
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Description 事件描述
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDescription() {
+        return this.Description;
+    }
+
+    /**
+     * Set 事件描述
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Description 事件描述
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDescription(String Description) {
+        this.Description = Description;
+    }
+
+    /**
+     * Get 目标地址(容器反弹shell)
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TargetAddress 目标地址(容器反弹shell)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTargetAddress() {
+        return this.TargetAddress;
+    }
+
+    /**
+     * Set 目标地址(容器反弹shell)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TargetAddress 目标地址(容器反弹shell)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTargetAddress(String TargetAddress) {
+        this.TargetAddress = TargetAddress;
+    }
+
+    /**
+     * Get 恶意请求域名(容器恶意外联)
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MaliciousRequestDomain 恶意请求域名(容器恶意外联)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getMaliciousRequestDomain() {
+        return this.MaliciousRequestDomain;
+    }
+
+    /**
+     * Set 恶意请求域名(容器恶意外联)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MaliciousRequestDomain 恶意请求域名(容器恶意外联)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMaliciousRequestDomain(String MaliciousRequestDomain) {
+        this.MaliciousRequestDomain = MaliciousRequestDomain;
+    }
+
+    /**
+     * Get 规则类型(容器K8sAPI异常请求)
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RuleType 规则类型(容器K8sAPI异常请求)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRuleType() {
+        return this.RuleType;
+    }
+
+    /**
+     * Set 规则类型(容器K8sAPI异常请求)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RuleType 规则类型(容器K8sAPI异常请求)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRuleType(String RuleType) {
+        this.RuleType = RuleType;
+    }
+
+    /**
+     * Get 请求资源(容器K8sAPI异常请求)
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RequestURI 请求资源(容器K8sAPI异常请求)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRequestURI() {
+        return this.RequestURI;
+    }
+
+    /**
+     * Set 请求资源(容器K8sAPI异常请求)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RequestURI 请求资源(容器K8sAPI异常请求)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRequestURI(String RequestURI) {
+        this.RequestURI = RequestURI;
+    }
+
+    /**
+     * Get 发起请求用户(容器K8sAPI异常请求)
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RequestUser 发起请求用户(容器K8sAPI异常请求)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRequestUser() {
+        return this.RequestUser;
+    }
+
+    /**
+     * Set 发起请求用户(容器K8sAPI异常请求)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RequestUser 发起请求用户(容器K8sAPI异常请求)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRequestUser(String RequestUser) {
+        this.RequestUser = RequestUser;
+    }
+
+    /**
+     * Get 请求对象(容器K8sAPI异常请求)
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RequestObject 请求对象(容器K8sAPI异常请求)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRequestObject() {
+        return this.RequestObject;
+    }
+
+    /**
+     * Set 请求对象(容器K8sAPI异常请求)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RequestObject 请求对象(容器K8sAPI异常请求)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRequestObject(String RequestObject) {
+        this.RequestObject = RequestObject;
+    }
+
+    /**
+     * Get 响应对象(容器K8sAPI异常请求)
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ResponseObject 响应对象(容器K8sAPI异常请求)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getResponseObject() {
+        return this.ResponseObject;
+    }
+
+    /**
+     * Set 响应对象(容器K8sAPI异常请求)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ResponseObject 响应对象(容器K8sAPI异常请求)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setResponseObject(String ResponseObject) {
+        this.ResponseObject = ResponseObject;
+    }
+
+    /**
+     * Get 文件类型(容器文件篡改)
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FileType 文件类型(容器文件篡改)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getFileType() {
+        return this.FileType;
+    }
+
+    /**
+     * Set 文件类型(容器文件篡改)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FileType 文件类型(容器文件篡改)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFileType(String FileType) {
+        this.FileType = FileType;
+    }
+
+    /**
+     * Get 标签特征(容器恶意外联)
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TIType 标签特征(容器恶意外联)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTIType() {
+        return this.TIType;
+    }
+
+    /**
+     * Set 标签特征(容器恶意外联)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TIType 标签特征(容器恶意外联)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTIType(String TIType) {
+        this.TIType = TIType;
+    }
+
+    /**
+     * Get 来源IP(容器K8sAPI异常请求)
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SourceIP 来源IP(容器K8sAPI异常请求)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSourceIP() {
+        return this.SourceIP;
+    }
+
+    /**
+     * Set 来源IP(容器K8sAPI异常请求)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SourceIP 来源IP(容器K8sAPI异常请求)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSourceIP(String SourceIP) {
+        this.SourceIP = SourceIP;
+    }
+
     public AlertExtraInfo() {
     }
 
@@ -2183,6 +2771,69 @@ public class AlertExtraInfo extends AbstractModel {
         if (source.HitStrategy != null) {
             this.HitStrategy = new String(source.HitStrategy);
         }
+        if (source.ProcessName != null) {
+            this.ProcessName = new String(source.ProcessName);
+        }
+        if (source.PID != null) {
+            this.PID = new String(source.PID);
+        }
+        if (source.PodName != null) {
+            this.PodName = new String(source.PodName);
+        }
+        if (source.PodID != null) {
+            this.PodID = new String(source.PodID);
+        }
+        if (source.Response != null) {
+            this.Response = new String(source.Response);
+        }
+        if (source.SystemCall != null) {
+            this.SystemCall = new String(source.SystemCall);
+        }
+        if (source.Verb != null) {
+            this.Verb = new String(source.Verb);
+        }
+        if (source.LogID != null) {
+            this.LogID = new String(source.LogID);
+        }
+        if (source.Different != null) {
+            this.Different = new String(source.Different);
+        }
+        if (source.EventType != null) {
+            this.EventType = new String(source.EventType);
+        }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
+        if (source.TargetAddress != null) {
+            this.TargetAddress = new String(source.TargetAddress);
+        }
+        if (source.MaliciousRequestDomain != null) {
+            this.MaliciousRequestDomain = new String(source.MaliciousRequestDomain);
+        }
+        if (source.RuleType != null) {
+            this.RuleType = new String(source.RuleType);
+        }
+        if (source.RequestURI != null) {
+            this.RequestURI = new String(source.RequestURI);
+        }
+        if (source.RequestUser != null) {
+            this.RequestUser = new String(source.RequestUser);
+        }
+        if (source.RequestObject != null) {
+            this.RequestObject = new String(source.RequestObject);
+        }
+        if (source.ResponseObject != null) {
+            this.ResponseObject = new String(source.ResponseObject);
+        }
+        if (source.FileType != null) {
+            this.FileType = new String(source.FileType);
+        }
+        if (source.TIType != null) {
+            this.TIType = new String(source.TIType);
+        }
+        if (source.SourceIP != null) {
+            this.SourceIP = new String(source.SourceIP);
+        }
     }
 
 
@@ -2259,6 +2910,27 @@ public class AlertExtraInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "StrategyID", this.StrategyID);
         this.setParamSimple(map, prefix + "StrategyName", this.StrategyName);
         this.setParamSimple(map, prefix + "HitStrategy", this.HitStrategy);
+        this.setParamSimple(map, prefix + "ProcessName", this.ProcessName);
+        this.setParamSimple(map, prefix + "PID", this.PID);
+        this.setParamSimple(map, prefix + "PodName", this.PodName);
+        this.setParamSimple(map, prefix + "PodID", this.PodID);
+        this.setParamSimple(map, prefix + "Response", this.Response);
+        this.setParamSimple(map, prefix + "SystemCall", this.SystemCall);
+        this.setParamSimple(map, prefix + "Verb", this.Verb);
+        this.setParamSimple(map, prefix + "LogID", this.LogID);
+        this.setParamSimple(map, prefix + "Different", this.Different);
+        this.setParamSimple(map, prefix + "EventType", this.EventType);
+        this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "TargetAddress", this.TargetAddress);
+        this.setParamSimple(map, prefix + "MaliciousRequestDomain", this.MaliciousRequestDomain);
+        this.setParamSimple(map, prefix + "RuleType", this.RuleType);
+        this.setParamSimple(map, prefix + "RequestURI", this.RequestURI);
+        this.setParamSimple(map, prefix + "RequestUser", this.RequestUser);
+        this.setParamSimple(map, prefix + "RequestObject", this.RequestObject);
+        this.setParamSimple(map, prefix + "ResponseObject", this.ResponseObject);
+        this.setParamSimple(map, prefix + "FileType", this.FileType);
+        this.setParamSimple(map, prefix + "TIType", this.TIType);
+        this.setParamSimple(map, prefix + "SourceIP", this.SourceIP);
 
     }
 }

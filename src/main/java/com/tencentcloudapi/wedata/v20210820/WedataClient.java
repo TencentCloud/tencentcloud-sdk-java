@@ -50,6 +50,17 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *异步批量创建任务版本
+     * @param req BatchCreateTaskVersionAsyncRequest
+     * @return BatchCreateTaskVersionAsyncResponse
+     * @throws TencentCloudSDKException
+     */
+    public BatchCreateTaskVersionAsyncResponse BatchCreateTaskVersionAsync(BatchCreateTaskVersionAsyncRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "BatchCreateTaskVersionAsync", BatchCreateTaskVersionAsyncResponse.class);
+    }
+
+    /**
      *批量删除集成任务
      * @param req BatchDeleteIntegrationTasksRequest
      * @return BatchDeleteIntegrationTasksResponse
@@ -1271,6 +1282,17 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *获取待提交任务预提交校验信息
+     * @param req DescribePendingSubmitTaskListRequest
+     * @return DescribePendingSubmitTaskListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePendingSubmitTaskListResponse DescribePendingSubmitTaskList(DescribePendingSubmitTaskListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribePendingSubmitTaskList", DescribePendingSubmitTaskListResponse.class);
+    }
+
+    /**
      *获取项目信息
      * @param req DescribeProjectRequest
      * @return DescribeProjectResponse
@@ -1890,6 +1912,17 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *获取工作流调度信息
+     * @param req DescribeWorkflowSchedulerInfoDsRequest
+     * @return DescribeWorkflowSchedulerInfoDsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeWorkflowSchedulerInfoDsResponse DescribeWorkflowSchedulerInfoDs(DescribeWorkflowSchedulerInfoDsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeWorkflowSchedulerInfoDs", DescribeWorkflowSchedulerInfoDsResponse.class);
+    }
+
+    /**
      *查询工作流任务数
      * @param req DescribeWorkflowTaskCountRequest
      * @return DescribeWorkflowTaskCountResponse
@@ -1967,6 +2000,17 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *获取cos token
+     * @param req GetCosTokenRequest
+     * @return GetCosTokenResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetCosTokenResponse GetCosToken(GetCosTokenRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetCosToken", GetCosTokenResponse.class);
+    }
+
+    /**
      *开发空间-获取数据开发脚本信息
      * @param req GetFileInfoRequest
      * @return GetFileInfoResponse
@@ -2008,6 +2052,17 @@ public class WedataClient extends AbstractClient{
     public GetOfflineInstanceListResponse GetOfflineInstanceList(GetOfflineInstanceListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "GetOfflineInstanceList", GetOfflineInstanceListResponse.class);
+    }
+
+    /**
+     *资源管理-判断资源文件是否存在
+     * @param req JudgeResourceFileRequest
+     * @return JudgeResourceFileResponse
+     * @throws TencentCloudSDKException
+     */
+    public JudgeResourceFileResponse JudgeResourceFile(JudgeResourceFileRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "JudgeResourceFile", JudgeResourceFileResponse.class);
     }
 
     /**
@@ -2288,6 +2343,17 @@ public class WedataClient extends AbstractClient{
     public RemoveWorkflowDsResponse RemoveWorkflowDs(RemoveWorkflowDsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "RemoveWorkflowDs", RemoveWorkflowDsResponse.class);
+    }
+
+    /**
+     *更新工作流下任务调度信息
+     * @param req RenewWorkflowSchedulerInfoDsRequest
+     * @return RenewWorkflowSchedulerInfoDsResponse
+     * @throws TencentCloudSDKException
+     */
+    public RenewWorkflowSchedulerInfoDsResponse RenewWorkflowSchedulerInfoDs(RenewWorkflowSchedulerInfoDsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RenewWorkflowSchedulerInfoDs", RenewWorkflowSchedulerInfoDsResponse.class);
     }
 
     /**
