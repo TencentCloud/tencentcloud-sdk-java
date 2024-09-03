@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class DescribeDirectConnectsRequest extends AbstractModel {
 
     /**
-    * 过滤条件:
+    * 过滤条件。
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-    * 物理专线 ID数组
+    * 物理专线 ID数组。
     */
     @SerializedName("DirectConnectIds")
     @Expose
     private String [] DirectConnectIds;
 
     /**
-    * 偏移量，默认为0
+    * 偏移量，默认为0。
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 返回数量，默认为20，最大值为100
+    * 返回数量，默认为20，最大值为100。
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get 过滤条件: 
-     * @return Filters 过滤条件:
+     * Get 过滤条件。 
+     * @return Filters 过滤条件。
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤条件:
-     * @param Filters 过滤条件:
+     * Set 过滤条件。
+     * @param Filters 过滤条件。
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get 物理专线 ID数组 
-     * @return DirectConnectIds 物理专线 ID数组
+     * Get 物理专线 ID数组。 
+     * @return DirectConnectIds 物理专线 ID数组。
      */
     public String [] getDirectConnectIds() {
         return this.DirectConnectIds;
     }
 
     /**
-     * Set 物理专线 ID数组
-     * @param DirectConnectIds 物理专线 ID数组
+     * Set 物理专线 ID数组。
+     * @param DirectConnectIds 物理专线 ID数组。
      */
     public void setDirectConnectIds(String [] DirectConnectIds) {
         this.DirectConnectIds = DirectConnectIds;
     }
 
     /**
-     * Get 偏移量，默认为0 
-     * @return Offset 偏移量，默认为0
+     * Get 偏移量，默认为0。 
+     * @return Offset 偏移量，默认为0。
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量，默认为0
-     * @param Offset 偏移量，默认为0
+     * Set 偏移量，默认为0。
+     * @param Offset 偏移量，默认为0。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 返回数量，默认为20，最大值为100 
-     * @return Limit 返回数量，默认为20，最大值为100
+     * Get 返回数量，默认为20，最大值为100。 
+     * @return Limit 返回数量，默认为20，最大值为100。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 返回数量，默认为20，最大值为100
-     * @param Limit 返回数量，默认为20，最大值为100
+     * Set 返回数量，默认为20，最大值为100。
+     * @param Limit 返回数量，默认为20，最大值为100。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

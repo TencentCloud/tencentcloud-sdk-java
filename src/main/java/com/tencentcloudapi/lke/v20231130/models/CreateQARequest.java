@@ -94,6 +94,13 @@ public class CreateQARequest extends AbstractModel {
     private String ExpireEnd;
 
     /**
+    * 相似问内容
+    */
+    @SerializedName("SimilarQuestions")
+    @Expose
+    private String [] SimilarQuestions;
+
+    /**
      * Get 应用ID 
      * @return BotBizId 应用ID
      */
@@ -253,6 +260,22 @@ public class CreateQARequest extends AbstractModel {
         this.ExpireEnd = ExpireEnd;
     }
 
+    /**
+     * Get 相似问内容 
+     * @return SimilarQuestions 相似问内容
+     */
+    public String [] getSimilarQuestions() {
+        return this.SimilarQuestions;
+    }
+
+    /**
+     * Set 相似问内容
+     * @param SimilarQuestions 相似问内容
+     */
+    public void setSimilarQuestions(String [] SimilarQuestions) {
+        this.SimilarQuestions = SimilarQuestions;
+    }
+
     public CreateQARequest() {
     }
 
@@ -294,6 +317,12 @@ public class CreateQARequest extends AbstractModel {
         if (source.ExpireEnd != null) {
             this.ExpireEnd = new String(source.ExpireEnd);
         }
+        if (source.SimilarQuestions != null) {
+            this.SimilarQuestions = new String[source.SimilarQuestions.length];
+            for (int i = 0; i < source.SimilarQuestions.length; i++) {
+                this.SimilarQuestions[i] = new String(source.SimilarQuestions[i]);
+            }
+        }
     }
 
 
@@ -311,6 +340,7 @@ public class CreateQARequest extends AbstractModel {
         this.setParamSimple(map, prefix + "CateBizId", this.CateBizId);
         this.setParamSimple(map, prefix + "ExpireStart", this.ExpireStart);
         this.setParamSimple(map, prefix + "ExpireEnd", this.ExpireEnd);
+        this.setParamArraySimple(map, prefix + "SimilarQuestions.", this.SimilarQuestions);
 
     }
 }

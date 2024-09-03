@@ -245,6 +245,38 @@ public class Task extends AbstractModel {
     private Long PolicyDealType;
 
     /**
+    * 计划开始时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TaskPlanStartTime")
+    @Expose
+    private String TaskPlanStartTime;
+
+    /**
+    * 计划结束时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TaskPlanEndTime")
+    @Expose
+    private String TaskPlanEndTime;
+
+    /**
+    * 人员组织
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TaskOrg")
+    @Expose
+    private TaskOrg [] TaskOrg;
+
+    /**
+    * 问题和改进
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TaskIssue")
+    @Expose
+    private String TaskIssue;
+
+    /**
      * Get 任务ID 
      * @return TaskId 任务ID
      */
@@ -780,6 +812,86 @@ public class Task extends AbstractModel {
         this.PolicyDealType = PolicyDealType;
     }
 
+    /**
+     * Get 计划开始时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TaskPlanStartTime 计划开始时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTaskPlanStartTime() {
+        return this.TaskPlanStartTime;
+    }
+
+    /**
+     * Set 计划开始时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TaskPlanStartTime 计划开始时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTaskPlanStartTime(String TaskPlanStartTime) {
+        this.TaskPlanStartTime = TaskPlanStartTime;
+    }
+
+    /**
+     * Get 计划结束时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TaskPlanEndTime 计划结束时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTaskPlanEndTime() {
+        return this.TaskPlanEndTime;
+    }
+
+    /**
+     * Set 计划结束时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TaskPlanEndTime 计划结束时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTaskPlanEndTime(String TaskPlanEndTime) {
+        this.TaskPlanEndTime = TaskPlanEndTime;
+    }
+
+    /**
+     * Get 人员组织
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TaskOrg 人员组织
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public TaskOrg [] getTaskOrg() {
+        return this.TaskOrg;
+    }
+
+    /**
+     * Set 人员组织
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TaskOrg 人员组织
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTaskOrg(TaskOrg [] TaskOrg) {
+        this.TaskOrg = TaskOrg;
+    }
+
+    /**
+     * Get 问题和改进
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TaskIssue 问题和改进
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTaskIssue() {
+        return this.TaskIssue;
+    }
+
+    /**
+     * Set 问题和改进
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TaskIssue 问题和改进
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTaskIssue(String TaskIssue) {
+        this.TaskIssue = TaskIssue;
+    }
+
     public Task() {
     }
 
@@ -890,6 +1002,21 @@ public class Task extends AbstractModel {
         if (source.PolicyDealType != null) {
             this.PolicyDealType = new Long(source.PolicyDealType);
         }
+        if (source.TaskPlanStartTime != null) {
+            this.TaskPlanStartTime = new String(source.TaskPlanStartTime);
+        }
+        if (source.TaskPlanEndTime != null) {
+            this.TaskPlanEndTime = new String(source.TaskPlanEndTime);
+        }
+        if (source.TaskOrg != null) {
+            this.TaskOrg = new TaskOrg[source.TaskOrg.length];
+            for (int i = 0; i < source.TaskOrg.length; i++) {
+                this.TaskOrg[i] = new TaskOrg(source.TaskOrg[i]);
+            }
+        }
+        if (source.TaskIssue != null) {
+            this.TaskIssue = new String(source.TaskIssue);
+        }
     }
 
 
@@ -926,6 +1053,10 @@ public class Task extends AbstractModel {
         this.setParamArrayObj(map, prefix + "ApmServiceList.", this.ApmServiceList);
         this.setParamSimple(map, prefix + "VerifyId", this.VerifyId);
         this.setParamSimple(map, prefix + "PolicyDealType", this.PolicyDealType);
+        this.setParamSimple(map, prefix + "TaskPlanStartTime", this.TaskPlanStartTime);
+        this.setParamSimple(map, prefix + "TaskPlanEndTime", this.TaskPlanEndTime);
+        this.setParamArrayObj(map, prefix + "TaskOrg.", this.TaskOrg);
+        this.setParamSimple(map, prefix + "TaskIssue", this.TaskIssue);
 
     }
 }

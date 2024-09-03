@@ -91,12 +91,7 @@ public class ChannelCreateFlowByFilesRequest extends AbstractModel {
     private Long Deadline;
 
     /**
-    * 执行结果的回调URL，长度不超过255个字符，该URL仅支持HTTP或HTTPS协议，建议采用HTTPS协议以保证数据传输的安全性。
-腾讯电子签服务器将通过POST方式，application/json格式通知执行结果，请确保外网可以正常访问该URL。
-回调的相关说明可参考开发者中心的<a href="https://qian.tencent.com/developers/partner/callback_data_types" target="_blank">回调通知</a>模块。
-
-注:
-`如果不传递回调地址， 则默认是配置应用号时候使用的回调地址`
+    * 该字段已废弃，请使用【应用号配置】中的回调地址
     */
     @SerializedName("CallbackUrl")
     @Expose
@@ -399,37 +394,21 @@ MobileCheck：手机号验证，用户手机号和参与方手机号（ApproverM
     }
 
     /**
-     * Get 执行结果的回调URL，长度不超过255个字符，该URL仅支持HTTP或HTTPS协议，建议采用HTTPS协议以保证数据传输的安全性。
-腾讯电子签服务器将通过POST方式，application/json格式通知执行结果，请确保外网可以正常访问该URL。
-回调的相关说明可参考开发者中心的<a href="https://qian.tencent.com/developers/partner/callback_data_types" target="_blank">回调通知</a>模块。
-
-注:
-`如果不传递回调地址， 则默认是配置应用号时候使用的回调地址` 
-     * @return CallbackUrl 执行结果的回调URL，长度不超过255个字符，该URL仅支持HTTP或HTTPS协议，建议采用HTTPS协议以保证数据传输的安全性。
-腾讯电子签服务器将通过POST方式，application/json格式通知执行结果，请确保外网可以正常访问该URL。
-回调的相关说明可参考开发者中心的<a href="https://qian.tencent.com/developers/partner/callback_data_types" target="_blank">回调通知</a>模块。
-
-注:
-`如果不传递回调地址， 则默认是配置应用号时候使用的回调地址`
+     * Get 该字段已废弃，请使用【应用号配置】中的回调地址 
+     * @return CallbackUrl 该字段已废弃，请使用【应用号配置】中的回调地址
+     * @deprecated
      */
+    @Deprecated
     public String getCallbackUrl() {
         return this.CallbackUrl;
     }
 
     /**
-     * Set 执行结果的回调URL，长度不超过255个字符，该URL仅支持HTTP或HTTPS协议，建议采用HTTPS协议以保证数据传输的安全性。
-腾讯电子签服务器将通过POST方式，application/json格式通知执行结果，请确保外网可以正常访问该URL。
-回调的相关说明可参考开发者中心的<a href="https://qian.tencent.com/developers/partner/callback_data_types" target="_blank">回调通知</a>模块。
-
-注:
-`如果不传递回调地址， 则默认是配置应用号时候使用的回调地址`
-     * @param CallbackUrl 执行结果的回调URL，长度不超过255个字符，该URL仅支持HTTP或HTTPS协议，建议采用HTTPS协议以保证数据传输的安全性。
-腾讯电子签服务器将通过POST方式，application/json格式通知执行结果，请确保外网可以正常访问该URL。
-回调的相关说明可参考开发者中心的<a href="https://qian.tencent.com/developers/partner/callback_data_types" target="_blank">回调通知</a>模块。
-
-注:
-`如果不传递回调地址， 则默认是配置应用号时候使用的回调地址`
+     * Set 该字段已废弃，请使用【应用号配置】中的回调地址
+     * @param CallbackUrl 该字段已废弃，请使用【应用号配置】中的回调地址
+     * @deprecated
      */
+    @Deprecated
     public void setCallbackUrl(String CallbackUrl) {
         this.CallbackUrl = CallbackUrl;
     }

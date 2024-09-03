@@ -131,6 +131,20 @@ Block 建议屏蔽；
     private String Duration;
 
     /**
+    * 是否命中(0:否, 1: 是)
+    */
+    @SerializedName("HitFlag")
+    @Expose
+    private Long HitFlag;
+
+    /**
+    * 得分
+    */
+    @SerializedName("Score")
+    @Expose
+    private Long Score;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -410,6 +424,38 @@ Block 建议屏蔽；
     }
 
     /**
+     * Get 是否命中(0:否, 1: 是) 
+     * @return HitFlag 是否命中(0:否, 1: 是)
+     */
+    public Long getHitFlag() {
+        return this.HitFlag;
+    }
+
+    /**
+     * Set 是否命中(0:否, 1: 是)
+     * @param HitFlag 是否命中(0:否, 1: 是)
+     */
+    public void setHitFlag(Long HitFlag) {
+        this.HitFlag = HitFlag;
+    }
+
+    /**
+     * Get 得分 
+     * @return Score 得分
+     */
+    public Long getScore() {
+        return this.Score;
+    }
+
+    /**
+     * Set 得分
+     * @param Score 得分
+     */
+    public void setScore(Long Score) {
+        this.Score = Score;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -487,6 +533,12 @@ Block 建议屏蔽；
         if (source.Duration != null) {
             this.Duration = new String(source.Duration);
         }
+        if (source.HitFlag != null) {
+            this.HitFlag = new Long(source.HitFlag);
+        }
+        if (source.Score != null) {
+            this.Score = new Long(source.Score);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -510,6 +562,8 @@ Block 建议屏蔽；
         this.setParamArrayObj(map, prefix + "SpeakerResults.", this.SpeakerResults);
         this.setParamArrayObj(map, prefix + "RecognitionResults.", this.RecognitionResults);
         this.setParamSimple(map, prefix + "Duration", this.Duration);
+        this.setParamSimple(map, prefix + "HitFlag", this.HitFlag);
+        this.setParamSimple(map, prefix + "Score", this.Score);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -94,6 +94,13 @@ public class CreateResourceRequest extends AbstractModel {
     private String DeployZone;
 
     /**
+    * 0非试用版，1试用版
+    */
+    @SerializedName("Trial")
+    @Expose
+    private Long Trial;
+
+    /**
      * Get 部署region 
      * @return DeployRegion 部署region
      */
@@ -253,6 +260,22 @@ public class CreateResourceRequest extends AbstractModel {
         this.DeployZone = DeployZone;
     }
 
+    /**
+     * Get 0非试用版，1试用版 
+     * @return Trial 0非试用版，1试用版
+     */
+    public Long getTrial() {
+        return this.Trial;
+    }
+
+    /**
+     * Set 0非试用版，1试用版
+     * @param Trial 0非试用版，1试用版
+     */
+    public void setTrial(Long Trial) {
+        this.Trial = Trial;
+    }
+
     public CreateResourceRequest() {
     }
 
@@ -291,6 +314,9 @@ public class CreateResourceRequest extends AbstractModel {
         if (source.DeployZone != null) {
             this.DeployZone = new String(source.DeployZone);
         }
+        if (source.Trial != null) {
+            this.Trial = new Long(source.Trial);
+        }
     }
 
 
@@ -308,6 +334,7 @@ public class CreateResourceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "PayMode", this.PayMode);
         this.setParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
         this.setParamSimple(map, prefix + "DeployZone", this.DeployZone);
+        this.setParamSimple(map, prefix + "Trial", this.Trial);
 
     }
 }

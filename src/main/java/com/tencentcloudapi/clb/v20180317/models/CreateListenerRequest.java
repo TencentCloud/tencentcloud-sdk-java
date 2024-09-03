@@ -158,6 +158,13 @@ public class CreateListenerRequest extends AbstractModel {
     private Boolean SnatEnable;
 
     /**
+    * 全端口段监听器的结束端口
+    */
+    @SerializedName("FullEndPorts")
+    @Expose
+    private Long [] FullEndPorts;
+
+    /**
      * Get 负载均衡实例 ID。 
      * @return LoadBalancerId 负载均衡实例 ID。
      */
@@ -465,6 +472,22 @@ public class CreateListenerRequest extends AbstractModel {
         this.SnatEnable = SnatEnable;
     }
 
+    /**
+     * Get 全端口段监听器的结束端口 
+     * @return FullEndPorts 全端口段监听器的结束端口
+     */
+    public Long [] getFullEndPorts() {
+        return this.FullEndPorts;
+    }
+
+    /**
+     * Set 全端口段监听器的结束端口
+     * @param FullEndPorts 全端口段监听器的结束端口
+     */
+    public void setFullEndPorts(Long [] FullEndPorts) {
+        this.FullEndPorts = FullEndPorts;
+    }
+
     public CreateListenerRequest() {
     }
 
@@ -536,6 +559,12 @@ public class CreateListenerRequest extends AbstractModel {
         if (source.SnatEnable != null) {
             this.SnatEnable = new Boolean(source.SnatEnable);
         }
+        if (source.FullEndPorts != null) {
+            this.FullEndPorts = new Long[source.FullEndPorts.length];
+            for (int i = 0; i < source.FullEndPorts.length; i++) {
+                this.FullEndPorts[i] = new Long(source.FullEndPorts[i]);
+            }
+        }
     }
 
 
@@ -562,6 +591,7 @@ public class CreateListenerRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "MaxCps", this.MaxCps);
         this.setParamSimple(map, prefix + "IdleConnectTimeout", this.IdleConnectTimeout);
         this.setParamSimple(map, prefix + "SnatEnable", this.SnatEnable);
+        this.setParamArraySimple(map, prefix + "FullEndPorts.", this.FullEndPorts);
 
     }
 }

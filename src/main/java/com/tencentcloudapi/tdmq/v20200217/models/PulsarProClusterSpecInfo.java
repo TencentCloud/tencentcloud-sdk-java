@@ -67,6 +67,15 @@ public class PulsarProClusterSpecInfo extends AbstractModel {
     private Long ScalableTps;
 
     /**
+    * 32或者128
+当前集群topic的最大分区数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MaxPartitions")
+    @Expose
+    private Long MaxPartitions;
+
+    /**
      * Get 集群规格名称 
      * @return SpecName 集群规格名称
      */
@@ -166,6 +175,30 @@ public class PulsarProClusterSpecInfo extends AbstractModel {
         this.ScalableTps = ScalableTps;
     }
 
+    /**
+     * Get 32或者128
+当前集群topic的最大分区数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MaxPartitions 32或者128
+当前集群topic的最大分区数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getMaxPartitions() {
+        return this.MaxPartitions;
+    }
+
+    /**
+     * Set 32或者128
+当前集群topic的最大分区数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MaxPartitions 32或者128
+当前集群topic的最大分区数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMaxPartitions(Long MaxPartitions) {
+        this.MaxPartitions = MaxPartitions;
+    }
+
     public PulsarProClusterSpecInfo() {
     }
 
@@ -192,6 +225,9 @@ public class PulsarProClusterSpecInfo extends AbstractModel {
         if (source.ScalableTps != null) {
             this.ScalableTps = new Long(source.ScalableTps);
         }
+        if (source.MaxPartitions != null) {
+            this.MaxPartitions = new Long(source.MaxPartitions);
+        }
     }
 
 
@@ -205,6 +241,7 @@ public class PulsarProClusterSpecInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "MaxNamespaces", this.MaxNamespaces);
         this.setParamSimple(map, prefix + "MaxTopics", this.MaxTopics);
         this.setParamSimple(map, prefix + "ScalableTps", this.ScalableTps);
+        this.setParamSimple(map, prefix + "MaxPartitions", this.MaxPartitions);
 
     }
 }

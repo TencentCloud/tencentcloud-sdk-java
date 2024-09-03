@@ -414,6 +414,17 @@ public class EsClient extends AbstractClient{
     }
 
     /**
+     *ES集群安装模型接口
+     * @param req InstallInstanceModelRequest
+     * @return InstallInstanceModelResponse
+     * @throws TencentCloudSDKException
+     */
+    public InstallInstanceModelResponse InstallInstanceModel(InstallInstanceModelRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "InstallInstanceModel", InstallInstanceModelResponse.class);
+    }
+
+    /**
      *修改绑定VIP的安全组，传安全组id列表
      * @param req ModifyEsVipSecurityGroupRequest
      * @return ModifyEsVipSecurityGroupResponse

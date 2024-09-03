@@ -283,6 +283,17 @@ public class DcdbClient extends AbstractClient{
     }
 
     /**
+     *获取实例回档时可选的时间范围
+     * @param req DescribeDCDBBinlogTimeRequest
+     * @return DescribeDCDBBinlogTimeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDCDBBinlogTimeResponse DescribeDCDBBinlogTime(DescribeDCDBBinlogTimeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDCDBBinlogTime", DescribeDCDBBinlogTimeResponse.class);
+    }
+
+    /**
      *本接口（DescribeDCDBInstanceDetail）用于获取TDSQL实例详情
      * @param req DescribeDCDBInstanceDetailRequest
      * @return DescribeDCDBInstanceDetailResponse

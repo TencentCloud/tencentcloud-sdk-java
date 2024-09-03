@@ -375,6 +375,14 @@ public class Cluster extends AbstractModel {
     private String BillingResourceMode;
 
     /**
+    * Cu比例
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MemRatio")
+    @Expose
+    private Long MemRatio;
+
+    /**
      * Get 集群 ID 
      * @return ClusterId 集群 ID
      */
@@ -1226,6 +1234,26 @@ public class Cluster extends AbstractModel {
         this.BillingResourceMode = BillingResourceMode;
     }
 
+    /**
+     * Get Cu比例
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MemRatio Cu比例
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getMemRatio() {
+        return this.MemRatio;
+    }
+
+    /**
+     * Set Cu比例
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MemRatio Cu比例
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMemRatio(Long MemRatio) {
+        this.MemRatio = MemRatio;
+    }
+
     public Cluster() {
     }
 
@@ -1390,6 +1418,9 @@ public class Cluster extends AbstractModel {
         if (source.BillingResourceMode != null) {
             this.BillingResourceMode = new String(source.BillingResourceMode);
         }
+        if (source.MemRatio != null) {
+            this.MemRatio = new Long(source.MemRatio);
+        }
     }
 
 
@@ -1443,6 +1474,7 @@ public class Cluster extends AbstractModel {
         this.setParamSimple(map, prefix + "AgentSerialId", this.AgentSerialId);
         this.setParamSimple(map, prefix + "ResourceType", this.ResourceType);
         this.setParamSimple(map, prefix + "BillingResourceMode", this.BillingResourceMode);
+        this.setParamSimple(map, prefix + "MemRatio", this.MemRatio);
 
     }
 }

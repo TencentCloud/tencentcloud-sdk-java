@@ -38,7 +38,7 @@ public class SearchTags extends AbstractModel {
     private String TagValue;
 
     /**
-    * 1表示只输入标签的键，没有输入值；0表示输入键时且输入值
+    * 1表示只输入标签的键，没有输入值；非1则表示输入键时且输入值
     */
     @SerializedName("AllValue")
     @Expose
@@ -77,16 +77,16 @@ public class SearchTags extends AbstractModel {
     }
 
     /**
-     * Get 1表示只输入标签的键，没有输入值；0表示输入键时且输入值 
-     * @return AllValue 1表示只输入标签的键，没有输入值；0表示输入键时且输入值
+     * Get 1表示只输入标签的键，没有输入值；非1则表示输入键时且输入值 
+     * @return AllValue 1表示只输入标签的键，没有输入值；非1则表示输入键时且输入值
      */
     public Long getAllValue() {
         return this.AllValue;
     }
 
     /**
-     * Set 1表示只输入标签的键，没有输入值；0表示输入键时且输入值
-     * @param AllValue 1表示只输入标签的键，没有输入值；0表示输入键时且输入值
+     * Set 1表示只输入标签的键，没有输入值；非1则表示输入键时且输入值
+     * @param AllValue 1表示只输入标签的键，没有输入值；非1则表示输入键时且输入值
      */
     public void setAllValue(Long AllValue) {
         this.AllValue = AllValue;

@@ -68,6 +68,20 @@ public class TaskReportInfo extends AbstractModel {
     private String Log;
 
     /**
+    * 0--未开始，1--正在归档，2--归档成功，3--归档失败
+    */
+    @SerializedName("ArchiveStage")
+    @Expose
+    private Long ArchiveStage;
+
+    /**
+    * 归档时间
+    */
+    @SerializedName("ArchiveTime")
+    @Expose
+    private String ArchiveTime;
+
+    /**
      * Get 0--未开始，1--正在导出，2--导出成功，3--导出失败 
      * @return Stage 0--未开始，1--正在导出，2--导出成功，3--导出失败
      */
@@ -171,6 +185,38 @@ public class TaskReportInfo extends AbstractModel {
         this.Log = Log;
     }
 
+    /**
+     * Get 0--未开始，1--正在归档，2--归档成功，3--归档失败 
+     * @return ArchiveStage 0--未开始，1--正在归档，2--归档成功，3--归档失败
+     */
+    public Long getArchiveStage() {
+        return this.ArchiveStage;
+    }
+
+    /**
+     * Set 0--未开始，1--正在归档，2--归档成功，3--归档失败
+     * @param ArchiveStage 0--未开始，1--正在归档，2--归档成功，3--归档失败
+     */
+    public void setArchiveStage(Long ArchiveStage) {
+        this.ArchiveStage = ArchiveStage;
+    }
+
+    /**
+     * Get 归档时间 
+     * @return ArchiveTime 归档时间
+     */
+    public String getArchiveTime() {
+        return this.ArchiveTime;
+    }
+
+    /**
+     * Set 归档时间
+     * @param ArchiveTime 归档时间
+     */
+    public void setArchiveTime(String ArchiveTime) {
+        this.ArchiveTime = ArchiveTime;
+    }
+
     public TaskReportInfo() {
     }
 
@@ -197,6 +243,12 @@ public class TaskReportInfo extends AbstractModel {
         if (source.Log != null) {
             this.Log = new String(source.Log);
         }
+        if (source.ArchiveStage != null) {
+            this.ArchiveStage = new Long(source.ArchiveStage);
+        }
+        if (source.ArchiveTime != null) {
+            this.ArchiveTime = new String(source.ArchiveTime);
+        }
     }
 
 
@@ -210,6 +262,8 @@ public class TaskReportInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Expired", this.Expired);
         this.setParamSimple(map, prefix + "CosUrl", this.CosUrl);
         this.setParamSimple(map, prefix + "Log", this.Log);
+        this.setParamSimple(map, prefix + "ArchiveStage", this.ArchiveStage);
+        this.setParamSimple(map, prefix + "ArchiveTime", this.ArchiveTime);
 
     }
 }

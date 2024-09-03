@@ -50,6 +50,21 @@ public class AsrClient extends AbstractClient{
     }
 
     /**
+     *用户通过本接口进行关键字词表的创建。
+<br>•   默认每个用户最多可创建30个关键字词表。
+<br>•   每个关键词词表最多可添加100个词，每个词最多5个汉字或15个字符。
+<br>•   词表通过本地文件形式上传。
+<br>•   本地文件必须为UTF-8编码格式，每行仅添加一个词且不能包含标点和特殊字符。
+     * @param req CreateAsrKeyWordLibRequest
+     * @return CreateAsrKeyWordLibResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAsrKeyWordLibResponse CreateAsrKeyWordLib(CreateAsrKeyWordLibRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateAsrKeyWordLib", CreateAsrKeyWordLibResponse.class);
+    }
+
+    /**
      *用户通过本接口进行热词表的创建。
 <br>•   默认最多可创建30个热词表。
 <br>•   每个热词表最多可添加1000个词，每个词最长10个汉字或30个英文字符，不能超出限制。
@@ -113,6 +128,17 @@ public class AsrClient extends AbstractClient{
     public CreateRecTaskResponse CreateRecTask(CreateRecTaskRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateRecTask", CreateRecTaskResponse.class);
+    }
+
+    /**
+     *用户通过本接口进行关键词表的删除。
+     * @param req DeleteAsrKeyWordLibRequest
+     * @return DeleteAsrKeyWordLibResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAsrKeyWordLibResponse DeleteAsrKeyWordLib(DeleteAsrKeyWordLibRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteAsrKeyWordLib", DeleteAsrKeyWordLibResponse.class);
     }
 
     /**
@@ -186,6 +212,17 @@ public class AsrClient extends AbstractClient{
     public DownloadCustomizationResponse DownloadCustomization(DownloadCustomizationRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DownloadCustomization", DownloadCustomizationResponse.class);
+    }
+
+    /**
+     *用户通过该接口，可获得所有的关键词表及其信息。
+     * @param req GetAsrKeyWordLibListRequest
+     * @return GetAsrKeyWordLibListResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetAsrKeyWordLibListResponse GetAsrKeyWordLibList(GetAsrKeyWordLibListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetAsrKeyWordLibList", GetAsrKeyWordLibListResponse.class);
     }
 
     /**
@@ -280,6 +317,17 @@ public class AsrClient extends AbstractClient{
     public SetVocabStateResponse SetVocabState(SetVocabStateRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "SetVocabState", SetVocabStateResponse.class);
+    }
+
+    /**
+     *用户通过本接口进行对应的关键词表信息更新。
+     * @param req UpdateAsrKeyWordLibRequest
+     * @return UpdateAsrKeyWordLibResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateAsrKeyWordLibResponse UpdateAsrKeyWordLib(UpdateAsrKeyWordLibRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateAsrKeyWordLib", UpdateAsrKeyWordLibResponse.class);
     }
 
     /**

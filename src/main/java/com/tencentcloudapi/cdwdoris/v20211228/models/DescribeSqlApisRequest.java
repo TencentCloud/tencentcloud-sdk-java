@@ -24,6 +24,32 @@ import java.util.HashMap;
 public class DescribeSqlApisRequest extends AbstractModel {
 
     /**
+    * 实例id
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
+    * GetUsers：获取用户列表；
+GetDatabases：获取数据库列表；
+GetTables：获取数据库表列表；
+GetUserPrivilegesV2：获取用户下的权限，粒度到表级别；
+DeleteUser：删除用户；
+GetCatalog：获取Catalog列表；
+    */
+    @SerializedName("ApiType")
+    @Expose
+    private String ApiType;
+
+    /**
+    * 用户名称
+    */
+    @SerializedName("UserName")
+    @Expose
+    private String UserName;
+
+    /**
     * 用户链接来自的 IP
     */
     @SerializedName("WhiteHost")
@@ -57,6 +83,74 @@ public class DescribeSqlApisRequest extends AbstractModel {
     @SerializedName("TableName")
     @Expose
     private String TableName;
+
+    /**
+     * Get 实例id 
+     * @return InstanceId 实例id
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set 实例id
+     * @param InstanceId 实例id
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
+    /**
+     * Get GetUsers：获取用户列表；
+GetDatabases：获取数据库列表；
+GetTables：获取数据库表列表；
+GetUserPrivilegesV2：获取用户下的权限，粒度到表级别；
+DeleteUser：删除用户；
+GetCatalog：获取Catalog列表； 
+     * @return ApiType GetUsers：获取用户列表；
+GetDatabases：获取数据库列表；
+GetTables：获取数据库表列表；
+GetUserPrivilegesV2：获取用户下的权限，粒度到表级别；
+DeleteUser：删除用户；
+GetCatalog：获取Catalog列表；
+     */
+    public String getApiType() {
+        return this.ApiType;
+    }
+
+    /**
+     * Set GetUsers：获取用户列表；
+GetDatabases：获取数据库列表；
+GetTables：获取数据库表列表；
+GetUserPrivilegesV2：获取用户下的权限，粒度到表级别；
+DeleteUser：删除用户；
+GetCatalog：获取Catalog列表；
+     * @param ApiType GetUsers：获取用户列表；
+GetDatabases：获取数据库列表；
+GetTables：获取数据库表列表；
+GetUserPrivilegesV2：获取用户下的权限，粒度到表级别；
+DeleteUser：删除用户；
+GetCatalog：获取Catalog列表；
+     */
+    public void setApiType(String ApiType) {
+        this.ApiType = ApiType;
+    }
+
+    /**
+     * Get 用户名称 
+     * @return UserName 用户名称
+     */
+    public String getUserName() {
+        return this.UserName;
+    }
+
+    /**
+     * Set 用户名称
+     * @param UserName 用户名称
+     */
+    public void setUserName(String UserName) {
+        this.UserName = UserName;
+    }
 
     /**
      * Get 用户链接来自的 IP 
@@ -146,6 +240,15 @@ public class DescribeSqlApisRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeSqlApisRequest(DescribeSqlApisRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.ApiType != null) {
+            this.ApiType = new String(source.ApiType);
+        }
+        if (source.UserName != null) {
+            this.UserName = new String(source.UserName);
+        }
         if (source.WhiteHost != null) {
             this.WhiteHost = new String(source.WhiteHost);
         }
@@ -171,6 +274,9 @@ public class DescribeSqlApisRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "ApiType", this.ApiType);
+        this.setParamSimple(map, prefix + "UserName", this.UserName);
         this.setParamSimple(map, prefix + "WhiteHost", this.WhiteHost);
         this.setParamSimple(map, prefix + "Catalog", this.Catalog);
         this.setParamArraySimple(map, prefix + "Catalogs.", this.Catalogs);

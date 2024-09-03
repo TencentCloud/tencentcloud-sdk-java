@@ -136,6 +136,41 @@ public class ListQaItem extends AbstractModel {
     private String QaCharSize;
 
     /**
+    * 有效开始时间，unix时间戳
+    */
+    @SerializedName("ExpireStart")
+    @Expose
+    private String ExpireStart;
+
+    /**
+    * 有效结束时间，unix时间戳，0代表永久有效
+    */
+    @SerializedName("ExpireEnd")
+    @Expose
+    private String ExpireEnd;
+
+    /**
+    * 属性标签适用范围 1：全部，2：按条件
+    */
+    @SerializedName("AttrRange")
+    @Expose
+    private Long AttrRange;
+
+    /**
+    * 属性标签
+    */
+    @SerializedName("AttrLabels")
+    @Expose
+    private AttrLabel [] AttrLabels;
+
+    /**
+    * 相似问个数
+    */
+    @SerializedName("SimilarQuestionNum")
+    @Expose
+    private Long SimilarQuestionNum;
+
+    /**
      * Get 问答ID 
      * @return QaBizId 问答ID
      */
@@ -391,6 +426,86 @@ public class ListQaItem extends AbstractModel {
         this.QaCharSize = QaCharSize;
     }
 
+    /**
+     * Get 有效开始时间，unix时间戳 
+     * @return ExpireStart 有效开始时间，unix时间戳
+     */
+    public String getExpireStart() {
+        return this.ExpireStart;
+    }
+
+    /**
+     * Set 有效开始时间，unix时间戳
+     * @param ExpireStart 有效开始时间，unix时间戳
+     */
+    public void setExpireStart(String ExpireStart) {
+        this.ExpireStart = ExpireStart;
+    }
+
+    /**
+     * Get 有效结束时间，unix时间戳，0代表永久有效 
+     * @return ExpireEnd 有效结束时间，unix时间戳，0代表永久有效
+     */
+    public String getExpireEnd() {
+        return this.ExpireEnd;
+    }
+
+    /**
+     * Set 有效结束时间，unix时间戳，0代表永久有效
+     * @param ExpireEnd 有效结束时间，unix时间戳，0代表永久有效
+     */
+    public void setExpireEnd(String ExpireEnd) {
+        this.ExpireEnd = ExpireEnd;
+    }
+
+    /**
+     * Get 属性标签适用范围 1：全部，2：按条件 
+     * @return AttrRange 属性标签适用范围 1：全部，2：按条件
+     */
+    public Long getAttrRange() {
+        return this.AttrRange;
+    }
+
+    /**
+     * Set 属性标签适用范围 1：全部，2：按条件
+     * @param AttrRange 属性标签适用范围 1：全部，2：按条件
+     */
+    public void setAttrRange(Long AttrRange) {
+        this.AttrRange = AttrRange;
+    }
+
+    /**
+     * Get 属性标签 
+     * @return AttrLabels 属性标签
+     */
+    public AttrLabel [] getAttrLabels() {
+        return this.AttrLabels;
+    }
+
+    /**
+     * Set 属性标签
+     * @param AttrLabels 属性标签
+     */
+    public void setAttrLabels(AttrLabel [] AttrLabels) {
+        this.AttrLabels = AttrLabels;
+    }
+
+    /**
+     * Get 相似问个数 
+     * @return SimilarQuestionNum 相似问个数
+     */
+    public Long getSimilarQuestionNum() {
+        return this.SimilarQuestionNum;
+    }
+
+    /**
+     * Set 相似问个数
+     * @param SimilarQuestionNum 相似问个数
+     */
+    public void setSimilarQuestionNum(Long SimilarQuestionNum) {
+        this.SimilarQuestionNum = SimilarQuestionNum;
+    }
+
     public ListQaItem() {
     }
 
@@ -447,6 +562,24 @@ public class ListQaItem extends AbstractModel {
         if (source.QaCharSize != null) {
             this.QaCharSize = new String(source.QaCharSize);
         }
+        if (source.ExpireStart != null) {
+            this.ExpireStart = new String(source.ExpireStart);
+        }
+        if (source.ExpireEnd != null) {
+            this.ExpireEnd = new String(source.ExpireEnd);
+        }
+        if (source.AttrRange != null) {
+            this.AttrRange = new Long(source.AttrRange);
+        }
+        if (source.AttrLabels != null) {
+            this.AttrLabels = new AttrLabel[source.AttrLabels.length];
+            for (int i = 0; i < source.AttrLabels.length; i++) {
+                this.AttrLabels[i] = new AttrLabel(source.AttrLabels[i]);
+            }
+        }
+        if (source.SimilarQuestionNum != null) {
+            this.SimilarQuestionNum = new Long(source.SimilarQuestionNum);
+        }
     }
 
 
@@ -470,6 +603,11 @@ public class ListQaItem extends AbstractModel {
         this.setParamSimple(map, prefix + "FileName", this.FileName);
         this.setParamSimple(map, prefix + "FileType", this.FileType);
         this.setParamSimple(map, prefix + "QaCharSize", this.QaCharSize);
+        this.setParamSimple(map, prefix + "ExpireStart", this.ExpireStart);
+        this.setParamSimple(map, prefix + "ExpireEnd", this.ExpireEnd);
+        this.setParamSimple(map, prefix + "AttrRange", this.AttrRange);
+        this.setParamArrayObj(map, prefix + "AttrLabels.", this.AttrLabels);
+        this.setParamSimple(map, prefix + "SimilarQuestionNum", this.SimilarQuestionNum);
 
     }
 }

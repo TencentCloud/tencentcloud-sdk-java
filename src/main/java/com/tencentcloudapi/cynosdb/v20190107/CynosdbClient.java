@@ -866,6 +866,17 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *查询serverless策略
+     * @param req DescribeServerlessStrategyRequest
+     * @return DescribeServerlessStrategyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeServerlessStrategyResponse DescribeServerlessStrategy(DescribeServerlessStrategyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeServerlessStrategy", DescribeServerlessStrategyResponse.class);
+    }
+
+    /**
      *查询支持的数据库代理版本
      * @param req DescribeSupportProxyVersionRequest
      * @return DescribeSupportProxyVersionResponse
@@ -1292,6 +1303,17 @@ public class CynosdbClient extends AbstractClient{
     public ModifyResourcePackagesDeductionPriorityResponse ModifyResourcePackagesDeductionPriority(ModifyResourcePackagesDeductionPriorityRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyResourcePackagesDeductionPriority", ModifyResourcePackagesDeductionPriorityResponse.class);
+    }
+
+    /**
+     *修改serverless策略
+     * @param req ModifyServerlessStrategyRequest
+     * @return ModifyServerlessStrategyResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyServerlessStrategyResponse ModifyServerlessStrategy(ModifyServerlessStrategyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyServerlessStrategy", ModifyServerlessStrategyResponse.class);
     }
 
     /**

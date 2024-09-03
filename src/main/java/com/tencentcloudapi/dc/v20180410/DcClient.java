@@ -86,8 +86,7 @@ public class DcClient extends AbstractClient{
     }
 
     /**
-     *删除物理专线。
-只能删除处于已连接状态的物理专线。
+     *删除物理专线。只能删除处于已连接状态的物理专线。
      * @param req DeleteDirectConnectRequest
      * @return DeleteDirectConnectResponse
      * @throws TencentCloudSDKException
@@ -98,7 +97,7 @@ public class DcClient extends AbstractClient{
     }
 
     /**
-     *删除专用通道
+     *删除专用通道。
      * @param req DeleteDirectConnectTunnelRequest
      * @return DeleteDirectConnectTunnelResponse
      * @throws TencentCloudSDKException
@@ -231,7 +230,7 @@ public class DcClient extends AbstractClient{
     }
 
     /**
-     *修改专用通道属性
+     *修改专用通道属性。
      * @param req ModifyDirectConnectTunnelAttributeRequest
      * @return ModifyDirectConnectTunnelAttributeResponse
      * @throws TencentCloudSDKException

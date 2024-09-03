@@ -38,6 +38,13 @@ public class InstallLogAgentRequest extends AbstractModel {
     private String KubeletRootDir;
 
     /**
+    * 集群类型 tke/eks，默认tke
+    */
+    @SerializedName("ClusterType")
+    @Expose
+    private String ClusterType;
+
+    /**
      * Get TKE集群ID 
      * @return ClusterId TKE集群ID
      */
@@ -69,6 +76,22 @@ public class InstallLogAgentRequest extends AbstractModel {
         this.KubeletRootDir = KubeletRootDir;
     }
 
+    /**
+     * Get 集群类型 tke/eks，默认tke 
+     * @return ClusterType 集群类型 tke/eks，默认tke
+     */
+    public String getClusterType() {
+        return this.ClusterType;
+    }
+
+    /**
+     * Set 集群类型 tke/eks，默认tke
+     * @param ClusterType 集群类型 tke/eks，默认tke
+     */
+    public void setClusterType(String ClusterType) {
+        this.ClusterType = ClusterType;
+    }
+
     public InstallLogAgentRequest() {
     }
 
@@ -83,6 +106,9 @@ public class InstallLogAgentRequest extends AbstractModel {
         if (source.KubeletRootDir != null) {
             this.KubeletRootDir = new String(source.KubeletRootDir);
         }
+        if (source.ClusterType != null) {
+            this.ClusterType = new String(source.ClusterType);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class InstallLogAgentRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "KubeletRootDir", this.KubeletRootDir);
+        this.setParamSimple(map, prefix + "ClusterType", this.ClusterType);
 
     }
 }

@@ -52,7 +52,7 @@ public class DescribeInstancesRequest extends AbstractModel {
     private Long Limit;
 
     /**
-    * 搜索标签列表
+    * 搜索标签列表，没匹配到则不过滤集群列表
     */
     @SerializedName("SearchTags")
     @Expose
@@ -123,16 +123,16 @@ public class DescribeInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get 搜索标签列表 
-     * @return SearchTags 搜索标签列表
+     * Get 搜索标签列表，没匹配到则不过滤集群列表 
+     * @return SearchTags 搜索标签列表，没匹配到则不过滤集群列表
      */
     public SearchTags [] getSearchTags() {
         return this.SearchTags;
     }
 
     /**
-     * Set 搜索标签列表
-     * @param SearchTags 搜索标签列表
+     * Set 搜索标签列表，没匹配到则不过滤集群列表
+     * @param SearchTags 搜索标签列表，没匹配到则不过滤集群列表
      */
     public void setSearchTags(SearchTags [] SearchTags) {
         this.SearchTags = SearchTags;

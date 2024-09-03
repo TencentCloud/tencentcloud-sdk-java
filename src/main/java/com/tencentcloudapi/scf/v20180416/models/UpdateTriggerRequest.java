@@ -38,7 +38,7 @@ public class UpdateTriggerRequest extends AbstractModel {
     private String TriggerName;
 
     /**
-    * 触发器类型
+    * 触发器类型，目前只支持timer、ckafka、http三种类型
     */
     @SerializedName("Type")
     @Expose
@@ -52,14 +52,14 @@ public class UpdateTriggerRequest extends AbstractModel {
     private String Enable;
 
     /**
-    * 函数的版本，默认为 $LATEST，建议填写 [$DEFAULT](https://cloud.tencent.com/document/product/583/36149#.E9.BB.98.E8.AE.A4.E5.88.AB.E5.90.8D)方便后续进行版本的灰度发布。
+    * 触发器创建时所指向的函数版本或别名，默认为 $LATEST
     */
     @SerializedName("Qualifier")
     @Expose
     private String Qualifier;
 
     /**
-    * 函数的命名空间
+    * 函数的命名空间，默认值为default
     */
     @SerializedName("Namespace")
     @Expose
@@ -119,16 +119,16 @@ public class UpdateTriggerRequest extends AbstractModel {
     }
 
     /**
-     * Get 触发器类型 
-     * @return Type 触发器类型
+     * Get 触发器类型，目前只支持timer、ckafka、http三种类型 
+     * @return Type 触发器类型，目前只支持timer、ckafka、http三种类型
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 触发器类型
-     * @param Type 触发器类型
+     * Set 触发器类型，目前只支持timer、ckafka、http三种类型
+     * @param Type 触发器类型，目前只支持timer、ckafka、http三种类型
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -151,32 +151,32 @@ public class UpdateTriggerRequest extends AbstractModel {
     }
 
     /**
-     * Get 函数的版本，默认为 $LATEST，建议填写 [$DEFAULT](https://cloud.tencent.com/document/product/583/36149#.E9.BB.98.E8.AE.A4.E5.88.AB.E5.90.8D)方便后续进行版本的灰度发布。 
-     * @return Qualifier 函数的版本，默认为 $LATEST，建议填写 [$DEFAULT](https://cloud.tencent.com/document/product/583/36149#.E9.BB.98.E8.AE.A4.E5.88.AB.E5.90.8D)方便后续进行版本的灰度发布。
+     * Get 触发器创建时所指向的函数版本或别名，默认为 $LATEST 
+     * @return Qualifier 触发器创建时所指向的函数版本或别名，默认为 $LATEST
      */
     public String getQualifier() {
         return this.Qualifier;
     }
 
     /**
-     * Set 函数的版本，默认为 $LATEST，建议填写 [$DEFAULT](https://cloud.tencent.com/document/product/583/36149#.E9.BB.98.E8.AE.A4.E5.88.AB.E5.90.8D)方便后续进行版本的灰度发布。
-     * @param Qualifier 函数的版本，默认为 $LATEST，建议填写 [$DEFAULT](https://cloud.tencent.com/document/product/583/36149#.E9.BB.98.E8.AE.A4.E5.88.AB.E5.90.8D)方便后续进行版本的灰度发布。
+     * Set 触发器创建时所指向的函数版本或别名，默认为 $LATEST
+     * @param Qualifier 触发器创建时所指向的函数版本或别名，默认为 $LATEST
      */
     public void setQualifier(String Qualifier) {
         this.Qualifier = Qualifier;
     }
 
     /**
-     * Get 函数的命名空间 
-     * @return Namespace 函数的命名空间
+     * Get 函数的命名空间，默认值为default 
+     * @return Namespace 函数的命名空间，默认值为default
      */
     public String getNamespace() {
         return this.Namespace;
     }
 
     /**
-     * Set 函数的命名空间
-     * @param Namespace 函数的命名空间
+     * Set 函数的命名空间，默认值为default
+     * @param Namespace 函数的命名空间，默认值为default
      */
     public void setNamespace(String Namespace) {
         this.Namespace = Namespace;

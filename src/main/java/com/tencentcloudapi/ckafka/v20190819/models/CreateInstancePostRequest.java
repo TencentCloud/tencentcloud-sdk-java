@@ -150,6 +150,13 @@ public class CreateInstancePostRequest extends AbstractModel {
     private Long PublicNetworkMonthly;
 
     /**
+    * 标签
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get 实例名称，是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-) 
      * @return InstanceName 实例名称，是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
      */
@@ -437,6 +444,22 @@ public class CreateInstancePostRequest extends AbstractModel {
         this.PublicNetworkMonthly = PublicNetworkMonthly;
     }
 
+    /**
+     * Get 标签 
+     * @return Tags 标签
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 标签
+     * @param Tags 标签
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public CreateInstancePostRequest() {
     }
 
@@ -502,6 +525,12 @@ public class CreateInstancePostRequest extends AbstractModel {
         if (source.PublicNetworkMonthly != null) {
             this.PublicNetworkMonthly = new Long(source.PublicNetworkMonthly);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -527,6 +556,7 @@ public class CreateInstancePostRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "ZoneIds.", this.ZoneIds);
         this.setParamSimple(map, prefix + "InstanceNum", this.InstanceNum);
         this.setParamSimple(map, prefix + "PublicNetworkMonthly", this.PublicNetworkMonthly);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

@@ -294,6 +294,14 @@ public class DatasourceInfo extends AbstractModel {
     private String ClusterId;
 
     /**
+    * 数据源名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DbTypeName")
+    @Expose
+    private String DbTypeName;
+
+    /**
      * Get 数据库ID 
      * @return Id 数据库ID
      */
@@ -953,6 +961,26 @@ public class DatasourceInfo extends AbstractModel {
         this.ClusterId = ClusterId;
     }
 
+    /**
+     * Get 数据源名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DbTypeName 数据源名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDbTypeName() {
+        return this.DbTypeName;
+    }
+
+    /**
+     * Set 数据源名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DbTypeName 数据源名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDbTypeName(String DbTypeName) {
+        this.DbTypeName = DbTypeName;
+    }
+
     public DatasourceInfo() {
     }
 
@@ -1072,6 +1100,9 @@ public class DatasourceInfo extends AbstractModel {
         if (source.ClusterId != null) {
             this.ClusterId = new String(source.ClusterId);
         }
+        if (source.DbTypeName != null) {
+            this.DbTypeName = new String(source.DbTypeName);
+        }
     }
 
 
@@ -1114,6 +1145,7 @@ public class DatasourceInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "DataOriginProjectId", this.DataOriginProjectId);
         this.setParamSimple(map, prefix + "DataOriginDatasourceId", this.DataOriginDatasourceId);
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
+        this.setParamSimple(map, prefix + "DbTypeName", this.DbTypeName);
 
     }
 }

@@ -404,6 +404,18 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
+     *前提：预付费集群
+资源级别开启或关闭自动续费
+     * @param req ModifyAutoRenewFlagRequest
+     * @return ModifyAutoRenewFlagResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAutoRenewFlagResponse ModifyAutoRenewFlag(ModifyAutoRenewFlagRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyAutoRenewFlag", ModifyAutoRenewFlagResponse.class);
+    }
+
+    /**
      *修改自动扩缩容规则
      * @param req ModifyAutoScaleStrategyRequest
      * @return ModifyAutoScaleStrategyResponse

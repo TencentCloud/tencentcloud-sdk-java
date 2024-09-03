@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyDirectConnectAttributeRequest extends AbstractModel {
 
     /**
-    * 物理专线的ID。
+    * 物理专线ID。
     */
     @SerializedName("DirectConnectId")
     @Expose
@@ -101,30 +101,30 @@ public class ModifyDirectConnectAttributeRequest extends AbstractModel {
     private String FaultReportContactNumber;
 
     /**
-    * 物理专线申请者补签用户使用协议
+    * 物理专线申请者补签用户使用协议。
     */
     @SerializedName("SignLaw")
     @Expose
     private Boolean SignLaw;
 
     /**
-    * 物理专线带宽
+    * 物理专线带宽。
     */
     @SerializedName("Bandwidth")
     @Expose
     private Long Bandwidth;
 
     /**
-     * Get 物理专线的ID。 
-     * @return DirectConnectId 物理专线的ID。
+     * Get 物理专线ID。 
+     * @return DirectConnectId 物理专线ID。
      */
     public String getDirectConnectId() {
         return this.DirectConnectId;
     }
 
     /**
-     * Set 物理专线的ID。
-     * @param DirectConnectId 物理专线的ID。
+     * Set 物理专线ID。
+     * @param DirectConnectId 物理专线ID。
      */
     public void setDirectConnectId(String DirectConnectId) {
         this.DirectConnectId = DirectConnectId;
@@ -291,32 +291,32 @@ public class ModifyDirectConnectAttributeRequest extends AbstractModel {
     }
 
     /**
-     * Get 物理专线申请者补签用户使用协议 
-     * @return SignLaw 物理专线申请者补签用户使用协议
+     * Get 物理专线申请者补签用户使用协议。 
+     * @return SignLaw 物理专线申请者补签用户使用协议。
      */
     public Boolean getSignLaw() {
         return this.SignLaw;
     }
 
     /**
-     * Set 物理专线申请者补签用户使用协议
-     * @param SignLaw 物理专线申请者补签用户使用协议
+     * Set 物理专线申请者补签用户使用协议。
+     * @param SignLaw 物理专线申请者补签用户使用协议。
      */
     public void setSignLaw(Boolean SignLaw) {
         this.SignLaw = SignLaw;
     }
 
     /**
-     * Get 物理专线带宽 
-     * @return Bandwidth 物理专线带宽
+     * Get 物理专线带宽。 
+     * @return Bandwidth 物理专线带宽。
      */
     public Long getBandwidth() {
         return this.Bandwidth;
     }
 
     /**
-     * Set 物理专线带宽
-     * @param Bandwidth 物理专线带宽
+     * Set 物理专线带宽。
+     * @param Bandwidth 物理专线带宽。
      */
     public void setBandwidth(Long Bandwidth) {
         this.Bandwidth = Bandwidth;

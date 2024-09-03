@@ -325,6 +325,17 @@ public class CfwClient extends AbstractClient{
     }
 
     /**
+     *删除远程运维域名
+     * @param req DeleteRemoteAccessDomainRequest
+     * @return DeleteRemoteAccessDomainResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteRemoteAccessDomainResponse DeleteRemoteAccessDomain(DeleteRemoteAccessDomainRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteRemoteAccessDomain", DeleteRemoteAccessDomainResponse.class);
+    }
+
+    /**
      *DeleteResourceGroup-资产中心资产组删除
      * @param req DeleteResourceGroupRequest
      * @return DeleteResourceGroupResponse

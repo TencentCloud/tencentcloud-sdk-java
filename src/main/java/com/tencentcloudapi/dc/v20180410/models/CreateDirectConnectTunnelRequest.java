@@ -46,7 +46,7 @@ public class CreateDirectConnectTunnelRequest extends AbstractModel {
     private String DirectConnectOwnerAccount;
 
     /**
-    * 网络类型，枚举：VPC、BMVPC、CCN；默认为VPC。VPC：私有网络；BMVPC：黑石网络；CCN：云联网）。
+    * 网络类型，枚举：VPC、CCN、NAT；默认为VPC。VPC：私有网络；CCN：云联网；NAT：NAT网络）。
     */
     @SerializedName("NetworkType")
     @Expose
@@ -60,7 +60,7 @@ public class CreateDirectConnectTunnelRequest extends AbstractModel {
     private String NetworkRegion;
 
     /**
-    * 私有网络统一ID或黑石网络统一ID。
+    * 私有网络统一ID，在NetworkType为VPC时必填，且与专线网关所属的VPCID一致；NetworkType为其它组网类型时可不填，内部会统一处理。
     */
     @SerializedName("VpcId")
     @Expose
@@ -166,6 +166,13 @@ public class CreateDirectConnectTunnelRequest extends AbstractModel {
     private NQAInfo NqaInfo;
 
     /**
+    * 标签键值对
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get 物理专线ID，例如：dc-kd7d06of。 
      * @return DirectConnectId 物理专线ID，例如：dc-kd7d06of。
      */
@@ -218,16 +225,16 @@ public class CreateDirectConnectTunnelRequest extends AbstractModel {
     }
 
     /**
-     * Get 网络类型，枚举：VPC、BMVPC、CCN；默认为VPC。VPC：私有网络；BMVPC：黑石网络；CCN：云联网）。 
-     * @return NetworkType 网络类型，枚举：VPC、BMVPC、CCN；默认为VPC。VPC：私有网络；BMVPC：黑石网络；CCN：云联网）。
+     * Get 网络类型，枚举：VPC、CCN、NAT；默认为VPC。VPC：私有网络；CCN：云联网；NAT：NAT网络）。 
+     * @return NetworkType 网络类型，枚举：VPC、CCN、NAT；默认为VPC。VPC：私有网络；CCN：云联网；NAT：NAT网络）。
      */
     public String getNetworkType() {
         return this.NetworkType;
     }
 
     /**
-     * Set 网络类型，枚举：VPC、BMVPC、CCN；默认为VPC。VPC：私有网络；BMVPC：黑石网络；CCN：云联网）。
-     * @param NetworkType 网络类型，枚举：VPC、BMVPC、CCN；默认为VPC。VPC：私有网络；BMVPC：黑石网络；CCN：云联网）。
+     * Set 网络类型，枚举：VPC、CCN、NAT；默认为VPC。VPC：私有网络；CCN：云联网；NAT：NAT网络）。
+     * @param NetworkType 网络类型，枚举：VPC、CCN、NAT；默认为VPC。VPC：私有网络；CCN：云联网；NAT：NAT网络）。
      */
     public void setNetworkType(String NetworkType) {
         this.NetworkType = NetworkType;
@@ -250,16 +257,16 @@ public class CreateDirectConnectTunnelRequest extends AbstractModel {
     }
 
     /**
-     * Get 私有网络统一ID或黑石网络统一ID。 
-     * @return VpcId 私有网络统一ID或黑石网络统一ID。
+     * Get 私有网络统一ID，在NetworkType为VPC时必填，且与专线网关所属的VPCID一致；NetworkType为其它组网类型时可不填，内部会统一处理。 
+     * @return VpcId 私有网络统一ID，在NetworkType为VPC时必填，且与专线网关所属的VPCID一致；NetworkType为其它组网类型时可不填，内部会统一处理。
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set 私有网络统一ID或黑石网络统一ID。
-     * @param VpcId 私有网络统一ID或黑石网络统一ID。
+     * Set 私有网络统一ID，在NetworkType为VPC时必填，且与专线网关所属的VPCID一致；NetworkType为其它组网类型时可不填，内部会统一处理。
+     * @param VpcId 私有网络统一ID，在NetworkType为VPC时必填，且与专线网关所属的VPCID一致；NetworkType为其它组网类型时可不填，内部会统一处理。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
@@ -493,6 +500,22 @@ public class CreateDirectConnectTunnelRequest extends AbstractModel {
         this.NqaInfo = NqaInfo;
     }
 
+    /**
+     * Get 标签键值对 
+     * @return Tags 标签键值对
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 标签键值对
+     * @param Tags 标签键值对
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public CreateDirectConnectTunnelRequest() {
     }
 
@@ -564,6 +587,12 @@ public class CreateDirectConnectTunnelRequest extends AbstractModel {
         if (source.NqaInfo != null) {
             this.NqaInfo = new NQAInfo(source.NqaInfo);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -591,6 +620,7 @@ public class CreateDirectConnectTunnelRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "NqaEnable", this.NqaEnable);
         this.setParamObj(map, prefix + "BfdInfo.", this.BfdInfo);
         this.setParamObj(map, prefix + "NqaInfo.", this.NqaInfo);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

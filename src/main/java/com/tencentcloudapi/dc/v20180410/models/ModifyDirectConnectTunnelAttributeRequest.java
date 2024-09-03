@@ -24,42 +24,42 @@ import java.util.HashMap;
 public class ModifyDirectConnectTunnelAttributeRequest extends AbstractModel {
 
     /**
-    * 专用通道ID
+    * 专用通道ID。
     */
     @SerializedName("DirectConnectTunnelId")
     @Expose
     private String DirectConnectTunnelId;
 
     /**
-    * 专用通道名称
+    * 专用通道名称。
     */
     @SerializedName("DirectConnectTunnelName")
     @Expose
     private String DirectConnectTunnelName;
 
     /**
-    * 用户侧BGP，包括Asn，AuthKey
+    * 用户侧BGP，包括Asn，AuthKey。
     */
     @SerializedName("BgpPeer")
     @Expose
     private BgpPeer BgpPeer;
 
     /**
-    * 用户侧网段地址
+    * 用户侧网段地址。
     */
     @SerializedName("RouteFilterPrefixes")
     @Expose
     private RouteFilterPrefix [] RouteFilterPrefixes;
 
     /**
-    * 腾讯侧互联IP
+    * 腾讯侧互联IP。
     */
     @SerializedName("TencentAddress")
     @Expose
     private String TencentAddress;
 
     /**
-    * 用户侧互联IP
+    * 用户侧互联IP。
     */
     @SerializedName("CustomerAddress")
     @Expose
@@ -73,103 +73,103 @@ public class ModifyDirectConnectTunnelAttributeRequest extends AbstractModel {
     private Long Bandwidth;
 
     /**
-    * 腾讯侧备用互联IP
+    * 腾讯侧备用互联IP。
     */
     @SerializedName("TencentBackupAddress")
     @Expose
     private String TencentBackupAddress;
 
     /**
-     * Get 专用通道ID 
-     * @return DirectConnectTunnelId 专用通道ID
+     * Get 专用通道ID。 
+     * @return DirectConnectTunnelId 专用通道ID。
      */
     public String getDirectConnectTunnelId() {
         return this.DirectConnectTunnelId;
     }
 
     /**
-     * Set 专用通道ID
-     * @param DirectConnectTunnelId 专用通道ID
+     * Set 专用通道ID。
+     * @param DirectConnectTunnelId 专用通道ID。
      */
     public void setDirectConnectTunnelId(String DirectConnectTunnelId) {
         this.DirectConnectTunnelId = DirectConnectTunnelId;
     }
 
     /**
-     * Get 专用通道名称 
-     * @return DirectConnectTunnelName 专用通道名称
+     * Get 专用通道名称。 
+     * @return DirectConnectTunnelName 专用通道名称。
      */
     public String getDirectConnectTunnelName() {
         return this.DirectConnectTunnelName;
     }
 
     /**
-     * Set 专用通道名称
-     * @param DirectConnectTunnelName 专用通道名称
+     * Set 专用通道名称。
+     * @param DirectConnectTunnelName 专用通道名称。
      */
     public void setDirectConnectTunnelName(String DirectConnectTunnelName) {
         this.DirectConnectTunnelName = DirectConnectTunnelName;
     }
 
     /**
-     * Get 用户侧BGP，包括Asn，AuthKey 
-     * @return BgpPeer 用户侧BGP，包括Asn，AuthKey
+     * Get 用户侧BGP，包括Asn，AuthKey。 
+     * @return BgpPeer 用户侧BGP，包括Asn，AuthKey。
      */
     public BgpPeer getBgpPeer() {
         return this.BgpPeer;
     }
 
     /**
-     * Set 用户侧BGP，包括Asn，AuthKey
-     * @param BgpPeer 用户侧BGP，包括Asn，AuthKey
+     * Set 用户侧BGP，包括Asn，AuthKey。
+     * @param BgpPeer 用户侧BGP，包括Asn，AuthKey。
      */
     public void setBgpPeer(BgpPeer BgpPeer) {
         this.BgpPeer = BgpPeer;
     }
 
     /**
-     * Get 用户侧网段地址 
-     * @return RouteFilterPrefixes 用户侧网段地址
+     * Get 用户侧网段地址。 
+     * @return RouteFilterPrefixes 用户侧网段地址。
      */
     public RouteFilterPrefix [] getRouteFilterPrefixes() {
         return this.RouteFilterPrefixes;
     }
 
     /**
-     * Set 用户侧网段地址
-     * @param RouteFilterPrefixes 用户侧网段地址
+     * Set 用户侧网段地址。
+     * @param RouteFilterPrefixes 用户侧网段地址。
      */
     public void setRouteFilterPrefixes(RouteFilterPrefix [] RouteFilterPrefixes) {
         this.RouteFilterPrefixes = RouteFilterPrefixes;
     }
 
     /**
-     * Get 腾讯侧互联IP 
-     * @return TencentAddress 腾讯侧互联IP
+     * Get 腾讯侧互联IP。 
+     * @return TencentAddress 腾讯侧互联IP。
      */
     public String getTencentAddress() {
         return this.TencentAddress;
     }
 
     /**
-     * Set 腾讯侧互联IP
-     * @param TencentAddress 腾讯侧互联IP
+     * Set 腾讯侧互联IP。
+     * @param TencentAddress 腾讯侧互联IP。
      */
     public void setTencentAddress(String TencentAddress) {
         this.TencentAddress = TencentAddress;
     }
 
     /**
-     * Get 用户侧互联IP 
-     * @return CustomerAddress 用户侧互联IP
+     * Get 用户侧互联IP。 
+     * @return CustomerAddress 用户侧互联IP。
      */
     public String getCustomerAddress() {
         return this.CustomerAddress;
     }
 
     /**
-     * Set 用户侧互联IP
-     * @param CustomerAddress 用户侧互联IP
+     * Set 用户侧互联IP。
+     * @param CustomerAddress 用户侧互联IP。
      */
     public void setCustomerAddress(String CustomerAddress) {
         this.CustomerAddress = CustomerAddress;
@@ -192,16 +192,16 @@ public class ModifyDirectConnectTunnelAttributeRequest extends AbstractModel {
     }
 
     /**
-     * Get 腾讯侧备用互联IP 
-     * @return TencentBackupAddress 腾讯侧备用互联IP
+     * Get 腾讯侧备用互联IP。 
+     * @return TencentBackupAddress 腾讯侧备用互联IP。
      */
     public String getTencentBackupAddress() {
         return this.TencentBackupAddress;
     }
 
     /**
-     * Set 腾讯侧备用互联IP
-     * @param TencentBackupAddress 腾讯侧备用互联IP
+     * Set 腾讯侧备用互联IP。
+     * @param TencentBackupAddress 腾讯侧备用互联IP。
      */
     public void setTencentBackupAddress(String TencentBackupAddress) {
         this.TencentBackupAddress = TencentBackupAddress;

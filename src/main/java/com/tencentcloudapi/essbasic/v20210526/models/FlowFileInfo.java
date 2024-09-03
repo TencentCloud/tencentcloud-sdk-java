@@ -66,7 +66,7 @@ public class FlowFileInfo extends AbstractModel {
     private String FlowType;
 
     /**
-    * 签署流程回调地址，长度不超过255个字符
+    * 已废弃，请使用【应用号配置】中的回调地址统一接收消息
     */
     @SerializedName("CallbackUrl")
     @Expose
@@ -204,17 +204,21 @@ public class FlowFileInfo extends AbstractModel {
     }
 
     /**
-     * Get 签署流程回调地址，长度不超过255个字符 
-     * @return CallbackUrl 签署流程回调地址，长度不超过255个字符
+     * Get 已废弃，请使用【应用号配置】中的回调地址统一接收消息 
+     * @return CallbackUrl 已废弃，请使用【应用号配置】中的回调地址统一接收消息
+     * @deprecated
      */
+    @Deprecated
     public String getCallbackUrl() {
         return this.CallbackUrl;
     }
 
     /**
-     * Set 签署流程回调地址，长度不超过255个字符
-     * @param CallbackUrl 签署流程回调地址，长度不超过255个字符
+     * Set 已废弃，请使用【应用号配置】中的回调地址统一接收消息
+     * @param CallbackUrl 已废弃，请使用【应用号配置】中的回调地址统一接收消息
+     * @deprecated
      */
+    @Deprecated
     public void setCallbackUrl(String CallbackUrl) {
         this.CallbackUrl = CallbackUrl;
     }

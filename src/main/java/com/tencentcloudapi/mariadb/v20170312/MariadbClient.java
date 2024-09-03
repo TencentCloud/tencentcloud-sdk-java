@@ -217,6 +217,17 @@ public class MariadbClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeBinlogTime）用于查询可回档时间范围。
+     * @param req DescribeBinlogTimeRequest
+     * @return DescribeBinlogTimeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBinlogTimeResponse DescribeBinlogTime(DescribeBinlogTimeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBinlogTime", DescribeBinlogTimeResponse.class);
+    }
+
+    /**
      *本接口(DescribeDBEncryptAttributes)用于查询实例数据加密状态。
      * @param req DescribeDBEncryptAttributesRequest
      * @return DescribeDBEncryptAttributesResponse

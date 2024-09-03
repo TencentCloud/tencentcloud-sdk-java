@@ -1703,6 +1703,17 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *查询表的分区详情信息
+     * @param req DescribeTablePartitionsRequest
+     * @return DescribeTablePartitionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTablePartitionsResponse DescribeTablePartitions(DescribeTablePartitionsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTablePartitions", DescribeTablePartitionsResponse.class);
+    }
+
+    /**
      *质量报告-查询表质量详情
      * @param req DescribeTableQualityDetailsRequest
      * @return DescribeTableQualityDetailsResponse

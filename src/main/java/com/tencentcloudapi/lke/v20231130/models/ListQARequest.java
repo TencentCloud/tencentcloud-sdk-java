@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ListQARequest extends AbstractModel {
 
     /**
-    * 机器人ID
+    * 应用ID
     */
     @SerializedName("BotBizId")
     @Expose
@@ -59,7 +59,7 @@ public class ListQARequest extends AbstractModel {
     private Long [] AcceptStatus;
 
     /**
-    * 发布状态(2待发布 3发布中 4已发布 7审核中 8审核失败 9人工申述中 11人工申述失败)
+    * 发布状态(2待发布 3发布中 4已发布 7审核中 8审核失败 9人工申述中 11人工申述失败 12已过期 13超量失效 14超量失效恢复)
     */
     @SerializedName("ReleaseStatus")
     @Expose
@@ -94,16 +94,16 @@ public class ListQARequest extends AbstractModel {
     private String [] QaBizIds;
 
     /**
-     * Get 机器人ID 
-     * @return BotBizId 机器人ID
+     * Get 应用ID 
+     * @return BotBizId 应用ID
      */
     public String getBotBizId() {
         return this.BotBizId;
     }
 
     /**
-     * Set 机器人ID
-     * @param BotBizId 机器人ID
+     * Set 应用ID
+     * @param BotBizId 应用ID
      */
     public void setBotBizId(String BotBizId) {
         this.BotBizId = BotBizId;
@@ -174,16 +174,16 @@ public class ListQARequest extends AbstractModel {
     }
 
     /**
-     * Get 发布状态(2待发布 3发布中 4已发布 7审核中 8审核失败 9人工申述中 11人工申述失败) 
-     * @return ReleaseStatus 发布状态(2待发布 3发布中 4已发布 7审核中 8审核失败 9人工申述中 11人工申述失败)
+     * Get 发布状态(2待发布 3发布中 4已发布 7审核中 8审核失败 9人工申述中 11人工申述失败 12已过期 13超量失效 14超量失效恢复) 
+     * @return ReleaseStatus 发布状态(2待发布 3发布中 4已发布 7审核中 8审核失败 9人工申述中 11人工申述失败 12已过期 13超量失效 14超量失效恢复)
      */
     public Long [] getReleaseStatus() {
         return this.ReleaseStatus;
     }
 
     /**
-     * Set 发布状态(2待发布 3发布中 4已发布 7审核中 8审核失败 9人工申述中 11人工申述失败)
-     * @param ReleaseStatus 发布状态(2待发布 3发布中 4已发布 7审核中 8审核失败 9人工申述中 11人工申述失败)
+     * Set 发布状态(2待发布 3发布中 4已发布 7审核中 8审核失败 9人工申述中 11人工申述失败 12已过期 13超量失效 14超量失效恢复)
+     * @param ReleaseStatus 发布状态(2待发布 3发布中 4已发布 7审核中 8审核失败 9人工申述中 11人工申述失败 12已过期 13超量失效 14超量失效恢复)
      */
     public void setReleaseStatus(Long [] ReleaseStatus) {
         this.ReleaseStatus = ReleaseStatus;

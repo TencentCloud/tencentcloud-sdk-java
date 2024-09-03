@@ -45,6 +45,13 @@ public class CreateVpnGatewaySslClientRequest extends AbstractModel {
     private String [] SslVpnClientNames;
 
     /**
+    * 指定绑定的标签列表
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get SSL-VPN-SERVER 实例ID。 
      * @return SslVpnServerId SSL-VPN-SERVER 实例ID。
      */
@@ -92,6 +99,22 @@ public class CreateVpnGatewaySslClientRequest extends AbstractModel {
         this.SslVpnClientNames = SslVpnClientNames;
     }
 
+    /**
+     * Get 指定绑定的标签列表 
+     * @return Tags 指定绑定的标签列表
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 指定绑定的标签列表
+     * @param Tags 指定绑定的标签列表
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public CreateVpnGatewaySslClientRequest() {
     }
 
@@ -112,6 +135,12 @@ public class CreateVpnGatewaySslClientRequest extends AbstractModel {
                 this.SslVpnClientNames[i] = new String(source.SslVpnClientNames[i]);
             }
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -122,6 +151,7 @@ public class CreateVpnGatewaySslClientRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SslVpnServerId", this.SslVpnServerId);
         this.setParamSimple(map, prefix + "SslVpnClientName", this.SslVpnClientName);
         this.setParamArraySimple(map, prefix + "SslVpnClientNames.", this.SslVpnClientNames);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

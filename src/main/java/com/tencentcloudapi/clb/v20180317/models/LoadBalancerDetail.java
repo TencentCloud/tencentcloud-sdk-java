@@ -39,7 +39,7 @@ public class LoadBalancerDetail extends AbstractModel {
 
     /**
     * 负载均衡实例的网络类型：
-Public：公网属性， Private：内网属性。
+OPEN：公网属性，INTERNAL：内网属性。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LoadBalancerType")
@@ -336,6 +336,31 @@ Public：公网属性， Private：内网属性。
     private String Egress;
 
     /**
+    * 负载均衡的属性
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AttributeFlags")
+    @Expose
+    private String [] AttributeFlags;
+
+    /**
+    * 负载均衡实例的规格类型信息<ul><li> clb.c1.small：简约型规格 </li><li>clb.c2.medium：标准型规格 </li><li> clb.c3.small：高阶型1规格 </li><li> clb.c3.medium：高阶型2规格 </li><li> clb.c4.small：超强型1规格 </li><li> clb.c4.medium：超强型2规格 </li><li> clb.c4.large：超强型3规格 </li><li> clb.c4.xlarge：超强型4规格 </li><li>""：非性能容量型实例</li></ul>
+
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SlaType")
+    @Expose
+    private String SlaType;
+
+    /**
+    * 0：表示非独占型实例，1：表示独占型态实例。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Exclusive")
+    @Expose
+    private Long Exclusive;
+
+    /**
      * Get 负载均衡实例 ID。 
      * @return LoadBalancerId 负载均衡实例 ID。
      */
@@ -369,10 +394,10 @@ Public：公网属性， Private：内网属性。
 
     /**
      * Get 负载均衡实例的网络类型：
-Public：公网属性， Private：内网属性。
+OPEN：公网属性，INTERNAL：内网属性。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return LoadBalancerType 负载均衡实例的网络类型：
-Public：公网属性， Private：内网属性。
+OPEN：公网属性，INTERNAL：内网属性。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLoadBalancerType() {
@@ -381,10 +406,10 @@ Public：公网属性， Private：内网属性。
 
     /**
      * Set 负载均衡实例的网络类型：
-Public：公网属性， Private：内网属性。
+OPEN：公网属性，INTERNAL：内网属性。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param LoadBalancerType 负载均衡实例的网络类型：
-Public：公网属性， Private：内网属性。
+OPEN：公网属性，INTERNAL：内网属性。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLoadBalancerType(String LoadBalancerType) {
@@ -1115,6 +1140,70 @@ Public：公网属性， Private：内网属性。
         this.Egress = Egress;
     }
 
+    /**
+     * Get 负载均衡的属性
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AttributeFlags 负载均衡的属性
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getAttributeFlags() {
+        return this.AttributeFlags;
+    }
+
+    /**
+     * Set 负载均衡的属性
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AttributeFlags 负载均衡的属性
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAttributeFlags(String [] AttributeFlags) {
+        this.AttributeFlags = AttributeFlags;
+    }
+
+    /**
+     * Get 负载均衡实例的规格类型信息<ul><li> clb.c1.small：简约型规格 </li><li>clb.c2.medium：标准型规格 </li><li> clb.c3.small：高阶型1规格 </li><li> clb.c3.medium：高阶型2规格 </li><li> clb.c4.small：超强型1规格 </li><li> clb.c4.medium：超强型2规格 </li><li> clb.c4.large：超强型3规格 </li><li> clb.c4.xlarge：超强型4规格 </li><li>""：非性能容量型实例</li></ul>
+
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SlaType 负载均衡实例的规格类型信息<ul><li> clb.c1.small：简约型规格 </li><li>clb.c2.medium：标准型规格 </li><li> clb.c3.small：高阶型1规格 </li><li> clb.c3.medium：高阶型2规格 </li><li> clb.c4.small：超强型1规格 </li><li> clb.c4.medium：超强型2规格 </li><li> clb.c4.large：超强型3规格 </li><li> clb.c4.xlarge：超强型4规格 </li><li>""：非性能容量型实例</li></ul>
+
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSlaType() {
+        return this.SlaType;
+    }
+
+    /**
+     * Set 负载均衡实例的规格类型信息<ul><li> clb.c1.small：简约型规格 </li><li>clb.c2.medium：标准型规格 </li><li> clb.c3.small：高阶型1规格 </li><li> clb.c3.medium：高阶型2规格 </li><li> clb.c4.small：超强型1规格 </li><li> clb.c4.medium：超强型2规格 </li><li> clb.c4.large：超强型3规格 </li><li> clb.c4.xlarge：超强型4规格 </li><li>""：非性能容量型实例</li></ul>
+
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SlaType 负载均衡实例的规格类型信息<ul><li> clb.c1.small：简约型规格 </li><li>clb.c2.medium：标准型规格 </li><li> clb.c3.small：高阶型1规格 </li><li> clb.c3.medium：高阶型2规格 </li><li> clb.c4.small：超强型1规格 </li><li> clb.c4.medium：超强型2规格 </li><li> clb.c4.large：超强型3规格 </li><li> clb.c4.xlarge：超强型4规格 </li><li>""：非性能容量型实例</li></ul>
+
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSlaType(String SlaType) {
+        this.SlaType = SlaType;
+    }
+
+    /**
+     * Get 0：表示非独占型实例，1：表示独占型态实例。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Exclusive 0：表示非独占型实例，1：表示独占型态实例。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getExclusive() {
+        return this.Exclusive;
+    }
+
+    /**
+     * Set 0：表示非独占型实例，1：表示独占型态实例。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Exclusive 0：表示非独占型实例，1：表示独占型态实例。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExclusive(Long Exclusive) {
+        this.Exclusive = Exclusive;
+    }
+
     public LoadBalancerDetail() {
     }
 
@@ -1252,6 +1341,18 @@ Public：公网属性， Private：内网属性。
         if (source.Egress != null) {
             this.Egress = new String(source.Egress);
         }
+        if (source.AttributeFlags != null) {
+            this.AttributeFlags = new String[source.AttributeFlags.length];
+            for (int i = 0; i < source.AttributeFlags.length; i++) {
+                this.AttributeFlags[i] = new String(source.AttributeFlags[i]);
+            }
+        }
+        if (source.SlaType != null) {
+            this.SlaType = new String(source.SlaType);
+        }
+        if (source.Exclusive != null) {
+            this.Exclusive = new Long(source.Exclusive);
+        }
     }
 
 
@@ -1298,6 +1399,9 @@ Public：公网属性， Private：内网属性。
         this.setParamSimple(map, prefix + "SniSwitch", this.SniSwitch);
         this.setParamSimple(map, prefix + "LoadBalancerDomain", this.LoadBalancerDomain);
         this.setParamSimple(map, prefix + "Egress", this.Egress);
+        this.setParamArraySimple(map, prefix + "AttributeFlags.", this.AttributeFlags);
+        this.setParamSimple(map, prefix + "SlaType", this.SlaType);
+        this.setParamSimple(map, prefix + "Exclusive", this.Exclusive);
 
     }
 }

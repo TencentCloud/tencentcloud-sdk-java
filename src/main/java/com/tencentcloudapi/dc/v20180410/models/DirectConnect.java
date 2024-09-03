@@ -276,6 +276,22 @@ public class DirectConnect extends AbstractModel {
     private Long MinBandwidth;
 
     /**
+    * 建设模式
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Construct")
+    @Expose
+    private Long Construct;
+
+    /**
+    * 物理专线的接入点名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AccessPointName")
+    @Expose
+    private String AccessPointName;
+
+    /**
      * Get 物理专线ID。 
      * @return DirectConnectId 物理专线ID。
      */
@@ -899,6 +915,46 @@ public class DirectConnect extends AbstractModel {
         this.MinBandwidth = MinBandwidth;
     }
 
+    /**
+     * Get 建设模式
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Construct 建设模式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getConstruct() {
+        return this.Construct;
+    }
+
+    /**
+     * Set 建设模式
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Construct 建设模式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setConstruct(Long Construct) {
+        this.Construct = Construct;
+    }
+
+    /**
+     * Get 物理专线的接入点名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AccessPointName 物理专线的接入点名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAccessPointName() {
+        return this.AccessPointName;
+    }
+
+    /**
+     * Set 物理专线的接入点名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AccessPointName 物理专线的接入点名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAccessPointName(String AccessPointName) {
+        this.AccessPointName = AccessPointName;
+    }
+
     public DirectConnect() {
     }
 
@@ -1006,6 +1062,12 @@ public class DirectConnect extends AbstractModel {
         if (source.MinBandwidth != null) {
             this.MinBandwidth = new Long(source.MinBandwidth);
         }
+        if (source.Construct != null) {
+            this.Construct = new Long(source.Construct);
+        }
+        if (source.AccessPointName != null) {
+            this.AccessPointName = new String(source.AccessPointName);
+        }
     }
 
 
@@ -1045,6 +1107,8 @@ public class DirectConnect extends AbstractModel {
         this.setParamSimple(map, prefix + "VlanZeroDirectConnectTunnelCount", this.VlanZeroDirectConnectTunnelCount);
         this.setParamSimple(map, prefix + "OtherVlanDirectConnectTunnelCount", this.OtherVlanDirectConnectTunnelCount);
         this.setParamSimple(map, prefix + "MinBandwidth", this.MinBandwidth);
+        this.setParamSimple(map, prefix + "Construct", this.Construct);
+        this.setParamSimple(map, prefix + "AccessPointName", this.AccessPointName);
 
     }
 }

@@ -65,7 +65,7 @@ public class SlowLogInfoItem extends AbstractModel {
     */
     @SerializedName("QueryTime")
     @Expose
-    private Long QueryTime;
+    private Float QueryTime;
 
     /**
     * 锁时间,单位秒
@@ -73,7 +73,7 @@ public class SlowLogInfoItem extends AbstractModel {
     */
     @SerializedName("LockTime")
     @Expose
-    private Long LockTime;
+    private Float LockTime;
 
     /**
     * 扫描行数
@@ -183,7 +183,7 @@ public class SlowLogInfoItem extends AbstractModel {
      * Get 执行时间,单位秒 
      * @return QueryTime 执行时间,单位秒
      */
-    public Long getQueryTime() {
+    public Float getQueryTime() {
         return this.QueryTime;
     }
 
@@ -191,7 +191,7 @@ public class SlowLogInfoItem extends AbstractModel {
      * Set 执行时间,单位秒
      * @param QueryTime 执行时间,单位秒
      */
-    public void setQueryTime(Long QueryTime) {
+    public void setQueryTime(Float QueryTime) {
         this.QueryTime = QueryTime;
     }
 
@@ -201,7 +201,7 @@ public class SlowLogInfoItem extends AbstractModel {
      * @return LockTime 锁时间,单位秒
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getLockTime() {
+    public Float getLockTime() {
         return this.LockTime;
     }
 
@@ -211,7 +211,7 @@ public class SlowLogInfoItem extends AbstractModel {
      * @param LockTime 锁时间,单位秒
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setLockTime(Long LockTime) {
+    public void setLockTime(Float LockTime) {
         this.LockTime = LockTime;
     }
 
@@ -279,10 +279,10 @@ public class SlowLogInfoItem extends AbstractModel {
             this.UserHost = new String(source.UserHost);
         }
         if (source.QueryTime != null) {
-            this.QueryTime = new Long(source.QueryTime);
+            this.QueryTime = new Float(source.QueryTime);
         }
         if (source.LockTime != null) {
-            this.LockTime = new Long(source.LockTime);
+            this.LockTime = new Float(source.LockTime);
         }
         if (source.RowsExamined != null) {
             this.RowsExamined = new Long(source.RowsExamined);

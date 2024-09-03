@@ -101,6 +101,13 @@ public class ModifyQARequest extends AbstractModel {
     private String ExpireEnd;
 
     /**
+    * 相似问修改信息(相似问没有修改则不传)
+    */
+    @SerializedName("SimilarQuestionModify")
+    @Expose
+    private SimilarQuestionModify SimilarQuestionModify;
+
+    /**
      * Get 应用ID 
      * @return BotBizId 应用ID
      */
@@ -276,6 +283,22 @@ public class ModifyQARequest extends AbstractModel {
         this.ExpireEnd = ExpireEnd;
     }
 
+    /**
+     * Get 相似问修改信息(相似问没有修改则不传) 
+     * @return SimilarQuestionModify 相似问修改信息(相似问没有修改则不传)
+     */
+    public SimilarQuestionModify getSimilarQuestionModify() {
+        return this.SimilarQuestionModify;
+    }
+
+    /**
+     * Set 相似问修改信息(相似问没有修改则不传)
+     * @param SimilarQuestionModify 相似问修改信息(相似问没有修改则不传)
+     */
+    public void setSimilarQuestionModify(SimilarQuestionModify SimilarQuestionModify) {
+        this.SimilarQuestionModify = SimilarQuestionModify;
+    }
+
     public ModifyQARequest() {
     }
 
@@ -320,6 +343,9 @@ public class ModifyQARequest extends AbstractModel {
         if (source.ExpireEnd != null) {
             this.ExpireEnd = new String(source.ExpireEnd);
         }
+        if (source.SimilarQuestionModify != null) {
+            this.SimilarQuestionModify = new SimilarQuestionModify(source.SimilarQuestionModify);
+        }
     }
 
 
@@ -338,6 +364,7 @@ public class ModifyQARequest extends AbstractModel {
         this.setParamSimple(map, prefix + "CateBizId", this.CateBizId);
         this.setParamSimple(map, prefix + "ExpireStart", this.ExpireStart);
         this.setParamSimple(map, prefix + "ExpireEnd", this.ExpireEnd);
+        this.setParamObj(map, prefix + "SimilarQuestionModify.", this.SimilarQuestionModify);
 
     }
 }

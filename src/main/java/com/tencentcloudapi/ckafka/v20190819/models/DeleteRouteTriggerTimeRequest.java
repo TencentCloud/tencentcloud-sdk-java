@@ -24,11 +24,34 @@ import java.util.HashMap;
 public class DeleteRouteTriggerTimeRequest extends AbstractModel {
 
     /**
+    * 实例id
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
     * 修改时间
     */
     @SerializedName("DelayTime")
     @Expose
     private String DelayTime;
+
+    /**
+     * Get 实例id 
+     * @return InstanceId 实例id
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set 实例id
+     * @param InstanceId 实例id
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
 
     /**
      * Get 修改时间 
@@ -54,6 +77,9 @@ public class DeleteRouteTriggerTimeRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DeleteRouteTriggerTimeRequest(DeleteRouteTriggerTimeRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
         if (source.DelayTime != null) {
             this.DelayTime = new String(source.DelayTime);
         }
@@ -64,6 +90,7 @@ public class DeleteRouteTriggerTimeRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "DelayTime", this.DelayTime);
 
     }
