@@ -98,6 +98,17 @@ public class ThpcClient extends AbstractClient{
     }
 
     /**
+     *本接口 (CreateWorkspaces) 用于创建工作空间。
+     * @param req CreateWorkspacesRequest
+     * @return CreateWorkspacesResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateWorkspacesResponse CreateWorkspaces(CreateWorkspacesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateWorkspaces", CreateWorkspacesResponse.class);
+    }
+
+    /**
      *本接口（DeleteCluster）用于删除一个指定的集群。
      * @param req DeleteClusterRequest
      * @return DeleteClusterResponse

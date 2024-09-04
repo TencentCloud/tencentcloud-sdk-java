@@ -24,6 +24,20 @@ import java.util.HashMap;
 public class CreateBackUpScheduleRequest extends AbstractModel {
 
     /**
+    * 集群id
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
+    * 操作类型 create(创建) update(编辑修改)
+    */
+    @SerializedName("OperationType")
+    @Expose
+    private String OperationType;
+
+    /**
     * 编辑时需要传
     */
     @SerializedName("ScheduleId")
@@ -94,6 +108,69 @@ public class CreateBackUpScheduleRequest extends AbstractModel {
     @SerializedName("CosSourceInfo")
     @Expose
     private CosSourceInfo CosSourceInfo;
+
+    /**
+    * 调度任务名
+    */
+    @SerializedName("ScheduleName")
+    @Expose
+    private String ScheduleName;
+
+    /**
+    * 调度信息
+    */
+    @SerializedName("ScheduleInfo")
+    @Expose
+    private ScheduleInfo ScheduleInfo;
+
+    /**
+    * 更新任务状态：
+3-暂停,
+2-删除,
+1-启动
+    */
+    @SerializedName("UpdateStatus")
+    @Expose
+    private Long UpdateStatus;
+
+    /**
+    * 当前任务的cos桶信息
+    */
+    @SerializedName("CosBucket")
+    @Expose
+    private String CosBucket;
+
+    /**
+     * Get 集群id 
+     * @return InstanceId 集群id
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set 集群id
+     * @param InstanceId 集群id
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
+    /**
+     * Get 操作类型 create(创建) update(编辑修改) 
+     * @return OperationType 操作类型 create(创建) update(编辑修改)
+     */
+    public String getOperationType() {
+        return this.OperationType;
+    }
+
+    /**
+     * Set 操作类型 create(创建) update(编辑修改)
+     * @param OperationType 操作类型 create(创建) update(编辑修改)
+     */
+    public void setOperationType(String OperationType) {
+        this.OperationType = OperationType;
+    }
 
     /**
      * Get 编辑时需要传 
@@ -263,6 +340,82 @@ public class CreateBackUpScheduleRequest extends AbstractModel {
         this.CosSourceInfo = CosSourceInfo;
     }
 
+    /**
+     * Get 调度任务名 
+     * @return ScheduleName 调度任务名
+     */
+    public String getScheduleName() {
+        return this.ScheduleName;
+    }
+
+    /**
+     * Set 调度任务名
+     * @param ScheduleName 调度任务名
+     */
+    public void setScheduleName(String ScheduleName) {
+        this.ScheduleName = ScheduleName;
+    }
+
+    /**
+     * Get 调度信息 
+     * @return ScheduleInfo 调度信息
+     */
+    public ScheduleInfo getScheduleInfo() {
+        return this.ScheduleInfo;
+    }
+
+    /**
+     * Set 调度信息
+     * @param ScheduleInfo 调度信息
+     */
+    public void setScheduleInfo(ScheduleInfo ScheduleInfo) {
+        this.ScheduleInfo = ScheduleInfo;
+    }
+
+    /**
+     * Get 更新任务状态：
+3-暂停,
+2-删除,
+1-启动 
+     * @return UpdateStatus 更新任务状态：
+3-暂停,
+2-删除,
+1-启动
+     */
+    public Long getUpdateStatus() {
+        return this.UpdateStatus;
+    }
+
+    /**
+     * Set 更新任务状态：
+3-暂停,
+2-删除,
+1-启动
+     * @param UpdateStatus 更新任务状态：
+3-暂停,
+2-删除,
+1-启动
+     */
+    public void setUpdateStatus(Long UpdateStatus) {
+        this.UpdateStatus = UpdateStatus;
+    }
+
+    /**
+     * Get 当前任务的cos桶信息 
+     * @return CosBucket 当前任务的cos桶信息
+     */
+    public String getCosBucket() {
+        return this.CosBucket;
+    }
+
+    /**
+     * Set 当前任务的cos桶信息
+     * @param CosBucket 当前任务的cos桶信息
+     */
+    public void setCosBucket(String CosBucket) {
+        this.CosBucket = CosBucket;
+    }
+
     public CreateBackUpScheduleRequest() {
     }
 
@@ -271,6 +424,12 @@ public class CreateBackUpScheduleRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreateBackUpScheduleRequest(CreateBackUpScheduleRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.OperationType != null) {
+            this.OperationType = new String(source.OperationType);
+        }
         if (source.ScheduleId != null) {
             this.ScheduleId = new Long(source.ScheduleId);
         }
@@ -304,6 +463,18 @@ public class CreateBackUpScheduleRequest extends AbstractModel {
         if (source.CosSourceInfo != null) {
             this.CosSourceInfo = new CosSourceInfo(source.CosSourceInfo);
         }
+        if (source.ScheduleName != null) {
+            this.ScheduleName = new String(source.ScheduleName);
+        }
+        if (source.ScheduleInfo != null) {
+            this.ScheduleInfo = new ScheduleInfo(source.ScheduleInfo);
+        }
+        if (source.UpdateStatus != null) {
+            this.UpdateStatus = new Long(source.UpdateStatus);
+        }
+        if (source.CosBucket != null) {
+            this.CosBucket = new String(source.CosBucket);
+        }
     }
 
 
@@ -311,6 +482,8 @@ public class CreateBackUpScheduleRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "OperationType", this.OperationType);
         this.setParamSimple(map, prefix + "ScheduleId", this.ScheduleId);
         this.setParamSimple(map, prefix + "WeekDays", this.WeekDays);
         this.setParamSimple(map, prefix + "ExecuteHour", this.ExecuteHour);
@@ -321,6 +494,10 @@ public class CreateBackUpScheduleRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "RestoreType", this.RestoreType);
         this.setParamSimple(map, prefix + "AuthType", this.AuthType);
         this.setParamObj(map, prefix + "CosSourceInfo.", this.CosSourceInfo);
+        this.setParamSimple(map, prefix + "ScheduleName", this.ScheduleName);
+        this.setParamObj(map, prefix + "ScheduleInfo.", this.ScheduleInfo);
+        this.setParamSimple(map, prefix + "UpdateStatus", this.UpdateStatus);
+        this.setParamSimple(map, prefix + "CosBucket", this.CosBucket);
 
     }
 }
