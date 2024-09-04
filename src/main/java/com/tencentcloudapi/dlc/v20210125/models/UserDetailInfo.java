@@ -96,6 +96,14 @@ public class UserDetailInfo extends AbstractModel {
     private Policys RowFilterInfo;
 
     /**
+    * 账号类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AccountType")
+    @Expose
+    private String AccountType;
+
+    /**
      * Get 用户Id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return UserId 用户Id
@@ -275,6 +283,26 @@ public class UserDetailInfo extends AbstractModel {
         this.RowFilterInfo = RowFilterInfo;
     }
 
+    /**
+     * Get 账号类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AccountType 账号类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAccountType() {
+        return this.AccountType;
+    }
+
+    /**
+     * Set 账号类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AccountType 账号类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAccountType(String AccountType) {
+        this.AccountType = AccountType;
+    }
+
     public UserDetailInfo() {
     }
 
@@ -310,6 +338,9 @@ public class UserDetailInfo extends AbstractModel {
         if (source.RowFilterInfo != null) {
             this.RowFilterInfo = new Policys(source.RowFilterInfo);
         }
+        if (source.AccountType != null) {
+            this.AccountType = new String(source.AccountType);
+        }
     }
 
 
@@ -326,6 +357,7 @@ public class UserDetailInfo extends AbstractModel {
         this.setParamObj(map, prefix + "WorkGroupInfo.", this.WorkGroupInfo);
         this.setParamSimple(map, prefix + "UserAlias", this.UserAlias);
         this.setParamObj(map, prefix + "RowFilterInfo.", this.RowFilterInfo);
+        this.setParamSimple(map, prefix + "AccountType", this.AccountType);
 
     }
 }

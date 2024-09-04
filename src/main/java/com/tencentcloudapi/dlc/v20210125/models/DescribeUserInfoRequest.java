@@ -31,7 +31,7 @@ public class DescribeUserInfoRequest extends AbstractModel {
     private String UserId;
 
     /**
-    * 查询的信息类型，Group：工作组 DataAuth：数据权限 EngineAuth:引擎权限
+    * 必传字段，查询的信息类型，Group：工作组 DataAuth：数据权限 EngineAuth:引擎权限 RowFilter：行级别权限
     */
     @SerializedName("Type")
     @Expose
@@ -113,16 +113,16 @@ engine-name：库表的模糊搜索。
     }
 
     /**
-     * Get 查询的信息类型，Group：工作组 DataAuth：数据权限 EngineAuth:引擎权限 
-     * @return Type 查询的信息类型，Group：工作组 DataAuth：数据权限 EngineAuth:引擎权限
+     * Get 必传字段，查询的信息类型，Group：工作组 DataAuth：数据权限 EngineAuth:引擎权限 RowFilter：行级别权限 
+     * @return Type 必传字段，查询的信息类型，Group：工作组 DataAuth：数据权限 EngineAuth:引擎权限 RowFilter：行级别权限
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 查询的信息类型，Group：工作组 DataAuth：数据权限 EngineAuth:引擎权限
-     * @param Type 查询的信息类型，Group：工作组 DataAuth：数据权限 EngineAuth:引擎权限
+     * Set 必传字段，查询的信息类型，Group：工作组 DataAuth：数据权限 EngineAuth:引擎权限 RowFilter：行级别权限
+     * @param Type 必传字段，查询的信息类型，Group：工作组 DataAuth：数据权限 EngineAuth:引擎权限 RowFilter：行级别权限
      */
     public void setType(String Type) {
         this.Type = Type;
