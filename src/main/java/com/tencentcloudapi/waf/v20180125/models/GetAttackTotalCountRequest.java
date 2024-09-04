@@ -38,7 +38,7 @@ public class GetAttackTotalCountRequest extends AbstractModel {
     private String EndTime;
 
     /**
-    * 查询的域名，全部域名不指定
+    * 查询的域名，全部域名填all
     */
     @SerializedName("Domain")
     @Expose
@@ -84,16 +84,16 @@ public class GetAttackTotalCountRequest extends AbstractModel {
     }
 
     /**
-     * Get 查询的域名，全部域名不指定 
-     * @return Domain 查询的域名，全部域名不指定
+     * Get 查询的域名，全部域名填all 
+     * @return Domain 查询的域名，全部域名填all
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set 查询的域名，全部域名不指定
-     * @param Domain 查询的域名，全部域名不指定
+     * Set 查询的域名，全部域名填all
+     * @param Domain 查询的域名，全部域名填all
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;

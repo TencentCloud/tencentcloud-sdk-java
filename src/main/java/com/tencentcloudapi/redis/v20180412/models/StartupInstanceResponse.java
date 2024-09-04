@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class StartupInstanceResponse extends AbstractModel {
 
     /**
-    * 任务id
+    * 该字段已废弃，请通过查询实例接口获取到的状态来判断实例是否已解隔离
     */
     @SerializedName("TaskId")
     @Expose
@@ -38,16 +38,16 @@ public class StartupInstanceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 任务id 
-     * @return TaskId 任务id
+     * Get 该字段已废弃，请通过查询实例接口获取到的状态来判断实例是否已解隔离 
+     * @return TaskId 该字段已废弃，请通过查询实例接口获取到的状态来判断实例是否已解隔离
      */
     public Long getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 任务id
-     * @param TaskId 任务id
+     * Set 该字段已废弃，请通过查询实例接口获取到的状态来判断实例是否已解隔离
+     * @param TaskId 该字段已废弃，请通过查询实例接口获取到的状态来判断实例是否已解隔离
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;

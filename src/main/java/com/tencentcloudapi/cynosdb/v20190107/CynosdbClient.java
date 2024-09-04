@@ -721,6 +721,17 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *本接口(DescribeIsolatedInstances)用于查询回收站实例列表。
+     * @param req DescribeIsolatedInstancesRequest
+     * @return DescribeIsolatedInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeIsolatedInstancesResponse DescribeIsolatedInstances(DescribeIsolatedInstancesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeIsolatedInstances", DescribeIsolatedInstancesResponse.class);
+    }
+
+    /**
      *查询实例维护时间窗
      * @param req DescribeMaintainPeriodRequest
      * @return DescribeMaintainPeriodResponse

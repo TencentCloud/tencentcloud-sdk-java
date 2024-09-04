@@ -233,6 +233,17 @@ public class ThpcClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeWorkspaces）用于查询工作空间列表。
+     * @param req DescribeWorkspacesRequest
+     * @return DescribeWorkspacesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeWorkspacesResponse DescribeWorkspaces(DescribeWorkspacesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeWorkspaces", DescribeWorkspacesResponse.class);
+    }
+
+    /**
      *本接口 (DetachNodes) 用于将一个或者多个计算节点从集群中移除，但是不销毁指定计算资源。
      * @param req DetachNodesRequest
      * @return DetachNodesResponse
@@ -255,6 +266,17 @@ public class ThpcClient extends AbstractClient{
     }
 
     /**
+     *本接口 (ModifyWorkspacesAttribute) 用于修改工作空间的属性（目前只支持修改工作空间的名称）。
+     * @param req ModifyWorkspacesAttributeRequest
+     * @return ModifyWorkspacesAttributeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyWorkspacesAttributeResponse ModifyWorkspacesAttribute(ModifyWorkspacesAttributeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyWorkspacesAttribute", ModifyWorkspacesAttributeResponse.class);
+    }
+
+    /**
      *本接口(SetAutoScalingConfiguration)用于为集群设置集群弹性伸缩配置信息。
      * @param req SetAutoScalingConfigurationRequest
      * @return SetAutoScalingConfigurationResponse
@@ -263,6 +285,17 @@ public class ThpcClient extends AbstractClient{
     public SetAutoScalingConfigurationResponse SetAutoScalingConfiguration(SetAutoScalingConfigurationRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "SetAutoScalingConfiguration", SetAutoScalingConfigurationResponse.class);
+    }
+
+    /**
+     *本接口 (TerminateWorkspaces) 用于主动退还工作空间。
+     * @param req TerminateWorkspacesRequest
+     * @return TerminateWorkspacesResponse
+     * @throws TencentCloudSDKException
+     */
+    public TerminateWorkspacesResponse TerminateWorkspaces(TerminateWorkspacesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "TerminateWorkspaces", TerminateWorkspacesResponse.class);
     }
 
 }
