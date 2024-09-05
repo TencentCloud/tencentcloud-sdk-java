@@ -25,6 +25,7 @@ public class TrainingText extends AbstractModel {
 
     /**
     * 文本ID
+当复刻类型为一句话声音复刻时，生成的TextId有效期为7天，且在成功创建一次复刻任务后失效。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TextId")
@@ -41,8 +42,10 @@ public class TrainingText extends AbstractModel {
 
     /**
      * Get 文本ID
+当复刻类型为一句话声音复刻时，生成的TextId有效期为7天，且在成功创建一次复刻任务后失效。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TextId 文本ID
+当复刻类型为一句话声音复刻时，生成的TextId有效期为7天，且在成功创建一次复刻任务后失效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTextId() {
@@ -51,8 +54,10 @@ public class TrainingText extends AbstractModel {
 
     /**
      * Set 文本ID
+当复刻类型为一句话声音复刻时，生成的TextId有效期为7天，且在成功创建一次复刻任务后失效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TextId 文本ID
+当复刻类型为一句话声音复刻时，生成的TextId有效期为7天，且在成功创建一次复刻任务后失效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTextId(String TextId) {

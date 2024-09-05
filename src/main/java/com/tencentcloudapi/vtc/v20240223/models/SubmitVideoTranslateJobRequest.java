@@ -66,6 +66,13 @@ public class SubmitVideoTranslateJobRequest extends AbstractModel {
     private Long LipSync;
 
     /**
+    * 音色 ID
+    */
+    @SerializedName("VoiceType")
+    @Expose
+    private String VoiceType;
+
+    /**
      * Get 视频地址URL。 
      * @return VideoUrl 视频地址URL。
      */
@@ -161,6 +168,22 @@ public class SubmitVideoTranslateJobRequest extends AbstractModel {
         this.LipSync = LipSync;
     }
 
+    /**
+     * Get 音色 ID 
+     * @return VoiceType 音色 ID
+     */
+    public String getVoiceType() {
+        return this.VoiceType;
+    }
+
+    /**
+     * Set 音色 ID
+     * @param VoiceType 音色 ID
+     */
+    public void setVoiceType(String VoiceType) {
+        this.VoiceType = VoiceType;
+    }
+
     public SubmitVideoTranslateJobRequest() {
     }
 
@@ -187,6 +210,9 @@ public class SubmitVideoTranslateJobRequest extends AbstractModel {
         if (source.LipSync != null) {
             this.LipSync = new Long(source.LipSync);
         }
+        if (source.VoiceType != null) {
+            this.VoiceType = new String(source.VoiceType);
+        }
     }
 
 
@@ -200,6 +226,7 @@ public class SubmitVideoTranslateJobRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "AudioUrl", this.AudioUrl);
         this.setParamSimple(map, prefix + "Confirm", this.Confirm);
         this.setParamSimple(map, prefix + "LipSync", this.LipSync);
+        this.setParamSimple(map, prefix + "VoiceType", this.VoiceType);
 
     }
 }
