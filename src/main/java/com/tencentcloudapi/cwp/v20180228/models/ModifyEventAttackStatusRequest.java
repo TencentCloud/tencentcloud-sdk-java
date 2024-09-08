@@ -38,7 +38,7 @@ public class ModifyEventAttackStatusRequest extends AbstractModel {
     private Boolean All;
 
     /**
-    * 0：待处理 1：已处理 2： 已加白 3： 已忽略 4：已删除 
+    * 0：待处理 1：已处理 3： 已忽略 4：已删除 
     */
     @SerializedName("Status")
     @Expose
@@ -99,16 +99,16 @@ public class ModifyEventAttackStatusRequest extends AbstractModel {
     }
 
     /**
-     * Get 0：待处理 1：已处理 2： 已加白 3： 已忽略 4：已删除  
-     * @return Status 0：待处理 1：已处理 2： 已加白 3： 已忽略 4：已删除 
+     * Get 0：待处理 1：已处理 3： 已忽略 4：已删除  
+     * @return Status 0：待处理 1：已处理 3： 已忽略 4：已删除 
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 0：待处理 1：已处理 2： 已加白 3： 已忽略 4：已删除 
-     * @param Status 0：待处理 1：已处理 2： 已加白 3： 已忽略 4：已删除 
+     * Set 0：待处理 1：已处理 3： 已忽略 4：已删除 
+     * @param Status 0：待处理 1：已处理 3： 已忽略 4：已删除 
      */
     public void setStatus(Long Status) {
         this.Status = Status;

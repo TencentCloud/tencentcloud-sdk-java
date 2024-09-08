@@ -24,18 +24,16 @@ import java.util.HashMap;
 public class CreateOrganizationAuthUrlResponse extends AbstractModel {
 
     /**
-    * “H5”-H5长连接
-"SHORT_H5"- H5短链
-"APP"-小程序
-"PC"-PC浏览器
-链接有效期统一30天
+    * 生成的认证链接。
+
+注： `链接有效期统一30天`
     */
     @SerializedName("AuthUrl")
     @Expose
     private String AuthUrl;
 
     /**
-    * 链接过期时间戳
+    * 链接过期时间，格式为Unix标准时间戳（秒）
     */
     @SerializedName("ExpiredTime")
     @Expose
@@ -49,48 +47,40 @@ public class CreateOrganizationAuthUrlResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get “H5”-H5长连接
-"SHORT_H5"- H5短链
-"APP"-小程序
-"PC"-PC浏览器
-链接有效期统一30天 
-     * @return AuthUrl “H5”-H5长连接
-"SHORT_H5"- H5短链
-"APP"-小程序
-"PC"-PC浏览器
-链接有效期统一30天
+     * Get 生成的认证链接。
+
+注： `链接有效期统一30天` 
+     * @return AuthUrl 生成的认证链接。
+
+注： `链接有效期统一30天`
      */
     public String getAuthUrl() {
         return this.AuthUrl;
     }
 
     /**
-     * Set “H5”-H5长连接
-"SHORT_H5"- H5短链
-"APP"-小程序
-"PC"-PC浏览器
-链接有效期统一30天
-     * @param AuthUrl “H5”-H5长连接
-"SHORT_H5"- H5短链
-"APP"-小程序
-"PC"-PC浏览器
-链接有效期统一30天
+     * Set 生成的认证链接。
+
+注： `链接有效期统一30天`
+     * @param AuthUrl 生成的认证链接。
+
+注： `链接有效期统一30天`
      */
     public void setAuthUrl(String AuthUrl) {
         this.AuthUrl = AuthUrl;
     }
 
     /**
-     * Get 链接过期时间戳 
-     * @return ExpiredTime 链接过期时间戳
+     * Get 链接过期时间，格式为Unix标准时间戳（秒） 
+     * @return ExpiredTime 链接过期时间，格式为Unix标准时间戳（秒）
      */
     public Long getExpiredTime() {
         return this.ExpiredTime;
     }
 
     /**
-     * Set 链接过期时间戳
-     * @param ExpiredTime 链接过期时间戳
+     * Set 链接过期时间，格式为Unix标准时间戳（秒）
+     * @param ExpiredTime 链接过期时间，格式为Unix标准时间戳（秒）
      */
     public void setExpiredTime(Long ExpiredTime) {
         this.ExpiredTime = ExpiredTime;

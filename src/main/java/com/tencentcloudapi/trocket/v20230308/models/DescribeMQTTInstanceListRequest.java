@@ -45,6 +45,13 @@ public class DescribeMQTTInstanceListRequest extends AbstractModel {
     private Long Limit;
 
     /**
+    * 是否包含新控制台集群
+    */
+    @SerializedName("IncludeNew")
+    @Expose
+    private Boolean IncludeNew;
+
+    /**
      * Get 查询条件列表 
      * @return Filters 查询条件列表
      */
@@ -92,6 +99,22 @@ public class DescribeMQTTInstanceListRequest extends AbstractModel {
         this.Limit = Limit;
     }
 
+    /**
+     * Get 是否包含新控制台集群 
+     * @return IncludeNew 是否包含新控制台集群
+     */
+    public Boolean getIncludeNew() {
+        return this.IncludeNew;
+    }
+
+    /**
+     * Set 是否包含新控制台集群
+     * @param IncludeNew 是否包含新控制台集群
+     */
+    public void setIncludeNew(Boolean IncludeNew) {
+        this.IncludeNew = IncludeNew;
+    }
+
     public DescribeMQTTInstanceListRequest() {
     }
 
@@ -112,6 +135,9 @@ public class DescribeMQTTInstanceListRequest extends AbstractModel {
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
+        if (source.IncludeNew != null) {
+            this.IncludeNew = new Boolean(source.IncludeNew);
+        }
     }
 
 
@@ -122,6 +148,7 @@ public class DescribeMQTTInstanceListRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "IncludeNew", this.IncludeNew);
 
     }
 }

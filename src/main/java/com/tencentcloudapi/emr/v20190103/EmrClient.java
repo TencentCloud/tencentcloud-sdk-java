@@ -106,6 +106,17 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
+     *yarn资源调度-部署生效
+     * @param req DeployYarnConfRequest
+     * @return DeployYarnConfResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeployYarnConfResponse DeployYarnConf(DeployYarnConfRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeployYarnConf", DeployYarnConfResponse.class);
+    }
+
+    /**
      *获取自动扩缩容全局配置
      * @param req DescribeAutoScaleGroupGlobalConfRequest
      * @return DescribeAutoScaleGroupGlobalConfResponse
@@ -282,7 +293,7 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
-     *查询YARN资源调度数据信息
+     *查询YARN资源调度数据信息。已废弃，请使用`DescribeYarnQueue`去查询队列信息。
      * @param req DescribeResourceScheduleRequest
      * @return DescribeResourceScheduleResponse
      * @throws TencentCloudSDKException
@@ -338,7 +349,18 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
-     *查看yarn资源调度的调度历史
+     *获取资源调度中的队列信息
+     * @param req DescribeYarnQueueRequest
+     * @return DescribeYarnQueueResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeYarnQueueResponse DescribeYarnQueue(DescribeYarnQueueRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeYarnQueue", DescribeYarnQueueResponse.class);
+    }
+
+    /**
+     *查看yarn资源调度的调度历史。废弃，请使用流程中心查看历史记录。
      * @param req DescribeYarnScheduleHistoryRequest
      * @return DescribeYarnScheduleHistoryResponse
      * @throws TencentCloudSDKException
@@ -427,7 +449,7 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
-     *刷新YARN的动态资源池
+     *刷新YARN的动态资源池。已废弃，请使用`DeployYarnConf`
      * @param req ModifyResourcePoolsRequest
      * @return ModifyResourcePoolsResponse
      * @throws TencentCloudSDKException
@@ -438,7 +460,7 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
-     *修改YARN资源调度的资源配置
+     *修改YARN资源调度的资源配置。已废弃，请使用`ModifyYarnQueueV2`来修改队列配置
      * @param req ModifyResourceScheduleConfigRequest
      * @return ModifyResourceScheduleConfigResponse
      * @throws TencentCloudSDKException
@@ -449,7 +471,7 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
-     *修改了yarn的资源调度器，点击部署生效
+     *修改了yarn的资源调度器，点击部署生效。
      * @param req ModifyResourceSchedulerRequest
      * @return ModifyResourceSchedulerResponse
      * @throws TencentCloudSDKException
@@ -482,7 +504,7 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
-     *部署生效
+     *部署生效。已废弃，请使用`DeployYarnConf`接口进行部署生效
      * @param req ModifyYarnDeployRequest
      * @return ModifyYarnDeployResponse
      * @throws TencentCloudSDKException
@@ -490,6 +512,28 @@ public class EmrClient extends AbstractClient{
     public ModifyYarnDeployResponse ModifyYarnDeploy(ModifyYarnDeployRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyYarnDeploy", ModifyYarnDeployResponse.class);
+    }
+
+    /**
+     *修改资源调度中队列信息
+     * @param req ModifyYarnQueueV2Request
+     * @return ModifyYarnQueueV2Response
+     * @throws TencentCloudSDKException
+     */
+    public ModifyYarnQueueV2Response ModifyYarnQueueV2(ModifyYarnQueueV2Request req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyYarnQueueV2", ModifyYarnQueueV2Response.class);
+    }
+
+    /**
+     *修改YARN资源调度的资源配置
+     * @param req ResetYarnConfigRequest
+     * @return ResetYarnConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public ResetYarnConfigResponse ResetYarnConfig(ResetYarnConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ResetYarnConfig", ResetYarnConfigResponse.class);
     }
 
     /**

@@ -45,14 +45,14 @@ public class ScanDetail extends AbstractModel {
     private String KeyWord;
 
     /**
-    * 关键字在音频的开始时间，从0开始的偏移量，单位为毫秒
+    * 关键字在音频的开始时间，从0开始的偏移量，单位为毫秒，Label=moan时有效
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * 关键字在音频的结束时间，从0开始的偏移量,，单位为毫秒
+    * 关键字在音频的结束时间，从0开始的偏移量,，单位为毫秒，Label=moan时有效
     */
     @SerializedName("EndTime")
     @Expose
@@ -107,32 +107,32 @@ public class ScanDetail extends AbstractModel {
     }
 
     /**
-     * Get 关键字在音频的开始时间，从0开始的偏移量，单位为毫秒 
-     * @return StartTime 关键字在音频的开始时间，从0开始的偏移量，单位为毫秒
+     * Get 关键字在音频的开始时间，从0开始的偏移量，单位为毫秒，Label=moan时有效 
+     * @return StartTime 关键字在音频的开始时间，从0开始的偏移量，单位为毫秒，Label=moan时有效
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 关键字在音频的开始时间，从0开始的偏移量，单位为毫秒
-     * @param StartTime 关键字在音频的开始时间，从0开始的偏移量，单位为毫秒
+     * Set 关键字在音频的开始时间，从0开始的偏移量，单位为毫秒，Label=moan时有效
+     * @param StartTime 关键字在音频的开始时间，从0开始的偏移量，单位为毫秒，Label=moan时有效
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 关键字在音频的结束时间，从0开始的偏移量,，单位为毫秒 
-     * @return EndTime 关键字在音频的结束时间，从0开始的偏移量,，单位为毫秒
+     * Get 关键字在音频的结束时间，从0开始的偏移量,，单位为毫秒，Label=moan时有效 
+     * @return EndTime 关键字在音频的结束时间，从0开始的偏移量,，单位为毫秒，Label=moan时有效
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 关键字在音频的结束时间，从0开始的偏移量,，单位为毫秒
-     * @param EndTime 关键字在音频的结束时间，从0开始的偏移量,，单位为毫秒
+     * Set 关键字在音频的结束时间，从0开始的偏移量,，单位为毫秒，Label=moan时有效
+     * @param EndTime 关键字在音频的结束时间，从0开始的偏移量,，单位为毫秒，Label=moan时有效
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;

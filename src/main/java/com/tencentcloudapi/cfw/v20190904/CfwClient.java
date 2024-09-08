@@ -369,19 +369,6 @@ public class CfwClient extends AbstractClient{
     }
 
     /**
-     *接口废弃
-
-删除防火墙实例
-     * @param req DeleteVpcInstanceRequest
-     * @return DeleteVpcInstanceResponse
-     * @throws TencentCloudSDKException
-     */
-    public DeleteVpcInstanceResponse DeleteVpcInstance(DeleteVpcInstanceRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DeleteVpcInstance", DeleteVpcInstanceResponse.class);
-    }
-
-    /**
      *访问控制列表
      * @param req DescribeAcListsRequest
      * @return DescribeAcListsResponse
