@@ -1456,6 +1456,17 @@ public class EssClient extends AbstractClient{
     }
 
     /**
+     *查询企业认证状态
+     * @param req DescribeOrganizationAuthStatusRequest
+     * @return DescribeOrganizationAuthStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeOrganizationAuthStatusResponse DescribeOrganizationAuthStatus(DescribeOrganizationAuthStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeOrganizationAuthStatus", DescribeOrganizationAuthStatusResponse.class);
+    }
+
+    /**
      *此API接口用来查询加入集团的成员企业信息
 适用场景：子企业在加入集团后，主企业可能通过此接口获取到所有的子企业列表，方便进行展示和统计
      * @param req DescribeOrganizationGroupOrganizationsRequest

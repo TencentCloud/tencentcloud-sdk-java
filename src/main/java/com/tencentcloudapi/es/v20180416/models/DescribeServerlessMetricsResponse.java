@@ -59,6 +59,14 @@ public class DescribeServerlessMetricsResponse extends AbstractModel {
     private Long DocCount;
 
     /**
+    * 指标数据数据
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MetricMapList")
+    @Expose
+    private MetricMapByIndexId [] MetricMapList;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -146,6 +154,26 @@ public class DescribeServerlessMetricsResponse extends AbstractModel {
     }
 
     /**
+     * Get 指标数据数据
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MetricMapList 指标数据数据
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public MetricMapByIndexId [] getMetricMapList() {
+        return this.MetricMapList;
+    }
+
+    /**
+     * Set 指标数据数据
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MetricMapList 指标数据数据
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMetricMapList(MetricMapByIndexId [] MetricMapList) {
+        this.MetricMapList = MetricMapList;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -184,6 +212,12 @@ public class DescribeServerlessMetricsResponse extends AbstractModel {
         if (source.DocCount != null) {
             this.DocCount = new Long(source.DocCount);
         }
+        if (source.MetricMapList != null) {
+            this.MetricMapList = new MetricMapByIndexId[source.MetricMapList.length];
+            for (int i = 0; i < source.MetricMapList.length; i++) {
+                this.MetricMapList[i] = new MetricMapByIndexId(source.MetricMapList[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -199,6 +233,7 @@ public class DescribeServerlessMetricsResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "ReadReqTimes", this.ReadReqTimes);
         this.setParamSimple(map, prefix + "WriteReqTimes", this.WriteReqTimes);
         this.setParamSimple(map, prefix + "DocCount", this.DocCount);
+        this.setParamArrayObj(map, prefix + "MetricMapList.", this.MetricMapList);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

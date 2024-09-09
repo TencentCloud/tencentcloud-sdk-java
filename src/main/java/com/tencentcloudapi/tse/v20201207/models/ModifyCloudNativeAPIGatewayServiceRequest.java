@@ -49,13 +49,6 @@ public class ModifyCloudNativeAPIGatewayServiceRequest extends AbstractModel {
     private String Protocol;
 
     /**
-    * 请求路径
-    */
-    @SerializedName("Path")
-    @Expose
-    private String Path;
-
-    /**
     * 超时时间，单位ms
     */
     @SerializedName("Timeout")
@@ -94,6 +87,13 @@ public class ModifyCloudNativeAPIGatewayServiceRequest extends AbstractModel {
     @SerializedName("ID")
     @Expose
     private String ID;
+
+    /**
+    * 请求路径
+    */
+    @SerializedName("Path")
+    @Expose
+    private String Path;
 
     /**
      * Get 网关ID 
@@ -157,22 +157,6 @@ public class ModifyCloudNativeAPIGatewayServiceRequest extends AbstractModel {
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
-    }
-
-    /**
-     * Get 请求路径 
-     * @return Path 请求路径
-     */
-    public String getPath() {
-        return this.Path;
-    }
-
-    /**
-     * Set 请求路径
-     * @param Path 请求路径
-     */
-    public void setPath(String Path) {
-        this.Path = Path;
     }
 
     /**
@@ -275,6 +259,22 @@ public class ModifyCloudNativeAPIGatewayServiceRequest extends AbstractModel {
         this.ID = ID;
     }
 
+    /**
+     * Get 请求路径 
+     * @return Path 请求路径
+     */
+    public String getPath() {
+        return this.Path;
+    }
+
+    /**
+     * Set 请求路径
+     * @param Path 请求路径
+     */
+    public void setPath(String Path) {
+        this.Path = Path;
+    }
+
     public ModifyCloudNativeAPIGatewayServiceRequest() {
     }
 
@@ -292,9 +292,6 @@ public class ModifyCloudNativeAPIGatewayServiceRequest extends AbstractModel {
         if (source.Protocol != null) {
             this.Protocol = new String(source.Protocol);
         }
-        if (source.Path != null) {
-            this.Path = new String(source.Path);
-        }
         if (source.Timeout != null) {
             this.Timeout = new Long(source.Timeout);
         }
@@ -310,6 +307,9 @@ public class ModifyCloudNativeAPIGatewayServiceRequest extends AbstractModel {
         if (source.ID != null) {
             this.ID = new String(source.ID);
         }
+        if (source.Path != null) {
+            this.Path = new String(source.Path);
+        }
     }
 
 
@@ -320,12 +320,12 @@ public class ModifyCloudNativeAPIGatewayServiceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "GatewayId", this.GatewayId);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Protocol", this.Protocol);
-        this.setParamSimple(map, prefix + "Path", this.Path);
         this.setParamSimple(map, prefix + "Timeout", this.Timeout);
         this.setParamSimple(map, prefix + "Retries", this.Retries);
         this.setParamSimple(map, prefix + "UpstreamType", this.UpstreamType);
         this.setParamObj(map, prefix + "UpstreamInfo.", this.UpstreamInfo);
         this.setParamSimple(map, prefix + "ID", this.ID);
+        this.setParamSimple(map, prefix + "Path", this.Path);
 
     }
 }

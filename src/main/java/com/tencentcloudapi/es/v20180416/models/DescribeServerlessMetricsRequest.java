@@ -52,6 +52,13 @@ public class DescribeServerlessMetricsRequest extends AbstractModel {
     private Long DurationType;
 
     /**
+    * 索引数据
+    */
+    @SerializedName("BatchIndexList")
+    @Expose
+    private String [] BatchIndexList;
+
+    /**
      * Get space空间id 
      * @return SpaceId space空间id
      */
@@ -115,6 +122,22 @@ public class DescribeServerlessMetricsRequest extends AbstractModel {
         this.DurationType = DurationType;
     }
 
+    /**
+     * Get 索引数据 
+     * @return BatchIndexList 索引数据
+     */
+    public String [] getBatchIndexList() {
+        return this.BatchIndexList;
+    }
+
+    /**
+     * Set 索引数据
+     * @param BatchIndexList 索引数据
+     */
+    public void setBatchIndexList(String [] BatchIndexList) {
+        this.BatchIndexList = BatchIndexList;
+    }
+
     public DescribeServerlessMetricsRequest() {
     }
 
@@ -138,6 +161,12 @@ public class DescribeServerlessMetricsRequest extends AbstractModel {
         if (source.DurationType != null) {
             this.DurationType = new Long(source.DurationType);
         }
+        if (source.BatchIndexList != null) {
+            this.BatchIndexList = new String[source.BatchIndexList.length];
+            for (int i = 0; i < source.BatchIndexList.length; i++) {
+                this.BatchIndexList[i] = new String(source.BatchIndexList[i]);
+            }
+        }
     }
 
 
@@ -149,6 +178,7 @@ public class DescribeServerlessMetricsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "IndexId", this.IndexId);
         this.setParamArraySimple(map, prefix + "MetricType.", this.MetricType);
         this.setParamSimple(map, prefix + "DurationType", this.DurationType);
+        this.setParamArraySimple(map, prefix + "BatchIndexList.", this.BatchIndexList);
 
     }
 }

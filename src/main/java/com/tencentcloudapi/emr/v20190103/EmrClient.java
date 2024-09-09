@@ -304,6 +304,17 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
+     *YARN资源调度-变更详情
+     * @param req DescribeResourceScheduleDiffDetailRequest
+     * @return DescribeResourceScheduleDiffDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeResourceScheduleDiffDetailResponse DescribeResourceScheduleDiffDetail(DescribeResourceScheduleDiffDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeResourceScheduleDiffDetail", DescribeResourceScheduleDiffDetailResponse.class);
+    }
+
+    /**
      *查询服务进程信息
      * @param req DescribeServiceNodeInfosRequest
      * @return DescribeServiceNodeInfosResponse
