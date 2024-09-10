@@ -39,6 +39,39 @@ public class VdbClient extends AbstractClient{
     }
 
     /**
+     *本接口 (AssociateSecurityGroups) 用于安全组批量绑定多个指定实例。
+     * @param req AssociateSecurityGroupsRequest
+     * @return AssociateSecurityGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public AssociateSecurityGroupsResponse AssociateSecurityGroups(AssociateSecurityGroupsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AssociateSecurityGroups", AssociateSecurityGroupsResponse.class);
+    }
+
+    /**
+     *本接口(DescribeDBSecurityGroups)用于查询实例的安全组详情。
+     * @param req DescribeDBSecurityGroupsRequest
+     * @return DescribeDBSecurityGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBSecurityGroupsResponse DescribeDBSecurityGroups(DescribeDBSecurityGroupsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDBSecurityGroups", DescribeDBSecurityGroupsResponse.class);
+    }
+
+    /**
+     *实例节点列表
+     * @param req DescribeInstanceNodesRequest
+     * @return DescribeInstanceNodesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceNodesResponse DescribeInstanceNodes(DescribeInstanceNodesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeInstanceNodes", DescribeInstanceNodesResponse.class);
+    }
+
+    /**
      *查询实例列表
      * @param req DescribeInstancesRequest
      * @return DescribeInstancesResponse
@@ -47,6 +80,28 @@ public class VdbClient extends AbstractClient{
     public DescribeInstancesResponse DescribeInstances(DescribeInstancesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeInstances", DescribeInstancesResponse.class);
+    }
+
+    /**
+     *本接口(DisassociateSecurityGroups)用于安全组批量解绑实例。
+     * @param req DisassociateSecurityGroupsRequest
+     * @return DisassociateSecurityGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisassociateSecurityGroupsResponse DisassociateSecurityGroups(DisassociateSecurityGroupsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DisassociateSecurityGroups", DisassociateSecurityGroupsResponse.class);
+    }
+
+    /**
+     *本接口(ModifyDBInstanceSecurityGroups)用于修改实例绑定的安全组。
+     * @param req ModifyDBInstanceSecurityGroupsRequest
+     * @return ModifyDBInstanceSecurityGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDBInstanceSecurityGroupsResponse ModifyDBInstanceSecurityGroups(ModifyDBInstanceSecurityGroupsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDBInstanceSecurityGroups", ModifyDBInstanceSecurityGroupsResponse.class);
     }
 
 }

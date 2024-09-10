@@ -277,6 +277,14 @@ public class Task extends AbstractModel {
     private String TaskIssue;
 
     /**
+    * region信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TaskRegionName")
+    @Expose
+    private String TaskRegionName;
+
+    /**
      * Get 任务ID 
      * @return TaskId 任务ID
      */
@@ -892,6 +900,26 @@ public class Task extends AbstractModel {
         this.TaskIssue = TaskIssue;
     }
 
+    /**
+     * Get region信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TaskRegionName region信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTaskRegionName() {
+        return this.TaskRegionName;
+    }
+
+    /**
+     * Set region信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TaskRegionName region信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTaskRegionName(String TaskRegionName) {
+        this.TaskRegionName = TaskRegionName;
+    }
+
     public Task() {
     }
 
@@ -1017,6 +1045,9 @@ public class Task extends AbstractModel {
         if (source.TaskIssue != null) {
             this.TaskIssue = new String(source.TaskIssue);
         }
+        if (source.TaskRegionName != null) {
+            this.TaskRegionName = new String(source.TaskRegionName);
+        }
     }
 
 
@@ -1057,6 +1088,7 @@ public class Task extends AbstractModel {
         this.setParamSimple(map, prefix + "TaskPlanEndTime", this.TaskPlanEndTime);
         this.setParamArrayObj(map, prefix + "TaskOrg.", this.TaskOrg);
         this.setParamSimple(map, prefix + "TaskIssue", this.TaskIssue);
+        this.setParamSimple(map, prefix + "TaskRegionName", this.TaskRegionName);
 
     }
 }

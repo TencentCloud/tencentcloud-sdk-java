@@ -348,6 +348,17 @@ public class EsClient extends AbstractClient{
     }
 
     /**
+     *space维度的kibana获取登录token
+     * @param req DescribeSpaceKibanaToolsRequest
+     * @return DescribeSpaceKibanaToolsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSpaceKibanaToolsResponse DescribeSpaceKibanaTools(DescribeSpaceKibanaToolsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSpaceKibanaTools", DescribeSpaceKibanaToolsResponse.class);
+    }
+
+    /**
      *查询快照信息接口
      * @param req DescribeUserCosSnapshotListRequest
      * @return DescribeUserCosSnapshotListResponse

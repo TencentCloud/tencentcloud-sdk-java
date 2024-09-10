@@ -84,6 +84,19 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
+     *本接口（CreateSLInstance）用于创建 Lite HBase 实例
+- 接口调用成功，会创建Lite HBase实例，创建实例请求成功会返回创建实例的 InstaceId 和请求的 RequestID。
+- 接口为异步接口，接口返回时操作并未立即完成，实例操作结果可以通过调用 DescribeInstancesList 查看当前实例的 StatusDesc 状态。
+     * @param req CreateSLInstanceRequest
+     * @return CreateSLInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateSLInstanceResponse CreateSLInstance(CreateSLInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateSLInstance", CreateSLInstanceResponse.class);
+    }
+
+    /**
      *删除自动扩缩容规则，后台销毁根据该规则扩缩容出来的节点
      * @param req DeleteAutoScaleStrategyRequest
      * @return DeleteAutoScaleStrategyResponse
@@ -315,6 +328,28 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeSLInstance）用于查询 Lite HBase 实例基本信息
+     * @param req DescribeSLInstanceRequest
+     * @return DescribeSLInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSLInstanceResponse DescribeSLInstance(DescribeSLInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSLInstance", DescribeSLInstanceResponse.class);
+    }
+
+    /**
+     *本接口（DescribeSLInstanceList）用于查询 Lite HBase 实例列表详细信息
+     * @param req DescribeSLInstanceListRequest
+     * @return DescribeSLInstanceListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSLInstanceListResponse DescribeSLInstanceList(DescribeSLInstanceListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSLInstanceList", DescribeSLInstanceListResponse.class);
+    }
+
+    /**
      *查询服务进程信息
      * @param req DescribeServiceNodeInfosRequest
      * @return DescribeServiceNodeInfosResponse
@@ -504,6 +539,19 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
+     *本接口（ModifySLInstance）用于修改Lite HBase 实例节点数。
+- 接口调用成功，会创建Lite HBase实例，创建实例请求成功会返回请求的 RequestID。
+- 接口为异步接口，接口返回时操作并未立即完成，实例操作结果可以通过调用 DescribeInstancesList 查看当前实例的 StatusDesc 状态。
+     * @param req ModifySLInstanceRequest
+     * @return ModifySLInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifySLInstanceResponse ModifySLInstance(ModifySLInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifySLInstance", ModifySLInstanceResponse.class);
+    }
+
+    /**
      *修改用户密码（用户管理）
      * @param req ModifyUserManagerPwdRequest
      * @return ModifyUserManagerPwdResponse
@@ -622,6 +670,17 @@ public class EmrClient extends AbstractClient{
     public TerminateInstanceResponse TerminateInstance(TerminateInstanceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "TerminateInstance", TerminateInstanceResponse.class);
+    }
+
+    /**
+     *本接口（TerminateSLInstance）用于销毁 Lite HBase 实例
+     * @param req TerminateSLInstanceRequest
+     * @return TerminateSLInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public TerminateSLInstanceResponse TerminateSLInstance(TerminateSLInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "TerminateSLInstance", TerminateSLInstanceResponse.class);
     }
 
     /**

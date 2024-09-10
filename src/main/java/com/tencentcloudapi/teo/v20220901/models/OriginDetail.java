@@ -29,7 +29,6 @@ public class OriginDetail extends AbstractModel {
 <li>COS：腾讯云 COS 对象存储源站；</li>
 <li>AWS_S3：AWS S3 对象存储源站；</li>
 <li>ORIGIN_GROUP：源站组类型源站；</li>
-<li>VODEO：云点播-混合云版；</li>
 <li>VOD：云点播；</li>
 <li>SPACE：源站卸载，当前仅白名单开放；</li>
 <li>LB：负载均衡，当前仅白名单开放。</li>
@@ -45,7 +44,6 @@ public class OriginDetail extends AbstractModel {
 <li>当 OriginType = AWS_S3，该参数为 S3 桶的访问域名；</li>
 <li>当 OriginType = ORIGIN_GROUP 时，该参数为源站组 ID；</li>
 <li>当 OriginType = VOD 时，该参数请填写云点播应用 ID ；</li>
-<li>当 OriginType = VODEO 时，如果 VodeoDistributionRange = ALL，则该参数为 "all-buckets-in-vodeo-application"；如果 VodeoDistributionRange = Bucket，则该参数为对应存储桶域名。</li>
     */
     @SerializedName("Origin")
     @Expose
@@ -117,7 +115,6 @@ public class OriginDetail extends AbstractModel {
 <li>COS：腾讯云 COS 对象存储源站；</li>
 <li>AWS_S3：AWS S3 对象存储源站；</li>
 <li>ORIGIN_GROUP：源站组类型源站；</li>
-<li>VODEO：云点播-混合云版；</li>
 <li>VOD：云点播；</li>
 <li>SPACE：源站卸载，当前仅白名单开放；</li>
 <li>LB：负载均衡，当前仅白名单开放。</li> 
@@ -126,7 +123,6 @@ public class OriginDetail extends AbstractModel {
 <li>COS：腾讯云 COS 对象存储源站；</li>
 <li>AWS_S3：AWS S3 对象存储源站；</li>
 <li>ORIGIN_GROUP：源站组类型源站；</li>
-<li>VODEO：云点播-混合云版；</li>
 <li>VOD：云点播；</li>
 <li>SPACE：源站卸载，当前仅白名单开放；</li>
 <li>LB：负载均衡，当前仅白名单开放。</li>
@@ -141,7 +137,6 @@ public class OriginDetail extends AbstractModel {
 <li>COS：腾讯云 COS 对象存储源站；</li>
 <li>AWS_S3：AWS S3 对象存储源站；</li>
 <li>ORIGIN_GROUP：源站组类型源站；</li>
-<li>VODEO：云点播-混合云版；</li>
 <li>VOD：云点播；</li>
 <li>SPACE：源站卸载，当前仅白名单开放；</li>
 <li>LB：负载均衡，当前仅白名单开放。</li>
@@ -150,7 +145,6 @@ public class OriginDetail extends AbstractModel {
 <li>COS：腾讯云 COS 对象存储源站；</li>
 <li>AWS_S3：AWS S3 对象存储源站；</li>
 <li>ORIGIN_GROUP：源站组类型源站；</li>
-<li>VODEO：云点播-混合云版；</li>
 <li>VOD：云点播；</li>
 <li>SPACE：源站卸载，当前仅白名单开放；</li>
 <li>LB：负载均衡，当前仅白名单开放。</li>
@@ -165,15 +159,13 @@ public class OriginDetail extends AbstractModel {
 <li>当 OriginType = COS 时，该参数为 COS 桶的访问域名；</li>
 <li>当 OriginType = AWS_S3，该参数为 S3 桶的访问域名；</li>
 <li>当 OriginType = ORIGIN_GROUP 时，该参数为源站组 ID；</li>
-<li>当 OriginType = VOD 时，该参数请填写云点播应用 ID ；</li>
-<li>当 OriginType = VODEO 时，如果 VodeoDistributionRange = ALL，则该参数为 "all-buckets-in-vodeo-application"；如果 VodeoDistributionRange = Bucket，则该参数为对应存储桶域名。</li> 
+<li>当 OriginType = VOD 时，该参数请填写云点播应用 ID ；</li> 
      * @return Origin 源站地址，根据 OriginType 的取值分为以下情况：
 <li>当 OriginType = IP_DOMAIN 时，该参数为 IPv4、IPv6 地址或域名；</li>
 <li>当 OriginType = COS 时，该参数为 COS 桶的访问域名；</li>
 <li>当 OriginType = AWS_S3，该参数为 S3 桶的访问域名；</li>
 <li>当 OriginType = ORIGIN_GROUP 时，该参数为源站组 ID；</li>
 <li>当 OriginType = VOD 时，该参数请填写云点播应用 ID ；</li>
-<li>当 OriginType = VODEO 时，如果 VodeoDistributionRange = ALL，则该参数为 "all-buckets-in-vodeo-application"；如果 VodeoDistributionRange = Bucket，则该参数为对应存储桶域名。</li>
      */
     public String getOrigin() {
         return this.Origin;
@@ -186,14 +178,12 @@ public class OriginDetail extends AbstractModel {
 <li>当 OriginType = AWS_S3，该参数为 S3 桶的访问域名；</li>
 <li>当 OriginType = ORIGIN_GROUP 时，该参数为源站组 ID；</li>
 <li>当 OriginType = VOD 时，该参数请填写云点播应用 ID ；</li>
-<li>当 OriginType = VODEO 时，如果 VodeoDistributionRange = ALL，则该参数为 "all-buckets-in-vodeo-application"；如果 VodeoDistributionRange = Bucket，则该参数为对应存储桶域名。</li>
      * @param Origin 源站地址，根据 OriginType 的取值分为以下情况：
 <li>当 OriginType = IP_DOMAIN 时，该参数为 IPv4、IPv6 地址或域名；</li>
 <li>当 OriginType = COS 时，该参数为 COS 桶的访问域名；</li>
 <li>当 OriginType = AWS_S3，该参数为 S3 桶的访问域名；</li>
 <li>当 OriginType = ORIGIN_GROUP 时，该参数为源站组 ID；</li>
 <li>当 OriginType = VOD 时，该参数请填写云点播应用 ID ；</li>
-<li>当 OriginType = VODEO 时，如果 VodeoDistributionRange = ALL，则该参数为 "all-buckets-in-vodeo-application"；如果 VodeoDistributionRange = Bucket，则该参数为对应存储桶域名。</li>
      */
     public void setOrigin(String Origin) {
         this.Origin = Origin;
@@ -298,7 +288,9 @@ public class OriginDetail extends AbstractModel {
     /**
      * Get MO 子应用 ID 
      * @return VodeoSubAppId MO 子应用 ID
+     * @deprecated
      */
+    @Deprecated
     public Long getVodeoSubAppId() {
         return this.VodeoSubAppId;
     }
@@ -306,7 +298,9 @@ public class OriginDetail extends AbstractModel {
     /**
      * Set MO 子应用 ID
      * @param VodeoSubAppId MO 子应用 ID
+     * @deprecated
      */
+    @Deprecated
     public void setVodeoSubAppId(Long VodeoSubAppId) {
         this.VodeoSubAppId = VodeoSubAppId;
     }
@@ -314,7 +308,9 @@ public class OriginDetail extends AbstractModel {
     /**
      * Get MO 分发范围，取值有： <li>All：全部</li> <li>Bucket：存储桶</li> 
      * @return VodeoDistributionRange MO 分发范围，取值有： <li>All：全部</li> <li>Bucket：存储桶</li>
+     * @deprecated
      */
+    @Deprecated
     public String getVodeoDistributionRange() {
         return this.VodeoDistributionRange;
     }
@@ -322,7 +318,9 @@ public class OriginDetail extends AbstractModel {
     /**
      * Set MO 分发范围，取值有： <li>All：全部</li> <li>Bucket：存储桶</li>
      * @param VodeoDistributionRange MO 分发范围，取值有： <li>All：全部</li> <li>Bucket：存储桶</li>
+     * @deprecated
      */
+    @Deprecated
     public void setVodeoDistributionRange(String VodeoDistributionRange) {
         this.VodeoDistributionRange = VodeoDistributionRange;
     }
@@ -330,7 +328,9 @@ public class OriginDetail extends AbstractModel {
     /**
      * Get MO 存储桶 ID，分发范围(DistributionRange)为存储桶(Bucket)时必填 
      * @return VodeoBucketId MO 存储桶 ID，分发范围(DistributionRange)为存储桶(Bucket)时必填
+     * @deprecated
      */
+    @Deprecated
     public String getVodeoBucketId() {
         return this.VodeoBucketId;
     }
@@ -338,7 +338,9 @@ public class OriginDetail extends AbstractModel {
     /**
      * Set MO 存储桶 ID，分发范围(DistributionRange)为存储桶(Bucket)时必填
      * @param VodeoBucketId MO 存储桶 ID，分发范围(DistributionRange)为存储桶(Bucket)时必填
+     * @deprecated
      */
+    @Deprecated
     public void setVodeoBucketId(String VodeoBucketId) {
         this.VodeoBucketId = VodeoBucketId;
     }

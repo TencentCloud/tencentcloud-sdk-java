@@ -1320,6 +1320,27 @@ Web链接访问后，会根据子客企业(**Agent中ProxyOrganizationOpenId表�
     }
 
     /**
+     *获取个人用户认证证书图片下载URL
+
+个人用户认证证书图片样式如下图
+
+![image](https://dyn.ess.tencent.cn/guide/capi/CreatePersonAuthCertificateImage.png)
+
+注:  
+<ul>
+<li>只能获取个人用户证明图片, 企业员工的暂不支持</li>
+<li>处方单等特殊场景专用，此接口为白名单功能，使用前请联系对接的客户经理沟通。  </li>
+</ul>
+     * @param req CreatePersonAuthCertificateImageRequest
+     * @return CreatePersonAuthCertificateImageResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreatePersonAuthCertificateImageResponse CreatePersonAuthCertificateImage(CreatePersonAuthCertificateImageRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreatePersonAuthCertificateImage", CreatePersonAuthCertificateImageResponse.class);
+    }
+
+    /**
      *1. 可以**通过图片**为子客企业代创建印章，图片最大5MB
 
 2. 可以**系统创建**子客企业代创建印章, 系统创建的印章样子下图(样式可以调整)

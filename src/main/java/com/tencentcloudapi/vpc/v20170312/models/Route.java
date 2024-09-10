@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class Route extends AbstractModel {
 
     /**
-    * 目的网段，取值不能在私有网络网段内，例如：112.20.51.0/24。
+    * 创建IPv4目的网段，取值不能在私有网络网段内，例如：112.20.51.0/24。
     */
     @SerializedName("DestinationCidrBlock")
     @Expose
@@ -37,10 +37,13 @@ VPN：VPN网关；
 DIRECTCONNECT：专线网关；
 PEERCONNECTION：对等连接；
 HAVIP：高可用虚拟IP；
-NAT：NAT网关; 
+NAT：公网NAT网关; 
 NORMAL_CVM：普通云服务器；
 EIP：云服务器的公网IP；
-LOCAL_GATEWAY：本地网关。
+LOCAL_GATEWAY：CDC本地网关；
+INTRANAT：私网NAT网关；
+USER_CCN；云联网（自定义路由）。
+
     */
     @SerializedName("GatewayType")
     @Expose
@@ -97,7 +100,7 @@ CCN：云联网路由，系统默认下发，不可编辑与删除。
     private String RouteTableId;
 
     /**
-    * 目的IPv6网段，取值不能在私有网络网段内，例如：2402:4e00:1000:810b::/64。
+    * 创建IPv6目的网段，取值不能在私有网络网段内，例如：2402:4e00:1000:810b::/64。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DestinationIpv6CidrBlock")
@@ -112,7 +115,7 @@ CCN：云联网路由，系统默认下发，不可编辑与删除。
     private String RouteItemId;
 
     /**
-    * 路由策略是否发布到云联网。
+    * 路由策略是否发布到云联网。该字段仅做出参使用，作为入参字段时此参数不生效。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PublishedToVbc")
@@ -127,16 +130,16 @@ CCN：云联网路由，系统默认下发，不可编辑与删除。
     private String CreatedTime;
 
     /**
-     * Get 目的网段，取值不能在私有网络网段内，例如：112.20.51.0/24。 
-     * @return DestinationCidrBlock 目的网段，取值不能在私有网络网段内，例如：112.20.51.0/24。
+     * Get 创建IPv4目的网段，取值不能在私有网络网段内，例如：112.20.51.0/24。 
+     * @return DestinationCidrBlock 创建IPv4目的网段，取值不能在私有网络网段内，例如：112.20.51.0/24。
      */
     public String getDestinationCidrBlock() {
         return this.DestinationCidrBlock;
     }
 
     /**
-     * Set 目的网段，取值不能在私有网络网段内，例如：112.20.51.0/24。
-     * @param DestinationCidrBlock 目的网段，取值不能在私有网络网段内，例如：112.20.51.0/24。
+     * Set 创建IPv4目的网段，取值不能在私有网络网段内，例如：112.20.51.0/24。
+     * @param DestinationCidrBlock 创建IPv4目的网段，取值不能在私有网络网段内，例如：112.20.51.0/24。
      */
     public void setDestinationCidrBlock(String DestinationCidrBlock) {
         this.DestinationCidrBlock = DestinationCidrBlock;
@@ -149,20 +152,26 @@ VPN：VPN网关；
 DIRECTCONNECT：专线网关；
 PEERCONNECTION：对等连接；
 HAVIP：高可用虚拟IP；
-NAT：NAT网关; 
+NAT：公网NAT网关; 
 NORMAL_CVM：普通云服务器；
 EIP：云服务器的公网IP；
-LOCAL_GATEWAY：本地网关。 
+LOCAL_GATEWAY：CDC本地网关；
+INTRANAT：私网NAT网关；
+USER_CCN；云联网（自定义路由）。
+ 
      * @return GatewayType 下一跳类型，目前我们支持的类型有：
 CVM：公网网关类型的云服务器；
 VPN：VPN网关；
 DIRECTCONNECT：专线网关；
 PEERCONNECTION：对等连接；
 HAVIP：高可用虚拟IP；
-NAT：NAT网关; 
+NAT：公网NAT网关; 
 NORMAL_CVM：普通云服务器；
 EIP：云服务器的公网IP；
-LOCAL_GATEWAY：本地网关。
+LOCAL_GATEWAY：CDC本地网关；
+INTRANAT：私网NAT网关；
+USER_CCN；云联网（自定义路由）。
+
      */
     public String getGatewayType() {
         return this.GatewayType;
@@ -175,20 +184,26 @@ VPN：VPN网关；
 DIRECTCONNECT：专线网关；
 PEERCONNECTION：对等连接；
 HAVIP：高可用虚拟IP；
-NAT：NAT网关; 
+NAT：公网NAT网关; 
 NORMAL_CVM：普通云服务器；
 EIP：云服务器的公网IP；
-LOCAL_GATEWAY：本地网关。
+LOCAL_GATEWAY：CDC本地网关；
+INTRANAT：私网NAT网关；
+USER_CCN；云联网（自定义路由）。
+
      * @param GatewayType 下一跳类型，目前我们支持的类型有：
 CVM：公网网关类型的云服务器；
 VPN：VPN网关；
 DIRECTCONNECT：专线网关；
 PEERCONNECTION：对等连接；
 HAVIP：高可用虚拟IP；
-NAT：NAT网关; 
+NAT：公网NAT网关; 
 NORMAL_CVM：普通云服务器；
 EIP：云服务器的公网IP；
-LOCAL_GATEWAY：本地网关。
+LOCAL_GATEWAY：CDC本地网关；
+INTRANAT：私网NAT网关；
+USER_CCN；云联网（自定义路由）。
+
      */
     public void setGatewayType(String GatewayType) {
         this.GatewayType = GatewayType;
@@ -323,9 +338,9 @@ CCN：云联网路由，系统默认下发，不可编辑与删除。
     }
 
     /**
-     * Get 目的IPv6网段，取值不能在私有网络网段内，例如：2402:4e00:1000:810b::/64。
+     * Get 创建IPv6目的网段，取值不能在私有网络网段内，例如：2402:4e00:1000:810b::/64。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DestinationIpv6CidrBlock 目的IPv6网段，取值不能在私有网络网段内，例如：2402:4e00:1000:810b::/64。
+     * @return DestinationIpv6CidrBlock 创建IPv6目的网段，取值不能在私有网络网段内，例如：2402:4e00:1000:810b::/64。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDestinationIpv6CidrBlock() {
@@ -333,9 +348,9 @@ CCN：云联网路由，系统默认下发，不可编辑与删除。
     }
 
     /**
-     * Set 目的IPv6网段，取值不能在私有网络网段内，例如：2402:4e00:1000:810b::/64。
+     * Set 创建IPv6目的网段，取值不能在私有网络网段内，例如：2402:4e00:1000:810b::/64。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DestinationIpv6CidrBlock 目的IPv6网段，取值不能在私有网络网段内，例如：2402:4e00:1000:810b::/64。
+     * @param DestinationIpv6CidrBlock 创建IPv6目的网段，取值不能在私有网络网段内，例如：2402:4e00:1000:810b::/64。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDestinationIpv6CidrBlock(String DestinationIpv6CidrBlock) {
@@ -359,9 +374,9 @@ CCN：云联网路由，系统默认下发，不可编辑与删除。
     }
 
     /**
-     * Get 路由策略是否发布到云联网。
+     * Get 路由策略是否发布到云联网。该字段仅做出参使用，作为入参字段时此参数不生效。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PublishedToVbc 路由策略是否发布到云联网。
+     * @return PublishedToVbc 路由策略是否发布到云联网。该字段仅做出参使用，作为入参字段时此参数不生效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getPublishedToVbc() {
@@ -369,9 +384,9 @@ CCN：云联网路由，系统默认下发，不可编辑与删除。
     }
 
     /**
-     * Set 路由策略是否发布到云联网。
+     * Set 路由策略是否发布到云联网。该字段仅做出参使用，作为入参字段时此参数不生效。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PublishedToVbc 路由策略是否发布到云联网。
+     * @param PublishedToVbc 路由策略是否发布到云联网。该字段仅做出参使用，作为入参字段时此参数不生效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPublishedToVbc(Boolean PublishedToVbc) {

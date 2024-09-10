@@ -45,6 +45,13 @@ public class ModifyAutoRenewFlagRequest extends AbstractModel {
     private String RenewFlag;
 
     /**
+    * 计算资源id
+    */
+    @SerializedName("ComputeResourceId")
+    @Expose
+    private String ComputeResourceId;
+
+    /**
      * Get 集群ID 
      * @return InstanceId 集群ID
      */
@@ -92,6 +99,22 @@ public class ModifyAutoRenewFlagRequest extends AbstractModel {
         this.RenewFlag = RenewFlag;
     }
 
+    /**
+     * Get 计算资源id 
+     * @return ComputeResourceId 计算资源id
+     */
+    public String getComputeResourceId() {
+        return this.ComputeResourceId;
+    }
+
+    /**
+     * Set 计算资源id
+     * @param ComputeResourceId 计算资源id
+     */
+    public void setComputeResourceId(String ComputeResourceId) {
+        this.ComputeResourceId = ComputeResourceId;
+    }
+
     public ModifyAutoRenewFlagRequest() {
     }
 
@@ -112,6 +135,9 @@ public class ModifyAutoRenewFlagRequest extends AbstractModel {
         if (source.RenewFlag != null) {
             this.RenewFlag = new String(source.RenewFlag);
         }
+        if (source.ComputeResourceId != null) {
+            this.ComputeResourceId = new String(source.ComputeResourceId);
+        }
     }
 
 
@@ -122,6 +148,7 @@ public class ModifyAutoRenewFlagRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamArraySimple(map, prefix + "ResourceIds.", this.ResourceIds);
         this.setParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
+        this.setParamSimple(map, prefix + "ComputeResourceId", this.ComputeResourceId);
 
     }
 }
