@@ -52,6 +52,13 @@ public class CreateSecurityGroupWithPoliciesRequest extends AbstractModel {
     private SecurityGroupPolicySet SecurityGroupPolicySet;
 
     /**
+    * 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get 安全组名称，可任意命名，但不得超过60个字符。 
      * @return GroupName 安全组名称，可任意命名，但不得超过60个字符。
      */
@@ -115,6 +122,22 @@ public class CreateSecurityGroupWithPoliciesRequest extends AbstractModel {
         this.SecurityGroupPolicySet = SecurityGroupPolicySet;
     }
 
+    /**
+     * Get 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。 
+     * @return Tags 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
+     * @param Tags 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public CreateSecurityGroupWithPoliciesRequest() {
     }
 
@@ -135,6 +158,12 @@ public class CreateSecurityGroupWithPoliciesRequest extends AbstractModel {
         if (source.SecurityGroupPolicySet != null) {
             this.SecurityGroupPolicySet = new SecurityGroupPolicySet(source.SecurityGroupPolicySet);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -146,6 +175,7 @@ public class CreateSecurityGroupWithPoliciesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "GroupDescription", this.GroupDescription);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamObj(map, prefix + "SecurityGroupPolicySet.", this.SecurityGroupPolicySet);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

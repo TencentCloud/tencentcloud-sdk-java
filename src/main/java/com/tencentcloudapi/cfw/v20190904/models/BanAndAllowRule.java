@@ -64,6 +64,14 @@ public class BanAndAllowRule extends AbstractModel {
     private CustomWhiteRule CustomRule;
 
     /**
+    * 放通的引擎: 1针对互联网边界 2针对nat防火墙 4针对vpc防火墙
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FwType")
+    @Expose
+    private Long FwType;
+
+    /**
      * Get 封禁和放通对象
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Ioc 封禁和放通对象
@@ -163,6 +171,26 @@ public class BanAndAllowRule extends AbstractModel {
         this.CustomRule = CustomRule;
     }
 
+    /**
+     * Get 放通的引擎: 1针对互联网边界 2针对nat防火墙 4针对vpc防火墙
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FwType 放通的引擎: 1针对互联网边界 2针对nat防火墙 4针对vpc防火墙
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getFwType() {
+        return this.FwType;
+    }
+
+    /**
+     * Set 放通的引擎: 1针对互联网边界 2针对nat防火墙 4针对vpc防火墙
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FwType 放通的引擎: 1针对互联网边界 2针对nat防火墙 4针对vpc防火墙
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFwType(Long FwType) {
+        this.FwType = FwType;
+    }
+
     public BanAndAllowRule() {
     }
 
@@ -186,6 +214,9 @@ public class BanAndAllowRule extends AbstractModel {
         if (source.CustomRule != null) {
             this.CustomRule = new CustomWhiteRule(source.CustomRule);
         }
+        if (source.FwType != null) {
+            this.FwType = new Long(source.FwType);
+        }
     }
 
 
@@ -198,6 +229,7 @@ public class BanAndAllowRule extends AbstractModel {
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "Comment", this.Comment);
         this.setParamObj(map, prefix + "CustomRule.", this.CustomRule);
+        this.setParamSimple(map, prefix + "FwType", this.FwType);
 
     }
 }

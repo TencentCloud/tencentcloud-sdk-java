@@ -110,6 +110,14 @@ public class AiAnalysisResult extends AbstractModel {
     private AiAnalysisTaskDescriptionResult DescriptionTask;
 
     /**
+    * 视频内容分析横转竖任务的查询结果，当任务类型为 HorizontalToVertical 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HorizontalToVerticalTask")
+    @Expose
+    private AiAnalysisTaskHorizontalToVerticalResult HorizontalToVerticalTask;
+
+    /**
      * Get 任务的类型，可以取的值有：
 <li>Classification：智能分类</li>
 <li>Cover：智能封面</li>
@@ -333,6 +341,26 @@ public class AiAnalysisResult extends AbstractModel {
         this.DescriptionTask = DescriptionTask;
     }
 
+    /**
+     * Get 视频内容分析横转竖任务的查询结果，当任务类型为 HorizontalToVertical 时有效。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return HorizontalToVerticalTask 视频内容分析横转竖任务的查询结果，当任务类型为 HorizontalToVertical 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AiAnalysisTaskHorizontalToVerticalResult getHorizontalToVerticalTask() {
+        return this.HorizontalToVerticalTask;
+    }
+
+    /**
+     * Set 视频内容分析横转竖任务的查询结果，当任务类型为 HorizontalToVertical 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HorizontalToVerticalTask 视频内容分析横转竖任务的查询结果，当任务类型为 HorizontalToVertical 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHorizontalToVerticalTask(AiAnalysisTaskHorizontalToVerticalResult HorizontalToVerticalTask) {
+        this.HorizontalToVerticalTask = HorizontalToVerticalTask;
+    }
+
     public AiAnalysisResult() {
     }
 
@@ -371,6 +399,9 @@ public class AiAnalysisResult extends AbstractModel {
         if (source.DescriptionTask != null) {
             this.DescriptionTask = new AiAnalysisTaskDescriptionResult(source.DescriptionTask);
         }
+        if (source.HorizontalToVerticalTask != null) {
+            this.HorizontalToVerticalTask = new AiAnalysisTaskHorizontalToVerticalResult(source.HorizontalToVerticalTask);
+        }
     }
 
 
@@ -388,6 +419,7 @@ public class AiAnalysisResult extends AbstractModel {
         this.setParamObj(map, prefix + "SegmentTask.", this.SegmentTask);
         this.setParamObj(map, prefix + "HeadTailTask.", this.HeadTailTask);
         this.setParamObj(map, prefix + "DescriptionTask.", this.DescriptionTask);
+        this.setParamObj(map, prefix + "HorizontalToVerticalTask.", this.HorizontalToVerticalTask);
 
     }
 }

@@ -39,6 +39,17 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *创建健康检测策略
+     * @param req CreateHealthCheckPolicyRequest
+     * @return CreateHealthCheckPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateHealthCheckPolicyResponse CreateHealthCheckPolicy(CreateHealthCheckPolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateHealthCheckPolicy", CreateHealthCheckPolicyResponse.class);
+    }
+
+    /**
      *创建 TKE 节点池
      * @param req CreateNodePoolRequest
      * @return CreateNodePoolResponse
@@ -47,6 +58,17 @@ public class TkeClient extends AbstractClient{
     public CreateNodePoolResponse CreateNodePool(CreateNodePoolRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateNodePool", CreateNodePoolResponse.class);
+    }
+
+    /**
+     *删除健康检测策略
+     * @param req DeleteHealthCheckPolicyRequest
+     * @return DeleteHealthCheckPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteHealthCheckPolicyResponse DeleteHealthCheckPolicy(DeleteHealthCheckPolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteHealthCheckPolicy", DeleteHealthCheckPolicyResponse.class);
     }
 
     /**
@@ -72,6 +94,39 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *查询健康检测策略
+     * @param req DescribeHealthCheckPoliciesRequest
+     * @return DescribeHealthCheckPoliciesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeHealthCheckPoliciesResponse DescribeHealthCheckPolicies(DescribeHealthCheckPoliciesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeHealthCheckPolicies", DescribeHealthCheckPoliciesResponse.class);
+    }
+
+    /**
+     *查询健康检测策略绑定关系
+     * @param req DescribeHealthCheckPolicyBindingsRequest
+     * @return DescribeHealthCheckPolicyBindingsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeHealthCheckPolicyBindingsResponse DescribeHealthCheckPolicyBindings(DescribeHealthCheckPolicyBindingsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeHealthCheckPolicyBindings", DescribeHealthCheckPolicyBindingsResponse.class);
+    }
+
+    /**
+     *查询健康检测策略模板
+     * @param req DescribeHealthCheckTemplateRequest
+     * @return DescribeHealthCheckTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeHealthCheckTemplateResponse DescribeHealthCheckTemplate(DescribeHealthCheckTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeHealthCheckTemplate", DescribeHealthCheckTemplateResponse.class);
+    }
+
+    /**
      *查询 TKE 节点池列表
      * @param req DescribeNodePoolsRequest
      * @return DescribeNodePoolsResponse
@@ -80,6 +135,17 @@ public class TkeClient extends AbstractClient{
     public DescribeNodePoolsResponse DescribeNodePools(DescribeNodePoolsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeNodePools", DescribeNodePoolsResponse.class);
+    }
+
+    /**
+     *修改健康检测策略
+     * @param req ModifyHealthCheckPolicyRequest
+     * @return ModifyHealthCheckPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyHealthCheckPolicyResponse ModifyHealthCheckPolicy(ModifyHealthCheckPolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyHealthCheckPolicy", ModifyHealthCheckPolicyResponse.class);
     }
 
     /**

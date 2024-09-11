@@ -32,7 +32,7 @@ public class BanAndAllowRuleDel extends AbstractModel {
     private String Ioc;
 
     /**
-    * 0互联网出站 1互联网入站 5内网访问源 6内网访问目的
+    * 0互联网出站 1互联网入站 5内网访问源 6内网访问目的 （DeleteBlockIgnoreRuleNew接口，该字段无效）
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DirectionList")
@@ -68,9 +68,9 @@ public class BanAndAllowRuleDel extends AbstractModel {
     }
 
     /**
-     * Get 0互联网出站 1互联网入站 5内网访问源 6内网访问目的
+     * Get 0互联网出站 1互联网入站 5内网访问源 6内网访问目的 （DeleteBlockIgnoreRuleNew接口，该字段无效）
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DirectionList 0互联网出站 1互联网入站 5内网访问源 6内网访问目的
+     * @return DirectionList 0互联网出站 1互联网入站 5内网访问源 6内网访问目的 （DeleteBlockIgnoreRuleNew接口，该字段无效）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDirectionList() {
@@ -78,9 +78,9 @@ public class BanAndAllowRuleDel extends AbstractModel {
     }
 
     /**
-     * Set 0互联网出站 1互联网入站 5内网访问源 6内网访问目的
+     * Set 0互联网出站 1互联网入站 5内网访问源 6内网访问目的 （DeleteBlockIgnoreRuleNew接口，该字段无效）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DirectionList 0互联网出站 1互联网入站 5内网访问源 6内网访问目的
+     * @param DirectionList 0互联网出站 1互联网入站 5内网访问源 6内网访问目的 （DeleteBlockIgnoreRuleNew接口，该字段无效）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDirectionList(String DirectionList) {

@@ -208,6 +208,14 @@ public class BlockIgnoreRule extends AbstractModel {
     private CustomWhiteRule CustomRule;
 
     /**
+    * 1 border 2 nat 4 vpc 8 border-serial
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FwType")
+    @Expose
+    private Long FwType;
+
+    /**
      * Get 1 封禁 2外部IP 3域名 4情报 5assets 6udf  7入侵防御规则id （2-7属于白名单类型）
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return RuleType 1 封禁 2外部IP 3域名 4情报 5assets 6udf  7入侵防御规则id （2-7属于白名单类型）
@@ -667,6 +675,26 @@ public class BlockIgnoreRule extends AbstractModel {
         this.CustomRule = CustomRule;
     }
 
+    /**
+     * Get 1 border 2 nat 4 vpc 8 border-serial
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FwType 1 border 2 nat 4 vpc 8 border-serial
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getFwType() {
+        return this.FwType;
+    }
+
+    /**
+     * Set 1 border 2 nat 4 vpc 8 border-serial
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FwType 1 border 2 nat 4 vpc 8 border-serial
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFwType(Long FwType) {
+        this.FwType = FwType;
+    }
+
     public BlockIgnoreRule() {
     }
 
@@ -744,6 +772,9 @@ public class BlockIgnoreRule extends AbstractModel {
         if (source.CustomRule != null) {
             this.CustomRule = new CustomWhiteRule(source.CustomRule);
         }
+        if (source.FwType != null) {
+            this.FwType = new Long(source.FwType);
+        }
     }
 
 
@@ -774,6 +805,7 @@ public class BlockIgnoreRule extends AbstractModel {
         this.setParamSimple(map, prefix + "Comment", this.Comment);
         this.setParamSimple(map, prefix + "LastHitTime", this.LastHitTime);
         this.setParamObj(map, prefix + "CustomRule.", this.CustomRule);
+        this.setParamSimple(map, prefix + "FwType", this.FwType);
 
     }
 }

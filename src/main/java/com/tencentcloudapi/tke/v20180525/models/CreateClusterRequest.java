@@ -87,6 +87,13 @@ public class CreateClusterRequest extends AbstractModel {
     private ExtensionAddon [] ExtensionAddons;
 
     /**
+    * 本地专用集群Id
+    */
+    @SerializedName("CdcId")
+    @Expose
+    private String CdcId;
+
+    /**
      * Get 集群类型，托管集群：MANAGED_CLUSTER，独立集群：INDEPENDENT_CLUSTER。 
      * @return ClusterType 集群类型，托管集群：MANAGED_CLUSTER，独立集群：INDEPENDENT_CLUSTER。
      */
@@ -230,6 +237,22 @@ public class CreateClusterRequest extends AbstractModel {
         this.ExtensionAddons = ExtensionAddons;
     }
 
+    /**
+     * Get 本地专用集群Id 
+     * @return CdcId 本地专用集群Id
+     */
+    public String getCdcId() {
+        return this.CdcId;
+    }
+
+    /**
+     * Set 本地专用集群Id
+     * @param CdcId 本地专用集群Id
+     */
+    public void setCdcId(String CdcId) {
+        this.CdcId = CdcId;
+    }
+
     public CreateClusterRequest() {
     }
 
@@ -277,6 +300,9 @@ public class CreateClusterRequest extends AbstractModel {
                 this.ExtensionAddons[i] = new ExtensionAddon(source.ExtensionAddons[i]);
             }
         }
+        if (source.CdcId != null) {
+            this.CdcId = new String(source.CdcId);
+        }
     }
 
 
@@ -293,6 +319,7 @@ public class CreateClusterRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "ExistedInstancesForNode.", this.ExistedInstancesForNode);
         this.setParamArrayObj(map, prefix + "InstanceDataDiskMountSettings.", this.InstanceDataDiskMountSettings);
         this.setParamArrayObj(map, prefix + "ExtensionAddons.", this.ExtensionAddons);
+        this.setParamSimple(map, prefix + "CdcId", this.CdcId);
 
     }
 }

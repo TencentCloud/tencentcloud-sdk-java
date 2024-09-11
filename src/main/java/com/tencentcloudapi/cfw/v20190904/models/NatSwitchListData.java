@@ -159,6 +159,30 @@ public class NatSwitchListData extends AbstractModel {
     private Long Abnormal;
 
     /**
+    * nat防火墙出口路由表id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ORTableId")
+    @Expose
+    private String ORTableId;
+
+    /**
+    * nat防火墙出口路由表名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ORTableName")
+    @Expose
+    private String ORTableName;
+
+    /**
+    * 出口Snat Ip列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Ohavips")
+    @Expose
+    private String [] Ohavips;
+
+    /**
      * Get 列表ID 
      * @return Id 列表ID
      */
@@ -494,6 +518,66 @@ public class NatSwitchListData extends AbstractModel {
         this.Abnormal = Abnormal;
     }
 
+    /**
+     * Get nat防火墙出口路由表id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ORTableId nat防火墙出口路由表id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getORTableId() {
+        return this.ORTableId;
+    }
+
+    /**
+     * Set nat防火墙出口路由表id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ORTableId nat防火墙出口路由表id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setORTableId(String ORTableId) {
+        this.ORTableId = ORTableId;
+    }
+
+    /**
+     * Get nat防火墙出口路由表名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ORTableName nat防火墙出口路由表名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getORTableName() {
+        return this.ORTableName;
+    }
+
+    /**
+     * Set nat防火墙出口路由表名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ORTableName nat防火墙出口路由表名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setORTableName(String ORTableName) {
+        this.ORTableName = ORTableName;
+    }
+
+    /**
+     * Get 出口Snat Ip列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Ohavips 出口Snat Ip列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getOhavips() {
+        return this.Ohavips;
+    }
+
+    /**
+     * Set 出口Snat Ip列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Ohavips 出口Snat Ip列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOhavips(String [] Ohavips) {
+        this.Ohavips = Ohavips;
+    }
+
     public NatSwitchListData() {
     }
 
@@ -553,6 +637,18 @@ public class NatSwitchListData extends AbstractModel {
         if (source.Abnormal != null) {
             this.Abnormal = new Long(source.Abnormal);
         }
+        if (source.ORTableId != null) {
+            this.ORTableId = new String(source.ORTableId);
+        }
+        if (source.ORTableName != null) {
+            this.ORTableName = new String(source.ORTableName);
+        }
+        if (source.Ohavips != null) {
+            this.Ohavips = new String[source.Ohavips.length];
+            for (int i = 0; i < source.Ohavips.length; i++) {
+                this.Ohavips[i] = new String(source.Ohavips[i]);
+            }
+        }
     }
 
 
@@ -577,6 +673,9 @@ public class NatSwitchListData extends AbstractModel {
         this.setParamSimple(map, prefix + "NatInsName", this.NatInsName);
         this.setParamSimple(map, prefix + "Region", this.Region);
         this.setParamSimple(map, prefix + "Abnormal", this.Abnormal);
+        this.setParamSimple(map, prefix + "ORTableId", this.ORTableId);
+        this.setParamSimple(map, prefix + "ORTableName", this.ORTableName);
+        this.setParamArraySimple(map, prefix + "Ohavips.", this.Ohavips);
 
     }
 }

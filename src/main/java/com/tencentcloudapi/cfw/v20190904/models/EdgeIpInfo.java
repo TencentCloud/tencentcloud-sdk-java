@@ -213,6 +213,14 @@ public class EdgeIpInfo extends AbstractModel {
     private String Domain;
 
     /**
+    * IP超量状态
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OverUsedStatus")
+    @Expose
+    private Long OverUsedStatus;
+
+    /**
      * Get 公网IP 
      * @return PublicIp 公网IP
      */
@@ -704,6 +712,26 @@ public class EdgeIpInfo extends AbstractModel {
         this.Domain = Domain;
     }
 
+    /**
+     * Get IP超量状态
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OverUsedStatus IP超量状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getOverUsedStatus() {
+        return this.OverUsedStatus;
+    }
+
+    /**
+     * Set IP超量状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OverUsedStatus IP超量状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOverUsedStatus(Long OverUsedStatus) {
+        this.OverUsedStatus = OverUsedStatus;
+    }
+
     public EdgeIpInfo() {
     }
 
@@ -778,6 +806,9 @@ public class EdgeIpInfo extends AbstractModel {
         if (source.Domain != null) {
             this.Domain = new String(source.Domain);
         }
+        if (source.OverUsedStatus != null) {
+            this.OverUsedStatus = new Long(source.OverUsedStatus);
+        }
     }
 
 
@@ -807,6 +838,7 @@ public class EdgeIpInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "SwitchMode", this.SwitchMode);
         this.setParamSimple(map, prefix + "SwitchWeight", this.SwitchWeight);
         this.setParamSimple(map, prefix + "Domain", this.Domain);
+        this.setParamSimple(map, prefix + "OverUsedStatus", this.OverUsedStatus);
 
     }
 }

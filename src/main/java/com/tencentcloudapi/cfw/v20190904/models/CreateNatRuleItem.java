@@ -122,6 +122,13 @@ public class CreateNatRuleItem extends AbstractModel {
     private Long InternalUuid;
 
     /**
+    * 规则生效的范围：ALL，全局生效；ap-guangzhou，生效的地域；cfwnat-xxx，生效基于实例维度
+    */
+    @SerializedName("Scope")
+    @Expose
+    private String Scope;
+
+    /**
      * Get 访问源示例： net：IP/CIDR(192.168.0.2) 
      * @return SourceContent 访问源示例： net：IP/CIDR(192.168.0.2)
      */
@@ -345,6 +352,22 @@ public class CreateNatRuleItem extends AbstractModel {
         this.InternalUuid = InternalUuid;
     }
 
+    /**
+     * Get 规则生效的范围：ALL，全局生效；ap-guangzhou，生效的地域；cfwnat-xxx，生效基于实例维度 
+     * @return Scope 规则生效的范围：ALL，全局生效；ap-guangzhou，生效的地域；cfwnat-xxx，生效基于实例维度
+     */
+    public String getScope() {
+        return this.Scope;
+    }
+
+    /**
+     * Set 规则生效的范围：ALL，全局生效；ap-guangzhou，生效的地域；cfwnat-xxx，生效基于实例维度
+     * @param Scope 规则生效的范围：ALL，全局生效；ap-guangzhou，生效的地域；cfwnat-xxx，生效基于实例维度
+     */
+    public void setScope(String Scope) {
+        this.Scope = Scope;
+    }
+
     public CreateNatRuleItem() {
     }
 
@@ -395,6 +418,9 @@ public class CreateNatRuleItem extends AbstractModel {
         if (source.InternalUuid != null) {
             this.InternalUuid = new Long(source.InternalUuid);
         }
+        if (source.Scope != null) {
+            this.Scope = new String(source.Scope);
+        }
     }
 
 
@@ -416,6 +442,7 @@ public class CreateNatRuleItem extends AbstractModel {
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "ParamTemplateId", this.ParamTemplateId);
         this.setParamSimple(map, prefix + "InternalUuid", this.InternalUuid);
+        this.setParamSimple(map, prefix + "Scope", this.Scope);
 
     }
 }
