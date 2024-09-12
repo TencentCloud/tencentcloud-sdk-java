@@ -38,7 +38,7 @@ public class UserDefineOcrTextReviewTemplateInfoForUpdate extends AbstractModel 
     */
     @SerializedName("LabelSet")
     @Expose
-    private String LabelSet;
+    private String [] LabelSet;
 
     /**
     * 判定涉嫌违规的分数阈值，当智能审核达到该分数以上，认为涉嫌违规。取值范围：0~100。
@@ -84,7 +84,7 @@ public class UserDefineOcrTextReviewTemplateInfoForUpdate extends AbstractModel 
      * @return LabelSet 用户自定义文本过滤标签，审核结果包含选择的标签则返回结果，如果过滤标签为空，则审核结果全部返回。如果要使用标签过滤功能，添加自定义文本关键词素材时需要添加对应标签。
 标签个数最多 10 个，每个标签长度最多 16 个字符。
      */
-    public String getLabelSet() {
+    public String [] getLabelSet() {
         return this.LabelSet;
     }
 
@@ -94,7 +94,7 @@ public class UserDefineOcrTextReviewTemplateInfoForUpdate extends AbstractModel 
      * @param LabelSet 用户自定义文本过滤标签，审核结果包含选择的标签则返回结果，如果过滤标签为空，则审核结果全部返回。如果要使用标签过滤功能，添加自定义文本关键词素材时需要添加对应标签。
 标签个数最多 10 个，每个标签长度最多 16 个字符。
      */
-    public void setLabelSet(String LabelSet) {
+    public void setLabelSet(String [] LabelSet) {
         this.LabelSet = LabelSet;
     }
 
@@ -142,7 +142,10 @@ public class UserDefineOcrTextReviewTemplateInfoForUpdate extends AbstractModel 
             this.Switch = new String(source.Switch);
         }
         if (source.LabelSet != null) {
-            this.LabelSet = new String(source.LabelSet);
+            this.LabelSet = new String[source.LabelSet.length];
+            for (int i = 0; i < source.LabelSet.length; i++) {
+                this.LabelSet[i] = new String(source.LabelSet[i]);
+            }
         }
         if (source.BlockConfidence != null) {
             this.BlockConfidence = new Long(source.BlockConfidence);
@@ -158,7 +161,7 @@ public class UserDefineOcrTextReviewTemplateInfoForUpdate extends AbstractModel 
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Switch", this.Switch);
-        this.setParamSimple(map, prefix + "LabelSet", this.LabelSet);
+        this.setParamArraySimple(map, prefix + "LabelSet.", this.LabelSet);
         this.setParamSimple(map, prefix + "BlockConfidence", this.BlockConfidence);
         this.setParamSimple(map, prefix + "ReviewConfidence", this.ReviewConfidence);
 

@@ -36,6 +36,9 @@ public enum ApmErrorCode {
     // 请勿填写重复的标签名
      FAILEDOPERATION_DUPLICATETAGFIELD("FailedOperation.DuplicateTagField"),
      
+    // 该实例不允许修改
+     FAILEDOPERATION_INSTANCECANNOTMODIFY("FailedOperation.InstanceCannotModify"),
+     
     // 实例ID为空。
      FAILEDOPERATION_INSTANCEIDISEMPTY("FailedOperation.InstanceIdIsEmpty"),
      

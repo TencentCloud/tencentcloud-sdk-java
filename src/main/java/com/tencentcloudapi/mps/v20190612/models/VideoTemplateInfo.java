@@ -33,12 +33,14 @@ public class VideoTemplateInfo extends AbstractModel {
 <li>vp9：VP9 编码</li>
 <li>mpeg2：MPEG2 编码</li>
 <li>dnxhd：DNxHD 编码</li>
+<li>mv-hevc：MV-HEVC 编码</li>
 注意：目前 H.265 编码必须指定分辨率，并且需要在 640*480 以内。
 
 注意：av1 编码容器目前只支持 mp4 ，webm，mkv。
 注意：H.266 编码容器目前只支持 mp4 ，hls，ts，mov。
 注意：VP8、VP9编码容器目前只支持webm，mkv。
 注意：MPEG2、dnxhd 编码容器目前只支持mxf。
+注意：MV-HEVC编码容器目前只支持mp4，hls，mov。其中hls格式只支持mp4分片格式。
     */
     @SerializedName("Codec")
     @Expose
@@ -98,8 +100,7 @@ public class VideoTemplateInfo extends AbstractModel {
     private Long Height;
 
     /**
-    * 关键帧 I 帧之间的间隔，取值范围：0 和 [1, 100000]，单位：帧数。
-当填 0 或不填时，系统将自动设置 gop 长度。
+    * 关键帧 I 帧之间的间隔，取值范围：0 和 [1, 100000]，单位：帧数。 当填 0 或不填时，系统将自动设置 gop 长度。
     */
     @SerializedName("Gop")
     @Expose
@@ -150,6 +151,17 @@ public class VideoTemplateInfo extends AbstractModel {
     private Long FpsDenominator;
 
     /**
+    * 3D视频拼接方式，仅mv-hevc，3D视频生效，可选值：
+<li>side_by_side：左右视角</li>
+<li>top_bottom：上下视角</li>
+默认值:side_by_side
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Stereo3dType")
+    @Expose
+    private String Stereo3dType;
+
+    /**
      * Get 视频流的编码格式，可选值：
 <li>h264：H.264 编码</li>
 <li>h265：H.265 编码</li>
@@ -159,12 +171,14 @@ public class VideoTemplateInfo extends AbstractModel {
 <li>vp9：VP9 编码</li>
 <li>mpeg2：MPEG2 编码</li>
 <li>dnxhd：DNxHD 编码</li>
+<li>mv-hevc：MV-HEVC 编码</li>
 注意：目前 H.265 编码必须指定分辨率，并且需要在 640*480 以内。
 
 注意：av1 编码容器目前只支持 mp4 ，webm，mkv。
 注意：H.266 编码容器目前只支持 mp4 ，hls，ts，mov。
 注意：VP8、VP9编码容器目前只支持webm，mkv。
-注意：MPEG2、dnxhd 编码容器目前只支持mxf。 
+注意：MPEG2、dnxhd 编码容器目前只支持mxf。
+注意：MV-HEVC编码容器目前只支持mp4，hls，mov。其中hls格式只支持mp4分片格式。 
      * @return Codec 视频流的编码格式，可选值：
 <li>h264：H.264 编码</li>
 <li>h265：H.265 编码</li>
@@ -174,12 +188,14 @@ public class VideoTemplateInfo extends AbstractModel {
 <li>vp9：VP9 编码</li>
 <li>mpeg2：MPEG2 编码</li>
 <li>dnxhd：DNxHD 编码</li>
+<li>mv-hevc：MV-HEVC 编码</li>
 注意：目前 H.265 编码必须指定分辨率，并且需要在 640*480 以内。
 
 注意：av1 编码容器目前只支持 mp4 ，webm，mkv。
 注意：H.266 编码容器目前只支持 mp4 ，hls，ts，mov。
 注意：VP8、VP9编码容器目前只支持webm，mkv。
 注意：MPEG2、dnxhd 编码容器目前只支持mxf。
+注意：MV-HEVC编码容器目前只支持mp4，hls，mov。其中hls格式只支持mp4分片格式。
      */
     public String getCodec() {
         return this.Codec;
@@ -195,12 +211,14 @@ public class VideoTemplateInfo extends AbstractModel {
 <li>vp9：VP9 编码</li>
 <li>mpeg2：MPEG2 编码</li>
 <li>dnxhd：DNxHD 编码</li>
+<li>mv-hevc：MV-HEVC 编码</li>
 注意：目前 H.265 编码必须指定分辨率，并且需要在 640*480 以内。
 
 注意：av1 编码容器目前只支持 mp4 ，webm，mkv。
 注意：H.266 编码容器目前只支持 mp4 ，hls，ts，mov。
 注意：VP8、VP9编码容器目前只支持webm，mkv。
 注意：MPEG2、dnxhd 编码容器目前只支持mxf。
+注意：MV-HEVC编码容器目前只支持mp4，hls，mov。其中hls格式只支持mp4分片格式。
      * @param Codec 视频流的编码格式，可选值：
 <li>h264：H.264 编码</li>
 <li>h265：H.265 编码</li>
@@ -210,12 +228,14 @@ public class VideoTemplateInfo extends AbstractModel {
 <li>vp9：VP9 编码</li>
 <li>mpeg2：MPEG2 编码</li>
 <li>dnxhd：DNxHD 编码</li>
+<li>mv-hevc：MV-HEVC 编码</li>
 注意：目前 H.265 编码必须指定分辨率，并且需要在 640*480 以内。
 
 注意：av1 编码容器目前只支持 mp4 ，webm，mkv。
 注意：H.266 编码容器目前只支持 mp4 ，hls，ts，mov。
 注意：VP8、VP9编码容器目前只支持webm，mkv。
 注意：MPEG2、dnxhd 编码容器目前只支持mxf。
+注意：MV-HEVC编码容器目前只支持mp4，hls，mov。其中hls格式只支持mp4分片格式。
      */
     public void setCodec(String Codec) {
         this.Codec = Codec;
@@ -374,20 +394,16 @@ public class VideoTemplateInfo extends AbstractModel {
     }
 
     /**
-     * Get 关键帧 I 帧之间的间隔，取值范围：0 和 [1, 100000]，单位：帧数。
-当填 0 或不填时，系统将自动设置 gop 长度。 
-     * @return Gop 关键帧 I 帧之间的间隔，取值范围：0 和 [1, 100000]，单位：帧数。
-当填 0 或不填时，系统将自动设置 gop 长度。
+     * Get 关键帧 I 帧之间的间隔，取值范围：0 和 [1, 100000]，单位：帧数。 当填 0 或不填时，系统将自动设置 gop 长度。 
+     * @return Gop 关键帧 I 帧之间的间隔，取值范围：0 和 [1, 100000]，单位：帧数。 当填 0 或不填时，系统将自动设置 gop 长度。
      */
     public Long getGop() {
         return this.Gop;
     }
 
     /**
-     * Set 关键帧 I 帧之间的间隔，取值范围：0 和 [1, 100000]，单位：帧数。
-当填 0 或不填时，系统将自动设置 gop 长度。
-     * @param Gop 关键帧 I 帧之间的间隔，取值范围：0 和 [1, 100000]，单位：帧数。
-当填 0 或不填时，系统将自动设置 gop 长度。
+     * Set 关键帧 I 帧之间的间隔，取值范围：0 和 [1, 100000]，单位：帧数。 当填 0 或不填时，系统将自动设置 gop 长度。
+     * @param Gop 关键帧 I 帧之间的间隔，取值范围：0 和 [1, 100000]，单位：帧数。 当填 0 或不填时，系统将自动设置 gop 长度。
      */
     public void setGop(Long Gop) {
         this.Gop = Gop;
@@ -521,6 +537,38 @@ public class VideoTemplateInfo extends AbstractModel {
         this.FpsDenominator = FpsDenominator;
     }
 
+    /**
+     * Get 3D视频拼接方式，仅mv-hevc，3D视频生效，可选值：
+<li>side_by_side：左右视角</li>
+<li>top_bottom：上下视角</li>
+默认值:side_by_side
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Stereo3dType 3D视频拼接方式，仅mv-hevc，3D视频生效，可选值：
+<li>side_by_side：左右视角</li>
+<li>top_bottom：上下视角</li>
+默认值:side_by_side
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getStereo3dType() {
+        return this.Stereo3dType;
+    }
+
+    /**
+     * Set 3D视频拼接方式，仅mv-hevc，3D视频生效，可选值：
+<li>side_by_side：左右视角</li>
+<li>top_bottom：上下视角</li>
+默认值:side_by_side
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Stereo3dType 3D视频拼接方式，仅mv-hevc，3D视频生效，可选值：
+<li>side_by_side：左右视角</li>
+<li>top_bottom：上下视角</li>
+默认值:side_by_side
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStereo3dType(String Stereo3dType) {
+        this.Stereo3dType = Stereo3dType;
+    }
+
     public VideoTemplateInfo() {
     }
 
@@ -562,6 +610,9 @@ public class VideoTemplateInfo extends AbstractModel {
         if (source.FpsDenominator != null) {
             this.FpsDenominator = new Long(source.FpsDenominator);
         }
+        if (source.Stereo3dType != null) {
+            this.Stereo3dType = new String(source.Stereo3dType);
+        }
     }
 
 
@@ -580,6 +631,7 @@ public class VideoTemplateInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Vcrf", this.Vcrf);
         this.setParamSimple(map, prefix + "SegmentType", this.SegmentType);
         this.setParamSimple(map, prefix + "FpsDenominator", this.FpsDenominator);
+        this.setParamSimple(map, prefix + "Stereo3dType", this.Stereo3dType);
 
     }
 }

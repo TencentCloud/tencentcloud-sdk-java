@@ -23,6 +23,75 @@ import java.util.HashMap;
 
 public class DescribeInstanceNodesRequest extends AbstractModel {
 
+    /**
+    * limit
+    */
+    @SerializedName("Limit")
+    @Expose
+    private Long Limit;
+
+    /**
+    * offset
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
+
+    /**
+    * component
+    */
+    @SerializedName("Component")
+    @Expose
+    private String Component;
+
+    /**
+     * Get limit 
+     * @return Limit limit
+     */
+    public Long getLimit() {
+        return this.Limit;
+    }
+
+    /**
+     * Set limit
+     * @param Limit limit
+     */
+    public void setLimit(Long Limit) {
+        this.Limit = Limit;
+    }
+
+    /**
+     * Get offset 
+     * @return Offset offset
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set offset
+     * @param Offset offset
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
+    }
+
+    /**
+     * Get component 
+     * @return Component component
+     */
+    public String getComponent() {
+        return this.Component;
+    }
+
+    /**
+     * Set component
+     * @param Component component
+     */
+    public void setComponent(String Component) {
+        this.Component = Component;
+    }
+
     public DescribeInstanceNodesRequest() {
     }
 
@@ -31,6 +100,15 @@ public class DescribeInstanceNodesRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeInstanceNodesRequest(DescribeInstanceNodesRequest source) {
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Component != null) {
+            this.Component = new String(source.Component);
+        }
     }
 
 
@@ -38,6 +116,9 @@ public class DescribeInstanceNodesRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "Component", this.Component);
 
     }
 }

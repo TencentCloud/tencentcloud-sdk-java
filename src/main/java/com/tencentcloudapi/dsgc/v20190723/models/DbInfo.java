@@ -40,6 +40,14 @@ public class DbInfo extends AbstractModel {
     private String ValidStatus;
 
     /**
+    * 绑定的类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BindType")
+    @Expose
+    private String BindType;
+
+    /**
      * Get 数据库名称
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return DbName 数据库名称
@@ -79,6 +87,26 @@ public class DbInfo extends AbstractModel {
         this.ValidStatus = ValidStatus;
     }
 
+    /**
+     * Get 绑定的类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BindType 绑定的类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getBindType() {
+        return this.BindType;
+    }
+
+    /**
+     * Set 绑定的类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BindType 绑定的类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBindType(String BindType) {
+        this.BindType = BindType;
+    }
+
     public DbInfo() {
     }
 
@@ -93,6 +121,9 @@ public class DbInfo extends AbstractModel {
         if (source.ValidStatus != null) {
             this.ValidStatus = new String(source.ValidStatus);
         }
+        if (source.BindType != null) {
+            this.BindType = new String(source.BindType);
+        }
     }
 
 
@@ -102,6 +133,7 @@ public class DbInfo extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DbName", this.DbName);
         this.setParamSimple(map, prefix + "ValidStatus", this.ValidStatus);
+        this.setParamSimple(map, prefix + "BindType", this.BindType);
 
     }
 }

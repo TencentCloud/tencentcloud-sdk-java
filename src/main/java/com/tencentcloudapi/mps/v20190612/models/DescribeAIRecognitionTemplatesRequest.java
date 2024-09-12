@@ -54,6 +54,13 @@ public class DescribeAIRecognitionTemplatesRequest extends AbstractModel {
     private String Type;
 
     /**
+    * 视频内容识别模板标识过滤条件，长度限制：64 个字符。
+    */
+    @SerializedName("Name")
+    @Expose
+    private String Name;
+
+    /**
      * Get 视频内容识别模板唯一标识过滤条件，数组长度限制：10。 
      * @return Definitions 视频内容识别模板唯一标识过滤条件，数组长度限制：10。
      */
@@ -125,6 +132,22 @@ public class DescribeAIRecognitionTemplatesRequest extends AbstractModel {
         this.Type = Type;
     }
 
+    /**
+     * Get 视频内容识别模板标识过滤条件，长度限制：64 个字符。 
+     * @return Name 视频内容识别模板标识过滤条件，长度限制：64 个字符。
+     */
+    public String getName() {
+        return this.Name;
+    }
+
+    /**
+     * Set 视频内容识别模板标识过滤条件，长度限制：64 个字符。
+     * @param Name 视频内容识别模板标识过滤条件，长度限制：64 个字符。
+     */
+    public void setName(String Name) {
+        this.Name = Name;
+    }
+
     public DescribeAIRecognitionTemplatesRequest() {
     }
 
@@ -148,6 +171,9 @@ public class DescribeAIRecognitionTemplatesRequest extends AbstractModel {
         if (source.Type != null) {
             this.Type = new String(source.Type);
         }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
     }
 
 
@@ -159,6 +185,7 @@ public class DescribeAIRecognitionTemplatesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "Name", this.Name);
 
     }
 }

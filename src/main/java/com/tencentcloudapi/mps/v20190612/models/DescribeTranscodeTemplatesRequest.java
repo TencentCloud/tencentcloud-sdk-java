@@ -86,6 +86,13 @@ public class DescribeTranscodeTemplatesRequest extends AbstractModel {
     private String TranscodeType;
 
     /**
+    * 转码模板标识过滤条件，长度限制：64 个字符。	
+    */
+    @SerializedName("Name")
+    @Expose
+    private String Name;
+
+    /**
      * Get 转码模板唯一标识过滤条件，数组长度限制：100。 
      * @return Definitions 转码模板唯一标识过滤条件，数组长度限制：100。
      */
@@ -249,6 +256,22 @@ public class DescribeTranscodeTemplatesRequest extends AbstractModel {
         this.TranscodeType = TranscodeType;
     }
 
+    /**
+     * Get 转码模板标识过滤条件，长度限制：64 个字符。	 
+     * @return Name 转码模板标识过滤条件，长度限制：64 个字符。	
+     */
+    public String getName() {
+        return this.Name;
+    }
+
+    /**
+     * Set 转码模板标识过滤条件，长度限制：64 个字符。	
+     * @param Name 转码模板标识过滤条件，长度限制：64 个字符。	
+     */
+    public void setName(String Name) {
+        this.Name = Name;
+    }
+
     public DescribeTranscodeTemplatesRequest() {
     }
 
@@ -281,6 +304,9 @@ public class DescribeTranscodeTemplatesRequest extends AbstractModel {
         if (source.TranscodeType != null) {
             this.TranscodeType = new String(source.TranscodeType);
         }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
     }
 
 
@@ -295,6 +321,7 @@ public class DescribeTranscodeTemplatesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "TranscodeType", this.TranscodeType);
+        this.setParamSimple(map, prefix + "Name", this.Name);
 
     }
 }

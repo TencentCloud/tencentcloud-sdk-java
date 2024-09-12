@@ -1282,7 +1282,7 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *获取待提交任务预提交校验信息
+     *获取待提交任务预提交校验信息（注意：工作流编号或者任务编号列表，必须填一项）
      * @param req DescribePendingSubmitTaskListRequest
      * @return DescribePendingSubmitTaskListResponse
      * @throws TencentCloudSDKException

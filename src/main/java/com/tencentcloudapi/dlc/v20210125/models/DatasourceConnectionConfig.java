@@ -96,6 +96,14 @@ public class DatasourceConnectionConfig extends AbstractModel {
     private DataSourceInfo TDSQLPostgreSql;
 
     /**
+    * Doris数据源连接的属性
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TCHouseD")
+    @Expose
+    private TCHouseD TCHouseD;
+
+    /**
      * Get Mysql数据源连接的属性
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Mysql Mysql数据源连接的属性
@@ -275,6 +283,26 @@ public class DatasourceConnectionConfig extends AbstractModel {
         this.TDSQLPostgreSql = TDSQLPostgreSql;
     }
 
+    /**
+     * Get Doris数据源连接的属性
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TCHouseD Doris数据源连接的属性
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public TCHouseD getTCHouseD() {
+        return this.TCHouseD;
+    }
+
+    /**
+     * Set Doris数据源连接的属性
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TCHouseD Doris数据源连接的属性
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTCHouseD(TCHouseD TCHouseD) {
+        this.TCHouseD = TCHouseD;
+    }
+
     public DatasourceConnectionConfig() {
     }
 
@@ -310,6 +338,9 @@ public class DatasourceConnectionConfig extends AbstractModel {
         if (source.TDSQLPostgreSql != null) {
             this.TDSQLPostgreSql = new DataSourceInfo(source.TDSQLPostgreSql);
         }
+        if (source.TCHouseD != null) {
+            this.TCHouseD = new TCHouseD(source.TCHouseD);
+        }
     }
 
 
@@ -326,6 +357,7 @@ public class DatasourceConnectionConfig extends AbstractModel {
         this.setParamObj(map, prefix + "ClickHouse.", this.ClickHouse);
         this.setParamObj(map, prefix + "Elasticsearch.", this.Elasticsearch);
         this.setParamObj(map, prefix + "TDSQLPostgreSql.", this.TDSQLPostgreSql);
+        this.setParamObj(map, prefix + "TCHouseD.", this.TCHouseD);
 
     }
 }
