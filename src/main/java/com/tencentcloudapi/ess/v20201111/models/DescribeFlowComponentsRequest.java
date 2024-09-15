@@ -34,7 +34,7 @@ public class DescribeFlowComponentsRequest extends AbstractModel {
     /**
     * 合同流程ID，为32位字符串。
 
-[点击产看FlowId在控制台中的位置](https://qcloudimg.tencent-cloud.cn/raw/0a83015166cfe1cb043d14f9ec4bd75e.png)
+[点击查看FlowId在控制台中的位置](https://qcloudimg.tencent-cloud.cn/raw/0a83015166cfe1cb043d14f9ec4bd75e.png)
     */
     @SerializedName("FlowId")
     @Expose
@@ -71,10 +71,10 @@ public class DescribeFlowComponentsRequest extends AbstractModel {
     /**
      * Get 合同流程ID，为32位字符串。
 
-[点击产看FlowId在控制台中的位置](https://qcloudimg.tencent-cloud.cn/raw/0a83015166cfe1cb043d14f9ec4bd75e.png) 
+[点击查看FlowId在控制台中的位置](https://qcloudimg.tencent-cloud.cn/raw/0a83015166cfe1cb043d14f9ec4bd75e.png) 
      * @return FlowId 合同流程ID，为32位字符串。
 
-[点击产看FlowId在控制台中的位置](https://qcloudimg.tencent-cloud.cn/raw/0a83015166cfe1cb043d14f9ec4bd75e.png)
+[点击查看FlowId在控制台中的位置](https://qcloudimg.tencent-cloud.cn/raw/0a83015166cfe1cb043d14f9ec4bd75e.png)
      */
     public String getFlowId() {
         return this.FlowId;
@@ -83,10 +83,10 @@ public class DescribeFlowComponentsRequest extends AbstractModel {
     /**
      * Set 合同流程ID，为32位字符串。
 
-[点击产看FlowId在控制台中的位置](https://qcloudimg.tencent-cloud.cn/raw/0a83015166cfe1cb043d14f9ec4bd75e.png)
+[点击查看FlowId在控制台中的位置](https://qcloudimg.tencent-cloud.cn/raw/0a83015166cfe1cb043d14f9ec4bd75e.png)
      * @param FlowId 合同流程ID，为32位字符串。
 
-[点击产看FlowId在控制台中的位置](https://qcloudimg.tencent-cloud.cn/raw/0a83015166cfe1cb043d14f9ec4bd75e.png)
+[点击查看FlowId在控制台中的位置](https://qcloudimg.tencent-cloud.cn/raw/0a83015166cfe1cb043d14f9ec4bd75e.png)
      */
     public void setFlowId(String FlowId) {
         this.FlowId = FlowId;

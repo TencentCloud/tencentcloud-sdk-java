@@ -24,6 +24,13 @@ import java.util.HashMap;
 public class DescribeInstanceNodesRequest extends AbstractModel {
 
     /**
+    * 实例ID。
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
     * limit
     */
     @SerializedName("Limit")
@@ -43,6 +50,22 @@ public class DescribeInstanceNodesRequest extends AbstractModel {
     @SerializedName("Component")
     @Expose
     private String Component;
+
+    /**
+     * Get 实例ID。 
+     * @return InstanceId 实例ID。
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set 实例ID。
+     * @param InstanceId 实例ID。
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
 
     /**
      * Get limit 
@@ -100,6 +123,9 @@ public class DescribeInstanceNodesRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeInstanceNodesRequest(DescribeInstanceNodesRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
@@ -116,6 +142,7 @@ public class DescribeInstanceNodesRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Component", this.Component);

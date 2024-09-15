@@ -101,6 +101,13 @@ public class DescribeSlowLogDataRequest extends AbstractModel {
     private String InstType;
 
     /**
+    * 节点ID
+    */
+    @SerializedName("OpResourceId")
+    @Expose
+    private String OpResourceId;
+
+    /**
      * Get 实例 ID。 
      * @return InstanceId 实例 ID。
      */
@@ -276,6 +283,22 @@ public class DescribeSlowLogDataRequest extends AbstractModel {
         this.InstType = InstType;
     }
 
+    /**
+     * Get 节点ID 
+     * @return OpResourceId 节点ID
+     */
+    public String getOpResourceId() {
+        return this.OpResourceId;
+    }
+
+    /**
+     * Set 节点ID
+     * @param OpResourceId 节点ID
+     */
+    public void setOpResourceId(String OpResourceId) {
+        this.OpResourceId = OpResourceId;
+    }
+
     public DescribeSlowLogDataRequest() {
     }
 
@@ -326,6 +349,9 @@ public class DescribeSlowLogDataRequest extends AbstractModel {
         if (source.InstType != null) {
             this.InstType = new String(source.InstType);
         }
+        if (source.OpResourceId != null) {
+            this.OpResourceId = new String(source.OpResourceId);
+        }
     }
 
 
@@ -344,6 +370,7 @@ public class DescribeSlowLogDataRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "InstType", this.InstType);
+        this.setParamSimple(map, prefix + "OpResourceId", this.OpResourceId);
 
     }
 }

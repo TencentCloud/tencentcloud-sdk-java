@@ -57,14 +57,21 @@ public class NFOption extends AbstractModel {
 
     /**
     * Nextflow引擎版本，取值范围：
-- 22.10.4
-- 22.10.8 
+- 22.10.7
 - 23.10.1
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NFVersion")
     @Expose
     private String NFVersion;
+
+    /**
+    * 启动路径。可填写指定缓存卷内的绝对路径，nextflow run 命令将在此路径执行。当WorkDir为COS路径时必填；当WorkDir为缓存卷路径时选填，不填默认使用WorkDir作为LaunchDir。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LaunchDir")
+    @Expose
+    private String LaunchDir;
 
     /**
      * Get Config。
@@ -148,13 +155,11 @@ public class NFOption extends AbstractModel {
 
     /**
      * Get Nextflow引擎版本，取值范围：
-- 22.10.4
-- 22.10.8 
+- 22.10.7
 - 23.10.1
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return NFVersion Nextflow引擎版本，取值范围：
-- 22.10.4
-- 22.10.8 
+- 22.10.7
 - 23.10.1
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -164,18 +169,36 @@ public class NFOption extends AbstractModel {
 
     /**
      * Set Nextflow引擎版本，取值范围：
-- 22.10.4
-- 22.10.8 
+- 22.10.7
 - 23.10.1
 注意：此字段可能返回 null，表示取不到有效值。
      * @param NFVersion Nextflow引擎版本，取值范围：
-- 22.10.4
-- 22.10.8 
+- 22.10.7
 - 23.10.1
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNFVersion(String NFVersion) {
         this.NFVersion = NFVersion;
+    }
+
+    /**
+     * Get 启动路径。可填写指定缓存卷内的绝对路径，nextflow run 命令将在此路径执行。当WorkDir为COS路径时必填；当WorkDir为缓存卷路径时选填，不填默认使用WorkDir作为LaunchDir。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LaunchDir 启动路径。可填写指定缓存卷内的绝对路径，nextflow run 命令将在此路径执行。当WorkDir为COS路径时必填；当WorkDir为缓存卷路径时选填，不填默认使用WorkDir作为LaunchDir。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLaunchDir() {
+        return this.LaunchDir;
+    }
+
+    /**
+     * Set 启动路径。可填写指定缓存卷内的绝对路径，nextflow run 命令将在此路径执行。当WorkDir为COS路径时必填；当WorkDir为缓存卷路径时选填，不填默认使用WorkDir作为LaunchDir。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LaunchDir 启动路径。可填写指定缓存卷内的绝对路径，nextflow run 命令将在此路径执行。当WorkDir为COS路径时必填；当WorkDir为缓存卷路径时选填，不填默认使用WorkDir作为LaunchDir。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLaunchDir(String LaunchDir) {
+        this.LaunchDir = LaunchDir;
     }
 
     public NFOption() {
@@ -201,6 +224,9 @@ public class NFOption extends AbstractModel {
         if (source.NFVersion != null) {
             this.NFVersion = new String(source.NFVersion);
         }
+        if (source.LaunchDir != null) {
+            this.LaunchDir = new String(source.LaunchDir);
+        }
     }
 
 
@@ -213,6 +239,7 @@ public class NFOption extends AbstractModel {
         this.setParamSimple(map, prefix + "Report", this.Report);
         this.setParamSimple(map, prefix + "Resume", this.Resume);
         this.setParamSimple(map, prefix + "NFVersion", this.NFVersion);
+        this.setParamSimple(map, prefix + "LaunchDir", this.LaunchDir);
 
     }
 }

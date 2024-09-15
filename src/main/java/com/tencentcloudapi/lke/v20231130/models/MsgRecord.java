@@ -139,6 +139,7 @@ public class MsgRecord extends AbstractModel {
 
     /**
     * 图片链接，可公有读
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ImageUrls")
     @Expose
@@ -197,6 +198,14 @@ public class MsgRecord extends AbstractModel {
     @SerializedName("FileInfos")
     @Expose
     private FileInfo [] FileInfos;
+
+    /**
+    * 参考来源引用位置信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("QuoteInfos")
+    @Expose
+    private QuoteInfo [] QuoteInfos;
 
     /**
      * Get 内容 
@@ -463,8 +472,10 @@ public class MsgRecord extends AbstractModel {
     }
 
     /**
-     * Get 图片链接，可公有读 
+     * Get 图片链接，可公有读
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ImageUrls 图片链接，可公有读
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getImageUrls() {
         return this.ImageUrls;
@@ -472,7 +483,9 @@ public class MsgRecord extends AbstractModel {
 
     /**
      * Set 图片链接，可公有读
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ImageUrls 图片链接，可公有读
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setImageUrls(String [] ImageUrls) {
         this.ImageUrls = ImageUrls;
@@ -634,6 +647,26 @@ public class MsgRecord extends AbstractModel {
         this.FileInfos = FileInfos;
     }
 
+    /**
+     * Get 参考来源引用位置信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return QuoteInfos 参考来源引用位置信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public QuoteInfo [] getQuoteInfos() {
+        return this.QuoteInfos;
+    }
+
+    /**
+     * Set 参考来源引用位置信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param QuoteInfos 参考来源引用位置信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setQuoteInfos(QuoteInfo [] QuoteInfos) {
+        this.QuoteInfos = QuoteInfos;
+    }
+
     public MsgRecord() {
     }
 
@@ -723,6 +756,12 @@ public class MsgRecord extends AbstractModel {
                 this.FileInfos[i] = new FileInfo(source.FileInfos[i]);
             }
         }
+        if (source.QuoteInfos != null) {
+            this.QuoteInfos = new QuoteInfo[source.QuoteInfos.length];
+            for (int i = 0; i < source.QuoteInfos.length; i++) {
+                this.QuoteInfos[i] = new QuoteInfo(source.QuoteInfos[i]);
+            }
+        }
     }
 
 
@@ -752,6 +791,7 @@ public class MsgRecord extends AbstractModel {
         this.setParamArraySimple(map, prefix + "OptionCards.", this.OptionCards);
         this.setParamObj(map, prefix + "TaskFlow.", this.TaskFlow);
         this.setParamArrayObj(map, prefix + "FileInfos.", this.FileInfos);
+        this.setParamArrayObj(map, prefix + "QuoteInfos.", this.QuoteInfos);
 
     }
 }

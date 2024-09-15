@@ -810,6 +810,17 @@ public class CkafkaClient extends AbstractClient{
     }
 
     /**
+     *根据时间戳查询消息列表
+     * @param req FetchMessageListByTimestampRequest
+     * @return FetchMessageListByTimestampResponse
+     * @throws TencentCloudSDKException
+     */
+    public FetchMessageListByTimestampResponse FetchMessageListByTimestamp(FetchMessageListByTimestampRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "FetchMessageListByTimestamp", FetchMessageListByTimestampResponse.class);
+    }
+
+    /**
      *Ckafka实例购买/续费询价
      * @param req InquireCkafkaPriceRequest
      * @return InquireCkafkaPriceResponse

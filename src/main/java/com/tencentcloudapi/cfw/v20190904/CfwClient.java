@@ -503,6 +503,17 @@ public class CfwClient extends AbstractClient{
     }
 
     /**
+     *查询新企业安全组规则  从node接口迁移   原接口DescribeSecurityGroupNewList
+     * @param req DescribeEnterpriseSecurityGroupRuleListRequest
+     * @return DescribeEnterpriseSecurityGroupRuleListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEnterpriseSecurityGroupRuleListResponse DescribeEnterpriseSecurityGroupRuleList(DescribeEnterpriseSecurityGroupRuleListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeEnterpriseSecurityGroupRuleList", DescribeEnterpriseSecurityGroupRuleListResponse.class);
+    }
+
+    /**
      *串行防火墙IP开关列表
      * @param req DescribeFwEdgeIpsRequest
      * @return DescribeFwEdgeIpsResponse

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class FeedRecommendResponse extends AbstractModel {
 
     /**
-    * 推荐返回的内容信息列表
+    * 推荐返回的内容信息列表，返回结果已按策略规则做好了排序
     */
     @SerializedName("DataList")
     @Expose
@@ -38,16 +38,16 @@ public class FeedRecommendResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 推荐返回的内容信息列表 
-     * @return DataList 推荐返回的内容信息列表
+     * Get 推荐返回的内容信息列表，返回结果已按策略规则做好了排序 
+     * @return DataList 推荐返回的内容信息列表，返回结果已按策略规则做好了排序
      */
     public RecItemData [] getDataList() {
         return this.DataList;
     }
 
     /**
-     * Set 推荐返回的内容信息列表
-     * @param DataList 推荐返回的内容信息列表
+     * Set 推荐返回的内容信息列表，返回结果已按策略规则做好了排序
+     * @param DataList 推荐返回的内容信息列表，返回结果已按策略规则做好了排序
      */
     public void setDataList(RecItemData [] DataList) {
         this.DataList = DataList;
