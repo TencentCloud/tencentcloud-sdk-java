@@ -83,6 +83,16 @@ public class ChatCompletionsResponse extends SSEResponseModel {
     private SearchInfo SearchInfo;
 
     /**
+    * 多媒体信息。
+说明：
+1. 可以用多媒体信息替换回复内容里的占位符，得到完整的图文信息。
+2. 可能会出现回复内容里存在占位符，但是因为审核等原因没有返回多媒体信息。
+    */
+    @SerializedName("Replaces")
+    @Expose
+    private Replace [] Replaces;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。本接口为流式响应接口，当请求成功时，RequestId 会被放在 HTTP 响应的 Header "X-TC-RequestId" 中。
     */
     @SerializedName("RequestId")
@@ -230,6 +240,34 @@ public class ChatCompletionsResponse extends SSEResponseModel {
     }
 
     /**
+     * Get 多媒体信息。
+说明：
+1. 可以用多媒体信息替换回复内容里的占位符，得到完整的图文信息。
+2. 可能会出现回复内容里存在占位符，但是因为审核等原因没有返回多媒体信息。 
+     * @return Replaces 多媒体信息。
+说明：
+1. 可以用多媒体信息替换回复内容里的占位符，得到完整的图文信息。
+2. 可能会出现回复内容里存在占位符，但是因为审核等原因没有返回多媒体信息。
+     */
+    public Replace [] getReplaces() {
+        return this.Replaces;
+    }
+
+    /**
+     * Set 多媒体信息。
+说明：
+1. 可以用多媒体信息替换回复内容里的占位符，得到完整的图文信息。
+2. 可能会出现回复内容里存在占位符，但是因为审核等原因没有返回多媒体信息。
+     * @param Replaces 多媒体信息。
+说明：
+1. 可以用多媒体信息替换回复内容里的占位符，得到完整的图文信息。
+2. 可能会出现回复内容里存在占位符，但是因为审核等原因没有返回多媒体信息。
+     */
+    public void setReplaces(Replace [] Replaces) {
+        this.Replaces = Replaces;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。本接口为流式响应接口，当请求成功时，RequestId 会被放在 HTTP 响应的 Header "X-TC-RequestId" 中。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。本接口为流式响应接口，当请求成功时，RequestId 会被放在 HTTP 响应的 Header "X-TC-RequestId" 中。
      */
@@ -280,6 +318,12 @@ public class ChatCompletionsResponse extends SSEResponseModel {
         if (source.SearchInfo != null) {
             this.SearchInfo = new SearchInfo(source.SearchInfo);
         }
+        if (source.Replaces != null) {
+            this.Replaces = new Replace[source.Replaces.length];
+            for (int i = 0; i < source.Replaces.length; i++) {
+                this.Replaces[i] = new Replace(source.Replaces[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -298,6 +342,7 @@ public class ChatCompletionsResponse extends SSEResponseModel {
         this.setParamObj(map, prefix + "ErrorMsg.", this.ErrorMsg);
         this.setParamSimple(map, prefix + "ModerationLevel", this.ModerationLevel);
         this.setParamObj(map, prefix + "SearchInfo.", this.SearchInfo);
+        this.setParamArrayObj(map, prefix + "Replaces.", this.Replaces);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
