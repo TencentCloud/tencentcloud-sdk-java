@@ -1372,6 +1372,17 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *查询opa策略列表
+     * @param req DescribeOpenPolicyListRequest
+     * @return DescribeOpenPolicyListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeOpenPolicyListResponse DescribeOpenPolicyList(DescribeOpenPolicyListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeOpenPolicyList", DescribeOpenPolicyListResponse.class);
+    }
+
+    /**
      *查询正在运行中Pod的计费信息。可以通过 Namespace 和 Name 来查询某个 Pod 的信息，也可以通过 Pod 的 Uid 批量查询。
      * @param req DescribePodChargeInfoRequest
      * @return DescribePodChargeInfoResponse
@@ -2128,6 +2139,17 @@ public class TkeClient extends AbstractClient{
     public ModifyNodePoolInstanceTypesResponse ModifyNodePoolInstanceTypes(ModifyNodePoolInstanceTypesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyNodePoolInstanceTypes", ModifyNodePoolInstanceTypesResponse.class);
+    }
+
+    /**
+     *批量修改opa策略
+     * @param req ModifyOpenPolicyListRequest
+     * @return ModifyOpenPolicyListResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyOpenPolicyListResponse ModifyOpenPolicyList(ModifyOpenPolicyListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyOpenPolicyList", ModifyOpenPolicyListResponse.class);
     }
 
     /**

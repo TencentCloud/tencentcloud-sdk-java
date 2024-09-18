@@ -152,7 +152,7 @@ public class EnterpriseSecurityGroupRuleRuleInfo extends AbstractModel {
     private Long IsDelay;
 
     /**
-    * 服务模版id
+    * 服务模板id
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ServiceTemplateId")
@@ -192,7 +192,7 @@ public class EnterpriseSecurityGroupRuleRuleInfo extends AbstractModel {
     private String SouCidr;
 
     /**
-    * 源模版名称
+    * 源模板名称
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SouParameterName")
@@ -232,7 +232,7 @@ public class EnterpriseSecurityGroupRuleRuleInfo extends AbstractModel {
     private String Cidr;
 
     /**
-    * 目的模版名称
+    * 目的模板名称
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ParameterName")
@@ -240,7 +240,7 @@ public class EnterpriseSecurityGroupRuleRuleInfo extends AbstractModel {
     private String ParameterName;
 
     /**
-    * 端口模版名称
+    * 端口模板名称
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProtocolPortName")
@@ -584,9 +584,9 @@ public class EnterpriseSecurityGroupRuleRuleInfo extends AbstractModel {
     }
 
     /**
-     * Get 服务模版id
+     * Get 服务模板id
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ServiceTemplateId 服务模版id
+     * @return ServiceTemplateId 服务模板id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getServiceTemplateId() {
@@ -594,9 +594,9 @@ public class EnterpriseSecurityGroupRuleRuleInfo extends AbstractModel {
     }
 
     /**
-     * Set 服务模版id
+     * Set 服务模板id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ServiceTemplateId 服务模版id
+     * @param ServiceTemplateId 服务模板id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setServiceTemplateId(String ServiceTemplateId) {
@@ -684,9 +684,9 @@ public class EnterpriseSecurityGroupRuleRuleInfo extends AbstractModel {
     }
 
     /**
-     * Get 源模版名称
+     * Get 源模板名称
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SouParameterName 源模版名称
+     * @return SouParameterName 源模板名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSouParameterName() {
@@ -694,9 +694,9 @@ public class EnterpriseSecurityGroupRuleRuleInfo extends AbstractModel {
     }
 
     /**
-     * Set 源模版名称
+     * Set 源模板名称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SouParameterName 源模版名称
+     * @param SouParameterName 源模板名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSouParameterName(String SouParameterName) {
@@ -784,9 +784,9 @@ public class EnterpriseSecurityGroupRuleRuleInfo extends AbstractModel {
     }
 
     /**
-     * Get 目的模版名称
+     * Get 目的模板名称
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ParameterName 目的模版名称
+     * @return ParameterName 目的模板名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getParameterName() {
@@ -794,9 +794,9 @@ public class EnterpriseSecurityGroupRuleRuleInfo extends AbstractModel {
     }
 
     /**
-     * Set 目的模版名称
+     * Set 目的模板名称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ParameterName 目的模版名称
+     * @param ParameterName 目的模板名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setParameterName(String ParameterName) {
@@ -804,9 +804,9 @@ public class EnterpriseSecurityGroupRuleRuleInfo extends AbstractModel {
     }
 
     /**
-     * Get 端口模版名称
+     * Get 端口模板名称
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ProtocolPortName 端口模版名称
+     * @return ProtocolPortName 端口模板名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProtocolPortName() {
@@ -814,9 +814,9 @@ public class EnterpriseSecurityGroupRuleRuleInfo extends AbstractModel {
     }
 
     /**
-     * Set 端口模版名称
+     * Set 端口模板名称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ProtocolPortName 端口模版名称
+     * @param ProtocolPortName 端口模板名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProtocolPortName(String ProtocolPortName) {

@@ -118,11 +118,19 @@ public class DescribeExternalNodeSupportConfigResponse extends AbstractModel {
     private Boolean EnabledPublicConnect;
 
     /**
-    * 公网连接地址
+    * 注册节点公网版公网连接地址
     */
     @SerializedName("PublicConnectUrl")
     @Expose
     private String PublicConnectUrl;
+
+    /**
+    * 注册节点公网版自定义域名
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PublicCustomDomain")
+    @Expose
+    private String PublicCustomDomain;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -364,19 +372,39 @@ public class DescribeExternalNodeSupportConfigResponse extends AbstractModel {
     }
 
     /**
-     * Get 公网连接地址 
-     * @return PublicConnectUrl 公网连接地址
+     * Get 注册节点公网版公网连接地址 
+     * @return PublicConnectUrl 注册节点公网版公网连接地址
      */
     public String getPublicConnectUrl() {
         return this.PublicConnectUrl;
     }
 
     /**
-     * Set 公网连接地址
-     * @param PublicConnectUrl 公网连接地址
+     * Set 注册节点公网版公网连接地址
+     * @param PublicConnectUrl 注册节点公网版公网连接地址
      */
     public void setPublicConnectUrl(String PublicConnectUrl) {
         this.PublicConnectUrl = PublicConnectUrl;
+    }
+
+    /**
+     * Get 注册节点公网版自定义域名
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PublicCustomDomain 注册节点公网版自定义域名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPublicCustomDomain() {
+        return this.PublicCustomDomain;
+    }
+
+    /**
+     * Set 注册节点公网版自定义域名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PublicCustomDomain 注册节点公网版自定义域名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPublicCustomDomain(String PublicCustomDomain) {
+        this.PublicCustomDomain = PublicCustomDomain;
     }
 
     /**
@@ -445,6 +473,9 @@ public class DescribeExternalNodeSupportConfigResponse extends AbstractModel {
         if (source.PublicConnectUrl != null) {
             this.PublicConnectUrl = new String(source.PublicConnectUrl);
         }
+        if (source.PublicCustomDomain != null) {
+            this.PublicCustomDomain = new String(source.PublicCustomDomain);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -468,6 +499,7 @@ public class DescribeExternalNodeSupportConfigResponse extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Progress.", this.Progress);
         this.setParamSimple(map, prefix + "EnabledPublicConnect", this.EnabledPublicConnect);
         this.setParamSimple(map, prefix + "PublicConnectUrl", this.PublicConnectUrl);
+        this.setParamSimple(map, prefix + "PublicCustomDomain", this.PublicCustomDomain);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

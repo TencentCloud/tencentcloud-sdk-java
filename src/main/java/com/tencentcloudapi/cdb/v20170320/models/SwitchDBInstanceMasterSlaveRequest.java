@@ -52,6 +52,13 @@ public class SwitchDBInstanceMasterSlaveRequest extends AbstractModel {
     private Boolean WaitSwitch;
 
     /**
+    * 集群版实例指定节点id发起主从切换。
+    */
+    @SerializedName("DstNodeId")
+    @Expose
+    private String DstNodeId;
+
+    /**
      * Get 实例 ID。 
      * @return InstanceId 实例 ID。
      */
@@ -115,6 +122,22 @@ public class SwitchDBInstanceMasterSlaveRequest extends AbstractModel {
         this.WaitSwitch = WaitSwitch;
     }
 
+    /**
+     * Get 集群版实例指定节点id发起主从切换。 
+     * @return DstNodeId 集群版实例指定节点id发起主从切换。
+     */
+    public String getDstNodeId() {
+        return this.DstNodeId;
+    }
+
+    /**
+     * Set 集群版实例指定节点id发起主从切换。
+     * @param DstNodeId 集群版实例指定节点id发起主从切换。
+     */
+    public void setDstNodeId(String DstNodeId) {
+        this.DstNodeId = DstNodeId;
+    }
+
     public SwitchDBInstanceMasterSlaveRequest() {
     }
 
@@ -135,6 +158,9 @@ public class SwitchDBInstanceMasterSlaveRequest extends AbstractModel {
         if (source.WaitSwitch != null) {
             this.WaitSwitch = new Boolean(source.WaitSwitch);
         }
+        if (source.DstNodeId != null) {
+            this.DstNodeId = new String(source.DstNodeId);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class SwitchDBInstanceMasterSlaveRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "DstSlave", this.DstSlave);
         this.setParamSimple(map, prefix + "ForceSwitch", this.ForceSwitch);
         this.setParamSimple(map, prefix + "WaitSwitch", this.WaitSwitch);
+        this.setParamSimple(map, prefix + "DstNodeId", this.DstNodeId);
 
     }
 }

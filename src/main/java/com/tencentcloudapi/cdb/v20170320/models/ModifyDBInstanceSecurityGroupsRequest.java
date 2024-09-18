@@ -45,6 +45,13 @@ public class ModifyDBInstanceSecurityGroupsRequest extends AbstractModel {
     private Boolean ForReadonlyInstance;
 
     /**
+    * 变更集群版实例只读组时，InstanceId传实例id，需要额外指定该参数表示操作只读组。 如果操作读写节点则不需指定该参数。
+    */
+    @SerializedName("OpResourceId")
+    @Expose
+    private String OpResourceId;
+
+    /**
      * Get 实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。 
      * @return InstanceId 实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      */
@@ -92,6 +99,22 @@ public class ModifyDBInstanceSecurityGroupsRequest extends AbstractModel {
         this.ForReadonlyInstance = ForReadonlyInstance;
     }
 
+    /**
+     * Get 变更集群版实例只读组时，InstanceId传实例id，需要额外指定该参数表示操作只读组。 如果操作读写节点则不需指定该参数。 
+     * @return OpResourceId 变更集群版实例只读组时，InstanceId传实例id，需要额外指定该参数表示操作只读组。 如果操作读写节点则不需指定该参数。
+     */
+    public String getOpResourceId() {
+        return this.OpResourceId;
+    }
+
+    /**
+     * Set 变更集群版实例只读组时，InstanceId传实例id，需要额外指定该参数表示操作只读组。 如果操作读写节点则不需指定该参数。
+     * @param OpResourceId 变更集群版实例只读组时，InstanceId传实例id，需要额外指定该参数表示操作只读组。 如果操作读写节点则不需指定该参数。
+     */
+    public void setOpResourceId(String OpResourceId) {
+        this.OpResourceId = OpResourceId;
+    }
+
     public ModifyDBInstanceSecurityGroupsRequest() {
     }
 
@@ -112,6 +135,9 @@ public class ModifyDBInstanceSecurityGroupsRequest extends AbstractModel {
         if (source.ForReadonlyInstance != null) {
             this.ForReadonlyInstance = new Boolean(source.ForReadonlyInstance);
         }
+        if (source.OpResourceId != null) {
+            this.OpResourceId = new String(source.OpResourceId);
+        }
     }
 
 
@@ -122,6 +148,7 @@ public class ModifyDBInstanceSecurityGroupsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
         this.setParamSimple(map, prefix + "ForReadonlyInstance", this.ForReadonlyInstance);
+        this.setParamSimple(map, prefix + "OpResourceId", this.OpResourceId);
 
     }
 }

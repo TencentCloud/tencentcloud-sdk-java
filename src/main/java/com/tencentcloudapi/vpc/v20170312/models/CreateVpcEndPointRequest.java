@@ -66,6 +66,13 @@ public class CreateVpcEndPointRequest extends AbstractModel {
     private String SecurityGroupId;
 
     /**
+    * 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get VPC实例ID。 
      * @return VpcId VPC实例ID。
      */
@@ -161,6 +168,22 @@ public class CreateVpcEndPointRequest extends AbstractModel {
         this.SecurityGroupId = SecurityGroupId;
     }
 
+    /**
+     * Get 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。 
+     * @return Tags 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
+     * @param Tags 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public CreateVpcEndPointRequest() {
     }
 
@@ -187,6 +210,12 @@ public class CreateVpcEndPointRequest extends AbstractModel {
         if (source.SecurityGroupId != null) {
             this.SecurityGroupId = new String(source.SecurityGroupId);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -200,6 +229,7 @@ public class CreateVpcEndPointRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "EndPointServiceId", this.EndPointServiceId);
         this.setParamSimple(map, prefix + "EndPointVip", this.EndPointVip);
         this.setParamSimple(map, prefix + "SecurityGroupId", this.SecurityGroupId);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }
