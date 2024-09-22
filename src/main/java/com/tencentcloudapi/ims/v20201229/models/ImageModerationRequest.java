@@ -38,7 +38,7 @@ public class ImageModerationRequest extends AbstractModel {
     private String DataId;
 
     /**
-    * 该字段表示待检测图片文件内容的Base64编码，图片**大小不超过5MB**，建议**分辨率不低于256x256**，否则可能会影响识别效果。<br>备注： **该字段与FileUrl必须选择输入其中一个**。
+    * 该字段表示待检测图片文件内容的Base64编码，图片Base64编码内容大小不超过10MB，建议**分辨率不低于256x256**，否则可能会影响识别效果。<br>备注： **该字段与FileUrl必须选择输入其中一个**。
     */
     @SerializedName("FileContent")
     @Expose
@@ -112,16 +112,16 @@ public class ImageModerationRequest extends AbstractModel {
     }
 
     /**
-     * Get 该字段表示待检测图片文件内容的Base64编码，图片**大小不超过5MB**，建议**分辨率不低于256x256**，否则可能会影响识别效果。<br>备注： **该字段与FileUrl必须选择输入其中一个**。 
-     * @return FileContent 该字段表示待检测图片文件内容的Base64编码，图片**大小不超过5MB**，建议**分辨率不低于256x256**，否则可能会影响识别效果。<br>备注： **该字段与FileUrl必须选择输入其中一个**。
+     * Get 该字段表示待检测图片文件内容的Base64编码，图片Base64编码内容大小不超过10MB，建议**分辨率不低于256x256**，否则可能会影响识别效果。<br>备注： **该字段与FileUrl必须选择输入其中一个**。 
+     * @return FileContent 该字段表示待检测图片文件内容的Base64编码，图片Base64编码内容大小不超过10MB，建议**分辨率不低于256x256**，否则可能会影响识别效果。<br>备注： **该字段与FileUrl必须选择输入其中一个**。
      */
     public String getFileContent() {
         return this.FileContent;
     }
 
     /**
-     * Set 该字段表示待检测图片文件内容的Base64编码，图片**大小不超过5MB**，建议**分辨率不低于256x256**，否则可能会影响识别效果。<br>备注： **该字段与FileUrl必须选择输入其中一个**。
-     * @param FileContent 该字段表示待检测图片文件内容的Base64编码，图片**大小不超过5MB**，建议**分辨率不低于256x256**，否则可能会影响识别效果。<br>备注： **该字段与FileUrl必须选择输入其中一个**。
+     * Set 该字段表示待检测图片文件内容的Base64编码，图片Base64编码内容大小不超过10MB，建议**分辨率不低于256x256**，否则可能会影响识别效果。<br>备注： **该字段与FileUrl必须选择输入其中一个**。
+     * @param FileContent 该字段表示待检测图片文件内容的Base64编码，图片Base64编码内容大小不超过10MB，建议**分辨率不低于256x256**，否则可能会影响识别效果。<br>备注： **该字段与FileUrl必须选择输入其中一个**。
      */
     public void setFileContent(String FileContent) {
         this.FileContent = FileContent;

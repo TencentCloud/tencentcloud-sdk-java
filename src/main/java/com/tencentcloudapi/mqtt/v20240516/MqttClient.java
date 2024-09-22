@@ -39,6 +39,105 @@ public class MqttClient extends AbstractClient{
     }
 
     /**
+     *创建MQTT实例的性能测试任务
+     * @param req CreateAuthorizationPolicyRequest
+     * @return CreateAuthorizationPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAuthorizationPolicyResponse CreateAuthorizationPolicy(CreateAuthorizationPolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateAuthorizationPolicy", CreateAuthorizationPolicyResponse.class);
+    }
+
+    /**
+     *创建一个jwks的认证
+     * @param req CreateJWKSAuthenticatorRequest
+     * @return CreateJWKSAuthenticatorResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateJWKSAuthenticatorResponse CreateJWKSAuthenticator(CreateJWKSAuthenticatorRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateJWKSAuthenticator", CreateJWKSAuthenticatorResponse.class);
+    }
+
+    /**
+     *创建一个jwks的认证
+     * @param req CreateJWTAuthenticatorRequest
+     * @return CreateJWTAuthenticatorResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateJWTAuthenticatorResponse CreateJWTAuthenticator(CreateJWTAuthenticatorRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateJWTAuthenticator", CreateJWTAuthenticatorResponse.class);
+    }
+
+    /**
+     *创建主题
+     * @param req CreateTopicRequest
+     * @return CreateTopicResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateTopicResponse CreateTopic(CreateTopicRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateTopic", CreateTopicResponse.class);
+    }
+
+    /**
+     *根据认证器类型删除一个MQTT认证器
+     * @param req DeleteAuthenticatorRequest
+     * @return DeleteAuthenticatorResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAuthenticatorResponse DeleteAuthenticator(DeleteAuthenticatorRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteAuthenticator", DeleteAuthenticatorResponse.class);
+    }
+
+    /**
+     *删除策略规则
+     * @param req DeleteAuthorizationPolicyRequest
+     * @return DeleteAuthorizationPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAuthorizationPolicyResponse DeleteAuthorizationPolicy(DeleteAuthorizationPolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteAuthorizationPolicy", DeleteAuthorizationPolicyResponse.class);
+    }
+
+    /**
+     *删除MQTT主题
+     * @param req DeleteTopicRequest
+     * @return DeleteTopicResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteTopicResponse DeleteTopic(DeleteTopicRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteTopic", DeleteTopicResponse.class);
+    }
+
+    /**
+     *查询MQTT认证器
+     * @param req DescribeAuthenticatorRequest
+     * @return DescribeAuthenticatorResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAuthenticatorResponse DescribeAuthenticator(DescribeAuthenticatorRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAuthenticator", DescribeAuthenticatorResponse.class);
+    }
+
+    /**
+     *查询授权规则
+     * @param req DescribeAuthorizationPoliciesRequest
+     * @return DescribeAuthorizationPoliciesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAuthorizationPoliciesResponse DescribeAuthorizationPolicies(DescribeAuthorizationPoliciesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAuthorizationPolicies", DescribeAuthorizationPoliciesResponse.class);
+    }
+
+    /**
      *查询实例信息
      * @param req DescribeInstanceRequest
      * @return DescribeInstanceResponse
@@ -64,6 +163,97 @@ public class MqttClient extends AbstractClient{
     public DescribeInstanceListResponse DescribeInstanceList(DescribeInstanceListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeInstanceList", DescribeInstanceListResponse.class);
+    }
+
+    /**
+     *查询mqtt主题详情
+     * @param req DescribeTopicRequest
+     * @return DescribeTopicResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTopicResponse DescribeTopic(DescribeTopicRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTopic", DescribeTopicResponse.class);
+    }
+
+    /**
+     *获取主题列表，Filter参数使用说明如下：
+
+1. TopicName，主题名称模糊搜索
+2. TopicType，主题类型查询，支持多选，可选值：Normal,Order,Transaction,DelayScheduled
+     * @param req DescribeTopicListRequest
+     * @return DescribeTopicListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTopicListResponse DescribeTopicList(DescribeTopicListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTopicList", DescribeTopicListResponse.class);
+    }
+
+    /**
+     *修改策略规则
+     * @param req ModifyAuthorizationPolicyRequest
+     * @return ModifyAuthorizationPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAuthorizationPolicyResponse ModifyAuthorizationPolicy(ModifyAuthorizationPolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyAuthorizationPolicy", ModifyAuthorizationPolicyResponse.class);
+    }
+
+    /**
+     *修改MQTT JWKS 认证器
+     * @param req ModifyJWKSAuthenticatorRequest
+     * @return ModifyJWKSAuthenticatorResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyJWKSAuthenticatorResponse ModifyJWKSAuthenticator(ModifyJWKSAuthenticatorRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyJWKSAuthenticator", ModifyJWKSAuthenticatorResponse.class);
+    }
+
+    /**
+     *修改MQTT JWKS 认证器
+     * @param req ModifyJWTAuthenticatorRequest
+     * @return ModifyJWTAuthenticatorResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyJWTAuthenticatorResponse ModifyJWTAuthenticator(ModifyJWTAuthenticatorRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyJWTAuthenticator", ModifyJWTAuthenticatorResponse.class);
+    }
+
+    /**
+     *修改主题属性
+     * @param req ModifyTopicRequest
+     * @return ModifyTopicResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyTopicResponse ModifyTopic(ModifyTopicRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyTopic", ModifyTopicResponse.class);
+    }
+
+    /**
+     *注册设备证书
+     * @param req RegisterDeviceCertificateRequest
+     * @return RegisterDeviceCertificateResponse
+     * @throws TencentCloudSDKException
+     */
+    public RegisterDeviceCertificateResponse RegisterDeviceCertificate(RegisterDeviceCertificateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RegisterDeviceCertificate", RegisterDeviceCertificateResponse.class);
+    }
+
+    /**
+     *修改策略规则优先级
+     * @param req UpdateAuthorizationPolicyPriorityRequest
+     * @return UpdateAuthorizationPolicyPriorityResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateAuthorizationPolicyPriorityResponse UpdateAuthorizationPolicyPriority(UpdateAuthorizationPolicyPriorityRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateAuthorizationPolicyPriority", UpdateAuthorizationPolicyPriorityResponse.class);
     }
 
 }

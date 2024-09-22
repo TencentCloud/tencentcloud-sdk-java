@@ -32,6 +32,7 @@ public class ProcessMediaRequest extends AbstractModel {
 
     /**
     * 媒体处理输出文件的目标存储。不填则继承 InputInfo 中的存储位置。
+注意：当InputInfo.Type为URL时，该参数是必填项
     */
     @SerializedName("OutputStorage")
     @Expose
@@ -148,8 +149,10 @@ public class ProcessMediaRequest extends AbstractModel {
     }
 
     /**
-     * Get 媒体处理输出文件的目标存储。不填则继承 InputInfo 中的存储位置。 
+     * Get 媒体处理输出文件的目标存储。不填则继承 InputInfo 中的存储位置。
+注意：当InputInfo.Type为URL时，该参数是必填项 
      * @return OutputStorage 媒体处理输出文件的目标存储。不填则继承 InputInfo 中的存储位置。
+注意：当InputInfo.Type为URL时，该参数是必填项
      */
     public TaskOutputStorage getOutputStorage() {
         return this.OutputStorage;
@@ -157,7 +160,9 @@ public class ProcessMediaRequest extends AbstractModel {
 
     /**
      * Set 媒体处理输出文件的目标存储。不填则继承 InputInfo 中的存储位置。
+注意：当InputInfo.Type为URL时，该参数是必填项
      * @param OutputStorage 媒体处理输出文件的目标存储。不填则继承 InputInfo 中的存储位置。
+注意：当InputInfo.Type为URL时，该参数是必填项
      */
     public void setOutputStorage(TaskOutputStorage OutputStorage) {
         this.OutputStorage = OutputStorage;

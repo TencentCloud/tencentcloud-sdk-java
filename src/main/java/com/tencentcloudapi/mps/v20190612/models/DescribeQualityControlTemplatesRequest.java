@@ -47,7 +47,7 @@ public class DescribeQualityControlTemplatesRequest extends AbstractModel {
     private Long Limit;
 
     /**
-    * "Preset"：预设，Custom":客户魔板
+    * "Preset"：预设，Custom":自定义模板
     */
     @SerializedName("Type")
     @Expose
@@ -117,16 +117,16 @@ public class DescribeQualityControlTemplatesRequest extends AbstractModel {
     }
 
     /**
-     * Get "Preset"：预设，Custom":客户魔板 
-     * @return Type "Preset"：预设，Custom":客户魔板
+     * Get "Preset"：预设，Custom":自定义模板 
+     * @return Type "Preset"：预设，Custom":自定义模板
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set "Preset"：预设，Custom":客户魔板
-     * @param Type "Preset"：预设，Custom":客户魔板
+     * Set "Preset"：预设，Custom":自定义模板
+     * @param Type "Preset"：预设，Custom":自定义模板
      */
     public void setType(String Type) {
         this.Type = Type;

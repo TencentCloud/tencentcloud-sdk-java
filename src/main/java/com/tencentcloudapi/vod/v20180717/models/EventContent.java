@@ -48,7 +48,8 @@ public class EventContent extends AbstractModel {
 <li>ExtractCopyRightWatermarkComplete：提取版权水印完成；</li>
 <li>DescribeFileAttributesComplete：获取文件属性完成；</li>
 <li>QualityInspectComplete：音画质检测完成；</li>
-<li>QualityEnhanceComplete：音画质重生任务完成。</li>
+<li>QualityEnhanceComplete：音画质重生任务完成；</li>
+<li>PersistenceComplete：剪辑固化完成。</li>
 <b>兼容 2017 版的事件类型：</b>
 <li>TranscodeComplete：视频转码完成；</li>
 <li>ConcatComplete：视频拼接完成；</li>
@@ -261,6 +262,14 @@ public class EventContent extends AbstractModel {
     private MediaCastEvent MediaCastStatusChangedEvent;
 
     /**
+    * 剪辑固化完成事件，当事件类型为 PersistenceComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PersistenceCompleteEvent")
+    @Expose
+    private PersistenceCompleteTask PersistenceCompleteEvent;
+
+    /**
      * Get 事件句柄，调用方必须调用 ConfirmEvents 来确认消息已经收到，确认有效时间 30 秒。失效后，事件可重新被获取。 
      * @return EventHandle 事件句柄，调用方必须调用 ConfirmEvents 来确认消息已经收到，确认有效时间 30 秒。失效后，事件可重新被获取。
      */
@@ -294,7 +303,8 @@ public class EventContent extends AbstractModel {
 <li>ExtractCopyRightWatermarkComplete：提取版权水印完成；</li>
 <li>DescribeFileAttributesComplete：获取文件属性完成；</li>
 <li>QualityInspectComplete：音画质检测完成；</li>
-<li>QualityEnhanceComplete：音画质重生任务完成。</li>
+<li>QualityEnhanceComplete：音画质重生任务完成；</li>
+<li>PersistenceComplete：剪辑固化完成。</li>
 <b>兼容 2017 版的事件类型：</b>
 <li>TranscodeComplete：视频转码完成；</li>
 <li>ConcatComplete：视频拼接完成；</li>
@@ -318,7 +328,8 @@ public class EventContent extends AbstractModel {
 <li>ExtractCopyRightWatermarkComplete：提取版权水印完成；</li>
 <li>DescribeFileAttributesComplete：获取文件属性完成；</li>
 <li>QualityInspectComplete：音画质检测完成；</li>
-<li>QualityEnhanceComplete：音画质重生任务完成。</li>
+<li>QualityEnhanceComplete：音画质重生任务完成；</li>
+<li>PersistenceComplete：剪辑固化完成。</li>
 <b>兼容 2017 版的事件类型：</b>
 <li>TranscodeComplete：视频转码完成；</li>
 <li>ConcatComplete：视频拼接完成；</li>
@@ -348,7 +359,8 @@ public class EventContent extends AbstractModel {
 <li>ExtractCopyRightWatermarkComplete：提取版权水印完成；</li>
 <li>DescribeFileAttributesComplete：获取文件属性完成；</li>
 <li>QualityInspectComplete：音画质检测完成；</li>
-<li>QualityEnhanceComplete：音画质重生任务完成。</li>
+<li>QualityEnhanceComplete：音画质重生任务完成；</li>
+<li>PersistenceComplete：剪辑固化完成。</li>
 <b>兼容 2017 版的事件类型：</b>
 <li>TranscodeComplete：视频转码完成；</li>
 <li>ConcatComplete：视频拼接完成；</li>
@@ -372,7 +384,8 @@ public class EventContent extends AbstractModel {
 <li>ExtractCopyRightWatermarkComplete：提取版权水印完成；</li>
 <li>DescribeFileAttributesComplete：获取文件属性完成；</li>
 <li>QualityInspectComplete：音画质检测完成；</li>
-<li>QualityEnhanceComplete：音画质重生任务完成。</li>
+<li>QualityEnhanceComplete：音画质重生任务完成；</li>
+<li>PersistenceComplete：剪辑固化完成。</li>
 <b>兼容 2017 版的事件类型：</b>
 <li>TranscodeComplete：视频转码完成；</li>
 <li>ConcatComplete：视频拼接完成；</li>
@@ -884,6 +897,26 @@ public class EventContent extends AbstractModel {
         this.MediaCastStatusChangedEvent = MediaCastStatusChangedEvent;
     }
 
+    /**
+     * Get 剪辑固化完成事件，当事件类型为 PersistenceComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PersistenceCompleteEvent 剪辑固化完成事件，当事件类型为 PersistenceComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public PersistenceCompleteTask getPersistenceCompleteEvent() {
+        return this.PersistenceCompleteEvent;
+    }
+
+    /**
+     * Set 剪辑固化完成事件，当事件类型为 PersistenceComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PersistenceCompleteEvent 剪辑固化完成事件，当事件类型为 PersistenceComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPersistenceCompleteEvent(PersistenceCompleteTask PersistenceCompleteEvent) {
+        this.PersistenceCompleteEvent = PersistenceCompleteEvent;
+    }
+
     public EventContent() {
     }
 
@@ -973,6 +1006,9 @@ public class EventContent extends AbstractModel {
         if (source.MediaCastStatusChangedEvent != null) {
             this.MediaCastStatusChangedEvent = new MediaCastEvent(source.MediaCastStatusChangedEvent);
         }
+        if (source.PersistenceCompleteEvent != null) {
+            this.PersistenceCompleteEvent = new PersistenceCompleteTask(source.PersistenceCompleteEvent);
+        }
     }
 
 
@@ -1007,6 +1043,7 @@ public class EventContent extends AbstractModel {
         this.setParamObj(map, prefix + "QualityInspectCompleteEvent.", this.QualityInspectCompleteEvent);
         this.setParamObj(map, prefix + "QualityEnhanceCompleteEvent.", this.QualityEnhanceCompleteEvent);
         this.setParamObj(map, prefix + "MediaCastStatusChangedEvent.", this.MediaCastStatusChangedEvent);
+        this.setParamObj(map, prefix + "PersistenceCompleteEvent.", this.PersistenceCompleteEvent);
 
     }
 }

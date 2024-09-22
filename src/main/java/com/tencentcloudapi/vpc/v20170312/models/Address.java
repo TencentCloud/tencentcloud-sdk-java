@@ -218,6 +218,14 @@ public class Address extends AbstractModel {
     private String BandwidthPackageId;
 
     /**
+    * 传统弹性公网IPv6所属vpc唯一ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("UnVpcId")
+    @Expose
+    private String UnVpcId;
+
+    /**
      * Get `EIP`的`ID`，是`EIP`的唯一标识。 
      * @return AddressId `EIP`的`ID`，是`EIP`的唯一标识。
      */
@@ -693,6 +701,26 @@ public class Address extends AbstractModel {
         this.BandwidthPackageId = BandwidthPackageId;
     }
 
+    /**
+     * Get 传统弹性公网IPv6所属vpc唯一ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return UnVpcId 传统弹性公网IPv6所属vpc唯一ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getUnVpcId() {
+        return this.UnVpcId;
+    }
+
+    /**
+     * Set 传统弹性公网IPv6所属vpc唯一ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UnVpcId 传统弹性公网IPv6所属vpc唯一ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUnVpcId(String UnVpcId) {
+        this.UnVpcId = UnVpcId;
+    }
+
     public Address() {
     }
 
@@ -779,6 +807,9 @@ public class Address extends AbstractModel {
         if (source.BandwidthPackageId != null) {
             this.BandwidthPackageId = new String(source.BandwidthPackageId);
         }
+        if (source.UnVpcId != null) {
+            this.UnVpcId = new String(source.UnVpcId);
+        }
     }
 
 
@@ -811,6 +842,7 @@ public class Address extends AbstractModel {
         this.setParamSimple(map, prefix + "AntiDDoSPackageId", this.AntiDDoSPackageId);
         this.setParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
         this.setParamSimple(map, prefix + "BandwidthPackageId", this.BandwidthPackageId);
+        this.setParamSimple(map, prefix + "UnVpcId", this.UnVpcId);
 
     }
 }

@@ -48,6 +48,17 @@ WAKE_UP_STOPPED_SCALING：扩容优先开机。扩容时优先对已关机的实
     private Boolean ReplaceLoadBalancerUnhealthy;
 
     /**
+    * 不健康替换服务的替换模式。取值范围：
+RECREATE：重建实例替代原有不健康实例；
+RESET：对原有不健康实例进行重装系统操作，可保持数据盘、内网IP、实例id等信息不发生变化，实例登录设置、主机名、增强服务和 UserData 与当前启动配置保持一致。
+默认取值：RECREATE
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ReplaceMode")
+    @Expose
+    private String ReplaceMode;
+
+    /**
      * Get 开启监控不健康替换服务。若开启则对于云监控标记为不健康的实例，弹性伸缩服务会进行替换。若不指定该参数，则默认为 False。 
      * @return ReplaceMonitorUnhealthy 开启监控不健康替换服务。若开启则对于云监控标记为不健康的实例，弹性伸缩服务会进行替换。若不指定该参数，则默认为 False。
      */
@@ -107,6 +118,38 @@ WAKE_UP_STOPPED_SCALING：扩容优先开机。扩容时优先对已关机的实
         this.ReplaceLoadBalancerUnhealthy = ReplaceLoadBalancerUnhealthy;
     }
 
+    /**
+     * Get 不健康替换服务的替换模式。取值范围：
+RECREATE：重建实例替代原有不健康实例；
+RESET：对原有不健康实例进行重装系统操作，可保持数据盘、内网IP、实例id等信息不发生变化，实例登录设置、主机名、增强服务和 UserData 与当前启动配置保持一致。
+默认取值：RECREATE
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ReplaceMode 不健康替换服务的替换模式。取值范围：
+RECREATE：重建实例替代原有不健康实例；
+RESET：对原有不健康实例进行重装系统操作，可保持数据盘、内网IP、实例id等信息不发生变化，实例登录设置、主机名、增强服务和 UserData 与当前启动配置保持一致。
+默认取值：RECREATE
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getReplaceMode() {
+        return this.ReplaceMode;
+    }
+
+    /**
+     * Set 不健康替换服务的替换模式。取值范围：
+RECREATE：重建实例替代原有不健康实例；
+RESET：对原有不健康实例进行重装系统操作，可保持数据盘、内网IP、实例id等信息不发生变化，实例登录设置、主机名、增强服务和 UserData 与当前启动配置保持一致。
+默认取值：RECREATE
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ReplaceMode 不健康替换服务的替换模式。取值范围：
+RECREATE：重建实例替代原有不健康实例；
+RESET：对原有不健康实例进行重装系统操作，可保持数据盘、内网IP、实例id等信息不发生变化，实例登录设置、主机名、增强服务和 UserData 与当前启动配置保持一致。
+默认取值：RECREATE
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setReplaceMode(String ReplaceMode) {
+        this.ReplaceMode = ReplaceMode;
+    }
+
     public ServiceSettings() {
     }
 
@@ -124,6 +167,9 @@ WAKE_UP_STOPPED_SCALING：扩容优先开机。扩容时优先对已关机的实
         if (source.ReplaceLoadBalancerUnhealthy != null) {
             this.ReplaceLoadBalancerUnhealthy = new Boolean(source.ReplaceLoadBalancerUnhealthy);
         }
+        if (source.ReplaceMode != null) {
+            this.ReplaceMode = new String(source.ReplaceMode);
+        }
     }
 
 
@@ -134,6 +180,7 @@ WAKE_UP_STOPPED_SCALING：扩容优先开机。扩容时优先对已关机的实
         this.setParamSimple(map, prefix + "ReplaceMonitorUnhealthy", this.ReplaceMonitorUnhealthy);
         this.setParamSimple(map, prefix + "ScalingMode", this.ScalingMode);
         this.setParamSimple(map, prefix + "ReplaceLoadBalancerUnhealthy", this.ReplaceLoadBalancerUnhealthy);
+        this.setParamSimple(map, prefix + "ReplaceMode", this.ReplaceMode);
 
     }
 }

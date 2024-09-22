@@ -270,6 +270,17 @@ public class AsrClient extends AbstractClient{
     }
 
     /**
+     *查询用户用量
+     * @param req GetUsageByDateRequest
+     * @return GetUsageByDateResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetUsageByDateResponse GetUsageByDate(GetUsageByDateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetUsageByDate", GetUsageByDateResponse.class);
+    }
+
+    /**
      *用户通过该接口可以更新自学习模型，如模型名称、模型类型、模型语料。
      * @param req ModifyCustomizationRequest
      * @return ModifyCustomizationResponse

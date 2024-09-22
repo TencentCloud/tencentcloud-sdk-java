@@ -64,7 +64,7 @@ public class PendingRelease extends AbstractModel {
     private String Namespace;
 
     /**
-    * 应用状态
+    * 应用状态(参考helm的发布状态： unknown, deployed, uninstalled, superseded, failed, uninstalling, pending-install, pending-upgrade 或 pending-rollback)
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
@@ -180,9 +180,9 @@ public class PendingRelease extends AbstractModel {
     }
 
     /**
-     * Get 应用状态
+     * Get 应用状态(参考helm的发布状态： unknown, deployed, uninstalled, superseded, failed, uninstalling, pending-install, pending-upgrade 或 pending-rollback)
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Status 应用状态
+     * @return Status 应用状态(参考helm的发布状态： unknown, deployed, uninstalled, superseded, failed, uninstalling, pending-install, pending-upgrade 或 pending-rollback)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
@@ -190,9 +190,9 @@ public class PendingRelease extends AbstractModel {
     }
 
     /**
-     * Set 应用状态
+     * Set 应用状态(参考helm的发布状态： unknown, deployed, uninstalled, superseded, failed, uninstalling, pending-install, pending-upgrade 或 pending-rollback)
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Status 应用状态
+     * @param Status 应用状态(参考helm的发布状态： unknown, deployed, uninstalled, superseded, failed, uninstalling, pending-install, pending-upgrade 或 pending-rollback)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {

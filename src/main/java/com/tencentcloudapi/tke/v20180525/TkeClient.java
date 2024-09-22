@@ -655,6 +655,17 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *删除集群内采集规则
+     * @param req DeleteLogConfigsRequest
+     * @return DeleteLogConfigsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteLogConfigsResponse DeleteLogConfigs(DeleteLogConfigsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteLogConfigs", DeleteLogConfigsResponse.class);
+    }
+
+    /**
      *删除2.0实例告警策略
      * @param req DeletePrometheusAlertPolicyRequest
      * @return DeletePrometheusAlertPolicyResponse
@@ -1358,6 +1369,17 @@ public class TkeClient extends AbstractClient{
     public DescribeImagesResponse DescribeImages(DescribeImagesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeImages", DescribeImagesResponse.class);
+    }
+
+    /**
+     *查询日志采集规则
+     * @param req DescribeLogConfigsRequest
+     * @return DescribeLogConfigsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLogConfigsResponse DescribeLogConfigs(DescribeLogConfigsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLogConfigs", DescribeLogConfigsResponse.class);
     }
 
     /**

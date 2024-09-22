@@ -225,7 +225,7 @@ public class VodClient extends AbstractClient{
 
     /**
      *创建片头片尾模板。
-- 最大支持模版数量为 100 个。
+- 最大支持模板数量为 100 个。
      * @param req CreateHeadTailTemplateRequest
      * @return CreateHeadTailTemplateResponse
      * @throws TencentCloudSDKException

@@ -251,6 +251,39 @@ public class LkeClient extends AbstractClient{
     }
 
     /**
+     *接口调用折线图
+     * @param req DescribeCallStatsGraphRequest
+     * @return DescribeCallStatsGraphResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCallStatsGraphResponse DescribeCallStatsGraph(DescribeCallStatsGraphRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCallStatsGraph", DescribeCallStatsGraphResponse.class);
+    }
+
+    /**
+     *并发调用响应
+     * @param req DescribeConcurrencyUsageRequest
+     * @return DescribeConcurrencyUsageResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeConcurrencyUsageResponse DescribeConcurrencyUsage(DescribeConcurrencyUsageRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeConcurrencyUsage", DescribeConcurrencyUsageResponse.class);
+    }
+
+    /**
+     *并发调用折线图
+     * @param req DescribeConcurrencyUsageGraphRequest
+     * @return DescribeConcurrencyUsageGraphResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeConcurrencyUsageGraphResponse DescribeConcurrencyUsageGraph(DescribeConcurrencyUsageGraphRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeConcurrencyUsageGraph", DescribeConcurrencyUsageGraphResponse.class);
+    }
+
+    /**
      *企业详情
      * @param req DescribeCorpRequest
      * @return DescribeCorpResponse
@@ -270,6 +303,28 @@ public class LkeClient extends AbstractClient{
     public DescribeDocResponse DescribeDoc(DescribeDocRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeDoc", DescribeDocResponse.class);
+    }
+
+    /**
+     *查询知识库用量
+     * @param req DescribeKnowledgeUsageRequest
+     * @return DescribeKnowledgeUsageResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeKnowledgeUsageResponse DescribeKnowledgeUsage(DescribeKnowledgeUsageRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeKnowledgeUsage", DescribeKnowledgeUsageResponse.class);
+    }
+
+    /**
+     *查询企业知识库容量饼图
+     * @param req DescribeKnowledgeUsagePieGraphRequest
+     * @return DescribeKnowledgeUsagePieGraphResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeKnowledgeUsagePieGraphResponse DescribeKnowledgeUsagePieGraph(DescribeKnowledgeUsagePieGraphRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeKnowledgeUsagePieGraph", DescribeKnowledgeUsagePieGraphResponse.class);
     }
 
     /**
@@ -328,6 +383,17 @@ public class LkeClient extends AbstractClient{
     }
 
     /**
+     *查询搜索服务调用折线图
+     * @param req DescribeSearchStatsGraphRequest
+     * @return DescribeSearchStatsGraphResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSearchStatsGraphResponse DescribeSearchStatsGraph(DescribeSearchStatsGraphRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSearchStatsGraph", DescribeSearchStatsGraphResponse.class);
+    }
+
+    /**
      *获取片段详情
      * @param req DescribeSegmentsRequest
      * @return DescribeSegmentsResponse
@@ -347,6 +413,28 @@ public class LkeClient extends AbstractClient{
     public DescribeStorageCredentialResponse DescribeStorageCredential(DescribeStorageCredentialRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeStorageCredential", DescribeStorageCredentialResponse.class);
+    }
+
+    /**
+     *接口调用token详情
+     * @param req DescribeTokenUsageRequest
+     * @return DescribeTokenUsageResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTokenUsageResponse DescribeTokenUsage(DescribeTokenUsageRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTokenUsage", DescribeTokenUsageResponse.class);
+    }
+
+    /**
+     *接口调用token折线图
+     * @param req DescribeTokenUsageGraphRequest
+     * @return DescribeTokenUsageGraphResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTokenUsageGraphResponse DescribeTokenUsageGraph(DescribeTokenUsageGraphRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTokenUsageGraph", DescribeTokenUsageGraphResponse.class);
     }
 
     /**

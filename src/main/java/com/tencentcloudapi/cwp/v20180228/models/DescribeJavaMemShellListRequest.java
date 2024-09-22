@@ -24,7 +24,9 @@ import java.util.HashMap;
 public class DescribeJavaMemShellListRequest extends AbstractModel {
 
     /**
-    * 过滤条件：Keywords: ip或者主机名模糊查询, Type，Status精确匹配，CreateBeginTime，CreateEndTime时间段
+    * 过滤条件：InstanceID、IP、
+
+MachineName主机名模糊查询, Type，Status精确匹配，CreateBeginTime，CreateEndTime时间段
     */
     @SerializedName("Filters")
     @Expose
@@ -45,16 +47,24 @@ public class DescribeJavaMemShellListRequest extends AbstractModel {
     private Long Limit;
 
     /**
-     * Get 过滤条件：Keywords: ip或者主机名模糊查询, Type，Status精确匹配，CreateBeginTime，CreateEndTime时间段 
-     * @return Filters 过滤条件：Keywords: ip或者主机名模糊查询, Type，Status精确匹配，CreateBeginTime，CreateEndTime时间段
+     * Get 过滤条件：InstanceID、IP、
+
+MachineName主机名模糊查询, Type，Status精确匹配，CreateBeginTime，CreateEndTime时间段 
+     * @return Filters 过滤条件：InstanceID、IP、
+
+MachineName主机名模糊查询, Type，Status精确匹配，CreateBeginTime，CreateEndTime时间段
      */
     public Filters [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤条件：Keywords: ip或者主机名模糊查询, Type，Status精确匹配，CreateBeginTime，CreateEndTime时间段
-     * @param Filters 过滤条件：Keywords: ip或者主机名模糊查询, Type，Status精确匹配，CreateBeginTime，CreateEndTime时间段
+     * Set 过滤条件：InstanceID、IP、
+
+MachineName主机名模糊查询, Type，Status精确匹配，CreateBeginTime，CreateEndTime时间段
+     * @param Filters 过滤条件：InstanceID、IP、
+
+MachineName主机名模糊查询, Type，Status精确匹配，CreateBeginTime，CreateEndTime时间段
      */
     public void setFilters(Filters [] Filters) {
         this.Filters = Filters;

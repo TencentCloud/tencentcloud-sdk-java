@@ -52,6 +52,13 @@ public class DescribeEventConfigResponse extends AbstractModel {
     private String DeleteMediaCompleteEventSwitch;
 
     /**
+    * 是否接收剪辑固化完成事件通知，"OFF" 为忽略该事件通知，"ON" 为接收事件通知。
+    */
+    @SerializedName("PersistenceCompleteEventSwitch")
+    @Expose
+    private String PersistenceCompleteEventSwitch;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -123,6 +130,22 @@ public class DescribeEventConfigResponse extends AbstractModel {
     }
 
     /**
+     * Get 是否接收剪辑固化完成事件通知，"OFF" 为忽略该事件通知，"ON" 为接收事件通知。 
+     * @return PersistenceCompleteEventSwitch 是否接收剪辑固化完成事件通知，"OFF" 为忽略该事件通知，"ON" 为接收事件通知。
+     */
+    public String getPersistenceCompleteEventSwitch() {
+        return this.PersistenceCompleteEventSwitch;
+    }
+
+    /**
+     * Set 是否接收剪辑固化完成事件通知，"OFF" 为忽略该事件通知，"ON" 为接收事件通知。
+     * @param PersistenceCompleteEventSwitch 是否接收剪辑固化完成事件通知，"OFF" 为忽略该事件通知，"ON" 为接收事件通知。
+     */
+    public void setPersistenceCompleteEventSwitch(String PersistenceCompleteEventSwitch) {
+        this.PersistenceCompleteEventSwitch = PersistenceCompleteEventSwitch;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -158,6 +181,9 @@ public class DescribeEventConfigResponse extends AbstractModel {
         if (source.DeleteMediaCompleteEventSwitch != null) {
             this.DeleteMediaCompleteEventSwitch = new String(source.DeleteMediaCompleteEventSwitch);
         }
+        if (source.PersistenceCompleteEventSwitch != null) {
+            this.PersistenceCompleteEventSwitch = new String(source.PersistenceCompleteEventSwitch);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -172,6 +198,7 @@ public class DescribeEventConfigResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "NotificationUrl", this.NotificationUrl);
         this.setParamSimple(map, prefix + "UploadMediaCompleteEventSwitch", this.UploadMediaCompleteEventSwitch);
         this.setParamSimple(map, prefix + "DeleteMediaCompleteEventSwitch", this.DeleteMediaCompleteEventSwitch);
+        this.setParamSimple(map, prefix + "PersistenceCompleteEventSwitch", this.PersistenceCompleteEventSwitch);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }
