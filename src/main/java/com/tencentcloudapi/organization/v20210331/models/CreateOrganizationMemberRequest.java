@@ -94,6 +94,13 @@ public class CreateOrganizationMemberRequest extends AbstractModel {
     private Long AuthRelationId;
 
     /**
+    * 成员标签列表。最大10个
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get 成员名称。最大长度为25个字符，支持英文字母、数字、汉字、符号+@、&._[]-:, 
      * @return Name 成员名称。最大长度为25个字符，支持英文字母、数字、汉字、符号+@、&._[]-:,
      */
@@ -253,6 +260,22 @@ public class CreateOrganizationMemberRequest extends AbstractModel {
         this.AuthRelationId = AuthRelationId;
     }
 
+    /**
+     * Get 成员标签列表。最大10个 
+     * @return Tags 成员标签列表。最大10个
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 成员标签列表。最大10个
+     * @param Tags 成员标签列表。最大10个
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public CreateOrganizationMemberRequest() {
     }
 
@@ -297,6 +320,12 @@ public class CreateOrganizationMemberRequest extends AbstractModel {
         if (source.AuthRelationId != null) {
             this.AuthRelationId = new Long(source.AuthRelationId);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -314,6 +343,7 @@ public class CreateOrganizationMemberRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "PayUin", this.PayUin);
         this.setParamArraySimple(map, prefix + "IdentityRoleID.", this.IdentityRoleID);
         this.setParamSimple(map, prefix + "AuthRelationId", this.AuthRelationId);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

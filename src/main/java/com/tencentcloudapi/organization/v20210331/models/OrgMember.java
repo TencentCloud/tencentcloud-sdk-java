@@ -160,6 +160,14 @@ public class OrgMember extends AbstractModel {
     private String PermissionStatus;
 
     /**
+    * 成员标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get 成员Uin
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return MemberUin 成员Uin
@@ -499,6 +507,26 @@ public class OrgMember extends AbstractModel {
         this.PermissionStatus = PermissionStatus;
     }
 
+    /**
+     * Get 成员标签列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Tags 成员标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 成员标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Tags 成员标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public OrgMember() {
     }
 
@@ -564,6 +592,12 @@ public class OrgMember extends AbstractModel {
         if (source.PermissionStatus != null) {
             this.PermissionStatus = new String(source.PermissionStatus);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -588,6 +622,7 @@ public class OrgMember extends AbstractModel {
         this.setParamArrayObj(map, prefix + "OrgIdentity.", this.OrgIdentity);
         this.setParamSimple(map, prefix + "BindStatus", this.BindStatus);
         this.setParamSimple(map, prefix + "PermissionStatus", this.PermissionStatus);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

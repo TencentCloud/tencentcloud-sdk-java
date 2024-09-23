@@ -38,21 +38,21 @@ public class AddPermissionPolicyToRoleConfigurationRequest extends AbstractModel
     private String RoleConfigurationId;
 
     /**
-    * 权限策略类型。取值：  System：系统策略。复用 CAM 的系统策略。 Custom: 自定义策略。按照 CAM 权限策略语法和结构编写的自定义策略。 前期只支持系统策略，自定义策略后期在支持
+    * 权限策略类型。取值：  System：系统策略。复用 CAM 的系统策略。 Custom: 自定义策略。按照 CAM 权限策略语法和结构编写的自定义策略。 
     */
     @SerializedName("RolePolicyType")
     @Expose
     private String RolePolicyType;
 
     /**
-    * 权限策略名称，长度最大为 20策略，每个策略长度最大32个字符。
+    * 权限策略名称，长度最大为 20策略，每个策略长度最大32个字符。如果要添加系统策略，建议使用RolePolicies参数。自定义策略时，数组长度最大为1。
     */
     @SerializedName("RolePolicyNames")
     @Expose
     private String [] RolePolicyNames;
 
     /**
-    * 策略详情。
+    * 添加的系统策略详情。
     */
     @SerializedName("RolePolicies")
     @Expose
@@ -98,48 +98,48 @@ public class AddPermissionPolicyToRoleConfigurationRequest extends AbstractModel
     }
 
     /**
-     * Get 权限策略类型。取值：  System：系统策略。复用 CAM 的系统策略。 Custom: 自定义策略。按照 CAM 权限策略语法和结构编写的自定义策略。 前期只支持系统策略，自定义策略后期在支持 
-     * @return RolePolicyType 权限策略类型。取值：  System：系统策略。复用 CAM 的系统策略。 Custom: 自定义策略。按照 CAM 权限策略语法和结构编写的自定义策略。 前期只支持系统策略，自定义策略后期在支持
+     * Get 权限策略类型。取值：  System：系统策略。复用 CAM 的系统策略。 Custom: 自定义策略。按照 CAM 权限策略语法和结构编写的自定义策略。  
+     * @return RolePolicyType 权限策略类型。取值：  System：系统策略。复用 CAM 的系统策略。 Custom: 自定义策略。按照 CAM 权限策略语法和结构编写的自定义策略。 
      */
     public String getRolePolicyType() {
         return this.RolePolicyType;
     }
 
     /**
-     * Set 权限策略类型。取值：  System：系统策略。复用 CAM 的系统策略。 Custom: 自定义策略。按照 CAM 权限策略语法和结构编写的自定义策略。 前期只支持系统策略，自定义策略后期在支持
-     * @param RolePolicyType 权限策略类型。取值：  System：系统策略。复用 CAM 的系统策略。 Custom: 自定义策略。按照 CAM 权限策略语法和结构编写的自定义策略。 前期只支持系统策略，自定义策略后期在支持
+     * Set 权限策略类型。取值：  System：系统策略。复用 CAM 的系统策略。 Custom: 自定义策略。按照 CAM 权限策略语法和结构编写的自定义策略。 
+     * @param RolePolicyType 权限策略类型。取值：  System：系统策略。复用 CAM 的系统策略。 Custom: 自定义策略。按照 CAM 权限策略语法和结构编写的自定义策略。 
      */
     public void setRolePolicyType(String RolePolicyType) {
         this.RolePolicyType = RolePolicyType;
     }
 
     /**
-     * Get 权限策略名称，长度最大为 20策略，每个策略长度最大32个字符。 
-     * @return RolePolicyNames 权限策略名称，长度最大为 20策略，每个策略长度最大32个字符。
+     * Get 权限策略名称，长度最大为 20策略，每个策略长度最大32个字符。如果要添加系统策略，建议使用RolePolicies参数。自定义策略时，数组长度最大为1。 
+     * @return RolePolicyNames 权限策略名称，长度最大为 20策略，每个策略长度最大32个字符。如果要添加系统策略，建议使用RolePolicies参数。自定义策略时，数组长度最大为1。
      */
     public String [] getRolePolicyNames() {
         return this.RolePolicyNames;
     }
 
     /**
-     * Set 权限策略名称，长度最大为 20策略，每个策略长度最大32个字符。
-     * @param RolePolicyNames 权限策略名称，长度最大为 20策略，每个策略长度最大32个字符。
+     * Set 权限策略名称，长度最大为 20策略，每个策略长度最大32个字符。如果要添加系统策略，建议使用RolePolicies参数。自定义策略时，数组长度最大为1。
+     * @param RolePolicyNames 权限策略名称，长度最大为 20策略，每个策略长度最大32个字符。如果要添加系统策略，建议使用RolePolicies参数。自定义策略时，数组长度最大为1。
      */
     public void setRolePolicyNames(String [] RolePolicyNames) {
         this.RolePolicyNames = RolePolicyNames;
     }
 
     /**
-     * Get 策略详情。 
-     * @return RolePolicies 策略详情。
+     * Get 添加的系统策略详情。 
+     * @return RolePolicies 添加的系统策略详情。
      */
     public PolicyDetail [] getRolePolicies() {
         return this.RolePolicies;
     }
 
     /**
-     * Set 策略详情。
-     * @param RolePolicies 策略详情。
+     * Set 添加的系统策略详情。
+     * @param RolePolicies 添加的系统策略详情。
      */
     public void setRolePolicies(PolicyDetail [] RolePolicies) {
         this.RolePolicies = RolePolicies;

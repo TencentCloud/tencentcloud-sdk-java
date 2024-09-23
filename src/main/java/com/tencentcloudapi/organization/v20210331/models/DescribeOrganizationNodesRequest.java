@@ -38,6 +38,13 @@ public class DescribeOrganizationNodesRequest extends AbstractModel {
     private Long Offset;
 
     /**
+    * 部门标签搜索列表，最大10个
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get 限制数目。最大50 
      * @return Limit 限制数目。最大50
      */
@@ -69,6 +76,22 @@ public class DescribeOrganizationNodesRequest extends AbstractModel {
         this.Offset = Offset;
     }
 
+    /**
+     * Get 部门标签搜索列表，最大10个 
+     * @return Tags 部门标签搜索列表，最大10个
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 部门标签搜索列表，最大10个
+     * @param Tags 部门标签搜索列表，最大10个
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public DescribeOrganizationNodesRequest() {
     }
 
@@ -83,6 +106,12 @@ public class DescribeOrganizationNodesRequest extends AbstractModel {
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -92,6 +121,7 @@ public class DescribeOrganizationNodesRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

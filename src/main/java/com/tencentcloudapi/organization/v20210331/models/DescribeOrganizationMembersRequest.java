@@ -66,6 +66,13 @@ public class DescribeOrganizationMembersRequest extends AbstractModel {
     private String Product;
 
     /**
+    * 成员标签搜索列表，最大10个
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get 偏移量。取值是limit的整数倍，默认值 : 0 
      * @return Offset 偏移量。取值是limit的整数倍，默认值 : 0
      */
@@ -161,6 +168,22 @@ public class DescribeOrganizationMembersRequest extends AbstractModel {
         this.Product = Product;
     }
 
+    /**
+     * Get 成员标签搜索列表，最大10个 
+     * @return Tags 成员标签搜索列表，最大10个
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 成员标签搜索列表，最大10个
+     * @param Tags 成员标签搜索列表，最大10个
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public DescribeOrganizationMembersRequest() {
     }
 
@@ -187,6 +210,12 @@ public class DescribeOrganizationMembersRequest extends AbstractModel {
         if (source.Product != null) {
             this.Product = new String(source.Product);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -200,6 +229,7 @@ public class DescribeOrganizationMembersRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SearchKey", this.SearchKey);
         this.setParamSimple(map, prefix + "AuthName", this.AuthName);
         this.setParamSimple(map, prefix + "Product", this.Product);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }
