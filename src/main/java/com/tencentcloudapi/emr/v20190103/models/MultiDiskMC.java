@@ -40,6 +40,14 @@ public class MultiDiskMC extends AbstractModel {
     private Long Type;
 
     /**
+    * 磁盘大小
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Size")
+    @Expose
+    private String Size;
+
+    /**
     * 云盘大小
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -88,6 +96,26 @@ public class MultiDiskMC extends AbstractModel {
     }
 
     /**
+     * Get 磁盘大小
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Size 磁盘大小
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSize() {
+        return this.Size;
+    }
+
+    /**
+     * Set 磁盘大小
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Size 磁盘大小
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSize(String Size) {
+        this.Size = Size;
+    }
+
+    /**
      * Get 云盘大小
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Volume 云盘大小
@@ -121,6 +149,9 @@ public class MultiDiskMC extends AbstractModel {
         if (source.Type != null) {
             this.Type = new Long(source.Type);
         }
+        if (source.Size != null) {
+            this.Size = new String(source.Size);
+        }
         if (source.Volume != null) {
             this.Volume = new Long(source.Volume);
         }
@@ -133,6 +164,7 @@ public class MultiDiskMC extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Count", this.Count);
         this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "Size", this.Size);
         this.setParamSimple(map, prefix + "Volume", this.Volume);
 
     }

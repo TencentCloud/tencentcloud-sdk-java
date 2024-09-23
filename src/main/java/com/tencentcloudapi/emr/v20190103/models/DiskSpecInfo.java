@@ -63,6 +63,14 @@ public class DiskSpecInfo extends AbstractModel {
     private Long DiskSize;
 
     /**
+    * 额外性能
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ExtraPerformance")
+    @Expose
+    private Long ExtraPerformance;
+
+    /**
      * Get 磁盘数量
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Count 磁盘数量
@@ -182,6 +190,26 @@ public class DiskSpecInfo extends AbstractModel {
         this.DiskSize = DiskSize;
     }
 
+    /**
+     * Get 额外性能
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ExtraPerformance 额外性能
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getExtraPerformance() {
+        return this.ExtraPerformance;
+    }
+
+    /**
+     * Set 额外性能
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExtraPerformance 额外性能
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExtraPerformance(Long ExtraPerformance) {
+        this.ExtraPerformance = ExtraPerformance;
+    }
+
     public DiskSpecInfo() {
     }
 
@@ -199,6 +227,9 @@ public class DiskSpecInfo extends AbstractModel {
         if (source.DiskSize != null) {
             this.DiskSize = new Long(source.DiskSize);
         }
+        if (source.ExtraPerformance != null) {
+            this.ExtraPerformance = new Long(source.ExtraPerformance);
+        }
     }
 
 
@@ -209,6 +240,7 @@ public class DiskSpecInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Count", this.Count);
         this.setParamSimple(map, prefix + "DiskType", this.DiskType);
         this.setParamSimple(map, prefix + "DiskSize", this.DiskSize);
+        this.setParamSimple(map, prefix + "ExtraPerformance", this.ExtraPerformance);
 
     }
 }

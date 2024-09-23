@@ -32,6 +32,7 @@ public class SmsPackagesStatisticsRequest extends AbstractModel {
 
     /**
     * 最大上限(需要拉取的套餐包个数)。
+注：Limit默认最大值为500，可结合Offset实现分页查询。
     */
     @SerializedName("Limit")
     @Expose
@@ -45,7 +46,7 @@ public class SmsPackagesStatisticsRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * 起始时间，格式为yyyymmddhh，精确到小时，例如2021050113，表示2021年5月1号13时。
+    * 起始时间，格式为yyyymmddhh，精确到小时，例如2024050113，表示2024年5月1号13时。
 注：接口会返回 BeginTime 到 EndTime 之间创建的套餐包的统计信息。
     */
     @SerializedName("BeginTime")
@@ -53,7 +54,7 @@ public class SmsPackagesStatisticsRequest extends AbstractModel {
     private String BeginTime;
 
     /**
-    * 结束时间，格式为yyyymmddhh，精确到小时，例如2021050118，表示2021年5月1号18时。
+    * 结束时间，格式为yyyymmddhh，精确到小时，例如2024050118，表示2024年5月1号18时。
 注：EndTime 必须大于 BeginTime 且小于当前时间。
     */
     @SerializedName("EndTime")
@@ -77,8 +78,10 @@ public class SmsPackagesStatisticsRequest extends AbstractModel {
     }
 
     /**
-     * Get 最大上限(需要拉取的套餐包个数)。 
+     * Get 最大上限(需要拉取的套餐包个数)。
+注：Limit默认最大值为500，可结合Offset实现分页查询。 
      * @return Limit 最大上限(需要拉取的套餐包个数)。
+注：Limit默认最大值为500，可结合Offset实现分页查询。
      */
     public Long getLimit() {
         return this.Limit;
@@ -86,7 +89,9 @@ public class SmsPackagesStatisticsRequest extends AbstractModel {
 
     /**
      * Set 最大上限(需要拉取的套餐包个数)。
+注：Limit默认最大值为500，可结合Offset实现分页查询。
      * @param Limit 最大上限(需要拉取的套餐包个数)。
+注：Limit默认最大值为500，可结合Offset实现分页查询。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
@@ -109,9 +114,9 @@ public class SmsPackagesStatisticsRequest extends AbstractModel {
     }
 
     /**
-     * Get 起始时间，格式为yyyymmddhh，精确到小时，例如2021050113，表示2021年5月1号13时。
+     * Get 起始时间，格式为yyyymmddhh，精确到小时，例如2024050113，表示2024年5月1号13时。
 注：接口会返回 BeginTime 到 EndTime 之间创建的套餐包的统计信息。 
-     * @return BeginTime 起始时间，格式为yyyymmddhh，精确到小时，例如2021050113，表示2021年5月1号13时。
+     * @return BeginTime 起始时间，格式为yyyymmddhh，精确到小时，例如2024050113，表示2024年5月1号13时。
 注：接口会返回 BeginTime 到 EndTime 之间创建的套餐包的统计信息。
      */
     public String getBeginTime() {
@@ -119,9 +124,9 @@ public class SmsPackagesStatisticsRequest extends AbstractModel {
     }
 
     /**
-     * Set 起始时间，格式为yyyymmddhh，精确到小时，例如2021050113，表示2021年5月1号13时。
+     * Set 起始时间，格式为yyyymmddhh，精确到小时，例如2024050113，表示2024年5月1号13时。
 注：接口会返回 BeginTime 到 EndTime 之间创建的套餐包的统计信息。
-     * @param BeginTime 起始时间，格式为yyyymmddhh，精确到小时，例如2021050113，表示2021年5月1号13时。
+     * @param BeginTime 起始时间，格式为yyyymmddhh，精确到小时，例如2024050113，表示2024年5月1号13时。
 注：接口会返回 BeginTime 到 EndTime 之间创建的套餐包的统计信息。
      */
     public void setBeginTime(String BeginTime) {
@@ -129,9 +134,9 @@ public class SmsPackagesStatisticsRequest extends AbstractModel {
     }
 
     /**
-     * Get 结束时间，格式为yyyymmddhh，精确到小时，例如2021050118，表示2021年5月1号18时。
+     * Get 结束时间，格式为yyyymmddhh，精确到小时，例如2024050118，表示2024年5月1号18时。
 注：EndTime 必须大于 BeginTime 且小于当前时间。 
-     * @return EndTime 结束时间，格式为yyyymmddhh，精确到小时，例如2021050118，表示2021年5月1号18时。
+     * @return EndTime 结束时间，格式为yyyymmddhh，精确到小时，例如2024050118，表示2024年5月1号18时。
 注：EndTime 必须大于 BeginTime 且小于当前时间。
      */
     public String getEndTime() {
@@ -139,9 +144,9 @@ public class SmsPackagesStatisticsRequest extends AbstractModel {
     }
 
     /**
-     * Set 结束时间，格式为yyyymmddhh，精确到小时，例如2021050118，表示2021年5月1号18时。
+     * Set 结束时间，格式为yyyymmddhh，精确到小时，例如2024050118，表示2024年5月1号18时。
 注：EndTime 必须大于 BeginTime 且小于当前时间。
-     * @param EndTime 结束时间，格式为yyyymmddhh，精确到小时，例如2021050118，表示2021年5月1号18时。
+     * @param EndTime 结束时间，格式为yyyymmddhh，精确到小时，例如2024050118，表示2024年5月1号18时。
 注：EndTime 必须大于 BeginTime 且小于当前时间。
      */
     public void setEndTime(String EndTime) {

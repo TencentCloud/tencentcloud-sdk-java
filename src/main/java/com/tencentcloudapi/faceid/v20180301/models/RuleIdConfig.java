@@ -47,6 +47,17 @@ public class RuleIdConfig extends AbstractModel {
     private Boolean MouthOpenRecognition;
 
     /**
+    * 意愿核身语音播报速度，配置后问答模式和点头模式的语音播报环节都会生效，默认值为0：
+0：智能语速（根据播报文案的长度自动调整语音播报速度）
+1：固定1倍速
+2：固定1.2倍速
+3：固定1.5倍速
+    */
+    @SerializedName("Speed")
+    @Expose
+    private Long Speed;
+
+    /**
      * Get 意愿核身过程中识别用户的回答意图，开启后除了IntentionQuestions的Answers列表中的标准回答会通过，近似意图的回答也会通过，默认开启。 
      * @return IntentionRecognition 意愿核身过程中识别用户的回答意图，开启后除了IntentionQuestions的Answers列表中的标准回答会通过，近似意图的回答也会通过，默认开启。
      */
@@ -102,6 +113,38 @@ public class RuleIdConfig extends AbstractModel {
         this.MouthOpenRecognition = MouthOpenRecognition;
     }
 
+    /**
+     * Get 意愿核身语音播报速度，配置后问答模式和点头模式的语音播报环节都会生效，默认值为0：
+0：智能语速（根据播报文案的长度自动调整语音播报速度）
+1：固定1倍速
+2：固定1.2倍速
+3：固定1.5倍速 
+     * @return Speed 意愿核身语音播报速度，配置后问答模式和点头模式的语音播报环节都会生效，默认值为0：
+0：智能语速（根据播报文案的长度自动调整语音播报速度）
+1：固定1倍速
+2：固定1.2倍速
+3：固定1.5倍速
+     */
+    public Long getSpeed() {
+        return this.Speed;
+    }
+
+    /**
+     * Set 意愿核身语音播报速度，配置后问答模式和点头模式的语音播报环节都会生效，默认值为0：
+0：智能语速（根据播报文案的长度自动调整语音播报速度）
+1：固定1倍速
+2：固定1.2倍速
+3：固定1.5倍速
+     * @param Speed 意愿核身语音播报速度，配置后问答模式和点头模式的语音播报环节都会生效，默认值为0：
+0：智能语速（根据播报文案的长度自动调整语音播报速度）
+1：固定1倍速
+2：固定1.2倍速
+3：固定1.5倍速
+     */
+    public void setSpeed(Long Speed) {
+        this.Speed = Speed;
+    }
+
     public RuleIdConfig() {
     }
 
@@ -119,6 +162,9 @@ public class RuleIdConfig extends AbstractModel {
         if (source.MouthOpenRecognition != null) {
             this.MouthOpenRecognition = new Boolean(source.MouthOpenRecognition);
         }
+        if (source.Speed != null) {
+            this.Speed = new Long(source.Speed);
+        }
     }
 
 
@@ -129,6 +175,7 @@ public class RuleIdConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "IntentionRecognition", this.IntentionRecognition);
         this.setParamSimple(map, prefix + "IntentionType", this.IntentionType);
         this.setParamSimple(map, prefix + "MouthOpenRecognition", this.MouthOpenRecognition);
+        this.setParamSimple(map, prefix + "Speed", this.Speed);
 
     }
 }

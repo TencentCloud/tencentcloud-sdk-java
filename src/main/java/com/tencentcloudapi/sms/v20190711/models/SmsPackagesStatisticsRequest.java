@@ -32,6 +32,7 @@ public class SmsPackagesStatisticsRequest extends AbstractModel {
 
     /**
     * 最大上限(需要拉取的套餐包个数)。
+注：Limit默认最大值为500，可结合Offset实现分页查询。
     */
     @SerializedName("Limit")
     @Expose
@@ -39,7 +40,6 @@ public class SmsPackagesStatisticsRequest extends AbstractModel {
 
     /**
     * 偏移量。
-注：目前固定设置为0。
     */
     @SerializedName("Offset")
     @Expose
@@ -62,8 +62,10 @@ public class SmsPackagesStatisticsRequest extends AbstractModel {
     }
 
     /**
-     * Get 最大上限(需要拉取的套餐包个数)。 
+     * Get 最大上限(需要拉取的套餐包个数)。
+注：Limit默认最大值为500，可结合Offset实现分页查询。 
      * @return Limit 最大上限(需要拉取的套餐包个数)。
+注：Limit默认最大值为500，可结合Offset实现分页查询。
      */
     public Long getLimit() {
         return this.Limit;
@@ -71,17 +73,17 @@ public class SmsPackagesStatisticsRequest extends AbstractModel {
 
     /**
      * Set 最大上限(需要拉取的套餐包个数)。
+注：Limit默认最大值为500，可结合Offset实现分页查询。
      * @param Limit 最大上限(需要拉取的套餐包个数)。
+注：Limit默认最大值为500，可结合Offset实现分页查询。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 偏移量。
-注：目前固定设置为0。 
+     * Get 偏移量。 
      * @return Offset 偏移量。
-注：目前固定设置为0。
      */
     public Long getOffset() {
         return this.Offset;
@@ -89,9 +91,7 @@ public class SmsPackagesStatisticsRequest extends AbstractModel {
 
     /**
      * Set 偏移量。
-注：目前固定设置为0。
      * @param Offset 偏移量。
-注：目前固定设置为0。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

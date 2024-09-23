@@ -218,6 +218,17 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
+     *查询YARN资源调度的全局配置
+     * @param req DescribeGlobalConfigRequest
+     * @return DescribeGlobalConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeGlobalConfigResponse DescribeGlobalConfig(DescribeGlobalConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeGlobalConfig", DescribeGlobalConfigResponse.class);
+    }
+
+    /**
      *获取Hbase表级监控数据概览接口
      * @param req DescribeHBaseTableOverviewRequest
      * @return DescribeHBaseTableOverviewResponse
@@ -492,6 +503,17 @@ public class EmrClient extends AbstractClient{
     public ModifyAutoScaleStrategyResponse ModifyAutoScaleStrategy(ModifyAutoScaleStrategyRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyAutoScaleStrategy", ModifyAutoScaleStrategyResponse.class);
+    }
+
+    /**
+     *修改YARN资源调度的全局配置
+     * @param req ModifyGlobalConfigRequest
+     * @return ModifyGlobalConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyGlobalConfigResponse ModifyGlobalConfig(ModifyGlobalConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyGlobalConfig", ModifyGlobalConfigResponse.class);
     }
 
     /**

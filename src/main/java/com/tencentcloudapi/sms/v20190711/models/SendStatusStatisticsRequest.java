@@ -32,7 +32,7 @@ public class SendStatusStatisticsRequest extends AbstractModel {
 
     /**
     * 结束时间，yyyymmddhh 需要拉取的截止时间，精确到小时
-注：EndDataTime 必须大于 StartDateTime。
+注：EndDataTime 必须大于等于 StartDateTime。
     */
     @SerializedName("EndDataTime")
     @Expose
@@ -79,9 +79,9 @@ public class SendStatusStatisticsRequest extends AbstractModel {
 
     /**
      * Get 结束时间，yyyymmddhh 需要拉取的截止时间，精确到小时
-注：EndDataTime 必须大于 StartDateTime。 
+注：EndDataTime 必须大于等于 StartDateTime。 
      * @return EndDataTime 结束时间，yyyymmddhh 需要拉取的截止时间，精确到小时
-注：EndDataTime 必须大于 StartDateTime。
+注：EndDataTime 必须大于等于 StartDateTime。
      */
     public Long getEndDataTime() {
         return this.EndDataTime;
@@ -89,9 +89,9 @@ public class SendStatusStatisticsRequest extends AbstractModel {
 
     /**
      * Set 结束时间，yyyymmddhh 需要拉取的截止时间，精确到小时
-注：EndDataTime 必须大于 StartDateTime。
+注：EndDataTime 必须大于等于 StartDateTime。
      * @param EndDataTime 结束时间，yyyymmddhh 需要拉取的截止时间，精确到小时
-注：EndDataTime 必须大于 StartDateTime。
+注：EndDataTime 必须大于等于 StartDateTime。
      */
     public void setEndDataTime(Long EndDataTime) {
         this.EndDataTime = EndDataTime;
