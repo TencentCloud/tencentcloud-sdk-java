@@ -728,6 +728,14 @@ public class TaskOpsDto extends AbstractModel {
     private ExtResourceFlagDto ExtResourceFlag;
 
     /**
+    * 父任务simple信息(新)
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NewParentTaskInfos")
+    @Expose
+    private AiopsSimpleTaskDto [] NewParentTaskInfos;
+
+    /**
      * Get 任务ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TaskId 任务ID
@@ -2487,6 +2495,26 @@ public class TaskOpsDto extends AbstractModel {
         this.ExtResourceFlag = ExtResourceFlag;
     }
 
+    /**
+     * Get 父任务simple信息(新)
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NewParentTaskInfos 父任务simple信息(新)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AiopsSimpleTaskDto [] getNewParentTaskInfos() {
+        return this.NewParentTaskInfos;
+    }
+
+    /**
+     * Set 父任务simple信息(新)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NewParentTaskInfos 父任务simple信息(新)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNewParentTaskInfos(AiopsSimpleTaskDto [] NewParentTaskInfos) {
+        this.NewParentTaskInfos = NewParentTaskInfos;
+    }
+
     public TaskOpsDto() {
     }
 
@@ -2762,6 +2790,12 @@ public class TaskOpsDto extends AbstractModel {
         if (source.ExtResourceFlag != null) {
             this.ExtResourceFlag = new ExtResourceFlagDto(source.ExtResourceFlag);
         }
+        if (source.NewParentTaskInfos != null) {
+            this.NewParentTaskInfos = new AiopsSimpleTaskDto[source.NewParentTaskInfos.length];
+            for (int i = 0; i < source.NewParentTaskInfos.length; i++) {
+                this.NewParentTaskInfos[i] = new AiopsSimpleTaskDto(source.NewParentTaskInfos[i]);
+            }
+        }
     }
 
 
@@ -2857,6 +2891,7 @@ public class TaskOpsDto extends AbstractModel {
         this.setParamObj(map, prefix + "DLCResourceConfig.", this.DLCResourceConfig);
         this.setParamObj(map, prefix + "ParentTaskInfos.", this.ParentTaskInfos);
         this.setParamObj(map, prefix + "ExtResourceFlag.", this.ExtResourceFlag);
+        this.setParamArrayObj(map, prefix + "NewParentTaskInfos.", this.NewParentTaskInfos);
 
     }
 }

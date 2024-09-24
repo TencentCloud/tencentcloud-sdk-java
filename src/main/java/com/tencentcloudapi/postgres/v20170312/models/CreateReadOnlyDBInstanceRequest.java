@@ -180,6 +180,13 @@ public class CreateReadOnlyDBInstanceRequest extends AbstractModel {
     private String DBVersion;
 
     /**
+    * 专属集群ID
+    */
+    @SerializedName("DedicatedClusterId")
+    @Expose
+    private String DedicatedClusterId;
+
+    /**
      * Get 实例所属主可用区， 如：ap-guangzhou-3；
 可用区信息可以通过调用 [DescribeZones](https://cloud.tencent.com/document/api/409/16769) 接口的返回值中的Zone字段来获取。 
      * @return Zone 实例所属主可用区， 如：ap-guangzhou-3；
@@ -563,6 +570,22 @@ public class CreateReadOnlyDBInstanceRequest extends AbstractModel {
         this.DBVersion = DBVersion;
     }
 
+    /**
+     * Get 专属集群ID 
+     * @return DedicatedClusterId 专属集群ID
+     */
+    public String getDedicatedClusterId() {
+        return this.DedicatedClusterId;
+    }
+
+    /**
+     * Set 专属集群ID
+     * @param DedicatedClusterId 专属集群ID
+     */
+    public void setDedicatedClusterId(String DedicatedClusterId) {
+        this.DedicatedClusterId = DedicatedClusterId;
+    }
+
     public CreateReadOnlyDBInstanceRequest() {
     }
 
@@ -637,6 +660,9 @@ public class CreateReadOnlyDBInstanceRequest extends AbstractModel {
         if (source.DBVersion != null) {
             this.DBVersion = new String(source.DBVersion);
         }
+        if (source.DedicatedClusterId != null) {
+            this.DedicatedClusterId = new String(source.DedicatedClusterId);
+        }
     }
 
 
@@ -664,6 +690,7 @@ public class CreateReadOnlyDBInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "NeedSupportIpv6", this.NeedSupportIpv6);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "DBVersion", this.DBVersion);
+        this.setParamSimple(map, prefix + "DedicatedClusterId", this.DedicatedClusterId);
 
     }
 }

@@ -864,19 +864,6 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *历史废弃接口，从云API下线
-
-指定时间和集群查询是否可回滚
-     * @param req DescribeRollbackTimeValidityRequest
-     * @return DescribeRollbackTimeValidityResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeRollbackTimeValidityResponse DescribeRollbackTimeValidity(DescribeRollbackTimeValidityRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeRollbackTimeValidity", DescribeRollbackTimeValidityResponse.class);
-    }
-
-    /**
      *查询serverless策略
      * @param req DescribeServerlessStrategyRequest
      * @return DescribeServerlessStrategyResponse

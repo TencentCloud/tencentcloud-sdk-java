@@ -144,6 +144,15 @@ public class L4ProxyRule extends AbstractModel {
     private String BuId;
 
     /**
+    * 远程鉴权信息。
+注意：RemoteAuth 在 CreateL4ProxyRules 或 ModifyL4ProxyRules 不可作为入参使用，如有传此参数，会忽略。在 DescribeL4ProxyRules 返回为空时，表示没有开启远程鉴权。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RemoteAuth")
+    @Expose
+    private L4ProxyRemoteAuth RemoteAuth;
+
+    /**
      * Get 转发规则 ID。
 注意：L4ProxyRule 在 CreateL4ProxyRules 作为入参使用时，该参数请勿填写；在 ModifyL4ProxyRules 作为入参使用时，该参数必填。 
      * @return RuleId 转发规则 ID。
@@ -479,6 +488,30 @@ public class L4ProxyRule extends AbstractModel {
         this.BuId = BuId;
     }
 
+    /**
+     * Get 远程鉴权信息。
+注意：RemoteAuth 在 CreateL4ProxyRules 或 ModifyL4ProxyRules 不可作为入参使用，如有传此参数，会忽略。在 DescribeL4ProxyRules 返回为空时，表示没有开启远程鉴权。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RemoteAuth 远程鉴权信息。
+注意：RemoteAuth 在 CreateL4ProxyRules 或 ModifyL4ProxyRules 不可作为入参使用，如有传此参数，会忽略。在 DescribeL4ProxyRules 返回为空时，表示没有开启远程鉴权。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public L4ProxyRemoteAuth getRemoteAuth() {
+        return this.RemoteAuth;
+    }
+
+    /**
+     * Set 远程鉴权信息。
+注意：RemoteAuth 在 CreateL4ProxyRules 或 ModifyL4ProxyRules 不可作为入参使用，如有传此参数，会忽略。在 DescribeL4ProxyRules 返回为空时，表示没有开启远程鉴权。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RemoteAuth 远程鉴权信息。
+注意：RemoteAuth 在 CreateL4ProxyRules 或 ModifyL4ProxyRules 不可作为入参使用，如有传此参数，会忽略。在 DescribeL4ProxyRules 返回为空时，表示没有开启远程鉴权。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRemoteAuth(L4ProxyRemoteAuth RemoteAuth) {
+        this.RemoteAuth = RemoteAuth;
+    }
+
     public L4ProxyRule() {
     }
 
@@ -529,6 +562,9 @@ public class L4ProxyRule extends AbstractModel {
         if (source.BuId != null) {
             this.BuId = new String(source.BuId);
         }
+        if (source.RemoteAuth != null) {
+            this.RemoteAuth = new L4ProxyRemoteAuth(source.RemoteAuth);
+        }
     }
 
 
@@ -548,6 +584,7 @@ public class L4ProxyRule extends AbstractModel {
         this.setParamSimple(map, prefix + "RuleTag", this.RuleTag);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "BuId", this.BuId);
+        this.setParamObj(map, prefix + "RemoteAuth.", this.RemoteAuth);
 
     }
 }

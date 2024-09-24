@@ -1149,7 +1149,7 @@ public class OcrClient extends AbstractClient{
     /**
      *印尼身份证识别
 
-默认接口请求频率限制：20次/秒。
+默认接口请求频率限制：5次/秒。
      * @param req RecognizeIndonesiaIDCardOCRRequest
      * @return RecognizeIndonesiaIDCardOCRResponse
      * @throws TencentCloudSDKException

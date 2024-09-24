@@ -94,6 +94,20 @@ public class DescribeImageAuthorizedInfoResponse extends AbstractModel {
     private Boolean CanApplyFreeImageAuthorize;
 
     /**
+    * 镜像扫描计费信息
+    */
+    @SerializedName("ImageScanInquireInfo")
+    @Expose
+    private ImageScanInquireInfo ImageScanInquireInfo;
+
+    /**
+    * 重复镜像数(本地镜像和仓库镜像)
+    */
+    @SerializedName("RepeatImageIdCnt")
+    @Expose
+    private Long RepeatImageIdCnt;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -261,6 +275,38 @@ public class DescribeImageAuthorizedInfoResponse extends AbstractModel {
     }
 
     /**
+     * Get 镜像扫描计费信息 
+     * @return ImageScanInquireInfo 镜像扫描计费信息
+     */
+    public ImageScanInquireInfo getImageScanInquireInfo() {
+        return this.ImageScanInquireInfo;
+    }
+
+    /**
+     * Set 镜像扫描计费信息
+     * @param ImageScanInquireInfo 镜像扫描计费信息
+     */
+    public void setImageScanInquireInfo(ImageScanInquireInfo ImageScanInquireInfo) {
+        this.ImageScanInquireInfo = ImageScanInquireInfo;
+    }
+
+    /**
+     * Get 重复镜像数(本地镜像和仓库镜像) 
+     * @return RepeatImageIdCnt 重复镜像数(本地镜像和仓库镜像)
+     */
+    public Long getRepeatImageIdCnt() {
+        return this.RepeatImageIdCnt;
+    }
+
+    /**
+     * Set 重复镜像数(本地镜像和仓库镜像)
+     * @param RepeatImageIdCnt 重复镜像数(本地镜像和仓库镜像)
+     */
+    public void setRepeatImageIdCnt(Long RepeatImageIdCnt) {
+        this.RepeatImageIdCnt = RepeatImageIdCnt;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -314,6 +360,12 @@ public class DescribeImageAuthorizedInfoResponse extends AbstractModel {
         if (source.CanApplyFreeImageAuthorize != null) {
             this.CanApplyFreeImageAuthorize = new Boolean(source.CanApplyFreeImageAuthorize);
         }
+        if (source.ImageScanInquireInfo != null) {
+            this.ImageScanInquireInfo = new ImageScanInquireInfo(source.ImageScanInquireInfo);
+        }
+        if (source.RepeatImageIdCnt != null) {
+            this.RepeatImageIdCnt = new Long(source.RepeatImageIdCnt);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -334,6 +386,8 @@ public class DescribeImageAuthorizedInfoResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "PurchasedAuthorizedCnt", this.PurchasedAuthorizedCnt);
         this.setParamSimple(map, prefix + "UsedPurchasedAuthorizedCnt", this.UsedPurchasedAuthorizedCnt);
         this.setParamSimple(map, prefix + "CanApplyFreeImageAuthorize", this.CanApplyFreeImageAuthorize);
+        this.setParamObj(map, prefix + "ImageScanInquireInfo.", this.ImageScanInquireInfo);
+        this.setParamSimple(map, prefix + "RepeatImageIdCnt", this.RepeatImageIdCnt);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

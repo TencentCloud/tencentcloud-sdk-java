@@ -129,6 +129,21 @@ public class DescribeImageRegistryTimingScanTaskResponse extends AbstractModel {
     private Long [] ExcludeImageAssetIds;
 
     /**
+    * 最近扫描时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LastScanTime")
+    @Expose
+    private String LastScanTime;
+
+    /**
+    * 扫描结果(Success|InsufficientLicense|ImageNeedIsEmpty|InternalError)
+    */
+    @SerializedName("ScanResult")
+    @Expose
+    private String ScanResult;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -392,6 +407,42 @@ public class DescribeImageRegistryTimingScanTaskResponse extends AbstractModel {
     }
 
     /**
+     * Get 最近扫描时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LastScanTime 最近扫描时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLastScanTime() {
+        return this.LastScanTime;
+    }
+
+    /**
+     * Set 最近扫描时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LastScanTime 最近扫描时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLastScanTime(String LastScanTime) {
+        this.LastScanTime = LastScanTime;
+    }
+
+    /**
+     * Get 扫描结果(Success|InsufficientLicense|ImageNeedIsEmpty|InternalError) 
+     * @return ScanResult 扫描结果(Success|InsufficientLicense|ImageNeedIsEmpty|InternalError)
+     */
+    public String getScanResult() {
+        return this.ScanResult;
+    }
+
+    /**
+     * Set 扫描结果(Success|InsufficientLicense|ImageNeedIsEmpty|InternalError)
+     * @param ScanResult 扫描结果(Success|InsufficientLicense|ImageNeedIsEmpty|InternalError)
+     */
+    public void setScanResult(String ScanResult) {
+        this.ScanResult = ScanResult;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -475,6 +526,12 @@ public class DescribeImageRegistryTimingScanTaskResponse extends AbstractModel {
                 this.ExcludeImageAssetIds[i] = new Long(source.ExcludeImageAssetIds[i]);
             }
         }
+        if (source.LastScanTime != null) {
+            this.LastScanTime = new String(source.LastScanTime);
+        }
+        if (source.ScanResult != null) {
+            this.ScanResult = new String(source.ScanResult);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -499,6 +556,8 @@ public class DescribeImageRegistryTimingScanTaskResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "ScanScope", this.ScanScope);
         this.setParamArraySimple(map, prefix + "Namespace.", this.Namespace);
         this.setParamArraySimple(map, prefix + "ExcludeImageAssetIds.", this.ExcludeImageAssetIds);
+        this.setParamSimple(map, prefix + "LastScanTime", this.LastScanTime);
+        this.setParamSimple(map, prefix + "ScanResult", this.ScanResult);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

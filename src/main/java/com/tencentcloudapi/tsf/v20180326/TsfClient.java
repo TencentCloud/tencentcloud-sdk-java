@@ -832,19 +832,6 @@ public class TsfClient extends AbstractClient{
     }
 
     /**
-     *接口未使用，废弃录用
-
-查询应用关联日志配置项信息
-     * @param req DescribeApplicationBusinessLogConfigRequest
-     * @return DescribeApplicationBusinessLogConfigResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeApplicationBusinessLogConfigResponse DescribeApplicationBusinessLogConfig(DescribeApplicationBusinessLogConfigRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeApplicationBusinessLogConfig", DescribeApplicationBusinessLogConfigResponse.class);
-    }
-
-    /**
      *获取应用列表
      * @param req DescribeApplicationsRequest
      * @return DescribeApplicationsResponse

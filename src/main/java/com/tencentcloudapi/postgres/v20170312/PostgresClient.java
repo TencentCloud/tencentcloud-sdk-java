@@ -549,6 +549,17 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
+     *查询专属集群
+     * @param req DescribeDedicatedClustersRequest
+     * @return DescribeDedicatedClustersResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDedicatedClustersResponse DescribeDedicatedClusters(DescribeDedicatedClustersRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDedicatedClusters", DescribeDedicatedClustersResponse.class);
+    }
+
+    /**
      *本接口（DescribeDefaultParameters）主要用于查询某个数据库版本和引擎支持的所有参数。
      * @param req DescribeDefaultParametersRequest
      * @return DescribeDefaultParametersResponse

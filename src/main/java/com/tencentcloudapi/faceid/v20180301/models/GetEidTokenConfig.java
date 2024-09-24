@@ -93,6 +93,13 @@ public class GetEidTokenConfig extends AbstractModel {
     private Boolean MouthOpenRecognition;
 
     /**
+    * 意愿核身语音播报速度，配置后问答模式和点头模式的语音播报环节都会生效，默认值为0： 0：智能语速（根据播报文案的长度自动调整语音播报速度） 1：固定1倍速 2：固定1.2倍速 3：固定1.5倍速
+    */
+    @SerializedName("Speed")
+    @Expose
+    private Long Speed;
+
+    /**
      * Get 姓名身份证输入方式。
 1：传身份证正反面OCR   
 2：传身份证正面OCR  
@@ -260,6 +267,22 @@ public class GetEidTokenConfig extends AbstractModel {
         this.MouthOpenRecognition = MouthOpenRecognition;
     }
 
+    /**
+     * Get 意愿核身语音播报速度，配置后问答模式和点头模式的语音播报环节都会生效，默认值为0： 0：智能语速（根据播报文案的长度自动调整语音播报速度） 1：固定1倍速 2：固定1.2倍速 3：固定1.5倍速 
+     * @return Speed 意愿核身语音播报速度，配置后问答模式和点头模式的语音播报环节都会生效，默认值为0： 0：智能语速（根据播报文案的长度自动调整语音播报速度） 1：固定1倍速 2：固定1.2倍速 3：固定1.5倍速
+     */
+    public Long getSpeed() {
+        return this.Speed;
+    }
+
+    /**
+     * Set 意愿核身语音播报速度，配置后问答模式和点头模式的语音播报环节都会生效，默认值为0： 0：智能语速（根据播报文案的长度自动调整语音播报速度） 1：固定1倍速 2：固定1.2倍速 3：固定1.5倍速
+     * @param Speed 意愿核身语音播报速度，配置后问答模式和点头模式的语音播报环节都会生效，默认值为0： 0：智能语速（根据播报文案的长度自动调整语音播报速度） 1：固定1倍速 2：固定1.2倍速 3：固定1.5倍速
+     */
+    public void setSpeed(Long Speed) {
+        this.Speed = Speed;
+    }
+
     public GetEidTokenConfig() {
     }
 
@@ -301,6 +324,9 @@ public class GetEidTokenConfig extends AbstractModel {
         if (source.MouthOpenRecognition != null) {
             this.MouthOpenRecognition = new Boolean(source.MouthOpenRecognition);
         }
+        if (source.Speed != null) {
+            this.Speed = new Long(source.Speed);
+        }
     }
 
 
@@ -317,6 +343,7 @@ public class GetEidTokenConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "IntentionRecognition", this.IntentionRecognition);
         this.setParamSimple(map, prefix + "IsSupportHMTResidentPermitOCR", this.IsSupportHMTResidentPermitOCR);
         this.setParamSimple(map, prefix + "MouthOpenRecognition", this.MouthOpenRecognition);
+        this.setParamSimple(map, prefix + "Speed", this.Speed);
 
     }
 }
