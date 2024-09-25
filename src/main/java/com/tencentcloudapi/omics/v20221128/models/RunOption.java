@@ -63,6 +63,14 @@ public class RunOption extends AbstractModel {
     private Boolean UseRelativeOutputPaths;
 
     /**
+    * 是否添加运行信息到输出目录中
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AddRunInfoToOutputDir")
+    @Expose
+    private Boolean AddRunInfoToOutputDir;
+
+    /**
      * Get 运行失败模式，取值范围：
 - ContinueWhilePossible
 - NoNewCalls 
@@ -158,6 +166,26 @@ public class RunOption extends AbstractModel {
         this.UseRelativeOutputPaths = UseRelativeOutputPaths;
     }
 
+    /**
+     * Get 是否添加运行信息到输出目录中
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AddRunInfoToOutputDir 是否添加运行信息到输出目录中
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getAddRunInfoToOutputDir() {
+        return this.AddRunInfoToOutputDir;
+    }
+
+    /**
+     * Set 是否添加运行信息到输出目录中
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AddRunInfoToOutputDir 是否添加运行信息到输出目录中
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAddRunInfoToOutputDir(Boolean AddRunInfoToOutputDir) {
+        this.AddRunInfoToOutputDir = AddRunInfoToOutputDir;
+    }
+
     public RunOption() {
     }
 
@@ -181,6 +209,9 @@ public class RunOption extends AbstractModel {
         if (source.UseRelativeOutputPaths != null) {
             this.UseRelativeOutputPaths = new Boolean(source.UseRelativeOutputPaths);
         }
+        if (source.AddRunInfoToOutputDir != null) {
+            this.AddRunInfoToOutputDir = new Boolean(source.AddRunInfoToOutputDir);
+        }
     }
 
 
@@ -193,6 +224,7 @@ public class RunOption extends AbstractModel {
         this.setParamSimple(map, prefix + "UseErrorOnHold", this.UseErrorOnHold);
         this.setParamSimple(map, prefix + "FinalWorkflowOutputsDir", this.FinalWorkflowOutputsDir);
         this.setParamSimple(map, prefix + "UseRelativeOutputPaths", this.UseRelativeOutputPaths);
+        this.setParamSimple(map, prefix + "AddRunInfoToOutputDir", this.AddRunInfoToOutputDir);
 
     }
 }

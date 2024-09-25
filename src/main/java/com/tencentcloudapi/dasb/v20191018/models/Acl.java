@@ -240,6 +240,14 @@ public class Acl extends AbstractModel {
     private String [] WhiteCmds;
 
     /**
+    * 是否允许记录键盘
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AllowKeyboardLogger")
+    @Expose
+    private Boolean AllowKeyboardLogger;
+
+    /**
      * Get 访问权限ID 
      * @return Id 访问权限ID
      */
@@ -743,6 +751,26 @@ public class Acl extends AbstractModel {
         this.WhiteCmds = WhiteCmds;
     }
 
+    /**
+     * Get 是否允许记录键盘
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AllowKeyboardLogger 是否允许记录键盘
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getAllowKeyboardLogger() {
+        return this.AllowKeyboardLogger;
+    }
+
+    /**
+     * Set 是否允许记录键盘
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AllowKeyboardLogger 是否允许记录键盘
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAllowKeyboardLogger(Boolean AllowKeyboardLogger) {
+        this.AllowKeyboardLogger = AllowKeyboardLogger;
+    }
+
     public Acl() {
     }
 
@@ -865,6 +893,9 @@ public class Acl extends AbstractModel {
                 this.WhiteCmds[i] = new String(source.WhiteCmds[i]);
             }
         }
+        if (source.AllowKeyboardLogger != null) {
+            this.AllowKeyboardLogger = new Boolean(source.AllowKeyboardLogger);
+        }
     }
 
 
@@ -902,6 +933,7 @@ public class Acl extends AbstractModel {
         this.setParamSimple(map, prefix + "AllowAccessCredential", this.AllowAccessCredential);
         this.setParamArrayObj(map, prefix + "ACTemplateSet.", this.ACTemplateSet);
         this.setParamArraySimple(map, prefix + "WhiteCmds.", this.WhiteCmds);
+        this.setParamSimple(map, prefix + "AllowKeyboardLogger", this.AllowKeyboardLogger);
 
     }
 }

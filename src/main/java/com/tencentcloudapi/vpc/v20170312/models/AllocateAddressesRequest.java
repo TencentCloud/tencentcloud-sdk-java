@@ -121,6 +121,13 @@ AnycastEIP是否用于绑定负载均衡。
     private String AddressName;
 
     /**
+    * CDC唯一ID
+    */
+    @SerializedName("DedicatedClusterId")
+    @Expose
+    private String DedicatedClusterId;
+
+    /**
     * 网络出口，当前仅支持精品BGP、静态单线，这2种IP 地址类型的指定出口传入，默认值：center_egress1，其它可选值：center_egress2、center_egress3
     */
     @SerializedName("Egress")
@@ -398,6 +405,22 @@ AnycastEIP是否用于绑定负载均衡。
     }
 
     /**
+     * Get CDC唯一ID 
+     * @return DedicatedClusterId CDC唯一ID
+     */
+    public String getDedicatedClusterId() {
+        return this.DedicatedClusterId;
+    }
+
+    /**
+     * Set CDC唯一ID
+     * @param DedicatedClusterId CDC唯一ID
+     */
+    public void setDedicatedClusterId(String DedicatedClusterId) {
+        this.DedicatedClusterId = DedicatedClusterId;
+    }
+
+    /**
      * Get 网络出口，当前仅支持精品BGP、静态单线，这2种IP 地址类型的指定出口传入，默认值：center_egress1，其它可选值：center_egress2、center_egress3 
      * @return Egress 网络出口，当前仅支持精品BGP、静态单线，这2种IP 地址类型的指定出口传入，默认值：center_egress1，其它可选值：center_egress2、center_egress3
      */
@@ -489,6 +512,9 @@ AnycastEIP是否用于绑定负载均衡。
         if (source.AddressName != null) {
             this.AddressName = new String(source.AddressName);
         }
+        if (source.DedicatedClusterId != null) {
+            this.DedicatedClusterId = new String(source.DedicatedClusterId);
+        }
         if (source.Egress != null) {
             this.Egress = new String(source.Egress);
         }
@@ -516,6 +542,7 @@ AnycastEIP是否用于绑定负载均衡。
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "BandwidthPackageId", this.BandwidthPackageId);
         this.setParamSimple(map, prefix + "AddressName", this.AddressName);
+        this.setParamSimple(map, prefix + "DedicatedClusterId", this.DedicatedClusterId);
         this.setParamSimple(map, prefix + "Egress", this.Egress);
         this.setParamSimple(map, prefix + "AntiDDoSPackageId", this.AntiDDoSPackageId);
         this.setParamSimple(map, prefix + "ClientToken", this.ClientToken);

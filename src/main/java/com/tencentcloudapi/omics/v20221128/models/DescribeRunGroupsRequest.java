@@ -50,6 +50,8 @@ public class DescribeRunGroupsRequest extends AbstractModel {
 - Name：任务批次名称
 - RunGroupId：任务批次ID
 - Status：任务批次状态
+- ApplicationId：应用ID
+- Type：类型（支持WDL，NEXTFLOW）
     */
     @SerializedName("Filters")
     @Expose
@@ -111,11 +113,15 @@ public class DescribeRunGroupsRequest extends AbstractModel {
      * Get 过滤器，支持过滤字段：
 - Name：任务批次名称
 - RunGroupId：任务批次ID
-- Status：任务批次状态 
+- Status：任务批次状态
+- ApplicationId：应用ID
+- Type：类型（支持WDL，NEXTFLOW） 
      * @return Filters 过滤器，支持过滤字段：
 - Name：任务批次名称
 - RunGroupId：任务批次ID
 - Status：任务批次状态
+- ApplicationId：应用ID
+- Type：类型（支持WDL，NEXTFLOW）
      */
     public Filter [] getFilters() {
         return this.Filters;
@@ -126,10 +132,14 @@ public class DescribeRunGroupsRequest extends AbstractModel {
 - Name：任务批次名称
 - RunGroupId：任务批次ID
 - Status：任务批次状态
+- ApplicationId：应用ID
+- Type：类型（支持WDL，NEXTFLOW）
      * @param Filters 过滤器，支持过滤字段：
 - Name：任务批次名称
 - RunGroupId：任务批次ID
 - Status：任务批次状态
+- ApplicationId：应用ID
+- Type：类型（支持WDL，NEXTFLOW）
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

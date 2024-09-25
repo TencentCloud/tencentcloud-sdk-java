@@ -168,6 +168,14 @@ public class RunMetadata extends AbstractModel {
     private Boolean CallCached;
 
     /**
+    * 工作目录。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("WorkDir")
+    @Expose
+    private String WorkDir;
+
+    /**
     * 标准输出。
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -552,6 +560,26 @@ public class RunMetadata extends AbstractModel {
     }
 
     /**
+     * Get 工作目录。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WorkDir 工作目录。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getWorkDir() {
+        return this.WorkDir;
+    }
+
+    /**
+     * Set 工作目录。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WorkDir 工作目录。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWorkDir(String WorkDir) {
+        this.WorkDir = WorkDir;
+    }
+
+    /**
      * Get 标准输出。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Stdout 标准输出。
@@ -673,6 +701,9 @@ public class RunMetadata extends AbstractModel {
         if (source.CallCached != null) {
             this.CallCached = new Boolean(source.CallCached);
         }
+        if (source.WorkDir != null) {
+            this.WorkDir = new String(source.WorkDir);
+        }
         if (source.Stdout != null) {
             this.Stdout = new String(source.Stdout);
         }
@@ -707,6 +738,7 @@ public class RunMetadata extends AbstractModel {
         this.setParamSimple(map, prefix + "Preprocess", this.Preprocess);
         this.setParamSimple(map, prefix + "PostProcess", this.PostProcess);
         this.setParamSimple(map, prefix + "CallCached", this.CallCached);
+        this.setParamSimple(map, prefix + "WorkDir", this.WorkDir);
         this.setParamSimple(map, prefix + "Stdout", this.Stdout);
         this.setParamSimple(map, prefix + "Stderr", this.Stderr);
         this.setParamSimple(map, prefix + "Meta", this.Meta);

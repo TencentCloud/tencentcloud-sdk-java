@@ -183,6 +183,13 @@ public class CreateConsoleLoginUrlRequest extends AbstractModel {
     private String TopNavigationStatus;
 
     /**
+    * 是否自动激活子客
+    */
+    @SerializedName("AutoActive")
+    @Expose
+    private Boolean AutoActive;
+
+    /**
      * Get 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容
 此接口下面信息必填。
 <ul>
@@ -642,6 +649,22 @@ public class CreateConsoleLoginUrlRequest extends AbstractModel {
         this.TopNavigationStatus = TopNavigationStatus;
     }
 
+    /**
+     * Get 是否自动激活子客 
+     * @return AutoActive 是否自动激活子客
+     */
+    public Boolean getAutoActive() {
+        return this.AutoActive;
+    }
+
+    /**
+     * Set 是否自动激活子客
+     * @param AutoActive 是否自动激活子客
+     */
+    public void setAutoActive(Boolean AutoActive) {
+        this.AutoActive = AutoActive;
+    }
+
     public CreateConsoleLoginUrlRequest() {
     }
 
@@ -698,6 +721,9 @@ public class CreateConsoleLoginUrlRequest extends AbstractModel {
         if (source.TopNavigationStatus != null) {
             this.TopNavigationStatus = new String(source.TopNavigationStatus);
         }
+        if (source.AutoActive != null) {
+            this.AutoActive = new Boolean(source.AutoActive);
+        }
     }
 
 
@@ -720,6 +746,7 @@ public class CreateConsoleLoginUrlRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ProxyOperatorIdCardNumber", this.ProxyOperatorIdCardNumber);
         this.setParamSimple(map, prefix + "AutoJumpUrl", this.AutoJumpUrl);
         this.setParamSimple(map, prefix + "TopNavigationStatus", this.TopNavigationStatus);
+        this.setParamSimple(map, prefix + "AutoActive", this.AutoActive);
 
     }
 }

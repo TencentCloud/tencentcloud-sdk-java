@@ -66,6 +66,13 @@ public class DeleteCloudBaseRunServerVersionRequest extends AbstractModel {
     private String OperatorRemark;
 
     /**
+    * 延迟删除版本时间
+    */
+    @SerializedName("DelayedDeletionTime")
+    @Expose
+    private Long DelayedDeletionTime;
+
+    /**
      * Get 环境ID 
      * @return EnvId 环境ID
      */
@@ -161,6 +168,22 @@ public class DeleteCloudBaseRunServerVersionRequest extends AbstractModel {
         this.OperatorRemark = OperatorRemark;
     }
 
+    /**
+     * Get 延迟删除版本时间 
+     * @return DelayedDeletionTime 延迟删除版本时间
+     */
+    public Long getDelayedDeletionTime() {
+        return this.DelayedDeletionTime;
+    }
+
+    /**
+     * Set 延迟删除版本时间
+     * @param DelayedDeletionTime 延迟删除版本时间
+     */
+    public void setDelayedDeletionTime(Long DelayedDeletionTime) {
+        this.DelayedDeletionTime = DelayedDeletionTime;
+    }
+
     public DeleteCloudBaseRunServerVersionRequest() {
     }
 
@@ -187,6 +210,9 @@ public class DeleteCloudBaseRunServerVersionRequest extends AbstractModel {
         if (source.OperatorRemark != null) {
             this.OperatorRemark = new String(source.OperatorRemark);
         }
+        if (source.DelayedDeletionTime != null) {
+            this.DelayedDeletionTime = new Long(source.DelayedDeletionTime);
+        }
     }
 
 
@@ -200,6 +226,7 @@ public class DeleteCloudBaseRunServerVersionRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "IsDeleteServer", this.IsDeleteServer);
         this.setParamSimple(map, prefix + "IsDeleteImage", this.IsDeleteImage);
         this.setParamSimple(map, prefix + "OperatorRemark", this.OperatorRemark);
+        this.setParamSimple(map, prefix + "DelayedDeletionTime", this.DelayedDeletionTime);
 
     }
 }

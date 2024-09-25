@@ -96,6 +96,14 @@ public class ApplicationVersion extends AbstractModel {
     private String GitInfo;
 
     /**
+    * Git信息。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("GitSource")
+    @Expose
+    private GitInfo GitSource;
+
+    /**
      * Get 版本类型。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Type 版本类型。
@@ -260,7 +268,9 @@ public class ApplicationVersion extends AbstractModel {
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return GitInfo Git信息。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public String getGitInfo() {
         return this.GitInfo;
     }
@@ -270,9 +280,31 @@ public class ApplicationVersion extends AbstractModel {
 注意：此字段可能返回 null，表示取不到有效值。
      * @param GitInfo Git信息。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public void setGitInfo(String GitInfo) {
         this.GitInfo = GitInfo;
+    }
+
+    /**
+     * Get Git信息。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return GitSource Git信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public GitInfo getGitSource() {
+        return this.GitSource;
+    }
+
+    /**
+     * Set Git信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param GitSource Git信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setGitSource(GitInfo GitSource) {
+        this.GitSource = GitSource;
     }
 
     public ApplicationVersion() {
@@ -310,6 +342,9 @@ public class ApplicationVersion extends AbstractModel {
         if (source.GitInfo != null) {
             this.GitInfo = new String(source.GitInfo);
         }
+        if (source.GitSource != null) {
+            this.GitSource = new GitInfo(source.GitSource);
+        }
     }
 
 
@@ -326,6 +361,7 @@ public class ApplicationVersion extends AbstractModel {
         this.setParamSimple(map, prefix + "CreatorName", this.CreatorName);
         this.setParamSimple(map, prefix + "CreatorId", this.CreatorId);
         this.setParamSimple(map, prefix + "GitInfo", this.GitInfo);
+        this.setParamObj(map, prefix + "GitSource.", this.GitSource);
 
     }
 }
