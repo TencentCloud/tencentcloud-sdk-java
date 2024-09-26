@@ -149,6 +149,20 @@ public class MLIDPassportOCRResponse extends AbstractModel {
     private PassportRecognizeInfos PassportRecognizeInfos;
 
     /**
+    * 告警码
+-9101 证件边框不完整告警
+-9102 证件复印件告警
+-9103 证件翻拍告警
+-9104 证件PS告警
+-9107 证件反光告警
+-9108 证件模糊告警
+-9109 告警能力未开通
+    */
+    @SerializedName("WarnCardInfos")
+    @Expose
+    private Long [] WarnCardInfos;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -464,6 +478,50 @@ public class MLIDPassportOCRResponse extends AbstractModel {
     }
 
     /**
+     * Get 告警码
+-9101 证件边框不完整告警
+-9102 证件复印件告警
+-9103 证件翻拍告警
+-9104 证件PS告警
+-9107 证件反光告警
+-9108 证件模糊告警
+-9109 告警能力未开通 
+     * @return WarnCardInfos 告警码
+-9101 证件边框不完整告警
+-9102 证件复印件告警
+-9103 证件翻拍告警
+-9104 证件PS告警
+-9107 证件反光告警
+-9108 证件模糊告警
+-9109 告警能力未开通
+     */
+    public Long [] getWarnCardInfos() {
+        return this.WarnCardInfos;
+    }
+
+    /**
+     * Set 告警码
+-9101 证件边框不完整告警
+-9102 证件复印件告警
+-9103 证件翻拍告警
+-9104 证件PS告警
+-9107 证件反光告警
+-9108 证件模糊告警
+-9109 告警能力未开通
+     * @param WarnCardInfos 告警码
+-9101 证件边框不完整告警
+-9102 证件复印件告警
+-9103 证件翻拍告警
+-9104 证件PS告警
+-9107 证件反光告警
+-9108 证件模糊告警
+-9109 告警能力未开通
+     */
+    public void setWarnCardInfos(Long [] WarnCardInfos) {
+        this.WarnCardInfos = WarnCardInfos;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -538,6 +596,12 @@ public class MLIDPassportOCRResponse extends AbstractModel {
         if (source.PassportRecognizeInfos != null) {
             this.PassportRecognizeInfos = new PassportRecognizeInfos(source.PassportRecognizeInfos);
         }
+        if (source.WarnCardInfos != null) {
+            this.WarnCardInfos = new Long[source.WarnCardInfos.length];
+            for (int i = 0; i < source.WarnCardInfos.length; i++) {
+                this.WarnCardInfos[i] = new Long(source.WarnCardInfos[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -564,6 +628,7 @@ public class MLIDPassportOCRResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "GivenName", this.GivenName);
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamObj(map, prefix + "PassportRecognizeInfos.", this.PassportRecognizeInfos);
+        this.setParamArraySimple(map, prefix + "WarnCardInfos.", this.WarnCardInfos);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

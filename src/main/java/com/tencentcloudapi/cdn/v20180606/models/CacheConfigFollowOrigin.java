@@ -41,6 +41,17 @@ off：关闭
     private HeuristicCache HeuristicCache;
 
     /**
+    * 当缓存过期后，是否开启源站 mtime 校验，配置值为equal、since、none 和 null。默认配置值为equal，会校验源站文件的mtime与长度。2024-09-12 18:00 之前创建的域名默认值 null，行为保持不变。
+equal：源站响应mtime必须和缓存mtime一致，若mtime值不一致，清除缓存。
+since：若源站响应mtime大于缓存mtime，清除缓存。
+none： 缓存过期回源重新获取文件mtime和长度后，不会校验源站响应mtime，若源站响应携带Content-Length头部，只有文件大小改变时才会更新缓存；若源站响应不携带Content-Length头部，会更新缓存。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OriginMtimeCheckType")
+    @Expose
+    private String OriginMtimeCheckType;
+
+    /**
      * Get 路径缓存遵循源站配置开关，取值有：
 on：开启
 off：关闭 
@@ -84,6 +95,38 @@ off：关闭
         this.HeuristicCache = HeuristicCache;
     }
 
+    /**
+     * Get 当缓存过期后，是否开启源站 mtime 校验，配置值为equal、since、none 和 null。默认配置值为equal，会校验源站文件的mtime与长度。2024-09-12 18:00 之前创建的域名默认值 null，行为保持不变。
+equal：源站响应mtime必须和缓存mtime一致，若mtime值不一致，清除缓存。
+since：若源站响应mtime大于缓存mtime，清除缓存。
+none： 缓存过期回源重新获取文件mtime和长度后，不会校验源站响应mtime，若源站响应携带Content-Length头部，只有文件大小改变时才会更新缓存；若源站响应不携带Content-Length头部，会更新缓存。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OriginMtimeCheckType 当缓存过期后，是否开启源站 mtime 校验，配置值为equal、since、none 和 null。默认配置值为equal，会校验源站文件的mtime与长度。2024-09-12 18:00 之前创建的域名默认值 null，行为保持不变。
+equal：源站响应mtime必须和缓存mtime一致，若mtime值不一致，清除缓存。
+since：若源站响应mtime大于缓存mtime，清除缓存。
+none： 缓存过期回源重新获取文件mtime和长度后，不会校验源站响应mtime，若源站响应携带Content-Length头部，只有文件大小改变时才会更新缓存；若源站响应不携带Content-Length头部，会更新缓存。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getOriginMtimeCheckType() {
+        return this.OriginMtimeCheckType;
+    }
+
+    /**
+     * Set 当缓存过期后，是否开启源站 mtime 校验，配置值为equal、since、none 和 null。默认配置值为equal，会校验源站文件的mtime与长度。2024-09-12 18:00 之前创建的域名默认值 null，行为保持不变。
+equal：源站响应mtime必须和缓存mtime一致，若mtime值不一致，清除缓存。
+since：若源站响应mtime大于缓存mtime，清除缓存。
+none： 缓存过期回源重新获取文件mtime和长度后，不会校验源站响应mtime，若源站响应携带Content-Length头部，只有文件大小改变时才会更新缓存；若源站响应不携带Content-Length头部，会更新缓存。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OriginMtimeCheckType 当缓存过期后，是否开启源站 mtime 校验，配置值为equal、since、none 和 null。默认配置值为equal，会校验源站文件的mtime与长度。2024-09-12 18:00 之前创建的域名默认值 null，行为保持不变。
+equal：源站响应mtime必须和缓存mtime一致，若mtime值不一致，清除缓存。
+since：若源站响应mtime大于缓存mtime，清除缓存。
+none： 缓存过期回源重新获取文件mtime和长度后，不会校验源站响应mtime，若源站响应携带Content-Length头部，只有文件大小改变时才会更新缓存；若源站响应不携带Content-Length头部，会更新缓存。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOriginMtimeCheckType(String OriginMtimeCheckType) {
+        this.OriginMtimeCheckType = OriginMtimeCheckType;
+    }
+
     public CacheConfigFollowOrigin() {
     }
 
@@ -98,6 +141,9 @@ off：关闭
         if (source.HeuristicCache != null) {
             this.HeuristicCache = new HeuristicCache(source.HeuristicCache);
         }
+        if (source.OriginMtimeCheckType != null) {
+            this.OriginMtimeCheckType = new String(source.OriginMtimeCheckType);
+        }
     }
 
 
@@ -107,6 +153,7 @@ off：关闭
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Switch", this.Switch);
         this.setParamObj(map, prefix + "HeuristicCache.", this.HeuristicCache);
+        this.setParamSimple(map, prefix + "OriginMtimeCheckType", this.OriginMtimeCheckType);
 
     }
 }

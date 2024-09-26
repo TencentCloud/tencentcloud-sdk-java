@@ -130,6 +130,14 @@ CCN：云联网路由，系统默认下发，不可编辑与删除。
     private String CreatedTime;
 
     /**
+    * CDC 集群唯一 ID。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CdcId")
+    @Expose
+    private String CdcId;
+
+    /**
      * Get 创建IPv4目的网段，取值不能在私有网络网段内，例如：112.20.51.0/24。 
      * @return DestinationCidrBlock 创建IPv4目的网段，取值不能在私有网络网段内，例如：112.20.51.0/24。
      */
@@ -409,6 +417,26 @@ CCN：云联网路由，系统默认下发，不可编辑与删除。
         this.CreatedTime = CreatedTime;
     }
 
+    /**
+     * Get CDC 集群唯一 ID。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CdcId CDC 集群唯一 ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCdcId() {
+        return this.CdcId;
+    }
+
+    /**
+     * Set CDC 集群唯一 ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CdcId CDC 集群唯一 ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCdcId(String CdcId) {
+        this.CdcId = CdcId;
+    }
+
     public Route() {
     }
 
@@ -453,6 +481,9 @@ CCN：云联网路由，系统默认下发，不可编辑与删除。
         if (source.CreatedTime != null) {
             this.CreatedTime = new String(source.CreatedTime);
         }
+        if (source.CdcId != null) {
+            this.CdcId = new String(source.CdcId);
+        }
     }
 
 
@@ -472,6 +503,7 @@ CCN：云联网路由，系统默认下发，不可编辑与删除。
         this.setParamSimple(map, prefix + "RouteItemId", this.RouteItemId);
         this.setParamSimple(map, prefix + "PublishedToVbc", this.PublishedToVbc);
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
+        this.setParamSimple(map, prefix + "CdcId", this.CdcId);
 
     }
 }

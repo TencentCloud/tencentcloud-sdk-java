@@ -24,7 +24,7 @@ public enum ApmErrorCode {
     // token信息不存在。
      FAILEDOPERATION_APMCREDENTIALNOTEXIST("FailedOperation.ApmCredentialNotExist"),
      
-    // appid和实例信息不匹配。
+    // appid和业务系统信息不匹配。
      FAILEDOPERATION_APPIDNOTMATCHINSTANCEINFO("FailedOperation.AppIdNotMatchInstanceInfo"),
      
     // 未命中白名单且实例id为官方demo实例id时，不允许修改接口。
@@ -42,7 +42,7 @@ public enum ApmErrorCode {
     // 实例ID为空。
      FAILEDOPERATION_INSTANCEIDISEMPTY("FailedOperation.InstanceIdIsEmpty"),
      
-    // apm实例不存在。
+    // apm业务系统不存在。
      FAILEDOPERATION_INSTANCENOTFOUND("FailedOperation.InstanceNotFound"),
      
     // 非法实例id。
@@ -54,7 +54,7 @@ public enum ApmErrorCode {
     // 不合法请求
      FAILEDOPERATION_INVALIDREQUEST("FailedOperation.InvalidRequest"),
      
-    // 实例和服务名不匹配。
+    // 业务系统和应用名不匹配。
      FAILEDOPERATION_INVALIDSERVICENAME("FailedOperation.InvalidServiceName"),
      
     // Tag中指定了无效的Key

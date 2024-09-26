@@ -114,6 +114,13 @@ public class IMCdrInfo extends AbstractModel {
     private IMSatisfaction Satisfaction;
 
     /**
+    * 用户ID
+    */
+    @SerializedName("ClientUserId")
+    @Expose
+    private String ClientUserId;
+
+    /**
      * Get 服务记录ID 
      * @return Id 服务记录ID
      */
@@ -341,6 +348,22 @@ public class IMCdrInfo extends AbstractModel {
         this.Satisfaction = Satisfaction;
     }
 
+    /**
+     * Get 用户ID 
+     * @return ClientUserId 用户ID
+     */
+    public String getClientUserId() {
+        return this.ClientUserId;
+    }
+
+    /**
+     * Set 用户ID
+     * @param ClientUserId 用户ID
+     */
+    public void setClientUserId(String ClientUserId) {
+        this.ClientUserId = ClientUserId;
+    }
+
     public IMCdrInfo() {
     }
 
@@ -382,6 +405,9 @@ public class IMCdrInfo extends AbstractModel {
         if (source.Satisfaction != null) {
             this.Satisfaction = new IMSatisfaction(source.Satisfaction);
         }
+        if (source.ClientUserId != null) {
+            this.ClientUserId = new String(source.ClientUserId);
+        }
     }
 
 
@@ -400,6 +426,7 @@ public class IMCdrInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "SkillGroupId", this.SkillGroupId);
         this.setParamSimple(map, prefix + "SkillGroupName", this.SkillGroupName);
         this.setParamObj(map, prefix + "Satisfaction.", this.Satisfaction);
+        this.setParamSimple(map, prefix + "ClientUserId", this.ClientUserId);
 
     }
 }

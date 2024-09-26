@@ -103,6 +103,14 @@ public class EndPointService extends AbstractModel {
     private String ServiceType;
 
     /**
+    * CDC 集群唯一 ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CdcId")
+    @Expose
+    private String CdcId;
+
+    /**
     * Uin
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -311,6 +319,26 @@ public class EndPointService extends AbstractModel {
     }
 
     /**
+     * Get CDC 集群唯一 ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CdcId CDC 集群唯一 ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCdcId() {
+        return this.CdcId;
+    }
+
+    /**
+     * Set CDC 集群唯一 ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CdcId CDC 集群唯一 ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCdcId(String CdcId) {
+        this.CdcId = CdcId;
+    }
+
+    /**
      * Get Uin
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ServiceUin Uin
@@ -414,6 +442,9 @@ public class EndPointService extends AbstractModel {
         if (source.ServiceType != null) {
             this.ServiceType = new String(source.ServiceType);
         }
+        if (source.CdcId != null) {
+            this.CdcId = new String(source.CdcId);
+        }
         if (source.ServiceUin != null) {
             this.ServiceUin = new String(source.ServiceUin);
         }
@@ -444,6 +475,7 @@ public class EndPointService extends AbstractModel {
         this.setParamArrayObj(map, prefix + "EndPointSet.", this.EndPointSet);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "ServiceType", this.ServiceType);
+        this.setParamSimple(map, prefix + "CdcId", this.CdcId);
         this.setParamSimple(map, prefix + "ServiceUin", this.ServiceUin);
         this.setParamSimple(map, prefix + "BusinessIpType", this.BusinessIpType);
         this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);

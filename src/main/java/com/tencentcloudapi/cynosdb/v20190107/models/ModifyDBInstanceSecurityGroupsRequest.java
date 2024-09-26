@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyDBInstanceSecurityGroupsRequest extends AbstractModel {
 
     /**
-    * 实例组ID
+    * 网络组id(cynosdbmysql-grp-前缀开头)或集群id
     */
     @SerializedName("InstanceId")
     @Expose
@@ -45,16 +45,16 @@ public class ModifyDBInstanceSecurityGroupsRequest extends AbstractModel {
     private String Zone;
 
     /**
-     * Get 实例组ID 
-     * @return InstanceId 实例组ID
+     * Get 网络组id(cynosdbmysql-grp-前缀开头)或集群id 
+     * @return InstanceId 网络组id(cynosdbmysql-grp-前缀开头)或集群id
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例组ID
-     * @param InstanceId 实例组ID
+     * Set 网络组id(cynosdbmysql-grp-前缀开头)或集群id
+     * @param InstanceId 网络组id(cynosdbmysql-grp-前缀开头)或集群id
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

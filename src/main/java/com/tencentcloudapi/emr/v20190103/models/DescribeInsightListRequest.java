@@ -59,6 +59,13 @@ public class DescribeInsightListRequest extends AbstractModel {
     private Long Page;
 
     /**
+    * 查询类型,支持HIVE,SPARK,MAPREDUCE,TRINO等类型,默认查询全部
+    */
+    @SerializedName("Type")
+    @Expose
+    private String Type;
+
+    /**
      * Get 集群ID 
      * @return InstanceId 集群ID
      */
@@ -138,6 +145,22 @@ public class DescribeInsightListRequest extends AbstractModel {
         this.Page = Page;
     }
 
+    /**
+     * Get 查询类型,支持HIVE,SPARK,MAPREDUCE,TRINO等类型,默认查询全部 
+     * @return Type 查询类型,支持HIVE,SPARK,MAPREDUCE,TRINO等类型,默认查询全部
+     */
+    public String getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set 查询类型,支持HIVE,SPARK,MAPREDUCE,TRINO等类型,默认查询全部
+     * @param Type 查询类型,支持HIVE,SPARK,MAPREDUCE,TRINO等类型,默认查询全部
+     */
+    public void setType(String Type) {
+        this.Type = Type;
+    }
+
     public DescribeInsightListRequest() {
     }
 
@@ -161,6 +184,9 @@ public class DescribeInsightListRequest extends AbstractModel {
         if (source.Page != null) {
             this.Page = new Long(source.Page);
         }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
     }
 
 
@@ -173,6 +199,7 @@ public class DescribeInsightListRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "PageSize", this.PageSize);
         this.setParamSimple(map, prefix + "Page", this.Page);
+        this.setParamSimple(map, prefix + "Type", this.Type);
 
     }
 }
