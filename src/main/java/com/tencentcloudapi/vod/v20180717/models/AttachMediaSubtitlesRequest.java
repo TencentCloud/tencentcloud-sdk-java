@@ -54,6 +54,13 @@ public class AttachMediaSubtitlesRequest extends AbstractModel {
     private String [] SubtitleIds;
 
     /**
+    * 默认字幕的唯一标识。不填则不设置默认字幕。
+    */
+    @SerializedName("DefaultSubtitleId")
+    @Expose
+    private String DefaultSubtitleId;
+
+    /**
     * <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
     */
     @SerializedName("SubAppId")
@@ -133,6 +140,22 @@ public class AttachMediaSubtitlesRequest extends AbstractModel {
     }
 
     /**
+     * Get 默认字幕的唯一标识。不填则不设置默认字幕。 
+     * @return DefaultSubtitleId 默认字幕的唯一标识。不填则不设置默认字幕。
+     */
+    public String getDefaultSubtitleId() {
+        return this.DefaultSubtitleId;
+    }
+
+    /**
+     * Set 默认字幕的唯一标识。不填则不设置默认字幕。
+     * @param DefaultSubtitleId 默认字幕的唯一标识。不填则不设置默认字幕。
+     */
+    public void setDefaultSubtitleId(String DefaultSubtitleId) {
+        this.DefaultSubtitleId = DefaultSubtitleId;
+    }
+
+    /**
      * Get <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b> 
      * @return SubAppId <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
      */
@@ -171,6 +194,9 @@ public class AttachMediaSubtitlesRequest extends AbstractModel {
                 this.SubtitleIds[i] = new String(source.SubtitleIds[i]);
             }
         }
+        if (source.DefaultSubtitleId != null) {
+            this.DefaultSubtitleId = new String(source.DefaultSubtitleId);
+        }
         if (source.SubAppId != null) {
             this.SubAppId = new Long(source.SubAppId);
         }
@@ -185,6 +211,7 @@ public class AttachMediaSubtitlesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Operation", this.Operation);
         this.setParamSimple(map, prefix + "AdaptiveDynamicStreamingDefinition", this.AdaptiveDynamicStreamingDefinition);
         this.setParamArraySimple(map, prefix + "SubtitleIds.", this.SubtitleIds);
+        this.setParamSimple(map, prefix + "DefaultSubtitleId", this.DefaultSubtitleId);
         this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
 
     }

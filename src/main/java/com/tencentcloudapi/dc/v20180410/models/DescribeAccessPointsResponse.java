@@ -31,7 +31,7 @@ public class DescribeAccessPointsResponse extends AbstractModel {
     private AccessPoint [] AccessPointSet;
 
     /**
-    * 符合接入点数量。
+    * 接入点总数量。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -61,16 +61,16 @@ public class DescribeAccessPointsResponse extends AbstractModel {
     }
 
     /**
-     * Get 符合接入点数量。 
-     * @return TotalCount 符合接入点数量。
+     * Get 接入点总数量。 
+     * @return TotalCount 接入点总数量。
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 符合接入点数量。
-     * @param TotalCount 符合接入点数量。
+     * Set 接入点总数量。
+     * @param TotalCount 接入点总数量。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

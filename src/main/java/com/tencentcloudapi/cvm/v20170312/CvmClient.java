@@ -104,6 +104,17 @@ public class CvmClient extends AbstractClient{
     }
 
     /**
+     *本接口(ConvertOperatingSystem)用于转换实例的操作系统，仅支持源操作系统为 CentOS 7、CentOS 8 的实例。
+     * @param req ConvertOperatingSystemsRequest
+     * @return ConvertOperatingSystemsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ConvertOperatingSystemsResponse ConvertOperatingSystems(ConvertOperatingSystemsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ConvertOperatingSystems", ConvertOperatingSystemsResponse.class);
+    }
+
+    /**
      *本接口 (CreateDisasterRecoverGroup)用于创建[分散置放群组](https://cloud.tencent.com/document/product/213/15486)。创建好的置放群组，可在[创建实例](https://cloud.tencent.com/document/api/213/15730)时指定。
      * @param req CreateDisasterRecoverGroupRequest
      * @return CreateDisasterRecoverGroupResponse

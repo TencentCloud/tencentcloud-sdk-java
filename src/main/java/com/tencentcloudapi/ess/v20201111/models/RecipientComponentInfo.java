@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class RecipientComponentInfo extends AbstractModel {
 
     /**
-    * 参与方Id
+    * 签署方经办人在合同流程中的参与方ID，与控件绑定，是控件的归属方
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RecipientId")
@@ -33,8 +33,11 @@ public class RecipientComponentInfo extends AbstractModel {
 
     /**
     * 参与方填写状态
-<ul><li>0-未填写</li>
-<li>1-已填写</li></ul>
+<ul>
+<li>**空值** : 此参与方没有填写控件</li>
+<li>**0**:  未填写, 表示此参与方还没有填写合同的填写控件</li>
+<li>**1**:  已填写, 表示此参与方已经填写所有的填写控件</li></ul>
+
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RecipientFillStatus")
@@ -52,7 +55,7 @@ public class RecipientComponentInfo extends AbstractModel {
     private Boolean IsPromoter;
 
     /**
-    * 填写控件列表
+    * 改参与方填写控件信息列表
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Components")
@@ -60,9 +63,9 @@ public class RecipientComponentInfo extends AbstractModel {
     private FilledComponent [] Components;
 
     /**
-     * Get 参与方Id
+     * Get 签署方经办人在合同流程中的参与方ID，与控件绑定，是控件的归属方
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RecipientId 参与方Id
+     * @return RecipientId 签署方经办人在合同流程中的参与方ID，与控件绑定，是控件的归属方
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRecipientId() {
@@ -70,9 +73,9 @@ public class RecipientComponentInfo extends AbstractModel {
     }
 
     /**
-     * Set 参与方Id
+     * Set 签署方经办人在合同流程中的参与方ID，与控件绑定，是控件的归属方
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RecipientId 参与方Id
+     * @param RecipientId 签署方经办人在合同流程中的参与方ID，与控件绑定，是控件的归属方
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRecipientId(String RecipientId) {
@@ -81,12 +84,18 @@ public class RecipientComponentInfo extends AbstractModel {
 
     /**
      * Get 参与方填写状态
-<ul><li>0-未填写</li>
-<li>1-已填写</li></ul>
+<ul>
+<li>**空值** : 此参与方没有填写控件</li>
+<li>**0**:  未填写, 表示此参与方还没有填写合同的填写控件</li>
+<li>**1**:  已填写, 表示此参与方已经填写所有的填写控件</li></ul>
+
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return RecipientFillStatus 参与方填写状态
-<ul><li>0-未填写</li>
-<li>1-已填写</li></ul>
+<ul>
+<li>**空值** : 此参与方没有填写控件</li>
+<li>**0**:  未填写, 表示此参与方还没有填写合同的填写控件</li>
+<li>**1**:  已填写, 表示此参与方已经填写所有的填写控件</li></ul>
+
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRecipientFillStatus() {
@@ -95,12 +104,18 @@ public class RecipientComponentInfo extends AbstractModel {
 
     /**
      * Set 参与方填写状态
-<ul><li>0-未填写</li>
-<li>1-已填写</li></ul>
+<ul>
+<li>**空值** : 此参与方没有填写控件</li>
+<li>**0**:  未填写, 表示此参与方还没有填写合同的填写控件</li>
+<li>**1**:  已填写, 表示此参与方已经填写所有的填写控件</li></ul>
+
 注意：此字段可能返回 null，表示取不到有效值。
      * @param RecipientFillStatus 参与方填写状态
-<ul><li>0-未填写</li>
-<li>1-已填写</li></ul>
+<ul>
+<li>**空值** : 此参与方没有填写控件</li>
+<li>**0**:  未填写, 表示此参与方还没有填写合同的填写控件</li>
+<li>**1**:  已填写, 表示此参与方已经填写所有的填写控件</li></ul>
+
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRecipientFillStatus(String RecipientFillStatus) {
@@ -136,9 +151,9 @@ public class RecipientComponentInfo extends AbstractModel {
     }
 
     /**
-     * Get 填写控件列表
+     * Get 改参与方填写控件信息列表
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Components 填写控件列表
+     * @return Components 改参与方填写控件信息列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public FilledComponent [] getComponents() {
@@ -146,9 +161,9 @@ public class RecipientComponentInfo extends AbstractModel {
     }
 
     /**
-     * Set 填写控件列表
+     * Set 改参与方填写控件信息列表
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Components 填写控件列表
+     * @param Components 改参与方填写控件信息列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setComponents(FilledComponent [] Components) {

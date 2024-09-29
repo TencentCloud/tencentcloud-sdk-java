@@ -163,6 +163,28 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     }
 
     /**
+     *创建并部署边缘函数至 EdgeOne 的边缘节点。
+     * @param req CreateFunctionRequest
+     * @return CreateFunctionResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateFunctionResponse CreateFunction(CreateFunctionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateFunction", CreateFunctionResponse.class);
+    }
+
+    /**
+     *创建边缘函数的触发规则。
+     * @param req CreateFunctionRuleRequest
+     * @return CreateFunctionRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateFunctionRuleResponse CreateFunctionRule(CreateFunctionRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateFunctionRule", CreateFunctionRuleResponse.class);
+    }
+
+    /**
      *用于创建四层代理实例。
      * @param req CreateL4ProxyRequest
      * @return CreateL4ProxyResponse
@@ -354,6 +376,28 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     public DeleteCustomErrorPageResponse DeleteCustomErrorPage(DeleteCustomErrorPageRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteCustomErrorPage", DeleteCustomErrorPageResponse.class);
+    }
+
+    /**
+     *删除边缘函数，删除后函数无法恢复，关联的触发规则会一并删除。
+     * @param req DeleteFunctionRequest
+     * @return DeleteFunctionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteFunctionResponse DeleteFunction(DeleteFunctionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteFunction", DeleteFunctionResponse.class);
+    }
+
+    /**
+     *删除边缘函数触发规则。
+     * @param req DeleteFunctionRulesRequest
+     * @return DeleteFunctionRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteFunctionRulesResponse DeleteFunctionRules(DeleteFunctionRulesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteFunctionRules", DeleteFunctionRulesResponse.class);
     }
 
     /**
@@ -618,6 +662,39 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     public DescribeEnvironmentsResponse DescribeEnvironments(DescribeEnvironmentsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeEnvironments", DescribeEnvironmentsResponse.class);
+    }
+
+    /**
+     *查询边缘函数触发规则列表，支持按照规则 ID、函数 ID、规则描述等条件进行过滤。
+     * @param req DescribeFunctionRulesRequest
+     * @return DescribeFunctionRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeFunctionRulesResponse DescribeFunctionRules(DescribeFunctionRulesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeFunctionRules", DescribeFunctionRulesResponse.class);
+    }
+
+    /**
+     *查询边缘函数运行环境，包括环境变量。
+     * @param req DescribeFunctionRuntimeEnvironmentRequest
+     * @return DescribeFunctionRuntimeEnvironmentResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeFunctionRuntimeEnvironmentResponse DescribeFunctionRuntimeEnvironment(DescribeFunctionRuntimeEnvironmentRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeFunctionRuntimeEnvironment", DescribeFunctionRuntimeEnvironmentResponse.class);
+    }
+
+    /**
+     *查询边缘函数列表，支持函数 ID、函数名称、描述等条件的过滤。
+     * @param req DescribeFunctionsRequest
+     * @return DescribeFunctionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeFunctionsResponse DescribeFunctions(DescribeFunctionsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeFunctions", DescribeFunctionsResponse.class);
     }
 
     /**
@@ -917,6 +994,18 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     }
 
     /**
+     *操作边缘函数运行环境，支持环境变量的相关设置。
+设置环境变量后，可在函数代码中使用，具体参考 [边缘函数引入环境变量](https://cloud.tencent.com/document/product/1552/109151#0151fd9a-8b0e-407b-ae37-54553a60ded6)。
+     * @param req HandleFunctionRuntimeEnvironmentRequest
+     * @return HandleFunctionRuntimeEnvironmentResponse
+     * @throws TencentCloudSDKException
+     */
+    public HandleFunctionRuntimeEnvironmentResponse HandleFunctionRuntimeEnvironment(HandleFunctionRuntimeEnvironmentRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "HandleFunctionRuntimeEnvironment", HandleFunctionRuntimeEnvironmentResponse.class);
+    }
+
+    /**
      *用于验证站点所有权。
      * @param req IdentifyZoneRequest
      * @return IdentifyZoneResponse
@@ -1039,6 +1128,39 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     public ModifyCustomErrorPageResponse ModifyCustomErrorPage(ModifyCustomErrorPageRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyCustomErrorPage", ModifyCustomErrorPageResponse.class);
+    }
+
+    /**
+     *修改边缘函数，支持修改函数的内容及描述信息，修改且重新部署后，函数立刻生效。
+     * @param req ModifyFunctionRequest
+     * @return ModifyFunctionResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyFunctionResponse ModifyFunction(ModifyFunctionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyFunction", ModifyFunctionResponse.class);
+    }
+
+    /**
+     *修改边缘函数触发规则，支持修改规则条件、执行函数以及描述信息。
+     * @param req ModifyFunctionRuleRequest
+     * @return ModifyFunctionRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyFunctionRuleResponse ModifyFunctionRule(ModifyFunctionRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyFunctionRule", ModifyFunctionRuleResponse.class);
+    }
+
+    /**
+     *修改边缘函数触发规则的优先级。
+     * @param req ModifyFunctionRulePriorityRequest
+     * @return ModifyFunctionRulePriorityResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyFunctionRulePriorityResponse ModifyFunctionRulePriority(ModifyFunctionRulePriorityRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyFunctionRulePriority", ModifyFunctionRulePriorityResponse.class);
     }
 
     /**

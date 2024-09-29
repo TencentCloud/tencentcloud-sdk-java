@@ -66,7 +66,7 @@ public class FlowFileInfo extends AbstractModel {
     private String FlowType;
 
     /**
-    * 签署流程回调地址，长度不超过255个字符
+    * 已废弃，请使用【应用号配置】中的回调地址统一接收消息
     */
     @SerializedName("CallbackUrl")
     @Expose
@@ -106,6 +106,13 @@ public class FlowFileInfo extends AbstractModel {
     @SerializedName("NeedSignReview")
     @Expose
     private Boolean NeedSignReview;
+
+    /**
+    * 在短信通知、填写、签署流程中，若标题、按钮、合同详情等地方存在“合同”字样时，可根据此配置指定文案，可选文案如下：  <ul><li> <b>0</b> :合同（默认值）</li> <li> <b>1</b> :文件</li> <li> <b>2</b> :协议</li></ul>效果如下:![FlowDisplayType](https://qcloudimg.tencent-cloud.cn/raw/e4a2c4d638717cc901d3dbd5137c9bbc.png)
+    */
+    @SerializedName("FlowDisplayType")
+    @Expose
+    private Long FlowDisplayType;
 
     /**
      * Get 签署文件资源Id列表，目前仅支持单个文件 
@@ -204,17 +211,21 @@ public class FlowFileInfo extends AbstractModel {
     }
 
     /**
-     * Get 签署流程回调地址，长度不超过255个字符 
-     * @return CallbackUrl 签署流程回调地址，长度不超过255个字符
+     * Get 已废弃，请使用【应用号配置】中的回调地址统一接收消息 
+     * @return CallbackUrl 已废弃，请使用【应用号配置】中的回调地址统一接收消息
+     * @deprecated
      */
+    @Deprecated
     public String getCallbackUrl() {
         return this.CallbackUrl;
     }
 
     /**
-     * Set 签署流程回调地址，长度不超过255个字符
-     * @param CallbackUrl 签署流程回调地址，长度不超过255个字符
+     * Set 已废弃，请使用【应用号配置】中的回调地址统一接收消息
+     * @param CallbackUrl 已废弃，请使用【应用号配置】中的回调地址统一接收消息
+     * @deprecated
      */
+    @Deprecated
     public void setCallbackUrl(String CallbackUrl) {
         this.CallbackUrl = CallbackUrl;
     }
@@ -299,6 +310,22 @@ public class FlowFileInfo extends AbstractModel {
         this.NeedSignReview = NeedSignReview;
     }
 
+    /**
+     * Get 在短信通知、填写、签署流程中，若标题、按钮、合同详情等地方存在“合同”字样时，可根据此配置指定文案，可选文案如下：  <ul><li> <b>0</b> :合同（默认值）</li> <li> <b>1</b> :文件</li> <li> <b>2</b> :协议</li></ul>效果如下:![FlowDisplayType](https://qcloudimg.tencent-cloud.cn/raw/e4a2c4d638717cc901d3dbd5137c9bbc.png) 
+     * @return FlowDisplayType 在短信通知、填写、签署流程中，若标题、按钮、合同详情等地方存在“合同”字样时，可根据此配置指定文案，可选文案如下：  <ul><li> <b>0</b> :合同（默认值）</li> <li> <b>1</b> :文件</li> <li> <b>2</b> :协议</li></ul>效果如下:![FlowDisplayType](https://qcloudimg.tencent-cloud.cn/raw/e4a2c4d638717cc901d3dbd5137c9bbc.png)
+     */
+    public Long getFlowDisplayType() {
+        return this.FlowDisplayType;
+    }
+
+    /**
+     * Set 在短信通知、填写、签署流程中，若标题、按钮、合同详情等地方存在“合同”字样时，可根据此配置指定文案，可选文案如下：  <ul><li> <b>0</b> :合同（默认值）</li> <li> <b>1</b> :文件</li> <li> <b>2</b> :协议</li></ul>效果如下:![FlowDisplayType](https://qcloudimg.tencent-cloud.cn/raw/e4a2c4d638717cc901d3dbd5137c9bbc.png)
+     * @param FlowDisplayType 在短信通知、填写、签署流程中，若标题、按钮、合同详情等地方存在“合同”字样时，可根据此配置指定文案，可选文案如下：  <ul><li> <b>0</b> :合同（默认值）</li> <li> <b>1</b> :文件</li> <li> <b>2</b> :协议</li></ul>效果如下:![FlowDisplayType](https://qcloudimg.tencent-cloud.cn/raw/e4a2c4d638717cc901d3dbd5137c9bbc.png)
+     */
+    public void setFlowDisplayType(Long FlowDisplayType) {
+        this.FlowDisplayType = FlowDisplayType;
+    }
+
     public FlowFileInfo() {
     }
 
@@ -352,6 +379,9 @@ public class FlowFileInfo extends AbstractModel {
         if (source.NeedSignReview != null) {
             this.NeedSignReview = new Boolean(source.NeedSignReview);
         }
+        if (source.FlowDisplayType != null) {
+            this.FlowDisplayType = new Long(source.FlowDisplayType);
+        }
     }
 
 
@@ -371,6 +401,7 @@ public class FlowFileInfo extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Components.", this.Components);
         this.setParamSimple(map, prefix + "CustomShowMap", this.CustomShowMap);
         this.setParamSimple(map, prefix + "NeedSignReview", this.NeedSignReview);
+        this.setParamSimple(map, prefix + "FlowDisplayType", this.FlowDisplayType);
 
     }
 }

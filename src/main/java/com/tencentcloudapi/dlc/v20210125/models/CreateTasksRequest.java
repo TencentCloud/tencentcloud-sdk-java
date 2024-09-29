@@ -59,6 +59,13 @@ public class CreateTasksRequest extends AbstractModel {
     private String ResourceGroupName;
 
     /**
+    * 是否使用multi- statement方式运行一批次任务，true: 是，false: 否
+    */
+    @SerializedName("IsMultiStatement")
+    @Expose
+    private Boolean IsMultiStatement;
+
+    /**
      * Get 数据库名称。如果SQL语句中有数据库名称，优先使用SQL语句中的数据库，否则使用该参数指定的数据库（注：当提交建库sql时，该字段传空字符串）。 
      * @return DatabaseName 数据库名称。如果SQL语句中有数据库名称，优先使用SQL语句中的数据库，否则使用该参数指定的数据库（注：当提交建库sql时，该字段传空字符串）。
      */
@@ -138,6 +145,22 @@ public class CreateTasksRequest extends AbstractModel {
         this.ResourceGroupName = ResourceGroupName;
     }
 
+    /**
+     * Get 是否使用multi- statement方式运行一批次任务，true: 是，false: 否 
+     * @return IsMultiStatement 是否使用multi- statement方式运行一批次任务，true: 是，false: 否
+     */
+    public Boolean getIsMultiStatement() {
+        return this.IsMultiStatement;
+    }
+
+    /**
+     * Set 是否使用multi- statement方式运行一批次任务，true: 是，false: 否
+     * @param IsMultiStatement 是否使用multi- statement方式运行一批次任务，true: 是，false: 否
+     */
+    public void setIsMultiStatement(Boolean IsMultiStatement) {
+        this.IsMultiStatement = IsMultiStatement;
+    }
+
     public CreateTasksRequest() {
     }
 
@@ -161,6 +184,9 @@ public class CreateTasksRequest extends AbstractModel {
         if (source.ResourceGroupName != null) {
             this.ResourceGroupName = new String(source.ResourceGroupName);
         }
+        if (source.IsMultiStatement != null) {
+            this.IsMultiStatement = new Boolean(source.IsMultiStatement);
+        }
     }
 
 
@@ -173,6 +199,7 @@ public class CreateTasksRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "DatasourceConnectionName", this.DatasourceConnectionName);
         this.setParamSimple(map, prefix + "DataEngineName", this.DataEngineName);
         this.setParamSimple(map, prefix + "ResourceGroupName", this.ResourceGroupName);
+        this.setParamSimple(map, prefix + "IsMultiStatement", this.IsMultiStatement);
 
     }
 }

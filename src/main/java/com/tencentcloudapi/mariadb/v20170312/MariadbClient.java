@@ -195,6 +195,17 @@ public class MariadbClient extends AbstractClient{
     }
 
     /**
+     *本接口(DescribeBackupConfigs)用于查询数据库备份配置信息。
+     * @param req DescribeBackupConfigsRequest
+     * @return DescribeBackupConfigsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBackupConfigsResponse DescribeBackupConfigs(DescribeBackupConfigsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBackupConfigs", DescribeBackupConfigsResponse.class);
+    }
+
+    /**
      *本接口(DescribeBackupFiles)用于查看备份文件列表。
      * @param req DescribeBackupFilesRequest
      * @return DescribeBackupFilesResponse
@@ -214,6 +225,17 @@ public class MariadbClient extends AbstractClient{
     public DescribeBackupTimeResponse DescribeBackupTime(DescribeBackupTimeRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeBackupTime", DescribeBackupTimeResponse.class);
+    }
+
+    /**
+     *本接口（DescribeBinlogTime）用于查询可回档时间范围。
+     * @param req DescribeBinlogTimeRequest
+     * @return DescribeBinlogTimeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBinlogTimeResponse DescribeBinlogTime(DescribeBinlogTimeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBinlogTime", DescribeBinlogTimeResponse.class);
     }
 
     /**
@@ -607,6 +629,19 @@ public class MariadbClient extends AbstractClient{
     public ModifyAccountPrivilegesResponse ModifyAccountPrivileges(ModifyAccountPrivilegesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyAccountPrivileges", ModifyAccountPrivilegesResponse.class);
+    }
+
+    /**
+     *本接口(ModifyBackupConfigs)用于修改数据库备份配置信息。
+
+1. 修改数据库超期备份配置，目前按年、按月、按日只支持一种，存在互斥关系，如当前策略按年备份，如果传入按月备份策略将会覆盖当前的按年备份策略，务必注意。
+     * @param req ModifyBackupConfigsRequest
+     * @return ModifyBackupConfigsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyBackupConfigsResponse ModifyBackupConfigs(ModifyBackupConfigsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyBackupConfigs", ModifyBackupConfigsResponse.class);
     }
 
     /**

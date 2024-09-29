@@ -316,6 +316,14 @@ public class CreateRecTaskRequest extends AbstractModel {
     private String HotwordList;
 
     /**
+    * 关键词识别ID列表，默认空为不进行识别，最多10个
+
+    */
+    @SerializedName("KeyWordLibIdList")
+    @Expose
+    private String [] KeyWordLibIdList;
+
+    /**
      * Get 引擎模型类型
 识别引擎采用分级计费方案，标记为“大模型版”的引擎适用大模型计费方案，[点击这里](https://cloud.tencent.com/document/product/1093/35686) 查看产品计费说明
 
@@ -1223,6 +1231,26 @@ public class CreateRecTaskRequest extends AbstractModel {
         this.HotwordList = HotwordList;
     }
 
+    /**
+     * Get 关键词识别ID列表，默认空为不进行识别，最多10个
+ 
+     * @return KeyWordLibIdList 关键词识别ID列表，默认空为不进行识别，最多10个
+
+     */
+    public String [] getKeyWordLibIdList() {
+        return this.KeyWordLibIdList;
+    }
+
+    /**
+     * Set 关键词识别ID列表，默认空为不进行识别，最多10个
+
+     * @param KeyWordLibIdList 关键词识别ID列表，默认空为不进行识别，最多10个
+
+     */
+    public void setKeyWordLibIdList(String [] KeyWordLibIdList) {
+        this.KeyWordLibIdList = KeyWordLibIdList;
+    }
+
     public CreateRecTaskRequest() {
     }
 
@@ -1297,6 +1325,12 @@ public class CreateRecTaskRequest extends AbstractModel {
         if (source.HotwordList != null) {
             this.HotwordList = new String(source.HotwordList);
         }
+        if (source.KeyWordLibIdList != null) {
+            this.KeyWordLibIdList = new String[source.KeyWordLibIdList.length];
+            for (int i = 0; i < source.KeyWordLibIdList.length; i++) {
+                this.KeyWordLibIdList[i] = new String(source.KeyWordLibIdList[i]);
+            }
+        }
     }
 
 
@@ -1326,6 +1360,7 @@ public class CreateRecTaskRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SentenceMaxLength", this.SentenceMaxLength);
         this.setParamSimple(map, prefix + "Extra", this.Extra);
         this.setParamSimple(map, prefix + "HotwordList", this.HotwordList);
+        this.setParamArraySimple(map, prefix + "KeyWordLibIdList.", this.KeyWordLibIdList);
 
     }
 }

@@ -153,6 +153,14 @@ DeadLetter 死信
     private String ClientProtocol;
 
     /**
+    * 客户端订阅详情
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ClientSubscriptionInfos")
+    @Expose
+    private ClientSubscriptionInfo [] ClientSubscriptionInfos;
+
+    /**
      * Get 主题名称 
      * @return Topic 主题名称
      */
@@ -488,6 +496,26 @@ DeadLetter 死信
         this.ClientProtocol = ClientProtocol;
     }
 
+    /**
+     * Get 客户端订阅详情
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ClientSubscriptionInfos 客户端订阅详情
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ClientSubscriptionInfo [] getClientSubscriptionInfos() {
+        return this.ClientSubscriptionInfos;
+    }
+
+    /**
+     * Set 客户端订阅详情
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ClientSubscriptionInfos 客户端订阅详情
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setClientSubscriptionInfos(ClientSubscriptionInfo [] ClientSubscriptionInfos) {
+        this.ClientSubscriptionInfos = ClientSubscriptionInfos;
+    }
+
     public RocketMQSubscription() {
     }
 
@@ -541,6 +569,12 @@ DeadLetter 死信
         if (source.ClientProtocol != null) {
             this.ClientProtocol = new String(source.ClientProtocol);
         }
+        if (source.ClientSubscriptionInfos != null) {
+            this.ClientSubscriptionInfos = new ClientSubscriptionInfo[source.ClientSubscriptionInfos.length];
+            for (int i = 0; i < source.ClientSubscriptionInfos.length; i++) {
+                this.ClientSubscriptionInfos[i] = new ClientSubscriptionInfo(source.ClientSubscriptionInfos[i]);
+            }
+        }
     }
 
 
@@ -563,6 +597,7 @@ DeadLetter 死信
         this.setParamSimple(map, prefix + "LastUpdateTime", this.LastUpdateTime);
         this.setParamSimple(map, prefix + "MaxRetryTimes", this.MaxRetryTimes);
         this.setParamSimple(map, prefix + "ClientProtocol", this.ClientProtocol);
+        this.setParamArrayObj(map, prefix + "ClientSubscriptionInfos.", this.ClientSubscriptionInfos);
 
     }
 }

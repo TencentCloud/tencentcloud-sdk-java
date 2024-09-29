@@ -177,6 +177,13 @@ WARN_RESHOOT_CARD翻拍件告警
     private String RegistrationAuthority;
 
     /**
+    * 是否是电子营业执照。0为不是，1为是。
+    */
+    @SerializedName("Electronic")
+    @Expose
+    private Boolean Electronic;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -544,6 +551,22 @@ WARN_RESHOOT_CARD翻拍件告警
     }
 
     /**
+     * Get 是否是电子营业执照。0为不是，1为是。 
+     * @return Electronic 是否是电子营业执照。0为不是，1为是。
+     */
+    public Boolean getElectronic() {
+        return this.Electronic;
+    }
+
+    /**
+     * Set 是否是电子营业执照。0为不是，1为是。
+     * @param Electronic 是否是电子营业执照。0为不是，1为是。
+     */
+    public void setElectronic(Boolean Electronic) {
+        this.Electronic = Electronic;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -636,6 +659,9 @@ WARN_RESHOOT_CARD翻拍件告警
         if (source.RegistrationAuthority != null) {
             this.RegistrationAuthority = new String(source.RegistrationAuthority);
         }
+        if (source.Electronic != null) {
+            this.Electronic = new Boolean(source.Electronic);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -667,6 +693,7 @@ WARN_RESHOOT_CARD翻拍件告警
         this.setParamSimple(map, prefix + "Title", this.Title);
         this.setParamSimple(map, prefix + "SerialNumber", this.SerialNumber);
         this.setParamSimple(map, prefix + "RegistrationAuthority", this.RegistrationAuthority);
+        this.setParamSimple(map, prefix + "Electronic", this.Electronic);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

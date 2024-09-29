@@ -115,6 +115,13 @@ public class CreateBatchQuickSignUrlRequest extends AbstractModel {
     private Long SignTypeSelector;
 
     /**
+    * 批量签署合同相关信息，指定合同和签署方的信息，用于补充动态签署人。	
+    */
+    @SerializedName("FlowBatchUrlInfo")
+    @Expose
+    private FlowBatchUrlInfo FlowBatchUrlInfo;
+
+    /**
      * Get 批量签署的流程签署人，其中姓名(ApproverName)、参与人类型(ApproverType)必传，手机号(ApproverMobile)和证件信息(ApproverIdCardType、ApproverIdCardNumber)可任选一种或全部传入。
 注:
 `1. ApproverType目前只支持个人类型的签署人。`
@@ -370,6 +377,22 @@ public class CreateBatchQuickSignUrlRequest extends AbstractModel {
         this.SignTypeSelector = SignTypeSelector;
     }
 
+    /**
+     * Get 批量签署合同相关信息，指定合同和签署方的信息，用于补充动态签署人。	 
+     * @return FlowBatchUrlInfo 批量签署合同相关信息，指定合同和签署方的信息，用于补充动态签署人。	
+     */
+    public FlowBatchUrlInfo getFlowBatchUrlInfo() {
+        return this.FlowBatchUrlInfo;
+    }
+
+    /**
+     * Set 批量签署合同相关信息，指定合同和签署方的信息，用于补充动态签署人。	
+     * @param FlowBatchUrlInfo 批量签署合同相关信息，指定合同和签署方的信息，用于补充动态签署人。	
+     */
+    public void setFlowBatchUrlInfo(FlowBatchUrlInfo FlowBatchUrlInfo) {
+        this.FlowBatchUrlInfo = FlowBatchUrlInfo;
+    }
+
     public CreateBatchQuickSignUrlRequest() {
     }
 
@@ -414,6 +437,9 @@ public class CreateBatchQuickSignUrlRequest extends AbstractModel {
         if (source.SignTypeSelector != null) {
             this.SignTypeSelector = new Long(source.SignTypeSelector);
         }
+        if (source.FlowBatchUrlInfo != null) {
+            this.FlowBatchUrlInfo = new FlowBatchUrlInfo(source.FlowBatchUrlInfo);
+        }
     }
 
 
@@ -430,6 +456,7 @@ public class CreateBatchQuickSignUrlRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "SignatureTypes.", this.SignatureTypes);
         this.setParamArraySimple(map, prefix + "ApproverSignTypes.", this.ApproverSignTypes);
         this.setParamSimple(map, prefix + "SignTypeSelector", this.SignTypeSelector);
+        this.setParamObj(map, prefix + "FlowBatchUrlInfo.", this.FlowBatchUrlInfo);
 
     }
 }

@@ -192,9 +192,9 @@ public class VpcClient extends AbstractClient{
     /**
      *本接口 (AssociateAddress) 用于将[弹性公网IP](https://cloud.tencent.com/document/product/213/1941)（简称 EIP）绑定到实例或弹性网卡的指定内网 IP 上。
 * 将 EIP 绑定到实例（CVM）上，其本质是将 EIP 绑定到实例上主网卡的主内网 IP 上。
-* 将 EIP 绑定到主网卡的主内网IP上，绑定过程会把其上绑定的普通公网 IP 自动解绑并释放。
+* 将 EIP 绑定到主网卡的主内网IP时，如主内网IP已绑定普通公网IP，必须先退还才能绑定EIP。
 * 将 EIP 绑定到指定网卡的内网 IP上（非主网卡的主内网IP），则必须先解绑该 EIP，才能再绑定新的。
-* 将 EIP 绑定到内网型CLB实例的功能处于内测阶段，如需使用，请提交内测申请。
+* 将 EIP 绑定到内网型CLB实例的功能处于内测阶段，如需使用，请提交[内测申请](https://cloud.tencent.com/apply/p/4kxj7picqci)。
 * 将 EIP 绑定到NAT网关，请使用接口[AssociateNatGatewayAddress](https://cloud.tencent.com/document/product/215/36722)
 * EIP 如果欠费或被封堵，则不能被绑定。
 * 只有状态为 UNBIND 的 EIP 才能够被绑定。
@@ -489,6 +489,28 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
+     *创建 IDC 通道
+     * @param req CreateCdcLDCXListRequest
+     * @return CreateCdcLDCXListResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCdcLDCXListResponse CreateCdcLDCXList(CreateCdcLDCXListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateCdcLDCXList", CreateCdcLDCXListResponse.class);
+    }
+
+    /**
+     *创建虚拟连接，用于支持 CDC 多租户模式
+     * @param req CreateCdcNetPlanesRequest
+     * @return CreateCdcNetPlanesResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCdcNetPlanesResponse CreateCdcNetPlanes(CreateCdcNetPlanesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateCdcNetPlanes", CreateCdcNetPlanesResponse.class);
+    }
+
+    /**
      *本接口（CreateCustomerGateway）用于创建对端网关。
      * @param req CreateCustomerGatewayRequest
      * @return CreateCustomerGatewayResponse
@@ -585,6 +607,28 @@ public class VpcClient extends AbstractClient{
     public CreateHaVipResponse CreateHaVip(CreateHaVipRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateHaVip", CreateHaVipResponse.class);
+    }
+
+    /**
+     *高优路由表创建
+     * @param req CreateHighPriorityRouteTableRequest
+     * @return CreateHighPriorityRouteTableResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateHighPriorityRouteTableResponse CreateHighPriorityRouteTable(CreateHighPriorityRouteTableRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateHighPriorityRouteTable", CreateHighPriorityRouteTableResponse.class);
+    }
+
+    /**
+     *创建高优路由表条目。
+     * @param req CreateHighPriorityRoutesRequest
+     * @return CreateHighPriorityRoutesResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateHighPriorityRoutesResponse CreateHighPriorityRoutes(CreateHighPriorityRoutesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateHighPriorityRoutes", CreateHighPriorityRoutesResponse.class);
     }
 
     /**
@@ -1106,6 +1150,28 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
+     *删除 IDC通道
+     * @param req DeleteCdcLDCXListRequest
+     * @return DeleteCdcLDCXListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCdcLDCXListResponse DeleteCdcLDCXList(DeleteCdcLDCXListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteCdcLDCXList", DeleteCdcLDCXListResponse.class);
+    }
+
+    /**
+     *删除虚拟连接
+     * @param req DeleteCdcNetPlanesRequest
+     * @return DeleteCdcNetPlanesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCdcNetPlanesResponse DeleteCdcNetPlanes(DeleteCdcNetPlanesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteCdcNetPlanes", DeleteCdcNetPlanesResponse.class);
+    }
+
+    /**
      *本接口（DeleteCustomerGateway）用于删除对端网关。
      * @param req DeleteCustomerGatewayRequest
      * @return DeleteCustomerGatewayResponse
@@ -1175,6 +1241,28 @@ public class VpcClient extends AbstractClient{
     public DeleteHaVipResponse DeleteHaVip(DeleteHaVipRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteHaVip", DeleteHaVipResponse.class);
+    }
+
+    /**
+     *删除高优路由表
+     * @param req DeleteHighPriorityRouteTablesRequest
+     * @return DeleteHighPriorityRouteTablesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteHighPriorityRouteTablesResponse DeleteHighPriorityRouteTables(DeleteHighPriorityRouteTablesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteHighPriorityRouteTables", DeleteHighPriorityRouteTablesResponse.class);
+    }
+
+    /**
+     *删除高优路由表的路由条目。
+     * @param req DeleteHighPriorityRoutesRequest
+     * @return DeleteHighPriorityRoutesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteHighPriorityRoutesResponse DeleteHighPriorityRoutes(DeleteHighPriorityRoutesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteHighPriorityRoutes", DeleteHighPriorityRoutesResponse.class);
     }
 
     /**
@@ -1761,6 +1849,39 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
+     *查询 IDC通道信息
+     * @param req DescribeCdcLDCXListRequest
+     * @return DescribeCdcLDCXListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCdcLDCXListResponse DescribeCdcLDCXList(DescribeCdcLDCXListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCdcLDCXList", DescribeCdcLDCXListResponse.class);
+    }
+
+    /**
+     *查询虚拟连接
+     * @param req DescribeCdcNetPlanesRequest
+     * @return DescribeCdcNetPlanesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCdcNetPlanesResponse DescribeCdcNetPlanes(DescribeCdcNetPlanesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCdcNetPlanes", DescribeCdcNetPlanesResponse.class);
+    }
+
+    /**
+     *查询IDC使用的 VLAN
+     * @param req DescribeCdcUsedIdcVlanRequest
+     * @return DescribeCdcUsedIdcVlanResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCdcUsedIdcVlanResponse DescribeCdcUsedIdcVlan(DescribeCdcUsedIdcVlanRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCdcUsedIdcVlan", DescribeCdcUsedIdcVlanResponse.class);
+    }
+
+    /**
      *本接口（DescribeClassicLinkInstances）用于查询私有网络和基础网络设备互通列表。
      * @param req DescribeClassicLinkInstancesRequest
      * @return DescribeClassicLinkInstancesResponse
@@ -1917,6 +2038,28 @@ public class VpcClient extends AbstractClient{
     public DescribeHaVipsResponse DescribeHaVips(DescribeHaVipsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeHaVips", DescribeHaVipsResponse.class);
+    }
+
+    /**
+     *查询高优路由表。
+     * @param req DescribeHighPriorityRouteTablesRequest
+     * @return DescribeHighPriorityRouteTablesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeHighPriorityRouteTablesResponse DescribeHighPriorityRouteTables(DescribeHighPriorityRouteTablesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeHighPriorityRouteTables", DescribeHighPriorityRouteTablesResponse.class);
+    }
+
+    /**
+     *查询高优路由表条目信息。
+     * @param req DescribeHighPriorityRoutesRequest
+     * @return DescribeHighPriorityRoutesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeHighPriorityRoutesResponse DescribeHighPriorityRoutes(DescribeHighPriorityRoutesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeHighPriorityRoutes", DescribeHighPriorityRoutesResponse.class);
     }
 
     /**
@@ -2228,6 +2371,17 @@ public class VpcClient extends AbstractClient{
     public DescribeRouteTablesResponse DescribeRouteTables(DescribeRouteTablesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeRouteTables", DescribeRouteTablesResponse.class);
+    }
+
+    /**
+     *本接口（DescribeRoutes）用于查询路由列表。
+     * @param req DescribeRoutesRequest
+     * @return DescribeRoutesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRoutesResponse DescribeRoutes(DescribeRoutesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRoutes", DescribeRoutesResponse.class);
     }
 
     /**
@@ -3234,6 +3388,28 @@ LimitTypes取值范围：
     }
 
     /**
+     *修改 IDC通道信息
+     * @param req ModifyCdcLDCXAttributeRequest
+     * @return ModifyCdcLDCXAttributeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCdcLDCXAttributeResponse ModifyCdcLDCXAttribute(ModifyCdcLDCXAttributeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyCdcLDCXAttribute", ModifyCdcLDCXAttributeResponse.class);
+    }
+
+    /**
+     *修改虚拟连接
+     * @param req ModifyCdcNetPlaneAttributeRequest
+     * @return ModifyCdcNetPlaneAttributeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCdcNetPlaneAttributeResponse ModifyCdcNetPlaneAttribute(ModifyCdcNetPlaneAttributeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyCdcNetPlaneAttribute", ModifyCdcNetPlaneAttributeResponse.class);
+    }
+
+    /**
      *本接口（ModifyCustomerGatewayAttribute）用于修改对端网关信息。
      * @param req ModifyCustomerGatewayAttributeRequest
      * @return ModifyCustomerGatewayAttributeResponse
@@ -3297,6 +3473,39 @@ LimitTypes取值范围：
     public ModifyHaVipAttributeResponse ModifyHaVipAttribute(ModifyHaVipAttributeRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyHaVipAttribute", ModifyHaVipAttributeResponse.class);
+    }
+
+    /**
+     *修改高优路由表条目属性。
+     * @param req ModifyHighPriorityRouteAttributeRequest
+     * @return ModifyHighPriorityRouteAttributeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyHighPriorityRouteAttributeResponse ModifyHighPriorityRouteAttribute(ModifyHighPriorityRouteAttributeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyHighPriorityRouteAttribute", ModifyHighPriorityRouteAttributeResponse.class);
+    }
+
+    /**
+     *修改高优路由表 HASH 策略。
+     * @param req ModifyHighPriorityRouteECMPAlgorithmRequest
+     * @return ModifyHighPriorityRouteECMPAlgorithmResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyHighPriorityRouteECMPAlgorithmResponse ModifyHighPriorityRouteECMPAlgorithm(ModifyHighPriorityRouteECMPAlgorithmRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyHighPriorityRouteECMPAlgorithm", ModifyHighPriorityRouteECMPAlgorithmResponse.class);
+    }
+
+    /**
+     *修改高优路由表属性
+     * @param req ModifyHighPriorityRouteTableAttributeRequest
+     * @return ModifyHighPriorityRouteTableAttributeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyHighPriorityRouteTableAttributeResponse ModifyHighPriorityRouteTableAttribute(ModifyHighPriorityRouteTableAttributeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyHighPriorityRouteTableAttribute", ModifyHighPriorityRouteTableAttributeResponse.class);
     }
 
     /**
@@ -3934,6 +4143,28 @@ LimitTypes取值范围：
     }
 
     /**
+     *替换高优路由表和子网绑定关系。
+     * @param req ReplaceHighPriorityRouteTableAssociationRequest
+     * @return ReplaceHighPriorityRouteTableAssociationResponse
+     * @throws TencentCloudSDKException
+     */
+    public ReplaceHighPriorityRouteTableAssociationResponse ReplaceHighPriorityRouteTableAssociation(ReplaceHighPriorityRouteTableAssociationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ReplaceHighPriorityRouteTableAssociation", ReplaceHighPriorityRouteTableAssociationResponse.class);
+    }
+
+    /**
+     *替换高优路由表条目信息。
+     * @param req ReplaceHighPriorityRoutesRequest
+     * @return ReplaceHighPriorityRoutesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ReplaceHighPriorityRoutesResponse ReplaceHighPriorityRoutes(ReplaceHighPriorityRoutesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ReplaceHighPriorityRoutes", ReplaceHighPriorityRoutesResponse.class);
+    }
+
+    /**
      *本接口（ReplaceRouteTableAssociation）用于修改子网（Subnet）关联的路由表（RouteTable）。
 * 一个子网只能关联一个路由表。
      * @param req ReplaceRouteTableAssociationRequest
@@ -3989,6 +4220,17 @@ LimitTypes取值范围：
     public ResetAttachCcnInstancesResponse ResetAttachCcnInstances(ResetAttachCcnInstancesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ResetAttachCcnInstances", ResetAttachCcnInstancesResponse.class);
+    }
+
+    /**
+     *重置高优路由表。
+     * @param req ResetHighPriorityRoutesRequest
+     * @return ResetHighPriorityRoutesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ResetHighPriorityRoutesResponse ResetHighPriorityRoutes(ResetHighPriorityRoutesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ResetHighPriorityRoutes", ResetHighPriorityRoutesResponse.class);
     }
 
     /**

@@ -513,6 +513,17 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
     }
 
     /**
+     *Get the list of supported regions for dedicated instances
+     * @param req DescribeExclusiveInstanceRegionsRequest
+     * @return DescribeExclusiveInstanceRegionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeExclusiveInstanceRegionsResponse DescribeExclusiveInstanceRegions(DescribeExclusiveInstanceRegionsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeExclusiveInstanceRegions", DescribeExclusiveInstanceRegionsResponse.class);
+    }
+
+    /**
      *本接口（DescribeExclusiveInstances）用于查询独享实例列表信息。
      * @param req DescribeExclusiveInstancesRequest
      * @return DescribeExclusiveInstancesResponse

@@ -24,15 +24,15 @@ import java.util.HashMap;
 public class CallbackStatusStatisticsRequest extends AbstractModel {
 
     /**
-    * 起始时间，格式为yyyymmddhh，精确到小时，例如2021050113，表示2021年5月1号13时。
+    * 起始时间，格式为yyyymmddhh，精确到小时，例如2024050113，表示2024年5月1号13时。
     */
     @SerializedName("BeginTime")
     @Expose
     private String BeginTime;
 
     /**
-    * 结束时间，格式为yyyymmddhh，精确到小时，例如2021050118，表示2021年5月1号18时。
-注：EndTime 必须大于 BeginTime，且相差不超过32天。
+    * 结束时间，格式为yyyymmddhh，精确到小时，例如2024050118，表示2024年5月1号18时。
+注：EndTime 必须大于等于 BeginTime，且相差不超过32天。
     */
     @SerializedName("EndTime")
     @Expose
@@ -62,36 +62,36 @@ public class CallbackStatusStatisticsRequest extends AbstractModel {
     private Long Offset;
 
     /**
-     * Get 起始时间，格式为yyyymmddhh，精确到小时，例如2021050113，表示2021年5月1号13时。 
-     * @return BeginTime 起始时间，格式为yyyymmddhh，精确到小时，例如2021050113，表示2021年5月1号13时。
+     * Get 起始时间，格式为yyyymmddhh，精确到小时，例如2024050113，表示2024年5月1号13时。 
+     * @return BeginTime 起始时间，格式为yyyymmddhh，精确到小时，例如2024050113，表示2024年5月1号13时。
      */
     public String getBeginTime() {
         return this.BeginTime;
     }
 
     /**
-     * Set 起始时间，格式为yyyymmddhh，精确到小时，例如2021050113，表示2021年5月1号13时。
-     * @param BeginTime 起始时间，格式为yyyymmddhh，精确到小时，例如2021050113，表示2021年5月1号13时。
+     * Set 起始时间，格式为yyyymmddhh，精确到小时，例如2024050113，表示2024年5月1号13时。
+     * @param BeginTime 起始时间，格式为yyyymmddhh，精确到小时，例如2024050113，表示2024年5月1号13时。
      */
     public void setBeginTime(String BeginTime) {
         this.BeginTime = BeginTime;
     }
 
     /**
-     * Get 结束时间，格式为yyyymmddhh，精确到小时，例如2021050118，表示2021年5月1号18时。
-注：EndTime 必须大于 BeginTime，且相差不超过32天。 
-     * @return EndTime 结束时间，格式为yyyymmddhh，精确到小时，例如2021050118，表示2021年5月1号18时。
-注：EndTime 必须大于 BeginTime，且相差不超过32天。
+     * Get 结束时间，格式为yyyymmddhh，精确到小时，例如2024050118，表示2024年5月1号18时。
+注：EndTime 必须大于等于 BeginTime，且相差不超过32天。 
+     * @return EndTime 结束时间，格式为yyyymmddhh，精确到小时，例如2024050118，表示2024年5月1号18时。
+注：EndTime 必须大于等于 BeginTime，且相差不超过32天。
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间，格式为yyyymmddhh，精确到小时，例如2021050118，表示2021年5月1号18时。
-注：EndTime 必须大于 BeginTime，且相差不超过32天。
-     * @param EndTime 结束时间，格式为yyyymmddhh，精确到小时，例如2021050118，表示2021年5月1号18时。
-注：EndTime 必须大于 BeginTime，且相差不超过32天。
+     * Set 结束时间，格式为yyyymmddhh，精确到小时，例如2024050118，表示2024年5月1号18时。
+注：EndTime 必须大于等于 BeginTime，且相差不超过32天。
+     * @param EndTime 结束时间，格式为yyyymmddhh，精确到小时，例如2024050118，表示2024年5月1号18时。
+注：EndTime 必须大于等于 BeginTime，且相差不超过32天。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

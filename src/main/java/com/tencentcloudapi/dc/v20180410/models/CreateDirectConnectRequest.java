@@ -155,6 +155,13 @@ ChinaOther：中国其他；
     private Boolean SignLaw;
 
     /**
+    * 标签键值对
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get 物理专线的名称。 
      * @return DirectConnectName 物理专线的名称。
      */
@@ -474,6 +481,22 @@ ChinaOther：中国其他；
         this.SignLaw = SignLaw;
     }
 
+    /**
+     * Get 标签键值对 
+     * @return Tags 标签键值对
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 标签键值对
+     * @param Tags 标签键值对
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public CreateDirectConnectRequest() {
     }
 
@@ -533,6 +556,12 @@ ChinaOther：中国其他；
         if (source.SignLaw != null) {
             this.SignLaw = new Boolean(source.SignLaw);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -557,6 +586,7 @@ ChinaOther：中国其他；
         this.setParamSimple(map, prefix + "FaultReportContactPerson", this.FaultReportContactPerson);
         this.setParamSimple(map, prefix + "FaultReportContactNumber", this.FaultReportContactNumber);
         this.setParamSimple(map, prefix + "SignLaw", this.SignLaw);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

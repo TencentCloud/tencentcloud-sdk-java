@@ -72,6 +72,14 @@ public class OrgNode extends AbstractModel {
     private String UpdateTime;
 
     /**
+    * 成员标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get 组织节点ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return NodeId 组织节点ID
@@ -191,6 +199,26 @@ public class OrgNode extends AbstractModel {
         this.UpdateTime = UpdateTime;
     }
 
+    /**
+     * Get 成员标签列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Tags 成员标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 成员标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Tags 成员标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public OrgNode() {
     }
 
@@ -217,6 +245,12 @@ public class OrgNode extends AbstractModel {
         if (source.UpdateTime != null) {
             this.UpdateTime = new String(source.UpdateTime);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -230,6 +264,7 @@ public class OrgNode extends AbstractModel {
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

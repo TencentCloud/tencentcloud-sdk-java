@@ -95,6 +95,13 @@ public class ModifyOutputInfo extends AbstractModel {
     private String [] SecurityGroupIds;
 
     /**
+    * 可用区
+    */
+    @SerializedName("Zones")
+    @Expose
+    private String [] Zones;
+
+    /**
      * Get 需要修改的Output的Id。 
      * @return OutputId 需要修改的Output的Id。
      */
@@ -258,6 +265,22 @@ public class ModifyOutputInfo extends AbstractModel {
         this.SecurityGroupIds = SecurityGroupIds;
     }
 
+    /**
+     * Get 可用区 
+     * @return Zones 可用区
+     */
+    public String [] getZones() {
+        return this.Zones;
+    }
+
+    /**
+     * Set 可用区
+     * @param Zones 可用区
+     */
+    public void setZones(String [] Zones) {
+        this.Zones = Zones;
+    }
+
     public ModifyOutputInfo() {
     }
 
@@ -302,6 +325,12 @@ public class ModifyOutputInfo extends AbstractModel {
                 this.SecurityGroupIds[i] = new String(source.SecurityGroupIds[i]);
             }
         }
+        if (source.Zones != null) {
+            this.Zones = new String[source.Zones.length];
+            for (int i = 0; i < source.Zones.length; i++) {
+                this.Zones[i] = new String(source.Zones[i]);
+            }
+        }
     }
 
 
@@ -319,6 +348,7 @@ public class ModifyOutputInfo extends AbstractModel {
         this.setParamArraySimple(map, prefix + "AllowIpList.", this.AllowIpList);
         this.setParamSimple(map, prefix + "MaxConcurrent", this.MaxConcurrent);
         this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
+        this.setParamArraySimple(map, prefix + "Zones.", this.Zones);
 
     }
 }

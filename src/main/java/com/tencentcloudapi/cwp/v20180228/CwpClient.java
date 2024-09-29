@@ -2257,7 +2257,9 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
-     *获取索引列表
+     *接口已废弃
+
+获取索引列表
      * @param req DescribeIndexListRequest
      * @return DescribeIndexListResponse
      * @throws TencentCloudSDKException

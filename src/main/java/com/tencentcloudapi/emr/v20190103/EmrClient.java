@@ -84,6 +84,19 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
+     *本接口（CreateSLInstance）用于创建 Lite HBase 实例
+- 接口调用成功，会创建Lite HBase实例，创建实例请求成功会返回创建实例的 InstaceId 和请求的 RequestID。
+- 接口为异步接口，接口返回时操作并未立即完成，实例操作结果可以通过调用 DescribeInstancesList 查看当前实例的 StatusDesc 状态。
+     * @param req CreateSLInstanceRequest
+     * @return CreateSLInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateSLInstanceResponse CreateSLInstance(CreateSLInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateSLInstance", CreateSLInstanceResponse.class);
+    }
+
+    /**
      *删除自动扩缩容规则，后台销毁根据该规则扩缩容出来的节点
      * @param req DeleteAutoScaleStrategyRequest
      * @return DeleteAutoScaleStrategyResponse
@@ -103,6 +116,17 @@ public class EmrClient extends AbstractClient{
     public DeleteUserManagerUserListResponse DeleteUserManagerUserList(DeleteUserManagerUserListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteUserManagerUserList", DeleteUserManagerUserListResponse.class);
+    }
+
+    /**
+     *yarn资源调度-部署生效
+     * @param req DeployYarnConfRequest
+     * @return DeployYarnConfResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeployYarnConfResponse DeployYarnConf(DeployYarnConfRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeployYarnConf", DeployYarnConfResponse.class);
     }
 
     /**
@@ -194,6 +218,17 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
+     *查询YARN资源调度的全局配置
+     * @param req DescribeGlobalConfigRequest
+     * @return DescribeGlobalConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeGlobalConfigResponse DescribeGlobalConfig(DescribeGlobalConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeGlobalConfig", DescribeGlobalConfigResponse.class);
+    }
+
+    /**
      *获取Hbase表级监控数据概览接口
      * @param req DescribeHBaseTableOverviewRequest
      * @return DescribeHBaseTableOverviewResponse
@@ -282,7 +317,7 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
-     *查询YARN资源调度数据信息
+     *查询YARN资源调度数据信息。已废弃，请使用`DescribeYarnQueue`去查询队列信息。
      * @param req DescribeResourceScheduleRequest
      * @return DescribeResourceScheduleResponse
      * @throws TencentCloudSDKException
@@ -290,6 +325,39 @@ public class EmrClient extends AbstractClient{
     public DescribeResourceScheduleResponse DescribeResourceSchedule(DescribeResourceScheduleRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeResourceSchedule", DescribeResourceScheduleResponse.class);
+    }
+
+    /**
+     *YARN资源调度-变更详情
+     * @param req DescribeResourceScheduleDiffDetailRequest
+     * @return DescribeResourceScheduleDiffDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeResourceScheduleDiffDetailResponse DescribeResourceScheduleDiffDetail(DescribeResourceScheduleDiffDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeResourceScheduleDiffDetail", DescribeResourceScheduleDiffDetailResponse.class);
+    }
+
+    /**
+     *本接口（DescribeSLInstance）用于查询 Lite HBase 实例基本信息
+     * @param req DescribeSLInstanceRequest
+     * @return DescribeSLInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSLInstanceResponse DescribeSLInstance(DescribeSLInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSLInstance", DescribeSLInstanceResponse.class);
+    }
+
+    /**
+     *本接口（DescribeSLInstanceList）用于查询 Lite HBase 实例列表详细信息
+     * @param req DescribeSLInstanceListRequest
+     * @return DescribeSLInstanceListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSLInstanceListResponse DescribeSLInstanceList(DescribeSLInstanceListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSLInstanceList", DescribeSLInstanceListResponse.class);
     }
 
     /**
@@ -338,7 +406,18 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
-     *查看yarn资源调度的调度历史
+     *获取资源调度中的队列信息
+     * @param req DescribeYarnQueueRequest
+     * @return DescribeYarnQueueResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeYarnQueueResponse DescribeYarnQueue(DescribeYarnQueueRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeYarnQueue", DescribeYarnQueueResponse.class);
+    }
+
+    /**
+     *查看yarn资源调度的调度历史。废弃，请使用流程中心查看历史记录。
      * @param req DescribeYarnScheduleHistoryRequest
      * @return DescribeYarnScheduleHistoryResponse
      * @throws TencentCloudSDKException
@@ -404,6 +483,18 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
+     *前提：预付费集群
+资源级别开启或关闭自动续费
+     * @param req ModifyAutoRenewFlagRequest
+     * @return ModifyAutoRenewFlagResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAutoRenewFlagResponse ModifyAutoRenewFlag(ModifyAutoRenewFlagRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyAutoRenewFlag", ModifyAutoRenewFlagResponse.class);
+    }
+
+    /**
      *修改自动扩缩容规则
      * @param req ModifyAutoScaleStrategyRequest
      * @return ModifyAutoScaleStrategyResponse
@@ -415,7 +506,18 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
-     *刷新YARN的动态资源池
+     *修改YARN资源调度的全局配置
+     * @param req ModifyGlobalConfigRequest
+     * @return ModifyGlobalConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyGlobalConfigResponse ModifyGlobalConfig(ModifyGlobalConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyGlobalConfig", ModifyGlobalConfigResponse.class);
+    }
+
+    /**
+     *刷新YARN的动态资源池。已废弃，请使用`DeployYarnConf`
      * @param req ModifyResourcePoolsRequest
      * @return ModifyResourcePoolsResponse
      * @throws TencentCloudSDKException
@@ -426,7 +528,7 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
-     *修改YARN资源调度的资源配置
+     *修改YARN资源调度的资源配置。已废弃，请使用`ModifyYarnQueueV2`来修改队列配置
      * @param req ModifyResourceScheduleConfigRequest
      * @return ModifyResourceScheduleConfigResponse
      * @throws TencentCloudSDKException
@@ -437,7 +539,7 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
-     *修改了yarn的资源调度器，点击部署生效
+     *修改了yarn的资源调度器，点击部署生效。
      * @param req ModifyResourceSchedulerRequest
      * @return ModifyResourceSchedulerResponse
      * @throws TencentCloudSDKException
@@ -459,6 +561,19 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
+     *本接口（ModifySLInstance）用于修改Lite HBase 实例节点数。
+- 接口调用成功，会创建Lite HBase实例，创建实例请求成功会返回请求的 RequestID。
+- 接口为异步接口，接口返回时操作并未立即完成，实例操作结果可以通过调用 DescribeInstancesList 查看当前实例的 StatusDesc 状态。
+     * @param req ModifySLInstanceRequest
+     * @return ModifySLInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifySLInstanceResponse ModifySLInstance(ModifySLInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifySLInstance", ModifySLInstanceResponse.class);
+    }
+
+    /**
      *修改用户密码（用户管理）
      * @param req ModifyUserManagerPwdRequest
      * @return ModifyUserManagerPwdResponse
@@ -470,7 +585,7 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
-     *部署生效
+     *部署生效。已废弃，请使用`DeployYarnConf`接口进行部署生效
      * @param req ModifyYarnDeployRequest
      * @return ModifyYarnDeployResponse
      * @throws TencentCloudSDKException
@@ -478,6 +593,28 @@ public class EmrClient extends AbstractClient{
     public ModifyYarnDeployResponse ModifyYarnDeploy(ModifyYarnDeployRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyYarnDeploy", ModifyYarnDeployResponse.class);
+    }
+
+    /**
+     *修改资源调度中队列信息
+     * @param req ModifyYarnQueueV2Request
+     * @return ModifyYarnQueueV2Response
+     * @throws TencentCloudSDKException
+     */
+    public ModifyYarnQueueV2Response ModifyYarnQueueV2(ModifyYarnQueueV2Request req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyYarnQueueV2", ModifyYarnQueueV2Response.class);
+    }
+
+    /**
+     *修改YARN资源调度的资源配置
+     * @param req ResetYarnConfigRequest
+     * @return ResetYarnConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public ResetYarnConfigResponse ResetYarnConfig(ResetYarnConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ResetYarnConfig", ResetYarnConfigResponse.class);
     }
 
     /**
@@ -555,6 +692,17 @@ public class EmrClient extends AbstractClient{
     public TerminateInstanceResponse TerminateInstance(TerminateInstanceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "TerminateInstance", TerminateInstanceResponse.class);
+    }
+
+    /**
+     *本接口（TerminateSLInstance）用于销毁 Lite HBase 实例
+     * @param req TerminateSLInstanceRequest
+     * @return TerminateSLInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public TerminateSLInstanceResponse TerminateSLInstance(TerminateSLInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "TerminateSLInstance", TerminateSLInstanceResponse.class);
     }
 
     /**

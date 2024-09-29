@@ -38,6 +38,13 @@ public class DeleteJobsRequest extends AbstractModel {
     private String WorkSpaceId;
 
     /**
+    * 作业名称列表
+    */
+    @SerializedName("JobNames")
+    @Expose
+    private String [] JobNames;
+
+    /**
      * Get 作业Id列表 
      * @return JobIds 作业Id列表
      */
@@ -69,6 +76,22 @@ public class DeleteJobsRequest extends AbstractModel {
         this.WorkSpaceId = WorkSpaceId;
     }
 
+    /**
+     * Get 作业名称列表 
+     * @return JobNames 作业名称列表
+     */
+    public String [] getJobNames() {
+        return this.JobNames;
+    }
+
+    /**
+     * Set 作业名称列表
+     * @param JobNames 作业名称列表
+     */
+    public void setJobNames(String [] JobNames) {
+        this.JobNames = JobNames;
+    }
+
     public DeleteJobsRequest() {
     }
 
@@ -86,6 +109,12 @@ public class DeleteJobsRequest extends AbstractModel {
         if (source.WorkSpaceId != null) {
             this.WorkSpaceId = new String(source.WorkSpaceId);
         }
+        if (source.JobNames != null) {
+            this.JobNames = new String[source.JobNames.length];
+            for (int i = 0; i < source.JobNames.length; i++) {
+                this.JobNames[i] = new String(source.JobNames[i]);
+            }
+        }
     }
 
 
@@ -95,6 +124,7 @@ public class DeleteJobsRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "JobIds.", this.JobIds);
         this.setParamSimple(map, prefix + "WorkSpaceId", this.WorkSpaceId);
+        this.setParamArraySimple(map, prefix + "JobNames.", this.JobNames);
 
     }
 }

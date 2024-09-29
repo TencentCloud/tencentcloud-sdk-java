@@ -81,7 +81,7 @@ public class CreateListenerRequest extends AbstractModel {
     private String Scheduler;
 
     /**
-    * 是否开启SNI特性，此参数仅适用于HTTPS监听器。0表示开启，1表示未开启。
+    * 是否开启SNI特性，此参数仅适用于HTTPS监听器。0表示未开启，1表示开启。
     */
     @SerializedName("SniSwitch")
     @Expose
@@ -156,6 +156,27 @@ public class CreateListenerRequest extends AbstractModel {
     @SerializedName("SnatEnable")
     @Expose
     private Boolean SnatEnable;
+
+    /**
+    * 全端口段监听器的结束端口
+    */
+    @SerializedName("FullEndPorts")
+    @Expose
+    private Long [] FullEndPorts;
+
+    /**
+    * 内网http监听器开启h2c开关
+    */
+    @SerializedName("H2cSwitch")
+    @Expose
+    private Boolean H2cSwitch;
+
+    /**
+    * TCP_SSL监听器支持关闭SSL后仍然支持混绑，此参数为关闭开关
+    */
+    @SerializedName("SslCloseSwitch")
+    @Expose
+    private Boolean SslCloseSwitch;
 
     /**
      * Get 负载均衡实例 ID。 
@@ -290,16 +311,16 @@ public class CreateListenerRequest extends AbstractModel {
     }
 
     /**
-     * Get 是否开启SNI特性，此参数仅适用于HTTPS监听器。0表示开启，1表示未开启。 
-     * @return SniSwitch 是否开启SNI特性，此参数仅适用于HTTPS监听器。0表示开启，1表示未开启。
+     * Get 是否开启SNI特性，此参数仅适用于HTTPS监听器。0表示未开启，1表示开启。 
+     * @return SniSwitch 是否开启SNI特性，此参数仅适用于HTTPS监听器。0表示未开启，1表示开启。
      */
     public Long getSniSwitch() {
         return this.SniSwitch;
     }
 
     /**
-     * Set 是否开启SNI特性，此参数仅适用于HTTPS监听器。0表示开启，1表示未开启。
-     * @param SniSwitch 是否开启SNI特性，此参数仅适用于HTTPS监听器。0表示开启，1表示未开启。
+     * Set 是否开启SNI特性，此参数仅适用于HTTPS监听器。0表示未开启，1表示开启。
+     * @param SniSwitch 是否开启SNI特性，此参数仅适用于HTTPS监听器。0表示未开启，1表示开启。
      */
     public void setSniSwitch(Long SniSwitch) {
         this.SniSwitch = SniSwitch;
@@ -465,6 +486,54 @@ public class CreateListenerRequest extends AbstractModel {
         this.SnatEnable = SnatEnable;
     }
 
+    /**
+     * Get 全端口段监听器的结束端口 
+     * @return FullEndPorts 全端口段监听器的结束端口
+     */
+    public Long [] getFullEndPorts() {
+        return this.FullEndPorts;
+    }
+
+    /**
+     * Set 全端口段监听器的结束端口
+     * @param FullEndPorts 全端口段监听器的结束端口
+     */
+    public void setFullEndPorts(Long [] FullEndPorts) {
+        this.FullEndPorts = FullEndPorts;
+    }
+
+    /**
+     * Get 内网http监听器开启h2c开关 
+     * @return H2cSwitch 内网http监听器开启h2c开关
+     */
+    public Boolean getH2cSwitch() {
+        return this.H2cSwitch;
+    }
+
+    /**
+     * Set 内网http监听器开启h2c开关
+     * @param H2cSwitch 内网http监听器开启h2c开关
+     */
+    public void setH2cSwitch(Boolean H2cSwitch) {
+        this.H2cSwitch = H2cSwitch;
+    }
+
+    /**
+     * Get TCP_SSL监听器支持关闭SSL后仍然支持混绑，此参数为关闭开关 
+     * @return SslCloseSwitch TCP_SSL监听器支持关闭SSL后仍然支持混绑，此参数为关闭开关
+     */
+    public Boolean getSslCloseSwitch() {
+        return this.SslCloseSwitch;
+    }
+
+    /**
+     * Set TCP_SSL监听器支持关闭SSL后仍然支持混绑，此参数为关闭开关
+     * @param SslCloseSwitch TCP_SSL监听器支持关闭SSL后仍然支持混绑，此参数为关闭开关
+     */
+    public void setSslCloseSwitch(Boolean SslCloseSwitch) {
+        this.SslCloseSwitch = SslCloseSwitch;
+    }
+
     public CreateListenerRequest() {
     }
 
@@ -536,6 +605,18 @@ public class CreateListenerRequest extends AbstractModel {
         if (source.SnatEnable != null) {
             this.SnatEnable = new Boolean(source.SnatEnable);
         }
+        if (source.FullEndPorts != null) {
+            this.FullEndPorts = new Long[source.FullEndPorts.length];
+            for (int i = 0; i < source.FullEndPorts.length; i++) {
+                this.FullEndPorts[i] = new Long(source.FullEndPorts[i]);
+            }
+        }
+        if (source.H2cSwitch != null) {
+            this.H2cSwitch = new Boolean(source.H2cSwitch);
+        }
+        if (source.SslCloseSwitch != null) {
+            this.SslCloseSwitch = new Boolean(source.SslCloseSwitch);
+        }
     }
 
 
@@ -562,6 +643,9 @@ public class CreateListenerRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "MaxCps", this.MaxCps);
         this.setParamSimple(map, prefix + "IdleConnectTimeout", this.IdleConnectTimeout);
         this.setParamSimple(map, prefix + "SnatEnable", this.SnatEnable);
+        this.setParamArraySimple(map, prefix + "FullEndPorts.", this.FullEndPorts);
+        this.setParamSimple(map, prefix + "H2cSwitch", this.H2cSwitch);
+        this.setParamSimple(map, prefix + "SslCloseSwitch", this.SslCloseSwitch);
 
     }
 }

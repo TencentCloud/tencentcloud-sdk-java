@@ -54,7 +54,7 @@ public class Message extends AbstractModel {
     private String ToolCallId;
 
     /**
-    * 模型生成的工具调用，仅 hunyuan-functioncall 模型支持
+    * 模型生成的工具调用，仅 hunyuan-pro 或者 hunyuan-functioncall 模型支持
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ToolCalls")
@@ -134,9 +134,9 @@ public class Message extends AbstractModel {
     }
 
     /**
-     * Get 模型生成的工具调用，仅 hunyuan-functioncall 模型支持
+     * Get 模型生成的工具调用，仅 hunyuan-pro 或者 hunyuan-functioncall 模型支持
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ToolCalls 模型生成的工具调用，仅 hunyuan-functioncall 模型支持
+     * @return ToolCalls 模型生成的工具调用，仅 hunyuan-pro 或者 hunyuan-functioncall 模型支持
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ToolCall [] getToolCalls() {
@@ -144,9 +144,9 @@ public class Message extends AbstractModel {
     }
 
     /**
-     * Set 模型生成的工具调用，仅 hunyuan-functioncall 模型支持
+     * Set 模型生成的工具调用，仅 hunyuan-pro 或者 hunyuan-functioncall 模型支持
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ToolCalls 模型生成的工具调用，仅 hunyuan-functioncall 模型支持
+     * @param ToolCalls 模型生成的工具调用，仅 hunyuan-pro 或者 hunyuan-functioncall 模型支持
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setToolCalls(ToolCall [] ToolCalls) {

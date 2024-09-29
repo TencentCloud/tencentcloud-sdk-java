@@ -25,27 +25,37 @@ public class SubmitVideoTranslateJobRequest extends AbstractModel {
 
     /**
     * 视频地址URL。
+格式要求：支持 mp4、mov 。
+时长要求：【10-300】秒。
+fps 要求：【15-60】fps
+分辨率要求：单边像素要求在 【540~1920】 之间。
     */
     @SerializedName("VideoUrl")
     @Expose
     private String VideoUrl;
 
     /**
-    * 源语言：zh, en
+    * 源语言：zh(中文), en(英文)
     */
     @SerializedName("SrcLang")
     @Expose
     private String SrcLang;
 
     /**
-    * 目标语言：zh, en
+    * 目标语种：
+zh(简体中文)、en(英语)、ar(阿拉伯语)、de(德语)、es(西班牙语)、fr(法语)、id(印尼语)、it(意大利语)、ja(日语)、ko(韩语)、ms(马来语)、pt(葡萄牙语)、ru(俄语)、th(泰语)、tr(土耳其语)、vi(越南语)
+示例值：ar(阿拉伯语)
     */
     @SerializedName("DstLang")
     @Expose
     private String DstLang;
 
     /**
-    * 当音频 URL 不为空时，默认以音频驱动视频任务口型
+    * 当音频 URL 不为空时，默认以音频驱动视频任务口型。
+格式要求：支持 mp3、m4a、acc、wav 格式。
+时长要求：【10~300】秒
+大小要求：不超过 100M。
+示例值：http://xxx/audio.mp3
     */
     @SerializedName("AudioUrl")
     @Expose
@@ -66,8 +76,27 @@ public class SubmitVideoTranslateJobRequest extends AbstractModel {
     private Long LipSync;
 
     /**
-     * Get 视频地址URL。 
+    * 音色种别：一种音色种别对应一种不同区域的音色
+1）目标语种为小语种(非zh,en)时，该项为必填
+2）目标语种为zh,en时，该项为非必填，若填入，则对应填入的音色
+
+具体音色包含请见“支持音色种别列表”
+    */
+    @SerializedName("VoiceType")
+    @Expose
+    private String VoiceType;
+
+    /**
+     * Get 视频地址URL。
+格式要求：支持 mp4、mov 。
+时长要求：【10-300】秒。
+fps 要求：【15-60】fps
+分辨率要求：单边像素要求在 【540~1920】 之间。 
      * @return VideoUrl 视频地址URL。
+格式要求：支持 mp4、mov 。
+时长要求：【10-300】秒。
+fps 要求：【15-60】fps
+分辨率要求：单边像素要求在 【540~1920】 之间。
      */
     public String getVideoUrl() {
         return this.VideoUrl;
@@ -75,55 +104,87 @@ public class SubmitVideoTranslateJobRequest extends AbstractModel {
 
     /**
      * Set 视频地址URL。
+格式要求：支持 mp4、mov 。
+时长要求：【10-300】秒。
+fps 要求：【15-60】fps
+分辨率要求：单边像素要求在 【540~1920】 之间。
      * @param VideoUrl 视频地址URL。
+格式要求：支持 mp4、mov 。
+时长要求：【10-300】秒。
+fps 要求：【15-60】fps
+分辨率要求：单边像素要求在 【540~1920】 之间。
      */
     public void setVideoUrl(String VideoUrl) {
         this.VideoUrl = VideoUrl;
     }
 
     /**
-     * Get 源语言：zh, en 
-     * @return SrcLang 源语言：zh, en
+     * Get 源语言：zh(中文), en(英文) 
+     * @return SrcLang 源语言：zh(中文), en(英文)
      */
     public String getSrcLang() {
         return this.SrcLang;
     }
 
     /**
-     * Set 源语言：zh, en
-     * @param SrcLang 源语言：zh, en
+     * Set 源语言：zh(中文), en(英文)
+     * @param SrcLang 源语言：zh(中文), en(英文)
      */
     public void setSrcLang(String SrcLang) {
         this.SrcLang = SrcLang;
     }
 
     /**
-     * Get 目标语言：zh, en 
-     * @return DstLang 目标语言：zh, en
+     * Get 目标语种：
+zh(简体中文)、en(英语)、ar(阿拉伯语)、de(德语)、es(西班牙语)、fr(法语)、id(印尼语)、it(意大利语)、ja(日语)、ko(韩语)、ms(马来语)、pt(葡萄牙语)、ru(俄语)、th(泰语)、tr(土耳其语)、vi(越南语)
+示例值：ar(阿拉伯语) 
+     * @return DstLang 目标语种：
+zh(简体中文)、en(英语)、ar(阿拉伯语)、de(德语)、es(西班牙语)、fr(法语)、id(印尼语)、it(意大利语)、ja(日语)、ko(韩语)、ms(马来语)、pt(葡萄牙语)、ru(俄语)、th(泰语)、tr(土耳其语)、vi(越南语)
+示例值：ar(阿拉伯语)
      */
     public String getDstLang() {
         return this.DstLang;
     }
 
     /**
-     * Set 目标语言：zh, en
-     * @param DstLang 目标语言：zh, en
+     * Set 目标语种：
+zh(简体中文)、en(英语)、ar(阿拉伯语)、de(德语)、es(西班牙语)、fr(法语)、id(印尼语)、it(意大利语)、ja(日语)、ko(韩语)、ms(马来语)、pt(葡萄牙语)、ru(俄语)、th(泰语)、tr(土耳其语)、vi(越南语)
+示例值：ar(阿拉伯语)
+     * @param DstLang 目标语种：
+zh(简体中文)、en(英语)、ar(阿拉伯语)、de(德语)、es(西班牙语)、fr(法语)、id(印尼语)、it(意大利语)、ja(日语)、ko(韩语)、ms(马来语)、pt(葡萄牙语)、ru(俄语)、th(泰语)、tr(土耳其语)、vi(越南语)
+示例值：ar(阿拉伯语)
      */
     public void setDstLang(String DstLang) {
         this.DstLang = DstLang;
     }
 
     /**
-     * Get 当音频 URL 不为空时，默认以音频驱动视频任务口型 
-     * @return AudioUrl 当音频 URL 不为空时，默认以音频驱动视频任务口型
+     * Get 当音频 URL 不为空时，默认以音频驱动视频任务口型。
+格式要求：支持 mp3、m4a、acc、wav 格式。
+时长要求：【10~300】秒
+大小要求：不超过 100M。
+示例值：http://xxx/audio.mp3 
+     * @return AudioUrl 当音频 URL 不为空时，默认以音频驱动视频任务口型。
+格式要求：支持 mp3、m4a、acc、wav 格式。
+时长要求：【10~300】秒
+大小要求：不超过 100M。
+示例值：http://xxx/audio.mp3
      */
     public String getAudioUrl() {
         return this.AudioUrl;
     }
 
     /**
-     * Set 当音频 URL 不为空时，默认以音频驱动视频任务口型
-     * @param AudioUrl 当音频 URL 不为空时，默认以音频驱动视频任务口型
+     * Set 当音频 URL 不为空时，默认以音频驱动视频任务口型。
+格式要求：支持 mp3、m4a、acc、wav 格式。
+时长要求：【10~300】秒
+大小要求：不超过 100M。
+示例值：http://xxx/audio.mp3
+     * @param AudioUrl 当音频 URL 不为空时，默认以音频驱动视频任务口型。
+格式要求：支持 mp3、m4a、acc、wav 格式。
+时长要求：【10~300】秒
+大小要求：不超过 100M。
+示例值：http://xxx/audio.mp3
      */
     public void setAudioUrl(String AudioUrl) {
         this.AudioUrl = AudioUrl;
@@ -161,6 +222,38 @@ public class SubmitVideoTranslateJobRequest extends AbstractModel {
         this.LipSync = LipSync;
     }
 
+    /**
+     * Get 音色种别：一种音色种别对应一种不同区域的音色
+1）目标语种为小语种(非zh,en)时，该项为必填
+2）目标语种为zh,en时，该项为非必填，若填入，则对应填入的音色
+
+具体音色包含请见“支持音色种别列表” 
+     * @return VoiceType 音色种别：一种音色种别对应一种不同区域的音色
+1）目标语种为小语种(非zh,en)时，该项为必填
+2）目标语种为zh,en时，该项为非必填，若填入，则对应填入的音色
+
+具体音色包含请见“支持音色种别列表”
+     */
+    public String getVoiceType() {
+        return this.VoiceType;
+    }
+
+    /**
+     * Set 音色种别：一种音色种别对应一种不同区域的音色
+1）目标语种为小语种(非zh,en)时，该项为必填
+2）目标语种为zh,en时，该项为非必填，若填入，则对应填入的音色
+
+具体音色包含请见“支持音色种别列表”
+     * @param VoiceType 音色种别：一种音色种别对应一种不同区域的音色
+1）目标语种为小语种(非zh,en)时，该项为必填
+2）目标语种为zh,en时，该项为非必填，若填入，则对应填入的音色
+
+具体音色包含请见“支持音色种别列表”
+     */
+    public void setVoiceType(String VoiceType) {
+        this.VoiceType = VoiceType;
+    }
+
     public SubmitVideoTranslateJobRequest() {
     }
 
@@ -187,6 +280,9 @@ public class SubmitVideoTranslateJobRequest extends AbstractModel {
         if (source.LipSync != null) {
             this.LipSync = new Long(source.LipSync);
         }
+        if (source.VoiceType != null) {
+            this.VoiceType = new String(source.VoiceType);
+        }
     }
 
 
@@ -200,6 +296,7 @@ public class SubmitVideoTranslateJobRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "AudioUrl", this.AudioUrl);
         this.setParamSimple(map, prefix + "Confirm", this.Confirm);
         this.setParamSimple(map, prefix + "LipSync", this.LipSync);
+        this.setParamSimple(map, prefix + "VoiceType", this.VoiceType);
 
     }
 }

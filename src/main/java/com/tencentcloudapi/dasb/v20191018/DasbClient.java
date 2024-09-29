@@ -424,6 +424,17 @@ public class DasbClient extends AbstractClient{
     }
 
     /**
+     *查询网络域
+     * @param req DescribeDomainsRequest
+     * @return DescribeDomainsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDomainsResponse DescribeDomains(DescribeDomainsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDomains", DescribeDomainsResponse.class);
+    }
+
+    /**
      *查询登录日志
      * @param req DescribeLoginEventRequest
      * @return DescribeLoginEventResponse

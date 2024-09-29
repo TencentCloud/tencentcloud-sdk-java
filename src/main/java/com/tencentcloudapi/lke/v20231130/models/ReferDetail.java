@@ -104,6 +104,30 @@ public class ReferDetail extends AbstractModel {
     private String OrgData;
 
     /**
+    * 页码信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PageInfos")
+    @Expose
+    private Long [] PageInfos;
+
+    /**
+    * sheet信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SheetInfos")
+    @Expose
+    private String [] SheetInfos;
+
+    /**
+    * 文档ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DocBizId")
+    @Expose
+    private String DocBizId;
+
+    /**
      * Get 引用ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ReferBizId 引用ID
@@ -303,6 +327,66 @@ public class ReferDetail extends AbstractModel {
         this.OrgData = OrgData;
     }
 
+    /**
+     * Get 页码信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PageInfos 页码信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long [] getPageInfos() {
+        return this.PageInfos;
+    }
+
+    /**
+     * Set 页码信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PageInfos 页码信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPageInfos(Long [] PageInfos) {
+        this.PageInfos = PageInfos;
+    }
+
+    /**
+     * Get sheet信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SheetInfos sheet信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getSheetInfos() {
+        return this.SheetInfos;
+    }
+
+    /**
+     * Set sheet信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SheetInfos sheet信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSheetInfos(String [] SheetInfos) {
+        this.SheetInfos = SheetInfos;
+    }
+
+    /**
+     * Get 文档ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DocBizId 文档ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDocBizId() {
+        return this.DocBizId;
+    }
+
+    /**
+     * Set 文档ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DocBizId 文档ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDocBizId(String DocBizId) {
+        this.DocBizId = DocBizId;
+    }
+
     public ReferDetail() {
     }
 
@@ -344,6 +428,21 @@ public class ReferDetail extends AbstractModel {
         if (source.OrgData != null) {
             this.OrgData = new String(source.OrgData);
         }
+        if (source.PageInfos != null) {
+            this.PageInfos = new Long[source.PageInfos.length];
+            for (int i = 0; i < source.PageInfos.length; i++) {
+                this.PageInfos[i] = new Long(source.PageInfos[i]);
+            }
+        }
+        if (source.SheetInfos != null) {
+            this.SheetInfos = new String[source.SheetInfos.length];
+            for (int i = 0; i < source.SheetInfos.length; i++) {
+                this.SheetInfos[i] = new String(source.SheetInfos[i]);
+            }
+        }
+        if (source.DocBizId != null) {
+            this.DocBizId = new String(source.DocBizId);
+        }
     }
 
 
@@ -361,6 +460,9 @@ public class ReferDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "Mark", this.Mark);
         this.setParamArrayObj(map, prefix + "Highlights.", this.Highlights);
         this.setParamSimple(map, prefix + "OrgData", this.OrgData);
+        this.setParamArraySimple(map, prefix + "PageInfos.", this.PageInfos);
+        this.setParamArraySimple(map, prefix + "SheetInfos.", this.SheetInfos);
+        this.setParamSimple(map, prefix + "DocBizId", this.DocBizId);
 
     }
 }

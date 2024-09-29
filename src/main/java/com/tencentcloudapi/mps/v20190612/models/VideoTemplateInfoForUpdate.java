@@ -33,12 +33,14 @@ public class VideoTemplateInfoForUpdate extends AbstractModel {
 <li>vp9：VP9 编码</li>
 <li>mpeg2：MPEG2 编码</li>
 <li>dnxhd：DNxHD 编码</li>
+<li>mv-hevc：MV-HEVC 编码</li>
 注意：目前 H.265 编码必须指定分辨率，并且需要在 640*480 以内。
 
 注意：av1 编码容器目前只支持 mp4 ，webm，mkv。
 注意：H.266 编码容器目前只支持 mp4 ，hls，ts，mov。
 注意：VP8、VP9编码容器目前只支持webm，mkv。
 注意：MPEG2、dnxhd 编码容器目前只支持mxf。
+注意：MV-HEVC编码容器目前只支持mp4，hls，mov。其中hls格式只支持mp4分片格式。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Codec")
@@ -106,7 +108,7 @@ public class VideoTemplateInfoForUpdate extends AbstractModel {
 
     /**
     * 填充方式，当视频流配置宽高参数与原始视频的宽高比不一致时，对转码的处理方式，即为“填充”。可选填充方式：
-<li> stretch：拉伸，对每一帧进行拉伸，填满整个画面，可能导致转码后的视频被“压扁“或者“拉长“；</li>
+ <li> stretch：拉伸，对每一帧进行拉伸，填满整个画面，可能导致转码后的视频被“压扁“或者“拉长“；</li>
 <li>black：留黑，保持视频宽高比不变，边缘剩余部分使用黑色填充。</li>
 <li>white：留白，保持视频宽高比不变，边缘剩余部分使用白色填充。</li>
 <li>gauss：高斯模糊，保持视频宽高比不变，边缘剩余部分使用高斯模糊填充。</li>
@@ -117,7 +119,7 @@ public class VideoTemplateInfoForUpdate extends AbstractModel {
     private String FillType;
 
     /**
-    * 视频恒定码率控制因子。取值范围为[0, 51]，填0表示禁用该参数。
+    * 视频恒定码率控制因子。取值范围为[0, 51]，填0表示禁用该参数。 
 如果没有特殊需求，不建议指定该参数。
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -159,6 +161,17 @@ public class VideoTemplateInfoForUpdate extends AbstractModel {
     private Long FpsDenominator;
 
     /**
+    * 3D视频拼接方式，仅mv-hevc，3D视频生效，可选值：
+<li>side_by_side：左右视角</li>
+<li>top_bottom：上下视角</li>
+默认值:side_by_side
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Stereo3dType")
+    @Expose
+    private String Stereo3dType;
+
+    /**
      * Get 视频流的编码格式，可选值：
 <li>h264：H.264 编码</li>
 <li>h265：H.265 编码</li>
@@ -168,12 +181,14 @@ public class VideoTemplateInfoForUpdate extends AbstractModel {
 <li>vp9：VP9 编码</li>
 <li>mpeg2：MPEG2 编码</li>
 <li>dnxhd：DNxHD 编码</li>
+<li>mv-hevc：MV-HEVC 编码</li>
 注意：目前 H.265 编码必须指定分辨率，并且需要在 640*480 以内。
 
 注意：av1 编码容器目前只支持 mp4 ，webm，mkv。
 注意：H.266 编码容器目前只支持 mp4 ，hls，ts，mov。
 注意：VP8、VP9编码容器目前只支持webm，mkv。
 注意：MPEG2、dnxhd 编码容器目前只支持mxf。
+注意：MV-HEVC编码容器目前只支持mp4，hls，mov。其中hls格式只支持mp4分片格式。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Codec 视频流的编码格式，可选值：
 <li>h264：H.264 编码</li>
@@ -184,12 +199,14 @@ public class VideoTemplateInfoForUpdate extends AbstractModel {
 <li>vp9：VP9 编码</li>
 <li>mpeg2：MPEG2 编码</li>
 <li>dnxhd：DNxHD 编码</li>
+<li>mv-hevc：MV-HEVC 编码</li>
 注意：目前 H.265 编码必须指定分辨率，并且需要在 640*480 以内。
 
 注意：av1 编码容器目前只支持 mp4 ，webm，mkv。
 注意：H.266 编码容器目前只支持 mp4 ，hls，ts，mov。
 注意：VP8、VP9编码容器目前只支持webm，mkv。
 注意：MPEG2、dnxhd 编码容器目前只支持mxf。
+注意：MV-HEVC编码容器目前只支持mp4，hls，mov。其中hls格式只支持mp4分片格式。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCodec() {
@@ -206,12 +223,14 @@ public class VideoTemplateInfoForUpdate extends AbstractModel {
 <li>vp9：VP9 编码</li>
 <li>mpeg2：MPEG2 编码</li>
 <li>dnxhd：DNxHD 编码</li>
+<li>mv-hevc：MV-HEVC 编码</li>
 注意：目前 H.265 编码必须指定分辨率，并且需要在 640*480 以内。
 
 注意：av1 编码容器目前只支持 mp4 ，webm，mkv。
 注意：H.266 编码容器目前只支持 mp4 ，hls，ts，mov。
 注意：VP8、VP9编码容器目前只支持webm，mkv。
 注意：MPEG2、dnxhd 编码容器目前只支持mxf。
+注意：MV-HEVC编码容器目前只支持mp4，hls，mov。其中hls格式只支持mp4分片格式。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Codec 视频流的编码格式，可选值：
 <li>h264：H.264 编码</li>
@@ -222,12 +241,14 @@ public class VideoTemplateInfoForUpdate extends AbstractModel {
 <li>vp9：VP9 编码</li>
 <li>mpeg2：MPEG2 编码</li>
 <li>dnxhd：DNxHD 编码</li>
+<li>mv-hevc：MV-HEVC 编码</li>
 注意：目前 H.265 编码必须指定分辨率，并且需要在 640*480 以内。
 
 注意：av1 编码容器目前只支持 mp4 ，webm，mkv。
 注意：H.266 编码容器目前只支持 mp4 ，hls，ts，mov。
 注意：VP8、VP9编码容器目前只支持webm，mkv。
 注意：MPEG2、dnxhd 编码容器目前只支持mxf。
+注意：MV-HEVC编码容器目前只支持mp4，hls，mov。其中hls格式只支持mp4分片格式。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCodec(String Codec) {
@@ -400,13 +421,13 @@ public class VideoTemplateInfoForUpdate extends AbstractModel {
 
     /**
      * Get 填充方式，当视频流配置宽高参数与原始视频的宽高比不一致时，对转码的处理方式，即为“填充”。可选填充方式：
-<li> stretch：拉伸，对每一帧进行拉伸，填满整个画面，可能导致转码后的视频被“压扁“或者“拉长“；</li>
+ <li> stretch：拉伸，对每一帧进行拉伸，填满整个画面，可能导致转码后的视频被“压扁“或者“拉长“；</li>
 <li>black：留黑，保持视频宽高比不变，边缘剩余部分使用黑色填充。</li>
 <li>white：留白，保持视频宽高比不变，边缘剩余部分使用白色填充。</li>
 <li>gauss：高斯模糊，保持视频宽高比不变，边缘剩余部分使用高斯模糊填充。</li>
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return FillType 填充方式，当视频流配置宽高参数与原始视频的宽高比不一致时，对转码的处理方式，即为“填充”。可选填充方式：
-<li> stretch：拉伸，对每一帧进行拉伸，填满整个画面，可能导致转码后的视频被“压扁“或者“拉长“；</li>
+ <li> stretch：拉伸，对每一帧进行拉伸，填满整个画面，可能导致转码后的视频被“压扁“或者“拉长“；</li>
 <li>black：留黑，保持视频宽高比不变，边缘剩余部分使用黑色填充。</li>
 <li>white：留白，保持视频宽高比不变，边缘剩余部分使用白色填充。</li>
 <li>gauss：高斯模糊，保持视频宽高比不变，边缘剩余部分使用高斯模糊填充。</li>
@@ -418,13 +439,13 @@ public class VideoTemplateInfoForUpdate extends AbstractModel {
 
     /**
      * Set 填充方式，当视频流配置宽高参数与原始视频的宽高比不一致时，对转码的处理方式，即为“填充”。可选填充方式：
-<li> stretch：拉伸，对每一帧进行拉伸，填满整个画面，可能导致转码后的视频被“压扁“或者“拉长“；</li>
+ <li> stretch：拉伸，对每一帧进行拉伸，填满整个画面，可能导致转码后的视频被“压扁“或者“拉长“；</li>
 <li>black：留黑，保持视频宽高比不变，边缘剩余部分使用黑色填充。</li>
 <li>white：留白，保持视频宽高比不变，边缘剩余部分使用白色填充。</li>
 <li>gauss：高斯模糊，保持视频宽高比不变，边缘剩余部分使用高斯模糊填充。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param FillType 填充方式，当视频流配置宽高参数与原始视频的宽高比不一致时，对转码的处理方式，即为“填充”。可选填充方式：
-<li> stretch：拉伸，对每一帧进行拉伸，填满整个画面，可能导致转码后的视频被“压扁“或者“拉长“；</li>
+ <li> stretch：拉伸，对每一帧进行拉伸，填满整个画面，可能导致转码后的视频被“压扁“或者“拉长“；</li>
 <li>black：留黑，保持视频宽高比不变，边缘剩余部分使用黑色填充。</li>
 <li>white：留白，保持视频宽高比不变，边缘剩余部分使用白色填充。</li>
 <li>gauss：高斯模糊，保持视频宽高比不变，边缘剩余部分使用高斯模糊填充。</li>
@@ -435,10 +456,10 @@ public class VideoTemplateInfoForUpdate extends AbstractModel {
     }
 
     /**
-     * Get 视频恒定码率控制因子。取值范围为[0, 51]，填0表示禁用该参数。
+     * Get 视频恒定码率控制因子。取值范围为[0, 51]，填0表示禁用该参数。 
 如果没有特殊需求，不建议指定该参数。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Vcrf 视频恒定码率控制因子。取值范围为[0, 51]，填0表示禁用该参数。
+     * @return Vcrf 视频恒定码率控制因子。取值范围为[0, 51]，填0表示禁用该参数。 
 如果没有特殊需求，不建议指定该参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -447,10 +468,10 @@ public class VideoTemplateInfoForUpdate extends AbstractModel {
     }
 
     /**
-     * Set 视频恒定码率控制因子。取值范围为[0, 51]，填0表示禁用该参数。
+     * Set 视频恒定码率控制因子。取值范围为[0, 51]，填0表示禁用该参数。 
 如果没有特殊需求，不建议指定该参数。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Vcrf 视频恒定码率控制因子。取值范围为[0, 51]，填0表示禁用该参数。
+     * @param Vcrf 视频恒定码率控制因子。取值范围为[0, 51]，填0表示禁用该参数。 
 如果没有特殊需求，不建议指定该参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -554,6 +575,38 @@ public class VideoTemplateInfoForUpdate extends AbstractModel {
         this.FpsDenominator = FpsDenominator;
     }
 
+    /**
+     * Get 3D视频拼接方式，仅mv-hevc，3D视频生效，可选值：
+<li>side_by_side：左右视角</li>
+<li>top_bottom：上下视角</li>
+默认值:side_by_side
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Stereo3dType 3D视频拼接方式，仅mv-hevc，3D视频生效，可选值：
+<li>side_by_side：左右视角</li>
+<li>top_bottom：上下视角</li>
+默认值:side_by_side
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getStereo3dType() {
+        return this.Stereo3dType;
+    }
+
+    /**
+     * Set 3D视频拼接方式，仅mv-hevc，3D视频生效，可选值：
+<li>side_by_side：左右视角</li>
+<li>top_bottom：上下视角</li>
+默认值:side_by_side
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Stereo3dType 3D视频拼接方式，仅mv-hevc，3D视频生效，可选值：
+<li>side_by_side：左右视角</li>
+<li>top_bottom：上下视角</li>
+默认值:side_by_side
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStereo3dType(String Stereo3dType) {
+        this.Stereo3dType = Stereo3dType;
+    }
+
     public VideoTemplateInfoForUpdate() {
     }
 
@@ -598,6 +651,9 @@ public class VideoTemplateInfoForUpdate extends AbstractModel {
         if (source.FpsDenominator != null) {
             this.FpsDenominator = new Long(source.FpsDenominator);
         }
+        if (source.Stereo3dType != null) {
+            this.Stereo3dType = new String(source.Stereo3dType);
+        }
     }
 
 
@@ -617,6 +673,7 @@ public class VideoTemplateInfoForUpdate extends AbstractModel {
         this.setParamSimple(map, prefix + "ContentAdaptStream", this.ContentAdaptStream);
         this.setParamSimple(map, prefix + "SegmentType", this.SegmentType);
         this.setParamSimple(map, prefix + "FpsDenominator", this.FpsDenominator);
+        this.setParamSimple(map, prefix + "Stereo3dType", this.Stereo3dType);
 
     }
 }

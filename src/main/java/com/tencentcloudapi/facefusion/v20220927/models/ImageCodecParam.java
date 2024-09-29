@@ -24,23 +24,28 @@ import java.util.HashMap;
 public class ImageCodecParam extends AbstractModel {
 
     /**
-    * 元数据，个数不能大于1。
+    * 元数据是描述媒体文件的附加信息。通过添加自定义的元数据，可以将一些附加信息嵌入到文件中。这些信息可以用于版权、描述、标识等目的，并在后续的媒体处理或管理过程中使用。
+个数不能大于1。
     */
     @SerializedName("MetaData")
     @Expose
     private MetaData [] MetaData;
 
     /**
-     * Get 元数据，个数不能大于1。 
-     * @return MetaData 元数据，个数不能大于1。
+     * Get 元数据是描述媒体文件的附加信息。通过添加自定义的元数据，可以将一些附加信息嵌入到文件中。这些信息可以用于版权、描述、标识等目的，并在后续的媒体处理或管理过程中使用。
+个数不能大于1。 
+     * @return MetaData 元数据是描述媒体文件的附加信息。通过添加自定义的元数据，可以将一些附加信息嵌入到文件中。这些信息可以用于版权、描述、标识等目的，并在后续的媒体处理或管理过程中使用。
+个数不能大于1。
      */
     public MetaData [] getMetaData() {
         return this.MetaData;
     }
 
     /**
-     * Set 元数据，个数不能大于1。
-     * @param MetaData 元数据，个数不能大于1。
+     * Set 元数据是描述媒体文件的附加信息。通过添加自定义的元数据，可以将一些附加信息嵌入到文件中。这些信息可以用于版权、描述、标识等目的，并在后续的媒体处理或管理过程中使用。
+个数不能大于1。
+     * @param MetaData 元数据是描述媒体文件的附加信息。通过添加自定义的元数据，可以将一些附加信息嵌入到文件中。这些信息可以用于版权、描述、标识等目的，并在后续的媒体处理或管理过程中使用。
+个数不能大于1。
      */
     public void setMetaData(MetaData [] MetaData) {
         this.MetaData = MetaData;

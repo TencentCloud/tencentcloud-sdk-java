@@ -39,6 +39,13 @@ public class DescribeAssetImageRegistryAssetStatusResponse extends AbstractModel
     private String Err;
 
     /**
+    * 最后一次同步成功时间
+    */
+    @SerializedName("LatestSyncSuccessTime")
+    @Expose
+    private String LatestSyncSuccessTime;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -82,6 +89,22 @@ public class DescribeAssetImageRegistryAssetStatusResponse extends AbstractModel
     }
 
     /**
+     * Get 最后一次同步成功时间 
+     * @return LatestSyncSuccessTime 最后一次同步成功时间
+     */
+    public String getLatestSyncSuccessTime() {
+        return this.LatestSyncSuccessTime;
+    }
+
+    /**
+     * Set 最后一次同步成功时间
+     * @param LatestSyncSuccessTime 最后一次同步成功时间
+     */
+    public void setLatestSyncSuccessTime(String LatestSyncSuccessTime) {
+        this.LatestSyncSuccessTime = LatestSyncSuccessTime;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -111,6 +134,9 @@ public class DescribeAssetImageRegistryAssetStatusResponse extends AbstractModel
         if (source.Err != null) {
             this.Err = new String(source.Err);
         }
+        if (source.LatestSyncSuccessTime != null) {
+            this.LatestSyncSuccessTime = new String(source.LatestSyncSuccessTime);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -123,6 +149,7 @@ public class DescribeAssetImageRegistryAssetStatusResponse extends AbstractModel
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "Err", this.Err);
+        this.setParamSimple(map, prefix + "LatestSyncSuccessTime", this.LatestSyncSuccessTime);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

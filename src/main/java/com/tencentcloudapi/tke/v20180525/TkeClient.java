@@ -655,6 +655,17 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *删除集群内采集规则
+     * @param req DeleteLogConfigsRequest
+     * @return DeleteLogConfigsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteLogConfigsResponse DeleteLogConfigs(DeleteLogConfigsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteLogConfigs", DeleteLogConfigsResponse.class);
+    }
+
+    /**
      *删除2.0实例告警策略
      * @param req DeletePrometheusAlertPolicyRequest
      * @return DeletePrometheusAlertPolicyResponse
@@ -1361,6 +1372,17 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *查询日志采集规则
+     * @param req DescribeLogConfigsRequest
+     * @return DescribeLogConfigsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLogConfigsResponse DescribeLogConfigs(DescribeLogConfigsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLogConfigs", DescribeLogConfigsResponse.class);
+    }
+
+    /**
      *查询集群日志（审计、事件、普通日志）开关列表
      * @param req DescribeLogSwitchesRequest
      * @return DescribeLogSwitchesResponse
@@ -1369,6 +1391,17 @@ public class TkeClient extends AbstractClient{
     public DescribeLogSwitchesResponse DescribeLogSwitches(DescribeLogSwitchesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeLogSwitches", DescribeLogSwitchesResponse.class);
+    }
+
+    /**
+     *查询opa策略列表
+     * @param req DescribeOpenPolicyListRequest
+     * @return DescribeOpenPolicyListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeOpenPolicyListResponse DescribeOpenPolicyList(DescribeOpenPolicyListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeOpenPolicyList", DescribeOpenPolicyListResponse.class);
     }
 
     /**
@@ -2128,6 +2161,17 @@ public class TkeClient extends AbstractClient{
     public ModifyNodePoolInstanceTypesResponse ModifyNodePoolInstanceTypes(ModifyNodePoolInstanceTypesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyNodePoolInstanceTypes", ModifyNodePoolInstanceTypesResponse.class);
+    }
+
+    /**
+     *批量修改opa策略
+     * @param req ModifyOpenPolicyListRequest
+     * @return ModifyOpenPolicyListResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyOpenPolicyListResponse ModifyOpenPolicyList(ModifyOpenPolicyListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyOpenPolicyList", ModifyOpenPolicyListResponse.class);
     }
 
     /**

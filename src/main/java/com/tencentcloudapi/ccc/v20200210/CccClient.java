@@ -72,6 +72,17 @@ public class CccClient extends AbstractClient{
     }
 
     /**
+     *创建ai外呼会话(仅支持高级版座席)
+     * @param req CreateAICallRequest
+     * @return CreateAICallResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAICallResponse CreateAICall(CreateAICallRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateAICall", CreateAICallResponse.class);
+    }
+
+    /**
      *创建管理端访问链接
      * @param req CreateAdminURLRequest
      * @return CreateAdminURLResponse

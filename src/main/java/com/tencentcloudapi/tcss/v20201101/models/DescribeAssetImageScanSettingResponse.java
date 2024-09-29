@@ -109,6 +109,22 @@ public class DescribeAssetImageScanSettingResponse extends AbstractModel {
     private String [] ExcludeImages;
 
     /**
+    * 最后一次扫描时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LastScanTime")
+    @Expose
+    private String LastScanTime;
+
+    /**
+    * 扫描结果(Success|InsufficientLicense|ImageNeedIsEmpty|InternalError)
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ScanResult")
+    @Expose
+    private String ScanResult;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -316,6 +332,46 @@ public class DescribeAssetImageScanSettingResponse extends AbstractModel {
     }
 
     /**
+     * Get 最后一次扫描时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LastScanTime 最后一次扫描时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLastScanTime() {
+        return this.LastScanTime;
+    }
+
+    /**
+     * Set 最后一次扫描时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LastScanTime 最后一次扫描时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLastScanTime(String LastScanTime) {
+        this.LastScanTime = LastScanTime;
+    }
+
+    /**
+     * Get 扫描结果(Success|InsufficientLicense|ImageNeedIsEmpty|InternalError)
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ScanResult 扫描结果(Success|InsufficientLicense|ImageNeedIsEmpty|InternalError)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getScanResult() {
+        return this.ScanResult;
+    }
+
+    /**
+     * Set 扫描结果(Success|InsufficientLicense|ImageNeedIsEmpty|InternalError)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ScanResult 扫描结果(Success|InsufficientLicense|ImageNeedIsEmpty|InternalError)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setScanResult(String ScanResult) {
+        this.ScanResult = ScanResult;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -381,6 +437,12 @@ public class DescribeAssetImageScanSettingResponse extends AbstractModel {
                 this.ExcludeImages[i] = new String(source.ExcludeImages[i]);
             }
         }
+        if (source.LastScanTime != null) {
+            this.LastScanTime = new String(source.LastScanTime);
+        }
+        if (source.ScanResult != null) {
+            this.ScanResult = new String(source.ScanResult);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -403,6 +465,8 @@ public class DescribeAssetImageScanSettingResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "ScanScope", this.ScanScope);
         this.setParamSimple(map, prefix + "ScanEndTime", this.ScanEndTime);
         this.setParamArraySimple(map, prefix + "ExcludeImages.", this.ExcludeImages);
+        this.setParamSimple(map, prefix + "LastScanTime", this.LastScanTime);
+        this.setParamSimple(map, prefix + "ScanResult", this.ScanResult);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

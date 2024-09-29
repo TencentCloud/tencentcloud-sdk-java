@@ -24,11 +24,34 @@ import java.util.HashMap;
 public class AssignMangedTablePropertiesResponse extends AbstractModel {
 
     /**
+    * 分配的原生表表属性
+    */
+    @SerializedName("Properties")
+    @Expose
+    private Property [] Properties;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 分配的原生表表属性 
+     * @return Properties 分配的原生表表属性
+     */
+    public Property [] getProperties() {
+        return this.Properties;
+    }
+
+    /**
+     * Set 分配的原生表表属性
+     * @param Properties 分配的原生表表属性
+     */
+    public void setProperties(Property [] Properties) {
+        this.Properties = Properties;
+    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -54,6 +77,12 @@ public class AssignMangedTablePropertiesResponse extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public AssignMangedTablePropertiesResponse(AssignMangedTablePropertiesResponse source) {
+        if (source.Properties != null) {
+            this.Properties = new Property[source.Properties.length];
+            for (int i = 0; i < source.Properties.length; i++) {
+                this.Properties[i] = new Property(source.Properties[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -64,6 +93,7 @@ public class AssignMangedTablePropertiesResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "Properties.", this.Properties);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

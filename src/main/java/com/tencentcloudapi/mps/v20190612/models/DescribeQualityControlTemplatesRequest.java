@@ -47,11 +47,18 @@ public class DescribeQualityControlTemplatesRequest extends AbstractModel {
     private Long Limit;
 
     /**
-    * "Preset"：预设，Custom":客户魔板
+    * "Preset"：预设，Custom":自定义模板
     */
     @SerializedName("Type")
     @Expose
     private String Type;
+
+    /**
+    * 媒体质检模板标识过滤条件，长度限制：64 个字符。
+    */
+    @SerializedName("Name")
+    @Expose
+    private String Name;
 
     /**
      * Get 媒体质检模板唯一标识过滤条件，数组长度限制：100。 
@@ -110,19 +117,35 @@ public class DescribeQualityControlTemplatesRequest extends AbstractModel {
     }
 
     /**
-     * Get "Preset"：预设，Custom":客户魔板 
-     * @return Type "Preset"：预设，Custom":客户魔板
+     * Get "Preset"：预设，Custom":自定义模板 
+     * @return Type "Preset"：预设，Custom":自定义模板
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set "Preset"：预设，Custom":客户魔板
-     * @param Type "Preset"：预设，Custom":客户魔板
+     * Set "Preset"：预设，Custom":自定义模板
+     * @param Type "Preset"：预设，Custom":自定义模板
      */
     public void setType(String Type) {
         this.Type = Type;
+    }
+
+    /**
+     * Get 媒体质检模板标识过滤条件，长度限制：64 个字符。 
+     * @return Name 媒体质检模板标识过滤条件，长度限制：64 个字符。
+     */
+    public String getName() {
+        return this.Name;
+    }
+
+    /**
+     * Set 媒体质检模板标识过滤条件，长度限制：64 个字符。
+     * @param Name 媒体质检模板标识过滤条件，长度限制：64 个字符。
+     */
+    public void setName(String Name) {
+        this.Name = Name;
     }
 
     public DescribeQualityControlTemplatesRequest() {
@@ -148,6 +171,9 @@ public class DescribeQualityControlTemplatesRequest extends AbstractModel {
         if (source.Type != null) {
             this.Type = new String(source.Type);
         }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
     }
 
 
@@ -159,6 +185,7 @@ public class DescribeQualityControlTemplatesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "Name", this.Name);
 
     }
 }

@@ -120,6 +120,14 @@ public class SentenceDetail extends AbstractModel {
     private String [] EmotionType;
 
     /**
+    * 关键词识别结果列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("KeyWordResults")
+    @Expose
+    private KeyWordResult [] KeyWordResults;
+
+    /**
      * Get 单句最终识别结果
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return FinalSentence 单句最终识别结果
@@ -359,6 +367,26 @@ public class SentenceDetail extends AbstractModel {
         this.EmotionType = EmotionType;
     }
 
+    /**
+     * Get 关键词识别结果列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return KeyWordResults 关键词识别结果列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public KeyWordResult [] getKeyWordResults() {
+        return this.KeyWordResults;
+    }
+
+    /**
+     * Set 关键词识别结果列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param KeyWordResults 关键词识别结果列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setKeyWordResults(KeyWordResult [] KeyWordResults) {
+        this.KeyWordResults = KeyWordResults;
+    }
+
     public SentenceDetail() {
     }
 
@@ -409,6 +437,12 @@ public class SentenceDetail extends AbstractModel {
                 this.EmotionType[i] = new String(source.EmotionType[i]);
             }
         }
+        if (source.KeyWordResults != null) {
+            this.KeyWordResults = new KeyWordResult[source.KeyWordResults.length];
+            for (int i = 0; i < source.KeyWordResults.length; i++) {
+                this.KeyWordResults[i] = new KeyWordResult(source.KeyWordResults[i]);
+            }
+        }
     }
 
 
@@ -428,6 +462,7 @@ public class SentenceDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "EmotionalEnergy", this.EmotionalEnergy);
         this.setParamSimple(map, prefix + "SilenceTime", this.SilenceTime);
         this.setParamArraySimple(map, prefix + "EmotionType.", this.EmotionType);
+        this.setParamArrayObj(map, prefix + "KeyWordResults.", this.KeyWordResults);
 
     }
 }

@@ -39,7 +39,7 @@ public class DcClient extends AbstractClient{
     }
 
     /**
-     *接受专用通道申请
+     *接受专用通道申请。
      * @param req AcceptDirectConnectTunnelRequest
      * @return AcceptDirectConnectTunnelResponse
      * @throws TencentCloudSDKException
@@ -86,8 +86,7 @@ public class DcClient extends AbstractClient{
     }
 
     /**
-     *删除物理专线。
-只能删除处于已连接状态的物理专线。
+     *删除物理专线。只能删除处于已连接状态的物理专线。
      * @param req DeleteDirectConnectRequest
      * @return DeleteDirectConnectResponse
      * @throws TencentCloudSDKException
@@ -98,7 +97,7 @@ public class DcClient extends AbstractClient{
     }
 
     /**
-     *删除专用通道
+     *删除专用通道。
      * @param req DeleteDirectConnectTunnelRequest
      * @return DeleteDirectConnectTunnelResponse
      * @throws TencentCloudSDKException
@@ -109,8 +108,7 @@ public class DcClient extends AbstractClient{
     }
 
     /**
-     *查询物理专线接入点
-
+     *查询物理专线接入点。
      * @param req DescribeAccessPointsRequest
      * @return DescribeAccessPointsResponse
      * @throws TencentCloudSDKException
@@ -121,7 +119,7 @@ public class DcClient extends AbstractClient{
     }
 
     /**
-     *本接口（DescribeDirectConnectTunnelExtra）用于查询专用通道扩展信息
+     *查询专用通道扩展信息。
      * @param req DescribeDirectConnectTunnelExtraRequest
      * @return DescribeDirectConnectTunnelExtraResponse
      * @throws TencentCloudSDKException
@@ -231,7 +229,7 @@ public class DcClient extends AbstractClient{
     }
 
     /**
-     *修改专用通道属性
+     *修改专用通道属性。
      * @param req ModifyDirectConnectTunnelAttributeRequest
      * @return ModifyDirectConnectTunnelAttributeResponse
      * @throws TencentCloudSDKException
@@ -253,7 +251,7 @@ public class DcClient extends AbstractClient{
     }
 
     /**
-     *拒绝专用通道申请
+     *拒绝专用通道申请。
      * @param req RejectDirectConnectTunnelRequest
      * @return RejectDirectConnectTunnelResponse
      * @throws TencentCloudSDKException

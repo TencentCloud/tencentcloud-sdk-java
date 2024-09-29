@@ -38,6 +38,13 @@ public class DescribeDatabasesResponse extends AbstractModel {
     private Long TotalCount;
 
     /**
+    * 数据库详情列表
+    */
+    @SerializedName("Databases")
+    @Expose
+    private Database [] Databases;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -77,6 +84,22 @@ public class DescribeDatabasesResponse extends AbstractModel {
     }
 
     /**
+     * Get 数据库详情列表 
+     * @return Databases 数据库详情列表
+     */
+    public Database [] getDatabases() {
+        return this.Databases;
+    }
+
+    /**
+     * Set 数据库详情列表
+     * @param Databases 数据库详情列表
+     */
+    public void setDatabases(Database [] Databases) {
+        this.Databases = Databases;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -109,6 +132,12 @@ public class DescribeDatabasesResponse extends AbstractModel {
         if (source.TotalCount != null) {
             this.TotalCount = new Long(source.TotalCount);
         }
+        if (source.Databases != null) {
+            this.Databases = new Database[source.Databases.length];
+            for (int i = 0; i < source.Databases.length; i++) {
+                this.Databases[i] = new Database(source.Databases[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -121,6 +150,7 @@ public class DescribeDatabasesResponse extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "Items.", this.Items);
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "Databases.", this.Databases);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

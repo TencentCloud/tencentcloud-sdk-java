@@ -24,7 +24,12 @@ import java.util.HashMap;
 public class CheckBashPolicyParamsRequest extends AbstractModel {
 
     /**
-    * 校验内容 Name或Rule ，两个都要校验时逗号分割
+    * 校验内容字段,如果需要检测多个字段时,用逗号分割
+<li>Name 策略名称</li>
+<li>Process 进程</li>
+<li>Name PProcess 父进程</li>
+<li>Name AProcess 祖先进程</li>
+
     */
     @SerializedName("CheckField")
     @Expose
@@ -45,7 +50,8 @@ public class CheckBashPolicyParamsRequest extends AbstractModel {
     private String Name;
 
     /**
-    * 用户填入的正则表达式："正则表达式" 需与 "提交EventId对应的命令内容" 相匹配
+    * 该字段不在维护,如果填入该参数,自动替换到Rules.Process
+
     */
     @SerializedName("Rule")
     @Expose
@@ -59,16 +65,43 @@ public class CheckBashPolicyParamsRequest extends AbstractModel {
     private Long Id;
 
     /**
-     * Get 校验内容 Name或Rule ，两个都要校验时逗号分割 
-     * @return CheckField 校验内容 Name或Rule ，两个都要校验时逗号分割
+    * 规则表达式
+    */
+    @SerializedName("Rules")
+    @Expose
+    private PolicyRules Rules;
+
+    /**
+     * Get 校验内容字段,如果需要检测多个字段时,用逗号分割
+<li>Name 策略名称</li>
+<li>Process 进程</li>
+<li>Name PProcess 父进程</li>
+<li>Name AProcess 祖先进程</li>
+ 
+     * @return CheckField 校验内容字段,如果需要检测多个字段时,用逗号分割
+<li>Name 策略名称</li>
+<li>Process 进程</li>
+<li>Name PProcess 父进程</li>
+<li>Name AProcess 祖先进程</li>
+
      */
     public String getCheckField() {
         return this.CheckField;
     }
 
     /**
-     * Set 校验内容 Name或Rule ，两个都要校验时逗号分割
-     * @param CheckField 校验内容 Name或Rule ，两个都要校验时逗号分割
+     * Set 校验内容字段,如果需要检测多个字段时,用逗号分割
+<li>Name 策略名称</li>
+<li>Process 进程</li>
+<li>Name PProcess 父进程</li>
+<li>Name AProcess 祖先进程</li>
+
+     * @param CheckField 校验内容字段,如果需要检测多个字段时,用逗号分割
+<li>Name 策略名称</li>
+<li>Process 进程</li>
+<li>Name PProcess 父进程</li>
+<li>Name AProcess 祖先进程</li>
+
      */
     public void setCheckField(String CheckField) {
         this.CheckField = CheckField;
@@ -107,16 +140,20 @@ public class CheckBashPolicyParamsRequest extends AbstractModel {
     }
 
     /**
-     * Get 用户填入的正则表达式："正则表达式" 需与 "提交EventId对应的命令内容" 相匹配 
-     * @return Rule 用户填入的正则表达式："正则表达式" 需与 "提交EventId对应的命令内容" 相匹配
+     * Get 该字段不在维护,如果填入该参数,自动替换到Rules.Process
+ 
+     * @return Rule 该字段不在维护,如果填入该参数,自动替换到Rules.Process
+
      */
     public String getRule() {
         return this.Rule;
     }
 
     /**
-     * Set 用户填入的正则表达式："正则表达式" 需与 "提交EventId对应的命令内容" 相匹配
-     * @param Rule 用户填入的正则表达式："正则表达式" 需与 "提交EventId对应的命令内容" 相匹配
+     * Set 该字段不在维护,如果填入该参数,自动替换到Rules.Process
+
+     * @param Rule 该字段不在维护,如果填入该参数,自动替换到Rules.Process
+
      */
     public void setRule(String Rule) {
         this.Rule = Rule;
@@ -136,6 +173,22 @@ public class CheckBashPolicyParamsRequest extends AbstractModel {
      */
     public void setId(Long Id) {
         this.Id = Id;
+    }
+
+    /**
+     * Get 规则表达式 
+     * @return Rules 规则表达式
+     */
+    public PolicyRules getRules() {
+        return this.Rules;
+    }
+
+    /**
+     * Set 规则表达式
+     * @param Rules 规则表达式
+     */
+    public void setRules(PolicyRules Rules) {
+        this.Rules = Rules;
     }
 
     public CheckBashPolicyParamsRequest() {
@@ -161,6 +214,9 @@ public class CheckBashPolicyParamsRequest extends AbstractModel {
         if (source.Id != null) {
             this.Id = new Long(source.Id);
         }
+        if (source.Rules != null) {
+            this.Rules = new PolicyRules(source.Rules);
+        }
     }
 
 
@@ -173,6 +229,7 @@ public class CheckBashPolicyParamsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Rule", this.Rule);
         this.setParamSimple(map, prefix + "Id", this.Id);
+        this.setParamObj(map, prefix + "Rules.", this.Rules);
 
     }
 }

@@ -101,6 +101,13 @@ public class MainlandPermitOCRResponse extends AbstractModel {
     private String Profile;
 
     /**
+    * 国籍
+    */
+    @SerializedName("Nationality")
+    @Expose
+    private String Nationality;
+
+    /**
     * 背面字段信息
     */
     @SerializedName("MainlandTravelPermitBackInfos")
@@ -291,6 +298,22 @@ public class MainlandPermitOCRResponse extends AbstractModel {
     }
 
     /**
+     * Get 国籍 
+     * @return Nationality 国籍
+     */
+    public String getNationality() {
+        return this.Nationality;
+    }
+
+    /**
+     * Set 国籍
+     * @param Nationality 国籍
+     */
+    public void setNationality(String Nationality) {
+        this.Nationality = Nationality;
+    }
+
+    /**
      * Get 背面字段信息 
      * @return MainlandTravelPermitBackInfos 背面字段信息
      */
@@ -363,6 +386,9 @@ public class MainlandPermitOCRResponse extends AbstractModel {
         if (source.Profile != null) {
             this.Profile = new String(source.Profile);
         }
+        if (source.Nationality != null) {
+            this.Nationality = new String(source.Nationality);
+        }
         if (source.MainlandTravelPermitBackInfos != null) {
             this.MainlandTravelPermitBackInfos = new MainlandTravelPermitBackInfos(source.MainlandTravelPermitBackInfos);
         }
@@ -387,6 +413,7 @@ public class MainlandPermitOCRResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "IssueNumber", this.IssueNumber);
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "Profile", this.Profile);
+        this.setParamSimple(map, prefix + "Nationality", this.Nationality);
         this.setParamObj(map, prefix + "MainlandTravelPermitBackInfos.", this.MainlandTravelPermitBackInfos);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 

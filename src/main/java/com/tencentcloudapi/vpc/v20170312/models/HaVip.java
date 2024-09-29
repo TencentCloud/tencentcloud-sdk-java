@@ -119,6 +119,14 @@ public class HaVip extends AbstractModel {
     private Boolean CheckAssociate;
 
     /**
+    * CDC实例ID。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CdcId")
+    @Expose
+    private String CdcId;
+
+    /**
     * HAVIP 刷新时间。该参数只作为出参数。以下场景会触发 FlushTime 被刷新：1）子机发出免费 ARP 触发 HAVIP 漂移；2）手动HAVIP解绑网卡; 没有更新时默认值：0000-00-00 00:00:00
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -359,6 +367,26 @@ public class HaVip extends AbstractModel {
     }
 
     /**
+     * Get CDC实例ID。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CdcId CDC实例ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCdcId() {
+        return this.CdcId;
+    }
+
+    /**
+     * Set CDC实例ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CdcId CDC实例ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCdcId(String CdcId) {
+        this.CdcId = CdcId;
+    }
+
+    /**
      * Get HAVIP 刷新时间。该参数只作为出参数。以下场景会触发 FlushTime 被刷新：1）子机发出免费 ARP 触发 HAVIP 漂移；2）手动HAVIP解绑网卡; 没有更新时默认值：0000-00-00 00:00:00
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return FlushedTime HAVIP 刷新时间。该参数只作为出参数。以下场景会触发 FlushTime 被刷新：1）子机发出免费 ARP 触发 HAVIP 漂移；2）手动HAVIP解绑网卡; 没有更新时默认值：0000-00-00 00:00:00
@@ -448,6 +476,9 @@ public class HaVip extends AbstractModel {
         if (source.CheckAssociate != null) {
             this.CheckAssociate = new Boolean(source.CheckAssociate);
         }
+        if (source.CdcId != null) {
+            this.CdcId = new String(source.CdcId);
+        }
         if (source.FlushedTime != null) {
             this.FlushedTime = new String(source.FlushedTime);
         }
@@ -477,6 +508,7 @@ public class HaVip extends AbstractModel {
         this.setParamSimple(map, prefix + "Business", this.Business);
         this.setParamArrayObj(map, prefix + "HaVipAssociationSet.", this.HaVipAssociationSet);
         this.setParamSimple(map, prefix + "CheckAssociate", this.CheckAssociate);
+        this.setParamSimple(map, prefix + "CdcId", this.CdcId);
         this.setParamSimple(map, prefix + "FlushedTime", this.FlushedTime);
         this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
 

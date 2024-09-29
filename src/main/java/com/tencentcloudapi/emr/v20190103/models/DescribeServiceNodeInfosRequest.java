@@ -93,7 +93,7 @@ public class DescribeServiceNodeInfosRequest extends AbstractModel {
     private String HealthStateId;
 
     /**
-    * 服务组件名称，都是大写比如YARN
+    * 服务组件名称，都是大写例如YARN
     */
     @SerializedName("ServiceName")
     @Expose
@@ -309,16 +309,16 @@ router
     }
 
     /**
-     * Get 服务组件名称，都是大写比如YARN 
-     * @return ServiceName 服务组件名称，都是大写比如YARN
+     * Get 服务组件名称，都是大写例如YARN 
+     * @return ServiceName 服务组件名称，都是大写例如YARN
      */
     public String getServiceName() {
         return this.ServiceName;
     }
 
     /**
-     * Set 服务组件名称，都是大写比如YARN
-     * @param ServiceName 服务组件名称，都是大写比如YARN
+     * Set 服务组件名称，都是大写例如YARN
+     * @param ServiceName 服务组件名称，都是大写例如YARN
      */
     public void setServiceName(String ServiceName) {
         this.ServiceName = ServiceName;

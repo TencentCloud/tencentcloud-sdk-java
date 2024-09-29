@@ -80,7 +80,7 @@ public class CreateRiskCenterScanTaskRequest extends AbstractModel {
     private String [] SelfDefiningAssets;
 
     /**
-    * 请求发起源，默认为vss表示漏洞扫描服务，云安全中心的用户请填充csip
+    * 请求发起源，vss表示漏洞扫描服务，云安全中心的用户请填充csip，默认csip
     */
     @SerializedName("ScanFrom")
     @Expose
@@ -243,16 +243,16 @@ public class CreateRiskCenterScanTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get 请求发起源，默认为vss表示漏洞扫描服务，云安全中心的用户请填充csip 
-     * @return ScanFrom 请求发起源，默认为vss表示漏洞扫描服务，云安全中心的用户请填充csip
+     * Get 请求发起源，vss表示漏洞扫描服务，云安全中心的用户请填充csip，默认csip 
+     * @return ScanFrom 请求发起源，vss表示漏洞扫描服务，云安全中心的用户请填充csip，默认csip
      */
     public String getScanFrom() {
         return this.ScanFrom;
     }
 
     /**
-     * Set 请求发起源，默认为vss表示漏洞扫描服务，云安全中心的用户请填充csip
-     * @param ScanFrom 请求发起源，默认为vss表示漏洞扫描服务，云安全中心的用户请填充csip
+     * Set 请求发起源，vss表示漏洞扫描服务，云安全中心的用户请填充csip，默认csip
+     * @param ScanFrom 请求发起源，vss表示漏洞扫描服务，云安全中心的用户请填充csip，默认csip
      */
     public void setScanFrom(String ScanFrom) {
         this.ScanFrom = ScanFrom;

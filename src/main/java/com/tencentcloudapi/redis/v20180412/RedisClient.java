@@ -380,6 +380,17 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeInstanceLogDelivery）用于查询实例的日志投递配置。
+     * @param req DescribeInstanceLogDeliveryRequest
+     * @return DescribeInstanceLogDeliveryResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceLogDeliveryResponse DescribeInstanceLogDelivery(DescribeInstanceLogDeliveryRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeInstanceLogDelivery", DescribeInstanceLogDeliveryResponse.class);
+    }
+
+    /**
      *腾讯云数据库 Redis 已经于2022年10月31日下线查询实例大 Key 接口。具体公告，请参见[查询实例大 Key 接口下线公告](https://cloud.tencent.com/document/product/239/81005)。
      * @param req DescribeInstanceMonitorBigKeyRequest
      * @return DescribeInstanceMonitorBigKeyResponse
@@ -949,6 +960,17 @@ public class RedisClient extends AbstractClient{
     public ModifyInstanceEventResponse ModifyInstanceEvent(ModifyInstanceEventRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyInstanceEvent", ModifyInstanceEventResponse.class);
+    }
+
+    /**
+     *本接口（ModifyInstanceLogDelivery）用于开启或关闭投递实例日志到CLS。
+     * @param req ModifyInstanceLogDeliveryRequest
+     * @return ModifyInstanceLogDeliveryResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyInstanceLogDeliveryResponse ModifyInstanceLogDelivery(ModifyInstanceLogDeliveryRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyInstanceLogDelivery", ModifyInstanceLogDeliveryResponse.class);
     }
 
     /**

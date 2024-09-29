@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeDirectConnectTunnelExtraResponse extends AbstractModel {
 
     /**
-    * 专用通道扩展信息
+    * 专用通道扩展信息。
     */
     @SerializedName("DirectConnectTunnelExtra")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeDirectConnectTunnelExtraResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 专用通道扩展信息 
-     * @return DirectConnectTunnelExtra 专用通道扩展信息
+     * Get 专用通道扩展信息。 
+     * @return DirectConnectTunnelExtra 专用通道扩展信息。
      */
     public DirectConnectTunnelExtra getDirectConnectTunnelExtra() {
         return this.DirectConnectTunnelExtra;
     }
 
     /**
-     * Set 专用通道扩展信息
-     * @param DirectConnectTunnelExtra 专用通道扩展信息
+     * Set 专用通道扩展信息。
+     * @param DirectConnectTunnelExtra 专用通道扩展信息。
      */
     public void setDirectConnectTunnelExtra(DirectConnectTunnelExtra DirectConnectTunnelExtra) {
         this.DirectConnectTunnelExtra = DirectConnectTunnelExtra;

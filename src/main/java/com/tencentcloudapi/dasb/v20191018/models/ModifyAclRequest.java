@@ -222,6 +222,13 @@ public class ModifyAclRequest extends AbstractModel {
     private Boolean AllowAccessCredential;
 
     /**
+    * 是否允许键盘记录
+    */
+    @SerializedName("AllowKeyboardLogger")
+    @Expose
+    private Boolean AllowKeyboardLogger;
+
+    /**
      * Get 访问权限名称，最大32字符，不能包含空白字符 
      * @return Name 访问权限名称，最大32字符，不能包含空白字符
      */
@@ -677,6 +684,22 @@ public class ModifyAclRequest extends AbstractModel {
         this.AllowAccessCredential = AllowAccessCredential;
     }
 
+    /**
+     * Get 是否允许键盘记录 
+     * @return AllowKeyboardLogger 是否允许键盘记录
+     */
+    public Boolean getAllowKeyboardLogger() {
+        return this.AllowKeyboardLogger;
+    }
+
+    /**
+     * Set 是否允许键盘记录
+     * @param AllowKeyboardLogger 是否允许键盘记录
+     */
+    public void setAllowKeyboardLogger(Boolean AllowKeyboardLogger) {
+        this.AllowKeyboardLogger = AllowKeyboardLogger;
+    }
+
     public ModifyAclRequest() {
     }
 
@@ -790,6 +813,9 @@ public class ModifyAclRequest extends AbstractModel {
         if (source.AllowAccessCredential != null) {
             this.AllowAccessCredential = new Boolean(source.AllowAccessCredential);
         }
+        if (source.AllowKeyboardLogger != null) {
+            this.AllowKeyboardLogger = new Boolean(source.AllowKeyboardLogger);
+        }
     }
 
 
@@ -825,6 +851,7 @@ public class ModifyAclRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ValidateTo", this.ValidateTo);
         this.setParamSimple(map, prefix + "DepartmentId", this.DepartmentId);
         this.setParamSimple(map, prefix + "AllowAccessCredential", this.AllowAccessCredential);
+        this.setParamSimple(map, prefix + "AllowKeyboardLogger", this.AllowKeyboardLogger);
 
     }
 }

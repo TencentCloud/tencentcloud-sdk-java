@@ -52,6 +52,13 @@ public class ResetAccountPasswordRequest extends AbstractModel {
     private String Password;
 
     /**
+    * 使用GetPublicKey返回的RSA2048公钥加密后的密码，加密算法是PKCS1v15
+    */
+    @SerializedName("EncryptedPassword")
+    @Expose
+    private String EncryptedPassword;
+
+    /**
      * Get 实例 ID，形如：dcdbt-ow728lmc。 
      * @return InstanceId 实例 ID，形如：dcdbt-ow728lmc。
      */
@@ -115,6 +122,22 @@ public class ResetAccountPasswordRequest extends AbstractModel {
         this.Password = Password;
     }
 
+    /**
+     * Get 使用GetPublicKey返回的RSA2048公钥加密后的密码，加密算法是PKCS1v15 
+     * @return EncryptedPassword 使用GetPublicKey返回的RSA2048公钥加密后的密码，加密算法是PKCS1v15
+     */
+    public String getEncryptedPassword() {
+        return this.EncryptedPassword;
+    }
+
+    /**
+     * Set 使用GetPublicKey返回的RSA2048公钥加密后的密码，加密算法是PKCS1v15
+     * @param EncryptedPassword 使用GetPublicKey返回的RSA2048公钥加密后的密码，加密算法是PKCS1v15
+     */
+    public void setEncryptedPassword(String EncryptedPassword) {
+        this.EncryptedPassword = EncryptedPassword;
+    }
+
     public ResetAccountPasswordRequest() {
     }
 
@@ -135,6 +158,9 @@ public class ResetAccountPasswordRequest extends AbstractModel {
         if (source.Password != null) {
             this.Password = new String(source.Password);
         }
+        if (source.EncryptedPassword != null) {
+            this.EncryptedPassword = new String(source.EncryptedPassword);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class ResetAccountPasswordRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "UserName", this.UserName);
         this.setParamSimple(map, prefix + "Host", this.Host);
         this.setParamSimple(map, prefix + "Password", this.Password);
+        this.setParamSimple(map, prefix + "EncryptedPassword", this.EncryptedPassword);
 
     }
 }

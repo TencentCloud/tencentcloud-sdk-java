@@ -115,6 +115,24 @@ Strength 值越小，生成图和原图越接近，取值范围(0, 1]，不传�
     private String RspImgType;
 
     /**
+    * 画质增强开关，默认关闭。
+1：开启
+0：关闭
+开启后将增强图像的画质清晰度，生成耗时有所增加。
+    */
+    @SerializedName("EnhanceImage")
+    @Expose
+    private Long EnhanceImage;
+
+    /**
+    * 细节优化的面部数量上限，支持0 ~ 6，默认为0。
+若上传大于0的值，将以此为上限对每张图片中面积占比较小的面部进行细节修复，生成耗时根据实际优化的面部个数有所增加。
+    */
+    @SerializedName("RestoreFace")
+    @Expose
+    private Long RestoreFace;
+
+    /**
      * Get 输入图 Base64 数据。
 算法将根据输入的图片，结合文本描述智能生成与之相关的图像。
 Base64 和 Url 必须提供一个，如果都提供以 Url 为准。
@@ -358,6 +376,54 @@ Strength 值越小，生成图和原图越接近，取值范围(0, 1]，不传�
         this.RspImgType = RspImgType;
     }
 
+    /**
+     * Get 画质增强开关，默认关闭。
+1：开启
+0：关闭
+开启后将增强图像的画质清晰度，生成耗时有所增加。 
+     * @return EnhanceImage 画质增强开关，默认关闭。
+1：开启
+0：关闭
+开启后将增强图像的画质清晰度，生成耗时有所增加。
+     */
+    public Long getEnhanceImage() {
+        return this.EnhanceImage;
+    }
+
+    /**
+     * Set 画质增强开关，默认关闭。
+1：开启
+0：关闭
+开启后将增强图像的画质清晰度，生成耗时有所增加。
+     * @param EnhanceImage 画质增强开关，默认关闭。
+1：开启
+0：关闭
+开启后将增强图像的画质清晰度，生成耗时有所增加。
+     */
+    public void setEnhanceImage(Long EnhanceImage) {
+        this.EnhanceImage = EnhanceImage;
+    }
+
+    /**
+     * Get 细节优化的面部数量上限，支持0 ~ 6，默认为0。
+若上传大于0的值，将以此为上限对每张图片中面积占比较小的面部进行细节修复，生成耗时根据实际优化的面部个数有所增加。 
+     * @return RestoreFace 细节优化的面部数量上限，支持0 ~ 6，默认为0。
+若上传大于0的值，将以此为上限对每张图片中面积占比较小的面部进行细节修复，生成耗时根据实际优化的面部个数有所增加。
+     */
+    public Long getRestoreFace() {
+        return this.RestoreFace;
+    }
+
+    /**
+     * Set 细节优化的面部数量上限，支持0 ~ 6，默认为0。
+若上传大于0的值，将以此为上限对每张图片中面积占比较小的面部进行细节修复，生成耗时根据实际优化的面部个数有所增加。
+     * @param RestoreFace 细节优化的面部数量上限，支持0 ~ 6，默认为0。
+若上传大于0的值，将以此为上限对每张图片中面积占比较小的面部进行细节修复，生成耗时根据实际优化的面部个数有所增加。
+     */
+    public void setRestoreFace(Long RestoreFace) {
+        this.RestoreFace = RestoreFace;
+    }
+
     public ImageToImageRequest() {
     }
 
@@ -399,6 +465,12 @@ Strength 值越小，生成图和原图越接近，取值范围(0, 1]，不传�
         if (source.RspImgType != null) {
             this.RspImgType = new String(source.RspImgType);
         }
+        if (source.EnhanceImage != null) {
+            this.EnhanceImage = new Long(source.EnhanceImage);
+        }
+        if (source.RestoreFace != null) {
+            this.RestoreFace = new Long(source.RestoreFace);
+        }
     }
 
 
@@ -416,6 +488,8 @@ Strength 值越小，生成图和原图越接近，取值范围(0, 1]，不传�
         this.setParamObj(map, prefix + "LogoParam.", this.LogoParam);
         this.setParamSimple(map, prefix + "Strength", this.Strength);
         this.setParamSimple(map, prefix + "RspImgType", this.RspImgType);
+        this.setParamSimple(map, prefix + "EnhanceImage", this.EnhanceImage);
+        this.setParamSimple(map, prefix + "RestoreFace", this.RestoreFace);
 
     }
 }

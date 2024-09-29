@@ -75,8 +75,8 @@ public class DescribeTimingL4DataRequest extends AbstractModel {
 
     /**
     * 过滤条件，详细的过滤条件Key值如下：
-<li>ruleId<br>   按照【<strong>转发规则ID</strong>】进行过滤。</li>
-<li>proxyId<br>   按照【<strong>四层代理实例ID</strong>】进行过滤。</li>
+<li>ruleId：按照转发规则 ID 进行过滤。</li>
+<li>proxyId：按照四层代理实例 ID 进行过滤。</li>
     */
     @SerializedName("Filters")
     @Expose
@@ -222,11 +222,11 @@ public class DescribeTimingL4DataRequest extends AbstractModel {
 
     /**
      * Get 过滤条件，详细的过滤条件Key值如下：
-<li>ruleId<br>   按照【<strong>转发规则ID</strong>】进行过滤。</li>
-<li>proxyId<br>   按照【<strong>四层代理实例ID</strong>】进行过滤。</li> 
+<li>ruleId：按照转发规则 ID 进行过滤。</li>
+<li>proxyId：按照四层代理实例 ID 进行过滤。</li> 
      * @return Filters 过滤条件，详细的过滤条件Key值如下：
-<li>ruleId<br>   按照【<strong>转发规则ID</strong>】进行过滤。</li>
-<li>proxyId<br>   按照【<strong>四层代理实例ID</strong>】进行过滤。</li>
+<li>ruleId：按照转发规则 ID 进行过滤。</li>
+<li>proxyId：按照四层代理实例 ID 进行过滤。</li>
      */
     public QueryCondition [] getFilters() {
         return this.Filters;
@@ -234,11 +234,11 @@ public class DescribeTimingL4DataRequest extends AbstractModel {
 
     /**
      * Set 过滤条件，详细的过滤条件Key值如下：
-<li>ruleId<br>   按照【<strong>转发规则ID</strong>】进行过滤。</li>
-<li>proxyId<br>   按照【<strong>四层代理实例ID</strong>】进行过滤。</li>
+<li>ruleId：按照转发规则 ID 进行过滤。</li>
+<li>proxyId：按照四层代理实例 ID 进行过滤。</li>
      * @param Filters 过滤条件，详细的过滤条件Key值如下：
-<li>ruleId<br>   按照【<strong>转发规则ID</strong>】进行过滤。</li>
-<li>proxyId<br>   按照【<strong>四层代理实例ID</strong>】进行过滤。</li>
+<li>ruleId：按照转发规则 ID 进行过滤。</li>
+<li>proxyId：按照四层代理实例 ID 进行过滤。</li>
      */
     public void setFilters(QueryCondition [] Filters) {
         this.Filters = Filters;

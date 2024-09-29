@@ -249,7 +249,9 @@ public class OriginInfo extends AbstractModel {
     /**
      * Get VODEO 子应用 ID。该参数当 OriginType = VODEO 时必填。 
      * @return VodeoSubAppId VODEO 子应用 ID。该参数当 OriginType = VODEO 时必填。
+     * @deprecated
      */
+    @Deprecated
     public Long getVodeoSubAppId() {
         return this.VodeoSubAppId;
     }
@@ -257,7 +259,9 @@ public class OriginInfo extends AbstractModel {
     /**
      * Set VODEO 子应用 ID。该参数当 OriginType = VODEO 时必填。
      * @param VodeoSubAppId VODEO 子应用 ID。该参数当 OriginType = VODEO 时必填。
+     * @deprecated
      */
+    @Deprecated
     public void setVodeoSubAppId(Long VodeoSubAppId) {
         this.VodeoSubAppId = VodeoSubAppId;
     }
@@ -269,7 +273,9 @@ public class OriginInfo extends AbstractModel {
      * @return VodeoDistributionRange VODEO 分发范围，该参数当 OriginType = VODEO 时必填。取值有： 
 <li>All：当前应用下所有存储桶；</li> 
 <li>Bucket：指定的某一个存储桶。</li>
+     * @deprecated
      */
+    @Deprecated
     public String getVodeoDistributionRange() {
         return this.VodeoDistributionRange;
     }
@@ -281,7 +287,9 @@ public class OriginInfo extends AbstractModel {
      * @param VodeoDistributionRange VODEO 分发范围，该参数当 OriginType = VODEO 时必填。取值有： 
 <li>All：当前应用下所有存储桶；</li> 
 <li>Bucket：指定的某一个存储桶。</li>
+     * @deprecated
      */
+    @Deprecated
     public void setVodeoDistributionRange(String VodeoDistributionRange) {
         this.VodeoDistributionRange = VodeoDistributionRange;
     }
@@ -289,7 +297,9 @@ public class OriginInfo extends AbstractModel {
     /**
      * Get VODEO 存储桶 ID，该参数当 OriginType = VODEO 且 VodeoDistributionRange = Bucket 时必填。 
      * @return VodeoBucketId VODEO 存储桶 ID，该参数当 OriginType = VODEO 且 VodeoDistributionRange = Bucket 时必填。
+     * @deprecated
      */
+    @Deprecated
     public String getVodeoBucketId() {
         return this.VodeoBucketId;
     }
@@ -297,7 +307,9 @@ public class OriginInfo extends AbstractModel {
     /**
      * Set VODEO 存储桶 ID，该参数当 OriginType = VODEO 且 VodeoDistributionRange = Bucket 时必填。
      * @param VodeoBucketId VODEO 存储桶 ID，该参数当 OriginType = VODEO 且 VodeoDistributionRange = Bucket 时必填。
+     * @deprecated
      */
+    @Deprecated
     public void setVodeoBucketId(String VodeoBucketId) {
         this.VodeoBucketId = VodeoBucketId;
     }

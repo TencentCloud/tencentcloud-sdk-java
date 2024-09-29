@@ -25,6 +25,7 @@ public class GitInfo extends AbstractModel {
 
     /**
     * Git地址。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GitHttpPath")
     @Expose
@@ -32,6 +33,7 @@ public class GitInfo extends AbstractModel {
 
     /**
     * Git用户名。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GitUserName")
     @Expose
@@ -39,6 +41,7 @@ public class GitInfo extends AbstractModel {
 
     /**
     * Git密码或者Token。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GitTokenOrPassword")
     @Expose
@@ -46,6 +49,7 @@ public class GitInfo extends AbstractModel {
 
     /**
     * 分支。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Branch")
     @Expose
@@ -53,14 +57,17 @@ public class GitInfo extends AbstractModel {
 
     /**
     * 标签。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tag")
     @Expose
     private String Tag;
 
     /**
-     * Get Git地址。 
+     * Get Git地址。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return GitHttpPath Git地址。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGitHttpPath() {
         return this.GitHttpPath;
@@ -68,15 +75,19 @@ public class GitInfo extends AbstractModel {
 
     /**
      * Set Git地址。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param GitHttpPath Git地址。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGitHttpPath(String GitHttpPath) {
         this.GitHttpPath = GitHttpPath;
     }
 
     /**
-     * Get Git用户名。 
+     * Get Git用户名。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return GitUserName Git用户名。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGitUserName() {
         return this.GitUserName;
@@ -84,15 +95,19 @@ public class GitInfo extends AbstractModel {
 
     /**
      * Set Git用户名。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param GitUserName Git用户名。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGitUserName(String GitUserName) {
         this.GitUserName = GitUserName;
     }
 
     /**
-     * Get Git密码或者Token。 
+     * Get Git密码或者Token。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return GitTokenOrPassword Git密码或者Token。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGitTokenOrPassword() {
         return this.GitTokenOrPassword;
@@ -100,15 +115,19 @@ public class GitInfo extends AbstractModel {
 
     /**
      * Set Git密码或者Token。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param GitTokenOrPassword Git密码或者Token。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGitTokenOrPassword(String GitTokenOrPassword) {
         this.GitTokenOrPassword = GitTokenOrPassword;
     }
 
     /**
-     * Get 分支。 
+     * Get 分支。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Branch 分支。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBranch() {
         return this.Branch;
@@ -116,15 +135,19 @@ public class GitInfo extends AbstractModel {
 
     /**
      * Set 分支。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Branch 分支。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBranch(String Branch) {
         this.Branch = Branch;
     }
 
     /**
-     * Get 标签。 
+     * Get 标签。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Tag 标签。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTag() {
         return this.Tag;
@@ -132,7 +155,9 @@ public class GitInfo extends AbstractModel {
 
     /**
      * Set 标签。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Tag 标签。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTag(String Tag) {
         this.Tag = Tag;

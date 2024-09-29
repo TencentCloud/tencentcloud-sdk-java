@@ -457,6 +457,22 @@ public class Certificates extends AbstractModel {
     private String CertRevokedTime;
 
     /**
+    * 托管资源类型列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HostingResourceTypes")
+    @Expose
+    private String [] HostingResourceTypes;
+
+    /**
+    * 托管配置信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HostingConfig")
+    @Expose
+    private HostingConfig HostingConfig;
+
+    /**
      * Get 用户 UIN。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return OwnerUin 用户 UIN。
@@ -1540,6 +1556,46 @@ public class Certificates extends AbstractModel {
         this.CertRevokedTime = CertRevokedTime;
     }
 
+    /**
+     * Get 托管资源类型列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return HostingResourceTypes 托管资源类型列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getHostingResourceTypes() {
+        return this.HostingResourceTypes;
+    }
+
+    /**
+     * Set 托管资源类型列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HostingResourceTypes 托管资源类型列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHostingResourceTypes(String [] HostingResourceTypes) {
+        this.HostingResourceTypes = HostingResourceTypes;
+    }
+
+    /**
+     * Get 托管配置信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return HostingConfig 托管配置信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public HostingConfig getHostingConfig() {
+        return this.HostingConfig;
+    }
+
+    /**
+     * Set 托管配置信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HostingConfig 托管配置信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHostingConfig(HostingConfig HostingConfig) {
+        this.HostingConfig = HostingConfig;
+    }
+
     public Certificates() {
     }
 
@@ -1731,6 +1787,15 @@ public class Certificates extends AbstractModel {
         if (source.CertRevokedTime != null) {
             this.CertRevokedTime = new String(source.CertRevokedTime);
         }
+        if (source.HostingResourceTypes != null) {
+            this.HostingResourceTypes = new String[source.HostingResourceTypes.length];
+            for (int i = 0; i < source.HostingResourceTypes.length; i++) {
+                this.HostingResourceTypes[i] = new String(source.HostingResourceTypes[i]);
+            }
+        }
+        if (source.HostingConfig != null) {
+            this.HostingConfig = new HostingConfig(source.HostingConfig);
+        }
     }
 
 
@@ -1792,6 +1857,8 @@ public class Certificates extends AbstractModel {
         this.setParamSimple(map, prefix + "KeyPasswordCustomFlag", this.KeyPasswordCustomFlag);
         this.setParamObj(map, prefix + "SupportDownloadType.", this.SupportDownloadType);
         this.setParamSimple(map, prefix + "CertRevokedTime", this.CertRevokedTime);
+        this.setParamArraySimple(map, prefix + "HostingResourceTypes.", this.HostingResourceTypes);
+        this.setParamObj(map, prefix + "HostingConfig.", this.HostingConfig);
 
     }
 }

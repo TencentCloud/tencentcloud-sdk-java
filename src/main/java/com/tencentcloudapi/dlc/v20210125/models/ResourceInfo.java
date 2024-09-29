@@ -72,6 +72,14 @@ public class ResourceInfo extends AbstractModel {
     private Long Status;
 
     /**
+    * 标准引擎资源组信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ResourceGroupName")
+    @Expose
+    private String ResourceGroupName;
+
+    /**
      * Get 归属类型
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return AttributionType 归属类型
@@ -191,6 +199,26 @@ public class ResourceInfo extends AbstractModel {
         this.Status = Status;
     }
 
+    /**
+     * Get 标准引擎资源组信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ResourceGroupName 标准引擎资源组信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getResourceGroupName() {
+        return this.ResourceGroupName;
+    }
+
+    /**
+     * Set 标准引擎资源组信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ResourceGroupName 标准引擎资源组信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setResourceGroupName(String ResourceGroupName) {
+        this.ResourceGroupName = ResourceGroupName;
+    }
+
     public ResourceInfo() {
     }
 
@@ -220,6 +248,9 @@ public class ResourceInfo extends AbstractModel {
         if (source.Status != null) {
             this.Status = new Long(source.Status);
         }
+        if (source.ResourceGroupName != null) {
+            this.ResourceGroupName = new String(source.ResourceGroupName);
+        }
     }
 
 
@@ -233,6 +264,7 @@ public class ResourceInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Instance", this.Instance);
         this.setParamArrayObj(map, prefix + "Favor.", this.Favor);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "ResourceGroupName", this.ResourceGroupName);
 
     }
 }

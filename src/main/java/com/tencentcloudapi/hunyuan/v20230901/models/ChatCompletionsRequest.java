@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ChatCompletionsRequest extends AbstractModel {
 
     /**
-    * 模型名称，可选值包括 hunyuan-lite、hunyuan-standard、hunyuan-standard-256K、hunyuan-pro、 hunyuan-code、 hunyuan-role、 hunyuan-functioncall、 hunyuan-vision。
+    * 模型名称，可选值包括 hunyuan-lite、hunyuan-standard、hunyuan-standard-256K、hunyuan-pro、 hunyuan-code、 hunyuan-role、 hunyuan-functioncall、 hunyuan-vision、 hunyuan-turbo。
 各模型介绍请阅读 [产品概述](https://cloud.tencent.com/document/product/1729/104753) 中的说明。
 
 注意：
@@ -109,7 +109,7 @@ public class ChatCompletionsRequest extends AbstractModel {
     private Boolean EnableEnhancement;
 
     /**
-    * 可调用的工具列表，仅对 hunyuan-functioncall 模型生效。
+    * 可调用的工具列表，仅对 hunyuan-pro、hunyuan-turbo、hunyuan-functioncall 模型生效。
     */
     @SerializedName("Tools")
     @Expose
@@ -118,7 +118,7 @@ public class ChatCompletionsRequest extends AbstractModel {
     /**
     * 工具使用选项，可选值包括 none、auto、custom。
 说明：
-1. 仅对 hunyuan-functioncall 模型生效。
+1. 仅对 hunyuan-pro、hunyuan-turbo、hunyuan-functioncall 模型生效。
 2. none：不调用工具；auto：模型自行选择生成回复或调用工具；custom：强制模型调用指定的工具。
 3. 未设置时，默认值为auto
     */
@@ -159,12 +159,25 @@ public class ChatCompletionsRequest extends AbstractModel {
     private Boolean EnableSpeedSearch;
 
     /**
-     * Get 模型名称，可选值包括 hunyuan-lite、hunyuan-standard、hunyuan-standard-256K、hunyuan-pro、 hunyuan-code、 hunyuan-role、 hunyuan-functioncall、 hunyuan-vision。
+    * 图文并茂开关。
+详细介绍请阅读 [图文并茂](https://cloud.tencent.com/document/product/1729/111178) 中的说明。
+说明：
+1. 该参数仅在功能增强（如搜索）开关开启（EnableEnhancement=true）时生效。
+2. hunyuan-lite 无图文并茂能力，该参数对 hunyuan-lite 版本不生效。
+3. 未传值时默认关闭。
+4. 开启并搜索到对应的多媒体信息时，会输出对应的多媒体地址，可以定制个性化的图文消息。
+    */
+    @SerializedName("EnableMultimedia")
+    @Expose
+    private Boolean EnableMultimedia;
+
+    /**
+     * Get 模型名称，可选值包括 hunyuan-lite、hunyuan-standard、hunyuan-standard-256K、hunyuan-pro、 hunyuan-code、 hunyuan-role、 hunyuan-functioncall、 hunyuan-vision、 hunyuan-turbo。
 各模型介绍请阅读 [产品概述](https://cloud.tencent.com/document/product/1729/104753) 中的说明。
 
 注意：
 不同的模型计费不同，请根据 [购买指南](https://cloud.tencent.com/document/product/1729/97731) 按需调用。 
-     * @return Model 模型名称，可选值包括 hunyuan-lite、hunyuan-standard、hunyuan-standard-256K、hunyuan-pro、 hunyuan-code、 hunyuan-role、 hunyuan-functioncall、 hunyuan-vision。
+     * @return Model 模型名称，可选值包括 hunyuan-lite、hunyuan-standard、hunyuan-standard-256K、hunyuan-pro、 hunyuan-code、 hunyuan-role、 hunyuan-functioncall、 hunyuan-vision、 hunyuan-turbo。
 各模型介绍请阅读 [产品概述](https://cloud.tencent.com/document/product/1729/104753) 中的说明。
 
 注意：
@@ -175,12 +188,12 @@ public class ChatCompletionsRequest extends AbstractModel {
     }
 
     /**
-     * Set 模型名称，可选值包括 hunyuan-lite、hunyuan-standard、hunyuan-standard-256K、hunyuan-pro、 hunyuan-code、 hunyuan-role、 hunyuan-functioncall、 hunyuan-vision。
+     * Set 模型名称，可选值包括 hunyuan-lite、hunyuan-standard、hunyuan-standard-256K、hunyuan-pro、 hunyuan-code、 hunyuan-role、 hunyuan-functioncall、 hunyuan-vision、 hunyuan-turbo。
 各模型介绍请阅读 [产品概述](https://cloud.tencent.com/document/product/1729/104753) 中的说明。
 
 注意：
 不同的模型计费不同，请根据 [购买指南](https://cloud.tencent.com/document/product/1729/97731) 按需调用。
-     * @param Model 模型名称，可选值包括 hunyuan-lite、hunyuan-standard、hunyuan-standard-256K、hunyuan-pro、 hunyuan-code、 hunyuan-role、 hunyuan-functioncall、 hunyuan-vision。
+     * @param Model 模型名称，可选值包括 hunyuan-lite、hunyuan-standard、hunyuan-standard-256K、hunyuan-pro、 hunyuan-code、 hunyuan-role、 hunyuan-functioncall、 hunyuan-vision、 hunyuan-turbo。
 各模型介绍请阅读 [产品概述](https://cloud.tencent.com/document/product/1729/104753) 中的说明。
 
 注意：
@@ -415,16 +428,16 @@ public class ChatCompletionsRequest extends AbstractModel {
     }
 
     /**
-     * Get 可调用的工具列表，仅对 hunyuan-functioncall 模型生效。 
-     * @return Tools 可调用的工具列表，仅对 hunyuan-functioncall 模型生效。
+     * Get 可调用的工具列表，仅对 hunyuan-pro、hunyuan-turbo、hunyuan-functioncall 模型生效。 
+     * @return Tools 可调用的工具列表，仅对 hunyuan-pro、hunyuan-turbo、hunyuan-functioncall 模型生效。
      */
     public Tool [] getTools() {
         return this.Tools;
     }
 
     /**
-     * Set 可调用的工具列表，仅对 hunyuan-functioncall 模型生效。
-     * @param Tools 可调用的工具列表，仅对 hunyuan-functioncall 模型生效。
+     * Set 可调用的工具列表，仅对 hunyuan-pro、hunyuan-turbo、hunyuan-functioncall 模型生效。
+     * @param Tools 可调用的工具列表，仅对 hunyuan-pro、hunyuan-turbo、hunyuan-functioncall 模型生效。
      */
     public void setTools(Tool [] Tools) {
         this.Tools = Tools;
@@ -433,12 +446,12 @@ public class ChatCompletionsRequest extends AbstractModel {
     /**
      * Get 工具使用选项，可选值包括 none、auto、custom。
 说明：
-1. 仅对 hunyuan-functioncall 模型生效。
+1. 仅对 hunyuan-pro、hunyuan-turbo、hunyuan-functioncall 模型生效。
 2. none：不调用工具；auto：模型自行选择生成回复或调用工具；custom：强制模型调用指定的工具。
 3. 未设置时，默认值为auto 
      * @return ToolChoice 工具使用选项，可选值包括 none、auto、custom。
 说明：
-1. 仅对 hunyuan-functioncall 模型生效。
+1. 仅对 hunyuan-pro、hunyuan-turbo、hunyuan-functioncall 模型生效。
 2. none：不调用工具；auto：模型自行选择生成回复或调用工具；custom：强制模型调用指定的工具。
 3. 未设置时，默认值为auto
      */
@@ -449,12 +462,12 @@ public class ChatCompletionsRequest extends AbstractModel {
     /**
      * Set 工具使用选项，可选值包括 none、auto、custom。
 说明：
-1. 仅对 hunyuan-functioncall 模型生效。
+1. 仅对 hunyuan-pro、hunyuan-turbo、hunyuan-functioncall 模型生效。
 2. none：不调用工具；auto：模型自行选择生成回复或调用工具；custom：强制模型调用指定的工具。
 3. 未设置时，默认值为auto
      * @param ToolChoice 工具使用选项，可选值包括 none、auto、custom。
 说明：
-1. 仅对 hunyuan-functioncall 模型生效。
+1. 仅对 hunyuan-pro、hunyuan-turbo、hunyuan-functioncall 模型生效。
 2. none：不调用工具；auto：模型自行选择生成回复或调用工具；custom：强制模型调用指定的工具。
 3. 未设置时，默认值为auto
      */
@@ -542,6 +555,46 @@ public class ChatCompletionsRequest extends AbstractModel {
         this.EnableSpeedSearch = EnableSpeedSearch;
     }
 
+    /**
+     * Get 图文并茂开关。
+详细介绍请阅读 [图文并茂](https://cloud.tencent.com/document/product/1729/111178) 中的说明。
+说明：
+1. 该参数仅在功能增强（如搜索）开关开启（EnableEnhancement=true）时生效。
+2. hunyuan-lite 无图文并茂能力，该参数对 hunyuan-lite 版本不生效。
+3. 未传值时默认关闭。
+4. 开启并搜索到对应的多媒体信息时，会输出对应的多媒体地址，可以定制个性化的图文消息。 
+     * @return EnableMultimedia 图文并茂开关。
+详细介绍请阅读 [图文并茂](https://cloud.tencent.com/document/product/1729/111178) 中的说明。
+说明：
+1. 该参数仅在功能增强（如搜索）开关开启（EnableEnhancement=true）时生效。
+2. hunyuan-lite 无图文并茂能力，该参数对 hunyuan-lite 版本不生效。
+3. 未传值时默认关闭。
+4. 开启并搜索到对应的多媒体信息时，会输出对应的多媒体地址，可以定制个性化的图文消息。
+     */
+    public Boolean getEnableMultimedia() {
+        return this.EnableMultimedia;
+    }
+
+    /**
+     * Set 图文并茂开关。
+详细介绍请阅读 [图文并茂](https://cloud.tencent.com/document/product/1729/111178) 中的说明。
+说明：
+1. 该参数仅在功能增强（如搜索）开关开启（EnableEnhancement=true）时生效。
+2. hunyuan-lite 无图文并茂能力，该参数对 hunyuan-lite 版本不生效。
+3. 未传值时默认关闭。
+4. 开启并搜索到对应的多媒体信息时，会输出对应的多媒体地址，可以定制个性化的图文消息。
+     * @param EnableMultimedia 图文并茂开关。
+详细介绍请阅读 [图文并茂](https://cloud.tencent.com/document/product/1729/111178) 中的说明。
+说明：
+1. 该参数仅在功能增强（如搜索）开关开启（EnableEnhancement=true）时生效。
+2. hunyuan-lite 无图文并茂能力，该参数对 hunyuan-lite 版本不生效。
+3. 未传值时默认关闭。
+4. 开启并搜索到对应的多媒体信息时，会输出对应的多媒体地址，可以定制个性化的图文消息。
+     */
+    public void setEnableMultimedia(Boolean EnableMultimedia) {
+        this.EnableMultimedia = EnableMultimedia;
+    }
+
     public ChatCompletionsRequest() {
     }
 
@@ -595,6 +648,9 @@ public class ChatCompletionsRequest extends AbstractModel {
         if (source.EnableSpeedSearch != null) {
             this.EnableSpeedSearch = new Boolean(source.EnableSpeedSearch);
         }
+        if (source.EnableMultimedia != null) {
+            this.EnableMultimedia = new Boolean(source.EnableMultimedia);
+        }
     }
 
 
@@ -615,6 +671,7 @@ public class ChatCompletionsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SearchInfo", this.SearchInfo);
         this.setParamSimple(map, prefix + "Citation", this.Citation);
         this.setParamSimple(map, prefix + "EnableSpeedSearch", this.EnableSpeedSearch);
+        this.setParamSimple(map, prefix + "EnableMultimedia", this.EnableMultimedia);
 
     }
 }

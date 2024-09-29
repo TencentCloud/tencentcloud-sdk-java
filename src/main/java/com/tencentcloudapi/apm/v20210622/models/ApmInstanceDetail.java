@@ -256,6 +256,14 @@ public class ApmInstanceDetail extends AbstractModel {
     private Boolean PayModeEffective;
 
     /**
+    * 响应时间满意阈值
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ResponseDurationWarningThreshold")
+    @Expose
+    private Long ResponseDurationWarningThreshold;
+
+    /**
      * Get 存储使用量(MB)
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return AmountOfUsedStorage 存储使用量(MB)
@@ -835,6 +843,26 @@ public class ApmInstanceDetail extends AbstractModel {
         this.PayModeEffective = PayModeEffective;
     }
 
+    /**
+     * Get 响应时间满意阈值
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ResponseDurationWarningThreshold 响应时间满意阈值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getResponseDurationWarningThreshold() {
+        return this.ResponseDurationWarningThreshold;
+    }
+
+    /**
+     * Set 响应时间满意阈值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ResponseDurationWarningThreshold 响应时间满意阈值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setResponseDurationWarningThreshold(Long ResponseDurationWarningThreshold) {
+        this.ResponseDurationWarningThreshold = ResponseDurationWarningThreshold;
+    }
+
     public ApmInstanceDetail() {
     }
 
@@ -936,6 +964,9 @@ public class ApmInstanceDetail extends AbstractModel {
         if (source.PayModeEffective != null) {
             this.PayModeEffective = new Boolean(source.PayModeEffective);
         }
+        if (source.ResponseDurationWarningThreshold != null) {
+            this.ResponseDurationWarningThreshold = new Long(source.ResponseDurationWarningThreshold);
+        }
     }
 
 
@@ -972,6 +1003,7 @@ public class ApmInstanceDetail extends AbstractModel {
         this.setParamArraySimple(map, prefix + "CustomShowTags.", this.CustomShowTags);
         this.setParamSimple(map, prefix + "PayMode", this.PayMode);
         this.setParamSimple(map, prefix + "PayModeEffective", this.PayModeEffective);
+        this.setParamSimple(map, prefix + "ResponseDurationWarningThreshold", this.ResponseDurationWarningThreshold);
 
     }
 }

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AssociateNetworkInterfaceSecurityGroupsRequest extends AbstractModel {
 
     /**
-    * 弹性网卡实例ID。形如：eni-pxir56ns。每次请求的实例的上限为100。
+    * 弹性网卡实例ID。形如：eni-pxir56ns。每次请求的实例的上限为100。本接口不支持主网卡绑定安全组。
     */
     @SerializedName("NetworkInterfaceIds")
     @Expose
@@ -38,16 +38,16 @@ public class AssociateNetworkInterfaceSecurityGroupsRequest extends AbstractMode
     private String [] SecurityGroupIds;
 
     /**
-     * Get 弹性网卡实例ID。形如：eni-pxir56ns。每次请求的实例的上限为100。 
-     * @return NetworkInterfaceIds 弹性网卡实例ID。形如：eni-pxir56ns。每次请求的实例的上限为100。
+     * Get 弹性网卡实例ID。形如：eni-pxir56ns。每次请求的实例的上限为100。本接口不支持主网卡绑定安全组。 
+     * @return NetworkInterfaceIds 弹性网卡实例ID。形如：eni-pxir56ns。每次请求的实例的上限为100。本接口不支持主网卡绑定安全组。
      */
     public String [] getNetworkInterfaceIds() {
         return this.NetworkInterfaceIds;
     }
 
     /**
-     * Set 弹性网卡实例ID。形如：eni-pxir56ns。每次请求的实例的上限为100。
-     * @param NetworkInterfaceIds 弹性网卡实例ID。形如：eni-pxir56ns。每次请求的实例的上限为100。
+     * Set 弹性网卡实例ID。形如：eni-pxir56ns。每次请求的实例的上限为100。本接口不支持主网卡绑定安全组。
+     * @param NetworkInterfaceIds 弹性网卡实例ID。形如：eni-pxir56ns。每次请求的实例的上限为100。本接口不支持主网卡绑定安全组。
      */
     public void setNetworkInterfaceIds(String [] NetworkInterfaceIds) {
         this.NetworkInterfaceIds = NetworkInterfaceIds;

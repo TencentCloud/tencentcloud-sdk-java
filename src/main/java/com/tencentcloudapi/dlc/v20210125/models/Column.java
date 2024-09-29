@@ -31,8 +31,7 @@ public class Column extends AbstractModel {
     private String Name;
 
     /**
-    * 列类型，支持如下类型定义:
-string|tinyint|smallint|int|bigint|boolean|float|double|decimal|timestamp|date|binary|array<data_type>|map<primitive_type, data_type>|struct<col_name : data_type [COMMENT col_comment], ...>|uniontype<data_type, data_type, ...>。
+    * string|tinyint|smallint|int|bigint|boolean|float|double|decimal|timestamp|date|binary|array|map|struct|uniontype
     */
     @SerializedName("Type")
     @Expose
@@ -103,6 +102,14 @@ string|tinyint|smallint|int|bigint|boolean|float|double|decimal|timestamp|date|b
     private Boolean IsPartition;
 
     /**
+    * 数据脱敏策略信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DataMaskStrategyInfo")
+    @Expose
+    private DataMaskStrategyInfo DataMaskStrategyInfo;
+
+    /**
      * Get 列名称，不区分大小写，最大支持25个字符。 
      * @return Name 列名称，不区分大小写，最大支持25个字符。
      */
@@ -119,20 +126,16 @@ string|tinyint|smallint|int|bigint|boolean|float|double|decimal|timestamp|date|b
     }
 
     /**
-     * Get 列类型，支持如下类型定义:
-string|tinyint|smallint|int|bigint|boolean|float|double|decimal|timestamp|date|binary|array<data_type>|map<primitive_type, data_type>|struct<col_name : data_type [COMMENT col_comment], ...>|uniontype<data_type, data_type, ...>。 
-     * @return Type 列类型，支持如下类型定义:
-string|tinyint|smallint|int|bigint|boolean|float|double|decimal|timestamp|date|binary|array<data_type>|map<primitive_type, data_type>|struct<col_name : data_type [COMMENT col_comment], ...>|uniontype<data_type, data_type, ...>。
+     * Get string|tinyint|smallint|int|bigint|boolean|float|double|decimal|timestamp|date|binary|array|map|struct|uniontype 
+     * @return Type string|tinyint|smallint|int|bigint|boolean|float|double|decimal|timestamp|date|binary|array|map|struct|uniontype
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 列类型，支持如下类型定义:
-string|tinyint|smallint|int|bigint|boolean|float|double|decimal|timestamp|date|binary|array<data_type>|map<primitive_type, data_type>|struct<col_name : data_type [COMMENT col_comment], ...>|uniontype<data_type, data_type, ...>。
-     * @param Type 列类型，支持如下类型定义:
-string|tinyint|smallint|int|bigint|boolean|float|double|decimal|timestamp|date|binary|array<data_type>|map<primitive_type, data_type>|struct<col_name : data_type [COMMENT col_comment], ...>|uniontype<data_type, data_type, ...>。
+     * Set string|tinyint|smallint|int|bigint|boolean|float|double|decimal|timestamp|date|binary|array|map|struct|uniontype
+     * @param Type string|tinyint|smallint|int|bigint|boolean|float|double|decimal|timestamp|date|binary|array|map|struct|uniontype
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -298,6 +301,26 @@ string|tinyint|smallint|int|bigint|boolean|float|double|decimal|timestamp|date|b
         this.IsPartition = IsPartition;
     }
 
+    /**
+     * Get 数据脱敏策略信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DataMaskStrategyInfo 数据脱敏策略信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public DataMaskStrategyInfo getDataMaskStrategyInfo() {
+        return this.DataMaskStrategyInfo;
+    }
+
+    /**
+     * Set 数据脱敏策略信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DataMaskStrategyInfo 数据脱敏策略信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDataMaskStrategyInfo(DataMaskStrategyInfo DataMaskStrategyInfo) {
+        this.DataMaskStrategyInfo = DataMaskStrategyInfo;
+    }
+
     public Column() {
     }
 
@@ -336,6 +359,9 @@ string|tinyint|smallint|int|bigint|boolean|float|double|decimal|timestamp|date|b
         if (source.IsPartition != null) {
             this.IsPartition = new Boolean(source.IsPartition);
         }
+        if (source.DataMaskStrategyInfo != null) {
+            this.DataMaskStrategyInfo = new DataMaskStrategyInfo(source.DataMaskStrategyInfo);
+        }
     }
 
 
@@ -353,6 +379,7 @@ string|tinyint|smallint|int|bigint|boolean|float|double|decimal|timestamp|date|b
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "ModifiedTime", this.ModifiedTime);
         this.setParamSimple(map, prefix + "IsPartition", this.IsPartition);
+        this.setParamObj(map, prefix + "DataMaskStrategyInfo.", this.DataMaskStrategyInfo);
 
     }
 }

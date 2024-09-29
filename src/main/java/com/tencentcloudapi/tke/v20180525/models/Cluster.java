@@ -205,6 +205,14 @@ public class Cluster extends AbstractModel {
     private Long ClusterEtcdNodeNum;
 
     /**
+    * 本地专用集群Id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CdcId")
+    @Expose
+    private String CdcId;
+
+    /**
      * Get 集群ID 
      * @return ClusterId 集群ID
      */
@@ -640,6 +648,26 @@ public class Cluster extends AbstractModel {
         this.ClusterEtcdNodeNum = ClusterEtcdNodeNum;
     }
 
+    /**
+     * Get 本地专用集群Id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CdcId 本地专用集群Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCdcId() {
+        return this.CdcId;
+    }
+
+    /**
+     * Set 本地专用集群Id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CdcId 本地专用集群Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCdcId(String CdcId) {
+        this.CdcId = CdcId;
+    }
+
     public Cluster() {
     }
 
@@ -723,6 +751,9 @@ public class Cluster extends AbstractModel {
         if (source.ClusterEtcdNodeNum != null) {
             this.ClusterEtcdNodeNum = new Long(source.ClusterEtcdNodeNum);
         }
+        if (source.CdcId != null) {
+            this.CdcId = new String(source.CdcId);
+        }
     }
 
 
@@ -754,6 +785,7 @@ public class Cluster extends AbstractModel {
         this.setParamSimple(map, prefix + "QGPUShareEnable", this.QGPUShareEnable);
         this.setParamSimple(map, prefix + "RuntimeVersion", this.RuntimeVersion);
         this.setParamSimple(map, prefix + "ClusterEtcdNodeNum", this.ClusterEtcdNodeNum);
+        this.setParamSimple(map, prefix + "CdcId", this.CdcId);
 
     }
 }

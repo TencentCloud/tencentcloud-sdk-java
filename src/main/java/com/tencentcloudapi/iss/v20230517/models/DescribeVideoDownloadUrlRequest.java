@@ -68,6 +68,24 @@ public class DescribeVideoDownloadUrlRequest extends AbstractModel {
     private Boolean IsInternal;
 
     /**
+    * 设置URL的有效期, 最小值是1秒, 最大值是86400秒, 不设置的话, 默认是600秒
+    */
+    @SerializedName("Expires")
+    @Expose
+    private Long Expires;
+
+    /**
+    * 下载的MP4文件是否支持G711音频编码. 
+注意: 如果云端录像中的音频编码为AAC, 那么下载的MP4默认是支持AAC编码的
+如果云端录像中的音频编码为G711且 IsSupportG711设置为true时, 下载的MP4是支持G711音频编码
+如果云端录像中的音频编码为G711且 IsSupportG711设置为false时, 下载的MP4是不支持G711音频编码
+该参数只对FileType为mp4才有效, 不设置的话, 默认是false
+    */
+    @SerializedName("IsSupportG711")
+    @Expose
+    private Boolean IsSupportG711;
+
+    /**
      * Get 通道 ID 
      * @return ChannelId 通道 ID
      */
@@ -171,6 +189,54 @@ public class DescribeVideoDownloadUrlRequest extends AbstractModel {
         this.IsInternal = IsInternal;
     }
 
+    /**
+     * Get 设置URL的有效期, 最小值是1秒, 最大值是86400秒, 不设置的话, 默认是600秒 
+     * @return Expires 设置URL的有效期, 最小值是1秒, 最大值是86400秒, 不设置的话, 默认是600秒
+     */
+    public Long getExpires() {
+        return this.Expires;
+    }
+
+    /**
+     * Set 设置URL的有效期, 最小值是1秒, 最大值是86400秒, 不设置的话, 默认是600秒
+     * @param Expires 设置URL的有效期, 最小值是1秒, 最大值是86400秒, 不设置的话, 默认是600秒
+     */
+    public void setExpires(Long Expires) {
+        this.Expires = Expires;
+    }
+
+    /**
+     * Get 下载的MP4文件是否支持G711音频编码. 
+注意: 如果云端录像中的音频编码为AAC, 那么下载的MP4默认是支持AAC编码的
+如果云端录像中的音频编码为G711且 IsSupportG711设置为true时, 下载的MP4是支持G711音频编码
+如果云端录像中的音频编码为G711且 IsSupportG711设置为false时, 下载的MP4是不支持G711音频编码
+该参数只对FileType为mp4才有效, 不设置的话, 默认是false 
+     * @return IsSupportG711 下载的MP4文件是否支持G711音频编码. 
+注意: 如果云端录像中的音频编码为AAC, 那么下载的MP4默认是支持AAC编码的
+如果云端录像中的音频编码为G711且 IsSupportG711设置为true时, 下载的MP4是支持G711音频编码
+如果云端录像中的音频编码为G711且 IsSupportG711设置为false时, 下载的MP4是不支持G711音频编码
+该参数只对FileType为mp4才有效, 不设置的话, 默认是false
+     */
+    public Boolean getIsSupportG711() {
+        return this.IsSupportG711;
+    }
+
+    /**
+     * Set 下载的MP4文件是否支持G711音频编码. 
+注意: 如果云端录像中的音频编码为AAC, 那么下载的MP4默认是支持AAC编码的
+如果云端录像中的音频编码为G711且 IsSupportG711设置为true时, 下载的MP4是支持G711音频编码
+如果云端录像中的音频编码为G711且 IsSupportG711设置为false时, 下载的MP4是不支持G711音频编码
+该参数只对FileType为mp4才有效, 不设置的话, 默认是false
+     * @param IsSupportG711 下载的MP4文件是否支持G711音频编码. 
+注意: 如果云端录像中的音频编码为AAC, 那么下载的MP4默认是支持AAC编码的
+如果云端录像中的音频编码为G711且 IsSupportG711设置为true时, 下载的MP4是支持G711音频编码
+如果云端录像中的音频编码为G711且 IsSupportG711设置为false时, 下载的MP4是不支持G711音频编码
+该参数只对FileType为mp4才有效, 不设置的话, 默认是false
+     */
+    public void setIsSupportG711(Boolean IsSupportG711) {
+        this.IsSupportG711 = IsSupportG711;
+    }
+
     public DescribeVideoDownloadUrlRequest() {
     }
 
@@ -197,6 +263,12 @@ public class DescribeVideoDownloadUrlRequest extends AbstractModel {
         if (source.IsInternal != null) {
             this.IsInternal = new Boolean(source.IsInternal);
         }
+        if (source.Expires != null) {
+            this.Expires = new Long(source.Expires);
+        }
+        if (source.IsSupportG711 != null) {
+            this.IsSupportG711 = new Boolean(source.IsSupportG711);
+        }
     }
 
 
@@ -210,6 +282,8 @@ public class DescribeVideoDownloadUrlRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "FileType", this.FileType);
         this.setParamSimple(map, prefix + "IsRespActualTime", this.IsRespActualTime);
         this.setParamSimple(map, prefix + "IsInternal", this.IsInternal);
+        this.setParamSimple(map, prefix + "Expires", this.Expires);
+        this.setParamSimple(map, prefix + "IsSupportG711", this.IsSupportG711);
 
     }
 }

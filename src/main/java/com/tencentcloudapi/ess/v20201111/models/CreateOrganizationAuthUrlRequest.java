@@ -32,17 +32,25 @@ public class CreateOrganizationAuthUrlRequest extends AbstractModel {
 
     /**
     * 指定授权方式 支持多选:
-1-上传授权书方式
-2- 法人授权方式
-3- 法人身份认证方式
+
+<ul>
+<li><strong>1</strong>:上传授权书方式</li>
+<li><strong>2</strong>: 法人授权方式</li>
+<li><strong>3</strong>: 法人身份认证方式</li>
+</ul>
     */
     @SerializedName("AuthorizationTypes")
     @Expose
     private Long [] AuthorizationTypes;
 
     /**
-    * 企业名称
-EndPointType=“H5”或者"SHORT_H5"时，该参数必填
+    * 认证企业名称，请确认该名称与企业营业执照中注册的名称一致。
+
+注：
+
+1. `如果名称中包含英文括号()，请使用中文括号（）代替。`
+
+2. `EndPointType=“H5”或者"SHORT_H5"时，该参数必填`
 
     */
     @SerializedName("OrganizationName")
@@ -57,14 +65,14 @@ EndPointType=“H5”或者"SHORT_H5"时，该参数必填
     private String UniformSocialCreditCode;
 
     /**
-    * 法人姓名
+    * 企业法人的姓名
     */
     @SerializedName("LegalName")
     @Expose
     private String LegalName;
 
     /**
-    * 认证完成跳转链接
+    * 认证完成跳回的链接，最长500个字符
     */
     @SerializedName("AutoJumpUrl")
     @Expose
@@ -72,7 +80,6 @@ EndPointType=“H5”或者"SHORT_H5"时，该参数必填
 
     /**
     * 营业执照企业地址
-示例：xx省xx市xx县/区xx街道
     */
     @SerializedName("OrganizationAddress")
     @Expose
@@ -100,11 +107,10 @@ EndPointType=“H5”或者"SHORT_H5"时，该参数必填
     private String AdminIdCardNumber;
 
     /**
-    * 认证人证件类型
-支持以下类型
-<ul><li>ID_CARD : 中国大陆居民身份证  (默认值)</li>
-<li>HONGKONG_AND_MACAO : 港澳居民来往内地通行证</li>
-<li>HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)</li></ul>
+    * 认证人证件类型， 支持以下类型
+<ul><li><b>ID_CARD</b> : 中国大陆居民身份证  (默认值)</li>
+<li><b>HONGKONG_AND_MACAO</b>  : 港澳居民来往内地通行证</li>
+<li><b>HONGKONG_MACAO_AND_TAIWAN</b>  : 港澳台居民居住证(格式同居民身份证)</li></ul>
 
     */
     @SerializedName("AdminIdCardType")
@@ -112,67 +118,52 @@ EndPointType=“H5”或者"SHORT_H5"时，该参数必填
     private String AdminIdCardType;
 
     /**
-    * 营业执照的社会信用代码保持一致
-false 关闭-默认
-true 开启
+    * 对方打开链接认证时，对方填写的营业执照的社会信用代码是否与接口上传上来的要保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul>
     */
     @SerializedName("UniformSocialCreditCodeSame")
     @Expose
     private Boolean UniformSocialCreditCodeSame;
 
     /**
-    * 法人姓名保持一致
-false 关闭-默认
-true 开启
+    * 对方打开链接认证时，法人姓名是否要与接口传递上来的保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul>
     */
     @SerializedName("LegalNameSame")
     @Expose
     private Boolean LegalNameSame;
 
     /**
-    * 认证人姓名一致
-false 关闭-默认
-true 开启
-注意：
-开启后在认证过程前会校验拦截
+    * 对方打开链接认证时，认证人姓名是否要与接口传递上来的保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul>
     */
     @SerializedName("AdminNameSame")
     @Expose
     private Boolean AdminNameSame;
 
     /**
-    * 认证人居民身份证件号一致
-false 关闭-默认
-true 开启
-注意：
-开启后在认证过程前会校验拦截
+    * 对方打开链接认证时，认证人居民身份证件号是否要与接口传递上来的保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul>
     */
     @SerializedName("AdminIdCardNumberSame")
     @Expose
     private Boolean AdminIdCardNumberSame;
 
     /**
-    * 认证人手机号一致
-false 关闭-默认
-true 开启
-注意：
-开启后在认证过程前会校验拦截
+    * 对方打开链接认证时，认证人手机号是否要与接口传递上来的保持一致。<ul>
+<li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li>
+<li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li>
+</ul>
     */
     @SerializedName("AdminMobileSame")
     @Expose
     private Boolean AdminMobileSame;
 
     /**
-    * 企业名称保持一致
-false 关闭-默认
-true 开启
+    * 对方打开链接认证时，企业名称是否要与接口传递上来的保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul>
     */
     @SerializedName("OrganizationNameSame")
     @Expose
     private Boolean OrganizationNameSame;
 
     /**
-    * 营业执照正面照(PNG或JPG) base64格式, 大小不超过5M
+    * 营业执照正面照（支持PNG或JPG格式）需以base64格式提供，且文件大小不得超过5MB。
     */
     @SerializedName("BusinessLicense")
     @Expose
@@ -180,10 +171,15 @@ true 开启
 
     /**
     * 跳转链接类型：
-"PC"-PC端认证链接 
-"APP"-全屏或半屏跳转小程序链接
-“H5”-H5页面认证链接 "SHORT_H5"- H5认证短链
-"SHORT_URL"- 跳转小程序短链	
+
+<ul>
+<li><b>PC</b>：适用于PC端的认证链接</li>
+<li><b>APP</b>：用于全屏或半屏跳转的小程序链接</li>
+<li><b>SHORT_URL</b>：跳转小程序的链接的短链形式</li>
+<li><b>H5</b>：适用于H5页面的认证链接</li>
+<li><b>SHORT_H5</b>：H5认证链接的短链形式</li>
+</ul>
+
     */
     @SerializedName("Endpoint")
     @Expose
@@ -207,13 +203,19 @@ true 开启
 
     /**
      * Get 指定授权方式 支持多选:
-1-上传授权书方式
-2- 法人授权方式
-3- 法人身份认证方式 
+
+<ul>
+<li><strong>1</strong>:上传授权书方式</li>
+<li><strong>2</strong>: 法人授权方式</li>
+<li><strong>3</strong>: 法人身份认证方式</li>
+</ul> 
      * @return AuthorizationTypes 指定授权方式 支持多选:
-1-上传授权书方式
-2- 法人授权方式
-3- 法人身份认证方式
+
+<ul>
+<li><strong>1</strong>:上传授权书方式</li>
+<li><strong>2</strong>: 法人授权方式</li>
+<li><strong>3</strong>: 法人身份认证方式</li>
+</ul>
      */
     public Long [] getAuthorizationTypes() {
         return this.AuthorizationTypes;
@@ -221,24 +223,40 @@ true 开启
 
     /**
      * Set 指定授权方式 支持多选:
-1-上传授权书方式
-2- 法人授权方式
-3- 法人身份认证方式
+
+<ul>
+<li><strong>1</strong>:上传授权书方式</li>
+<li><strong>2</strong>: 法人授权方式</li>
+<li><strong>3</strong>: 法人身份认证方式</li>
+</ul>
      * @param AuthorizationTypes 指定授权方式 支持多选:
-1-上传授权书方式
-2- 法人授权方式
-3- 法人身份认证方式
+
+<ul>
+<li><strong>1</strong>:上传授权书方式</li>
+<li><strong>2</strong>: 法人授权方式</li>
+<li><strong>3</strong>: 法人身份认证方式</li>
+</ul>
      */
     public void setAuthorizationTypes(Long [] AuthorizationTypes) {
         this.AuthorizationTypes = AuthorizationTypes;
     }
 
     /**
-     * Get 企业名称
-EndPointType=“H5”或者"SHORT_H5"时，该参数必填
+     * Get 认证企业名称，请确认该名称与企业营业执照中注册的名称一致。
+
+注：
+
+1. `如果名称中包含英文括号()，请使用中文括号（）代替。`
+
+2. `EndPointType=“H5”或者"SHORT_H5"时，该参数必填`
  
-     * @return OrganizationName 企业名称
-EndPointType=“H5”或者"SHORT_H5"时，该参数必填
+     * @return OrganizationName 认证企业名称，请确认该名称与企业营业执照中注册的名称一致。
+
+注：
+
+1. `如果名称中包含英文括号()，请使用中文括号（）代替。`
+
+2. `EndPointType=“H5”或者"SHORT_H5"时，该参数必填`
 
      */
     public String getOrganizationName() {
@@ -246,11 +264,21 @@ EndPointType=“H5”或者"SHORT_H5"时，该参数必填
     }
 
     /**
-     * Set 企业名称
-EndPointType=“H5”或者"SHORT_H5"时，该参数必填
+     * Set 认证企业名称，请确认该名称与企业营业执照中注册的名称一致。
 
-     * @param OrganizationName 企业名称
-EndPointType=“H5”或者"SHORT_H5"时，该参数必填
+注：
+
+1. `如果名称中包含英文括号()，请使用中文括号（）代替。`
+
+2. `EndPointType=“H5”或者"SHORT_H5"时，该参数必填`
+
+     * @param OrganizationName 认证企业名称，请确认该名称与企业营业执照中注册的名称一致。
+
+注：
+
+1. `如果名称中包含英文括号()，请使用中文括号（）代替。`
+
+2. `EndPointType=“H5”或者"SHORT_H5"时，该参数必填`
 
      */
     public void setOrganizationName(String OrganizationName) {
@@ -274,42 +302,40 @@ EndPointType=“H5”或者"SHORT_H5"时，该参数必填
     }
 
     /**
-     * Get 法人姓名 
-     * @return LegalName 法人姓名
+     * Get 企业法人的姓名 
+     * @return LegalName 企业法人的姓名
      */
     public String getLegalName() {
         return this.LegalName;
     }
 
     /**
-     * Set 法人姓名
-     * @param LegalName 法人姓名
+     * Set 企业法人的姓名
+     * @param LegalName 企业法人的姓名
      */
     public void setLegalName(String LegalName) {
         this.LegalName = LegalName;
     }
 
     /**
-     * Get 认证完成跳转链接 
-     * @return AutoJumpUrl 认证完成跳转链接
+     * Get 认证完成跳回的链接，最长500个字符 
+     * @return AutoJumpUrl 认证完成跳回的链接，最长500个字符
      */
     public String getAutoJumpUrl() {
         return this.AutoJumpUrl;
     }
 
     /**
-     * Set 认证完成跳转链接
-     * @param AutoJumpUrl 认证完成跳转链接
+     * Set 认证完成跳回的链接，最长500个字符
+     * @param AutoJumpUrl 认证完成跳回的链接，最长500个字符
      */
     public void setAutoJumpUrl(String AutoJumpUrl) {
         this.AutoJumpUrl = AutoJumpUrl;
     }
 
     /**
-     * Get 营业执照企业地址
-示例：xx省xx市xx县/区xx街道 
+     * Get 营业执照企业地址 
      * @return OrganizationAddress 营业执照企业地址
-示例：xx省xx市xx县/区xx街道
      */
     public String getOrganizationAddress() {
         return this.OrganizationAddress;
@@ -317,9 +343,7 @@ EndPointType=“H5”或者"SHORT_H5"时，该参数必填
 
     /**
      * Set 营业执照企业地址
-示例：xx省xx市xx县/区xx街道
      * @param OrganizationAddress 营业执照企业地址
-示例：xx省xx市xx县/区xx街道
      */
     public void setOrganizationAddress(String OrganizationAddress) {
         this.OrganizationAddress = OrganizationAddress;
@@ -374,17 +398,15 @@ EndPointType=“H5”或者"SHORT_H5"时，该参数必填
     }
 
     /**
-     * Get 认证人证件类型
-支持以下类型
-<ul><li>ID_CARD : 中国大陆居民身份证  (默认值)</li>
-<li>HONGKONG_AND_MACAO : 港澳居民来往内地通行证</li>
-<li>HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)</li></ul>
+     * Get 认证人证件类型， 支持以下类型
+<ul><li><b>ID_CARD</b> : 中国大陆居民身份证  (默认值)</li>
+<li><b>HONGKONG_AND_MACAO</b>  : 港澳居民来往内地通行证</li>
+<li><b>HONGKONG_MACAO_AND_TAIWAN</b>  : 港澳台居民居住证(格式同居民身份证)</li></ul>
  
-     * @return AdminIdCardType 认证人证件类型
-支持以下类型
-<ul><li>ID_CARD : 中国大陆居民身份证  (默认值)</li>
-<li>HONGKONG_AND_MACAO : 港澳居民来往内地通行证</li>
-<li>HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)</li></ul>
+     * @return AdminIdCardType 认证人证件类型， 支持以下类型
+<ul><li><b>ID_CARD</b> : 中国大陆居民身份证  (默认值)</li>
+<li><b>HONGKONG_AND_MACAO</b>  : 港澳居民来往内地通行证</li>
+<li><b>HONGKONG_MACAO_AND_TAIWAN</b>  : 港澳台居民居住证(格式同居民身份证)</li></ul>
 
      */
     public String getAdminIdCardType() {
@@ -392,17 +414,15 @@ EndPointType=“H5”或者"SHORT_H5"时，该参数必填
     }
 
     /**
-     * Set 认证人证件类型
-支持以下类型
-<ul><li>ID_CARD : 中国大陆居民身份证  (默认值)</li>
-<li>HONGKONG_AND_MACAO : 港澳居民来往内地通行证</li>
-<li>HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)</li></ul>
+     * Set 认证人证件类型， 支持以下类型
+<ul><li><b>ID_CARD</b> : 中国大陆居民身份证  (默认值)</li>
+<li><b>HONGKONG_AND_MACAO</b>  : 港澳居民来往内地通行证</li>
+<li><b>HONGKONG_MACAO_AND_TAIWAN</b>  : 港澳台居民居住证(格式同居民身份证)</li></ul>
 
-     * @param AdminIdCardType 认证人证件类型
-支持以下类型
-<ul><li>ID_CARD : 中国大陆居民身份证  (默认值)</li>
-<li>HONGKONG_AND_MACAO : 港澳居民来往内地通行证</li>
-<li>HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)</li></ul>
+     * @param AdminIdCardType 认证人证件类型， 支持以下类型
+<ul><li><b>ID_CARD</b> : 中国大陆居民身份证  (默认值)</li>
+<li><b>HONGKONG_AND_MACAO</b>  : 港澳居民来往内地通行证</li>
+<li><b>HONGKONG_MACAO_AND_TAIWAN</b>  : 港澳台居民居住证(格式同居民身份证)</li></ul>
 
      */
     public void setAdminIdCardType(String AdminIdCardType) {
@@ -410,184 +430,124 @@ EndPointType=“H5”或者"SHORT_H5"时，该参数必填
     }
 
     /**
-     * Get 营业执照的社会信用代码保持一致
-false 关闭-默认
-true 开启 
-     * @return UniformSocialCreditCodeSame 营业执照的社会信用代码保持一致
-false 关闭-默认
-true 开启
+     * Get 对方打开链接认证时，对方填写的营业执照的社会信用代码是否与接口上传上来的要保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul> 
+     * @return UniformSocialCreditCodeSame 对方打开链接认证时，对方填写的营业执照的社会信用代码是否与接口上传上来的要保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul>
      */
     public Boolean getUniformSocialCreditCodeSame() {
         return this.UniformSocialCreditCodeSame;
     }
 
     /**
-     * Set 营业执照的社会信用代码保持一致
-false 关闭-默认
-true 开启
-     * @param UniformSocialCreditCodeSame 营业执照的社会信用代码保持一致
-false 关闭-默认
-true 开启
+     * Set 对方打开链接认证时，对方填写的营业执照的社会信用代码是否与接口上传上来的要保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul>
+     * @param UniformSocialCreditCodeSame 对方打开链接认证时，对方填写的营业执照的社会信用代码是否与接口上传上来的要保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul>
      */
     public void setUniformSocialCreditCodeSame(Boolean UniformSocialCreditCodeSame) {
         this.UniformSocialCreditCodeSame = UniformSocialCreditCodeSame;
     }
 
     /**
-     * Get 法人姓名保持一致
-false 关闭-默认
-true 开启 
-     * @return LegalNameSame 法人姓名保持一致
-false 关闭-默认
-true 开启
+     * Get 对方打开链接认证时，法人姓名是否要与接口传递上来的保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul> 
+     * @return LegalNameSame 对方打开链接认证时，法人姓名是否要与接口传递上来的保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul>
      */
     public Boolean getLegalNameSame() {
         return this.LegalNameSame;
     }
 
     /**
-     * Set 法人姓名保持一致
-false 关闭-默认
-true 开启
-     * @param LegalNameSame 法人姓名保持一致
-false 关闭-默认
-true 开启
+     * Set 对方打开链接认证时，法人姓名是否要与接口传递上来的保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul>
+     * @param LegalNameSame 对方打开链接认证时，法人姓名是否要与接口传递上来的保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul>
      */
     public void setLegalNameSame(Boolean LegalNameSame) {
         this.LegalNameSame = LegalNameSame;
     }
 
     /**
-     * Get 认证人姓名一致
-false 关闭-默认
-true 开启
-注意：
-开启后在认证过程前会校验拦截 
-     * @return AdminNameSame 认证人姓名一致
-false 关闭-默认
-true 开启
-注意：
-开启后在认证过程前会校验拦截
+     * Get 对方打开链接认证时，认证人姓名是否要与接口传递上来的保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul> 
+     * @return AdminNameSame 对方打开链接认证时，认证人姓名是否要与接口传递上来的保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul>
      */
     public Boolean getAdminNameSame() {
         return this.AdminNameSame;
     }
 
     /**
-     * Set 认证人姓名一致
-false 关闭-默认
-true 开启
-注意：
-开启后在认证过程前会校验拦截
-     * @param AdminNameSame 认证人姓名一致
-false 关闭-默认
-true 开启
-注意：
-开启后在认证过程前会校验拦截
+     * Set 对方打开链接认证时，认证人姓名是否要与接口传递上来的保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul>
+     * @param AdminNameSame 对方打开链接认证时，认证人姓名是否要与接口传递上来的保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul>
      */
     public void setAdminNameSame(Boolean AdminNameSame) {
         this.AdminNameSame = AdminNameSame;
     }
 
     /**
-     * Get 认证人居民身份证件号一致
-false 关闭-默认
-true 开启
-注意：
-开启后在认证过程前会校验拦截 
-     * @return AdminIdCardNumberSame 认证人居民身份证件号一致
-false 关闭-默认
-true 开启
-注意：
-开启后在认证过程前会校验拦截
+     * Get 对方打开链接认证时，认证人居民身份证件号是否要与接口传递上来的保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul> 
+     * @return AdminIdCardNumberSame 对方打开链接认证时，认证人居民身份证件号是否要与接口传递上来的保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul>
      */
     public Boolean getAdminIdCardNumberSame() {
         return this.AdminIdCardNumberSame;
     }
 
     /**
-     * Set 认证人居民身份证件号一致
-false 关闭-默认
-true 开启
-注意：
-开启后在认证过程前会校验拦截
-     * @param AdminIdCardNumberSame 认证人居民身份证件号一致
-false 关闭-默认
-true 开启
-注意：
-开启后在认证过程前会校验拦截
+     * Set 对方打开链接认证时，认证人居民身份证件号是否要与接口传递上来的保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul>
+     * @param AdminIdCardNumberSame 对方打开链接认证时，认证人居民身份证件号是否要与接口传递上来的保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul>
      */
     public void setAdminIdCardNumberSame(Boolean AdminIdCardNumberSame) {
         this.AdminIdCardNumberSame = AdminIdCardNumberSame;
     }
 
     /**
-     * Get 认证人手机号一致
-false 关闭-默认
-true 开启
-注意：
-开启后在认证过程前会校验拦截 
-     * @return AdminMobileSame 认证人手机号一致
-false 关闭-默认
-true 开启
-注意：
-开启后在认证过程前会校验拦截
+     * Get 对方打开链接认证时，认证人手机号是否要与接口传递上来的保持一致。<ul>
+<li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li>
+<li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li>
+</ul> 
+     * @return AdminMobileSame 对方打开链接认证时，认证人手机号是否要与接口传递上来的保持一致。<ul>
+<li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li>
+<li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li>
+</ul>
      */
     public Boolean getAdminMobileSame() {
         return this.AdminMobileSame;
     }
 
     /**
-     * Set 认证人手机号一致
-false 关闭-默认
-true 开启
-注意：
-开启后在认证过程前会校验拦截
-     * @param AdminMobileSame 认证人手机号一致
-false 关闭-默认
-true 开启
-注意：
-开启后在认证过程前会校验拦截
+     * Set 对方打开链接认证时，认证人手机号是否要与接口传递上来的保持一致。<ul>
+<li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li>
+<li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li>
+</ul>
+     * @param AdminMobileSame 对方打开链接认证时，认证人手机号是否要与接口传递上来的保持一致。<ul>
+<li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li>
+<li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li>
+</ul>
      */
     public void setAdminMobileSame(Boolean AdminMobileSame) {
         this.AdminMobileSame = AdminMobileSame;
     }
 
     /**
-     * Get 企业名称保持一致
-false 关闭-默认
-true 开启 
-     * @return OrganizationNameSame 企业名称保持一致
-false 关闭-默认
-true 开启
+     * Get 对方打开链接认证时，企业名称是否要与接口传递上来的保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul> 
+     * @return OrganizationNameSame 对方打开链接认证时，企业名称是否要与接口传递上来的保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul>
      */
     public Boolean getOrganizationNameSame() {
         return this.OrganizationNameSame;
     }
 
     /**
-     * Set 企业名称保持一致
-false 关闭-默认
-true 开启
-     * @param OrganizationNameSame 企业名称保持一致
-false 关闭-默认
-true 开启
+     * Set 对方打开链接认证时，企业名称是否要与接口传递上来的保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul>
+     * @param OrganizationNameSame 对方打开链接认证时，企业名称是否要与接口传递上来的保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul>
      */
     public void setOrganizationNameSame(Boolean OrganizationNameSame) {
         this.OrganizationNameSame = OrganizationNameSame;
     }
 
     /**
-     * Get 营业执照正面照(PNG或JPG) base64格式, 大小不超过5M 
-     * @return BusinessLicense 营业执照正面照(PNG或JPG) base64格式, 大小不超过5M
+     * Get 营业执照正面照（支持PNG或JPG格式）需以base64格式提供，且文件大小不得超过5MB。 
+     * @return BusinessLicense 营业执照正面照（支持PNG或JPG格式）需以base64格式提供，且文件大小不得超过5MB。
      */
     public String getBusinessLicense() {
         return this.BusinessLicense;
     }
 
     /**
-     * Set 营业执照正面照(PNG或JPG) base64格式, 大小不超过5M
-     * @param BusinessLicense 营业执照正面照(PNG或JPG) base64格式, 大小不超过5M
+     * Set 营业执照正面照（支持PNG或JPG格式）需以base64格式提供，且文件大小不得超过5MB。
+     * @param BusinessLicense 营业执照正面照（支持PNG或JPG格式）需以base64格式提供，且文件大小不得超过5MB。
      */
     public void setBusinessLicense(String BusinessLicense) {
         this.BusinessLicense = BusinessLicense;
@@ -595,15 +555,25 @@ true 开启
 
     /**
      * Get 跳转链接类型：
-"PC"-PC端认证链接 
-"APP"-全屏或半屏跳转小程序链接
-“H5”-H5页面认证链接 "SHORT_H5"- H5认证短链
-"SHORT_URL"- 跳转小程序短链	 
+
+<ul>
+<li><b>PC</b>：适用于PC端的认证链接</li>
+<li><b>APP</b>：用于全屏或半屏跳转的小程序链接</li>
+<li><b>SHORT_URL</b>：跳转小程序的链接的短链形式</li>
+<li><b>H5</b>：适用于H5页面的认证链接</li>
+<li><b>SHORT_H5</b>：H5认证链接的短链形式</li>
+</ul>
+ 
      * @return Endpoint 跳转链接类型：
-"PC"-PC端认证链接 
-"APP"-全屏或半屏跳转小程序链接
-“H5”-H5页面认证链接 "SHORT_H5"- H5认证短链
-"SHORT_URL"- 跳转小程序短链	
+
+<ul>
+<li><b>PC</b>：适用于PC端的认证链接</li>
+<li><b>APP</b>：用于全屏或半屏跳转的小程序链接</li>
+<li><b>SHORT_URL</b>：跳转小程序的链接的短链形式</li>
+<li><b>H5</b>：适用于H5页面的认证链接</li>
+<li><b>SHORT_H5</b>：H5认证链接的短链形式</li>
+</ul>
+
      */
     public String getEndpoint() {
         return this.Endpoint;
@@ -611,15 +581,25 @@ true 开启
 
     /**
      * Set 跳转链接类型：
-"PC"-PC端认证链接 
-"APP"-全屏或半屏跳转小程序链接
-“H5”-H5页面认证链接 "SHORT_H5"- H5认证短链
-"SHORT_URL"- 跳转小程序短链	
+
+<ul>
+<li><b>PC</b>：适用于PC端的认证链接</li>
+<li><b>APP</b>：用于全屏或半屏跳转的小程序链接</li>
+<li><b>SHORT_URL</b>：跳转小程序的链接的短链形式</li>
+<li><b>H5</b>：适用于H5页面的认证链接</li>
+<li><b>SHORT_H5</b>：H5认证链接的短链形式</li>
+</ul>
+
      * @param Endpoint 跳转链接类型：
-"PC"-PC端认证链接 
-"APP"-全屏或半屏跳转小程序链接
-“H5”-H5页面认证链接 "SHORT_H5"- H5认证短链
-"SHORT_URL"- 跳转小程序短链	
+
+<ul>
+<li><b>PC</b>：适用于PC端的认证链接</li>
+<li><b>APP</b>：用于全屏或半屏跳转的小程序链接</li>
+<li><b>SHORT_URL</b>：跳转小程序的链接的短链形式</li>
+<li><b>H5</b>：适用于H5页面的认证链接</li>
+<li><b>SHORT_H5</b>：H5认证链接的短链形式</li>
+</ul>
+
      */
     public void setEndpoint(String Endpoint) {
         this.Endpoint = Endpoint;

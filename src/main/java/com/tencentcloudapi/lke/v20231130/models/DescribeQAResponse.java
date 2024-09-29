@@ -210,6 +210,13 @@ public class DescribeQAResponse extends AbstractModel {
     private String ExpireEnd;
 
     /**
+    * 相似问列表信息
+    */
+    @SerializedName("SimilarQuestions")
+    @Expose
+    private SimilarQuestion [] SimilarQuestions;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -673,6 +680,22 @@ public class DescribeQAResponse extends AbstractModel {
     }
 
     /**
+     * Get 相似问列表信息 
+     * @return SimilarQuestions 相似问列表信息
+     */
+    public SimilarQuestion [] getSimilarQuestions() {
+        return this.SimilarQuestions;
+    }
+
+    /**
+     * Set 相似问列表信息
+     * @param SimilarQuestions 相似问列表信息
+     */
+    public void setSimilarQuestions(SimilarQuestion [] SimilarQuestions) {
+        this.SimilarQuestions = SimilarQuestions;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -774,6 +797,12 @@ public class DescribeQAResponse extends AbstractModel {
         if (source.ExpireEnd != null) {
             this.ExpireEnd = new String(source.ExpireEnd);
         }
+        if (source.SimilarQuestions != null) {
+            this.SimilarQuestions = new SimilarQuestion[source.SimilarQuestions.length];
+            for (int i = 0; i < source.SimilarQuestions.length; i++) {
+                this.SimilarQuestions[i] = new SimilarQuestion(source.SimilarQuestions[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -808,6 +837,7 @@ public class DescribeQAResponse extends AbstractModel {
         this.setParamArrayObj(map, prefix + "AttrLabels.", this.AttrLabels);
         this.setParamSimple(map, prefix + "ExpireStart", this.ExpireStart);
         this.setParamSimple(map, prefix + "ExpireEnd", this.ExpireEnd);
+        this.setParamArrayObj(map, prefix + "SimilarQuestions.", this.SimilarQuestions);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

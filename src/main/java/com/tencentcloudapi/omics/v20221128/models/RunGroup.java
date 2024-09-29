@@ -66,6 +66,24 @@ public class RunGroup extends AbstractModel {
     private String ApplicationType;
 
     /**
+    * 应用版本。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ApplicationVersion")
+    @Expose
+    private ApplicationVersion ApplicationVersion;
+
+    /**
+    * 应用访问类型：
+- PRIVATE 私有应用
+- PUBLIC 公共应用
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AccessMode")
+    @Expose
+    private String AccessMode;
+
+    /**
     * 环境ID。
     */
     @SerializedName("EnvironmentId")
@@ -109,11 +127,56 @@ public class RunGroup extends AbstractModel {
     private String Status;
 
     /**
+    * 任务批次类型 ：
+- WDL
+- NEXTFLOW
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Type")
+    @Expose
+    private String Type;
+
+    /**
+    * 工作目录。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("WorkDir")
+    @Expose
+    private String WorkDir;
+
+    /**
     * 任务输入。
     */
     @SerializedName("Input")
     @Expose
     private String Input;
+
+    /**
+    * 任务输入类型：
+- JSON: 导入JSON
+- MANUAL: 手动输入
+- COS: COS文件
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InputType")
+    @Expose
+    private String InputType;
+
+    /**
+    * 输入COS地址。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InputCosUri")
+    @Expose
+    private String InputCosUri;
+
+    /**
+    * 输入模版ID。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InputTemplateId")
+    @Expose
+    private String InputTemplateId;
 
     /**
     * WDL运行选项。
@@ -129,6 +192,14 @@ public class RunGroup extends AbstractModel {
     @SerializedName("NFOption")
     @Expose
     private NFOption NFOption;
+
+    /**
+    * 使用的缓存卷。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Volumes")
+    @Expose
+    private VolumeInfo [] Volumes;
 
     /**
     * 任务总数量。
@@ -159,6 +230,14 @@ public class RunGroup extends AbstractModel {
     private String ErrorMessage;
 
     /**
+    * 运行结果通知方式。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ResultNotify")
+    @Expose
+    private String ResultNotify;
+
+    /**
     * 创建时间。
     */
     @SerializedName("CreateTime")
@@ -187,22 +266,6 @@ public class RunGroup extends AbstractModel {
     @SerializedName("CreatorId")
     @Expose
     private String CreatorId;
-
-    /**
-    * 运行结果通知方式。
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("ResultNotify")
-    @Expose
-    private String ResultNotify;
-
-    /**
-    * 应用版本。
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("ApplicationVersion")
-    @Expose
-    private ApplicationVersion ApplicationVersion;
 
     /**
      * Get 任务批次ID。 
@@ -298,6 +361,54 @@ public class RunGroup extends AbstractModel {
      */
     public void setApplicationType(String ApplicationType) {
         this.ApplicationType = ApplicationType;
+    }
+
+    /**
+     * Get 应用版本。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ApplicationVersion 应用版本。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ApplicationVersion getApplicationVersion() {
+        return this.ApplicationVersion;
+    }
+
+    /**
+     * Set 应用版本。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ApplicationVersion 应用版本。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setApplicationVersion(ApplicationVersion ApplicationVersion) {
+        this.ApplicationVersion = ApplicationVersion;
+    }
+
+    /**
+     * Get 应用访问类型：
+- PRIVATE 私有应用
+- PUBLIC 公共应用
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AccessMode 应用访问类型：
+- PRIVATE 私有应用
+- PUBLIC 公共应用
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAccessMode() {
+        return this.AccessMode;
+    }
+
+    /**
+     * Set 应用访问类型：
+- PRIVATE 私有应用
+- PUBLIC 公共应用
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AccessMode 应用访问类型：
+- PRIVATE 私有应用
+- PUBLIC 公共应用
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAccessMode(String AccessMode) {
+        this.AccessMode = AccessMode;
     }
 
     /**
@@ -401,6 +512,54 @@ public class RunGroup extends AbstractModel {
     }
 
     /**
+     * Get 任务批次类型 ：
+- WDL
+- NEXTFLOW
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Type 任务批次类型 ：
+- WDL
+- NEXTFLOW
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set 任务批次类型 ：
+- WDL
+- NEXTFLOW
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Type 任务批次类型 ：
+- WDL
+- NEXTFLOW
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setType(String Type) {
+        this.Type = Type;
+    }
+
+    /**
+     * Get 工作目录。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WorkDir 工作目录。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getWorkDir() {
+        return this.WorkDir;
+    }
+
+    /**
+     * Set 工作目录。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WorkDir 工作目录。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWorkDir(String WorkDir) {
+        this.WorkDir = WorkDir;
+    }
+
+    /**
      * Get 任务输入。 
      * @return Input 任务输入。
      */
@@ -414,6 +573,78 @@ public class RunGroup extends AbstractModel {
      */
     public void setInput(String Input) {
         this.Input = Input;
+    }
+
+    /**
+     * Get 任务输入类型：
+- JSON: 导入JSON
+- MANUAL: 手动输入
+- COS: COS文件
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InputType 任务输入类型：
+- JSON: 导入JSON
+- MANUAL: 手动输入
+- COS: COS文件
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getInputType() {
+        return this.InputType;
+    }
+
+    /**
+     * Set 任务输入类型：
+- JSON: 导入JSON
+- MANUAL: 手动输入
+- COS: COS文件
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InputType 任务输入类型：
+- JSON: 导入JSON
+- MANUAL: 手动输入
+- COS: COS文件
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInputType(String InputType) {
+        this.InputType = InputType;
+    }
+
+    /**
+     * Get 输入COS地址。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InputCosUri 输入COS地址。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getInputCosUri() {
+        return this.InputCosUri;
+    }
+
+    /**
+     * Set 输入COS地址。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InputCosUri 输入COS地址。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInputCosUri(String InputCosUri) {
+        this.InputCosUri = InputCosUri;
+    }
+
+    /**
+     * Get 输入模版ID。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InputTemplateId 输入模版ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getInputTemplateId() {
+        return this.InputTemplateId;
+    }
+
+    /**
+     * Set 输入模版ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InputTemplateId 输入模版ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInputTemplateId(String InputTemplateId) {
+        this.InputTemplateId = InputTemplateId;
     }
 
     /**
@@ -450,6 +681,26 @@ public class RunGroup extends AbstractModel {
      */
     public void setNFOption(NFOption NFOption) {
         this.NFOption = NFOption;
+    }
+
+    /**
+     * Get 使用的缓存卷。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Volumes 使用的缓存卷。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public VolumeInfo [] getVolumes() {
+        return this.Volumes;
+    }
+
+    /**
+     * Set 使用的缓存卷。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Volumes 使用的缓存卷。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVolumes(VolumeInfo [] Volumes) {
+        this.Volumes = Volumes;
     }
 
     /**
@@ -514,6 +765,26 @@ public class RunGroup extends AbstractModel {
      */
     public void setErrorMessage(String ErrorMessage) {
         this.ErrorMessage = ErrorMessage;
+    }
+
+    /**
+     * Get 运行结果通知方式。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ResultNotify 运行结果通知方式。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getResultNotify() {
+        return this.ResultNotify;
+    }
+
+    /**
+     * Set 运行结果通知方式。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ResultNotify 运行结果通知方式。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setResultNotify(String ResultNotify) {
+        this.ResultNotify = ResultNotify;
     }
 
     /**
@@ -588,46 +859,6 @@ public class RunGroup extends AbstractModel {
         this.CreatorId = CreatorId;
     }
 
-    /**
-     * Get 运行结果通知方式。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ResultNotify 运行结果通知方式。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getResultNotify() {
-        return this.ResultNotify;
-    }
-
-    /**
-     * Set 运行结果通知方式。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResultNotify 运行结果通知方式。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setResultNotify(String ResultNotify) {
-        this.ResultNotify = ResultNotify;
-    }
-
-    /**
-     * Get 应用版本。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ApplicationVersion 应用版本。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public ApplicationVersion getApplicationVersion() {
-        return this.ApplicationVersion;
-    }
-
-    /**
-     * Set 应用版本。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param ApplicationVersion 应用版本。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setApplicationVersion(ApplicationVersion ApplicationVersion) {
-        this.ApplicationVersion = ApplicationVersion;
-    }
-
     public RunGroup() {
     }
 
@@ -654,6 +885,12 @@ public class RunGroup extends AbstractModel {
         if (source.ApplicationType != null) {
             this.ApplicationType = new String(source.ApplicationType);
         }
+        if (source.ApplicationVersion != null) {
+            this.ApplicationVersion = new ApplicationVersion(source.ApplicationVersion);
+        }
+        if (source.AccessMode != null) {
+            this.AccessMode = new String(source.AccessMode);
+        }
         if (source.EnvironmentId != null) {
             this.EnvironmentId = new String(source.EnvironmentId);
         }
@@ -672,14 +909,35 @@ public class RunGroup extends AbstractModel {
         if (source.Status != null) {
             this.Status = new String(source.Status);
         }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
+        if (source.WorkDir != null) {
+            this.WorkDir = new String(source.WorkDir);
+        }
         if (source.Input != null) {
             this.Input = new String(source.Input);
+        }
+        if (source.InputType != null) {
+            this.InputType = new String(source.InputType);
+        }
+        if (source.InputCosUri != null) {
+            this.InputCosUri = new String(source.InputCosUri);
+        }
+        if (source.InputTemplateId != null) {
+            this.InputTemplateId = new String(source.InputTemplateId);
         }
         if (source.Option != null) {
             this.Option = new RunOption(source.Option);
         }
         if (source.NFOption != null) {
             this.NFOption = new NFOption(source.NFOption);
+        }
+        if (source.Volumes != null) {
+            this.Volumes = new VolumeInfo[source.Volumes.length];
+            for (int i = 0; i < source.Volumes.length; i++) {
+                this.Volumes[i] = new VolumeInfo(source.Volumes[i]);
+            }
         }
         if (source.TotalRun != null) {
             this.TotalRun = new Long(source.TotalRun);
@@ -696,6 +954,9 @@ public class RunGroup extends AbstractModel {
         if (source.ErrorMessage != null) {
             this.ErrorMessage = new String(source.ErrorMessage);
         }
+        if (source.ResultNotify != null) {
+            this.ResultNotify = new String(source.ResultNotify);
+        }
         if (source.CreateTime != null) {
             this.CreateTime = new String(source.CreateTime);
         }
@@ -707,12 +968,6 @@ public class RunGroup extends AbstractModel {
         }
         if (source.CreatorId != null) {
             this.CreatorId = new String(source.CreatorId);
-        }
-        if (source.ResultNotify != null) {
-            this.ResultNotify = new String(source.ResultNotify);
-        }
-        if (source.ApplicationVersion != null) {
-            this.ApplicationVersion = new ApplicationVersion(source.ApplicationVersion);
         }
     }
 
@@ -727,25 +982,32 @@ public class RunGroup extends AbstractModel {
         this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
         this.setParamSimple(map, prefix + "ApplicationName", this.ApplicationName);
         this.setParamSimple(map, prefix + "ApplicationType", this.ApplicationType);
+        this.setParamObj(map, prefix + "ApplicationVersion.", this.ApplicationVersion);
+        this.setParamSimple(map, prefix + "AccessMode", this.AccessMode);
         this.setParamSimple(map, prefix + "EnvironmentId", this.EnvironmentId);
         this.setParamSimple(map, prefix + "EnvironmentName", this.EnvironmentName);
         this.setParamSimple(map, prefix + "TableId", this.TableId);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "WorkDir", this.WorkDir);
         this.setParamSimple(map, prefix + "Input", this.Input);
+        this.setParamSimple(map, prefix + "InputType", this.InputType);
+        this.setParamSimple(map, prefix + "InputCosUri", this.InputCosUri);
+        this.setParamSimple(map, prefix + "InputTemplateId", this.InputTemplateId);
         this.setParamObj(map, prefix + "Option.", this.Option);
         this.setParamObj(map, prefix + "NFOption.", this.NFOption);
+        this.setParamArrayObj(map, prefix + "Volumes.", this.Volumes);
         this.setParamSimple(map, prefix + "TotalRun", this.TotalRun);
         this.setParamArrayObj(map, prefix + "RunStatusCounts.", this.RunStatusCounts);
         this.setParamObj(map, prefix + "ExecutionTime.", this.ExecutionTime);
         this.setParamSimple(map, prefix + "ErrorMessage", this.ErrorMessage);
+        this.setParamSimple(map, prefix + "ResultNotify", this.ResultNotify);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "Creator", this.Creator);
         this.setParamSimple(map, prefix + "CreatorId", this.CreatorId);
-        this.setParamSimple(map, prefix + "ResultNotify", this.ResultNotify);
-        this.setParamObj(map, prefix + "ApplicationVersion.", this.ApplicationVersion);
 
     }
 }

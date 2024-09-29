@@ -68,6 +68,22 @@ public class ObjectType extends AbstractModel {
     private Boolean ObjectHasNewAction;
 
     /**
+    * 对应在平台架构图中的资源类型名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ObjectPlatformName")
+    @Expose
+    private String ObjectPlatformName;
+
+    /**
+    * 1：平台支持的对象 2：应用支持的部分对象
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ObjectSupportType")
+    @Expose
+    private Long ObjectSupportType;
+
+    /**
      * Get 对象类型ID 
      * @return ObjectTypeId 对象类型ID
      */
@@ -171,6 +187,46 @@ public class ObjectType extends AbstractModel {
         this.ObjectHasNewAction = ObjectHasNewAction;
     }
 
+    /**
+     * Get 对应在平台架构图中的资源类型名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ObjectPlatformName 对应在平台架构图中的资源类型名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getObjectPlatformName() {
+        return this.ObjectPlatformName;
+    }
+
+    /**
+     * Set 对应在平台架构图中的资源类型名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ObjectPlatformName 对应在平台架构图中的资源类型名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setObjectPlatformName(String ObjectPlatformName) {
+        this.ObjectPlatformName = ObjectPlatformName;
+    }
+
+    /**
+     * Get 1：平台支持的对象 2：应用支持的部分对象
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ObjectSupportType 1：平台支持的对象 2：应用支持的部分对象
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getObjectSupportType() {
+        return this.ObjectSupportType;
+    }
+
+    /**
+     * Set 1：平台支持的对象 2：应用支持的部分对象
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ObjectSupportType 1：平台支持的对象 2：应用支持的部分对象
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setObjectSupportType(Long ObjectSupportType) {
+        this.ObjectSupportType = ObjectSupportType;
+    }
+
     public ObjectType() {
     }
 
@@ -197,6 +253,12 @@ public class ObjectType extends AbstractModel {
         if (source.ObjectHasNewAction != null) {
             this.ObjectHasNewAction = new Boolean(source.ObjectHasNewAction);
         }
+        if (source.ObjectPlatformName != null) {
+            this.ObjectPlatformName = new String(source.ObjectPlatformName);
+        }
+        if (source.ObjectSupportType != null) {
+            this.ObjectSupportType = new Long(source.ObjectSupportType);
+        }
     }
 
 
@@ -210,6 +272,8 @@ public class ObjectType extends AbstractModel {
         this.setParamObj(map, prefix + "ObjectTypeParams.", this.ObjectTypeParams);
         this.setParamObj(map, prefix + "ObjectTypeJsonParse.", this.ObjectTypeJsonParse);
         this.setParamSimple(map, prefix + "ObjectHasNewAction", this.ObjectHasNewAction);
+        this.setParamSimple(map, prefix + "ObjectPlatformName", this.ObjectPlatformName);
+        this.setParamSimple(map, prefix + "ObjectSupportType", this.ObjectSupportType);
 
     }
 }

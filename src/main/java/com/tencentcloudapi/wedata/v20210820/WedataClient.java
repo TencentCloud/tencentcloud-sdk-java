@@ -1282,7 +1282,7 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *获取待提交任务预提交校验信息
+     *获取待提交任务预提交校验信息（注意：工作流编号或者任务编号列表，必须填一项）
      * @param req DescribePendingSubmitTaskListRequest
      * @return DescribePendingSubmitTaskListResponse
      * @throws TencentCloudSDKException
@@ -1700,6 +1700,17 @@ public class WedataClient extends AbstractClient{
     public DescribeTableMetasResponse DescribeTableMetas(DescribeTableMetasRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeTableMetas", DescribeTableMetasResponse.class);
+    }
+
+    /**
+     *查询表的分区详情信息
+     * @param req DescribeTablePartitionsRequest
+     * @return DescribeTablePartitionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTablePartitionsResponse DescribeTablePartitions(DescribeTablePartitionsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTablePartitions", DescribeTablePartitionsResponse.class);
     }
 
     /**

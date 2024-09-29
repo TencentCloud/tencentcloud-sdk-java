@@ -875,6 +875,17 @@ public class OrganizationClient extends AbstractClient{
     }
 
     /**
+     *邀请组织成员
+     * @param req InviteOrganizationMemberRequest
+     * @return InviteOrganizationMemberResponse
+     * @throws TencentCloudSDKException
+     */
+    public InviteOrganizationMemberResponse InviteOrganizationMember(InviteOrganizationMemberRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "InviteOrganizationMember", InviteOrganizationMemberResponse.class);
+    }
+
+    /**
      *查询SAML签名证书列表
      * @param req ListExternalSAMLIdPCertificatesRequest
      * @return ListExternalSAMLIdPCertificatesResponse
@@ -1180,6 +1191,17 @@ public class OrganizationClient extends AbstractClient{
     public SetExternalSAMLIdentityProviderResponse SetExternalSAMLIdentityProvider(SetExternalSAMLIdentityProviderRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "SetExternalSAMLIdentityProvider", SetExternalSAMLIdentityProviderResponse.class);
+    }
+
+    /**
+     *为权限配置修改自定义策略
+     * @param req UpdateCustomPolicyForRoleConfigurationRequest
+     * @return UpdateCustomPolicyForRoleConfigurationResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateCustomPolicyForRoleConfigurationResponse UpdateCustomPolicyForRoleConfiguration(UpdateCustomPolicyForRoleConfigurationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateCustomPolicyForRoleConfiguration", UpdateCustomPolicyForRoleConfigurationResponse.class);
     }
 
     /**

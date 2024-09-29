@@ -73,6 +73,13 @@ public class ModifyUserRoleRequest extends AbstractModel {
     private String AppUserId;
 
     /**
+    * 是否开启手机验证码登录（0 关闭，1 开启）
+    */
+    @SerializedName("LoginSecurityStatus")
+    @Expose
+    private Long LoginSecurityStatus;
+
+    /**
      * Get 用户ID 
      * @return UserId 用户ID
      */
@@ -184,6 +191,22 @@ public class ModifyUserRoleRequest extends AbstractModel {
         this.AppUserId = AppUserId;
     }
 
+    /**
+     * Get 是否开启手机验证码登录（0 关闭，1 开启） 
+     * @return LoginSecurityStatus 是否开启手机验证码登录（0 关闭，1 开启）
+     */
+    public Long getLoginSecurityStatus() {
+        return this.LoginSecurityStatus;
+    }
+
+    /**
+     * Set 是否开启手机验证码登录（0 关闭，1 开启）
+     * @param LoginSecurityStatus 是否开启手机验证码登录（0 关闭，1 开启）
+     */
+    public void setLoginSecurityStatus(Long LoginSecurityStatus) {
+        this.LoginSecurityStatus = LoginSecurityStatus;
+    }
+
     public ModifyUserRoleRequest() {
     }
 
@@ -216,6 +239,9 @@ public class ModifyUserRoleRequest extends AbstractModel {
         if (source.AppUserId != null) {
             this.AppUserId = new String(source.AppUserId);
         }
+        if (source.LoginSecurityStatus != null) {
+            this.LoginSecurityStatus = new Long(source.LoginSecurityStatus);
+        }
     }
 
 
@@ -230,6 +256,7 @@ public class ModifyUserRoleRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "PhoneNumber", this.PhoneNumber);
         this.setParamSimple(map, prefix + "AreaCode", this.AreaCode);
         this.setParamSimple(map, prefix + "AppUserId", this.AppUserId);
+        this.setParamSimple(map, prefix + "LoginSecurityStatus", this.LoginSecurityStatus);
 
     }
 }

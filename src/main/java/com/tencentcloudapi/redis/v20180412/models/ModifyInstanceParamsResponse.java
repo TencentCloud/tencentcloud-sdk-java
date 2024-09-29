@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyInstanceParamsResponse extends AbstractModel {
 
     /**
-    * 说明修改参数配置是否成功。<br><li>true：指修改成功；<br><li>false：指修改失败。<br>
+    * 说明修改参数配置是否成功。<br><li>true：指修改成功；</li><li>false：指修改失败。</li>
     */
     @SerializedName("Changed")
     @Expose
@@ -45,16 +45,16 @@ public class ModifyInstanceParamsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 说明修改参数配置是否成功。<br><li>true：指修改成功；<br><li>false：指修改失败。<br> 
-     * @return Changed 说明修改参数配置是否成功。<br><li>true：指修改成功；<br><li>false：指修改失败。<br>
+     * Get 说明修改参数配置是否成功。<br><li>true：指修改成功；</li><li>false：指修改失败。</li> 
+     * @return Changed 说明修改参数配置是否成功。<br><li>true：指修改成功；</li><li>false：指修改失败。</li>
      */
     public Boolean getChanged() {
         return this.Changed;
     }
 
     /**
-     * Set 说明修改参数配置是否成功。<br><li>true：指修改成功；<br><li>false：指修改失败。<br>
-     * @param Changed 说明修改参数配置是否成功。<br><li>true：指修改成功；<br><li>false：指修改失败。<br>
+     * Set 说明修改参数配置是否成功。<br><li>true：指修改成功；</li><li>false：指修改失败。</li>
+     * @param Changed 说明修改参数配置是否成功。<br><li>true：指修改成功；</li><li>false：指修改失败。</li>
      */
     public void setChanged(Boolean Changed) {
         this.Changed = Changed;

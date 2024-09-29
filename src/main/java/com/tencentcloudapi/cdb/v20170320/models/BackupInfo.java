@@ -143,7 +143,7 @@ public class BackupInfo extends AbstractModel {
     private RemoteBackupInfo [] RemoteInfo;
 
     /**
-    * 存储方式，0-常规存储，1-归档存储，默认为0
+    * 存储方式，0-常规存储，1-归档存储，2-标准存储，默认为0
     */
     @SerializedName("CosStorageType")
     @Expose
@@ -445,16 +445,16 @@ public class BackupInfo extends AbstractModel {
     }
 
     /**
-     * Get 存储方式，0-常规存储，1-归档存储，默认为0 
-     * @return CosStorageType 存储方式，0-常规存储，1-归档存储，默认为0
+     * Get 存储方式，0-常规存储，1-归档存储，2-标准存储，默认为0 
+     * @return CosStorageType 存储方式，0-常规存储，1-归档存储，2-标准存储，默认为0
      */
     public Long getCosStorageType() {
         return this.CosStorageType;
     }
 
     /**
-     * Set 存储方式，0-常规存储，1-归档存储，默认为0
-     * @param CosStorageType 存储方式，0-常规存储，1-归档存储，默认为0
+     * Set 存储方式，0-常规存储，1-归档存储，2-标准存储，默认为0
+     * @param CosStorageType 存储方式，0-常规存储，1-归档存储，2-标准存储，默认为0
      */
     public void setCosStorageType(Long CosStorageType) {
         this.CosStorageType = CosStorageType;

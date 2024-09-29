@@ -24,28 +24,26 @@ import java.util.HashMap;
 public class CreateUserMobileChangeUrlResponse extends AbstractModel {
 
     /**
-    * 腾讯电子签小程序的实名认证链接。
-如果没有传递，默认值是 HTTP。 链接的有效期均是 7 天。
+    * 腾讯电子签小程序的实名认证链接。 如果没有传递，默认值是 HTTP。 链接的有效期均是 7 天。
 
-- 如果EndPoint是APP，
-得到的链接类似于pages/guide/index?to=MOBILE_CHANGE_INTENTION&shortKey=yDCZHUyOcExAlcOvNod0, 用法可以参考描述中的"跳转到小程序的实现"
+<b>1.如果EndPoint是APP</b>，
+得到的链接类似于<a href="">pages/guide/index?to=MOBILE_CHANGE_INTENTION&shortKey=yDCZHUyOcExAlcOvNod0</a>, 用法可以参考描述中的"跳转到小程序的实现"
 
-- 如果EndPoint是HTTP，
-得到的链接类似于https://res.ess.tencent.cn/cdn/h5-activity/jump-mp.html?to=MOBILE_CHANGE_INTENTION&shortKey=yDCZHUyOcChrfpaswT0d，点击后会跳转到腾讯电子签小程序进行签署
+<b>2.如果EndPoint是HTTP</b>，
+得到的链接类似于<a href="">https://res.ess.tencent.cn/cdn/h5-activity/jump-mp.html?to=MOBILE_CHANGE_INTENTION&shortKey=yDCZHUyOcChrfpaswT0d</a>，点击后会跳转到腾讯电子签小程序进行签署
 
-- 如果EndPoint是HTTP_SHORT_URL，
-得到的链接类似于https://essurl.cn/2n**42Nd，点击后会跳转到腾讯电子签小程序进行签署
+<b>3.如果EndPoint是HTTP_SHORT_URL</b>，
+得到的链接类似于<a href="">https://essurl.cn/2n**42Nd</a>，点击后会跳转到腾讯电子签小程序进行签署
 
+注： <font color="red">生成的链路后面不能再增加参数</font>
 
-注： 生成的链路后面不能再增加参数
-示例值：https://essurl.cn/2n**42Nd
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-    * 链接失效期限如下：
+    * 链接失效期限，为Unix时间戳（单位秒），有如下规则：
 
 <ul>
 <li>如果指定更换绑定手机号的用户(指定用户ID或姓名等信息)，则设定的链接失效期限为7天后。</li>
@@ -64,85 +62,77 @@ public class CreateUserMobileChangeUrlResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 腾讯电子签小程序的实名认证链接。
-如果没有传递，默认值是 HTTP。 链接的有效期均是 7 天。
+     * Get 腾讯电子签小程序的实名认证链接。 如果没有传递，默认值是 HTTP。 链接的有效期均是 7 天。
 
-- 如果EndPoint是APP，
-得到的链接类似于pages/guide/index?to=MOBILE_CHANGE_INTENTION&shortKey=yDCZHUyOcExAlcOvNod0, 用法可以参考描述中的"跳转到小程序的实现"
+<b>1.如果EndPoint是APP</b>，
+得到的链接类似于<a href="">pages/guide/index?to=MOBILE_CHANGE_INTENTION&shortKey=yDCZHUyOcExAlcOvNod0</a>, 用法可以参考描述中的"跳转到小程序的实现"
 
-- 如果EndPoint是HTTP，
-得到的链接类似于https://res.ess.tencent.cn/cdn/h5-activity/jump-mp.html?to=MOBILE_CHANGE_INTENTION&shortKey=yDCZHUyOcChrfpaswT0d，点击后会跳转到腾讯电子签小程序进行签署
+<b>2.如果EndPoint是HTTP</b>，
+得到的链接类似于<a href="">https://res.ess.tencent.cn/cdn/h5-activity/jump-mp.html?to=MOBILE_CHANGE_INTENTION&shortKey=yDCZHUyOcChrfpaswT0d</a>，点击后会跳转到腾讯电子签小程序进行签署
 
-- 如果EndPoint是HTTP_SHORT_URL，
-得到的链接类似于https://essurl.cn/2n**42Nd，点击后会跳转到腾讯电子签小程序进行签署
+<b>3.如果EndPoint是HTTP_SHORT_URL</b>，
+得到的链接类似于<a href="">https://essurl.cn/2n**42Nd</a>，点击后会跳转到腾讯电子签小程序进行签署
 
+注： <font color="red">生成的链路后面不能再增加参数</font>
+ 
+     * @return Url 腾讯电子签小程序的实名认证链接。 如果没有传递，默认值是 HTTP。 链接的有效期均是 7 天。
 
-注： 生成的链路后面不能再增加参数
-示例值：https://essurl.cn/2n**42Nd 
-     * @return Url 腾讯电子签小程序的实名认证链接。
-如果没有传递，默认值是 HTTP。 链接的有效期均是 7 天。
+<b>1.如果EndPoint是APP</b>，
+得到的链接类似于<a href="">pages/guide/index?to=MOBILE_CHANGE_INTENTION&shortKey=yDCZHUyOcExAlcOvNod0</a>, 用法可以参考描述中的"跳转到小程序的实现"
 
-- 如果EndPoint是APP，
-得到的链接类似于pages/guide/index?to=MOBILE_CHANGE_INTENTION&shortKey=yDCZHUyOcExAlcOvNod0, 用法可以参考描述中的"跳转到小程序的实现"
+<b>2.如果EndPoint是HTTP</b>，
+得到的链接类似于<a href="">https://res.ess.tencent.cn/cdn/h5-activity/jump-mp.html?to=MOBILE_CHANGE_INTENTION&shortKey=yDCZHUyOcChrfpaswT0d</a>，点击后会跳转到腾讯电子签小程序进行签署
 
-- 如果EndPoint是HTTP，
-得到的链接类似于https://res.ess.tencent.cn/cdn/h5-activity/jump-mp.html?to=MOBILE_CHANGE_INTENTION&shortKey=yDCZHUyOcChrfpaswT0d，点击后会跳转到腾讯电子签小程序进行签署
+<b>3.如果EndPoint是HTTP_SHORT_URL</b>，
+得到的链接类似于<a href="">https://essurl.cn/2n**42Nd</a>，点击后会跳转到腾讯电子签小程序进行签署
 
-- 如果EndPoint是HTTP_SHORT_URL，
-得到的链接类似于https://essurl.cn/2n**42Nd，点击后会跳转到腾讯电子签小程序进行签署
+注： <font color="red">生成的链路后面不能再增加参数</font>
 
-
-注： 生成的链路后面不能再增加参数
-示例值：https://essurl.cn/2n**42Nd
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set 腾讯电子签小程序的实名认证链接。
-如果没有传递，默认值是 HTTP。 链接的有效期均是 7 天。
+     * Set 腾讯电子签小程序的实名认证链接。 如果没有传递，默认值是 HTTP。 链接的有效期均是 7 天。
 
-- 如果EndPoint是APP，
-得到的链接类似于pages/guide/index?to=MOBILE_CHANGE_INTENTION&shortKey=yDCZHUyOcExAlcOvNod0, 用法可以参考描述中的"跳转到小程序的实现"
+<b>1.如果EndPoint是APP</b>，
+得到的链接类似于<a href="">pages/guide/index?to=MOBILE_CHANGE_INTENTION&shortKey=yDCZHUyOcExAlcOvNod0</a>, 用法可以参考描述中的"跳转到小程序的实现"
 
-- 如果EndPoint是HTTP，
-得到的链接类似于https://res.ess.tencent.cn/cdn/h5-activity/jump-mp.html?to=MOBILE_CHANGE_INTENTION&shortKey=yDCZHUyOcChrfpaswT0d，点击后会跳转到腾讯电子签小程序进行签署
+<b>2.如果EndPoint是HTTP</b>，
+得到的链接类似于<a href="">https://res.ess.tencent.cn/cdn/h5-activity/jump-mp.html?to=MOBILE_CHANGE_INTENTION&shortKey=yDCZHUyOcChrfpaswT0d</a>，点击后会跳转到腾讯电子签小程序进行签署
 
-- 如果EndPoint是HTTP_SHORT_URL，
-得到的链接类似于https://essurl.cn/2n**42Nd，点击后会跳转到腾讯电子签小程序进行签署
+<b>3.如果EndPoint是HTTP_SHORT_URL</b>，
+得到的链接类似于<a href="">https://essurl.cn/2n**42Nd</a>，点击后会跳转到腾讯电子签小程序进行签署
 
+注： <font color="red">生成的链路后面不能再增加参数</font>
 
-注： 生成的链路后面不能再增加参数
-示例值：https://essurl.cn/2n**42Nd
-     * @param Url 腾讯电子签小程序的实名认证链接。
-如果没有传递，默认值是 HTTP。 链接的有效期均是 7 天。
+     * @param Url 腾讯电子签小程序的实名认证链接。 如果没有传递，默认值是 HTTP。 链接的有效期均是 7 天。
 
-- 如果EndPoint是APP，
-得到的链接类似于pages/guide/index?to=MOBILE_CHANGE_INTENTION&shortKey=yDCZHUyOcExAlcOvNod0, 用法可以参考描述中的"跳转到小程序的实现"
+<b>1.如果EndPoint是APP</b>，
+得到的链接类似于<a href="">pages/guide/index?to=MOBILE_CHANGE_INTENTION&shortKey=yDCZHUyOcExAlcOvNod0</a>, 用法可以参考描述中的"跳转到小程序的实现"
 
-- 如果EndPoint是HTTP，
-得到的链接类似于https://res.ess.tencent.cn/cdn/h5-activity/jump-mp.html?to=MOBILE_CHANGE_INTENTION&shortKey=yDCZHUyOcChrfpaswT0d，点击后会跳转到腾讯电子签小程序进行签署
+<b>2.如果EndPoint是HTTP</b>，
+得到的链接类似于<a href="">https://res.ess.tencent.cn/cdn/h5-activity/jump-mp.html?to=MOBILE_CHANGE_INTENTION&shortKey=yDCZHUyOcChrfpaswT0d</a>，点击后会跳转到腾讯电子签小程序进行签署
 
-- 如果EndPoint是HTTP_SHORT_URL，
-得到的链接类似于https://essurl.cn/2n**42Nd，点击后会跳转到腾讯电子签小程序进行签署
+<b>3.如果EndPoint是HTTP_SHORT_URL</b>，
+得到的链接类似于<a href="">https://essurl.cn/2n**42Nd</a>，点击后会跳转到腾讯电子签小程序进行签署
 
+注： <font color="red">生成的链路后面不能再增加参数</font>
 
-注： 生成的链路后面不能再增加参数
-示例值：https://essurl.cn/2n**42Nd
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * Get 链接失效期限如下：
+     * Get 链接失效期限，为Unix时间戳（单位秒），有如下规则：
 
 <ul>
 <li>如果指定更换绑定手机号的用户(指定用户ID或姓名等信息)，则设定的链接失效期限为7天后。</li>
 <li>如果没有指定更换绑定手机号的用户，则生成通用跳转到个人换手机号的界面，链接不会过期。</li>
 </ul> 
-     * @return ExpireTime 链接失效期限如下：
+     * @return ExpireTime 链接失效期限，为Unix时间戳（单位秒），有如下规则：
 
 <ul>
 <li>如果指定更换绑定手机号的用户(指定用户ID或姓名等信息)，则设定的链接失效期限为7天后。</li>
@@ -154,13 +144,13 @@ public class CreateUserMobileChangeUrlResponse extends AbstractModel {
     }
 
     /**
-     * Set 链接失效期限如下：
+     * Set 链接失效期限，为Unix时间戳（单位秒），有如下规则：
 
 <ul>
 <li>如果指定更换绑定手机号的用户(指定用户ID或姓名等信息)，则设定的链接失效期限为7天后。</li>
 <li>如果没有指定更换绑定手机号的用户，则生成通用跳转到个人换手机号的界面，链接不会过期。</li>
 </ul>
-     * @param ExpireTime 链接失效期限如下：
+     * @param ExpireTime 链接失效期限，为Unix时间戳（单位秒），有如下规则：
 
 <ul>
 <li>如果指定更换绑定手机号的用户(指定用户ID或姓名等信息)，则设定的链接失效期限为7天后。</li>

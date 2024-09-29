@@ -24,6 +24,13 @@ import java.util.HashMap;
 public class ModifyJavaMemShellsStatusRequest extends AbstractModel {
 
     /**
+    * 目标处理状态： 0 - 待处理 1 - 已加白 2 - 已删除 3 - 已忽略 4 - 已手动处理
+    */
+    @SerializedName("Status")
+    @Expose
+    private Long Status;
+
+    /**
     * 事件Id数组
     */
     @SerializedName("Ids")
@@ -31,11 +38,27 @@ public class ModifyJavaMemShellsStatusRequest extends AbstractModel {
     private Long [] Ids;
 
     /**
-    * 目标处理状态： 0 - 待处理 1 - 已加白 2 - 已删除 3 - 已忽略 4 - 已手动处理
+    * 是否更新全部，只支持忽略、已处理、删除
     */
-    @SerializedName("Status")
+    @SerializedName("UpdateAll")
     @Expose
-    private Long Status;
+    private Boolean UpdateAll;
+
+    /**
+     * Get 目标处理状态： 0 - 待处理 1 - 已加白 2 - 已删除 3 - 已忽略 4 - 已手动处理 
+     * @return Status 目标处理状态： 0 - 待处理 1 - 已加白 2 - 已删除 3 - 已忽略 4 - 已手动处理
+     */
+    public Long getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 目标处理状态： 0 - 待处理 1 - 已加白 2 - 已删除 3 - 已忽略 4 - 已手动处理
+     * @param Status 目标处理状态： 0 - 待处理 1 - 已加白 2 - 已删除 3 - 已忽略 4 - 已手动处理
+     */
+    public void setStatus(Long Status) {
+        this.Status = Status;
+    }
 
     /**
      * Get 事件Id数组 
@@ -54,19 +77,19 @@ public class ModifyJavaMemShellsStatusRequest extends AbstractModel {
     }
 
     /**
-     * Get 目标处理状态： 0 - 待处理 1 - 已加白 2 - 已删除 3 - 已忽略 4 - 已手动处理 
-     * @return Status 目标处理状态： 0 - 待处理 1 - 已加白 2 - 已删除 3 - 已忽略 4 - 已手动处理
+     * Get 是否更新全部，只支持忽略、已处理、删除 
+     * @return UpdateAll 是否更新全部，只支持忽略、已处理、删除
      */
-    public Long getStatus() {
-        return this.Status;
+    public Boolean getUpdateAll() {
+        return this.UpdateAll;
     }
 
     /**
-     * Set 目标处理状态： 0 - 待处理 1 - 已加白 2 - 已删除 3 - 已忽略 4 - 已手动处理
-     * @param Status 目标处理状态： 0 - 待处理 1 - 已加白 2 - 已删除 3 - 已忽略 4 - 已手动处理
+     * Set 是否更新全部，只支持忽略、已处理、删除
+     * @param UpdateAll 是否更新全部，只支持忽略、已处理、删除
      */
-    public void setStatus(Long Status) {
-        this.Status = Status;
+    public void setUpdateAll(Boolean UpdateAll) {
+        this.UpdateAll = UpdateAll;
     }
 
     public ModifyJavaMemShellsStatusRequest() {
@@ -77,14 +100,17 @@ public class ModifyJavaMemShellsStatusRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ModifyJavaMemShellsStatusRequest(ModifyJavaMemShellsStatusRequest source) {
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
         if (source.Ids != null) {
             this.Ids = new Long[source.Ids.length];
             for (int i = 0; i < source.Ids.length; i++) {
                 this.Ids[i] = new Long(source.Ids[i]);
             }
         }
-        if (source.Status != null) {
-            this.Status = new Long(source.Status);
+        if (source.UpdateAll != null) {
+            this.UpdateAll = new Boolean(source.UpdateAll);
         }
     }
 
@@ -93,8 +119,9 @@ public class ModifyJavaMemShellsStatusRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "Ids.", this.Ids);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamArraySimple(map, prefix + "Ids.", this.Ids);
+        this.setParamSimple(map, prefix + "UpdateAll", this.UpdateAll);
 
     }
 }

@@ -152,6 +152,13 @@ public class ModifyApmInstanceRequest extends AbstractModel {
     private Long PayMode;
 
     /**
+    * 响应时间满意阈值
+    */
+    @SerializedName("ResponseDurationWarningThreshold")
+    @Expose
+    private Long ResponseDurationWarningThreshold;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -447,6 +454,22 @@ public class ModifyApmInstanceRequest extends AbstractModel {
         this.PayMode = PayMode;
     }
 
+    /**
+     * Get 响应时间满意阈值 
+     * @return ResponseDurationWarningThreshold 响应时间满意阈值
+     */
+    public Long getResponseDurationWarningThreshold() {
+        return this.ResponseDurationWarningThreshold;
+    }
+
+    /**
+     * Set 响应时间满意阈值
+     * @param ResponseDurationWarningThreshold 响应时间满意阈值
+     */
+    public void setResponseDurationWarningThreshold(Long ResponseDurationWarningThreshold) {
+        this.ResponseDurationWarningThreshold = ResponseDurationWarningThreshold;
+    }
+
     public ModifyApmInstanceRequest() {
     }
 
@@ -515,6 +538,9 @@ public class ModifyApmInstanceRequest extends AbstractModel {
         if (source.PayMode != null) {
             this.PayMode = new Long(source.PayMode);
         }
+        if (source.ResponseDurationWarningThreshold != null) {
+            this.ResponseDurationWarningThreshold = new Long(source.ResponseDurationWarningThreshold);
+        }
     }
 
 
@@ -540,6 +566,7 @@ public class ModifyApmInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "LogSource", this.LogSource);
         this.setParamArraySimple(map, prefix + "CustomShowTags.", this.CustomShowTags);
         this.setParamSimple(map, prefix + "PayMode", this.PayMode);
+        this.setParamSimple(map, prefix + "ResponseDurationWarningThreshold", this.ResponseDurationWarningThreshold);
 
     }
 }

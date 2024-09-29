@@ -105,6 +105,46 @@ public class JavaMemShellInfo extends AbstractModel {
     private String Uuid;
 
     /**
+    * 类名
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ClassName")
+    @Expose
+    private String ClassName;
+
+    /**
+    * 父类名
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SuperClassName")
+    @Expose
+    private String SuperClassName;
+
+    /**
+    * 继承的接口
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Interfaces")
+    @Expose
+    private String Interfaces;
+
+    /**
+    * 注释
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Annotations")
+    @Expose
+    private String Annotations;
+
+    /**
+    * 所属的类加载器
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LoaderClassName")
+    @Expose
+    private String LoaderClassName;
+
+    /**
      * Get 事件ID 
      * @return Id 事件ID
      */
@@ -296,6 +336,106 @@ public class JavaMemShellInfo extends AbstractModel {
         this.Uuid = Uuid;
     }
 
+    /**
+     * Get 类名
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ClassName 类名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getClassName() {
+        return this.ClassName;
+    }
+
+    /**
+     * Set 类名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ClassName 类名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setClassName(String ClassName) {
+        this.ClassName = ClassName;
+    }
+
+    /**
+     * Get 父类名
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SuperClassName 父类名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSuperClassName() {
+        return this.SuperClassName;
+    }
+
+    /**
+     * Set 父类名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SuperClassName 父类名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSuperClassName(String SuperClassName) {
+        this.SuperClassName = SuperClassName;
+    }
+
+    /**
+     * Get 继承的接口
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Interfaces 继承的接口
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getInterfaces() {
+        return this.Interfaces;
+    }
+
+    /**
+     * Set 继承的接口
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Interfaces 继承的接口
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInterfaces(String Interfaces) {
+        this.Interfaces = Interfaces;
+    }
+
+    /**
+     * Get 注释
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Annotations 注释
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAnnotations() {
+        return this.Annotations;
+    }
+
+    /**
+     * Set 注释
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Annotations 注释
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAnnotations(String Annotations) {
+        this.Annotations = Annotations;
+    }
+
+    /**
+     * Get 所属的类加载器
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LoaderClassName 所属的类加载器
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLoaderClassName() {
+        return this.LoaderClassName;
+    }
+
+    /**
+     * Set 所属的类加载器
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LoaderClassName 所属的类加载器
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLoaderClassName(String LoaderClassName) {
+        this.LoaderClassName = LoaderClassName;
+    }
+
     public JavaMemShellInfo() {
     }
 
@@ -337,6 +477,21 @@ public class JavaMemShellInfo extends AbstractModel {
         if (source.Uuid != null) {
             this.Uuid = new String(source.Uuid);
         }
+        if (source.ClassName != null) {
+            this.ClassName = new String(source.ClassName);
+        }
+        if (source.SuperClassName != null) {
+            this.SuperClassName = new String(source.SuperClassName);
+        }
+        if (source.Interfaces != null) {
+            this.Interfaces = new String(source.Interfaces);
+        }
+        if (source.Annotations != null) {
+            this.Annotations = new String(source.Annotations);
+        }
+        if (source.LoaderClassName != null) {
+            this.LoaderClassName = new String(source.LoaderClassName);
+        }
     }
 
 
@@ -355,6 +510,11 @@ public class JavaMemShellInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Quuid", this.Quuid);
         this.setParamObj(map, prefix + "MachineExtraInfo.", this.MachineExtraInfo);
         this.setParamSimple(map, prefix + "Uuid", this.Uuid);
+        this.setParamSimple(map, prefix + "ClassName", this.ClassName);
+        this.setParamSimple(map, prefix + "SuperClassName", this.SuperClassName);
+        this.setParamSimple(map, prefix + "Interfaces", this.Interfaces);
+        this.setParamSimple(map, prefix + "Annotations", this.Annotations);
+        this.setParamSimple(map, prefix + "LoaderClassName", this.LoaderClassName);
 
     }
 }

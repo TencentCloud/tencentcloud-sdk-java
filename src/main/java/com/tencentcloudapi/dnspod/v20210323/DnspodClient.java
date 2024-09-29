@@ -405,6 +405,17 @@ public class DnspodClient extends AbstractClient{
     }
 
     /**
+     *获取指定域名的已共享列表
+     * @param req DescribeDomainShareUserListRequest
+     * @return DescribeDomainShareUserListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDomainShareUserListResponse DescribeDomainShareUserList(DescribeDomainShareUserListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDomainShareUserList", DescribeDomainShareUserListResponse.class);
+    }
+
+    /**
      *获取域名Whois信息
      * @param req DescribeDomainWhoisRequest
      * @return DescribeDomainWhoisResponse

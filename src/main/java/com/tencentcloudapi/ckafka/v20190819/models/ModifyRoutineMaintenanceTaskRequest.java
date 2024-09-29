@@ -38,7 +38,7 @@ public class ModifyRoutineMaintenanceTaskRequest extends AbstractModel {
     private String MaintenanceType;
 
     /**
-    * 自动化运维子类别
+    * INSTANCE_STORAGE_CAPACITY(磁盘自动扩容)/MESSAGE_RETENTION_PERIOD(磁盘动态消息保留策略)
     */
     @SerializedName("MaintenanceSubtype")
     @Expose
@@ -133,16 +133,16 @@ public class ModifyRoutineMaintenanceTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get 自动化运维子类别 
-     * @return MaintenanceSubtype 自动化运维子类别
+     * Get INSTANCE_STORAGE_CAPACITY(磁盘自动扩容)/MESSAGE_RETENTION_PERIOD(磁盘动态消息保留策略) 
+     * @return MaintenanceSubtype INSTANCE_STORAGE_CAPACITY(磁盘自动扩容)/MESSAGE_RETENTION_PERIOD(磁盘动态消息保留策略)
      */
     public String getMaintenanceSubtype() {
         return this.MaintenanceSubtype;
     }
 
     /**
-     * Set 自动化运维子类别
-     * @param MaintenanceSubtype 自动化运维子类别
+     * Set INSTANCE_STORAGE_CAPACITY(磁盘自动扩容)/MESSAGE_RETENTION_PERIOD(磁盘动态消息保留策略)
+     * @param MaintenanceSubtype INSTANCE_STORAGE_CAPACITY(磁盘自动扩容)/MESSAGE_RETENTION_PERIOD(磁盘动态消息保留策略)
      */
     public void setMaintenanceSubtype(String MaintenanceSubtype) {
         this.MaintenanceSubtype = MaintenanceSubtype;

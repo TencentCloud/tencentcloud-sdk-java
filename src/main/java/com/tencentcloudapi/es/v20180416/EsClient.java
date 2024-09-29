@@ -348,6 +348,17 @@ public class EsClient extends AbstractClient{
     }
 
     /**
+     *space维度的kibana获取登录token
+     * @param req DescribeSpaceKibanaToolsRequest
+     * @return DescribeSpaceKibanaToolsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSpaceKibanaToolsResponse DescribeSpaceKibanaTools(DescribeSpaceKibanaToolsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSpaceKibanaTools", DescribeSpaceKibanaToolsResponse.class);
+    }
+
+    /**
      *查询快照信息接口
      * @param req DescribeUserCosSnapshotListRequest
      * @return DescribeUserCosSnapshotListResponse
@@ -411,6 +422,17 @@ public class EsClient extends AbstractClient{
     public InquirePriceRenewInstanceResponse InquirePriceRenewInstance(InquirePriceRenewInstanceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "InquirePriceRenewInstance", InquirePriceRenewInstanceResponse.class);
+    }
+
+    /**
+     *ES集群安装模型接口
+     * @param req InstallInstanceModelRequest
+     * @return InstallInstanceModelResponse
+     * @throws TencentCloudSDKException
+     */
+    public InstallInstanceModelResponse InstallInstanceModel(InstallInstanceModelRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "InstallInstanceModel", InstallInstanceModelResponse.class);
     }
 
     /**

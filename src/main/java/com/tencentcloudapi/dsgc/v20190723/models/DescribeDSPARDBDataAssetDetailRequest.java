@@ -38,6 +38,22 @@ public class DescribeDSPARDBDataAssetDetailRequest extends AbstractModel {
     private Long ComplianceId;
 
     /**
+    * 过滤数组。支持的Name：
+DataSourceID 数据源ID
+DbName 数据库名称
+CategoryID 敏感数据分类ID
+RuleID 规则ID
+LevelID 敏感分级ID
+ResourceRegion 资源所在地域
+SensitiveField 过滤敏感字段，可选值为1，或者无此SensitiveField字段
+DataSourceType 数据源类型，不填默认过滤非自建的所有关系型数据源类型，填selfbuilt-db只过滤自建类型
+注意：每个name默认支持最多5个values。
+    */
+    @SerializedName("Filters")
+    @Expose
+    private Filter [] Filters;
+
+    /**
     * 偏移量，默认为0。
     */
     @SerializedName("Offset")
@@ -89,6 +105,58 @@ DESC降序
      */
     public void setComplianceId(Long ComplianceId) {
         this.ComplianceId = ComplianceId;
+    }
+
+    /**
+     * Get 过滤数组。支持的Name：
+DataSourceID 数据源ID
+DbName 数据库名称
+CategoryID 敏感数据分类ID
+RuleID 规则ID
+LevelID 敏感分级ID
+ResourceRegion 资源所在地域
+SensitiveField 过滤敏感字段，可选值为1，或者无此SensitiveField字段
+DataSourceType 数据源类型，不填默认过滤非自建的所有关系型数据源类型，填selfbuilt-db只过滤自建类型
+注意：每个name默认支持最多5个values。 
+     * @return Filters 过滤数组。支持的Name：
+DataSourceID 数据源ID
+DbName 数据库名称
+CategoryID 敏感数据分类ID
+RuleID 规则ID
+LevelID 敏感分级ID
+ResourceRegion 资源所在地域
+SensitiveField 过滤敏感字段，可选值为1，或者无此SensitiveField字段
+DataSourceType 数据源类型，不填默认过滤非自建的所有关系型数据源类型，填selfbuilt-db只过滤自建类型
+注意：每个name默认支持最多5个values。
+     */
+    public Filter [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * Set 过滤数组。支持的Name：
+DataSourceID 数据源ID
+DbName 数据库名称
+CategoryID 敏感数据分类ID
+RuleID 规则ID
+LevelID 敏感分级ID
+ResourceRegion 资源所在地域
+SensitiveField 过滤敏感字段，可选值为1，或者无此SensitiveField字段
+DataSourceType 数据源类型，不填默认过滤非自建的所有关系型数据源类型，填selfbuilt-db只过滤自建类型
+注意：每个name默认支持最多5个values。
+     * @param Filters 过滤数组。支持的Name：
+DataSourceID 数据源ID
+DbName 数据库名称
+CategoryID 敏感数据分类ID
+RuleID 规则ID
+LevelID 敏感分级ID
+ResourceRegion 资源所在地域
+SensitiveField 过滤敏感字段，可选值为1，或者无此SensitiveField字段
+DataSourceType 数据源类型，不填默认过滤非自建的所有关系型数据源类型，填selfbuilt-db只过滤自建类型
+注意：每个name默认支持最多5个values。
+     */
+    public void setFilters(Filter [] Filters) {
+        this.Filters = Filters;
     }
 
     /**
@@ -157,6 +225,12 @@ DESC降序
         if (source.ComplianceId != null) {
             this.ComplianceId = new Long(source.ComplianceId);
         }
+        if (source.Filters != null) {
+            this.Filters = new Filter[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new Filter(source.Filters[i]);
+            }
+        }
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
         }
@@ -175,6 +249,7 @@ DESC降序
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DspaId", this.DspaId);
         this.setParamSimple(map, prefix + "ComplianceId", this.ComplianceId);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "CreditScore", this.CreditScore);

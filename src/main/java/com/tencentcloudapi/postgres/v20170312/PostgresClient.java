@@ -127,6 +127,17 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
+     *此接口用于创建数据库，需指定数据库名及所有者。
+     * @param req CreateDatabaseRequest
+     * @return CreateDatabaseResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDatabaseResponse CreateDatabase(CreateDatabaseRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateDatabase", CreateDatabaseResponse.class);
+    }
+
+    /**
      *本接口 (CreateInstances) 用于创建一个或者多个PostgreSQL实例，通过此接口创建的实例无需进行初始化，可直接使用。
 <li>实例创建成功后将自动开机启动，实例状态变为“运行中”。</li>
 <li>预付费实例的购买会预先扣除本次实例购买所需金额，按小时后付费实例购买会预先冻结本次实例购买一小时内所需金额，在调用本接口前请确保账户余额充足。</li>
@@ -538,6 +549,17 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
+     *查询专属集群
+     * @param req DescribeDedicatedClustersRequest
+     * @return DescribeDedicatedClustersResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDedicatedClustersResponse DescribeDedicatedClusters(DescribeDedicatedClustersRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDedicatedClusters", DescribeDedicatedClustersResponse.class);
+    }
+
+    /**
      *本接口（DescribeDefaultParameters）主要用于查询某个数据库版本和引擎支持的所有参数。
      * @param req DescribeDefaultParametersRequest
      * @return DescribeDefaultParametersResponse
@@ -933,6 +955,17 @@ public class PostgresClient extends AbstractClient{
     public ModifyDBInstancesProjectResponse ModifyDBInstancesProject(ModifyDBInstancesProjectRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyDBInstancesProject", ModifyDBInstancesProjectResponse.class);
+    }
+
+    /**
+     *修改数据库所有者
+     * @param req ModifyDatabaseOwnerRequest
+     * @return ModifyDatabaseOwnerResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDatabaseOwnerResponse ModifyDatabaseOwner(ModifyDatabaseOwnerRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDatabaseOwner", ModifyDatabaseOwnerResponse.class);
     }
 
     /**

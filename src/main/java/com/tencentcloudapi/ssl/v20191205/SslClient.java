@@ -83,6 +83,17 @@ public class SslClient extends AbstractClient{
     }
 
     /**
+     *检查证书域名验证
+     * @param req CheckCertificateDomainVerificationRequest
+     * @return CheckCertificateDomainVerificationResponse
+     * @throws TencentCloudSDKException
+     */
+    public CheckCertificateDomainVerificationResponse CheckCertificateDomainVerification(CheckCertificateDomainVerificationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CheckCertificateDomainVerification", CheckCertificateDomainVerificationResponse.class);
+    }
+
+    /**
      *提交证书订单。
      * @param req CommitCertificateInformationRequest
      * @return CommitCertificateInformationResponse

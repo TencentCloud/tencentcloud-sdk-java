@@ -545,6 +545,17 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *删除表
+     * @param req DeleteTableRequest
+     * @return DeleteTableResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteTableResponse DeleteTable(DeleteTableRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteTable", DeleteTableResponse.class);
+    }
+
+    /**
      *本接口（RegisterThirdPartyAccessUser）用于移除第三方平台访问
      * @param req DeleteThirdPartyAccessUserRequest
      * @return DeleteThirdPartyAccessUserResponse
@@ -699,7 +710,7 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
-     *本接口（DescribeDataEngines）用于查询DataEngines信息列表
+     *本接口（DescribeDataEngines）用于查询DataEngines信息列表.
      * @param req DescribeDataEnginesRequest
      * @return DescribeDataEnginesResponse
      * @throws TencentCloudSDKException
@@ -1389,6 +1400,17 @@ public class DlcClient extends AbstractClient{
     public ModifyWorkGroupResponse ModifyWorkGroup(ModifyWorkGroupRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyWorkGroup", ModifyWorkGroupResponse.class);
+    }
+
+    /**
+     *本接口（QueryInternalTableWarehouse）用于获取原生表warehouse路径
+     * @param req QueryInternalTableWarehouseRequest
+     * @return QueryInternalTableWarehouseResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryInternalTableWarehouseResponse QueryInternalTableWarehouse(QueryInternalTableWarehouseRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "QueryInternalTableWarehouse", QueryInternalTableWarehouseResponse.class);
     }
 
     /**

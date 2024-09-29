@@ -32,7 +32,7 @@ public class STTConfig extends AbstractModel {
 4.     English = "en" # 英语
 5.     Vietnamese = "vi" # 越南语
 6.     Japanese = "ja" # 日语
-7.     Korean = "ko" # 汉语
+7.     Korean = "ko" # 韩语
 8.     Indonesia = "id" # 印度尼西亚语
 9.     Thai = "th" # 泰语
 10.     Portuguese = "pt" # 葡萄牙语
@@ -66,6 +66,14 @@ public class STTConfig extends AbstractModel {
     private String [] AlternativeLanguage;
 
     /**
+    * 语音识别vad的时间，范围为240-2000，默认为1000，单位为ms。更小的值会让语音识别分句更快。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VadSilenceTime")
+    @Expose
+    private Long VadSilenceTime;
+
+    /**
      * Get 语音识别支持的语言，默认是"zh" 中文
 目前全量支持的语言如下，等号左面是语言英文名，右面是Language字段需要填写的值，该值遵循[ISO639](https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes)：
 1.     Chinese = "zh" # 中文
@@ -74,7 +82,7 @@ public class STTConfig extends AbstractModel {
 4.     English = "en" # 英语
 5.     Vietnamese = "vi" # 越南语
 6.     Japanese = "ja" # 日语
-7.     Korean = "ko" # 汉语
+7.     Korean = "ko" # 韩语
 8.     Indonesia = "id" # 印度尼西亚语
 9.     Thai = "th" # 泰语
 10.     Portuguese = "pt" # 葡萄牙语
@@ -100,7 +108,7 @@ public class STTConfig extends AbstractModel {
 4.     English = "en" # 英语
 5.     Vietnamese = "vi" # 越南语
 6.     Japanese = "ja" # 日语
-7.     Korean = "ko" # 汉语
+7.     Korean = "ko" # 韩语
 8.     Indonesia = "id" # 印度尼西亚语
 9.     Thai = "th" # 泰语
 10.     Portuguese = "pt" # 葡萄牙语
@@ -132,7 +140,7 @@ public class STTConfig extends AbstractModel {
 4.     English = "en" # 英语
 5.     Vietnamese = "vi" # 越南语
 6.     Japanese = "ja" # 日语
-7.     Korean = "ko" # 汉语
+7.     Korean = "ko" # 韩语
 8.     Indonesia = "id" # 印度尼西亚语
 9.     Thai = "th" # 泰语
 10.     Portuguese = "pt" # 葡萄牙语
@@ -158,7 +166,7 @@ public class STTConfig extends AbstractModel {
 4.     English = "en" # 英语
 5.     Vietnamese = "vi" # 越南语
 6.     Japanese = "ja" # 日语
-7.     Korean = "ko" # 汉语
+7.     Korean = "ko" # 韩语
 8.     Indonesia = "id" # 印度尼西亚语
 9.     Thai = "th" # 泰语
 10.     Portuguese = "pt" # 葡萄牙语
@@ -209,6 +217,26 @@ public class STTConfig extends AbstractModel {
         this.AlternativeLanguage = AlternativeLanguage;
     }
 
+    /**
+     * Get 语音识别vad的时间，范围为240-2000，默认为1000，单位为ms。更小的值会让语音识别分句更快。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VadSilenceTime 语音识别vad的时间，范围为240-2000，默认为1000，单位为ms。更小的值会让语音识别分句更快。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getVadSilenceTime() {
+        return this.VadSilenceTime;
+    }
+
+    /**
+     * Set 语音识别vad的时间，范围为240-2000，默认为1000，单位为ms。更小的值会让语音识别分句更快。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VadSilenceTime 语音识别vad的时间，范围为240-2000，默认为1000，单位为ms。更小的值会让语音识别分句更快。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVadSilenceTime(Long VadSilenceTime) {
+        this.VadSilenceTime = VadSilenceTime;
+    }
+
     public STTConfig() {
     }
 
@@ -226,6 +254,9 @@ public class STTConfig extends AbstractModel {
                 this.AlternativeLanguage[i] = new String(source.AlternativeLanguage[i]);
             }
         }
+        if (source.VadSilenceTime != null) {
+            this.VadSilenceTime = new Long(source.VadSilenceTime);
+        }
     }
 
 
@@ -235,6 +266,7 @@ public class STTConfig extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Language", this.Language);
         this.setParamArraySimple(map, prefix + "AlternativeLanguage.", this.AlternativeLanguage);
+        this.setParamSimple(map, prefix + "VadSilenceTime", this.VadSilenceTime);
 
     }
 }

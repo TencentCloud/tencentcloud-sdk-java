@@ -61,6 +61,13 @@ public class DescribeAdaptiveDynamicStreamingTemplatesRequest extends AbstractMo
     private Long PureAudio;
 
     /**
+    * 自适应转码模板标识过滤条件，长度限制：64 个字符
+    */
+    @SerializedName("Name")
+    @Expose
+    private String Name;
+
+    /**
      * Get 转自适应码流模板唯一标识过滤条件，数组长度限制：100。 
      * @return Definitions 转自适应码流模板唯一标识过滤条件，数组长度限制：100。
      */
@@ -148,6 +155,22 @@ public class DescribeAdaptiveDynamicStreamingTemplatesRequest extends AbstractMo
         this.PureAudio = PureAudio;
     }
 
+    /**
+     * Get 自适应转码模板标识过滤条件，长度限制：64 个字符 
+     * @return Name 自适应转码模板标识过滤条件，长度限制：64 个字符
+     */
+    public String getName() {
+        return this.Name;
+    }
+
+    /**
+     * Set 自适应转码模板标识过滤条件，长度限制：64 个字符
+     * @param Name 自适应转码模板标识过滤条件，长度限制：64 个字符
+     */
+    public void setName(String Name) {
+        this.Name = Name;
+    }
+
     public DescribeAdaptiveDynamicStreamingTemplatesRequest() {
     }
 
@@ -174,6 +197,9 @@ public class DescribeAdaptiveDynamicStreamingTemplatesRequest extends AbstractMo
         if (source.PureAudio != null) {
             this.PureAudio = new Long(source.PureAudio);
         }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
     }
 
 
@@ -186,6 +212,7 @@ public class DescribeAdaptiveDynamicStreamingTemplatesRequest extends AbstractMo
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "PureAudio", this.PureAudio);
+        this.setParamSimple(map, prefix + "Name", this.Name);
 
     }
 }

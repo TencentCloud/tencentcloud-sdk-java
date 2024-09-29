@@ -52,7 +52,7 @@ public class CreateAccountRequest extends AbstractModel {
     private String Password;
 
     /**
-    * 是否创建为只读账号，0：否:； 1：只读账号，该账号的sql请求优先选择备机执行，备机延迟时选择主机执行；2：只读账号，优先选择备机执行，备机延迟时操作报错；3：只读账号，优先选择备机执行，忽略备机延迟只读备机；
+    * 是否创建为只读账号，0：否； 1：只读账号，该账号的sql请求优先选择备机执行，备机延迟时选择主机执行；2：只读账号，优先选择备机执行，备机延迟时操作报错；3：只读账号，优先选择备机执行，忽略备机延迟只读备机；
     */
     @SerializedName("ReadOnly")
     @Expose
@@ -85,6 +85,13 @@ public class CreateAccountRequest extends AbstractModel {
     @SerializedName("MaxUserConnections")
     @Expose
     private Long MaxUserConnections;
+
+    /**
+    * 使用GetPublicKey返回的RSA2048公钥加密后的密码
+    */
+    @SerializedName("EncryptedPassword")
+    @Expose
+    private String EncryptedPassword;
 
     /**
      * Get 实例 ID，形如：tdsql-ow728lmc，可以通过 DescribeDBInstances 查询实例详情获得。 
@@ -151,16 +158,16 @@ public class CreateAccountRequest extends AbstractModel {
     }
 
     /**
-     * Get 是否创建为只读账号，0：否:； 1：只读账号，该账号的sql请求优先选择备机执行，备机延迟时选择主机执行；2：只读账号，优先选择备机执行，备机延迟时操作报错；3：只读账号，优先选择备机执行，忽略备机延迟只读备机； 
-     * @return ReadOnly 是否创建为只读账号，0：否:； 1：只读账号，该账号的sql请求优先选择备机执行，备机延迟时选择主机执行；2：只读账号，优先选择备机执行，备机延迟时操作报错；3：只读账号，优先选择备机执行，忽略备机延迟只读备机；
+     * Get 是否创建为只读账号，0：否； 1：只读账号，该账号的sql请求优先选择备机执行，备机延迟时选择主机执行；2：只读账号，优先选择备机执行，备机延迟时操作报错；3：只读账号，优先选择备机执行，忽略备机延迟只读备机； 
+     * @return ReadOnly 是否创建为只读账号，0：否； 1：只读账号，该账号的sql请求优先选择备机执行，备机延迟时选择主机执行；2：只读账号，优先选择备机执行，备机延迟时操作报错；3：只读账号，优先选择备机执行，忽略备机延迟只读备机；
      */
     public Long getReadOnly() {
         return this.ReadOnly;
     }
 
     /**
-     * Set 是否创建为只读账号，0：否:； 1：只读账号，该账号的sql请求优先选择备机执行，备机延迟时选择主机执行；2：只读账号，优先选择备机执行，备机延迟时操作报错；3：只读账号，优先选择备机执行，忽略备机延迟只读备机；
-     * @param ReadOnly 是否创建为只读账号，0：否:； 1：只读账号，该账号的sql请求优先选择备机执行，备机延迟时选择主机执行；2：只读账号，优先选择备机执行，备机延迟时操作报错；3：只读账号，优先选择备机执行，忽略备机延迟只读备机；
+     * Set 是否创建为只读账号，0：否； 1：只读账号，该账号的sql请求优先选择备机执行，备机延迟时选择主机执行；2：只读账号，优先选择备机执行，备机延迟时操作报错；3：只读账号，优先选择备机执行，忽略备机延迟只读备机；
+     * @param ReadOnly 是否创建为只读账号，0：否； 1：只读账号，该账号的sql请求优先选择备机执行，备机延迟时选择主机执行；2：只读账号，优先选择备机执行，备机延迟时操作报错；3：只读账号，优先选择备机执行，忽略备机延迟只读备机；
      */
     public void setReadOnly(Long ReadOnly) {
         this.ReadOnly = ReadOnly;
@@ -230,6 +237,22 @@ public class CreateAccountRequest extends AbstractModel {
         this.MaxUserConnections = MaxUserConnections;
     }
 
+    /**
+     * Get 使用GetPublicKey返回的RSA2048公钥加密后的密码 
+     * @return EncryptedPassword 使用GetPublicKey返回的RSA2048公钥加密后的密码
+     */
+    public String getEncryptedPassword() {
+        return this.EncryptedPassword;
+    }
+
+    /**
+     * Set 使用GetPublicKey返回的RSA2048公钥加密后的密码
+     * @param EncryptedPassword 使用GetPublicKey返回的RSA2048公钥加密后的密码
+     */
+    public void setEncryptedPassword(String EncryptedPassword) {
+        this.EncryptedPassword = EncryptedPassword;
+    }
+
     public CreateAccountRequest() {
     }
 
@@ -265,6 +288,9 @@ public class CreateAccountRequest extends AbstractModel {
         if (source.MaxUserConnections != null) {
             this.MaxUserConnections = new Long(source.MaxUserConnections);
         }
+        if (source.EncryptedPassword != null) {
+            this.EncryptedPassword = new String(source.EncryptedPassword);
+        }
     }
 
 
@@ -281,6 +307,7 @@ public class CreateAccountRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "DelayThresh", this.DelayThresh);
         this.setParamSimple(map, prefix + "SlaveConst", this.SlaveConst);
         this.setParamSimple(map, prefix + "MaxUserConnections", this.MaxUserConnections);
+        this.setParamSimple(map, prefix + "EncryptedPassword", this.EncryptedPassword);
 
     }
 }

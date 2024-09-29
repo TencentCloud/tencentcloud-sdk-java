@@ -72,6 +72,14 @@ public class Context extends AbstractModel {
     private MsgFileInfo [] FileInfos;
 
     /**
+    * 回复方式，15：澄清确认回复
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ReplyMethod")
+    @Expose
+    private Long ReplyMethod;
+
+    /**
      * Get 消息记录ID信息
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return RecordBizId 消息记录ID信息
@@ -191,6 +199,26 @@ public class Context extends AbstractModel {
         this.FileInfos = FileInfos;
     }
 
+    /**
+     * Get 回复方式，15：澄清确认回复
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ReplyMethod 回复方式，15：澄清确认回复
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getReplyMethod() {
+        return this.ReplyMethod;
+    }
+
+    /**
+     * Set 回复方式，15：澄清确认回复
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ReplyMethod 回复方式，15：澄清确认回复
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setReplyMethod(Long ReplyMethod) {
+        this.ReplyMethod = ReplyMethod;
+    }
+
     public Context() {
     }
 
@@ -220,6 +248,9 @@ public class Context extends AbstractModel {
                 this.FileInfos[i] = new MsgFileInfo(source.FileInfos[i]);
             }
         }
+        if (source.ReplyMethod != null) {
+            this.ReplyMethod = new Long(source.ReplyMethod);
+        }
     }
 
 
@@ -233,6 +264,7 @@ public class Context extends AbstractModel {
         this.setParamSimple(map, prefix + "Avatar", this.Avatar);
         this.setParamSimple(map, prefix + "Content", this.Content);
         this.setParamArrayObj(map, prefix + "FileInfos.", this.FileInfos);
+        this.setParamSimple(map, prefix + "ReplyMethod", this.ReplyMethod);
 
     }
 }

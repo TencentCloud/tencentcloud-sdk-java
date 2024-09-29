@@ -67,6 +67,38 @@ public class ConsumeGroupItem extends AbstractModel {
     private String Remark;
 
     /**
+    * 4.x的集群ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ClusterIdV4")
+    @Expose
+    private String ClusterIdV4;
+
+    /**
+    * 4.x的命名空间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NamespaceV4")
+    @Expose
+    private String NamespaceV4;
+
+    /**
+    * 4.x的消费组名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ConsumerGroupV4")
+    @Expose
+    private String ConsumerGroupV4;
+
+    /**
+    * 4.x的完整命名空间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FullNamespaceV4")
+    @Expose
+    private String FullNamespaceV4;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -166,6 +198,86 @@ public class ConsumeGroupItem extends AbstractModel {
         this.Remark = Remark;
     }
 
+    /**
+     * Get 4.x的集群ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ClusterIdV4 4.x的集群ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getClusterIdV4() {
+        return this.ClusterIdV4;
+    }
+
+    /**
+     * Set 4.x的集群ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ClusterIdV4 4.x的集群ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setClusterIdV4(String ClusterIdV4) {
+        this.ClusterIdV4 = ClusterIdV4;
+    }
+
+    /**
+     * Get 4.x的命名空间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NamespaceV4 4.x的命名空间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getNamespaceV4() {
+        return this.NamespaceV4;
+    }
+
+    /**
+     * Set 4.x的命名空间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NamespaceV4 4.x的命名空间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNamespaceV4(String NamespaceV4) {
+        this.NamespaceV4 = NamespaceV4;
+    }
+
+    /**
+     * Get 4.x的消费组名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ConsumerGroupV4 4.x的消费组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getConsumerGroupV4() {
+        return this.ConsumerGroupV4;
+    }
+
+    /**
+     * Set 4.x的消费组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ConsumerGroupV4 4.x的消费组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setConsumerGroupV4(String ConsumerGroupV4) {
+        this.ConsumerGroupV4 = ConsumerGroupV4;
+    }
+
+    /**
+     * Get 4.x的完整命名空间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FullNamespaceV4 4.x的完整命名空间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getFullNamespaceV4() {
+        return this.FullNamespaceV4;
+    }
+
+    /**
+     * Set 4.x的完整命名空间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FullNamespaceV4 4.x的完整命名空间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFullNamespaceV4(String FullNamespaceV4) {
+        this.FullNamespaceV4 = FullNamespaceV4;
+    }
+
     public ConsumeGroupItem() {
     }
 
@@ -192,6 +304,18 @@ public class ConsumeGroupItem extends AbstractModel {
         if (source.Remark != null) {
             this.Remark = new String(source.Remark);
         }
+        if (source.ClusterIdV4 != null) {
+            this.ClusterIdV4 = new String(source.ClusterIdV4);
+        }
+        if (source.NamespaceV4 != null) {
+            this.NamespaceV4 = new String(source.NamespaceV4);
+        }
+        if (source.ConsumerGroupV4 != null) {
+            this.ConsumerGroupV4 = new String(source.ConsumerGroupV4);
+        }
+        if (source.FullNamespaceV4 != null) {
+            this.FullNamespaceV4 = new String(source.FullNamespaceV4);
+        }
     }
 
 
@@ -205,6 +329,10 @@ public class ConsumeGroupItem extends AbstractModel {
         this.setParamSimple(map, prefix + "ConsumeMessageOrderly", this.ConsumeMessageOrderly);
         this.setParamSimple(map, prefix + "MaxRetryTimes", this.MaxRetryTimes);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
+        this.setParamSimple(map, prefix + "ClusterIdV4", this.ClusterIdV4);
+        this.setParamSimple(map, prefix + "NamespaceV4", this.NamespaceV4);
+        this.setParamSimple(map, prefix + "ConsumerGroupV4", this.ConsumerGroupV4);
+        this.setParamSimple(map, prefix + "FullNamespaceV4", this.FullNamespaceV4);
 
     }
 }

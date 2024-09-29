@@ -45,6 +45,14 @@ public class HighlightSegmentItem extends AbstractModel {
     private Float EndTimeOffset;
 
     /**
+    * 片段标签
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SegmentTags")
+    @Expose
+    private String [] SegmentTags;
+
+    /**
      * Get 置信度。 
      * @return Confidence 置信度。
      */
@@ -92,6 +100,26 @@ public class HighlightSegmentItem extends AbstractModel {
         this.EndTimeOffset = EndTimeOffset;
     }
 
+    /**
+     * Get 片段标签
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SegmentTags 片段标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getSegmentTags() {
+        return this.SegmentTags;
+    }
+
+    /**
+     * Set 片段标签
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SegmentTags 片段标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSegmentTags(String [] SegmentTags) {
+        this.SegmentTags = SegmentTags;
+    }
+
     public HighlightSegmentItem() {
     }
 
@@ -109,6 +137,12 @@ public class HighlightSegmentItem extends AbstractModel {
         if (source.EndTimeOffset != null) {
             this.EndTimeOffset = new Float(source.EndTimeOffset);
         }
+        if (source.SegmentTags != null) {
+            this.SegmentTags = new String[source.SegmentTags.length];
+            for (int i = 0; i < source.SegmentTags.length; i++) {
+                this.SegmentTags[i] = new String(source.SegmentTags[i]);
+            }
+        }
     }
 
 
@@ -119,6 +153,7 @@ public class HighlightSegmentItem extends AbstractModel {
         this.setParamSimple(map, prefix + "Confidence", this.Confidence);
         this.setParamSimple(map, prefix + "StartTimeOffset", this.StartTimeOffset);
         this.setParamSimple(map, prefix + "EndTimeOffset", this.EndTimeOffset);
+        this.setParamArraySimple(map, prefix + "SegmentTags.", this.SegmentTags);
 
     }
 }

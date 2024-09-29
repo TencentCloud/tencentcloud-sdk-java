@@ -38,7 +38,7 @@ public class GetFileTranslateData extends AbstractModel {
     private String Status;
 
     /**
-    * 文件数据
+    * 文件数据，目标文件必须小于50M，否则请通过回调方式请求文件翻译接口
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileData")
@@ -93,9 +93,9 @@ public class GetFileTranslateData extends AbstractModel {
     }
 
     /**
-     * Get 文件数据
+     * Get 文件数据，目标文件必须小于50M，否则请通过回调方式请求文件翻译接口
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FileData 文件数据
+     * @return FileData 文件数据，目标文件必须小于50M，否则请通过回调方式请求文件翻译接口
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFileData() {
@@ -103,9 +103,9 @@ public class GetFileTranslateData extends AbstractModel {
     }
 
     /**
-     * Set 文件数据
+     * Set 文件数据，目标文件必须小于50M，否则请通过回调方式请求文件翻译接口
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FileData 文件数据
+     * @param FileData 文件数据，目标文件必须小于50M，否则请通过回调方式请求文件翻译接口
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileData(String FileData) {

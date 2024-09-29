@@ -152,6 +152,17 @@ public class IssClient extends AbstractClient{
     }
 
     /**
+     *本接口可基于海康ISUP 5.0协议实现透传ISAPI的请求数据，调用接口前需确保设备采用ISUP协议成功注册至本平台
+     * @param req CallISAPIRequest
+     * @return CallISAPIResponse
+     * @throws TencentCloudSDKException
+     */
+    public CallISAPIResponse CallISAPI(CallISAPIRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CallISAPI", CallISAPIResponse.class);
+    }
+
+    /**
      *用于检测域名是否备案。
      * @param req CheckDomainRequest
      * @return CheckDomainResponse

@@ -25,6 +25,7 @@ public class RegisterInfo extends AbstractModel {
 
     /**
     * 法人姓名
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LegalName")
     @Expose
@@ -32,6 +33,7 @@ public class RegisterInfo extends AbstractModel {
 
     /**
     * 社会统一信用代码
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Uscc")
     @Expose
@@ -39,14 +41,17 @@ public class RegisterInfo extends AbstractModel {
 
     /**
     * 社会统一信用代码
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UnifiedSocialCreditCode")
     @Expose
     private String UnifiedSocialCreditCode;
 
     /**
-     * Get 法人姓名 
+     * Get 法人姓名
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return LegalName 法人姓名
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLegalName() {
         return this.LegalName;
@@ -54,15 +59,19 @@ public class RegisterInfo extends AbstractModel {
 
     /**
      * Set 法人姓名
+注意：此字段可能返回 null，表示取不到有效值。
      * @param LegalName 法人姓名
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLegalName(String LegalName) {
         this.LegalName = LegalName;
     }
 
     /**
-     * Get 社会统一信用代码 
+     * Get 社会统一信用代码
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Uscc 社会统一信用代码
+注意：此字段可能返回 null，表示取不到有效值。
      * @deprecated
      */
     @Deprecated
@@ -72,7 +81,9 @@ public class RegisterInfo extends AbstractModel {
 
     /**
      * Set 社会统一信用代码
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Uscc 社会统一信用代码
+注意：此字段可能返回 null，表示取不到有效值。
      * @deprecated
      */
     @Deprecated
@@ -81,8 +92,10 @@ public class RegisterInfo extends AbstractModel {
     }
 
     /**
-     * Get 社会统一信用代码 
+     * Get 社会统一信用代码
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return UnifiedSocialCreditCode 社会统一信用代码
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUnifiedSocialCreditCode() {
         return this.UnifiedSocialCreditCode;
@@ -90,7 +103,9 @@ public class RegisterInfo extends AbstractModel {
 
     /**
      * Set 社会统一信用代码
+注意：此字段可能返回 null，表示取不到有效值。
      * @param UnifiedSocialCreditCode 社会统一信用代码
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUnifiedSocialCreditCode(String UnifiedSocialCreditCode) {
         this.UnifiedSocialCreditCode = UnifiedSocialCreditCode;

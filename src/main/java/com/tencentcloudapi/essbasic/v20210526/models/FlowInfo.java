@@ -77,10 +77,7 @@ public class FlowInfo extends AbstractModel {
     private FormField [] FormFields;
 
     /**
-    * 合同状态变动结的通知回调URL，该URL仅支持HTTP或HTTPS协议，建议采用HTTPS协议以保证数据传输的安全性，最大长度1000个字符。
-
-腾讯电子签服务器将通过POST方式，application/json格式通知执行结果，请确保外网可以正常访问该URL。
-回调的相关说明可参考开发者中心的<a href="https://qian.tencent.com/developers/partner/callback_data_types" target="_blank">回调通知</a>模块
+    * 该字段已废弃，请使用【应用号配置】中的回调地址统一接口消息
     */
     @SerializedName("CallbackUrl")
     @Expose
@@ -168,6 +165,13 @@ public class FlowInfo extends AbstractModel {
     @SerializedName("AutoSignScene")
     @Expose
     private String AutoSignScene;
+
+    /**
+    * 在短信通知、填写、签署流程中，若标题、按钮、合同详情等地方存在“合同”字样时，可根据此配置指定文案，可选文案如下：  <ul><li> <b>0</b> :合同（默认值）</li> <li> <b>1</b> :文件</li> <li> <b>2</b> :协议</li></ul>效果如下:![FlowDisplayType](https://qcloudimg.tencent-cloud.cn/raw/e4a2c4d638717cc901d3dbd5137c9bbc.png)
+    */
+    @SerializedName("FlowDisplayType")
+    @Expose
+    private Long FlowDisplayType;
 
     /**
      * Get 合同流程的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。 
@@ -322,29 +326,21 @@ public class FlowInfo extends AbstractModel {
     }
 
     /**
-     * Get 合同状态变动结的通知回调URL，该URL仅支持HTTP或HTTPS协议，建议采用HTTPS协议以保证数据传输的安全性，最大长度1000个字符。
-
-腾讯电子签服务器将通过POST方式，application/json格式通知执行结果，请确保外网可以正常访问该URL。
-回调的相关说明可参考开发者中心的<a href="https://qian.tencent.com/developers/partner/callback_data_types" target="_blank">回调通知</a>模块 
-     * @return CallbackUrl 合同状态变动结的通知回调URL，该URL仅支持HTTP或HTTPS协议，建议采用HTTPS协议以保证数据传输的安全性，最大长度1000个字符。
-
-腾讯电子签服务器将通过POST方式，application/json格式通知执行结果，请确保外网可以正常访问该URL。
-回调的相关说明可参考开发者中心的<a href="https://qian.tencent.com/developers/partner/callback_data_types" target="_blank">回调通知</a>模块
+     * Get 该字段已废弃，请使用【应用号配置】中的回调地址统一接口消息 
+     * @return CallbackUrl 该字段已废弃，请使用【应用号配置】中的回调地址统一接口消息
+     * @deprecated
      */
+    @Deprecated
     public String getCallbackUrl() {
         return this.CallbackUrl;
     }
 
     /**
-     * Set 合同状态变动结的通知回调URL，该URL仅支持HTTP或HTTPS协议，建议采用HTTPS协议以保证数据传输的安全性，最大长度1000个字符。
-
-腾讯电子签服务器将通过POST方式，application/json格式通知执行结果，请确保外网可以正常访问该URL。
-回调的相关说明可参考开发者中心的<a href="https://qian.tencent.com/developers/partner/callback_data_types" target="_blank">回调通知</a>模块
-     * @param CallbackUrl 合同状态变动结的通知回调URL，该URL仅支持HTTP或HTTPS协议，建议采用HTTPS协议以保证数据传输的安全性，最大长度1000个字符。
-
-腾讯电子签服务器将通过POST方式，application/json格式通知执行结果，请确保外网可以正常访问该URL。
-回调的相关说明可参考开发者中心的<a href="https://qian.tencent.com/developers/partner/callback_data_types" target="_blank">回调通知</a>模块
+     * Set 该字段已废弃，请使用【应用号配置】中的回调地址统一接口消息
+     * @param CallbackUrl 该字段已废弃，请使用【应用号配置】中的回调地址统一接口消息
+     * @deprecated
      */
+    @Deprecated
     public void setCallbackUrl(String CallbackUrl) {
         this.CallbackUrl = CallbackUrl;
     }
@@ -585,6 +581,22 @@ public class FlowInfo extends AbstractModel {
         this.AutoSignScene = AutoSignScene;
     }
 
+    /**
+     * Get 在短信通知、填写、签署流程中，若标题、按钮、合同详情等地方存在“合同”字样时，可根据此配置指定文案，可选文案如下：  <ul><li> <b>0</b> :合同（默认值）</li> <li> <b>1</b> :文件</li> <li> <b>2</b> :协议</li></ul>效果如下:![FlowDisplayType](https://qcloudimg.tencent-cloud.cn/raw/e4a2c4d638717cc901d3dbd5137c9bbc.png) 
+     * @return FlowDisplayType 在短信通知、填写、签署流程中，若标题、按钮、合同详情等地方存在“合同”字样时，可根据此配置指定文案，可选文案如下：  <ul><li> <b>0</b> :合同（默认值）</li> <li> <b>1</b> :文件</li> <li> <b>2</b> :协议</li></ul>效果如下:![FlowDisplayType](https://qcloudimg.tencent-cloud.cn/raw/e4a2c4d638717cc901d3dbd5137c9bbc.png)
+     */
+    public Long getFlowDisplayType() {
+        return this.FlowDisplayType;
+    }
+
+    /**
+     * Set 在短信通知、填写、签署流程中，若标题、按钮、合同详情等地方存在“合同”字样时，可根据此配置指定文案，可选文案如下：  <ul><li> <b>0</b> :合同（默认值）</li> <li> <b>1</b> :文件</li> <li> <b>2</b> :协议</li></ul>效果如下:![FlowDisplayType](https://qcloudimg.tencent-cloud.cn/raw/e4a2c4d638717cc901d3dbd5137c9bbc.png)
+     * @param FlowDisplayType 在短信通知、填写、签署流程中，若标题、按钮、合同详情等地方存在“合同”字样时，可根据此配置指定文案，可选文案如下：  <ul><li> <b>0</b> :合同（默认值）</li> <li> <b>1</b> :文件</li> <li> <b>2</b> :协议</li></ul>效果如下:![FlowDisplayType](https://qcloudimg.tencent-cloud.cn/raw/e4a2c4d638717cc901d3dbd5137c9bbc.png)
+     */
+    public void setFlowDisplayType(Long FlowDisplayType) {
+        this.FlowDisplayType = FlowDisplayType;
+    }
+
     public FlowInfo() {
     }
 
@@ -644,6 +656,9 @@ public class FlowInfo extends AbstractModel {
         if (source.AutoSignScene != null) {
             this.AutoSignScene = new String(source.AutoSignScene);
         }
+        if (source.FlowDisplayType != null) {
+            this.FlowDisplayType = new Long(source.FlowDisplayType);
+        }
     }
 
 
@@ -665,6 +680,7 @@ public class FlowInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "NeedSignReview", this.NeedSignReview);
         this.setParamSimple(map, prefix + "CcNotifyType", this.CcNotifyType);
         this.setParamSimple(map, prefix + "AutoSignScene", this.AutoSignScene);
+        this.setParamSimple(map, prefix + "FlowDisplayType", this.FlowDisplayType);
 
     }
 }

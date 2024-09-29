@@ -56,6 +56,14 @@ public class CloudBaseRunVolumeMount extends AbstractModel {
     private CloudBaseRunNfsVolumeSource [] NfsVolumes;
 
     /**
+    * 挂载配置
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MountPropagation")
+    @Expose
+    private String MountPropagation;
+
+    /**
      * Get 资源名
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Name 资源名
@@ -135,6 +143,26 @@ public class CloudBaseRunVolumeMount extends AbstractModel {
         this.NfsVolumes = NfsVolumes;
     }
 
+    /**
+     * Get 挂载配置
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MountPropagation 挂载配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getMountPropagation() {
+        return this.MountPropagation;
+    }
+
+    /**
+     * Set 挂载配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MountPropagation 挂载配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMountPropagation(String MountPropagation) {
+        this.MountPropagation = MountPropagation;
+    }
+
     public CloudBaseRunVolumeMount() {
     }
 
@@ -158,6 +186,9 @@ public class CloudBaseRunVolumeMount extends AbstractModel {
                 this.NfsVolumes[i] = new CloudBaseRunNfsVolumeSource(source.NfsVolumes[i]);
             }
         }
+        if (source.MountPropagation != null) {
+            this.MountPropagation = new String(source.MountPropagation);
+        }
     }
 
 
@@ -169,6 +200,7 @@ public class CloudBaseRunVolumeMount extends AbstractModel {
         this.setParamSimple(map, prefix + "MountPath", this.MountPath);
         this.setParamSimple(map, prefix + "ReadOnly", this.ReadOnly);
         this.setParamArrayObj(map, prefix + "NfsVolumes.", this.NfsVolumes);
+        this.setParamSimple(map, prefix + "MountPropagation", this.MountPropagation);
 
     }
 }

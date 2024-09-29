@@ -109,6 +109,14 @@ public class Command extends AbstractModel {
     private DefaultParameterConf [] DefaultParameterConfs;
 
     /**
+    * 命令关联的场景
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Scenes")
+    @Expose
+    private String [] Scenes;
+
+    /**
     * 命令的结构化描述。公共命令有值，用户命令为空字符串。
     */
     @SerializedName("FormattedDescription")
@@ -347,6 +355,26 @@ public class Command extends AbstractModel {
     }
 
     /**
+     * Get 命令关联的场景
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Scenes 命令关联的场景
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getScenes() {
+        return this.Scenes;
+    }
+
+    /**
+     * Set 命令关联的场景
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Scenes 命令关联的场景
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setScenes(String [] Scenes) {
+        this.Scenes = Scenes;
+    }
+
+    /**
      * Get 命令的结构化描述。公共命令有值，用户命令为空字符串。 
      * @return FormattedDescription 命令的结构化描述。公共命令有值，用户命令为空字符串。
      */
@@ -489,6 +517,12 @@ public class Command extends AbstractModel {
                 this.DefaultParameterConfs[i] = new DefaultParameterConf(source.DefaultParameterConfs[i]);
             }
         }
+        if (source.Scenes != null) {
+            this.Scenes = new String[source.Scenes.length];
+            for (int i = 0; i < source.Scenes.length; i++) {
+                this.Scenes[i] = new String(source.Scenes[i]);
+            }
+        }
         if (source.FormattedDescription != null) {
             this.FormattedDescription = new String(source.FormattedDescription);
         }
@@ -529,6 +563,7 @@ public class Command extends AbstractModel {
         this.setParamSimple(map, prefix + "EnableParameter", this.EnableParameter);
         this.setParamSimple(map, prefix + "DefaultParameters", this.DefaultParameters);
         this.setParamArrayObj(map, prefix + "DefaultParameterConfs.", this.DefaultParameterConfs);
+        this.setParamArraySimple(map, prefix + "Scenes.", this.Scenes);
         this.setParamSimple(map, prefix + "FormattedDescription", this.FormattedDescription);
         this.setParamSimple(map, prefix + "CreatedBy", this.CreatedBy);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);

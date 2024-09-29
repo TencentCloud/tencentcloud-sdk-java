@@ -56,6 +56,13 @@ public class DescribeWatermarkTemplatesRequest extends AbstractModel {
     private Long Limit;
 
     /**
+    * 水印模板标识过滤条件，长度限制：64 个字符。
+    */
+    @SerializedName("Name")
+    @Expose
+    private String Name;
+
+    /**
      * Get 水印模板唯一标识过滤条件，数组长度限制：100。 
      * @return Definitions 水印模板唯一标识过滤条件，数组长度限制：100。
      */
@@ -135,6 +142,22 @@ public class DescribeWatermarkTemplatesRequest extends AbstractModel {
         this.Limit = Limit;
     }
 
+    /**
+     * Get 水印模板标识过滤条件，长度限制：64 个字符。 
+     * @return Name 水印模板标识过滤条件，长度限制：64 个字符。
+     */
+    public String getName() {
+        return this.Name;
+    }
+
+    /**
+     * Set 水印模板标识过滤条件，长度限制：64 个字符。
+     * @param Name 水印模板标识过滤条件，长度限制：64 个字符。
+     */
+    public void setName(String Name) {
+        this.Name = Name;
+    }
+
     public DescribeWatermarkTemplatesRequest() {
     }
 
@@ -158,6 +181,9 @@ public class DescribeWatermarkTemplatesRequest extends AbstractModel {
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
     }
 
 
@@ -169,6 +195,7 @@ public class DescribeWatermarkTemplatesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "Name", this.Name);
 
     }
 }

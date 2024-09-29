@@ -54,6 +54,13 @@ public class DescribeImageSpriteTemplatesRequest extends AbstractModel {
     private String Type;
 
     /**
+    * 雪碧图模板标识过滤条件，长度限制：64 个字符。
+    */
+    @SerializedName("Name")
+    @Expose
+    private String Name;
+
+    /**
      * Get 雪碧图模板唯一标识过滤条件，数组长度限制：100。 
      * @return Definitions 雪碧图模板唯一标识过滤条件，数组长度限制：100。
      */
@@ -125,6 +132,22 @@ public class DescribeImageSpriteTemplatesRequest extends AbstractModel {
         this.Type = Type;
     }
 
+    /**
+     * Get 雪碧图模板标识过滤条件，长度限制：64 个字符。 
+     * @return Name 雪碧图模板标识过滤条件，长度限制：64 个字符。
+     */
+    public String getName() {
+        return this.Name;
+    }
+
+    /**
+     * Set 雪碧图模板标识过滤条件，长度限制：64 个字符。
+     * @param Name 雪碧图模板标识过滤条件，长度限制：64 个字符。
+     */
+    public void setName(String Name) {
+        this.Name = Name;
+    }
+
     public DescribeImageSpriteTemplatesRequest() {
     }
 
@@ -148,6 +171,9 @@ public class DescribeImageSpriteTemplatesRequest extends AbstractModel {
         if (source.Type != null) {
             this.Type = new String(source.Type);
         }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
     }
 
 
@@ -159,6 +185,7 @@ public class DescribeImageSpriteTemplatesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "Name", this.Name);
 
     }
 }

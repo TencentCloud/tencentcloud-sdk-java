@@ -58,7 +58,7 @@ public class AutoSignConfig extends AbstractModel {
     private Boolean SealImgCallback;
 
     /**
-    * 回调链接，如果渠道已经配置了，可以不传
+    * 该字段已废弃，请使用【应用号配置】中的回调地址统一接口消息
     */
     @SerializedName("CallbackUrl")
     @Expose
@@ -192,17 +192,21 @@ public class AutoSignConfig extends AbstractModel {
     }
 
     /**
-     * Get 回调链接，如果渠道已经配置了，可以不传 
-     * @return CallbackUrl 回调链接，如果渠道已经配置了，可以不传
+     * Get 该字段已废弃，请使用【应用号配置】中的回调地址统一接口消息 
+     * @return CallbackUrl 该字段已废弃，请使用【应用号配置】中的回调地址统一接口消息
+     * @deprecated
      */
+    @Deprecated
     public String getCallbackUrl() {
         return this.CallbackUrl;
     }
 
     /**
-     * Set 回调链接，如果渠道已经配置了，可以不传
-     * @param CallbackUrl 回调链接，如果渠道已经配置了，可以不传
+     * Set 该字段已废弃，请使用【应用号配置】中的回调地址统一接口消息
+     * @param CallbackUrl 该字段已废弃，请使用【应用号配置】中的回调地址统一接口消息
+     * @deprecated
      */
+    @Deprecated
     public void setCallbackUrl(String CallbackUrl) {
         this.CallbackUrl = CallbackUrl;
     }

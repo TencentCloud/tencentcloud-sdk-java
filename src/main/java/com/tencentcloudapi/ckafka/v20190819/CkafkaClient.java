@@ -369,7 +369,7 @@ public class CkafkaClient extends AbstractClient{
     }
 
     /**
-     *删除预付费实例
+     *删除预付费实例，该接口会对实例执行隔离并删除的动作，执行成功后实例会被直接删除销毁
      * @param req DeleteInstancePreRequest
      * @return DeleteInstancePreResponse
      * @throws TencentCloudSDKException
@@ -807,6 +807,17 @@ public class CkafkaClient extends AbstractClient{
     public FetchMessageListByOffsetResponse FetchMessageListByOffset(FetchMessageListByOffsetRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "FetchMessageListByOffset", FetchMessageListByOffsetResponse.class);
+    }
+
+    /**
+     *根据时间戳查询消息列表
+     * @param req FetchMessageListByTimestampRequest
+     * @return FetchMessageListByTimestampResponse
+     * @throws TencentCloudSDKException
+     */
+    public FetchMessageListByTimestampResponse FetchMessageListByTimestamp(FetchMessageListByTimestampRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "FetchMessageListByTimestamp", FetchMessageListByTimestampResponse.class);
     }
 
     /**

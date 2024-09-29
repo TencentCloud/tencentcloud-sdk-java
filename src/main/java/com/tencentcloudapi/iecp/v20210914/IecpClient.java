@@ -39,19 +39,6 @@ public class IecpClient extends AbstractClient{
     }
 
     /**
-     *产品停售，预下线
-
-从组件市场选中组件并添加到应用模板列表
-     * @param req ApplyMarketComponentRequest
-     * @return ApplyMarketComponentResponse
-     * @throws TencentCloudSDKException
-     */
-    public ApplyMarketComponentResponse ApplyMarketComponent(ApplyMarketComponentRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "ApplyMarketComponent", ApplyMarketComponentResponse.class);
-    }
-
-    /**
      *建立消息路由
      * @param req BuildMessageRouteRequest
      * @return BuildMessageRouteResponse
@@ -60,19 +47,6 @@ public class IecpClient extends AbstractClient{
     public BuildMessageRouteResponse BuildMessageRoute(BuildMessageRouteRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "BuildMessageRoute", BuildMessageRouteResponse.class);
-    }
-
-    /**
-     *产品停售，预下线
-
-创建可视化创建应用模板
-     * @param req CreateApplicationVisualizationRequest
-     * @return CreateApplicationVisualizationResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateApplicationVisualizationResponse CreateApplicationVisualization(CreateApplicationVisualizationRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "CreateApplicationVisualization", CreateApplicationVisualizationResponse.class);
     }
 
     /**
@@ -128,32 +102,6 @@ public class IecpClient extends AbstractClient{
     public CreateEdgeNodeUnitTemplateResponse CreateEdgeNodeUnitTemplate(CreateEdgeNodeUnitTemplateRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateEdgeNodeUnitTemplate", CreateEdgeNodeUnitTemplateResponse.class);
-    }
-
-    /**
-     *产品停售，预下线
-
-可视化创建应用
-     * @param req CreateEdgeUnitApplicationVisualizationRequest
-     * @return CreateEdgeUnitApplicationVisualizationResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateEdgeUnitApplicationVisualizationResponse CreateEdgeUnitApplicationVisualization(CreateEdgeUnitApplicationVisualizationRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "CreateEdgeUnitApplicationVisualization", CreateEdgeUnitApplicationVisualizationResponse.class);
-    }
-
-    /**
-     *产品停售，预下线
-
-yaml方式创建应用
-     * @param req CreateEdgeUnitApplicationYamlRequest
-     * @return CreateEdgeUnitApplicationYamlResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateEdgeUnitApplicationYamlResponse CreateEdgeUnitApplicationYaml(CreateEdgeUnitApplicationYamlRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "CreateEdgeUnitApplicationYaml", CreateEdgeUnitApplicationYamlResponse.class);
     }
 
     /**
@@ -245,19 +193,6 @@ yaml方式创建应用
     }
 
     /**
-     *产品停售，预下线
-
-删除应用模板
-     * @param req DeleteApplicationsRequest
-     * @return DeleteApplicationsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DeleteApplicationsResponse DeleteApplications(DeleteApplicationsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DeleteApplications", DeleteApplicationsResponse.class);
-    }
-
-    /**
      *删除ConfigMap
      * @param req DeleteConfigMapRequest
      * @return DeleteConfigMapResponse
@@ -299,19 +234,6 @@ yaml方式创建应用
     public DeleteEdgeNodesResponse DeleteEdgeNodes(DeleteEdgeNodesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteEdgeNodes", DeleteEdgeNodesResponse.class);
-    }
-
-    /**
-     *产品停售，预下线
-
-删除应用列表
-     * @param req DeleteEdgeUnitApplicationsRequest
-     * @return DeleteEdgeUnitApplicationsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DeleteEdgeUnitApplicationsResponse DeleteEdgeUnitApplications(DeleteEdgeUnitApplicationsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DeleteEdgeUnitApplications", DeleteEdgeUnitApplicationsResponse.class);
     }
 
     /**
@@ -422,58 +344,6 @@ yaml方式创建应用
     public DeleteSecretResponse DeleteSecret(DeleteSecretRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteSecret", DeleteSecretResponse.class);
-    }
-
-    /**
-     *产品停售，预下线
-
-获取应用模板可视化配置信息
-     * @param req DescribeApplicationVisualizationRequest
-     * @return DescribeApplicationVisualizationResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeApplicationVisualizationResponse DescribeApplicationVisualization(DescribeApplicationVisualizationRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeApplicationVisualization", DescribeApplicationVisualizationResponse.class);
-    }
-
-    /**
-     *产品停售，预下线
-
-查询应用模板Yaml
-     * @param req DescribeApplicationYamlRequest
-     * @return DescribeApplicationYamlResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeApplicationYamlResponse DescribeApplicationYaml(DescribeApplicationYamlRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeApplicationYaml", DescribeApplicationYamlResponse.class);
-    }
-
-    /**
-     *产品停售，预下线
-
-检查应用模板的Yaml配置
-     * @param req DescribeApplicationYamlErrorRequest
-     * @return DescribeApplicationYamlErrorResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeApplicationYamlErrorResponse DescribeApplicationYamlError(DescribeApplicationYamlErrorRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeApplicationYamlError", DescribeApplicationYamlErrorResponse.class);
-    }
-
-    /**
-     *产品停售，预下线
-
-获取应用模板列表
-     * @param req DescribeApplicationsRequest
-     * @return DescribeApplicationsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeApplicationsResponse DescribeApplications(DescribeApplicationsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeApplications", DescribeApplicationsResponse.class);
     }
 
     /**
@@ -631,97 +501,6 @@ yaml方式创建应用
     }
 
     /**
-     *产品停售，预下线
-
-获取应用事件列表
-     * @param req DescribeEdgeUnitApplicationEventsRequest
-     * @return DescribeEdgeUnitApplicationEventsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeEdgeUnitApplicationEventsResponse DescribeEdgeUnitApplicationEvents(DescribeEdgeUnitApplicationEventsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeEdgeUnitApplicationEvents", DescribeEdgeUnitApplicationEventsResponse.class);
-    }
-
-    /**
-     *产品停售，预下线
-
-获取应用日志
-     * @param req DescribeEdgeUnitApplicationLogsRequest
-     * @return DescribeEdgeUnitApplicationLogsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeEdgeUnitApplicationLogsResponse DescribeEdgeUnitApplicationLogs(DescribeEdgeUnitApplicationLogsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeEdgeUnitApplicationLogs", DescribeEdgeUnitApplicationLogsResponse.class);
-    }
-
-    /**
-     *产品停售，预下线
-
-获取应用容器状态
-     * @param req DescribeEdgeUnitApplicationPodContainersRequest
-     * @return DescribeEdgeUnitApplicationPodContainersResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeEdgeUnitApplicationPodContainersResponse DescribeEdgeUnitApplicationPodContainers(DescribeEdgeUnitApplicationPodContainersRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeEdgeUnitApplicationPodContainers", DescribeEdgeUnitApplicationPodContainersResponse.class);
-    }
-
-    /**
-     *产品停售，预下线
-
-获取应用下Pod状态
-     * @param req DescribeEdgeUnitApplicationPodsRequest
-     * @return DescribeEdgeUnitApplicationPodsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeEdgeUnitApplicationPodsResponse DescribeEdgeUnitApplicationPods(DescribeEdgeUnitApplicationPodsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeEdgeUnitApplicationPods", DescribeEdgeUnitApplicationPodsResponse.class);
-    }
-
-    /**
-     *产品停售，预下线
-
-获取单元可视化配置信息
-     * @param req DescribeEdgeUnitApplicationVisualizationRequest
-     * @return DescribeEdgeUnitApplicationVisualizationResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeEdgeUnitApplicationVisualizationResponse DescribeEdgeUnitApplicationVisualization(DescribeEdgeUnitApplicationVisualizationRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeEdgeUnitApplicationVisualization", DescribeEdgeUnitApplicationVisualizationResponse.class);
-    }
-
-    /**
-     *产品停售，预下线
-
-获取应用的Yaml配置
-     * @param req DescribeEdgeUnitApplicationYamlRequest
-     * @return DescribeEdgeUnitApplicationYamlResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeEdgeUnitApplicationYamlResponse DescribeEdgeUnitApplicationYaml(DescribeEdgeUnitApplicationYamlRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeEdgeUnitApplicationYaml", DescribeEdgeUnitApplicationYamlResponse.class);
-    }
-
-    /**
-     *产品停售，预下线
-
-检查单元应用的Yaml配置
-     * @param req DescribeEdgeUnitApplicationYamlErrorRequest
-     * @return DescribeEdgeUnitApplicationYamlErrorResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeEdgeUnitApplicationYamlErrorResponse DescribeEdgeUnitApplicationYamlError(DescribeEdgeUnitApplicationYamlErrorRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeEdgeUnitApplicationYamlError", DescribeEdgeUnitApplicationYamlErrorResponse.class);
-    }
-
-    /**
      *获取单元下应用列表
      * @param req DescribeEdgeUnitApplicationsRequest
      * @return DescribeEdgeUnitApplicationsResponse
@@ -730,19 +509,6 @@ yaml方式创建应用
     public DescribeEdgeUnitApplicationsResponse DescribeEdgeUnitApplications(DescribeEdgeUnitApplicationsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeEdgeUnitApplications", DescribeEdgeUnitApplicationsResponse.class);
-    }
-
-    /**
-     *产品停售，预下线
-
-查询边缘集群详情
-     * @param req DescribeEdgeUnitCloudRequest
-     * @return DescribeEdgeUnitCloudResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeEdgeUnitCloudResponse DescribeEdgeUnitCloud(DescribeEdgeUnitCloudRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeEdgeUnitCloud", DescribeEdgeUnitCloudResponse.class);
     }
 
     /**
@@ -1018,32 +784,6 @@ yaml方式创建应用
     public GetMarketComponentListResponse GetMarketComponentList(GetMarketComponentListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "GetMarketComponentList", GetMarketComponentListResponse.class);
-    }
-
-    /**
-     *产品停售，预下线
-
-修改应用模板基本信息
-     * @param req ModifyApplicationBasicInfoRequest
-     * @return ModifyApplicationBasicInfoResponse
-     * @throws TencentCloudSDKException
-     */
-    public ModifyApplicationBasicInfoResponse ModifyApplicationBasicInfo(ModifyApplicationBasicInfoRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "ModifyApplicationBasicInfo", ModifyApplicationBasicInfoResponse.class);
-    }
-
-    /**
-     *产品停售，预下线
-
-修改应用模板配置
-     * @param req ModifyApplicationVisualizationRequest
-     * @return ModifyApplicationVisualizationResponse
-     * @throws TencentCloudSDKException
-     */
-    public ModifyApplicationVisualizationResponse ModifyApplicationVisualization(ModifyApplicationVisualizationRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "ModifyApplicationVisualization", ModifyApplicationVisualizationResponse.class);
     }
 
     /**

@@ -159,6 +159,13 @@ public class InquiryPriceRunInstancesRequest extends AbstractModel {
     private String HpcClusterId;
 
     /**
+    * 描述了实例CPU拓扑结构的相关信息。若不指定该参数，则按系统资源情况决定。
+    */
+    @SerializedName("CpuTopology")
+    @Expose
+    private CpuTopology CpuTopology;
+
+    /**
     * 实例启动模板。
     */
     @SerializedName("LaunchTemplate")
@@ -478,6 +485,22 @@ public class InquiryPriceRunInstancesRequest extends AbstractModel {
     }
 
     /**
+     * Get 描述了实例CPU拓扑结构的相关信息。若不指定该参数，则按系统资源情况决定。 
+     * @return CpuTopology 描述了实例CPU拓扑结构的相关信息。若不指定该参数，则按系统资源情况决定。
+     */
+    public CpuTopology getCpuTopology() {
+        return this.CpuTopology;
+    }
+
+    /**
+     * Set 描述了实例CPU拓扑结构的相关信息。若不指定该参数，则按系统资源情况决定。
+     * @param CpuTopology 描述了实例CPU拓扑结构的相关信息。若不指定该参数，则按系统资源情况决定。
+     */
+    public void setCpuTopology(CpuTopology CpuTopology) {
+        this.CpuTopology = CpuTopology;
+    }
+
+    /**
      * Get 实例启动模板。 
      * @return LaunchTemplate 实例启动模板。
      */
@@ -567,6 +590,9 @@ public class InquiryPriceRunInstancesRequest extends AbstractModel {
         if (source.HpcClusterId != null) {
             this.HpcClusterId = new String(source.HpcClusterId);
         }
+        if (source.CpuTopology != null) {
+            this.CpuTopology = new CpuTopology(source.CpuTopology);
+        }
         if (source.LaunchTemplate != null) {
             this.LaunchTemplate = new LaunchTemplate(source.LaunchTemplate);
         }
@@ -596,6 +622,7 @@ public class InquiryPriceRunInstancesRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "TagSpecification.", this.TagSpecification);
         this.setParamObj(map, prefix + "InstanceMarketOptions.", this.InstanceMarketOptions);
         this.setParamSimple(map, prefix + "HpcClusterId", this.HpcClusterId);
+        this.setParamObj(map, prefix + "CpuTopology.", this.CpuTopology);
         this.setParamObj(map, prefix + "LaunchTemplate.", this.LaunchTemplate);
 
     }

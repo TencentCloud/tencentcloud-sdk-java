@@ -88,6 +88,13 @@ public class CreateAccountRequest extends AbstractModel {
     private Long MaxUserConnections;
 
     /**
+    * 使用GetPublicKey返回的RSA2048公钥加密后的密码
+    */
+    @SerializedName("EncryptedPassword")
+    @Expose
+    private String EncryptedPassword;
+
+    /**
      * Get 实例 ID，形如：dcdbt-ow728lmc，可以通过 DescribeDCDBInstances 查询实例详情获得。 
      * @return InstanceId 实例 ID，形如：dcdbt-ow728lmc，可以通过 DescribeDCDBInstances 查询实例详情获得。
      */
@@ -235,6 +242,22 @@ public class CreateAccountRequest extends AbstractModel {
         this.MaxUserConnections = MaxUserConnections;
     }
 
+    /**
+     * Get 使用GetPublicKey返回的RSA2048公钥加密后的密码 
+     * @return EncryptedPassword 使用GetPublicKey返回的RSA2048公钥加密后的密码
+     */
+    public String getEncryptedPassword() {
+        return this.EncryptedPassword;
+    }
+
+    /**
+     * Set 使用GetPublicKey返回的RSA2048公钥加密后的密码
+     * @param EncryptedPassword 使用GetPublicKey返回的RSA2048公钥加密后的密码
+     */
+    public void setEncryptedPassword(String EncryptedPassword) {
+        this.EncryptedPassword = EncryptedPassword;
+    }
+
     public CreateAccountRequest() {
     }
 
@@ -270,6 +293,9 @@ public class CreateAccountRequest extends AbstractModel {
         if (source.MaxUserConnections != null) {
             this.MaxUserConnections = new Long(source.MaxUserConnections);
         }
+        if (source.EncryptedPassword != null) {
+            this.EncryptedPassword = new String(source.EncryptedPassword);
+        }
     }
 
 
@@ -286,6 +312,7 @@ public class CreateAccountRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "DelayThresh", this.DelayThresh);
         this.setParamSimple(map, prefix + "SlaveConst", this.SlaveConst);
         this.setParamSimple(map, prefix + "MaxUserConnections", this.MaxUserConnections);
+        this.setParamSimple(map, prefix + "EncryptedPassword", this.EncryptedPassword);
 
     }
 }

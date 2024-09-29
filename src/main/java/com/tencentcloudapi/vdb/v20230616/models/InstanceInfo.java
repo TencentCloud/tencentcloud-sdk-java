@@ -184,6 +184,14 @@ public class InstanceInfo extends AbstractModel {
     private String EngineVersion;
 
     /**
+    * api版本
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ApiVersion")
+    @Expose
+    private String ApiVersion;
+
+    /**
     * 计费模式。
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -640,6 +648,26 @@ public class InstanceInfo extends AbstractModel {
     }
 
     /**
+     * Get api版本
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ApiVersion api版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getApiVersion() {
+        return this.ApiVersion;
+    }
+
+    /**
+     * Set api版本
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ApiVersion api版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setApiVersion(String ApiVersion) {
+        this.ApiVersion = ApiVersion;
+    }
+
+    /**
      * Get 计费模式。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return PayMode 计费模式。
@@ -853,6 +881,9 @@ public class InstanceInfo extends AbstractModel {
         if (source.EngineVersion != null) {
             this.EngineVersion = new String(source.EngineVersion);
         }
+        if (source.ApiVersion != null) {
+            this.ApiVersion = new String(source.ApiVersion);
+        }
         if (source.PayMode != null) {
             this.PayMode = new Long(source.PayMode);
         }
@@ -901,6 +932,7 @@ public class InstanceInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "EngineName", this.EngineName);
         this.setParamSimple(map, prefix + "EngineVersion", this.EngineVersion);
+        this.setParamSimple(map, prefix + "ApiVersion", this.ApiVersion);
         this.setParamSimple(map, prefix + "PayMode", this.PayMode);
         this.setParamSimple(map, prefix + "Extend", this.Extend);
         this.setParamSimple(map, prefix + "ExpiredAt", this.ExpiredAt);

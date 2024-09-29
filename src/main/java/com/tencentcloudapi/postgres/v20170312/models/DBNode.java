@@ -40,6 +40,14 @@ Standby，代表备节点。
     private String Zone;
 
     /**
+    * 专属集群ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DedicatedClusterId")
+    @Expose
+    private String DedicatedClusterId;
+
+    /**
      * Get 节点类型，值可以为：
 Primary，代表主节点；
 Standby，代表备节点。 
@@ -79,6 +87,26 @@ Standby，代表备节点。
         this.Zone = Zone;
     }
 
+    /**
+     * Get 专属集群ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DedicatedClusterId 专属集群ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDedicatedClusterId() {
+        return this.DedicatedClusterId;
+    }
+
+    /**
+     * Set 专属集群ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DedicatedClusterId 专属集群ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDedicatedClusterId(String DedicatedClusterId) {
+        this.DedicatedClusterId = DedicatedClusterId;
+    }
+
     public DBNode() {
     }
 
@@ -93,6 +121,9 @@ Standby，代表备节点。
         if (source.Zone != null) {
             this.Zone = new String(source.Zone);
         }
+        if (source.DedicatedClusterId != null) {
+            this.DedicatedClusterId = new String(source.DedicatedClusterId);
+        }
     }
 
 
@@ -102,6 +133,7 @@ Standby，代表备节点。
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Role", this.Role);
         this.setParamSimple(map, prefix + "Zone", this.Zone);
+        this.setParamSimple(map, prefix + "DedicatedClusterId", this.DedicatedClusterId);
 
     }
 }

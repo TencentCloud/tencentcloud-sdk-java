@@ -222,12 +222,21 @@ public class DescAcItem extends AbstractModel {
     private BetaInfoByACL [] BetaList;
 
     /**
-    * 生效范围：serial，串行；side，旁路；all，全局
+    * （1）互联网边界防火墙，生效范围：serial，串行；side，旁路；all，全局；
+（2）NAT边界防火墙：ALL，全局生效；ap-guangzhou，生效的地域；cfwnat-xxx，生效基于实例维度
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Scope")
     @Expose
     private String Scope;
+
+    /**
+    * 生效范围描述
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ScopeDesc")
+    @Expose
+    private String ScopeDesc;
 
     /**
     * 互联网边界防火墙使用的内部规则id
@@ -770,9 +779,11 @@ public class DescAcItem extends AbstractModel {
     }
 
     /**
-     * Get 生效范围：serial，串行；side，旁路；all，全局
+     * Get （1）互联网边界防火墙，生效范围：serial，串行；side，旁路；all，全局；
+（2）NAT边界防火墙：ALL，全局生效；ap-guangzhou，生效的地域；cfwnat-xxx，生效基于实例维度
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Scope 生效范围：serial，串行；side，旁路；all，全局
+     * @return Scope （1）互联网边界防火墙，生效范围：serial，串行；side，旁路；all，全局；
+（2）NAT边界防火墙：ALL，全局生效；ap-guangzhou，生效的地域；cfwnat-xxx，生效基于实例维度
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getScope() {
@@ -780,13 +791,35 @@ public class DescAcItem extends AbstractModel {
     }
 
     /**
-     * Set 生效范围：serial，串行；side，旁路；all，全局
+     * Set （1）互联网边界防火墙，生效范围：serial，串行；side，旁路；all，全局；
+（2）NAT边界防火墙：ALL，全局生效；ap-guangzhou，生效的地域；cfwnat-xxx，生效基于实例维度
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Scope 生效范围：serial，串行；side，旁路；all，全局
+     * @param Scope （1）互联网边界防火墙，生效范围：serial，串行；side，旁路；all，全局；
+（2）NAT边界防火墙：ALL，全局生效；ap-guangzhou，生效的地域；cfwnat-xxx，生效基于实例维度
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScope(String Scope) {
         this.Scope = Scope;
+    }
+
+    /**
+     * Get 生效范围描述
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ScopeDesc 生效范围描述
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getScopeDesc() {
+        return this.ScopeDesc;
+    }
+
+    /**
+     * Set 生效范围描述
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ScopeDesc 生效范围描述
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setScopeDesc(String ScopeDesc) {
+        this.ScopeDesc = ScopeDesc;
     }
 
     /**
@@ -998,6 +1031,9 @@ public class DescAcItem extends AbstractModel {
         if (source.Scope != null) {
             this.Scope = new String(source.Scope);
         }
+        if (source.ScopeDesc != null) {
+            this.ScopeDesc = new String(source.ScopeDesc);
+        }
         if (source.InternetBorderUuid != null) {
             this.InternetBorderUuid = new String(source.InternetBorderUuid);
         }
@@ -1049,6 +1085,7 @@ public class DescAcItem extends AbstractModel {
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamArrayObj(map, prefix + "BetaList.", this.BetaList);
         this.setParamSimple(map, prefix + "Scope", this.Scope);
+        this.setParamSimple(map, prefix + "ScopeDesc", this.ScopeDesc);
         this.setParamSimple(map, prefix + "InternetBorderUuid", this.InternetBorderUuid);
         this.setParamSimple(map, prefix + "ParamTemplateName", this.ParamTemplateName);
         this.setParamSimple(map, prefix + "ParamTemplateId", this.ParamTemplateId);

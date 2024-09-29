@@ -325,6 +325,17 @@ public class CfwClient extends AbstractClient{
     }
 
     /**
+     *删除远程运维域名
+     * @param req DeleteRemoteAccessDomainRequest
+     * @return DeleteRemoteAccessDomainResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteRemoteAccessDomainResponse DeleteRemoteAccessDomain(DeleteRemoteAccessDomainRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteRemoteAccessDomain", DeleteRemoteAccessDomainResponse.class);
+    }
+
+    /**
      *DeleteResourceGroup-资产中心资产组删除
      * @param req DeleteResourceGroupRequest
      * @return DeleteResourceGroupResponse
@@ -355,19 +366,6 @@ public class CfwClient extends AbstractClient{
     public DeleteVpcFwGroupResponse DeleteVpcFwGroup(DeleteVpcFwGroupRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteVpcFwGroup", DeleteVpcFwGroupResponse.class);
-    }
-
-    /**
-     *接口废弃
-
-删除防火墙实例
-     * @param req DeleteVpcInstanceRequest
-     * @return DeleteVpcInstanceResponse
-     * @throws TencentCloudSDKException
-     */
-    public DeleteVpcInstanceResponse DeleteVpcInstance(DeleteVpcInstanceRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DeleteVpcInstance", DeleteVpcInstanceResponse.class);
     }
 
     /**
@@ -502,6 +500,17 @@ public class CfwClient extends AbstractClient{
     public DescribeEnterpriseSecurityGroupRuleResponse DescribeEnterpriseSecurityGroupRule(DescribeEnterpriseSecurityGroupRuleRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeEnterpriseSecurityGroupRule", DescribeEnterpriseSecurityGroupRuleResponse.class);
+    }
+
+    /**
+     *查询新企业安全组规则  从node接口迁移   原接口DescribeSecurityGroupNewList
+     * @param req DescribeEnterpriseSecurityGroupRuleListRequest
+     * @return DescribeEnterpriseSecurityGroupRuleListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEnterpriseSecurityGroupRuleListResponse DescribeEnterpriseSecurityGroupRuleList(DescribeEnterpriseSecurityGroupRuleListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeEnterpriseSecurityGroupRuleList", DescribeEnterpriseSecurityGroupRuleListResponse.class);
     }
 
     /**

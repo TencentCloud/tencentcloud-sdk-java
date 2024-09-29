@@ -52,7 +52,7 @@ public class GetMsgRecordRequest extends AbstractModel {
     private String LastRecordId;
 
     /**
-    * 应用AppKey
+    * 应用AppKey, 当Type=5[API访客]时, 该字段必填
     */
     @SerializedName("BotAppKey")
     @Expose
@@ -130,16 +130,16 @@ public class GetMsgRecordRequest extends AbstractModel {
     }
 
     /**
-     * Get 应用AppKey 
-     * @return BotAppKey 应用AppKey
+     * Get 应用AppKey, 当Type=5[API访客]时, 该字段必填 
+     * @return BotAppKey 应用AppKey, 当Type=5[API访客]时, 该字段必填
      */
     public String getBotAppKey() {
         return this.BotAppKey;
     }
 
     /**
-     * Set 应用AppKey
-     * @param BotAppKey 应用AppKey
+     * Set 应用AppKey, 当Type=5[API访客]时, 该字段必填
+     * @param BotAppKey 应用AppKey, 当Type=5[API访客]时, 该字段必填
      */
     public void setBotAppKey(String BotAppKey) {
         this.BotAppKey = BotAppKey;

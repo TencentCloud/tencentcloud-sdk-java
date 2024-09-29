@@ -201,7 +201,9 @@ public class ModifyInstanceAttributesRequest extends AbstractModel {
     /**
      * Get 动态硬盘扩容策略配置 
      * @return DynamicDiskConfig 动态硬盘扩容策略配置
+     * @deprecated
      */
+    @Deprecated
     public DynamicDiskConfig getDynamicDiskConfig() {
         return this.DynamicDiskConfig;
     }
@@ -209,7 +211,9 @@ public class ModifyInstanceAttributesRequest extends AbstractModel {
     /**
      * Set 动态硬盘扩容策略配置
      * @param DynamicDiskConfig 动态硬盘扩容策略配置
+     * @deprecated
      */
+    @Deprecated
     public void setDynamicDiskConfig(DynamicDiskConfig DynamicDiskConfig) {
         this.DynamicDiskConfig = DynamicDiskConfig;
     }

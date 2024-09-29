@@ -26,8 +26,9 @@ public class CreateZoneRequest extends AbstractModel {
     /**
     * 站点接入类型。该参数取值如下，不填写时默认为 partial：
 <li>partial：CNAME 接入；</li>
-<li> full：NS 接入；</li>
-<li>noDomainAccess：无域名接入。</li>
+<li>full：NS 接入；</li>
+<li>noDomainAccess：无域名接入；</li>
+<li>dnsPodAccess：DNSPod 托管接入，该接入模式要求您的域名已托管在 DNSPod 内。</li>
     */
     @SerializedName("Type")
     @Expose
@@ -90,12 +91,14 @@ public class CreateZoneRequest extends AbstractModel {
     /**
      * Get 站点接入类型。该参数取值如下，不填写时默认为 partial：
 <li>partial：CNAME 接入；</li>
-<li> full：NS 接入；</li>
-<li>noDomainAccess：无域名接入。</li> 
+<li>full：NS 接入；</li>
+<li>noDomainAccess：无域名接入；</li>
+<li>dnsPodAccess：DNSPod 托管接入，该接入模式要求您的域名已托管在 DNSPod 内。</li> 
      * @return Type 站点接入类型。该参数取值如下，不填写时默认为 partial：
 <li>partial：CNAME 接入；</li>
-<li> full：NS 接入；</li>
-<li>noDomainAccess：无域名接入。</li>
+<li>full：NS 接入；</li>
+<li>noDomainAccess：无域名接入；</li>
+<li>dnsPodAccess：DNSPod 托管接入，该接入模式要求您的域名已托管在 DNSPod 内。</li>
      */
     public String getType() {
         return this.Type;
@@ -104,12 +107,14 @@ public class CreateZoneRequest extends AbstractModel {
     /**
      * Set 站点接入类型。该参数取值如下，不填写时默认为 partial：
 <li>partial：CNAME 接入；</li>
-<li> full：NS 接入；</li>
-<li>noDomainAccess：无域名接入。</li>
+<li>full：NS 接入；</li>
+<li>noDomainAccess：无域名接入；</li>
+<li>dnsPodAccess：DNSPod 托管接入，该接入模式要求您的域名已托管在 DNSPod 内。</li>
      * @param Type 站点接入类型。该参数取值如下，不填写时默认为 partial：
 <li>partial：CNAME 接入；</li>
-<li> full：NS 接入；</li>
-<li>noDomainAccess：无域名接入。</li>
+<li>full：NS 接入；</li>
+<li>noDomainAccess：无域名接入；</li>
+<li>dnsPodAccess：DNSPod 托管接入，该接入模式要求您的域名已托管在 DNSPod 内。</li>
      */
     public void setType(String Type) {
         this.Type = Type;

@@ -47,7 +47,7 @@ public class DescribeResultDownloadResponse extends AbstractModel {
     private String Reason;
 
     /**
-    * 临时AK
+    * 临时SecretId
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SecretId")
@@ -55,7 +55,7 @@ public class DescribeResultDownloadResponse extends AbstractModel {
     private String SecretId;
 
     /**
-    * 临时SK
+    * 临时SecretKey
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SecretKey")
@@ -134,9 +134,9 @@ public class DescribeResultDownloadResponse extends AbstractModel {
     }
 
     /**
-     * Get 临时AK
+     * Get 临时SecretId
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SecretId 临时AK
+     * @return SecretId 临时SecretId
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSecretId() {
@@ -144,9 +144,9 @@ public class DescribeResultDownloadResponse extends AbstractModel {
     }
 
     /**
-     * Set 临时AK
+     * Set 临时SecretId
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SecretId 临时AK
+     * @param SecretId 临时SecretId
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSecretId(String SecretId) {
@@ -154,9 +154,9 @@ public class DescribeResultDownloadResponse extends AbstractModel {
     }
 
     /**
-     * Get 临时SK
+     * Get 临时SecretKey
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SecretKey 临时SK
+     * @return SecretKey 临时SecretKey
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSecretKey() {
@@ -164,9 +164,9 @@ public class DescribeResultDownloadResponse extends AbstractModel {
     }
 
     /**
-     * Set 临时SK
+     * Set 临时SecretKey
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SecretKey 临时SK
+     * @param SecretKey 临时SecretKey
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSecretKey(String SecretKey) {

@@ -52,7 +52,7 @@ public class BashPolicy extends AbstractModel {
     private Long BashAction;
 
     /**
-    * 正则表达式
+    * 正则表达式 base64 加密,该字段废弃,如果写入则自动替换为Rules.Process.CmdLine
     */
     @SerializedName("Rule")
     @Expose
@@ -140,6 +140,14 @@ public class BashPolicy extends AbstractModel {
     private String [] Uuids;
 
     /**
+    * 规则表达式
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Rules")
+    @Expose
+    private PolicyRules Rules;
+
+    /**
      * Get 策略名称 
      * @return Name 策略名称
      */
@@ -204,16 +212,16 @@ public class BashPolicy extends AbstractModel {
     }
 
     /**
-     * Get 正则表达式 
-     * @return Rule 正则表达式
+     * Get 正则表达式 base64 加密,该字段废弃,如果写入则自动替换为Rules.Process.CmdLine 
+     * @return Rule 正则表达式 base64 加密,该字段废弃,如果写入则自动替换为Rules.Process.CmdLine
      */
     public String getRule() {
         return this.Rule;
     }
 
     /**
-     * Set 正则表达式
-     * @param Rule 正则表达式
+     * Set 正则表达式 base64 加密,该字段废弃,如果写入则自动替换为Rules.Process.CmdLine
+     * @param Rule 正则表达式 base64 加密,该字段废弃,如果写入则自动替换为Rules.Process.CmdLine
      */
     public void setRule(String Rule) {
         this.Rule = Rule;
@@ -411,6 +419,26 @@ public class BashPolicy extends AbstractModel {
         this.Uuids = Uuids;
     }
 
+    /**
+     * Get 规则表达式
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Rules 规则表达式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public PolicyRules getRules() {
+        return this.Rules;
+    }
+
+    /**
+     * Set 规则表达式
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Rules 规则表达式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRules(PolicyRules Rules) {
+        this.Rules = Rules;
+    }
+
     public BashPolicy() {
     }
 
@@ -473,6 +501,9 @@ public class BashPolicy extends AbstractModel {
                 this.Uuids[i] = new String(source.Uuids[i]);
             }
         }
+        if (source.Rules != null) {
+            this.Rules = new PolicyRules(source.Rules);
+        }
     }
 
 
@@ -496,6 +527,7 @@ public class BashPolicy extends AbstractModel {
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
         this.setParamArraySimple(map, prefix + "Uuids.", this.Uuids);
+        this.setParamObj(map, prefix + "Rules.", this.Rules);
 
     }
 }

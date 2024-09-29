@@ -260,6 +260,17 @@ public class CamClient extends AbstractClient{
     }
 
     /**
+     *删除消息接收人
+     * @param req DeleteMessageReceiverRequest
+     * @return DeleteMessageReceiverResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteMessageReceiverResponse DeleteMessageReceiver(DeleteMessageReceiverRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteMessageReceiver", DeleteMessageReceiverResponse.class);
+    }
+
+    /**
      *删除OIDC身份提供商
      * @param req DeleteOIDCConfigRequest
      * @return DeleteOIDCConfigResponse
@@ -763,6 +774,17 @@ public class CamClient extends AbstractClient{
     public ListPolicyVersionsResponse ListPolicyVersions(ListPolicyVersionsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ListPolicyVersions", ListPolicyVersionsResponse.class);
+    }
+
+    /**
+     *获取消息接收人列表
+     * @param req ListReceiverRequest
+     * @return ListReceiverResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListReceiverResponse ListReceiver(ListReceiverRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListReceiver", ListReceiverResponse.class);
     }
 
     /**

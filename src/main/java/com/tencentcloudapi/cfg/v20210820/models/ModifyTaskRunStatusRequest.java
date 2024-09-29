@@ -52,6 +52,20 @@ public class ModifyTaskRunStatusRequest extends AbstractModel {
     private String Summary;
 
     /**
+    * 问题以及改进
+    */
+    @SerializedName("Issue")
+    @Expose
+    private String Issue;
+
+    /**
+    * 演练记录
+    */
+    @SerializedName("Record")
+    @Expose
+    private String Record;
+
+    /**
      * Get 任务ID 
      * @return TaskId 任务ID
      */
@@ -115,6 +129,38 @@ public class ModifyTaskRunStatusRequest extends AbstractModel {
         this.Summary = Summary;
     }
 
+    /**
+     * Get 问题以及改进 
+     * @return Issue 问题以及改进
+     */
+    public String getIssue() {
+        return this.Issue;
+    }
+
+    /**
+     * Set 问题以及改进
+     * @param Issue 问题以及改进
+     */
+    public void setIssue(String Issue) {
+        this.Issue = Issue;
+    }
+
+    /**
+     * Get 演练记录 
+     * @return Record 演练记录
+     */
+    public String getRecord() {
+        return this.Record;
+    }
+
+    /**
+     * Set 演练记录
+     * @param Record 演练记录
+     */
+    public void setRecord(String Record) {
+        this.Record = Record;
+    }
+
     public ModifyTaskRunStatusRequest() {
     }
 
@@ -135,6 +181,12 @@ public class ModifyTaskRunStatusRequest extends AbstractModel {
         if (source.Summary != null) {
             this.Summary = new String(source.Summary);
         }
+        if (source.Issue != null) {
+            this.Issue = new String(source.Issue);
+        }
+        if (source.Record != null) {
+            this.Record = new String(source.Record);
+        }
     }
 
 
@@ -146,6 +198,8 @@ public class ModifyTaskRunStatusRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "IsExpect", this.IsExpect);
         this.setParamSimple(map, prefix + "Summary", this.Summary);
+        this.setParamSimple(map, prefix + "Issue", this.Issue);
+        this.setParamSimple(map, prefix + "Record", this.Record);
 
     }
 }

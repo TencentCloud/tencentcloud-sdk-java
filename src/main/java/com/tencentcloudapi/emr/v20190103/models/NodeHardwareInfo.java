@@ -441,6 +441,22 @@ public class NodeHardwareInfo extends AbstractModel {
     private String Remark;
 
     /**
+    * 共享集群id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SharedClusterId")
+    @Expose
+    private String SharedClusterId;
+
+    /**
+    * 共享集群id描述
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SharedClusterIdDesc")
+    @Expose
+    private String SharedClusterIdDesc;
+
+    /**
      * Get 用户APPID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return AppId 用户APPID
@@ -1484,6 +1500,46 @@ public class NodeHardwareInfo extends AbstractModel {
         this.Remark = Remark;
     }
 
+    /**
+     * Get 共享集群id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SharedClusterId 共享集群id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSharedClusterId() {
+        return this.SharedClusterId;
+    }
+
+    /**
+     * Set 共享集群id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SharedClusterId 共享集群id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSharedClusterId(String SharedClusterId) {
+        this.SharedClusterId = SharedClusterId;
+    }
+
+    /**
+     * Get 共享集群id描述
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SharedClusterIdDesc 共享集群id描述
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSharedClusterIdDesc() {
+        return this.SharedClusterIdDesc;
+    }
+
+    /**
+     * Set 共享集群id描述
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SharedClusterIdDesc 共享集群id描述
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSharedClusterIdDesc(String SharedClusterIdDesc) {
+        this.SharedClusterIdDesc = SharedClusterIdDesc;
+    }
+
     public NodeHardwareInfo() {
     }
 
@@ -1654,6 +1710,12 @@ public class NodeHardwareInfo extends AbstractModel {
         if (source.Remark != null) {
             this.Remark = new String(source.Remark);
         }
+        if (source.SharedClusterId != null) {
+            this.SharedClusterId = new String(source.SharedClusterId);
+        }
+        if (source.SharedClusterIdDesc != null) {
+            this.SharedClusterIdDesc = new String(source.SharedClusterIdDesc);
+        }
     }
 
 
@@ -1713,6 +1775,8 @@ public class NodeHardwareInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "TradeVersion", this.TradeVersion);
         this.setParamSimple(map, prefix + "ServicesStatus", this.ServicesStatus);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
+        this.setParamSimple(map, prefix + "SharedClusterId", this.SharedClusterId);
+        this.setParamSimple(map, prefix + "SharedClusterIdDesc", this.SharedClusterIdDesc);
 
     }
 }

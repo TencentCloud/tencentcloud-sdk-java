@@ -721,6 +721,17 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *本接口(DescribeIsolatedInstances)用于查询回收站实例列表。
+     * @param req DescribeIsolatedInstancesRequest
+     * @return DescribeIsolatedInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeIsolatedInstancesResponse DescribeIsolatedInstances(DescribeIsolatedInstancesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeIsolatedInstances", DescribeIsolatedInstancesResponse.class);
+    }
+
+    /**
      *查询实例维护时间窗
      * @param req DescribeMaintainPeriodRequest
      * @return DescribeMaintainPeriodResponse
@@ -853,16 +864,14 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *历史废弃接口，从云API下线
-
-指定时间和集群查询是否可回滚
-     * @param req DescribeRollbackTimeValidityRequest
-     * @return DescribeRollbackTimeValidityResponse
+     *查询serverless策略
+     * @param req DescribeServerlessStrategyRequest
+     * @return DescribeServerlessStrategyResponse
      * @throws TencentCloudSDKException
      */
-    public DescribeRollbackTimeValidityResponse DescribeRollbackTimeValidity(DescribeRollbackTimeValidityRequest req) throws TencentCloudSDKException{
+    public DescribeServerlessStrategyResponse DescribeServerlessStrategy(DescribeServerlessStrategyRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeRollbackTimeValidity", DescribeRollbackTimeValidityResponse.class);
+        return this.internalRequest(req, "DescribeServerlessStrategy", DescribeServerlessStrategyResponse.class);
     }
 
     /**
@@ -1207,7 +1216,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *修改实例小版本升级限制时间
+     *本接口（ModifyInstanceUpgradeLimitDays）用于修改实例内核小版本的升级限制时间。
      * @param req ModifyInstanceUpgradeLimitDaysRequest
      * @return ModifyInstanceUpgradeLimitDaysResponse
      * @throws TencentCloudSDKException
@@ -1295,6 +1304,17 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *修改serverless策略
+     * @param req ModifyServerlessStrategyRequest
+     * @return ModifyServerlessStrategyResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyServerlessStrategyResponse ModifyServerlessStrategy(ModifyServerlessStrategyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyServerlessStrategy", ModifyServerlessStrategyResponse.class);
+    }
+
+    /**
      *修改实例组ip，端口
      * @param req ModifyVipVportRequest
      * @return ModifyVipVportResponse
@@ -1306,7 +1326,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *销毁集群
+     *本接口（OfflineCluster）用于销毁集群。
      * @param req OfflineClusterRequest
      * @return OfflineClusterResponse
      * @throws TencentCloudSDKException
@@ -1537,7 +1557,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *开启日志投递
+     *本接口（StartCLSDelivery）用于开启日志投递功能。
      * @param req StartCLSDeliveryRequest
      * @return StartCLSDeliveryResponse
      * @throws TencentCloudSDKException
@@ -1548,7 +1568,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *停止日志投递
+     *本接口（StopCLSDelivery）用于停止日志投递功能。
      * @param req StopCLSDeliveryRequest
      * @return StopCLSDeliveryResponse
      * @throws TencentCloudSDKException
@@ -1603,7 +1623,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *更新内核小版本
+     *本接口（UpgradeClusterVersion）用于更新内核小版本。
      * @param req UpgradeClusterVersionRequest
      * @return UpgradeClusterVersionResponse
      * @throws TencentCloudSDKException
@@ -1614,7 +1634,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *实例变配
+     *本接口（UpgradeInstance）用于实例变配。
      * @param req UpgradeInstanceRequest
      * @return UpgradeInstanceResponse
      * @throws TencentCloudSDKException
