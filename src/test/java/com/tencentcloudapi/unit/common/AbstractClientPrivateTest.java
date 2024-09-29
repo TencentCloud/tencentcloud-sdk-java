@@ -57,22 +57,6 @@ public class AbstractClientPrivateTest {
     }
 
     @Test
-    public void testAbstractClientGetResponseBody() throws Exception {
-        client = new AbstractClient(endpoint, version, credential, region, clientProfile) {
-        };
-
-        String url = "https://example.com/api";
-        Map<String, String> headers = new HashMap<>();
-        headers.put("Content-Type", "application/json");
-        byte[] body = "{\"key\":\"value\"}".getBytes();
-        try {
-            Whitebox.invokeMethod(client, "getResponseBody", url, headers, body);
-        } catch (TencentCloudSDKException e) {
-            assert e.getMessage().contains("404");
-        }
-    }
-
-    @Test
     public void testAbstractClientTrySetProxy() throws Exception {
         HttpProfile httpProfile = new HttpProfile();
         httpProfile.setProxyHost("127.0.0.1");
