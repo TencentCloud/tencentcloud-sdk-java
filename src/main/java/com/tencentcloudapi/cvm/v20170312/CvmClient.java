@@ -354,6 +354,17 @@ public class CvmClient extends AbstractClient{
     }
 
     /**
+     *本接口(DescribeImageFromFamily) 用于查看镜像族内可用镜像信息。
+     * @param req DescribeImageFromFamilyRequest
+     * @return DescribeImageFromFamilyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeImageFromFamilyResponse DescribeImageFromFamily(DescribeImageFromFamilyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeImageFromFamily", DescribeImageFromFamilyResponse.class);
+    }
+
+    /**
      *本接口(DescribeImageQuota)用于查询用户账号的镜像配额。
      * @param req DescribeImageQuotaRequest
      * @return DescribeImageQuotaResponse

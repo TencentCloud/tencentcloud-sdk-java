@@ -24,7 +24,8 @@ import java.util.HashMap;
 public class AssociateSecurityGroupsRequest extends AbstractModel {
 
     /**
-    * 实例组ID数组
+    * 实例组 ID 数组，cynosdbmysql-grp-前缀开头或集群 ID。
+说明：要获取集群的实例组 ID，可通过 [查询集群实例组](https://cloud.tencent.com/document/product/1003/103934) 进行。
     */
     @SerializedName("InstanceIds")
     @Expose
@@ -45,16 +46,20 @@ public class AssociateSecurityGroupsRequest extends AbstractModel {
     private String Zone;
 
     /**
-     * Get 实例组ID数组 
-     * @return InstanceIds 实例组ID数组
+     * Get 实例组 ID 数组，cynosdbmysql-grp-前缀开头或集群 ID。
+说明：要获取集群的实例组 ID，可通过 [查询集群实例组](https://cloud.tencent.com/document/product/1003/103934) 进行。 
+     * @return InstanceIds 实例组 ID 数组，cynosdbmysql-grp-前缀开头或集群 ID。
+说明：要获取集群的实例组 ID，可通过 [查询集群实例组](https://cloud.tencent.com/document/product/1003/103934) 进行。
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set 实例组ID数组
-     * @param InstanceIds 实例组ID数组
+     * Set 实例组 ID 数组，cynosdbmysql-grp-前缀开头或集群 ID。
+说明：要获取集群的实例组 ID，可通过 [查询集群实例组](https://cloud.tencent.com/document/product/1003/103934) 进行。
+     * @param InstanceIds 实例组 ID 数组，cynosdbmysql-grp-前缀开头或集群 ID。
+说明：要获取集群的实例组 ID，可通过 [查询集群实例组](https://cloud.tencent.com/document/product/1003/103934) 进行。
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;

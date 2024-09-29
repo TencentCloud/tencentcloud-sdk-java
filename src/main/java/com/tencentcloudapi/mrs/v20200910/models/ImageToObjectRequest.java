@@ -70,6 +70,13 @@ public class ImageToObjectRequest extends AbstractModel {
     private ReportTypeVersion [] ReportTypeVersion;
 
     /**
+    * 可选。 图片OCR信息列表，每一个元素是一张图片的OCR结果。适用于不想将医疗报告图片传入腾讯云的客户，客户可对图片OCR信息中的敏感信息去除之后再传入。与 ImageInfoList 二选一，同时存在则使用OcrInfoList
+    */
+    @SerializedName("OcrInfoList")
+    @Expose
+    private OcrInfo [] OcrInfoList;
+
+    /**
      * Get 图片列表，允许传入多张图片，目前只支持传入图片base64编码，图片url暂不支持 
      * @return ImageInfoList 图片列表，允许传入多张图片，目前只支持传入图片base64编码，图片url暂不支持
      */
@@ -181,6 +188,22 @@ public class ImageToObjectRequest extends AbstractModel {
         this.ReportTypeVersion = ReportTypeVersion;
     }
 
+    /**
+     * Get 可选。 图片OCR信息列表，每一个元素是一张图片的OCR结果。适用于不想将医疗报告图片传入腾讯云的客户，客户可对图片OCR信息中的敏感信息去除之后再传入。与 ImageInfoList 二选一，同时存在则使用OcrInfoList 
+     * @return OcrInfoList 可选。 图片OCR信息列表，每一个元素是一张图片的OCR结果。适用于不想将医疗报告图片传入腾讯云的客户，客户可对图片OCR信息中的敏感信息去除之后再传入。与 ImageInfoList 二选一，同时存在则使用OcrInfoList
+     */
+    public OcrInfo [] getOcrInfoList() {
+        return this.OcrInfoList;
+    }
+
+    /**
+     * Set 可选。 图片OCR信息列表，每一个元素是一张图片的OCR结果。适用于不想将医疗报告图片传入腾讯云的客户，客户可对图片OCR信息中的敏感信息去除之后再传入。与 ImageInfoList 二选一，同时存在则使用OcrInfoList
+     * @param OcrInfoList 可选。 图片OCR信息列表，每一个元素是一张图片的OCR结果。适用于不想将医疗报告图片传入腾讯云的客户，客户可对图片OCR信息中的敏感信息去除之后再传入。与 ImageInfoList 二选一，同时存在则使用OcrInfoList
+     */
+    public void setOcrInfoList(OcrInfo [] OcrInfoList) {
+        this.OcrInfoList = OcrInfoList;
+    }
+
     public ImageToObjectRequest() {
     }
 
@@ -213,6 +236,12 @@ public class ImageToObjectRequest extends AbstractModel {
                 this.ReportTypeVersion[i] = new ReportTypeVersion(source.ReportTypeVersion[i]);
             }
         }
+        if (source.OcrInfoList != null) {
+            this.OcrInfoList = new OcrInfo[source.OcrInfoList.length];
+            for (int i = 0; i < source.OcrInfoList.length; i++) {
+                this.OcrInfoList[i] = new OcrInfo(source.OcrInfoList[i]);
+            }
+        }
     }
 
 
@@ -226,6 +255,7 @@ public class ImageToObjectRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "IsUsedClassify", this.IsUsedClassify);
         this.setParamSimple(map, prefix + "UserType", this.UserType);
         this.setParamArrayObj(map, prefix + "ReportTypeVersion.", this.ReportTypeVersion);
+        this.setParamArrayObj(map, prefix + "OcrInfoList.", this.OcrInfoList);
 
     }
 }

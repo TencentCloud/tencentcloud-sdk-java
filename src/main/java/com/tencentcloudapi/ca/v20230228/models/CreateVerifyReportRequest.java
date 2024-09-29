@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateVerifyReportRequest extends AbstractModel {
 
     /**
-    * 客户类型 1:个人，2:企业
+    * 申请者类型 1:个人，2:企业
     */
     @SerializedName("ApplyCustomerType")
     @Expose
@@ -38,14 +38,14 @@ public class CreateVerifyReportRequest extends AbstractModel {
     private String ApplyCustomerName;
 
     /**
-    * 验签申请人姓名
+    * 验签申请经办人姓名
     */
     @SerializedName("ApplyName")
     @Expose
     private String ApplyName;
 
     /**
-    * 验签申请人电弧
+    * 验签申请经办人电话
     */
     @SerializedName("ApplyMobile")
     @Expose
@@ -59,23 +59,23 @@ public class CreateVerifyReportRequest extends AbstractModel {
     private String FileId;
 
     /**
-    * 验签申请人邮箱
+    * 验签申请经办人邮箱
     */
     @SerializedName("ApplyEmail")
     @Expose
     private String ApplyEmail;
 
     /**
-     * Get 客户类型 1:个人，2:企业 
-     * @return ApplyCustomerType 客户类型 1:个人，2:企业
+     * Get 申请者类型 1:个人，2:企业 
+     * @return ApplyCustomerType 申请者类型 1:个人，2:企业
      */
     public String getApplyCustomerType() {
         return this.ApplyCustomerType;
     }
 
     /**
-     * Set 客户类型 1:个人，2:企业
-     * @param ApplyCustomerType 客户类型 1:个人，2:企业
+     * Set 申请者类型 1:个人，2:企业
+     * @param ApplyCustomerType 申请者类型 1:个人，2:企业
      */
     public void setApplyCustomerType(String ApplyCustomerType) {
         this.ApplyCustomerType = ApplyCustomerType;
@@ -98,32 +98,32 @@ public class CreateVerifyReportRequest extends AbstractModel {
     }
 
     /**
-     * Get 验签申请人姓名 
-     * @return ApplyName 验签申请人姓名
+     * Get 验签申请经办人姓名 
+     * @return ApplyName 验签申请经办人姓名
      */
     public String getApplyName() {
         return this.ApplyName;
     }
 
     /**
-     * Set 验签申请人姓名
-     * @param ApplyName 验签申请人姓名
+     * Set 验签申请经办人姓名
+     * @param ApplyName 验签申请经办人姓名
      */
     public void setApplyName(String ApplyName) {
         this.ApplyName = ApplyName;
     }
 
     /**
-     * Get 验签申请人电弧 
-     * @return ApplyMobile 验签申请人电弧
+     * Get 验签申请经办人电话 
+     * @return ApplyMobile 验签申请经办人电话
      */
     public String getApplyMobile() {
         return this.ApplyMobile;
     }
 
     /**
-     * Set 验签申请人电弧
-     * @param ApplyMobile 验签申请人电弧
+     * Set 验签申请经办人电话
+     * @param ApplyMobile 验签申请经办人电话
      */
     public void setApplyMobile(String ApplyMobile) {
         this.ApplyMobile = ApplyMobile;
@@ -146,16 +146,16 @@ public class CreateVerifyReportRequest extends AbstractModel {
     }
 
     /**
-     * Get 验签申请人邮箱 
-     * @return ApplyEmail 验签申请人邮箱
+     * Get 验签申请经办人邮箱 
+     * @return ApplyEmail 验签申请经办人邮箱
      */
     public String getApplyEmail() {
         return this.ApplyEmail;
     }
 
     /**
-     * Set 验签申请人邮箱
-     * @param ApplyEmail 验签申请人邮箱
+     * Set 验签申请经办人邮箱
+     * @param ApplyEmail 验签申请经办人邮箱
      */
     public void setApplyEmail(String ApplyEmail) {
         this.ApplyEmail = ApplyEmail;

@@ -75,6 +75,20 @@ public class ReservedInstancePriceItem extends AbstractModel {
     private String ProductDescription;
 
     /**
+    * 预支合计费用，单位：元。
+    */
+    @SerializedName("DiscountUsagePrice")
+    @Expose
+    private Float DiscountUsagePrice;
+
+    /**
+    * 后续合计费用的折扣价，单位：元/小时
+    */
+    @SerializedName("DiscountFixedPrice")
+    @Expose
+    private Float DiscountFixedPrice;
+
+    /**
      * Get 付费类型，如："All Upfront","Partial Upfront","No Upfront" 
      * @return OfferingType 付费类型，如："All Upfront","Partial Upfront","No Upfront"
      */
@@ -194,6 +208,38 @@ public class ReservedInstancePriceItem extends AbstractModel {
         this.ProductDescription = ProductDescription;
     }
 
+    /**
+     * Get 预支合计费用，单位：元。 
+     * @return DiscountUsagePrice 预支合计费用，单位：元。
+     */
+    public Float getDiscountUsagePrice() {
+        return this.DiscountUsagePrice;
+    }
+
+    /**
+     * Set 预支合计费用，单位：元。
+     * @param DiscountUsagePrice 预支合计费用，单位：元。
+     */
+    public void setDiscountUsagePrice(Float DiscountUsagePrice) {
+        this.DiscountUsagePrice = DiscountUsagePrice;
+    }
+
+    /**
+     * Get 后续合计费用的折扣价，单位：元/小时 
+     * @return DiscountFixedPrice 后续合计费用的折扣价，单位：元/小时
+     */
+    public Float getDiscountFixedPrice() {
+        return this.DiscountFixedPrice;
+    }
+
+    /**
+     * Set 后续合计费用的折扣价，单位：元/小时
+     * @param DiscountFixedPrice 后续合计费用的折扣价，单位：元/小时
+     */
+    public void setDiscountFixedPrice(Float DiscountFixedPrice) {
+        this.DiscountFixedPrice = DiscountFixedPrice;
+    }
+
     public ReservedInstancePriceItem() {
     }
 
@@ -223,6 +269,12 @@ public class ReservedInstancePriceItem extends AbstractModel {
         if (source.ProductDescription != null) {
             this.ProductDescription = new String(source.ProductDescription);
         }
+        if (source.DiscountUsagePrice != null) {
+            this.DiscountUsagePrice = new Float(source.DiscountUsagePrice);
+        }
+        if (source.DiscountFixedPrice != null) {
+            this.DiscountFixedPrice = new Float(source.DiscountFixedPrice);
+        }
     }
 
 
@@ -237,6 +289,8 @@ public class ReservedInstancePriceItem extends AbstractModel {
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamSimple(map, prefix + "Duration", this.Duration);
         this.setParamSimple(map, prefix + "ProductDescription", this.ProductDescription);
+        this.setParamSimple(map, prefix + "DiscountUsagePrice", this.DiscountUsagePrice);
+        this.setParamSimple(map, prefix + "DiscountFixedPrice", this.DiscountFixedPrice);
 
     }
 }

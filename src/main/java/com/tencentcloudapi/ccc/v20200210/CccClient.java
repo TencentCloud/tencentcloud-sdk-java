@@ -171,6 +171,17 @@ public class CccClient extends AbstractClient{
     }
 
     /**
+     *创建客户自携号码接入审核
+     * @param req CreateOwnNumberApplyRequest
+     * @return CreateOwnNumberApplyResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateOwnNumberApplyResponse CreateOwnNumberApply(CreateOwnNumberApplyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateOwnNumberApply", CreateOwnNumberApplyResponse.class);
+    }
+
+    /**
      *创建预测式外呼任务
      * @param req CreatePredictiveDialingCampaignRequest
      * @return CreatePredictiveDialingCampaignResponse
@@ -566,6 +577,17 @@ public class CccClient extends AbstractClient{
     public ModifyExtensionResponse ModifyExtension(ModifyExtensionRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyExtension", ModifyExtensionResponse.class);
+    }
+
+    /**
+     *修改客户自携号码审批单
+     * @param req ModifyOwnNumberApplyRequest
+     * @return ModifyOwnNumberApplyResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyOwnNumberApplyResponse ModifyOwnNumberApply(ModifyOwnNumberApplyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyOwnNumberApply", ModifyOwnNumberApplyResponse.class);
     }
 
     /**

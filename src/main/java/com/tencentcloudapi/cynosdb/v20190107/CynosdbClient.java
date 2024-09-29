@@ -50,7 +50,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *开启多可用区部署
+     *本接口（AddClusterSlaveZone）用于对集群开启多可用区部署。
      * @param req AddClusterSlaveZoneRequest
      * @return AddClusterSlaveZoneResponse
      * @throws TencentCloudSDKException
@@ -61,7 +61,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *本接口（AddInstances）用于集群添加实例
+     *本接口（AddInstances）用于集群添加实例。
      * @param req AddInstancesRequest
      * @return AddInstancesResponse
      * @throws TencentCloudSDKException
@@ -72,7 +72,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *安全组批量绑定云资源
+     *本接口（AssociateSecurityGroups）用于安全组批量绑定云资源。
      * @param req AssociateSecurityGroupsRequest
      * @return AssociateSecurityGroupsResponse
      * @throws TencentCloudSDKException
@@ -105,7 +105,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *本接口（CloseClusterPasswordComplexity）用于关闭集群密码复杂度
+     *本接口（CloseClusterPasswordComplexity）用于关闭集群密码复杂度。
      * @param req CloseClusterPasswordComplexityRequest
      * @return CloseClusterPasswordComplexityResponse
      * @throws TencentCloudSDKException
@@ -116,7 +116,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *关闭数据库代理
+     *本接口（CloseProxy）用于关闭集群的数据库代理服务。
      * @param req CloseProxyRequest
      * @return CloseProxyResponse
      * @throws TencentCloudSDKException
@@ -127,7 +127,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *本接口（CloseWan）用于关闭外网
+     *本接口（CloseWan）用于关闭外网。
      * @param req CloseWanRequest
      * @return CloseWanResponse
      * @throws TencentCloudSDKException
@@ -138,7 +138,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *本接口（CopyClusterPasswordComplexity）用于复制集群密码复杂度
+     *本接口（CopyClusterPasswordComplexity）用于复制集群密码复杂度。
      * @param req CopyClusterPasswordComplexityRequest
      * @return CopyClusterPasswordComplexityResponse
      * @throws TencentCloudSDKException
@@ -237,7 +237,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *创建数据库代理
+     *本接口（CreateProxy）用于开启集群的数据库代理。
      * @param req CreateProxyRequest
      * @return CreateProxyResponse
      * @throws TencentCloudSDKException
@@ -259,7 +259,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *新购资源包
+     *本接口（CreateResourcePackage）用于新购资源包。
      * @param req CreateResourcePackageRequest
      * @return CreateResourcePackageResponse
      * @throws TencentCloudSDKException
@@ -303,7 +303,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *为集群删除手动备份，无法删除自动备份
+     *本接口（DeleteBackup）用于为集群删除手动备份，无法删除自动备份。
      * @param req DeleteBackupRequest
      * @return DeleteBackupResponse
      * @throws TencentCloudSDKException
@@ -325,7 +325,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *删除数据库
+     *本接口（DeleteClusterDatabase）用于删除数据库。
      * @param req DeleteClusterDatabaseRequest
      * @return DeleteClusterDatabaseResponse
      * @throws TencentCloudSDKException
@@ -347,7 +347,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *查询账号所有可授予权限
+     *本接口（DescribeAccountAllGrantPrivileges）用于查询账号所有可授予的权限。
      * @param req DescribeAccountAllGrantPrivilegesRequest
      * @return DescribeAccountAllGrantPrivilegesResponse
      * @throws TencentCloudSDKException
@@ -369,7 +369,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *本接口(DescribeAccounts)用于查询数据库账号列表
+     *本接口（DescribeAccounts）用于查询数据库账号列表。
      * @param req DescribeAccountsRequest
      * @return DescribeAccountsResponse
      * @throws TencentCloudSDKException
@@ -435,7 +435,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *获取指定集群的备份配置信息，包括全量备份时间段，备份文件保留时间
+     *本接口（DescribeBackupConfig）用于获取指定集群的备份配置信息，包括全量备份时间段、备份文件保留时间。
      * @param req DescribeBackupConfigRequest
      * @return DescribeBackupConfigResponse
      * @throws TencentCloudSDKException
@@ -457,7 +457,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *查询备份文件列表
+     *本接口（DescribeBackupList）用于查询集群的备份文件列表。
      * @param req DescribeBackupListRequest
      * @return DescribeBackupListResponse
      * @throws TencentCloudSDKException
@@ -512,7 +512,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *本接口（DescribeChangedParamsAfterUpgrade）用于查询升降配运行参数对比
+     *本接口（DescribeChangedParamsAfterUpgrade）用于查询升降配运行参数对比。
      * @param req DescribeChangedParamsAfterUpgradeRequest
      * @return DescribeChangedParamsAfterUpgradeResponse
      * @throws TencentCloudSDKException
@@ -545,7 +545,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *查询数据库列表
+     *本接口（DescribeClusterDetailDatabases）用于查询数据库列表。
      * @param req DescribeClusterDetailDatabasesRequest
      * @return DescribeClusterDetailDatabasesResponse
      * @throws TencentCloudSDKException
@@ -578,7 +578,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *本接口（DescribeClusterParamLogs）查询参数修改记录
+     *本接口（DescribeClusterParamLogs）用于查询参数修改记录。
      * @param req DescribeClusterParamLogsRequest
      * @return DescribeClusterParamLogsResponse
      * @throws TencentCloudSDKException
@@ -633,7 +633,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *本接口（DescribeFlow）用于查询任务流信息
+     *本接口（DescribeFlow）用于查询任务流信息。
      * @param req DescribeFlowRequest
      * @return DescribeFlowResponse
      * @throws TencentCloudSDKException
@@ -699,7 +699,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *本接口（DescribeInstanceSpecs）用于查询购买页可购买的实例规格
+     *本接口（DescribeInstanceSpecs）用于查询购买页可购买的实例规格。
      * @param req DescribeInstanceSpecsRequest
      * @return DescribeInstanceSpecsResponse
      * @throws TencentCloudSDKException
@@ -732,7 +732,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *查询实例维护时间窗
+     *本接口（DescribeMaintainPeriod）用于查询实例维护时间窗。
      * @param req DescribeMaintainPeriodRequest
      * @return DescribeMaintainPeriodResponse
      * @throws TencentCloudSDKException
@@ -765,7 +765,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *查询项目安全组信息
+     *本接口（DescribeProjectSecurityGroups）用于查询项目安全组信息。
      * @param req DescribeProjectSecurityGroupsRequest
      * @return DescribeProjectSecurityGroupsResponse
      * @throws TencentCloudSDKException
@@ -853,7 +853,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *查询回档时间范围
+     *本接口（DescribeRollbackTimeRange）用于查询回档时间范围。
      * @param req DescribeRollbackTimeRangeRequest
      * @return DescribeRollbackTimeRangeResponse
      * @throws TencentCloudSDKException
@@ -908,7 +908,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *安全组批量解绑云资源
+     *本接口（DisassociateSecurityGroups）用于安全组批量解绑云资源。
      * @param req DisassociateSecurityGroupsRequest
      * @return DisassociateSecurityGroupsResponse
      * @throws TencentCloudSDKException
@@ -963,7 +963,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *查询新购集群价格
+     *本接口（InquirePriceCreate）用于新购集群的价格查询。
      * @param req InquirePriceCreateRequest
      * @return InquirePriceCreateResponse
      * @throws TencentCloudSDKException
@@ -1073,7 +1073,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *修改指定集群的备份配置
+     *本接口（ModifyBackupConfig）用于修改指定集群的备份配置。
      * @param req ModifyBackupConfigRequest
      * @return ModifyBackupConfigResponse
      * @throws TencentCloudSDKException
@@ -1117,7 +1117,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *修改数据库
+     *本接口（ModifyClusterDatabase）用于修改数据库的账号授权。
      * @param req ModifyClusterDatabaseRequest
      * @return ModifyClusterDatabaseResponse
      * @throws TencentCloudSDKException
@@ -1128,7 +1128,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *修改集群名称
+     *本接口（ModifyClusterName）用于修改集群名称。
      * @param req ModifyClusterNameRequest
      * @return ModifyClusterNameResponse
      * @throws TencentCloudSDKException
@@ -1150,7 +1150,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *本接口（ModifyClusterPasswordComplexity）用于修改/开启集群密码复杂度
+     *本接口（ModifyClusterPasswordComplexity）用于修改/开启集群密码复杂度。
      * @param req ModifyClusterPasswordComplexityRequest
      * @return ModifyClusterPasswordComplexityResponse
      * @throws TencentCloudSDKException
@@ -1161,7 +1161,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *变更备可用区
+     *本接口（ModifyClusterSlaveZone）用于变更集群的备可用区。
      * @param req ModifyClusterSlaveZoneRequest
      * @return ModifyClusterSlaveZoneResponse
      * @throws TencentCloudSDKException
@@ -1227,7 +1227,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *修改维护时间配置
+     *本接口（ModifyMaintainPeriodConfig）用于修改维护时间配置。
      * @param req ModifyMaintainPeriodConfigRequest
      * @return ModifyMaintainPeriodConfigResponse
      * @throws TencentCloudSDKException
@@ -1359,7 +1359,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *本接口（OpenClusterPasswordComplexity）用于开启自定义密码复杂度功能
+     *本接口（OpenClusterPasswordComplexity）用于开启自定义密码复杂度功能。
      * @param req OpenClusterPasswordComplexityRequest
      * @return OpenClusterPasswordComplexityResponse
      * @throws TencentCloudSDKException
@@ -1370,7 +1370,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *开启只读实例组接入
+     *本接口（OpenClusterReadOnlyInstanceGroupAccess）用于开启只读实例组接入。
      * @param req OpenClusterReadOnlyInstanceGroupAccessRequest
      * @return OpenClusterReadOnlyInstanceGroupAccessResponse
      * @throws TencentCloudSDKException
@@ -1381,7 +1381,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *开通只读实例独有访问接入组
+     *本接口（OpenReadOnlyInstanceExclusiveAccess）用于开通只读实例独有访问接入组。
      * @param req OpenReadOnlyInstanceExclusiveAccessRequest
      * @return OpenReadOnlyInstanceExclusiveAccessResponse
      * @throws TencentCloudSDKException
@@ -1392,7 +1392,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *本接口（OpenWan）用于开通外网
+     *本接口（OpenWan）用于开通外网。
      * @param req OpenWanRequest
      * @return OpenWanResponse
      * @throws TencentCloudSDKException
@@ -1403,7 +1403,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *暂停serverless集群
+     *本接口（PauseServerless）用于暂停 serverless 集群。
      * @param req PauseServerlessRequest
      * @return PauseServerlessResponse
      * @throws TencentCloudSDKException
@@ -1436,7 +1436,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *关闭多可用区部署
+     *本接口（RemoveClusterSlaveZone）用于关闭集群多可用区部署。
      * @param req RemoveClusterSlaveZoneRequest
      * @return RemoveClusterSlaveZoneResponse
      * @throws TencentCloudSDKException
@@ -1480,7 +1480,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *恢复serverless集群
+     *本接口（ResumeServerless）用于恢复 serverless 集群（启动暂停的集群）。
      * @param req ResumeServerlessRequest
      * @return ResumeServerlessResponse
      * @throws TencentCloudSDKException
@@ -1491,7 +1491,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *批量回收账号权限
+     *本接口（RevokeAccountPrivileges）用于批量回收账号权限。
      * @param req RevokeAccountPrivilegesRequest
      * @return RevokeAccountPrivilegesResponse
      * @throws TencentCloudSDKException
@@ -1513,7 +1513,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *回档到新集群
+     *本接口（RollbackToNewCluster）用于回档到新集群。
      * @param req RollbackToNewClusterRequest
      * @return RollbackToNewClusterResponse
      * @throws TencentCloudSDKException
@@ -1524,7 +1524,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *本接口(SearchClusterDatabases)搜索集群数据库列表
+     *本接口（SearchClusterDatabases）用于搜索集群数据库列表。
      * @param req SearchClusterDatabasesRequest
      * @return SearchClusterDatabasesResponse
      * @throws TencentCloudSDKException
@@ -1590,7 +1590,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *主备可用区切换
+     *本接口（SwitchClusterZone）用于切换集群的主备可用区。
      * @param req SwitchClusterZoneRequest
      * @return SwitchClusterZoneResponse
      * @throws TencentCloudSDKException

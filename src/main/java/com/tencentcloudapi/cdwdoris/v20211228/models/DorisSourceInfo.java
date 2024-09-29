@@ -48,7 +48,7 @@ public class DorisSourceInfo extends AbstractModel {
     private String User;
 
     /**
-    * doris集群的密码
+    * base64编码的doris集群对应用户的密码
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Password")
@@ -116,9 +116,9 @@ public class DorisSourceInfo extends AbstractModel {
     }
 
     /**
-     * Get doris集群的密码
+     * Get base64编码的doris集群对应用户的密码
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Password doris集群的密码
+     * @return Password base64编码的doris集群对应用户的密码
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPassword() {
@@ -126,9 +126,9 @@ public class DorisSourceInfo extends AbstractModel {
     }
 
     /**
-     * Set doris集群的密码
+     * Set base64编码的doris集群对应用户的密码
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Password doris集群的密码
+     * @param Password base64编码的doris集群对应用户的密码
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPassword(String Password) {

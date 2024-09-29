@@ -87,6 +87,13 @@ public class CreateVpcPeeringConnectionRequest extends AbstractModel {
     private String QosLevel;
 
     /**
+    * 标签键值对
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tags [] Tags;
+
+    /**
      * Get 本端VPC唯一ID。 
      * @return SourceVpcId 本端VPC唯一ID。
      */
@@ -230,6 +237,22 @@ public class CreateVpcPeeringConnectionRequest extends AbstractModel {
         this.QosLevel = QosLevel;
     }
 
+    /**
+     * Get 标签键值对 
+     * @return Tags 标签键值对
+     */
+    public Tags [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 标签键值对
+     * @param Tags 标签键值对
+     */
+    public void setTags(Tags [] Tags) {
+        this.Tags = Tags;
+    }
+
     public CreateVpcPeeringConnectionRequest() {
     }
 
@@ -265,6 +288,12 @@ public class CreateVpcPeeringConnectionRequest extends AbstractModel {
         if (source.QosLevel != null) {
             this.QosLevel = new String(source.QosLevel);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tags[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tags(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -281,6 +310,7 @@ public class CreateVpcPeeringConnectionRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "ChargeType", this.ChargeType);
         this.setParamSimple(map, prefix + "QosLevel", this.QosLevel);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

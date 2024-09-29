@@ -46,7 +46,7 @@ public class CreateImageRequest extends AbstractModel {
 
     /**
     * 是否执行强制关机以制作镜像。
-取值范围：<br><li>true：表示关机之后制作镜像<br><li>false：表示开机状态制作镜像<br><br>默认取值：false。<br><br>开机状态制作镜像，可能导致部分数据未备份，影响数据安全。
+取值范围：<br><li>true：表示关机之后制作镜像</li><br><li>false：表示开机状态制作镜像</li><br><br>默认取值：false。<br><br>开机状态制作镜像，可能导致部分数据未备份，影响数据安全。
     */
     @SerializedName("ForcePoweroff")
     @Expose
@@ -89,6 +89,13 @@ public class CreateImageRequest extends AbstractModel {
     @SerializedName("TagSpecification")
     @Expose
     private TagSpecification [] TagSpecification;
+
+    /**
+    * 镜像族
+    */
+    @SerializedName("ImageFamily")
+    @Expose
+    private String ImageFamily;
 
     /**
      * Get 镜像名称 
@@ -140,9 +147,9 @@ public class CreateImageRequest extends AbstractModel {
 
     /**
      * Get 是否执行强制关机以制作镜像。
-取值范围：<br><li>true：表示关机之后制作镜像<br><li>false：表示开机状态制作镜像<br><br>默认取值：false。<br><br>开机状态制作镜像，可能导致部分数据未备份，影响数据安全。 
+取值范围：<br><li>true：表示关机之后制作镜像</li><br><li>false：表示开机状态制作镜像</li><br><br>默认取值：false。<br><br>开机状态制作镜像，可能导致部分数据未备份，影响数据安全。 
      * @return ForcePoweroff 是否执行强制关机以制作镜像。
-取值范围：<br><li>true：表示关机之后制作镜像<br><li>false：表示开机状态制作镜像<br><br>默认取值：false。<br><br>开机状态制作镜像，可能导致部分数据未备份，影响数据安全。
+取值范围：<br><li>true：表示关机之后制作镜像</li><br><li>false：表示开机状态制作镜像</li><br><br>默认取值：false。<br><br>开机状态制作镜像，可能导致部分数据未备份，影响数据安全。
      */
     public String getForcePoweroff() {
         return this.ForcePoweroff;
@@ -150,9 +157,9 @@ public class CreateImageRequest extends AbstractModel {
 
     /**
      * Set 是否执行强制关机以制作镜像。
-取值范围：<br><li>true：表示关机之后制作镜像<br><li>false：表示开机状态制作镜像<br><br>默认取值：false。<br><br>开机状态制作镜像，可能导致部分数据未备份，影响数据安全。
+取值范围：<br><li>true：表示关机之后制作镜像</li><br><li>false：表示开机状态制作镜像</li><br><br>默认取值：false。<br><br>开机状态制作镜像，可能导致部分数据未备份，影响数据安全。
      * @param ForcePoweroff 是否执行强制关机以制作镜像。
-取值范围：<br><li>true：表示关机之后制作镜像<br><li>false：表示开机状态制作镜像<br><br>默认取值：false。<br><br>开机状态制作镜像，可能导致部分数据未备份，影响数据安全。
+取值范围：<br><li>true：表示关机之后制作镜像</li><br><li>false：表示开机状态制作镜像</li><br><br>默认取值：false。<br><br>开机状态制作镜像，可能导致部分数据未备份，影响数据安全。
      */
     public void setForcePoweroff(String ForcePoweroff) {
         this.ForcePoweroff = ForcePoweroff;
@@ -250,6 +257,22 @@ public class CreateImageRequest extends AbstractModel {
         this.TagSpecification = TagSpecification;
     }
 
+    /**
+     * Get 镜像族 
+     * @return ImageFamily 镜像族
+     */
+    public String getImageFamily() {
+        return this.ImageFamily;
+    }
+
+    /**
+     * Set 镜像族
+     * @param ImageFamily 镜像族
+     */
+    public void setImageFamily(String ImageFamily) {
+        this.ImageFamily = ImageFamily;
+    }
+
     public CreateImageRequest() {
     }
 
@@ -294,6 +317,9 @@ public class CreateImageRequest extends AbstractModel {
                 this.TagSpecification[i] = new TagSpecification(source.TagSpecification[i]);
             }
         }
+        if (source.ImageFamily != null) {
+            this.ImageFamily = new String(source.ImageFamily);
+        }
     }
 
 
@@ -310,6 +336,7 @@ public class CreateImageRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "SnapshotIds.", this.SnapshotIds);
         this.setParamSimple(map, prefix + "DryRun", this.DryRun);
         this.setParamArrayObj(map, prefix + "TagSpecification.", this.TagSpecification);
+        this.setParamSimple(map, prefix + "ImageFamily", this.ImageFamily);
 
     }
 }

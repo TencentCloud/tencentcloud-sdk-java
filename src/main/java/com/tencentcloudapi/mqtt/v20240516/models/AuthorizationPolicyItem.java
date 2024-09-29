@@ -102,7 +102,7 @@ public class AuthorizationPolicyItem extends AbstractModel {
     private String Username;
 
     /**
-    * ip地址
+    * IP地址
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Ip")
@@ -340,9 +340,9 @@ public class AuthorizationPolicyItem extends AbstractModel {
     }
 
     /**
-     * Get ip地址
+     * Get IP地址
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Ip ip地址
+     * @return Ip IP地址
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIp() {
@@ -350,9 +350,9 @@ public class AuthorizationPolicyItem extends AbstractModel {
     }
 
     /**
-     * Set ip地址
+     * Set IP地址
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Ip ip地址
+     * @param Ip IP地址
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIp(String Ip) {
