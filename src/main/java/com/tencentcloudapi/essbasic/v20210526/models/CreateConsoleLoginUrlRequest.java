@@ -169,7 +169,7 @@ public class CreateConsoleLoginUrlRequest extends AbstractModel {
 
     /**
     * 认证完成跳转链接。
-注意：`目前仅支持 H5 和 PC`。
+注意：`此功能仅在Endpoint参数设置成 H5 或 PC时才有效`。
     */
     @SerializedName("AutoJumpUrl")
     @Expose
@@ -177,6 +177,8 @@ public class CreateConsoleLoginUrlRequest extends AbstractModel {
 
     /**
     * 是否展示头顶导航栏  <ul><li> **ENABLE** : (默认)进入web控制台展示头顶导航栏</li> <li> **DISABLE** : 进入web控制台不展示头顶导航栏</li></ul> 注：该参数**仅在企业和员工激活完成，登录控制台场景才生效**。
+
+<a href="https://qcloudimg.tencent-cloud.cn/raw/dd54f333140c711cf6a88e3801bcd178.png" target="_blank">点击查看头顶导航栏位置</a>
     */
     @SerializedName("TopNavigationStatus")
     @Expose
@@ -615,9 +617,9 @@ public class CreateConsoleLoginUrlRequest extends AbstractModel {
 
     /**
      * Get 认证完成跳转链接。
-注意：`目前仅支持 H5 和 PC`。 
+注意：`此功能仅在Endpoint参数设置成 H5 或 PC时才有效`。 
      * @return AutoJumpUrl 认证完成跳转链接。
-注意：`目前仅支持 H5 和 PC`。
+注意：`此功能仅在Endpoint参数设置成 H5 或 PC时才有效`。
      */
     public String getAutoJumpUrl() {
         return this.AutoJumpUrl;
@@ -625,17 +627,21 @@ public class CreateConsoleLoginUrlRequest extends AbstractModel {
 
     /**
      * Set 认证完成跳转链接。
-注意：`目前仅支持 H5 和 PC`。
+注意：`此功能仅在Endpoint参数设置成 H5 或 PC时才有效`。
      * @param AutoJumpUrl 认证完成跳转链接。
-注意：`目前仅支持 H5 和 PC`。
+注意：`此功能仅在Endpoint参数设置成 H5 或 PC时才有效`。
      */
     public void setAutoJumpUrl(String AutoJumpUrl) {
         this.AutoJumpUrl = AutoJumpUrl;
     }
 
     /**
-     * Get 是否展示头顶导航栏  <ul><li> **ENABLE** : (默认)进入web控制台展示头顶导航栏</li> <li> **DISABLE** : 进入web控制台不展示头顶导航栏</li></ul> 注：该参数**仅在企业和员工激活完成，登录控制台场景才生效**。 
+     * Get 是否展示头顶导航栏  <ul><li> **ENABLE** : (默认)进入web控制台展示头顶导航栏</li> <li> **DISABLE** : 进入web控制台不展示头顶导航栏</li></ul> 注：该参数**仅在企业和员工激活完成，登录控制台场景才生效**。
+
+<a href="https://qcloudimg.tencent-cloud.cn/raw/dd54f333140c711cf6a88e3801bcd178.png" target="_blank">点击查看头顶导航栏位置</a> 
      * @return TopNavigationStatus 是否展示头顶导航栏  <ul><li> **ENABLE** : (默认)进入web控制台展示头顶导航栏</li> <li> **DISABLE** : 进入web控制台不展示头顶导航栏</li></ul> 注：该参数**仅在企业和员工激活完成，登录控制台场景才生效**。
+
+<a href="https://qcloudimg.tencent-cloud.cn/raw/dd54f333140c711cf6a88e3801bcd178.png" target="_blank">点击查看头顶导航栏位置</a>
      */
     public String getTopNavigationStatus() {
         return this.TopNavigationStatus;
@@ -643,7 +649,11 @@ public class CreateConsoleLoginUrlRequest extends AbstractModel {
 
     /**
      * Set 是否展示头顶导航栏  <ul><li> **ENABLE** : (默认)进入web控制台展示头顶导航栏</li> <li> **DISABLE** : 进入web控制台不展示头顶导航栏</li></ul> 注：该参数**仅在企业和员工激活完成，登录控制台场景才生效**。
+
+<a href="https://qcloudimg.tencent-cloud.cn/raw/dd54f333140c711cf6a88e3801bcd178.png" target="_blank">点击查看头顶导航栏位置</a>
      * @param TopNavigationStatus 是否展示头顶导航栏  <ul><li> **ENABLE** : (默认)进入web控制台展示头顶导航栏</li> <li> **DISABLE** : 进入web控制台不展示头顶导航栏</li></ul> 注：该参数**仅在企业和员工激活完成，登录控制台场景才生效**。
+
+<a href="https://qcloudimg.tencent-cloud.cn/raw/dd54f333140c711cf6a88e3801bcd178.png" target="_blank">点击查看头顶导航栏位置</a>
      */
     public void setTopNavigationStatus(String TopNavigationStatus) {
         this.TopNavigationStatus = TopNavigationStatus;

@@ -66,6 +66,22 @@ public class NodeInfos extends AbstractModel {
     private String LastRestartTime;
 
     /**
+    * id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Id")
+    @Expose
+    private String Id;
+
+    /**
+    * 可用区
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Zone")
+    @Expose
+    private String Zone;
+
+    /**
      * Get 节点名称 
      * @return NodeName 节点名称
      */
@@ -161,6 +177,46 @@ public class NodeInfos extends AbstractModel {
         this.LastRestartTime = LastRestartTime;
     }
 
+    /**
+     * Get id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Id id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getId() {
+        return this.Id;
+    }
+
+    /**
+     * Set id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Id id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setId(String Id) {
+        this.Id = Id;
+    }
+
+    /**
+     * Get 可用区
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Zone 可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getZone() {
+        return this.Zone;
+    }
+
+    /**
+     * Set 可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Zone 可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setZone(String Zone) {
+        this.Zone = Zone;
+    }
+
     public NodeInfos() {
     }
 
@@ -187,6 +243,12 @@ public class NodeInfos extends AbstractModel {
         if (source.LastRestartTime != null) {
             this.LastRestartTime = new String(source.LastRestartTime);
         }
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
     }
 
 
@@ -200,6 +262,8 @@ public class NodeInfos extends AbstractModel {
         this.setParamSimple(map, prefix + "NodeRole", this.NodeRole);
         this.setParamSimple(map, prefix + "ComponentName", this.ComponentName);
         this.setParamSimple(map, prefix + "LastRestartTime", this.LastRestartTime);
+        this.setParamSimple(map, prefix + "Id", this.Id);
+        this.setParamSimple(map, prefix + "Zone", this.Zone);
 
     }
 }

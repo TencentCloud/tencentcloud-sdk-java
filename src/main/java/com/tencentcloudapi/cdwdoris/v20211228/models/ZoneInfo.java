@@ -53,6 +53,14 @@ public class ZoneInfo extends AbstractModel {
     private Long Encrypt;
 
     /**
+    * 是否为主力园区
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Main")
+    @Expose
+    private Boolean Main;
+
+    /**
      * Get 可用区名称，例如"ap-guangzhou-1" 
      * @return Name 可用区名称，例如"ap-guangzhou-1"
      */
@@ -120,6 +128,26 @@ public class ZoneInfo extends AbstractModel {
         this.Encrypt = Encrypt;
     }
 
+    /**
+     * Get 是否为主力园区
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Main 是否为主力园区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getMain() {
+        return this.Main;
+    }
+
+    /**
+     * Set 是否为主力园区
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Main 是否为主力园区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMain(Boolean Main) {
+        this.Main = Main;
+    }
+
     public ZoneInfo() {
     }
 
@@ -140,6 +168,9 @@ public class ZoneInfo extends AbstractModel {
         if (source.Encrypt != null) {
             this.Encrypt = new Long(source.Encrypt);
         }
+        if (source.Main != null) {
+            this.Main = new Boolean(source.Main);
+        }
     }
 
 
@@ -151,6 +182,7 @@ public class ZoneInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Desc", this.Desc);
         this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
         this.setParamSimple(map, prefix + "Encrypt", this.Encrypt);
+        this.setParamSimple(map, prefix + "Main", this.Main);
 
     }
 }
