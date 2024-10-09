@@ -49,6 +49,13 @@ public class DescribeShippersRequest extends AbstractModel {
     private Long Limit;
 
     /**
+    * 控制Filters相关字段是否为精确匹配。  0: 默认值，shipperName模糊匹配 1: shipperName 精确匹配
+    */
+    @SerializedName("PreciseSearch")
+    @Expose
+    private Long PreciseSearch;
+
+    /**
      * Get - shipperName：按照【投递规则名称】进行过滤。类型：String。必选：否
 - shipperId：按照【投递规则ID】进行过滤。类型：String。必选：否
 - topicId：按照【日志主题】进行过滤。类型：String。必选：否
@@ -112,6 +119,22 @@ public class DescribeShippersRequest extends AbstractModel {
         this.Limit = Limit;
     }
 
+    /**
+     * Get 控制Filters相关字段是否为精确匹配。  0: 默认值，shipperName模糊匹配 1: shipperName 精确匹配 
+     * @return PreciseSearch 控制Filters相关字段是否为精确匹配。  0: 默认值，shipperName模糊匹配 1: shipperName 精确匹配
+     */
+    public Long getPreciseSearch() {
+        return this.PreciseSearch;
+    }
+
+    /**
+     * Set 控制Filters相关字段是否为精确匹配。  0: 默认值，shipperName模糊匹配 1: shipperName 精确匹配
+     * @param PreciseSearch 控制Filters相关字段是否为精确匹配。  0: 默认值，shipperName模糊匹配 1: shipperName 精确匹配
+     */
+    public void setPreciseSearch(Long PreciseSearch) {
+        this.PreciseSearch = PreciseSearch;
+    }
+
     public DescribeShippersRequest() {
     }
 
@@ -132,6 +155,9 @@ public class DescribeShippersRequest extends AbstractModel {
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
+        if (source.PreciseSearch != null) {
+            this.PreciseSearch = new Long(source.PreciseSearch);
+        }
     }
 
 
@@ -142,6 +168,7 @@ public class DescribeShippersRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "PreciseSearch", this.PreciseSearch);
 
     }
 }

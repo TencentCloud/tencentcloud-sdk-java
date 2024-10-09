@@ -357,6 +357,14 @@ public：公有云域名
     private Long AccessStatus;
 
     /**
+    * 域名标签
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Labels")
+    @Expose
+    private String [] Labels;
+
+    /**
      * Get 域名 
      * @return Domain 域名
      */
@@ -1268,6 +1276,26 @@ public：公有云域名
         this.AccessStatus = AccessStatus;
     }
 
+    /**
+     * Get 域名标签
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Labels 域名标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getLabels() {
+        return this.Labels;
+    }
+
+    /**
+     * Set 域名标签
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Labels 域名标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLabels(String [] Labels) {
+        this.Labels = Labels;
+    }
+
     public DomainInfo() {
     }
 
@@ -1399,6 +1427,12 @@ public：公有云域名
         if (source.AccessStatus != null) {
             this.AccessStatus = new Long(source.AccessStatus);
         }
+        if (source.Labels != null) {
+            this.Labels = new String[source.Labels.length];
+            for (int i = 0; i < source.Labels.length; i++) {
+                this.Labels[i] = new String(source.Labels[i]);
+            }
+        }
     }
 
 
@@ -1441,6 +1475,7 @@ public：公有云域名
         this.setParamArraySimple(map, prefix + "UpstreamDomainList.", this.UpstreamDomainList);
         this.setParamSimple(map, prefix + "SgID", this.SgID);
         this.setParamSimple(map, prefix + "AccessStatus", this.AccessStatus);
+        this.setParamArraySimple(map, prefix + "Labels.", this.Labels);
 
     }
 }

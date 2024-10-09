@@ -162,6 +162,14 @@ Saas 域名扩展包  sv_wsm_waf_domain
     private String ResourceId;
 
     /**
+    * 模式clb-waf或者saas-waf
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MicroVersion")
+    @Expose
+    private String MicroVersion;
+
+    /**
      * Get 时间间隔
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TimeSpan 时间间隔
@@ -569,6 +577,26 @@ Saas 域名扩展包  sv_wsm_waf_domain
         this.ResourceId = ResourceId;
     }
 
+    /**
+     * Get 模式clb-waf或者saas-waf
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MicroVersion 模式clb-waf或者saas-waf
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getMicroVersion() {
+        return this.MicroVersion;
+    }
+
+    /**
+     * Set 模式clb-waf或者saas-waf
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MicroVersion 模式clb-waf或者saas-waf
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMicroVersion(String MicroVersion) {
+        this.MicroVersion = MicroVersion;
+    }
+
     public GoodsDetailNew() {
     }
 
@@ -619,6 +647,9 @@ Saas 域名扩展包  sv_wsm_waf_domain
         if (source.ResourceId != null) {
             this.ResourceId = new String(source.ResourceId);
         }
+        if (source.MicroVersion != null) {
+            this.MicroVersion = new String(source.MicroVersion);
+        }
     }
 
 
@@ -638,6 +669,7 @@ Saas 域名扩展包  sv_wsm_waf_domain
         this.setParamSimple(map, prefix + "CurDeadline", this.CurDeadline);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
+        this.setParamSimple(map, prefix + "MicroVersion", this.MicroVersion);
 
     }
 }

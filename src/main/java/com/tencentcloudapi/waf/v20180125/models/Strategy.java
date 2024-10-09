@@ -87,6 +87,15 @@ public class Strategy extends AbstractModel {
     private String Arg;
 
     /**
+    * 0：大小写敏感
+1：大小写不敏感
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CaseNotSensitive")
+    @Expose
+    private Long CaseNotSensitive;
+
+    /**
      * Get 匹配字段
 
     匹配字段不同，相应的匹配参数、逻辑符号、匹配内容有所不同具体如下所示：
@@ -290,6 +299,30 @@ public class Strategy extends AbstractModel {
         this.Arg = Arg;
     }
 
+    /**
+     * Get 0：大小写敏感
+1：大小写不敏感
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CaseNotSensitive 0：大小写敏感
+1：大小写不敏感
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getCaseNotSensitive() {
+        return this.CaseNotSensitive;
+    }
+
+    /**
+     * Set 0：大小写敏感
+1：大小写不敏感
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CaseNotSensitive 0：大小写敏感
+1：大小写不敏感
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCaseNotSensitive(Long CaseNotSensitive) {
+        this.CaseNotSensitive = CaseNotSensitive;
+    }
+
     public Strategy() {
     }
 
@@ -310,6 +343,9 @@ public class Strategy extends AbstractModel {
         if (source.Arg != null) {
             this.Arg = new String(source.Arg);
         }
+        if (source.CaseNotSensitive != null) {
+            this.CaseNotSensitive = new Long(source.CaseNotSensitive);
+        }
     }
 
 
@@ -321,6 +357,7 @@ public class Strategy extends AbstractModel {
         this.setParamSimple(map, prefix + "CompareFunc", this.CompareFunc);
         this.setParamSimple(map, prefix + "Content", this.Content);
         this.setParamSimple(map, prefix + "Arg", this.Arg);
+        this.setParamSimple(map, prefix + "CaseNotSensitive", this.CaseNotSensitive);
 
     }
 }

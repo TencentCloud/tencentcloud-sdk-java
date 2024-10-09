@@ -567,7 +567,9 @@ public class CCN extends AbstractModel {
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Ipv6Flag 是否支持ipv6路由表
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public String getIpv6Flag() {
         return this.Ipv6Flag;
     }
@@ -577,7 +579,9 @@ public class CCN extends AbstractModel {
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Ipv6Flag 是否支持ipv6路由表
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public void setIpv6Flag(String Ipv6Flag) {
         this.Ipv6Flag = Ipv6Flag;
     }

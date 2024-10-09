@@ -31,14 +31,14 @@ public class DeleteIpAccessControlV2Request extends AbstractModel {
     private String Domain;
 
     /**
-    * 规则ID列表，支持批量删除
+    * 规则ID列表，支持批量删除，在DeleteAll参数为true的时候可以不传
     */
     @SerializedName("RuleIds")
     @Expose
     private Long [] RuleIds;
 
     /**
-    * 是否删除对应的域名下的所有黑/白IP名单，true表示全部删除，false表示只删除指定ip名单
+    * 是否删除对应的域名下的所有黑/白IP名单，true表示全部删除，false表示只删除指定IP名单，批量防护不支持
     */
     @SerializedName("DeleteAll")
     @Expose
@@ -52,7 +52,7 @@ public class DeleteIpAccessControlV2Request extends AbstractModel {
     private String SourceType;
 
     /**
-    * IP黑白名单类型，40为IP白名单，42为IP黑名单
+    * IP黑白名单类型，40为IP白名单，42为IP黑名单，在DeleteAll为true的时候必传此参数
     */
     @SerializedName("ActionType")
     @Expose
@@ -75,32 +75,32 @@ public class DeleteIpAccessControlV2Request extends AbstractModel {
     }
 
     /**
-     * Get 规则ID列表，支持批量删除 
-     * @return RuleIds 规则ID列表，支持批量删除
+     * Get 规则ID列表，支持批量删除，在DeleteAll参数为true的时候可以不传 
+     * @return RuleIds 规则ID列表，支持批量删除，在DeleteAll参数为true的时候可以不传
      */
     public Long [] getRuleIds() {
         return this.RuleIds;
     }
 
     /**
-     * Set 规则ID列表，支持批量删除
-     * @param RuleIds 规则ID列表，支持批量删除
+     * Set 规则ID列表，支持批量删除，在DeleteAll参数为true的时候可以不传
+     * @param RuleIds 规则ID列表，支持批量删除，在DeleteAll参数为true的时候可以不传
      */
     public void setRuleIds(Long [] RuleIds) {
         this.RuleIds = RuleIds;
     }
 
     /**
-     * Get 是否删除对应的域名下的所有黑/白IP名单，true表示全部删除，false表示只删除指定ip名单 
-     * @return DeleteAll 是否删除对应的域名下的所有黑/白IP名单，true表示全部删除，false表示只删除指定ip名单
+     * Get 是否删除对应的域名下的所有黑/白IP名单，true表示全部删除，false表示只删除指定IP名单，批量防护不支持 
+     * @return DeleteAll 是否删除对应的域名下的所有黑/白IP名单，true表示全部删除，false表示只删除指定IP名单，批量防护不支持
      */
     public Boolean getDeleteAll() {
         return this.DeleteAll;
     }
 
     /**
-     * Set 是否删除对应的域名下的所有黑/白IP名单，true表示全部删除，false表示只删除指定ip名单
-     * @param DeleteAll 是否删除对应的域名下的所有黑/白IP名单，true表示全部删除，false表示只删除指定ip名单
+     * Set 是否删除对应的域名下的所有黑/白IP名单，true表示全部删除，false表示只删除指定IP名单，批量防护不支持
+     * @param DeleteAll 是否删除对应的域名下的所有黑/白IP名单，true表示全部删除，false表示只删除指定IP名单，批量防护不支持
      */
     public void setDeleteAll(Boolean DeleteAll) {
         this.DeleteAll = DeleteAll;
@@ -123,16 +123,16 @@ public class DeleteIpAccessControlV2Request extends AbstractModel {
     }
 
     /**
-     * Get IP黑白名单类型，40为IP白名单，42为IP黑名单 
-     * @return ActionType IP黑白名单类型，40为IP白名单，42为IP黑名单
+     * Get IP黑白名单类型，40为IP白名单，42为IP黑名单，在DeleteAll为true的时候必传此参数 
+     * @return ActionType IP黑白名单类型，40为IP白名单，42为IP黑名单，在DeleteAll为true的时候必传此参数
      */
     public Long getActionType() {
         return this.ActionType;
     }
 
     /**
-     * Set IP黑白名单类型，40为IP白名单，42为IP黑名单
-     * @param ActionType IP黑白名单类型，40为IP白名单，42为IP黑名单
+     * Set IP黑白名单类型，40为IP白名单，42为IP黑名单，在DeleteAll为true的时候必传此参数
+     * @param ActionType IP黑白名单类型，40为IP白名单，42为IP黑名单，在DeleteAll为true的时候必传此参数
      */
     public void setActionType(Long ActionType) {
         this.ActionType = ActionType;

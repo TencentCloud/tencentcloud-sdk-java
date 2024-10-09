@@ -378,6 +378,70 @@ https：使用https协议回源
     private Long ProxyBuffer;
 
     /**
+    * 国密选项。0：不开启国密 1：在原有TLS选项的基础上追加支持国密 2：开启国密并仅支持国密客户端访问
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("GmType")
+    @Expose
+    private Long GmType;
+
+    /**
+    * 国密证书类型。0：无国密证书 1：证书来源为自有国密证书 2：证书来源为托管国密证书
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("GmCertType")
+    @Expose
+    private Long GmCertType;
+
+    /**
+    * GmCertType为1时，需要填充此参数，表示自有国密证书的证书链
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("GmCert")
+    @Expose
+    private String GmCert;
+
+    /**
+    * GmCertType为1时，需要填充此参数，表示自有国密证书的私钥
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("GmPrivateKey")
+    @Expose
+    private String GmPrivateKey;
+
+    /**
+    * GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("GmEncCert")
+    @Expose
+    private String GmEncCert;
+
+    /**
+    * GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书的私钥
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("GmEncPrivateKey")
+    @Expose
+    private String GmEncPrivateKey;
+
+    /**
+    * GmCertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("GmSSLId")
+    @Expose
+    private String GmSSLId;
+
+    /**
+    * 域名标签
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Labels")
+    @Expose
+    private String [] Labels;
+
+    /**
      * Get 域名 
      * @return Domain 域名
      */
@@ -1289,6 +1353,166 @@ https：使用https协议回源
         this.ProxyBuffer = ProxyBuffer;
     }
 
+    /**
+     * Get 国密选项。0：不开启国密 1：在原有TLS选项的基础上追加支持国密 2：开启国密并仅支持国密客户端访问
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return GmType 国密选项。0：不开启国密 1：在原有TLS选项的基础上追加支持国密 2：开启国密并仅支持国密客户端访问
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getGmType() {
+        return this.GmType;
+    }
+
+    /**
+     * Set 国密选项。0：不开启国密 1：在原有TLS选项的基础上追加支持国密 2：开启国密并仅支持国密客户端访问
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param GmType 国密选项。0：不开启国密 1：在原有TLS选项的基础上追加支持国密 2：开启国密并仅支持国密客户端访问
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setGmType(Long GmType) {
+        this.GmType = GmType;
+    }
+
+    /**
+     * Get 国密证书类型。0：无国密证书 1：证书来源为自有国密证书 2：证书来源为托管国密证书
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return GmCertType 国密证书类型。0：无国密证书 1：证书来源为自有国密证书 2：证书来源为托管国密证书
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getGmCertType() {
+        return this.GmCertType;
+    }
+
+    /**
+     * Set 国密证书类型。0：无国密证书 1：证书来源为自有国密证书 2：证书来源为托管国密证书
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param GmCertType 国密证书类型。0：无国密证书 1：证书来源为自有国密证书 2：证书来源为托管国密证书
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setGmCertType(Long GmCertType) {
+        this.GmCertType = GmCertType;
+    }
+
+    /**
+     * Get GmCertType为1时，需要填充此参数，表示自有国密证书的证书链
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return GmCert GmCertType为1时，需要填充此参数，表示自有国密证书的证书链
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getGmCert() {
+        return this.GmCert;
+    }
+
+    /**
+     * Set GmCertType为1时，需要填充此参数，表示自有国密证书的证书链
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param GmCert GmCertType为1时，需要填充此参数，表示自有国密证书的证书链
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setGmCert(String GmCert) {
+        this.GmCert = GmCert;
+    }
+
+    /**
+     * Get GmCertType为1时，需要填充此参数，表示自有国密证书的私钥
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return GmPrivateKey GmCertType为1时，需要填充此参数，表示自有国密证书的私钥
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getGmPrivateKey() {
+        return this.GmPrivateKey;
+    }
+
+    /**
+     * Set GmCertType为1时，需要填充此参数，表示自有国密证书的私钥
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param GmPrivateKey GmCertType为1时，需要填充此参数，表示自有国密证书的私钥
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setGmPrivateKey(String GmPrivateKey) {
+        this.GmPrivateKey = GmPrivateKey;
+    }
+
+    /**
+     * Get GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return GmEncCert GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getGmEncCert() {
+        return this.GmEncCert;
+    }
+
+    /**
+     * Set GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param GmEncCert GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setGmEncCert(String GmEncCert) {
+        this.GmEncCert = GmEncCert;
+    }
+
+    /**
+     * Get GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书的私钥
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return GmEncPrivateKey GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书的私钥
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getGmEncPrivateKey() {
+        return this.GmEncPrivateKey;
+    }
+
+    /**
+     * Set GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书的私钥
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param GmEncPrivateKey GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书的私钥
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setGmEncPrivateKey(String GmEncPrivateKey) {
+        this.GmEncPrivateKey = GmEncPrivateKey;
+    }
+
+    /**
+     * Get GmCertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return GmSSLId GmCertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getGmSSLId() {
+        return this.GmSSLId;
+    }
+
+    /**
+     * Set GmCertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param GmSSLId GmCertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setGmSSLId(String GmSSLId) {
+        this.GmSSLId = GmSSLId;
+    }
+
+    /**
+     * Get 域名标签
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Labels 域名标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getLabels() {
+        return this.Labels;
+    }
+
+    /**
+     * Set 域名标签
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Labels 域名标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLabels(String [] Labels) {
+        this.Labels = Labels;
+    }
+
     public DomainsPartInfo() {
     }
 
@@ -1438,6 +1662,33 @@ https：使用https协议回源
         if (source.ProxyBuffer != null) {
             this.ProxyBuffer = new Long(source.ProxyBuffer);
         }
+        if (source.GmType != null) {
+            this.GmType = new Long(source.GmType);
+        }
+        if (source.GmCertType != null) {
+            this.GmCertType = new Long(source.GmCertType);
+        }
+        if (source.GmCert != null) {
+            this.GmCert = new String(source.GmCert);
+        }
+        if (source.GmPrivateKey != null) {
+            this.GmPrivateKey = new String(source.GmPrivateKey);
+        }
+        if (source.GmEncCert != null) {
+            this.GmEncCert = new String(source.GmEncCert);
+        }
+        if (source.GmEncPrivateKey != null) {
+            this.GmEncPrivateKey = new String(source.GmEncPrivateKey);
+        }
+        if (source.GmSSLId != null) {
+            this.GmSSLId = new String(source.GmSSLId);
+        }
+        if (source.Labels != null) {
+            this.Labels = new String[source.Labels.length];
+            for (int i = 0; i < source.Labels.length; i++) {
+                this.Labels[i] = new String(source.Labels[i]);
+            }
+        }
     }
 
 
@@ -1487,6 +1738,14 @@ https：使用https协议回源
         this.setParamSimple(map, prefix + "UpstreamHost", this.UpstreamHost);
         this.setParamSimple(map, prefix + "Level", this.Level);
         this.setParamSimple(map, prefix + "ProxyBuffer", this.ProxyBuffer);
+        this.setParamSimple(map, prefix + "GmType", this.GmType);
+        this.setParamSimple(map, prefix + "GmCertType", this.GmCertType);
+        this.setParamSimple(map, prefix + "GmCert", this.GmCert);
+        this.setParamSimple(map, prefix + "GmPrivateKey", this.GmPrivateKey);
+        this.setParamSimple(map, prefix + "GmEncCert", this.GmEncCert);
+        this.setParamSimple(map, prefix + "GmEncPrivateKey", this.GmEncPrivateKey);
+        this.setParamSimple(map, prefix + "GmSSLId", this.GmSSLId);
+        this.setParamArraySimple(map, prefix + "Labels.", this.Labels);
 
     }
 }

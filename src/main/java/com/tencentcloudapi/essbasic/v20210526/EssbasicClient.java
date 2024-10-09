@@ -1101,6 +1101,31 @@ public class EssbasicClient extends AbstractClient{
     }
 
     /**
+     *激活或续期子客企业， 在激活状态下，企业可以正常发起合同；在非激活状态下，企业仅能查看和签署合同。
+
+**1. 激活**：使用一个许可证将子客企业从未激活状态转变为激活状态。**激活状态的有效期为一年，一年后将自动回到未激活状态**。
+
+**2. 续期**：使用一个许可证将已激活的子客企业的有效期延长一年。只有处于激活状态的子企业才能进行续期操作（**若处于非激活状态，则需先激活**）。您可以使用多个许可证对同一子客企业进行多次续费。
+
+
+该接口的效果同：**【企业应用管理】 -> 【子客企业管理】 -> 【激活】或者【续期】**
+
+![image](https://qcloudimg.tencent-cloud.cn/raw/cd63761ca6e814c64b4ecf131555b74e.png)
+
+
+如果不想调用此接口或者页面点击进行激活或续期，可以在【应用扩展服务】中打开自动激活或续期，在许可证充足的情况下会自动激活或续期子客企业
+
+![image](https://qcloudimg.tencent-cloud.cn/raw/2ccb37ef6bde463c15c39fdda789216f.png)
+     * @param req CreateChannelSubOrganizationActiveRequest
+     * @return CreateChannelSubOrganizationActiveResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateChannelSubOrganizationActiveResponse CreateChannelSubOrganizationActive(CreateChannelSubOrganizationActiveRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateChannelSubOrganizationActive", CreateChannelSubOrganizationActiveResponse.class);
+    }
+
+    /**
      *此接口（CreateConsoleLoginUrl）用于创建第三方平台子客企业控制台Web/移动登录链接。支持web控制台、电子签小程序和H5链接。登录链接是进入子客web企业控制台的唯一入口。
 
 Web链接访问后，会根据子客企业(**Agent中ProxyOrganizationOpenId表示**)和员工(**Agent中OpenId表示**)的状态，进入不同的流程，主要情况分类如下：

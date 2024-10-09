@@ -101,6 +101,13 @@ public class UpdateAssetImageRegistryRegistryDetailRequest extends AbstractModel
     private ConnDetectConfig [] ConnDetectConfig;
 
     /**
+    * 仓库唯一id
+    */
+    @SerializedName("RegistryId")
+    @Expose
+    private Long RegistryId;
+
+    /**
      * Get 仓库名 
      * @return Name 仓库名
      */
@@ -276,6 +283,22 @@ public class UpdateAssetImageRegistryRegistryDetailRequest extends AbstractModel
         this.ConnDetectConfig = ConnDetectConfig;
     }
 
+    /**
+     * Get 仓库唯一id 
+     * @return RegistryId 仓库唯一id
+     */
+    public Long getRegistryId() {
+        return this.RegistryId;
+    }
+
+    /**
+     * Set 仓库唯一id
+     * @param RegistryId 仓库唯一id
+     */
+    public void setRegistryId(Long RegistryId) {
+        this.RegistryId = RegistryId;
+    }
+
     public UpdateAssetImageRegistryRegistryDetailRequest() {
     }
 
@@ -320,6 +343,9 @@ public class UpdateAssetImageRegistryRegistryDetailRequest extends AbstractModel
                 this.ConnDetectConfig[i] = new ConnDetectConfig(source.ConnDetectConfig[i]);
             }
         }
+        if (source.RegistryId != null) {
+            this.RegistryId = new Long(source.RegistryId);
+        }
     }
 
 
@@ -338,6 +364,7 @@ public class UpdateAssetImageRegistryRegistryDetailRequest extends AbstractModel
         this.setParamSimple(map, prefix + "SpeedLimit", this.SpeedLimit);
         this.setParamSimple(map, prefix + "Insecure", this.Insecure);
         this.setParamArrayObj(map, prefix + "ConnDetectConfig.", this.ConnDetectConfig);
+        this.setParamSimple(map, prefix + "RegistryId", this.RegistryId);
 
     }
 }

@@ -63,6 +63,14 @@ public class SubmitImageAnimateJobRequest extends AbstractModel {
     private Boolean EnableBodyJoins;
 
     /**
+    * 最终视频是否保留原图的背景（该模式对于tuziwu、huajiangwu不生效）
+
+    */
+    @SerializedName("EnableSegment")
+    @Expose
+    private Boolean EnableSegment;
+
+    /**
      * Get 图片格式：支持PNG、JPG、JPEG格式；
 图片分辨率：长边分辨率不超过2056；
 图片大小：不超过10M；
@@ -158,6 +166,26 @@ public class SubmitImageAnimateJobRequest extends AbstractModel {
         this.EnableBodyJoins = EnableBodyJoins;
     }
 
+    /**
+     * Get 最终视频是否保留原图的背景（该模式对于tuziwu、huajiangwu不生效）
+ 
+     * @return EnableSegment 最终视频是否保留原图的背景（该模式对于tuziwu、huajiangwu不生效）
+
+     */
+    public Boolean getEnableSegment() {
+        return this.EnableSegment;
+    }
+
+    /**
+     * Set 最终视频是否保留原图的背景（该模式对于tuziwu、huajiangwu不生效）
+
+     * @param EnableSegment 最终视频是否保留原图的背景（该模式对于tuziwu、huajiangwu不生效）
+
+     */
+    public void setEnableSegment(Boolean EnableSegment) {
+        this.EnableSegment = EnableSegment;
+    }
+
     public SubmitImageAnimateJobRequest() {
     }
 
@@ -181,6 +209,9 @@ public class SubmitImageAnimateJobRequest extends AbstractModel {
         if (source.EnableBodyJoins != null) {
             this.EnableBodyJoins = new Boolean(source.EnableBodyJoins);
         }
+        if (source.EnableSegment != null) {
+            this.EnableSegment = new Boolean(source.EnableSegment);
+        }
     }
 
 
@@ -193,6 +224,7 @@ public class SubmitImageAnimateJobRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
         this.setParamSimple(map, prefix + "EnableAudio", this.EnableAudio);
         this.setParamSimple(map, prefix + "EnableBodyJoins", this.EnableBodyJoins);
+        this.setParamSimple(map, prefix + "EnableSegment", this.EnableSegment);
 
     }
 }

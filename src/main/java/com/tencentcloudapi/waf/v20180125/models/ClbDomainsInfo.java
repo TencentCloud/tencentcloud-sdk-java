@@ -128,6 +128,14 @@ public class ClbDomainsInfo extends AbstractModel {
     private String Note;
 
     /**
+    * 域名标签
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Labels")
+    @Expose
+    private String [] Labels;
+
+    /**
      * Get 域名 
      * @return Domain 域名
      */
@@ -375,6 +383,26 @@ public class ClbDomainsInfo extends AbstractModel {
         this.Note = Note;
     }
 
+    /**
+     * Get 域名标签
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Labels 域名标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getLabels() {
+        return this.Labels;
+    }
+
+    /**
+     * Set 域名标签
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Labels 域名标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLabels(String [] Labels) {
+        this.Labels = Labels;
+    }
+
     public ClbDomainsInfo() {
     }
 
@@ -431,6 +459,12 @@ public class ClbDomainsInfo extends AbstractModel {
         if (source.Note != null) {
             this.Note = new String(source.Note);
         }
+        if (source.Labels != null) {
+            this.Labels = new String[source.Labels.length];
+            for (int i = 0; i < source.Labels.length; i++) {
+                this.Labels[i] = new String(source.Labels[i]);
+            }
+        }
     }
 
 
@@ -452,6 +486,7 @@ public class ClbDomainsInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "CdcClusters", this.CdcClusters);
         this.setParamSimple(map, prefix + "CloudType", this.CloudType);
         this.setParamSimple(map, prefix + "Note", this.Note);
+        this.setParamArraySimple(map, prefix + "Labels.", this.Labels);
 
     }
 }

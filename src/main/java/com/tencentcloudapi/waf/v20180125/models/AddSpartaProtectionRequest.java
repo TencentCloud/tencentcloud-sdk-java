@@ -295,9 +295,7 @@ cdn-waf：CDN上的Web防护能力
     private String SniHost;
 
     /**
-    * 是否开启XFF重置。
-0：关闭
-1：开启
+    * 是否开启XFF重置。0：关闭 1：开启
     */
     @SerializedName("XFFReset")
     @Expose
@@ -318,18 +316,67 @@ cdn-waf：CDN上的Web防护能力
     private String UpstreamHost;
 
     /**
-    * 是否开启缓存 0-关闭 1-开启
+    * 是否开启缓存。 0：关闭 1：开启
     */
     @SerializedName("ProxyBuffer")
     @Expose
     private Long ProxyBuffer;
 
     /**
-    * 0: 禁用拨测, 1: 启用拨测。默认启用拨测
+    * 是否开启拨测。 0: 禁用拨测  1: 启用拨测。默认启用拨测
     */
     @SerializedName("ProbeStatus")
     @Expose
     private Long ProbeStatus;
+
+    /**
+    * 国密选项。0：不开启国密 1：在原有TLS选项的基础上追加支持国密 2：开启国密并仅支持国密客户端访问
+    */
+    @SerializedName("GmType")
+    @Expose
+    private Long GmType;
+
+    /**
+    * 国密证书类型。0：无国密证书 1：证书来源为自有国密证书 2：证书来源为托管国密证书
+    */
+    @SerializedName("GmCertType")
+    @Expose
+    private Long GmCertType;
+
+    /**
+    * GmCertType为1时，需要填充此参数，表示自有国密证书的证书链
+    */
+    @SerializedName("GmCert")
+    @Expose
+    private String GmCert;
+
+    /**
+    * GmCertType为1时，需要填充此参数，表示自有国密证书的私钥
+    */
+    @SerializedName("GmPrivateKey")
+    @Expose
+    private String GmPrivateKey;
+
+    /**
+    * GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书
+    */
+    @SerializedName("GmEncCert")
+    @Expose
+    private String GmEncCert;
+
+    /**
+    * GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书的私钥
+    */
+    @SerializedName("GmEncPrivateKey")
+    @Expose
+    private String GmEncPrivateKey;
+
+    /**
+    * GmCertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id
+    */
+    @SerializedName("GmSSLId")
+    @Expose
+    private String GmSSLId;
 
     /**
      * Get 需要防护的域名 
@@ -1020,24 +1067,16 @@ cdn-waf：CDN上的Web防护能力
     }
 
     /**
-     * Get 是否开启XFF重置。
-0：关闭
-1：开启 
-     * @return XFFReset 是否开启XFF重置。
-0：关闭
-1：开启
+     * Get 是否开启XFF重置。0：关闭 1：开启 
+     * @return XFFReset 是否开启XFF重置。0：关闭 1：开启
      */
     public Long getXFFReset() {
         return this.XFFReset;
     }
 
     /**
-     * Set 是否开启XFF重置。
-0：关闭
-1：开启
-     * @param XFFReset 是否开启XFF重置。
-0：关闭
-1：开启
+     * Set 是否开启XFF重置。0：关闭 1：开启
+     * @param XFFReset 是否开启XFF重置。0：关闭 1：开启
      */
     public void setXFFReset(Long XFFReset) {
         this.XFFReset = XFFReset;
@@ -1076,35 +1115,147 @@ cdn-waf：CDN上的Web防护能力
     }
 
     /**
-     * Get 是否开启缓存 0-关闭 1-开启 
-     * @return ProxyBuffer 是否开启缓存 0-关闭 1-开启
+     * Get 是否开启缓存。 0：关闭 1：开启 
+     * @return ProxyBuffer 是否开启缓存。 0：关闭 1：开启
      */
     public Long getProxyBuffer() {
         return this.ProxyBuffer;
     }
 
     /**
-     * Set 是否开启缓存 0-关闭 1-开启
-     * @param ProxyBuffer 是否开启缓存 0-关闭 1-开启
+     * Set 是否开启缓存。 0：关闭 1：开启
+     * @param ProxyBuffer 是否开启缓存。 0：关闭 1：开启
      */
     public void setProxyBuffer(Long ProxyBuffer) {
         this.ProxyBuffer = ProxyBuffer;
     }
 
     /**
-     * Get 0: 禁用拨测, 1: 启用拨测。默认启用拨测 
-     * @return ProbeStatus 0: 禁用拨测, 1: 启用拨测。默认启用拨测
+     * Get 是否开启拨测。 0: 禁用拨测  1: 启用拨测。默认启用拨测 
+     * @return ProbeStatus 是否开启拨测。 0: 禁用拨测  1: 启用拨测。默认启用拨测
      */
     public Long getProbeStatus() {
         return this.ProbeStatus;
     }
 
     /**
-     * Set 0: 禁用拨测, 1: 启用拨测。默认启用拨测
-     * @param ProbeStatus 0: 禁用拨测, 1: 启用拨测。默认启用拨测
+     * Set 是否开启拨测。 0: 禁用拨测  1: 启用拨测。默认启用拨测
+     * @param ProbeStatus 是否开启拨测。 0: 禁用拨测  1: 启用拨测。默认启用拨测
      */
     public void setProbeStatus(Long ProbeStatus) {
         this.ProbeStatus = ProbeStatus;
+    }
+
+    /**
+     * Get 国密选项。0：不开启国密 1：在原有TLS选项的基础上追加支持国密 2：开启国密并仅支持国密客户端访问 
+     * @return GmType 国密选项。0：不开启国密 1：在原有TLS选项的基础上追加支持国密 2：开启国密并仅支持国密客户端访问
+     */
+    public Long getGmType() {
+        return this.GmType;
+    }
+
+    /**
+     * Set 国密选项。0：不开启国密 1：在原有TLS选项的基础上追加支持国密 2：开启国密并仅支持国密客户端访问
+     * @param GmType 国密选项。0：不开启国密 1：在原有TLS选项的基础上追加支持国密 2：开启国密并仅支持国密客户端访问
+     */
+    public void setGmType(Long GmType) {
+        this.GmType = GmType;
+    }
+
+    /**
+     * Get 国密证书类型。0：无国密证书 1：证书来源为自有国密证书 2：证书来源为托管国密证书 
+     * @return GmCertType 国密证书类型。0：无国密证书 1：证书来源为自有国密证书 2：证书来源为托管国密证书
+     */
+    public Long getGmCertType() {
+        return this.GmCertType;
+    }
+
+    /**
+     * Set 国密证书类型。0：无国密证书 1：证书来源为自有国密证书 2：证书来源为托管国密证书
+     * @param GmCertType 国密证书类型。0：无国密证书 1：证书来源为自有国密证书 2：证书来源为托管国密证书
+     */
+    public void setGmCertType(Long GmCertType) {
+        this.GmCertType = GmCertType;
+    }
+
+    /**
+     * Get GmCertType为1时，需要填充此参数，表示自有国密证书的证书链 
+     * @return GmCert GmCertType为1时，需要填充此参数，表示自有国密证书的证书链
+     */
+    public String getGmCert() {
+        return this.GmCert;
+    }
+
+    /**
+     * Set GmCertType为1时，需要填充此参数，表示自有国密证书的证书链
+     * @param GmCert GmCertType为1时，需要填充此参数，表示自有国密证书的证书链
+     */
+    public void setGmCert(String GmCert) {
+        this.GmCert = GmCert;
+    }
+
+    /**
+     * Get GmCertType为1时，需要填充此参数，表示自有国密证书的私钥 
+     * @return GmPrivateKey GmCertType为1时，需要填充此参数，表示自有国密证书的私钥
+     */
+    public String getGmPrivateKey() {
+        return this.GmPrivateKey;
+    }
+
+    /**
+     * Set GmCertType为1时，需要填充此参数，表示自有国密证书的私钥
+     * @param GmPrivateKey GmCertType为1时，需要填充此参数，表示自有国密证书的私钥
+     */
+    public void setGmPrivateKey(String GmPrivateKey) {
+        this.GmPrivateKey = GmPrivateKey;
+    }
+
+    /**
+     * Get GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书 
+     * @return GmEncCert GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书
+     */
+    public String getGmEncCert() {
+        return this.GmEncCert;
+    }
+
+    /**
+     * Set GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书
+     * @param GmEncCert GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书
+     */
+    public void setGmEncCert(String GmEncCert) {
+        this.GmEncCert = GmEncCert;
+    }
+
+    /**
+     * Get GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书的私钥 
+     * @return GmEncPrivateKey GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书的私钥
+     */
+    public String getGmEncPrivateKey() {
+        return this.GmEncPrivateKey;
+    }
+
+    /**
+     * Set GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书的私钥
+     * @param GmEncPrivateKey GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书的私钥
+     */
+    public void setGmEncPrivateKey(String GmEncPrivateKey) {
+        this.GmEncPrivateKey = GmEncPrivateKey;
+    }
+
+    /**
+     * Get GmCertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id 
+     * @return GmSSLId GmCertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id
+     */
+    public String getGmSSLId() {
+        return this.GmSSLId;
+    }
+
+    /**
+     * Set GmCertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id
+     * @param GmSSLId GmCertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id
+     */
+    public void setGmSSLId(String GmSSLId) {
+        this.GmSSLId = GmSSLId;
     }
 
     public AddSpartaProtectionRequest() {
@@ -1247,6 +1398,27 @@ cdn-waf：CDN上的Web防护能力
         if (source.ProbeStatus != null) {
             this.ProbeStatus = new Long(source.ProbeStatus);
         }
+        if (source.GmType != null) {
+            this.GmType = new Long(source.GmType);
+        }
+        if (source.GmCertType != null) {
+            this.GmCertType = new Long(source.GmCertType);
+        }
+        if (source.GmCert != null) {
+            this.GmCert = new String(source.GmCert);
+        }
+        if (source.GmPrivateKey != null) {
+            this.GmPrivateKey = new String(source.GmPrivateKey);
+        }
+        if (source.GmEncCert != null) {
+            this.GmEncCert = new String(source.GmEncCert);
+        }
+        if (source.GmEncPrivateKey != null) {
+            this.GmEncPrivateKey = new String(source.GmEncPrivateKey);
+        }
+        if (source.GmSSLId != null) {
+            this.GmSSLId = new String(source.GmSSLId);
+        }
     }
 
 
@@ -1292,6 +1464,13 @@ cdn-waf：CDN上的Web防护能力
         this.setParamSimple(map, prefix + "UpstreamHost", this.UpstreamHost);
         this.setParamSimple(map, prefix + "ProxyBuffer", this.ProxyBuffer);
         this.setParamSimple(map, prefix + "ProbeStatus", this.ProbeStatus);
+        this.setParamSimple(map, prefix + "GmType", this.GmType);
+        this.setParamSimple(map, prefix + "GmCertType", this.GmCertType);
+        this.setParamSimple(map, prefix + "GmCert", this.GmCert);
+        this.setParamSimple(map, prefix + "GmPrivateKey", this.GmPrivateKey);
+        this.setParamSimple(map, prefix + "GmEncCert", this.GmEncCert);
+        this.setParamSimple(map, prefix + "GmEncPrivateKey", this.GmEncPrivateKey);
+        this.setParamSimple(map, prefix + "GmSSLId", this.GmSSLId);
 
     }
 }

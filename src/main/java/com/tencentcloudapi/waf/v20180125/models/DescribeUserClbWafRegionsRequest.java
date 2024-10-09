@@ -23,6 +23,29 @@ import java.util.HashMap;
 
 public class DescribeUserClbWafRegionsRequest extends AbstractModel {
 
+    /**
+    * 流量来源，不填默认clb。clb：负载均衡器，tsegw：云原生API网关，scf：云函数，apisix：腾讯云上其他网关
+    */
+    @SerializedName("AlbType")
+    @Expose
+    private String AlbType;
+
+    /**
+     * Get 流量来源，不填默认clb。clb：负载均衡器，tsegw：云原生API网关，scf：云函数，apisix：腾讯云上其他网关 
+     * @return AlbType 流量来源，不填默认clb。clb：负载均衡器，tsegw：云原生API网关，scf：云函数，apisix：腾讯云上其他网关
+     */
+    public String getAlbType() {
+        return this.AlbType;
+    }
+
+    /**
+     * Set 流量来源，不填默认clb。clb：负载均衡器，tsegw：云原生API网关，scf：云函数，apisix：腾讯云上其他网关
+     * @param AlbType 流量来源，不填默认clb。clb：负载均衡器，tsegw：云原生API网关，scf：云函数，apisix：腾讯云上其他网关
+     */
+    public void setAlbType(String AlbType) {
+        this.AlbType = AlbType;
+    }
+
     public DescribeUserClbWafRegionsRequest() {
     }
 
@@ -31,6 +54,9 @@ public class DescribeUserClbWafRegionsRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeUserClbWafRegionsRequest(DescribeUserClbWafRegionsRequest source) {
+        if (source.AlbType != null) {
+            this.AlbType = new String(source.AlbType);
+        }
     }
 
 
@@ -38,6 +64,7 @@ public class DescribeUserClbWafRegionsRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "AlbType", this.AlbType);
 
     }
 }

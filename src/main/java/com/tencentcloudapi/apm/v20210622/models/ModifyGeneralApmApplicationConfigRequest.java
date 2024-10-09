@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyGeneralApmApplicationConfigRequest extends AbstractModel {
 
     /**
-    * 实例Id
+    * 业务系统Id
     */
     @SerializedName("InstanceId")
     @Expose
@@ -32,37 +32,40 @@ public class ModifyGeneralApmApplicationConfigRequest extends AbstractModel {
 
     /**
     * 需要修改的字段key value分别指定字段名、字段值
+[具体字段请见](https://cloud.tencent.com/document/product/248/111241)
     */
     @SerializedName("Tags")
     @Expose
     private ApmTag [] Tags;
 
     /**
-    * 需要修改配置的服务列表名称	
+    * 需要修改配置的应用列表名称	
     */
     @SerializedName("ServiceNames")
     @Expose
     private String [] ServiceNames;
 
     /**
-     * Get 实例Id 
-     * @return InstanceId 实例Id
+     * Get 业务系统Id 
+     * @return InstanceId 业务系统Id
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例Id
-     * @param InstanceId 实例Id
+     * Set 业务系统Id
+     * @param InstanceId 业务系统Id
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 需要修改的字段key value分别指定字段名、字段值 
+     * Get 需要修改的字段key value分别指定字段名、字段值
+[具体字段请见](https://cloud.tencent.com/document/product/248/111241) 
      * @return Tags 需要修改的字段key value分别指定字段名、字段值
+[具体字段请见](https://cloud.tencent.com/document/product/248/111241)
      */
     public ApmTag [] getTags() {
         return this.Tags;
@@ -70,23 +73,25 @@ public class ModifyGeneralApmApplicationConfigRequest extends AbstractModel {
 
     /**
      * Set 需要修改的字段key value分别指定字段名、字段值
+[具体字段请见](https://cloud.tencent.com/document/product/248/111241)
      * @param Tags 需要修改的字段key value分别指定字段名、字段值
+[具体字段请见](https://cloud.tencent.com/document/product/248/111241)
      */
     public void setTags(ApmTag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 需要修改配置的服务列表名称	 
-     * @return ServiceNames 需要修改配置的服务列表名称	
+     * Get 需要修改配置的应用列表名称	 
+     * @return ServiceNames 需要修改配置的应用列表名称	
      */
     public String [] getServiceNames() {
         return this.ServiceNames;
     }
 
     /**
-     * Set 需要修改配置的服务列表名称	
-     * @param ServiceNames 需要修改配置的服务列表名称	
+     * Set 需要修改配置的应用列表名称	
+     * @param ServiceNames 需要修改配置的应用列表名称	
      */
     public void setServiceNames(String [] ServiceNames) {
         this.ServiceNames = ServiceNames;

@@ -185,6 +185,14 @@ public class ClbObject extends AbstractModel {
     private Long ObjectFlowMode;
 
     /**
+    * 数值形式的私有网络 ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NumericalVpcId")
+    @Expose
+    private Long NumericalVpcId;
+
+    /**
      * Get 对象ID 
      * @return ObjectId 对象ID
      */
@@ -564,6 +572,26 @@ public class ClbObject extends AbstractModel {
         this.ObjectFlowMode = ObjectFlowMode;
     }
 
+    /**
+     * Get 数值形式的私有网络 ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NumericalVpcId 数值形式的私有网络 ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getNumericalVpcId() {
+        return this.NumericalVpcId;
+    }
+
+    /**
+     * Set 数值形式的私有网络 ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NumericalVpcId 数值形式的私有网络 ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNumericalVpcId(Long NumericalVpcId) {
+        this.NumericalVpcId = NumericalVpcId;
+    }
+
     public ClbObject() {
     }
 
@@ -650,6 +678,9 @@ public class ClbObject extends AbstractModel {
         if (source.ObjectFlowMode != null) {
             this.ObjectFlowMode = new Long(source.ObjectFlowMode);
         }
+        if (source.NumericalVpcId != null) {
+            this.NumericalVpcId = new Long(source.NumericalVpcId);
+        }
     }
 
 
@@ -679,6 +710,7 @@ public class ClbObject extends AbstractModel {
         this.setParamSimple(map, prefix + "BotStatus", this.BotStatus);
         this.setParamSimple(map, prefix + "ApiStatus", this.ApiStatus);
         this.setParamSimple(map, prefix + "ObjectFlowMode", this.ObjectFlowMode);
+        this.setParamSimple(map, prefix + "NumericalVpcId", this.NumericalVpcId);
 
     }
 }
