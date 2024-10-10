@@ -974,6 +974,17 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *变配预付费集群询价
+     * @param req InquirePriceModifyRequest
+     * @return InquirePriceModifyResponse
+     * @throws TencentCloudSDKException
+     */
+    public InquirePriceModifyResponse InquirePriceModify(InquirePriceModifyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "InquirePriceModify", InquirePriceModifyResponse.class);
+    }
+
+    /**
      *查询续费集群价格
      * @param req InquirePriceRenewRequest
      * @return InquirePriceRenewResponse

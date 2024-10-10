@@ -387,6 +387,9 @@ public enum CvmErrorCode {
     // ipv6地址无效
      INVALIDPARAMETERVALUE_IPV6ADDRESSMALFORMED("InvalidParameterValue.IPv6AddressMalformed"),
      
+    // ISO文件必须强制导入
+     INVALIDPARAMETERVALUE_ISOMUSTIMPORTBYFORCE("InvalidParameterValue.ISOMustImportByForce"),
+     
     // HostName参数值不合法
      INVALIDPARAMETERVALUE_ILLEGALHOSTNAME("InvalidParameterValue.IllegalHostName"),
      

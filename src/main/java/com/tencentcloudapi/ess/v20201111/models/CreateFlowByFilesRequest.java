@@ -242,6 +242,15 @@ public class CreateFlowByFilesRequest extends AbstractModel {
     private Long FlowDisplayType;
 
     /**
+    * 是否开启动态签署合同：
+<ul><li> **true**：开启动态签署合同，可在签署过程中追加签署人（必须满足：1，发起方企业开启了模块化计费能力；2，发起方企业在企业应用管理中开启了动态签署人2.0能力）    。</li>
+<li> **false**：不开启动态签署合同。</li></ul>
+    */
+    @SerializedName("OpenDynamicSignFlow")
+    @Expose
+    private Boolean OpenDynamicSignFlow;
+
+    /**
      * Get 执行本接口操作的员工信息。使用此接口时，必须填写userId。
 支持填入集团子公司经办人 userId 代发合同。
 
@@ -849,6 +858,30 @@ public class CreateFlowByFilesRequest extends AbstractModel {
         this.FlowDisplayType = FlowDisplayType;
     }
 
+    /**
+     * Get 是否开启动态签署合同：
+<ul><li> **true**：开启动态签署合同，可在签署过程中追加签署人（必须满足：1，发起方企业开启了模块化计费能力；2，发起方企业在企业应用管理中开启了动态签署人2.0能力）    。</li>
+<li> **false**：不开启动态签署合同。</li></ul> 
+     * @return OpenDynamicSignFlow 是否开启动态签署合同：
+<ul><li> **true**：开启动态签署合同，可在签署过程中追加签署人（必须满足：1，发起方企业开启了模块化计费能力；2，发起方企业在企业应用管理中开启了动态签署人2.0能力）    。</li>
+<li> **false**：不开启动态签署合同。</li></ul>
+     */
+    public Boolean getOpenDynamicSignFlow() {
+        return this.OpenDynamicSignFlow;
+    }
+
+    /**
+     * Set 是否开启动态签署合同：
+<ul><li> **true**：开启动态签署合同，可在签署过程中追加签署人（必须满足：1，发起方企业开启了模块化计费能力；2，发起方企业在企业应用管理中开启了动态签署人2.0能力）    。</li>
+<li> **false**：不开启动态签署合同。</li></ul>
+     * @param OpenDynamicSignFlow 是否开启动态签署合同：
+<ul><li> **true**：开启动态签署合同，可在签署过程中追加签署人（必须满足：1，发起方企业开启了模块化计费能力；2，发起方企业在企业应用管理中开启了动态签署人2.0能力）    。</li>
+<li> **false**：不开启动态签署合同。</li></ul>
+     */
+    public void setOpenDynamicSignFlow(Boolean OpenDynamicSignFlow) {
+        this.OpenDynamicSignFlow = OpenDynamicSignFlow;
+    }
+
     public CreateFlowByFilesRequest() {
     }
 
@@ -935,6 +968,9 @@ public class CreateFlowByFilesRequest extends AbstractModel {
         if (source.FlowDisplayType != null) {
             this.FlowDisplayType = new Long(source.FlowDisplayType);
         }
+        if (source.OpenDynamicSignFlow != null) {
+            this.OpenDynamicSignFlow = new Boolean(source.OpenDynamicSignFlow);
+        }
     }
 
 
@@ -964,6 +1000,7 @@ public class CreateFlowByFilesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "AutoSignScene", this.AutoSignScene);
         this.setParamSimple(map, prefix + "NeedSignReview", this.NeedSignReview);
         this.setParamSimple(map, prefix + "FlowDisplayType", this.FlowDisplayType);
+        this.setParamSimple(map, prefix + "OpenDynamicSignFlow", this.OpenDynamicSignFlow);
 
     }
 }

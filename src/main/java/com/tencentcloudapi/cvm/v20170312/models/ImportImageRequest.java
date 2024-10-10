@@ -104,6 +104,13 @@ BYOL: 自带许可（Bring Your Own License）
     private String BootMode;
 
     /**
+    *  镜像族
+    */
+    @SerializedName("ImageFamily")
+    @Expose
+    private String ImageFamily;
+
+    /**
      * Get 导入镜像的操作系统架构，`x86_64` 或 `i386` 
      * @return Architecture 导入镜像的操作系统架构，`x86_64` 或 `i386`
      */
@@ -291,6 +298,22 @@ BYOL: 自带许可（Bring Your Own License）
         this.BootMode = BootMode;
     }
 
+    /**
+     * Get  镜像族 
+     * @return ImageFamily  镜像族
+     */
+    public String getImageFamily() {
+        return this.ImageFamily;
+    }
+
+    /**
+     * Set  镜像族
+     * @param ImageFamily  镜像族
+     */
+    public void setImageFamily(String ImageFamily) {
+        this.ImageFamily = ImageFamily;
+    }
+
     public ImportImageRequest() {
     }
 
@@ -335,6 +358,9 @@ BYOL: 自带许可（Bring Your Own License）
         if (source.BootMode != null) {
             this.BootMode = new String(source.BootMode);
         }
+        if (source.ImageFamily != null) {
+            this.ImageFamily = new String(source.ImageFamily);
+        }
     }
 
 
@@ -353,6 +379,7 @@ BYOL: 自带许可（Bring Your Own License）
         this.setParamArrayObj(map, prefix + "TagSpecification.", this.TagSpecification);
         this.setParamSimple(map, prefix + "LicenseType", this.LicenseType);
         this.setParamSimple(map, prefix + "BootMode", this.BootMode);
+        this.setParamSimple(map, prefix + "ImageFamily", this.ImageFamily);
 
     }
 }

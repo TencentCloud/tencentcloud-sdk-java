@@ -39,6 +39,17 @@ public class EssClient extends AbstractClient{
     }
 
     /**
+     *该接口用于结束动态签署流程，若当前合同还存在签署方未签署，无法结束。
+     * @param req ArchiveDynamicFlowRequest
+     * @return ArchiveDynamicFlowResponse
+     * @throws TencentCloudSDKException
+     */
+    public ArchiveDynamicFlowResponse ArchiveDynamicFlow(ArchiveDynamicFlowRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ArchiveDynamicFlow", ArchiveDynamicFlowResponse.class);
+    }
+
+    /**
      *此接口（BindEmployeeUserIdWithClientOpenId）用于将电子签系统员工UserId与客户系统员工OpenId进行绑定。
 
 此OpenId只在 [更新企业员工信息 ](https://qian.tencent.com/developers/companyApis/staffs/UpdateIntegrationEmployees)、[移除企业员工](https://qian.tencent.com/developers/companyApis/staffs/DeleteIntegrationEmployees) 等场景下可以使用
@@ -300,6 +311,18 @@ public class EssClient extends AbstractClient{
     public CreateDocumentResponse CreateDocument(CreateDocumentRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateDocument", CreateDocumentResponse.class);
+    }
+
+    /**
+     *此接口（CreateDynamicFlowApprover）用来补充动态合同的签署人信息。<br/>
+适用场景：使用CreateFlowByFiles指定：OpenDynamicSignFlow=true发起的合同，可以使用该接口补充后续签署人。<br/>
+     * @param req CreateDynamicFlowApproverRequest
+     * @return CreateDynamicFlowApproverResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDynamicFlowApproverResponse CreateDynamicFlowApprover(CreateDynamicFlowApproverRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateDynamicFlowApprover", CreateDynamicFlowApproverResponse.class);
     }
 
     /**
