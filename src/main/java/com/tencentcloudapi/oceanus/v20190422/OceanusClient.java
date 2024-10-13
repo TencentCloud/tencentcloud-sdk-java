@@ -248,6 +248,17 @@ public class OceanusClient extends AbstractClient{
     }
 
     /**
+     *获取作业运行时的信息
+     * @param req DescribeJobRuntimeInfoRequest
+     * @return DescribeJobRuntimeInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeJobRuntimeInfoResponse DescribeJobRuntimeInfo(DescribeJobRuntimeInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeJobRuntimeInfo", DescribeJobRuntimeInfoResponse.class);
+    }
+
+    /**
      *查找Savepoint列表
      * @param req DescribeJobSavepointRequest
      * @return DescribeJobSavepointResponse

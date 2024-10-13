@@ -173,6 +173,21 @@ public class DspaUserResourceMeta extends AbstractModel {
     private String InstanceValue;
 
     /**
+    * //治理授权状态（0：关闭 1：开启）
+    */
+    @SerializedName("GovernAuthStatus")
+    @Expose
+    private Long GovernAuthStatus;
+
+    /**
+    * 授权范围：all - 授权整个数据源 manual:手动指定数据源
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AuthRange")
+    @Expose
+    private String AuthRange;
+
+    /**
      * Get 用户资源ID。 
      * @return ResourceId 用户资源ID。
      */
@@ -516,6 +531,42 @@ public class DspaUserResourceMeta extends AbstractModel {
         this.InstanceValue = InstanceValue;
     }
 
+    /**
+     * Get //治理授权状态（0：关闭 1：开启） 
+     * @return GovernAuthStatus //治理授权状态（0：关闭 1：开启）
+     */
+    public Long getGovernAuthStatus() {
+        return this.GovernAuthStatus;
+    }
+
+    /**
+     * Set //治理授权状态（0：关闭 1：开启）
+     * @param GovernAuthStatus //治理授权状态（0：关闭 1：开启）
+     */
+    public void setGovernAuthStatus(Long GovernAuthStatus) {
+        this.GovernAuthStatus = GovernAuthStatus;
+    }
+
+    /**
+     * Get 授权范围：all - 授权整个数据源 manual:手动指定数据源
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AuthRange 授权范围：all - 授权整个数据源 manual:手动指定数据源
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAuthRange() {
+        return this.AuthRange;
+    }
+
+    /**
+     * Set 授权范围：all - 授权整个数据源 manual:手动指定数据源
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AuthRange 授权范围：all - 授权整个数据源 manual:手动指定数据源
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAuthRange(String AuthRange) {
+        this.AuthRange = AuthRange;
+    }
+
     public DspaUserResourceMeta() {
     }
 
@@ -587,6 +638,12 @@ public class DspaUserResourceMeta extends AbstractModel {
         if (source.InstanceValue != null) {
             this.InstanceValue = new String(source.InstanceValue);
         }
+        if (source.GovernAuthStatus != null) {
+            this.GovernAuthStatus = new Long(source.GovernAuthStatus);
+        }
+        if (source.AuthRange != null) {
+            this.AuthRange = new String(source.AuthRange);
+        }
     }
 
 
@@ -615,6 +672,8 @@ public class DspaUserResourceMeta extends AbstractModel {
         this.setParamSimple(map, prefix + "ResourceAuthAccount", this.ResourceAuthAccount);
         this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
         this.setParamSimple(map, prefix + "InstanceValue", this.InstanceValue);
+        this.setParamSimple(map, prefix + "GovernAuthStatus", this.GovernAuthStatus);
+        this.setParamSimple(map, prefix + "AuthRange", this.AuthRange);
 
     }
 }

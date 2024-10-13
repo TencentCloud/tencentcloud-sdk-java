@@ -18,6 +18,9 @@ public enum IotexplorerErrorCode {
     // 产品未开通视频AI分析服务
      FAILEDOPERATION_CLOUDSTORAGEAISERVICENOTENABLED("FailedOperation.CloudStorageAIServiceNotEnabled"),
      
+    // 云存 AI 分析任务已存在，不支持重复创建
+     FAILEDOPERATION_CLOUDSTORAGEAISERVICETASKALREADYEXISTS("FailedOperation.CloudStorageAIServiceTaskAlreadyExists"),
+     
     // 需先开通云存套餐
      FAILEDOPERATION_CLOUDSTORAGEPACKAGEREQUIRED("FailedOperation.CloudStoragePackageRequired"),
      
@@ -341,6 +344,9 @@ public enum IotexplorerErrorCode {
      
     // 已有量产进行，请等待量产完成。
      RESOURCEINSUFFICIENT_BATCHPRODUCTIONISRUNNING("ResourceInsufficient.BatchProductionIsRunning"),
+     
+    // 云存 AI 分析任务创建额度不足
+     RESOURCEINSUFFICIENT_CLOUDSTORAGEAISERVICETASKQUOTAINSUFFICIENT("ResourceInsufficient.CloudStorageAIServiceTaskQuotaInsufficient"),
      
     // 资源不存在。
      RESOURCENOTFOUND("ResourceNotFound"),

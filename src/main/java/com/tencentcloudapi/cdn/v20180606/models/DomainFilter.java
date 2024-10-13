@@ -42,7 +42,7 @@ public class DomainFilter extends AbstractModel {
     private String Name;
 
     /**
-    * 过滤字段值。
+    * 过滤字段值，默认最多传 5 个。当 Name 是 origin/domain 且 Fuzzy 传 true，最多传 1 个。
     */
     @SerializedName("Value")
     @Expose
@@ -117,16 +117,16 @@ public class DomainFilter extends AbstractModel {
     }
 
     /**
-     * Get 过滤字段值。 
-     * @return Value 过滤字段值。
+     * Get 过滤字段值，默认最多传 5 个。当 Name 是 origin/domain 且 Fuzzy 传 true，最多传 1 个。 
+     * @return Value 过滤字段值，默认最多传 5 个。当 Name 是 origin/domain 且 Fuzzy 传 true，最多传 1 个。
      */
     public String [] getValue() {
         return this.Value;
     }
 
     /**
-     * Set 过滤字段值。
-     * @param Value 过滤字段值。
+     * Set 过滤字段值，默认最多传 5 个。当 Name 是 origin/domain 且 Fuzzy 传 true，最多传 1 个。
+     * @param Value 过滤字段值，默认最多传 5 个。当 Name 是 origin/domain 且 Fuzzy 传 true，最多传 1 个。
      */
     public void setValue(String [] Value) {
         this.Value = Value;

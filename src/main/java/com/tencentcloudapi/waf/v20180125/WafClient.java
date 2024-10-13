@@ -430,6 +430,28 @@ public class WafClient extends AbstractClient{
     }
 
     /**
+     *获取Api请求详情信息
+     * @param req DescribeApiDetailRequest
+     * @return DescribeApiDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeApiDetailResponse DescribeApiDetail(DescribeApiDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeApiDetail", DescribeApiDetailResponse.class);
+    }
+
+    /**
+     *api资产列表
+     * @param req DescribeApiListVersionTwoRequest
+     * @return DescribeApiListVersionTwoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeApiListVersionTwoResponse DescribeApiListVersionTwo(DescribeApiListVersionTwoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeApiListVersionTwo", DescribeApiListVersionTwoResponse.class);
+    }
+
+    /**
      *获取地域封禁配置包括地域封禁开关，设置封禁的地区信息
      * @param req DescribeAreaBanAreasRequest
      * @return DescribeAreaBanAreasResponse

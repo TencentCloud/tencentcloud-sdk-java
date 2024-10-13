@@ -886,7 +886,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *查询任务列表
+     *本接口（DescribeTasks）用于查询任务列表。
      * @param req DescribeTasksRequest
      * @return DescribeTasksResponse
      * @throws TencentCloudSDKException

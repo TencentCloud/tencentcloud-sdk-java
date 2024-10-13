@@ -259,6 +259,29 @@ public class MpsClient extends AbstractClient{
     }
 
     /**
+     *对URL链接或COS中的视频发起入库任务。
+可选在任务完成后向回调方发送任务完成状态信息。
+     * @param req CreateVideoDatabaseEntryTaskRequest
+     * @return CreateVideoDatabaseEntryTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateVideoDatabaseEntryTaskResponse CreateVideoDatabaseEntryTask(CreateVideoDatabaseEntryTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateVideoDatabaseEntryTask", CreateVideoDatabaseEntryTaskResponse.class);
+    }
+
+    /**
+     *使用检索值检索库中最接近检索值的若干视频。
+     * @param req CreateVideoSearchTaskRequest
+     * @return CreateVideoSearchTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateVideoSearchTaskResponse CreateVideoSearchTask(CreateVideoSearchTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateVideoSearchTask", CreateVideoSearchTaskResponse.class);
+    }
+
+    /**
      *创建用户自定义水印模板，数量上限：1000。
      * @param req CreateWatermarkTemplateRequest
      * @return CreateWatermarkTemplateResponse
@@ -801,6 +824,28 @@ public class MpsClient extends AbstractClient{
     public DescribeTranscodeTemplatesResponse DescribeTranscodeTemplates(DescribeTranscodeTemplatesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeTranscodeTemplates", DescribeTranscodeTemplatesResponse.class);
+    }
+
+    /**
+     *根据任务ID查询视频入库任务的状态。
+     * @param req DescribeVideoDatabaseEntryTaskDetailRequest
+     * @return DescribeVideoDatabaseEntryTaskDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVideoDatabaseEntryTaskDetailResponse DescribeVideoDatabaseEntryTaskDetail(DescribeVideoDatabaseEntryTaskDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeVideoDatabaseEntryTaskDetail", DescribeVideoDatabaseEntryTaskDetailResponse.class);
+    }
+
+    /**
+     *根据任务ID查询视频检索任务的状态。
+     * @param req DescribeVideoSearchTaskDetailRequest
+     * @return DescribeVideoSearchTaskDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVideoSearchTaskDetailResponse DescribeVideoSearchTaskDetail(DescribeVideoSearchTaskDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeVideoSearchTaskDetail", DescribeVideoSearchTaskDetailResponse.class);
     }
 
     /**

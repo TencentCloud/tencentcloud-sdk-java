@@ -74,6 +74,13 @@ https://cloud.tencent.com/document/product/269/31999#app-.E7.AE.A1.E7.90.86.E5.9
     private String TargetUserId;
 
     /**
+    * 机器人订阅的用户列表
+    */
+    @SerializedName("TargetUserIdList")
+    @Expose
+    private String [] TargetUserIdList;
+
+    /**
      * Get 转录机器人的UserId，用于进房发起转录任务。【注意】这个UserId不能与当前房间内的主播观众[UserId](https://cloud.tencent.com/document/product/647/46351#userid)重复。如果一个房间发起多个转录任务时，机器人的userid也不能相互重复，否则会中断前一个任务。需要保证转录机器人UserId在房间内唯一。 
      * @return UserId 转录机器人的UserId，用于进房发起转录任务。【注意】这个UserId不能与当前房间内的主播观众[UserId](https://cloud.tencent.com/document/product/647/46351#userid)重复。如果一个房间发起多个转录任务时，机器人的userid也不能相互重复，否则会中断前一个任务。需要保证转录机器人UserId在房间内唯一。
      */
@@ -197,6 +204,22 @@ https://cloud.tencent.com/document/product/269/31999#app-.E7.AE.A1.E7.90.86.E5.9
         this.TargetUserId = TargetUserId;
     }
 
+    /**
+     * Get 机器人订阅的用户列表 
+     * @return TargetUserIdList 机器人订阅的用户列表
+     */
+    public String [] getTargetUserIdList() {
+        return this.TargetUserIdList;
+    }
+
+    /**
+     * Set 机器人订阅的用户列表
+     * @param TargetUserIdList 机器人订阅的用户列表
+     */
+    public void setTargetUserIdList(String [] TargetUserIdList) {
+        this.TargetUserIdList = TargetUserIdList;
+    }
+
     public TranscriptionParams() {
     }
 
@@ -226,6 +249,12 @@ https://cloud.tencent.com/document/product/269/31999#app-.E7.AE.A1.E7.90.86.E5.9
         if (source.TargetUserId != null) {
             this.TargetUserId = new String(source.TargetUserId);
         }
+        if (source.TargetUserIdList != null) {
+            this.TargetUserIdList = new String[source.TargetUserIdList.length];
+            for (int i = 0; i < source.TargetUserIdList.length; i++) {
+                this.TargetUserIdList[i] = new String(source.TargetUserIdList[i]);
+            }
+        }
     }
 
 
@@ -240,6 +269,7 @@ https://cloud.tencent.com/document/product/269/31999#app-.E7.AE.A1.E7.90.86.E5.9
         this.setParamSimple(map, prefix + "MaxIdleTime", this.MaxIdleTime);
         this.setParamSimple(map, prefix + "TranscriptionMode", this.TranscriptionMode);
         this.setParamSimple(map, prefix + "TargetUserId", this.TargetUserId);
+        this.setParamArraySimple(map, prefix + "TargetUserIdList.", this.TargetUserIdList);
 
     }
 }

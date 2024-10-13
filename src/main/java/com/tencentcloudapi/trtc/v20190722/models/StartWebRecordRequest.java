@@ -76,6 +76,13 @@ public class StartWebRecordRequest extends AbstractModel {
     private McuPublishCdnParam [] PublishCdnParams;
 
     /**
+    * 录制页面资源加载的超时时间，单位：秒。默认值为 0 秒，该值需大于等于 0秒，且小于等于 60秒。录制页面未启用页面加载超时检测时，请勿设置此参数。
+    */
+    @SerializedName("ReadyTimeout")
+    @Expose
+    private Long ReadyTimeout;
+
+    /**
      * Get 需要录制的网页URL
  
      * @return RecordUrl 需要录制的网页URL
@@ -199,6 +206,22 @@ public class StartWebRecordRequest extends AbstractModel {
         this.PublishCdnParams = PublishCdnParams;
     }
 
+    /**
+     * Get 录制页面资源加载的超时时间，单位：秒。默认值为 0 秒，该值需大于等于 0秒，且小于等于 60秒。录制页面未启用页面加载超时检测时，请勿设置此参数。 
+     * @return ReadyTimeout 录制页面资源加载的超时时间，单位：秒。默认值为 0 秒，该值需大于等于 0秒，且小于等于 60秒。录制页面未启用页面加载超时检测时，请勿设置此参数。
+     */
+    public Long getReadyTimeout() {
+        return this.ReadyTimeout;
+    }
+
+    /**
+     * Set 录制页面资源加载的超时时间，单位：秒。默认值为 0 秒，该值需大于等于 0秒，且小于等于 60秒。录制页面未启用页面加载超时检测时，请勿设置此参数。
+     * @param ReadyTimeout 录制页面资源加载的超时时间，单位：秒。默认值为 0 秒，该值需大于等于 0秒，且小于等于 60秒。录制页面未启用页面加载超时检测时，请勿设置此参数。
+     */
+    public void setReadyTimeout(Long ReadyTimeout) {
+        this.ReadyTimeout = ReadyTimeout;
+    }
+
     public StartWebRecordRequest() {
     }
 
@@ -231,6 +254,9 @@ public class StartWebRecordRequest extends AbstractModel {
                 this.PublishCdnParams[i] = new McuPublishCdnParam(source.PublishCdnParams[i]);
             }
         }
+        if (source.ReadyTimeout != null) {
+            this.ReadyTimeout = new Long(source.ReadyTimeout);
+        }
     }
 
 
@@ -245,6 +271,7 @@ public class StartWebRecordRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
         this.setParamSimple(map, prefix + "RecordId", this.RecordId);
         this.setParamArrayObj(map, prefix + "PublishCdnParams.", this.PublishCdnParams);
+        this.setParamSimple(map, prefix + "ReadyTimeout", this.ReadyTimeout);
 
     }
 }

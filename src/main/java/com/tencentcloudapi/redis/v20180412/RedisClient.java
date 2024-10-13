@@ -908,7 +908,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *本接口(ModifyDBInstanceSecurityGroups)用于修改实例绑定的安全组。
+     *本接口（ModifyDBInstanceSecurityGroups）用于对实例原有的安全组列表进行修改。
      * @param req ModifyDBInstanceSecurityGroupsRequest
      * @return ModifyDBInstanceSecurityGroupsResponse
      * @throws TencentCloudSDKException
@@ -982,6 +982,17 @@ public class RedisClient extends AbstractClient{
     public ModifyInstanceParamsResponse ModifyInstanceParams(ModifyInstanceParamsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyInstanceParams", ModifyInstanceParamsResponse.class);
+    }
+
+    /**
+     *本接口（ModifyInstancePassword）用于修改实例访问密码。
+     * @param req ModifyInstancePasswordRequest
+     * @return ModifyInstancePasswordResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyInstancePasswordResponse ModifyInstancePassword(ModifyInstancePasswordRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyInstancePassword", ModifyInstancePasswordResponse.class);
     }
 
     /**

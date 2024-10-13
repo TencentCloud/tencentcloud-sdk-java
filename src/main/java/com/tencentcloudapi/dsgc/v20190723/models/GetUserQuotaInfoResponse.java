@@ -80,6 +80,27 @@ public class GetUserQuotaInfoResponse extends AbstractModel {
     private Long COSUnbindNum;
 
     /**
+    * 用户购买的实例配额。
+    */
+    @SerializedName("InsTotalQuota")
+    @Expose
+    private Long InsTotalQuota;
+
+    /**
+    * 用户可用的实例配额。
+    */
+    @SerializedName("InsRemainQuota")
+    @Expose
+    private Long InsRemainQuota;
+
+    /**
+    * 用户购买的版本
+    */
+    @SerializedName("Version")
+    @Expose
+    private String Version;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -215,6 +236,54 @@ public class GetUserQuotaInfoResponse extends AbstractModel {
     }
 
     /**
+     * Get 用户购买的实例配额。 
+     * @return InsTotalQuota 用户购买的实例配额。
+     */
+    public Long getInsTotalQuota() {
+        return this.InsTotalQuota;
+    }
+
+    /**
+     * Set 用户购买的实例配额。
+     * @param InsTotalQuota 用户购买的实例配额。
+     */
+    public void setInsTotalQuota(Long InsTotalQuota) {
+        this.InsTotalQuota = InsTotalQuota;
+    }
+
+    /**
+     * Get 用户可用的实例配额。 
+     * @return InsRemainQuota 用户可用的实例配额。
+     */
+    public Long getInsRemainQuota() {
+        return this.InsRemainQuota;
+    }
+
+    /**
+     * Set 用户可用的实例配额。
+     * @param InsRemainQuota 用户可用的实例配额。
+     */
+    public void setInsRemainQuota(Long InsRemainQuota) {
+        this.InsRemainQuota = InsRemainQuota;
+    }
+
+    /**
+     * Get 用户购买的版本 
+     * @return Version 用户购买的版本
+     */
+    public String getVersion() {
+        return this.Version;
+    }
+
+    /**
+     * Set 用户购买的版本
+     * @param Version 用户购买的版本
+     */
+    public void setVersion(String Version) {
+        this.Version = Version;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -262,6 +331,15 @@ public class GetUserQuotaInfoResponse extends AbstractModel {
         if (source.COSUnbindNum != null) {
             this.COSUnbindNum = new Long(source.COSUnbindNum);
         }
+        if (source.InsTotalQuota != null) {
+            this.InsTotalQuota = new Long(source.InsTotalQuota);
+        }
+        if (source.InsRemainQuota != null) {
+            this.InsRemainQuota = new Long(source.InsRemainQuota);
+        }
+        if (source.Version != null) {
+            this.Version = new String(source.Version);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -280,6 +358,9 @@ public class GetUserQuotaInfoResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "CosQuotaUnit", this.CosQuotaUnit);
         this.setParamSimple(map, prefix + "DBUnbindNum", this.DBUnbindNum);
         this.setParamSimple(map, prefix + "COSUnbindNum", this.COSUnbindNum);
+        this.setParamSimple(map, prefix + "InsTotalQuota", this.InsTotalQuota);
+        this.setParamSimple(map, prefix + "InsRemainQuota", this.InsRemainQuota);
+        this.setParamSimple(map, prefix + "Version", this.Version);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

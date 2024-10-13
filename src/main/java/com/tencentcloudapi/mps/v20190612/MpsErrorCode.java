@@ -24,6 +24,9 @@ public enum MpsErrorCode {
     // 操作失败：设置源通知错误。
      FAILEDOPERATION_SETSOURCENOTIFY("FailedOperation.SetSourceNotify"),
      
+    // 查询的任务不存在
+     FAILEDOPERATION_TASKNOTFOUND("FailedOperation.TaskNotFound"),
+     
     // 内部错误。
      INTERNALERROR("InternalError"),
      

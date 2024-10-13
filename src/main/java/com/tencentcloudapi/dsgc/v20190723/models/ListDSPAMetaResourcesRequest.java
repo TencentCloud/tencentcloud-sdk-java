@@ -42,6 +42,8 @@ BuildType - cloud（云原生资源）、build（用户自建资源），不支�
 MetaType - cdb（云数据Mysql）、dcdb（TDSQL MySQL版）、mariadb（云数据库 MariaDB）、postgres（云数据库 PostgreSQL）、cynosdbmysql（TDSQL-C MySQL版）、cos（对象存储）、mysql_like_proto（自建型Mysql协议类关系型数据库）、postgre_like_proto（自建型Postgre协议类关系型数据库）。
 
 ResourceId - 资源ID，支持模糊搜索。
+
+CvmID - 自建资源对应CvmId，如：ins-xxxxxxxx。该字段用于casb调用dsgc接口时，根据cvmId和vport确定具体的自建实例
     */
     @SerializedName("Filters")
     @Expose
@@ -95,7 +97,9 @@ BuildType - cloud（云原生资源）、build（用户自建资源），不支�
 
 MetaType - cdb（云数据Mysql）、dcdb（TDSQL MySQL版）、mariadb（云数据库 MariaDB）、postgres（云数据库 PostgreSQL）、cynosdbmysql（TDSQL-C MySQL版）、cos（对象存储）、mysql_like_proto（自建型Mysql协议类关系型数据库）、postgre_like_proto（自建型Postgre协议类关系型数据库）。
 
-ResourceId - 资源ID，支持模糊搜索。 
+ResourceId - 资源ID，支持模糊搜索。
+
+CvmID - 自建资源对应CvmId，如：ins-xxxxxxxx。该字段用于casb调用dsgc接口时，根据cvmId和vport确定具体的自建实例 
      * @return Filters 过滤项。
 可过滤值包括：
 ResoureRegion - 资源所处地域，需要填写完整地域名称，不支持模糊匹配。
@@ -107,6 +111,8 @@ BuildType - cloud（云原生资源）、build（用户自建资源），不支�
 MetaType - cdb（云数据Mysql）、dcdb（TDSQL MySQL版）、mariadb（云数据库 MariaDB）、postgres（云数据库 PostgreSQL）、cynosdbmysql（TDSQL-C MySQL版）、cos（对象存储）、mysql_like_proto（自建型Mysql协议类关系型数据库）、postgre_like_proto（自建型Postgre协议类关系型数据库）。
 
 ResourceId - 资源ID，支持模糊搜索。
+
+CvmID - 自建资源对应CvmId，如：ins-xxxxxxxx。该字段用于casb调用dsgc接口时，根据cvmId和vport确定具体的自建实例
      */
     public DspaDataSourceMngFilter [] getFilters() {
         return this.Filters;
@@ -124,6 +130,8 @@ BuildType - cloud（云原生资源）、build（用户自建资源），不支�
 MetaType - cdb（云数据Mysql）、dcdb（TDSQL MySQL版）、mariadb（云数据库 MariaDB）、postgres（云数据库 PostgreSQL）、cynosdbmysql（TDSQL-C MySQL版）、cos（对象存储）、mysql_like_proto（自建型Mysql协议类关系型数据库）、postgre_like_proto（自建型Postgre协议类关系型数据库）。
 
 ResourceId - 资源ID，支持模糊搜索。
+
+CvmID - 自建资源对应CvmId，如：ins-xxxxxxxx。该字段用于casb调用dsgc接口时，根据cvmId和vport确定具体的自建实例
      * @param Filters 过滤项。
 可过滤值包括：
 ResoureRegion - 资源所处地域，需要填写完整地域名称，不支持模糊匹配。
@@ -135,6 +143,8 @@ BuildType - cloud（云原生资源）、build（用户自建资源），不支�
 MetaType - cdb（云数据Mysql）、dcdb（TDSQL MySQL版）、mariadb（云数据库 MariaDB）、postgres（云数据库 PostgreSQL）、cynosdbmysql（TDSQL-C MySQL版）、cos（对象存储）、mysql_like_proto（自建型Mysql协议类关系型数据库）、postgre_like_proto（自建型Postgre协议类关系型数据库）。
 
 ResourceId - 资源ID，支持模糊搜索。
+
+CvmID - 自建资源对应CvmId，如：ins-xxxxxxxx。该字段用于casb调用dsgc接口时，根据cvmId和vport确定具体的自建实例
      */
     public void setFilters(DspaDataSourceMngFilter [] Filters) {
         this.Filters = Filters;

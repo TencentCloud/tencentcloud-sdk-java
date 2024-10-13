@@ -73,6 +73,13 @@ public class DSPACosMetaDataInfo extends AbstractModel {
     private Float Storage;
 
     /**
+    * 治理授权状态，0:关闭 1：开启
+    */
+    @SerializedName("GovernAuthStatus")
+    @Expose
+    private Long GovernAuthStatus;
+
+    /**
      * Get COS桶名 
      * @return Bucket COS桶名
      */
@@ -184,6 +191,22 @@ public class DSPACosMetaDataInfo extends AbstractModel {
         this.Storage = Storage;
     }
 
+    /**
+     * Get 治理授权状态，0:关闭 1：开启 
+     * @return GovernAuthStatus 治理授权状态，0:关闭 1：开启
+     */
+    public Long getGovernAuthStatus() {
+        return this.GovernAuthStatus;
+    }
+
+    /**
+     * Set 治理授权状态，0:关闭 1：开启
+     * @param GovernAuthStatus 治理授权状态，0:关闭 1：开启
+     */
+    public void setGovernAuthStatus(Long GovernAuthStatus) {
+        this.GovernAuthStatus = GovernAuthStatus;
+    }
+
     public DSPACosMetaDataInfo() {
     }
 
@@ -213,6 +236,9 @@ public class DSPACosMetaDataInfo extends AbstractModel {
         if (source.Storage != null) {
             this.Storage = new Float(source.Storage);
         }
+        if (source.GovernAuthStatus != null) {
+            this.GovernAuthStatus = new Long(source.GovernAuthStatus);
+        }
     }
 
 
@@ -227,6 +253,7 @@ public class DSPACosMetaDataInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "ResourceRegion", this.ResourceRegion);
         this.setParamSimple(map, prefix + "BindStatus", this.BindStatus);
         this.setParamSimple(map, prefix + "Storage", this.Storage);
+        this.setParamSimple(map, prefix + "GovernAuthStatus", this.GovernAuthStatus);
 
     }
 }

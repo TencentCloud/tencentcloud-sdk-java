@@ -45,6 +45,14 @@ public class ManualBackupData extends AbstractModel {
     private String SnapshotTime;
 
     /**
+    * 跨地域备份项详细信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CrossRegionBackupInfos")
+    @Expose
+    private CrossRegionBackupItem [] CrossRegionBackupInfos;
+
+    /**
      * Get 备份类型。snapshot-快照备份 
      * @return BackupType 备份类型。snapshot-快照备份
      */
@@ -92,6 +100,26 @@ public class ManualBackupData extends AbstractModel {
         this.SnapshotTime = SnapshotTime;
     }
 
+    /**
+     * Get 跨地域备份项详细信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CrossRegionBackupInfos 跨地域备份项详细信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public CrossRegionBackupItem [] getCrossRegionBackupInfos() {
+        return this.CrossRegionBackupInfos;
+    }
+
+    /**
+     * Set 跨地域备份项详细信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CrossRegionBackupInfos 跨地域备份项详细信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCrossRegionBackupInfos(CrossRegionBackupItem [] CrossRegionBackupInfos) {
+        this.CrossRegionBackupInfos = CrossRegionBackupInfos;
+    }
+
     public ManualBackupData() {
     }
 
@@ -109,6 +137,12 @@ public class ManualBackupData extends AbstractModel {
         if (source.SnapshotTime != null) {
             this.SnapshotTime = new String(source.SnapshotTime);
         }
+        if (source.CrossRegionBackupInfos != null) {
+            this.CrossRegionBackupInfos = new CrossRegionBackupItem[source.CrossRegionBackupInfos.length];
+            for (int i = 0; i < source.CrossRegionBackupInfos.length; i++) {
+                this.CrossRegionBackupInfos[i] = new CrossRegionBackupItem(source.CrossRegionBackupInfos[i]);
+            }
+        }
     }
 
 
@@ -119,6 +153,7 @@ public class ManualBackupData extends AbstractModel {
         this.setParamSimple(map, prefix + "BackupType", this.BackupType);
         this.setParamSimple(map, prefix + "BackupMethod", this.BackupMethod);
         this.setParamSimple(map, prefix + "SnapshotTime", this.SnapshotTime);
+        this.setParamArrayObj(map, prefix + "CrossRegionBackupInfos.", this.CrossRegionBackupInfos);
 
     }
 }

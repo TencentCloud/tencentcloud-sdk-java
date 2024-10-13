@@ -711,7 +711,9 @@ public class BizTaskInfo extends AbstractModel {
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ModifyParamsData 修改参数任务信息
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public ModifyParamsData [] getModifyParamsData() {
         return this.ModifyParamsData;
     }
@@ -721,7 +723,9 @@ public class BizTaskInfo extends AbstractModel {
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ModifyParamsData 修改参数任务信息
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public void setModifyParamsData(ModifyParamsData [] ModifyParamsData) {
         this.ModifyParamsData = ModifyParamsData;
     }

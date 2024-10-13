@@ -55,20 +55,6 @@ postgre_like_proto -- Postgre协议类关系型数据库。
     private String ResourceId;
 
     /**
-    * 可用于访问自建云资源的IP。
-    */
-    @SerializedName("ResourceVip")
-    @Expose
-    private String ResourceVip;
-
-    /**
-    * 可用于访问自建云资源的端口。
-    */
-    @SerializedName("ResourceVPort")
-    @Expose
-    private Long ResourceVPort;
-
-    /**
     * 自建云资源的VPC ID。
     */
     @SerializedName("ResourceUniqueVpcId")
@@ -92,14 +78,30 @@ clb - 通过LB的方式进行访问。
     private String ResourceAccessType;
 
     /**
-    * 账户名。
+    * 可用于访问自建云资源的IP。
+emr的连接不需要使用该字段
+    */
+    @SerializedName("ResourceVip")
+    @Expose
+    private String ResourceVip;
+
+    /**
+    * 可用于访问自建云资源的端口。
+emr的连接不需要使用该字段
+    */
+    @SerializedName("ResourceVPort")
+    @Expose
+    private Long ResourceVPort;
+
+    /**
+    * 账户名。如果emr_hive的连接方式为“LDAP”，则复用该字段
     */
     @SerializedName("UserName")
     @Expose
     private String UserName;
 
     /**
-    * 账户密码。
+    * 账户密码。如果emr_hive的连接方式为“LDAP”，则复用该字段
     */
     @SerializedName("Password")
     @Expose
@@ -128,6 +130,13 @@ serviceName
     @SerializedName("InstanceValue")
     @Expose
     private String InstanceValue;
+
+    /**
+    * 授权范围（all:授权整个数据源 manual:手动指定数据库）
+    */
+    @SerializedName("AuthRange")
+    @Expose
+    private String AuthRange;
 
     /**
      * Get Dspa实例ID。 
@@ -206,38 +215,6 @@ postgre_like_proto -- Postgre协议类关系型数据库。
     }
 
     /**
-     * Get 可用于访问自建云资源的IP。 
-     * @return ResourceVip 可用于访问自建云资源的IP。
-     */
-    public String getResourceVip() {
-        return this.ResourceVip;
-    }
-
-    /**
-     * Set 可用于访问自建云资源的IP。
-     * @param ResourceVip 可用于访问自建云资源的IP。
-     */
-    public void setResourceVip(String ResourceVip) {
-        this.ResourceVip = ResourceVip;
-    }
-
-    /**
-     * Get 可用于访问自建云资源的端口。 
-     * @return ResourceVPort 可用于访问自建云资源的端口。
-     */
-    public Long getResourceVPort() {
-        return this.ResourceVPort;
-    }
-
-    /**
-     * Set 可用于访问自建云资源的端口。
-     * @param ResourceVPort 可用于访问自建云资源的端口。
-     */
-    public void setResourceVPort(Long ResourceVPort) {
-        this.ResourceVPort = ResourceVPort;
-    }
-
-    /**
      * Get 自建云资源的VPC ID。 
      * @return ResourceUniqueVpcId 自建云资源的VPC ID。
      */
@@ -294,32 +271,72 @@ clb - 通过LB的方式进行访问。
     }
 
     /**
-     * Get 账户名。 
-     * @return UserName 账户名。
+     * Get 可用于访问自建云资源的IP。
+emr的连接不需要使用该字段 
+     * @return ResourceVip 可用于访问自建云资源的IP。
+emr的连接不需要使用该字段
+     */
+    public String getResourceVip() {
+        return this.ResourceVip;
+    }
+
+    /**
+     * Set 可用于访问自建云资源的IP。
+emr的连接不需要使用该字段
+     * @param ResourceVip 可用于访问自建云资源的IP。
+emr的连接不需要使用该字段
+     */
+    public void setResourceVip(String ResourceVip) {
+        this.ResourceVip = ResourceVip;
+    }
+
+    /**
+     * Get 可用于访问自建云资源的端口。
+emr的连接不需要使用该字段 
+     * @return ResourceVPort 可用于访问自建云资源的端口。
+emr的连接不需要使用该字段
+     */
+    public Long getResourceVPort() {
+        return this.ResourceVPort;
+    }
+
+    /**
+     * Set 可用于访问自建云资源的端口。
+emr的连接不需要使用该字段
+     * @param ResourceVPort 可用于访问自建云资源的端口。
+emr的连接不需要使用该字段
+     */
+    public void setResourceVPort(Long ResourceVPort) {
+        this.ResourceVPort = ResourceVPort;
+    }
+
+    /**
+     * Get 账户名。如果emr_hive的连接方式为“LDAP”，则复用该字段 
+     * @return UserName 账户名。如果emr_hive的连接方式为“LDAP”，则复用该字段
      */
     public String getUserName() {
         return this.UserName;
     }
 
     /**
-     * Set 账户名。
-     * @param UserName 账户名。
+     * Set 账户名。如果emr_hive的连接方式为“LDAP”，则复用该字段
+     * @param UserName 账户名。如果emr_hive的连接方式为“LDAP”，则复用该字段
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;
     }
 
     /**
-     * Get 账户密码。 
-     * @return Password 账户密码。
+     * Get 账户密码。如果emr_hive的连接方式为“LDAP”，则复用该字段 
+     * @return Password 账户密码。如果emr_hive的连接方式为“LDAP”，则复用该字段
      */
     public String getPassword() {
         return this.Password;
     }
 
     /**
-     * Set 账户密码。
-     * @param Password 账户密码。
+     * Set 账户密码。如果emr_hive的连接方式为“LDAP”，则复用该字段
+     * @param Password 账户密码。如果emr_hive的连接方式为“LDAP”，则复用该字段
      */
     public void setPassword(String Password) {
         this.Password = Password;
@@ -385,6 +402,22 @@ serviceName
         this.InstanceValue = InstanceValue;
     }
 
+    /**
+     * Get 授权范围（all:授权整个数据源 manual:手动指定数据库） 
+     * @return AuthRange 授权范围（all:授权整个数据源 manual:手动指定数据库）
+     */
+    public String getAuthRange() {
+        return this.AuthRange;
+    }
+
+    /**
+     * Set 授权范围（all:授权整个数据源 manual:手动指定数据库）
+     * @param AuthRange 授权范围（all:授权整个数据源 manual:手动指定数据库）
+     */
+    public void setAuthRange(String AuthRange) {
+        this.AuthRange = AuthRange;
+    }
+
     public CreateDSPASelfBuildMetaResourceRequest() {
     }
 
@@ -405,12 +438,6 @@ serviceName
         if (source.ResourceId != null) {
             this.ResourceId = new String(source.ResourceId);
         }
-        if (source.ResourceVip != null) {
-            this.ResourceVip = new String(source.ResourceVip);
-        }
-        if (source.ResourceVPort != null) {
-            this.ResourceVPort = new Long(source.ResourceVPort);
-        }
         if (source.ResourceUniqueVpcId != null) {
             this.ResourceUniqueVpcId = new String(source.ResourceUniqueVpcId);
         }
@@ -419,6 +446,12 @@ serviceName
         }
         if (source.ResourceAccessType != null) {
             this.ResourceAccessType = new String(source.ResourceAccessType);
+        }
+        if (source.ResourceVip != null) {
+            this.ResourceVip = new String(source.ResourceVip);
+        }
+        if (source.ResourceVPort != null) {
+            this.ResourceVPort = new Long(source.ResourceVPort);
         }
         if (source.UserName != null) {
             this.UserName = new String(source.UserName);
@@ -435,6 +468,9 @@ serviceName
         if (source.InstanceValue != null) {
             this.InstanceValue = new String(source.InstanceValue);
         }
+        if (source.AuthRange != null) {
+            this.AuthRange = new String(source.AuthRange);
+        }
     }
 
 
@@ -446,16 +482,17 @@ serviceName
         this.setParamSimple(map, prefix + "MetaType", this.MetaType);
         this.setParamSimple(map, prefix + "ResourceRegion", this.ResourceRegion);
         this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
-        this.setParamSimple(map, prefix + "ResourceVip", this.ResourceVip);
-        this.setParamSimple(map, prefix + "ResourceVPort", this.ResourceVPort);
         this.setParamSimple(map, prefix + "ResourceUniqueVpcId", this.ResourceUniqueVpcId);
         this.setParamSimple(map, prefix + "ResourceUniqueSubnetId", this.ResourceUniqueSubnetId);
         this.setParamSimple(map, prefix + "ResourceAccessType", this.ResourceAccessType);
+        this.setParamSimple(map, prefix + "ResourceVip", this.ResourceVip);
+        this.setParamSimple(map, prefix + "ResourceVPort", this.ResourceVPort);
         this.setParamSimple(map, prefix + "UserName", this.UserName);
         this.setParamSimple(map, prefix + "Password", this.Password);
         this.setParamSimple(map, prefix + "ResourceName", this.ResourceName);
         this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
         this.setParamSimple(map, prefix + "InstanceValue", this.InstanceValue);
+        this.setParamSimple(map, prefix + "AuthRange", this.AuthRange);
 
     }
 }

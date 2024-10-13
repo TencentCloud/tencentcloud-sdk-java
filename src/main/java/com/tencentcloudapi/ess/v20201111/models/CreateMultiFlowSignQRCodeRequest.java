@@ -122,6 +122,13 @@ public class CreateMultiFlowSignQRCodeRequest extends AbstractModel {
     private ApproverComponentLimitType [] ApproverComponentLimitTypes;
 
     /**
+    * 禁止个人用户重复签署，默认不禁止，即同一用户可多次扫码签署多份合同。若要求同一用户仅能扫码签署一份合同，请传入true。
+    */
+    @SerializedName("ForbidPersonalMultipleSign")
+    @Expose
+    private Boolean ForbidPersonalMultipleSign;
+
+    /**
      * Get 执行本接口操作的员工信息。
 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。` 
      * @return Operator 执行本接口操作的员工信息。
@@ -377,6 +384,22 @@ public class CreateMultiFlowSignQRCodeRequest extends AbstractModel {
         this.ApproverComponentLimitTypes = ApproverComponentLimitTypes;
     }
 
+    /**
+     * Get 禁止个人用户重复签署，默认不禁止，即同一用户可多次扫码签署多份合同。若要求同一用户仅能扫码签署一份合同，请传入true。 
+     * @return ForbidPersonalMultipleSign 禁止个人用户重复签署，默认不禁止，即同一用户可多次扫码签署多份合同。若要求同一用户仅能扫码签署一份合同，请传入true。
+     */
+    public Boolean getForbidPersonalMultipleSign() {
+        return this.ForbidPersonalMultipleSign;
+    }
+
+    /**
+     * Set 禁止个人用户重复签署，默认不禁止，即同一用户可多次扫码签署多份合同。若要求同一用户仅能扫码签署一份合同，请传入true。
+     * @param ForbidPersonalMultipleSign 禁止个人用户重复签署，默认不禁止，即同一用户可多次扫码签署多份合同。若要求同一用户仅能扫码签署一份合同，请传入true。
+     */
+    public void setForbidPersonalMultipleSign(Boolean ForbidPersonalMultipleSign) {
+        this.ForbidPersonalMultipleSign = ForbidPersonalMultipleSign;
+    }
+
     public CreateMultiFlowSignQRCodeRequest() {
     }
 
@@ -427,6 +450,9 @@ public class CreateMultiFlowSignQRCodeRequest extends AbstractModel {
                 this.ApproverComponentLimitTypes[i] = new ApproverComponentLimitType(source.ApproverComponentLimitTypes[i]);
             }
         }
+        if (source.ForbidPersonalMultipleSign != null) {
+            this.ForbidPersonalMultipleSign = new Boolean(source.ForbidPersonalMultipleSign);
+        }
     }
 
 
@@ -446,6 +472,7 @@ public class CreateMultiFlowSignQRCodeRequest extends AbstractModel {
         this.setParamObj(map, prefix + "Agent.", this.Agent);
         this.setParamObj(map, prefix + "ApproverRestrictions.", this.ApproverRestrictions);
         this.setParamArrayObj(map, prefix + "ApproverComponentLimitTypes.", this.ApproverComponentLimitTypes);
+        this.setParamSimple(map, prefix + "ForbidPersonalMultipleSign", this.ForbidPersonalMultipleSign);
 
     }
 }

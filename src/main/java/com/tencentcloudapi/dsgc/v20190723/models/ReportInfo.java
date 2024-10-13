@@ -134,6 +134,14 @@ public class ReportInfo extends AbstractModel {
     private Long ProgressPercent;
 
     /**
+    * 报告模版名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ReportTemplateName")
+    @Expose
+    private String ReportTemplateName;
+
+    /**
      * Get 任务id 
      * @return Id 任务id
      */
@@ -405,6 +413,26 @@ public class ReportInfo extends AbstractModel {
         this.ProgressPercent = ProgressPercent;
     }
 
+    /**
+     * Get 报告模版名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ReportTemplateName 报告模版名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getReportTemplateName() {
+        return this.ReportTemplateName;
+    }
+
+    /**
+     * Set 报告模版名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ReportTemplateName 报告模版名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setReportTemplateName(String ReportTemplateName) {
+        this.ReportTemplateName = ReportTemplateName;
+    }
+
     public ReportInfo() {
     }
 
@@ -455,6 +483,9 @@ public class ReportInfo extends AbstractModel {
         if (source.ProgressPercent != null) {
             this.ProgressPercent = new Long(source.ProgressPercent);
         }
+        if (source.ReportTemplateName != null) {
+            this.ReportTemplateName = new String(source.ReportTemplateName);
+        }
     }
 
 
@@ -476,6 +507,7 @@ public class ReportInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Enable", this.Enable);
         this.setParamSimple(map, prefix + "ComplianceName", this.ComplianceName);
         this.setParamSimple(map, prefix + "ProgressPercent", this.ProgressPercent);
+        this.setParamSimple(map, prefix + "ReportTemplateName", this.ReportTemplateName);
 
     }
 }

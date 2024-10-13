@@ -768,6 +768,20 @@ public class EssbasicClient extends AbstractClient{
     }
 
     /**
+     *通过此接口（ChannelDescribeAccountBillDetail）查询该第三方平台子客账号计费详情。
+<ul>
+<li>对于渠道客户企业的查询，通过指定渠道企业的唯一标识(Agent.ProxyOrganizationId)来查询子客账号消耗详情</li>
+</ul>
+     * @param req ChannelDescribeAccountBillDetailRequest
+     * @return ChannelDescribeAccountBillDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public ChannelDescribeAccountBillDetailResponse ChannelDescribeAccountBillDetail(ChannelDescribeAccountBillDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ChannelDescribeAccountBillDetail", ChannelDescribeAccountBillDetailResponse.class);
+    }
+
+    /**
      *通过此接口（ChannelDescribeBillUsageDetail）查询该第三方平台子客企业的套餐消耗详情。可以支持单个子客和整个应用下所有子客的查询。
 <ul>
 <li>对于单个子客企业的查询，通过指定子客的唯一标识(Agent.ProxyOrganizationOpenId)来查询该子客消耗详情</li>
@@ -1636,26 +1650,20 @@ Agent参数中的OpenId 必须为审批者的openId，且链接必须由审批�
     }
 
     /**
-     *管理企业扩展服务 ，企业经办人需要是企业超管或者法人。
+     *管理企业扩展服务
 
-跳转小程序的几种方式：主要是设置不同的EndPoint
-1. 通过链接Url直接跳转到小程序，不需要返回
-设置EndPoint为WEIXINAPP，得到链接打开即可。
+- **直接开通的情形：** 若在操作过程中接口没有返回跳转链接，这表明无需进行任何跳转操作。此时，相应的企业拓展服务将会直接被开通或关闭。
 
-2. 客户App直接跳转到小程序-->腾讯电子签小程序操作完成-->返回App
-跳转到小程序的实现，参考官方文档<a href="https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/launchApp.html">打开 App</a>
-设置EndPoint为APP，得到path。
+- **需要法人或者超管签署开通协议的情形：** 当需要开通以下企业拓展服务时， 系统将返回一个操作链接。贵方需要主动联系并通知企业的超级管理员（超管）或法人。由他们点击该链接，完成服务的开通操作。
+  - **AUTO_SIGN（企业自动签）**
+  - **DOWNLOAD_FLOW（授权渠道下载合同）**
+  - **OVERSEA_SIGN（企业与港澳台居民签署合同）**
 
-3. 客户小程序直接跳到电子签小程序-->腾讯电子签小程序操作完成--->回到客户小程序
-跳转到小程序的实现，参考官方文档（分为<a href="https://developers.weixin.qq.com/miniprogram/dev/api/navigate/wx.navigateToMiniProgram.html">全屏</a>、<a href="https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/openEmbeddedMiniProgram.html">半屏</a>两种方式），如何配置也可以请参考: <a href="https://qian.tencent.com/developers/company/openwxminiprogram">跳转电子签小程序配置</a>
-设置EndPoint为APP，得到path。
+注意： `在调用此接口以管理企业扩展服务时，操作者（ Agent.ProxyOperator.OpenId）必须是企业的超级管理员（超管）或法人`
 
-4.其中小程序的原始Id如下，或者查看小程序信息自助获取。
 
-| 小程序 | AppID | 原始ID |
-| ------------ | ------------ | ------------ |
-| 腾讯电子签（正式版） | wxa023b292fd19d41d | gh_da88f6188665 |
-| 腾讯电子签Demo | wx371151823f6f3edf | gh_39a5d3de69fa |
+对应的扩展服务能力可以在控制台的【扩展服务】中找到
+![image](https://qcloudimg.tencent-cloud.cn/raw/99eebd37883ec55ed1f1df3a57aee60a.png)
      * @param req ModifyExtendedServiceRequest
      * @return ModifyExtendedServiceResponse
      * @throws TencentCloudSDKException
