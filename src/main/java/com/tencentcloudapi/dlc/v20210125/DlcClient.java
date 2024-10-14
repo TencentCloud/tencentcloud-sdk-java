@@ -1062,6 +1062,17 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *该接口用于洞察分析列表
+     * @param req DescribeTasksAnalysisRequest
+     * @return DescribeTasksAnalysisResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTasksAnalysisResponse DescribeTasksAnalysis(DescribeTasksAnalysisRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTasksAnalysis", DescribeTasksAnalysisResponse.class);
+    }
+
+    /**
      *该接口（DescribeTasksCostInfo）用于查询任务消耗
      * @param req DescribeTasksCostInfoRequest
      * @return DescribeTasksCostInfoResponse

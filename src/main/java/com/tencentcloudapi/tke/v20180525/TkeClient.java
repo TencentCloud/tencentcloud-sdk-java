@@ -1315,19 +1315,6 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
-     *tdcc接口已迁移至tdcc产品下，tke下的接口下线
-
-获取导入第三方集群YAML定义
-     * @param req DescribeExternalClusterSpecRequest
-     * @return DescribeExternalClusterSpecResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeExternalClusterSpecResponse DescribeExternalClusterSpec(DescribeExternalClusterSpecRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeExternalClusterSpec", DescribeExternalClusterSpecResponse.class);
-    }
-
-    /**
      *查看开启第三方节点池配置信息
      * @param req DescribeExternalNodeSupportConfigRequest
      * @return DescribeExternalNodeSupportConfigResponse

@@ -24,7 +24,12 @@ import java.util.HashMap;
 public class DynamicFlowApproverResult extends AbstractModel {
 
     /**
-    * 签署方角色编号
+    * 签署方角色编号，签署方角色编号是用于区分同一个流程中不同签署方的唯一标识。不同的流程会出现同样的签署方角色编号。
+
+填写控件和签署控件都与特定的角色编号关联。
+
+在进行新增签署方操作时，建议记录下该签署方的角色编号。后续可以拉取流程信息，用来判断该签署方的当前状态。
+
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RecipientId")
@@ -32,7 +37,9 @@ public class DynamicFlowApproverResult extends AbstractModel {
     private String RecipientId;
 
     /**
-    * 签署方唯一编号
+    * 签署方唯一编号，一个全局唯一的标识符，不同的流程不会出现冲突。
+
+可以使用签署方的唯一编号来生成签署链接（也可以通过RecipientId来生成签署链接）。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SignId")
@@ -40,7 +47,18 @@ public class DynamicFlowApproverResult extends AbstractModel {
     private String SignId;
 
     /**
-    * 签署方当前状态
+    * 签署方当前状态，会出现下面的状态
+
+2：待签署
+3：已签署
+4：已拒绝
+5：已过期
+6：已撤销
+8：待填写
+9：因为各种原因（签署人改名等）而终止
+10：填写完成
+15：已解除
+19：转他人处理
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApproverStatus")
@@ -48,9 +66,19 @@ public class DynamicFlowApproverResult extends AbstractModel {
     private Long ApproverStatus;
 
     /**
-     * Get 签署方角色编号
+     * Get 签署方角色编号，签署方角色编号是用于区分同一个流程中不同签署方的唯一标识。不同的流程会出现同样的签署方角色编号。
+
+填写控件和签署控件都与特定的角色编号关联。
+
+在进行新增签署方操作时，建议记录下该签署方的角色编号。后续可以拉取流程信息，用来判断该签署方的当前状态。
+
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RecipientId 签署方角色编号
+     * @return RecipientId 签署方角色编号，签署方角色编号是用于区分同一个流程中不同签署方的唯一标识。不同的流程会出现同样的签署方角色编号。
+
+填写控件和签署控件都与特定的角色编号关联。
+
+在进行新增签署方操作时，建议记录下该签署方的角色编号。后续可以拉取流程信息，用来判断该签署方的当前状态。
+
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRecipientId() {
@@ -58,9 +86,19 @@ public class DynamicFlowApproverResult extends AbstractModel {
     }
 
     /**
-     * Set 签署方角色编号
+     * Set 签署方角色编号，签署方角色编号是用于区分同一个流程中不同签署方的唯一标识。不同的流程会出现同样的签署方角色编号。
+
+填写控件和签署控件都与特定的角色编号关联。
+
+在进行新增签署方操作时，建议记录下该签署方的角色编号。后续可以拉取流程信息，用来判断该签署方的当前状态。
+
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RecipientId 签署方角色编号
+     * @param RecipientId 签署方角色编号，签署方角色编号是用于区分同一个流程中不同签署方的唯一标识。不同的流程会出现同样的签署方角色编号。
+
+填写控件和签署控件都与特定的角色编号关联。
+
+在进行新增签署方操作时，建议记录下该签署方的角色编号。后续可以拉取流程信息，用来判断该签署方的当前状态。
+
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRecipientId(String RecipientId) {
@@ -68,9 +106,13 @@ public class DynamicFlowApproverResult extends AbstractModel {
     }
 
     /**
-     * Get 签署方唯一编号
+     * Get 签署方唯一编号，一个全局唯一的标识符，不同的流程不会出现冲突。
+
+可以使用签署方的唯一编号来生成签署链接（也可以通过RecipientId来生成签署链接）。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SignId 签署方唯一编号
+     * @return SignId 签署方唯一编号，一个全局唯一的标识符，不同的流程不会出现冲突。
+
+可以使用签署方的唯一编号来生成签署链接（也可以通过RecipientId来生成签署链接）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSignId() {
@@ -78,9 +120,13 @@ public class DynamicFlowApproverResult extends AbstractModel {
     }
 
     /**
-     * Set 签署方唯一编号
+     * Set 签署方唯一编号，一个全局唯一的标识符，不同的流程不会出现冲突。
+
+可以使用签署方的唯一编号来生成签署链接（也可以通过RecipientId来生成签署链接）。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SignId 签署方唯一编号
+     * @param SignId 签署方唯一编号，一个全局唯一的标识符，不同的流程不会出现冲突。
+
+可以使用签署方的唯一编号来生成签署链接（也可以通过RecipientId来生成签署链接）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSignId(String SignId) {
@@ -88,9 +134,31 @@ public class DynamicFlowApproverResult extends AbstractModel {
     }
 
     /**
-     * Get 签署方当前状态
+     * Get 签署方当前状态，会出现下面的状态
+
+2：待签署
+3：已签署
+4：已拒绝
+5：已过期
+6：已撤销
+8：待填写
+9：因为各种原因（签署人改名等）而终止
+10：填写完成
+15：已解除
+19：转他人处理
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ApproverStatus 签署方当前状态
+     * @return ApproverStatus 签署方当前状态，会出现下面的状态
+
+2：待签署
+3：已签署
+4：已拒绝
+5：已过期
+6：已撤销
+8：待填写
+9：因为各种原因（签署人改名等）而终止
+10：填写完成
+15：已解除
+19：转他人处理
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getApproverStatus() {
@@ -98,9 +166,31 @@ public class DynamicFlowApproverResult extends AbstractModel {
     }
 
     /**
-     * Set 签署方当前状态
+     * Set 签署方当前状态，会出现下面的状态
+
+2：待签署
+3：已签署
+4：已拒绝
+5：已过期
+6：已撤销
+8：待填写
+9：因为各种原因（签署人改名等）而终止
+10：填写完成
+15：已解除
+19：转他人处理
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ApproverStatus 签署方当前状态
+     * @param ApproverStatus 签署方当前状态，会出现下面的状态
+
+2：待签署
+3：已签署
+4：已拒绝
+5：已过期
+6：已撤销
+8：待填写
+9：因为各种原因（签署人改名等）而终止
+10：填写完成
+15：已解除
+19：转他人处理
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApproverStatus(Long ApproverStatus) {

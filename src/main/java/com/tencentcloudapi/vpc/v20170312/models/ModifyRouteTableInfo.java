@@ -31,14 +31,14 @@ public class ModifyRouteTableInfo extends AbstractModel {
     private String RouteTableId;
 
     /**
-    * 云联网路由表名称。
+    * 云联网路由表名称。Name和Description 两者必传一个。
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 云联网路由表描述。
+    * 云联网路由表描述。Name和Description 两者必传一个。
     */
     @SerializedName("Description")
     @Expose
@@ -61,32 +61,32 @@ public class ModifyRouteTableInfo extends AbstractModel {
     }
 
     /**
-     * Get 云联网路由表名称。 
-     * @return Name 云联网路由表名称。
+     * Get 云联网路由表名称。Name和Description 两者必传一个。 
+     * @return Name 云联网路由表名称。Name和Description 两者必传一个。
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 云联网路由表名称。
-     * @param Name 云联网路由表名称。
+     * Set 云联网路由表名称。Name和Description 两者必传一个。
+     * @param Name 云联网路由表名称。Name和Description 两者必传一个。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 云联网路由表描述。 
-     * @return Description 云联网路由表描述。
+     * Get 云联网路由表描述。Name和Description 两者必传一个。 
+     * @return Description 云联网路由表描述。Name和Description 两者必传一个。
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 云联网路由表描述。
-     * @param Description 云联网路由表描述。
+     * Set 云联网路由表描述。Name和Description 两者必传一个。
+     * @param Description 云联网路由表描述。Name和Description 两者必传一个。
      */
     public void setDescription(String Description) {
         this.Description = Description;

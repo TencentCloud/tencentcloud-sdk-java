@@ -59,7 +59,7 @@ public class DescribeInsightListRequest extends AbstractModel {
     private Long Page;
 
     /**
-    * 查询类型,支持HIVE,SPARK,MAPREDUCE,TRINO等类型,默认查询全部
+    * 查询类型,支持HIVE,SPARK,DLC_SPARK,SPARK_SQL,SCHEDULE,MAPREDUCE,TRINO等类型,默认查询全部
     */
     @SerializedName("Type")
     @Expose
@@ -146,16 +146,16 @@ public class DescribeInsightListRequest extends AbstractModel {
     }
 
     /**
-     * Get 查询类型,支持HIVE,SPARK,MAPREDUCE,TRINO等类型,默认查询全部 
-     * @return Type 查询类型,支持HIVE,SPARK,MAPREDUCE,TRINO等类型,默认查询全部
+     * Get 查询类型,支持HIVE,SPARK,DLC_SPARK,SPARK_SQL,SCHEDULE,MAPREDUCE,TRINO等类型,默认查询全部 
+     * @return Type 查询类型,支持HIVE,SPARK,DLC_SPARK,SPARK_SQL,SCHEDULE,MAPREDUCE,TRINO等类型,默认查询全部
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 查询类型,支持HIVE,SPARK,MAPREDUCE,TRINO等类型,默认查询全部
-     * @param Type 查询类型,支持HIVE,SPARK,MAPREDUCE,TRINO等类型,默认查询全部
+     * Set 查询类型,支持HIVE,SPARK,DLC_SPARK,SPARK_SQL,SCHEDULE,MAPREDUCE,TRINO等类型,默认查询全部
+     * @param Type 查询类型,支持HIVE,SPARK,DLC_SPARK,SPARK_SQL,SCHEDULE,MAPREDUCE,TRINO等类型,默认查询全部
      */
     public void setType(String Type) {
         this.Type = Type;
