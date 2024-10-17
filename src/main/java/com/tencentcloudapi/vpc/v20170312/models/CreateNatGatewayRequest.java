@@ -38,28 +38,28 @@ public class CreateNatGatewayRequest extends AbstractModel {
     private String VpcId;
 
     /**
-    * NAT网关最大外网出带宽(单位:Mbps)，支持的参数值：`20, 50, 100, 200, 500, 1000, 2000, 5000`，默认: `100Mbps`。
+    * NAT网关最大外网出带宽(单位：Mbps)，支持的参数值：20, 50, 100, 200, 500, 1000, 2000, 5000，默认: 100Mbps。  当以下NatProductVersion参数值为2即标准型时，此参数无需填写，默认为5000Mbps。
     */
     @SerializedName("InternetMaxBandwidthOut")
     @Expose
     private Long InternetMaxBandwidthOut;
 
     /**
-    * NAT网关并发连接上限，支持参数值：`1000000、3000000、10000000`，默认值为`100000`。
+    * NAT网关并发连接数上限，支持参数值：1000000、3000000、10000000，默认值为100000。  当以下NatProductVersion参数值为2即标准型时，此参数无需填写，默认为2000000。
     */
     @SerializedName("MaxConcurrentConnection")
     @Expose
     private Long MaxConcurrentConnection;
 
     /**
-    * 需要申请的弹性IP个数，系统会按您的要求生产N个弹性IP，其中AddressCount和PublicAddresses至少传递一个。
+    * 新建弹性公网IP个数，系统会按您的要求创建对应数量的弹性公网IP，其中AddressCount和PublicAddresses两个参数至少填写一个。
     */
     @SerializedName("AddressCount")
     @Expose
     private Long AddressCount;
 
     /**
-    * 绑定NAT网关的弹性IP数组，其中AddressCount和PublicAddresses至少传递一个。
+    * 绑定NAT网关的已有弹性公网IP数组，其中AddressCount和PublicAddresses两个参数至少填写一个。 示例值：["139.199.232.119"]
     */
     @SerializedName("PublicIpAddresses")
     @Expose
@@ -80,14 +80,14 @@ public class CreateNatGatewayRequest extends AbstractModel {
     private Tag [] Tags;
 
     /**
-    * NAT网关所属子网
+    * NAT网关所属子网，已废弃
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * 绑定NAT网关的弹性IP带宽大小（单位Mbps），默认为当前用户类型所能使用的最大值。
+    * 绑定NAT网关的弹性公网IP带宽值（单位：Mbps）。不填写此参数时：则该参数默认为弹性公网IP的带宽值，部分用户默认为该用户类型的弹性公网IP的带宽上限。
     */
     @SerializedName("StockPublicIpAddressesBandwidthOut")
     @Expose
@@ -108,7 +108,7 @@ public class CreateNatGatewayRequest extends AbstractModel {
     private Boolean PublicIpFromSameZone;
 
     /**
-    * NAT网关大版本号，1是传统型，2是标准型，默认是1
+    * NAT网关类型，1表示传统型NAT网关，2表示标准型NAT网关，默认值是1。
     */
     @SerializedName("NatProductVersion")
     @Expose
@@ -147,64 +147,64 @@ public class CreateNatGatewayRequest extends AbstractModel {
     }
 
     /**
-     * Get NAT网关最大外网出带宽(单位:Mbps)，支持的参数值：`20, 50, 100, 200, 500, 1000, 2000, 5000`，默认: `100Mbps`。 
-     * @return InternetMaxBandwidthOut NAT网关最大外网出带宽(单位:Mbps)，支持的参数值：`20, 50, 100, 200, 500, 1000, 2000, 5000`，默认: `100Mbps`。
+     * Get NAT网关最大外网出带宽(单位：Mbps)，支持的参数值：20, 50, 100, 200, 500, 1000, 2000, 5000，默认: 100Mbps。  当以下NatProductVersion参数值为2即标准型时，此参数无需填写，默认为5000Mbps。 
+     * @return InternetMaxBandwidthOut NAT网关最大外网出带宽(单位：Mbps)，支持的参数值：20, 50, 100, 200, 500, 1000, 2000, 5000，默认: 100Mbps。  当以下NatProductVersion参数值为2即标准型时，此参数无需填写，默认为5000Mbps。
      */
     public Long getInternetMaxBandwidthOut() {
         return this.InternetMaxBandwidthOut;
     }
 
     /**
-     * Set NAT网关最大外网出带宽(单位:Mbps)，支持的参数值：`20, 50, 100, 200, 500, 1000, 2000, 5000`，默认: `100Mbps`。
-     * @param InternetMaxBandwidthOut NAT网关最大外网出带宽(单位:Mbps)，支持的参数值：`20, 50, 100, 200, 500, 1000, 2000, 5000`，默认: `100Mbps`。
+     * Set NAT网关最大外网出带宽(单位：Mbps)，支持的参数值：20, 50, 100, 200, 500, 1000, 2000, 5000，默认: 100Mbps。  当以下NatProductVersion参数值为2即标准型时，此参数无需填写，默认为5000Mbps。
+     * @param InternetMaxBandwidthOut NAT网关最大外网出带宽(单位：Mbps)，支持的参数值：20, 50, 100, 200, 500, 1000, 2000, 5000，默认: 100Mbps。  当以下NatProductVersion参数值为2即标准型时，此参数无需填写，默认为5000Mbps。
      */
     public void setInternetMaxBandwidthOut(Long InternetMaxBandwidthOut) {
         this.InternetMaxBandwidthOut = InternetMaxBandwidthOut;
     }
 
     /**
-     * Get NAT网关并发连接上限，支持参数值：`1000000、3000000、10000000`，默认值为`100000`。 
-     * @return MaxConcurrentConnection NAT网关并发连接上限，支持参数值：`1000000、3000000、10000000`，默认值为`100000`。
+     * Get NAT网关并发连接数上限，支持参数值：1000000、3000000、10000000，默认值为100000。  当以下NatProductVersion参数值为2即标准型时，此参数无需填写，默认为2000000。 
+     * @return MaxConcurrentConnection NAT网关并发连接数上限，支持参数值：1000000、3000000、10000000，默认值为100000。  当以下NatProductVersion参数值为2即标准型时，此参数无需填写，默认为2000000。
      */
     public Long getMaxConcurrentConnection() {
         return this.MaxConcurrentConnection;
     }
 
     /**
-     * Set NAT网关并发连接上限，支持参数值：`1000000、3000000、10000000`，默认值为`100000`。
-     * @param MaxConcurrentConnection NAT网关并发连接上限，支持参数值：`1000000、3000000、10000000`，默认值为`100000`。
+     * Set NAT网关并发连接数上限，支持参数值：1000000、3000000、10000000，默认值为100000。  当以下NatProductVersion参数值为2即标准型时，此参数无需填写，默认为2000000。
+     * @param MaxConcurrentConnection NAT网关并发连接数上限，支持参数值：1000000、3000000、10000000，默认值为100000。  当以下NatProductVersion参数值为2即标准型时，此参数无需填写，默认为2000000。
      */
     public void setMaxConcurrentConnection(Long MaxConcurrentConnection) {
         this.MaxConcurrentConnection = MaxConcurrentConnection;
     }
 
     /**
-     * Get 需要申请的弹性IP个数，系统会按您的要求生产N个弹性IP，其中AddressCount和PublicAddresses至少传递一个。 
-     * @return AddressCount 需要申请的弹性IP个数，系统会按您的要求生产N个弹性IP，其中AddressCount和PublicAddresses至少传递一个。
+     * Get 新建弹性公网IP个数，系统会按您的要求创建对应数量的弹性公网IP，其中AddressCount和PublicAddresses两个参数至少填写一个。 
+     * @return AddressCount 新建弹性公网IP个数，系统会按您的要求创建对应数量的弹性公网IP，其中AddressCount和PublicAddresses两个参数至少填写一个。
      */
     public Long getAddressCount() {
         return this.AddressCount;
     }
 
     /**
-     * Set 需要申请的弹性IP个数，系统会按您的要求生产N个弹性IP，其中AddressCount和PublicAddresses至少传递一个。
-     * @param AddressCount 需要申请的弹性IP个数，系统会按您的要求生产N个弹性IP，其中AddressCount和PublicAddresses至少传递一个。
+     * Set 新建弹性公网IP个数，系统会按您的要求创建对应数量的弹性公网IP，其中AddressCount和PublicAddresses两个参数至少填写一个。
+     * @param AddressCount 新建弹性公网IP个数，系统会按您的要求创建对应数量的弹性公网IP，其中AddressCount和PublicAddresses两个参数至少填写一个。
      */
     public void setAddressCount(Long AddressCount) {
         this.AddressCount = AddressCount;
     }
 
     /**
-     * Get 绑定NAT网关的弹性IP数组，其中AddressCount和PublicAddresses至少传递一个。 
-     * @return PublicIpAddresses 绑定NAT网关的弹性IP数组，其中AddressCount和PublicAddresses至少传递一个。
+     * Get 绑定NAT网关的已有弹性公网IP数组，其中AddressCount和PublicAddresses两个参数至少填写一个。 示例值：["139.199.232.119"] 
+     * @return PublicIpAddresses 绑定NAT网关的已有弹性公网IP数组，其中AddressCount和PublicAddresses两个参数至少填写一个。 示例值：["139.199.232.119"]
      */
     public String [] getPublicIpAddresses() {
         return this.PublicIpAddresses;
     }
 
     /**
-     * Set 绑定NAT网关的弹性IP数组，其中AddressCount和PublicAddresses至少传递一个。
-     * @param PublicIpAddresses 绑定NAT网关的弹性IP数组，其中AddressCount和PublicAddresses至少传递一个。
+     * Set 绑定NAT网关的已有弹性公网IP数组，其中AddressCount和PublicAddresses两个参数至少填写一个。 示例值：["139.199.232.119"]
+     * @param PublicIpAddresses 绑定NAT网关的已有弹性公网IP数组，其中AddressCount和PublicAddresses两个参数至少填写一个。 示例值：["139.199.232.119"]
      */
     public void setPublicIpAddresses(String [] PublicIpAddresses) {
         this.PublicIpAddresses = PublicIpAddresses;
@@ -243,32 +243,36 @@ public class CreateNatGatewayRequest extends AbstractModel {
     }
 
     /**
-     * Get NAT网关所属子网 
-     * @return SubnetId NAT网关所属子网
+     * Get NAT网关所属子网，已废弃 
+     * @return SubnetId NAT网关所属子网，已废弃
+     * @deprecated
      */
+    @Deprecated
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set NAT网关所属子网
-     * @param SubnetId NAT网关所属子网
+     * Set NAT网关所属子网，已废弃
+     * @param SubnetId NAT网关所属子网，已废弃
+     * @deprecated
      */
+    @Deprecated
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get 绑定NAT网关的弹性IP带宽大小（单位Mbps），默认为当前用户类型所能使用的最大值。 
-     * @return StockPublicIpAddressesBandwidthOut 绑定NAT网关的弹性IP带宽大小（单位Mbps），默认为当前用户类型所能使用的最大值。
+     * Get 绑定NAT网关的弹性公网IP带宽值（单位：Mbps）。不填写此参数时：则该参数默认为弹性公网IP的带宽值，部分用户默认为该用户类型的弹性公网IP的带宽上限。 
+     * @return StockPublicIpAddressesBandwidthOut 绑定NAT网关的弹性公网IP带宽值（单位：Mbps）。不填写此参数时：则该参数默认为弹性公网IP的带宽值，部分用户默认为该用户类型的弹性公网IP的带宽上限。
      */
     public Long getStockPublicIpAddressesBandwidthOut() {
         return this.StockPublicIpAddressesBandwidthOut;
     }
 
     /**
-     * Set 绑定NAT网关的弹性IP带宽大小（单位Mbps），默认为当前用户类型所能使用的最大值。
-     * @param StockPublicIpAddressesBandwidthOut 绑定NAT网关的弹性IP带宽大小（单位Mbps），默认为当前用户类型所能使用的最大值。
+     * Set 绑定NAT网关的弹性公网IP带宽值（单位：Mbps）。不填写此参数时：则该参数默认为弹性公网IP的带宽值，部分用户默认为该用户类型的弹性公网IP的带宽上限。
+     * @param StockPublicIpAddressesBandwidthOut 绑定NAT网关的弹性公网IP带宽值（单位：Mbps）。不填写此参数时：则该参数默认为弹性公网IP的带宽值，部分用户默认为该用户类型的弹性公网IP的带宽上限。
      */
     public void setStockPublicIpAddressesBandwidthOut(Long StockPublicIpAddressesBandwidthOut) {
         this.StockPublicIpAddressesBandwidthOut = StockPublicIpAddressesBandwidthOut;
@@ -307,16 +311,16 @@ public class CreateNatGatewayRequest extends AbstractModel {
     }
 
     /**
-     * Get NAT网关大版本号，1是传统型，2是标准型，默认是1 
-     * @return NatProductVersion NAT网关大版本号，1是传统型，2是标准型，默认是1
+     * Get NAT网关类型，1表示传统型NAT网关，2表示标准型NAT网关，默认值是1。 
+     * @return NatProductVersion NAT网关类型，1表示传统型NAT网关，2表示标准型NAT网关，默认值是1。
      */
     public Long getNatProductVersion() {
         return this.NatProductVersion;
     }
 
     /**
-     * Set NAT网关大版本号，1是传统型，2是标准型，默认是1
-     * @param NatProductVersion NAT网关大版本号，1是传统型，2是标准型，默认是1
+     * Set NAT网关类型，1表示传统型NAT网关，2表示标准型NAT网关，默认值是1。
+     * @param NatProductVersion NAT网关类型，1表示传统型NAT网关，2表示标准型NAT网关，默认值是1。
      */
     public void setNatProductVersion(Long NatProductVersion) {
         this.NatProductVersion = NatProductVersion;

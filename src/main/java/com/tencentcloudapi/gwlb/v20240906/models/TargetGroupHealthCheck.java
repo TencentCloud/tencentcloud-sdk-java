@@ -31,7 +31,10 @@ public class TargetGroupHealthCheck extends AbstractModel {
     private Boolean HealthSwitch;
 
     /**
-    * 健康检查使用的协议。支持icmp和tcp，默认为icmp。
+    * 健康检查使用的协议。支持ping和tcp，默认为ping。
+
+- PING: icmp
+- TCP: tcp
     */
     @SerializedName("Protocol")
     @Expose
@@ -90,16 +93,28 @@ public class TargetGroupHealthCheck extends AbstractModel {
     }
 
     /**
-     * Get 健康检查使用的协议。支持icmp和tcp，默认为icmp。 
-     * @return Protocol 健康检查使用的协议。支持icmp和tcp，默认为icmp。
+     * Get 健康检查使用的协议。支持ping和tcp，默认为ping。
+
+- PING: icmp
+- TCP: tcp 
+     * @return Protocol 健康检查使用的协议。支持ping和tcp，默认为ping。
+
+- PING: icmp
+- TCP: tcp
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set 健康检查使用的协议。支持icmp和tcp，默认为icmp。
-     * @param Protocol 健康检查使用的协议。支持icmp和tcp，默认为icmp。
+     * Set 健康检查使用的协议。支持ping和tcp，默认为ping。
+
+- PING: icmp
+- TCP: tcp
+     * @param Protocol 健康检查使用的协议。支持ping和tcp，默认为ping。
+
+- PING: icmp
+- TCP: tcp
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;

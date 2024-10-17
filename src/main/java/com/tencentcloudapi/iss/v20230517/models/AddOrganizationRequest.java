@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AddOrganizationRequest extends AbstractModel {
 
     /**
-    * 组织名称（仅支持中文、英文、数字、_、-的组合，长度不超过16个字符，且组织名称不能重复）
+    * 组织名称（仅支持中文、英文、数字、空格、中英文括号、_、-, 长度不超过64位，且组织名称不能重复）
     */
     @SerializedName("Name")
     @Expose
@@ -38,16 +38,16 @@ public class AddOrganizationRequest extends AbstractModel {
     private String ParentId;
 
     /**
-     * Get 组织名称（仅支持中文、英文、数字、_、-的组合，长度不超过16个字符，且组织名称不能重复） 
-     * @return Name 组织名称（仅支持中文、英文、数字、_、-的组合，长度不超过16个字符，且组织名称不能重复）
+     * Get 组织名称（仅支持中文、英文、数字、空格、中英文括号、_、-, 长度不超过64位，且组织名称不能重复） 
+     * @return Name 组织名称（仅支持中文、英文、数字、空格、中英文括号、_、-, 长度不超过64位，且组织名称不能重复）
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 组织名称（仅支持中文、英文、数字、_、-的组合，长度不超过16个字符，且组织名称不能重复）
-     * @param Name 组织名称（仅支持中文、英文、数字、_、-的组合，长度不超过16个字符，且组织名称不能重复）
+     * Set 组织名称（仅支持中文、英文、数字、空格、中英文括号、_、-, 长度不超过64位，且组织名称不能重复）
+     * @param Name 组织名称（仅支持中文、英文、数字、空格、中英文括号、_、-, 长度不超过64位，且组织名称不能重复）
      */
     public void setName(String Name) {
         this.Name = Name;

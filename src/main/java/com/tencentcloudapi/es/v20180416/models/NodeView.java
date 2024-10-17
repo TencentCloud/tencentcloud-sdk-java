@@ -157,6 +157,22 @@ public class NodeView extends AbstractModel {
     private String CVMStatus;
 
     /**
+    * cvm绑定的置放群组的id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CVMDisasterRecoverGroupId")
+    @Expose
+    private String CVMDisasterRecoverGroupId;
+
+    /**
+    * cvm绑定置放群组的状态。2: 已绑定；1: 绑定中；0: 未开启
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CVMDisasterRecoverGroupStatus")
+    @Expose
+    private Long CVMDisasterRecoverGroupStatus;
+
+    /**
      * Get 节点ID 
      * @return NodeId 节点ID
      */
@@ -460,6 +476,46 @@ public class NodeView extends AbstractModel {
         this.CVMStatus = CVMStatus;
     }
 
+    /**
+     * Get cvm绑定的置放群组的id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CVMDisasterRecoverGroupId cvm绑定的置放群组的id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCVMDisasterRecoverGroupId() {
+        return this.CVMDisasterRecoverGroupId;
+    }
+
+    /**
+     * Set cvm绑定的置放群组的id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CVMDisasterRecoverGroupId cvm绑定的置放群组的id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCVMDisasterRecoverGroupId(String CVMDisasterRecoverGroupId) {
+        this.CVMDisasterRecoverGroupId = CVMDisasterRecoverGroupId;
+    }
+
+    /**
+     * Get cvm绑定置放群组的状态。2: 已绑定；1: 绑定中；0: 未开启
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CVMDisasterRecoverGroupStatus cvm绑定置放群组的状态。2: 已绑定；1: 绑定中；0: 未开启
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getCVMDisasterRecoverGroupStatus() {
+        return this.CVMDisasterRecoverGroupStatus;
+    }
+
+    /**
+     * Set cvm绑定置放群组的状态。2: 已绑定；1: 绑定中；0: 未开启
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CVMDisasterRecoverGroupStatus cvm绑定置放群组的状态。2: 已绑定；1: 绑定中；0: 未开启
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCVMDisasterRecoverGroupStatus(Long CVMDisasterRecoverGroupStatus) {
+        this.CVMDisasterRecoverGroupStatus = CVMDisasterRecoverGroupStatus;
+    }
+
     public NodeView() {
     }
 
@@ -528,6 +584,12 @@ public class NodeView extends AbstractModel {
         if (source.CVMStatus != null) {
             this.CVMStatus = new String(source.CVMStatus);
         }
+        if (source.CVMDisasterRecoverGroupId != null) {
+            this.CVMDisasterRecoverGroupId = new String(source.CVMDisasterRecoverGroupId);
+        }
+        if (source.CVMDisasterRecoverGroupStatus != null) {
+            this.CVMDisasterRecoverGroupStatus = new Long(source.CVMDisasterRecoverGroupStatus);
+        }
     }
 
 
@@ -554,6 +616,8 @@ public class NodeView extends AbstractModel {
         this.setParamSimple(map, prefix + "Hidden", this.Hidden);
         this.setParamSimple(map, prefix + "IsCoordinationNode", this.IsCoordinationNode);
         this.setParamSimple(map, prefix + "CVMStatus", this.CVMStatus);
+        this.setParamSimple(map, prefix + "CVMDisasterRecoverGroupId", this.CVMDisasterRecoverGroupId);
+        this.setParamSimple(map, prefix + "CVMDisasterRecoverGroupStatus", this.CVMDisasterRecoverGroupStatus);
 
     }
 }

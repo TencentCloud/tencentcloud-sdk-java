@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class TargetGroupAssociation extends AbstractModel {
 
     /**
-    * 负载均衡ID。
+    * 网关负载均衡实例ID。
     */
     @SerializedName("LoadBalancerId")
     @Expose
@@ -38,16 +38,16 @@ public class TargetGroupAssociation extends AbstractModel {
     private String TargetGroupId;
 
     /**
-     * Get 负载均衡ID。 
-     * @return LoadBalancerId 负载均衡ID。
+     * Get 网关负载均衡实例ID。 
+     * @return LoadBalancerId 网关负载均衡实例ID。
      */
     public String getLoadBalancerId() {
         return this.LoadBalancerId;
     }
 
     /**
-     * Set 负载均衡ID。
-     * @param LoadBalancerId 负载均衡ID。
+     * Set 网关负载均衡实例ID。
+     * @param LoadBalancerId 网关负载均衡实例ID。
      */
     public void setLoadBalancerId(String LoadBalancerId) {
         this.LoadBalancerId = LoadBalancerId;

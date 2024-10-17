@@ -842,6 +842,17 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *查询批量修改标签状态
+     * @param req DescribeBatchModifyTagsStatusRequest
+     * @return DescribeBatchModifyTagsStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBatchModifyTagsStatusResponse DescribeBatchModifyTagsStatus(DescribeBatchModifyTagsStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBatchModifyTagsStatus", DescribeBatchModifyTagsStatusResponse.class);
+    }
+
+    /**
      *集群弹性伸缩配置
      * @param req DescribeClusterAsGroupOptionRequest
      * @return DescribeClusterAsGroupOptionResponse
@@ -2115,6 +2126,17 @@ public class TkeClient extends AbstractClient{
     public ModifyClusterRuntimeConfigResponse ModifyClusterRuntimeConfig(ModifyClusterRuntimeConfigRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyClusterRuntimeConfig", ModifyClusterRuntimeConfigResponse.class);
+    }
+
+    /**
+     *修改集群标签
+     * @param req ModifyClusterTagsRequest
+     * @return ModifyClusterTagsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyClusterTagsResponse ModifyClusterTags(ModifyClusterTagsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyClusterTags", ModifyClusterTagsResponse.class);
     }
 
     /**

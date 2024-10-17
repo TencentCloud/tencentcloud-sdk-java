@@ -32,7 +32,7 @@ public class Price extends AbstractModel {
     private ItemPrice InstancePrice;
 
     /**
-    * 描述了实例价格。
+    * 描述了GLCU的价格。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LcuPrice")
@@ -60,9 +60,9 @@ public class Price extends AbstractModel {
     }
 
     /**
-     * Get 描述了实例价格。
+     * Get 描述了GLCU的价格。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LcuPrice 描述了实例价格。
+     * @return LcuPrice 描述了GLCU的价格。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ItemPrice getLcuPrice() {
@@ -70,9 +70,9 @@ public class Price extends AbstractModel {
     }
 
     /**
-     * Set 描述了实例价格。
+     * Set 描述了GLCU的价格。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LcuPrice 描述了实例价格。
+     * @param LcuPrice 描述了GLCU的价格。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLcuPrice(ItemPrice LcuPrice) {

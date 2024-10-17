@@ -31,7 +31,7 @@ public class ModifyTargetGroupInstancesWeightRequest extends AbstractModel {
     private String TargetGroupId;
 
     /**
-    * 待修改权重的服务器数组。
+    * 实例绑定配置数组。
     */
     @SerializedName("TargetGroupInstances")
     @Expose
@@ -54,16 +54,16 @@ public class ModifyTargetGroupInstancesWeightRequest extends AbstractModel {
     }
 
     /**
-     * Get 待修改权重的服务器数组。 
-     * @return TargetGroupInstances 待修改权重的服务器数组。
+     * Get 实例绑定配置数组。 
+     * @return TargetGroupInstances 实例绑定配置数组。
      */
     public TargetGroupInstance [] getTargetGroupInstances() {
         return this.TargetGroupInstances;
     }
 
     /**
-     * Set 待修改权重的服务器数组。
-     * @param TargetGroupInstances 待修改权重的服务器数组。
+     * Set 实例绑定配置数组。
+     * @param TargetGroupInstances 实例绑定配置数组。
      */
     public void setTargetGroupInstances(TargetGroupInstance [] TargetGroupInstances) {
         this.TargetGroupInstances = TargetGroupInstances;

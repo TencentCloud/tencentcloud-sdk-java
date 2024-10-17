@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateTargetGroupRequest extends AbstractModel {
 
     /**
-    * 目标组名称，限定50个字符
+    * 目标组名称，限定60个字符。
     */
     @SerializedName("TargetGroupName")
     @Expose
@@ -39,7 +39,6 @@ public class CreateTargetGroupRequest extends AbstractModel {
 
     /**
     * 目标组的默认端口， 后续添加服务器时可使用该默认端口。Port和TargetGroupInstances.N中的port二者必填其一。
-
     */
     @SerializedName("Port")
     @Expose
@@ -54,22 +53,22 @@ public class CreateTargetGroupRequest extends AbstractModel {
 
     /**
     * 网关负载均衡目标组协议。
-- AWS_GENEVE：GENEVE 兼容协议 
 - TENCENT_GENEVE ：GENEVE 标准协议
+- AWS_GENEVE：GENEVE 兼容协议（需要提交工单申请开白）
     */
     @SerializedName("Protocol")
     @Expose
     private String Protocol;
 
     /**
-    * 健康检查。
+    * 健康检查设置。
     */
     @SerializedName("HealthCheck")
     @Expose
     private TargetGroupHealthCheck HealthCheck;
 
     /**
-    * RS调度算法。
+    * 均衡算法。
 - IP_HASH_3_ELASTIC：弹性哈希
     */
     @SerializedName("ScheduleAlgorithm")
@@ -84,16 +83,16 @@ public class CreateTargetGroupRequest extends AbstractModel {
     private Boolean AllDeadToAlive;
 
     /**
-     * Get 目标组名称，限定50个字符 
-     * @return TargetGroupName 目标组名称，限定50个字符
+     * Get 目标组名称，限定60个字符。 
+     * @return TargetGroupName 目标组名称，限定60个字符。
      */
     public String getTargetGroupName() {
         return this.TargetGroupName;
     }
 
     /**
-     * Set 目标组名称，限定50个字符
-     * @param TargetGroupName 目标组名称，限定50个字符
+     * Set 目标组名称，限定60个字符。
+     * @param TargetGroupName 目标组名称，限定60个字符。
      */
     public void setTargetGroupName(String TargetGroupName) {
         this.TargetGroupName = TargetGroupName;
@@ -116,10 +115,8 @@ public class CreateTargetGroupRequest extends AbstractModel {
     }
 
     /**
-     * Get 目标组的默认端口， 后续添加服务器时可使用该默认端口。Port和TargetGroupInstances.N中的port二者必填其一。
- 
+     * Get 目标组的默认端口， 后续添加服务器时可使用该默认端口。Port和TargetGroupInstances.N中的port二者必填其一。 
      * @return Port 目标组的默认端口， 后续添加服务器时可使用该默认端口。Port和TargetGroupInstances.N中的port二者必填其一。
-
      */
     public Long getPort() {
         return this.Port;
@@ -127,9 +124,7 @@ public class CreateTargetGroupRequest extends AbstractModel {
 
     /**
      * Set 目标组的默认端口， 后续添加服务器时可使用该默认端口。Port和TargetGroupInstances.N中的port二者必填其一。
-
      * @param Port 目标组的默认端口， 后续添加服务器时可使用该默认端口。Port和TargetGroupInstances.N中的port二者必填其一。
-
      */
     public void setPort(Long Port) {
         this.Port = Port;
@@ -153,11 +148,11 @@ public class CreateTargetGroupRequest extends AbstractModel {
 
     /**
      * Get 网关负载均衡目标组协议。
-- AWS_GENEVE：GENEVE 兼容协议 
-- TENCENT_GENEVE ：GENEVE 标准协议 
-     * @return Protocol 网关负载均衡目标组协议。
-- AWS_GENEVE：GENEVE 兼容协议 
 - TENCENT_GENEVE ：GENEVE 标准协议
+- AWS_GENEVE：GENEVE 兼容协议（需要提交工单申请开白） 
+     * @return Protocol 网关负载均衡目标组协议。
+- TENCENT_GENEVE ：GENEVE 标准协议
+- AWS_GENEVE：GENEVE 兼容协议（需要提交工单申请开白）
      */
     public String getProtocol() {
         return this.Protocol;
@@ -165,36 +160,36 @@ public class CreateTargetGroupRequest extends AbstractModel {
 
     /**
      * Set 网关负载均衡目标组协议。
-- AWS_GENEVE：GENEVE 兼容协议 
 - TENCENT_GENEVE ：GENEVE 标准协议
+- AWS_GENEVE：GENEVE 兼容协议（需要提交工单申请开白）
      * @param Protocol 网关负载均衡目标组协议。
-- AWS_GENEVE：GENEVE 兼容协议 
 - TENCENT_GENEVE ：GENEVE 标准协议
+- AWS_GENEVE：GENEVE 兼容协议（需要提交工单申请开白）
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
     }
 
     /**
-     * Get 健康检查。 
-     * @return HealthCheck 健康检查。
+     * Get 健康检查设置。 
+     * @return HealthCheck 健康检查设置。
      */
     public TargetGroupHealthCheck getHealthCheck() {
         return this.HealthCheck;
     }
 
     /**
-     * Set 健康检查。
-     * @param HealthCheck 健康检查。
+     * Set 健康检查设置。
+     * @param HealthCheck 健康检查设置。
      */
     public void setHealthCheck(TargetGroupHealthCheck HealthCheck) {
         this.HealthCheck = HealthCheck;
     }
 
     /**
-     * Get RS调度算法。
+     * Get 均衡算法。
 - IP_HASH_3_ELASTIC：弹性哈希 
-     * @return ScheduleAlgorithm RS调度算法。
+     * @return ScheduleAlgorithm 均衡算法。
 - IP_HASH_3_ELASTIC：弹性哈希
      */
     public String getScheduleAlgorithm() {
@@ -202,9 +197,9 @@ public class CreateTargetGroupRequest extends AbstractModel {
     }
 
     /**
-     * Set RS调度算法。
+     * Set 均衡算法。
 - IP_HASH_3_ELASTIC：弹性哈希
-     * @param ScheduleAlgorithm RS调度算法。
+     * @param ScheduleAlgorithm 均衡算法。
 - IP_HASH_3_ELASTIC：弹性哈希
      */
     public void setScheduleAlgorithm(String ScheduleAlgorithm) {

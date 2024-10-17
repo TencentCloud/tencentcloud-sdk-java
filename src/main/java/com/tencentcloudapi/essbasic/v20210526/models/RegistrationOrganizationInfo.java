@@ -143,6 +143,13 @@ p.s. 如果上传授权书 ，需遵循以下条件
     private String [] PowerOfAttorneys;
 
     /**
+    * 认证完之后的H5页面的跳转链接，最大长度1000个字符。链接类型请参考 [跳转电子签H5](https://qian.tencent.com/developers/company/openqianh5/)
+    */
+    @SerializedName("AutoJumpUrl")
+    @Expose
+    private String AutoJumpUrl;
+
+    /**
      * Get 组织机构名称。
 请确认该名称与企业营业执照中注册的名称一致。
 如果名称中包含英文括号()，请使用中文括号（）代替。 
@@ -462,6 +469,22 @@ p.s. 如果上传授权书 ，需遵循以下条件
         this.PowerOfAttorneys = PowerOfAttorneys;
     }
 
+    /**
+     * Get 认证完之后的H5页面的跳转链接，最大长度1000个字符。链接类型请参考 [跳转电子签H5](https://qian.tencent.com/developers/company/openqianh5/) 
+     * @return AutoJumpUrl 认证完之后的H5页面的跳转链接，最大长度1000个字符。链接类型请参考 [跳转电子签H5](https://qian.tencent.com/developers/company/openqianh5/)
+     */
+    public String getAutoJumpUrl() {
+        return this.AutoJumpUrl;
+    }
+
+    /**
+     * Set 认证完之后的H5页面的跳转链接，最大长度1000个字符。链接类型请参考 [跳转电子签H5](https://qian.tencent.com/developers/company/openqianh5/)
+     * @param AutoJumpUrl 认证完之后的H5页面的跳转链接，最大长度1000个字符。链接类型请参考 [跳转电子签H5](https://qian.tencent.com/developers/company/openqianh5/)
+     */
+    public void setAutoJumpUrl(String AutoJumpUrl) {
+        this.AutoJumpUrl = AutoJumpUrl;
+    }
+
     public RegistrationOrganizationInfo() {
     }
 
@@ -515,6 +538,9 @@ p.s. 如果上传授权书 ，需遵循以下条件
                 this.PowerOfAttorneys[i] = new String(source.PowerOfAttorneys[i]);
             }
         }
+        if (source.AutoJumpUrl != null) {
+            this.AutoJumpUrl = new String(source.AutoJumpUrl);
+        }
     }
 
 
@@ -535,6 +561,7 @@ p.s. 如果上传授权书 ，需遵循以下条件
         this.setParamSimple(map, prefix + "AdminIdCardNumber", this.AdminIdCardNumber);
         this.setParamSimple(map, prefix + "BusinessLicense", this.BusinessLicense);
         this.setParamArraySimple(map, prefix + "PowerOfAttorneys.", this.PowerOfAttorneys);
+        this.setParamSimple(map, prefix + "AutoJumpUrl", this.AutoJumpUrl);
 
     }
 }

@@ -31,7 +31,7 @@ public class ModifyGatewayLoadBalancerAttributeRequest extends AbstractModel {
     private String LoadBalancerId;
 
     /**
-    * 网关负载均衡名称。
+    * 网关负载均衡实例名称。可支持输入1-60个字符。
     */
     @SerializedName("LoadBalancerName")
     @Expose
@@ -54,16 +54,16 @@ public class ModifyGatewayLoadBalancerAttributeRequest extends AbstractModel {
     }
 
     /**
-     * Get 网关负载均衡名称。 
-     * @return LoadBalancerName 网关负载均衡名称。
+     * Get 网关负载均衡实例名称。可支持输入1-60个字符。 
+     * @return LoadBalancerName 网关负载均衡实例名称。可支持输入1-60个字符。
      */
     public String getLoadBalancerName() {
         return this.LoadBalancerName;
     }
 
     /**
-     * Set 网关负载均衡名称。
-     * @param LoadBalancerName 网关负载均衡名称。
+     * Set 网关负载均衡实例名称。可支持输入1-60个字符。
+     * @param LoadBalancerName 网关负载均衡实例名称。可支持输入1-60个字符。
      */
     public void setLoadBalancerName(String LoadBalancerName) {
         this.LoadBalancerName = LoadBalancerName;

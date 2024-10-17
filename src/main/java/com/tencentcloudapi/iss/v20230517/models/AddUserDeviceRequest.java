@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AddUserDeviceRequest extends AbstractModel {
 
     /**
-    * 设备名称，仅支持中文、英文、数字、_、-，长度不超过32个字符；（设备名称无需全局唯一，可以重复）
+    * 设备名称，仅支持中文、英文、数字、空格、中英文括号、_、-, 长度不超过128位；（设备名称无需全局唯一，可以重复）
     */
     @SerializedName("Name")
     @Expose
@@ -66,14 +66,14 @@ public class AddUserDeviceRequest extends AbstractModel {
     private Long TransportProtocol;
 
     /**
-    * 设备密码（国标，网关设备必填，仅支持数字组合，长度为1-64个字符）
+    * 设备密码（国标，网关设备必填，长度为1-64个字符）
     */
     @SerializedName("Password")
     @Expose
     private String Password;
 
     /**
-    * 设备描述，仅支持中文、英文、数字、_、-，长度不超过128个字符
+    * 设备描述，长度不超过128个字符
     */
     @SerializedName("Description")
     @Expose
@@ -122,30 +122,30 @@ public class AddUserDeviceRequest extends AbstractModel {
     private String SNCode;
 
     /**
-    * RTMP推流地址自定义AppName（仅RTMP需要，支持英文、数字组合限制32个字符内）
+    * RTMP推流地址自定义AppName（仅RTMP需要，支持英文、数字、_、-、.、长度不超过64位）
     */
     @SerializedName("AppName")
     @Expose
     private String AppName;
 
     /**
-    * RTMP推流地址自定义StreamName（仅RTMP需要，支持英文、数字组合限制32个字符内）
+    * RTMP推流地址自定义StreamName（仅RTMP需要，支持英文、数字、_、-、.、长度不超过64位）
     */
     @SerializedName("StreamName")
     @Expose
     private String StreamName;
 
     /**
-     * Get 设备名称，仅支持中文、英文、数字、_、-，长度不超过32个字符；（设备名称无需全局唯一，可以重复） 
-     * @return Name 设备名称，仅支持中文、英文、数字、_、-，长度不超过32个字符；（设备名称无需全局唯一，可以重复）
+     * Get 设备名称，仅支持中文、英文、数字、空格、中英文括号、_、-, 长度不超过128位；（设备名称无需全局唯一，可以重复） 
+     * @return Name 设备名称，仅支持中文、英文、数字、空格、中英文括号、_、-, 长度不超过128位；（设备名称无需全局唯一，可以重复）
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 设备名称，仅支持中文、英文、数字、_、-，长度不超过32个字符；（设备名称无需全局唯一，可以重复）
-     * @param Name 设备名称，仅支持中文、英文、数字、_、-，长度不超过32个字符；（设备名称无需全局唯一，可以重复）
+     * Set 设备名称，仅支持中文、英文、数字、空格、中英文括号、_、-, 长度不超过128位；（设备名称无需全局唯一，可以重复）
+     * @param Name 设备名称，仅支持中文、英文、数字、空格、中英文括号、_、-, 长度不超过128位；（设备名称无需全局唯一，可以重复）
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -232,32 +232,32 @@ public class AddUserDeviceRequest extends AbstractModel {
     }
 
     /**
-     * Get 设备密码（国标，网关设备必填，仅支持数字组合，长度为1-64个字符） 
-     * @return Password 设备密码（国标，网关设备必填，仅支持数字组合，长度为1-64个字符）
+     * Get 设备密码（国标，网关设备必填，长度为1-64个字符） 
+     * @return Password 设备密码（国标，网关设备必填，长度为1-64个字符）
      */
     public String getPassword() {
         return this.Password;
     }
 
     /**
-     * Set 设备密码（国标，网关设备必填，仅支持数字组合，长度为1-64个字符）
-     * @param Password 设备密码（国标，网关设备必填，仅支持数字组合，长度为1-64个字符）
+     * Set 设备密码（国标，网关设备必填，长度为1-64个字符）
+     * @param Password 设备密码（国标，网关设备必填，长度为1-64个字符）
      */
     public void setPassword(String Password) {
         this.Password = Password;
     }
 
     /**
-     * Get 设备描述，仅支持中文、英文、数字、_、-，长度不超过128个字符 
-     * @return Description 设备描述，仅支持中文、英文、数字、_、-，长度不超过128个字符
+     * Get 设备描述，长度不超过128个字符 
+     * @return Description 设备描述，长度不超过128个字符
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 设备描述，仅支持中文、英文、数字、_、-，长度不超过128个字符
-     * @param Description 设备描述，仅支持中文、英文、数字、_、-，长度不超过128个字符
+     * Set 设备描述，长度不超过128个字符
+     * @param Description 设备描述，长度不超过128个字符
      */
     public void setDescription(String Description) {
         this.Description = Description;
@@ -360,32 +360,32 @@ public class AddUserDeviceRequest extends AbstractModel {
     }
 
     /**
-     * Get RTMP推流地址自定义AppName（仅RTMP需要，支持英文、数字组合限制32个字符内） 
-     * @return AppName RTMP推流地址自定义AppName（仅RTMP需要，支持英文、数字组合限制32个字符内）
+     * Get RTMP推流地址自定义AppName（仅RTMP需要，支持英文、数字、_、-、.、长度不超过64位） 
+     * @return AppName RTMP推流地址自定义AppName（仅RTMP需要，支持英文、数字、_、-、.、长度不超过64位）
      */
     public String getAppName() {
         return this.AppName;
     }
 
     /**
-     * Set RTMP推流地址自定义AppName（仅RTMP需要，支持英文、数字组合限制32个字符内）
-     * @param AppName RTMP推流地址自定义AppName（仅RTMP需要，支持英文、数字组合限制32个字符内）
+     * Set RTMP推流地址自定义AppName（仅RTMP需要，支持英文、数字、_、-、.、长度不超过64位）
+     * @param AppName RTMP推流地址自定义AppName（仅RTMP需要，支持英文、数字、_、-、.、长度不超过64位）
      */
     public void setAppName(String AppName) {
         this.AppName = AppName;
     }
 
     /**
-     * Get RTMP推流地址自定义StreamName（仅RTMP需要，支持英文、数字组合限制32个字符内） 
-     * @return StreamName RTMP推流地址自定义StreamName（仅RTMP需要，支持英文、数字组合限制32个字符内）
+     * Get RTMP推流地址自定义StreamName（仅RTMP需要，支持英文、数字、_、-、.、长度不超过64位） 
+     * @return StreamName RTMP推流地址自定义StreamName（仅RTMP需要，支持英文、数字、_、-、.、长度不超过64位）
      */
     public String getStreamName() {
         return this.StreamName;
     }
 
     /**
-     * Set RTMP推流地址自定义StreamName（仅RTMP需要，支持英文、数字组合限制32个字符内）
-     * @param StreamName RTMP推流地址自定义StreamName（仅RTMP需要，支持英文、数字组合限制32个字符内）
+     * Set RTMP推流地址自定义StreamName（仅RTMP需要，支持英文、数字、_、-、.、长度不超过64位）
+     * @param StreamName RTMP推流地址自定义StreamName（仅RTMP需要，支持英文、数字、_、-、.、长度不超过64位）
      */
     public void setStreamName(String StreamName) {
         this.StreamName = StreamName;

@@ -113,6 +113,13 @@ public class RestoreTask extends AbstractModel {
     private Long Status;
 
     /**
+    * 回档异步任务ID
+    */
+    @SerializedName("FlowId")
+    @Expose
+    private Long FlowId;
+
+    /**
      * Get 目标实例ID 
      * @return TargetInstanceId 目标实例ID
      */
@@ -336,6 +343,22 @@ public class RestoreTask extends AbstractModel {
         this.Status = Status;
     }
 
+    /**
+     * Get 回档异步任务ID 
+     * @return FlowId 回档异步任务ID
+     */
+    public Long getFlowId() {
+        return this.FlowId;
+    }
+
+    /**
+     * Set 回档异步任务ID
+     * @param FlowId 回档异步任务ID
+     */
+    public void setFlowId(Long FlowId) {
+        this.FlowId = FlowId;
+    }
+
     public RestoreTask() {
     }
 
@@ -377,6 +400,9 @@ public class RestoreTask extends AbstractModel {
         if (source.Status != null) {
             this.Status = new Long(source.Status);
         }
+        if (source.FlowId != null) {
+            this.FlowId = new Long(source.FlowId);
+        }
     }
 
 
@@ -395,6 +421,7 @@ public class RestoreTask extends AbstractModel {
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "FlowId", this.FlowId);
 
     }
 }

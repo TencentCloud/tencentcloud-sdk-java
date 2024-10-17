@@ -166,7 +166,7 @@ public class NatGateway extends AbstractModel {
     private String RestrictState;
 
     /**
-    * NAT网关大版本号，传统型=1，标准型=2
+    * NAT网关类型，1表示传统型NAT网关，2表示标准型NAT网关
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NatProductVersion")
@@ -530,9 +530,9 @@ public class NatGateway extends AbstractModel {
     }
 
     /**
-     * Get NAT网关大版本号，传统型=1，标准型=2
+     * Get NAT网关类型，1表示传统型NAT网关，2表示标准型NAT网关
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return NatProductVersion NAT网关大版本号，传统型=1，标准型=2
+     * @return NatProductVersion NAT网关类型，1表示传统型NAT网关，2表示标准型NAT网关
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getNatProductVersion() {
@@ -540,9 +540,9 @@ public class NatGateway extends AbstractModel {
     }
 
     /**
-     * Set NAT网关大版本号，传统型=1，标准型=2
+     * Set NAT网关类型，1表示传统型NAT网关，2表示标准型NAT网关
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param NatProductVersion NAT网关大版本号，传统型=1，标准型=2
+     * @param NatProductVersion NAT网关类型，1表示传统型NAT网关，2表示标准型NAT网关
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNatProductVersion(Long NatProductVersion) {

@@ -24,11 +24,34 @@ import java.util.HashMap;
 public class CreateBPFakeURLResponse extends AbstractModel {
 
     /**
+    * FakeURLId
+    */
+    @SerializedName("FakeURLId")
+    @Expose
+    private Long FakeURLId;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get FakeURLId 
+     * @return FakeURLId FakeURLId
+     */
+    public Long getFakeURLId() {
+        return this.FakeURLId;
+    }
+
+    /**
+     * Set FakeURLId
+     * @param FakeURLId FakeURLId
+     */
+    public void setFakeURLId(Long FakeURLId) {
+        this.FakeURLId = FakeURLId;
+    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -54,6 +77,9 @@ public class CreateBPFakeURLResponse extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreateBPFakeURLResponse(CreateBPFakeURLResponse source) {
+        if (source.FakeURLId != null) {
+            this.FakeURLId = new Long(source.FakeURLId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -64,6 +90,7 @@ public class CreateBPFakeURLResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "FakeURLId", this.FakeURLId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

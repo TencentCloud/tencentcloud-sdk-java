@@ -62,6 +62,13 @@ public class RecordPlanChannelInfo extends AbstractModel {
     private String OrganizationName;
 
     /**
+    * 通道所属设备的接入协议类型
+    */
+    @SerializedName("AccessProtocol")
+    @Expose
+    private Long AccessProtocol;
+
+    /**
      * Get 设备通道所属的设备ID 
      * @return DeviceId 设备通道所属的设备ID
      */
@@ -153,6 +160,22 @@ public class RecordPlanChannelInfo extends AbstractModel {
         this.OrganizationName = OrganizationName;
     }
 
+    /**
+     * Get 通道所属设备的接入协议类型 
+     * @return AccessProtocol 通道所属设备的接入协议类型
+     */
+    public Long getAccessProtocol() {
+        return this.AccessProtocol;
+    }
+
+    /**
+     * Set 通道所属设备的接入协议类型
+     * @param AccessProtocol 通道所属设备的接入协议类型
+     */
+    public void setAccessProtocol(Long AccessProtocol) {
+        this.AccessProtocol = AccessProtocol;
+    }
+
     public RecordPlanChannelInfo() {
     }
 
@@ -176,6 +199,9 @@ public class RecordPlanChannelInfo extends AbstractModel {
         if (source.OrganizationName != null) {
             this.OrganizationName = new String(source.OrganizationName);
         }
+        if (source.AccessProtocol != null) {
+            this.AccessProtocol = new Long(source.AccessProtocol);
+        }
     }
 
 
@@ -188,6 +214,7 @@ public class RecordPlanChannelInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "ChannelId", this.ChannelId);
         this.setParamSimple(map, prefix + "ChannelName", this.ChannelName);
         this.setParamSimple(map, prefix + "OrganizationName", this.OrganizationName);
+        this.setParamSimple(map, prefix + "AccessProtocol", this.AccessProtocol);
 
     }
 }

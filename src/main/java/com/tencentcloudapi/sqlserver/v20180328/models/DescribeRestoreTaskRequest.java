@@ -101,6 +101,13 @@ public class DescribeRestoreTaskRequest extends AbstractModel {
     private String OrderByType;
 
     /**
+    * 回档异步任务ID
+    */
+    @SerializedName("FlowId")
+    @Expose
+    private Long FlowId;
+
+    /**
      * Get 源实例ID 
      * @return InstanceId 源实例ID
      */
@@ -276,6 +283,22 @@ public class DescribeRestoreTaskRequest extends AbstractModel {
         this.OrderByType = OrderByType;
     }
 
+    /**
+     * Get 回档异步任务ID 
+     * @return FlowId 回档异步任务ID
+     */
+    public Long getFlowId() {
+        return this.FlowId;
+    }
+
+    /**
+     * Set 回档异步任务ID
+     * @param FlowId 回档异步任务ID
+     */
+    public void setFlowId(Long FlowId) {
+        this.FlowId = FlowId;
+    }
+
     public DescribeRestoreTaskRequest() {
     }
 
@@ -317,6 +340,9 @@ public class DescribeRestoreTaskRequest extends AbstractModel {
         if (source.OrderByType != null) {
             this.OrderByType = new String(source.OrderByType);
         }
+        if (source.FlowId != null) {
+            this.FlowId = new Long(source.FlowId);
+        }
     }
 
 
@@ -335,6 +361,7 @@ public class DescribeRestoreTaskRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "OrderBy", this.OrderBy);
         this.setParamSimple(map, prefix + "OrderByType", this.OrderByType);
+        this.setParamSimple(map, prefix + "FlowId", this.FlowId);
 
     }
 }

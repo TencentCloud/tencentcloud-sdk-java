@@ -38,7 +38,7 @@ public class CreateGatewayLoadBalancerRequest extends AbstractModel {
     private String SubnetId;
 
     /**
-    * 网关负载均衡实例名称。可支持输入1-60个字符，允许英文字母、数字、中文字符、“-”、“_”、“.”。不填写时默认自动生成。
+    * 网关负载均衡实例名称。可支持输入1-60个字符。不填写时默认自动生成。
     */
     @SerializedName("LoadBalancerName")
     @Expose
@@ -98,16 +98,16 @@ public class CreateGatewayLoadBalancerRequest extends AbstractModel {
     }
 
     /**
-     * Get 网关负载均衡实例名称。可支持输入1-60个字符，允许英文字母、数字、中文字符、“-”、“_”、“.”。不填写时默认自动生成。 
-     * @return LoadBalancerName 网关负载均衡实例名称。可支持输入1-60个字符，允许英文字母、数字、中文字符、“-”、“_”、“.”。不填写时默认自动生成。
+     * Get 网关负载均衡实例名称。可支持输入1-60个字符。不填写时默认自动生成。 
+     * @return LoadBalancerName 网关负载均衡实例名称。可支持输入1-60个字符。不填写时默认自动生成。
      */
     public String getLoadBalancerName() {
         return this.LoadBalancerName;
     }
 
     /**
-     * Set 网关负载均衡实例名称。可支持输入1-60个字符，允许英文字母、数字、中文字符、“-”、“_”、“.”。不填写时默认自动生成。
-     * @param LoadBalancerName 网关负载均衡实例名称。可支持输入1-60个字符，允许英文字母、数字、中文字符、“-”、“_”、“.”。不填写时默认自动生成。
+     * Set 网关负载均衡实例名称。可支持输入1-60个字符。不填写时默认自动生成。
+     * @param LoadBalancerName 网关负载均衡实例名称。可支持输入1-60个字符。不填写时默认自动生成。
      */
     public void setLoadBalancerName(String LoadBalancerName) {
         this.LoadBalancerName = LoadBalancerName;

@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class AssociationItem extends AbstractModel {
 
     /**
-    * 关联到的负载均衡ID
+    * 关联到的网关负载均衡实例ID
     */
     @SerializedName("LoadBalancerId")
     @Expose
     private String LoadBalancerId;
 
     /**
-    * 负载均衡名称
+    * 网关负载均衡实例名称
     */
     @SerializedName("LoadBalancerName")
     @Expose
     private String LoadBalancerName;
 
     /**
-     * Get 关联到的负载均衡ID 
-     * @return LoadBalancerId 关联到的负载均衡ID
+     * Get 关联到的网关负载均衡实例ID 
+     * @return LoadBalancerId 关联到的网关负载均衡实例ID
      */
     public String getLoadBalancerId() {
         return this.LoadBalancerId;
     }
 
     /**
-     * Set 关联到的负载均衡ID
-     * @param LoadBalancerId 关联到的负载均衡ID
+     * Set 关联到的网关负载均衡实例ID
+     * @param LoadBalancerId 关联到的网关负载均衡实例ID
      */
     public void setLoadBalancerId(String LoadBalancerId) {
         this.LoadBalancerId = LoadBalancerId;
     }
 
     /**
-     * Get 负载均衡名称 
-     * @return LoadBalancerName 负载均衡名称
+     * Get 网关负载均衡实例名称 
+     * @return LoadBalancerName 网关负载均衡实例名称
      */
     public String getLoadBalancerName() {
         return this.LoadBalancerName;
     }
 
     /**
-     * Set 负载均衡名称
-     * @param LoadBalancerName 负载均衡名称
+     * Set 网关负载均衡实例名称
+     * @param LoadBalancerName 网关负载均衡实例名称
      */
     public void setLoadBalancerName(String LoadBalancerName) {
         this.LoadBalancerName = LoadBalancerName;

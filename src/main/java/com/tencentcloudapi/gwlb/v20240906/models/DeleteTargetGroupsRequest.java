@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DeleteTargetGroupsRequest extends AbstractModel {
 
     /**
-    * 目标组列表。
+    * 目标组ID列表。
     */
     @SerializedName("TargetGroupIds")
     @Expose
     private String [] TargetGroupIds;
 
     /**
-     * Get 目标组列表。 
-     * @return TargetGroupIds 目标组列表。
+     * Get 目标组ID列表。 
+     * @return TargetGroupIds 目标组ID列表。
      */
     public String [] getTargetGroupIds() {
         return this.TargetGroupIds;
     }
 
     /**
-     * Set 目标组列表。
-     * @param TargetGroupIds 目标组列表。
+     * Set 目标组ID列表。
+     * @param TargetGroupIds 目标组ID列表。
      */
     public void setTargetGroupIds(String [] TargetGroupIds) {
         this.TargetGroupIds = TargetGroupIds;

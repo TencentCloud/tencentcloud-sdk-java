@@ -56,7 +56,7 @@ public class WebCallback extends AbstractModel {
 
     /**
     * 请求头。
-注意：该参数已废弃，请在<a href="https://cloud.tencent.com/document/product/614/56466">创建告警策略</a>接口CallBack参数中指定请求头。
+注意：该参数已废弃，请使用NoticeContentId。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Headers")
@@ -65,7 +65,7 @@ public class WebCallback extends AbstractModel {
 
     /**
     * 请求内容。
-注意：该参数已废弃，请在<a href="https://cloud.tencent.com/document/product/614/56466">创建告警策略</a>接口CallBack参数中指定请求内容。
+注意：该参数已废弃，请使用NoticeContentId。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Body")
@@ -80,6 +80,22 @@ public class WebCallback extends AbstractModel {
     @SerializedName("Index")
     @Expose
     private Long Index;
+
+    /**
+    * 通知内容模板ID。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NoticeContentId")
+    @Expose
+    private String NoticeContentId;
+
+    /**
+    * 集成配置ID。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("WebCallbackId")
+    @Expose
+    private String WebCallbackId;
 
     /**
      * Get 回调地址。最大支持1024个字节数。 
@@ -171,10 +187,10 @@ public class WebCallback extends AbstractModel {
 
     /**
      * Get 请求头。
-注意：该参数已废弃，请在<a href="https://cloud.tencent.com/document/product/614/56466">创建告警策略</a>接口CallBack参数中指定请求头。
+注意：该参数已废弃，请使用NoticeContentId。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Headers 请求头。
-注意：该参数已废弃，请在<a href="https://cloud.tencent.com/document/product/614/56466">创建告警策略</a>接口CallBack参数中指定请求头。
+注意：该参数已废弃，请使用NoticeContentId。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getHeaders() {
@@ -183,10 +199,10 @@ public class WebCallback extends AbstractModel {
 
     /**
      * Set 请求头。
-注意：该参数已废弃，请在<a href="https://cloud.tencent.com/document/product/614/56466">创建告警策略</a>接口CallBack参数中指定请求头。
+注意：该参数已废弃，请使用NoticeContentId。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Headers 请求头。
-注意：该参数已废弃，请在<a href="https://cloud.tencent.com/document/product/614/56466">创建告警策略</a>接口CallBack参数中指定请求头。
+注意：该参数已废弃，请使用NoticeContentId。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHeaders(String [] Headers) {
@@ -195,10 +211,10 @@ public class WebCallback extends AbstractModel {
 
     /**
      * Get 请求内容。
-注意：该参数已废弃，请在<a href="https://cloud.tencent.com/document/product/614/56466">创建告警策略</a>接口CallBack参数中指定请求内容。
+注意：该参数已废弃，请使用NoticeContentId。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Body 请求内容。
-注意：该参数已废弃，请在<a href="https://cloud.tencent.com/document/product/614/56466">创建告警策略</a>接口CallBack参数中指定请求内容。
+注意：该参数已废弃，请使用NoticeContentId。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBody() {
@@ -207,10 +223,10 @@ public class WebCallback extends AbstractModel {
 
     /**
      * Set 请求内容。
-注意：该参数已废弃，请在<a href="https://cloud.tencent.com/document/product/614/56466">创建告警策略</a>接口CallBack参数中指定请求内容。
+注意：该参数已废弃，请使用NoticeContentId。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Body 请求内容。
-注意：该参数已废弃，请在<a href="https://cloud.tencent.com/document/product/614/56466">创建告警策略</a>接口CallBack参数中指定请求内容。
+注意：该参数已废弃，请使用NoticeContentId。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBody(String Body) {
@@ -239,6 +255,46 @@ public class WebCallback extends AbstractModel {
      */
     public void setIndex(Long Index) {
         this.Index = Index;
+    }
+
+    /**
+     * Get 通知内容模板ID。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NoticeContentId 通知内容模板ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getNoticeContentId() {
+        return this.NoticeContentId;
+    }
+
+    /**
+     * Set 通知内容模板ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NoticeContentId 通知内容模板ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNoticeContentId(String NoticeContentId) {
+        this.NoticeContentId = NoticeContentId;
+    }
+
+    /**
+     * Get 集成配置ID。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WebCallbackId 集成配置ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getWebCallbackId() {
+        return this.WebCallbackId;
+    }
+
+    /**
+     * Set 集成配置ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WebCallbackId 集成配置ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWebCallbackId(String WebCallbackId) {
+        this.WebCallbackId = WebCallbackId;
     }
 
     public WebCallback() {
@@ -270,6 +326,12 @@ public class WebCallback extends AbstractModel {
         if (source.Index != null) {
             this.Index = new Long(source.Index);
         }
+        if (source.NoticeContentId != null) {
+            this.NoticeContentId = new String(source.NoticeContentId);
+        }
+        if (source.WebCallbackId != null) {
+            this.WebCallbackId = new String(source.WebCallbackId);
+        }
     }
 
 
@@ -283,6 +345,8 @@ public class WebCallback extends AbstractModel {
         this.setParamArraySimple(map, prefix + "Headers.", this.Headers);
         this.setParamSimple(map, prefix + "Body", this.Body);
         this.setParamSimple(map, prefix + "Index", this.Index);
+        this.setParamSimple(map, prefix + "NoticeContentId", this.NoticeContentId);
+        this.setParamSimple(map, prefix + "WebCallbackId", this.WebCallbackId);
 
     }
 }
