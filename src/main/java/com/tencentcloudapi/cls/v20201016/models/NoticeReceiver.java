@@ -78,6 +78,14 @@ public class NoticeReceiver extends AbstractModel {
     private Long Index;
 
     /**
+    * 通知内容模板ID。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NoticeContentId")
+    @Expose
+    private String NoticeContentId;
+
+    /**
      * Get 接受者类型。可选值：
 -  Uin - 用户ID
 - Group - 用户组ID
@@ -221,6 +229,26 @@ public class NoticeReceiver extends AbstractModel {
         this.Index = Index;
     }
 
+    /**
+     * Get 通知内容模板ID。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NoticeContentId 通知内容模板ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getNoticeContentId() {
+        return this.NoticeContentId;
+    }
+
+    /**
+     * Set 通知内容模板ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NoticeContentId 通知内容模板ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNoticeContentId(String NoticeContentId) {
+        this.NoticeContentId = NoticeContentId;
+    }
+
     public NoticeReceiver() {
     }
 
@@ -253,6 +281,9 @@ public class NoticeReceiver extends AbstractModel {
         if (source.Index != null) {
             this.Index = new Long(source.Index);
         }
+        if (source.NoticeContentId != null) {
+            this.NoticeContentId = new String(source.NoticeContentId);
+        }
     }
 
 
@@ -266,6 +297,7 @@ public class NoticeReceiver extends AbstractModel {
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "Index", this.Index);
+        this.setParamSimple(map, prefix + "NoticeContentId", this.NoticeContentId);
 
     }
 }

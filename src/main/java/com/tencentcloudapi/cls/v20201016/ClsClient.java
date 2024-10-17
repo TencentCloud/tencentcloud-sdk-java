@@ -270,6 +270,17 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
+     *该接口用于创建通知内容。
+     * @param req CreateNoticeContentRequest
+     * @return CreateNoticeContentResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateNoticeContentResponse CreateNoticeContent(CreateNoticeContentRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateNoticeContent", CreateNoticeContentResponse.class);
+    }
+
+    /**
      *本接口用于创建定时SQL分析任务
      * @param req CreateScheduledSqlRequest
      * @return CreateScheduledSqlResponse
@@ -476,6 +487,17 @@ public class ClsClient extends AbstractClient{
     public DeleteMachineGroupInfoResponse DeleteMachineGroupInfo(DeleteMachineGroupInfoRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteMachineGroupInfo", DeleteMachineGroupInfoResponse.class);
+    }
+
+    /**
+     *该接口用于删除通知内容配置
+     * @param req DeleteNoticeContentRequest
+     * @return DeleteNoticeContentResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteNoticeContentResponse DeleteNoticeContent(DeleteNoticeContentRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteNoticeContent", DeleteNoticeContentResponse.class);
     }
 
     /**
@@ -766,6 +788,17 @@ API返回数据包最大49MB，建议启用 gzip 压缩（HTTP Request Header Ac
     }
 
     /**
+     *获取通知内容列表
+     * @param req DescribeNoticeContentsRequest
+     * @return DescribeNoticeContentsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeNoticeContentsResponse DescribeNoticeContents(DescribeNoticeContentsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeNoticeContents", DescribeNoticeContentsResponse.class);
+    }
+
+    /**
      *该接口已废弃，如需获取分区数量，请使用DescribeTopics接口。
      * @param req DescribePartitionsRequest
      * @return DescribePartitionsResponse
@@ -1005,6 +1038,17 @@ API返回数据包最大49MB，建议启用 gzip 压缩（HTTP Request Header Ac
     public ModifyMachineGroupResponse ModifyMachineGroup(ModifyMachineGroupRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyMachineGroup", ModifyMachineGroupResponse.class);
+    }
+
+    /**
+     *该接口用于修改通知内容配置
+     * @param req ModifyNoticeContentRequest
+     * @return ModifyNoticeContentResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyNoticeContentResponse ModifyNoticeContent(ModifyNoticeContentRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyNoticeContent", ModifyNoticeContentResponse.class);
     }
 
     /**

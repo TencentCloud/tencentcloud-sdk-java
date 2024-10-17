@@ -78,6 +78,14 @@ public class Ability extends AbstractModel {
     private String NoSupportTransparentDataEncryptionReason;
 
     /**
+    * 是否支持手动发起逻辑备份
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsSupportManualLogic")
+    @Expose
+    private String IsSupportManualLogic;
+
+    /**
      * Get 是否支持从可用区 
      * @return IsSupportSlaveZone 是否支持从可用区
      */
@@ -209,6 +217,26 @@ public class Ability extends AbstractModel {
         this.NoSupportTransparentDataEncryptionReason = NoSupportTransparentDataEncryptionReason;
     }
 
+    /**
+     * Get 是否支持手动发起逻辑备份
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsSupportManualLogic 是否支持手动发起逻辑备份
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getIsSupportManualLogic() {
+        return this.IsSupportManualLogic;
+    }
+
+    /**
+     * Set 是否支持手动发起逻辑备份
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsSupportManualLogic 是否支持手动发起逻辑备份
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsSupportManualLogic(String IsSupportManualLogic) {
+        this.IsSupportManualLogic = IsSupportManualLogic;
+    }
+
     public Ability() {
     }
 
@@ -238,6 +266,9 @@ public class Ability extends AbstractModel {
         if (source.NoSupportTransparentDataEncryptionReason != null) {
             this.NoSupportTransparentDataEncryptionReason = new String(source.NoSupportTransparentDataEncryptionReason);
         }
+        if (source.IsSupportManualLogic != null) {
+            this.IsSupportManualLogic = new String(source.IsSupportManualLogic);
+        }
     }
 
 
@@ -252,6 +283,7 @@ public class Ability extends AbstractModel {
         this.setParamSimple(map, prefix + "IsSupportManualSnapshot", this.IsSupportManualSnapshot);
         this.setParamSimple(map, prefix + "IsSupportTransparentDataEncryption", this.IsSupportTransparentDataEncryption);
         this.setParamSimple(map, prefix + "NoSupportTransparentDataEncryptionReason", this.NoSupportTransparentDataEncryptionReason);
+        this.setParamSimple(map, prefix + "IsSupportManualLogic", this.IsSupportManualLogic);
 
     }
 }

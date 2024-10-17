@@ -50,6 +50,17 @@ public class PrivatednsClient extends AbstractClient{
     }
 
     /**
+     *创建终端节点
+     * @param req CreateEndPointRequest
+     * @return CreateEndPointResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateEndPointResponse CreateEndPoint(CreateEndPointRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateEndPoint", CreateEndPointResponse.class);
+    }
+
+    /**
      *创建私有域解析账号
      * @param req CreatePrivateDNSAccountRequest
      * @return CreatePrivateDNSAccountResponse

@@ -204,6 +204,28 @@ public class DetectInfoText extends AbstractModel {
     private DetectDetail [] LivenessDetail;
 
     /**
+    * 描述当前请求活体阶段被拒绝的详细原因，详情如下：
+01-用户全程闭眼
+02-用户未完成指定动作
+03-疑似翻拍攻击
+04-疑似合成攻击
+05-疑似黑产模版
+06-疑似存在水印
+07-反光校验未通过
+08-疑似中途换人
+09-人脸质量过差
+10-距离校验不通过
+11-疑似对抗样本攻击
+12-嘴巴区域疑似存在攻击痕迹
+13-眼睛区域疑似存在攻击痕迹
+14-眼睛或嘴巴被遮挡
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LivenessInfoTag")
+    @Expose
+    private String [] LivenessInfoTag;
+
+    /**
     * 手机号码。
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -725,6 +747,82 @@ public class DetectInfoText extends AbstractModel {
     }
 
     /**
+     * Get 描述当前请求活体阶段被拒绝的详细原因，详情如下：
+01-用户全程闭眼
+02-用户未完成指定动作
+03-疑似翻拍攻击
+04-疑似合成攻击
+05-疑似黑产模版
+06-疑似存在水印
+07-反光校验未通过
+08-疑似中途换人
+09-人脸质量过差
+10-距离校验不通过
+11-疑似对抗样本攻击
+12-嘴巴区域疑似存在攻击痕迹
+13-眼睛区域疑似存在攻击痕迹
+14-眼睛或嘴巴被遮挡
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LivenessInfoTag 描述当前请求活体阶段被拒绝的详细原因，详情如下：
+01-用户全程闭眼
+02-用户未完成指定动作
+03-疑似翻拍攻击
+04-疑似合成攻击
+05-疑似黑产模版
+06-疑似存在水印
+07-反光校验未通过
+08-疑似中途换人
+09-人脸质量过差
+10-距离校验不通过
+11-疑似对抗样本攻击
+12-嘴巴区域疑似存在攻击痕迹
+13-眼睛区域疑似存在攻击痕迹
+14-眼睛或嘴巴被遮挡
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getLivenessInfoTag() {
+        return this.LivenessInfoTag;
+    }
+
+    /**
+     * Set 描述当前请求活体阶段被拒绝的详细原因，详情如下：
+01-用户全程闭眼
+02-用户未完成指定动作
+03-疑似翻拍攻击
+04-疑似合成攻击
+05-疑似黑产模版
+06-疑似存在水印
+07-反光校验未通过
+08-疑似中途换人
+09-人脸质量过差
+10-距离校验不通过
+11-疑似对抗样本攻击
+12-嘴巴区域疑似存在攻击痕迹
+13-眼睛区域疑似存在攻击痕迹
+14-眼睛或嘴巴被遮挡
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LivenessInfoTag 描述当前请求活体阶段被拒绝的详细原因，详情如下：
+01-用户全程闭眼
+02-用户未完成指定动作
+03-疑似翻拍攻击
+04-疑似合成攻击
+05-疑似黑产模版
+06-疑似存在水印
+07-反光校验未通过
+08-疑似中途换人
+09-人脸质量过差
+10-距离校验不通过
+11-疑似对抗样本攻击
+12-嘴巴区域疑似存在攻击痕迹
+13-眼睛区域疑似存在攻击痕迹
+14-眼睛或嘴巴被遮挡
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLivenessInfoTag(String [] LivenessInfoTag) {
+        this.LivenessInfoTag = LivenessInfoTag;
+    }
+
+    /**
      * Get 手机号码。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Mobile 手机号码。
@@ -977,6 +1075,12 @@ public class DetectInfoText extends AbstractModel {
                 this.LivenessDetail[i] = new DetectDetail(source.LivenessDetail[i]);
             }
         }
+        if (source.LivenessInfoTag != null) {
+            this.LivenessInfoTag = new String[source.LivenessInfoTag.length];
+            for (int i = 0; i < source.LivenessInfoTag.length; i++) {
+                this.LivenessInfoTag[i] = new String(source.LivenessInfoTag[i]);
+            }
+        }
         if (source.Mobile != null) {
             this.Mobile = new String(source.Mobile);
         }
@@ -1030,6 +1134,7 @@ public class DetectInfoText extends AbstractModel {
         this.setParamSimple(map, prefix + "Location", this.Location);
         this.setParamSimple(map, prefix + "Extra", this.Extra);
         this.setParamArrayObj(map, prefix + "LivenessDetail.", this.LivenessDetail);
+        this.setParamArraySimple(map, prefix + "LivenessInfoTag.", this.LivenessInfoTag);
         this.setParamSimple(map, prefix + "Mobile", this.Mobile);
         this.setParamSimple(map, prefix + "CompareLibType", this.CompareLibType);
         this.setParamSimple(map, prefix + "LivenessMode", this.LivenessMode);

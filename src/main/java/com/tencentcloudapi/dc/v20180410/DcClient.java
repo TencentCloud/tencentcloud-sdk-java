@@ -61,6 +61,17 @@ public class DcClient extends AbstractClient{
     }
 
     /**
+     *创建敏捷上云服务
+     * @param req CreateCloudAttachServiceRequest
+     * @return CreateCloudAttachServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCloudAttachServiceResponse CreateCloudAttachService(CreateCloudAttachServiceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateCloudAttachService", CreateCloudAttachServiceResponse.class);
+    }
+
+    /**
      *申请物理专线接入。
 调用该接口时，请注意：
 账号要进行实名认证，否则不允许申请物理专线；

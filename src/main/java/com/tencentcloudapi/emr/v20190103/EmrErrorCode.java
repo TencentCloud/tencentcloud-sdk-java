@@ -360,7 +360,7 @@ public enum EmrErrorCode {
     // 无效的Tke集群ID，或Tke集群不符合条件。
      INVALIDPARAMETER_INVALIDTKEINSTANCE("InvalidParameter.InvalidTkeInstance"),
      
-    // 父帐号uin参数输入异常。
+    // 父账号uin参数输入异常。
      INVALIDPARAMETER_INVALIDUINNUM("InvalidParameter.InvalidUinNum"),
      
     // 无效的统一元数据库。

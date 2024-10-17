@@ -62,6 +62,13 @@ zh(简体中文)、en(英语)、ar(阿拉伯语)、de(德语)、es(西班牙语)
     private String AudioUrl;
 
     /**
+    * 是否需要去除VideoUrl或AudioUrl中背景音，取值范围：0-不需要，1-需要，默认0 。
+    */
+    @SerializedName("RemoveVocal")
+    @Expose
+    private Long RemoveVocal;
+
+    /**
     * 是否需要确认翻译结果0：不需要，1：需要
     */
     @SerializedName("Confirm")
@@ -191,6 +198,22 @@ zh(简体中文)、en(英语)、ar(阿拉伯语)、de(德语)、es(西班牙语)
     }
 
     /**
+     * Get 是否需要去除VideoUrl或AudioUrl中背景音，取值范围：0-不需要，1-需要，默认0 。 
+     * @return RemoveVocal 是否需要去除VideoUrl或AudioUrl中背景音，取值范围：0-不需要，1-需要，默认0 。
+     */
+    public Long getRemoveVocal() {
+        return this.RemoveVocal;
+    }
+
+    /**
+     * Set 是否需要去除VideoUrl或AudioUrl中背景音，取值范围：0-不需要，1-需要，默认0 。
+     * @param RemoveVocal 是否需要去除VideoUrl或AudioUrl中背景音，取值范围：0-不需要，1-需要，默认0 。
+     */
+    public void setRemoveVocal(Long RemoveVocal) {
+        this.RemoveVocal = RemoveVocal;
+    }
+
+    /**
      * Get 是否需要确认翻译结果0：不需要，1：需要 
      * @return Confirm 是否需要确认翻译结果0：不需要，1：需要
      */
@@ -274,6 +297,9 @@ zh(简体中文)、en(英语)、ar(阿拉伯语)、de(德语)、es(西班牙语)
         if (source.AudioUrl != null) {
             this.AudioUrl = new String(source.AudioUrl);
         }
+        if (source.RemoveVocal != null) {
+            this.RemoveVocal = new Long(source.RemoveVocal);
+        }
         if (source.Confirm != null) {
             this.Confirm = new Long(source.Confirm);
         }
@@ -294,6 +320,7 @@ zh(简体中文)、en(英语)、ar(阿拉伯语)、de(德语)、es(西班牙语)
         this.setParamSimple(map, prefix + "SrcLang", this.SrcLang);
         this.setParamSimple(map, prefix + "DstLang", this.DstLang);
         this.setParamSimple(map, prefix + "AudioUrl", this.AudioUrl);
+        this.setParamSimple(map, prefix + "RemoveVocal", this.RemoveVocal);
         this.setParamSimple(map, prefix + "Confirm", this.Confirm);
         this.setParamSimple(map, prefix + "LipSync", this.LipSync);
         this.setParamSimple(map, prefix + "VoiceType", this.VoiceType);

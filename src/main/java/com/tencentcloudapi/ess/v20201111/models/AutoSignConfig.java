@@ -80,10 +80,9 @@ public class AutoSignConfig extends AbstractModel {
     private String [] VerifyChannels;
 
     /**
-    * 设置用户开通自动签时是否绑定个人自动签账号许可。
+    * 设置用户自动签合同的扣费方式。
 
-<ul><li>**0**: (默认) 使用个人自动签账号许可进行开通，个人自动签账号许可有效期1年，注: `不可解绑释放更换他人`</li>
-<li>**1**: 不绑定自动签账号许可开通，后续使用合同份额进行合同发起</li></ul>
+<ul><li><b>1</b>: (默认)使用合同份额进行扣减</li></ul>
     */
     @SerializedName("LicenseType")
     @Expose
@@ -262,28 +261,24 @@ public class AutoSignConfig extends AbstractModel {
     }
 
     /**
-     * Get 设置用户开通自动签时是否绑定个人自动签账号许可。
+     * Get 设置用户自动签合同的扣费方式。
 
-<ul><li>**0**: (默认) 使用个人自动签账号许可进行开通，个人自动签账号许可有效期1年，注: `不可解绑释放更换他人`</li>
-<li>**1**: 不绑定自动签账号许可开通，后续使用合同份额进行合同发起</li></ul> 
-     * @return LicenseType 设置用户开通自动签时是否绑定个人自动签账号许可。
+<ul><li><b>1</b>: (默认)使用合同份额进行扣减</li></ul> 
+     * @return LicenseType 设置用户自动签合同的扣费方式。
 
-<ul><li>**0**: (默认) 使用个人自动签账号许可进行开通，个人自动签账号许可有效期1年，注: `不可解绑释放更换他人`</li>
-<li>**1**: 不绑定自动签账号许可开通，后续使用合同份额进行合同发起</li></ul>
+<ul><li><b>1</b>: (默认)使用合同份额进行扣减</li></ul>
      */
     public Long getLicenseType() {
         return this.LicenseType;
     }
 
     /**
-     * Set 设置用户开通自动签时是否绑定个人自动签账号许可。
+     * Set 设置用户自动签合同的扣费方式。
 
-<ul><li>**0**: (默认) 使用个人自动签账号许可进行开通，个人自动签账号许可有效期1年，注: `不可解绑释放更换他人`</li>
-<li>**1**: 不绑定自动签账号许可开通，后续使用合同份额进行合同发起</li></ul>
-     * @param LicenseType 设置用户开通自动签时是否绑定个人自动签账号许可。
+<ul><li><b>1</b>: (默认)使用合同份额进行扣减</li></ul>
+     * @param LicenseType 设置用户自动签合同的扣费方式。
 
-<ul><li>**0**: (默认) 使用个人自动签账号许可进行开通，个人自动签账号许可有效期1年，注: `不可解绑释放更换他人`</li>
-<li>**1**: 不绑定自动签账号许可开通，后续使用合同份额进行合同发起</li></ul>
+<ul><li><b>1</b>: (默认)使用合同份额进行扣减</li></ul>
      */
     public void setLicenseType(Long LicenseType) {
         this.LicenseType = LicenseType;

@@ -43,6 +43,15 @@ public class MonitorTime extends AbstractModel {
     private Long Time;
 
     /**
+    * 执行的周期cron表达式。示例：`"* /1 * * * *"` 从左到右每个field的含义 Minutes field, Hours field,Day of month field,Month field,Day of week field， 不支持秒级别。
+当type为`Cron`时，CronExpression字段生效。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CronExpression")
+    @Expose
+    private String CronExpression;
+
+    /**
      * Get 执行周期， 可选值：`Period`、`Fixed`、`Cron`。
 
 - Period：固定频率
@@ -94,6 +103,30 @@ public class MonitorTime extends AbstractModel {
         this.Time = Time;
     }
 
+    /**
+     * Get 执行的周期cron表达式。示例：`"* /1 * * * *"` 从左到右每个field的含义 Minutes field, Hours field,Day of month field,Month field,Day of week field， 不支持秒级别。
+当type为`Cron`时，CronExpression字段生效。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CronExpression 执行的周期cron表达式。示例：`"* /1 * * * *"` 从左到右每个field的含义 Minutes field, Hours field,Day of month field,Month field,Day of week field， 不支持秒级别。
+当type为`Cron`时，CronExpression字段生效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCronExpression() {
+        return this.CronExpression;
+    }
+
+    /**
+     * Set 执行的周期cron表达式。示例：`"* /1 * * * *"` 从左到右每个field的含义 Minutes field, Hours field,Day of month field,Month field,Day of week field， 不支持秒级别。
+当type为`Cron`时，CronExpression字段生效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CronExpression 执行的周期cron表达式。示例：`"* /1 * * * *"` 从左到右每个field的含义 Minutes field, Hours field,Day of month field,Month field,Day of week field， 不支持秒级别。
+当type为`Cron`时，CronExpression字段生效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCronExpression(String CronExpression) {
+        this.CronExpression = CronExpression;
+    }
+
     public MonitorTime() {
     }
 
@@ -108,6 +141,9 @@ public class MonitorTime extends AbstractModel {
         if (source.Time != null) {
             this.Time = new Long(source.Time);
         }
+        if (source.CronExpression != null) {
+            this.CronExpression = new String(source.CronExpression);
+        }
     }
 
 
@@ -117,6 +153,7 @@ public class MonitorTime extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "Time", this.Time);
+        this.setParamSimple(map, prefix + "CronExpression", this.CronExpression);
 
     }
 }
