@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class QueryApiKeyResponse extends AbstractModel {
 
     /**
-    * 密钥ID列表
+    * 密钥ID列表。
     */
     @SerializedName("IdKeys")
     @Expose
@@ -38,16 +38,16 @@ public class QueryApiKeyResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 密钥ID列表 
-     * @return IdKeys 密钥ID列表
+     * Get 密钥ID列表。 
+     * @return IdKeys 密钥ID列表。
      */
     public ApiKey [] getIdKeys() {
         return this.IdKeys;
     }
 
     /**
-     * Set 密钥ID列表
-     * @param IdKeys 密钥ID列表
+     * Set 密钥ID列表。
+     * @param IdKeys 密钥ID列表。
      */
     public void setIdKeys(ApiKey [] IdKeys) {
         this.IdKeys = IdKeys;

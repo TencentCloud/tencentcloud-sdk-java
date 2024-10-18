@@ -240,6 +240,17 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
+     *查询HDFS存储文件信息
+     * @param req DescribeHDFSStorageInfoRequest
+     * @return DescribeHDFSStorageInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeHDFSStorageInfoResponse DescribeHDFSStorageInfo(DescribeHDFSStorageInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeHDFSStorageInfo", DescribeHDFSStorageInfoResponse.class);
+    }
+
+    /**
      *获取hive查询信息
      * @param req DescribeHiveQueriesRequest
      * @return DescribeHiveQueriesResponse
@@ -317,6 +328,17 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
+     *查询Kyuubi查询信息
+     * @param req DescribeKyuubiQueryInfoRequest
+     * @return DescribeKyuubiQueryInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeKyuubiQueryInfoResponse DescribeKyuubiQueryInfo(DescribeKyuubiQueryInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeKyuubiQueryInfo", DescribeKyuubiQueryInfoResponse.class);
+    }
+
+    /**
      *查询YARN资源调度数据信息。已废弃，请使用`DescribeYarnQueue`去查询队列信息。
      * @param req DescribeResourceScheduleRequest
      * @return DescribeResourceScheduleResponse
@@ -369,6 +391,28 @@ public class EmrClient extends AbstractClient{
     public DescribeServiceNodeInfosResponse DescribeServiceNodeInfos(DescribeServiceNodeInfosRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeServiceNodeInfos", DescribeServiceNodeInfosResponse.class);
+    }
+
+    /**
+     *查询Spark查询信息列表
+     * @param req DescribeSparkQueriesRequest
+     * @return DescribeSparkQueriesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSparkQueriesResponse DescribeSparkQueries(DescribeSparkQueriesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSparkQueries", DescribeSparkQueriesResponse.class);
+    }
+
+    /**
+     *查询StarRocks查询信息
+     * @param req DescribeStarRocksQueryInfoRequest
+     * @return DescribeStarRocksQueryInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeStarRocksQueryInfoResponse DescribeStarRocksQueryInfo(DescribeStarRocksQueryInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeStarRocksQueryInfo", DescribeStarRocksQueryInfoResponse.class);
     }
 
     /**

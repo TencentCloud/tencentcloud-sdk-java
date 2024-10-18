@@ -31,6 +31,16 @@ public class DescribeBackUpJobRequest extends AbstractModel {
     private String InstanceId;
 
     /**
+    * 任务类型：
+0-不限制，或使用TypeFilters过滤；
+1-备份恢复（包括周期备份和一次性备份）；
+2-数据迁移（包括跨集群迁移和cos迁移）	
+    */
+    @SerializedName("ApplicationType")
+    @Expose
+    private Long ApplicationType;
+
+    /**
     * 分页大小
     */
     @SerializedName("PageSize")
@@ -79,6 +89,34 @@ public class DescribeBackUpJobRequest extends AbstractModel {
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
+    }
+
+    /**
+     * Get 任务类型：
+0-不限制，或使用TypeFilters过滤；
+1-备份恢复（包括周期备份和一次性备份）；
+2-数据迁移（包括跨集群迁移和cos迁移）	 
+     * @return ApplicationType 任务类型：
+0-不限制，或使用TypeFilters过滤；
+1-备份恢复（包括周期备份和一次性备份）；
+2-数据迁移（包括跨集群迁移和cos迁移）	
+     */
+    public Long getApplicationType() {
+        return this.ApplicationType;
+    }
+
+    /**
+     * Set 任务类型：
+0-不限制，或使用TypeFilters过滤；
+1-备份恢复（包括周期备份和一次性备份）；
+2-数据迁移（包括跨集群迁移和cos迁移）	
+     * @param ApplicationType 任务类型：
+0-不限制，或使用TypeFilters过滤；
+1-备份恢复（包括周期备份和一次性备份）；
+2-数据迁移（包括跨集群迁移和cos迁移）	
+     */
+    public void setApplicationType(Long ApplicationType) {
+        this.ApplicationType = ApplicationType;
     }
 
     /**
@@ -172,6 +210,9 @@ public class DescribeBackUpJobRequest extends AbstractModel {
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }
+        if (source.ApplicationType != null) {
+            this.ApplicationType = new Long(source.ApplicationType);
+        }
         if (source.PageSize != null) {
             this.PageSize = new Long(source.PageSize);
         }
@@ -195,6 +236,7 @@ public class DescribeBackUpJobRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "ApplicationType", this.ApplicationType);
         this.setParamSimple(map, prefix + "PageSize", this.PageSize);
         this.setParamSimple(map, prefix + "PageNum", this.PageNum);
         this.setParamSimple(map, prefix + "BeginTime", this.BeginTime);

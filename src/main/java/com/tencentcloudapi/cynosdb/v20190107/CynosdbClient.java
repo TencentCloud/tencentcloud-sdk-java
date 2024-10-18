@@ -1194,7 +1194,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *本接口(ModifyDBInstanceSecurityGroups)用于修改实例绑定的安全组。
+     *本接口（ModifyDBInstanceSecurityGroups）用于修改实例绑定的安全组。
      * @param req ModifyDBInstanceSecurityGroupsRequest
      * @return ModifyDBInstanceSecurityGroupsResponse
      * @throws TencentCloudSDKException

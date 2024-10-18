@@ -32,7 +32,10 @@ public class DescribeBatchModifyTagsStatusResponse extends AbstractModel {
     private FailedResource [] FailedResources;
 
     /**
-    * 任务状态
+    * 任务状态：
+- running 运行中
+- failed 失败
+- done 成功
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
@@ -81,9 +84,15 @@ public class DescribeBatchModifyTagsStatusResponse extends AbstractModel {
     }
 
     /**
-     * Get 任务状态
+     * Get 任务状态：
+- running 运行中
+- failed 失败
+- done 成功
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Status 任务状态
+     * @return Status 任务状态：
+- running 运行中
+- failed 失败
+- done 成功
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
@@ -91,9 +100,15 @@ public class DescribeBatchModifyTagsStatusResponse extends AbstractModel {
     }
 
     /**
-     * Set 任务状态
+     * Set 任务状态：
+- running 运行中
+- failed 失败
+- done 成功
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Status 任务状态
+     * @param Status 任务状态：
+- running 运行中
+- failed 失败
+- done 成功
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {

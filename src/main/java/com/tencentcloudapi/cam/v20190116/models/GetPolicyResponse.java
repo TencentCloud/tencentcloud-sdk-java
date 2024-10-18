@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class GetPolicyResponse extends AbstractModel {
 
     /**
-    * 策略名
+    * 策略名。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PolicyName")
@@ -32,7 +32,7 @@ public class GetPolicyResponse extends AbstractModel {
     private String PolicyName;
 
     /**
-    * 策略描述
+    * 策略描述。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
@@ -40,7 +40,7 @@ public class GetPolicyResponse extends AbstractModel {
     private String Description;
 
     /**
-    * 1 表示自定义策略，2 表示预设策略
+    * 1 表示自定义策略，2 表示预设策略。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
@@ -48,7 +48,7 @@ public class GetPolicyResponse extends AbstractModel {
     private Long Type;
 
     /**
-    * 创建时间
+    * 策略创建时间。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AddTime")
@@ -56,7 +56,7 @@ public class GetPolicyResponse extends AbstractModel {
     private String AddTime;
 
     /**
-    * 最近更新时间
+    * 策略最近更新时间。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
@@ -64,7 +64,7 @@ public class GetPolicyResponse extends AbstractModel {
     private String UpdateTime;
 
     /**
-    * 策略文档
+    * 策略文档。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PolicyDocument")
@@ -72,7 +72,7 @@ public class GetPolicyResponse extends AbstractModel {
     private String PolicyDocument;
 
     /**
-    * 备注
+    * 备注。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PresetAlias")
@@ -80,7 +80,7 @@ public class GetPolicyResponse extends AbstractModel {
     private String PresetAlias;
 
     /**
-    * 是否服务相关策略
+    * 是否是服务相关策略，0代表不是服务相关策略，1代表是服务相关策略。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsServiceLinkedRolePolicy")
@@ -95,9 +95,9 @@ public class GetPolicyResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 策略名
+     * Get 策略名。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PolicyName 策略名
+     * @return PolicyName 策略名。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPolicyName() {
@@ -105,9 +105,9 @@ public class GetPolicyResponse extends AbstractModel {
     }
 
     /**
-     * Set 策略名
+     * Set 策略名。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PolicyName 策略名
+     * @param PolicyName 策略名。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPolicyName(String PolicyName) {
@@ -115,9 +115,9 @@ public class GetPolicyResponse extends AbstractModel {
     }
 
     /**
-     * Get 策略描述
+     * Get 策略描述。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Description 策略描述
+     * @return Description 策略描述。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
@@ -125,9 +125,9 @@ public class GetPolicyResponse extends AbstractModel {
     }
 
     /**
-     * Set 策略描述
+     * Set 策略描述。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Description 策略描述
+     * @param Description 策略描述。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
@@ -135,9 +135,9 @@ public class GetPolicyResponse extends AbstractModel {
     }
 
     /**
-     * Get 1 表示自定义策略，2 表示预设策略
+     * Get 1 表示自定义策略，2 表示预设策略。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Type 1 表示自定义策略，2 表示预设策略
+     * @return Type 1 表示自定义策略，2 表示预设策略。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getType() {
@@ -145,9 +145,9 @@ public class GetPolicyResponse extends AbstractModel {
     }
 
     /**
-     * Set 1 表示自定义策略，2 表示预设策略
+     * Set 1 表示自定义策略，2 表示预设策略。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Type 1 表示自定义策略，2 表示预设策略
+     * @param Type 1 表示自定义策略，2 表示预设策略。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(Long Type) {
@@ -155,9 +155,9 @@ public class GetPolicyResponse extends AbstractModel {
     }
 
     /**
-     * Get 创建时间
+     * Get 策略创建时间。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AddTime 创建时间
+     * @return AddTime 策略创建时间。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAddTime() {
@@ -165,9 +165,9 @@ public class GetPolicyResponse extends AbstractModel {
     }
 
     /**
-     * Set 创建时间
+     * Set 策略创建时间。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AddTime 创建时间
+     * @param AddTime 策略创建时间。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAddTime(String AddTime) {
@@ -175,9 +175,9 @@ public class GetPolicyResponse extends AbstractModel {
     }
 
     /**
-     * Get 最近更新时间
+     * Get 策略最近更新时间。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UpdateTime 最近更新时间
+     * @return UpdateTime 策略最近更新时间。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdateTime() {
@@ -185,9 +185,9 @@ public class GetPolicyResponse extends AbstractModel {
     }
 
     /**
-     * Set 最近更新时间
+     * Set 策略最近更新时间。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UpdateTime 最近更新时间
+     * @param UpdateTime 策略最近更新时间。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(String UpdateTime) {
@@ -195,9 +195,9 @@ public class GetPolicyResponse extends AbstractModel {
     }
 
     /**
-     * Get 策略文档
+     * Get 策略文档。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PolicyDocument 策略文档
+     * @return PolicyDocument 策略文档。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPolicyDocument() {
@@ -205,9 +205,9 @@ public class GetPolicyResponse extends AbstractModel {
     }
 
     /**
-     * Set 策略文档
+     * Set 策略文档。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PolicyDocument 策略文档
+     * @param PolicyDocument 策略文档。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPolicyDocument(String PolicyDocument) {
@@ -215,9 +215,9 @@ public class GetPolicyResponse extends AbstractModel {
     }
 
     /**
-     * Get 备注
+     * Get 备注。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PresetAlias 备注
+     * @return PresetAlias 备注。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPresetAlias() {
@@ -225,9 +225,9 @@ public class GetPolicyResponse extends AbstractModel {
     }
 
     /**
-     * Set 备注
+     * Set 备注。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PresetAlias 备注
+     * @param PresetAlias 备注。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPresetAlias(String PresetAlias) {
@@ -235,9 +235,9 @@ public class GetPolicyResponse extends AbstractModel {
     }
 
     /**
-     * Get 是否服务相关策略
+     * Get 是否是服务相关策略，0代表不是服务相关策略，1代表是服务相关策略。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IsServiceLinkedRolePolicy 是否服务相关策略
+     * @return IsServiceLinkedRolePolicy 是否是服务相关策略，0代表不是服务相关策略，1代表是服务相关策略。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsServiceLinkedRolePolicy() {
@@ -245,9 +245,9 @@ public class GetPolicyResponse extends AbstractModel {
     }
 
     /**
-     * Set 是否服务相关策略
+     * Set 是否是服务相关策略，0代表不是服务相关策略，1代表是服务相关策略。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IsServiceLinkedRolePolicy 是否服务相关策略
+     * @param IsServiceLinkedRolePolicy 是否是服务相关策略，0代表不是服务相关策略，1代表是服务相关策略。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsServiceLinkedRolePolicy(Long IsServiceLinkedRolePolicy) {

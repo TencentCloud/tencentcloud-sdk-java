@@ -38,6 +38,27 @@ public class DescribeSecLogJoinObjectListResponse extends AbstractModel {
     private SecLogJoinObjectInfo [] List;
 
     /**
+    * 日志节点范围类型,0自选 1全部
+    */
+    @SerializedName("RangeType")
+    @Expose
+    private Long RangeType;
+
+    /**
+    * 新增资产是否自动加入，节点范围为全部时生效
+    */
+    @SerializedName("AutoJoin")
+    @Expose
+    private Boolean AutoJoin;
+
+    /**
+    * 剔除节点数
+    */
+    @SerializedName("ExcludedCount")
+    @Expose
+    private Long ExcludedCount;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -77,6 +98,54 @@ public class DescribeSecLogJoinObjectListResponse extends AbstractModel {
     }
 
     /**
+     * Get 日志节点范围类型,0自选 1全部 
+     * @return RangeType 日志节点范围类型,0自选 1全部
+     */
+    public Long getRangeType() {
+        return this.RangeType;
+    }
+
+    /**
+     * Set 日志节点范围类型,0自选 1全部
+     * @param RangeType 日志节点范围类型,0自选 1全部
+     */
+    public void setRangeType(Long RangeType) {
+        this.RangeType = RangeType;
+    }
+
+    /**
+     * Get 新增资产是否自动加入，节点范围为全部时生效 
+     * @return AutoJoin 新增资产是否自动加入，节点范围为全部时生效
+     */
+    public Boolean getAutoJoin() {
+        return this.AutoJoin;
+    }
+
+    /**
+     * Set 新增资产是否自动加入，节点范围为全部时生效
+     * @param AutoJoin 新增资产是否自动加入，节点范围为全部时生效
+     */
+    public void setAutoJoin(Boolean AutoJoin) {
+        this.AutoJoin = AutoJoin;
+    }
+
+    /**
+     * Get 剔除节点数 
+     * @return ExcludedCount 剔除节点数
+     */
+    public Long getExcludedCount() {
+        return this.ExcludedCount;
+    }
+
+    /**
+     * Set 剔除节点数
+     * @param ExcludedCount 剔除节点数
+     */
+    public void setExcludedCount(Long ExcludedCount) {
+        this.ExcludedCount = ExcludedCount;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -109,6 +178,15 @@ public class DescribeSecLogJoinObjectListResponse extends AbstractModel {
                 this.List[i] = new SecLogJoinObjectInfo(source.List[i]);
             }
         }
+        if (source.RangeType != null) {
+            this.RangeType = new Long(source.RangeType);
+        }
+        if (source.AutoJoin != null) {
+            this.AutoJoin = new Boolean(source.AutoJoin);
+        }
+        if (source.ExcludedCount != null) {
+            this.ExcludedCount = new Long(source.ExcludedCount);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -121,6 +199,9 @@ public class DescribeSecLogJoinObjectListResponse extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamArrayObj(map, prefix + "List.", this.List);
+        this.setParamSimple(map, prefix + "RangeType", this.RangeType);
+        this.setParamSimple(map, prefix + "AutoJoin", this.AutoJoin);
+        this.setParamSimple(map, prefix + "ExcludedCount", this.ExcludedCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

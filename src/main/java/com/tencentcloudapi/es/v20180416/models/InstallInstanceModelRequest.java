@@ -31,7 +31,7 @@ public class InstallInstanceModelRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * 客户上传到自己cos的地址列表
+    * 客户上传到cos的模型地址，单次请求限制一个。cos文件为压缩文件，格式包括：zip、tgz和tar.gz
     */
     @SerializedName("UsrCosModelUrlList")
     @Expose
@@ -54,16 +54,16 @@ public class InstallInstanceModelRequest extends AbstractModel {
     }
 
     /**
-     * Get 客户上传到自己cos的地址列表 
-     * @return UsrCosModelUrlList 客户上传到自己cos的地址列表
+     * Get 客户上传到cos的模型地址，单次请求限制一个。cos文件为压缩文件，格式包括：zip、tgz和tar.gz 
+     * @return UsrCosModelUrlList 客户上传到cos的模型地址，单次请求限制一个。cos文件为压缩文件，格式包括：zip、tgz和tar.gz
      */
     public String [] getUsrCosModelUrlList() {
         return this.UsrCosModelUrlList;
     }
 
     /**
-     * Set 客户上传到自己cos的地址列表
-     * @param UsrCosModelUrlList 客户上传到自己cos的地址列表
+     * Set 客户上传到cos的模型地址，单次请求限制一个。cos文件为压缩文件，格式包括：zip、tgz和tar.gz
+     * @param UsrCosModelUrlList 客户上传到cos的模型地址，单次请求限制一个。cos文件为压缩文件，格式包括：zip、tgz和tar.gz
      */
     public void setUsrCosModelUrlList(String [] UsrCosModelUrlList) {
         this.UsrCosModelUrlList = UsrCosModelUrlList;

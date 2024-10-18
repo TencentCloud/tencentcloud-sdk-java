@@ -31,7 +31,7 @@ public class DescribeTopL7AnalysisDataResponse extends AbstractModel {
     private Long TotalCount;
 
     /**
-    * 七层流量前topN数据列表。
+    * 七层访问数据按照 MetricName 指定统计维度的前 topN 数据列表。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
@@ -62,9 +62,9 @@ public class DescribeTopL7AnalysisDataResponse extends AbstractModel {
     }
 
     /**
-     * Get 七层流量前topN数据列表。
+     * Get 七层访问数据按照 MetricName 指定统计维度的前 topN 数据列表。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Data 七层流量前topN数据列表。
+     * @return Data 七层访问数据按照 MetricName 指定统计维度的前 topN 数据列表。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public TopDataRecord [] getData() {
@@ -72,9 +72,9 @@ public class DescribeTopL7AnalysisDataResponse extends AbstractModel {
     }
 
     /**
-     * Set 七层流量前topN数据列表。
+     * Set 七层访问数据按照 MetricName 指定统计维度的前 topN 数据列表。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Data 七层流量前topN数据列表。
+     * @param Data 七层访问数据按照 MetricName 指定统计维度的前 topN 数据列表。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(TopDataRecord [] Data) {

@@ -171,6 +171,14 @@ public class ActionLibraryListResult extends AbstractModel {
     private Boolean IsNewAction;
 
     /**
+    * 对象类型ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ObjectTypeId")
+    @Expose
+    private Long ObjectTypeId;
+
+    /**
      * Get 动作名称 
      * @return ActionName 动作名称
      */
@@ -518,6 +526,26 @@ public class ActionLibraryListResult extends AbstractModel {
         this.IsNewAction = IsNewAction;
     }
 
+    /**
+     * Get 对象类型ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ObjectTypeId 对象类型ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getObjectTypeId() {
+        return this.ObjectTypeId;
+    }
+
+    /**
+     * Set 对象类型ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ObjectTypeId 对象类型ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setObjectTypeId(Long ObjectTypeId) {
+        this.ObjectTypeId = ObjectTypeId;
+    }
+
     public ActionLibraryListResult() {
     }
 
@@ -589,6 +617,9 @@ public class ActionLibraryListResult extends AbstractModel {
         if (source.IsNewAction != null) {
             this.IsNewAction = new Boolean(source.IsNewAction);
         }
+        if (source.ObjectTypeId != null) {
+            this.ObjectTypeId = new Long(source.ObjectTypeId);
+        }
     }
 
 
@@ -616,6 +647,7 @@ public class ActionLibraryListResult extends AbstractModel {
         this.setParamSimple(map, prefix + "ObjectType", this.ObjectType);
         this.setParamArraySimple(map, prefix + "MetricIdList.", this.MetricIdList);
         this.setParamSimple(map, prefix + "IsNewAction", this.IsNewAction);
+        this.setParamSimple(map, prefix + "ObjectTypeId", this.ObjectTypeId);
 
     }
 }

@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class QueryApiKeyRequest extends AbstractModel {
 
     /**
-    * 待查询的账号(不填默认查当前账号)
+    * 待查询的账号uin(不填默认查当前账号uin)
     */
     @SerializedName("TargetUin")
     @Expose
     private Long TargetUin;
 
     /**
-     * Get 待查询的账号(不填默认查当前账号) 
-     * @return TargetUin 待查询的账号(不填默认查当前账号)
+     * Get 待查询的账号uin(不填默认查当前账号uin) 
+     * @return TargetUin 待查询的账号uin(不填默认查当前账号uin)
      */
     public Long getTargetUin() {
         return this.TargetUin;
     }
 
     /**
-     * Set 待查询的账号(不填默认查当前账号)
-     * @param TargetUin 待查询的账号(不填默认查当前账号)
+     * Set 待查询的账号uin(不填默认查当前账号uin)
+     * @param TargetUin 待查询的账号uin(不填默认查当前账号uin)
      */
     public void setTargetUin(Long TargetUin) {
         this.TargetUin = TargetUin;
