@@ -49,6 +49,20 @@ public class DescribePortraitSingJobResponse extends AbstractModel {
     private String StatusMsg;
 
     /**
+    * 错误码
+    */
+    @SerializedName("ErrorCode")
+    @Expose
+    private String ErrorCode;
+
+    /**
+    * 错误信息
+    */
+    @SerializedName("ErrorMessage")
+    @Expose
+    private String ErrorMessage;
+
+    /**
     * 生成视频的URL地址
 有效期24小时
     */
@@ -128,6 +142,38 @@ public class DescribePortraitSingJobResponse extends AbstractModel {
     }
 
     /**
+     * Get 错误码 
+     * @return ErrorCode 错误码
+     */
+    public String getErrorCode() {
+        return this.ErrorCode;
+    }
+
+    /**
+     * Set 错误码
+     * @param ErrorCode 错误码
+     */
+    public void setErrorCode(String ErrorCode) {
+        this.ErrorCode = ErrorCode;
+    }
+
+    /**
+     * Get 错误信息 
+     * @return ErrorMessage 错误信息
+     */
+    public String getErrorMessage() {
+        return this.ErrorMessage;
+    }
+
+    /**
+     * Set 错误信息
+     * @param ErrorMessage 错误信息
+     */
+    public void setErrorMessage(String ErrorMessage) {
+        this.ErrorMessage = ErrorMessage;
+    }
+
+    /**
      * Get 生成视频的URL地址
 有效期24小时 
      * @return ResultVideoUrl 生成视频的URL地址
@@ -180,6 +226,12 @@ public class DescribePortraitSingJobResponse extends AbstractModel {
         if (source.StatusMsg != null) {
             this.StatusMsg = new String(source.StatusMsg);
         }
+        if (source.ErrorCode != null) {
+            this.ErrorCode = new String(source.ErrorCode);
+        }
+        if (source.ErrorMessage != null) {
+            this.ErrorMessage = new String(source.ErrorMessage);
+        }
         if (source.ResultVideoUrl != null) {
             this.ResultVideoUrl = new String(source.ResultVideoUrl);
         }
@@ -196,6 +248,8 @@ public class DescribePortraitSingJobResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "JobId", this.JobId);
         this.setParamSimple(map, prefix + "StatusCode", this.StatusCode);
         this.setParamSimple(map, prefix + "StatusMsg", this.StatusMsg);
+        this.setParamSimple(map, prefix + "ErrorCode", this.ErrorCode);
+        this.setParamSimple(map, prefix + "ErrorMessage", this.ErrorMessage);
         this.setParamSimple(map, prefix + "ResultVideoUrl", this.ResultVideoUrl);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
