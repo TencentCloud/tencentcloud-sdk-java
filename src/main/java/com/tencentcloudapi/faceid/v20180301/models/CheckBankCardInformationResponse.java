@@ -31,6 +31,8 @@ public class CheckBankCardInformationResponse extends AbstractModel {
 不收费结果码：
 -2：验证中心服务繁忙
 -3：银行卡不存在
+-4：认证次数超过当日限制，请次日重试
+
     */
     @SerializedName("Result")
     @Expose
@@ -71,7 +73,9 @@ public class CheckBankCardInformationResponse extends AbstractModel {
 -1: 未查到信息
 不收费结果码：
 -2：验证中心服务繁忙
--3：银行卡不存在 
+-3：银行卡不存在
+-4：认证次数超过当日限制，请次日重试
+ 
      * @return Result 认证结果码，收费情况如下。
 收费结果码：
 0: 查询成功
@@ -79,6 +83,8 @@ public class CheckBankCardInformationResponse extends AbstractModel {
 不收费结果码：
 -2：验证中心服务繁忙
 -3：银行卡不存在
+-4：认证次数超过当日限制，请次日重试
+
      */
     public String getResult() {
         return this.Result;
@@ -92,6 +98,8 @@ public class CheckBankCardInformationResponse extends AbstractModel {
 不收费结果码：
 -2：验证中心服务繁忙
 -3：银行卡不存在
+-4：认证次数超过当日限制，请次日重试
+
      * @param Result 认证结果码，收费情况如下。
 收费结果码：
 0: 查询成功
@@ -99,6 +107,8 @@ public class CheckBankCardInformationResponse extends AbstractModel {
 不收费结果码：
 -2：验证中心服务繁忙
 -3：银行卡不存在
+-4：认证次数超过当日限制，请次日重试
+
      */
     public void setResult(String Result) {
         this.Result = Result;

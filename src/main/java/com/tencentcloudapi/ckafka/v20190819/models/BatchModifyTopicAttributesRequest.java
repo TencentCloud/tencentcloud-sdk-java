@@ -31,7 +31,7 @@ public class BatchModifyTopicAttributesRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * 主题属性列表
+    * 主题属性列表 (同一个批次最多支持10个)
     */
     @SerializedName("Topic")
     @Expose
@@ -54,16 +54,16 @@ public class BatchModifyTopicAttributesRequest extends AbstractModel {
     }
 
     /**
-     * Get 主题属性列表 
-     * @return Topic 主题属性列表
+     * Get 主题属性列表 (同一个批次最多支持10个) 
+     * @return Topic 主题属性列表 (同一个批次最多支持10个)
      */
     public BatchModifyTopicInfo [] getTopic() {
         return this.Topic;
     }
 
     /**
-     * Set 主题属性列表
-     * @param Topic 主题属性列表
+     * Set 主题属性列表 (同一个批次最多支持10个)
+     * @param Topic 主题属性列表 (同一个批次最多支持10个)
      */
     public void setTopic(BatchModifyTopicInfo [] Topic) {
         this.Topic = Topic;

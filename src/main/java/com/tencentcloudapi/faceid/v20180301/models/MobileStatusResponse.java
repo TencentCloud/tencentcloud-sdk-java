@@ -31,6 +31,7 @@ public class MobileStatusResponse extends AbstractModel {
 -1：未查询到结果
 -2：手机号格式不正确
 -3：验证中心服务繁忙
+-4：认证次数超过当日限制，请次日重试
     */
     @SerializedName("Result")
     @Expose
@@ -70,7 +71,8 @@ public class MobileStatusResponse extends AbstractModel {
 不收费结果码：
 -1：未查询到结果
 -2：手机号格式不正确
--3：验证中心服务繁忙 
+-3：验证中心服务繁忙
+-4：认证次数超过当日限制，请次日重试 
      * @return Result 认证结果码，收费情况如下。
 收费结果码：
 0：成功
@@ -78,6 +80,7 @@ public class MobileStatusResponse extends AbstractModel {
 -1：未查询到结果
 -2：手机号格式不正确
 -3：验证中心服务繁忙
+-4：认证次数超过当日限制，请次日重试
      */
     public String getResult() {
         return this.Result;
@@ -91,6 +94,7 @@ public class MobileStatusResponse extends AbstractModel {
 -1：未查询到结果
 -2：手机号格式不正确
 -3：验证中心服务繁忙
+-4：认证次数超过当日限制，请次日重试
      * @param Result 认证结果码，收费情况如下。
 收费结果码：
 0：成功
@@ -98,6 +102,7 @@ public class MobileStatusResponse extends AbstractModel {
 -1：未查询到结果
 -2：手机号格式不正确
 -3：验证中心服务繁忙
+-4：认证次数超过当日限制，请次日重试
      */
     public void setResult(String Result) {
         this.Result = Result;

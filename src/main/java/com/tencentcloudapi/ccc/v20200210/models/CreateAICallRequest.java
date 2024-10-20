@@ -46,6 +46,9 @@ public class CreateAICallRequest extends AbstractModel {
 
     /**
     * LLM类型
+目前有两种
+openai(兼容openai协议的模型)
+azure
     */
     @SerializedName("LLMType")
     @Expose
@@ -66,7 +69,8 @@ public class CreateAICallRequest extends AbstractModel {
     private String APIKey;
 
     /**
-    * API URL，仅支持兼容openai协议的模型，填写url时后缀不要带/chat/completions
+    * API URL，仅支持兼容openai协议的模型，填写url时后缀不要带/chat/completions；
+llmType为azure时,URL填写格式需为：https://{your-resource-name}.openai.azure.com?api-version={api-version},填写url时后缀不要带/openai/deployments/{deployment-id}/chat/completions，系统会自动帮你填充后缀
     */
     @SerializedName("APIUrl")
     @Expose
@@ -350,8 +354,14 @@ https://doc.weixin.qq.com/doc/w3_ANQAiAbdAFwHILbJBmtSqSbV1WZ3L?scode=AJEAIQdfAAo
     }
 
     /**
-     * Get LLM类型 
+     * Get LLM类型
+目前有两种
+openai(兼容openai协议的模型)
+azure 
      * @return LLMType LLM类型
+目前有两种
+openai(兼容openai协议的模型)
+azure
      */
     public String getLLMType() {
         return this.LLMType;
@@ -359,7 +369,13 @@ https://doc.weixin.qq.com/doc/w3_ANQAiAbdAFwHILbJBmtSqSbV1WZ3L?scode=AJEAIQdfAAo
 
     /**
      * Set LLM类型
+目前有两种
+openai(兼容openai协议的模型)
+azure
      * @param LLMType LLM类型
+目前有两种
+openai(兼容openai协议的模型)
+azure
      */
     public void setLLMType(String LLMType) {
         this.LLMType = LLMType;
@@ -398,16 +414,20 @@ https://doc.weixin.qq.com/doc/w3_ANQAiAbdAFwHILbJBmtSqSbV1WZ3L?scode=AJEAIQdfAAo
     }
 
     /**
-     * Get API URL，仅支持兼容openai协议的模型，填写url时后缀不要带/chat/completions 
-     * @return APIUrl API URL，仅支持兼容openai协议的模型，填写url时后缀不要带/chat/completions
+     * Get API URL，仅支持兼容openai协议的模型，填写url时后缀不要带/chat/completions；
+llmType为azure时,URL填写格式需为：https://{your-resource-name}.openai.azure.com?api-version={api-version},填写url时后缀不要带/openai/deployments/{deployment-id}/chat/completions，系统会自动帮你填充后缀 
+     * @return APIUrl API URL，仅支持兼容openai协议的模型，填写url时后缀不要带/chat/completions；
+llmType为azure时,URL填写格式需为：https://{your-resource-name}.openai.azure.com?api-version={api-version},填写url时后缀不要带/openai/deployments/{deployment-id}/chat/completions，系统会自动帮你填充后缀
      */
     public String getAPIUrl() {
         return this.APIUrl;
     }
 
     /**
-     * Set API URL，仅支持兼容openai协议的模型，填写url时后缀不要带/chat/completions
-     * @param APIUrl API URL，仅支持兼容openai协议的模型，填写url时后缀不要带/chat/completions
+     * Set API URL，仅支持兼容openai协议的模型，填写url时后缀不要带/chat/completions；
+llmType为azure时,URL填写格式需为：https://{your-resource-name}.openai.azure.com?api-version={api-version},填写url时后缀不要带/openai/deployments/{deployment-id}/chat/completions，系统会自动帮你填充后缀
+     * @param APIUrl API URL，仅支持兼容openai协议的模型，填写url时后缀不要带/chat/completions；
+llmType为azure时,URL填写格式需为：https://{your-resource-name}.openai.azure.com?api-version={api-version},填写url时后缀不要带/openai/deployments/{deployment-id}/chat/completions，系统会自动帮你填充后缀
      */
     public void setAPIUrl(String APIUrl) {
         this.APIUrl = APIUrl;

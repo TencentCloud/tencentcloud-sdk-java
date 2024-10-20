@@ -1656,7 +1656,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *升级数据库代理配置
+     *本接口（UpgradeProxy）用于升级数据库代理配置。
      * @param req UpgradeProxyRequest
      * @return UpgradeProxyResponse
      * @throws TencentCloudSDKException
