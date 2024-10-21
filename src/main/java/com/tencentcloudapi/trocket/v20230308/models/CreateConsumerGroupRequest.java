@@ -24,18 +24,11 @@ import java.util.HashMap;
 public class CreateConsumerGroupRequest extends AbstractModel {
 
     /**
-    * 实例ID
+    * 集群ID
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
-
-    /**
-    * 消费组名称
-    */
-    @SerializedName("ConsumerGroup")
-    @Expose
-    private String ConsumerGroup;
 
     /**
     * 最大重试次数
@@ -60,6 +53,13 @@ public class CreateConsumerGroupRequest extends AbstractModel {
     private Boolean ConsumeMessageOrderly;
 
     /**
+    * 消费组名称
+    */
+    @SerializedName("ConsumerGroup")
+    @Expose
+    private String ConsumerGroup;
+
+    /**
     * 备注
     */
     @SerializedName("Remark")
@@ -67,35 +67,19 @@ public class CreateConsumerGroupRequest extends AbstractModel {
     private String Remark;
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+     * Get 集群ID 
+     * @return InstanceId 集群ID
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set 集群ID
+     * @param InstanceId 集群ID
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
-    }
-
-    /**
-     * Get 消费组名称 
-     * @return ConsumerGroup 消费组名称
-     */
-    public String getConsumerGroup() {
-        return this.ConsumerGroup;
-    }
-
-    /**
-     * Set 消费组名称
-     * @param ConsumerGroup 消费组名称
-     */
-    public void setConsumerGroup(String ConsumerGroup) {
-        this.ConsumerGroup = ConsumerGroup;
     }
 
     /**
@@ -151,6 +135,22 @@ public class CreateConsumerGroupRequest extends AbstractModel {
     }
 
     /**
+     * Get 消费组名称 
+     * @return ConsumerGroup 消费组名称
+     */
+    public String getConsumerGroup() {
+        return this.ConsumerGroup;
+    }
+
+    /**
+     * Set 消费组名称
+     * @param ConsumerGroup 消费组名称
+     */
+    public void setConsumerGroup(String ConsumerGroup) {
+        this.ConsumerGroup = ConsumerGroup;
+    }
+
+    /**
      * Get 备注 
      * @return Remark 备注
      */
@@ -177,9 +177,6 @@ public class CreateConsumerGroupRequest extends AbstractModel {
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }
-        if (source.ConsumerGroup != null) {
-            this.ConsumerGroup = new String(source.ConsumerGroup);
-        }
         if (source.MaxRetryTimes != null) {
             this.MaxRetryTimes = new Long(source.MaxRetryTimes);
         }
@@ -188,6 +185,9 @@ public class CreateConsumerGroupRequest extends AbstractModel {
         }
         if (source.ConsumeMessageOrderly != null) {
             this.ConsumeMessageOrderly = new Boolean(source.ConsumeMessageOrderly);
+        }
+        if (source.ConsumerGroup != null) {
+            this.ConsumerGroup = new String(source.ConsumerGroup);
         }
         if (source.Remark != null) {
             this.Remark = new String(source.Remark);
@@ -200,10 +200,10 @@ public class CreateConsumerGroupRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
-        this.setParamSimple(map, prefix + "ConsumerGroup", this.ConsumerGroup);
         this.setParamSimple(map, prefix + "MaxRetryTimes", this.MaxRetryTimes);
         this.setParamSimple(map, prefix + "ConsumeEnable", this.ConsumeEnable);
         this.setParamSimple(map, prefix + "ConsumeMessageOrderly", this.ConsumeMessageOrderly);
+        this.setParamSimple(map, prefix + "ConsumerGroup", this.ConsumerGroup);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
 
     }

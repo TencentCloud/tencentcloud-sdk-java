@@ -25,7 +25,7 @@ public class DescribePhoneNumberInfoRequest extends AbstractModel {
 
     /**
     * 查询手机号码，采用 E.164 标准，格式为+[国家或地区码][手机号]，单次请求最多支持200个手机号。
-例如：+8613711112222， 其中前面有一个+号 ，86为国家码，13711112222为手机号。
+例如：+8618501234444， 其中前面有一个+号 ，86为国家码，18501234444为手机号。
     */
     @SerializedName("PhoneNumberSet")
     @Expose
@@ -33,9 +33,9 @@ public class DescribePhoneNumberInfoRequest extends AbstractModel {
 
     /**
      * Get 查询手机号码，采用 E.164 标准，格式为+[国家或地区码][手机号]，单次请求最多支持200个手机号。
-例如：+8613711112222， 其中前面有一个+号 ，86为国家码，13711112222为手机号。 
+例如：+8618501234444， 其中前面有一个+号 ，86为国家码，18501234444为手机号。 
      * @return PhoneNumberSet 查询手机号码，采用 E.164 标准，格式为+[国家或地区码][手机号]，单次请求最多支持200个手机号。
-例如：+8613711112222， 其中前面有一个+号 ，86为国家码，13711112222为手机号。
+例如：+8618501234444， 其中前面有一个+号 ，86为国家码，18501234444为手机号。
      */
     public String [] getPhoneNumberSet() {
         return this.PhoneNumberSet;
@@ -43,9 +43,9 @@ public class DescribePhoneNumberInfoRequest extends AbstractModel {
 
     /**
      * Set 查询手机号码，采用 E.164 标准，格式为+[国家或地区码][手机号]，单次请求最多支持200个手机号。
-例如：+8613711112222， 其中前面有一个+号 ，86为国家码，13711112222为手机号。
+例如：+8618501234444， 其中前面有一个+号 ，86为国家码，18501234444为手机号。
      * @param PhoneNumberSet 查询手机号码，采用 E.164 标准，格式为+[国家或地区码][手机号]，单次请求最多支持200个手机号。
-例如：+8613711112222， 其中前面有一个+号 ，86为国家码，13711112222为手机号。
+例如：+8618501234444， 其中前面有一个+号 ，86为国家码，18501234444为手机号。
      */
     public void setPhoneNumberSet(String [] PhoneNumberSet) {
         this.PhoneNumberSet = PhoneNumberSet;

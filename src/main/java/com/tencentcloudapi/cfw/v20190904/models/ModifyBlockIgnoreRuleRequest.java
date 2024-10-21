@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyBlockIgnoreRuleRequest extends AbstractModel {
 
     /**
-    * 规则
+    * 规则列表
     */
     @SerializedName("Rule")
     @Expose
@@ -38,16 +38,16 @@ public class ModifyBlockIgnoreRuleRequest extends AbstractModel {
     private Long RuleType;
 
     /**
-     * Get 规则 
-     * @return Rule 规则
+     * Get 规则列表 
+     * @return Rule 规则列表
      */
     public IntrusionDefenseRule getRule() {
         return this.Rule;
     }
 
     /**
-     * Set 规则
-     * @param Rule 规则
+     * Set 规则列表
+     * @param Rule 规则列表
      */
     public void setRule(IntrusionDefenseRule Rule) {
         this.Rule = Rule;

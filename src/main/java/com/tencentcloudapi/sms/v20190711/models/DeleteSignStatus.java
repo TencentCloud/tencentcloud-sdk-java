@@ -25,7 +25,6 @@ public class DeleteSignStatus extends AbstractModel {
 
     /**
     * 删除状态信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeleteStatus")
     @Expose
@@ -33,17 +32,14 @@ public class DeleteSignStatus extends AbstractModel {
 
     /**
     * 删除时间，UNIX 时间戳（单位：秒）。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeleteTime")
     @Expose
     private Long DeleteTime;
 
     /**
-     * Get 删除状态信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 删除状态信息。 
      * @return DeleteStatus 删除状态信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDeleteStatus() {
         return this.DeleteStatus;
@@ -51,19 +47,15 @@ public class DeleteSignStatus extends AbstractModel {
 
     /**
      * Set 删除状态信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeleteStatus 删除状态信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeleteStatus(String DeleteStatus) {
         this.DeleteStatus = DeleteStatus;
     }
 
     /**
-     * Get 删除时间，UNIX 时间戳（单位：秒）。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 删除时间，UNIX 时间戳（单位：秒）。 
      * @return DeleteTime 删除时间，UNIX 时间戳（单位：秒）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDeleteTime() {
         return this.DeleteTime;
@@ -71,9 +63,7 @@ public class DeleteSignStatus extends AbstractModel {
 
     /**
      * Set 删除时间，UNIX 时间戳（单位：秒）。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeleteTime 删除时间，UNIX 时间戳（单位：秒）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeleteTime(Long DeleteTime) {
         this.DeleteTime = DeleteTime;

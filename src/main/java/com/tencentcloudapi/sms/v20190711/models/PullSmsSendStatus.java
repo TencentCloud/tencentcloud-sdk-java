@@ -45,14 +45,14 @@ public class PullSmsSendStatus extends AbstractModel {
     private String NationCode;
 
     /**
-    * 手机号码,e.164标准，+[国家或地区码][手机号] ，示例如：+8613711112222， 其中前面有一个+号 ，86为国家码，13711112222为手机号。
+    * 手机号码,e.164标准，+[国家或地区码][手机号] ，示例如：+8618501234444， 其中前面有一个+号 ，86为国家码，18501234444为手机号。
     */
     @SerializedName("PurePhoneNumber")
     @Expose
     private String PurePhoneNumber;
 
     /**
-    * 手机号码，普通格式，示例如：13711112222。
+    * 手机号码，普通格式，示例如：18501234444。
     */
     @SerializedName("PhoneNumber")
     @Expose
@@ -128,32 +128,32 @@ public class PullSmsSendStatus extends AbstractModel {
     }
 
     /**
-     * Get 手机号码,e.164标准，+[国家或地区码][手机号] ，示例如：+8613711112222， 其中前面有一个+号 ，86为国家码，13711112222为手机号。 
-     * @return PurePhoneNumber 手机号码,e.164标准，+[国家或地区码][手机号] ，示例如：+8613711112222， 其中前面有一个+号 ，86为国家码，13711112222为手机号。
+     * Get 手机号码,e.164标准，+[国家或地区码][手机号] ，示例如：+8618501234444， 其中前面有一个+号 ，86为国家码，18501234444为手机号。 
+     * @return PurePhoneNumber 手机号码,e.164标准，+[国家或地区码][手机号] ，示例如：+8618501234444， 其中前面有一个+号 ，86为国家码，18501234444为手机号。
      */
     public String getPurePhoneNumber() {
         return this.PurePhoneNumber;
     }
 
     /**
-     * Set 手机号码,e.164标准，+[国家或地区码][手机号] ，示例如：+8613711112222， 其中前面有一个+号 ，86为国家码，13711112222为手机号。
-     * @param PurePhoneNumber 手机号码,e.164标准，+[国家或地区码][手机号] ，示例如：+8613711112222， 其中前面有一个+号 ，86为国家码，13711112222为手机号。
+     * Set 手机号码,e.164标准，+[国家或地区码][手机号] ，示例如：+8618501234444， 其中前面有一个+号 ，86为国家码，18501234444为手机号。
+     * @param PurePhoneNumber 手机号码,e.164标准，+[国家或地区码][手机号] ，示例如：+8618501234444， 其中前面有一个+号 ，86为国家码，18501234444为手机号。
      */
     public void setPurePhoneNumber(String PurePhoneNumber) {
         this.PurePhoneNumber = PurePhoneNumber;
     }
 
     /**
-     * Get 手机号码，普通格式，示例如：13711112222。 
-     * @return PhoneNumber 手机号码，普通格式，示例如：13711112222。
+     * Get 手机号码，普通格式，示例如：18501234444。 
+     * @return PhoneNumber 手机号码，普通格式，示例如：18501234444。
      */
     public String getPhoneNumber() {
         return this.PhoneNumber;
     }
 
     /**
-     * Set 手机号码，普通格式，示例如：13711112222。
-     * @param PhoneNumber 手机号码，普通格式，示例如：13711112222。
+     * Set 手机号码，普通格式，示例如：18501234444。
+     * @param PhoneNumber 手机号码，普通格式，示例如：18501234444。
      */
     public void setPhoneNumber(String PhoneNumber) {
         this.PhoneNumber = PhoneNumber;

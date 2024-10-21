@@ -31,20 +31,6 @@ public class RoleItem extends AbstractModel {
     private String RoleName;
 
     /**
-    * Access Key
-    */
-    @SerializedName("AccessKey")
-    @Expose
-    private String AccessKey;
-
-    /**
-    * Secret Key
-    */
-    @SerializedName("SecretKey")
-    @Expose
-    private String SecretKey;
-
-    /**
     * 是否开启消费
     */
     @SerializedName("PermRead")
@@ -57,6 +43,20 @@ public class RoleItem extends AbstractModel {
     @SerializedName("PermWrite")
     @Expose
     private Boolean PermWrite;
+
+    /**
+    * Access Key
+    */
+    @SerializedName("AccessKey")
+    @Expose
+    private String AccessKey;
+
+    /**
+    * Secret Key
+    */
+    @SerializedName("SecretKey")
+    @Expose
+    private String SecretKey;
 
     /**
     * 备注信息
@@ -96,38 +96,6 @@ public class RoleItem extends AbstractModel {
     }
 
     /**
-     * Get Access Key 
-     * @return AccessKey Access Key
-     */
-    public String getAccessKey() {
-        return this.AccessKey;
-    }
-
-    /**
-     * Set Access Key
-     * @param AccessKey Access Key
-     */
-    public void setAccessKey(String AccessKey) {
-        this.AccessKey = AccessKey;
-    }
-
-    /**
-     * Get Secret Key 
-     * @return SecretKey Secret Key
-     */
-    public String getSecretKey() {
-        return this.SecretKey;
-    }
-
-    /**
-     * Set Secret Key
-     * @param SecretKey Secret Key
-     */
-    public void setSecretKey(String SecretKey) {
-        this.SecretKey = SecretKey;
-    }
-
-    /**
      * Get 是否开启消费 
      * @return PermRead 是否开启消费
      */
@@ -157,6 +125,38 @@ public class RoleItem extends AbstractModel {
      */
     public void setPermWrite(Boolean PermWrite) {
         this.PermWrite = PermWrite;
+    }
+
+    /**
+     * Get Access Key 
+     * @return AccessKey Access Key
+     */
+    public String getAccessKey() {
+        return this.AccessKey;
+    }
+
+    /**
+     * Set Access Key
+     * @param AccessKey Access Key
+     */
+    public void setAccessKey(String AccessKey) {
+        this.AccessKey = AccessKey;
+    }
+
+    /**
+     * Get Secret Key 
+     * @return SecretKey Secret Key
+     */
+    public String getSecretKey() {
+        return this.SecretKey;
+    }
+
+    /**
+     * Set Secret Key
+     * @param SecretKey Secret Key
+     */
+    public void setSecretKey(String SecretKey) {
+        this.SecretKey = SecretKey;
     }
 
     /**
@@ -218,17 +218,17 @@ public class RoleItem extends AbstractModel {
         if (source.RoleName != null) {
             this.RoleName = new String(source.RoleName);
         }
-        if (source.AccessKey != null) {
-            this.AccessKey = new String(source.AccessKey);
-        }
-        if (source.SecretKey != null) {
-            this.SecretKey = new String(source.SecretKey);
-        }
         if (source.PermRead != null) {
             this.PermRead = new Boolean(source.PermRead);
         }
         if (source.PermWrite != null) {
             this.PermWrite = new Boolean(source.PermWrite);
+        }
+        if (source.AccessKey != null) {
+            this.AccessKey = new String(source.AccessKey);
+        }
+        if (source.SecretKey != null) {
+            this.SecretKey = new String(source.SecretKey);
         }
         if (source.Remark != null) {
             this.Remark = new String(source.Remark);
@@ -247,10 +247,10 @@ public class RoleItem extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RoleName", this.RoleName);
-        this.setParamSimple(map, prefix + "AccessKey", this.AccessKey);
-        this.setParamSimple(map, prefix + "SecretKey", this.SecretKey);
         this.setParamSimple(map, prefix + "PermRead", this.PermRead);
         this.setParamSimple(map, prefix + "PermWrite", this.PermWrite);
+        this.setParamSimple(map, prefix + "AccessKey", this.AccessKey);
+        this.setParamSimple(map, prefix + "SecretKey", this.SecretKey);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
         this.setParamSimple(map, prefix + "ModifiedTime", this.ModifiedTime);

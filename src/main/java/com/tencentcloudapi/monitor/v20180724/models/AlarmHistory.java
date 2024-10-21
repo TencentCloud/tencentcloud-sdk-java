@@ -266,6 +266,14 @@ public class AlarmHistory extends AbstractModel {
     private String MetricName;
 
     /**
+    * 策略是否有权限
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PolicyPermissions")
+    @Expose
+    private Long PolicyPermissions;
+
+    /**
      * Get 告警历史Id 
      * @return AlarmId 告警历史Id
      */
@@ -837,6 +845,26 @@ public class AlarmHistory extends AbstractModel {
         this.MetricName = MetricName;
     }
 
+    /**
+     * Get 策略是否有权限
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PolicyPermissions 策略是否有权限
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getPolicyPermissions() {
+        return this.PolicyPermissions;
+    }
+
+    /**
+     * Set 策略是否有权限
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PolicyPermissions 策略是否有权限
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPolicyPermissions(Long PolicyPermissions) {
+        this.PolicyPermissions = PolicyPermissions;
+    }
+
     public AlarmHistory() {
     }
 
@@ -959,6 +987,9 @@ public class AlarmHistory extends AbstractModel {
         if (source.MetricName != null) {
             this.MetricName = new String(source.MetricName);
         }
+        if (source.PolicyPermissions != null) {
+            this.PolicyPermissions = new Long(source.PolicyPermissions);
+        }
     }
 
 
@@ -999,6 +1030,7 @@ public class AlarmHistory extends AbstractModel {
         this.setParamSimple(map, prefix + "AlarmShieldReason", this.AlarmShieldReason);
         this.setParamSimple(map, prefix + "InternalDimensions", this.InternalDimensions);
         this.setParamSimple(map, prefix + "MetricName", this.MetricName);
+        this.setParamSimple(map, prefix + "PolicyPermissions", this.PolicyPermissions);
 
     }
 }

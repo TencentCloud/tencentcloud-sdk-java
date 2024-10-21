@@ -224,6 +224,14 @@ public class VulInfoList extends AbstractModel {
     private Long Method;
 
     /**
+    * 漏洞是否支持修复 0不支持，1支持
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VulFixSwitch")
+    @Expose
+    private Long VulFixSwitch;
+
+    /**
      * Get 漏洞包含的事件id串，多个用“,”分割 
      * @return Ids 漏洞包含的事件id串，多个用“,”分割
      */
@@ -711,6 +719,26 @@ public class VulInfoList extends AbstractModel {
         this.Method = Method;
     }
 
+    /**
+     * Get 漏洞是否支持修复 0不支持，1支持
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VulFixSwitch 漏洞是否支持修复 0不支持，1支持
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getVulFixSwitch() {
+        return this.VulFixSwitch;
+    }
+
+    /**
+     * Set 漏洞是否支持修复 0不支持，1支持
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VulFixSwitch 漏洞是否支持修复 0不支持，1支持
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVulFixSwitch(Long VulFixSwitch) {
+        this.VulFixSwitch = VulFixSwitch;
+    }
+
     public VulInfoList() {
     }
 
@@ -797,6 +825,9 @@ public class VulInfoList extends AbstractModel {
         if (source.Method != null) {
             this.Method = new Long(source.Method);
         }
+        if (source.VulFixSwitch != null) {
+            this.VulFixSwitch = new Long(source.VulFixSwitch);
+        }
     }
 
 
@@ -830,6 +861,7 @@ public class VulInfoList extends AbstractModel {
         this.setParamSimple(map, prefix + "AttackLevel", this.AttackLevel);
         this.setParamSimple(map, prefix + "FixNoNeedRestart", this.FixNoNeedRestart);
         this.setParamSimple(map, prefix + "Method", this.Method);
+        this.setParamSimple(map, prefix + "VulFixSwitch", this.VulFixSwitch);
 
     }
 }

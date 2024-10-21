@@ -43,28 +43,7 @@ PLATINUM 铂金版
 
     /**
     * 商品规格，可用规格如下：
-experiment_500,
 basic_1k,
-basic_2k,
-basic_4k,
-basic_6k,
-pro_4k,
-pro_6k,
-pro_1w,
-pro_2w,
-pro_3w,
-pro_4w,
-pro_5w,
-platinum_6k,
-platinum_1w,
-platinum_2w,
-platinum_4w,
-platinum_10w,
-platinum_15w,
-platinum_20w,
-platinum_40w,
-platinum_60w,
-platinum_100w
     */
     @SerializedName("SkuCode")
     @Expose
@@ -176,51 +155,9 @@ PLATINUM 铂金版
 
     /**
      * Get 商品规格，可用规格如下：
-experiment_500,
-basic_1k,
-basic_2k,
-basic_4k,
-basic_6k,
-pro_4k,
-pro_6k,
-pro_1w,
-pro_2w,
-pro_3w,
-pro_4w,
-pro_5w,
-platinum_6k,
-platinum_1w,
-platinum_2w,
-platinum_4w,
-platinum_10w,
-platinum_15w,
-platinum_20w,
-platinum_40w,
-platinum_60w,
-platinum_100w 
+basic_1k, 
      * @return SkuCode 商品规格，可用规格如下：
-experiment_500,
 basic_1k,
-basic_2k,
-basic_4k,
-basic_6k,
-pro_4k,
-pro_6k,
-pro_1w,
-pro_2w,
-pro_3w,
-pro_4w,
-pro_5w,
-platinum_6k,
-platinum_1w,
-platinum_2w,
-platinum_4w,
-platinum_10w,
-platinum_15w,
-platinum_20w,
-platinum_40w,
-platinum_60w,
-platinum_100w
      */
     public String getSkuCode() {
         return this.SkuCode;
@@ -228,51 +165,9 @@ platinum_100w
 
     /**
      * Set 商品规格，可用规格如下：
-experiment_500,
 basic_1k,
-basic_2k,
-basic_4k,
-basic_6k,
-pro_4k,
-pro_6k,
-pro_1w,
-pro_2w,
-pro_3w,
-pro_4w,
-pro_5w,
-platinum_6k,
-platinum_1w,
-platinum_2w,
-platinum_4w,
-platinum_10w,
-platinum_15w,
-platinum_20w,
-platinum_40w,
-platinum_60w,
-platinum_100w
      * @param SkuCode 商品规格，可用规格如下：
-experiment_500,
 basic_1k,
-basic_2k,
-basic_4k,
-basic_6k,
-pro_4k,
-pro_6k,
-pro_1w,
-pro_2w,
-pro_3w,
-pro_4w,
-pro_5w,
-platinum_6k,
-platinum_1w,
-platinum_2w,
-platinum_4w,
-platinum_10w,
-platinum_15w,
-platinum_20w,
-platinum_40w,
-platinum_60w,
-platinum_100w
      */
     public void setSkuCode(String SkuCode) {
         this.SkuCode = SkuCode;

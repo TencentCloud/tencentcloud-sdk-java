@@ -38,18 +38,18 @@ public class CreateVpnGatewaySslServerRequest extends AbstractModel {
     private String SslVpnServerName;
 
     /**
-    * 云端地址（CIDR）列表。
-    */
-    @SerializedName("LocalAddress")
-    @Expose
-    private String [] LocalAddress;
-
-    /**
     * 客户端地址网段。
     */
     @SerializedName("RemoteAddress")
     @Expose
     private String RemoteAddress;
+
+    /**
+    * 云端地址（CIDR）列表。
+    */
+    @SerializedName("LocalAddress")
+    @Expose
+    private String [] LocalAddress;
 
     /**
     * SSL VPN服务端监听协议。当前仅支持 UDP，默认UDP。
@@ -147,22 +147,6 @@ public class CreateVpnGatewaySslServerRequest extends AbstractModel {
     }
 
     /**
-     * Get 云端地址（CIDR）列表。 
-     * @return LocalAddress 云端地址（CIDR）列表。
-     */
-    public String [] getLocalAddress() {
-        return this.LocalAddress;
-    }
-
-    /**
-     * Set 云端地址（CIDR）列表。
-     * @param LocalAddress 云端地址（CIDR）列表。
-     */
-    public void setLocalAddress(String [] LocalAddress) {
-        this.LocalAddress = LocalAddress;
-    }
-
-    /**
      * Get 客户端地址网段。 
      * @return RemoteAddress 客户端地址网段。
      */
@@ -176,6 +160,22 @@ public class CreateVpnGatewaySslServerRequest extends AbstractModel {
      */
     public void setRemoteAddress(String RemoteAddress) {
         this.RemoteAddress = RemoteAddress;
+    }
+
+    /**
+     * Get 云端地址（CIDR）列表。 
+     * @return LocalAddress 云端地址（CIDR）列表。
+     */
+    public String [] getLocalAddress() {
+        return this.LocalAddress;
+    }
+
+    /**
+     * Set 云端地址（CIDR）列表。
+     * @param LocalAddress 云端地址（CIDR）列表。
+     */
+    public void setLocalAddress(String [] LocalAddress) {
+        this.LocalAddress = LocalAddress;
     }
 
     /**
@@ -336,14 +336,14 @@ public class CreateVpnGatewaySslServerRequest extends AbstractModel {
         if (source.SslVpnServerName != null) {
             this.SslVpnServerName = new String(source.SslVpnServerName);
         }
+        if (source.RemoteAddress != null) {
+            this.RemoteAddress = new String(source.RemoteAddress);
+        }
         if (source.LocalAddress != null) {
             this.LocalAddress = new String[source.LocalAddress.length];
             for (int i = 0; i < source.LocalAddress.length; i++) {
                 this.LocalAddress[i] = new String(source.LocalAddress[i]);
             }
-        }
-        if (source.RemoteAddress != null) {
-            this.RemoteAddress = new String(source.RemoteAddress);
         }
         if (source.SslVpnProtocol != null) {
             this.SslVpnProtocol = new String(source.SslVpnProtocol);
@@ -384,8 +384,8 @@ public class CreateVpnGatewaySslServerRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VpnGatewayId", this.VpnGatewayId);
         this.setParamSimple(map, prefix + "SslVpnServerName", this.SslVpnServerName);
-        this.setParamArraySimple(map, prefix + "LocalAddress.", this.LocalAddress);
         this.setParamSimple(map, prefix + "RemoteAddress", this.RemoteAddress);
+        this.setParamArraySimple(map, prefix + "LocalAddress.", this.LocalAddress);
         this.setParamSimple(map, prefix + "SslVpnProtocol", this.SslVpnProtocol);
         this.setParamSimple(map, prefix + "SslVpnPort", this.SslVpnPort);
         this.setParamSimple(map, prefix + "IntegrityAlgorithm", this.IntegrityAlgorithm);

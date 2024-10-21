@@ -46,10 +46,8 @@ public class MQTTInstanceItem extends AbstractModel {
 
     /**
     * 实例类型，
-EXPERIMENT，体验版
 BASIC，基础版
 PRO，专业版
-PLATINUM，铂金版
     */
     @SerializedName("InstanceType")
     @Expose
@@ -183,15 +181,11 @@ DELETING，删除中
 
     /**
      * Get 实例类型，
-EXPERIMENT，体验版
 BASIC，基础版
-PRO，专业版
-PLATINUM，铂金版 
+PRO，专业版 
      * @return InstanceType 实例类型，
-EXPERIMENT，体验版
 BASIC，基础版
 PRO，专业版
-PLATINUM，铂金版
      */
     public String getInstanceType() {
         return this.InstanceType;
@@ -199,15 +193,11 @@ PLATINUM，铂金版
 
     /**
      * Set 实例类型，
-EXPERIMENT，体验版
 BASIC，基础版
 PRO，专业版
-PLATINUM，铂金版
      * @param InstanceType 实例类型，
-EXPERIMENT，体验版
 BASIC，基础版
 PRO，专业版
-PLATINUM，铂金版
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;

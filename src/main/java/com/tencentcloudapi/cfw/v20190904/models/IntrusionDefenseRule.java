@@ -52,18 +52,18 @@ public class IntrusionDefenseRule extends AbstractModel {
     private String Domain;
 
     /**
-    * 备注信息，长度不能超过50
-    */
-    @SerializedName("Comment")
-    @Expose
-    private String Comment;
-
-    /**
     * 规则开始时间
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
+
+    /**
+    * 备注信息，长度不能超过50
+    */
+    @SerializedName("Comment")
+    @Expose
+    private String Comment;
 
     /**
      * Get 规则方向，0出站，1入站，3内网间 
@@ -130,22 +130,6 @@ public class IntrusionDefenseRule extends AbstractModel {
     }
 
     /**
-     * Get 备注信息，长度不能超过50 
-     * @return Comment 备注信息，长度不能超过50
-     */
-    public String getComment() {
-        return this.Comment;
-    }
-
-    /**
-     * Set 备注信息，长度不能超过50
-     * @param Comment 备注信息，长度不能超过50
-     */
-    public void setComment(String Comment) {
-        this.Comment = Comment;
-    }
-
-    /**
      * Get 规则开始时间 
      * @return StartTime 规则开始时间
      */
@@ -159,6 +143,22 @@ public class IntrusionDefenseRule extends AbstractModel {
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
+    }
+
+    /**
+     * Get 备注信息，长度不能超过50 
+     * @return Comment 备注信息，长度不能超过50
+     */
+    public String getComment() {
+        return this.Comment;
+    }
+
+    /**
+     * Set 备注信息，长度不能超过50
+     * @param Comment 备注信息，长度不能超过50
+     */
+    public void setComment(String Comment) {
+        this.Comment = Comment;
     }
 
     public IntrusionDefenseRule() {
@@ -181,11 +181,11 @@ public class IntrusionDefenseRule extends AbstractModel {
         if (source.Domain != null) {
             this.Domain = new String(source.Domain);
         }
-        if (source.Comment != null) {
-            this.Comment = new String(source.Comment);
-        }
         if (source.StartTime != null) {
             this.StartTime = new String(source.StartTime);
+        }
+        if (source.Comment != null) {
+            this.Comment = new String(source.Comment);
         }
     }
 
@@ -198,8 +198,8 @@ public class IntrusionDefenseRule extends AbstractModel {
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "IP", this.IP);
         this.setParamSimple(map, prefix + "Domain", this.Domain);
-        this.setParamSimple(map, prefix + "Comment", this.Comment);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
+        this.setParamSimple(map, prefix + "Comment", this.Comment);
 
     }
 }

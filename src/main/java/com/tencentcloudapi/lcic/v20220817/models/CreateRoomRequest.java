@@ -519,7 +519,9 @@ video 纯视频
     /**
      * Get rtc人数。 
      * @return RTCAudienceNumber rtc人数。
+     * @deprecated
      */
+    @Deprecated
     public Long getRTCAudienceNumber() {
         return this.RTCAudienceNumber;
     }
@@ -527,7 +529,9 @@ video 纯视频
     /**
      * Set rtc人数。
      * @param RTCAudienceNumber rtc人数。
+     * @deprecated
      */
+    @Deprecated
     public void setRTCAudienceNumber(Long RTCAudienceNumber) {
         this.RTCAudienceNumber = RTCAudienceNumber;
     }

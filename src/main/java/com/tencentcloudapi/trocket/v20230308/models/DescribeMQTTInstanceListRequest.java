@@ -45,7 +45,7 @@ public class DescribeMQTTInstanceListRequest extends AbstractModel {
     private Long Limit;
 
     /**
-    * 是否包含新控制台集群
+    * 是否包含新控制台集群：默认为包含
     */
     @SerializedName("IncludeNew")
     @Expose
@@ -100,16 +100,16 @@ public class DescribeMQTTInstanceListRequest extends AbstractModel {
     }
 
     /**
-     * Get 是否包含新控制台集群 
-     * @return IncludeNew 是否包含新控制台集群
+     * Get 是否包含新控制台集群：默认为包含 
+     * @return IncludeNew 是否包含新控制台集群：默认为包含
      */
     public Boolean getIncludeNew() {
         return this.IncludeNew;
     }
 
     /**
-     * Set 是否包含新控制台集群
-     * @param IncludeNew 是否包含新控制台集群
+     * Set 是否包含新控制台集群：默认为包含
+     * @param IncludeNew 是否包含新控制台集群：默认为包含
      */
     public void setIncludeNew(Boolean IncludeNew) {
         this.IncludeNew = IncludeNew;

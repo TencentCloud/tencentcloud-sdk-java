@@ -79,6 +79,14 @@ EvilLevel=100 请求有恶意
     private Long SubmitCaptchaTime;
 
     /**
+    * 设备风险大类
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DeviceRiskCategory")
+    @Expose
+    private String DeviceRiskCategory;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -234,6 +242,26 @@ EvilLevel=100 请求有恶意
     }
 
     /**
+     * Get 设备风险大类
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DeviceRiskCategory 设备风险大类
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDeviceRiskCategory() {
+        return this.DeviceRiskCategory;
+    }
+
+    /**
+     * Set 设备风险大类
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DeviceRiskCategory 设备风险大类
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDeviceRiskCategory(String DeviceRiskCategory) {
+        this.DeviceRiskCategory = DeviceRiskCategory;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -275,6 +303,9 @@ EvilLevel=100 请求有恶意
         if (source.SubmitCaptchaTime != null) {
             this.SubmitCaptchaTime = new Long(source.SubmitCaptchaTime);
         }
+        if (source.DeviceRiskCategory != null) {
+            this.DeviceRiskCategory = new String(source.DeviceRiskCategory);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -291,6 +322,7 @@ EvilLevel=100 请求有恶意
         this.setParamSimple(map, prefix + "GetCaptchaTime", this.GetCaptchaTime);
         this.setParamSimple(map, prefix + "EvilBitmap", this.EvilBitmap);
         this.setParamSimple(map, prefix + "SubmitCaptchaTime", this.SubmitCaptchaTime);
+        this.setParamSimple(map, prefix + "DeviceRiskCategory", this.DeviceRiskCategory);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

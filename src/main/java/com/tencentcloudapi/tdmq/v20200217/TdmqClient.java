@@ -149,6 +149,17 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
+     *创建RabbitMQ路由关系
+     * @param req CreateRabbitMQBindingRequest
+     * @return CreateRabbitMQBindingResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateRabbitMQBindingResponse CreateRabbitMQBinding(CreateRabbitMQBindingRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateRabbitMQBinding", CreateRabbitMQBindingResponse.class);
+    }
+
+    /**
      *创建RabbitMQ的用户
      * @param req CreateRabbitMQUserRequest
      * @return CreateRabbitMQUserResponse

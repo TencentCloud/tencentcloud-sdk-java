@@ -101,7 +101,7 @@ public class ScanTaskDetails extends AbstractModel {
     private Long Id;
 
     /**
-    * 失败详情
+    * 失败类型  3离线、4超时、5失败、8agent版本过低
     */
     @SerializedName("FailType")
     @Expose
@@ -299,16 +299,16 @@ public class ScanTaskDetails extends AbstractModel {
     }
 
     /**
-     * Get 失败详情 
-     * @return FailType 失败详情
+     * Get 失败类型  3离线、4超时、5失败、8agent版本过低 
+     * @return FailType 失败类型  3离线、4超时、5失败、8agent版本过低
      */
     public Long getFailType() {
         return this.FailType;
     }
 
     /**
-     * Set 失败详情
-     * @param FailType 失败详情
+     * Set 失败类型  3离线、4超时、5失败、8agent版本过低
+     * @param FailType 失败类型  3离线、4超时、5失败、8agent版本过低
      */
     public void setFailType(Long FailType) {
         this.FailType = FailType;

@@ -94,6 +94,14 @@ POSTPAID 按量付费
     private IpRule [] IpRules;
 
     /**
+    * 公网是否按流量计费
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BillingFlow")
+    @Expose
+    private Boolean BillingFlow;
+
+    /**
      * Get 接入点类型，枚举值如下
 VPC: VPC;
 PUBLIC: 公网;
@@ -277,6 +285,26 @@ POSTPAID 按量付费
         this.IpRules = IpRules;
     }
 
+    /**
+     * Get 公网是否按流量计费
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BillingFlow 公网是否按流量计费
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getBillingFlow() {
+        return this.BillingFlow;
+    }
+
+    /**
+     * Set 公网是否按流量计费
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BillingFlow 公网是否按流量计费
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBillingFlow(Boolean BillingFlow) {
+        this.BillingFlow = BillingFlow;
+    }
+
     public Endpoint() {
     }
 
@@ -312,6 +340,9 @@ POSTPAID 按量付费
                 this.IpRules[i] = new IpRule(source.IpRules[i]);
             }
         }
+        if (source.BillingFlow != null) {
+            this.BillingFlow = new Boolean(source.BillingFlow);
+        }
     }
 
 
@@ -327,6 +358,7 @@ POSTPAID 按量付费
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
         this.setParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
         this.setParamArrayObj(map, prefix + "IpRules.", this.IpRules);
+        this.setParamSimple(map, prefix + "BillingFlow", this.BillingFlow);
 
     }
 }

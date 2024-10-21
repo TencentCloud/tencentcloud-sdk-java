@@ -848,6 +848,17 @@ public class WafClient extends AbstractClient{
     }
 
     /**
+     *查询Tiga引擎大类规则及其防护模式
+     * @param req DescribeProtectionModesRequest
+     * @return DescribeProtectionModesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeProtectionModesResponse DescribeProtectionModes(DescribeProtectionModesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeProtectionModes", DescribeProtectionModesResponse.class);
+    }
+
+    /**
      *获取各个模块具体的规格限制
      * @param req DescribeRuleLimitRequest
      * @return DescribeRuleLimitResponse

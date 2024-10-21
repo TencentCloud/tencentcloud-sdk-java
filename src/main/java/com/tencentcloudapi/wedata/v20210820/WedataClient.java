@@ -1304,6 +1304,17 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *获取项目下的用户，分页返回
+     * @param req DescribeProjectUsersRequest
+     * @return DescribeProjectUsersResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeProjectUsersResponse DescribeProjectUsers(DescribeProjectUsersRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeProjectUsers", DescribeProjectUsersResponse.class);
+    }
+
+    /**
      *质量报告-质量评分
      * @param req DescribeQualityScoreRequest
      * @return DescribeQualityScoreResponse

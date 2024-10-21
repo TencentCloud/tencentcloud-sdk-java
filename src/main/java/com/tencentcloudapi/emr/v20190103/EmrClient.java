@@ -416,7 +416,7 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
-     *获取trino查询结果
+     *查询Trino(PrestoSQL)查询信息
      * @param req DescribeTrinoQueryInfoRequest
      * @return DescribeTrinoQueryInfoResponse
      * @throws TencentCloudSDKException

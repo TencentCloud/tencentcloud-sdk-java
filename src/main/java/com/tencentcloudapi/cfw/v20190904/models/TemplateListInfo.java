@@ -112,6 +112,14 @@ public class TemplateListInfo extends AbstractModel {
     private Long IPNum;
 
     /**
+    * IP版本,0,IPv4;1,IPv6
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IpVersion")
+    @Expose
+    private Long IpVersion;
+
+    /**
      * Get 模板ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Uuid 模板ID
@@ -331,6 +339,26 @@ public class TemplateListInfo extends AbstractModel {
         this.IPNum = IPNum;
     }
 
+    /**
+     * Get IP版本,0,IPv4;1,IPv6
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IpVersion IP版本,0,IPv4;1,IPv6
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getIpVersion() {
+        return this.IpVersion;
+    }
+
+    /**
+     * Set IP版本,0,IPv4;1,IPv6
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IpVersion IP版本,0,IPv4;1,IPv6
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIpVersion(Long IpVersion) {
+        this.IpVersion = IpVersion;
+    }
+
     public TemplateListInfo() {
     }
 
@@ -372,6 +400,9 @@ public class TemplateListInfo extends AbstractModel {
         if (source.IPNum != null) {
             this.IPNum = new Long(source.IPNum);
         }
+        if (source.IpVersion != null) {
+            this.IpVersion = new Long(source.IpVersion);
+        }
     }
 
 
@@ -390,6 +421,7 @@ public class TemplateListInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
         this.setParamSimple(map, prefix + "ProtocolType", this.ProtocolType);
         this.setParamSimple(map, prefix + "IPNum", this.IPNum);
+        this.setParamSimple(map, prefix + "IpVersion", this.IpVersion);
 
     }
 }

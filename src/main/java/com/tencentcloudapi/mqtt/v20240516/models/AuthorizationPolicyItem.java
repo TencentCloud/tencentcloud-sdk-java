@@ -118,7 +118,9 @@ public class AuthorizationPolicyItem extends AbstractModel {
     private String Qos;
 
     /**
-    * 1、2、3
+    * 1：表示匹配retain消息
+2：表示匹配非retain消息
+3：表示匹配retain和非retain消息
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Retain")
@@ -380,9 +382,13 @@ public class AuthorizationPolicyItem extends AbstractModel {
     }
 
     /**
-     * Get 1、2、3
+     * Get 1：表示匹配retain消息
+2：表示匹配非retain消息
+3：表示匹配retain和非retain消息
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Retain 1、2、3
+     * @return Retain 1：表示匹配retain消息
+2：表示匹配非retain消息
+3：表示匹配retain和非retain消息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRetain() {
@@ -390,9 +396,13 @@ public class AuthorizationPolicyItem extends AbstractModel {
     }
 
     /**
-     * Set 1、2、3
+     * Set 1：表示匹配retain消息
+2：表示匹配非retain消息
+3：表示匹配retain和非retain消息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Retain 1、2、3
+     * @param Retain 1：表示匹配retain消息
+2：表示匹配非retain消息
+3：表示匹配retain和非retain消息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRetain(Long Retain) {

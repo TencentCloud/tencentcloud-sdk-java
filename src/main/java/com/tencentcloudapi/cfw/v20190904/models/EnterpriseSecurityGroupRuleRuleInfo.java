@@ -56,7 +56,19 @@ public class EnterpriseSecurityGroupRuleRuleInfo extends AbstractModel {
     private String SourceId;
 
     /**
-    * 源规则类型
+    * 源规则类型 
+取值范围 0/1/2/3/4/5/6/7/8/9/100
+0表示ip(net),
+1表示VPC实例(intance)
+2表示子网实例(intance)
+3表示CVM实例(intance)
+4表示CLB实例(intance)
+5表示ENI实例(intance)
+6表示数据库实例(intance)
+7表示模版(template)
+8表示标签(tag)
+9表示地域(region)
+100表示资产分组(resourcegroup)
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SourceType")
@@ -72,7 +84,19 @@ public class EnterpriseSecurityGroupRuleRuleInfo extends AbstractModel {
     private String TargetId;
 
     /**
-    * 目的规则类型
+    * 目的规则类型 
+取值范围 0/1/2/3/4/5/6/7/8/9/100
+0表示ip(net),
+1表示VPC实例(intance)
+2表示子网实例(intance)
+3表示CVM实例(intance)
+4表示CLB实例(intance)
+5表示ENI实例(intance)
+6表示数据库实例(intance)
+7表示模版(template)
+8表示标签(tag)
+9表示地域(region)
+100表示资产分组(resourcegroup)
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TargetType")
@@ -81,6 +105,9 @@ public class EnterpriseSecurityGroupRuleRuleInfo extends AbstractModel {
 
     /**
     * 协议名称
+取值范围:TCP/ANY/ICMP/UDP
+ANY:表示所有
+
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Protocol")
@@ -96,7 +123,10 @@ public class EnterpriseSecurityGroupRuleRuleInfo extends AbstractModel {
     private String Port;
 
     /**
-    * 策略，1阻断，2放行
+    * 规则策略
+取值范围:1/2
+1:阻断
+2:放行
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Strategy")
@@ -104,7 +134,10 @@ public class EnterpriseSecurityGroupRuleRuleInfo extends AbstractModel {
     private Long Strategy;
 
     /**
-    * 启用状态 ，0未开启，1开启
+    * 规则启用状态 
+取值范围： 0/1
+0:未开启
+1:开启
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
@@ -128,7 +161,10 @@ public class EnterpriseSecurityGroupRuleRuleInfo extends AbstractModel {
     private String AclTags;
 
     /**
-    * 是否最新一次改动的规则,0否，1是
+    * 规则最新一次是否有改动
+取值范围：0/1
+0:否
+1:是
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsNew")
@@ -144,7 +180,9 @@ public class EnterpriseSecurityGroupRuleRuleInfo extends AbstractModel {
     private String Region;
 
     /**
-    * 是否延迟下发
+    * 是否延迟下发规则 
+取值范围：0/1
+0:立即下发 1:延迟下发
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsDelay")
@@ -248,7 +286,7 @@ public class EnterpriseSecurityGroupRuleRuleInfo extends AbstractModel {
     private String ProtocolPortName;
 
     /**
-    * 自动化任务任务信息
+    * 自动化任务信息
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BetaList")
@@ -256,7 +294,7 @@ public class EnterpriseSecurityGroupRuleRuleInfo extends AbstractModel {
     private EnterpriseSecurityGroupRuleBetaInfo [] BetaList;
 
     /**
-    * 规则id
+    * 规则id  等同RuleUuid
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
@@ -344,9 +382,33 @@ public class EnterpriseSecurityGroupRuleRuleInfo extends AbstractModel {
     }
 
     /**
-     * Get 源规则类型
+     * Get 源规则类型 
+取值范围 0/1/2/3/4/5/6/7/8/9/100
+0表示ip(net),
+1表示VPC实例(intance)
+2表示子网实例(intance)
+3表示CVM实例(intance)
+4表示CLB实例(intance)
+5表示ENI实例(intance)
+6表示数据库实例(intance)
+7表示模版(template)
+8表示标签(tag)
+9表示地域(region)
+100表示资产分组(resourcegroup)
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SourceType 源规则类型
+     * @return SourceType 源规则类型 
+取值范围 0/1/2/3/4/5/6/7/8/9/100
+0表示ip(net),
+1表示VPC实例(intance)
+2表示子网实例(intance)
+3表示CVM实例(intance)
+4表示CLB实例(intance)
+5表示ENI实例(intance)
+6表示数据库实例(intance)
+7表示模版(template)
+8表示标签(tag)
+9表示地域(region)
+100表示资产分组(resourcegroup)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSourceType() {
@@ -354,9 +416,33 @@ public class EnterpriseSecurityGroupRuleRuleInfo extends AbstractModel {
     }
 
     /**
-     * Set 源规则类型
+     * Set 源规则类型 
+取值范围 0/1/2/3/4/5/6/7/8/9/100
+0表示ip(net),
+1表示VPC实例(intance)
+2表示子网实例(intance)
+3表示CVM实例(intance)
+4表示CLB实例(intance)
+5表示ENI实例(intance)
+6表示数据库实例(intance)
+7表示模版(template)
+8表示标签(tag)
+9表示地域(region)
+100表示资产分组(resourcegroup)
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SourceType 源规则类型
+     * @param SourceType 源规则类型 
+取值范围 0/1/2/3/4/5/6/7/8/9/100
+0表示ip(net),
+1表示VPC实例(intance)
+2表示子网实例(intance)
+3表示CVM实例(intance)
+4表示CLB实例(intance)
+5表示ENI实例(intance)
+6表示数据库实例(intance)
+7表示模版(template)
+8表示标签(tag)
+9表示地域(region)
+100表示资产分组(resourcegroup)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSourceType(Long SourceType) {
@@ -384,9 +470,33 @@ public class EnterpriseSecurityGroupRuleRuleInfo extends AbstractModel {
     }
 
     /**
-     * Get 目的规则类型
+     * Get 目的规则类型 
+取值范围 0/1/2/3/4/5/6/7/8/9/100
+0表示ip(net),
+1表示VPC实例(intance)
+2表示子网实例(intance)
+3表示CVM实例(intance)
+4表示CLB实例(intance)
+5表示ENI实例(intance)
+6表示数据库实例(intance)
+7表示模版(template)
+8表示标签(tag)
+9表示地域(region)
+100表示资产分组(resourcegroup)
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TargetType 目的规则类型
+     * @return TargetType 目的规则类型 
+取值范围 0/1/2/3/4/5/6/7/8/9/100
+0表示ip(net),
+1表示VPC实例(intance)
+2表示子网实例(intance)
+3表示CVM实例(intance)
+4表示CLB实例(intance)
+5表示ENI实例(intance)
+6表示数据库实例(intance)
+7表示模版(template)
+8表示标签(tag)
+9表示地域(region)
+100表示资产分组(resourcegroup)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTargetType() {
@@ -394,9 +504,33 @@ public class EnterpriseSecurityGroupRuleRuleInfo extends AbstractModel {
     }
 
     /**
-     * Set 目的规则类型
+     * Set 目的规则类型 
+取值范围 0/1/2/3/4/5/6/7/8/9/100
+0表示ip(net),
+1表示VPC实例(intance)
+2表示子网实例(intance)
+3表示CVM实例(intance)
+4表示CLB实例(intance)
+5表示ENI实例(intance)
+6表示数据库实例(intance)
+7表示模版(template)
+8表示标签(tag)
+9表示地域(region)
+100表示资产分组(resourcegroup)
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TargetType 目的规则类型
+     * @param TargetType 目的规则类型 
+取值范围 0/1/2/3/4/5/6/7/8/9/100
+0表示ip(net),
+1表示VPC实例(intance)
+2表示子网实例(intance)
+3表示CVM实例(intance)
+4表示CLB实例(intance)
+5表示ENI实例(intance)
+6表示数据库实例(intance)
+7表示模版(template)
+8表示标签(tag)
+9表示地域(region)
+100表示资产分组(resourcegroup)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTargetType(Long TargetType) {
@@ -405,8 +539,14 @@ public class EnterpriseSecurityGroupRuleRuleInfo extends AbstractModel {
 
     /**
      * Get 协议名称
+取值范围:TCP/ANY/ICMP/UDP
+ANY:表示所有
+
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Protocol 协议名称
+取值范围:TCP/ANY/ICMP/UDP
+ANY:表示所有
+
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProtocol() {
@@ -415,8 +555,14 @@ public class EnterpriseSecurityGroupRuleRuleInfo extends AbstractModel {
 
     /**
      * Set 协议名称
+取值范围:TCP/ANY/ICMP/UDP
+ANY:表示所有
+
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Protocol 协议名称
+取值范围:TCP/ANY/ICMP/UDP
+ANY:表示所有
+
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProtocol(String Protocol) {
@@ -444,9 +590,15 @@ public class EnterpriseSecurityGroupRuleRuleInfo extends AbstractModel {
     }
 
     /**
-     * Get 策略，1阻断，2放行
+     * Get 规则策略
+取值范围:1/2
+1:阻断
+2:放行
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Strategy 策略，1阻断，2放行
+     * @return Strategy 规则策略
+取值范围:1/2
+1:阻断
+2:放行
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStrategy() {
@@ -454,9 +606,15 @@ public class EnterpriseSecurityGroupRuleRuleInfo extends AbstractModel {
     }
 
     /**
-     * Set 策略，1阻断，2放行
+     * Set 规则策略
+取值范围:1/2
+1:阻断
+2:放行
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Strategy 策略，1阻断，2放行
+     * @param Strategy 规则策略
+取值范围:1/2
+1:阻断
+2:放行
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStrategy(Long Strategy) {
@@ -464,9 +622,15 @@ public class EnterpriseSecurityGroupRuleRuleInfo extends AbstractModel {
     }
 
     /**
-     * Get 启用状态 ，0未开启，1开启
+     * Get 规则启用状态 
+取值范围： 0/1
+0:未开启
+1:开启
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Status 启用状态 ，0未开启，1开启
+     * @return Status 规则启用状态 
+取值范围： 0/1
+0:未开启
+1:开启
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
@@ -474,9 +638,15 @@ public class EnterpriseSecurityGroupRuleRuleInfo extends AbstractModel {
     }
 
     /**
-     * Set 启用状态 ，0未开启，1开启
+     * Set 规则启用状态 
+取值范围： 0/1
+0:未开启
+1:开启
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Status 启用状态 ，0未开启，1开启
+     * @param Status 规则启用状态 
+取值范围： 0/1
+0:未开启
+1:开启
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
@@ -524,9 +694,15 @@ public class EnterpriseSecurityGroupRuleRuleInfo extends AbstractModel {
     }
 
     /**
-     * Get 是否最新一次改动的规则,0否，1是
+     * Get 规则最新一次是否有改动
+取值范围：0/1
+0:否
+1:是
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IsNew 是否最新一次改动的规则,0否，1是
+     * @return IsNew 规则最新一次是否有改动
+取值范围：0/1
+0:否
+1:是
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsNew() {
@@ -534,9 +710,15 @@ public class EnterpriseSecurityGroupRuleRuleInfo extends AbstractModel {
     }
 
     /**
-     * Set 是否最新一次改动的规则,0否，1是
+     * Set 规则最新一次是否有改动
+取值范围：0/1
+0:否
+1:是
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IsNew 是否最新一次改动的规则,0否，1是
+     * @param IsNew 规则最新一次是否有改动
+取值范围：0/1
+0:否
+1:是
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsNew(Long IsNew) {
@@ -564,9 +746,13 @@ public class EnterpriseSecurityGroupRuleRuleInfo extends AbstractModel {
     }
 
     /**
-     * Get 是否延迟下发
+     * Get 是否延迟下发规则 
+取值范围：0/1
+0:立即下发 1:延迟下发
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IsDelay 是否延迟下发
+     * @return IsDelay 是否延迟下发规则 
+取值范围：0/1
+0:立即下发 1:延迟下发
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsDelay() {
@@ -574,9 +760,13 @@ public class EnterpriseSecurityGroupRuleRuleInfo extends AbstractModel {
     }
 
     /**
-     * Set 是否延迟下发
+     * Set 是否延迟下发规则 
+取值范围：0/1
+0:立即下发 1:延迟下发
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IsDelay 是否延迟下发
+     * @param IsDelay 是否延迟下发规则 
+取值范围：0/1
+0:立即下发 1:延迟下发
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsDelay(Long IsDelay) {
@@ -824,9 +1014,9 @@ public class EnterpriseSecurityGroupRuleRuleInfo extends AbstractModel {
     }
 
     /**
-     * Get 自动化任务任务信息
+     * Get 自动化任务信息
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BetaList 自动化任务任务信息
+     * @return BetaList 自动化任务信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public EnterpriseSecurityGroupRuleBetaInfo [] getBetaList() {
@@ -834,9 +1024,9 @@ public class EnterpriseSecurityGroupRuleRuleInfo extends AbstractModel {
     }
 
     /**
-     * Set 自动化任务任务信息
+     * Set 自动化任务信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BetaList 自动化任务任务信息
+     * @param BetaList 自动化任务信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBetaList(EnterpriseSecurityGroupRuleBetaInfo [] BetaList) {
@@ -844,9 +1034,9 @@ public class EnterpriseSecurityGroupRuleRuleInfo extends AbstractModel {
     }
 
     /**
-     * Get 规则id
+     * Get 规则id  等同RuleUuid
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Id 规则id
+     * @return Id 规则id  等同RuleUuid
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getId() {
@@ -854,9 +1044,9 @@ public class EnterpriseSecurityGroupRuleRuleInfo extends AbstractModel {
     }
 
     /**
-     * Set 规则id
+     * Set 规则id  等同RuleUuid
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Id 规则id
+     * @param Id 规则id  等同RuleUuid
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(Long Id) {

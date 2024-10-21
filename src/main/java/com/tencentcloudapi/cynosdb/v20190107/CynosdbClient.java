@@ -149,7 +149,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *创建用户账号
+     *本接口（CreateAccounts）用于创建用户账号。
      * @param req CreateAccountsRequest
      * @return CreateAccountsResponse
      * @throws TencentCloudSDKException
@@ -182,7 +182,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *为集群创建手动备份
+     *本接口（CreateBackup）用于为集群创建手动备份。
      * @param req CreateBackupRequest
      * @return CreateBackupResponse
      * @throws TencentCloudSDKException
@@ -204,7 +204,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *创建数据库
+     *本接口（CreateClusterDatabase）用于创建数据库。
      * @param req CreateClusterDatabaseRequest
      * @return CreateClusterDatabaseResponse
      * @throws TencentCloudSDKException
@@ -226,7 +226,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *本接口（CreateParamTemplate）用于创建参数模板
+     *本接口（CreateParamTemplate）用于创建参数模板。
      * @param req CreateParamTemplateRequest
      * @return CreateParamTemplateResponse
      * @throws TencentCloudSDKException
@@ -248,7 +248,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *创建数据库代理连接点
+     *本接口（CreateProxyEndPoint）用于创建数据库代理连接点。
      * @param req CreateProxyEndPointRequest
      * @return CreateProxyEndPointResponse
      * @throws TencentCloudSDKException
@@ -270,7 +270,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *删除用户账号
+     *本接口（DeleteAccounts）用于删除用户账号。
      * @param req DeleteAccountsRequest
      * @return DeleteAccountsResponse
      * @throws TencentCloudSDKException
@@ -292,7 +292,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *删除审计规则模板
+     *本接口（DeleteAuditRuleTemplates）用于删除审计规则模板。
      * @param req DeleteAuditRuleTemplatesRequest
      * @return DeleteAuditRuleTemplatesResponse
      * @throws TencentCloudSDKException
@@ -358,7 +358,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *查询账号已有权限
+     *本接口（DescribeAccountPrivileges）用于查询账号已有权限。
      * @param req DescribeAccountPrivilegesRequest
      * @return DescribeAccountPrivilegesResponse
      * @throws TencentCloudSDKException
@@ -413,7 +413,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *查询审计规则模板信息
+     *本接口（DescribeAuditRuleTemplates）用于查询审计规则模板信息。
      * @param req DescribeAuditRuleTemplatesRequest
      * @return DescribeAuditRuleTemplatesResponse
      * @throws TencentCloudSDKException
@@ -589,7 +589,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *本接口（DescribeClusterParams）用于查询集群参数
+     *本接口（DescribeClusterParams）用于查询集群参数。
      * @param req DescribeClusterParamsRequest
      * @return DescribeClusterParamsResponse
      * @throws TencentCloudSDKException
@@ -600,7 +600,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *本接口（DescribeClusterPasswordComplexity）用于查看集群密码复杂度详情
+     *本接口（DescribeClusterPasswordComplexity）用于查看集群密码复杂度详情。
      * @param req DescribeClusterPasswordComplexityRequest
      * @return DescribeClusterPasswordComplexityResponse
      * @throws TencentCloudSDKException
@@ -622,7 +622,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *查询实例安全组信息
+     *本接口（DescribeDBSecurityGroups）用于查询实例安全组信息。
      * @param req DescribeDBSecurityGroupsRequest
      * @return DescribeDBSecurityGroupsResponse
      * @throws TencentCloudSDKException
@@ -666,7 +666,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *查询实例错误日志列表
+     *本接口（DescribeInstanceErrorLogs）用于查询实例错误日志列表。
      * @param req DescribeInstanceErrorLogsRequest
      * @return DescribeInstanceErrorLogsResponse
      * @throws TencentCloudSDKException
@@ -677,7 +677,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *该接口(DescribeInstanceParams)查询实例参数列表
+     *本接口（DescribeInstanceParams）用于查询实例参数列表。
      * @param req DescribeInstanceParamsRequest
      * @return DescribeInstanceParamsResponse
      * @throws TencentCloudSDKException
@@ -743,7 +743,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *本接口（DescribeParamTemplateDetail）用于查询用户参数模板详情
+     *本接口（DescribeParamTemplateDetail）用于查询用户参数模板详情。
      * @param req DescribeParamTemplateDetailRequest
      * @return DescribeParamTemplateDetailResponse
      * @throws TencentCloudSDKException
@@ -754,7 +754,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *查询用户指定产品下的所有参数模板信息
+     *本接口（DescribeParamTemplates）用于查询用户指定产品下的所有参数模板信息。
      * @param req DescribeParamTemplatesRequest
      * @return DescribeParamTemplatesResponse
      * @throws TencentCloudSDKException
@@ -776,7 +776,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *查询数据库代理列表
+     *本接口（DescribeProxies）用于查询数据库代理列表。
      * @param req DescribeProxiesRequest
      * @return DescribeProxiesResponse
      * @throws TencentCloudSDKException
@@ -842,7 +842,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *查询订单关联实例
+     *本接口（DescribeResourcesByDealName）用于查询订单关联实例。
      * @param req DescribeResourcesByDealNameRequest
      * @return DescribeResourcesByDealNameResponse
      * @throws TencentCloudSDKException
@@ -875,7 +875,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *查询支持的数据库代理版本
+     *本接口（DescribeSupportProxyVersion）用于查询支持的数据库代理版本。
      * @param req DescribeSupportProxyVersionRequest
      * @return DescribeSupportProxyVersionResponse
      * @throws TencentCloudSDKException
@@ -952,7 +952,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *批量授权账号权限
+     *本接口（GrantAccountPrivileges）用于批量授权账号权限。
      * @param req GrantAccountPrivilegesRequest
      * @return GrantAccountPrivilegesResponse
      * @throws TencentCloudSDKException
@@ -985,7 +985,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *查询续费集群价格
+     *本接口（InquirePriceRenew）用于查询续费集群价格。
      * @param req InquirePriceRenewRequest
      * @return InquirePriceRenewResponse
      * @throws TencentCloudSDKException
@@ -1029,7 +1029,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *修改账号主机
+     *本接口（ModifyAccountHost）用于修改账号主机。
      * @param req ModifyAccountHostRequest
      * @return ModifyAccountHostResponse
      * @throws TencentCloudSDKException
@@ -1040,7 +1040,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *修改账号配置
+     *本接口（ModifyAccountParams）用于修改账号配置。
      * @param req ModifyAccountParamsRequest
      * @return ModifyAccountParamsResponse
      * @throws TencentCloudSDKException
@@ -1051,7 +1051,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *修改账号库表权限
+     *本接口（ModifyAccountPrivileges）用于修改账号库表权限。
      * @param req ModifyAccountPrivilegesRequest
      * @return ModifyAccountPrivilegesResponse
      * @throws TencentCloudSDKException
@@ -1150,7 +1150,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *修改集群参数
+     *本接口（ModifyClusterParam）用于修改集群参数。
      * @param req ModifyClusterParamRequest
      * @return ModifyClusterParamResponse
      * @throws TencentCloudSDKException
@@ -1183,7 +1183,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *调整包年包月存储容量
+     *本接口（ModifyClusterStorage）用于调整包年包月存储容量。
      * @param req ModifyClusterStorageRequest
      * @return ModifyClusterStorageResponse
      * @throws TencentCloudSDKException
@@ -1260,7 +1260,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *修改数据库代理描述
+     *本接口（ModifyProxyDesc）用于修改数据库代理描述。
      * @param req ModifyProxyDescRequest
      * @return ModifyProxyDescResponse
      * @throws TencentCloudSDKException
@@ -1271,7 +1271,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *配置数据库代理读写分离
+     *本接口（ModifyProxyRwSplit）用于配置数据库代理读写分离。
      * @param req ModifyProxyRwSplitRequest
      * @return ModifyProxyRwSplitResponse
      * @throws TencentCloudSDKException
@@ -1326,7 +1326,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *修改实例组ip，端口
+     *本接口（ModifyVipVport）用于修改实例组ip，端口。
      * @param req ModifyVipVportRequest
      * @return ModifyVipVportResponse
      * @throws TencentCloudSDKException
@@ -1348,7 +1348,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *销毁实例
+     *本接口（OfflineInstance）用于销毁实例。
      * @param req OfflineInstanceRequest
      * @return OfflineInstanceResponse
      * @throws TencentCloudSDKException
@@ -1436,7 +1436,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *负载均衡数据库代理
+     *本接口（ReloadBalanceProxyNode）用于负载均衡数据库代理。
      * @param req ReloadBalanceProxyNodeRequest
      * @return ReloadBalanceProxyNodeResponse
      * @throws TencentCloudSDKException
@@ -1469,7 +1469,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *本接口(ResetAccountPassword)用于修改数据库账号密码
+     *本接口（ResetAccountPassword）用于修改数据库账号密码。
      * @param req ResetAccountPasswordRequest
      * @return ResetAccountPasswordResponse
      * @throws TencentCloudSDKException
@@ -1480,7 +1480,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *重启实例
+     *本接口（RestartInstance）用于重启实例。
      * @param req RestartInstanceRequest
      * @return RestartInstanceResponse
      * @throws TencentCloudSDKException
@@ -1513,7 +1513,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *本接口（RollBackCluster）用于集群回档
+     *本接口（RollBackCluster）用于集群回档。
      * @param req RollBackClusterRequest
      * @return RollBackClusterResponse
      * @throws TencentCloudSDKException
@@ -1546,7 +1546,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *本接口(SearchClusterTables)搜索集群数据表列表
+     *本接口（SearchClusterTables）用于搜索集群数据表列表。
      * @param req SearchClusterTablesRequest
      * @return SearchClusterTablesResponse
      * @throws TencentCloudSDKException
@@ -1557,7 +1557,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *SetRenewFlag设置实例的自动续费功能
+     *本接口（SetRenewFlag）用于设置实例的自动续费功能。
      * @param req SetRenewFlagRequest
      * @return SetRenewFlagResponse
      * @throws TencentCloudSDKException
@@ -1590,7 +1590,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *更换集群vpc
+     *本接口（SwitchClusterVpc）用于更换集群vpc。
      * @param req SwitchClusterVpcRequest
      * @return SwitchClusterVpcResponse
      * @throws TencentCloudSDKException
@@ -1612,7 +1612,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *本接口(SwitchProxyVpc)更换数据库代理vpc
+     *本接口（SwitchProxyVpc）用于更换数据库代理vpc。
      * @param req SwitchProxyVpcRequest
      * @return SwitchProxyVpcResponse
      * @throws TencentCloudSDKException
@@ -1667,7 +1667,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *升级数据库代理版本
+     *本接口（UpgradeProxyVersion）用于升级数据库代理版本。
      * @param req UpgradeProxyVersionRequest
      * @return UpgradeProxyVersionResponse
      * @throws TencentCloudSDKException
