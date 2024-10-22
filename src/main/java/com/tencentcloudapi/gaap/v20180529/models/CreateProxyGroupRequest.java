@@ -38,7 +38,7 @@ public class CreateProxyGroupRequest extends AbstractModel {
     private String GroupName;
 
     /**
-    * 源站地域，参考接口DescribeDestRegions 返回参数RegionDetail中的RegionId
+    * 源站地域，参考接口 [https://cloud.tencent.com/document/api/608/36964] 返回参数RegionDetail中的RegionId
     */
     @SerializedName("RealServerRegion")
     @Expose
@@ -112,16 +112,16 @@ public class CreateProxyGroupRequest extends AbstractModel {
     }
 
     /**
-     * Get 源站地域，参考接口DescribeDestRegions 返回参数RegionDetail中的RegionId 
-     * @return RealServerRegion 源站地域，参考接口DescribeDestRegions 返回参数RegionDetail中的RegionId
+     * Get 源站地域，参考接口 [https://cloud.tencent.com/document/api/608/36964] 返回参数RegionDetail中的RegionId 
+     * @return RealServerRegion 源站地域，参考接口 [https://cloud.tencent.com/document/api/608/36964] 返回参数RegionDetail中的RegionId
      */
     public String getRealServerRegion() {
         return this.RealServerRegion;
     }
 
     /**
-     * Set 源站地域，参考接口DescribeDestRegions 返回参数RegionDetail中的RegionId
-     * @param RealServerRegion 源站地域，参考接口DescribeDestRegions 返回参数RegionDetail中的RegionId
+     * Set 源站地域，参考接口 [https://cloud.tencent.com/document/api/608/36964] 返回参数RegionDetail中的RegionId
+     * @param RealServerRegion 源站地域，参考接口 [https://cloud.tencent.com/document/api/608/36964] 返回参数RegionDetail中的RegionId
      */
     public void setRealServerRegion(String RealServerRegion) {
         this.RealServerRegion = RealServerRegion;

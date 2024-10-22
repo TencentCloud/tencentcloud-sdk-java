@@ -31,7 +31,7 @@ public class ModifyProxiesAttributeRequest extends AbstractModel {
     private String [] InstanceIds;
 
     /**
-    * 通道名称。可任意命名，但不得超过30个字符。
+    * 通道名称。可任意命名，但不得超过32个字符。
     */
     @SerializedName("ProxyName")
     @Expose
@@ -69,16 +69,16 @@ public class ModifyProxiesAttributeRequest extends AbstractModel {
     }
 
     /**
-     * Get 通道名称。可任意命名，但不得超过30个字符。 
-     * @return ProxyName 通道名称。可任意命名，但不得超过30个字符。
+     * Get 通道名称。可任意命名，但不得超过32个字符。 
+     * @return ProxyName 通道名称。可任意命名，但不得超过32个字符。
      */
     public String getProxyName() {
         return this.ProxyName;
     }
 
     /**
-     * Set 通道名称。可任意命名，但不得超过30个字符。
-     * @param ProxyName 通道名称。可任意命名，但不得超过30个字符。
+     * Set 通道名称。可任意命名，但不得超过32个字符。
+     * @param ProxyName 通道名称。可任意命名，但不得超过32个字符。
      */
     public void setProxyName(String ProxyName) {
         this.ProxyName = ProxyName;

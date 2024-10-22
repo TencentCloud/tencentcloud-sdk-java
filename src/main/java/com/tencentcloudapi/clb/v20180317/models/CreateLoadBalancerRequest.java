@@ -54,7 +54,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     private String VpcId;
 
     /**
-    * 在私有网络内购买内网负载均衡实例的情况下，必须指定子网 ID，内网负载均衡实例的 VIP 将从这个子网中产生。创建内网负载均衡实例时，此参数必填。
+    * 在私有网络内购买内网负载均衡实例的情况下，必须指定子网 ID，内网负载均衡实例的 VIP 将从这个子网中产生。创建内网负载均衡实例时，此参数必填，创建公网IPv4负载均衡实例时，不支持指定该参数。
     */
     @SerializedName("SubnetId")
     @Expose
@@ -226,6 +226,20 @@ OPEN：公网属性， INTERNAL：内网属性。
     private LBChargePrepaid LBChargePrepaid;
 
     /**
+    * 负载均衡实例计费类型，取值：POSTPAID_BY_HOUR，PREPAID，默认是POSTPAID_BY_HOUR。
+    */
+    @SerializedName("LBChargeType")
+    @Expose
+    private String LBChargeType;
+
+    /**
+    * 七层访问日志主题ID
+    */
+    @SerializedName("AccessLogTopicId")
+    @Expose
+    private String AccessLogTopicId;
+
+    /**
      * Get 负载均衡实例的网络类型：
 OPEN：公网属性， INTERNAL：内网属性。 
      * @return LoadBalancerType 负载均衡实例的网络类型：
@@ -298,16 +312,16 @@ OPEN：公网属性， INTERNAL：内网属性。
     }
 
     /**
-     * Get 在私有网络内购买内网负载均衡实例的情况下，必须指定子网 ID，内网负载均衡实例的 VIP 将从这个子网中产生。创建内网负载均衡实例时，此参数必填。 
-     * @return SubnetId 在私有网络内购买内网负载均衡实例的情况下，必须指定子网 ID，内网负载均衡实例的 VIP 将从这个子网中产生。创建内网负载均衡实例时，此参数必填。
+     * Get 在私有网络内购买内网负载均衡实例的情况下，必须指定子网 ID，内网负载均衡实例的 VIP 将从这个子网中产生。创建内网负载均衡实例时，此参数必填，创建公网IPv4负载均衡实例时，不支持指定该参数。 
+     * @return SubnetId 在私有网络内购买内网负载均衡实例的情况下，必须指定子网 ID，内网负载均衡实例的 VIP 将从这个子网中产生。创建内网负载均衡实例时，此参数必填，创建公网IPv4负载均衡实例时，不支持指定该参数。
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 在私有网络内购买内网负载均衡实例的情况下，必须指定子网 ID，内网负载均衡实例的 VIP 将从这个子网中产生。创建内网负载均衡实例时，此参数必填。
-     * @param SubnetId 在私有网络内购买内网负载均衡实例的情况下，必须指定子网 ID，内网负载均衡实例的 VIP 将从这个子网中产生。创建内网负载均衡实例时，此参数必填。
+     * Set 在私有网络内购买内网负载均衡实例的情况下，必须指定子网 ID，内网负载均衡实例的 VIP 将从这个子网中产生。创建内网负载均衡实例时，此参数必填，创建公网IPv4负载均衡实例时，不支持指定该参数。
+     * @param SubnetId 在私有网络内购买内网负载均衡实例的情况下，必须指定子网 ID，内网负载均衡实例的 VIP 将从这个子网中产生。创建内网负载均衡实例时，此参数必填，创建公网IPv4负载均衡实例时，不支持指定该参数。
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
@@ -697,6 +711,38 @@ OPEN：公网属性， INTERNAL：内网属性。
         this.LBChargePrepaid = LBChargePrepaid;
     }
 
+    /**
+     * Get 负载均衡实例计费类型，取值：POSTPAID_BY_HOUR，PREPAID，默认是POSTPAID_BY_HOUR。 
+     * @return LBChargeType 负载均衡实例计费类型，取值：POSTPAID_BY_HOUR，PREPAID，默认是POSTPAID_BY_HOUR。
+     */
+    public String getLBChargeType() {
+        return this.LBChargeType;
+    }
+
+    /**
+     * Set 负载均衡实例计费类型，取值：POSTPAID_BY_HOUR，PREPAID，默认是POSTPAID_BY_HOUR。
+     * @param LBChargeType 负载均衡实例计费类型，取值：POSTPAID_BY_HOUR，PREPAID，默认是POSTPAID_BY_HOUR。
+     */
+    public void setLBChargeType(String LBChargeType) {
+        this.LBChargeType = LBChargeType;
+    }
+
+    /**
+     * Get 七层访问日志主题ID 
+     * @return AccessLogTopicId 七层访问日志主题ID
+     */
+    public String getAccessLogTopicId() {
+        return this.AccessLogTopicId;
+    }
+
+    /**
+     * Set 七层访问日志主题ID
+     * @param AccessLogTopicId 七层访问日志主题ID
+     */
+    public void setAccessLogTopicId(String AccessLogTopicId) {
+        this.AccessLogTopicId = AccessLogTopicId;
+    }
+
     public CreateLoadBalancerRequest() {
     }
 
@@ -798,6 +844,12 @@ OPEN：公网属性， INTERNAL：内网属性。
         if (source.LBChargePrepaid != null) {
             this.LBChargePrepaid = new LBChargePrepaid(source.LBChargePrepaid);
         }
+        if (source.LBChargeType != null) {
+            this.LBChargeType = new String(source.LBChargeType);
+        }
+        if (source.AccessLogTopicId != null) {
+            this.AccessLogTopicId = new String(source.AccessLogTopicId);
+        }
     }
 
 
@@ -833,6 +885,8 @@ OPEN：公网属性， INTERNAL：内网属性。
         this.setParamSimple(map, prefix + "DynamicVip", this.DynamicVip);
         this.setParamSimple(map, prefix + "Egress", this.Egress);
         this.setParamObj(map, prefix + "LBChargePrepaid.", this.LBChargePrepaid);
+        this.setParamSimple(map, prefix + "LBChargeType", this.LBChargeType);
+        this.setParamSimple(map, prefix + "AccessLogTopicId", this.AccessLogTopicId);
 
     }
 }

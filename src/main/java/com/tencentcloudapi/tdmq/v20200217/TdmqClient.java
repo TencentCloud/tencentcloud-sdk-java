@@ -380,6 +380,17 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
+     *解绑RabbitMQ路由关系
+     * @param req DeleteRabbitMQBindingRequest
+     * @return DeleteRabbitMQBindingResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteRabbitMQBindingResponse DeleteRabbitMQBinding(DeleteRabbitMQBindingRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteRabbitMQBinding", DeleteRabbitMQBindingResponse.class);
+    }
+
+    /**
      *删除RabbitMQ的用户
      * @param req DeleteRabbitMQUserRequest
      * @return DeleteRabbitMQUserResponse
@@ -786,6 +797,17 @@ public class TdmqClient extends AbstractClient{
     public DescribePulsarProInstancesResponse DescribePulsarProInstances(DescribePulsarProInstancesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribePulsarProInstances", DescribePulsarProInstancesResponse.class);
+    }
+
+    /**
+     *查询RabbitMQ路由关系列表
+     * @param req DescribeRabbitMQBindingsRequest
+     * @return DescribeRabbitMQBindingsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRabbitMQBindingsResponse DescribeRabbitMQBindings(DescribeRabbitMQBindingsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRabbitMQBindings", DescribeRabbitMQBindingsResponse.class);
     }
 
     /**

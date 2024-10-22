@@ -31,7 +31,7 @@ public class EdgeIpInfo extends AbstractModel {
     private String PublicIp;
 
     /**
-    * 公网 IP 类型
+    * 公网 IP 类型 1 公网,2 弹性,3 弹性ipv6,4 anycastIP, 6 HighQualityEIP
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PublicIpType")
@@ -237,9 +237,9 @@ public class EdgeIpInfo extends AbstractModel {
     }
 
     /**
-     * Get 公网 IP 类型
+     * Get 公网 IP 类型 1 公网,2 弹性,3 弹性ipv6,4 anycastIP, 6 HighQualityEIP
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PublicIpType 公网 IP 类型
+     * @return PublicIpType 公网 IP 类型 1 公网,2 弹性,3 弹性ipv6,4 anycastIP, 6 HighQualityEIP
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPublicIpType() {
@@ -247,9 +247,9 @@ public class EdgeIpInfo extends AbstractModel {
     }
 
     /**
-     * Set 公网 IP 类型
+     * Set 公网 IP 类型 1 公网,2 弹性,3 弹性ipv6,4 anycastIP, 6 HighQualityEIP
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PublicIpType 公网 IP 类型
+     * @param PublicIpType 公网 IP 类型 1 公网,2 弹性,3 弹性ipv6,4 anycastIP, 6 HighQualityEIP
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPublicIpType(Long PublicIpType) {

@@ -94,6 +94,13 @@ public class CreateAIRecognitionTemplateRequest extends AbstractModel {
     private AsrWordsConfigureInfo AsrWordsConfigure;
 
     /**
+    * 语音翻译控制参数。
+    */
+    @SerializedName("AsrTranslateConfigure")
+    @Expose
+    private AsrTranslateConfigureInfo AsrTranslateConfigure;
+
+    /**
     * 物体识别控制参数。
     */
     @SerializedName("ObjectConfigure")
@@ -268,6 +275,22 @@ public class CreateAIRecognitionTemplateRequest extends AbstractModel {
     }
 
     /**
+     * Get 语音翻译控制参数。 
+     * @return AsrTranslateConfigure 语音翻译控制参数。
+     */
+    public AsrTranslateConfigureInfo getAsrTranslateConfigure() {
+        return this.AsrTranslateConfigure;
+    }
+
+    /**
+     * Set 语音翻译控制参数。
+     * @param AsrTranslateConfigure 语音翻译控制参数。
+     */
+    public void setAsrTranslateConfigure(AsrTranslateConfigureInfo AsrTranslateConfigure) {
+        this.AsrTranslateConfigure = AsrTranslateConfigure;
+    }
+
+    /**
      * Get 物体识别控制参数。 
      * @return ObjectConfigure 物体识别控制参数。
      */
@@ -337,6 +360,9 @@ public class CreateAIRecognitionTemplateRequest extends AbstractModel {
         if (source.AsrWordsConfigure != null) {
             this.AsrWordsConfigure = new AsrWordsConfigureInfo(source.AsrWordsConfigure);
         }
+        if (source.AsrTranslateConfigure != null) {
+            this.AsrTranslateConfigure = new AsrTranslateConfigureInfo(source.AsrTranslateConfigure);
+        }
         if (source.ObjectConfigure != null) {
             this.ObjectConfigure = new ObjectConfigureInfo(source.ObjectConfigure);
         }
@@ -360,6 +386,7 @@ public class CreateAIRecognitionTemplateRequest extends AbstractModel {
         this.setParamObj(map, prefix + "OcrWordsConfigure.", this.OcrWordsConfigure);
         this.setParamObj(map, prefix + "AsrFullTextConfigure.", this.AsrFullTextConfigure);
         this.setParamObj(map, prefix + "AsrWordsConfigure.", this.AsrWordsConfigure);
+        this.setParamObj(map, prefix + "AsrTranslateConfigure.", this.AsrTranslateConfigure);
         this.setParamObj(map, prefix + "ObjectConfigure.", this.ObjectConfigure);
         this.setParamSimple(map, prefix + "ScreenshotInterval", this.ScreenshotInterval);
 

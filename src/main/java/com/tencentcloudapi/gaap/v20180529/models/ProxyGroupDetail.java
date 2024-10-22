@@ -191,7 +191,7 @@ public class ProxyGroupDetail extends AbstractModel {
     private Long FeatureBitmap;
 
     /**
-    * 是否支持设置TSL设置
+    * 是否支持设置TLS设置
 0表示不支持；
 1表示支持。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -629,11 +629,11 @@ public class ProxyGroupDetail extends AbstractModel {
     }
 
     /**
-     * Get 是否支持设置TSL设置
+     * Get 是否支持设置TLS设置
 0表示不支持；
 1表示支持。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IsSupportTLSChoice 是否支持设置TSL设置
+     * @return IsSupportTLSChoice 是否支持设置TLS设置
 0表示不支持；
 1表示支持。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -643,11 +643,11 @@ public class ProxyGroupDetail extends AbstractModel {
     }
 
     /**
-     * Set 是否支持设置TSL设置
+     * Set 是否支持设置TLS设置
 0表示不支持；
 1表示支持。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IsSupportTLSChoice 是否支持设置TSL设置
+     * @param IsSupportTLSChoice 是否支持设置TLS设置
 0表示不支持；
 1表示支持。
 注意：此字段可能返回 null，表示取不到有效值。

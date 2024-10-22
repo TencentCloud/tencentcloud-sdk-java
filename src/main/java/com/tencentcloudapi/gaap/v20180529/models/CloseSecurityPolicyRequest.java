@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class CloseSecurityPolicyRequest extends AbstractModel {
 
     /**
-    * 通道ID
+    * 通道ID。操作通道组时无需填此参数。
     */
     @SerializedName("ProxyId")
     @Expose
     private String ProxyId;
 
     /**
-    * 安全组策略ID
+    * 安全组策略ID。操作通道组时须填此参数。
     */
     @SerializedName("PolicyId")
     @Expose
     private String PolicyId;
 
     /**
-     * Get 通道ID 
-     * @return ProxyId 通道ID
+     * Get 通道ID。操作通道组时无需填此参数。 
+     * @return ProxyId 通道ID。操作通道组时无需填此参数。
      */
     public String getProxyId() {
         return this.ProxyId;
     }
 
     /**
-     * Set 通道ID
-     * @param ProxyId 通道ID
+     * Set 通道ID。操作通道组时无需填此参数。
+     * @param ProxyId 通道ID。操作通道组时无需填此参数。
      */
     public void setProxyId(String ProxyId) {
         this.ProxyId = ProxyId;
     }
 
     /**
-     * Get 安全组策略ID 
-     * @return PolicyId 安全组策略ID
+     * Get 安全组策略ID。操作通道组时须填此参数。 
+     * @return PolicyId 安全组策略ID。操作通道组时须填此参数。
      */
     public String getPolicyId() {
         return this.PolicyId;
     }
 
     /**
-     * Set 安全组策略ID
-     * @param PolicyId 安全组策略ID
+     * Set 安全组策略ID。操作通道组时须填此参数。
+     * @param PolicyId 安全组策略ID。操作通道组时须填此参数。
      */
     public void setPolicyId(String PolicyId) {
         this.PolicyId = PolicyId;

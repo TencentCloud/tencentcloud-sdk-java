@@ -370,6 +370,14 @@ JobSelectClusterException:19,JobCreateTaskException:20,JobSyncTaskException:21
     private String ScenarioName;
 
     /**
+    * 付费类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PayMode")
+    @Expose
+    private Long PayMode;
+
+    /**
      * Get 任务的JobID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return JobId 任务的JobID
@@ -1237,6 +1245,26 @@ JobSelectClusterException:19,JobCreateTaskException:20,JobSyncTaskException:21
         this.ScenarioName = ScenarioName;
     }
 
+    /**
+     * Get 付费类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PayMode 付费类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getPayMode() {
+        return this.PayMode;
+    }
+
+    /**
+     * Set 付费类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PayMode 付费类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPayMode(Long PayMode) {
+        this.PayMode = PayMode;
+    }
+
     public Job() {
     }
 
@@ -1404,6 +1432,9 @@ JobSelectClusterException:19,JobCreateTaskException:20,JobSyncTaskException:21
         if (source.ScenarioName != null) {
             this.ScenarioName = new String(source.ScenarioName);
         }
+        if (source.PayMode != null) {
+            this.PayMode = new Long(source.PayMode);
+        }
     }
 
 
@@ -1454,6 +1485,7 @@ JobSelectClusterException:19,JobCreateTaskException:20,JobSyncTaskException:21
         this.setParamSimple(map, prefix + "Message", this.Message);
         this.setParamSimple(map, prefix + "ProjectName", this.ProjectName);
         this.setParamSimple(map, prefix + "ScenarioName", this.ScenarioName);
+        this.setParamSimple(map, prefix + "PayMode", this.PayMode);
 
     }
 }

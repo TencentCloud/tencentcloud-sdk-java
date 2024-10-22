@@ -1386,7 +1386,9 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
-     *查询攻击溯源
+     *已废弃
+
+查询攻击溯源
      * @param req DescribeAttackSourceRequest
      * @return DescribeAttackSourceResponse
      * @throws TencentCloudSDKException
@@ -1397,7 +1399,9 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
-     *查询攻击溯源事件
+     *已废弃
+
+查询攻击溯源事件
      * @param req DescribeAttackSourceEventsRequest
      * @return DescribeAttackSourceEventsResponse
      * @throws TencentCloudSDKException

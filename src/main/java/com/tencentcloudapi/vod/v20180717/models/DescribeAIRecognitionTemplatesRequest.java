@@ -38,6 +38,13 @@ public class DescribeAIRecognitionTemplatesRequest extends AbstractModel {
     private Long [] Definitions;
 
     /**
+    * 模板类型过滤条件，可选值：<li>Preset：系统预置模板；</li><li>Custom：用户自定义模板。</li>不填默认为空，即不对模板类型过滤。
+    */
+    @SerializedName("Type")
+    @Expose
+    private String Type;
+
+    /**
     * 分页偏移量，默认值：0。
     */
     @SerializedName("Offset")
@@ -81,6 +88,22 @@ public class DescribeAIRecognitionTemplatesRequest extends AbstractModel {
      */
     public void setDefinitions(Long [] Definitions) {
         this.Definitions = Definitions;
+    }
+
+    /**
+     * Get 模板类型过滤条件，可选值：<li>Preset：系统预置模板；</li><li>Custom：用户自定义模板。</li>不填默认为空，即不对模板类型过滤。 
+     * @return Type 模板类型过滤条件，可选值：<li>Preset：系统预置模板；</li><li>Custom：用户自定义模板。</li>不填默认为空，即不对模板类型过滤。
+     */
+    public String getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set 模板类型过滤条件，可选值：<li>Preset：系统预置模板；</li><li>Custom：用户自定义模板。</li>不填默认为空，即不对模板类型过滤。
+     * @param Type 模板类型过滤条件，可选值：<li>Preset：系统预置模板；</li><li>Custom：用户自定义模板。</li>不填默认为空，即不对模板类型过滤。
+     */
+    public void setType(String Type) {
+        this.Type = Type;
     }
 
     /**
@@ -132,6 +155,9 @@ public class DescribeAIRecognitionTemplatesRequest extends AbstractModel {
                 this.Definitions[i] = new Long(source.Definitions[i]);
             }
         }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
         }
@@ -147,6 +173,7 @@ public class DescribeAIRecognitionTemplatesRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
         this.setParamArraySimple(map, prefix + "Definitions.", this.Definitions);
+        this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
 

@@ -39,9 +39,19 @@ public class MediaSubtitleItem extends AbstractModel {
 
     /**
     * 字幕语言。常见的取值如下：
-<li>cn：中文</li>
-<li>ja：日文</li>
-<li>en-US：英文</li>
+<li>zh：中文；</li>
+<li>en：英文；</li>
+<li>ja：日文；</li>
+<li>ko：韩文；</li>
+<li>vi：越南语；</li>
+<li>ms：马来语；</li>
+<li>th：泰语；</li>
+<li>pt：葡萄牙语；</li>
+<li>tr：土耳其语；</li>
+<li>ar：阿拉伯语；</li>
+<li>es：西班牙语；</li>
+<li>hi：印地语；</li>
+<li>fr：法语。</li>
 其他取值参考 [RFC5646](https://tools.ietf.org/html/rfc5646)
     */
     @SerializedName("Language")
@@ -62,6 +72,15 @@ public class MediaSubtitleItem extends AbstractModel {
     @SerializedName("Url")
     @Expose
     private String Url;
+
+    /**
+    * 字幕来源，取值范围：
+<li>UserUploaded：用户上传；</li>
+<li>AIRecognition：AI 识别，通过语音识别或语音翻译生成。</li>
+    */
+    @SerializedName("Source")
+    @Expose
+    private String Source;
 
     /**
      * Get 字幕的唯一标识。 
@@ -97,14 +116,34 @@ public class MediaSubtitleItem extends AbstractModel {
 
     /**
      * Get 字幕语言。常见的取值如下：
-<li>cn：中文</li>
-<li>ja：日文</li>
-<li>en-US：英文</li>
+<li>zh：中文；</li>
+<li>en：英文；</li>
+<li>ja：日文；</li>
+<li>ko：韩文；</li>
+<li>vi：越南语；</li>
+<li>ms：马来语；</li>
+<li>th：泰语；</li>
+<li>pt：葡萄牙语；</li>
+<li>tr：土耳其语；</li>
+<li>ar：阿拉伯语；</li>
+<li>es：西班牙语；</li>
+<li>hi：印地语；</li>
+<li>fr：法语。</li>
 其他取值参考 [RFC5646](https://tools.ietf.org/html/rfc5646) 
      * @return Language 字幕语言。常见的取值如下：
-<li>cn：中文</li>
-<li>ja：日文</li>
-<li>en-US：英文</li>
+<li>zh：中文；</li>
+<li>en：英文；</li>
+<li>ja：日文；</li>
+<li>ko：韩文；</li>
+<li>vi：越南语；</li>
+<li>ms：马来语；</li>
+<li>th：泰语；</li>
+<li>pt：葡萄牙语；</li>
+<li>tr：土耳其语；</li>
+<li>ar：阿拉伯语；</li>
+<li>es：西班牙语；</li>
+<li>hi：印地语；</li>
+<li>fr：法语。</li>
 其他取值参考 [RFC5646](https://tools.ietf.org/html/rfc5646)
      */
     public String getLanguage() {
@@ -113,14 +152,34 @@ public class MediaSubtitleItem extends AbstractModel {
 
     /**
      * Set 字幕语言。常见的取值如下：
-<li>cn：中文</li>
-<li>ja：日文</li>
-<li>en-US：英文</li>
+<li>zh：中文；</li>
+<li>en：英文；</li>
+<li>ja：日文；</li>
+<li>ko：韩文；</li>
+<li>vi：越南语；</li>
+<li>ms：马来语；</li>
+<li>th：泰语；</li>
+<li>pt：葡萄牙语；</li>
+<li>tr：土耳其语；</li>
+<li>ar：阿拉伯语；</li>
+<li>es：西班牙语；</li>
+<li>hi：印地语；</li>
+<li>fr：法语。</li>
 其他取值参考 [RFC5646](https://tools.ietf.org/html/rfc5646)
      * @param Language 字幕语言。常见的取值如下：
-<li>cn：中文</li>
-<li>ja：日文</li>
-<li>en-US：英文</li>
+<li>zh：中文；</li>
+<li>en：英文；</li>
+<li>ja：日文；</li>
+<li>ko：韩文；</li>
+<li>vi：越南语；</li>
+<li>ms：马来语；</li>
+<li>th：泰语；</li>
+<li>pt：葡萄牙语；</li>
+<li>tr：土耳其语；</li>
+<li>ar：阿拉伯语；</li>
+<li>es：西班牙语；</li>
+<li>hi：印地语；</li>
+<li>fr：法语。</li>
 其他取值参考 [RFC5646](https://tools.ietf.org/html/rfc5646)
      */
     public void setLanguage(String Language) {
@@ -163,6 +222,30 @@ public class MediaSubtitleItem extends AbstractModel {
         this.Url = Url;
     }
 
+    /**
+     * Get 字幕来源，取值范围：
+<li>UserUploaded：用户上传；</li>
+<li>AIRecognition：AI 识别，通过语音识别或语音翻译生成。</li> 
+     * @return Source 字幕来源，取值范围：
+<li>UserUploaded：用户上传；</li>
+<li>AIRecognition：AI 识别，通过语音识别或语音翻译生成。</li>
+     */
+    public String getSource() {
+        return this.Source;
+    }
+
+    /**
+     * Set 字幕来源，取值范围：
+<li>UserUploaded：用户上传；</li>
+<li>AIRecognition：AI 识别，通过语音识别或语音翻译生成。</li>
+     * @param Source 字幕来源，取值范围：
+<li>UserUploaded：用户上传；</li>
+<li>AIRecognition：AI 识别，通过语音识别或语音翻译生成。</li>
+     */
+    public void setSource(String Source) {
+        this.Source = Source;
+    }
+
     public MediaSubtitleItem() {
     }
 
@@ -186,6 +269,9 @@ public class MediaSubtitleItem extends AbstractModel {
         if (source.Url != null) {
             this.Url = new String(source.Url);
         }
+        if (source.Source != null) {
+            this.Source = new String(source.Source);
+        }
     }
 
 
@@ -198,6 +284,7 @@ public class MediaSubtitleItem extends AbstractModel {
         this.setParamSimple(map, prefix + "Language", this.Language);
         this.setParamSimple(map, prefix + "Format", this.Format);
         this.setParamSimple(map, prefix + "Url", this.Url);
+        this.setParamSimple(map, prefix + "Source", this.Source);
 
     }
 }

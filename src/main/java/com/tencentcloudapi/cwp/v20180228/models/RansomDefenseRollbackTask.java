@@ -94,6 +94,14 @@ public class RansomDefenseRollbackTask extends AbstractModel {
     private RegionInfo RegionInfo;
 
     /**
+    * 主机示例ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
      * Get 任务ID 
      * @return Id 任务ID
      */
@@ -253,6 +261,26 @@ public class RansomDefenseRollbackTask extends AbstractModel {
         this.RegionInfo = RegionInfo;
     }
 
+    /**
+     * Get 主机示例ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InstanceId 主机示例ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set 主机示例ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstanceId 主机示例ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
     public RansomDefenseRollbackTask() {
     }
 
@@ -291,6 +319,9 @@ public class RansomDefenseRollbackTask extends AbstractModel {
         if (source.RegionInfo != null) {
             this.RegionInfo = new RegionInfo(source.RegionInfo);
         }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
     }
 
 
@@ -308,6 +339,7 @@ public class RansomDefenseRollbackTask extends AbstractModel {
         this.setParamSimple(map, prefix + "BackupTime", this.BackupTime);
         this.setParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
         this.setParamObj(map, prefix + "RegionInfo.", this.RegionInfo);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
 
     }
 }

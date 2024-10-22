@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateRocketMQEnvironmentRoleRequest extends AbstractModel {
 
     /**
-    * 环境（命名空间）名称。
+    * 命名空间
     */
     @SerializedName("EnvironmentId")
     @Expose
@@ -52,16 +52,16 @@ public class CreateRocketMQEnvironmentRoleRequest extends AbstractModel {
     private String ClusterId;
 
     /**
-     * Get 环境（命名空间）名称。 
-     * @return EnvironmentId 环境（命名空间）名称。
+     * Get 命名空间 
+     * @return EnvironmentId 命名空间
      */
     public String getEnvironmentId() {
         return this.EnvironmentId;
     }
 
     /**
-     * Set 环境（命名空间）名称。
-     * @param EnvironmentId 环境（命名空间）名称。
+     * Set 命名空间
+     * @param EnvironmentId 命名空间
      */
     public void setEnvironmentId(String EnvironmentId) {
         this.EnvironmentId = EnvironmentId;

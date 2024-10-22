@@ -45,6 +45,15 @@ public class AIRecognitionTemplateItem extends AbstractModel {
     private String Comment;
 
     /**
+    * 模板类型，取值：
+<li>Preset：系统预置模板；</li>
+<li>Custom：用户自定义模板。</li>
+    */
+    @SerializedName("Type")
+    @Expose
+    private String Type;
+
+    /**
     * 头尾识别控制参数。
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -99,6 +108,14 @@ public class AIRecognitionTemplateItem extends AbstractModel {
     @SerializedName("AsrWordsConfigure")
     @Expose
     private AsrWordsConfigureInfo AsrWordsConfigure;
+
+    /**
+    * 语音翻译控制参数。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AsrTranslateConfigure")
+    @Expose
+    private AsrTranslateConfigureInfo AsrTranslateConfigure;
 
     /**
     * 物体识别控制参数。
@@ -175,6 +192,30 @@ public class AIRecognitionTemplateItem extends AbstractModel {
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
+    }
+
+    /**
+     * Get 模板类型，取值：
+<li>Preset：系统预置模板；</li>
+<li>Custom：用户自定义模板。</li> 
+     * @return Type 模板类型，取值：
+<li>Preset：系统预置模板；</li>
+<li>Custom：用户自定义模板。</li>
+     */
+    public String getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set 模板类型，取值：
+<li>Preset：系统预置模板；</li>
+<li>Custom：用户自定义模板。</li>
+     * @param Type 模板类型，取值：
+<li>Preset：系统预置模板；</li>
+<li>Custom：用户自定义模板。</li>
+     */
+    public void setType(String Type) {
+        this.Type = Type;
     }
 
     /**
@@ -318,6 +359,26 @@ public class AIRecognitionTemplateItem extends AbstractModel {
     }
 
     /**
+     * Get 语音翻译控制参数。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AsrTranslateConfigure 语音翻译控制参数。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AsrTranslateConfigureInfo getAsrTranslateConfigure() {
+        return this.AsrTranslateConfigure;
+    }
+
+    /**
+     * Set 语音翻译控制参数。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AsrTranslateConfigure 语音翻译控制参数。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAsrTranslateConfigure(AsrTranslateConfigureInfo AsrTranslateConfigure) {
+        this.AsrTranslateConfigure = AsrTranslateConfigure;
+    }
+
+    /**
      * Get 物体识别控制参数。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ObjectConfigure 物体识别控制参数。
@@ -402,6 +463,9 @@ public class AIRecognitionTemplateItem extends AbstractModel {
         if (source.Comment != null) {
             this.Comment = new String(source.Comment);
         }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
         if (source.HeadTailConfigure != null) {
             this.HeadTailConfigure = new HeadTailConfigureInfo(source.HeadTailConfigure);
         }
@@ -422,6 +486,9 @@ public class AIRecognitionTemplateItem extends AbstractModel {
         }
         if (source.AsrWordsConfigure != null) {
             this.AsrWordsConfigure = new AsrWordsConfigureInfo(source.AsrWordsConfigure);
+        }
+        if (source.AsrTranslateConfigure != null) {
+            this.AsrTranslateConfigure = new AsrTranslateConfigureInfo(source.AsrTranslateConfigure);
         }
         if (source.ObjectConfigure != null) {
             this.ObjectConfigure = new ObjectConfigureInfo(source.ObjectConfigure);
@@ -445,6 +512,7 @@ public class AIRecognitionTemplateItem extends AbstractModel {
         this.setParamSimple(map, prefix + "Definition", this.Definition);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Comment", this.Comment);
+        this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamObj(map, prefix + "HeadTailConfigure.", this.HeadTailConfigure);
         this.setParamObj(map, prefix + "SegmentConfigure.", this.SegmentConfigure);
         this.setParamObj(map, prefix + "FaceConfigure.", this.FaceConfigure);
@@ -452,6 +520,7 @@ public class AIRecognitionTemplateItem extends AbstractModel {
         this.setParamObj(map, prefix + "OcrWordsConfigure.", this.OcrWordsConfigure);
         this.setParamObj(map, prefix + "AsrFullTextConfigure.", this.AsrFullTextConfigure);
         this.setParamObj(map, prefix + "AsrWordsConfigure.", this.AsrWordsConfigure);
+        this.setParamObj(map, prefix + "AsrTranslateConfigure.", this.AsrTranslateConfigure);
         this.setParamObj(map, prefix + "ObjectConfigure.", this.ObjectConfigure);
         this.setParamSimple(map, prefix + "ScreenshotInterval", this.ScreenshotInterval);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);

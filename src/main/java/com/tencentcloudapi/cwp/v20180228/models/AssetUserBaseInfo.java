@@ -122,14 +122,14 @@ public class AssetUserBaseInfo extends AbstractModel {
     private Long ProjectId;
 
     /**
-    * 账号类型：0访客用户，1标准用户，2管理员用户 ,999为空,仅windows
+    * 账号类型：0访客用户，1标准用户，2管理员用户 ,999为空,仅Windows
     */
     @SerializedName("UserType")
     @Expose
     private Long UserType;
 
     /**
-    * 是否域账号：0否， 1是，2否, 999为空  仅windows
+    * 是否域账号：0否， 1是，2否, 999为空  仅Windows
     */
     @SerializedName("IsDomain")
     @Expose
@@ -454,32 +454,32 @@ public class AssetUserBaseInfo extends AbstractModel {
     }
 
     /**
-     * Get 账号类型：0访客用户，1标准用户，2管理员用户 ,999为空,仅windows 
-     * @return UserType 账号类型：0访客用户，1标准用户，2管理员用户 ,999为空,仅windows
+     * Get 账号类型：0访客用户，1标准用户，2管理员用户 ,999为空,仅Windows 
+     * @return UserType 账号类型：0访客用户，1标准用户，2管理员用户 ,999为空,仅Windows
      */
     public Long getUserType() {
         return this.UserType;
     }
 
     /**
-     * Set 账号类型：0访客用户，1标准用户，2管理员用户 ,999为空,仅windows
-     * @param UserType 账号类型：0访客用户，1标准用户，2管理员用户 ,999为空,仅windows
+     * Set 账号类型：0访客用户，1标准用户，2管理员用户 ,999为空,仅Windows
+     * @param UserType 账号类型：0访客用户，1标准用户，2管理员用户 ,999为空,仅Windows
      */
     public void setUserType(Long UserType) {
         this.UserType = UserType;
     }
 
     /**
-     * Get 是否域账号：0否， 1是，2否, 999为空  仅windows 
-     * @return IsDomain 是否域账号：0否， 1是，2否, 999为空  仅windows
+     * Get 是否域账号：0否， 1是，2否, 999为空  仅Windows 
+     * @return IsDomain 是否域账号：0否， 1是，2否, 999为空  仅Windows
      */
     public Long getIsDomain() {
         return this.IsDomain;
     }
 
     /**
-     * Set 是否域账号：0否， 1是，2否, 999为空  仅windows
-     * @param IsDomain 是否域账号：0否， 1是，2否, 999为空  仅windows
+     * Set 是否域账号：0否， 1是，2否, 999为空  仅Windows
+     * @param IsDomain 是否域账号：0否， 1是，2否, 999为空  仅Windows
      */
     public void setIsDomain(Long IsDomain) {
         this.IsDomain = IsDomain;

@@ -180,6 +180,14 @@ public class RansomDefenseStrategyMachineBackupInfo extends AbstractModel {
     private Long BackupSuccessCount;
 
     /**
+    * 版本信息：0-基础版 1-专业版 2-旗舰版 3-普惠版
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HostVersion")
+    @Expose
+    private Long HostVersion;
+
+    /**
      * Get 主机Uuid 
      * @return Uuid 主机Uuid
      */
@@ -563,6 +571,26 @@ public class RansomDefenseStrategyMachineBackupInfo extends AbstractModel {
         this.BackupSuccessCount = BackupSuccessCount;
     }
 
+    /**
+     * Get 版本信息：0-基础版 1-专业版 2-旗舰版 3-普惠版
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return HostVersion 版本信息：0-基础版 1-专业版 2-旗舰版 3-普惠版
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getHostVersion() {
+        return this.HostVersion;
+    }
+
+    /**
+     * Set 版本信息：0-基础版 1-专业版 2-旗舰版 3-普惠版
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HostVersion 版本信息：0-基础版 1-专业版 2-旗舰版 3-普惠版
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHostVersion(Long HostVersion) {
+        this.HostVersion = HostVersion;
+    }
+
     public RansomDefenseStrategyMachineBackupInfo() {
     }
 
@@ -637,6 +665,9 @@ public class RansomDefenseStrategyMachineBackupInfo extends AbstractModel {
         if (source.BackupSuccessCount != null) {
             this.BackupSuccessCount = new Long(source.BackupSuccessCount);
         }
+        if (source.HostVersion != null) {
+            this.HostVersion = new Long(source.HostVersion);
+        }
     }
 
 
@@ -664,6 +695,7 @@ public class RansomDefenseStrategyMachineBackupInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "RollBackPercent", this.RollBackPercent);
         this.setParamSimple(map, prefix + "RollBackStatus", this.RollBackStatus);
         this.setParamSimple(map, prefix + "BackupSuccessCount", this.BackupSuccessCount);
+        this.setParamSimple(map, prefix + "HostVersion", this.HostVersion);
 
     }
 }
