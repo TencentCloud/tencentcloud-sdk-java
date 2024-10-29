@@ -52,7 +52,7 @@ public class DescribeSecurityBroadcastsRequest extends AbstractModel {
     private String EndDate;
 
     /**
-    * 过滤安全播报类型：0-紧急通知，1-功能更新，2-行业荣誉，3-版本发布，4-最佳实践
+    * 过滤安全播报类型：0-紧急通知，1-功能更新，2-行业荣誉，3-版本发布，4-实践教程
     */
     @SerializedName("BroadcastType")
     @Expose
@@ -123,16 +123,16 @@ public class DescribeSecurityBroadcastsRequest extends AbstractModel {
     }
 
     /**
-     * Get 过滤安全播报类型：0-紧急通知，1-功能更新，2-行业荣誉，3-版本发布，4-最佳实践 
-     * @return BroadcastType 过滤安全播报类型：0-紧急通知，1-功能更新，2-行业荣誉，3-版本发布，4-最佳实践
+     * Get 过滤安全播报类型：0-紧急通知，1-功能更新，2-行业荣誉，3-版本发布，4-实践教程 
+     * @return BroadcastType 过滤安全播报类型：0-紧急通知，1-功能更新，2-行业荣誉，3-版本发布，4-实践教程
      */
     public String getBroadcastType() {
         return this.BroadcastType;
     }
 
     /**
-     * Set 过滤安全播报类型：0-紧急通知，1-功能更新，2-行业荣誉，3-版本发布，4-最佳实践
-     * @param BroadcastType 过滤安全播报类型：0-紧急通知，1-功能更新，2-行业荣誉，3-版本发布，4-最佳实践
+     * Set 过滤安全播报类型：0-紧急通知，1-功能更新，2-行业荣誉，3-版本发布，4-实践教程
+     * @param BroadcastType 过滤安全播报类型：0-紧急通知，1-功能更新，2-行业荣誉，3-版本发布，4-实践教程
      */
     public void setBroadcastType(String BroadcastType) {
         this.BroadcastType = BroadcastType;

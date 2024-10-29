@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeActiveCarrierPrivilegeNumberRequest extends AbstractModel {
 
     /**
-    * 实例Id
+    * 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
     */
     @SerializedName("SdkAppId")
     @Expose
@@ -52,16 +52,16 @@ public class DescribeActiveCarrierPrivilegeNumberRequest extends AbstractModel {
     private Filter [] Filters;
 
     /**
-     * Get 实例Id 
-     * @return SdkAppId 实例Id
+     * Get 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc 
+     * @return SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      */
     public Long getSdkAppId() {
         return this.SdkAppId;
     }
 
     /**
-     * Set 实例Id
-     * @param SdkAppId 实例Id
+     * Set 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
+     * @param SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      */
     public void setSdkAppId(Long SdkAppId) {
         this.SdkAppId = SdkAppId;

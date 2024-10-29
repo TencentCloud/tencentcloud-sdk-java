@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class McuLayoutParams extends AbstractModel {
 
     /**
-    * 布局模式：动态布局（1：悬浮布局（默认），2：屏幕分享布局，3：九宫格布局），静态布局（4：自定义布局）。
+    * 布局模式：动态布局（1：悬浮布局（默认），2：屏幕分享布局，3：九宫格布局），静态布局（4：自定义布局）。最多支持混入16路音视频流，如果用户只上行音频，也会被算作一路；自定义布局中，如果子画面只设置占位图，也被算作一路。
     */
     @SerializedName("MixLayoutMode")
     @Expose
@@ -38,7 +38,7 @@ public class McuLayoutParams extends AbstractModel {
     private Long PureAudioHoldPlaceMode;
 
     /**
-    * 自定义模板中有效，指定用户视频在混合画面中的位置。
+    * 自定义模板中有效，指定用户视频在混合画面中的位置，最多支持设置16个输入流。
     */
     @SerializedName("MixLayoutList")
     @Expose
@@ -59,16 +59,16 @@ public class McuLayoutParams extends AbstractModel {
     private Long RenderMode;
 
     /**
-     * Get 布局模式：动态布局（1：悬浮布局（默认），2：屏幕分享布局，3：九宫格布局），静态布局（4：自定义布局）。 
-     * @return MixLayoutMode 布局模式：动态布局（1：悬浮布局（默认），2：屏幕分享布局，3：九宫格布局），静态布局（4：自定义布局）。
+     * Get 布局模式：动态布局（1：悬浮布局（默认），2：屏幕分享布局，3：九宫格布局），静态布局（4：自定义布局）。最多支持混入16路音视频流，如果用户只上行音频，也会被算作一路；自定义布局中，如果子画面只设置占位图，也被算作一路。 
+     * @return MixLayoutMode 布局模式：动态布局（1：悬浮布局（默认），2：屏幕分享布局，3：九宫格布局），静态布局（4：自定义布局）。最多支持混入16路音视频流，如果用户只上行音频，也会被算作一路；自定义布局中，如果子画面只设置占位图，也被算作一路。
      */
     public Long getMixLayoutMode() {
         return this.MixLayoutMode;
     }
 
     /**
-     * Set 布局模式：动态布局（1：悬浮布局（默认），2：屏幕分享布局，3：九宫格布局），静态布局（4：自定义布局）。
-     * @param MixLayoutMode 布局模式：动态布局（1：悬浮布局（默认），2：屏幕分享布局，3：九宫格布局），静态布局（4：自定义布局）。
+     * Set 布局模式：动态布局（1：悬浮布局（默认），2：屏幕分享布局，3：九宫格布局），静态布局（4：自定义布局）。最多支持混入16路音视频流，如果用户只上行音频，也会被算作一路；自定义布局中，如果子画面只设置占位图，也被算作一路。
+     * @param MixLayoutMode 布局模式：动态布局（1：悬浮布局（默认），2：屏幕分享布局，3：九宫格布局），静态布局（4：自定义布局）。最多支持混入16路音视频流，如果用户只上行音频，也会被算作一路；自定义布局中，如果子画面只设置占位图，也被算作一路。
      */
     public void setMixLayoutMode(Long MixLayoutMode) {
         this.MixLayoutMode = MixLayoutMode;
@@ -91,16 +91,16 @@ public class McuLayoutParams extends AbstractModel {
     }
 
     /**
-     * Get 自定义模板中有效，指定用户视频在混合画面中的位置。 
-     * @return MixLayoutList 自定义模板中有效，指定用户视频在混合画面中的位置。
+     * Get 自定义模板中有效，指定用户视频在混合画面中的位置，最多支持设置16个输入流。 
+     * @return MixLayoutList 自定义模板中有效，指定用户视频在混合画面中的位置，最多支持设置16个输入流。
      */
     public McuLayout [] getMixLayoutList() {
         return this.MixLayoutList;
     }
 
     /**
-     * Set 自定义模板中有效，指定用户视频在混合画面中的位置。
-     * @param MixLayoutList 自定义模板中有效，指定用户视频在混合画面中的位置。
+     * Set 自定义模板中有效，指定用户视频在混合画面中的位置，最多支持设置16个输入流。
+     * @param MixLayoutList 自定义模板中有效，指定用户视频在混合画面中的位置，最多支持设置16个输入流。
      */
     public void setMixLayoutList(McuLayout [] MixLayoutList) {
         this.MixLayoutList = MixLayoutList;

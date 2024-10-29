@@ -38,14 +38,14 @@ public class DeployApplicationRequest extends AbstractModel {
     private Long InitPodNum;
 
     /**
-    * cpu规格
+    * cpu规格 单位：核
     */
     @SerializedName("CpuSpec")
     @Expose
     private Float CpuSpec;
 
     /**
-    * 内存规格
+    * 内存规格 单位：G
     */
     @SerializedName("MemorySpec")
     @Expose
@@ -405,32 +405,32 @@ public class DeployApplicationRequest extends AbstractModel {
     }
 
     /**
-     * Get cpu规格 
-     * @return CpuSpec cpu规格
+     * Get cpu规格 单位：核 
+     * @return CpuSpec cpu规格 单位：核
      */
     public Float getCpuSpec() {
         return this.CpuSpec;
     }
 
     /**
-     * Set cpu规格
-     * @param CpuSpec cpu规格
+     * Set cpu规格 单位：核
+     * @param CpuSpec cpu规格 单位：核
      */
     public void setCpuSpec(Float CpuSpec) {
         this.CpuSpec = CpuSpec;
     }
 
     /**
-     * Get 内存规格 
-     * @return MemorySpec 内存规格
+     * Get 内存规格 单位：G 
+     * @return MemorySpec 内存规格 单位：G
      */
     public Float getMemorySpec() {
         return this.MemorySpec;
     }
 
     /**
-     * Set 内存规格
-     * @param MemorySpec 内存规格
+     * Set 内存规格 单位：G
+     * @param MemorySpec 内存规格 单位：G
      */
     public void setMemorySpec(Float MemorySpec) {
         this.MemorySpec = MemorySpec;

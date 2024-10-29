@@ -1487,6 +1487,17 @@ public class WafClient extends AbstractClient{
     }
 
     /**
+     *修改用户防护规则，开启关闭具体的某条规则
+     * @param req ModifyUserSignatureRuleV2Request
+     * @return ModifyUserSignatureRuleV2Response
+     * @throws TencentCloudSDKException
+     */
+    public ModifyUserSignatureRuleV2Response ModifyUserSignatureRuleV2(ModifyUserSignatureRuleV2Request req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyUserSignatureRuleV2", ModifyUserSignatureRuleV2Response.class);
+    }
+
+    /**
      *修改ip惩罚规则
      * @param req ModifyWafAutoDenyRulesRequest
      * @return ModifyWafAutoDenyRulesResponse

@@ -62,6 +62,13 @@ Type为5，域名模板eg：www.qq.com,www.tencent.com
     private String ProtocolType;
 
     /**
+    * IP版本,0 IPV4;1 IPV6
+    */
+    @SerializedName("IpVersion")
+    @Expose
+    private Long IpVersion;
+
+    /**
      * Get 模板名称 
      * @return Name 模板名称
      */
@@ -153,6 +160,22 @@ Type为5，域名模板eg：www.qq.com,www.tencent.com
         this.ProtocolType = ProtocolType;
     }
 
+    /**
+     * Get IP版本,0 IPV4;1 IPV6 
+     * @return IpVersion IP版本,0 IPV4;1 IPV6
+     */
+    public Long getIpVersion() {
+        return this.IpVersion;
+    }
+
+    /**
+     * Set IP版本,0 IPV4;1 IPV6
+     * @param IpVersion IP版本,0 IPV4;1 IPV6
+     */
+    public void setIpVersion(Long IpVersion) {
+        this.IpVersion = IpVersion;
+    }
+
     public CreateAddressTemplateRequest() {
     }
 
@@ -176,6 +199,9 @@ Type为5，域名模板eg：www.qq.com,www.tencent.com
         if (source.ProtocolType != null) {
             this.ProtocolType = new String(source.ProtocolType);
         }
+        if (source.IpVersion != null) {
+            this.IpVersion = new Long(source.IpVersion);
+        }
     }
 
 
@@ -188,6 +214,7 @@ Type为5，域名模板eg：www.qq.com,www.tencent.com
         this.setParamSimple(map, prefix + "IpString", this.IpString);
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "ProtocolType", this.ProtocolType);
+        this.setParamSimple(map, prefix + "IpVersion", this.IpVersion);
 
     }
 }

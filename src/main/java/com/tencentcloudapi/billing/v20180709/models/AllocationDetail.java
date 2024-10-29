@@ -557,6 +557,54 @@ public class AllocationDetail extends AbstractModel {
     private Long AllocationType;
 
     /**
+    * 当前消费项的优惠对象，例如：官网折扣、用户折扣、活动折扣。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DiscountObject")
+    @Expose
+    private String DiscountObject;
+
+    /**
+    * 当前消费项的优惠类型，例如：折扣、合同价。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DiscountType")
+    @Expose
+    private String DiscountType;
+
+    /**
+    * 对优惠类型的补充描述，例如：商务折扣8折，则优惠类型为“折扣”，优惠内容为“0.8”。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DiscountContent")
+    @Expose
+    private String DiscountContent;
+
+    /**
+    * SPDeduction
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SPDeduction")
+    @Expose
+    private String SPDeduction;
+
+    /**
+    * SPDeduction
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SPDeductionRate")
+    @Expose
+    private String SPDeductionRate;
+
+    /**
+    * 账单月
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BillMonth")
+    @Expose
+    private String BillMonth;
+
+    /**
      * Get 分账单元唯一标识
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TreeNodeUniqKey 分账单元唯一标识
@@ -1904,6 +1952,126 @@ public class AllocationDetail extends AbstractModel {
         this.AllocationType = AllocationType;
     }
 
+    /**
+     * Get 当前消费项的优惠对象，例如：官网折扣、用户折扣、活动折扣。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DiscountObject 当前消费项的优惠对象，例如：官网折扣、用户折扣、活动折扣。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDiscountObject() {
+        return this.DiscountObject;
+    }
+
+    /**
+     * Set 当前消费项的优惠对象，例如：官网折扣、用户折扣、活动折扣。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DiscountObject 当前消费项的优惠对象，例如：官网折扣、用户折扣、活动折扣。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDiscountObject(String DiscountObject) {
+        this.DiscountObject = DiscountObject;
+    }
+
+    /**
+     * Get 当前消费项的优惠类型，例如：折扣、合同价。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DiscountType 当前消费项的优惠类型，例如：折扣、合同价。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDiscountType() {
+        return this.DiscountType;
+    }
+
+    /**
+     * Set 当前消费项的优惠类型，例如：折扣、合同价。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DiscountType 当前消费项的优惠类型，例如：折扣、合同价。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDiscountType(String DiscountType) {
+        this.DiscountType = DiscountType;
+    }
+
+    /**
+     * Get 对优惠类型的补充描述，例如：商务折扣8折，则优惠类型为“折扣”，优惠内容为“0.8”。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DiscountContent 对优惠类型的补充描述，例如：商务折扣8折，则优惠类型为“折扣”，优惠内容为“0.8”。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDiscountContent() {
+        return this.DiscountContent;
+    }
+
+    /**
+     * Set 对优惠类型的补充描述，例如：商务折扣8折，则优惠类型为“折扣”，优惠内容为“0.8”。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DiscountContent 对优惠类型的补充描述，例如：商务折扣8折，则优惠类型为“折扣”，优惠内容为“0.8”。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDiscountContent(String DiscountContent) {
+        this.DiscountContent = DiscountContent;
+    }
+
+    /**
+     * Get SPDeduction
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SPDeduction SPDeduction
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSPDeduction() {
+        return this.SPDeduction;
+    }
+
+    /**
+     * Set SPDeduction
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SPDeduction SPDeduction
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSPDeduction(String SPDeduction) {
+        this.SPDeduction = SPDeduction;
+    }
+
+    /**
+     * Get SPDeduction
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SPDeductionRate SPDeduction
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSPDeductionRate() {
+        return this.SPDeductionRate;
+    }
+
+    /**
+     * Set SPDeduction
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SPDeductionRate SPDeduction
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSPDeductionRate(String SPDeductionRate) {
+        this.SPDeductionRate = SPDeductionRate;
+    }
+
+    /**
+     * Get 账单月
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BillMonth 账单月
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getBillMonth() {
+        return this.BillMonth;
+    }
+
+    /**
+     * Set 账单月
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BillMonth 账单月
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBillMonth(String BillMonth) {
+        this.BillMonth = BillMonth;
+    }
+
     public AllocationDetail() {
     }
 
@@ -2116,6 +2284,24 @@ public class AllocationDetail extends AbstractModel {
         if (source.AllocationType != null) {
             this.AllocationType = new Long(source.AllocationType);
         }
+        if (source.DiscountObject != null) {
+            this.DiscountObject = new String(source.DiscountObject);
+        }
+        if (source.DiscountType != null) {
+            this.DiscountType = new String(source.DiscountType);
+        }
+        if (source.DiscountContent != null) {
+            this.DiscountContent = new String(source.DiscountContent);
+        }
+        if (source.SPDeduction != null) {
+            this.SPDeduction = new String(source.SPDeduction);
+        }
+        if (source.SPDeductionRate != null) {
+            this.SPDeductionRate = new String(source.SPDeductionRate);
+        }
+        if (source.BillMonth != null) {
+            this.BillMonth = new String(source.BillMonth);
+        }
     }
 
 
@@ -2189,6 +2375,12 @@ public class AllocationDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "DeductedMeasure", this.DeductedMeasure);
         this.setParamSimple(map, prefix + "ComponentConfig", this.ComponentConfig);
         this.setParamSimple(map, prefix + "AllocationType", this.AllocationType);
+        this.setParamSimple(map, prefix + "DiscountObject", this.DiscountObject);
+        this.setParamSimple(map, prefix + "DiscountType", this.DiscountType);
+        this.setParamSimple(map, prefix + "DiscountContent", this.DiscountContent);
+        this.setParamSimple(map, prefix + "SPDeduction", this.SPDeduction);
+        this.setParamSimple(map, prefix + "SPDeductionRate", this.SPDeductionRate);
+        this.setParamSimple(map, prefix + "BillMonth", this.BillMonth);
 
     }
 }

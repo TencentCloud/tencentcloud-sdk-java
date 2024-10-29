@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ServicePortMapping extends AbstractModel {
 
     /**
-    * 服务类型
+    * 服务类型：如：EXTERNAL，VPC，CLUSTER
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
@@ -112,9 +112,9 @@ public class ServicePortMapping extends AbstractModel {
     private String ExternalDomain;
 
     /**
-     * Get 服务类型
+     * Get 服务类型：如：EXTERNAL，VPC，CLUSTER
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Type 服务类型
+     * @return Type 服务类型：如：EXTERNAL，VPC，CLUSTER
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
@@ -122,9 +122,9 @@ public class ServicePortMapping extends AbstractModel {
     }
 
     /**
-     * Set 服务类型
+     * Set 服务类型：如：EXTERNAL，VPC，CLUSTER
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Type 服务类型
+     * @param Type 服务类型：如：EXTERNAL，VPC，CLUSTER
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {

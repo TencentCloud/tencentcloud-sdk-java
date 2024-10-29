@@ -525,6 +525,17 @@ public class CccClient extends AbstractClient{
     }
 
     /**
+     *拉取会话录音转文本信息
+     * @param req DescribeTelRecordAsrRequest
+     * @return DescribeTelRecordAsrResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTelRecordAsrResponse DescribeTelRecordAsr(DescribeTelRecordAsrRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTelRecordAsr", DescribeTelRecordAsrResponse.class);
+    }
+
+    /**
      *获取 PSTN 会话信息
      * @param req DescribeTelSessionRequest
      * @return DescribeTelSessionResponse

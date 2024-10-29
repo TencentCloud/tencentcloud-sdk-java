@@ -24,22 +24,6 @@ import java.util.HashMap;
 public class NoticeRule extends AbstractModel {
 
     /**
-    * 告警通知模板接收者信息。
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("NoticeReceivers")
-    @Expose
-    private NoticeReceiver [] NoticeReceivers;
-
-    /**
-    * 告警通知模板回调信息。
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("WebCallbacks")
-    @Expose
-    private WebCallback [] WebCallbacks;
-
-    /**
     * 匹配规则 JSON串。
 **rule规则树格式为嵌套结构体JSON字符串**
 `{"Value":"AND","Type":"Operation","Children":[{"Value":"OR","Type":"Operation","Children":[{"Type":"Condition","Value":"Level","Children":[{"Value":"In","Type":"Compare"},{"Value":"[1,0]","Type":"Value"}]},{"Type":"Condition","Value":"Level","Children":[{"Value":"NotIn","Type":"Compare"},{"Value":"[2]","Type":"Value"}]}]}]}`
@@ -105,44 +89,55 @@ public class NoticeRule extends AbstractModel {
     private String Rule;
 
     /**
-     * Get 告警通知模板接收者信息。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return NoticeReceivers 告警通知模板接收者信息。
+    * 告警通知接收者信息。
 注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public NoticeReceiver [] getNoticeReceivers() {
-        return this.NoticeReceivers;
-    }
+    */
+    @SerializedName("NoticeReceivers")
+    @Expose
+    private NoticeReceiver [] NoticeReceivers;
 
     /**
-     * Set 告警通知模板接收者信息。
+    * 告警通知模板回调信息，包括企业微信、钉钉、飞书。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param NoticeReceivers 告警通知模板接收者信息。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setNoticeReceivers(NoticeReceiver [] NoticeReceivers) {
-        this.NoticeReceivers = NoticeReceivers;
-    }
+    */
+    @SerializedName("WebCallbacks")
+    @Expose
+    private WebCallback [] WebCallbacks;
 
     /**
-     * Get 告警通知模板回调信息。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WebCallbacks 告警通知模板回调信息。
+    * 告警升级开关。`true`：开启告警升级、`false`：关闭告警升级，默认：false
 注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public WebCallback [] getWebCallbacks() {
-        return this.WebCallbacks;
-    }
+    */
+    @SerializedName("Escalate")
+    @Expose
+    private Boolean Escalate;
 
     /**
-     * Set 告警通知模板回调信息。
+    * 告警升级条件。`1`：无人认领且未恢复、`2`：未恢复，默认为1
+- 无人认领且未恢复：告警没有恢复并且没有人认领则升级
+- 未恢复：当前告警持续未恢复则升级
+
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WebCallbacks 告警通知模板回调信息。
+    */
+    @SerializedName("Type")
+    @Expose
+    private Long Type;
+
+    /**
+    * 告警升级间隔。单位：分钟，范围`[1，14400]`
 注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setWebCallbacks(WebCallback [] WebCallbacks) {
-        this.WebCallbacks = WebCallbacks;
-    }
+    */
+    @SerializedName("Interval")
+    @Expose
+    private Long Interval;
+
+    /**
+    * 告警升级后下一个环节的通知渠道配置
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EscalateNotice")
+    @Expose
+    private EscalateNoticeInfo EscalateNotice;
 
     /**
      * Get 匹配规则 JSON串。
@@ -392,6 +387,138 @@ public class NoticeRule extends AbstractModel {
         this.Rule = Rule;
     }
 
+    /**
+     * Get 告警通知接收者信息。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NoticeReceivers 告警通知接收者信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public NoticeReceiver [] getNoticeReceivers() {
+        return this.NoticeReceivers;
+    }
+
+    /**
+     * Set 告警通知接收者信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NoticeReceivers 告警通知接收者信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNoticeReceivers(NoticeReceiver [] NoticeReceivers) {
+        this.NoticeReceivers = NoticeReceivers;
+    }
+
+    /**
+     * Get 告警通知模板回调信息，包括企业微信、钉钉、飞书。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WebCallbacks 告警通知模板回调信息，包括企业微信、钉钉、飞书。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public WebCallback [] getWebCallbacks() {
+        return this.WebCallbacks;
+    }
+
+    /**
+     * Set 告警通知模板回调信息，包括企业微信、钉钉、飞书。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WebCallbacks 告警通知模板回调信息，包括企业微信、钉钉、飞书。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWebCallbacks(WebCallback [] WebCallbacks) {
+        this.WebCallbacks = WebCallbacks;
+    }
+
+    /**
+     * Get 告警升级开关。`true`：开启告警升级、`false`：关闭告警升级，默认：false
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Escalate 告警升级开关。`true`：开启告警升级、`false`：关闭告警升级，默认：false
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getEscalate() {
+        return this.Escalate;
+    }
+
+    /**
+     * Set 告警升级开关。`true`：开启告警升级、`false`：关闭告警升级，默认：false
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Escalate 告警升级开关。`true`：开启告警升级、`false`：关闭告警升级，默认：false
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEscalate(Boolean Escalate) {
+        this.Escalate = Escalate;
+    }
+
+    /**
+     * Get 告警升级条件。`1`：无人认领且未恢复、`2`：未恢复，默认为1
+- 无人认领且未恢复：告警没有恢复并且没有人认领则升级
+- 未恢复：当前告警持续未恢复则升级
+
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Type 告警升级条件。`1`：无人认领且未恢复、`2`：未恢复，默认为1
+- 无人认领且未恢复：告警没有恢复并且没有人认领则升级
+- 未恢复：当前告警持续未恢复则升级
+
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set 告警升级条件。`1`：无人认领且未恢复、`2`：未恢复，默认为1
+- 无人认领且未恢复：告警没有恢复并且没有人认领则升级
+- 未恢复：当前告警持续未恢复则升级
+
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Type 告警升级条件。`1`：无人认领且未恢复、`2`：未恢复，默认为1
+- 无人认领且未恢复：告警没有恢复并且没有人认领则升级
+- 未恢复：当前告警持续未恢复则升级
+
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setType(Long Type) {
+        this.Type = Type;
+    }
+
+    /**
+     * Get 告警升级间隔。单位：分钟，范围`[1，14400]`
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Interval 告警升级间隔。单位：分钟，范围`[1，14400]`
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getInterval() {
+        return this.Interval;
+    }
+
+    /**
+     * Set 告警升级间隔。单位：分钟，范围`[1，14400]`
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Interval 告警升级间隔。单位：分钟，范围`[1，14400]`
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInterval(Long Interval) {
+        this.Interval = Interval;
+    }
+
+    /**
+     * Get 告警升级后下一个环节的通知渠道配置
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EscalateNotice 告警升级后下一个环节的通知渠道配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public EscalateNoticeInfo getEscalateNotice() {
+        return this.EscalateNotice;
+    }
+
+    /**
+     * Set 告警升级后下一个环节的通知渠道配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EscalateNotice 告警升级后下一个环节的通知渠道配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEscalateNotice(EscalateNoticeInfo EscalateNotice) {
+        this.EscalateNotice = EscalateNotice;
+    }
+
     public NoticeRule() {
     }
 
@@ -400,6 +527,9 @@ public class NoticeRule extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public NoticeRule(NoticeRule source) {
+        if (source.Rule != null) {
+            this.Rule = new String(source.Rule);
+        }
         if (source.NoticeReceivers != null) {
             this.NoticeReceivers = new NoticeReceiver[source.NoticeReceivers.length];
             for (int i = 0; i < source.NoticeReceivers.length; i++) {
@@ -412,8 +542,17 @@ public class NoticeRule extends AbstractModel {
                 this.WebCallbacks[i] = new WebCallback(source.WebCallbacks[i]);
             }
         }
-        if (source.Rule != null) {
-            this.Rule = new String(source.Rule);
+        if (source.Escalate != null) {
+            this.Escalate = new Boolean(source.Escalate);
+        }
+        if (source.Type != null) {
+            this.Type = new Long(source.Type);
+        }
+        if (source.Interval != null) {
+            this.Interval = new Long(source.Interval);
+        }
+        if (source.EscalateNotice != null) {
+            this.EscalateNotice = new EscalateNoticeInfo(source.EscalateNotice);
         }
     }
 
@@ -422,9 +561,13 @@ public class NoticeRule extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Rule", this.Rule);
         this.setParamArrayObj(map, prefix + "NoticeReceivers.", this.NoticeReceivers);
         this.setParamArrayObj(map, prefix + "WebCallbacks.", this.WebCallbacks);
-        this.setParamSimple(map, prefix + "Rule", this.Rule);
+        this.setParamSimple(map, prefix + "Escalate", this.Escalate);
+        this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "Interval", this.Interval);
+        this.setParamObj(map, prefix + "EscalateNotice.", this.EscalateNotice);
 
     }
 }

@@ -2107,6 +2107,17 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *修改集群镜像
+     * @param req ModifyClusterImageRequest
+     * @return ModifyClusterImageResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyClusterImageResponse ModifyClusterImage(ModifyClusterImageRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyClusterImage", ModifyClusterImageResponse.class);
+    }
+
+    /**
      *编辑节点池
      * @param req ModifyClusterNodePoolRequest
      * @return ModifyClusterNodePoolResponse

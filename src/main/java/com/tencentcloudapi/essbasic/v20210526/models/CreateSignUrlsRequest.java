@@ -40,7 +40,10 @@ public class CreateSignUrlsRequest extends AbstractModel {
 
     /**
     * 合同流程ID数组，最多支持100个。
-注: `该参数和合同组编号必须二选一`
+
+注: 
+1. 必须选择提供此参数或合同组编号中的一个。
+2. 当生成类型（GenerateType）设为“ALL”时，不可提供多个流程ID。
     */
     @SerializedName("FlowIds")
     @Expose
@@ -73,22 +76,19 @@ public class CreateSignUrlsRequest extends AbstractModel {
     /**
     * 签署链接生成类型，可以选择的类型如下
 
-<ul><li>**ALL**：(默认)全部签署方签署链接，此时不会给自动签署(静默签署)的签署方创建签署链接</li>
-<li>**CHANNEL**：第三方子企业员工签署方</li>
-<li>**NOT_CHANNEL**：SaaS平台企业员工签署方</li>
-<li>**PERSON**：个人/自然人签署方</li>
-<li>**FOLLOWER**：关注方，目前是合同抄送方</li>
-<li>**RECIPIENT**：获取RecipientId对应的签署链接，可用于生成动态签署人补充链接</li></ul>
+<ul><li><strong>ALL</strong>：（默认）为所有签署方生成签署链接，但不包括自动签署（静默签署）的签署方。注意：<strong>此中类型不支持多个合同ID（FlowIds）</strong>。</li>
+<li><strong>CHANNEL</strong>：适用于第三方子企业的员工签署方。</li>
+<li><strong>NOT_CHANNEL</strong>：适用于SaaS平台企业的员工签署方。</li>
+<li><strong>PERSON</strong>：适用于个人或自然人签署方。</li>
+<li><strong>FOLLOWER</strong>：适用于关注方，目前指合同的抄送方。</li>
+<li><strong>RECIPIENT</strong>：根据RecipientId生成对应的签署链接，适用于动态添加签署人的情况。</li></ul>
     */
     @SerializedName("GenerateType")
     @Expose
     private String GenerateType;
 
     /**
-    * SaaS平台企业员工签署方的企业名称
-如果名称中包含英文括号()，请使用中文括号（）代替。
-
-注: `GenerateType为"NOT_CHANNEL"时必填`
+    * SaaS平台企业员工签署方的企业名称如果名称中包含英文括号()，请使用中文括号（）代替。  注:  `1.GenerateType为"NOT_CHANNEL"时必填` `2.获取B端动态签署人领取链接时,可指定此字段来预先设定签署人的企业,预设后只能以该企业身份去领取合同并完成签署`
     */
     @SerializedName("OrganizationName")
     @Expose
@@ -255,9 +255,15 @@ public class CreateSignUrlsRequest extends AbstractModel {
 
     /**
      * Get 合同流程ID数组，最多支持100个。
-注: `该参数和合同组编号必须二选一` 
+
+注: 
+1. 必须选择提供此参数或合同组编号中的一个。
+2. 当生成类型（GenerateType）设为“ALL”时，不可提供多个流程ID。 
      * @return FlowIds 合同流程ID数组，最多支持100个。
-注: `该参数和合同组编号必须二选一`
+
+注: 
+1. 必须选择提供此参数或合同组编号中的一个。
+2. 当生成类型（GenerateType）设为“ALL”时，不可提供多个流程ID。
      */
     public String [] getFlowIds() {
         return this.FlowIds;
@@ -265,9 +271,15 @@ public class CreateSignUrlsRequest extends AbstractModel {
 
     /**
      * Set 合同流程ID数组，最多支持100个。
-注: `该参数和合同组编号必须二选一`
+
+注: 
+1. 必须选择提供此参数或合同组编号中的一个。
+2. 当生成类型（GenerateType）设为“ALL”时，不可提供多个流程ID。
      * @param FlowIds 合同流程ID数组，最多支持100个。
-注: `该参数和合同组编号必须二选一`
+
+注: 
+1. 必须选择提供此参数或合同组编号中的一个。
+2. 当生成类型（GenerateType）设为“ALL”时，不可提供多个流程ID。
      */
     public void setFlowIds(String [] FlowIds) {
         this.FlowIds = FlowIds;
@@ -348,20 +360,20 @@ public class CreateSignUrlsRequest extends AbstractModel {
     /**
      * Get 签署链接生成类型，可以选择的类型如下
 
-<ul><li>**ALL**：(默认)全部签署方签署链接，此时不会给自动签署(静默签署)的签署方创建签署链接</li>
-<li>**CHANNEL**：第三方子企业员工签署方</li>
-<li>**NOT_CHANNEL**：SaaS平台企业员工签署方</li>
-<li>**PERSON**：个人/自然人签署方</li>
-<li>**FOLLOWER**：关注方，目前是合同抄送方</li>
-<li>**RECIPIENT**：获取RecipientId对应的签署链接，可用于生成动态签署人补充链接</li></ul> 
+<ul><li><strong>ALL</strong>：（默认）为所有签署方生成签署链接，但不包括自动签署（静默签署）的签署方。注意：<strong>此中类型不支持多个合同ID（FlowIds）</strong>。</li>
+<li><strong>CHANNEL</strong>：适用于第三方子企业的员工签署方。</li>
+<li><strong>NOT_CHANNEL</strong>：适用于SaaS平台企业的员工签署方。</li>
+<li><strong>PERSON</strong>：适用于个人或自然人签署方。</li>
+<li><strong>FOLLOWER</strong>：适用于关注方，目前指合同的抄送方。</li>
+<li><strong>RECIPIENT</strong>：根据RecipientId生成对应的签署链接，适用于动态添加签署人的情况。</li></ul> 
      * @return GenerateType 签署链接生成类型，可以选择的类型如下
 
-<ul><li>**ALL**：(默认)全部签署方签署链接，此时不会给自动签署(静默签署)的签署方创建签署链接</li>
-<li>**CHANNEL**：第三方子企业员工签署方</li>
-<li>**NOT_CHANNEL**：SaaS平台企业员工签署方</li>
-<li>**PERSON**：个人/自然人签署方</li>
-<li>**FOLLOWER**：关注方，目前是合同抄送方</li>
-<li>**RECIPIENT**：获取RecipientId对应的签署链接，可用于生成动态签署人补充链接</li></ul>
+<ul><li><strong>ALL</strong>：（默认）为所有签署方生成签署链接，但不包括自动签署（静默签署）的签署方。注意：<strong>此中类型不支持多个合同ID（FlowIds）</strong>。</li>
+<li><strong>CHANNEL</strong>：适用于第三方子企业的员工签署方。</li>
+<li><strong>NOT_CHANNEL</strong>：适用于SaaS平台企业的员工签署方。</li>
+<li><strong>PERSON</strong>：适用于个人或自然人签署方。</li>
+<li><strong>FOLLOWER</strong>：适用于关注方，目前指合同的抄送方。</li>
+<li><strong>RECIPIENT</strong>：根据RecipientId生成对应的签署链接，适用于动态添加签署人的情况。</li></ul>
      */
     public String getGenerateType() {
         return this.GenerateType;
@@ -370,48 +382,36 @@ public class CreateSignUrlsRequest extends AbstractModel {
     /**
      * Set 签署链接生成类型，可以选择的类型如下
 
-<ul><li>**ALL**：(默认)全部签署方签署链接，此时不会给自动签署(静默签署)的签署方创建签署链接</li>
-<li>**CHANNEL**：第三方子企业员工签署方</li>
-<li>**NOT_CHANNEL**：SaaS平台企业员工签署方</li>
-<li>**PERSON**：个人/自然人签署方</li>
-<li>**FOLLOWER**：关注方，目前是合同抄送方</li>
-<li>**RECIPIENT**：获取RecipientId对应的签署链接，可用于生成动态签署人补充链接</li></ul>
+<ul><li><strong>ALL</strong>：（默认）为所有签署方生成签署链接，但不包括自动签署（静默签署）的签署方。注意：<strong>此中类型不支持多个合同ID（FlowIds）</strong>。</li>
+<li><strong>CHANNEL</strong>：适用于第三方子企业的员工签署方。</li>
+<li><strong>NOT_CHANNEL</strong>：适用于SaaS平台企业的员工签署方。</li>
+<li><strong>PERSON</strong>：适用于个人或自然人签署方。</li>
+<li><strong>FOLLOWER</strong>：适用于关注方，目前指合同的抄送方。</li>
+<li><strong>RECIPIENT</strong>：根据RecipientId生成对应的签署链接，适用于动态添加签署人的情况。</li></ul>
      * @param GenerateType 签署链接生成类型，可以选择的类型如下
 
-<ul><li>**ALL**：(默认)全部签署方签署链接，此时不会给自动签署(静默签署)的签署方创建签署链接</li>
-<li>**CHANNEL**：第三方子企业员工签署方</li>
-<li>**NOT_CHANNEL**：SaaS平台企业员工签署方</li>
-<li>**PERSON**：个人/自然人签署方</li>
-<li>**FOLLOWER**：关注方，目前是合同抄送方</li>
-<li>**RECIPIENT**：获取RecipientId对应的签署链接，可用于生成动态签署人补充链接</li></ul>
+<ul><li><strong>ALL</strong>：（默认）为所有签署方生成签署链接，但不包括自动签署（静默签署）的签署方。注意：<strong>此中类型不支持多个合同ID（FlowIds）</strong>。</li>
+<li><strong>CHANNEL</strong>：适用于第三方子企业的员工签署方。</li>
+<li><strong>NOT_CHANNEL</strong>：适用于SaaS平台企业的员工签署方。</li>
+<li><strong>PERSON</strong>：适用于个人或自然人签署方。</li>
+<li><strong>FOLLOWER</strong>：适用于关注方，目前指合同的抄送方。</li>
+<li><strong>RECIPIENT</strong>：根据RecipientId生成对应的签署链接，适用于动态添加签署人的情况。</li></ul>
      */
     public void setGenerateType(String GenerateType) {
         this.GenerateType = GenerateType;
     }
 
     /**
-     * Get SaaS平台企业员工签署方的企业名称
-如果名称中包含英文括号()，请使用中文括号（）代替。
-
-注: `GenerateType为"NOT_CHANNEL"时必填` 
-     * @return OrganizationName SaaS平台企业员工签署方的企业名称
-如果名称中包含英文括号()，请使用中文括号（）代替。
-
-注: `GenerateType为"NOT_CHANNEL"时必填`
+     * Get SaaS平台企业员工签署方的企业名称如果名称中包含英文括号()，请使用中文括号（）代替。  注:  `1.GenerateType为"NOT_CHANNEL"时必填` `2.获取B端动态签署人领取链接时,可指定此字段来预先设定签署人的企业,预设后只能以该企业身份去领取合同并完成签署` 
+     * @return OrganizationName SaaS平台企业员工签署方的企业名称如果名称中包含英文括号()，请使用中文括号（）代替。  注:  `1.GenerateType为"NOT_CHANNEL"时必填` `2.获取B端动态签署人领取链接时,可指定此字段来预先设定签署人的企业,预设后只能以该企业身份去领取合同并完成签署`
      */
     public String getOrganizationName() {
         return this.OrganizationName;
     }
 
     /**
-     * Set SaaS平台企业员工签署方的企业名称
-如果名称中包含英文括号()，请使用中文括号（）代替。
-
-注: `GenerateType为"NOT_CHANNEL"时必填`
-     * @param OrganizationName SaaS平台企业员工签署方的企业名称
-如果名称中包含英文括号()，请使用中文括号（）代替。
-
-注: `GenerateType为"NOT_CHANNEL"时必填`
+     * Set SaaS平台企业员工签署方的企业名称如果名称中包含英文括号()，请使用中文括号（）代替。  注:  `1.GenerateType为"NOT_CHANNEL"时必填` `2.获取B端动态签署人领取链接时,可指定此字段来预先设定签署人的企业,预设后只能以该企业身份去领取合同并完成签署`
+     * @param OrganizationName SaaS平台企业员工签署方的企业名称如果名称中包含英文括号()，请使用中文括号（）代替。  注:  `1.GenerateType为"NOT_CHANNEL"时必填` `2.获取B端动态签署人领取链接时,可指定此字段来预先设定签署人的企业,预设后只能以该企业身份去领取合同并完成签署`
      */
     public void setOrganizationName(String OrganizationName) {
         this.OrganizationName = OrganizationName;

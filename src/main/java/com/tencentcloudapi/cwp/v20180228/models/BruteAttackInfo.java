@@ -122,6 +122,8 @@ public class BruteAttackInfo extends AbstractModel {
 83-不阻断(已加白名单)
 86-不阻断(系统白名单)
 87-不阻断(客户端离线)
+88-不阻断(来源Ip归属相同客户)
+89-不阻断(ipv6不支持阻断)
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BanStatus")
@@ -476,6 +478,8 @@ public class BruteAttackInfo extends AbstractModel {
 83-不阻断(已加白名单)
 86-不阻断(系统白名单)
 87-不阻断(客户端离线)
+88-不阻断(来源Ip归属相同客户)
+89-不阻断(ipv6不支持阻断)
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return BanStatus 0 -不阻断(客户端版本不支持)
 1 -已阻断
@@ -488,6 +492,8 @@ public class BruteAttackInfo extends AbstractModel {
 83-不阻断(已加白名单)
 86-不阻断(系统白名单)
 87-不阻断(客户端离线)
+88-不阻断(来源Ip归属相同客户)
+89-不阻断(ipv6不支持阻断)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBanStatus() {
@@ -506,6 +512,8 @@ public class BruteAttackInfo extends AbstractModel {
 83-不阻断(已加白名单)
 86-不阻断(系统白名单)
 87-不阻断(客户端离线)
+88-不阻断(来源Ip归属相同客户)
+89-不阻断(ipv6不支持阻断)
 注意：此字段可能返回 null，表示取不到有效值。
      * @param BanStatus 0 -不阻断(客户端版本不支持)
 1 -已阻断
@@ -518,6 +526,8 @@ public class BruteAttackInfo extends AbstractModel {
 83-不阻断(已加白名单)
 86-不阻断(系统白名单)
 87-不阻断(客户端离线)
+88-不阻断(来源Ip归属相同客户)
+89-不阻断(ipv6不支持阻断)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBanStatus(Long BanStatus) {

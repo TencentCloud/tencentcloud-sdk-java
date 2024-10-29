@@ -80,7 +80,7 @@ public class StartPublishCdnStreamRequest extends AbstractModel {
     private SingleSubscribeParams SingleSubscribeParams;
 
     /**
-    * 转推的CDN参数。和回推房间参数必须要有一个。
+    * 转推的CDN参数，一个任务最多支持10个推流URL。和回推房间参数必须要有一个。
     */
     @SerializedName("PublishCdnParams")
     @Expose
@@ -94,11 +94,18 @@ public class StartPublishCdnStreamRequest extends AbstractModel {
     private McuSeiParams SeiParams;
 
     /**
-    * 回推房间信息，和转推CDN参数必须要有一个。注：回推房间需使用10.4及以上SDK版本，如您有需求，请联系腾讯云技术支持。
+    * 回推房间信息，一个任务最多支持回推10个房间，和转推CDN参数必须要有一个。注：回推房间需使用10.4及以上SDK版本，如您有需求，请联系腾讯云技术支持。
     */
     @SerializedName("FeedBackRoomParams")
     @Expose
     private McuFeedBackRoomParams [] FeedBackRoomParams;
+
+    /**
+    * 转推录制参数，[参考文档](https://cloud.tencent.com/document/product/647/111748)。
+    */
+    @SerializedName("RecordParams")
+    @Expose
+    private McuRecordParams RecordParams;
 
     /**
      * Get TRTC的[SdkAppId](https://cloud.tencent.com/document/product/647/46351#sdkappid)，和转推的房间所对应的SdkAppId相同。 
@@ -229,16 +236,16 @@ public class StartPublishCdnStreamRequest extends AbstractModel {
     }
 
     /**
-     * Get 转推的CDN参数。和回推房间参数必须要有一个。 
-     * @return PublishCdnParams 转推的CDN参数。和回推房间参数必须要有一个。
+     * Get 转推的CDN参数，一个任务最多支持10个推流URL。和回推房间参数必须要有一个。 
+     * @return PublishCdnParams 转推的CDN参数，一个任务最多支持10个推流URL。和回推房间参数必须要有一个。
      */
     public McuPublishCdnParam [] getPublishCdnParams() {
         return this.PublishCdnParams;
     }
 
     /**
-     * Set 转推的CDN参数。和回推房间参数必须要有一个。
-     * @param PublishCdnParams 转推的CDN参数。和回推房间参数必须要有一个。
+     * Set 转推的CDN参数，一个任务最多支持10个推流URL。和回推房间参数必须要有一个。
+     * @param PublishCdnParams 转推的CDN参数，一个任务最多支持10个推流URL。和回推房间参数必须要有一个。
      */
     public void setPublishCdnParams(McuPublishCdnParam [] PublishCdnParams) {
         this.PublishCdnParams = PublishCdnParams;
@@ -261,19 +268,35 @@ public class StartPublishCdnStreamRequest extends AbstractModel {
     }
 
     /**
-     * Get 回推房间信息，和转推CDN参数必须要有一个。注：回推房间需使用10.4及以上SDK版本，如您有需求，请联系腾讯云技术支持。 
-     * @return FeedBackRoomParams 回推房间信息，和转推CDN参数必须要有一个。注：回推房间需使用10.4及以上SDK版本，如您有需求，请联系腾讯云技术支持。
+     * Get 回推房间信息，一个任务最多支持回推10个房间，和转推CDN参数必须要有一个。注：回推房间需使用10.4及以上SDK版本，如您有需求，请联系腾讯云技术支持。 
+     * @return FeedBackRoomParams 回推房间信息，一个任务最多支持回推10个房间，和转推CDN参数必须要有一个。注：回推房间需使用10.4及以上SDK版本，如您有需求，请联系腾讯云技术支持。
      */
     public McuFeedBackRoomParams [] getFeedBackRoomParams() {
         return this.FeedBackRoomParams;
     }
 
     /**
-     * Set 回推房间信息，和转推CDN参数必须要有一个。注：回推房间需使用10.4及以上SDK版本，如您有需求，请联系腾讯云技术支持。
-     * @param FeedBackRoomParams 回推房间信息，和转推CDN参数必须要有一个。注：回推房间需使用10.4及以上SDK版本，如您有需求，请联系腾讯云技术支持。
+     * Set 回推房间信息，一个任务最多支持回推10个房间，和转推CDN参数必须要有一个。注：回推房间需使用10.4及以上SDK版本，如您有需求，请联系腾讯云技术支持。
+     * @param FeedBackRoomParams 回推房间信息，一个任务最多支持回推10个房间，和转推CDN参数必须要有一个。注：回推房间需使用10.4及以上SDK版本，如您有需求，请联系腾讯云技术支持。
      */
     public void setFeedBackRoomParams(McuFeedBackRoomParams [] FeedBackRoomParams) {
         this.FeedBackRoomParams = FeedBackRoomParams;
+    }
+
+    /**
+     * Get 转推录制参数，[参考文档](https://cloud.tencent.com/document/product/647/111748)。 
+     * @return RecordParams 转推录制参数，[参考文档](https://cloud.tencent.com/document/product/647/111748)。
+     */
+    public McuRecordParams getRecordParams() {
+        return this.RecordParams;
+    }
+
+    /**
+     * Set 转推录制参数，[参考文档](https://cloud.tencent.com/document/product/647/111748)。
+     * @param RecordParams 转推录制参数，[参考文档](https://cloud.tencent.com/document/product/647/111748)。
+     */
+    public void setRecordParams(McuRecordParams RecordParams) {
+        this.RecordParams = RecordParams;
     }
 
     public StartPublishCdnStreamRequest() {
@@ -323,6 +346,9 @@ public class StartPublishCdnStreamRequest extends AbstractModel {
                 this.FeedBackRoomParams[i] = new McuFeedBackRoomParams(source.FeedBackRoomParams[i]);
             }
         }
+        if (source.RecordParams != null) {
+            this.RecordParams = new McuRecordParams(source.RecordParams);
+        }
     }
 
 
@@ -341,6 +367,7 @@ public class StartPublishCdnStreamRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "PublishCdnParams.", this.PublishCdnParams);
         this.setParamObj(map, prefix + "SeiParams.", this.SeiParams);
         this.setParamArrayObj(map, prefix + "FeedBackRoomParams.", this.FeedBackRoomParams);
+        this.setParamObj(map, prefix + "RecordParams.", this.RecordParams);
 
     }
 }

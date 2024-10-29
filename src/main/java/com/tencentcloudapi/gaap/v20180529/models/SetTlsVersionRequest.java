@@ -31,7 +31,7 @@ public class SetTlsVersionRequest extends AbstractModel {
     private String ListenerId;
 
     /**
-    * TLS版本,可选TLSv1.0、TLSv1.1、TLSv1.2、TLSv1.3
+    * TLS版本,可选TLSv1、TLSv1.1、TLSv1.2、TLSv1.3
     */
     @SerializedName("TLSSupportVersion")
     @Expose
@@ -61,16 +61,16 @@ public class SetTlsVersionRequest extends AbstractModel {
     }
 
     /**
-     * Get TLS版本,可选TLSv1.0、TLSv1.1、TLSv1.2、TLSv1.3 
-     * @return TLSSupportVersion TLS版本,可选TLSv1.0、TLSv1.1、TLSv1.2、TLSv1.3
+     * Get TLS版本,可选TLSv1、TLSv1.1、TLSv1.2、TLSv1.3 
+     * @return TLSSupportVersion TLS版本,可选TLSv1、TLSv1.1、TLSv1.2、TLSv1.3
      */
     public String [] getTLSSupportVersion() {
         return this.TLSSupportVersion;
     }
 
     /**
-     * Set TLS版本,可选TLSv1.0、TLSv1.1、TLSv1.2、TLSv1.3
-     * @param TLSSupportVersion TLS版本,可选TLSv1.0、TLSv1.1、TLSv1.2、TLSv1.3
+     * Set TLS版本,可选TLSv1、TLSv1.1、TLSv1.2、TLSv1.3
+     * @param TLSSupportVersion TLS版本,可选TLSv1、TLSv1.1、TLSv1.2、TLSv1.3
      */
     public void setTLSSupportVersion(String [] TLSSupportVersion) {
         this.TLSSupportVersion = TLSSupportVersion;

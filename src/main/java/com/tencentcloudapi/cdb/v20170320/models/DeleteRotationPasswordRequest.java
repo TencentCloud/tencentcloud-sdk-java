@@ -52,6 +52,13 @@ public class DeleteRotationPasswordRequest extends AbstractModel {
     private String Password;
 
     /**
+    * 传入不为空则对密码进行了加密处理
+    */
+    @SerializedName("EncryptMethod")
+    @Expose
+    private String EncryptMethod;
+
+    /**
      * Get 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同 
      * @return InstanceId 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同
      */
@@ -115,6 +122,22 @@ public class DeleteRotationPasswordRequest extends AbstractModel {
         this.Password = Password;
     }
 
+    /**
+     * Get 传入不为空则对密码进行了加密处理 
+     * @return EncryptMethod 传入不为空则对密码进行了加密处理
+     */
+    public String getEncryptMethod() {
+        return this.EncryptMethod;
+    }
+
+    /**
+     * Set 传入不为空则对密码进行了加密处理
+     * @param EncryptMethod 传入不为空则对密码进行了加密处理
+     */
+    public void setEncryptMethod(String EncryptMethod) {
+        this.EncryptMethod = EncryptMethod;
+    }
+
     public DeleteRotationPasswordRequest() {
     }
 
@@ -135,6 +158,9 @@ public class DeleteRotationPasswordRequest extends AbstractModel {
         if (source.Password != null) {
             this.Password = new String(source.Password);
         }
+        if (source.EncryptMethod != null) {
+            this.EncryptMethod = new String(source.EncryptMethod);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class DeleteRotationPasswordRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "User", this.User);
         this.setParamSimple(map, prefix + "Host", this.Host);
         this.setParamSimple(map, prefix + "Password", this.Password);
+        this.setParamSimple(map, prefix + "EncryptMethod", this.EncryptMethod);
 
     }
 }

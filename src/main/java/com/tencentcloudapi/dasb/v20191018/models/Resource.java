@@ -260,6 +260,30 @@ public class Resource extends AbstractModel {
     private Long Trial;
 
     /**
+    * cdc集群id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CdcClusterId")
+    @Expose
+    private String CdcClusterId;
+
+    /**
+    * 日志投递规格信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LogDelivery")
+    @Expose
+    private String LogDelivery;
+
+    /**
+    * 部署模式
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DeployModel")
+    @Expose
+    private Long DeployModel;
+
+    /**
      * Get 服务实例ID，如bh-saas-s3ed4r5e 
      * @return ResourceId 服务实例ID，如bh-saas-s3ed4r5e
      */
@@ -807,6 +831,66 @@ public class Resource extends AbstractModel {
         this.Trial = Trial;
     }
 
+    /**
+     * Get cdc集群id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CdcClusterId cdc集群id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCdcClusterId() {
+        return this.CdcClusterId;
+    }
+
+    /**
+     * Set cdc集群id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CdcClusterId cdc集群id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCdcClusterId(String CdcClusterId) {
+        this.CdcClusterId = CdcClusterId;
+    }
+
+    /**
+     * Get 日志投递规格信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LogDelivery 日志投递规格信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLogDelivery() {
+        return this.LogDelivery;
+    }
+
+    /**
+     * Set 日志投递规格信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LogDelivery 日志投递规格信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLogDelivery(String LogDelivery) {
+        this.LogDelivery = LogDelivery;
+    }
+
+    /**
+     * Get 部署模式
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DeployModel 部署模式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getDeployModel() {
+        return this.DeployModel;
+    }
+
+    /**
+     * Set 部署模式
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DeployModel 部署模式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDeployModel(Long DeployModel) {
+        this.DeployModel = DeployModel;
+    }
+
     public Resource() {
     }
 
@@ -926,6 +1010,15 @@ public class Resource extends AbstractModel {
         if (source.Trial != null) {
             this.Trial = new Long(source.Trial);
         }
+        if (source.CdcClusterId != null) {
+            this.CdcClusterId = new String(source.CdcClusterId);
+        }
+        if (source.LogDelivery != null) {
+            this.LogDelivery = new String(source.LogDelivery);
+        }
+        if (source.DeployModel != null) {
+            this.DeployModel = new Long(source.DeployModel);
+        }
     }
 
 
@@ -966,6 +1059,9 @@ public class Resource extends AbstractModel {
         this.setParamSimple(map, prefix + "DomainCount", this.DomainCount);
         this.setParamSimple(map, prefix + "UsedDomainCount", this.UsedDomainCount);
         this.setParamSimple(map, prefix + "Trial", this.Trial);
+        this.setParamSimple(map, prefix + "CdcClusterId", this.CdcClusterId);
+        this.setParamSimple(map, prefix + "LogDelivery", this.LogDelivery);
+        this.setParamSimple(map, prefix + "DeployModel", this.DeployModel);
 
     }
 }

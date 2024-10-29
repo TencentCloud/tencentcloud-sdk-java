@@ -101,6 +101,13 @@ public class UpdateUserDeviceRequest extends AbstractModel {
     private Long SubscribeSwitch;
 
     /**
+    * 是否开启静音帧（0：关闭；1 开启）
+    */
+    @SerializedName("SilentFrameSwitch")
+    @Expose
+    private Long SilentFrameSwitch;
+
+    /**
      * Get 设备ID（从获取设备列表接口ListDevices中获取） 
      * @return DeviceId 设备ID（从获取设备列表接口ListDevices中获取）
      */
@@ -276,6 +283,22 @@ public class UpdateUserDeviceRequest extends AbstractModel {
         this.SubscribeSwitch = SubscribeSwitch;
     }
 
+    /**
+     * Get 是否开启静音帧（0：关闭；1 开启） 
+     * @return SilentFrameSwitch 是否开启静音帧（0：关闭；1 开启）
+     */
+    public Long getSilentFrameSwitch() {
+        return this.SilentFrameSwitch;
+    }
+
+    /**
+     * Set 是否开启静音帧（0：关闭；1 开启）
+     * @param SilentFrameSwitch 是否开启静音帧（0：关闭；1 开启）
+     */
+    public void setSilentFrameSwitch(Long SilentFrameSwitch) {
+        this.SilentFrameSwitch = SilentFrameSwitch;
+    }
+
     public UpdateUserDeviceRequest() {
     }
 
@@ -317,6 +340,9 @@ public class UpdateUserDeviceRequest extends AbstractModel {
         if (source.SubscribeSwitch != null) {
             this.SubscribeSwitch = new Long(source.SubscribeSwitch);
         }
+        if (source.SilentFrameSwitch != null) {
+            this.SilentFrameSwitch = new Long(source.SilentFrameSwitch);
+        }
     }
 
 
@@ -335,6 +361,7 @@ public class UpdateUserDeviceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ProtocolType", this.ProtocolType);
         this.setParamSimple(map, prefix + "AudioSwitch", this.AudioSwitch);
         this.setParamSimple(map, prefix + "SubscribeSwitch", this.SubscribeSwitch);
+        this.setParamSimple(map, prefix + "SilentFrameSwitch", this.SilentFrameSwitch);
 
     }
 }

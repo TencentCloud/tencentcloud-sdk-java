@@ -74,7 +74,7 @@ public class AssetWebServiceBaseInfo extends AbstractModel {
     private MachineTag [] Tag;
 
     /**
-    * 数据库名
+    * 服务名
     */
     @SerializedName("Name")
     @Expose
@@ -290,16 +290,16 @@ public class AssetWebServiceBaseInfo extends AbstractModel {
     }
 
     /**
-     * Get 数据库名 
-     * @return Name 数据库名
+     * Get 服务名 
+     * @return Name 服务名
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 数据库名
-     * @param Name 数据库名
+     * Set 服务名
+     * @param Name 服务名
      */
     public void setName(String Name) {
         this.Name = Name;

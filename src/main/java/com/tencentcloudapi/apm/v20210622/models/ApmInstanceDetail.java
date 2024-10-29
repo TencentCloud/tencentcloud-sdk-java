@@ -264,6 +264,22 @@ public class ApmInstanceDetail extends AbstractModel {
     private Long ResponseDurationWarningThreshold;
 
     /**
+    * 是否免费（0=否，1=限额免费，2=完全免费），默认0
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Free")
+    @Expose
+    private Long Free;
+
+    /**
+    * 是否tsf默认业务系统（0=否，1-是）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DefaultTSF")
+    @Expose
+    private Long DefaultTSF;
+
+    /**
      * Get 存储使用量(MB)
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return AmountOfUsedStorage 存储使用量(MB)
@@ -863,6 +879,46 @@ public class ApmInstanceDetail extends AbstractModel {
         this.ResponseDurationWarningThreshold = ResponseDurationWarningThreshold;
     }
 
+    /**
+     * Get 是否免费（0=否，1=限额免费，2=完全免费），默认0
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Free 是否免费（0=否，1=限额免费，2=完全免费），默认0
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getFree() {
+        return this.Free;
+    }
+
+    /**
+     * Set 是否免费（0=否，1=限额免费，2=完全免费），默认0
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Free 是否免费（0=否，1=限额免费，2=完全免费），默认0
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFree(Long Free) {
+        this.Free = Free;
+    }
+
+    /**
+     * Get 是否tsf默认业务系统（0=否，1-是）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DefaultTSF 是否tsf默认业务系统（0=否，1-是）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getDefaultTSF() {
+        return this.DefaultTSF;
+    }
+
+    /**
+     * Set 是否tsf默认业务系统（0=否，1-是）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DefaultTSF 是否tsf默认业务系统（0=否，1-是）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDefaultTSF(Long DefaultTSF) {
+        this.DefaultTSF = DefaultTSF;
+    }
+
     public ApmInstanceDetail() {
     }
 
@@ -967,6 +1023,12 @@ public class ApmInstanceDetail extends AbstractModel {
         if (source.ResponseDurationWarningThreshold != null) {
             this.ResponseDurationWarningThreshold = new Long(source.ResponseDurationWarningThreshold);
         }
+        if (source.Free != null) {
+            this.Free = new Long(source.Free);
+        }
+        if (source.DefaultTSF != null) {
+            this.DefaultTSF = new Long(source.DefaultTSF);
+        }
     }
 
 
@@ -1004,6 +1066,8 @@ public class ApmInstanceDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "PayMode", this.PayMode);
         this.setParamSimple(map, prefix + "PayModeEffective", this.PayModeEffective);
         this.setParamSimple(map, prefix + "ResponseDurationWarningThreshold", this.ResponseDurationWarningThreshold);
+        this.setParamSimple(map, prefix + "Free", this.Free);
+        this.setParamSimple(map, prefix + "DefaultTSF", this.DefaultTSF);
 
     }
 }

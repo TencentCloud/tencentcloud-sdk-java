@@ -787,6 +787,28 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *查询数据服务API的发布态信息
+     * @param req DescribeDataServicePublishedApiDetailRequest
+     * @return DescribeDataServicePublishedApiDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDataServicePublishedApiDetailResponse DescribeDataServicePublishedApiDetail(DescribeDataServicePublishedApiDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDataServicePublishedApiDetail", DescribeDataServicePublishedApiDetailResponse.class);
+    }
+
+    /**
+     *获取数据服务API的发布态信息列表
+     * @param req DescribeDataServicePublishedApiListRequest
+     * @return DescribeDataServicePublishedApiListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDataServicePublishedApiListResponse DescribeDataServicePublishedApiList(DescribeDataServicePublishedApiListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDataServicePublishedApiList", DescribeDataServicePublishedApiListResponse.class);
+    }
+
+    /**
      *获取数据源信息-数据源分页列表
      * @param req DescribeDataSourceInfoListRequest
      * @return DescribeDataSourceInfoListResponse

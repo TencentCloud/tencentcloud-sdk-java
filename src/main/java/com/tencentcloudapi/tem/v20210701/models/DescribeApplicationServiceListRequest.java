@@ -38,7 +38,7 @@ public class DescribeApplicationServiceListRequest extends AbstractModel {
     private String ApplicationId;
 
     /**
-    * xx
+    * 来源渠道
     */
     @SerializedName("SourceChannel")
     @Expose
@@ -77,16 +77,16 @@ public class DescribeApplicationServiceListRequest extends AbstractModel {
     }
 
     /**
-     * Get xx 
-     * @return SourceChannel xx
+     * Get 来源渠道 
+     * @return SourceChannel 来源渠道
      */
     public Long getSourceChannel() {
         return this.SourceChannel;
     }
 
     /**
-     * Set xx
-     * @param SourceChannel xx
+     * Set 来源渠道
+     * @param SourceChannel 来源渠道
      */
     public void setSourceChannel(Long SourceChannel) {
         this.SourceChannel = SourceChannel;

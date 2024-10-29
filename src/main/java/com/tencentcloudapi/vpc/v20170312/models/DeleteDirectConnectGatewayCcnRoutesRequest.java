@@ -38,6 +38,13 @@ public class DeleteDirectConnectGatewayCcnRoutesRequest extends AbstractModel {
     private String [] RouteIds;
 
     /**
+    * 地址类型，支持：IPv4、IPv6。默认IPv4。
+    */
+    @SerializedName("AddressType")
+    @Expose
+    private String AddressType;
+
+    /**
      * Get 专线网关ID，形如：dcg-prpqlmg1 
      * @return DirectConnectGatewayId 专线网关ID，形如：dcg-prpqlmg1
      */
@@ -69,6 +76,22 @@ public class DeleteDirectConnectGatewayCcnRoutesRequest extends AbstractModel {
         this.RouteIds = RouteIds;
     }
 
+    /**
+     * Get 地址类型，支持：IPv4、IPv6。默认IPv4。 
+     * @return AddressType 地址类型，支持：IPv4、IPv6。默认IPv4。
+     */
+    public String getAddressType() {
+        return this.AddressType;
+    }
+
+    /**
+     * Set 地址类型，支持：IPv4、IPv6。默认IPv4。
+     * @param AddressType 地址类型，支持：IPv4、IPv6。默认IPv4。
+     */
+    public void setAddressType(String AddressType) {
+        this.AddressType = AddressType;
+    }
+
     public DeleteDirectConnectGatewayCcnRoutesRequest() {
     }
 
@@ -86,6 +109,9 @@ public class DeleteDirectConnectGatewayCcnRoutesRequest extends AbstractModel {
                 this.RouteIds[i] = new String(source.RouteIds[i]);
             }
         }
+        if (source.AddressType != null) {
+            this.AddressType = new String(source.AddressType);
+        }
     }
 
 
@@ -95,6 +121,7 @@ public class DeleteDirectConnectGatewayCcnRoutesRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DirectConnectGatewayId", this.DirectConnectGatewayId);
         this.setParamArraySimple(map, prefix + "RouteIds.", this.RouteIds);
+        this.setParamSimple(map, prefix + "AddressType", this.AddressType);
 
     }
 }

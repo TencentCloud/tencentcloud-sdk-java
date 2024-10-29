@@ -38,7 +38,7 @@ public class Autoscaler extends AbstractModel {
     private Long MaxReplicas;
 
     /**
-    * 指标弹性伸缩策略
+    * 指标弹性伸缩策略(指标策略和定时策略必须填写一个)
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HorizontalAutoscaler")
@@ -46,7 +46,7 @@ public class Autoscaler extends AbstractModel {
     private HorizontalAutoscaler [] HorizontalAutoscaler;
 
     /**
-    * 定时弹性伸缩策略
+    * 定时弹性伸缩策略(指标策略和定时策略必须填写一个)
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CronHorizontalAutoscaler")
@@ -142,9 +142,9 @@ public class Autoscaler extends AbstractModel {
     }
 
     /**
-     * Get 指标弹性伸缩策略
+     * Get 指标弹性伸缩策略(指标策略和定时策略必须填写一个)
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return HorizontalAutoscaler 指标弹性伸缩策略
+     * @return HorizontalAutoscaler 指标弹性伸缩策略(指标策略和定时策略必须填写一个)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public HorizontalAutoscaler [] getHorizontalAutoscaler() {
@@ -152,9 +152,9 @@ public class Autoscaler extends AbstractModel {
     }
 
     /**
-     * Set 指标弹性伸缩策略
+     * Set 指标弹性伸缩策略(指标策略和定时策略必须填写一个)
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param HorizontalAutoscaler 指标弹性伸缩策略
+     * @param HorizontalAutoscaler 指标弹性伸缩策略(指标策略和定时策略必须填写一个)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHorizontalAutoscaler(HorizontalAutoscaler [] HorizontalAutoscaler) {
@@ -162,9 +162,9 @@ public class Autoscaler extends AbstractModel {
     }
 
     /**
-     * Get 定时弹性伸缩策略
+     * Get 定时弹性伸缩策略(指标策略和定时策略必须填写一个)
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CronHorizontalAutoscaler 定时弹性伸缩策略
+     * @return CronHorizontalAutoscaler 定时弹性伸缩策略(指标策略和定时策略必须填写一个)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public CronHorizontalAutoscaler [] getCronHorizontalAutoscaler() {
@@ -172,9 +172,9 @@ public class Autoscaler extends AbstractModel {
     }
 
     /**
-     * Set 定时弹性伸缩策略
+     * Set 定时弹性伸缩策略(指标策略和定时策略必须填写一个)
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CronHorizontalAutoscaler 定时弹性伸缩策略
+     * @param CronHorizontalAutoscaler 定时弹性伸缩策略(指标策略和定时策略必须填写一个)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCronHorizontalAutoscaler(CronHorizontalAutoscaler [] CronHorizontalAutoscaler) {

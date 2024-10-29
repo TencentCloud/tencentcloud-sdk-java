@@ -126,6 +126,22 @@ public class InstanceAuditStatus extends AbstractModel {
     private String [] RuleTemplateIds;
 
     /**
+    * 是否开启日志投递：ON，OFF
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Deliver")
+    @Expose
+    private String Deliver;
+
+    /**
+    * 日志投递类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DeliverSummary")
+    @Expose
+    private DeliverSummary [] DeliverSummary;
+
+    /**
      * Get 实例ID。 
      * @return InstanceId 实例ID。
      */
@@ -377,6 +393,46 @@ public class InstanceAuditStatus extends AbstractModel {
         this.RuleTemplateIds = RuleTemplateIds;
     }
 
+    /**
+     * Get 是否开启日志投递：ON，OFF
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Deliver 是否开启日志投递：ON，OFF
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDeliver() {
+        return this.Deliver;
+    }
+
+    /**
+     * Set 是否开启日志投递：ON，OFF
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Deliver 是否开启日志投递：ON，OFF
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDeliver(String Deliver) {
+        this.Deliver = Deliver;
+    }
+
+    /**
+     * Get 日志投递类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DeliverSummary 日志投递类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public DeliverSummary [] getDeliverSummary() {
+        return this.DeliverSummary;
+    }
+
+    /**
+     * Set 日志投递类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DeliverSummary 日志投递类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDeliverSummary(DeliverSummary [] DeliverSummary) {
+        this.DeliverSummary = DeliverSummary;
+    }
+
     public InstanceAuditStatus() {
     }
 
@@ -427,6 +483,15 @@ public class InstanceAuditStatus extends AbstractModel {
                 this.RuleTemplateIds[i] = new String(source.RuleTemplateIds[i]);
             }
         }
+        if (source.Deliver != null) {
+            this.Deliver = new String(source.Deliver);
+        }
+        if (source.DeliverSummary != null) {
+            this.DeliverSummary = new DeliverSummary[source.DeliverSummary.length];
+            for (int i = 0; i < source.DeliverSummary.length; i++) {
+                this.DeliverSummary[i] = new DeliverSummary(source.DeliverSummary[i]);
+            }
+        }
     }
 
 
@@ -447,6 +512,8 @@ public class InstanceAuditStatus extends AbstractModel {
         this.setParamObj(map, prefix + "InstanceInfo.", this.InstanceInfo);
         this.setParamSimple(map, prefix + "RealStorage", this.RealStorage);
         this.setParamArraySimple(map, prefix + "RuleTemplateIds.", this.RuleTemplateIds);
+        this.setParamSimple(map, prefix + "Deliver", this.Deliver);
+        this.setParamArrayObj(map, prefix + "DeliverSummary.", this.DeliverSummary);
 
     }
 }

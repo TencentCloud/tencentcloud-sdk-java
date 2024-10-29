@@ -54,7 +54,7 @@ public class CmqQueue extends AbstractModel {
     private Long Bps;
 
     /**
-    * 飞行消息最大保留时间。
+    * 飞行消息最大保留时间，需要小于消息保留周期。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxDelaySeconds")
@@ -341,9 +341,9 @@ public class CmqQueue extends AbstractModel {
     }
 
     /**
-     * Get 飞行消息最大保留时间。
+     * Get 飞行消息最大保留时间，需要小于消息保留周期。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MaxDelaySeconds 飞行消息最大保留时间。
+     * @return MaxDelaySeconds 飞行消息最大保留时间，需要小于消息保留周期。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaxDelaySeconds() {
@@ -351,9 +351,9 @@ public class CmqQueue extends AbstractModel {
     }
 
     /**
-     * Set 飞行消息最大保留时间。
+     * Set 飞行消息最大保留时间，需要小于消息保留周期。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MaxDelaySeconds 飞行消息最大保留时间。
+     * @param MaxDelaySeconds 飞行消息最大保留时间，需要小于消息保留周期。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxDelaySeconds(Long MaxDelaySeconds) {

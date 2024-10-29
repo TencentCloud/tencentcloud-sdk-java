@@ -100,7 +100,9 @@ public class FillApproverInfo extends AbstractModel {
     private String ApproverIdCardNumber;
 
     /**
-    * 合同流程ID，补充合同组子合同动态签署人时必传。
+    * 合同流程ID
+- 补充合同组子合同动态签署人时必传。
+- 补充正常合同，请阅读：<a href="https://qian.tencent.com/developers/partnerApis/flows/ChannelCreateFlowApprovers/" target="_blank">补充签署人接口</a>接口使用说明
     */
     @SerializedName("FlowId")
     @Expose
@@ -303,16 +305,24 @@ public class FillApproverInfo extends AbstractModel {
     }
 
     /**
-     * Get 合同流程ID，补充合同组子合同动态签署人时必传。 
-     * @return FlowId 合同流程ID，补充合同组子合同动态签署人时必传。
+     * Get 合同流程ID
+- 补充合同组子合同动态签署人时必传。
+- 补充正常合同，请阅读：<a href="https://qian.tencent.com/developers/partnerApis/flows/ChannelCreateFlowApprovers/" target="_blank">补充签署人接口</a>接口使用说明 
+     * @return FlowId 合同流程ID
+- 补充合同组子合同动态签署人时必传。
+- 补充正常合同，请阅读：<a href="https://qian.tencent.com/developers/partnerApis/flows/ChannelCreateFlowApprovers/" target="_blank">补充签署人接口</a>接口使用说明
      */
     public String getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set 合同流程ID，补充合同组子合同动态签署人时必传。
-     * @param FlowId 合同流程ID，补充合同组子合同动态签署人时必传。
+     * Set 合同流程ID
+- 补充合同组子合同动态签署人时必传。
+- 补充正常合同，请阅读：<a href="https://qian.tencent.com/developers/partnerApis/flows/ChannelCreateFlowApprovers/" target="_blank">补充签署人接口</a>接口使用说明
+     * @param FlowId 合同流程ID
+- 补充合同组子合同动态签署人时必传。
+- 补充正常合同，请阅读：<a href="https://qian.tencent.com/developers/partnerApis/flows/ChannelCreateFlowApprovers/" target="_blank">补充签署人接口</a>接口使用说明
      */
     public void setFlowId(String FlowId) {
         this.FlowId = FlowId;

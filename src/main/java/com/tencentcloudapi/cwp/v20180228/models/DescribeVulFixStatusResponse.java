@@ -55,7 +55,7 @@ public class DescribeVulFixStatusResponse extends AbstractModel {
     private Long FixFailCnt;
 
     /**
-    * 主机总是
+    * 主机总数
     */
     @SerializedName("HostCnt")
     @Expose
@@ -92,7 +92,7 @@ public class DescribeVulFixStatusResponse extends AbstractModel {
     private Long SnapshotProgress;
 
     /**
-    * 修复精度 0-100
+    * 修复进度 0-100
     */
     @SerializedName("FixProgress")
     @Expose
@@ -212,16 +212,16 @@ public class DescribeVulFixStatusResponse extends AbstractModel {
     }
 
     /**
-     * Get 主机总是 
-     * @return HostCnt 主机总是
+     * Get 主机总数 
+     * @return HostCnt 主机总数
      */
     public Long getHostCnt() {
         return this.HostCnt;
     }
 
     /**
-     * Set 主机总是
-     * @param HostCnt 主机总是
+     * Set 主机总数
+     * @param HostCnt 主机总数
      */
     public void setHostCnt(Long HostCnt) {
         this.HostCnt = HostCnt;
@@ -300,16 +300,16 @@ public class DescribeVulFixStatusResponse extends AbstractModel {
     }
 
     /**
-     * Get 修复精度 0-100 
-     * @return FixProgress 修复精度 0-100
+     * Get 修复进度 0-100 
+     * @return FixProgress 修复进度 0-100
      */
     public Long getFixProgress() {
         return this.FixProgress;
     }
 
     /**
-     * Set 修复精度 0-100
-     * @param FixProgress 修复精度 0-100
+     * Set 修复进度 0-100
+     * @param FixProgress 修复进度 0-100
      */
     public void setFixProgress(Long FixProgress) {
         this.FixProgress = FixProgress;

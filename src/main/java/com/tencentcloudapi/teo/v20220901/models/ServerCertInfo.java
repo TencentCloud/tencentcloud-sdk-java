@@ -24,7 +24,8 @@ import java.util.HashMap;
 public class ServerCertInfo extends AbstractModel {
 
     /**
-    * 服务器证书 ID。
+    * 服务器证书 ID。来源于 SSL 侧，您可以前往 [SSL 证书列表](https://console.cloud.tencent.com/ssl) 查看 CertId。
+
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CertId")
@@ -83,9 +84,11 @@ public class ServerCertInfo extends AbstractModel {
     private String CommonName;
 
     /**
-     * Get 服务器证书 ID。
+     * Get 服务器证书 ID。来源于 SSL 侧，您可以前往 [SSL 证书列表](https://console.cloud.tencent.com/ssl) 查看 CertId。
+
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CertId 服务器证书 ID。
+     * @return CertId 服务器证书 ID。来源于 SSL 侧，您可以前往 [SSL 证书列表](https://console.cloud.tencent.com/ssl) 查看 CertId。
+
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCertId() {
@@ -93,9 +96,11 @@ public class ServerCertInfo extends AbstractModel {
     }
 
     /**
-     * Set 服务器证书 ID。
+     * Set 服务器证书 ID。来源于 SSL 侧，您可以前往 [SSL 证书列表](https://console.cloud.tencent.com/ssl) 查看 CertId。
+
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CertId 服务器证书 ID。
+     * @param CertId 服务器证书 ID。来源于 SSL 侧，您可以前往 [SSL 证书列表](https://console.cloud.tencent.com/ssl) 查看 CertId。
+
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCertId(String CertId) {

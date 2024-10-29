@@ -110,13 +110,6 @@ log：观察
     private Long OrderIndex;
 
     /**
-    * 规则对应的唯一id
-    */
-    @SerializedName("Uuid")
-    @Expose
-    private Long Uuid;
-
-    /**
     * 规则状态，true表示启用，false表示禁用
     */
     @SerializedName("Enable")
@@ -129,6 +122,13 @@ log：观察
     @SerializedName("EdgeId")
     @Expose
     private String EdgeId;
+
+    /**
+    * 规则对应的唯一id，添加规则时忽略该字段，修改该规则时需要填写Uuid;查询返回时会返回该参数
+    */
+    @SerializedName("Uuid")
+    @Expose
+    private Long Uuid;
 
     /**
     * 规则的命中次数，增删改查规则时无需传入此参数，主要用于返回查询结果数据
@@ -213,6 +213,14 @@ log：观察
     @SerializedName("SourceName")
     @Expose
     private String SourceName;
+
+    /**
+    * Ip版本，0：IPv4，1：IPv6，默认为IPv4
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IpVersion")
+    @Expose
+    private Long IpVersion;
 
     /**
      * Get 访问源示例：
@@ -451,22 +459,6 @@ log：观察
     }
 
     /**
-     * Get 规则对应的唯一id 
-     * @return Uuid 规则对应的唯一id
-     */
-    public Long getUuid() {
-        return this.Uuid;
-    }
-
-    /**
-     * Set 规则对应的唯一id
-     * @param Uuid 规则对应的唯一id
-     */
-    public void setUuid(Long Uuid) {
-        this.Uuid = Uuid;
-    }
-
-    /**
      * Get 规则状态，true表示启用，false表示禁用 
      * @return Enable 规则状态，true表示启用，false表示禁用
      */
@@ -496,6 +488,22 @@ log：观察
      */
     public void setEdgeId(String EdgeId) {
         this.EdgeId = EdgeId;
+    }
+
+    /**
+     * Get 规则对应的唯一id，添加规则时忽略该字段，修改该规则时需要填写Uuid;查询返回时会返回该参数 
+     * @return Uuid 规则对应的唯一id，添加规则时忽略该字段，修改该规则时需要填写Uuid;查询返回时会返回该参数
+     */
+    public Long getUuid() {
+        return this.Uuid;
+    }
+
+    /**
+     * Set 规则对应的唯一id，添加规则时忽略该字段，修改该规则时需要填写Uuid;查询返回时会返回该参数
+     * @param Uuid 规则对应的唯一id，添加规则时忽略该字段，修改该规则时需要填写Uuid;查询返回时会返回该参数
+     */
+    public void setUuid(Long Uuid) {
+        this.Uuid = Uuid;
     }
 
     /**
@@ -702,6 +710,26 @@ log：观察
         this.SourceName = SourceName;
     }
 
+    /**
+     * Get Ip版本，0：IPv4，1：IPv6，默认为IPv4
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IpVersion Ip版本，0：IPv4，1：IPv6，默认为IPv4
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getIpVersion() {
+        return this.IpVersion;
+    }
+
+    /**
+     * Set Ip版本，0：IPv4，1：IPv6，默认为IPv4
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IpVersion Ip版本，0：IPv4，1：IPv6，默认为IPv4
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIpVersion(Long IpVersion) {
+        this.IpVersion = IpVersion;
+    }
+
     public VpcRuleItem() {
     }
 
@@ -737,14 +765,14 @@ log：观察
         if (source.OrderIndex != null) {
             this.OrderIndex = new Long(source.OrderIndex);
         }
-        if (source.Uuid != null) {
-            this.Uuid = new Long(source.Uuid);
-        }
         if (source.Enable != null) {
             this.Enable = new String(source.Enable);
         }
         if (source.EdgeId != null) {
             this.EdgeId = new String(source.EdgeId);
+        }
+        if (source.Uuid != null) {
+            this.Uuid = new Long(source.Uuid);
         }
         if (source.DetectedTimes != null) {
             this.DetectedTimes = new Long(source.DetectedTimes);
@@ -782,6 +810,9 @@ log：观察
         if (source.SourceName != null) {
             this.SourceName = new String(source.SourceName);
         }
+        if (source.IpVersion != null) {
+            this.IpVersion = new Long(source.IpVersion);
+        }
     }
 
 
@@ -798,9 +829,9 @@ log：观察
         this.setParamSimple(map, prefix + "Port", this.Port);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "OrderIndex", this.OrderIndex);
-        this.setParamSimple(map, prefix + "Uuid", this.Uuid);
         this.setParamSimple(map, prefix + "Enable", this.Enable);
         this.setParamSimple(map, prefix + "EdgeId", this.EdgeId);
+        this.setParamSimple(map, prefix + "Uuid", this.Uuid);
         this.setParamSimple(map, prefix + "DetectedTimes", this.DetectedTimes);
         this.setParamSimple(map, prefix + "EdgeName", this.EdgeName);
         this.setParamSimple(map, prefix + "InternalUuid", this.InternalUuid);
@@ -812,6 +843,7 @@ log：观察
         this.setParamSimple(map, prefix + "ParamTemplateName", this.ParamTemplateName);
         this.setParamSimple(map, prefix + "TargetName", this.TargetName);
         this.setParamSimple(map, prefix + "SourceName", this.SourceName);
+        this.setParamSimple(map, prefix + "IpVersion", this.IpVersion);
 
     }
 }

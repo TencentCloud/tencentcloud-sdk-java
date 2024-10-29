@@ -81,7 +81,15 @@ public class DescribeAuditTrackResponse extends AbstractModel {
     private Long TrackForAllMembers;
 
     /**
-    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+    * 数据投递过滤条件
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Filters")
+    @Expose
+    private Filter Filters;
+
+    /**
+    * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
@@ -220,16 +228,36 @@ public class DescribeAuditTrackResponse extends AbstractModel {
     }
 
     /**
-     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
-     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 数据投递过滤条件
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Filters 数据投递过滤条件
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Filter getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * Set 数据投递过滤条件
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Filters 数据投递过滤条件
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFilters(Filter Filters) {
+        this.Filters = Filters;
+    }
+
+    /**
+     * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
+     * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
         return this.RequestId;
     }
 
     /**
-     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
-     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+     * @param RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
         this.RequestId = RequestId;
@@ -270,6 +298,9 @@ public class DescribeAuditTrackResponse extends AbstractModel {
         if (source.TrackForAllMembers != null) {
             this.TrackForAllMembers = new Long(source.TrackForAllMembers);
         }
+        if (source.Filters != null) {
+            this.Filters = new Filter(source.Filters);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -288,6 +319,7 @@ public class DescribeAuditTrackResponse extends AbstractModel {
         this.setParamObj(map, prefix + "Storage.", this.Storage);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "TrackForAllMembers", this.TrackForAllMembers);
+        this.setParamObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

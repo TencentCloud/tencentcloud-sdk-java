@@ -517,6 +517,62 @@ public class AllocationSummaryByItem extends AbstractModel {
     private String ComponentConfig;
 
     /**
+    * SPDeduction
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SPDeduction")
+    @Expose
+    private String SPDeduction;
+
+    /**
+    * 节省计划抵扣率：节省计划可用余额额度范围内，节省计划对于此组件打的折扣率
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SPDeductionRate")
+    @Expose
+    private String SPDeductionRate;
+
+    /**
+    * AssociatedOrder
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AssociatedOrder")
+    @Expose
+    private String AssociatedOrder;
+
+    /**
+    * 当前消费项的优惠对象，例如：官网折扣、用户折扣、活动折扣。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DiscountObject")
+    @Expose
+    private String DiscountObject;
+
+    /**
+    * 当前消费项的优惠类型，例如：折扣、合同价。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DiscountType")
+    @Expose
+    private String DiscountType;
+
+    /**
+    * 对优惠类型的补充描述，例如：商务折扣8折，则优惠类型为“折扣”，优惠内容为“0.8”。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DiscountContent")
+    @Expose
+    private String DiscountContent;
+
+    /**
+    * 账单月
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BillMonth")
+    @Expose
+    private String BillMonth;
+
+    /**
      * Get 分账单元唯一标识
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TreeNodeUniqKey 分账单元唯一标识
@@ -1764,6 +1820,146 @@ public class AllocationSummaryByItem extends AbstractModel {
         this.ComponentConfig = ComponentConfig;
     }
 
+    /**
+     * Get SPDeduction
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SPDeduction SPDeduction
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSPDeduction() {
+        return this.SPDeduction;
+    }
+
+    /**
+     * Set SPDeduction
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SPDeduction SPDeduction
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSPDeduction(String SPDeduction) {
+        this.SPDeduction = SPDeduction;
+    }
+
+    /**
+     * Get 节省计划抵扣率：节省计划可用余额额度范围内，节省计划对于此组件打的折扣率
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SPDeductionRate 节省计划抵扣率：节省计划可用余额额度范围内，节省计划对于此组件打的折扣率
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSPDeductionRate() {
+        return this.SPDeductionRate;
+    }
+
+    /**
+     * Set 节省计划抵扣率：节省计划可用余额额度范围内，节省计划对于此组件打的折扣率
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SPDeductionRate 节省计划抵扣率：节省计划可用余额额度范围内，节省计划对于此组件打的折扣率
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSPDeductionRate(String SPDeductionRate) {
+        this.SPDeductionRate = SPDeductionRate;
+    }
+
+    /**
+     * Get AssociatedOrder
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AssociatedOrder AssociatedOrder
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAssociatedOrder() {
+        return this.AssociatedOrder;
+    }
+
+    /**
+     * Set AssociatedOrder
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AssociatedOrder AssociatedOrder
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAssociatedOrder(String AssociatedOrder) {
+        this.AssociatedOrder = AssociatedOrder;
+    }
+
+    /**
+     * Get 当前消费项的优惠对象，例如：官网折扣、用户折扣、活动折扣。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DiscountObject 当前消费项的优惠对象，例如：官网折扣、用户折扣、活动折扣。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDiscountObject() {
+        return this.DiscountObject;
+    }
+
+    /**
+     * Set 当前消费项的优惠对象，例如：官网折扣、用户折扣、活动折扣。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DiscountObject 当前消费项的优惠对象，例如：官网折扣、用户折扣、活动折扣。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDiscountObject(String DiscountObject) {
+        this.DiscountObject = DiscountObject;
+    }
+
+    /**
+     * Get 当前消费项的优惠类型，例如：折扣、合同价。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DiscountType 当前消费项的优惠类型，例如：折扣、合同价。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDiscountType() {
+        return this.DiscountType;
+    }
+
+    /**
+     * Set 当前消费项的优惠类型，例如：折扣、合同价。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DiscountType 当前消费项的优惠类型，例如：折扣、合同价。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDiscountType(String DiscountType) {
+        this.DiscountType = DiscountType;
+    }
+
+    /**
+     * Get 对优惠类型的补充描述，例如：商务折扣8折，则优惠类型为“折扣”，优惠内容为“0.8”。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DiscountContent 对优惠类型的补充描述，例如：商务折扣8折，则优惠类型为“折扣”，优惠内容为“0.8”。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDiscountContent() {
+        return this.DiscountContent;
+    }
+
+    /**
+     * Set 对优惠类型的补充描述，例如：商务折扣8折，则优惠类型为“折扣”，优惠内容为“0.8”。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DiscountContent 对优惠类型的补充描述，例如：商务折扣8折，则优惠类型为“折扣”，优惠内容为“0.8”。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDiscountContent(String DiscountContent) {
+        this.DiscountContent = DiscountContent;
+    }
+
+    /**
+     * Get 账单月
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BillMonth 账单月
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getBillMonth() {
+        return this.BillMonth;
+    }
+
+    /**
+     * Set 账单月
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BillMonth 账单月
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBillMonth(String BillMonth) {
+        this.BillMonth = BillMonth;
+    }
+
     public AllocationSummaryByItem() {
     }
 
@@ -1961,6 +2157,27 @@ public class AllocationSummaryByItem extends AbstractModel {
         if (source.ComponentConfig != null) {
             this.ComponentConfig = new String(source.ComponentConfig);
         }
+        if (source.SPDeduction != null) {
+            this.SPDeduction = new String(source.SPDeduction);
+        }
+        if (source.SPDeductionRate != null) {
+            this.SPDeductionRate = new String(source.SPDeductionRate);
+        }
+        if (source.AssociatedOrder != null) {
+            this.AssociatedOrder = new String(source.AssociatedOrder);
+        }
+        if (source.DiscountObject != null) {
+            this.DiscountObject = new String(source.DiscountObject);
+        }
+        if (source.DiscountType != null) {
+            this.DiscountType = new String(source.DiscountType);
+        }
+        if (source.DiscountContent != null) {
+            this.DiscountContent = new String(source.DiscountContent);
+        }
+        if (source.BillMonth != null) {
+            this.BillMonth = new String(source.BillMonth);
+        }
     }
 
 
@@ -2029,6 +2246,13 @@ public class AllocationSummaryByItem extends AbstractModel {
         this.setParamSimple(map, prefix + "Formula", this.Formula);
         this.setParamSimple(map, prefix + "FormulaUrl", this.FormulaUrl);
         this.setParamSimple(map, prefix + "ComponentConfig", this.ComponentConfig);
+        this.setParamSimple(map, prefix + "SPDeduction", this.SPDeduction);
+        this.setParamSimple(map, prefix + "SPDeductionRate", this.SPDeductionRate);
+        this.setParamSimple(map, prefix + "AssociatedOrder", this.AssociatedOrder);
+        this.setParamSimple(map, prefix + "DiscountObject", this.DiscountObject);
+        this.setParamSimple(map, prefix + "DiscountType", this.DiscountType);
+        this.setParamSimple(map, prefix + "DiscountContent", this.DiscountContent);
+        this.setParamSimple(map, prefix + "BillMonth", this.BillMonth);
 
     }
 }

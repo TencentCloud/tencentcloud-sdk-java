@@ -111,6 +111,13 @@ BYOL: 自带许可（Bring Your Own License）
     private String ImageFamily;
 
     /**
+    * 导入的数据盘列表
+    */
+    @SerializedName("ImportImageDataDiskList")
+    @Expose
+    private ImportImageDataDisk [] ImportImageDataDiskList;
+
+    /**
      * Get 导入镜像的操作系统架构，`x86_64` 或 `i386` 
      * @return Architecture 导入镜像的操作系统架构，`x86_64` 或 `i386`
      */
@@ -314,6 +321,22 @@ BYOL: 自带许可（Bring Your Own License）
         this.ImageFamily = ImageFamily;
     }
 
+    /**
+     * Get 导入的数据盘列表 
+     * @return ImportImageDataDiskList 导入的数据盘列表
+     */
+    public ImportImageDataDisk [] getImportImageDataDiskList() {
+        return this.ImportImageDataDiskList;
+    }
+
+    /**
+     * Set 导入的数据盘列表
+     * @param ImportImageDataDiskList 导入的数据盘列表
+     */
+    public void setImportImageDataDiskList(ImportImageDataDisk [] ImportImageDataDiskList) {
+        this.ImportImageDataDiskList = ImportImageDataDiskList;
+    }
+
     public ImportImageRequest() {
     }
 
@@ -361,6 +384,12 @@ BYOL: 自带许可（Bring Your Own License）
         if (source.ImageFamily != null) {
             this.ImageFamily = new String(source.ImageFamily);
         }
+        if (source.ImportImageDataDiskList != null) {
+            this.ImportImageDataDiskList = new ImportImageDataDisk[source.ImportImageDataDiskList.length];
+            for (int i = 0; i < source.ImportImageDataDiskList.length; i++) {
+                this.ImportImageDataDiskList[i] = new ImportImageDataDisk(source.ImportImageDataDiskList[i]);
+            }
+        }
     }
 
 
@@ -380,6 +409,7 @@ BYOL: 自带许可（Bring Your Own License）
         this.setParamSimple(map, prefix + "LicenseType", this.LicenseType);
         this.setParamSimple(map, prefix + "BootMode", this.BootMode);
         this.setParamSimple(map, prefix + "ImageFamily", this.ImageFamily);
+        this.setParamArrayObj(map, prefix + "ImportImageDataDiskList.", this.ImportImageDataDiskList);
 
     }
 }

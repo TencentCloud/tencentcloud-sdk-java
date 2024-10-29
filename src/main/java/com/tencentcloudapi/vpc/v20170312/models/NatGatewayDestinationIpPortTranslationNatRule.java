@@ -31,7 +31,7 @@ public class NatGatewayDestinationIpPortTranslationNatRule extends AbstractModel
     private String IpProtocol;
 
     /**
-    * 弹性IP。
+    * 弹性公网IP。
     */
     @SerializedName("PublicIpAddress")
     @Expose
@@ -106,16 +106,16 @@ public class NatGatewayDestinationIpPortTranslationNatRule extends AbstractModel
     }
 
     /**
-     * Get 弹性IP。 
-     * @return PublicIpAddress 弹性IP。
+     * Get 弹性公网IP。 
+     * @return PublicIpAddress 弹性公网IP。
      */
     public String getPublicIpAddress() {
         return this.PublicIpAddress;
     }
 
     /**
-     * Set 弹性IP。
-     * @param PublicIpAddress 弹性IP。
+     * Set 弹性公网IP。
+     * @param PublicIpAddress 弹性公网IP。
      */
     public void setPublicIpAddress(String PublicIpAddress) {
         this.PublicIpAddress = PublicIpAddress;

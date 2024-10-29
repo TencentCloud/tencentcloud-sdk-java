@@ -90,6 +90,14 @@ public class TimeShiftStreamInfo extends AbstractModel {
     private Long Duration;
 
     /**
+    * 时移自适应码率子流列表。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TimeShiftSubStreams")
+    @Expose
+    private TimeShiftSubStream [] TimeShiftSubStreams;
+
+    /**
      * Get 推流域名所属组。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return DomainGroup 推流域名所属组。
@@ -245,6 +253,26 @@ public class TimeShiftStreamInfo extends AbstractModel {
         this.Duration = Duration;
     }
 
+    /**
+     * Get 时移自适应码率子流列表。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TimeShiftSubStreams 时移自适应码率子流列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public TimeShiftSubStream [] getTimeShiftSubStreams() {
+        return this.TimeShiftSubStreams;
+    }
+
+    /**
+     * Set 时移自适应码率子流列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TimeShiftSubStreams 时移自适应码率子流列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTimeShiftSubStreams(TimeShiftSubStream [] TimeShiftSubStreams) {
+        this.TimeShiftSubStreams = TimeShiftSubStreams;
+    }
+
     public TimeShiftStreamInfo() {
     }
 
@@ -280,6 +308,12 @@ public class TimeShiftStreamInfo extends AbstractModel {
         if (source.Duration != null) {
             this.Duration = new Long(source.Duration);
         }
+        if (source.TimeShiftSubStreams != null) {
+            this.TimeShiftSubStreams = new TimeShiftSubStream[source.TimeShiftSubStreams.length];
+            for (int i = 0; i < source.TimeShiftSubStreams.length; i++) {
+                this.TimeShiftSubStreams[i] = new TimeShiftSubStream(source.TimeShiftSubStreams[i]);
+            }
+        }
     }
 
 
@@ -296,6 +330,7 @@ public class TimeShiftStreamInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "TransCodeId", this.TransCodeId);
         this.setParamSimple(map, prefix + "StreamType", this.StreamType);
         this.setParamSimple(map, prefix + "Duration", this.Duration);
+        this.setParamArrayObj(map, prefix + "TimeShiftSubStreams.", this.TimeShiftSubStreams);
 
     }
 }

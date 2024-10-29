@@ -3322,6 +3322,17 @@ LimitTypes取值范围：
     }
 
     /**
+     *调整EIP续费标识
+     * @param req ModifyAddressesRenewFlagRequest
+     * @return ModifyAddressesRenewFlagResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAddressesRenewFlagResponse ModifyAddressesRenewFlag(ModifyAddressesRenewFlagRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyAddressesRenewFlag", ModifyAddressesRenewFlagResponse.class);
+    }
+
+    /**
      *本接口（ModifyAssistantCidr）用于批量修改辅助CIDR，支持新增和删除。
      * @param req ModifyAssistantCidrRequest
      * @return ModifyAssistantCidrResponse

@@ -471,6 +471,22 @@ public class EssClient extends AbstractClient{
 
 实际签署人需要通过[获取跳转至腾讯电子签小程序的签署链接](https://qian.tencent.com/developers/companyApis/startFlows/CreateSchemeUrl/)生成的链接进入小程序，领取合同并签署。同一签署环节可补充多个员工作为或签署人，最终实际签署人取决于谁先领取合同完成签署。
 
+**接口使用说明**：
+
+1.本接口现已支持批量补充签署人
+
+2.当<a href="https://qian.tencent.com/developers/companyApis/dataTypes/#fillapproverinfo/" target="_blank">补充签署人结构体</a>中指定需要补充的FlowId时，可以对指定合同补充签署人；可以指定多个相同发起方的不同合同在完成批量补充
+
+3.当<a href="https://qian.tencent.com/developers/companyApis/operateFlows/CreateFlowApprovers/" target="_blank">补充签署人接口入参</a>中指定需要补充的FlowId时，是对指定的合同补充多个指定的签署人
+
+4.如果同时指定了<a href="https://qian.tencent.com/developers/companyApis/dataTypes/#fillapproverinfo/" target="_blank">补充签署人结构体</a>中的FlowId和<a href="https://qian.tencent.com/developers/companyApis/operateFlows/CreateFlowApprovers/" target="_blank">补充签署人接口入参</a>中的FlowId，仅使用<a href="https://qian.tencent.com/developers/companyApis/dataTypes/#fillapproverinfo/" target="_blank">补充签署人结构体</a>中的FlowId作为补充的合同
+
+5.如果部分指定了<a href="https://qian.tencent.com/developers/companyApis/dataTypes/#fillapproverinfo/" target="_blank">补充签署人结构体</a>中的FlowId，又指定了<a href="https://qian.tencent.com/developers/companyApis/operateFlows/CreateFlowApprovers/" target="_blank">补充签署人接口入参</a>中的FlowId；那么<a href="https://qian.tencent.com/developers/companyApis/dataTypes/#fillapproverinfo/" target="_blank">补充签署人结构体</a>存在指定的FlowId，则使用<a href="https://qian.tencent.com/developers/companyApis/dataTypes/#fillapproverinfo/" target="_blank">补充签署人结构体</a>中的FlowId，不存在则使用<a href="https://qian.tencent.com/developers/companyApis/operateFlows/CreateFlowApprovers/" target="_blank">补充签署人接口入参</a>中的FlowId作为补充的合同
+
+
+6.如果同时未指定了<a href="https://qian.tencent.com/developers/companyApis/dataTypes/#fillapproverinfo/" target="_blank">补充签署人结构体</a>中的FlowId和<a href="https://qian.tencent.com/developers/companyApis/operateFlows/CreateFlowApprovers/" target="_blank">补充签署人接口入参</a>中的FlowId，则传参错误。
+
+7. 新加入的签署方<font color="red">平台不会发送短信</font>进行签署。请您生成相应的链接，并将其发送给该签署方以便完成签署过程。
 
 **限制条件**：
 
@@ -1058,7 +1074,7 @@ public class EssClient extends AbstractClient{
 
     /**
      *发起解除协议的主要应用场景为：基于一份已经签署的合同（签署流程），进行解除操作。
-解除协议的模板是官方提供 ，经过提供法务审核，暂不支持自定义。
+解除协议的模板是官方提供 ，经过提供法务审核，暂不支持自定义。具体用法可以参考文档[合同解除](https://qian.tencent.com/developers/company/flow_release)。
 
 注意：
 <ul>
@@ -1071,6 +1087,7 @@ public class EssClient extends AbstractClient{
 <li><strong>非原合同企业参与者的权限：</strong>非原合同的企业参与者发起解除协议时，必须具备相应的解除权限。</li>
 <li><strong>自动签署：</strong>支持本企业的自动签署，不支持其他企业的自动签署（不能不动神色的把别人参与的合同作废了）</li>
 </ul>
+
 ![image](https://qcloudimg.tencent-cloud.cn/raw/3427941ecb091bf0c55009bad192dd1c.png)
      * @param req CreateReleaseFlowRequest
      * @return CreateReleaseFlowResponse
@@ -1268,6 +1285,23 @@ public class EssClient extends AbstractClient{
     }
 
     /**
+     *批量清理未认证的企业认证流程。
+
+此接口用来清除企业方认证信息填写错误，批量清理认证中的认证流信息。
+为接口[创建企业批量认证链接](https://qian.tencent.com/developers/companyApis/organizations/CreateBatchOrganizationRegistrationTasks) 和[查询企业批量认证链接](https://qian.tencent.com/developers/companyApis/organizations/DescribeBatchOrganizationRegistrationUrls) 接口的扩展接口。即在批量认证过程中，当发起认证企业发现超管信息错误的时候，可以将当前超管下的所有认证流企业清除。
+
+注意：
+**这个接口的操作人必须跟生成批量认证链接接口的操作人一致，才可以调用，否则会返回当前操作人没有认证中的企业认证流**
+     * @param req DeleteOrganizationAuthorizationsRequest
+     * @return DeleteOrganizationAuthorizationsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteOrganizationAuthorizationsResponse DeleteOrganizationAuthorizations(DeleteOrganizationAuthorizationsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteOrganizationAuthorizations", DeleteOrganizationAuthorizationsResponse.class);
+    }
+
+    /**
      *本接口（DeleteSealPolicies）用于撤销企业员工持有的印章权限
      * @param req DeleteSealPoliciesRequest
      * @return DeleteSealPoliciesResponse
@@ -1375,6 +1409,12 @@ public class EssClient extends AbstractClient{
     /**
      *本接口（DescribeFileUrls）用于查询文件的下载URL。
 适用场景：通过传参合同流程编号，下载对应的合同PDF文件流到本地。
+
+
+**注**：用户创建合同或者提交签署动作后，后台需要1~3秒的时间就进行合同PDF合成或者签名，为了确保您下载的是签署完成的完整合同文件，我们建议采取下面两种方式的一种来<font color="red"><b>确保PDF已经合成完成，然后在调用本接口</b></font>。
+
+**第一种**：请确保您的系统配置了[接收合同完成通知的回调](https://qian.tencent.com/developers/company/callback_types_contracts_sign)功能。一旦所有参与方签署完毕，我们的系统将自动向您提供的回调地址发送完成通知。
+**第二种**：通过调用我们的[获取合同信息](https://qian.tencent.com/developers/companyApis/queryFlows/DescribeFlowBriefs)接口来主动检查合同的签署状态。请仅在确认合同状态为“签署完成”后，进行文件的下载操作。
      * @param req DescribeFileUrlsRequest
      * @return DescribeFileUrlsResponse
      * @throws TencentCloudSDKException
@@ -1645,6 +1685,7 @@ public class EssClient extends AbstractClient{
 适用场景：已创建一个文件转换任务，想查询该文件转换任务的状态，或获取转换后的文件资源Id。<br />
 注：
 1. `大文件转换所需的时间可能会比较长`
+2.  `本接口返回的文件资源ID就是PDF资源ID，可以直接用于【用PDF文件创建签署流程】接口发起合同。`
      * @param req GetTaskResultApiRequest
      * @return GetTaskResultApiResponse
      * @throws TencentCloudSDKException

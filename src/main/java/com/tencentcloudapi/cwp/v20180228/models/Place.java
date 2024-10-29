@@ -25,6 +25,7 @@ public class Place extends AbstractModel {
 
     /**
     * 城市 ID。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CityId")
     @Expose
@@ -32,6 +33,7 @@ public class Place extends AbstractModel {
 
     /**
     * 省份 ID。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProvinceId")
     @Expose
@@ -39,6 +41,7 @@ public class Place extends AbstractModel {
 
     /**
     * 国家ID，暂只支持国内：1。
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CountryId")
     @Expose
@@ -46,14 +49,17 @@ public class Place extends AbstractModel {
 
     /**
     * 位置名称
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Location")
     @Expose
     private String Location;
 
     /**
-     * Get 城市 ID。 
+     * Get 城市 ID。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return CityId 城市 ID。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCityId() {
         return this.CityId;
@@ -61,15 +67,19 @@ public class Place extends AbstractModel {
 
     /**
      * Set 城市 ID。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param CityId 城市 ID。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCityId(Long CityId) {
         this.CityId = CityId;
     }
 
     /**
-     * Get 省份 ID。 
+     * Get 省份 ID。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ProvinceId 省份 ID。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getProvinceId() {
         return this.ProvinceId;
@@ -77,15 +87,19 @@ public class Place extends AbstractModel {
 
     /**
      * Set 省份 ID。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ProvinceId 省份 ID。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProvinceId(Long ProvinceId) {
         this.ProvinceId = ProvinceId;
     }
 
     /**
-     * Get 国家ID，暂只支持国内：1。 
+     * Get 国家ID，暂只支持国内：1。
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return CountryId 国家ID，暂只支持国内：1。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCountryId() {
         return this.CountryId;
@@ -93,15 +107,19 @@ public class Place extends AbstractModel {
 
     /**
      * Set 国家ID，暂只支持国内：1。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param CountryId 国家ID，暂只支持国内：1。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCountryId(Long CountryId) {
         this.CountryId = CountryId;
     }
 
     /**
-     * Get 位置名称 
+     * Get 位置名称
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Location 位置名称
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLocation() {
         return this.Location;
@@ -109,7 +127,9 @@ public class Place extends AbstractModel {
 
     /**
      * Set 位置名称
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Location 位置名称
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLocation(String Location) {
         this.Location = Location;

@@ -103,6 +103,22 @@ public class SetAuthenticationRequest extends AbstractModel {
     private String [] PolyRealServerCertificateIds;
 
     /**
+    * TLS支持的版本
+支持TLSv1，TLSv1.1,TLSv1.2,TLSv1.3
+    */
+    @SerializedName("TLSSupportVersion")
+    @Expose
+    private String [] TLSSupportVersion;
+
+    /**
+    * 支持的TLS密码套件，可选值为：
+[GAAP_TLS_CIPHERS_WIDE,GAAPTLS_CIPHERS_GENERAL,GAAPTLS_CIPHERS_STRICT]
+    */
+    @SerializedName("TLSCiphers")
+    @Expose
+    private String TLSCiphers;
+
+    /**
      * Get 监听器ID。 
      * @return ListenerId 监听器ID。
      */
@@ -298,6 +314,46 @@ public class SetAuthenticationRequest extends AbstractModel {
         this.PolyRealServerCertificateIds = PolyRealServerCertificateIds;
     }
 
+    /**
+     * Get TLS支持的版本
+支持TLSv1，TLSv1.1,TLSv1.2,TLSv1.3 
+     * @return TLSSupportVersion TLS支持的版本
+支持TLSv1，TLSv1.1,TLSv1.2,TLSv1.3
+     */
+    public String [] getTLSSupportVersion() {
+        return this.TLSSupportVersion;
+    }
+
+    /**
+     * Set TLS支持的版本
+支持TLSv1，TLSv1.1,TLSv1.2,TLSv1.3
+     * @param TLSSupportVersion TLS支持的版本
+支持TLSv1，TLSv1.1,TLSv1.2,TLSv1.3
+     */
+    public void setTLSSupportVersion(String [] TLSSupportVersion) {
+        this.TLSSupportVersion = TLSSupportVersion;
+    }
+
+    /**
+     * Get 支持的TLS密码套件，可选值为：
+[GAAP_TLS_CIPHERS_WIDE,GAAPTLS_CIPHERS_GENERAL,GAAPTLS_CIPHERS_STRICT] 
+     * @return TLSCiphers 支持的TLS密码套件，可选值为：
+[GAAP_TLS_CIPHERS_WIDE,GAAPTLS_CIPHERS_GENERAL,GAAPTLS_CIPHERS_STRICT]
+     */
+    public String getTLSCiphers() {
+        return this.TLSCiphers;
+    }
+
+    /**
+     * Set 支持的TLS密码套件，可选值为：
+[GAAP_TLS_CIPHERS_WIDE,GAAPTLS_CIPHERS_GENERAL,GAAPTLS_CIPHERS_STRICT]
+     * @param TLSCiphers 支持的TLS密码套件，可选值为：
+[GAAP_TLS_CIPHERS_WIDE,GAAPTLS_CIPHERS_GENERAL,GAAPTLS_CIPHERS_STRICT]
+     */
+    public void setTLSCiphers(String TLSCiphers) {
+        this.TLSCiphers = TLSCiphers;
+    }
+
     public SetAuthenticationRequest() {
     }
 
@@ -339,6 +395,15 @@ public class SetAuthenticationRequest extends AbstractModel {
                 this.PolyRealServerCertificateIds[i] = new String(source.PolyRealServerCertificateIds[i]);
             }
         }
+        if (source.TLSSupportVersion != null) {
+            this.TLSSupportVersion = new String[source.TLSSupportVersion.length];
+            for (int i = 0; i < source.TLSSupportVersion.length; i++) {
+                this.TLSSupportVersion[i] = new String(source.TLSSupportVersion[i]);
+            }
+        }
+        if (source.TLSCiphers != null) {
+            this.TLSCiphers = new String(source.TLSCiphers);
+        }
     }
 
 
@@ -356,6 +421,8 @@ public class SetAuthenticationRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "RealServerCertificateId", this.RealServerCertificateId);
         this.setParamSimple(map, prefix + "RealServerCertificateDomain", this.RealServerCertificateDomain);
         this.setParamArraySimple(map, prefix + "PolyRealServerCertificateIds.", this.PolyRealServerCertificateIds);
+        this.setParamArraySimple(map, prefix + "TLSSupportVersion.", this.TLSSupportVersion);
+        this.setParamSimple(map, prefix + "TLSCiphers", this.TLSCiphers);
 
     }
 }

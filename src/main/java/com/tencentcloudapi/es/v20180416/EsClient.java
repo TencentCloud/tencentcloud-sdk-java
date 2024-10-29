@@ -50,6 +50,17 @@ public class EsClient extends AbstractClient{
     }
 
     /**
+     *集群快照手动创建
+     * @param req CreateClusterSnapshotRequest
+     * @return CreateClusterSnapshotResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateClusterSnapshotResponse CreateClusterSnapshot(CreateClusterSnapshotRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateClusterSnapshot", CreateClusterSnapshotResponse.class);
+    }
+
+    /**
      *cos迁移流程
      * @param req CreateCosMigrateToServerlessInstanceRequest
      * @return CreateCosMigrateToServerlessInstanceResponse
@@ -116,6 +127,17 @@ public class EsClient extends AbstractClient{
     }
 
     /**
+     *删除快照仓库里备份的快照
+     * @param req DeleteClusterSnapshotRequest
+     * @return DeleteClusterSnapshotResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteClusterSnapshotResponse DeleteClusterSnapshot(DeleteClusterSnapshotRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteClusterSnapshot", DeleteClusterSnapshotResponse.class);
+    }
+
+    /**
      *删除索引
      * @param req DeleteIndexRequest
      * @return DeleteIndexResponse
@@ -179,6 +201,17 @@ public class EsClient extends AbstractClient{
     public DeleteServerlessSpaceUserResponse DeleteServerlessSpaceUser(DeleteServerlessSpaceUserRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteServerlessSpaceUser", DeleteServerlessSpaceUserResponse.class);
+    }
+
+    /**
+     *获取快照备份列表
+     * @param req DescribeClusterSnapshotRequest
+     * @return DescribeClusterSnapshotResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClusterSnapshotResponse DescribeClusterSnapshot(DescribeClusterSnapshotRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeClusterSnapshot", DescribeClusterSnapshotResponse.class);
     }
 
     /**
@@ -488,6 +521,17 @@ public class EsClient extends AbstractClient{
     public RestartNodesResponse RestartNodes(RestartNodesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "RestartNodes", RestartNodesResponse.class);
+    }
+
+    /**
+     *快照备份恢复，从仓库中恢复快照到集群中
+     * @param req RestoreClusterSnapshotRequest
+     * @return RestoreClusterSnapshotResponse
+     * @throws TencentCloudSDKException
+     */
+    public RestoreClusterSnapshotResponse RestoreClusterSnapshot(RestoreClusterSnapshotRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RestoreClusterSnapshot", RestoreClusterSnapshotResponse.class);
     }
 
     /**

@@ -66,6 +66,27 @@ public class ExternalDevice extends AbstractModel {
     private String [] IpPortSet;
 
     /**
+    * 是否启用SSL,1:启用 0：禁用，仅支持Redis资产
+    */
+    @SerializedName("EnableSSL")
+    @Expose
+    private Long EnableSSL;
+
+    /**
+    * SSL证书，EnableSSL时必填
+    */
+    @SerializedName("SSLCert")
+    @Expose
+    private String SSLCert;
+
+    /**
+    * SSL证书名称，EnableSSL时必填
+    */
+    @SerializedName("SSLCertName")
+    @Expose
+    private String SSLCertName;
+
+    /**
      * Get 操作系统名称，只能是Linux、Windows或MySQL 
      * @return OsName 操作系统名称，只能是Linux、Windows或MySQL
      */
@@ -161,6 +182,54 @@ public class ExternalDevice extends AbstractModel {
         this.IpPortSet = IpPortSet;
     }
 
+    /**
+     * Get 是否启用SSL,1:启用 0：禁用，仅支持Redis资产 
+     * @return EnableSSL 是否启用SSL,1:启用 0：禁用，仅支持Redis资产
+     */
+    public Long getEnableSSL() {
+        return this.EnableSSL;
+    }
+
+    /**
+     * Set 是否启用SSL,1:启用 0：禁用，仅支持Redis资产
+     * @param EnableSSL 是否启用SSL,1:启用 0：禁用，仅支持Redis资产
+     */
+    public void setEnableSSL(Long EnableSSL) {
+        this.EnableSSL = EnableSSL;
+    }
+
+    /**
+     * Get SSL证书，EnableSSL时必填 
+     * @return SSLCert SSL证书，EnableSSL时必填
+     */
+    public String getSSLCert() {
+        return this.SSLCert;
+    }
+
+    /**
+     * Set SSL证书，EnableSSL时必填
+     * @param SSLCert SSL证书，EnableSSL时必填
+     */
+    public void setSSLCert(String SSLCert) {
+        this.SSLCert = SSLCert;
+    }
+
+    /**
+     * Get SSL证书名称，EnableSSL时必填 
+     * @return SSLCertName SSL证书名称，EnableSSL时必填
+     */
+    public String getSSLCertName() {
+        return this.SSLCertName;
+    }
+
+    /**
+     * Set SSL证书名称，EnableSSL时必填
+     * @param SSLCertName SSL证书名称，EnableSSL时必填
+     */
+    public void setSSLCertName(String SSLCertName) {
+        this.SSLCertName = SSLCertName;
+    }
+
     public ExternalDevice() {
     }
 
@@ -190,6 +259,15 @@ public class ExternalDevice extends AbstractModel {
                 this.IpPortSet[i] = new String(source.IpPortSet[i]);
             }
         }
+        if (source.EnableSSL != null) {
+            this.EnableSSL = new Long(source.EnableSSL);
+        }
+        if (source.SSLCert != null) {
+            this.SSLCert = new String(source.SSLCert);
+        }
+        if (source.SSLCertName != null) {
+            this.SSLCertName = new String(source.SSLCertName);
+        }
     }
 
 
@@ -203,6 +281,9 @@ public class ExternalDevice extends AbstractModel {
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "DepartmentId", this.DepartmentId);
         this.setParamArraySimple(map, prefix + "IpPortSet.", this.IpPortSet);
+        this.setParamSimple(map, prefix + "EnableSSL", this.EnableSSL);
+        this.setParamSimple(map, prefix + "SSLCert", this.SSLCert);
+        this.setParamSimple(map, prefix + "SSLCertName", this.SSLCertName);
 
     }
 }

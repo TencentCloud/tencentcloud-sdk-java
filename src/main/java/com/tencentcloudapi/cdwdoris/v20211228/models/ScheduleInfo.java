@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ScheduleInfo extends AbstractModel {
 
     /**
-    * 生效时间
+    * 生效周期
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EffectivePeriod")
@@ -32,11 +32,12 @@ public class ScheduleInfo extends AbstractModel {
     private String EffectivePeriod;
 
     /**
-    * 调度类型：
+    * 调度类型，不传该参数时为立即执行：
 Day-天
 Week-周
 Month-月
 Once-单次
+
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScheduleType")
@@ -88,9 +89,9 @@ Table-按表
     private String BackupDatabase;
 
     /**
-     * Get 生效时间
+     * Get 生效周期
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EffectivePeriod 生效时间
+     * @return EffectivePeriod 生效周期
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEffectivePeriod() {
@@ -98,9 +99,9 @@ Table-按表
     }
 
     /**
-     * Set 生效时间
+     * Set 生效周期
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EffectivePeriod 生效时间
+     * @param EffectivePeriod 生效周期
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEffectivePeriod(String EffectivePeriod) {
@@ -108,17 +109,19 @@ Table-按表
     }
 
     /**
-     * Get 调度类型：
+     * Get 调度类型，不传该参数时为立即执行：
 Day-天
 Week-周
 Month-月
 Once-单次
+
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ScheduleType 调度类型：
+     * @return ScheduleType 调度类型，不传该参数时为立即执行：
 Day-天
 Week-周
 Month-月
 Once-单次
+
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getScheduleType() {
@@ -126,17 +129,19 @@ Once-单次
     }
 
     /**
-     * Set 调度类型：
+     * Set 调度类型，不传该参数时为立即执行：
 Day-天
 Week-周
 Month-月
 Once-单次
+
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ScheduleType 调度类型：
+     * @param ScheduleType 调度类型，不传该参数时为立即执行：
 Day-天
 Week-周
 Month-月
 Once-单次
+
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScheduleType(String ScheduleType) {

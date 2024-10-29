@@ -24,11 +24,67 @@ import java.util.HashMap;
 public class DescribeAssetImageRegistryRegistryListResponse extends AbstractModel {
 
     /**
+    * 镜像仓库列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("List")
+    @Expose
+    private ImageRepoRegistryInfo [] List;
+
+    /**
+    * 总数量
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TotalCount")
+    @Expose
+    private Long TotalCount;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 镜像仓库列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return List 镜像仓库列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ImageRepoRegistryInfo [] getList() {
+        return this.List;
+    }
+
+    /**
+     * Set 镜像仓库列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param List 镜像仓库列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setList(ImageRepoRegistryInfo [] List) {
+        this.List = List;
+    }
+
+    /**
+     * Get 总数量
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TotalCount 总数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getTotalCount() {
+        return this.TotalCount;
+    }
+
+    /**
+     * Set 总数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TotalCount 总数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
+    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -54,6 +110,15 @@ public class DescribeAssetImageRegistryRegistryListResponse extends AbstractMode
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeAssetImageRegistryRegistryListResponse(DescribeAssetImageRegistryRegistryListResponse source) {
+        if (source.List != null) {
+            this.List = new ImageRepoRegistryInfo[source.List.length];
+            for (int i = 0; i < source.List.length; i++) {
+                this.List[i] = new ImageRepoRegistryInfo(source.List[i]);
+            }
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -64,6 +129,8 @@ public class DescribeAssetImageRegistryRegistryListResponse extends AbstractMode
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "List.", this.List);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

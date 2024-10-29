@@ -102,6 +102,9 @@ public enum OrganizationErrorCode {
     // 用户组创建超过限制
      FAILEDOPERATION_GROUPOVERUPPERLIMIT("FailedOperation.GroupOverUpperLimit"),
      
+    // 用户组类型和用户类型不匹配
+     FAILEDOPERATION_GROUPTYPEUSERTYPENOTMATCH("FailedOperation.GroupTypeUserTypeNotMatch"),
+     
     // CIC的用户组组员超出限制。
      FAILEDOPERATION_GROUPUSERCOUNTOVERUPPERLIMIT("FailedOperation.GroupUserCountOverUpperLimit"),
      
@@ -131,6 +134,18 @@ public enum OrganizationErrorCode {
      
     // 邀请已存在。
      FAILEDOPERATION_INVITATIONEXIST("FailedOperation.InvitationExist"),
+     
+    // 手动用户组不允许删除
+     FAILEDOPERATION_MANUALGROUPNOTDELETE("FailedOperation.ManualGroupNotDelete"),
+     
+    // 手动用户组不允许更新
+     FAILEDOPERATION_MANUALGROUPNOTUPDATE("FailedOperation.ManualGroupNotUpdate"),
+     
+    // 手动用户不允许删除
+     FAILEDOPERATION_MANUALUSERNOTDELETE("FailedOperation.ManualUserNotDelete"),
+     
+    // 手动用户不允许更新
+     FAILEDOPERATION_MANUALUSERNOTUPDATE("FailedOperation.ManualUserNotUpdate"),
      
     // 邮箱绑定失败。
      FAILEDOPERATION_MEMBERBINDEMAILERROR("FailedOperation.MemberBindEmailError"),
@@ -296,6 +311,9 @@ public enum OrganizationErrorCode {
      
     // 当 SSO 登录处于开启状态时不能清空 SAML 身份提供商信息。
      FAILEDOPERATION_SSOSTATUSENABLENOTCLEARIDENTITYPROVIDER("FailedOperation.SSoStatusEnableNotClearIdentityProvider"),
+     
+    // 生成SCIM密钥失败
+     FAILEDOPERATION_SCIMCREDENTIALGENERATEERROR("FailedOperation.ScimCredentialGenerateError"),
      
     // 共享地域不存在。
      FAILEDOPERATION_SHAREAREANOTEXIST("FailedOperation.ShareAreaNotExist"),
@@ -561,6 +579,12 @@ public enum OrganizationErrorCode {
     // 策略不存在
      INVALIDPARAMETER_ROLEPOLICYNOTEXIST("InvalidParameter.RolePolicyNotExist"),
      
+    // SCIM密钥不存在
+     INVALIDPARAMETER_SCIMCREDENTIALNOTFOUND("InvalidParameter.ScimCredentialNotFound"),
+     
+    // SCIM同步状态错误
+     INVALIDPARAMETER_SCIMSYNCSTATUSERROR("InvalidParameter.ScimSyncStatusError"),
+     
     // 策略文档的Statement字段不合法。
      INVALIDPARAMETER_STATEMENTERROR("InvalidParameter.StatementError"),
      
@@ -572,6 +596,9 @@ public enum OrganizationErrorCode {
      
     // 用户还存在用户组里。
      INVALIDPARAMETER_USERALREADYEXISTSGROUP("InvalidParameter.UserAlreadyExistsGroup"),
+     
+    // SCIM密钥状态错误
+     INVALIDPARAMETER_USERSCIMCREDENTIALSTATUSERROR("InvalidParameter.UserScimCredentialStatusError"),
      
     // 用户名已经存在
      INVALIDPARAMETER_USERNAMEALREADYEXISTS("InvalidParameter.UsernameAlreadyExists"),
@@ -588,7 +615,7 @@ public enum OrganizationErrorCode {
     // 策略内容不合法。
      INVALIDPARAMETERVALUE_POLICYCONTENTINVALID("InvalidParameterValue.PolicyContentInvalid"),
      
-    // sso登陆启用状态值非法
+    // sso登录启用状态值非法
      INVALIDPARAMETERVALUE_SSOSTATUSINVALID("InvalidParameterValue.SSoStatusInvalid"),
      
     // X509证书格式错误。
@@ -638,6 +665,9 @@ public enum OrganizationErrorCode {
      
     // 请求用户组移除用户超出限制。
      LIMITEXCEEDED_REMOVEUSERFROMGROUPLIMITEXCEEDED("LimitExceeded.RemoveUserFromGroupLimitExceeded"),
+     
+    // SCIM密钥数量超过限制
+     LIMITEXCEEDED_SCIMCREDENTIALLIMITEXCEEDED("LimitExceeded.ScimCredentialLimitExceeded"),
      
     // 重新发送激活邮件次数超过限制。
      LIMITEXCEEDED_SENDEMAILLIMIT("LimitExceeded.SendEmailLimit"),

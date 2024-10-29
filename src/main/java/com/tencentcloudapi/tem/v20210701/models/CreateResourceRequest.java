@@ -31,7 +31,7 @@ public class CreateResourceRequest extends AbstractModel {
     private String EnvironmentId;
 
     /**
-    * 资源类型，目前支持文件系统：CFS；日志服务：CLS；注册中心：TSE_SRE
+    * 资源类型，目前支持文件系统：CFS；注册中心：TSE_SRE
     */
     @SerializedName("ResourceType")
     @Expose
@@ -82,16 +82,16 @@ public class CreateResourceRequest extends AbstractModel {
     }
 
     /**
-     * Get 资源类型，目前支持文件系统：CFS；日志服务：CLS；注册中心：TSE_SRE 
-     * @return ResourceType 资源类型，目前支持文件系统：CFS；日志服务：CLS；注册中心：TSE_SRE
+     * Get 资源类型，目前支持文件系统：CFS；注册中心：TSE_SRE 
+     * @return ResourceType 资源类型，目前支持文件系统：CFS；注册中心：TSE_SRE
      */
     public String getResourceType() {
         return this.ResourceType;
     }
 
     /**
-     * Set 资源类型，目前支持文件系统：CFS；日志服务：CLS；注册中心：TSE_SRE
-     * @param ResourceType 资源类型，目前支持文件系统：CFS；日志服务：CLS；注册中心：TSE_SRE
+     * Set 资源类型，目前支持文件系统：CFS；注册中心：TSE_SRE
+     * @param ResourceType 资源类型，目前支持文件系统：CFS；注册中心：TSE_SRE
      */
     public void setResourceType(String ResourceType) {
         this.ResourceType = ResourceType;

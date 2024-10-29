@@ -31,6 +31,13 @@ public class DescribeBlockStaticListResponse extends AbstractModel {
     private StaticInfo [] Data;
 
     /**
+    * 异步查询状态，1查询执行中，0查询已结束
+    */
+    @SerializedName("Status")
+    @Expose
+    private Long Status;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -51,6 +58,22 @@ public class DescribeBlockStaticListResponse extends AbstractModel {
      */
     public void setData(StaticInfo [] Data) {
         this.Data = Data;
+    }
+
+    /**
+     * Get 异步查询状态，1查询执行中，0查询已结束 
+     * @return Status 异步查询状态，1查询执行中，0查询已结束
+     */
+    public Long getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 异步查询状态，1查询执行中，0查询已结束
+     * @param Status 异步查询状态，1查询执行中，0查询已结束
+     */
+    public void setStatus(Long Status) {
+        this.Status = Status;
     }
 
     /**
@@ -83,6 +106,9 @@ public class DescribeBlockStaticListResponse extends AbstractModel {
                 this.Data[i] = new StaticInfo(source.Data[i]);
             }
         }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -94,6 +120,7 @@ public class DescribeBlockStaticListResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Data.", this.Data);
+        this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -172,7 +172,7 @@ public class AssetProcessBaseInfo extends AbstractModel {
     private String Status;
 
     /**
-    * 数字签名:0无，1有， 999 空，仅windows
+    * 数字签名:0无，1有， 999 空，仅Windows
     */
     @SerializedName("HasSign")
     @Expose
@@ -572,16 +572,16 @@ public class AssetProcessBaseInfo extends AbstractModel {
     }
 
     /**
-     * Get 数字签名:0无，1有， 999 空，仅windows 
-     * @return HasSign 数字签名:0无，1有， 999 空，仅windows
+     * Get 数字签名:0无，1有， 999 空，仅Windows 
+     * @return HasSign 数字签名:0无，1有， 999 空，仅Windows
      */
     public Long getHasSign() {
         return this.HasSign;
     }
 
     /**
-     * Set 数字签名:0无，1有， 999 空，仅windows
-     * @param HasSign 数字签名:0无，1有， 999 空，仅windows
+     * Set 数字签名:0无，1有， 999 空，仅Windows
+     * @param HasSign 数字签名:0无，1有， 999 空，仅Windows
      */
     public void setHasSign(Long HasSign) {
         this.HasSign = HasSign;

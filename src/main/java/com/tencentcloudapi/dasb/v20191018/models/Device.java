@@ -155,6 +155,22 @@ public class Device extends AbstractModel {
     private String DomainName;
 
     /**
+    * 是否启用SSL，仅支持Redis资产。0：禁用 1：启用
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EnableSSL")
+    @Expose
+    private Long EnableSSL;
+
+    /**
+    * 已上传的SSL证书名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SSLCertName")
+    @Expose
+    private String SSLCertName;
+
+    /**
      * Get 资产ID 
      * @return Id 资产ID
      */
@@ -462,6 +478,46 @@ public class Device extends AbstractModel {
         this.DomainName = DomainName;
     }
 
+    /**
+     * Get 是否启用SSL，仅支持Redis资产。0：禁用 1：启用
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EnableSSL 是否启用SSL，仅支持Redis资产。0：禁用 1：启用
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getEnableSSL() {
+        return this.EnableSSL;
+    }
+
+    /**
+     * Set 是否启用SSL，仅支持Redis资产。0：禁用 1：启用
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EnableSSL 是否启用SSL，仅支持Redis资产。0：禁用 1：启用
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEnableSSL(Long EnableSSL) {
+        this.EnableSSL = EnableSSL;
+    }
+
+    /**
+     * Get 已上传的SSL证书名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SSLCertName 已上传的SSL证书名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSSLCertName() {
+        return this.SSLCertName;
+    }
+
+    /**
+     * Set 已上传的SSL证书名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SSLCertName 已上传的SSL证书名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSSLCertName(String SSLCertName) {
+        this.SSLCertName = SSLCertName;
+    }
+
     public Device() {
     }
 
@@ -530,6 +586,12 @@ public class Device extends AbstractModel {
         if (source.DomainName != null) {
             this.DomainName = new String(source.DomainName);
         }
+        if (source.EnableSSL != null) {
+            this.EnableSSL = new Long(source.EnableSSL);
+        }
+        if (source.SSLCertName != null) {
+            this.SSLCertName = new String(source.SSLCertName);
+        }
     }
 
 
@@ -555,6 +617,8 @@ public class Device extends AbstractModel {
         this.setParamArraySimple(map, prefix + "IpPortSet.", this.IpPortSet);
         this.setParamSimple(map, prefix + "DomainId", this.DomainId);
         this.setParamSimple(map, prefix + "DomainName", this.DomainName);
+        this.setParamSimple(map, prefix + "EnableSSL", this.EnableSSL);
+        this.setParamSimple(map, prefix + "SSLCertName", this.SSLCertName);
 
     }
 }

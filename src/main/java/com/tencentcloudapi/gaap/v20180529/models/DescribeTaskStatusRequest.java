@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeTaskStatusRequest extends AbstractModel {
 
     /**
-    * 任务ID，值为异步接口返回的RequestId
+    * 任务ID，值为异步接口返回的RequestId，此参数不能传空值。
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-     * Get 任务ID，值为异步接口返回的RequestId 
-     * @return TaskId 任务ID，值为异步接口返回的RequestId
+     * Get 任务ID，值为异步接口返回的RequestId，此参数不能传空值。 
+     * @return TaskId 任务ID，值为异步接口返回的RequestId，此参数不能传空值。
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 任务ID，值为异步接口返回的RequestId
-     * @param TaskId 任务ID，值为异步接口返回的RequestId
+     * Set 任务ID，值为异步接口返回的RequestId，此参数不能传空值。
+     * @param TaskId 任务ID，值为异步接口返回的RequestId，此参数不能传空值。
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

@@ -52,6 +52,13 @@ public class OwnNumberApplyDetailItem extends AbstractModel {
     private Long MaxCallPSec;
 
     /**
+    * 呼出被叫格式，使用 {+E.164} 或 {E.164}, 
+    */
+    @SerializedName("OutboundCalleeFormat")
+    @Expose
+    private String OutboundCalleeFormat;
+
+    /**
      * Get 号码类型：0-呼入|1-呼出|2-呼入呼出 
      * @return CallType 号码类型：0-呼入|1-呼出|2-呼入呼出
      */
@@ -115,6 +122,22 @@ public class OwnNumberApplyDetailItem extends AbstractModel {
         this.MaxCallPSec = MaxCallPSec;
     }
 
+    /**
+     * Get 呼出被叫格式，使用 {+E.164} 或 {E.164},  
+     * @return OutboundCalleeFormat 呼出被叫格式，使用 {+E.164} 或 {E.164}, 
+     */
+    public String getOutboundCalleeFormat() {
+        return this.OutboundCalleeFormat;
+    }
+
+    /**
+     * Set 呼出被叫格式，使用 {+E.164} 或 {E.164}, 
+     * @param OutboundCalleeFormat 呼出被叫格式，使用 {+E.164} 或 {E.164}, 
+     */
+    public void setOutboundCalleeFormat(String OutboundCalleeFormat) {
+        this.OutboundCalleeFormat = OutboundCalleeFormat;
+    }
+
     public OwnNumberApplyDetailItem() {
     }
 
@@ -135,6 +158,9 @@ public class OwnNumberApplyDetailItem extends AbstractModel {
         if (source.MaxCallPSec != null) {
             this.MaxCallPSec = new Long(source.MaxCallPSec);
         }
+        if (source.OutboundCalleeFormat != null) {
+            this.OutboundCalleeFormat = new String(source.OutboundCalleeFormat);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class OwnNumberApplyDetailItem extends AbstractModel {
         this.setParamSimple(map, prefix + "PhoneNumber", this.PhoneNumber);
         this.setParamSimple(map, prefix + "MaxCallCount", this.MaxCallCount);
         this.setParamSimple(map, prefix + "MaxCallPSec", this.MaxCallPSec);
+        this.setParamSimple(map, prefix + "OutboundCalleeFormat", this.OutboundCalleeFormat);
 
     }
 }

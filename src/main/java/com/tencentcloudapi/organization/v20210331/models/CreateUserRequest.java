@@ -80,6 +80,13 @@ public class CreateUserRequest extends AbstractModel {
     private String UserStatus;
 
     /**
+    * 用户类型  Manual：手动创建，Synchronized：外部导入
+    */
+    @SerializedName("UserType")
+    @Expose
+    private String UserType;
+
+    /**
      * Get 空间 ID。 
      * @return ZoneId 空间 ID。
      */
@@ -207,6 +214,22 @@ public class CreateUserRequest extends AbstractModel {
         this.UserStatus = UserStatus;
     }
 
+    /**
+     * Get 用户类型  Manual：手动创建，Synchronized：外部导入 
+     * @return UserType 用户类型  Manual：手动创建，Synchronized：外部导入
+     */
+    public String getUserType() {
+        return this.UserType;
+    }
+
+    /**
+     * Set 用户类型  Manual：手动创建，Synchronized：外部导入
+     * @param UserType 用户类型  Manual：手动创建，Synchronized：外部导入
+     */
+    public void setUserType(String UserType) {
+        this.UserType = UserType;
+    }
+
     public CreateUserRequest() {
     }
 
@@ -239,6 +262,9 @@ public class CreateUserRequest extends AbstractModel {
         if (source.UserStatus != null) {
             this.UserStatus = new String(source.UserStatus);
         }
+        if (source.UserType != null) {
+            this.UserType = new String(source.UserType);
+        }
     }
 
 
@@ -254,6 +280,7 @@ public class CreateUserRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "Email", this.Email);
         this.setParamSimple(map, prefix + "UserStatus", this.UserStatus);
+        this.setParamSimple(map, prefix + "UserType", this.UserType);
 
     }
 }

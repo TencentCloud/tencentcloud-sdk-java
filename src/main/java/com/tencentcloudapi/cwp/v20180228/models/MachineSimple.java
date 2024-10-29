@@ -98,7 +98,8 @@ public class MachineSimple extends AbstractModel {
     private RegionInfo RegionInfo;
 
     /**
-    * 实例状态 TERMINATED_PRO_VERSION 已销毁
+    * 实例状态请参考CVM实例列表InstanceState值
+https://cloud.tencent.com/document/api/213/15753#Instance
     */
     @SerializedName("InstanceState")
     @Expose
@@ -333,16 +334,20 @@ public class MachineSimple extends AbstractModel {
     }
 
     /**
-     * Get 实例状态 TERMINATED_PRO_VERSION 已销毁 
-     * @return InstanceState 实例状态 TERMINATED_PRO_VERSION 已销毁
+     * Get 实例状态请参考CVM实例列表InstanceState值
+https://cloud.tencent.com/document/api/213/15753#Instance 
+     * @return InstanceState 实例状态请参考CVM实例列表InstanceState值
+https://cloud.tencent.com/document/api/213/15753#Instance
      */
     public String getInstanceState() {
         return this.InstanceState;
     }
 
     /**
-     * Set 实例状态 TERMINATED_PRO_VERSION 已销毁
-     * @param InstanceState 实例状态 TERMINATED_PRO_VERSION 已销毁
+     * Set 实例状态请参考CVM实例列表InstanceState值
+https://cloud.tencent.com/document/api/213/15753#Instance
+     * @param InstanceState 实例状态请参考CVM实例列表InstanceState值
+https://cloud.tencent.com/document/api/213/15753#Instance
      */
     public void setInstanceState(String InstanceState) {
         this.InstanceState = InstanceState;

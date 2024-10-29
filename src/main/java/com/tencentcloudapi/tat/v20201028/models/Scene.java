@@ -25,7 +25,6 @@ public class Scene extends AbstractModel {
 
     /**
     * 场景 ID 。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SceneId")
     @Expose
@@ -33,7 +32,6 @@ public class Scene extends AbstractModel {
 
     /**
     * 场景名称。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SceneName")
     @Expose
@@ -41,7 +39,6 @@ public class Scene extends AbstractModel {
 
     /**
     * 场景创建者。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreatedBy")
     @Expose
@@ -49,7 +46,6 @@ public class Scene extends AbstractModel {
 
     /**
     * 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreatedTime")
     @Expose
@@ -57,17 +53,14 @@ public class Scene extends AbstractModel {
 
     /**
     * 更新时间。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdatedTime")
     @Expose
     private String UpdatedTime;
 
     /**
-     * Get 场景 ID 。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 场景 ID 。 
      * @return SceneId 场景 ID 。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSceneId() {
         return this.SceneId;
@@ -75,19 +68,15 @@ public class Scene extends AbstractModel {
 
     /**
      * Set 场景 ID 。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SceneId 场景 ID 。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSceneId(String SceneId) {
         this.SceneId = SceneId;
     }
 
     /**
-     * Get 场景名称。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 场景名称。 
      * @return SceneName 场景名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSceneName() {
         return this.SceneName;
@@ -95,19 +84,15 @@ public class Scene extends AbstractModel {
 
     /**
      * Set 场景名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SceneName 场景名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSceneName(String SceneName) {
         this.SceneName = SceneName;
     }
 
     /**
-     * Get 场景创建者。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 场景创建者。 
      * @return CreatedBy 场景创建者。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreatedBy() {
         return this.CreatedBy;
@@ -115,19 +100,15 @@ public class Scene extends AbstractModel {
 
     /**
      * Set 场景创建者。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreatedBy 场景创建者。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreatedBy(String CreatedBy) {
         this.CreatedBy = CreatedBy;
     }
 
     /**
-     * Get 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间。 
      * @return CreatedTime 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreatedTime() {
         return this.CreatedTime;
@@ -135,19 +116,15 @@ public class Scene extends AbstractModel {
 
     /**
      * Set 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreatedTime 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreatedTime(String CreatedTime) {
         this.CreatedTime = CreatedTime;
     }
 
     /**
-     * Get 更新时间。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 更新时间。 
      * @return UpdatedTime 更新时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdatedTime() {
         return this.UpdatedTime;
@@ -155,9 +132,7 @@ public class Scene extends AbstractModel {
 
     /**
      * Set 更新时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdatedTime 更新时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdatedTime(String UpdatedTime) {
         this.UpdatedTime = UpdatedTime;

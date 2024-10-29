@@ -54,14 +54,22 @@ public class NoticeReceiver extends AbstractModel {
     private String [] ReceiverChannels;
 
     /**
-    * 允许接收信息的开始时间。格式：`15:04:05`，必填。
+    * 通知内容模板ID，使用Default-zh引用默认模板（中文），使用Default-en引用DefaultTemplate(English)。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NoticeContentId")
+    @Expose
+    private String NoticeContentId;
+
+    /**
+    * 允许接收信息的开始时间。格式：`15:04:05`。必填
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 允许接收信息的结束时间。格式：`15:04:05`，必填。
+    * 允许接收信息的结束时间。格式：`15:04:05`。必填
     */
     @SerializedName("EndTime")
     @Expose
@@ -76,14 +84,6 @@ public class NoticeReceiver extends AbstractModel {
     @SerializedName("Index")
     @Expose
     private Long Index;
-
-    /**
-    * 通知内容模板ID。
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("NoticeContentId")
-    @Expose
-    private String NoticeContentId;
 
     /**
      * Get 接受者类型。可选值：
@@ -170,32 +170,52 @@ public class NoticeReceiver extends AbstractModel {
     }
 
     /**
-     * Get 允许接收信息的开始时间。格式：`15:04:05`，必填。 
-     * @return StartTime 允许接收信息的开始时间。格式：`15:04:05`，必填。
+     * Get 通知内容模板ID，使用Default-zh引用默认模板（中文），使用Default-en引用DefaultTemplate(English)。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NoticeContentId 通知内容模板ID，使用Default-zh引用默认模板（中文），使用Default-en引用DefaultTemplate(English)。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getNoticeContentId() {
+        return this.NoticeContentId;
+    }
+
+    /**
+     * Set 通知内容模板ID，使用Default-zh引用默认模板（中文），使用Default-en引用DefaultTemplate(English)。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NoticeContentId 通知内容模板ID，使用Default-zh引用默认模板（中文），使用Default-en引用DefaultTemplate(English)。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNoticeContentId(String NoticeContentId) {
+        this.NoticeContentId = NoticeContentId;
+    }
+
+    /**
+     * Get 允许接收信息的开始时间。格式：`15:04:05`。必填 
+     * @return StartTime 允许接收信息的开始时间。格式：`15:04:05`。必填
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 允许接收信息的开始时间。格式：`15:04:05`，必填。
-     * @param StartTime 允许接收信息的开始时间。格式：`15:04:05`，必填。
+     * Set 允许接收信息的开始时间。格式：`15:04:05`。必填
+     * @param StartTime 允许接收信息的开始时间。格式：`15:04:05`。必填
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 允许接收信息的结束时间。格式：`15:04:05`，必填。 
-     * @return EndTime 允许接收信息的结束时间。格式：`15:04:05`，必填。
+     * Get 允许接收信息的结束时间。格式：`15:04:05`。必填 
+     * @return EndTime 允许接收信息的结束时间。格式：`15:04:05`。必填
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 允许接收信息的结束时间。格式：`15:04:05`，必填。
-     * @param EndTime 允许接收信息的结束时间。格式：`15:04:05`，必填。
+     * Set 允许接收信息的结束时间。格式：`15:04:05`。必填
+     * @param EndTime 允许接收信息的结束时间。格式：`15:04:05`。必填
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
@@ -229,26 +249,6 @@ public class NoticeReceiver extends AbstractModel {
         this.Index = Index;
     }
 
-    /**
-     * Get 通知内容模板ID。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return NoticeContentId 通知内容模板ID。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getNoticeContentId() {
-        return this.NoticeContentId;
-    }
-
-    /**
-     * Set 通知内容模板ID。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param NoticeContentId 通知内容模板ID。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setNoticeContentId(String NoticeContentId) {
-        this.NoticeContentId = NoticeContentId;
-    }
-
     public NoticeReceiver() {
     }
 
@@ -272,6 +272,9 @@ public class NoticeReceiver extends AbstractModel {
                 this.ReceiverChannels[i] = new String(source.ReceiverChannels[i]);
             }
         }
+        if (source.NoticeContentId != null) {
+            this.NoticeContentId = new String(source.NoticeContentId);
+        }
         if (source.StartTime != null) {
             this.StartTime = new String(source.StartTime);
         }
@@ -280,9 +283,6 @@ public class NoticeReceiver extends AbstractModel {
         }
         if (source.Index != null) {
             this.Index = new Long(source.Index);
-        }
-        if (source.NoticeContentId != null) {
-            this.NoticeContentId = new String(source.NoticeContentId);
         }
     }
 
@@ -294,10 +294,10 @@ public class NoticeReceiver extends AbstractModel {
         this.setParamSimple(map, prefix + "ReceiverType", this.ReceiverType);
         this.setParamArraySimple(map, prefix + "ReceiverIds.", this.ReceiverIds);
         this.setParamArraySimple(map, prefix + "ReceiverChannels.", this.ReceiverChannels);
+        this.setParamSimple(map, prefix + "NoticeContentId", this.NoticeContentId);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "Index", this.Index);
-        this.setParamSimple(map, prefix + "NoticeContentId", this.NoticeContentId);
 
     }
 }

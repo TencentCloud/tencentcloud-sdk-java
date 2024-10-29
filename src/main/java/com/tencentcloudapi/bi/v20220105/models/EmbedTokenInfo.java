@@ -144,6 +144,14 @@ public class EmbedTokenInfo extends AbstractModel {
     private String GlobalParam;
 
     /**
+    * embed表示页面看板嵌出，chatBIEmbed表示ChatBI嵌出
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Intention")
+    @Expose
+    private String Intention;
+
+    /**
      * Get 信息标识
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Id 信息标识
@@ -443,6 +451,26 @@ public class EmbedTokenInfo extends AbstractModel {
         this.GlobalParam = GlobalParam;
     }
 
+    /**
+     * Get embed表示页面看板嵌出，chatBIEmbed表示ChatBI嵌出
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Intention embed表示页面看板嵌出，chatBIEmbed表示ChatBI嵌出
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getIntention() {
+        return this.Intention;
+    }
+
+    /**
+     * Set embed表示页面看板嵌出，chatBIEmbed表示ChatBI嵌出
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Intention embed表示页面看板嵌出，chatBIEmbed表示ChatBI嵌出
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIntention(String Intention) {
+        this.Intention = Intention;
+    }
+
     public EmbedTokenInfo() {
     }
 
@@ -496,6 +524,9 @@ public class EmbedTokenInfo extends AbstractModel {
         if (source.GlobalParam != null) {
             this.GlobalParam = new String(source.GlobalParam);
         }
+        if (source.Intention != null) {
+            this.Intention = new String(source.Intention);
+        }
     }
 
 
@@ -518,6 +549,7 @@ public class EmbedTokenInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "UserId", this.UserId);
         this.setParamSimple(map, prefix + "TicketNum", this.TicketNum);
         this.setParamSimple(map, prefix + "GlobalParam", this.GlobalParam);
+        this.setParamSimple(map, prefix + "Intention", this.Intention);
 
     }
 }

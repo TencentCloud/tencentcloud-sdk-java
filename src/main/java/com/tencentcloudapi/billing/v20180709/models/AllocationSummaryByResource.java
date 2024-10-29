@@ -363,6 +363,22 @@ public class AllocationSummaryByResource extends AbstractModel {
     private String ComponentConfig;
 
     /**
+    * SPDeduction
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SPDeduction")
+    @Expose
+    private String SPDeduction;
+
+    /**
+    * 账单月
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BillMonth")
+    @Expose
+    private String BillMonth;
+
+    /**
      * Get 分账单元唯一标识
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TreeNodeUniqKey 分账单元唯一标识
@@ -1222,6 +1238,46 @@ public class AllocationSummaryByResource extends AbstractModel {
         this.ComponentConfig = ComponentConfig;
     }
 
+    /**
+     * Get SPDeduction
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SPDeduction SPDeduction
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSPDeduction() {
+        return this.SPDeduction;
+    }
+
+    /**
+     * Set SPDeduction
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SPDeduction SPDeduction
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSPDeduction(String SPDeduction) {
+        this.SPDeduction = SPDeduction;
+    }
+
+    /**
+     * Get 账单月
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BillMonth 账单月
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getBillMonth() {
+        return this.BillMonth;
+    }
+
+    /**
+     * Set 账单月
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BillMonth 账单月
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBillMonth(String BillMonth) {
+        this.BillMonth = BillMonth;
+    }
+
     public AllocationSummaryByResource() {
     }
 
@@ -1359,6 +1415,12 @@ public class AllocationSummaryByResource extends AbstractModel {
         if (source.ComponentConfig != null) {
             this.ComponentConfig = new String(source.ComponentConfig);
         }
+        if (source.SPDeduction != null) {
+            this.SPDeduction = new String(source.SPDeduction);
+        }
+        if (source.BillMonth != null) {
+            this.BillMonth = new String(source.BillMonth);
+        }
     }
 
 
@@ -1408,6 +1470,8 @@ public class AllocationSummaryByResource extends AbstractModel {
         this.setParamSimple(map, prefix + "RegionType", this.RegionType);
         this.setParamSimple(map, prefix + "RegionTypeName", this.RegionTypeName);
         this.setParamSimple(map, prefix + "ComponentConfig", this.ComponentConfig);
+        this.setParamSimple(map, prefix + "SPDeduction", this.SPDeduction);
+        this.setParamSimple(map, prefix + "BillMonth", this.BillMonth);
 
     }
 }

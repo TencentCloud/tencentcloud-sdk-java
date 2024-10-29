@@ -70,7 +70,7 @@ azure
 
     /**
     * API URL，仅支持兼容openai协议的模型，填写url时后缀不要带/chat/completions；
-llmType为azure时,URL填写格式需为：https://{your-resource-name}.openai.azure.com?api-version={api-version},填写url时后缀不要带/openai/deployments/{deployment-id}/chat/completions，系统会自动帮你填充后缀
+llmType为azure时,URL填写格式需为：https://{your-resource-name}.openai.azure.com?api-version={api-version},填写url时后缀不要带/openai/deployments/{deployment-id}/chat/completions，系统会自动帮您填充后缀
     */
     @SerializedName("APIUrl")
     @Expose
@@ -415,9 +415,9 @@ azure
 
     /**
      * Get API URL，仅支持兼容openai协议的模型，填写url时后缀不要带/chat/completions；
-llmType为azure时,URL填写格式需为：https://{your-resource-name}.openai.azure.com?api-version={api-version},填写url时后缀不要带/openai/deployments/{deployment-id}/chat/completions，系统会自动帮你填充后缀 
+llmType为azure时,URL填写格式需为：https://{your-resource-name}.openai.azure.com?api-version={api-version},填写url时后缀不要带/openai/deployments/{deployment-id}/chat/completions，系统会自动帮您填充后缀 
      * @return APIUrl API URL，仅支持兼容openai协议的模型，填写url时后缀不要带/chat/completions；
-llmType为azure时,URL填写格式需为：https://{your-resource-name}.openai.azure.com?api-version={api-version},填写url时后缀不要带/openai/deployments/{deployment-id}/chat/completions，系统会自动帮你填充后缀
+llmType为azure时,URL填写格式需为：https://{your-resource-name}.openai.azure.com?api-version={api-version},填写url时后缀不要带/openai/deployments/{deployment-id}/chat/completions，系统会自动帮您填充后缀
      */
     public String getAPIUrl() {
         return this.APIUrl;
@@ -425,9 +425,9 @@ llmType为azure时,URL填写格式需为：https://{your-resource-name}.openai.a
 
     /**
      * Set API URL，仅支持兼容openai协议的模型，填写url时后缀不要带/chat/completions；
-llmType为azure时,URL填写格式需为：https://{your-resource-name}.openai.azure.com?api-version={api-version},填写url时后缀不要带/openai/deployments/{deployment-id}/chat/completions，系统会自动帮你填充后缀
+llmType为azure时,URL填写格式需为：https://{your-resource-name}.openai.azure.com?api-version={api-version},填写url时后缀不要带/openai/deployments/{deployment-id}/chat/completions，系统会自动帮您填充后缀
      * @param APIUrl API URL，仅支持兼容openai协议的模型，填写url时后缀不要带/chat/completions；
-llmType为azure时,URL填写格式需为：https://{your-resource-name}.openai.azure.com?api-version={api-version},填写url时后缀不要带/openai/deployments/{deployment-id}/chat/completions，系统会自动帮你填充后缀
+llmType为azure时,URL填写格式需为：https://{your-resource-name}.openai.azure.com?api-version={api-version},填写url时后缀不要带/openai/deployments/{deployment-id}/chat/completions，系统会自动帮您填充后缀
      */
     public void setAPIUrl(String APIUrl) {
         this.APIUrl = APIUrl;

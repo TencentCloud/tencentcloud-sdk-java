@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class DescribeRoutesRequest extends AbstractModel {
 
     /**
-    * 过滤条件，参数不支持同时指定RouteTableIds和Filters。
-<li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。</li>
+    * <li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。</li>
 <li>gateway-id - String - （过滤条件）网关ID。</li>
 <li>description - String - （过滤条件）路由描述。</li>
 <li>route-table-id - String - （过滤条件）路由表实例ID。</li>
@@ -50,14 +49,12 @@ public class DescribeRoutesRequest extends AbstractModel {
     private Long Limit;
 
     /**
-     * Get 过滤条件，参数不支持同时指定RouteTableIds和Filters。
-<li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。</li>
+     * Get <li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。</li>
 <li>gateway-id - String - （过滤条件）网关ID。</li>
 <li>description - String - （过滤条件）路由描述。</li>
 <li>route-table-id - String - （过滤条件）路由表实例ID。</li>
 <li>dest-cidr - String - （过滤条件）目的端地址，支持模糊左匹配。</li> 
-     * @return Filters 过滤条件，参数不支持同时指定RouteTableIds和Filters。
-<li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。</li>
+     * @return Filters <li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。</li>
 <li>gateway-id - String - （过滤条件）网关ID。</li>
 <li>description - String - （过滤条件）路由描述。</li>
 <li>route-table-id - String - （过滤条件）路由表实例ID。</li>
@@ -68,14 +65,12 @@ public class DescribeRoutesRequest extends AbstractModel {
     }
 
     /**
-     * Set 过滤条件，参数不支持同时指定RouteTableIds和Filters。
-<li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。</li>
+     * Set <li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。</li>
 <li>gateway-id - String - （过滤条件）网关ID。</li>
 <li>description - String - （过滤条件）路由描述。</li>
 <li>route-table-id - String - （过滤条件）路由表实例ID。</li>
 <li>dest-cidr - String - （过滤条件）目的端地址，支持模糊左匹配。</li>
-     * @param Filters 过滤条件，参数不支持同时指定RouteTableIds和Filters。
-<li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。</li>
+     * @param Filters <li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。</li>
 <li>gateway-id - String - （过滤条件）网关ID。</li>
 <li>description - String - （过滤条件）路由描述。</li>
 <li>route-table-id - String - （过滤条件）路由表实例ID。</li>

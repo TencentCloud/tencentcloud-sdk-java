@@ -31,14 +31,21 @@ public class CreateEmbedTokenRequest extends AbstractModel {
     private Long ProjectId;
 
     /**
-    * 分享页面id，嵌出看板时此为空值0
+    * 分享页面id，嵌出看板时此为空值0，ChatBI嵌出时不传
     */
     @SerializedName("PageId")
     @Expose
     private Long PageId;
 
     /**
-    * page表示嵌出页面，panel表示嵌出整个看板
+    * embed表示页面看板嵌出，chatBIEmbed表示ChatBI嵌出
+    */
+    @SerializedName("Intention")
+    @Expose
+    private String Intention;
+
+    /**
+    * page表示嵌出页面，panel表示嵌出整个看板，ChatBI嵌出时使用project
     */
     @SerializedName("Scope")
     @Expose
@@ -142,32 +149,48 @@ Operator 目前支持
     }
 
     /**
-     * Get 分享页面id，嵌出看板时此为空值0 
-     * @return PageId 分享页面id，嵌出看板时此为空值0
+     * Get 分享页面id，嵌出看板时此为空值0，ChatBI嵌出时不传 
+     * @return PageId 分享页面id，嵌出看板时此为空值0，ChatBI嵌出时不传
      */
     public Long getPageId() {
         return this.PageId;
     }
 
     /**
-     * Set 分享页面id，嵌出看板时此为空值0
-     * @param PageId 分享页面id，嵌出看板时此为空值0
+     * Set 分享页面id，嵌出看板时此为空值0，ChatBI嵌出时不传
+     * @param PageId 分享页面id，嵌出看板时此为空值0，ChatBI嵌出时不传
      */
     public void setPageId(Long PageId) {
         this.PageId = PageId;
     }
 
     /**
-     * Get page表示嵌出页面，panel表示嵌出整个看板 
-     * @return Scope page表示嵌出页面，panel表示嵌出整个看板
+     * Get embed表示页面看板嵌出，chatBIEmbed表示ChatBI嵌出 
+     * @return Intention embed表示页面看板嵌出，chatBIEmbed表示ChatBI嵌出
+     */
+    public String getIntention() {
+        return this.Intention;
+    }
+
+    /**
+     * Set embed表示页面看板嵌出，chatBIEmbed表示ChatBI嵌出
+     * @param Intention embed表示页面看板嵌出，chatBIEmbed表示ChatBI嵌出
+     */
+    public void setIntention(String Intention) {
+        this.Intention = Intention;
+    }
+
+    /**
+     * Get page表示嵌出页面，panel表示嵌出整个看板，ChatBI嵌出时使用project 
+     * @return Scope page表示嵌出页面，panel表示嵌出整个看板，ChatBI嵌出时使用project
      */
     public String getScope() {
         return this.Scope;
     }
 
     /**
-     * Set page表示嵌出页面，panel表示嵌出整个看板
-     * @param Scope page表示嵌出页面，panel表示嵌出整个看板
+     * Set page表示嵌出页面，panel表示嵌出整个看板，ChatBI嵌出时使用project
+     * @param Scope page表示嵌出页面，panel表示嵌出整个看板，ChatBI嵌出时使用project
      */
     public void setScope(String Scope) {
         this.Scope = Scope;
@@ -439,6 +462,9 @@ Operator 目前支持
         if (source.PageId != null) {
             this.PageId = new Long(source.PageId);
         }
+        if (source.Intention != null) {
+            this.Intention = new String(source.Intention);
+        }
         if (source.Scope != null) {
             this.Scope = new String(source.Scope);
         }
@@ -469,6 +495,7 @@ Operator 目前支持
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "PageId", this.PageId);
+        this.setParamSimple(map, prefix + "Intention", this.Intention);
         this.setParamSimple(map, prefix + "Scope", this.Scope);
         this.setParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
         this.setParamSimple(map, prefix + "ExtraParam", this.ExtraParam);

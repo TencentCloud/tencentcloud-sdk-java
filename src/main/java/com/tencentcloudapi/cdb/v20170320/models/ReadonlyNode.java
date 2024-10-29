@@ -38,6 +38,13 @@ public class ReadonlyNode extends AbstractModel {
     private String Zone;
 
     /**
+    * 升级集群版实例时，如果要调整只读节点可用区，需要指定节点id。
+    */
+    @SerializedName("NodeId")
+    @Expose
+    private String NodeId;
+
+    /**
      * Get 是否分布在随机可用区。传入YES表示随机可用区。否则使用Zone指定的可用区。 
      * @return IsRandomZone 是否分布在随机可用区。传入YES表示随机可用区。否则使用Zone指定的可用区。
      */
@@ -69,6 +76,22 @@ public class ReadonlyNode extends AbstractModel {
         this.Zone = Zone;
     }
 
+    /**
+     * Get 升级集群版实例时，如果要调整只读节点可用区，需要指定节点id。 
+     * @return NodeId 升级集群版实例时，如果要调整只读节点可用区，需要指定节点id。
+     */
+    public String getNodeId() {
+        return this.NodeId;
+    }
+
+    /**
+     * Set 升级集群版实例时，如果要调整只读节点可用区，需要指定节点id。
+     * @param NodeId 升级集群版实例时，如果要调整只读节点可用区，需要指定节点id。
+     */
+    public void setNodeId(String NodeId) {
+        this.NodeId = NodeId;
+    }
+
     public ReadonlyNode() {
     }
 
@@ -83,6 +106,9 @@ public class ReadonlyNode extends AbstractModel {
         if (source.Zone != null) {
             this.Zone = new String(source.Zone);
         }
+        if (source.NodeId != null) {
+            this.NodeId = new String(source.NodeId);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class ReadonlyNode extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "IsRandomZone", this.IsRandomZone);
         this.setParamSimple(map, prefix + "Zone", this.Zone);
+        this.setParamSimple(map, prefix + "NodeId", this.NodeId);
 
     }
 }

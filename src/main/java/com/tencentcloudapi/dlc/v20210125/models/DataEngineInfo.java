@@ -435,6 +435,14 @@ public class DataEngineInfo extends AbstractModel {
     private String EngineNetworkName;
 
     /**
+    * 是否使用预留池
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsPoolMode")
+    @Expose
+    private String IsPoolMode;
+
+    /**
      * Get DataEngine名称 
      * @return DataEngineName DataEngine名称
      */
@@ -1442,6 +1450,26 @@ public class DataEngineInfo extends AbstractModel {
         this.EngineNetworkName = EngineNetworkName;
     }
 
+    /**
+     * Get 是否使用预留池
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsPoolMode 是否使用预留池
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getIsPoolMode() {
+        return this.IsPoolMode;
+    }
+
+    /**
+     * Set 是否使用预留池
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsPoolMode 是否使用预留池
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsPoolMode(String IsPoolMode) {
+        this.IsPoolMode = IsPoolMode;
+    }
+
     public DataEngineInfo() {
     }
 
@@ -1621,6 +1649,9 @@ public class DataEngineInfo extends AbstractModel {
         if (source.EngineNetworkName != null) {
             this.EngineNetworkName = new String(source.EngineNetworkName);
         }
+        if (source.IsPoolMode != null) {
+            this.IsPoolMode = new String(source.IsPoolMode);
+        }
     }
 
 
@@ -1681,6 +1712,7 @@ public class DataEngineInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "EngineResourceUsedCU", this.EngineResourceUsedCU);
         this.setParamArrayObj(map, prefix + "AccessInfos.", this.AccessInfos);
         this.setParamSimple(map, prefix + "EngineNetworkName", this.EngineNetworkName);
+        this.setParamSimple(map, prefix + "IsPoolMode", this.IsPoolMode);
 
     }
 }

@@ -314,6 +314,17 @@ public class OrganizationClient extends AbstractClient{
     }
 
     /**
+     *创建SCIM密钥
+     * @param req CreateSCIMCredentialRequest
+     * @return CreateSCIMCredentialResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateSCIMCredentialResponse CreateSCIMCredential(CreateSCIMCredentialRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateSCIMCredential", CreateSCIMCredentialResponse.class);
+    }
+
+    /**
      *创建用户
      * @param req CreateUserRequest
      * @return CreateUserResponse
@@ -465,6 +476,17 @@ public class OrganizationClient extends AbstractClient{
     public DeleteRoleConfigurationResponse DeleteRoleConfiguration(DeleteRoleConfigurationRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteRoleConfiguration", DeleteRoleConfigurationResponse.class);
+    }
+
+    /**
+     *删除SCIM密钥
+     * @param req DeleteSCIMCredentialRequest
+     * @return DeleteSCIMCredentialResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteSCIMCredentialResponse DeleteSCIMCredential(DeleteSCIMCredentialRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteSCIMCredential", DeleteSCIMCredentialResponse.class);
     }
 
     /**
@@ -820,6 +842,17 @@ public class OrganizationClient extends AbstractClient{
     }
 
     /**
+     *获取SCIM同步状态
+     * @param req GetSCIMSynchronizationStatusRequest
+     * @return GetSCIMSynchronizationStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetSCIMSynchronizationStatusResponse GetSCIMSynchronizationStatus(GetSCIMSynchronizationStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetSCIMSynchronizationStatus", GetSCIMSynchronizationStatusResponse.class);
+    }
+
+    /**
      *查询异步任务的状态
      * @param req GetTaskStatusRequest
      * @return GetTaskStatusResponse
@@ -1037,6 +1070,17 @@ public class OrganizationClient extends AbstractClient{
     public ListRoleConfigurationsResponse ListRoleConfigurations(ListRoleConfigurationsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ListRoleConfigurations", ListRoleConfigurationsResponse.class);
+    }
+
+    /**
+     *查询用户SCIM密钥列表
+     * @param req ListSCIMCredentialsRequest
+     * @return ListSCIMCredentialsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListSCIMCredentialsResponse ListSCIMCredentials(ListSCIMCredentialsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListSCIMCredentials", ListSCIMCredentialsResponse.class);
     }
 
     /**
@@ -1279,6 +1323,28 @@ public class OrganizationClient extends AbstractClient{
     public UpdateRoleConfigurationResponse UpdateRoleConfiguration(UpdateRoleConfigurationRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "UpdateRoleConfiguration", UpdateRoleConfigurationResponse.class);
+    }
+
+    /**
+     *启用/禁用SCIM密钥
+     * @param req UpdateSCIMCredentialStatusRequest
+     * @return UpdateSCIMCredentialStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateSCIMCredentialStatusResponse UpdateSCIMCredentialStatus(UpdateSCIMCredentialStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateSCIMCredentialStatus", UpdateSCIMCredentialStatusResponse.class);
+    }
+
+    /**
+     *启用/禁用用户SCIM同步
+     * @param req UpdateSCIMSynchronizationStatusRequest
+     * @return UpdateSCIMSynchronizationStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateSCIMSynchronizationStatusResponse UpdateSCIMSynchronizationStatus(UpdateSCIMSynchronizationStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateSCIMSynchronizationStatus", UpdateSCIMSynchronizationStatusResponse.class);
     }
 
     /**
