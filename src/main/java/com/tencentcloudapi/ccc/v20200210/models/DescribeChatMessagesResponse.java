@@ -32,7 +32,6 @@ public class DescribeChatMessagesResponse extends AbstractModel {
 
     /**
     * 消息列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Messages")
     @Expose
@@ -62,10 +61,8 @@ public class DescribeChatMessagesResponse extends AbstractModel {
     }
 
     /**
-     * Get 消息列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 消息列表 
      * @return Messages 消息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public MessageBody [] getMessages() {
         return this.Messages;
@@ -73,9 +70,7 @@ public class DescribeChatMessagesResponse extends AbstractModel {
 
     /**
      * Set 消息列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Messages 消息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMessages(MessageBody [] Messages) {
         this.Messages = Messages;

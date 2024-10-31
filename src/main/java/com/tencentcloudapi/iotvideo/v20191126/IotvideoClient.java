@@ -199,6 +199,17 @@ public class IotvideoClient extends AbstractClient{
     }
 
     /**
+     *设备申请cos上传证书
+     * @param req CreateUploadTestRequest
+     * @return CreateUploadTestResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateUploadTestResponse CreateUploadTest(CreateUploadTestRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateUploadTest", CreateUploadTestResponse.class);
+    }
+
+    /**
      *本接口（CreateUsrToken）用于终端用户获取IoT Video平台的accessToken，初始化SDK,连接到IoT Video接入服务器。
      * @param req CreateUsrTokenRequest
      * @return CreateUsrTokenResponse
@@ -686,6 +697,17 @@ ProWritable.Pos.setVal.x;
     public RefundStorageServiceResponse RefundStorageService(RefundStorageServiceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "RefundStorageService", RefundStorageServiceResponse.class);
+    }
+
+    /**
+     *设备刷新cos上传证书
+     * @param req RenewUploadTestRequest
+     * @return RenewUploadTestResponse
+     * @throws TencentCloudSDKException
+     */
+    public RenewUploadTestResponse RenewUploadTest(RenewUploadTestRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RenewUploadTest", RenewUploadTestResponse.class);
     }
 
     /**

@@ -25,7 +25,6 @@ public class GeneralResourceQuotaSet extends AbstractModel {
 
     /**
     * 资源名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceName")
     @Expose
@@ -33,7 +32,6 @@ public class GeneralResourceQuotaSet extends AbstractModel {
 
     /**
     * 已使用额度
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceQuotaUsed")
     @Expose
@@ -41,17 +39,14 @@ public class GeneralResourceQuotaSet extends AbstractModel {
 
     /**
     * 总额度
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceQuotaTotal")
     @Expose
     private Long ResourceQuotaTotal;
 
     /**
-     * Get 资源名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源名称 
      * @return ResourceName 资源名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceName() {
         return this.ResourceName;
@@ -59,19 +54,15 @@ public class GeneralResourceQuotaSet extends AbstractModel {
 
     /**
      * Set 资源名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceName 资源名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceName(String ResourceName) {
         this.ResourceName = ResourceName;
     }
 
     /**
-     * Get 已使用额度
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 已使用额度 
      * @return ResourceQuotaUsed 已使用额度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getResourceQuotaUsed() {
         return this.ResourceQuotaUsed;
@@ -79,19 +70,15 @@ public class GeneralResourceQuotaSet extends AbstractModel {
 
     /**
      * Set 已使用额度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceQuotaUsed 已使用额度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceQuotaUsed(Long ResourceQuotaUsed) {
         this.ResourceQuotaUsed = ResourceQuotaUsed;
     }
 
     /**
-     * Get 总额度
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 总额度 
      * @return ResourceQuotaTotal 总额度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getResourceQuotaTotal() {
         return this.ResourceQuotaTotal;
@@ -99,9 +86,7 @@ public class GeneralResourceQuotaSet extends AbstractModel {
 
     /**
      * Set 总额度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceQuotaTotal 总额度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceQuotaTotal(Long ResourceQuotaTotal) {
         this.ResourceQuotaTotal = ResourceQuotaTotal;

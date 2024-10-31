@@ -59,6 +59,14 @@ public class DeployApplicationRequest extends AbstractModel {
     private String EnvironmentId;
 
     /**
+    * 部署类型为 IMAGE 时，该参数表示镜像 tag。
+部署类型为 JAR/WAR 时，该参数表示包版本号。
+    */
+    @SerializedName("DeployVersion")
+    @Expose
+    private String DeployVersion;
+
+    /**
     * 镜像仓库
     */
     @SerializedName("ImgRepo")
@@ -123,14 +131,6 @@ public class DeployApplicationRequest extends AbstractModel {
     @SerializedName("DeployMode")
     @Expose
     private String DeployMode;
-
-    /**
-    * 部署类型为 IMAGE 时，该参数表示镜像 tag。
-部署类型为 JAR/WAR 时，该参数表示包版本号。
-    */
-    @SerializedName("DeployVersion")
-    @Expose
-    private String DeployVersion;
 
     /**
     * 传入内容为 /jar包名字 的形式。也就是在 jar包名字前增加一个/。
@@ -453,6 +453,26 @@ public class DeployApplicationRequest extends AbstractModel {
     }
 
     /**
+     * Get 部署类型为 IMAGE 时，该参数表示镜像 tag。
+部署类型为 JAR/WAR 时，该参数表示包版本号。 
+     * @return DeployVersion 部署类型为 IMAGE 时，该参数表示镜像 tag。
+部署类型为 JAR/WAR 时，该参数表示包版本号。
+     */
+    public String getDeployVersion() {
+        return this.DeployVersion;
+    }
+
+    /**
+     * Set 部署类型为 IMAGE 时，该参数表示镜像 tag。
+部署类型为 JAR/WAR 时，该参数表示包版本号。
+     * @param DeployVersion 部署类型为 IMAGE 时，该参数表示镜像 tag。
+部署类型为 JAR/WAR 时，该参数表示包版本号。
+     */
+    public void setDeployVersion(String DeployVersion) {
+        this.DeployVersion = DeployVersion;
+    }
+
+    /**
      * Get 镜像仓库 
      * @return ImgRepo 镜像仓库
      */
@@ -606,26 +626,6 @@ public class DeployApplicationRequest extends AbstractModel {
      */
     public void setDeployMode(String DeployMode) {
         this.DeployMode = DeployMode;
-    }
-
-    /**
-     * Get 部署类型为 IMAGE 时，该参数表示镜像 tag。
-部署类型为 JAR/WAR 时，该参数表示包版本号。 
-     * @return DeployVersion 部署类型为 IMAGE 时，该参数表示镜像 tag。
-部署类型为 JAR/WAR 时，该参数表示包版本号。
-     */
-    public String getDeployVersion() {
-        return this.DeployVersion;
-    }
-
-    /**
-     * Set 部署类型为 IMAGE 时，该参数表示镜像 tag。
-部署类型为 JAR/WAR 时，该参数表示包版本号。
-     * @param DeployVersion 部署类型为 IMAGE 时，该参数表示镜像 tag。
-部署类型为 JAR/WAR 时，该参数表示包版本号。
-     */
-    public void setDeployVersion(String DeployVersion) {
-        this.DeployVersion = DeployVersion;
     }
 
     /**
@@ -1227,6 +1227,9 @@ public class DeployApplicationRequest extends AbstractModel {
         if (source.EnvironmentId != null) {
             this.EnvironmentId = new String(source.EnvironmentId);
         }
+        if (source.DeployVersion != null) {
+            this.DeployVersion = new String(source.DeployVersion);
+        }
         if (source.ImgRepo != null) {
             this.ImgRepo = new String(source.ImgRepo);
         }
@@ -1265,9 +1268,6 @@ public class DeployApplicationRequest extends AbstractModel {
         }
         if (source.DeployMode != null) {
             this.DeployMode = new String(source.DeployMode);
-        }
-        if (source.DeployVersion != null) {
-            this.DeployVersion = new String(source.DeployVersion);
         }
         if (source.PkgName != null) {
             this.PkgName = new String(source.PkgName);
@@ -1392,6 +1392,7 @@ public class DeployApplicationRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "CpuSpec", this.CpuSpec);
         this.setParamSimple(map, prefix + "MemorySpec", this.MemorySpec);
         this.setParamSimple(map, prefix + "EnvironmentId", this.EnvironmentId);
+        this.setParamSimple(map, prefix + "DeployVersion", this.DeployVersion);
         this.setParamSimple(map, prefix + "ImgRepo", this.ImgRepo);
         this.setParamSimple(map, prefix + "VersionDesc", this.VersionDesc);
         this.setParamSimple(map, prefix + "JvmOpts", this.JvmOpts);
@@ -1401,7 +1402,6 @@ public class DeployApplicationRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "StorageConfs.", this.StorageConfs);
         this.setParamArrayObj(map, prefix + "StorageMountConfs.", this.StorageMountConfs);
         this.setParamSimple(map, prefix + "DeployMode", this.DeployMode);
-        this.setParamSimple(map, prefix + "DeployVersion", this.DeployVersion);
         this.setParamSimple(map, prefix + "PkgName", this.PkgName);
         this.setParamSimple(map, prefix + "JdkVersion", this.JdkVersion);
         this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);

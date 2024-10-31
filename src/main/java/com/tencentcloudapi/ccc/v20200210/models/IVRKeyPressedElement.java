@@ -25,7 +25,6 @@ public class IVRKeyPressedElement extends AbstractModel {
 
     /**
     * 命中的关键字或者按键
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Key")
     @Expose
@@ -33,7 +32,6 @@ public class IVRKeyPressedElement extends AbstractModel {
 
     /**
     * 按键关联的标签
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Label")
     @Expose
@@ -41,7 +39,6 @@ public class IVRKeyPressedElement extends AbstractModel {
 
     /**
     * Unix 毫秒时间戳
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Timestamp")
     @Expose
@@ -49,7 +46,6 @@ public class IVRKeyPressedElement extends AbstractModel {
 
     /**
     * 节点标签
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NodeLabel")
     @Expose
@@ -57,7 +53,6 @@ public class IVRKeyPressedElement extends AbstractModel {
 
     /**
     * 用户原始输入
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OriginalContent")
     @Expose
@@ -65,17 +60,14 @@ public class IVRKeyPressedElement extends AbstractModel {
 
     /**
     * TTS 提示音内容
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TTSPrompt")
     @Expose
     private String TTSPrompt;
 
     /**
-     * Get 命中的关键字或者按键
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 命中的关键字或者按键 
      * @return Key 命中的关键字或者按键
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKey() {
         return this.Key;
@@ -83,19 +75,15 @@ public class IVRKeyPressedElement extends AbstractModel {
 
     /**
      * Set 命中的关键字或者按键
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Key 命中的关键字或者按键
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKey(String Key) {
         this.Key = Key;
     }
 
     /**
-     * Get 按键关联的标签
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 按键关联的标签 
      * @return Label 按键关联的标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLabel() {
         return this.Label;
@@ -103,19 +91,15 @@ public class IVRKeyPressedElement extends AbstractModel {
 
     /**
      * Set 按键关联的标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Label 按键关联的标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLabel(String Label) {
         this.Label = Label;
     }
 
     /**
-     * Get Unix 毫秒时间戳
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Unix 毫秒时间戳 
      * @return Timestamp Unix 毫秒时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTimestamp() {
         return this.Timestamp;
@@ -123,19 +107,15 @@ public class IVRKeyPressedElement extends AbstractModel {
 
     /**
      * Set Unix 毫秒时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Timestamp Unix 毫秒时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimestamp(Long Timestamp) {
         this.Timestamp = Timestamp;
     }
 
     /**
-     * Get 节点标签
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 节点标签 
      * @return NodeLabel 节点标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNodeLabel() {
         return this.NodeLabel;
@@ -143,19 +123,15 @@ public class IVRKeyPressedElement extends AbstractModel {
 
     /**
      * Set 节点标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NodeLabel 节点标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNodeLabel(String NodeLabel) {
         this.NodeLabel = NodeLabel;
     }
 
     /**
-     * Get 用户原始输入
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户原始输入 
      * @return OriginalContent 用户原始输入
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOriginalContent() {
         return this.OriginalContent;
@@ -163,19 +139,15 @@ public class IVRKeyPressedElement extends AbstractModel {
 
     /**
      * Set 用户原始输入
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OriginalContent 用户原始输入
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOriginalContent(String OriginalContent) {
         this.OriginalContent = OriginalContent;
     }
 
     /**
-     * Get TTS 提示音内容
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get TTS 提示音内容 
      * @return TTSPrompt TTS 提示音内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTTSPrompt() {
         return this.TTSPrompt;
@@ -183,9 +155,7 @@ public class IVRKeyPressedElement extends AbstractModel {
 
     /**
      * Set TTS 提示音内容
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TTSPrompt TTS 提示音内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTTSPrompt(String TTSPrompt) {
         this.TTSPrompt = TTSPrompt;

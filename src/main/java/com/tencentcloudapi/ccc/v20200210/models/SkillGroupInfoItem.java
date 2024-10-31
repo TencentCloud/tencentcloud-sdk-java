@@ -46,7 +46,6 @@ public class SkillGroupInfoItem extends AbstractModel {
 
     /**
     * 会话分配策略
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RoutePolicy")
     @Expose
@@ -54,7 +53,6 @@ public class SkillGroupInfoItem extends AbstractModel {
 
     /**
     * 会话分配是否优先上次服务座席
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UsingLastSeat")
     @Expose
@@ -62,7 +60,6 @@ public class SkillGroupInfoItem extends AbstractModel {
 
     /**
     * 单客服最大并发数（电话类型默认1）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxConcurrency")
     @Expose
@@ -70,7 +67,6 @@ public class SkillGroupInfoItem extends AbstractModel {
 
     /**
     * 最后修改时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LastModifyTimestamp")
     @Expose
@@ -78,7 +74,6 @@ public class SkillGroupInfoItem extends AbstractModel {
 
     /**
     * 技能组类型0-电话，1-在线，3-音频，4-视频	
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SkillGroupType")
     @Expose
@@ -86,7 +81,6 @@ public class SkillGroupInfoItem extends AbstractModel {
 
     /**
     * 技能组内线号码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Alias")
     @Expose
@@ -141,10 +135,8 @@ public class SkillGroupInfoItem extends AbstractModel {
     }
 
     /**
-     * Get 会话分配策略
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 会话分配策略 
      * @return RoutePolicy 会话分配策略
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRoutePolicy() {
         return this.RoutePolicy;
@@ -152,19 +144,15 @@ public class SkillGroupInfoItem extends AbstractModel {
 
     /**
      * Set 会话分配策略
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RoutePolicy 会话分配策略
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRoutePolicy(String RoutePolicy) {
         this.RoutePolicy = RoutePolicy;
     }
 
     /**
-     * Get 会话分配是否优先上次服务座席
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 会话分配是否优先上次服务座席 
      * @return UsingLastSeat 会话分配是否优先上次服务座席
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getUsingLastSeat() {
         return this.UsingLastSeat;
@@ -172,19 +160,15 @@ public class SkillGroupInfoItem extends AbstractModel {
 
     /**
      * Set 会话分配是否优先上次服务座席
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UsingLastSeat 会话分配是否优先上次服务座席
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUsingLastSeat(Long UsingLastSeat) {
         this.UsingLastSeat = UsingLastSeat;
     }
 
     /**
-     * Get 单客服最大并发数（电话类型默认1）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 单客服最大并发数（电话类型默认1） 
      * @return MaxConcurrency 单客服最大并发数（电话类型默认1）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaxConcurrency() {
         return this.MaxConcurrency;
@@ -192,19 +176,15 @@ public class SkillGroupInfoItem extends AbstractModel {
 
     /**
      * Set 单客服最大并发数（电话类型默认1）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MaxConcurrency 单客服最大并发数（电话类型默认1）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxConcurrency(Long MaxConcurrency) {
         this.MaxConcurrency = MaxConcurrency;
     }
 
     /**
-     * Get 最后修改时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最后修改时间 
      * @return LastModifyTimestamp 最后修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLastModifyTimestamp() {
         return this.LastModifyTimestamp;
@@ -212,19 +192,15 @@ public class SkillGroupInfoItem extends AbstractModel {
 
     /**
      * Set 最后修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LastModifyTimestamp 最后修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLastModifyTimestamp(Long LastModifyTimestamp) {
         this.LastModifyTimestamp = LastModifyTimestamp;
     }
 
     /**
-     * Get 技能组类型0-电话，1-在线，3-音频，4-视频	
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 技能组类型0-电话，1-在线，3-音频，4-视频	 
      * @return SkillGroupType 技能组类型0-电话，1-在线，3-音频，4-视频	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSkillGroupType() {
         return this.SkillGroupType;
@@ -232,19 +208,15 @@ public class SkillGroupInfoItem extends AbstractModel {
 
     /**
      * Set 技能组类型0-电话，1-在线，3-音频，4-视频	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SkillGroupType 技能组类型0-电话，1-在线，3-音频，4-视频	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSkillGroupType(Long SkillGroupType) {
         this.SkillGroupType = SkillGroupType;
     }
 
     /**
-     * Get 技能组内线号码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 技能组内线号码 
      * @return Alias 技能组内线号码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAlias() {
         return this.Alias;
@@ -252,9 +224,7 @@ public class SkillGroupInfoItem extends AbstractModel {
 
     /**
      * Set 技能组内线号码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Alias 技能组内线号码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAlias(String Alias) {
         this.Alias = Alias;

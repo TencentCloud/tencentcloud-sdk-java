@@ -46,7 +46,6 @@ public class AsrData extends AbstractModel {
 
     /**
     * 句子开始时间，Unix 毫秒时间戳
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Start")
     @Expose
@@ -54,7 +53,6 @@ public class AsrData extends AbstractModel {
 
     /**
     * 句子结束时间，Unix 毫秒时间戳
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("End")
     @Expose
@@ -113,10 +111,8 @@ public class AsrData extends AbstractModel {
     }
 
     /**
-     * Get 句子开始时间，Unix 毫秒时间戳
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 句子开始时间，Unix 毫秒时间戳 
      * @return Start 句子开始时间，Unix 毫秒时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStart() {
         return this.Start;
@@ -124,19 +120,15 @@ public class AsrData extends AbstractModel {
 
     /**
      * Set 句子开始时间，Unix 毫秒时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Start 句子开始时间，Unix 毫秒时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStart(Long Start) {
         this.Start = Start;
     }
 
     /**
-     * Get 句子结束时间，Unix 毫秒时间戳
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 句子结束时间，Unix 毫秒时间戳 
      * @return End 句子结束时间，Unix 毫秒时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getEnd() {
         return this.End;
@@ -144,9 +136,7 @@ public class AsrData extends AbstractModel {
 
     /**
      * Set 句子结束时间，Unix 毫秒时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      * @param End 句子结束时间，Unix 毫秒时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnd(Long End) {
         this.End = End;

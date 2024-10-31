@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class AuthorizationPolicyItem extends AbstractModel {
 
     /**
-    * 规则id
+    * 规则ID
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-    * 集群id
+    * 集群ID
     */
     @SerializedName("InstanceId")
     @Expose
@@ -150,32 +150,32 @@ public class AuthorizationPolicyItem extends AbstractModel {
     private Long UpdateTime;
 
     /**
-     * Get 规则id 
-     * @return Id 规则id
+     * Get 规则ID 
+     * @return Id 规则ID
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set 规则id
-     * @param Id 规则id
+     * Set 规则ID
+     * @param Id 规则ID
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 集群id 
-     * @return InstanceId 集群id
+     * Get 集群ID 
+     * @return InstanceId 集群ID
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 集群id
-     * @param InstanceId 集群id
+     * Set 集群ID
+     * @param InstanceId 集群ID
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

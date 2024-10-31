@@ -60,7 +60,6 @@ public class SdkAppIdBuyInfo extends AbstractModel {
 
     /**
     * 办公电话购买数（还在有效期内）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SipBuyNum")
     @Expose
@@ -147,10 +146,8 @@ public class SdkAppIdBuyInfo extends AbstractModel {
     }
 
     /**
-     * Get 办公电话购买数（还在有效期内）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 办公电话购买数（还在有效期内） 
      * @return SipBuyNum 办公电话购买数（还在有效期内）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSipBuyNum() {
         return this.SipBuyNum;
@@ -158,9 +155,7 @@ public class SdkAppIdBuyInfo extends AbstractModel {
 
     /**
      * Set 办公电话购买数（还在有效期内）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SipBuyNum 办公电话购买数（还在有效期内）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSipBuyNum(Long SipBuyNum) {
         this.SipBuyNum = SipBuyNum;

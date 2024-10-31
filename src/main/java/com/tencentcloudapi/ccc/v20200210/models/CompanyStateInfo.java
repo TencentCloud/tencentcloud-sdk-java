@@ -32,7 +32,6 @@ public class CompanyStateInfo extends AbstractModel {
 
     /**
     * 公司名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CompanyName")
     @Expose
@@ -40,7 +39,6 @@ public class CompanyStateInfo extends AbstractModel {
 
     /**
     * 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -48,7 +46,6 @@ public class CompanyStateInfo extends AbstractModel {
 
     /**
     * 审核时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CheckTime")
     @Expose
@@ -56,7 +53,6 @@ public class CompanyStateInfo extends AbstractModel {
 
     /**
     * 审核备注
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CheckMsg")
     @Expose
@@ -64,7 +60,6 @@ public class CompanyStateInfo extends AbstractModel {
 
     /**
     * 审核状态，1-待审核，2-审核通过，3-驳回
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("State")
     @Expose
@@ -72,7 +67,6 @@ public class CompanyStateInfo extends AbstractModel {
 
     /**
     * 公司统一社会信用代码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BusinessId")
     @Expose
@@ -80,7 +74,6 @@ public class CompanyStateInfo extends AbstractModel {
 
     /**
     * 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ModifyTime")
     @Expose
@@ -103,10 +96,8 @@ public class CompanyStateInfo extends AbstractModel {
     }
 
     /**
-     * Get 公司名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 公司名称 
      * @return CompanyName 公司名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCompanyName() {
         return this.CompanyName;
@@ -114,19 +105,15 @@ public class CompanyStateInfo extends AbstractModel {
 
     /**
      * Set 公司名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CompanyName 公司名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCompanyName(String CompanyName) {
         this.CompanyName = CompanyName;
     }
 
     /**
-     * Get 创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间 
      * @return CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCreateTime() {
         return this.CreateTime;
@@ -134,19 +121,15 @@ public class CompanyStateInfo extends AbstractModel {
 
     /**
      * Set 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(Long CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 审核时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 审核时间 
      * @return CheckTime 审核时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCheckTime() {
         return this.CheckTime;
@@ -154,19 +137,15 @@ public class CompanyStateInfo extends AbstractModel {
 
     /**
      * Set 审核时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CheckTime 审核时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCheckTime(Long CheckTime) {
         this.CheckTime = CheckTime;
     }
 
     /**
-     * Get 审核备注
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 审核备注 
      * @return CheckMsg 审核备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCheckMsg() {
         return this.CheckMsg;
@@ -174,19 +153,15 @@ public class CompanyStateInfo extends AbstractModel {
 
     /**
      * Set 审核备注
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CheckMsg 审核备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCheckMsg(String CheckMsg) {
         this.CheckMsg = CheckMsg;
     }
 
     /**
-     * Get 审核状态，1-待审核，2-审核通过，3-驳回
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 审核状态，1-待审核，2-审核通过，3-驳回 
      * @return State 审核状态，1-待审核，2-审核通过，3-驳回
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getState() {
         return this.State;
@@ -194,19 +169,15 @@ public class CompanyStateInfo extends AbstractModel {
 
     /**
      * Set 审核状态，1-待审核，2-审核通过，3-驳回
-注意：此字段可能返回 null，表示取不到有效值。
      * @param State 审核状态，1-待审核，2-审核通过，3-驳回
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setState(Long State) {
         this.State = State;
     }
 
     /**
-     * Get 公司统一社会信用代码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 公司统一社会信用代码 
      * @return BusinessId 公司统一社会信用代码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBusinessId() {
         return this.BusinessId;
@@ -214,19 +185,15 @@ public class CompanyStateInfo extends AbstractModel {
 
     /**
      * Set 公司统一社会信用代码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BusinessId 公司统一社会信用代码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBusinessId(String BusinessId) {
         this.BusinessId = BusinessId;
     }
 
     /**
-     * Get 修改时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 修改时间 
      * @return ModifyTime 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getModifyTime() {
         return this.ModifyTime;
@@ -234,9 +201,7 @@ public class CompanyStateInfo extends AbstractModel {
 
     /**
      * Set 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ModifyTime 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModifyTime(Long ModifyTime) {
         this.ModifyTime = ModifyTime;

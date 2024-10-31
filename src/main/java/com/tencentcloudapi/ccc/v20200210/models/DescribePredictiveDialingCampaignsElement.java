@@ -25,7 +25,6 @@ public class DescribePredictiveDialingCampaignsElement extends AbstractModel {
 
     /**
     * 任务 ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CampaignId")
     @Expose
@@ -33,7 +32,6 @@ public class DescribePredictiveDialingCampaignsElement extends AbstractModel {
 
     /**
     * 任务名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -41,7 +39,6 @@ public class DescribePredictiveDialingCampaignsElement extends AbstractModel {
 
     /**
     * 任务状态 0 待开始 1 进行中 2 已暂停 3 已终止 4 已完成
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -49,7 +46,6 @@ public class DescribePredictiveDialingCampaignsElement extends AbstractModel {
 
     /**
     * 任务状态原因 0 正常 1 手动结束 2 超时结束
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StatusReason")
     @Expose
@@ -57,7 +53,6 @@ public class DescribePredictiveDialingCampaignsElement extends AbstractModel {
 
     /**
     * 被叫号码个数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CalleeCount")
     @Expose
@@ -65,7 +60,6 @@ public class DescribePredictiveDialingCampaignsElement extends AbstractModel {
 
     /**
     * 已完成的被叫个数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FinishedCalleeCount")
     @Expose
@@ -73,7 +67,6 @@ public class DescribePredictiveDialingCampaignsElement extends AbstractModel {
 
     /**
     * 相同应用内多个任务运行优先级，从高到底 1 - 5
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Priority")
     @Expose
@@ -81,17 +74,14 @@ public class DescribePredictiveDialingCampaignsElement extends AbstractModel {
 
     /**
     * 使用的座席技能组 ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SkillGroupId")
     @Expose
     private Long SkillGroupId;
 
     /**
-     * Get 任务 ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务 ID 
      * @return CampaignId 任务 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCampaignId() {
         return this.CampaignId;
@@ -99,19 +89,15 @@ public class DescribePredictiveDialingCampaignsElement extends AbstractModel {
 
     /**
      * Set 任务 ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CampaignId 任务 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCampaignId(Long CampaignId) {
         this.CampaignId = CampaignId;
     }
 
     /**
-     * Get 任务名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务名称 
      * @return Name 任务名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -119,19 +105,15 @@ public class DescribePredictiveDialingCampaignsElement extends AbstractModel {
 
     /**
      * Set 任务名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 任务名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 任务状态 0 待开始 1 进行中 2 已暂停 3 已终止 4 已完成
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务状态 0 待开始 1 进行中 2 已暂停 3 已终止 4 已完成 
      * @return Status 任务状态 0 待开始 1 进行中 2 已暂停 3 已终止 4 已完成
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
         return this.Status;
@@ -139,19 +121,15 @@ public class DescribePredictiveDialingCampaignsElement extends AbstractModel {
 
     /**
      * Set 任务状态 0 待开始 1 进行中 2 已暂停 3 已终止 4 已完成
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 任务状态 0 待开始 1 进行中 2 已暂停 3 已终止 4 已完成
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 任务状态原因 0 正常 1 手动结束 2 超时结束
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务状态原因 0 正常 1 手动结束 2 超时结束 
      * @return StatusReason 任务状态原因 0 正常 1 手动结束 2 超时结束
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatusReason() {
         return this.StatusReason;
@@ -159,19 +137,15 @@ public class DescribePredictiveDialingCampaignsElement extends AbstractModel {
 
     /**
      * Set 任务状态原因 0 正常 1 手动结束 2 超时结束
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StatusReason 任务状态原因 0 正常 1 手动结束 2 超时结束
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatusReason(Long StatusReason) {
         this.StatusReason = StatusReason;
     }
 
     /**
-     * Get 被叫号码个数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 被叫号码个数 
      * @return CalleeCount 被叫号码个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCalleeCount() {
         return this.CalleeCount;
@@ -179,19 +153,15 @@ public class DescribePredictiveDialingCampaignsElement extends AbstractModel {
 
     /**
      * Set 被叫号码个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CalleeCount 被叫号码个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCalleeCount(Long CalleeCount) {
         this.CalleeCount = CalleeCount;
     }
 
     /**
-     * Get 已完成的被叫个数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 已完成的被叫个数 
      * @return FinishedCalleeCount 已完成的被叫个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFinishedCalleeCount() {
         return this.FinishedCalleeCount;
@@ -199,19 +169,15 @@ public class DescribePredictiveDialingCampaignsElement extends AbstractModel {
 
     /**
      * Set 已完成的被叫个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FinishedCalleeCount 已完成的被叫个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFinishedCalleeCount(Long FinishedCalleeCount) {
         this.FinishedCalleeCount = FinishedCalleeCount;
     }
 
     /**
-     * Get 相同应用内多个任务运行优先级，从高到底 1 - 5
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 相同应用内多个任务运行优先级，从高到底 1 - 5 
      * @return Priority 相同应用内多个任务运行优先级，从高到底 1 - 5
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPriority() {
         return this.Priority;
@@ -219,19 +185,15 @@ public class DescribePredictiveDialingCampaignsElement extends AbstractModel {
 
     /**
      * Set 相同应用内多个任务运行优先级，从高到底 1 - 5
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Priority 相同应用内多个任务运行优先级，从高到底 1 - 5
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPriority(Long Priority) {
         this.Priority = Priority;
     }
 
     /**
-     * Get 使用的座席技能组 ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 使用的座席技能组 ID 
      * @return SkillGroupId 使用的座席技能组 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSkillGroupId() {
         return this.SkillGroupId;
@@ -239,9 +201,7 @@ public class DescribePredictiveDialingCampaignsElement extends AbstractModel {
 
     /**
      * Set 使用的座席技能组 ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SkillGroupId 使用的座席技能组 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSkillGroupId(Long SkillGroupId) {
         this.SkillGroupId = SkillGroupId;

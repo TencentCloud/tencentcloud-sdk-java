@@ -61,6 +61,28 @@ public class PrivatednsClient extends AbstractClient{
     }
 
     /**
+     *同时创建终端节点和终端节点服务
+     * @param req CreateEndPointAndEndPointServiceRequest
+     * @return CreateEndPointAndEndPointServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateEndPointAndEndPointServiceResponse CreateEndPointAndEndPointService(CreateEndPointAndEndPointServiceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateEndPointAndEndPointService", CreateEndPointAndEndPointServiceResponse.class);
+    }
+
+    /**
+     *创建自定义转发规则
+     * @param req CreateForwardRuleRequest
+     * @return CreateForwardRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateForwardRuleResponse CreateForwardRule(CreateForwardRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateForwardRule", CreateForwardRuleResponse.class);
+    }
+
+    /**
      *创建私有域解析账号
      * @param req CreatePrivateDNSAccountRequest
      * @return CreatePrivateDNSAccountResponse
@@ -179,6 +201,28 @@ public class PrivatednsClient extends AbstractClient{
     public DescribeDashboardResponse DescribeDashboard(DescribeDashboardRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeDashboard", DescribeDashboardResponse.class);
+    }
+
+    /**
+     *获取终端节点列表
+     * @param req DescribeEndPointListRequest
+     * @return DescribeEndPointListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEndPointListResponse DescribeEndPointList(DescribeEndPointListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeEndPointList", DescribeEndPointListResponse.class);
+    }
+
+    /**
+     *查询转发规则列表
+     * @param req DescribeForwardRuleListRequest
+     * @return DescribeForwardRuleListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeForwardRuleListResponse DescribeForwardRuleList(DescribeForwardRuleListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeForwardRuleList", DescribeForwardRuleListResponse.class);
     }
 
     /**

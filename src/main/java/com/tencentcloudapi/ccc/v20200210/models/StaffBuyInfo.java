@@ -46,7 +46,6 @@ public class StaffBuyInfo extends AbstractModel {
 
     /**
     * 购买办公电话数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SipNum")
     @Expose
@@ -101,10 +100,8 @@ public class StaffBuyInfo extends AbstractModel {
     }
 
     /**
-     * Get 购买办公电话数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 购买办公电话数量 
      * @return SipNum 购买办公电话数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSipNum() {
         return this.SipNum;
@@ -112,9 +109,7 @@ public class StaffBuyInfo extends AbstractModel {
 
     /**
      * Set 购买办公电话数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SipNum 购买办公电话数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSipNum(Long SipNum) {
         this.SipNum = SipNum;

@@ -25,7 +25,6 @@ public class CompanyApplyInfo extends AbstractModel {
 
     /**
     * 申请人身份，0-公司法定代表人，1-经办人（受法定代表人委托）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApplicantType")
     @Expose
@@ -33,7 +32,6 @@ public class CompanyApplyInfo extends AbstractModel {
 
     /**
     * 企业名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CompanyName")
     @Expose
@@ -41,7 +39,6 @@ public class CompanyApplyInfo extends AbstractModel {
 
     /**
     * 统一社会信用代码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BusinessId")
     @Expose
@@ -49,7 +46,6 @@ public class CompanyApplyInfo extends AbstractModel {
 
     /**
     * 营业执照扫描件(加盖公章)。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BusinessIdPicUrl")
     @Expose
@@ -57,7 +53,6 @@ public class CompanyApplyInfo extends AbstractModel {
 
     /**
     * 法定代表人名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CorporationName")
     @Expose
@@ -65,7 +60,6 @@ public class CompanyApplyInfo extends AbstractModel {
 
     /**
     * 法定代表人身份证号码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CorporationId")
     @Expose
@@ -73,7 +67,6 @@ public class CompanyApplyInfo extends AbstractModel {
 
     /**
     * 法定代表人身份证正反面扫描件。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CorporationIdPicUrl")
     @Expose
@@ -81,7 +74,6 @@ public class CompanyApplyInfo extends AbstractModel {
 
     /**
     * 安全合规使用承诺书。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NetworkCommitmentPicUrl")
     @Expose
@@ -89,7 +81,6 @@ public class CompanyApplyInfo extends AbstractModel {
 
     /**
     * 是否与腾讯云账号的资质一致,0-不一致,1-一致
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsEqualTencentCloud")
     @Expose
@@ -97,7 +88,6 @@ public class CompanyApplyInfo extends AbstractModel {
 
     /**
     * 法定代表人手机号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CorporationMobile")
     @Expose
@@ -105,7 +95,6 @@ public class CompanyApplyInfo extends AbstractModel {
 
     /**
     * 法定代表人手机号码实名认证。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CorporationMobilePicUrl")
     @Expose
@@ -113,7 +102,6 @@ public class CompanyApplyInfo extends AbstractModel {
 
     /**
     * 通话话术。(支持doc、docx格式的文档不超过50MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UseDescribeFileUrl")
     @Expose
@@ -121,7 +109,6 @@ public class CompanyApplyInfo extends AbstractModel {
 
     /**
     * 公司授权函。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CompanyAuthLetterPicUrl")
     @Expose
@@ -129,7 +116,6 @@ public class CompanyApplyInfo extends AbstractModel {
 
     /**
     * 电话受理单。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AcceptPicUrl")
     @Expose
@@ -137,7 +123,6 @@ public class CompanyApplyInfo extends AbstractModel {
 
     /**
     * 法定代表人手持身份证照，申请人类型为法定代表人时必填。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CorporationHoldingOnIdPicUrl")
     @Expose
@@ -145,7 +130,6 @@ public class CompanyApplyInfo extends AbstractModel {
 
     /**
     * 经办人名称，申请人类型为经办人时必填。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OperatorName")
     @Expose
@@ -153,7 +137,6 @@ public class CompanyApplyInfo extends AbstractModel {
 
     /**
     * 经办人证件号码，申请人类型为经办人时必填。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OperatorId")
     @Expose
@@ -161,7 +144,6 @@ public class CompanyApplyInfo extends AbstractModel {
 
     /**
     * 经办人身份证正反面扫描件，申请人类型为经办人时必填。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OperatorIdPicUrl")
     @Expose
@@ -169,7 +151,6 @@ public class CompanyApplyInfo extends AbstractModel {
 
     /**
     * 经办人手持身份证照，申请人类型为经办人时必填。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OperatorHoldingOnIdPicUrl")
     @Expose
@@ -177,7 +158,6 @@ public class CompanyApplyInfo extends AbstractModel {
 
     /**
     * 委托授权书，申请人类型为经办人时必填。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CommissionPicUrl")
     @Expose
@@ -185,7 +165,6 @@ public class CompanyApplyInfo extends AbstractModel {
 
     /**
     * 经办人手机号，申请人类型为经办人时必填。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OperatorMobile")
     @Expose
@@ -193,7 +172,6 @@ public class CompanyApplyInfo extends AbstractModel {
 
     /**
     * 经办人邮箱，申请人类型为经办人时必填。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OperatorEmail")
     @Expose
@@ -201,17 +179,14 @@ public class CompanyApplyInfo extends AbstractModel {
 
     /**
     * 经办人手机号码实名认证，申请人类型为经办人时必填。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OperatorMobilePicUrl")
     @Expose
     private String OperatorMobilePicUrl;
 
     /**
-     * Get 申请人身份，0-公司法定代表人，1-经办人（受法定代表人委托）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 申请人身份，0-公司法定代表人，1-经办人（受法定代表人委托） 
      * @return ApplicantType 申请人身份，0-公司法定代表人，1-经办人（受法定代表人委托）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getApplicantType() {
         return this.ApplicantType;
@@ -219,19 +194,15 @@ public class CompanyApplyInfo extends AbstractModel {
 
     /**
      * Set 申请人身份，0-公司法定代表人，1-经办人（受法定代表人委托）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplicantType 申请人身份，0-公司法定代表人，1-经办人（受法定代表人委托）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApplicantType(Long ApplicantType) {
         this.ApplicantType = ApplicantType;
     }
 
     /**
-     * Get 企业名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 企业名称 
      * @return CompanyName 企业名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCompanyName() {
         return this.CompanyName;
@@ -239,19 +210,15 @@ public class CompanyApplyInfo extends AbstractModel {
 
     /**
      * Set 企业名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CompanyName 企业名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCompanyName(String CompanyName) {
         this.CompanyName = CompanyName;
     }
 
     /**
-     * Get 统一社会信用代码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 统一社会信用代码 
      * @return BusinessId 统一社会信用代码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBusinessId() {
         return this.BusinessId;
@@ -259,19 +226,15 @@ public class CompanyApplyInfo extends AbstractModel {
 
     /**
      * Set 统一社会信用代码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BusinessId 统一社会信用代码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBusinessId(String BusinessId) {
         this.BusinessId = BusinessId;
     }
 
     /**
-     * Get 营业执照扫描件(加盖公章)。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 营业执照扫描件(加盖公章)。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update) 
      * @return BusinessIdPicUrl 营业执照扫描件(加盖公章)。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBusinessIdPicUrl() {
         return this.BusinessIdPicUrl;
@@ -279,19 +242,15 @@ public class CompanyApplyInfo extends AbstractModel {
 
     /**
      * Set 营业执照扫描件(加盖公章)。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BusinessIdPicUrl 营业执照扫描件(加盖公章)。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBusinessIdPicUrl(String BusinessIdPicUrl) {
         this.BusinessIdPicUrl = BusinessIdPicUrl;
     }
 
     /**
-     * Get 法定代表人名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 法定代表人名称 
      * @return CorporationName 法定代表人名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCorporationName() {
         return this.CorporationName;
@@ -299,19 +258,15 @@ public class CompanyApplyInfo extends AbstractModel {
 
     /**
      * Set 法定代表人名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CorporationName 法定代表人名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCorporationName(String CorporationName) {
         this.CorporationName = CorporationName;
     }
 
     /**
-     * Get 法定代表人身份证号码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 法定代表人身份证号码 
      * @return CorporationId 法定代表人身份证号码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCorporationId() {
         return this.CorporationId;
@@ -319,19 +274,15 @@ public class CompanyApplyInfo extends AbstractModel {
 
     /**
      * Set 法定代表人身份证号码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CorporationId 法定代表人身份证号码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCorporationId(String CorporationId) {
         this.CorporationId = CorporationId;
     }
 
     /**
-     * Get 法定代表人身份证正反面扫描件。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 法定代表人身份证正反面扫描件。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update) 
      * @return CorporationIdPicUrl 法定代表人身份证正反面扫描件。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCorporationIdPicUrl() {
         return this.CorporationIdPicUrl;
@@ -339,19 +290,15 @@ public class CompanyApplyInfo extends AbstractModel {
 
     /**
      * Set 法定代表人身份证正反面扫描件。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CorporationIdPicUrl 法定代表人身份证正反面扫描件。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCorporationIdPicUrl(String CorporationIdPicUrl) {
         this.CorporationIdPicUrl = CorporationIdPicUrl;
     }
 
     /**
-     * Get 安全合规使用承诺书。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 安全合规使用承诺书。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update) 
      * @return NetworkCommitmentPicUrl 安全合规使用承诺书。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNetworkCommitmentPicUrl() {
         return this.NetworkCommitmentPicUrl;
@@ -359,19 +306,15 @@ public class CompanyApplyInfo extends AbstractModel {
 
     /**
      * Set 安全合规使用承诺书。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NetworkCommitmentPicUrl 安全合规使用承诺书。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNetworkCommitmentPicUrl(String NetworkCommitmentPicUrl) {
         this.NetworkCommitmentPicUrl = NetworkCommitmentPicUrl;
     }
 
     /**
-     * Get 是否与腾讯云账号的资质一致,0-不一致,1-一致
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否与腾讯云账号的资质一致,0-不一致,1-一致 
      * @return IsEqualTencentCloud 是否与腾讯云账号的资质一致,0-不一致,1-一致
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsEqualTencentCloud() {
         return this.IsEqualTencentCloud;
@@ -379,19 +322,15 @@ public class CompanyApplyInfo extends AbstractModel {
 
     /**
      * Set 是否与腾讯云账号的资质一致,0-不一致,1-一致
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsEqualTencentCloud 是否与腾讯云账号的资质一致,0-不一致,1-一致
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsEqualTencentCloud(Long IsEqualTencentCloud) {
         this.IsEqualTencentCloud = IsEqualTencentCloud;
     }
 
     /**
-     * Get 法定代表人手机号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 法定代表人手机号 
      * @return CorporationMobile 法定代表人手机号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCorporationMobile() {
         return this.CorporationMobile;
@@ -399,19 +338,15 @@ public class CompanyApplyInfo extends AbstractModel {
 
     /**
      * Set 法定代表人手机号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CorporationMobile 法定代表人手机号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCorporationMobile(String CorporationMobile) {
         this.CorporationMobile = CorporationMobile;
     }
 
     /**
-     * Get 法定代表人手机号码实名认证。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 法定代表人手机号码实名认证。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update) 
      * @return CorporationMobilePicUrl 法定代表人手机号码实名认证。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCorporationMobilePicUrl() {
         return this.CorporationMobilePicUrl;
@@ -419,19 +354,15 @@ public class CompanyApplyInfo extends AbstractModel {
 
     /**
      * Set 法定代表人手机号码实名认证。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CorporationMobilePicUrl 法定代表人手机号码实名认证。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCorporationMobilePicUrl(String CorporationMobilePicUrl) {
         this.CorporationMobilePicUrl = CorporationMobilePicUrl;
     }
 
     /**
-     * Get 通话话术。(支持doc、docx格式的文档不超过50MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 通话话术。(支持doc、docx格式的文档不超过50MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update) 
      * @return UseDescribeFileUrl 通话话术。(支持doc、docx格式的文档不超过50MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUseDescribeFileUrl() {
         return this.UseDescribeFileUrl;
@@ -439,19 +370,15 @@ public class CompanyApplyInfo extends AbstractModel {
 
     /**
      * Set 通话话术。(支持doc、docx格式的文档不超过50MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UseDescribeFileUrl 通话话术。(支持doc、docx格式的文档不超过50MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUseDescribeFileUrl(String UseDescribeFileUrl) {
         this.UseDescribeFileUrl = UseDescribeFileUrl;
     }
 
     /**
-     * Get 公司授权函。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 公司授权函。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update) 
      * @return CompanyAuthLetterPicUrl 公司授权函。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCompanyAuthLetterPicUrl() {
         return this.CompanyAuthLetterPicUrl;
@@ -459,19 +386,15 @@ public class CompanyApplyInfo extends AbstractModel {
 
     /**
      * Set 公司授权函。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CompanyAuthLetterPicUrl 公司授权函。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCompanyAuthLetterPicUrl(String CompanyAuthLetterPicUrl) {
         this.CompanyAuthLetterPicUrl = CompanyAuthLetterPicUrl;
     }
 
     /**
-     * Get 电话受理单。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 电话受理单。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update) 
      * @return AcceptPicUrl 电话受理单。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAcceptPicUrl() {
         return this.AcceptPicUrl;
@@ -479,19 +402,15 @@ public class CompanyApplyInfo extends AbstractModel {
 
     /**
      * Set 电话受理单。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AcceptPicUrl 电话受理单。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAcceptPicUrl(String AcceptPicUrl) {
         this.AcceptPicUrl = AcceptPicUrl;
     }
 
     /**
-     * Get 法定代表人手持身份证照，申请人类型为法定代表人时必填。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 法定代表人手持身份证照，申请人类型为法定代表人时必填。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update) 
      * @return CorporationHoldingOnIdPicUrl 法定代表人手持身份证照，申请人类型为法定代表人时必填。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCorporationHoldingOnIdPicUrl() {
         return this.CorporationHoldingOnIdPicUrl;
@@ -499,19 +418,15 @@ public class CompanyApplyInfo extends AbstractModel {
 
     /**
      * Set 法定代表人手持身份证照，申请人类型为法定代表人时必填。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CorporationHoldingOnIdPicUrl 法定代表人手持身份证照，申请人类型为法定代表人时必填。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCorporationHoldingOnIdPicUrl(String CorporationHoldingOnIdPicUrl) {
         this.CorporationHoldingOnIdPicUrl = CorporationHoldingOnIdPicUrl;
     }
 
     /**
-     * Get 经办人名称，申请人类型为经办人时必填。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 经办人名称，申请人类型为经办人时必填。 
      * @return OperatorName 经办人名称，申请人类型为经办人时必填。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOperatorName() {
         return this.OperatorName;
@@ -519,19 +434,15 @@ public class CompanyApplyInfo extends AbstractModel {
 
     /**
      * Set 经办人名称，申请人类型为经办人时必填。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OperatorName 经办人名称，申请人类型为经办人时必填。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOperatorName(String OperatorName) {
         this.OperatorName = OperatorName;
     }
 
     /**
-     * Get 经办人证件号码，申请人类型为经办人时必填。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 经办人证件号码，申请人类型为经办人时必填。 
      * @return OperatorId 经办人证件号码，申请人类型为经办人时必填。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOperatorId() {
         return this.OperatorId;
@@ -539,19 +450,15 @@ public class CompanyApplyInfo extends AbstractModel {
 
     /**
      * Set 经办人证件号码，申请人类型为经办人时必填。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OperatorId 经办人证件号码，申请人类型为经办人时必填。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOperatorId(String OperatorId) {
         this.OperatorId = OperatorId;
     }
 
     /**
-     * Get 经办人身份证正反面扫描件，申请人类型为经办人时必填。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 经办人身份证正反面扫描件，申请人类型为经办人时必填。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update) 
      * @return OperatorIdPicUrl 经办人身份证正反面扫描件，申请人类型为经办人时必填。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOperatorIdPicUrl() {
         return this.OperatorIdPicUrl;
@@ -559,19 +466,15 @@ public class CompanyApplyInfo extends AbstractModel {
 
     /**
      * Set 经办人身份证正反面扫描件，申请人类型为经办人时必填。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OperatorIdPicUrl 经办人身份证正反面扫描件，申请人类型为经办人时必填。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOperatorIdPicUrl(String OperatorIdPicUrl) {
         this.OperatorIdPicUrl = OperatorIdPicUrl;
     }
 
     /**
-     * Get 经办人手持身份证照，申请人类型为经办人时必填。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 经办人手持身份证照，申请人类型为经办人时必填。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update) 
      * @return OperatorHoldingOnIdPicUrl 经办人手持身份证照，申请人类型为经办人时必填。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOperatorHoldingOnIdPicUrl() {
         return this.OperatorHoldingOnIdPicUrl;
@@ -579,19 +482,15 @@ public class CompanyApplyInfo extends AbstractModel {
 
     /**
      * Set 经办人手持身份证照，申请人类型为经办人时必填。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OperatorHoldingOnIdPicUrl 经办人手持身份证照，申请人类型为经办人时必填。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOperatorHoldingOnIdPicUrl(String OperatorHoldingOnIdPicUrl) {
         this.OperatorHoldingOnIdPicUrl = OperatorHoldingOnIdPicUrl;
     }
 
     /**
-     * Get 委托授权书，申请人类型为经办人时必填。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 委托授权书，申请人类型为经办人时必填。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update) 
      * @return CommissionPicUrl 委托授权书，申请人类型为经办人时必填。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCommissionPicUrl() {
         return this.CommissionPicUrl;
@@ -599,19 +498,15 @@ public class CompanyApplyInfo extends AbstractModel {
 
     /**
      * Set 委托授权书，申请人类型为经办人时必填。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CommissionPicUrl 委托授权书，申请人类型为经办人时必填。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCommissionPicUrl(String CommissionPicUrl) {
         this.CommissionPicUrl = CommissionPicUrl;
     }
 
     /**
-     * Get 经办人手机号，申请人类型为经办人时必填。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 经办人手机号，申请人类型为经办人时必填。 
      * @return OperatorMobile 经办人手机号，申请人类型为经办人时必填。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOperatorMobile() {
         return this.OperatorMobile;
@@ -619,19 +514,15 @@ public class CompanyApplyInfo extends AbstractModel {
 
     /**
      * Set 经办人手机号，申请人类型为经办人时必填。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OperatorMobile 经办人手机号，申请人类型为经办人时必填。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOperatorMobile(String OperatorMobile) {
         this.OperatorMobile = OperatorMobile;
     }
 
     /**
-     * Get 经办人邮箱，申请人类型为经办人时必填。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 经办人邮箱，申请人类型为经办人时必填。 
      * @return OperatorEmail 经办人邮箱，申请人类型为经办人时必填。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOperatorEmail() {
         return this.OperatorEmail;
@@ -639,19 +530,15 @@ public class CompanyApplyInfo extends AbstractModel {
 
     /**
      * Set 经办人邮箱，申请人类型为经办人时必填。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OperatorEmail 经办人邮箱，申请人类型为经办人时必填。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOperatorEmail(String OperatorEmail) {
         this.OperatorEmail = OperatorEmail;
     }
 
     /**
-     * Get 经办人手机号码实名认证，申请人类型为经办人时必填。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 经办人手机号码实名认证，申请人类型为经办人时必填。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update) 
      * @return OperatorMobilePicUrl 经办人手机号码实名认证，申请人类型为经办人时必填。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOperatorMobilePicUrl() {
         return this.OperatorMobilePicUrl;
@@ -659,9 +546,7 @@ public class CompanyApplyInfo extends AbstractModel {
 
     /**
      * Set 经办人手机号码实名认证，申请人类型为经办人时必填。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OperatorMobilePicUrl 经办人手机号码实名认证，申请人类型为经办人时必填。(支持jpg、png、gif、jpeg格式的图片，每张图片应大于50K，不超过5MB，模板参见控制台:https://console.cloud.tencent.com/ccc/enterprise/update)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOperatorMobilePicUrl(String OperatorMobilePicUrl) {
         this.OperatorMobilePicUrl = OperatorMobilePicUrl;

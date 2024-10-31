@@ -71,6 +71,25 @@ public class SubmitImageAnimateJobRequest extends AbstractModel {
     private Boolean EnableSegment;
 
     /**
+    * 为生成视频添加标识的开关，默认为0。
+1：添加标识。
+0：不添加标识。
+其他数值：默认按1处理。
+建议您使用显著标识来提示，该视频是 AI 生成的视频。
+    */
+    @SerializedName("LogoAdd")
+    @Expose
+    private Long LogoAdd;
+
+    /**
+    * 标识内容设置。
+默认在生成视频的右下角添加“视频由 AI 生成”字样，您可根据自身需要替换为其他的标识图片。
+    */
+    @SerializedName("LogoParam")
+    @Expose
+    private LogoParam LogoParam;
+
+    /**
      * Get 图片格式：支持PNG、JPG、JPEG格式；
 图片分辨率：长边分辨率不超过2056；
 图片大小：不超过10M；
@@ -186,6 +205,58 @@ public class SubmitImageAnimateJobRequest extends AbstractModel {
         this.EnableSegment = EnableSegment;
     }
 
+    /**
+     * Get 为生成视频添加标识的开关，默认为0。
+1：添加标识。
+0：不添加标识。
+其他数值：默认按1处理。
+建议您使用显著标识来提示，该视频是 AI 生成的视频。 
+     * @return LogoAdd 为生成视频添加标识的开关，默认为0。
+1：添加标识。
+0：不添加标识。
+其他数值：默认按1处理。
+建议您使用显著标识来提示，该视频是 AI 生成的视频。
+     */
+    public Long getLogoAdd() {
+        return this.LogoAdd;
+    }
+
+    /**
+     * Set 为生成视频添加标识的开关，默认为0。
+1：添加标识。
+0：不添加标识。
+其他数值：默认按1处理。
+建议您使用显著标识来提示，该视频是 AI 生成的视频。
+     * @param LogoAdd 为生成视频添加标识的开关，默认为0。
+1：添加标识。
+0：不添加标识。
+其他数值：默认按1处理。
+建议您使用显著标识来提示，该视频是 AI 生成的视频。
+     */
+    public void setLogoAdd(Long LogoAdd) {
+        this.LogoAdd = LogoAdd;
+    }
+
+    /**
+     * Get 标识内容设置。
+默认在生成视频的右下角添加“视频由 AI 生成”字样，您可根据自身需要替换为其他的标识图片。 
+     * @return LogoParam 标识内容设置。
+默认在生成视频的右下角添加“视频由 AI 生成”字样，您可根据自身需要替换为其他的标识图片。
+     */
+    public LogoParam getLogoParam() {
+        return this.LogoParam;
+    }
+
+    /**
+     * Set 标识内容设置。
+默认在生成视频的右下角添加“视频由 AI 生成”字样，您可根据自身需要替换为其他的标识图片。
+     * @param LogoParam 标识内容设置。
+默认在生成视频的右下角添加“视频由 AI 生成”字样，您可根据自身需要替换为其他的标识图片。
+     */
+    public void setLogoParam(LogoParam LogoParam) {
+        this.LogoParam = LogoParam;
+    }
+
     public SubmitImageAnimateJobRequest() {
     }
 
@@ -212,6 +283,12 @@ public class SubmitImageAnimateJobRequest extends AbstractModel {
         if (source.EnableSegment != null) {
             this.EnableSegment = new Boolean(source.EnableSegment);
         }
+        if (source.LogoAdd != null) {
+            this.LogoAdd = new Long(source.LogoAdd);
+        }
+        if (source.LogoParam != null) {
+            this.LogoParam = new LogoParam(source.LogoParam);
+        }
     }
 
 
@@ -225,6 +302,8 @@ public class SubmitImageAnimateJobRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "EnableAudio", this.EnableAudio);
         this.setParamSimple(map, prefix + "EnableBodyJoins", this.EnableBodyJoins);
         this.setParamSimple(map, prefix + "EnableSegment", this.EnableSegment);
+        this.setParamSimple(map, prefix + "LogoAdd", this.LogoAdd);
+        this.setParamObj(map, prefix + "LogoParam.", this.LogoParam);
 
     }
 }

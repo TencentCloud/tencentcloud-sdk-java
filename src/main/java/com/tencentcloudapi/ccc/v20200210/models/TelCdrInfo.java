@@ -67,7 +67,6 @@ public class TelCdrInfo extends AbstractModel {
 
     /**
     * 录音 ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RecordId")
     @Expose
@@ -156,7 +155,6 @@ public class TelCdrInfo extends AbstractModel {
 
     /**
     * IVR 阶段耗时
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IVRDuration")
     @Expose
@@ -164,7 +162,6 @@ public class TelCdrInfo extends AbstractModel {
 
     /**
     * 振铃时间戳，UNIX 秒级时间戳
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RingTimestamp")
     @Expose
@@ -172,7 +169,6 @@ public class TelCdrInfo extends AbstractModel {
 
     /**
     * 接听时间戳，UNIX 秒级时间戳
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AcceptTimestamp")
     @Expose
@@ -180,7 +176,6 @@ public class TelCdrInfo extends AbstractModel {
 
     /**
     * 结束时间戳，UNIX 秒级时间戳
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndedTimestamp")
     @Expose
@@ -188,7 +183,6 @@ public class TelCdrInfo extends AbstractModel {
 
     /**
     * IVR 按键信息 ，e.g. ["1","2","3"]
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IVRKeyPressed")
     @Expose
@@ -196,7 +190,6 @@ public class TelCdrInfo extends AbstractModel {
 
     /**
     * 挂机方 seat 座席 user 用户 system 系统
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HungUpSide")
     @Expose
@@ -204,7 +197,6 @@ public class TelCdrInfo extends AbstractModel {
 
     /**
     * 服务参与者列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ServeParticipants")
     @Expose
@@ -212,7 +204,6 @@ public class TelCdrInfo extends AbstractModel {
 
     /**
     * 技能组ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SkillGroupId")
     @Expose
@@ -273,7 +264,6 @@ public class TelCdrInfo extends AbstractModel {
 
 电话呼入&呼出	211    clientError    客户端错误
 
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndStatusString")
     @Expose
@@ -281,7 +271,6 @@ public class TelCdrInfo extends AbstractModel {
 
     /**
     * 会话开始时间戳，UNIX 秒级时间戳
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartTimestamp")
     @Expose
@@ -289,7 +278,6 @@ public class TelCdrInfo extends AbstractModel {
 
     /**
     * 进入排队时间，Unix 秒级时间戳
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("QueuedTimestamp")
     @Expose
@@ -297,7 +285,6 @@ public class TelCdrInfo extends AbstractModel {
 
     /**
     * 后置IVR按键信息（e.g. [{"Key":"1","Label":"非常满意"}]）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PostIVRKeyPressed")
     @Expose
@@ -305,7 +292,6 @@ public class TelCdrInfo extends AbstractModel {
 
     /**
     * 排队技能组Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("QueuedSkillGroupId")
     @Expose
@@ -313,7 +299,6 @@ public class TelCdrInfo extends AbstractModel {
 
     /**
     * 会话 ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SessionId")
     @Expose
@@ -321,7 +306,6 @@ public class TelCdrInfo extends AbstractModel {
 
     /**
     * 主叫号码保护ID，开启号码保护映射功能时有效，且Caller字段置空
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProtectedCaller")
     @Expose
@@ -329,7 +313,6 @@ public class TelCdrInfo extends AbstractModel {
 
     /**
     * 被叫号码保护ID，开启号码保护映射功能时有效，且Callee字段置空
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProtectedCallee")
     @Expose
@@ -345,7 +328,6 @@ public class TelCdrInfo extends AbstractModel {
 
     /**
     * 客户自定义数据（User-to-User Interface）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UUI")
     @Expose
@@ -353,7 +335,6 @@ public class TelCdrInfo extends AbstractModel {
 
     /**
     * IVR按键信息（e.g. [{"Key":"1","Label":"非常满意"}]）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IVRKeyPressedEx")
     @Expose
@@ -361,7 +342,6 @@ public class TelCdrInfo extends AbstractModel {
 
     /**
     * 获取录音ASR文本信息地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AsrUrl")
     @Expose
@@ -374,7 +354,6 @@ Processing
 正在生成中;
 NotExists
 无记录(未开启生成离线asr或者无套餐包)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AsrStatus")
     @Expose
@@ -382,7 +361,6 @@ NotExists
 
     /**
     * 录音转存第三方COS地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CustomRecordURL")
     @Expose
@@ -390,7 +368,6 @@ NotExists
 
     /**
     * 备注
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Remark")
     @Expose
@@ -398,7 +375,6 @@ NotExists
 
     /**
     * 排队技能组名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("QueuedSkillGroupName")
     @Expose
@@ -406,7 +382,6 @@ NotExists
 
     /**
     * 通话中语音留言录音URL
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VoicemailRecordURL")
     @Expose
@@ -414,7 +389,6 @@ NotExists
 
     /**
     * 通话中语音留言ASR文本信息地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VoicemailAsrURL")
     @Expose
@@ -517,10 +491,8 @@ NotExists
     }
 
     /**
-     * Get 录音 ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 录音 ID 
      * @return RecordId 录音 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRecordId() {
         return this.RecordId;
@@ -528,9 +500,7 @@ NotExists
 
     /**
      * Set 录音 ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RecordId 录音 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRecordId(String RecordId) {
         this.RecordId = RecordId;
@@ -813,10 +783,8 @@ NotExists
     }
 
     /**
-     * Get IVR 阶段耗时
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get IVR 阶段耗时 
      * @return IVRDuration IVR 阶段耗时
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIVRDuration() {
         return this.IVRDuration;
@@ -824,19 +792,15 @@ NotExists
 
     /**
      * Set IVR 阶段耗时
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IVRDuration IVR 阶段耗时
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIVRDuration(Long IVRDuration) {
         this.IVRDuration = IVRDuration;
     }
 
     /**
-     * Get 振铃时间戳，UNIX 秒级时间戳
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 振铃时间戳，UNIX 秒级时间戳 
      * @return RingTimestamp 振铃时间戳，UNIX 秒级时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRingTimestamp() {
         return this.RingTimestamp;
@@ -844,19 +808,15 @@ NotExists
 
     /**
      * Set 振铃时间戳，UNIX 秒级时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RingTimestamp 振铃时间戳，UNIX 秒级时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRingTimestamp(Long RingTimestamp) {
         this.RingTimestamp = RingTimestamp;
     }
 
     /**
-     * Get 接听时间戳，UNIX 秒级时间戳
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 接听时间戳，UNIX 秒级时间戳 
      * @return AcceptTimestamp 接听时间戳，UNIX 秒级时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAcceptTimestamp() {
         return this.AcceptTimestamp;
@@ -864,19 +824,15 @@ NotExists
 
     /**
      * Set 接听时间戳，UNIX 秒级时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AcceptTimestamp 接听时间戳，UNIX 秒级时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAcceptTimestamp(Long AcceptTimestamp) {
         this.AcceptTimestamp = AcceptTimestamp;
     }
 
     /**
-     * Get 结束时间戳，UNIX 秒级时间戳
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 结束时间戳，UNIX 秒级时间戳 
      * @return EndedTimestamp 结束时间戳，UNIX 秒级时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getEndedTimestamp() {
         return this.EndedTimestamp;
@@ -884,19 +840,15 @@ NotExists
 
     /**
      * Set 结束时间戳，UNIX 秒级时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EndedTimestamp 结束时间戳，UNIX 秒级时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndedTimestamp(Long EndedTimestamp) {
         this.EndedTimestamp = EndedTimestamp;
     }
 
     /**
-     * Get IVR 按键信息 ，e.g. ["1","2","3"]
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get IVR 按键信息 ，e.g. ["1","2","3"] 
      * @return IVRKeyPressed IVR 按键信息 ，e.g. ["1","2","3"]
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getIVRKeyPressed() {
         return this.IVRKeyPressed;
@@ -904,19 +856,15 @@ NotExists
 
     /**
      * Set IVR 按键信息 ，e.g. ["1","2","3"]
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IVRKeyPressed IVR 按键信息 ，e.g. ["1","2","3"]
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIVRKeyPressed(String [] IVRKeyPressed) {
         this.IVRKeyPressed = IVRKeyPressed;
     }
 
     /**
-     * Get 挂机方 seat 座席 user 用户 system 系统
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 挂机方 seat 座席 user 用户 system 系统 
      * @return HungUpSide 挂机方 seat 座席 user 用户 system 系统
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHungUpSide() {
         return this.HungUpSide;
@@ -924,19 +872,15 @@ NotExists
 
     /**
      * Set 挂机方 seat 座席 user 用户 system 系统
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HungUpSide 挂机方 seat 座席 user 用户 system 系统
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHungUpSide(String HungUpSide) {
         this.HungUpSide = HungUpSide;
     }
 
     /**
-     * Get 服务参与者列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 服务参与者列表 
      * @return ServeParticipants 服务参与者列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ServeParticipant [] getServeParticipants() {
         return this.ServeParticipants;
@@ -944,19 +888,15 @@ NotExists
 
     /**
      * Set 服务参与者列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ServeParticipants 服务参与者列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setServeParticipants(ServeParticipant [] ServeParticipants) {
         this.ServeParticipants = ServeParticipants;
     }
 
     /**
-     * Get 技能组ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 技能组ID 
      * @return SkillGroupId 技能组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSkillGroupId() {
         return this.SkillGroupId;
@@ -964,9 +904,7 @@ NotExists
 
     /**
      * Set 技能组ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SkillGroupId 技能组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSkillGroupId(Long SkillGroupId) {
         this.SkillGroupId = SkillGroupId;
@@ -1026,8 +964,7 @@ NotExists
 电话呼出	        210	           notInService	不在服务区
 
 电话呼入&呼出	211    clientError    客户端错误
-
-注意：此字段可能返回 null，表示取不到有效值。 
+ 
      * @return EndStatusString EndStatus与EndStatusString一一对应，具体枚举如下：
 
 **场景	         EndStatus	EndStatusString	状态说明**
@@ -1082,7 +1019,6 @@ NotExists
 
 电话呼入&呼出	211    clientError    客户端错误
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEndStatusString() {
         return this.EndStatusString;
@@ -1143,7 +1079,6 @@ NotExists
 
 电话呼入&呼出	211    clientError    客户端错误
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EndStatusString EndStatus与EndStatusString一一对应，具体枚举如下：
 
 **场景	         EndStatus	EndStatusString	状态说明**
@@ -1198,17 +1133,14 @@ NotExists
 
 电话呼入&呼出	211    clientError    客户端错误
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndStatusString(String EndStatusString) {
         this.EndStatusString = EndStatusString;
     }
 
     /**
-     * Get 会话开始时间戳，UNIX 秒级时间戳
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 会话开始时间戳，UNIX 秒级时间戳 
      * @return StartTimestamp 会话开始时间戳，UNIX 秒级时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStartTimestamp() {
         return this.StartTimestamp;
@@ -1216,19 +1148,15 @@ NotExists
 
     /**
      * Set 会话开始时间戳，UNIX 秒级时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StartTimestamp 会话开始时间戳，UNIX 秒级时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartTimestamp(Long StartTimestamp) {
         this.StartTimestamp = StartTimestamp;
     }
 
     /**
-     * Get 进入排队时间，Unix 秒级时间戳
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 进入排队时间，Unix 秒级时间戳 
      * @return QueuedTimestamp 进入排队时间，Unix 秒级时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getQueuedTimestamp() {
         return this.QueuedTimestamp;
@@ -1236,19 +1164,15 @@ NotExists
 
     /**
      * Set 进入排队时间，Unix 秒级时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      * @param QueuedTimestamp 进入排队时间，Unix 秒级时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQueuedTimestamp(Long QueuedTimestamp) {
         this.QueuedTimestamp = QueuedTimestamp;
     }
 
     /**
-     * Get 后置IVR按键信息（e.g. [{"Key":"1","Label":"非常满意"}]）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 后置IVR按键信息（e.g. [{"Key":"1","Label":"非常满意"}]） 
      * @return PostIVRKeyPressed 后置IVR按键信息（e.g. [{"Key":"1","Label":"非常满意"}]）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public IVRKeyPressedElement [] getPostIVRKeyPressed() {
         return this.PostIVRKeyPressed;
@@ -1256,19 +1180,15 @@ NotExists
 
     /**
      * Set 后置IVR按键信息（e.g. [{"Key":"1","Label":"非常满意"}]）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PostIVRKeyPressed 后置IVR按键信息（e.g. [{"Key":"1","Label":"非常满意"}]）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPostIVRKeyPressed(IVRKeyPressedElement [] PostIVRKeyPressed) {
         this.PostIVRKeyPressed = PostIVRKeyPressed;
     }
 
     /**
-     * Get 排队技能组Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 排队技能组Id 
      * @return QueuedSkillGroupId 排队技能组Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getQueuedSkillGroupId() {
         return this.QueuedSkillGroupId;
@@ -1276,19 +1196,15 @@ NotExists
 
     /**
      * Set 排队技能组Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param QueuedSkillGroupId 排队技能组Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQueuedSkillGroupId(Long QueuedSkillGroupId) {
         this.QueuedSkillGroupId = QueuedSkillGroupId;
     }
 
     /**
-     * Get 会话 ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 会话 ID 
      * @return SessionId 会话 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSessionId() {
         return this.SessionId;
@@ -1296,19 +1212,15 @@ NotExists
 
     /**
      * Set 会话 ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SessionId 会话 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSessionId(String SessionId) {
         this.SessionId = SessionId;
     }
 
     /**
-     * Get 主叫号码保护ID，开启号码保护映射功能时有效，且Caller字段置空
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主叫号码保护ID，开启号码保护映射功能时有效，且Caller字段置空 
      * @return ProtectedCaller 主叫号码保护ID，开启号码保护映射功能时有效，且Caller字段置空
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProtectedCaller() {
         return this.ProtectedCaller;
@@ -1316,19 +1228,15 @@ NotExists
 
     /**
      * Set 主叫号码保护ID，开启号码保护映射功能时有效，且Caller字段置空
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProtectedCaller 主叫号码保护ID，开启号码保护映射功能时有效，且Caller字段置空
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProtectedCaller(String ProtectedCaller) {
         this.ProtectedCaller = ProtectedCaller;
     }
 
     /**
-     * Get 被叫号码保护ID，开启号码保护映射功能时有效，且Callee字段置空
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 被叫号码保护ID，开启号码保护映射功能时有效，且Callee字段置空 
      * @return ProtectedCallee 被叫号码保护ID，开启号码保护映射功能时有效，且Callee字段置空
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProtectedCallee() {
         return this.ProtectedCallee;
@@ -1336,9 +1244,7 @@ NotExists
 
     /**
      * Set 被叫号码保护ID，开启号码保护映射功能时有效，且Callee字段置空
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProtectedCallee 被叫号码保护ID，开启号码保护映射功能时有效，且Callee字段置空
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProtectedCallee(String ProtectedCallee) {
         this.ProtectedCallee = ProtectedCallee;
@@ -1369,10 +1275,8 @@ NotExists
     }
 
     /**
-     * Get 客户自定义数据（User-to-User Interface）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 客户自定义数据（User-to-User Interface） 
      * @return UUI 客户自定义数据（User-to-User Interface）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUUI() {
         return this.UUI;
@@ -1380,19 +1284,15 @@ NotExists
 
     /**
      * Set 客户自定义数据（User-to-User Interface）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UUI 客户自定义数据（User-to-User Interface）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUUI(String UUI) {
         this.UUI = UUI;
     }
 
     /**
-     * Get IVR按键信息（e.g. [{"Key":"1","Label":"非常满意"}]）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get IVR按键信息（e.g. [{"Key":"1","Label":"非常满意"}]） 
      * @return IVRKeyPressedEx IVR按键信息（e.g. [{"Key":"1","Label":"非常满意"}]）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public IVRKeyPressedElement [] getIVRKeyPressedEx() {
         return this.IVRKeyPressedEx;
@@ -1400,19 +1300,15 @@ NotExists
 
     /**
      * Set IVR按键信息（e.g. [{"Key":"1","Label":"非常满意"}]）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IVRKeyPressedEx IVR按键信息（e.g. [{"Key":"1","Label":"非常满意"}]）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIVRKeyPressedEx(IVRKeyPressedElement [] IVRKeyPressedEx) {
         this.IVRKeyPressedEx = IVRKeyPressedEx;
     }
 
     /**
-     * Get 获取录音ASR文本信息地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 获取录音ASR文本信息地址 
      * @return AsrUrl 获取录音ASR文本信息地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAsrUrl() {
         return this.AsrUrl;
@@ -1420,9 +1316,7 @@ NotExists
 
     /**
      * Set 获取录音ASR文本信息地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AsrUrl 获取录音ASR文本信息地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAsrUrl(String AsrUrl) {
         this.AsrUrl = AsrUrl;
@@ -1434,15 +1328,13 @@ NotExists
 Processing
 正在生成中;
 NotExists
-无记录(未开启生成离线asr或者无套餐包)
-注意：此字段可能返回 null，表示取不到有效值。 
+无记录(未开启生成离线asr或者无套餐包) 
      * @return AsrStatus AsrUrl的状态：Complete
 已完成;
 Processing
 正在生成中;
 NotExists
 无记录(未开启生成离线asr或者无套餐包)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAsrStatus() {
         return this.AsrStatus;
@@ -1455,24 +1347,20 @@ Processing
 正在生成中;
 NotExists
 无记录(未开启生成离线asr或者无套餐包)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AsrStatus AsrUrl的状态：Complete
 已完成;
 Processing
 正在生成中;
 NotExists
 无记录(未开启生成离线asr或者无套餐包)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAsrStatus(String AsrStatus) {
         this.AsrStatus = AsrStatus;
     }
 
     /**
-     * Get 录音转存第三方COS地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 录音转存第三方COS地址 
      * @return CustomRecordURL 录音转存第三方COS地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCustomRecordURL() {
         return this.CustomRecordURL;
@@ -1480,19 +1368,15 @@ NotExists
 
     /**
      * Set 录音转存第三方COS地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CustomRecordURL 录音转存第三方COS地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCustomRecordURL(String CustomRecordURL) {
         this.CustomRecordURL = CustomRecordURL;
     }
 
     /**
-     * Get 备注
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 备注 
      * @return Remark 备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRemark() {
         return this.Remark;
@@ -1500,19 +1384,15 @@ NotExists
 
     /**
      * Set 备注
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Remark 备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get 排队技能组名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 排队技能组名称 
      * @return QueuedSkillGroupName 排队技能组名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getQueuedSkillGroupName() {
         return this.QueuedSkillGroupName;
@@ -1520,19 +1400,15 @@ NotExists
 
     /**
      * Set 排队技能组名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param QueuedSkillGroupName 排队技能组名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQueuedSkillGroupName(String QueuedSkillGroupName) {
         this.QueuedSkillGroupName = QueuedSkillGroupName;
     }
 
     /**
-     * Get 通话中语音留言录音URL
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 通话中语音留言录音URL 
      * @return VoicemailRecordURL 通话中语音留言录音URL
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getVoicemailRecordURL() {
         return this.VoicemailRecordURL;
@@ -1540,19 +1416,15 @@ NotExists
 
     /**
      * Set 通话中语音留言录音URL
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VoicemailRecordURL 通话中语音留言录音URL
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVoicemailRecordURL(String [] VoicemailRecordURL) {
         this.VoicemailRecordURL = VoicemailRecordURL;
     }
 
     /**
-     * Get 通话中语音留言ASR文本信息地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 通话中语音留言ASR文本信息地址 
      * @return VoicemailAsrURL 通话中语音留言ASR文本信息地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getVoicemailAsrURL() {
         return this.VoicemailAsrURL;
@@ -1560,9 +1432,7 @@ NotExists
 
     /**
      * Set 通话中语音留言ASR文本信息地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VoicemailAsrURL 通话中语音留言ASR文本信息地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVoicemailAsrURL(String [] VoicemailAsrURL) {
         this.VoicemailAsrURL = VoicemailAsrURL;

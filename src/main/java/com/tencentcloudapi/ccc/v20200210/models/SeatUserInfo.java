@@ -39,7 +39,6 @@ public class SeatUserInfo extends AbstractModel {
 
     /**
     * 工号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StaffNumber")
     @Expose
@@ -68,7 +67,6 @@ public class SeatUserInfo extends AbstractModel {
 
     /**
     * 座席关联的技能组列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SkillGroupNameList")
     @Expose
@@ -79,7 +77,6 @@ public class SeatUserInfo extends AbstractModel {
 2:质检员
 3:普通座席
 else:自定义角色ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Role")
     @Expose
@@ -118,10 +115,8 @@ else:自定义角色ID
     }
 
     /**
-     * Get 工号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 工号 
      * @return StaffNumber 工号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStaffNumber() {
         return this.StaffNumber;
@@ -129,9 +124,7 @@ else:自定义角色ID
 
     /**
      * Set 工号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StaffNumber 工号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStaffNumber(String StaffNumber) {
         this.StaffNumber = StaffNumber;
@@ -186,10 +179,8 @@ else:自定义角色ID
     }
 
     /**
-     * Get 座席关联的技能组列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 座席关联的技能组列表 
      * @return SkillGroupNameList 座席关联的技能组列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getSkillGroupNameList() {
         return this.SkillGroupNameList;
@@ -197,9 +188,7 @@ else:自定义角色ID
 
     /**
      * Set 座席关联的技能组列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SkillGroupNameList 座席关联的技能组列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSkillGroupNameList(String [] SkillGroupNameList) {
         this.SkillGroupNameList = SkillGroupNameList;
@@ -209,13 +198,11 @@ else:自定义角色ID
      * Get 1:管理员
 2:质检员
 3:普通座席
-else:自定义角色ID
-注意：此字段可能返回 null，表示取不到有效值。 
+else:自定义角色ID 
      * @return Role 1:管理员
 2:质检员
 3:普通座席
 else:自定义角色ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRole() {
         return this.Role;
@@ -226,12 +213,10 @@ else:自定义角色ID
 2:质检员
 3:普通座席
 else:自定义角色ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Role 1:管理员
 2:质检员
 3:普通座席
 else:自定义角色ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRole(Long Role) {
         this.Role = Role;

@@ -173,6 +173,13 @@ public class ChatCompletionsRequest extends AbstractModel {
     private Boolean EnableMultimedia;
 
     /**
+    * 说明：1. 确保模型的输出是可复现的。2. 取值区间为非0正整数，最大值10000。3. 非必要不建议使用，不合理的取值会影响效果。
+    */
+    @SerializedName("Seed")
+    @Expose
+    private Long Seed;
+
+    /**
      * Get 模型名称，可选值包括 hunyuan-lite、hunyuan-standard、hunyuan-standard-256K、hunyuan-pro、 hunyuan-code、 hunyuan-role、 hunyuan-functioncall、 hunyuan-vision、 hunyuan-turbo、 hunyuan-turbo-latest。
 各模型介绍请阅读 [产品概述](https://cloud.tencent.com/document/product/1729/104753) 中的说明。
 
@@ -600,6 +607,22 @@ public class ChatCompletionsRequest extends AbstractModel {
         this.EnableMultimedia = EnableMultimedia;
     }
 
+    /**
+     * Get 说明：1. 确保模型的输出是可复现的。2. 取值区间为非0正整数，最大值10000。3. 非必要不建议使用，不合理的取值会影响效果。 
+     * @return Seed 说明：1. 确保模型的输出是可复现的。2. 取值区间为非0正整数，最大值10000。3. 非必要不建议使用，不合理的取值会影响效果。
+     */
+    public Long getSeed() {
+        return this.Seed;
+    }
+
+    /**
+     * Set 说明：1. 确保模型的输出是可复现的。2. 取值区间为非0正整数，最大值10000。3. 非必要不建议使用，不合理的取值会影响效果。
+     * @param Seed 说明：1. 确保模型的输出是可复现的。2. 取值区间为非0正整数，最大值10000。3. 非必要不建议使用，不合理的取值会影响效果。
+     */
+    public void setSeed(Long Seed) {
+        this.Seed = Seed;
+    }
+
     public ChatCompletionsRequest() {
     }
 
@@ -656,6 +679,9 @@ public class ChatCompletionsRequest extends AbstractModel {
         if (source.EnableMultimedia != null) {
             this.EnableMultimedia = new Boolean(source.EnableMultimedia);
         }
+        if (source.Seed != null) {
+            this.Seed = new Long(source.Seed);
+        }
     }
 
 
@@ -677,6 +703,7 @@ public class ChatCompletionsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Citation", this.Citation);
         this.setParamSimple(map, prefix + "EnableSpeedSearch", this.EnableSpeedSearch);
         this.setParamSimple(map, prefix + "EnableMultimedia", this.EnableMultimedia);
+        this.setParamSimple(map, prefix + "Seed", this.Seed);
 
     }
 }

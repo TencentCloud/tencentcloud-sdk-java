@@ -41,7 +41,6 @@ public class DescribeOrganizationUserInfoResponse extends AbstractModel {
 
     /**
     * 加入方式枚举
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("JoinTypeLst")
     @Expose
@@ -49,7 +48,6 @@ public class DescribeOrganizationUserInfoResponse extends AbstractModel {
 
     /**
     * 云厂商枚举
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CloudTypeLst")
     @Expose
@@ -103,10 +101,8 @@ public class DescribeOrganizationUserInfoResponse extends AbstractModel {
     }
 
     /**
-     * Get 加入方式枚举
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 加入方式枚举 
      * @return JoinTypeLst 加入方式枚举
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public FilterDataObject [] getJoinTypeLst() {
         return this.JoinTypeLst;
@@ -114,19 +110,15 @@ public class DescribeOrganizationUserInfoResponse extends AbstractModel {
 
     /**
      * Set 加入方式枚举
-注意：此字段可能返回 null，表示取不到有效值。
      * @param JoinTypeLst 加入方式枚举
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setJoinTypeLst(FilterDataObject [] JoinTypeLst) {
         this.JoinTypeLst = JoinTypeLst;
     }
 
     /**
-     * Get 云厂商枚举
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 云厂商枚举 
      * @return CloudTypeLst 云厂商枚举
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public FilterDataObject [] getCloudTypeLst() {
         return this.CloudTypeLst;
@@ -134,9 +126,7 @@ public class DescribeOrganizationUserInfoResponse extends AbstractModel {
 
     /**
      * Set 云厂商枚举
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CloudTypeLst 云厂商枚举
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCloudTypeLst(FilterDataObject [] CloudTypeLst) {
         this.CloudTypeLst = CloudTypeLst;
