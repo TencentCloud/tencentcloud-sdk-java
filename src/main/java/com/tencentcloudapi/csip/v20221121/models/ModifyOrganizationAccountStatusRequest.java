@@ -31,6 +31,13 @@ public class ModifyOrganizationAccountStatusRequest extends AbstractModel {
     private Long Status;
 
     /**
+    * 集团账号的成员id
+    */
+    @SerializedName("MemberId")
+    @Expose
+    private String [] MemberId;
+
+    /**
      * Get 修改集团账号状态，1 开启， 2关闭 
      * @return Status 修改集团账号状态，1 开启， 2关闭
      */
@@ -46,6 +53,22 @@ public class ModifyOrganizationAccountStatusRequest extends AbstractModel {
         this.Status = Status;
     }
 
+    /**
+     * Get 集团账号的成员id 
+     * @return MemberId 集团账号的成员id
+     */
+    public String [] getMemberId() {
+        return this.MemberId;
+    }
+
+    /**
+     * Set 集团账号的成员id
+     * @param MemberId 集团账号的成员id
+     */
+    public void setMemberId(String [] MemberId) {
+        this.MemberId = MemberId;
+    }
+
     public ModifyOrganizationAccountStatusRequest() {
     }
 
@@ -57,6 +80,12 @@ public class ModifyOrganizationAccountStatusRequest extends AbstractModel {
         if (source.Status != null) {
             this.Status = new Long(source.Status);
         }
+        if (source.MemberId != null) {
+            this.MemberId = new String[source.MemberId.length];
+            for (int i = 0; i < source.MemberId.length; i++) {
+                this.MemberId[i] = new String(source.MemberId[i]);
+            }
+        }
     }
 
 
@@ -65,6 +94,7 @@ public class ModifyOrganizationAccountStatusRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamArraySimple(map, prefix + "MemberId.", this.MemberId);
 
     }
 }

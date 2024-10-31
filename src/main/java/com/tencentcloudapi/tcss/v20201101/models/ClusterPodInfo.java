@@ -206,7 +206,7 @@ public class ClusterPodInfo extends AbstractModel {
     private String ClusterType;
 
     /**
-    * abc
+    * 节点名称
     */
     @SerializedName("NodeName")
     @Expose
@@ -643,16 +643,16 @@ public class ClusterPodInfo extends AbstractModel {
     }
 
     /**
-     * Get abc 
-     * @return NodeName abc
+     * Get 节点名称 
+     * @return NodeName 节点名称
      */
     public String getNodeName() {
         return this.NodeName;
     }
 
     /**
-     * Set abc
-     * @param NodeName abc
+     * Set 节点名称
+     * @param NodeName 节点名称
      */
     public void setNodeName(String NodeName) {
         this.NodeName = NodeName;

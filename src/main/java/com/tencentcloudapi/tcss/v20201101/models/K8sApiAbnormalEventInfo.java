@@ -59,7 +59,7 @@ public class K8sApiAbnormalEventInfo extends AbstractModel {
     private String ClusterName;
 
     /**
-    * 集群运行状态
+    * 集群运行状态，CSR_RUNNING-运行中，CSR_EXCEPTION-异常，CSR_CREATING-创建中
     */
     @SerializedName("ClusterRunningStatus")
     @Expose
@@ -242,16 +242,16 @@ public class K8sApiAbnormalEventInfo extends AbstractModel {
     }
 
     /**
-     * Get 集群运行状态 
-     * @return ClusterRunningStatus 集群运行状态
+     * Get 集群运行状态，CSR_RUNNING-运行中，CSR_EXCEPTION-异常，CSR_CREATING-创建中 
+     * @return ClusterRunningStatus 集群运行状态，CSR_RUNNING-运行中，CSR_EXCEPTION-异常，CSR_CREATING-创建中
      */
     public String getClusterRunningStatus() {
         return this.ClusterRunningStatus;
     }
 
     /**
-     * Set 集群运行状态
-     * @param ClusterRunningStatus 集群运行状态
+     * Set 集群运行状态，CSR_RUNNING-运行中，CSR_EXCEPTION-异常，CSR_CREATING-创建中
+     * @param ClusterRunningStatus 集群运行状态，CSR_RUNNING-运行中，CSR_EXCEPTION-异常，CSR_CREATING-创建中
      */
     public void setClusterRunningStatus(String ClusterRunningStatus) {
         this.ClusterRunningStatus = ClusterRunningStatus;

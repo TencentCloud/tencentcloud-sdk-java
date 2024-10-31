@@ -81,7 +81,7 @@ CSIP:云安全中心
     private RoleInfo Victim;
 
     /**
-    * 证据数据(例如攻击内容等)
+    * 证据数据(例如攻击内容等，base64编码)
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EvidenceData")
@@ -422,9 +422,9 @@ CSIP:云安全中心
     }
 
     /**
-     * Get 证据数据(例如攻击内容等)
+     * Get 证据数据(例如攻击内容等，base64编码)
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EvidenceData 证据数据(例如攻击内容等)
+     * @return EvidenceData 证据数据(例如攻击内容等，base64编码)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEvidenceData() {
@@ -432,9 +432,9 @@ CSIP:云安全中心
     }
 
     /**
-     * Set 证据数据(例如攻击内容等)
+     * Set 证据数据(例如攻击内容等，base64编码)
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EvidenceData 证据数据(例如攻击内容等)
+     * @param EvidenceData 证据数据(例如攻击内容等，base64编码)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEvidenceData(String EvidenceData) {

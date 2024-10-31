@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class SubmitTaskEventResponse extends AbstractModel {
 
     /**
-    * 订单ID
+    * 任务的唯一订单号
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OrderId")
@@ -32,7 +32,7 @@ public class SubmitTaskEventResponse extends AbstractModel {
     private String OrderId;
 
     /**
-    * 信息码
+    * 信息码。0表示成功，-1标识失败
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Code")
@@ -40,7 +40,7 @@ public class SubmitTaskEventResponse extends AbstractModel {
     private Long Code;
 
     /**
-    * success
+    * 提示信息
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Message")
@@ -63,9 +63,9 @@ public class SubmitTaskEventResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 订单ID
+     * Get 任务的唯一订单号
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OrderId 订单ID
+     * @return OrderId 任务的唯一订单号
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOrderId() {
@@ -73,9 +73,9 @@ public class SubmitTaskEventResponse extends AbstractModel {
     }
 
     /**
-     * Set 订单ID
+     * Set 任务的唯一订单号
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OrderId 订单ID
+     * @param OrderId 任务的唯一订单号
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOrderId(String OrderId) {
@@ -83,9 +83,9 @@ public class SubmitTaskEventResponse extends AbstractModel {
     }
 
     /**
-     * Get 信息码
+     * Get 信息码。0表示成功，-1标识失败
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Code 信息码
+     * @return Code 信息码。0表示成功，-1标识失败
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCode() {
@@ -93,9 +93,9 @@ public class SubmitTaskEventResponse extends AbstractModel {
     }
 
     /**
-     * Set 信息码
+     * Set 信息码。0表示成功，-1标识失败
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Code 信息码
+     * @param Code 信息码。0表示成功，-1标识失败
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCode(Long Code) {
@@ -103,9 +103,9 @@ public class SubmitTaskEventResponse extends AbstractModel {
     }
 
     /**
-     * Get success
+     * Get 提示信息
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Message success
+     * @return Message 提示信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMessage() {
@@ -113,9 +113,9 @@ public class SubmitTaskEventResponse extends AbstractModel {
     }
 
     /**
-     * Set success
+     * Set 提示信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Message success
+     * @param Message 提示信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMessage(String Message) {

@@ -1194,6 +1194,17 @@ public class TseClient extends AbstractClient{
     }
 
     /**
+     *重启微服务引擎实例
+     * @param req RestartSREInstanceRequest
+     * @return RestartSREInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public RestartSREInstanceResponse RestartSREInstance(RestartSREInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RestartSREInstance", RestartSREInstanceResponse.class);
+    }
+
+    /**
      *回滚配置发布
      * @param req RollbackConfigFileReleasesRequest
      * @return RollbackConfigFileReleasesResponse

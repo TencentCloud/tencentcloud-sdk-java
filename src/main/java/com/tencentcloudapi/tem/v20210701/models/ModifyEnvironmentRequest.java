@@ -31,7 +31,7 @@ public class ModifyEnvironmentRequest extends AbstractModel {
     private String EnvironmentId;
 
     /**
-    * 环境名称
+    * 环境名称。环境名称不可修改
     */
     @SerializedName("EnvironmentName")
     @Expose
@@ -89,16 +89,16 @@ public class ModifyEnvironmentRequest extends AbstractModel {
     }
 
     /**
-     * Get 环境名称 
-     * @return EnvironmentName 环境名称
+     * Get 环境名称。环境名称不可修改 
+     * @return EnvironmentName 环境名称。环境名称不可修改
      */
     public String getEnvironmentName() {
         return this.EnvironmentName;
     }
 
     /**
-     * Set 环境名称
-     * @param EnvironmentName 环境名称
+     * Set 环境名称。环境名称不可修改
+     * @param EnvironmentName 环境名称。环境名称不可修改
      */
     public void setEnvironmentName(String EnvironmentName) {
         this.EnvironmentName = EnvironmentName;

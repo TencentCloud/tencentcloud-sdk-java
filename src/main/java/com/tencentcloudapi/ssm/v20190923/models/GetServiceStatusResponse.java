@@ -46,6 +46,55 @@ false表示用户暂时不能使用密钥安全托管功能。
     private Boolean AccessKeyEscrowEnabled;
 
     /**
+    * 过期时间
+    */
+    @SerializedName("ExpireTime")
+    @Expose
+    private String ExpireTime;
+
+    /**
+    * 计算性能限制
+    */
+    @SerializedName("QPSLimit")
+    @Expose
+    private Long QPSLimit;
+
+    /**
+    * 凭据个数限制
+    */
+    @SerializedName("SecretLimit")
+    @Expose
+    private Long SecretLimit;
+
+    /**
+    * 付费模式
+    */
+    @SerializedName("PayModel")
+    @Expose
+    private String PayModel;
+
+    /**
+    * 自动续费标识，0:手动续费 1:自动续费 2:到期不续
+    */
+    @SerializedName("RenewFlag")
+    @Expose
+    private Long RenewFlag;
+
+    /**
+    * 资源id
+    */
+    @SerializedName("ResourceId")
+    @Expose
+    private String ResourceId;
+
+    /**
+    * 已托管凭据个数
+    */
+    @SerializedName("TotalCount")
+    @Expose
+    private Long TotalCount;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -105,6 +154,118 @@ false表示用户暂时不能使用密钥安全托管功能。
     }
 
     /**
+     * Get 过期时间 
+     * @return ExpireTime 过期时间
+     */
+    public String getExpireTime() {
+        return this.ExpireTime;
+    }
+
+    /**
+     * Set 过期时间
+     * @param ExpireTime 过期时间
+     */
+    public void setExpireTime(String ExpireTime) {
+        this.ExpireTime = ExpireTime;
+    }
+
+    /**
+     * Get 计算性能限制 
+     * @return QPSLimit 计算性能限制
+     */
+    public Long getQPSLimit() {
+        return this.QPSLimit;
+    }
+
+    /**
+     * Set 计算性能限制
+     * @param QPSLimit 计算性能限制
+     */
+    public void setQPSLimit(Long QPSLimit) {
+        this.QPSLimit = QPSLimit;
+    }
+
+    /**
+     * Get 凭据个数限制 
+     * @return SecretLimit 凭据个数限制
+     */
+    public Long getSecretLimit() {
+        return this.SecretLimit;
+    }
+
+    /**
+     * Set 凭据个数限制
+     * @param SecretLimit 凭据个数限制
+     */
+    public void setSecretLimit(Long SecretLimit) {
+        this.SecretLimit = SecretLimit;
+    }
+
+    /**
+     * Get 付费模式 
+     * @return PayModel 付费模式
+     */
+    public String getPayModel() {
+        return this.PayModel;
+    }
+
+    /**
+     * Set 付费模式
+     * @param PayModel 付费模式
+     */
+    public void setPayModel(String PayModel) {
+        this.PayModel = PayModel;
+    }
+
+    /**
+     * Get 自动续费标识，0:手动续费 1:自动续费 2:到期不续 
+     * @return RenewFlag 自动续费标识，0:手动续费 1:自动续费 2:到期不续
+     */
+    public Long getRenewFlag() {
+        return this.RenewFlag;
+    }
+
+    /**
+     * Set 自动续费标识，0:手动续费 1:自动续费 2:到期不续
+     * @param RenewFlag 自动续费标识，0:手动续费 1:自动续费 2:到期不续
+     */
+    public void setRenewFlag(Long RenewFlag) {
+        this.RenewFlag = RenewFlag;
+    }
+
+    /**
+     * Get 资源id 
+     * @return ResourceId 资源id
+     */
+    public String getResourceId() {
+        return this.ResourceId;
+    }
+
+    /**
+     * Set 资源id
+     * @param ResourceId 资源id
+     */
+    public void setResourceId(String ResourceId) {
+        this.ResourceId = ResourceId;
+    }
+
+    /**
+     * Get 已托管凭据个数 
+     * @return TotalCount 已托管凭据个数
+     */
+    public Long getTotalCount() {
+        return this.TotalCount;
+    }
+
+    /**
+     * Set 已托管凭据个数
+     * @param TotalCount 已托管凭据个数
+     */
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -137,6 +298,27 @@ false表示用户暂时不能使用密钥安全托管功能。
         if (source.AccessKeyEscrowEnabled != null) {
             this.AccessKeyEscrowEnabled = new Boolean(source.AccessKeyEscrowEnabled);
         }
+        if (source.ExpireTime != null) {
+            this.ExpireTime = new String(source.ExpireTime);
+        }
+        if (source.QPSLimit != null) {
+            this.QPSLimit = new Long(source.QPSLimit);
+        }
+        if (source.SecretLimit != null) {
+            this.SecretLimit = new Long(source.SecretLimit);
+        }
+        if (source.PayModel != null) {
+            this.PayModel = new String(source.PayModel);
+        }
+        if (source.RenewFlag != null) {
+            this.RenewFlag = new Long(source.RenewFlag);
+        }
+        if (source.ResourceId != null) {
+            this.ResourceId = new String(source.ResourceId);
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -150,6 +332,13 @@ false表示用户暂时不能使用密钥安全托管功能。
         this.setParamSimple(map, prefix + "ServiceEnabled", this.ServiceEnabled);
         this.setParamSimple(map, prefix + "InvalidType", this.InvalidType);
         this.setParamSimple(map, prefix + "AccessKeyEscrowEnabled", this.AccessKeyEscrowEnabled);
+        this.setParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
+        this.setParamSimple(map, prefix + "QPSLimit", this.QPSLimit);
+        this.setParamSimple(map, prefix + "SecretLimit", this.SecretLimit);
+        this.setParamSimple(map, prefix + "PayModel", this.PayModel);
+        this.setParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
+        this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

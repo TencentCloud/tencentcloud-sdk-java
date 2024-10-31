@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeAccountGroupsData extends AbstractModel {
 
     /**
-    * 名称path
+    * 账号分组名全路径，点分格式
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NamePath")
@@ -32,7 +32,7 @@ public class DescribeAccountGroupsData extends AbstractModel {
     private String NamePath;
 
     /**
-    * id patch数组(只支持32位)
+    * 账号分组ID全路径，数组格式
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IdPathArr")
@@ -56,7 +56,7 @@ public class DescribeAccountGroupsData extends AbstractModel {
     private String Utime;
 
     /**
-    * 父id
+    * 父分组ID
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ParentId")
@@ -64,7 +64,7 @@ public class DescribeAccountGroupsData extends AbstractModel {
     private Long ParentId;
 
     /**
-    * 组织id
+    * 源账号组织ID。使用第三方导入用户源时，记录该分组在源组织架构下的分组ID
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OrgId")
@@ -72,7 +72,7 @@ public class DescribeAccountGroupsData extends AbstractModel {
     private String OrgId;
 
     /**
-    * 账户组名称
+    * 分组名称
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
@@ -80,7 +80,7 @@ public class DescribeAccountGroupsData extends AbstractModel {
     private String Name;
 
     /**
-    * id
+    * 分组ID
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
@@ -88,7 +88,7 @@ public class DescribeAccountGroupsData extends AbstractModel {
     private Long Id;
 
     /**
-    * 描述
+    * 分组描述
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
@@ -104,7 +104,7 @@ public class DescribeAccountGroupsData extends AbstractModel {
     private Long Source;
 
     /**
-    * id path
+    * 账号分组ID全路径，点分格式
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IdPath")
@@ -120,7 +120,7 @@ public class DescribeAccountGroupsData extends AbstractModel {
     private String Itime;
 
     /**
-    * 父组织id
+    * 父源账号组织ID。使用第三方导入用户源时，记录该分组在源组织架构下的分组ID
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ParentOrgId")
@@ -144,7 +144,7 @@ public class DescribeAccountGroupsData extends AbstractModel {
     private String MiniIamId;
 
     /**
-    * 该分组下用户总数
+    * 该分组下含子组的所有用户总数
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserTotal")
@@ -184,9 +184,9 @@ public class DescribeAccountGroupsData extends AbstractModel {
     private String LatestSyncTime;
 
     /**
-     * Get 名称path
+     * Get 账号分组名全路径，点分格式
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return NamePath 名称path
+     * @return NamePath 账号分组名全路径，点分格式
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNamePath() {
@@ -194,9 +194,9 @@ public class DescribeAccountGroupsData extends AbstractModel {
     }
 
     /**
-     * Set 名称path
+     * Set 账号分组名全路径，点分格式
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param NamePath 名称path
+     * @param NamePath 账号分组名全路径，点分格式
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNamePath(String NamePath) {
@@ -204,9 +204,9 @@ public class DescribeAccountGroupsData extends AbstractModel {
     }
 
     /**
-     * Get id patch数组(只支持32位)
+     * Get 账号分组ID全路径，数组格式
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IdPathArr id patch数组(只支持32位)
+     * @return IdPathArr 账号分组ID全路径，数组格式
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long [] getIdPathArr() {
@@ -214,9 +214,9 @@ public class DescribeAccountGroupsData extends AbstractModel {
     }
 
     /**
-     * Set id patch数组(只支持32位)
+     * Set 账号分组ID全路径，数组格式
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IdPathArr id patch数组(只支持32位)
+     * @param IdPathArr 账号分组ID全路径，数组格式
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIdPathArr(Long [] IdPathArr) {
@@ -264,9 +264,9 @@ public class DescribeAccountGroupsData extends AbstractModel {
     }
 
     /**
-     * Get 父id
+     * Get 父分组ID
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ParentId 父id
+     * @return ParentId 父分组ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getParentId() {
@@ -274,9 +274,9 @@ public class DescribeAccountGroupsData extends AbstractModel {
     }
 
     /**
-     * Set 父id
+     * Set 父分组ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ParentId 父id
+     * @param ParentId 父分组ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setParentId(Long ParentId) {
@@ -284,9 +284,9 @@ public class DescribeAccountGroupsData extends AbstractModel {
     }
 
     /**
-     * Get 组织id
+     * Get 源账号组织ID。使用第三方导入用户源时，记录该分组在源组织架构下的分组ID
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OrgId 组织id
+     * @return OrgId 源账号组织ID。使用第三方导入用户源时，记录该分组在源组织架构下的分组ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOrgId() {
@@ -294,9 +294,9 @@ public class DescribeAccountGroupsData extends AbstractModel {
     }
 
     /**
-     * Set 组织id
+     * Set 源账号组织ID。使用第三方导入用户源时，记录该分组在源组织架构下的分组ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OrgId 组织id
+     * @param OrgId 源账号组织ID。使用第三方导入用户源时，记录该分组在源组织架构下的分组ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOrgId(String OrgId) {
@@ -304,9 +304,9 @@ public class DescribeAccountGroupsData extends AbstractModel {
     }
 
     /**
-     * Get 账户组名称
+     * Get 分组名称
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Name 账户组名称
+     * @return Name 分组名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
@@ -314,9 +314,9 @@ public class DescribeAccountGroupsData extends AbstractModel {
     }
 
     /**
-     * Set 账户组名称
+     * Set 分组名称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Name 账户组名称
+     * @param Name 分组名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
@@ -324,9 +324,9 @@ public class DescribeAccountGroupsData extends AbstractModel {
     }
 
     /**
-     * Get id
+     * Get 分组ID
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Id id
+     * @return Id 分组ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getId() {
@@ -334,9 +334,9 @@ public class DescribeAccountGroupsData extends AbstractModel {
     }
 
     /**
-     * Set id
+     * Set 分组ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Id id
+     * @param Id 分组ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(Long Id) {
@@ -344,9 +344,9 @@ public class DescribeAccountGroupsData extends AbstractModel {
     }
 
     /**
-     * Get 描述
+     * Get 分组描述
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Description 描述
+     * @return Description 分组描述
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
@@ -354,9 +354,9 @@ public class DescribeAccountGroupsData extends AbstractModel {
     }
 
     /**
-     * Set 描述
+     * Set 分组描述
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Description 描述
+     * @param Description 分组描述
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
@@ -384,9 +384,9 @@ public class DescribeAccountGroupsData extends AbstractModel {
     }
 
     /**
-     * Get id path
+     * Get 账号分组ID全路径，点分格式
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IdPath id path
+     * @return IdPath 账号分组ID全路径，点分格式
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIdPath() {
@@ -394,9 +394,9 @@ public class DescribeAccountGroupsData extends AbstractModel {
     }
 
     /**
-     * Set id path
+     * Set 账号分组ID全路径，点分格式
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IdPath id path
+     * @param IdPath 账号分组ID全路径，点分格式
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIdPath(String IdPath) {
@@ -424,9 +424,9 @@ public class DescribeAccountGroupsData extends AbstractModel {
     }
 
     /**
-     * Get 父组织id
+     * Get 父源账号组织ID。使用第三方导入用户源时，记录该分组在源组织架构下的分组ID
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ParentOrgId 父组织id
+     * @return ParentOrgId 父源账号组织ID。使用第三方导入用户源时，记录该分组在源组织架构下的分组ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getParentOrgId() {
@@ -434,9 +434,9 @@ public class DescribeAccountGroupsData extends AbstractModel {
     }
 
     /**
-     * Set 父组织id
+     * Set 父源账号组织ID。使用第三方导入用户源时，记录该分组在源组织架构下的分组ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ParentOrgId 父组织id
+     * @param ParentOrgId 父源账号组织ID。使用第三方导入用户源时，记录该分组在源组织架构下的分组ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setParentOrgId(String ParentOrgId) {
@@ -484,9 +484,9 @@ public class DescribeAccountGroupsData extends AbstractModel {
     }
 
     /**
-     * Get 该分组下用户总数
+     * Get 该分组下含子组的所有用户总数
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UserTotal 该分组下用户总数
+     * @return UserTotal 该分组下含子组的所有用户总数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getUserTotal() {
@@ -494,9 +494,9 @@ public class DescribeAccountGroupsData extends AbstractModel {
     }
 
     /**
-     * Set 该分组下用户总数
+     * Set 该分组下含子组的所有用户总数
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UserTotal 该分组下用户总数
+     * @param UserTotal 该分组下含子组的所有用户总数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserTotal(Long UserTotal) {

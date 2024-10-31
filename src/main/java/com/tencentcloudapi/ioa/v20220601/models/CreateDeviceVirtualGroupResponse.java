@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cfw.v20190904.models;
+package com.tencentcloudapi.ioa.v20220601.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,21 +21,15 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeNatSwitchListResponse extends AbstractModel {
+public class CreateDeviceVirtualGroupResponse extends AbstractModel {
 
     /**
-    * 总数
-    */
-    @SerializedName("Total")
-    @Expose
-    private Long Total;
-
-    /**
-    * NAT边界防火墙开关列表数据
+    * 响应返回的data
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
     @Expose
-    private NatSwitchListData [] Data;
+    private CreateDeviceVirtualGroupRspData Data;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -45,34 +39,22 @@ public class DescribeNatSwitchListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 总数 
-     * @return Total 总数
+     * Get 响应返回的data
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Data 响应返回的data
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public Long getTotal() {
-        return this.Total;
-    }
-
-    /**
-     * Set 总数
-     * @param Total 总数
-     */
-    public void setTotal(Long Total) {
-        this.Total = Total;
-    }
-
-    /**
-     * Get NAT边界防火墙开关列表数据 
-     * @return Data NAT边界防火墙开关列表数据
-     */
-    public NatSwitchListData [] getData() {
+    public CreateDeviceVirtualGroupRspData getData() {
         return this.Data;
     }
 
     /**
-     * Set NAT边界防火墙开关列表数据
-     * @param Data NAT边界防火墙开关列表数据
+     * Set 响应返回的data
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Data 响应返回的data
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setData(NatSwitchListData [] Data) {
+    public void setData(CreateDeviceVirtualGroupRspData Data) {
         this.Data = Data;
     }
 
@@ -92,22 +74,16 @@ public class DescribeNatSwitchListResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public DescribeNatSwitchListResponse() {
+    public CreateDeviceVirtualGroupResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeNatSwitchListResponse(DescribeNatSwitchListResponse source) {
-        if (source.Total != null) {
-            this.Total = new Long(source.Total);
-        }
+    public CreateDeviceVirtualGroupResponse(CreateDeviceVirtualGroupResponse source) {
         if (source.Data != null) {
-            this.Data = new NatSwitchListData[source.Data.length];
-            for (int i = 0; i < source.Data.length; i++) {
-                this.Data[i] = new NatSwitchListData(source.Data[i]);
-            }
+            this.Data = new CreateDeviceVirtualGroupRspData(source.Data);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -119,8 +95,7 @@ public class DescribeNatSwitchListResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Total", this.Total);
-        this.setParamArrayObj(map, prefix + "Data.", this.Data);
+        this.setParamObj(map, prefix + "Data.", this.Data);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

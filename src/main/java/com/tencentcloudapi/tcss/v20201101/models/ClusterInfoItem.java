@@ -87,6 +87,13 @@ public class ClusterInfoItem extends AbstractModel {
     private String ClusterStatus;
 
     /**
+    * 集群运行子状态
+    */
+    @SerializedName("ClusterSubStatus")
+    @Expose
+    private String ClusterSubStatus;
+
+    /**
     * 集群的检测模式，为Cluster_Normal或者Cluster_Actived.
     */
     @SerializedName("ClusterCheckMode")
@@ -234,6 +241,21 @@ public class ClusterInfoItem extends AbstractModel {
     private Long CoresCnt;
 
     /**
+    * 集群审计开关状态：
+已关闭Closed/关闭中Closing/关闭失败CloseFailed/已开启Opened/开启中Opening/开启失败OpenFailed
+    */
+    @SerializedName("ClusterAuditStatus")
+    @Expose
+    private String ClusterAuditStatus;
+
+    /**
+    * 集群审计开关失败信息
+    */
+    @SerializedName("ClusterAuditFailedInfo")
+    @Expose
+    private String ClusterAuditFailedInfo;
+
+    /**
      * Get 集群id 
      * @return ClusterId 集群id
      */
@@ -375,6 +397,22 @@ public class ClusterInfoItem extends AbstractModel {
      */
     public void setClusterStatus(String ClusterStatus) {
         this.ClusterStatus = ClusterStatus;
+    }
+
+    /**
+     * Get 集群运行子状态 
+     * @return ClusterSubStatus 集群运行子状态
+     */
+    public String getClusterSubStatus() {
+        return this.ClusterSubStatus;
+    }
+
+    /**
+     * Set 集群运行子状态
+     * @param ClusterSubStatus 集群运行子状态
+     */
+    public void setClusterSubStatus(String ClusterSubStatus) {
+        this.ClusterSubStatus = ClusterSubStatus;
     }
 
     /**
@@ -737,6 +775,42 @@ public class ClusterInfoItem extends AbstractModel {
         this.CoresCnt = CoresCnt;
     }
 
+    /**
+     * Get 集群审计开关状态：
+已关闭Closed/关闭中Closing/关闭失败CloseFailed/已开启Opened/开启中Opening/开启失败OpenFailed 
+     * @return ClusterAuditStatus 集群审计开关状态：
+已关闭Closed/关闭中Closing/关闭失败CloseFailed/已开启Opened/开启中Opening/开启失败OpenFailed
+     */
+    public String getClusterAuditStatus() {
+        return this.ClusterAuditStatus;
+    }
+
+    /**
+     * Set 集群审计开关状态：
+已关闭Closed/关闭中Closing/关闭失败CloseFailed/已开启Opened/开启中Opening/开启失败OpenFailed
+     * @param ClusterAuditStatus 集群审计开关状态：
+已关闭Closed/关闭中Closing/关闭失败CloseFailed/已开启Opened/开启中Opening/开启失败OpenFailed
+     */
+    public void setClusterAuditStatus(String ClusterAuditStatus) {
+        this.ClusterAuditStatus = ClusterAuditStatus;
+    }
+
+    /**
+     * Get 集群审计开关失败信息 
+     * @return ClusterAuditFailedInfo 集群审计开关失败信息
+     */
+    public String getClusterAuditFailedInfo() {
+        return this.ClusterAuditFailedInfo;
+    }
+
+    /**
+     * Set 集群审计开关失败信息
+     * @param ClusterAuditFailedInfo 集群审计开关失败信息
+     */
+    public void setClusterAuditFailedInfo(String ClusterAuditFailedInfo) {
+        this.ClusterAuditFailedInfo = ClusterAuditFailedInfo;
+    }
+
     public ClusterInfoItem() {
     }
 
@@ -771,6 +845,9 @@ public class ClusterInfoItem extends AbstractModel {
         }
         if (source.ClusterStatus != null) {
             this.ClusterStatus = new String(source.ClusterStatus);
+        }
+        if (source.ClusterSubStatus != null) {
+            this.ClusterSubStatus = new String(source.ClusterSubStatus);
         }
         if (source.ClusterCheckMode != null) {
             this.ClusterCheckMode = new String(source.ClusterCheckMode);
@@ -832,6 +909,12 @@ public class ClusterInfoItem extends AbstractModel {
         if (source.CoresCnt != null) {
             this.CoresCnt = new Long(source.CoresCnt);
         }
+        if (source.ClusterAuditStatus != null) {
+            this.ClusterAuditStatus = new String(source.ClusterAuditStatus);
+        }
+        if (source.ClusterAuditFailedInfo != null) {
+            this.ClusterAuditFailedInfo = new String(source.ClusterAuditFailedInfo);
+        }
     }
 
 
@@ -848,6 +931,7 @@ public class ClusterInfoItem extends AbstractModel {
         this.setParamSimple(map, prefix + "Region", this.Region);
         this.setParamSimple(map, prefix + "DefenderStatus", this.DefenderStatus);
         this.setParamSimple(map, prefix + "ClusterStatus", this.ClusterStatus);
+        this.setParamSimple(map, prefix + "ClusterSubStatus", this.ClusterSubStatus);
         this.setParamSimple(map, prefix + "ClusterCheckMode", this.ClusterCheckMode);
         this.setParamSimple(map, prefix + "ClusterAutoCheck", this.ClusterAutoCheck);
         this.setParamSimple(map, prefix + "DefenderErrorReason", this.DefenderErrorReason);
@@ -867,6 +951,8 @@ public class ClusterInfoItem extends AbstractModel {
         this.setParamSimple(map, prefix + "ChargeCoresCnt", this.ChargeCoresCnt);
         this.setParamArraySimple(map, prefix + "MasterAddresses.", this.MasterAddresses);
         this.setParamSimple(map, prefix + "CoresCnt", this.CoresCnt);
+        this.setParamSimple(map, prefix + "ClusterAuditStatus", this.ClusterAuditStatus);
+        this.setParamSimple(map, prefix + "ClusterAuditFailedInfo", this.ClusterAuditFailedInfo);
 
     }
 }

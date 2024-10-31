@@ -31,7 +31,7 @@ public class DescribePublicIpAssetsRequest extends AbstractModel {
     private String [] MemberId;
 
     /**
-    * filte过滤条件
+    * 过滤器参数
     */
     @SerializedName("Filter")
     @Expose
@@ -61,16 +61,16 @@ public class DescribePublicIpAssetsRequest extends AbstractModel {
     }
 
     /**
-     * Get filte过滤条件 
-     * @return Filter filte过滤条件
+     * Get 过滤器参数 
+     * @return Filter 过滤器参数
      */
     public Filter getFilter() {
         return this.Filter;
     }
 
     /**
-     * Set filte过滤条件
-     * @param Filter filte过滤条件
+     * Set 过滤器参数
+     * @param Filter 过滤器参数
      */
     public void setFilter(Filter Filter) {
         this.Filter = Filter;

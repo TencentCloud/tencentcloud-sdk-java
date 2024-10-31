@@ -80,7 +80,7 @@ public class ScanTaskDetails extends AbstractModel {
     private String Quuid;
 
     /**
-    * 状态码
+    * 状态码Scanning、Ok、Fail
     */
     @SerializedName("Status")
     @Expose
@@ -251,16 +251,16 @@ public class ScanTaskDetails extends AbstractModel {
     }
 
     /**
-     * Get 状态码 
-     * @return Status 状态码
+     * Get 状态码Scanning、Ok、Fail 
+     * @return Status 状态码Scanning、Ok、Fail
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 状态码
-     * @param Status 状态码
+     * Set 状态码Scanning、Ok、Fail
+     * @param Status 状态码Scanning、Ok、Fail
      */
     public void setStatus(String Status) {
         this.Status = Status;

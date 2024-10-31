@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeDomainAssetsResponse extends AbstractModel {
 
     /**
-    * -
+    * 总数
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Total")
@@ -32,7 +32,7 @@ public class DescribeDomainAssetsResponse extends AbstractModel {
     private Long Total;
 
     /**
-    * -
+    * 域名列表
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
@@ -79,9 +79,9 @@ public class DescribeDomainAssetsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get -
+     * Get 总数
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Total -
+     * @return Total 总数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotal() {
@@ -89,9 +89,9 @@ public class DescribeDomainAssetsResponse extends AbstractModel {
     }
 
     /**
-     * Set -
+     * Set 总数
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Total -
+     * @param Total 总数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotal(Long Total) {
@@ -99,9 +99,9 @@ public class DescribeDomainAssetsResponse extends AbstractModel {
     }
 
     /**
-     * Get -
+     * Get 域名列表
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Data -
+     * @return Data 域名列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DomainAssetVO [] getData() {
@@ -109,9 +109,9 @@ public class DescribeDomainAssetsResponse extends AbstractModel {
     }
 
     /**
-     * Set -
+     * Set 域名列表
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Data -
+     * @param Data 域名列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(DomainAssetVO [] Data) {

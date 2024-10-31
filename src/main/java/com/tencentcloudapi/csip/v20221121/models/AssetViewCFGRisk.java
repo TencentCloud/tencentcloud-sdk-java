@@ -166,6 +166,14 @@ public class AssetViewCFGRisk extends AbstractModel {
     private String Uin;
 
     /**
+    * 当资产类型为LBL的时候，展示该字段，方便定位具体的LB
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ClbId")
+    @Expose
+    private String ClbId;
+
+    /**
      * Get 唯一id 
      * @return Id 唯一id
      */
@@ -493,6 +501,26 @@ public class AssetViewCFGRisk extends AbstractModel {
         this.Uin = Uin;
     }
 
+    /**
+     * Get 当资产类型为LBL的时候，展示该字段，方便定位具体的LB
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ClbId 当资产类型为LBL的时候，展示该字段，方便定位具体的LB
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getClbId() {
+        return this.ClbId;
+    }
+
+    /**
+     * Set 当资产类型为LBL的时候，展示该字段，方便定位具体的LB
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ClbId 当资产类型为LBL的时候，展示该字段，方便定位具体的LB
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setClbId(String ClbId) {
+        this.ClbId = ClbId;
+    }
+
     public AssetViewCFGRisk() {
     }
 
@@ -561,6 +589,9 @@ public class AssetViewCFGRisk extends AbstractModel {
         if (source.Uin != null) {
             this.Uin = new String(source.Uin);
         }
+        if (source.ClbId != null) {
+            this.ClbId = new String(source.ClbId);
+        }
     }
 
 
@@ -588,6 +619,7 @@ public class AssetViewCFGRisk extends AbstractModel {
         this.setParamSimple(map, prefix + "AppId", this.AppId);
         this.setParamSimple(map, prefix + "Nick", this.Nick);
         this.setParamSimple(map, prefix + "Uin", this.Uin);
+        this.setParamSimple(map, prefix + "ClbId", this.ClbId);
 
     }
 }

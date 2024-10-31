@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class TaskEventData extends AbstractModel {
 
     /**
-    * 状态码
+    * 状态码，0为成功，-1为失败
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Code")
@@ -48,7 +48,7 @@ public class TaskEventData extends AbstractModel {
     private Long TaskId;
 
     /**
-    * 当前完成或正在完成的任务订单ID
+    * 当前完成或正在完成的安心用户运营平台的任务订单ID
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskOrderId")
@@ -56,7 +56,7 @@ public class TaskEventData extends AbstractModel {
     private String TaskOrderId;
 
     /**
-    * 当前任务订单状态码
+    * 当前任务订单状态码。1代表未完成；2代表已完成但未提交任务；3表示已完成，且已提交获得积分任务；4表示过期任务，提交后不获得积分。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskCode")
@@ -64,7 +64,7 @@ public class TaskEventData extends AbstractModel {
     private Long TaskCode;
 
     /**
-    * 获得积分数/成长值
+    * 获得积分数
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskCoinNumber")
@@ -80,7 +80,7 @@ public class TaskEventData extends AbstractModel {
     private Long TaskType;
 
     /**
-    * 当前积分
+    * 用户的当前积分
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCoin")
@@ -88,7 +88,7 @@ public class TaskEventData extends AbstractModel {
     private Long TotalCoin;
 
     /**
-    * 用户透传的代码块
+    * 用户透传的附加数据
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Attach")
@@ -120,7 +120,7 @@ public class TaskEventData extends AbstractModel {
     private String TaskName;
 
     /**
-    * 当前成长值
+    * 用户当前成长值
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GrowScore")
@@ -128,9 +128,9 @@ public class TaskEventData extends AbstractModel {
     private Long GrowScore;
 
     /**
-     * Get 状态码
+     * Get 状态码，0为成功，-1为失败
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Code 状态码
+     * @return Code 状态码，0为成功，-1为失败
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCode() {
@@ -138,9 +138,9 @@ public class TaskEventData extends AbstractModel {
     }
 
     /**
-     * Set 状态码
+     * Set 状态码，0为成功，-1为失败
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Code 状态码
+     * @param Code 状态码，0为成功，-1为失败
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCode(Long Code) {
@@ -188,9 +188,9 @@ public class TaskEventData extends AbstractModel {
     }
 
     /**
-     * Get 当前完成或正在完成的任务订单ID
+     * Get 当前完成或正在完成的安心用户运营平台的任务订单ID
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskOrderId 当前完成或正在完成的任务订单ID
+     * @return TaskOrderId 当前完成或正在完成的安心用户运营平台的任务订单ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskOrderId() {
@@ -198,9 +198,9 @@ public class TaskEventData extends AbstractModel {
     }
 
     /**
-     * Set 当前完成或正在完成的任务订单ID
+     * Set 当前完成或正在完成的安心用户运营平台的任务订单ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskOrderId 当前完成或正在完成的任务订单ID
+     * @param TaskOrderId 当前完成或正在完成的安心用户运营平台的任务订单ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskOrderId(String TaskOrderId) {
@@ -208,9 +208,9 @@ public class TaskEventData extends AbstractModel {
     }
 
     /**
-     * Get 当前任务订单状态码
+     * Get 当前任务订单状态码。1代表未完成；2代表已完成但未提交任务；3表示已完成，且已提交获得积分任务；4表示过期任务，提交后不获得积分。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskCode 当前任务订单状态码
+     * @return TaskCode 当前任务订单状态码。1代表未完成；2代表已完成但未提交任务；3表示已完成，且已提交获得积分任务；4表示过期任务，提交后不获得积分。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTaskCode() {
@@ -218,9 +218,9 @@ public class TaskEventData extends AbstractModel {
     }
 
     /**
-     * Set 当前任务订单状态码
+     * Set 当前任务订单状态码。1代表未完成；2代表已完成但未提交任务；3表示已完成，且已提交获得积分任务；4表示过期任务，提交后不获得积分。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskCode 当前任务订单状态码
+     * @param TaskCode 当前任务订单状态码。1代表未完成；2代表已完成但未提交任务；3表示已完成，且已提交获得积分任务；4表示过期任务，提交后不获得积分。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskCode(Long TaskCode) {
@@ -228,9 +228,9 @@ public class TaskEventData extends AbstractModel {
     }
 
     /**
-     * Get 获得积分数/成长值
+     * Get 获得积分数
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TaskCoinNumber 获得积分数/成长值
+     * @return TaskCoinNumber 获得积分数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTaskCoinNumber() {
@@ -238,9 +238,9 @@ public class TaskEventData extends AbstractModel {
     }
 
     /**
-     * Set 获得积分数/成长值
+     * Set 获得积分数
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TaskCoinNumber 获得积分数/成长值
+     * @param TaskCoinNumber 获得积分数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskCoinNumber(Long TaskCoinNumber) {
@@ -268,9 +268,9 @@ public class TaskEventData extends AbstractModel {
     }
 
     /**
-     * Get 当前积分
+     * Get 用户的当前积分
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TotalCoin 当前积分
+     * @return TotalCoin 用户的当前积分
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCoin() {
@@ -278,9 +278,9 @@ public class TaskEventData extends AbstractModel {
     }
 
     /**
-     * Set 当前积分
+     * Set 用户的当前积分
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TotalCoin 当前积分
+     * @param TotalCoin 用户的当前积分
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCoin(Long TotalCoin) {
@@ -288,9 +288,9 @@ public class TaskEventData extends AbstractModel {
     }
 
     /**
-     * Get 用户透传的代码块
+     * Get 用户透传的附加数据
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Attach 用户透传的代码块
+     * @return Attach 用户透传的附加数据
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAttach() {
@@ -298,9 +298,9 @@ public class TaskEventData extends AbstractModel {
     }
 
     /**
-     * Set 用户透传的代码块
+     * Set 用户透传的附加数据
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Attach 用户透传的代码块
+     * @param Attach 用户透传的附加数据
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAttach(String Attach) {
@@ -368,9 +368,9 @@ public class TaskEventData extends AbstractModel {
     }
 
     /**
-     * Get 当前成长值
+     * Get 用户当前成长值
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return GrowScore 当前成长值
+     * @return GrowScore 用户当前成长值
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getGrowScore() {
@@ -378,9 +378,9 @@ public class TaskEventData extends AbstractModel {
     }
 
     /**
-     * Set 当前成长值
+     * Set 用户当前成长值
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param GrowScore 当前成长值
+     * @param GrowScore 用户当前成长值
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGrowScore(Long GrowScore) {

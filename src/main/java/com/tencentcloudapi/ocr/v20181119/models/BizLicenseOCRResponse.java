@@ -135,21 +135,21 @@ WARN_RESHOOT_CARD翻拍件告警
     private Float Angle;
 
     /**
-    * 是否有国徽。0为没有，1为有。
+    * 是否有国徽。false为没有，true为有。
     */
     @SerializedName("NationalEmblem")
     @Expose
     private Boolean NationalEmblem;
 
     /**
-    * 是否有二维码。0为没有，1为有。
+    * 是否有二维码。false为没有，true为有。
     */
     @SerializedName("QRCode")
     @Expose
     private Boolean QRCode;
 
     /**
-    * 是否有印章。0为没有，1为有。
+    * 是否有印章。false为没有，true为有。
     */
     @SerializedName("Seal")
     @Expose
@@ -177,7 +177,7 @@ WARN_RESHOOT_CARD翻拍件告警
     private String RegistrationAuthority;
 
     /**
-    * 是否是电子营业执照。0为不是，1为是。
+    * 是否是电子营业执照。false为没有，true为有。
     */
     @SerializedName("Electronic")
     @Expose
@@ -455,48 +455,48 @@ WARN_RESHOOT_CARD翻拍件告警
     }
 
     /**
-     * Get 是否有国徽。0为没有，1为有。 
-     * @return NationalEmblem 是否有国徽。0为没有，1为有。
+     * Get 是否有国徽。false为没有，true为有。 
+     * @return NationalEmblem 是否有国徽。false为没有，true为有。
      */
     public Boolean getNationalEmblem() {
         return this.NationalEmblem;
     }
 
     /**
-     * Set 是否有国徽。0为没有，1为有。
-     * @param NationalEmblem 是否有国徽。0为没有，1为有。
+     * Set 是否有国徽。false为没有，true为有。
+     * @param NationalEmblem 是否有国徽。false为没有，true为有。
      */
     public void setNationalEmblem(Boolean NationalEmblem) {
         this.NationalEmblem = NationalEmblem;
     }
 
     /**
-     * Get 是否有二维码。0为没有，1为有。 
-     * @return QRCode 是否有二维码。0为没有，1为有。
+     * Get 是否有二维码。false为没有，true为有。 
+     * @return QRCode 是否有二维码。false为没有，true为有。
      */
     public Boolean getQRCode() {
         return this.QRCode;
     }
 
     /**
-     * Set 是否有二维码。0为没有，1为有。
-     * @param QRCode 是否有二维码。0为没有，1为有。
+     * Set 是否有二维码。false为没有，true为有。
+     * @param QRCode 是否有二维码。false为没有，true为有。
      */
     public void setQRCode(Boolean QRCode) {
         this.QRCode = QRCode;
     }
 
     /**
-     * Get 是否有印章。0为没有，1为有。 
-     * @return Seal 是否有印章。0为没有，1为有。
+     * Get 是否有印章。false为没有，true为有。 
+     * @return Seal 是否有印章。false为没有，true为有。
      */
     public Boolean getSeal() {
         return this.Seal;
     }
 
     /**
-     * Set 是否有印章。0为没有，1为有。
-     * @param Seal 是否有印章。0为没有，1为有。
+     * Set 是否有印章。false为没有，true为有。
+     * @param Seal 是否有印章。false为没有，true为有。
      */
     public void setSeal(Boolean Seal) {
         this.Seal = Seal;
@@ -551,16 +551,16 @@ WARN_RESHOOT_CARD翻拍件告警
     }
 
     /**
-     * Get 是否是电子营业执照。0为不是，1为是。 
-     * @return Electronic 是否是电子营业执照。0为不是，1为是。
+     * Get 是否是电子营业执照。false为没有，true为有。 
+     * @return Electronic 是否是电子营业执照。false为没有，true为有。
      */
     public Boolean getElectronic() {
         return this.Electronic;
     }
 
     /**
-     * Set 是否是电子营业执照。0为不是，1为是。
-     * @param Electronic 是否是电子营业执照。0为不是，1为是。
+     * Set 是否是电子营业执照。false为没有，true为有。
+     * @param Electronic 是否是电子营业执照。false为没有，true为有。
      */
     public void setElectronic(Boolean Electronic) {
         this.Electronic = Electronic;

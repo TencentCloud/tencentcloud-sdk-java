@@ -164,7 +164,7 @@ public class AssetMachineDetail extends AbstractModel {
     private String CoreVersion;
 
     /**
-    * linux/windows
+    * Linux/Windows
     */
     @SerializedName("OsType")
     @Expose
@@ -616,16 +616,16 @@ public class AssetMachineDetail extends AbstractModel {
     }
 
     /**
-     * Get linux/windows 
-     * @return OsType linux/windows
+     * Get Linux/Windows 
+     * @return OsType Linux/Windows
      */
     public String getOsType() {
         return this.OsType;
     }
 
     /**
-     * Set linux/windows
-     * @param OsType linux/windows
+     * Set Linux/Windows
+     * @param OsType Linux/Windows
      */
     public void setOsType(String OsType) {
         this.OsType = OsType;

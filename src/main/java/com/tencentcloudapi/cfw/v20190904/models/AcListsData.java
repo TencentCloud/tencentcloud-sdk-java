@@ -101,6 +101,120 @@ public class AcListsData extends AbstractModel {
     private String LogId;
 
     /**
+    * 规则开关状态 1打开 0关闭
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Status")
+    @Expose
+    private Long Status;
+
+    /**
+    * 规则源类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SrcType")
+    @Expose
+    private Long SrcType;
+
+    /**
+    * 规则目的类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DstType")
+    @Expose
+    private Long DstType;
+
+    /**
+    * 规则唯一ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Uuid")
+    @Expose
+    private String Uuid;
+
+    /**
+    * 规则有效性
+1 有效
+0 无效
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Invalid")
+    @Expose
+    private Long Invalid;
+
+    /**
+    * 是否地域规则
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsRegion")
+    @Expose
+    private Long IsRegion;
+
+    /**
+    * 云厂商代码
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CloudCode")
+    @Expose
+    private String CloudCode;
+
+    /**
+    * 自动化助手信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AutoTask")
+    @Expose
+    private String AutoTask;
+
+    /**
+    * 实例名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InstanceName")
+    @Expose
+    private String InstanceName;
+
+    /**
+    * 地域码信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RegionCode")
+    @Expose
+    private String RegionCode;
+
+    /**
+    * 国家代码
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Country")
+    @Expose
+    private Long Country;
+
+    /**
+    * 城市代码
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("City")
+    @Expose
+    private Long City;
+
+    /**
+    * 国家名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RegName1")
+    @Expose
+    private String RegName1;
+
+    /**
+    * 城市名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RegName2")
+    @Expose
+    private String RegName2;
+
+    /**
      * Get 规则id 
      * @return Id 规则id
      */
@@ -288,6 +402,294 @@ public class AcListsData extends AbstractModel {
         this.LogId = LogId;
     }
 
+    /**
+     * Get 规则开关状态 1打开 0关闭
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Status 规则开关状态 1打开 0关闭
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 规则开关状态 1打开 0关闭
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Status 规则开关状态 1打开 0关闭
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStatus(Long Status) {
+        this.Status = Status;
+    }
+
+    /**
+     * Get 规则源类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SrcType 规则源类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getSrcType() {
+        return this.SrcType;
+    }
+
+    /**
+     * Set 规则源类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SrcType 规则源类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSrcType(Long SrcType) {
+        this.SrcType = SrcType;
+    }
+
+    /**
+     * Get 规则目的类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DstType 规则目的类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getDstType() {
+        return this.DstType;
+    }
+
+    /**
+     * Set 规则目的类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DstType 规则目的类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDstType(Long DstType) {
+        this.DstType = DstType;
+    }
+
+    /**
+     * Get 规则唯一ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Uuid 规则唯一ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getUuid() {
+        return this.Uuid;
+    }
+
+    /**
+     * Set 规则唯一ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Uuid 规则唯一ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUuid(String Uuid) {
+        this.Uuid = Uuid;
+    }
+
+    /**
+     * Get 规则有效性
+1 有效
+0 无效
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Invalid 规则有效性
+1 有效
+0 无效
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getInvalid() {
+        return this.Invalid;
+    }
+
+    /**
+     * Set 规则有效性
+1 有效
+0 无效
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Invalid 规则有效性
+1 有效
+0 无效
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInvalid(Long Invalid) {
+        this.Invalid = Invalid;
+    }
+
+    /**
+     * Get 是否地域规则
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsRegion 是否地域规则
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getIsRegion() {
+        return this.IsRegion;
+    }
+
+    /**
+     * Set 是否地域规则
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsRegion 是否地域规则
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsRegion(Long IsRegion) {
+        this.IsRegion = IsRegion;
+    }
+
+    /**
+     * Get 云厂商代码
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CloudCode 云厂商代码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCloudCode() {
+        return this.CloudCode;
+    }
+
+    /**
+     * Set 云厂商代码
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CloudCode 云厂商代码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCloudCode(String CloudCode) {
+        this.CloudCode = CloudCode;
+    }
+
+    /**
+     * Get 自动化助手信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AutoTask 自动化助手信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAutoTask() {
+        return this.AutoTask;
+    }
+
+    /**
+     * Set 自动化助手信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AutoTask 自动化助手信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAutoTask(String AutoTask) {
+        this.AutoTask = AutoTask;
+    }
+
+    /**
+     * Get 实例名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InstanceName 实例名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getInstanceName() {
+        return this.InstanceName;
+    }
+
+    /**
+     * Set 实例名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstanceName 实例名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInstanceName(String InstanceName) {
+        this.InstanceName = InstanceName;
+    }
+
+    /**
+     * Get 地域码信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RegionCode 地域码信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRegionCode() {
+        return this.RegionCode;
+    }
+
+    /**
+     * Set 地域码信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RegionCode 地域码信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRegionCode(String RegionCode) {
+        this.RegionCode = RegionCode;
+    }
+
+    /**
+     * Get 国家代码
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Country 国家代码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getCountry() {
+        return this.Country;
+    }
+
+    /**
+     * Set 国家代码
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Country 国家代码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCountry(Long Country) {
+        this.Country = Country;
+    }
+
+    /**
+     * Get 城市代码
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return City 城市代码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getCity() {
+        return this.City;
+    }
+
+    /**
+     * Set 城市代码
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param City 城市代码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCity(Long City) {
+        this.City = City;
+    }
+
+    /**
+     * Get 国家名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RegName1 国家名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRegName1() {
+        return this.RegName1;
+    }
+
+    /**
+     * Set 国家名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RegName1 国家名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRegName1(String RegName1) {
+        this.RegName1 = RegName1;
+    }
+
+    /**
+     * Get 城市名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RegName2 城市名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRegName2() {
+        return this.RegName2;
+    }
+
+    /**
+     * Set 城市名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RegName2 城市名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRegName2(String RegName2) {
+        this.RegName2 = RegName2;
+    }
+
     public AcListsData() {
     }
 
@@ -326,6 +728,48 @@ public class AcListsData extends AbstractModel {
         if (source.LogId != null) {
             this.LogId = new String(source.LogId);
         }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.SrcType != null) {
+            this.SrcType = new Long(source.SrcType);
+        }
+        if (source.DstType != null) {
+            this.DstType = new Long(source.DstType);
+        }
+        if (source.Uuid != null) {
+            this.Uuid = new String(source.Uuid);
+        }
+        if (source.Invalid != null) {
+            this.Invalid = new Long(source.Invalid);
+        }
+        if (source.IsRegion != null) {
+            this.IsRegion = new Long(source.IsRegion);
+        }
+        if (source.CloudCode != null) {
+            this.CloudCode = new String(source.CloudCode);
+        }
+        if (source.AutoTask != null) {
+            this.AutoTask = new String(source.AutoTask);
+        }
+        if (source.InstanceName != null) {
+            this.InstanceName = new String(source.InstanceName);
+        }
+        if (source.RegionCode != null) {
+            this.RegionCode = new String(source.RegionCode);
+        }
+        if (source.Country != null) {
+            this.Country = new Long(source.Country);
+        }
+        if (source.City != null) {
+            this.City = new Long(source.City);
+        }
+        if (source.RegName1 != null) {
+            this.RegName1 = new String(source.RegName1);
+        }
+        if (source.RegName2 != null) {
+            this.RegName2 = new String(source.RegName2);
+        }
     }
 
 
@@ -343,6 +787,20 @@ public class AcListsData extends AbstractModel {
         this.setParamSimple(map, prefix + "Count", this.Count);
         this.setParamSimple(map, prefix + "OrderIndex", this.OrderIndex);
         this.setParamSimple(map, prefix + "LogId", this.LogId);
+        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "SrcType", this.SrcType);
+        this.setParamSimple(map, prefix + "DstType", this.DstType);
+        this.setParamSimple(map, prefix + "Uuid", this.Uuid);
+        this.setParamSimple(map, prefix + "Invalid", this.Invalid);
+        this.setParamSimple(map, prefix + "IsRegion", this.IsRegion);
+        this.setParamSimple(map, prefix + "CloudCode", this.CloudCode);
+        this.setParamSimple(map, prefix + "AutoTask", this.AutoTask);
+        this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);
+        this.setParamSimple(map, prefix + "RegionCode", this.RegionCode);
+        this.setParamSimple(map, prefix + "Country", this.Country);
+        this.setParamSimple(map, prefix + "City", this.City);
+        this.setParamSimple(map, prefix + "RegName1", this.RegName1);
+        this.setParamSimple(map, prefix + "RegName2", this.RegName2);
 
     }
 }

@@ -446,7 +446,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *此接口（DescribeBackupDownloadUrl）用于查询集群备份文件下载地址。
+     *本接口（DescribeBackupDownloadUrl）用于查询集群备份文件下载地址。
      * @param req DescribeBackupDownloadUrlRequest
      * @return DescribeBackupDownloadUrlResponse
      * @throws TencentCloudSDKException
@@ -479,7 +479,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *此接口（DescribeBinlogDownloadUrl）用于查询Binlog的下载地址。
+     *本接口（DescribeBinlogDownloadUrl）用于查询 Binlog 的下载地址。
      * @param req DescribeBinlogDownloadUrlRequest
      * @return DescribeBinlogDownloadUrlResponse
      * @throws TencentCloudSDKException
@@ -501,7 +501,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *此接口（DescribeBinlogs）用来查询集群Binlog日志列表。
+     *本接口（DescribeBinlogs）用来查询集群 Binlog 日志列表。
      * @param req DescribeBinlogsRequest
      * @return DescribeBinlogsResponse
      * @throws TencentCloudSDKException
@@ -611,7 +611,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *查询集群列表
+     *本接口（DescribeClusters）用于查询集群列表。
      * @param req DescribeClustersRequest
      * @return DescribeClustersResponse
      * @throws TencentCloudSDKException
@@ -897,7 +897,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *本接口(DescribeZones)用于查询可售卖地域可用区信息。
+     *本接口（DescribeZones）用于查询可售卖地域可用区信息。
      * @param req DescribeZonesRequest
      * @return DescribeZonesResponse
      * @throws TencentCloudSDKException
@@ -930,7 +930,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *此接口（ExportInstanceSlowQueries）用于导出实例慢日志。
+     *本接口（ExportInstanceSlowQueries）用于导出实例慢日志。
      * @param req ExportInstanceSlowQueriesRequest
      * @return ExportInstanceSlowQueriesResponse
      * @throws TencentCloudSDKException

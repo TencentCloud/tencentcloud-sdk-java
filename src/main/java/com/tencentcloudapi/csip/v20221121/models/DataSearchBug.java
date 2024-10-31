@@ -87,6 +87,22 @@ public class DataSearchBug extends AbstractModel {
     private Long CWPFix;
 
     /**
+    * 产品支持状态
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DataSupport")
+    @Expose
+    private ProductSupport [] DataSupport;
+
+    /**
+    * cveId
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CveId")
+    @Expose
+    private String CveId;
+
+    /**
      * Get 返回查询状态 
      * @return StateCode 返回查询状态
      */
@@ -242,6 +258,46 @@ public class DataSearchBug extends AbstractModel {
         this.CWPFix = CWPFix;
     }
 
+    /**
+     * Get 产品支持状态
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DataSupport 产品支持状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ProductSupport [] getDataSupport() {
+        return this.DataSupport;
+    }
+
+    /**
+     * Set 产品支持状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DataSupport 产品支持状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDataSupport(ProductSupport [] DataSupport) {
+        this.DataSupport = DataSupport;
+    }
+
+    /**
+     * Get cveId
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CveId cveId
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCveId() {
+        return this.CveId;
+    }
+
+    /**
+     * Set cveId
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CveId cveId
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCveId(String CveId) {
+        this.CveId = CveId;
+    }
+
     public DataSearchBug() {
     }
 
@@ -280,6 +336,15 @@ public class DataSearchBug extends AbstractModel {
         if (source.CWPFix != null) {
             this.CWPFix = new Long(source.CWPFix);
         }
+        if (source.DataSupport != null) {
+            this.DataSupport = new ProductSupport[source.DataSupport.length];
+            for (int i = 0; i < source.DataSupport.length; i++) {
+                this.DataSupport[i] = new ProductSupport(source.DataSupport[i]);
+            }
+        }
+        if (source.CveId != null) {
+            this.CveId = new String(source.CveId);
+        }
     }
 
 
@@ -295,6 +360,8 @@ public class DataSearchBug extends AbstractModel {
         this.setParamSimple(map, prefix + "CFWPatch", this.CFWPatch);
         this.setParamSimple(map, prefix + "WafPatch", this.WafPatch);
         this.setParamSimple(map, prefix + "CWPFix", this.CWPFix);
+        this.setParamArrayObj(map, prefix + "DataSupport.", this.DataSupport);
+        this.setParamSimple(map, prefix + "CveId", this.CveId);
 
     }
 }

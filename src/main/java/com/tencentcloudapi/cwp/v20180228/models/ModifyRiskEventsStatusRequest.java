@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyRiskEventsStatusRequest extends AbstractModel {
 
     /**
-    * 操作-0:标记已处理,1:忽略,2:删除记录,3:木马隔离,4:木马恢复隔离,5:木马信任,6:木马取消信任,7:查杀异常进程
+    * 操作-0:标记已处理,1:忽略,2:删除记录,3:木马隔离,4:木马恢复隔离,5:木马信任,6:木马取消信任,7:查杀异常进程,8:加入白名单
     */
     @SerializedName("Operate")
     @Expose
@@ -94,16 +94,24 @@ RiskType 为PROCESS时:
     private Filters [] Filters;
 
     /**
-     * Get 操作-0:标记已处理,1:忽略,2:删除记录,3:木马隔离,4:木马恢复隔离,5:木马信任,6:木马取消信任,7:查杀异常进程 
-     * @return Operate 操作-0:标记已处理,1:忽略,2:删除记录,3:木马隔离,4:木马恢复隔离,5:木马信任,6:木马取消信任,7:查杀异常进程
+    * 当Operate 是木马隔离时
+<li> 本操作会修复被篡改的系统命令，计划任务等系统文件，操作中请确保yum/apt 可用。</li>
+    */
+    @SerializedName("DoClean")
+    @Expose
+    private Boolean DoClean;
+
+    /**
+     * Get 操作-0:标记已处理,1:忽略,2:删除记录,3:木马隔离,4:木马恢复隔离,5:木马信任,6:木马取消信任,7:查杀异常进程,8:加入白名单 
+     * @return Operate 操作-0:标记已处理,1:忽略,2:删除记录,3:木马隔离,4:木马恢复隔离,5:木马信任,6:木马取消信任,7:查杀异常进程,8:加入白名单
      */
     public Long getOperate() {
         return this.Operate;
     }
 
     /**
-     * Set 操作-0:标记已处理,1:忽略,2:删除记录,3:木马隔离,4:木马恢复隔离,5:木马信任,6:木马取消信任,7:查杀异常进程
-     * @param Operate 操作-0:标记已处理,1:忽略,2:删除记录,3:木马隔离,4:木马恢复隔离,5:木马信任,6:木马取消信任,7:查杀异常进程
+     * Set 操作-0:标记已处理,1:忽略,2:删除记录,3:木马隔离,4:木马恢复隔离,5:木马信任,6:木马取消信任,7:查杀异常进程,8:加入白名单
+     * @param Operate 操作-0:标记已处理,1:忽略,2:删除记录,3:木马隔离,4:木马恢复隔离,5:木马信任,6:木马取消信任,7:查杀异常进程,8:加入白名单
      */
     public void setOperate(Long Operate) {
         this.Operate = Operate;
@@ -277,6 +285,26 @@ RiskType 为PROCESS时:
         this.Filters = Filters;
     }
 
+    /**
+     * Get 当Operate 是木马隔离时
+<li> 本操作会修复被篡改的系统命令，计划任务等系统文件，操作中请确保yum/apt 可用。</li> 
+     * @return DoClean 当Operate 是木马隔离时
+<li> 本操作会修复被篡改的系统命令，计划任务等系统文件，操作中请确保yum/apt 可用。</li>
+     */
+    public Boolean getDoClean() {
+        return this.DoClean;
+    }
+
+    /**
+     * Set 当Operate 是木马隔离时
+<li> 本操作会修复被篡改的系统命令，计划任务等系统文件，操作中请确保yum/apt 可用。</li>
+     * @param DoClean 当Operate 是木马隔离时
+<li> 本操作会修复被篡改的系统命令，计划任务等系统文件，操作中请确保yum/apt 可用。</li>
+     */
+    public void setDoClean(Boolean DoClean) {
+        this.DoClean = DoClean;
+    }
+
     public ModifyRiskEventsStatusRequest() {
     }
 
@@ -321,6 +349,9 @@ RiskType 为PROCESS时:
                 this.Filters[i] = new Filters(source.Filters[i]);
             }
         }
+        if (source.DoClean != null) {
+            this.DoClean = new Boolean(source.DoClean);
+        }
     }
 
 
@@ -336,6 +367,7 @@ RiskType 为PROCESS时:
         this.setParamSimple(map, prefix + "KillProcess", this.KillProcess);
         this.setParamArraySimple(map, prefix + "Ip.", this.Ip);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamSimple(map, prefix + "DoClean", this.DoClean);
 
     }
 }

@@ -31,32 +31,67 @@ public class MachineLicenseDetail extends AbstractModel {
     private String Quuid;
 
     /**
-    * xx
+    * 计费模式, 0 按量计费 , 1 预付费
     */
     @SerializedName("PayMode")
     @Expose
     private Long PayMode;
 
     /**
-    * xxx
+    * 资源ID
     */
     @SerializedName("ResourceId")
     @Expose
     private String ResourceId;
 
     /**
-    * xxx
+    * 授权类型
+    */
+    @SerializedName("LicenseType")
+    @Expose
+    private Long LicenseType;
+
+    /**
+    * 订单类型,0 默认计费订单 1 试用订单, 2 赠送 3 体验
+    */
+    @SerializedName("SourceType")
+    @Expose
+    private Long SourceType;
+
+    /**
+    * 废弃字段,
     */
     @SerializedName("InquireKey")
     @Expose
     private String InquireKey;
 
     /**
-    * xxx
+    * 自动续费标识 0 默认不自动付费, 1 自动付费 2 手动设置不续费
     */
-    @SerializedName("SourceType")
+    @SerializedName("AutoRenewFlag")
     @Expose
-    private Long SourceType;
+    private Long AutoRenewFlag;
+
+    /**
+    * 到期时间,按量付费该值为空
+    */
+    @SerializedName("Deadline")
+    @Expose
+    private String Deadline;
+
+    /**
+    * 购买时间
+    */
+    @SerializedName("BuyTime")
+    @Expose
+    private String BuyTime;
+
+    /**
+    * 授权数量
+    */
+    @SerializedName("LicenseCnt")
+    @Expose
+    private Long LicenseCnt;
 
     /**
      * Get 主机quuid 
@@ -75,67 +110,147 @@ public class MachineLicenseDetail extends AbstractModel {
     }
 
     /**
-     * Get xx 
-     * @return PayMode xx
+     * Get 计费模式, 0 按量计费 , 1 预付费 
+     * @return PayMode 计费模式, 0 按量计费 , 1 预付费
      */
     public Long getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set xx
-     * @param PayMode xx
+     * Set 计费模式, 0 按量计费 , 1 预付费
+     * @param PayMode 计费模式, 0 按量计费 , 1 预付费
      */
     public void setPayMode(Long PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get xxx 
-     * @return ResourceId xxx
+     * Get 资源ID 
+     * @return ResourceId 资源ID
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set xxx
-     * @param ResourceId xxx
+     * Set 资源ID
+     * @param ResourceId 资源ID
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
     }
 
     /**
-     * Get xxx 
-     * @return InquireKey xxx
+     * Get 授权类型 
+     * @return LicenseType 授权类型
      */
-    public String getInquireKey() {
-        return this.InquireKey;
+    public Long getLicenseType() {
+        return this.LicenseType;
     }
 
     /**
-     * Set xxx
-     * @param InquireKey xxx
+     * Set 授权类型
+     * @param LicenseType 授权类型
      */
-    public void setInquireKey(String InquireKey) {
-        this.InquireKey = InquireKey;
+    public void setLicenseType(Long LicenseType) {
+        this.LicenseType = LicenseType;
     }
 
     /**
-     * Get xxx 
-     * @return SourceType xxx
+     * Get 订单类型,0 默认计费订单 1 试用订单, 2 赠送 3 体验 
+     * @return SourceType 订单类型,0 默认计费订单 1 试用订单, 2 赠送 3 体验
      */
     public Long getSourceType() {
         return this.SourceType;
     }
 
     /**
-     * Set xxx
-     * @param SourceType xxx
+     * Set 订单类型,0 默认计费订单 1 试用订单, 2 赠送 3 体验
+     * @param SourceType 订单类型,0 默认计费订单 1 试用订单, 2 赠送 3 体验
      */
     public void setSourceType(Long SourceType) {
         this.SourceType = SourceType;
+    }
+
+    /**
+     * Get 废弃字段, 
+     * @return InquireKey 废弃字段,
+     */
+    public String getInquireKey() {
+        return this.InquireKey;
+    }
+
+    /**
+     * Set 废弃字段,
+     * @param InquireKey 废弃字段,
+     */
+    public void setInquireKey(String InquireKey) {
+        this.InquireKey = InquireKey;
+    }
+
+    /**
+     * Get 自动续费标识 0 默认不自动付费, 1 自动付费 2 手动设置不续费 
+     * @return AutoRenewFlag 自动续费标识 0 默认不自动付费, 1 自动付费 2 手动设置不续费
+     */
+    public Long getAutoRenewFlag() {
+        return this.AutoRenewFlag;
+    }
+
+    /**
+     * Set 自动续费标识 0 默认不自动付费, 1 自动付费 2 手动设置不续费
+     * @param AutoRenewFlag 自动续费标识 0 默认不自动付费, 1 自动付费 2 手动设置不续费
+     */
+    public void setAutoRenewFlag(Long AutoRenewFlag) {
+        this.AutoRenewFlag = AutoRenewFlag;
+    }
+
+    /**
+     * Get 到期时间,按量付费该值为空 
+     * @return Deadline 到期时间,按量付费该值为空
+     */
+    public String getDeadline() {
+        return this.Deadline;
+    }
+
+    /**
+     * Set 到期时间,按量付费该值为空
+     * @param Deadline 到期时间,按量付费该值为空
+     */
+    public void setDeadline(String Deadline) {
+        this.Deadline = Deadline;
+    }
+
+    /**
+     * Get 购买时间 
+     * @return BuyTime 购买时间
+     */
+    public String getBuyTime() {
+        return this.BuyTime;
+    }
+
+    /**
+     * Set 购买时间
+     * @param BuyTime 购买时间
+     */
+    public void setBuyTime(String BuyTime) {
+        this.BuyTime = BuyTime;
+    }
+
+    /**
+     * Get 授权数量 
+     * @return LicenseCnt 授权数量
+     */
+    public Long getLicenseCnt() {
+        return this.LicenseCnt;
+    }
+
+    /**
+     * Set 授权数量
+     * @param LicenseCnt 授权数量
+     */
+    public void setLicenseCnt(Long LicenseCnt) {
+        this.LicenseCnt = LicenseCnt;
     }
 
     public MachineLicenseDetail() {
@@ -155,11 +270,26 @@ public class MachineLicenseDetail extends AbstractModel {
         if (source.ResourceId != null) {
             this.ResourceId = new String(source.ResourceId);
         }
-        if (source.InquireKey != null) {
-            this.InquireKey = new String(source.InquireKey);
+        if (source.LicenseType != null) {
+            this.LicenseType = new Long(source.LicenseType);
         }
         if (source.SourceType != null) {
             this.SourceType = new Long(source.SourceType);
+        }
+        if (source.InquireKey != null) {
+            this.InquireKey = new String(source.InquireKey);
+        }
+        if (source.AutoRenewFlag != null) {
+            this.AutoRenewFlag = new Long(source.AutoRenewFlag);
+        }
+        if (source.Deadline != null) {
+            this.Deadline = new String(source.Deadline);
+        }
+        if (source.BuyTime != null) {
+            this.BuyTime = new String(source.BuyTime);
+        }
+        if (source.LicenseCnt != null) {
+            this.LicenseCnt = new Long(source.LicenseCnt);
         }
     }
 
@@ -171,8 +301,13 @@ public class MachineLicenseDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "Quuid", this.Quuid);
         this.setParamSimple(map, prefix + "PayMode", this.PayMode);
         this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
-        this.setParamSimple(map, prefix + "InquireKey", this.InquireKey);
+        this.setParamSimple(map, prefix + "LicenseType", this.LicenseType);
         this.setParamSimple(map, prefix + "SourceType", this.SourceType);
+        this.setParamSimple(map, prefix + "InquireKey", this.InquireKey);
+        this.setParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
+        this.setParamSimple(map, prefix + "Deadline", this.Deadline);
+        this.setParamSimple(map, prefix + "BuyTime", this.BuyTime);
+        this.setParamSimple(map, prefix + "LicenseCnt", this.LicenseCnt);
 
     }
 }

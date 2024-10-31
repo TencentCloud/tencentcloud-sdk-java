@@ -666,19 +666,6 @@ public class CfwClient extends AbstractClient{
     }
 
     /**
-     *旧接口，不再维护
-
-查询NAT边界防火墙开关列表
-     * @param req DescribeNatSwitchListRequest
-     * @return DescribeNatSwitchListResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeNatSwitchListResponse DescribeNatSwitchList(DescribeNatSwitchListRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeNatSwitchList", DescribeNatSwitchListResponse.class);
-    }
-
-    /**
      *DescribeResourceGroup资产中心资产树信息
      * @param req DescribeResourceGroupRequest
      * @return DescribeResourceGroupResponse

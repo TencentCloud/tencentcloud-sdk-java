@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeCVMAssetsResponse extends AbstractModel {
 
     /**
-    * -
+    * 总数
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Total")
@@ -32,7 +32,7 @@ public class DescribeCVMAssetsResponse extends AbstractModel {
     private Long Total;
 
     /**
-    * -
+    * 机器列表
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
@@ -143,9 +143,9 @@ public class DescribeCVMAssetsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get -
+     * Get 总数
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Total -
+     * @return Total 总数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotal() {
@@ -153,9 +153,9 @@ public class DescribeCVMAssetsResponse extends AbstractModel {
     }
 
     /**
-     * Set -
+     * Set 总数
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Total -
+     * @param Total 总数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotal(Long Total) {
@@ -163,9 +163,9 @@ public class DescribeCVMAssetsResponse extends AbstractModel {
     }
 
     /**
-     * Get -
+     * Get 机器列表
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Data -
+     * @return Data 机器列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public CVMAssetVO [] getData() {
@@ -173,9 +173,9 @@ public class DescribeCVMAssetsResponse extends AbstractModel {
     }
 
     /**
-     * Set -
+     * Set 机器列表
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Data -
+     * @param Data 机器列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(CVMAssetVO [] Data) {

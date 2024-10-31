@@ -128,7 +128,7 @@ public class DeviceDetail extends AbstractModel {
     private String LocalIpList;
 
     /**
-    * 主机ID(只支持32位)
+    * 宿主机id（需要宿主机也安装iOA才能显示）
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HostId")
@@ -304,7 +304,7 @@ public class DeviceDetail extends AbstractModel {
     private String NGNNewStrategyVer;
 
     /**
-    * 主机名称
+    * 宿主机名称（需要宿主机也安装iOA才能显示）
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HostName")
@@ -320,7 +320,7 @@ public class DeviceDetail extends AbstractModel {
     private String BaseBoardSn;
 
     /**
-    * 绑定账户只有名字
+    * 绑定账户名称
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AccountUsers")
@@ -628,9 +628,9 @@ public class DeviceDetail extends AbstractModel {
     }
 
     /**
-     * Get 主机ID(只支持32位)
+     * Get 宿主机id（需要宿主机也安装iOA才能显示）
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return HostId 主机ID(只支持32位)
+     * @return HostId 宿主机id（需要宿主机也安装iOA才能显示）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getHostId() {
@@ -638,9 +638,9 @@ public class DeviceDetail extends AbstractModel {
     }
 
     /**
-     * Set 主机ID(只支持32位)
+     * Set 宿主机id（需要宿主机也安装iOA才能显示）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param HostId 主机ID(只支持32位)
+     * @param HostId 宿主机id（需要宿主机也安装iOA才能显示）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHostId(Long HostId) {
@@ -1068,9 +1068,9 @@ public class DeviceDetail extends AbstractModel {
     }
 
     /**
-     * Get 主机名称
+     * Get 宿主机名称（需要宿主机也安装iOA才能显示）
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return HostName 主机名称
+     * @return HostName 宿主机名称（需要宿主机也安装iOA才能显示）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHostName() {
@@ -1078,9 +1078,9 @@ public class DeviceDetail extends AbstractModel {
     }
 
     /**
-     * Set 主机名称
+     * Set 宿主机名称（需要宿主机也安装iOA才能显示）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param HostName 主机名称
+     * @param HostName 宿主机名称（需要宿主机也安装iOA才能显示）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHostName(String HostName) {
@@ -1108,9 +1108,9 @@ public class DeviceDetail extends AbstractModel {
     }
 
     /**
-     * Get 绑定账户只有名字
+     * Get 绑定账户名称
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AccountUsers 绑定账户只有名字
+     * @return AccountUsers 绑定账户名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAccountUsers() {
@@ -1118,9 +1118,9 @@ public class DeviceDetail extends AbstractModel {
     }
 
     /**
-     * Set 绑定账户只有名字
+     * Set 绑定账户名称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AccountUsers 绑定账户只有名字
+     * @param AccountUsers 绑定账户名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAccountUsers(String AccountUsers) {

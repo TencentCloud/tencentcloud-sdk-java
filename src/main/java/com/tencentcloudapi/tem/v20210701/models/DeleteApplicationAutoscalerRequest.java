@@ -38,18 +38,18 @@ public class DeleteApplicationAutoscalerRequest extends AbstractModel {
     private String EnvironmentId;
 
     /**
-    * 来源渠道
-    */
-    @SerializedName("SourceChannel")
-    @Expose
-    private Long SourceChannel;
-
-    /**
     * 弹性伸缩策略ID
     */
     @SerializedName("AutoscalerId")
     @Expose
     private String AutoscalerId;
+
+    /**
+    * 来源渠道
+    */
+    @SerializedName("SourceChannel")
+    @Expose
+    private Long SourceChannel;
 
     /**
      * Get 服务id 
@@ -84,22 +84,6 @@ public class DeleteApplicationAutoscalerRequest extends AbstractModel {
     }
 
     /**
-     * Get 来源渠道 
-     * @return SourceChannel 来源渠道
-     */
-    public Long getSourceChannel() {
-        return this.SourceChannel;
-    }
-
-    /**
-     * Set 来源渠道
-     * @param SourceChannel 来源渠道
-     */
-    public void setSourceChannel(Long SourceChannel) {
-        this.SourceChannel = SourceChannel;
-    }
-
-    /**
      * Get 弹性伸缩策略ID 
      * @return AutoscalerId 弹性伸缩策略ID
      */
@@ -113,6 +97,22 @@ public class DeleteApplicationAutoscalerRequest extends AbstractModel {
      */
     public void setAutoscalerId(String AutoscalerId) {
         this.AutoscalerId = AutoscalerId;
+    }
+
+    /**
+     * Get 来源渠道 
+     * @return SourceChannel 来源渠道
+     */
+    public Long getSourceChannel() {
+        return this.SourceChannel;
+    }
+
+    /**
+     * Set 来源渠道
+     * @param SourceChannel 来源渠道
+     */
+    public void setSourceChannel(Long SourceChannel) {
+        this.SourceChannel = SourceChannel;
     }
 
     public DeleteApplicationAutoscalerRequest() {
@@ -129,11 +129,11 @@ public class DeleteApplicationAutoscalerRequest extends AbstractModel {
         if (source.EnvironmentId != null) {
             this.EnvironmentId = new String(source.EnvironmentId);
         }
-        if (source.SourceChannel != null) {
-            this.SourceChannel = new Long(source.SourceChannel);
-        }
         if (source.AutoscalerId != null) {
             this.AutoscalerId = new String(source.AutoscalerId);
+        }
+        if (source.SourceChannel != null) {
+            this.SourceChannel = new Long(source.SourceChannel);
         }
     }
 
@@ -144,8 +144,8 @@ public class DeleteApplicationAutoscalerRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
         this.setParamSimple(map, prefix + "EnvironmentId", this.EnvironmentId);
-        this.setParamSimple(map, prefix + "SourceChannel", this.SourceChannel);
         this.setParamSimple(map, prefix + "AutoscalerId", this.AutoscalerId);
+        this.setParamSimple(map, prefix + "SourceChannel", this.SourceChannel);
 
     }
 }

@@ -32,13 +32,6 @@ public class IngressInfo extends AbstractModel {
     private String EnvironmentId;
 
     /**
-    * 环境namespace
-    */
-    @SerializedName("ClusterNamespace")
-    @Expose
-    private String ClusterNamespace;
-
-    /**
     * ip version
     */
     @SerializedName("AddressIPVersion")
@@ -66,6 +59,13 @@ public class IngressInfo extends AbstractModel {
     @SerializedName("ClbId")
     @Expose
     private String ClbId;
+
+    /**
+    * 环境namespace
+    */
+    @SerializedName("ClusterNamespace")
+    @Expose
+    private String ClusterNamespace;
 
     /**
     * tls 配置
@@ -145,22 +145,6 @@ public class IngressInfo extends AbstractModel {
     }
 
     /**
-     * Get 环境namespace 
-     * @return ClusterNamespace 环境namespace
-     */
-    public String getClusterNamespace() {
-        return this.ClusterNamespace;
-    }
-
-    /**
-     * Set 环境namespace
-     * @param ClusterNamespace 环境namespace
-     */
-    public void setClusterNamespace(String ClusterNamespace) {
-        this.ClusterNamespace = ClusterNamespace;
-    }
-
-    /**
      * Get ip version 
      * @return AddressIPVersion ip version
      */
@@ -226,6 +210,22 @@ public class IngressInfo extends AbstractModel {
      */
     public void setClbId(String ClbId) {
         this.ClbId = ClbId;
+    }
+
+    /**
+     * Get 环境namespace 
+     * @return ClusterNamespace 环境namespace
+     */
+    public String getClusterNamespace() {
+        return this.ClusterNamespace;
+    }
+
+    /**
+     * Set 环境namespace
+     * @param ClusterNamespace 环境namespace
+     */
+    public void setClusterNamespace(String ClusterNamespace) {
+        this.ClusterNamespace = ClusterNamespace;
     }
 
     /**
@@ -383,9 +383,6 @@ public class IngressInfo extends AbstractModel {
         if (source.EnvironmentId != null) {
             this.EnvironmentId = new String(source.EnvironmentId);
         }
-        if (source.ClusterNamespace != null) {
-            this.ClusterNamespace = new String(source.ClusterNamespace);
-        }
         if (source.AddressIPVersion != null) {
             this.AddressIPVersion = new String(source.AddressIPVersion);
         }
@@ -400,6 +397,9 @@ public class IngressInfo extends AbstractModel {
         }
         if (source.ClbId != null) {
             this.ClbId = new String(source.ClbId);
+        }
+        if (source.ClusterNamespace != null) {
+            this.ClusterNamespace = new String(source.ClusterNamespace);
         }
         if (source.Tls != null) {
             this.Tls = new IngressTls[source.Tls.length];
@@ -433,11 +433,11 @@ public class IngressInfo extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EnvironmentId", this.EnvironmentId);
-        this.setParamSimple(map, prefix + "ClusterNamespace", this.ClusterNamespace);
         this.setParamSimple(map, prefix + "AddressIPVersion", this.AddressIPVersion);
         this.setParamSimple(map, prefix + "IngressName", this.IngressName);
         this.setParamArrayObj(map, prefix + "Rules.", this.Rules);
         this.setParamSimple(map, prefix + "ClbId", this.ClbId);
+        this.setParamSimple(map, prefix + "ClusterNamespace", this.ClusterNamespace);
         this.setParamArrayObj(map, prefix + "Tls.", this.Tls);
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "Vip", this.Vip);

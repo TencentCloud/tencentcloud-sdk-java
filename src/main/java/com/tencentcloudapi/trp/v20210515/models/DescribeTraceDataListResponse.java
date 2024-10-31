@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeTraceDataListResponse extends AbstractModel {
 
     /**
-    * 数量
+    * 溯源阶段数量
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 无
+    * 溯源明细
     */
     @SerializedName("TraceDataList")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeTraceDataListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 数量 
-     * @return TotalCount 数量
+     * Get 溯源阶段数量 
+     * @return TotalCount 溯源阶段数量
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 数量
-     * @param TotalCount 数量
+     * Set 溯源阶段数量
+     * @param TotalCount 溯源阶段数量
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 无 
-     * @return TraceDataList 无
+     * Get 溯源明细 
+     * @return TraceDataList 溯源明细
      */
     public TraceData [] getTraceDataList() {
         return this.TraceDataList;
     }
 
     /**
-     * Set 无
-     * @param TraceDataList 无
+     * Set 溯源明细
+     * @param TraceDataList 溯源明细
      */
     public void setTraceDataList(TraceData [] TraceDataList) {
         this.TraceDataList = TraceDataList;

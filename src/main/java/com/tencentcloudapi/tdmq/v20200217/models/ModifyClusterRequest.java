@@ -38,7 +38,7 @@ public class ModifyClusterRequest extends AbstractModel {
     private String ClusterName;
 
     /**
-    * 说明信息。
+    * 说明信息。长度限制为 128 字节
     */
     @SerializedName("Remark")
     @Expose
@@ -84,16 +84,16 @@ public class ModifyClusterRequest extends AbstractModel {
     }
 
     /**
-     * Get 说明信息。 
-     * @return Remark 说明信息。
+     * Get 说明信息。长度限制为 128 字节 
+     * @return Remark 说明信息。长度限制为 128 字节
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set 说明信息。
-     * @param Remark 说明信息。
+     * Set 说明信息。长度限制为 128 字节
+     * @param Remark 说明信息。长度限制为 128 字节
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;

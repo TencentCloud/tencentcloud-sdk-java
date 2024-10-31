@@ -46,7 +46,7 @@ public class RecognizeEncryptedIDCardOCRRequest extends AbstractModel {
     private String ImageBase64;
 
     /**
-    * 图片的 Url 地址。要求图片经Base64编码后不超过 7M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。
+    * 图片的 Url 地址。要求图片经Base64编码后不超过 7M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。图片下载时间不超过 3 秒。
 建议图片存储于腾讯云，可保障更高的下载速度和稳定性。
     */
     @SerializedName("ImageUrl")
@@ -154,9 +154,9 @@ Config = {"CropIdCard":true,"CropPortrait":true}
     }
 
     /**
-     * Get 图片的 Url 地址。要求图片经Base64编码后不超过 7M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。
+     * Get 图片的 Url 地址。要求图片经Base64编码后不超过 7M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。图片下载时间不超过 3 秒。
 建议图片存储于腾讯云，可保障更高的下载速度和稳定性。 
-     * @return ImageUrl 图片的 Url 地址。要求图片经Base64编码后不超过 7M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。
+     * @return ImageUrl 图片的 Url 地址。要求图片经Base64编码后不超过 7M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。图片下载时间不超过 3 秒。
 建议图片存储于腾讯云，可保障更高的下载速度和稳定性。
      */
     public String getImageUrl() {
@@ -164,9 +164,9 @@ Config = {"CropIdCard":true,"CropPortrait":true}
     }
 
     /**
-     * Set 图片的 Url 地址。要求图片经Base64编码后不超过 7M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。
+     * Set 图片的 Url 地址。要求图片经Base64编码后不超过 7M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。图片下载时间不超过 3 秒。
 建议图片存储于腾讯云，可保障更高的下载速度和稳定性。
-     * @param ImageUrl 图片的 Url 地址。要求图片经Base64编码后不超过 7M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。
+     * @param ImageUrl 图片的 Url 地址。要求图片经Base64编码后不超过 7M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。图片下载时间不超过 3 秒。
 建议图片存储于腾讯云，可保障更高的下载速度和稳定性。
      */
     public void setImageUrl(String ImageUrl) {

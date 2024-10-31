@@ -38,18 +38,18 @@ public class CreateApplicationServiceRequest extends AbstractModel {
     private String EnvironmentId;
 
     /**
-    * 来源渠道
-    */
-    @SerializedName("SourceChannel")
-    @Expose
-    private Long SourceChannel;
-
-    /**
     * 访问方式详情
     */
     @SerializedName("Service")
     @Expose
     private ServicePortMapping Service;
+
+    /**
+    * 来源渠道
+    */
+    @SerializedName("SourceChannel")
+    @Expose
+    private Long SourceChannel;
 
     /**
      * Get 服务id 
@@ -84,22 +84,6 @@ public class CreateApplicationServiceRequest extends AbstractModel {
     }
 
     /**
-     * Get 来源渠道 
-     * @return SourceChannel 来源渠道
-     */
-    public Long getSourceChannel() {
-        return this.SourceChannel;
-    }
-
-    /**
-     * Set 来源渠道
-     * @param SourceChannel 来源渠道
-     */
-    public void setSourceChannel(Long SourceChannel) {
-        this.SourceChannel = SourceChannel;
-    }
-
-    /**
      * Get 访问方式详情 
      * @return Service 访问方式详情
      */
@@ -113,6 +97,22 @@ public class CreateApplicationServiceRequest extends AbstractModel {
      */
     public void setService(ServicePortMapping Service) {
         this.Service = Service;
+    }
+
+    /**
+     * Get 来源渠道 
+     * @return SourceChannel 来源渠道
+     */
+    public Long getSourceChannel() {
+        return this.SourceChannel;
+    }
+
+    /**
+     * Set 来源渠道
+     * @param SourceChannel 来源渠道
+     */
+    public void setSourceChannel(Long SourceChannel) {
+        this.SourceChannel = SourceChannel;
     }
 
     public CreateApplicationServiceRequest() {
@@ -129,11 +129,11 @@ public class CreateApplicationServiceRequest extends AbstractModel {
         if (source.EnvironmentId != null) {
             this.EnvironmentId = new String(source.EnvironmentId);
         }
-        if (source.SourceChannel != null) {
-            this.SourceChannel = new Long(source.SourceChannel);
-        }
         if (source.Service != null) {
             this.Service = new ServicePortMapping(source.Service);
+        }
+        if (source.SourceChannel != null) {
+            this.SourceChannel = new Long(source.SourceChannel);
         }
     }
 
@@ -144,8 +144,8 @@ public class CreateApplicationServiceRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
         this.setParamSimple(map, prefix + "EnvironmentId", this.EnvironmentId);
-        this.setParamSimple(map, prefix + "SourceChannel", this.SourceChannel);
         this.setParamObj(map, prefix + "Service.", this.Service);
+        this.setParamSimple(map, prefix + "SourceChannel", this.SourceChannel);
 
     }
 }

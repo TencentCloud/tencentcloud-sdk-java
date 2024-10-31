@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyVirusAutoIsolateExampleSwitchRequest extends AbstractModel {
 
     /**
-    * 文件Md5值
+    * 文件MD5值
     */
     @SerializedName("MD5")
     @Expose
@@ -38,16 +38,16 @@ public class ModifyVirusAutoIsolateExampleSwitchRequest extends AbstractModel {
     private Boolean Status;
 
     /**
-     * Get 文件Md5值 
-     * @return MD5 文件Md5值
+     * Get 文件MD5值 
+     * @return MD5 文件MD5值
      */
     public String getMD5() {
         return this.MD5;
     }
 
     /**
-     * Set 文件Md5值
-     * @param MD5 文件Md5值
+     * Set 文件MD5值
+     * @param MD5 文件MD5值
      */
     public void setMD5(String MD5) {
         this.MD5 = MD5;

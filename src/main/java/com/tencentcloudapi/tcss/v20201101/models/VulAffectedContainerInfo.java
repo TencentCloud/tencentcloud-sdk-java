@@ -122,6 +122,14 @@ public class VulAffectedContainerInfo extends AbstractModel {
     private String NodeName;
 
     /**
+    * 容器状态 "RUNNING":运行,"PAUSED":暂停,"STOPPED":停止,"CREATED":已经创建,"DESTROYED":已销毁,"RESTARTING":重启中,"REMOVING":迁移中,"DEAD":DEAD,"UNKNOWN":未知
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ContainerStatus")
+    @Expose
+    private String ContainerStatus;
+
+    /**
      * Get 内网IP 
      * @return HostIP 内网IP
      */
@@ -345,6 +353,26 @@ public class VulAffectedContainerInfo extends AbstractModel {
         this.NodeName = NodeName;
     }
 
+    /**
+     * Get 容器状态 "RUNNING":运行,"PAUSED":暂停,"STOPPED":停止,"CREATED":已经创建,"DESTROYED":已销毁,"RESTARTING":重启中,"REMOVING":迁移中,"DEAD":DEAD,"UNKNOWN":未知
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ContainerStatus 容器状态 "RUNNING":运行,"PAUSED":暂停,"STOPPED":停止,"CREATED":已经创建,"DESTROYED":已销毁,"RESTARTING":重启中,"REMOVING":迁移中,"DEAD":DEAD,"UNKNOWN":未知
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getContainerStatus() {
+        return this.ContainerStatus;
+    }
+
+    /**
+     * Set 容器状态 "RUNNING":运行,"PAUSED":暂停,"STOPPED":停止,"CREATED":已经创建,"DESTROYED":已销毁,"RESTARTING":重启中,"REMOVING":迁移中,"DEAD":DEAD,"UNKNOWN":未知
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ContainerStatus 容器状态 "RUNNING":运行,"PAUSED":暂停,"STOPPED":停止,"CREATED":已经创建,"DESTROYED":已销毁,"RESTARTING":重启中,"REMOVING":迁移中,"DEAD":DEAD,"UNKNOWN":未知
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setContainerStatus(String ContainerStatus) {
+        this.ContainerStatus = ContainerStatus;
+    }
+
     public VulAffectedContainerInfo() {
     }
 
@@ -395,6 +423,9 @@ public class VulAffectedContainerInfo extends AbstractModel {
         if (source.NodeName != null) {
             this.NodeName = new String(source.NodeName);
         }
+        if (source.ContainerStatus != null) {
+            this.ContainerStatus = new String(source.ContainerStatus);
+        }
     }
 
 
@@ -416,6 +447,7 @@ public class VulAffectedContainerInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "NodeUniqueID", this.NodeUniqueID);
         this.setParamSimple(map, prefix + "NodeID", this.NodeID);
         this.setParamSimple(map, prefix + "NodeName", this.NodeName);
+        this.setParamSimple(map, prefix + "ContainerStatus", this.ContainerStatus);
 
     }
 }

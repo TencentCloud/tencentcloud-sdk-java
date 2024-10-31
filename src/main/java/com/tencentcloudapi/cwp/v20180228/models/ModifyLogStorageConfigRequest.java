@@ -38,11 +38,18 @@ public class ModifyLogStorageConfigRequest extends AbstractModel {
     private String [] Type;
 
     /**
-    * 日志存储天数，3640表示不限
+    * 日志存储时长，3640表示不限
     */
     @SerializedName("Period")
     @Expose
     private Long Period;
+
+    /**
+    * 日志存储时长单位，年year/月month/天day
+    */
+    @SerializedName("Granularity")
+    @Expose
+    private String Granularity;
 
     /**
      * Get 是否修改有效期 
@@ -77,19 +84,35 @@ public class ModifyLogStorageConfigRequest extends AbstractModel {
     }
 
     /**
-     * Get 日志存储天数，3640表示不限 
-     * @return Period 日志存储天数，3640表示不限
+     * Get 日志存储时长，3640表示不限 
+     * @return Period 日志存储时长，3640表示不限
      */
     public Long getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set 日志存储天数，3640表示不限
-     * @param Period 日志存储天数，3640表示不限
+     * Set 日志存储时长，3640表示不限
+     * @param Period 日志存储时长，3640表示不限
      */
     public void setPeriod(Long Period) {
         this.Period = Period;
+    }
+
+    /**
+     * Get 日志存储时长单位，年year/月month/天day 
+     * @return Granularity 日志存储时长单位，年year/月month/天day
+     */
+    public String getGranularity() {
+        return this.Granularity;
+    }
+
+    /**
+     * Set 日志存储时长单位，年year/月month/天day
+     * @param Granularity 日志存储时长单位，年year/月month/天day
+     */
+    public void setGranularity(String Granularity) {
+        this.Granularity = Granularity;
     }
 
     public ModifyLogStorageConfigRequest() {
@@ -112,6 +135,9 @@ public class ModifyLogStorageConfigRequest extends AbstractModel {
         if (source.Period != null) {
             this.Period = new Long(source.Period);
         }
+        if (source.Granularity != null) {
+            this.Granularity = new String(source.Granularity);
+        }
     }
 
 
@@ -122,6 +148,7 @@ public class ModifyLogStorageConfigRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "IsModifyPeriod", this.IsModifyPeriod);
         this.setParamArraySimple(map, prefix + "Type.", this.Type);
         this.setParamSimple(map, prefix + "Period", this.Period);
+        this.setParamSimple(map, prefix + "Granularity", this.Granularity);
 
     }
 }

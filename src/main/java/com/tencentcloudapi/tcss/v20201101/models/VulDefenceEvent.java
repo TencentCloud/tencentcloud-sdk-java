@@ -248,6 +248,20 @@ public class VulDefenceEvent extends AbstractModel {
     private String ClusterName;
 
     /**
+    * pod名称
+    */
+    @SerializedName("PodName")
+    @Expose
+    private String PodName;
+
+    /**
+    * pod ip
+    */
+    @SerializedName("PodIP")
+    @Expose
+    private String PodIP;
+
+    /**
      * Get 漏洞CVEID 
      * @return CVEID 漏洞CVEID
      */
@@ -807,6 +821,38 @@ public class VulDefenceEvent extends AbstractModel {
         this.ClusterName = ClusterName;
     }
 
+    /**
+     * Get pod名称 
+     * @return PodName pod名称
+     */
+    public String getPodName() {
+        return this.PodName;
+    }
+
+    /**
+     * Set pod名称
+     * @param PodName pod名称
+     */
+    public void setPodName(String PodName) {
+        this.PodName = PodName;
+    }
+
+    /**
+     * Get pod ip 
+     * @return PodIP pod ip
+     */
+    public String getPodIP() {
+        return this.PodIP;
+    }
+
+    /**
+     * Set pod ip
+     * @param PodIP pod ip
+     */
+    public void setPodIP(String PodIP) {
+        this.PodIP = PodIP;
+    }
+
     public VulDefenceEvent() {
     }
 
@@ -899,6 +945,12 @@ public class VulDefenceEvent extends AbstractModel {
         if (source.ClusterName != null) {
             this.ClusterName = new String(source.ClusterName);
         }
+        if (source.PodName != null) {
+            this.PodName = new String(source.PodName);
+        }
+        if (source.PodIP != null) {
+            this.PodIP = new String(source.PodIP);
+        }
     }
 
 
@@ -934,6 +986,8 @@ public class VulDefenceEvent extends AbstractModel {
         this.setParamSimple(map, prefix + "NodeID", this.NodeID);
         this.setParamSimple(map, prefix + "ClusterID", this.ClusterID);
         this.setParamSimple(map, prefix + "ClusterName", this.ClusterName);
+        this.setParamSimple(map, prefix + "PodName", this.PodName);
+        this.setParamSimple(map, prefix + "PodIP", this.PodIP);
 
     }
 }

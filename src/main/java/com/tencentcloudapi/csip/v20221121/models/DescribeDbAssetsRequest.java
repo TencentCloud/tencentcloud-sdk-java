@@ -31,7 +31,7 @@ public class DescribeDbAssetsRequest extends AbstractModel {
     private String [] MemberId;
 
     /**
-    * -
+    * 过滤器参数
     */
     @SerializedName("Filter")
     @Expose
@@ -61,16 +61,16 @@ public class DescribeDbAssetsRequest extends AbstractModel {
     }
 
     /**
-     * Get - 
-     * @return Filter -
+     * Get 过滤器参数 
+     * @return Filter 过滤器参数
      */
     public Filter getFilter() {
         return this.Filter;
     }
 
     /**
-     * Set -
-     * @param Filter -
+     * Set 过滤器参数
+     * @param Filter 过滤器参数
      */
     public void setFilter(Filter Filter) {
         this.Filter = Filter;

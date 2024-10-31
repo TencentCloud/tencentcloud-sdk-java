@@ -24,161 +24,161 @@ import java.util.HashMap;
 public class SubmitTaskEventRequest extends AbstractModel {
 
     /**
-    * 用户ID
+    * 用户唯一标识，最大长度为64
     */
     @SerializedName("AccountId")
     @Expose
     private String AccountId;
 
     /**
-    * 设备ID
+    * 用户设备ID，最大长度为64
     */
     @SerializedName("DeviceId")
     @Expose
     private String DeviceId;
 
     /**
-    * 订单ID
+    * 任务的唯一订单号，只能是数字、大小写字母，且在同一个产品ID下唯一，最大长度为64
     */
     @SerializedName("OrderId")
     @Expose
     private String OrderId;
 
     /**
-    * 任务事件Code
+    * 任务事件Code，在腾讯安心用户运营平台下的任务事件列表中设置并获取
     */
     @SerializedName("Code")
     @Expose
     private String Code;
 
     /**
-    * 同步异步方式：0为同步、1位异步
+    * 任务结果是否异步通知。0表示任务结果在返回信息中同步返回；1表示任务结果通过回调结果异步通知。
     */
     @SerializedName("Async")
     @Expose
     private Long Async;
 
     /**
-    * 产品ID
+    * 产品ID，可在腾讯安心用户运营平台的企业管理中获取
     */
     @SerializedName("ProductId")
     @Expose
     private Long ProductId;
 
     /**
-    * 回调地址
+    * 异步接收任务结果通知的回调地址。在Async为1的时候，会将任务结果通过该回调地址进行通知。
     */
     @SerializedName("NotifyURL")
     @Expose
     private String NotifyURL;
 
     /**
-     * Get 用户ID 
-     * @return AccountId 用户ID
+     * Get 用户唯一标识，最大长度为64 
+     * @return AccountId 用户唯一标识，最大长度为64
      */
     public String getAccountId() {
         return this.AccountId;
     }
 
     /**
-     * Set 用户ID
-     * @param AccountId 用户ID
+     * Set 用户唯一标识，最大长度为64
+     * @param AccountId 用户唯一标识，最大长度为64
      */
     public void setAccountId(String AccountId) {
         this.AccountId = AccountId;
     }
 
     /**
-     * Get 设备ID 
-     * @return DeviceId 设备ID
+     * Get 用户设备ID，最大长度为64 
+     * @return DeviceId 用户设备ID，最大长度为64
      */
     public String getDeviceId() {
         return this.DeviceId;
     }
 
     /**
-     * Set 设备ID
-     * @param DeviceId 设备ID
+     * Set 用户设备ID，最大长度为64
+     * @param DeviceId 用户设备ID，最大长度为64
      */
     public void setDeviceId(String DeviceId) {
         this.DeviceId = DeviceId;
     }
 
     /**
-     * Get 订单ID 
-     * @return OrderId 订单ID
+     * Get 任务的唯一订单号，只能是数字、大小写字母，且在同一个产品ID下唯一，最大长度为64 
+     * @return OrderId 任务的唯一订单号，只能是数字、大小写字母，且在同一个产品ID下唯一，最大长度为64
      */
     public String getOrderId() {
         return this.OrderId;
     }
 
     /**
-     * Set 订单ID
-     * @param OrderId 订单ID
+     * Set 任务的唯一订单号，只能是数字、大小写字母，且在同一个产品ID下唯一，最大长度为64
+     * @param OrderId 任务的唯一订单号，只能是数字、大小写字母，且在同一个产品ID下唯一，最大长度为64
      */
     public void setOrderId(String OrderId) {
         this.OrderId = OrderId;
     }
 
     /**
-     * Get 任务事件Code 
-     * @return Code 任务事件Code
+     * Get 任务事件Code，在腾讯安心用户运营平台下的任务事件列表中设置并获取 
+     * @return Code 任务事件Code，在腾讯安心用户运营平台下的任务事件列表中设置并获取
      */
     public String getCode() {
         return this.Code;
     }
 
     /**
-     * Set 任务事件Code
-     * @param Code 任务事件Code
+     * Set 任务事件Code，在腾讯安心用户运营平台下的任务事件列表中设置并获取
+     * @param Code 任务事件Code，在腾讯安心用户运营平台下的任务事件列表中设置并获取
      */
     public void setCode(String Code) {
         this.Code = Code;
     }
 
     /**
-     * Get 同步异步方式：0为同步、1位异步 
-     * @return Async 同步异步方式：0为同步、1位异步
+     * Get 任务结果是否异步通知。0表示任务结果在返回信息中同步返回；1表示任务结果通过回调结果异步通知。 
+     * @return Async 任务结果是否异步通知。0表示任务结果在返回信息中同步返回；1表示任务结果通过回调结果异步通知。
      */
     public Long getAsync() {
         return this.Async;
     }
 
     /**
-     * Set 同步异步方式：0为同步、1位异步
-     * @param Async 同步异步方式：0为同步、1位异步
+     * Set 任务结果是否异步通知。0表示任务结果在返回信息中同步返回；1表示任务结果通过回调结果异步通知。
+     * @param Async 任务结果是否异步通知。0表示任务结果在返回信息中同步返回；1表示任务结果通过回调结果异步通知。
      */
     public void setAsync(Long Async) {
         this.Async = Async;
     }
 
     /**
-     * Get 产品ID 
-     * @return ProductId 产品ID
+     * Get 产品ID，可在腾讯安心用户运营平台的企业管理中获取 
+     * @return ProductId 产品ID，可在腾讯安心用户运营平台的企业管理中获取
      */
     public Long getProductId() {
         return this.ProductId;
     }
 
     /**
-     * Set 产品ID
-     * @param ProductId 产品ID
+     * Set 产品ID，可在腾讯安心用户运营平台的企业管理中获取
+     * @param ProductId 产品ID，可在腾讯安心用户运营平台的企业管理中获取
      */
     public void setProductId(Long ProductId) {
         this.ProductId = ProductId;
     }
 
     /**
-     * Get 回调地址 
-     * @return NotifyURL 回调地址
+     * Get 异步接收任务结果通知的回调地址。在Async为1的时候，会将任务结果通过该回调地址进行通知。 
+     * @return NotifyURL 异步接收任务结果通知的回调地址。在Async为1的时候，会将任务结果通过该回调地址进行通知。
      */
     public String getNotifyURL() {
         return this.NotifyURL;
     }
 
     /**
-     * Set 回调地址
-     * @param NotifyURL 回调地址
+     * Set 异步接收任务结果通知的回调地址。在Async为1的时候，会将任务结果通过该回调地址进行通知。
+     * @param NotifyURL 异步接收任务结果通知的回调地址。在Async为1的时候，会将任务结果通过该回调地址进行通知。
      */
     public void setNotifyURL(String NotifyURL) {
         this.NotifyURL = NotifyURL;

@@ -186,7 +186,7 @@ public class JavaMemShellDetail extends AbstractModel {
     private MachineExtraInfo MachineExtraInfo;
 
     /**
-    * 实例状态：RUNNING,STOPPED,SHUTDOWN...
+    * agent状态：OFFLINE,ONLINE
     */
     @SerializedName("MachineState")
     @Expose
@@ -565,16 +565,16 @@ public class JavaMemShellDetail extends AbstractModel {
     }
 
     /**
-     * Get 实例状态：RUNNING,STOPPED,SHUTDOWN... 
-     * @return MachineState 实例状态：RUNNING,STOPPED,SHUTDOWN...
+     * Get agent状态：OFFLINE,ONLINE 
+     * @return MachineState agent状态：OFFLINE,ONLINE
      */
     public String getMachineState() {
         return this.MachineState;
     }
 
     /**
-     * Set 实例状态：RUNNING,STOPPED,SHUTDOWN...
-     * @param MachineState 实例状态：RUNNING,STOPPED,SHUTDOWN...
+     * Set agent状态：OFFLINE,ONLINE
+     * @param MachineState agent状态：OFFLINE,ONLINE
      */
     public void setMachineState(String MachineState) {
         this.MachineState = MachineState;
