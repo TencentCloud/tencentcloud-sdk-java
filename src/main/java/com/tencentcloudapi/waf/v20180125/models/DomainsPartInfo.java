@@ -249,7 +249,6 @@ https：使用https协议回源
     * 是否开启主动健康检测。
 0：不开启
 1：开启
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ActiveCheck")
     @Expose
@@ -257,7 +256,6 @@ https：使用https协议回源
 
     /**
     * TLS版本信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TLSVersion")
     @Expose
@@ -265,7 +263,6 @@ https：使用https协议回源
 
     /**
     * 自定义的加密套件列表。CipherTemplate为3时需要填此字段，表示自定义的加密套件，值通过DescribeCiphersDetail接口获取。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Ciphers")
     @Expose
@@ -277,7 +274,6 @@ https：使用https协议回源
 1：通用型模板 
 2：安全型模板
 3：自定义模板
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CipherTemplate")
     @Expose
@@ -285,7 +281,6 @@ https：使用https协议回源
 
     /**
     * WAF与源站的读超时时间，默认300s。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProxyReadTimeout")
     @Expose
@@ -293,7 +288,6 @@ https：使用https协议回源
 
     /**
     * WAF与源站的写超时时间，默认300s。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProxySendTimeout")
     @Expose
@@ -305,7 +299,6 @@ https：使用https协议回源
 1：开启SNI，client_hello中的server_name为防护域名
 2：开启SNI，SNI为域名回源时的源站域名
 3：开启SNI，SNI为自定义域名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SniType")
     @Expose
@@ -313,7 +306,6 @@ https：使用https协议回源
 
     /**
     * SniType为3时，需要填此参数，表示自定义的SNI；
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SniHost")
     @Expose
@@ -321,7 +313,6 @@ https：使用https协议回源
 
     /**
     * 回源IP权重
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Weights")
     @Expose
@@ -329,7 +320,6 @@ https：使用https协议回源
 
     /**
     * IsCdn=3时，表示自定义header
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IpHeaders")
     @Expose
@@ -339,7 +329,6 @@ https：使用https协议回源
     * 是否开启XFF重置。
 0：关闭
 1：开启
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("XFFReset")
     @Expose
@@ -347,7 +336,6 @@ https：使用https协议回源
 
     /**
     * 域名备注信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Note")
     @Expose
@@ -355,7 +343,6 @@ https：使用https协议回源
 
     /**
     * 自定义回源Host。默认为空字符串，表示使用防护域名作为回源Host。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpstreamHost")
     @Expose
@@ -363,7 +350,6 @@ https：使用https协议回源
 
     /**
     * 防护规则
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Level")
     @Expose
@@ -371,7 +357,6 @@ https：使用https协议回源
 
     /**
     * 是否开启缓存 0-关闭 1-开启
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProxyBuffer")
     @Expose
@@ -379,7 +364,6 @@ https：使用https协议回源
 
     /**
     * 国密选项。0：不开启国密 1：在原有TLS选项的基础上追加支持国密 2：开启国密并仅支持国密客户端访问
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GmType")
     @Expose
@@ -387,7 +371,6 @@ https：使用https协议回源
 
     /**
     * 国密证书类型。0：无国密证书 1：证书来源为自有国密证书 2：证书来源为托管国密证书
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GmCertType")
     @Expose
@@ -395,7 +378,6 @@ https：使用https协议回源
 
     /**
     * GmCertType为1时，需要填充此参数，表示自有国密证书的证书链
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GmCert")
     @Expose
@@ -403,7 +385,6 @@ https：使用https协议回源
 
     /**
     * GmCertType为1时，需要填充此参数，表示自有国密证书的私钥
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GmPrivateKey")
     @Expose
@@ -411,7 +392,6 @@ https：使用https协议回源
 
     /**
     * GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GmEncCert")
     @Expose
@@ -419,7 +399,6 @@ https：使用https协议回源
 
     /**
     * GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书的私钥
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GmEncPrivateKey")
     @Expose
@@ -427,7 +406,6 @@ https：使用https协议回源
 
     /**
     * GmCertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GmSSLId")
     @Expose
@@ -435,7 +413,6 @@ https：使用https协议回源
 
     /**
     * 域名标签
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Labels")
     @Expose
@@ -1008,12 +985,10 @@ https：使用https协议回源
     /**
      * Get 是否开启主动健康检测。
 0：不开启
-1：开启
-注意：此字段可能返回 null，表示取不到有效值。 
+1：开启 
      * @return ActiveCheck 是否开启主动健康检测。
 0：不开启
 1：开启
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getActiveCheck() {
         return this.ActiveCheck;
@@ -1023,21 +998,17 @@ https：使用https协议回源
      * Set 是否开启主动健康检测。
 0：不开启
 1：开启
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ActiveCheck 是否开启主动健康检测。
 0：不开启
 1：开启
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setActiveCheck(Long ActiveCheck) {
         this.ActiveCheck = ActiveCheck;
     }
 
     /**
-     * Get TLS版本信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get TLS版本信息 
      * @return TLSVersion TLS版本信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTLSVersion() {
         return this.TLSVersion;
@@ -1045,19 +1016,15 @@ https：使用https协议回源
 
     /**
      * Set TLS版本信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TLSVersion TLS版本信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTLSVersion(Long TLSVersion) {
         this.TLSVersion = TLSVersion;
     }
 
     /**
-     * Get 自定义的加密套件列表。CipherTemplate为3时需要填此字段，表示自定义的加密套件，值通过DescribeCiphersDetail接口获取。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 自定义的加密套件列表。CipherTemplate为3时需要填此字段，表示自定义的加密套件，值通过DescribeCiphersDetail接口获取。 
      * @return Ciphers 自定义的加密套件列表。CipherTemplate为3时需要填此字段，表示自定义的加密套件，值通过DescribeCiphersDetail接口获取。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long [] getCiphers() {
         return this.Ciphers;
@@ -1065,9 +1032,7 @@ https：使用https协议回源
 
     /**
      * Set 自定义的加密套件列表。CipherTemplate为3时需要填此字段，表示自定义的加密套件，值通过DescribeCiphersDetail接口获取。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Ciphers 自定义的加密套件列表。CipherTemplate为3时需要填此字段，表示自定义的加密套件，值通过DescribeCiphersDetail接口获取。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCiphers(Long [] Ciphers) {
         this.Ciphers = Ciphers;
@@ -1078,14 +1043,12 @@ https：使用https协议回源
 0：不支持选择，使用默认模板  
 1：通用型模板 
 2：安全型模板
-3：自定义模板
-注意：此字段可能返回 null，表示取不到有效值。 
+3：自定义模板 
      * @return CipherTemplate 加密套件模板。
 0：不支持选择，使用默认模板  
 1：通用型模板 
 2：安全型模板
 3：自定义模板
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCipherTemplate() {
         return this.CipherTemplate;
@@ -1097,23 +1060,19 @@ https：使用https协议回源
 1：通用型模板 
 2：安全型模板
 3：自定义模板
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CipherTemplate 加密套件模板。
 0：不支持选择，使用默认模板  
 1：通用型模板 
 2：安全型模板
 3：自定义模板
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCipherTemplate(Long CipherTemplate) {
         this.CipherTemplate = CipherTemplate;
     }
 
     /**
-     * Get WAF与源站的读超时时间，默认300s。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get WAF与源站的读超时时间，默认300s。 
      * @return ProxyReadTimeout WAF与源站的读超时时间，默认300s。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getProxyReadTimeout() {
         return this.ProxyReadTimeout;
@@ -1121,19 +1080,15 @@ https：使用https协议回源
 
     /**
      * Set WAF与源站的读超时时间，默认300s。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProxyReadTimeout WAF与源站的读超时时间，默认300s。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProxyReadTimeout(Long ProxyReadTimeout) {
         this.ProxyReadTimeout = ProxyReadTimeout;
     }
 
     /**
-     * Get WAF与源站的写超时时间，默认300s。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get WAF与源站的写超时时间，默认300s。 
      * @return ProxySendTimeout WAF与源站的写超时时间，默认300s。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getProxySendTimeout() {
         return this.ProxySendTimeout;
@@ -1141,9 +1096,7 @@ https：使用https协议回源
 
     /**
      * Set WAF与源站的写超时时间，默认300s。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProxySendTimeout WAF与源站的写超时时间，默认300s。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProxySendTimeout(Long ProxySendTimeout) {
         this.ProxySendTimeout = ProxySendTimeout;
@@ -1154,14 +1107,12 @@ https：使用https协议回源
 0：关闭SNI，不配置client_hello中的server_name
 1：开启SNI，client_hello中的server_name为防护域名
 2：开启SNI，SNI为域名回源时的源站域名
-3：开启SNI，SNI为自定义域名
-注意：此字段可能返回 null，表示取不到有效值。 
+3：开启SNI，SNI为自定义域名 
      * @return SniType WAF回源时的SNI类型。
 0：关闭SNI，不配置client_hello中的server_name
 1：开启SNI，client_hello中的server_name为防护域名
 2：开启SNI，SNI为域名回源时的源站域名
 3：开启SNI，SNI为自定义域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSniType() {
         return this.SniType;
@@ -1173,23 +1124,19 @@ https：使用https协议回源
 1：开启SNI，client_hello中的server_name为防护域名
 2：开启SNI，SNI为域名回源时的源站域名
 3：开启SNI，SNI为自定义域名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SniType WAF回源时的SNI类型。
 0：关闭SNI，不配置client_hello中的server_name
 1：开启SNI，client_hello中的server_name为防护域名
 2：开启SNI，SNI为域名回源时的源站域名
 3：开启SNI，SNI为自定义域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSniType(Long SniType) {
         this.SniType = SniType;
     }
 
     /**
-     * Get SniType为3时，需要填此参数，表示自定义的SNI；
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get SniType为3时，需要填此参数，表示自定义的SNI； 
      * @return SniHost SniType为3时，需要填此参数，表示自定义的SNI；
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSniHost() {
         return this.SniHost;
@@ -1197,19 +1144,15 @@ https：使用https协议回源
 
     /**
      * Set SniType为3时，需要填此参数，表示自定义的SNI；
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SniHost SniType为3时，需要填此参数，表示自定义的SNI；
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSniHost(String SniHost) {
         this.SniHost = SniHost;
     }
 
     /**
-     * Get 回源IP权重
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 回源IP权重 
      * @return Weights 回源IP权重
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getWeights() {
         return this.Weights;
@@ -1217,19 +1160,15 @@ https：使用https协议回源
 
     /**
      * Set 回源IP权重
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Weights 回源IP权重
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWeights(String [] Weights) {
         this.Weights = Weights;
     }
 
     /**
-     * Get IsCdn=3时，表示自定义header
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get IsCdn=3时，表示自定义header 
      * @return IpHeaders IsCdn=3时，表示自定义header
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getIpHeaders() {
         return this.IpHeaders;
@@ -1237,9 +1176,7 @@ https：使用https协议回源
 
     /**
      * Set IsCdn=3时，表示自定义header
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IpHeaders IsCdn=3时，表示自定义header
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIpHeaders(String [] IpHeaders) {
         this.IpHeaders = IpHeaders;
@@ -1248,12 +1185,10 @@ https：使用https协议回源
     /**
      * Get 是否开启XFF重置。
 0：关闭
-1：开启
-注意：此字段可能返回 null，表示取不到有效值。 
+1：开启 
      * @return XFFReset 是否开启XFF重置。
 0：关闭
 1：开启
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getXFFReset() {
         return this.XFFReset;
@@ -1263,21 +1198,17 @@ https：使用https协议回源
      * Set 是否开启XFF重置。
 0：关闭
 1：开启
-注意：此字段可能返回 null，表示取不到有效值。
      * @param XFFReset 是否开启XFF重置。
 0：关闭
 1：开启
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setXFFReset(Long XFFReset) {
         this.XFFReset = XFFReset;
     }
 
     /**
-     * Get 域名备注信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 域名备注信息 
      * @return Note 域名备注信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNote() {
         return this.Note;
@@ -1285,19 +1216,15 @@ https：使用https协议回源
 
     /**
      * Set 域名备注信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Note 域名备注信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNote(String Note) {
         this.Note = Note;
     }
 
     /**
-     * Get 自定义回源Host。默认为空字符串，表示使用防护域名作为回源Host。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 自定义回源Host。默认为空字符串，表示使用防护域名作为回源Host。 
      * @return UpstreamHost 自定义回源Host。默认为空字符串，表示使用防护域名作为回源Host。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpstreamHost() {
         return this.UpstreamHost;
@@ -1305,19 +1232,15 @@ https：使用https协议回源
 
     /**
      * Set 自定义回源Host。默认为空字符串，表示使用防护域名作为回源Host。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpstreamHost 自定义回源Host。默认为空字符串，表示使用防护域名作为回源Host。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpstreamHost(String UpstreamHost) {
         this.UpstreamHost = UpstreamHost;
     }
 
     /**
-     * Get 防护规则
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 防护规则 
      * @return Level 防护规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLevel() {
         return this.Level;
@@ -1325,19 +1248,15 @@ https：使用https协议回源
 
     /**
      * Set 防护规则
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Level 防护规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLevel(String Level) {
         this.Level = Level;
     }
 
     /**
-     * Get 是否开启缓存 0-关闭 1-开启
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否开启缓存 0-关闭 1-开启 
      * @return ProxyBuffer 是否开启缓存 0-关闭 1-开启
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getProxyBuffer() {
         return this.ProxyBuffer;
@@ -1345,19 +1264,15 @@ https：使用https协议回源
 
     /**
      * Set 是否开启缓存 0-关闭 1-开启
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProxyBuffer 是否开启缓存 0-关闭 1-开启
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProxyBuffer(Long ProxyBuffer) {
         this.ProxyBuffer = ProxyBuffer;
     }
 
     /**
-     * Get 国密选项。0：不开启国密 1：在原有TLS选项的基础上追加支持国密 2：开启国密并仅支持国密客户端访问
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 国密选项。0：不开启国密 1：在原有TLS选项的基础上追加支持国密 2：开启国密并仅支持国密客户端访问 
      * @return GmType 国密选项。0：不开启国密 1：在原有TLS选项的基础上追加支持国密 2：开启国密并仅支持国密客户端访问
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getGmType() {
         return this.GmType;
@@ -1365,19 +1280,15 @@ https：使用https协议回源
 
     /**
      * Set 国密选项。0：不开启国密 1：在原有TLS选项的基础上追加支持国密 2：开启国密并仅支持国密客户端访问
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GmType 国密选项。0：不开启国密 1：在原有TLS选项的基础上追加支持国密 2：开启国密并仅支持国密客户端访问
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGmType(Long GmType) {
         this.GmType = GmType;
     }
 
     /**
-     * Get 国密证书类型。0：无国密证书 1：证书来源为自有国密证书 2：证书来源为托管国密证书
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 国密证书类型。0：无国密证书 1：证书来源为自有国密证书 2：证书来源为托管国密证书 
      * @return GmCertType 国密证书类型。0：无国密证书 1：证书来源为自有国密证书 2：证书来源为托管国密证书
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getGmCertType() {
         return this.GmCertType;
@@ -1385,19 +1296,15 @@ https：使用https协议回源
 
     /**
      * Set 国密证书类型。0：无国密证书 1：证书来源为自有国密证书 2：证书来源为托管国密证书
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GmCertType 国密证书类型。0：无国密证书 1：证书来源为自有国密证书 2：证书来源为托管国密证书
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGmCertType(Long GmCertType) {
         this.GmCertType = GmCertType;
     }
 
     /**
-     * Get GmCertType为1时，需要填充此参数，表示自有国密证书的证书链
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get GmCertType为1时，需要填充此参数，表示自有国密证书的证书链 
      * @return GmCert GmCertType为1时，需要填充此参数，表示自有国密证书的证书链
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGmCert() {
         return this.GmCert;
@@ -1405,19 +1312,15 @@ https：使用https协议回源
 
     /**
      * Set GmCertType为1时，需要填充此参数，表示自有国密证书的证书链
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GmCert GmCertType为1时，需要填充此参数，表示自有国密证书的证书链
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGmCert(String GmCert) {
         this.GmCert = GmCert;
     }
 
     /**
-     * Get GmCertType为1时，需要填充此参数，表示自有国密证书的私钥
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get GmCertType为1时，需要填充此参数，表示自有国密证书的私钥 
      * @return GmPrivateKey GmCertType为1时，需要填充此参数，表示自有国密证书的私钥
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGmPrivateKey() {
         return this.GmPrivateKey;
@@ -1425,19 +1328,15 @@ https：使用https协议回源
 
     /**
      * Set GmCertType为1时，需要填充此参数，表示自有国密证书的私钥
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GmPrivateKey GmCertType为1时，需要填充此参数，表示自有国密证书的私钥
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGmPrivateKey(String GmPrivateKey) {
         this.GmPrivateKey = GmPrivateKey;
     }
 
     /**
-     * Get GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书 
      * @return GmEncCert GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGmEncCert() {
         return this.GmEncCert;
@@ -1445,19 +1344,15 @@ https：使用https协议回源
 
     /**
      * Set GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GmEncCert GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGmEncCert(String GmEncCert) {
         this.GmEncCert = GmEncCert;
     }
 
     /**
-     * Get GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书的私钥
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书的私钥 
      * @return GmEncPrivateKey GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书的私钥
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGmEncPrivateKey() {
         return this.GmEncPrivateKey;
@@ -1465,19 +1360,15 @@ https：使用https协议回源
 
     /**
      * Set GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书的私钥
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GmEncPrivateKey GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书的私钥
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGmEncPrivateKey(String GmEncPrivateKey) {
         this.GmEncPrivateKey = GmEncPrivateKey;
     }
 
     /**
-     * Get GmCertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get GmCertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id 
      * @return GmSSLId GmCertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGmSSLId() {
         return this.GmSSLId;
@@ -1485,19 +1376,15 @@ https：使用https协议回源
 
     /**
      * Set GmCertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GmSSLId GmCertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGmSSLId(String GmSSLId) {
         this.GmSSLId = GmSSLId;
     }
 
     /**
-     * Get 域名标签
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 域名标签 
      * @return Labels 域名标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getLabels() {
         return this.Labels;
@@ -1505,9 +1392,7 @@ https：使用https协议回源
 
     /**
      * Set 域名标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Labels 域名标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLabels(String [] Labels) {
         this.Labels = Labels;

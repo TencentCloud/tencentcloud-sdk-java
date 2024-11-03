@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class SpartaProtectionPort extends AbstractModel {
 
     /**
-    * nginx Id
+    * 分配的服务器id
     */
     @SerializedName("NginxServerId")
     @Expose
@@ -59,16 +59,16 @@ public class SpartaProtectionPort extends AbstractModel {
     private String UpstreamProtocol;
 
     /**
-     * Get nginx Id 
-     * @return NginxServerId nginx Id
+     * Get 分配的服务器id 
+     * @return NginxServerId 分配的服务器id
      */
     public Long getNginxServerId() {
         return this.NginxServerId;
     }
 
     /**
-     * Set nginx Id
-     * @param NginxServerId nginx Id
+     * Set 分配的服务器id
+     * @param NginxServerId 分配的服务器id
      */
     public void setNginxServerId(Long NginxServerId) {
         this.NginxServerId = NginxServerId;

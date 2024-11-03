@@ -25,7 +25,6 @@ public class ClbWafRegionItem extends AbstractModel {
 
     /**
     * 地域ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
     @Expose
@@ -33,7 +32,6 @@ public class ClbWafRegionItem extends AbstractModel {
 
     /**
     * 地域中文说明
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Text")
     @Expose
@@ -41,7 +39,6 @@ public class ClbWafRegionItem extends AbstractModel {
 
     /**
     * 地域英文全拼
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Value")
     @Expose
@@ -49,17 +46,14 @@ public class ClbWafRegionItem extends AbstractModel {
 
     /**
     * 地域编码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Code")
     @Expose
     private String Code;
 
     /**
-     * Get 地域ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地域ID 
      * @return Id 地域ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getId() {
         return this.Id;
@@ -67,19 +61,15 @@ public class ClbWafRegionItem extends AbstractModel {
 
     /**
      * Set 地域ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Id 地域ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 地域中文说明
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地域中文说明 
      * @return Text 地域中文说明
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getText() {
         return this.Text;
@@ -87,19 +77,15 @@ public class ClbWafRegionItem extends AbstractModel {
 
     /**
      * Set 地域中文说明
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Text 地域中文说明
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setText(String Text) {
         this.Text = Text;
     }
 
     /**
-     * Get 地域英文全拼
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地域英文全拼 
      * @return Value 地域英文全拼
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getValue() {
         return this.Value;
@@ -107,19 +93,15 @@ public class ClbWafRegionItem extends AbstractModel {
 
     /**
      * Set 地域英文全拼
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Value 地域英文全拼
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValue(String Value) {
         this.Value = Value;
     }
 
     /**
-     * Get 地域编码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地域编码 
      * @return Code 地域编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCode() {
         return this.Code;
@@ -127,9 +109,7 @@ public class ClbWafRegionItem extends AbstractModel {
 
     /**
      * Set 地域编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Code 地域编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCode(String Code) {
         this.Code = Code;

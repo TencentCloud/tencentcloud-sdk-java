@@ -270,19 +270,6 @@ public class WafClient extends AbstractClient{
     }
 
     /**
-     *废弃接口，无有效调用
-
-删除访问日志下载记录
-     * @param req DeleteDownloadRecordRequest
-     * @return DeleteDownloadRecordResponse
-     * @throws TencentCloudSDKException
-     */
-    public DeleteDownloadRecordResponse DeleteDownloadRecord(DeleteDownloadRecordRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DeleteDownloadRecord", DeleteDownloadRecordResponse.class);
-    }
-
-    /**
      *删除负载均衡型域名，支持批量操作。
      * @param req DeleteHostRequest
      * @return DeleteHostResponse

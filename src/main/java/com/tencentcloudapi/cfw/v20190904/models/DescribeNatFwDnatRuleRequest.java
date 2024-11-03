@@ -66,14 +66,14 @@ public class DescribeNatFwDnatRuleRequest extends AbstractModel {
     private String EndTime;
 
     /**
-    * desc：降序；asc：升序。根据By字段的值进行排序，这里传参的话则By也必须有值
+    * desc：降序；asc：升序。根据By字段的值进行排序，这里传参的话则By也必须有值，可不传
     */
     @SerializedName("Order")
     @Expose
     private String Order;
 
     /**
-    * 排序所用到的字段
+    * 排序所用到的字段，可不传
     */
     @SerializedName("By")
     @Expose
@@ -176,32 +176,32 @@ public class DescribeNatFwDnatRuleRequest extends AbstractModel {
     }
 
     /**
-     * Get desc：降序；asc：升序。根据By字段的值进行排序，这里传参的话则By也必须有值 
-     * @return Order desc：降序；asc：升序。根据By字段的值进行排序，这里传参的话则By也必须有值
+     * Get desc：降序；asc：升序。根据By字段的值进行排序，这里传参的话则By也必须有值，可不传 
+     * @return Order desc：降序；asc：升序。根据By字段的值进行排序，这里传参的话则By也必须有值，可不传
      */
     public String getOrder() {
         return this.Order;
     }
 
     /**
-     * Set desc：降序；asc：升序。根据By字段的值进行排序，这里传参的话则By也必须有值
-     * @param Order desc：降序；asc：升序。根据By字段的值进行排序，这里传参的话则By也必须有值
+     * Set desc：降序；asc：升序。根据By字段的值进行排序，这里传参的话则By也必须有值，可不传
+     * @param Order desc：降序；asc：升序。根据By字段的值进行排序，这里传参的话则By也必须有值，可不传
      */
     public void setOrder(String Order) {
         this.Order = Order;
     }
 
     /**
-     * Get 排序所用到的字段 
-     * @return By 排序所用到的字段
+     * Get 排序所用到的字段，可不传 
+     * @return By 排序所用到的字段，可不传
      */
     public String getBy() {
         return this.By;
     }
 
     /**
-     * Set 排序所用到的字段
-     * @param By 排序所用到的字段
+     * Set 排序所用到的字段，可不传
+     * @param By 排序所用到的字段，可不传
      */
     public void setBy(String By) {
         this.By = By;

@@ -733,6 +733,8 @@ public class RedisClient extends AbstractClient{
 
     /**
      *本接口（DescribeTaskList）用于查询指定实例的任务列表信息。
+
+- 可查询近30天内任务列表数据。
      * @param req DescribeTaskListRequest
      * @return DescribeTaskListResponse
      * @throws TencentCloudSDKException

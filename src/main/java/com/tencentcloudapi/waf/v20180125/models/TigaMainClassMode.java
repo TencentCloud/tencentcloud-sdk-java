@@ -25,7 +25,6 @@ public class TigaMainClassMode extends AbstractModel {
 
     /**
     * MainclassID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TypeID")
     @Expose
@@ -33,17 +32,14 @@ public class TigaMainClassMode extends AbstractModel {
 
     /**
     * 防护模式，0表示观察，1表示拦截
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Mode")
     @Expose
     private Long Mode;
 
     /**
-     * Get MainclassID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get MainclassID 
      * @return TypeID MainclassID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTypeID() {
         return this.TypeID;
@@ -51,19 +47,15 @@ public class TigaMainClassMode extends AbstractModel {
 
     /**
      * Set MainclassID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TypeID MainclassID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTypeID(String TypeID) {
         this.TypeID = TypeID;
     }
 
     /**
-     * Get 防护模式，0表示观察，1表示拦截
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 防护模式，0表示观察，1表示拦截 
      * @return Mode 防护模式，0表示观察，1表示拦截
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMode() {
         return this.Mode;
@@ -71,9 +63,7 @@ public class TigaMainClassMode extends AbstractModel {
 
     /**
      * Set 防护模式，0表示观察，1表示拦截
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Mode 防护模式，0表示观察，1表示拦截
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMode(Long Mode) {
         this.Mode = Mode;

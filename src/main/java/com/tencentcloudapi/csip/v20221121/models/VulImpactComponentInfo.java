@@ -25,7 +25,6 @@ public class VulImpactComponentInfo extends AbstractModel {
 
     /**
     * 组件名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Component")
     @Expose
@@ -33,17 +32,14 @@ public class VulImpactComponentInfo extends AbstractModel {
 
     /**
     * 版本名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Version")
     @Expose
     private String Version;
 
     /**
-     * Get 组件名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 组件名称 
      * @return Component 组件名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getComponent() {
         return this.Component;
@@ -51,19 +47,15 @@ public class VulImpactComponentInfo extends AbstractModel {
 
     /**
      * Set 组件名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Component 组件名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setComponent(String Component) {
         this.Component = Component;
     }
 
     /**
-     * Get 版本名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 版本名称 
      * @return Version 版本名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVersion() {
         return this.Version;
@@ -71,9 +63,7 @@ public class VulImpactComponentInfo extends AbstractModel {
 
     /**
      * Set 版本名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Version 版本名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVersion(String Version) {
         this.Version = Version;

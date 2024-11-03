@@ -53,7 +53,6 @@ public class UserWhiteRule extends AbstractModel {
 
     /**
     * 匹配参数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MatchParams")
     @Expose
@@ -89,7 +88,6 @@ public class UserWhiteRule extends AbstractModel {
 
     /**
     * 规则ID列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SignatureIds")
     @Expose
@@ -97,7 +95,6 @@ public class UserWhiteRule extends AbstractModel {
 
     /**
     * 大类规则ID列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TypeIds")
     @Expose
@@ -105,7 +102,6 @@ public class UserWhiteRule extends AbstractModel {
 
     /**
     * 大类规则ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TypeId")
     @Expose
@@ -113,7 +109,6 @@ public class UserWhiteRule extends AbstractModel {
 
     /**
     * 0:按照特定规则ID加白, 1:按照规则类型加白
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Mode")
     @Expose
@@ -121,7 +116,6 @@ public class UserWhiteRule extends AbstractModel {
 
     /**
     * 规则名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -129,7 +123,6 @@ public class UserWhiteRule extends AbstractModel {
 
     /**
     * 匹配规则列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MatchInfo")
     @Expose
@@ -137,7 +130,6 @@ public class UserWhiteRule extends AbstractModel {
 
     /**
     * MatchInfo字符串
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MatchInfoStr")
     @Expose
@@ -208,10 +200,8 @@ public class UserWhiteRule extends AbstractModel {
     }
 
     /**
-     * Get 匹配参数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 匹配参数 
      * @return MatchParams 匹配参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMatchParams() {
         return this.MatchParams;
@@ -219,9 +209,7 @@ public class UserWhiteRule extends AbstractModel {
 
     /**
      * Set 匹配参数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MatchParams 匹配参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMatchParams(String MatchParams) {
         this.MatchParams = MatchParams;
@@ -292,10 +280,8 @@ public class UserWhiteRule extends AbstractModel {
     }
 
     /**
-     * Get 规则ID列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则ID列表 
      * @return SignatureIds 规则ID列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getSignatureIds() {
         return this.SignatureIds;
@@ -303,19 +289,15 @@ public class UserWhiteRule extends AbstractModel {
 
     /**
      * Set 规则ID列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SignatureIds 规则ID列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSignatureIds(String [] SignatureIds) {
         this.SignatureIds = SignatureIds;
     }
 
     /**
-     * Get 大类规则ID列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 大类规则ID列表 
      * @return TypeIds 大类规则ID列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getTypeIds() {
         return this.TypeIds;
@@ -323,19 +305,15 @@ public class UserWhiteRule extends AbstractModel {
 
     /**
      * Set 大类规则ID列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TypeIds 大类规则ID列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTypeIds(String [] TypeIds) {
         this.TypeIds = TypeIds;
     }
 
     /**
-     * Get 大类规则ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 大类规则ID 
      * @return TypeId 大类规则ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTypeId() {
         return this.TypeId;
@@ -343,19 +321,15 @@ public class UserWhiteRule extends AbstractModel {
 
     /**
      * Set 大类规则ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TypeId 大类规则ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTypeId(String TypeId) {
         this.TypeId = TypeId;
     }
 
     /**
-     * Get 0:按照特定规则ID加白, 1:按照规则类型加白
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 0:按照特定规则ID加白, 1:按照规则类型加白 
      * @return Mode 0:按照特定规则ID加白, 1:按照规则类型加白
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMode() {
         return this.Mode;
@@ -363,19 +337,15 @@ public class UserWhiteRule extends AbstractModel {
 
     /**
      * Set 0:按照特定规则ID加白, 1:按照规则类型加白
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Mode 0:按照特定规则ID加白, 1:按照规则类型加白
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMode(Long Mode) {
         this.Mode = Mode;
     }
 
     /**
-     * Get 规则名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则名 
      * @return Name 规则名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -383,19 +353,15 @@ public class UserWhiteRule extends AbstractModel {
 
     /**
      * Set 规则名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 规则名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 匹配规则列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 匹配规则列表 
      * @return MatchInfo 匹配规则列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public UserWhiteRuleItem [] getMatchInfo() {
         return this.MatchInfo;
@@ -403,19 +369,15 @@ public class UserWhiteRule extends AbstractModel {
 
     /**
      * Set 匹配规则列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MatchInfo 匹配规则列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMatchInfo(UserWhiteRuleItem [] MatchInfo) {
         this.MatchInfo = MatchInfo;
     }
 
     /**
-     * Get MatchInfo字符串
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get MatchInfo字符串 
      * @return MatchInfoStr MatchInfo字符串
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMatchInfoStr() {
         return this.MatchInfoStr;
@@ -423,9 +385,7 @@ public class UserWhiteRule extends AbstractModel {
 
     /**
      * Set MatchInfo字符串
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MatchInfoStr MatchInfo字符串
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMatchInfoStr(String MatchInfoStr) {
         this.MatchInfoStr = MatchInfoStr;

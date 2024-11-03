@@ -25,7 +25,6 @@ public class IdsWhiteInfo extends AbstractModel {
 
     /**
     * 白名单唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
     @Expose
@@ -33,7 +32,6 @@ public class IdsWhiteInfo extends AbstractModel {
 
     /**
     * 源IP
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SrcIp")
     @Expose
@@ -41,7 +39,6 @@ public class IdsWhiteInfo extends AbstractModel {
 
     /**
     * 目的IP
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DstIp")
     @Expose
@@ -49,7 +46,6 @@ public class IdsWhiteInfo extends AbstractModel {
 
     /**
     * 规则类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WhiteRuleType")
     @Expose
@@ -57,7 +53,6 @@ public class IdsWhiteInfo extends AbstractModel {
 
     /**
     * 白名单生效防火墙范围： 1 边界防火墙 2 nat防火墙 4 vpc防火墙 7 = 1+2+4 所有防火墙
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FwType")
     @Expose
@@ -65,17 +60,14 @@ public class IdsWhiteInfo extends AbstractModel {
 
     /**
     * 入侵防御规则ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleId")
     @Expose
     private String RuleId;
 
     /**
-     * Get 白名单唯一ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 白名单唯一ID 
      * @return Id 白名单唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getId() {
         return this.Id;
@@ -83,19 +75,15 @@ public class IdsWhiteInfo extends AbstractModel {
 
     /**
      * Set 白名单唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Id 白名单唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 源IP
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 源IP 
      * @return SrcIp 源IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSrcIp() {
         return this.SrcIp;
@@ -103,19 +91,15 @@ public class IdsWhiteInfo extends AbstractModel {
 
     /**
      * Set 源IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SrcIp 源IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSrcIp(String SrcIp) {
         this.SrcIp = SrcIp;
     }
 
     /**
-     * Get 目的IP
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 目的IP 
      * @return DstIp 目的IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDstIp() {
         return this.DstIp;
@@ -123,19 +107,15 @@ public class IdsWhiteInfo extends AbstractModel {
 
     /**
      * Set 目的IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DstIp 目的IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDstIp(String DstIp) {
         this.DstIp = DstIp;
     }
 
     /**
-     * Get 规则类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则类型 
      * @return WhiteRuleType 规则类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWhiteRuleType() {
         return this.WhiteRuleType;
@@ -143,19 +123,15 @@ public class IdsWhiteInfo extends AbstractModel {
 
     /**
      * Set 规则类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WhiteRuleType 规则类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWhiteRuleType(String WhiteRuleType) {
         this.WhiteRuleType = WhiteRuleType;
     }
 
     /**
-     * Get 白名单生效防火墙范围： 1 边界防火墙 2 nat防火墙 4 vpc防火墙 7 = 1+2+4 所有防火墙
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 白名单生效防火墙范围： 1 边界防火墙 2 nat防火墙 4 vpc防火墙 7 = 1+2+4 所有防火墙 
      * @return FwType 白名单生效防火墙范围： 1 边界防火墙 2 nat防火墙 4 vpc防火墙 7 = 1+2+4 所有防火墙
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFwType() {
         return this.FwType;
@@ -163,19 +139,15 @@ public class IdsWhiteInfo extends AbstractModel {
 
     /**
      * Set 白名单生效防火墙范围： 1 边界防火墙 2 nat防火墙 4 vpc防火墙 7 = 1+2+4 所有防火墙
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FwType 白名单生效防火墙范围： 1 边界防火墙 2 nat防火墙 4 vpc防火墙 7 = 1+2+4 所有防火墙
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFwType(Long FwType) {
         this.FwType = FwType;
     }
 
     /**
-     * Get 入侵防御规则ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 入侵防御规则ID 
      * @return RuleId 入侵防御规则ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRuleId() {
         return this.RuleId;
@@ -183,9 +155,7 @@ public class IdsWhiteInfo extends AbstractModel {
 
     /**
      * Set 入侵防御规则ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RuleId 入侵防御规则ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleId(String RuleId) {
         this.RuleId = RuleId;

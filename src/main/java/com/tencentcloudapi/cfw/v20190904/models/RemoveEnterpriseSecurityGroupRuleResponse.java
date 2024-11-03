@@ -32,7 +32,6 @@ public class RemoveEnterpriseSecurityGroupRuleResponse extends AbstractModel {
 
     /**
     * 0代表成功，-1代表失败
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -62,10 +61,8 @@ public class RemoveEnterpriseSecurityGroupRuleResponse extends AbstractModel {
     }
 
     /**
-     * Get 0代表成功，-1代表失败
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 0代表成功，-1代表失败 
      * @return Status 0代表成功，-1代表失败
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
         return this.Status;
@@ -73,9 +70,7 @@ public class RemoveEnterpriseSecurityGroupRuleResponse extends AbstractModel {
 
     /**
      * Set 0代表成功，-1代表失败
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 0代表成功，-1代表失败
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
         this.Status = Status;

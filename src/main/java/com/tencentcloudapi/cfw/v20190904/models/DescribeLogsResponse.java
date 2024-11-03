@@ -53,7 +53,6 @@ public class DescribeLogsResponse extends AbstractModel {
 
     /**
     * 七层协议，NTA日志有效
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AppProtocolList")
     @Expose
@@ -131,10 +130,8 @@ public class DescribeLogsResponse extends AbstractModel {
     }
 
     /**
-     * Get 七层协议，NTA日志有效
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 七层协议，NTA日志有效 
      * @return AppProtocolList 七层协议，NTA日志有效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getAppProtocolList() {
         return this.AppProtocolList;
@@ -142,9 +139,7 @@ public class DescribeLogsResponse extends AbstractModel {
 
     /**
      * Set 七层协议，NTA日志有效
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AppProtocolList 七层协议，NTA日志有效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAppProtocolList(String [] AppProtocolList) {
         this.AppProtocolList = AppProtocolList;

@@ -25,7 +25,6 @@ public class AccessValueInfo extends AbstractModel {
 
     /**
     * 字段类型，目前支持的类型有：long、text、double
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -33,7 +32,6 @@ public class AccessValueInfo extends AbstractModel {
 
     /**
     * 字段的分词符，只有当字段类型为text时才有意义；输入字符串中的每个字符代表一个分词符
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tokenizer")
     @Expose
@@ -41,7 +39,6 @@ public class AccessValueInfo extends AbstractModel {
 
     /**
     * 字段是否开启分析功能
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SqlFlag")
     @Expose
@@ -50,17 +47,14 @@ public class AccessValueInfo extends AbstractModel {
     /**
     * 是否包含中文
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ContainZH")
     @Expose
     private Boolean ContainZH;
 
     /**
-     * Get 字段类型，目前支持的类型有：long、text、double
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 字段类型，目前支持的类型有：long、text、double 
      * @return Type 字段类型，目前支持的类型有：long、text、double
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
         return this.Type;
@@ -68,19 +62,15 @@ public class AccessValueInfo extends AbstractModel {
 
     /**
      * Set 字段类型，目前支持的类型有：long、text、double
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 字段类型，目前支持的类型有：long、text、double
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 字段的分词符，只有当字段类型为text时才有意义；输入字符串中的每个字符代表一个分词符
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 字段的分词符，只有当字段类型为text时才有意义；输入字符串中的每个字符代表一个分词符 
      * @return Tokenizer 字段的分词符，只有当字段类型为text时才有意义；输入字符串中的每个字符代表一个分词符
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTokenizer() {
         return this.Tokenizer;
@@ -88,19 +78,15 @@ public class AccessValueInfo extends AbstractModel {
 
     /**
      * Set 字段的分词符，只有当字段类型为text时才有意义；输入字符串中的每个字符代表一个分词符
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tokenizer 字段的分词符，只有当字段类型为text时才有意义；输入字符串中的每个字符代表一个分词符
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTokenizer(String Tokenizer) {
         this.Tokenizer = Tokenizer;
     }
 
     /**
-     * Get 字段是否开启分析功能
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 字段是否开启分析功能 
      * @return SqlFlag 字段是否开启分析功能
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getSqlFlag() {
         return this.SqlFlag;
@@ -108,9 +94,7 @@ public class AccessValueInfo extends AbstractModel {
 
     /**
      * Set 字段是否开启分析功能
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SqlFlag 字段是否开启分析功能
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSqlFlag(Boolean SqlFlag) {
         this.SqlFlag = SqlFlag;
@@ -118,10 +102,8 @@ public class AccessValueInfo extends AbstractModel {
 
     /**
      * Get 是否包含中文
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ContainZH 是否包含中文
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getContainZH() {
@@ -131,9 +113,7 @@ public class AccessValueInfo extends AbstractModel {
     /**
      * Set 是否包含中文
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ContainZH 是否包含中文
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContainZH(Boolean ContainZH) {

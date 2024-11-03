@@ -25,7 +25,6 @@ public class ApiParameterType extends AbstractModel {
 
     /**
     * 参数名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ParameterName")
     @Expose
@@ -33,7 +32,6 @@ public class ApiParameterType extends AbstractModel {
 
     /**
     * 参数类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -41,7 +39,6 @@ public class ApiParameterType extends AbstractModel {
 
     /**
     * 参数位置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Location")
     @Expose
@@ -49,7 +46,6 @@ public class ApiParameterType extends AbstractModel {
 
     /**
     * 数据标签(敏感字段)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Label")
     @Expose
@@ -57,7 +53,6 @@ public class ApiParameterType extends AbstractModel {
 
     /**
     * 时间戳
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Timestamp")
     @Expose
@@ -65,7 +60,6 @@ public class ApiParameterType extends AbstractModel {
 
     /**
     * 备注信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Remark")
     @Expose
@@ -73,7 +67,6 @@ public class ApiParameterType extends AbstractModel {
 
     /**
     * 来源是请求或者响应
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Source")
     @Expose
@@ -81,7 +74,6 @@ public class ApiParameterType extends AbstractModel {
 
     /**
     * 是否需要泛化 ，0表示不需要，1表示需要
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsPan")
     @Expose
@@ -89,17 +81,14 @@ public class ApiParameterType extends AbstractModel {
 
     /**
     * 是否鉴权，1表示是，0表示否
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsAuth")
     @Expose
     private Long IsAuth;
 
     /**
-     * Get 参数名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 参数名称 
      * @return ParameterName 参数名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getParameterName() {
         return this.ParameterName;
@@ -107,19 +96,15 @@ public class ApiParameterType extends AbstractModel {
 
     /**
      * Set 参数名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ParameterName 参数名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setParameterName(String ParameterName) {
         this.ParameterName = ParameterName;
     }
 
     /**
-     * Get 参数类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 参数类型 
      * @return Type 参数类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
         return this.Type;
@@ -127,19 +112,15 @@ public class ApiParameterType extends AbstractModel {
 
     /**
      * Set 参数类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 参数类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 参数位置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 参数位置 
      * @return Location 参数位置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLocation() {
         return this.Location;
@@ -147,19 +128,15 @@ public class ApiParameterType extends AbstractModel {
 
     /**
      * Set 参数位置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Location 参数位置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLocation(String Location) {
         this.Location = Location;
     }
 
     /**
-     * Get 数据标签(敏感字段)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据标签(敏感字段) 
      * @return Label 数据标签(敏感字段)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getLabel() {
         return this.Label;
@@ -167,19 +144,15 @@ public class ApiParameterType extends AbstractModel {
 
     /**
      * Set 数据标签(敏感字段)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Label 数据标签(敏感字段)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLabel(String [] Label) {
         this.Label = Label;
     }
 
     /**
-     * Get 时间戳
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 时间戳 
      * @return Timestamp 时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTimestamp() {
         return this.Timestamp;
@@ -187,19 +160,15 @@ public class ApiParameterType extends AbstractModel {
 
     /**
      * Set 时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Timestamp 时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimestamp(Long Timestamp) {
         this.Timestamp = Timestamp;
     }
 
     /**
-     * Get 备注信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 备注信息 
      * @return Remark 备注信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRemark() {
         return this.Remark;
@@ -207,19 +176,15 @@ public class ApiParameterType extends AbstractModel {
 
     /**
      * Set 备注信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Remark 备注信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get 来源是请求或者响应
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 来源是请求或者响应 
      * @return Source 来源是请求或者响应
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSource() {
         return this.Source;
@@ -227,19 +192,15 @@ public class ApiParameterType extends AbstractModel {
 
     /**
      * Set 来源是请求或者响应
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Source 来源是请求或者响应
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSource(String Source) {
         this.Source = Source;
     }
 
     /**
-     * Get 是否需要泛化 ，0表示不需要，1表示需要
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否需要泛化 ，0表示不需要，1表示需要 
      * @return IsPan 是否需要泛化 ，0表示不需要，1表示需要
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsPan() {
         return this.IsPan;
@@ -247,19 +208,15 @@ public class ApiParameterType extends AbstractModel {
 
     /**
      * Set 是否需要泛化 ，0表示不需要，1表示需要
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsPan 是否需要泛化 ，0表示不需要，1表示需要
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsPan(Long IsPan) {
         this.IsPan = IsPan;
     }
 
     /**
-     * Get 是否鉴权，1表示是，0表示否
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否鉴权，1表示是，0表示否 
      * @return IsAuth 是否鉴权，1表示是，0表示否
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsAuth() {
         return this.IsAuth;
@@ -267,9 +224,7 @@ public class ApiParameterType extends AbstractModel {
 
     /**
      * Set 是否鉴权，1表示是，0表示否
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsAuth 是否鉴权，1表示是，0表示否
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsAuth(Long IsAuth) {
         this.IsAuth = IsAuth;

@@ -24,6 +24,13 @@ import java.util.HashMap;
 public class ScanInfo extends AbstractModel {
 
     /**
+    * 进度
+    */
+    @SerializedName("ScanPercent")
+    @Expose
+    private Float ScanPercent;
+
+    /**
     * 扫描结果信息
     */
     @SerializedName("ScanResultInfo")
@@ -38,18 +45,27 @@ public class ScanInfo extends AbstractModel {
     private Long ScanStatus;
 
     /**
-    * 进度
-    */
-    @SerializedName("ScanPercent")
-    @Expose
-    private Float ScanPercent;
-
-    /**
     * 预计完成时间
     */
     @SerializedName("ScanTime")
     @Expose
     private String ScanTime;
+
+    /**
+     * Get 进度 
+     * @return ScanPercent 进度
+     */
+    public Float getScanPercent() {
+        return this.ScanPercent;
+    }
+
+    /**
+     * Set 进度
+     * @param ScanPercent 进度
+     */
+    public void setScanPercent(Float ScanPercent) {
+        this.ScanPercent = ScanPercent;
+    }
 
     /**
      * Get 扫描结果信息 
@@ -84,22 +100,6 @@ public class ScanInfo extends AbstractModel {
     }
 
     /**
-     * Get 进度 
-     * @return ScanPercent 进度
-     */
-    public Float getScanPercent() {
-        return this.ScanPercent;
-    }
-
-    /**
-     * Set 进度
-     * @param ScanPercent 进度
-     */
-    public void setScanPercent(Float ScanPercent) {
-        this.ScanPercent = ScanPercent;
-    }
-
-    /**
      * Get 预计完成时间 
      * @return ScanTime 预计完成时间
      */
@@ -123,14 +123,14 @@ public class ScanInfo extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ScanInfo(ScanInfo source) {
+        if (source.ScanPercent != null) {
+            this.ScanPercent = new Float(source.ScanPercent);
+        }
         if (source.ScanResultInfo != null) {
             this.ScanResultInfo = new ScanResultInfo(source.ScanResultInfo);
         }
         if (source.ScanStatus != null) {
             this.ScanStatus = new Long(source.ScanStatus);
-        }
-        if (source.ScanPercent != null) {
-            this.ScanPercent = new Float(source.ScanPercent);
         }
         if (source.ScanTime != null) {
             this.ScanTime = new String(source.ScanTime);
@@ -142,9 +142,9 @@ public class ScanInfo extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "ScanPercent", this.ScanPercent);
         this.setParamObj(map, prefix + "ScanResultInfo.", this.ScanResultInfo);
         this.setParamSimple(map, prefix + "ScanStatus", this.ScanStatus);
-        this.setParamSimple(map, prefix + "ScanPercent", this.ScanPercent);
         this.setParamSimple(map, prefix + "ScanTime", this.ScanTime);
 
     }

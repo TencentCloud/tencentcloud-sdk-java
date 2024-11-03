@@ -25,7 +25,6 @@ public class DescribeCiphersDetailResponse extends AbstractModel {
 
     /**
     * 加密套件信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Ciphers")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeCiphersDetailResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 加密套件信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 加密套件信息 
      * @return Ciphers 加密套件信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TLSCiphers [] getCiphers() {
         return this.Ciphers;
@@ -50,9 +47,7 @@ public class DescribeCiphersDetailResponse extends AbstractModel {
 
     /**
      * Set 加密套件信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Ciphers 加密套件信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCiphers(TLSCiphers [] Ciphers) {
         this.Ciphers = Ciphers;

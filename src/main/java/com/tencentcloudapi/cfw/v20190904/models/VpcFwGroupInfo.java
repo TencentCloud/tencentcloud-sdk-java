@@ -25,7 +25,6 @@ public class VpcFwGroupInfo extends AbstractModel {
 
     /**
     * 防火墙(组)ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FwGroupId")
     @Expose
@@ -33,7 +32,6 @@ public class VpcFwGroupInfo extends AbstractModel {
 
     /**
     * 防火墙(组)名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FwGroupName")
     @Expose
@@ -41,7 +39,6 @@ public class VpcFwGroupInfo extends AbstractModel {
 
     /**
     * 防火墙组涉及到的开关个数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FwSwitchNum")
     @Expose
@@ -49,7 +46,6 @@ public class VpcFwGroupInfo extends AbstractModel {
 
     /**
     * 防火墙(组)部署的地域
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RegionLst")
     @Expose
@@ -57,7 +53,6 @@ public class VpcFwGroupInfo extends AbstractModel {
 
     /**
     * 模式 1：CCN云联网模式；0：私有网络模式 2: sase 模式 3：ccn 高级模式 4: 私有网络(跨租户单边模式)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Mode")
     @Expose
@@ -65,7 +60,6 @@ public class VpcFwGroupInfo extends AbstractModel {
 
     /**
     * 防火墙实例的开关模式 1: 单点互通 2: 多点互通 3: 全互通 4: 自定义路由
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SwitchMode")
     @Expose
@@ -73,7 +67,6 @@ public class VpcFwGroupInfo extends AbstractModel {
 
     /**
     * VPC防火墙实例卡片信息数组
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FwInstanceLst")
     @Expose
@@ -81,7 +74,6 @@ public class VpcFwGroupInfo extends AbstractModel {
 
     /**
     * 防火墙(状态) 0：正常 1: 初始化或操作中
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -97,7 +89,6 @@ public class VpcFwGroupInfo extends AbstractModel {
 
     /**
     * cdc专用集群场景时表示部署所属的cdc
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CdcId")
     @Expose
@@ -105,7 +96,6 @@ public class VpcFwGroupInfo extends AbstractModel {
 
     /**
     * cdc专用集群场景时表示cdc名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CdcName")
     @Expose
@@ -113,7 +103,6 @@ public class VpcFwGroupInfo extends AbstractModel {
 
     /**
     * 跨租户模式 1管理员 2单边 0 非跨租户
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CrossUserMode")
     @Expose
@@ -121,7 +110,6 @@ public class VpcFwGroupInfo extends AbstractModel {
 
     /**
     * 云联网模式下，当前实例是否需要开启重叠路由开关，1：需要开启，0：不需要开启
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NeedSwitchCcnOverlap")
     @Expose
@@ -129,17 +117,14 @@ public class VpcFwGroupInfo extends AbstractModel {
 
     /**
     * 云联网模式下，实例关联的云联网id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CcnId")
     @Expose
     private String CcnId;
 
     /**
-     * Get 防火墙(组)ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 防火墙(组)ID 
      * @return FwGroupId 防火墙(组)ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFwGroupId() {
         return this.FwGroupId;
@@ -147,19 +132,15 @@ public class VpcFwGroupInfo extends AbstractModel {
 
     /**
      * Set 防火墙(组)ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FwGroupId 防火墙(组)ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFwGroupId(String FwGroupId) {
         this.FwGroupId = FwGroupId;
     }
 
     /**
-     * Get 防火墙(组)名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 防火墙(组)名称 
      * @return FwGroupName 防火墙(组)名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFwGroupName() {
         return this.FwGroupName;
@@ -167,19 +148,15 @@ public class VpcFwGroupInfo extends AbstractModel {
 
     /**
      * Set 防火墙(组)名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FwGroupName 防火墙(组)名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFwGroupName(String FwGroupName) {
         this.FwGroupName = FwGroupName;
     }
 
     /**
-     * Get 防火墙组涉及到的开关个数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 防火墙组涉及到的开关个数 
      * @return FwSwitchNum 防火墙组涉及到的开关个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFwSwitchNum() {
         return this.FwSwitchNum;
@@ -187,19 +164,15 @@ public class VpcFwGroupInfo extends AbstractModel {
 
     /**
      * Set 防火墙组涉及到的开关个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FwSwitchNum 防火墙组涉及到的开关个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFwSwitchNum(Long FwSwitchNum) {
         this.FwSwitchNum = FwSwitchNum;
     }
 
     /**
-     * Get 防火墙(组)部署的地域
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 防火墙(组)部署的地域 
      * @return RegionLst 防火墙(组)部署的地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getRegionLst() {
         return this.RegionLst;
@@ -207,19 +180,15 @@ public class VpcFwGroupInfo extends AbstractModel {
 
     /**
      * Set 防火墙(组)部署的地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RegionLst 防火墙(组)部署的地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegionLst(String [] RegionLst) {
         this.RegionLst = RegionLst;
     }
 
     /**
-     * Get 模式 1：CCN云联网模式；0：私有网络模式 2: sase 模式 3：ccn 高级模式 4: 私有网络(跨租户单边模式)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 模式 1：CCN云联网模式；0：私有网络模式 2: sase 模式 3：ccn 高级模式 4: 私有网络(跨租户单边模式) 
      * @return Mode 模式 1：CCN云联网模式；0：私有网络模式 2: sase 模式 3：ccn 高级模式 4: 私有网络(跨租户单边模式)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMode() {
         return this.Mode;
@@ -227,19 +196,15 @@ public class VpcFwGroupInfo extends AbstractModel {
 
     /**
      * Set 模式 1：CCN云联网模式；0：私有网络模式 2: sase 模式 3：ccn 高级模式 4: 私有网络(跨租户单边模式)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Mode 模式 1：CCN云联网模式；0：私有网络模式 2: sase 模式 3：ccn 高级模式 4: 私有网络(跨租户单边模式)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMode(Long Mode) {
         this.Mode = Mode;
     }
 
     /**
-     * Get 防火墙实例的开关模式 1: 单点互通 2: 多点互通 3: 全互通 4: 自定义路由
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 防火墙实例的开关模式 1: 单点互通 2: 多点互通 3: 全互通 4: 自定义路由 
      * @return SwitchMode 防火墙实例的开关模式 1: 单点互通 2: 多点互通 3: 全互通 4: 自定义路由
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSwitchMode() {
         return this.SwitchMode;
@@ -247,19 +212,15 @@ public class VpcFwGroupInfo extends AbstractModel {
 
     /**
      * Set 防火墙实例的开关模式 1: 单点互通 2: 多点互通 3: 全互通 4: 自定义路由
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SwitchMode 防火墙实例的开关模式 1: 单点互通 2: 多点互通 3: 全互通 4: 自定义路由
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSwitchMode(Long SwitchMode) {
         this.SwitchMode = SwitchMode;
     }
 
     /**
-     * Get VPC防火墙实例卡片信息数组
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get VPC防火墙实例卡片信息数组 
      * @return FwInstanceLst VPC防火墙实例卡片信息数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public VpcFwInstanceInfo [] getFwInstanceLst() {
         return this.FwInstanceLst;
@@ -267,19 +228,15 @@ public class VpcFwGroupInfo extends AbstractModel {
 
     /**
      * Set VPC防火墙实例卡片信息数组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FwInstanceLst VPC防火墙实例卡片信息数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFwInstanceLst(VpcFwInstanceInfo [] FwInstanceLst) {
         this.FwInstanceLst = FwInstanceLst;
     }
 
     /**
-     * Get 防火墙(状态) 0：正常 1: 初始化或操作中
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 防火墙(状态) 0：正常 1: 初始化或操作中 
      * @return Status 防火墙(状态) 0：正常 1: 初始化或操作中
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
         return this.Status;
@@ -287,9 +244,7 @@ public class VpcFwGroupInfo extends AbstractModel {
 
     /**
      * Set 防火墙(状态) 0：正常 1: 初始化或操作中
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 防火墙(状态) 0：正常 1: 初始化或操作中
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
         this.Status = Status;
@@ -316,10 +271,8 @@ public class VpcFwGroupInfo extends AbstractModel {
     }
 
     /**
-     * Get cdc专用集群场景时表示部署所属的cdc
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get cdc专用集群场景时表示部署所属的cdc 
      * @return CdcId cdc专用集群场景时表示部署所属的cdc
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCdcId() {
         return this.CdcId;
@@ -327,19 +280,15 @@ public class VpcFwGroupInfo extends AbstractModel {
 
     /**
      * Set cdc专用集群场景时表示部署所属的cdc
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CdcId cdc专用集群场景时表示部署所属的cdc
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCdcId(String CdcId) {
         this.CdcId = CdcId;
     }
 
     /**
-     * Get cdc专用集群场景时表示cdc名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get cdc专用集群场景时表示cdc名称 
      * @return CdcName cdc专用集群场景时表示cdc名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCdcName() {
         return this.CdcName;
@@ -347,19 +296,15 @@ public class VpcFwGroupInfo extends AbstractModel {
 
     /**
      * Set cdc专用集群场景时表示cdc名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CdcName cdc专用集群场景时表示cdc名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCdcName(String CdcName) {
         this.CdcName = CdcName;
     }
 
     /**
-     * Get 跨租户模式 1管理员 2单边 0 非跨租户
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 跨租户模式 1管理员 2单边 0 非跨租户 
      * @return CrossUserMode 跨租户模式 1管理员 2单边 0 非跨租户
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCrossUserMode() {
         return this.CrossUserMode;
@@ -367,19 +312,15 @@ public class VpcFwGroupInfo extends AbstractModel {
 
     /**
      * Set 跨租户模式 1管理员 2单边 0 非跨租户
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CrossUserMode 跨租户模式 1管理员 2单边 0 非跨租户
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCrossUserMode(String CrossUserMode) {
         this.CrossUserMode = CrossUserMode;
     }
 
     /**
-     * Get 云联网模式下，当前实例是否需要开启重叠路由开关，1：需要开启，0：不需要开启
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 云联网模式下，当前实例是否需要开启重叠路由开关，1：需要开启，0：不需要开启 
      * @return NeedSwitchCcnOverlap 云联网模式下，当前实例是否需要开启重叠路由开关，1：需要开启，0：不需要开启
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getNeedSwitchCcnOverlap() {
         return this.NeedSwitchCcnOverlap;
@@ -387,19 +328,15 @@ public class VpcFwGroupInfo extends AbstractModel {
 
     /**
      * Set 云联网模式下，当前实例是否需要开启重叠路由开关，1：需要开启，0：不需要开启
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NeedSwitchCcnOverlap 云联网模式下，当前实例是否需要开启重叠路由开关，1：需要开启，0：不需要开启
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNeedSwitchCcnOverlap(Long NeedSwitchCcnOverlap) {
         this.NeedSwitchCcnOverlap = NeedSwitchCcnOverlap;
     }
 
     /**
-     * Get 云联网模式下，实例关联的云联网id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 云联网模式下，实例关联的云联网id 
      * @return CcnId 云联网模式下，实例关联的云联网id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCcnId() {
         return this.CcnId;
@@ -407,9 +344,7 @@ public class VpcFwGroupInfo extends AbstractModel {
 
     /**
      * Set 云联网模式下，实例关联的云联网id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CcnId 云联网模式下，实例关联的云联网id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCcnId(String CcnId) {
         this.CcnId = CcnId;

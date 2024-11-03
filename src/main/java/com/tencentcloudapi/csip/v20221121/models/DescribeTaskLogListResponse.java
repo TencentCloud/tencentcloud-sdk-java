@@ -25,7 +25,6 @@ public class DescribeTaskLogListResponse extends AbstractModel {
 
     /**
     * 总条数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeTaskLogListResponse extends AbstractModel {
 
     /**
     * 报告列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
     @Expose
@@ -41,7 +39,6 @@ public class DescribeTaskLogListResponse extends AbstractModel {
 
     /**
     * 待查看数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NotViewNumber")
     @Expose
@@ -49,7 +46,6 @@ public class DescribeTaskLogListResponse extends AbstractModel {
 
     /**
     * 报告模板数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReportTemplateNumber")
     @Expose
@@ -63,10 +59,8 @@ public class DescribeTaskLogListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 总条数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 总条数 
      * @return TotalCount 总条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -74,19 +68,15 @@ public class DescribeTaskLogListResponse extends AbstractModel {
 
     /**
      * Set 总条数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 总条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 报告列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 报告列表 
      * @return Data 报告列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TaskLogInfo [] getData() {
         return this.Data;
@@ -94,19 +84,15 @@ public class DescribeTaskLogListResponse extends AbstractModel {
 
     /**
      * Set 报告列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Data 报告列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(TaskLogInfo [] Data) {
         this.Data = Data;
     }
 
     /**
-     * Get 待查看数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 待查看数量 
      * @return NotViewNumber 待查看数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getNotViewNumber() {
         return this.NotViewNumber;
@@ -114,19 +100,15 @@ public class DescribeTaskLogListResponse extends AbstractModel {
 
     /**
      * Set 待查看数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NotViewNumber 待查看数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNotViewNumber(Long NotViewNumber) {
         this.NotViewNumber = NotViewNumber;
     }
 
     /**
-     * Get 报告模板数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 报告模板数 
      * @return ReportTemplateNumber 报告模板数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getReportTemplateNumber() {
         return this.ReportTemplateNumber;
@@ -134,9 +116,7 @@ public class DescribeTaskLogListResponse extends AbstractModel {
 
     /**
      * Set 报告模板数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReportTemplateNumber 报告模板数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReportTemplateNumber(Long ReportTemplateNumber) {
         this.ReportTemplateNumber = ReportTemplateNumber;

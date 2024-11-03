@@ -32,7 +32,6 @@ public class VpcFwInstanceShow extends AbstractModel {
 
     /**
     * VPC防火墙实例名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FwInsName")
     @Expose
@@ -40,7 +39,6 @@ public class VpcFwInstanceShow extends AbstractModel {
 
     /**
     * 网络经过VPC防火墙CVM所在地域
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FwInsRegion")
     @Expose
@@ -63,10 +61,8 @@ public class VpcFwInstanceShow extends AbstractModel {
     }
 
     /**
-     * Get VPC防火墙实例名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get VPC防火墙实例名称 
      * @return FwInsName VPC防火墙实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFwInsName() {
         return this.FwInsName;
@@ -74,19 +70,15 @@ public class VpcFwInstanceShow extends AbstractModel {
 
     /**
      * Set VPC防火墙实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FwInsName VPC防火墙实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFwInsName(String FwInsName) {
         this.FwInsName = FwInsName;
     }
 
     /**
-     * Get 网络经过VPC防火墙CVM所在地域
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网络经过VPC防火墙CVM所在地域 
      * @return FwInsRegion 网络经过VPC防火墙CVM所在地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFwInsRegion() {
         return this.FwInsRegion;
@@ -94,9 +86,7 @@ public class VpcFwInstanceShow extends AbstractModel {
 
     /**
      * Set 网络经过VPC防火墙CVM所在地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FwInsRegion 网络经过VPC防火墙CVM所在地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFwInsRegion(String FwInsRegion) {
         this.FwInsRegion = FwInsRegion;

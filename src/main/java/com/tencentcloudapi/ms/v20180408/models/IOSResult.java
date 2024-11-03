@@ -56,7 +56,7 @@ public class IOSResult extends AbstractModel {
     private String ResourceId;
 
     /**
-    * 加固状态
+    * 加固状态：0等待，1成功，2任务中，3失败，4重试中
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EncryptState")
@@ -200,9 +200,9 @@ public class IOSResult extends AbstractModel {
     }
 
     /**
-     * Get 加固状态
+     * Get 加固状态：0等待，1成功，2任务中，3失败，4重试中
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EncryptState 加固状态
+     * @return EncryptState 加固状态：0等待，1成功，2任务中，3失败，4重试中
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getEncryptState() {
@@ -210,9 +210,9 @@ public class IOSResult extends AbstractModel {
     }
 
     /**
-     * Set 加固状态
+     * Set 加固状态：0等待，1成功，2任务中，3失败，4重试中
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EncryptState 加固状态
+     * @param EncryptState 加固状态：0等待，1成功，2任务中，3失败，4重试中
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEncryptState(Long EncryptState) {

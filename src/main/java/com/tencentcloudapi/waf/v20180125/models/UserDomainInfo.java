@@ -67,7 +67,6 @@ public class UserDomainInfo extends AbstractModel {
 
     /**
     * 版本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Level")
     @Expose
@@ -75,7 +74,6 @@ public class UserDomainInfo extends AbstractModel {
 
     /**
     * 指定域名访问日志字段的开关
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WriteConfig")
     @Expose
@@ -83,7 +81,6 @@ public class UserDomainInfo extends AbstractModel {
 
     /**
     * 指定域名是否写cls的开关 1:写 0:不写
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Cls")
     @Expose
@@ -91,7 +88,6 @@ public class UserDomainInfo extends AbstractModel {
 
     /**
     * 标记是否是混合云接入。hybrid表示混合云接入域名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CloudType")
     @Expose
@@ -99,7 +95,6 @@ public class UserDomainInfo extends AbstractModel {
 
     /**
     * 标记clbwaf类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AlbType")
     @Expose
@@ -107,7 +102,6 @@ public class UserDomainInfo extends AbstractModel {
 
     /**
     * BOT开关状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BotStatus")
     @Expose
@@ -115,7 +109,6 @@ public class UserDomainInfo extends AbstractModel {
 
     /**
     * API开关状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApiStatus")
     @Expose
@@ -218,10 +211,8 @@ public class UserDomainInfo extends AbstractModel {
     }
 
     /**
-     * Get 版本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 版本 
      * @return Level 版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLevel() {
         return this.Level;
@@ -229,19 +220,15 @@ public class UserDomainInfo extends AbstractModel {
 
     /**
      * Set 版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Level 版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLevel(String Level) {
         this.Level = Level;
     }
 
     /**
-     * Get 指定域名访问日志字段的开关
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 指定域名访问日志字段的开关 
      * @return WriteConfig 指定域名访问日志字段的开关
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWriteConfig() {
         return this.WriteConfig;
@@ -249,19 +236,15 @@ public class UserDomainInfo extends AbstractModel {
 
     /**
      * Set 指定域名访问日志字段的开关
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WriteConfig 指定域名访问日志字段的开关
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWriteConfig(String WriteConfig) {
         this.WriteConfig = WriteConfig;
     }
 
     /**
-     * Get 指定域名是否写cls的开关 1:写 0:不写
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 指定域名是否写cls的开关 1:写 0:不写 
      * @return Cls 指定域名是否写cls的开关 1:写 0:不写
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCls() {
         return this.Cls;
@@ -269,19 +252,15 @@ public class UserDomainInfo extends AbstractModel {
 
     /**
      * Set 指定域名是否写cls的开关 1:写 0:不写
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Cls 指定域名是否写cls的开关 1:写 0:不写
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCls(Long Cls) {
         this.Cls = Cls;
     }
 
     /**
-     * Get 标记是否是混合云接入。hybrid表示混合云接入域名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标记是否是混合云接入。hybrid表示混合云接入域名 
      * @return CloudType 标记是否是混合云接入。hybrid表示混合云接入域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCloudType() {
         return this.CloudType;
@@ -289,19 +268,15 @@ public class UserDomainInfo extends AbstractModel {
 
     /**
      * Set 标记是否是混合云接入。hybrid表示混合云接入域名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CloudType 标记是否是混合云接入。hybrid表示混合云接入域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCloudType(String CloudType) {
         this.CloudType = CloudType;
     }
 
     /**
-     * Get 标记clbwaf类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标记clbwaf类型 
      * @return AlbType 标记clbwaf类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAlbType() {
         return this.AlbType;
@@ -309,19 +284,15 @@ public class UserDomainInfo extends AbstractModel {
 
     /**
      * Set 标记clbwaf类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AlbType 标记clbwaf类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAlbType(String AlbType) {
         this.AlbType = AlbType;
     }
 
     /**
-     * Get BOT开关状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get BOT开关状态 
      * @return BotStatus BOT开关状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBotStatus() {
         return this.BotStatus;
@@ -329,19 +300,15 @@ public class UserDomainInfo extends AbstractModel {
 
     /**
      * Set BOT开关状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BotStatus BOT开关状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBotStatus(Long BotStatus) {
         this.BotStatus = BotStatus;
     }
 
     /**
-     * Get API开关状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get API开关状态 
      * @return ApiStatus API开关状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getApiStatus() {
         return this.ApiStatus;
@@ -349,9 +316,7 @@ public class UserDomainInfo extends AbstractModel {
 
     /**
      * Set API开关状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApiStatus API开关状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApiStatus(Long ApiStatus) {
         this.ApiStatus = ApiStatus;

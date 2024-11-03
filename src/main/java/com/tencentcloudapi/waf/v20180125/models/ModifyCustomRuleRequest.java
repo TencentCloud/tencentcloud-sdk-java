@@ -45,7 +45,7 @@ public class ModifyCustomRuleRequest extends AbstractModel {
     private String RuleName;
 
     /**
-    * 执行动作，0：放行、1：阻断、2：人机识别、3：观察、4：重定向
+    * 动作类型，1代表阻断，2代表人机识别，3代表观察，4代表重定向，5代表JS校验
     */
     @SerializedName("RuleAction")
     @Expose
@@ -97,7 +97,7 @@ public class ModifyCustomRuleRequest extends AbstractModel {
     private Long ExpireTime;
 
     /**
-    * 定时任务类型
+    * 规则执行的方式，TimedJob为定时执行，CronJob为周期执行
     */
     @SerializedName("JobType")
     @Expose
@@ -180,16 +180,16 @@ public class ModifyCustomRuleRequest extends AbstractModel {
     }
 
     /**
-     * Get 执行动作，0：放行、1：阻断、2：人机识别、3：观察、4：重定向 
-     * @return RuleAction 执行动作，0：放行、1：阻断、2：人机识别、3：观察、4：重定向
+     * Get 动作类型，1代表阻断，2代表人机识别，3代表观察，4代表重定向，5代表JS校验 
+     * @return RuleAction 动作类型，1代表阻断，2代表人机识别，3代表观察，4代表重定向，5代表JS校验
      */
     public String getRuleAction() {
         return this.RuleAction;
     }
 
     /**
-     * Set 执行动作，0：放行、1：阻断、2：人机识别、3：观察、4：重定向
-     * @param RuleAction 执行动作，0：放行、1：阻断、2：人机识别、3：观察、4：重定向
+     * Set 动作类型，1代表阻断，2代表人机识别，3代表观察，4代表重定向，5代表JS校验
+     * @param RuleAction 动作类型，1代表阻断，2代表人机识别，3代表观察，4代表重定向，5代表JS校验
      */
     public void setRuleAction(String RuleAction) {
         this.RuleAction = RuleAction;
@@ -304,16 +304,16 @@ public class ModifyCustomRuleRequest extends AbstractModel {
     }
 
     /**
-     * Get 定时任务类型 
-     * @return JobType 定时任务类型
+     * Get 规则执行的方式，TimedJob为定时执行，CronJob为周期执行 
+     * @return JobType 规则执行的方式，TimedJob为定时执行，CronJob为周期执行
      */
     public String getJobType() {
         return this.JobType;
     }
 
     /**
-     * Set 定时任务类型
-     * @param JobType 定时任务类型
+     * Set 规则执行的方式，TimedJob为定时执行，CronJob为周期执行
+     * @param JobType 规则执行的方式，TimedJob为定时执行，CronJob为周期执行
      */
     public void setJobType(String JobType) {
         this.JobType = JobType;

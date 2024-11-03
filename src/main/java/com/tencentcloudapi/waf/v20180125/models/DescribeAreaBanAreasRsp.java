@@ -32,7 +32,6 @@ public class DescribeAreaBanAreasRsp extends AbstractModel {
 
     /**
     * 数据来源 custom-自定义(默认)、batch-批量防护
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Source")
     @Expose
@@ -47,7 +46,6 @@ public class DescribeAreaBanAreasRsp extends AbstractModel {
 
     /**
     * 定时任务类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("JobType")
     @Expose
@@ -63,7 +61,6 @@ public class DescribeAreaBanAreasRsp extends AbstractModel {
 
     /**
     * 周期任务配置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CronType")
     @Expose
@@ -86,10 +83,8 @@ public class DescribeAreaBanAreasRsp extends AbstractModel {
     }
 
     /**
-     * Get 数据来源 custom-自定义(默认)、batch-批量防护
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据来源 custom-自定义(默认)、batch-批量防护 
      * @return Source 数据来源 custom-自定义(默认)、batch-批量防护
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSource() {
         return this.Source;
@@ -97,9 +92,7 @@ public class DescribeAreaBanAreasRsp extends AbstractModel {
 
     /**
      * Set 数据来源 custom-自定义(默认)、batch-批量防护
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Source 数据来源 custom-自定义(默认)、batch-批量防护
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSource(String Source) {
         this.Source = Source;
@@ -122,10 +115,8 @@ public class DescribeAreaBanAreasRsp extends AbstractModel {
     }
 
     /**
-     * Get 定时任务类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 定时任务类型 
      * @return JobType 定时任务类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getJobType() {
         return this.JobType;
@@ -133,9 +124,7 @@ public class DescribeAreaBanAreasRsp extends AbstractModel {
 
     /**
      * Set 定时任务类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param JobType 定时任务类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setJobType(String JobType) {
         this.JobType = JobType;
@@ -162,10 +151,8 @@ public class DescribeAreaBanAreasRsp extends AbstractModel {
     }
 
     /**
-     * Get 周期任务配置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 周期任务配置 
      * @return CronType 周期任务配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCronType() {
         return this.CronType;
@@ -173,9 +160,7 @@ public class DescribeAreaBanAreasRsp extends AbstractModel {
 
     /**
      * Set 周期任务配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CronType 周期任务配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCronType(String CronType) {
         this.CronType = CronType;

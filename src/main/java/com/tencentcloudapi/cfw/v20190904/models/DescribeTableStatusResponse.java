@@ -25,7 +25,6 @@ public class DescribeTableStatusResponse extends AbstractModel {
 
     /**
     * 0：正常，其它：不正常
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeTableStatusResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 0：正常，其它：不正常
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 0：正常，其它：不正常 
      * @return Status 0：正常，其它：不正常
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
         return this.Status;
@@ -50,9 +47,7 @@ public class DescribeTableStatusResponse extends AbstractModel {
 
     /**
      * Set 0：正常，其它：不正常
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 0：正常，其它：不正常
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
         this.Status = Status;

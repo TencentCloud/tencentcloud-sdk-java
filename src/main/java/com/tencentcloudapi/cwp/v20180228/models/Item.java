@@ -39,7 +39,6 @@ public class Item extends AbstractModel {
 
     /**
     * 自定义阈值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CustomItemValues")
     @Expose
@@ -47,7 +46,6 @@ public class Item extends AbstractModel {
 
     /**
     * 检测项所属分类
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CategoryId")
     @Expose
@@ -86,10 +84,8 @@ public class Item extends AbstractModel {
     }
 
     /**
-     * Get 自定义阈值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 自定义阈值 
      * @return CustomItemValues 自定义阈值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long [] getCustomItemValues() {
         return this.CustomItemValues;
@@ -97,19 +93,15 @@ public class Item extends AbstractModel {
 
     /**
      * Set 自定义阈值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CustomItemValues 自定义阈值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCustomItemValues(Long [] CustomItemValues) {
         this.CustomItemValues = CustomItemValues;
     }
 
     /**
-     * Get 检测项所属分类
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 检测项所属分类 
      * @return CategoryId 检测项所属分类
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCategoryId() {
         return this.CategoryId;
@@ -117,9 +109,7 @@ public class Item extends AbstractModel {
 
     /**
      * Set 检测项所属分类
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CategoryId 检测项所属分类
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCategoryId(Long CategoryId) {
         this.CategoryId = CategoryId;

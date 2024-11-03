@@ -25,7 +25,6 @@ public class AssetInfoDetail extends AbstractModel {
 
     /**
     * 用户appid
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AppID")
     @Expose
@@ -33,7 +32,6 @@ public class AssetInfoDetail extends AbstractModel {
 
     /**
     * CVE编号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CVEId")
     @Expose
@@ -41,7 +39,6 @@ public class AssetInfoDetail extends AbstractModel {
 
     /**
     * 是扫描，0默认未扫描，1正在扫描，2扫描完成，3扫描出错
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsScan")
     @Expose
@@ -49,7 +46,6 @@ public class AssetInfoDetail extends AbstractModel {
 
     /**
     * 影响资产数目
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InfluenceAsset")
     @Expose
@@ -57,7 +53,6 @@ public class AssetInfoDetail extends AbstractModel {
 
     /**
     * 未修复资产数目
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NotRepairAsset")
     @Expose
@@ -65,7 +60,6 @@ public class AssetInfoDetail extends AbstractModel {
 
     /**
     * 未防护资产数目
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NotProtectAsset")
     @Expose
@@ -73,7 +67,6 @@ public class AssetInfoDetail extends AbstractModel {
 
     /**
     * 任务ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskId")
     @Expose
@@ -81,7 +74,6 @@ public class AssetInfoDetail extends AbstractModel {
 
     /**
     * 任务百分比
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskPercent")
     @Expose
@@ -89,7 +81,6 @@ public class AssetInfoDetail extends AbstractModel {
 
     /**
     * 任务时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskTime")
     @Expose
@@ -97,17 +88,14 @@ public class AssetInfoDetail extends AbstractModel {
 
     /**
     * 扫描时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScanTime")
     @Expose
     private String ScanTime;
 
     /**
-     * Get 用户appid
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户appid 
      * @return AppID 用户appid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAppID() {
         return this.AppID;
@@ -115,19 +103,15 @@ public class AssetInfoDetail extends AbstractModel {
 
     /**
      * Set 用户appid
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AppID 用户appid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAppID(String AppID) {
         this.AppID = AppID;
     }
 
     /**
-     * Get CVE编号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get CVE编号 
      * @return CVEId CVE编号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCVEId() {
         return this.CVEId;
@@ -135,19 +119,15 @@ public class AssetInfoDetail extends AbstractModel {
 
     /**
      * Set CVE编号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CVEId CVE编号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCVEId(String CVEId) {
         this.CVEId = CVEId;
     }
 
     /**
-     * Get 是扫描，0默认未扫描，1正在扫描，2扫描完成，3扫描出错
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是扫描，0默认未扫描，1正在扫描，2扫描完成，3扫描出错 
      * @return IsScan 是扫描，0默认未扫描，1正在扫描，2扫描完成，3扫描出错
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsScan() {
         return this.IsScan;
@@ -155,19 +135,15 @@ public class AssetInfoDetail extends AbstractModel {
 
     /**
      * Set 是扫描，0默认未扫描，1正在扫描，2扫描完成，3扫描出错
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsScan 是扫描，0默认未扫描，1正在扫描，2扫描完成，3扫描出错
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsScan(Long IsScan) {
         this.IsScan = IsScan;
     }
 
     /**
-     * Get 影响资产数目
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 影响资产数目 
      * @return InfluenceAsset 影响资产数目
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getInfluenceAsset() {
         return this.InfluenceAsset;
@@ -175,19 +151,15 @@ public class AssetInfoDetail extends AbstractModel {
 
     /**
      * Set 影响资产数目
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InfluenceAsset 影响资产数目
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInfluenceAsset(Long InfluenceAsset) {
         this.InfluenceAsset = InfluenceAsset;
     }
 
     /**
-     * Get 未修复资产数目
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 未修复资产数目 
      * @return NotRepairAsset 未修复资产数目
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getNotRepairAsset() {
         return this.NotRepairAsset;
@@ -195,19 +167,15 @@ public class AssetInfoDetail extends AbstractModel {
 
     /**
      * Set 未修复资产数目
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NotRepairAsset 未修复资产数目
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNotRepairAsset(Long NotRepairAsset) {
         this.NotRepairAsset = NotRepairAsset;
     }
 
     /**
-     * Get 未防护资产数目
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 未防护资产数目 
      * @return NotProtectAsset 未防护资产数目
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getNotProtectAsset() {
         return this.NotProtectAsset;
@@ -215,19 +183,15 @@ public class AssetInfoDetail extends AbstractModel {
 
     /**
      * Set 未防护资产数目
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NotProtectAsset 未防护资产数目
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNotProtectAsset(Long NotProtectAsset) {
         this.NotProtectAsset = NotProtectAsset;
     }
 
     /**
-     * Get 任务ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务ID 
      * @return TaskId 任务ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskId() {
         return this.TaskId;
@@ -235,19 +199,15 @@ public class AssetInfoDetail extends AbstractModel {
 
     /**
      * Set 任务ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskId 任务ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get 任务百分比
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务百分比 
      * @return TaskPercent 任务百分比
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTaskPercent() {
         return this.TaskPercent;
@@ -255,19 +215,15 @@ public class AssetInfoDetail extends AbstractModel {
 
     /**
      * Set 任务百分比
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskPercent 任务百分比
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskPercent(Long TaskPercent) {
         this.TaskPercent = TaskPercent;
     }
 
     /**
-     * Get 任务时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务时间 
      * @return TaskTime 任务时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTaskTime() {
         return this.TaskTime;
@@ -275,19 +231,15 @@ public class AssetInfoDetail extends AbstractModel {
 
     /**
      * Set 任务时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskTime 任务时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskTime(Long TaskTime) {
         this.TaskTime = TaskTime;
     }
 
     /**
-     * Get 扫描时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 扫描时间 
      * @return ScanTime 扫描时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getScanTime() {
         return this.ScanTime;
@@ -295,9 +247,7 @@ public class AssetInfoDetail extends AbstractModel {
 
     /**
      * Set 扫描时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ScanTime 扫描时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScanTime(String ScanTime) {
         this.ScanTime = ScanTime;

@@ -25,7 +25,6 @@ public class DescribeNatFwDnatRuleResponse extends AbstractModel {
 
     /**
     * Dnat规则列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
     @Expose
@@ -46,10 +45,8 @@ public class DescribeNatFwDnatRuleResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Dnat规则列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Dnat规则列表 
      * @return Data Dnat规则列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DescNatDnatRule [] getData() {
         return this.Data;
@@ -57,9 +54,7 @@ public class DescribeNatFwDnatRuleResponse extends AbstractModel {
 
     /**
      * Set Dnat规则列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Data Dnat规则列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(DescNatDnatRule [] Data) {
         this.Data = Data;

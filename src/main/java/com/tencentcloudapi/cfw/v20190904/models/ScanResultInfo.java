@@ -24,11 +24,11 @@ import java.util.HashMap;
 public class ScanResultInfo extends AbstractModel {
 
     /**
-    * 暴露漏洞数量
+    * 是否禁封端口
     */
-    @SerializedName("LeakNum")
+    @SerializedName("BanStatus")
     @Expose
-    private Long LeakNum;
+    private Boolean BanStatus;
 
     /**
     * 防护ip数量
@@ -36,13 +36,6 @@ public class ScanResultInfo extends AbstractModel {
     @SerializedName("IPNum")
     @Expose
     private Long IPNum;
-
-    /**
-    * 暴露端口数量
-    */
-    @SerializedName("PortNum")
-    @Expose
-    private Long PortNum;
 
     /**
     * 是否开启防护
@@ -59,26 +52,33 @@ public class ScanResultInfo extends AbstractModel {
     private Boolean IdpStatus;
 
     /**
-    * 是否禁封端口
+    * 暴露漏洞数量
     */
-    @SerializedName("BanStatus")
+    @SerializedName("LeakNum")
     @Expose
-    private Boolean BanStatus;
+    private Long LeakNum;
 
     /**
-     * Get 暴露漏洞数量 
-     * @return LeakNum 暴露漏洞数量
+    * 暴露端口数量
+    */
+    @SerializedName("PortNum")
+    @Expose
+    private Long PortNum;
+
+    /**
+     * Get 是否禁封端口 
+     * @return BanStatus 是否禁封端口
      */
-    public Long getLeakNum() {
-        return this.LeakNum;
+    public Boolean getBanStatus() {
+        return this.BanStatus;
     }
 
     /**
-     * Set 暴露漏洞数量
-     * @param LeakNum 暴露漏洞数量
+     * Set 是否禁封端口
+     * @param BanStatus 是否禁封端口
      */
-    public void setLeakNum(Long LeakNum) {
-        this.LeakNum = LeakNum;
+    public void setBanStatus(Boolean BanStatus) {
+        this.BanStatus = BanStatus;
     }
 
     /**
@@ -95,22 +95,6 @@ public class ScanResultInfo extends AbstractModel {
      */
     public void setIPNum(Long IPNum) {
         this.IPNum = IPNum;
-    }
-
-    /**
-     * Get 暴露端口数量 
-     * @return PortNum 暴露端口数量
-     */
-    public Long getPortNum() {
-        return this.PortNum;
-    }
-
-    /**
-     * Set 暴露端口数量
-     * @param PortNum 暴露端口数量
-     */
-    public void setPortNum(Long PortNum) {
-        this.PortNum = PortNum;
     }
 
     /**
@@ -146,19 +130,35 @@ public class ScanResultInfo extends AbstractModel {
     }
 
     /**
-     * Get 是否禁封端口 
-     * @return BanStatus 是否禁封端口
+     * Get 暴露漏洞数量 
+     * @return LeakNum 暴露漏洞数量
      */
-    public Boolean getBanStatus() {
-        return this.BanStatus;
+    public Long getLeakNum() {
+        return this.LeakNum;
     }
 
     /**
-     * Set 是否禁封端口
-     * @param BanStatus 是否禁封端口
+     * Set 暴露漏洞数量
+     * @param LeakNum 暴露漏洞数量
      */
-    public void setBanStatus(Boolean BanStatus) {
-        this.BanStatus = BanStatus;
+    public void setLeakNum(Long LeakNum) {
+        this.LeakNum = LeakNum;
+    }
+
+    /**
+     * Get 暴露端口数量 
+     * @return PortNum 暴露端口数量
+     */
+    public Long getPortNum() {
+        return this.PortNum;
+    }
+
+    /**
+     * Set 暴露端口数量
+     * @param PortNum 暴露端口数量
+     */
+    public void setPortNum(Long PortNum) {
+        this.PortNum = PortNum;
     }
 
     public ScanResultInfo() {
@@ -169,14 +169,11 @@ public class ScanResultInfo extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ScanResultInfo(ScanResultInfo source) {
-        if (source.LeakNum != null) {
-            this.LeakNum = new Long(source.LeakNum);
+        if (source.BanStatus != null) {
+            this.BanStatus = new Boolean(source.BanStatus);
         }
         if (source.IPNum != null) {
             this.IPNum = new Long(source.IPNum);
-        }
-        if (source.PortNum != null) {
-            this.PortNum = new Long(source.PortNum);
         }
         if (source.IPStatus != null) {
             this.IPStatus = new Boolean(source.IPStatus);
@@ -184,8 +181,11 @@ public class ScanResultInfo extends AbstractModel {
         if (source.IdpStatus != null) {
             this.IdpStatus = new Boolean(source.IdpStatus);
         }
-        if (source.BanStatus != null) {
-            this.BanStatus = new Boolean(source.BanStatus);
+        if (source.LeakNum != null) {
+            this.LeakNum = new Long(source.LeakNum);
+        }
+        if (source.PortNum != null) {
+            this.PortNum = new Long(source.PortNum);
         }
     }
 
@@ -194,12 +194,12 @@ public class ScanResultInfo extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "LeakNum", this.LeakNum);
+        this.setParamSimple(map, prefix + "BanStatus", this.BanStatus);
         this.setParamSimple(map, prefix + "IPNum", this.IPNum);
-        this.setParamSimple(map, prefix + "PortNum", this.PortNum);
         this.setParamSimple(map, prefix + "IPStatus", this.IPStatus);
         this.setParamSimple(map, prefix + "IdpStatus", this.IdpStatus);
-        this.setParamSimple(map, prefix + "BanStatus", this.BanStatus);
+        this.setParamSimple(map, prefix + "LeakNum", this.LeakNum);
+        this.setParamSimple(map, prefix + "PortNum", this.PortNum);
 
     }
 }

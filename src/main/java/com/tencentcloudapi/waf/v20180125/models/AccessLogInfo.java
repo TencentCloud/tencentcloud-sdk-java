@@ -25,7 +25,6 @@ public class AccessLogInfo extends AbstractModel {
 
     /**
     * 日志时间，单位ms
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Time")
     @Expose
@@ -89,10 +88,8 @@ public class AccessLogInfo extends AbstractModel {
     private String LogJson;
 
     /**
-     * Get 日志时间，单位ms
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 日志时间，单位ms 
      * @return Time 日志时间，单位ms
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTime() {
         return this.Time;
@@ -100,9 +97,7 @@ public class AccessLogInfo extends AbstractModel {
 
     /**
      * Set 日志时间，单位ms
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Time 日志时间，单位ms
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTime(Long Time) {
         this.Time = Time;

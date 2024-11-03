@@ -25,7 +25,6 @@ public class HostTagInfo extends AbstractModel {
 
     /**
     * 主机Quuid
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Quuid")
     @Expose
@@ -33,7 +32,6 @@ public class HostTagInfo extends AbstractModel {
 
     /**
     * 主机标签名数组
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TagList")
     @Expose
@@ -41,7 +39,6 @@ public class HostTagInfo extends AbstractModel {
 
     /**
     * 主机内网Ip
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HostIp")
     @Expose
@@ -49,7 +46,6 @@ public class HostTagInfo extends AbstractModel {
 
     /**
     * 主机名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AliasName")
     @Expose
@@ -57,7 +53,6 @@ public class HostTagInfo extends AbstractModel {
 
     /**
     * 主机公网ip
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MachineWanIp")
     @Expose
@@ -65,7 +60,6 @@ public class HostTagInfo extends AbstractModel {
 
     /**
     * 主机uuid
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Uuid")
     @Expose
@@ -73,7 +67,6 @@ public class HostTagInfo extends AbstractModel {
 
     /**
     * 内核版本号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KernelVersion")
     @Expose
@@ -81,7 +74,6 @@ public class HostTagInfo extends AbstractModel {
 
     /**
     * 主机在线状态 ONLINE，OFFLINE
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MachineStatus")
     @Expose
@@ -89,7 +81,6 @@ public class HostTagInfo extends AbstractModel {
 
     /**
     * 防护版本 BASIC_VERSION 基础版, PRO_VERSION 专业版 Flagship 旗舰版
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProtectType")
     @Expose
@@ -97,7 +88,6 @@ public class HostTagInfo extends AbstractModel {
 
     /**
     * 漏洞数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VulNum")
     @Expose
@@ -105,7 +95,6 @@ public class HostTagInfo extends AbstractModel {
 
     /**
     * 云标签信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CloudTags")
     @Expose
@@ -113,17 +102,14 @@ public class HostTagInfo extends AbstractModel {
 
     /**
     * 主机instance ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceID")
     @Expose
     private String InstanceID;
 
     /**
-     * Get 主机Quuid
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主机Quuid 
      * @return Quuid 主机Quuid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getQuuid() {
         return this.Quuid;
@@ -131,19 +117,15 @@ public class HostTagInfo extends AbstractModel {
 
     /**
      * Set 主机Quuid
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Quuid 主机Quuid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQuuid(String Quuid) {
         this.Quuid = Quuid;
     }
 
     /**
-     * Get 主机标签名数组
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主机标签名数组 
      * @return TagList 主机标签名数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getTagList() {
         return this.TagList;
@@ -151,19 +133,15 @@ public class HostTagInfo extends AbstractModel {
 
     /**
      * Set 主机标签名数组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TagList 主机标签名数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTagList(String [] TagList) {
         this.TagList = TagList;
     }
 
     /**
-     * Get 主机内网Ip
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主机内网Ip 
      * @return HostIp 主机内网Ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHostIp() {
         return this.HostIp;
@@ -171,19 +149,15 @@ public class HostTagInfo extends AbstractModel {
 
     /**
      * Set 主机内网Ip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HostIp 主机内网Ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHostIp(String HostIp) {
         this.HostIp = HostIp;
     }
 
     /**
-     * Get 主机名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主机名 
      * @return AliasName 主机名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAliasName() {
         return this.AliasName;
@@ -191,19 +165,15 @@ public class HostTagInfo extends AbstractModel {
 
     /**
      * Set 主机名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AliasName 主机名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAliasName(String AliasName) {
         this.AliasName = AliasName;
     }
 
     /**
-     * Get 主机公网ip
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主机公网ip 
      * @return MachineWanIp 主机公网ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMachineWanIp() {
         return this.MachineWanIp;
@@ -211,19 +181,15 @@ public class HostTagInfo extends AbstractModel {
 
     /**
      * Set 主机公网ip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MachineWanIp 主机公网ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMachineWanIp(String MachineWanIp) {
         this.MachineWanIp = MachineWanIp;
     }
 
     /**
-     * Get 主机uuid
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主机uuid 
      * @return Uuid 主机uuid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUuid() {
         return this.Uuid;
@@ -231,19 +197,15 @@ public class HostTagInfo extends AbstractModel {
 
     /**
      * Set 主机uuid
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Uuid 主机uuid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUuid(String Uuid) {
         this.Uuid = Uuid;
     }
 
     /**
-     * Get 内核版本号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 内核版本号 
      * @return KernelVersion 内核版本号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKernelVersion() {
         return this.KernelVersion;
@@ -251,19 +213,15 @@ public class HostTagInfo extends AbstractModel {
 
     /**
      * Set 内核版本号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param KernelVersion 内核版本号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKernelVersion(String KernelVersion) {
         this.KernelVersion = KernelVersion;
     }
 
     /**
-     * Get 主机在线状态 ONLINE，OFFLINE
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主机在线状态 ONLINE，OFFLINE 
      * @return MachineStatus 主机在线状态 ONLINE，OFFLINE
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMachineStatus() {
         return this.MachineStatus;
@@ -271,19 +229,15 @@ public class HostTagInfo extends AbstractModel {
 
     /**
      * Set 主机在线状态 ONLINE，OFFLINE
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MachineStatus 主机在线状态 ONLINE，OFFLINE
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMachineStatus(String MachineStatus) {
         this.MachineStatus = MachineStatus;
     }
 
     /**
-     * Get 防护版本 BASIC_VERSION 基础版, PRO_VERSION 专业版 Flagship 旗舰版
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 防护版本 BASIC_VERSION 基础版, PRO_VERSION 专业版 Flagship 旗舰版 
      * @return ProtectType 防护版本 BASIC_VERSION 基础版, PRO_VERSION 专业版 Flagship 旗舰版
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProtectType() {
         return this.ProtectType;
@@ -291,19 +245,15 @@ public class HostTagInfo extends AbstractModel {
 
     /**
      * Set 防护版本 BASIC_VERSION 基础版, PRO_VERSION 专业版 Flagship 旗舰版
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProtectType 防护版本 BASIC_VERSION 基础版, PRO_VERSION 专业版 Flagship 旗舰版
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProtectType(String ProtectType) {
         this.ProtectType = ProtectType;
     }
 
     /**
-     * Get 漏洞数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 漏洞数 
      * @return VulNum 漏洞数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getVulNum() {
         return this.VulNum;
@@ -311,19 +261,15 @@ public class HostTagInfo extends AbstractModel {
 
     /**
      * Set 漏洞数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VulNum 漏洞数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVulNum(Long VulNum) {
         this.VulNum = VulNum;
     }
 
     /**
-     * Get 云标签信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 云标签信息 
      * @return CloudTags 云标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Tags [] getCloudTags() {
         return this.CloudTags;
@@ -331,19 +277,15 @@ public class HostTagInfo extends AbstractModel {
 
     /**
      * Set 云标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CloudTags 云标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCloudTags(Tags [] CloudTags) {
         this.CloudTags = CloudTags;
     }
 
     /**
-     * Get 主机instance ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主机instance ID 
      * @return InstanceID 主机instance ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceID() {
         return this.InstanceID;
@@ -351,9 +293,7 @@ public class HostTagInfo extends AbstractModel {
 
     /**
      * Set 主机instance ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceID 主机instance ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceID(String InstanceID) {
         this.InstanceID = InstanceID;

@@ -46,18 +46,18 @@ public class ModifyIpAccessControlRequest extends AbstractModel {
     private Long ActionType;
 
     /**
-    * valid_ts为有效日期，值为秒级时间戳（（如1680570420代表2023-04-04 09:07:00））
-    */
-    @SerializedName("ValidTS")
-    @Expose
-    private Long ValidTS;
-
-    /**
     * 规则ID
     */
     @SerializedName("RuleId")
     @Expose
     private Long RuleId;
+
+    /**
+    * valid_ts为有效日期，值为秒级时间戳（（如1680570420代表2023-04-04 09:07:00））
+    */
+    @SerializedName("ValidTS")
+    @Expose
+    private Long ValidTS;
 
     /**
     * 实例Id
@@ -88,7 +88,7 @@ public class ModifyIpAccessControlRequest extends AbstractModel {
     private String Note;
 
     /**
-    * 定时配置类型
+    * 规则执行的方式，TimedJob为定时执行，CronJob为周期执行
     */
     @SerializedName("JobType")
     @Expose
@@ -154,22 +154,6 @@ public class ModifyIpAccessControlRequest extends AbstractModel {
     }
 
     /**
-     * Get valid_ts为有效日期，值为秒级时间戳（（如1680570420代表2023-04-04 09:07:00）） 
-     * @return ValidTS valid_ts为有效日期，值为秒级时间戳（（如1680570420代表2023-04-04 09:07:00））
-     */
-    public Long getValidTS() {
-        return this.ValidTS;
-    }
-
-    /**
-     * Set valid_ts为有效日期，值为秒级时间戳（（如1680570420代表2023-04-04 09:07:00））
-     * @param ValidTS valid_ts为有效日期，值为秒级时间戳（（如1680570420代表2023-04-04 09:07:00））
-     */
-    public void setValidTS(Long ValidTS) {
-        this.ValidTS = ValidTS;
-    }
-
-    /**
      * Get 规则ID 
      * @return RuleId 规则ID
      */
@@ -183,6 +167,26 @@ public class ModifyIpAccessControlRequest extends AbstractModel {
      */
     public void setRuleId(Long RuleId) {
         this.RuleId = RuleId;
+    }
+
+    /**
+     * Get valid_ts为有效日期，值为秒级时间戳（（如1680570420代表2023-04-04 09:07:00）） 
+     * @return ValidTS valid_ts为有效日期，值为秒级时间戳（（如1680570420代表2023-04-04 09:07:00））
+     * @deprecated
+     */
+    @Deprecated
+    public Long getValidTS() {
+        return this.ValidTS;
+    }
+
+    /**
+     * Set valid_ts为有效日期，值为秒级时间戳（（如1680570420代表2023-04-04 09:07:00））
+     * @param ValidTS valid_ts为有效日期，值为秒级时间戳（（如1680570420代表2023-04-04 09:07:00））
+     * @deprecated
+     */
+    @Deprecated
+    public void setValidTS(Long ValidTS) {
+        this.ValidTS = ValidTS;
     }
 
     /**
@@ -250,16 +254,16 @@ public class ModifyIpAccessControlRequest extends AbstractModel {
     }
 
     /**
-     * Get 定时配置类型 
-     * @return JobType 定时配置类型
+     * Get 规则执行的方式，TimedJob为定时执行，CronJob为周期执行 
+     * @return JobType 规则执行的方式，TimedJob为定时执行，CronJob为周期执行
      */
     public String getJobType() {
         return this.JobType;
     }
 
     /**
-     * Set 定时配置类型
-     * @param JobType 定时配置类型
+     * Set 规则执行的方式，TimedJob为定时执行，CronJob为周期执行
+     * @param JobType 规则执行的方式，TimedJob为定时执行，CronJob为周期执行
      */
     public void setJobType(String JobType) {
         this.JobType = JobType;
@@ -301,11 +305,11 @@ public class ModifyIpAccessControlRequest extends AbstractModel {
         if (source.ActionType != null) {
             this.ActionType = new Long(source.ActionType);
         }
-        if (source.ValidTS != null) {
-            this.ValidTS = new Long(source.ValidTS);
-        }
         if (source.RuleId != null) {
             this.RuleId = new Long(source.RuleId);
+        }
+        if (source.ValidTS != null) {
+            this.ValidTS = new Long(source.ValidTS);
         }
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
@@ -335,8 +339,8 @@ public class ModifyIpAccessControlRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Domain", this.Domain);
         this.setParamArraySimple(map, prefix + "IpList.", this.IpList);
         this.setParamSimple(map, prefix + "ActionType", this.ActionType);
-        this.setParamSimple(map, prefix + "ValidTS", this.ValidTS);
         this.setParamSimple(map, prefix + "RuleId", this.RuleId);
+        this.setParamSimple(map, prefix + "ValidTS", this.ValidTS);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "Edition", this.Edition);
         this.setParamSimple(map, prefix + "SourceType", this.SourceType);

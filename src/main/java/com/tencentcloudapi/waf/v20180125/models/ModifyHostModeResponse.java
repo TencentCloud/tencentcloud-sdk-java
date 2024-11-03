@@ -25,7 +25,6 @@ public class ModifyHostModeResponse extends AbstractModel {
 
     /**
     * 操作的状态码，如果所有的资源操作成功则返回的是成功的状态码，如果有资源操作失败则需要解析Message的内容来查看哪个资源失败
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Success")
     @Expose
@@ -39,10 +38,8 @@ public class ModifyHostModeResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 操作的状态码，如果所有的资源操作成功则返回的是成功的状态码，如果有资源操作失败则需要解析Message的内容来查看哪个资源失败
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 操作的状态码，如果所有的资源操作成功则返回的是成功的状态码，如果有资源操作失败则需要解析Message的内容来查看哪个资源失败 
      * @return Success 操作的状态码，如果所有的资源操作成功则返回的是成功的状态码，如果有资源操作失败则需要解析Message的内容来查看哪个资源失败
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ResponseCode getSuccess() {
         return this.Success;
@@ -50,9 +47,7 @@ public class ModifyHostModeResponse extends AbstractModel {
 
     /**
      * Set 操作的状态码，如果所有的资源操作成功则返回的是成功的状态码，如果有资源操作失败则需要解析Message的内容来查看哪个资源失败
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Success 操作的状态码，如果所有的资源操作成功则返回的是成功的状态码，如果有资源操作失败则需要解析Message的内容来查看哪个资源失败
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSuccess(ResponseCode Success) {
         this.Success = Success;

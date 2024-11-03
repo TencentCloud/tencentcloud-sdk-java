@@ -25,7 +25,6 @@ public class VulTrend extends AbstractModel {
 
     /**
     * 影响的资产数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AffectAssetCount")
     @Expose
@@ -33,7 +32,6 @@ public class VulTrend extends AbstractModel {
 
     /**
     * 影响的用户数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AffectUserCount")
     @Expose
@@ -41,7 +39,6 @@ public class VulTrend extends AbstractModel {
 
     /**
     * 攻击数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AttackCount")
     @Expose
@@ -49,17 +46,14 @@ public class VulTrend extends AbstractModel {
 
     /**
     * 时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Date")
     @Expose
     private String Date;
 
     /**
-     * Get 影响的资产数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 影响的资产数 
      * @return AffectAssetCount 影响的资产数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAffectAssetCount() {
         return this.AffectAssetCount;
@@ -67,19 +61,15 @@ public class VulTrend extends AbstractModel {
 
     /**
      * Set 影响的资产数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AffectAssetCount 影响的资产数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAffectAssetCount(Long AffectAssetCount) {
         this.AffectAssetCount = AffectAssetCount;
     }
 
     /**
-     * Get 影响的用户数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 影响的用户数 
      * @return AffectUserCount 影响的用户数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAffectUserCount() {
         return this.AffectUserCount;
@@ -87,19 +77,15 @@ public class VulTrend extends AbstractModel {
 
     /**
      * Set 影响的用户数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AffectUserCount 影响的用户数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAffectUserCount(Long AffectUserCount) {
         this.AffectUserCount = AffectUserCount;
     }
 
     /**
-     * Get 攻击数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 攻击数 
      * @return AttackCount 攻击数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAttackCount() {
         return this.AttackCount;
@@ -107,19 +93,15 @@ public class VulTrend extends AbstractModel {
 
     /**
      * Set 攻击数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AttackCount 攻击数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAttackCount(Long AttackCount) {
         this.AttackCount = AttackCount;
     }
 
     /**
-     * Get 时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 时间 
      * @return Date 时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDate() {
         return this.Date;
@@ -127,9 +109,7 @@ public class VulTrend extends AbstractModel {
 
     /**
      * Set 时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Date 时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDate(String Date) {
         this.Date = Date;

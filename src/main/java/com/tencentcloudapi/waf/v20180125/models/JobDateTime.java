@@ -41,7 +41,6 @@ public class JobDateTime extends AbstractModel {
 
     /**
     * 时区
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TimeTZone")
     @Expose
@@ -88,10 +87,8 @@ public class JobDateTime extends AbstractModel {
     }
 
     /**
-     * Get 时区
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 时区 
      * @return TimeTZone 时区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTimeTZone() {
         return this.TimeTZone;
@@ -99,9 +96,7 @@ public class JobDateTime extends AbstractModel {
 
     /**
      * Set 时区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TimeTZone 时区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimeTZone(String TimeTZone) {
         this.TimeTZone = TimeTZone;

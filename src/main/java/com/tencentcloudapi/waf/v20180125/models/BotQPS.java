@@ -60,7 +60,6 @@ public class BotQPS extends AbstractModel {
 
     /**
     * 续费标志
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RenewFlag")
     @Expose
@@ -147,10 +146,8 @@ public class BotQPS extends AbstractModel {
     }
 
     /**
-     * Get 续费标志
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 续费标志 
      * @return RenewFlag 续费标志
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRenewFlag() {
         return this.RenewFlag;
@@ -158,9 +155,7 @@ public class BotQPS extends AbstractModel {
 
     /**
      * Set 续费标志
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RenewFlag 续费标志
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRenewFlag(Long RenewFlag) {
         this.RenewFlag = RenewFlag;

@@ -137,7 +137,6 @@ public class HostRecord extends AbstractModel {
 
     /**
     * 防护等级，可选值100,200,300
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Level")
     @Expose
@@ -145,7 +144,6 @@ public class HostRecord extends AbstractModel {
 
     /**
     * 域名需要下发到的cdc集群列表。仅CDC场景下填充
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CdcClusters")
     @Expose
@@ -155,7 +153,8 @@ public class HostRecord extends AbstractModel {
     * 应用型负载均衡类型，默认clb。 
 clb：七层负载均衡器类型 
 apisix：apisix网关型
-注意：此字段可能返回 null，表示取不到有效值。
+tsegw：云原生API网关
+scf：云函数
     */
     @SerializedName("AlbType")
     @Expose
@@ -163,7 +162,6 @@ apisix：apisix网关型
 
     /**
     * IsCdn=3时，需要填此参数，表示自定义header
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IpHeaders")
     @Expose
@@ -173,7 +171,6 @@ apisix：apisix网关型
     * 规则引擎类型。
 1: menshen
 2: tiga
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EngineType")
     @Expose
@@ -184,7 +181,6 @@ apisix：apisix网关型
 public:公有云
 private:私有云
 hybrid:混合云
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CloudType")
     @Expose
@@ -192,7 +188,6 @@ hybrid:混合云
 
     /**
     * 域名备注信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Note")
     @Expose
@@ -491,10 +486,8 @@ hybrid:混合云
     }
 
     /**
-     * Get 防护等级，可选值100,200,300
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 防护等级，可选值100,200,300 
      * @return Level 防护等级，可选值100,200,300
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLevel() {
         return this.Level;
@@ -502,19 +495,15 @@ hybrid:混合云
 
     /**
      * Set 防护等级，可选值100,200,300
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Level 防护等级，可选值100,200,300
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLevel(Long Level) {
         this.Level = Level;
     }
 
     /**
-     * Get 域名需要下发到的cdc集群列表。仅CDC场景下填充
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 域名需要下发到的cdc集群列表。仅CDC场景下填充 
      * @return CdcClusters 域名需要下发到的cdc集群列表。仅CDC场景下填充
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getCdcClusters() {
         return this.CdcClusters;
@@ -522,9 +511,7 @@ hybrid:混合云
 
     /**
      * Set 域名需要下发到的cdc集群列表。仅CDC场景下填充
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CdcClusters 域名需要下发到的cdc集群列表。仅CDC场景下填充
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCdcClusters(String [] CdcClusters) {
         this.CdcClusters = CdcClusters;
@@ -534,11 +521,13 @@ hybrid:混合云
      * Get 应用型负载均衡类型，默认clb。 
 clb：七层负载均衡器类型 
 apisix：apisix网关型
-注意：此字段可能返回 null，表示取不到有效值。 
+tsegw：云原生API网关
+scf：云函数 
      * @return AlbType 应用型负载均衡类型，默认clb。 
 clb：七层负载均衡器类型 
 apisix：apisix网关型
-注意：此字段可能返回 null，表示取不到有效值。
+tsegw：云原生API网关
+scf：云函数
      */
     public String getAlbType() {
         return this.AlbType;
@@ -548,21 +537,21 @@ apisix：apisix网关型
      * Set 应用型负载均衡类型，默认clb。 
 clb：七层负载均衡器类型 
 apisix：apisix网关型
-注意：此字段可能返回 null，表示取不到有效值。
+tsegw：云原生API网关
+scf：云函数
      * @param AlbType 应用型负载均衡类型，默认clb。 
 clb：七层负载均衡器类型 
 apisix：apisix网关型
-注意：此字段可能返回 null，表示取不到有效值。
+tsegw：云原生API网关
+scf：云函数
      */
     public void setAlbType(String AlbType) {
         this.AlbType = AlbType;
     }
 
     /**
-     * Get IsCdn=3时，需要填此参数，表示自定义header
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get IsCdn=3时，需要填此参数，表示自定义header 
      * @return IpHeaders IsCdn=3时，需要填此参数，表示自定义header
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getIpHeaders() {
         return this.IpHeaders;
@@ -570,9 +559,7 @@ apisix：apisix网关型
 
     /**
      * Set IsCdn=3时，需要填此参数，表示自定义header
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IpHeaders IsCdn=3时，需要填此参数，表示自定义header
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIpHeaders(String [] IpHeaders) {
         this.IpHeaders = IpHeaders;
@@ -581,12 +568,10 @@ apisix：apisix网关型
     /**
      * Get 规则引擎类型。
 1: menshen
-2: tiga
-注意：此字段可能返回 null，表示取不到有效值。 
+2: tiga 
      * @return EngineType 规则引擎类型。
 1: menshen
 2: tiga
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getEngineType() {
         return this.EngineType;
@@ -596,11 +581,9 @@ apisix：apisix网关型
      * Set 规则引擎类型。
 1: menshen
 2: tiga
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EngineType 规则引擎类型。
 1: menshen
 2: tiga
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEngineType(Long EngineType) {
         this.EngineType = EngineType;
@@ -610,13 +593,11 @@ apisix：apisix网关型
      * Get 云类型。
 public:公有云
 private:私有云
-hybrid:混合云
-注意：此字段可能返回 null，表示取不到有效值。 
+hybrid:混合云 
      * @return CloudType 云类型。
 public:公有云
 private:私有云
 hybrid:混合云
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCloudType() {
         return this.CloudType;
@@ -627,22 +608,18 @@ hybrid:混合云
 public:公有云
 private:私有云
 hybrid:混合云
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CloudType 云类型。
 public:公有云
 private:私有云
 hybrid:混合云
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCloudType(String CloudType) {
         this.CloudType = CloudType;
     }
 
     /**
-     * Get 域名备注信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 域名备注信息 
      * @return Note 域名备注信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNote() {
         return this.Note;
@@ -650,9 +627,7 @@ hybrid:混合云
 
     /**
      * Set 域名备注信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Note 域名备注信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNote(String Note) {
         this.Note = Note;

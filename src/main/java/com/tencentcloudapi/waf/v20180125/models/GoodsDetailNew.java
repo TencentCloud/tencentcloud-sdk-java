@@ -25,7 +25,6 @@ public class GoodsDetailNew extends AbstractModel {
 
     /**
     * 时间间隔
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TimeSpan")
     @Expose
@@ -33,7 +32,6 @@ public class GoodsDetailNew extends AbstractModel {
 
     /**
     * 单位，支持购买d、m、y 即（日、月、年）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TimeUnit")
     @Expose
@@ -54,7 +52,6 @@ Saas 域名扩展包：sp_wsm_waf_domain
  业务扩展包-CLB：sp_wsm_waf_qpsep_clb
 域名扩展包-CLB：sp_wsm_waf_domain_clb
 
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubProductCode")
     @Expose
@@ -73,7 +70,6 @@ Saas 域名扩展包：sp_wsm_waf_domain
 域名包-CLB: 1001156
 业务扩展包-CLB : 1001160
 
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Pid")
     @Expose
@@ -81,7 +77,6 @@ Saas 域名扩展包：sp_wsm_waf_domain
 
     /**
     * waf实例名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceName")
     @Expose
@@ -89,7 +84,6 @@ Saas 域名扩展包：sp_wsm_waf_domain
 
     /**
     * 1:自动续费，0:不自动续费
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AutoRenewFlag")
     @Expose
@@ -97,7 +91,6 @@ Saas 域名扩展包：sp_wsm_waf_domain
 
     /**
     * waf购买的实际地域信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RealRegion")
     @Expose
@@ -123,7 +116,6 @@ Saas 域名扩展包  sv_wsm_waf_domain
 业务扩展包CLB sv_wsm_waf_qps_ep_clb
 域名扩展包CLB  sv_wsm_waf_domain_clb
 
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LabelTypes")
     @Expose
@@ -131,7 +123,6 @@ Saas 域名扩展包  sv_wsm_waf_domain
 
     /**
     * 计费细项标签数量，一般和SvLabelType一一对应
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LabelCounts")
     @Expose
@@ -139,7 +130,6 @@ Saas 域名扩展包  sv_wsm_waf_domain
 
     /**
     * 变配使用，实例到期时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CurDeadline")
     @Expose
@@ -147,7 +137,6 @@ Saas 域名扩展包  sv_wsm_waf_domain
 
     /**
     * 对存在的实例购买bot 或api 安全
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -155,7 +144,6 @@ Saas 域名扩展包  sv_wsm_waf_domain
 
     /**
     * 资源id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceId")
     @Expose
@@ -163,17 +151,14 @@ Saas 域名扩展包  sv_wsm_waf_domain
 
     /**
     * 模式clb-waf或者saas-waf
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MicroVersion")
     @Expose
     private String MicroVersion;
 
     /**
-     * Get 时间间隔
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 时间间隔 
      * @return TimeSpan 时间间隔
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTimeSpan() {
         return this.TimeSpan;
@@ -181,19 +166,15 @@ Saas 域名扩展包  sv_wsm_waf_domain
 
     /**
      * Set 时间间隔
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TimeSpan 时间间隔
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimeSpan(Long TimeSpan) {
         this.TimeSpan = TimeSpan;
     }
 
     /**
-     * Get 单位，支持购买d、m、y 即（日、月、年）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 单位，支持购买d、m、y 即（日、月、年） 
      * @return TimeUnit 单位，支持购买d、m、y 即（日、月、年）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTimeUnit() {
         return this.TimeUnit;
@@ -201,9 +182,7 @@ Saas 域名扩展包  sv_wsm_waf_domain
 
     /**
      * Set 单位，支持购买d、m、y 即（日、月、年）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TimeUnit 单位，支持购买d、m、y 即（日、月、年）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimeUnit(String TimeUnit) {
         this.TimeUnit = TimeUnit;
@@ -223,8 +202,7 @@ Saas 域名扩展包：sp_wsm_waf_domain
 旗舰版-CLB:sp_wsm_waf_ultimate_clb
  业务扩展包-CLB：sp_wsm_waf_qpsep_clb
 域名扩展包-CLB：sp_wsm_waf_domain_clb
-
-注意：此字段可能返回 null，表示取不到有效值。 
+ 
      * @return SubProductCode 子产品标签,。新购，续费必传，变配时放在oldConfig newConfig里面
 
 Saas 高级版 ：sp_wsm_waf_premium
@@ -239,7 +217,6 @@ Saas 域名扩展包：sp_wsm_waf_domain
  业务扩展包-CLB：sp_wsm_waf_qpsep_clb
 域名扩展包-CLB：sp_wsm_waf_domain_clb
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubProductCode() {
         return this.SubProductCode;
@@ -260,7 +237,6 @@ Saas 域名扩展包：sp_wsm_waf_domain
  业务扩展包-CLB：sp_wsm_waf_qpsep_clb
 域名扩展包-CLB：sp_wsm_waf_domain_clb
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubProductCode 子产品标签,。新购，续费必传，变配时放在oldConfig newConfig里面
 
 Saas 高级版 ：sp_wsm_waf_premium
@@ -275,7 +251,6 @@ Saas 域名扩展包：sp_wsm_waf_domain
  业务扩展包-CLB：sp_wsm_waf_qpsep_clb
 域名扩展包-CLB：sp_wsm_waf_domain_clb
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubProductCode(String SubProductCode) {
         this.SubProductCode = SubProductCode;
@@ -293,8 +268,7 @@ Saas 域名扩展包：sp_wsm_waf_domain
 旗舰版-CLB:1001154
 域名包-CLB: 1001156
 业务扩展包-CLB : 1001160
-
-注意：此字段可能返回 null，表示取不到有效值。 
+ 
      * @return Pid 业务产品申请的pid（对应一个定价公式），通过pid计费查询到定价模型
 高级版 ：1000827
 企业版 ：1000830
@@ -307,7 +281,6 @@ Saas 域名扩展包：sp_wsm_waf_domain
 域名包-CLB: 1001156
 业务扩展包-CLB : 1001160
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPid() {
         return this.Pid;
@@ -326,7 +299,6 @@ Saas 域名扩展包：sp_wsm_waf_domain
 域名包-CLB: 1001156
 业务扩展包-CLB : 1001160
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Pid 业务产品申请的pid（对应一个定价公式），通过pid计费查询到定价模型
 高级版 ：1000827
 企业版 ：1000830
@@ -339,17 +311,14 @@ Saas 域名扩展包：sp_wsm_waf_domain
 域名包-CLB: 1001156
 业务扩展包-CLB : 1001160
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPid(Long Pid) {
         this.Pid = Pid;
     }
 
     /**
-     * Get waf实例名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get waf实例名 
      * @return InstanceName waf实例名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceName() {
         return this.InstanceName;
@@ -357,19 +326,15 @@ Saas 域名扩展包：sp_wsm_waf_domain
 
     /**
      * Set waf实例名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceName waf实例名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get 1:自动续费，0:不自动续费
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 1:自动续费，0:不自动续费 
      * @return AutoRenewFlag 1:自动续费，0:不自动续费
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAutoRenewFlag() {
         return this.AutoRenewFlag;
@@ -377,19 +342,15 @@ Saas 域名扩展包：sp_wsm_waf_domain
 
     /**
      * Set 1:自动续费，0:不自动续费
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AutoRenewFlag 1:自动续费，0:不自动续费
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAutoRenewFlag(Long AutoRenewFlag) {
         this.AutoRenewFlag = AutoRenewFlag;
     }
 
     /**
-     * Get waf购买的实际地域信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get waf购买的实际地域信息 
      * @return RealRegion waf购买的实际地域信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRealRegion() {
         return this.RealRegion;
@@ -397,9 +358,7 @@ Saas 域名扩展包：sp_wsm_waf_domain
 
     /**
      * Set waf购买的实际地域信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RealRegion waf购买的实际地域信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRealRegion(Long RealRegion) {
         this.RealRegion = RealRegion;
@@ -424,8 +383,7 @@ Saas 域名扩展包  sv_wsm_waf_domain
 非中国大陆旗舰版CLB  sv_wsm_waf_package_ultimate_clb _intl
 业务扩展包CLB sv_wsm_waf_qps_ep_clb
 域名扩展包CLB  sv_wsm_waf_domain_clb
-
-注意：此字段可能返回 null，表示取不到有效值。 
+ 
      * @return LabelTypes 计费细项标签数组
 Saas 高级版  sv_wsm_waf_package_premium 
 Saas 企业版  sv_wsm_waf_package_enterprise
@@ -445,7 +403,6 @@ Saas 域名扩展包  sv_wsm_waf_domain
 业务扩展包CLB sv_wsm_waf_qps_ep_clb
 域名扩展包CLB  sv_wsm_waf_domain_clb
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getLabelTypes() {
         return this.LabelTypes;
@@ -471,7 +428,6 @@ Saas 域名扩展包  sv_wsm_waf_domain
 业务扩展包CLB sv_wsm_waf_qps_ep_clb
 域名扩展包CLB  sv_wsm_waf_domain_clb
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LabelTypes 计费细项标签数组
 Saas 高级版  sv_wsm_waf_package_premium 
 Saas 企业版  sv_wsm_waf_package_enterprise
@@ -491,17 +447,14 @@ Saas 域名扩展包  sv_wsm_waf_domain
 业务扩展包CLB sv_wsm_waf_qps_ep_clb
 域名扩展包CLB  sv_wsm_waf_domain_clb
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLabelTypes(String [] LabelTypes) {
         this.LabelTypes = LabelTypes;
     }
 
     /**
-     * Get 计费细项标签数量，一般和SvLabelType一一对应
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 计费细项标签数量，一般和SvLabelType一一对应 
      * @return LabelCounts 计费细项标签数量，一般和SvLabelType一一对应
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long [] getLabelCounts() {
         return this.LabelCounts;
@@ -509,19 +462,15 @@ Saas 域名扩展包  sv_wsm_waf_domain
 
     /**
      * Set 计费细项标签数量，一般和SvLabelType一一对应
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LabelCounts 计费细项标签数量，一般和SvLabelType一一对应
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLabelCounts(Long [] LabelCounts) {
         this.LabelCounts = LabelCounts;
     }
 
     /**
-     * Get 变配使用，实例到期时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 变配使用，实例到期时间 
      * @return CurDeadline 变配使用，实例到期时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCurDeadline() {
         return this.CurDeadline;
@@ -529,19 +478,15 @@ Saas 域名扩展包  sv_wsm_waf_domain
 
     /**
      * Set 变配使用，实例到期时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CurDeadline 变配使用，实例到期时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCurDeadline(String CurDeadline) {
         this.CurDeadline = CurDeadline;
     }
 
     /**
-     * Get 对存在的实例购买bot 或api 安全
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 对存在的实例购买bot 或api 安全 
      * @return InstanceId 对存在的实例购买bot 或api 安全
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceId() {
         return this.InstanceId;
@@ -549,19 +494,15 @@ Saas 域名扩展包  sv_wsm_waf_domain
 
     /**
      * Set 对存在的实例购买bot 或api 安全
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceId 对存在的实例购买bot 或api 安全
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 资源id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源id 
      * @return ResourceId 资源id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceId() {
         return this.ResourceId;
@@ -569,19 +510,15 @@ Saas 域名扩展包  sv_wsm_waf_domain
 
     /**
      * Set 资源id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceId 资源id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
     }
 
     /**
-     * Get 模式clb-waf或者saas-waf
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 模式clb-waf或者saas-waf 
      * @return MicroVersion 模式clb-waf或者saas-waf
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMicroVersion() {
         return this.MicroVersion;
@@ -589,9 +526,7 @@ Saas 域名扩展包  sv_wsm_waf_domain
 
     /**
      * Set 模式clb-waf或者saas-waf
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MicroVersion 模式clb-waf或者saas-waf
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMicroVersion(String MicroVersion) {
         this.MicroVersion = MicroVersion;

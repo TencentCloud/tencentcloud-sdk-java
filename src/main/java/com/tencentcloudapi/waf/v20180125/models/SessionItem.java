@@ -74,7 +74,6 @@ public class SessionItem extends AbstractModel {
 
     /**
     * SessionID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SessionId")
     @Expose
@@ -82,7 +81,6 @@ public class SessionItem extends AbstractModel {
 
     /**
     * Session名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SessionName")
     @Expose
@@ -90,7 +88,6 @@ public class SessionItem extends AbstractModel {
 
     /**
     * Session是否正在被启用
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SessionInUsed")
     @Expose
@@ -98,7 +95,6 @@ public class SessionItem extends AbstractModel {
 
     /**
     * Session关联的CC规则ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RelatedRuleID")
     @Expose
@@ -217,10 +213,8 @@ public class SessionItem extends AbstractModel {
     }
 
     /**
-     * Get SessionID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get SessionID 
      * @return SessionId SessionID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSessionId() {
         return this.SessionId;
@@ -228,19 +222,15 @@ public class SessionItem extends AbstractModel {
 
     /**
      * Set SessionID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SessionId SessionID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSessionId(Long SessionId) {
         this.SessionId = SessionId;
     }
 
     /**
-     * Get Session名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Session名 
      * @return SessionName Session名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSessionName() {
         return this.SessionName;
@@ -248,19 +238,15 @@ public class SessionItem extends AbstractModel {
 
     /**
      * Set Session名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SessionName Session名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSessionName(String SessionName) {
         this.SessionName = SessionName;
     }
 
     /**
-     * Get Session是否正在被启用
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Session是否正在被启用 
      * @return SessionInUsed Session是否正在被启用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getSessionInUsed() {
         return this.SessionInUsed;
@@ -268,19 +254,15 @@ public class SessionItem extends AbstractModel {
 
     /**
      * Set Session是否正在被启用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SessionInUsed Session是否正在被启用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSessionInUsed(Boolean SessionInUsed) {
         this.SessionInUsed = SessionInUsed;
     }
 
     /**
-     * Get Session关联的CC规则ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Session关联的CC规则ID 
      * @return RelatedRuleID Session关联的CC规则ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long [] getRelatedRuleID() {
         return this.RelatedRuleID;
@@ -288,9 +270,7 @@ public class SessionItem extends AbstractModel {
 
     /**
      * Set Session关联的CC规则ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RelatedRuleID Session关联的CC规则ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRelatedRuleID(Long [] RelatedRuleID) {
         this.RelatedRuleID = RelatedRuleID;

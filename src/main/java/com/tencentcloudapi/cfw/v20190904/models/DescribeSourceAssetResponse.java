@@ -24,13 +24,6 @@ import java.util.HashMap;
 public class DescribeSourceAssetResponse extends AbstractModel {
 
     /**
-    * 地域集合
-    */
-    @SerializedName("ZoneList")
-    @Expose
-    private AssetZone [] ZoneList;
-
-    /**
     * 数据
     */
     @SerializedName("Data")
@@ -45,27 +38,18 @@ public class DescribeSourceAssetResponse extends AbstractModel {
     private Long Total;
 
     /**
+    * 地域集合
+    */
+    @SerializedName("ZoneList")
+    @Expose
+    private AssetZone [] ZoneList;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get 地域集合 
-     * @return ZoneList 地域集合
-     */
-    public AssetZone [] getZoneList() {
-        return this.ZoneList;
-    }
-
-    /**
-     * Set 地域集合
-     * @param ZoneList 地域集合
-     */
-    public void setZoneList(AssetZone [] ZoneList) {
-        this.ZoneList = ZoneList;
-    }
 
     /**
      * Get 数据 
@@ -100,6 +84,22 @@ public class DescribeSourceAssetResponse extends AbstractModel {
     }
 
     /**
+     * Get 地域集合 
+     * @return ZoneList 地域集合
+     */
+    public AssetZone [] getZoneList() {
+        return this.ZoneList;
+    }
+
+    /**
+     * Set 地域集合
+     * @param ZoneList 地域集合
+     */
+    public void setZoneList(AssetZone [] ZoneList) {
+        this.ZoneList = ZoneList;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -123,12 +123,6 @@ public class DescribeSourceAssetResponse extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeSourceAssetResponse(DescribeSourceAssetResponse source) {
-        if (source.ZoneList != null) {
-            this.ZoneList = new AssetZone[source.ZoneList.length];
-            for (int i = 0; i < source.ZoneList.length; i++) {
-                this.ZoneList[i] = new AssetZone(source.ZoneList[i]);
-            }
-        }
         if (source.Data != null) {
             this.Data = new InstanceInfo[source.Data.length];
             for (int i = 0; i < source.Data.length; i++) {
@@ -137,6 +131,12 @@ public class DescribeSourceAssetResponse extends AbstractModel {
         }
         if (source.Total != null) {
             this.Total = new Long(source.Total);
+        }
+        if (source.ZoneList != null) {
+            this.ZoneList = new AssetZone[source.ZoneList.length];
+            for (int i = 0; i < source.ZoneList.length; i++) {
+                this.ZoneList[i] = new AssetZone(source.ZoneList[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -148,9 +148,9 @@ public class DescribeSourceAssetResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "ZoneList.", this.ZoneList);
         this.setParamArrayObj(map, prefix + "Data.", this.Data);
         this.setParamSimple(map, prefix + "Total", this.Total);
+        this.setParamArrayObj(map, prefix + "ZoneList.", this.ZoneList);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

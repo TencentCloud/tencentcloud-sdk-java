@@ -26,7 +26,6 @@ public class ServiceSupport extends AbstractModel {
     /**
     * 产品名称:
 "cfw_waf_virtual", "cwp_detect", "cwp_defense", "cwp_fix"
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ServiceName")
     @Expose
@@ -34,7 +33,6 @@ public class ServiceSupport extends AbstractModel {
 
     /**
     * 已处理的资产总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SupportHandledCount")
     @Expose
@@ -42,7 +40,6 @@ public class ServiceSupport extends AbstractModel {
 
     /**
     * 支持的资产总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SupportTotalCount")
     @Expose
@@ -50,7 +47,6 @@ public class ServiceSupport extends AbstractModel {
 
     /**
     * 是否支持该产品1支持；0不支持
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsSupport")
     @Expose
@@ -58,11 +54,9 @@ public class ServiceSupport extends AbstractModel {
 
     /**
      * Get 产品名称:
-"cfw_waf_virtual", "cwp_detect", "cwp_defense", "cwp_fix"
-注意：此字段可能返回 null，表示取不到有效值。 
+"cfw_waf_virtual", "cwp_detect", "cwp_defense", "cwp_fix" 
      * @return ServiceName 产品名称:
 "cfw_waf_virtual", "cwp_detect", "cwp_defense", "cwp_fix"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getServiceName() {
         return this.ServiceName;
@@ -71,20 +65,16 @@ public class ServiceSupport extends AbstractModel {
     /**
      * Set 产品名称:
 "cfw_waf_virtual", "cwp_detect", "cwp_defense", "cwp_fix"
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ServiceName 产品名称:
 "cfw_waf_virtual", "cwp_detect", "cwp_defense", "cwp_fix"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setServiceName(String ServiceName) {
         this.ServiceName = ServiceName;
     }
 
     /**
-     * Get 已处理的资产总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 已处理的资产总数 
      * @return SupportHandledCount 已处理的资产总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSupportHandledCount() {
         return this.SupportHandledCount;
@@ -92,19 +82,15 @@ public class ServiceSupport extends AbstractModel {
 
     /**
      * Set 已处理的资产总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SupportHandledCount 已处理的资产总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSupportHandledCount(Long SupportHandledCount) {
         this.SupportHandledCount = SupportHandledCount;
     }
 
     /**
-     * Get 支持的资产总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 支持的资产总数 
      * @return SupportTotalCount 支持的资产总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSupportTotalCount() {
         return this.SupportTotalCount;
@@ -112,19 +98,15 @@ public class ServiceSupport extends AbstractModel {
 
     /**
      * Set 支持的资产总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SupportTotalCount 支持的资产总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSupportTotalCount(Long SupportTotalCount) {
         this.SupportTotalCount = SupportTotalCount;
     }
 
     /**
-     * Get 是否支持该产品1支持；0不支持
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否支持该产品1支持；0不支持 
      * @return IsSupport 是否支持该产品1支持；0不支持
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsSupport() {
         return this.IsSupport;
@@ -132,9 +114,7 @@ public class ServiceSupport extends AbstractModel {
 
     /**
      * Set 是否支持该产品1支持；0不支持
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsSupport 是否支持该产品1支持；0不支持
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsSupport(Boolean IsSupport) {
         this.IsSupport = IsSupport;

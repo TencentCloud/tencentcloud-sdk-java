@@ -46,7 +46,6 @@ public class ApiAsset extends AbstractModel {
 
     /**
     * 场景
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Scene")
     @Expose
@@ -54,7 +53,6 @@ public class ApiAsset extends AbstractModel {
 
     /**
     * 数据标签
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Label")
     @Expose
@@ -62,7 +60,6 @@ public class ApiAsset extends AbstractModel {
 
     /**
     * 过去7天是否活跃
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Active")
     @Expose
@@ -84,7 +81,6 @@ public class ApiAsset extends AbstractModel {
 
     /**
     * 资产状态，1:新发现，2，确认中，3，已确认，4，已下线，5，已忽略
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Mode")
     @Expose
@@ -92,7 +88,6 @@ public class ApiAsset extends AbstractModel {
 
     /**
     * 风险等级，100,200,300对应低中高
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Level")
     @Expose
@@ -100,7 +95,6 @@ public class ApiAsset extends AbstractModel {
 
     /**
     * 近30天调用量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Count")
     @Expose
@@ -108,7 +102,6 @@ public class ApiAsset extends AbstractModel {
 
     /**
     * 备注
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Remark")
     @Expose
@@ -116,7 +109,6 @@ public class ApiAsset extends AbstractModel {
 
     /**
     * 是否鉴权，1标识是，0表示否
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsAuth")
     @Expose
@@ -124,7 +116,6 @@ public class ApiAsset extends AbstractModel {
 
     /**
     * 如果添加了api入参检测规则，则此id返回值不为0
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApiRequestRuleId")
     @Expose
@@ -132,7 +123,6 @@ public class ApiAsset extends AbstractModel {
 
     /**
     * 如果添加了api限流规则，则此id返回值不为0
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApiLimitRuleId")
     @Expose
@@ -140,7 +130,6 @@ public class ApiAsset extends AbstractModel {
 
     /**
     * 对象接入和泛域名接入时，展示host列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HostList")
     @Expose
@@ -195,10 +184,8 @@ public class ApiAsset extends AbstractModel {
     }
 
     /**
-     * Get 场景
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 场景 
      * @return Scene 场景
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getScene() {
         return this.Scene;
@@ -206,19 +193,15 @@ public class ApiAsset extends AbstractModel {
 
     /**
      * Set 场景
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Scene 场景
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScene(String Scene) {
         this.Scene = Scene;
     }
 
     /**
-     * Get 数据标签
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据标签 
      * @return Label 数据标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getLabel() {
         return this.Label;
@@ -226,19 +209,15 @@ public class ApiAsset extends AbstractModel {
 
     /**
      * Set 数据标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Label 数据标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLabel(String [] Label) {
         this.Label = Label;
     }
 
     /**
-     * Get 过去7天是否活跃
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 过去7天是否活跃 
      * @return Active 过去7天是否活跃
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getActive() {
         return this.Active;
@@ -246,9 +225,7 @@ public class ApiAsset extends AbstractModel {
 
     /**
      * Set 过去7天是否活跃
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Active 过去7天是否活跃
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setActive(Boolean Active) {
         this.Active = Active;
@@ -287,10 +264,8 @@ public class ApiAsset extends AbstractModel {
     }
 
     /**
-     * Get 资产状态，1:新发现，2，确认中，3，已确认，4，已下线，5，已忽略
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资产状态，1:新发现，2，确认中，3，已确认，4，已下线，5，已忽略 
      * @return Mode 资产状态，1:新发现，2，确认中，3，已确认，4，已下线，5，已忽略
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMode() {
         return this.Mode;
@@ -298,19 +273,15 @@ public class ApiAsset extends AbstractModel {
 
     /**
      * Set 资产状态，1:新发现，2，确认中，3，已确认，4，已下线，5，已忽略
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Mode 资产状态，1:新发现，2，确认中，3，已确认，4，已下线，5，已忽略
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMode(String Mode) {
         this.Mode = Mode;
     }
 
     /**
-     * Get 风险等级，100,200,300对应低中高
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 风险等级，100,200,300对应低中高 
      * @return Level 风险等级，100,200,300对应低中高
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLevel() {
         return this.Level;
@@ -318,19 +289,15 @@ public class ApiAsset extends AbstractModel {
 
     /**
      * Set 风险等级，100,200,300对应低中高
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Level 风险等级，100,200,300对应低中高
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLevel(String Level) {
         this.Level = Level;
     }
 
     /**
-     * Get 近30天调用量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 近30天调用量 
      * @return Count 近30天调用量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCount() {
         return this.Count;
@@ -338,19 +305,15 @@ public class ApiAsset extends AbstractModel {
 
     /**
      * Set 近30天调用量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Count 近30天调用量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCount(Long Count) {
         this.Count = Count;
     }
 
     /**
-     * Get 备注
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 备注 
      * @return Remark 备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRemark() {
         return this.Remark;
@@ -358,19 +321,15 @@ public class ApiAsset extends AbstractModel {
 
     /**
      * Set 备注
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Remark 备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get 是否鉴权，1标识是，0表示否
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否鉴权，1标识是，0表示否 
      * @return IsAuth 是否鉴权，1标识是，0表示否
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsAuth() {
         return this.IsAuth;
@@ -378,19 +337,15 @@ public class ApiAsset extends AbstractModel {
 
     /**
      * Set 是否鉴权，1标识是，0表示否
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsAuth 是否鉴权，1标识是，0表示否
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsAuth(Long IsAuth) {
         this.IsAuth = IsAuth;
     }
 
     /**
-     * Get 如果添加了api入参检测规则，则此id返回值不为0
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 如果添加了api入参检测规则，则此id返回值不为0 
      * @return ApiRequestRuleId 如果添加了api入参检测规则，则此id返回值不为0
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getApiRequestRuleId() {
         return this.ApiRequestRuleId;
@@ -398,19 +353,15 @@ public class ApiAsset extends AbstractModel {
 
     /**
      * Set 如果添加了api入参检测规则，则此id返回值不为0
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApiRequestRuleId 如果添加了api入参检测规则，则此id返回值不为0
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApiRequestRuleId(Long ApiRequestRuleId) {
         this.ApiRequestRuleId = ApiRequestRuleId;
     }
 
     /**
-     * Get 如果添加了api限流规则，则此id返回值不为0
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 如果添加了api限流规则，则此id返回值不为0 
      * @return ApiLimitRuleId 如果添加了api限流规则，则此id返回值不为0
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getApiLimitRuleId() {
         return this.ApiLimitRuleId;
@@ -418,19 +369,15 @@ public class ApiAsset extends AbstractModel {
 
     /**
      * Set 如果添加了api限流规则，则此id返回值不为0
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApiLimitRuleId 如果添加了api限流规则，则此id返回值不为0
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApiLimitRuleId(Long ApiLimitRuleId) {
         this.ApiLimitRuleId = ApiLimitRuleId;
     }
 
     /**
-     * Get 对象接入和泛域名接入时，展示host列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 对象接入和泛域名接入时，展示host列表 
      * @return HostList 对象接入和泛域名接入时，展示host列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getHostList() {
         return this.HostList;
@@ -438,9 +385,7 @@ public class ApiAsset extends AbstractModel {
 
     /**
      * Set 对象接入和泛域名接入时，展示host列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HostList 对象接入和泛域名接入时，展示host列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHostList(String [] HostList) {
         this.HostList = HostList;

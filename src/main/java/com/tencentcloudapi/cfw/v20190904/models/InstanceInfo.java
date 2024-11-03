@@ -31,32 +31,20 @@ public class InstanceInfo extends AbstractModel {
     private String AppId;
 
     /**
-    * 地域
+    * 资产来源
+1公网 2内网
     */
-    @SerializedName("Region")
+    @SerializedName("InsSource")
     @Expose
-    private String Region;
+    private String InsSource;
 
     /**
-    * vpcid信息
+    * 资产类型
+ 3是cvm实例,4是clb实例,5是eni实例,6是mysql,7是redis,8是NAT,9是VPN,10是ES,11是MARIADB,12是KAFKA 13 NATFW
     */
-    @SerializedName("VpcId")
+    @SerializedName("InsType")
     @Expose
-    private String VpcId;
-
-    /**
-    * vpc名称
-    */
-    @SerializedName("VPCName")
-    @Expose
-    private String VPCName;
-
-    /**
-    * 子网id
-    */
-    @SerializedName("SubnetId")
-    @Expose
-    private String SubnetId;
+    private Long InsType;
 
     /**
     * 资产id
@@ -73,26 +61,11 @@ public class InstanceInfo extends AbstractModel {
     private String InstanceName;
 
     /**
-    * 资产类型
- 3是cvm实例,4是clb实例,5是eni实例,6是mysql,7是redis,8是NAT,9是VPN,10是ES,11是MARIADB,12是KAFKA 13 NATFW
+    * 漏洞数
     */
-    @SerializedName("InsType")
+    @SerializedName("LeakNum")
     @Expose
-    private Long InsType;
-
-    /**
-    * 公网ip
-    */
-    @SerializedName("PublicIp")
-    @Expose
-    private String PublicIp;
-
-    /**
-    * 内网ip
-    */
-    @SerializedName("PrivateIp")
-    @Expose
-    private String PrivateIp;
+    private String LeakNum;
 
     /**
     * 端口数
@@ -102,22 +75,35 @@ public class InstanceInfo extends AbstractModel {
     private String PortNum;
 
     /**
-    * 漏洞数
+    * 内网ip
     */
-    @SerializedName("LeakNum")
+    @SerializedName("PrivateIp")
     @Expose
-    private String LeakNum;
+    private String PrivateIp;
 
     /**
-    * 1，公网 2内网
+    * 公网ip
     */
-    @SerializedName("InsSource")
+    @SerializedName("PublicIp")
     @Expose
-    private String InsSource;
+    private String PublicIp;
 
     /**
-    * [a,b]
-注意：此字段可能返回 null，表示取不到有效值。
+    * 地域
+    */
+    @SerializedName("Region")
+    @Expose
+    private String Region;
+
+    /**
+    * 地域
+    */
+    @SerializedName("RegionKey")
+    @Expose
+    private String RegionKey;
+
+    /**
+    * 资产路径
     */
     @SerializedName("ResourcePath")
     @Expose
@@ -125,19 +111,31 @@ public class InstanceInfo extends AbstractModel {
 
     /**
     * 扫描结果
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Server")
     @Expose
     private String [] Server;
 
     /**
-    * 地域
-注意：此字段可能返回 null，表示取不到有效值。
+    * 子网id
     */
-    @SerializedName("RegionKey")
+    @SerializedName("SubnetId")
     @Expose
-    private String RegionKey;
+    private String SubnetId;
+
+    /**
+    * vpc名称
+    */
+    @SerializedName("VPCName")
+    @Expose
+    private String VPCName;
+
+    /**
+    * vpcid信息
+    */
+    @SerializedName("VpcId")
+    @Expose
+    private String VpcId;
 
     /**
      * Get appid信息 
@@ -156,67 +154,43 @@ public class InstanceInfo extends AbstractModel {
     }
 
     /**
-     * Get 地域 
-     * @return Region 地域
+     * Get 资产来源
+1公网 2内网 
+     * @return InsSource 资产来源
+1公网 2内网
      */
-    public String getRegion() {
-        return this.Region;
+    public String getInsSource() {
+        return this.InsSource;
     }
 
     /**
-     * Set 地域
-     * @param Region 地域
+     * Set 资产来源
+1公网 2内网
+     * @param InsSource 资产来源
+1公网 2内网
      */
-    public void setRegion(String Region) {
-        this.Region = Region;
+    public void setInsSource(String InsSource) {
+        this.InsSource = InsSource;
     }
 
     /**
-     * Get vpcid信息 
-     * @return VpcId vpcid信息
+     * Get 资产类型
+ 3是cvm实例,4是clb实例,5是eni实例,6是mysql,7是redis,8是NAT,9是VPN,10是ES,11是MARIADB,12是KAFKA 13 NATFW 
+     * @return InsType 资产类型
+ 3是cvm实例,4是clb实例,5是eni实例,6是mysql,7是redis,8是NAT,9是VPN,10是ES,11是MARIADB,12是KAFKA 13 NATFW
      */
-    public String getVpcId() {
-        return this.VpcId;
+    public Long getInsType() {
+        return this.InsType;
     }
 
     /**
-     * Set vpcid信息
-     * @param VpcId vpcid信息
+     * Set 资产类型
+ 3是cvm实例,4是clb实例,5是eni实例,6是mysql,7是redis,8是NAT,9是VPN,10是ES,11是MARIADB,12是KAFKA 13 NATFW
+     * @param InsType 资产类型
+ 3是cvm实例,4是clb实例,5是eni实例,6是mysql,7是redis,8是NAT,9是VPN,10是ES,11是MARIADB,12是KAFKA 13 NATFW
      */
-    public void setVpcId(String VpcId) {
-        this.VpcId = VpcId;
-    }
-
-    /**
-     * Get vpc名称 
-     * @return VPCName vpc名称
-     */
-    public String getVPCName() {
-        return this.VPCName;
-    }
-
-    /**
-     * Set vpc名称
-     * @param VPCName vpc名称
-     */
-    public void setVPCName(String VPCName) {
-        this.VPCName = VPCName;
-    }
-
-    /**
-     * Get 子网id 
-     * @return SubnetId 子网id
-     */
-    public String getSubnetId() {
-        return this.SubnetId;
-    }
-
-    /**
-     * Set 子网id
-     * @param SubnetId 子网id
-     */
-    public void setSubnetId(String SubnetId) {
-        this.SubnetId = SubnetId;
+    public void setInsType(Long InsType) {
+        this.InsType = InsType;
     }
 
     /**
@@ -252,55 +226,19 @@ public class InstanceInfo extends AbstractModel {
     }
 
     /**
-     * Get 资产类型
- 3是cvm实例,4是clb实例,5是eni实例,6是mysql,7是redis,8是NAT,9是VPN,10是ES,11是MARIADB,12是KAFKA 13 NATFW 
-     * @return InsType 资产类型
- 3是cvm实例,4是clb实例,5是eni实例,6是mysql,7是redis,8是NAT,9是VPN,10是ES,11是MARIADB,12是KAFKA 13 NATFW
+     * Get 漏洞数 
+     * @return LeakNum 漏洞数
      */
-    public Long getInsType() {
-        return this.InsType;
+    public String getLeakNum() {
+        return this.LeakNum;
     }
 
     /**
-     * Set 资产类型
- 3是cvm实例,4是clb实例,5是eni实例,6是mysql,7是redis,8是NAT,9是VPN,10是ES,11是MARIADB,12是KAFKA 13 NATFW
-     * @param InsType 资产类型
- 3是cvm实例,4是clb实例,5是eni实例,6是mysql,7是redis,8是NAT,9是VPN,10是ES,11是MARIADB,12是KAFKA 13 NATFW
+     * Set 漏洞数
+     * @param LeakNum 漏洞数
      */
-    public void setInsType(Long InsType) {
-        this.InsType = InsType;
-    }
-
-    /**
-     * Get 公网ip 
-     * @return PublicIp 公网ip
-     */
-    public String getPublicIp() {
-        return this.PublicIp;
-    }
-
-    /**
-     * Set 公网ip
-     * @param PublicIp 公网ip
-     */
-    public void setPublicIp(String PublicIp) {
-        this.PublicIp = PublicIp;
-    }
-
-    /**
-     * Get 内网ip 
-     * @return PrivateIp 内网ip
-     */
-    public String getPrivateIp() {
-        return this.PrivateIp;
-    }
-
-    /**
-     * Set 内网ip
-     * @param PrivateIp 内网ip
-     */
-    public void setPrivateIp(String PrivateIp) {
-        this.PrivateIp = PrivateIp;
+    public void setLeakNum(String LeakNum) {
+        this.LeakNum = LeakNum;
     }
 
     /**
@@ -320,82 +258,56 @@ public class InstanceInfo extends AbstractModel {
     }
 
     /**
-     * Get 漏洞数 
-     * @return LeakNum 漏洞数
+     * Get 内网ip 
+     * @return PrivateIp 内网ip
      */
-    public String getLeakNum() {
-        return this.LeakNum;
+    public String getPrivateIp() {
+        return this.PrivateIp;
     }
 
     /**
-     * Set 漏洞数
-     * @param LeakNum 漏洞数
+     * Set 内网ip
+     * @param PrivateIp 内网ip
      */
-    public void setLeakNum(String LeakNum) {
-        this.LeakNum = LeakNum;
+    public void setPrivateIp(String PrivateIp) {
+        this.PrivateIp = PrivateIp;
     }
 
     /**
-     * Get 1，公网 2内网 
-     * @return InsSource 1，公网 2内网
+     * Get 公网ip 
+     * @return PublicIp 公网ip
      */
-    public String getInsSource() {
-        return this.InsSource;
+    public String getPublicIp() {
+        return this.PublicIp;
     }
 
     /**
-     * Set 1，公网 2内网
-     * @param InsSource 1，公网 2内网
+     * Set 公网ip
+     * @param PublicIp 公网ip
      */
-    public void setInsSource(String InsSource) {
-        this.InsSource = InsSource;
+    public void setPublicIp(String PublicIp) {
+        this.PublicIp = PublicIp;
     }
 
     /**
-     * Get [a,b]
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ResourcePath [a,b]
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 地域 
+     * @return Region 地域
      */
-    public String [] getResourcePath() {
-        return this.ResourcePath;
+    public String getRegion() {
+        return this.Region;
     }
 
     /**
-     * Set [a,b]
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResourcePath [a,b]
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 地域
+     * @param Region 地域
      */
-    public void setResourcePath(String [] ResourcePath) {
-        this.ResourcePath = ResourcePath;
+    public void setRegion(String Region) {
+        this.Region = Region;
     }
 
     /**
-     * Get 扫描结果
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Server 扫描结果
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String [] getServer() {
-        return this.Server;
-    }
-
-    /**
-     * Set 扫描结果
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Server 扫描结果
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setServer(String [] Server) {
-        this.Server = Server;
-    }
-
-    /**
-     * Get 地域
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地域 
      * @return RegionKey 地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegionKey() {
         return this.RegionKey;
@@ -403,12 +315,90 @@ public class InstanceInfo extends AbstractModel {
 
     /**
      * Set 地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RegionKey 地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegionKey(String RegionKey) {
         this.RegionKey = RegionKey;
+    }
+
+    /**
+     * Get 资产路径 
+     * @return ResourcePath 资产路径
+     */
+    public String [] getResourcePath() {
+        return this.ResourcePath;
+    }
+
+    /**
+     * Set 资产路径
+     * @param ResourcePath 资产路径
+     */
+    public void setResourcePath(String [] ResourcePath) {
+        this.ResourcePath = ResourcePath;
+    }
+
+    /**
+     * Get 扫描结果 
+     * @return Server 扫描结果
+     */
+    public String [] getServer() {
+        return this.Server;
+    }
+
+    /**
+     * Set 扫描结果
+     * @param Server 扫描结果
+     */
+    public void setServer(String [] Server) {
+        this.Server = Server;
+    }
+
+    /**
+     * Get 子网id 
+     * @return SubnetId 子网id
+     */
+    public String getSubnetId() {
+        return this.SubnetId;
+    }
+
+    /**
+     * Set 子网id
+     * @param SubnetId 子网id
+     */
+    public void setSubnetId(String SubnetId) {
+        this.SubnetId = SubnetId;
+    }
+
+    /**
+     * Get vpc名称 
+     * @return VPCName vpc名称
+     */
+    public String getVPCName() {
+        return this.VPCName;
+    }
+
+    /**
+     * Set vpc名称
+     * @param VPCName vpc名称
+     */
+    public void setVPCName(String VPCName) {
+        this.VPCName = VPCName;
+    }
+
+    /**
+     * Get vpcid信息 
+     * @return VpcId vpcid信息
+     */
+    public String getVpcId() {
+        return this.VpcId;
+    }
+
+    /**
+     * Set vpcid信息
+     * @param VpcId vpcid信息
+     */
+    public void setVpcId(String VpcId) {
+        this.VpcId = VpcId;
     }
 
     public InstanceInfo() {
@@ -422,17 +412,11 @@ public class InstanceInfo extends AbstractModel {
         if (source.AppId != null) {
             this.AppId = new String(source.AppId);
         }
-        if (source.Region != null) {
-            this.Region = new String(source.Region);
+        if (source.InsSource != null) {
+            this.InsSource = new String(source.InsSource);
         }
-        if (source.VpcId != null) {
-            this.VpcId = new String(source.VpcId);
-        }
-        if (source.VPCName != null) {
-            this.VPCName = new String(source.VPCName);
-        }
-        if (source.SubnetId != null) {
-            this.SubnetId = new String(source.SubnetId);
+        if (source.InsType != null) {
+            this.InsType = new Long(source.InsType);
         }
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
@@ -440,23 +424,23 @@ public class InstanceInfo extends AbstractModel {
         if (source.InstanceName != null) {
             this.InstanceName = new String(source.InstanceName);
         }
-        if (source.InsType != null) {
-            this.InsType = new Long(source.InsType);
-        }
-        if (source.PublicIp != null) {
-            this.PublicIp = new String(source.PublicIp);
-        }
-        if (source.PrivateIp != null) {
-            this.PrivateIp = new String(source.PrivateIp);
+        if (source.LeakNum != null) {
+            this.LeakNum = new String(source.LeakNum);
         }
         if (source.PortNum != null) {
             this.PortNum = new String(source.PortNum);
         }
-        if (source.LeakNum != null) {
-            this.LeakNum = new String(source.LeakNum);
+        if (source.PrivateIp != null) {
+            this.PrivateIp = new String(source.PrivateIp);
         }
-        if (source.InsSource != null) {
-            this.InsSource = new String(source.InsSource);
+        if (source.PublicIp != null) {
+            this.PublicIp = new String(source.PublicIp);
+        }
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
+        if (source.RegionKey != null) {
+            this.RegionKey = new String(source.RegionKey);
         }
         if (source.ResourcePath != null) {
             this.ResourcePath = new String[source.ResourcePath.length];
@@ -470,8 +454,14 @@ public class InstanceInfo extends AbstractModel {
                 this.Server[i] = new String(source.Server[i]);
             }
         }
-        if (source.RegionKey != null) {
-            this.RegionKey = new String(source.RegionKey);
+        if (source.SubnetId != null) {
+            this.SubnetId = new String(source.SubnetId);
+        }
+        if (source.VPCName != null) {
+            this.VPCName = new String(source.VPCName);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
         }
     }
 
@@ -481,21 +471,21 @@ public class InstanceInfo extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AppId", this.AppId);
-        this.setParamSimple(map, prefix + "Region", this.Region);
-        this.setParamSimple(map, prefix + "VpcId", this.VpcId);
-        this.setParamSimple(map, prefix + "VPCName", this.VPCName);
-        this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
+        this.setParamSimple(map, prefix + "InsSource", this.InsSource);
+        this.setParamSimple(map, prefix + "InsType", this.InsType);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);
-        this.setParamSimple(map, prefix + "InsType", this.InsType);
-        this.setParamSimple(map, prefix + "PublicIp", this.PublicIp);
-        this.setParamSimple(map, prefix + "PrivateIp", this.PrivateIp);
-        this.setParamSimple(map, prefix + "PortNum", this.PortNum);
         this.setParamSimple(map, prefix + "LeakNum", this.LeakNum);
-        this.setParamSimple(map, prefix + "InsSource", this.InsSource);
+        this.setParamSimple(map, prefix + "PortNum", this.PortNum);
+        this.setParamSimple(map, prefix + "PrivateIp", this.PrivateIp);
+        this.setParamSimple(map, prefix + "PublicIp", this.PublicIp);
+        this.setParamSimple(map, prefix + "Region", this.Region);
+        this.setParamSimple(map, prefix + "RegionKey", this.RegionKey);
         this.setParamArraySimple(map, prefix + "ResourcePath.", this.ResourcePath);
         this.setParamArraySimple(map, prefix + "Server.", this.Server);
-        this.setParamSimple(map, prefix + "RegionKey", this.RegionKey);
+        this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
+        this.setParamSimple(map, prefix + "VPCName", this.VPCName);
+        this.setParamSimple(map, prefix + "VpcId", this.VpcId);
 
     }
 }

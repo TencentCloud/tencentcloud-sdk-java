@@ -31,11 +31,11 @@ public class DescribeResourceGroupNewResponse extends AbstractModel {
     private String Data;
 
     /**
-    * 未分类实例数量
+    * 返回码；0为请求成功
     */
-    @SerializedName("UnResourceNum")
+    @SerializedName("ReturnCode")
     @Expose
-    private Long UnResourceNum;
+    private Long ReturnCode;
 
     /**
     * 接口返回消息
@@ -45,11 +45,11 @@ public class DescribeResourceGroupNewResponse extends AbstractModel {
     private String ReturnMsg;
 
     /**
-    * 返回码；0为请求成功
+    * 未分类实例数量
     */
-    @SerializedName("ReturnCode")
+    @SerializedName("UnResourceNum")
     @Expose
-    private Long ReturnCode;
+    private Long UnResourceNum;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -75,19 +75,19 @@ public class DescribeResourceGroupNewResponse extends AbstractModel {
     }
 
     /**
-     * Get 未分类实例数量 
-     * @return UnResourceNum 未分类实例数量
+     * Get 返回码；0为请求成功 
+     * @return ReturnCode 返回码；0为请求成功
      */
-    public Long getUnResourceNum() {
-        return this.UnResourceNum;
+    public Long getReturnCode() {
+        return this.ReturnCode;
     }
 
     /**
-     * Set 未分类实例数量
-     * @param UnResourceNum 未分类实例数量
+     * Set 返回码；0为请求成功
+     * @param ReturnCode 返回码；0为请求成功
      */
-    public void setUnResourceNum(Long UnResourceNum) {
-        this.UnResourceNum = UnResourceNum;
+    public void setReturnCode(Long ReturnCode) {
+        this.ReturnCode = ReturnCode;
     }
 
     /**
@@ -107,19 +107,19 @@ public class DescribeResourceGroupNewResponse extends AbstractModel {
     }
 
     /**
-     * Get 返回码；0为请求成功 
-     * @return ReturnCode 返回码；0为请求成功
+     * Get 未分类实例数量 
+     * @return UnResourceNum 未分类实例数量
      */
-    public Long getReturnCode() {
-        return this.ReturnCode;
+    public Long getUnResourceNum() {
+        return this.UnResourceNum;
     }
 
     /**
-     * Set 返回码；0为请求成功
-     * @param ReturnCode 返回码；0为请求成功
+     * Set 未分类实例数量
+     * @param UnResourceNum 未分类实例数量
      */
-    public void setReturnCode(Long ReturnCode) {
-        this.ReturnCode = ReturnCode;
+    public void setUnResourceNum(Long UnResourceNum) {
+        this.UnResourceNum = UnResourceNum;
     }
 
     /**
@@ -149,14 +149,14 @@ public class DescribeResourceGroupNewResponse extends AbstractModel {
         if (source.Data != null) {
             this.Data = new String(source.Data);
         }
-        if (source.UnResourceNum != null) {
-            this.UnResourceNum = new Long(source.UnResourceNum);
+        if (source.ReturnCode != null) {
+            this.ReturnCode = new Long(source.ReturnCode);
         }
         if (source.ReturnMsg != null) {
             this.ReturnMsg = new String(source.ReturnMsg);
         }
-        if (source.ReturnCode != null) {
-            this.ReturnCode = new Long(source.ReturnCode);
+        if (source.UnResourceNum != null) {
+            this.UnResourceNum = new Long(source.UnResourceNum);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -169,9 +169,9 @@ public class DescribeResourceGroupNewResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Data", this.Data);
-        this.setParamSimple(map, prefix + "UnResourceNum", this.UnResourceNum);
-        this.setParamSimple(map, prefix + "ReturnMsg", this.ReturnMsg);
         this.setParamSimple(map, prefix + "ReturnCode", this.ReturnCode);
+        this.setParamSimple(map, prefix + "ReturnMsg", this.ReturnMsg);
+        this.setParamSimple(map, prefix + "UnResourceNum", this.UnResourceNum);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

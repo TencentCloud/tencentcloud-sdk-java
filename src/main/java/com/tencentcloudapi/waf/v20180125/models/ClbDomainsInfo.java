@@ -81,7 +81,6 @@ public class ClbDomainsInfo extends AbstractModel {
 
     /**
     * 域名绑定负载均衡器状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("State")
     @Expose
@@ -89,7 +88,6 @@ public class ClbDomainsInfo extends AbstractModel {
 
     /**
     * 负载均衡类型，clb或者apisix
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AlbType")
     @Expose
@@ -97,7 +95,6 @@ public class ClbDomainsInfo extends AbstractModel {
 
     /**
     * IsCdn=3时，表示自定义header
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IpHeaders")
     @Expose
@@ -105,7 +102,6 @@ public class ClbDomainsInfo extends AbstractModel {
 
     /**
     * cdc-clb-waf类型WAF的CDC集群信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CdcClusters")
     @Expose
@@ -113,7 +109,6 @@ public class ClbDomainsInfo extends AbstractModel {
 
     /**
     * 云类型:public:公有云；private:私有云;hybrid:混合云
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CloudType")
     @Expose
@@ -121,7 +116,6 @@ public class ClbDomainsInfo extends AbstractModel {
 
     /**
     * 域名备注信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Note")
     @Expose
@@ -129,7 +123,6 @@ public class ClbDomainsInfo extends AbstractModel {
 
     /**
     * 域名标签
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Labels")
     @Expose
@@ -264,10 +257,8 @@ public class ClbDomainsInfo extends AbstractModel {
     }
 
     /**
-     * Get 域名绑定负载均衡器状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 域名绑定负载均衡器状态 
      * @return State 域名绑定负载均衡器状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getState() {
         return this.State;
@@ -275,19 +266,15 @@ public class ClbDomainsInfo extends AbstractModel {
 
     /**
      * Set 域名绑定负载均衡器状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param State 域名绑定负载均衡器状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setState(Long State) {
         this.State = State;
     }
 
     /**
-     * Get 负载均衡类型，clb或者apisix
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 负载均衡类型，clb或者apisix 
      * @return AlbType 负载均衡类型，clb或者apisix
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAlbType() {
         return this.AlbType;
@@ -295,19 +282,15 @@ public class ClbDomainsInfo extends AbstractModel {
 
     /**
      * Set 负载均衡类型，clb或者apisix
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AlbType 负载均衡类型，clb或者apisix
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAlbType(String AlbType) {
         this.AlbType = AlbType;
     }
 
     /**
-     * Get IsCdn=3时，表示自定义header
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get IsCdn=3时，表示自定义header 
      * @return IpHeaders IsCdn=3时，表示自定义header
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getIpHeaders() {
         return this.IpHeaders;
@@ -315,19 +298,15 @@ public class ClbDomainsInfo extends AbstractModel {
 
     /**
      * Set IsCdn=3时，表示自定义header
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IpHeaders IsCdn=3时，表示自定义header
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIpHeaders(String [] IpHeaders) {
         this.IpHeaders = IpHeaders;
     }
 
     /**
-     * Get cdc-clb-waf类型WAF的CDC集群信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get cdc-clb-waf类型WAF的CDC集群信息 
      * @return CdcClusters cdc-clb-waf类型WAF的CDC集群信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCdcClusters() {
         return this.CdcClusters;
@@ -335,19 +314,15 @@ public class ClbDomainsInfo extends AbstractModel {
 
     /**
      * Set cdc-clb-waf类型WAF的CDC集群信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CdcClusters cdc-clb-waf类型WAF的CDC集群信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCdcClusters(String CdcClusters) {
         this.CdcClusters = CdcClusters;
     }
 
     /**
-     * Get 云类型:public:公有云；private:私有云;hybrid:混合云
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 云类型:public:公有云；private:私有云;hybrid:混合云 
      * @return CloudType 云类型:public:公有云；private:私有云;hybrid:混合云
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCloudType() {
         return this.CloudType;
@@ -355,19 +330,15 @@ public class ClbDomainsInfo extends AbstractModel {
 
     /**
      * Set 云类型:public:公有云；private:私有云;hybrid:混合云
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CloudType 云类型:public:公有云；private:私有云;hybrid:混合云
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCloudType(String CloudType) {
         this.CloudType = CloudType;
     }
 
     /**
-     * Get 域名备注信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 域名备注信息 
      * @return Note 域名备注信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNote() {
         return this.Note;
@@ -375,19 +346,15 @@ public class ClbDomainsInfo extends AbstractModel {
 
     /**
      * Set 域名备注信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Note 域名备注信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNote(String Note) {
         this.Note = Note;
     }
 
     /**
-     * Get 域名标签
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 域名标签 
      * @return Labels 域名标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getLabels() {
         return this.Labels;
@@ -395,9 +362,7 @@ public class ClbDomainsInfo extends AbstractModel {
 
     /**
      * Set 域名标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Labels 域名标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLabels(String [] Labels) {
         this.Labels = Labels;

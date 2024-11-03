@@ -31,13 +31,6 @@ public class CommonFilter extends AbstractModel {
     private String Name;
 
     /**
-    * 检索的值，各检索值间为OR关系
-    */
-    @SerializedName("Values")
-    @Expose
-    private String [] Values;
-
-    /**
     * 枚举类型，代表Name与Values之间的匹配关系
 enum FilterOperatorType {
     //等于
@@ -63,6 +56,13 @@ enum FilterOperatorType {
     private Long OperatorType;
 
     /**
+    * 检索的值，各检索值间为OR关系
+    */
+    @SerializedName("Values")
+    @Expose
+    private String [] Values;
+
+    /**
      * Get 检索的键值 
      * @return Name 检索的键值
      */
@@ -76,22 +76,6 @@ enum FilterOperatorType {
      */
     public void setName(String Name) {
         this.Name = Name;
-    }
-
-    /**
-     * Get 检索的值，各检索值间为OR关系 
-     * @return Values 检索的值，各检索值间为OR关系
-     */
-    public String [] getValues() {
-        return this.Values;
-    }
-
-    /**
-     * Set 检索的值，各检索值间为OR关系
-     * @param Values 检索的值，各检索值间为OR关系
-     */
-    public void setValues(String [] Values) {
-        this.Values = Values;
     }
 
     /**
@@ -182,6 +166,22 @@ enum FilterOperatorType {
         this.OperatorType = OperatorType;
     }
 
+    /**
+     * Get 检索的值，各检索值间为OR关系 
+     * @return Values 检索的值，各检索值间为OR关系
+     */
+    public String [] getValues() {
+        return this.Values;
+    }
+
+    /**
+     * Set 检索的值，各检索值间为OR关系
+     * @param Values 检索的值，各检索值间为OR关系
+     */
+    public void setValues(String [] Values) {
+        this.Values = Values;
+    }
+
     public CommonFilter() {
     }
 
@@ -193,14 +193,14 @@ enum FilterOperatorType {
         if (source.Name != null) {
             this.Name = new String(source.Name);
         }
+        if (source.OperatorType != null) {
+            this.OperatorType = new Long(source.OperatorType);
+        }
         if (source.Values != null) {
             this.Values = new String[source.Values.length];
             for (int i = 0; i < source.Values.length; i++) {
                 this.Values[i] = new String(source.Values[i]);
             }
-        }
-        if (source.OperatorType != null) {
-            this.OperatorType = new Long(source.OperatorType);
         }
     }
 
@@ -210,8 +210,8 @@ enum FilterOperatorType {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);
-        this.setParamArraySimple(map, prefix + "Values.", this.Values);
         this.setParamSimple(map, prefix + "OperatorType", this.OperatorType);
+        this.setParamArraySimple(map, prefix + "Values.", this.Values);
 
     }
 }

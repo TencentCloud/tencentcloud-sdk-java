@@ -56,7 +56,6 @@ public class SearchAccessLogResponse extends AbstractModel {
     /**
     * 日志查询结果；当Analysis为True时，可能返回为null
 注意：此字段可能返回 null，表示取不到有效值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Results")
     @Expose
@@ -133,7 +132,9 @@ public class SearchAccessLogResponse extends AbstractModel {
      * @return ColNames 如果Analysis为True，则返回分析结果的列名，否则为空
 注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public String [] getColNames() {
         return this.ColNames;
     }
@@ -145,18 +146,18 @@ public class SearchAccessLogResponse extends AbstractModel {
      * @param ColNames 如果Analysis为True，则返回分析结果的列名，否则为空
 注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public void setColNames(String [] ColNames) {
         this.ColNames = ColNames;
     }
 
     /**
      * Get 日志查询结果；当Analysis为True时，可能返回为null
-注意：此字段可能返回 null，表示取不到有效值
-注意：此字段可能返回 null，表示取不到有效值。 
+注意：此字段可能返回 null，表示取不到有效值 
      * @return Results 日志查询结果；当Analysis为True时，可能返回为null
 注意：此字段可能返回 null，表示取不到有效值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AccessLogInfo [] getResults() {
         return this.Results;
@@ -165,10 +166,8 @@ public class SearchAccessLogResponse extends AbstractModel {
     /**
      * Set 日志查询结果；当Analysis为True时，可能返回为null
 注意：此字段可能返回 null，表示取不到有效值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Results 日志查询结果；当Analysis为True时，可能返回为null
 注意：此字段可能返回 null，表示取不到有效值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResults(AccessLogInfo [] Results) {
         this.Results = Results;
@@ -181,7 +180,9 @@ public class SearchAccessLogResponse extends AbstractModel {
      * @return AnalysisResults 日志分析结果；当Analysis为False时，可能返回为null
 注意：此字段可能返回 null，表示取不到有效值
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public AccessLogItems [] getAnalysisResults() {
         return this.AnalysisResults;
     }
@@ -193,7 +194,9 @@ public class SearchAccessLogResponse extends AbstractModel {
      * @param AnalysisResults 日志分析结果；当Analysis为False时，可能返回为null
 注意：此字段可能返回 null，表示取不到有效值
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public void setAnalysisResults(AccessLogItems [] AnalysisResults) {
         this.AnalysisResults = AnalysisResults;
     }

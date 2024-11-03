@@ -25,7 +25,6 @@ public class SecurityGroupBothWayInfo extends AbstractModel {
 
     /**
     * 执行顺序
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OrderIndex")
     @Expose
@@ -33,7 +32,6 @@ public class SecurityGroupBothWayInfo extends AbstractModel {
 
     /**
     * 访问源
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SourceId")
     @Expose
@@ -41,7 +39,6 @@ public class SecurityGroupBothWayInfo extends AbstractModel {
 
     /**
     * 访问源类型，默认为0，0: IP, 1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB, 7: 参数模板, 100: 资产分组
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SourceType")
     @Expose
@@ -49,7 +46,6 @@ public class SecurityGroupBothWayInfo extends AbstractModel {
 
     /**
     * 访问目的
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TargetId")
     @Expose
@@ -57,7 +53,6 @@ public class SecurityGroupBothWayInfo extends AbstractModel {
 
     /**
     * 访问目的类型，默认为0，0: IP, 1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB, 7: 参数模板, 100: 资产分组
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TargetType")
     @Expose
@@ -65,7 +60,6 @@ public class SecurityGroupBothWayInfo extends AbstractModel {
 
     /**
     * 协议
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Protocol")
     @Expose
@@ -73,7 +67,6 @@ public class SecurityGroupBothWayInfo extends AbstractModel {
 
     /**
     * 目的端口
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Port")
     @Expose
@@ -81,7 +74,6 @@ public class SecurityGroupBothWayInfo extends AbstractModel {
 
     /**
     * 策略, 1：阻断，2：放行
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Strategy")
     @Expose
@@ -89,7 +81,6 @@ public class SecurityGroupBothWayInfo extends AbstractModel {
 
     /**
     * 方向，0：出站，1：入站，默认1
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Direction")
     @Expose
@@ -104,7 +95,6 @@ public class SecurityGroupBothWayInfo extends AbstractModel {
 
     /**
     * 描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Detail")
     @Expose
@@ -112,7 +102,6 @@ public class SecurityGroupBothWayInfo extends AbstractModel {
 
     /**
     * 是否开关开启，0：未开启，1：开启
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -120,7 +109,6 @@ public class SecurityGroupBothWayInfo extends AbstractModel {
 
     /**
     * 是否是正常规则，0：正常，1：异常
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsNew")
     @Expose
@@ -128,7 +116,6 @@ public class SecurityGroupBothWayInfo extends AbstractModel {
 
     /**
     * 单/双向下发，0:单向下发，1：双向下发
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BothWay")
     @Expose
@@ -136,7 +123,6 @@ public class SecurityGroupBothWayInfo extends AbstractModel {
 
     /**
     * 私有网络ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcId")
     @Expose
@@ -144,7 +130,6 @@ public class SecurityGroupBothWayInfo extends AbstractModel {
 
     /**
     * 子网ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubnetId")
     @Expose
@@ -152,7 +137,6 @@ public class SecurityGroupBothWayInfo extends AbstractModel {
 
     /**
     * 实例名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceName")
     @Expose
@@ -160,7 +144,6 @@ public class SecurityGroupBothWayInfo extends AbstractModel {
 
     /**
     * 公网IP，多个以英文逗号分隔
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PublicIp")
     @Expose
@@ -168,7 +151,6 @@ public class SecurityGroupBothWayInfo extends AbstractModel {
 
     /**
     * 内网IP，多个以英文逗号分隔
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PrivateIp")
     @Expose
@@ -176,7 +158,6 @@ public class SecurityGroupBothWayInfo extends AbstractModel {
 
     /**
     * 掩码地址，多个以英文逗号分隔
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Cidr")
     @Expose
@@ -184,7 +165,6 @@ public class SecurityGroupBothWayInfo extends AbstractModel {
 
     /**
     * 端口协议类型参数模板id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ServiceTemplateId")
     @Expose
@@ -198,10 +178,8 @@ public class SecurityGroupBothWayInfo extends AbstractModel {
     private Long ProtocolPortType;
 
     /**
-     * Get 执行顺序
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 执行顺序 
      * @return OrderIndex 执行顺序
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getOrderIndex() {
         return this.OrderIndex;
@@ -209,19 +187,15 @@ public class SecurityGroupBothWayInfo extends AbstractModel {
 
     /**
      * Set 执行顺序
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OrderIndex 执行顺序
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOrderIndex(Long OrderIndex) {
         this.OrderIndex = OrderIndex;
     }
 
     /**
-     * Get 访问源
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 访问源 
      * @return SourceId 访问源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSourceId() {
         return this.SourceId;
@@ -229,19 +203,15 @@ public class SecurityGroupBothWayInfo extends AbstractModel {
 
     /**
      * Set 访问源
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SourceId 访问源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSourceId(String SourceId) {
         this.SourceId = SourceId;
     }
 
     /**
-     * Get 访问源类型，默认为0，0: IP, 1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB, 7: 参数模板, 100: 资产分组
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 访问源类型，默认为0，0: IP, 1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB, 7: 参数模板, 100: 资产分组 
      * @return SourceType 访问源类型，默认为0，0: IP, 1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB, 7: 参数模板, 100: 资产分组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSourceType() {
         return this.SourceType;
@@ -249,19 +219,15 @@ public class SecurityGroupBothWayInfo extends AbstractModel {
 
     /**
      * Set 访问源类型，默认为0，0: IP, 1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB, 7: 参数模板, 100: 资产分组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SourceType 访问源类型，默认为0，0: IP, 1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB, 7: 参数模板, 100: 资产分组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSourceType(Long SourceType) {
         this.SourceType = SourceType;
     }
 
     /**
-     * Get 访问目的
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 访问目的 
      * @return TargetId 访问目的
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTargetId() {
         return this.TargetId;
@@ -269,19 +235,15 @@ public class SecurityGroupBothWayInfo extends AbstractModel {
 
     /**
      * Set 访问目的
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TargetId 访问目的
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTargetId(String TargetId) {
         this.TargetId = TargetId;
     }
 
     /**
-     * Get 访问目的类型，默认为0，0: IP, 1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB, 7: 参数模板, 100: 资产分组
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 访问目的类型，默认为0，0: IP, 1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB, 7: 参数模板, 100: 资产分组 
      * @return TargetType 访问目的类型，默认为0，0: IP, 1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB, 7: 参数模板, 100: 资产分组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTargetType() {
         return this.TargetType;
@@ -289,19 +251,15 @@ public class SecurityGroupBothWayInfo extends AbstractModel {
 
     /**
      * Set 访问目的类型，默认为0，0: IP, 1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB, 7: 参数模板, 100: 资产分组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TargetType 访问目的类型，默认为0，0: IP, 1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB, 7: 参数模板, 100: 资产分组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTargetType(Long TargetType) {
         this.TargetType = TargetType;
     }
 
     /**
-     * Get 协议
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 协议 
      * @return Protocol 协议
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProtocol() {
         return this.Protocol;
@@ -309,19 +267,15 @@ public class SecurityGroupBothWayInfo extends AbstractModel {
 
     /**
      * Set 协议
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Protocol 协议
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
     }
 
     /**
-     * Get 目的端口
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 目的端口 
      * @return Port 目的端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPort() {
         return this.Port;
@@ -329,19 +283,15 @@ public class SecurityGroupBothWayInfo extends AbstractModel {
 
     /**
      * Set 目的端口
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Port 目的端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPort(String Port) {
         this.Port = Port;
     }
 
     /**
-     * Get 策略, 1：阻断，2：放行
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 策略, 1：阻断，2：放行 
      * @return Strategy 策略, 1：阻断，2：放行
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStrategy() {
         return this.Strategy;
@@ -349,19 +299,15 @@ public class SecurityGroupBothWayInfo extends AbstractModel {
 
     /**
      * Set 策略, 1：阻断，2：放行
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Strategy 策略, 1：阻断，2：放行
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStrategy(Long Strategy) {
         this.Strategy = Strategy;
     }
 
     /**
-     * Get 方向，0：出站，1：入站，默认1
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 方向，0：出站，1：入站，默认1 
      * @return Direction 方向，0：出站，1：入站，默认1
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDirection() {
         return this.Direction;
@@ -369,9 +315,7 @@ public class SecurityGroupBothWayInfo extends AbstractModel {
 
     /**
      * Set 方向，0：出站，1：入站，默认1
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Direction 方向，0：出站，1：入站，默认1
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDirection(Long Direction) {
         this.Direction = Direction;
@@ -394,10 +338,8 @@ public class SecurityGroupBothWayInfo extends AbstractModel {
     }
 
     /**
-     * Get 描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 描述 
      * @return Detail 描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDetail() {
         return this.Detail;
@@ -405,19 +347,15 @@ public class SecurityGroupBothWayInfo extends AbstractModel {
 
     /**
      * Set 描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Detail 描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDetail(String Detail) {
         this.Detail = Detail;
     }
 
     /**
-     * Get 是否开关开启，0：未开启，1：开启
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否开关开启，0：未开启，1：开启 
      * @return Status 是否开关开启，0：未开启，1：开启
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
         return this.Status;
@@ -425,19 +363,15 @@ public class SecurityGroupBothWayInfo extends AbstractModel {
 
     /**
      * Set 是否开关开启，0：未开启，1：开启
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 是否开关开启，0：未开启，1：开启
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 是否是正常规则，0：正常，1：异常
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否是正常规则，0：正常，1：异常 
      * @return IsNew 是否是正常规则，0：正常，1：异常
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsNew() {
         return this.IsNew;
@@ -445,19 +379,15 @@ public class SecurityGroupBothWayInfo extends AbstractModel {
 
     /**
      * Set 是否是正常规则，0：正常，1：异常
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsNew 是否是正常规则，0：正常，1：异常
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsNew(Long IsNew) {
         this.IsNew = IsNew;
     }
 
     /**
-     * Get 单/双向下发，0:单向下发，1：双向下发
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 单/双向下发，0:单向下发，1：双向下发 
      * @return BothWay 单/双向下发，0:单向下发，1：双向下发
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBothWay() {
         return this.BothWay;
@@ -465,19 +395,15 @@ public class SecurityGroupBothWayInfo extends AbstractModel {
 
     /**
      * Set 单/双向下发，0:单向下发，1：双向下发
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BothWay 单/双向下发，0:单向下发，1：双向下发
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBothWay(Long BothWay) {
         this.BothWay = BothWay;
     }
 
     /**
-     * Get 私有网络ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 私有网络ID 
      * @return VpcId 私有网络ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVpcId() {
         return this.VpcId;
@@ -485,19 +411,15 @@ public class SecurityGroupBothWayInfo extends AbstractModel {
 
     /**
      * Set 私有网络ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VpcId 私有网络ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 子网ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子网ID 
      * @return SubnetId 子网ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubnetId() {
         return this.SubnetId;
@@ -505,19 +427,15 @@ public class SecurityGroupBothWayInfo extends AbstractModel {
 
     /**
      * Set 子网ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubnetId 子网ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get 实例名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例名称 
      * @return InstanceName 实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceName() {
         return this.InstanceName;
@@ -525,19 +443,15 @@ public class SecurityGroupBothWayInfo extends AbstractModel {
 
     /**
      * Set 实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceName 实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get 公网IP，多个以英文逗号分隔
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 公网IP，多个以英文逗号分隔 
      * @return PublicIp 公网IP，多个以英文逗号分隔
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPublicIp() {
         return this.PublicIp;
@@ -545,19 +459,15 @@ public class SecurityGroupBothWayInfo extends AbstractModel {
 
     /**
      * Set 公网IP，多个以英文逗号分隔
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PublicIp 公网IP，多个以英文逗号分隔
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPublicIp(String PublicIp) {
         this.PublicIp = PublicIp;
     }
 
     /**
-     * Get 内网IP，多个以英文逗号分隔
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 内网IP，多个以英文逗号分隔 
      * @return PrivateIp 内网IP，多个以英文逗号分隔
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPrivateIp() {
         return this.PrivateIp;
@@ -565,19 +475,15 @@ public class SecurityGroupBothWayInfo extends AbstractModel {
 
     /**
      * Set 内网IP，多个以英文逗号分隔
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PrivateIp 内网IP，多个以英文逗号分隔
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPrivateIp(String PrivateIp) {
         this.PrivateIp = PrivateIp;
     }
 
     /**
-     * Get 掩码地址，多个以英文逗号分隔
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 掩码地址，多个以英文逗号分隔 
      * @return Cidr 掩码地址，多个以英文逗号分隔
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCidr() {
         return this.Cidr;
@@ -585,19 +491,15 @@ public class SecurityGroupBothWayInfo extends AbstractModel {
 
     /**
      * Set 掩码地址，多个以英文逗号分隔
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Cidr 掩码地址，多个以英文逗号分隔
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCidr(String Cidr) {
         this.Cidr = Cidr;
     }
 
     /**
-     * Get 端口协议类型参数模板id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 端口协议类型参数模板id 
      * @return ServiceTemplateId 端口协议类型参数模板id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getServiceTemplateId() {
         return this.ServiceTemplateId;
@@ -605,9 +507,7 @@ public class SecurityGroupBothWayInfo extends AbstractModel {
 
     /**
      * Set 端口协议类型参数模板id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ServiceTemplateId 端口协议类型参数模板id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setServiceTemplateId(String ServiceTemplateId) {
         this.ServiceTemplateId = ServiceTemplateId;

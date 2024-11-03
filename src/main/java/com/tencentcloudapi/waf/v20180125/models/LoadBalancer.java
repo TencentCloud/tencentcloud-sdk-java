@@ -88,15 +88,13 @@ public class LoadBalancer extends AbstractModel {
 
     /**
     * 负载均衡的VPCID，公网为-1，内网按实际填写
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NumericalVpcId")
     @Expose
     private Long NumericalVpcId;
 
     /**
-    * 负载均衡的网络类型
-注意：此字段可能返回 null，表示取不到有效值。
+    * 负载均衡的网络类型。OPEN： 公网 INTERNAL ：内网
     */
     @SerializedName("LoadBalancerType")
     @Expose
@@ -104,7 +102,6 @@ public class LoadBalancer extends AbstractModel {
 
     /**
     * 负载均衡的域名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LoadBalancerDomain")
     @Expose
@@ -255,10 +252,8 @@ public class LoadBalancer extends AbstractModel {
     }
 
     /**
-     * Get 负载均衡的VPCID，公网为-1，内网按实际填写
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 负载均衡的VPCID，公网为-1，内网按实际填写 
      * @return NumericalVpcId 负载均衡的VPCID，公网为-1，内网按实际填写
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getNumericalVpcId() {
         return this.NumericalVpcId;
@@ -266,39 +261,31 @@ public class LoadBalancer extends AbstractModel {
 
     /**
      * Set 负载均衡的VPCID，公网为-1，内网按实际填写
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NumericalVpcId 负载均衡的VPCID，公网为-1，内网按实际填写
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNumericalVpcId(Long NumericalVpcId) {
         this.NumericalVpcId = NumericalVpcId;
     }
 
     /**
-     * Get 负载均衡的网络类型
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LoadBalancerType 负载均衡的网络类型
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 负载均衡的网络类型。OPEN： 公网 INTERNAL ：内网 
+     * @return LoadBalancerType 负载均衡的网络类型。OPEN： 公网 INTERNAL ：内网
      */
     public String getLoadBalancerType() {
         return this.LoadBalancerType;
     }
 
     /**
-     * Set 负载均衡的网络类型
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param LoadBalancerType 负载均衡的网络类型
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 负载均衡的网络类型。OPEN： 公网 INTERNAL ：内网
+     * @param LoadBalancerType 负载均衡的网络类型。OPEN： 公网 INTERNAL ：内网
      */
     public void setLoadBalancerType(String LoadBalancerType) {
         this.LoadBalancerType = LoadBalancerType;
     }
 
     /**
-     * Get 负载均衡的域名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 负载均衡的域名 
      * @return LoadBalancerDomain 负载均衡的域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLoadBalancerDomain() {
         return this.LoadBalancerDomain;
@@ -306,9 +293,7 @@ public class LoadBalancer extends AbstractModel {
 
     /**
      * Set 负载均衡的域名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LoadBalancerDomain 负载均衡的域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLoadBalancerDomain(String LoadBalancerDomain) {
         this.LoadBalancerDomain = LoadBalancerDomain;

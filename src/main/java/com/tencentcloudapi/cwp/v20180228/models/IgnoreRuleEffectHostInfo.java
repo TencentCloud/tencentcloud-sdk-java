@@ -25,7 +25,6 @@ public class IgnoreRuleEffectHostInfo extends AbstractModel {
 
     /**
     * 主机名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HostName")
     @Expose
@@ -33,7 +32,6 @@ public class IgnoreRuleEffectHostInfo extends AbstractModel {
 
     /**
     * 危害等级：1-低位，2-中危，3-高危，4-严重
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Level")
     @Expose
@@ -41,7 +39,6 @@ public class IgnoreRuleEffectHostInfo extends AbstractModel {
 
     /**
     * 主机标签数组
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TagList")
     @Expose
@@ -49,7 +46,6 @@ public class IgnoreRuleEffectHostInfo extends AbstractModel {
 
     /**
     * 状态：0-未通过，1-忽略，3-已通过，5-检测中
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -57,7 +53,6 @@ public class IgnoreRuleEffectHostInfo extends AbstractModel {
 
     /**
     * 最后检测时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LastScanTime")
     @Expose
@@ -65,7 +60,6 @@ public class IgnoreRuleEffectHostInfo extends AbstractModel {
 
     /**
     * 事件id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EventId")
     @Expose
@@ -73,17 +67,14 @@ public class IgnoreRuleEffectHostInfo extends AbstractModel {
 
     /**
     * 主机quuid
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Quuid")
     @Expose
     private String Quuid;
 
     /**
-     * Get 主机名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主机名称 
      * @return HostName 主机名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHostName() {
         return this.HostName;
@@ -91,19 +82,15 @@ public class IgnoreRuleEffectHostInfo extends AbstractModel {
 
     /**
      * Set 主机名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HostName 主机名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHostName(String HostName) {
         this.HostName = HostName;
     }
 
     /**
-     * Get 危害等级：1-低位，2-中危，3-高危，4-严重
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 危害等级：1-低位，2-中危，3-高危，4-严重 
      * @return Level 危害等级：1-低位，2-中危，3-高危，4-严重
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLevel() {
         return this.Level;
@@ -111,19 +98,15 @@ public class IgnoreRuleEffectHostInfo extends AbstractModel {
 
     /**
      * Set 危害等级：1-低位，2-中危，3-高危，4-严重
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Level 危害等级：1-低位，2-中危，3-高危，4-严重
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLevel(Long Level) {
         this.Level = Level;
     }
 
     /**
-     * Get 主机标签数组
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主机标签数组 
      * @return TagList 主机标签数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getTagList() {
         return this.TagList;
@@ -131,19 +114,15 @@ public class IgnoreRuleEffectHostInfo extends AbstractModel {
 
     /**
      * Set 主机标签数组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TagList 主机标签数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTagList(String [] TagList) {
         this.TagList = TagList;
     }
 
     /**
-     * Get 状态：0-未通过，1-忽略，3-已通过，5-检测中
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 状态：0-未通过，1-忽略，3-已通过，5-检测中 
      * @return Status 状态：0-未通过，1-忽略，3-已通过，5-检测中
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
         return this.Status;
@@ -151,19 +130,15 @@ public class IgnoreRuleEffectHostInfo extends AbstractModel {
 
     /**
      * Set 状态：0-未通过，1-忽略，3-已通过，5-检测中
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 状态：0-未通过，1-忽略，3-已通过，5-检测中
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 最后检测时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最后检测时间 
      * @return LastScanTime 最后检测时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLastScanTime() {
         return this.LastScanTime;
@@ -171,19 +146,15 @@ public class IgnoreRuleEffectHostInfo extends AbstractModel {
 
     /**
      * Set 最后检测时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LastScanTime 最后检测时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLastScanTime(String LastScanTime) {
         this.LastScanTime = LastScanTime;
     }
 
     /**
-     * Get 事件id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 事件id 
      * @return EventId 事件id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getEventId() {
         return this.EventId;
@@ -191,19 +162,15 @@ public class IgnoreRuleEffectHostInfo extends AbstractModel {
 
     /**
      * Set 事件id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EventId 事件id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEventId(Long EventId) {
         this.EventId = EventId;
     }
 
     /**
-     * Get 主机quuid
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主机quuid 
      * @return Quuid 主机quuid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getQuuid() {
         return this.Quuid;
@@ -211,9 +178,7 @@ public class IgnoreRuleEffectHostInfo extends AbstractModel {
 
     /**
      * Set 主机quuid
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Quuid 主机quuid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQuuid(String Quuid) {
         this.Quuid = Quuid;

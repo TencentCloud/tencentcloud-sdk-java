@@ -25,7 +25,6 @@ public class ModifyAssetScanResponse extends AbstractModel {
 
     /**
     * 接口返回信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReturnMsg")
     @Expose
@@ -33,7 +32,6 @@ public class ModifyAssetScanResponse extends AbstractModel {
 
     /**
     * 接口返回错误码，0请求成功  非0失败
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReturnCode")
     @Expose
@@ -54,10 +52,8 @@ public class ModifyAssetScanResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 接口返回信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 接口返回信息 
      * @return ReturnMsg 接口返回信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getReturnMsg() {
         return this.ReturnMsg;
@@ -65,19 +61,15 @@ public class ModifyAssetScanResponse extends AbstractModel {
 
     /**
      * Set 接口返回信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReturnMsg 接口返回信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReturnMsg(String ReturnMsg) {
         this.ReturnMsg = ReturnMsg;
     }
 
     /**
-     * Get 接口返回错误码，0请求成功  非0失败
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 接口返回错误码，0请求成功  非0失败 
      * @return ReturnCode 接口返回错误码，0请求成功  非0失败
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getReturnCode() {
         return this.ReturnCode;
@@ -85,9 +77,7 @@ public class ModifyAssetScanResponse extends AbstractModel {
 
     /**
      * Set 接口返回错误码，0请求成功  非0失败
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReturnCode 接口返回错误码，0请求成功  非0失败
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReturnCode(Long ReturnCode) {
         this.ReturnCode = ReturnCode;

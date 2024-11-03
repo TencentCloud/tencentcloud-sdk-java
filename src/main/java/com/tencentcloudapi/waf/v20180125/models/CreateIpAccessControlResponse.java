@@ -25,7 +25,6 @@ public class CreateIpAccessControlResponse extends AbstractModel {
 
     /**
     * 新增的规则对应的ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleId")
     @Expose
@@ -39,10 +38,8 @@ public class CreateIpAccessControlResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 新增的规则对应的ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 新增的规则对应的ID 
      * @return RuleId 新增的规则对应的ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRuleId() {
         return this.RuleId;
@@ -50,9 +47,7 @@ public class CreateIpAccessControlResponse extends AbstractModel {
 
     /**
      * Set 新增的规则对应的ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RuleId 新增的规则对应的ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleId(Long RuleId) {
         this.RuleId = RuleId;

@@ -25,7 +25,6 @@ public class DescribeApiListVersionTwoResponse extends AbstractModel {
 
     /**
     * api资产列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeApiListVersionTwoResponse extends AbstractModel {
 
     /**
     * 总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Total")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeApiListVersionTwoResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get api资产列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get api资产列表 
      * @return Data api资产列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ApiAsset [] getData() {
         return this.Data;
@@ -58,19 +54,15 @@ public class DescribeApiListVersionTwoResponse extends AbstractModel {
 
     /**
      * Set api资产列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Data api资产列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(ApiAsset [] Data) {
         this.Data = Data;
     }
 
     /**
-     * Get 总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 总数 
      * @return Total 总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotal() {
         return this.Total;
@@ -78,9 +70,7 @@ public class DescribeApiListVersionTwoResponse extends AbstractModel {
 
     /**
      * Set 总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Total 总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotal(Long Total) {
         this.Total = Total;

@@ -25,7 +25,6 @@ public class QpsData extends AbstractModel {
 
     /**
     * 弹性qps默认值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ElasticBillingDefault")
     @Expose
@@ -33,7 +32,6 @@ public class QpsData extends AbstractModel {
 
     /**
     * 弹性qps最小值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ElasticBillingMin")
     @Expose
@@ -41,7 +39,6 @@ public class QpsData extends AbstractModel {
 
     /**
     * 弹性qps最大值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ElasticBillingMax")
     @Expose
@@ -49,25 +46,21 @@ public class QpsData extends AbstractModel {
 
     /**
     * 业务扩展包最大qps
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("QPSExtendMax")
     @Expose
     private Long QPSExtendMax;
 
     /**
-    * 海外业务扩展包最大qps
-注意：此字段可能返回 null，表示取不到有效值。
+    * 境外业务扩展包最大qps
     */
     @SerializedName("QPSExtendIntlMax")
     @Expose
     private Long QPSExtendIntlMax;
 
     /**
-     * Get 弹性qps默认值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 弹性qps默认值 
      * @return ElasticBillingDefault 弹性qps默认值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getElasticBillingDefault() {
         return this.ElasticBillingDefault;
@@ -75,19 +68,15 @@ public class QpsData extends AbstractModel {
 
     /**
      * Set 弹性qps默认值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ElasticBillingDefault 弹性qps默认值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setElasticBillingDefault(Long ElasticBillingDefault) {
         this.ElasticBillingDefault = ElasticBillingDefault;
     }
 
     /**
-     * Get 弹性qps最小值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 弹性qps最小值 
      * @return ElasticBillingMin 弹性qps最小值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getElasticBillingMin() {
         return this.ElasticBillingMin;
@@ -95,19 +84,15 @@ public class QpsData extends AbstractModel {
 
     /**
      * Set 弹性qps最小值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ElasticBillingMin 弹性qps最小值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setElasticBillingMin(Long ElasticBillingMin) {
         this.ElasticBillingMin = ElasticBillingMin;
     }
 
     /**
-     * Get 弹性qps最大值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 弹性qps最大值 
      * @return ElasticBillingMax 弹性qps最大值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getElasticBillingMax() {
         return this.ElasticBillingMax;
@@ -115,19 +100,15 @@ public class QpsData extends AbstractModel {
 
     /**
      * Set 弹性qps最大值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ElasticBillingMax 弹性qps最大值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setElasticBillingMax(Long ElasticBillingMax) {
         this.ElasticBillingMax = ElasticBillingMax;
     }
 
     /**
-     * Get 业务扩展包最大qps
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 业务扩展包最大qps 
      * @return QPSExtendMax 业务扩展包最大qps
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getQPSExtendMax() {
         return this.QPSExtendMax;
@@ -135,29 +116,23 @@ public class QpsData extends AbstractModel {
 
     /**
      * Set 业务扩展包最大qps
-注意：此字段可能返回 null，表示取不到有效值。
      * @param QPSExtendMax 业务扩展包最大qps
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQPSExtendMax(Long QPSExtendMax) {
         this.QPSExtendMax = QPSExtendMax;
     }
 
     /**
-     * Get 海外业务扩展包最大qps
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return QPSExtendIntlMax 海外业务扩展包最大qps
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 境外业务扩展包最大qps 
+     * @return QPSExtendIntlMax 境外业务扩展包最大qps
      */
     public Long getQPSExtendIntlMax() {
         return this.QPSExtendIntlMax;
     }
 
     /**
-     * Set 海外业务扩展包最大qps
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param QPSExtendIntlMax 海外业务扩展包最大qps
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 境外业务扩展包最大qps
+     * @param QPSExtendIntlMax 境外业务扩展包最大qps
      */
     public void setQPSExtendIntlMax(Long QPSExtendIntlMax) {
         this.QPSExtendIntlMax = QPSExtendIntlMax;

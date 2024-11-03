@@ -158,7 +158,6 @@ public class VULViewVULRisk extends AbstractModel {
 
     /**
     * 用户昵称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Nick")
     @Expose
@@ -173,7 +172,6 @@ public class VULViewVULRisk extends AbstractModel {
 
     /**
     * 用户uin
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Uin")
     @Expose
@@ -181,7 +179,6 @@ public class VULViewVULRisk extends AbstractModel {
 
     /**
     * 修复建议
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Fix")
     @Expose
@@ -189,7 +186,6 @@ public class VULViewVULRisk extends AbstractModel {
 
     /**
     * 应急漏洞类型，1-应急漏洞，0-非应急漏洞
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EMGCVulType")
     @Expose
@@ -500,10 +496,8 @@ public class VULViewVULRisk extends AbstractModel {
     }
 
     /**
-     * Get 用户昵称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户昵称 
      * @return Nick 用户昵称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNick() {
         return this.Nick;
@@ -511,9 +505,7 @@ public class VULViewVULRisk extends AbstractModel {
 
     /**
      * Set 用户昵称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Nick 用户昵称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNick(String Nick) {
         this.Nick = Nick;
@@ -536,10 +528,8 @@ public class VULViewVULRisk extends AbstractModel {
     }
 
     /**
-     * Get 用户uin
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户uin 
      * @return Uin 用户uin
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUin() {
         return this.Uin;
@@ -547,19 +537,15 @@ public class VULViewVULRisk extends AbstractModel {
 
     /**
      * Set 用户uin
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Uin 用户uin
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUin(String Uin) {
         this.Uin = Uin;
     }
 
     /**
-     * Get 修复建议
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 修复建议 
      * @return Fix 修复建议
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFix() {
         return this.Fix;
@@ -567,19 +553,15 @@ public class VULViewVULRisk extends AbstractModel {
 
     /**
      * Set 修复建议
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Fix 修复建议
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFix(String Fix) {
         this.Fix = Fix;
     }
 
     /**
-     * Get 应急漏洞类型，1-应急漏洞，0-非应急漏洞
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 应急漏洞类型，1-应急漏洞，0-非应急漏洞 
      * @return EMGCVulType 应急漏洞类型，1-应急漏洞，0-非应急漏洞
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getEMGCVulType() {
         return this.EMGCVulType;
@@ -587,9 +569,7 @@ public class VULViewVULRisk extends AbstractModel {
 
     /**
      * Set 应急漏洞类型，1-应急漏洞，0-非应急漏洞
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EMGCVulType 应急漏洞类型，1-应急漏洞，0-非应急漏洞
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEMGCVulType(Long EMGCVulType) {
         this.EMGCVulType = EMGCVulType;

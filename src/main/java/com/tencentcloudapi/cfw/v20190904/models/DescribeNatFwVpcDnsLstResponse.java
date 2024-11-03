@@ -25,15 +25,13 @@ public class DescribeNatFwVpcDnsLstResponse extends AbstractModel {
 
     /**
     * nat防火墙vpc dns 信息数组
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcDnsSwitchLst")
     @Expose
     private VpcDnsInfo [] VpcDnsSwitchLst;
 
     /**
-    * 返回参数
-注意：此字段可能返回 null，表示取不到有效值。
+    * 返回参数 success成功 failed 失败
     */
     @SerializedName("ReturnMsg")
     @Expose
@@ -41,7 +39,6 @@ public class DescribeNatFwVpcDnsLstResponse extends AbstractModel {
 
     /**
     * 开关总条数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Total")
     @Expose
@@ -55,10 +52,8 @@ public class DescribeNatFwVpcDnsLstResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get nat防火墙vpc dns 信息数组
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get nat防火墙vpc dns 信息数组 
      * @return VpcDnsSwitchLst nat防火墙vpc dns 信息数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public VpcDnsInfo [] getVpcDnsSwitchLst() {
         return this.VpcDnsSwitchLst;
@@ -66,39 +61,31 @@ public class DescribeNatFwVpcDnsLstResponse extends AbstractModel {
 
     /**
      * Set nat防火墙vpc dns 信息数组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VpcDnsSwitchLst nat防火墙vpc dns 信息数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcDnsSwitchLst(VpcDnsInfo [] VpcDnsSwitchLst) {
         this.VpcDnsSwitchLst = VpcDnsSwitchLst;
     }
 
     /**
-     * Get 返回参数
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ReturnMsg 返回参数
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 返回参数 success成功 failed 失败 
+     * @return ReturnMsg 返回参数 success成功 failed 失败
      */
     public String getReturnMsg() {
         return this.ReturnMsg;
     }
 
     /**
-     * Set 返回参数
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param ReturnMsg 返回参数
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 返回参数 success成功 failed 失败
+     * @param ReturnMsg 返回参数 success成功 failed 失败
      */
     public void setReturnMsg(String ReturnMsg) {
         this.ReturnMsg = ReturnMsg;
     }
 
     /**
-     * Get 开关总条数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 开关总条数 
      * @return Total 开关总条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotal() {
         return this.Total;
@@ -106,9 +93,7 @@ public class DescribeNatFwVpcDnsLstResponse extends AbstractModel {
 
     /**
      * Set 开关总条数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Total 开关总条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotal(Long Total) {
         this.Total = Total;

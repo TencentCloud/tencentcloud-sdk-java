@@ -25,7 +25,6 @@ public class DescNatDnatRule extends AbstractModel {
 
     /**
     * id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
     @Expose
@@ -33,7 +32,6 @@ public class DescNatDnatRule extends AbstractModel {
 
     /**
     * 网络协议，可选值：TCP、UDP。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IpProtocol")
     @Expose
@@ -41,7 +39,6 @@ public class DescNatDnatRule extends AbstractModel {
 
     /**
     * 弹性IP。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PublicIpAddress")
     @Expose
@@ -49,7 +46,6 @@ public class DescNatDnatRule extends AbstractModel {
 
     /**
     * 公网端口。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PublicPort")
     @Expose
@@ -57,7 +53,6 @@ public class DescNatDnatRule extends AbstractModel {
 
     /**
     * 内网地址。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PrivateIpAddress")
     @Expose
@@ -65,7 +60,6 @@ public class DescNatDnatRule extends AbstractModel {
 
     /**
     * 内网端口。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PrivatePort")
     @Expose
@@ -73,7 +67,6 @@ public class DescNatDnatRule extends AbstractModel {
 
     /**
     * NAT防火墙转发规则描述。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
     @Expose
@@ -81,7 +74,6 @@ public class DescNatDnatRule extends AbstractModel {
 
     /**
     * 是否被关联引用，如被远程运维使用
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsReferenced")
     @Expose
@@ -89,7 +81,6 @@ public class DescNatDnatRule extends AbstractModel {
 
     /**
     * 所属防火墙实例id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FwInsId")
     @Expose
@@ -97,17 +88,14 @@ public class DescNatDnatRule extends AbstractModel {
 
     /**
     * 关联的nat网关Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NatGwId")
     @Expose
     private String NatGwId;
 
     /**
-     * Get id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get id 
      * @return Id id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getId() {
         return this.Id;
@@ -115,19 +103,15 @@ public class DescNatDnatRule extends AbstractModel {
 
     /**
      * Set id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Id id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 网络协议，可选值：TCP、UDP。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网络协议，可选值：TCP、UDP。 
      * @return IpProtocol 网络协议，可选值：TCP、UDP。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIpProtocol() {
         return this.IpProtocol;
@@ -135,19 +119,15 @@ public class DescNatDnatRule extends AbstractModel {
 
     /**
      * Set 网络协议，可选值：TCP、UDP。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IpProtocol 网络协议，可选值：TCP、UDP。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIpProtocol(String IpProtocol) {
         this.IpProtocol = IpProtocol;
     }
 
     /**
-     * Get 弹性IP。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 弹性IP。 
      * @return PublicIpAddress 弹性IP。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPublicIpAddress() {
         return this.PublicIpAddress;
@@ -155,19 +135,15 @@ public class DescNatDnatRule extends AbstractModel {
 
     /**
      * Set 弹性IP。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PublicIpAddress 弹性IP。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPublicIpAddress(String PublicIpAddress) {
         this.PublicIpAddress = PublicIpAddress;
     }
 
     /**
-     * Get 公网端口。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 公网端口。 
      * @return PublicPort 公网端口。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPublicPort() {
         return this.PublicPort;
@@ -175,19 +151,15 @@ public class DescNatDnatRule extends AbstractModel {
 
     /**
      * Set 公网端口。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PublicPort 公网端口。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPublicPort(Long PublicPort) {
         this.PublicPort = PublicPort;
     }
 
     /**
-     * Get 内网地址。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 内网地址。 
      * @return PrivateIpAddress 内网地址。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPrivateIpAddress() {
         return this.PrivateIpAddress;
@@ -195,19 +167,15 @@ public class DescNatDnatRule extends AbstractModel {
 
     /**
      * Set 内网地址。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PrivateIpAddress 内网地址。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPrivateIpAddress(String PrivateIpAddress) {
         this.PrivateIpAddress = PrivateIpAddress;
     }
 
     /**
-     * Get 内网端口。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 内网端口。 
      * @return PrivatePort 内网端口。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPrivatePort() {
         return this.PrivatePort;
@@ -215,19 +183,15 @@ public class DescNatDnatRule extends AbstractModel {
 
     /**
      * Set 内网端口。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PrivatePort 内网端口。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPrivatePort(Long PrivatePort) {
         this.PrivatePort = PrivatePort;
     }
 
     /**
-     * Get NAT防火墙转发规则描述。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get NAT防火墙转发规则描述。 
      * @return Description NAT防火墙转发规则描述。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
         return this.Description;
@@ -235,19 +199,15 @@ public class DescNatDnatRule extends AbstractModel {
 
     /**
      * Set NAT防火墙转发规则描述。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Description NAT防火墙转发规则描述。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 是否被关联引用，如被远程运维使用
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否被关联引用，如被远程运维使用 
      * @return IsReferenced 是否被关联引用，如被远程运维使用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsReferenced() {
         return this.IsReferenced;
@@ -255,19 +215,15 @@ public class DescNatDnatRule extends AbstractModel {
 
     /**
      * Set 是否被关联引用，如被远程运维使用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsReferenced 是否被关联引用，如被远程运维使用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsReferenced(Long IsReferenced) {
         this.IsReferenced = IsReferenced;
     }
 
     /**
-     * Get 所属防火墙实例id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 所属防火墙实例id 
      * @return FwInsId 所属防火墙实例id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFwInsId() {
         return this.FwInsId;
@@ -275,19 +231,15 @@ public class DescNatDnatRule extends AbstractModel {
 
     /**
      * Set 所属防火墙实例id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FwInsId 所属防火墙实例id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFwInsId(String FwInsId) {
         this.FwInsId = FwInsId;
     }
 
     /**
-     * Get 关联的nat网关Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 关联的nat网关Id 
      * @return NatGwId 关联的nat网关Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNatGwId() {
         return this.NatGwId;
@@ -295,9 +247,7 @@ public class DescNatDnatRule extends AbstractModel {
 
     /**
      * Set 关联的nat网关Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NatGwId 关联的nat网关Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNatGwId(String NatGwId) {
         this.NatGwId = NatGwId;

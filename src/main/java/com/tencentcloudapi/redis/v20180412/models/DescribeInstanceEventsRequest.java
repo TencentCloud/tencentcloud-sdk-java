@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeInstanceEventsRequest extends AbstractModel {
 
     /**
-    * 配置查询事件执行计划的起始日期。
+    * 配置查询事件执行计划的起始日期，查询日期最大跨度30天。
     */
     @SerializedName("ExecutionStartDate")
     @Expose
     private String ExecutionStartDate;
 
     /**
-    * 配置查询事件执行计划的结束日期。
+    * 配置查询事件执行计划的结束日期，查询日期最大跨度30天。
     */
     @SerializedName("ExecutionEndDate")
     @Expose
@@ -45,7 +45,7 @@ public class DescribeInstanceEventsRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * 输出每页显示事件的数量，默认：10。
+    * 输出每页显示事件的数量，默认：10，最大100。
     */
     @SerializedName("PageSize")
     @Expose
@@ -88,32 +88,32 @@ public class DescribeInstanceEventsRequest extends AbstractModel {
     private String [] Grades;
 
     /**
-     * Get 配置查询事件执行计划的起始日期。 
-     * @return ExecutionStartDate 配置查询事件执行计划的起始日期。
+     * Get 配置查询事件执行计划的起始日期，查询日期最大跨度30天。 
+     * @return ExecutionStartDate 配置查询事件执行计划的起始日期，查询日期最大跨度30天。
      */
     public String getExecutionStartDate() {
         return this.ExecutionStartDate;
     }
 
     /**
-     * Set 配置查询事件执行计划的起始日期。
-     * @param ExecutionStartDate 配置查询事件执行计划的起始日期。
+     * Set 配置查询事件执行计划的起始日期，查询日期最大跨度30天。
+     * @param ExecutionStartDate 配置查询事件执行计划的起始日期，查询日期最大跨度30天。
      */
     public void setExecutionStartDate(String ExecutionStartDate) {
         this.ExecutionStartDate = ExecutionStartDate;
     }
 
     /**
-     * Get 配置查询事件执行计划的结束日期。 
-     * @return ExecutionEndDate 配置查询事件执行计划的结束日期。
+     * Get 配置查询事件执行计划的结束日期，查询日期最大跨度30天。 
+     * @return ExecutionEndDate 配置查询事件执行计划的结束日期，查询日期最大跨度30天。
      */
     public String getExecutionEndDate() {
         return this.ExecutionEndDate;
     }
 
     /**
-     * Set 配置查询事件执行计划的结束日期。
-     * @param ExecutionEndDate 配置查询事件执行计划的结束日期。
+     * Set 配置查询事件执行计划的结束日期，查询日期最大跨度30天。
+     * @param ExecutionEndDate 配置查询事件执行计划的结束日期，查询日期最大跨度30天。
      */
     public void setExecutionEndDate(String ExecutionEndDate) {
         this.ExecutionEndDate = ExecutionEndDate;
@@ -136,16 +136,16 @@ public class DescribeInstanceEventsRequest extends AbstractModel {
     }
 
     /**
-     * Get 输出每页显示事件的数量，默认：10。 
-     * @return PageSize 输出每页显示事件的数量，默认：10。
+     * Get 输出每页显示事件的数量，默认：10，最大100。 
+     * @return PageSize 输出每页显示事件的数量，默认：10，最大100。
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set 输出每页显示事件的数量，默认：10。
-     * @param PageSize 输出每页显示事件的数量，默认：10。
+     * Set 输出每页显示事件的数量，默认：10，最大100。
+     * @param PageSize 输出每页显示事件的数量，默认：10，最大100。
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;

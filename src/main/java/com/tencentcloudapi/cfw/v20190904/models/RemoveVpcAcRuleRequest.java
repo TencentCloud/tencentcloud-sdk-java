@@ -31,6 +31,13 @@ public class RemoveVpcAcRuleRequest extends AbstractModel {
     private Long [] RuleUuids;
 
     /**
+    * 仅当RuleUuids为-1时有效；0：删除Ipv4规则，1：删除Ipv6规则；默认为Ipv4类型规则
+    */
+    @SerializedName("IpVersion")
+    @Expose
+    private Long IpVersion;
+
+    /**
      * Get 规则的uuid列表，可通过查询规则列表获取，注意：如果传入的是[-1]将删除所有规则 
      * @return RuleUuids 规则的uuid列表，可通过查询规则列表获取，注意：如果传入的是[-1]将删除所有规则
      */
@@ -44,6 +51,22 @@ public class RemoveVpcAcRuleRequest extends AbstractModel {
      */
     public void setRuleUuids(Long [] RuleUuids) {
         this.RuleUuids = RuleUuids;
+    }
+
+    /**
+     * Get 仅当RuleUuids为-1时有效；0：删除Ipv4规则，1：删除Ipv6规则；默认为Ipv4类型规则 
+     * @return IpVersion 仅当RuleUuids为-1时有效；0：删除Ipv4规则，1：删除Ipv6规则；默认为Ipv4类型规则
+     */
+    public Long getIpVersion() {
+        return this.IpVersion;
+    }
+
+    /**
+     * Set 仅当RuleUuids为-1时有效；0：删除Ipv4规则，1：删除Ipv6规则；默认为Ipv4类型规则
+     * @param IpVersion 仅当RuleUuids为-1时有效；0：删除Ipv4规则，1：删除Ipv6规则；默认为Ipv4类型规则
+     */
+    public void setIpVersion(Long IpVersion) {
+        this.IpVersion = IpVersion;
     }
 
     public RemoveVpcAcRuleRequest() {
@@ -60,6 +83,9 @@ public class RemoveVpcAcRuleRequest extends AbstractModel {
                 this.RuleUuids[i] = new Long(source.RuleUuids[i]);
             }
         }
+        if (source.IpVersion != null) {
+            this.IpVersion = new Long(source.IpVersion);
+        }
     }
 
 
@@ -68,6 +94,7 @@ public class RemoveVpcAcRuleRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "RuleUuids.", this.RuleUuids);
+        this.setParamSimple(map, prefix + "IpVersion", this.IpVersion);
 
     }
 }

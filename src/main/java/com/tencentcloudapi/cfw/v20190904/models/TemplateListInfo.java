@@ -25,7 +25,6 @@ public class TemplateListInfo extends AbstractModel {
 
     /**
     * 模板ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Uuid")
     @Expose
@@ -33,7 +32,6 @@ public class TemplateListInfo extends AbstractModel {
 
     /**
     * 模板名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -41,7 +39,6 @@ public class TemplateListInfo extends AbstractModel {
 
     /**
     * 描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Detail")
     @Expose
@@ -49,7 +46,6 @@ public class TemplateListInfo extends AbstractModel {
 
     /**
     * IP模板
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IpString")
     @Expose
@@ -57,7 +53,6 @@ public class TemplateListInfo extends AbstractModel {
 
     /**
     * 插入时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InsertTime")
     @Expose
@@ -65,7 +60,6 @@ public class TemplateListInfo extends AbstractModel {
 
     /**
     * 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -73,7 +67,6 @@ public class TemplateListInfo extends AbstractModel {
 
     /**
     * 模板类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -81,7 +74,6 @@ public class TemplateListInfo extends AbstractModel {
 
     /**
     * 关联规则条数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RulesNum")
     @Expose
@@ -89,7 +81,6 @@ public class TemplateListInfo extends AbstractModel {
 
     /**
     * 模板Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TemplateId")
     @Expose
@@ -97,7 +88,6 @@ public class TemplateListInfo extends AbstractModel {
 
     /**
     * 协议端口模板，协议类型，4:4层协议，7:7层协议
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProtocolType")
     @Expose
@@ -105,7 +95,6 @@ public class TemplateListInfo extends AbstractModel {
 
     /**
     * 模板包含地址数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IPNum")
     @Expose
@@ -113,17 +102,14 @@ public class TemplateListInfo extends AbstractModel {
 
     /**
     * IP版本,0,IPv4;1,IPv6
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IpVersion")
     @Expose
     private Long IpVersion;
 
     /**
-     * Get 模板ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 模板ID 
      * @return Uuid 模板ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUuid() {
         return this.Uuid;
@@ -131,19 +117,15 @@ public class TemplateListInfo extends AbstractModel {
 
     /**
      * Set 模板ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Uuid 模板ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUuid(String Uuid) {
         this.Uuid = Uuid;
     }
 
     /**
-     * Get 模板名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 模板名称 
      * @return Name 模板名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -151,19 +133,15 @@ public class TemplateListInfo extends AbstractModel {
 
     /**
      * Set 模板名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 模板名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 描述 
      * @return Detail 描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDetail() {
         return this.Detail;
@@ -171,19 +149,15 @@ public class TemplateListInfo extends AbstractModel {
 
     /**
      * Set 描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Detail 描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDetail(String Detail) {
         this.Detail = Detail;
     }
 
     /**
-     * Get IP模板
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get IP模板 
      * @return IpString IP模板
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIpString() {
         return this.IpString;
@@ -191,19 +165,15 @@ public class TemplateListInfo extends AbstractModel {
 
     /**
      * Set IP模板
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IpString IP模板
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIpString(String IpString) {
         this.IpString = IpString;
     }
 
     /**
-     * Get 插入时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 插入时间 
      * @return InsertTime 插入时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInsertTime() {
         return this.InsertTime;
@@ -211,19 +181,15 @@ public class TemplateListInfo extends AbstractModel {
 
     /**
      * Set 插入时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InsertTime 插入时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInsertTime(String InsertTime) {
         this.InsertTime = InsertTime;
     }
 
     /**
-     * Get 修改时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 修改时间 
      * @return UpdateTime 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdateTime() {
         return this.UpdateTime;
@@ -231,19 +197,15 @@ public class TemplateListInfo extends AbstractModel {
 
     /**
      * Set 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdateTime 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get 模板类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 模板类型 
      * @return Type 模板类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getType() {
         return this.Type;
@@ -251,19 +213,15 @@ public class TemplateListInfo extends AbstractModel {
 
     /**
      * Set 模板类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 模板类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(Long Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 关联规则条数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 关联规则条数 
      * @return RulesNum 关联规则条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRulesNum() {
         return this.RulesNum;
@@ -271,19 +229,15 @@ public class TemplateListInfo extends AbstractModel {
 
     /**
      * Set 关联规则条数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RulesNum 关联规则条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRulesNum(Long RulesNum) {
         this.RulesNum = RulesNum;
     }
 
     /**
-     * Get 模板Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 模板Id 
      * @return TemplateId 模板Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTemplateId() {
         return this.TemplateId;
@@ -291,19 +245,15 @@ public class TemplateListInfo extends AbstractModel {
 
     /**
      * Set 模板Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TemplateId 模板Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTemplateId(String TemplateId) {
         this.TemplateId = TemplateId;
     }
 
     /**
-     * Get 协议端口模板，协议类型，4:4层协议，7:7层协议
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 协议端口模板，协议类型，4:4层协议，7:7层协议 
      * @return ProtocolType 协议端口模板，协议类型，4:4层协议，7:7层协议
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProtocolType() {
         return this.ProtocolType;
@@ -311,19 +261,15 @@ public class TemplateListInfo extends AbstractModel {
 
     /**
      * Set 协议端口模板，协议类型，4:4层协议，7:7层协议
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProtocolType 协议端口模板，协议类型，4:4层协议，7:7层协议
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProtocolType(String ProtocolType) {
         this.ProtocolType = ProtocolType;
     }
 
     /**
-     * Get 模板包含地址数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 模板包含地址数量 
      * @return IPNum 模板包含地址数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIPNum() {
         return this.IPNum;
@@ -331,19 +277,15 @@ public class TemplateListInfo extends AbstractModel {
 
     /**
      * Set 模板包含地址数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IPNum 模板包含地址数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIPNum(Long IPNum) {
         this.IPNum = IPNum;
     }
 
     /**
-     * Get IP版本,0,IPv4;1,IPv6
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get IP版本,0,IPv4;1,IPv6 
      * @return IpVersion IP版本,0,IPv4;1,IPv6
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIpVersion() {
         return this.IpVersion;
@@ -351,9 +293,7 @@ public class TemplateListInfo extends AbstractModel {
 
     /**
      * Set IP版本,0,IPv4;1,IPv6
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IpVersion IP版本,0,IPv4;1,IPv6
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIpVersion(Long IpVersion) {
         this.IpVersion = IpVersion;

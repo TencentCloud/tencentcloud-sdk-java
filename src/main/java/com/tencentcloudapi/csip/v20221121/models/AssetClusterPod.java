@@ -46,7 +46,6 @@ public class AssetClusterPod extends AbstractModel {
 
     /**
     * 地域
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Region")
     @Expose
@@ -68,7 +67,6 @@ public class AssetClusterPod extends AbstractModel {
 
     /**
     * pod创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceCreateTime")
     @Expose
@@ -76,7 +74,6 @@ public class AssetClusterPod extends AbstractModel {
 
     /**
     * 命名空间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Namespace")
     @Expose
@@ -84,7 +81,6 @@ public class AssetClusterPod extends AbstractModel {
 
     /**
     * 状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -92,7 +88,6 @@ public class AssetClusterPod extends AbstractModel {
 
     /**
     * 集群id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterId")
     @Expose
@@ -100,7 +95,6 @@ public class AssetClusterPod extends AbstractModel {
 
     /**
     * 集群名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterName")
     @Expose
@@ -108,7 +102,6 @@ public class AssetClusterPod extends AbstractModel {
 
     /**
     * 主机id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MachineId")
     @Expose
@@ -116,7 +109,6 @@ public class AssetClusterPod extends AbstractModel {
 
     /**
     * 主机名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MachineName")
     @Expose
@@ -124,7 +116,6 @@ public class AssetClusterPod extends AbstractModel {
 
     /**
     * pod ip
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PodIp")
     @Expose
@@ -132,7 +123,6 @@ public class AssetClusterPod extends AbstractModel {
 
     /**
     * 关联service数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ServiceCount")
     @Expose
@@ -140,7 +130,6 @@ public class AssetClusterPod extends AbstractModel {
 
     /**
     * 关联容器数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ContainerCount")
     @Expose
@@ -148,7 +137,6 @@ public class AssetClusterPod extends AbstractModel {
 
     /**
     * 公网ip
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PublicIp")
     @Expose
@@ -156,7 +144,6 @@ public class AssetClusterPod extends AbstractModel {
 
     /**
     * 内网ip
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PrivateIp")
     @Expose
@@ -164,7 +151,6 @@ public class AssetClusterPod extends AbstractModel {
 
     /**
     * 是否核心：1:核心，2:非核心
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsCore")
     @Expose
@@ -172,7 +158,6 @@ public class AssetClusterPod extends AbstractModel {
 
     /**
     * 是否新资产 1新
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsNewAsset")
     @Expose
@@ -227,10 +212,8 @@ public class AssetClusterPod extends AbstractModel {
     }
 
     /**
-     * Get 地域
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地域 
      * @return Region 地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegion() {
         return this.Region;
@@ -238,9 +221,7 @@ public class AssetClusterPod extends AbstractModel {
 
     /**
      * Set 地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Region 地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegion(String Region) {
         this.Region = Region;
@@ -279,10 +260,8 @@ public class AssetClusterPod extends AbstractModel {
     }
 
     /**
-     * Get pod创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get pod创建时间 
      * @return InstanceCreateTime pod创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceCreateTime() {
         return this.InstanceCreateTime;
@@ -290,19 +269,15 @@ public class AssetClusterPod extends AbstractModel {
 
     /**
      * Set pod创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceCreateTime pod创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceCreateTime(String InstanceCreateTime) {
         this.InstanceCreateTime = InstanceCreateTime;
     }
 
     /**
-     * Get 命名空间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 命名空间 
      * @return Namespace 命名空间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNamespace() {
         return this.Namespace;
@@ -310,19 +285,15 @@ public class AssetClusterPod extends AbstractModel {
 
     /**
      * Set 命名空间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Namespace 命名空间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNamespace(String Namespace) {
         this.Namespace = Namespace;
     }
 
     /**
-     * Get 状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 状态 
      * @return Status 状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
         return this.Status;
@@ -330,19 +301,15 @@ public class AssetClusterPod extends AbstractModel {
 
     /**
      * Set 状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 集群id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群id 
      * @return ClusterId 集群id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClusterId() {
         return this.ClusterId;
@@ -350,19 +317,15 @@ public class AssetClusterPod extends AbstractModel {
 
     /**
      * Set 集群id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterId 集群id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 集群名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集群名称 
      * @return ClusterName 集群名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClusterName() {
         return this.ClusterName;
@@ -370,19 +333,15 @@ public class AssetClusterPod extends AbstractModel {
 
     /**
      * Set 集群名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterName 集群名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterName(String ClusterName) {
         this.ClusterName = ClusterName;
     }
 
     /**
-     * Get 主机id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主机id 
      * @return MachineId 主机id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMachineId() {
         return this.MachineId;
@@ -390,19 +349,15 @@ public class AssetClusterPod extends AbstractModel {
 
     /**
      * Set 主机id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MachineId 主机id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMachineId(String MachineId) {
         this.MachineId = MachineId;
     }
 
     /**
-     * Get 主机名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主机名 
      * @return MachineName 主机名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMachineName() {
         return this.MachineName;
@@ -410,19 +365,15 @@ public class AssetClusterPod extends AbstractModel {
 
     /**
      * Set 主机名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MachineName 主机名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMachineName(String MachineName) {
         this.MachineName = MachineName;
     }
 
     /**
-     * Get pod ip
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get pod ip 
      * @return PodIp pod ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPodIp() {
         return this.PodIp;
@@ -430,19 +381,15 @@ public class AssetClusterPod extends AbstractModel {
 
     /**
      * Set pod ip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PodIp pod ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPodIp(String PodIp) {
         this.PodIp = PodIp;
     }
 
     /**
-     * Get 关联service数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 关联service数 
      * @return ServiceCount 关联service数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getServiceCount() {
         return this.ServiceCount;
@@ -450,19 +397,15 @@ public class AssetClusterPod extends AbstractModel {
 
     /**
      * Set 关联service数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ServiceCount 关联service数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setServiceCount(Long ServiceCount) {
         this.ServiceCount = ServiceCount;
     }
 
     /**
-     * Get 关联容器数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 关联容器数 
      * @return ContainerCount 关联容器数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getContainerCount() {
         return this.ContainerCount;
@@ -470,19 +413,15 @@ public class AssetClusterPod extends AbstractModel {
 
     /**
      * Set 关联容器数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ContainerCount 关联容器数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContainerCount(Long ContainerCount) {
         this.ContainerCount = ContainerCount;
     }
 
     /**
-     * Get 公网ip
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 公网ip 
      * @return PublicIp 公网ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPublicIp() {
         return this.PublicIp;
@@ -490,19 +429,15 @@ public class AssetClusterPod extends AbstractModel {
 
     /**
      * Set 公网ip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PublicIp 公网ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPublicIp(String PublicIp) {
         this.PublicIp = PublicIp;
     }
 
     /**
-     * Get 内网ip
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 内网ip 
      * @return PrivateIp 内网ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPrivateIp() {
         return this.PrivateIp;
@@ -510,19 +445,15 @@ public class AssetClusterPod extends AbstractModel {
 
     /**
      * Set 内网ip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PrivateIp 内网ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPrivateIp(String PrivateIp) {
         this.PrivateIp = PrivateIp;
     }
 
     /**
-     * Get 是否核心：1:核心，2:非核心
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否核心：1:核心，2:非核心 
      * @return IsCore 是否核心：1:核心，2:非核心
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsCore() {
         return this.IsCore;
@@ -530,19 +461,15 @@ public class AssetClusterPod extends AbstractModel {
 
     /**
      * Set 是否核心：1:核心，2:非核心
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsCore 是否核心：1:核心，2:非核心
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsCore(Long IsCore) {
         this.IsCore = IsCore;
     }
 
     /**
-     * Get 是否新资产 1新
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否新资产 1新 
      * @return IsNewAsset 是否新资产 1新
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsNewAsset() {
         return this.IsNewAsset;
@@ -550,9 +477,7 @@ public class AssetClusterPod extends AbstractModel {
 
     /**
      * Set 是否新资产 1新
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsNewAsset 是否新资产 1新
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsNewAsset(Long IsNewAsset) {
         this.IsNewAsset = IsNewAsset;

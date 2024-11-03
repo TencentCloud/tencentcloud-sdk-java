@@ -24,56 +24,46 @@ import java.util.HashMap;
 public class Tags extends AbstractModel {
 
     /**
-    * 无
-注意：此字段可能返回 null，表示取不到有效值。
+    * 主机标签key
     */
     @SerializedName("TagKey")
     @Expose
     private String TagKey;
 
     /**
-    * 无
-注意：此字段可能返回 null，表示取不到有效值。
+    * 主机标签value
     */
     @SerializedName("TagValue")
     @Expose
     private String TagValue;
 
     /**
-     * Get 无
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TagKey 无
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 主机标签key 
+     * @return TagKey 主机标签key
      */
     public String getTagKey() {
         return this.TagKey;
     }
 
     /**
-     * Set 无
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param TagKey 无
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 主机标签key
+     * @param TagKey 主机标签key
      */
     public void setTagKey(String TagKey) {
         this.TagKey = TagKey;
     }
 
     /**
-     * Get 无
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TagValue 无
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 主机标签value 
+     * @return TagValue 主机标签value
      */
     public String getTagValue() {
         return this.TagValue;
     }
 
     /**
-     * Set 无
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param TagValue 无
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 主机标签value
+     * @param TagValue 主机标签value
      */
     public void setTagValue(String TagValue) {
         this.TagValue = TagValue;

@@ -25,7 +25,6 @@ public class CreateVpcFwGroupResponse extends AbstractModel {
 
     /**
     * 防火墙组ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FwGroupId")
     @Expose
@@ -39,10 +38,8 @@ public class CreateVpcFwGroupResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 防火墙组ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 防火墙组ID 
      * @return FwGroupId 防火墙组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFwGroupId() {
         return this.FwGroupId;
@@ -50,9 +47,7 @@ public class CreateVpcFwGroupResponse extends AbstractModel {
 
     /**
      * Set 防火墙组ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FwGroupId 防火墙组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFwGroupId(String FwGroupId) {
         this.FwGroupId = FwGroupId;

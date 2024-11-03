@@ -25,7 +25,6 @@ public class VpcFwCvmInsInfo extends AbstractModel {
 
     /**
     * VPC防火墙实例ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FwInsId")
     @Expose
@@ -33,7 +32,6 @@ public class VpcFwCvmInsInfo extends AbstractModel {
 
     /**
     * CVM所在地域
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Region")
     @Expose
@@ -41,7 +39,6 @@ public class VpcFwCvmInsInfo extends AbstractModel {
 
     /**
     * CVM所在地域中文
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RegionZh")
     @Expose
@@ -49,7 +46,6 @@ public class VpcFwCvmInsInfo extends AbstractModel {
 
     /**
     * CVM所在地域详情
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RegionDetail")
     @Expose
@@ -57,7 +53,6 @@ public class VpcFwCvmInsInfo extends AbstractModel {
 
     /**
     * 主机所在可用区
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ZoneZh")
     @Expose
@@ -65,7 +60,6 @@ public class VpcFwCvmInsInfo extends AbstractModel {
 
     /**
     * 备机所在可用区
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ZoneZhBack")
     @Expose
@@ -73,7 +67,6 @@ public class VpcFwCvmInsInfo extends AbstractModel {
 
     /**
     * 防火墙CVM带宽值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BandWidth")
     @Expose
@@ -81,7 +74,6 @@ public class VpcFwCvmInsInfo extends AbstractModel {
 
     /**
     * 实例主机所在可用区
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Zone")
     @Expose
@@ -89,17 +81,14 @@ public class VpcFwCvmInsInfo extends AbstractModel {
 
     /**
     * 实例备机所在可用区
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ZoneBak")
     @Expose
     private String ZoneBak;
 
     /**
-     * Get VPC防火墙实例ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get VPC防火墙实例ID 
      * @return FwInsId VPC防火墙实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFwInsId() {
         return this.FwInsId;
@@ -107,19 +96,15 @@ public class VpcFwCvmInsInfo extends AbstractModel {
 
     /**
      * Set VPC防火墙实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FwInsId VPC防火墙实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFwInsId(String FwInsId) {
         this.FwInsId = FwInsId;
     }
 
     /**
-     * Get CVM所在地域
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get CVM所在地域 
      * @return Region CVM所在地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegion() {
         return this.Region;
@@ -127,19 +112,15 @@ public class VpcFwCvmInsInfo extends AbstractModel {
 
     /**
      * Set CVM所在地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Region CVM所在地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get CVM所在地域中文
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get CVM所在地域中文 
      * @return RegionZh CVM所在地域中文
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegionZh() {
         return this.RegionZh;
@@ -147,19 +128,15 @@ public class VpcFwCvmInsInfo extends AbstractModel {
 
     /**
      * Set CVM所在地域中文
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RegionZh CVM所在地域中文
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegionZh(String RegionZh) {
         this.RegionZh = RegionZh;
     }
 
     /**
-     * Get CVM所在地域详情
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get CVM所在地域详情 
      * @return RegionDetail CVM所在地域详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegionDetail() {
         return this.RegionDetail;
@@ -167,19 +144,15 @@ public class VpcFwCvmInsInfo extends AbstractModel {
 
     /**
      * Set CVM所在地域详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RegionDetail CVM所在地域详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegionDetail(String RegionDetail) {
         this.RegionDetail = RegionDetail;
     }
 
     /**
-     * Get 主机所在可用区
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主机所在可用区 
      * @return ZoneZh 主机所在可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getZoneZh() {
         return this.ZoneZh;
@@ -187,19 +160,15 @@ public class VpcFwCvmInsInfo extends AbstractModel {
 
     /**
      * Set 主机所在可用区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ZoneZh 主机所在可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZoneZh(String ZoneZh) {
         this.ZoneZh = ZoneZh;
     }
 
     /**
-     * Get 备机所在可用区
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 备机所在可用区 
      * @return ZoneZhBack 备机所在可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getZoneZhBack() {
         return this.ZoneZhBack;
@@ -207,19 +176,15 @@ public class VpcFwCvmInsInfo extends AbstractModel {
 
     /**
      * Set 备机所在可用区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ZoneZhBack 备机所在可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZoneZhBack(String ZoneZhBack) {
         this.ZoneZhBack = ZoneZhBack;
     }
 
     /**
-     * Get 防火墙CVM带宽值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 防火墙CVM带宽值 
      * @return BandWidth 防火墙CVM带宽值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBandWidth() {
         return this.BandWidth;
@@ -227,19 +192,15 @@ public class VpcFwCvmInsInfo extends AbstractModel {
 
     /**
      * Set 防火墙CVM带宽值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BandWidth 防火墙CVM带宽值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBandWidth(Long BandWidth) {
         this.BandWidth = BandWidth;
     }
 
     /**
-     * Get 实例主机所在可用区
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例主机所在可用区 
      * @return Zone 实例主机所在可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getZone() {
         return this.Zone;
@@ -247,19 +208,15 @@ public class VpcFwCvmInsInfo extends AbstractModel {
 
     /**
      * Set 实例主机所在可用区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Zone 实例主机所在可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get 实例备机所在可用区
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例备机所在可用区 
      * @return ZoneBak 实例备机所在可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getZoneBak() {
         return this.ZoneBak;
@@ -267,9 +224,7 @@ public class VpcFwCvmInsInfo extends AbstractModel {
 
     /**
      * Set 实例备机所在可用区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ZoneBak 实例备机所在可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZoneBak(String ZoneBak) {
         this.ZoneBak = ZoneBak;

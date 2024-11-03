@@ -25,7 +25,6 @@ public class DescribeAreaBanAreasResponse extends AbstractModel {
 
     /**
     * 回包内容
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeAreaBanAreasResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 回包内容
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 回包内容 
      * @return Data 回包内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DescribeAreaBanAreasRsp getData() {
         return this.Data;
@@ -50,9 +47,7 @@ public class DescribeAreaBanAreasResponse extends AbstractModel {
 
     /**
      * Set 回包内容
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Data 回包内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(DescribeAreaBanAreasRsp Data) {
         this.Data = Data;

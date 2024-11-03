@@ -32,7 +32,6 @@ public class FwGroupSwitchShow extends AbstractModel {
 
     /**
     * 防火墙开关NAME
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SwitchName")
     @Expose
@@ -47,7 +46,6 @@ public class FwGroupSwitchShow extends AbstractModel {
 
     /**
     * 开关边连接类型 0：对等连接， 1：云连网
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConnectType")
     @Expose
@@ -55,7 +53,6 @@ public class FwGroupSwitchShow extends AbstractModel {
 
     /**
     * 连接ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConnectId")
     @Expose
@@ -63,7 +60,6 @@ public class FwGroupSwitchShow extends AbstractModel {
 
     /**
     * 连接名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConnectName")
     @Expose
@@ -71,7 +67,6 @@ public class FwGroupSwitchShow extends AbstractModel {
 
     /**
     * 源实例信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SrcInstancesInfo")
     @Expose
@@ -79,7 +74,6 @@ public class FwGroupSwitchShow extends AbstractModel {
 
     /**
     * 目的实例信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DstInstancesInfo")
     @Expose
@@ -87,7 +81,6 @@ public class FwGroupSwitchShow extends AbstractModel {
 
     /**
     * 防火墙(组)数据
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FwGroupId")
     @Expose
@@ -95,7 +88,6 @@ public class FwGroupSwitchShow extends AbstractModel {
 
     /**
     * 防火墙(组)名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FwGroupName")
     @Expose
@@ -103,7 +95,6 @@ public class FwGroupSwitchShow extends AbstractModel {
 
     /**
     * 开关状态 0：关 ， 1：开
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Enable")
     @Expose
@@ -111,7 +102,6 @@ public class FwGroupSwitchShow extends AbstractModel {
 
     /**
     * 开关的状态 0：正常， 1：转换中
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -119,7 +109,6 @@ public class FwGroupSwitchShow extends AbstractModel {
 
     /**
     * 0-非sase实例，忽略，1-未绑定状态，2-已绑定
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AttachWithEdge")
     @Expose
@@ -127,7 +116,6 @@ public class FwGroupSwitchShow extends AbstractModel {
 
     /**
     * 对等防火墙和开关状态 0：正常， 1：对等未创建防火墙，2：对等已创建防火墙，未打开开关
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CrossEdgeStatus")
     @Expose
@@ -135,7 +123,6 @@ public class FwGroupSwitchShow extends AbstractModel {
 
     /**
     * 网络经过VPC防火墙CVM所在地域
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FwInsRegion")
     @Expose
@@ -143,7 +130,6 @@ public class FwGroupSwitchShow extends AbstractModel {
 
     /**
     * 0 观察 1 拦截 2 严格 3 关闭 4 不支持ips 前端展示tag
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IpsAction")
     @Expose
@@ -151,7 +137,6 @@ public class FwGroupSwitchShow extends AbstractModel {
 
     /**
     * 开关关联的防火墙实例列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FwInsLst")
     @Expose
@@ -161,11 +146,17 @@ public class FwGroupSwitchShow extends AbstractModel {
     * 开关是否处于bypass状态
 0：正常状态
 1：bypass状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BypassStatus")
     @Expose
     private Long BypassStatus;
+
+    /**
+    * 0: ipv4 , 1:ipv6
+    */
+    @SerializedName("IpVersion")
+    @Expose
+    private Long IpVersion;
 
     /**
      * Get 防火墙开关ID 
@@ -184,10 +175,8 @@ public class FwGroupSwitchShow extends AbstractModel {
     }
 
     /**
-     * Get 防火墙开关NAME
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 防火墙开关NAME 
      * @return SwitchName 防火墙开关NAME
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSwitchName() {
         return this.SwitchName;
@@ -195,9 +184,7 @@ public class FwGroupSwitchShow extends AbstractModel {
 
     /**
      * Set 防火墙开关NAME
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SwitchName 防火墙开关NAME
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSwitchName(String SwitchName) {
         this.SwitchName = SwitchName;
@@ -220,10 +207,8 @@ public class FwGroupSwitchShow extends AbstractModel {
     }
 
     /**
-     * Get 开关边连接类型 0：对等连接， 1：云连网
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 开关边连接类型 0：对等连接， 1：云连网 
      * @return ConnectType 开关边连接类型 0：对等连接， 1：云连网
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getConnectType() {
         return this.ConnectType;
@@ -231,19 +216,15 @@ public class FwGroupSwitchShow extends AbstractModel {
 
     /**
      * Set 开关边连接类型 0：对等连接， 1：云连网
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ConnectType 开关边连接类型 0：对等连接， 1：云连网
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConnectType(Long ConnectType) {
         this.ConnectType = ConnectType;
     }
 
     /**
-     * Get 连接ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 连接ID 
      * @return ConnectId 连接ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getConnectId() {
         return this.ConnectId;
@@ -251,19 +232,15 @@ public class FwGroupSwitchShow extends AbstractModel {
 
     /**
      * Set 连接ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ConnectId 连接ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConnectId(String ConnectId) {
         this.ConnectId = ConnectId;
     }
 
     /**
-     * Get 连接名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 连接名称 
      * @return ConnectName 连接名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getConnectName() {
         return this.ConnectName;
@@ -271,19 +248,15 @@ public class FwGroupSwitchShow extends AbstractModel {
 
     /**
      * Set 连接名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ConnectName 连接名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConnectName(String ConnectName) {
         this.ConnectName = ConnectName;
     }
 
     /**
-     * Get 源实例信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 源实例信息 
      * @return SrcInstancesInfo 源实例信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public NetInstancesInfo [] getSrcInstancesInfo() {
         return this.SrcInstancesInfo;
@@ -291,19 +264,15 @@ public class FwGroupSwitchShow extends AbstractModel {
 
     /**
      * Set 源实例信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SrcInstancesInfo 源实例信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSrcInstancesInfo(NetInstancesInfo [] SrcInstancesInfo) {
         this.SrcInstancesInfo = SrcInstancesInfo;
     }
 
     /**
-     * Get 目的实例信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 目的实例信息 
      * @return DstInstancesInfo 目的实例信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public NetInstancesInfo [] getDstInstancesInfo() {
         return this.DstInstancesInfo;
@@ -311,19 +280,15 @@ public class FwGroupSwitchShow extends AbstractModel {
 
     /**
      * Set 目的实例信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DstInstancesInfo 目的实例信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDstInstancesInfo(NetInstancesInfo [] DstInstancesInfo) {
         this.DstInstancesInfo = DstInstancesInfo;
     }
 
     /**
-     * Get 防火墙(组)数据
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 防火墙(组)数据 
      * @return FwGroupId 防火墙(组)数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFwGroupId() {
         return this.FwGroupId;
@@ -331,19 +296,15 @@ public class FwGroupSwitchShow extends AbstractModel {
 
     /**
      * Set 防火墙(组)数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FwGroupId 防火墙(组)数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFwGroupId(String FwGroupId) {
         this.FwGroupId = FwGroupId;
     }
 
     /**
-     * Get 防火墙(组)名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 防火墙(组)名称 
      * @return FwGroupName 防火墙(组)名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFwGroupName() {
         return this.FwGroupName;
@@ -351,19 +312,15 @@ public class FwGroupSwitchShow extends AbstractModel {
 
     /**
      * Set 防火墙(组)名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FwGroupName 防火墙(组)名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFwGroupName(String FwGroupName) {
         this.FwGroupName = FwGroupName;
     }
 
     /**
-     * Get 开关状态 0：关 ， 1：开
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 开关状态 0：关 ， 1：开 
      * @return Enable 开关状态 0：关 ， 1：开
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getEnable() {
         return this.Enable;
@@ -371,19 +328,15 @@ public class FwGroupSwitchShow extends AbstractModel {
 
     /**
      * Set 开关状态 0：关 ， 1：开
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Enable 开关状态 0：关 ， 1：开
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnable(Long Enable) {
         this.Enable = Enable;
     }
 
     /**
-     * Get 开关的状态 0：正常， 1：转换中
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 开关的状态 0：正常， 1：转换中 
      * @return Status 开关的状态 0：正常， 1：转换中
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
         return this.Status;
@@ -391,19 +344,15 @@ public class FwGroupSwitchShow extends AbstractModel {
 
     /**
      * Set 开关的状态 0：正常， 1：转换中
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 开关的状态 0：正常， 1：转换中
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 0-非sase实例，忽略，1-未绑定状态，2-已绑定
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 0-非sase实例，忽略，1-未绑定状态，2-已绑定 
      * @return AttachWithEdge 0-非sase实例，忽略，1-未绑定状态，2-已绑定
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAttachWithEdge() {
         return this.AttachWithEdge;
@@ -411,19 +360,15 @@ public class FwGroupSwitchShow extends AbstractModel {
 
     /**
      * Set 0-非sase实例，忽略，1-未绑定状态，2-已绑定
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AttachWithEdge 0-非sase实例，忽略，1-未绑定状态，2-已绑定
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAttachWithEdge(Long AttachWithEdge) {
         this.AttachWithEdge = AttachWithEdge;
     }
 
     /**
-     * Get 对等防火墙和开关状态 0：正常， 1：对等未创建防火墙，2：对等已创建防火墙，未打开开关
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 对等防火墙和开关状态 0：正常， 1：对等未创建防火墙，2：对等已创建防火墙，未打开开关 
      * @return CrossEdgeStatus 对等防火墙和开关状态 0：正常， 1：对等未创建防火墙，2：对等已创建防火墙，未打开开关
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCrossEdgeStatus() {
         return this.CrossEdgeStatus;
@@ -431,19 +376,15 @@ public class FwGroupSwitchShow extends AbstractModel {
 
     /**
      * Set 对等防火墙和开关状态 0：正常， 1：对等未创建防火墙，2：对等已创建防火墙，未打开开关
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CrossEdgeStatus 对等防火墙和开关状态 0：正常， 1：对等未创建防火墙，2：对等已创建防火墙，未打开开关
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCrossEdgeStatus(Long CrossEdgeStatus) {
         this.CrossEdgeStatus = CrossEdgeStatus;
     }
 
     /**
-     * Get 网络经过VPC防火墙CVM所在地域
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网络经过VPC防火墙CVM所在地域 
      * @return FwInsRegion 网络经过VPC防火墙CVM所在地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getFwInsRegion() {
         return this.FwInsRegion;
@@ -451,19 +392,15 @@ public class FwGroupSwitchShow extends AbstractModel {
 
     /**
      * Set 网络经过VPC防火墙CVM所在地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FwInsRegion 网络经过VPC防火墙CVM所在地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFwInsRegion(String [] FwInsRegion) {
         this.FwInsRegion = FwInsRegion;
     }
 
     /**
-     * Get 0 观察 1 拦截 2 严格 3 关闭 4 不支持ips 前端展示tag
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 0 观察 1 拦截 2 严格 3 关闭 4 不支持ips 前端展示tag 
      * @return IpsAction 0 观察 1 拦截 2 严格 3 关闭 4 不支持ips 前端展示tag
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIpsAction() {
         return this.IpsAction;
@@ -471,19 +408,15 @@ public class FwGroupSwitchShow extends AbstractModel {
 
     /**
      * Set 0 观察 1 拦截 2 严格 3 关闭 4 不支持ips 前端展示tag
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IpsAction 0 观察 1 拦截 2 严格 3 关闭 4 不支持ips 前端展示tag
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIpsAction(Long IpsAction) {
         this.IpsAction = IpsAction;
     }
 
     /**
-     * Get 开关关联的防火墙实例列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 开关关联的防火墙实例列表 
      * @return FwInsLst 开关关联的防火墙实例列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public VpcFwInstanceShow [] getFwInsLst() {
         return this.FwInsLst;
@@ -491,9 +424,7 @@ public class FwGroupSwitchShow extends AbstractModel {
 
     /**
      * Set 开关关联的防火墙实例列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FwInsLst 开关关联的防火墙实例列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFwInsLst(VpcFwInstanceShow [] FwInsLst) {
         this.FwInsLst = FwInsLst;
@@ -502,12 +433,10 @@ public class FwGroupSwitchShow extends AbstractModel {
     /**
      * Get 开关是否处于bypass状态
 0：正常状态
-1：bypass状态
-注意：此字段可能返回 null，表示取不到有效值。 
+1：bypass状态 
      * @return BypassStatus 开关是否处于bypass状态
 0：正常状态
 1：bypass状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBypassStatus() {
         return this.BypassStatus;
@@ -517,14 +446,28 @@ public class FwGroupSwitchShow extends AbstractModel {
      * Set 开关是否处于bypass状态
 0：正常状态
 1：bypass状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BypassStatus 开关是否处于bypass状态
 0：正常状态
 1：bypass状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBypassStatus(Long BypassStatus) {
         this.BypassStatus = BypassStatus;
+    }
+
+    /**
+     * Get 0: ipv4 , 1:ipv6 
+     * @return IpVersion 0: ipv4 , 1:ipv6
+     */
+    public Long getIpVersion() {
+        return this.IpVersion;
+    }
+
+    /**
+     * Set 0: ipv4 , 1:ipv6
+     * @param IpVersion 0: ipv4 , 1:ipv6
+     */
+    public void setIpVersion(Long IpVersion) {
+        this.IpVersion = IpVersion;
     }
 
     public FwGroupSwitchShow() {
@@ -601,6 +544,9 @@ public class FwGroupSwitchShow extends AbstractModel {
         if (source.BypassStatus != null) {
             this.BypassStatus = new Long(source.BypassStatus);
         }
+        if (source.IpVersion != null) {
+            this.IpVersion = new Long(source.IpVersion);
+        }
     }
 
 
@@ -626,6 +572,7 @@ public class FwGroupSwitchShow extends AbstractModel {
         this.setParamSimple(map, prefix + "IpsAction", this.IpsAction);
         this.setParamArrayObj(map, prefix + "FwInsLst.", this.FwInsLst);
         this.setParamSimple(map, prefix + "BypassStatus", this.BypassStatus);
+        this.setParamSimple(map, prefix + "IpVersion", this.IpVersion);
 
     }
 }

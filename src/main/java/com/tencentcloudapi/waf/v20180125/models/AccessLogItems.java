@@ -25,17 +25,14 @@ public class AccessLogItems extends AbstractModel {
 
     /**
     * 分析结果返回的KV数据对
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
     @Expose
     private AccessLogItem [] Data;
 
     /**
-     * Get 分析结果返回的KV数据对
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分析结果返回的KV数据对 
      * @return Data 分析结果返回的KV数据对
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AccessLogItem [] getData() {
         return this.Data;
@@ -43,9 +40,7 @@ public class AccessLogItems extends AbstractModel {
 
     /**
      * Set 分析结果返回的KV数据对
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Data 分析结果返回的KV数据对
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(AccessLogItem [] Data) {
         this.Data = Data;

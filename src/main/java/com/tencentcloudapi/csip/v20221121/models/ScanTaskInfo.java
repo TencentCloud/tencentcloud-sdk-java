@@ -25,7 +25,6 @@ public class ScanTaskInfo extends AbstractModel {
 
     /**
     * 任务Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskId")
     @Expose
@@ -33,7 +32,6 @@ public class ScanTaskInfo extends AbstractModel {
 
     /**
     * 任务名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskName")
     @Expose
@@ -41,7 +39,6 @@ public class ScanTaskInfo extends AbstractModel {
 
     /**
     * 任务状态码：1等待开始  2正在扫描  3扫描出错 4扫描完成
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -49,7 +46,6 @@ public class ScanTaskInfo extends AbstractModel {
 
     /**
     * 任务进度
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Progress")
     @Expose
@@ -57,7 +53,6 @@ public class ScanTaskInfo extends AbstractModel {
 
     /**
     * 任务完成时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskTime")
     @Expose
@@ -65,7 +60,6 @@ public class ScanTaskInfo extends AbstractModel {
 
     /**
     * 报告ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReportId")
     @Expose
@@ -73,7 +67,6 @@ public class ScanTaskInfo extends AbstractModel {
 
     /**
     * 报告名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReportName")
     @Expose
@@ -81,7 +74,6 @@ public class ScanTaskInfo extends AbstractModel {
 
     /**
     * 扫描计划，0-周期任务,1-立即扫描,2-定时扫描,3-自定义
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScanPlan")
     @Expose
@@ -89,7 +81,6 @@ public class ScanTaskInfo extends AbstractModel {
 
     /**
     * 关联的资产数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AssetCount")
     @Expose
@@ -97,7 +88,6 @@ public class ScanTaskInfo extends AbstractModel {
 
     /**
     * APP ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AppId")
     @Expose
@@ -105,7 +95,6 @@ public class ScanTaskInfo extends AbstractModel {
 
     /**
     * 用户主账户ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UIN")
     @Expose
@@ -113,17 +102,14 @@ public class ScanTaskInfo extends AbstractModel {
 
     /**
     * 用户名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserName")
     @Expose
     private String UserName;
 
     /**
-     * Get 任务Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务Id 
      * @return TaskId 任务Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskId() {
         return this.TaskId;
@@ -131,19 +117,15 @@ public class ScanTaskInfo extends AbstractModel {
 
     /**
      * Set 任务Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskId 任务Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get 任务名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务名称 
      * @return TaskName 任务名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskName() {
         return this.TaskName;
@@ -151,19 +133,15 @@ public class ScanTaskInfo extends AbstractModel {
 
     /**
      * Set 任务名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskName 任务名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskName(String TaskName) {
         this.TaskName = TaskName;
     }
 
     /**
-     * Get 任务状态码：1等待开始  2正在扫描  3扫描出错 4扫描完成
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务状态码：1等待开始  2正在扫描  3扫描出错 4扫描完成 
      * @return Status 任务状态码：1等待开始  2正在扫描  3扫描出错 4扫描完成
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
         return this.Status;
@@ -171,19 +149,15 @@ public class ScanTaskInfo extends AbstractModel {
 
     /**
      * Set 任务状态码：1等待开始  2正在扫描  3扫描出错 4扫描完成
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 任务状态码：1等待开始  2正在扫描  3扫描出错 4扫描完成
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 任务进度
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务进度 
      * @return Progress 任务进度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getProgress() {
         return this.Progress;
@@ -191,19 +165,15 @@ public class ScanTaskInfo extends AbstractModel {
 
     /**
      * Set 任务进度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Progress 任务进度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProgress(Long Progress) {
         this.Progress = Progress;
     }
 
     /**
-     * Get 任务完成时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务完成时间 
      * @return TaskTime 任务完成时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskTime() {
         return this.TaskTime;
@@ -211,19 +181,15 @@ public class ScanTaskInfo extends AbstractModel {
 
     /**
      * Set 任务完成时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskTime 任务完成时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskTime(String TaskTime) {
         this.TaskTime = TaskTime;
     }
 
     /**
-     * Get 报告ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 报告ID 
      * @return ReportId 报告ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getReportId() {
         return this.ReportId;
@@ -231,19 +197,15 @@ public class ScanTaskInfo extends AbstractModel {
 
     /**
      * Set 报告ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReportId 报告ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReportId(String ReportId) {
         this.ReportId = ReportId;
     }
 
     /**
-     * Get 报告名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 报告名称 
      * @return ReportName 报告名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getReportName() {
         return this.ReportName;
@@ -251,19 +213,15 @@ public class ScanTaskInfo extends AbstractModel {
 
     /**
      * Set 报告名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReportName 报告名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReportName(String ReportName) {
         this.ReportName = ReportName;
     }
 
     /**
-     * Get 扫描计划，0-周期任务,1-立即扫描,2-定时扫描,3-自定义
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 扫描计划，0-周期任务,1-立即扫描,2-定时扫描,3-自定义 
      * @return ScanPlan 扫描计划，0-周期任务,1-立即扫描,2-定时扫描,3-自定义
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getScanPlan() {
         return this.ScanPlan;
@@ -271,19 +229,15 @@ public class ScanTaskInfo extends AbstractModel {
 
     /**
      * Set 扫描计划，0-周期任务,1-立即扫描,2-定时扫描,3-自定义
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ScanPlan 扫描计划，0-周期任务,1-立即扫描,2-定时扫描,3-自定义
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScanPlan(Long ScanPlan) {
         this.ScanPlan = ScanPlan;
     }
 
     /**
-     * Get 关联的资产数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 关联的资产数 
      * @return AssetCount 关联的资产数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAssetCount() {
         return this.AssetCount;
@@ -291,19 +245,15 @@ public class ScanTaskInfo extends AbstractModel {
 
     /**
      * Set 关联的资产数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AssetCount 关联的资产数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAssetCount(Long AssetCount) {
         this.AssetCount = AssetCount;
     }
 
     /**
-     * Get APP ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get APP ID 
      * @return AppId APP ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAppId() {
         return this.AppId;
@@ -311,19 +261,15 @@ public class ScanTaskInfo extends AbstractModel {
 
     /**
      * Set APP ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AppId APP ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAppId(String AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get 用户主账户ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户主账户ID 
      * @return UIN 用户主账户ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUIN() {
         return this.UIN;
@@ -331,19 +277,15 @@ public class ScanTaskInfo extends AbstractModel {
 
     /**
      * Set 用户主账户ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UIN 用户主账户ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUIN(String UIN) {
         this.UIN = UIN;
     }
 
     /**
-     * Get 用户名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户名称 
      * @return UserName 用户名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUserName() {
         return this.UserName;
@@ -351,9 +293,7 @@ public class ScanTaskInfo extends AbstractModel {
 
     /**
      * Set 用户名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UserName 用户名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;

@@ -32,7 +32,6 @@ public class AcListsData extends AbstractModel {
 
     /**
     * 访问源
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SourceIp")
     @Expose
@@ -40,7 +39,6 @@ public class AcListsData extends AbstractModel {
 
     /**
     * 访问目的
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TargetIp")
     @Expose
@@ -48,7 +46,6 @@ public class AcListsData extends AbstractModel {
 
     /**
     * 协议
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Protocol")
     @Expose
@@ -56,7 +53,6 @@ public class AcListsData extends AbstractModel {
 
     /**
     * 端口
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Port")
     @Expose
@@ -64,7 +60,6 @@ public class AcListsData extends AbstractModel {
 
     /**
     * 策略
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Strategy")
     @Expose
@@ -72,7 +67,6 @@ public class AcListsData extends AbstractModel {
 
     /**
     * 描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Detail")
     @Expose
@@ -94,7 +88,6 @@ public class AcListsData extends AbstractModel {
 
     /**
     * 告警规则id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LogId")
     @Expose
@@ -102,7 +95,6 @@ public class AcListsData extends AbstractModel {
 
     /**
     * 规则开关状态 1打开 0关闭
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -110,7 +102,6 @@ public class AcListsData extends AbstractModel {
 
     /**
     * 规则源类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SrcType")
     @Expose
@@ -118,7 +109,6 @@ public class AcListsData extends AbstractModel {
 
     /**
     * 规则目的类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DstType")
     @Expose
@@ -126,7 +116,6 @@ public class AcListsData extends AbstractModel {
 
     /**
     * 规则唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Uuid")
     @Expose
@@ -136,7 +125,6 @@ public class AcListsData extends AbstractModel {
     * 规则有效性
 1 有效
 0 无效
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Invalid")
     @Expose
@@ -144,7 +132,6 @@ public class AcListsData extends AbstractModel {
 
     /**
     * 是否地域规则
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsRegion")
     @Expose
@@ -152,7 +139,6 @@ public class AcListsData extends AbstractModel {
 
     /**
     * 云厂商代码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CloudCode")
     @Expose
@@ -160,7 +146,6 @@ public class AcListsData extends AbstractModel {
 
     /**
     * 自动化助手信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AutoTask")
     @Expose
@@ -168,7 +153,6 @@ public class AcListsData extends AbstractModel {
 
     /**
     * 实例名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceName")
     @Expose
@@ -176,7 +160,6 @@ public class AcListsData extends AbstractModel {
 
     /**
     * 地域码信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RegionCode")
     @Expose
@@ -184,7 +167,6 @@ public class AcListsData extends AbstractModel {
 
     /**
     * 国家代码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Country")
     @Expose
@@ -192,7 +174,6 @@ public class AcListsData extends AbstractModel {
 
     /**
     * 城市代码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("City")
     @Expose
@@ -200,7 +181,6 @@ public class AcListsData extends AbstractModel {
 
     /**
     * 国家名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RegName1")
     @Expose
@@ -208,7 +188,6 @@ public class AcListsData extends AbstractModel {
 
     /**
     * 城市名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RegName2")
     @Expose
@@ -231,10 +210,8 @@ public class AcListsData extends AbstractModel {
     }
 
     /**
-     * Get 访问源
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 访问源 
      * @return SourceIp 访问源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSourceIp() {
         return this.SourceIp;
@@ -242,19 +219,15 @@ public class AcListsData extends AbstractModel {
 
     /**
      * Set 访问源
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SourceIp 访问源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSourceIp(String SourceIp) {
         this.SourceIp = SourceIp;
     }
 
     /**
-     * Get 访问目的
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 访问目的 
      * @return TargetIp 访问目的
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTargetIp() {
         return this.TargetIp;
@@ -262,19 +235,15 @@ public class AcListsData extends AbstractModel {
 
     /**
      * Set 访问目的
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TargetIp 访问目的
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTargetIp(String TargetIp) {
         this.TargetIp = TargetIp;
     }
 
     /**
-     * Get 协议
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 协议 
      * @return Protocol 协议
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProtocol() {
         return this.Protocol;
@@ -282,19 +251,15 @@ public class AcListsData extends AbstractModel {
 
     /**
      * Set 协议
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Protocol 协议
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
     }
 
     /**
-     * Get 端口
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 端口 
      * @return Port 端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPort() {
         return this.Port;
@@ -302,19 +267,15 @@ public class AcListsData extends AbstractModel {
 
     /**
      * Set 端口
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Port 端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPort(String Port) {
         this.Port = Port;
     }
 
     /**
-     * Get 策略
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 策略 
      * @return Strategy 策略
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStrategy() {
         return this.Strategy;
@@ -322,19 +283,15 @@ public class AcListsData extends AbstractModel {
 
     /**
      * Set 策略
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Strategy 策略
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStrategy(Long Strategy) {
         this.Strategy = Strategy;
     }
 
     /**
-     * Get 描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 描述 
      * @return Detail 描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDetail() {
         return this.Detail;
@@ -342,9 +299,7 @@ public class AcListsData extends AbstractModel {
 
     /**
      * Set 描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Detail 描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDetail(String Detail) {
         this.Detail = Detail;
@@ -383,10 +338,8 @@ public class AcListsData extends AbstractModel {
     }
 
     /**
-     * Get 告警规则id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 告警规则id 
      * @return LogId 告警规则id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLogId() {
         return this.LogId;
@@ -394,19 +347,15 @@ public class AcListsData extends AbstractModel {
 
     /**
      * Set 告警规则id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LogId 告警规则id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLogId(String LogId) {
         this.LogId = LogId;
     }
 
     /**
-     * Get 规则开关状态 1打开 0关闭
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则开关状态 1打开 0关闭 
      * @return Status 规则开关状态 1打开 0关闭
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
         return this.Status;
@@ -414,19 +363,15 @@ public class AcListsData extends AbstractModel {
 
     /**
      * Set 规则开关状态 1打开 0关闭
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 规则开关状态 1打开 0关闭
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 规则源类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则源类型 
      * @return SrcType 规则源类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSrcType() {
         return this.SrcType;
@@ -434,19 +379,15 @@ public class AcListsData extends AbstractModel {
 
     /**
      * Set 规则源类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SrcType 规则源类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSrcType(Long SrcType) {
         this.SrcType = SrcType;
     }
 
     /**
-     * Get 规则目的类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则目的类型 
      * @return DstType 规则目的类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDstType() {
         return this.DstType;
@@ -454,19 +395,15 @@ public class AcListsData extends AbstractModel {
 
     /**
      * Set 规则目的类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DstType 规则目的类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDstType(Long DstType) {
         this.DstType = DstType;
     }
 
     /**
-     * Get 规则唯一ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则唯一ID 
      * @return Uuid 规则唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUuid() {
         return this.Uuid;
@@ -474,9 +411,7 @@ public class AcListsData extends AbstractModel {
 
     /**
      * Set 规则唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Uuid 规则唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUuid(String Uuid) {
         this.Uuid = Uuid;
@@ -485,12 +420,10 @@ public class AcListsData extends AbstractModel {
     /**
      * Get 规则有效性
 1 有效
-0 无效
-注意：此字段可能返回 null，表示取不到有效值。 
+0 无效 
      * @return Invalid 规则有效性
 1 有效
 0 无效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getInvalid() {
         return this.Invalid;
@@ -500,21 +433,17 @@ public class AcListsData extends AbstractModel {
      * Set 规则有效性
 1 有效
 0 无效
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Invalid 规则有效性
 1 有效
 0 无效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInvalid(Long Invalid) {
         this.Invalid = Invalid;
     }
 
     /**
-     * Get 是否地域规则
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否地域规则 
      * @return IsRegion 是否地域规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsRegion() {
         return this.IsRegion;
@@ -522,19 +451,15 @@ public class AcListsData extends AbstractModel {
 
     /**
      * Set 是否地域规则
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsRegion 是否地域规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsRegion(Long IsRegion) {
         this.IsRegion = IsRegion;
     }
 
     /**
-     * Get 云厂商代码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 云厂商代码 
      * @return CloudCode 云厂商代码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCloudCode() {
         return this.CloudCode;
@@ -542,19 +467,15 @@ public class AcListsData extends AbstractModel {
 
     /**
      * Set 云厂商代码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CloudCode 云厂商代码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCloudCode(String CloudCode) {
         this.CloudCode = CloudCode;
     }
 
     /**
-     * Get 自动化助手信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 自动化助手信息 
      * @return AutoTask 自动化助手信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAutoTask() {
         return this.AutoTask;
@@ -562,19 +483,15 @@ public class AcListsData extends AbstractModel {
 
     /**
      * Set 自动化助手信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AutoTask 自动化助手信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAutoTask(String AutoTask) {
         this.AutoTask = AutoTask;
     }
 
     /**
-     * Get 实例名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例名称 
      * @return InstanceName 实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceName() {
         return this.InstanceName;
@@ -582,19 +499,15 @@ public class AcListsData extends AbstractModel {
 
     /**
      * Set 实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceName 实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get 地域码信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地域码信息 
      * @return RegionCode 地域码信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegionCode() {
         return this.RegionCode;
@@ -602,19 +515,15 @@ public class AcListsData extends AbstractModel {
 
     /**
      * Set 地域码信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RegionCode 地域码信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegionCode(String RegionCode) {
         this.RegionCode = RegionCode;
     }
 
     /**
-     * Get 国家代码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 国家代码 
      * @return Country 国家代码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCountry() {
         return this.Country;
@@ -622,19 +531,15 @@ public class AcListsData extends AbstractModel {
 
     /**
      * Set 国家代码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Country 国家代码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCountry(Long Country) {
         this.Country = Country;
     }
 
     /**
-     * Get 城市代码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 城市代码 
      * @return City 城市代码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCity() {
         return this.City;
@@ -642,19 +547,15 @@ public class AcListsData extends AbstractModel {
 
     /**
      * Set 城市代码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param City 城市代码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCity(Long City) {
         this.City = City;
     }
 
     /**
-     * Get 国家名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 国家名称 
      * @return RegName1 国家名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegName1() {
         return this.RegName1;
@@ -662,19 +563,15 @@ public class AcListsData extends AbstractModel {
 
     /**
      * Set 国家名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RegName1 国家名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegName1(String RegName1) {
         this.RegName1 = RegName1;
     }
 
     /**
-     * Get 城市名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 城市名称 
      * @return RegName2 城市名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegName2() {
         return this.RegName2;
@@ -682,9 +579,7 @@ public class AcListsData extends AbstractModel {
 
     /**
      * Set 城市名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RegName2 城市名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegName2(String RegName2) {
         this.RegName2 = RegName2;

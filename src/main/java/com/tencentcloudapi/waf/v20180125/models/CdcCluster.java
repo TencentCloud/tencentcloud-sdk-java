@@ -32,7 +32,6 @@ public class CdcCluster extends AbstractModel {
 
     /**
     * cdc的集群名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -55,10 +54,8 @@ public class CdcCluster extends AbstractModel {
     }
 
     /**
-     * Get cdc的集群名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get cdc的集群名称 
      * @return Name cdc的集群名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -66,9 +63,7 @@ public class CdcCluster extends AbstractModel {
 
     /**
      * Set cdc的集群名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name cdc的集群名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;

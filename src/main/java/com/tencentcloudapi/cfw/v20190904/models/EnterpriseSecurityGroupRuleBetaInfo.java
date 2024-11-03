@@ -25,7 +25,6 @@ public class EnterpriseSecurityGroupRuleBetaInfo extends AbstractModel {
 
     /**
     * 任务id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskId")
     @Expose
@@ -33,7 +32,6 @@ public class EnterpriseSecurityGroupRuleBetaInfo extends AbstractModel {
 
     /**
     * 任务名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskName")
     @Expose
@@ -41,17 +39,14 @@ public class EnterpriseSecurityGroupRuleBetaInfo extends AbstractModel {
 
     /**
     * 时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LastTime")
     @Expose
     private String LastTime;
 
     /**
-     * Get 任务id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务id 
      * @return TaskId 任务id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTaskId() {
         return this.TaskId;
@@ -59,19 +54,15 @@ public class EnterpriseSecurityGroupRuleBetaInfo extends AbstractModel {
 
     /**
      * Set 任务id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskId 任务id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get 任务名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务名称 
      * @return TaskName 任务名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskName() {
         return this.TaskName;
@@ -79,19 +70,15 @@ public class EnterpriseSecurityGroupRuleBetaInfo extends AbstractModel {
 
     /**
      * Set 任务名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskName 任务名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskName(String TaskName) {
         this.TaskName = TaskName;
     }
 
     /**
-     * Get 时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 时间 
      * @return LastTime 时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLastTime() {
         return this.LastTime;
@@ -99,9 +86,7 @@ public class EnterpriseSecurityGroupRuleBetaInfo extends AbstractModel {
 
     /**
      * Set 时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LastTime 时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLastTime(String LastTime) {
         this.LastTime = LastTime;

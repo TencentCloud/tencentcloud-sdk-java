@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class DescribeFwGroupInstanceInfoResponse extends AbstractModel {
 
     /**
-    * 防火墙(组)
-注意：此字段可能返回 null，表示取不到有效值。
+    * 防火墙(组)详细信息
     */
     @SerializedName("VpcFwGroupLst")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeFwGroupInstanceInfoResponse extends AbstractModel {
 
     /**
     * 防火墙(组)个数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Total")
     @Expose
@@ -47,30 +45,24 @@ public class DescribeFwGroupInstanceInfoResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 防火墙(组)
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return VpcFwGroupLst 防火墙(组)
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 防火墙(组)详细信息 
+     * @return VpcFwGroupLst 防火墙(组)详细信息
      */
     public VpcFwGroupInfo [] getVpcFwGroupLst() {
         return this.VpcFwGroupLst;
     }
 
     /**
-     * Set 防火墙(组)
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param VpcFwGroupLst 防火墙(组)
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 防火墙(组)详细信息
+     * @param VpcFwGroupLst 防火墙(组)详细信息
      */
     public void setVpcFwGroupLst(VpcFwGroupInfo [] VpcFwGroupLst) {
         this.VpcFwGroupLst = VpcFwGroupLst;
     }
 
     /**
-     * Get 防火墙(组)个数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 防火墙(组)个数 
      * @return Total 防火墙(组)个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotal() {
         return this.Total;
@@ -78,9 +70,7 @@ public class DescribeFwGroupInstanceInfoResponse extends AbstractModel {
 
     /**
      * Set 防火墙(组)个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Total 防火墙(组)个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotal(Long Total) {
         this.Total = Total;

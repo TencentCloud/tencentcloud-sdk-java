@@ -32,7 +32,6 @@ public class CreateAcRulesResponse extends AbstractModel {
 
     /**
     * 返回多余的信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Info")
     @Expose
@@ -62,10 +61,8 @@ public class CreateAcRulesResponse extends AbstractModel {
     }
 
     /**
-     * Get 返回多余的信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 返回多余的信息 
      * @return Info 返回多余的信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInfo() {
         return this.Info;
@@ -73,9 +70,7 @@ public class CreateAcRulesResponse extends AbstractModel {
 
     /**
      * Set 返回多余的信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Info 返回多余的信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInfo(String Info) {
         this.Info = Info;

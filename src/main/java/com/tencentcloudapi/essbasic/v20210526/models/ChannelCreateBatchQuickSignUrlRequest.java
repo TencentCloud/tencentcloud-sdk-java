@@ -119,7 +119,7 @@ public class ChannelCreateBatchQuickSignUrlRequest extends AbstractModel {
     private Intention Intention;
 
     /**
-    * 是否开启缓存签署人信息
+    * 缓存签署人信息。在H5签署链接动态领取场景，首次填写后，选择缓存签署人信息，在下次签署人点击领取链接时，会自动将个人信息（姓名、身份证号、手机号）填入，否则需要每次手动填写。
     */
     @SerializedName("CacheApproverInfo")
     @Expose
@@ -386,16 +386,16 @@ public class ChannelCreateBatchQuickSignUrlRequest extends AbstractModel {
     }
 
     /**
-     * Get 是否开启缓存签署人信息 
-     * @return CacheApproverInfo 是否开启缓存签署人信息
+     * Get 缓存签署人信息。在H5签署链接动态领取场景，首次填写后，选择缓存签署人信息，在下次签署人点击领取链接时，会自动将个人信息（姓名、身份证号、手机号）填入，否则需要每次手动填写。 
+     * @return CacheApproverInfo 缓存签署人信息。在H5签署链接动态领取场景，首次填写后，选择缓存签署人信息，在下次签署人点击领取链接时，会自动将个人信息（姓名、身份证号、手机号）填入，否则需要每次手动填写。
      */
     public Boolean getCacheApproverInfo() {
         return this.CacheApproverInfo;
     }
 
     /**
-     * Set 是否开启缓存签署人信息
-     * @param CacheApproverInfo 是否开启缓存签署人信息
+     * Set 缓存签署人信息。在H5签署链接动态领取场景，首次填写后，选择缓存签署人信息，在下次签署人点击领取链接时，会自动将个人信息（姓名、身份证号、手机号）填入，否则需要每次手动填写。
+     * @param CacheApproverInfo 缓存签署人信息。在H5签署链接动态领取场景，首次填写后，选择缓存签署人信息，在下次签署人点击领取链接时，会自动将个人信息（姓名、身份证号、手机号）填入，否则需要每次手动填写。
      */
     public void setCacheApproverInfo(Boolean CacheApproverInfo) {
         this.CacheApproverInfo = CacheApproverInfo;

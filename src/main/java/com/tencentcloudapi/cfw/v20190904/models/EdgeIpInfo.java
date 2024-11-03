@@ -32,7 +32,6 @@ public class EdgeIpInfo extends AbstractModel {
 
     /**
     * 公网 IP 类型 1 公网,2 弹性,3 弹性ipv6,4 anycastIP, 6 HighQualityEIP
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PublicIpType")
     @Expose
@@ -40,7 +39,6 @@ public class EdgeIpInfo extends AbstractModel {
 
     /**
     * 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -48,7 +46,6 @@ public class EdgeIpInfo extends AbstractModel {
 
     /**
     * 实例名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceName")
     @Expose
@@ -56,7 +53,6 @@ public class EdgeIpInfo extends AbstractModel {
 
     /**
     * 内网IP
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IntranetIp")
     @Expose
@@ -64,7 +60,6 @@ public class EdgeIpInfo extends AbstractModel {
 
     /**
     * 资产类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AssetType")
     @Expose
@@ -72,7 +67,6 @@ public class EdgeIpInfo extends AbstractModel {
 
     /**
     * 地域
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Region")
     @Expose
@@ -80,7 +74,6 @@ public class EdgeIpInfo extends AbstractModel {
 
     /**
     * 风险端口数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PortRiskCount")
     @Expose
@@ -88,7 +81,6 @@ public class EdgeIpInfo extends AbstractModel {
 
     /**
     * 最近扫描时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LastScanTime")
     @Expose
@@ -98,7 +90,6 @@ public class EdgeIpInfo extends AbstractModel {
     * 是否为region eip
 0 不为region eip，不能选择串行
 1 为region eip 可以选择串行
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsRegionEip")
     @Expose
@@ -106,7 +97,6 @@ public class EdgeIpInfo extends AbstractModel {
 
     /**
     * EIP 所关联的VPC
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcId")
     @Expose
@@ -116,7 +106,6 @@ public class EdgeIpInfo extends AbstractModel {
     * 0: 该地域暂未支持串行
 1: 该用户未在该地域配置串行带宽
 2: 该用户已在该地域配置串行带宽，可以开启串行开关
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsSerialRegion")
     @Expose
@@ -126,7 +115,6 @@ public class EdgeIpInfo extends AbstractModel {
     * 0: 不是公网CLB 可以开启串行开关
 1: 是公网CLB 不可以开启串行开关
 
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsPublicClb")
     @Expose
@@ -136,7 +124,6 @@ public class EdgeIpInfo extends AbstractModel {
     * 0: 开启开关时提示要创建私有连接。
 1: 关闭该开关是提示删除私有连接。
 如果大于 1: 关闭开关 、开启开关不需提示创建删除私有连接。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndpointBindEipNum")
     @Expose
@@ -144,7 +131,6 @@ public class EdgeIpInfo extends AbstractModel {
 
     /**
     * 扫描深度
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScanMode")
     @Expose
@@ -152,7 +138,6 @@ public class EdgeIpInfo extends AbstractModel {
 
     /**
     * 扫描状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScanStatus")
     @Expose
@@ -165,7 +150,6 @@ public class EdgeIpInfo extends AbstractModel {
 2 : 开启中
 3 : 关闭中
 4 : 异常
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -173,7 +157,6 @@ public class EdgeIpInfo extends AbstractModel {
 
     /**
     * 私有连接ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndpointId")
     @Expose
@@ -181,7 +164,6 @@ public class EdgeIpInfo extends AbstractModel {
 
     /**
     * 私有连接IP
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndpointIp")
     @Expose
@@ -198,7 +180,6 @@ public class EdgeIpInfo extends AbstractModel {
 
     /**
     * 开关权重
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SwitchWeight")
     @Expose
@@ -206,7 +187,6 @@ public class EdgeIpInfo extends AbstractModel {
 
     /**
     * 域名化CLB的域名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Domain")
     @Expose
@@ -214,7 +194,6 @@ public class EdgeIpInfo extends AbstractModel {
 
     /**
     * IP超量状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OverUsedStatus")
     @Expose
@@ -237,10 +216,8 @@ public class EdgeIpInfo extends AbstractModel {
     }
 
     /**
-     * Get 公网 IP 类型 1 公网,2 弹性,3 弹性ipv6,4 anycastIP, 6 HighQualityEIP
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 公网 IP 类型 1 公网,2 弹性,3 弹性ipv6,4 anycastIP, 6 HighQualityEIP 
      * @return PublicIpType 公网 IP 类型 1 公网,2 弹性,3 弹性ipv6,4 anycastIP, 6 HighQualityEIP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPublicIpType() {
         return this.PublicIpType;
@@ -248,19 +225,15 @@ public class EdgeIpInfo extends AbstractModel {
 
     /**
      * Set 公网 IP 类型 1 公网,2 弹性,3 弹性ipv6,4 anycastIP, 6 HighQualityEIP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PublicIpType 公网 IP 类型 1 公网,2 弹性,3 弹性ipv6,4 anycastIP, 6 HighQualityEIP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPublicIpType(Long PublicIpType) {
         this.PublicIpType = PublicIpType;
     }
 
     /**
-     * Get 实例ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例ID 
      * @return InstanceId 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceId() {
         return this.InstanceId;
@@ -268,19 +241,15 @@ public class EdgeIpInfo extends AbstractModel {
 
     /**
      * Set 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceId 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 实例名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例名 
      * @return InstanceName 实例名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceName() {
         return this.InstanceName;
@@ -288,19 +257,15 @@ public class EdgeIpInfo extends AbstractModel {
 
     /**
      * Set 实例名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceName 实例名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get 内网IP
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 内网IP 
      * @return IntranetIp 内网IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIntranetIp() {
         return this.IntranetIp;
@@ -308,19 +273,15 @@ public class EdgeIpInfo extends AbstractModel {
 
     /**
      * Set 内网IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IntranetIp 内网IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIntranetIp(String IntranetIp) {
         this.IntranetIp = IntranetIp;
     }
 
     /**
-     * Get 资产类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资产类型 
      * @return AssetType 资产类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAssetType() {
         return this.AssetType;
@@ -328,19 +289,15 @@ public class EdgeIpInfo extends AbstractModel {
 
     /**
      * Set 资产类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AssetType 资产类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAssetType(String AssetType) {
         this.AssetType = AssetType;
     }
 
     /**
-     * Get 地域
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地域 
      * @return Region 地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegion() {
         return this.Region;
@@ -348,19 +305,15 @@ public class EdgeIpInfo extends AbstractModel {
 
     /**
      * Set 地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Region 地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get 风险端口数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 风险端口数 
      * @return PortRiskCount 风险端口数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPortRiskCount() {
         return this.PortRiskCount;
@@ -368,19 +321,15 @@ public class EdgeIpInfo extends AbstractModel {
 
     /**
      * Set 风险端口数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PortRiskCount 风险端口数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPortRiskCount(Long PortRiskCount) {
         this.PortRiskCount = PortRiskCount;
     }
 
     /**
-     * Get 最近扫描时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最近扫描时间 
      * @return LastScanTime 最近扫描时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLastScanTime() {
         return this.LastScanTime;
@@ -388,9 +337,7 @@ public class EdgeIpInfo extends AbstractModel {
 
     /**
      * Set 最近扫描时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LastScanTime 最近扫描时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLastScanTime(String LastScanTime) {
         this.LastScanTime = LastScanTime;
@@ -399,12 +346,10 @@ public class EdgeIpInfo extends AbstractModel {
     /**
      * Get 是否为region eip
 0 不为region eip，不能选择串行
-1 为region eip 可以选择串行
-注意：此字段可能返回 null，表示取不到有效值。 
+1 为region eip 可以选择串行 
      * @return IsRegionEip 是否为region eip
 0 不为region eip，不能选择串行
 1 为region eip 可以选择串行
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsRegionEip() {
         return this.IsRegionEip;
@@ -414,21 +359,17 @@ public class EdgeIpInfo extends AbstractModel {
      * Set 是否为region eip
 0 不为region eip，不能选择串行
 1 为region eip 可以选择串行
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsRegionEip 是否为region eip
 0 不为region eip，不能选择串行
 1 为region eip 可以选择串行
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsRegionEip(Long IsRegionEip) {
         this.IsRegionEip = IsRegionEip;
     }
 
     /**
-     * Get EIP 所关联的VPC
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get EIP 所关联的VPC 
      * @return VpcId EIP 所关联的VPC
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVpcId() {
         return this.VpcId;
@@ -436,9 +377,7 @@ public class EdgeIpInfo extends AbstractModel {
 
     /**
      * Set EIP 所关联的VPC
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VpcId EIP 所关联的VPC
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
@@ -447,12 +386,10 @@ public class EdgeIpInfo extends AbstractModel {
     /**
      * Get 0: 该地域暂未支持串行
 1: 该用户未在该地域配置串行带宽
-2: 该用户已在该地域配置串行带宽，可以开启串行开关
-注意：此字段可能返回 null，表示取不到有效值。 
+2: 该用户已在该地域配置串行带宽，可以开启串行开关 
      * @return IsSerialRegion 0: 该地域暂未支持串行
 1: 该用户未在该地域配置串行带宽
 2: 该用户已在该地域配置串行带宽，可以开启串行开关
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsSerialRegion() {
         return this.IsSerialRegion;
@@ -462,11 +399,9 @@ public class EdgeIpInfo extends AbstractModel {
      * Set 0: 该地域暂未支持串行
 1: 该用户未在该地域配置串行带宽
 2: 该用户已在该地域配置串行带宽，可以开启串行开关
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsSerialRegion 0: 该地域暂未支持串行
 1: 该用户未在该地域配置串行带宽
 2: 该用户已在该地域配置串行带宽，可以开启串行开关
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsSerialRegion(Long IsSerialRegion) {
         this.IsSerialRegion = IsSerialRegion;
@@ -475,12 +410,10 @@ public class EdgeIpInfo extends AbstractModel {
     /**
      * Get 0: 不是公网CLB 可以开启串行开关
 1: 是公网CLB 不可以开启串行开关
-
-注意：此字段可能返回 null，表示取不到有效值。 
+ 
      * @return IsPublicClb 0: 不是公网CLB 可以开启串行开关
 1: 是公网CLB 不可以开启串行开关
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsPublicClb() {
         return this.IsPublicClb;
@@ -490,11 +423,9 @@ public class EdgeIpInfo extends AbstractModel {
      * Set 0: 不是公网CLB 可以开启串行开关
 1: 是公网CLB 不可以开启串行开关
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsPublicClb 0: 不是公网CLB 可以开启串行开关
 1: 是公网CLB 不可以开启串行开关
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsPublicClb(Long IsPublicClb) {
         this.IsPublicClb = IsPublicClb;
@@ -503,12 +434,10 @@ public class EdgeIpInfo extends AbstractModel {
     /**
      * Get 0: 开启开关时提示要创建私有连接。
 1: 关闭该开关是提示删除私有连接。
-如果大于 1: 关闭开关 、开启开关不需提示创建删除私有连接。
-注意：此字段可能返回 null，表示取不到有效值。 
+如果大于 1: 关闭开关 、开启开关不需提示创建删除私有连接。 
      * @return EndpointBindEipNum 0: 开启开关时提示要创建私有连接。
 1: 关闭该开关是提示删除私有连接。
 如果大于 1: 关闭开关 、开启开关不需提示创建删除私有连接。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getEndpointBindEipNum() {
         return this.EndpointBindEipNum;
@@ -518,21 +447,17 @@ public class EdgeIpInfo extends AbstractModel {
      * Set 0: 开启开关时提示要创建私有连接。
 1: 关闭该开关是提示删除私有连接。
 如果大于 1: 关闭开关 、开启开关不需提示创建删除私有连接。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EndpointBindEipNum 0: 开启开关时提示要创建私有连接。
 1: 关闭该开关是提示删除私有连接。
 如果大于 1: 关闭开关 、开启开关不需提示创建删除私有连接。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndpointBindEipNum(Long EndpointBindEipNum) {
         this.EndpointBindEipNum = EndpointBindEipNum;
     }
 
     /**
-     * Get 扫描深度
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 扫描深度 
      * @return ScanMode 扫描深度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getScanMode() {
         return this.ScanMode;
@@ -540,19 +465,15 @@ public class EdgeIpInfo extends AbstractModel {
 
     /**
      * Set 扫描深度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ScanMode 扫描深度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScanMode(String ScanMode) {
         this.ScanMode = ScanMode;
     }
 
     /**
-     * Get 扫描状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 扫描状态 
      * @return ScanStatus 扫描状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getScanStatus() {
         return this.ScanStatus;
@@ -560,9 +481,7 @@ public class EdgeIpInfo extends AbstractModel {
 
     /**
      * Set 扫描状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ScanStatus 扫描状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScanStatus(Long ScanStatus) {
         this.ScanStatus = ScanStatus;
@@ -574,15 +493,13 @@ public class EdgeIpInfo extends AbstractModel {
 1 : 开启
 2 : 开启中
 3 : 关闭中
-4 : 异常
-注意：此字段可能返回 null，表示取不到有效值。 
+4 : 异常 
      * @return Status 开关状态
 0 : 关闭
 1 : 开启
 2 : 开启中
 3 : 关闭中
 4 : 异常
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
         return this.Status;
@@ -595,24 +512,20 @@ public class EdgeIpInfo extends AbstractModel {
 2 : 开启中
 3 : 关闭中
 4 : 异常
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 开关状态
 0 : 关闭
 1 : 开启
 2 : 开启中
 3 : 关闭中
 4 : 异常
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 私有连接ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 私有连接ID 
      * @return EndpointId 私有连接ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEndpointId() {
         return this.EndpointId;
@@ -620,19 +533,15 @@ public class EdgeIpInfo extends AbstractModel {
 
     /**
      * Set 私有连接ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EndpointId 私有连接ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndpointId(String EndpointId) {
         this.EndpointId = EndpointId;
     }
 
     /**
-     * Get 私有连接IP
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 私有连接IP 
      * @return EndpointIp 私有连接IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEndpointIp() {
         return this.EndpointIp;
@@ -640,9 +549,7 @@ public class EdgeIpInfo extends AbstractModel {
 
     /**
      * Set 私有连接IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EndpointIp 私有连接IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndpointIp(String EndpointIp) {
         this.EndpointIp = EndpointIp;
@@ -673,10 +580,8 @@ public class EdgeIpInfo extends AbstractModel {
     }
 
     /**
-     * Get 开关权重
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 开关权重 
      * @return SwitchWeight 开关权重
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSwitchWeight() {
         return this.SwitchWeight;
@@ -684,19 +589,15 @@ public class EdgeIpInfo extends AbstractModel {
 
     /**
      * Set 开关权重
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SwitchWeight 开关权重
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSwitchWeight(Long SwitchWeight) {
         this.SwitchWeight = SwitchWeight;
     }
 
     /**
-     * Get 域名化CLB的域名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 域名化CLB的域名 
      * @return Domain 域名化CLB的域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDomain() {
         return this.Domain;
@@ -704,19 +605,15 @@ public class EdgeIpInfo extends AbstractModel {
 
     /**
      * Set 域名化CLB的域名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Domain 域名化CLB的域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get IP超量状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get IP超量状态 
      * @return OverUsedStatus IP超量状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getOverUsedStatus() {
         return this.OverUsedStatus;
@@ -724,9 +621,7 @@ public class EdgeIpInfo extends AbstractModel {
 
     /**
      * Set IP超量状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OverUsedStatus IP超量状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOverUsedStatus(Long OverUsedStatus) {
         this.OverUsedStatus = OverUsedStatus;

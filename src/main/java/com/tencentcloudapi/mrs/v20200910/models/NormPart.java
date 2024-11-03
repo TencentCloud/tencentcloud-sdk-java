@@ -72,6 +72,14 @@ public class NormPart extends AbstractModel {
     private PartDesc PartDetail;
 
     /**
+    * 部位详情
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PartDetailList")
+    @Expose
+    private PartDesc [] PartDetailList;
+
+    /**
      * Get 部位值
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Part 部位值
@@ -176,7 +184,9 @@ public class NormPart extends AbstractModel {
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return PartDetail 部位详情
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public PartDesc getPartDetail() {
         return this.PartDetail;
     }
@@ -186,9 +196,31 @@ public class NormPart extends AbstractModel {
 注意：此字段可能返回 null，表示取不到有效值。
      * @param PartDetail 部位详情
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public void setPartDetail(PartDesc PartDetail) {
         this.PartDetail = PartDetail;
+    }
+
+    /**
+     * Get 部位详情
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PartDetailList 部位详情
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public PartDesc [] getPartDetailList() {
+        return this.PartDetailList;
+    }
+
+    /**
+     * Set 部位详情
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PartDetailList 部位详情
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPartDetailList(PartDesc [] PartDetailList) {
+        this.PartDetailList = PartDetailList;
     }
 
     public NormPart() {
@@ -217,6 +249,12 @@ public class NormPart extends AbstractModel {
         if (source.PartDetail != null) {
             this.PartDetail = new PartDesc(source.PartDetail);
         }
+        if (source.PartDetailList != null) {
+            this.PartDetailList = new PartDesc[source.PartDetailList.length];
+            for (int i = 0; i < source.PartDetailList.length; i++) {
+                this.PartDetailList[i] = new PartDesc(source.PartDetailList[i]);
+            }
+        }
     }
 
 
@@ -230,6 +268,7 @@ public class NormPart extends AbstractModel {
         this.setParamSimple(map, prefix + "TissueDirection", this.TissueDirection);
         this.setParamSimple(map, prefix + "Upper", this.Upper);
         this.setParamObj(map, prefix + "PartDetail.", this.PartDetail);
+        this.setParamArrayObj(map, prefix + "PartDetailList.", this.PartDetailList);
 
     }
 }

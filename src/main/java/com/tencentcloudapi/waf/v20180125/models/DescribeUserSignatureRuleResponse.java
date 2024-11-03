@@ -32,7 +32,6 @@ public class DescribeUserSignatureRuleResponse extends AbstractModel {
 
     /**
     * 规则列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Rules")
     @Expose
@@ -62,10 +61,8 @@ public class DescribeUserSignatureRuleResponse extends AbstractModel {
     }
 
     /**
-     * Get 规则列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则列表 
      * @return Rules 规则列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public UserSignatureRule [] getRules() {
         return this.Rules;
@@ -73,9 +70,7 @@ public class DescribeUserSignatureRuleResponse extends AbstractModel {
 
     /**
      * Set 规则列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Rules 规则列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRules(UserSignatureRule [] Rules) {
         this.Rules = Rules;

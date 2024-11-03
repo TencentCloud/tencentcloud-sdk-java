@@ -102,7 +102,6 @@ public class UserSignatureRule extends AbstractModel {
 
     /**
     * 1: 高危 2:中危 3:低危
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RiskLevel")
     @Expose
@@ -285,10 +284,8 @@ public class UserSignatureRule extends AbstractModel {
     }
 
     /**
-     * Get 1: 高危 2:中危 3:低危
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 1: 高危 2:中危 3:低危 
      * @return RiskLevel 1: 高危 2:中危 3:低危
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRiskLevel() {
         return this.RiskLevel;
@@ -296,9 +293,7 @@ public class UserSignatureRule extends AbstractModel {
 
     /**
      * Set 1: 高危 2:中危 3:低危
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RiskLevel 1: 高危 2:中危 3:低危
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRiskLevel(Long RiskLevel) {
         this.RiskLevel = RiskLevel;

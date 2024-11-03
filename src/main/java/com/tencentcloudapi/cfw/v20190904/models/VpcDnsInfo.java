@@ -60,7 +60,6 @@ public class VpcDnsInfo extends AbstractModel {
 
     /**
     * nat网关id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NatInsId")
     @Expose
@@ -68,7 +67,6 @@ public class VpcDnsInfo extends AbstractModel {
 
     /**
     * nat网关名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NatInsName")
     @Expose
@@ -83,7 +81,6 @@ public class VpcDnsInfo extends AbstractModel {
 
     /**
     * 0：未防护， 1: 已防护，2：忽略此字段
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProtectedStatus")
     @Expose
@@ -91,7 +88,6 @@ public class VpcDnsInfo extends AbstractModel {
 
     /**
     * 是否支持DNS FW，0-不支持、1-支持
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SupportDNSFW")
     @Expose
@@ -178,10 +174,8 @@ public class VpcDnsInfo extends AbstractModel {
     }
 
     /**
-     * Get nat网关id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get nat网关id 
      * @return NatInsId nat网关id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNatInsId() {
         return this.NatInsId;
@@ -189,19 +183,15 @@ public class VpcDnsInfo extends AbstractModel {
 
     /**
      * Set nat网关id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NatInsId nat网关id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNatInsId(String NatInsId) {
         this.NatInsId = NatInsId;
     }
 
     /**
-     * Get nat网关名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get nat网关名称 
      * @return NatInsName nat网关名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNatInsName() {
         return this.NatInsName;
@@ -209,9 +199,7 @@ public class VpcDnsInfo extends AbstractModel {
 
     /**
      * Set nat网关名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NatInsName nat网关名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNatInsName(String NatInsName) {
         this.NatInsName = NatInsName;
@@ -234,10 +222,8 @@ public class VpcDnsInfo extends AbstractModel {
     }
 
     /**
-     * Get 0：未防护， 1: 已防护，2：忽略此字段
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 0：未防护， 1: 已防护，2：忽略此字段 
      * @return ProtectedStatus 0：未防护， 1: 已防护，2：忽略此字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getProtectedStatus() {
         return this.ProtectedStatus;
@@ -245,19 +231,15 @@ public class VpcDnsInfo extends AbstractModel {
 
     /**
      * Set 0：未防护， 1: 已防护，2：忽略此字段
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProtectedStatus 0：未防护， 1: 已防护，2：忽略此字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProtectedStatus(Long ProtectedStatus) {
         this.ProtectedStatus = ProtectedStatus;
     }
 
     /**
-     * Get 是否支持DNS FW，0-不支持、1-支持
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否支持DNS FW，0-不支持、1-支持 
      * @return SupportDNSFW 是否支持DNS FW，0-不支持、1-支持
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSupportDNSFW() {
         return this.SupportDNSFW;
@@ -265,9 +247,7 @@ public class VpcDnsInfo extends AbstractModel {
 
     /**
      * Set 是否支持DNS FW，0-不支持、1-支持
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SupportDNSFW 是否支持DNS FW，0-不支持、1-支持
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSupportDNSFW(Long SupportDNSFW) {
         this.SupportDNSFW = SupportDNSFW;

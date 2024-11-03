@@ -53,7 +53,6 @@ public class UnHandleEvent extends AbstractModel {
 
     /**
     * vpc间防火墙实例数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcFwCount")
     @Expose
@@ -124,10 +123,8 @@ public class UnHandleEvent extends AbstractModel {
     }
 
     /**
-     * Get vpc间防火墙实例数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get vpc间防火墙实例数量 
      * @return VpcFwCount vpc间防火墙实例数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getVpcFwCount() {
         return this.VpcFwCount;
@@ -135,9 +132,7 @@ public class UnHandleEvent extends AbstractModel {
 
     /**
      * Set vpc间防火墙实例数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VpcFwCount vpc间防火墙实例数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcFwCount(Long VpcFwCount) {
         this.VpcFwCount = VpcFwCount;

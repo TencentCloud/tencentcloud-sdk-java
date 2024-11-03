@@ -25,7 +25,6 @@ public class EnterpriseSecurityGroupRuleRuleInfo extends AbstractModel {
 
     /**
     * 排序
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OrderIndex")
     @Expose
@@ -33,7 +32,6 @@ public class EnterpriseSecurityGroupRuleRuleInfo extends AbstractModel {
 
     /**
     * 主键id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleUuid")
     @Expose
@@ -41,7 +39,6 @@ public class EnterpriseSecurityGroupRuleRuleInfo extends AbstractModel {
 
     /**
     * 规则uuid
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Uuid")
     @Expose
@@ -49,7 +46,6 @@ public class EnterpriseSecurityGroupRuleRuleInfo extends AbstractModel {
 
     /**
     * 源规则内容
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SourceId")
     @Expose
@@ -69,7 +65,6 @@ public class EnterpriseSecurityGroupRuleRuleInfo extends AbstractModel {
 8表示标签(tag)
 9表示地域(region)
 100表示资产分组(resourcegroup)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SourceType")
     @Expose
@@ -77,7 +72,6 @@ public class EnterpriseSecurityGroupRuleRuleInfo extends AbstractModel {
 
     /**
     * 目的规则内容
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TargetId")
     @Expose
@@ -97,7 +91,6 @@ public class EnterpriseSecurityGroupRuleRuleInfo extends AbstractModel {
 8表示标签(tag)
 9表示地域(region)
 100表示资产分组(resourcegroup)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TargetType")
     @Expose
@@ -108,7 +101,6 @@ public class EnterpriseSecurityGroupRuleRuleInfo extends AbstractModel {
 取值范围:TCP/ANY/ICMP/UDP
 ANY:表示所有
 
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Protocol")
     @Expose
@@ -116,7 +108,6 @@ ANY:表示所有
 
     /**
     * 端口
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Port")
     @Expose
@@ -127,7 +118,6 @@ ANY:表示所有
 取值范围:1/2
 1:阻断
 2:放行
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Strategy")
     @Expose
@@ -138,7 +128,6 @@ ANY:表示所有
 取值范围： 0/1
 0:未开启
 1:开启
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -146,7 +135,6 @@ ANY:表示所有
 
     /**
     * 描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Detail")
     @Expose
@@ -154,7 +142,6 @@ ANY:表示所有
 
     /**
     * 标签
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AclTags")
     @Expose
@@ -165,7 +152,6 @@ ANY:表示所有
 取值范围：0/1
 0:否
 1:是
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsNew")
     @Expose
@@ -173,7 +159,6 @@ ANY:表示所有
 
     /**
     * 地域
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Region")
     @Expose
@@ -183,7 +168,6 @@ ANY:表示所有
     * 是否延迟下发规则 
 取值范围：0/1
 0:立即下发 1:延迟下发
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsDelay")
     @Expose
@@ -191,7 +175,6 @@ ANY:表示所有
 
     /**
     * 服务模板id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ServiceTemplateId")
     @Expose
@@ -199,7 +182,6 @@ ANY:表示所有
 
     /**
     * 源资产名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SouInstanceName")
     @Expose
@@ -207,7 +189,6 @@ ANY:表示所有
 
     /**
     * 源资产公网ip
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SouPublicIp")
     @Expose
@@ -215,7 +196,6 @@ ANY:表示所有
 
     /**
     * 源资产内网ip
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SouPrivateIp")
     @Expose
@@ -223,7 +203,6 @@ ANY:表示所有
 
     /**
     * 源资产网段信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SouCidr")
     @Expose
@@ -231,7 +210,6 @@ ANY:表示所有
 
     /**
     * 源模板名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SouParameterName")
     @Expose
@@ -239,7 +217,6 @@ ANY:表示所有
 
     /**
     * 目的资产名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceName")
     @Expose
@@ -247,7 +224,6 @@ ANY:表示所有
 
     /**
     * 目的资产公网ip
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PublicIp")
     @Expose
@@ -255,7 +231,6 @@ ANY:表示所有
 
     /**
     * 目的资产内网ip
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PrivateIp")
     @Expose
@@ -263,7 +238,6 @@ ANY:表示所有
 
     /**
     * 目的资产网段信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Cidr")
     @Expose
@@ -271,7 +245,6 @@ ANY:表示所有
 
     /**
     * 目的模板名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ParameterName")
     @Expose
@@ -279,7 +252,6 @@ ANY:表示所有
 
     /**
     * 端口模板名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProtocolPortName")
     @Expose
@@ -287,7 +259,6 @@ ANY:表示所有
 
     /**
     * 自动化任务信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BetaList")
     @Expose
@@ -295,17 +266,14 @@ ANY:表示所有
 
     /**
     * 规则id  等同RuleUuid
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-     * Get 排序
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 排序 
      * @return OrderIndex 排序
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getOrderIndex() {
         return this.OrderIndex;
@@ -313,19 +281,15 @@ ANY:表示所有
 
     /**
      * Set 排序
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OrderIndex 排序
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOrderIndex(Long OrderIndex) {
         this.OrderIndex = OrderIndex;
     }
 
     /**
-     * Get 主键id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主键id 
      * @return RuleUuid 主键id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRuleUuid() {
         return this.RuleUuid;
@@ -333,19 +297,15 @@ ANY:表示所有
 
     /**
      * Set 主键id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RuleUuid 主键id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleUuid(Long RuleUuid) {
         this.RuleUuid = RuleUuid;
     }
 
     /**
-     * Get 规则uuid
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则uuid 
      * @return Uuid 规则uuid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUuid() {
         return this.Uuid;
@@ -353,19 +313,15 @@ ANY:表示所有
 
     /**
      * Set 规则uuid
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Uuid 规则uuid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUuid(String Uuid) {
         this.Uuid = Uuid;
     }
 
     /**
-     * Get 源规则内容
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 源规则内容 
      * @return SourceId 源规则内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSourceId() {
         return this.SourceId;
@@ -373,9 +329,7 @@ ANY:表示所有
 
     /**
      * Set 源规则内容
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SourceId 源规则内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSourceId(String SourceId) {
         this.SourceId = SourceId;
@@ -394,8 +348,7 @@ ANY:表示所有
 7表示模版(template)
 8表示标签(tag)
 9表示地域(region)
-100表示资产分组(resourcegroup)
-注意：此字段可能返回 null，表示取不到有效值。 
+100表示资产分组(resourcegroup) 
      * @return SourceType 源规则类型 
 取值范围 0/1/2/3/4/5/6/7/8/9/100
 0表示ip(net),
@@ -409,7 +362,6 @@ ANY:表示所有
 8表示标签(tag)
 9表示地域(region)
 100表示资产分组(resourcegroup)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSourceType() {
         return this.SourceType;
@@ -429,7 +381,6 @@ ANY:表示所有
 8表示标签(tag)
 9表示地域(region)
 100表示资产分组(resourcegroup)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SourceType 源规则类型 
 取值范围 0/1/2/3/4/5/6/7/8/9/100
 0表示ip(net),
@@ -443,17 +394,14 @@ ANY:表示所有
 8表示标签(tag)
 9表示地域(region)
 100表示资产分组(resourcegroup)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSourceType(Long SourceType) {
         this.SourceType = SourceType;
     }
 
     /**
-     * Get 目的规则内容
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 目的规则内容 
      * @return TargetId 目的规则内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTargetId() {
         return this.TargetId;
@@ -461,9 +409,7 @@ ANY:表示所有
 
     /**
      * Set 目的规则内容
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TargetId 目的规则内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTargetId(String TargetId) {
         this.TargetId = TargetId;
@@ -482,8 +428,7 @@ ANY:表示所有
 7表示模版(template)
 8表示标签(tag)
 9表示地域(region)
-100表示资产分组(resourcegroup)
-注意：此字段可能返回 null，表示取不到有效值。 
+100表示资产分组(resourcegroup) 
      * @return TargetType 目的规则类型 
 取值范围 0/1/2/3/4/5/6/7/8/9/100
 0表示ip(net),
@@ -497,7 +442,6 @@ ANY:表示所有
 8表示标签(tag)
 9表示地域(region)
 100表示资产分组(resourcegroup)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTargetType() {
         return this.TargetType;
@@ -517,7 +461,6 @@ ANY:表示所有
 8表示标签(tag)
 9表示地域(region)
 100表示资产分组(resourcegroup)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TargetType 目的规则类型 
 取值范围 0/1/2/3/4/5/6/7/8/9/100
 0表示ip(net),
@@ -531,7 +474,6 @@ ANY:表示所有
 8表示标签(tag)
 9表示地域(region)
 100表示资产分组(resourcegroup)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTargetType(Long TargetType) {
         this.TargetType = TargetType;
@@ -541,13 +483,11 @@ ANY:表示所有
      * Get 协议名称
 取值范围:TCP/ANY/ICMP/UDP
 ANY:表示所有
-
-注意：此字段可能返回 null，表示取不到有效值。 
+ 
      * @return Protocol 协议名称
 取值范围:TCP/ANY/ICMP/UDP
 ANY:表示所有
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProtocol() {
         return this.Protocol;
@@ -558,22 +498,18 @@ ANY:表示所有
 取值范围:TCP/ANY/ICMP/UDP
 ANY:表示所有
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Protocol 协议名称
 取值范围:TCP/ANY/ICMP/UDP
 ANY:表示所有
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
     }
 
     /**
-     * Get 端口
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 端口 
      * @return Port 端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPort() {
         return this.Port;
@@ -581,9 +517,7 @@ ANY:表示所有
 
     /**
      * Set 端口
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Port 端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPort(String Port) {
         this.Port = Port;
@@ -593,13 +527,11 @@ ANY:表示所有
      * Get 规则策略
 取值范围:1/2
 1:阻断
-2:放行
-注意：此字段可能返回 null，表示取不到有效值。 
+2:放行 
      * @return Strategy 规则策略
 取值范围:1/2
 1:阻断
 2:放行
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStrategy() {
         return this.Strategy;
@@ -610,12 +542,10 @@ ANY:表示所有
 取值范围:1/2
 1:阻断
 2:放行
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Strategy 规则策略
 取值范围:1/2
 1:阻断
 2:放行
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStrategy(Long Strategy) {
         this.Strategy = Strategy;
@@ -625,13 +555,11 @@ ANY:表示所有
      * Get 规则启用状态 
 取值范围： 0/1
 0:未开启
-1:开启
-注意：此字段可能返回 null，表示取不到有效值。 
+1:开启 
      * @return Status 规则启用状态 
 取值范围： 0/1
 0:未开启
 1:开启
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
         return this.Status;
@@ -642,22 +570,18 @@ ANY:表示所有
 取值范围： 0/1
 0:未开启
 1:开启
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 规则启用状态 
 取值范围： 0/1
 0:未开启
 1:开启
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 描述 
      * @return Detail 描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDetail() {
         return this.Detail;
@@ -665,19 +589,15 @@ ANY:表示所有
 
     /**
      * Set 描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Detail 描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDetail(String Detail) {
         this.Detail = Detail;
     }
 
     /**
-     * Get 标签
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标签 
      * @return AclTags 标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAclTags() {
         return this.AclTags;
@@ -685,9 +605,7 @@ ANY:表示所有
 
     /**
      * Set 标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AclTags 标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAclTags(String AclTags) {
         this.AclTags = AclTags;
@@ -697,13 +615,11 @@ ANY:表示所有
      * Get 规则最新一次是否有改动
 取值范围：0/1
 0:否
-1:是
-注意：此字段可能返回 null，表示取不到有效值。 
+1:是 
      * @return IsNew 规则最新一次是否有改动
 取值范围：0/1
 0:否
 1:是
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsNew() {
         return this.IsNew;
@@ -714,22 +630,18 @@ ANY:表示所有
 取值范围：0/1
 0:否
 1:是
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsNew 规则最新一次是否有改动
 取值范围：0/1
 0:否
 1:是
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsNew(Long IsNew) {
         this.IsNew = IsNew;
     }
 
     /**
-     * Get 地域
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地域 
      * @return Region 地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegion() {
         return this.Region;
@@ -737,9 +649,7 @@ ANY:表示所有
 
     /**
      * Set 地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Region 地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegion(String Region) {
         this.Region = Region;
@@ -748,12 +658,10 @@ ANY:表示所有
     /**
      * Get 是否延迟下发规则 
 取值范围：0/1
-0:立即下发 1:延迟下发
-注意：此字段可能返回 null，表示取不到有效值。 
+0:立即下发 1:延迟下发 
      * @return IsDelay 是否延迟下发规则 
 取值范围：0/1
 0:立即下发 1:延迟下发
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsDelay() {
         return this.IsDelay;
@@ -763,21 +671,17 @@ ANY:表示所有
      * Set 是否延迟下发规则 
 取值范围：0/1
 0:立即下发 1:延迟下发
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsDelay 是否延迟下发规则 
 取值范围：0/1
 0:立即下发 1:延迟下发
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsDelay(Long IsDelay) {
         this.IsDelay = IsDelay;
     }
 
     /**
-     * Get 服务模板id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 服务模板id 
      * @return ServiceTemplateId 服务模板id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getServiceTemplateId() {
         return this.ServiceTemplateId;
@@ -785,19 +689,15 @@ ANY:表示所有
 
     /**
      * Set 服务模板id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ServiceTemplateId 服务模板id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setServiceTemplateId(String ServiceTemplateId) {
         this.ServiceTemplateId = ServiceTemplateId;
     }
 
     /**
-     * Get 源资产名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 源资产名称 
      * @return SouInstanceName 源资产名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSouInstanceName() {
         return this.SouInstanceName;
@@ -805,19 +705,15 @@ ANY:表示所有
 
     /**
      * Set 源资产名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SouInstanceName 源资产名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSouInstanceName(String SouInstanceName) {
         this.SouInstanceName = SouInstanceName;
     }
 
     /**
-     * Get 源资产公网ip
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 源资产公网ip 
      * @return SouPublicIp 源资产公网ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSouPublicIp() {
         return this.SouPublicIp;
@@ -825,19 +721,15 @@ ANY:表示所有
 
     /**
      * Set 源资产公网ip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SouPublicIp 源资产公网ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSouPublicIp(String SouPublicIp) {
         this.SouPublicIp = SouPublicIp;
     }
 
     /**
-     * Get 源资产内网ip
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 源资产内网ip 
      * @return SouPrivateIp 源资产内网ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSouPrivateIp() {
         return this.SouPrivateIp;
@@ -845,19 +737,15 @@ ANY:表示所有
 
     /**
      * Set 源资产内网ip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SouPrivateIp 源资产内网ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSouPrivateIp(String SouPrivateIp) {
         this.SouPrivateIp = SouPrivateIp;
     }
 
     /**
-     * Get 源资产网段信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 源资产网段信息 
      * @return SouCidr 源资产网段信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSouCidr() {
         return this.SouCidr;
@@ -865,19 +753,15 @@ ANY:表示所有
 
     /**
      * Set 源资产网段信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SouCidr 源资产网段信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSouCidr(String SouCidr) {
         this.SouCidr = SouCidr;
     }
 
     /**
-     * Get 源模板名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 源模板名称 
      * @return SouParameterName 源模板名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSouParameterName() {
         return this.SouParameterName;
@@ -885,19 +769,15 @@ ANY:表示所有
 
     /**
      * Set 源模板名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SouParameterName 源模板名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSouParameterName(String SouParameterName) {
         this.SouParameterName = SouParameterName;
     }
 
     /**
-     * Get 目的资产名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 目的资产名称 
      * @return InstanceName 目的资产名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceName() {
         return this.InstanceName;
@@ -905,19 +785,15 @@ ANY:表示所有
 
     /**
      * Set 目的资产名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceName 目的资产名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get 目的资产公网ip
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 目的资产公网ip 
      * @return PublicIp 目的资产公网ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPublicIp() {
         return this.PublicIp;
@@ -925,19 +801,15 @@ ANY:表示所有
 
     /**
      * Set 目的资产公网ip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PublicIp 目的资产公网ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPublicIp(String PublicIp) {
         this.PublicIp = PublicIp;
     }
 
     /**
-     * Get 目的资产内网ip
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 目的资产内网ip 
      * @return PrivateIp 目的资产内网ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPrivateIp() {
         return this.PrivateIp;
@@ -945,19 +817,15 @@ ANY:表示所有
 
     /**
      * Set 目的资产内网ip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PrivateIp 目的资产内网ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPrivateIp(String PrivateIp) {
         this.PrivateIp = PrivateIp;
     }
 
     /**
-     * Get 目的资产网段信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 目的资产网段信息 
      * @return Cidr 目的资产网段信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCidr() {
         return this.Cidr;
@@ -965,19 +833,15 @@ ANY:表示所有
 
     /**
      * Set 目的资产网段信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Cidr 目的资产网段信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCidr(String Cidr) {
         this.Cidr = Cidr;
     }
 
     /**
-     * Get 目的模板名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 目的模板名称 
      * @return ParameterName 目的模板名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getParameterName() {
         return this.ParameterName;
@@ -985,19 +849,15 @@ ANY:表示所有
 
     /**
      * Set 目的模板名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ParameterName 目的模板名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setParameterName(String ParameterName) {
         this.ParameterName = ParameterName;
     }
 
     /**
-     * Get 端口模板名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 端口模板名称 
      * @return ProtocolPortName 端口模板名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProtocolPortName() {
         return this.ProtocolPortName;
@@ -1005,19 +865,15 @@ ANY:表示所有
 
     /**
      * Set 端口模板名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProtocolPortName 端口模板名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProtocolPortName(String ProtocolPortName) {
         this.ProtocolPortName = ProtocolPortName;
     }
 
     /**
-     * Get 自动化任务信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 自动化任务信息 
      * @return BetaList 自动化任务信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public EnterpriseSecurityGroupRuleBetaInfo [] getBetaList() {
         return this.BetaList;
@@ -1025,19 +881,15 @@ ANY:表示所有
 
     /**
      * Set 自动化任务信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BetaList 自动化任务信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBetaList(EnterpriseSecurityGroupRuleBetaInfo [] BetaList) {
         this.BetaList = BetaList;
     }
 
     /**
-     * Get 规则id  等同RuleUuid
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则id  等同RuleUuid 
      * @return Id 规则id  等同RuleUuid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getId() {
         return this.Id;
@@ -1045,9 +897,7 @@ ANY:表示所有
 
     /**
      * Set 规则id  等同RuleUuid
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Id 规则id  等同RuleUuid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(Long Id) {
         this.Id = Id;

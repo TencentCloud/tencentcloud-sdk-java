@@ -24,27 +24,6 @@ import java.util.HashMap;
 public class StaticInfo extends AbstractModel {
 
     /**
-    * 数
-    */
-    @SerializedName("Num")
-    @Expose
-    private Long Num;
-
-    /**
-    * 端口
-    */
-    @SerializedName("Port")
-    @Expose
-    private String Port;
-
-    /**
-    * ip信息
-    */
-    @SerializedName("Ip")
-    @Expose
-    private String Ip;
-
-    /**
     * 地址
     */
     @SerializedName("Address")
@@ -66,52 +45,25 @@ public class StaticInfo extends AbstractModel {
     private String InsName;
 
     /**
-     * Get 数 
-     * @return Num 数
-     */
-    public Long getNum() {
-        return this.Num;
-    }
+    * ip信息
+    */
+    @SerializedName("Ip")
+    @Expose
+    private String Ip;
 
     /**
-     * Set 数
-     * @param Num 数
-     */
-    public void setNum(Long Num) {
-        this.Num = Num;
-    }
+    * 数
+    */
+    @SerializedName("Num")
+    @Expose
+    private Long Num;
 
     /**
-     * Get 端口 
-     * @return Port 端口
-     */
-    public String getPort() {
-        return this.Port;
-    }
-
-    /**
-     * Set 端口
-     * @param Port 端口
-     */
-    public void setPort(String Port) {
-        this.Port = Port;
-    }
-
-    /**
-     * Get ip信息 
-     * @return Ip ip信息
-     */
-    public String getIp() {
-        return this.Ip;
-    }
-
-    /**
-     * Set ip信息
-     * @param Ip ip信息
-     */
-    public void setIp(String Ip) {
-        this.Ip = Ip;
-    }
+    * 端口
+    */
+    @SerializedName("Port")
+    @Expose
+    private String Port;
 
     /**
      * Get 地址 
@@ -161,6 +113,54 @@ public class StaticInfo extends AbstractModel {
         this.InsName = InsName;
     }
 
+    /**
+     * Get ip信息 
+     * @return Ip ip信息
+     */
+    public String getIp() {
+        return this.Ip;
+    }
+
+    /**
+     * Set ip信息
+     * @param Ip ip信息
+     */
+    public void setIp(String Ip) {
+        this.Ip = Ip;
+    }
+
+    /**
+     * Get 数 
+     * @return Num 数
+     */
+    public Long getNum() {
+        return this.Num;
+    }
+
+    /**
+     * Set 数
+     * @param Num 数
+     */
+    public void setNum(Long Num) {
+        this.Num = Num;
+    }
+
+    /**
+     * Get 端口 
+     * @return Port 端口
+     */
+    public String getPort() {
+        return this.Port;
+    }
+
+    /**
+     * Set 端口
+     * @param Port 端口
+     */
+    public void setPort(String Port) {
+        this.Port = Port;
+    }
+
     public StaticInfo() {
     }
 
@@ -169,15 +169,6 @@ public class StaticInfo extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public StaticInfo(StaticInfo source) {
-        if (source.Num != null) {
-            this.Num = new Long(source.Num);
-        }
-        if (source.Port != null) {
-            this.Port = new String(source.Port);
-        }
-        if (source.Ip != null) {
-            this.Ip = new String(source.Ip);
-        }
         if (source.Address != null) {
             this.Address = new String(source.Address);
         }
@@ -187,6 +178,15 @@ public class StaticInfo extends AbstractModel {
         if (source.InsName != null) {
             this.InsName = new String(source.InsName);
         }
+        if (source.Ip != null) {
+            this.Ip = new String(source.Ip);
+        }
+        if (source.Num != null) {
+            this.Num = new Long(source.Num);
+        }
+        if (source.Port != null) {
+            this.Port = new String(source.Port);
+        }
     }
 
 
@@ -194,12 +194,12 @@ public class StaticInfo extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Num", this.Num);
-        this.setParamSimple(map, prefix + "Port", this.Port);
-        this.setParamSimple(map, prefix + "Ip", this.Ip);
         this.setParamSimple(map, prefix + "Address", this.Address);
         this.setParamSimple(map, prefix + "InsID", this.InsID);
         this.setParamSimple(map, prefix + "InsName", this.InsName);
+        this.setParamSimple(map, prefix + "Ip", this.Ip);
+        this.setParamSimple(map, prefix + "Num", this.Num);
+        this.setParamSimple(map, prefix + "Port", this.Port);
 
     }
 }

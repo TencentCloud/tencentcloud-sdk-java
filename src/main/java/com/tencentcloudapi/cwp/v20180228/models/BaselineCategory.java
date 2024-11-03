@@ -46,7 +46,6 @@ public class BaselineCategory extends AbstractModel {
 
     /**
     * 子分类下检测项总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ItemCount")
     @Expose
@@ -101,10 +100,8 @@ public class BaselineCategory extends AbstractModel {
     }
 
     /**
-     * Get 子分类下检测项总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子分类下检测项总数 
      * @return ItemCount 子分类下检测项总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getItemCount() {
         return this.ItemCount;
@@ -112,9 +109,7 @@ public class BaselineCategory extends AbstractModel {
 
     /**
      * Set 子分类下检测项总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ItemCount 子分类下检测项总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setItemCount(Long ItemCount) {
         this.ItemCount = ItemCount;

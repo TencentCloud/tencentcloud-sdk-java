@@ -24,13 +24,6 @@ import java.util.HashMap;
 public class ModifyBlockTopRequest extends AbstractModel {
 
     /**
-    * 记录id
-    */
-    @SerializedName("UniqueId")
-    @Expose
-    private String UniqueId;
-
-    /**
     * 操作类型 1 置顶 0取消
     */
     @SerializedName("OpeType")
@@ -38,20 +31,11 @@ public class ModifyBlockTopRequest extends AbstractModel {
     private String OpeType;
 
     /**
-     * Get 记录id 
-     * @return UniqueId 记录id
-     */
-    public String getUniqueId() {
-        return this.UniqueId;
-    }
-
-    /**
-     * Set 记录id
-     * @param UniqueId 记录id
-     */
-    public void setUniqueId(String UniqueId) {
-        this.UniqueId = UniqueId;
-    }
+    * 记录id
+    */
+    @SerializedName("UniqueId")
+    @Expose
+    private String UniqueId;
 
     /**
      * Get 操作类型 1 置顶 0取消 
@@ -69,6 +53,22 @@ public class ModifyBlockTopRequest extends AbstractModel {
         this.OpeType = OpeType;
     }
 
+    /**
+     * Get 记录id 
+     * @return UniqueId 记录id
+     */
+    public String getUniqueId() {
+        return this.UniqueId;
+    }
+
+    /**
+     * Set 记录id
+     * @param UniqueId 记录id
+     */
+    public void setUniqueId(String UniqueId) {
+        this.UniqueId = UniqueId;
+    }
+
     public ModifyBlockTopRequest() {
     }
 
@@ -77,11 +77,11 @@ public class ModifyBlockTopRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ModifyBlockTopRequest(ModifyBlockTopRequest source) {
-        if (source.UniqueId != null) {
-            this.UniqueId = new String(source.UniqueId);
-        }
         if (source.OpeType != null) {
             this.OpeType = new String(source.OpeType);
+        }
+        if (source.UniqueId != null) {
+            this.UniqueId = new String(source.UniqueId);
         }
     }
 
@@ -90,8 +90,8 @@ public class ModifyBlockTopRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "UniqueId", this.UniqueId);
         this.setParamSimple(map, prefix + "OpeType", this.OpeType);
+        this.setParamSimple(map, prefix + "UniqueId", this.UniqueId);
 
     }
 }

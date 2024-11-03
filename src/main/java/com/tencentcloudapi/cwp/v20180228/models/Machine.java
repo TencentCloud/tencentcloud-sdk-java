@@ -204,7 +204,6 @@ public class Machine extends AbstractModel {
 
     /**
     * 云标签信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CloudTags")
     @Expose
@@ -212,7 +211,6 @@ public class Machine extends AbstractModel {
 
     /**
     * 是否15天内新增的主机 0：非15天内新增的主机，1：15天内增加的主机
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsAddedOnTheFifteen")
     @Expose
@@ -220,7 +218,6 @@ public class Machine extends AbstractModel {
 
     /**
     * 主机ip列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IpList")
     @Expose
@@ -228,7 +225,6 @@ public class Machine extends AbstractModel {
 
     /**
     * 所属网络
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcId")
     @Expose
@@ -236,7 +232,6 @@ public class Machine extends AbstractModel {
 
     /**
     * 附加信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MachineExtraInfo")
     @Expose
@@ -251,7 +246,6 @@ public class Machine extends AbstractModel {
 
     /**
     * 备注信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Remark")
     @Expose
@@ -686,10 +680,8 @@ public class Machine extends AbstractModel {
     }
 
     /**
-     * Get 云标签信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 云标签信息 
      * @return CloudTags 云标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Tags [] getCloudTags() {
         return this.CloudTags;
@@ -697,19 +689,15 @@ public class Machine extends AbstractModel {
 
     /**
      * Set 云标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CloudTags 云标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCloudTags(Tags [] CloudTags) {
         this.CloudTags = CloudTags;
     }
 
     /**
-     * Get 是否15天内新增的主机 0：非15天内新增的主机，1：15天内增加的主机
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否15天内新增的主机 0：非15天内新增的主机，1：15天内增加的主机 
      * @return IsAddedOnTheFifteen 是否15天内新增的主机 0：非15天内新增的主机，1：15天内增加的主机
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsAddedOnTheFifteen() {
         return this.IsAddedOnTheFifteen;
@@ -717,19 +705,15 @@ public class Machine extends AbstractModel {
 
     /**
      * Set 是否15天内新增的主机 0：非15天内新增的主机，1：15天内增加的主机
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsAddedOnTheFifteen 是否15天内新增的主机 0：非15天内新增的主机，1：15天内增加的主机
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsAddedOnTheFifteen(Long IsAddedOnTheFifteen) {
         this.IsAddedOnTheFifteen = IsAddedOnTheFifteen;
     }
 
     /**
-     * Get 主机ip列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主机ip列表 
      * @return IpList 主机ip列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIpList() {
         return this.IpList;
@@ -737,19 +721,15 @@ public class Machine extends AbstractModel {
 
     /**
      * Set 主机ip列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IpList 主机ip列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIpList(String IpList) {
         this.IpList = IpList;
     }
 
     /**
-     * Get 所属网络
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 所属网络 
      * @return VpcId 所属网络
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVpcId() {
         return this.VpcId;
@@ -757,19 +737,15 @@ public class Machine extends AbstractModel {
 
     /**
      * Set 所属网络
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VpcId 所属网络
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 附加信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 附加信息 
      * @return MachineExtraInfo 附加信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public MachineExtraInfo getMachineExtraInfo() {
         return this.MachineExtraInfo;
@@ -777,9 +753,7 @@ public class Machine extends AbstractModel {
 
     /**
      * Set 附加信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MachineExtraInfo 附加信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMachineExtraInfo(MachineExtraInfo MachineExtraInfo) {
         this.MachineExtraInfo = MachineExtraInfo;
@@ -802,10 +776,8 @@ public class Machine extends AbstractModel {
     }
 
     /**
-     * Get 备注信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 备注信息 
      * @return Remark 备注信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRemark() {
         return this.Remark;
@@ -813,9 +785,7 @@ public class Machine extends AbstractModel {
 
     /**
      * Set 备注信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Remark 备注信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;

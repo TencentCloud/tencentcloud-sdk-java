@@ -25,7 +25,6 @@ public class AccessRuleTagInfo extends AbstractModel {
 
     /**
     * 是否大小写敏感
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CaseSensitive")
     @Expose
@@ -33,17 +32,14 @@ public class AccessRuleTagInfo extends AbstractModel {
 
     /**
     * 标签索引配置中的字段信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KeyValues")
     @Expose
     private AccessKeyValueInfo [] KeyValues;
 
     /**
-     * Get 是否大小写敏感
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否大小写敏感 
      * @return CaseSensitive 是否大小写敏感
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getCaseSensitive() {
         return this.CaseSensitive;
@@ -51,19 +47,15 @@ public class AccessRuleTagInfo extends AbstractModel {
 
     /**
      * Set 是否大小写敏感
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CaseSensitive 是否大小写敏感
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCaseSensitive(Boolean CaseSensitive) {
         this.CaseSensitive = CaseSensitive;
     }
 
     /**
-     * Get 标签索引配置中的字段信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标签索引配置中的字段信息 
      * @return KeyValues 标签索引配置中的字段信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AccessKeyValueInfo [] getKeyValues() {
         return this.KeyValues;
@@ -71,9 +63,7 @@ public class AccessRuleTagInfo extends AbstractModel {
 
     /**
      * Set 标签索引配置中的字段信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param KeyValues 标签索引配置中的字段信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKeyValues(AccessKeyValueInfo [] KeyValues) {
         this.KeyValues = KeyValues;

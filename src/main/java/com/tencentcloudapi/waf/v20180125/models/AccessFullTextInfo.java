@@ -25,7 +25,6 @@ public class AccessFullTextInfo extends AbstractModel {
 
     /**
     * 是否大小写敏感
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CaseSensitive")
     @Expose
@@ -33,7 +32,6 @@ public class AccessFullTextInfo extends AbstractModel {
 
     /**
     * 全文索引的分词符，字符串中每个字符代表一个分词符
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tokenizer")
     @Expose
@@ -42,17 +40,14 @@ public class AccessFullTextInfo extends AbstractModel {
     /**
     * 是否包含中文
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ContainZH")
     @Expose
     private Boolean ContainZH;
 
     /**
-     * Get 是否大小写敏感
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否大小写敏感 
      * @return CaseSensitive 是否大小写敏感
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getCaseSensitive() {
         return this.CaseSensitive;
@@ -60,19 +55,15 @@ public class AccessFullTextInfo extends AbstractModel {
 
     /**
      * Set 是否大小写敏感
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CaseSensitive 是否大小写敏感
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCaseSensitive(Boolean CaseSensitive) {
         this.CaseSensitive = CaseSensitive;
     }
 
     /**
-     * Get 全文索引的分词符，字符串中每个字符代表一个分词符
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 全文索引的分词符，字符串中每个字符代表一个分词符 
      * @return Tokenizer 全文索引的分词符，字符串中每个字符代表一个分词符
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTokenizer() {
         return this.Tokenizer;
@@ -80,9 +71,7 @@ public class AccessFullTextInfo extends AbstractModel {
 
     /**
      * Set 全文索引的分词符，字符串中每个字符代表一个分词符
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tokenizer 全文索引的分词符，字符串中每个字符代表一个分词符
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTokenizer(String Tokenizer) {
         this.Tokenizer = Tokenizer;
@@ -90,10 +79,8 @@ public class AccessFullTextInfo extends AbstractModel {
 
     /**
      * Get 是否包含中文
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ContainZH 是否包含中文
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getContainZH() {
@@ -103,9 +90,7 @@ public class AccessFullTextInfo extends AbstractModel {
     /**
      * Set 是否包含中文
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ContainZH 是否包含中文
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContainZH(Boolean ContainZH) {

@@ -32,7 +32,6 @@ public class DescribeHostsResponse extends AbstractModel {
 
     /**
     * 防护域名的列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HostList")
     @Expose
@@ -62,10 +61,8 @@ public class DescribeHostsResponse extends AbstractModel {
     }
 
     /**
-     * Get 防护域名的列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 防护域名的列表 
      * @return HostList 防护域名的列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public HostRecord [] getHostList() {
         return this.HostList;
@@ -73,9 +70,7 @@ public class DescribeHostsResponse extends AbstractModel {
 
     /**
      * Set 防护域名的列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HostList 防护域名的列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHostList(HostRecord [] HostList) {
         this.HostList = HostList;

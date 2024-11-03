@@ -53,7 +53,6 @@ public class VertexInfo extends AbstractModel {
 
     /**
     * 进程名，当Type=1时使用
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProcNamePrefix")
     @Expose
@@ -61,7 +60,6 @@ public class VertexInfo extends AbstractModel {
 
     /**
     * 进程名md5，当Type=1时使用
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProcNameMd5")
     @Expose
@@ -69,7 +67,6 @@ public class VertexInfo extends AbstractModel {
 
     /**
     * 命令行，当Type=1时使用
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CmdLinePrefix")
     @Expose
@@ -77,7 +74,6 @@ public class VertexInfo extends AbstractModel {
 
     /**
     * 命令行md5，当Type=1时使用
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CmdLineMd5")
     @Expose
@@ -85,7 +81,6 @@ public class VertexInfo extends AbstractModel {
 
     /**
     * 文件路径，当Type=3时使用
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FilePathPrefix")
     @Expose
@@ -93,7 +88,6 @@ public class VertexInfo extends AbstractModel {
 
     /**
     * 请求目的地址，当Type=2时使用
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AddressPrefix")
     @Expose
@@ -115,7 +109,6 @@ public class VertexInfo extends AbstractModel {
 
     /**
     * 文件路径md5，当Type=3时使用
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FilePathMd5")
     @Expose
@@ -123,7 +116,6 @@ public class VertexInfo extends AbstractModel {
 
     /**
     * 请求目的地址md5，当Type=2时使用
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AddressMd5")
     @Expose
@@ -194,10 +186,8 @@ public class VertexInfo extends AbstractModel {
     }
 
     /**
-     * Get 进程名，当Type=1时使用
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 进程名，当Type=1时使用 
      * @return ProcNamePrefix 进程名，当Type=1时使用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProcNamePrefix() {
         return this.ProcNamePrefix;
@@ -205,19 +195,15 @@ public class VertexInfo extends AbstractModel {
 
     /**
      * Set 进程名，当Type=1时使用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProcNamePrefix 进程名，当Type=1时使用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProcNamePrefix(String ProcNamePrefix) {
         this.ProcNamePrefix = ProcNamePrefix;
     }
 
     /**
-     * Get 进程名md5，当Type=1时使用
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 进程名md5，当Type=1时使用 
      * @return ProcNameMd5 进程名md5，当Type=1时使用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProcNameMd5() {
         return this.ProcNameMd5;
@@ -225,19 +211,15 @@ public class VertexInfo extends AbstractModel {
 
     /**
      * Set 进程名md5，当Type=1时使用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProcNameMd5 进程名md5，当Type=1时使用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProcNameMd5(String ProcNameMd5) {
         this.ProcNameMd5 = ProcNameMd5;
     }
 
     /**
-     * Get 命令行，当Type=1时使用
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 命令行，当Type=1时使用 
      * @return CmdLinePrefix 命令行，当Type=1时使用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCmdLinePrefix() {
         return this.CmdLinePrefix;
@@ -245,19 +227,15 @@ public class VertexInfo extends AbstractModel {
 
     /**
      * Set 命令行，当Type=1时使用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CmdLinePrefix 命令行，当Type=1时使用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCmdLinePrefix(String CmdLinePrefix) {
         this.CmdLinePrefix = CmdLinePrefix;
     }
 
     /**
-     * Get 命令行md5，当Type=1时使用
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 命令行md5，当Type=1时使用 
      * @return CmdLineMd5 命令行md5，当Type=1时使用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCmdLineMd5() {
         return this.CmdLineMd5;
@@ -265,19 +243,15 @@ public class VertexInfo extends AbstractModel {
 
     /**
      * Set 命令行md5，当Type=1时使用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CmdLineMd5 命令行md5，当Type=1时使用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCmdLineMd5(String CmdLineMd5) {
         this.CmdLineMd5 = CmdLineMd5;
     }
 
     /**
-     * Get 文件路径，当Type=3时使用
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文件路径，当Type=3时使用 
      * @return FilePathPrefix 文件路径，当Type=3时使用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFilePathPrefix() {
         return this.FilePathPrefix;
@@ -285,19 +259,15 @@ public class VertexInfo extends AbstractModel {
 
     /**
      * Set 文件路径，当Type=3时使用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FilePathPrefix 文件路径，当Type=3时使用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFilePathPrefix(String FilePathPrefix) {
         this.FilePathPrefix = FilePathPrefix;
     }
 
     /**
-     * Get 请求目的地址，当Type=2时使用
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 请求目的地址，当Type=2时使用 
      * @return AddressPrefix 请求目的地址，当Type=2时使用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAddressPrefix() {
         return this.AddressPrefix;
@@ -305,9 +275,7 @@ public class VertexInfo extends AbstractModel {
 
     /**
      * Set 请求目的地址，当Type=2时使用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AddressPrefix 请求目的地址，当Type=2时使用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAddressPrefix(String AddressPrefix) {
         this.AddressPrefix = AddressPrefix;
@@ -346,10 +314,8 @@ public class VertexInfo extends AbstractModel {
     }
 
     /**
-     * Get 文件路径md5，当Type=3时使用
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文件路径md5，当Type=3时使用 
      * @return FilePathMd5 文件路径md5，当Type=3时使用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFilePathMd5() {
         return this.FilePathMd5;
@@ -357,19 +323,15 @@ public class VertexInfo extends AbstractModel {
 
     /**
      * Set 文件路径md5，当Type=3时使用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FilePathMd5 文件路径md5，当Type=3时使用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFilePathMd5(String FilePathMd5) {
         this.FilePathMd5 = FilePathMd5;
     }
 
     /**
-     * Get 请求目的地址md5，当Type=2时使用
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 请求目的地址md5，当Type=2时使用 
      * @return AddressMd5 请求目的地址md5，当Type=2时使用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAddressMd5() {
         return this.AddressMd5;
@@ -377,9 +339,7 @@ public class VertexInfo extends AbstractModel {
 
     /**
      * Set 请求目的地址md5，当Type=2时使用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AddressMd5 请求目的地址md5，当Type=2时使用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAddressMd5(String AddressMd5) {
         this.AddressMd5 = AddressMd5;

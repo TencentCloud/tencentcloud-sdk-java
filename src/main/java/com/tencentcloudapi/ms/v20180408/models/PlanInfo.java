@@ -24,6 +24,14 @@ import java.util.HashMap;
 public class PlanInfo extends AbstractModel {
 
     /**
+    * Dex分离，0关闭，1开启
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SetFile")
+    @Expose
+    private String SetFile;
+
+    /**
     * apk大小优化，0关闭，1开启
     */
     @SerializedName("ApkSizeOpt")
@@ -59,25 +67,11 @@ public class PlanInfo extends AbstractModel {
     private Long AntiRepack;
 
     /**
-    * Dex分离，0关闭，1开启
-    */
-    @SerializedName("SeperateDex")
-    @Expose
-    private Long SeperateDex;
-
-    /**
     * 内存保护，0关闭，1开启
     */
     @SerializedName("Db")
     @Expose
     private Long Db;
-
-    /**
-    * Dex签名校验，0关闭，1开启
-    */
-    @SerializedName("DexSig")
-    @Expose
-    private Long DexSig;
 
     /**
     * So文件信息
@@ -108,13 +102,6 @@ public class PlanInfo extends AbstractModel {
     private Long AntiLogLeak;
 
     /**
-    * root检测，0关闭，1开启
-    */
-    @SerializedName("AntiQemuRoot")
-    @Expose
-    private Long AntiQemuRoot;
-
-    /**
     * 资源防篡改，0关闭，1开启
     */
     @SerializedName("AntiAssets")
@@ -136,14 +123,6 @@ public class PlanInfo extends AbstractModel {
     private Long AntiSSL;
 
     /**
-    * Dex分离，0关闭，1开启
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("SetFile")
-    @Expose
-    private String SetFile;
-
-    /**
     * Dex签名校验，0关闭，1开启
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -158,6 +137,47 @@ public class PlanInfo extends AbstractModel {
     @SerializedName("AntiRoot")
     @Expose
     private String AntiRoot;
+
+    /**
+    * Dex分离，0关闭，1开启
+    */
+    @SerializedName("SeperateDex")
+    @Expose
+    private Long SeperateDex;
+
+    /**
+    * Dex签名校验，0关闭，1开启
+    */
+    @SerializedName("DexSig")
+    @Expose
+    private Long DexSig;
+
+    /**
+    * root检测，0关闭，1开启
+    */
+    @SerializedName("AntiQemuRoot")
+    @Expose
+    private Long AntiQemuRoot;
+
+    /**
+     * Get Dex分离，0关闭，1开启
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SetFile Dex分离，0关闭，1开启
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSetFile() {
+        return this.SetFile;
+    }
+
+    /**
+     * Set Dex分离，0关闭，1开启
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SetFile Dex分离，0关闭，1开启
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSetFile(String SetFile) {
+        this.SetFile = SetFile;
+    }
 
     /**
      * Get apk大小优化，0关闭，1开启 
@@ -240,26 +260,6 @@ public class PlanInfo extends AbstractModel {
     }
 
     /**
-     * Get Dex分离，0关闭，1开启 
-     * @return SeperateDex Dex分离，0关闭，1开启
-     * @deprecated
-     */
-    @Deprecated
-    public Long getSeperateDex() {
-        return this.SeperateDex;
-    }
-
-    /**
-     * Set Dex分离，0关闭，1开启
-     * @param SeperateDex Dex分离，0关闭，1开启
-     * @deprecated
-     */
-    @Deprecated
-    public void setSeperateDex(Long SeperateDex) {
-        this.SeperateDex = SeperateDex;
-    }
-
-    /**
      * Get 内存保护，0关闭，1开启 
      * @return Db 内存保护，0关闭，1开启
      */
@@ -273,26 +273,6 @@ public class PlanInfo extends AbstractModel {
      */
     public void setDb(Long Db) {
         this.Db = Db;
-    }
-
-    /**
-     * Get Dex签名校验，0关闭，1开启 
-     * @return DexSig Dex签名校验，0关闭，1开启
-     * @deprecated
-     */
-    @Deprecated
-    public Long getDexSig() {
-        return this.DexSig;
-    }
-
-    /**
-     * Set Dex签名校验，0关闭，1开启
-     * @param DexSig Dex签名校验，0关闭，1开启
-     * @deprecated
-     */
-    @Deprecated
-    public void setDexSig(Long DexSig) {
-        this.DexSig = DexSig;
     }
 
     /**
@@ -360,26 +340,6 @@ public class PlanInfo extends AbstractModel {
     }
 
     /**
-     * Get root检测，0关闭，1开启 
-     * @return AntiQemuRoot root检测，0关闭，1开启
-     * @deprecated
-     */
-    @Deprecated
-    public Long getAntiQemuRoot() {
-        return this.AntiQemuRoot;
-    }
-
-    /**
-     * Set root检测，0关闭，1开启
-     * @param AntiQemuRoot root检测，0关闭，1开启
-     * @deprecated
-     */
-    @Deprecated
-    public void setAntiQemuRoot(Long AntiQemuRoot) {
-        this.AntiQemuRoot = AntiQemuRoot;
-    }
-
-    /**
      * Get 资源防篡改，0关闭，1开启 
      * @return AntiAssets 资源防篡改，0关闭，1开启
      */
@@ -428,26 +388,6 @@ public class PlanInfo extends AbstractModel {
     }
 
     /**
-     * Get Dex分离，0关闭，1开启
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SetFile Dex分离，0关闭，1开启
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getSetFile() {
-        return this.SetFile;
-    }
-
-    /**
-     * Set Dex分离，0关闭，1开启
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param SetFile Dex分离，0关闭，1开启
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setSetFile(String SetFile) {
-        this.SetFile = SetFile;
-    }
-
-    /**
      * Get Dex签名校验，0关闭，1开启
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return FileSign Dex签名校验，0关闭，1开启
@@ -487,6 +427,66 @@ public class PlanInfo extends AbstractModel {
         this.AntiRoot = AntiRoot;
     }
 
+    /**
+     * Get Dex分离，0关闭，1开启 
+     * @return SeperateDex Dex分离，0关闭，1开启
+     * @deprecated
+     */
+    @Deprecated
+    public Long getSeperateDex() {
+        return this.SeperateDex;
+    }
+
+    /**
+     * Set Dex分离，0关闭，1开启
+     * @param SeperateDex Dex分离，0关闭，1开启
+     * @deprecated
+     */
+    @Deprecated
+    public void setSeperateDex(Long SeperateDex) {
+        this.SeperateDex = SeperateDex;
+    }
+
+    /**
+     * Get Dex签名校验，0关闭，1开启 
+     * @return DexSig Dex签名校验，0关闭，1开启
+     * @deprecated
+     */
+    @Deprecated
+    public Long getDexSig() {
+        return this.DexSig;
+    }
+
+    /**
+     * Set Dex签名校验，0关闭，1开启
+     * @param DexSig Dex签名校验，0关闭，1开启
+     * @deprecated
+     */
+    @Deprecated
+    public void setDexSig(Long DexSig) {
+        this.DexSig = DexSig;
+    }
+
+    /**
+     * Get root检测，0关闭，1开启 
+     * @return AntiQemuRoot root检测，0关闭，1开启
+     * @deprecated
+     */
+    @Deprecated
+    public Long getAntiQemuRoot() {
+        return this.AntiQemuRoot;
+    }
+
+    /**
+     * Set root检测，0关闭，1开启
+     * @param AntiQemuRoot root检测，0关闭，1开启
+     * @deprecated
+     */
+    @Deprecated
+    public void setAntiQemuRoot(Long AntiQemuRoot) {
+        this.AntiQemuRoot = AntiQemuRoot;
+    }
+
     public PlanInfo() {
     }
 
@@ -495,6 +495,9 @@ public class PlanInfo extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public PlanInfo(PlanInfo source) {
+        if (source.SetFile != null) {
+            this.SetFile = new String(source.SetFile);
+        }
         if (source.ApkSizeOpt != null) {
             this.ApkSizeOpt = new Long(source.ApkSizeOpt);
         }
@@ -510,14 +513,8 @@ public class PlanInfo extends AbstractModel {
         if (source.AntiRepack != null) {
             this.AntiRepack = new Long(source.AntiRepack);
         }
-        if (source.SeperateDex != null) {
-            this.SeperateDex = new Long(source.SeperateDex);
-        }
         if (source.Db != null) {
             this.Db = new Long(source.Db);
-        }
-        if (source.DexSig != null) {
-            this.DexSig = new Long(source.DexSig);
         }
         if (source.SoInfo != null) {
             this.SoInfo = new SoInfo(source.SoInfo);
@@ -534,9 +531,6 @@ public class PlanInfo extends AbstractModel {
         if (source.AntiLogLeak != null) {
             this.AntiLogLeak = new Long(source.AntiLogLeak);
         }
-        if (source.AntiQemuRoot != null) {
-            this.AntiQemuRoot = new Long(source.AntiQemuRoot);
-        }
         if (source.AntiAssets != null) {
             this.AntiAssets = new Long(source.AntiAssets);
         }
@@ -546,14 +540,20 @@ public class PlanInfo extends AbstractModel {
         if (source.AntiSSL != null) {
             this.AntiSSL = new Long(source.AntiSSL);
         }
-        if (source.SetFile != null) {
-            this.SetFile = new String(source.SetFile);
-        }
         if (source.FileSign != null) {
             this.FileSign = new String(source.FileSign);
         }
         if (source.AntiRoot != null) {
             this.AntiRoot = new String(source.AntiRoot);
+        }
+        if (source.SeperateDex != null) {
+            this.SeperateDex = new Long(source.SeperateDex);
+        }
+        if (source.DexSig != null) {
+            this.DexSig = new Long(source.DexSig);
+        }
+        if (source.AntiQemuRoot != null) {
+            this.AntiQemuRoot = new Long(source.AntiQemuRoot);
         }
     }
 
@@ -562,25 +562,25 @@ public class PlanInfo extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "SetFile", this.SetFile);
         this.setParamSimple(map, prefix + "ApkSizeOpt", this.ApkSizeOpt);
         this.setParamSimple(map, prefix + "Dex", this.Dex);
         this.setParamSimple(map, prefix + "So", this.So);
         this.setParamSimple(map, prefix + "Bugly", this.Bugly);
         this.setParamSimple(map, prefix + "AntiRepack", this.AntiRepack);
-        this.setParamSimple(map, prefix + "SeperateDex", this.SeperateDex);
         this.setParamSimple(map, prefix + "Db", this.Db);
-        this.setParamSimple(map, prefix + "DexSig", this.DexSig);
         this.setParamObj(map, prefix + "SoInfo.", this.SoInfo);
         this.setParamSimple(map, prefix + "AntiVMP", this.AntiVMP);
         this.setParamArraySimple(map, prefix + "SoType.", this.SoType);
         this.setParamSimple(map, prefix + "AntiLogLeak", this.AntiLogLeak);
-        this.setParamSimple(map, prefix + "AntiQemuRoot", this.AntiQemuRoot);
         this.setParamSimple(map, prefix + "AntiAssets", this.AntiAssets);
         this.setParamSimple(map, prefix + "AntiScreenshot", this.AntiScreenshot);
         this.setParamSimple(map, prefix + "AntiSSL", this.AntiSSL);
-        this.setParamSimple(map, prefix + "SetFile", this.SetFile);
         this.setParamSimple(map, prefix + "FileSign", this.FileSign);
         this.setParamSimple(map, prefix + "AntiRoot", this.AntiRoot);
+        this.setParamSimple(map, prefix + "SeperateDex", this.SeperateDex);
+        this.setParamSimple(map, prefix + "DexSig", this.DexSig);
+        this.setParamSimple(map, prefix + "AntiQemuRoot", this.AntiQemuRoot);
 
     }
 }

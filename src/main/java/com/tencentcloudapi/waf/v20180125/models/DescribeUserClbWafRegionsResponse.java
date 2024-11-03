@@ -25,7 +25,6 @@ public class DescribeUserClbWafRegionsResponse extends AbstractModel {
 
     /**
     * 地域（标准的ap-格式）列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeUserClbWafRegionsResponse extends AbstractModel {
 
     /**
     * 包含详细属性的地域信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RichDatas")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeUserClbWafRegionsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 地域（标准的ap-格式）列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地域（标准的ap-格式）列表 
      * @return Data 地域（标准的ap-格式）列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getData() {
         return this.Data;
@@ -58,19 +54,15 @@ public class DescribeUserClbWafRegionsResponse extends AbstractModel {
 
     /**
      * Set 地域（标准的ap-格式）列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Data 地域（标准的ap-格式）列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(String [] Data) {
         this.Data = Data;
     }
 
     /**
-     * Get 包含详细属性的地域信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 包含详细属性的地域信息 
      * @return RichDatas 包含详细属性的地域信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ClbWafRegionItem [] getRichDatas() {
         return this.RichDatas;
@@ -78,9 +70,7 @@ public class DescribeUserClbWafRegionsResponse extends AbstractModel {
 
     /**
      * Set 包含详细属性的地域信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RichDatas 包含详细属性的地域信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRichDatas(ClbWafRegionItem [] RichDatas) {
         this.RichDatas = RichDatas;

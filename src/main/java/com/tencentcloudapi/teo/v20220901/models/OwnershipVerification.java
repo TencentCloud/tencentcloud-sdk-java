@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class OwnershipVerification extends AbstractModel {
 
     /**
-    * CNAME 接入，使用 DNS 解析验证时所需的信息。详情参考 [站点/域名归属权验证
+    * CNAME 、无域名接入时，使用 DNS 解析验证时所需的信息。详情参考 [站点/域名归属权验证
 ](https://cloud.tencent.com/document/product/1552/70789#7af6ecf8-afca-4e35-8811-b5797ed1bde5)。
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -33,7 +33,7 @@ public class OwnershipVerification extends AbstractModel {
     private DnsVerification DnsVerification;
 
     /**
-    * CNAME 接入，使用文件验证时所需的信息。详情参考 [站点/域名归属权验证
+    * CNAME 、无域名接入时，使用文件验证时所需的信息。详情参考 [站点/域名归属权验证
 ](https://cloud.tencent.com/document/product/1552/70789#7af6ecf8-afca-4e35-8811-b5797ed1bde5)。
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -50,10 +50,10 @@ public class OwnershipVerification extends AbstractModel {
     private NsVerification NsVerification;
 
     /**
-     * Get CNAME 接入，使用 DNS 解析验证时所需的信息。详情参考 [站点/域名归属权验证
+     * Get CNAME 、无域名接入时，使用 DNS 解析验证时所需的信息。详情参考 [站点/域名归属权验证
 ](https://cloud.tencent.com/document/product/1552/70789#7af6ecf8-afca-4e35-8811-b5797ed1bde5)。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DnsVerification CNAME 接入，使用 DNS 解析验证时所需的信息。详情参考 [站点/域名归属权验证
+     * @return DnsVerification CNAME 、无域名接入时，使用 DNS 解析验证时所需的信息。详情参考 [站点/域名归属权验证
 ](https://cloud.tencent.com/document/product/1552/70789#7af6ecf8-afca-4e35-8811-b5797ed1bde5)。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -62,10 +62,10 @@ public class OwnershipVerification extends AbstractModel {
     }
 
     /**
-     * Set CNAME 接入，使用 DNS 解析验证时所需的信息。详情参考 [站点/域名归属权验证
+     * Set CNAME 、无域名接入时，使用 DNS 解析验证时所需的信息。详情参考 [站点/域名归属权验证
 ](https://cloud.tencent.com/document/product/1552/70789#7af6ecf8-afca-4e35-8811-b5797ed1bde5)。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DnsVerification CNAME 接入，使用 DNS 解析验证时所需的信息。详情参考 [站点/域名归属权验证
+     * @param DnsVerification CNAME 、无域名接入时，使用 DNS 解析验证时所需的信息。详情参考 [站点/域名归属权验证
 ](https://cloud.tencent.com/document/product/1552/70789#7af6ecf8-afca-4e35-8811-b5797ed1bde5)。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -74,10 +74,10 @@ public class OwnershipVerification extends AbstractModel {
     }
 
     /**
-     * Get CNAME 接入，使用文件验证时所需的信息。详情参考 [站点/域名归属权验证
+     * Get CNAME 、无域名接入时，使用文件验证时所需的信息。详情参考 [站点/域名归属权验证
 ](https://cloud.tencent.com/document/product/1552/70789#7af6ecf8-afca-4e35-8811-b5797ed1bde5)。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FileVerification CNAME 接入，使用文件验证时所需的信息。详情参考 [站点/域名归属权验证
+     * @return FileVerification CNAME 、无域名接入时，使用文件验证时所需的信息。详情参考 [站点/域名归属权验证
 ](https://cloud.tencent.com/document/product/1552/70789#7af6ecf8-afca-4e35-8811-b5797ed1bde5)。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -86,10 +86,10 @@ public class OwnershipVerification extends AbstractModel {
     }
 
     /**
-     * Set CNAME 接入，使用文件验证时所需的信息。详情参考 [站点/域名归属权验证
+     * Set CNAME 、无域名接入时，使用文件验证时所需的信息。详情参考 [站点/域名归属权验证
 ](https://cloud.tencent.com/document/product/1552/70789#7af6ecf8-afca-4e35-8811-b5797ed1bde5)。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FileVerification CNAME 接入，使用文件验证时所需的信息。详情参考 [站点/域名归属权验证
+     * @param FileVerification CNAME 、无域名接入时，使用文件验证时所需的信息。详情参考 [站点/域名归属权验证
 ](https://cloud.tencent.com/document/product/1552/70789#7af6ecf8-afca-4e35-8811-b5797ed1bde5)。
 注意：此字段可能返回 null，表示取不到有效值。
      */

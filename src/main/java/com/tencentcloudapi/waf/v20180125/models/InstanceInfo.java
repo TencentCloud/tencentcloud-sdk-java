@@ -168,7 +168,6 @@ public class InstanceInfo extends AbstractModel {
 
     /**
     * 业务安全包
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FraudPkg")
     @Expose
@@ -176,7 +175,6 @@ public class InstanceInfo extends AbstractModel {
 
     /**
     * Bot资源包
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BotPkg")
     @Expose
@@ -184,7 +182,6 @@ public class InstanceInfo extends AbstractModel {
 
     /**
     * bot的qps详情
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BotQPS")
     @Expose
@@ -192,7 +189,6 @@ public class InstanceInfo extends AbstractModel {
 
     /**
     * qps弹性计费上限
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ElasticBilling")
     @Expose
@@ -200,7 +196,6 @@ public class InstanceInfo extends AbstractModel {
 
     /**
     * 攻击日志投递开关
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AttackLogPost")
     @Expose
@@ -208,7 +203,6 @@ public class InstanceInfo extends AbstractModel {
 
     /**
     * 带宽峰值，单位为B/s(字节每秒)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxBandwidth")
     @Expose
@@ -223,7 +217,6 @@ public class InstanceInfo extends AbstractModel {
 
     /**
     * 购买的qps规格
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("QpsStandard")
     @Expose
@@ -231,7 +224,6 @@ public class InstanceInfo extends AbstractModel {
 
     /**
     * 购买的带宽规格
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BandwidthStandard")
     @Expose
@@ -239,7 +231,6 @@ public class InstanceInfo extends AbstractModel {
 
     /**
     * 实例状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -247,7 +238,6 @@ public class InstanceInfo extends AbstractModel {
 
     /**
     * 实例沙箱qps值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SandboxQps")
     @Expose
@@ -255,7 +245,6 @@ public class InstanceInfo extends AbstractModel {
 
     /**
     * 是否api 安全试用
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsAPISecurityTrial")
     @Expose
@@ -263,7 +252,6 @@ public class InstanceInfo extends AbstractModel {
 
     /**
     * 重保包
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MajorEventsPkg")
     @Expose
@@ -271,7 +259,6 @@ public class InstanceInfo extends AbstractModel {
 
     /**
     * 混合云子节点包
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HybridPkg")
     @Expose
@@ -279,7 +266,6 @@ public class InstanceInfo extends AbstractModel {
 
     /**
     * API安全资源包
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApiPkg")
     @Expose
@@ -287,7 +273,6 @@ public class InstanceInfo extends AbstractModel {
 
     /**
     * 小程序安全加速包
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MiniPkg")
     @Expose
@@ -295,7 +280,6 @@ public class InstanceInfo extends AbstractModel {
 
     /**
     * 小程序qps规格
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MiniQpsStandard")
     @Expose
@@ -303,7 +287,6 @@ public class InstanceInfo extends AbstractModel {
 
     /**
     * 小程序qps峰值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MiniMaxQPS")
     @Expose
@@ -311,7 +294,6 @@ public class InstanceInfo extends AbstractModel {
 
     /**
     * 最近一次超量时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LastQpsExceedTime")
     @Expose
@@ -319,7 +301,6 @@ public class InstanceInfo extends AbstractModel {
 
     /**
     * 小程序安全接入ID数量扩张包
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MiniExtendPkg")
     @Expose
@@ -327,7 +308,6 @@ public class InstanceInfo extends AbstractModel {
 
     /**
     * 计费项
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BillingItem")
     @Expose
@@ -335,7 +315,6 @@ public class InstanceInfo extends AbstractModel {
 
     /**
     * 实例延期释放标识
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FreeDelayFlag")
     @Expose
@@ -686,10 +665,8 @@ public class InstanceInfo extends AbstractModel {
     }
 
     /**
-     * Get 业务安全包
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 业务安全包 
      * @return FraudPkg 业务安全包
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public FraudPkg getFraudPkg() {
         return this.FraudPkg;
@@ -697,19 +674,15 @@ public class InstanceInfo extends AbstractModel {
 
     /**
      * Set 业务安全包
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FraudPkg 业务安全包
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFraudPkg(FraudPkg FraudPkg) {
         this.FraudPkg = FraudPkg;
     }
 
     /**
-     * Get Bot资源包
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Bot资源包 
      * @return BotPkg Bot资源包
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BotPkg getBotPkg() {
         return this.BotPkg;
@@ -717,19 +690,15 @@ public class InstanceInfo extends AbstractModel {
 
     /**
      * Set Bot资源包
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BotPkg Bot资源包
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBotPkg(BotPkg BotPkg) {
         this.BotPkg = BotPkg;
     }
 
     /**
-     * Get bot的qps详情
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get bot的qps详情 
      * @return BotQPS bot的qps详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BotQPS getBotQPS() {
         return this.BotQPS;
@@ -737,19 +706,15 @@ public class InstanceInfo extends AbstractModel {
 
     /**
      * Set bot的qps详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BotQPS bot的qps详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBotQPS(BotQPS BotQPS) {
         this.BotQPS = BotQPS;
     }
 
     /**
-     * Get qps弹性计费上限
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get qps弹性计费上限 
      * @return ElasticBilling qps弹性计费上限
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getElasticBilling() {
         return this.ElasticBilling;
@@ -757,19 +722,15 @@ public class InstanceInfo extends AbstractModel {
 
     /**
      * Set qps弹性计费上限
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ElasticBilling qps弹性计费上限
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setElasticBilling(Long ElasticBilling) {
         this.ElasticBilling = ElasticBilling;
     }
 
     /**
-     * Get 攻击日志投递开关
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 攻击日志投递开关 
      * @return AttackLogPost 攻击日志投递开关
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAttackLogPost() {
         return this.AttackLogPost;
@@ -777,19 +738,15 @@ public class InstanceInfo extends AbstractModel {
 
     /**
      * Set 攻击日志投递开关
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AttackLogPost 攻击日志投递开关
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAttackLogPost(Long AttackLogPost) {
         this.AttackLogPost = AttackLogPost;
     }
 
     /**
-     * Get 带宽峰值，单位为B/s(字节每秒)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 带宽峰值，单位为B/s(字节每秒) 
      * @return MaxBandwidth 带宽峰值，单位为B/s(字节每秒)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaxBandwidth() {
         return this.MaxBandwidth;
@@ -797,9 +754,7 @@ public class InstanceInfo extends AbstractModel {
 
     /**
      * Set 带宽峰值，单位为B/s(字节每秒)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MaxBandwidth 带宽峰值，单位为B/s(字节每秒)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxBandwidth(Long MaxBandwidth) {
         this.MaxBandwidth = MaxBandwidth;
@@ -822,10 +777,8 @@ public class InstanceInfo extends AbstractModel {
     }
 
     /**
-     * Get 购买的qps规格
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 购买的qps规格 
      * @return QpsStandard 购买的qps规格
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getQpsStandard() {
         return this.QpsStandard;
@@ -833,19 +786,15 @@ public class InstanceInfo extends AbstractModel {
 
     /**
      * Set 购买的qps规格
-注意：此字段可能返回 null，表示取不到有效值。
      * @param QpsStandard 购买的qps规格
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQpsStandard(Long QpsStandard) {
         this.QpsStandard = QpsStandard;
     }
 
     /**
-     * Get 购买的带宽规格
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 购买的带宽规格 
      * @return BandwidthStandard 购买的带宽规格
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBandwidthStandard() {
         return this.BandwidthStandard;
@@ -853,19 +802,15 @@ public class InstanceInfo extends AbstractModel {
 
     /**
      * Set 购买的带宽规格
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BandwidthStandard 购买的带宽规格
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBandwidthStandard(Long BandwidthStandard) {
         this.BandwidthStandard = BandwidthStandard;
     }
 
     /**
-     * Get 实例状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例状态 
      * @return Status 实例状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
         return this.Status;
@@ -873,19 +818,15 @@ public class InstanceInfo extends AbstractModel {
 
     /**
      * Set 实例状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 实例状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 实例沙箱qps值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例沙箱qps值 
      * @return SandboxQps 实例沙箱qps值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSandboxQps() {
         return this.SandboxQps;
@@ -893,19 +834,15 @@ public class InstanceInfo extends AbstractModel {
 
     /**
      * Set 实例沙箱qps值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SandboxQps 实例沙箱qps值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSandboxQps(Long SandboxQps) {
         this.SandboxQps = SandboxQps;
     }
 
     /**
-     * Get 是否api 安全试用
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否api 安全试用 
      * @return IsAPISecurityTrial 是否api 安全试用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsAPISecurityTrial() {
         return this.IsAPISecurityTrial;
@@ -913,19 +850,15 @@ public class InstanceInfo extends AbstractModel {
 
     /**
      * Set 是否api 安全试用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsAPISecurityTrial 是否api 安全试用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsAPISecurityTrial(Long IsAPISecurityTrial) {
         this.IsAPISecurityTrial = IsAPISecurityTrial;
     }
 
     /**
-     * Get 重保包
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 重保包 
      * @return MajorEventsPkg 重保包
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public MajorEventsPkg getMajorEventsPkg() {
         return this.MajorEventsPkg;
@@ -933,19 +866,15 @@ public class InstanceInfo extends AbstractModel {
 
     /**
      * Set 重保包
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MajorEventsPkg 重保包
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMajorEventsPkg(MajorEventsPkg MajorEventsPkg) {
         this.MajorEventsPkg = MajorEventsPkg;
     }
 
     /**
-     * Get 混合云子节点包
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 混合云子节点包 
      * @return HybridPkg 混合云子节点包
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public HybridPkg getHybridPkg() {
         return this.HybridPkg;
@@ -953,19 +882,15 @@ public class InstanceInfo extends AbstractModel {
 
     /**
      * Set 混合云子节点包
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HybridPkg 混合云子节点包
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHybridPkg(HybridPkg HybridPkg) {
         this.HybridPkg = HybridPkg;
     }
 
     /**
-     * Get API安全资源包
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get API安全资源包 
      * @return ApiPkg API安全资源包
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ApiPkg getApiPkg() {
         return this.ApiPkg;
@@ -973,19 +898,15 @@ public class InstanceInfo extends AbstractModel {
 
     /**
      * Set API安全资源包
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApiPkg API安全资源包
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApiPkg(ApiPkg ApiPkg) {
         this.ApiPkg = ApiPkg;
     }
 
     /**
-     * Get 小程序安全加速包
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 小程序安全加速包 
      * @return MiniPkg 小程序安全加速包
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public MiniPkg getMiniPkg() {
         return this.MiniPkg;
@@ -993,19 +914,15 @@ public class InstanceInfo extends AbstractModel {
 
     /**
      * Set 小程序安全加速包
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MiniPkg 小程序安全加速包
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMiniPkg(MiniPkg MiniPkg) {
         this.MiniPkg = MiniPkg;
     }
 
     /**
-     * Get 小程序qps规格
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 小程序qps规格 
      * @return MiniQpsStandard 小程序qps规格
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMiniQpsStandard() {
         return this.MiniQpsStandard;
@@ -1013,19 +930,15 @@ public class InstanceInfo extends AbstractModel {
 
     /**
      * Set 小程序qps规格
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MiniQpsStandard 小程序qps规格
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMiniQpsStandard(Long MiniQpsStandard) {
         this.MiniQpsStandard = MiniQpsStandard;
     }
 
     /**
-     * Get 小程序qps峰值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 小程序qps峰值 
      * @return MiniMaxQPS 小程序qps峰值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMiniMaxQPS() {
         return this.MiniMaxQPS;
@@ -1033,19 +946,15 @@ public class InstanceInfo extends AbstractModel {
 
     /**
      * Set 小程序qps峰值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MiniMaxQPS 小程序qps峰值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMiniMaxQPS(Long MiniMaxQPS) {
         this.MiniMaxQPS = MiniMaxQPS;
     }
 
     /**
-     * Get 最近一次超量时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最近一次超量时间 
      * @return LastQpsExceedTime 最近一次超量时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLastQpsExceedTime() {
         return this.LastQpsExceedTime;
@@ -1053,19 +962,15 @@ public class InstanceInfo extends AbstractModel {
 
     /**
      * Set 最近一次超量时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LastQpsExceedTime 最近一次超量时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLastQpsExceedTime(String LastQpsExceedTime) {
         this.LastQpsExceedTime = LastQpsExceedTime;
     }
 
     /**
-     * Get 小程序安全接入ID数量扩张包
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 小程序安全接入ID数量扩张包 
      * @return MiniExtendPkg 小程序安全接入ID数量扩张包
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public MiniExtendPkg getMiniExtendPkg() {
         return this.MiniExtendPkg;
@@ -1073,19 +978,15 @@ public class InstanceInfo extends AbstractModel {
 
     /**
      * Set 小程序安全接入ID数量扩张包
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MiniExtendPkg 小程序安全接入ID数量扩张包
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMiniExtendPkg(MiniExtendPkg MiniExtendPkg) {
         this.MiniExtendPkg = MiniExtendPkg;
     }
 
     /**
-     * Get 计费项
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 计费项 
      * @return BillingItem 计费项
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBillingItem() {
         return this.BillingItem;
@@ -1093,19 +994,15 @@ public class InstanceInfo extends AbstractModel {
 
     /**
      * Set 计费项
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BillingItem 计费项
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBillingItem(String BillingItem) {
         this.BillingItem = BillingItem;
     }
 
     /**
-     * Get 实例延期释放标识
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例延期释放标识 
      * @return FreeDelayFlag 实例延期释放标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFreeDelayFlag() {
         return this.FreeDelayFlag;
@@ -1113,9 +1010,7 @@ public class InstanceInfo extends AbstractModel {
 
     /**
      * Set 实例延期释放标识
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FreeDelayFlag 实例延期释放标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFreeDelayFlag(Long FreeDelayFlag) {
         this.FreeDelayFlag = FreeDelayFlag;

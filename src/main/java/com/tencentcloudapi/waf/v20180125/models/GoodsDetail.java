@@ -60,7 +60,6 @@ public class GoodsDetail extends AbstractModel {
 
     /**
     * waf产品码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProductInfo")
     @Expose
@@ -68,7 +67,6 @@ public class GoodsDetail extends AbstractModel {
 
     /**
     * waf实例名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceName")
     @Expose
@@ -76,7 +74,6 @@ public class GoodsDetail extends AbstractModel {
 
     /**
     * QPS数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ElasticQps")
     @Expose
@@ -84,7 +81,6 @@ public class GoodsDetail extends AbstractModel {
 
     /**
     * 弹性账单
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FlexBill")
     @Expose
@@ -92,7 +88,6 @@ public class GoodsDetail extends AbstractModel {
 
     /**
     * 1:自动续费，0:不自动续费
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AutoRenewFlag")
     @Expose
@@ -100,7 +95,6 @@ public class GoodsDetail extends AbstractModel {
 
     /**
     * waf购买的实际地域信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RealRegion")
     @Expose
@@ -108,7 +102,6 @@ public class GoodsDetail extends AbstractModel {
 
     /**
     * Waf实例对应的二级产品码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -116,7 +109,6 @@ public class GoodsDetail extends AbstractModel {
 
     /**
     * 计费细项标签数组
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LabelTypes")
     @Expose
@@ -124,7 +116,6 @@ public class GoodsDetail extends AbstractModel {
 
     /**
     * 计费细项标签数量，一般和SvLabelType一一对应
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LabelCounts")
     @Expose
@@ -132,7 +123,6 @@ public class GoodsDetail extends AbstractModel {
 
     /**
     * 变配使用，实例到期时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CurDeadline")
     @Expose
@@ -140,7 +130,6 @@ public class GoodsDetail extends AbstractModel {
 
     /**
     * 对存在的实例购买bot 或api 安全
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -227,10 +216,8 @@ public class GoodsDetail extends AbstractModel {
     }
 
     /**
-     * Get waf产品码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get waf产品码 
      * @return ProductInfo waf产品码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ProductInfo [] getProductInfo() {
         return this.ProductInfo;
@@ -238,19 +225,15 @@ public class GoodsDetail extends AbstractModel {
 
     /**
      * Set waf产品码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProductInfo waf产品码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProductInfo(ProductInfo [] ProductInfo) {
         this.ProductInfo = ProductInfo;
     }
 
     /**
-     * Get waf实例名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get waf实例名 
      * @return InstanceName waf实例名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceName() {
         return this.InstanceName;
@@ -258,19 +241,15 @@ public class GoodsDetail extends AbstractModel {
 
     /**
      * Set waf实例名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceName waf实例名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get QPS数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get QPS数量 
      * @return ElasticQps QPS数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getElasticQps() {
         return this.ElasticQps;
@@ -278,19 +257,15 @@ public class GoodsDetail extends AbstractModel {
 
     /**
      * Set QPS数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ElasticQps QPS数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setElasticQps(Long ElasticQps) {
         this.ElasticQps = ElasticQps;
     }
 
     /**
-     * Get 弹性账单
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 弹性账单 
      * @return FlexBill 弹性账单
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFlexBill() {
         return this.FlexBill;
@@ -298,19 +273,15 @@ public class GoodsDetail extends AbstractModel {
 
     /**
      * Set 弹性账单
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FlexBill 弹性账单
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFlexBill(Long FlexBill) {
         this.FlexBill = FlexBill;
     }
 
     /**
-     * Get 1:自动续费，0:不自动续费
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 1:自动续费，0:不自动续费 
      * @return AutoRenewFlag 1:自动续费，0:不自动续费
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAutoRenewFlag() {
         return this.AutoRenewFlag;
@@ -318,19 +289,15 @@ public class GoodsDetail extends AbstractModel {
 
     /**
      * Set 1:自动续费，0:不自动续费
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AutoRenewFlag 1:自动续费，0:不自动续费
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAutoRenewFlag(Long AutoRenewFlag) {
         this.AutoRenewFlag = AutoRenewFlag;
     }
 
     /**
-     * Get waf购买的实际地域信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get waf购买的实际地域信息 
      * @return RealRegion waf购买的实际地域信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRealRegion() {
         return this.RealRegion;
@@ -338,19 +305,15 @@ public class GoodsDetail extends AbstractModel {
 
     /**
      * Set waf购买的实际地域信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RealRegion waf购买的实际地域信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRealRegion(Long RealRegion) {
         this.RealRegion = RealRegion;
     }
 
     /**
-     * Get Waf实例对应的二级产品码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Waf实例对应的二级产品码 
      * @return Type Waf实例对应的二级产品码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
         return this.Type;
@@ -358,19 +321,15 @@ public class GoodsDetail extends AbstractModel {
 
     /**
      * Set Waf实例对应的二级产品码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type Waf实例对应的二级产品码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 计费细项标签数组
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 计费细项标签数组 
      * @return LabelTypes 计费细项标签数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getLabelTypes() {
         return this.LabelTypes;
@@ -378,19 +337,15 @@ public class GoodsDetail extends AbstractModel {
 
     /**
      * Set 计费细项标签数组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LabelTypes 计费细项标签数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLabelTypes(String [] LabelTypes) {
         this.LabelTypes = LabelTypes;
     }
 
     /**
-     * Get 计费细项标签数量，一般和SvLabelType一一对应
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 计费细项标签数量，一般和SvLabelType一一对应 
      * @return LabelCounts 计费细项标签数量，一般和SvLabelType一一对应
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long [] getLabelCounts() {
         return this.LabelCounts;
@@ -398,19 +353,15 @@ public class GoodsDetail extends AbstractModel {
 
     /**
      * Set 计费细项标签数量，一般和SvLabelType一一对应
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LabelCounts 计费细项标签数量，一般和SvLabelType一一对应
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLabelCounts(Long [] LabelCounts) {
         this.LabelCounts = LabelCounts;
     }
 
     /**
-     * Get 变配使用，实例到期时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 变配使用，实例到期时间 
      * @return CurDeadline 变配使用，实例到期时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCurDeadline() {
         return this.CurDeadline;
@@ -418,19 +369,15 @@ public class GoodsDetail extends AbstractModel {
 
     /**
      * Set 变配使用，实例到期时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CurDeadline 变配使用，实例到期时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCurDeadline(String CurDeadline) {
         this.CurDeadline = CurDeadline;
     }
 
     /**
-     * Get 对存在的实例购买bot 或api 安全
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 对存在的实例购买bot 或api 安全 
      * @return InstanceId 对存在的实例购买bot 或api 安全
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceId() {
         return this.InstanceId;
@@ -438,9 +385,7 @@ public class GoodsDetail extends AbstractModel {
 
     /**
      * Set 对存在的实例购买bot 或api 安全
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceId 对存在的实例购买bot 或api 安全
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

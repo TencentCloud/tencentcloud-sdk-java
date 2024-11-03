@@ -81,7 +81,7 @@ public class CreateIpAccessControlRequest extends AbstractModel {
     private String Note;
 
     /**
-    * 定时配置类型
+    * 规则执行的方式，TimedJob为定时执行，CronJob为周期执行
     */
     @SerializedName("JobType")
     @Expose
@@ -149,7 +149,9 @@ public class CreateIpAccessControlRequest extends AbstractModel {
     /**
      * Get valid_ts为有效日期，值为秒级时间戳（（如1680570420代表2023-04-04 09:07:00）） 
      * @return ValidTS valid_ts为有效日期，值为秒级时间戳（（如1680570420代表2023-04-04 09:07:00））
+     * @deprecated
      */
+    @Deprecated
     public Long getValidTS() {
         return this.ValidTS;
     }
@@ -157,7 +159,9 @@ public class CreateIpAccessControlRequest extends AbstractModel {
     /**
      * Set valid_ts为有效日期，值为秒级时间戳（（如1680570420代表2023-04-04 09:07:00））
      * @param ValidTS valid_ts为有效日期，值为秒级时间戳（（如1680570420代表2023-04-04 09:07:00））
+     * @deprecated
      */
+    @Deprecated
     public void setValidTS(Long ValidTS) {
         this.ValidTS = ValidTS;
     }
@@ -227,16 +231,16 @@ public class CreateIpAccessControlRequest extends AbstractModel {
     }
 
     /**
-     * Get 定时配置类型 
-     * @return JobType 定时配置类型
+     * Get 规则执行的方式，TimedJob为定时执行，CronJob为周期执行 
+     * @return JobType 规则执行的方式，TimedJob为定时执行，CronJob为周期执行
      */
     public String getJobType() {
         return this.JobType;
     }
 
     /**
-     * Set 定时配置类型
-     * @param JobType 定时配置类型
+     * Set 规则执行的方式，TimedJob为定时执行，CronJob为周期执行
+     * @param JobType 规则执行的方式，TimedJob为定时执行，CronJob为周期执行
      */
     public void setJobType(String JobType) {
         this.JobType = JobType;

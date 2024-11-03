@@ -25,7 +25,6 @@ public class DescribeOrganizationUserInfoResponse extends AbstractModel {
 
     /**
     * 总条数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeOrganizationUserInfoResponse extends AbstractModel {
 
     /**
     * 集团用户列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
     @Expose
@@ -61,10 +59,8 @@ public class DescribeOrganizationUserInfoResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 总条数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 总条数 
      * @return TotalCount 总条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -72,19 +68,15 @@ public class DescribeOrganizationUserInfoResponse extends AbstractModel {
 
     /**
      * Set 总条数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 总条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 集团用户列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集团用户列表 
      * @return Data 集团用户列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public OrganizationUserInfo [] getData() {
         return this.Data;
@@ -92,9 +84,7 @@ public class DescribeOrganizationUserInfoResponse extends AbstractModel {
 
     /**
      * Set 集团用户列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Data 集团用户列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(OrganizationUserInfo [] Data) {
         this.Data = Data;

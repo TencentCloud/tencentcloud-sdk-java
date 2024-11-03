@@ -52,7 +52,7 @@ public class PortItem extends AbstractModel {
     private String UpstreamProtocol;
 
     /**
-    * Nginx的服务器ID
+    * Nginx的服务器ID,新增域名时填"0"
     */
     @SerializedName("NginxServerId")
     @Expose
@@ -123,16 +123,16 @@ public class PortItem extends AbstractModel {
     }
 
     /**
-     * Get Nginx的服务器ID 
-     * @return NginxServerId Nginx的服务器ID
+     * Get Nginx的服务器ID,新增域名时填"0" 
+     * @return NginxServerId Nginx的服务器ID,新增域名时填"0"
      */
     public String getNginxServerId() {
         return this.NginxServerId;
     }
 
     /**
-     * Set Nginx的服务器ID
-     * @param NginxServerId Nginx的服务器ID
+     * Set Nginx的服务器ID,新增域名时填"0"
+     * @param NginxServerId Nginx的服务器ID,新增域名时填"0"
      */
     public void setNginxServerId(String NginxServerId) {
         this.NginxServerId = NginxServerId;

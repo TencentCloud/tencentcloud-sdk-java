@@ -25,7 +25,6 @@ public class ApiDetailSampleHistory extends AbstractModel {
 
     /**
     * 样例名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SampleNme")
     @Expose
@@ -33,7 +32,6 @@ public class ApiDetailSampleHistory extends AbstractModel {
 
     /**
     * 请求样例
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RepLog")
     @Expose
@@ -41,17 +39,14 @@ public class ApiDetailSampleHistory extends AbstractModel {
 
     /**
     * 响应样例
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RspLog")
     @Expose
     private String RspLog;
 
     /**
-     * Get 样例名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 样例名称 
      * @return SampleNme 样例名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSampleNme() {
         return this.SampleNme;
@@ -59,19 +54,15 @@ public class ApiDetailSampleHistory extends AbstractModel {
 
     /**
      * Set 样例名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SampleNme 样例名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSampleNme(String SampleNme) {
         this.SampleNme = SampleNme;
     }
 
     /**
-     * Get 请求样例
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 请求样例 
      * @return RepLog 请求样例
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRepLog() {
         return this.RepLog;
@@ -79,19 +70,15 @@ public class ApiDetailSampleHistory extends AbstractModel {
 
     /**
      * Set 请求样例
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RepLog 请求样例
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRepLog(String RepLog) {
         this.RepLog = RepLog;
     }
 
     /**
-     * Get 响应样例
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 响应样例 
      * @return RspLog 响应样例
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRspLog() {
         return this.RspLog;
@@ -99,9 +86,7 @@ public class ApiDetailSampleHistory extends AbstractModel {
 
     /**
      * Set 响应样例
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RspLog 响应样例
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRspLog(String RspLog) {
         this.RspLog = RspLog;

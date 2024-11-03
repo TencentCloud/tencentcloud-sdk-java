@@ -25,7 +25,6 @@ public class DescribeApiDetailResponse extends AbstractModel {
 
     /**
     * 请求样例，json字符串格式
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Log")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeApiDetailResponse extends AbstractModel {
 
     /**
     * 请求参数样例列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ParameterList")
     @Expose
@@ -41,7 +39,6 @@ public class DescribeApiDetailResponse extends AbstractModel {
 
     /**
     * 当前场景标签
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Scene")
     @Expose
@@ -49,7 +46,6 @@ public class DescribeApiDetailResponse extends AbstractModel {
 
     /**
     * 敏感字段
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SensitiveFields")
     @Expose
@@ -57,7 +53,6 @@ public class DescribeApiDetailResponse extends AbstractModel {
 
     /**
     * 7天内是否活跃
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsActive")
     @Expose
@@ -65,7 +60,6 @@ public class DescribeApiDetailResponse extends AbstractModel {
 
     /**
     * 访问ip数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IpCount")
     @Expose
@@ -73,7 +67,6 @@ public class DescribeApiDetailResponse extends AbstractModel {
 
     /**
     * 访问地域数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RegionCount")
     @Expose
@@ -81,7 +74,6 @@ public class DescribeApiDetailResponse extends AbstractModel {
 
     /**
     * 关联事件数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EventCount")
     @Expose
@@ -89,7 +81,6 @@ public class DescribeApiDetailResponse extends AbstractModel {
 
     /**
     * 涉敏数据条数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SensitiveCount")
     @Expose
@@ -97,7 +88,6 @@ public class DescribeApiDetailResponse extends AbstractModel {
 
     /**
     * 风险等级
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Level")
     @Expose
@@ -105,7 +95,6 @@ public class DescribeApiDetailResponse extends AbstractModel {
 
     /**
     * 响应体
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RspLog")
     @Expose
@@ -113,7 +102,6 @@ public class DescribeApiDetailResponse extends AbstractModel {
 
     /**
     * 昨日访问峰值QPS
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxQPS")
     @Expose
@@ -134,10 +122,8 @@ public class DescribeApiDetailResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 请求样例，json字符串格式
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 请求样例，json字符串格式 
      * @return Log 请求样例，json字符串格式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLog() {
         return this.Log;
@@ -145,19 +131,15 @@ public class DescribeApiDetailResponse extends AbstractModel {
 
     /**
      * Set 请求样例，json字符串格式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Log 请求样例，json字符串格式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLog(String Log) {
         this.Log = Log;
     }
 
     /**
-     * Get 请求参数样例列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 请求参数样例列表 
      * @return ParameterList 请求参数样例列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ApiParameterType [] getParameterList() {
         return this.ParameterList;
@@ -165,19 +147,15 @@ public class DescribeApiDetailResponse extends AbstractModel {
 
     /**
      * Set 请求参数样例列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ParameterList 请求参数样例列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setParameterList(ApiParameterType [] ParameterList) {
         this.ParameterList = ParameterList;
     }
 
     /**
-     * Get 当前场景标签
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当前场景标签 
      * @return Scene 当前场景标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getScene() {
         return this.Scene;
@@ -185,19 +163,15 @@ public class DescribeApiDetailResponse extends AbstractModel {
 
     /**
      * Set 当前场景标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Scene 当前场景标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScene(String Scene) {
         this.Scene = Scene;
     }
 
     /**
-     * Get 敏感字段
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 敏感字段 
      * @return SensitiveFields 敏感字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getSensitiveFields() {
         return this.SensitiveFields;
@@ -205,19 +179,15 @@ public class DescribeApiDetailResponse extends AbstractModel {
 
     /**
      * Set 敏感字段
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SensitiveFields 敏感字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSensitiveFields(String [] SensitiveFields) {
         this.SensitiveFields = SensitiveFields;
     }
 
     /**
-     * Get 7天内是否活跃
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 7天内是否活跃 
      * @return IsActive 7天内是否活跃
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsActive() {
         return this.IsActive;
@@ -225,19 +195,15 @@ public class DescribeApiDetailResponse extends AbstractModel {
 
     /**
      * Set 7天内是否活跃
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsActive 7天内是否活跃
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsActive(Boolean IsActive) {
         this.IsActive = IsActive;
     }
 
     /**
-     * Get 访问ip数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 访问ip数 
      * @return IpCount 访问ip数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIpCount() {
         return this.IpCount;
@@ -245,19 +211,15 @@ public class DescribeApiDetailResponse extends AbstractModel {
 
     /**
      * Set 访问ip数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IpCount 访问ip数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIpCount(Long IpCount) {
         this.IpCount = IpCount;
     }
 
     /**
-     * Get 访问地域数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 访问地域数量 
      * @return RegionCount 访问地域数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRegionCount() {
         return this.RegionCount;
@@ -265,19 +227,15 @@ public class DescribeApiDetailResponse extends AbstractModel {
 
     /**
      * Set 访问地域数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RegionCount 访问地域数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegionCount(Long RegionCount) {
         this.RegionCount = RegionCount;
     }
 
     /**
-     * Get 关联事件数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 关联事件数 
      * @return EventCount 关联事件数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getEventCount() {
         return this.EventCount;
@@ -285,19 +243,15 @@ public class DescribeApiDetailResponse extends AbstractModel {
 
     /**
      * Set 关联事件数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EventCount 关联事件数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEventCount(Long EventCount) {
         this.EventCount = EventCount;
     }
 
     /**
-     * Get 涉敏数据条数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 涉敏数据条数 
      * @return SensitiveCount 涉敏数据条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSensitiveCount() {
         return this.SensitiveCount;
@@ -305,19 +259,15 @@ public class DescribeApiDetailResponse extends AbstractModel {
 
     /**
      * Set 涉敏数据条数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SensitiveCount 涉敏数据条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSensitiveCount(Long SensitiveCount) {
         this.SensitiveCount = SensitiveCount;
     }
 
     /**
-     * Get 风险等级
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 风险等级 
      * @return Level 风险等级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLevel() {
         return this.Level;
@@ -325,19 +275,15 @@ public class DescribeApiDetailResponse extends AbstractModel {
 
     /**
      * Set 风险等级
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Level 风险等级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLevel(Long Level) {
         this.Level = Level;
     }
 
     /**
-     * Get 响应体
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 响应体 
      * @return RspLog 响应体
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRspLog() {
         return this.RspLog;
@@ -345,19 +291,15 @@ public class DescribeApiDetailResponse extends AbstractModel {
 
     /**
      * Set 响应体
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RspLog 响应体
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRspLog(String RspLog) {
         this.RspLog = RspLog;
     }
 
     /**
-     * Get 昨日访问峰值QPS
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 昨日访问峰值QPS 
      * @return MaxQPS 昨日访问峰值QPS
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaxQPS() {
         return this.MaxQPS;
@@ -365,9 +307,7 @@ public class DescribeApiDetailResponse extends AbstractModel {
 
     /**
      * Set 昨日访问峰值QPS
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MaxQPS 昨日访问峰值QPS
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxQPS(Long MaxQPS) {
         this.MaxQPS = MaxQPS;

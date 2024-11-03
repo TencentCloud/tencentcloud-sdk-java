@@ -130,7 +130,6 @@ public class ClbObject extends AbstractModel {
 
     /**
     * 对象类型：CLB:负载均衡器，TSE:云原生网关
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -138,7 +137,6 @@ public class ClbObject extends AbstractModel {
 
     /**
     * 对象地域
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Region")
     @Expose
@@ -146,7 +144,6 @@ public class ClbObject extends AbstractModel {
 
     /**
     * 代理状态: 0:不开启,1:以XFF的第一个IP地址作为客户端IP,2:以remote_addr作为客户端IP,3:从指定的头部字段获取客户端IP，字段通过IpHeaders字段给出
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Proxy")
     @Expose
@@ -154,7 +151,6 @@ public class ClbObject extends AbstractModel {
 
     /**
     * 指定获取客户端IP的头部字段列表。IsCdn为3时有效
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IpHeaders")
     @Expose
@@ -162,7 +158,6 @@ public class ClbObject extends AbstractModel {
 
     /**
     * bot防护开关
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BotStatus")
     @Expose
@@ -170,7 +165,6 @@ public class ClbObject extends AbstractModel {
 
     /**
     * api防护开关
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApiStatus")
     @Expose
@@ -178,7 +172,6 @@ public class ClbObject extends AbstractModel {
 
     /**
     * 对象接入模式，0表示镜像模式，1表示清洗模式，2表示体检模式，默认为清洗模式
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ObjectFlowMode")
     @Expose
@@ -186,7 +179,6 @@ public class ClbObject extends AbstractModel {
 
     /**
     * 数值形式的私有网络 ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NumericalVpcId")
     @Expose
@@ -433,10 +425,8 @@ public class ClbObject extends AbstractModel {
     }
 
     /**
-     * Get 对象类型：CLB:负载均衡器，TSE:云原生网关
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 对象类型：CLB:负载均衡器，TSE:云原生网关 
      * @return Type 对象类型：CLB:负载均衡器，TSE:云原生网关
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
         return this.Type;
@@ -444,19 +434,15 @@ public class ClbObject extends AbstractModel {
 
     /**
      * Set 对象类型：CLB:负载均衡器，TSE:云原生网关
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 对象类型：CLB:负载均衡器，TSE:云原生网关
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 对象地域
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 对象地域 
      * @return Region 对象地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegion() {
         return this.Region;
@@ -464,19 +450,15 @@ public class ClbObject extends AbstractModel {
 
     /**
      * Set 对象地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Region 对象地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get 代理状态: 0:不开启,1:以XFF的第一个IP地址作为客户端IP,2:以remote_addr作为客户端IP,3:从指定的头部字段获取客户端IP，字段通过IpHeaders字段给出
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 代理状态: 0:不开启,1:以XFF的第一个IP地址作为客户端IP,2:以remote_addr作为客户端IP,3:从指定的头部字段获取客户端IP，字段通过IpHeaders字段给出 
      * @return Proxy 代理状态: 0:不开启,1:以XFF的第一个IP地址作为客户端IP,2:以remote_addr作为客户端IP,3:从指定的头部字段获取客户端IP，字段通过IpHeaders字段给出
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getProxy() {
         return this.Proxy;
@@ -484,19 +466,15 @@ public class ClbObject extends AbstractModel {
 
     /**
      * Set 代理状态: 0:不开启,1:以XFF的第一个IP地址作为客户端IP,2:以remote_addr作为客户端IP,3:从指定的头部字段获取客户端IP，字段通过IpHeaders字段给出
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Proxy 代理状态: 0:不开启,1:以XFF的第一个IP地址作为客户端IP,2:以remote_addr作为客户端IP,3:从指定的头部字段获取客户端IP，字段通过IpHeaders字段给出
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProxy(Long Proxy) {
         this.Proxy = Proxy;
     }
 
     /**
-     * Get 指定获取客户端IP的头部字段列表。IsCdn为3时有效
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 指定获取客户端IP的头部字段列表。IsCdn为3时有效 
      * @return IpHeaders 指定获取客户端IP的头部字段列表。IsCdn为3时有效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getIpHeaders() {
         return this.IpHeaders;
@@ -504,19 +482,15 @@ public class ClbObject extends AbstractModel {
 
     /**
      * Set 指定获取客户端IP的头部字段列表。IsCdn为3时有效
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IpHeaders 指定获取客户端IP的头部字段列表。IsCdn为3时有效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIpHeaders(String [] IpHeaders) {
         this.IpHeaders = IpHeaders;
     }
 
     /**
-     * Get bot防护开关
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get bot防护开关 
      * @return BotStatus bot防护开关
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBotStatus() {
         return this.BotStatus;
@@ -524,19 +498,15 @@ public class ClbObject extends AbstractModel {
 
     /**
      * Set bot防护开关
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BotStatus bot防护开关
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBotStatus(Long BotStatus) {
         this.BotStatus = BotStatus;
     }
 
     /**
-     * Get api防护开关
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get api防护开关 
      * @return ApiStatus api防护开关
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getApiStatus() {
         return this.ApiStatus;
@@ -544,19 +514,15 @@ public class ClbObject extends AbstractModel {
 
     /**
      * Set api防护开关
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApiStatus api防护开关
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApiStatus(Long ApiStatus) {
         this.ApiStatus = ApiStatus;
     }
 
     /**
-     * Get 对象接入模式，0表示镜像模式，1表示清洗模式，2表示体检模式，默认为清洗模式
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 对象接入模式，0表示镜像模式，1表示清洗模式，2表示体检模式，默认为清洗模式 
      * @return ObjectFlowMode 对象接入模式，0表示镜像模式，1表示清洗模式，2表示体检模式，默认为清洗模式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getObjectFlowMode() {
         return this.ObjectFlowMode;
@@ -564,19 +530,15 @@ public class ClbObject extends AbstractModel {
 
     /**
      * Set 对象接入模式，0表示镜像模式，1表示清洗模式，2表示体检模式，默认为清洗模式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ObjectFlowMode 对象接入模式，0表示镜像模式，1表示清洗模式，2表示体检模式，默认为清洗模式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setObjectFlowMode(Long ObjectFlowMode) {
         this.ObjectFlowMode = ObjectFlowMode;
     }
 
     /**
-     * Get 数值形式的私有网络 ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数值形式的私有网络 ID 
      * @return NumericalVpcId 数值形式的私有网络 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getNumericalVpcId() {
         return this.NumericalVpcId;
@@ -584,9 +546,7 @@ public class ClbObject extends AbstractModel {
 
     /**
      * Set 数值形式的私有网络 ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NumericalVpcId 数值形式的私有网络 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNumericalVpcId(Long NumericalVpcId) {
         this.NumericalVpcId = NumericalVpcId;

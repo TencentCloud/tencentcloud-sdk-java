@@ -76,7 +76,6 @@ public class DescribeAntiLeakageItem extends AbstractModel {
 
     /**
     * 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ModifyTime")
     @Expose
@@ -203,10 +202,8 @@ public class DescribeAntiLeakageItem extends AbstractModel {
     }
 
     /**
-     * Get 修改时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 修改时间 
      * @return ModifyTime 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getModifyTime() {
         return this.ModifyTime;
@@ -214,9 +211,7 @@ public class DescribeAntiLeakageItem extends AbstractModel {
 
     /**
      * Set 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ModifyTime 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModifyTime(String ModifyTime) {
         this.ModifyTime = ModifyTime;

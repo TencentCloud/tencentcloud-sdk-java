@@ -32,7 +32,6 @@ public class FwGateway extends AbstractModel {
 
     /**
     * 网关所属vpc id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcId")
     @Expose
@@ -40,7 +39,6 @@ public class FwGateway extends AbstractModel {
 
     /**
     * 网关ip地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IpAddress")
     @Expose
@@ -63,10 +61,8 @@ public class FwGateway extends AbstractModel {
     }
 
     /**
-     * Get 网关所属vpc id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网关所属vpc id 
      * @return VpcId 网关所属vpc id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVpcId() {
         return this.VpcId;
@@ -74,19 +70,15 @@ public class FwGateway extends AbstractModel {
 
     /**
      * Set 网关所属vpc id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VpcId 网关所属vpc id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 网关ip地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网关ip地址 
      * @return IpAddress 网关ip地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIpAddress() {
         return this.IpAddress;
@@ -94,9 +86,7 @@ public class FwGateway extends AbstractModel {
 
     /**
      * Set 网关ip地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IpAddress 网关ip地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIpAddress(String IpAddress) {
         this.IpAddress = IpAddress;

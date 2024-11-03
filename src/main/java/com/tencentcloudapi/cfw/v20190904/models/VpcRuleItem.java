@@ -69,7 +69,6 @@ SMTP/SMTPS
 FTP
 DNS
 TLS/SSL
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Protocol")
     @Expose
@@ -89,7 +88,6 @@ log：观察
     * 访问控制策略的端口。取值：
 -1/-1：全部端口
 80：80端口
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Port")
     @Expose
@@ -160,7 +158,6 @@ log：观察
 
     /**
     * 规则生效的防火墙实例ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FwGroupId")
     @Expose
@@ -168,7 +165,6 @@ log：观察
 
     /**
     * 防火墙名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FwGroupName")
     @Expose
@@ -176,7 +172,6 @@ log：观察
 
     /**
     * beta任务详情
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BetaList")
     @Expose
@@ -184,7 +179,6 @@ log：观察
 
     /**
     * 端口协议组ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ParamTemplateId")
     @Expose
@@ -192,7 +186,6 @@ log：观察
 
     /**
     * 端口协议组名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ParamTemplateName")
     @Expose
@@ -200,7 +193,6 @@ log：观察
 
     /**
     * 访问目的名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TargetName")
     @Expose
@@ -208,7 +200,6 @@ log：观察
 
     /**
     * 访问源名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SourceName")
     @Expose
@@ -216,11 +207,17 @@ log：观察
 
     /**
     * Ip版本，0：IPv4，1：IPv6，默认为IPv4
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IpVersion")
     @Expose
     private Long IpVersion;
+
+    /**
+    * 是否是无效规则，0 表示有效规则，1 表示无效规则，出参场景返回使用
+    */
+    @SerializedName("Invalid")
+    @Expose
+    private Long Invalid;
 
     /**
      * Get 访问源示例：
@@ -312,8 +309,7 @@ SMTPS
 SMTP/SMTPS
 FTP
 DNS
-TLS/SSL
-注意：此字段可能返回 null，表示取不到有效值。 
+TLS/SSL 
      * @return Protocol 协议，可选的值：
 TCP
 UDP
@@ -328,7 +324,6 @@ SMTP/SMTPS
 FTP
 DNS
 TLS/SSL
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProtocol() {
         return this.Protocol;
@@ -349,7 +344,6 @@ SMTP/SMTPS
 FTP
 DNS
 TLS/SSL
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Protocol 协议，可选的值：
 TCP
 UDP
@@ -364,7 +358,6 @@ SMTP/SMTPS
 FTP
 DNS
 TLS/SSL
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
@@ -401,12 +394,10 @@ log：观察
     /**
      * Get 访问控制策略的端口。取值：
 -1/-1：全部端口
-80：80端口
-注意：此字段可能返回 null，表示取不到有效值。 
+80：80端口 
      * @return Port 访问控制策略的端口。取值：
 -1/-1：全部端口
 80：80端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPort() {
         return this.Port;
@@ -416,11 +407,9 @@ log：观察
      * Set 访问控制策略的端口。取值：
 -1/-1：全部端口
 80：80端口
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Port 访问控制策略的端口。取值：
 -1/-1：全部端口
 80：80端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPort(String Port) {
         this.Port = Port;
@@ -571,10 +560,8 @@ log：观察
     }
 
     /**
-     * Get 规则生效的防火墙实例ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则生效的防火墙实例ID 
      * @return FwGroupId 规则生效的防火墙实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFwGroupId() {
         return this.FwGroupId;
@@ -582,19 +569,15 @@ log：观察
 
     /**
      * Set 规则生效的防火墙实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FwGroupId 规则生效的防火墙实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFwGroupId(String FwGroupId) {
         this.FwGroupId = FwGroupId;
     }
 
     /**
-     * Get 防火墙名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 防火墙名称 
      * @return FwGroupName 防火墙名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFwGroupName() {
         return this.FwGroupName;
@@ -602,19 +585,15 @@ log：观察
 
     /**
      * Set 防火墙名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FwGroupName 防火墙名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFwGroupName(String FwGroupName) {
         this.FwGroupName = FwGroupName;
     }
 
     /**
-     * Get beta任务详情
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get beta任务详情 
      * @return BetaList beta任务详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BetaInfoByACL [] getBetaList() {
         return this.BetaList;
@@ -622,19 +601,15 @@ log：观察
 
     /**
      * Set beta任务详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BetaList beta任务详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBetaList(BetaInfoByACL [] BetaList) {
         this.BetaList = BetaList;
     }
 
     /**
-     * Get 端口协议组ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 端口协议组ID 
      * @return ParamTemplateId 端口协议组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getParamTemplateId() {
         return this.ParamTemplateId;
@@ -642,19 +617,15 @@ log：观察
 
     /**
      * Set 端口协议组ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ParamTemplateId 端口协议组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setParamTemplateId(String ParamTemplateId) {
         this.ParamTemplateId = ParamTemplateId;
     }
 
     /**
-     * Get 端口协议组名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 端口协议组名称 
      * @return ParamTemplateName 端口协议组名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getParamTemplateName() {
         return this.ParamTemplateName;
@@ -662,19 +633,15 @@ log：观察
 
     /**
      * Set 端口协议组名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ParamTemplateName 端口协议组名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setParamTemplateName(String ParamTemplateName) {
         this.ParamTemplateName = ParamTemplateName;
     }
 
     /**
-     * Get 访问目的名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 访问目的名称 
      * @return TargetName 访问目的名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTargetName() {
         return this.TargetName;
@@ -682,19 +649,15 @@ log：观察
 
     /**
      * Set 访问目的名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TargetName 访问目的名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTargetName(String TargetName) {
         this.TargetName = TargetName;
     }
 
     /**
-     * Get 访问源名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 访问源名称 
      * @return SourceName 访问源名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSourceName() {
         return this.SourceName;
@@ -702,19 +665,15 @@ log：观察
 
     /**
      * Set 访问源名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SourceName 访问源名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSourceName(String SourceName) {
         this.SourceName = SourceName;
     }
 
     /**
-     * Get Ip版本，0：IPv4，1：IPv6，默认为IPv4
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Ip版本，0：IPv4，1：IPv6，默认为IPv4 
      * @return IpVersion Ip版本，0：IPv4，1：IPv6，默认为IPv4
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIpVersion() {
         return this.IpVersion;
@@ -722,12 +681,26 @@ log：观察
 
     /**
      * Set Ip版本，0：IPv4，1：IPv6，默认为IPv4
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IpVersion Ip版本，0：IPv4，1：IPv6，默认为IPv4
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIpVersion(Long IpVersion) {
         this.IpVersion = IpVersion;
+    }
+
+    /**
+     * Get 是否是无效规则，0 表示有效规则，1 表示无效规则，出参场景返回使用 
+     * @return Invalid 是否是无效规则，0 表示有效规则，1 表示无效规则，出参场景返回使用
+     */
+    public Long getInvalid() {
+        return this.Invalid;
+    }
+
+    /**
+     * Set 是否是无效规则，0 表示有效规则，1 表示无效规则，出参场景返回使用
+     * @param Invalid 是否是无效规则，0 表示有效规则，1 表示无效规则，出参场景返回使用
+     */
+    public void setInvalid(Long Invalid) {
+        this.Invalid = Invalid;
     }
 
     public VpcRuleItem() {
@@ -813,6 +786,9 @@ log：观察
         if (source.IpVersion != null) {
             this.IpVersion = new Long(source.IpVersion);
         }
+        if (source.Invalid != null) {
+            this.Invalid = new Long(source.Invalid);
+        }
     }
 
 
@@ -844,6 +820,7 @@ log：观察
         this.setParamSimple(map, prefix + "TargetName", this.TargetName);
         this.setParamSimple(map, prefix + "SourceName", this.SourceName);
         this.setParamSimple(map, prefix + "IpVersion", this.IpVersion);
+        this.setParamSimple(map, prefix + "Invalid", this.Invalid);
 
     }
 }

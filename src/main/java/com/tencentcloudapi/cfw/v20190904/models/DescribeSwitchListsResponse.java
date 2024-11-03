@@ -46,7 +46,6 @@ public class DescribeSwitchListsResponse extends AbstractModel {
 
     /**
     * 打开个数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OnNum")
     @Expose
@@ -54,7 +53,6 @@ public class DescribeSwitchListsResponse extends AbstractModel {
 
     /**
     * 关闭个数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OffNum")
     @Expose
@@ -116,10 +114,8 @@ public class DescribeSwitchListsResponse extends AbstractModel {
     }
 
     /**
-     * Get 打开个数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 打开个数 
      * @return OnNum 打开个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getOnNum() {
         return this.OnNum;
@@ -127,19 +123,15 @@ public class DescribeSwitchListsResponse extends AbstractModel {
 
     /**
      * Set 打开个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OnNum 打开个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOnNum(Long OnNum) {
         this.OnNum = OnNum;
     }
 
     /**
-     * Get 关闭个数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 关闭个数 
      * @return OffNum 关闭个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getOffNum() {
         return this.OffNum;
@@ -147,9 +139,7 @@ public class DescribeSwitchListsResponse extends AbstractModel {
 
     /**
      * Set 关闭个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OffNum 关闭个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOffNum(Long OffNum) {
         this.OffNum = OffNum;

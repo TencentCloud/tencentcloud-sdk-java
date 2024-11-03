@@ -53,7 +53,6 @@ public class VULRiskAdvanceCFGList extends AbstractModel {
 
     /**
     * 是否启用，1-启用，0-禁用
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Enable")
     @Expose
@@ -75,7 +74,6 @@ public class VULRiskAdvanceCFGList extends AbstractModel {
 
     /**
     * CVE
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CVE")
     @Expose
@@ -90,7 +88,6 @@ public class VULRiskAdvanceCFGList extends AbstractModel {
 
     /**
     * 修复方式
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FixMethod")
     @Expose
@@ -98,7 +95,6 @@ public class VULRiskAdvanceCFGList extends AbstractModel {
 
     /**
     * 披露时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReleaseTime")
     @Expose
@@ -106,7 +102,6 @@ public class VULRiskAdvanceCFGList extends AbstractModel {
 
     /**
     * 应急漏洞类型，1-应急漏洞，0-非应急漏洞
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EMGCVulType")
     @Expose
@@ -114,7 +109,6 @@ public class VULRiskAdvanceCFGList extends AbstractModel {
 
     /**
     * 漏洞描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VULDescribe")
     @Expose
@@ -122,7 +116,6 @@ public class VULRiskAdvanceCFGList extends AbstractModel {
 
     /**
     * 影响组件
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ImpactComponent")
     @Expose
@@ -130,7 +123,6 @@ public class VULRiskAdvanceCFGList extends AbstractModel {
 
     /**
     * 漏洞Payload
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Payload")
     @Expose
@@ -138,7 +130,6 @@ public class VULRiskAdvanceCFGList extends AbstractModel {
 
     /**
     * 技术参考
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("References")
     @Expose
@@ -146,7 +137,6 @@ public class VULRiskAdvanceCFGList extends AbstractModel {
 
     /**
     * cvss评分
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CVSS")
     @Expose
@@ -154,7 +144,6 @@ public class VULRiskAdvanceCFGList extends AbstractModel {
 
     /**
     * 攻击热度
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AttackHeat")
     @Expose
@@ -162,7 +151,6 @@ public class VULRiskAdvanceCFGList extends AbstractModel {
 
     /**
     * 安全产品支持情况
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ServiceSupport")
     @Expose
@@ -170,7 +158,6 @@ public class VULRiskAdvanceCFGList extends AbstractModel {
 
     /**
     * 最新检测时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RecentScanTime")
     @Expose
@@ -241,10 +228,8 @@ public class VULRiskAdvanceCFGList extends AbstractModel {
     }
 
     /**
-     * Get 是否启用，1-启用，0-禁用
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否启用，1-启用，0-禁用 
      * @return Enable 是否启用，1-启用，0-禁用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getEnable() {
         return this.Enable;
@@ -252,9 +237,7 @@ public class VULRiskAdvanceCFGList extends AbstractModel {
 
     /**
      * Set 是否启用，1-启用，0-禁用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Enable 是否启用，1-启用，0-禁用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnable(Long Enable) {
         this.Enable = Enable;
@@ -293,10 +276,8 @@ public class VULRiskAdvanceCFGList extends AbstractModel {
     }
 
     /**
-     * Get CVE
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get CVE 
      * @return CVE CVE
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCVE() {
         return this.CVE;
@@ -304,9 +285,7 @@ public class VULRiskAdvanceCFGList extends AbstractModel {
 
     /**
      * Set CVE
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CVE CVE
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCVE(String CVE) {
         this.CVE = CVE;
@@ -329,10 +308,8 @@ public class VULRiskAdvanceCFGList extends AbstractModel {
     }
 
     /**
-     * Get 修复方式
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 修复方式 
      * @return FixMethod 修复方式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getFixMethod() {
         return this.FixMethod;
@@ -340,19 +317,15 @@ public class VULRiskAdvanceCFGList extends AbstractModel {
 
     /**
      * Set 修复方式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FixMethod 修复方式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFixMethod(String [] FixMethod) {
         this.FixMethod = FixMethod;
     }
 
     /**
-     * Get 披露时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 披露时间 
      * @return ReleaseTime 披露时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getReleaseTime() {
         return this.ReleaseTime;
@@ -360,19 +333,15 @@ public class VULRiskAdvanceCFGList extends AbstractModel {
 
     /**
      * Set 披露时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReleaseTime 披露时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReleaseTime(String ReleaseTime) {
         this.ReleaseTime = ReleaseTime;
     }
 
     /**
-     * Get 应急漏洞类型，1-应急漏洞，0-非应急漏洞
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 应急漏洞类型，1-应急漏洞，0-非应急漏洞 
      * @return EMGCVulType 应急漏洞类型，1-应急漏洞，0-非应急漏洞
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getEMGCVulType() {
         return this.EMGCVulType;
@@ -380,19 +349,15 @@ public class VULRiskAdvanceCFGList extends AbstractModel {
 
     /**
      * Set 应急漏洞类型，1-应急漏洞，0-非应急漏洞
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EMGCVulType 应急漏洞类型，1-应急漏洞，0-非应急漏洞
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEMGCVulType(Long EMGCVulType) {
         this.EMGCVulType = EMGCVulType;
     }
 
     /**
-     * Get 漏洞描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 漏洞描述 
      * @return VULDescribe 漏洞描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVULDescribe() {
         return this.VULDescribe;
@@ -400,19 +365,15 @@ public class VULRiskAdvanceCFGList extends AbstractModel {
 
     /**
      * Set 漏洞描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VULDescribe 漏洞描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVULDescribe(String VULDescribe) {
         this.VULDescribe = VULDescribe;
     }
 
     /**
-     * Get 影响组件
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 影响组件 
      * @return ImpactComponent 影响组件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getImpactComponent() {
         return this.ImpactComponent;
@@ -420,19 +381,15 @@ public class VULRiskAdvanceCFGList extends AbstractModel {
 
     /**
      * Set 影响组件
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ImpactComponent 影响组件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setImpactComponent(String ImpactComponent) {
         this.ImpactComponent = ImpactComponent;
     }
 
     /**
-     * Get 漏洞Payload
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 漏洞Payload 
      * @return Payload 漏洞Payload
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPayload() {
         return this.Payload;
@@ -440,19 +397,15 @@ public class VULRiskAdvanceCFGList extends AbstractModel {
 
     /**
      * Set 漏洞Payload
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Payload 漏洞Payload
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPayload(String Payload) {
         this.Payload = Payload;
     }
 
     /**
-     * Get 技术参考
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 技术参考 
      * @return References 技术参考
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getReferences() {
         return this.References;
@@ -460,19 +413,15 @@ public class VULRiskAdvanceCFGList extends AbstractModel {
 
     /**
      * Set 技术参考
-注意：此字段可能返回 null，表示取不到有效值。
      * @param References 技术参考
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReferences(String References) {
         this.References = References;
     }
 
     /**
-     * Get cvss评分
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get cvss评分 
      * @return CVSS cvss评分
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCVSS() {
         return this.CVSS;
@@ -480,19 +429,15 @@ public class VULRiskAdvanceCFGList extends AbstractModel {
 
     /**
      * Set cvss评分
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CVSS cvss评分
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCVSS(String CVSS) {
         this.CVSS = CVSS;
     }
 
     /**
-     * Get 攻击热度
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 攻击热度 
      * @return AttackHeat 攻击热度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAttackHeat() {
         return this.AttackHeat;
@@ -500,19 +445,15 @@ public class VULRiskAdvanceCFGList extends AbstractModel {
 
     /**
      * Set 攻击热度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AttackHeat 攻击热度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAttackHeat(String AttackHeat) {
         this.AttackHeat = AttackHeat;
     }
 
     /**
-     * Get 安全产品支持情况
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 安全产品支持情况 
      * @return ServiceSupport 安全产品支持情况
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ServiceSupport [] getServiceSupport() {
         return this.ServiceSupport;
@@ -520,19 +461,15 @@ public class VULRiskAdvanceCFGList extends AbstractModel {
 
     /**
      * Set 安全产品支持情况
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ServiceSupport 安全产品支持情况
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setServiceSupport(ServiceSupport [] ServiceSupport) {
         this.ServiceSupport = ServiceSupport;
     }
 
     /**
-     * Get 最新检测时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最新检测时间 
      * @return RecentScanTime 最新检测时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRecentScanTime() {
         return this.RecentScanTime;
@@ -540,9 +477,7 @@ public class VULRiskAdvanceCFGList extends AbstractModel {
 
     /**
      * Set 最新检测时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RecentScanTime 最新检测时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRecentScanTime(String RecentScanTime) {
         this.RecentScanTime = RecentScanTime;

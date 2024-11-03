@@ -66,7 +66,7 @@ public class AddCustomWhiteRuleRequest extends AbstractModel {
     private String Bypass;
 
     /**
-    * 定时任务类型
+    * 规则执行的方式，TimedJob为定时执行，CronJob为周期执行
     */
     @SerializedName("JobType")
     @Expose
@@ -176,16 +176,16 @@ public class AddCustomWhiteRuleRequest extends AbstractModel {
     }
 
     /**
-     * Get 定时任务类型 
-     * @return JobType 定时任务类型
+     * Get 规则执行的方式，TimedJob为定时执行，CronJob为周期执行 
+     * @return JobType 规则执行的方式，TimedJob为定时执行，CronJob为周期执行
      */
     public String getJobType() {
         return this.JobType;
     }
 
     /**
-     * Set 定时任务类型
-     * @param JobType 定时任务类型
+     * Set 规则执行的方式，TimedJob为定时执行，CronJob为周期执行
+     * @param JobType 规则执行的方式，TimedJob为定时执行，CronJob为周期执行
      */
     public void setJobType(String JobType) {
         this.JobType = JobType;

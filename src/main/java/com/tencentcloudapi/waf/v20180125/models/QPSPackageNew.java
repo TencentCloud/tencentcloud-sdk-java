@@ -25,7 +25,6 @@ public class QPSPackageNew extends AbstractModel {
 
     /**
     * 资源ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceIds")
     @Expose
@@ -33,7 +32,6 @@ public class QPSPackageNew extends AbstractModel {
 
     /**
     * 过期时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ValidTime")
     @Expose
@@ -41,7 +39,6 @@ public class QPSPackageNew extends AbstractModel {
 
     /**
     * 是否自动续费，1：自动续费，0：不自动续费
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RenewFlag")
     @Expose
@@ -49,7 +46,6 @@ public class QPSPackageNew extends AbstractModel {
 
     /**
     * 套餐购买个数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Count")
     @Expose
@@ -57,7 +53,6 @@ public class QPSPackageNew extends AbstractModel {
 
     /**
     * 套餐购买地域，clb-waf暂时没有用到
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Region")
     @Expose
@@ -65,17 +60,14 @@ public class QPSPackageNew extends AbstractModel {
 
     /**
     * 计费项
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BillingItem")
     @Expose
     private String BillingItem;
 
     /**
-     * Get 资源ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源ID 
      * @return ResourceIds 资源ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceIds() {
         return this.ResourceIds;
@@ -83,19 +75,15 @@ public class QPSPackageNew extends AbstractModel {
 
     /**
      * Set 资源ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceIds 资源ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceIds(String ResourceIds) {
         this.ResourceIds = ResourceIds;
     }
 
     /**
-     * Get 过期时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 过期时间 
      * @return ValidTime 过期时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getValidTime() {
         return this.ValidTime;
@@ -103,19 +91,15 @@ public class QPSPackageNew extends AbstractModel {
 
     /**
      * Set 过期时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ValidTime 过期时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValidTime(String ValidTime) {
         this.ValidTime = ValidTime;
     }
 
     /**
-     * Get 是否自动续费，1：自动续费，0：不自动续费
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否自动续费，1：自动续费，0：不自动续费 
      * @return RenewFlag 是否自动续费，1：自动续费，0：不自动续费
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRenewFlag() {
         return this.RenewFlag;
@@ -123,19 +107,15 @@ public class QPSPackageNew extends AbstractModel {
 
     /**
      * Set 是否自动续费，1：自动续费，0：不自动续费
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RenewFlag 是否自动续费，1：自动续费，0：不自动续费
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRenewFlag(Long RenewFlag) {
         this.RenewFlag = RenewFlag;
     }
 
     /**
-     * Get 套餐购买个数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 套餐购买个数 
      * @return Count 套餐购买个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCount() {
         return this.Count;
@@ -143,19 +123,15 @@ public class QPSPackageNew extends AbstractModel {
 
     /**
      * Set 套餐购买个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Count 套餐购买个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCount(Long Count) {
         this.Count = Count;
     }
 
     /**
-     * Get 套餐购买地域，clb-waf暂时没有用到
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 套餐购买地域，clb-waf暂时没有用到 
      * @return Region 套餐购买地域，clb-waf暂时没有用到
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegion() {
         return this.Region;
@@ -163,19 +139,15 @@ public class QPSPackageNew extends AbstractModel {
 
     /**
      * Set 套餐购买地域，clb-waf暂时没有用到
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Region 套餐购买地域，clb-waf暂时没有用到
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get 计费项
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 计费项 
      * @return BillingItem 计费项
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBillingItem() {
         return this.BillingItem;
@@ -183,9 +155,7 @@ public class QPSPackageNew extends AbstractModel {
 
     /**
      * Set 计费项
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BillingItem 计费项
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBillingItem(String BillingItem) {
         this.BillingItem = BillingItem;

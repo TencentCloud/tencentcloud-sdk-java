@@ -31,7 +31,6 @@ instance：资产实例(ins-123456)
 resourcegroup：资产分组(/全部分组/分组1/子分组1)
 tag：资源标签({"Key":"标签key值","Value":"标签Value值"})
 region：地域(ap-gaungzhou)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SourceContent")
     @Expose
@@ -45,7 +44,6 @@ instance：资产实例(ins-123456)
 resourcegroup：资产分组(/全部分组/分组1/子分组1)
 tag：资源标签({"Key":"标签key值","Value":"标签Value值"})
 region：地域(ap-gaungzhou)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DestContent")
     @Expose
@@ -53,7 +51,6 @@ region：地域(ap-gaungzhou)
 
     /**
     * 协议；TCP/UDP/ICMP/ANY
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Protocol")
     @Expose
@@ -61,7 +58,6 @@ region：地域(ap-gaungzhou)
 
     /**
     * 描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
     @Expose
@@ -69,7 +65,6 @@ region：地域(ap-gaungzhou)
 
     /**
     * 规则对应的唯一id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleUuid")
     @Expose
@@ -77,7 +72,6 @@ region：地域(ap-gaungzhou)
 
     /**
     * 规则序号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Sequence")
     @Expose
@@ -90,8 +84,7 @@ template：参数模板(ipm-dyodhpby)
 instance：资产实例(ins-123456)
 resourcegroup：资产分组(/全部分组/分组1/子分组1)
 tag：资源标签({"Key":"标签key值","Value":"标签Value值"})
-region：地域(ap-gaungzhou)
-注意：此字段可能返回 null，表示取不到有效值。 
+region：地域(ap-gaungzhou) 
      * @return SourceContent 访问源示例：
 net：IP/CIDR(192.168.0.2)
 template：参数模板(ipm-dyodhpby)
@@ -99,7 +92,6 @@ instance：资产实例(ins-123456)
 resourcegroup：资产分组(/全部分组/分组1/子分组1)
 tag：资源标签({"Key":"标签key值","Value":"标签Value值"})
 region：地域(ap-gaungzhou)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSourceContent() {
         return this.SourceContent;
@@ -113,7 +105,6 @@ instance：资产实例(ins-123456)
 resourcegroup：资产分组(/全部分组/分组1/子分组1)
 tag：资源标签({"Key":"标签key值","Value":"标签Value值"})
 region：地域(ap-gaungzhou)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SourceContent 访问源示例：
 net：IP/CIDR(192.168.0.2)
 template：参数模板(ipm-dyodhpby)
@@ -121,7 +112,6 @@ instance：资产实例(ins-123456)
 resourcegroup：资产分组(/全部分组/分组1/子分组1)
 tag：资源标签({"Key":"标签key值","Value":"标签Value值"})
 region：地域(ap-gaungzhou)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSourceContent(String SourceContent) {
         this.SourceContent = SourceContent;
@@ -134,8 +124,7 @@ template：参数模板(ipm-dyodhpby)
 instance：资产实例(ins-123456)
 resourcegroup：资产分组(/全部分组/分组1/子分组1)
 tag：资源标签({"Key":"标签key值","Value":"标签Value值"})
-region：地域(ap-gaungzhou)
-注意：此字段可能返回 null，表示取不到有效值。 
+region：地域(ap-gaungzhou) 
      * @return DestContent 访问目的示例：
 net：IP/CIDR(192.168.0.2)
 template：参数模板(ipm-dyodhpby)
@@ -143,7 +132,6 @@ instance：资产实例(ins-123456)
 resourcegroup：资产分组(/全部分组/分组1/子分组1)
 tag：资源标签({"Key":"标签key值","Value":"标签Value值"})
 region：地域(ap-gaungzhou)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDestContent() {
         return this.DestContent;
@@ -157,7 +145,6 @@ instance：资产实例(ins-123456)
 resourcegroup：资产分组(/全部分组/分组1/子分组1)
 tag：资源标签({"Key":"标签key值","Value":"标签Value值"})
 region：地域(ap-gaungzhou)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DestContent 访问目的示例：
 net：IP/CIDR(192.168.0.2)
 template：参数模板(ipm-dyodhpby)
@@ -165,17 +152,14 @@ instance：资产实例(ins-123456)
 resourcegroup：资产分组(/全部分组/分组1/子分组1)
 tag：资源标签({"Key":"标签key值","Value":"标签Value值"})
 region：地域(ap-gaungzhou)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDestContent(String DestContent) {
         this.DestContent = DestContent;
     }
 
     /**
-     * Get 协议；TCP/UDP/ICMP/ANY
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 协议；TCP/UDP/ICMP/ANY 
      * @return Protocol 协议；TCP/UDP/ICMP/ANY
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProtocol() {
         return this.Protocol;
@@ -183,19 +167,15 @@ region：地域(ap-gaungzhou)
 
     /**
      * Set 协议；TCP/UDP/ICMP/ANY
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Protocol 协议；TCP/UDP/ICMP/ANY
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
     }
 
     /**
-     * Get 描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 描述 
      * @return Description 描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
         return this.Description;
@@ -203,19 +183,15 @@ region：地域(ap-gaungzhou)
 
     /**
      * Set 描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Description 描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 规则对应的唯一id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则对应的唯一id 
      * @return RuleUuid 规则对应的唯一id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRuleUuid() {
         return this.RuleUuid;
@@ -223,19 +199,15 @@ region：地域(ap-gaungzhou)
 
     /**
      * Set 规则对应的唯一id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RuleUuid 规则对应的唯一id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleUuid(Long RuleUuid) {
         this.RuleUuid = RuleUuid;
     }
 
     /**
-     * Get 规则序号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则序号 
      * @return Sequence 规则序号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSequence() {
         return this.Sequence;
@@ -243,9 +215,7 @@ region：地域(ap-gaungzhou)
 
     /**
      * Set 规则序号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Sequence 规则序号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSequence(Long Sequence) {
         this.Sequence = Sequence;

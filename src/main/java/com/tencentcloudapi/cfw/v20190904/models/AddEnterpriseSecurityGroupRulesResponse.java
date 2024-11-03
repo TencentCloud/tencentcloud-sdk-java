@@ -31,8 +31,7 @@ public class AddEnterpriseSecurityGroupRulesResponse extends AbstractModel {
     private Long Status;
 
     /**
-    * 规则uuid
-注意：此字段可能返回 null，表示取不到有效值。
+    * 添加成功的规则详情
     */
     @SerializedName("Rules")
     @Expose
@@ -62,20 +61,16 @@ public class AddEnterpriseSecurityGroupRulesResponse extends AbstractModel {
     }
 
     /**
-     * Get 规则uuid
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Rules 规则uuid
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 添加成功的规则详情 
+     * @return Rules 添加成功的规则详情
      */
     public SecurityGroupSimplifyRule [] getRules() {
         return this.Rules;
     }
 
     /**
-     * Set 规则uuid
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Rules 规则uuid
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 添加成功的规则详情
+     * @param Rules 添加成功的规则详情
      */
     public void setRules(SecurityGroupSimplifyRule [] Rules) {
         this.Rules = Rules;

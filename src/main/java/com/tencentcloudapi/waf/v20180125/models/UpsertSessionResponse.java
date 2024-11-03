@@ -33,7 +33,6 @@ public class UpsertSessionResponse extends AbstractModel {
 
     /**
     * SessionID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SessionID")
     @Expose
@@ -67,10 +66,8 @@ public class UpsertSessionResponse extends AbstractModel {
     }
 
     /**
-     * Get SessionID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get SessionID 
      * @return SessionID SessionID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSessionID() {
         return this.SessionID;
@@ -78,9 +75,7 @@ public class UpsertSessionResponse extends AbstractModel {
 
     /**
      * Set SessionID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SessionID SessionID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSessionID(Long SessionID) {
         this.SessionID = SessionID;
