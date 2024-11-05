@@ -129,6 +129,28 @@ public class DnspodClient extends AbstractClient{
     }
 
     /**
+     *创建域名的线路分组
+     * @param req CreateLineGroupRequest
+     * @return CreateLineGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateLineGroupResponse CreateLineGroup(CreateLineGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateLineGroup", CreateLineGroupResponse.class);
+    }
+
+    /**
+     *复制域名的线路分组
+     * @param req CreateLineGroupCopyRequest
+     * @return CreateLineGroupCopyResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateLineGroupCopyResponse CreateLineGroupCopy(CreateLineGroupCopyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateLineGroupCopy", CreateLineGroupCopyResponse.class);
+    }
+
+    /**
      *添加记录
 备注：新添加的解析记录存在短暂的索引延迟，如果查询不到新增记录，请在 30 秒后重试
      * @param req CreateRecordRequest
@@ -227,6 +249,17 @@ public class DnspodClient extends AbstractClient{
     public DeleteDomainCustomLineResponse DeleteDomainCustomLine(DeleteDomainCustomLineRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteDomainCustomLine", DeleteDomainCustomLineResponse.class);
+    }
+
+    /**
+     *删除域名的线路分组
+     * @param req DeleteLineGroupRequest
+     * @return DeleteLineGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteLineGroupResponse DeleteLineGroup(DeleteLineGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteLineGroup", DeleteLineGroupResponse.class);
     }
 
     /**
@@ -438,6 +471,17 @@ public class DnspodClient extends AbstractClient{
     public DescribeDomainWhoisResponse DescribeDomainWhois(DescribeDomainWhoisRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeDomainWhois", DescribeDomainWhoisResponse.class);
+    }
+
+    /**
+     *获取域名的线路分组列表
+     * @param req DescribeLineGroupListRequest
+     * @return DescribeLineGroupListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLineGroupListResponse DescribeLineGroupList(DescribeLineGroupListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLineGroupList", DescribeLineGroupListResponse.class);
     }
 
     /**
@@ -730,6 +774,17 @@ public class DnspodClient extends AbstractClient{
     public ModifyDynamicDNSResponse ModifyDynamicDNS(ModifyDynamicDNSRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyDynamicDNS", ModifyDynamicDNSResponse.class);
+    }
+
+    /**
+     *修改域名的线路分组
+     * @param req ModifyLineGroupRequest
+     * @return ModifyLineGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLineGroupResponse ModifyLineGroup(ModifyLineGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyLineGroup", ModifyLineGroupResponse.class);
     }
 
     /**

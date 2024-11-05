@@ -52,7 +52,7 @@ public class CreateSecretRequest extends AbstractModel {
     private String KmsKeyId;
 
     /**
-    * 凭据类型，默认为自定义凭据。
+    * 凭据类型，默认为0自定义凭据。
     */
     @SerializedName("SecretType")
     @Expose
@@ -151,16 +151,16 @@ public class CreateSecretRequest extends AbstractModel {
     }
 
     /**
-     * Get 凭据类型，默认为自定义凭据。 
-     * @return SecretType 凭据类型，默认为自定义凭据。
+     * Get 凭据类型，默认为0自定义凭据。 
+     * @return SecretType 凭据类型，默认为0自定义凭据。
      */
     public Long getSecretType() {
         return this.SecretType;
     }
 
     /**
-     * Set 凭据类型，默认为自定义凭据。
-     * @param SecretType 凭据类型，默认为自定义凭据。
+     * Set 凭据类型，默认为0自定义凭据。
+     * @param SecretType 凭据类型，默认为0自定义凭据。
      */
     public void setSecretType(Long SecretType) {
         this.SecretType = SecretType;

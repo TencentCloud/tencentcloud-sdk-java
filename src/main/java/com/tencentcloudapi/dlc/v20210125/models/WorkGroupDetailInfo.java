@@ -88,6 +88,14 @@ public class WorkGroupDetailInfo extends AbstractModel {
     private Policys RowFilterInfo;
 
     /**
+    * 数据目录权限集
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CatalogPolicyInfo")
+    @Expose
+    private Policy CatalogPolicyInfo;
+
+    /**
      * Get 工作组Id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return WorkGroupId 工作组Id
@@ -247,6 +255,26 @@ public class WorkGroupDetailInfo extends AbstractModel {
         this.RowFilterInfo = RowFilterInfo;
     }
 
+    /**
+     * Get 数据目录权限集
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CatalogPolicyInfo 数据目录权限集
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Policy getCatalogPolicyInfo() {
+        return this.CatalogPolicyInfo;
+    }
+
+    /**
+     * Set 数据目录权限集
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CatalogPolicyInfo 数据目录权限集
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCatalogPolicyInfo(Policy CatalogPolicyInfo) {
+        this.CatalogPolicyInfo = CatalogPolicyInfo;
+    }
+
     public WorkGroupDetailInfo() {
     }
 
@@ -279,6 +307,9 @@ public class WorkGroupDetailInfo extends AbstractModel {
         if (source.RowFilterInfo != null) {
             this.RowFilterInfo = new Policys(source.RowFilterInfo);
         }
+        if (source.CatalogPolicyInfo != null) {
+            this.CatalogPolicyInfo = new Policy(source.CatalogPolicyInfo);
+        }
     }
 
 
@@ -294,6 +325,7 @@ public class WorkGroupDetailInfo extends AbstractModel {
         this.setParamObj(map, prefix + "EnginePolicyInfo.", this.EnginePolicyInfo);
         this.setParamSimple(map, prefix + "WorkGroupDescription", this.WorkGroupDescription);
         this.setParamObj(map, prefix + "RowFilterInfo.", this.RowFilterInfo);
+        this.setParamObj(map, prefix + "CatalogPolicyInfo.", this.CatalogPolicyInfo);
 
     }
 }

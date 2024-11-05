@@ -136,6 +136,20 @@ public class KeyMetadata extends AbstractModel {
     private String HsmClusterId;
 
     /**
+    * 密钥轮转周期（天）
+    */
+    @SerializedName("RotateDays")
+    @Expose
+    private Long RotateDays;
+
+    /**
+    * 上次乱转时间（Unix timestamp）
+    */
+    @SerializedName("LastRotateTime")
+    @Expose
+    private Long LastRotateTime;
+
+    /**
      * Get CMK的全局唯一标识 
      * @return KeyId CMK的全局唯一标识
      */
@@ -391,6 +405,38 @@ public class KeyMetadata extends AbstractModel {
         this.HsmClusterId = HsmClusterId;
     }
 
+    /**
+     * Get 密钥轮转周期（天） 
+     * @return RotateDays 密钥轮转周期（天）
+     */
+    public Long getRotateDays() {
+        return this.RotateDays;
+    }
+
+    /**
+     * Set 密钥轮转周期（天）
+     * @param RotateDays 密钥轮转周期（天）
+     */
+    public void setRotateDays(Long RotateDays) {
+        this.RotateDays = RotateDays;
+    }
+
+    /**
+     * Get 上次乱转时间（Unix timestamp） 
+     * @return LastRotateTime 上次乱转时间（Unix timestamp）
+     */
+    public Long getLastRotateTime() {
+        return this.LastRotateTime;
+    }
+
+    /**
+     * Set 上次乱转时间（Unix timestamp）
+     * @param LastRotateTime 上次乱转时间（Unix timestamp）
+     */
+    public void setLastRotateTime(Long LastRotateTime) {
+        this.LastRotateTime = LastRotateTime;
+    }
+
     public KeyMetadata() {
     }
 
@@ -447,6 +493,12 @@ public class KeyMetadata extends AbstractModel {
         if (source.HsmClusterId != null) {
             this.HsmClusterId = new String(source.HsmClusterId);
         }
+        if (source.RotateDays != null) {
+            this.RotateDays = new Long(source.RotateDays);
+        }
+        if (source.LastRotateTime != null) {
+            this.LastRotateTime = new Long(source.LastRotateTime);
+        }
     }
 
 
@@ -470,6 +522,8 @@ public class KeyMetadata extends AbstractModel {
         this.setParamSimple(map, prefix + "ValidTo", this.ValidTo);
         this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
         this.setParamSimple(map, prefix + "HsmClusterId", this.HsmClusterId);
+        this.setParamSimple(map, prefix + "RotateDays", this.RotateDays);
+        this.setParamSimple(map, prefix + "LastRotateTime", this.LastRotateTime);
 
     }
 }

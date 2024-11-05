@@ -32,8 +32,6 @@ public class CreateProductSecretResponse extends AbstractModel {
 
     /**
     * 标签操作的返回码. 0: 成功；1: 内部错误；2: 业务处理错误。
-注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TagCode")
     @Expose
@@ -41,7 +39,6 @@ public class CreateProductSecretResponse extends AbstractModel {
 
     /**
     * 标签操作的返回信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TagMsg")
     @Expose
@@ -78,12 +75,8 @@ public class CreateProductSecretResponse extends AbstractModel {
     }
 
     /**
-     * Get 标签操作的返回码. 0: 成功；1: 内部错误；2: 业务处理错误。
-注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标签操作的返回码. 0: 成功；1: 内部错误；2: 业务处理错误。 
      * @return TagCode 标签操作的返回码. 0: 成功；1: 内部错误；2: 业务处理错误。
-注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTagCode() {
         return this.TagCode;
@@ -91,21 +84,15 @@ public class CreateProductSecretResponse extends AbstractModel {
 
     /**
      * Set 标签操作的返回码. 0: 成功；1: 内部错误；2: 业务处理错误。
-注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TagCode 标签操作的返回码. 0: 成功；1: 内部错误；2: 业务处理错误。
-注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTagCode(Long TagCode) {
         this.TagCode = TagCode;
     }
 
     /**
-     * Get 标签操作的返回信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标签操作的返回信息。 
      * @return TagMsg 标签操作的返回信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTagMsg() {
         return this.TagMsg;
@@ -113,9 +100,7 @@ public class CreateProductSecretResponse extends AbstractModel {
 
     /**
      * Set 标签操作的返回信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TagMsg 标签操作的返回信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTagMsg(String TagMsg) {
         this.TagMsg = TagMsg;

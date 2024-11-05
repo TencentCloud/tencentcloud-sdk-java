@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class ListSecretVersionIdsRequest extends AbstractModel {
 
     /**
-    * 凭据名称。
+    * 凭据名称
     */
     @SerializedName("SecretName")
     @Expose
     private String SecretName;
 
     /**
-     * Get 凭据名称。 
-     * @return SecretName 凭据名称。
+     * Get 凭据名称 
+     * @return SecretName 凭据名称
      */
     public String getSecretName() {
         return this.SecretName;
     }
 
     /**
-     * Set 凭据名称。
-     * @param SecretName 凭据名称。
+     * Set 凭据名称
+     * @param SecretName 凭据名称
      */
     public void setSecretName(String SecretName) {
         this.SecretName = SecretName;

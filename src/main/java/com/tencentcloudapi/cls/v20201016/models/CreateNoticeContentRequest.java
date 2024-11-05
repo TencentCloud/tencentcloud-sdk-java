@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class CreateNoticeContentRequest extends AbstractModel {
 
     /**
-    * 模版名称。
+    * 模板名称。
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 模版内容语言。0：中文1：英文
+    * 模板内容语言。0：中文1：英文
     */
     @SerializedName("Type")
     @Expose
     private Long Type;
 
     /**
-    * 模版详细配置。
+    * 模板详细配置。
     */
     @SerializedName("NoticeContents")
     @Expose
     private NoticeContent [] NoticeContents;
 
     /**
-     * Get 模版名称。 
-     * @return Name 模版名称。
+     * Get 模板名称。 
+     * @return Name 模板名称。
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 模版名称。
-     * @param Name 模版名称。
+     * Set 模板名称。
+     * @param Name 模板名称。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 模版内容语言。0：中文1：英文 
-     * @return Type 模版内容语言。0：中文1：英文
+     * Get 模板内容语言。0：中文1：英文 
+     * @return Type 模板内容语言。0：中文1：英文
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set 模版内容语言。0：中文1：英文
-     * @param Type 模版内容语言。0：中文1：英文
+     * Set 模板内容语言。0：中文1：英文
+     * @param Type 模板内容语言。0：中文1：英文
      */
     public void setType(Long Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 模版详细配置。 
-     * @return NoticeContents 模版详细配置。
+     * Get 模板详细配置。 
+     * @return NoticeContents 模板详细配置。
      */
     public NoticeContent [] getNoticeContents() {
         return this.NoticeContents;
     }
 
     /**
-     * Set 模版详细配置。
-     * @param NoticeContents 模版详细配置。
+     * Set 模板详细配置。
+     * @param NoticeContents 模板详细配置。
      */
     public void setNoticeContents(NoticeContent [] NoticeContents) {
         this.NoticeContents = NoticeContents;

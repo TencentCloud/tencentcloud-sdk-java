@@ -159,6 +159,20 @@ public class ModifyApmInstanceRequest extends AbstractModel {
     private Long ResponseDurationWarningThreshold;
 
     /**
+    * 是否关联dashboard： 0 关 1 开
+    */
+    @SerializedName("IsRelatedDashboard")
+    @Expose
+    private Long IsRelatedDashboard;
+
+    /**
+    * dashboard ID
+    */
+    @SerializedName("DashboardTopicID")
+    @Expose
+    private String DashboardTopicID;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -470,6 +484,38 @@ public class ModifyApmInstanceRequest extends AbstractModel {
         this.ResponseDurationWarningThreshold = ResponseDurationWarningThreshold;
     }
 
+    /**
+     * Get 是否关联dashboard： 0 关 1 开 
+     * @return IsRelatedDashboard 是否关联dashboard： 0 关 1 开
+     */
+    public Long getIsRelatedDashboard() {
+        return this.IsRelatedDashboard;
+    }
+
+    /**
+     * Set 是否关联dashboard： 0 关 1 开
+     * @param IsRelatedDashboard 是否关联dashboard： 0 关 1 开
+     */
+    public void setIsRelatedDashboard(Long IsRelatedDashboard) {
+        this.IsRelatedDashboard = IsRelatedDashboard;
+    }
+
+    /**
+     * Get dashboard ID 
+     * @return DashboardTopicID dashboard ID
+     */
+    public String getDashboardTopicID() {
+        return this.DashboardTopicID;
+    }
+
+    /**
+     * Set dashboard ID
+     * @param DashboardTopicID dashboard ID
+     */
+    public void setDashboardTopicID(String DashboardTopicID) {
+        this.DashboardTopicID = DashboardTopicID;
+    }
+
     public ModifyApmInstanceRequest() {
     }
 
@@ -541,6 +587,12 @@ public class ModifyApmInstanceRequest extends AbstractModel {
         if (source.ResponseDurationWarningThreshold != null) {
             this.ResponseDurationWarningThreshold = new Long(source.ResponseDurationWarningThreshold);
         }
+        if (source.IsRelatedDashboard != null) {
+            this.IsRelatedDashboard = new Long(source.IsRelatedDashboard);
+        }
+        if (source.DashboardTopicID != null) {
+            this.DashboardTopicID = new String(source.DashboardTopicID);
+        }
     }
 
 
@@ -567,6 +619,8 @@ public class ModifyApmInstanceRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "CustomShowTags.", this.CustomShowTags);
         this.setParamSimple(map, prefix + "PayMode", this.PayMode);
         this.setParamSimple(map, prefix + "ResponseDurationWarningThreshold", this.ResponseDurationWarningThreshold);
+        this.setParamSimple(map, prefix + "IsRelatedDashboard", this.IsRelatedDashboard);
+        this.setParamSimple(map, prefix + "DashboardTopicID", this.DashboardTopicID);
 
     }
 }

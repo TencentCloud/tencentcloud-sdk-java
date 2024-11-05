@@ -33,7 +33,7 @@ Email:邮件;Sms:短信;WeChat:微信;Phone:电话;WeCom:企业微信;DingTalk:�
     private String Type;
 
     /**
-    * 告警触发通知内容模版。
+    * 告警触发通知内容模板。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TriggerContent")
@@ -41,7 +41,7 @@ Email:邮件;Sms:短信;WeChat:微信;Phone:电话;WeCom:企业微信;DingTalk:�
     private NoticeContentInfo TriggerContent;
 
     /**
-    * 告警恢复通知内容模版。
+    * 告警恢复通知内容模板。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RecoveryContent")
@@ -73,9 +73,9 @@ Email:邮件;Sms:短信;WeChat:微信;Phone:电话;WeCom:企业微信;DingTalk:�
     }
 
     /**
-     * Get 告警触发通知内容模版。
+     * Get 告警触发通知内容模板。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TriggerContent 告警触发通知内容模版。
+     * @return TriggerContent 告警触发通知内容模板。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public NoticeContentInfo getTriggerContent() {
@@ -83,9 +83,9 @@ Email:邮件;Sms:短信;WeChat:微信;Phone:电话;WeCom:企业微信;DingTalk:�
     }
 
     /**
-     * Set 告警触发通知内容模版。
+     * Set 告警触发通知内容模板。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TriggerContent 告警触发通知内容模版。
+     * @param TriggerContent 告警触发通知内容模板。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTriggerContent(NoticeContentInfo TriggerContent) {
@@ -93,9 +93,9 @@ Email:邮件;Sms:短信;WeChat:微信;Phone:电话;WeCom:企业微信;DingTalk:�
     }
 
     /**
-     * Get 告警恢复通知内容模版。
+     * Get 告警恢复通知内容模板。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RecoveryContent 告警恢复通知内容模版。
+     * @return RecoveryContent 告警恢复通知内容模板。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public NoticeContentInfo getRecoveryContent() {
@@ -103,9 +103,9 @@ Email:邮件;Sms:短信;WeChat:微信;Phone:电话;WeCom:企业微信;DingTalk:�
     }
 
     /**
-     * Set 告警恢复通知内容模版。
+     * Set 告警恢复通知内容模板。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RecoveryContent 告警恢复通知内容模版。
+     * @param RecoveryContent 告警恢复通知内容模板。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRecoveryContent(NoticeContentInfo RecoveryContent) {

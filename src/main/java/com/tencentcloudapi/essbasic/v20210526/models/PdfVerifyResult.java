@@ -72,9 +72,7 @@ public class PdfVerifyResult extends AbstractModel {
     private String SignAlgorithm;
 
     /**
-    * CA供应商下发给用户的证书编号
-
-注意：`腾讯电子签接入多家CA供应商以提供容灾能力，不同CA下发的证书编号区别较大，但基本都是由数字和字母组成，长度在200以下`。
+    * 在数字证书申请过程中，系统会自动生成一个独一无二的序列号。
     */
     @SerializedName("CertSn")
     @Expose
@@ -271,24 +269,16 @@ public class PdfVerifyResult extends AbstractModel {
     }
 
     /**
-     * Get CA供应商下发给用户的证书编号
-
-注意：`腾讯电子签接入多家CA供应商以提供容灾能力，不同CA下发的证书编号区别较大，但基本都是由数字和字母组成，长度在200以下`。 
-     * @return CertSn CA供应商下发给用户的证书编号
-
-注意：`腾讯电子签接入多家CA供应商以提供容灾能力，不同CA下发的证书编号区别较大，但基本都是由数字和字母组成，长度在200以下`。
+     * Get 在数字证书申请过程中，系统会自动生成一个独一无二的序列号。 
+     * @return CertSn 在数字证书申请过程中，系统会自动生成一个独一无二的序列号。
      */
     public String getCertSn() {
         return this.CertSn;
     }
 
     /**
-     * Set CA供应商下发给用户的证书编号
-
-注意：`腾讯电子签接入多家CA供应商以提供容灾能力，不同CA下发的证书编号区别较大，但基本都是由数字和字母组成，长度在200以下`。
-     * @param CertSn CA供应商下发给用户的证书编号
-
-注意：`腾讯电子签接入多家CA供应商以提供容灾能力，不同CA下发的证书编号区别较大，但基本都是由数字和字母组成，长度在200以下`。
+     * Set 在数字证书申请过程中，系统会自动生成一个独一无二的序列号。
+     * @param CertSn 在数字证书申请过程中，系统会自动生成一个独一无二的序列号。
      */
     public void setCertSn(String CertSn) {
         this.CertSn = CertSn;

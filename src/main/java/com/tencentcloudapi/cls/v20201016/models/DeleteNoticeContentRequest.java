@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DeleteNoticeContentRequest extends AbstractModel {
 
     /**
-    * 通知内容模版ID
+    * 通知内容模板ID
     */
     @SerializedName("NoticeContentId")
     @Expose
     private String NoticeContentId;
 
     /**
-     * Get 通知内容模版ID 
-     * @return NoticeContentId 通知内容模版ID
+     * Get 通知内容模板ID 
+     * @return NoticeContentId 通知内容模板ID
      */
     public String getNoticeContentId() {
         return this.NoticeContentId;
     }
 
     /**
-     * Set 通知内容模版ID
-     * @param NoticeContentId 通知内容模版ID
+     * Set 通知内容模板ID
+     * @param NoticeContentId 通知内容模板ID
      */
     public void setNoticeContentId(String NoticeContentId) {
         this.NoticeContentId = NoticeContentId;

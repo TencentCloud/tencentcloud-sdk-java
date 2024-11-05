@@ -31,7 +31,7 @@ public class AccelerationDomainCertificate extends AbstractModel {
     private String Mode;
 
     /**
-    * 服务端证书列表。
+    * 服务端证书列表，相关证书部署在 EO 的入口侧。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("List")
@@ -39,11 +39,18 @@ public class AccelerationDomainCertificate extends AbstractModel {
     private CertificateInfo [] List;
 
     /**
-    * 边缘双向认证配置。
+    * 在边缘双向认证场景下，该字段为客户端的 CA 证书，部署在 EO 节点内，用于 EO 节点认证客户端证书。
     */
     @SerializedName("ClientCertInfo")
     @Expose
     private MutualTLS ClientCertInfo;
+
+    /**
+    * 用于 EO 节点回源时携带的证书，源站启用双向认证握手时使用，用于源站认证客户端证书是否有效，确保请求来源于受信任的 EO 节点。
+    */
+    @SerializedName("UpstreamCertInfo")
+    @Expose
+    private UpstreamCertInfo UpstreamCertInfo;
 
     /**
      * Get 配置证书的模式，取值有： <li>disable：不配置证书；</li> <li>eofreecert：配置 EdgeOne 免费证书；</li> <li>sslcert：配置 SSL 证书。</li> 
@@ -62,9 +69,9 @@ public class AccelerationDomainCertificate extends AbstractModel {
     }
 
     /**
-     * Get 服务端证书列表。
+     * Get 服务端证书列表，相关证书部署在 EO 的入口侧。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return List 服务端证书列表。
+     * @return List 服务端证书列表，相关证书部署在 EO 的入口侧。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public CertificateInfo [] getList() {
@@ -72,9 +79,9 @@ public class AccelerationDomainCertificate extends AbstractModel {
     }
 
     /**
-     * Set 服务端证书列表。
+     * Set 服务端证书列表，相关证书部署在 EO 的入口侧。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param List 服务端证书列表。
+     * @param List 服务端证书列表，相关证书部署在 EO 的入口侧。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setList(CertificateInfo [] List) {
@@ -82,19 +89,35 @@ public class AccelerationDomainCertificate extends AbstractModel {
     }
 
     /**
-     * Get 边缘双向认证配置。 
-     * @return ClientCertInfo 边缘双向认证配置。
+     * Get 在边缘双向认证场景下，该字段为客户端的 CA 证书，部署在 EO 节点内，用于 EO 节点认证客户端证书。 
+     * @return ClientCertInfo 在边缘双向认证场景下，该字段为客户端的 CA 证书，部署在 EO 节点内，用于 EO 节点认证客户端证书。
      */
     public MutualTLS getClientCertInfo() {
         return this.ClientCertInfo;
     }
 
     /**
-     * Set 边缘双向认证配置。
-     * @param ClientCertInfo 边缘双向认证配置。
+     * Set 在边缘双向认证场景下，该字段为客户端的 CA 证书，部署在 EO 节点内，用于 EO 节点认证客户端证书。
+     * @param ClientCertInfo 在边缘双向认证场景下，该字段为客户端的 CA 证书，部署在 EO 节点内，用于 EO 节点认证客户端证书。
      */
     public void setClientCertInfo(MutualTLS ClientCertInfo) {
         this.ClientCertInfo = ClientCertInfo;
+    }
+
+    /**
+     * Get 用于 EO 节点回源时携带的证书，源站启用双向认证握手时使用，用于源站认证客户端证书是否有效，确保请求来源于受信任的 EO 节点。 
+     * @return UpstreamCertInfo 用于 EO 节点回源时携带的证书，源站启用双向认证握手时使用，用于源站认证客户端证书是否有效，确保请求来源于受信任的 EO 节点。
+     */
+    public UpstreamCertInfo getUpstreamCertInfo() {
+        return this.UpstreamCertInfo;
+    }
+
+    /**
+     * Set 用于 EO 节点回源时携带的证书，源站启用双向认证握手时使用，用于源站认证客户端证书是否有效，确保请求来源于受信任的 EO 节点。
+     * @param UpstreamCertInfo 用于 EO 节点回源时携带的证书，源站启用双向认证握手时使用，用于源站认证客户端证书是否有效，确保请求来源于受信任的 EO 节点。
+     */
+    public void setUpstreamCertInfo(UpstreamCertInfo UpstreamCertInfo) {
+        this.UpstreamCertInfo = UpstreamCertInfo;
     }
 
     public AccelerationDomainCertificate() {
@@ -117,6 +140,9 @@ public class AccelerationDomainCertificate extends AbstractModel {
         if (source.ClientCertInfo != null) {
             this.ClientCertInfo = new MutualTLS(source.ClientCertInfo);
         }
+        if (source.UpstreamCertInfo != null) {
+            this.UpstreamCertInfo = new UpstreamCertInfo(source.UpstreamCertInfo);
+        }
     }
 
 
@@ -127,6 +153,7 @@ public class AccelerationDomainCertificate extends AbstractModel {
         this.setParamSimple(map, prefix + "Mode", this.Mode);
         this.setParamArrayObj(map, prefix + "List.", this.List);
         this.setParamObj(map, prefix + "ClientCertInfo.", this.ClientCertInfo);
+        this.setParamObj(map, prefix + "UpstreamCertInfo.", this.UpstreamCertInfo);
 
     }
 }

@@ -81,7 +81,6 @@ public class SecretMetadata extends AbstractModel {
 
     /**
     * 1:--开启轮转；0--禁止轮转
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RotationStatus")
     @Expose
@@ -89,7 +88,6 @@ public class SecretMetadata extends AbstractModel {
 
     /**
     * 下一次轮转开始时间，uinx 时间戳
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NextRotationTime")
     @Expose
@@ -101,7 +99,6 @@ public class SecretMetadata extends AbstractModel {
 2 -- SSH密钥对凭据；
 3 -- 云API密钥对凭据；
 4 -- Redis类型凭据；
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SecretType")
     @Expose
@@ -109,7 +106,6 @@ public class SecretMetadata extends AbstractModel {
 
     /**
     * 云产品名称，仅在SecretType为1，即凭据类型为云产品凭据时生效
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProductName")
     @Expose
@@ -117,7 +113,6 @@ public class SecretMetadata extends AbstractModel {
 
     /**
     * 当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对凭据的名称。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceName")
     @Expose
@@ -125,7 +120,6 @@ public class SecretMetadata extends AbstractModel {
 
     /**
     * 当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对所属的项目ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProjectID")
     @Expose
@@ -141,7 +135,6 @@ public class SecretMetadata extends AbstractModel {
 
     /**
     * 当凭据类型为云API密钥对凭据时，此字段有效，用于表示云API密钥对所属的用户UIN。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TargetUin")
     @Expose
@@ -149,7 +142,6 @@ public class SecretMetadata extends AbstractModel {
 
     /**
     * 轮转的频率，以天作为单位，在轮转开启状态下生效。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RotationFrequency")
     @Expose
@@ -157,7 +149,6 @@ public class SecretMetadata extends AbstractModel {
 
     /**
     * 云产品凭据对应的云产品实例 ID 号。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceID")
     @Expose
@@ -165,7 +156,6 @@ public class SecretMetadata extends AbstractModel {
 
     /**
     * 用户指定的轮转开始时间。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RotationBeginTime")
     @Expose
@@ -300,10 +290,8 @@ public class SecretMetadata extends AbstractModel {
     }
 
     /**
-     * Get 1:--开启轮转；0--禁止轮转
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 1:--开启轮转；0--禁止轮转 
      * @return RotationStatus 1:--开启轮转；0--禁止轮转
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRotationStatus() {
         return this.RotationStatus;
@@ -311,19 +299,15 @@ public class SecretMetadata extends AbstractModel {
 
     /**
      * Set 1:--开启轮转；0--禁止轮转
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RotationStatus 1:--开启轮转；0--禁止轮转
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRotationStatus(Long RotationStatus) {
         this.RotationStatus = RotationStatus;
     }
 
     /**
-     * Get 下一次轮转开始时间，uinx 时间戳
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 下一次轮转开始时间，uinx 时间戳 
      * @return NextRotationTime 下一次轮转开始时间，uinx 时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getNextRotationTime() {
         return this.NextRotationTime;
@@ -331,9 +315,7 @@ public class SecretMetadata extends AbstractModel {
 
     /**
      * Set 下一次轮转开始时间，uinx 时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NextRotationTime 下一次轮转开始时间，uinx 时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNextRotationTime(Long NextRotationTime) {
         this.NextRotationTime = NextRotationTime;
@@ -344,14 +326,12 @@ public class SecretMetadata extends AbstractModel {
 1 -- 云产品凭据；
 2 -- SSH密钥对凭据；
 3 -- 云API密钥对凭据；
-4 -- Redis类型凭据；
-注意：此字段可能返回 null，表示取不到有效值。 
+4 -- Redis类型凭据； 
      * @return SecretType 0 -- 用户自定义凭据；
 1 -- 云产品凭据；
 2 -- SSH密钥对凭据；
 3 -- 云API密钥对凭据；
 4 -- Redis类型凭据；
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSecretType() {
         return this.SecretType;
@@ -363,23 +343,19 @@ public class SecretMetadata extends AbstractModel {
 2 -- SSH密钥对凭据；
 3 -- 云API密钥对凭据；
 4 -- Redis类型凭据；
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SecretType 0 -- 用户自定义凭据；
 1 -- 云产品凭据；
 2 -- SSH密钥对凭据；
 3 -- 云API密钥对凭据；
 4 -- Redis类型凭据；
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSecretType(Long SecretType) {
         this.SecretType = SecretType;
     }
 
     /**
-     * Get 云产品名称，仅在SecretType为1，即凭据类型为云产品凭据时生效
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 云产品名称，仅在SecretType为1，即凭据类型为云产品凭据时生效 
      * @return ProductName 云产品名称，仅在SecretType为1，即凭据类型为云产品凭据时生效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProductName() {
         return this.ProductName;
@@ -387,19 +363,15 @@ public class SecretMetadata extends AbstractModel {
 
     /**
      * Set 云产品名称，仅在SecretType为1，即凭据类型为云产品凭据时生效
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProductName 云产品名称，仅在SecretType为1，即凭据类型为云产品凭据时生效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProductName(String ProductName) {
         this.ProductName = ProductName;
     }
 
     /**
-     * Get 当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对凭据的名称。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对凭据的名称。 
      * @return ResourceName 当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对凭据的名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceName() {
         return this.ResourceName;
@@ -407,19 +379,15 @@ public class SecretMetadata extends AbstractModel {
 
     /**
      * Set 当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对凭据的名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceName 当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对凭据的名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceName(String ResourceName) {
         this.ResourceName = ResourceName;
     }
 
     /**
-     * Get 当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对所属的项目ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对所属的项目ID。 
      * @return ProjectID 当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对所属的项目ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getProjectID() {
         return this.ProjectID;
@@ -427,9 +395,7 @@ public class SecretMetadata extends AbstractModel {
 
     /**
      * Set 当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对所属的项目ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProjectID 当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对所属的项目ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProjectID(Long ProjectID) {
         this.ProjectID = ProjectID;
@@ -456,10 +422,8 @@ public class SecretMetadata extends AbstractModel {
     }
 
     /**
-     * Get 当凭据类型为云API密钥对凭据时，此字段有效，用于表示云API密钥对所属的用户UIN。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当凭据类型为云API密钥对凭据时，此字段有效，用于表示云API密钥对所属的用户UIN。 
      * @return TargetUin 当凭据类型为云API密钥对凭据时，此字段有效，用于表示云API密钥对所属的用户UIN。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTargetUin() {
         return this.TargetUin;
@@ -467,19 +431,15 @@ public class SecretMetadata extends AbstractModel {
 
     /**
      * Set 当凭据类型为云API密钥对凭据时，此字段有效，用于表示云API密钥对所属的用户UIN。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TargetUin 当凭据类型为云API密钥对凭据时，此字段有效，用于表示云API密钥对所属的用户UIN。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTargetUin(Long TargetUin) {
         this.TargetUin = TargetUin;
     }
 
     /**
-     * Get 轮转的频率，以天作为单位，在轮转开启状态下生效。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 轮转的频率，以天作为单位，在轮转开启状态下生效。 
      * @return RotationFrequency 轮转的频率，以天作为单位，在轮转开启状态下生效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRotationFrequency() {
         return this.RotationFrequency;
@@ -487,19 +447,15 @@ public class SecretMetadata extends AbstractModel {
 
     /**
      * Set 轮转的频率，以天作为单位，在轮转开启状态下生效。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RotationFrequency 轮转的频率，以天作为单位，在轮转开启状态下生效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRotationFrequency(Long RotationFrequency) {
         this.RotationFrequency = RotationFrequency;
     }
 
     /**
-     * Get 云产品凭据对应的云产品实例 ID 号。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 云产品凭据对应的云产品实例 ID 号。 
      * @return ResourceID 云产品凭据对应的云产品实例 ID 号。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceID() {
         return this.ResourceID;
@@ -507,19 +463,15 @@ public class SecretMetadata extends AbstractModel {
 
     /**
      * Set 云产品凭据对应的云产品实例 ID 号。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceID 云产品凭据对应的云产品实例 ID 号。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceID(String ResourceID) {
         this.ResourceID = ResourceID;
     }
 
     /**
-     * Get 用户指定的轮转开始时间。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户指定的轮转开始时间。 
      * @return RotationBeginTime 用户指定的轮转开始时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRotationBeginTime() {
         return this.RotationBeginTime;
@@ -527,9 +479,7 @@ public class SecretMetadata extends AbstractModel {
 
     /**
      * Set 用户指定的轮转开始时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RotationBeginTime 用户指定的轮转开始时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRotationBeginTime(String RotationBeginTime) {
         this.RotationBeginTime = RotationBeginTime;

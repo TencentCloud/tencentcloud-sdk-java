@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeNoticeContentsResponse extends AbstractModel {
 
     /**
-    * 通知内容模版列表。
+    * 通知内容模板列表。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NoticeContents")
@@ -32,7 +32,7 @@ public class DescribeNoticeContentsResponse extends AbstractModel {
     private NoticeContentTemplate [] NoticeContents;
 
     /**
-    * 符合条件的通知内容模版总数。
+    * 符合条件的通知内容模板总数。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -46,9 +46,9 @@ public class DescribeNoticeContentsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 通知内容模版列表。
+     * Get 通知内容模板列表。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return NoticeContents 通知内容模版列表。
+     * @return NoticeContents 通知内容模板列表。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public NoticeContentTemplate [] getNoticeContents() {
@@ -56,9 +56,9 @@ public class DescribeNoticeContentsResponse extends AbstractModel {
     }
 
     /**
-     * Set 通知内容模版列表。
+     * Set 通知内容模板列表。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param NoticeContents 通知内容模版列表。
+     * @param NoticeContents 通知内容模板列表。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNoticeContents(NoticeContentTemplate [] NoticeContents) {
@@ -66,16 +66,16 @@ public class DescribeNoticeContentsResponse extends AbstractModel {
     }
 
     /**
-     * Get 符合条件的通知内容模版总数。 
-     * @return TotalCount 符合条件的通知内容模版总数。
+     * Get 符合条件的通知内容模板总数。 
+     * @return TotalCount 符合条件的通知内容模板总数。
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 符合条件的通知内容模版总数。
-     * @param TotalCount 符合条件的通知内容模版总数。
+     * Set 符合条件的通知内容模板总数。
+     * @param TotalCount 符合条件的通知内容模板总数。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

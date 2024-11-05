@@ -128,6 +128,14 @@ public class DataBaseAuditRecord extends AbstractModel {
     private String Catalog;
 
     /**
+    * 状态
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("State")
+    @Expose
+    private String State;
+
+    /**
      * Get 查询用户
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return OsUser 查询用户
@@ -387,6 +395,26 @@ public class DataBaseAuditRecord extends AbstractModel {
         this.Catalog = Catalog;
     }
 
+    /**
+     * Get 状态
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return State 状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getState() {
+        return this.State;
+    }
+
+    /**
+     * Set 状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param State 状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setState(String State) {
+        this.State = State;
+    }
+
     public DataBaseAuditRecord() {
     }
 
@@ -434,6 +462,9 @@ public class DataBaseAuditRecord extends AbstractModel {
         if (source.Catalog != null) {
             this.Catalog = new String(source.Catalog);
         }
+        if (source.State != null) {
+            this.State = new String(source.State);
+        }
     }
 
 
@@ -454,6 +485,7 @@ public class DataBaseAuditRecord extends AbstractModel {
         this.setParamSimple(map, prefix + "DbName", this.DbName);
         this.setParamSimple(map, prefix + "SqlType", this.SqlType);
         this.setParamSimple(map, prefix + "Catalog", this.Catalog);
+        this.setParamSimple(map, prefix + "State", this.State);
 
     }
 }

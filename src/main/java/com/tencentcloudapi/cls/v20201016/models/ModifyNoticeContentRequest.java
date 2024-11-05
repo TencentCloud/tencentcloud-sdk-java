@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ModifyNoticeContentRequest extends AbstractModel {
 
     /**
-    * 通知内容模版ID。
+    * 通知内容模板ID。
     */
     @SerializedName("NoticeContentId")
     @Expose
     private String NoticeContentId;
 
     /**
-    * 通知内容模版名称。
+    * 通知内容模板名称。
     */
     @SerializedName("Name")
     @Expose
@@ -47,39 +47,39 @@ public class ModifyNoticeContentRequest extends AbstractModel {
     private Long Type;
 
     /**
-    * 通知内容模版详细信息。
+    * 通知内容模板详细信息。
     */
     @SerializedName("NoticeContents")
     @Expose
     private NoticeContent [] NoticeContents;
 
     /**
-     * Get 通知内容模版ID。 
-     * @return NoticeContentId 通知内容模版ID。
+     * Get 通知内容模板ID。 
+     * @return NoticeContentId 通知内容模板ID。
      */
     public String getNoticeContentId() {
         return this.NoticeContentId;
     }
 
     /**
-     * Set 通知内容模版ID。
-     * @param NoticeContentId 通知内容模版ID。
+     * Set 通知内容模板ID。
+     * @param NoticeContentId 通知内容模板ID。
      */
     public void setNoticeContentId(String NoticeContentId) {
         this.NoticeContentId = NoticeContentId;
     }
 
     /**
-     * Get 通知内容模版名称。 
-     * @return Name 通知内容模版名称。
+     * Get 通知内容模板名称。 
+     * @return Name 通知内容模板名称。
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 通知内容模版名称。
-     * @param Name 通知内容模版名称。
+     * Set 通知内容模板名称。
+     * @param Name 通知内容模板名称。
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -110,16 +110,16 @@ public class ModifyNoticeContentRequest extends AbstractModel {
     }
 
     /**
-     * Get 通知内容模版详细信息。 
-     * @return NoticeContents 通知内容模版详细信息。
+     * Get 通知内容模板详细信息。 
+     * @return NoticeContents 通知内容模板详细信息。
      */
     public NoticeContent [] getNoticeContents() {
         return this.NoticeContents;
     }
 
     /**
-     * Set 通知内容模版详细信息。
-     * @param NoticeContents 通知内容模版详细信息。
+     * Set 通知内容模板详细信息。
+     * @param NoticeContents 通知内容模板详细信息。
      */
     public void setNoticeContents(NoticeContent [] NoticeContents) {
         this.NoticeContents = NoticeContents;

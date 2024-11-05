@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeScanIpResponse extends AbstractModel {
 
     /**
-    * ip列表,当入参Ip为all时，返回该值
+    * ip列表,当入参Ip为all时，返回所有已知ip列表
     */
     @SerializedName("IpList")
     @Expose
@@ -108,16 +108,16 @@ public class DescribeScanIpResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get ip列表,当入参Ip为all时，返回该值 
-     * @return IpList ip列表,当入参Ip为all时，返回该值
+     * Get ip列表,当入参Ip为all时，返回所有已知ip列表 
+     * @return IpList ip列表,当入参Ip为all时，返回所有已知ip列表
      */
     public ScanIpInfo [] getIpList() {
         return this.IpList;
     }
 
     /**
-     * Set ip列表,当入参Ip为all时，返回该值
-     * @param IpList ip列表,当入参Ip为all时，返回该值
+     * Set ip列表,当入参Ip为all时，返回所有已知ip列表
+     * @param IpList ip列表,当入参Ip为all时，返回所有已知ip列表
      */
     public void setIpList(ScanIpInfo [] IpList) {
         this.IpList = IpList;
