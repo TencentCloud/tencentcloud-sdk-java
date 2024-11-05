@@ -66,6 +66,56 @@ public class HunyuanClient extends AbstractClient{
     }
 
     /**
+     *腾讯混元大模型是由腾讯研发的大语言模型，具备强大的中文创作能力，复杂语境下的逻辑推理能力，以及可靠的任务执行能力。本接口支持流式或非流式调用，当使用流式调用时为 SSE 协议。
+
+ 1. 本接口暂不支持返回图片内容。
+ 2. 默认该接口下单账号限制并发数为  5 路，如您有提高并发限制的需求请 [购买](https://buy.cloud.tencent.com/hunyuan) 。
+ 3. 请使用 SDK 调用本接口，每种开发语言的 SDK Git 仓库 examples/hunyuan/v20230901/ 目录下有提供示例供参考。SDK 链接在文档下方 “**开发者资源 - SDK**” 部分提供。
+ 4. 我们推荐您使用 API Explorer，方便快速地在线调试接口和下载各语言的示例代码，[点击打开](https://console.cloud.tencent.com/api/explorer?Product=hunyuan&Version=2023-09-01&Action=ChatCompletions)。
+     * @param req CreateThreadRequest
+     * @return CreateThreadResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateThreadResponse CreateThread(CreateThreadRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateThread", CreateThreadResponse.class);
+    }
+
+    /**
+     *删除文件。
+     * @param req FilesDeletionsRequest
+     * @return FilesDeletionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public FilesDeletionsResponse FilesDeletions(FilesDeletionsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "FilesDeletions", FilesDeletionsResponse.class);
+    }
+
+    /**
+     *文件列表。
+     * @param req FilesListRequest
+     * @return FilesListResponse
+     * @throws TencentCloudSDKException
+     */
+    public FilesListResponse FilesList(FilesListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "FilesList", FilesListResponse.class);
+    }
+
+    /**
+     *上传用于不同用途的的文件。
+当前用途仅支持 hunyuan 等模型的文档理解。
+     * @param req FilesUploadsRequest
+     * @return FilesUploadsResponse
+     * @throws TencentCloudSDKException
+     */
+    public FilesUploadsResponse FilesUploads(FilesUploadsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "FilesUploads", FilesUploadsResponse.class);
+    }
+
+    /**
      *腾讯混元 Embedding 接口，可以将文本转化为高质量的向量数据。向量维度为1024维。
      * @param req GetEmbeddingRequest
      * @return GetEmbeddingResponse
@@ -74,6 +124,54 @@ public class HunyuanClient extends AbstractClient{
     public GetEmbeddingResponse GetEmbedding(GetEmbeddingRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "GetEmbedding", GetEmbeddingResponse.class);
+    }
+
+    /**
+     *腾讯混元大模型是由腾讯研发的大语言模型，具备强大的中文创作能力，复杂语境下的逻辑推理能力，以及可靠的任务执行能力。本接口支持流式或非流式调用，当使用流式调用时为 SSE 协议。
+
+ 1. 本接口暂不支持返回图片内容。
+ 2. 默认该接口下单账号限制并发数为  5 路，如您有提高并发限制的需求请 [购买](https://buy.cloud.tencent.com/hunyuan) 。
+ 3. 请使用 SDK 调用本接口，每种开发语言的 SDK Git 仓库 examples/hunyuan/v20230901/ 目录下有提供示例供参考。SDK 链接在文档下方 “**开发者资源 - SDK**” 部分提供。
+ 4. 我们推荐您使用 API Explorer，方便快速地在线调试接口和下载各语言的示例代码，[点击打开](https://console.cloud.tencent.com/api/explorer?Product=hunyuan&Version=2023-09-01&Action=ChatCompletions)。
+     * @param req GetThreadRequest
+     * @return GetThreadResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetThreadResponse GetThread(GetThreadRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetThread", GetThreadResponse.class);
+    }
+
+    /**
+     *腾讯混元大模型是由腾讯研发的大语言模型，具备强大的中文创作能力，复杂语境下的逻辑推理能力，以及可靠的任务执行能力。本接口支持流式或非流式调用，当使用流式调用时为 SSE 协议。
+
+ 1. 本接口暂不支持返回图片内容。
+ 2. 默认该接口下单账号限制并发数为  5 路，如您有提高并发限制的需求请 [购买](https://buy.cloud.tencent.com/hunyuan) 。
+ 3. 请使用 SDK 调用本接口，每种开发语言的 SDK Git 仓库 examples/hunyuan/v20230901/ 目录下有提供示例供参考。SDK 链接在文档下方 “**开发者资源 - SDK**” 部分提供。
+ 4. 我们推荐您使用 API Explorer，方便快速地在线调试接口和下载各语言的示例代码，[点击打开](https://console.cloud.tencent.com/api/explorer?Product=hunyuan&Version=2023-09-01&Action=ChatCompletions)。
+     * @param req GetThreadMessageRequest
+     * @return GetThreadMessageResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetThreadMessageResponse GetThreadMessage(GetThreadMessageRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetThreadMessage", GetThreadMessageResponse.class);
+    }
+
+    /**
+     *腾讯混元大模型是由腾讯研发的大语言模型，具备强大的中文创作能力，复杂语境下的逻辑推理能力，以及可靠的任务执行能力。本接口支持流式或非流式调用，当使用流式调用时为 SSE 协议。
+
+ 1. 本接口暂不支持返回图片内容。
+ 2. 默认该接口下单账号限制并发数为  5 路，如您有提高并发限制的需求请 [购买](https://buy.cloud.tencent.com/hunyuan) 。
+ 3. 请使用 SDK 调用本接口，每种开发语言的 SDK Git 仓库 examples/hunyuan/v20230901/ 目录下有提供示例供参考。SDK 链接在文档下方 “**开发者资源 - SDK**” 部分提供。
+ 4. 我们推荐您使用 API Explorer，方便快速地在线调试接口和下载各语言的示例代码，[点击打开](https://console.cloud.tencent.com/api/explorer?Product=hunyuan&Version=2023-09-01&Action=ChatCompletions)。
+     * @param req GetThreadMessageListRequest
+     * @return GetThreadMessageListResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetThreadMessageListResponse GetThreadMessageList(GetThreadMessageListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetThreadMessageList", GetThreadMessageListResponse.class);
     }
 
     /**
@@ -113,6 +211,22 @@ public class HunyuanClient extends AbstractClient{
     public QueryHunyuanImageJobResponse QueryHunyuanImageJob(QueryHunyuanImageJobRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "QueryHunyuanImageJob", QueryHunyuanImageJobResponse.class);
+    }
+
+    /**
+     *腾讯混元大模型是由腾讯研发的大语言模型，具备强大的中文创作能力，复杂语境下的逻辑推理能力，以及可靠的任务执行能力。本接口支持流式或非流式调用，当使用流式调用时为 SSE 协议。
+
+ 1. 本接口暂不支持返回图片内容。
+ 2. 默认该接口下单账号限制并发数为  5 路，如您有提高并发限制的需求请 [购买](https://buy.cloud.tencent.com/hunyuan) 。
+ 3. 请使用 SDK 调用本接口，每种开发语言的 SDK Git 仓库 examples/hunyuan/v20230901/ 目录下有提供示例供参考。SDK 链接在文档下方 “**开发者资源 - SDK**” 部分提供。
+ 4. 我们推荐您使用 API Explorer，方便快速地在线调试接口和下载各语言的示例代码，[点击打开](https://console.cloud.tencent.com/api/explorer?Product=hunyuan&Version=2023-09-01&Action=ChatCompletions)。
+     * @param req RunThreadRequest
+     * @return RunThreadResponse
+     * @throws TencentCloudSDKException
+     */
+    public RunThreadResponse RunThread(RunThreadRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RunThread", RunThreadResponse.class);
     }
 
     /**
