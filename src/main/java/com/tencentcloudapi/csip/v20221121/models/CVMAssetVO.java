@@ -25,7 +25,6 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
     * 资产id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AssetId")
     @Expose
@@ -33,7 +32,6 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
     * 资产名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AssetName")
     @Expose
@@ -41,7 +39,6 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
     * 资产类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AssetType")
     @Expose
@@ -49,7 +46,6 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
     * 地域
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Region")
     @Expose
@@ -57,7 +53,6 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
     * 防护状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CWPStatus")
     @Expose
@@ -65,7 +60,6 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
     * 资产创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AssetCreateTime")
     @Expose
@@ -73,7 +67,6 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
     * 公网ip
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PublicIp")
     @Expose
@@ -81,7 +74,6 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
     * 私网ip
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PrivateIp")
     @Expose
@@ -89,7 +81,6 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
     * vpc id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcId")
     @Expose
@@ -97,7 +88,6 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
     * vpc 名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcName")
     @Expose
@@ -105,7 +95,6 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
     * appid信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AppId")
     @Expose
@@ -113,7 +102,6 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
     * 用户uin
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Uin")
     @Expose
@@ -121,7 +109,6 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
     * 昵称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NickName")
     @Expose
@@ -129,7 +116,6 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
     * 可用区
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AvailableArea")
     @Expose
@@ -137,7 +123,6 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
     * 是否核心
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsCore")
     @Expose
@@ -145,7 +130,6 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
     * 子网id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubnetId")
     @Expose
@@ -153,7 +137,6 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
     * 子网名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubnetName")
     @Expose
@@ -161,7 +144,6 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
     * uuid
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceUuid")
     @Expose
@@ -169,7 +151,6 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
     * qquid
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceQUuid")
     @Expose
@@ -177,7 +158,6 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
     * os名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OsName")
     @Expose
@@ -185,7 +165,6 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
     * 分区
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PartitionCount")
     @Expose
@@ -193,7 +172,6 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
     * cpu信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CPUInfo")
     @Expose
@@ -201,7 +179,6 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
     * cpu大小
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CPUSize")
     @Expose
@@ -209,7 +186,6 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
     * cpu负载
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CPULoad")
     @Expose
@@ -217,7 +193,6 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
     * 内存大小
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MemorySize")
     @Expose
@@ -225,7 +200,6 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
     * 内存负载
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MemoryLoad")
     @Expose
@@ -233,7 +207,6 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
     * 硬盘大小
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiskSize")
     @Expose
@@ -241,7 +214,6 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
     * 硬盘负载
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiskLoad")
     @Expose
@@ -249,7 +221,6 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
     * 账号数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AccountCount")
     @Expose
@@ -257,7 +228,6 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
     * 进程数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProcessCount")
     @Expose
@@ -265,7 +235,6 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
     * 软件应用
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AppCount")
     @Expose
@@ -273,7 +242,6 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
     * 监听端口
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PortCount")
     @Expose
@@ -281,7 +249,6 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
     * 网络攻击
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Attack")
     @Expose
@@ -289,7 +256,6 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
     * 网络访问
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Access")
     @Expose
@@ -297,7 +263,6 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
     * 网络拦截
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Intercept")
     @Expose
@@ -305,7 +270,6 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
     * 入向峰值带宽
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InBandwidth")
     @Expose
@@ -313,7 +277,6 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
     * 出向峰值带宽
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OutBandwidth")
     @Expose
@@ -321,7 +284,6 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
     * 入向累计流量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InFlow")
     @Expose
@@ -329,7 +291,6 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
     * 出向累计流量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OutFlow")
     @Expose
@@ -337,7 +298,6 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
     * 最近扫描时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LastScanTime")
     @Expose
@@ -345,7 +305,6 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
     * 恶意主动外联
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NetWorkOut")
     @Expose
@@ -353,7 +312,6 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
     * 端口风险
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PortRisk")
     @Expose
@@ -361,7 +319,6 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
     * 漏洞风险
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VulnerabilityRisk")
     @Expose
@@ -369,7 +326,6 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
     * 配置风险
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConfigurationRisk")
     @Expose
@@ -377,7 +333,6 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
     * 扫描任务数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScanTask")
     @Expose
@@ -385,7 +340,6 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
     * 标签
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tag")
     @Expose
@@ -393,7 +347,6 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
     * memberId
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MemberId")
     @Expose
@@ -401,7 +354,6 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
     * os全称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Os")
     @Expose
@@ -409,7 +361,6 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
     * 风险服务暴露
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RiskExposure")
     @Expose
@@ -417,7 +368,6 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
     * 模拟攻击工具状态。0代表未安装，1代表已安装，2代表已离线
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BASAgentStatus")
     @Expose
@@ -425,7 +375,6 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
     * 1新资产；0 非新资产
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsNewAsset")
     @Expose
@@ -433,7 +382,6 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
     * 0 未安装  1安装 2:安装中
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CVMAgentStatus")
     @Expose
@@ -441,7 +389,6 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
     * 1:开启 0:未开启
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CVMStatus")
     @Expose
@@ -449,7 +396,6 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
     * 1:客户端已安装 0：未安装 2: Agentless
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DefenseModel")
     @Expose
@@ -457,7 +403,6 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
     * 1:已安装 0:未安装
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TatStatus")
     @Expose
@@ -465,7 +410,6 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
     * cpu趋势图
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CpuTrend")
     @Expose
@@ -473,7 +417,6 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
     * 内存趋势图
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MemoryTrend")
     @Expose
@@ -481,7 +424,6 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
     * 1:agent在线 0:agent离线 2:主机离线
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AgentStatus")
     @Expose
@@ -489,7 +431,6 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
     * 本月防护关闭次数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CloseDefenseCount")
     @Expose
@@ -497,7 +438,6 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
     * 运行状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceState")
     @Expose
@@ -505,7 +445,6 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
     * 安全组数据
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SecurityGroupIds")
     @Expose
@@ -513,7 +452,6 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
     * 物理内存占用KB
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AgentMemRss")
     @Expose
@@ -521,7 +459,6 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
     * CPU使用率百分比
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AgentCpuPer")
     @Expose
@@ -529,7 +466,6 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
     * cvm真正所属的appid
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RealAppid")
     @Expose
@@ -537,7 +473,6 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
     * 云资产类型：0：腾讯云，1：aws，2：azure
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CloudType")
     @Expose
@@ -552,7 +487,6 @@ public class CVMAssetVO extends AbstractModel {
 4：旗舰版防护中
 5：已离线
 6：已关机
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProtectStatus")
     @Expose
@@ -560,17 +494,14 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
     * 最后离线时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OfflineTime")
     @Expose
     private String OfflineTime;
 
     /**
-     * Get 资产id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资产id 
      * @return AssetId 资产id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAssetId() {
         return this.AssetId;
@@ -578,19 +509,15 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
      * Set 资产id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AssetId 资产id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAssetId(String AssetId) {
         this.AssetId = AssetId;
     }
 
     /**
-     * Get 资产名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资产名 
      * @return AssetName 资产名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAssetName() {
         return this.AssetName;
@@ -598,19 +525,15 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
      * Set 资产名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AssetName 资产名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAssetName(String AssetName) {
         this.AssetName = AssetName;
     }
 
     /**
-     * Get 资产类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资产类型 
      * @return AssetType 资产类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAssetType() {
         return this.AssetType;
@@ -618,19 +541,15 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
      * Set 资产类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AssetType 资产类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAssetType(String AssetType) {
         this.AssetType = AssetType;
     }
 
     /**
-     * Get 地域
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地域 
      * @return Region 地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegion() {
         return this.Region;
@@ -638,19 +557,15 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
      * Set 地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Region 地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get 防护状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 防护状态 
      * @return CWPStatus 防护状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCWPStatus() {
         return this.CWPStatus;
@@ -658,19 +573,15 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
      * Set 防护状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CWPStatus 防护状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCWPStatus(Long CWPStatus) {
         this.CWPStatus = CWPStatus;
     }
 
     /**
-     * Get 资产创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资产创建时间 
      * @return AssetCreateTime 资产创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAssetCreateTime() {
         return this.AssetCreateTime;
@@ -678,19 +589,15 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
      * Set 资产创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AssetCreateTime 资产创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAssetCreateTime(String AssetCreateTime) {
         this.AssetCreateTime = AssetCreateTime;
     }
 
     /**
-     * Get 公网ip
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 公网ip 
      * @return PublicIp 公网ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPublicIp() {
         return this.PublicIp;
@@ -698,19 +605,15 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
      * Set 公网ip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PublicIp 公网ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPublicIp(String PublicIp) {
         this.PublicIp = PublicIp;
     }
 
     /**
-     * Get 私网ip
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 私网ip 
      * @return PrivateIp 私网ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPrivateIp() {
         return this.PrivateIp;
@@ -718,19 +621,15 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
      * Set 私网ip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PrivateIp 私网ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPrivateIp(String PrivateIp) {
         this.PrivateIp = PrivateIp;
     }
 
     /**
-     * Get vpc id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get vpc id 
      * @return VpcId vpc id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVpcId() {
         return this.VpcId;
@@ -738,19 +637,15 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
      * Set vpc id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VpcId vpc id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get vpc 名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get vpc 名 
      * @return VpcName vpc 名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVpcName() {
         return this.VpcName;
@@ -758,19 +653,15 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
      * Set vpc 名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VpcName vpc 名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcName(String VpcName) {
         this.VpcName = VpcName;
     }
 
     /**
-     * Get appid信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get appid信息 
      * @return AppId appid信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAppId() {
         return this.AppId;
@@ -778,19 +669,15 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
      * Set appid信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AppId appid信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get 用户uin
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户uin 
      * @return Uin 用户uin
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUin() {
         return this.Uin;
@@ -798,19 +685,15 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
      * Set 用户uin
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Uin 用户uin
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUin(String Uin) {
         this.Uin = Uin;
     }
 
     /**
-     * Get 昵称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 昵称 
      * @return NickName 昵称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNickName() {
         return this.NickName;
@@ -818,19 +701,15 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
      * Set 昵称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NickName 昵称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNickName(String NickName) {
         this.NickName = NickName;
     }
 
     /**
-     * Get 可用区
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 可用区 
      * @return AvailableArea 可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAvailableArea() {
         return this.AvailableArea;
@@ -838,19 +717,15 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
      * Set 可用区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AvailableArea 可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAvailableArea(String AvailableArea) {
         this.AvailableArea = AvailableArea;
     }
 
     /**
-     * Get 是否核心
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否核心 
      * @return IsCore 是否核心
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsCore() {
         return this.IsCore;
@@ -858,19 +733,15 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
      * Set 是否核心
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsCore 是否核心
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsCore(Long IsCore) {
         this.IsCore = IsCore;
     }
 
     /**
-     * Get 子网id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子网id 
      * @return SubnetId 子网id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubnetId() {
         return this.SubnetId;
@@ -878,19 +749,15 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
      * Set 子网id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubnetId 子网id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get 子网名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子网名 
      * @return SubnetName 子网名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubnetName() {
         return this.SubnetName;
@@ -898,19 +765,15 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
      * Set 子网名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubnetName 子网名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubnetName(String SubnetName) {
         this.SubnetName = SubnetName;
     }
 
     /**
-     * Get uuid
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get uuid 
      * @return InstanceUuid uuid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceUuid() {
         return this.InstanceUuid;
@@ -918,19 +781,15 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
      * Set uuid
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceUuid uuid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceUuid(String InstanceUuid) {
         this.InstanceUuid = InstanceUuid;
     }
 
     /**
-     * Get qquid
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get qquid 
      * @return InstanceQUuid qquid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceQUuid() {
         return this.InstanceQUuid;
@@ -938,19 +797,15 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
      * Set qquid
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceQUuid qquid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceQUuid(String InstanceQUuid) {
         this.InstanceQUuid = InstanceQUuid;
     }
 
     /**
-     * Get os名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get os名 
      * @return OsName os名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOsName() {
         return this.OsName;
@@ -958,19 +813,15 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
      * Set os名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OsName os名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOsName(String OsName) {
         this.OsName = OsName;
     }
 
     /**
-     * Get 分区
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分区 
      * @return PartitionCount 分区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPartitionCount() {
         return this.PartitionCount;
@@ -978,19 +829,15 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
      * Set 分区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PartitionCount 分区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPartitionCount(Long PartitionCount) {
         this.PartitionCount = PartitionCount;
     }
 
     /**
-     * Get cpu信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get cpu信息 
      * @return CPUInfo cpu信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCPUInfo() {
         return this.CPUInfo;
@@ -998,19 +845,15 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
      * Set cpu信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CPUInfo cpu信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCPUInfo(String CPUInfo) {
         this.CPUInfo = CPUInfo;
     }
 
     /**
-     * Get cpu大小
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get cpu大小 
      * @return CPUSize cpu大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCPUSize() {
         return this.CPUSize;
@@ -1018,19 +861,15 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
      * Set cpu大小
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CPUSize cpu大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCPUSize(Long CPUSize) {
         this.CPUSize = CPUSize;
     }
 
     /**
-     * Get cpu负载
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get cpu负载 
      * @return CPULoad cpu负载
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCPULoad() {
         return this.CPULoad;
@@ -1038,19 +877,15 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
      * Set cpu负载
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CPULoad cpu负载
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCPULoad(String CPULoad) {
         this.CPULoad = CPULoad;
     }
 
     /**
-     * Get 内存大小
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 内存大小 
      * @return MemorySize 内存大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMemorySize() {
         return this.MemorySize;
@@ -1058,19 +893,15 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
      * Set 内存大小
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MemorySize 内存大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMemorySize(String MemorySize) {
         this.MemorySize = MemorySize;
     }
 
     /**
-     * Get 内存负载
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 内存负载 
      * @return MemoryLoad 内存负载
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMemoryLoad() {
         return this.MemoryLoad;
@@ -1078,19 +909,15 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
      * Set 内存负载
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MemoryLoad 内存负载
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMemoryLoad(String MemoryLoad) {
         this.MemoryLoad = MemoryLoad;
     }
 
     /**
-     * Get 硬盘大小
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 硬盘大小 
      * @return DiskSize 硬盘大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDiskSize() {
         return this.DiskSize;
@@ -1098,19 +925,15 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
      * Set 硬盘大小
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DiskSize 硬盘大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiskSize(String DiskSize) {
         this.DiskSize = DiskSize;
     }
 
     /**
-     * Get 硬盘负载
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 硬盘负载 
      * @return DiskLoad 硬盘负载
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDiskLoad() {
         return this.DiskLoad;
@@ -1118,19 +941,15 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
      * Set 硬盘负载
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DiskLoad 硬盘负载
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiskLoad(String DiskLoad) {
         this.DiskLoad = DiskLoad;
     }
 
     /**
-     * Get 账号数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 账号数 
      * @return AccountCount 账号数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAccountCount() {
         return this.AccountCount;
@@ -1138,19 +957,15 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
      * Set 账号数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AccountCount 账号数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAccountCount(String AccountCount) {
         this.AccountCount = AccountCount;
     }
 
     /**
-     * Get 进程数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 进程数 
      * @return ProcessCount 进程数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProcessCount() {
         return this.ProcessCount;
@@ -1158,19 +973,15 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
      * Set 进程数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProcessCount 进程数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProcessCount(String ProcessCount) {
         this.ProcessCount = ProcessCount;
     }
 
     /**
-     * Get 软件应用
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 软件应用 
      * @return AppCount 软件应用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAppCount() {
         return this.AppCount;
@@ -1178,19 +989,15 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
      * Set 软件应用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AppCount 软件应用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAppCount(String AppCount) {
         this.AppCount = AppCount;
     }
 
     /**
-     * Get 监听端口
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 监听端口 
      * @return PortCount 监听端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPortCount() {
         return this.PortCount;
@@ -1198,19 +1005,15 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
      * Set 监听端口
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PortCount 监听端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPortCount(Long PortCount) {
         this.PortCount = PortCount;
     }
 
     /**
-     * Get 网络攻击
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网络攻击 
      * @return Attack 网络攻击
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAttack() {
         return this.Attack;
@@ -1218,19 +1021,15 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
      * Set 网络攻击
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Attack 网络攻击
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAttack(Long Attack) {
         this.Attack = Attack;
     }
 
     /**
-     * Get 网络访问
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网络访问 
      * @return Access 网络访问
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAccess() {
         return this.Access;
@@ -1238,19 +1037,15 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
      * Set 网络访问
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Access 网络访问
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAccess(Long Access) {
         this.Access = Access;
     }
 
     /**
-     * Get 网络拦截
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网络拦截 
      * @return Intercept 网络拦截
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIntercept() {
         return this.Intercept;
@@ -1258,19 +1053,15 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
      * Set 网络拦截
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Intercept 网络拦截
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIntercept(Long Intercept) {
         this.Intercept = Intercept;
     }
 
     /**
-     * Get 入向峰值带宽
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 入向峰值带宽 
      * @return InBandwidth 入向峰值带宽
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInBandwidth() {
         return this.InBandwidth;
@@ -1278,19 +1069,15 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
      * Set 入向峰值带宽
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InBandwidth 入向峰值带宽
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInBandwidth(String InBandwidth) {
         this.InBandwidth = InBandwidth;
     }
 
     /**
-     * Get 出向峰值带宽
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 出向峰值带宽 
      * @return OutBandwidth 出向峰值带宽
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOutBandwidth() {
         return this.OutBandwidth;
@@ -1298,19 +1085,15 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
      * Set 出向峰值带宽
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OutBandwidth 出向峰值带宽
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutBandwidth(String OutBandwidth) {
         this.OutBandwidth = OutBandwidth;
     }
 
     /**
-     * Get 入向累计流量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 入向累计流量 
      * @return InFlow 入向累计流量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInFlow() {
         return this.InFlow;
@@ -1318,19 +1101,15 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
      * Set 入向累计流量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InFlow 入向累计流量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInFlow(String InFlow) {
         this.InFlow = InFlow;
     }
 
     /**
-     * Get 出向累计流量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 出向累计流量 
      * @return OutFlow 出向累计流量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOutFlow() {
         return this.OutFlow;
@@ -1338,19 +1117,15 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
      * Set 出向累计流量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OutFlow 出向累计流量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutFlow(String OutFlow) {
         this.OutFlow = OutFlow;
     }
 
     /**
-     * Get 最近扫描时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最近扫描时间 
      * @return LastScanTime 最近扫描时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLastScanTime() {
         return this.LastScanTime;
@@ -1358,19 +1133,15 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
      * Set 最近扫描时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LastScanTime 最近扫描时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLastScanTime(String LastScanTime) {
         this.LastScanTime = LastScanTime;
     }
 
     /**
-     * Get 恶意主动外联
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 恶意主动外联 
      * @return NetWorkOut 恶意主动外联
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getNetWorkOut() {
         return this.NetWorkOut;
@@ -1378,19 +1149,15 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
      * Set 恶意主动外联
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NetWorkOut 恶意主动外联
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNetWorkOut(Long NetWorkOut) {
         this.NetWorkOut = NetWorkOut;
     }
 
     /**
-     * Get 端口风险
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 端口风险 
      * @return PortRisk 端口风险
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPortRisk() {
         return this.PortRisk;
@@ -1398,19 +1165,15 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
      * Set 端口风险
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PortRisk 端口风险
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPortRisk(Long PortRisk) {
         this.PortRisk = PortRisk;
     }
 
     /**
-     * Get 漏洞风险
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 漏洞风险 
      * @return VulnerabilityRisk 漏洞风险
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getVulnerabilityRisk() {
         return this.VulnerabilityRisk;
@@ -1418,19 +1181,15 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
      * Set 漏洞风险
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VulnerabilityRisk 漏洞风险
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVulnerabilityRisk(Long VulnerabilityRisk) {
         this.VulnerabilityRisk = VulnerabilityRisk;
     }
 
     /**
-     * Get 配置风险
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 配置风险 
      * @return ConfigurationRisk 配置风险
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getConfigurationRisk() {
         return this.ConfigurationRisk;
@@ -1438,19 +1197,15 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
      * Set 配置风险
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ConfigurationRisk 配置风险
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConfigurationRisk(Long ConfigurationRisk) {
         this.ConfigurationRisk = ConfigurationRisk;
     }
 
     /**
-     * Get 扫描任务数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 扫描任务数 
      * @return ScanTask 扫描任务数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getScanTask() {
         return this.ScanTask;
@@ -1458,19 +1213,15 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
      * Set 扫描任务数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ScanTask 扫描任务数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScanTask(Long ScanTask) {
         this.ScanTask = ScanTask;
     }
 
     /**
-     * Get 标签
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标签 
      * @return Tag 标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Tag [] getTag() {
         return this.Tag;
@@ -1478,19 +1229,15 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
      * Set 标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tag 标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTag(Tag [] Tag) {
         this.Tag = Tag;
     }
 
     /**
-     * Get memberId
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get memberId 
      * @return MemberId memberId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMemberId() {
         return this.MemberId;
@@ -1498,19 +1245,15 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
      * Set memberId
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MemberId memberId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMemberId(String MemberId) {
         this.MemberId = MemberId;
     }
 
     /**
-     * Get os全称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get os全称 
      * @return Os os全称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOs() {
         return this.Os;
@@ -1518,19 +1261,15 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
      * Set os全称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Os os全称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOs(String Os) {
         this.Os = Os;
     }
 
     /**
-     * Get 风险服务暴露
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 风险服务暴露 
      * @return RiskExposure 风险服务暴露
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRiskExposure() {
         return this.RiskExposure;
@@ -1538,19 +1277,15 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
      * Set 风险服务暴露
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RiskExposure 风险服务暴露
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRiskExposure(Long RiskExposure) {
         this.RiskExposure = RiskExposure;
     }
 
     /**
-     * Get 模拟攻击工具状态。0代表未安装，1代表已安装，2代表已离线
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 模拟攻击工具状态。0代表未安装，1代表已安装，2代表已离线 
      * @return BASAgentStatus 模拟攻击工具状态。0代表未安装，1代表已安装，2代表已离线
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBASAgentStatus() {
         return this.BASAgentStatus;
@@ -1558,19 +1293,15 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
      * Set 模拟攻击工具状态。0代表未安装，1代表已安装，2代表已离线
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BASAgentStatus 模拟攻击工具状态。0代表未安装，1代表已安装，2代表已离线
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBASAgentStatus(Long BASAgentStatus) {
         this.BASAgentStatus = BASAgentStatus;
     }
 
     /**
-     * Get 1新资产；0 非新资产
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 1新资产；0 非新资产 
      * @return IsNewAsset 1新资产；0 非新资产
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsNewAsset() {
         return this.IsNewAsset;
@@ -1578,19 +1309,15 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
      * Set 1新资产；0 非新资产
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsNewAsset 1新资产；0 非新资产
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsNewAsset(Long IsNewAsset) {
         this.IsNewAsset = IsNewAsset;
     }
 
     /**
-     * Get 0 未安装  1安装 2:安装中
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 0 未安装  1安装 2:安装中 
      * @return CVMAgentStatus 0 未安装  1安装 2:安装中
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCVMAgentStatus() {
         return this.CVMAgentStatus;
@@ -1598,19 +1325,15 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
      * Set 0 未安装  1安装 2:安装中
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CVMAgentStatus 0 未安装  1安装 2:安装中
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCVMAgentStatus(Long CVMAgentStatus) {
         this.CVMAgentStatus = CVMAgentStatus;
     }
 
     /**
-     * Get 1:开启 0:未开启
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 1:开启 0:未开启 
      * @return CVMStatus 1:开启 0:未开启
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCVMStatus() {
         return this.CVMStatus;
@@ -1618,19 +1341,15 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
      * Set 1:开启 0:未开启
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CVMStatus 1:开启 0:未开启
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCVMStatus(Long CVMStatus) {
         this.CVMStatus = CVMStatus;
     }
 
     /**
-     * Get 1:客户端已安装 0：未安装 2: Agentless
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 1:客户端已安装 0：未安装 2: Agentless 
      * @return DefenseModel 1:客户端已安装 0：未安装 2: Agentless
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDefenseModel() {
         return this.DefenseModel;
@@ -1638,19 +1357,15 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
      * Set 1:客户端已安装 0：未安装 2: Agentless
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DefenseModel 1:客户端已安装 0：未安装 2: Agentless
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDefenseModel(Long DefenseModel) {
         this.DefenseModel = DefenseModel;
     }
 
     /**
-     * Get 1:已安装 0:未安装
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 1:已安装 0:未安装 
      * @return TatStatus 1:已安装 0:未安装
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTatStatus() {
         return this.TatStatus;
@@ -1658,19 +1373,15 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
      * Set 1:已安装 0:未安装
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TatStatus 1:已安装 0:未安装
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTatStatus(Long TatStatus) {
         this.TatStatus = TatStatus;
     }
 
     /**
-     * Get cpu趋势图
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get cpu趋势图 
      * @return CpuTrend cpu趋势图
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Element [] getCpuTrend() {
         return this.CpuTrend;
@@ -1678,19 +1389,15 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
      * Set cpu趋势图
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CpuTrend cpu趋势图
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCpuTrend(Element [] CpuTrend) {
         this.CpuTrend = CpuTrend;
     }
 
     /**
-     * Get 内存趋势图
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 内存趋势图 
      * @return MemoryTrend 内存趋势图
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Element [] getMemoryTrend() {
         return this.MemoryTrend;
@@ -1698,19 +1405,15 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
      * Set 内存趋势图
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MemoryTrend 内存趋势图
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMemoryTrend(Element [] MemoryTrend) {
         this.MemoryTrend = MemoryTrend;
     }
 
     /**
-     * Get 1:agent在线 0:agent离线 2:主机离线
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 1:agent在线 0:agent离线 2:主机离线 
      * @return AgentStatus 1:agent在线 0:agent离线 2:主机离线
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAgentStatus() {
         return this.AgentStatus;
@@ -1718,19 +1421,15 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
      * Set 1:agent在线 0:agent离线 2:主机离线
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AgentStatus 1:agent在线 0:agent离线 2:主机离线
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAgentStatus(Long AgentStatus) {
         this.AgentStatus = AgentStatus;
     }
 
     /**
-     * Get 本月防护关闭次数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 本月防护关闭次数 
      * @return CloseDefenseCount 本月防护关闭次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCloseDefenseCount() {
         return this.CloseDefenseCount;
@@ -1738,19 +1437,15 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
      * Set 本月防护关闭次数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CloseDefenseCount 本月防护关闭次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCloseDefenseCount(Long CloseDefenseCount) {
         this.CloseDefenseCount = CloseDefenseCount;
     }
 
     /**
-     * Get 运行状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 运行状态 
      * @return InstanceState 运行状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceState() {
         return this.InstanceState;
@@ -1758,19 +1453,15 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
      * Set 运行状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceState 运行状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceState(String InstanceState) {
         this.InstanceState = InstanceState;
     }
 
     /**
-     * Get 安全组数据
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 安全组数据 
      * @return SecurityGroupIds 安全组数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getSecurityGroupIds() {
         return this.SecurityGroupIds;
@@ -1778,19 +1469,15 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
      * Set 安全组数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SecurityGroupIds 安全组数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSecurityGroupIds(String [] SecurityGroupIds) {
         this.SecurityGroupIds = SecurityGroupIds;
     }
 
     /**
-     * Get 物理内存占用KB
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 物理内存占用KB 
      * @return AgentMemRss 物理内存占用KB
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAgentMemRss() {
         return this.AgentMemRss;
@@ -1798,19 +1485,15 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
      * Set 物理内存占用KB
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AgentMemRss 物理内存占用KB
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAgentMemRss(Long AgentMemRss) {
         this.AgentMemRss = AgentMemRss;
     }
 
     /**
-     * Get CPU使用率百分比
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get CPU使用率百分比 
      * @return AgentCpuPer CPU使用率百分比
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getAgentCpuPer() {
         return this.AgentCpuPer;
@@ -1818,19 +1501,15 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
      * Set CPU使用率百分比
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AgentCpuPer CPU使用率百分比
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAgentCpuPer(Float AgentCpuPer) {
         this.AgentCpuPer = AgentCpuPer;
     }
 
     /**
-     * Get cvm真正所属的appid
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get cvm真正所属的appid 
      * @return RealAppid cvm真正所属的appid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRealAppid() {
         return this.RealAppid;
@@ -1838,19 +1517,15 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
      * Set cvm真正所属的appid
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RealAppid cvm真正所属的appid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRealAppid(Long RealAppid) {
         this.RealAppid = RealAppid;
     }
 
     /**
-     * Get 云资产类型：0：腾讯云，1：aws，2：azure
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 云资产类型：0：腾讯云，1：aws，2：azure 
      * @return CloudType 云资产类型：0：腾讯云，1：aws，2：azure
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCloudType() {
         return this.CloudType;
@@ -1858,9 +1533,7 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
      * Set 云资产类型：0：腾讯云，1：aws，2：azure
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CloudType 云资产类型：0：腾讯云，1：aws，2：azure
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCloudType(Long CloudType) {
         this.CloudType = CloudType;
@@ -1874,8 +1547,7 @@ public class CVMAssetVO extends AbstractModel {
 3：专业版防护中
 4：旗舰版防护中
 5：已离线
-6：已关机
-注意：此字段可能返回 null，表示取不到有效值。 
+6：已关机 
      * @return ProtectStatus 主机防护状态枚举
 0：未安装
 1：基础版防护中
@@ -1884,7 +1556,6 @@ public class CVMAssetVO extends AbstractModel {
 4：旗舰版防护中
 5：已离线
 6：已关机
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getProtectStatus() {
         return this.ProtectStatus;
@@ -1899,7 +1570,6 @@ public class CVMAssetVO extends AbstractModel {
 4：旗舰版防护中
 5：已离线
 6：已关机
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProtectStatus 主机防护状态枚举
 0：未安装
 1：基础版防护中
@@ -1908,17 +1578,14 @@ public class CVMAssetVO extends AbstractModel {
 4：旗舰版防护中
 5：已离线
 6：已关机
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProtectStatus(Long ProtectStatus) {
         this.ProtectStatus = ProtectStatus;
     }
 
     /**
-     * Get 最后离线时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最后离线时间 
      * @return OfflineTime 最后离线时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOfflineTime() {
         return this.OfflineTime;
@@ -1926,9 +1593,7 @@ public class CVMAssetVO extends AbstractModel {
 
     /**
      * Set 最后离线时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OfflineTime 最后离线时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOfflineTime(String OfflineTime) {
         this.OfflineTime = OfflineTime;

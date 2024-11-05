@@ -44,7 +44,6 @@ public class ModifyExtendedServiceRequest extends AbstractModel {
 <li>AUTO_SIGN             企业自动签（自动签署）</li>
 <li>  OVERSEA_SIGN          企业与港澳台居民签署合同</li>
 <li>  MOBILE_CHECK_APPROVER 使用手机号验证签署方身份</li>
-<li> PAGING_SEAL           骑缝章</li>
 <li> DOWNLOAD_FLOW         授权渠道下载合同 </li>
 <li>AGE_LIMIT_EXPANSION 拓宽签署方年龄限制</li>
 <li>HIDE_OPERATOR_DISPLAY 隐藏合同经办人姓名</li>
@@ -131,7 +130,6 @@ public class ModifyExtendedServiceRequest extends AbstractModel {
 <li>AUTO_SIGN             企业自动签（自动签署）</li>
 <li>  OVERSEA_SIGN          企业与港澳台居民签署合同</li>
 <li>  MOBILE_CHECK_APPROVER 使用手机号验证签署方身份</li>
-<li> PAGING_SEAL           骑缝章</li>
 <li> DOWNLOAD_FLOW         授权渠道下载合同 </li>
 <li>AGE_LIMIT_EXPANSION 拓宽签署方年龄限制</li>
 <li>HIDE_OPERATOR_DISPLAY 隐藏合同经办人姓名</li>
@@ -141,7 +139,6 @@ public class ModifyExtendedServiceRequest extends AbstractModel {
 <li>AUTO_SIGN             企业自动签（自动签署）</li>
 <li>  OVERSEA_SIGN          企业与港澳台居民签署合同</li>
 <li>  MOBILE_CHECK_APPROVER 使用手机号验证签署方身份</li>
-<li> PAGING_SEAL           骑缝章</li>
 <li> DOWNLOAD_FLOW         授权渠道下载合同 </li>
 <li>AGE_LIMIT_EXPANSION 拓宽签署方年龄限制</li>
 <li>HIDE_OPERATOR_DISPLAY 隐藏合同经办人姓名</li>
@@ -157,7 +154,6 @@ public class ModifyExtendedServiceRequest extends AbstractModel {
 <li>AUTO_SIGN             企业自动签（自动签署）</li>
 <li>  OVERSEA_SIGN          企业与港澳台居民签署合同</li>
 <li>  MOBILE_CHECK_APPROVER 使用手机号验证签署方身份</li>
-<li> PAGING_SEAL           骑缝章</li>
 <li> DOWNLOAD_FLOW         授权渠道下载合同 </li>
 <li>AGE_LIMIT_EXPANSION 拓宽签署方年龄限制</li>
 <li>HIDE_OPERATOR_DISPLAY 隐藏合同经办人姓名</li>
@@ -167,7 +163,6 @@ public class ModifyExtendedServiceRequest extends AbstractModel {
 <li>AUTO_SIGN             企业自动签（自动签署）</li>
 <li>  OVERSEA_SIGN          企业与港澳台居民签署合同</li>
 <li>  MOBILE_CHECK_APPROVER 使用手机号验证签署方身份</li>
-<li> PAGING_SEAL           骑缝章</li>
 <li> DOWNLOAD_FLOW         授权渠道下载合同 </li>
 <li>AGE_LIMIT_EXPANSION 拓宽签署方年龄限制</li>
 <li>HIDE_OPERATOR_DISPLAY 隐藏合同经办人姓名</li>

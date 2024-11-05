@@ -25,7 +25,6 @@ public class DescribeDbAssetInfoResponse extends AbstractModel {
 
     /**
     * db资产详情
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeDbAssetInfoResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get db资产详情
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get db资产详情 
      * @return Data db资产详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DbAssetInfo getData() {
         return this.Data;
@@ -50,9 +47,7 @@ public class DescribeDbAssetInfoResponse extends AbstractModel {
 
     /**
      * Set db资产详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Data db资产详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(DbAssetInfo Data) {
         this.Data = Data;

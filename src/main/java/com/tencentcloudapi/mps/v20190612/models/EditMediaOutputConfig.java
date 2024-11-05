@@ -32,7 +32,10 @@ public class EditMediaOutputConfig extends AbstractModel {
     private String Container;
 
     /**
-    * 剪辑模式，可选值 normal、fast。默认是精确剪辑 normal
+    * 剪辑模式，可选值：
+normal（默认）：精准编辑
+fast：快速编辑，处理速度更快但精准度一定程度降低
+注意：fast只支持单文件，normal默认输出转码格式是h264
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
@@ -60,9 +63,15 @@ public class EditMediaOutputConfig extends AbstractModel {
     }
 
     /**
-     * Get 剪辑模式，可选值 normal、fast。默认是精确剪辑 normal
+     * Get 剪辑模式，可选值：
+normal（默认）：精准编辑
+fast：快速编辑，处理速度更快但精准度一定程度降低
+注意：fast只支持单文件，normal默认输出转码格式是h264
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Type 剪辑模式，可选值 normal、fast。默认是精确剪辑 normal
+     * @return Type 剪辑模式，可选值：
+normal（默认）：精准编辑
+fast：快速编辑，处理速度更快但精准度一定程度降低
+注意：fast只支持单文件，normal默认输出转码格式是h264
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
@@ -70,9 +79,15 @@ public class EditMediaOutputConfig extends AbstractModel {
     }
 
     /**
-     * Set 剪辑模式，可选值 normal、fast。默认是精确剪辑 normal
+     * Set 剪辑模式，可选值：
+normal（默认）：精准编辑
+fast：快速编辑，处理速度更快但精准度一定程度降低
+注意：fast只支持单文件，normal默认输出转码格式是h264
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Type 剪辑模式，可选值 normal、fast。默认是精确剪辑 normal
+     * @param Type 剪辑模式，可选值：
+normal（默认）：精准编辑
+fast：快速编辑，处理速度更快但精准度一定程度降低
+注意：fast只支持单文件，normal默认输出转码格式是h264
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {

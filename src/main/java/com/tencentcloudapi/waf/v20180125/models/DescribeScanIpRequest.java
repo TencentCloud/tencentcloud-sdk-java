@@ -21,67 +21,41 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAntiFakeUrlRequest extends AbstractModel {
+public class DescribeScanIpRequest extends AbstractModel {
 
     /**
-    * 域名
+    * 要查询的ip地址
     */
-    @SerializedName("Domain")
+    @SerializedName("Ip")
     @Expose
-    private String Domain;
+    private String Ip;
 
     /**
-    * 翻页参数
-    */
-    @SerializedName("PageInfo")
-    @Expose
-    private PageInfo PageInfo;
-
-    /**
-     * Get 域名 
-     * @return Domain 域名
+     * Get 要查询的ip地址 
+     * @return Ip 要查询的ip地址
      */
-    public String getDomain() {
-        return this.Domain;
+    public String getIp() {
+        return this.Ip;
     }
 
     /**
-     * Set 域名
-     * @param Domain 域名
+     * Set 要查询的ip地址
+     * @param Ip 要查询的ip地址
      */
-    public void setDomain(String Domain) {
-        this.Domain = Domain;
+    public void setIp(String Ip) {
+        this.Ip = Ip;
     }
 
-    /**
-     * Get 翻页参数 
-     * @return PageInfo 翻页参数
-     */
-    public PageInfo getPageInfo() {
-        return this.PageInfo;
-    }
-
-    /**
-     * Set 翻页参数
-     * @param PageInfo 翻页参数
-     */
-    public void setPageInfo(PageInfo PageInfo) {
-        this.PageInfo = PageInfo;
-    }
-
-    public DescribeAntiFakeUrlRequest() {
+    public DescribeScanIpRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeAntiFakeUrlRequest(DescribeAntiFakeUrlRequest source) {
-        if (source.Domain != null) {
-            this.Domain = new String(source.Domain);
-        }
-        if (source.PageInfo != null) {
-            this.PageInfo = new PageInfo(source.PageInfo);
+    public DescribeScanIpRequest(DescribeScanIpRequest source) {
+        if (source.Ip != null) {
+            this.Ip = new String(source.Ip);
         }
     }
 
@@ -90,8 +64,7 @@ public class DescribeAntiFakeUrlRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Domain", this.Domain);
-        this.setParamObj(map, prefix + "PageInfo.", this.PageInfo);
+        this.setParamSimple(map, prefix + "Ip", this.Ip);
 
     }
 }

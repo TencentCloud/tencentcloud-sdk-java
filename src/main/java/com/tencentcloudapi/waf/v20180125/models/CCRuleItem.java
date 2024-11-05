@@ -102,7 +102,6 @@ public class CCRuleItem extends AbstractModel {
 
     /**
     * 高级参数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OptionsArr")
     @Expose
@@ -320,10 +319,8 @@ public class CCRuleItem extends AbstractModel {
     }
 
     /**
-     * Get 高级参数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 高级参数 
      * @return OptionsArr 高级参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOptionsArr() {
         return this.OptionsArr;
@@ -331,9 +328,7 @@ public class CCRuleItem extends AbstractModel {
 
     /**
      * Set 高级参数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OptionsArr 高级参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOptionsArr(String OptionsArr) {
         this.OptionsArr = OptionsArr;

@@ -31,14 +31,14 @@ public class DescribeTendisSlowLogRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * 开始时间：2019-09-08 12:12:41
+    * 开始时间：2019-09-08 12:12:41，查询时间最大跨度30天。
     */
     @SerializedName("BeginTime")
     @Expose
     private String BeginTime;
 
     /**
-    * 结束时间：2019-09-09 12:12:41
+    * 结束时间：2019-09-09 12:12:41，查询时间最大跨度30天。
     */
     @SerializedName("EndTime")
     @Expose
@@ -52,14 +52,14 @@ public class DescribeTendisSlowLogRequest extends AbstractModel {
     private Long MinQueryTime;
 
     /**
-    * 页面大小：默认20
+    * 页面大小：默认20，最大100。
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 偏移量，取Limit整数倍
+    * 分页偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。
     */
     @SerializedName("Offset")
     @Expose
@@ -82,32 +82,32 @@ public class DescribeTendisSlowLogRequest extends AbstractModel {
     }
 
     /**
-     * Get 开始时间：2019-09-08 12:12:41 
-     * @return BeginTime 开始时间：2019-09-08 12:12:41
+     * Get 开始时间：2019-09-08 12:12:41，查询时间最大跨度30天。 
+     * @return BeginTime 开始时间：2019-09-08 12:12:41，查询时间最大跨度30天。
      */
     public String getBeginTime() {
         return this.BeginTime;
     }
 
     /**
-     * Set 开始时间：2019-09-08 12:12:41
-     * @param BeginTime 开始时间：2019-09-08 12:12:41
+     * Set 开始时间：2019-09-08 12:12:41，查询时间最大跨度30天。
+     * @param BeginTime 开始时间：2019-09-08 12:12:41，查询时间最大跨度30天。
      */
     public void setBeginTime(String BeginTime) {
         this.BeginTime = BeginTime;
     }
 
     /**
-     * Get 结束时间：2019-09-09 12:12:41 
-     * @return EndTime 结束时间：2019-09-09 12:12:41
+     * Get 结束时间：2019-09-09 12:12:41，查询时间最大跨度30天。 
+     * @return EndTime 结束时间：2019-09-09 12:12:41，查询时间最大跨度30天。
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间：2019-09-09 12:12:41
-     * @param EndTime 结束时间：2019-09-09 12:12:41
+     * Set 结束时间：2019-09-09 12:12:41，查询时间最大跨度30天。
+     * @param EndTime 结束时间：2019-09-09 12:12:41，查询时间最大跨度30天。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
@@ -130,32 +130,32 @@ public class DescribeTendisSlowLogRequest extends AbstractModel {
     }
 
     /**
-     * Get 页面大小：默认20 
-     * @return Limit 页面大小：默认20
+     * Get 页面大小：默认20，最大100。 
+     * @return Limit 页面大小：默认20，最大100。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 页面大小：默认20
-     * @param Limit 页面大小：默认20
+     * Set 页面大小：默认20，最大100。
+     * @param Limit 页面大小：默认20，最大100。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 偏移量，取Limit整数倍 
-     * @return Offset 偏移量，取Limit整数倍
+     * Get 分页偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。 
+     * @return Offset 分页偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量，取Limit整数倍
-     * @param Offset 偏移量，取Limit整数倍
+     * Set 分页偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。
+     * @param Offset 分页偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

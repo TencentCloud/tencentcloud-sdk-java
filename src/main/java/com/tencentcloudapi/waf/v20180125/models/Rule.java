@@ -32,7 +32,6 @@ public class Rule extends AbstractModel {
 
     /**
     * 规则类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -47,7 +46,6 @@ public class Rule extends AbstractModel {
 
     /**
     * 规则描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
     @Expose
@@ -55,7 +53,6 @@ public class Rule extends AbstractModel {
 
     /**
     * 规则防护的CVE编号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CVE")
     @Expose
@@ -77,7 +74,6 @@ public class Rule extends AbstractModel {
 
     /**
     * 门神规则新增/更新时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AddTime")
     @Expose
@@ -100,10 +96,8 @@ public class Rule extends AbstractModel {
     }
 
     /**
-     * Get 规则类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则类型 
      * @return Type 规则类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
         return this.Type;
@@ -111,9 +105,7 @@ public class Rule extends AbstractModel {
 
     /**
      * Set 规则类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 规则类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -136,10 +128,8 @@ public class Rule extends AbstractModel {
     }
 
     /**
-     * Get 规则描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则描述 
      * @return Description 规则描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
         return this.Description;
@@ -147,19 +137,15 @@ public class Rule extends AbstractModel {
 
     /**
      * Set 规则描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Description 规则描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 规则防护的CVE编号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则防护的CVE编号 
      * @return CVE 规则防护的CVE编号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCVE() {
         return this.CVE;
@@ -167,9 +153,7 @@ public class Rule extends AbstractModel {
 
     /**
      * Set 规则防护的CVE编号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CVE 规则防护的CVE编号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCVE(String CVE) {
         this.CVE = CVE;
@@ -208,10 +192,8 @@ public class Rule extends AbstractModel {
     }
 
     /**
-     * Get 门神规则新增/更新时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 门神规则新增/更新时间 
      * @return AddTime 门神规则新增/更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAddTime() {
         return this.AddTime;
@@ -219,9 +201,7 @@ public class Rule extends AbstractModel {
 
     /**
      * Set 门神规则新增/更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AddTime 门神规则新增/更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAddTime(String AddTime) {
         this.AddTime = AddTime;

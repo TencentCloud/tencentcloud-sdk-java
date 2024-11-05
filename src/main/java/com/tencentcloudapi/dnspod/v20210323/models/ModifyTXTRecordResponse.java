@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.waf.v20180125.models;
+package com.tencentcloudapi.dnspod.v20210323.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,21 +21,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAntiInfoLeakRulesResponse extends AbstractModel {
+public class ModifyTXTRecordResponse extends AbstractModel {
 
     /**
-    * 记录条数
+    * 记录ID
     */
-    @SerializedName("TotalCount")
+    @SerializedName("RecordId")
     @Expose
-    private String TotalCount;
-
-    /**
-    * 规则列表
-    */
-    @SerializedName("RuleList")
-    @Expose
-    private DescribeAntiInfoLeakRulesRuleItem [] RuleList;
+    private Long RecordId;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -45,35 +38,19 @@ public class DescribeAntiInfoLeakRulesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 记录条数 
-     * @return TotalCount 记录条数
+     * Get 记录ID 
+     * @return RecordId 记录ID
      */
-    public String getTotalCount() {
-        return this.TotalCount;
+    public Long getRecordId() {
+        return this.RecordId;
     }
 
     /**
-     * Set 记录条数
-     * @param TotalCount 记录条数
+     * Set 记录ID
+     * @param RecordId 记录ID
      */
-    public void setTotalCount(String TotalCount) {
-        this.TotalCount = TotalCount;
-    }
-
-    /**
-     * Get 规则列表 
-     * @return RuleList 规则列表
-     */
-    public DescribeAntiInfoLeakRulesRuleItem [] getRuleList() {
-        return this.RuleList;
-    }
-
-    /**
-     * Set 规则列表
-     * @param RuleList 规则列表
-     */
-    public void setRuleList(DescribeAntiInfoLeakRulesRuleItem [] RuleList) {
-        this.RuleList = RuleList;
+    public void setRecordId(Long RecordId) {
+        this.RecordId = RecordId;
     }
 
     /**
@@ -92,22 +69,16 @@ public class DescribeAntiInfoLeakRulesResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public DescribeAntiInfoLeakRulesResponse() {
+    public ModifyTXTRecordResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeAntiInfoLeakRulesResponse(DescribeAntiInfoLeakRulesResponse source) {
-        if (source.TotalCount != null) {
-            this.TotalCount = new String(source.TotalCount);
-        }
-        if (source.RuleList != null) {
-            this.RuleList = new DescribeAntiInfoLeakRulesRuleItem[source.RuleList.length];
-            for (int i = 0; i < source.RuleList.length; i++) {
-                this.RuleList[i] = new DescribeAntiInfoLeakRulesRuleItem(source.RuleList[i]);
-            }
+    public ModifyTXTRecordResponse(ModifyTXTRecordResponse source) {
+        if (source.RecordId != null) {
+            this.RecordId = new Long(source.RecordId);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -119,8 +90,7 @@ public class DescribeAntiInfoLeakRulesResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
-        this.setParamArrayObj(map, prefix + "RuleList.", this.RuleList);
+        this.setParamSimple(map, prefix + "RecordId", this.RecordId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

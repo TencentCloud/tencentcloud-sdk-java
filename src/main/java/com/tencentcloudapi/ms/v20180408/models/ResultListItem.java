@@ -195,7 +195,6 @@ public class ResultListItem extends AbstractModel {
 1001表示APP md5 different between real md5, please confirm it.
 
 1002表示App md5 uncollect, please offer downloadlink.
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ErrNo")
     @Expose
@@ -604,8 +603,7 @@ public class ResultListItem extends AbstractModel {
 
 1001表示APP md5 different between real md5, please confirm it.
 
-1002表示App md5 uncollect, please offer downloadlink.
-注意：此字段可能返回 null，表示取不到有效值。 
+1002表示App md5 uncollect, please offer downloadlink. 
      * @return ErrNo 应用错误码：0、1-表示正常；                  
 
 2表示System Error(engine analysis error).
@@ -629,7 +627,6 @@ public class ResultListItem extends AbstractModel {
 1001表示APP md5 different between real md5, please confirm it.
 
 1002表示App md5 uncollect, please offer downloadlink.
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getErrNo() {
         return this.ErrNo;
@@ -659,7 +656,6 @@ public class ResultListItem extends AbstractModel {
 1001表示APP md5 different between real md5, please confirm it.
 
 1002表示App md5 uncollect, please offer downloadlink.
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ErrNo 应用错误码：0、1-表示正常；                  
 
 2表示System Error(engine analysis error).
@@ -683,7 +679,6 @@ public class ResultListItem extends AbstractModel {
 1001表示APP md5 different between real md5, please confirm it.
 
 1002表示App md5 uncollect, please offer downloadlink.
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrNo(String ErrNo) {
         this.ErrNo = ErrNo;

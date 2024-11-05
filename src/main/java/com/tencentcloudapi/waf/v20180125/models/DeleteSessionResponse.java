@@ -25,7 +25,6 @@ public class DeleteSessionResponse extends AbstractModel {
 
     /**
     * 结果
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
     @Expose
@@ -39,10 +38,8 @@ public class DeleteSessionResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 结果
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 结果 
      * @return Data 结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getData() {
         return this.Data;
@@ -50,9 +47,7 @@ public class DeleteSessionResponse extends AbstractModel {
 
     /**
      * Set 结果
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Data 结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(String Data) {
         this.Data = Data;

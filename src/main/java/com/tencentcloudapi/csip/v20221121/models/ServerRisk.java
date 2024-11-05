@@ -32,7 +32,6 @@ public class ServerRisk extends AbstractModel {
 
     /**
     * 端口
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Port")
     @Expose
@@ -110,7 +109,6 @@ public class ServerRisk extends AbstractModel {
 
     /**
     * 风险详情
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RiskDetails")
     @Expose
@@ -146,7 +144,6 @@ public class ServerRisk extends AbstractModel {
 
     /**
     * 用户昵称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Nick")
     @Expose
@@ -154,7 +151,6 @@ public class ServerRisk extends AbstractModel {
 
     /**
     * 用户uin
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Uin")
     @Expose
@@ -162,7 +158,6 @@ public class ServerRisk extends AbstractModel {
 
     /**
     * 服务快照
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ServiceSnapshot")
     @Expose
@@ -170,7 +165,6 @@ public class ServerRisk extends AbstractModel {
 
     /**
     * 服务访问的url
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Url")
     @Expose
@@ -178,7 +172,6 @@ public class ServerRisk extends AbstractModel {
 
     /**
     * 列表索引值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Index")
     @Expose
@@ -186,7 +179,6 @@ public class ServerRisk extends AbstractModel {
 
     /**
     * 风险列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RiskList")
     @Expose
@@ -194,7 +186,6 @@ public class ServerRisk extends AbstractModel {
 
     /**
     * 建议列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SuggestionList")
     @Expose
@@ -202,7 +193,6 @@ public class ServerRisk extends AbstractModel {
 
     /**
     * HTTP响应状态码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StatusCode")
     @Expose
@@ -225,10 +215,8 @@ public class ServerRisk extends AbstractModel {
     }
 
     /**
-     * Get 端口
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 端口 
      * @return Port 端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPort() {
         return this.Port;
@@ -236,9 +224,7 @@ public class ServerRisk extends AbstractModel {
 
     /**
      * Set 端口
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Port 端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPort(Long Port) {
         this.Port = Port;
@@ -405,10 +391,8 @@ public class ServerRisk extends AbstractModel {
     }
 
     /**
-     * Get 风险详情
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 风险详情 
      * @return RiskDetails 风险详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRiskDetails() {
         return this.RiskDetails;
@@ -416,9 +400,7 @@ public class ServerRisk extends AbstractModel {
 
     /**
      * Set 风险详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RiskDetails 风险详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRiskDetails(String RiskDetails) {
         this.RiskDetails = RiskDetails;
@@ -489,10 +471,8 @@ public class ServerRisk extends AbstractModel {
     }
 
     /**
-     * Get 用户昵称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户昵称 
      * @return Nick 用户昵称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNick() {
         return this.Nick;
@@ -500,19 +480,15 @@ public class ServerRisk extends AbstractModel {
 
     /**
      * Set 用户昵称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Nick 用户昵称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNick(String Nick) {
         this.Nick = Nick;
     }
 
     /**
-     * Get 用户uin
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户uin 
      * @return Uin 用户uin
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUin() {
         return this.Uin;
@@ -520,19 +496,15 @@ public class ServerRisk extends AbstractModel {
 
     /**
      * Set 用户uin
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Uin 用户uin
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUin(String Uin) {
         this.Uin = Uin;
     }
 
     /**
-     * Get 服务快照
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 服务快照 
      * @return ServiceSnapshot 服务快照
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getServiceSnapshot() {
         return this.ServiceSnapshot;
@@ -540,19 +512,15 @@ public class ServerRisk extends AbstractModel {
 
     /**
      * Set 服务快照
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ServiceSnapshot 服务快照
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setServiceSnapshot(String ServiceSnapshot) {
         this.ServiceSnapshot = ServiceSnapshot;
     }
 
     /**
-     * Get 服务访问的url
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 服务访问的url 
      * @return Url 服务访问的url
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUrl() {
         return this.Url;
@@ -560,19 +528,15 @@ public class ServerRisk extends AbstractModel {
 
     /**
      * Set 服务访问的url
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Url 服务访问的url
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * Get 列表索引值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 列表索引值 
      * @return Index 列表索引值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIndex() {
         return this.Index;
@@ -580,19 +544,15 @@ public class ServerRisk extends AbstractModel {
 
     /**
      * Set 列表索引值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Index 列表索引值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIndex(String Index) {
         this.Index = Index;
     }
 
     /**
-     * Get 风险列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 风险列表 
      * @return RiskList 风险列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ServerRiskSuggestion [] getRiskList() {
         return this.RiskList;
@@ -600,19 +560,15 @@ public class ServerRisk extends AbstractModel {
 
     /**
      * Set 风险列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RiskList 风险列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRiskList(ServerRiskSuggestion [] RiskList) {
         this.RiskList = RiskList;
     }
 
     /**
-     * Get 建议列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 建议列表 
      * @return SuggestionList 建议列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ServerRiskSuggestion [] getSuggestionList() {
         return this.SuggestionList;
@@ -620,19 +576,15 @@ public class ServerRisk extends AbstractModel {
 
     /**
      * Set 建议列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SuggestionList 建议列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSuggestionList(ServerRiskSuggestion [] SuggestionList) {
         this.SuggestionList = SuggestionList;
     }
 
     /**
-     * Get HTTP响应状态码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get HTTP响应状态码 
      * @return StatusCode HTTP响应状态码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatusCode() {
         return this.StatusCode;
@@ -640,9 +592,7 @@ public class ServerRisk extends AbstractModel {
 
     /**
      * Set HTTP响应状态码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StatusCode HTTP响应状态码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatusCode(String StatusCode) {
         this.StatusCode = StatusCode;

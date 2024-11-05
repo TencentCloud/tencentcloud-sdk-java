@@ -95,7 +95,6 @@ public class GateWayAsset extends AbstractModel {
 
     /**
     * 标签
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tag")
     @Expose
@@ -187,7 +186,6 @@ public class GateWayAsset extends AbstractModel {
 
     /**
     * ipv6地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AddressIPV6")
     @Expose
@@ -195,7 +193,6 @@ public class GateWayAsset extends AbstractModel {
 
     /**
     * 是否核心
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsCore")
     @Expose
@@ -203,7 +200,6 @@ public class GateWayAsset extends AbstractModel {
 
     /**
     * 风险服务暴露
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RiskExposure")
     @Expose
@@ -211,7 +207,6 @@ public class GateWayAsset extends AbstractModel {
 
     /**
     * 是否新资产 1新
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsNewAsset")
     @Expose
@@ -219,7 +214,6 @@ public class GateWayAsset extends AbstractModel {
 
     /**
     * 网关状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -227,7 +221,6 @@ public class GateWayAsset extends AbstractModel {
 
     /**
     * TSE的网关真实地域
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EngineRegion")
     @Expose
@@ -394,10 +387,8 @@ public class GateWayAsset extends AbstractModel {
     }
 
     /**
-     * Get 标签
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标签 
      * @return Tag 标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Tag [] getTag() {
         return this.Tag;
@@ -405,9 +396,7 @@ public class GateWayAsset extends AbstractModel {
 
     /**
      * Set 标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tag 标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTag(Tag [] Tag) {
         this.Tag = Tag;
@@ -606,10 +595,8 @@ public class GateWayAsset extends AbstractModel {
     }
 
     /**
-     * Get ipv6地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get ipv6地址 
      * @return AddressIPV6 ipv6地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAddressIPV6() {
         return this.AddressIPV6;
@@ -617,19 +604,15 @@ public class GateWayAsset extends AbstractModel {
 
     /**
      * Set ipv6地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AddressIPV6 ipv6地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAddressIPV6(String AddressIPV6) {
         this.AddressIPV6 = AddressIPV6;
     }
 
     /**
-     * Get 是否核心
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否核心 
      * @return IsCore 是否核心
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsCore() {
         return this.IsCore;
@@ -637,19 +620,15 @@ public class GateWayAsset extends AbstractModel {
 
     /**
      * Set 是否核心
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsCore 是否核心
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsCore(Long IsCore) {
         this.IsCore = IsCore;
     }
 
     /**
-     * Get 风险服务暴露
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 风险服务暴露 
      * @return RiskExposure 风险服务暴露
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRiskExposure() {
         return this.RiskExposure;
@@ -657,19 +636,15 @@ public class GateWayAsset extends AbstractModel {
 
     /**
      * Set 风险服务暴露
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RiskExposure 风险服务暴露
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRiskExposure(Long RiskExposure) {
         this.RiskExposure = RiskExposure;
     }
 
     /**
-     * Get 是否新资产 1新
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否新资产 1新 
      * @return IsNewAsset 是否新资产 1新
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsNewAsset() {
         return this.IsNewAsset;
@@ -677,19 +652,15 @@ public class GateWayAsset extends AbstractModel {
 
     /**
      * Set 是否新资产 1新
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsNewAsset 是否新资产 1新
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsNewAsset(Long IsNewAsset) {
         this.IsNewAsset = IsNewAsset;
     }
 
     /**
-     * Get 网关状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网关状态 
      * @return Status 网关状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
         return this.Status;
@@ -697,19 +668,15 @@ public class GateWayAsset extends AbstractModel {
 
     /**
      * Set 网关状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 网关状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get TSE的网关真实地域
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get TSE的网关真实地域 
      * @return EngineRegion TSE的网关真实地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEngineRegion() {
         return this.EngineRegion;
@@ -717,9 +684,7 @@ public class GateWayAsset extends AbstractModel {
 
     /**
      * Set TSE的网关真实地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EngineRegion TSE的网关真实地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEngineRegion(String EngineRegion) {
         this.EngineRegion = EngineRegion;

@@ -25,7 +25,6 @@ public class AssetBaseInfoResponse extends AbstractModel {
 
     /**
     * vpc-id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcId")
     @Expose
@@ -33,7 +32,6 @@ public class AssetBaseInfoResponse extends AbstractModel {
 
     /**
     * vpc-name
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcName")
     @Expose
@@ -41,7 +39,6 @@ public class AssetBaseInfoResponse extends AbstractModel {
 
     /**
     * 资产名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AssetName")
     @Expose
@@ -49,7 +46,6 @@ public class AssetBaseInfoResponse extends AbstractModel {
 
     /**
     * 操作系统
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Os")
     @Expose
@@ -57,7 +53,6 @@ public class AssetBaseInfoResponse extends AbstractModel {
 
     /**
     * 公网ip
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PublicIp")
     @Expose
@@ -65,7 +60,6 @@ public class AssetBaseInfoResponse extends AbstractModel {
 
     /**
     * 内网ip
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PrivateIp")
     @Expose
@@ -73,7 +67,6 @@ public class AssetBaseInfoResponse extends AbstractModel {
 
     /**
     * 地域
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Region")
     @Expose
@@ -81,7 +74,6 @@ public class AssetBaseInfoResponse extends AbstractModel {
 
     /**
     * 资产类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AssetType")
     @Expose
@@ -89,7 +81,6 @@ public class AssetBaseInfoResponse extends AbstractModel {
 
     /**
     * 资产id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AssetId")
     @Expose
@@ -97,7 +88,6 @@ public class AssetBaseInfoResponse extends AbstractModel {
 
     /**
     * 账号数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AccountNum")
     @Expose
@@ -105,7 +95,6 @@ public class AssetBaseInfoResponse extends AbstractModel {
 
     /**
     * 端口数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PortNum")
     @Expose
@@ -113,7 +102,6 @@ public class AssetBaseInfoResponse extends AbstractModel {
 
     /**
     * 进程数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProcessNum")
     @Expose
@@ -121,7 +109,6 @@ public class AssetBaseInfoResponse extends AbstractModel {
 
     /**
     * 软件应用数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SoftApplicationNum")
     @Expose
@@ -129,7 +116,6 @@ public class AssetBaseInfoResponse extends AbstractModel {
 
     /**
     * 数据库数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DatabaseNum")
     @Expose
@@ -137,7 +123,6 @@ public class AssetBaseInfoResponse extends AbstractModel {
 
     /**
     * Web应用数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WebApplicationNum")
     @Expose
@@ -145,7 +130,6 @@ public class AssetBaseInfoResponse extends AbstractModel {
 
     /**
     * 服务数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ServiceNum")
     @Expose
@@ -153,7 +137,6 @@ public class AssetBaseInfoResponse extends AbstractModel {
 
     /**
     * web框架数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WebFrameworkNum")
     @Expose
@@ -161,7 +144,6 @@ public class AssetBaseInfoResponse extends AbstractModel {
 
     /**
     * Web站点数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WebSiteNum")
     @Expose
@@ -169,7 +151,6 @@ public class AssetBaseInfoResponse extends AbstractModel {
 
     /**
     * Jar包数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("JarPackageNum")
     @Expose
@@ -177,7 +158,6 @@ public class AssetBaseInfoResponse extends AbstractModel {
 
     /**
     * 启动服务数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartServiceNum")
     @Expose
@@ -185,7 +165,6 @@ public class AssetBaseInfoResponse extends AbstractModel {
 
     /**
     * 计划任务数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScheduledTaskNum")
     @Expose
@@ -193,7 +172,6 @@ public class AssetBaseInfoResponse extends AbstractModel {
 
     /**
     * 环境变量数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnvironmentVariableNum")
     @Expose
@@ -201,7 +179,6 @@ public class AssetBaseInfoResponse extends AbstractModel {
 
     /**
     * 内核模块数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KernelModuleNum")
     @Expose
@@ -209,7 +186,6 @@ public class AssetBaseInfoResponse extends AbstractModel {
 
     /**
     * 系统安装包数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SystemInstallationPackageNum")
     @Expose
@@ -217,7 +193,6 @@ public class AssetBaseInfoResponse extends AbstractModel {
 
     /**
     * 剩余防护时长
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SurplusProtectDay")
     @Expose
@@ -225,7 +200,6 @@ public class AssetBaseInfoResponse extends AbstractModel {
 
     /**
     * 客户端是否安装  1 已安装 0 未安装
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CWPStatus")
     @Expose
@@ -233,7 +207,6 @@ public class AssetBaseInfoResponse extends AbstractModel {
 
     /**
     * 标签
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tag")
     @Expose
@@ -241,7 +214,6 @@ public class AssetBaseInfoResponse extends AbstractModel {
 
     /**
     * 防护等级
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProtectLevel")
     @Expose
@@ -249,17 +221,14 @@ public class AssetBaseInfoResponse extends AbstractModel {
 
     /**
     * 防护时长
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProtectedDay")
     @Expose
     private Long ProtectedDay;
 
     /**
-     * Get vpc-id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get vpc-id 
      * @return VpcId vpc-id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVpcId() {
         return this.VpcId;
@@ -267,19 +236,15 @@ public class AssetBaseInfoResponse extends AbstractModel {
 
     /**
      * Set vpc-id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VpcId vpc-id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get vpc-name
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get vpc-name 
      * @return VpcName vpc-name
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVpcName() {
         return this.VpcName;
@@ -287,19 +252,15 @@ public class AssetBaseInfoResponse extends AbstractModel {
 
     /**
      * Set vpc-name
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VpcName vpc-name
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcName(String VpcName) {
         this.VpcName = VpcName;
     }
 
     /**
-     * Get 资产名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资产名 
      * @return AssetName 资产名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAssetName() {
         return this.AssetName;
@@ -307,19 +268,15 @@ public class AssetBaseInfoResponse extends AbstractModel {
 
     /**
      * Set 资产名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AssetName 资产名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAssetName(String AssetName) {
         this.AssetName = AssetName;
     }
 
     /**
-     * Get 操作系统
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 操作系统 
      * @return Os 操作系统
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOs() {
         return this.Os;
@@ -327,19 +284,15 @@ public class AssetBaseInfoResponse extends AbstractModel {
 
     /**
      * Set 操作系统
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Os 操作系统
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOs(String Os) {
         this.Os = Os;
     }
 
     /**
-     * Get 公网ip
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 公网ip 
      * @return PublicIp 公网ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPublicIp() {
         return this.PublicIp;
@@ -347,19 +300,15 @@ public class AssetBaseInfoResponse extends AbstractModel {
 
     /**
      * Set 公网ip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PublicIp 公网ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPublicIp(String PublicIp) {
         this.PublicIp = PublicIp;
     }
 
     /**
-     * Get 内网ip
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 内网ip 
      * @return PrivateIp 内网ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPrivateIp() {
         return this.PrivateIp;
@@ -367,19 +316,15 @@ public class AssetBaseInfoResponse extends AbstractModel {
 
     /**
      * Set 内网ip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PrivateIp 内网ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPrivateIp(String PrivateIp) {
         this.PrivateIp = PrivateIp;
     }
 
     /**
-     * Get 地域
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地域 
      * @return Region 地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegion() {
         return this.Region;
@@ -387,19 +332,15 @@ public class AssetBaseInfoResponse extends AbstractModel {
 
     /**
      * Set 地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Region 地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get 资产类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资产类型 
      * @return AssetType 资产类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAssetType() {
         return this.AssetType;
@@ -407,19 +348,15 @@ public class AssetBaseInfoResponse extends AbstractModel {
 
     /**
      * Set 资产类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AssetType 资产类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAssetType(String AssetType) {
         this.AssetType = AssetType;
     }
 
     /**
-     * Get 资产id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资产id 
      * @return AssetId 资产id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAssetId() {
         return this.AssetId;
@@ -427,19 +364,15 @@ public class AssetBaseInfoResponse extends AbstractModel {
 
     /**
      * Set 资产id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AssetId 资产id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAssetId(String AssetId) {
         this.AssetId = AssetId;
     }
 
     /**
-     * Get 账号数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 账号数量 
      * @return AccountNum 账号数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAccountNum() {
         return this.AccountNum;
@@ -447,19 +380,15 @@ public class AssetBaseInfoResponse extends AbstractModel {
 
     /**
      * Set 账号数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AccountNum 账号数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAccountNum(Long AccountNum) {
         this.AccountNum = AccountNum;
     }
 
     /**
-     * Get 端口数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 端口数量 
      * @return PortNum 端口数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPortNum() {
         return this.PortNum;
@@ -467,19 +396,15 @@ public class AssetBaseInfoResponse extends AbstractModel {
 
     /**
      * Set 端口数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PortNum 端口数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPortNum(Long PortNum) {
         this.PortNum = PortNum;
     }
 
     /**
-     * Get 进程数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 进程数量 
      * @return ProcessNum 进程数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getProcessNum() {
         return this.ProcessNum;
@@ -487,19 +412,15 @@ public class AssetBaseInfoResponse extends AbstractModel {
 
     /**
      * Set 进程数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProcessNum 进程数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProcessNum(Long ProcessNum) {
         this.ProcessNum = ProcessNum;
     }
 
     /**
-     * Get 软件应用数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 软件应用数量 
      * @return SoftApplicationNum 软件应用数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSoftApplicationNum() {
         return this.SoftApplicationNum;
@@ -507,19 +428,15 @@ public class AssetBaseInfoResponse extends AbstractModel {
 
     /**
      * Set 软件应用数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SoftApplicationNum 软件应用数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSoftApplicationNum(Long SoftApplicationNum) {
         this.SoftApplicationNum = SoftApplicationNum;
     }
 
     /**
-     * Get 数据库数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据库数量 
      * @return DatabaseNum 数据库数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDatabaseNum() {
         return this.DatabaseNum;
@@ -527,19 +444,15 @@ public class AssetBaseInfoResponse extends AbstractModel {
 
     /**
      * Set 数据库数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DatabaseNum 数据库数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDatabaseNum(Long DatabaseNum) {
         this.DatabaseNum = DatabaseNum;
     }
 
     /**
-     * Get Web应用数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Web应用数量 
      * @return WebApplicationNum Web应用数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getWebApplicationNum() {
         return this.WebApplicationNum;
@@ -547,19 +460,15 @@ public class AssetBaseInfoResponse extends AbstractModel {
 
     /**
      * Set Web应用数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WebApplicationNum Web应用数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWebApplicationNum(Long WebApplicationNum) {
         this.WebApplicationNum = WebApplicationNum;
     }
 
     /**
-     * Get 服务数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 服务数量 
      * @return ServiceNum 服务数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getServiceNum() {
         return this.ServiceNum;
@@ -567,19 +476,15 @@ public class AssetBaseInfoResponse extends AbstractModel {
 
     /**
      * Set 服务数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ServiceNum 服务数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setServiceNum(Long ServiceNum) {
         this.ServiceNum = ServiceNum;
     }
 
     /**
-     * Get web框架数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get web框架数量 
      * @return WebFrameworkNum web框架数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getWebFrameworkNum() {
         return this.WebFrameworkNum;
@@ -587,19 +492,15 @@ public class AssetBaseInfoResponse extends AbstractModel {
 
     /**
      * Set web框架数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WebFrameworkNum web框架数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWebFrameworkNum(Long WebFrameworkNum) {
         this.WebFrameworkNum = WebFrameworkNum;
     }
 
     /**
-     * Get Web站点数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Web站点数量 
      * @return WebSiteNum Web站点数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getWebSiteNum() {
         return this.WebSiteNum;
@@ -607,19 +508,15 @@ public class AssetBaseInfoResponse extends AbstractModel {
 
     /**
      * Set Web站点数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WebSiteNum Web站点数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWebSiteNum(Long WebSiteNum) {
         this.WebSiteNum = WebSiteNum;
     }
 
     /**
-     * Get Jar包数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Jar包数量 
      * @return JarPackageNum Jar包数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getJarPackageNum() {
         return this.JarPackageNum;
@@ -627,19 +524,15 @@ public class AssetBaseInfoResponse extends AbstractModel {
 
     /**
      * Set Jar包数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param JarPackageNum Jar包数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setJarPackageNum(Long JarPackageNum) {
         this.JarPackageNum = JarPackageNum;
     }
 
     /**
-     * Get 启动服务数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 启动服务数量 
      * @return StartServiceNum 启动服务数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStartServiceNum() {
         return this.StartServiceNum;
@@ -647,19 +540,15 @@ public class AssetBaseInfoResponse extends AbstractModel {
 
     /**
      * Set 启动服务数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StartServiceNum 启动服务数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartServiceNum(Long StartServiceNum) {
         this.StartServiceNum = StartServiceNum;
     }
 
     /**
-     * Get 计划任务数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 计划任务数量 
      * @return ScheduledTaskNum 计划任务数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getScheduledTaskNum() {
         return this.ScheduledTaskNum;
@@ -667,19 +556,15 @@ public class AssetBaseInfoResponse extends AbstractModel {
 
     /**
      * Set 计划任务数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ScheduledTaskNum 计划任务数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScheduledTaskNum(Long ScheduledTaskNum) {
         this.ScheduledTaskNum = ScheduledTaskNum;
     }
 
     /**
-     * Get 环境变量数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 环境变量数量 
      * @return EnvironmentVariableNum 环境变量数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getEnvironmentVariableNum() {
         return this.EnvironmentVariableNum;
@@ -687,19 +572,15 @@ public class AssetBaseInfoResponse extends AbstractModel {
 
     /**
      * Set 环境变量数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EnvironmentVariableNum 环境变量数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnvironmentVariableNum(Long EnvironmentVariableNum) {
         this.EnvironmentVariableNum = EnvironmentVariableNum;
     }
 
     /**
-     * Get 内核模块数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 内核模块数量 
      * @return KernelModuleNum 内核模块数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getKernelModuleNum() {
         return this.KernelModuleNum;
@@ -707,19 +588,15 @@ public class AssetBaseInfoResponse extends AbstractModel {
 
     /**
      * Set 内核模块数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param KernelModuleNum 内核模块数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKernelModuleNum(Long KernelModuleNum) {
         this.KernelModuleNum = KernelModuleNum;
     }
 
     /**
-     * Get 系统安装包数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 系统安装包数量 
      * @return SystemInstallationPackageNum 系统安装包数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSystemInstallationPackageNum() {
         return this.SystemInstallationPackageNum;
@@ -727,19 +604,15 @@ public class AssetBaseInfoResponse extends AbstractModel {
 
     /**
      * Set 系统安装包数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SystemInstallationPackageNum 系统安装包数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSystemInstallationPackageNum(Long SystemInstallationPackageNum) {
         this.SystemInstallationPackageNum = SystemInstallationPackageNum;
     }
 
     /**
-     * Get 剩余防护时长
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 剩余防护时长 
      * @return SurplusProtectDay 剩余防护时长
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSurplusProtectDay() {
         return this.SurplusProtectDay;
@@ -747,19 +620,15 @@ public class AssetBaseInfoResponse extends AbstractModel {
 
     /**
      * Set 剩余防护时长
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SurplusProtectDay 剩余防护时长
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSurplusProtectDay(Long SurplusProtectDay) {
         this.SurplusProtectDay = SurplusProtectDay;
     }
 
     /**
-     * Get 客户端是否安装  1 已安装 0 未安装
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 客户端是否安装  1 已安装 0 未安装 
      * @return CWPStatus 客户端是否安装  1 已安装 0 未安装
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCWPStatus() {
         return this.CWPStatus;
@@ -767,19 +636,15 @@ public class AssetBaseInfoResponse extends AbstractModel {
 
     /**
      * Set 客户端是否安装  1 已安装 0 未安装
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CWPStatus 客户端是否安装  1 已安装 0 未安装
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCWPStatus(Long CWPStatus) {
         this.CWPStatus = CWPStatus;
     }
 
     /**
-     * Get 标签
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标签 
      * @return Tag 标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Tag [] getTag() {
         return this.Tag;
@@ -787,19 +652,15 @@ public class AssetBaseInfoResponse extends AbstractModel {
 
     /**
      * Set 标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tag 标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTag(Tag [] Tag) {
         this.Tag = Tag;
     }
 
     /**
-     * Get 防护等级
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 防护等级 
      * @return ProtectLevel 防护等级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProtectLevel() {
         return this.ProtectLevel;
@@ -807,19 +668,15 @@ public class AssetBaseInfoResponse extends AbstractModel {
 
     /**
      * Set 防护等级
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProtectLevel 防护等级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProtectLevel(String ProtectLevel) {
         this.ProtectLevel = ProtectLevel;
     }
 
     /**
-     * Get 防护时长
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 防护时长 
      * @return ProtectedDay 防护时长
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getProtectedDay() {
         return this.ProtectedDay;
@@ -827,9 +684,7 @@ public class AssetBaseInfoResponse extends AbstractModel {
 
     /**
      * Set 防护时长
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProtectedDay 防护时长
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProtectedDay(Long ProtectedDay) {
         this.ProtectedDay = ProtectedDay;

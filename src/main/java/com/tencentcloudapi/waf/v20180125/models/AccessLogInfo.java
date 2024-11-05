@@ -32,7 +32,6 @@ public class AccessLogInfo extends AbstractModel {
 
     /**
     * 日志主题ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TopicId")
     @Expose
@@ -40,7 +39,6 @@ public class AccessLogInfo extends AbstractModel {
 
     /**
     * 日志主题名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TopicName")
     @Expose
@@ -48,7 +46,6 @@ public class AccessLogInfo extends AbstractModel {
 
     /**
     * 日志来源IP
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Source")
     @Expose
@@ -56,7 +53,6 @@ public class AccessLogInfo extends AbstractModel {
 
     /**
     * 日志文件名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileName")
     @Expose
@@ -64,7 +60,6 @@ public class AccessLogInfo extends AbstractModel {
 
     /**
     * 日志上报请求包的ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PkgId")
     @Expose
@@ -72,7 +67,6 @@ public class AccessLogInfo extends AbstractModel {
 
     /**
     * 请求包内日志的ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PkgLogId")
     @Expose
@@ -80,7 +74,6 @@ public class AccessLogInfo extends AbstractModel {
 
     /**
     * 日志内容的Json序列化字符串
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LogJson")
@@ -104,10 +97,8 @@ public class AccessLogInfo extends AbstractModel {
     }
 
     /**
-     * Get 日志主题ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 日志主题ID 
      * @return TopicId 日志主题ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTopicId() {
         return this.TopicId;
@@ -115,19 +106,15 @@ public class AccessLogInfo extends AbstractModel {
 
     /**
      * Set 日志主题ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TopicId 日志主题ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
     }
 
     /**
-     * Get 日志主题名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 日志主题名称 
      * @return TopicName 日志主题名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTopicName() {
         return this.TopicName;
@@ -135,19 +122,15 @@ public class AccessLogInfo extends AbstractModel {
 
     /**
      * Set 日志主题名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TopicName 日志主题名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;
     }
 
     /**
-     * Get 日志来源IP
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 日志来源IP 
      * @return Source 日志来源IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSource() {
         return this.Source;
@@ -155,19 +138,15 @@ public class AccessLogInfo extends AbstractModel {
 
     /**
      * Set 日志来源IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Source 日志来源IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSource(String Source) {
         this.Source = Source;
     }
 
     /**
-     * Get 日志文件名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 日志文件名称 
      * @return FileName 日志文件名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFileName() {
         return this.FileName;
@@ -175,19 +154,15 @@ public class AccessLogInfo extends AbstractModel {
 
     /**
      * Set 日志文件名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FileName 日志文件名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileName(String FileName) {
         this.FileName = FileName;
     }
 
     /**
-     * Get 日志上报请求包的ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 日志上报请求包的ID 
      * @return PkgId 日志上报请求包的ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPkgId() {
         return this.PkgId;
@@ -195,19 +170,15 @@ public class AccessLogInfo extends AbstractModel {
 
     /**
      * Set 日志上报请求包的ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PkgId 日志上报请求包的ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPkgId(String PkgId) {
         this.PkgId = PkgId;
     }
 
     /**
-     * Get 请求包内日志的ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 请求包内日志的ID 
      * @return PkgLogId 请求包内日志的ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPkgLogId() {
         return this.PkgLogId;
@@ -215,9 +186,7 @@ public class AccessLogInfo extends AbstractModel {
 
     /**
      * Set 请求包内日志的ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PkgLogId 请求包内日志的ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPkgLogId(String PkgLogId) {
         this.PkgLogId = PkgLogId;
@@ -225,10 +194,8 @@ public class AccessLogInfo extends AbstractModel {
 
     /**
      * Get 日志内容的Json序列化字符串
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return LogJson 日志内容的Json序列化字符串
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLogJson() {
@@ -238,9 +205,7 @@ public class AccessLogInfo extends AbstractModel {
     /**
      * Set 日志内容的Json序列化字符串
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LogJson 日志内容的Json序列化字符串
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLogJson(String LogJson) {

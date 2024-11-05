@@ -25,7 +25,6 @@ public class AssetInstanceTypeMap extends AbstractModel {
 
     /**
     * 资产类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Text")
     @Expose
@@ -33,7 +32,6 @@ public class AssetInstanceTypeMap extends AbstractModel {
 
     /**
     * 资产类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Value")
     @Expose
@@ -41,17 +39,14 @@ public class AssetInstanceTypeMap extends AbstractModel {
 
     /**
     * 资产类型和实例类型映射关系
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceTypeList")
     @Expose
     private FilterDataObject [] InstanceTypeList;
 
     /**
-     * Get 资产类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资产类型 
      * @return Text 资产类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getText() {
         return this.Text;
@@ -59,19 +54,15 @@ public class AssetInstanceTypeMap extends AbstractModel {
 
     /**
      * Set 资产类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Text 资产类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setText(String Text) {
         this.Text = Text;
     }
 
     /**
-     * Get 资产类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资产类型 
      * @return Value 资产类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getValue() {
         return this.Value;
@@ -79,19 +70,15 @@ public class AssetInstanceTypeMap extends AbstractModel {
 
     /**
      * Set 资产类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Value 资产类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValue(String Value) {
         this.Value = Value;
     }
 
     /**
-     * Get 资产类型和实例类型映射关系
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资产类型和实例类型映射关系 
      * @return InstanceTypeList 资产类型和实例类型映射关系
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public FilterDataObject [] getInstanceTypeList() {
         return this.InstanceTypeList;
@@ -99,9 +86,7 @@ public class AssetInstanceTypeMap extends AbstractModel {
 
     /**
      * Set 资产类型和实例类型映射关系
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceTypeList 资产类型和实例类型映射关系
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceTypeList(FilterDataObject [] InstanceTypeList) {
         this.InstanceTypeList = InstanceTypeList;

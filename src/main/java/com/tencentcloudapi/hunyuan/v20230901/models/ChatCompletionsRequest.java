@@ -173,6 +173,13 @@ public class ChatCompletionsRequest extends AbstractModel {
     private Boolean EnableMultimedia;
 
     /**
+    * 是否开启搜索深度模式，默认是false，在值为true且命中搜索时，会请求深度搜索。
+    */
+    @SerializedName("EnableDeepSearch")
+    @Expose
+    private Boolean EnableDeepSearch;
+
+    /**
     * 说明： 1. 确保模型的输出是可复现的。 2. 取值区间为非0正整数，最大值10000。 3. 非必要不建议使用，不合理的取值会影响效果。
     */
     @SerializedName("Seed")
@@ -608,6 +615,22 @@ public class ChatCompletionsRequest extends AbstractModel {
     }
 
     /**
+     * Get 是否开启搜索深度模式，默认是false，在值为true且命中搜索时，会请求深度搜索。 
+     * @return EnableDeepSearch 是否开启搜索深度模式，默认是false，在值为true且命中搜索时，会请求深度搜索。
+     */
+    public Boolean getEnableDeepSearch() {
+        return this.EnableDeepSearch;
+    }
+
+    /**
+     * Set 是否开启搜索深度模式，默认是false，在值为true且命中搜索时，会请求深度搜索。
+     * @param EnableDeepSearch 是否开启搜索深度模式，默认是false，在值为true且命中搜索时，会请求深度搜索。
+     */
+    public void setEnableDeepSearch(Boolean EnableDeepSearch) {
+        this.EnableDeepSearch = EnableDeepSearch;
+    }
+
+    /**
      * Get 说明： 1. 确保模型的输出是可复现的。 2. 取值区间为非0正整数，最大值10000。 3. 非必要不建议使用，不合理的取值会影响效果。 
      * @return Seed 说明： 1. 确保模型的输出是可复现的。 2. 取值区间为非0正整数，最大值10000。 3. 非必要不建议使用，不合理的取值会影响效果。
      */
@@ -679,6 +702,9 @@ public class ChatCompletionsRequest extends AbstractModel {
         if (source.EnableMultimedia != null) {
             this.EnableMultimedia = new Boolean(source.EnableMultimedia);
         }
+        if (source.EnableDeepSearch != null) {
+            this.EnableDeepSearch = new Boolean(source.EnableDeepSearch);
+        }
         if (source.Seed != null) {
             this.Seed = new Long(source.Seed);
         }
@@ -703,6 +729,7 @@ public class ChatCompletionsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Citation", this.Citation);
         this.setParamSimple(map, prefix + "EnableSpeedSearch", this.EnableSpeedSearch);
         this.setParamSimple(map, prefix + "EnableMultimedia", this.EnableMultimedia);
+        this.setParamSimple(map, prefix + "EnableDeepSearch", this.EnableDeepSearch);
         this.setParamSimple(map, prefix + "Seed", this.Seed);
 
     }

@@ -52,7 +52,7 @@ public class DescribeTasksAnalysisRequest extends AbstractModel {
     private Filter [] Filters;
 
     /**
-    * 排序字段，支持如下字段类型，instance-start-time (任务开始时间）, instance-complete-time (任务结束时间）,job-time-sum （单位毫秒，引擎内执行耗时）,task-time-sum （CU资源消耗，单位秒）,input-bytes-sum（数据扫描总大小，单位bytes）,shuffle-read-bytes-sum（数据shuffle总大小，单位bytes）
+    * 排序字段，支持如下字段类型，instance-start-time (任务开始时间）,job-time-sum （单位毫秒，引擎内执行耗时）,task-time-sum （CU资源消耗，单位秒）,input-bytes-sum（数据扫描总大小，单位bytes）,shuffle-read-bytes-sum（数据shuffle总大小，单位bytes）
     */
     @SerializedName("SortBy")
     @Expose
@@ -66,14 +66,14 @@ public class DescribeTasksAnalysisRequest extends AbstractModel {
     private String Sorting;
 
     /**
-    * 起始时间点，格式为yyyy-mm-dd HH:MM:SS
+    * 任务开始时间点，格式为yyyy-mm-dd HH:MM:SS时间跨度在(0,30天]，支持最近30天数据查询。默认为当前时刻
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 结束时间点，格式为yyyy-mm-dd HH:MM:SS时间跨度在(0,30天]，支持最近45天数据查询。默认为当前时刻
+    * 结束时间点，格式为yyyy-mm-dd HH:MM:SS时间跨度在(0,30天]，支持最近30天数据查询。默认为当前时刻
     */
     @SerializedName("EndTime")
     @Expose
@@ -144,16 +144,16 @@ public class DescribeTasksAnalysisRequest extends AbstractModel {
     }
 
     /**
-     * Get 排序字段，支持如下字段类型，instance-start-time (任务开始时间）, instance-complete-time (任务结束时间）,job-time-sum （单位毫秒，引擎内执行耗时）,task-time-sum （CU资源消耗，单位秒）,input-bytes-sum（数据扫描总大小，单位bytes）,shuffle-read-bytes-sum（数据shuffle总大小，单位bytes） 
-     * @return SortBy 排序字段，支持如下字段类型，instance-start-time (任务开始时间）, instance-complete-time (任务结束时间）,job-time-sum （单位毫秒，引擎内执行耗时）,task-time-sum （CU资源消耗，单位秒）,input-bytes-sum（数据扫描总大小，单位bytes）,shuffle-read-bytes-sum（数据shuffle总大小，单位bytes）
+     * Get 排序字段，支持如下字段类型，instance-start-time (任务开始时间）,job-time-sum （单位毫秒，引擎内执行耗时）,task-time-sum （CU资源消耗，单位秒）,input-bytes-sum（数据扫描总大小，单位bytes）,shuffle-read-bytes-sum（数据shuffle总大小，单位bytes） 
+     * @return SortBy 排序字段，支持如下字段类型，instance-start-time (任务开始时间）,job-time-sum （单位毫秒，引擎内执行耗时）,task-time-sum （CU资源消耗，单位秒）,input-bytes-sum（数据扫描总大小，单位bytes）,shuffle-read-bytes-sum（数据shuffle总大小，单位bytes）
      */
     public String getSortBy() {
         return this.SortBy;
     }
 
     /**
-     * Set 排序字段，支持如下字段类型，instance-start-time (任务开始时间）, instance-complete-time (任务结束时间）,job-time-sum （单位毫秒，引擎内执行耗时）,task-time-sum （CU资源消耗，单位秒）,input-bytes-sum（数据扫描总大小，单位bytes）,shuffle-read-bytes-sum（数据shuffle总大小，单位bytes）
-     * @param SortBy 排序字段，支持如下字段类型，instance-start-time (任务开始时间）, instance-complete-time (任务结束时间）,job-time-sum （单位毫秒，引擎内执行耗时）,task-time-sum （CU资源消耗，单位秒）,input-bytes-sum（数据扫描总大小，单位bytes）,shuffle-read-bytes-sum（数据shuffle总大小，单位bytes）
+     * Set 排序字段，支持如下字段类型，instance-start-time (任务开始时间）,job-time-sum （单位毫秒，引擎内执行耗时）,task-time-sum （CU资源消耗，单位秒）,input-bytes-sum（数据扫描总大小，单位bytes）,shuffle-read-bytes-sum（数据shuffle总大小，单位bytes）
+     * @param SortBy 排序字段，支持如下字段类型，instance-start-time (任务开始时间）,job-time-sum （单位毫秒，引擎内执行耗时）,task-time-sum （CU资源消耗，单位秒）,input-bytes-sum（数据扫描总大小，单位bytes）,shuffle-read-bytes-sum（数据shuffle总大小，单位bytes）
      */
     public void setSortBy(String SortBy) {
         this.SortBy = SortBy;
@@ -176,32 +176,32 @@ public class DescribeTasksAnalysisRequest extends AbstractModel {
     }
 
     /**
-     * Get 起始时间点，格式为yyyy-mm-dd HH:MM:SS 
-     * @return StartTime 起始时间点，格式为yyyy-mm-dd HH:MM:SS
+     * Get 任务开始时间点，格式为yyyy-mm-dd HH:MM:SS时间跨度在(0,30天]，支持最近30天数据查询。默认为当前时刻 
+     * @return StartTime 任务开始时间点，格式为yyyy-mm-dd HH:MM:SS时间跨度在(0,30天]，支持最近30天数据查询。默认为当前时刻
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 起始时间点，格式为yyyy-mm-dd HH:MM:SS
-     * @param StartTime 起始时间点，格式为yyyy-mm-dd HH:MM:SS
+     * Set 任务开始时间点，格式为yyyy-mm-dd HH:MM:SS时间跨度在(0,30天]，支持最近30天数据查询。默认为当前时刻
+     * @param StartTime 任务开始时间点，格式为yyyy-mm-dd HH:MM:SS时间跨度在(0,30天]，支持最近30天数据查询。默认为当前时刻
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 结束时间点，格式为yyyy-mm-dd HH:MM:SS时间跨度在(0,30天]，支持最近45天数据查询。默认为当前时刻 
-     * @return EndTime 结束时间点，格式为yyyy-mm-dd HH:MM:SS时间跨度在(0,30天]，支持最近45天数据查询。默认为当前时刻
+     * Get 结束时间点，格式为yyyy-mm-dd HH:MM:SS时间跨度在(0,30天]，支持最近30天数据查询。默认为当前时刻 
+     * @return EndTime 结束时间点，格式为yyyy-mm-dd HH:MM:SS时间跨度在(0,30天]，支持最近30天数据查询。默认为当前时刻
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间点，格式为yyyy-mm-dd HH:MM:SS时间跨度在(0,30天]，支持最近45天数据查询。默认为当前时刻
-     * @param EndTime 结束时间点，格式为yyyy-mm-dd HH:MM:SS时间跨度在(0,30天]，支持最近45天数据查询。默认为当前时刻
+     * Set 结束时间点，格式为yyyy-mm-dd HH:MM:SS时间跨度在(0,30天]，支持最近30天数据查询。默认为当前时刻
+     * @param EndTime 结束时间点，格式为yyyy-mm-dd HH:MM:SS时间跨度在(0,30天]，支持最近30天数据查询。默认为当前时刻
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

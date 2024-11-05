@@ -25,7 +25,6 @@ public class OrganizationUserInfo extends AbstractModel {
 
     /**
     * 成员账号Uin
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Uin")
     @Expose
@@ -33,7 +32,6 @@ public class OrganizationUserInfo extends AbstractModel {
 
     /**
     * 成员账号名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NickName")
     @Expose
@@ -41,7 +39,6 @@ public class OrganizationUserInfo extends AbstractModel {
 
     /**
     * 部门节点名称，账号所属部门
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NodeName")
     @Expose
@@ -49,7 +46,6 @@ public class OrganizationUserInfo extends AbstractModel {
 
     /**
     * 资产数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AssetCount")
     @Expose
@@ -57,7 +53,6 @@ public class OrganizationUserInfo extends AbstractModel {
 
     /**
     * 风险数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RiskCount")
     @Expose
@@ -65,7 +60,6 @@ public class OrganizationUserInfo extends AbstractModel {
 
     /**
     * 攻击数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AttackCount")
     @Expose
@@ -73,7 +67,6 @@ public class OrganizationUserInfo extends AbstractModel {
 
     /**
     * Member/Admin/;成员或者管理员
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Role")
     @Expose
@@ -81,7 +74,6 @@ public class OrganizationUserInfo extends AbstractModel {
 
     /**
     * 成员账号id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MemberId")
     @Expose
@@ -89,7 +81,6 @@ public class OrganizationUserInfo extends AbstractModel {
 
     /**
     * 成员账号Appid
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AppId")
     @Expose
@@ -97,7 +88,6 @@ public class OrganizationUserInfo extends AbstractModel {
 
     /**
     * 账号加入方式,create/invite
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("JoinType")
     @Expose
@@ -105,7 +95,6 @@ public class OrganizationUserInfo extends AbstractModel {
 
     /**
     * 空则未开启，否则不同字符串对应不同版本，common为通用，不区分版本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CFWProtect")
     @Expose
@@ -113,7 +102,6 @@ public class OrganizationUserInfo extends AbstractModel {
 
     /**
     * 空则未开启，否则不同字符串对应不同版本，common为通用，不区分版本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WAFProtect")
     @Expose
@@ -121,7 +109,6 @@ public class OrganizationUserInfo extends AbstractModel {
 
     /**
     * 空则未开启，否则不同字符串对应不同版本，common为通用，不区分版本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CWPProtect")
     @Expose
@@ -129,7 +116,6 @@ public class OrganizationUserInfo extends AbstractModel {
 
     /**
     * 1启用，0未启用
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Enable")
     @Expose
@@ -137,7 +123,6 @@ public class OrganizationUserInfo extends AbstractModel {
 
     /**
     * "Free"       //免费版  "Advanced"   //高级版 "Enterprise" //企业版 "Ultimate"   //旗舰版
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CSIPProtect")
     @Expose
@@ -145,7 +130,6 @@ public class OrganizationUserInfo extends AbstractModel {
 
     /**
     * 1为配额消耗者
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("QuotaConsumer")
     @Expose
@@ -153,7 +137,6 @@ public class OrganizationUserInfo extends AbstractModel {
 
     /**
     * 账户类型，0为腾讯云账户，1为AWS账户
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CloudType")
     @Expose
@@ -161,7 +144,6 @@ public class OrganizationUserInfo extends AbstractModel {
 
     /**
     * 0为缺省值，1为10分钟，2为1小时，3为24小时
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SyncFrequency")
     @Expose
@@ -169,7 +151,6 @@ public class OrganizationUserInfo extends AbstractModel {
 
     /**
     * 多云账户是否过期
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsExpired")
     @Expose
@@ -177,7 +158,6 @@ public class OrganizationUserInfo extends AbstractModel {
 
     /**
     * 多云账户 权限列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PermissionList")
     @Expose
@@ -185,7 +165,6 @@ public class OrganizationUserInfo extends AbstractModel {
 
     /**
     * 1
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AuthType")
     @Expose
@@ -195,7 +174,6 @@ public class OrganizationUserInfo extends AbstractModel {
     * 0 腾讯云集团账户
 1 腾讯云接入账户
 2 非腾讯云
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TcMemberType")
     @Expose
@@ -203,7 +181,6 @@ public class OrganizationUserInfo extends AbstractModel {
 
     /**
     * 子账号数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubUserCount")
     @Expose
@@ -211,17 +188,14 @@ public class OrganizationUserInfo extends AbstractModel {
 
     /**
     * 加入方式详细信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("JoinTypeInfo")
     @Expose
     private String JoinTypeInfo;
 
     /**
-     * Get 成员账号Uin
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 成员账号Uin 
      * @return Uin 成员账号Uin
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUin() {
         return this.Uin;
@@ -229,19 +203,15 @@ public class OrganizationUserInfo extends AbstractModel {
 
     /**
      * Set 成员账号Uin
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Uin 成员账号Uin
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUin(String Uin) {
         this.Uin = Uin;
     }
 
     /**
-     * Get 成员账号名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 成员账号名称 
      * @return NickName 成员账号名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNickName() {
         return this.NickName;
@@ -249,19 +219,15 @@ public class OrganizationUserInfo extends AbstractModel {
 
     /**
      * Set 成员账号名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NickName 成员账号名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNickName(String NickName) {
         this.NickName = NickName;
     }
 
     /**
-     * Get 部门节点名称，账号所属部门
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 部门节点名称，账号所属部门 
      * @return NodeName 部门节点名称，账号所属部门
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNodeName() {
         return this.NodeName;
@@ -269,19 +235,15 @@ public class OrganizationUserInfo extends AbstractModel {
 
     /**
      * Set 部门节点名称，账号所属部门
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NodeName 部门节点名称，账号所属部门
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNodeName(String NodeName) {
         this.NodeName = NodeName;
     }
 
     /**
-     * Get 资产数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资产数量 
      * @return AssetCount 资产数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAssetCount() {
         return this.AssetCount;
@@ -289,19 +251,15 @@ public class OrganizationUserInfo extends AbstractModel {
 
     /**
      * Set 资产数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AssetCount 资产数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAssetCount(Long AssetCount) {
         this.AssetCount = AssetCount;
     }
 
     /**
-     * Get 风险数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 风险数量 
      * @return RiskCount 风险数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRiskCount() {
         return this.RiskCount;
@@ -309,19 +267,15 @@ public class OrganizationUserInfo extends AbstractModel {
 
     /**
      * Set 风险数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RiskCount 风险数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRiskCount(Long RiskCount) {
         this.RiskCount = RiskCount;
     }
 
     /**
-     * Get 攻击数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 攻击数量 
      * @return AttackCount 攻击数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAttackCount() {
         return this.AttackCount;
@@ -329,19 +283,15 @@ public class OrganizationUserInfo extends AbstractModel {
 
     /**
      * Set 攻击数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AttackCount 攻击数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAttackCount(Long AttackCount) {
         this.AttackCount = AttackCount;
     }
 
     /**
-     * Get Member/Admin/;成员或者管理员
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Member/Admin/;成员或者管理员 
      * @return Role Member/Admin/;成员或者管理员
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRole() {
         return this.Role;
@@ -349,19 +299,15 @@ public class OrganizationUserInfo extends AbstractModel {
 
     /**
      * Set Member/Admin/;成员或者管理员
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Role Member/Admin/;成员或者管理员
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRole(String Role) {
         this.Role = Role;
     }
 
     /**
-     * Get 成员账号id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 成员账号id 
      * @return MemberId 成员账号id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMemberId() {
         return this.MemberId;
@@ -369,19 +315,15 @@ public class OrganizationUserInfo extends AbstractModel {
 
     /**
      * Set 成员账号id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MemberId 成员账号id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMemberId(String MemberId) {
         this.MemberId = MemberId;
     }
 
     /**
-     * Get 成员账号Appid
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 成员账号Appid 
      * @return AppId 成员账号Appid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAppId() {
         return this.AppId;
@@ -389,19 +331,15 @@ public class OrganizationUserInfo extends AbstractModel {
 
     /**
      * Set 成员账号Appid
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AppId 成员账号Appid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAppId(String AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get 账号加入方式,create/invite
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 账号加入方式,create/invite 
      * @return JoinType 账号加入方式,create/invite
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getJoinType() {
         return this.JoinType;
@@ -409,19 +347,15 @@ public class OrganizationUserInfo extends AbstractModel {
 
     /**
      * Set 账号加入方式,create/invite
-注意：此字段可能返回 null，表示取不到有效值。
      * @param JoinType 账号加入方式,create/invite
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setJoinType(String JoinType) {
         this.JoinType = JoinType;
     }
 
     /**
-     * Get 空则未开启，否则不同字符串对应不同版本，common为通用，不区分版本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 空则未开启，否则不同字符串对应不同版本，common为通用，不区分版本 
      * @return CFWProtect 空则未开启，否则不同字符串对应不同版本，common为通用，不区分版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCFWProtect() {
         return this.CFWProtect;
@@ -429,19 +363,15 @@ public class OrganizationUserInfo extends AbstractModel {
 
     /**
      * Set 空则未开启，否则不同字符串对应不同版本，common为通用，不区分版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CFWProtect 空则未开启，否则不同字符串对应不同版本，common为通用，不区分版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCFWProtect(String CFWProtect) {
         this.CFWProtect = CFWProtect;
     }
 
     /**
-     * Get 空则未开启，否则不同字符串对应不同版本，common为通用，不区分版本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 空则未开启，否则不同字符串对应不同版本，common为通用，不区分版本 
      * @return WAFProtect 空则未开启，否则不同字符串对应不同版本，common为通用，不区分版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWAFProtect() {
         return this.WAFProtect;
@@ -449,19 +379,15 @@ public class OrganizationUserInfo extends AbstractModel {
 
     /**
      * Set 空则未开启，否则不同字符串对应不同版本，common为通用，不区分版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WAFProtect 空则未开启，否则不同字符串对应不同版本，common为通用，不区分版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWAFProtect(String WAFProtect) {
         this.WAFProtect = WAFProtect;
     }
 
     /**
-     * Get 空则未开启，否则不同字符串对应不同版本，common为通用，不区分版本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 空则未开启，否则不同字符串对应不同版本，common为通用，不区分版本 
      * @return CWPProtect 空则未开启，否则不同字符串对应不同版本，common为通用，不区分版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCWPProtect() {
         return this.CWPProtect;
@@ -469,19 +395,15 @@ public class OrganizationUserInfo extends AbstractModel {
 
     /**
      * Set 空则未开启，否则不同字符串对应不同版本，common为通用，不区分版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CWPProtect 空则未开启，否则不同字符串对应不同版本，common为通用，不区分版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCWPProtect(String CWPProtect) {
         this.CWPProtect = CWPProtect;
     }
 
     /**
-     * Get 1启用，0未启用
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 1启用，0未启用 
      * @return Enable 1启用，0未启用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getEnable() {
         return this.Enable;
@@ -489,19 +411,15 @@ public class OrganizationUserInfo extends AbstractModel {
 
     /**
      * Set 1启用，0未启用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Enable 1启用，0未启用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnable(Long Enable) {
         this.Enable = Enable;
     }
 
     /**
-     * Get "Free"       //免费版  "Advanced"   //高级版 "Enterprise" //企业版 "Ultimate"   //旗舰版
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get "Free"       //免费版  "Advanced"   //高级版 "Enterprise" //企业版 "Ultimate"   //旗舰版 
      * @return CSIPProtect "Free"       //免费版  "Advanced"   //高级版 "Enterprise" //企业版 "Ultimate"   //旗舰版
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCSIPProtect() {
         return this.CSIPProtect;
@@ -509,19 +427,15 @@ public class OrganizationUserInfo extends AbstractModel {
 
     /**
      * Set "Free"       //免费版  "Advanced"   //高级版 "Enterprise" //企业版 "Ultimate"   //旗舰版
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CSIPProtect "Free"       //免费版  "Advanced"   //高级版 "Enterprise" //企业版 "Ultimate"   //旗舰版
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCSIPProtect(String CSIPProtect) {
         this.CSIPProtect = CSIPProtect;
     }
 
     /**
-     * Get 1为配额消耗者
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 1为配额消耗者 
      * @return QuotaConsumer 1为配额消耗者
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getQuotaConsumer() {
         return this.QuotaConsumer;
@@ -529,19 +443,15 @@ public class OrganizationUserInfo extends AbstractModel {
 
     /**
      * Set 1为配额消耗者
-注意：此字段可能返回 null，表示取不到有效值。
      * @param QuotaConsumer 1为配额消耗者
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQuotaConsumer(Long QuotaConsumer) {
         this.QuotaConsumer = QuotaConsumer;
     }
 
     /**
-     * Get 账户类型，0为腾讯云账户，1为AWS账户
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 账户类型，0为腾讯云账户，1为AWS账户 
      * @return CloudType 账户类型，0为腾讯云账户，1为AWS账户
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCloudType() {
         return this.CloudType;
@@ -549,19 +459,15 @@ public class OrganizationUserInfo extends AbstractModel {
 
     /**
      * Set 账户类型，0为腾讯云账户，1为AWS账户
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CloudType 账户类型，0为腾讯云账户，1为AWS账户
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCloudType(Long CloudType) {
         this.CloudType = CloudType;
     }
 
     /**
-     * Get 0为缺省值，1为10分钟，2为1小时，3为24小时
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 0为缺省值，1为10分钟，2为1小时，3为24小时 
      * @return SyncFrequency 0为缺省值，1为10分钟，2为1小时，3为24小时
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSyncFrequency() {
         return this.SyncFrequency;
@@ -569,19 +475,15 @@ public class OrganizationUserInfo extends AbstractModel {
 
     /**
      * Set 0为缺省值，1为10分钟，2为1小时，3为24小时
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SyncFrequency 0为缺省值，1为10分钟，2为1小时，3为24小时
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSyncFrequency(Long SyncFrequency) {
         this.SyncFrequency = SyncFrequency;
     }
 
     /**
-     * Get 多云账户是否过期
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 多云账户是否过期 
      * @return IsExpired 多云账户是否过期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsExpired() {
         return this.IsExpired;
@@ -589,19 +491,15 @@ public class OrganizationUserInfo extends AbstractModel {
 
     /**
      * Set 多云账户是否过期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsExpired 多云账户是否过期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsExpired(Boolean IsExpired) {
         this.IsExpired = IsExpired;
     }
 
     /**
-     * Get 多云账户 权限列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 多云账户 权限列表 
      * @return PermissionList 多云账户 权限列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getPermissionList() {
         return this.PermissionList;
@@ -609,19 +507,15 @@ public class OrganizationUserInfo extends AbstractModel {
 
     /**
      * Set 多云账户 权限列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PermissionList 多云账户 权限列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPermissionList(String [] PermissionList) {
         this.PermissionList = PermissionList;
     }
 
     /**
-     * Get 1
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 1 
      * @return AuthType 1
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAuthType() {
         return this.AuthType;
@@ -629,9 +523,7 @@ public class OrganizationUserInfo extends AbstractModel {
 
     /**
      * Set 1
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AuthType 1
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAuthType(Long AuthType) {
         this.AuthType = AuthType;
@@ -640,12 +532,10 @@ public class OrganizationUserInfo extends AbstractModel {
     /**
      * Get 0 腾讯云集团账户
 1 腾讯云接入账户
-2 非腾讯云
-注意：此字段可能返回 null，表示取不到有效值。 
+2 非腾讯云 
      * @return TcMemberType 0 腾讯云集团账户
 1 腾讯云接入账户
 2 非腾讯云
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTcMemberType() {
         return this.TcMemberType;
@@ -655,21 +545,17 @@ public class OrganizationUserInfo extends AbstractModel {
      * Set 0 腾讯云集团账户
 1 腾讯云接入账户
 2 非腾讯云
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TcMemberType 0 腾讯云集团账户
 1 腾讯云接入账户
 2 非腾讯云
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTcMemberType(Long TcMemberType) {
         this.TcMemberType = TcMemberType;
     }
 
     /**
-     * Get 子账号数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子账号数量 
      * @return SubUserCount 子账号数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSubUserCount() {
         return this.SubUserCount;
@@ -677,19 +563,15 @@ public class OrganizationUserInfo extends AbstractModel {
 
     /**
      * Set 子账号数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubUserCount 子账号数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubUserCount(Long SubUserCount) {
         this.SubUserCount = SubUserCount;
     }
 
     /**
-     * Get 加入方式详细信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 加入方式详细信息 
      * @return JoinTypeInfo 加入方式详细信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getJoinTypeInfo() {
         return this.JoinTypeInfo;
@@ -697,9 +579,7 @@ public class OrganizationUserInfo extends AbstractModel {
 
     /**
      * Set 加入方式详细信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param JoinTypeInfo 加入方式详细信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setJoinTypeInfo(String JoinTypeInfo) {
         this.JoinTypeInfo = JoinTypeInfo;

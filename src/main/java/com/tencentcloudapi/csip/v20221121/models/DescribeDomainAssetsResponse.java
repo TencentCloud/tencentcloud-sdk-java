@@ -25,7 +25,6 @@ public class DescribeDomainAssetsResponse extends AbstractModel {
 
     /**
     * 总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Total")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeDomainAssetsResponse extends AbstractModel {
 
     /**
     * 域名列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
     @Expose
@@ -41,7 +39,6 @@ public class DescribeDomainAssetsResponse extends AbstractModel {
 
     /**
     * 防护状态列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DefenseStatusList")
     @Expose
@@ -49,7 +46,6 @@ public class DescribeDomainAssetsResponse extends AbstractModel {
 
     /**
     * 资产归属地列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AssetLocationList")
     @Expose
@@ -57,7 +53,6 @@ public class DescribeDomainAssetsResponse extends AbstractModel {
 
     /**
     * 资产类型列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SourceTypeList")
     @Expose
@@ -65,7 +60,6 @@ public class DescribeDomainAssetsResponse extends AbstractModel {
 
     /**
     * 地域列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RegionList")
     @Expose
@@ -79,10 +73,8 @@ public class DescribeDomainAssetsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 总数 
      * @return Total 总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotal() {
         return this.Total;
@@ -90,19 +82,15 @@ public class DescribeDomainAssetsResponse extends AbstractModel {
 
     /**
      * Set 总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Total 总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotal(Long Total) {
         this.Total = Total;
     }
 
     /**
-     * Get 域名列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 域名列表 
      * @return Data 域名列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DomainAssetVO [] getData() {
         return this.Data;
@@ -110,19 +98,15 @@ public class DescribeDomainAssetsResponse extends AbstractModel {
 
     /**
      * Set 域名列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Data 域名列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(DomainAssetVO [] Data) {
         this.Data = Data;
     }
 
     /**
-     * Get 防护状态列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 防护状态列表 
      * @return DefenseStatusList 防护状态列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public FilterDataObject [] getDefenseStatusList() {
         return this.DefenseStatusList;
@@ -130,19 +114,15 @@ public class DescribeDomainAssetsResponse extends AbstractModel {
 
     /**
      * Set 防护状态列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DefenseStatusList 防护状态列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDefenseStatusList(FilterDataObject [] DefenseStatusList) {
         this.DefenseStatusList = DefenseStatusList;
     }
 
     /**
-     * Get 资产归属地列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资产归属地列表 
      * @return AssetLocationList 资产归属地列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public FilterDataObject [] getAssetLocationList() {
         return this.AssetLocationList;
@@ -150,19 +130,15 @@ public class DescribeDomainAssetsResponse extends AbstractModel {
 
     /**
      * Set 资产归属地列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AssetLocationList 资产归属地列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAssetLocationList(FilterDataObject [] AssetLocationList) {
         this.AssetLocationList = AssetLocationList;
     }
 
     /**
-     * Get 资产类型列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资产类型列表 
      * @return SourceTypeList 资产类型列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public FilterDataObject [] getSourceTypeList() {
         return this.SourceTypeList;
@@ -170,19 +146,15 @@ public class DescribeDomainAssetsResponse extends AbstractModel {
 
     /**
      * Set 资产类型列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SourceTypeList 资产类型列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSourceTypeList(FilterDataObject [] SourceTypeList) {
         this.SourceTypeList = SourceTypeList;
     }
 
     /**
-     * Get 地域列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地域列表 
      * @return RegionList 地域列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public FilterDataObject [] getRegionList() {
         return this.RegionList;
@@ -190,9 +162,7 @@ public class DescribeDomainAssetsResponse extends AbstractModel {
 
     /**
      * Set 地域列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RegionList 地域列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegionList(FilterDataObject [] RegionList) {
         this.RegionList = RegionList;

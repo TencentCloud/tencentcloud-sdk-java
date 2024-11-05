@@ -25,7 +25,6 @@ public class CreateDeviceVirtualGroupResponse extends AbstractModel {
 
     /**
     * 响应返回的data
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
     @Expose
@@ -39,10 +38,8 @@ public class CreateDeviceVirtualGroupResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 响应返回的data
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 响应返回的data 
      * @return Data 响应返回的data
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CreateDeviceVirtualGroupRspData getData() {
         return this.Data;
@@ -50,9 +47,7 @@ public class CreateDeviceVirtualGroupResponse extends AbstractModel {
 
     /**
      * Set 响应返回的data
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Data 响应返回的data
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(CreateDeviceVirtualGroupRspData Data) {
         this.Data = Data;

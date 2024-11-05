@@ -102,6 +102,14 @@ public class ClusterSession extends AbstractModel {
     private Property [] Properties;
 
     /**
+    * 引用资源
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ResourceRefs")
+    @Expose
+    private SessionClusterRefItem [] ResourceRefs;
+
+    /**
     * JobManager的规格
     */
     @SerializedName("JobManagerCuSpec")
@@ -135,6 +143,34 @@ public class ClusterSession extends AbstractModel {
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
+
+    /**
+    * JobManagerCpu
+    */
+    @SerializedName("JobManagerCpu")
+    @Expose
+    private Float JobManagerCpu;
+
+    /**
+    * JobManagerMem
+    */
+    @SerializedName("JobManagerMem")
+    @Expose
+    private Float JobManagerMem;
+
+    /**
+    * TaskManagerCpu
+    */
+    @SerializedName("TaskManagerCpu")
+    @Expose
+    private Float TaskManagerCpu;
+
+    /**
+    * TaskManagerMem
+    */
+    @SerializedName("TaskManagerMem")
+    @Expose
+    private Float TaskManagerMem;
 
     /**
      * Get 集群SerialId 
@@ -317,6 +353,26 @@ public class ClusterSession extends AbstractModel {
     }
 
     /**
+     * Get 引用资源
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ResourceRefs 引用资源
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public SessionClusterRefItem [] getResourceRefs() {
+        return this.ResourceRefs;
+    }
+
+    /**
+     * Set 引用资源
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ResourceRefs 引用资源
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setResourceRefs(SessionClusterRefItem [] ResourceRefs) {
+        this.ResourceRefs = ResourceRefs;
+    }
+
+    /**
      * Get JobManager的规格 
      * @return JobManagerCuSpec JobManager的规格
      */
@@ -396,6 +452,70 @@ public class ClusterSession extends AbstractModel {
         this.UpdateTime = UpdateTime;
     }
 
+    /**
+     * Get JobManagerCpu 
+     * @return JobManagerCpu JobManagerCpu
+     */
+    public Float getJobManagerCpu() {
+        return this.JobManagerCpu;
+    }
+
+    /**
+     * Set JobManagerCpu
+     * @param JobManagerCpu JobManagerCpu
+     */
+    public void setJobManagerCpu(Float JobManagerCpu) {
+        this.JobManagerCpu = JobManagerCpu;
+    }
+
+    /**
+     * Get JobManagerMem 
+     * @return JobManagerMem JobManagerMem
+     */
+    public Float getJobManagerMem() {
+        return this.JobManagerMem;
+    }
+
+    /**
+     * Set JobManagerMem
+     * @param JobManagerMem JobManagerMem
+     */
+    public void setJobManagerMem(Float JobManagerMem) {
+        this.JobManagerMem = JobManagerMem;
+    }
+
+    /**
+     * Get TaskManagerCpu 
+     * @return TaskManagerCpu TaskManagerCpu
+     */
+    public Float getTaskManagerCpu() {
+        return this.TaskManagerCpu;
+    }
+
+    /**
+     * Set TaskManagerCpu
+     * @param TaskManagerCpu TaskManagerCpu
+     */
+    public void setTaskManagerCpu(Float TaskManagerCpu) {
+        this.TaskManagerCpu = TaskManagerCpu;
+    }
+
+    /**
+     * Get TaskManagerMem 
+     * @return TaskManagerMem TaskManagerMem
+     */
+    public Float getTaskManagerMem() {
+        return this.TaskManagerMem;
+    }
+
+    /**
+     * Set TaskManagerMem
+     * @param TaskManagerMem TaskManagerMem
+     */
+    public void setTaskManagerMem(Float TaskManagerMem) {
+        this.TaskManagerMem = TaskManagerMem;
+    }
+
     public ClusterSession() {
     }
 
@@ -440,6 +560,12 @@ public class ClusterSession extends AbstractModel {
                 this.Properties[i] = new Property(source.Properties[i]);
             }
         }
+        if (source.ResourceRefs != null) {
+            this.ResourceRefs = new SessionClusterRefItem[source.ResourceRefs.length];
+            for (int i = 0; i < source.ResourceRefs.length; i++) {
+                this.ResourceRefs[i] = new SessionClusterRefItem(source.ResourceRefs[i]);
+            }
+        }
         if (source.JobManagerCuSpec != null) {
             this.JobManagerCuSpec = new Float(source.JobManagerCuSpec);
         }
@@ -454,6 +580,18 @@ public class ClusterSession extends AbstractModel {
         }
         if (source.UpdateTime != null) {
             this.UpdateTime = new String(source.UpdateTime);
+        }
+        if (source.JobManagerCpu != null) {
+            this.JobManagerCpu = new Float(source.JobManagerCpu);
+        }
+        if (source.JobManagerMem != null) {
+            this.JobManagerMem = new Float(source.JobManagerMem);
+        }
+        if (source.TaskManagerCpu != null) {
+            this.TaskManagerCpu = new Float(source.TaskManagerCpu);
+        }
+        if (source.TaskManagerMem != null) {
+            this.TaskManagerMem = new Float(source.TaskManagerMem);
         }
     }
 
@@ -473,11 +611,16 @@ public class ClusterSession extends AbstractModel {
         this.setParamSimple(map, prefix + "FlinkVersion", this.FlinkVersion);
         this.setParamSimple(map, prefix + "WebUIUrl", this.WebUIUrl);
         this.setParamArrayObj(map, prefix + "Properties.", this.Properties);
+        this.setParamArrayObj(map, prefix + "ResourceRefs.", this.ResourceRefs);
         this.setParamSimple(map, prefix + "JobManagerCuSpec", this.JobManagerCuSpec);
         this.setParamSimple(map, prefix + "TaskManagerCuSpec", this.TaskManagerCuSpec);
         this.setParamSimple(map, prefix + "TaskManagerNum", this.TaskManagerNum);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamSimple(map, prefix + "JobManagerCpu", this.JobManagerCpu);
+        this.setParamSimple(map, prefix + "JobManagerMem", this.JobManagerMem);
+        this.setParamSimple(map, prefix + "TaskManagerCpu", this.TaskManagerCpu);
+        this.setParamSimple(map, prefix + "TaskManagerMem", this.TaskManagerMem);
 
     }
 }

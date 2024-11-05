@@ -25,7 +25,6 @@ public class PlanInfo extends AbstractModel {
 
     /**
     * Dex分离，0关闭，1开启
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SetFile")
     @Expose
@@ -124,7 +123,6 @@ public class PlanInfo extends AbstractModel {
 
     /**
     * Dex签名校验，0关闭，1开启
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileSign")
     @Expose
@@ -132,7 +130,6 @@ public class PlanInfo extends AbstractModel {
 
     /**
     * root检测，0关闭，1开启
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AntiRoot")
     @Expose
@@ -160,10 +157,8 @@ public class PlanInfo extends AbstractModel {
     private Long AntiQemuRoot;
 
     /**
-     * Get Dex分离，0关闭，1开启
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Dex分离，0关闭，1开启 
      * @return SetFile Dex分离，0关闭，1开启
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSetFile() {
         return this.SetFile;
@@ -171,9 +166,7 @@ public class PlanInfo extends AbstractModel {
 
     /**
      * Set Dex分离，0关闭，1开启
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SetFile Dex分离，0关闭，1开启
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSetFile(String SetFile) {
         this.SetFile = SetFile;
@@ -388,10 +381,8 @@ public class PlanInfo extends AbstractModel {
     }
 
     /**
-     * Get Dex签名校验，0关闭，1开启
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Dex签名校验，0关闭，1开启 
      * @return FileSign Dex签名校验，0关闭，1开启
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFileSign() {
         return this.FileSign;
@@ -399,19 +390,15 @@ public class PlanInfo extends AbstractModel {
 
     /**
      * Set Dex签名校验，0关闭，1开启
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FileSign Dex签名校验，0关闭，1开启
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileSign(String FileSign) {
         this.FileSign = FileSign;
     }
 
     /**
-     * Get root检测，0关闭，1开启
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get root检测，0关闭，1开启 
      * @return AntiRoot root检测，0关闭，1开启
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAntiRoot() {
         return this.AntiRoot;
@@ -419,9 +406,7 @@ public class PlanInfo extends AbstractModel {
 
     /**
      * Set root检测，0关闭，1开启
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AntiRoot root检测，0关闭，1开启
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAntiRoot(String AntiRoot) {
         this.AntiRoot = AntiRoot;

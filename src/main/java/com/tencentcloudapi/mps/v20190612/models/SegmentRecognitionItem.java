@@ -69,6 +69,22 @@ public class SegmentRecognitionItem extends AbstractModel {
     private String Summary;
 
     /**
+    * 直播切片对应直播起始时间点，采用 ISO 日期格式。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BeginTime")
+    @Expose
+    private String BeginTime;
+
+    /**
+    * 直播切片对应直播结束时间点，采用 ISO 日期格式。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EndTime")
+    @Expose
+    private String EndTime;
+
+    /**
      * Get 置信度。 
      * @return Confidence 置信度。
      */
@@ -176,6 +192,46 @@ public class SegmentRecognitionItem extends AbstractModel {
         this.Summary = Summary;
     }
 
+    /**
+     * Get 直播切片对应直播起始时间点，采用 ISO 日期格式。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BeginTime 直播切片对应直播起始时间点，采用 ISO 日期格式。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getBeginTime() {
+        return this.BeginTime;
+    }
+
+    /**
+     * Set 直播切片对应直播起始时间点，采用 ISO 日期格式。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BeginTime 直播切片对应直播起始时间点，采用 ISO 日期格式。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBeginTime(String BeginTime) {
+        this.BeginTime = BeginTime;
+    }
+
+    /**
+     * Get 直播切片对应直播结束时间点，采用 ISO 日期格式。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EndTime 直播切片对应直播结束时间点，采用 ISO 日期格式。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getEndTime() {
+        return this.EndTime;
+    }
+
+    /**
+     * Set 直播切片对应直播结束时间点，采用 ISO 日期格式。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EndTime 直播切片对应直播结束时间点，采用 ISO 日期格式。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEndTime(String EndTime) {
+        this.EndTime = EndTime;
+    }
+
     public SegmentRecognitionItem() {
     }
 
@@ -202,6 +258,12 @@ public class SegmentRecognitionItem extends AbstractModel {
         if (source.Summary != null) {
             this.Summary = new String(source.Summary);
         }
+        if (source.BeginTime != null) {
+            this.BeginTime = new String(source.BeginTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
     }
 
 
@@ -215,6 +277,8 @@ public class SegmentRecognitionItem extends AbstractModel {
         this.setParamSimple(map, prefix + "SegmentUrl", this.SegmentUrl);
         this.setParamSimple(map, prefix + "Title", this.Title);
         this.setParamSimple(map, prefix + "Summary", this.Summary);
+        this.setParamSimple(map, prefix + "BeginTime", this.BeginTime);
+        this.setParamSimple(map, prefix + "EndTime", this.EndTime);
 
     }
 }

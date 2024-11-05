@@ -25,7 +25,6 @@ public class VULRiskInfo extends AbstractModel {
 
     /**
     * 修复建议
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Fix")
     @Expose
@@ -33,7 +32,6 @@ public class VULRiskInfo extends AbstractModel {
 
     /**
     * 技术参考/参考链接
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("References")
     @Expose
@@ -41,7 +39,6 @@ public class VULRiskInfo extends AbstractModel {
 
     /**
     * 漏洞描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Describe")
     @Expose
@@ -49,17 +46,14 @@ public class VULRiskInfo extends AbstractModel {
 
     /**
     * 受影响组件
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ImpactComponent")
     @Expose
     private VulImpactComponentInfo [] ImpactComponent;
 
     /**
-     * Get 修复建议
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 修复建议 
      * @return Fix 修复建议
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFix() {
         return this.Fix;
@@ -67,19 +61,15 @@ public class VULRiskInfo extends AbstractModel {
 
     /**
      * Set 修复建议
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Fix 修复建议
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFix(String Fix) {
         this.Fix = Fix;
     }
 
     /**
-     * Get 技术参考/参考链接
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 技术参考/参考链接 
      * @return References 技术参考/参考链接
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getReferences() {
         return this.References;
@@ -87,19 +77,15 @@ public class VULRiskInfo extends AbstractModel {
 
     /**
      * Set 技术参考/参考链接
-注意：此字段可能返回 null，表示取不到有效值。
      * @param References 技术参考/参考链接
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReferences(String References) {
         this.References = References;
     }
 
     /**
-     * Get 漏洞描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 漏洞描述 
      * @return Describe 漏洞描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescribe() {
         return this.Describe;
@@ -107,19 +93,15 @@ public class VULRiskInfo extends AbstractModel {
 
     /**
      * Set 漏洞描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Describe 漏洞描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescribe(String Describe) {
         this.Describe = Describe;
     }
 
     /**
-     * Get 受影响组件
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 受影响组件 
      * @return ImpactComponent 受影响组件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public VulImpactComponentInfo [] getImpactComponent() {
         return this.ImpactComponent;
@@ -127,9 +109,7 @@ public class VULRiskInfo extends AbstractModel {
 
     /**
      * Set 受影响组件
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ImpactComponent 受影响组件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setImpactComponent(VulImpactComponentInfo [] ImpactComponent) {
         this.ImpactComponent = ImpactComponent;

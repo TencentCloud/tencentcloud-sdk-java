@@ -39,7 +39,6 @@ public class DescribeAccessHistogramResponse extends AbstractModel {
 
     /**
     * 注意：此字段可能返回 null，表示取不到有效值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HistogramInfos")
     @Expose
@@ -85,10 +84,8 @@ public class DescribeAccessHistogramResponse extends AbstractModel {
     }
 
     /**
-     * Get 注意：此字段可能返回 null，表示取不到有效值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 注意：此字段可能返回 null，表示取不到有效值 
      * @return HistogramInfos 注意：此字段可能返回 null，表示取不到有效值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AccessHistogramItem [] getHistogramInfos() {
         return this.HistogramInfos;
@@ -96,9 +93,7 @@ public class DescribeAccessHistogramResponse extends AbstractModel {
 
     /**
      * Set 注意：此字段可能返回 null，表示取不到有效值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HistogramInfos 注意：此字段可能返回 null，表示取不到有效值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHistogramInfos(AccessHistogramItem [] HistogramInfos) {
         this.HistogramInfos = HistogramInfos;

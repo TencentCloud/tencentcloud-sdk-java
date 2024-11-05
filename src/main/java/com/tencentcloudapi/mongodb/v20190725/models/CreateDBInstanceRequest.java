@@ -118,14 +118,14 @@ public class CreateDBInstanceRequest extends AbstractModel {
     private Long ProjectId;
 
     /**
-    * 私有网络ID。如果不设置该参数，则默认选择基础网络。
+    * 私有网络ID。请登录[私有网络控制台](https://console.cloud.tencent.com/vpc)查询确认正确的ID。 示例值：vpc-pxyzim13
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 私有网络下的子网 ID，如果配置参数 VpcId，则 SubnetId必须配置。
+    * 私有网络VPC的子网。请登录 [私有网络控制台](https://console.cloud.tencent.com/vpc) 查询子网列表确认正确的 ID。 示例值：subnet-7jbabche
     */
     @SerializedName("SubnetId")
     @Expose
@@ -506,32 +506,32 @@ public class CreateDBInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get 私有网络ID。如果不设置该参数，则默认选择基础网络。 
-     * @return VpcId 私有网络ID。如果不设置该参数，则默认选择基础网络。
+     * Get 私有网络ID。请登录[私有网络控制台](https://console.cloud.tencent.com/vpc)查询确认正确的ID。 示例值：vpc-pxyzim13 
+     * @return VpcId 私有网络ID。请登录[私有网络控制台](https://console.cloud.tencent.com/vpc)查询确认正确的ID。 示例值：vpc-pxyzim13
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set 私有网络ID。如果不设置该参数，则默认选择基础网络。
-     * @param VpcId 私有网络ID。如果不设置该参数，则默认选择基础网络。
+     * Set 私有网络ID。请登录[私有网络控制台](https://console.cloud.tencent.com/vpc)查询确认正确的ID。 示例值：vpc-pxyzim13
+     * @param VpcId 私有网络ID。请登录[私有网络控制台](https://console.cloud.tencent.com/vpc)查询确认正确的ID。 示例值：vpc-pxyzim13
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 私有网络下的子网 ID，如果配置参数 VpcId，则 SubnetId必须配置。 
-     * @return SubnetId 私有网络下的子网 ID，如果配置参数 VpcId，则 SubnetId必须配置。
+     * Get 私有网络VPC的子网。请登录 [私有网络控制台](https://console.cloud.tencent.com/vpc) 查询子网列表确认正确的 ID。 示例值：subnet-7jbabche 
+     * @return SubnetId 私有网络VPC的子网。请登录 [私有网络控制台](https://console.cloud.tencent.com/vpc) 查询子网列表确认正确的 ID。 示例值：subnet-7jbabche
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 私有网络下的子网 ID，如果配置参数 VpcId，则 SubnetId必须配置。
-     * @param SubnetId 私有网络下的子网 ID，如果配置参数 VpcId，则 SubnetId必须配置。
+     * Set 私有网络VPC的子网。请登录 [私有网络控制台](https://console.cloud.tencent.com/vpc) 查询子网列表确认正确的 ID。 示例值：subnet-7jbabche
+     * @param SubnetId 私有网络VPC的子网。请登录 [私有网络控制台](https://console.cloud.tencent.com/vpc) 查询子网列表确认正确的 ID。 示例值：subnet-7jbabche
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;

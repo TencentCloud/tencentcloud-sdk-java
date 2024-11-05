@@ -25,17 +25,14 @@ public class CreateDeviceVirtualGroupRspData extends AbstractModel {
 
     /**
     * 返回的自定义分组id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-     * Get 返回的自定义分组id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 返回的自定义分组id 
      * @return Id 返回的自定义分组id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getId() {
         return this.Id;
@@ -43,9 +40,7 @@ public class CreateDeviceVirtualGroupRspData extends AbstractModel {
 
     /**
      * Set 返回的自定义分组id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Id 返回的自定义分组id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(Long Id) {
         this.Id = Id;

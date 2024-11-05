@@ -32,7 +32,6 @@ public class ListKeyDetailResponse extends AbstractModel {
 
     /**
     * 返回的属性信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KeyMetadatas")
     @Expose
@@ -62,10 +61,8 @@ public class ListKeyDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get 返回的属性信息列表。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 返回的属性信息列表。 
      * @return KeyMetadatas 返回的属性信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public KeyMetadata [] getKeyMetadatas() {
         return this.KeyMetadatas;
@@ -73,9 +70,7 @@ public class ListKeyDetailResponse extends AbstractModel {
 
     /**
      * Set 返回的属性信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param KeyMetadatas 返回的属性信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKeyMetadatas(KeyMetadata [] KeyMetadatas) {
         this.KeyMetadatas = KeyMetadatas;

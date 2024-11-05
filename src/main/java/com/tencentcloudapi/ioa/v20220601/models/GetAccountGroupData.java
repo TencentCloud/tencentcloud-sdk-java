@@ -25,7 +25,6 @@ public class GetAccountGroupData extends AbstractModel {
 
     /**
     * 分组名称全路径，点分格式
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NamePath")
     @Expose
@@ -33,7 +32,6 @@ public class GetAccountGroupData extends AbstractModel {
 
     /**
     * 分组ID全路径，数组格式
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IdPathArr")
     @Expose
@@ -41,7 +39,6 @@ public class GetAccountGroupData extends AbstractModel {
 
     /**
     * 分组扩展信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExtraInfo")
     @Expose
@@ -49,7 +46,6 @@ public class GetAccountGroupData extends AbstractModel {
 
     /**
     * 最后更新时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Utime")
     @Expose
@@ -57,7 +53,6 @@ public class GetAccountGroupData extends AbstractModel {
 
     /**
     * 当前分组的父分组ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ParentId")
     @Expose
@@ -65,7 +60,6 @@ public class GetAccountGroupData extends AbstractModel {
 
     /**
     * 源账号组ID，该字段仅适用于第三方同步的组织架构，通过OrgId-Id构成源组织架构分组ID-现组织架构分组ID映射关系
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OrgId")
     @Expose
@@ -73,7 +67,6 @@ public class GetAccountGroupData extends AbstractModel {
 
     /**
     * 分组名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -81,7 +74,6 @@ public class GetAccountGroupData extends AbstractModel {
 
     /**
     * 分组ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
     @Expose
@@ -89,7 +81,6 @@ public class GetAccountGroupData extends AbstractModel {
 
     /**
     * 分组描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
     @Expose
@@ -97,7 +88,6 @@ public class GetAccountGroupData extends AbstractModel {
 
     /**
     * 分组导入源(只支持32位)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Source")
     @Expose
@@ -105,7 +95,6 @@ public class GetAccountGroupData extends AbstractModel {
 
     /**
     * 分组ID全路径，点分格式
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IdPath")
     @Expose
@@ -113,7 +102,6 @@ public class GetAccountGroupData extends AbstractModel {
 
     /**
     * 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Itime")
     @Expose
@@ -121,7 +109,6 @@ public class GetAccountGroupData extends AbstractModel {
 
     /**
     * 父源账号组ID，该字段仅适用于第三方同步的组织架构
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ParentOrgId")
     @Expose
@@ -129,7 +116,6 @@ public class GetAccountGroupData extends AbstractModel {
 
     /**
     * 导入信息,json格式
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Import")
     @Expose
@@ -137,7 +123,6 @@ public class GetAccountGroupData extends AbstractModel {
 
     /**
     * 是否开启导入架构
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ImportEnable")
     @Expose
@@ -145,7 +130,6 @@ public class GetAccountGroupData extends AbstractModel {
 
     /**
     * 导入类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ImportType")
     @Expose
@@ -153,17 +137,14 @@ public class GetAccountGroupData extends AbstractModel {
 
     /**
     * miniIAMId，MiniIAM源才有
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MiniIamId")
     @Expose
     private String MiniIamId;
 
     /**
-     * Get 分组名称全路径，点分格式
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分组名称全路径，点分格式 
      * @return NamePath 分组名称全路径，点分格式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNamePath() {
         return this.NamePath;
@@ -171,19 +152,15 @@ public class GetAccountGroupData extends AbstractModel {
 
     /**
      * Set 分组名称全路径，点分格式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NamePath 分组名称全路径，点分格式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNamePath(String NamePath) {
         this.NamePath = NamePath;
     }
 
     /**
-     * Get 分组ID全路径，数组格式
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分组ID全路径，数组格式 
      * @return IdPathArr 分组ID全路径，数组格式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long [] getIdPathArr() {
         return this.IdPathArr;
@@ -191,19 +168,15 @@ public class GetAccountGroupData extends AbstractModel {
 
     /**
      * Set 分组ID全路径，数组格式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IdPathArr 分组ID全路径，数组格式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIdPathArr(Long [] IdPathArr) {
         this.IdPathArr = IdPathArr;
     }
 
     /**
-     * Get 分组扩展信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分组扩展信息 
      * @return ExtraInfo 分组扩展信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExtraInfo() {
         return this.ExtraInfo;
@@ -211,19 +184,15 @@ public class GetAccountGroupData extends AbstractModel {
 
     /**
      * Set 分组扩展信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExtraInfo 分组扩展信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExtraInfo(String ExtraInfo) {
         this.ExtraInfo = ExtraInfo;
     }
 
     /**
-     * Get 最后更新时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最后更新时间 
      * @return Utime 最后更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUtime() {
         return this.Utime;
@@ -231,19 +200,15 @@ public class GetAccountGroupData extends AbstractModel {
 
     /**
      * Set 最后更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Utime 最后更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUtime(String Utime) {
         this.Utime = Utime;
     }
 
     /**
-     * Get 当前分组的父分组ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当前分组的父分组ID 
      * @return ParentId 当前分组的父分组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getParentId() {
         return this.ParentId;
@@ -251,19 +216,15 @@ public class GetAccountGroupData extends AbstractModel {
 
     /**
      * Set 当前分组的父分组ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ParentId 当前分组的父分组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setParentId(Long ParentId) {
         this.ParentId = ParentId;
     }
 
     /**
-     * Get 源账号组ID，该字段仅适用于第三方同步的组织架构，通过OrgId-Id构成源组织架构分组ID-现组织架构分组ID映射关系
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 源账号组ID，该字段仅适用于第三方同步的组织架构，通过OrgId-Id构成源组织架构分组ID-现组织架构分组ID映射关系 
      * @return OrgId 源账号组ID，该字段仅适用于第三方同步的组织架构，通过OrgId-Id构成源组织架构分组ID-现组织架构分组ID映射关系
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOrgId() {
         return this.OrgId;
@@ -271,19 +232,15 @@ public class GetAccountGroupData extends AbstractModel {
 
     /**
      * Set 源账号组ID，该字段仅适用于第三方同步的组织架构，通过OrgId-Id构成源组织架构分组ID-现组织架构分组ID映射关系
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OrgId 源账号组ID，该字段仅适用于第三方同步的组织架构，通过OrgId-Id构成源组织架构分组ID-现组织架构分组ID映射关系
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOrgId(String OrgId) {
         this.OrgId = OrgId;
     }
 
     /**
-     * Get 分组名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分组名称 
      * @return Name 分组名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -291,19 +248,15 @@ public class GetAccountGroupData extends AbstractModel {
 
     /**
      * Set 分组名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 分组名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 分组ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分组ID 
      * @return Id 分组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getId() {
         return this.Id;
@@ -311,19 +264,15 @@ public class GetAccountGroupData extends AbstractModel {
 
     /**
      * Set 分组ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Id 分组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 分组描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分组描述 
      * @return Description 分组描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
         return this.Description;
@@ -331,19 +280,15 @@ public class GetAccountGroupData extends AbstractModel {
 
     /**
      * Set 分组描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Description 分组描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 分组导入源(只支持32位)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分组导入源(只支持32位) 
      * @return Source 分组导入源(只支持32位)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSource() {
         return this.Source;
@@ -351,19 +296,15 @@ public class GetAccountGroupData extends AbstractModel {
 
     /**
      * Set 分组导入源(只支持32位)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Source 分组导入源(只支持32位)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSource(Long Source) {
         this.Source = Source;
     }
 
     /**
-     * Get 分组ID全路径，点分格式
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分组ID全路径，点分格式 
      * @return IdPath 分组ID全路径，点分格式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIdPath() {
         return this.IdPath;
@@ -371,19 +312,15 @@ public class GetAccountGroupData extends AbstractModel {
 
     /**
      * Set 分组ID全路径，点分格式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IdPath 分组ID全路径，点分格式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIdPath(String IdPath) {
         this.IdPath = IdPath;
     }
 
     /**
-     * Get 创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间 
      * @return Itime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getItime() {
         return this.Itime;
@@ -391,19 +328,15 @@ public class GetAccountGroupData extends AbstractModel {
 
     /**
      * Set 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Itime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setItime(String Itime) {
         this.Itime = Itime;
     }
 
     /**
-     * Get 父源账号组ID，该字段仅适用于第三方同步的组织架构
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 父源账号组ID，该字段仅适用于第三方同步的组织架构 
      * @return ParentOrgId 父源账号组ID，该字段仅适用于第三方同步的组织架构
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getParentOrgId() {
         return this.ParentOrgId;
@@ -411,19 +344,15 @@ public class GetAccountGroupData extends AbstractModel {
 
     /**
      * Set 父源账号组ID，该字段仅适用于第三方同步的组织架构
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ParentOrgId 父源账号组ID，该字段仅适用于第三方同步的组织架构
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setParentOrgId(String ParentOrgId) {
         this.ParentOrgId = ParentOrgId;
     }
 
     /**
-     * Get 导入信息,json格式
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 导入信息,json格式 
      * @return Import 导入信息,json格式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getImport() {
         return this.Import;
@@ -431,19 +360,15 @@ public class GetAccountGroupData extends AbstractModel {
 
     /**
      * Set 导入信息,json格式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Import 导入信息,json格式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setImport(String Import) {
         this.Import = Import;
     }
 
     /**
-     * Get 是否开启导入架构
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否开启导入架构 
      * @return ImportEnable 是否开启导入架构
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getImportEnable() {
         return this.ImportEnable;
@@ -451,19 +376,15 @@ public class GetAccountGroupData extends AbstractModel {
 
     /**
      * Set 是否开启导入架构
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ImportEnable 是否开启导入架构
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setImportEnable(Boolean ImportEnable) {
         this.ImportEnable = ImportEnable;
     }
 
     /**
-     * Get 导入类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 导入类型 
      * @return ImportType 导入类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getImportType() {
         return this.ImportType;
@@ -471,19 +392,15 @@ public class GetAccountGroupData extends AbstractModel {
 
     /**
      * Set 导入类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ImportType 导入类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setImportType(String ImportType) {
         this.ImportType = ImportType;
     }
 
     /**
-     * Get miniIAMId，MiniIAM源才有
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get miniIAMId，MiniIAM源才有 
      * @return MiniIamId miniIAMId，MiniIAM源才有
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMiniIamId() {
         return this.MiniIamId;
@@ -491,9 +408,7 @@ public class GetAccountGroupData extends AbstractModel {
 
     /**
      * Set miniIAMId，MiniIAM源才有
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MiniIamId miniIAMId，MiniIAM源才有
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMiniIamId(String MiniIamId) {
         this.MiniIamId = MiniIamId;

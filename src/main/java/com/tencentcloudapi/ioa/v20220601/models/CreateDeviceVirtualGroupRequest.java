@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateDeviceVirtualGroupRequest extends AbstractModel {
 
     /**
-    * 终端自定义分组名
+    * 必填，终端自定义分组名
     */
     @SerializedName("DeviceVirtualGroupName")
     @Expose
@@ -38,44 +38,44 @@ public class CreateDeviceVirtualGroupRequest extends AbstractModel {
     private String Description;
 
     /**
-    * 系统类型（0: win，1：linux，2: mac，3: win_srv，4：android，5：ios   默认值0）(只支持32位)
+    * 必填，系统类型（0: win，1：linux，2: mac，3: win_srv，4：android，5：ios ）(只支持32位)
     */
     @SerializedName("OsType")
     @Expose
     private Long OsType;
 
     /**
-    * 时间设置类型（1:自动小时、2:自动每天、3:自定义、0:手动分组）(只支持32位)
+    * 必填，分组类型（0:手动分组；非0为自动划分分组；具体枚举值为：1:自动每小时划分分组、2:自动每天划分分组、3:自定义时间划分分组）(只支持32位)
     */
     @SerializedName("TimeType")
     @Expose
     private Long TimeType;
 
     /**
-    * 自动划分时间（单位min）(只支持32位)
+    * 选填，TimeType=3时的自动划分时间，其他情况为0（单位min）(只支持32位)
     */
     @SerializedName("AutoMinute")
     @Expose
     private Long AutoMinute;
 
     /**
-    * 自动划分规则数据
+    * 选填，手动分组不填，自动划分分组的划分规则数据
     */
     @SerializedName("AutoRules")
     @Expose
     private ComplexRule AutoRules;
 
     /**
-     * Get 终端自定义分组名 
-     * @return DeviceVirtualGroupName 终端自定义分组名
+     * Get 必填，终端自定义分组名 
+     * @return DeviceVirtualGroupName 必填，终端自定义分组名
      */
     public String getDeviceVirtualGroupName() {
         return this.DeviceVirtualGroupName;
     }
 
     /**
-     * Set 终端自定义分组名
-     * @param DeviceVirtualGroupName 终端自定义分组名
+     * Set 必填，终端自定义分组名
+     * @param DeviceVirtualGroupName 必填，终端自定义分组名
      */
     public void setDeviceVirtualGroupName(String DeviceVirtualGroupName) {
         this.DeviceVirtualGroupName = DeviceVirtualGroupName;
@@ -98,64 +98,64 @@ public class CreateDeviceVirtualGroupRequest extends AbstractModel {
     }
 
     /**
-     * Get 系统类型（0: win，1：linux，2: mac，3: win_srv，4：android，5：ios   默认值0）(只支持32位) 
-     * @return OsType 系统类型（0: win，1：linux，2: mac，3: win_srv，4：android，5：ios   默认值0）(只支持32位)
+     * Get 必填，系统类型（0: win，1：linux，2: mac，3: win_srv，4：android，5：ios ）(只支持32位) 
+     * @return OsType 必填，系统类型（0: win，1：linux，2: mac，3: win_srv，4：android，5：ios ）(只支持32位)
      */
     public Long getOsType() {
         return this.OsType;
     }
 
     /**
-     * Set 系统类型（0: win，1：linux，2: mac，3: win_srv，4：android，5：ios   默认值0）(只支持32位)
-     * @param OsType 系统类型（0: win，1：linux，2: mac，3: win_srv，4：android，5：ios   默认值0）(只支持32位)
+     * Set 必填，系统类型（0: win，1：linux，2: mac，3: win_srv，4：android，5：ios ）(只支持32位)
+     * @param OsType 必填，系统类型（0: win，1：linux，2: mac，3: win_srv，4：android，5：ios ）(只支持32位)
      */
     public void setOsType(Long OsType) {
         this.OsType = OsType;
     }
 
     /**
-     * Get 时间设置类型（1:自动小时、2:自动每天、3:自定义、0:手动分组）(只支持32位) 
-     * @return TimeType 时间设置类型（1:自动小时、2:自动每天、3:自定义、0:手动分组）(只支持32位)
+     * Get 必填，分组类型（0:手动分组；非0为自动划分分组；具体枚举值为：1:自动每小时划分分组、2:自动每天划分分组、3:自定义时间划分分组）(只支持32位) 
+     * @return TimeType 必填，分组类型（0:手动分组；非0为自动划分分组；具体枚举值为：1:自动每小时划分分组、2:自动每天划分分组、3:自定义时间划分分组）(只支持32位)
      */
     public Long getTimeType() {
         return this.TimeType;
     }
 
     /**
-     * Set 时间设置类型（1:自动小时、2:自动每天、3:自定义、0:手动分组）(只支持32位)
-     * @param TimeType 时间设置类型（1:自动小时、2:自动每天、3:自定义、0:手动分组）(只支持32位)
+     * Set 必填，分组类型（0:手动分组；非0为自动划分分组；具体枚举值为：1:自动每小时划分分组、2:自动每天划分分组、3:自定义时间划分分组）(只支持32位)
+     * @param TimeType 必填，分组类型（0:手动分组；非0为自动划分分组；具体枚举值为：1:自动每小时划分分组、2:自动每天划分分组、3:自定义时间划分分组）(只支持32位)
      */
     public void setTimeType(Long TimeType) {
         this.TimeType = TimeType;
     }
 
     /**
-     * Get 自动划分时间（单位min）(只支持32位) 
-     * @return AutoMinute 自动划分时间（单位min）(只支持32位)
+     * Get 选填，TimeType=3时的自动划分时间，其他情况为0（单位min）(只支持32位) 
+     * @return AutoMinute 选填，TimeType=3时的自动划分时间，其他情况为0（单位min）(只支持32位)
      */
     public Long getAutoMinute() {
         return this.AutoMinute;
     }
 
     /**
-     * Set 自动划分时间（单位min）(只支持32位)
-     * @param AutoMinute 自动划分时间（单位min）(只支持32位)
+     * Set 选填，TimeType=3时的自动划分时间，其他情况为0（单位min）(只支持32位)
+     * @param AutoMinute 选填，TimeType=3时的自动划分时间，其他情况为0（单位min）(只支持32位)
      */
     public void setAutoMinute(Long AutoMinute) {
         this.AutoMinute = AutoMinute;
     }
 
     /**
-     * Get 自动划分规则数据 
-     * @return AutoRules 自动划分规则数据
+     * Get 选填，手动分组不填，自动划分分组的划分规则数据 
+     * @return AutoRules 选填，手动分组不填，自动划分分组的划分规则数据
      */
     public ComplexRule getAutoRules() {
         return this.AutoRules;
     }
 
     /**
-     * Set 自动划分规则数据
-     * @param AutoRules 自动划分规则数据
+     * Set 选填，手动分组不填，自动划分分组的划分规则数据
+     * @param AutoRules 选填，手动分组不填，自动划分分组的划分规则数据
      */
     public void setAutoRules(ComplexRule AutoRules) {
         this.AutoRules = AutoRules;

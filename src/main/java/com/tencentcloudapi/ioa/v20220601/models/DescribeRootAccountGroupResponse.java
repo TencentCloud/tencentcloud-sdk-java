@@ -25,7 +25,6 @@ public class DescribeRootAccountGroupResponse extends AbstractModel {
 
     /**
     * 账号根分组响应详情
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeRootAccountGroupResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 账号根分组响应详情
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 账号根分组响应详情 
      * @return Data 账号根分组响应详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public GetAccountGroupData getData() {
         return this.Data;
@@ -50,9 +47,7 @@ public class DescribeRootAccountGroupResponse extends AbstractModel {
 
     /**
      * Set 账号根分组响应详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Data 账号根分组响应详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(GetAccountGroupData Data) {
         this.Data = Data;

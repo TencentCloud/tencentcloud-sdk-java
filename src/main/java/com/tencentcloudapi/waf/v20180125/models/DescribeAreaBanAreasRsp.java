@@ -53,7 +53,6 @@ public class DescribeAreaBanAreasRsp extends AbstractModel {
 
     /**
     * 定时任务详细配置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("JobDateTime")
     @Expose
@@ -131,10 +130,8 @@ public class DescribeAreaBanAreasRsp extends AbstractModel {
     }
 
     /**
-     * Get 定时任务详细配置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 定时任务详细配置 
      * @return JobDateTime 定时任务详细配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public JobDateTime getJobDateTime() {
         return this.JobDateTime;
@@ -142,9 +139,7 @@ public class DescribeAreaBanAreasRsp extends AbstractModel {
 
     /**
      * Set 定时任务详细配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param JobDateTime 定时任务详细配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setJobDateTime(JobDateTime JobDateTime) {
         this.JobDateTime = JobDateTime;

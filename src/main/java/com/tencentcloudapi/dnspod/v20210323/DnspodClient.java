@@ -73,6 +73,8 @@ public class DnspodClient extends AbstractClient{
 
     /**
      *添加域名
+
+备注：该接口不支持添加子域名。
      * @param req CreateDomainRequest
      * @return CreateDomainResponse
      * @throws TencentCloudSDKException
@@ -169,6 +171,18 @@ public class DnspodClient extends AbstractClient{
     public CreateSnapshotResponse CreateSnapshot(CreateSnapshotRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateSnapshot", CreateSnapshotResponse.class);
+    }
+
+    /**
+     *添加TXT记录
+备注：新添加的解析记录存在短暂的索引延迟，如果查询不到新增记录，请在 30 秒后重试
+     * @param req CreateTXTRecordRequest
+     * @return CreateTXTRecordResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateTXTRecordResponse CreateTXTRecord(CreateTXTRecordRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateTXTRecord", CreateTXTRecordResponse.class);
     }
 
     /**
@@ -826,6 +840,17 @@ public class DnspodClient extends AbstractClient{
     public ModifySubdomainStatusResponse ModifySubdomainStatus(ModifySubdomainStatusRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifySubdomainStatus", ModifySubdomainStatusResponse.class);
+    }
+
+    /**
+     *修改TXT记录
+     * @param req ModifyTXTRecordRequest
+     * @return ModifyTXTRecordResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyTXTRecordResponse ModifyTXTRecord(ModifyTXTRecordRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyTXTRecord", ModifyTXTRecordResponse.class);
     }
 
     /**

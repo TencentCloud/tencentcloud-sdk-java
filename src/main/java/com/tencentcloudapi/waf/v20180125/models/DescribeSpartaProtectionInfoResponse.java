@@ -200,7 +200,6 @@ public class DescribeSpartaProtectionInfoResponse extends AbstractModel {
 
     /**
     * 0：BGP 1：Anycast
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Anycast")
     @Expose
@@ -614,10 +613,8 @@ public class DescribeSpartaProtectionInfoResponse extends AbstractModel {
     }
 
     /**
-     * Get 0：BGP 1：Anycast
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 0：BGP 1：Anycast 
      * @return Anycast 0：BGP 1：Anycast
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAnycast() {
         return this.Anycast;
@@ -625,9 +622,7 @@ public class DescribeSpartaProtectionInfoResponse extends AbstractModel {
 
     /**
      * Set 0：BGP 1：Anycast
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Anycast 0：BGP 1：Anycast
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAnycast(String Anycast) {
         this.Anycast = Anycast;

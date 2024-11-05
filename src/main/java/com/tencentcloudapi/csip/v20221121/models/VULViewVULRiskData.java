@@ -144,7 +144,6 @@ public class VULViewVULRiskData extends AbstractModel {
 
     /**
     * 用户昵称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Nick")
     @Expose
@@ -159,7 +158,6 @@ public class VULViewVULRiskData extends AbstractModel {
 
     /**
     * 用户uin
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Uin")
     @Expose
@@ -167,7 +165,6 @@ public class VULViewVULRiskData extends AbstractModel {
 
     /**
     * 应急漏洞类型，1-应急漏洞，0-非应急漏洞
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EMGCVulType")
     @Expose
@@ -175,7 +172,6 @@ public class VULViewVULRiskData extends AbstractModel {
 
     /**
     * CVSS评分
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CVSS")
     @Expose
@@ -183,7 +179,6 @@ public class VULViewVULRiskData extends AbstractModel {
 
     /**
     * PCMGRId
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PCMGRId")
     @Expose
@@ -191,7 +186,6 @@ public class VULViewVULRiskData extends AbstractModel {
 
     /**
     * 漏洞标签。搜索时应急 必修传参VulTag=SuggestRepair/EMGCVul
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VulTag")
     @Expose
@@ -199,7 +193,6 @@ public class VULViewVULRiskData extends AbstractModel {
 
     /**
     * 漏洞披露时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DisclosureTime")
     @Expose
@@ -207,7 +200,6 @@ public class VULViewVULRiskData extends AbstractModel {
 
     /**
     * 攻击热度
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AttackHeat")
     @Expose
@@ -215,7 +207,6 @@ public class VULViewVULRiskData extends AbstractModel {
 
     /**
     * 是否必修漏洞，1-是，0-不是
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsSuggest")
     @Expose
@@ -223,7 +214,6 @@ public class VULViewVULRiskData extends AbstractModel {
 
     /**
     * 处置任务id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HandleTaskId")
     @Expose
@@ -231,7 +221,6 @@ public class VULViewVULRiskData extends AbstractModel {
 
     /**
     * 引擎来源
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EngineSource")
     @Expose
@@ -239,7 +228,6 @@ public class VULViewVULRiskData extends AbstractModel {
 
     /**
     * 新的漏洞风险id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VulRiskId")
     @Expose
@@ -247,7 +235,6 @@ public class VULViewVULRiskData extends AbstractModel {
 
     /**
     * 新版漏洞id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TvdID")
     @Expose
@@ -255,7 +242,6 @@ public class VULViewVULRiskData extends AbstractModel {
 
     /**
     * 是否可以一键体检，1-可以，0-不可以
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsOneClick")
     @Expose
@@ -534,10 +520,8 @@ public class VULViewVULRiskData extends AbstractModel {
     }
 
     /**
-     * Get 用户昵称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户昵称 
      * @return Nick 用户昵称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNick() {
         return this.Nick;
@@ -545,9 +529,7 @@ public class VULViewVULRiskData extends AbstractModel {
 
     /**
      * Set 用户昵称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Nick 用户昵称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNick(String Nick) {
         this.Nick = Nick;
@@ -570,10 +552,8 @@ public class VULViewVULRiskData extends AbstractModel {
     }
 
     /**
-     * Get 用户uin
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户uin 
      * @return Uin 用户uin
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUin() {
         return this.Uin;
@@ -581,19 +561,15 @@ public class VULViewVULRiskData extends AbstractModel {
 
     /**
      * Set 用户uin
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Uin 用户uin
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUin(String Uin) {
         this.Uin = Uin;
     }
 
     /**
-     * Get 应急漏洞类型，1-应急漏洞，0-非应急漏洞
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 应急漏洞类型，1-应急漏洞，0-非应急漏洞 
      * @return EMGCVulType 应急漏洞类型，1-应急漏洞，0-非应急漏洞
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getEMGCVulType() {
         return this.EMGCVulType;
@@ -601,19 +577,15 @@ public class VULViewVULRiskData extends AbstractModel {
 
     /**
      * Set 应急漏洞类型，1-应急漏洞，0-非应急漏洞
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EMGCVulType 应急漏洞类型，1-应急漏洞，0-非应急漏洞
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEMGCVulType(Long EMGCVulType) {
         this.EMGCVulType = EMGCVulType;
     }
 
     /**
-     * Get CVSS评分
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get CVSS评分 
      * @return CVSS CVSS评分
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getCVSS() {
         return this.CVSS;
@@ -621,19 +593,15 @@ public class VULViewVULRiskData extends AbstractModel {
 
     /**
      * Set CVSS评分
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CVSS CVSS评分
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCVSS(Float CVSS) {
         this.CVSS = CVSS;
     }
 
     /**
-     * Get PCMGRId
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get PCMGRId 
      * @return PCMGRId PCMGRId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPCMGRId() {
         return this.PCMGRId;
@@ -641,19 +609,15 @@ public class VULViewVULRiskData extends AbstractModel {
 
     /**
      * Set PCMGRId
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PCMGRId PCMGRId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPCMGRId(String PCMGRId) {
         this.PCMGRId = PCMGRId;
     }
 
     /**
-     * Get 漏洞标签。搜索时应急 必修传参VulTag=SuggestRepair/EMGCVul
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 漏洞标签。搜索时应急 必修传参VulTag=SuggestRepair/EMGCVul 
      * @return VulTag 漏洞标签。搜索时应急 必修传参VulTag=SuggestRepair/EMGCVul
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getVulTag() {
         return this.VulTag;
@@ -661,19 +625,15 @@ public class VULViewVULRiskData extends AbstractModel {
 
     /**
      * Set 漏洞标签。搜索时应急 必修传参VulTag=SuggestRepair/EMGCVul
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VulTag 漏洞标签。搜索时应急 必修传参VulTag=SuggestRepair/EMGCVul
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVulTag(String [] VulTag) {
         this.VulTag = VulTag;
     }
 
     /**
-     * Get 漏洞披露时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 漏洞披露时间 
      * @return DisclosureTime 漏洞披露时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDisclosureTime() {
         return this.DisclosureTime;
@@ -681,19 +641,15 @@ public class VULViewVULRiskData extends AbstractModel {
 
     /**
      * Set 漏洞披露时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DisclosureTime 漏洞披露时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDisclosureTime(String DisclosureTime) {
         this.DisclosureTime = DisclosureTime;
     }
 
     /**
-     * Get 攻击热度
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 攻击热度 
      * @return AttackHeat 攻击热度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAttackHeat() {
         return this.AttackHeat;
@@ -701,19 +657,15 @@ public class VULViewVULRiskData extends AbstractModel {
 
     /**
      * Set 攻击热度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AttackHeat 攻击热度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAttackHeat(Long AttackHeat) {
         this.AttackHeat = AttackHeat;
     }
 
     /**
-     * Get 是否必修漏洞，1-是，0-不是
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否必修漏洞，1-是，0-不是 
      * @return IsSuggest 是否必修漏洞，1-是，0-不是
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsSuggest() {
         return this.IsSuggest;
@@ -721,19 +673,15 @@ public class VULViewVULRiskData extends AbstractModel {
 
     /**
      * Set 是否必修漏洞，1-是，0-不是
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsSuggest 是否必修漏洞，1-是，0-不是
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsSuggest(Long IsSuggest) {
         this.IsSuggest = IsSuggest;
     }
 
     /**
-     * Get 处置任务id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 处置任务id 
      * @return HandleTaskId 处置任务id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHandleTaskId() {
         return this.HandleTaskId;
@@ -741,19 +689,15 @@ public class VULViewVULRiskData extends AbstractModel {
 
     /**
      * Set 处置任务id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HandleTaskId 处置任务id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHandleTaskId(String HandleTaskId) {
         this.HandleTaskId = HandleTaskId;
     }
 
     /**
-     * Get 引擎来源
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 引擎来源 
      * @return EngineSource 引擎来源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEngineSource() {
         return this.EngineSource;
@@ -761,19 +705,15 @@ public class VULViewVULRiskData extends AbstractModel {
 
     /**
      * Set 引擎来源
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EngineSource 引擎来源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEngineSource(String EngineSource) {
         this.EngineSource = EngineSource;
     }
 
     /**
-     * Get 新的漏洞风险id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 新的漏洞风险id 
      * @return VulRiskId 新的漏洞风险id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVulRiskId() {
         return this.VulRiskId;
@@ -781,19 +721,15 @@ public class VULViewVULRiskData extends AbstractModel {
 
     /**
      * Set 新的漏洞风险id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VulRiskId 新的漏洞风险id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVulRiskId(String VulRiskId) {
         this.VulRiskId = VulRiskId;
     }
 
     /**
-     * Get 新版漏洞id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 新版漏洞id 
      * @return TvdID 新版漏洞id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTvdID() {
         return this.TvdID;
@@ -801,19 +737,15 @@ public class VULViewVULRiskData extends AbstractModel {
 
     /**
      * Set 新版漏洞id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TvdID 新版漏洞id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTvdID(String TvdID) {
         this.TvdID = TvdID;
     }
 
     /**
-     * Get 是否可以一键体检，1-可以，0-不可以
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否可以一键体检，1-可以，0-不可以 
      * @return IsOneClick 是否可以一键体检，1-可以，0-不可以
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsOneClick() {
         return this.IsOneClick;
@@ -821,9 +753,7 @@ public class VULViewVULRiskData extends AbstractModel {
 
     /**
      * Set 是否可以一键体检，1-可以，0-不可以
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsOneClick 是否可以一键体检，1-可以，0-不可以
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsOneClick(Long IsOneClick) {
         this.IsOneClick = IsOneClick;

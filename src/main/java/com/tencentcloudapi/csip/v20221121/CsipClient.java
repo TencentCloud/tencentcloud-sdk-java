@@ -138,7 +138,7 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
-     *cvm列表
+     *获取cvm列表
      * @param req DescribeCVMAssetsRequest
      * @return DescribeCVMAssetsResponse
      * @throws TencentCloudSDKException

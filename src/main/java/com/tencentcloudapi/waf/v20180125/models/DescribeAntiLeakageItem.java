@@ -60,7 +60,6 @@ public class DescribeAntiLeakageItem extends AbstractModel {
 
     /**
     * 匹配条件
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Strategies")
     @Expose
@@ -68,7 +67,6 @@ public class DescribeAntiLeakageItem extends AbstractModel {
 
     /**
     * 匹配的URL
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Uri")
     @Expose
@@ -162,10 +160,8 @@ public class DescribeAntiLeakageItem extends AbstractModel {
     }
 
     /**
-     * Get 匹配条件
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 匹配条件 
      * @return Strategies 匹配条件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DescribeAntiInfoLeakRulesStrategyItem [] getStrategies() {
         return this.Strategies;
@@ -173,19 +169,15 @@ public class DescribeAntiLeakageItem extends AbstractModel {
 
     /**
      * Set 匹配条件
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Strategies 匹配条件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStrategies(DescribeAntiInfoLeakRulesStrategyItem [] Strategies) {
         this.Strategies = Strategies;
     }
 
     /**
-     * Get 匹配的URL
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 匹配的URL 
      * @return Uri 匹配的URL
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUri() {
         return this.Uri;
@@ -193,9 +185,7 @@ public class DescribeAntiLeakageItem extends AbstractModel {
 
     /**
      * Set 匹配的URL
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Uri 匹配的URL
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUri(String Uri) {
         this.Uri = Uri;

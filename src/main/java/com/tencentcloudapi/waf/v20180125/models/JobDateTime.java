@@ -25,7 +25,6 @@ public class JobDateTime extends AbstractModel {
 
     /**
     * 定时执行的时间参数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Timed")
     @Expose
@@ -33,7 +32,6 @@ public class JobDateTime extends AbstractModel {
 
     /**
     * 周期执行的时间参数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Cron")
     @Expose
@@ -47,10 +45,8 @@ public class JobDateTime extends AbstractModel {
     private String TimeTZone;
 
     /**
-     * Get 定时执行的时间参数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 定时执行的时间参数 
      * @return Timed 定时执行的时间参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TimedJob [] getTimed() {
         return this.Timed;
@@ -58,19 +54,15 @@ public class JobDateTime extends AbstractModel {
 
     /**
      * Set 定时执行的时间参数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Timed 定时执行的时间参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimed(TimedJob [] Timed) {
         this.Timed = Timed;
     }
 
     /**
-     * Get 周期执行的时间参数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 周期执行的时间参数 
      * @return Cron 周期执行的时间参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CronJob [] getCron() {
         return this.Cron;
@@ -78,9 +70,7 @@ public class JobDateTime extends AbstractModel {
 
     /**
      * Set 周期执行的时间参数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Cron 周期执行的时间参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCron(CronJob [] Cron) {
         this.Cron = Cron;

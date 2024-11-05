@@ -25,7 +25,6 @@ public class RoleInfo extends AbstractModel {
 
     /**
     * IP
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IP")
     @Expose
@@ -33,7 +32,6 @@ public class RoleInfo extends AbstractModel {
 
     /**
     * HostIP
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HostIP")
     @Expose
@@ -41,7 +39,6 @@ public class RoleInfo extends AbstractModel {
 
     /**
     * 原始IP
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OriginIP")
     @Expose
@@ -49,7 +46,6 @@ public class RoleInfo extends AbstractModel {
 
     /**
     * 端口
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Port")
     @Expose
@@ -57,7 +53,6 @@ public class RoleInfo extends AbstractModel {
 
     /**
     * 资产ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceID")
     @Expose
@@ -65,7 +60,6 @@ public class RoleInfo extends AbstractModel {
 
     /**
     * 城市
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("City")
     @Expose
@@ -73,7 +67,6 @@ public class RoleInfo extends AbstractModel {
 
     /**
     * 省份
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Province")
     @Expose
@@ -81,7 +74,6 @@ public class RoleInfo extends AbstractModel {
 
     /**
     * 国家
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Country")
     @Expose
@@ -89,7 +81,6 @@ public class RoleInfo extends AbstractModel {
 
     /**
     * 地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Address")
     @Expose
@@ -97,7 +88,6 @@ public class RoleInfo extends AbstractModel {
 
     /**
     * 纬度
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Latitude")
     @Expose
@@ -105,7 +95,6 @@ public class RoleInfo extends AbstractModel {
 
     /**
     * 经度
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Longitude")
     @Expose
@@ -113,7 +102,6 @@ public class RoleInfo extends AbstractModel {
 
     /**
     * 信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Info")
     @Expose
@@ -121,7 +109,6 @@ public class RoleInfo extends AbstractModel {
 
     /**
     * 域名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Domain")
     @Expose
@@ -129,7 +116,6 @@ public class RoleInfo extends AbstractModel {
 
     /**
     * 企业名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -137,7 +123,6 @@ public class RoleInfo extends AbstractModel {
 
     /**
     * 账号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Account")
     @Expose
@@ -145,7 +130,6 @@ public class RoleInfo extends AbstractModel {
 
     /**
     * 家族团伙
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Family")
     @Expose
@@ -153,7 +137,6 @@ public class RoleInfo extends AbstractModel {
 
     /**
     * 病毒名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VirusName")
     @Expose
@@ -161,7 +144,6 @@ public class RoleInfo extends AbstractModel {
 
     /**
     * MD5值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MD5")
     @Expose
@@ -169,7 +151,6 @@ public class RoleInfo extends AbstractModel {
 
     /**
     * 恶意进程文件名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileName")
     @Expose
@@ -177,7 +158,6 @@ public class RoleInfo extends AbstractModel {
 
     /**
     * 1:主机资产 2:域名资产 3:网络资产
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AssetType")
     @Expose
@@ -185,7 +165,6 @@ public class RoleInfo extends AbstractModel {
 
     /**
     * 来源日志分析的信息字段
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FromLogAnalysisData")
     @Expose
@@ -193,7 +172,6 @@ public class RoleInfo extends AbstractModel {
 
     /**
     * 容器名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ContainerName")
     @Expose
@@ -201,17 +179,14 @@ public class RoleInfo extends AbstractModel {
 
     /**
     * 容器ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ContainerID")
     @Expose
     private String ContainerID;
 
     /**
-     * Get IP
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get IP 
      * @return IP IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIP() {
         return this.IP;
@@ -219,19 +194,15 @@ public class RoleInfo extends AbstractModel {
 
     /**
      * Set IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IP IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIP(String IP) {
         this.IP = IP;
     }
 
     /**
-     * Get HostIP
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get HostIP 
      * @return HostIP HostIP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHostIP() {
         return this.HostIP;
@@ -239,19 +210,15 @@ public class RoleInfo extends AbstractModel {
 
     /**
      * Set HostIP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HostIP HostIP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHostIP(String HostIP) {
         this.HostIP = HostIP;
     }
 
     /**
-     * Get 原始IP
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 原始IP 
      * @return OriginIP 原始IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOriginIP() {
         return this.OriginIP;
@@ -259,19 +226,15 @@ public class RoleInfo extends AbstractModel {
 
     /**
      * Set 原始IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OriginIP 原始IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOriginIP(String OriginIP) {
         this.OriginIP = OriginIP;
     }
 
     /**
-     * Get 端口
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 端口 
      * @return Port 端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPort() {
         return this.Port;
@@ -279,19 +242,15 @@ public class RoleInfo extends AbstractModel {
 
     /**
      * Set 端口
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Port 端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPort(Long Port) {
         this.Port = Port;
     }
 
     /**
-     * Get 资产ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资产ID 
      * @return InstanceID 资产ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceID() {
         return this.InstanceID;
@@ -299,19 +258,15 @@ public class RoleInfo extends AbstractModel {
 
     /**
      * Set 资产ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceID 资产ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceID(String InstanceID) {
         this.InstanceID = InstanceID;
     }
 
     /**
-     * Get 城市
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 城市 
      * @return City 城市
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCity() {
         return this.City;
@@ -319,19 +274,15 @@ public class RoleInfo extends AbstractModel {
 
     /**
      * Set 城市
-注意：此字段可能返回 null，表示取不到有效值。
      * @param City 城市
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCity(String City) {
         this.City = City;
     }
 
     /**
-     * Get 省份
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 省份 
      * @return Province 省份
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProvince() {
         return this.Province;
@@ -339,19 +290,15 @@ public class RoleInfo extends AbstractModel {
 
     /**
      * Set 省份
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Province 省份
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProvince(String Province) {
         this.Province = Province;
     }
 
     /**
-     * Get 国家
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 国家 
      * @return Country 国家
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCountry() {
         return this.Country;
@@ -359,19 +306,15 @@ public class RoleInfo extends AbstractModel {
 
     /**
      * Set 国家
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Country 国家
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCountry(String Country) {
         this.Country = Country;
     }
 
     /**
-     * Get 地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地址 
      * @return Address 地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAddress() {
         return this.Address;
@@ -379,19 +322,15 @@ public class RoleInfo extends AbstractModel {
 
     /**
      * Set 地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Address 地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAddress(String Address) {
         this.Address = Address;
     }
 
     /**
-     * Get 纬度
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 纬度 
      * @return Latitude 纬度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLatitude() {
         return this.Latitude;
@@ -399,19 +338,15 @@ public class RoleInfo extends AbstractModel {
 
     /**
      * Set 纬度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Latitude 纬度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLatitude(String Latitude) {
         this.Latitude = Latitude;
     }
 
     /**
-     * Get 经度
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 经度 
      * @return Longitude 经度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLongitude() {
         return this.Longitude;
@@ -419,19 +354,15 @@ public class RoleInfo extends AbstractModel {
 
     /**
      * Set 经度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Longitude 经度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLongitude(String Longitude) {
         this.Longitude = Longitude;
     }
 
     /**
-     * Get 信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 信息 
      * @return Info 信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInfo() {
         return this.Info;
@@ -439,19 +370,15 @@ public class RoleInfo extends AbstractModel {
 
     /**
      * Set 信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Info 信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInfo(String Info) {
         this.Info = Info;
     }
 
     /**
-     * Get 域名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 域名 
      * @return Domain 域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDomain() {
         return this.Domain;
@@ -459,19 +386,15 @@ public class RoleInfo extends AbstractModel {
 
     /**
      * Set 域名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Domain 域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get 企业名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 企业名称 
      * @return Name 企业名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -479,19 +402,15 @@ public class RoleInfo extends AbstractModel {
 
     /**
      * Set 企业名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 企业名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 账号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 账号 
      * @return Account 账号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAccount() {
         return this.Account;
@@ -499,19 +418,15 @@ public class RoleInfo extends AbstractModel {
 
     /**
      * Set 账号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Account 账号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAccount(String Account) {
         this.Account = Account;
     }
 
     /**
-     * Get 家族团伙
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 家族团伙 
      * @return Family 家族团伙
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFamily() {
         return this.Family;
@@ -519,19 +434,15 @@ public class RoleInfo extends AbstractModel {
 
     /**
      * Set 家族团伙
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Family 家族团伙
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFamily(String Family) {
         this.Family = Family;
     }
 
     /**
-     * Get 病毒名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 病毒名 
      * @return VirusName 病毒名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVirusName() {
         return this.VirusName;
@@ -539,19 +450,15 @@ public class RoleInfo extends AbstractModel {
 
     /**
      * Set 病毒名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VirusName 病毒名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVirusName(String VirusName) {
         this.VirusName = VirusName;
     }
 
     /**
-     * Get MD5值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get MD5值 
      * @return MD5 MD5值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMD5() {
         return this.MD5;
@@ -559,19 +466,15 @@ public class RoleInfo extends AbstractModel {
 
     /**
      * Set MD5值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MD5 MD5值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMD5(String MD5) {
         this.MD5 = MD5;
     }
 
     /**
-     * Get 恶意进程文件名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 恶意进程文件名 
      * @return FileName 恶意进程文件名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFileName() {
         return this.FileName;
@@ -579,19 +482,15 @@ public class RoleInfo extends AbstractModel {
 
     /**
      * Set 恶意进程文件名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FileName 恶意进程文件名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileName(String FileName) {
         this.FileName = FileName;
     }
 
     /**
-     * Get 1:主机资产 2:域名资产 3:网络资产
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 1:主机资产 2:域名资产 3:网络资产 
      * @return AssetType 1:主机资产 2:域名资产 3:网络资产
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAssetType() {
         return this.AssetType;
@@ -599,19 +498,15 @@ public class RoleInfo extends AbstractModel {
 
     /**
      * Set 1:主机资产 2:域名资产 3:网络资产
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AssetType 1:主机资产 2:域名资产 3:网络资产
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAssetType(Long AssetType) {
         this.AssetType = AssetType;
     }
 
     /**
-     * Get 来源日志分析的信息字段
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 来源日志分析的信息字段 
      * @return FromLogAnalysisData 来源日志分析的信息字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public KeyValue [] getFromLogAnalysisData() {
         return this.FromLogAnalysisData;
@@ -619,19 +514,15 @@ public class RoleInfo extends AbstractModel {
 
     /**
      * Set 来源日志分析的信息字段
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FromLogAnalysisData 来源日志分析的信息字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFromLogAnalysisData(KeyValue [] FromLogAnalysisData) {
         this.FromLogAnalysisData = FromLogAnalysisData;
     }
 
     /**
-     * Get 容器名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 容器名 
      * @return ContainerName 容器名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getContainerName() {
         return this.ContainerName;
@@ -639,19 +530,15 @@ public class RoleInfo extends AbstractModel {
 
     /**
      * Set 容器名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ContainerName 容器名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContainerName(String ContainerName) {
         this.ContainerName = ContainerName;
     }
 
     /**
-     * Get 容器ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 容器ID 
      * @return ContainerID 容器ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getContainerID() {
         return this.ContainerID;
@@ -659,9 +546,7 @@ public class RoleInfo extends AbstractModel {
 
     /**
      * Set 容器ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ContainerID 容器ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContainerID(String ContainerID) {
         this.ContainerID = ContainerID;

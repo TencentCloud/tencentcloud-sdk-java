@@ -25,7 +25,6 @@ public class DeleteDomainWhiteRulesResponse extends AbstractModel {
 
     /**
     * 出参
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
     @Expose
@@ -39,10 +38,8 @@ public class DeleteDomainWhiteRulesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 出参
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 出参 
      * @return Data 出参
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getData() {
         return this.Data;
@@ -50,9 +47,7 @@ public class DeleteDomainWhiteRulesResponse extends AbstractModel {
 
     /**
      * Set 出参
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Data 出参
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(String Data) {
         this.Data = Data;

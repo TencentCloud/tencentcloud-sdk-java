@@ -25,7 +25,6 @@ public class ProductSupport extends AbstractModel {
 
     /**
     * true支持扫描。false不支持扫描
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VSSScan")
     @Expose
@@ -33,7 +32,6 @@ public class ProductSupport extends AbstractModel {
 
     /**
     * 0不支持，1支持
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CWPScan")
     @Expose
@@ -41,7 +39,6 @@ public class ProductSupport extends AbstractModel {
 
     /**
     * 1支持虚拟补丁，0或空不支持
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CFWPatch")
     @Expose
@@ -49,7 +46,6 @@ public class ProductSupport extends AbstractModel {
 
     /**
     * 0不支持，1支持	
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WafPatch")
     @Expose
@@ -57,7 +53,6 @@ public class ProductSupport extends AbstractModel {
 
     /**
     * 0不支持，1支持	
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CWPFix")
     @Expose
@@ -65,17 +60,14 @@ public class ProductSupport extends AbstractModel {
 
     /**
     * cveid
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CveId")
     @Expose
     private String CveId;
 
     /**
-     * Get true支持扫描。false不支持扫描
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get true支持扫描。false不支持扫描 
      * @return VSSScan true支持扫描。false不支持扫描
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getVSSScan() {
         return this.VSSScan;
@@ -83,19 +75,15 @@ public class ProductSupport extends AbstractModel {
 
     /**
      * Set true支持扫描。false不支持扫描
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VSSScan true支持扫描。false不支持扫描
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVSSScan(Boolean VSSScan) {
         this.VSSScan = VSSScan;
     }
 
     /**
-     * Get 0不支持，1支持
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 0不支持，1支持 
      * @return CWPScan 0不支持，1支持
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCWPScan() {
         return this.CWPScan;
@@ -103,19 +91,15 @@ public class ProductSupport extends AbstractModel {
 
     /**
      * Set 0不支持，1支持
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CWPScan 0不支持，1支持
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCWPScan(String CWPScan) {
         this.CWPScan = CWPScan;
     }
 
     /**
-     * Get 1支持虚拟补丁，0或空不支持
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 1支持虚拟补丁，0或空不支持 
      * @return CFWPatch 1支持虚拟补丁，0或空不支持
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCFWPatch() {
         return this.CFWPatch;
@@ -123,19 +107,15 @@ public class ProductSupport extends AbstractModel {
 
     /**
      * Set 1支持虚拟补丁，0或空不支持
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CFWPatch 1支持虚拟补丁，0或空不支持
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCFWPatch(String CFWPatch) {
         this.CFWPatch = CFWPatch;
     }
 
     /**
-     * Get 0不支持，1支持	
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 0不支持，1支持	 
      * @return WafPatch 0不支持，1支持	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getWafPatch() {
         return this.WafPatch;
@@ -143,19 +123,15 @@ public class ProductSupport extends AbstractModel {
 
     /**
      * Set 0不支持，1支持	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WafPatch 0不支持，1支持	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWafPatch(Long WafPatch) {
         this.WafPatch = WafPatch;
     }
 
     /**
-     * Get 0不支持，1支持	
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 0不支持，1支持	 
      * @return CWPFix 0不支持，1支持	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCWPFix() {
         return this.CWPFix;
@@ -163,19 +139,15 @@ public class ProductSupport extends AbstractModel {
 
     /**
      * Set 0不支持，1支持	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CWPFix 0不支持，1支持	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCWPFix(Long CWPFix) {
         this.CWPFix = CWPFix;
     }
 
     /**
-     * Get cveid
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get cveid 
      * @return CveId cveid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCveId() {
         return this.CveId;
@@ -183,9 +155,7 @@ public class ProductSupport extends AbstractModel {
 
     /**
      * Set cveid
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CveId cveid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCveId(String CveId) {
         this.CveId = CveId;

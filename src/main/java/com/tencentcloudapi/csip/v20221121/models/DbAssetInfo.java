@@ -25,7 +25,6 @@ public class DbAssetInfo extends AbstractModel {
 
     /**
     * 云防状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CFWStatus")
     @Expose
@@ -33,7 +32,6 @@ public class DbAssetInfo extends AbstractModel {
 
     /**
     * 资产id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AssetId")
     @Expose
@@ -41,7 +39,6 @@ public class DbAssetInfo extends AbstractModel {
 
     /**
     * vpc信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcName")
     @Expose
@@ -49,7 +46,6 @@ public class DbAssetInfo extends AbstractModel {
 
     /**
     * 资产类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AssetType")
     @Expose
@@ -57,7 +53,6 @@ public class DbAssetInfo extends AbstractModel {
 
     /**
     * 公网ip
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PublicIp")
     @Expose
@@ -65,7 +60,6 @@ public class DbAssetInfo extends AbstractModel {
 
     /**
     * 私网ip
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PrivateIp")
     @Expose
@@ -73,7 +67,6 @@ public class DbAssetInfo extends AbstractModel {
 
     /**
     * 地域
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Region")
     @Expose
@@ -81,7 +74,6 @@ public class DbAssetInfo extends AbstractModel {
 
     /**
     * vpc信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcId")
     @Expose
@@ -89,7 +81,6 @@ public class DbAssetInfo extends AbstractModel {
 
     /**
     * 资产名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AssetName")
     @Expose
@@ -97,7 +88,6 @@ public class DbAssetInfo extends AbstractModel {
 
     /**
     * 云防保护版本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CFWProtectLevel")
     @Expose
@@ -105,17 +95,14 @@ public class DbAssetInfo extends AbstractModel {
 
     /**
     * tag信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tag")
     @Expose
     private Tag [] Tag;
 
     /**
-     * Get 云防状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 云防状态 
      * @return CFWStatus 云防状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCFWStatus() {
         return this.CFWStatus;
@@ -123,19 +110,15 @@ public class DbAssetInfo extends AbstractModel {
 
     /**
      * Set 云防状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CFWStatus 云防状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCFWStatus(Long CFWStatus) {
         this.CFWStatus = CFWStatus;
     }
 
     /**
-     * Get 资产id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资产id 
      * @return AssetId 资产id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAssetId() {
         return this.AssetId;
@@ -143,19 +126,15 @@ public class DbAssetInfo extends AbstractModel {
 
     /**
      * Set 资产id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AssetId 资产id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAssetId(String AssetId) {
         this.AssetId = AssetId;
     }
 
     /**
-     * Get vpc信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get vpc信息 
      * @return VpcName vpc信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVpcName() {
         return this.VpcName;
@@ -163,19 +142,15 @@ public class DbAssetInfo extends AbstractModel {
 
     /**
      * Set vpc信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VpcName vpc信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcName(String VpcName) {
         this.VpcName = VpcName;
     }
 
     /**
-     * Get 资产类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资产类型 
      * @return AssetType 资产类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAssetType() {
         return this.AssetType;
@@ -183,19 +158,15 @@ public class DbAssetInfo extends AbstractModel {
 
     /**
      * Set 资产类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AssetType 资产类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAssetType(String AssetType) {
         this.AssetType = AssetType;
     }
 
     /**
-     * Get 公网ip
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 公网ip 
      * @return PublicIp 公网ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPublicIp() {
         return this.PublicIp;
@@ -203,19 +174,15 @@ public class DbAssetInfo extends AbstractModel {
 
     /**
      * Set 公网ip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PublicIp 公网ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPublicIp(String PublicIp) {
         this.PublicIp = PublicIp;
     }
 
     /**
-     * Get 私网ip
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 私网ip 
      * @return PrivateIp 私网ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPrivateIp() {
         return this.PrivateIp;
@@ -223,19 +190,15 @@ public class DbAssetInfo extends AbstractModel {
 
     /**
      * Set 私网ip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PrivateIp 私网ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPrivateIp(String PrivateIp) {
         this.PrivateIp = PrivateIp;
     }
 
     /**
-     * Get 地域
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地域 
      * @return Region 地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegion() {
         return this.Region;
@@ -243,19 +206,15 @@ public class DbAssetInfo extends AbstractModel {
 
     /**
      * Set 地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Region 地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get vpc信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get vpc信息 
      * @return VpcId vpc信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVpcId() {
         return this.VpcId;
@@ -263,19 +222,15 @@ public class DbAssetInfo extends AbstractModel {
 
     /**
      * Set vpc信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VpcId vpc信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 资产名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资产名 
      * @return AssetName 资产名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAssetName() {
         return this.AssetName;
@@ -283,19 +238,15 @@ public class DbAssetInfo extends AbstractModel {
 
     /**
      * Set 资产名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AssetName 资产名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAssetName(String AssetName) {
         this.AssetName = AssetName;
     }
 
     /**
-     * Get 云防保护版本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 云防保护版本 
      * @return CFWProtectLevel 云防保护版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCFWProtectLevel() {
         return this.CFWProtectLevel;
@@ -303,19 +254,15 @@ public class DbAssetInfo extends AbstractModel {
 
     /**
      * Set 云防保护版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CFWProtectLevel 云防保护版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCFWProtectLevel(Long CFWProtectLevel) {
         this.CFWProtectLevel = CFWProtectLevel;
     }
 
     /**
-     * Get tag信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get tag信息 
      * @return Tag tag信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Tag [] getTag() {
         return this.Tag;
@@ -323,9 +270,7 @@ public class DbAssetInfo extends AbstractModel {
 
     /**
      * Set tag信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tag tag信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTag(Tag [] Tag) {
         this.Tag = Tag;

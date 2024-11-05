@@ -25,7 +25,6 @@ public class DBAssetVO extends AbstractModel {
 
     /**
     * 资产id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AssetId")
     @Expose
@@ -33,7 +32,6 @@ public class DBAssetVO extends AbstractModel {
 
     /**
     * 资产名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AssetName")
     @Expose
@@ -41,7 +39,6 @@ public class DBAssetVO extends AbstractModel {
 
     /**
     * 资产类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AssetType")
     @Expose
@@ -49,7 +46,6 @@ public class DBAssetVO extends AbstractModel {
 
     /**
     * vpcid
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcId")
     @Expose
@@ -57,7 +53,6 @@ public class DBAssetVO extends AbstractModel {
 
     /**
     * vpc标签
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcName")
     @Expose
@@ -65,7 +60,6 @@ public class DBAssetVO extends AbstractModel {
 
     /**
     * 地域
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Region")
     @Expose
@@ -73,7 +67,6 @@ public class DBAssetVO extends AbstractModel {
 
     /**
     * 域名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Domain")
     @Expose
@@ -81,7 +74,6 @@ public class DBAssetVO extends AbstractModel {
 
     /**
     * 资产创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AssetCreateTime")
     @Expose
@@ -89,7 +81,6 @@ public class DBAssetVO extends AbstractModel {
 
     /**
     * 最近扫描时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LastScanTime")
     @Expose
@@ -97,7 +88,6 @@ public class DBAssetVO extends AbstractModel {
 
     /**
     * 配置风险
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConfigurationRisk")
     @Expose
@@ -105,7 +95,6 @@ public class DBAssetVO extends AbstractModel {
 
     /**
     * 网络攻击
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Attack")
     @Expose
@@ -113,7 +102,6 @@ public class DBAssetVO extends AbstractModel {
 
     /**
     * 网络访问
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Access")
     @Expose
@@ -121,7 +109,6 @@ public class DBAssetVO extends AbstractModel {
 
     /**
     * 扫描任务
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScanTask")
     @Expose
@@ -129,7 +116,6 @@ public class DBAssetVO extends AbstractModel {
 
     /**
     * 用户appid
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AppId")
     @Expose
@@ -137,7 +123,6 @@ public class DBAssetVO extends AbstractModel {
 
     /**
     * 用户uin
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Uin")
     @Expose
@@ -145,7 +130,6 @@ public class DBAssetVO extends AbstractModel {
 
     /**
     * 昵称别名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NickName")
     @Expose
@@ -153,7 +137,6 @@ public class DBAssetVO extends AbstractModel {
 
     /**
     * 端口
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Port")
     @Expose
@@ -161,7 +144,6 @@ public class DBAssetVO extends AbstractModel {
 
     /**
     * 标签
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tag")
     @Expose
@@ -169,7 +151,6 @@ public class DBAssetVO extends AbstractModel {
 
     /**
     * 内网ip
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PrivateIp")
     @Expose
@@ -177,7 +158,6 @@ public class DBAssetVO extends AbstractModel {
 
     /**
     * 公网ip
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PublicIp")
     @Expose
@@ -185,7 +165,6 @@ public class DBAssetVO extends AbstractModel {
 
     /**
     * 状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -193,7 +172,6 @@ public class DBAssetVO extends AbstractModel {
 
     /**
     * 是否核心
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsCore")
     @Expose
@@ -201,17 +179,14 @@ public class DBAssetVO extends AbstractModel {
 
     /**
     * 是否新资产: 1新
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsNewAsset")
     @Expose
     private Long IsNewAsset;
 
     /**
-     * Get 资产id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资产id 
      * @return AssetId 资产id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAssetId() {
         return this.AssetId;
@@ -219,19 +194,15 @@ public class DBAssetVO extends AbstractModel {
 
     /**
      * Set 资产id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AssetId 资产id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAssetId(String AssetId) {
         this.AssetId = AssetId;
     }
 
     /**
-     * Get 资产名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资产名 
      * @return AssetName 资产名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAssetName() {
         return this.AssetName;
@@ -239,19 +210,15 @@ public class DBAssetVO extends AbstractModel {
 
     /**
      * Set 资产名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AssetName 资产名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAssetName(String AssetName) {
         this.AssetName = AssetName;
     }
 
     /**
-     * Get 资产类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资产类型 
      * @return AssetType 资产类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAssetType() {
         return this.AssetType;
@@ -259,19 +226,15 @@ public class DBAssetVO extends AbstractModel {
 
     /**
      * Set 资产类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AssetType 资产类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAssetType(String AssetType) {
         this.AssetType = AssetType;
     }
 
     /**
-     * Get vpcid
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get vpcid 
      * @return VpcId vpcid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVpcId() {
         return this.VpcId;
@@ -279,19 +242,15 @@ public class DBAssetVO extends AbstractModel {
 
     /**
      * Set vpcid
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VpcId vpcid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get vpc标签
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get vpc标签 
      * @return VpcName vpc标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVpcName() {
         return this.VpcName;
@@ -299,19 +258,15 @@ public class DBAssetVO extends AbstractModel {
 
     /**
      * Set vpc标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VpcName vpc标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcName(String VpcName) {
         this.VpcName = VpcName;
     }
 
     /**
-     * Get 地域
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地域 
      * @return Region 地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegion() {
         return this.Region;
@@ -319,19 +274,15 @@ public class DBAssetVO extends AbstractModel {
 
     /**
      * Set 地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Region 地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get 域名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 域名 
      * @return Domain 域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDomain() {
         return this.Domain;
@@ -339,19 +290,15 @@ public class DBAssetVO extends AbstractModel {
 
     /**
      * Set 域名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Domain 域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get 资产创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资产创建时间 
      * @return AssetCreateTime 资产创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAssetCreateTime() {
         return this.AssetCreateTime;
@@ -359,19 +306,15 @@ public class DBAssetVO extends AbstractModel {
 
     /**
      * Set 资产创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AssetCreateTime 资产创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAssetCreateTime(String AssetCreateTime) {
         this.AssetCreateTime = AssetCreateTime;
     }
 
     /**
-     * Get 最近扫描时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最近扫描时间 
      * @return LastScanTime 最近扫描时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLastScanTime() {
         return this.LastScanTime;
@@ -379,19 +322,15 @@ public class DBAssetVO extends AbstractModel {
 
     /**
      * Set 最近扫描时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LastScanTime 最近扫描时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLastScanTime(String LastScanTime) {
         this.LastScanTime = LastScanTime;
     }
 
     /**
-     * Get 配置风险
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 配置风险 
      * @return ConfigurationRisk 配置风险
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getConfigurationRisk() {
         return this.ConfigurationRisk;
@@ -399,19 +338,15 @@ public class DBAssetVO extends AbstractModel {
 
     /**
      * Set 配置风险
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ConfigurationRisk 配置风险
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConfigurationRisk(Long ConfigurationRisk) {
         this.ConfigurationRisk = ConfigurationRisk;
     }
 
     /**
-     * Get 网络攻击
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网络攻击 
      * @return Attack 网络攻击
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAttack() {
         return this.Attack;
@@ -419,19 +354,15 @@ public class DBAssetVO extends AbstractModel {
 
     /**
      * Set 网络攻击
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Attack 网络攻击
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAttack(Long Attack) {
         this.Attack = Attack;
     }
 
     /**
-     * Get 网络访问
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网络访问 
      * @return Access 网络访问
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAccess() {
         return this.Access;
@@ -439,19 +370,15 @@ public class DBAssetVO extends AbstractModel {
 
     /**
      * Set 网络访问
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Access 网络访问
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAccess(Long Access) {
         this.Access = Access;
     }
 
     /**
-     * Get 扫描任务
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 扫描任务 
      * @return ScanTask 扫描任务
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getScanTask() {
         return this.ScanTask;
@@ -459,19 +386,15 @@ public class DBAssetVO extends AbstractModel {
 
     /**
      * Set 扫描任务
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ScanTask 扫描任务
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScanTask(Long ScanTask) {
         this.ScanTask = ScanTask;
     }
 
     /**
-     * Get 用户appid
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户appid 
      * @return AppId 用户appid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAppId() {
         return this.AppId;
@@ -479,19 +402,15 @@ public class DBAssetVO extends AbstractModel {
 
     /**
      * Set 用户appid
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AppId 用户appid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get 用户uin
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户uin 
      * @return Uin 用户uin
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUin() {
         return this.Uin;
@@ -499,19 +418,15 @@ public class DBAssetVO extends AbstractModel {
 
     /**
      * Set 用户uin
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Uin 用户uin
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUin(String Uin) {
         this.Uin = Uin;
     }
 
     /**
-     * Get 昵称别名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 昵称别名 
      * @return NickName 昵称别名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNickName() {
         return this.NickName;
@@ -519,19 +434,15 @@ public class DBAssetVO extends AbstractModel {
 
     /**
      * Set 昵称别名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NickName 昵称别名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNickName(String NickName) {
         this.NickName = NickName;
     }
 
     /**
-     * Get 端口
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 端口 
      * @return Port 端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPort() {
         return this.Port;
@@ -539,19 +450,15 @@ public class DBAssetVO extends AbstractModel {
 
     /**
      * Set 端口
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Port 端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPort(Long Port) {
         this.Port = Port;
     }
 
     /**
-     * Get 标签
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标签 
      * @return Tag 标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Tag [] getTag() {
         return this.Tag;
@@ -559,19 +466,15 @@ public class DBAssetVO extends AbstractModel {
 
     /**
      * Set 标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tag 标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTag(Tag [] Tag) {
         this.Tag = Tag;
     }
 
     /**
-     * Get 内网ip
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 内网ip 
      * @return PrivateIp 内网ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPrivateIp() {
         return this.PrivateIp;
@@ -579,19 +482,15 @@ public class DBAssetVO extends AbstractModel {
 
     /**
      * Set 内网ip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PrivateIp 内网ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPrivateIp(String PrivateIp) {
         this.PrivateIp = PrivateIp;
     }
 
     /**
-     * Get 公网ip
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 公网ip 
      * @return PublicIp 公网ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPublicIp() {
         return this.PublicIp;
@@ -599,19 +498,15 @@ public class DBAssetVO extends AbstractModel {
 
     /**
      * Set 公网ip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PublicIp 公网ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPublicIp(String PublicIp) {
         this.PublicIp = PublicIp;
     }
 
     /**
-     * Get 状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 状态 
      * @return Status 状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
         return this.Status;
@@ -619,19 +514,15 @@ public class DBAssetVO extends AbstractModel {
 
     /**
      * Set 状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 是否核心
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否核心 
      * @return IsCore 是否核心
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsCore() {
         return this.IsCore;
@@ -639,19 +530,15 @@ public class DBAssetVO extends AbstractModel {
 
     /**
      * Set 是否核心
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsCore 是否核心
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsCore(Long IsCore) {
         this.IsCore = IsCore;
     }
 
     /**
-     * Get 是否新资产: 1新
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否新资产: 1新 
      * @return IsNewAsset 是否新资产: 1新
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsNewAsset() {
         return this.IsNewAsset;
@@ -659,9 +546,7 @@ public class DBAssetVO extends AbstractModel {
 
     /**
      * Set 是否新资产: 1新
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsNewAsset 是否新资产: 1新
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsNewAsset(Long IsNewAsset) {
         this.IsNewAsset = IsNewAsset;

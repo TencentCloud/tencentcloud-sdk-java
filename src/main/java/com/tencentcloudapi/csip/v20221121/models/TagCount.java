@@ -25,7 +25,6 @@ public class TagCount extends AbstractModel {
 
     /**
     * 产品名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -33,17 +32,14 @@ public class TagCount extends AbstractModel {
 
     /**
     * 日志条数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Count")
     @Expose
     private Long Count;
 
     /**
-     * Get 产品名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 产品名 
      * @return Name 产品名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -51,19 +47,15 @@ public class TagCount extends AbstractModel {
 
     /**
      * Set 产品名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 产品名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 日志条数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 日志条数 
      * @return Count 日志条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCount() {
         return this.Count;
@@ -71,9 +63,7 @@ public class TagCount extends AbstractModel {
 
     /**
      * Set 日志条数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Count 日志条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCount(Long Count) {
         this.Count = Count;

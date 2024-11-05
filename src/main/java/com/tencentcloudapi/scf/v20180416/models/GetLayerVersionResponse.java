@@ -52,7 +52,7 @@ public class GetLayerVersionResponse extends AbstractModel {
     private String AddTime;
 
     /**
-    * 版本的描述
+    * 版本的描述信息
     */
     @SerializedName("Description")
     @Expose
@@ -158,16 +158,16 @@ public class GetLayerVersionResponse extends AbstractModel {
     }
 
     /**
-     * Get 版本的描述 
-     * @return Description 版本的描述
+     * Get 版本的描述信息 
+     * @return Description 版本的描述信息
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 版本的描述
-     * @param Description 版本的描述
+     * Set 版本的描述信息
+     * @param Description 版本的描述信息
      */
     public void setDescription(String Description) {
         this.Description = Description;

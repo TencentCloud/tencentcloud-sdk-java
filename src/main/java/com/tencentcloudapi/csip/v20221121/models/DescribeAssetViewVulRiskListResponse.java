@@ -32,7 +32,6 @@ public class DescribeAssetViewVulRiskListResponse extends AbstractModel {
 
     /**
     * 资产视角的漏洞风险列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
     @Expose
@@ -75,7 +74,6 @@ public class DescribeAssetViewVulRiskListResponse extends AbstractModel {
 
     /**
     * tag枚举
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tags")
     @Expose
@@ -105,10 +103,8 @@ public class DescribeAssetViewVulRiskListResponse extends AbstractModel {
     }
 
     /**
-     * Get 资产视角的漏洞风险列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资产视角的漏洞风险列表 
      * @return Data 资产视角的漏洞风险列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AssetViewVULRiskData [] getData() {
         return this.Data;
@@ -116,9 +112,7 @@ public class DescribeAssetViewVulRiskListResponse extends AbstractModel {
 
     /**
      * Set 资产视角的漏洞风险列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Data 资产视角的漏洞风险列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(AssetViewVULRiskData [] Data) {
         this.Data = Data;
@@ -205,10 +199,8 @@ public class DescribeAssetViewVulRiskListResponse extends AbstractModel {
     }
 
     /**
-     * Get tag枚举
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get tag枚举 
      * @return Tags tag枚举
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public FilterDataObject [] getTags() {
         return this.Tags;
@@ -216,9 +208,7 @@ public class DescribeAssetViewVulRiskListResponse extends AbstractModel {
 
     /**
      * Set tag枚举
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tags tag枚举
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTags(FilterDataObject [] Tags) {
         this.Tags = Tags;

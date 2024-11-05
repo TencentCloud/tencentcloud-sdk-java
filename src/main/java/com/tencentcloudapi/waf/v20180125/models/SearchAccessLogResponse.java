@@ -47,7 +47,6 @@ public class SearchAccessLogResponse extends AbstractModel {
     /**
     * 如果Analysis为True，则返回分析结果的列名，否则为空
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ColNames")
     @Expose
@@ -64,7 +63,6 @@ public class SearchAccessLogResponse extends AbstractModel {
     /**
     * 日志分析结果；当Analysis为False时，可能返回为null
 注意：此字段可能返回 null，表示取不到有效值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AnalysisResults")
     @Expose
@@ -127,10 +125,8 @@ public class SearchAccessLogResponse extends AbstractModel {
 
     /**
      * Get 如果Analysis为True，则返回分析结果的列名，否则为空
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ColNames 如果Analysis为True，则返回分析结果的列名，否则为空
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      * @deprecated
      */
@@ -142,9 +138,7 @@ public class SearchAccessLogResponse extends AbstractModel {
     /**
      * Set 如果Analysis为True，则返回分析结果的列名，否则为空
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ColNames 如果Analysis为True，则返回分析结果的列名，否则为空
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      * @deprecated
      */
@@ -175,11 +169,9 @@ public class SearchAccessLogResponse extends AbstractModel {
 
     /**
      * Get 日志分析结果；当Analysis为False时，可能返回为null
-注意：此字段可能返回 null，表示取不到有效值
-注意：此字段可能返回 null，表示取不到有效值。 
+注意：此字段可能返回 null，表示取不到有效值 
      * @return AnalysisResults 日志分析结果；当Analysis为False时，可能返回为null
 注意：此字段可能返回 null，表示取不到有效值
-注意：此字段可能返回 null，表示取不到有效值。
      * @deprecated
      */
     @Deprecated
@@ -190,10 +182,8 @@ public class SearchAccessLogResponse extends AbstractModel {
     /**
      * Set 日志分析结果；当Analysis为False时，可能返回为null
 注意：此字段可能返回 null，表示取不到有效值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AnalysisResults 日志分析结果；当Analysis为False时，可能返回为null
 注意：此字段可能返回 null，表示取不到有效值
-注意：此字段可能返回 null，表示取不到有效值。
      * @deprecated
      */
     @Deprecated

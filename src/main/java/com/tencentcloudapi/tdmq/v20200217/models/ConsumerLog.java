@@ -38,7 +38,7 @@ public class ConsumerLog extends AbstractModel {
     private String ConsumerGroup;
 
     /**
-    * 消费组名称。
+    * 消费者名称。
     */
     @SerializedName("ConsumerName")
     @Expose
@@ -105,16 +105,16 @@ public class ConsumerLog extends AbstractModel {
     }
 
     /**
-     * Get 消费组名称。 
-     * @return ConsumerName 消费组名称。
+     * Get 消费者名称。 
+     * @return ConsumerName 消费者名称。
      */
     public String getConsumerName() {
         return this.ConsumerName;
     }
 
     /**
-     * Set 消费组名称。
-     * @param ConsumerName 消费组名称。
+     * Set 消费者名称。
+     * @param ConsumerName 消费者名称。
      */
     public void setConsumerName(String ConsumerName) {
         this.ConsumerName = ConsumerName;

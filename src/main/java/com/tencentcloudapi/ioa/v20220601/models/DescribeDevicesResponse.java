@@ -25,7 +25,6 @@ public class DescribeDevicesResponse extends AbstractModel {
 
     /**
     * 分页的data数据
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeDevicesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 分页的data数据
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分页的data数据 
      * @return Data 分页的data数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DescribeDevicesPageRsp getData() {
         return this.Data;
@@ -50,9 +47,7 @@ public class DescribeDevicesResponse extends AbstractModel {
 
     /**
      * Set 分页的data数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Data 分页的data数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(DescribeDevicesPageRsp Data) {
         this.Data = Data;

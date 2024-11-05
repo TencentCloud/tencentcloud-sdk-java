@@ -25,7 +25,6 @@ public class ListKeysResponse extends AbstractModel {
 
     /**
     * CMK列表数组
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Keys")
     @Expose
@@ -46,10 +45,8 @@ public class ListKeysResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get CMK列表数组
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get CMK列表数组 
      * @return Keys CMK列表数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Key [] getKeys() {
         return this.Keys;
@@ -57,9 +54,7 @@ public class ListKeysResponse extends AbstractModel {
 
     /**
      * Set CMK列表数组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Keys CMK列表数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKeys(Key [] Keys) {
         this.Keys = Keys;

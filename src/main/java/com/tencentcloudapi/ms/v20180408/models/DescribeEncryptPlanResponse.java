@@ -74,7 +74,6 @@ public class DescribeEncryptPlanResponse extends AbstractModel {
 
     /**
     * 上次加固策略
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AndroidPlan")
     @Expose
@@ -82,7 +81,6 @@ public class DescribeEncryptPlanResponse extends AbstractModel {
 
     /**
     * 上次小程序加固策略
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AppletPlan")
     @Expose
@@ -90,7 +88,6 @@ public class DescribeEncryptPlanResponse extends AbstractModel {
 
     /**
     * 上次ios源码混淆加固配置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IOSPlan")
     @Expose
@@ -98,7 +95,6 @@ public class DescribeEncryptPlanResponse extends AbstractModel {
 
     /**
     * 上次sdk加固配置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SDKPlan")
     @Expose
@@ -224,10 +220,8 @@ public class DescribeEncryptPlanResponse extends AbstractModel {
     }
 
     /**
-     * Get 上次加固策略
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 上次加固策略 
      * @return AndroidPlan 上次加固策略
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AndroidPlan getAndroidPlan() {
         return this.AndroidPlan;
@@ -235,19 +229,15 @@ public class DescribeEncryptPlanResponse extends AbstractModel {
 
     /**
      * Set 上次加固策略
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AndroidPlan 上次加固策略
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAndroidPlan(AndroidPlan AndroidPlan) {
         this.AndroidPlan = AndroidPlan;
     }
 
     /**
-     * Get 上次小程序加固策略
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 上次小程序加固策略 
      * @return AppletPlan 上次小程序加固策略
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AppletPlan getAppletPlan() {
         return this.AppletPlan;
@@ -255,19 +245,15 @@ public class DescribeEncryptPlanResponse extends AbstractModel {
 
     /**
      * Set 上次小程序加固策略
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AppletPlan 上次小程序加固策略
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAppletPlan(AppletPlan AppletPlan) {
         this.AppletPlan = AppletPlan;
     }
 
     /**
-     * Get 上次ios源码混淆加固配置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 上次ios源码混淆加固配置 
      * @return IOSPlan 上次ios源码混淆加固配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public IOSPlan getIOSPlan() {
         return this.IOSPlan;
@@ -275,19 +261,15 @@ public class DescribeEncryptPlanResponse extends AbstractModel {
 
     /**
      * Set 上次ios源码混淆加固配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IOSPlan 上次ios源码混淆加固配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIOSPlan(IOSPlan IOSPlan) {
         this.IOSPlan = IOSPlan;
     }
 
     /**
-     * Get 上次sdk加固配置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 上次sdk加固配置 
      * @return SDKPlan 上次sdk加固配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SDKPlan getSDKPlan() {
         return this.SDKPlan;
@@ -295,9 +277,7 @@ public class DescribeEncryptPlanResponse extends AbstractModel {
 
     /**
      * Set 上次sdk加固配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SDKPlan 上次sdk加固配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSDKPlan(SDKPlan SDKPlan) {
         this.SDKPlan = SDKPlan;

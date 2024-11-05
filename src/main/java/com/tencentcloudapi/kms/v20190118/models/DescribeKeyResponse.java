@@ -25,7 +25,6 @@ public class DescribeKeyResponse extends AbstractModel {
 
     /**
     * 密钥属性信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KeyMetadata")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeKeyResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 密钥属性信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 密钥属性信息 
      * @return KeyMetadata 密钥属性信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public KeyMetadata getKeyMetadata() {
         return this.KeyMetadata;
@@ -50,9 +47,7 @@ public class DescribeKeyResponse extends AbstractModel {
 
     /**
      * Set 密钥属性信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param KeyMetadata 密钥属性信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKeyMetadata(KeyMetadata KeyMetadata) {
         this.KeyMetadata = KeyMetadata;

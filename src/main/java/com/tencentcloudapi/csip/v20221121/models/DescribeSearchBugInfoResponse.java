@@ -25,7 +25,6 @@ public class DescribeSearchBugInfoResponse extends AbstractModel {
 
     /**
     * 漏洞信息和资产信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
     @Expose
@@ -53,10 +52,8 @@ public class DescribeSearchBugInfoResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 漏洞信息和资产信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 漏洞信息和资产信息 
      * @return Data 漏洞信息和资产信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DataSearchBug getData() {
         return this.Data;
@@ -64,9 +61,7 @@ public class DescribeSearchBugInfoResponse extends AbstractModel {
 
     /**
      * Set 漏洞信息和资产信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Data 漏洞信息和资产信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(DataSearchBug Data) {
         this.Data = Data;

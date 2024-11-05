@@ -66,6 +66,13 @@ public class CreateVerifyReportRequest extends AbstractModel {
     private String ApplyEmail;
 
     /**
+    * 证书用户身份及身份鉴别信息
+    */
+    @SerializedName("CertificateIdentityUsers")
+    @Expose
+    private CertificateIdentityUser [] CertificateIdentityUsers;
+
+    /**
      * Get 申请者类型 1:个人，2:企业 
      * @return ApplyCustomerType 申请者类型 1:个人，2:企业
      */
@@ -161,6 +168,22 @@ public class CreateVerifyReportRequest extends AbstractModel {
         this.ApplyEmail = ApplyEmail;
     }
 
+    /**
+     * Get 证书用户身份及身份鉴别信息 
+     * @return CertificateIdentityUsers 证书用户身份及身份鉴别信息
+     */
+    public CertificateIdentityUser [] getCertificateIdentityUsers() {
+        return this.CertificateIdentityUsers;
+    }
+
+    /**
+     * Set 证书用户身份及身份鉴别信息
+     * @param CertificateIdentityUsers 证书用户身份及身份鉴别信息
+     */
+    public void setCertificateIdentityUsers(CertificateIdentityUser [] CertificateIdentityUsers) {
+        this.CertificateIdentityUsers = CertificateIdentityUsers;
+    }
+
     public CreateVerifyReportRequest() {
     }
 
@@ -187,6 +210,12 @@ public class CreateVerifyReportRequest extends AbstractModel {
         if (source.ApplyEmail != null) {
             this.ApplyEmail = new String(source.ApplyEmail);
         }
+        if (source.CertificateIdentityUsers != null) {
+            this.CertificateIdentityUsers = new CertificateIdentityUser[source.CertificateIdentityUsers.length];
+            for (int i = 0; i < source.CertificateIdentityUsers.length; i++) {
+                this.CertificateIdentityUsers[i] = new CertificateIdentityUser(source.CertificateIdentityUsers[i]);
+            }
+        }
     }
 
 
@@ -200,6 +229,7 @@ public class CreateVerifyReportRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ApplyMobile", this.ApplyMobile);
         this.setParamSimple(map, prefix + "FileId", this.FileId);
         this.setParamSimple(map, prefix + "ApplyEmail", this.ApplyEmail);
+        this.setParamArrayObj(map, prefix + "CertificateIdentityUsers.", this.CertificateIdentityUsers);
 
     }
 }

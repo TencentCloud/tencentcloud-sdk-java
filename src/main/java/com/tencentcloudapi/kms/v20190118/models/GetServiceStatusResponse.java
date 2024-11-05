@@ -32,7 +32,6 @@ public class GetServiceStatusResponse extends AbstractModel {
 
     /**
     * 服务不可用类型： 0-未购买，1-正常， 2-欠费停服， 3-资源释放
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InvalidType")
     @Expose
@@ -47,7 +46,6 @@ public class GetServiceStatusResponse extends AbstractModel {
 
     /**
     * 旗舰版到期时间（Epoch Unix Timestamp）。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProExpireTime")
     @Expose
@@ -55,7 +53,6 @@ public class GetServiceStatusResponse extends AbstractModel {
 
     /**
     * 旗舰版是否自动续费：0-不自动续费，1-自动续费
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProRenewFlag")
     @Expose
@@ -63,7 +60,6 @@ public class GetServiceStatusResponse extends AbstractModel {
 
     /**
     * 旗舰版购买记录的唯一性标识。如果为开通旗舰版，则返回值为空
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProResourceId")
     @Expose
@@ -71,7 +67,6 @@ public class GetServiceStatusResponse extends AbstractModel {
 
     /**
     * 是否开通 KMS 托管版
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExclusiveVSMEnabled")
     @Expose
@@ -79,7 +74,6 @@ public class GetServiceStatusResponse extends AbstractModel {
 
     /**
     * 是否开通 KMS 独享版
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExclusiveHSMEnabled")
     @Expose
@@ -87,7 +81,6 @@ public class GetServiceStatusResponse extends AbstractModel {
 
     /**
     * KMS 订阅信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubscriptionInfo")
     @Expose
@@ -117,10 +110,8 @@ public class GetServiceStatusResponse extends AbstractModel {
     }
 
     /**
-     * Get 服务不可用类型： 0-未购买，1-正常， 2-欠费停服， 3-资源释放
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 服务不可用类型： 0-未购买，1-正常， 2-欠费停服， 3-资源释放 
      * @return InvalidType 服务不可用类型： 0-未购买，1-正常， 2-欠费停服， 3-资源释放
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getInvalidType() {
         return this.InvalidType;
@@ -128,9 +119,7 @@ public class GetServiceStatusResponse extends AbstractModel {
 
     /**
      * Set 服务不可用类型： 0-未购买，1-正常， 2-欠费停服， 3-资源释放
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InvalidType 服务不可用类型： 0-未购买，1-正常， 2-欠费停服， 3-资源释放
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInvalidType(Long InvalidType) {
         this.InvalidType = InvalidType;
@@ -153,10 +142,8 @@ public class GetServiceStatusResponse extends AbstractModel {
     }
 
     /**
-     * Get 旗舰版到期时间（Epoch Unix Timestamp）。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 旗舰版到期时间（Epoch Unix Timestamp）。 
      * @return ProExpireTime 旗舰版到期时间（Epoch Unix Timestamp）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getProExpireTime() {
         return this.ProExpireTime;
@@ -164,19 +151,15 @@ public class GetServiceStatusResponse extends AbstractModel {
 
     /**
      * Set 旗舰版到期时间（Epoch Unix Timestamp）。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProExpireTime 旗舰版到期时间（Epoch Unix Timestamp）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProExpireTime(Long ProExpireTime) {
         this.ProExpireTime = ProExpireTime;
     }
 
     /**
-     * Get 旗舰版是否自动续费：0-不自动续费，1-自动续费
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 旗舰版是否自动续费：0-不自动续费，1-自动续费 
      * @return ProRenewFlag 旗舰版是否自动续费：0-不自动续费，1-自动续费
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getProRenewFlag() {
         return this.ProRenewFlag;
@@ -184,19 +167,15 @@ public class GetServiceStatusResponse extends AbstractModel {
 
     /**
      * Set 旗舰版是否自动续费：0-不自动续费，1-自动续费
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProRenewFlag 旗舰版是否自动续费：0-不自动续费，1-自动续费
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProRenewFlag(Long ProRenewFlag) {
         this.ProRenewFlag = ProRenewFlag;
     }
 
     /**
-     * Get 旗舰版购买记录的唯一性标识。如果为开通旗舰版，则返回值为空
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 旗舰版购买记录的唯一性标识。如果为开通旗舰版，则返回值为空 
      * @return ProResourceId 旗舰版购买记录的唯一性标识。如果为开通旗舰版，则返回值为空
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProResourceId() {
         return this.ProResourceId;
@@ -204,19 +183,15 @@ public class GetServiceStatusResponse extends AbstractModel {
 
     /**
      * Set 旗舰版购买记录的唯一性标识。如果为开通旗舰版，则返回值为空
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProResourceId 旗舰版购买记录的唯一性标识。如果为开通旗舰版，则返回值为空
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProResourceId(String ProResourceId) {
         this.ProResourceId = ProResourceId;
     }
 
     /**
-     * Get 是否开通 KMS 托管版
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否开通 KMS 托管版 
      * @return ExclusiveVSMEnabled 是否开通 KMS 托管版
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getExclusiveVSMEnabled() {
         return this.ExclusiveVSMEnabled;
@@ -224,19 +199,15 @@ public class GetServiceStatusResponse extends AbstractModel {
 
     /**
      * Set 是否开通 KMS 托管版
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExclusiveVSMEnabled 是否开通 KMS 托管版
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExclusiveVSMEnabled(Boolean ExclusiveVSMEnabled) {
         this.ExclusiveVSMEnabled = ExclusiveVSMEnabled;
     }
 
     /**
-     * Get 是否开通 KMS 独享版
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否开通 KMS 独享版 
      * @return ExclusiveHSMEnabled 是否开通 KMS 独享版
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getExclusiveHSMEnabled() {
         return this.ExclusiveHSMEnabled;
@@ -244,19 +215,15 @@ public class GetServiceStatusResponse extends AbstractModel {
 
     /**
      * Set 是否开通 KMS 独享版
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExclusiveHSMEnabled 是否开通 KMS 独享版
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExclusiveHSMEnabled(Boolean ExclusiveHSMEnabled) {
         this.ExclusiveHSMEnabled = ExclusiveHSMEnabled;
     }
 
     /**
-     * Get KMS 订阅信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get KMS 订阅信息。 
      * @return SubscriptionInfo KMS 订阅信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubscriptionInfo() {
         return this.SubscriptionInfo;
@@ -264,9 +231,7 @@ public class GetServiceStatusResponse extends AbstractModel {
 
     /**
      * Set KMS 订阅信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubscriptionInfo KMS 订阅信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubscriptionInfo(String SubscriptionInfo) {
         this.SubscriptionInfo = SubscriptionInfo;

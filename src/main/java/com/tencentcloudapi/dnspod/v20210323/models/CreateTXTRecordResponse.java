@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.waf.v20180125.models;
+package com.tencentcloudapi.dnspod.v20210323.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,21 +21,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAntiFakeUrlResponse extends AbstractModel {
+public class CreateTXTRecordResponse extends AbstractModel {
 
     /**
-    * 总数
+    * 记录ID
     */
-    @SerializedName("Total")
+    @SerializedName("RecordId")
     @Expose
-    private String Total;
-
-    /**
-    * 信息
-    */
-    @SerializedName("List")
-    @Expose
-    private CacheUrlItem [] List;
+    private Long RecordId;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -45,35 +38,19 @@ public class DescribeAntiFakeUrlResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 总数 
-     * @return Total 总数
+     * Get 记录ID 
+     * @return RecordId 记录ID
      */
-    public String getTotal() {
-        return this.Total;
+    public Long getRecordId() {
+        return this.RecordId;
     }
 
     /**
-     * Set 总数
-     * @param Total 总数
+     * Set 记录ID
+     * @param RecordId 记录ID
      */
-    public void setTotal(String Total) {
-        this.Total = Total;
-    }
-
-    /**
-     * Get 信息 
-     * @return List 信息
-     */
-    public CacheUrlItem [] getList() {
-        return this.List;
-    }
-
-    /**
-     * Set 信息
-     * @param List 信息
-     */
-    public void setList(CacheUrlItem [] List) {
-        this.List = List;
+    public void setRecordId(Long RecordId) {
+        this.RecordId = RecordId;
     }
 
     /**
@@ -92,22 +69,16 @@ public class DescribeAntiFakeUrlResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public DescribeAntiFakeUrlResponse() {
+    public CreateTXTRecordResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeAntiFakeUrlResponse(DescribeAntiFakeUrlResponse source) {
-        if (source.Total != null) {
-            this.Total = new String(source.Total);
-        }
-        if (source.List != null) {
-            this.List = new CacheUrlItem[source.List.length];
-            for (int i = 0; i < source.List.length; i++) {
-                this.List[i] = new CacheUrlItem(source.List[i]);
-            }
+    public CreateTXTRecordResponse(CreateTXTRecordResponse source) {
+        if (source.RecordId != null) {
+            this.RecordId = new Long(source.RecordId);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -119,8 +90,7 @@ public class DescribeAntiFakeUrlResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Total", this.Total);
-        this.setParamArrayObj(map, prefix + "List.", this.List);
+        this.setParamSimple(map, prefix + "RecordId", this.RecordId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -25,7 +25,6 @@ public class DescribeCCRuleListResponse extends AbstractModel {
 
     /**
     * 查询到的CC规则的列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeCCRuleListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 查询到的CC规则的列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 查询到的CC规则的列表 
      * @return Data 查询到的CC规则的列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CCRuleLists getData() {
         return this.Data;
@@ -50,9 +47,7 @@ public class DescribeCCRuleListResponse extends AbstractModel {
 
     /**
      * Set 查询到的CC规则的列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Data 查询到的CC规则的列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(CCRuleLists Data) {
         this.Data = Data;

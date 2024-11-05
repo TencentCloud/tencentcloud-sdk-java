@@ -25,7 +25,6 @@ public class IOSResult extends AbstractModel {
 
     /**
     * 加固任务结果Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResultId")
     @Expose
@@ -33,7 +32,6 @@ public class IOSResult extends AbstractModel {
 
     /**
     * 用户uid
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OpUin")
     @Expose
@@ -41,7 +39,6 @@ public class IOSResult extends AbstractModel {
 
     /**
     * 加固类型，这里为ios
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EncryptType")
     @Expose
@@ -49,7 +46,6 @@ public class IOSResult extends AbstractModel {
 
     /**
     * 资源id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceId")
     @Expose
@@ -57,7 +53,6 @@ public class IOSResult extends AbstractModel {
 
     /**
     * 加固状态：0等待，1成功，2任务中，3失败，4重试中
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EncryptState")
     @Expose
@@ -65,7 +60,6 @@ public class IOSResult extends AbstractModel {
 
     /**
     * 业务错误码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EncryptErrno")
     @Expose
@@ -73,7 +67,6 @@ public class IOSResult extends AbstractModel {
 
     /**
     * 业务错误信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EncryptErrDesc")
     @Expose
@@ -81,7 +74,6 @@ public class IOSResult extends AbstractModel {
 
     /**
     * 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreatTime")
     @Expose
@@ -89,7 +81,6 @@ public class IOSResult extends AbstractModel {
 
     /**
     * 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartTime")
     @Expose
@@ -97,7 +88,6 @@ public class IOSResult extends AbstractModel {
 
     /**
     * 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndTime")
     @Expose
@@ -105,7 +95,6 @@ public class IOSResult extends AbstractModel {
 
     /**
     * 消耗时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CostTime")
     @Expose
@@ -113,17 +102,14 @@ public class IOSResult extends AbstractModel {
 
     /**
     * 加固（混淆）包结果url
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EncryptPkgUrl")
     @Expose
     private String EncryptPkgUrl;
 
     /**
-     * Get 加固任务结果Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 加固任务结果Id 
      * @return ResultId 加固任务结果Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResultId() {
         return this.ResultId;
@@ -131,19 +117,15 @@ public class IOSResult extends AbstractModel {
 
     /**
      * Set 加固任务结果Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResultId 加固任务结果Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResultId(String ResultId) {
         this.ResultId = ResultId;
     }
 
     /**
-     * Get 用户uid
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户uid 
      * @return OpUin 用户uid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getOpUin() {
         return this.OpUin;
@@ -151,19 +133,15 @@ public class IOSResult extends AbstractModel {
 
     /**
      * Set 用户uid
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OpUin 用户uid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOpUin(Long OpUin) {
         this.OpUin = OpUin;
     }
 
     /**
-     * Get 加固类型，这里为ios
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 加固类型，这里为ios 
      * @return EncryptType 加固类型，这里为ios
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEncryptType() {
         return this.EncryptType;
@@ -171,19 +149,15 @@ public class IOSResult extends AbstractModel {
 
     /**
      * Set 加固类型，这里为ios
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EncryptType 加固类型，这里为ios
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEncryptType(String EncryptType) {
         this.EncryptType = EncryptType;
     }
 
     /**
-     * Get 资源id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源id 
      * @return ResourceId 资源id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceId() {
         return this.ResourceId;
@@ -191,19 +165,15 @@ public class IOSResult extends AbstractModel {
 
     /**
      * Set 资源id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceId 资源id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
     }
 
     /**
-     * Get 加固状态：0等待，1成功，2任务中，3失败，4重试中
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 加固状态：0等待，1成功，2任务中，3失败，4重试中 
      * @return EncryptState 加固状态：0等待，1成功，2任务中，3失败，4重试中
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getEncryptState() {
         return this.EncryptState;
@@ -211,19 +181,15 @@ public class IOSResult extends AbstractModel {
 
     /**
      * Set 加固状态：0等待，1成功，2任务中，3失败，4重试中
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EncryptState 加固状态：0等待，1成功，2任务中，3失败，4重试中
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEncryptState(Long EncryptState) {
         this.EncryptState = EncryptState;
     }
 
     /**
-     * Get 业务错误码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 业务错误码 
      * @return EncryptErrno 业务错误码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getEncryptErrno() {
         return this.EncryptErrno;
@@ -231,19 +197,15 @@ public class IOSResult extends AbstractModel {
 
     /**
      * Set 业务错误码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EncryptErrno 业务错误码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEncryptErrno(Long EncryptErrno) {
         this.EncryptErrno = EncryptErrno;
     }
 
     /**
-     * Get 业务错误信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 业务错误信息 
      * @return EncryptErrDesc 业务错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEncryptErrDesc() {
         return this.EncryptErrDesc;
@@ -251,19 +213,15 @@ public class IOSResult extends AbstractModel {
 
     /**
      * Set 业务错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EncryptErrDesc 业务错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEncryptErrDesc(String EncryptErrDesc) {
         this.EncryptErrDesc = EncryptErrDesc;
     }
 
     /**
-     * Get 创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间 
      * @return CreatTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreatTime() {
         return this.CreatTime;
@@ -271,19 +229,15 @@ public class IOSResult extends AbstractModel {
 
     /**
      * Set 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreatTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreatTime(String CreatTime) {
         this.CreatTime = CreatTime;
     }
 
     /**
-     * Get 开始时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 开始时间 
      * @return StartTime 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStartTime() {
         return this.StartTime;
@@ -291,19 +245,15 @@ public class IOSResult extends AbstractModel {
 
     /**
      * Set 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StartTime 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 结束时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 结束时间 
      * @return EndTime 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEndTime() {
         return this.EndTime;
@@ -311,19 +261,15 @@ public class IOSResult extends AbstractModel {
 
     /**
      * Set 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EndTime 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 消耗时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 消耗时间 
      * @return CostTime 消耗时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCostTime() {
         return this.CostTime;
@@ -331,19 +277,15 @@ public class IOSResult extends AbstractModel {
 
     /**
      * Set 消耗时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CostTime 消耗时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCostTime(Long CostTime) {
         this.CostTime = CostTime;
     }
 
     /**
-     * Get 加固（混淆）包结果url
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 加固（混淆）包结果url 
      * @return EncryptPkgUrl 加固（混淆）包结果url
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEncryptPkgUrl() {
         return this.EncryptPkgUrl;
@@ -351,9 +293,7 @@ public class IOSResult extends AbstractModel {
 
     /**
      * Set 加固（混淆）包结果url
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EncryptPkgUrl 加固（混淆）包结果url
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEncryptPkgUrl(String EncryptPkgUrl) {
         this.EncryptPkgUrl = EncryptPkgUrl;

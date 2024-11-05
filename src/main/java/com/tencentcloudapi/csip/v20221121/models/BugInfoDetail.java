@@ -25,7 +25,6 @@ public class BugInfoDetail extends AbstractModel {
 
     /**
     * 漏洞编号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
     @Expose
@@ -33,7 +32,6 @@ public class BugInfoDetail extends AbstractModel {
 
     /**
     * 漏洞对应pocId
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PatchId")
     @Expose
@@ -41,7 +39,6 @@ public class BugInfoDetail extends AbstractModel {
 
     /**
     * 漏洞名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VULName")
     @Expose
@@ -49,7 +46,6 @@ public class BugInfoDetail extends AbstractModel {
 
     /**
     * 漏洞严重性：high,middle，low，info
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Level")
     @Expose
@@ -57,7 +53,6 @@ public class BugInfoDetail extends AbstractModel {
 
     /**
     * cvss评分
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CVSSScore")
     @Expose
@@ -65,7 +60,6 @@ public class BugInfoDetail extends AbstractModel {
 
     /**
     * cve编号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CVEId")
     @Expose
@@ -73,7 +67,6 @@ public class BugInfoDetail extends AbstractModel {
 
     /**
     * 漏洞标签
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tag")
     @Expose
@@ -81,7 +74,6 @@ public class BugInfoDetail extends AbstractModel {
 
     /**
     * 漏洞种类，1:web应用，2:系统组件漏洞，3:配置风险
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VULCategory")
     @Expose
@@ -89,7 +81,6 @@ public class BugInfoDetail extends AbstractModel {
 
     /**
     * 漏洞影响系统
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ImpactOs")
     @Expose
@@ -97,7 +88,6 @@ public class BugInfoDetail extends AbstractModel {
 
     /**
     * 漏洞影响组件
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ImpactCOMPENT")
     @Expose
@@ -105,7 +95,6 @@ public class BugInfoDetail extends AbstractModel {
 
     /**
     * 漏洞影响版本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ImpactVersion")
     @Expose
@@ -113,7 +102,6 @@ public class BugInfoDetail extends AbstractModel {
 
     /**
     * 链接
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Reference")
     @Expose
@@ -121,7 +109,6 @@ public class BugInfoDetail extends AbstractModel {
 
     /**
     * 漏洞描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VULDescribe")
     @Expose
@@ -129,7 +116,6 @@ public class BugInfoDetail extends AbstractModel {
 
     /**
     * 修复建议
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Fix")
     @Expose
@@ -137,7 +123,6 @@ public class BugInfoDetail extends AbstractModel {
 
     /**
     * 产品支持状态，实时返回
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProSupport")
     @Expose
@@ -145,7 +130,6 @@ public class BugInfoDetail extends AbstractModel {
 
     /**
     * 是否公开，0为未发布，1为发布
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsPublish")
     @Expose
@@ -153,7 +137,6 @@ public class BugInfoDetail extends AbstractModel {
 
     /**
     * 释放时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReleaseTime")
     @Expose
@@ -161,7 +144,6 @@ public class BugInfoDetail extends AbstractModel {
 
     /**
     * 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -169,7 +151,6 @@ public class BugInfoDetail extends AbstractModel {
 
     /**
     * 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -177,17 +158,14 @@ public class BugInfoDetail extends AbstractModel {
 
     /**
     * 漏洞子类别
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubCategory")
     @Expose
     private String SubCategory;
 
     /**
-     * Get 漏洞编号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 漏洞编号 
      * @return Id 漏洞编号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getId() {
         return this.Id;
@@ -195,19 +173,15 @@ public class BugInfoDetail extends AbstractModel {
 
     /**
      * Set 漏洞编号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Id 漏洞编号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 漏洞对应pocId
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 漏洞对应pocId 
      * @return PatchId 漏洞对应pocId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPatchId() {
         return this.PatchId;
@@ -215,19 +189,15 @@ public class BugInfoDetail extends AbstractModel {
 
     /**
      * Set 漏洞对应pocId
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PatchId 漏洞对应pocId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPatchId(String PatchId) {
         this.PatchId = PatchId;
     }
 
     /**
-     * Get 漏洞名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 漏洞名称 
      * @return VULName 漏洞名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVULName() {
         return this.VULName;
@@ -235,19 +205,15 @@ public class BugInfoDetail extends AbstractModel {
 
     /**
      * Set 漏洞名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VULName 漏洞名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVULName(String VULName) {
         this.VULName = VULName;
     }
 
     /**
-     * Get 漏洞严重性：high,middle，low，info
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 漏洞严重性：high,middle，low，info 
      * @return Level 漏洞严重性：high,middle，low，info
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLevel() {
         return this.Level;
@@ -255,19 +221,15 @@ public class BugInfoDetail extends AbstractModel {
 
     /**
      * Set 漏洞严重性：high,middle，low，info
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Level 漏洞严重性：high,middle，low，info
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLevel(String Level) {
         this.Level = Level;
     }
 
     /**
-     * Get cvss评分
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get cvss评分 
      * @return CVSSScore cvss评分
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCVSSScore() {
         return this.CVSSScore;
@@ -275,19 +237,15 @@ public class BugInfoDetail extends AbstractModel {
 
     /**
      * Set cvss评分
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CVSSScore cvss评分
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCVSSScore(String CVSSScore) {
         this.CVSSScore = CVSSScore;
     }
 
     /**
-     * Get cve编号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get cve编号 
      * @return CVEId cve编号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCVEId() {
         return this.CVEId;
@@ -295,19 +253,15 @@ public class BugInfoDetail extends AbstractModel {
 
     /**
      * Set cve编号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CVEId cve编号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCVEId(String CVEId) {
         this.CVEId = CVEId;
     }
 
     /**
-     * Get 漏洞标签
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 漏洞标签 
      * @return Tag 漏洞标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTag() {
         return this.Tag;
@@ -315,19 +269,15 @@ public class BugInfoDetail extends AbstractModel {
 
     /**
      * Set 漏洞标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tag 漏洞标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTag(String Tag) {
         this.Tag = Tag;
     }
 
     /**
-     * Get 漏洞种类，1:web应用，2:系统组件漏洞，3:配置风险
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 漏洞种类，1:web应用，2:系统组件漏洞，3:配置风险 
      * @return VULCategory 漏洞种类，1:web应用，2:系统组件漏洞，3:配置风险
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getVULCategory() {
         return this.VULCategory;
@@ -335,19 +285,15 @@ public class BugInfoDetail extends AbstractModel {
 
     /**
      * Set 漏洞种类，1:web应用，2:系统组件漏洞，3:配置风险
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VULCategory 漏洞种类，1:web应用，2:系统组件漏洞，3:配置风险
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVULCategory(Long VULCategory) {
         this.VULCategory = VULCategory;
     }
 
     /**
-     * Get 漏洞影响系统
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 漏洞影响系统 
      * @return ImpactOs 漏洞影响系统
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getImpactOs() {
         return this.ImpactOs;
@@ -355,19 +301,15 @@ public class BugInfoDetail extends AbstractModel {
 
     /**
      * Set 漏洞影响系统
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ImpactOs 漏洞影响系统
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setImpactOs(String ImpactOs) {
         this.ImpactOs = ImpactOs;
     }
 
     /**
-     * Get 漏洞影响组件
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 漏洞影响组件 
      * @return ImpactCOMPENT 漏洞影响组件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getImpactCOMPENT() {
         return this.ImpactCOMPENT;
@@ -375,19 +317,15 @@ public class BugInfoDetail extends AbstractModel {
 
     /**
      * Set 漏洞影响组件
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ImpactCOMPENT 漏洞影响组件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setImpactCOMPENT(String ImpactCOMPENT) {
         this.ImpactCOMPENT = ImpactCOMPENT;
     }
 
     /**
-     * Get 漏洞影响版本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 漏洞影响版本 
      * @return ImpactVersion 漏洞影响版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getImpactVersion() {
         return this.ImpactVersion;
@@ -395,19 +333,15 @@ public class BugInfoDetail extends AbstractModel {
 
     /**
      * Set 漏洞影响版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ImpactVersion 漏洞影响版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setImpactVersion(String ImpactVersion) {
         this.ImpactVersion = ImpactVersion;
     }
 
     /**
-     * Get 链接
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 链接 
      * @return Reference 链接
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getReference() {
         return this.Reference;
@@ -415,19 +349,15 @@ public class BugInfoDetail extends AbstractModel {
 
     /**
      * Set 链接
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Reference 链接
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReference(String Reference) {
         this.Reference = Reference;
     }
 
     /**
-     * Get 漏洞描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 漏洞描述 
      * @return VULDescribe 漏洞描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVULDescribe() {
         return this.VULDescribe;
@@ -435,19 +365,15 @@ public class BugInfoDetail extends AbstractModel {
 
     /**
      * Set 漏洞描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VULDescribe 漏洞描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVULDescribe(String VULDescribe) {
         this.VULDescribe = VULDescribe;
     }
 
     /**
-     * Get 修复建议
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 修复建议 
      * @return Fix 修复建议
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFix() {
         return this.Fix;
@@ -455,19 +381,15 @@ public class BugInfoDetail extends AbstractModel {
 
     /**
      * Set 修复建议
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Fix 修复建议
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFix(String Fix) {
         this.Fix = Fix;
     }
 
     /**
-     * Get 产品支持状态，实时返回
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 产品支持状态，实时返回 
      * @return ProSupport 产品支持状态，实时返回
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getProSupport() {
         return this.ProSupport;
@@ -475,19 +397,15 @@ public class BugInfoDetail extends AbstractModel {
 
     /**
      * Set 产品支持状态，实时返回
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProSupport 产品支持状态，实时返回
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProSupport(Long ProSupport) {
         this.ProSupport = ProSupport;
     }
 
     /**
-     * Get 是否公开，0为未发布，1为发布
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否公开，0为未发布，1为发布 
      * @return IsPublish 是否公开，0为未发布，1为发布
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsPublish() {
         return this.IsPublish;
@@ -495,19 +413,15 @@ public class BugInfoDetail extends AbstractModel {
 
     /**
      * Set 是否公开，0为未发布，1为发布
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsPublish 是否公开，0为未发布，1为发布
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsPublish(Long IsPublish) {
         this.IsPublish = IsPublish;
     }
 
     /**
-     * Get 释放时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 释放时间 
      * @return ReleaseTime 释放时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getReleaseTime() {
         return this.ReleaseTime;
@@ -515,19 +429,15 @@ public class BugInfoDetail extends AbstractModel {
 
     /**
      * Set 释放时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReleaseTime 释放时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReleaseTime(String ReleaseTime) {
         this.ReleaseTime = ReleaseTime;
     }
 
     /**
-     * Get 创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间 
      * @return CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -535,19 +445,15 @@ public class BugInfoDetail extends AbstractModel {
 
     /**
      * Set 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 更新时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 更新时间 
      * @return UpdateTime 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdateTime() {
         return this.UpdateTime;
@@ -555,19 +461,15 @@ public class BugInfoDetail extends AbstractModel {
 
     /**
      * Set 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdateTime 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get 漏洞子类别
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 漏洞子类别 
      * @return SubCategory 漏洞子类别
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubCategory() {
         return this.SubCategory;
@@ -575,9 +477,7 @@ public class BugInfoDetail extends AbstractModel {
 
     /**
      * Set 漏洞子类别
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubCategory 漏洞子类别
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubCategory(String SubCategory) {
         this.SubCategory = SubCategory;

@@ -380,32 +380,6 @@ public class WafClient extends AbstractClient{
     }
 
     /**
-     *废弃接口
-
-获取防篡改url
-     * @param req DescribeAntiFakeUrlRequest
-     * @return DescribeAntiFakeUrlResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeAntiFakeUrlResponse DescribeAntiFakeUrl(DescribeAntiFakeUrlRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeAntiFakeUrl", DescribeAntiFakeUrlResponse.class);
-    }
-
-    /**
-     *老接口已经不再使用。
-
-获取信息防泄漏规则列表
-     * @param req DescribeAntiInfoLeakRulesRequest
-     * @return DescribeAntiInfoLeakRulesResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeAntiInfoLeakRulesResponse DescribeAntiInfoLeakRules(DescribeAntiInfoLeakRulesRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeAntiInfoLeakRules", DescribeAntiInfoLeakRulesResponse.class);
-    }
-
-    /**
      *取得信息防泄漏规则列表
      * @param req DescribeAntiInfoLeakageRulesRequest
      * @return DescribeAntiInfoLeakageRulesResponse
@@ -854,6 +828,17 @@ public class WafClient extends AbstractClient{
     public DescribeRuleLimitResponse DescribeRuleLimit(DescribeRuleLimitRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeRuleLimit", DescribeRuleLimitResponse.class);
+    }
+
+    /**
+     *查询扫描ip
+     * @param req DescribeScanIpRequest
+     * @return DescribeScanIpResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeScanIpResponse DescribeScanIp(DescribeScanIpRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeScanIp", DescribeScanIpResponse.class);
     }
 
     /**
