@@ -160,7 +160,7 @@
 | nlp | [NLP 服务](https://cloud.tencent.com/document/product/271) | 2024-09-27 01:23:18 |
 | npp | [号码保护](https://cloud.tencent.com/document/product) | 2020-04-22 08:00:22 |
 | oceanus | [流计算 Oceanus](https://cloud.tencent.com/document/product/849) | 2024-11-05 02:01:14 |
-| ocr | [文字识别](https://cloud.tencent.com/document/product/866) | 2024-11-05 12:02:42 |
+| ocr | [文字识别](https://cloud.tencent.com/document/product/866) | 2024-10-31 01:56:58 |
 | omics | [腾讯健康组学平台](https://cloud.tencent.com/document/product/1643) | 2024-09-26 01:28:34 |
 | organization | [集团账号管理](https://cloud.tencent.com/document/product/850) | 2024-10-30 01:54:08 |
 | partners | [渠道合作伙伴](https://cloud.tencent.com/document/product/563) | 2024-10-24 01:27:39 |
