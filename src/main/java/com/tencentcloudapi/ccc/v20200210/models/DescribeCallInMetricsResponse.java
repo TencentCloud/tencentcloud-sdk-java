@@ -39,7 +39,6 @@ public class DescribeCallInMetricsResponse extends AbstractModel {
 
     /**
     * 线路维度指标
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NumberMetrics")
     @Expose
@@ -47,7 +46,6 @@ public class DescribeCallInMetricsResponse extends AbstractModel {
 
     /**
     * 技能组维度指标
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SkillGroupMetrics")
     @Expose
@@ -93,10 +91,8 @@ public class DescribeCallInMetricsResponse extends AbstractModel {
     }
 
     /**
-     * Get 线路维度指标
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 线路维度指标 
      * @return NumberMetrics 线路维度指标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CallInNumberMetrics [] getNumberMetrics() {
         return this.NumberMetrics;
@@ -104,19 +100,15 @@ public class DescribeCallInMetricsResponse extends AbstractModel {
 
     /**
      * Set 线路维度指标
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NumberMetrics 线路维度指标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNumberMetrics(CallInNumberMetrics [] NumberMetrics) {
         this.NumberMetrics = NumberMetrics;
     }
 
     /**
-     * Get 技能组维度指标
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 技能组维度指标 
      * @return SkillGroupMetrics 技能组维度指标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CallInSkillGroupMetrics [] getSkillGroupMetrics() {
         return this.SkillGroupMetrics;
@@ -124,9 +116,7 @@ public class DescribeCallInMetricsResponse extends AbstractModel {
 
     /**
      * Set 技能组维度指标
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SkillGroupMetrics 技能组维度指标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSkillGroupMetrics(CallInSkillGroupMetrics [] SkillGroupMetrics) {
         this.SkillGroupMetrics = SkillGroupMetrics;

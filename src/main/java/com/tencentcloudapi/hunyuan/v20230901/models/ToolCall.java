@@ -45,6 +45,13 @@ public class ToolCall extends AbstractModel {
     private ToolCallFunction Function;
 
     /**
+    * 索引值
+    */
+    @SerializedName("Index")
+    @Expose
+    private Long Index;
+
+    /**
      * Get 工具调用id 
      * @return Id 工具调用id
      */
@@ -92,6 +99,22 @@ public class ToolCall extends AbstractModel {
         this.Function = Function;
     }
 
+    /**
+     * Get 索引值 
+     * @return Index 索引值
+     */
+    public Long getIndex() {
+        return this.Index;
+    }
+
+    /**
+     * Set 索引值
+     * @param Index 索引值
+     */
+    public void setIndex(Long Index) {
+        this.Index = Index;
+    }
+
     public ToolCall() {
     }
 
@@ -109,6 +132,9 @@ public class ToolCall extends AbstractModel {
         if (source.Function != null) {
             this.Function = new ToolCallFunction(source.Function);
         }
+        if (source.Index != null) {
+            this.Index = new Long(source.Index);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class ToolCall extends AbstractModel {
         this.setParamSimple(map, prefix + "Id", this.Id);
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamObj(map, prefix + "Function.", this.Function);
+        this.setParamSimple(map, prefix + "Index", this.Index);
 
     }
 }

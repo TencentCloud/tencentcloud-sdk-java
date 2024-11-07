@@ -50,7 +50,7 @@ public class DescribeLocalAccountsRequest extends AbstractModel {
     private Long AccountGroupId;
 
     /**
-    * 是否仅展示当前目录下用户 1： 递归显示 2：仅显示当前目录下用户(只支持32位)
+    * 是否仅展示当前目录下用户 1： 递归显示 2：仅显示当前目录下用户
     */
     @SerializedName("ShowFlag")
     @Expose
@@ -137,16 +137,16 @@ public class DescribeLocalAccountsRequest extends AbstractModel {
     }
 
     /**
-     * Get 是否仅展示当前目录下用户 1： 递归显示 2：仅显示当前目录下用户(只支持32位) 
-     * @return ShowFlag 是否仅展示当前目录下用户 1： 递归显示 2：仅显示当前目录下用户(只支持32位)
+     * Get 是否仅展示当前目录下用户 1： 递归显示 2：仅显示当前目录下用户 
+     * @return ShowFlag 是否仅展示当前目录下用户 1： 递归显示 2：仅显示当前目录下用户
      */
     public Long getShowFlag() {
         return this.ShowFlag;
     }
 
     /**
-     * Set 是否仅展示当前目录下用户 1： 递归显示 2：仅显示当前目录下用户(只支持32位)
-     * @param ShowFlag 是否仅展示当前目录下用户 1： 递归显示 2：仅显示当前目录下用户(只支持32位)
+     * Set 是否仅展示当前目录下用户 1： 递归显示 2：仅显示当前目录下用户
+     * @param ShowFlag 是否仅展示当前目录下用户 1： 递归显示 2：仅显示当前目录下用户
      */
     public void setShowFlag(Long ShowFlag) {
         this.ShowFlag = ShowFlag;

@@ -94,7 +94,7 @@ public class ListDevicesRequest extends AbstractModel {
     private Long PageNumber;
 
     /**
-    * 每页数量，默认为20。
+    * 每页数量，默认为20，单页最大10000条
     */
     @SerializedName("PageSize")
     @Expose
@@ -261,16 +261,16 @@ public class ListDevicesRequest extends AbstractModel {
     }
 
     /**
-     * Get 每页数量，默认为20。 
-     * @return PageSize 每页数量，默认为20。
+     * Get 每页数量，默认为20，单页最大10000条 
+     * @return PageSize 每页数量，默认为20，单页最大10000条
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set 每页数量，默认为20。
-     * @param PageSize 每页数量，默认为20。
+     * Set 每页数量，默认为20，单页最大10000条
+     * @param PageSize 每页数量，默认为20，单页最大10000条
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;

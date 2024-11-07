@@ -25,7 +25,6 @@ public class DescribeTelRecordAsrResponse extends AbstractModel {
 
     /**
     * 录音转文本信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AsrDataList")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeTelRecordAsrResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 录音转文本信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 录音转文本信息 
      * @return AsrDataList 录音转文本信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AsrData [] getAsrDataList() {
         return this.AsrDataList;
@@ -50,9 +47,7 @@ public class DescribeTelRecordAsrResponse extends AbstractModel {
 
     /**
      * Set 录音转文本信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AsrDataList 录音转文本信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAsrDataList(AsrData [] AsrDataList) {
         this.AsrDataList = AsrDataList;

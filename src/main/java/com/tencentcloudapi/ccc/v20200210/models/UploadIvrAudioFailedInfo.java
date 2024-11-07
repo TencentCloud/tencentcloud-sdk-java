@@ -25,7 +25,6 @@ public class UploadIvrAudioFailedInfo extends AbstractModel {
 
     /**
     * 文件名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileName")
     @Expose
@@ -33,17 +32,14 @@ public class UploadIvrAudioFailedInfo extends AbstractModel {
 
     /**
     * 失败原因
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FailedMsg")
     @Expose
     private String FailedMsg;
 
     /**
-     * Get 文件名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文件名 
      * @return FileName 文件名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFileName() {
         return this.FileName;
@@ -51,19 +47,15 @@ public class UploadIvrAudioFailedInfo extends AbstractModel {
 
     /**
      * Set 文件名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FileName 文件名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileName(String FileName) {
         this.FileName = FileName;
     }
 
     /**
-     * Get 失败原因
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 失败原因 
      * @return FailedMsg 失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFailedMsg() {
         return this.FailedMsg;
@@ -71,9 +63,7 @@ public class UploadIvrAudioFailedInfo extends AbstractModel {
 
     /**
      * Set 失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FailedMsg 失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFailedMsg(String FailedMsg) {
         this.FailedMsg = FailedMsg;

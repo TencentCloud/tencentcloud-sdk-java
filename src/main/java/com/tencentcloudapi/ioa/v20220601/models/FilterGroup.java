@@ -25,17 +25,14 @@ public class FilterGroup extends AbstractModel {
 
     /**
     * Filters 条件过滤
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-     * Get Filters 条件过滤
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Filters 条件过滤 
      * @return Filters Filters 条件过滤
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Filter [] getFilters() {
         return this.Filters;
@@ -43,9 +40,7 @@ public class FilterGroup extends AbstractModel {
 
     /**
      * Set Filters 条件过滤
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Filters Filters 条件过滤
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

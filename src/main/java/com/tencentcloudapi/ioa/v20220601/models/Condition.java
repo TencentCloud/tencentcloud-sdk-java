@@ -25,7 +25,6 @@ public class Condition extends AbstractModel {
 
     /**
     * Filters 条件过滤
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Filters")
     @Expose
@@ -33,7 +32,6 @@ public class Condition extends AbstractModel {
 
     /**
     * FilterGroups 条件过滤组
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FilterGroups")
     @Expose
@@ -41,7 +39,6 @@ public class Condition extends AbstractModel {
 
     /**
     * Sort 排序字段
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Sort")
     @Expose
@@ -49,7 +46,6 @@ public class Condition extends AbstractModel {
 
     /**
     * PageSize 每页获取数(只支持32位)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PageSize")
     @Expose
@@ -57,17 +53,14 @@ public class Condition extends AbstractModel {
 
     /**
     * PageNum 获取第几页(只支持32位)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PageNum")
     @Expose
     private Long PageNum;
 
     /**
-     * Get Filters 条件过滤
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Filters 条件过滤 
      * @return Filters Filters 条件过滤
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Filter [] getFilters() {
         return this.Filters;
@@ -75,19 +68,15 @@ public class Condition extends AbstractModel {
 
     /**
      * Set Filters 条件过滤
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Filters Filters 条件过滤
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get FilterGroups 条件过滤组
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get FilterGroups 条件过滤组 
      * @return FilterGroups FilterGroups 条件过滤组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public FilterGroup [] getFilterGroups() {
         return this.FilterGroups;
@@ -95,19 +84,15 @@ public class Condition extends AbstractModel {
 
     /**
      * Set FilterGroups 条件过滤组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FilterGroups FilterGroups 条件过滤组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFilterGroups(FilterGroup [] FilterGroups) {
         this.FilterGroups = FilterGroups;
     }
 
     /**
-     * Get Sort 排序字段
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Sort 排序字段 
      * @return Sort Sort 排序字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Sort getSort() {
         return this.Sort;
@@ -115,19 +100,15 @@ public class Condition extends AbstractModel {
 
     /**
      * Set Sort 排序字段
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Sort Sort 排序字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSort(Sort Sort) {
         this.Sort = Sort;
     }
 
     /**
-     * Get PageSize 每页获取数(只支持32位)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get PageSize 每页获取数(只支持32位) 
      * @return PageSize PageSize 每页获取数(只支持32位)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPageSize() {
         return this.PageSize;
@@ -135,19 +116,15 @@ public class Condition extends AbstractModel {
 
     /**
      * Set PageSize 每页获取数(只支持32位)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PageSize PageSize 每页获取数(只支持32位)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
     }
 
     /**
-     * Get PageNum 获取第几页(只支持32位)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get PageNum 获取第几页(只支持32位) 
      * @return PageNum PageNum 获取第几页(只支持32位)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPageNum() {
         return this.PageNum;
@@ -155,9 +132,7 @@ public class Condition extends AbstractModel {
 
     /**
      * Set PageNum 获取第几页(只支持32位)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PageNum PageNum 获取第几页(只支持32位)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPageNum(Long PageNum) {
         this.PageNum = PageNum;

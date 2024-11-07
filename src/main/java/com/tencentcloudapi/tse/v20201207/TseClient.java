@@ -820,6 +820,17 @@ public class TseClient extends AbstractClient{
     }
 
     /**
+     *查看实例的标签信息
+     * @param req DescribeInstanceTagInfosRequest
+     * @return DescribeInstanceTagInfosResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceTagInfosResponse DescribeInstanceTagInfos(DescribeInstanceTagInfosRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeInstanceTagInfos", DescribeInstanceTagInfosResponse.class);
+    }
+
+    /**
      *查询Nacos类型引擎实例副本信息
      * @param req DescribeNacosReplicasRequest
      * @return DescribeNacosReplicasResponse

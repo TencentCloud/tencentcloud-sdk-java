@@ -25,7 +25,6 @@ public class Sort extends AbstractModel {
 
     /**
     * 排序字段
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Field")
     @Expose
@@ -33,17 +32,14 @@ public class Sort extends AbstractModel {
 
     /**
     * 排序方式
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Order")
     @Expose
     private String Order;
 
     /**
-     * Get 排序字段
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 排序字段 
      * @return Field 排序字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getField() {
         return this.Field;
@@ -51,19 +47,15 @@ public class Sort extends AbstractModel {
 
     /**
      * Set 排序字段
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Field 排序字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setField(String Field) {
         this.Field = Field;
     }
 
     /**
-     * Get 排序方式
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 排序方式 
      * @return Order 排序方式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOrder() {
         return this.Order;
@@ -71,9 +63,7 @@ public class Sort extends AbstractModel {
 
     /**
      * Set 排序方式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Order 排序方式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOrder(String Order) {
         this.Order = Order;

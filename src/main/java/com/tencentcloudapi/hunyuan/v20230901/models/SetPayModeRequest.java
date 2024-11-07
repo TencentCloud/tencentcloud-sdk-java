@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class SetPayModeRequest extends AbstractModel {
 
     /**
-    * 设置后付费状态，0：后付费；1：预付费
+    * 设置后付费状态，0：后付费打开；1：后付费关闭
     */
     @SerializedName("PayMode")
     @Expose
     private Long PayMode;
 
     /**
-     * Get 设置后付费状态，0：后付费；1：预付费 
-     * @return PayMode 设置后付费状态，0：后付费；1：预付费
+     * Get 设置后付费状态，0：后付费打开；1：后付费关闭 
+     * @return PayMode 设置后付费状态，0：后付费打开；1：后付费关闭
      */
     public Long getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set 设置后付费状态，0：后付费；1：预付费
-     * @param PayMode 设置后付费状态，0：后付费；1：预付费
+     * Set 设置后付费状态，0：后付费打开；1：后付费关闭
+     * @param PayMode 设置后付费状态，0：后付费打开；1：后付费关闭
      */
     public void setPayMode(Long PayMode) {
         this.PayMode = PayMode;
