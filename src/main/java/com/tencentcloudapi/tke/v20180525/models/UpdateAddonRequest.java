@@ -38,18 +38,25 @@ public class UpdateAddonRequest extends AbstractModel {
     private String AddonName;
 
     /**
-    * addon版本（不传默认不更新）
+    * addon版本（不传默认不更新，不传AddonVersion时RawValues必传）
     */
     @SerializedName("AddonVersion")
     @Expose
     private String AddonVersion;
 
     /**
-    * addon的参数，是一个json格式的base64转码后的字符串（addon参数由DescribeAddonValues获取）
+    * addon的参数，是一个json格式的base64转码后的字符串（addon参数由DescribeAddonValues获取，不传RawValues时AddonVersion必传））
     */
     @SerializedName("RawValues")
     @Expose
     private String RawValues;
+
+    /**
+    * addon参数的更新策略，支持replace和merge两种策略，默认值为merge，兼容旧版本API。replace：使用新RawValues全量替换addon原RawValues，merge：根据新RawValues新增或更新addon原RawValues中对应参数。
+    */
+    @SerializedName("UpdateStrategy")
+    @Expose
+    private String UpdateStrategy;
 
     /**
      * Get 集群ID 
@@ -84,35 +91,51 @@ public class UpdateAddonRequest extends AbstractModel {
     }
 
     /**
-     * Get addon版本（不传默认不更新） 
-     * @return AddonVersion addon版本（不传默认不更新）
+     * Get addon版本（不传默认不更新，不传AddonVersion时RawValues必传） 
+     * @return AddonVersion addon版本（不传默认不更新，不传AddonVersion时RawValues必传）
      */
     public String getAddonVersion() {
         return this.AddonVersion;
     }
 
     /**
-     * Set addon版本（不传默认不更新）
-     * @param AddonVersion addon版本（不传默认不更新）
+     * Set addon版本（不传默认不更新，不传AddonVersion时RawValues必传）
+     * @param AddonVersion addon版本（不传默认不更新，不传AddonVersion时RawValues必传）
      */
     public void setAddonVersion(String AddonVersion) {
         this.AddonVersion = AddonVersion;
     }
 
     /**
-     * Get addon的参数，是一个json格式的base64转码后的字符串（addon参数由DescribeAddonValues获取） 
-     * @return RawValues addon的参数，是一个json格式的base64转码后的字符串（addon参数由DescribeAddonValues获取）
+     * Get addon的参数，是一个json格式的base64转码后的字符串（addon参数由DescribeAddonValues获取，不传RawValues时AddonVersion必传）） 
+     * @return RawValues addon的参数，是一个json格式的base64转码后的字符串（addon参数由DescribeAddonValues获取，不传RawValues时AddonVersion必传））
      */
     public String getRawValues() {
         return this.RawValues;
     }
 
     /**
-     * Set addon的参数，是一个json格式的base64转码后的字符串（addon参数由DescribeAddonValues获取）
-     * @param RawValues addon的参数，是一个json格式的base64转码后的字符串（addon参数由DescribeAddonValues获取）
+     * Set addon的参数，是一个json格式的base64转码后的字符串（addon参数由DescribeAddonValues获取，不传RawValues时AddonVersion必传））
+     * @param RawValues addon的参数，是一个json格式的base64转码后的字符串（addon参数由DescribeAddonValues获取，不传RawValues时AddonVersion必传））
      */
     public void setRawValues(String RawValues) {
         this.RawValues = RawValues;
+    }
+
+    /**
+     * Get addon参数的更新策略，支持replace和merge两种策略，默认值为merge，兼容旧版本API。replace：使用新RawValues全量替换addon原RawValues，merge：根据新RawValues新增或更新addon原RawValues中对应参数。 
+     * @return UpdateStrategy addon参数的更新策略，支持replace和merge两种策略，默认值为merge，兼容旧版本API。replace：使用新RawValues全量替换addon原RawValues，merge：根据新RawValues新增或更新addon原RawValues中对应参数。
+     */
+    public String getUpdateStrategy() {
+        return this.UpdateStrategy;
+    }
+
+    /**
+     * Set addon参数的更新策略，支持replace和merge两种策略，默认值为merge，兼容旧版本API。replace：使用新RawValues全量替换addon原RawValues，merge：根据新RawValues新增或更新addon原RawValues中对应参数。
+     * @param UpdateStrategy addon参数的更新策略，支持replace和merge两种策略，默认值为merge，兼容旧版本API。replace：使用新RawValues全量替换addon原RawValues，merge：根据新RawValues新增或更新addon原RawValues中对应参数。
+     */
+    public void setUpdateStrategy(String UpdateStrategy) {
+        this.UpdateStrategy = UpdateStrategy;
     }
 
     public UpdateAddonRequest() {
@@ -135,6 +158,9 @@ public class UpdateAddonRequest extends AbstractModel {
         if (source.RawValues != null) {
             this.RawValues = new String(source.RawValues);
         }
+        if (source.UpdateStrategy != null) {
+            this.UpdateStrategy = new String(source.UpdateStrategy);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class UpdateAddonRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "AddonName", this.AddonName);
         this.setParamSimple(map, prefix + "AddonVersion", this.AddonVersion);
         this.setParamSimple(map, prefix + "RawValues", this.RawValues);
+        this.setParamSimple(map, prefix + "UpdateStrategy", this.UpdateStrategy);
 
     }
 }

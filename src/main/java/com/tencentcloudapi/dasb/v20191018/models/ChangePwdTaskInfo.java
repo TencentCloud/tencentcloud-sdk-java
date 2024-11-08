@@ -25,7 +25,6 @@ public class ChangePwdTaskInfo extends AbstractModel {
 
     /**
     * id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
     @Expose
@@ -40,7 +39,6 @@ public class ChangePwdTaskInfo extends AbstractModel {
 
     /**
     * 任务名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskName")
     @Expose
@@ -48,7 +46,6 @@ public class ChangePwdTaskInfo extends AbstractModel {
 
     /**
     * 所属部门信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Department")
     @Expose
@@ -56,7 +53,6 @@ public class ChangePwdTaskInfo extends AbstractModel {
 
     /**
     * 改密方式。1：使用执行账号。2：修改自身密码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ChangeMethod")
     @Expose
@@ -64,7 +60,6 @@ public class ChangePwdTaskInfo extends AbstractModel {
 
     /**
     * 执行账号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RunAccount")
     @Expose
@@ -72,7 +67,6 @@ public class ChangePwdTaskInfo extends AbstractModel {
 
     /**
     * 密码生成策略
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AuthGenerationStrategy")
     @Expose
@@ -80,7 +74,6 @@ public class ChangePwdTaskInfo extends AbstractModel {
 
     /**
     * 密码长度
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PasswordLength")
     @Expose
@@ -88,7 +81,6 @@ public class ChangePwdTaskInfo extends AbstractModel {
 
     /**
     * 包含小写字母
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SmallLetter")
     @Expose
@@ -96,7 +88,6 @@ public class ChangePwdTaskInfo extends AbstractModel {
 
     /**
     * 包含大写字母
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BigLetter")
     @Expose
@@ -104,7 +95,6 @@ public class ChangePwdTaskInfo extends AbstractModel {
 
     /**
     * 包含数字
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Digit")
     @Expose
@@ -112,7 +102,6 @@ public class ChangePwdTaskInfo extends AbstractModel {
 
     /**
     * 包含的特殊字符，base64
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Symbol")
     @Expose
@@ -120,7 +109,6 @@ public class ChangePwdTaskInfo extends AbstractModel {
 
     /**
     * 改密完成通知。0-通知，1-不通知
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CompleteNotify")
     @Expose
@@ -128,7 +116,6 @@ public class ChangePwdTaskInfo extends AbstractModel {
 
     /**
     * 通知人邮箱
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NotifyEmails")
     @Expose
@@ -136,7 +123,6 @@ public class ChangePwdTaskInfo extends AbstractModel {
 
     /**
     * 加密附件密码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FilePassword")
     @Expose
@@ -144,7 +130,6 @@ public class ChangePwdTaskInfo extends AbstractModel {
 
     /**
     * 需要改密的账户
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AccountSet")
     @Expose
@@ -152,7 +137,6 @@ public class ChangePwdTaskInfo extends AbstractModel {
 
     /**
     * 需要改密的主机
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeviceSet")
     @Expose
@@ -160,7 +144,6 @@ public class ChangePwdTaskInfo extends AbstractModel {
 
     /**
     * 任务类型：4手动，5自动
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -168,7 +151,6 @@ public class ChangePwdTaskInfo extends AbstractModel {
 
     /**
     * 周期
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Period")
     @Expose
@@ -176,7 +158,6 @@ public class ChangePwdTaskInfo extends AbstractModel {
 
     /**
     * 首次执行时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FirstTime")
     @Expose
@@ -184,17 +165,14 @@ public class ChangePwdTaskInfo extends AbstractModel {
 
     /**
     * 下次执行时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NextTime")
     @Expose
     private String NextTime;
 
     /**
-     * Get id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get id 
      * @return Id id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getId() {
         return this.Id;
@@ -202,9 +180,7 @@ public class ChangePwdTaskInfo extends AbstractModel {
 
     /**
      * Set id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Id id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(Long Id) {
         this.Id = Id;
@@ -227,10 +203,8 @@ public class ChangePwdTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 任务名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务名 
      * @return TaskName 任务名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskName() {
         return this.TaskName;
@@ -238,19 +212,15 @@ public class ChangePwdTaskInfo extends AbstractModel {
 
     /**
      * Set 任务名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskName 任务名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskName(String TaskName) {
         this.TaskName = TaskName;
     }
 
     /**
-     * Get 所属部门信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 所属部门信息 
      * @return Department 所属部门信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Department getDepartment() {
         return this.Department;
@@ -258,19 +228,15 @@ public class ChangePwdTaskInfo extends AbstractModel {
 
     /**
      * Set 所属部门信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Department 所属部门信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDepartment(Department Department) {
         this.Department = Department;
     }
 
     /**
-     * Get 改密方式。1：使用执行账号。2：修改自身密码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 改密方式。1：使用执行账号。2：修改自身密码 
      * @return ChangeMethod 改密方式。1：使用执行账号。2：修改自身密码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getChangeMethod() {
         return this.ChangeMethod;
@@ -278,19 +244,15 @@ public class ChangePwdTaskInfo extends AbstractModel {
 
     /**
      * Set 改密方式。1：使用执行账号。2：修改自身密码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ChangeMethod 改密方式。1：使用执行账号。2：修改自身密码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setChangeMethod(Long ChangeMethod) {
         this.ChangeMethod = ChangeMethod;
     }
 
     /**
-     * Get 执行账号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 执行账号 
      * @return RunAccount 执行账号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRunAccount() {
         return this.RunAccount;
@@ -298,19 +260,15 @@ public class ChangePwdTaskInfo extends AbstractModel {
 
     /**
      * Set 执行账号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RunAccount 执行账号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRunAccount(String RunAccount) {
         this.RunAccount = RunAccount;
     }
 
     /**
-     * Get 密码生成策略
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 密码生成策略 
      * @return AuthGenerationStrategy 密码生成策略
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAuthGenerationStrategy() {
         return this.AuthGenerationStrategy;
@@ -318,19 +276,15 @@ public class ChangePwdTaskInfo extends AbstractModel {
 
     /**
      * Set 密码生成策略
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AuthGenerationStrategy 密码生成策略
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAuthGenerationStrategy(Long AuthGenerationStrategy) {
         this.AuthGenerationStrategy = AuthGenerationStrategy;
     }
 
     /**
-     * Get 密码长度
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 密码长度 
      * @return PasswordLength 密码长度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPasswordLength() {
         return this.PasswordLength;
@@ -338,19 +292,15 @@ public class ChangePwdTaskInfo extends AbstractModel {
 
     /**
      * Set 密码长度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PasswordLength 密码长度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPasswordLength(Long PasswordLength) {
         this.PasswordLength = PasswordLength;
     }
 
     /**
-     * Get 包含小写字母
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 包含小写字母 
      * @return SmallLetter 包含小写字母
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSmallLetter() {
         return this.SmallLetter;
@@ -358,19 +308,15 @@ public class ChangePwdTaskInfo extends AbstractModel {
 
     /**
      * Set 包含小写字母
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SmallLetter 包含小写字母
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSmallLetter(Long SmallLetter) {
         this.SmallLetter = SmallLetter;
     }
 
     /**
-     * Get 包含大写字母
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 包含大写字母 
      * @return BigLetter 包含大写字母
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBigLetter() {
         return this.BigLetter;
@@ -378,19 +324,15 @@ public class ChangePwdTaskInfo extends AbstractModel {
 
     /**
      * Set 包含大写字母
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BigLetter 包含大写字母
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBigLetter(Long BigLetter) {
         this.BigLetter = BigLetter;
     }
 
     /**
-     * Get 包含数字
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 包含数字 
      * @return Digit 包含数字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDigit() {
         return this.Digit;
@@ -398,19 +340,15 @@ public class ChangePwdTaskInfo extends AbstractModel {
 
     /**
      * Set 包含数字
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Digit 包含数字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDigit(Long Digit) {
         this.Digit = Digit;
     }
 
     /**
-     * Get 包含的特殊字符，base64
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 包含的特殊字符，base64 
      * @return Symbol 包含的特殊字符，base64
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSymbol() {
         return this.Symbol;
@@ -418,19 +356,15 @@ public class ChangePwdTaskInfo extends AbstractModel {
 
     /**
      * Set 包含的特殊字符，base64
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Symbol 包含的特殊字符，base64
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSymbol(String Symbol) {
         this.Symbol = Symbol;
     }
 
     /**
-     * Get 改密完成通知。0-通知，1-不通知
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 改密完成通知。0-通知，1-不通知 
      * @return CompleteNotify 改密完成通知。0-通知，1-不通知
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCompleteNotify() {
         return this.CompleteNotify;
@@ -438,19 +372,15 @@ public class ChangePwdTaskInfo extends AbstractModel {
 
     /**
      * Set 改密完成通知。0-通知，1-不通知
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CompleteNotify 改密完成通知。0-通知，1-不通知
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCompleteNotify(Long CompleteNotify) {
         this.CompleteNotify = CompleteNotify;
     }
 
     /**
-     * Get 通知人邮箱
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 通知人邮箱 
      * @return NotifyEmails 通知人邮箱
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getNotifyEmails() {
         return this.NotifyEmails;
@@ -458,19 +388,15 @@ public class ChangePwdTaskInfo extends AbstractModel {
 
     /**
      * Set 通知人邮箱
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NotifyEmails 通知人邮箱
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNotifyEmails(String [] NotifyEmails) {
         this.NotifyEmails = NotifyEmails;
     }
 
     /**
-     * Get 加密附件密码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 加密附件密码 
      * @return FilePassword 加密附件密码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFilePassword() {
         return this.FilePassword;
@@ -478,19 +404,15 @@ public class ChangePwdTaskInfo extends AbstractModel {
 
     /**
      * Set 加密附件密码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FilePassword 加密附件密码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFilePassword(String FilePassword) {
         this.FilePassword = FilePassword;
     }
 
     /**
-     * Get 需要改密的账户
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 需要改密的账户 
      * @return AccountSet 需要改密的账户
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getAccountSet() {
         return this.AccountSet;
@@ -498,19 +420,15 @@ public class ChangePwdTaskInfo extends AbstractModel {
 
     /**
      * Set 需要改密的账户
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AccountSet 需要改密的账户
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAccountSet(String [] AccountSet) {
         this.AccountSet = AccountSet;
     }
 
     /**
-     * Get 需要改密的主机
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 需要改密的主机 
      * @return DeviceSet 需要改密的主机
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Device [] getDeviceSet() {
         return this.DeviceSet;
@@ -518,19 +436,15 @@ public class ChangePwdTaskInfo extends AbstractModel {
 
     /**
      * Set 需要改密的主机
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeviceSet 需要改密的主机
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeviceSet(Device [] DeviceSet) {
         this.DeviceSet = DeviceSet;
     }
 
     /**
-     * Get 任务类型：4手动，5自动
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务类型：4手动，5自动 
      * @return Type 任务类型：4手动，5自动
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getType() {
         return this.Type;
@@ -538,19 +452,15 @@ public class ChangePwdTaskInfo extends AbstractModel {
 
     /**
      * Set 任务类型：4手动，5自动
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 任务类型：4手动，5自动
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(Long Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 周期
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 周期 
      * @return Period 周期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPeriod() {
         return this.Period;
@@ -558,19 +468,15 @@ public class ChangePwdTaskInfo extends AbstractModel {
 
     /**
      * Set 周期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Period 周期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPeriod(Long Period) {
         this.Period = Period;
     }
 
     /**
-     * Get 首次执行时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 首次执行时间 
      * @return FirstTime 首次执行时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFirstTime() {
         return this.FirstTime;
@@ -578,19 +484,15 @@ public class ChangePwdTaskInfo extends AbstractModel {
 
     /**
      * Set 首次执行时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FirstTime 首次执行时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFirstTime(String FirstTime) {
         this.FirstTime = FirstTime;
     }
 
     /**
-     * Get 下次执行时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 下次执行时间 
      * @return NextTime 下次执行时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNextTime() {
         return this.NextTime;
@@ -598,9 +500,7 @@ public class ChangePwdTaskInfo extends AbstractModel {
 
     /**
      * Set 下次执行时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NextTime 下次执行时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNextTime(String NextTime) {
         this.NextTime = NextTime;

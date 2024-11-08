@@ -149,7 +149,7 @@ public class CloudauditClient extends AbstractClient{
     }
 
     /**
-     *查询云审计支持的cmq的可用区
+     *查询操作审计支持的cmq的可用区
      * @param req ListCmqEnableRegionRequest
      * @return ListCmqEnableRegionResponse
      * @throws TencentCloudSDKException
@@ -160,7 +160,7 @@ public class CloudauditClient extends AbstractClient{
     }
 
     /**
-     *查询云审计支持的cos可用区
+     *查询操作审计支持的cos可用区
      * @param req ListCosEnableRegionRequest
      * @return ListCosEnableRegionResponse
      * @throws TencentCloudSDKException

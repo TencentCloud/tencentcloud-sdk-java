@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ListCmqEnableRegionResponse extends AbstractModel {
 
     /**
-    * 云审计支持的cmq的可用区
+    * 操作审计支持的cmq的可用区
     */
     @SerializedName("EnableRegions")
     @Expose
@@ -38,16 +38,16 @@ public class ListCmqEnableRegionResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 云审计支持的cmq的可用区 
-     * @return EnableRegions 云审计支持的cmq的可用区
+     * Get 操作审计支持的cmq的可用区 
+     * @return EnableRegions 操作审计支持的cmq的可用区
      */
     public CmqRegionInfo [] getEnableRegions() {
         return this.EnableRegions;
     }
 
     /**
-     * Set 云审计支持的cmq的可用区
-     * @param EnableRegions 云审计支持的cmq的可用区
+     * Set 操作审计支持的cmq的可用区
+     * @param EnableRegions 操作审计支持的cmq的可用区
      */
     public void setEnableRegions(CmqRegionInfo [] EnableRegions) {
         this.EnableRegions = EnableRegions;

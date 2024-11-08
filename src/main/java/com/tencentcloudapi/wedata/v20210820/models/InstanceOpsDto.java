@@ -520,6 +520,22 @@ public class InstanceOpsDto extends AbstractModel {
     private InstanceOpsDto [] CirculateInstanceList;
 
     /**
+    * 并发策略, 0: 等待并发, 1: kill自身
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ConcurrentStrategy")
+    @Expose
+    private Long ConcurrentStrategy;
+
+    /**
+    * 调度运行方式, 0: 周期调度, 1: 空跑调度
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ScheduleRunType")
+    @Expose
+    private Long ScheduleRunType;
+
+    /**
      * Get 任务ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TaskId 任务ID
@@ -1759,6 +1775,46 @@ public class InstanceOpsDto extends AbstractModel {
         this.CirculateInstanceList = CirculateInstanceList;
     }
 
+    /**
+     * Get 并发策略, 0: 等待并发, 1: kill自身
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ConcurrentStrategy 并发策略, 0: 等待并发, 1: kill自身
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getConcurrentStrategy() {
+        return this.ConcurrentStrategy;
+    }
+
+    /**
+     * Set 并发策略, 0: 等待并发, 1: kill自身
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ConcurrentStrategy 并发策略, 0: 等待并发, 1: kill自身
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setConcurrentStrategy(Long ConcurrentStrategy) {
+        this.ConcurrentStrategy = ConcurrentStrategy;
+    }
+
+    /**
+     * Get 调度运行方式, 0: 周期调度, 1: 空跑调度
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ScheduleRunType 调度运行方式, 0: 周期调度, 1: 空跑调度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getScheduleRunType() {
+        return this.ScheduleRunType;
+    }
+
+    /**
+     * Set 调度运行方式, 0: 周期调度, 1: 空跑调度
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ScheduleRunType 调度运行方式, 0: 周期调度, 1: 空跑调度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setScheduleRunType(Long ScheduleRunType) {
+        this.ScheduleRunType = ScheduleRunType;
+    }
+
     public InstanceOpsDto() {
     }
 
@@ -1962,6 +2018,12 @@ public class InstanceOpsDto extends AbstractModel {
                 this.CirculateInstanceList[i] = new InstanceOpsDto(source.CirculateInstanceList[i]);
             }
         }
+        if (source.ConcurrentStrategy != null) {
+            this.ConcurrentStrategy = new Long(source.ConcurrentStrategy);
+        }
+        if (source.ScheduleRunType != null) {
+            this.ScheduleRunType = new Long(source.ScheduleRunType);
+        }
     }
 
 
@@ -2031,6 +2093,8 @@ public class InstanceOpsDto extends AbstractModel {
         this.setParamSimple(map, prefix + "RetryAttempts", this.RetryAttempts);
         this.setParamArraySimple(map, prefix + "DeletedFatherList.", this.DeletedFatherList);
         this.setParamArrayObj(map, prefix + "CirculateInstanceList.", this.CirculateInstanceList);
+        this.setParamSimple(map, prefix + "ConcurrentStrategy", this.ConcurrentStrategy);
+        this.setParamSimple(map, prefix + "ScheduleRunType", this.ScheduleRunType);
 
     }
 }

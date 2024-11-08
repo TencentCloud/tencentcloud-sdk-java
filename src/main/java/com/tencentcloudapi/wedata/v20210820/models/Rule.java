@@ -408,6 +408,22 @@ public class Rule extends AbstractModel {
     private String TargetSchemaName;
 
     /**
+    * 项目id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProjectId")
+    @Expose
+    private String ProjectId;
+
+    /**
+    * 项目名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProjectName")
+    @Expose
+    private String ProjectName;
+
+    /**
      * Get 规则ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return RuleId 规则ID
@@ -1367,6 +1383,46 @@ public class Rule extends AbstractModel {
         this.TargetSchemaName = TargetSchemaName;
     }
 
+    /**
+     * Get 项目id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProjectId 项目id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getProjectId() {
+        return this.ProjectId;
+    }
+
+    /**
+     * Set 项目id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProjectId 项目id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProjectId(String ProjectId) {
+        this.ProjectId = ProjectId;
+    }
+
+    /**
+     * Get 项目名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProjectName 项目名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getProjectName() {
+        return this.ProjectName;
+    }
+
+    /**
+     * Set 项目名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProjectName 项目名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProjectName(String ProjectName) {
+        this.ProjectName = ProjectName;
+    }
+
     public Rule() {
     }
 
@@ -1522,6 +1578,12 @@ public class Rule extends AbstractModel {
         if (source.TargetSchemaName != null) {
             this.TargetSchemaName = new String(source.TargetSchemaName);
         }
+        if (source.ProjectId != null) {
+            this.ProjectId = new String(source.ProjectId);
+        }
+        if (source.ProjectName != null) {
+            this.ProjectName = new String(source.ProjectName);
+        }
     }
 
 
@@ -1577,6 +1639,8 @@ public class Rule extends AbstractModel {
         this.setParamSimple(map, prefix + "DatasourceType", this.DatasourceType);
         this.setParamSimple(map, prefix + "SchemaName", this.SchemaName);
         this.setParamSimple(map, prefix + "TargetSchemaName", this.TargetSchemaName);
+        this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
+        this.setParamSimple(map, prefix + "ProjectName", this.ProjectName);
 
     }
 }

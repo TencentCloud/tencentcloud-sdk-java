@@ -252,6 +252,14 @@ public class OrganizationalFunction extends AbstractModel {
     private String EnvType;
 
     /**
+    * 函数资源文件类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FunctionResourceFileType")
+    @Expose
+    private String FunctionResourceFileType;
+
+    /**
      * Get 名称 
      * @return Name 名称
      */
@@ -815,6 +823,26 @@ public class OrganizationalFunction extends AbstractModel {
         this.EnvType = EnvType;
     }
 
+    /**
+     * Get 函数资源文件类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FunctionResourceFileType 函数资源文件类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getFunctionResourceFileType() {
+        return this.FunctionResourceFileType;
+    }
+
+    /**
+     * Set 函数资源文件类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FunctionResourceFileType 函数资源文件类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFunctionResourceFileType(String FunctionResourceFileType) {
+        this.FunctionResourceFileType = FunctionResourceFileType;
+    }
+
     public OrganizationalFunction() {
     }
 
@@ -925,6 +953,9 @@ public class OrganizationalFunction extends AbstractModel {
         if (source.EnvType != null) {
             this.EnvType = new String(source.EnvType);
         }
+        if (source.FunctionResourceFileType != null) {
+            this.FunctionResourceFileType = new String(source.FunctionResourceFileType);
+        }
     }
 
 
@@ -961,6 +992,7 @@ public class OrganizationalFunction extends AbstractModel {
         this.setParamArraySimple(map, prefix + "OperatorUserIdsStr.", this.OperatorUserIdsStr);
         this.setParamArraySimple(map, prefix + "OwnerUserIdsStr.", this.OwnerUserIdsStr);
         this.setParamSimple(map, prefix + "EnvType", this.EnvType);
+        this.setParamSimple(map, prefix + "FunctionResourceFileType", this.FunctionResourceFileType);
 
     }
 }

@@ -25,16 +25,16 @@ public class IdCardOCRVerificationResponse extends AbstractModel {
 
     /**
     * 认证结果码，收费情况如下。
-收费结果码：
-0: 姓名和身份证号一致
--1: 姓名和身份证号不一致
-不收费结果码：
--2: 非法身份证号（长度、校验位等不正确）
--3: 非法姓名（长度、格式等不正确）
--4: 证件库服务异常
--5: 证件库中无此身份证记录
--6: 权威比对系统升级中，请稍后再试
--7: 认证次数超过当日限制
+- 收费结果码：
+0: 姓名和身份证号一致。
+-1: 姓名和身份证号不一致。
+- 不收费结果码：
+-2: 非法身份证号（长度、校验位等不正确）。
+-3: 非法姓名（长度、格式等不正确）。
+-4: 证件库服务异常。
+-5: 证件库中无此身份证记录。
+-6: 权威比对系统升级中，请稍后再试。
+-7: 认证次数超过当日限制。
     */
     @SerializedName("Result")
     @Expose
@@ -48,21 +48,21 @@ public class IdCardOCRVerificationResponse extends AbstractModel {
     private String Description;
 
     /**
-    * 用于验证的姓名
+    * 用于验证的姓名。
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 用于验证的身份证号
+    * 用于验证的身份证号。
     */
     @SerializedName("IdCard")
     @Expose
     private String IdCard;
 
     /**
-    * OCR得到的性别
+    * OCR得到的性别。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Sex")
@@ -70,7 +70,7 @@ public class IdCardOCRVerificationResponse extends AbstractModel {
     private String Sex;
 
     /**
-    * OCR得到的民族
+    * OCR得到的民族。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Nation")
@@ -78,7 +78,7 @@ public class IdCardOCRVerificationResponse extends AbstractModel {
     private String Nation;
 
     /**
-    * OCR得到的生日
+    * OCR得到的生日。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Birth")
@@ -86,7 +86,7 @@ public class IdCardOCRVerificationResponse extends AbstractModel {
     private String Birth;
 
     /**
-    * OCR得到的地址
+    * OCR得到的地址。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Address")
@@ -102,27 +102,27 @@ public class IdCardOCRVerificationResponse extends AbstractModel {
 
     /**
      * Get 认证结果码，收费情况如下。
-收费结果码：
-0: 姓名和身份证号一致
--1: 姓名和身份证号不一致
-不收费结果码：
--2: 非法身份证号（长度、校验位等不正确）
--3: 非法姓名（长度、格式等不正确）
--4: 证件库服务异常
--5: 证件库中无此身份证记录
--6: 权威比对系统升级中，请稍后再试
--7: 认证次数超过当日限制 
+- 收费结果码：
+0: 姓名和身份证号一致。
+-1: 姓名和身份证号不一致。
+- 不收费结果码：
+-2: 非法身份证号（长度、校验位等不正确）。
+-3: 非法姓名（长度、格式等不正确）。
+-4: 证件库服务异常。
+-5: 证件库中无此身份证记录。
+-6: 权威比对系统升级中，请稍后再试。
+-7: 认证次数超过当日限制。 
      * @return Result 认证结果码，收费情况如下。
-收费结果码：
-0: 姓名和身份证号一致
--1: 姓名和身份证号不一致
-不收费结果码：
--2: 非法身份证号（长度、校验位等不正确）
--3: 非法姓名（长度、格式等不正确）
--4: 证件库服务异常
--5: 证件库中无此身份证记录
--6: 权威比对系统升级中，请稍后再试
--7: 认证次数超过当日限制
+- 收费结果码：
+0: 姓名和身份证号一致。
+-1: 姓名和身份证号不一致。
+- 不收费结果码：
+-2: 非法身份证号（长度、校验位等不正确）。
+-3: 非法姓名（长度、格式等不正确）。
+-4: 证件库服务异常。
+-5: 证件库中无此身份证记录。
+-6: 权威比对系统升级中，请稍后再试。
+-7: 认证次数超过当日限制。
      */
     public String getResult() {
         return this.Result;
@@ -130,27 +130,27 @@ public class IdCardOCRVerificationResponse extends AbstractModel {
 
     /**
      * Set 认证结果码，收费情况如下。
-收费结果码：
-0: 姓名和身份证号一致
--1: 姓名和身份证号不一致
-不收费结果码：
--2: 非法身份证号（长度、校验位等不正确）
--3: 非法姓名（长度、格式等不正确）
--4: 证件库服务异常
--5: 证件库中无此身份证记录
--6: 权威比对系统升级中，请稍后再试
--7: 认证次数超过当日限制
+- 收费结果码：
+0: 姓名和身份证号一致。
+-1: 姓名和身份证号不一致。
+- 不收费结果码：
+-2: 非法身份证号（长度、校验位等不正确）。
+-3: 非法姓名（长度、格式等不正确）。
+-4: 证件库服务异常。
+-5: 证件库中无此身份证记录。
+-6: 权威比对系统升级中，请稍后再试。
+-7: 认证次数超过当日限制。
      * @param Result 认证结果码，收费情况如下。
-收费结果码：
-0: 姓名和身份证号一致
--1: 姓名和身份证号不一致
-不收费结果码：
--2: 非法身份证号（长度、校验位等不正确）
--3: 非法姓名（长度、格式等不正确）
--4: 证件库服务异常
--5: 证件库中无此身份证记录
--6: 权威比对系统升级中，请稍后再试
--7: 认证次数超过当日限制
+- 收费结果码：
+0: 姓名和身份证号一致。
+-1: 姓名和身份证号不一致。
+- 不收费结果码：
+-2: 非法身份证号（长度、校验位等不正确）。
+-3: 非法姓名（长度、格式等不正确）。
+-4: 证件库服务异常。
+-5: 证件库中无此身份证记录。
+-6: 权威比对系统升级中，请稍后再试。
+-7: 认证次数超过当日限制。
      */
     public void setResult(String Result) {
         this.Result = Result;
@@ -173,41 +173,41 @@ public class IdCardOCRVerificationResponse extends AbstractModel {
     }
 
     /**
-     * Get 用于验证的姓名 
-     * @return Name 用于验证的姓名
+     * Get 用于验证的姓名。 
+     * @return Name 用于验证的姓名。
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 用于验证的姓名
-     * @param Name 用于验证的姓名
+     * Set 用于验证的姓名。
+     * @param Name 用于验证的姓名。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 用于验证的身份证号 
-     * @return IdCard 用于验证的身份证号
+     * Get 用于验证的身份证号。 
+     * @return IdCard 用于验证的身份证号。
      */
     public String getIdCard() {
         return this.IdCard;
     }
 
     /**
-     * Set 用于验证的身份证号
-     * @param IdCard 用于验证的身份证号
+     * Set 用于验证的身份证号。
+     * @param IdCard 用于验证的身份证号。
      */
     public void setIdCard(String IdCard) {
         this.IdCard = IdCard;
     }
 
     /**
-     * Get OCR得到的性别
+     * Get OCR得到的性别。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Sex OCR得到的性别
+     * @return Sex OCR得到的性别。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSex() {
@@ -215,9 +215,9 @@ public class IdCardOCRVerificationResponse extends AbstractModel {
     }
 
     /**
-     * Set OCR得到的性别
+     * Set OCR得到的性别。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Sex OCR得到的性别
+     * @param Sex OCR得到的性别。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSex(String Sex) {
@@ -225,9 +225,9 @@ public class IdCardOCRVerificationResponse extends AbstractModel {
     }
 
     /**
-     * Get OCR得到的民族
+     * Get OCR得到的民族。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Nation OCR得到的民族
+     * @return Nation OCR得到的民族。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNation() {
@@ -235,9 +235,9 @@ public class IdCardOCRVerificationResponse extends AbstractModel {
     }
 
     /**
-     * Set OCR得到的民族
+     * Set OCR得到的民族。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Nation OCR得到的民族
+     * @param Nation OCR得到的民族。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNation(String Nation) {
@@ -245,9 +245,9 @@ public class IdCardOCRVerificationResponse extends AbstractModel {
     }
 
     /**
-     * Get OCR得到的生日
+     * Get OCR得到的生日。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Birth OCR得到的生日
+     * @return Birth OCR得到的生日。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBirth() {
@@ -255,9 +255,9 @@ public class IdCardOCRVerificationResponse extends AbstractModel {
     }
 
     /**
-     * Set OCR得到的生日
+     * Set OCR得到的生日。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Birth OCR得到的生日
+     * @param Birth OCR得到的生日。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBirth(String Birth) {
@@ -265,9 +265,9 @@ public class IdCardOCRVerificationResponse extends AbstractModel {
     }
 
     /**
-     * Get OCR得到的地址
+     * Get OCR得到的地址。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Address OCR得到的地址
+     * @return Address OCR得到的地址。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAddress() {
@@ -275,9 +275,9 @@ public class IdCardOCRVerificationResponse extends AbstractModel {
     }
 
     /**
-     * Set OCR得到的地址
+     * Set OCR得到的地址。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Address OCR得到的地址
+     * @param Address OCR得到的地址。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAddress(String Address) {

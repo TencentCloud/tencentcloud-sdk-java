@@ -24,49 +24,49 @@ import java.util.HashMap;
 public class LoginActionFlag extends AbstractModel {
 
     /**
-    * 手机
+    * 0: 非安全手机校验 1: 安全手机校验。
     */
     @SerializedName("Phone")
     @Expose
     private Long Phone;
 
     /**
-    * 硬token
+    * 0: 非硬token校验 1: 硬token校验。
     */
     @SerializedName("Token")
     @Expose
     private Long Token;
 
     /**
-    * 软token
+    * 0: 非软token校验 1: 软token校验
     */
     @SerializedName("Stoken")
     @Expose
     private Long Stoken;
 
     /**
-    * 微信
+    * 0: 非微信校验 1: 微信校验
     */
     @SerializedName("Wechat")
     @Expose
     private Long Wechat;
 
     /**
-    * 自定义
+    * 0: 非自定义校验 1: 自定义校验
     */
     @SerializedName("Custom")
     @Expose
     private Long Custom;
 
     /**
-    * 邮箱
+    * 0: 非邮箱校验 1: 邮箱校验
     */
     @SerializedName("Mail")
     @Expose
     private Long Mail;
 
     /**
-    * u2f硬件token
+    * 0: 非u2f硬件token 1: u2f硬件token
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("U2FToken")
@@ -74,105 +74,105 @@ public class LoginActionFlag extends AbstractModel {
     private Long U2FToken;
 
     /**
-     * Get 手机 
-     * @return Phone 手机
+     * Get 0: 非安全手机校验 1: 安全手机校验。 
+     * @return Phone 0: 非安全手机校验 1: 安全手机校验。
      */
     public Long getPhone() {
         return this.Phone;
     }
 
     /**
-     * Set 手机
-     * @param Phone 手机
+     * Set 0: 非安全手机校验 1: 安全手机校验。
+     * @param Phone 0: 非安全手机校验 1: 安全手机校验。
      */
     public void setPhone(Long Phone) {
         this.Phone = Phone;
     }
 
     /**
-     * Get 硬token 
-     * @return Token 硬token
+     * Get 0: 非硬token校验 1: 硬token校验。 
+     * @return Token 0: 非硬token校验 1: 硬token校验。
      */
     public Long getToken() {
         return this.Token;
     }
 
     /**
-     * Set 硬token
-     * @param Token 硬token
+     * Set 0: 非硬token校验 1: 硬token校验。
+     * @param Token 0: 非硬token校验 1: 硬token校验。
      */
     public void setToken(Long Token) {
         this.Token = Token;
     }
 
     /**
-     * Get 软token 
-     * @return Stoken 软token
+     * Get 0: 非软token校验 1: 软token校验 
+     * @return Stoken 0: 非软token校验 1: 软token校验
      */
     public Long getStoken() {
         return this.Stoken;
     }
 
     /**
-     * Set 软token
-     * @param Stoken 软token
+     * Set 0: 非软token校验 1: 软token校验
+     * @param Stoken 0: 非软token校验 1: 软token校验
      */
     public void setStoken(Long Stoken) {
         this.Stoken = Stoken;
     }
 
     /**
-     * Get 微信 
-     * @return Wechat 微信
+     * Get 0: 非微信校验 1: 微信校验 
+     * @return Wechat 0: 非微信校验 1: 微信校验
      */
     public Long getWechat() {
         return this.Wechat;
     }
 
     /**
-     * Set 微信
-     * @param Wechat 微信
+     * Set 0: 非微信校验 1: 微信校验
+     * @param Wechat 0: 非微信校验 1: 微信校验
      */
     public void setWechat(Long Wechat) {
         this.Wechat = Wechat;
     }
 
     /**
-     * Get 自定义 
-     * @return Custom 自定义
+     * Get 0: 非自定义校验 1: 自定义校验 
+     * @return Custom 0: 非自定义校验 1: 自定义校验
      */
     public Long getCustom() {
         return this.Custom;
     }
 
     /**
-     * Set 自定义
-     * @param Custom 自定义
+     * Set 0: 非自定义校验 1: 自定义校验
+     * @param Custom 0: 非自定义校验 1: 自定义校验
      */
     public void setCustom(Long Custom) {
         this.Custom = Custom;
     }
 
     /**
-     * Get 邮箱 
-     * @return Mail 邮箱
+     * Get 0: 非邮箱校验 1: 邮箱校验 
+     * @return Mail 0: 非邮箱校验 1: 邮箱校验
      */
     public Long getMail() {
         return this.Mail;
     }
 
     /**
-     * Set 邮箱
-     * @param Mail 邮箱
+     * Set 0: 非邮箱校验 1: 邮箱校验
+     * @param Mail 0: 非邮箱校验 1: 邮箱校验
      */
     public void setMail(Long Mail) {
         this.Mail = Mail;
     }
 
     /**
-     * Get u2f硬件token
+     * Get 0: 非u2f硬件token 1: u2f硬件token
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return U2FToken u2f硬件token
+     * @return U2FToken 0: 非u2f硬件token 1: u2f硬件token
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getU2FToken() {
@@ -180,9 +180,9 @@ public class LoginActionFlag extends AbstractModel {
     }
 
     /**
-     * Set u2f硬件token
+     * Set 0: 非u2f硬件token 1: u2f硬件token
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param U2FToken u2f硬件token
+     * @param U2FToken 0: 非u2f硬件token 1: u2f硬件token
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setU2FToken(Long U2FToken) {

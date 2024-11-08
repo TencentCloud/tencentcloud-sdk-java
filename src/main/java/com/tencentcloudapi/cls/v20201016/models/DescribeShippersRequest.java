@@ -24,11 +24,21 @@ import java.util.HashMap;
 public class DescribeShippersRequest extends AbstractModel {
 
     /**
-    * - shipperName：按照【投递规则名称】进行过滤。类型：String。必选：否
-- shipperId：按照【投递规则ID】进行过滤。类型：String。必选：否
-- topicId：按照【日志主题】进行过滤。类型：String。必选：否
+    * - shipperName：按照【投递规则名称】进行过滤。
+    类型：String。
+    必选：否
+- shipperId：按照【投递规则ID】进行过滤。
+    类型：String。
+    必选：否
+- topicId：按照【日志主题】进行过滤。
+    类型：String。
+    必选：否
+- taskStatus
+按照【任务运行状态】进行过滤。 支持`0`：停止，`1`：运行中，`2`：异常
+类型：String
+必选：否
 
-每次请求的Filters的上限为10，Filter.Values的上限为5。
+每次请求的Filters的上限为10，Filter.Values的上限为10。
     */
     @SerializedName("Filters")
     @Expose
@@ -56,32 +66,72 @@ public class DescribeShippersRequest extends AbstractModel {
     private Long PreciseSearch;
 
     /**
-     * Get - shipperName：按照【投递规则名称】进行过滤。类型：String。必选：否
-- shipperId：按照【投递规则ID】进行过滤。类型：String。必选：否
-- topicId：按照【日志主题】进行过滤。类型：String。必选：否
+     * Get - shipperName：按照【投递规则名称】进行过滤。
+    类型：String。
+    必选：否
+- shipperId：按照【投递规则ID】进行过滤。
+    类型：String。
+    必选：否
+- topicId：按照【日志主题】进行过滤。
+    类型：String。
+    必选：否
+- taskStatus
+按照【任务运行状态】进行过滤。 支持`0`：停止，`1`：运行中，`2`：异常
+类型：String
+必选：否
 
-每次请求的Filters的上限为10，Filter.Values的上限为5。 
-     * @return Filters - shipperName：按照【投递规则名称】进行过滤。类型：String。必选：否
-- shipperId：按照【投递规则ID】进行过滤。类型：String。必选：否
-- topicId：按照【日志主题】进行过滤。类型：String。必选：否
+每次请求的Filters的上限为10，Filter.Values的上限为10。 
+     * @return Filters - shipperName：按照【投递规则名称】进行过滤。
+    类型：String。
+    必选：否
+- shipperId：按照【投递规则ID】进行过滤。
+    类型：String。
+    必选：否
+- topicId：按照【日志主题】进行过滤。
+    类型：String。
+    必选：否
+- taskStatus
+按照【任务运行状态】进行过滤。 支持`0`：停止，`1`：运行中，`2`：异常
+类型：String
+必选：否
 
-每次请求的Filters的上限为10，Filter.Values的上限为5。
+每次请求的Filters的上限为10，Filter.Values的上限为10。
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set - shipperName：按照【投递规则名称】进行过滤。类型：String。必选：否
-- shipperId：按照【投递规则ID】进行过滤。类型：String。必选：否
-- topicId：按照【日志主题】进行过滤。类型：String。必选：否
+     * Set - shipperName：按照【投递规则名称】进行过滤。
+    类型：String。
+    必选：否
+- shipperId：按照【投递规则ID】进行过滤。
+    类型：String。
+    必选：否
+- topicId：按照【日志主题】进行过滤。
+    类型：String。
+    必选：否
+- taskStatus
+按照【任务运行状态】进行过滤。 支持`0`：停止，`1`：运行中，`2`：异常
+类型：String
+必选：否
 
-每次请求的Filters的上限为10，Filter.Values的上限为5。
-     * @param Filters - shipperName：按照【投递规则名称】进行过滤。类型：String。必选：否
-- shipperId：按照【投递规则ID】进行过滤。类型：String。必选：否
-- topicId：按照【日志主题】进行过滤。类型：String。必选：否
+每次请求的Filters的上限为10，Filter.Values的上限为10。
+     * @param Filters - shipperName：按照【投递规则名称】进行过滤。
+    类型：String。
+    必选：否
+- shipperId：按照【投递规则ID】进行过滤。
+    类型：String。
+    必选：否
+- topicId：按照【日志主题】进行过滤。
+    类型：String。
+    必选：否
+- taskStatus
+按照【任务运行状态】进行过滤。 支持`0`：停止，`1`：运行中，`2`：异常
+类型：String
+必选：否
 
-每次请求的Filters的上限为10，Filter.Values的上限为5。
+每次请求的Filters的上限为10，Filter.Values的上限为10。
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

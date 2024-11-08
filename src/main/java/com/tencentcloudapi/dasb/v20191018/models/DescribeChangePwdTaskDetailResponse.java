@@ -32,7 +32,6 @@ public class DescribeChangePwdTaskDetailResponse extends AbstractModel {
 
     /**
     * 任务详情
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Details")
     @Expose
@@ -62,10 +61,8 @@ public class DescribeChangePwdTaskDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get 任务详情
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务详情 
      * @return Details 任务详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ChangePwdTaskDetail [] getDetails() {
         return this.Details;
@@ -73,9 +70,7 @@ public class DescribeChangePwdTaskDetailResponse extends AbstractModel {
 
     /**
      * Set 任务详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Details 任务详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDetails(ChangePwdTaskDetail [] Details) {
         this.Details = Details;

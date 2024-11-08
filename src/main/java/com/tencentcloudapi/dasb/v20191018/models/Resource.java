@@ -221,7 +221,6 @@ public class Resource extends AbstractModel {
 
     /**
     * 日志投递规格信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LogDeliveryArgs")
     @Expose
@@ -229,7 +228,6 @@ public class Resource extends AbstractModel {
 
     /**
     * 堡垒机资源LB
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClbSet")
     @Expose
@@ -237,7 +235,6 @@ public class Resource extends AbstractModel {
 
     /**
     * 网络域个数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DomainCount")
     @Expose
@@ -245,7 +242,6 @@ public class Resource extends AbstractModel {
 
     /**
     * 已使用网络域个数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UsedDomainCount")
     @Expose
@@ -253,7 +249,6 @@ public class Resource extends AbstractModel {
 
     /**
     * 0 非试用版，1 试用版
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Trial")
     @Expose
@@ -261,7 +256,6 @@ public class Resource extends AbstractModel {
 
     /**
     * cdc集群id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CdcClusterId")
     @Expose
@@ -269,7 +263,6 @@ public class Resource extends AbstractModel {
 
     /**
     * 日志投递规格信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LogDelivery")
     @Expose
@@ -732,10 +725,8 @@ public class Resource extends AbstractModel {
     }
 
     /**
-     * Get 日志投递规格信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 日志投递规格信息 
      * @return LogDeliveryArgs 日志投递规格信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLogDeliveryArgs() {
         return this.LogDeliveryArgs;
@@ -743,19 +734,15 @@ public class Resource extends AbstractModel {
 
     /**
      * Set 日志投递规格信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LogDeliveryArgs 日志投递规格信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLogDeliveryArgs(String LogDeliveryArgs) {
         this.LogDeliveryArgs = LogDeliveryArgs;
     }
 
     /**
-     * Get 堡垒机资源LB
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 堡垒机资源LB 
      * @return ClbSet 堡垒机资源LB
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Clb [] getClbSet() {
         return this.ClbSet;
@@ -763,19 +750,15 @@ public class Resource extends AbstractModel {
 
     /**
      * Set 堡垒机资源LB
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClbSet 堡垒机资源LB
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClbSet(Clb [] ClbSet) {
         this.ClbSet = ClbSet;
     }
 
     /**
-     * Get 网络域个数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网络域个数 
      * @return DomainCount 网络域个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDomainCount() {
         return this.DomainCount;
@@ -783,19 +766,15 @@ public class Resource extends AbstractModel {
 
     /**
      * Set 网络域个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DomainCount 网络域个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDomainCount(Long DomainCount) {
         this.DomainCount = DomainCount;
     }
 
     /**
-     * Get 已使用网络域个数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 已使用网络域个数 
      * @return UsedDomainCount 已使用网络域个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getUsedDomainCount() {
         return this.UsedDomainCount;
@@ -803,19 +782,15 @@ public class Resource extends AbstractModel {
 
     /**
      * Set 已使用网络域个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UsedDomainCount 已使用网络域个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUsedDomainCount(Long UsedDomainCount) {
         this.UsedDomainCount = UsedDomainCount;
     }
 
     /**
-     * Get 0 非试用版，1 试用版
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 0 非试用版，1 试用版 
      * @return Trial 0 非试用版，1 试用版
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTrial() {
         return this.Trial;
@@ -823,19 +798,15 @@ public class Resource extends AbstractModel {
 
     /**
      * Set 0 非试用版，1 试用版
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Trial 0 非试用版，1 试用版
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTrial(Long Trial) {
         this.Trial = Trial;
     }
 
     /**
-     * Get cdc集群id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get cdc集群id 
      * @return CdcClusterId cdc集群id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCdcClusterId() {
         return this.CdcClusterId;
@@ -843,19 +814,15 @@ public class Resource extends AbstractModel {
 
     /**
      * Set cdc集群id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CdcClusterId cdc集群id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCdcClusterId(String CdcClusterId) {
         this.CdcClusterId = CdcClusterId;
     }
 
     /**
-     * Get 日志投递规格信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 日志投递规格信息 
      * @return LogDelivery 日志投递规格信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLogDelivery() {
         return this.LogDelivery;
@@ -863,9 +830,7 @@ public class Resource extends AbstractModel {
 
     /**
      * Set 日志投递规格信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LogDelivery 日志投递规格信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLogDelivery(String LogDelivery) {
         this.LogDelivery = LogDelivery;

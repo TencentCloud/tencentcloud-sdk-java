@@ -52,7 +52,7 @@ public class DescribeDevicesRequest extends AbstractModel {
     private String [] ApCodeSet;
 
     /**
-    * 操作系统类型, 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer
+    * 操作系统类型, 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer, 5 - TDSQL MySQL, 6 - TDSQL-C MySQL, 7 - MariaDB, 8 - PostgreSQL, 9 - MongoDB副本集群, 10 - MongoDB分片集群, 11 - Redis
     */
     @SerializedName("Kind")
     @Expose
@@ -87,7 +87,7 @@ public class DescribeDevicesRequest extends AbstractModel {
     private String [] ResourceIdSet;
 
     /**
-    * 可提供按照多种类型过滤, 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer
+    * 可提供按照多种类型过滤, 取值范围与Kind一致
     */
     @SerializedName("KindSet")
     @Expose
@@ -187,16 +187,16 @@ BindingStatus 绑定状态
     }
 
     /**
-     * Get 操作系统类型, 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer 
-     * @return Kind 操作系统类型, 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer
+     * Get 操作系统类型, 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer, 5 - TDSQL MySQL, 6 - TDSQL-C MySQL, 7 - MariaDB, 8 - PostgreSQL, 9 - MongoDB副本集群, 10 - MongoDB分片集群, 11 - Redis 
+     * @return Kind 操作系统类型, 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer, 5 - TDSQL MySQL, 6 - TDSQL-C MySQL, 7 - MariaDB, 8 - PostgreSQL, 9 - MongoDB副本集群, 10 - MongoDB分片集群, 11 - Redis
      */
     public Long getKind() {
         return this.Kind;
     }
 
     /**
-     * Set 操作系统类型, 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer
-     * @param Kind 操作系统类型, 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer
+     * Set 操作系统类型, 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer, 5 - TDSQL MySQL, 6 - TDSQL-C MySQL, 7 - MariaDB, 8 - PostgreSQL, 9 - MongoDB副本集群, 10 - MongoDB分片集群, 11 - Redis
+     * @param Kind 操作系统类型, 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer, 5 - TDSQL MySQL, 6 - TDSQL-C MySQL, 7 - MariaDB, 8 - PostgreSQL, 9 - MongoDB副本集群, 10 - MongoDB分片集群, 11 - Redis
      */
     public void setKind(Long Kind) {
         this.Kind = Kind;
@@ -267,16 +267,16 @@ BindingStatus 绑定状态
     }
 
     /**
-     * Get 可提供按照多种类型过滤, 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer 
-     * @return KindSet 可提供按照多种类型过滤, 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer
+     * Get 可提供按照多种类型过滤, 取值范围与Kind一致 
+     * @return KindSet 可提供按照多种类型过滤, 取值范围与Kind一致
      */
     public Long [] getKindSet() {
         return this.KindSet;
     }
 
     /**
-     * Set 可提供按照多种类型过滤, 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer
-     * @param KindSet 可提供按照多种类型过滤, 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer
+     * Set 可提供按照多种类型过滤, 取值范围与Kind一致
+     * @param KindSet 可提供按照多种类型过滤, 取值范围与Kind一致
      */
     public void setKindSet(Long [] KindSet) {
         this.KindSet = KindSet;

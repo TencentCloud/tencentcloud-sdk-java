@@ -129,6 +129,35 @@ public class RenewWorkflowSchedulerInfoDsRequest extends AbstractModel {
     private String CrontabExpression;
 
     /**
+    * 0：不修改
+1：将任务的上游依赖配置改为默认值 
+    */
+    @SerializedName("ModifyCycleValue")
+    @Expose
+    private String ModifyCycleValue;
+
+    /**
+    * 是否开启日历调度 1 开启 0关闭
+    */
+    @SerializedName("CalendarOpen")
+    @Expose
+    private String CalendarOpen;
+
+    /**
+    * 日历名称
+    */
+    @SerializedName("CalendarName")
+    @Expose
+    private String CalendarName;
+
+    /**
+    * 日历id
+    */
+    @SerializedName("CalendarId")
+    @Expose
+    private String CalendarId;
+
+    /**
      * Get 项目ID 
      * @return ProjectId 项目ID
      */
@@ -368,6 +397,74 @@ public class RenewWorkflowSchedulerInfoDsRequest extends AbstractModel {
         this.CrontabExpression = CrontabExpression;
     }
 
+    /**
+     * Get 0：不修改
+1：将任务的上游依赖配置改为默认值  
+     * @return ModifyCycleValue 0：不修改
+1：将任务的上游依赖配置改为默认值 
+     */
+    public String getModifyCycleValue() {
+        return this.ModifyCycleValue;
+    }
+
+    /**
+     * Set 0：不修改
+1：将任务的上游依赖配置改为默认值 
+     * @param ModifyCycleValue 0：不修改
+1：将任务的上游依赖配置改为默认值 
+     */
+    public void setModifyCycleValue(String ModifyCycleValue) {
+        this.ModifyCycleValue = ModifyCycleValue;
+    }
+
+    /**
+     * Get 是否开启日历调度 1 开启 0关闭 
+     * @return CalendarOpen 是否开启日历调度 1 开启 0关闭
+     */
+    public String getCalendarOpen() {
+        return this.CalendarOpen;
+    }
+
+    /**
+     * Set 是否开启日历调度 1 开启 0关闭
+     * @param CalendarOpen 是否开启日历调度 1 开启 0关闭
+     */
+    public void setCalendarOpen(String CalendarOpen) {
+        this.CalendarOpen = CalendarOpen;
+    }
+
+    /**
+     * Get 日历名称 
+     * @return CalendarName 日历名称
+     */
+    public String getCalendarName() {
+        return this.CalendarName;
+    }
+
+    /**
+     * Set 日历名称
+     * @param CalendarName 日历名称
+     */
+    public void setCalendarName(String CalendarName) {
+        this.CalendarName = CalendarName;
+    }
+
+    /**
+     * Get 日历id 
+     * @return CalendarId 日历id
+     */
+    public String getCalendarId() {
+        return this.CalendarId;
+    }
+
+    /**
+     * Set 日历id
+     * @param CalendarId 日历id
+     */
+    public void setCalendarId(String CalendarId) {
+        this.CalendarId = CalendarId;
+    }
+
     public RenewWorkflowSchedulerInfoDsRequest() {
     }
 
@@ -421,6 +518,18 @@ public class RenewWorkflowSchedulerInfoDsRequest extends AbstractModel {
         if (source.CrontabExpression != null) {
             this.CrontabExpression = new String(source.CrontabExpression);
         }
+        if (source.ModifyCycleValue != null) {
+            this.ModifyCycleValue = new String(source.ModifyCycleValue);
+        }
+        if (source.CalendarOpen != null) {
+            this.CalendarOpen = new String(source.CalendarOpen);
+        }
+        if (source.CalendarName != null) {
+            this.CalendarName = new String(source.CalendarName);
+        }
+        if (source.CalendarId != null) {
+            this.CalendarId = new String(source.CalendarId);
+        }
     }
 
 
@@ -443,6 +552,10 @@ public class RenewWorkflowSchedulerInfoDsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "InstanceInitStrategy", this.InstanceInitStrategy);
         this.setParamSimple(map, prefix + "DependencyWorkflow", this.DependencyWorkflow);
         this.setParamSimple(map, prefix + "CrontabExpression", this.CrontabExpression);
+        this.setParamSimple(map, prefix + "ModifyCycleValue", this.ModifyCycleValue);
+        this.setParamSimple(map, prefix + "CalendarOpen", this.CalendarOpen);
+        this.setParamSimple(map, prefix + "CalendarName", this.CalendarName);
+        this.setParamSimple(map, prefix + "CalendarId", this.CalendarId);
 
     }
 }

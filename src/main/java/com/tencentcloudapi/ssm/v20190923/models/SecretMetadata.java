@@ -127,7 +127,6 @@ public class SecretMetadata extends AbstractModel {
 
     /**
     * 当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对所关联的CVM实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AssociatedInstanceIDs")
     @Expose
@@ -402,10 +401,8 @@ public class SecretMetadata extends AbstractModel {
     }
 
     /**
-     * Get 当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对所关联的CVM实例ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对所关联的CVM实例ID。 
      * @return AssociatedInstanceIDs 当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对所关联的CVM实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getAssociatedInstanceIDs() {
         return this.AssociatedInstanceIDs;
@@ -413,9 +410,7 @@ public class SecretMetadata extends AbstractModel {
 
     /**
      * Set 当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对所关联的CVM实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AssociatedInstanceIDs 当凭据类型为SSH密钥对凭据时，此字段有效，用于表示SSH密钥对所关联的CVM实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAssociatedInstanceIDs(String [] AssociatedInstanceIDs) {
         this.AssociatedInstanceIDs = AssociatedInstanceIDs;

@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class GetActionSequenceRequest extends AbstractModel {
 
     /**
-    * 默认不需要使用
+    * 默认不需要使用。
     */
     @SerializedName("ActionType")
     @Expose
     private String ActionType;
 
     /**
-     * Get 默认不需要使用 
-     * @return ActionType 默认不需要使用
+     * Get 默认不需要使用。 
+     * @return ActionType 默认不需要使用。
      */
     public String getActionType() {
         return this.ActionType;
     }
 
     /**
-     * Set 默认不需要使用
-     * @param ActionType 默认不需要使用
+     * Set 默认不需要使用。
+     * @param ActionType 默认不需要使用。
      */
     public void setActionType(String ActionType) {
         this.ActionType = ActionType;

@@ -25,7 +25,6 @@ public class ImportExternalDeviceResponse extends AbstractModel {
 
     /**
     * 资产ID列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeviceIdSet")
     @Expose
@@ -39,10 +38,8 @@ public class ImportExternalDeviceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 资产ID列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资产ID列表 
      * @return DeviceIdSet 资产ID列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long [] getDeviceIdSet() {
         return this.DeviceIdSet;
@@ -50,9 +47,7 @@ public class ImportExternalDeviceResponse extends AbstractModel {
 
     /**
      * Set 资产ID列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeviceIdSet 资产ID列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeviceIdSet(Long [] DeviceIdSet) {
         this.DeviceIdSet = DeviceIdSet;

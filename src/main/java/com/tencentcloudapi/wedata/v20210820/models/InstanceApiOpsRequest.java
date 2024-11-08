@@ -241,6 +241,13 @@ public class InstanceApiOpsRequest extends AbstractModel {
     private String [] ExecutorGroupIdList;
 
     /**
+    * true 只过滤重跑过的实例，false 忽略此过滤条件，结果集过滤条件中不包括是否重跑
+    */
+    @SerializedName("OnlyRerun")
+    @Expose
+    private Boolean OnlyRerun;
+
+    /**
      * Get 单个查询条件 
      * @return Instance 单个查询条件
      */
@@ -736,6 +743,22 @@ public class InstanceApiOpsRequest extends AbstractModel {
         this.ExecutorGroupIdList = ExecutorGroupIdList;
     }
 
+    /**
+     * Get true 只过滤重跑过的实例，false 忽略此过滤条件，结果集过滤条件中不包括是否重跑 
+     * @return OnlyRerun true 只过滤重跑过的实例，false 忽略此过滤条件，结果集过滤条件中不包括是否重跑
+     */
+    public Boolean getOnlyRerun() {
+        return this.OnlyRerun;
+    }
+
+    /**
+     * Set true 只过滤重跑过的实例，false 忽略此过滤条件，结果集过滤条件中不包括是否重跑
+     * @param OnlyRerun true 只过滤重跑过的实例，false 忽略此过滤条件，结果集过滤条件中不包括是否重跑
+     */
+    public void setOnlyRerun(Boolean OnlyRerun) {
+        this.OnlyRerun = OnlyRerun;
+    }
+
     public InstanceApiOpsRequest() {
     }
 
@@ -873,6 +896,9 @@ public class InstanceApiOpsRequest extends AbstractModel {
                 this.ExecutorGroupIdList[i] = new String(source.ExecutorGroupIdList[i]);
             }
         }
+        if (source.OnlyRerun != null) {
+            this.OnlyRerun = new Boolean(source.OnlyRerun);
+        }
     }
 
 
@@ -911,6 +937,7 @@ public class InstanceApiOpsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "TenantId", this.TenantId);
         this.setParamSimple(map, prefix + "DataTimeCycle", this.DataTimeCycle);
         this.setParamArraySimple(map, prefix + "ExecutorGroupIdList.", this.ExecutorGroupIdList);
+        this.setParamSimple(map, prefix + "OnlyRerun", this.OnlyRerun);
 
     }
 }

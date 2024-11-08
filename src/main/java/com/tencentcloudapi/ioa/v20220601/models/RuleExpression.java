@@ -25,7 +25,6 @@ public class RuleExpression extends AbstractModel {
 
     /**
     * 规则元数据
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Items")
     @Expose
@@ -33,17 +32,14 @@ public class RuleExpression extends AbstractModel {
 
     /**
     * 关系
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Relation")
     @Expose
     private String Relation;
 
     /**
-     * Get 规则元数据
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则元数据 
      * @return Items 规则元数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RuleItem [] getItems() {
         return this.Items;
@@ -51,19 +47,15 @@ public class RuleExpression extends AbstractModel {
 
     /**
      * Set 规则元数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Items 规则元数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setItems(RuleItem [] Items) {
         this.Items = Items;
     }
 
     /**
-     * Get 关系
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 关系 
      * @return Relation 关系
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRelation() {
         return this.Relation;
@@ -71,9 +63,7 @@ public class RuleExpression extends AbstractModel {
 
     /**
      * Set 关系
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Relation 关系
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRelation(String Relation) {
         this.Relation = Relation;

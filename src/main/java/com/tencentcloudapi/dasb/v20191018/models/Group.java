@@ -39,7 +39,6 @@ public class Group extends AbstractModel {
 
     /**
     * 所属部门信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Department")
     @Expose
@@ -47,7 +46,6 @@ public class Group extends AbstractModel {
 
     /**
     * 个数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Count")
     @Expose
@@ -86,10 +84,8 @@ public class Group extends AbstractModel {
     }
 
     /**
-     * Get 所属部门信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 所属部门信息 
      * @return Department 所属部门信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Department getDepartment() {
         return this.Department;
@@ -97,19 +93,15 @@ public class Group extends AbstractModel {
 
     /**
      * Set 所属部门信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Department 所属部门信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDepartment(Department Department) {
         this.Department = Department;
     }
 
     /**
-     * Get 个数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 个数 
      * @return Count 个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCount() {
         return this.Count;
@@ -117,9 +109,7 @@ public class Group extends AbstractModel {
 
     /**
      * Set 个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Count 个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCount(Long Count) {
         this.Count = Count;

@@ -24,11 +24,11 @@ import java.util.HashMap;
 public class CheckEidTokenStatusResponse extends AbstractModel {
 
     /**
-    * 枚举：
-init：token未验证
-doing: 验证中
-finished: 验证完成
-timeout: token已超时
+    * 状态。
+- init：EidToken未验证。
+- doing: EidToken验证中。
+- finished: EidToken验证完成。
+- timeout: EidToken已超时。
     */
     @SerializedName("Status")
     @Expose
@@ -42,32 +42,32 @@ timeout: token已超时
     private String RequestId;
 
     /**
-     * Get 枚举：
-init：token未验证
-doing: 验证中
-finished: 验证完成
-timeout: token已超时 
-     * @return Status 枚举：
-init：token未验证
-doing: 验证中
-finished: 验证完成
-timeout: token已超时
+     * Get 状态。
+- init：EidToken未验证。
+- doing: EidToken验证中。
+- finished: EidToken验证完成。
+- timeout: EidToken已超时。 
+     * @return Status 状态。
+- init：EidToken未验证。
+- doing: EidToken验证中。
+- finished: EidToken验证完成。
+- timeout: EidToken已超时。
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 枚举：
-init：token未验证
-doing: 验证中
-finished: 验证完成
-timeout: token已超时
-     * @param Status 枚举：
-init：token未验证
-doing: 验证中
-finished: 验证完成
-timeout: token已超时
+     * Set 状态。
+- init：EidToken未验证。
+- doing: EidToken验证中。
+- finished: EidToken验证完成。
+- timeout: EidToken已超时。
+     * @param Status 状态。
+- init：EidToken未验证。
+- doing: EidToken验证中。
+- finished: EidToken验证完成。
+- timeout: EidToken已超时。
      */
     public void setStatus(String Status) {
         this.Status = Status;

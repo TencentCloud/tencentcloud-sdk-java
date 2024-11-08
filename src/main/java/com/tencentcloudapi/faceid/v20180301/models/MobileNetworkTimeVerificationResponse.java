@@ -25,14 +25,15 @@ public class MobileNetworkTimeVerificationResponse extends AbstractModel {
 
     /**
     * 认证结果码，收费情况如下。
-收费结果码：
-0: 成功
--2: 手机号不存在
--3: 手机号存在，但无法查询到在网时长
-不收费结果码：
--1: 手机号格式不正确
--4: 验证中心服务繁忙
--5：认证次数超过当日限制，请次日重试
+- 收费结果码：
+0: 成功。
+-2: 手机号不存在。
+-3: 手机号存在，但无法查询到在网时长。
+
+- 不收费结果码：
+-1: 手机号格式不正确。
+-4: 验证中心服务繁忙。
+-5：认证次数超过当日限制，请次日重试。
     */
     @SerializedName("Result")
     @Expose
@@ -47,7 +48,8 @@ public class MobileNetworkTimeVerificationResponse extends AbstractModel {
 
     /**
     * 在网时长区间。
-格式为(a,b]，表示在网时长在a个月以上，b个月以下。若b为+时表示没有上限。
+- 格式为(a,b]，表示在网时长在a个月以上，b个月以下。
+- 若b为+时表示没有上限。
     */
     @SerializedName("Range")
     @Expose
@@ -62,23 +64,25 @@ public class MobileNetworkTimeVerificationResponse extends AbstractModel {
 
     /**
      * Get 认证结果码，收费情况如下。
-收费结果码：
-0: 成功
--2: 手机号不存在
--3: 手机号存在，但无法查询到在网时长
-不收费结果码：
--1: 手机号格式不正确
--4: 验证中心服务繁忙
--5：认证次数超过当日限制，请次日重试 
+- 收费结果码：
+0: 成功。
+-2: 手机号不存在。
+-3: 手机号存在，但无法查询到在网时长。
+
+- 不收费结果码：
+-1: 手机号格式不正确。
+-4: 验证中心服务繁忙。
+-5：认证次数超过当日限制，请次日重试。 
      * @return Result 认证结果码，收费情况如下。
-收费结果码：
-0: 成功
--2: 手机号不存在
--3: 手机号存在，但无法查询到在网时长
-不收费结果码：
--1: 手机号格式不正确
--4: 验证中心服务繁忙
--5：认证次数超过当日限制，请次日重试
+- 收费结果码：
+0: 成功。
+-2: 手机号不存在。
+-3: 手机号存在，但无法查询到在网时长。
+
+- 不收费结果码：
+-1: 手机号格式不正确。
+-4: 验证中心服务繁忙。
+-5：认证次数超过当日限制，请次日重试。
      */
     public String getResult() {
         return this.Result;
@@ -86,23 +90,25 @@ public class MobileNetworkTimeVerificationResponse extends AbstractModel {
 
     /**
      * Set 认证结果码，收费情况如下。
-收费结果码：
-0: 成功
--2: 手机号不存在
--3: 手机号存在，但无法查询到在网时长
-不收费结果码：
--1: 手机号格式不正确
--4: 验证中心服务繁忙
--5：认证次数超过当日限制，请次日重试
+- 收费结果码：
+0: 成功。
+-2: 手机号不存在。
+-3: 手机号存在，但无法查询到在网时长。
+
+- 不收费结果码：
+-1: 手机号格式不正确。
+-4: 验证中心服务繁忙。
+-5：认证次数超过当日限制，请次日重试。
      * @param Result 认证结果码，收费情况如下。
-收费结果码：
-0: 成功
--2: 手机号不存在
--3: 手机号存在，但无法查询到在网时长
-不收费结果码：
--1: 手机号格式不正确
--4: 验证中心服务繁忙
--5：认证次数超过当日限制，请次日重试
+- 收费结果码：
+0: 成功。
+-2: 手机号不存在。
+-3: 手机号存在，但无法查询到在网时长。
+
+- 不收费结果码：
+-1: 手机号格式不正确。
+-4: 验证中心服务繁忙。
+-5：认证次数超过当日限制，请次日重试。
      */
     public void setResult(String Result) {
         this.Result = Result;
@@ -126,9 +132,11 @@ public class MobileNetworkTimeVerificationResponse extends AbstractModel {
 
     /**
      * Get 在网时长区间。
-格式为(a,b]，表示在网时长在a个月以上，b个月以下。若b为+时表示没有上限。 
+- 格式为(a,b]，表示在网时长在a个月以上，b个月以下。
+- 若b为+时表示没有上限。 
      * @return Range 在网时长区间。
-格式为(a,b]，表示在网时长在a个月以上，b个月以下。若b为+时表示没有上限。
+- 格式为(a,b]，表示在网时长在a个月以上，b个月以下。
+- 若b为+时表示没有上限。
      */
     public String getRange() {
         return this.Range;
@@ -136,9 +144,11 @@ public class MobileNetworkTimeVerificationResponse extends AbstractModel {
 
     /**
      * Set 在网时长区间。
-格式为(a,b]，表示在网时长在a个月以上，b个月以下。若b为+时表示没有上限。
+- 格式为(a,b]，表示在网时长在a个月以上，b个月以下。
+- 若b为+时表示没有上限。
      * @param Range 在网时长区间。
-格式为(a,b]，表示在网时长在a个月以上，b个月以下。若b为+时表示没有上限。
+- 格式为(a,b]，表示在网时长在a个月以上，b个月以下。
+- 若b为+时表示没有上限。
      */
     public void setRange(String Range) {
         this.Range = Range;

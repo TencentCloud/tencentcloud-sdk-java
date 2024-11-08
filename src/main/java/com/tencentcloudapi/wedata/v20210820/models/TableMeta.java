@@ -473,6 +473,46 @@ TABLE, VIEW, MANAGED_TABLE(Hive管理表), EXTERNAL_TABLE(Hive外部表), VIRTUA
     private String Schema;
 
     /**
+    * 关联数据眼信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CollectDatasourceList")
+    @Expose
+    private GovDatasourceInfo [] CollectDatasourceList;
+
+    /**
+    * 采集任务id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CollectJobId")
+    @Expose
+    private String CollectJobId;
+
+    /**
+    * 采集任务名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CollectJobName")
+    @Expose
+    private String CollectJobName;
+
+    /**
+    * 数据源urn
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Urn")
+    @Expose
+    private String Urn;
+
+    /**
+    * 是否有修改业务权限
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HasBizPermission")
+    @Expose
+    private Boolean HasBizPermission;
+
+    /**
      * Get 表的全局唯一ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TableId 表的全局唯一ID
@@ -1596,6 +1636,106 @@ TABLE, VIEW, MANAGED_TABLE(Hive管理表), EXTERNAL_TABLE(Hive外部表), VIRTUA
         this.Schema = Schema;
     }
 
+    /**
+     * Get 关联数据眼信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CollectDatasourceList 关联数据眼信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public GovDatasourceInfo [] getCollectDatasourceList() {
+        return this.CollectDatasourceList;
+    }
+
+    /**
+     * Set 关联数据眼信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CollectDatasourceList 关联数据眼信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCollectDatasourceList(GovDatasourceInfo [] CollectDatasourceList) {
+        this.CollectDatasourceList = CollectDatasourceList;
+    }
+
+    /**
+     * Get 采集任务id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CollectJobId 采集任务id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCollectJobId() {
+        return this.CollectJobId;
+    }
+
+    /**
+     * Set 采集任务id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CollectJobId 采集任务id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCollectJobId(String CollectJobId) {
+        this.CollectJobId = CollectJobId;
+    }
+
+    /**
+     * Get 采集任务名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CollectJobName 采集任务名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCollectJobName() {
+        return this.CollectJobName;
+    }
+
+    /**
+     * Set 采集任务名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CollectJobName 采集任务名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCollectJobName(String CollectJobName) {
+        this.CollectJobName = CollectJobName;
+    }
+
+    /**
+     * Get 数据源urn
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Urn 数据源urn
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getUrn() {
+        return this.Urn;
+    }
+
+    /**
+     * Set 数据源urn
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Urn 数据源urn
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setUrn(String Urn) {
+        this.Urn = Urn;
+    }
+
+    /**
+     * Get 是否有修改业务权限
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return HasBizPermission 是否有修改业务权限
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getHasBizPermission() {
+        return this.HasBizPermission;
+    }
+
+    /**
+     * Set 是否有修改业务权限
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HasBizPermission 是否有修改业务权限
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHasBizPermission(Boolean HasBizPermission) {
+        this.HasBizPermission = HasBizPermission;
+    }
+
     public TableMeta() {
     }
 
@@ -1787,6 +1927,24 @@ TABLE, VIEW, MANAGED_TABLE(Hive管理表), EXTERNAL_TABLE(Hive外部表), VIRTUA
         if (source.Schema != null) {
             this.Schema = new String(source.Schema);
         }
+        if (source.CollectDatasourceList != null) {
+            this.CollectDatasourceList = new GovDatasourceInfo[source.CollectDatasourceList.length];
+            for (int i = 0; i < source.CollectDatasourceList.length; i++) {
+                this.CollectDatasourceList[i] = new GovDatasourceInfo(source.CollectDatasourceList[i]);
+            }
+        }
+        if (source.CollectJobId != null) {
+            this.CollectJobId = new String(source.CollectJobId);
+        }
+        if (source.CollectJobName != null) {
+            this.CollectJobName = new String(source.CollectJobName);
+        }
+        if (source.Urn != null) {
+            this.Urn = new String(source.Urn);
+        }
+        if (source.HasBizPermission != null) {
+            this.HasBizPermission = new Boolean(source.HasBizPermission);
+        }
     }
 
 
@@ -1850,6 +2008,11 @@ TABLE, VIEW, MANAGED_TABLE(Hive管理表), EXTERNAL_TABLE(Hive外部表), VIRTUA
         this.setParamArrayObj(map, prefix + "TableProperties.", this.TableProperties);
         this.setParamSimple(map, prefix + "Environment", this.Environment);
         this.setParamSimple(map, prefix + "Schema", this.Schema);
+        this.setParamArrayObj(map, prefix + "CollectDatasourceList.", this.CollectDatasourceList);
+        this.setParamSimple(map, prefix + "CollectJobId", this.CollectJobId);
+        this.setParamSimple(map, prefix + "CollectJobName", this.CollectJobName);
+        this.setParamSimple(map, prefix + "Urn", this.Urn);
+        this.setParamSimple(map, prefix + "HasBizPermission", this.HasBizPermission);
 
     }
 }

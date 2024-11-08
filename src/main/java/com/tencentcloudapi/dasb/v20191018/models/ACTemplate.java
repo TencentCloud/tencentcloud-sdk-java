@@ -25,7 +25,6 @@ public class ACTemplate extends AbstractModel {
 
     /**
     * 模板id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TemplateId")
     @Expose
@@ -33,7 +32,6 @@ public class ACTemplate extends AbstractModel {
 
     /**
     * 模板名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TemplateName")
     @Expose
@@ -41,17 +39,14 @@ public class ACTemplate extends AbstractModel {
 
     /**
     * 模板描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-     * Get 模板id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 模板id 
      * @return TemplateId 模板id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTemplateId() {
         return this.TemplateId;
@@ -59,19 +54,15 @@ public class ACTemplate extends AbstractModel {
 
     /**
      * Set 模板id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TemplateId 模板id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTemplateId(String TemplateId) {
         this.TemplateId = TemplateId;
     }
 
     /**
-     * Get 模板名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 模板名称 
      * @return TemplateName 模板名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTemplateName() {
         return this.TemplateName;
@@ -79,19 +70,15 @@ public class ACTemplate extends AbstractModel {
 
     /**
      * Set 模板名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TemplateName 模板名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTemplateName(String TemplateName) {
         this.TemplateName = TemplateName;
     }
 
     /**
-     * Get 模板描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 模板描述 
      * @return Description 模板描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
         return this.Description;
@@ -99,9 +86,7 @@ public class ACTemplate extends AbstractModel {
 
     /**
      * Set 模板描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Description 模板描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
         this.Description = Description;

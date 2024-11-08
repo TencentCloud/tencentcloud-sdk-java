@@ -53,7 +53,6 @@ public class Command extends AbstractModel {
 
     /**
     * 会话id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Sid")
     @Expose
@@ -61,7 +60,6 @@ public class Command extends AbstractModel {
 
     /**
     * 用户名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserName")
     @Expose
@@ -69,7 +67,6 @@ public class Command extends AbstractModel {
 
     /**
     * 设备account
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Account")
     @Expose
@@ -77,7 +74,6 @@ public class Command extends AbstractModel {
 
     /**
     * 设备ip
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -85,7 +81,6 @@ public class Command extends AbstractModel {
 
     /**
     * source ip
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FromIp")
     @Expose
@@ -93,7 +88,6 @@ public class Command extends AbstractModel {
 
     /**
     * 该命令所属会话的会话开始时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SessionTime")
     @Expose
@@ -109,7 +103,6 @@ public class Command extends AbstractModel {
 
     /**
     * 复核时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConfirmTime")
     @Expose
@@ -117,7 +110,6 @@ public class Command extends AbstractModel {
 
     /**
     * 用户部门id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserDepartmentId")
     @Expose
@@ -125,7 +117,6 @@ public class Command extends AbstractModel {
 
     /**
     * 用户部门name
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserDepartmentName")
     @Expose
@@ -133,7 +124,6 @@ public class Command extends AbstractModel {
 
     /**
     * 设备部门id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeviceDepartmentId")
     @Expose
@@ -141,7 +131,6 @@ public class Command extends AbstractModel {
 
     /**
     * 设备部门name
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeviceDepartmentName")
     @Expose
@@ -149,7 +138,6 @@ public class Command extends AbstractModel {
 
     /**
     * 会话大小
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Size")
     @Expose
@@ -220,10 +208,8 @@ public class Command extends AbstractModel {
     }
 
     /**
-     * Get 会话id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 会话id 
      * @return Sid 会话id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSid() {
         return this.Sid;
@@ -231,19 +217,15 @@ public class Command extends AbstractModel {
 
     /**
      * Set 会话id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Sid 会话id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSid(String Sid) {
         this.Sid = Sid;
     }
 
     /**
-     * Get 用户名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户名 
      * @return UserName 用户名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUserName() {
         return this.UserName;
@@ -251,19 +233,15 @@ public class Command extends AbstractModel {
 
     /**
      * Set 用户名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UserName 用户名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;
     }
 
     /**
-     * Get 设备account
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备account 
      * @return Account 设备account
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAccount() {
         return this.Account;
@@ -271,19 +249,15 @@ public class Command extends AbstractModel {
 
     /**
      * Set 设备account
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Account 设备account
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAccount(String Account) {
         this.Account = Account;
     }
 
     /**
-     * Get 设备ip
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备ip 
      * @return InstanceId 设备ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceId() {
         return this.InstanceId;
@@ -291,19 +265,15 @@ public class Command extends AbstractModel {
 
     /**
      * Set 设备ip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceId 设备ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get source ip
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get source ip 
      * @return FromIp source ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFromIp() {
         return this.FromIp;
@@ -311,19 +281,15 @@ public class Command extends AbstractModel {
 
     /**
      * Set source ip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FromIp source ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFromIp(String FromIp) {
         this.FromIp = FromIp;
     }
 
     /**
-     * Get 该命令所属会话的会话开始时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该命令所属会话的会话开始时间 
      * @return SessionTime 该命令所属会话的会话开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSessionTime() {
         return this.SessionTime;
@@ -331,9 +297,7 @@ public class Command extends AbstractModel {
 
     /**
      * Set 该命令所属会话的会话开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SessionTime 该命令所属会话的会话开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSessionTime(String SessionTime) {
         this.SessionTime = SessionTime;
@@ -364,10 +328,8 @@ public class Command extends AbstractModel {
     }
 
     /**
-     * Get 复核时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 复核时间 
      * @return ConfirmTime 复核时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getConfirmTime() {
         return this.ConfirmTime;
@@ -375,19 +337,15 @@ public class Command extends AbstractModel {
 
     /**
      * Set 复核时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ConfirmTime 复核时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConfirmTime(String ConfirmTime) {
         this.ConfirmTime = ConfirmTime;
     }
 
     /**
-     * Get 用户部门id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户部门id 
      * @return UserDepartmentId 用户部门id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUserDepartmentId() {
         return this.UserDepartmentId;
@@ -395,19 +353,15 @@ public class Command extends AbstractModel {
 
     /**
      * Set 用户部门id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UserDepartmentId 用户部门id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserDepartmentId(String UserDepartmentId) {
         this.UserDepartmentId = UserDepartmentId;
     }
 
     /**
-     * Get 用户部门name
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户部门name 
      * @return UserDepartmentName 用户部门name
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUserDepartmentName() {
         return this.UserDepartmentName;
@@ -415,19 +369,15 @@ public class Command extends AbstractModel {
 
     /**
      * Set 用户部门name
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UserDepartmentName 用户部门name
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserDepartmentName(String UserDepartmentName) {
         this.UserDepartmentName = UserDepartmentName;
     }
 
     /**
-     * Get 设备部门id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备部门id 
      * @return DeviceDepartmentId 设备部门id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDeviceDepartmentId() {
         return this.DeviceDepartmentId;
@@ -435,19 +385,15 @@ public class Command extends AbstractModel {
 
     /**
      * Set 设备部门id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeviceDepartmentId 设备部门id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeviceDepartmentId(String DeviceDepartmentId) {
         this.DeviceDepartmentId = DeviceDepartmentId;
     }
 
     /**
-     * Get 设备部门name
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备部门name 
      * @return DeviceDepartmentName 设备部门name
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDeviceDepartmentName() {
         return this.DeviceDepartmentName;
@@ -455,19 +401,15 @@ public class Command extends AbstractModel {
 
     /**
      * Set 设备部门name
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeviceDepartmentName 设备部门name
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeviceDepartmentName(String DeviceDepartmentName) {
         this.DeviceDepartmentName = DeviceDepartmentName;
     }
 
     /**
-     * Get 会话大小
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 会话大小 
      * @return Size 会话大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSize() {
         return this.Size;
@@ -475,9 +417,7 @@ public class Command extends AbstractModel {
 
     /**
      * Set 会话大小
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Size 会话大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSize(Long Size) {
         this.Size = Size;

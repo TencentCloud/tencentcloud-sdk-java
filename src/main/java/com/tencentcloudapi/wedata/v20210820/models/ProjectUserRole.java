@@ -80,6 +80,38 @@ public class ProjectUserRole extends AbstractModel {
     private Boolean IsProjectAdmin;
 
     /**
+    * 手机号
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PhoneNum")
+    @Expose
+    private String PhoneNum;
+
+    /**
+    * 邮箱
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Email")
+    @Expose
+    private String Email;
+
+    /**
+    * 主账号id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OwnerUin")
+    @Expose
+    private String OwnerUin;
+
+    /**
+    * 租户iD
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AppId")
+    @Expose
+    private String AppId;
+
+    /**
      * Get 用户角色对象
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Roles 用户角色对象
@@ -219,6 +251,86 @@ public class ProjectUserRole extends AbstractModel {
         this.IsProjectAdmin = IsProjectAdmin;
     }
 
+    /**
+     * Get 手机号
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PhoneNum 手机号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPhoneNum() {
+        return this.PhoneNum;
+    }
+
+    /**
+     * Set 手机号
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PhoneNum 手机号
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPhoneNum(String PhoneNum) {
+        this.PhoneNum = PhoneNum;
+    }
+
+    /**
+     * Get 邮箱
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Email 邮箱
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getEmail() {
+        return this.Email;
+    }
+
+    /**
+     * Set 邮箱
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Email 邮箱
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEmail(String Email) {
+        this.Email = Email;
+    }
+
+    /**
+     * Get 主账号id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OwnerUin 主账号id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getOwnerUin() {
+        return this.OwnerUin;
+    }
+
+    /**
+     * Set 主账号id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OwnerUin 主账号id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOwnerUin(String OwnerUin) {
+        this.OwnerUin = OwnerUin;
+    }
+
+    /**
+     * Get 租户iD
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AppId 租户iD
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAppId() {
+        return this.AppId;
+    }
+
+    /**
+     * Set 租户iD
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AppId 租户iD
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAppId(String AppId) {
+        this.AppId = AppId;
+    }
+
     public ProjectUserRole() {
     }
 
@@ -251,6 +363,18 @@ public class ProjectUserRole extends AbstractModel {
         if (source.IsProjectAdmin != null) {
             this.IsProjectAdmin = new Boolean(source.IsProjectAdmin);
         }
+        if (source.PhoneNum != null) {
+            this.PhoneNum = new String(source.PhoneNum);
+        }
+        if (source.Email != null) {
+            this.Email = new String(source.Email);
+        }
+        if (source.OwnerUin != null) {
+            this.OwnerUin = new String(source.OwnerUin);
+        }
+        if (source.AppId != null) {
+            this.AppId = new String(source.AppId);
+        }
     }
 
 
@@ -265,6 +389,10 @@ public class ProjectUserRole extends AbstractModel {
         this.setParamSimple(map, prefix + "Creator", this.Creator);
         this.setParamSimple(map, prefix + "DisplayName", this.DisplayName);
         this.setParamSimple(map, prefix + "IsProjectAdmin", this.IsProjectAdmin);
+        this.setParamSimple(map, prefix + "PhoneNum", this.PhoneNum);
+        this.setParamSimple(map, prefix + "Email", this.Email);
+        this.setParamSimple(map, prefix + "OwnerUin", this.OwnerUin);
+        this.setParamSimple(map, prefix + "AppId", this.AppId);
 
     }
 }

@@ -127,6 +127,17 @@ public class PrivatednsClient extends AbstractClient{
     }
 
     /**
+     *删除转发规则并停止转发
+     * @param req DeleteForwardRuleRequest
+     * @return DeleteForwardRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteForwardRuleResponse DeleteForwardRule(DeleteForwardRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteForwardRule", DeleteForwardRuleResponse.class);
+    }
+
+    /**
      *删除私有域解析账号
      * @param req DeletePrivateDNSAccountRequest
      * @return DeletePrivateDNSAccountResponse
@@ -215,6 +226,28 @@ public class PrivatednsClient extends AbstractClient{
     }
 
     /**
+     *查询终端节点已经启用了的地域
+     * @param req DescribeEndPointRegionRequest
+     * @return DescribeEndPointRegionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEndPointRegionResponse DescribeEndPointRegion(DescribeEndPointRegionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeEndPointRegion", DescribeEndPointRegionResponse.class);
+    }
+
+    /**
+     *查询转发规则
+     * @param req DescribeForwardRuleRequest
+     * @return DescribeForwardRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeForwardRuleResponse DescribeForwardRule(DescribeForwardRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeForwardRule", DescribeForwardRuleResponse.class);
+    }
+
+    /**
      *查询转发规则列表
      * @param req DescribeForwardRuleListRequest
      * @return DescribeForwardRuleListResponse
@@ -300,6 +333,17 @@ public class PrivatednsClient extends AbstractClient{
     public DescribeRequestDataResponse DescribeRequestData(DescribeRequestDataRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeRequestData", DescribeRequestDataResponse.class);
+    }
+
+    /**
+     *修改转发规则
+     * @param req ModifyForwardRuleRequest
+     * @return ModifyForwardRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyForwardRuleResponse ModifyForwardRule(ModifyForwardRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyForwardRule", ModifyForwardRuleResponse.class);
     }
 
     /**

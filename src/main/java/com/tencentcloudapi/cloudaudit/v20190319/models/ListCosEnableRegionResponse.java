@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ListCosEnableRegionResponse extends AbstractModel {
 
     /**
-    * 云审计支持的cos可用区
+    * 操作审计支持的cos可用区
     */
     @SerializedName("EnableRegions")
     @Expose
@@ -38,16 +38,16 @@ public class ListCosEnableRegionResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 云审计支持的cos可用区 
-     * @return EnableRegions 云审计支持的cos可用区
+     * Get 操作审计支持的cos可用区 
+     * @return EnableRegions 操作审计支持的cos可用区
      */
     public CosRegionInfo [] getEnableRegions() {
         return this.EnableRegions;
     }
 
     /**
-     * Set 云审计支持的cos可用区
-     * @param EnableRegions 云审计支持的cos可用区
+     * Set 操作审计支持的cos可用区
+     * @param EnableRegions 操作审计支持的cos可用区
      */
     public void setEnableRegions(CosRegionInfo [] EnableRegions) {
         this.EnableRegions = EnableRegions;

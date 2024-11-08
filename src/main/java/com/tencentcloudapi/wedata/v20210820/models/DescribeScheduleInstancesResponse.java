@@ -24,6 +24,14 @@ import java.util.HashMap;
 public class DescribeScheduleInstancesResponse extends AbstractModel {
 
     /**
+    * 请求来源，WEB 前端；CLIENT 客户端
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RequestFromSource")
+    @Expose
+    private String RequestFromSource;
+
+    /**
     * 实例结果集
     */
     @SerializedName("Data")
@@ -36,6 +44,26 @@ public class DescribeScheduleInstancesResponse extends AbstractModel {
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 请求来源，WEB 前端；CLIENT 客户端
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RequestFromSource 请求来源，WEB 前端；CLIENT 客户端
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRequestFromSource() {
+        return this.RequestFromSource;
+    }
+
+    /**
+     * Set 请求来源，WEB 前端；CLIENT 客户端
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RequestFromSource 请求来源，WEB 前端；CLIENT 客户端
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRequestFromSource(String RequestFromSource) {
+        this.RequestFromSource = RequestFromSource;
+    }
 
     /**
      * Get 实例结果集 
@@ -77,6 +105,9 @@ public class DescribeScheduleInstancesResponse extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeScheduleInstancesResponse(DescribeScheduleInstancesResponse source) {
+        if (source.RequestFromSource != null) {
+            this.RequestFromSource = new String(source.RequestFromSource);
+        }
         if (source.Data != null) {
             this.Data = new CollectionInstanceOpsDto(source.Data);
         }
@@ -90,6 +121,7 @@ public class DescribeScheduleInstancesResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "RequestFromSource", this.RequestFromSource);
         this.setParamObj(map, prefix + "Data.", this.Data);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 

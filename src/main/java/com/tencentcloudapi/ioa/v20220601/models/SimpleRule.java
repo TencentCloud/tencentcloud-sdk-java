@@ -25,7 +25,6 @@ public class SimpleRule extends AbstractModel {
 
     /**
     * 规则表达式
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Expressions")
     @Expose
@@ -33,17 +32,14 @@ public class SimpleRule extends AbstractModel {
 
     /**
     * 表达式间逻辑关系
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Relation")
     @Expose
     private String Relation;
 
     /**
-     * Get 规则表达式
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则表达式 
      * @return Expressions 规则表达式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RuleExpression [] getExpressions() {
         return this.Expressions;
@@ -51,19 +47,15 @@ public class SimpleRule extends AbstractModel {
 
     /**
      * Set 规则表达式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Expressions 规则表达式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExpressions(RuleExpression [] Expressions) {
         this.Expressions = Expressions;
     }
 
     /**
-     * Get 表达式间逻辑关系
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 表达式间逻辑关系 
      * @return Relation 表达式间逻辑关系
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRelation() {
         return this.Relation;
@@ -71,9 +63,7 @@ public class SimpleRule extends AbstractModel {
 
     /**
      * Set 表达式间逻辑关系
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Relation 表达式间逻辑关系
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRelation(String Relation) {
         this.Relation = Relation;

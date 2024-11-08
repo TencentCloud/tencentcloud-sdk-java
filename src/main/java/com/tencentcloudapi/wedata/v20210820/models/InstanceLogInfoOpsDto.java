@@ -72,6 +72,30 @@ public class InstanceLogInfoOpsDto extends AbstractModel {
     private Long LineCount;
 
     /**
+    * 统一执行平台日志分页查询参数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ExtInfo")
+    @Expose
+    private String ExtInfo;
+
+    /**
+    * 日志分页查询，是否最后一页
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsEnd")
+    @Expose
+    private Boolean IsEnd;
+
+    /**
+    * 文件大小
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FileSize")
+    @Expose
+    private String FileSize;
+
+    /**
      * Get 实例运行日志
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return LogInfo 实例运行日志
@@ -191,6 +215,66 @@ public class InstanceLogInfoOpsDto extends AbstractModel {
         this.LineCount = LineCount;
     }
 
+    /**
+     * Get 统一执行平台日志分页查询参数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ExtInfo 统一执行平台日志分页查询参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getExtInfo() {
+        return this.ExtInfo;
+    }
+
+    /**
+     * Set 统一执行平台日志分页查询参数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExtInfo 统一执行平台日志分页查询参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExtInfo(String ExtInfo) {
+        this.ExtInfo = ExtInfo;
+    }
+
+    /**
+     * Get 日志分页查询，是否最后一页
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsEnd 日志分页查询，是否最后一页
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getIsEnd() {
+        return this.IsEnd;
+    }
+
+    /**
+     * Set 日志分页查询，是否最后一页
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsEnd 日志分页查询，是否最后一页
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsEnd(Boolean IsEnd) {
+        this.IsEnd = IsEnd;
+    }
+
+    /**
+     * Get 文件大小
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FileSize 文件大小
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getFileSize() {
+        return this.FileSize;
+    }
+
+    /**
+     * Set 文件大小
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FileSize 文件大小
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFileSize(String FileSize) {
+        this.FileSize = FileSize;
+    }
+
     public InstanceLogInfoOpsDto() {
     }
 
@@ -220,6 +304,15 @@ public class InstanceLogInfoOpsDto extends AbstractModel {
         if (source.LineCount != null) {
             this.LineCount = new Long(source.LineCount);
         }
+        if (source.ExtInfo != null) {
+            this.ExtInfo = new String(source.ExtInfo);
+        }
+        if (source.IsEnd != null) {
+            this.IsEnd = new Boolean(source.IsEnd);
+        }
+        if (source.FileSize != null) {
+            this.FileSize = new String(source.FileSize);
+        }
     }
 
 
@@ -233,6 +326,9 @@ public class InstanceLogInfoOpsDto extends AbstractModel {
         this.setParamSimple(map, prefix + "ThirdTaskRunLogInfo", this.ThirdTaskRunLogInfo);
         this.setParamSimple(map, prefix + "ThirdTaskLogUrlDesc", this.ThirdTaskLogUrlDesc);
         this.setParamSimple(map, prefix + "LineCount", this.LineCount);
+        this.setParamSimple(map, prefix + "ExtInfo", this.ExtInfo);
+        this.setParamSimple(map, prefix + "IsEnd", this.IsEnd);
+        this.setParamSimple(map, prefix + "FileSize", this.FileSize);
 
     }
 }

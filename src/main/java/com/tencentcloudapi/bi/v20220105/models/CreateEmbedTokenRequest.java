@@ -133,6 +133,20 @@ Operator 目前支持
     private String GlobalParam;
 
     /**
+    * 100 不绑定用户  200 单用户单token  300 单用户多token
+    */
+    @SerializedName("TokenType")
+    @Expose
+    private Long TokenType;
+
+    /**
+    * 一次创建的token数
+    */
+    @SerializedName("TokenNum")
+    @Expose
+    private Long TokenNum;
+
+    /**
      * Get 分享项目id 
      * @return ProjectId 分享项目id
      */
@@ -448,6 +462,38 @@ Operator 目前支持
         this.GlobalParam = GlobalParam;
     }
 
+    /**
+     * Get 100 不绑定用户  200 单用户单token  300 单用户多token 
+     * @return TokenType 100 不绑定用户  200 单用户单token  300 单用户多token
+     */
+    public Long getTokenType() {
+        return this.TokenType;
+    }
+
+    /**
+     * Set 100 不绑定用户  200 单用户单token  300 单用户多token
+     * @param TokenType 100 不绑定用户  200 单用户单token  300 单用户多token
+     */
+    public void setTokenType(Long TokenType) {
+        this.TokenType = TokenType;
+    }
+
+    /**
+     * Get 一次创建的token数 
+     * @return TokenNum 一次创建的token数
+     */
+    public Long getTokenNum() {
+        return this.TokenNum;
+    }
+
+    /**
+     * Set 一次创建的token数
+     * @param TokenNum 一次创建的token数
+     */
+    public void setTokenNum(Long TokenNum) {
+        this.TokenNum = TokenNum;
+    }
+
     public CreateEmbedTokenRequest() {
     }
 
@@ -486,6 +532,12 @@ Operator 目前支持
         if (source.GlobalParam != null) {
             this.GlobalParam = new String(source.GlobalParam);
         }
+        if (source.TokenType != null) {
+            this.TokenType = new Long(source.TokenType);
+        }
+        if (source.TokenNum != null) {
+            this.TokenNum = new Long(source.TokenNum);
+        }
     }
 
 
@@ -503,6 +555,8 @@ Operator 目前支持
         this.setParamSimple(map, prefix + "UserId", this.UserId);
         this.setParamSimple(map, prefix + "TicketNum", this.TicketNum);
         this.setParamSimple(map, prefix + "GlobalParam", this.GlobalParam);
+        this.setParamSimple(map, prefix + "TokenType", this.TokenType);
+        this.setParamSimple(map, prefix + "TokenNum", this.TokenNum);
 
     }
 }

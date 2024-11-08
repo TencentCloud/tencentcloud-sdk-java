@@ -102,7 +102,6 @@ public class CdsAuditInstance extends AbstractModel {
 
     /**
     * 实例名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceName")
     @Expose
@@ -110,7 +109,6 @@ public class CdsAuditInstance extends AbstractModel {
 
     /**
     * 实例公网IP
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PublicIp")
     @Expose
@@ -118,7 +116,6 @@ public class CdsAuditInstance extends AbstractModel {
 
     /**
     * 实例私网IP
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PrivateIp")
     @Expose
@@ -133,7 +130,6 @@ public class CdsAuditInstance extends AbstractModel {
 
     /**
     * 实例域名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Pdomain")
     @Expose
@@ -316,10 +312,8 @@ public class CdsAuditInstance extends AbstractModel {
     }
 
     /**
-     * Get 实例名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例名称 
      * @return InstanceName 实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceName() {
         return this.InstanceName;
@@ -327,19 +321,15 @@ public class CdsAuditInstance extends AbstractModel {
 
     /**
      * Set 实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceName 实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get 实例公网IP
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例公网IP 
      * @return PublicIp 实例公网IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPublicIp() {
         return this.PublicIp;
@@ -347,19 +337,15 @@ public class CdsAuditInstance extends AbstractModel {
 
     /**
      * Set 实例公网IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PublicIp 实例公网IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPublicIp(String PublicIp) {
         this.PublicIp = PublicIp;
     }
 
     /**
-     * Get 实例私网IP
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例私网IP 
      * @return PrivateIp 实例私网IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPrivateIp() {
         return this.PrivateIp;
@@ -367,9 +353,7 @@ public class CdsAuditInstance extends AbstractModel {
 
     /**
      * Set 实例私网IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PrivateIp 实例私网IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPrivateIp(String PrivateIp) {
         this.PrivateIp = PrivateIp;
@@ -392,10 +376,8 @@ public class CdsAuditInstance extends AbstractModel {
     }
 
     /**
-     * Get 实例域名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例域名 
      * @return Pdomain 实例域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPdomain() {
         return this.Pdomain;
@@ -403,9 +385,7 @@ public class CdsAuditInstance extends AbstractModel {
 
     /**
      * Set 实例域名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Pdomain 实例域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPdomain(String Pdomain) {
         this.Pdomain = Pdomain;

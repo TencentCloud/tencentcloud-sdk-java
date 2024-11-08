@@ -45,6 +45,13 @@ public class DescribeInstanceLogFileRequest extends AbstractModel {
     private String CurRunDate;
 
     /**
+    * 请求来源，WEB 前端；CLIENT 客户端
+    */
+    @SerializedName("RequestFromSource")
+    @Expose
+    private String RequestFromSource;
+
+    /**
     * 执行机IP
     */
     @SerializedName("BrokerIp")
@@ -57,6 +64,27 @@ public class DescribeInstanceLogFileRequest extends AbstractModel {
     @SerializedName("OriginFileName")
     @Expose
     private String OriginFileName;
+
+    /**
+    * 执行平台下发执行id
+    */
+    @SerializedName("ExecutionJobId")
+    @Expose
+    private String ExecutionJobId;
+
+    /**
+    * 日志级别，Info/Debug/Warn/Error/All
+    */
+    @SerializedName("LogLevelType")
+    @Expose
+    private String LogLevelType;
+
+    /**
+    * 文件类型,Log/Code
+    */
+    @SerializedName("ExecutionFileType")
+    @Expose
+    private String ExecutionFileType;
 
     /**
      * Get 项目ID 
@@ -107,6 +135,22 @@ public class DescribeInstanceLogFileRequest extends AbstractModel {
     }
 
     /**
+     * Get 请求来源，WEB 前端；CLIENT 客户端 
+     * @return RequestFromSource 请求来源，WEB 前端；CLIENT 客户端
+     */
+    public String getRequestFromSource() {
+        return this.RequestFromSource;
+    }
+
+    /**
+     * Set 请求来源，WEB 前端；CLIENT 客户端
+     * @param RequestFromSource 请求来源，WEB 前端；CLIENT 客户端
+     */
+    public void setRequestFromSource(String RequestFromSource) {
+        this.RequestFromSource = RequestFromSource;
+    }
+
+    /**
      * Get 执行机IP 
      * @return BrokerIp 执行机IP
      */
@@ -138,6 +182,54 @@ public class DescribeInstanceLogFileRequest extends AbstractModel {
         this.OriginFileName = OriginFileName;
     }
 
+    /**
+     * Get 执行平台下发执行id 
+     * @return ExecutionJobId 执行平台下发执行id
+     */
+    public String getExecutionJobId() {
+        return this.ExecutionJobId;
+    }
+
+    /**
+     * Set 执行平台下发执行id
+     * @param ExecutionJobId 执行平台下发执行id
+     */
+    public void setExecutionJobId(String ExecutionJobId) {
+        this.ExecutionJobId = ExecutionJobId;
+    }
+
+    /**
+     * Get 日志级别，Info/Debug/Warn/Error/All 
+     * @return LogLevelType 日志级别，Info/Debug/Warn/Error/All
+     */
+    public String getLogLevelType() {
+        return this.LogLevelType;
+    }
+
+    /**
+     * Set 日志级别，Info/Debug/Warn/Error/All
+     * @param LogLevelType 日志级别，Info/Debug/Warn/Error/All
+     */
+    public void setLogLevelType(String LogLevelType) {
+        this.LogLevelType = LogLevelType;
+    }
+
+    /**
+     * Get 文件类型,Log/Code 
+     * @return ExecutionFileType 文件类型,Log/Code
+     */
+    public String getExecutionFileType() {
+        return this.ExecutionFileType;
+    }
+
+    /**
+     * Set 文件类型,Log/Code
+     * @param ExecutionFileType 文件类型,Log/Code
+     */
+    public void setExecutionFileType(String ExecutionFileType) {
+        this.ExecutionFileType = ExecutionFileType;
+    }
+
     public DescribeInstanceLogFileRequest() {
     }
 
@@ -155,11 +247,23 @@ public class DescribeInstanceLogFileRequest extends AbstractModel {
         if (source.CurRunDate != null) {
             this.CurRunDate = new String(source.CurRunDate);
         }
+        if (source.RequestFromSource != null) {
+            this.RequestFromSource = new String(source.RequestFromSource);
+        }
         if (source.BrokerIp != null) {
             this.BrokerIp = new String(source.BrokerIp);
         }
         if (source.OriginFileName != null) {
             this.OriginFileName = new String(source.OriginFileName);
+        }
+        if (source.ExecutionJobId != null) {
+            this.ExecutionJobId = new String(source.ExecutionJobId);
+        }
+        if (source.LogLevelType != null) {
+            this.LogLevelType = new String(source.LogLevelType);
+        }
+        if (source.ExecutionFileType != null) {
+            this.ExecutionFileType = new String(source.ExecutionFileType);
         }
     }
 
@@ -171,8 +275,12 @@ public class DescribeInstanceLogFileRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "CurRunDate", this.CurRunDate);
+        this.setParamSimple(map, prefix + "RequestFromSource", this.RequestFromSource);
         this.setParamSimple(map, prefix + "BrokerIp", this.BrokerIp);
         this.setParamSimple(map, prefix + "OriginFileName", this.OriginFileName);
+        this.setParamSimple(map, prefix + "ExecutionJobId", this.ExecutionJobId);
+        this.setParamSimple(map, prefix + "LogLevelType", this.LogLevelType);
+        this.setParamSimple(map, prefix + "ExecutionFileType", this.ExecutionFileType);
 
     }
 }

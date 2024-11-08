@@ -136,6 +136,14 @@ public class InstanceLogInfo extends AbstractModel {
     private AttributeItemDTO [] ExtensionInfo;
 
     /**
+    * 统一执行平台，下发执行Id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ExecutionJobId")
+    @Expose
+    private String ExecutionJobId;
+
+    /**
      * Get 任务id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TaskId 任务id
@@ -415,6 +423,26 @@ public class InstanceLogInfo extends AbstractModel {
         this.ExtensionInfo = ExtensionInfo;
     }
 
+    /**
+     * Get 统一执行平台，下发执行Id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ExecutionJobId 统一执行平台，下发执行Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getExecutionJobId() {
+        return this.ExecutionJobId;
+    }
+
+    /**
+     * Set 统一执行平台，下发执行Id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExecutionJobId 统一执行平台，下发执行Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExecutionJobId(String ExecutionJobId) {
+        this.ExecutionJobId = ExecutionJobId;
+    }
+
     public InstanceLogInfo() {
     }
 
@@ -468,6 +496,9 @@ public class InstanceLogInfo extends AbstractModel {
                 this.ExtensionInfo[i] = new AttributeItemDTO(source.ExtensionInfo[i]);
             }
         }
+        if (source.ExecutionJobId != null) {
+            this.ExecutionJobId = new String(source.ExecutionJobId);
+        }
     }
 
 
@@ -489,6 +520,7 @@ public class InstanceLogInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "InstanceStatus", this.InstanceStatus);
         this.setParamSimple(map, prefix + "CodeFileName", this.CodeFileName);
         this.setParamArrayObj(map, prefix + "ExtensionInfo.", this.ExtensionInfo);
+        this.setParamSimple(map, prefix + "ExecutionJobId", this.ExecutionJobId);
 
     }
 }

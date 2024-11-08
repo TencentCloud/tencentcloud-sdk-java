@@ -72,7 +72,7 @@ public class UsageQuota extends AbstractModel {
     private Long ChainCnt;
 
     /**
-    * 营销风控次数
+    * 风险检测次数
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RiskCnt")
@@ -208,21 +208,25 @@ public class UsageQuota extends AbstractModel {
     }
 
     /**
-     * Get 营销风控次数
+     * Get 风险检测次数
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RiskCnt 营销风控次数
+     * @return RiskCnt 风险检测次数
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public Long getRiskCnt() {
         return this.RiskCnt;
     }
 
     /**
-     * Set 营销风控次数
+     * Set 风险检测次数
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RiskCnt 营销风控次数
+     * @param RiskCnt 风险检测次数
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public void setRiskCnt(Long RiskCnt) {
         this.RiskCnt = RiskCnt;
     }

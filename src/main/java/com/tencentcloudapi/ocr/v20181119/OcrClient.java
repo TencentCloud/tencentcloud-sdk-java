@@ -1309,6 +1309,19 @@ public class OcrClient extends AbstractClient{
     }
 
     /**
+     *本接口支持二代身份证、临时身份证、港澳台居住证、外国人永久居留证，字段内容识别功能，包括姓名、性别、民族、出生、出生日期、住址、公民身份号码、签发机关、有效期限、国籍、通行证号码、持证人持有号码；支持返回证件类型；支持翻拍、复印、边框不完整、遮挡、字段级反光和字段级完整性告警；支持卡片主体框裁剪和头像裁剪。
+
+默认接口请求频率限制：20次/秒。
+     * @param req RecognizeValidIDCardOCRRequest
+     * @return RecognizeValidIDCardOCRResponse
+     * @throws TencentCloudSDKException
+     */
+    public RecognizeValidIDCardOCRResponse RecognizeValidIDCardOCR(RecognizeValidIDCardOCRRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RecognizeValidIDCardOCR", RecognizeValidIDCardOCRResponse.class);
+    }
+
+    /**
      *服务已迁移至 [文档解析](https://cloud.tencent.com/document/product/1759/107504)，请跳转查看接口文档。该接口支持将图片或PDF文件转换成Markdown格式文件，可解析包括表格、公式、图片、标题、段落、页眉、页脚等内容元素，并将内容智能转换成阅读顺序。
      * @param req ReconstructDocumentRequest
      * @return ReconstructDocumentResponse

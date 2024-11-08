@@ -45,6 +45,13 @@ public class InstanceNodeDistribution extends AbstractModel {
     private Long NodeCount;
 
     /**
+    * 有调度任务且没有切回的可用区，此标识为true
+    */
+    @SerializedName("NodePermWipeFlag")
+    @Expose
+    private Boolean NodePermWipeFlag;
+
+    /**
      * Get 可用区 
      * @return ZoneName 可用区
      */
@@ -92,6 +99,22 @@ public class InstanceNodeDistribution extends AbstractModel {
         this.NodeCount = NodeCount;
     }
 
+    /**
+     * Get 有调度任务且没有切回的可用区，此标识为true 
+     * @return NodePermWipeFlag 有调度任务且没有切回的可用区，此标识为true
+     */
+    public Boolean getNodePermWipeFlag() {
+        return this.NodePermWipeFlag;
+    }
+
+    /**
+     * Set 有调度任务且没有切回的可用区，此标识为true
+     * @param NodePermWipeFlag 有调度任务且没有切回的可用区，此标识为true
+     */
+    public void setNodePermWipeFlag(Boolean NodePermWipeFlag) {
+        this.NodePermWipeFlag = NodePermWipeFlag;
+    }
+
     public InstanceNodeDistribution() {
     }
 
@@ -109,6 +132,9 @@ public class InstanceNodeDistribution extends AbstractModel {
         if (source.NodeCount != null) {
             this.NodeCount = new Long(source.NodeCount);
         }
+        if (source.NodePermWipeFlag != null) {
+            this.NodePermWipeFlag = new Boolean(source.NodePermWipeFlag);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class InstanceNodeDistribution extends AbstractModel {
         this.setParamSimple(map, prefix + "ZoneName", this.ZoneName);
         this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
         this.setParamSimple(map, prefix + "NodeCount", this.NodeCount);
+        this.setParamSimple(map, prefix + "NodePermWipeFlag", this.NodePermWipeFlag);
 
     }
 }

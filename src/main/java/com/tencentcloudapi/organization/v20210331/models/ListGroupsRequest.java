@@ -73,7 +73,7 @@ public class ListGroupsRequest extends AbstractModel {
     private String SortField;
 
     /**
-    * 排序类型：Desc 倒序 Asc  正序，需要你和SortField一起设置
+    * 排序类型：Desc 倒序 Asc  正序，需要您和SortField一起设置
     */
     @SerializedName("SortType")
     @Expose
@@ -199,16 +199,16 @@ public class ListGroupsRequest extends AbstractModel {
     }
 
     /**
-     * Get 排序类型：Desc 倒序 Asc  正序，需要你和SortField一起设置 
-     * @return SortType 排序类型：Desc 倒序 Asc  正序，需要你和SortField一起设置
+     * Get 排序类型：Desc 倒序 Asc  正序，需要您和SortField一起设置 
+     * @return SortType 排序类型：Desc 倒序 Asc  正序，需要您和SortField一起设置
      */
     public String getSortType() {
         return this.SortType;
     }
 
     /**
-     * Set 排序类型：Desc 倒序 Asc  正序，需要你和SortField一起设置
-     * @param SortType 排序类型：Desc 倒序 Asc  正序，需要你和SortField一起设置
+     * Set 排序类型：Desc 倒序 Asc  正序，需要您和SortField一起设置
+     * @param SortType 排序类型：Desc 倒序 Asc  正序，需要您和SortField一起设置
      */
     public void setSortType(String SortType) {
         this.SortType = SortType;

@@ -25,7 +25,6 @@ public class ChangePwdTaskDetail extends AbstractModel {
 
     /**
     * 资产信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Device")
     @Expose
@@ -33,7 +32,6 @@ public class ChangePwdTaskDetail extends AbstractModel {
 
     /**
     * 资产账号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Account")
     @Expose
@@ -41,17 +39,14 @@ public class ChangePwdTaskDetail extends AbstractModel {
 
     /**
     * 上次改密结果。0-未改密  1-改密成功 2-改密失败
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LastChangeStatus")
     @Expose
     private Long LastChangeStatus;
 
     /**
-     * Get 资产信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资产信息 
      * @return Device 资产信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Device getDevice() {
         return this.Device;
@@ -59,19 +54,15 @@ public class ChangePwdTaskDetail extends AbstractModel {
 
     /**
      * Set 资产信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Device 资产信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDevice(Device Device) {
         this.Device = Device;
     }
 
     /**
-     * Get 资产账号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资产账号 
      * @return Account 资产账号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAccount() {
         return this.Account;
@@ -79,19 +70,15 @@ public class ChangePwdTaskDetail extends AbstractModel {
 
     /**
      * Set 资产账号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Account 资产账号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAccount(String Account) {
         this.Account = Account;
     }
 
     /**
-     * Get 上次改密结果。0-未改密  1-改密成功 2-改密失败
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 上次改密结果。0-未改密  1-改密成功 2-改密失败 
      * @return LastChangeStatus 上次改密结果。0-未改密  1-改密成功 2-改密失败
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLastChangeStatus() {
         return this.LastChangeStatus;
@@ -99,9 +86,7 @@ public class ChangePwdTaskDetail extends AbstractModel {
 
     /**
      * Set 上次改密结果。0-未改密  1-改密成功 2-改密失败
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LastChangeStatus 上次改密结果。0-未改密  1-改密成功 2-改密失败
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLastChangeStatus(Long LastChangeStatus) {
         this.LastChangeStatus = LastChangeStatus;

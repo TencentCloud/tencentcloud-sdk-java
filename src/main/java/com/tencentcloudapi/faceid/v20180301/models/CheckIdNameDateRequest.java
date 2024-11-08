@@ -24,115 +24,130 @@ import java.util.HashMap;
 public class CheckIdNameDateRequest extends AbstractModel {
 
     /**
-    * 姓名
+    * 姓名。
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 身份证号
+    * 身份证号。
     */
     @SerializedName("IdCard")
     @Expose
     private String IdCard;
 
     /**
-    * 身份证有效期开始时间，格式：YYYYMMDD。如：20210701
+    * 身份证有效期开始时间。
+- 格式：YYYYMMDD，如：20210701。
     */
     @SerializedName("ValidityBegin")
     @Expose
     private String ValidityBegin;
 
     /**
-    * 身份证有效期到期时间，格式：YYYYMMDD，长期用“00000000”代替；如：20210701
+    * 身份证有效期到期时间。
+格式：YYYYMMDD，长期用“00000000”代替，如：20210701。
     */
     @SerializedName("ValidityEnd")
     @Expose
     private String ValidityEnd;
 
     /**
-    * 敏感数据加密信息。对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+    * 敏感数据加密信息。
+- 对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。
     */
     @SerializedName("Encryption")
     @Expose
     private Encryption Encryption;
 
     /**
-     * Get 姓名 
-     * @return Name 姓名
+     * Get 姓名。 
+     * @return Name 姓名。
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 姓名
-     * @param Name 姓名
+     * Set 姓名。
+     * @param Name 姓名。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 身份证号 
-     * @return IdCard 身份证号
+     * Get 身份证号。 
+     * @return IdCard 身份证号。
      */
     public String getIdCard() {
         return this.IdCard;
     }
 
     /**
-     * Set 身份证号
-     * @param IdCard 身份证号
+     * Set 身份证号。
+     * @param IdCard 身份证号。
      */
     public void setIdCard(String IdCard) {
         this.IdCard = IdCard;
     }
 
     /**
-     * Get 身份证有效期开始时间，格式：YYYYMMDD。如：20210701 
-     * @return ValidityBegin 身份证有效期开始时间，格式：YYYYMMDD。如：20210701
+     * Get 身份证有效期开始时间。
+- 格式：YYYYMMDD，如：20210701。 
+     * @return ValidityBegin 身份证有效期开始时间。
+- 格式：YYYYMMDD，如：20210701。
      */
     public String getValidityBegin() {
         return this.ValidityBegin;
     }
 
     /**
-     * Set 身份证有效期开始时间，格式：YYYYMMDD。如：20210701
-     * @param ValidityBegin 身份证有效期开始时间，格式：YYYYMMDD。如：20210701
+     * Set 身份证有效期开始时间。
+- 格式：YYYYMMDD，如：20210701。
+     * @param ValidityBegin 身份证有效期开始时间。
+- 格式：YYYYMMDD，如：20210701。
      */
     public void setValidityBegin(String ValidityBegin) {
         this.ValidityBegin = ValidityBegin;
     }
 
     /**
-     * Get 身份证有效期到期时间，格式：YYYYMMDD，长期用“00000000”代替；如：20210701 
-     * @return ValidityEnd 身份证有效期到期时间，格式：YYYYMMDD，长期用“00000000”代替；如：20210701
+     * Get 身份证有效期到期时间。
+格式：YYYYMMDD，长期用“00000000”代替，如：20210701。 
+     * @return ValidityEnd 身份证有效期到期时间。
+格式：YYYYMMDD，长期用“00000000”代替，如：20210701。
      */
     public String getValidityEnd() {
         return this.ValidityEnd;
     }
 
     /**
-     * Set 身份证有效期到期时间，格式：YYYYMMDD，长期用“00000000”代替；如：20210701
-     * @param ValidityEnd 身份证有效期到期时间，格式：YYYYMMDD，长期用“00000000”代替；如：20210701
+     * Set 身份证有效期到期时间。
+格式：YYYYMMDD，长期用“00000000”代替，如：20210701。
+     * @param ValidityEnd 身份证有效期到期时间。
+格式：YYYYMMDD，长期用“00000000”代替，如：20210701。
      */
     public void setValidityEnd(String ValidityEnd) {
         this.ValidityEnd = ValidityEnd;
     }
 
     /**
-     * Get 敏感数据加密信息。对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。 
-     * @return Encryption 敏感数据加密信息。对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+     * Get 敏感数据加密信息。
+- 对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。 
+     * @return Encryption 敏感数据加密信息。
+- 对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。
      */
     public Encryption getEncryption() {
         return this.Encryption;
     }
 
     /**
-     * Set 敏感数据加密信息。对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。
-     * @param Encryption 敏感数据加密信息。对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+     * Set 敏感数据加密信息。
+- 对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+     * @param Encryption 敏感数据加密信息。
+- 对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。
      */
     public void setEncryption(Encryption Encryption) {
         this.Encryption = Encryption;

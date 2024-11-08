@@ -25,7 +25,6 @@ public class RuleItem extends AbstractModel {
 
     /**
     * 字段名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Key")
     @Expose
@@ -33,7 +32,6 @@ public class RuleItem extends AbstractModel {
 
     /**
     * 操作关系（等于、不等于、包含、不包含）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Operate")
     @Expose
@@ -41,7 +39,6 @@ public class RuleItem extends AbstractModel {
 
     /**
     * 内容
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Value")
     @Expose
@@ -49,17 +46,14 @@ public class RuleItem extends AbstractModel {
 
     /**
     * 内容，v2多值版本使用
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Values")
     @Expose
     private String [] Values;
 
     /**
-     * Get 字段名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 字段名称 
      * @return Key 字段名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKey() {
         return this.Key;
@@ -67,19 +61,15 @@ public class RuleItem extends AbstractModel {
 
     /**
      * Set 字段名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Key 字段名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKey(String Key) {
         this.Key = Key;
     }
 
     /**
-     * Get 操作关系（等于、不等于、包含、不包含）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 操作关系（等于、不等于、包含、不包含） 
      * @return Operate 操作关系（等于、不等于、包含、不包含）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOperate() {
         return this.Operate;
@@ -87,19 +77,15 @@ public class RuleItem extends AbstractModel {
 
     /**
      * Set 操作关系（等于、不等于、包含、不包含）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Operate 操作关系（等于、不等于、包含、不包含）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOperate(String Operate) {
         this.Operate = Operate;
     }
 
     /**
-     * Get 内容
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 内容 
      * @return Value 内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getValue() {
         return this.Value;
@@ -107,19 +93,15 @@ public class RuleItem extends AbstractModel {
 
     /**
      * Set 内容
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Value 内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValue(String Value) {
         this.Value = Value;
     }
 
     /**
-     * Get 内容，v2多值版本使用
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 内容，v2多值版本使用 
      * @return Values 内容，v2多值版本使用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getValues() {
         return this.Values;
@@ -127,9 +109,7 @@ public class RuleItem extends AbstractModel {
 
     /**
      * Set 内容，v2多值版本使用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Values 内容，v2多值版本使用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValues(String [] Values) {
         this.Values = Values;

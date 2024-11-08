@@ -25,7 +25,6 @@ public class DescribeChangePwdTaskResponse extends AbstractModel {
 
     /**
     * 任务详情
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tasks")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeChangePwdTaskResponse extends AbstractModel {
 
     /**
     * 任务总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeChangePwdTaskResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 任务详情
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务详情 
      * @return Tasks 任务详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ChangePwdTaskInfo [] getTasks() {
         return this.Tasks;
@@ -58,19 +54,15 @@ public class DescribeChangePwdTaskResponse extends AbstractModel {
 
     /**
      * Set 任务详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tasks 任务详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTasks(ChangePwdTaskInfo [] Tasks) {
         this.Tasks = Tasks;
     }
 
     /**
-     * Get 任务总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务总数 
      * @return TotalCount 任务总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -78,9 +70,7 @@ public class DescribeChangePwdTaskResponse extends AbstractModel {
 
     /**
      * Set 任务总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 任务总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

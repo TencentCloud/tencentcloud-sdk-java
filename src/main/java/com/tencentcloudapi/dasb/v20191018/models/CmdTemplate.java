@@ -46,7 +46,6 @@ public class CmdTemplate extends AbstractModel {
 
     /**
     * 命令模板类型 1-内置 2-自定义	
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -101,10 +100,8 @@ public class CmdTemplate extends AbstractModel {
     }
 
     /**
-     * Get 命令模板类型 1-内置 2-自定义	
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 命令模板类型 1-内置 2-自定义	 
      * @return Type 命令模板类型 1-内置 2-自定义	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getType() {
         return this.Type;
@@ -112,9 +109,7 @@ public class CmdTemplate extends AbstractModel {
 
     /**
      * Set 命令模板类型 1-内置 2-自定义	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 命令模板类型 1-内置 2-自定义	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(Long Type) {
         this.Type = Type;

@@ -164,6 +164,13 @@ public class CreateNativeNodePoolParam extends AbstractModel {
     private String [] KeyIds;
 
     /**
+    * 节点池类型
+    */
+    @SerializedName("MachineType")
+    @Expose
+    private String MachineType;
+
+    /**
      * Get 节点池伸缩配置 
      * @return Scaling 节点池伸缩配置
      */
@@ -483,6 +490,22 @@ public class CreateNativeNodePoolParam extends AbstractModel {
         this.KeyIds = KeyIds;
     }
 
+    /**
+     * Get 节点池类型 
+     * @return MachineType 节点池类型
+     */
+    public String getMachineType() {
+        return this.MachineType;
+    }
+
+    /**
+     * Set 节点池类型
+     * @param MachineType 节点池类型
+     */
+    public void setMachineType(String MachineType) {
+        this.MachineType = MachineType;
+    }
+
     public CreateNativeNodePoolParam() {
     }
 
@@ -569,6 +592,9 @@ public class CreateNativeNodePoolParam extends AbstractModel {
                 this.KeyIds[i] = new String(source.KeyIds[i]);
             }
         }
+        if (source.MachineType != null) {
+            this.MachineType = new String(source.MachineType);
+        }
     }
 
 
@@ -596,6 +622,7 @@ public class CreateNativeNodePoolParam extends AbstractModel {
         this.setParamObj(map, prefix + "InternetAccessible.", this.InternetAccessible);
         this.setParamArrayObj(map, prefix + "DataDisks.", this.DataDisks);
         this.setParamArraySimple(map, prefix + "KeyIds.", this.KeyIds);
+        this.setParamSimple(map, prefix + "MachineType", this.MachineType);
 
     }
 }

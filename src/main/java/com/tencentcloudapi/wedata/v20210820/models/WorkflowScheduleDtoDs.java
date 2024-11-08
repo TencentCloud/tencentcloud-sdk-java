@@ -192,6 +192,30 @@ public class WorkflowScheduleDtoDs extends AbstractModel {
     private String LatestSubmitTime;
 
     /**
+    * 日历调度是否开启
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CalendarOpen")
+    @Expose
+    private String CalendarOpen;
+
+    /**
+    * 日历调度名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CalendarName")
+    @Expose
+    private String CalendarName;
+
+    /**
+    * 日历调度id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CalendarId")
+    @Expose
+    private String CalendarId;
+
+    /**
      * Get 项目ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ProjectId 项目ID
@@ -611,6 +635,66 @@ public class WorkflowScheduleDtoDs extends AbstractModel {
         this.LatestSubmitTime = LatestSubmitTime;
     }
 
+    /**
+     * Get 日历调度是否开启
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CalendarOpen 日历调度是否开启
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCalendarOpen() {
+        return this.CalendarOpen;
+    }
+
+    /**
+     * Set 日历调度是否开启
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CalendarOpen 日历调度是否开启
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCalendarOpen(String CalendarOpen) {
+        this.CalendarOpen = CalendarOpen;
+    }
+
+    /**
+     * Get 日历调度名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CalendarName 日历调度名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCalendarName() {
+        return this.CalendarName;
+    }
+
+    /**
+     * Set 日历调度名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CalendarName 日历调度名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCalendarName(String CalendarName) {
+        this.CalendarName = CalendarName;
+    }
+
+    /**
+     * Get 日历调度id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CalendarId 日历调度id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCalendarId() {
+        return this.CalendarId;
+    }
+
+    /**
+     * Set 日历调度id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CalendarId 日历调度id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCalendarId(String CalendarId) {
+        this.CalendarId = CalendarId;
+    }
+
     public WorkflowScheduleDtoDs() {
     }
 
@@ -682,6 +766,15 @@ public class WorkflowScheduleDtoDs extends AbstractModel {
         if (source.LatestSubmitTime != null) {
             this.LatestSubmitTime = new String(source.LatestSubmitTime);
         }
+        if (source.CalendarOpen != null) {
+            this.CalendarOpen = new String(source.CalendarOpen);
+        }
+        if (source.CalendarName != null) {
+            this.CalendarName = new String(source.CalendarName);
+        }
+        if (source.CalendarId != null) {
+            this.CalendarId = new String(source.CalendarId);
+        }
     }
 
 
@@ -710,6 +803,9 @@ public class WorkflowScheduleDtoDs extends AbstractModel {
         this.setParamSimple(map, prefix + "SchedulerDesc", this.SchedulerDesc);
         this.setParamSimple(map, prefix + "FirstSubmitTime", this.FirstSubmitTime);
         this.setParamSimple(map, prefix + "LatestSubmitTime", this.LatestSubmitTime);
+        this.setParamSimple(map, prefix + "CalendarOpen", this.CalendarOpen);
+        this.setParamSimple(map, prefix + "CalendarName", this.CalendarName);
+        this.setParamSimple(map, prefix + "CalendarId", this.CalendarId);
 
     }
 }

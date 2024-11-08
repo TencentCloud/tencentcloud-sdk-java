@@ -112,6 +112,30 @@ public class InstanceLifeCycleOpsDto extends AbstractModel {
     private String InstanceState;
 
     /**
+    * 调度运行方式, 0: 周期调度, 1: 空跑调度
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ScheduleRunType")
+    @Expose
+    private Long ScheduleRunType;
+
+    /**
+    * 统一执行平台，下发执行Id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ExecutionJobId")
+    @Expose
+    private String ExecutionJobId;
+
+    /**
+    * 实例运行类型: 0: 普通运行, 1: 空跑运行
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InstanceRunType")
+    @Expose
+    private Long InstanceRunType;
+
+    /**
      * Get 任务id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TaskId 任务id
@@ -331,6 +355,66 @@ public class InstanceLifeCycleOpsDto extends AbstractModel {
         this.InstanceState = InstanceState;
     }
 
+    /**
+     * Get 调度运行方式, 0: 周期调度, 1: 空跑调度
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ScheduleRunType 调度运行方式, 0: 周期调度, 1: 空跑调度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getScheduleRunType() {
+        return this.ScheduleRunType;
+    }
+
+    /**
+     * Set 调度运行方式, 0: 周期调度, 1: 空跑调度
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ScheduleRunType 调度运行方式, 0: 周期调度, 1: 空跑调度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setScheduleRunType(Long ScheduleRunType) {
+        this.ScheduleRunType = ScheduleRunType;
+    }
+
+    /**
+     * Get 统一执行平台，下发执行Id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ExecutionJobId 统一执行平台，下发执行Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getExecutionJobId() {
+        return this.ExecutionJobId;
+    }
+
+    /**
+     * Set 统一执行平台，下发执行Id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExecutionJobId 统一执行平台，下发执行Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExecutionJobId(String ExecutionJobId) {
+        this.ExecutionJobId = ExecutionJobId;
+    }
+
+    /**
+     * Get 实例运行类型: 0: 普通运行, 1: 空跑运行
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InstanceRunType 实例运行类型: 0: 普通运行, 1: 空跑运行
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getInstanceRunType() {
+        return this.InstanceRunType;
+    }
+
+    /**
+     * Set 实例运行类型: 0: 普通运行, 1: 空跑运行
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstanceRunType 实例运行类型: 0: 普通运行, 1: 空跑运行
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInstanceRunType(Long InstanceRunType) {
+        this.InstanceRunType = InstanceRunType;
+    }
+
     public InstanceLifeCycleOpsDto() {
     }
 
@@ -375,6 +459,15 @@ public class InstanceLifeCycleOpsDto extends AbstractModel {
         if (source.InstanceState != null) {
             this.InstanceState = new String(source.InstanceState);
         }
+        if (source.ScheduleRunType != null) {
+            this.ScheduleRunType = new Long(source.ScheduleRunType);
+        }
+        if (source.ExecutionJobId != null) {
+            this.ExecutionJobId = new String(source.ExecutionJobId);
+        }
+        if (source.InstanceRunType != null) {
+            this.InstanceRunType = new Long(source.InstanceRunType);
+        }
     }
 
 
@@ -393,6 +486,9 @@ public class InstanceLifeCycleOpsDto extends AbstractModel {
         this.setParamSimple(map, prefix + "ErrorCodeLevel", this.ErrorCodeLevel);
         this.setParamObj(map, prefix + "InstanceLogListOpsDto.", this.InstanceLogListOpsDto);
         this.setParamSimple(map, prefix + "InstanceState", this.InstanceState);
+        this.setParamSimple(map, prefix + "ScheduleRunType", this.ScheduleRunType);
+        this.setParamSimple(map, prefix + "ExecutionJobId", this.ExecutionJobId);
+        this.setParamSimple(map, prefix + "InstanceRunType", this.InstanceRunType);
 
     }
 }
