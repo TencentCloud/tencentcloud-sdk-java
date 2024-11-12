@@ -31,7 +31,7 @@ public class GroupQARequest extends AbstractModel {
     private String BotBizId;
 
     /**
-    * QA业务ID列表
+    * QaBizID列表
     */
     @SerializedName("QaBizIds")
     @Expose
@@ -61,16 +61,16 @@ public class GroupQARequest extends AbstractModel {
     }
 
     /**
-     * Get QA业务ID列表 
-     * @return QaBizIds QA业务ID列表
+     * Get QaBizID列表 
+     * @return QaBizIds QaBizID列表
      */
     public String [] getQaBizIds() {
         return this.QaBizIds;
     }
 
     /**
-     * Set QA业务ID列表
-     * @param QaBizIds QA业务ID列表
+     * Set QaBizID列表
+     * @param QaBizIds QaBizID列表
      */
     public void setQaBizIds(String [] QaBizIds) {
         this.QaBizIds = QaBizIds;

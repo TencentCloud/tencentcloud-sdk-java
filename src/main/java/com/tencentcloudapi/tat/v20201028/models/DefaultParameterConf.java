@@ -25,7 +25,6 @@ public class DefaultParameterConf extends AbstractModel {
 
     /**
     * 参数名。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ParameterName")
     @Expose
@@ -33,7 +32,6 @@ public class DefaultParameterConf extends AbstractModel {
 
     /**
     * 参数默认值。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ParameterValue")
     @Expose
@@ -41,17 +39,14 @@ public class DefaultParameterConf extends AbstractModel {
 
     /**
     * 参数描述。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ParameterDescription")
     @Expose
     private String ParameterDescription;
 
     /**
-     * Get 参数名。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 参数名。 
      * @return ParameterName 参数名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getParameterName() {
         return this.ParameterName;
@@ -59,19 +54,15 @@ public class DefaultParameterConf extends AbstractModel {
 
     /**
      * Set 参数名。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ParameterName 参数名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setParameterName(String ParameterName) {
         this.ParameterName = ParameterName;
     }
 
     /**
-     * Get 参数默认值。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 参数默认值。 
      * @return ParameterValue 参数默认值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getParameterValue() {
         return this.ParameterValue;
@@ -79,19 +70,15 @@ public class DefaultParameterConf extends AbstractModel {
 
     /**
      * Set 参数默认值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ParameterValue 参数默认值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setParameterValue(String ParameterValue) {
         this.ParameterValue = ParameterValue;
     }
 
     /**
-     * Get 参数描述。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 参数描述。 
      * @return ParameterDescription 参数描述。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getParameterDescription() {
         return this.ParameterDescription;
@@ -99,9 +86,7 @@ public class DefaultParameterConf extends AbstractModel {
 
     /**
      * Set 参数描述。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ParameterDescription 参数描述。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setParameterDescription(String ParameterDescription) {
         this.ParameterDescription = ParameterDescription;

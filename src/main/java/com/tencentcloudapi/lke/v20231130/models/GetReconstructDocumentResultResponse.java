@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class GetReconstructDocumentResultResponse extends AbstractModel {
 
     /**
-    * 任务状态: Success->执行完成；Processing->执行中；Failed->执行失败；WaitExecute->等待执行；
+    * 任务状态: Success->执行完成；Processing->执行中；Failed->执行失败；WaitExecute->等待执行。
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 输入文件中嵌入的图片中文字内容的识别结果，存储在腾讯云cos的下载地址
+    * 本次文档解析的结果文件，存储在腾讯云COS的下载URL，下载URL的有效期为10分钟。
     */
     @SerializedName("DocumentRecognizeResultUrl")
     @Expose
     private String DocumentRecognizeResultUrl;
 
     /**
-    * 文档解析失败的页码
+    * 本次文档解析失败的页码信息。
     */
     @SerializedName("FailedPages")
     @Expose
@@ -52,48 +52,48 @@ public class GetReconstructDocumentResultResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 任务状态: Success->执行完成；Processing->执行中；Failed->执行失败；WaitExecute->等待执行； 
-     * @return Status 任务状态: Success->执行完成；Processing->执行中；Failed->执行失败；WaitExecute->等待执行；
+     * Get 任务状态: Success->执行完成；Processing->执行中；Failed->执行失败；WaitExecute->等待执行。 
+     * @return Status 任务状态: Success->执行完成；Processing->执行中；Failed->执行失败；WaitExecute->等待执行。
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 任务状态: Success->执行完成；Processing->执行中；Failed->执行失败；WaitExecute->等待执行；
-     * @param Status 任务状态: Success->执行完成；Processing->执行中；Failed->执行失败；WaitExecute->等待执行；
+     * Set 任务状态: Success->执行完成；Processing->执行中；Failed->执行失败；WaitExecute->等待执行。
+     * @param Status 任务状态: Success->执行完成；Processing->执行中；Failed->执行失败；WaitExecute->等待执行。
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 输入文件中嵌入的图片中文字内容的识别结果，存储在腾讯云cos的下载地址 
-     * @return DocumentRecognizeResultUrl 输入文件中嵌入的图片中文字内容的识别结果，存储在腾讯云cos的下载地址
+     * Get 本次文档解析的结果文件，存储在腾讯云COS的下载URL，下载URL的有效期为10分钟。 
+     * @return DocumentRecognizeResultUrl 本次文档解析的结果文件，存储在腾讯云COS的下载URL，下载URL的有效期为10分钟。
      */
     public String getDocumentRecognizeResultUrl() {
         return this.DocumentRecognizeResultUrl;
     }
 
     /**
-     * Set 输入文件中嵌入的图片中文字内容的识别结果，存储在腾讯云cos的下载地址
-     * @param DocumentRecognizeResultUrl 输入文件中嵌入的图片中文字内容的识别结果，存储在腾讯云cos的下载地址
+     * Set 本次文档解析的结果文件，存储在腾讯云COS的下载URL，下载URL的有效期为10分钟。
+     * @param DocumentRecognizeResultUrl 本次文档解析的结果文件，存储在腾讯云COS的下载URL，下载URL的有效期为10分钟。
      */
     public void setDocumentRecognizeResultUrl(String DocumentRecognizeResultUrl) {
         this.DocumentRecognizeResultUrl = DocumentRecognizeResultUrl;
     }
 
     /**
-     * Get 文档解析失败的页码 
-     * @return FailedPages 文档解析失败的页码
+     * Get 本次文档解析失败的页码信息。 
+     * @return FailedPages 本次文档解析失败的页码信息。
      */
     public ReconstructDocumentFailedPage [] getFailedPages() {
         return this.FailedPages;
     }
 
     /**
-     * Set 文档解析失败的页码
-     * @param FailedPages 文档解析失败的页码
+     * Set 本次文档解析失败的页码信息。
+     * @param FailedPages 本次文档解析失败的页码信息。
      */
     public void setFailedPages(ReconstructDocumentFailedPage [] FailedPages) {
         this.FailedPages = FailedPages;

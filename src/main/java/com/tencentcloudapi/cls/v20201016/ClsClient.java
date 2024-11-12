@@ -134,6 +134,17 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
+     *内部云产品接入使用相关接口
+     * @param req CreateCloudProductLogTaskRequest
+     * @return CreateCloudProductLogTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCloudProductLogTaskResponse CreateCloudProductLogTask(CreateCloudProductLogTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateCloudProductLogTask", CreateCloudProductLogTaskResponse.class);
+    }
+
+    /**
      *创建采集规则配置
      * @param req CreateConfigRequest
      * @return CreateConfigResponse
@@ -351,6 +362,17 @@ public class ClsClient extends AbstractClient{
     public DeleteAlarmShieldResponse DeleteAlarmShield(DeleteAlarmShieldRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteAlarmShield", DeleteAlarmShieldResponse.class);
+    }
+
+    /**
+     *内部云产品接入使用相关接口
+     * @param req DeleteCloudProductLogTaskRequest
+     * @return DeleteCloudProductLogTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCloudProductLogTaskResponse DeleteCloudProductLogTask(DeleteCloudProductLogTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteCloudProductLogTask", DeleteCloudProductLogTaskResponse.class);
     }
 
     /**
@@ -582,6 +604,17 @@ public class ClsClient extends AbstractClient{
     public DescribeAlertRecordHistoryResponse DescribeAlertRecordHistory(DescribeAlertRecordHistoryRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeAlertRecordHistory", DescribeAlertRecordHistoryResponse.class);
+    }
+
+    /**
+     *云产品接入使用相关接口
+     * @param req DescribeCloudProductLogTasksRequest
+     * @return DescribeCloudProductLogTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCloudProductLogTasksResponse DescribeCloudProductLogTasks(DescribeCloudProductLogTasksRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCloudProductLogTasks", DescribeCloudProductLogTasksResponse.class);
     }
 
     /**
@@ -913,6 +946,17 @@ API返回数据包最大49MB，建议启用 gzip 压缩（HTTP Request Header Ac
     public ModifyAlarmShieldResponse ModifyAlarmShield(ModifyAlarmShieldRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyAlarmShield", ModifyAlarmShieldResponse.class);
+    }
+
+    /**
+     *内部云产品接入使用相关接口
+     * @param req ModifyCloudProductLogTaskRequest
+     * @return ModifyCloudProductLogTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCloudProductLogTaskResponse ModifyCloudProductLogTask(ModifyCloudProductLogTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyCloudProductLogTask", ModifyCloudProductLogTaskResponse.class);
     }
 
     /**

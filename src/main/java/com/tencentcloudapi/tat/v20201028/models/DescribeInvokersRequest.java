@@ -31,11 +31,7 @@ public class DescribeInvokersRequest extends AbstractModel {
     private String [] InvokerIds;
 
     /**
-    * 过滤条件：
-
-<li> invoker-id - String - 是否必填：否 - （过滤条件）按执行器ID过滤。
-<li> command-id - String - 是否必填：否 - （过滤条件）按命令ID过滤。
-<li> type - String - 是否必填：否 - （过滤条件）按执行器类型过滤。
+    * 过滤条件：<li> invoker-id - String - 是否必填：否 - （过滤条件）按执行器ID过滤。</li> <li> command-id - String - 是否必填：否 - （过滤条件）按命令ID过滤。</li> <li> type - String - 是否必填：否 - （过滤条件）按执行器类型过滤。</li>
     */
     @SerializedName("Filters")
     @Expose
@@ -72,32 +68,16 @@ public class DescribeInvokersRequest extends AbstractModel {
     }
 
     /**
-     * Get 过滤条件：
-
-<li> invoker-id - String - 是否必填：否 - （过滤条件）按执行器ID过滤。
-<li> command-id - String - 是否必填：否 - （过滤条件）按命令ID过滤。
-<li> type - String - 是否必填：否 - （过滤条件）按执行器类型过滤。 
-     * @return Filters 过滤条件：
-
-<li> invoker-id - String - 是否必填：否 - （过滤条件）按执行器ID过滤。
-<li> command-id - String - 是否必填：否 - （过滤条件）按命令ID过滤。
-<li> type - String - 是否必填：否 - （过滤条件）按执行器类型过滤。
+     * Get 过滤条件：<li> invoker-id - String - 是否必填：否 - （过滤条件）按执行器ID过滤。</li> <li> command-id - String - 是否必填：否 - （过滤条件）按命令ID过滤。</li> <li> type - String - 是否必填：否 - （过滤条件）按执行器类型过滤。</li> 
+     * @return Filters 过滤条件：<li> invoker-id - String - 是否必填：否 - （过滤条件）按执行器ID过滤。</li> <li> command-id - String - 是否必填：否 - （过滤条件）按命令ID过滤。</li> <li> type - String - 是否必填：否 - （过滤条件）按执行器类型过滤。</li>
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤条件：
-
-<li> invoker-id - String - 是否必填：否 - （过滤条件）按执行器ID过滤。
-<li> command-id - String - 是否必填：否 - （过滤条件）按命令ID过滤。
-<li> type - String - 是否必填：否 - （过滤条件）按执行器类型过滤。
-     * @param Filters 过滤条件：
-
-<li> invoker-id - String - 是否必填：否 - （过滤条件）按执行器ID过滤。
-<li> command-id - String - 是否必填：否 - （过滤条件）按命令ID过滤。
-<li> type - String - 是否必填：否 - （过滤条件）按执行器类型过滤。
+     * Set 过滤条件：<li> invoker-id - String - 是否必填：否 - （过滤条件）按执行器ID过滤。</li> <li> command-id - String - 是否必填：否 - （过滤条件）按命令ID过滤。</li> <li> type - String - 是否必填：否 - （过滤条件）按执行器类型过滤。</li>
+     * @param Filters 过滤条件：<li> invoker-id - String - 是否必填：否 - （过滤条件）按执行器ID过滤。</li> <li> command-id - String - 是否必填：否 - （过滤条件）按命令ID过滤。</li> <li> type - String - 是否必填：否 - （过滤条件）按执行器类型过滤。</li>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

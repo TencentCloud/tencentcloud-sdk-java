@@ -31,14 +31,14 @@ public class ModifyOrderStatusRequest extends AbstractModel {
     private String Status;
 
     /**
-    * 大订单ID
+    * 大订单ID，可以在本地专用集群的基础信息页获取大订单ID
     */
     @SerializedName("DedicatedClusterOrderId")
     @Expose
     private String DedicatedClusterOrderId;
 
     /**
-    * 小订单ID
+    * 小订单ID，进入大订单的详情页，可以看到小订单ID
     */
     @SerializedName("SubOrderIds")
     @Expose
@@ -61,32 +61,32 @@ public class ModifyOrderStatusRequest extends AbstractModel {
     }
 
     /**
-     * Get 大订单ID 
-     * @return DedicatedClusterOrderId 大订单ID
+     * Get 大订单ID，可以在本地专用集群的基础信息页获取大订单ID 
+     * @return DedicatedClusterOrderId 大订单ID，可以在本地专用集群的基础信息页获取大订单ID
      */
     public String getDedicatedClusterOrderId() {
         return this.DedicatedClusterOrderId;
     }
 
     /**
-     * Set 大订单ID
-     * @param DedicatedClusterOrderId 大订单ID
+     * Set 大订单ID，可以在本地专用集群的基础信息页获取大订单ID
+     * @param DedicatedClusterOrderId 大订单ID，可以在本地专用集群的基础信息页获取大订单ID
      */
     public void setDedicatedClusterOrderId(String DedicatedClusterOrderId) {
         this.DedicatedClusterOrderId = DedicatedClusterOrderId;
     }
 
     /**
-     * Get 小订单ID 
-     * @return SubOrderIds 小订单ID
+     * Get 小订单ID，进入大订单的详情页，可以看到小订单ID 
+     * @return SubOrderIds 小订单ID，进入大订单的详情页，可以看到小订单ID
      */
     public String [] getSubOrderIds() {
         return this.SubOrderIds;
     }
 
     /**
-     * Set 小订单ID
-     * @param SubOrderIds 小订单ID
+     * Set 小订单ID，进入大订单的详情页，可以看到小订单ID
+     * @param SubOrderIds 小订单ID，进入大订单的详情页，可以看到小订单ID
      */
     public void setSubOrderIds(String [] SubOrderIds) {
         this.SubOrderIds = SubOrderIds;

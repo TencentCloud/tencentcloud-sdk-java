@@ -52,7 +52,10 @@ public class CreateScalingPolicyRequest extends AbstractModel {
     private String AdjustmentType;
 
     /**
-    * 告警触发后，期望实例数的调整值，仅适用于简单策略。<br><li>当 AdjustmentType 为 CHANGE_IN_CAPACITY 时，AdjustmentValue 为正数表示告警触发后增加实例，为负数表示告警触发后减少实例 </li> <li> 当 AdjustmentType 为 EXACT_CAPACITY 时，AdjustmentValue 的值即为告警触发后新的期望实例数，需要大于或等于0 </li> <li> 当 AdjustmentType 为 PERCENT_CHANGE_IN_CAPACITY 时，AdjusmentValue 为正数表示告警触发后按百分比增加实例，为负数表示告警触发后按百分比减少实例，单位是：%。
+    * 告警触发后，期望实例数的调整值，仅适用于简单策略。
+<li>当 AdjustmentType 为 CHANGE_IN_CAPACITY 时，AdjustmentValue 为正数表示告警触发后增加实例，为负数表示告警触发后减少实例 </li> 
+<li> 当 AdjustmentType 为 EXACT_CAPACITY 时，AdjustmentValue 的值即为告警触发后新的期望实例数，需要大于或等于0 </li> 
+<li> 当 AdjustmentType 为 PERCENT_CHANGE_IN_CAPACITY 时，AdjusmentValue 为正数表示告警触发后按百分比增加实例，为负数表示告警触发后按百分比减少实例，单位是：%。</li>
     */
     @SerializedName("AdjustmentValue")
     @Expose
@@ -73,14 +76,24 @@ public class CreateScalingPolicyRequest extends AbstractModel {
     private MetricAlarm MetricAlarm;
 
     /**
-    * 预定义监控项，仅适用于目标追踪策略。取值范围：<br><li>ASG_AVG_CPU_UTILIZATION：平均CPU使用率</li><li>ASG_AVG_LAN_TRAFFIC_OUT：平均内网出带宽</li><li>ASG_AVG_LAN_TRAFFIC_IN：平均内网入带宽</li><li>ASG_AVG_WAN_TRAFFIC_OUT：平均外网出带宽</li><li>ASG_AVG_WAN_TRAFFIC_IN：平均外网出带宽</li>
+    * 预定义监控项，仅适用于目标追踪策略。取值范围：
+<li>ASG_AVG_CPU_UTILIZATION：平均CPU使用率</li>
+<li>ASG_AVG_LAN_TRAFFIC_OUT：平均内网出带宽</li>
+<li>ASG_AVG_LAN_TRAFFIC_IN：平均内网入带宽</li>
+<li>ASG_AVG_WAN_TRAFFIC_OUT：平均外网出带宽</li>
+<li>ASG_AVG_WAN_TRAFFIC_IN：平均外网出带宽</li>
     */
     @SerializedName("PredefinedMetricType")
     @Expose
     private String PredefinedMetricType;
 
     /**
-    * 目标值，仅适用于目标追踪策略。<br><li>ASG_AVG_CPU_UTILIZATION：[1, 100)，单位：%</li><li>ASG_AVG_LAN_TRAFFIC_OUT：>0，单位：Mbps</li><li>ASG_AVG_LAN_TRAFFIC_IN：>0，单位：Mbps</li><li>ASG_AVG_WAN_TRAFFIC_OUT：>0，单位：Mbps</li><li>ASG_AVG_WAN_TRAFFIC_IN：>0，单位：Mbps</li>
+    * 目标值，仅适用于目标追踪策略。
+<li>ASG_AVG_CPU_UTILIZATION：[1, 100)，单位：%</li>
+<li>ASG_AVG_LAN_TRAFFIC_OUT：>0，单位：Mbps</li>
+<li>ASG_AVG_LAN_TRAFFIC_IN：>0，单位：Mbps</li>
+<li>ASG_AVG_WAN_TRAFFIC_OUT：>0，单位：Mbps</li>
+<li>ASG_AVG_WAN_TRAFFIC_IN：>0，单位：Mbps</li>
     */
     @SerializedName("TargetValue")
     @Expose
@@ -94,7 +107,9 @@ public class CreateScalingPolicyRequest extends AbstractModel {
     private Long EstimatedInstanceWarmup;
 
     /**
-    * 是否禁用缩容，仅适用于目标追踪策略，默认值为 false。取值范围：<br><li>true：目标追踪策略仅触发扩容</li><li>false：目标追踪策略触发扩容和缩容</li>
+    * 是否禁用缩容，仅适用于目标追踪策略，默认值为 false。取值范围：
+<li>true：目标追踪策略仅触发扩容</li>
+<li>false：目标追踪策略触发扩容和缩容</li>
     */
     @SerializedName("DisableScaleIn")
     @Expose
@@ -173,16 +188,28 @@ public class CreateScalingPolicyRequest extends AbstractModel {
     }
 
     /**
-     * Get 告警触发后，期望实例数的调整值，仅适用于简单策略。<br><li>当 AdjustmentType 为 CHANGE_IN_CAPACITY 时，AdjustmentValue 为正数表示告警触发后增加实例，为负数表示告警触发后减少实例 </li> <li> 当 AdjustmentType 为 EXACT_CAPACITY 时，AdjustmentValue 的值即为告警触发后新的期望实例数，需要大于或等于0 </li> <li> 当 AdjustmentType 为 PERCENT_CHANGE_IN_CAPACITY 时，AdjusmentValue 为正数表示告警触发后按百分比增加实例，为负数表示告警触发后按百分比减少实例，单位是：%。 
-     * @return AdjustmentValue 告警触发后，期望实例数的调整值，仅适用于简单策略。<br><li>当 AdjustmentType 为 CHANGE_IN_CAPACITY 时，AdjustmentValue 为正数表示告警触发后增加实例，为负数表示告警触发后减少实例 </li> <li> 当 AdjustmentType 为 EXACT_CAPACITY 时，AdjustmentValue 的值即为告警触发后新的期望实例数，需要大于或等于0 </li> <li> 当 AdjustmentType 为 PERCENT_CHANGE_IN_CAPACITY 时，AdjusmentValue 为正数表示告警触发后按百分比增加实例，为负数表示告警触发后按百分比减少实例，单位是：%。
+     * Get 告警触发后，期望实例数的调整值，仅适用于简单策略。
+<li>当 AdjustmentType 为 CHANGE_IN_CAPACITY 时，AdjustmentValue 为正数表示告警触发后增加实例，为负数表示告警触发后减少实例 </li> 
+<li> 当 AdjustmentType 为 EXACT_CAPACITY 时，AdjustmentValue 的值即为告警触发后新的期望实例数，需要大于或等于0 </li> 
+<li> 当 AdjustmentType 为 PERCENT_CHANGE_IN_CAPACITY 时，AdjusmentValue 为正数表示告警触发后按百分比增加实例，为负数表示告警触发后按百分比减少实例，单位是：%。</li> 
+     * @return AdjustmentValue 告警触发后，期望实例数的调整值，仅适用于简单策略。
+<li>当 AdjustmentType 为 CHANGE_IN_CAPACITY 时，AdjustmentValue 为正数表示告警触发后增加实例，为负数表示告警触发后减少实例 </li> 
+<li> 当 AdjustmentType 为 EXACT_CAPACITY 时，AdjustmentValue 的值即为告警触发后新的期望实例数，需要大于或等于0 </li> 
+<li> 当 AdjustmentType 为 PERCENT_CHANGE_IN_CAPACITY 时，AdjusmentValue 为正数表示告警触发后按百分比增加实例，为负数表示告警触发后按百分比减少实例，单位是：%。</li>
      */
     public Long getAdjustmentValue() {
         return this.AdjustmentValue;
     }
 
     /**
-     * Set 告警触发后，期望实例数的调整值，仅适用于简单策略。<br><li>当 AdjustmentType 为 CHANGE_IN_CAPACITY 时，AdjustmentValue 为正数表示告警触发后增加实例，为负数表示告警触发后减少实例 </li> <li> 当 AdjustmentType 为 EXACT_CAPACITY 时，AdjustmentValue 的值即为告警触发后新的期望实例数，需要大于或等于0 </li> <li> 当 AdjustmentType 为 PERCENT_CHANGE_IN_CAPACITY 时，AdjusmentValue 为正数表示告警触发后按百分比增加实例，为负数表示告警触发后按百分比减少实例，单位是：%。
-     * @param AdjustmentValue 告警触发后，期望实例数的调整值，仅适用于简单策略。<br><li>当 AdjustmentType 为 CHANGE_IN_CAPACITY 时，AdjustmentValue 为正数表示告警触发后增加实例，为负数表示告警触发后减少实例 </li> <li> 当 AdjustmentType 为 EXACT_CAPACITY 时，AdjustmentValue 的值即为告警触发后新的期望实例数，需要大于或等于0 </li> <li> 当 AdjustmentType 为 PERCENT_CHANGE_IN_CAPACITY 时，AdjusmentValue 为正数表示告警触发后按百分比增加实例，为负数表示告警触发后按百分比减少实例，单位是：%。
+     * Set 告警触发后，期望实例数的调整值，仅适用于简单策略。
+<li>当 AdjustmentType 为 CHANGE_IN_CAPACITY 时，AdjustmentValue 为正数表示告警触发后增加实例，为负数表示告警触发后减少实例 </li> 
+<li> 当 AdjustmentType 为 EXACT_CAPACITY 时，AdjustmentValue 的值即为告警触发后新的期望实例数，需要大于或等于0 </li> 
+<li> 当 AdjustmentType 为 PERCENT_CHANGE_IN_CAPACITY 时，AdjusmentValue 为正数表示告警触发后按百分比增加实例，为负数表示告警触发后按百分比减少实例，单位是：%。</li>
+     * @param AdjustmentValue 告警触发后，期望实例数的调整值，仅适用于简单策略。
+<li>当 AdjustmentType 为 CHANGE_IN_CAPACITY 时，AdjustmentValue 为正数表示告警触发后增加实例，为负数表示告警触发后减少实例 </li> 
+<li> 当 AdjustmentType 为 EXACT_CAPACITY 时，AdjustmentValue 的值即为告警触发后新的期望实例数，需要大于或等于0 </li> 
+<li> 当 AdjustmentType 为 PERCENT_CHANGE_IN_CAPACITY 时，AdjusmentValue 为正数表示告警触发后按百分比增加实例，为负数表示告警触发后按百分比减少实例，单位是：%。</li>
      */
     public void setAdjustmentValue(Long AdjustmentValue) {
         this.AdjustmentValue = AdjustmentValue;
@@ -221,32 +248,72 @@ public class CreateScalingPolicyRequest extends AbstractModel {
     }
 
     /**
-     * Get 预定义监控项，仅适用于目标追踪策略。取值范围：<br><li>ASG_AVG_CPU_UTILIZATION：平均CPU使用率</li><li>ASG_AVG_LAN_TRAFFIC_OUT：平均内网出带宽</li><li>ASG_AVG_LAN_TRAFFIC_IN：平均内网入带宽</li><li>ASG_AVG_WAN_TRAFFIC_OUT：平均外网出带宽</li><li>ASG_AVG_WAN_TRAFFIC_IN：平均外网出带宽</li> 
-     * @return PredefinedMetricType 预定义监控项，仅适用于目标追踪策略。取值范围：<br><li>ASG_AVG_CPU_UTILIZATION：平均CPU使用率</li><li>ASG_AVG_LAN_TRAFFIC_OUT：平均内网出带宽</li><li>ASG_AVG_LAN_TRAFFIC_IN：平均内网入带宽</li><li>ASG_AVG_WAN_TRAFFIC_OUT：平均外网出带宽</li><li>ASG_AVG_WAN_TRAFFIC_IN：平均外网出带宽</li>
+     * Get 预定义监控项，仅适用于目标追踪策略。取值范围：
+<li>ASG_AVG_CPU_UTILIZATION：平均CPU使用率</li>
+<li>ASG_AVG_LAN_TRAFFIC_OUT：平均内网出带宽</li>
+<li>ASG_AVG_LAN_TRAFFIC_IN：平均内网入带宽</li>
+<li>ASG_AVG_WAN_TRAFFIC_OUT：平均外网出带宽</li>
+<li>ASG_AVG_WAN_TRAFFIC_IN：平均外网出带宽</li> 
+     * @return PredefinedMetricType 预定义监控项，仅适用于目标追踪策略。取值范围：
+<li>ASG_AVG_CPU_UTILIZATION：平均CPU使用率</li>
+<li>ASG_AVG_LAN_TRAFFIC_OUT：平均内网出带宽</li>
+<li>ASG_AVG_LAN_TRAFFIC_IN：平均内网入带宽</li>
+<li>ASG_AVG_WAN_TRAFFIC_OUT：平均外网出带宽</li>
+<li>ASG_AVG_WAN_TRAFFIC_IN：平均外网出带宽</li>
      */
     public String getPredefinedMetricType() {
         return this.PredefinedMetricType;
     }
 
     /**
-     * Set 预定义监控项，仅适用于目标追踪策略。取值范围：<br><li>ASG_AVG_CPU_UTILIZATION：平均CPU使用率</li><li>ASG_AVG_LAN_TRAFFIC_OUT：平均内网出带宽</li><li>ASG_AVG_LAN_TRAFFIC_IN：平均内网入带宽</li><li>ASG_AVG_WAN_TRAFFIC_OUT：平均外网出带宽</li><li>ASG_AVG_WAN_TRAFFIC_IN：平均外网出带宽</li>
-     * @param PredefinedMetricType 预定义监控项，仅适用于目标追踪策略。取值范围：<br><li>ASG_AVG_CPU_UTILIZATION：平均CPU使用率</li><li>ASG_AVG_LAN_TRAFFIC_OUT：平均内网出带宽</li><li>ASG_AVG_LAN_TRAFFIC_IN：平均内网入带宽</li><li>ASG_AVG_WAN_TRAFFIC_OUT：平均外网出带宽</li><li>ASG_AVG_WAN_TRAFFIC_IN：平均外网出带宽</li>
+     * Set 预定义监控项，仅适用于目标追踪策略。取值范围：
+<li>ASG_AVG_CPU_UTILIZATION：平均CPU使用率</li>
+<li>ASG_AVG_LAN_TRAFFIC_OUT：平均内网出带宽</li>
+<li>ASG_AVG_LAN_TRAFFIC_IN：平均内网入带宽</li>
+<li>ASG_AVG_WAN_TRAFFIC_OUT：平均外网出带宽</li>
+<li>ASG_AVG_WAN_TRAFFIC_IN：平均外网出带宽</li>
+     * @param PredefinedMetricType 预定义监控项，仅适用于目标追踪策略。取值范围：
+<li>ASG_AVG_CPU_UTILIZATION：平均CPU使用率</li>
+<li>ASG_AVG_LAN_TRAFFIC_OUT：平均内网出带宽</li>
+<li>ASG_AVG_LAN_TRAFFIC_IN：平均内网入带宽</li>
+<li>ASG_AVG_WAN_TRAFFIC_OUT：平均外网出带宽</li>
+<li>ASG_AVG_WAN_TRAFFIC_IN：平均外网出带宽</li>
      */
     public void setPredefinedMetricType(String PredefinedMetricType) {
         this.PredefinedMetricType = PredefinedMetricType;
     }
 
     /**
-     * Get 目标值，仅适用于目标追踪策略。<br><li>ASG_AVG_CPU_UTILIZATION：[1, 100)，单位：%</li><li>ASG_AVG_LAN_TRAFFIC_OUT：>0，单位：Mbps</li><li>ASG_AVG_LAN_TRAFFIC_IN：>0，单位：Mbps</li><li>ASG_AVG_WAN_TRAFFIC_OUT：>0，单位：Mbps</li><li>ASG_AVG_WAN_TRAFFIC_IN：>0，单位：Mbps</li> 
-     * @return TargetValue 目标值，仅适用于目标追踪策略。<br><li>ASG_AVG_CPU_UTILIZATION：[1, 100)，单位：%</li><li>ASG_AVG_LAN_TRAFFIC_OUT：>0，单位：Mbps</li><li>ASG_AVG_LAN_TRAFFIC_IN：>0，单位：Mbps</li><li>ASG_AVG_WAN_TRAFFIC_OUT：>0，单位：Mbps</li><li>ASG_AVG_WAN_TRAFFIC_IN：>0，单位：Mbps</li>
+     * Get 目标值，仅适用于目标追踪策略。
+<li>ASG_AVG_CPU_UTILIZATION：[1, 100)，单位：%</li>
+<li>ASG_AVG_LAN_TRAFFIC_OUT：>0，单位：Mbps</li>
+<li>ASG_AVG_LAN_TRAFFIC_IN：>0，单位：Mbps</li>
+<li>ASG_AVG_WAN_TRAFFIC_OUT：>0，单位：Mbps</li>
+<li>ASG_AVG_WAN_TRAFFIC_IN：>0，单位：Mbps</li> 
+     * @return TargetValue 目标值，仅适用于目标追踪策略。
+<li>ASG_AVG_CPU_UTILIZATION：[1, 100)，单位：%</li>
+<li>ASG_AVG_LAN_TRAFFIC_OUT：>0，单位：Mbps</li>
+<li>ASG_AVG_LAN_TRAFFIC_IN：>0，单位：Mbps</li>
+<li>ASG_AVG_WAN_TRAFFIC_OUT：>0，单位：Mbps</li>
+<li>ASG_AVG_WAN_TRAFFIC_IN：>0，单位：Mbps</li>
      */
     public Long getTargetValue() {
         return this.TargetValue;
     }
 
     /**
-     * Set 目标值，仅适用于目标追踪策略。<br><li>ASG_AVG_CPU_UTILIZATION：[1, 100)，单位：%</li><li>ASG_AVG_LAN_TRAFFIC_OUT：>0，单位：Mbps</li><li>ASG_AVG_LAN_TRAFFIC_IN：>0，单位：Mbps</li><li>ASG_AVG_WAN_TRAFFIC_OUT：>0，单位：Mbps</li><li>ASG_AVG_WAN_TRAFFIC_IN：>0，单位：Mbps</li>
-     * @param TargetValue 目标值，仅适用于目标追踪策略。<br><li>ASG_AVG_CPU_UTILIZATION：[1, 100)，单位：%</li><li>ASG_AVG_LAN_TRAFFIC_OUT：>0，单位：Mbps</li><li>ASG_AVG_LAN_TRAFFIC_IN：>0，单位：Mbps</li><li>ASG_AVG_WAN_TRAFFIC_OUT：>0，单位：Mbps</li><li>ASG_AVG_WAN_TRAFFIC_IN：>0，单位：Mbps</li>
+     * Set 目标值，仅适用于目标追踪策略。
+<li>ASG_AVG_CPU_UTILIZATION：[1, 100)，单位：%</li>
+<li>ASG_AVG_LAN_TRAFFIC_OUT：>0，单位：Mbps</li>
+<li>ASG_AVG_LAN_TRAFFIC_IN：>0，单位：Mbps</li>
+<li>ASG_AVG_WAN_TRAFFIC_OUT：>0，单位：Mbps</li>
+<li>ASG_AVG_WAN_TRAFFIC_IN：>0，单位：Mbps</li>
+     * @param TargetValue 目标值，仅适用于目标追踪策略。
+<li>ASG_AVG_CPU_UTILIZATION：[1, 100)，单位：%</li>
+<li>ASG_AVG_LAN_TRAFFIC_OUT：>0，单位：Mbps</li>
+<li>ASG_AVG_LAN_TRAFFIC_IN：>0，单位：Mbps</li>
+<li>ASG_AVG_WAN_TRAFFIC_OUT：>0，单位：Mbps</li>
+<li>ASG_AVG_WAN_TRAFFIC_IN：>0，单位：Mbps</li>
      */
     public void setTargetValue(Long TargetValue) {
         this.TargetValue = TargetValue;
@@ -269,16 +336,24 @@ public class CreateScalingPolicyRequest extends AbstractModel {
     }
 
     /**
-     * Get 是否禁用缩容，仅适用于目标追踪策略，默认值为 false。取值范围：<br><li>true：目标追踪策略仅触发扩容</li><li>false：目标追踪策略触发扩容和缩容</li> 
-     * @return DisableScaleIn 是否禁用缩容，仅适用于目标追踪策略，默认值为 false。取值范围：<br><li>true：目标追踪策略仅触发扩容</li><li>false：目标追踪策略触发扩容和缩容</li>
+     * Get 是否禁用缩容，仅适用于目标追踪策略，默认值为 false。取值范围：
+<li>true：目标追踪策略仅触发扩容</li>
+<li>false：目标追踪策略触发扩容和缩容</li> 
+     * @return DisableScaleIn 是否禁用缩容，仅适用于目标追踪策略，默认值为 false。取值范围：
+<li>true：目标追踪策略仅触发扩容</li>
+<li>false：目标追踪策略触发扩容和缩容</li>
      */
     public Boolean getDisableScaleIn() {
         return this.DisableScaleIn;
     }
 
     /**
-     * Set 是否禁用缩容，仅适用于目标追踪策略，默认值为 false。取值范围：<br><li>true：目标追踪策略仅触发扩容</li><li>false：目标追踪策略触发扩容和缩容</li>
-     * @param DisableScaleIn 是否禁用缩容，仅适用于目标追踪策略，默认值为 false。取值范围：<br><li>true：目标追踪策略仅触发扩容</li><li>false：目标追踪策略触发扩容和缩容</li>
+     * Set 是否禁用缩容，仅适用于目标追踪策略，默认值为 false。取值范围：
+<li>true：目标追踪策略仅触发扩容</li>
+<li>false：目标追踪策略触发扩容和缩容</li>
+     * @param DisableScaleIn 是否禁用缩容，仅适用于目标追踪策略，默认值为 false。取值范围：
+<li>true：目标追踪策略仅触发扩容</li>
+<li>false：目标追踪策略触发扩容和缩容</li>
      */
     public void setDisableScaleIn(Boolean DisableScaleIn) {
         this.DisableScaleIn = DisableScaleIn;

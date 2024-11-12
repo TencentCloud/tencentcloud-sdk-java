@@ -52,7 +52,7 @@ public class ModifySiteDeviceInfoRequest extends AbstractModel {
     private String PowerConnectors;
 
     /**
-    * 从机架上方还是下方供电。
+    * 从机架上方还是下方供电。取值范围：["UP","DOWN"]
     */
     @SerializedName("PowerFeedDrop")
     @Expose
@@ -201,16 +201,16 @@ public class ModifySiteDeviceInfoRequest extends AbstractModel {
     }
 
     /**
-     * Get 从机架上方还是下方供电。 
-     * @return PowerFeedDrop 从机架上方还是下方供电。
+     * Get 从机架上方还是下方供电。取值范围：["UP","DOWN"] 
+     * @return PowerFeedDrop 从机架上方还是下方供电。取值范围：["UP","DOWN"]
      */
     public String getPowerFeedDrop() {
         return this.PowerFeedDrop;
     }
 
     /**
-     * Set 从机架上方还是下方供电。
-     * @param PowerFeedDrop 从机架上方还是下方供电。
+     * Set 从机架上方还是下方供电。取值范围：["UP","DOWN"]
+     * @param PowerFeedDrop 从机架上方还是下方供电。取值范围：["UP","DOWN"]
      */
     public void setPowerFeedDrop(String PowerFeedDrop) {
         this.PowerFeedDrop = PowerFeedDrop;

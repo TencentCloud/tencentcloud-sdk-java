@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class GetDocPreviewRequest extends AbstractModel {
 
     /**
-    * 文档业务ID
+    * 文档BizID
     */
     @SerializedName("DocBizId")
     @Expose
@@ -45,16 +45,16 @@ public class GetDocPreviewRequest extends AbstractModel {
     private String TypeKey;
 
     /**
-     * Get 文档业务ID 
-     * @return DocBizId 文档业务ID
+     * Get 文档BizID 
+     * @return DocBizId 文档BizID
      */
     public String getDocBizId() {
         return this.DocBizId;
     }
 
     /**
-     * Set 文档业务ID
-     * @param DocBizId 文档业务ID
+     * Set 文档BizID
+     * @param DocBizId 文档BizID
      */
     public void setDocBizId(String DocBizId) {
         this.DocBizId = DocBizId;

@@ -38,6 +38,13 @@ public class ImageMaskRequest extends AbstractModel {
     private ImageMaskFlags MaskFlag;
 
     /**
+    * 是否自动矫正图片方向
+    */
+    @SerializedName("AutoFixImageDirection")
+    @Expose
+    private Boolean AutoFixImageDirection;
+
+    /**
      * Get 图片信息,目前只支持传图片base64 
      * @return Image 图片信息,目前只支持传图片base64
      */
@@ -69,6 +76,22 @@ public class ImageMaskRequest extends AbstractModel {
         this.MaskFlag = MaskFlag;
     }
 
+    /**
+     * Get 是否自动矫正图片方向 
+     * @return AutoFixImageDirection 是否自动矫正图片方向
+     */
+    public Boolean getAutoFixImageDirection() {
+        return this.AutoFixImageDirection;
+    }
+
+    /**
+     * Set 是否自动矫正图片方向
+     * @param AutoFixImageDirection 是否自动矫正图片方向
+     */
+    public void setAutoFixImageDirection(Boolean AutoFixImageDirection) {
+        this.AutoFixImageDirection = AutoFixImageDirection;
+    }
+
     public ImageMaskRequest() {
     }
 
@@ -83,6 +106,9 @@ public class ImageMaskRequest extends AbstractModel {
         if (source.MaskFlag != null) {
             this.MaskFlag = new ImageMaskFlags(source.MaskFlag);
         }
+        if (source.AutoFixImageDirection != null) {
+            this.AutoFixImageDirection = new Boolean(source.AutoFixImageDirection);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class ImageMaskRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "Image.", this.Image);
         this.setParamObj(map, prefix + "MaskFlag.", this.MaskFlag);
+        this.setParamSimple(map, prefix + "AutoFixImageDirection", this.AutoFixImageDirection);
 
     }
 }
