@@ -25,6 +25,11 @@ public class ModifyAutoRenewFlagRequest extends AbstractModel {
 
     /**
     * 实例的 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+说明：可输入多个实例 ID 进行修改，json 格式如下。
+[
+    "cdb-30z11v8s",
+    "cdb-93h11efg"
+  ]
     */
     @SerializedName("InstanceIds")
     @Expose
@@ -38,8 +43,18 @@ public class ModifyAutoRenewFlagRequest extends AbstractModel {
     private Long AutoRenew;
 
     /**
-     * Get 实例的 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。 
+     * Get 实例的 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+说明：可输入多个实例 ID 进行修改，json 格式如下。
+[
+    "cdb-30z11v8s",
+    "cdb-93h11efg"
+  ] 
      * @return InstanceIds 实例的 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+说明：可输入多个实例 ID 进行修改，json 格式如下。
+[
+    "cdb-30z11v8s",
+    "cdb-93h11efg"
+  ]
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
@@ -47,7 +62,17 @@ public class ModifyAutoRenewFlagRequest extends AbstractModel {
 
     /**
      * Set 实例的 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+说明：可输入多个实例 ID 进行修改，json 格式如下。
+[
+    "cdb-30z11v8s",
+    "cdb-93h11efg"
+  ]
      * @param InstanceIds 实例的 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+说明：可输入多个实例 ID 进行修改，json 格式如下。
+[
+    "cdb-30z11v8s",
+    "cdb-93h11efg"
+  ]
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;

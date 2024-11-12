@@ -53,7 +53,6 @@ public class DescribeBaselineDetectOverviewResponse extends AbstractModel {
 
     /**
     * 最近一次检测通过个数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LatestPassCount")
     @Expose
@@ -61,7 +60,6 @@ public class DescribeBaselineDetectOverviewResponse extends AbstractModel {
 
     /**
     * 最近一次检测未通过个数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LatestNotPassCount")
     @Expose
@@ -139,10 +137,8 @@ public class DescribeBaselineDetectOverviewResponse extends AbstractModel {
     }
 
     /**
-     * Get 最近一次检测通过个数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最近一次检测通过个数 
      * @return LatestPassCount 最近一次检测通过个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLatestPassCount() {
         return this.LatestPassCount;
@@ -150,19 +146,15 @@ public class DescribeBaselineDetectOverviewResponse extends AbstractModel {
 
     /**
      * Set 最近一次检测通过个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LatestPassCount 最近一次检测通过个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLatestPassCount(Long LatestPassCount) {
         this.LatestPassCount = LatestPassCount;
     }
 
     /**
-     * Get 最近一次检测未通过个数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最近一次检测未通过个数 
      * @return LatestNotPassCount 最近一次检测未通过个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLatestNotPassCount() {
         return this.LatestNotPassCount;
@@ -170,9 +162,7 @@ public class DescribeBaselineDetectOverviewResponse extends AbstractModel {
 
     /**
      * Set 最近一次检测未通过个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LatestNotPassCount 最近一次检测未通过个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLatestNotPassCount(Long LatestNotPassCount) {
         this.LatestNotPassCount = LatestNotPassCount;

@@ -24,26 +24,49 @@ import java.util.HashMap;
 public class DeleteBashEventsRequest extends AbstractModel {
 
     /**
-    * ID数组，最大100条。
+    * ID数组，最大1000条。
     */
     @SerializedName("Ids")
     @Expose
     private Long [] Ids;
 
     /**
-     * Get ID数组，最大100条。 
-     * @return Ids ID数组，最大100条。
+    * 是否删除全部
+    */
+    @SerializedName("All")
+    @Expose
+    private Boolean All;
+
+    /**
+     * Get ID数组，最大1000条。 
+     * @return Ids ID数组，最大1000条。
      */
     public Long [] getIds() {
         return this.Ids;
     }
 
     /**
-     * Set ID数组，最大100条。
-     * @param Ids ID数组，最大100条。
+     * Set ID数组，最大1000条。
+     * @param Ids ID数组，最大1000条。
      */
     public void setIds(Long [] Ids) {
         this.Ids = Ids;
+    }
+
+    /**
+     * Get 是否删除全部 
+     * @return All 是否删除全部
+     */
+    public Boolean getAll() {
+        return this.All;
+    }
+
+    /**
+     * Set 是否删除全部
+     * @param All 是否删除全部
+     */
+    public void setAll(Boolean All) {
+        this.All = All;
     }
 
     public DeleteBashEventsRequest() {
@@ -60,6 +83,9 @@ public class DeleteBashEventsRequest extends AbstractModel {
                 this.Ids[i] = new Long(source.Ids[i]);
             }
         }
+        if (source.All != null) {
+            this.All = new Boolean(source.All);
+        }
     }
 
 
@@ -68,6 +94,7 @@ public class DeleteBashEventsRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "Ids.", this.Ids);
+        this.setParamSimple(map, prefix + "All", this.All);
 
     }
 }

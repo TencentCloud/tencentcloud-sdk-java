@@ -25,7 +25,6 @@ public class CanFixVulInfo extends AbstractModel {
 
     /**
     * 漏洞id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VulId")
     @Expose
@@ -33,7 +32,6 @@ public class CanFixVulInfo extends AbstractModel {
 
     /**
     * 漏洞名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VulName")
     @Expose
@@ -41,7 +39,6 @@ public class CanFixVulInfo extends AbstractModel {
 
     /**
     * 该漏洞可修复的主机信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HostList")
     @Expose
@@ -49,7 +46,6 @@ public class CanFixVulInfo extends AbstractModel {
 
     /**
     * 修复提示tag
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FixTag")
     @Expose
@@ -57,17 +53,14 @@ public class CanFixVulInfo extends AbstractModel {
 
     /**
     * 漏洞分类1 web cms漏洞,2应用漏洞,4linux软件漏洞,5windows系统漏洞
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VulCategory")
     @Expose
     private Long VulCategory;
 
     /**
-     * Get 漏洞id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 漏洞id 
      * @return VulId 漏洞id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getVulId() {
         return this.VulId;
@@ -75,19 +68,15 @@ public class CanFixVulInfo extends AbstractModel {
 
     /**
      * Set 漏洞id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VulId 漏洞id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVulId(Long VulId) {
         this.VulId = VulId;
     }
 
     /**
-     * Get 漏洞名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 漏洞名称 
      * @return VulName 漏洞名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVulName() {
         return this.VulName;
@@ -95,19 +84,15 @@ public class CanFixVulInfo extends AbstractModel {
 
     /**
      * Set 漏洞名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VulName 漏洞名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVulName(String VulName) {
         this.VulName = VulName;
     }
 
     /**
-     * Get 该漏洞可修复的主机信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该漏洞可修复的主机信息 
      * @return HostList 该漏洞可修复的主机信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public VulInfoHostInfo [] getHostList() {
         return this.HostList;
@@ -115,19 +100,15 @@ public class CanFixVulInfo extends AbstractModel {
 
     /**
      * Set 该漏洞可修复的主机信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HostList 该漏洞可修复的主机信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHostList(VulInfoHostInfo [] HostList) {
         this.HostList = HostList;
     }
 
     /**
-     * Get 修复提示tag
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 修复提示tag 
      * @return FixTag 修复提示tag
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getFixTag() {
         return this.FixTag;
@@ -135,19 +116,15 @@ public class CanFixVulInfo extends AbstractModel {
 
     /**
      * Set 修复提示tag
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FixTag 修复提示tag
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFixTag(String [] FixTag) {
         this.FixTag = FixTag;
     }
 
     /**
-     * Get 漏洞分类1 web cms漏洞,2应用漏洞,4linux软件漏洞,5windows系统漏洞
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 漏洞分类1 web cms漏洞,2应用漏洞,4linux软件漏洞,5windows系统漏洞 
      * @return VulCategory 漏洞分类1 web cms漏洞,2应用漏洞,4linux软件漏洞,5windows系统漏洞
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getVulCategory() {
         return this.VulCategory;
@@ -155,9 +132,7 @@ public class CanFixVulInfo extends AbstractModel {
 
     /**
      * Set 漏洞分类1 web cms漏洞,2应用漏洞,4linux软件漏洞,5windows系统漏洞
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VulCategory 漏洞分类1 web cms漏洞,2应用漏洞,4linux软件漏洞,5windows系统漏洞
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVulCategory(Long VulCategory) {
         this.VulCategory = VulCategory;

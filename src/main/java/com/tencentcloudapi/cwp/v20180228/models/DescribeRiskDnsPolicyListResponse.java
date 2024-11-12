@@ -32,7 +32,6 @@ public class DescribeRiskDnsPolicyListResponse extends AbstractModel {
 
     /**
     * 列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("List")
     @Expose
@@ -62,10 +61,8 @@ public class DescribeRiskDnsPolicyListResponse extends AbstractModel {
     }
 
     /**
-     * Get 列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 列表 
      * @return List 列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RiskDnsPolicy [] getList() {
         return this.List;
@@ -73,9 +70,7 @@ public class DescribeRiskDnsPolicyListResponse extends AbstractModel {
 
     /**
      * Set 列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param List 列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setList(RiskDnsPolicy [] List) {
         this.List = List;

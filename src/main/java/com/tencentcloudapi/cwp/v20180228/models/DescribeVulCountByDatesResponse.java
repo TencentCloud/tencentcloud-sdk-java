@@ -25,7 +25,6 @@ public class DescribeVulCountByDatesResponse extends AbstractModel {
 
     /**
     * 批量获得对应天数的漏洞数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VulCount")
     @Expose
@@ -46,10 +45,8 @@ public class DescribeVulCountByDatesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 批量获得对应天数的漏洞数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 批量获得对应天数的漏洞数量 
      * @return VulCount 批量获得对应天数的漏洞数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long [] getVulCount() {
         return this.VulCount;
@@ -57,9 +54,7 @@ public class DescribeVulCountByDatesResponse extends AbstractModel {
 
     /**
      * Set 批量获得对应天数的漏洞数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VulCount 批量获得对应天数的漏洞数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVulCount(Long [] VulCount) {
         this.VulCount = VulCount;

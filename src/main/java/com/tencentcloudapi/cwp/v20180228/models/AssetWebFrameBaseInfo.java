@@ -67,7 +67,6 @@ public class AssetWebFrameBaseInfo extends AbstractModel {
 
     /**
     * 主机标签
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tag")
     @Expose
@@ -131,7 +130,6 @@ public class AssetWebFrameBaseInfo extends AbstractModel {
 
     /**
     *  附加信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MachineExtraInfo")
     @Expose
@@ -241,10 +239,8 @@ public class AssetWebFrameBaseInfo extends AbstractModel {
     }
 
     /**
-     * Get 主机标签
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主机标签 
      * @return Tag 主机标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public MachineTag [] getTag() {
         return this.Tag;
@@ -252,9 +248,7 @@ public class AssetWebFrameBaseInfo extends AbstractModel {
 
     /**
      * Set 主机标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tag 主机标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTag(MachineTag [] Tag) {
         this.Tag = Tag;
@@ -389,10 +383,8 @@ public class AssetWebFrameBaseInfo extends AbstractModel {
     }
 
     /**
-     * Get  附加信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get  附加信息 
      * @return MachineExtraInfo  附加信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public MachineExtraInfo getMachineExtraInfo() {
         return this.MachineExtraInfo;
@@ -400,9 +392,7 @@ public class AssetWebFrameBaseInfo extends AbstractModel {
 
     /**
      * Set  附加信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MachineExtraInfo  附加信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMachineExtraInfo(MachineExtraInfo MachineExtraInfo) {
         this.MachineExtraInfo = MachineExtraInfo;

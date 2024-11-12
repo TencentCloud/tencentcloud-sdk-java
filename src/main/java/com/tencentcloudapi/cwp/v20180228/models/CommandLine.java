@@ -25,7 +25,6 @@ public class CommandLine extends AbstractModel {
 
     /**
     * 路径,需要base64加密
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Exe")
     @Expose
@@ -33,17 +32,14 @@ public class CommandLine extends AbstractModel {
 
     /**
     * 命令行,需要base64加密
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Cmdline")
     @Expose
     private String Cmdline;
 
     /**
-     * Get 路径,需要base64加密
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 路径,需要base64加密 
      * @return Exe 路径,需要base64加密
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExe() {
         return this.Exe;
@@ -51,19 +47,15 @@ public class CommandLine extends AbstractModel {
 
     /**
      * Set 路径,需要base64加密
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Exe 路径,需要base64加密
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExe(String Exe) {
         this.Exe = Exe;
     }
 
     /**
-     * Get 命令行,需要base64加密
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 命令行,需要base64加密 
      * @return Cmdline 命令行,需要base64加密
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCmdline() {
         return this.Cmdline;
@@ -71,9 +63,7 @@ public class CommandLine extends AbstractModel {
 
     /**
      * Set 命令行,需要base64加密
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Cmdline 命令行,需要base64加密
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCmdline(String Cmdline) {
         this.Cmdline = Cmdline;

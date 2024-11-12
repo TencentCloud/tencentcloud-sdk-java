@@ -25,7 +25,6 @@ public class DescribeBruteAttackListResponse extends AbstractModel {
 
     /**
     * 总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeBruteAttackListResponse extends AbstractModel {
 
     /**
     * 密码破解列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BruteAttackList")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeBruteAttackListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 总数 
      * @return TotalCount 总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -58,19 +54,15 @@ public class DescribeBruteAttackListResponse extends AbstractModel {
 
     /**
      * Set 总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 密码破解列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 密码破解列表 
      * @return BruteAttackList 密码破解列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BruteAttackInfo [] getBruteAttackList() {
         return this.BruteAttackList;
@@ -78,9 +70,7 @@ public class DescribeBruteAttackListResponse extends AbstractModel {
 
     /**
      * Set 密码破解列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BruteAttackList 密码破解列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBruteAttackList(BruteAttackInfo [] BruteAttackList) {
         this.BruteAttackList = BruteAttackList;

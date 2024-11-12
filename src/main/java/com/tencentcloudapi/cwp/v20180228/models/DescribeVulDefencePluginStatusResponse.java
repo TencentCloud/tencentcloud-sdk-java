@@ -32,7 +32,6 @@ public class DescribeVulDefencePluginStatusResponse extends AbstractModel {
 
     /**
     * 各主机漏洞防御插件信息列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("List")
     @Expose
@@ -62,10 +61,8 @@ public class DescribeVulDefencePluginStatusResponse extends AbstractModel {
     }
 
     /**
-     * Get 各主机漏洞防御插件信息列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 各主机漏洞防御插件信息列表 
      * @return List 各主机漏洞防御插件信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public VulDefencePluginStatus [] getList() {
         return this.List;
@@ -73,9 +70,7 @@ public class DescribeVulDefencePluginStatusResponse extends AbstractModel {
 
     /**
      * Set 各主机漏洞防御插件信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param List 各主机漏洞防御插件信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setList(VulDefencePluginStatus [] List) {
         this.List = List;

@@ -39,7 +39,6 @@ public class AssetLoadSummary extends AbstractModel {
 
     /**
     * 负载Top5
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Top5")
     @Expose
@@ -90,10 +89,8 @@ public class AssetLoadSummary extends AbstractModel {
     }
 
     /**
-     * Get 负载Top5
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 负载Top5 
      * @return Top5 负载Top5
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AssetLoadDetail [] getTop5() {
         return this.Top5;
@@ -101,9 +98,7 @@ public class AssetLoadSummary extends AbstractModel {
 
     /**
      * Set 负载Top5
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Top5 负载Top5
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTop5(AssetLoadDetail [] Top5) {
         this.Top5 = Top5;

@@ -25,7 +25,6 @@ public class VulFixStatusInfo extends AbstractModel {
 
     /**
     * 漏洞id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VulId")
     @Expose
@@ -33,7 +32,6 @@ public class VulFixStatusInfo extends AbstractModel {
 
     /**
     * 漏洞名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VulName")
     @Expose
@@ -48,7 +46,6 @@ public class VulFixStatusInfo extends AbstractModel {
 
     /**
     * 漏洞对应主机修复状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HostList")
     @Expose
@@ -56,7 +53,6 @@ public class VulFixStatusInfo extends AbstractModel {
 
     /**
     * 漏洞修复失败主机数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FailCnt")
     @Expose
@@ -64,7 +60,6 @@ public class VulFixStatusInfo extends AbstractModel {
 
     /**
     * 修复成功的数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FixSuccessCnt")
     @Expose
@@ -72,17 +67,14 @@ public class VulFixStatusInfo extends AbstractModel {
 
     /**
     * 修复方式 0组件更新或者安装补丁,1禁用服务
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FixMethod")
     @Expose
     private Long FixMethod;
 
     /**
-     * Get 漏洞id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 漏洞id 
      * @return VulId 漏洞id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getVulId() {
         return this.VulId;
@@ -90,19 +82,15 @@ public class VulFixStatusInfo extends AbstractModel {
 
     /**
      * Set 漏洞id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VulId 漏洞id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVulId(Long VulId) {
         this.VulId = VulId;
     }
 
     /**
-     * Get 漏洞名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 漏洞名称 
      * @return VulName 漏洞名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVulName() {
         return this.VulName;
@@ -110,9 +98,7 @@ public class VulFixStatusInfo extends AbstractModel {
 
     /**
      * Set 漏洞名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VulName 漏洞名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVulName(String VulName) {
         this.VulName = VulName;
@@ -135,10 +121,8 @@ public class VulFixStatusInfo extends AbstractModel {
     }
 
     /**
-     * Get 漏洞对应主机修复状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 漏洞对应主机修复状态 
      * @return HostList 漏洞对应主机修复状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public VulFixStatusHostInfo [] getHostList() {
         return this.HostList;
@@ -146,19 +130,15 @@ public class VulFixStatusInfo extends AbstractModel {
 
     /**
      * Set 漏洞对应主机修复状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HostList 漏洞对应主机修复状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHostList(VulFixStatusHostInfo [] HostList) {
         this.HostList = HostList;
     }
 
     /**
-     * Get 漏洞修复失败主机数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 漏洞修复失败主机数量 
      * @return FailCnt 漏洞修复失败主机数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFailCnt() {
         return this.FailCnt;
@@ -166,19 +146,15 @@ public class VulFixStatusInfo extends AbstractModel {
 
     /**
      * Set 漏洞修复失败主机数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FailCnt 漏洞修复失败主机数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFailCnt(Long FailCnt) {
         this.FailCnt = FailCnt;
     }
 
     /**
-     * Get 修复成功的数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 修复成功的数量 
      * @return FixSuccessCnt 修复成功的数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFixSuccessCnt() {
         return this.FixSuccessCnt;
@@ -186,19 +162,15 @@ public class VulFixStatusInfo extends AbstractModel {
 
     /**
      * Set 修复成功的数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FixSuccessCnt 修复成功的数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFixSuccessCnt(Long FixSuccessCnt) {
         this.FixSuccessCnt = FixSuccessCnt;
     }
 
     /**
-     * Get 修复方式 0组件更新或者安装补丁,1禁用服务
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 修复方式 0组件更新或者安装补丁,1禁用服务 
      * @return FixMethod 修复方式 0组件更新或者安装补丁,1禁用服务
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFixMethod() {
         return this.FixMethod;
@@ -206,9 +178,7 @@ public class VulFixStatusInfo extends AbstractModel {
 
     /**
      * Set 修复方式 0组件更新或者安装补丁,1禁用服务
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FixMethod 修复方式 0组件更新或者安装补丁,1禁用服务
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFixMethod(Long FixMethod) {
         this.FixMethod = FixMethod;

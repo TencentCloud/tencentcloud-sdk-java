@@ -25,7 +25,6 @@ public class DescribeAssetMachineTagTopResponse extends AbstractModel {
 
     /**
     * Top5标签及数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tags")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeAssetMachineTagTopResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Top5标签及数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Top5标签及数量 
      * @return Tags Top5标签及数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AssetKeyVal [] getTags() {
         return this.Tags;
@@ -50,9 +47,7 @@ public class DescribeAssetMachineTagTopResponse extends AbstractModel {
 
     /**
      * Set Top5标签及数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tags Top5标签及数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTags(AssetKeyVal [] Tags) {
         this.Tags = Tags;

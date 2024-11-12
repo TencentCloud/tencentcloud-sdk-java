@@ -74,7 +74,6 @@ public class AssetCoreModuleDetail extends AbstractModel {
 
     /**
     * 参数信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Params")
     @Expose
@@ -82,7 +81,6 @@ public class AssetCoreModuleDetail extends AbstractModel {
 
     /**
     * 数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -201,10 +199,8 @@ public class AssetCoreModuleDetail extends AbstractModel {
     }
 
     /**
-     * Get 参数信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 参数信息 
      * @return Params 参数信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AssetCoreModuleParam [] getParams() {
         return this.Params;
@@ -212,19 +208,15 @@ public class AssetCoreModuleDetail extends AbstractModel {
 
     /**
      * Set 参数信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Params 参数信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setParams(AssetCoreModuleParam [] Params) {
         this.Params = Params;
     }
 
     /**
-     * Get 数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据更新时间 
      * @return UpdateTime 数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdateTime() {
         return this.UpdateTime;
@@ -232,9 +224,7 @@ public class AssetCoreModuleDetail extends AbstractModel {
 
     /**
      * Set 数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdateTime 数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;

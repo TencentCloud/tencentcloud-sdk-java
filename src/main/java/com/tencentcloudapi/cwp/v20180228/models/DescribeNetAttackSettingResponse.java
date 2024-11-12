@@ -46,7 +46,6 @@ public class DescribeNetAttackSettingResponse extends AbstractModel {
 
     /**
     * 自选主机
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceIds")
     @Expose
@@ -54,7 +53,6 @@ public class DescribeNetAttackSettingResponse extends AbstractModel {
 
     /**
     * 自选排除主机
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExcludeInstanceIds")
     @Expose
@@ -123,10 +121,8 @@ public class DescribeNetAttackSettingResponse extends AbstractModel {
     }
 
     /**
-     * Get 自选主机
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 自选主机 
      * @return InstanceIds 自选主机
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
@@ -134,19 +130,15 @@ public class DescribeNetAttackSettingResponse extends AbstractModel {
 
     /**
      * Set 自选主机
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceIds 自选主机
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
     }
 
     /**
-     * Get 自选排除主机
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 自选排除主机 
      * @return ExcludeInstanceIds 自选排除主机
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getExcludeInstanceIds() {
         return this.ExcludeInstanceIds;
@@ -154,9 +146,7 @@ public class DescribeNetAttackSettingResponse extends AbstractModel {
 
     /**
      * Set 自选排除主机
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExcludeInstanceIds 自选排除主机
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExcludeInstanceIds(String [] ExcludeInstanceIds) {
         this.ExcludeInstanceIds = ExcludeInstanceIds;

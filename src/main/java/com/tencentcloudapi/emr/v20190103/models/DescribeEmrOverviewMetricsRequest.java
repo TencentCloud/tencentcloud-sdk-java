@@ -31,7 +31,7 @@ public class DescribeEmrOverviewMetricsRequest extends AbstractModel {
     private Long End;
 
     /**
-    * 指标名
+    * 指标名，NODE.CPU：节点平均CPU利用率和总核数；NODE.CPU.SLHBASE：Serverless实例平均CPU利用率和总核数；HDFS.NN.CAPACITY：存储使用率和总量
     */
     @SerializedName("Metric")
     @Expose
@@ -89,16 +89,16 @@ public class DescribeEmrOverviewMetricsRequest extends AbstractModel {
     }
 
     /**
-     * Get 指标名 
-     * @return Metric 指标名
+     * Get 指标名，NODE.CPU：节点平均CPU利用率和总核数；NODE.CPU.SLHBASE：Serverless实例平均CPU利用率和总核数；HDFS.NN.CAPACITY：存储使用率和总量 
+     * @return Metric 指标名，NODE.CPU：节点平均CPU利用率和总核数；NODE.CPU.SLHBASE：Serverless实例平均CPU利用率和总核数；HDFS.NN.CAPACITY：存储使用率和总量
      */
     public String getMetric() {
         return this.Metric;
     }
 
     /**
-     * Set 指标名
-     * @param Metric 指标名
+     * Set 指标名，NODE.CPU：节点平均CPU利用率和总核数；NODE.CPU.SLHBASE：Serverless实例平均CPU利用率和总核数；HDFS.NN.CAPACITY：存储使用率和总量
+     * @param Metric 指标名，NODE.CPU：节点平均CPU利用率和总核数；NODE.CPU.SLHBASE：Serverless实例平均CPU利用率和总核数；HDFS.NN.CAPACITY：存储使用率和总量
      */
     public void setMetric(String Metric) {
         this.Metric = Metric;

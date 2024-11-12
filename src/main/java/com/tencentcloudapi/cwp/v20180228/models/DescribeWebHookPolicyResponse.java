@@ -25,7 +25,6 @@ public class DescribeWebHookPolicyResponse extends AbstractModel {
 
     /**
     * 策略列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("List")
     @Expose
@@ -46,10 +45,8 @@ public class DescribeWebHookPolicyResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 策略列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 策略列表 
      * @return List 策略列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public WebHookPolicy [] getList() {
         return this.List;
@@ -57,9 +54,7 @@ public class DescribeWebHookPolicyResponse extends AbstractModel {
 
     /**
      * Set 策略列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param List 策略列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setList(WebHookPolicy [] List) {
         this.List = List;

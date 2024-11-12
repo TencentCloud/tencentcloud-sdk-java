@@ -214,7 +214,6 @@ public class AssetUserDetail extends AbstractModel {
 
     /**
     * 用户公钥列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Keys")
     @Expose
@@ -222,7 +221,6 @@ public class AssetUserDetail extends AbstractModel {
 
     /**
     * 数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -661,10 +659,8 @@ public class AssetUserDetail extends AbstractModel {
     }
 
     /**
-     * Get 用户公钥列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户公钥列表 
      * @return Keys 用户公钥列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AssetUserKeyInfo [] getKeys() {
         return this.Keys;
@@ -672,19 +668,15 @@ public class AssetUserDetail extends AbstractModel {
 
     /**
      * Set 用户公钥列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Keys 用户公钥列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKeys(AssetUserKeyInfo [] Keys) {
         this.Keys = Keys;
     }
 
     /**
-     * Get 数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据更新时间 
      * @return UpdateTime 数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdateTime() {
         return this.UpdateTime;
@@ -692,9 +684,7 @@ public class AssetUserDetail extends AbstractModel {
 
     /**
      * Set 数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdateTime 数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;

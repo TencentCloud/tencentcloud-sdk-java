@@ -32,7 +32,6 @@ public class DescribeAssetUserListResponse extends AbstractModel {
 
     /**
     * 账号列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Users")
     @Expose
@@ -62,10 +61,8 @@ public class DescribeAssetUserListResponse extends AbstractModel {
     }
 
     /**
-     * Get 账号列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 账号列表 
      * @return Users 账号列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AssetUserBaseInfo [] getUsers() {
         return this.Users;
@@ -73,9 +70,7 @@ public class DescribeAssetUserListResponse extends AbstractModel {
 
     /**
      * Set 账号列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Users 账号列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUsers(AssetUserBaseInfo [] Users) {
         this.Users = Users;

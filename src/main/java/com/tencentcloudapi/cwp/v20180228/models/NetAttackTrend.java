@@ -25,7 +25,6 @@ public class NetAttackTrend extends AbstractModel {
 
     /**
     * 时间点，如 2023-05-06
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DateTime")
     @Expose
@@ -33,7 +32,6 @@ public class NetAttackTrend extends AbstractModel {
 
     /**
     * 攻击次数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AttackCount")
     @Expose
@@ -41,7 +39,6 @@ public class NetAttackTrend extends AbstractModel {
 
     /**
     * 尝试攻击次数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TryAttackCount")
     @Expose
@@ -49,17 +46,14 @@ public class NetAttackTrend extends AbstractModel {
 
     /**
     * 攻击成功次数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SuccAttackCount")
     @Expose
     private Long SuccAttackCount;
 
     /**
-     * Get 时间点，如 2023-05-06
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 时间点，如 2023-05-06 
      * @return DateTime 时间点，如 2023-05-06
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDateTime() {
         return this.DateTime;
@@ -67,19 +61,15 @@ public class NetAttackTrend extends AbstractModel {
 
     /**
      * Set 时间点，如 2023-05-06
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DateTime 时间点，如 2023-05-06
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDateTime(String DateTime) {
         this.DateTime = DateTime;
     }
 
     /**
-     * Get 攻击次数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 攻击次数 
      * @return AttackCount 攻击次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAttackCount() {
         return this.AttackCount;
@@ -87,19 +77,15 @@ public class NetAttackTrend extends AbstractModel {
 
     /**
      * Set 攻击次数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AttackCount 攻击次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAttackCount(Long AttackCount) {
         this.AttackCount = AttackCount;
     }
 
     /**
-     * Get 尝试攻击次数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 尝试攻击次数 
      * @return TryAttackCount 尝试攻击次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTryAttackCount() {
         return this.TryAttackCount;
@@ -107,19 +93,15 @@ public class NetAttackTrend extends AbstractModel {
 
     /**
      * Set 尝试攻击次数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TryAttackCount 尝试攻击次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTryAttackCount(Long TryAttackCount) {
         this.TryAttackCount = TryAttackCount;
     }
 
     /**
-     * Get 攻击成功次数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 攻击成功次数 
      * @return SuccAttackCount 攻击成功次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSuccAttackCount() {
         return this.SuccAttackCount;
@@ -127,9 +109,7 @@ public class NetAttackTrend extends AbstractModel {
 
     /**
      * Set 攻击成功次数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SuccAttackCount 攻击成功次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSuccAttackCount(Long SuccAttackCount) {
         this.SuccAttackCount = SuccAttackCount;

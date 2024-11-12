@@ -32,7 +32,6 @@ public class DescribeVulEffectModulesResponse extends AbstractModel {
 
     /**
     * 影响主机列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VulEffectModuleInfo")
     @Expose
@@ -62,10 +61,8 @@ public class DescribeVulEffectModulesResponse extends AbstractModel {
     }
 
     /**
-     * Get 影响主机列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 影响主机列表 
      * @return VulEffectModuleInfo 影响主机列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public VulEffectModuleInfo [] getVulEffectModuleInfo() {
         return this.VulEffectModuleInfo;
@@ -73,9 +70,7 @@ public class DescribeVulEffectModulesResponse extends AbstractModel {
 
     /**
      * Set 影响主机列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VulEffectModuleInfo 影响主机列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVulEffectModuleInfo(VulEffectModuleInfo [] VulEffectModuleInfo) {
         this.VulEffectModuleInfo = VulEffectModuleInfo;

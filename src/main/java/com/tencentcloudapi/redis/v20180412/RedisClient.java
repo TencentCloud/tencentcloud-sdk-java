@@ -226,7 +226,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *移除复制组成员 注：接口下线中，请使用 RemoveReplicationInstance
+     *移除复制组成员。注：该接口下线中，请使用 [RemoveReplicationInstance](https://cloud.tencent.com/document/product/239/90099)。
      * @param req DeleteReplicationInstanceRequest
      * @return DeleteReplicationInstanceResponse
      * @throws TencentCloudSDKException

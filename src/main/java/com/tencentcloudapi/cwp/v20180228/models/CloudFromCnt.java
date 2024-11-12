@@ -21,44 +21,67 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateCloudProtectServiceOrderRecordRequest extends AbstractModel {
+public class CloudFromCnt extends AbstractModel {
 
     /**
-    * 对应云护航服务的资源ID
+    * 云服务器类型
     */
-    @SerializedName("ResourceIds")
+    @SerializedName("CloudFrom")
     @Expose
-    private String [] ResourceIds;
+    private Long CloudFrom;
 
     /**
-     * Get 对应云护航服务的资源ID 
-     * @return ResourceIds 对应云护航服务的资源ID
+    * 机器数量
+    */
+    @SerializedName("MachineCnt")
+    @Expose
+    private Long MachineCnt;
+
+    /**
+     * Get 云服务器类型 
+     * @return CloudFrom 云服务器类型
      */
-    public String [] getResourceIds() {
-        return this.ResourceIds;
+    public Long getCloudFrom() {
+        return this.CloudFrom;
     }
 
     /**
-     * Set 对应云护航服务的资源ID
-     * @param ResourceIds 对应云护航服务的资源ID
+     * Set 云服务器类型
+     * @param CloudFrom 云服务器类型
      */
-    public void setResourceIds(String [] ResourceIds) {
-        this.ResourceIds = ResourceIds;
+    public void setCloudFrom(Long CloudFrom) {
+        this.CloudFrom = CloudFrom;
     }
 
-    public CreateCloudProtectServiceOrderRecordRequest() {
+    /**
+     * Get 机器数量 
+     * @return MachineCnt 机器数量
+     */
+    public Long getMachineCnt() {
+        return this.MachineCnt;
+    }
+
+    /**
+     * Set 机器数量
+     * @param MachineCnt 机器数量
+     */
+    public void setMachineCnt(Long MachineCnt) {
+        this.MachineCnt = MachineCnt;
+    }
+
+    public CloudFromCnt() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateCloudProtectServiceOrderRecordRequest(CreateCloudProtectServiceOrderRecordRequest source) {
-        if (source.ResourceIds != null) {
-            this.ResourceIds = new String[source.ResourceIds.length];
-            for (int i = 0; i < source.ResourceIds.length; i++) {
-                this.ResourceIds[i] = new String(source.ResourceIds[i]);
-            }
+    public CloudFromCnt(CloudFromCnt source) {
+        if (source.CloudFrom != null) {
+            this.CloudFrom = new Long(source.CloudFrom);
+        }
+        if (source.MachineCnt != null) {
+            this.MachineCnt = new Long(source.MachineCnt);
         }
     }
 
@@ -67,7 +90,8 @@ public class CreateCloudProtectServiceOrderRecordRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "ResourceIds.", this.ResourceIds);
+        this.setParamSimple(map, prefix + "CloudFrom", this.CloudFrom);
+        this.setParamSimple(map, prefix + "MachineCnt", this.MachineCnt);
 
     }
 }

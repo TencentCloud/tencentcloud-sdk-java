@@ -25,7 +25,6 @@ public class DescribeAttackEventsResponse extends AbstractModel {
 
     /**
     * 攻击事件列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("List")
     @Expose
@@ -46,10 +45,8 @@ public class DescribeAttackEventsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 攻击事件列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 攻击事件列表 
      * @return List 攻击事件列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public NetAttackEvent [] getList() {
         return this.List;
@@ -57,9 +54,7 @@ public class DescribeAttackEventsResponse extends AbstractModel {
 
     /**
      * Set 攻击事件列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param List 攻击事件列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setList(NetAttackEvent [] List) {
         this.List = List;

@@ -25,7 +25,6 @@ public class EffectiveMachineInfo extends AbstractModel {
 
     /**
     * 机器名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MachineName")
     @Expose
@@ -33,7 +32,6 @@ public class EffectiveMachineInfo extends AbstractModel {
 
     /**
     * 机器公网ip
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MachinePublicIp")
     @Expose
@@ -41,7 +39,6 @@ public class EffectiveMachineInfo extends AbstractModel {
 
     /**
     * 机器内网ip
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MachinePrivateIp")
     @Expose
@@ -49,7 +46,6 @@ public class EffectiveMachineInfo extends AbstractModel {
 
     /**
     * 机器标签
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MachineTag")
     @Expose
@@ -57,15 +53,13 @@ public class EffectiveMachineInfo extends AbstractModel {
 
     /**
     * 机器Quuid
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Quuid")
     @Expose
     private String Quuid;
 
     /**
-    * 云镜Uuid
-注意：此字段可能返回 null，表示取不到有效值。
+    * 主机Uuid
     */
     @SerializedName("Uuid")
     @Expose
@@ -73,7 +67,6 @@ public class EffectiveMachineInfo extends AbstractModel {
 
     /**
     * 内核版本号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KernelVersion")
     @Expose
@@ -81,7 +74,6 @@ public class EffectiveMachineInfo extends AbstractModel {
 
     /**
     * 在线状态 OFFLINE，ONLINE
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MachineStatus")
     @Expose
@@ -89,7 +81,6 @@ public class EffectiveMachineInfo extends AbstractModel {
 
     /**
     * 授权订单对象
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LicenseOrder")
     @Expose
@@ -97,7 +88,6 @@ public class EffectiveMachineInfo extends AbstractModel {
 
     /**
     * 漏洞数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VulNum")
     @Expose
@@ -105,7 +95,6 @@ public class EffectiveMachineInfo extends AbstractModel {
 
     /**
     * 云标签信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CloudTags")
     @Expose
@@ -113,17 +102,14 @@ public class EffectiveMachineInfo extends AbstractModel {
 
     /**
     * 机器instance ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceID")
     @Expose
     private String InstanceID;
 
     /**
-     * Get 机器名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 机器名称 
      * @return MachineName 机器名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMachineName() {
         return this.MachineName;
@@ -131,19 +117,15 @@ public class EffectiveMachineInfo extends AbstractModel {
 
     /**
      * Set 机器名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MachineName 机器名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMachineName(String MachineName) {
         this.MachineName = MachineName;
     }
 
     /**
-     * Get 机器公网ip
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 机器公网ip 
      * @return MachinePublicIp 机器公网ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMachinePublicIp() {
         return this.MachinePublicIp;
@@ -151,19 +133,15 @@ public class EffectiveMachineInfo extends AbstractModel {
 
     /**
      * Set 机器公网ip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MachinePublicIp 机器公网ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMachinePublicIp(String MachinePublicIp) {
         this.MachinePublicIp = MachinePublicIp;
     }
 
     /**
-     * Get 机器内网ip
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 机器内网ip 
      * @return MachinePrivateIp 机器内网ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMachinePrivateIp() {
         return this.MachinePrivateIp;
@@ -171,19 +149,15 @@ public class EffectiveMachineInfo extends AbstractModel {
 
     /**
      * Set 机器内网ip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MachinePrivateIp 机器内网ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMachinePrivateIp(String MachinePrivateIp) {
         this.MachinePrivateIp = MachinePrivateIp;
     }
 
     /**
-     * Get 机器标签
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 机器标签 
      * @return MachineTag 机器标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public MachineTag [] getMachineTag() {
         return this.MachineTag;
@@ -191,19 +165,15 @@ public class EffectiveMachineInfo extends AbstractModel {
 
     /**
      * Set 机器标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MachineTag 机器标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMachineTag(MachineTag [] MachineTag) {
         this.MachineTag = MachineTag;
     }
 
     /**
-     * Get 机器Quuid
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 机器Quuid 
      * @return Quuid 机器Quuid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getQuuid() {
         return this.Quuid;
@@ -211,39 +181,31 @@ public class EffectiveMachineInfo extends AbstractModel {
 
     /**
      * Set 机器Quuid
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Quuid 机器Quuid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQuuid(String Quuid) {
         this.Quuid = Quuid;
     }
 
     /**
-     * Get 云镜Uuid
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Uuid 云镜Uuid
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 主机Uuid 
+     * @return Uuid 主机Uuid
      */
     public String getUuid() {
         return this.Uuid;
     }
 
     /**
-     * Set 云镜Uuid
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Uuid 云镜Uuid
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 主机Uuid
+     * @param Uuid 主机Uuid
      */
     public void setUuid(String Uuid) {
         this.Uuid = Uuid;
     }
 
     /**
-     * Get 内核版本号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 内核版本号 
      * @return KernelVersion 内核版本号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKernelVersion() {
         return this.KernelVersion;
@@ -251,19 +213,15 @@ public class EffectiveMachineInfo extends AbstractModel {
 
     /**
      * Set 内核版本号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param KernelVersion 内核版本号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKernelVersion(String KernelVersion) {
         this.KernelVersion = KernelVersion;
     }
 
     /**
-     * Get 在线状态 OFFLINE，ONLINE
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 在线状态 OFFLINE，ONLINE 
      * @return MachineStatus 在线状态 OFFLINE，ONLINE
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMachineStatus() {
         return this.MachineStatus;
@@ -271,19 +229,15 @@ public class EffectiveMachineInfo extends AbstractModel {
 
     /**
      * Set 在线状态 OFFLINE，ONLINE
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MachineStatus 在线状态 OFFLINE，ONLINE
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMachineStatus(String MachineStatus) {
         this.MachineStatus = MachineStatus;
     }
 
     /**
-     * Get 授权订单对象
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 授权订单对象 
      * @return LicenseOrder 授权订单对象
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public LicenseOrder getLicenseOrder() {
         return this.LicenseOrder;
@@ -291,19 +245,15 @@ public class EffectiveMachineInfo extends AbstractModel {
 
     /**
      * Set 授权订单对象
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LicenseOrder 授权订单对象
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLicenseOrder(LicenseOrder LicenseOrder) {
         this.LicenseOrder = LicenseOrder;
     }
 
     /**
-     * Get 漏洞数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 漏洞数量 
      * @return VulNum 漏洞数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getVulNum() {
         return this.VulNum;
@@ -311,19 +261,15 @@ public class EffectiveMachineInfo extends AbstractModel {
 
     /**
      * Set 漏洞数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VulNum 漏洞数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVulNum(Long VulNum) {
         this.VulNum = VulNum;
     }
 
     /**
-     * Get 云标签信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 云标签信息 
      * @return CloudTags 云标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Tags [] getCloudTags() {
         return this.CloudTags;
@@ -331,19 +277,15 @@ public class EffectiveMachineInfo extends AbstractModel {
 
     /**
      * Set 云标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CloudTags 云标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCloudTags(Tags [] CloudTags) {
         this.CloudTags = CloudTags;
     }
 
     /**
-     * Get 机器instance ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 机器instance ID 
      * @return InstanceID 机器instance ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceID() {
         return this.InstanceID;
@@ -351,9 +293,7 @@ public class EffectiveMachineInfo extends AbstractModel {
 
     /**
      * Set 机器instance ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceID 机器instance ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceID(String InstanceID) {
         this.InstanceID = InstanceID;

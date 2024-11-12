@@ -25,7 +25,6 @@ public class DescribeJavaMemShellListResponse extends AbstractModel {
 
     /**
     * 事件列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("List")
     @Expose
@@ -46,10 +45,8 @@ public class DescribeJavaMemShellListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 事件列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 事件列表 
      * @return List 事件列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public JavaMemShellInfo [] getList() {
         return this.List;
@@ -57,9 +54,7 @@ public class DescribeJavaMemShellListResponse extends AbstractModel {
 
     /**
      * Set 事件列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param List 事件列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setList(JavaMemShellInfo [] List) {
         this.List = List;

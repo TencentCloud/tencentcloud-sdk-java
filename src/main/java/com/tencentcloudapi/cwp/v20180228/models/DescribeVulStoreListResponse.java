@@ -25,7 +25,6 @@ public class DescribeVulStoreListResponse extends AbstractModel {
 
     /**
     * 漏洞信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("List")
     @Expose
@@ -60,10 +59,8 @@ public class DescribeVulStoreListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 漏洞信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 漏洞信息 
      * @return List 漏洞信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public VulStoreListInfo [] getList() {
         return this.List;
@@ -71,9 +68,7 @@ public class DescribeVulStoreListResponse extends AbstractModel {
 
     /**
      * Set 漏洞信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param List 漏洞信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setList(VulStoreListInfo [] List) {
         this.List = List;

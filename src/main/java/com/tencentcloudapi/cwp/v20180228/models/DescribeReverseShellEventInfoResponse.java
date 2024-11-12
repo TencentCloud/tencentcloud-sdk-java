@@ -25,7 +25,6 @@ public class DescribeReverseShellEventInfoResponse extends AbstractModel {
 
     /**
     * 反弹shell详情信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReverseShellEventInfo")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeReverseShellEventInfoResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 反弹shell详情信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 反弹shell详情信息 
      * @return ReverseShellEventInfo 反弹shell详情信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ReverseShellEventInfo getReverseShellEventInfo() {
         return this.ReverseShellEventInfo;
@@ -50,9 +47,7 @@ public class DescribeReverseShellEventInfoResponse extends AbstractModel {
 
     /**
      * Set 反弹shell详情信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReverseShellEventInfo 反弹shell详情信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReverseShellEventInfo(ReverseShellEventInfo ReverseShellEventInfo) {
         this.ReverseShellEventInfo = ReverseShellEventInfo;

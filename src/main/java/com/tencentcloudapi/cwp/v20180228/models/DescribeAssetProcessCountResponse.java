@@ -25,7 +25,6 @@ public class DescribeAssetProcessCountResponse extends AbstractModel {
 
     /**
     * 各进程数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Process")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeAssetProcessCountResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 各进程数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 各进程数量 
      * @return Process 各进程数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AssetKeyVal [] getProcess() {
         return this.Process;
@@ -50,9 +47,7 @@ public class DescribeAssetProcessCountResponse extends AbstractModel {
 
     /**
      * Set 各进程数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Process 各进程数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProcess(AssetKeyVal [] Process) {
         this.Process = Process;

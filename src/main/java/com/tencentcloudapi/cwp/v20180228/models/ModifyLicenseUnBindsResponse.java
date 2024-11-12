@@ -25,7 +25,6 @@ public class ModifyLicenseUnBindsResponse extends AbstractModel {
 
     /**
     * 只有解绑失败的才有该值.
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ErrMsg")
     @Expose
@@ -39,10 +38,8 @@ public class ModifyLicenseUnBindsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 只有解绑失败的才有该值.
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 只有解绑失败的才有该值. 
      * @return ErrMsg 只有解绑失败的才有该值.
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public LicenseUnBindRsp [] getErrMsg() {
         return this.ErrMsg;
@@ -50,9 +47,7 @@ public class ModifyLicenseUnBindsResponse extends AbstractModel {
 
     /**
      * Set 只有解绑失败的才有该值.
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ErrMsg 只有解绑失败的才有该值.
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrMsg(LicenseUnBindRsp [] ErrMsg) {
         this.ErrMsg = ErrMsg;

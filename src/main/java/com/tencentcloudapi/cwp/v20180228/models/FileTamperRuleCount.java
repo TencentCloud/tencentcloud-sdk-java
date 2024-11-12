@@ -39,7 +39,6 @@ public class FileTamperRuleCount extends AbstractModel {
 
     /**
     * 关联规则的名称（仅展示其中一条）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -78,10 +77,8 @@ public class FileTamperRuleCount extends AbstractModel {
     }
 
     /**
-     * Get 关联规则的名称（仅展示其中一条）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 关联规则的名称（仅展示其中一条） 
      * @return Name 关联规则的名称（仅展示其中一条）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -89,9 +86,7 @@ public class FileTamperRuleCount extends AbstractModel {
 
     /**
      * Set 关联规则的名称（仅展示其中一条）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 关联规则的名称（仅展示其中一条）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;

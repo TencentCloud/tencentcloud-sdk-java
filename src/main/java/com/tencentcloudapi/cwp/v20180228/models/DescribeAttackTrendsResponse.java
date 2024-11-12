@@ -25,7 +25,6 @@ public class DescribeAttackTrendsResponse extends AbstractModel {
 
     /**
     * 攻击趋势统计数据（天）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NetAttackTrend")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeAttackTrendsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 攻击趋势统计数据（天）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 攻击趋势统计数据（天） 
      * @return NetAttackTrend 攻击趋势统计数据（天）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public NetAttackTrend [] getNetAttackTrend() {
         return this.NetAttackTrend;
@@ -50,9 +47,7 @@ public class DescribeAttackTrendsResponse extends AbstractModel {
 
     /**
      * Set 攻击趋势统计数据（天）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NetAttackTrend 攻击趋势统计数据（天）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNetAttackTrend(NetAttackTrend [] NetAttackTrend) {
         this.NetAttackTrend = NetAttackTrend;

@@ -130,7 +130,6 @@ public class AssetMachineBaseInfo extends AbstractModel {
 
     /**
     * 标签
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tag")
     @Expose
@@ -138,7 +137,6 @@ public class AssetMachineBaseInfo extends AbstractModel {
 
     /**
     * 数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -160,7 +158,6 @@ public class AssetMachineBaseInfo extends AbstractModel {
 
     /**
     * 附加信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MachineExtraInfo")
     @Expose
@@ -168,7 +165,6 @@ public class AssetMachineBaseInfo extends AbstractModel {
 
     /**
     * cpu负载读数（仅linux系统有效）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CpuLoadNum")
     @Expose
@@ -415,10 +411,8 @@ public class AssetMachineBaseInfo extends AbstractModel {
     }
 
     /**
-     * Get 标签
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标签 
      * @return Tag 标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public MachineTag [] getTag() {
         return this.Tag;
@@ -426,19 +420,15 @@ public class AssetMachineBaseInfo extends AbstractModel {
 
     /**
      * Set 标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tag 标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTag(MachineTag [] Tag) {
         this.Tag = Tag;
     }
 
     /**
-     * Get 数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据更新时间 
      * @return UpdateTime 数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdateTime() {
         return this.UpdateTime;
@@ -446,9 +436,7 @@ public class AssetMachineBaseInfo extends AbstractModel {
 
     /**
      * Set 数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdateTime 数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
@@ -487,10 +475,8 @@ public class AssetMachineBaseInfo extends AbstractModel {
     }
 
     /**
-     * Get 附加信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 附加信息 
      * @return MachineExtraInfo 附加信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public MachineExtraInfo getMachineExtraInfo() {
         return this.MachineExtraInfo;
@@ -498,19 +484,15 @@ public class AssetMachineBaseInfo extends AbstractModel {
 
     /**
      * Set 附加信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MachineExtraInfo 附加信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMachineExtraInfo(MachineExtraInfo MachineExtraInfo) {
         this.MachineExtraInfo = MachineExtraInfo;
     }
 
     /**
-     * Get cpu负载读数（仅linux系统有效）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get cpu负载读数（仅linux系统有效） 
      * @return CpuLoadNum cpu负载读数（仅linux系统有效）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCpuLoadNum() {
         return this.CpuLoadNum;
@@ -518,9 +500,7 @@ public class AssetMachineBaseInfo extends AbstractModel {
 
     /**
      * Set cpu负载读数（仅linux系统有效）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CpuLoadNum cpu负载读数（仅linux系统有效）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCpuLoadNum(String CpuLoadNum) {
         this.CpuLoadNum = CpuLoadNum;

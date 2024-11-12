@@ -25,7 +25,6 @@ public class DescribeBaselineStrategyListResponse extends AbstractModel {
 
     /**
     * 分页查询记录的总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeBaselineStrategyListResponse extends AbstractModel {
 
     /**
     * 用户策略信息列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StrategyList")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeBaselineStrategyListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 分页查询记录的总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分页查询记录的总数 
      * @return TotalCount 分页查询记录的总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -58,19 +54,15 @@ public class DescribeBaselineStrategyListResponse extends AbstractModel {
 
     /**
      * Set 分页查询记录的总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 分页查询记录的总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 用户策略信息列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户策略信息列表 
      * @return StrategyList 用户策略信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Strategy [] getStrategyList() {
         return this.StrategyList;
@@ -78,9 +70,7 @@ public class DescribeBaselineStrategyListResponse extends AbstractModel {
 
     /**
      * Set 用户策略信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StrategyList 用户策略信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStrategyList(Strategy [] StrategyList) {
         this.StrategyList = StrategyList;

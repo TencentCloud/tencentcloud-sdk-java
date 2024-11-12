@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class GroupInfo extends AbstractModel {
 
     /**
-    * 人员库名称
+    * 人员库名称。
     */
     @SerializedName("GroupName")
     @Expose
     private String GroupName;
 
     /**
-    * 人员库ID
+    * 人员库ID。
     */
     @SerializedName("GroupId")
     @Expose
     private String GroupId;
 
     /**
-    * 人员库自定义描述字段
+    * 人员库自定义描述字段。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupExDescriptions")
@@ -46,7 +46,7 @@ public class GroupInfo extends AbstractModel {
     private String [] GroupExDescriptions;
 
     /**
-    * 人员库信息备注
+    * 人员库信息备注。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tag")
@@ -62,8 +62,10 @@ public class GroupInfo extends AbstractModel {
     private String FaceModelVersion;
 
     /**
-    * Group的创建时间和日期 CreationTimestamp。CreationTimestamp 的值是自 Unix 纪元时间到Group创建时间的毫秒数。 
-Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00:00。有关更多信息，请参阅 Unix 时间。
+    * Group的创建时间和日期 CreationTimestamp。
+- CreationTimestamp 的值是自 Unix 纪元时间到Group创建时间的毫秒数。 
+- Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00:00。
+- 有关更多信息，请参阅 Unix 时间。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreationTimestamp")
@@ -71,41 +73,41 @@ Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00
     private Long CreationTimestamp;
 
     /**
-     * Get 人员库名称 
-     * @return GroupName 人员库名称
+     * Get 人员库名称。 
+     * @return GroupName 人员库名称。
      */
     public String getGroupName() {
         return this.GroupName;
     }
 
     /**
-     * Set 人员库名称
-     * @param GroupName 人员库名称
+     * Set 人员库名称。
+     * @param GroupName 人员库名称。
      */
     public void setGroupName(String GroupName) {
         this.GroupName = GroupName;
     }
 
     /**
-     * Get 人员库ID 
-     * @return GroupId 人员库ID
+     * Get 人员库ID。 
+     * @return GroupId 人员库ID。
      */
     public String getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set 人员库ID
-     * @param GroupId 人员库ID
+     * Set 人员库ID。
+     * @param GroupId 人员库ID。
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;
     }
 
     /**
-     * Get 人员库自定义描述字段
+     * Get 人员库自定义描述字段。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return GroupExDescriptions 人员库自定义描述字段
+     * @return GroupExDescriptions 人员库自定义描述字段。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getGroupExDescriptions() {
@@ -113,9 +115,9 @@ Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00
     }
 
     /**
-     * Set 人员库自定义描述字段
+     * Set 人员库自定义描述字段。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param GroupExDescriptions 人员库自定义描述字段
+     * @param GroupExDescriptions 人员库自定义描述字段。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupExDescriptions(String [] GroupExDescriptions) {
@@ -123,9 +125,9 @@ Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00
     }
 
     /**
-     * Get 人员库信息备注
+     * Get 人员库信息备注。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Tag 人员库信息备注
+     * @return Tag 人员库信息备注。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTag() {
@@ -133,9 +135,9 @@ Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00
     }
 
     /**
-     * Set 人员库信息备注
+     * Set 人员库信息备注。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Tag 人员库信息备注
+     * @param Tag 人员库信息备注。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTag(String Tag) {
@@ -163,11 +165,15 @@ Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00
     }
 
     /**
-     * Get Group的创建时间和日期 CreationTimestamp。CreationTimestamp 的值是自 Unix 纪元时间到Group创建时间的毫秒数。 
-Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00:00。有关更多信息，请参阅 Unix 时间。
+     * Get Group的创建时间和日期 CreationTimestamp。
+- CreationTimestamp 的值是自 Unix 纪元时间到Group创建时间的毫秒数。 
+- Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00:00。
+- 有关更多信息，请参阅 Unix 时间。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreationTimestamp Group的创建时间和日期 CreationTimestamp。CreationTimestamp 的值是自 Unix 纪元时间到Group创建时间的毫秒数。 
-Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00:00。有关更多信息，请参阅 Unix 时间。
+     * @return CreationTimestamp Group的创建时间和日期 CreationTimestamp。
+- CreationTimestamp 的值是自 Unix 纪元时间到Group创建时间的毫秒数。 
+- Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00:00。
+- 有关更多信息，请参阅 Unix 时间。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCreationTimestamp() {
@@ -175,11 +181,15 @@ Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00
     }
 
     /**
-     * Set Group的创建时间和日期 CreationTimestamp。CreationTimestamp 的值是自 Unix 纪元时间到Group创建时间的毫秒数。 
-Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00:00。有关更多信息，请参阅 Unix 时间。
+     * Set Group的创建时间和日期 CreationTimestamp。
+- CreationTimestamp 的值是自 Unix 纪元时间到Group创建时间的毫秒数。 
+- Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00:00。
+- 有关更多信息，请参阅 Unix 时间。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreationTimestamp Group的创建时间和日期 CreationTimestamp。CreationTimestamp 的值是自 Unix 纪元时间到Group创建时间的毫秒数。 
-Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00:00。有关更多信息，请参阅 Unix 时间。
+     * @param CreationTimestamp Group的创建时间和日期 CreationTimestamp。
+- CreationTimestamp 的值是自 Unix 纪元时间到Group创建时间的毫秒数。 
+- Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00:00。
+- 有关更多信息，请参阅 Unix 时间。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreationTimestamp(Long CreationTimestamp) {

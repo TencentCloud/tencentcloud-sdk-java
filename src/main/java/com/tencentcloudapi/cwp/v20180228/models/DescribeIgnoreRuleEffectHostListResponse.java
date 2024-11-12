@@ -25,7 +25,6 @@ public class DescribeIgnoreRuleEffectHostListResponse extends AbstractModel {
 
     /**
     * 忽略检测项影响主机列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IgnoreRuleEffectHostList")
     @Expose
@@ -46,10 +45,8 @@ public class DescribeIgnoreRuleEffectHostListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 忽略检测项影响主机列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 忽略检测项影响主机列表 
      * @return IgnoreRuleEffectHostList 忽略检测项影响主机列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public IgnoreRuleEffectHostInfo [] getIgnoreRuleEffectHostList() {
         return this.IgnoreRuleEffectHostList;
@@ -57,9 +54,7 @@ public class DescribeIgnoreRuleEffectHostListResponse extends AbstractModel {
 
     /**
      * Set 忽略检测项影响主机列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IgnoreRuleEffectHostList 忽略检测项影响主机列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIgnoreRuleEffectHostList(IgnoreRuleEffectHostInfo [] IgnoreRuleEffectHostList) {
         this.IgnoreRuleEffectHostList = IgnoreRuleEffectHostList;

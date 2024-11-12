@@ -25,7 +25,6 @@ public class DescribeVulFixStatusResponse extends AbstractModel {
 
     /**
     * 开始修复时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FixStartTime")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeVulFixStatusResponse extends AbstractModel {
 
     /**
     * 修复结束时间，为空表示还没结束
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FixEndTime")
     @Expose
@@ -41,7 +39,6 @@ public class DescribeVulFixStatusResponse extends AbstractModel {
 
     /**
     * 修复成功的主机数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FixSuccessCnt")
     @Expose
@@ -70,7 +67,6 @@ public class DescribeVulFixStatusResponse extends AbstractModel {
 
     /**
     * 修复快照状态列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SnapshotList")
     @Expose
@@ -78,7 +74,6 @@ public class DescribeVulFixStatusResponse extends AbstractModel {
 
     /**
     * 修复漏洞详情列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VulFixList")
     @Expose
@@ -114,7 +109,6 @@ public class DescribeVulFixStatusResponse extends AbstractModel {
 
     /**
     * 快照创建失败数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SnapshotFailCnt")
     @Expose
@@ -122,7 +116,6 @@ public class DescribeVulFixStatusResponse extends AbstractModel {
 
     /**
     * 是否允许重试 0:不允许 1：允许
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsAllowRetry")
     @Expose
@@ -136,10 +129,8 @@ public class DescribeVulFixStatusResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 开始修复时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 开始修复时间 
      * @return FixStartTime 开始修复时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFixStartTime() {
         return this.FixStartTime;
@@ -147,19 +138,15 @@ public class DescribeVulFixStatusResponse extends AbstractModel {
 
     /**
      * Set 开始修复时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FixStartTime 开始修复时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFixStartTime(String FixStartTime) {
         this.FixStartTime = FixStartTime;
     }
 
     /**
-     * Get 修复结束时间，为空表示还没结束
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 修复结束时间，为空表示还没结束 
      * @return FixEndTime 修复结束时间，为空表示还没结束
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFixEndTime() {
         return this.FixEndTime;
@@ -167,19 +154,15 @@ public class DescribeVulFixStatusResponse extends AbstractModel {
 
     /**
      * Set 修复结束时间，为空表示还没结束
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FixEndTime 修复结束时间，为空表示还没结束
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFixEndTime(String FixEndTime) {
         this.FixEndTime = FixEndTime;
     }
 
     /**
-     * Get 修复成功的主机数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 修复成功的主机数 
      * @return FixSuccessCnt 修复成功的主机数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFixSuccessCnt() {
         return this.FixSuccessCnt;
@@ -187,9 +170,7 @@ public class DescribeVulFixStatusResponse extends AbstractModel {
 
     /**
      * Set 修复成功的主机数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FixSuccessCnt 修复成功的主机数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFixSuccessCnt(Long FixSuccessCnt) {
         this.FixSuccessCnt = FixSuccessCnt;
@@ -244,10 +225,8 @@ public class DescribeVulFixStatusResponse extends AbstractModel {
     }
 
     /**
-     * Get 修复快照状态列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 修复快照状态列表 
      * @return SnapshotList 修复快照状态列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public VulFixStatusSnapshotInfo [] getSnapshotList() {
         return this.SnapshotList;
@@ -255,19 +234,15 @@ public class DescribeVulFixStatusResponse extends AbstractModel {
 
     /**
      * Set 修复快照状态列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SnapshotList 修复快照状态列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSnapshotList(VulFixStatusSnapshotInfo [] SnapshotList) {
         this.SnapshotList = SnapshotList;
     }
 
     /**
-     * Get 修复漏洞详情列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 修复漏洞详情列表 
      * @return VulFixList 修复漏洞详情列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public VulFixStatusInfo [] getVulFixList() {
         return this.VulFixList;
@@ -275,9 +250,7 @@ public class DescribeVulFixStatusResponse extends AbstractModel {
 
     /**
      * Set 修复漏洞详情列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VulFixList 修复漏洞详情列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVulFixList(VulFixStatusInfo [] VulFixList) {
         this.VulFixList = VulFixList;
@@ -348,10 +321,8 @@ public class DescribeVulFixStatusResponse extends AbstractModel {
     }
 
     /**
-     * Get 快照创建失败数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 快照创建失败数 
      * @return SnapshotFailCnt 快照创建失败数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSnapshotFailCnt() {
         return this.SnapshotFailCnt;
@@ -359,19 +330,15 @@ public class DescribeVulFixStatusResponse extends AbstractModel {
 
     /**
      * Set 快照创建失败数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SnapshotFailCnt 快照创建失败数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSnapshotFailCnt(Long SnapshotFailCnt) {
         this.SnapshotFailCnt = SnapshotFailCnt;
     }
 
     /**
-     * Get 是否允许重试 0:不允许 1：允许
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否允许重试 0:不允许 1：允许 
      * @return IsAllowRetry 是否允许重试 0:不允许 1：允许
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsAllowRetry() {
         return this.IsAllowRetry;
@@ -379,9 +346,7 @@ public class DescribeVulFixStatusResponse extends AbstractModel {
 
     /**
      * Set 是否允许重试 0:不允许 1：允许
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsAllowRetry 是否允许重试 0:不允许 1：允许
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsAllowRetry(Long IsAllowRetry) {
         this.IsAllowRetry = IsAllowRetry;

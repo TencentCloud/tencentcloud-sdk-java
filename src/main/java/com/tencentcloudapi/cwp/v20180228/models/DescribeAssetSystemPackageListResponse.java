@@ -32,7 +32,6 @@ public class DescribeAssetSystemPackageListResponse extends AbstractModel {
 
     /**
     * 列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Packages")
     @Expose
@@ -62,10 +61,8 @@ public class DescribeAssetSystemPackageListResponse extends AbstractModel {
     }
 
     /**
-     * Get 列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 列表 
      * @return Packages 列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AssetSystemPackageInfo [] getPackages() {
         return this.Packages;
@@ -73,9 +70,7 @@ public class DescribeAssetSystemPackageListResponse extends AbstractModel {
 
     /**
      * Set 列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Packages 列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPackages(AssetSystemPackageInfo [] Packages) {
         this.Packages = Packages;

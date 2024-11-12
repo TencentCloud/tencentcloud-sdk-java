@@ -78,16 +78,14 @@ TypeId为标准架构时，MemSize是实例总内存容量；TypeId为集群架�
     private Long ZoneId;
 
     /**
-    * 实例分片数量。
-Redis2.8标准架构、CKV标准架构、Redis4.0标准架构无需填写。
+    * 实例分片数量。2.8 标准架构无需配置分片，其余版本标准架构需要配置分片数量为1。集群架构需指定需购买的分片数量。
     */
     @SerializedName("RedisShardNum")
     @Expose
     private Long RedisShardNum;
 
     /**
-    * 实例副本数量。
-Redis2.8标准架构、CKV标准架构无需填写。
+    * 实例副本数量。2.8 标准架构无需配置副本数量。
     */
     @SerializedName("RedisReplicasNum")
     @Expose
@@ -264,40 +262,32 @@ TypeId为标准架构时，MemSize是实例总内存容量；TypeId为集群架�
     }
 
     /**
-     * Get 实例分片数量。
-Redis2.8标准架构、CKV标准架构、Redis4.0标准架构无需填写。 
-     * @return RedisShardNum 实例分片数量。
-Redis2.8标准架构、CKV标准架构、Redis4.0标准架构无需填写。
+     * Get 实例分片数量。2.8 标准架构无需配置分片，其余版本标准架构需要配置分片数量为1。集群架构需指定需购买的分片数量。 
+     * @return RedisShardNum 实例分片数量。2.8 标准架构无需配置分片，其余版本标准架构需要配置分片数量为1。集群架构需指定需购买的分片数量。
      */
     public Long getRedisShardNum() {
         return this.RedisShardNum;
     }
 
     /**
-     * Set 实例分片数量。
-Redis2.8标准架构、CKV标准架构、Redis4.0标准架构无需填写。
-     * @param RedisShardNum 实例分片数量。
-Redis2.8标准架构、CKV标准架构、Redis4.0标准架构无需填写。
+     * Set 实例分片数量。2.8 标准架构无需配置分片，其余版本标准架构需要配置分片数量为1。集群架构需指定需购买的分片数量。
+     * @param RedisShardNum 实例分片数量。2.8 标准架构无需配置分片，其余版本标准架构需要配置分片数量为1。集群架构需指定需购买的分片数量。
      */
     public void setRedisShardNum(Long RedisShardNum) {
         this.RedisShardNum = RedisShardNum;
     }
 
     /**
-     * Get 实例副本数量。
-Redis2.8标准架构、CKV标准架构无需填写。 
-     * @return RedisReplicasNum 实例副本数量。
-Redis2.8标准架构、CKV标准架构无需填写。
+     * Get 实例副本数量。2.8 标准架构无需配置副本数量。 
+     * @return RedisReplicasNum 实例副本数量。2.8 标准架构无需配置副本数量。
      */
     public Long getRedisReplicasNum() {
         return this.RedisReplicasNum;
     }
 
     /**
-     * Set 实例副本数量。
-Redis2.8标准架构、CKV标准架构无需填写。
-     * @param RedisReplicasNum 实例副本数量。
-Redis2.8标准架构、CKV标准架构无需填写。
+     * Set 实例副本数量。2.8 标准架构无需配置副本数量。
+     * @param RedisReplicasNum 实例副本数量。2.8 标准架构无需配置副本数量。
      */
     public void setRedisReplicasNum(Long RedisReplicasNum) {
         this.RedisReplicasNum = RedisReplicasNum;

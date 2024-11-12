@@ -25,7 +25,6 @@ public class DescribeAssetWebAppPluginListResponse extends AbstractModel {
 
     /**
     * 列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Plugins")
     @Expose
@@ -46,10 +45,8 @@ public class DescribeAssetWebAppPluginListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 列表 
      * @return Plugins 列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AssetWebAppPluginInfo [] getPlugins() {
         return this.Plugins;
@@ -57,9 +54,7 @@ public class DescribeAssetWebAppPluginListResponse extends AbstractModel {
 
     /**
      * Set 列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Plugins 列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPlugins(AssetWebAppPluginInfo [] Plugins) {
         this.Plugins = Plugins;

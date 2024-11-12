@@ -25,7 +25,6 @@ public class DescribePrivilegeEventInfoResponse extends AbstractModel {
 
     /**
     * 本地提权详情
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PrivilegeEventInfo")
     @Expose
@@ -39,10 +38,8 @@ public class DescribePrivilegeEventInfoResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 本地提权详情
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 本地提权详情 
      * @return PrivilegeEventInfo 本地提权详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public PrivilegeEventInfo getPrivilegeEventInfo() {
         return this.PrivilegeEventInfo;
@@ -50,9 +47,7 @@ public class DescribePrivilegeEventInfoResponse extends AbstractModel {
 
     /**
      * Set 本地提权详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PrivilegeEventInfo 本地提权详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPrivilegeEventInfo(PrivilegeEventInfo PrivilegeEventInfo) {
         this.PrivilegeEventInfo = PrivilegeEventInfo;

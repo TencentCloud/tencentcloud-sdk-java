@@ -25,15 +25,13 @@ public class DescribeLogStorageConfigResponse extends AbstractModel {
 
     /**
     * 存储类型，string数组
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
     private String [] Type;
 
     /**
-    * 日志存储天数，3640表示不限
-注意：此字段可能返回 null，表示取不到有效值。
+    * 日志存储时长，3640表示不限
     */
     @SerializedName("Period")
     @Expose
@@ -41,11 +39,17 @@ public class DescribeLogStorageConfigResponse extends AbstractModel {
 
     /**
     * 本月Period的修改次数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PeriodModifyCount")
     @Expose
     private Long PeriodModifyCount;
+
+    /**
+    * 日志存储时长单位，年year/月month/天day
+    */
+    @SerializedName("Granularity")
+    @Expose
+    private String Granularity;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -55,10 +59,8 @@ public class DescribeLogStorageConfigResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 存储类型，string数组
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 存储类型，string数组 
      * @return Type 存储类型，string数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getType() {
         return this.Type;
@@ -66,39 +68,31 @@ public class DescribeLogStorageConfigResponse extends AbstractModel {
 
     /**
      * Set 存储类型，string数组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 存储类型，string数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String [] Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 日志存储天数，3640表示不限
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Period 日志存储天数，3640表示不限
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 日志存储时长，3640表示不限 
+     * @return Period 日志存储时长，3640表示不限
      */
     public Long getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set 日志存储天数，3640表示不限
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Period 日志存储天数，3640表示不限
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 日志存储时长，3640表示不限
+     * @param Period 日志存储时长，3640表示不限
      */
     public void setPeriod(Long Period) {
         this.Period = Period;
     }
 
     /**
-     * Get 本月Period的修改次数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 本月Period的修改次数 
      * @return PeriodModifyCount 本月Period的修改次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPeriodModifyCount() {
         return this.PeriodModifyCount;
@@ -106,12 +100,26 @@ public class DescribeLogStorageConfigResponse extends AbstractModel {
 
     /**
      * Set 本月Period的修改次数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PeriodModifyCount 本月Period的修改次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPeriodModifyCount(Long PeriodModifyCount) {
         this.PeriodModifyCount = PeriodModifyCount;
+    }
+
+    /**
+     * Get 日志存储时长单位，年year/月month/天day 
+     * @return Granularity 日志存储时长单位，年year/月month/天day
+     */
+    public String getGranularity() {
+        return this.Granularity;
+    }
+
+    /**
+     * Set 日志存储时长单位，年year/月month/天day
+     * @param Granularity 日志存储时长单位，年year/月month/天day
+     */
+    public void setGranularity(String Granularity) {
+        this.Granularity = Granularity;
     }
 
     /**
@@ -150,6 +158,9 @@ public class DescribeLogStorageConfigResponse extends AbstractModel {
         if (source.PeriodModifyCount != null) {
             this.PeriodModifyCount = new Long(source.PeriodModifyCount);
         }
+        if (source.Granularity != null) {
+            this.Granularity = new String(source.Granularity);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -163,6 +174,7 @@ public class DescribeLogStorageConfigResponse extends AbstractModel {
         this.setParamArraySimple(map, prefix + "Type.", this.Type);
         this.setParamSimple(map, prefix + "Period", this.Period);
         this.setParamSimple(map, prefix + "PeriodModifyCount", this.PeriodModifyCount);
+        this.setParamSimple(map, prefix + "Granularity", this.Granularity);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

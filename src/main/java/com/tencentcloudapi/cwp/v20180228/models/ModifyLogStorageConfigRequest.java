@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyLogStorageConfigRequest extends AbstractModel {
 
     /**
-    * 是否修改有效期
+    * 是否修改有效期（已废弃）
     */
     @SerializedName("IsModifyPeriod")
     @Expose
@@ -52,16 +52,16 @@ public class ModifyLogStorageConfigRequest extends AbstractModel {
     private String Granularity;
 
     /**
-     * Get 是否修改有效期 
-     * @return IsModifyPeriod 是否修改有效期
+     * Get 是否修改有效期（已废弃） 
+     * @return IsModifyPeriod 是否修改有效期（已废弃）
      */
     public Boolean getIsModifyPeriod() {
         return this.IsModifyPeriod;
     }
 
     /**
-     * Set 是否修改有效期
-     * @param IsModifyPeriod 是否修改有效期
+     * Set 是否修改有效期（已废弃）
+     * @param IsModifyPeriod 是否修改有效期（已废弃）
      */
     public void setIsModifyPeriod(Boolean IsModifyPeriod) {
         this.IsModifyPeriod = IsModifyPeriod;

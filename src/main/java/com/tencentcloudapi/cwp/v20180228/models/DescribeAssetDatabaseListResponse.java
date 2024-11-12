@@ -25,7 +25,6 @@ public class DescribeAssetDatabaseListResponse extends AbstractModel {
 
     /**
     * 列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Databases")
     @Expose
@@ -46,10 +45,8 @@ public class DescribeAssetDatabaseListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 列表 
      * @return Databases 列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AssetDatabaseBaseInfo [] getDatabases() {
         return this.Databases;
@@ -57,9 +54,7 @@ public class DescribeAssetDatabaseListResponse extends AbstractModel {
 
     /**
      * Set 列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Databases 列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDatabases(AssetDatabaseBaseInfo [] Databases) {
         this.Databases = Databases;

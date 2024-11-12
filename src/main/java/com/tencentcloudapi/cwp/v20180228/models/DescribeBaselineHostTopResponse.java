@@ -25,7 +25,6 @@ public class DescribeBaselineHostTopResponse extends AbstractModel {
 
     /**
     * 主机基线策略事件Top
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BaselineHostTopList")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeBaselineHostTopResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 主机基线策略事件Top
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主机基线策略事件Top 
      * @return BaselineHostTopList 主机基线策略事件Top
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BaselineHostTopList [] getBaselineHostTopList() {
         return this.BaselineHostTopList;
@@ -50,9 +47,7 @@ public class DescribeBaselineHostTopResponse extends AbstractModel {
 
     /**
      * Set 主机基线策略事件Top
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BaselineHostTopList 主机基线策略事件Top
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBaselineHostTopList(BaselineHostTopList [] BaselineHostTopList) {
         this.BaselineHostTopList = BaselineHostTopList;

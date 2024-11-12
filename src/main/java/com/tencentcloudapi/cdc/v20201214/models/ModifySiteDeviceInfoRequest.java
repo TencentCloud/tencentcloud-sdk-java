@@ -73,7 +73,7 @@ public class ModifySiteDeviceInfoRequest extends AbstractModel {
     private Long PowerDrawKva;
 
     /**
-    * 网络到腾讯云Region区域的上行链路速度
+    * 网络到腾讯云Region区域的上行链路速度(Gbps)
     */
     @SerializedName("UplinkSpeedGbps")
     @Expose
@@ -249,16 +249,16 @@ public class ModifySiteDeviceInfoRequest extends AbstractModel {
     }
 
     /**
-     * Get 网络到腾讯云Region区域的上行链路速度 
-     * @return UplinkSpeedGbps 网络到腾讯云Region区域的上行链路速度
+     * Get 网络到腾讯云Region区域的上行链路速度(Gbps) 
+     * @return UplinkSpeedGbps 网络到腾讯云Region区域的上行链路速度(Gbps)
      */
     public Long getUplinkSpeedGbps() {
         return this.UplinkSpeedGbps;
     }
 
     /**
-     * Set 网络到腾讯云Region区域的上行链路速度
-     * @param UplinkSpeedGbps 网络到腾讯云Region区域的上行链路速度
+     * Set 网络到腾讯云Region区域的上行链路速度(Gbps)
+     * @param UplinkSpeedGbps 网络到腾讯云Region区域的上行链路速度(Gbps)
      */
     public void setUplinkSpeedGbps(Long UplinkSpeedGbps) {
         this.UplinkSpeedGbps = UplinkSpeedGbps;

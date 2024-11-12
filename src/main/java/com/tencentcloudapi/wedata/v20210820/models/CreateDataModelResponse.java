@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cwp.v20180228.models;
+package com.tencentcloudapi.wedata.v20210820.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,14 +21,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class CreateCloudProtectServiceOrderRecordResponse extends AbstractModel {
+public class CreateDataModelResponse extends AbstractModel {
 
     /**
-    * 成功收货的资源ID
+    * “Wedata数据建模”的实例id
     */
-    @SerializedName("Success")
+    @SerializedName("Data")
     @Expose
-    private String [] Success;
+    private String Data;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,19 +38,19 @@ public class CreateCloudProtectServiceOrderRecordResponse extends AbstractModel 
     private String RequestId;
 
     /**
-     * Get 成功收货的资源ID 
-     * @return Success 成功收货的资源ID
+     * Get “Wedata数据建模”的实例id 
+     * @return Data “Wedata数据建模”的实例id
      */
-    public String [] getSuccess() {
-        return this.Success;
+    public String getData() {
+        return this.Data;
     }
 
     /**
-     * Set 成功收货的资源ID
-     * @param Success 成功收货的资源ID
+     * Set “Wedata数据建模”的实例id
+     * @param Data “Wedata数据建模”的实例id
      */
-    public void setSuccess(String [] Success) {
-        this.Success = Success;
+    public void setData(String Data) {
+        this.Data = Data;
     }
 
     /**
@@ -69,19 +69,16 @@ public class CreateCloudProtectServiceOrderRecordResponse extends AbstractModel 
         this.RequestId = RequestId;
     }
 
-    public CreateCloudProtectServiceOrderRecordResponse() {
+    public CreateDataModelResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public CreateCloudProtectServiceOrderRecordResponse(CreateCloudProtectServiceOrderRecordResponse source) {
-        if (source.Success != null) {
-            this.Success = new String[source.Success.length];
-            for (int i = 0; i < source.Success.length; i++) {
-                this.Success[i] = new String(source.Success[i]);
-            }
+    public CreateDataModelResponse(CreateDataModelResponse source) {
+        if (source.Data != null) {
+            this.Data = new String(source.Data);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -93,7 +90,7 @@ public class CreateCloudProtectServiceOrderRecordResponse extends AbstractModel 
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "Success.", this.Success);
+        this.setParamSimple(map, prefix + "Data", this.Data);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

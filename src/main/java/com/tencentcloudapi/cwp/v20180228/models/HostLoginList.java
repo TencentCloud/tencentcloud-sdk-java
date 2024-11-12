@@ -31,8 +31,7 @@ public class HostLoginList extends AbstractModel {
     private Long Id;
 
     /**
-    * Uuid串
-注意：此字段可能返回 null，表示取不到有效值。
+    * 主机Uuid
     */
     @SerializedName("Uuid")
     @Expose
@@ -40,7 +39,6 @@ public class HostLoginList extends AbstractModel {
 
     /**
     * 主机ip
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MachineIp")
     @Expose
@@ -48,7 +46,6 @@ public class HostLoginList extends AbstractModel {
 
     /**
     * 主机名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MachineName")
     @Expose
@@ -56,7 +53,6 @@ public class HostLoginList extends AbstractModel {
 
     /**
     * 用户名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserName")
     @Expose
@@ -64,7 +60,6 @@ public class HostLoginList extends AbstractModel {
 
     /**
     * 来源ip
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SrcIp")
     @Expose
@@ -79,7 +74,6 @@ public class HostLoginList extends AbstractModel {
 
     /**
     * 国家id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Country")
     @Expose
@@ -87,7 +81,6 @@ public class HostLoginList extends AbstractModel {
 
     /**
     * 城市id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("City")
     @Expose
@@ -95,7 +88,6 @@ public class HostLoginList extends AbstractModel {
 
     /**
     * 省份id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Province")
     @Expose
@@ -103,7 +95,6 @@ public class HostLoginList extends AbstractModel {
 
     /**
     * 登录时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LoginTime")
     @Expose
@@ -111,7 +102,6 @@ public class HostLoginList extends AbstractModel {
 
     /**
     * 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ModifyTime")
     @Expose
@@ -119,7 +109,6 @@ public class HostLoginList extends AbstractModel {
 
     /**
     * 是否命中异地登录异常  1表示命中此类异常, 0表示未命中
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsRiskArea")
     @Expose
@@ -127,7 +116,6 @@ public class HostLoginList extends AbstractModel {
 
     /**
     * 是否命中异常用户异常 1表示命中此类异常, 0表示未命中
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsRiskUser")
     @Expose
@@ -135,7 +123,6 @@ public class HostLoginList extends AbstractModel {
 
     /**
     * 是否命中异常时间异常 1表示命中此类异常, 0表示未命中
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsRiskTime")
     @Expose
@@ -143,7 +130,6 @@ public class HostLoginList extends AbstractModel {
 
     /**
     * 是否命中异常IP异常 1表示命中此类异常, 0表示未命中
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsRiskSrcIp")
     @Expose
@@ -153,7 +139,6 @@ public class HostLoginList extends AbstractModel {
     * 危险等级：
 0 高危
 1 可疑
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RiskLevel")
     @Expose
@@ -161,7 +146,6 @@ public class HostLoginList extends AbstractModel {
 
     /**
     * 位置名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Location")
     @Expose
@@ -169,7 +153,6 @@ public class HostLoginList extends AbstractModel {
 
     /**
     * 主机quuid
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Quuid")
     @Expose
@@ -179,7 +162,6 @@ public class HostLoginList extends AbstractModel {
     * 高危信息说明：
 ABROAD - 海外IP；
 XTI - 威胁情报
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Desc")
     @Expose
@@ -187,7 +169,6 @@ XTI - 威胁情报
 
     /**
     * 附加信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MachineExtraInfo")
     @Expose
@@ -195,7 +176,6 @@ XTI - 威胁情报
 
     /**
     * 请求目的端口
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Port")
     @Expose
@@ -218,30 +198,24 @@ XTI - 威胁情报
     }
 
     /**
-     * Get Uuid串
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Uuid Uuid串
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 主机Uuid 
+     * @return Uuid 主机Uuid
      */
     public String getUuid() {
         return this.Uuid;
     }
 
     /**
-     * Set Uuid串
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Uuid Uuid串
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 主机Uuid
+     * @param Uuid 主机Uuid
      */
     public void setUuid(String Uuid) {
         this.Uuid = Uuid;
     }
 
     /**
-     * Get 主机ip
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主机ip 
      * @return MachineIp 主机ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMachineIp() {
         return this.MachineIp;
@@ -249,19 +223,15 @@ XTI - 威胁情报
 
     /**
      * Set 主机ip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MachineIp 主机ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMachineIp(String MachineIp) {
         this.MachineIp = MachineIp;
     }
 
     /**
-     * Get 主机名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主机名 
      * @return MachineName 主机名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMachineName() {
         return this.MachineName;
@@ -269,19 +239,15 @@ XTI - 威胁情报
 
     /**
      * Set 主机名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MachineName 主机名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMachineName(String MachineName) {
         this.MachineName = MachineName;
     }
 
     /**
-     * Get 用户名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户名 
      * @return UserName 用户名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUserName() {
         return this.UserName;
@@ -289,19 +255,15 @@ XTI - 威胁情报
 
     /**
      * Set 用户名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UserName 用户名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;
     }
 
     /**
-     * Get 来源ip
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 来源ip 
      * @return SrcIp 来源ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSrcIp() {
         return this.SrcIp;
@@ -309,9 +271,7 @@ XTI - 威胁情报
 
     /**
      * Set 来源ip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SrcIp 来源ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSrcIp(String SrcIp) {
         this.SrcIp = SrcIp;
@@ -334,10 +294,8 @@ XTI - 威胁情报
     }
 
     /**
-     * Get 国家id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 国家id 
      * @return Country 国家id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCountry() {
         return this.Country;
@@ -345,19 +303,15 @@ XTI - 威胁情报
 
     /**
      * Set 国家id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Country 国家id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCountry(Long Country) {
         this.Country = Country;
     }
 
     /**
-     * Get 城市id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 城市id 
      * @return City 城市id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCity() {
         return this.City;
@@ -365,19 +319,15 @@ XTI - 威胁情报
 
     /**
      * Set 城市id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param City 城市id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCity(Long City) {
         this.City = City;
     }
 
     /**
-     * Get 省份id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 省份id 
      * @return Province 省份id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getProvince() {
         return this.Province;
@@ -385,19 +335,15 @@ XTI - 威胁情报
 
     /**
      * Set 省份id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Province 省份id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProvince(Long Province) {
         this.Province = Province;
     }
 
     /**
-     * Get 登录时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 登录时间 
      * @return LoginTime 登录时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLoginTime() {
         return this.LoginTime;
@@ -405,19 +351,15 @@ XTI - 威胁情报
 
     /**
      * Set 登录时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LoginTime 登录时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLoginTime(String LoginTime) {
         this.LoginTime = LoginTime;
     }
 
     /**
-     * Get 修改时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 修改时间 
      * @return ModifyTime 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getModifyTime() {
         return this.ModifyTime;
@@ -425,19 +367,15 @@ XTI - 威胁情报
 
     /**
      * Set 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ModifyTime 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModifyTime(String ModifyTime) {
         this.ModifyTime = ModifyTime;
     }
 
     /**
-     * Get 是否命中异地登录异常  1表示命中此类异常, 0表示未命中
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否命中异地登录异常  1表示命中此类异常, 0表示未命中 
      * @return IsRiskArea 是否命中异地登录异常  1表示命中此类异常, 0表示未命中
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsRiskArea() {
         return this.IsRiskArea;
@@ -445,19 +383,15 @@ XTI - 威胁情报
 
     /**
      * Set 是否命中异地登录异常  1表示命中此类异常, 0表示未命中
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsRiskArea 是否命中异地登录异常  1表示命中此类异常, 0表示未命中
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsRiskArea(Long IsRiskArea) {
         this.IsRiskArea = IsRiskArea;
     }
 
     /**
-     * Get 是否命中异常用户异常 1表示命中此类异常, 0表示未命中
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否命中异常用户异常 1表示命中此类异常, 0表示未命中 
      * @return IsRiskUser 是否命中异常用户异常 1表示命中此类异常, 0表示未命中
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsRiskUser() {
         return this.IsRiskUser;
@@ -465,19 +399,15 @@ XTI - 威胁情报
 
     /**
      * Set 是否命中异常用户异常 1表示命中此类异常, 0表示未命中
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsRiskUser 是否命中异常用户异常 1表示命中此类异常, 0表示未命中
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsRiskUser(Long IsRiskUser) {
         this.IsRiskUser = IsRiskUser;
     }
 
     /**
-     * Get 是否命中异常时间异常 1表示命中此类异常, 0表示未命中
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否命中异常时间异常 1表示命中此类异常, 0表示未命中 
      * @return IsRiskTime 是否命中异常时间异常 1表示命中此类异常, 0表示未命中
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsRiskTime() {
         return this.IsRiskTime;
@@ -485,19 +415,15 @@ XTI - 威胁情报
 
     /**
      * Set 是否命中异常时间异常 1表示命中此类异常, 0表示未命中
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsRiskTime 是否命中异常时间异常 1表示命中此类异常, 0表示未命中
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsRiskTime(Long IsRiskTime) {
         this.IsRiskTime = IsRiskTime;
     }
 
     /**
-     * Get 是否命中异常IP异常 1表示命中此类异常, 0表示未命中
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否命中异常IP异常 1表示命中此类异常, 0表示未命中 
      * @return IsRiskSrcIp 是否命中异常IP异常 1表示命中此类异常, 0表示未命中
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsRiskSrcIp() {
         return this.IsRiskSrcIp;
@@ -505,9 +431,7 @@ XTI - 威胁情报
 
     /**
      * Set 是否命中异常IP异常 1表示命中此类异常, 0表示未命中
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsRiskSrcIp 是否命中异常IP异常 1表示命中此类异常, 0表示未命中
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsRiskSrcIp(Long IsRiskSrcIp) {
         this.IsRiskSrcIp = IsRiskSrcIp;
@@ -516,12 +440,10 @@ XTI - 威胁情报
     /**
      * Get 危险等级：
 0 高危
-1 可疑
-注意：此字段可能返回 null，表示取不到有效值。 
+1 可疑 
      * @return RiskLevel 危险等级：
 0 高危
 1 可疑
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRiskLevel() {
         return this.RiskLevel;
@@ -531,21 +453,17 @@ XTI - 威胁情报
      * Set 危险等级：
 0 高危
 1 可疑
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RiskLevel 危险等级：
 0 高危
 1 可疑
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRiskLevel(Long RiskLevel) {
         this.RiskLevel = RiskLevel;
     }
 
     /**
-     * Get 位置名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 位置名称 
      * @return Location 位置名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLocation() {
         return this.Location;
@@ -553,19 +471,15 @@ XTI - 威胁情报
 
     /**
      * Set 位置名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Location 位置名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLocation(String Location) {
         this.Location = Location;
     }
 
     /**
-     * Get 主机quuid
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主机quuid 
      * @return Quuid 主机quuid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getQuuid() {
         return this.Quuid;
@@ -573,9 +487,7 @@ XTI - 威胁情报
 
     /**
      * Set 主机quuid
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Quuid 主机quuid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQuuid(String Quuid) {
         this.Quuid = Quuid;
@@ -584,12 +496,10 @@ XTI - 威胁情报
     /**
      * Get 高危信息说明：
 ABROAD - 海外IP；
-XTI - 威胁情报
-注意：此字段可能返回 null，表示取不到有效值。 
+XTI - 威胁情报 
      * @return Desc 高危信息说明：
 ABROAD - 海外IP；
 XTI - 威胁情报
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDesc() {
         return this.Desc;
@@ -599,21 +509,17 @@ XTI - 威胁情报
      * Set 高危信息说明：
 ABROAD - 海外IP；
 XTI - 威胁情报
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Desc 高危信息说明：
 ABROAD - 海外IP；
 XTI - 威胁情报
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDesc(String Desc) {
         this.Desc = Desc;
     }
 
     /**
-     * Get 附加信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 附加信息 
      * @return MachineExtraInfo 附加信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public MachineExtraInfo getMachineExtraInfo() {
         return this.MachineExtraInfo;
@@ -621,19 +527,15 @@ XTI - 威胁情报
 
     /**
      * Set 附加信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MachineExtraInfo 附加信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMachineExtraInfo(MachineExtraInfo MachineExtraInfo) {
         this.MachineExtraInfo = MachineExtraInfo;
     }
 
     /**
-     * Get 请求目的端口
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 请求目的端口 
      * @return Port 请求目的端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPort() {
         return this.Port;
@@ -641,9 +543,7 @@ XTI - 威胁情报
 
     /**
      * Set 请求目的端口
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Port 请求目的端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPort(Long Port) {
         this.Port = Port;

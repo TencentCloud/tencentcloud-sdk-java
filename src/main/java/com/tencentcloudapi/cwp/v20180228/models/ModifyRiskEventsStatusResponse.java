@@ -25,7 +25,6 @@ public class ModifyRiskEventsStatusResponse extends AbstractModel {
 
     /**
     * 此次操作是否是异步操作，0：操作已完成，1：正在异步操作中，前端需要通过DescribeRiskBatchStatus 查询操作是否完成
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsSync")
     @Expose
@@ -39,10 +38,8 @@ public class ModifyRiskEventsStatusResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 此次操作是否是异步操作，0：操作已完成，1：正在异步操作中，前端需要通过DescribeRiskBatchStatus 查询操作是否完成
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 此次操作是否是异步操作，0：操作已完成，1：正在异步操作中，前端需要通过DescribeRiskBatchStatus 查询操作是否完成 
      * @return IsSync 此次操作是否是异步操作，0：操作已完成，1：正在异步操作中，前端需要通过DescribeRiskBatchStatus 查询操作是否完成
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsSync() {
         return this.IsSync;
@@ -50,9 +47,7 @@ public class ModifyRiskEventsStatusResponse extends AbstractModel {
 
     /**
      * Set 此次操作是否是异步操作，0：操作已完成，1：正在异步操作中，前端需要通过DescribeRiskBatchStatus 查询操作是否完成
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsSync 此次操作是否是异步操作，0：操作已完成，1：正在异步操作中，前端需要通过DescribeRiskBatchStatus 查询操作是否完成
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsSync(Long IsSync) {
         this.IsSync = IsSync;

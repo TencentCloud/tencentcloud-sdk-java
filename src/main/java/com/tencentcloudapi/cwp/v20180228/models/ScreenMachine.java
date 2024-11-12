@@ -38,7 +38,7 @@ public class ScreenMachine extends AbstractModel {
     private String MachineOs;
 
     /**
-    * 云镜客户端唯一Uuid，若客户端长时间不在线将返回空字符。
+    * 主机安全Uuid，若客户端长时间不在线将返回空字符。
     */
     @SerializedName("Uuid")
     @Expose
@@ -209,16 +209,16 @@ public class ScreenMachine extends AbstractModel {
     }
 
     /**
-     * Get 云镜客户端唯一Uuid，若客户端长时间不在线将返回空字符。 
-     * @return Uuid 云镜客户端唯一Uuid，若客户端长时间不在线将返回空字符。
+     * Get 主机安全Uuid，若客户端长时间不在线将返回空字符。 
+     * @return Uuid 主机安全Uuid，若客户端长时间不在线将返回空字符。
      */
     public String getUuid() {
         return this.Uuid;
     }
 
     /**
-     * Set 云镜客户端唯一Uuid，若客户端长时间不在线将返回空字符。
-     * @param Uuid 云镜客户端唯一Uuid，若客户端长时间不在线将返回空字符。
+     * Set 主机安全Uuid，若客户端长时间不在线将返回空字符。
+     * @param Uuid 主机安全Uuid，若客户端长时间不在线将返回空字符。
      */
     public void setUuid(String Uuid) {
         this.Uuid = Uuid;

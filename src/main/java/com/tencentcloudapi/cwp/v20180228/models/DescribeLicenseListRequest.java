@@ -61,6 +61,20 @@ public class DescribeLicenseListRequest extends AbstractModel {
     private Tags [] Tags;
 
     /**
+    * ASC 正序,  DESC 倒序
+    */
+    @SerializedName("Order")
+    @Expose
+    private String Order;
+
+    /**
+    * LicenseCnt 授权数量
+    */
+    @SerializedName("By")
+    @Expose
+    private String By;
+
+    /**
      * Get 多个条件筛选时取交集
 <li> LicenseStatus 授权状态信息,0 未使用,1 部分使用, 2 已用完, 3 不可用  4 可使用</li>
 <li> BuyTime 购买时间</li>
@@ -160,6 +174,38 @@ public class DescribeLicenseListRequest extends AbstractModel {
         this.Tags = Tags;
     }
 
+    /**
+     * Get ASC 正序,  DESC 倒序 
+     * @return Order ASC 正序,  DESC 倒序
+     */
+    public String getOrder() {
+        return this.Order;
+    }
+
+    /**
+     * Set ASC 正序,  DESC 倒序
+     * @param Order ASC 正序,  DESC 倒序
+     */
+    public void setOrder(String Order) {
+        this.Order = Order;
+    }
+
+    /**
+     * Get LicenseCnt 授权数量 
+     * @return By LicenseCnt 授权数量
+     */
+    public String getBy() {
+        return this.By;
+    }
+
+    /**
+     * Set LicenseCnt 授权数量
+     * @param By LicenseCnt 授权数量
+     */
+    public void setBy(String By) {
+        this.By = By;
+    }
+
     public DescribeLicenseListRequest() {
     }
 
@@ -186,6 +232,12 @@ public class DescribeLicenseListRequest extends AbstractModel {
                 this.Tags[i] = new Tags(source.Tags[i]);
             }
         }
+        if (source.Order != null) {
+            this.Order = new String(source.Order);
+        }
+        if (source.By != null) {
+            this.By = new String(source.By);
+        }
     }
 
 
@@ -197,6 +249,8 @@ public class DescribeLicenseListRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "Order", this.Order);
+        this.setParamSimple(map, prefix + "By", this.By);
 
     }
 }

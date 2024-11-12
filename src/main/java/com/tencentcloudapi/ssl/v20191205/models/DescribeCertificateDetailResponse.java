@@ -352,6 +352,14 @@ public class DescribeCertificateDetailResponse extends AbstractModel {
     private DvAuths [] DvRevokeAuthDetail;
 
     /**
+    * 证书链信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CertChainInfo")
+    @Expose
+    private CertBasicInfo [] CertChainInfo;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -1179,6 +1187,26 @@ public class DescribeCertificateDetailResponse extends AbstractModel {
     }
 
     /**
+     * Get 证书链信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CertChainInfo 证书链信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public CertBasicInfo [] getCertChainInfo() {
+        return this.CertChainInfo;
+    }
+
+    /**
+     * Set 证书链信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CertChainInfo 证书链信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCertChainInfo(CertBasicInfo [] CertChainInfo) {
+        this.CertChainInfo = CertChainInfo;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -1334,6 +1362,12 @@ public class DescribeCertificateDetailResponse extends AbstractModel {
                 this.DvRevokeAuthDetail[i] = new DvAuths(source.DvRevokeAuthDetail[i]);
             }
         }
+        if (source.CertChainInfo != null) {
+            this.CertChainInfo = new CertBasicInfo[source.CertChainInfo.length];
+            for (int i = 0; i < source.CertChainInfo.length; i++) {
+                this.CertChainInfo[i] = new CertBasicInfo(source.CertChainInfo[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -1385,6 +1419,7 @@ public class DescribeCertificateDetailResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "EncryptCertFingerprint", this.EncryptCertFingerprint);
         this.setParamSimple(map, prefix + "EncryptAlgorithm", this.EncryptAlgorithm);
         this.setParamArrayObj(map, prefix + "DvRevokeAuthDetail.", this.DvRevokeAuthDetail);
+        this.setParamArrayObj(map, prefix + "CertChainInfo.", this.CertChainInfo);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

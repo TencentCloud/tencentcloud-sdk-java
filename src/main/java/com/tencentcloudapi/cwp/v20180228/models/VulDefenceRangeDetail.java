@@ -74,7 +74,6 @@ public class VulDefenceRangeDetail extends AbstractModel {
 
     /**
     * 状态，0:防御中，1：已加白，指的是在白名单列表中有这个漏洞的，不一定是全局型白名单
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -193,10 +192,8 @@ public class VulDefenceRangeDetail extends AbstractModel {
     }
 
     /**
-     * Get 状态，0:防御中，1：已加白，指的是在白名单列表中有这个漏洞的，不一定是全局型白名单
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 状态，0:防御中，1：已加白，指的是在白名单列表中有这个漏洞的，不一定是全局型白名单 
      * @return Status 状态，0:防御中，1：已加白，指的是在白名单列表中有这个漏洞的，不一定是全局型白名单
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
         return this.Status;
@@ -204,9 +201,7 @@ public class VulDefenceRangeDetail extends AbstractModel {
 
     /**
      * Set 状态，0:防御中，1：已加白，指的是在白名单列表中有这个漏洞的，不一定是全局型白名单
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 状态，0:防御中，1：已加白，指的是在白名单列表中有这个漏洞的，不一定是全局型白名单
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
         this.Status = Status;

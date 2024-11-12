@@ -25,7 +25,6 @@ public class VulEffectHostList extends AbstractModel {
 
     /**
     * 事件id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EventId")
     @Expose
@@ -33,7 +32,6 @@ public class VulEffectHostList extends AbstractModel {
 
     /**
     * 状态：0: 待处理 1:忽略  3:已修复  5:检测中 6:修复中 7: 回滚中 8:修复失败
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -41,7 +39,6 @@ public class VulEffectHostList extends AbstractModel {
 
     /**
     * 最后检测时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LastTime")
     @Expose
@@ -49,7 +46,6 @@ public class VulEffectHostList extends AbstractModel {
 
     /**
     * 危害等级：1-低危；2-中危；3-高危；4-严重
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Level")
     @Expose
@@ -57,7 +53,6 @@ public class VulEffectHostList extends AbstractModel {
 
     /**
     * 主机Quuid
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Quuid")
     @Expose
@@ -65,7 +60,6 @@ public class VulEffectHostList extends AbstractModel {
 
     /**
     * 主机Uuid
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Uuid")
     @Expose
@@ -73,7 +67,6 @@ public class VulEffectHostList extends AbstractModel {
 
     /**
     * 主机HostIp
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HostIp")
     @Expose
@@ -81,7 +74,6 @@ public class VulEffectHostList extends AbstractModel {
 
     /**
     * 主机别名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AliasName")
     @Expose
@@ -89,7 +81,6 @@ public class VulEffectHostList extends AbstractModel {
 
     /**
     * 主机标签
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tags")
     @Expose
@@ -97,7 +88,6 @@ public class VulEffectHostList extends AbstractModel {
 
     /**
     * 说明
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
     @Expose
@@ -105,7 +95,6 @@ public class VulEffectHostList extends AbstractModel {
 
     /**
     * 版本信息：0-基础版 1-专业版 2-旗舰版 3-普惠版
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HostVersion")
     @Expose
@@ -113,7 +102,6 @@ public class VulEffectHostList extends AbstractModel {
 
     /**
     * 是否能自动修复 0 :漏洞不可自动修复，  1：可自动修复， 2：客户端已离线， 3：主机不是旗舰版只能手动修复， 4：机型不允许 ，5：修复中 ，6：已修复， 7：检测中  9:修复失败，10:已忽略 11:漏洞只支持linux不支持Windows 12：漏洞只支持Windows不支持linux，13:修复失败但此时主机已离线，14:修复失败但此时主机不是旗舰版， 15:已手动修复
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsSupportAutoFix")
     @Expose
@@ -121,7 +109,6 @@ public class VulEffectHostList extends AbstractModel {
 
     /**
     * 失败原因
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FixStatusMsg")
     @Expose
@@ -129,7 +116,6 @@ public class VulEffectHostList extends AbstractModel {
 
     /**
     * 首次发现时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FirstDiscoveryTime")
     @Expose
@@ -137,7 +123,6 @@ public class VulEffectHostList extends AbstractModel {
 
     /**
     * 实例状态："PENDING"-创建中 "LAUNCH_FAILED"-创建失败 "RUNNING"-运行中 "STOPPED"-关机 "STARTING"-表示开机中 "STOPPING"-表示关机中 "REBOOTING"-重启中 "SHUTDOWN"-表示停止待销毁 "TERMINATING"-表示销毁中 "
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceState")
     @Expose
@@ -145,7 +130,6 @@ public class VulEffectHostList extends AbstractModel {
 
     /**
     * 外网ip
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PublicIpAddresses")
     @Expose
@@ -153,7 +137,6 @@ public class VulEffectHostList extends AbstractModel {
 
     /**
     * 云标签信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CloudTags")
     @Expose
@@ -161,17 +144,14 @@ public class VulEffectHostList extends AbstractModel {
 
     /**
     * 主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MachineExtraInfo")
     @Expose
     private MachineExtraInfo MachineExtraInfo;
 
     /**
-     * Get 事件id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 事件id 
      * @return EventId 事件id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getEventId() {
         return this.EventId;
@@ -179,19 +159,15 @@ public class VulEffectHostList extends AbstractModel {
 
     /**
      * Set 事件id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EventId 事件id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEventId(Long EventId) {
         this.EventId = EventId;
     }
 
     /**
-     * Get 状态：0: 待处理 1:忽略  3:已修复  5:检测中 6:修复中 7: 回滚中 8:修复失败
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 状态：0: 待处理 1:忽略  3:已修复  5:检测中 6:修复中 7: 回滚中 8:修复失败 
      * @return Status 状态：0: 待处理 1:忽略  3:已修复  5:检测中 6:修复中 7: 回滚中 8:修复失败
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
         return this.Status;
@@ -199,19 +175,15 @@ public class VulEffectHostList extends AbstractModel {
 
     /**
      * Set 状态：0: 待处理 1:忽略  3:已修复  5:检测中 6:修复中 7: 回滚中 8:修复失败
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 状态：0: 待处理 1:忽略  3:已修复  5:检测中 6:修复中 7: 回滚中 8:修复失败
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 最后检测时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最后检测时间 
      * @return LastTime 最后检测时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLastTime() {
         return this.LastTime;
@@ -219,19 +191,15 @@ public class VulEffectHostList extends AbstractModel {
 
     /**
      * Set 最后检测时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LastTime 最后检测时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLastTime(String LastTime) {
         this.LastTime = LastTime;
     }
 
     /**
-     * Get 危害等级：1-低危；2-中危；3-高危；4-严重
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 危害等级：1-低危；2-中危；3-高危；4-严重 
      * @return Level 危害等级：1-低危；2-中危；3-高危；4-严重
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLevel() {
         return this.Level;
@@ -239,19 +207,15 @@ public class VulEffectHostList extends AbstractModel {
 
     /**
      * Set 危害等级：1-低危；2-中危；3-高危；4-严重
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Level 危害等级：1-低危；2-中危；3-高危；4-严重
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLevel(Long Level) {
         this.Level = Level;
     }
 
     /**
-     * Get 主机Quuid
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主机Quuid 
      * @return Quuid 主机Quuid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getQuuid() {
         return this.Quuid;
@@ -259,19 +223,15 @@ public class VulEffectHostList extends AbstractModel {
 
     /**
      * Set 主机Quuid
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Quuid 主机Quuid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQuuid(String Quuid) {
         this.Quuid = Quuid;
     }
 
     /**
-     * Get 主机Uuid
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主机Uuid 
      * @return Uuid 主机Uuid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUuid() {
         return this.Uuid;
@@ -279,19 +239,15 @@ public class VulEffectHostList extends AbstractModel {
 
     /**
      * Set 主机Uuid
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Uuid 主机Uuid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUuid(String Uuid) {
         this.Uuid = Uuid;
     }
 
     /**
-     * Get 主机HostIp
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主机HostIp 
      * @return HostIp 主机HostIp
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHostIp() {
         return this.HostIp;
@@ -299,19 +255,15 @@ public class VulEffectHostList extends AbstractModel {
 
     /**
      * Set 主机HostIp
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HostIp 主机HostIp
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHostIp(String HostIp) {
         this.HostIp = HostIp;
     }
 
     /**
-     * Get 主机别名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主机别名 
      * @return AliasName 主机别名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAliasName() {
         return this.AliasName;
@@ -319,19 +271,15 @@ public class VulEffectHostList extends AbstractModel {
 
     /**
      * Set 主机别名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AliasName 主机别名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAliasName(String AliasName) {
         this.AliasName = AliasName;
     }
 
     /**
-     * Get 主机标签
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主机标签 
      * @return Tags 主机标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getTags() {
         return this.Tags;
@@ -339,19 +287,15 @@ public class VulEffectHostList extends AbstractModel {
 
     /**
      * Set 主机标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tags 主机标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTags(String [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 说明
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 说明 
      * @return Description 说明
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
         return this.Description;
@@ -359,19 +303,15 @@ public class VulEffectHostList extends AbstractModel {
 
     /**
      * Set 说明
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Description 说明
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 版本信息：0-基础版 1-专业版 2-旗舰版 3-普惠版
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 版本信息：0-基础版 1-专业版 2-旗舰版 3-普惠版 
      * @return HostVersion 版本信息：0-基础版 1-专业版 2-旗舰版 3-普惠版
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getHostVersion() {
         return this.HostVersion;
@@ -379,19 +319,15 @@ public class VulEffectHostList extends AbstractModel {
 
     /**
      * Set 版本信息：0-基础版 1-专业版 2-旗舰版 3-普惠版
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HostVersion 版本信息：0-基础版 1-专业版 2-旗舰版 3-普惠版
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHostVersion(Long HostVersion) {
         this.HostVersion = HostVersion;
     }
 
     /**
-     * Get 是否能自动修复 0 :漏洞不可自动修复，  1：可自动修复， 2：客户端已离线， 3：主机不是旗舰版只能手动修复， 4：机型不允许 ，5：修复中 ，6：已修复， 7：检测中  9:修复失败，10:已忽略 11:漏洞只支持linux不支持Windows 12：漏洞只支持Windows不支持linux，13:修复失败但此时主机已离线，14:修复失败但此时主机不是旗舰版， 15:已手动修复
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否能自动修复 0 :漏洞不可自动修复，  1：可自动修复， 2：客户端已离线， 3：主机不是旗舰版只能手动修复， 4：机型不允许 ，5：修复中 ，6：已修复， 7：检测中  9:修复失败，10:已忽略 11:漏洞只支持linux不支持Windows 12：漏洞只支持Windows不支持linux，13:修复失败但此时主机已离线，14:修复失败但此时主机不是旗舰版， 15:已手动修复 
      * @return IsSupportAutoFix 是否能自动修复 0 :漏洞不可自动修复，  1：可自动修复， 2：客户端已离线， 3：主机不是旗舰版只能手动修复， 4：机型不允许 ，5：修复中 ，6：已修复， 7：检测中  9:修复失败，10:已忽略 11:漏洞只支持linux不支持Windows 12：漏洞只支持Windows不支持linux，13:修复失败但此时主机已离线，14:修复失败但此时主机不是旗舰版， 15:已手动修复
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsSupportAutoFix() {
         return this.IsSupportAutoFix;
@@ -399,19 +335,15 @@ public class VulEffectHostList extends AbstractModel {
 
     /**
      * Set 是否能自动修复 0 :漏洞不可自动修复，  1：可自动修复， 2：客户端已离线， 3：主机不是旗舰版只能手动修复， 4：机型不允许 ，5：修复中 ，6：已修复， 7：检测中  9:修复失败，10:已忽略 11:漏洞只支持linux不支持Windows 12：漏洞只支持Windows不支持linux，13:修复失败但此时主机已离线，14:修复失败但此时主机不是旗舰版， 15:已手动修复
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsSupportAutoFix 是否能自动修复 0 :漏洞不可自动修复，  1：可自动修复， 2：客户端已离线， 3：主机不是旗舰版只能手动修复， 4：机型不允许 ，5：修复中 ，6：已修复， 7：检测中  9:修复失败，10:已忽略 11:漏洞只支持linux不支持Windows 12：漏洞只支持Windows不支持linux，13:修复失败但此时主机已离线，14:修复失败但此时主机不是旗舰版， 15:已手动修复
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsSupportAutoFix(Long IsSupportAutoFix) {
         this.IsSupportAutoFix = IsSupportAutoFix;
     }
 
     /**
-     * Get 失败原因
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 失败原因 
      * @return FixStatusMsg 失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFixStatusMsg() {
         return this.FixStatusMsg;
@@ -419,19 +351,15 @@ public class VulEffectHostList extends AbstractModel {
 
     /**
      * Set 失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FixStatusMsg 失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFixStatusMsg(String FixStatusMsg) {
         this.FixStatusMsg = FixStatusMsg;
     }
 
     /**
-     * Get 首次发现时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 首次发现时间 
      * @return FirstDiscoveryTime 首次发现时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFirstDiscoveryTime() {
         return this.FirstDiscoveryTime;
@@ -439,19 +367,15 @@ public class VulEffectHostList extends AbstractModel {
 
     /**
      * Set 首次发现时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FirstDiscoveryTime 首次发现时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFirstDiscoveryTime(String FirstDiscoveryTime) {
         this.FirstDiscoveryTime = FirstDiscoveryTime;
     }
 
     /**
-     * Get 实例状态："PENDING"-创建中 "LAUNCH_FAILED"-创建失败 "RUNNING"-运行中 "STOPPED"-关机 "STARTING"-表示开机中 "STOPPING"-表示关机中 "REBOOTING"-重启中 "SHUTDOWN"-表示停止待销毁 "TERMINATING"-表示销毁中 "
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例状态："PENDING"-创建中 "LAUNCH_FAILED"-创建失败 "RUNNING"-运行中 "STOPPED"-关机 "STARTING"-表示开机中 "STOPPING"-表示关机中 "REBOOTING"-重启中 "SHUTDOWN"-表示停止待销毁 "TERMINATING"-表示销毁中 " 
      * @return InstanceState 实例状态："PENDING"-创建中 "LAUNCH_FAILED"-创建失败 "RUNNING"-运行中 "STOPPED"-关机 "STARTING"-表示开机中 "STOPPING"-表示关机中 "REBOOTING"-重启中 "SHUTDOWN"-表示停止待销毁 "TERMINATING"-表示销毁中 "
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceState() {
         return this.InstanceState;
@@ -459,19 +383,15 @@ public class VulEffectHostList extends AbstractModel {
 
     /**
      * Set 实例状态："PENDING"-创建中 "LAUNCH_FAILED"-创建失败 "RUNNING"-运行中 "STOPPED"-关机 "STARTING"-表示开机中 "STOPPING"-表示关机中 "REBOOTING"-重启中 "SHUTDOWN"-表示停止待销毁 "TERMINATING"-表示销毁中 "
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceState 实例状态："PENDING"-创建中 "LAUNCH_FAILED"-创建失败 "RUNNING"-运行中 "STOPPED"-关机 "STARTING"-表示开机中 "STOPPING"-表示关机中 "REBOOTING"-重启中 "SHUTDOWN"-表示停止待销毁 "TERMINATING"-表示销毁中 "
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceState(String InstanceState) {
         this.InstanceState = InstanceState;
     }
 
     /**
-     * Get 外网ip
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 外网ip 
      * @return PublicIpAddresses 外网ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPublicIpAddresses() {
         return this.PublicIpAddresses;
@@ -479,19 +399,15 @@ public class VulEffectHostList extends AbstractModel {
 
     /**
      * Set 外网ip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PublicIpAddresses 外网ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPublicIpAddresses(String PublicIpAddresses) {
         this.PublicIpAddresses = PublicIpAddresses;
     }
 
     /**
-     * Get 云标签信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 云标签信息 
      * @return CloudTags 云标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Tags [] getCloudTags() {
         return this.CloudTags;
@@ -499,19 +415,15 @@ public class VulEffectHostList extends AbstractModel {
 
     /**
      * Set 云标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CloudTags 云标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCloudTags(Tags [] CloudTags) {
         this.CloudTags = CloudTags;
     }
 
     /**
-     * Get 主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主机额外信息 
      * @return MachineExtraInfo 主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public MachineExtraInfo getMachineExtraInfo() {
         return this.MachineExtraInfo;
@@ -519,9 +431,7 @@ public class VulEffectHostList extends AbstractModel {
 
     /**
      * Set 主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MachineExtraInfo 主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMachineExtraInfo(MachineExtraInfo MachineExtraInfo) {
         this.MachineExtraInfo = MachineExtraInfo;

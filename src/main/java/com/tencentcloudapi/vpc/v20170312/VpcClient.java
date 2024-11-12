@@ -3355,6 +3355,17 @@ LimitTypes取值范围：
     }
 
     /**
+     *接口用于调整[共享带宽包](https://cloud.tencent.com/document/product/684/15245)(BWP)带宽
+     * @param req ModifyBandwidthPackageBandwidthRequest
+     * @return ModifyBandwidthPackageBandwidthResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyBandwidthPackageBandwidthResponse ModifyBandwidthPackageBandwidth(ModifyBandwidthPackageBandwidthRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyBandwidthPackageBandwidth", ModifyBandwidthPackageBandwidthResponse.class);
+    }
+
+    /**
      *修改CCN关联实例属性，目前仅修改备注description
      * @param req ModifyCcnAttachedInstancesAttributeRequest
      * @return ModifyCcnAttachedInstancesAttributeResponse

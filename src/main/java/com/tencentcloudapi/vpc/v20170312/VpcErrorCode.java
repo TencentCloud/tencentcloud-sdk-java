@@ -258,6 +258,9 @@ public enum VpcErrorCode {
     // 无效的IPv6地址。
      INVALIDPARAMETERVALUE_INVALIDIPV6("InvalidParameterValue.InvalidIpv6"),
      
+    // 旧的带宽值无效。
+     INVALIDPARAMETERVALUE_INVALIDOLDBANDWIDTH("InvalidParameterValue.InvalidOldBandwidth"),
+     
     // 该Tag不合法。
      INVALIDPARAMETERVALUE_INVALIDTAG("InvalidParameterValue.InvalidTag"),
      

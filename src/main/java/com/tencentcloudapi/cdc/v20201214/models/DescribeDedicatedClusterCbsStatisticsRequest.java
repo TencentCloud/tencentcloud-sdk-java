@@ -52,7 +52,7 @@ public class DescribeDedicatedClusterCbsStatisticsRequest extends AbstractModel 
     private String EndTime;
 
     /**
-    * 时间范围精度，1分钟/5分钟
+    * 时间范围精度，1分钟(ONE_MINUTE)/5分钟(FIVE_MINUTE)
     */
     @SerializedName("Period")
     @Expose
@@ -137,16 +137,16 @@ public class DescribeDedicatedClusterCbsStatisticsRequest extends AbstractModel 
     }
 
     /**
-     * Get 时间范围精度，1分钟/5分钟 
-     * @return Period 时间范围精度，1分钟/5分钟
+     * Get 时间范围精度，1分钟(ONE_MINUTE)/5分钟(FIVE_MINUTE) 
+     * @return Period 时间范围精度，1分钟(ONE_MINUTE)/5分钟(FIVE_MINUTE)
      */
     public String getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set 时间范围精度，1分钟/5分钟
-     * @param Period 时间范围精度，1分钟/5分钟
+     * Set 时间范围精度，1分钟(ONE_MINUTE)/5分钟(FIVE_MINUTE)
+     * @param Period 时间范围精度，1分钟(ONE_MINUTE)/5分钟(FIVE_MINUTE)
      */
     public void setPeriod(String Period) {
         this.Period = Period;

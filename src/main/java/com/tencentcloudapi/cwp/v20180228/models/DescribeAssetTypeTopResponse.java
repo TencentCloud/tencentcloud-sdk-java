@@ -25,7 +25,6 @@ public class DescribeAssetTypeTopResponse extends AbstractModel {
 
     /**
     * 账号Top5
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("User")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeAssetTypeTopResponse extends AbstractModel {
 
     /**
     * 端口Top5
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Port")
     @Expose
@@ -41,7 +39,6 @@ public class DescribeAssetTypeTopResponse extends AbstractModel {
 
     /**
     * 进程Top5
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Process")
     @Expose
@@ -49,7 +46,6 @@ public class DescribeAssetTypeTopResponse extends AbstractModel {
 
     /**
     * 软件Top5
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Software")
     @Expose
@@ -57,7 +53,6 @@ public class DescribeAssetTypeTopResponse extends AbstractModel {
 
     /**
     * 数据库Top5
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Database")
     @Expose
@@ -65,7 +60,6 @@ public class DescribeAssetTypeTopResponse extends AbstractModel {
 
     /**
     * Web应用Top5
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WebApp")
     @Expose
@@ -73,7 +67,6 @@ public class DescribeAssetTypeTopResponse extends AbstractModel {
 
     /**
     * Web站点Top5
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WebLocation")
     @Expose
@@ -81,7 +74,6 @@ public class DescribeAssetTypeTopResponse extends AbstractModel {
 
     /**
     * Web框架Top5
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WebFrame")
     @Expose
@@ -89,7 +81,6 @@ public class DescribeAssetTypeTopResponse extends AbstractModel {
 
     /**
     * Web服务Top5
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WebService")
     @Expose
@@ -103,10 +94,8 @@ public class DescribeAssetTypeTopResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 账号Top5
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 账号Top5 
      * @return User 账号Top5
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AssetKeyVal [] getUser() {
         return this.User;
@@ -114,19 +103,15 @@ public class DescribeAssetTypeTopResponse extends AbstractModel {
 
     /**
      * Set 账号Top5
-注意：此字段可能返回 null，表示取不到有效值。
      * @param User 账号Top5
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUser(AssetKeyVal [] User) {
         this.User = User;
     }
 
     /**
-     * Get 端口Top5
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 端口Top5 
      * @return Port 端口Top5
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AssetKeyVal [] getPort() {
         return this.Port;
@@ -134,19 +119,15 @@ public class DescribeAssetTypeTopResponse extends AbstractModel {
 
     /**
      * Set 端口Top5
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Port 端口Top5
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPort(AssetKeyVal [] Port) {
         this.Port = Port;
     }
 
     /**
-     * Get 进程Top5
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 进程Top5 
      * @return Process 进程Top5
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AssetKeyVal [] getProcess() {
         return this.Process;
@@ -154,19 +135,15 @@ public class DescribeAssetTypeTopResponse extends AbstractModel {
 
     /**
      * Set 进程Top5
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Process 进程Top5
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProcess(AssetKeyVal [] Process) {
         this.Process = Process;
     }
 
     /**
-     * Get 软件Top5
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 软件Top5 
      * @return Software 软件Top5
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AssetKeyVal [] getSoftware() {
         return this.Software;
@@ -174,19 +151,15 @@ public class DescribeAssetTypeTopResponse extends AbstractModel {
 
     /**
      * Set 软件Top5
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Software 软件Top5
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSoftware(AssetKeyVal [] Software) {
         this.Software = Software;
     }
 
     /**
-     * Get 数据库Top5
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据库Top5 
      * @return Database 数据库Top5
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AssetKeyVal [] getDatabase() {
         return this.Database;
@@ -194,19 +167,15 @@ public class DescribeAssetTypeTopResponse extends AbstractModel {
 
     /**
      * Set 数据库Top5
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Database 数据库Top5
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDatabase(AssetKeyVal [] Database) {
         this.Database = Database;
     }
 
     /**
-     * Get Web应用Top5
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Web应用Top5 
      * @return WebApp Web应用Top5
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AssetKeyVal [] getWebApp() {
         return this.WebApp;
@@ -214,19 +183,15 @@ public class DescribeAssetTypeTopResponse extends AbstractModel {
 
     /**
      * Set Web应用Top5
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WebApp Web应用Top5
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWebApp(AssetKeyVal [] WebApp) {
         this.WebApp = WebApp;
     }
 
     /**
-     * Get Web站点Top5
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Web站点Top5 
      * @return WebLocation Web站点Top5
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AssetKeyVal [] getWebLocation() {
         return this.WebLocation;
@@ -234,19 +199,15 @@ public class DescribeAssetTypeTopResponse extends AbstractModel {
 
     /**
      * Set Web站点Top5
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WebLocation Web站点Top5
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWebLocation(AssetKeyVal [] WebLocation) {
         this.WebLocation = WebLocation;
     }
 
     /**
-     * Get Web框架Top5
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Web框架Top5 
      * @return WebFrame Web框架Top5
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AssetKeyVal [] getWebFrame() {
         return this.WebFrame;
@@ -254,19 +215,15 @@ public class DescribeAssetTypeTopResponse extends AbstractModel {
 
     /**
      * Set Web框架Top5
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WebFrame Web框架Top5
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWebFrame(AssetKeyVal [] WebFrame) {
         this.WebFrame = WebFrame;
     }
 
     /**
-     * Get Web服务Top5
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Web服务Top5 
      * @return WebService Web服务Top5
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AssetKeyVal [] getWebService() {
         return this.WebService;
@@ -274,9 +231,7 @@ public class DescribeAssetTypeTopResponse extends AbstractModel {
 
     /**
      * Set Web服务Top5
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WebService Web服务Top5
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWebService(AssetKeyVal [] WebService) {
         this.WebService = WebService;

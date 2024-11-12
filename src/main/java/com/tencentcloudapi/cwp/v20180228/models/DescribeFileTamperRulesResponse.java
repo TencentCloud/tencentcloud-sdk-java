@@ -25,7 +25,6 @@ public class DescribeFileTamperRulesResponse extends AbstractModel {
 
     /**
     * 规则列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("List")
     @Expose
@@ -46,10 +45,8 @@ public class DescribeFileTamperRulesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 规则列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则列表 
      * @return List 规则列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public FileTamperRuleInfo [] getList() {
         return this.List;
@@ -57,9 +54,7 @@ public class DescribeFileTamperRulesResponse extends AbstractModel {
 
     /**
      * Set 规则列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param List 规则列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setList(FileTamperRuleInfo [] List) {
         this.List = List;

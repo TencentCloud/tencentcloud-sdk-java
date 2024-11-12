@@ -25,7 +25,6 @@ public class DescribeAssetLoadInfoResponse extends AbstractModel {
 
     /**
     * 系统负载
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CpuLoad")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeAssetLoadInfoResponse extends AbstractModel {
 
     /**
     * 内存使用率
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MemLoad")
     @Expose
@@ -41,7 +39,6 @@ public class DescribeAssetLoadInfoResponse extends AbstractModel {
 
     /**
     * 硬盘使用率
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiskLoad")
     @Expose
@@ -55,10 +52,8 @@ public class DescribeAssetLoadInfoResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 系统负载
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 系统负载 
      * @return CpuLoad 系统负载
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AssetLoadSummary getCpuLoad() {
         return this.CpuLoad;
@@ -66,19 +61,15 @@ public class DescribeAssetLoadInfoResponse extends AbstractModel {
 
     /**
      * Set 系统负载
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CpuLoad 系统负载
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCpuLoad(AssetLoadSummary CpuLoad) {
         this.CpuLoad = CpuLoad;
     }
 
     /**
-     * Get 内存使用率
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 内存使用率 
      * @return MemLoad 内存使用率
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AssetLoadSummary getMemLoad() {
         return this.MemLoad;
@@ -86,19 +77,15 @@ public class DescribeAssetLoadInfoResponse extends AbstractModel {
 
     /**
      * Set 内存使用率
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MemLoad 内存使用率
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMemLoad(AssetLoadSummary MemLoad) {
         this.MemLoad = MemLoad;
     }
 
     /**
-     * Get 硬盘使用率
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 硬盘使用率 
      * @return DiskLoad 硬盘使用率
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AssetLoadSummary getDiskLoad() {
         return this.DiskLoad;
@@ -106,9 +93,7 @@ public class DescribeAssetLoadInfoResponse extends AbstractModel {
 
     /**
      * Set 硬盘使用率
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DiskLoad 硬盘使用率
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiskLoad(AssetLoadSummary DiskLoad) {
         this.DiskLoad = DiskLoad;

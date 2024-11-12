@@ -25,7 +25,6 @@ public class DescribeAssetJarListResponse extends AbstractModel {
 
     /**
     * 应用列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Jars")
     @Expose
@@ -46,10 +45,8 @@ public class DescribeAssetJarListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 应用列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 应用列表 
      * @return Jars 应用列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AssetJarBaseInfo [] getJars() {
         return this.Jars;
@@ -57,9 +54,7 @@ public class DescribeAssetJarListResponse extends AbstractModel {
 
     /**
      * Set 应用列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Jars 应用列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setJars(AssetJarBaseInfo [] Jars) {
         this.Jars = Jars;

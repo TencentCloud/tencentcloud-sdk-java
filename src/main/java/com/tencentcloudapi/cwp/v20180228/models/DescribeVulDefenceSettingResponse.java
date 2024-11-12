@@ -39,7 +39,6 @@ public class DescribeVulDefenceSettingResponse extends AbstractModel {
 
     /**
     * 影响主机quuid列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Quuids")
     @Expose
@@ -54,7 +53,6 @@ public class DescribeVulDefenceSettingResponse extends AbstractModel {
 
     /**
     * 影响主机id列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceIds")
     @Expose
@@ -69,7 +67,6 @@ public class DescribeVulDefenceSettingResponse extends AbstractModel {
 
     /**
     * 排除的主机id列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExcludeInstanceIds")
     @Expose
@@ -115,10 +112,8 @@ public class DescribeVulDefenceSettingResponse extends AbstractModel {
     }
 
     /**
-     * Get 影响主机quuid列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 影响主机quuid列表 
      * @return Quuids 影响主机quuid列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getQuuids() {
         return this.Quuids;
@@ -126,9 +121,7 @@ public class DescribeVulDefenceSettingResponse extends AbstractModel {
 
     /**
      * Set 影响主机quuid列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Quuids 影响主机quuid列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQuuids(String [] Quuids) {
         this.Quuids = Quuids;
@@ -151,10 +144,8 @@ public class DescribeVulDefenceSettingResponse extends AbstractModel {
     }
 
     /**
-     * Get 影响主机id列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 影响主机id列表 
      * @return InstanceIds 影响主机id列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
@@ -162,9 +153,7 @@ public class DescribeVulDefenceSettingResponse extends AbstractModel {
 
     /**
      * Set 影响主机id列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceIds 影响主机id列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
@@ -187,10 +176,8 @@ public class DescribeVulDefenceSettingResponse extends AbstractModel {
     }
 
     /**
-     * Get 排除的主机id列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 排除的主机id列表 
      * @return ExcludeInstanceIds 排除的主机id列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getExcludeInstanceIds() {
         return this.ExcludeInstanceIds;
@@ -198,9 +185,7 @@ public class DescribeVulDefenceSettingResponse extends AbstractModel {
 
     /**
      * Set 排除的主机id列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExcludeInstanceIds 排除的主机id列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExcludeInstanceIds(String [] ExcludeInstanceIds) {
         this.ExcludeInstanceIds = ExcludeInstanceIds;

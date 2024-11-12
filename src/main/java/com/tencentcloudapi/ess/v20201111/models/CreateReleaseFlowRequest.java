@@ -58,7 +58,7 @@ public class CreateReleaseFlowRequest extends AbstractModel {
 如需更换原合同中的企业端签署人，可通过指定该签署人的RecipientId编号更换此企业端签署人。(可通过接口<a href="https://qian.tencent.com/developers/companyApis/queryFlows/DescribeFlowInfo/">DescribeFlowInfo</a>查询签署人的RecipientId编号)<br/>
 
 注意：
-`只能更换自己企业的签署人,  不支持更换个人类型或者其他企业的签署人。`
+`只能更换自己企业的签署人,  不支持更换个人类型。`
 `可以不指定替换签署人, 使用原流程的签署人 `
     */
     @SerializedName("ReleasedApprovers")
@@ -161,13 +161,13 @@ public class CreateReleaseFlowRequest extends AbstractModel {
 如需更换原合同中的企业端签署人，可通过指定该签署人的RecipientId编号更换此企业端签署人。(可通过接口<a href="https://qian.tencent.com/developers/companyApis/queryFlows/DescribeFlowInfo/">DescribeFlowInfo</a>查询签署人的RecipientId编号)<br/>
 
 注意：
-`只能更换自己企业的签署人,  不支持更换个人类型或者其他企业的签署人。`
+`只能更换自己企业的签署人,  不支持更换个人类型。`
 `可以不指定替换签署人, 使用原流程的签署人 ` 
      * @return ReleasedApprovers 替换解除协议的签署人， 如不指定替换签署人,  则使用原流程的签署人。 <br/>
 如需更换原合同中的企业端签署人，可通过指定该签署人的RecipientId编号更换此企业端签署人。(可通过接口<a href="https://qian.tencent.com/developers/companyApis/queryFlows/DescribeFlowInfo/">DescribeFlowInfo</a>查询签署人的RecipientId编号)<br/>
 
 注意：
-`只能更换自己企业的签署人,  不支持更换个人类型或者其他企业的签署人。`
+`只能更换自己企业的签署人,  不支持更换个人类型。`
 `可以不指定替换签署人, 使用原流程的签署人 `
      */
     public ReleasedApprover [] getReleasedApprovers() {
@@ -179,13 +179,13 @@ public class CreateReleaseFlowRequest extends AbstractModel {
 如需更换原合同中的企业端签署人，可通过指定该签署人的RecipientId编号更换此企业端签署人。(可通过接口<a href="https://qian.tencent.com/developers/companyApis/queryFlows/DescribeFlowInfo/">DescribeFlowInfo</a>查询签署人的RecipientId编号)<br/>
 
 注意：
-`只能更换自己企业的签署人,  不支持更换个人类型或者其他企业的签署人。`
+`只能更换自己企业的签署人,  不支持更换个人类型。`
 `可以不指定替换签署人, 使用原流程的签署人 `
      * @param ReleasedApprovers 替换解除协议的签署人， 如不指定替换签署人,  则使用原流程的签署人。 <br/>
 如需更换原合同中的企业端签署人，可通过指定该签署人的RecipientId编号更换此企业端签署人。(可通过接口<a href="https://qian.tencent.com/developers/companyApis/queryFlows/DescribeFlowInfo/">DescribeFlowInfo</a>查询签署人的RecipientId编号)<br/>
 
 注意：
-`只能更换自己企业的签署人,  不支持更换个人类型或者其他企业的签署人。`
+`只能更换自己企业的签署人,  不支持更换个人类型。`
 `可以不指定替换签署人, 使用原流程的签署人 `
      */
     public void setReleasedApprovers(ReleasedApprover [] ReleasedApprovers) {

@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeInstanceUpgradeTypeResponse extends AbstractModel {
 
     /**
-    * 实例id
+    * 实例 ID。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 实例升级类型
+    * 实例升级类型。
     */
     @SerializedName("UpgradeType")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeInstanceUpgradeTypeResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 实例id 
-     * @return InstanceId 实例id
+     * Get 实例 ID。 
+     * @return InstanceId 实例 ID。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例id
-     * @param InstanceId 实例id
+     * Set 实例 ID。
+     * @param InstanceId 实例 ID。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 实例升级类型 
-     * @return UpgradeType 实例升级类型
+     * Get 实例升级类型。 
+     * @return UpgradeType 实例升级类型。
      */
     public String getUpgradeType() {
         return this.UpgradeType;
     }
 
     /**
-     * Set 实例升级类型
-     * @param UpgradeType 实例升级类型
+     * Set 实例升级类型。
+     * @param UpgradeType 实例升级类型。
      */
     public void setUpgradeType(String UpgradeType) {
         this.UpgradeType = UpgradeType;

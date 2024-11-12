@@ -45,6 +45,13 @@ public class VulEmergentMsgInfo extends AbstractModel {
     private String Name;
 
     /**
+    * 漏洞名,英文描述
+    */
+    @SerializedName("NameEn")
+    @Expose
+    private String NameEn;
+
+    /**
      * Get 漏洞id 
      * @return VulId 漏洞id
      */
@@ -92,6 +99,22 @@ public class VulEmergentMsgInfo extends AbstractModel {
         this.Name = Name;
     }
 
+    /**
+     * Get 漏洞名,英文描述 
+     * @return NameEn 漏洞名,英文描述
+     */
+    public String getNameEn() {
+        return this.NameEn;
+    }
+
+    /**
+     * Set 漏洞名,英文描述
+     * @param NameEn 漏洞名,英文描述
+     */
+    public void setNameEn(String NameEn) {
+        this.NameEn = NameEn;
+    }
+
     public VulEmergentMsgInfo() {
     }
 
@@ -109,6 +132,9 @@ public class VulEmergentMsgInfo extends AbstractModel {
         if (source.Name != null) {
             this.Name = new String(source.Name);
         }
+        if (source.NameEn != null) {
+            this.NameEn = new String(source.NameEn);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class VulEmergentMsgInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "VulId", this.VulId);
         this.setParamSimple(map, prefix + "PublishTime", this.PublishTime);
         this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "NameEn", this.NameEn);
 
     }
 }

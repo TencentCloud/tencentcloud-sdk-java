@@ -200,7 +200,6 @@ public class AssetUserBaseInfo extends AbstractModel {
 
     /**
     * 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -223,7 +222,6 @@ public class AssetUserBaseInfo extends AbstractModel {
     /**
     * 
  附加信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MachineExtraInfo")
     @Expose
@@ -630,10 +628,8 @@ public class AssetUserBaseInfo extends AbstractModel {
     }
 
     /**
-     * Get 更新时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 更新时间 
      * @return UpdateTime 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdateTime() {
         return this.UpdateTime;
@@ -641,9 +637,7 @@ public class AssetUserBaseInfo extends AbstractModel {
 
     /**
      * Set 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdateTime 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
@@ -683,11 +677,9 @@ public class AssetUserBaseInfo extends AbstractModel {
 
     /**
      * Get 
- 附加信息
-注意：此字段可能返回 null，表示取不到有效值。 
+ 附加信息 
      * @return MachineExtraInfo 
  附加信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public MachineExtraInfo getMachineExtraInfo() {
         return this.MachineExtraInfo;
@@ -696,10 +688,8 @@ public class AssetUserBaseInfo extends AbstractModel {
     /**
      * Set 
  附加信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MachineExtraInfo 
  附加信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMachineExtraInfo(MachineExtraInfo MachineExtraInfo) {
         this.MachineExtraInfo = MachineExtraInfo;

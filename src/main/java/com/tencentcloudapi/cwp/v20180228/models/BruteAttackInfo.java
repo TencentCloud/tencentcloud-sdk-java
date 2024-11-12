@@ -32,7 +32,6 @@ public class BruteAttackInfo extends AbstractModel {
 
     /**
     * 主机安全客户端唯一标识UUID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Uuid")
     @Expose
@@ -40,7 +39,6 @@ public class BruteAttackInfo extends AbstractModel {
 
     /**
     * 主机ip
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MachineIp")
     @Expose
@@ -48,7 +46,6 @@ public class BruteAttackInfo extends AbstractModel {
 
     /**
     * 主机名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MachineName")
     @Expose
@@ -56,7 +53,6 @@ public class BruteAttackInfo extends AbstractModel {
 
     /**
     * 用户名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserName")
     @Expose
@@ -64,7 +60,6 @@ public class BruteAttackInfo extends AbstractModel {
 
     /**
     * 来源ip
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SrcIp")
     @Expose
@@ -72,7 +67,6 @@ public class BruteAttackInfo extends AbstractModel {
 
     /**
     * SUCCESS：破解成功；FAILED：破解失败
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -80,7 +74,6 @@ public class BruteAttackInfo extends AbstractModel {
 
     /**
     * 国家id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Country")
     @Expose
@@ -88,7 +81,6 @@ public class BruteAttackInfo extends AbstractModel {
 
     /**
     * 城市id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("City")
     @Expose
@@ -96,7 +88,6 @@ public class BruteAttackInfo extends AbstractModel {
 
     /**
     * 省份id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Province")
     @Expose
@@ -104,7 +95,6 @@ public class BruteAttackInfo extends AbstractModel {
 
     /**
     * 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -124,15 +114,13 @@ public class BruteAttackInfo extends AbstractModel {
 87-不阻断(客户端离线)
 88-不阻断(来源Ip归属相同客户)
 89-不阻断(ipv6不支持阻断)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BanStatus")
     @Expose
     private Long BanStatus;
 
     /**
-    * 事件类型：200-暴力破解事件，300-暴力破解成功事件（页面展示），400-暴力破解不存在的帐号事件
-注意：此字段可能返回 null，表示取不到有效值。
+    * 事件类型：200-暴力破解事件，300-暴力破解成功事件（页面展示），400-暴力破解不存在的账号事件
     */
     @SerializedName("EventType")
     @Expose
@@ -140,7 +128,6 @@ public class BruteAttackInfo extends AbstractModel {
 
     /**
     * 发生次数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Count")
     @Expose
@@ -148,7 +135,6 @@ public class BruteAttackInfo extends AbstractModel {
 
     /**
     * 机器UUID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Quuid")
     @Expose
@@ -156,7 +142,6 @@ public class BruteAttackInfo extends AbstractModel {
 
     /**
     * 是否为专业版（true/false）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsProVersion")
     @Expose
@@ -164,7 +149,6 @@ public class BruteAttackInfo extends AbstractModel {
 
     /**
     * 被攻击的服务的用户名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Protocol")
     @Expose
@@ -172,7 +156,6 @@ public class BruteAttackInfo extends AbstractModel {
 
     /**
     * 端口
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Port")
     @Expose
@@ -180,7 +163,6 @@ public class BruteAttackInfo extends AbstractModel {
 
     /**
     * 最近攻击时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ModifyTime")
     @Expose
@@ -188,7 +170,6 @@ public class BruteAttackInfo extends AbstractModel {
 
     /**
     * 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -196,7 +177,6 @@ public class BruteAttackInfo extends AbstractModel {
 
     /**
     * 0：待处理，1：忽略，5：已处理，6：加入白名单
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataStatus")
     @Expose
@@ -204,7 +184,6 @@ public class BruteAttackInfo extends AbstractModel {
 
     /**
     * 附加信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MachineExtraInfo")
     @Expose
@@ -212,7 +191,6 @@ public class BruteAttackInfo extends AbstractModel {
 
     /**
     * 地理位置中文名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Location")
     @Expose
@@ -220,7 +198,6 @@ public class BruteAttackInfo extends AbstractModel {
 
     /**
     * 威胁等级：0低危，1中危，2高危
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RiskLevel")
     @Expose
@@ -228,7 +205,6 @@ public class BruteAttackInfo extends AbstractModel {
 
     /**
     * 事件来源：0--阻断规则，1--威胁情报
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataFrom")
     @Expose
@@ -236,7 +212,6 @@ public class BruteAttackInfo extends AbstractModel {
 
     /**
     * 破解状态说明
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AttackStatusDesc")
     @Expose
@@ -244,7 +219,6 @@ public class BruteAttackInfo extends AbstractModel {
 
     /**
     * 阻断过期时间（仅阻断中事件有效）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BanExpiredTime")
     @Expose
@@ -267,10 +241,8 @@ public class BruteAttackInfo extends AbstractModel {
     }
 
     /**
-     * Get 主机安全客户端唯一标识UUID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主机安全客户端唯一标识UUID 
      * @return Uuid 主机安全客户端唯一标识UUID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUuid() {
         return this.Uuid;
@@ -278,19 +250,15 @@ public class BruteAttackInfo extends AbstractModel {
 
     /**
      * Set 主机安全客户端唯一标识UUID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Uuid 主机安全客户端唯一标识UUID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUuid(String Uuid) {
         this.Uuid = Uuid;
     }
 
     /**
-     * Get 主机ip
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主机ip 
      * @return MachineIp 主机ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMachineIp() {
         return this.MachineIp;
@@ -298,19 +266,15 @@ public class BruteAttackInfo extends AbstractModel {
 
     /**
      * Set 主机ip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MachineIp 主机ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMachineIp(String MachineIp) {
         this.MachineIp = MachineIp;
     }
 
     /**
-     * Get 主机名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主机名 
      * @return MachineName 主机名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMachineName() {
         return this.MachineName;
@@ -318,19 +282,15 @@ public class BruteAttackInfo extends AbstractModel {
 
     /**
      * Set 主机名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MachineName 主机名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMachineName(String MachineName) {
         this.MachineName = MachineName;
     }
 
     /**
-     * Get 用户名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户名 
      * @return UserName 用户名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUserName() {
         return this.UserName;
@@ -338,19 +298,15 @@ public class BruteAttackInfo extends AbstractModel {
 
     /**
      * Set 用户名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UserName 用户名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;
     }
 
     /**
-     * Get 来源ip
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 来源ip 
      * @return SrcIp 来源ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSrcIp() {
         return this.SrcIp;
@@ -358,19 +314,15 @@ public class BruteAttackInfo extends AbstractModel {
 
     /**
      * Set 来源ip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SrcIp 来源ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSrcIp(String SrcIp) {
         this.SrcIp = SrcIp;
     }
 
     /**
-     * Get SUCCESS：破解成功；FAILED：破解失败
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get SUCCESS：破解成功；FAILED：破解失败 
      * @return Status SUCCESS：破解成功；FAILED：破解失败
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
         return this.Status;
@@ -378,19 +330,15 @@ public class BruteAttackInfo extends AbstractModel {
 
     /**
      * Set SUCCESS：破解成功；FAILED：破解失败
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status SUCCESS：破解成功；FAILED：破解失败
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 国家id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 国家id 
      * @return Country 国家id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCountry() {
         return this.Country;
@@ -398,19 +346,15 @@ public class BruteAttackInfo extends AbstractModel {
 
     /**
      * Set 国家id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Country 国家id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCountry(Long Country) {
         this.Country = Country;
     }
 
     /**
-     * Get 城市id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 城市id 
      * @return City 城市id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCity() {
         return this.City;
@@ -418,19 +362,15 @@ public class BruteAttackInfo extends AbstractModel {
 
     /**
      * Set 城市id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param City 城市id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCity(Long City) {
         this.City = City;
     }
 
     /**
-     * Get 省份id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 省份id 
      * @return Province 省份id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getProvince() {
         return this.Province;
@@ -438,19 +378,15 @@ public class BruteAttackInfo extends AbstractModel {
 
     /**
      * Set 省份id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Province 省份id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProvince(Long Province) {
         this.Province = Province;
     }
 
     /**
-     * Get 创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间 
      * @return CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -458,9 +394,7 @@ public class BruteAttackInfo extends AbstractModel {
 
     /**
      * Set 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
@@ -479,8 +413,7 @@ public class BruteAttackInfo extends AbstractModel {
 86-不阻断(系统白名单)
 87-不阻断(客户端离线)
 88-不阻断(来源Ip归属相同客户)
-89-不阻断(ipv6不支持阻断)
-注意：此字段可能返回 null，表示取不到有效值。 
+89-不阻断(ipv6不支持阻断) 
      * @return BanStatus 0 -不阻断(客户端版本不支持)
 1 -已阻断
 2 -阻断失败(程序异常)
@@ -494,7 +427,6 @@ public class BruteAttackInfo extends AbstractModel {
 87-不阻断(客户端离线)
 88-不阻断(来源Ip归属相同客户)
 89-不阻断(ipv6不支持阻断)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBanStatus() {
         return this.BanStatus;
@@ -514,7 +446,6 @@ public class BruteAttackInfo extends AbstractModel {
 87-不阻断(客户端离线)
 88-不阻断(来源Ip归属相同客户)
 89-不阻断(ipv6不支持阻断)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BanStatus 0 -不阻断(客户端版本不支持)
 1 -已阻断
 2 -阻断失败(程序异常)
@@ -528,37 +459,30 @@ public class BruteAttackInfo extends AbstractModel {
 87-不阻断(客户端离线)
 88-不阻断(来源Ip归属相同客户)
 89-不阻断(ipv6不支持阻断)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBanStatus(Long BanStatus) {
         this.BanStatus = BanStatus;
     }
 
     /**
-     * Get 事件类型：200-暴力破解事件，300-暴力破解成功事件（页面展示），400-暴力破解不存在的帐号事件
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EventType 事件类型：200-暴力破解事件，300-暴力破解成功事件（页面展示），400-暴力破解不存在的帐号事件
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 事件类型：200-暴力破解事件，300-暴力破解成功事件（页面展示），400-暴力破解不存在的账号事件 
+     * @return EventType 事件类型：200-暴力破解事件，300-暴力破解成功事件（页面展示），400-暴力破解不存在的账号事件
      */
     public Long getEventType() {
         return this.EventType;
     }
 
     /**
-     * Set 事件类型：200-暴力破解事件，300-暴力破解成功事件（页面展示），400-暴力破解不存在的帐号事件
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param EventType 事件类型：200-暴力破解事件，300-暴力破解成功事件（页面展示），400-暴力破解不存在的帐号事件
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 事件类型：200-暴力破解事件，300-暴力破解成功事件（页面展示），400-暴力破解不存在的账号事件
+     * @param EventType 事件类型：200-暴力破解事件，300-暴力破解成功事件（页面展示），400-暴力破解不存在的账号事件
      */
     public void setEventType(Long EventType) {
         this.EventType = EventType;
     }
 
     /**
-     * Get 发生次数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 发生次数 
      * @return Count 发生次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCount() {
         return this.Count;
@@ -566,19 +490,15 @@ public class BruteAttackInfo extends AbstractModel {
 
     /**
      * Set 发生次数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Count 发生次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCount(Long Count) {
         this.Count = Count;
     }
 
     /**
-     * Get 机器UUID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 机器UUID 
      * @return Quuid 机器UUID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getQuuid() {
         return this.Quuid;
@@ -586,19 +506,15 @@ public class BruteAttackInfo extends AbstractModel {
 
     /**
      * Set 机器UUID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Quuid 机器UUID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQuuid(String Quuid) {
         this.Quuid = Quuid;
     }
 
     /**
-     * Get 是否为专业版（true/false）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否为专业版（true/false） 
      * @return IsProVersion 是否为专业版（true/false）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsProVersion() {
         return this.IsProVersion;
@@ -606,19 +522,15 @@ public class BruteAttackInfo extends AbstractModel {
 
     /**
      * Set 是否为专业版（true/false）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsProVersion 是否为专业版（true/false）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsProVersion(Boolean IsProVersion) {
         this.IsProVersion = IsProVersion;
     }
 
     /**
-     * Get 被攻击的服务的用户名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 被攻击的服务的用户名 
      * @return Protocol 被攻击的服务的用户名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProtocol() {
         return this.Protocol;
@@ -626,19 +538,15 @@ public class BruteAttackInfo extends AbstractModel {
 
     /**
      * Set 被攻击的服务的用户名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Protocol 被攻击的服务的用户名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
     }
 
     /**
-     * Get 端口
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 端口 
      * @return Port 端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPort() {
         return this.Port;
@@ -646,19 +554,15 @@ public class BruteAttackInfo extends AbstractModel {
 
     /**
      * Set 端口
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Port 端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPort(Long Port) {
         this.Port = Port;
     }
 
     /**
-     * Get 最近攻击时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最近攻击时间 
      * @return ModifyTime 最近攻击时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getModifyTime() {
         return this.ModifyTime;
@@ -666,19 +570,15 @@ public class BruteAttackInfo extends AbstractModel {
 
     /**
      * Set 最近攻击时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ModifyTime 最近攻击时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModifyTime(String ModifyTime) {
         this.ModifyTime = ModifyTime;
     }
 
     /**
-     * Get 实例ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例ID 
      * @return InstanceId 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceId() {
         return this.InstanceId;
@@ -686,19 +586,15 @@ public class BruteAttackInfo extends AbstractModel {
 
     /**
      * Set 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceId 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 0：待处理，1：忽略，5：已处理，6：加入白名单
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 0：待处理，1：忽略，5：已处理，6：加入白名单 
      * @return DataStatus 0：待处理，1：忽略，5：已处理，6：加入白名单
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDataStatus() {
         return this.DataStatus;
@@ -706,19 +602,15 @@ public class BruteAttackInfo extends AbstractModel {
 
     /**
      * Set 0：待处理，1：忽略，5：已处理，6：加入白名单
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DataStatus 0：待处理，1：忽略，5：已处理，6：加入白名单
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataStatus(Long DataStatus) {
         this.DataStatus = DataStatus;
     }
 
     /**
-     * Get 附加信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 附加信息 
      * @return MachineExtraInfo 附加信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public MachineExtraInfo getMachineExtraInfo() {
         return this.MachineExtraInfo;
@@ -726,19 +618,15 @@ public class BruteAttackInfo extends AbstractModel {
 
     /**
      * Set 附加信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MachineExtraInfo 附加信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMachineExtraInfo(MachineExtraInfo MachineExtraInfo) {
         this.MachineExtraInfo = MachineExtraInfo;
     }
 
     /**
-     * Get 地理位置中文名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地理位置中文名 
      * @return Location 地理位置中文名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLocation() {
         return this.Location;
@@ -746,19 +634,15 @@ public class BruteAttackInfo extends AbstractModel {
 
     /**
      * Set 地理位置中文名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Location 地理位置中文名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLocation(String Location) {
         this.Location = Location;
     }
 
     /**
-     * Get 威胁等级：0低危，1中危，2高危
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 威胁等级：0低危，1中危，2高危 
      * @return RiskLevel 威胁等级：0低危，1中危，2高危
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRiskLevel() {
         return this.RiskLevel;
@@ -766,19 +650,15 @@ public class BruteAttackInfo extends AbstractModel {
 
     /**
      * Set 威胁等级：0低危，1中危，2高危
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RiskLevel 威胁等级：0低危，1中危，2高危
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRiskLevel(Long RiskLevel) {
         this.RiskLevel = RiskLevel;
     }
 
     /**
-     * Get 事件来源：0--阻断规则，1--威胁情报
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 事件来源：0--阻断规则，1--威胁情报 
      * @return DataFrom 事件来源：0--阻断规则，1--威胁情报
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDataFrom() {
         return this.DataFrom;
@@ -786,19 +666,15 @@ public class BruteAttackInfo extends AbstractModel {
 
     /**
      * Set 事件来源：0--阻断规则，1--威胁情报
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DataFrom 事件来源：0--阻断规则，1--威胁情报
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataFrom(Long DataFrom) {
         this.DataFrom = DataFrom;
     }
 
     /**
-     * Get 破解状态说明
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 破解状态说明 
      * @return AttackStatusDesc 破解状态说明
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAttackStatusDesc() {
         return this.AttackStatusDesc;
@@ -806,19 +682,15 @@ public class BruteAttackInfo extends AbstractModel {
 
     /**
      * Set 破解状态说明
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AttackStatusDesc 破解状态说明
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAttackStatusDesc(String AttackStatusDesc) {
         this.AttackStatusDesc = AttackStatusDesc;
     }
 
     /**
-     * Get 阻断过期时间（仅阻断中事件有效）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 阻断过期时间（仅阻断中事件有效） 
      * @return BanExpiredTime 阻断过期时间（仅阻断中事件有效）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBanExpiredTime() {
         return this.BanExpiredTime;
@@ -826,9 +698,7 @@ public class BruteAttackInfo extends AbstractModel {
 
     /**
      * Set 阻断过期时间（仅阻断中事件有效）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BanExpiredTime 阻断过期时间（仅阻断中事件有效）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBanExpiredTime(String BanExpiredTime) {
         this.BanExpiredTime = BanExpiredTime;

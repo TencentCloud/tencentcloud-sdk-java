@@ -25,7 +25,6 @@ public class DescribeAssetAppCountResponse extends AbstractModel {
 
     /**
     * 各软件应用数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Apps")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeAssetAppCountResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 各软件应用数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 各软件应用数量 
      * @return Apps 各软件应用数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AssetKeyVal [] getApps() {
         return this.Apps;
@@ -50,9 +47,7 @@ public class DescribeAssetAppCountResponse extends AbstractModel {
 
     /**
      * Set 各软件应用数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Apps 各软件应用数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApps(AssetKeyVal [] Apps) {
         this.Apps = Apps;

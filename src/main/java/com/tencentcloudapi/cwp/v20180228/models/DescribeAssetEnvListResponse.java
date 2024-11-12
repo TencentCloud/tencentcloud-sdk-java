@@ -25,7 +25,6 @@ public class DescribeAssetEnvListResponse extends AbstractModel {
 
     /**
     * 列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Envs")
     @Expose
@@ -46,10 +45,8 @@ public class DescribeAssetEnvListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 列表 
      * @return Envs 列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AssetEnvBaseInfo [] getEnvs() {
         return this.Envs;
@@ -57,9 +54,7 @@ public class DescribeAssetEnvListResponse extends AbstractModel {
 
     /**
      * Set 列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Envs 列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnvs(AssetEnvBaseInfo [] Envs) {
         this.Envs = Envs;

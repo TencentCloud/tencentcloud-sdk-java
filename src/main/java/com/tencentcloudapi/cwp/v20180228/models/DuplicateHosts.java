@@ -25,7 +25,6 @@ public class DuplicateHosts extends AbstractModel {
 
     /**
     * Quuid
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Quuid")
     @Expose
@@ -33,7 +32,6 @@ public class DuplicateHosts extends AbstractModel {
 
     /**
     * Uuid
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Uuid")
     @Expose
@@ -47,10 +45,8 @@ public class DuplicateHosts extends AbstractModel {
     private Long Id;
 
     /**
-     * Get Quuid
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Quuid 
      * @return Quuid Quuid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getQuuid() {
         return this.Quuid;
@@ -58,19 +54,15 @@ public class DuplicateHosts extends AbstractModel {
 
     /**
      * Set Quuid
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Quuid Quuid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQuuid(String Quuid) {
         this.Quuid = Quuid;
     }
 
     /**
-     * Get Uuid
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Uuid 
      * @return Uuid Uuid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUuid() {
         return this.Uuid;
@@ -78,9 +70,7 @@ public class DuplicateHosts extends AbstractModel {
 
     /**
      * Set Uuid
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Uuid Uuid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUuid(String Uuid) {
         this.Uuid = Uuid;

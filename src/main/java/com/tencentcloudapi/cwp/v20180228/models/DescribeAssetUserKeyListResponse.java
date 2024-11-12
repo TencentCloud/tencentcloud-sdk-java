@@ -25,7 +25,6 @@ public class DescribeAssetUserKeyListResponse extends AbstractModel {
 
     /**
     * 公钥列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Keys")
     @Expose
@@ -46,10 +45,8 @@ public class DescribeAssetUserKeyListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 公钥列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 公钥列表 
      * @return Keys 公钥列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AssetUserKeyInfo [] getKeys() {
         return this.Keys;
@@ -57,9 +54,7 @@ public class DescribeAssetUserKeyListResponse extends AbstractModel {
 
     /**
      * Set 公钥列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Keys 公钥列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKeys(AssetUserKeyInfo [] Keys) {
         this.Keys = Keys;

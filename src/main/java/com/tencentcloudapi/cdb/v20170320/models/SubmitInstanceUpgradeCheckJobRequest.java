@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class SubmitInstanceUpgradeCheckJobRequest extends AbstractModel {
 
     /**
-    * 实例D
+    * 实例 ID。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 目标数据库版本
+    * 目标数据库版本。
     */
     @SerializedName("DstMysqlVersion")
     @Expose
     private String DstMysqlVersion;
 
     /**
-     * Get 实例D 
-     * @return InstanceId 实例D
+     * Get 实例 ID。 
+     * @return InstanceId 实例 ID。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例D
-     * @param InstanceId 实例D
+     * Set 实例 ID。
+     * @param InstanceId 实例 ID。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 目标数据库版本 
-     * @return DstMysqlVersion 目标数据库版本
+     * Get 目标数据库版本。 
+     * @return DstMysqlVersion 目标数据库版本。
      */
     public String getDstMysqlVersion() {
         return this.DstMysqlVersion;
     }
 
     /**
-     * Set 目标数据库版本
-     * @param DstMysqlVersion 目标数据库版本
+     * Set 目标数据库版本。
+     * @param DstMysqlVersion 目标数据库版本。
      */
     public void setDstMysqlVersion(String DstMysqlVersion) {
         this.DstMysqlVersion = DstMysqlVersion;

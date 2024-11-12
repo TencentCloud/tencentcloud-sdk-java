@@ -40,6 +40,14 @@ public class Price extends AbstractModel {
     private ItemPrice CloudDiskPrice;
 
     /**
+    * 分实例价格
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PriceDetailSet")
+    @Expose
+    private ItemPriceDetail [] PriceDetailSet;
+
+    /**
      * Get 实例价格信息
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return InstancePrice 实例价格信息
@@ -79,6 +87,26 @@ public class Price extends AbstractModel {
         this.CloudDiskPrice = CloudDiskPrice;
     }
 
+    /**
+     * Get 分实例价格
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PriceDetailSet 分实例价格
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ItemPriceDetail [] getPriceDetailSet() {
+        return this.PriceDetailSet;
+    }
+
+    /**
+     * Set 分实例价格
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PriceDetailSet 分实例价格
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPriceDetailSet(ItemPriceDetail [] PriceDetailSet) {
+        this.PriceDetailSet = PriceDetailSet;
+    }
+
     public Price() {
     }
 
@@ -93,6 +121,12 @@ public class Price extends AbstractModel {
         if (source.CloudDiskPrice != null) {
             this.CloudDiskPrice = new ItemPrice(source.CloudDiskPrice);
         }
+        if (source.PriceDetailSet != null) {
+            this.PriceDetailSet = new ItemPriceDetail[source.PriceDetailSet.length];
+            for (int i = 0; i < source.PriceDetailSet.length; i++) {
+                this.PriceDetailSet[i] = new ItemPriceDetail(source.PriceDetailSet[i]);
+            }
+        }
     }
 
 
@@ -102,6 +136,7 @@ public class Price extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "InstancePrice.", this.InstancePrice);
         this.setParamObj(map, prefix + "CloudDiskPrice.", this.CloudDiskPrice);
+        this.setParamArrayObj(map, prefix + "PriceDetailSet.", this.PriceDetailSet);
 
     }
 }

@@ -25,7 +25,6 @@ public class DescribeAssetPlanTaskListResponse extends AbstractModel {
 
     /**
     * 列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tasks")
     @Expose
@@ -46,10 +45,8 @@ public class DescribeAssetPlanTaskListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 列表 
      * @return Tasks 列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AssetPlanTask [] getTasks() {
         return this.Tasks;
@@ -57,9 +54,7 @@ public class DescribeAssetPlanTaskListResponse extends AbstractModel {
 
     /**
      * Set 列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tasks 列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTasks(AssetPlanTask [] Tasks) {
         this.Tasks = Tasks;

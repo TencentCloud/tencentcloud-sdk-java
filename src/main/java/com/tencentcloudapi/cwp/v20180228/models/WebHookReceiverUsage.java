@@ -25,7 +25,6 @@ public class WebHookReceiverUsage extends AbstractModel {
 
     /**
     * 接收人id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReceiverId")
     @Expose
@@ -33,7 +32,6 @@ public class WebHookReceiverUsage extends AbstractModel {
 
     /**
     * 接收人名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReceiverName")
     @Expose
@@ -41,17 +39,14 @@ public class WebHookReceiverUsage extends AbstractModel {
 
     /**
     * 策略名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PolicyName")
     @Expose
     private String PolicyName;
 
     /**
-     * Get 接收人id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 接收人id 
      * @return ReceiverId 接收人id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getReceiverId() {
         return this.ReceiverId;
@@ -59,19 +54,15 @@ public class WebHookReceiverUsage extends AbstractModel {
 
     /**
      * Set 接收人id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReceiverId 接收人id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReceiverId(Long ReceiverId) {
         this.ReceiverId = ReceiverId;
     }
 
     /**
-     * Get 接收人名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 接收人名称 
      * @return ReceiverName 接收人名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getReceiverName() {
         return this.ReceiverName;
@@ -79,19 +70,15 @@ public class WebHookReceiverUsage extends AbstractModel {
 
     /**
      * Set 接收人名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReceiverName 接收人名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReceiverName(String ReceiverName) {
         this.ReceiverName = ReceiverName;
     }
 
     /**
-     * Get 策略名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 策略名称 
      * @return PolicyName 策略名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPolicyName() {
         return this.PolicyName;
@@ -99,9 +86,7 @@ public class WebHookReceiverUsage extends AbstractModel {
 
     /**
      * Set 策略名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PolicyName 策略名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPolicyName(String PolicyName) {
         this.PolicyName = PolicyName;

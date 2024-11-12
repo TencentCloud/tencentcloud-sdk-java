@@ -32,7 +32,6 @@ public class DescribeWarningHostConfigResponse extends AbstractModel {
 
     /**
     * 项目或标签的名称列表，自选主机时为空
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ItemLabels")
     @Expose
@@ -40,7 +39,6 @@ public class DescribeWarningHostConfigResponse extends AbstractModel {
 
     /**
     * 机器列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Quuids")
     @Expose
@@ -48,7 +46,6 @@ public class DescribeWarningHostConfigResponse extends AbstractModel {
 
     /**
     * 机器列表总数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -56,7 +53,6 @@ public class DescribeWarningHostConfigResponse extends AbstractModel {
 
     /**
     * 项目或标签的id列表，自选主机时为空
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ItemLabelIds")
     @Expose
@@ -93,10 +89,8 @@ public class DescribeWarningHostConfigResponse extends AbstractModel {
     }
 
     /**
-     * Get 项目或标签的名称列表，自选主机时为空
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 项目或标签的名称列表，自选主机时为空 
      * @return ItemLabels 项目或标签的名称列表，自选主机时为空
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getItemLabels() {
         return this.ItemLabels;
@@ -104,19 +98,15 @@ public class DescribeWarningHostConfigResponse extends AbstractModel {
 
     /**
      * Set 项目或标签的名称列表，自选主机时为空
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ItemLabels 项目或标签的名称列表，自选主机时为空
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setItemLabels(String [] ItemLabels) {
         this.ItemLabels = ItemLabels;
     }
 
     /**
-     * Get 机器列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 机器列表 
      * @return Quuids 机器列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getQuuids() {
         return this.Quuids;
@@ -124,19 +114,15 @@ public class DescribeWarningHostConfigResponse extends AbstractModel {
 
     /**
      * Set 机器列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Quuids 机器列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQuuids(String [] Quuids) {
         this.Quuids = Quuids;
     }
 
     /**
-     * Get 机器列表总数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 机器列表总数量 
      * @return TotalCount 机器列表总数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -144,19 +130,15 @@ public class DescribeWarningHostConfigResponse extends AbstractModel {
 
     /**
      * Set 机器列表总数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 机器列表总数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 项目或标签的id列表，自选主机时为空
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 项目或标签的id列表，自选主机时为空 
      * @return ItemLabelIds 项目或标签的id列表，自选主机时为空
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getItemLabelIds() {
         return this.ItemLabelIds;
@@ -164,9 +146,7 @@ public class DescribeWarningHostConfigResponse extends AbstractModel {
 
     /**
      * Set 项目或标签的id列表，自选主机时为空
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ItemLabelIds 项目或标签的id列表，自选主机时为空
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setItemLabelIds(String [] ItemLabelIds) {
         this.ItemLabelIds = ItemLabelIds;

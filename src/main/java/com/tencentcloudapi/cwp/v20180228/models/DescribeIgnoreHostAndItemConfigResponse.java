@@ -25,7 +25,6 @@ public class DescribeIgnoreHostAndItemConfigResponse extends AbstractModel {
 
     /**
     * 受影响检测项
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ItemSet")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeIgnoreHostAndItemConfigResponse extends AbstractModel {
 
     /**
     * 受影响主机
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HostSet")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeIgnoreHostAndItemConfigResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 受影响检测项
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 受影响检测项 
      * @return ItemSet 受影响检测项
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BaselineItemInfo [] getItemSet() {
         return this.ItemSet;
@@ -58,19 +54,15 @@ public class DescribeIgnoreHostAndItemConfigResponse extends AbstractModel {
 
     /**
      * Set 受影响检测项
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ItemSet 受影响检测项
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setItemSet(BaselineItemInfo [] ItemSet) {
         this.ItemSet = ItemSet;
     }
 
     /**
-     * Get 受影响主机
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 受影响主机 
      * @return HostSet 受影响主机
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BaselineHost [] getHostSet() {
         return this.HostSet;
@@ -78,9 +70,7 @@ public class DescribeIgnoreHostAndItemConfigResponse extends AbstractModel {
 
     /**
      * Set 受影响主机
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HostSet 受影响主机
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHostSet(BaselineHost [] HostSet) {
         this.HostSet = HostSet;

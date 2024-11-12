@@ -182,19 +182,6 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
-     *云护航计费产品已下线
-
-云护航服务使用完成后，该接口可以确认收货
-     * @param req CreateCloudProtectServiceOrderRecordRequest
-     * @return CreateCloudProtectServiceOrderRecordResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateCloudProtectServiceOrderRecordResponse CreateCloudProtectServiceOrderRecord(CreateCloudProtectServiceOrderRecordRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "CreateCloudProtectServiceOrderRecord", CreateCloudProtectServiceOrderRecordResponse.class);
-    }
-
-    /**
      *创建应急漏洞扫描任务
      * @param req CreateEmergencyVulScanRequest
      * @return CreateEmergencyVulScanResponse

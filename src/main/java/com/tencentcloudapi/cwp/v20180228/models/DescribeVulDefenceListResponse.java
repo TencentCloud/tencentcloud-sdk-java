@@ -32,7 +32,6 @@ public class DescribeVulDefenceListResponse extends AbstractModel {
 
     /**
     * 漏洞防御列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("List")
     @Expose
@@ -62,10 +61,8 @@ public class DescribeVulDefenceListResponse extends AbstractModel {
     }
 
     /**
-     * Get 漏洞防御列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 漏洞防御列表 
      * @return List 漏洞防御列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public VulDefenceRangeDetail [] getList() {
         return this.List;
@@ -73,9 +70,7 @@ public class DescribeVulDefenceListResponse extends AbstractModel {
 
     /**
      * Set 漏洞防御列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param List 漏洞防御列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setList(VulDefenceRangeDetail [] List) {
         this.List = List;

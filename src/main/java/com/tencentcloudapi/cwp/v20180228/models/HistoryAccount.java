@@ -52,17 +52,17 @@ public class HistoryAccount extends AbstractModel {
     private String MachineName;
 
     /**
-    * 帐号名。
+    * 账号名。
     */
     @SerializedName("Username")
     @Expose
     private String Username;
 
     /**
-    * 帐号变更类型。
-<li>CREATE：表示新增帐号</li>
-<li>MODIFY：表示修改帐号</li>
-<li>DELETE：表示删除帐号</li>
+    * 账号变更类型。
+<li>CREATE：表示新增账号</li>
+<li>MODIFY：表示修改账号</li>
+<li>DELETE：表示删除账号</li>
     */
     @SerializedName("ModifyType")
     @Expose
@@ -140,44 +140,44 @@ public class HistoryAccount extends AbstractModel {
     }
 
     /**
-     * Get 帐号名。 
-     * @return Username 帐号名。
+     * Get 账号名。 
+     * @return Username 账号名。
      */
     public String getUsername() {
         return this.Username;
     }
 
     /**
-     * Set 帐号名。
-     * @param Username 帐号名。
+     * Set 账号名。
+     * @param Username 账号名。
      */
     public void setUsername(String Username) {
         this.Username = Username;
     }
 
     /**
-     * Get 帐号变更类型。
-<li>CREATE：表示新增帐号</li>
-<li>MODIFY：表示修改帐号</li>
-<li>DELETE：表示删除帐号</li> 
-     * @return ModifyType 帐号变更类型。
-<li>CREATE：表示新增帐号</li>
-<li>MODIFY：表示修改帐号</li>
-<li>DELETE：表示删除帐号</li>
+     * Get 账号变更类型。
+<li>CREATE：表示新增账号</li>
+<li>MODIFY：表示修改账号</li>
+<li>DELETE：表示删除账号</li> 
+     * @return ModifyType 账号变更类型。
+<li>CREATE：表示新增账号</li>
+<li>MODIFY：表示修改账号</li>
+<li>DELETE：表示删除账号</li>
      */
     public String getModifyType() {
         return this.ModifyType;
     }
 
     /**
-     * Set 帐号变更类型。
-<li>CREATE：表示新增帐号</li>
-<li>MODIFY：表示修改帐号</li>
-<li>DELETE：表示删除帐号</li>
-     * @param ModifyType 帐号变更类型。
-<li>CREATE：表示新增帐号</li>
-<li>MODIFY：表示修改帐号</li>
-<li>DELETE：表示删除帐号</li>
+     * Set 账号变更类型。
+<li>CREATE：表示新增账号</li>
+<li>MODIFY：表示修改账号</li>
+<li>DELETE：表示删除账号</li>
+     * @param ModifyType 账号变更类型。
+<li>CREATE：表示新增账号</li>
+<li>MODIFY：表示修改账号</li>
+<li>DELETE：表示删除账号</li>
      */
     public void setModifyType(String ModifyType) {
         this.ModifyType = ModifyType;

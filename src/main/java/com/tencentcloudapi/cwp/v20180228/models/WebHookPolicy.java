@@ -25,7 +25,6 @@ public class WebHookPolicy extends AbstractModel {
 
     /**
     * id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
     @Expose
@@ -33,7 +32,6 @@ public class WebHookPolicy extends AbstractModel {
 
     /**
     * 策略名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -41,7 +39,6 @@ public class WebHookPolicy extends AbstractModel {
 
     /**
     * 事件类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Events")
     @Expose
@@ -49,7 +46,6 @@ public class WebHookPolicy extends AbstractModel {
 
     /**
     * 主机范围
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HostLabels")
     @Expose
@@ -57,7 +53,6 @@ public class WebHookPolicy extends AbstractModel {
 
     /**
     * 接收人
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Receivers")
     @Expose
@@ -65,7 +60,6 @@ public class WebHookPolicy extends AbstractModel {
 
     /**
     * 格式 0text 1json
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Format")
     @Expose
@@ -73,7 +67,6 @@ public class WebHookPolicy extends AbstractModel {
 
     /**
     * 自定义透传字段
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CustomFields")
     @Expose
@@ -81,7 +74,6 @@ public class WebHookPolicy extends AbstractModel {
 
     /**
     * 是否启用[1:禁用|0:启用]
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsDisabled")
     @Expose
@@ -89,7 +81,6 @@ public class WebHookPolicy extends AbstractModel {
 
     /**
     * 主机列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Quuids")
     @Expose
@@ -97,17 +88,21 @@ public class WebHookPolicy extends AbstractModel {
 
     /**
     * 主机数目
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HostCount")
     @Expose
     private Long HostCount;
 
     /**
-     * Get id
-注意：此字段可能返回 null，表示取不到有效值。 
+    * 需排除的机器列表
+    */
+    @SerializedName("ExcludedQuuids")
+    @Expose
+    private String [] ExcludedQuuids;
+
+    /**
+     * Get id 
      * @return Id id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getId() {
         return this.Id;
@@ -115,19 +110,15 @@ public class WebHookPolicy extends AbstractModel {
 
     /**
      * Set id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Id id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 策略名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 策略名称 
      * @return Name 策略名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -135,19 +126,15 @@ public class WebHookPolicy extends AbstractModel {
 
     /**
      * Set 策略名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 策略名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 事件类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 事件类型 
      * @return Events 事件类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public WebHookEventKv [] getEvents() {
         return this.Events;
@@ -155,19 +142,15 @@ public class WebHookPolicy extends AbstractModel {
 
     /**
      * Set 事件类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Events 事件类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEvents(WebHookEventKv [] Events) {
         this.Events = Events;
     }
 
     /**
-     * Get 主机范围
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主机范围 
      * @return HostLabels 主机范围
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public WebHookHostLabel [] getHostLabels() {
         return this.HostLabels;
@@ -175,19 +158,15 @@ public class WebHookPolicy extends AbstractModel {
 
     /**
      * Set 主机范围
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HostLabels 主机范围
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHostLabels(WebHookHostLabel [] HostLabels) {
         this.HostLabels = HostLabels;
     }
 
     /**
-     * Get 接收人
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 接收人 
      * @return Receivers 接收人
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public WebHookReceiver [] getReceivers() {
         return this.Receivers;
@@ -195,19 +174,15 @@ public class WebHookPolicy extends AbstractModel {
 
     /**
      * Set 接收人
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Receivers 接收人
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReceivers(WebHookReceiver [] Receivers) {
         this.Receivers = Receivers;
     }
 
     /**
-     * Get 格式 0text 1json
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 格式 0text 1json 
      * @return Format 格式 0text 1json
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFormat() {
         return this.Format;
@@ -215,19 +190,15 @@ public class WebHookPolicy extends AbstractModel {
 
     /**
      * Set 格式 0text 1json
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Format 格式 0text 1json
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFormat(Long Format) {
         this.Format = Format;
     }
 
     /**
-     * Get 自定义透传字段
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 自定义透传字段 
      * @return CustomFields 自定义透传字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public WebHookCustomField [] getCustomFields() {
         return this.CustomFields;
@@ -235,19 +206,15 @@ public class WebHookPolicy extends AbstractModel {
 
     /**
      * Set 自定义透传字段
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CustomFields 自定义透传字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCustomFields(WebHookCustomField [] CustomFields) {
         this.CustomFields = CustomFields;
     }
 
     /**
-     * Get 是否启用[1:禁用|0:启用]
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否启用[1:禁用|0:启用] 
      * @return IsDisabled 是否启用[1:禁用|0:启用]
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsDisabled() {
         return this.IsDisabled;
@@ -255,19 +222,15 @@ public class WebHookPolicy extends AbstractModel {
 
     /**
      * Set 是否启用[1:禁用|0:启用]
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsDisabled 是否启用[1:禁用|0:启用]
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsDisabled(Long IsDisabled) {
         this.IsDisabled = IsDisabled;
     }
 
     /**
-     * Get 主机列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主机列表 
      * @return Quuids 主机列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getQuuids() {
         return this.Quuids;
@@ -275,19 +238,15 @@ public class WebHookPolicy extends AbstractModel {
 
     /**
      * Set 主机列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Quuids 主机列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQuuids(String [] Quuids) {
         this.Quuids = Quuids;
     }
 
     /**
-     * Get 主机数目
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主机数目 
      * @return HostCount 主机数目
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getHostCount() {
         return this.HostCount;
@@ -295,12 +254,26 @@ public class WebHookPolicy extends AbstractModel {
 
     /**
      * Set 主机数目
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HostCount 主机数目
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHostCount(Long HostCount) {
         this.HostCount = HostCount;
+    }
+
+    /**
+     * Get 需排除的机器列表 
+     * @return ExcludedQuuids 需排除的机器列表
+     */
+    public String [] getExcludedQuuids() {
+        return this.ExcludedQuuids;
+    }
+
+    /**
+     * Set 需排除的机器列表
+     * @param ExcludedQuuids 需排除的机器列表
+     */
+    public void setExcludedQuuids(String [] ExcludedQuuids) {
+        this.ExcludedQuuids = ExcludedQuuids;
     }
 
     public WebHookPolicy() {
@@ -356,6 +329,12 @@ public class WebHookPolicy extends AbstractModel {
         if (source.HostCount != null) {
             this.HostCount = new Long(source.HostCount);
         }
+        if (source.ExcludedQuuids != null) {
+            this.ExcludedQuuids = new String[source.ExcludedQuuids.length];
+            for (int i = 0; i < source.ExcludedQuuids.length; i++) {
+                this.ExcludedQuuids[i] = new String(source.ExcludedQuuids[i]);
+            }
+        }
     }
 
 
@@ -373,6 +352,7 @@ public class WebHookPolicy extends AbstractModel {
         this.setParamSimple(map, prefix + "IsDisabled", this.IsDisabled);
         this.setParamArraySimple(map, prefix + "Quuids.", this.Quuids);
         this.setParamSimple(map, prefix + "HostCount", this.HostCount);
+        this.setParamArraySimple(map, prefix + "ExcludedQuuids.", this.ExcludedQuuids);
 
     }
 }

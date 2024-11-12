@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class SubmitInstanceUpgradeCheckJobResponse extends AbstractModel {
 
     /**
-    * 任务ID
+    * 任务 ID
     */
     @SerializedName("JobId")
     @Expose
@@ -38,16 +38,16 @@ public class SubmitInstanceUpgradeCheckJobResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 任务ID 
-     * @return JobId 任务ID
+     * Get 任务 ID 
+     * @return JobId 任务 ID
      */
     public Long getJobId() {
         return this.JobId;
     }
 
     /**
-     * Set 任务ID
-     * @param JobId 任务ID
+     * Set 任务 ID
+     * @param JobId 任务 ID
      */
     public void setJobId(Long JobId) {
         this.JobId = JobId;

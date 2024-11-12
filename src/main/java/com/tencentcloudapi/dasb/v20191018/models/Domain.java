@@ -39,7 +39,6 @@ public class Domain extends AbstractModel {
 
     /**
     * 网络域名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DomainName")
     @Expose
@@ -120,10 +119,8 @@ public class Domain extends AbstractModel {
     }
 
     /**
-     * Get 网络域名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网络域名称 
      * @return DomainName 网络域名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDomainName() {
         return this.DomainName;
@@ -131,9 +128,7 @@ public class Domain extends AbstractModel {
 
     /**
      * Set 网络域名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DomainName 网络域名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDomainName(String DomainName) {
         this.DomainName = DomainName;

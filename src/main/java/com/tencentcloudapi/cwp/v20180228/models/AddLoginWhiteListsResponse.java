@@ -25,7 +25,6 @@ public class AddLoginWhiteListsResponse extends AbstractModel {
 
     /**
     * 重复添加的提示列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DuplicateHosts")
     @Expose
@@ -39,10 +38,8 @@ public class AddLoginWhiteListsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 重复添加的提示列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 重复添加的提示列表 
      * @return DuplicateHosts 重复添加的提示列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DuplicateHosts [] getDuplicateHosts() {
         return this.DuplicateHosts;
@@ -50,9 +47,7 @@ public class AddLoginWhiteListsResponse extends AbstractModel {
 
     /**
      * Set 重复添加的提示列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DuplicateHosts 重复添加的提示列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDuplicateHosts(DuplicateHosts [] DuplicateHosts) {
         this.DuplicateHosts = DuplicateHosts;

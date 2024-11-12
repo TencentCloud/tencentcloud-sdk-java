@@ -32,7 +32,6 @@ public class DescribeAssetMachineListResponse extends AbstractModel {
 
     /**
     * 记录列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Machines")
     @Expose
@@ -62,10 +61,8 @@ public class DescribeAssetMachineListResponse extends AbstractModel {
     }
 
     /**
-     * Get 记录列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 记录列表 
      * @return Machines 记录列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AssetMachineBaseInfo [] getMachines() {
         return this.Machines;
@@ -73,9 +70,7 @@ public class DescribeAssetMachineListResponse extends AbstractModel {
 
     /**
      * Set 记录列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Machines 记录列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMachines(AssetMachineBaseInfo [] Machines) {
         this.Machines = Machines;

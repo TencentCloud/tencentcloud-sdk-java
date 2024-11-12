@@ -25,7 +25,6 @@ public class DescribeVulInfoCvssResponse extends AbstractModel {
 
     /**
     * 漏洞id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VulId")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeVulInfoCvssResponse extends AbstractModel {
 
     /**
     * 漏洞名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VulName")
     @Expose
@@ -41,7 +39,6 @@ public class DescribeVulInfoCvssResponse extends AbstractModel {
 
     /**
     * 危害等级：1-低危；2-中危；3-高危；4-严重
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VulLevel")
     @Expose
@@ -49,7 +46,6 @@ public class DescribeVulInfoCvssResponse extends AbstractModel {
 
     /**
     * 漏洞分类 1: web-cms漏洞 2:应用漏洞  4: Linux软件漏洞 5: Windows系统漏洞
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VulType")
     @Expose
@@ -57,7 +53,6 @@ public class DescribeVulInfoCvssResponse extends AbstractModel {
 
     /**
     * 漏洞描述信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
     @Expose
@@ -65,7 +60,6 @@ public class DescribeVulInfoCvssResponse extends AbstractModel {
 
     /**
     * 修复方案
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RepairPlan")
     @Expose
@@ -73,7 +67,6 @@ public class DescribeVulInfoCvssResponse extends AbstractModel {
 
     /**
     * 漏洞CVEID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CveId")
     @Expose
@@ -81,7 +74,6 @@ public class DescribeVulInfoCvssResponse extends AbstractModel {
 
     /**
     * 参考链接
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Reference")
     @Expose
@@ -89,7 +81,6 @@ public class DescribeVulInfoCvssResponse extends AbstractModel {
 
     /**
     * CVSS信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CVSS")
     @Expose
@@ -97,7 +88,6 @@ public class DescribeVulInfoCvssResponse extends AbstractModel {
 
     /**
     * 发布时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PublicDate")
     @Expose
@@ -105,7 +95,6 @@ public class DescribeVulInfoCvssResponse extends AbstractModel {
 
     /**
     * Cvss分数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CvssScore")
     @Expose
@@ -113,7 +102,6 @@ public class DescribeVulInfoCvssResponse extends AbstractModel {
 
     /**
     * cvss详情
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CveInfo")
     @Expose
@@ -121,7 +109,6 @@ public class DescribeVulInfoCvssResponse extends AbstractModel {
 
     /**
     * cvss 分数 浮点型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CvssScoreFloat")
     @Expose
@@ -129,7 +116,6 @@ public class DescribeVulInfoCvssResponse extends AbstractModel {
 
     /**
     * 漏洞标签 多个逗号分割
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Labels")
     @Expose
@@ -137,7 +123,6 @@ public class DescribeVulInfoCvssResponse extends AbstractModel {
 
     /**
     * 已防御的攻击次数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DefenseAttackCount")
     @Expose
@@ -145,7 +130,6 @@ public class DescribeVulInfoCvssResponse extends AbstractModel {
 
     /**
     * 全网修复成功次数, 不支持自动修复的漏洞默认返回0
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SuccessFixCount")
     @Expose
@@ -153,7 +137,6 @@ public class DescribeVulInfoCvssResponse extends AbstractModel {
 
     /**
     * 修复是否支持：0-windows/linux均不支持修复 ;1-windows/linux 均支持修复 ;2-仅linux支持修复;3-仅windows支持修复
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FixSwitch")
     @Expose
@@ -167,10 +150,8 @@ public class DescribeVulInfoCvssResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 漏洞id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 漏洞id 
      * @return VulId 漏洞id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getVulId() {
         return this.VulId;
@@ -178,19 +159,15 @@ public class DescribeVulInfoCvssResponse extends AbstractModel {
 
     /**
      * Set 漏洞id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VulId 漏洞id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVulId(Long VulId) {
         this.VulId = VulId;
     }
 
     /**
-     * Get 漏洞名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 漏洞名称 
      * @return VulName 漏洞名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVulName() {
         return this.VulName;
@@ -198,19 +175,15 @@ public class DescribeVulInfoCvssResponse extends AbstractModel {
 
     /**
      * Set 漏洞名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VulName 漏洞名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVulName(String VulName) {
         this.VulName = VulName;
     }
 
     /**
-     * Get 危害等级：1-低危；2-中危；3-高危；4-严重
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 危害等级：1-低危；2-中危；3-高危；4-严重 
      * @return VulLevel 危害等级：1-低危；2-中危；3-高危；4-严重
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getVulLevel() {
         return this.VulLevel;
@@ -218,19 +191,15 @@ public class DescribeVulInfoCvssResponse extends AbstractModel {
 
     /**
      * Set 危害等级：1-低危；2-中危；3-高危；4-严重
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VulLevel 危害等级：1-低危；2-中危；3-高危；4-严重
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVulLevel(Long VulLevel) {
         this.VulLevel = VulLevel;
     }
 
     /**
-     * Get 漏洞分类 1: web-cms漏洞 2:应用漏洞  4: Linux软件漏洞 5: Windows系统漏洞
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 漏洞分类 1: web-cms漏洞 2:应用漏洞  4: Linux软件漏洞 5: Windows系统漏洞 
      * @return VulType 漏洞分类 1: web-cms漏洞 2:应用漏洞  4: Linux软件漏洞 5: Windows系统漏洞
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getVulType() {
         return this.VulType;
@@ -238,19 +207,15 @@ public class DescribeVulInfoCvssResponse extends AbstractModel {
 
     /**
      * Set 漏洞分类 1: web-cms漏洞 2:应用漏洞  4: Linux软件漏洞 5: Windows系统漏洞
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VulType 漏洞分类 1: web-cms漏洞 2:应用漏洞  4: Linux软件漏洞 5: Windows系统漏洞
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVulType(Long VulType) {
         this.VulType = VulType;
     }
 
     /**
-     * Get 漏洞描述信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 漏洞描述信息 
      * @return Description 漏洞描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
         return this.Description;
@@ -258,19 +223,15 @@ public class DescribeVulInfoCvssResponse extends AbstractModel {
 
     /**
      * Set 漏洞描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Description 漏洞描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 修复方案
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 修复方案 
      * @return RepairPlan 修复方案
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRepairPlan() {
         return this.RepairPlan;
@@ -278,19 +239,15 @@ public class DescribeVulInfoCvssResponse extends AbstractModel {
 
     /**
      * Set 修复方案
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RepairPlan 修复方案
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRepairPlan(String RepairPlan) {
         this.RepairPlan = RepairPlan;
     }
 
     /**
-     * Get 漏洞CVEID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 漏洞CVEID 
      * @return CveId 漏洞CVEID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCveId() {
         return this.CveId;
@@ -298,19 +255,15 @@ public class DescribeVulInfoCvssResponse extends AbstractModel {
 
     /**
      * Set 漏洞CVEID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CveId 漏洞CVEID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCveId(String CveId) {
         this.CveId = CveId;
     }
 
     /**
-     * Get 参考链接
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 参考链接 
      * @return Reference 参考链接
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getReference() {
         return this.Reference;
@@ -318,19 +271,15 @@ public class DescribeVulInfoCvssResponse extends AbstractModel {
 
     /**
      * Set 参考链接
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Reference 参考链接
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReference(String Reference) {
         this.Reference = Reference;
     }
 
     /**
-     * Get CVSS信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get CVSS信息 
      * @return CVSS CVSS信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCVSS() {
         return this.CVSS;
@@ -338,19 +287,15 @@ public class DescribeVulInfoCvssResponse extends AbstractModel {
 
     /**
      * Set CVSS信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CVSS CVSS信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCVSS(String CVSS) {
         this.CVSS = CVSS;
     }
 
     /**
-     * Get 发布时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 发布时间 
      * @return PublicDate 发布时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPublicDate() {
         return this.PublicDate;
@@ -358,19 +303,15 @@ public class DescribeVulInfoCvssResponse extends AbstractModel {
 
     /**
      * Set 发布时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PublicDate 发布时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPublicDate(String PublicDate) {
         this.PublicDate = PublicDate;
     }
 
     /**
-     * Get Cvss分数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Cvss分数 
      * @return CvssScore Cvss分数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCvssScore() {
         return this.CvssScore;
@@ -378,19 +319,15 @@ public class DescribeVulInfoCvssResponse extends AbstractModel {
 
     /**
      * Set Cvss分数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CvssScore Cvss分数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCvssScore(Long CvssScore) {
         this.CvssScore = CvssScore;
     }
 
     /**
-     * Get cvss详情
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get cvss详情 
      * @return CveInfo cvss详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCveInfo() {
         return this.CveInfo;
@@ -398,19 +335,15 @@ public class DescribeVulInfoCvssResponse extends AbstractModel {
 
     /**
      * Set cvss详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CveInfo cvss详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCveInfo(String CveInfo) {
         this.CveInfo = CveInfo;
     }
 
     /**
-     * Get cvss 分数 浮点型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get cvss 分数 浮点型 
      * @return CvssScoreFloat cvss 分数 浮点型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getCvssScoreFloat() {
         return this.CvssScoreFloat;
@@ -418,19 +351,15 @@ public class DescribeVulInfoCvssResponse extends AbstractModel {
 
     /**
      * Set cvss 分数 浮点型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CvssScoreFloat cvss 分数 浮点型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCvssScoreFloat(Float CvssScoreFloat) {
         this.CvssScoreFloat = CvssScoreFloat;
     }
 
     /**
-     * Get 漏洞标签 多个逗号分割
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 漏洞标签 多个逗号分割 
      * @return Labels 漏洞标签 多个逗号分割
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLabels() {
         return this.Labels;
@@ -438,19 +367,15 @@ public class DescribeVulInfoCvssResponse extends AbstractModel {
 
     /**
      * Set 漏洞标签 多个逗号分割
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Labels 漏洞标签 多个逗号分割
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLabels(String Labels) {
         this.Labels = Labels;
     }
 
     /**
-     * Get 已防御的攻击次数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 已防御的攻击次数 
      * @return DefenseAttackCount 已防御的攻击次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDefenseAttackCount() {
         return this.DefenseAttackCount;
@@ -458,19 +383,15 @@ public class DescribeVulInfoCvssResponse extends AbstractModel {
 
     /**
      * Set 已防御的攻击次数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DefenseAttackCount 已防御的攻击次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDefenseAttackCount(Long DefenseAttackCount) {
         this.DefenseAttackCount = DefenseAttackCount;
     }
 
     /**
-     * Get 全网修复成功次数, 不支持自动修复的漏洞默认返回0
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 全网修复成功次数, 不支持自动修复的漏洞默认返回0 
      * @return SuccessFixCount 全网修复成功次数, 不支持自动修复的漏洞默认返回0
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSuccessFixCount() {
         return this.SuccessFixCount;
@@ -478,19 +399,15 @@ public class DescribeVulInfoCvssResponse extends AbstractModel {
 
     /**
      * Set 全网修复成功次数, 不支持自动修复的漏洞默认返回0
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SuccessFixCount 全网修复成功次数, 不支持自动修复的漏洞默认返回0
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSuccessFixCount(Long SuccessFixCount) {
         this.SuccessFixCount = SuccessFixCount;
     }
 
     /**
-     * Get 修复是否支持：0-windows/linux均不支持修复 ;1-windows/linux 均支持修复 ;2-仅linux支持修复;3-仅windows支持修复
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 修复是否支持：0-windows/linux均不支持修复 ;1-windows/linux 均支持修复 ;2-仅linux支持修复;3-仅windows支持修复 
      * @return FixSwitch 修复是否支持：0-windows/linux均不支持修复 ;1-windows/linux 均支持修复 ;2-仅linux支持修复;3-仅windows支持修复
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFixSwitch() {
         return this.FixSwitch;
@@ -498,9 +415,7 @@ public class DescribeVulInfoCvssResponse extends AbstractModel {
 
     /**
      * Set 修复是否支持：0-windows/linux均不支持修复 ;1-windows/linux 均支持修复 ;2-仅linux支持修复;3-仅windows支持修复
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FixSwitch 修复是否支持：0-windows/linux均不支持修复 ;1-windows/linux 均支持修复 ;2-仅linux支持修复;3-仅windows支持修复
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFixSwitch(Long FixSwitch) {
         this.FixSwitch = FixSwitch;

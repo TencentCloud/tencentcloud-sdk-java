@@ -173,7 +173,7 @@ public class ChatCompletionsRequest extends AbstractModel {
     private Boolean EnableMultimedia;
 
     /**
-    * 是否开启搜索深度模式，默认是false，在值为true且命中搜索时，会请求深度搜索。
+    * 是否开启深度研究该问题，默认是false，在值为true且命中深度研究该问题时，会返回深度研究该问题信息。
     */
     @SerializedName("EnableDeepSearch")
     @Expose
@@ -615,16 +615,16 @@ public class ChatCompletionsRequest extends AbstractModel {
     }
 
     /**
-     * Get 是否开启搜索深度模式，默认是false，在值为true且命中搜索时，会请求深度搜索。 
-     * @return EnableDeepSearch 是否开启搜索深度模式，默认是false，在值为true且命中搜索时，会请求深度搜索。
+     * Get 是否开启深度研究该问题，默认是false，在值为true且命中深度研究该问题时，会返回深度研究该问题信息。 
+     * @return EnableDeepSearch 是否开启深度研究该问题，默认是false，在值为true且命中深度研究该问题时，会返回深度研究该问题信息。
      */
     public Boolean getEnableDeepSearch() {
         return this.EnableDeepSearch;
     }
 
     /**
-     * Set 是否开启搜索深度模式，默认是false，在值为true且命中搜索时，会请求深度搜索。
-     * @param EnableDeepSearch 是否开启搜索深度模式，默认是false，在值为true且命中搜索时，会请求深度搜索。
+     * Set 是否开启深度研究该问题，默认是false，在值为true且命中深度研究该问题时，会返回深度研究该问题信息。
+     * @param EnableDeepSearch 是否开启深度研究该问题，默认是false，在值为true且命中深度研究该问题时，会返回深度研究该问题信息。
      */
     public void setEnableDeepSearch(Boolean EnableDeepSearch) {
         this.EnableDeepSearch = EnableDeepSearch;

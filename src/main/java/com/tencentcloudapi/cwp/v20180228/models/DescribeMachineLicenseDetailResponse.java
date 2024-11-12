@@ -25,7 +25,6 @@ public class DescribeMachineLicenseDetailResponse extends AbstractModel {
 
     /**
     * 授权信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MachineLicense")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeMachineLicenseDetailResponse extends AbstractModel {
 
     /**
     * 总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeMachineLicenseDetailResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 授权信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 授权信息 
      * @return MachineLicense 授权信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public MachineLicenseDetail [] getMachineLicense() {
         return this.MachineLicense;
@@ -58,19 +54,15 @@ public class DescribeMachineLicenseDetailResponse extends AbstractModel {
 
     /**
      * Set 授权信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MachineLicense 授权信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMachineLicense(MachineLicenseDetail [] MachineLicense) {
         this.MachineLicense = MachineLicense;
     }
 
     /**
-     * Get 总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 总数 
      * @return TotalCount 总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -78,9 +70,7 @@ public class DescribeMachineLicenseDetailResponse extends AbstractModel {
 
     /**
      * Set 总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

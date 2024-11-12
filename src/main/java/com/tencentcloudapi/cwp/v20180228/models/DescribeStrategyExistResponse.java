@@ -25,7 +25,6 @@ public class DescribeStrategyExistResponse extends AbstractModel {
 
     /**
     * 策略是否存在, 1是 0否
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IfExist")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeStrategyExistResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 策略是否存在, 1是 0否
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 策略是否存在, 1是 0否 
      * @return IfExist 策略是否存在, 1是 0否
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIfExist() {
         return this.IfExist;
@@ -50,9 +47,7 @@ public class DescribeStrategyExistResponse extends AbstractModel {
 
     /**
      * Set 策略是否存在, 1是 0否
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IfExist 策略是否存在, 1是 0否
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIfExist(Long IfExist) {
         this.IfExist = IfExist;

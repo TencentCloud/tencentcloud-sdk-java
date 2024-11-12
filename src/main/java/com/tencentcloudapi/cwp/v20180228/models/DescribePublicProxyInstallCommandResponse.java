@@ -32,7 +32,6 @@ public class DescribePublicProxyInstallCommandResponse extends AbstractModel {
 
     /**
     * Keepalived安装命令
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KeepAliveCommand")
     @Expose
@@ -62,10 +61,8 @@ public class DescribePublicProxyInstallCommandResponse extends AbstractModel {
     }
 
     /**
-     * Get Keepalived安装命令
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Keepalived安装命令 
      * @return KeepAliveCommand Keepalived安装命令
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKeepAliveCommand() {
         return this.KeepAliveCommand;
@@ -73,9 +70,7 @@ public class DescribePublicProxyInstallCommandResponse extends AbstractModel {
 
     /**
      * Set Keepalived安装命令
-注意：此字段可能返回 null，表示取不到有效值。
      * @param KeepAliveCommand Keepalived安装命令
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKeepAliveCommand(String KeepAliveCommand) {
         this.KeepAliveCommand = KeepAliveCommand;

@@ -32,7 +32,6 @@ public class DescribeRiskProcessEventsResponse extends AbstractModel {
 
     /**
     * 异常进程列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("List")
     @Expose
@@ -62,10 +61,8 @@ public class DescribeRiskProcessEventsResponse extends AbstractModel {
     }
 
     /**
-     * Get 异常进程列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 异常进程列表 
      * @return List 异常进程列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RiskProcessEvent [] getList() {
         return this.List;
@@ -73,9 +70,7 @@ public class DescribeRiskProcessEventsResponse extends AbstractModel {
 
     /**
      * Set 异常进程列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param List 异常进程列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setList(RiskProcessEvent [] List) {
         this.List = List;

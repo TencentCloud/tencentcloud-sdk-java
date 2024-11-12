@@ -25,7 +25,6 @@ public class DescribeBaselineTopResponse extends AbstractModel {
 
     /**
     * 检测项Top列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleTopList")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeBaselineTopResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 检测项Top列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 检测项Top列表 
      * @return RuleTopList 检测项Top列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BaselineRuleTopInfo [] getRuleTopList() {
         return this.RuleTopList;
@@ -50,9 +47,7 @@ public class DescribeBaselineTopResponse extends AbstractModel {
 
     /**
      * Set 检测项Top列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RuleTopList 检测项Top列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleTopList(BaselineRuleTopInfo [] RuleTopList) {
         this.RuleTopList = RuleTopList;

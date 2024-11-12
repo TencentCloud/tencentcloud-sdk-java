@@ -25,7 +25,6 @@ public class DescribeAssetWebLocationInfoResponse extends AbstractModel {
 
     /**
     * 站点信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WebLocation")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeAssetWebLocationInfoResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 站点信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 站点信息 
      * @return WebLocation 站点信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AssetWebLocationInfo getWebLocation() {
         return this.WebLocation;
@@ -50,9 +47,7 @@ public class DescribeAssetWebLocationInfoResponse extends AbstractModel {
 
     /**
      * Set 站点信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WebLocation 站点信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWebLocation(AssetWebLocationInfo WebLocation) {
         this.WebLocation = WebLocation;

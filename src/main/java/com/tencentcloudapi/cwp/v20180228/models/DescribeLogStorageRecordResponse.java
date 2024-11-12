@@ -25,7 +25,6 @@ public class DescribeLogStorageRecordResponse extends AbstractModel {
 
     /**
     * 存储量记录
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Records")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeLogStorageRecordResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 存储量记录
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 存储量记录 
      * @return Records 存储量记录
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public LogStorageRecord [] getRecords() {
         return this.Records;
@@ -50,9 +47,7 @@ public class DescribeLogStorageRecordResponse extends AbstractModel {
 
     /**
      * Set 存储量记录
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Records 存储量记录
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRecords(LogStorageRecord [] Records) {
         this.Records = Records;

@@ -25,7 +25,6 @@ public class DescribeScreenEventsCntResponse extends AbstractModel {
 
     /**
     * 事件统计详情
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Info")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeScreenEventsCntResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 事件统计详情
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 事件统计详情 
      * @return Info 事件统计详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ScreenEventsCnt [] getInfo() {
         return this.Info;
@@ -50,9 +47,7 @@ public class DescribeScreenEventsCntResponse extends AbstractModel {
 
     /**
      * Set 事件统计详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Info 事件统计详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInfo(ScreenEventsCnt [] Info) {
         this.Info = Info;

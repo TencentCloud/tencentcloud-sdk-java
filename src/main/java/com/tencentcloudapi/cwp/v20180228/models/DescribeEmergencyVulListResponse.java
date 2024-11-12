@@ -25,7 +25,6 @@ public class DescribeEmergencyVulListResponse extends AbstractModel {
 
     /**
     * 漏洞列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("List")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeEmergencyVulListResponse extends AbstractModel {
 
     /**
     * 漏洞总条数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -41,7 +39,6 @@ public class DescribeEmergencyVulListResponse extends AbstractModel {
 
     /**
     * 是否存在风险
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExistsRisk")
     @Expose
@@ -55,10 +52,8 @@ public class DescribeEmergencyVulListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 漏洞列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 漏洞列表 
      * @return List 漏洞列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public EmergencyVul [] getList() {
         return this.List;
@@ -66,19 +61,15 @@ public class DescribeEmergencyVulListResponse extends AbstractModel {
 
     /**
      * Set 漏洞列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param List 漏洞列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setList(EmergencyVul [] List) {
         this.List = List;
     }
 
     /**
-     * Get 漏洞总条数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 漏洞总条数 
      * @return TotalCount 漏洞总条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -86,19 +77,15 @@ public class DescribeEmergencyVulListResponse extends AbstractModel {
 
     /**
      * Set 漏洞总条数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 漏洞总条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 是否存在风险
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否存在风险 
      * @return ExistsRisk 是否存在风险
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getExistsRisk() {
         return this.ExistsRisk;
@@ -106,9 +93,7 @@ public class DescribeEmergencyVulListResponse extends AbstractModel {
 
     /**
      * Set 是否存在风险
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExistsRisk 是否存在风险
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExistsRisk(Boolean ExistsRisk) {
         this.ExistsRisk = ExistsRisk;

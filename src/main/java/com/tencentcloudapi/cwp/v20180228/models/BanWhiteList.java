@@ -60,7 +60,6 @@ public class BanWhiteList extends AbstractModel {
 
     /**
     * 白名单所属机器。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Uuid")
     @Expose
@@ -68,7 +67,6 @@ public class BanWhiteList extends AbstractModel {
 
     /**
     * 白名单是否全局
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsGlobal")
     @Expose
@@ -76,7 +74,6 @@ public class BanWhiteList extends AbstractModel {
 
     /**
     * 白名单所属机器列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Quuids")
     @Expose
@@ -163,10 +160,8 @@ public class BanWhiteList extends AbstractModel {
     }
 
     /**
-     * Get 白名单所属机器。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 白名单所属机器。 
      * @return Uuid 白名单所属机器。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUuid() {
         return this.Uuid;
@@ -174,19 +169,15 @@ public class BanWhiteList extends AbstractModel {
 
     /**
      * Set 白名单所属机器。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Uuid 白名单所属机器。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUuid(String Uuid) {
         this.Uuid = Uuid;
     }
 
     /**
-     * Get 白名单是否全局
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 白名单是否全局 
      * @return IsGlobal 白名单是否全局
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsGlobal() {
         return this.IsGlobal;
@@ -194,19 +185,15 @@ public class BanWhiteList extends AbstractModel {
 
     /**
      * Set 白名单是否全局
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsGlobal 白名单是否全局
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsGlobal(Boolean IsGlobal) {
         this.IsGlobal = IsGlobal;
     }
 
     /**
-     * Get 白名单所属机器列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 白名单所属机器列表 
      * @return Quuids 白名单所属机器列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getQuuids() {
         return this.Quuids;
@@ -214,9 +201,7 @@ public class BanWhiteList extends AbstractModel {
 
     /**
      * Set 白名单所属机器列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Quuids 白名单所属机器列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQuuids(String [] Quuids) {
         this.Quuids = Quuids;

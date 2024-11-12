@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class HostDesc extends AbstractModel {
 
     /**
-    * 云镜客户端ID
+    * 机器uuid
     */
     @SerializedName("Quuid")
     @Expose
     private String Quuid;
 
     /**
-    * 主机ID
+    * 主机安全uuid
     */
     @SerializedName("Uuid")
     @Expose
@@ -66,32 +66,32 @@ public class HostDesc extends AbstractModel {
     private MachineTag [] Tags;
 
     /**
-     * Get 云镜客户端ID 
-     * @return Quuid 云镜客户端ID
+     * Get 机器uuid 
+     * @return Quuid 机器uuid
      */
     public String getQuuid() {
         return this.Quuid;
     }
 
     /**
-     * Set 云镜客户端ID
-     * @param Quuid 云镜客户端ID
+     * Set 机器uuid
+     * @param Quuid 机器uuid
      */
     public void setQuuid(String Quuid) {
         this.Quuid = Quuid;
     }
 
     /**
-     * Get 主机ID 
-     * @return Uuid 主机ID
+     * Get 主机安全uuid 
+     * @return Uuid 主机安全uuid
      */
     public String getUuid() {
         return this.Uuid;
     }
 
     /**
-     * Set 主机ID
-     * @param Uuid 主机ID
+     * Set 主机安全uuid
+     * @param Uuid 主机安全uuid
      */
     public void setUuid(String Uuid) {
         this.Uuid = Uuid;

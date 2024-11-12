@@ -95,7 +95,6 @@ public class VulDefenceEventDetail extends AbstractModel {
 
     /**
     * 攻击源端口
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SourcePort")
     @Expose
@@ -194,7 +193,6 @@ public class VulDefenceEventDetail extends AbstractModel {
 
     /**
     * 主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MachineExtraInfo")
     @Expose
@@ -361,10 +359,8 @@ public class VulDefenceEventDetail extends AbstractModel {
     }
 
     /**
-     * Get 攻击源端口
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 攻击源端口 
      * @return SourcePort 攻击源端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long [] getSourcePort() {
         return this.SourcePort;
@@ -372,9 +368,7 @@ public class VulDefenceEventDetail extends AbstractModel {
 
     /**
      * Set 攻击源端口
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SourcePort 攻击源端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSourcePort(Long [] SourcePort) {
         this.SourcePort = SourcePort;
@@ -589,10 +583,8 @@ public class VulDefenceEventDetail extends AbstractModel {
     }
 
     /**
-     * Get 主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主机额外信息 
      * @return MachineExtraInfo 主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public MachineExtraInfo getMachineExtraInfo() {
         return this.MachineExtraInfo;
@@ -600,9 +592,7 @@ public class VulDefenceEventDetail extends AbstractModel {
 
     /**
      * Set 主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MachineExtraInfo 主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMachineExtraInfo(MachineExtraInfo MachineExtraInfo) {
         this.MachineExtraInfo = MachineExtraInfo;

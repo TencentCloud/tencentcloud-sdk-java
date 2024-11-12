@@ -25,7 +25,6 @@ public class DescribeScreenMachineRegionsResponse extends AbstractModel {
 
     /**
     * 列表详情
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("List")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeScreenMachineRegionsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 列表详情
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 列表详情 
      * @return List 列表详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ScreenRegionInfo [] getList() {
         return this.List;
@@ -50,9 +47,7 @@ public class DescribeScreenMachineRegionsResponse extends AbstractModel {
 
     /**
      * Set 列表详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param List 列表详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setList(ScreenRegionInfo [] List) {
         this.List = List;

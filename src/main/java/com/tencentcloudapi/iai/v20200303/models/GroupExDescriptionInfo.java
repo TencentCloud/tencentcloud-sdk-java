@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class GroupExDescriptionInfo extends AbstractModel {
 
     /**
-    * 人员库自定义描述字段Index，从0开始
+    * 人员库自定义描述字段Index，从0开始。
     */
     @SerializedName("GroupExDescriptionIndex")
     @Expose
     private Long GroupExDescriptionIndex;
 
     /**
-    * 需要更新的人员库自定义描述字段内容
+    * 需要更新的人员库自定义描述字段内容。
     */
     @SerializedName("GroupExDescription")
     @Expose
     private String GroupExDescription;
 
     /**
-     * Get 人员库自定义描述字段Index，从0开始 
-     * @return GroupExDescriptionIndex 人员库自定义描述字段Index，从0开始
+     * Get 人员库自定义描述字段Index，从0开始。 
+     * @return GroupExDescriptionIndex 人员库自定义描述字段Index，从0开始。
      */
     public Long getGroupExDescriptionIndex() {
         return this.GroupExDescriptionIndex;
     }
 
     /**
-     * Set 人员库自定义描述字段Index，从0开始
-     * @param GroupExDescriptionIndex 人员库自定义描述字段Index，从0开始
+     * Set 人员库自定义描述字段Index，从0开始。
+     * @param GroupExDescriptionIndex 人员库自定义描述字段Index，从0开始。
      */
     public void setGroupExDescriptionIndex(Long GroupExDescriptionIndex) {
         this.GroupExDescriptionIndex = GroupExDescriptionIndex;
     }
 
     /**
-     * Get 需要更新的人员库自定义描述字段内容 
-     * @return GroupExDescription 需要更新的人员库自定义描述字段内容
+     * Get 需要更新的人员库自定义描述字段内容。 
+     * @return GroupExDescription 需要更新的人员库自定义描述字段内容。
      */
     public String getGroupExDescription() {
         return this.GroupExDescription;
     }
 
     /**
-     * Set 需要更新的人员库自定义描述字段内容
-     * @param GroupExDescription 需要更新的人员库自定义描述字段内容
+     * Set 需要更新的人员库自定义描述字段内容。
+     * @param GroupExDescription 需要更新的人员库自定义描述字段内容。
      */
     public void setGroupExDescription(String GroupExDescription) {
         this.GroupExDescription = GroupExDescription;

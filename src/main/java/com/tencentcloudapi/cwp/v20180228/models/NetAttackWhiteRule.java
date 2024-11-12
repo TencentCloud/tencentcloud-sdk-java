@@ -25,7 +25,6 @@ public class NetAttackWhiteRule extends AbstractModel {
 
     /**
     * 规则id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
     @Expose
@@ -33,7 +32,6 @@ public class NetAttackWhiteRule extends AbstractModel {
 
     /**
     * 规则描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
     @Expose
@@ -41,7 +39,6 @@ public class NetAttackWhiteRule extends AbstractModel {
 
     /**
     * 0: 一组quuid 1: 所有主机
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Scope")
     @Expose
@@ -49,7 +46,6 @@ public class NetAttackWhiteRule extends AbstractModel {
 
     /**
     * 是否处理之前的事件 0: 不处理 1:处理
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DealOldEvents")
     @Expose
@@ -57,7 +53,6 @@ public class NetAttackWhiteRule extends AbstractModel {
 
     /**
     * 主机quuid 多个用;隔开
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Quuids")
     @Expose
@@ -65,7 +60,6 @@ public class NetAttackWhiteRule extends AbstractModel {
 
     /**
     * 来源IP 单IP:1.1.1.1  IP范围:1.1.1.1-1.1.2.1  IP范围：1.1.1.0/24 多个用;隔开
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SrcIP")
     @Expose
@@ -73,7 +67,6 @@ public class NetAttackWhiteRule extends AbstractModel {
 
     /**
     * 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -81,17 +74,14 @@ public class NetAttackWhiteRule extends AbstractModel {
 
     /**
     * 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ModifyTime")
     @Expose
     private String ModifyTime;
 
     /**
-     * Get 规则id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则id 
      * @return Id 规则id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getId() {
         return this.Id;
@@ -99,19 +89,15 @@ public class NetAttackWhiteRule extends AbstractModel {
 
     /**
      * Set 规则id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Id 规则id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 规则描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则描述 
      * @return Description 规则描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
         return this.Description;
@@ -119,19 +105,15 @@ public class NetAttackWhiteRule extends AbstractModel {
 
     /**
      * Set 规则描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Description 规则描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 0: 一组quuid 1: 所有主机
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 0: 一组quuid 1: 所有主机 
      * @return Scope 0: 一组quuid 1: 所有主机
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getScope() {
         return this.Scope;
@@ -139,19 +121,15 @@ public class NetAttackWhiteRule extends AbstractModel {
 
     /**
      * Set 0: 一组quuid 1: 所有主机
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Scope 0: 一组quuid 1: 所有主机
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScope(Long Scope) {
         this.Scope = Scope;
     }
 
     /**
-     * Get 是否处理之前的事件 0: 不处理 1:处理
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否处理之前的事件 0: 不处理 1:处理 
      * @return DealOldEvents 是否处理之前的事件 0: 不处理 1:处理
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDealOldEvents() {
         return this.DealOldEvents;
@@ -159,19 +137,15 @@ public class NetAttackWhiteRule extends AbstractModel {
 
     /**
      * Set 是否处理之前的事件 0: 不处理 1:处理
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DealOldEvents 是否处理之前的事件 0: 不处理 1:处理
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDealOldEvents(Long DealOldEvents) {
         this.DealOldEvents = DealOldEvents;
     }
 
     /**
-     * Get 主机quuid 多个用;隔开
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主机quuid 多个用;隔开 
      * @return Quuids 主机quuid 多个用;隔开
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getQuuids() {
         return this.Quuids;
@@ -179,19 +153,15 @@ public class NetAttackWhiteRule extends AbstractModel {
 
     /**
      * Set 主机quuid 多个用;隔开
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Quuids 主机quuid 多个用;隔开
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQuuids(String Quuids) {
         this.Quuids = Quuids;
     }
 
     /**
-     * Get 来源IP 单IP:1.1.1.1  IP范围:1.1.1.1-1.1.2.1  IP范围：1.1.1.0/24 多个用;隔开
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 来源IP 单IP:1.1.1.1  IP范围:1.1.1.1-1.1.2.1  IP范围：1.1.1.0/24 多个用;隔开 
      * @return SrcIP 来源IP 单IP:1.1.1.1  IP范围:1.1.1.1-1.1.2.1  IP范围：1.1.1.0/24 多个用;隔开
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSrcIP() {
         return this.SrcIP;
@@ -199,19 +169,15 @@ public class NetAttackWhiteRule extends AbstractModel {
 
     /**
      * Set 来源IP 单IP:1.1.1.1  IP范围:1.1.1.1-1.1.2.1  IP范围：1.1.1.0/24 多个用;隔开
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SrcIP 来源IP 单IP:1.1.1.1  IP范围:1.1.1.1-1.1.2.1  IP范围：1.1.1.0/24 多个用;隔开
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSrcIP(String SrcIP) {
         this.SrcIP = SrcIP;
     }
 
     /**
-     * Get 创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间 
      * @return CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -219,19 +185,15 @@ public class NetAttackWhiteRule extends AbstractModel {
 
     /**
      * Set 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 修改时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 修改时间 
      * @return ModifyTime 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getModifyTime() {
         return this.ModifyTime;
@@ -239,9 +201,7 @@ public class NetAttackWhiteRule extends AbstractModel {
 
     /**
      * Set 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ModifyTime 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModifyTime(String ModifyTime) {
         this.ModifyTime = ModifyTime;

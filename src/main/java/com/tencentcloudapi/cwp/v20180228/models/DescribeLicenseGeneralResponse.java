@@ -150,7 +150,7 @@ public class DescribeLicenseGeneralResponse extends AbstractModel {
     private Long DestroyOrderNum;
 
     /**
-    * 是否自动续费开关,true 开启,false 关闭
+    * 自动加购是否自动续费开关,true 开启,false 关闭
     */
     @SerializedName("RepurchaseRenewSwitch")
     @Expose
@@ -452,16 +452,16 @@ public class DescribeLicenseGeneralResponse extends AbstractModel {
     }
 
     /**
-     * Get 是否自动续费开关,true 开启,false 关闭 
-     * @return RepurchaseRenewSwitch 是否自动续费开关,true 开启,false 关闭
+     * Get 自动加购是否自动续费开关,true 开启,false 关闭 
+     * @return RepurchaseRenewSwitch 自动加购是否自动续费开关,true 开启,false 关闭
      */
     public Boolean getRepurchaseRenewSwitch() {
         return this.RepurchaseRenewSwitch;
     }
 
     /**
-     * Set 是否自动续费开关,true 开启,false 关闭
-     * @param RepurchaseRenewSwitch 是否自动续费开关,true 开启,false 关闭
+     * Set 自动加购是否自动续费开关,true 开启,false 关闭
+     * @param RepurchaseRenewSwitch 自动加购是否自动续费开关,true 开启,false 关闭
      */
     public void setRepurchaseRenewSwitch(Boolean RepurchaseRenewSwitch) {
         this.RepurchaseRenewSwitch = RepurchaseRenewSwitch;

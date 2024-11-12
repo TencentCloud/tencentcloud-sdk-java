@@ -25,7 +25,6 @@ public class FileTamperRuleInfo extends AbstractModel {
 
     /**
     * 规则名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -40,7 +39,6 @@ public class FileTamperRuleInfo extends AbstractModel {
 
     /**
     * 影响主机数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HostCount")
     @Expose
@@ -90,7 +88,6 @@ public class FileTamperRuleInfo extends AbstractModel {
 
     /**
     * 子规则写条目数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WriteRuleCount")
     @Expose
@@ -98,7 +95,6 @@ public class FileTamperRuleInfo extends AbstractModel {
 
     /**
     * 子规则读条目数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReadRuleCount")
     @Expose
@@ -106,7 +102,6 @@ public class FileTamperRuleInfo extends AbstractModel {
 
     /**
     * 子规则读写条目数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReadWriteRuleCount")
     @Expose
@@ -117,7 +112,6 @@ public class FileTamperRuleInfo extends AbstractModel {
 <li>read 读取文件</li>
 <li>write 修改文件</li>
 <li>read-write 读取修改文件</li>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileAction")
     @Expose
@@ -127,17 +121,14 @@ public class FileTamperRuleInfo extends AbstractModel {
     * 加白处理类型
 <li>cur 仅对当前加白</li>
 <li>all 所有符合条件加白</li>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AddWhiteType")
     @Expose
     private String AddWhiteType;
 
     /**
-     * Get 规则名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则名称 
      * @return Name 规则名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -145,9 +136,7 @@ public class FileTamperRuleInfo extends AbstractModel {
 
     /**
      * Set 规则名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 规则名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -170,10 +159,8 @@ public class FileTamperRuleInfo extends AbstractModel {
     }
 
     /**
-     * Get 影响主机数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 影响主机数 
      * @return HostCount 影响主机数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getHostCount() {
         return this.HostCount;
@@ -181,9 +168,7 @@ public class FileTamperRuleInfo extends AbstractModel {
 
     /**
      * Set 影响主机数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HostCount 影响主机数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHostCount(Long HostCount) {
         this.HostCount = HostCount;
@@ -286,10 +271,8 @@ public class FileTamperRuleInfo extends AbstractModel {
     }
 
     /**
-     * Get 子规则写条目数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子规则写条目数 
      * @return WriteRuleCount 子规则写条目数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getWriteRuleCount() {
         return this.WriteRuleCount;
@@ -297,19 +280,15 @@ public class FileTamperRuleInfo extends AbstractModel {
 
     /**
      * Set 子规则写条目数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WriteRuleCount 子规则写条目数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWriteRuleCount(Long WriteRuleCount) {
         this.WriteRuleCount = WriteRuleCount;
     }
 
     /**
-     * Get 子规则读条目数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子规则读条目数 
      * @return ReadRuleCount 子规则读条目数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getReadRuleCount() {
         return this.ReadRuleCount;
@@ -317,19 +296,15 @@ public class FileTamperRuleInfo extends AbstractModel {
 
     /**
      * Set 子规则读条目数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReadRuleCount 子规则读条目数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReadRuleCount(Long ReadRuleCount) {
         this.ReadRuleCount = ReadRuleCount;
     }
 
     /**
-     * Get 子规则读写条目数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子规则读写条目数 
      * @return ReadWriteRuleCount 子规则读写条目数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getReadWriteRuleCount() {
         return this.ReadWriteRuleCount;
@@ -337,9 +312,7 @@ public class FileTamperRuleInfo extends AbstractModel {
 
     /**
      * Set 子规则读写条目数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReadWriteRuleCount 子规则读写条目数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReadWriteRuleCount(Long ReadWriteRuleCount) {
         this.ReadWriteRuleCount = ReadWriteRuleCount;
@@ -349,13 +322,11 @@ public class FileTamperRuleInfo extends AbstractModel {
      * Get 监控行为
 <li>read 读取文件</li>
 <li>write 修改文件</li>
-<li>read-write 读取修改文件</li>
-注意：此字段可能返回 null，表示取不到有效值。 
+<li>read-write 读取修改文件</li> 
      * @return FileAction 监控行为
 <li>read 读取文件</li>
 <li>write 修改文件</li>
 <li>read-write 读取修改文件</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFileAction() {
         return this.FileAction;
@@ -366,12 +337,10 @@ public class FileTamperRuleInfo extends AbstractModel {
 <li>read 读取文件</li>
 <li>write 修改文件</li>
 <li>read-write 读取修改文件</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FileAction 监控行为
 <li>read 读取文件</li>
 <li>write 修改文件</li>
 <li>read-write 读取修改文件</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileAction(String FileAction) {
         this.FileAction = FileAction;
@@ -380,12 +349,10 @@ public class FileTamperRuleInfo extends AbstractModel {
     /**
      * Get 加白处理类型
 <li>cur 仅对当前加白</li>
-<li>all 所有符合条件加白</li>
-注意：此字段可能返回 null，表示取不到有效值。 
+<li>all 所有符合条件加白</li> 
      * @return AddWhiteType 加白处理类型
 <li>cur 仅对当前加白</li>
 <li>all 所有符合条件加白</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAddWhiteType() {
         return this.AddWhiteType;
@@ -395,11 +362,9 @@ public class FileTamperRuleInfo extends AbstractModel {
      * Set 加白处理类型
 <li>cur 仅对当前加白</li>
 <li>all 所有符合条件加白</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AddWhiteType 加白处理类型
 <li>cur 仅对当前加白</li>
 <li>all 所有符合条件加白</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAddWhiteType(String AddWhiteType) {
         this.AddWhiteType = AddWhiteType;

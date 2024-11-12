@@ -25,7 +25,6 @@ public class IgnoreBaselineRule extends AbstractModel {
 
     /**
     * 基线检测项名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleName")
     @Expose
@@ -33,7 +32,6 @@ public class IgnoreBaselineRule extends AbstractModel {
 
     /**
     * 基线检测项id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleId")
     @Expose
@@ -41,7 +39,6 @@ public class IgnoreBaselineRule extends AbstractModel {
 
     /**
     * 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ModifyTime")
     @Expose
@@ -49,7 +46,6 @@ public class IgnoreBaselineRule extends AbstractModel {
 
     /**
     * 修复建议
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Fix")
     @Expose
@@ -57,17 +53,14 @@ public class IgnoreBaselineRule extends AbstractModel {
 
     /**
     * 影响主机数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EffectHostCount")
     @Expose
     private Long EffectHostCount;
 
     /**
-     * Get 基线检测项名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 基线检测项名称 
      * @return RuleName 基线检测项名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRuleName() {
         return this.RuleName;
@@ -75,19 +68,15 @@ public class IgnoreBaselineRule extends AbstractModel {
 
     /**
      * Set 基线检测项名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RuleName 基线检测项名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleName(String RuleName) {
         this.RuleName = RuleName;
     }
 
     /**
-     * Get 基线检测项id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 基线检测项id 
      * @return RuleId 基线检测项id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRuleId() {
         return this.RuleId;
@@ -95,19 +84,15 @@ public class IgnoreBaselineRule extends AbstractModel {
 
     /**
      * Set 基线检测项id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RuleId 基线检测项id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleId(Long RuleId) {
         this.RuleId = RuleId;
     }
 
     /**
-     * Get 更新时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 更新时间 
      * @return ModifyTime 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getModifyTime() {
         return this.ModifyTime;
@@ -115,19 +100,15 @@ public class IgnoreBaselineRule extends AbstractModel {
 
     /**
      * Set 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ModifyTime 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModifyTime(String ModifyTime) {
         this.ModifyTime = ModifyTime;
     }
 
     /**
-     * Get 修复建议
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 修复建议 
      * @return Fix 修复建议
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFix() {
         return this.Fix;
@@ -135,19 +116,15 @@ public class IgnoreBaselineRule extends AbstractModel {
 
     /**
      * Set 修复建议
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Fix 修复建议
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFix(String Fix) {
         this.Fix = Fix;
     }
 
     /**
-     * Get 影响主机数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 影响主机数 
      * @return EffectHostCount 影响主机数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getEffectHostCount() {
         return this.EffectHostCount;
@@ -155,9 +132,7 @@ public class IgnoreBaselineRule extends AbstractModel {
 
     /**
      * Set 影响主机数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EffectHostCount 影响主机数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEffectHostCount(Long EffectHostCount) {
         this.EffectHostCount = EffectHostCount;

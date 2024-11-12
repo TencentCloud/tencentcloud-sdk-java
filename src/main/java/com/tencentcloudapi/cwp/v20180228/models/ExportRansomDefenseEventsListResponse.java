@@ -25,7 +25,6 @@ public class ExportRansomDefenseEventsListResponse extends AbstractModel {
 
     /**
     * 任务ID,需要到接口“异步导出任务”ExportTasks获取DownloadUrl下载地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskId")
     @Expose
@@ -39,10 +38,8 @@ public class ExportRansomDefenseEventsListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 任务ID,需要到接口“异步导出任务”ExportTasks获取DownloadUrl下载地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务ID,需要到接口“异步导出任务”ExportTasks获取DownloadUrl下载地址 
      * @return TaskId 任务ID,需要到接口“异步导出任务”ExportTasks获取DownloadUrl下载地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskId() {
         return this.TaskId;
@@ -50,9 +47,7 @@ public class ExportRansomDefenseEventsListResponse extends AbstractModel {
 
     /**
      * Set 任务ID,需要到接口“异步导出任务”ExportTasks获取DownloadUrl下载地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskId 任务ID,需要到接口“异步导出任务”ExportTasks获取DownloadUrl下载地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

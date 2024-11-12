@@ -32,13 +32,23 @@ public class ModifyTimeWindowRequest extends AbstractModel {
 
     /**
     * 修改后的可维护时间段，其中每一个时间段的格式形如：10:00-12:00；起止时间按半个小时对齐；最短半个小时，最长三个小时；最多设置两个时间段；起止时间范围为：[00:00, 24:00]。
+说明：设置两个时间段的 json 示例如下。
+[
+    "01:00-01:30",
+    "02:00-02:30"
+  ]
     */
     @SerializedName("TimeRanges")
     @Expose
     private String [] TimeRanges;
 
     /**
-    * 指定修改哪一天的客户时间段，可能的取值为：monday，tuesday，wednesday，thursday，friday，saturday，sunday。如果不指定该值或者为空，则默认一周七天都修改。
+    * 指定修改哪一天的可维护时间段，可能的取值为：monday，tuesday，wednesday，thursday，friday，saturday，sunday。如果不指定该值或者为空，则默认一周七天都修改。
+说明：指定修改多天的 json 示例如下。
+[
+    "monday",
+    "tuesday"
+  ]
     */
     @SerializedName("Weekdays")
     @Expose
@@ -68,8 +78,18 @@ public class ModifyTimeWindowRequest extends AbstractModel {
     }
 
     /**
-     * Get 修改后的可维护时间段，其中每一个时间段的格式形如：10:00-12:00；起止时间按半个小时对齐；最短半个小时，最长三个小时；最多设置两个时间段；起止时间范围为：[00:00, 24:00]。 
+     * Get 修改后的可维护时间段，其中每一个时间段的格式形如：10:00-12:00；起止时间按半个小时对齐；最短半个小时，最长三个小时；最多设置两个时间段；起止时间范围为：[00:00, 24:00]。
+说明：设置两个时间段的 json 示例如下。
+[
+    "01:00-01:30",
+    "02:00-02:30"
+  ] 
      * @return TimeRanges 修改后的可维护时间段，其中每一个时间段的格式形如：10:00-12:00；起止时间按半个小时对齐；最短半个小时，最长三个小时；最多设置两个时间段；起止时间范围为：[00:00, 24:00]。
+说明：设置两个时间段的 json 示例如下。
+[
+    "01:00-01:30",
+    "02:00-02:30"
+  ]
      */
     public String [] getTimeRanges() {
         return this.TimeRanges;
@@ -77,23 +97,53 @@ public class ModifyTimeWindowRequest extends AbstractModel {
 
     /**
      * Set 修改后的可维护时间段，其中每一个时间段的格式形如：10:00-12:00；起止时间按半个小时对齐；最短半个小时，最长三个小时；最多设置两个时间段；起止时间范围为：[00:00, 24:00]。
+说明：设置两个时间段的 json 示例如下。
+[
+    "01:00-01:30",
+    "02:00-02:30"
+  ]
      * @param TimeRanges 修改后的可维护时间段，其中每一个时间段的格式形如：10:00-12:00；起止时间按半个小时对齐；最短半个小时，最长三个小时；最多设置两个时间段；起止时间范围为：[00:00, 24:00]。
+说明：设置两个时间段的 json 示例如下。
+[
+    "01:00-01:30",
+    "02:00-02:30"
+  ]
      */
     public void setTimeRanges(String [] TimeRanges) {
         this.TimeRanges = TimeRanges;
     }
 
     /**
-     * Get 指定修改哪一天的客户时间段，可能的取值为：monday，tuesday，wednesday，thursday，friday，saturday，sunday。如果不指定该值或者为空，则默认一周七天都修改。 
-     * @return Weekdays 指定修改哪一天的客户时间段，可能的取值为：monday，tuesday，wednesday，thursday，friday，saturday，sunday。如果不指定该值或者为空，则默认一周七天都修改。
+     * Get 指定修改哪一天的可维护时间段，可能的取值为：monday，tuesday，wednesday，thursday，friday，saturday，sunday。如果不指定该值或者为空，则默认一周七天都修改。
+说明：指定修改多天的 json 示例如下。
+[
+    "monday",
+    "tuesday"
+  ] 
+     * @return Weekdays 指定修改哪一天的可维护时间段，可能的取值为：monday，tuesday，wednesday，thursday，friday，saturday，sunday。如果不指定该值或者为空，则默认一周七天都修改。
+说明：指定修改多天的 json 示例如下。
+[
+    "monday",
+    "tuesday"
+  ]
      */
     public String [] getWeekdays() {
         return this.Weekdays;
     }
 
     /**
-     * Set 指定修改哪一天的客户时间段，可能的取值为：monday，tuesday，wednesday，thursday，friday，saturday，sunday。如果不指定该值或者为空，则默认一周七天都修改。
-     * @param Weekdays 指定修改哪一天的客户时间段，可能的取值为：monday，tuesday，wednesday，thursday，friday，saturday，sunday。如果不指定该值或者为空，则默认一周七天都修改。
+     * Set 指定修改哪一天的可维护时间段，可能的取值为：monday，tuesday，wednesday，thursday，friday，saturday，sunday。如果不指定该值或者为空，则默认一周七天都修改。
+说明：指定修改多天的 json 示例如下。
+[
+    "monday",
+    "tuesday"
+  ]
+     * @param Weekdays 指定修改哪一天的可维护时间段，可能的取值为：monday，tuesday，wednesday，thursday，friday，saturday，sunday。如果不指定该值或者为空，则默认一周七天都修改。
+说明：指定修改多天的 json 示例如下。
+[
+    "monday",
+    "tuesday"
+  ]
      */
     public void setWeekdays(String [] Weekdays) {
         this.Weekdays = Weekdays;

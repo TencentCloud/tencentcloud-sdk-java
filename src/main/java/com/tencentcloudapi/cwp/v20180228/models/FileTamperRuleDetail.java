@@ -25,7 +25,6 @@ public class FileTamperRuleDetail extends AbstractModel {
 
     /**
     * 规则名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -61,7 +60,6 @@ public class FileTamperRuleDetail extends AbstractModel {
 
     /**
     * 生效主机uuid,空表示全部主机，通过参数可控制返回的条数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Uuids")
     @Expose
@@ -99,17 +97,14 @@ public class FileTamperRuleDetail extends AbstractModel {
     * 加白处理类型
 <li>cur 仅对当前加白</li>
 <li>all 所有符合条件加白</li>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AddWhiteType")
     @Expose
     private String AddWhiteType;
 
     /**
-     * Get 规则名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则名称 
      * @return Name 规则名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -117,9 +112,7 @@ public class FileTamperRuleDetail extends AbstractModel {
 
     /**
      * Set 规则名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 规则名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -190,10 +183,8 @@ public class FileTamperRuleDetail extends AbstractModel {
     }
 
     /**
-     * Get 生效主机uuid,空表示全部主机，通过参数可控制返回的条数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 生效主机uuid,空表示全部主机，通过参数可控制返回的条数 
      * @return Uuids 生效主机uuid,空表示全部主机，通过参数可控制返回的条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getUuids() {
         return this.Uuids;
@@ -201,9 +192,7 @@ public class FileTamperRuleDetail extends AbstractModel {
 
     /**
      * Set 生效主机uuid,空表示全部主机，通过参数可控制返回的条数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Uuids 生效主机uuid,空表示全部主机，通过参数可控制返回的条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUuids(String [] Uuids) {
         this.Uuids = Uuids;
@@ -276,12 +265,10 @@ public class FileTamperRuleDetail extends AbstractModel {
     /**
      * Get 加白处理类型
 <li>cur 仅对当前加白</li>
-<li>all 所有符合条件加白</li>
-注意：此字段可能返回 null，表示取不到有效值。 
+<li>all 所有符合条件加白</li> 
      * @return AddWhiteType 加白处理类型
 <li>cur 仅对当前加白</li>
 <li>all 所有符合条件加白</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAddWhiteType() {
         return this.AddWhiteType;
@@ -291,11 +278,9 @@ public class FileTamperRuleDetail extends AbstractModel {
      * Set 加白处理类型
 <li>cur 仅对当前加白</li>
 <li>all 所有符合条件加白</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AddWhiteType 加白处理类型
 <li>cur 仅对当前加白</li>
 <li>all 所有符合条件加白</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAddWhiteType(String AddWhiteType) {
         this.AddWhiteType = AddWhiteType;

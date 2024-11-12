@@ -25,7 +25,6 @@ public class DescribeVulCveIdInfoResponse extends AbstractModel {
 
     /**
     * 详情列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("List")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeVulCveIdInfoResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 详情列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 详情列表 
      * @return List 详情列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public VulInfoByCveId [] getList() {
         return this.List;
@@ -50,9 +47,7 @@ public class DescribeVulCveIdInfoResponse extends AbstractModel {
 
     /**
      * Set 详情列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param List 详情列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setList(VulInfoByCveId [] List) {
         this.List = List;

@@ -24,7 +24,9 @@ import java.util.HashMap;
 public class DescribeJavaMemShellPluginListRequest extends AbstractModel {
 
     /**
-    * 过滤条件：Keywords: ip或者主机名模糊查询, JavaShellStatus，Exception精确匹配
+    * 过滤条件：InstanceID、IP、
+
+MachineName模糊查询, JavaShellStatus，Exception精确匹配
     */
     @SerializedName("Filters")
     @Expose
@@ -45,16 +47,24 @@ public class DescribeJavaMemShellPluginListRequest extends AbstractModel {
     private Long Limit;
 
     /**
-     * Get 过滤条件：Keywords: ip或者主机名模糊查询, JavaShellStatus，Exception精确匹配 
-     * @return Filters 过滤条件：Keywords: ip或者主机名模糊查询, JavaShellStatus，Exception精确匹配
+     * Get 过滤条件：InstanceID、IP、
+
+MachineName模糊查询, JavaShellStatus，Exception精确匹配 
+     * @return Filters 过滤条件：InstanceID、IP、
+
+MachineName模糊查询, JavaShellStatus，Exception精确匹配
      */
     public Filters [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤条件：Keywords: ip或者主机名模糊查询, JavaShellStatus，Exception精确匹配
-     * @param Filters 过滤条件：Keywords: ip或者主机名模糊查询, JavaShellStatus，Exception精确匹配
+     * Set 过滤条件：InstanceID、IP、
+
+MachineName模糊查询, JavaShellStatus，Exception精确匹配
+     * @param Filters 过滤条件：InstanceID、IP、
+
+MachineName模糊查询, JavaShellStatus，Exception精确匹配
      */
     public void setFilters(Filters [] Filters) {
         this.Filters = Filters;

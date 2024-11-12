@@ -25,7 +25,6 @@ public class DescribeBaselineBasicInfoResponse extends AbstractModel {
 
     /**
     * 基线基础信息列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BaselineBasicInfoList")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeBaselineBasicInfoResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 基线基础信息列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 基线基础信息列表 
      * @return BaselineBasicInfoList 基线基础信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BaselineBasicInfo [] getBaselineBasicInfoList() {
         return this.BaselineBasicInfoList;
@@ -50,9 +47,7 @@ public class DescribeBaselineBasicInfoResponse extends AbstractModel {
 
     /**
      * Set 基线基础信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BaselineBasicInfoList 基线基础信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBaselineBasicInfoList(BaselineBasicInfo [] BaselineBasicInfoList) {
         this.BaselineBasicInfoList = BaselineBasicInfoList;

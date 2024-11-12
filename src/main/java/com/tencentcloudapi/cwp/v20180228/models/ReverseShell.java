@@ -165,7 +165,6 @@ public class ReverseShell extends AbstractModel {
 
     /**
     *  主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MachineExtraInfo")
     @Expose
@@ -173,7 +172,6 @@ public class ReverseShell extends AbstractModel {
 
     /**
     * 进程id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Pid")
     @Expose
@@ -181,7 +179,6 @@ public class ReverseShell extends AbstractModel {
 
     /**
     * 威胁等级：0中危，1高危
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RiskLevel")
     @Expose
@@ -508,10 +505,8 @@ public class ReverseShell extends AbstractModel {
     }
 
     /**
-     * Get  主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get  主机额外信息 
      * @return MachineExtraInfo  主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public MachineExtraInfo getMachineExtraInfo() {
         return this.MachineExtraInfo;
@@ -519,19 +514,15 @@ public class ReverseShell extends AbstractModel {
 
     /**
      * Set  主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MachineExtraInfo  主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMachineExtraInfo(MachineExtraInfo MachineExtraInfo) {
         this.MachineExtraInfo = MachineExtraInfo;
     }
 
     /**
-     * Get 进程id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 进程id 
      * @return Pid 进程id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPid() {
         return this.Pid;
@@ -539,19 +530,15 @@ public class ReverseShell extends AbstractModel {
 
     /**
      * Set 进程id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Pid 进程id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPid(Long Pid) {
         this.Pid = Pid;
     }
 
     /**
-     * Get 威胁等级：0中危，1高危
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 威胁等级：0中危，1高危 
      * @return RiskLevel 威胁等级：0中危，1高危
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRiskLevel() {
         return this.RiskLevel;
@@ -559,9 +546,7 @@ public class ReverseShell extends AbstractModel {
 
     /**
      * Set 威胁等级：0中危，1高危
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RiskLevel 威胁等级：0中危，1高危
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRiskLevel(Long RiskLevel) {
         this.RiskLevel = RiskLevel;

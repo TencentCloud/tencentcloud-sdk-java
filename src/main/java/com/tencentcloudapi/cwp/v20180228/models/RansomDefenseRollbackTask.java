@@ -95,7 +95,6 @@ public class RansomDefenseRollbackTask extends AbstractModel {
 
     /**
     * 主机示例ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -262,10 +261,8 @@ public class RansomDefenseRollbackTask extends AbstractModel {
     }
 
     /**
-     * Get 主机示例ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主机示例ID 
      * @return InstanceId 主机示例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceId() {
         return this.InstanceId;
@@ -273,9 +270,7 @@ public class RansomDefenseRollbackTask extends AbstractModel {
 
     /**
      * Set 主机示例ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceId 主机示例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

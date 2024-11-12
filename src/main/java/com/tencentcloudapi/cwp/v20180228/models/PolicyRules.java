@@ -25,7 +25,6 @@ public class PolicyRules extends AbstractModel {
 
     /**
     * 进程
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Process")
     @Expose
@@ -33,7 +32,6 @@ public class PolicyRules extends AbstractModel {
 
     /**
     * 父进程
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PProcess")
     @Expose
@@ -41,17 +39,14 @@ public class PolicyRules extends AbstractModel {
 
     /**
     * 祖先进程
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AProcess")
     @Expose
     private CommandLine AProcess;
 
     /**
-     * Get 进程
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 进程 
      * @return Process 进程
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CommandLine getProcess() {
         return this.Process;
@@ -59,19 +54,15 @@ public class PolicyRules extends AbstractModel {
 
     /**
      * Set 进程
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Process 进程
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProcess(CommandLine Process) {
         this.Process = Process;
     }
 
     /**
-     * Get 父进程
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 父进程 
      * @return PProcess 父进程
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CommandLine getPProcess() {
         return this.PProcess;
@@ -79,19 +70,15 @@ public class PolicyRules extends AbstractModel {
 
     /**
      * Set 父进程
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PProcess 父进程
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPProcess(CommandLine PProcess) {
         this.PProcess = PProcess;
     }
 
     /**
-     * Get 祖先进程
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 祖先进程 
      * @return AProcess 祖先进程
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CommandLine getAProcess() {
         return this.AProcess;
@@ -99,9 +86,7 @@ public class PolicyRules extends AbstractModel {
 
     /**
      * Set 祖先进程
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AProcess 祖先进程
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAProcess(CommandLine AProcess) {
         this.AProcess = AProcess;

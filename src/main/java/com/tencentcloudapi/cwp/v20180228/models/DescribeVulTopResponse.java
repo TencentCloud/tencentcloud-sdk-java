@@ -25,7 +25,6 @@ public class DescribeVulTopResponse extends AbstractModel {
 
     /**
     * 漏洞top列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VulTopList")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeVulTopResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 漏洞top列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 漏洞top列表 
      * @return VulTopList 漏洞top列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public VulTopInfo [] getVulTopList() {
         return this.VulTopList;
@@ -50,9 +47,7 @@ public class DescribeVulTopResponse extends AbstractModel {
 
     /**
      * Set 漏洞top列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VulTopList 漏洞top列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVulTopList(VulTopInfo [] VulTopList) {
         this.VulTopList = VulTopList;

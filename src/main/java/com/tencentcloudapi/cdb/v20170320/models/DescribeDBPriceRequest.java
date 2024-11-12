@@ -45,14 +45,14 @@ public class DescribeDBPriceRequest extends AbstractModel {
     private Long GoodsNum;
 
     /**
-    * 实例内存大小，单位：MB。InstanceId为空时该参数为必填项。
+    * 实例内存大小，单位：MB。InstanceId 为空时该参数为必填项。为保证传入值有效，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/product/236/17229) 接口获取可售卖的实例内存大小范围。
     */
     @SerializedName("Memory")
     @Expose
     private Long Memory;
 
     /**
-    * 实例硬盘大小，单位：GB。InstanceId为空时该参数为必填项。
+    * 实例硬盘大小，单位：GB。InstanceId 为空时该参数为必填项。为保证传入值有效，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/product/236/17229) 接口获取可售卖的硬盘大小范围。
     */
     @SerializedName("Volume")
     @Expose
@@ -163,32 +163,32 @@ public class DescribeDBPriceRequest extends AbstractModel {
     }
 
     /**
-     * Get 实例内存大小，单位：MB。InstanceId为空时该参数为必填项。 
-     * @return Memory 实例内存大小，单位：MB。InstanceId为空时该参数为必填项。
+     * Get 实例内存大小，单位：MB。InstanceId 为空时该参数为必填项。为保证传入值有效，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/product/236/17229) 接口获取可售卖的实例内存大小范围。 
+     * @return Memory 实例内存大小，单位：MB。InstanceId 为空时该参数为必填项。为保证传入值有效，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/product/236/17229) 接口获取可售卖的实例内存大小范围。
      */
     public Long getMemory() {
         return this.Memory;
     }
 
     /**
-     * Set 实例内存大小，单位：MB。InstanceId为空时该参数为必填项。
-     * @param Memory 实例内存大小，单位：MB。InstanceId为空时该参数为必填项。
+     * Set 实例内存大小，单位：MB。InstanceId 为空时该参数为必填项。为保证传入值有效，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/product/236/17229) 接口获取可售卖的实例内存大小范围。
+     * @param Memory 实例内存大小，单位：MB。InstanceId 为空时该参数为必填项。为保证传入值有效，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/product/236/17229) 接口获取可售卖的实例内存大小范围。
      */
     public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * Get 实例硬盘大小，单位：GB。InstanceId为空时该参数为必填项。 
-     * @return Volume 实例硬盘大小，单位：GB。InstanceId为空时该参数为必填项。
+     * Get 实例硬盘大小，单位：GB。InstanceId 为空时该参数为必填项。为保证传入值有效，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/product/236/17229) 接口获取可售卖的硬盘大小范围。 
+     * @return Volume 实例硬盘大小，单位：GB。InstanceId 为空时该参数为必填项。为保证传入值有效，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/product/236/17229) 接口获取可售卖的硬盘大小范围。
      */
     public Long getVolume() {
         return this.Volume;
     }
 
     /**
-     * Set 实例硬盘大小，单位：GB。InstanceId为空时该参数为必填项。
-     * @param Volume 实例硬盘大小，单位：GB。InstanceId为空时该参数为必填项。
+     * Set 实例硬盘大小，单位：GB。InstanceId 为空时该参数为必填项。为保证传入值有效，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/product/236/17229) 接口获取可售卖的硬盘大小范围。
+     * @param Volume 实例硬盘大小，单位：GB。InstanceId 为空时该参数为必填项。为保证传入值有效，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/product/236/17229) 接口获取可售卖的硬盘大小范围。
      */
     public void setVolume(Long Volume) {
         this.Volume = Volume;

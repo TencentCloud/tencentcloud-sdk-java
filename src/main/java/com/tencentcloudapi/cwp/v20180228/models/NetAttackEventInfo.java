@@ -123,7 +123,6 @@ public class NetAttackEventInfo extends AbstractModel {
 
     /**
     * 主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MachineExtraInfo")
     @Expose
@@ -152,7 +151,6 @@ public class NetAttackEventInfo extends AbstractModel {
 
     /**
     * cvm uuid
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Quuid")
     @Expose
@@ -160,7 +158,6 @@ public class NetAttackEventInfo extends AbstractModel {
 
     /**
     * 攻击发生时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MergeTime")
     @Expose
@@ -168,7 +165,6 @@ public class NetAttackEventInfo extends AbstractModel {
 
     /**
     * 0: 尝试攻击 1:攻击成功
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -176,7 +172,6 @@ public class NetAttackEventInfo extends AbstractModel {
 
     /**
     * 0:无失陷行为 1: rce(命令执行) 2: dnslog 3: writefile
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HostOpType")
     @Expose
@@ -184,7 +179,6 @@ public class NetAttackEventInfo extends AbstractModel {
 
     /**
     * 进程树,需要用base64 解码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HostOpProcessTree")
     @Expose
@@ -415,10 +409,8 @@ public class NetAttackEventInfo extends AbstractModel {
     }
 
     /**
-     * Get 主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主机额外信息 
      * @return MachineExtraInfo 主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public MachineExtraInfo getMachineExtraInfo() {
         return this.MachineExtraInfo;
@@ -426,9 +418,7 @@ public class NetAttackEventInfo extends AbstractModel {
 
     /**
      * Set 主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MachineExtraInfo 主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMachineExtraInfo(MachineExtraInfo MachineExtraInfo) {
         this.MachineExtraInfo = MachineExtraInfo;
@@ -483,10 +473,8 @@ public class NetAttackEventInfo extends AbstractModel {
     }
 
     /**
-     * Get cvm uuid
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get cvm uuid 
      * @return Quuid cvm uuid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getQuuid() {
         return this.Quuid;
@@ -494,19 +482,15 @@ public class NetAttackEventInfo extends AbstractModel {
 
     /**
      * Set cvm uuid
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Quuid cvm uuid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQuuid(String Quuid) {
         this.Quuid = Quuid;
     }
 
     /**
-     * Get 攻击发生时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 攻击发生时间 
      * @return MergeTime 攻击发生时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMergeTime() {
         return this.MergeTime;
@@ -514,19 +498,15 @@ public class NetAttackEventInfo extends AbstractModel {
 
     /**
      * Set 攻击发生时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MergeTime 攻击发生时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMergeTime(String MergeTime) {
         this.MergeTime = MergeTime;
     }
 
     /**
-     * Get 0: 尝试攻击 1:攻击成功
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 0: 尝试攻击 1:攻击成功 
      * @return Type 0: 尝试攻击 1:攻击成功
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getType() {
         return this.Type;
@@ -534,19 +514,15 @@ public class NetAttackEventInfo extends AbstractModel {
 
     /**
      * Set 0: 尝试攻击 1:攻击成功
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 0: 尝试攻击 1:攻击成功
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(Long Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 0:无失陷行为 1: rce(命令执行) 2: dnslog 3: writefile
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 0:无失陷行为 1: rce(命令执行) 2: dnslog 3: writefile 
      * @return HostOpType 0:无失陷行为 1: rce(命令执行) 2: dnslog 3: writefile
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getHostOpType() {
         return this.HostOpType;
@@ -554,19 +530,15 @@ public class NetAttackEventInfo extends AbstractModel {
 
     /**
      * Set 0:无失陷行为 1: rce(命令执行) 2: dnslog 3: writefile
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HostOpType 0:无失陷行为 1: rce(命令执行) 2: dnslog 3: writefile
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHostOpType(Long HostOpType) {
         this.HostOpType = HostOpType;
     }
 
     /**
-     * Get 进程树,需要用base64 解码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 进程树,需要用base64 解码 
      * @return HostOpProcessTree 进程树,需要用base64 解码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHostOpProcessTree() {
         return this.HostOpProcessTree;
@@ -574,9 +546,7 @@ public class NetAttackEventInfo extends AbstractModel {
 
     /**
      * Set 进程树,需要用base64 解码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HostOpProcessTree 进程树,需要用base64 解码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHostOpProcessTree(String HostOpProcessTree) {
         this.HostOpProcessTree = HostOpProcessTree;

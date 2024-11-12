@@ -123,7 +123,6 @@ public class SearchCommandResult extends AbstractModel {
 
     /**
     * 该命令所属会话的会话开始时间（废弃，使用SessionTime）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SessTime")
     @Expose
@@ -396,10 +395,8 @@ public class SearchCommandResult extends AbstractModel {
     }
 
     /**
-     * Get 该命令所属会话的会话开始时间（废弃，使用SessionTime）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该命令所属会话的会话开始时间（废弃，使用SessionTime） 
      * @return SessTime 该命令所属会话的会话开始时间（废弃，使用SessionTime）
-注意：此字段可能返回 null，表示取不到有效值。
      * @deprecated
      */
     @Deprecated
@@ -409,9 +406,7 @@ public class SearchCommandResult extends AbstractModel {
 
     /**
      * Set 该命令所属会话的会话开始时间（废弃，使用SessionTime）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SessTime 该命令所属会话的会话开始时间（废弃，使用SessionTime）
-注意：此字段可能返回 null，表示取不到有效值。
      * @deprecated
      */
     @Deprecated

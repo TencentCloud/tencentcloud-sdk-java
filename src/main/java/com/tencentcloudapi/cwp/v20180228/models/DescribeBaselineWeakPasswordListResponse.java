@@ -31,7 +31,7 @@ public class DescribeBaselineWeakPasswordListResponse extends AbstractModel {
     private Long Total;
 
     /**
-    * 无
+    * 列表
     */
     @SerializedName("List")
     @Expose
@@ -61,16 +61,16 @@ public class DescribeBaselineWeakPasswordListResponse extends AbstractModel {
     }
 
     /**
-     * Get 无 
-     * @return List 无
+     * Get 列表 
+     * @return List 列表
      */
     public BaselineWeakPassword [] getList() {
         return this.List;
     }
 
     /**
-     * Set 无
-     * @param List 无
+     * Set 列表
+     * @param List 列表
      */
     public void setList(BaselineWeakPassword [] List) {
         this.List = List;

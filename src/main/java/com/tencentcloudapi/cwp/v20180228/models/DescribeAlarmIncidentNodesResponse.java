@@ -25,7 +25,6 @@ public class DescribeAlarmIncidentNodesResponse extends AbstractModel {
 
     /**
     * 告警点所在事件的所有节点信息,可能包含多事件
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IncidentNodes")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeAlarmIncidentNodesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 告警点所在事件的所有节点信息,可能包含多事件
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 告警点所在事件的所有节点信息,可能包含多事件 
      * @return IncidentNodes 告警点所在事件的所有节点信息,可能包含多事件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public IncidentVertexInfo [] getIncidentNodes() {
         return this.IncidentNodes;
@@ -50,9 +47,7 @@ public class DescribeAlarmIncidentNodesResponse extends AbstractModel {
 
     /**
      * Set 告警点所在事件的所有节点信息,可能包含多事件
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IncidentNodes 告警点所在事件的所有节点信息,可能包含多事件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIncidentNodes(IncidentVertexInfo [] IncidentNodes) {
         this.IncidentNodes = IncidentNodes;

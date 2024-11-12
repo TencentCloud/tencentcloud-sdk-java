@@ -25,7 +25,6 @@ public class AttackSource extends AbstractModel {
 
     /**
     * 攻击溯源节点描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Nodes")
     @Expose
@@ -33,7 +32,6 @@ public class AttackSource extends AbstractModel {
 
     /**
     * 攻击溯源节点路径
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Edges")
     @Expose
@@ -41,17 +39,14 @@ public class AttackSource extends AbstractModel {
 
     /**
     * 请求节点相关事件详情的参数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EventInfoParam")
     @Expose
     private String EventInfoParam;
 
     /**
-     * Get 攻击溯源节点描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 攻击溯源节点描述 
      * @return Nodes 攻击溯源节点描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AttackSourceNode [] getNodes() {
         return this.Nodes;
@@ -59,19 +54,15 @@ public class AttackSource extends AbstractModel {
 
     /**
      * Set 攻击溯源节点描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Nodes 攻击溯源节点描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNodes(AttackSourceNode [] Nodes) {
         this.Nodes = Nodes;
     }
 
     /**
-     * Get 攻击溯源节点路径
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 攻击溯源节点路径 
      * @return Edges 攻击溯源节点路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AttackSourceEdge [] getEdges() {
         return this.Edges;
@@ -79,19 +70,15 @@ public class AttackSource extends AbstractModel {
 
     /**
      * Set 攻击溯源节点路径
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Edges 攻击溯源节点路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEdges(AttackSourceEdge [] Edges) {
         this.Edges = Edges;
     }
 
     /**
-     * Get 请求节点相关事件详情的参数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 请求节点相关事件详情的参数 
      * @return EventInfoParam 请求节点相关事件详情的参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEventInfoParam() {
         return this.EventInfoParam;
@@ -99,9 +86,7 @@ public class AttackSource extends AbstractModel {
 
     /**
      * Set 请求节点相关事件详情的参数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EventInfoParam 请求节点相关事件详情的参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEventInfoParam(String EventInfoParam) {
         this.EventInfoParam = EventInfoParam;

@@ -25,7 +25,6 @@ public class BaselineInfo extends AbstractModel {
 
     /**
     * 基线名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -33,7 +32,6 @@ public class BaselineInfo extends AbstractModel {
 
     /**
     * 危害等级：1-低危；2-中危；3-高危；4-严重
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Level")
     @Expose
@@ -41,7 +39,6 @@ public class BaselineInfo extends AbstractModel {
 
     /**
     * 检测项数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleCount")
     @Expose
@@ -49,7 +46,6 @@ public class BaselineInfo extends AbstractModel {
 
     /**
     * 影响服务器数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HostCount")
     @Expose
@@ -57,7 +53,6 @@ public class BaselineInfo extends AbstractModel {
 
     /**
     * 通过状态:0:未通过,1:已通过
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -65,7 +60,6 @@ public class BaselineInfo extends AbstractModel {
 
     /**
     * 基线id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CategoryId")
     @Expose
@@ -73,7 +67,6 @@ public class BaselineInfo extends AbstractModel {
 
     /**
     * 最后检测时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LastScanTime")
     @Expose
@@ -81,7 +74,6 @@ public class BaselineInfo extends AbstractModel {
 
     /**
     * 检测中状态: 5
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxStatus")
     @Expose
@@ -89,17 +81,14 @@ public class BaselineInfo extends AbstractModel {
 
     /**
     * 基线风险项
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BaselineFailCount")
     @Expose
     private Long BaselineFailCount;
 
     /**
-     * Get 基线名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 基线名 
      * @return Name 基线名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -107,19 +96,15 @@ public class BaselineInfo extends AbstractModel {
 
     /**
      * Set 基线名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 基线名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 危害等级：1-低危；2-中危；3-高危；4-严重
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 危害等级：1-低危；2-中危；3-高危；4-严重 
      * @return Level 危害等级：1-低危；2-中危；3-高危；4-严重
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLevel() {
         return this.Level;
@@ -127,19 +112,15 @@ public class BaselineInfo extends AbstractModel {
 
     /**
      * Set 危害等级：1-低危；2-中危；3-高危；4-严重
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Level 危害等级：1-低危；2-中危；3-高危；4-严重
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLevel(Long Level) {
         this.Level = Level;
     }
 
     /**
-     * Get 检测项数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 检测项数量 
      * @return RuleCount 检测项数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRuleCount() {
         return this.RuleCount;
@@ -147,19 +128,15 @@ public class BaselineInfo extends AbstractModel {
 
     /**
      * Set 检测项数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RuleCount 检测项数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleCount(Long RuleCount) {
         this.RuleCount = RuleCount;
     }
 
     /**
-     * Get 影响服务器数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 影响服务器数量 
      * @return HostCount 影响服务器数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getHostCount() {
         return this.HostCount;
@@ -167,19 +144,15 @@ public class BaselineInfo extends AbstractModel {
 
     /**
      * Set 影响服务器数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HostCount 影响服务器数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHostCount(Long HostCount) {
         this.HostCount = HostCount;
     }
 
     /**
-     * Get 通过状态:0:未通过,1:已通过
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 通过状态:0:未通过,1:已通过 
      * @return Status 通过状态:0:未通过,1:已通过
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
         return this.Status;
@@ -187,19 +160,15 @@ public class BaselineInfo extends AbstractModel {
 
     /**
      * Set 通过状态:0:未通过,1:已通过
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 通过状态:0:未通过,1:已通过
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 基线id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 基线id 
      * @return CategoryId 基线id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCategoryId() {
         return this.CategoryId;
@@ -207,19 +176,15 @@ public class BaselineInfo extends AbstractModel {
 
     /**
      * Set 基线id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CategoryId 基线id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCategoryId(Long CategoryId) {
         this.CategoryId = CategoryId;
     }
 
     /**
-     * Get 最后检测时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最后检测时间 
      * @return LastScanTime 最后检测时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLastScanTime() {
         return this.LastScanTime;
@@ -227,19 +192,15 @@ public class BaselineInfo extends AbstractModel {
 
     /**
      * Set 最后检测时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LastScanTime 最后检测时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLastScanTime(String LastScanTime) {
         this.LastScanTime = LastScanTime;
     }
 
     /**
-     * Get 检测中状态: 5
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 检测中状态: 5 
      * @return MaxStatus 检测中状态: 5
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaxStatus() {
         return this.MaxStatus;
@@ -247,19 +208,15 @@ public class BaselineInfo extends AbstractModel {
 
     /**
      * Set 检测中状态: 5
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MaxStatus 检测中状态: 5
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxStatus(Long MaxStatus) {
         this.MaxStatus = MaxStatus;
     }
 
     /**
-     * Get 基线风险项
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 基线风险项 
      * @return BaselineFailCount 基线风险项
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBaselineFailCount() {
         return this.BaselineFailCount;
@@ -267,9 +224,7 @@ public class BaselineInfo extends AbstractModel {
 
     /**
      * Set 基线风险项
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BaselineFailCount 基线风险项
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBaselineFailCount(Long BaselineFailCount) {
         this.BaselineFailCount = BaselineFailCount;

@@ -60,7 +60,6 @@ public class RansomDefenseStrategyMachineBackupInfo extends AbstractModel {
 
     /**
     * 外网ip
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MachineWanIp")
     @Expose
@@ -68,7 +67,6 @@ public class RansomDefenseStrategyMachineBackupInfo extends AbstractModel {
 
     /**
     * 云标签
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CloudTags")
     @Expose
@@ -76,7 +74,6 @@ public class RansomDefenseStrategyMachineBackupInfo extends AbstractModel {
 
     /**
     * 可用区信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RegionInfo")
     @Expose
@@ -84,7 +81,6 @@ public class RansomDefenseStrategyMachineBackupInfo extends AbstractModel {
 
     /**
     * 主机安全标签
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tag")
     @Expose
@@ -92,7 +88,6 @@ public class RansomDefenseStrategyMachineBackupInfo extends AbstractModel {
 
     /**
     * 防护状态：0关闭，1开启
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -100,7 +95,6 @@ public class RansomDefenseStrategyMachineBackupInfo extends AbstractModel {
 
     /**
     * 策略id，为0时未绑定策略
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StrategyId")
     @Expose
@@ -109,7 +103,6 @@ public class RansomDefenseStrategyMachineBackupInfo extends AbstractModel {
     /**
     * 硬盘信息，为空时所有硬盘生效：
 ;分割 diskId1|diskName1;diskId2|diskName2
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiskInfo")
     @Expose
@@ -117,7 +110,6 @@ public class RansomDefenseStrategyMachineBackupInfo extends AbstractModel {
 
     /**
     * 策略名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StrategyName")
     @Expose
@@ -125,7 +117,6 @@ public class RansomDefenseStrategyMachineBackupInfo extends AbstractModel {
 
     /**
     * 备份数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BackupCount")
     @Expose
@@ -133,7 +124,6 @@ public class RansomDefenseStrategyMachineBackupInfo extends AbstractModel {
 
     /**
     * 最近一次备份状态：0备份中，1正常，2失败，9暂无备份
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LastBackupStatus")
     @Expose
@@ -141,7 +131,6 @@ public class RansomDefenseStrategyMachineBackupInfo extends AbstractModel {
 
     /**
     * 最近一次备份失败原因
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LastBackupMessage")
     @Expose
@@ -149,7 +138,6 @@ public class RansomDefenseStrategyMachineBackupInfo extends AbstractModel {
 
     /**
     * 最近一次备份时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LastBackupTime")
     @Expose
@@ -157,7 +145,6 @@ public class RansomDefenseStrategyMachineBackupInfo extends AbstractModel {
 
     /**
     * 最近一次回滚进度百分比
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RollBackPercent")
     @Expose
@@ -165,7 +152,6 @@ public class RansomDefenseStrategyMachineBackupInfo extends AbstractModel {
 
     /**
     * 最近一次回滚状态：0进行中，1成功，2失败
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RollBackStatus")
     @Expose
@@ -173,7 +159,6 @@ public class RansomDefenseStrategyMachineBackupInfo extends AbstractModel {
 
     /**
     * 备份成功次数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BackupSuccessCount")
     @Expose
@@ -181,7 +166,6 @@ public class RansomDefenseStrategyMachineBackupInfo extends AbstractModel {
 
     /**
     * 版本信息：0-基础版 1-专业版 2-旗舰版 3-普惠版
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HostVersion")
     @Expose
@@ -268,10 +252,8 @@ public class RansomDefenseStrategyMachineBackupInfo extends AbstractModel {
     }
 
     /**
-     * Get 外网ip
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 外网ip 
      * @return MachineWanIp 外网ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMachineWanIp() {
         return this.MachineWanIp;
@@ -279,19 +261,15 @@ public class RansomDefenseStrategyMachineBackupInfo extends AbstractModel {
 
     /**
      * Set 外网ip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MachineWanIp 外网ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMachineWanIp(String MachineWanIp) {
         this.MachineWanIp = MachineWanIp;
     }
 
     /**
-     * Get 云标签
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 云标签 
      * @return CloudTags 云标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Tag [] getCloudTags() {
         return this.CloudTags;
@@ -299,19 +277,15 @@ public class RansomDefenseStrategyMachineBackupInfo extends AbstractModel {
 
     /**
      * Set 云标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CloudTags 云标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCloudTags(Tag [] CloudTags) {
         this.CloudTags = CloudTags;
     }
 
     /**
-     * Get 可用区信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 可用区信息 
      * @return RegionInfo 可用区信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RegionInfo getRegionInfo() {
         return this.RegionInfo;
@@ -319,19 +293,15 @@ public class RansomDefenseStrategyMachineBackupInfo extends AbstractModel {
 
     /**
      * Set 可用区信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RegionInfo 可用区信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegionInfo(RegionInfo RegionInfo) {
         this.RegionInfo = RegionInfo;
     }
 
     /**
-     * Get 主机安全标签
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主机安全标签 
      * @return Tag 主机安全标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public MachineTag [] getTag() {
         return this.Tag;
@@ -339,19 +309,15 @@ public class RansomDefenseStrategyMachineBackupInfo extends AbstractModel {
 
     /**
      * Set 主机安全标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tag 主机安全标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTag(MachineTag [] Tag) {
         this.Tag = Tag;
     }
 
     /**
-     * Get 防护状态：0关闭，1开启
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 防护状态：0关闭，1开启 
      * @return Status 防护状态：0关闭，1开启
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
         return this.Status;
@@ -359,19 +325,15 @@ public class RansomDefenseStrategyMachineBackupInfo extends AbstractModel {
 
     /**
      * Set 防护状态：0关闭，1开启
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 防护状态：0关闭，1开启
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 策略id，为0时未绑定策略
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 策略id，为0时未绑定策略 
      * @return StrategyId 策略id，为0时未绑定策略
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStrategyId() {
         return this.StrategyId;
@@ -379,9 +341,7 @@ public class RansomDefenseStrategyMachineBackupInfo extends AbstractModel {
 
     /**
      * Set 策略id，为0时未绑定策略
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StrategyId 策略id，为0时未绑定策略
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStrategyId(Long StrategyId) {
         this.StrategyId = StrategyId;
@@ -389,11 +349,9 @@ public class RansomDefenseStrategyMachineBackupInfo extends AbstractModel {
 
     /**
      * Get 硬盘信息，为空时所有硬盘生效：
-;分割 diskId1|diskName1;diskId2|diskName2
-注意：此字段可能返回 null，表示取不到有效值。 
+;分割 diskId1|diskName1;diskId2|diskName2 
      * @return DiskInfo 硬盘信息，为空时所有硬盘生效：
 ;分割 diskId1|diskName1;diskId2|diskName2
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDiskInfo() {
         return this.DiskInfo;
@@ -402,20 +360,16 @@ public class RansomDefenseStrategyMachineBackupInfo extends AbstractModel {
     /**
      * Set 硬盘信息，为空时所有硬盘生效：
 ;分割 diskId1|diskName1;diskId2|diskName2
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DiskInfo 硬盘信息，为空时所有硬盘生效：
 ;分割 diskId1|diskName1;diskId2|diskName2
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiskInfo(String DiskInfo) {
         this.DiskInfo = DiskInfo;
     }
 
     /**
-     * Get 策略名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 策略名称 
      * @return StrategyName 策略名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStrategyName() {
         return this.StrategyName;
@@ -423,19 +377,15 @@ public class RansomDefenseStrategyMachineBackupInfo extends AbstractModel {
 
     /**
      * Set 策略名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StrategyName 策略名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStrategyName(String StrategyName) {
         this.StrategyName = StrategyName;
     }
 
     /**
-     * Get 备份数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 备份数量 
      * @return BackupCount 备份数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBackupCount() {
         return this.BackupCount;
@@ -443,19 +393,15 @@ public class RansomDefenseStrategyMachineBackupInfo extends AbstractModel {
 
     /**
      * Set 备份数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BackupCount 备份数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBackupCount(Long BackupCount) {
         this.BackupCount = BackupCount;
     }
 
     /**
-     * Get 最近一次备份状态：0备份中，1正常，2失败，9暂无备份
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最近一次备份状态：0备份中，1正常，2失败，9暂无备份 
      * @return LastBackupStatus 最近一次备份状态：0备份中，1正常，2失败，9暂无备份
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLastBackupStatus() {
         return this.LastBackupStatus;
@@ -463,19 +409,15 @@ public class RansomDefenseStrategyMachineBackupInfo extends AbstractModel {
 
     /**
      * Set 最近一次备份状态：0备份中，1正常，2失败，9暂无备份
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LastBackupStatus 最近一次备份状态：0备份中，1正常，2失败，9暂无备份
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLastBackupStatus(Long LastBackupStatus) {
         this.LastBackupStatus = LastBackupStatus;
     }
 
     /**
-     * Get 最近一次备份失败原因
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最近一次备份失败原因 
      * @return LastBackupMessage 最近一次备份失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLastBackupMessage() {
         return this.LastBackupMessage;
@@ -483,19 +425,15 @@ public class RansomDefenseStrategyMachineBackupInfo extends AbstractModel {
 
     /**
      * Set 最近一次备份失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LastBackupMessage 最近一次备份失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLastBackupMessage(String LastBackupMessage) {
         this.LastBackupMessage = LastBackupMessage;
     }
 
     /**
-     * Get 最近一次备份时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最近一次备份时间 
      * @return LastBackupTime 最近一次备份时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLastBackupTime() {
         return this.LastBackupTime;
@@ -503,19 +441,15 @@ public class RansomDefenseStrategyMachineBackupInfo extends AbstractModel {
 
     /**
      * Set 最近一次备份时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LastBackupTime 最近一次备份时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLastBackupTime(String LastBackupTime) {
         this.LastBackupTime = LastBackupTime;
     }
 
     /**
-     * Get 最近一次回滚进度百分比
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最近一次回滚进度百分比 
      * @return RollBackPercent 最近一次回滚进度百分比
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRollBackPercent() {
         return this.RollBackPercent;
@@ -523,19 +457,15 @@ public class RansomDefenseStrategyMachineBackupInfo extends AbstractModel {
 
     /**
      * Set 最近一次回滚进度百分比
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RollBackPercent 最近一次回滚进度百分比
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRollBackPercent(Long RollBackPercent) {
         this.RollBackPercent = RollBackPercent;
     }
 
     /**
-     * Get 最近一次回滚状态：0进行中，1成功，2失败
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最近一次回滚状态：0进行中，1成功，2失败 
      * @return RollBackStatus 最近一次回滚状态：0进行中，1成功，2失败
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRollBackStatus() {
         return this.RollBackStatus;
@@ -543,19 +473,15 @@ public class RansomDefenseStrategyMachineBackupInfo extends AbstractModel {
 
     /**
      * Set 最近一次回滚状态：0进行中，1成功，2失败
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RollBackStatus 最近一次回滚状态：0进行中，1成功，2失败
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRollBackStatus(Long RollBackStatus) {
         this.RollBackStatus = RollBackStatus;
     }
 
     /**
-     * Get 备份成功次数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 备份成功次数 
      * @return BackupSuccessCount 备份成功次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBackupSuccessCount() {
         return this.BackupSuccessCount;
@@ -563,19 +489,15 @@ public class RansomDefenseStrategyMachineBackupInfo extends AbstractModel {
 
     /**
      * Set 备份成功次数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BackupSuccessCount 备份成功次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBackupSuccessCount(Long BackupSuccessCount) {
         this.BackupSuccessCount = BackupSuccessCount;
     }
 
     /**
-     * Get 版本信息：0-基础版 1-专业版 2-旗舰版 3-普惠版
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 版本信息：0-基础版 1-专业版 2-旗舰版 3-普惠版 
      * @return HostVersion 版本信息：0-基础版 1-专业版 2-旗舰版 3-普惠版
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getHostVersion() {
         return this.HostVersion;
@@ -583,9 +505,7 @@ public class RansomDefenseStrategyMachineBackupInfo extends AbstractModel {
 
     /**
      * Set 版本信息：0-基础版 1-专业版 2-旗舰版 3-普惠版
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HostVersion 版本信息：0-基础版 1-专业版 2-旗舰版 3-普惠版
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHostVersion(Long HostVersion) {
         this.HostVersion = HostVersion;

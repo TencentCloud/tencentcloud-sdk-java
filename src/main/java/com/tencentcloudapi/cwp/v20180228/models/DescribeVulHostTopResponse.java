@@ -25,7 +25,6 @@ public class DescribeVulHostTopResponse extends AbstractModel {
 
     /**
     * 服务器风险top列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VulHostTopList")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeVulHostTopResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 服务器风险top列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 服务器风险top列表 
      * @return VulHostTopList 服务器风险top列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public VulHostTopInfo [] getVulHostTopList() {
         return this.VulHostTopList;
@@ -50,9 +47,7 @@ public class DescribeVulHostTopResponse extends AbstractModel {
 
     /**
      * Set 服务器风险top列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VulHostTopList 服务器风险top列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVulHostTopList(VulHostTopInfo [] VulHostTopList) {
         this.VulHostTopList = VulHostTopList;

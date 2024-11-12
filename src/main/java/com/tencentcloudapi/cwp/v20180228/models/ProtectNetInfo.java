@@ -31,28 +31,28 @@ public class ProtectNetInfo extends AbstractModel {
     private String TaskId;
 
     /**
-    * 护网天数
+    * 重保天数
     */
     @SerializedName("ProtectDays")
     @Expose
     private Long ProtectDays;
 
     /**
-    * 护网状态 0未启动，1护网中，2已完成
+    * 重保状态 0未启动，1重保中，2已完成
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 护网启动时间
+    * 重保启动时间
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 护网完成时间
+    * 重保完成时间
     */
     @SerializedName("EndTime")
     @Expose
@@ -82,64 +82,64 @@ public class ProtectNetInfo extends AbstractModel {
     }
 
     /**
-     * Get 护网天数 
-     * @return ProtectDays 护网天数
+     * Get 重保天数 
+     * @return ProtectDays 重保天数
      */
     public Long getProtectDays() {
         return this.ProtectDays;
     }
 
     /**
-     * Set 护网天数
-     * @param ProtectDays 护网天数
+     * Set 重保天数
+     * @param ProtectDays 重保天数
      */
     public void setProtectDays(Long ProtectDays) {
         this.ProtectDays = ProtectDays;
     }
 
     /**
-     * Get 护网状态 0未启动，1护网中，2已完成 
-     * @return Status 护网状态 0未启动，1护网中，2已完成
+     * Get 重保状态 0未启动，1重保中，2已完成 
+     * @return Status 重保状态 0未启动，1重保中，2已完成
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 护网状态 0未启动，1护网中，2已完成
-     * @param Status 护网状态 0未启动，1护网中，2已完成
+     * Set 重保状态 0未启动，1重保中，2已完成
+     * @param Status 重保状态 0未启动，1重保中，2已完成
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 护网启动时间 
-     * @return StartTime 护网启动时间
+     * Get 重保启动时间 
+     * @return StartTime 重保启动时间
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 护网启动时间
-     * @param StartTime 护网启动时间
+     * Set 重保启动时间
+     * @param StartTime 重保启动时间
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 护网完成时间 
-     * @return EndTime 护网完成时间
+     * Get 重保完成时间 
+     * @return EndTime 重保完成时间
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 护网完成时间
-     * @param EndTime 护网完成时间
+     * Set 重保完成时间
+     * @param EndTime 重保完成时间
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

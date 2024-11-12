@@ -270,7 +270,6 @@ public class Resource extends AbstractModel {
 
     /**
     * 部署模式
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeployModel")
     @Expose
@@ -837,10 +836,8 @@ public class Resource extends AbstractModel {
     }
 
     /**
-     * Get 部署模式
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 部署模式 
      * @return DeployModel 部署模式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDeployModel() {
         return this.DeployModel;
@@ -848,9 +845,7 @@ public class Resource extends AbstractModel {
 
     /**
      * Set 部署模式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeployModel 部署模式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeployModel(Long DeployModel) {
         this.DeployModel = DeployModel;

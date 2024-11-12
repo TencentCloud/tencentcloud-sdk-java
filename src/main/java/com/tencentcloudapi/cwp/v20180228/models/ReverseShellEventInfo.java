@@ -31,14 +31,14 @@ public class ReverseShellEventInfo extends AbstractModel {
     private Long Id;
 
     /**
-    * 云镜UUID
+    * 主机安全uuid
     */
     @SerializedName("Uuid")
     @Expose
     private String Uuid;
 
     /**
-    * 主机ID
+    * 主机uuid
     */
     @SerializedName("Quuid")
     @Expose
@@ -158,7 +158,6 @@ public class ReverseShellEventInfo extends AbstractModel {
 
     /**
     * 进程树 json  pid:进程id，exe:文件路径 ，account:进程所属用组和用户 ,cmdline:执行命令，ssh_service: SSH服务ip, ssh_soure:登录源
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PsTree")
     @Expose
@@ -230,32 +229,32 @@ public class ReverseShellEventInfo extends AbstractModel {
     }
 
     /**
-     * Get 云镜UUID 
-     * @return Uuid 云镜UUID
+     * Get 主机安全uuid 
+     * @return Uuid 主机安全uuid
      */
     public String getUuid() {
         return this.Uuid;
     }
 
     /**
-     * Set 云镜UUID
-     * @param Uuid 云镜UUID
+     * Set 主机安全uuid
+     * @param Uuid 主机安全uuid
      */
     public void setUuid(String Uuid) {
         this.Uuid = Uuid;
     }
 
     /**
-     * Get 主机ID 
-     * @return Quuid 主机ID
+     * Get 主机uuid 
+     * @return Quuid 主机uuid
      */
     public String getQuuid() {
         return this.Quuid;
     }
 
     /**
-     * Set 主机ID
-     * @param Quuid 主机ID
+     * Set 主机uuid
+     * @param Quuid 主机uuid
      */
     public void setQuuid(String Quuid) {
         this.Quuid = Quuid;
@@ -518,10 +517,8 @@ public class ReverseShellEventInfo extends AbstractModel {
     }
 
     /**
-     * Get 进程树 json  pid:进程id，exe:文件路径 ，account:进程所属用组和用户 ,cmdline:执行命令，ssh_service: SSH服务ip, ssh_soure:登录源
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 进程树 json  pid:进程id，exe:文件路径 ，account:进程所属用组和用户 ,cmdline:执行命令，ssh_service: SSH服务ip, ssh_soure:登录源 
      * @return PsTree 进程树 json  pid:进程id，exe:文件路径 ，account:进程所属用组和用户 ,cmdline:执行命令，ssh_service: SSH服务ip, ssh_soure:登录源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPsTree() {
         return this.PsTree;
@@ -529,9 +526,7 @@ public class ReverseShellEventInfo extends AbstractModel {
 
     /**
      * Set 进程树 json  pid:进程id，exe:文件路径 ，account:进程所属用组和用户 ,cmdline:执行命令，ssh_service: SSH服务ip, ssh_soure:登录源
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PsTree 进程树 json  pid:进程id，exe:文件路径 ，account:进程所属用组和用户 ,cmdline:执行命令，ssh_service: SSH服务ip, ssh_soure:登录源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPsTree(String PsTree) {
         this.PsTree = PsTree;

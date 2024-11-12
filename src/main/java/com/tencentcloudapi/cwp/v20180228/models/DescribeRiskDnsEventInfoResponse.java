@@ -25,7 +25,6 @@ public class DescribeRiskDnsEventInfoResponse extends AbstractModel {
 
     /**
     * 恶意请求事件详情
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Info")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeRiskDnsEventInfoResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 恶意请求事件详情
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 恶意请求事件详情 
      * @return Info 恶意请求事件详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RiskDnsEvent getInfo() {
         return this.Info;
@@ -50,9 +47,7 @@ public class DescribeRiskDnsEventInfoResponse extends AbstractModel {
 
     /**
      * Set 恶意请求事件详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Info 恶意请求事件详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInfo(RiskDnsEvent Info) {
         this.Info = Info;
