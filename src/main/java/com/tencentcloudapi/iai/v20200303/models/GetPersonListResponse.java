@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class GetPersonListResponse extends AbstractModel {
 
     /**
-    * 返回的人员信息
+    * 返回的人员信息。
     */
     @SerializedName("PersonInfos")
     @Expose
     private PersonInfo [] PersonInfos;
 
     /**
-    * 该人员库的人员数量
+    * 该人员库的人员数量。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PersonNum")
@@ -39,7 +39,7 @@ public class GetPersonListResponse extends AbstractModel {
     private Long PersonNum;
 
     /**
-    * 该人员库的人脸数量
+    * 该人员库的人脸数量。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FaceNum")
@@ -62,25 +62,25 @@ public class GetPersonListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 返回的人员信息 
-     * @return PersonInfos 返回的人员信息
+     * Get 返回的人员信息。 
+     * @return PersonInfos 返回的人员信息。
      */
     public PersonInfo [] getPersonInfos() {
         return this.PersonInfos;
     }
 
     /**
-     * Set 返回的人员信息
-     * @param PersonInfos 返回的人员信息
+     * Set 返回的人员信息。
+     * @param PersonInfos 返回的人员信息。
      */
     public void setPersonInfos(PersonInfo [] PersonInfos) {
         this.PersonInfos = PersonInfos;
     }
 
     /**
-     * Get 该人员库的人员数量
+     * Get 该人员库的人员数量。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PersonNum 该人员库的人员数量
+     * @return PersonNum 该人员库的人员数量。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPersonNum() {
@@ -88,9 +88,9 @@ public class GetPersonListResponse extends AbstractModel {
     }
 
     /**
-     * Set 该人员库的人员数量
+     * Set 该人员库的人员数量。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PersonNum 该人员库的人员数量
+     * @param PersonNum 该人员库的人员数量。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPersonNum(Long PersonNum) {
@@ -98,9 +98,9 @@ public class GetPersonListResponse extends AbstractModel {
     }
 
     /**
-     * Get 该人员库的人脸数量
+     * Get 该人员库的人脸数量。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FaceNum 该人员库的人脸数量
+     * @return FaceNum 该人员库的人脸数量。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFaceNum() {
@@ -108,9 +108,9 @@ public class GetPersonListResponse extends AbstractModel {
     }
 
     /**
-     * Set 该人员库的人脸数量
+     * Set 该人员库的人脸数量。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FaceNum 该人员库的人脸数量
+     * @param FaceNum 该人员库的人脸数量。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFaceNum(Long FaceNum) {

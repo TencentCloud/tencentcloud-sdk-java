@@ -25,7 +25,6 @@ public class DescribeDedicatedClusterCbsStatisticsResponse extends AbstractModel
 
     /**
     * 云硬盘仓库信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SetList")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeDedicatedClusterCbsStatisticsResponse extends AbstractModel
 
     /**
     * 总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeDedicatedClusterCbsStatisticsResponse extends AbstractModel
     private String RequestId;
 
     /**
-     * Get 云硬盘仓库信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 云硬盘仓库信息 
      * @return SetList 云硬盘仓库信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SetInfo [] getSetList() {
         return this.SetList;
@@ -58,19 +54,15 @@ public class DescribeDedicatedClusterCbsStatisticsResponse extends AbstractModel
 
     /**
      * Set 云硬盘仓库信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SetList 云硬盘仓库信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSetList(SetInfo [] SetList) {
         this.SetList = SetList;
     }
 
     /**
-     * Get 总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 总数 
      * @return TotalCount 总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -78,9 +70,7 @@ public class DescribeDedicatedClusterCbsStatisticsResponse extends AbstractModel
 
     /**
      * Set 总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

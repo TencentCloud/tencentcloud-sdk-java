@@ -49,22 +49,21 @@ public class DescribePortraitSingJobResponse extends AbstractModel {
     private String StatusMsg;
 
     /**
-    * 错误码
+    * 任务执行错误码。当任务状态不为FAIL时，该值为""。
     */
     @SerializedName("ErrorCode")
     @Expose
     private String ErrorCode;
 
     /**
-    * 错误信息
+    * 任务执行错误信息。当任务状态不为FAIL时，该值为""。
     */
     @SerializedName("ErrorMessage")
     @Expose
     private String ErrorMessage;
 
     /**
-    * 生成视频的URL地址
-有效期24小时
+    * 生成视频的URL地址。有效期24小时。
     */
     @SerializedName("ResultVideoUrl")
     @Expose
@@ -142,52 +141,48 @@ public class DescribePortraitSingJobResponse extends AbstractModel {
     }
 
     /**
-     * Get 错误码 
-     * @return ErrorCode 错误码
+     * Get 任务执行错误码。当任务状态不为FAIL时，该值为""。 
+     * @return ErrorCode 任务执行错误码。当任务状态不为FAIL时，该值为""。
      */
     public String getErrorCode() {
         return this.ErrorCode;
     }
 
     /**
-     * Set 错误码
-     * @param ErrorCode 错误码
+     * Set 任务执行错误码。当任务状态不为FAIL时，该值为""。
+     * @param ErrorCode 任务执行错误码。当任务状态不为FAIL时，该值为""。
      */
     public void setErrorCode(String ErrorCode) {
         this.ErrorCode = ErrorCode;
     }
 
     /**
-     * Get 错误信息 
-     * @return ErrorMessage 错误信息
+     * Get 任务执行错误信息。当任务状态不为FAIL时，该值为""。 
+     * @return ErrorMessage 任务执行错误信息。当任务状态不为FAIL时，该值为""。
      */
     public String getErrorMessage() {
         return this.ErrorMessage;
     }
 
     /**
-     * Set 错误信息
-     * @param ErrorMessage 错误信息
+     * Set 任务执行错误信息。当任务状态不为FAIL时，该值为""。
+     * @param ErrorMessage 任务执行错误信息。当任务状态不为FAIL时，该值为""。
      */
     public void setErrorMessage(String ErrorMessage) {
         this.ErrorMessage = ErrorMessage;
     }
 
     /**
-     * Get 生成视频的URL地址
-有效期24小时 
-     * @return ResultVideoUrl 生成视频的URL地址
-有效期24小时
+     * Get 生成视频的URL地址。有效期24小时。 
+     * @return ResultVideoUrl 生成视频的URL地址。有效期24小时。
      */
     public String getResultVideoUrl() {
         return this.ResultVideoUrl;
     }
 
     /**
-     * Set 生成视频的URL地址
-有效期24小时
-     * @param ResultVideoUrl 生成视频的URL地址
-有效期24小时
+     * Set 生成视频的URL地址。有效期24小时。
+     * @param ResultVideoUrl 生成视频的URL地址。有效期24小时。
      */
     public void setResultVideoUrl(String ResultVideoUrl) {
         this.ResultVideoUrl = ResultVideoUrl;

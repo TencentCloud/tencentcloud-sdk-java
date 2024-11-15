@@ -38,6 +38,20 @@ public class InstallInstanceModelRequest extends AbstractModel {
     private String [] UsrCosModelUrlList;
 
     /**
+    * 客户指定安装的模型名称，可为空，默认为模型文件名
+    */
+    @SerializedName("ModelNames")
+    @Expose
+    private String [] ModelNames;
+
+    /**
+    * 模型使用的任务类型，包括：fill_mask, ner, question_answering, text_classification, text_embedding, text_expansion, text_similarity和zero_shot_classification，默认为text_embedding
+    */
+    @SerializedName("TaskTypes")
+    @Expose
+    private String [] TaskTypes;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -69,6 +83,38 @@ public class InstallInstanceModelRequest extends AbstractModel {
         this.UsrCosModelUrlList = UsrCosModelUrlList;
     }
 
+    /**
+     * Get 客户指定安装的模型名称，可为空，默认为模型文件名 
+     * @return ModelNames 客户指定安装的模型名称，可为空，默认为模型文件名
+     */
+    public String [] getModelNames() {
+        return this.ModelNames;
+    }
+
+    /**
+     * Set 客户指定安装的模型名称，可为空，默认为模型文件名
+     * @param ModelNames 客户指定安装的模型名称，可为空，默认为模型文件名
+     */
+    public void setModelNames(String [] ModelNames) {
+        this.ModelNames = ModelNames;
+    }
+
+    /**
+     * Get 模型使用的任务类型，包括：fill_mask, ner, question_answering, text_classification, text_embedding, text_expansion, text_similarity和zero_shot_classification，默认为text_embedding 
+     * @return TaskTypes 模型使用的任务类型，包括：fill_mask, ner, question_answering, text_classification, text_embedding, text_expansion, text_similarity和zero_shot_classification，默认为text_embedding
+     */
+    public String [] getTaskTypes() {
+        return this.TaskTypes;
+    }
+
+    /**
+     * Set 模型使用的任务类型，包括：fill_mask, ner, question_answering, text_classification, text_embedding, text_expansion, text_similarity和zero_shot_classification，默认为text_embedding
+     * @param TaskTypes 模型使用的任务类型，包括：fill_mask, ner, question_answering, text_classification, text_embedding, text_expansion, text_similarity和zero_shot_classification，默认为text_embedding
+     */
+    public void setTaskTypes(String [] TaskTypes) {
+        this.TaskTypes = TaskTypes;
+    }
+
     public InstallInstanceModelRequest() {
     }
 
@@ -86,6 +132,18 @@ public class InstallInstanceModelRequest extends AbstractModel {
                 this.UsrCosModelUrlList[i] = new String(source.UsrCosModelUrlList[i]);
             }
         }
+        if (source.ModelNames != null) {
+            this.ModelNames = new String[source.ModelNames.length];
+            for (int i = 0; i < source.ModelNames.length; i++) {
+                this.ModelNames[i] = new String(source.ModelNames[i]);
+            }
+        }
+        if (source.TaskTypes != null) {
+            this.TaskTypes = new String[source.TaskTypes.length];
+            for (int i = 0; i < source.TaskTypes.length; i++) {
+                this.TaskTypes[i] = new String(source.TaskTypes[i]);
+            }
+        }
     }
 
 
@@ -95,6 +153,8 @@ public class InstallInstanceModelRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamArraySimple(map, prefix + "UsrCosModelUrlList.", this.UsrCosModelUrlList);
+        this.setParamArraySimple(map, prefix + "ModelNames.", this.ModelNames);
+        this.setParamArraySimple(map, prefix + "TaskTypes.", this.TaskTypes);
 
     }
 }

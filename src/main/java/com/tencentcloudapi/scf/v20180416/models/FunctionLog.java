@@ -52,7 +52,7 @@ public class FunctionLog extends AbstractModel {
     private String StartTime;
 
     /**
-    * 函数执行结果，如果是 0 表示执行成功，其他值表示失败
+    * 函数执行结果，如果是 0 表示执行成功，2表示函数运行中，3表示函数执行中断，其他值表示失败
     */
     @SerializedName("RetCode")
     @Expose
@@ -179,16 +179,16 @@ public class FunctionLog extends AbstractModel {
     }
 
     /**
-     * Get 函数执行结果，如果是 0 表示执行成功，其他值表示失败 
-     * @return RetCode 函数执行结果，如果是 0 表示执行成功，其他值表示失败
+     * Get 函数执行结果，如果是 0 表示执行成功，2表示函数运行中，3表示函数执行中断，其他值表示失败 
+     * @return RetCode 函数执行结果，如果是 0 表示执行成功，2表示函数运行中，3表示函数执行中断，其他值表示失败
      */
     public Long getRetCode() {
         return this.RetCode;
     }
 
     /**
-     * Set 函数执行结果，如果是 0 表示执行成功，其他值表示失败
-     * @param RetCode 函数执行结果，如果是 0 表示执行成功，其他值表示失败
+     * Set 函数执行结果，如果是 0 表示执行成功，2表示函数运行中，3表示函数执行中断，其他值表示失败
+     * @param RetCode 函数执行结果，如果是 0 表示执行成功，2表示函数运行中，3表示函数执行中断，其他值表示失败
      */
     public void setRetCode(Long RetCode) {
         this.RetCode = RetCode;

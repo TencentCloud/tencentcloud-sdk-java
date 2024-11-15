@@ -25,7 +25,6 @@ public class LogoParam extends AbstractModel {
 
     /**
     * 水印 Url
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LogoUrl")
     @Expose
@@ -33,25 +32,21 @@ public class LogoParam extends AbstractModel {
 
     /**
     * 水印 Base64，Url 和 Base64 二选一传入，如果都提供以 Url 为准
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LogoImage")
     @Expose
     private String LogoImage;
 
     /**
-    * 水印图片位于生成结果图中的坐标，将按照坐标对标识图片进行位置和大小的拉伸匹配
-注意：此字段可能返回 null，表示取不到有效值。
+    * 水印图片位于生成结果图中的坐标及宽高，将按照坐标对标识图片进行位置和大小的拉伸匹配。
     */
     @SerializedName("LogoRect")
     @Expose
     private LogoRect LogoRect;
 
     /**
-     * Get 水印 Url
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 水印 Url 
      * @return LogoUrl 水印 Url
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLogoUrl() {
         return this.LogoUrl;
@@ -59,19 +54,15 @@ public class LogoParam extends AbstractModel {
 
     /**
      * Set 水印 Url
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LogoUrl 水印 Url
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLogoUrl(String LogoUrl) {
         this.LogoUrl = LogoUrl;
     }
 
     /**
-     * Get 水印 Base64，Url 和 Base64 二选一传入，如果都提供以 Url 为准
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 水印 Base64，Url 和 Base64 二选一传入，如果都提供以 Url 为准 
      * @return LogoImage 水印 Base64，Url 和 Base64 二选一传入，如果都提供以 Url 为准
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLogoImage() {
         return this.LogoImage;
@@ -79,29 +70,23 @@ public class LogoParam extends AbstractModel {
 
     /**
      * Set 水印 Base64，Url 和 Base64 二选一传入，如果都提供以 Url 为准
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LogoImage 水印 Base64，Url 和 Base64 二选一传入，如果都提供以 Url 为准
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLogoImage(String LogoImage) {
         this.LogoImage = LogoImage;
     }
 
     /**
-     * Get 水印图片位于生成结果图中的坐标，将按照坐标对标识图片进行位置和大小的拉伸匹配
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LogoRect 水印图片位于生成结果图中的坐标，将按照坐标对标识图片进行位置和大小的拉伸匹配
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 水印图片位于生成结果图中的坐标及宽高，将按照坐标对标识图片进行位置和大小的拉伸匹配。 
+     * @return LogoRect 水印图片位于生成结果图中的坐标及宽高，将按照坐标对标识图片进行位置和大小的拉伸匹配。
      */
     public LogoRect getLogoRect() {
         return this.LogoRect;
     }
 
     /**
-     * Set 水印图片位于生成结果图中的坐标，将按照坐标对标识图片进行位置和大小的拉伸匹配
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param LogoRect 水印图片位于生成结果图中的坐标，将按照坐标对标识图片进行位置和大小的拉伸匹配
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 水印图片位于生成结果图中的坐标及宽高，将按照坐标对标识图片进行位置和大小的拉伸匹配。
+     * @param LogoRect 水印图片位于生成结果图中的坐标及宽高，将按照坐标对标识图片进行位置和大小的拉伸匹配。
      */
     public void setLogoRect(LogoRect LogoRect) {
         this.LogoRect = LogoRect;

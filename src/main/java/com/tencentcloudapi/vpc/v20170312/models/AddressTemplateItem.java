@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AddressTemplateItem extends AbstractModel {
 
     /**
-    * ipm-xxxxxxxx
+    * IP地址模板ID
     */
     @SerializedName("AddressTemplateId")
     @Expose
@@ -52,16 +52,16 @@ public class AddressTemplateItem extends AbstractModel {
     private String To;
 
     /**
-     * Get ipm-xxxxxxxx 
-     * @return AddressTemplateId ipm-xxxxxxxx
+     * Get IP地址模板ID 
+     * @return AddressTemplateId IP地址模板ID
      */
     public String getAddressTemplateId() {
         return this.AddressTemplateId;
     }
 
     /**
-     * Set ipm-xxxxxxxx
-     * @param AddressTemplateId ipm-xxxxxxxx
+     * Set IP地址模板ID
+     * @param AddressTemplateId IP地址模板ID
      */
     public void setAddressTemplateId(String AddressTemplateId) {
         this.AddressTemplateId = AddressTemplateId;

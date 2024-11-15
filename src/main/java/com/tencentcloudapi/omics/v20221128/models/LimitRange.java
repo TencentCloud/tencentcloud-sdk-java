@@ -25,7 +25,6 @@ public class LimitRange extends AbstractModel {
 
     /**
     * 最大CPU设置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxCPU")
     @Expose
@@ -33,17 +32,14 @@ public class LimitRange extends AbstractModel {
 
     /**
     * 最大内存设置（单位：Mi，Gi，Ti，M，G，T）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxMemory")
     @Expose
     private String MaxMemory;
 
     /**
-     * Get 最大CPU设置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最大CPU设置 
      * @return MaxCPU 最大CPU设置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMaxCPU() {
         return this.MaxCPU;
@@ -51,19 +47,15 @@ public class LimitRange extends AbstractModel {
 
     /**
      * Set 最大CPU设置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MaxCPU 最大CPU设置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxCPU(String MaxCPU) {
         this.MaxCPU = MaxCPU;
     }
 
     /**
-     * Get 最大内存设置（单位：Mi，Gi，Ti，M，G，T）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最大内存设置（单位：Mi，Gi，Ti，M，G，T） 
      * @return MaxMemory 最大内存设置（单位：Mi，Gi，Ti，M，G，T）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMaxMemory() {
         return this.MaxMemory;
@@ -71,9 +63,7 @@ public class LimitRange extends AbstractModel {
 
     /**
      * Set 最大内存设置（单位：Mi，Gi，Ti，M，G，T）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MaxMemory 最大内存设置（单位：Mi，Gi，Ti，M，G，T）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxMemory(String MaxMemory) {
         this.MaxMemory = MaxMemory;

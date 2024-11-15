@@ -110,7 +110,6 @@ public class Environment extends AbstractModel {
 
     /**
     * 上个工作流UUID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LastWorkflowUuid")
     @Expose
@@ -118,7 +117,6 @@ public class Environment extends AbstractModel {
 
     /**
     * 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreationTime")
     @Expose
@@ -333,10 +331,8 @@ public class Environment extends AbstractModel {
     }
 
     /**
-     * Get 上个工作流UUID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 上个工作流UUID。 
      * @return LastWorkflowUuid 上个工作流UUID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLastWorkflowUuid() {
         return this.LastWorkflowUuid;
@@ -344,19 +340,15 @@ public class Environment extends AbstractModel {
 
     /**
      * Set 上个工作流UUID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LastWorkflowUuid 上个工作流UUID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLastWorkflowUuid(String LastWorkflowUuid) {
         this.LastWorkflowUuid = LastWorkflowUuid;
     }
 
     /**
-     * Get 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间。 
      * @return CreationTime 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreationTime() {
         return this.CreationTime;
@@ -364,9 +356,7 @@ public class Environment extends AbstractModel {
 
     /**
      * Set 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreationTime 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreationTime(String CreationTime) {
         this.CreationTime = CreationTime;

@@ -25,7 +25,6 @@ public class License extends AbstractModel {
 
     /**
     * 该类型的license个数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Count")
     @Expose
@@ -33,7 +32,6 @@ public class License extends AbstractModel {
 
     /**
     * license状态：0:未绑定；1:已绑定；2:已停服；3:已退费
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -41,7 +39,6 @@ public class License extends AbstractModel {
 
     /**
     * 到期时间戳：s
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExpireTime")
     @Expose
@@ -49,7 +46,6 @@ public class License extends AbstractModel {
 
     /**
     * 服务时长：s
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Duration")
     @Expose
@@ -57,7 +53,6 @@ public class License extends AbstractModel {
 
     /**
     * 剩余天数：天
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RemainDay")
     @Expose
@@ -65,17 +60,14 @@ public class License extends AbstractModel {
 
     /**
     * 该类型的licenseId列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LicenseIds")
     @Expose
     private String [] LicenseIds;
 
     /**
-     * Get 该类型的license个数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该类型的license个数 
      * @return Count 该类型的license个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCount() {
         return this.Count;
@@ -83,19 +75,15 @@ public class License extends AbstractModel {
 
     /**
      * Set 该类型的license个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Count 该类型的license个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCount(Long Count) {
         this.Count = Count;
     }
 
     /**
-     * Get license状态：0:未绑定；1:已绑定；2:已停服；3:已退费
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get license状态：0:未绑定；1:已绑定；2:已停服；3:已退费 
      * @return Status license状态：0:未绑定；1:已绑定；2:已停服；3:已退费
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
         return this.Status;
@@ -103,19 +91,15 @@ public class License extends AbstractModel {
 
     /**
      * Set license状态：0:未绑定；1:已绑定；2:已停服；3:已退费
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status license状态：0:未绑定；1:已绑定；2:已停服；3:已退费
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 到期时间戳：s
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 到期时间戳：s 
      * @return ExpireTime 到期时间戳：s
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExpireTime() {
         return this.ExpireTime;
@@ -123,19 +107,15 @@ public class License extends AbstractModel {
 
     /**
      * Set 到期时间戳：s
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExpireTime 到期时间戳：s
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 
     /**
-     * Get 服务时长：s
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 服务时长：s 
      * @return Duration 服务时长：s
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDuration() {
         return this.Duration;
@@ -143,19 +123,15 @@ public class License extends AbstractModel {
 
     /**
      * Set 服务时长：s
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Duration 服务时长：s
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDuration(String Duration) {
         this.Duration = Duration;
     }
 
     /**
-     * Get 剩余天数：天
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 剩余天数：天 
      * @return RemainDay 剩余天数：天
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRemainDay() {
         return this.RemainDay;
@@ -163,19 +139,15 @@ public class License extends AbstractModel {
 
     /**
      * Set 剩余天数：天
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RemainDay 剩余天数：天
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemainDay(Long RemainDay) {
         this.RemainDay = RemainDay;
     }
 
     /**
-     * Get 该类型的licenseId列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该类型的licenseId列表 
      * @return LicenseIds 该类型的licenseId列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getLicenseIds() {
         return this.LicenseIds;
@@ -183,9 +155,7 @@ public class License extends AbstractModel {
 
     /**
      * Set 该类型的licenseId列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LicenseIds 该类型的licenseId列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLicenseIds(String [] LicenseIds) {
         this.LicenseIds = LicenseIds;

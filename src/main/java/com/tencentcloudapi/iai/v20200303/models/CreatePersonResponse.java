@@ -40,7 +40,7 @@ public class CreatePersonResponse extends AbstractModel {
 
     /**
     * 疑似同一人的PersonId。 
-当 UniquePersonControl 参数不为0且人员库中有疑似的同一人，此参数才有意义。
+- 当 UniquePersonControl 参数不为0且人员库中有疑似的同一人，此参数才有意义。
     */
     @SerializedName("SimilarPersonId")
     @Expose
@@ -98,9 +98,9 @@ public class CreatePersonResponse extends AbstractModel {
 
     /**
      * Get 疑似同一人的PersonId。 
-当 UniquePersonControl 参数不为0且人员库中有疑似的同一人，此参数才有意义。 
+- 当 UniquePersonControl 参数不为0且人员库中有疑似的同一人，此参数才有意义。 
      * @return SimilarPersonId 疑似同一人的PersonId。 
-当 UniquePersonControl 参数不为0且人员库中有疑似的同一人，此参数才有意义。
+- 当 UniquePersonControl 参数不为0且人员库中有疑似的同一人，此参数才有意义。
      */
     public String getSimilarPersonId() {
         return this.SimilarPersonId;
@@ -108,9 +108,9 @@ public class CreatePersonResponse extends AbstractModel {
 
     /**
      * Set 疑似同一人的PersonId。 
-当 UniquePersonControl 参数不为0且人员库中有疑似的同一人，此参数才有意义。
+- 当 UniquePersonControl 参数不为0且人员库中有疑似的同一人，此参数才有意义。
      * @param SimilarPersonId 疑似同一人的PersonId。 
-当 UniquePersonControl 参数不为0且人员库中有疑似的同一人，此参数才有意义。
+- 当 UniquePersonControl 参数不为0且人员库中有疑似的同一人，此参数才有意义。
      */
     public void setSimilarPersonId(String SimilarPersonId) {
         this.SimilarPersonId = SimilarPersonId;

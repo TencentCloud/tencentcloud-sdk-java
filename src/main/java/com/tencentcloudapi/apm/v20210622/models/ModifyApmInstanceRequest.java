@@ -159,6 +159,13 @@ public class ModifyApmInstanceRequest extends AbstractModel {
     private Long ResponseDurationWarningThreshold;
 
     /**
+    * （0=付费版；1=tsf受限免费版；2=免费版）
+    */
+    @SerializedName("Free")
+    @Expose
+    private Long Free;
+
+    /**
     * 是否关联dashboard： 0 关 1 开
     */
     @SerializedName("IsRelatedDashboard")
@@ -171,6 +178,20 @@ public class ModifyApmInstanceRequest extends AbstractModel {
     @SerializedName("DashboardTopicID")
     @Expose
     private String DashboardTopicID;
+
+    /**
+    * 是否开启SQL注入检测
+    */
+    @SerializedName("IsSqlInjectionAnalysis")
+    @Expose
+    private Long IsSqlInjectionAnalysis;
+
+    /**
+    * 是否开启组件漏洞检测
+    */
+    @SerializedName("IsInstrumentationVulnerabilityScan")
+    @Expose
+    private Long IsInstrumentationVulnerabilityScan;
 
     /**
      * Get 实例ID 
@@ -485,6 +506,22 @@ public class ModifyApmInstanceRequest extends AbstractModel {
     }
 
     /**
+     * Get （0=付费版；1=tsf受限免费版；2=免费版） 
+     * @return Free （0=付费版；1=tsf受限免费版；2=免费版）
+     */
+    public Long getFree() {
+        return this.Free;
+    }
+
+    /**
+     * Set （0=付费版；1=tsf受限免费版；2=免费版）
+     * @param Free （0=付费版；1=tsf受限免费版；2=免费版）
+     */
+    public void setFree(Long Free) {
+        this.Free = Free;
+    }
+
+    /**
      * Get 是否关联dashboard： 0 关 1 开 
      * @return IsRelatedDashboard 是否关联dashboard： 0 关 1 开
      */
@@ -514,6 +551,38 @@ public class ModifyApmInstanceRequest extends AbstractModel {
      */
     public void setDashboardTopicID(String DashboardTopicID) {
         this.DashboardTopicID = DashboardTopicID;
+    }
+
+    /**
+     * Get 是否开启SQL注入检测 
+     * @return IsSqlInjectionAnalysis 是否开启SQL注入检测
+     */
+    public Long getIsSqlInjectionAnalysis() {
+        return this.IsSqlInjectionAnalysis;
+    }
+
+    /**
+     * Set 是否开启SQL注入检测
+     * @param IsSqlInjectionAnalysis 是否开启SQL注入检测
+     */
+    public void setIsSqlInjectionAnalysis(Long IsSqlInjectionAnalysis) {
+        this.IsSqlInjectionAnalysis = IsSqlInjectionAnalysis;
+    }
+
+    /**
+     * Get 是否开启组件漏洞检测 
+     * @return IsInstrumentationVulnerabilityScan 是否开启组件漏洞检测
+     */
+    public Long getIsInstrumentationVulnerabilityScan() {
+        return this.IsInstrumentationVulnerabilityScan;
+    }
+
+    /**
+     * Set 是否开启组件漏洞检测
+     * @param IsInstrumentationVulnerabilityScan 是否开启组件漏洞检测
+     */
+    public void setIsInstrumentationVulnerabilityScan(Long IsInstrumentationVulnerabilityScan) {
+        this.IsInstrumentationVulnerabilityScan = IsInstrumentationVulnerabilityScan;
     }
 
     public ModifyApmInstanceRequest() {
@@ -587,11 +656,20 @@ public class ModifyApmInstanceRequest extends AbstractModel {
         if (source.ResponseDurationWarningThreshold != null) {
             this.ResponseDurationWarningThreshold = new Long(source.ResponseDurationWarningThreshold);
         }
+        if (source.Free != null) {
+            this.Free = new Long(source.Free);
+        }
         if (source.IsRelatedDashboard != null) {
             this.IsRelatedDashboard = new Long(source.IsRelatedDashboard);
         }
         if (source.DashboardTopicID != null) {
             this.DashboardTopicID = new String(source.DashboardTopicID);
+        }
+        if (source.IsSqlInjectionAnalysis != null) {
+            this.IsSqlInjectionAnalysis = new Long(source.IsSqlInjectionAnalysis);
+        }
+        if (source.IsInstrumentationVulnerabilityScan != null) {
+            this.IsInstrumentationVulnerabilityScan = new Long(source.IsInstrumentationVulnerabilityScan);
         }
     }
 
@@ -619,8 +697,11 @@ public class ModifyApmInstanceRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "CustomShowTags.", this.CustomShowTags);
         this.setParamSimple(map, prefix + "PayMode", this.PayMode);
         this.setParamSimple(map, prefix + "ResponseDurationWarningThreshold", this.ResponseDurationWarningThreshold);
+        this.setParamSimple(map, prefix + "Free", this.Free);
         this.setParamSimple(map, prefix + "IsRelatedDashboard", this.IsRelatedDashboard);
         this.setParamSimple(map, prefix + "DashboardTopicID", this.DashboardTopicID);
+        this.setParamSimple(map, prefix + "IsSqlInjectionAnalysis", this.IsSqlInjectionAnalysis);
+        this.setParamSimple(map, prefix + "IsInstrumentationVulnerabilityScan", this.IsInstrumentationVulnerabilityScan);
 
     }
 }

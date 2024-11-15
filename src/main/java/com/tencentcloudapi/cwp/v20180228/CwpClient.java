@@ -1951,19 +1951,6 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
-     *云护航计费产品已下线
-
-查询云护航服务订单列表
-     * @param req DescribeCloudProtectServiceOrderListRequest
-     * @return DescribeCloudProtectServiceOrderListResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeCloudProtectServiceOrderListResponse DescribeCloudProtectServiceOrderList(DescribeCloudProtectServiceOrderListRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeCloudProtectServiceOrderList", DescribeCloudProtectServiceOrderListResponse.class);
-    }
-
-    /**
      *接口已无效
 
 本接口 (DescribeComponentStatistics) 用于获取组件统计列表数据。

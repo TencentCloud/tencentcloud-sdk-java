@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DeleteFaceResponse extends AbstractModel {
 
     /**
-    * 删除成功的人脸数量
+    * 删除成功的人脸数量.
     */
     @SerializedName("SucDeletedNum")
     @Expose
     private Long SucDeletedNum;
 
     /**
-    * 删除成功的人脸ID列表
+    * 删除成功的人脸ID列表。
     */
     @SerializedName("SucFaceIds")
     @Expose
@@ -45,32 +45,32 @@ public class DeleteFaceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 删除成功的人脸数量 
-     * @return SucDeletedNum 删除成功的人脸数量
+     * Get 删除成功的人脸数量. 
+     * @return SucDeletedNum 删除成功的人脸数量.
      */
     public Long getSucDeletedNum() {
         return this.SucDeletedNum;
     }
 
     /**
-     * Set 删除成功的人脸数量
-     * @param SucDeletedNum 删除成功的人脸数量
+     * Set 删除成功的人脸数量.
+     * @param SucDeletedNum 删除成功的人脸数量.
      */
     public void setSucDeletedNum(Long SucDeletedNum) {
         this.SucDeletedNum = SucDeletedNum;
     }
 
     /**
-     * Get 删除成功的人脸ID列表 
-     * @return SucFaceIds 删除成功的人脸ID列表
+     * Get 删除成功的人脸ID列表。 
+     * @return SucFaceIds 删除成功的人脸ID列表。
      */
     public String [] getSucFaceIds() {
         return this.SucFaceIds;
     }
 
     /**
-     * Set 删除成功的人脸ID列表
-     * @param SucFaceIds 删除成功的人脸ID列表
+     * Set 删除成功的人脸ID列表。
+     * @param SucFaceIds 删除成功的人脸ID列表。
      */
     public void setSucFaceIds(String [] SucFaceIds) {
         this.SucFaceIds = SucFaceIds;

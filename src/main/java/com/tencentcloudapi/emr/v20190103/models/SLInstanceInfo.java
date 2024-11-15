@@ -131,6 +131,27 @@ public class SLInstanceInfo extends AbstractModel {
     private Tag [] Tags;
 
     /**
+    * 自动续费标记， 0：表示通知即将过期，但不自动续费 1：表示通知即将过期，而且自动续费 2：表示不通知即将过期，也不自动续费，若业务无续费概念，设置为0
+    */
+    @SerializedName("AutoRenewFlag")
+    @Expose
+    private Long AutoRenewFlag;
+
+    /**
+    * 隔离时间，未隔离返回0000-00-00 00:00:00。
+    */
+    @SerializedName("IsolateTime")
+    @Expose
+    private String IsolateTime;
+
+    /**
+    * 过期时间，后付费返回0000-00-00 00:00:00
+    */
+    @SerializedName("ExpireTime")
+    @Expose
+    private String ExpireTime;
+
+    /**
      * Get 集群实例字符串ID 
      * @return ClusterId 集群实例字符串ID
      */
@@ -378,6 +399,54 @@ public class SLInstanceInfo extends AbstractModel {
         this.Tags = Tags;
     }
 
+    /**
+     * Get 自动续费标记， 0：表示通知即将过期，但不自动续费 1：表示通知即将过期，而且自动续费 2：表示不通知即将过期，也不自动续费，若业务无续费概念，设置为0 
+     * @return AutoRenewFlag 自动续费标记， 0：表示通知即将过期，但不自动续费 1：表示通知即将过期，而且自动续费 2：表示不通知即将过期，也不自动续费，若业务无续费概念，设置为0
+     */
+    public Long getAutoRenewFlag() {
+        return this.AutoRenewFlag;
+    }
+
+    /**
+     * Set 自动续费标记， 0：表示通知即将过期，但不自动续费 1：表示通知即将过期，而且自动续费 2：表示不通知即将过期，也不自动续费，若业务无续费概念，设置为0
+     * @param AutoRenewFlag 自动续费标记， 0：表示通知即将过期，但不自动续费 1：表示通知即将过期，而且自动续费 2：表示不通知即将过期，也不自动续费，若业务无续费概念，设置为0
+     */
+    public void setAutoRenewFlag(Long AutoRenewFlag) {
+        this.AutoRenewFlag = AutoRenewFlag;
+    }
+
+    /**
+     * Get 隔离时间，未隔离返回0000-00-00 00:00:00。 
+     * @return IsolateTime 隔离时间，未隔离返回0000-00-00 00:00:00。
+     */
+    public String getIsolateTime() {
+        return this.IsolateTime;
+    }
+
+    /**
+     * Set 隔离时间，未隔离返回0000-00-00 00:00:00。
+     * @param IsolateTime 隔离时间，未隔离返回0000-00-00 00:00:00。
+     */
+    public void setIsolateTime(String IsolateTime) {
+        this.IsolateTime = IsolateTime;
+    }
+
+    /**
+     * Get 过期时间，后付费返回0000-00-00 00:00:00 
+     * @return ExpireTime 过期时间，后付费返回0000-00-00 00:00:00
+     */
+    public String getExpireTime() {
+        return this.ExpireTime;
+    }
+
+    /**
+     * Set 过期时间，后付费返回0000-00-00 00:00:00
+     * @param ExpireTime 过期时间，后付费返回0000-00-00 00:00:00
+     */
+    public void setExpireTime(String ExpireTime) {
+        this.ExpireTime = ExpireTime;
+    }
+
     public SLInstanceInfo() {
     }
 
@@ -437,6 +506,15 @@ public class SLInstanceInfo extends AbstractModel {
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
         }
+        if (source.AutoRenewFlag != null) {
+            this.AutoRenewFlag = new Long(source.AutoRenewFlag);
+        }
+        if (source.IsolateTime != null) {
+            this.IsolateTime = new String(source.IsolateTime);
+        }
+        if (source.ExpireTime != null) {
+            this.ExpireTime = new String(source.ExpireTime);
+        }
     }
 
 
@@ -459,6 +537,9 @@ public class SLInstanceInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "PayMode", this.PayMode);
         this.setParamArrayObj(map, prefix + "ZoneSettings.", this.ZoneSettings);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
+        this.setParamSimple(map, prefix + "IsolateTime", this.IsolateTime);
+        this.setParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
 
     }
 }

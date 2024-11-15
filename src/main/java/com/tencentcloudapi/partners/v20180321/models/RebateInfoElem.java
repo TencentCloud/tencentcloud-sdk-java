@@ -25,6 +25,7 @@ public class RebateInfoElem extends AbstractModel {
 
     /**
     * 代理商账号ID
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Uin")
     @Expose
@@ -32,6 +33,7 @@ public class RebateInfoElem extends AbstractModel {
 
     /**
     * 返佣月份，如2018-02
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RebateMonth")
     @Expose
@@ -39,6 +41,7 @@ public class RebateInfoElem extends AbstractModel {
 
     /**
     * 返佣金额，单位分
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Amt")
     @Expose
@@ -46,6 +49,7 @@ public class RebateInfoElem extends AbstractModel {
 
     /**
     * 月度业绩，单位分
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MonthSales")
     @Expose
@@ -53,6 +57,7 @@ public class RebateInfoElem extends AbstractModel {
 
     /**
     * 季度业绩，单位分
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("QuarterSales")
     @Expose
@@ -60,14 +65,17 @@ public class RebateInfoElem extends AbstractModel {
 
     /**
     * NORMAL(正常)/HAS_OVERDUE_BILL(欠费)/NO_CONTRACT(缺合同)
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExceptionFlag")
     @Expose
     private String ExceptionFlag;
 
     /**
-     * Get 代理商账号ID 
+     * Get 代理商账号ID
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Uin 代理商账号ID
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUin() {
         return this.Uin;
@@ -75,15 +83,19 @@ public class RebateInfoElem extends AbstractModel {
 
     /**
      * Set 代理商账号ID
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Uin 代理商账号ID
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUin(String Uin) {
         this.Uin = Uin;
     }
 
     /**
-     * Get 返佣月份，如2018-02 
+     * Get 返佣月份，如2018-02
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return RebateMonth 返佣月份，如2018-02
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRebateMonth() {
         return this.RebateMonth;
@@ -91,15 +103,19 @@ public class RebateInfoElem extends AbstractModel {
 
     /**
      * Set 返佣月份，如2018-02
+注意：此字段可能返回 null，表示取不到有效值。
      * @param RebateMonth 返佣月份，如2018-02
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRebateMonth(String RebateMonth) {
         this.RebateMonth = RebateMonth;
     }
 
     /**
-     * Get 返佣金额，单位分 
+     * Get 返佣金额，单位分
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Amt 返佣金额，单位分
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAmt() {
         return this.Amt;
@@ -107,15 +123,19 @@ public class RebateInfoElem extends AbstractModel {
 
     /**
      * Set 返佣金额，单位分
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Amt 返佣金额，单位分
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAmt(Long Amt) {
         this.Amt = Amt;
     }
 
     /**
-     * Get 月度业绩，单位分 
+     * Get 月度业绩，单位分
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return MonthSales 月度业绩，单位分
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMonthSales() {
         return this.MonthSales;
@@ -123,15 +143,19 @@ public class RebateInfoElem extends AbstractModel {
 
     /**
      * Set 月度业绩，单位分
+注意：此字段可能返回 null，表示取不到有效值。
      * @param MonthSales 月度业绩，单位分
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMonthSales(Long MonthSales) {
         this.MonthSales = MonthSales;
     }
 
     /**
-     * Get 季度业绩，单位分 
+     * Get 季度业绩，单位分
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return QuarterSales 季度业绩，单位分
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getQuarterSales() {
         return this.QuarterSales;
@@ -139,15 +163,19 @@ public class RebateInfoElem extends AbstractModel {
 
     /**
      * Set 季度业绩，单位分
+注意：此字段可能返回 null，表示取不到有效值。
      * @param QuarterSales 季度业绩，单位分
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQuarterSales(Long QuarterSales) {
         this.QuarterSales = QuarterSales;
     }
 
     /**
-     * Get NORMAL(正常)/HAS_OVERDUE_BILL(欠费)/NO_CONTRACT(缺合同) 
+     * Get NORMAL(正常)/HAS_OVERDUE_BILL(欠费)/NO_CONTRACT(缺合同)
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ExceptionFlag NORMAL(正常)/HAS_OVERDUE_BILL(欠费)/NO_CONTRACT(缺合同)
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExceptionFlag() {
         return this.ExceptionFlag;
@@ -155,7 +183,9 @@ public class RebateInfoElem extends AbstractModel {
 
     /**
      * Set NORMAL(正常)/HAS_OVERDUE_BILL(欠费)/NO_CONTRACT(缺合同)
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ExceptionFlag NORMAL(正常)/HAS_OVERDUE_BILL(欠费)/NO_CONTRACT(缺合同)
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExceptionFlag(String ExceptionFlag) {
         this.ExceptionFlag = ExceptionFlag;

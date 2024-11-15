@@ -38,6 +38,13 @@ public class GeneralHandwritingOCRResponse extends AbstractModel {
     private Float Angel;
 
     /**
+    * 图片旋转角度（角度制），文本的水平方向为0°；顺时针为正，逆时针为负。点击查看<a href="https://cloud.tencent.com/document/product/866/45139">如何纠正倾斜文本</a>
+    */
+    @SerializedName("Angle")
+    @Expose
+    private Float Angle;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -63,7 +70,9 @@ public class GeneralHandwritingOCRResponse extends AbstractModel {
     /**
      * Get 图片旋转角度（角度制），文本的水平方向为0°；顺时针为正，逆时针为负。点击查看<a href="https://cloud.tencent.com/document/product/866/45139">如何纠正倾斜文本</a> 
      * @return Angel 图片旋转角度（角度制），文本的水平方向为0°；顺时针为正，逆时针为负。点击查看<a href="https://cloud.tencent.com/document/product/866/45139">如何纠正倾斜文本</a>
+     * @deprecated
      */
+    @Deprecated
     public Float getAngel() {
         return this.Angel;
     }
@@ -71,9 +80,27 @@ public class GeneralHandwritingOCRResponse extends AbstractModel {
     /**
      * Set 图片旋转角度（角度制），文本的水平方向为0°；顺时针为正，逆时针为负。点击查看<a href="https://cloud.tencent.com/document/product/866/45139">如何纠正倾斜文本</a>
      * @param Angel 图片旋转角度（角度制），文本的水平方向为0°；顺时针为正，逆时针为负。点击查看<a href="https://cloud.tencent.com/document/product/866/45139">如何纠正倾斜文本</a>
+     * @deprecated
      */
+    @Deprecated
     public void setAngel(Float Angel) {
         this.Angel = Angel;
+    }
+
+    /**
+     * Get 图片旋转角度（角度制），文本的水平方向为0°；顺时针为正，逆时针为负。点击查看<a href="https://cloud.tencent.com/document/product/866/45139">如何纠正倾斜文本</a> 
+     * @return Angle 图片旋转角度（角度制），文本的水平方向为0°；顺时针为正，逆时针为负。点击查看<a href="https://cloud.tencent.com/document/product/866/45139">如何纠正倾斜文本</a>
+     */
+    public Float getAngle() {
+        return this.Angle;
+    }
+
+    /**
+     * Set 图片旋转角度（角度制），文本的水平方向为0°；顺时针为正，逆时针为负。点击查看<a href="https://cloud.tencent.com/document/product/866/45139">如何纠正倾斜文本</a>
+     * @param Angle 图片旋转角度（角度制），文本的水平方向为0°；顺时针为正，逆时针为负。点击查看<a href="https://cloud.tencent.com/document/product/866/45139">如何纠正倾斜文本</a>
+     */
+    public void setAngle(Float Angle) {
+        this.Angle = Angle;
     }
 
     /**
@@ -109,6 +136,9 @@ public class GeneralHandwritingOCRResponse extends AbstractModel {
         if (source.Angel != null) {
             this.Angel = new Float(source.Angel);
         }
+        if (source.Angle != null) {
+            this.Angle = new Float(source.Angle);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -121,6 +151,7 @@ public class GeneralHandwritingOCRResponse extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "TextDetections.", this.TextDetections);
         this.setParamSimple(map, prefix + "Angel", this.Angel);
+        this.setParamSimple(map, prefix + "Angle", this.Angle);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

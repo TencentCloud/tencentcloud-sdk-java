@@ -24,7 +24,14 @@ import java.util.HashMap;
 public class GetFaceIdRiskInfoResponse extends AbstractModel {
 
     /**
-    * 描述当前请求所在设备的风险标签，详情如下： 01-设备疑似被Root/设备疑似越狱 02-设备疑似被注入 03-设备疑似为模拟器 04-设备疑似存在风险操作 05-摄像头疑似被劫持 06-疑似黑产设备
+    * 描述当前请求所在设备的风险标签
+- 详情如下：
+01-设备疑似被Root/设备疑似越狱。
+02-设备疑似被注入。
+03-设备疑似为模拟器。
+04-设备疑似存在风险操作。
+05-摄像头疑似被劫持。
+06-疑似黑产设备。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeviceInfoTag")
@@ -32,7 +39,13 @@ public class GetFaceIdRiskInfoResponse extends AbstractModel {
     private String DeviceInfoTag;
 
     /**
-    * 描述当前请求所在设备的风险等级，共4级，详情如下： 1 - 低风险 2 - 中风险 3 - 高风险 4 - 攻击 ，-1表示未获取到风险等级
+    * 描述当前请求所在设备的风险等级，共4级。
+- 详情如下：
+ 1 - 低风险。
+ 2 - 中风险。
+ 3 - 高风险。
+ 4 - 攻击。 
+-1表示未获取到风险等级。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeviceInfoLevel")
@@ -40,7 +53,7 @@ public class GetFaceIdRiskInfoResponse extends AbstractModel {
     private Long DeviceInfoLevel;
 
     /**
-    * 设备id标识
+    * 设备id标识。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OpenId")
@@ -48,7 +61,13 @@ public class GetFaceIdRiskInfoResponse extends AbstractModel {
     private String OpenId;
 
     /**
-    * 描述当前请求所在设备的相机指纹风险等级，共4级，详情如下： 1 - 低风险 2 - 中风险 3 - 高风险 4 - 攻击 ，-1表示未获取到风险等级
+    * 描述当前请求所在设备的相机指纹风险等级，共4级。
+- 详情如下：
+ 1 - 低风险。
+ 2 - 中风险。
+ 3 - 高风险。
+ 4 - 攻击。
+ -1表示未获取到风险等级。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CameraInfoLevel")
@@ -56,7 +75,16 @@ public class GetFaceIdRiskInfoResponse extends AbstractModel {
     private Long CameraInfoLevel;
 
     /**
-    * 描述当前请求所在设备的相机指纹风险标签，详情如下： 01-设备疑似被Root/设备疑似越狱 02-设备疑似被注入 03-设备疑似为模拟器 04-设备疑似存在风险操作 05-摄像头疑似被劫持 06-疑似黑产设备，空表示没有相机指纹风险
+    * 描述当前请求所在设备的相机指纹风险标签。
+
+- 详情如下：
+ 01-设备疑似被Root/设备疑似越狱。
+ 02-设备疑似被注入。
+ 03-设备疑似为模拟器。
+ 04-设备疑似存在风险操作。
+ 05-摄像头疑似被劫持。
+ 06-疑似黑产设备。
+ 空表示没有相机指纹风险。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CameraInfoTag")
@@ -64,7 +92,7 @@ public class GetFaceIdRiskInfoResponse extends AbstractModel {
     private String CameraInfoTag;
 
     /**
-    * 获取token时透传的信息	
+    * 获取token时透传的信息。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Extra")
@@ -79,9 +107,23 @@ public class GetFaceIdRiskInfoResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 描述当前请求所在设备的风险标签，详情如下： 01-设备疑似被Root/设备疑似越狱 02-设备疑似被注入 03-设备疑似为模拟器 04-设备疑似存在风险操作 05-摄像头疑似被劫持 06-疑似黑产设备
+     * Get 描述当前请求所在设备的风险标签
+- 详情如下：
+01-设备疑似被Root/设备疑似越狱。
+02-设备疑似被注入。
+03-设备疑似为模拟器。
+04-设备疑似存在风险操作。
+05-摄像头疑似被劫持。
+06-疑似黑产设备。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DeviceInfoTag 描述当前请求所在设备的风险标签，详情如下： 01-设备疑似被Root/设备疑似越狱 02-设备疑似被注入 03-设备疑似为模拟器 04-设备疑似存在风险操作 05-摄像头疑似被劫持 06-疑似黑产设备
+     * @return DeviceInfoTag 描述当前请求所在设备的风险标签
+- 详情如下：
+01-设备疑似被Root/设备疑似越狱。
+02-设备疑似被注入。
+03-设备疑似为模拟器。
+04-设备疑似存在风险操作。
+05-摄像头疑似被劫持。
+06-疑似黑产设备。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDeviceInfoTag() {
@@ -89,9 +131,23 @@ public class GetFaceIdRiskInfoResponse extends AbstractModel {
     }
 
     /**
-     * Set 描述当前请求所在设备的风险标签，详情如下： 01-设备疑似被Root/设备疑似越狱 02-设备疑似被注入 03-设备疑似为模拟器 04-设备疑似存在风险操作 05-摄像头疑似被劫持 06-疑似黑产设备
+     * Set 描述当前请求所在设备的风险标签
+- 详情如下：
+01-设备疑似被Root/设备疑似越狱。
+02-设备疑似被注入。
+03-设备疑似为模拟器。
+04-设备疑似存在风险操作。
+05-摄像头疑似被劫持。
+06-疑似黑产设备。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DeviceInfoTag 描述当前请求所在设备的风险标签，详情如下： 01-设备疑似被Root/设备疑似越狱 02-设备疑似被注入 03-设备疑似为模拟器 04-设备疑似存在风险操作 05-摄像头疑似被劫持 06-疑似黑产设备
+     * @param DeviceInfoTag 描述当前请求所在设备的风险标签
+- 详情如下：
+01-设备疑似被Root/设备疑似越狱。
+02-设备疑似被注入。
+03-设备疑似为模拟器。
+04-设备疑似存在风险操作。
+05-摄像头疑似被劫持。
+06-疑似黑产设备。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeviceInfoTag(String DeviceInfoTag) {
@@ -99,9 +155,21 @@ public class GetFaceIdRiskInfoResponse extends AbstractModel {
     }
 
     /**
-     * Get 描述当前请求所在设备的风险等级，共4级，详情如下： 1 - 低风险 2 - 中风险 3 - 高风险 4 - 攻击 ，-1表示未获取到风险等级
+     * Get 描述当前请求所在设备的风险等级，共4级。
+- 详情如下：
+ 1 - 低风险。
+ 2 - 中风险。
+ 3 - 高风险。
+ 4 - 攻击。 
+-1表示未获取到风险等级。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DeviceInfoLevel 描述当前请求所在设备的风险等级，共4级，详情如下： 1 - 低风险 2 - 中风险 3 - 高风险 4 - 攻击 ，-1表示未获取到风险等级
+     * @return DeviceInfoLevel 描述当前请求所在设备的风险等级，共4级。
+- 详情如下：
+ 1 - 低风险。
+ 2 - 中风险。
+ 3 - 高风险。
+ 4 - 攻击。 
+-1表示未获取到风险等级。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDeviceInfoLevel() {
@@ -109,9 +177,21 @@ public class GetFaceIdRiskInfoResponse extends AbstractModel {
     }
 
     /**
-     * Set 描述当前请求所在设备的风险等级，共4级，详情如下： 1 - 低风险 2 - 中风险 3 - 高风险 4 - 攻击 ，-1表示未获取到风险等级
+     * Set 描述当前请求所在设备的风险等级，共4级。
+- 详情如下：
+ 1 - 低风险。
+ 2 - 中风险。
+ 3 - 高风险。
+ 4 - 攻击。 
+-1表示未获取到风险等级。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DeviceInfoLevel 描述当前请求所在设备的风险等级，共4级，详情如下： 1 - 低风险 2 - 中风险 3 - 高风险 4 - 攻击 ，-1表示未获取到风险等级
+     * @param DeviceInfoLevel 描述当前请求所在设备的风险等级，共4级。
+- 详情如下：
+ 1 - 低风险。
+ 2 - 中风险。
+ 3 - 高风险。
+ 4 - 攻击。 
+-1表示未获取到风险等级。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeviceInfoLevel(Long DeviceInfoLevel) {
@@ -119,9 +199,9 @@ public class GetFaceIdRiskInfoResponse extends AbstractModel {
     }
 
     /**
-     * Get 设备id标识
+     * Get 设备id标识。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OpenId 设备id标识
+     * @return OpenId 设备id标识。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOpenId() {
@@ -129,9 +209,9 @@ public class GetFaceIdRiskInfoResponse extends AbstractModel {
     }
 
     /**
-     * Set 设备id标识
+     * Set 设备id标识。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OpenId 设备id标识
+     * @param OpenId 设备id标识。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOpenId(String OpenId) {
@@ -139,9 +219,21 @@ public class GetFaceIdRiskInfoResponse extends AbstractModel {
     }
 
     /**
-     * Get 描述当前请求所在设备的相机指纹风险等级，共4级，详情如下： 1 - 低风险 2 - 中风险 3 - 高风险 4 - 攻击 ，-1表示未获取到风险等级
+     * Get 描述当前请求所在设备的相机指纹风险等级，共4级。
+- 详情如下：
+ 1 - 低风险。
+ 2 - 中风险。
+ 3 - 高风险。
+ 4 - 攻击。
+ -1表示未获取到风险等级。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CameraInfoLevel 描述当前请求所在设备的相机指纹风险等级，共4级，详情如下： 1 - 低风险 2 - 中风险 3 - 高风险 4 - 攻击 ，-1表示未获取到风险等级
+     * @return CameraInfoLevel 描述当前请求所在设备的相机指纹风险等级，共4级。
+- 详情如下：
+ 1 - 低风险。
+ 2 - 中风险。
+ 3 - 高风险。
+ 4 - 攻击。
+ -1表示未获取到风险等级。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCameraInfoLevel() {
@@ -149,9 +241,21 @@ public class GetFaceIdRiskInfoResponse extends AbstractModel {
     }
 
     /**
-     * Set 描述当前请求所在设备的相机指纹风险等级，共4级，详情如下： 1 - 低风险 2 - 中风险 3 - 高风险 4 - 攻击 ，-1表示未获取到风险等级
+     * Set 描述当前请求所在设备的相机指纹风险等级，共4级。
+- 详情如下：
+ 1 - 低风险。
+ 2 - 中风险。
+ 3 - 高风险。
+ 4 - 攻击。
+ -1表示未获取到风险等级。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CameraInfoLevel 描述当前请求所在设备的相机指纹风险等级，共4级，详情如下： 1 - 低风险 2 - 中风险 3 - 高风险 4 - 攻击 ，-1表示未获取到风险等级
+     * @param CameraInfoLevel 描述当前请求所在设备的相机指纹风险等级，共4级。
+- 详情如下：
+ 1 - 低风险。
+ 2 - 中风险。
+ 3 - 高风险。
+ 4 - 攻击。
+ -1表示未获取到风险等级。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCameraInfoLevel(Long CameraInfoLevel) {
@@ -159,9 +263,27 @@ public class GetFaceIdRiskInfoResponse extends AbstractModel {
     }
 
     /**
-     * Get 描述当前请求所在设备的相机指纹风险标签，详情如下： 01-设备疑似被Root/设备疑似越狱 02-设备疑似被注入 03-设备疑似为模拟器 04-设备疑似存在风险操作 05-摄像头疑似被劫持 06-疑似黑产设备，空表示没有相机指纹风险
+     * Get 描述当前请求所在设备的相机指纹风险标签。
+
+- 详情如下：
+ 01-设备疑似被Root/设备疑似越狱。
+ 02-设备疑似被注入。
+ 03-设备疑似为模拟器。
+ 04-设备疑似存在风险操作。
+ 05-摄像头疑似被劫持。
+ 06-疑似黑产设备。
+ 空表示没有相机指纹风险。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CameraInfoTag 描述当前请求所在设备的相机指纹风险标签，详情如下： 01-设备疑似被Root/设备疑似越狱 02-设备疑似被注入 03-设备疑似为模拟器 04-设备疑似存在风险操作 05-摄像头疑似被劫持 06-疑似黑产设备，空表示没有相机指纹风险
+     * @return CameraInfoTag 描述当前请求所在设备的相机指纹风险标签。
+
+- 详情如下：
+ 01-设备疑似被Root/设备疑似越狱。
+ 02-设备疑似被注入。
+ 03-设备疑似为模拟器。
+ 04-设备疑似存在风险操作。
+ 05-摄像头疑似被劫持。
+ 06-疑似黑产设备。
+ 空表示没有相机指纹风险。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCameraInfoTag() {
@@ -169,9 +291,27 @@ public class GetFaceIdRiskInfoResponse extends AbstractModel {
     }
 
     /**
-     * Set 描述当前请求所在设备的相机指纹风险标签，详情如下： 01-设备疑似被Root/设备疑似越狱 02-设备疑似被注入 03-设备疑似为模拟器 04-设备疑似存在风险操作 05-摄像头疑似被劫持 06-疑似黑产设备，空表示没有相机指纹风险
+     * Set 描述当前请求所在设备的相机指纹风险标签。
+
+- 详情如下：
+ 01-设备疑似被Root/设备疑似越狱。
+ 02-设备疑似被注入。
+ 03-设备疑似为模拟器。
+ 04-设备疑似存在风险操作。
+ 05-摄像头疑似被劫持。
+ 06-疑似黑产设备。
+ 空表示没有相机指纹风险。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CameraInfoTag 描述当前请求所在设备的相机指纹风险标签，详情如下： 01-设备疑似被Root/设备疑似越狱 02-设备疑似被注入 03-设备疑似为模拟器 04-设备疑似存在风险操作 05-摄像头疑似被劫持 06-疑似黑产设备，空表示没有相机指纹风险
+     * @param CameraInfoTag 描述当前请求所在设备的相机指纹风险标签。
+
+- 详情如下：
+ 01-设备疑似被Root/设备疑似越狱。
+ 02-设备疑似被注入。
+ 03-设备疑似为模拟器。
+ 04-设备疑似存在风险操作。
+ 05-摄像头疑似被劫持。
+ 06-疑似黑产设备。
+ 空表示没有相机指纹风险。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCameraInfoTag(String CameraInfoTag) {
@@ -179,9 +319,9 @@ public class GetFaceIdRiskInfoResponse extends AbstractModel {
     }
 
     /**
-     * Get 获取token时透传的信息	
+     * Get 获取token时透传的信息。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Extra 获取token时透传的信息	
+     * @return Extra 获取token时透传的信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExtra() {
@@ -189,9 +329,9 @@ public class GetFaceIdRiskInfoResponse extends AbstractModel {
     }
 
     /**
-     * Set 获取token时透传的信息	
+     * Set 获取token时透传的信息。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Extra 获取token时透传的信息	
+     * @param Extra 获取token时透传的信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExtra(String Extra) {

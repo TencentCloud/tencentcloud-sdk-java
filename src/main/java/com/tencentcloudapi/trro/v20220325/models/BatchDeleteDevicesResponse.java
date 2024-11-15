@@ -25,7 +25,6 @@ public class BatchDeleteDevicesResponse extends AbstractModel {
 
     /**
     * 删除失败的设备ID列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FailedDeviceIds")
     @Expose
@@ -39,10 +38,8 @@ public class BatchDeleteDevicesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 删除失败的设备ID列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 删除失败的设备ID列表 
      * @return FailedDeviceIds 删除失败的设备ID列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getFailedDeviceIds() {
         return this.FailedDeviceIds;
@@ -50,9 +47,7 @@ public class BatchDeleteDevicesResponse extends AbstractModel {
 
     /**
      * Set 删除失败的设备ID列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FailedDeviceIds 删除失败的设备ID列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFailedDeviceIds(String [] FailedDeviceIds) {
         this.FailedDeviceIds = FailedDeviceIds;

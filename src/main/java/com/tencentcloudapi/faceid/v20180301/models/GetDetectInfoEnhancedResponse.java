@@ -64,7 +64,8 @@ public class GetDetectInfoEnhancedResponse extends AbstractModel {
     private Encryption Encryption;
 
     /**
-    * 意愿核身朗读模式结果信息。若未使用意愿核身功能，该字段返回值可以不处理。
+    * 意愿核身朗读模式结果信息。
+- 若未使用意愿核身功能，该字段返回值可以不处理。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IntentionVerifyData")
@@ -72,7 +73,9 @@ public class GetDetectInfoEnhancedResponse extends AbstractModel {
     private IntentionVerifyData IntentionVerifyData;
 
     /**
-    * 意愿核身问答模式结果。若未使用该意愿核身功能，该字段返回值可以不处理。
+    * 意愿核身问答模式结果。
+
+- 若未使用该意愿核身功能，该字段返回值可以不处理。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IntentionQuestionResult")
@@ -80,7 +83,8 @@ public class GetDetectInfoEnhancedResponse extends AbstractModel {
     private IntentionQuestionResult IntentionQuestionResult;
 
     /**
-    * 意愿核身点头确认模式的结果信息，若未使用该意愿核身功能，该字段返回值可以不处理。
+    * 意愿核身点头确认模式的结果信息。
+- 若未使用该意愿核身功能，该字段返回值可以不处理。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IntentionActionResult")
@@ -88,7 +92,7 @@ public class GetDetectInfoEnhancedResponse extends AbstractModel {
     private IntentionActionResult IntentionActionResult;
 
     /**
-    * 加密后的数据
+    * 加密后的数据。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EncryptedBody")
@@ -203,9 +207,11 @@ public class GetDetectInfoEnhancedResponse extends AbstractModel {
     }
 
     /**
-     * Get 意愿核身朗读模式结果信息。若未使用意愿核身功能，该字段返回值可以不处理。
+     * Get 意愿核身朗读模式结果信息。
+- 若未使用意愿核身功能，该字段返回值可以不处理。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IntentionVerifyData 意愿核身朗读模式结果信息。若未使用意愿核身功能，该字段返回值可以不处理。
+     * @return IntentionVerifyData 意愿核身朗读模式结果信息。
+- 若未使用意愿核身功能，该字段返回值可以不处理。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public IntentionVerifyData getIntentionVerifyData() {
@@ -213,9 +219,11 @@ public class GetDetectInfoEnhancedResponse extends AbstractModel {
     }
 
     /**
-     * Set 意愿核身朗读模式结果信息。若未使用意愿核身功能，该字段返回值可以不处理。
+     * Set 意愿核身朗读模式结果信息。
+- 若未使用意愿核身功能，该字段返回值可以不处理。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IntentionVerifyData 意愿核身朗读模式结果信息。若未使用意愿核身功能，该字段返回值可以不处理。
+     * @param IntentionVerifyData 意愿核身朗读模式结果信息。
+- 若未使用意愿核身功能，该字段返回值可以不处理。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIntentionVerifyData(IntentionVerifyData IntentionVerifyData) {
@@ -223,9 +231,13 @@ public class GetDetectInfoEnhancedResponse extends AbstractModel {
     }
 
     /**
-     * Get 意愿核身问答模式结果。若未使用该意愿核身功能，该字段返回值可以不处理。
+     * Get 意愿核身问答模式结果。
+
+- 若未使用该意愿核身功能，该字段返回值可以不处理。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IntentionQuestionResult 意愿核身问答模式结果。若未使用该意愿核身功能，该字段返回值可以不处理。
+     * @return IntentionQuestionResult 意愿核身问答模式结果。
+
+- 若未使用该意愿核身功能，该字段返回值可以不处理。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public IntentionQuestionResult getIntentionQuestionResult() {
@@ -233,9 +245,13 @@ public class GetDetectInfoEnhancedResponse extends AbstractModel {
     }
 
     /**
-     * Set 意愿核身问答模式结果。若未使用该意愿核身功能，该字段返回值可以不处理。
+     * Set 意愿核身问答模式结果。
+
+- 若未使用该意愿核身功能，该字段返回值可以不处理。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IntentionQuestionResult 意愿核身问答模式结果。若未使用该意愿核身功能，该字段返回值可以不处理。
+     * @param IntentionQuestionResult 意愿核身问答模式结果。
+
+- 若未使用该意愿核身功能，该字段返回值可以不处理。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIntentionQuestionResult(IntentionQuestionResult IntentionQuestionResult) {
@@ -243,9 +259,11 @@ public class GetDetectInfoEnhancedResponse extends AbstractModel {
     }
 
     /**
-     * Get 意愿核身点头确认模式的结果信息，若未使用该意愿核身功能，该字段返回值可以不处理。
+     * Get 意愿核身点头确认模式的结果信息。
+- 若未使用该意愿核身功能，该字段返回值可以不处理。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IntentionActionResult 意愿核身点头确认模式的结果信息，若未使用该意愿核身功能，该字段返回值可以不处理。
+     * @return IntentionActionResult 意愿核身点头确认模式的结果信息。
+- 若未使用该意愿核身功能，该字段返回值可以不处理。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public IntentionActionResult getIntentionActionResult() {
@@ -253,9 +271,11 @@ public class GetDetectInfoEnhancedResponse extends AbstractModel {
     }
 
     /**
-     * Set 意愿核身点头确认模式的结果信息，若未使用该意愿核身功能，该字段返回值可以不处理。
+     * Set 意愿核身点头确认模式的结果信息。
+- 若未使用该意愿核身功能，该字段返回值可以不处理。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IntentionActionResult 意愿核身点头确认模式的结果信息，若未使用该意愿核身功能，该字段返回值可以不处理。
+     * @param IntentionActionResult 意愿核身点头确认模式的结果信息。
+- 若未使用该意愿核身功能，该字段返回值可以不处理。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIntentionActionResult(IntentionActionResult IntentionActionResult) {
@@ -263,9 +283,9 @@ public class GetDetectInfoEnhancedResponse extends AbstractModel {
     }
 
     /**
-     * Get 加密后的数据
+     * Get 加密后的数据。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EncryptedBody 加密后的数据
+     * @return EncryptedBody 加密后的数据。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEncryptedBody() {
@@ -273,9 +293,9 @@ public class GetDetectInfoEnhancedResponse extends AbstractModel {
     }
 
     /**
-     * Set 加密后的数据
+     * Set 加密后的数据。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EncryptedBody 加密后的数据
+     * @param EncryptedBody 加密后的数据。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEncryptedBody(String EncryptedBody) {

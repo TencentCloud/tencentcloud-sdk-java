@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateReconstructDocumentFlowResponse extends AbstractModel {
 
     /**
-    * 任务唯一id。30天内可以通过GetReconstructDocumentResult接口查询TaskId对应的处理结果。
+    * 任务唯一ID。30天内可以通过[GetReconstructDocumentResult](https://cloud.tencent.com/document/product/1759/107505)接口查询TaskId对应的处理结果。
     */
     @SerializedName("TaskId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateReconstructDocumentFlowResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 任务唯一id。30天内可以通过GetReconstructDocumentResult接口查询TaskId对应的处理结果。 
-     * @return TaskId 任务唯一id。30天内可以通过GetReconstructDocumentResult接口查询TaskId对应的处理结果。
+     * Get 任务唯一ID。30天内可以通过[GetReconstructDocumentResult](https://cloud.tencent.com/document/product/1759/107505)接口查询TaskId对应的处理结果。 
+     * @return TaskId 任务唯一ID。30天内可以通过[GetReconstructDocumentResult](https://cloud.tencent.com/document/product/1759/107505)接口查询TaskId对应的处理结果。
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 任务唯一id。30天内可以通过GetReconstructDocumentResult接口查询TaskId对应的处理结果。
-     * @param TaskId 任务唯一id。30天内可以通过GetReconstructDocumentResult接口查询TaskId对应的处理结果。
+     * Set 任务唯一ID。30天内可以通过[GetReconstructDocumentResult](https://cloud.tencent.com/document/product/1759/107505)接口查询TaskId对应的处理结果。
+     * @param TaskId 任务唯一ID。30天内可以通过[GetReconstructDocumentResult](https://cloud.tencent.com/document/product/1759/107505)接口查询TaskId对应的处理结果。
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

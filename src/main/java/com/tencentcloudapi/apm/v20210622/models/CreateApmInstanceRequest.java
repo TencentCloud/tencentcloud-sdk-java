@@ -66,6 +66,13 @@ public class CreateApmInstanceRequest extends AbstractModel {
     private Long PayMode;
 
     /**
+    * （0=付费版；1=tsf受限免费版；2=免费版）
+    */
+    @SerializedName("Free")
+    @Expose
+    private Long Free;
+
+    /**
      * Get 实例名 
      * @return Name 实例名
      */
@@ -161,6 +168,22 @@ public class CreateApmInstanceRequest extends AbstractModel {
         this.PayMode = PayMode;
     }
 
+    /**
+     * Get （0=付费版；1=tsf受限免费版；2=免费版） 
+     * @return Free （0=付费版；1=tsf受限免费版；2=免费版）
+     */
+    public Long getFree() {
+        return this.Free;
+    }
+
+    /**
+     * Set （0=付费版；1=tsf受限免费版；2=免费版）
+     * @param Free （0=付费版；1=tsf受限免费版；2=免费版）
+     */
+    public void setFree(Long Free) {
+        this.Free = Free;
+    }
+
     public CreateApmInstanceRequest() {
     }
 
@@ -190,6 +213,9 @@ public class CreateApmInstanceRequest extends AbstractModel {
         if (source.PayMode != null) {
             this.PayMode = new Long(source.PayMode);
         }
+        if (source.Free != null) {
+            this.Free = new Long(source.Free);
+        }
     }
 
 
@@ -203,6 +229,7 @@ public class CreateApmInstanceRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "SpanDailyCounters", this.SpanDailyCounters);
         this.setParamSimple(map, prefix + "PayMode", this.PayMode);
+        this.setParamSimple(map, prefix + "Free", this.Free);
 
     }
 }

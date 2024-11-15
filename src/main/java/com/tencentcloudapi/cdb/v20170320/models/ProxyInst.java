@@ -81,7 +81,6 @@ public class ProxyInst extends AbstractModel {
 
     /**
     * 实例节点ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstNodeId")
     @Expose
@@ -89,7 +88,6 @@ public class ProxyInst extends AbstractModel {
 
     /**
     * 节点角色
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstNodeRole")
     @Expose
@@ -236,10 +234,8 @@ public class ProxyInst extends AbstractModel {
     }
 
     /**
-     * Get 实例节点ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例节点ID 
      * @return InstNodeId 实例节点ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstNodeId() {
         return this.InstNodeId;
@@ -247,19 +243,15 @@ public class ProxyInst extends AbstractModel {
 
     /**
      * Set 实例节点ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstNodeId 实例节点ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstNodeId(String InstNodeId) {
         this.InstNodeId = InstNodeId;
     }
 
     /**
-     * Get 节点角色
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 节点角色 
      * @return InstNodeRole 节点角色
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstNodeRole() {
         return this.InstNodeRole;
@@ -267,9 +259,7 @@ public class ProxyInst extends AbstractModel {
 
     /**
      * Set 节点角色
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstNodeRole 节点角色
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstNodeRole(String InstNodeRole) {
         this.InstNodeRole = InstNodeRole;

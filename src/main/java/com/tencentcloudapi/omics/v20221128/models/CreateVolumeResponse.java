@@ -25,7 +25,6 @@ public class CreateVolumeResponse extends AbstractModel {
 
     /**
     * 缓存卷ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VolumeId")
     @Expose
@@ -39,10 +38,8 @@ public class CreateVolumeResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 缓存卷ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 缓存卷ID。 
      * @return VolumeId 缓存卷ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVolumeId() {
         return this.VolumeId;
@@ -50,9 +47,7 @@ public class CreateVolumeResponse extends AbstractModel {
 
     /**
      * Set 缓存卷ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VolumeId 缓存卷ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVolumeId(String VolumeId) {
         this.VolumeId = VolumeId;

@@ -25,75 +25,100 @@ public class GetEidTokenConfig extends AbstractModel {
 
     /**
     * 姓名身份证输入方式。
-1：传身份证正反面OCR   
-2：传身份证正面OCR  
-3：用户手动输入  
-4：客户后台传入  
-默认1
-注：使用OCR时仅支持用户修改结果中的姓名
+- 取值范围：
+1：传身份证正反面OCR。
+2：传身份证正面OCR。
+3：用户手动输入。
+4：客户后台传入。
+- 默认值：1。
+- 注意：使用OCR时仅支持用户修改结果中的姓名。
     */
     @SerializedName("InputType")
     @Expose
     private String InputType;
 
     /**
-    * 是否使用意愿核身，默认不使用。注意：如开启使用，则计费标签按【意愿核身】计费标签计价；如不开启，则计费标签按【E证通】计费标签计价，价格详见：[价格说明](https://cloud.tencent.com/document/product/1007/56804)。
+    * 是否使用意愿核身。
+
+- 默认不使用。
+- 注意：如开启使用，则计费标签按【意愿核身】计费标签计价；如不开启，则计费标签按【E证通】计费标签计价，价格详见：[价格说明](https://cloud.tencent.com/document/product/1007/56804)。
     */
     @SerializedName("UseIntentionVerify")
     @Expose
     private Boolean UseIntentionVerify;
 
     /**
-    * 意愿核身模式。枚举值：1( 语音朗读模式)，2（语音问答模式） ，3（点头确认模式）。默认值为1。
+    * 意愿核身模式。
+- 取值范围：
+1：语音朗读模式。
+2：语音问答模式。
+3：点头确认模式。
+- 默认值为1。
     */
     @SerializedName("IntentionMode")
     @Expose
     private String IntentionMode;
 
     /**
-    * 意愿核身朗读模式使用的文案，若未使用意愿核身朗读功能，该字段无需传入。默认为空，最长可接受120的字符串长度。
+    * 意愿核身朗读模式使用的文案。
+- 若未使用意愿核身朗读功能，该字段无需传入。
+- 默认为空，最长可接受120的字符串长度。
     */
     @SerializedName("IntentionVerifyText")
     @Expose
     private String IntentionVerifyText;
 
     /**
-    * 意愿核身问答模式的配置列表。当前仅支持一个问答。
+    * 意愿核身问答模式的配置列表。
+- 当前仅支持一个问答。
     */
     @SerializedName("IntentionQuestions")
     @Expose
     private IntentionQuestion [] IntentionQuestions;
 
     /**
-    * 意愿核身（点头确认模式）使用的文案，若未使用意愿核身（点头确认模式），则该字段无需传入。默认为空，最长可接受150的字符串长度。
+    * 意愿核身（点头确认模式）使用的文案。
+- 若未使用意愿核身（点头确认模式），则该字段无需传入。
+- 默认为空，最长可接受150的字符串长度。
     */
     @SerializedName("IntentionActions")
     @Expose
     private IntentionActionConfig [] IntentionActions;
 
     /**
-    * 意愿核身过程中识别用户的回答意图，开启后除了IntentionQuestions的Answers列表中的标准回答会通过，近似意图的回答也会通过，默认开启。
+    * 意愿核身过程中识别用户的回答意图。
+- 开启后除了IntentionQuestions的Answers列表中的标准回答会通过，近似意图的回答也会通过。
+- 默认开启。
     */
     @SerializedName("IntentionRecognition")
     @Expose
     private Boolean IntentionRecognition;
 
     /**
-    * 是否支持港澳台居住证识别
+    * 是否支持港澳台居住证识别。
     */
     @SerializedName("IsSupportHMTResidentPermitOCR")
     @Expose
     private Boolean IsSupportHMTResidentPermitOCR;
 
     /**
-    * 用户语音回答过程中是否开启张嘴识别检测，默认不开启，仅在意愿核身问答模式中使用。
+    * 用户语音回答过程中是否开启张嘴识别检测。
+- 默认不开启。
+- 仅在意愿核身问答模式中使用。
     */
     @SerializedName("MouthOpenRecognition")
     @Expose
     private Boolean MouthOpenRecognition;
 
     /**
-    * 意愿核身语音播报速度，配置后问答模式和点头模式的语音播报环节都会生效，默认值为0： 0：智能语速（根据播报文案的长度自动调整语音播报速度） 1：固定1倍速 2：固定1.2倍速 3：固定1.5倍速
+    * 意愿核身语音播报速度。
+- 配置后问答模式和点头模式的语音播报环节都会生效。
+- 默认值为0。
+- 取值范围： 
+0：智能语速（根据播报文案的长度自动调整语音播报速度）。
+1：固定1倍速。
+2：固定1.2倍速。
+3：固定1.5倍速。
     */
     @SerializedName("Speed")
     @Expose
@@ -101,19 +126,21 @@ public class GetEidTokenConfig extends AbstractModel {
 
     /**
      * Get 姓名身份证输入方式。
-1：传身份证正反面OCR   
-2：传身份证正面OCR  
-3：用户手动输入  
-4：客户后台传入  
-默认1
-注：使用OCR时仅支持用户修改结果中的姓名 
+- 取值范围：
+1：传身份证正反面OCR。
+2：传身份证正面OCR。
+3：用户手动输入。
+4：客户后台传入。
+- 默认值：1。
+- 注意：使用OCR时仅支持用户修改结果中的姓名。 
      * @return InputType 姓名身份证输入方式。
-1：传身份证正反面OCR   
-2：传身份证正面OCR  
-3：用户手动输入  
-4：客户后台传入  
-默认1
-注：使用OCR时仅支持用户修改结果中的姓名
+- 取值范围：
+1：传身份证正反面OCR。
+2：传身份证正面OCR。
+3：用户手动输入。
+4：客户后台传入。
+- 默认值：1。
+- 注意：使用OCR时仅支持用户修改结果中的姓名。
      */
     public String getInputType() {
         return this.InputType;
@@ -121,163 +148,261 @@ public class GetEidTokenConfig extends AbstractModel {
 
     /**
      * Set 姓名身份证输入方式。
-1：传身份证正反面OCR   
-2：传身份证正面OCR  
-3：用户手动输入  
-4：客户后台传入  
-默认1
-注：使用OCR时仅支持用户修改结果中的姓名
+- 取值范围：
+1：传身份证正反面OCR。
+2：传身份证正面OCR。
+3：用户手动输入。
+4：客户后台传入。
+- 默认值：1。
+- 注意：使用OCR时仅支持用户修改结果中的姓名。
      * @param InputType 姓名身份证输入方式。
-1：传身份证正反面OCR   
-2：传身份证正面OCR  
-3：用户手动输入  
-4：客户后台传入  
-默认1
-注：使用OCR时仅支持用户修改结果中的姓名
+- 取值范围：
+1：传身份证正反面OCR。
+2：传身份证正面OCR。
+3：用户手动输入。
+4：客户后台传入。
+- 默认值：1。
+- 注意：使用OCR时仅支持用户修改结果中的姓名。
      */
     public void setInputType(String InputType) {
         this.InputType = InputType;
     }
 
     /**
-     * Get 是否使用意愿核身，默认不使用。注意：如开启使用，则计费标签按【意愿核身】计费标签计价；如不开启，则计费标签按【E证通】计费标签计价，价格详见：[价格说明](https://cloud.tencent.com/document/product/1007/56804)。 
-     * @return UseIntentionVerify 是否使用意愿核身，默认不使用。注意：如开启使用，则计费标签按【意愿核身】计费标签计价；如不开启，则计费标签按【E证通】计费标签计价，价格详见：[价格说明](https://cloud.tencent.com/document/product/1007/56804)。
+     * Get 是否使用意愿核身。
+
+- 默认不使用。
+- 注意：如开启使用，则计费标签按【意愿核身】计费标签计价；如不开启，则计费标签按【E证通】计费标签计价，价格详见：[价格说明](https://cloud.tencent.com/document/product/1007/56804)。 
+     * @return UseIntentionVerify 是否使用意愿核身。
+
+- 默认不使用。
+- 注意：如开启使用，则计费标签按【意愿核身】计费标签计价；如不开启，则计费标签按【E证通】计费标签计价，价格详见：[价格说明](https://cloud.tencent.com/document/product/1007/56804)。
      */
     public Boolean getUseIntentionVerify() {
         return this.UseIntentionVerify;
     }
 
     /**
-     * Set 是否使用意愿核身，默认不使用。注意：如开启使用，则计费标签按【意愿核身】计费标签计价；如不开启，则计费标签按【E证通】计费标签计价，价格详见：[价格说明](https://cloud.tencent.com/document/product/1007/56804)。
-     * @param UseIntentionVerify 是否使用意愿核身，默认不使用。注意：如开启使用，则计费标签按【意愿核身】计费标签计价；如不开启，则计费标签按【E证通】计费标签计价，价格详见：[价格说明](https://cloud.tencent.com/document/product/1007/56804)。
+     * Set 是否使用意愿核身。
+
+- 默认不使用。
+- 注意：如开启使用，则计费标签按【意愿核身】计费标签计价；如不开启，则计费标签按【E证通】计费标签计价，价格详见：[价格说明](https://cloud.tencent.com/document/product/1007/56804)。
+     * @param UseIntentionVerify 是否使用意愿核身。
+
+- 默认不使用。
+- 注意：如开启使用，则计费标签按【意愿核身】计费标签计价；如不开启，则计费标签按【E证通】计费标签计价，价格详见：[价格说明](https://cloud.tencent.com/document/product/1007/56804)。
      */
     public void setUseIntentionVerify(Boolean UseIntentionVerify) {
         this.UseIntentionVerify = UseIntentionVerify;
     }
 
     /**
-     * Get 意愿核身模式。枚举值：1( 语音朗读模式)，2（语音问答模式） ，3（点头确认模式）。默认值为1。 
-     * @return IntentionMode 意愿核身模式。枚举值：1( 语音朗读模式)，2（语音问答模式） ，3（点头确认模式）。默认值为1。
+     * Get 意愿核身模式。
+- 取值范围：
+1：语音朗读模式。
+2：语音问答模式。
+3：点头确认模式。
+- 默认值为1。 
+     * @return IntentionMode 意愿核身模式。
+- 取值范围：
+1：语音朗读模式。
+2：语音问答模式。
+3：点头确认模式。
+- 默认值为1。
      */
     public String getIntentionMode() {
         return this.IntentionMode;
     }
 
     /**
-     * Set 意愿核身模式。枚举值：1( 语音朗读模式)，2（语音问答模式） ，3（点头确认模式）。默认值为1。
-     * @param IntentionMode 意愿核身模式。枚举值：1( 语音朗读模式)，2（语音问答模式） ，3（点头确认模式）。默认值为1。
+     * Set 意愿核身模式。
+- 取值范围：
+1：语音朗读模式。
+2：语音问答模式。
+3：点头确认模式。
+- 默认值为1。
+     * @param IntentionMode 意愿核身模式。
+- 取值范围：
+1：语音朗读模式。
+2：语音问答模式。
+3：点头确认模式。
+- 默认值为1。
      */
     public void setIntentionMode(String IntentionMode) {
         this.IntentionMode = IntentionMode;
     }
 
     /**
-     * Get 意愿核身朗读模式使用的文案，若未使用意愿核身朗读功能，该字段无需传入。默认为空，最长可接受120的字符串长度。 
-     * @return IntentionVerifyText 意愿核身朗读模式使用的文案，若未使用意愿核身朗读功能，该字段无需传入。默认为空，最长可接受120的字符串长度。
+     * Get 意愿核身朗读模式使用的文案。
+- 若未使用意愿核身朗读功能，该字段无需传入。
+- 默认为空，最长可接受120的字符串长度。 
+     * @return IntentionVerifyText 意愿核身朗读模式使用的文案。
+- 若未使用意愿核身朗读功能，该字段无需传入。
+- 默认为空，最长可接受120的字符串长度。
      */
     public String getIntentionVerifyText() {
         return this.IntentionVerifyText;
     }
 
     /**
-     * Set 意愿核身朗读模式使用的文案，若未使用意愿核身朗读功能，该字段无需传入。默认为空，最长可接受120的字符串长度。
-     * @param IntentionVerifyText 意愿核身朗读模式使用的文案，若未使用意愿核身朗读功能，该字段无需传入。默认为空，最长可接受120的字符串长度。
+     * Set 意愿核身朗读模式使用的文案。
+- 若未使用意愿核身朗读功能，该字段无需传入。
+- 默认为空，最长可接受120的字符串长度。
+     * @param IntentionVerifyText 意愿核身朗读模式使用的文案。
+- 若未使用意愿核身朗读功能，该字段无需传入。
+- 默认为空，最长可接受120的字符串长度。
      */
     public void setIntentionVerifyText(String IntentionVerifyText) {
         this.IntentionVerifyText = IntentionVerifyText;
     }
 
     /**
-     * Get 意愿核身问答模式的配置列表。当前仅支持一个问答。 
-     * @return IntentionQuestions 意愿核身问答模式的配置列表。当前仅支持一个问答。
+     * Get 意愿核身问答模式的配置列表。
+- 当前仅支持一个问答。 
+     * @return IntentionQuestions 意愿核身问答模式的配置列表。
+- 当前仅支持一个问答。
      */
     public IntentionQuestion [] getIntentionQuestions() {
         return this.IntentionQuestions;
     }
 
     /**
-     * Set 意愿核身问答模式的配置列表。当前仅支持一个问答。
-     * @param IntentionQuestions 意愿核身问答模式的配置列表。当前仅支持一个问答。
+     * Set 意愿核身问答模式的配置列表。
+- 当前仅支持一个问答。
+     * @param IntentionQuestions 意愿核身问答模式的配置列表。
+- 当前仅支持一个问答。
      */
     public void setIntentionQuestions(IntentionQuestion [] IntentionQuestions) {
         this.IntentionQuestions = IntentionQuestions;
     }
 
     /**
-     * Get 意愿核身（点头确认模式）使用的文案，若未使用意愿核身（点头确认模式），则该字段无需传入。默认为空，最长可接受150的字符串长度。 
-     * @return IntentionActions 意愿核身（点头确认模式）使用的文案，若未使用意愿核身（点头确认模式），则该字段无需传入。默认为空，最长可接受150的字符串长度。
+     * Get 意愿核身（点头确认模式）使用的文案。
+- 若未使用意愿核身（点头确认模式），则该字段无需传入。
+- 默认为空，最长可接受150的字符串长度。 
+     * @return IntentionActions 意愿核身（点头确认模式）使用的文案。
+- 若未使用意愿核身（点头确认模式），则该字段无需传入。
+- 默认为空，最长可接受150的字符串长度。
      */
     public IntentionActionConfig [] getIntentionActions() {
         return this.IntentionActions;
     }
 
     /**
-     * Set 意愿核身（点头确认模式）使用的文案，若未使用意愿核身（点头确认模式），则该字段无需传入。默认为空，最长可接受150的字符串长度。
-     * @param IntentionActions 意愿核身（点头确认模式）使用的文案，若未使用意愿核身（点头确认模式），则该字段无需传入。默认为空，最长可接受150的字符串长度。
+     * Set 意愿核身（点头确认模式）使用的文案。
+- 若未使用意愿核身（点头确认模式），则该字段无需传入。
+- 默认为空，最长可接受150的字符串长度。
+     * @param IntentionActions 意愿核身（点头确认模式）使用的文案。
+- 若未使用意愿核身（点头确认模式），则该字段无需传入。
+- 默认为空，最长可接受150的字符串长度。
      */
     public void setIntentionActions(IntentionActionConfig [] IntentionActions) {
         this.IntentionActions = IntentionActions;
     }
 
     /**
-     * Get 意愿核身过程中识别用户的回答意图，开启后除了IntentionQuestions的Answers列表中的标准回答会通过，近似意图的回答也会通过，默认开启。 
-     * @return IntentionRecognition 意愿核身过程中识别用户的回答意图，开启后除了IntentionQuestions的Answers列表中的标准回答会通过，近似意图的回答也会通过，默认开启。
+     * Get 意愿核身过程中识别用户的回答意图。
+- 开启后除了IntentionQuestions的Answers列表中的标准回答会通过，近似意图的回答也会通过。
+- 默认开启。 
+     * @return IntentionRecognition 意愿核身过程中识别用户的回答意图。
+- 开启后除了IntentionQuestions的Answers列表中的标准回答会通过，近似意图的回答也会通过。
+- 默认开启。
      */
     public Boolean getIntentionRecognition() {
         return this.IntentionRecognition;
     }
 
     /**
-     * Set 意愿核身过程中识别用户的回答意图，开启后除了IntentionQuestions的Answers列表中的标准回答会通过，近似意图的回答也会通过，默认开启。
-     * @param IntentionRecognition 意愿核身过程中识别用户的回答意图，开启后除了IntentionQuestions的Answers列表中的标准回答会通过，近似意图的回答也会通过，默认开启。
+     * Set 意愿核身过程中识别用户的回答意图。
+- 开启后除了IntentionQuestions的Answers列表中的标准回答会通过，近似意图的回答也会通过。
+- 默认开启。
+     * @param IntentionRecognition 意愿核身过程中识别用户的回答意图。
+- 开启后除了IntentionQuestions的Answers列表中的标准回答会通过，近似意图的回答也会通过。
+- 默认开启。
      */
     public void setIntentionRecognition(Boolean IntentionRecognition) {
         this.IntentionRecognition = IntentionRecognition;
     }
 
     /**
-     * Get 是否支持港澳台居住证识别 
-     * @return IsSupportHMTResidentPermitOCR 是否支持港澳台居住证识别
+     * Get 是否支持港澳台居住证识别。 
+     * @return IsSupportHMTResidentPermitOCR 是否支持港澳台居住证识别。
      */
     public Boolean getIsSupportHMTResidentPermitOCR() {
         return this.IsSupportHMTResidentPermitOCR;
     }
 
     /**
-     * Set 是否支持港澳台居住证识别
-     * @param IsSupportHMTResidentPermitOCR 是否支持港澳台居住证识别
+     * Set 是否支持港澳台居住证识别。
+     * @param IsSupportHMTResidentPermitOCR 是否支持港澳台居住证识别。
      */
     public void setIsSupportHMTResidentPermitOCR(Boolean IsSupportHMTResidentPermitOCR) {
         this.IsSupportHMTResidentPermitOCR = IsSupportHMTResidentPermitOCR;
     }
 
     /**
-     * Get 用户语音回答过程中是否开启张嘴识别检测，默认不开启，仅在意愿核身问答模式中使用。 
-     * @return MouthOpenRecognition 用户语音回答过程中是否开启张嘴识别检测，默认不开启，仅在意愿核身问答模式中使用。
+     * Get 用户语音回答过程中是否开启张嘴识别检测。
+- 默认不开启。
+- 仅在意愿核身问答模式中使用。 
+     * @return MouthOpenRecognition 用户语音回答过程中是否开启张嘴识别检测。
+- 默认不开启。
+- 仅在意愿核身问答模式中使用。
      */
     public Boolean getMouthOpenRecognition() {
         return this.MouthOpenRecognition;
     }
 
     /**
-     * Set 用户语音回答过程中是否开启张嘴识别检测，默认不开启，仅在意愿核身问答模式中使用。
-     * @param MouthOpenRecognition 用户语音回答过程中是否开启张嘴识别检测，默认不开启，仅在意愿核身问答模式中使用。
+     * Set 用户语音回答过程中是否开启张嘴识别检测。
+- 默认不开启。
+- 仅在意愿核身问答模式中使用。
+     * @param MouthOpenRecognition 用户语音回答过程中是否开启张嘴识别检测。
+- 默认不开启。
+- 仅在意愿核身问答模式中使用。
      */
     public void setMouthOpenRecognition(Boolean MouthOpenRecognition) {
         this.MouthOpenRecognition = MouthOpenRecognition;
     }
 
     /**
-     * Get 意愿核身语音播报速度，配置后问答模式和点头模式的语音播报环节都会生效，默认值为0： 0：智能语速（根据播报文案的长度自动调整语音播报速度） 1：固定1倍速 2：固定1.2倍速 3：固定1.5倍速 
-     * @return Speed 意愿核身语音播报速度，配置后问答模式和点头模式的语音播报环节都会生效，默认值为0： 0：智能语速（根据播报文案的长度自动调整语音播报速度） 1：固定1倍速 2：固定1.2倍速 3：固定1.5倍速
+     * Get 意愿核身语音播报速度。
+- 配置后问答模式和点头模式的语音播报环节都会生效。
+- 默认值为0。
+- 取值范围： 
+0：智能语速（根据播报文案的长度自动调整语音播报速度）。
+1：固定1倍速。
+2：固定1.2倍速。
+3：固定1.5倍速。 
+     * @return Speed 意愿核身语音播报速度。
+- 配置后问答模式和点头模式的语音播报环节都会生效。
+- 默认值为0。
+- 取值范围： 
+0：智能语速（根据播报文案的长度自动调整语音播报速度）。
+1：固定1倍速。
+2：固定1.2倍速。
+3：固定1.5倍速。
      */
     public Long getSpeed() {
         return this.Speed;
     }
 
     /**
-     * Set 意愿核身语音播报速度，配置后问答模式和点头模式的语音播报环节都会生效，默认值为0： 0：智能语速（根据播报文案的长度自动调整语音播报速度） 1：固定1倍速 2：固定1.2倍速 3：固定1.5倍速
-     * @param Speed 意愿核身语音播报速度，配置后问答模式和点头模式的语音播报环节都会生效，默认值为0： 0：智能语速（根据播报文案的长度自动调整语音播报速度） 1：固定1倍速 2：固定1.2倍速 3：固定1.5倍速
+     * Set 意愿核身语音播报速度。
+- 配置后问答模式和点头模式的语音播报环节都会生效。
+- 默认值为0。
+- 取值范围： 
+0：智能语速（根据播报文案的长度自动调整语音播报速度）。
+1：固定1倍速。
+2：固定1.2倍速。
+3：固定1.5倍速。
+     * @param Speed 意愿核身语音播报速度。
+- 配置后问答模式和点头模式的语音播报环节都会生效。
+- 默认值为0。
+- 取值范围： 
+0：智能语速（根据播报文案的长度自动调整语音播报速度）。
+1：固定1倍速。
+2：固定1.2倍速。
+3：固定1.5倍速。
      */
     public void setSpeed(Long Speed) {
         this.Speed = Speed;

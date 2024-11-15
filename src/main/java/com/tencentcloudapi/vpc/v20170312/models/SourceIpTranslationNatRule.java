@@ -53,7 +53,7 @@ public class SourceIpTranslationNatRule extends AbstractModel {
     private String [] PublicIpAddresses;
 
     /**
-    * 描述
+    * 规则描述
     */
     @SerializedName("Description")
     @Expose
@@ -159,16 +159,16 @@ public class SourceIpTranslationNatRule extends AbstractModel {
     }
 
     /**
-     * Get 描述 
-     * @return Description 描述
+     * Get 规则描述 
+     * @return Description 规则描述
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 描述
-     * @param Description 描述
+     * Set 规则描述
+     * @param Description 规则描述
      */
     public void setDescription(String Description) {
         this.Description = Description;

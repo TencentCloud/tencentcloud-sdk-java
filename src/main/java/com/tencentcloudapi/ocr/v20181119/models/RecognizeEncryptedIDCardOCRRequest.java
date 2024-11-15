@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class RecognizeEncryptedIDCardOCRRequest extends AbstractModel {
 
     /**
-    * 请求体被加密后的密文，本接口只支持加密传输
+    * 请求体被加密后的密文（Base64编码），本接口只支持加密传输
     */
     @SerializedName("EncryptedBody")
     @Expose
@@ -102,16 +102,16 @@ Config = {"CropIdCard":true,"CropPortrait":true}
     private Boolean EnableReflectDetail;
 
     /**
-     * Get 请求体被加密后的密文，本接口只支持加密传输 
-     * @return EncryptedBody 请求体被加密后的密文，本接口只支持加密传输
+     * Get 请求体被加密后的密文（Base64编码），本接口只支持加密传输 
+     * @return EncryptedBody 请求体被加密后的密文（Base64编码），本接口只支持加密传输
      */
     public String getEncryptedBody() {
         return this.EncryptedBody;
     }
 
     /**
-     * Set 请求体被加密后的密文，本接口只支持加密传输
-     * @param EncryptedBody 请求体被加密后的密文，本接口只支持加密传输
+     * Set 请求体被加密后的密文（Base64编码），本接口只支持加密传输
+     * @param EncryptedBody 请求体被加密后的密文（Base64编码），本接口只支持加密传输
      */
     public void setEncryptedBody(String EncryptedBody) {
         this.EncryptedBody = EncryptedBody;

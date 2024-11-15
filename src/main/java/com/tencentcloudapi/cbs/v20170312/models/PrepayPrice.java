@@ -32,7 +32,7 @@ public class PrepayPrice extends AbstractModel {
     private Float DiscountPrice;
 
     /**
-    * 后付费云盘的计价单元，取值范围：<br><li>HOUR：表示后付费云盘的计价单元是按小时计算。
+    * 后付费云盘的计价单元，取值范围：<br><li>HOUR：表示后付费云盘的计价单元是按小时计算。</li>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ChargeUnit")
@@ -124,9 +124,9 @@ public class PrepayPrice extends AbstractModel {
     }
 
     /**
-     * Get 后付费云盘的计价单元，取值范围：<br><li>HOUR：表示后付费云盘的计价单元是按小时计算。
+     * Get 后付费云盘的计价单元，取值范围：<br><li>HOUR：表示后付费云盘的计价单元是按小时计算。</li>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ChargeUnit 后付费云盘的计价单元，取值范围：<br><li>HOUR：表示后付费云盘的计价单元是按小时计算。
+     * @return ChargeUnit 后付费云盘的计价单元，取值范围：<br><li>HOUR：表示后付费云盘的计价单元是按小时计算。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getChargeUnit() {
@@ -134,9 +134,9 @@ public class PrepayPrice extends AbstractModel {
     }
 
     /**
-     * Set 后付费云盘的计价单元，取值范围：<br><li>HOUR：表示后付费云盘的计价单元是按小时计算。
+     * Set 后付费云盘的计价单元，取值范围：<br><li>HOUR：表示后付费云盘的计价单元是按小时计算。</li>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ChargeUnit 后付费云盘的计价单元，取值范围：<br><li>HOUR：表示后付费云盘的计价单元是按小时计算。
+     * @param ChargeUnit 后付费云盘的计价单元，取值范围：<br><li>HOUR：表示后付费云盘的计价单元是按小时计算。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setChargeUnit(String ChargeUnit) {

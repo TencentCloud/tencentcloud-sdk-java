@@ -24,14 +24,15 @@ import java.util.HashMap;
 public class ImageRecognitionV2Request extends AbstractModel {
 
     /**
-    * 身份证号
+    * 身份证号。
     */
     @SerializedName("IdCard")
     @Expose
     private String IdCard;
 
     /**
-    * 姓名。中文请使用UTF-8编码。
+    * 姓名。
+- 中文请使用UTF-8编码。
     */
     @SerializedName("Name")
     @Expose
@@ -54,39 +55,44 @@ Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
     private String Optional;
 
     /**
-    * 敏感数据加密信息。对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+    * 敏感数据加密信息。
+- 对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。
     */
     @SerializedName("Encryption")
     @Expose
     private Encryption Encryption;
 
     /**
-     * Get 身份证号 
-     * @return IdCard 身份证号
+     * Get 身份证号。 
+     * @return IdCard 身份证号。
      */
     public String getIdCard() {
         return this.IdCard;
     }
 
     /**
-     * Set 身份证号
-     * @param IdCard 身份证号
+     * Set 身份证号。
+     * @param IdCard 身份证号。
      */
     public void setIdCard(String IdCard) {
         this.IdCard = IdCard;
     }
 
     /**
-     * Get 姓名。中文请使用UTF-8编码。 
-     * @return Name 姓名。中文请使用UTF-8编码。
+     * Get 姓名。
+- 中文请使用UTF-8编码。 
+     * @return Name 姓名。
+- 中文请使用UTF-8编码。
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 姓名。中文请使用UTF-8编码。
-     * @param Name 姓名。中文请使用UTF-8编码。
+     * Set 姓名。
+- 中文请使用UTF-8编码。
+     * @param Name 姓名。
+- 中文请使用UTF-8编码。
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -133,16 +139,20 @@ Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
     }
 
     /**
-     * Get 敏感数据加密信息。对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。 
-     * @return Encryption 敏感数据加密信息。对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+     * Get 敏感数据加密信息。
+- 对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。 
+     * @return Encryption 敏感数据加密信息。
+- 对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。
      */
     public Encryption getEncryption() {
         return this.Encryption;
     }
 
     /**
-     * Set 敏感数据加密信息。对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。
-     * @param Encryption 敏感数据加密信息。对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+     * Set 敏感数据加密信息。
+- 对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+     * @param Encryption 敏感数据加密信息。
+- 对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。
      */
     public void setEncryption(Encryption Encryption) {
         this.Encryption = Encryption;

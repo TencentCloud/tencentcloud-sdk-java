@@ -108,7 +108,9 @@ public class BiologicalProductInfoName extends AbstractModel {
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return BarndName 品牌名
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public String getBarndName() {
         return this.BarndName;
     }
@@ -118,7 +120,9 @@ public class BiologicalProductInfoName extends AbstractModel {
 注意：此字段可能返回 null，表示取不到有效值。
      * @param BarndName 品牌名
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public void setBarndName(String BarndName) {
         this.BarndName = BarndName;
     }

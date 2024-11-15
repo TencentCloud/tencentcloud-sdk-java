@@ -39,7 +39,8 @@ public class CreatePartnerAutoSignAuthUrlRequest extends AbstractModel {
     private Agent Agent;
 
     /**
-    * 被授企业id，和AuthorizedOrganizationName二选一，不能同时为空
+    * 被授企业id/授权方企业id（即OrganizationId），如果是企业之间授权和AuthorizedOrganizationName二选一传入。
+
 注：`被授权企业必须和当前企业在同一应用号下`
     */
     @SerializedName("AuthorizedOrganizationId")
@@ -47,38 +48,50 @@ public class CreatePartnerAutoSignAuthUrlRequest extends AbstractModel {
     private String AuthorizedOrganizationId;
 
     /**
-    * 被授权企业名，和AuthorizedOrganizationId二选一，不能同时为空
-注：`被授权企业必须和当前企业在同一应用号下`
+    * 被授企业名称/授权方企业的名字，如果是企业之间授权和AuthorizedOrganizationId二选一传入即可。请确认该名称与企业营业执照中注册的名称一致。
+
+注: 
+1. 如果名称中包含英文括号()，请使用中文括号（）代替。
+2. 被授权企业必须和当前企业在同一应用号下
     */
     @SerializedName("AuthorizedOrganizationName")
     @Expose
     private String AuthorizedOrganizationName;
 
     /**
-    * 是否给平台应用授权:
-- true: 是（无需设置AuthorizedOrganizationId和AuthorizedOrganizationName）
-- false: 否（默认）
- 注：该参数需要开通“基于子客授权第三方应用可文件发起子客自动签署”，请联系运营经理开通
+    * 是否给平台应用授权
 
+<ul>
+<li><strong>true</strong>: 表示是，授权平台应用。在此情况下，无需设置<code>AuthorizedOrganizationId</code>和<code>AuthorizedOrganizationName</code>。</li>
+<li><strong>false</strong>: （默认）表示否，不是授权平台应用。</li>
+</ul>
+
+ 注：授权给平台应用需要开通【基于子客授权第三方应用可文件发起子客自动签署】白名单，请联系运营经理开通。
     */
     @SerializedName("PlatformAppAuthorization")
     @Expose
     private Boolean PlatformAppAuthorization;
 
     /**
-    * 指定印章类型，指定后只能选择该类型的印章进行授权
-支持以下印章类型：
-- OFFICIAL : 企业公章
-- CONTRACT : 合同专用章
-- FINANCE : 财务专用章
-- PERSONNEL : 人事专用章
+    * 在设置印章授权时，可以指定特定的印章类型，以确保在授权过程中只使用相应类型的印章。支持的印章类型包括：
+
+<ul>
+<li><strong>OFFICIAL</strong>：企业公章，用于代表企业对外的正式文件和重要事务的认证。</li>
+<li><strong>CONTRACT</strong>：合同专用章，专门用于签署各类合同。</li>
+<li><strong>FINANCE</strong>：财务专用章，用于企业的财务相关文件，如发票、收据等财务凭证的认证。</li>
+<li><strong>PERSONNEL</strong>：人事专用章，用于人事管理相关文件，如劳动合同、人事任命等。</li>
+</ul>
     */
     @SerializedName("SealTypes")
     @Expose
     private String [] SealTypes;
 
     /**
-    * 他方授权给我方：- false：我方授权他方，AuthorizedOrganizationName代表【被授权方】企业名称- true：他方授权我方，AuthorizedOrganizationName代表【授权方】企业名称
+    * 在处理授权关系时，授权的方向
+<ul>
+<li><strong>false</strong>（默认值）：表示我方授权他方。在这种情况下，<code>AuthorizedOrganizationName</code> 代表的是【被授权方】的企业名称，即接收授权的企业。</li>
+<li><strong>true</strong>：表示他方授权我方。在这种情况下，<code>AuthorizedOrganizationName</code> 代表的是【授权方】的企业名称，即提供授权的企业。</li>
+</ul>
     */
     @SerializedName("AuthToMe")
     @Expose
@@ -133,9 +146,11 @@ public class CreatePartnerAutoSignAuthUrlRequest extends AbstractModel {
     }
 
     /**
-     * Get 被授企业id，和AuthorizedOrganizationName二选一，不能同时为空
+     * Get 被授企业id/授权方企业id（即OrganizationId），如果是企业之间授权和AuthorizedOrganizationName二选一传入。
+
 注：`被授权企业必须和当前企业在同一应用号下` 
-     * @return AuthorizedOrganizationId 被授企业id，和AuthorizedOrganizationName二选一，不能同时为空
+     * @return AuthorizedOrganizationId 被授企业id/授权方企业id（即OrganizationId），如果是企业之间授权和AuthorizedOrganizationName二选一传入。
+
 注：`被授权企业必须和当前企业在同一应用号下`
      */
     public String getAuthorizedOrganizationId() {
@@ -143,9 +158,11 @@ public class CreatePartnerAutoSignAuthUrlRequest extends AbstractModel {
     }
 
     /**
-     * Set 被授企业id，和AuthorizedOrganizationName二选一，不能同时为空
+     * Set 被授企业id/授权方企业id（即OrganizationId），如果是企业之间授权和AuthorizedOrganizationName二选一传入。
+
 注：`被授权企业必须和当前企业在同一应用号下`
-     * @param AuthorizedOrganizationId 被授企业id，和AuthorizedOrganizationName二选一，不能同时为空
+     * @param AuthorizedOrganizationId 被授企业id/授权方企业id（即OrganizationId），如果是企业之间授权和AuthorizedOrganizationName二选一传入。
+
 注：`被授权企业必须和当前企业在同一应用号下`
      */
     public void setAuthorizedOrganizationId(String AuthorizedOrganizationId) {
@@ -153,104 +170,152 @@ public class CreatePartnerAutoSignAuthUrlRequest extends AbstractModel {
     }
 
     /**
-     * Get 被授权企业名，和AuthorizedOrganizationId二选一，不能同时为空
-注：`被授权企业必须和当前企业在同一应用号下` 
-     * @return AuthorizedOrganizationName 被授权企业名，和AuthorizedOrganizationId二选一，不能同时为空
-注：`被授权企业必须和当前企业在同一应用号下`
+     * Get 被授企业名称/授权方企业的名字，如果是企业之间授权和AuthorizedOrganizationId二选一传入即可。请确认该名称与企业营业执照中注册的名称一致。
+
+注: 
+1. 如果名称中包含英文括号()，请使用中文括号（）代替。
+2. 被授权企业必须和当前企业在同一应用号下 
+     * @return AuthorizedOrganizationName 被授企业名称/授权方企业的名字，如果是企业之间授权和AuthorizedOrganizationId二选一传入即可。请确认该名称与企业营业执照中注册的名称一致。
+
+注: 
+1. 如果名称中包含英文括号()，请使用中文括号（）代替。
+2. 被授权企业必须和当前企业在同一应用号下
      */
     public String getAuthorizedOrganizationName() {
         return this.AuthorizedOrganizationName;
     }
 
     /**
-     * Set 被授权企业名，和AuthorizedOrganizationId二选一，不能同时为空
-注：`被授权企业必须和当前企业在同一应用号下`
-     * @param AuthorizedOrganizationName 被授权企业名，和AuthorizedOrganizationId二选一，不能同时为空
-注：`被授权企业必须和当前企业在同一应用号下`
+     * Set 被授企业名称/授权方企业的名字，如果是企业之间授权和AuthorizedOrganizationId二选一传入即可。请确认该名称与企业营业执照中注册的名称一致。
+
+注: 
+1. 如果名称中包含英文括号()，请使用中文括号（）代替。
+2. 被授权企业必须和当前企业在同一应用号下
+     * @param AuthorizedOrganizationName 被授企业名称/授权方企业的名字，如果是企业之间授权和AuthorizedOrganizationId二选一传入即可。请确认该名称与企业营业执照中注册的名称一致。
+
+注: 
+1. 如果名称中包含英文括号()，请使用中文括号（）代替。
+2. 被授权企业必须和当前企业在同一应用号下
      */
     public void setAuthorizedOrganizationName(String AuthorizedOrganizationName) {
         this.AuthorizedOrganizationName = AuthorizedOrganizationName;
     }
 
     /**
-     * Get 是否给平台应用授权:
-- true: 是（无需设置AuthorizedOrganizationId和AuthorizedOrganizationName）
-- false: 否（默认）
- 注：该参数需要开通“基于子客授权第三方应用可文件发起子客自动签署”，请联系运营经理开通
- 
-     * @return PlatformAppAuthorization 是否给平台应用授权:
-- true: 是（无需设置AuthorizedOrganizationId和AuthorizedOrganizationName）
-- false: 否（默认）
- 注：该参数需要开通“基于子客授权第三方应用可文件发起子客自动签署”，请联系运营经理开通
+     * Get 是否给平台应用授权
 
+<ul>
+<li><strong>true</strong>: 表示是，授权平台应用。在此情况下，无需设置<code>AuthorizedOrganizationId</code>和<code>AuthorizedOrganizationName</code>。</li>
+<li><strong>false</strong>: （默认）表示否，不是授权平台应用。</li>
+</ul>
+
+ 注：授权给平台应用需要开通【基于子客授权第三方应用可文件发起子客自动签署】白名单，请联系运营经理开通。 
+     * @return PlatformAppAuthorization 是否给平台应用授权
+
+<ul>
+<li><strong>true</strong>: 表示是，授权平台应用。在此情况下，无需设置<code>AuthorizedOrganizationId</code>和<code>AuthorizedOrganizationName</code>。</li>
+<li><strong>false</strong>: （默认）表示否，不是授权平台应用。</li>
+</ul>
+
+ 注：授权给平台应用需要开通【基于子客授权第三方应用可文件发起子客自动签署】白名单，请联系运营经理开通。
      */
     public Boolean getPlatformAppAuthorization() {
         return this.PlatformAppAuthorization;
     }
 
     /**
-     * Set 是否给平台应用授权:
-- true: 是（无需设置AuthorizedOrganizationId和AuthorizedOrganizationName）
-- false: 否（默认）
- 注：该参数需要开通“基于子客授权第三方应用可文件发起子客自动签署”，请联系运营经理开通
+     * Set 是否给平台应用授权
 
-     * @param PlatformAppAuthorization 是否给平台应用授权:
-- true: 是（无需设置AuthorizedOrganizationId和AuthorizedOrganizationName）
-- false: 否（默认）
- 注：该参数需要开通“基于子客授权第三方应用可文件发起子客自动签署”，请联系运营经理开通
+<ul>
+<li><strong>true</strong>: 表示是，授权平台应用。在此情况下，无需设置<code>AuthorizedOrganizationId</code>和<code>AuthorizedOrganizationName</code>。</li>
+<li><strong>false</strong>: （默认）表示否，不是授权平台应用。</li>
+</ul>
 
+ 注：授权给平台应用需要开通【基于子客授权第三方应用可文件发起子客自动签署】白名单，请联系运营经理开通。
+     * @param PlatformAppAuthorization 是否给平台应用授权
+
+<ul>
+<li><strong>true</strong>: 表示是，授权平台应用。在此情况下，无需设置<code>AuthorizedOrganizationId</code>和<code>AuthorizedOrganizationName</code>。</li>
+<li><strong>false</strong>: （默认）表示否，不是授权平台应用。</li>
+</ul>
+
+ 注：授权给平台应用需要开通【基于子客授权第三方应用可文件发起子客自动签署】白名单，请联系运营经理开通。
      */
     public void setPlatformAppAuthorization(Boolean PlatformAppAuthorization) {
         this.PlatformAppAuthorization = PlatformAppAuthorization;
     }
 
     /**
-     * Get 指定印章类型，指定后只能选择该类型的印章进行授权
-支持以下印章类型：
-- OFFICIAL : 企业公章
-- CONTRACT : 合同专用章
-- FINANCE : 财务专用章
-- PERSONNEL : 人事专用章 
-     * @return SealTypes 指定印章类型，指定后只能选择该类型的印章进行授权
-支持以下印章类型：
-- OFFICIAL : 企业公章
-- CONTRACT : 合同专用章
-- FINANCE : 财务专用章
-- PERSONNEL : 人事专用章
+     * Get 在设置印章授权时，可以指定特定的印章类型，以确保在授权过程中只使用相应类型的印章。支持的印章类型包括：
+
+<ul>
+<li><strong>OFFICIAL</strong>：企业公章，用于代表企业对外的正式文件和重要事务的认证。</li>
+<li><strong>CONTRACT</strong>：合同专用章，专门用于签署各类合同。</li>
+<li><strong>FINANCE</strong>：财务专用章，用于企业的财务相关文件，如发票、收据等财务凭证的认证。</li>
+<li><strong>PERSONNEL</strong>：人事专用章，用于人事管理相关文件，如劳动合同、人事任命等。</li>
+</ul> 
+     * @return SealTypes 在设置印章授权时，可以指定特定的印章类型，以确保在授权过程中只使用相应类型的印章。支持的印章类型包括：
+
+<ul>
+<li><strong>OFFICIAL</strong>：企业公章，用于代表企业对外的正式文件和重要事务的认证。</li>
+<li><strong>CONTRACT</strong>：合同专用章，专门用于签署各类合同。</li>
+<li><strong>FINANCE</strong>：财务专用章，用于企业的财务相关文件，如发票、收据等财务凭证的认证。</li>
+<li><strong>PERSONNEL</strong>：人事专用章，用于人事管理相关文件，如劳动合同、人事任命等。</li>
+</ul>
      */
     public String [] getSealTypes() {
         return this.SealTypes;
     }
 
     /**
-     * Set 指定印章类型，指定后只能选择该类型的印章进行授权
-支持以下印章类型：
-- OFFICIAL : 企业公章
-- CONTRACT : 合同专用章
-- FINANCE : 财务专用章
-- PERSONNEL : 人事专用章
-     * @param SealTypes 指定印章类型，指定后只能选择该类型的印章进行授权
-支持以下印章类型：
-- OFFICIAL : 企业公章
-- CONTRACT : 合同专用章
-- FINANCE : 财务专用章
-- PERSONNEL : 人事专用章
+     * Set 在设置印章授权时，可以指定特定的印章类型，以确保在授权过程中只使用相应类型的印章。支持的印章类型包括：
+
+<ul>
+<li><strong>OFFICIAL</strong>：企业公章，用于代表企业对外的正式文件和重要事务的认证。</li>
+<li><strong>CONTRACT</strong>：合同专用章，专门用于签署各类合同。</li>
+<li><strong>FINANCE</strong>：财务专用章，用于企业的财务相关文件，如发票、收据等财务凭证的认证。</li>
+<li><strong>PERSONNEL</strong>：人事专用章，用于人事管理相关文件，如劳动合同、人事任命等。</li>
+</ul>
+     * @param SealTypes 在设置印章授权时，可以指定特定的印章类型，以确保在授权过程中只使用相应类型的印章。支持的印章类型包括：
+
+<ul>
+<li><strong>OFFICIAL</strong>：企业公章，用于代表企业对外的正式文件和重要事务的认证。</li>
+<li><strong>CONTRACT</strong>：合同专用章，专门用于签署各类合同。</li>
+<li><strong>FINANCE</strong>：财务专用章，用于企业的财务相关文件，如发票、收据等财务凭证的认证。</li>
+<li><strong>PERSONNEL</strong>：人事专用章，用于人事管理相关文件，如劳动合同、人事任命等。</li>
+</ul>
      */
     public void setSealTypes(String [] SealTypes) {
         this.SealTypes = SealTypes;
     }
 
     /**
-     * Get 他方授权给我方：- false：我方授权他方，AuthorizedOrganizationName代表【被授权方】企业名称- true：他方授权我方，AuthorizedOrganizationName代表【授权方】企业名称 
-     * @return AuthToMe 他方授权给我方：- false：我方授权他方，AuthorizedOrganizationName代表【被授权方】企业名称- true：他方授权我方，AuthorizedOrganizationName代表【授权方】企业名称
+     * Get 在处理授权关系时，授权的方向
+<ul>
+<li><strong>false</strong>（默认值）：表示我方授权他方。在这种情况下，<code>AuthorizedOrganizationName</code> 代表的是【被授权方】的企业名称，即接收授权的企业。</li>
+<li><strong>true</strong>：表示他方授权我方。在这种情况下，<code>AuthorizedOrganizationName</code> 代表的是【授权方】的企业名称，即提供授权的企业。</li>
+</ul> 
+     * @return AuthToMe 在处理授权关系时，授权的方向
+<ul>
+<li><strong>false</strong>（默认值）：表示我方授权他方。在这种情况下，<code>AuthorizedOrganizationName</code> 代表的是【被授权方】的企业名称，即接收授权的企业。</li>
+<li><strong>true</strong>：表示他方授权我方。在这种情况下，<code>AuthorizedOrganizationName</code> 代表的是【授权方】的企业名称，即提供授权的企业。</li>
+</ul>
      */
     public Boolean getAuthToMe() {
         return this.AuthToMe;
     }
 
     /**
-     * Set 他方授权给我方：- false：我方授权他方，AuthorizedOrganizationName代表【被授权方】企业名称- true：他方授权我方，AuthorizedOrganizationName代表【授权方】企业名称
-     * @param AuthToMe 他方授权给我方：- false：我方授权他方，AuthorizedOrganizationName代表【被授权方】企业名称- true：他方授权我方，AuthorizedOrganizationName代表【授权方】企业名称
+     * Set 在处理授权关系时，授权的方向
+<ul>
+<li><strong>false</strong>（默认值）：表示我方授权他方。在这种情况下，<code>AuthorizedOrganizationName</code> 代表的是【被授权方】的企业名称，即接收授权的企业。</li>
+<li><strong>true</strong>：表示他方授权我方。在这种情况下，<code>AuthorizedOrganizationName</code> 代表的是【授权方】的企业名称，即提供授权的企业。</li>
+</ul>
+     * @param AuthToMe 在处理授权关系时，授权的方向
+<ul>
+<li><strong>false</strong>（默认值）：表示我方授权他方。在这种情况下，<code>AuthorizedOrganizationName</code> 代表的是【被授权方】的企业名称，即接收授权的企业。</li>
+<li><strong>true</strong>：表示他方授权我方。在这种情况下，<code>AuthorizedOrganizationName</code> 代表的是【授权方】的企业名称，即提供授权的企业。</li>
+</ul>
      */
     public void setAuthToMe(Boolean AuthToMe) {
         this.AuthToMe = AuthToMe;

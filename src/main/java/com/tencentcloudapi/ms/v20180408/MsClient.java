@@ -96,7 +96,9 @@ public class MsClient extends AbstractClient{
     }
 
     /**
-     *用户可以使用该接口自建资源，只支持白名单用户
+     *不再使用
+
+用户可以使用该接口自建资源，只支持白名单用户
      * @param req CreateResourceInstancesRequest
      * @return CreateResourceInstancesResponse
      * @throws TencentCloudSDKException

@@ -67,6 +67,14 @@ public class STTConfig extends AbstractModel {
     private String [] AlternativeLanguage;
 
     /**
+    * 自定义参数，联系后台使用
+
+    */
+    @SerializedName("CustomParam")
+    @Expose
+    private String CustomParam;
+
+    /**
     * 语音识别vad的时间，范围为240-2000，默认为1000，单位为ms。更小的值会让语音识别分句更快。
     */
     @SerializedName("VadSilenceTime")
@@ -222,6 +230,26 @@ public class STTConfig extends AbstractModel {
     }
 
     /**
+     * Get 自定义参数，联系后台使用
+ 
+     * @return CustomParam 自定义参数，联系后台使用
+
+     */
+    public String getCustomParam() {
+        return this.CustomParam;
+    }
+
+    /**
+     * Set 自定义参数，联系后台使用
+
+     * @param CustomParam 自定义参数，联系后台使用
+
+     */
+    public void setCustomParam(String CustomParam) {
+        this.CustomParam = CustomParam;
+    }
+
+    /**
      * Get 语音识别vad的时间，范围为240-2000，默认为1000，单位为ms。更小的值会让语音识别分句更快。 
      * @return VadSilenceTime 语音识别vad的时间，范围为240-2000，默认为1000，单位为ms。更小的值会让语音识别分句更快。
      */
@@ -254,6 +282,9 @@ public class STTConfig extends AbstractModel {
                 this.AlternativeLanguage[i] = new String(source.AlternativeLanguage[i]);
             }
         }
+        if (source.CustomParam != null) {
+            this.CustomParam = new String(source.CustomParam);
+        }
         if (source.VadSilenceTime != null) {
             this.VadSilenceTime = new Long(source.VadSilenceTime);
         }
@@ -266,6 +297,7 @@ public class STTConfig extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Language", this.Language);
         this.setParamArraySimple(map, prefix + "AlternativeLanguage.", this.AlternativeLanguage);
+        this.setParamSimple(map, prefix + "CustomParam", this.CustomParam);
         this.setParamSimple(map, prefix + "VadSilenceTime", this.VadSilenceTime);
 
     }

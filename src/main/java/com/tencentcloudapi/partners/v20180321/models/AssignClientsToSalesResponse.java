@@ -25,7 +25,6 @@ public class AssignClientsToSalesResponse extends AbstractModel {
 
     /**
     * 处理成功的代客uin列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SucceedUins")
     @Expose
@@ -33,7 +32,6 @@ public class AssignClientsToSalesResponse extends AbstractModel {
 
     /**
     * 处理失败的代客uin列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FailedUins")
     @Expose
@@ -47,10 +45,8 @@ public class AssignClientsToSalesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 处理成功的代客uin列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 处理成功的代客uin列表 
      * @return SucceedUins 处理成功的代客uin列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getSucceedUins() {
         return this.SucceedUins;
@@ -58,19 +54,15 @@ public class AssignClientsToSalesResponse extends AbstractModel {
 
     /**
      * Set 处理成功的代客uin列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SucceedUins 处理成功的代客uin列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSucceedUins(String [] SucceedUins) {
         this.SucceedUins = SucceedUins;
     }
 
     /**
-     * Get 处理失败的代客uin列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 处理失败的代客uin列表 
      * @return FailedUins 处理失败的代客uin列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getFailedUins() {
         return this.FailedUins;
@@ -78,9 +70,7 @@ public class AssignClientsToSalesResponse extends AbstractModel {
 
     /**
      * Set 处理失败的代客uin列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FailedUins 处理失败的代客uin列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFailedUins(String [] FailedUins) {
         this.FailedUins = FailedUins;

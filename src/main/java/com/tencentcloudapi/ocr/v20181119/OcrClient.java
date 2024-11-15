@@ -1161,6 +1161,28 @@ public class OcrClient extends AbstractClient{
     }
 
     /**
+     *韩国驾驶证识别
+     * @param req RecognizeKoreanDrivingLicenseOCRRequest
+     * @return RecognizeKoreanDrivingLicenseOCRResponse
+     * @throws TencentCloudSDKException
+     */
+    public RecognizeKoreanDrivingLicenseOCRResponse RecognizeKoreanDrivingLicenseOCR(RecognizeKoreanDrivingLicenseOCRRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RecognizeKoreanDrivingLicenseOCR", RecognizeKoreanDrivingLicenseOCRResponse.class);
+    }
+
+    /**
+     *韩国身份证识别
+     * @param req RecognizeKoreanIDCardOCRRequest
+     * @return RecognizeKoreanIDCardOCRResponse
+     * @throws TencentCloudSDKException
+     */
+    public RecognizeKoreanIDCardOCRResponse RecognizeKoreanIDCardOCR(RecognizeKoreanIDCardOCRRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RecognizeKoreanIDCardOCR", RecognizeKoreanIDCardOCRResponse.class);
+    }
+
+    /**
      *医疗发票识别目前支持全国统一门诊发票、全国统一住院发票、以及部分地方的门诊和住院发票的识别。
 
 默认接口请求频率限制：5次/秒。
@@ -1188,6 +1210,8 @@ public class OcrClient extends AbstractClient{
 
     /**
      *菲律宾驾驶证识别
+
+默认接口请求频率限制：20次/秒。
      * @param req RecognizePhilippinesDrivingLicenseOCRRequest
      * @return RecognizePhilippinesDrivingLicenseOCRResponse
      * @throws TencentCloudSDKException

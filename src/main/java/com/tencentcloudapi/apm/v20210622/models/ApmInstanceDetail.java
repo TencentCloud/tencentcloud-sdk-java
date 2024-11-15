@@ -280,6 +280,38 @@ public class ApmInstanceDetail extends AbstractModel {
     private Long DefaultTSF;
 
     /**
+    * 是否关联dashboard： 0 关 1 开
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsRelatedDashboard")
+    @Expose
+    private Long IsRelatedDashboard;
+
+    /**
+    * dashboard ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DashboardTopicID")
+    @Expose
+    private String DashboardTopicID;
+
+    /**
+    * 是否开启组件漏洞检测
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsInstrumentationVulnerabilityScan")
+    @Expose
+    private Long IsInstrumentationVulnerabilityScan;
+
+    /**
+    * 是否开启SQL注入分析
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsSqlInjectionAnalysis")
+    @Expose
+    private Long IsSqlInjectionAnalysis;
+
+    /**
      * Get 存储使用量(MB)
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return AmountOfUsedStorage 存储使用量(MB)
@@ -919,6 +951,86 @@ public class ApmInstanceDetail extends AbstractModel {
         this.DefaultTSF = DefaultTSF;
     }
 
+    /**
+     * Get 是否关联dashboard： 0 关 1 开
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsRelatedDashboard 是否关联dashboard： 0 关 1 开
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getIsRelatedDashboard() {
+        return this.IsRelatedDashboard;
+    }
+
+    /**
+     * Set 是否关联dashboard： 0 关 1 开
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsRelatedDashboard 是否关联dashboard： 0 关 1 开
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsRelatedDashboard(Long IsRelatedDashboard) {
+        this.IsRelatedDashboard = IsRelatedDashboard;
+    }
+
+    /**
+     * Get dashboard ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DashboardTopicID dashboard ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDashboardTopicID() {
+        return this.DashboardTopicID;
+    }
+
+    /**
+     * Set dashboard ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DashboardTopicID dashboard ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDashboardTopicID(String DashboardTopicID) {
+        this.DashboardTopicID = DashboardTopicID;
+    }
+
+    /**
+     * Get 是否开启组件漏洞检测
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsInstrumentationVulnerabilityScan 是否开启组件漏洞检测
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getIsInstrumentationVulnerabilityScan() {
+        return this.IsInstrumentationVulnerabilityScan;
+    }
+
+    /**
+     * Set 是否开启组件漏洞检测
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsInstrumentationVulnerabilityScan 是否开启组件漏洞检测
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsInstrumentationVulnerabilityScan(Long IsInstrumentationVulnerabilityScan) {
+        this.IsInstrumentationVulnerabilityScan = IsInstrumentationVulnerabilityScan;
+    }
+
+    /**
+     * Get 是否开启SQL注入分析
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsSqlInjectionAnalysis 是否开启SQL注入分析
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getIsSqlInjectionAnalysis() {
+        return this.IsSqlInjectionAnalysis;
+    }
+
+    /**
+     * Set 是否开启SQL注入分析
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsSqlInjectionAnalysis 是否开启SQL注入分析
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsSqlInjectionAnalysis(Long IsSqlInjectionAnalysis) {
+        this.IsSqlInjectionAnalysis = IsSqlInjectionAnalysis;
+    }
+
     public ApmInstanceDetail() {
     }
 
@@ -1029,6 +1141,18 @@ public class ApmInstanceDetail extends AbstractModel {
         if (source.DefaultTSF != null) {
             this.DefaultTSF = new Long(source.DefaultTSF);
         }
+        if (source.IsRelatedDashboard != null) {
+            this.IsRelatedDashboard = new Long(source.IsRelatedDashboard);
+        }
+        if (source.DashboardTopicID != null) {
+            this.DashboardTopicID = new String(source.DashboardTopicID);
+        }
+        if (source.IsInstrumentationVulnerabilityScan != null) {
+            this.IsInstrumentationVulnerabilityScan = new Long(source.IsInstrumentationVulnerabilityScan);
+        }
+        if (source.IsSqlInjectionAnalysis != null) {
+            this.IsSqlInjectionAnalysis = new Long(source.IsSqlInjectionAnalysis);
+        }
     }
 
 
@@ -1068,6 +1192,10 @@ public class ApmInstanceDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "ResponseDurationWarningThreshold", this.ResponseDurationWarningThreshold);
         this.setParamSimple(map, prefix + "Free", this.Free);
         this.setParamSimple(map, prefix + "DefaultTSF", this.DefaultTSF);
+        this.setParamSimple(map, prefix + "IsRelatedDashboard", this.IsRelatedDashboard);
+        this.setParamSimple(map, prefix + "DashboardTopicID", this.DashboardTopicID);
+        this.setParamSimple(map, prefix + "IsInstrumentationVulnerabilityScan", this.IsInstrumentationVulnerabilityScan);
+        this.setParamSimple(map, prefix + "IsSqlInjectionAnalysis", this.IsSqlInjectionAnalysis);
 
     }
 }

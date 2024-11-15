@@ -38,7 +38,7 @@ public class DescribeInstancesActionTimerRequest extends AbstractModel {
     private String [] InstanceIds;
 
     /**
-    * 定时任务执行时间，格式如：2018-05-01 19:00:00，必须大于当前时间5分钟。
+    * 定时器动作，目前仅支持销毁一个值：TerminateInstances。
     */
     @SerializedName("TimerAction")
     @Expose
@@ -59,7 +59,7 @@ public class DescribeInstancesActionTimerRequest extends AbstractModel {
     private String StartActionTime;
 
     /**
-    * 定时任务状态列表。<br><li>UNDO：未执行<br><li>DOING：正在执行<br><li>DONE：执行完成。
+    * 定时任务状态列表。<br><li>UNDO：未执行</li> <br><li>DOING：正在执行</li><br><li>DONE：执行完成。</li>
     */
     @SerializedName("StatusList")
     @Expose
@@ -98,16 +98,16 @@ public class DescribeInstancesActionTimerRequest extends AbstractModel {
     }
 
     /**
-     * Get 定时任务执行时间，格式如：2018-05-01 19:00:00，必须大于当前时间5分钟。 
-     * @return TimerAction 定时任务执行时间，格式如：2018-05-01 19:00:00，必须大于当前时间5分钟。
+     * Get 定时器动作，目前仅支持销毁一个值：TerminateInstances。 
+     * @return TimerAction 定时器动作，目前仅支持销毁一个值：TerminateInstances。
      */
     public String getTimerAction() {
         return this.TimerAction;
     }
 
     /**
-     * Set 定时任务执行时间，格式如：2018-05-01 19:00:00，必须大于当前时间5分钟。
-     * @param TimerAction 定时任务执行时间，格式如：2018-05-01 19:00:00，必须大于当前时间5分钟。
+     * Set 定时器动作，目前仅支持销毁一个值：TerminateInstances。
+     * @param TimerAction 定时器动作，目前仅支持销毁一个值：TerminateInstances。
      */
     public void setTimerAction(String TimerAction) {
         this.TimerAction = TimerAction;
@@ -146,16 +146,16 @@ public class DescribeInstancesActionTimerRequest extends AbstractModel {
     }
 
     /**
-     * Get 定时任务状态列表。<br><li>UNDO：未执行<br><li>DOING：正在执行<br><li>DONE：执行完成。 
-     * @return StatusList 定时任务状态列表。<br><li>UNDO：未执行<br><li>DOING：正在执行<br><li>DONE：执行完成。
+     * Get 定时任务状态列表。<br><li>UNDO：未执行</li> <br><li>DOING：正在执行</li><br><li>DONE：执行完成。</li> 
+     * @return StatusList 定时任务状态列表。<br><li>UNDO：未执行</li> <br><li>DOING：正在执行</li><br><li>DONE：执行完成。</li>
      */
     public String [] getStatusList() {
         return this.StatusList;
     }
 
     /**
-     * Set 定时任务状态列表。<br><li>UNDO：未执行<br><li>DOING：正在执行<br><li>DONE：执行完成。
-     * @param StatusList 定时任务状态列表。<br><li>UNDO：未执行<br><li>DOING：正在执行<br><li>DONE：执行完成。
+     * Set 定时任务状态列表。<br><li>UNDO：未执行</li> <br><li>DOING：正在执行</li><br><li>DONE：执行完成。</li>
+     * @param StatusList 定时任务状态列表。<br><li>UNDO：未执行</li> <br><li>DOING：正在执行</li><br><li>DONE：执行完成。</li>
      */
     public void setStatusList(String [] StatusList) {
         this.StatusList = StatusList;

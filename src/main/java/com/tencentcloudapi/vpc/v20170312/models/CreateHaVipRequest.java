@@ -66,6 +66,13 @@ public class CreateHaVipRequest extends AbstractModel {
     private Boolean CheckAssociate;
 
     /**
+    * 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get `HAVIP`所在私有网络`ID`。 
      * @return VpcId `HAVIP`所在私有网络`ID`。
      */
@@ -161,6 +168,22 @@ public class CreateHaVipRequest extends AbstractModel {
         this.CheckAssociate = CheckAssociate;
     }
 
+    /**
+     * Get 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。 
+     * @return Tags 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
+     * @param Tags 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public CreateHaVipRequest() {
     }
 
@@ -187,6 +210,12 @@ public class CreateHaVipRequest extends AbstractModel {
         if (source.CheckAssociate != null) {
             this.CheckAssociate = new Boolean(source.CheckAssociate);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -200,6 +229,7 @@ public class CreateHaVipRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Vip", this.Vip);
         this.setParamSimple(map, prefix + "NetworkInterfaceId", this.NetworkInterfaceId);
         this.setParamSimple(map, prefix + "CheckAssociate", this.CheckAssociate);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

@@ -89,6 +89,14 @@ public class DomainDetailInfo extends AbstractModel {
     private DomainQUICConfig QUICConfig;
 
     /**
+    * IP 访问限制配置信息。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IPFilterPolicy")
+    @Expose
+    private IPFilterPolicy IPFilterPolicy;
+
+    /**
      * Get 域名名称。 
      * @return Domain 域名名称。
      */
@@ -252,6 +260,26 @@ public class DomainDetailInfo extends AbstractModel {
         this.QUICConfig = QUICConfig;
     }
 
+    /**
+     * Get IP 访问限制配置信息。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IPFilterPolicy IP 访问限制配置信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public IPFilterPolicy getIPFilterPolicy() {
+        return this.IPFilterPolicy;
+    }
+
+    /**
+     * Set IP 访问限制配置信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IPFilterPolicy IP 访问限制配置信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIPFilterPolicy(IPFilterPolicy IPFilterPolicy) {
+        this.IPFilterPolicy = IPFilterPolicy;
+    }
+
     public DomainDetailInfo() {
     }
 
@@ -287,6 +315,9 @@ public class DomainDetailInfo extends AbstractModel {
         if (source.QUICConfig != null) {
             this.QUICConfig = new DomainQUICConfig(source.QUICConfig);
         }
+        if (source.IPFilterPolicy != null) {
+            this.IPFilterPolicy = new IPFilterPolicy(source.IPFilterPolicy);
+        }
     }
 
 
@@ -302,6 +333,7 @@ public class DomainDetailInfo extends AbstractModel {
         this.setParamObj(map, prefix + "RefererAuthPolicy.", this.RefererAuthPolicy);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamObj(map, prefix + "QUICConfig.", this.QUICConfig);
+        this.setParamObj(map, prefix + "IPFilterPolicy.", this.IPFilterPolicy);
 
     }
 }

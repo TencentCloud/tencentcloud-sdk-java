@@ -24,7 +24,8 @@ import java.util.HashMap;
 public class IntentionVerifyData extends AbstractModel {
 
     /**
-    * 意愿确认环节中录制的视频（base64）。若不存在则为空字符串。
+    * 意愿确认环节中录制的视频（base64）。
+- 若不存在则为空字符串。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IntentionVerifyVideo")
@@ -32,7 +33,8 @@ public class IntentionVerifyData extends AbstractModel {
     private String IntentionVerifyVideo;
 
     /**
-    * 意愿确认环节中用户语音转文字的识别结果。若不存在则为空字符串。
+    * 意愿确认环节中用户语音转文字的识别结果。
+- 若不存在则为空字符串。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AsrResult")
@@ -40,7 +42,8 @@ public class IntentionVerifyData extends AbstractModel {
     private String AsrResult;
 
     /**
-    * 意愿确认环节的结果码。当该结果码为0时，语音朗读的视频与语音识别结果才会返回。
+    * 意愿确认环节的结果码。
+- 当该结果码为0时，语音朗读的视频与语音识别结果才会返回。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ErrorCode")
@@ -56,7 +59,8 @@ public class IntentionVerifyData extends AbstractModel {
     private String ErrorMessage;
 
     /**
-    * 意愿确认环节中录制视频的最佳帧（base64）。若不存在则为空字符串。
+    * 意愿确认环节中录制视频的最佳帧（base64）。
+- 若不存在则为空字符串。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IntentionVerifyBestFrame")
@@ -72,9 +76,11 @@ public class IntentionVerifyData extends AbstractModel {
     private String AsrResultSimilarity;
 
     /**
-     * Get 意愿确认环节中录制的视频（base64）。若不存在则为空字符串。
+     * Get 意愿确认环节中录制的视频（base64）。
+- 若不存在则为空字符串。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IntentionVerifyVideo 意愿确认环节中录制的视频（base64）。若不存在则为空字符串。
+     * @return IntentionVerifyVideo 意愿确认环节中录制的视频（base64）。
+- 若不存在则为空字符串。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIntentionVerifyVideo() {
@@ -82,9 +88,11 @@ public class IntentionVerifyData extends AbstractModel {
     }
 
     /**
-     * Set 意愿确认环节中录制的视频（base64）。若不存在则为空字符串。
+     * Set 意愿确认环节中录制的视频（base64）。
+- 若不存在则为空字符串。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IntentionVerifyVideo 意愿确认环节中录制的视频（base64）。若不存在则为空字符串。
+     * @param IntentionVerifyVideo 意愿确认环节中录制的视频（base64）。
+- 若不存在则为空字符串。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIntentionVerifyVideo(String IntentionVerifyVideo) {
@@ -92,9 +100,11 @@ public class IntentionVerifyData extends AbstractModel {
     }
 
     /**
-     * Get 意愿确认环节中用户语音转文字的识别结果。若不存在则为空字符串。
+     * Get 意愿确认环节中用户语音转文字的识别结果。
+- 若不存在则为空字符串。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AsrResult 意愿确认环节中用户语音转文字的识别结果。若不存在则为空字符串。
+     * @return AsrResult 意愿确认环节中用户语音转文字的识别结果。
+- 若不存在则为空字符串。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAsrResult() {
@@ -102,9 +112,11 @@ public class IntentionVerifyData extends AbstractModel {
     }
 
     /**
-     * Set 意愿确认环节中用户语音转文字的识别结果。若不存在则为空字符串。
+     * Set 意愿确认环节中用户语音转文字的识别结果。
+- 若不存在则为空字符串。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AsrResult 意愿确认环节中用户语音转文字的识别结果。若不存在则为空字符串。
+     * @param AsrResult 意愿确认环节中用户语音转文字的识别结果。
+- 若不存在则为空字符串。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAsrResult(String AsrResult) {
@@ -112,9 +124,11 @@ public class IntentionVerifyData extends AbstractModel {
     }
 
     /**
-     * Get 意愿确认环节的结果码。当该结果码为0时，语音朗读的视频与语音识别结果才会返回。
+     * Get 意愿确认环节的结果码。
+- 当该结果码为0时，语音朗读的视频与语音识别结果才会返回。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ErrorCode 意愿确认环节的结果码。当该结果码为0时，语音朗读的视频与语音识别结果才会返回。
+     * @return ErrorCode 意愿确认环节的结果码。
+- 当该结果码为0时，语音朗读的视频与语音识别结果才会返回。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getErrorCode() {
@@ -122,9 +136,11 @@ public class IntentionVerifyData extends AbstractModel {
     }
 
     /**
-     * Set 意愿确认环节的结果码。当该结果码为0时，语音朗读的视频与语音识别结果才会返回。
+     * Set 意愿确认环节的结果码。
+- 当该结果码为0时，语音朗读的视频与语音识别结果才会返回。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ErrorCode 意愿确认环节的结果码。当该结果码为0时，语音朗读的视频与语音识别结果才会返回。
+     * @param ErrorCode 意愿确认环节的结果码。
+- 当该结果码为0时，语音朗读的视频与语音识别结果才会返回。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrorCode(Long ErrorCode) {
@@ -152,9 +168,11 @@ public class IntentionVerifyData extends AbstractModel {
     }
 
     /**
-     * Get 意愿确认环节中录制视频的最佳帧（base64）。若不存在则为空字符串。
+     * Get 意愿确认环节中录制视频的最佳帧（base64）。
+- 若不存在则为空字符串。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IntentionVerifyBestFrame 意愿确认环节中录制视频的最佳帧（base64）。若不存在则为空字符串。
+     * @return IntentionVerifyBestFrame 意愿确认环节中录制视频的最佳帧（base64）。
+- 若不存在则为空字符串。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIntentionVerifyBestFrame() {
@@ -162,9 +180,11 @@ public class IntentionVerifyData extends AbstractModel {
     }
 
     /**
-     * Set 意愿确认环节中录制视频的最佳帧（base64）。若不存在则为空字符串。
+     * Set 意愿确认环节中录制视频的最佳帧（base64）。
+- 若不存在则为空字符串。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IntentionVerifyBestFrame 意愿确认环节中录制视频的最佳帧（base64）。若不存在则为空字符串。
+     * @param IntentionVerifyBestFrame 意愿确认环节中录制视频的最佳帧（base64）。
+- 若不存在则为空字符串。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIntentionVerifyBestFrame(String IntentionVerifyBestFrame) {

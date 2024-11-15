@@ -24,15 +24,17 @@ import java.util.HashMap;
 public class GetEidTokenResponse extends AbstractModel {
 
     /**
-    * 一次核身流程的标识，有效时间为600秒；
-完成核身后，可用该标识获取验证结果信息。
+    * 一次核身流程的标识。
+- 有效时间为600秒。
+- 完成核身后，可用该标识获取验证结果信息。
     */
     @SerializedName("EidToken")
     @Expose
     private String EidToken;
 
     /**
-    * 发起核身流程的URL，用于H5场景核身。
+    * 发起核身流程的URL。
+- 用于H5场景核身。
     */
     @SerializedName("Url")
     @Expose
@@ -46,36 +48,44 @@ public class GetEidTokenResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 一次核身流程的标识，有效时间为600秒；
-完成核身后，可用该标识获取验证结果信息。 
-     * @return EidToken 一次核身流程的标识，有效时间为600秒；
-完成核身后，可用该标识获取验证结果信息。
+     * Get 一次核身流程的标识。
+- 有效时间为600秒。
+- 完成核身后，可用该标识获取验证结果信息。 
+     * @return EidToken 一次核身流程的标识。
+- 有效时间为600秒。
+- 完成核身后，可用该标识获取验证结果信息。
      */
     public String getEidToken() {
         return this.EidToken;
     }
 
     /**
-     * Set 一次核身流程的标识，有效时间为600秒；
-完成核身后，可用该标识获取验证结果信息。
-     * @param EidToken 一次核身流程的标识，有效时间为600秒；
-完成核身后，可用该标识获取验证结果信息。
+     * Set 一次核身流程的标识。
+- 有效时间为600秒。
+- 完成核身后，可用该标识获取验证结果信息。
+     * @param EidToken 一次核身流程的标识。
+- 有效时间为600秒。
+- 完成核身后，可用该标识获取验证结果信息。
      */
     public void setEidToken(String EidToken) {
         this.EidToken = EidToken;
     }
 
     /**
-     * Get 发起核身流程的URL，用于H5场景核身。 
-     * @return Url 发起核身流程的URL，用于H5场景核身。
+     * Get 发起核身流程的URL。
+- 用于H5场景核身。 
+     * @return Url 发起核身流程的URL。
+- 用于H5场景核身。
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set 发起核身流程的URL，用于H5场景核身。
-     * @param Url 发起核身流程的URL，用于H5场景核身。
+     * Set 发起核身流程的URL。
+- 用于H5场景核身。
+     * @param Url 发起核身流程的URL。
+- 用于H5场景核身。
      */
     public void setUrl(String Url) {
         this.Url = Url;

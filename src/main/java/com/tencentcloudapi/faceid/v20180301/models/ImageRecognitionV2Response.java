@@ -24,14 +24,18 @@ import java.util.HashMap;
 public class ImageRecognitionV2Response extends AbstractModel {
 
     /**
-    * 相似度，取值范围 [0.00, 100.00]。推荐相似度大于等于70时可判断为同一人，可根据具体场景自行调整阈值（阈值70的误通过率为千分之一，阈值80的误通过率是万分之一）
+    * 相似度。
+- 取值范围 [0.00, 100.00]。
+- 推荐相似度大于等于70时可判断为同一人，可根据具体场景自行调整阈值（阈值70的误通过率为千分之一，阈值80的误通过率是万分之一）
     */
     @SerializedName("Sim")
     @Expose
     private Float Sim;
 
     /**
-    * 业务错误码，成功情况返回Success, 错误情况请参考下方错误码 列表中FailedOperation部分
+    * 业务错误码。
+- 成功情况返回Success。
+- 错误情况请参考下方错误码 列表中FailedOperation部分
     */
     @SerializedName("Result")
     @Expose
@@ -52,32 +56,48 @@ public class ImageRecognitionV2Response extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 相似度，取值范围 [0.00, 100.00]。推荐相似度大于等于70时可判断为同一人，可根据具体场景自行调整阈值（阈值70的误通过率为千分之一，阈值80的误通过率是万分之一） 
-     * @return Sim 相似度，取值范围 [0.00, 100.00]。推荐相似度大于等于70时可判断为同一人，可根据具体场景自行调整阈值（阈值70的误通过率为千分之一，阈值80的误通过率是万分之一）
+     * Get 相似度。
+- 取值范围 [0.00, 100.00]。
+- 推荐相似度大于等于70时可判断为同一人，可根据具体场景自行调整阈值（阈值70的误通过率为千分之一，阈值80的误通过率是万分之一） 
+     * @return Sim 相似度。
+- 取值范围 [0.00, 100.00]。
+- 推荐相似度大于等于70时可判断为同一人，可根据具体场景自行调整阈值（阈值70的误通过率为千分之一，阈值80的误通过率是万分之一）
      */
     public Float getSim() {
         return this.Sim;
     }
 
     /**
-     * Set 相似度，取值范围 [0.00, 100.00]。推荐相似度大于等于70时可判断为同一人，可根据具体场景自行调整阈值（阈值70的误通过率为千分之一，阈值80的误通过率是万分之一）
-     * @param Sim 相似度，取值范围 [0.00, 100.00]。推荐相似度大于等于70时可判断为同一人，可根据具体场景自行调整阈值（阈值70的误通过率为千分之一，阈值80的误通过率是万分之一）
+     * Set 相似度。
+- 取值范围 [0.00, 100.00]。
+- 推荐相似度大于等于70时可判断为同一人，可根据具体场景自行调整阈值（阈值70的误通过率为千分之一，阈值80的误通过率是万分之一）
+     * @param Sim 相似度。
+- 取值范围 [0.00, 100.00]。
+- 推荐相似度大于等于70时可判断为同一人，可根据具体场景自行调整阈值（阈值70的误通过率为千分之一，阈值80的误通过率是万分之一）
      */
     public void setSim(Float Sim) {
         this.Sim = Sim;
     }
 
     /**
-     * Get 业务错误码，成功情况返回Success, 错误情况请参考下方错误码 列表中FailedOperation部分 
-     * @return Result 业务错误码，成功情况返回Success, 错误情况请参考下方错误码 列表中FailedOperation部分
+     * Get 业务错误码。
+- 成功情况返回Success。
+- 错误情况请参考下方错误码 列表中FailedOperation部分 
+     * @return Result 业务错误码。
+- 成功情况返回Success。
+- 错误情况请参考下方错误码 列表中FailedOperation部分
      */
     public String getResult() {
         return this.Result;
     }
 
     /**
-     * Set 业务错误码，成功情况返回Success, 错误情况请参考下方错误码 列表中FailedOperation部分
-     * @param Result 业务错误码，成功情况返回Success, 错误情况请参考下方错误码 列表中FailedOperation部分
+     * Set 业务错误码。
+- 成功情况返回Success。
+- 错误情况请参考下方错误码 列表中FailedOperation部分
+     * @param Result 业务错误码。
+- 成功情况返回Success。
+- 错误情况请参考下方错误码 列表中FailedOperation部分
      */
     public void setResult(String Result) {
         this.Result = Result;

@@ -71,7 +71,6 @@ public class DescribeDedicatedClusterOverviewResponse extends AbstractModel {
 
     /**
     * 宿主机资源概览信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HostDetailInfo")
     @Expose
@@ -79,7 +78,6 @@ public class DescribeDedicatedClusterOverviewResponse extends AbstractModel {
 
     /**
     * 热备宿主机数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HostStandbyCount")
     @Expose
@@ -87,7 +85,6 @@ public class DescribeDedicatedClusterOverviewResponse extends AbstractModel {
 
     /**
     * 普通宿主机数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HostNormalCount")
     @Expose
@@ -213,10 +210,8 @@ public class DescribeDedicatedClusterOverviewResponse extends AbstractModel {
     }
 
     /**
-     * Get 宿主机资源概览信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 宿主机资源概览信息 
      * @return HostDetailInfo 宿主机资源概览信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public HostDetailInfo [] getHostDetailInfo() {
         return this.HostDetailInfo;
@@ -224,19 +219,15 @@ public class DescribeDedicatedClusterOverviewResponse extends AbstractModel {
 
     /**
      * Set 宿主机资源概览信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HostDetailInfo 宿主机资源概览信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHostDetailInfo(HostDetailInfo [] HostDetailInfo) {
         this.HostDetailInfo = HostDetailInfo;
     }
 
     /**
-     * Get 热备宿主机数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 热备宿主机数量 
      * @return HostStandbyCount 热备宿主机数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getHostStandbyCount() {
         return this.HostStandbyCount;
@@ -244,19 +235,15 @@ public class DescribeDedicatedClusterOverviewResponse extends AbstractModel {
 
     /**
      * Set 热备宿主机数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HostStandbyCount 热备宿主机数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHostStandbyCount(Long HostStandbyCount) {
         this.HostStandbyCount = HostStandbyCount;
     }
 
     /**
-     * Get 普通宿主机数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 普通宿主机数量 
      * @return HostNormalCount 普通宿主机数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getHostNormalCount() {
         return this.HostNormalCount;
@@ -264,9 +251,7 @@ public class DescribeDedicatedClusterOverviewResponse extends AbstractModel {
 
     /**
      * Set 普通宿主机数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HostNormalCount 普通宿主机数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHostNormalCount(Long HostNormalCount) {
         this.HostNormalCount = HostNormalCount;

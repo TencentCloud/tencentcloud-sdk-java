@@ -25,7 +25,6 @@ public class ResourceQuota extends AbstractModel {
 
     /**
     * CPU Limit设置。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CPULimit")
     @Expose
@@ -33,7 +32,6 @@ public class ResourceQuota extends AbstractModel {
 
     /**
     * 内存Limit设置（单位：Mi，Gi，Ti，M，G，T）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MemoryLimit")
     @Expose
@@ -41,17 +39,14 @@ public class ResourceQuota extends AbstractModel {
 
     /**
     * Pods数量设置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Pods")
     @Expose
     private String Pods;
 
     /**
-     * Get CPU Limit设置。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get CPU Limit设置。 
      * @return CPULimit CPU Limit设置。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCPULimit() {
         return this.CPULimit;
@@ -59,19 +54,15 @@ public class ResourceQuota extends AbstractModel {
 
     /**
      * Set CPU Limit设置。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CPULimit CPU Limit设置。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCPULimit(String CPULimit) {
         this.CPULimit = CPULimit;
     }
 
     /**
-     * Get 内存Limit设置（单位：Mi，Gi，Ti，M，G，T）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 内存Limit设置（单位：Mi，Gi，Ti，M，G，T） 
      * @return MemoryLimit 内存Limit设置（单位：Mi，Gi，Ti，M，G，T）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMemoryLimit() {
         return this.MemoryLimit;
@@ -79,19 +70,15 @@ public class ResourceQuota extends AbstractModel {
 
     /**
      * Set 内存Limit设置（单位：Mi，Gi，Ti，M，G，T）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MemoryLimit 内存Limit设置（单位：Mi，Gi，Ti，M，G，T）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMemoryLimit(String MemoryLimit) {
         this.MemoryLimit = MemoryLimit;
     }
 
     /**
-     * Get Pods数量设置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Pods数量设置 
      * @return Pods Pods数量设置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPods() {
         return this.Pods;
@@ -99,9 +86,7 @@ public class ResourceQuota extends AbstractModel {
 
     /**
      * Set Pods数量设置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Pods Pods数量设置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPods(String Pods) {
         this.Pods = Pods;

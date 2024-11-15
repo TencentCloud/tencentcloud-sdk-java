@@ -25,7 +25,6 @@ public class MultiNet extends AbstractModel {
 
     /**
     * 网卡序号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NetId")
     @Expose
@@ -33,7 +32,6 @@ public class MultiNet extends AbstractModel {
 
     /**
     * 网卡IP
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NetIp")
     @Expose
@@ -41,7 +39,6 @@ public class MultiNet extends AbstractModel {
 
     /**
     * 时延，单位ms
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Rtt")
     @Expose
@@ -49,7 +46,6 @@ public class MultiNet extends AbstractModel {
 
     /**
     * 丢包率，单位%
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Lost")
     @Expose
@@ -57,7 +53,6 @@ public class MultiNet extends AbstractModel {
 
     /**
     * 发送bps，单位kbps
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SendBps")
     @Expose
@@ -65,17 +60,14 @@ public class MultiNet extends AbstractModel {
 
     /**
     * 接收bps，单位kbps
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RecvBps")
     @Expose
     private Long [] RecvBps;
 
     /**
-     * Get 网卡序号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网卡序号 
      * @return NetId 网卡序号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getNetId() {
         return this.NetId;
@@ -83,19 +75,15 @@ public class MultiNet extends AbstractModel {
 
     /**
      * Set 网卡序号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NetId 网卡序号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNetId(Long NetId) {
         this.NetId = NetId;
     }
 
     /**
-     * Get 网卡IP
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网卡IP 
      * @return NetIp 网卡IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNetIp() {
         return this.NetIp;
@@ -103,19 +91,15 @@ public class MultiNet extends AbstractModel {
 
     /**
      * Set 网卡IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NetIp 网卡IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNetIp(String NetIp) {
         this.NetIp = NetIp;
     }
 
     /**
-     * Get 时延，单位ms
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 时延，单位ms 
      * @return Rtt 时延，单位ms
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long [] getRtt() {
         return this.Rtt;
@@ -123,19 +107,15 @@ public class MultiNet extends AbstractModel {
 
     /**
      * Set 时延，单位ms
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Rtt 时延，单位ms
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRtt(Long [] Rtt) {
         this.Rtt = Rtt;
     }
 
     /**
-     * Get 丢包率，单位%
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 丢包率，单位% 
      * @return Lost 丢包率，单位%
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long [] getLost() {
         return this.Lost;
@@ -143,19 +123,15 @@ public class MultiNet extends AbstractModel {
 
     /**
      * Set 丢包率，单位%
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Lost 丢包率，单位%
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLost(Long [] Lost) {
         this.Lost = Lost;
     }
 
     /**
-     * Get 发送bps，单位kbps
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 发送bps，单位kbps 
      * @return SendBps 发送bps，单位kbps
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long [] getSendBps() {
         return this.SendBps;
@@ -163,19 +139,15 @@ public class MultiNet extends AbstractModel {
 
     /**
      * Set 发送bps，单位kbps
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SendBps 发送bps，单位kbps
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSendBps(Long [] SendBps) {
         this.SendBps = SendBps;
     }
 
     /**
-     * Get 接收bps，单位kbps
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 接收bps，单位kbps 
      * @return RecvBps 接收bps，单位kbps
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long [] getRecvBps() {
         return this.RecvBps;
@@ -183,9 +155,7 @@ public class MultiNet extends AbstractModel {
 
     /**
      * Set 接收bps，单位kbps
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RecvBps 接收bps，单位kbps
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRecvBps(Long [] RecvBps) {
         this.RecvBps = RecvBps;

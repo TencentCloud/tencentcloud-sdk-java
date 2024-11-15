@@ -83,6 +83,13 @@ public class StartWebRecordRequest extends AbstractModel {
     private Long ReadyTimeout;
 
     /**
+    * 渲染移动模式参数；不准备渲染移动模式页面时，请勿设置此参数。
+    */
+    @SerializedName("EmulateMobileParams")
+    @Expose
+    private EmulateMobileParams EmulateMobileParams;
+
+    /**
      * Get 需要录制的网页URL
  
      * @return RecordUrl 需要录制的网页URL
@@ -222,6 +229,22 @@ public class StartWebRecordRequest extends AbstractModel {
         this.ReadyTimeout = ReadyTimeout;
     }
 
+    /**
+     * Get 渲染移动模式参数；不准备渲染移动模式页面时，请勿设置此参数。 
+     * @return EmulateMobileParams 渲染移动模式参数；不准备渲染移动模式页面时，请勿设置此参数。
+     */
+    public EmulateMobileParams getEmulateMobileParams() {
+        return this.EmulateMobileParams;
+    }
+
+    /**
+     * Set 渲染移动模式参数；不准备渲染移动模式页面时，请勿设置此参数。
+     * @param EmulateMobileParams 渲染移动模式参数；不准备渲染移动模式页面时，请勿设置此参数。
+     */
+    public void setEmulateMobileParams(EmulateMobileParams EmulateMobileParams) {
+        this.EmulateMobileParams = EmulateMobileParams;
+    }
+
     public StartWebRecordRequest() {
     }
 
@@ -257,6 +280,9 @@ public class StartWebRecordRequest extends AbstractModel {
         if (source.ReadyTimeout != null) {
             this.ReadyTimeout = new Long(source.ReadyTimeout);
         }
+        if (source.EmulateMobileParams != null) {
+            this.EmulateMobileParams = new EmulateMobileParams(source.EmulateMobileParams);
+        }
     }
 
 
@@ -272,6 +298,7 @@ public class StartWebRecordRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "RecordId", this.RecordId);
         this.setParamArrayObj(map, prefix + "PublishCdnParams.", this.PublishCdnParams);
         this.setParamSimple(map, prefix + "ReadyTimeout", this.ReadyTimeout);
+        this.setParamObj(map, prefix + "EmulateMobileParams.", this.EmulateMobileParams);
 
     }
 }

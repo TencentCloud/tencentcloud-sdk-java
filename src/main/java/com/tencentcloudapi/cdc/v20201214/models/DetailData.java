@@ -25,7 +25,6 @@ public class DetailData extends AbstractModel {
 
     /**
     * 时间戳
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Timestamps")
     @Expose
@@ -33,17 +32,14 @@ public class DetailData extends AbstractModel {
 
     /**
     * 对应的具体值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Values")
     @Expose
     private Float [] Values;
 
     /**
-     * Get 时间戳
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 时间戳 
      * @return Timestamps 时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float [] getTimestamps() {
         return this.Timestamps;
@@ -51,19 +47,15 @@ public class DetailData extends AbstractModel {
 
     /**
      * Set 时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Timestamps 时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimestamps(Float [] Timestamps) {
         this.Timestamps = Timestamps;
     }
 
     /**
-     * Get 对应的具体值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 对应的具体值 
      * @return Values 对应的具体值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float [] getValues() {
         return this.Values;
@@ -71,9 +63,7 @@ public class DetailData extends AbstractModel {
 
     /**
      * Set 对应的具体值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Values 对应的具体值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValues(Float [] Values) {
         this.Values = Values;

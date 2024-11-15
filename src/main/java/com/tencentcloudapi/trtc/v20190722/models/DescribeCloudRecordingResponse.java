@@ -42,7 +42,6 @@ Exited：表示当前录制任务正在退出的过程中。
 
     /**
     * 录制文件信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StorageFileList")
     @Expose
@@ -100,10 +99,8 @@ Exited：表示当前录制任务正在退出的过程中。
     }
 
     /**
-     * Get 录制文件信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 录制文件信息。 
      * @return StorageFileList 录制文件信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public StorageFile [] getStorageFileList() {
         return this.StorageFileList;
@@ -111,9 +108,7 @@ Exited：表示当前录制任务正在退出的过程中。
 
     /**
      * Set 录制文件信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StorageFileList 录制文件信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStorageFileList(StorageFile [] StorageFileList) {
         this.StorageFileList = StorageFileList;

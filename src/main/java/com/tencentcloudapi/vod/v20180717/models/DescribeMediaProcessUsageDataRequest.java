@@ -66,6 +66,7 @@ public class DescribeMediaProcessUsageDataRequest extends AbstractModel {
 <li> VideoProduce: 视频制作</li>
 <li> MediaCast: 媒体转推</li>
 <li>Transcode: 转码，包含普通转码、极速高清和视频编辑（不推荐使用）</li>
+<li>VoiceTranslation: 语音翻译</li>
     */
     @SerializedName("Type")
     @Expose
@@ -140,7 +141,8 @@ public class DescribeMediaProcessUsageDataRequest extends AbstractModel {
 <li> VideoSegment: 视频智能拆条</li>
 <li> VideoProduce: 视频制作</li>
 <li> MediaCast: 媒体转推</li>
-<li>Transcode: 转码，包含普通转码、极速高清和视频编辑（不推荐使用）</li> 
+<li>Transcode: 转码，包含普通转码、极速高清和视频编辑（不推荐使用）</li>
+<li>VoiceTranslation: 语音翻译</li> 
      * @return Type 查询视频处理任务类型，目前支持的任务类型包括：
 <li> Transcoding: 普通转码</li>
 <li> Transcoding-TESHD: 极速高清转码</li>
@@ -162,6 +164,7 @@ public class DescribeMediaProcessUsageDataRequest extends AbstractModel {
 <li> VideoProduce: 视频制作</li>
 <li> MediaCast: 媒体转推</li>
 <li>Transcode: 转码，包含普通转码、极速高清和视频编辑（不推荐使用）</li>
+<li>VoiceTranslation: 语音翻译</li>
      */
     public String getType() {
         return this.Type;
@@ -189,6 +192,7 @@ public class DescribeMediaProcessUsageDataRequest extends AbstractModel {
 <li> VideoProduce: 视频制作</li>
 <li> MediaCast: 媒体转推</li>
 <li>Transcode: 转码，包含普通转码、极速高清和视频编辑（不推荐使用）</li>
+<li>VoiceTranslation: 语音翻译</li>
      * @param Type 查询视频处理任务类型，目前支持的任务类型包括：
 <li> Transcoding: 普通转码</li>
 <li> Transcoding-TESHD: 极速高清转码</li>
@@ -210,6 +214,7 @@ public class DescribeMediaProcessUsageDataRequest extends AbstractModel {
 <li> VideoProduce: 视频制作</li>
 <li> MediaCast: 媒体转推</li>
 <li>Transcode: 转码，包含普通转码、极速高清和视频编辑（不推荐使用）</li>
+<li>VoiceTranslation: 语音翻译</li>
      */
     public void setType(String Type) {
         this.Type = Type;

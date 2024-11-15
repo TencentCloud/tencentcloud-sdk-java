@@ -25,7 +25,6 @@ public class DescribeAgentRelateBigDealIdsResponse extends AbstractModel {
 
     /**
     * 申请合并支付的关联大订单号列表（不包含请求的订单号）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BigDealIdList")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeAgentRelateBigDealIdsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 申请合并支付的关联大订单号列表（不包含请求的订单号）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 申请合并支付的关联大订单号列表（不包含请求的订单号） 
      * @return BigDealIdList 申请合并支付的关联大订单号列表（不包含请求的订单号）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getBigDealIdList() {
         return this.BigDealIdList;
@@ -50,9 +47,7 @@ public class DescribeAgentRelateBigDealIdsResponse extends AbstractModel {
 
     /**
      * Set 申请合并支付的关联大订单号列表（不包含请求的订单号）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BigDealIdList 申请合并支付的关联大订单号列表（不包含请求的订单号）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBigDealIdList(String [] BigDealIdList) {
         this.BigDealIdList = BigDealIdList;

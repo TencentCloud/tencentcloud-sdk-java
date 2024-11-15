@@ -24,7 +24,8 @@ import java.util.HashMap;
 public class ParseNfcDataResponse extends AbstractModel {
 
     /**
-    * 0为首次查询成功，-1为查询失败。
+    * 结果码。
+- 取值范围：0为首次查询成功，-1为查询失败。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResultCode")
@@ -32,7 +33,7 @@ public class ParseNfcDataResponse extends AbstractModel {
     private String ResultCode;
 
     /**
-    * 身份证号
+    * 身份证号。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IdNum")
@@ -40,7 +41,7 @@ public class ParseNfcDataResponse extends AbstractModel {
     private String IdNum;
 
     /**
-    * 姓名
+    * 姓名。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
@@ -48,7 +49,7 @@ public class ParseNfcDataResponse extends AbstractModel {
     private String Name;
 
     /**
-    * 照片
+    * 照片。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Picture")
@@ -56,7 +57,7 @@ public class ParseNfcDataResponse extends AbstractModel {
     private String Picture;
 
     /**
-    * 出生日期
+    * 出生日期。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BirthDate")
@@ -64,7 +65,7 @@ public class ParseNfcDataResponse extends AbstractModel {
     private String BirthDate;
 
     /**
-    * 有效期起始时间
+    * 有效期起始时间。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BeginTime")
@@ -72,7 +73,7 @@ public class ParseNfcDataResponse extends AbstractModel {
     private String BeginTime;
 
     /**
-    * 有效期结束时间
+    * 有效期结束时间。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndTime")
@@ -80,7 +81,7 @@ public class ParseNfcDataResponse extends AbstractModel {
     private String EndTime;
 
     /**
-    * 住址
+    * 住址。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Address")
@@ -88,7 +89,7 @@ public class ParseNfcDataResponse extends AbstractModel {
     private String Address;
 
     /**
-    * 民族
+    * 民族。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Nation")
@@ -96,7 +97,7 @@ public class ParseNfcDataResponse extends AbstractModel {
     private String Nation;
 
     /**
-    * 性别
+    * 性别。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Sex")
@@ -104,7 +105,24 @@ public class ParseNfcDataResponse extends AbstractModel {
     private String Sex;
 
     /**
-    * 身份证 01 中国护照 03 军官证 04 武警证 05 港澳通行证 06 台胞证 07 外国护照 08 士兵证 09 临时身份证 10 户口本 11 警官证 12 外国人永久居留证 13 港澳台居民居住证 14 回乡证 15 大陆居民来往台湾通行证 16 其他证件 99
+    * 类型。
+- 取值范围：
+01：身份证。 
+03 ：中国护照。
+04 ：军官证。
+05 ：武警证。
+06：港澳通行证 。
+07 ：台胞证 。
+08：外国护照 。
+09 ：士兵证。
+09 ：临时身份证。
+11：户口本  。
+12 ：警官证 。
+13：外国人永久居留证。
+14：港澳台居民居住证。
+15：回乡证。
+16：大陆居民来往台湾通行证。
+99：其他证件。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IdType")
@@ -112,7 +130,7 @@ public class ParseNfcDataResponse extends AbstractModel {
     private String IdType;
 
     /**
-    * 英文姓名
+    * 英文姓名。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnName")
@@ -128,7 +146,7 @@ public class ParseNfcDataResponse extends AbstractModel {
     private String SigningOrganization;
 
     /**
-    * 港澳台居民居住证，通行证号码
+    * 港澳台居民居住证，通行证号码。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OtherIdNum")
@@ -136,7 +154,7 @@ public class ParseNfcDataResponse extends AbstractModel {
     private String OtherIdNum;
 
     /**
-    * 旅行证件国籍
+    * 旅行证件国籍。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Nationality")
@@ -144,7 +162,7 @@ public class ParseNfcDataResponse extends AbstractModel {
     private String Nationality;
 
     /**
-    * 旅行证件机读区第二行 29~42 位
+    * 旅行证件机读区第二行 29~42 位。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PersonalNumber")
@@ -152,9 +170,10 @@ public class ParseNfcDataResponse extends AbstractModel {
     private String PersonalNumber;
 
     /**
-    * 旅行证件类的核验结果。JSON格式如下：
-{"result_issuer ":"签发者证书合法性验证结果 ","result_pape r":"证件安全对象合法性验证 结果 ","result_data" :"防数据篡改验证结果 ","result_chip" :"防证书件芯片被复制验证结果"} 
- 0:验证通过，1: 验证不通过，2: 未验证，3:部分通过，当4项核验结果都为0时，表示证件为真
+    * 旅行证件类的核验结果。
+- JSON格式如下：
+{"result_issuer ":"签发者证书合法性验证结果 ","result_pape r":"证件安全对象合法性验证 结果 ","result_data" :"防数据篡改验证结果 ","result_chip" :"防证书件芯片被复制验证结果"} 。
+- 取值范围： 0:验证通过，1: 验证不通过，2: 未验证，3:部分通过，当4项核验结果都为0时，表示证件为真。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CheckMRTD")
@@ -162,7 +181,7 @@ public class ParseNfcDataResponse extends AbstractModel {
     private String CheckMRTD;
 
     /**
-    * 身份证照片面合成图片
+    * 身份证照片面合成图片。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ImageA")
@@ -170,7 +189,7 @@ public class ParseNfcDataResponse extends AbstractModel {
     private String ImageA;
 
     /**
-    * 身份证国徽面合成图片
+    * 身份证国徽面合成图片。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ImageB")
@@ -178,7 +197,7 @@ public class ParseNfcDataResponse extends AbstractModel {
     private String ImageB;
 
     /**
-    * 对result code的结果描述
+    * 对result code的结果描述。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResultDescription")
@@ -193,9 +212,11 @@ public class ParseNfcDataResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 0为首次查询成功，-1为查询失败。
+     * Get 结果码。
+- 取值范围：0为首次查询成功，-1为查询失败。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ResultCode 0为首次查询成功，-1为查询失败。
+     * @return ResultCode 结果码。
+- 取值范围：0为首次查询成功，-1为查询失败。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResultCode() {
@@ -203,9 +224,11 @@ public class ParseNfcDataResponse extends AbstractModel {
     }
 
     /**
-     * Set 0为首次查询成功，-1为查询失败。
+     * Set 结果码。
+- 取值范围：0为首次查询成功，-1为查询失败。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResultCode 0为首次查询成功，-1为查询失败。
+     * @param ResultCode 结果码。
+- 取值范围：0为首次查询成功，-1为查询失败。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResultCode(String ResultCode) {
@@ -213,9 +236,9 @@ public class ParseNfcDataResponse extends AbstractModel {
     }
 
     /**
-     * Get 身份证号
+     * Get 身份证号。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IdNum 身份证号
+     * @return IdNum 身份证号。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIdNum() {
@@ -223,9 +246,9 @@ public class ParseNfcDataResponse extends AbstractModel {
     }
 
     /**
-     * Set 身份证号
+     * Set 身份证号。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IdNum 身份证号
+     * @param IdNum 身份证号。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIdNum(String IdNum) {
@@ -233,9 +256,9 @@ public class ParseNfcDataResponse extends AbstractModel {
     }
 
     /**
-     * Get 姓名
+     * Get 姓名。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Name 姓名
+     * @return Name 姓名。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
@@ -243,9 +266,9 @@ public class ParseNfcDataResponse extends AbstractModel {
     }
 
     /**
-     * Set 姓名
+     * Set 姓名。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Name 姓名
+     * @param Name 姓名。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
@@ -253,9 +276,9 @@ public class ParseNfcDataResponse extends AbstractModel {
     }
 
     /**
-     * Get 照片
+     * Get 照片。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Picture 照片
+     * @return Picture 照片。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPicture() {
@@ -263,9 +286,9 @@ public class ParseNfcDataResponse extends AbstractModel {
     }
 
     /**
-     * Set 照片
+     * Set 照片。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Picture 照片
+     * @param Picture 照片。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPicture(String Picture) {
@@ -273,9 +296,9 @@ public class ParseNfcDataResponse extends AbstractModel {
     }
 
     /**
-     * Get 出生日期
+     * Get 出生日期。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BirthDate 出生日期
+     * @return BirthDate 出生日期。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBirthDate() {
@@ -283,9 +306,9 @@ public class ParseNfcDataResponse extends AbstractModel {
     }
 
     /**
-     * Set 出生日期
+     * Set 出生日期。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BirthDate 出生日期
+     * @param BirthDate 出生日期。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBirthDate(String BirthDate) {
@@ -293,9 +316,9 @@ public class ParseNfcDataResponse extends AbstractModel {
     }
 
     /**
-     * Get 有效期起始时间
+     * Get 有效期起始时间。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BeginTime 有效期起始时间
+     * @return BeginTime 有效期起始时间。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBeginTime() {
@@ -303,9 +326,9 @@ public class ParseNfcDataResponse extends AbstractModel {
     }
 
     /**
-     * Set 有效期起始时间
+     * Set 有效期起始时间。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param BeginTime 有效期起始时间
+     * @param BeginTime 有效期起始时间。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBeginTime(String BeginTime) {
@@ -313,9 +336,9 @@ public class ParseNfcDataResponse extends AbstractModel {
     }
 
     /**
-     * Get 有效期结束时间
+     * Get 有效期结束时间。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EndTime 有效期结束时间
+     * @return EndTime 有效期结束时间。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEndTime() {
@@ -323,9 +346,9 @@ public class ParseNfcDataResponse extends AbstractModel {
     }
 
     /**
-     * Set 有效期结束时间
+     * Set 有效期结束时间。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EndTime 有效期结束时间
+     * @param EndTime 有效期结束时间。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndTime(String EndTime) {
@@ -333,9 +356,9 @@ public class ParseNfcDataResponse extends AbstractModel {
     }
 
     /**
-     * Get 住址
+     * Get 住址。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Address 住址
+     * @return Address 住址。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAddress() {
@@ -343,9 +366,9 @@ public class ParseNfcDataResponse extends AbstractModel {
     }
 
     /**
-     * Set 住址
+     * Set 住址。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Address 住址
+     * @param Address 住址。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAddress(String Address) {
@@ -353,9 +376,9 @@ public class ParseNfcDataResponse extends AbstractModel {
     }
 
     /**
-     * Get 民族
+     * Get 民族。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Nation 民族
+     * @return Nation 民族。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNation() {
@@ -363,9 +386,9 @@ public class ParseNfcDataResponse extends AbstractModel {
     }
 
     /**
-     * Set 民族
+     * Set 民族。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Nation 民族
+     * @param Nation 民族。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNation(String Nation) {
@@ -373,9 +396,9 @@ public class ParseNfcDataResponse extends AbstractModel {
     }
 
     /**
-     * Get 性别
+     * Get 性别。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Sex 性别
+     * @return Sex 性别。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSex() {
@@ -383,9 +406,9 @@ public class ParseNfcDataResponse extends AbstractModel {
     }
 
     /**
-     * Set 性别
+     * Set 性别。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Sex 性别
+     * @param Sex 性别。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSex(String Sex) {
@@ -393,9 +416,43 @@ public class ParseNfcDataResponse extends AbstractModel {
     }
 
     /**
-     * Get 身份证 01 中国护照 03 军官证 04 武警证 05 港澳通行证 06 台胞证 07 外国护照 08 士兵证 09 临时身份证 10 户口本 11 警官证 12 外国人永久居留证 13 港澳台居民居住证 14 回乡证 15 大陆居民来往台湾通行证 16 其他证件 99
+     * Get 类型。
+- 取值范围：
+01：身份证。 
+03 ：中国护照。
+04 ：军官证。
+05 ：武警证。
+06：港澳通行证 。
+07 ：台胞证 。
+08：外国护照 。
+09 ：士兵证。
+09 ：临时身份证。
+11：户口本  。
+12 ：警官证 。
+13：外国人永久居留证。
+14：港澳台居民居住证。
+15：回乡证。
+16：大陆居民来往台湾通行证。
+99：其他证件。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IdType 身份证 01 中国护照 03 军官证 04 武警证 05 港澳通行证 06 台胞证 07 外国护照 08 士兵证 09 临时身份证 10 户口本 11 警官证 12 外国人永久居留证 13 港澳台居民居住证 14 回乡证 15 大陆居民来往台湾通行证 16 其他证件 99
+     * @return IdType 类型。
+- 取值范围：
+01：身份证。 
+03 ：中国护照。
+04 ：军官证。
+05 ：武警证。
+06：港澳通行证 。
+07 ：台胞证 。
+08：外国护照 。
+09 ：士兵证。
+09 ：临时身份证。
+11：户口本  。
+12 ：警官证 。
+13：外国人永久居留证。
+14：港澳台居民居住证。
+15：回乡证。
+16：大陆居民来往台湾通行证。
+99：其他证件。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIdType() {
@@ -403,9 +460,43 @@ public class ParseNfcDataResponse extends AbstractModel {
     }
 
     /**
-     * Set 身份证 01 中国护照 03 军官证 04 武警证 05 港澳通行证 06 台胞证 07 外国护照 08 士兵证 09 临时身份证 10 户口本 11 警官证 12 外国人永久居留证 13 港澳台居民居住证 14 回乡证 15 大陆居民来往台湾通行证 16 其他证件 99
+     * Set 类型。
+- 取值范围：
+01：身份证。 
+03 ：中国护照。
+04 ：军官证。
+05 ：武警证。
+06：港澳通行证 。
+07 ：台胞证 。
+08：外国护照 。
+09 ：士兵证。
+09 ：临时身份证。
+11：户口本  。
+12 ：警官证 。
+13：外国人永久居留证。
+14：港澳台居民居住证。
+15：回乡证。
+16：大陆居民来往台湾通行证。
+99：其他证件。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IdType 身份证 01 中国护照 03 军官证 04 武警证 05 港澳通行证 06 台胞证 07 外国护照 08 士兵证 09 临时身份证 10 户口本 11 警官证 12 外国人永久居留证 13 港澳台居民居住证 14 回乡证 15 大陆居民来往台湾通行证 16 其他证件 99
+     * @param IdType 类型。
+- 取值范围：
+01：身份证。 
+03 ：中国护照。
+04 ：军官证。
+05 ：武警证。
+06：港澳通行证 。
+07 ：台胞证 。
+08：外国护照 。
+09 ：士兵证。
+09 ：临时身份证。
+11：户口本  。
+12 ：警官证 。
+13：外国人永久居留证。
+14：港澳台居民居住证。
+15：回乡证。
+16：大陆居民来往台湾通行证。
+99：其他证件。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIdType(String IdType) {
@@ -413,9 +504,9 @@ public class ParseNfcDataResponse extends AbstractModel {
     }
 
     /**
-     * Get 英文姓名
+     * Get 英文姓名。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EnName 英文姓名
+     * @return EnName 英文姓名。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEnName() {
@@ -423,9 +514,9 @@ public class ParseNfcDataResponse extends AbstractModel {
     }
 
     /**
-     * Set 英文姓名
+     * Set 英文姓名。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EnName 英文姓名
+     * @param EnName 英文姓名。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnName(String EnName) {
@@ -453,9 +544,9 @@ public class ParseNfcDataResponse extends AbstractModel {
     }
 
     /**
-     * Get 港澳台居民居住证，通行证号码
+     * Get 港澳台居民居住证，通行证号码。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OtherIdNum 港澳台居民居住证，通行证号码
+     * @return OtherIdNum 港澳台居民居住证，通行证号码。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOtherIdNum() {
@@ -463,9 +554,9 @@ public class ParseNfcDataResponse extends AbstractModel {
     }
 
     /**
-     * Set 港澳台居民居住证，通行证号码
+     * Set 港澳台居民居住证，通行证号码。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OtherIdNum 港澳台居民居住证，通行证号码
+     * @param OtherIdNum 港澳台居民居住证，通行证号码。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOtherIdNum(String OtherIdNum) {
@@ -473,9 +564,9 @@ public class ParseNfcDataResponse extends AbstractModel {
     }
 
     /**
-     * Get 旅行证件国籍
+     * Get 旅行证件国籍。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Nationality 旅行证件国籍
+     * @return Nationality 旅行证件国籍。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNationality() {
@@ -483,9 +574,9 @@ public class ParseNfcDataResponse extends AbstractModel {
     }
 
     /**
-     * Set 旅行证件国籍
+     * Set 旅行证件国籍。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Nationality 旅行证件国籍
+     * @param Nationality 旅行证件国籍。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNationality(String Nationality) {
@@ -493,9 +584,9 @@ public class ParseNfcDataResponse extends AbstractModel {
     }
 
     /**
-     * Get 旅行证件机读区第二行 29~42 位
+     * Get 旅行证件机读区第二行 29~42 位。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PersonalNumber 旅行证件机读区第二行 29~42 位
+     * @return PersonalNumber 旅行证件机读区第二行 29~42 位。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPersonalNumber() {
@@ -503,9 +594,9 @@ public class ParseNfcDataResponse extends AbstractModel {
     }
 
     /**
-     * Set 旅行证件机读区第二行 29~42 位
+     * Set 旅行证件机读区第二行 29~42 位。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PersonalNumber 旅行证件机读区第二行 29~42 位
+     * @param PersonalNumber 旅行证件机读区第二行 29~42 位。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPersonalNumber(String PersonalNumber) {
@@ -513,13 +604,15 @@ public class ParseNfcDataResponse extends AbstractModel {
     }
 
     /**
-     * Get 旅行证件类的核验结果。JSON格式如下：
-{"result_issuer ":"签发者证书合法性验证结果 ","result_pape r":"证件安全对象合法性验证 结果 ","result_data" :"防数据篡改验证结果 ","result_chip" :"防证书件芯片被复制验证结果"} 
- 0:验证通过，1: 验证不通过，2: 未验证，3:部分通过，当4项核验结果都为0时，表示证件为真
+     * Get 旅行证件类的核验结果。
+- JSON格式如下：
+{"result_issuer ":"签发者证书合法性验证结果 ","result_pape r":"证件安全对象合法性验证 结果 ","result_data" :"防数据篡改验证结果 ","result_chip" :"防证书件芯片被复制验证结果"} 。
+- 取值范围： 0:验证通过，1: 验证不通过，2: 未验证，3:部分通过，当4项核验结果都为0时，表示证件为真。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CheckMRTD 旅行证件类的核验结果。JSON格式如下：
-{"result_issuer ":"签发者证书合法性验证结果 ","result_pape r":"证件安全对象合法性验证 结果 ","result_data" :"防数据篡改验证结果 ","result_chip" :"防证书件芯片被复制验证结果"} 
- 0:验证通过，1: 验证不通过，2: 未验证，3:部分通过，当4项核验结果都为0时，表示证件为真
+     * @return CheckMRTD 旅行证件类的核验结果。
+- JSON格式如下：
+{"result_issuer ":"签发者证书合法性验证结果 ","result_pape r":"证件安全对象合法性验证 结果 ","result_data" :"防数据篡改验证结果 ","result_chip" :"防证书件芯片被复制验证结果"} 。
+- 取值范围： 0:验证通过，1: 验证不通过，2: 未验证，3:部分通过，当4项核验结果都为0时，表示证件为真。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCheckMRTD() {
@@ -527,13 +620,15 @@ public class ParseNfcDataResponse extends AbstractModel {
     }
 
     /**
-     * Set 旅行证件类的核验结果。JSON格式如下：
-{"result_issuer ":"签发者证书合法性验证结果 ","result_pape r":"证件安全对象合法性验证 结果 ","result_data" :"防数据篡改验证结果 ","result_chip" :"防证书件芯片被复制验证结果"} 
- 0:验证通过，1: 验证不通过，2: 未验证，3:部分通过，当4项核验结果都为0时，表示证件为真
+     * Set 旅行证件类的核验结果。
+- JSON格式如下：
+{"result_issuer ":"签发者证书合法性验证结果 ","result_pape r":"证件安全对象合法性验证 结果 ","result_data" :"防数据篡改验证结果 ","result_chip" :"防证书件芯片被复制验证结果"} 。
+- 取值范围： 0:验证通过，1: 验证不通过，2: 未验证，3:部分通过，当4项核验结果都为0时，表示证件为真。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CheckMRTD 旅行证件类的核验结果。JSON格式如下：
-{"result_issuer ":"签发者证书合法性验证结果 ","result_pape r":"证件安全对象合法性验证 结果 ","result_data" :"防数据篡改验证结果 ","result_chip" :"防证书件芯片被复制验证结果"} 
- 0:验证通过，1: 验证不通过，2: 未验证，3:部分通过，当4项核验结果都为0时，表示证件为真
+     * @param CheckMRTD 旅行证件类的核验结果。
+- JSON格式如下：
+{"result_issuer ":"签发者证书合法性验证结果 ","result_pape r":"证件安全对象合法性验证 结果 ","result_data" :"防数据篡改验证结果 ","result_chip" :"防证书件芯片被复制验证结果"} 。
+- 取值范围： 0:验证通过，1: 验证不通过，2: 未验证，3:部分通过，当4项核验结果都为0时，表示证件为真。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCheckMRTD(String CheckMRTD) {
@@ -541,9 +636,9 @@ public class ParseNfcDataResponse extends AbstractModel {
     }
 
     /**
-     * Get 身份证照片面合成图片
+     * Get 身份证照片面合成图片。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ImageA 身份证照片面合成图片
+     * @return ImageA 身份证照片面合成图片。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getImageA() {
@@ -551,9 +646,9 @@ public class ParseNfcDataResponse extends AbstractModel {
     }
 
     /**
-     * Set 身份证照片面合成图片
+     * Set 身份证照片面合成图片。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ImageA 身份证照片面合成图片
+     * @param ImageA 身份证照片面合成图片。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setImageA(String ImageA) {
@@ -561,9 +656,9 @@ public class ParseNfcDataResponse extends AbstractModel {
     }
 
     /**
-     * Get 身份证国徽面合成图片
+     * Get 身份证国徽面合成图片。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ImageB 身份证国徽面合成图片
+     * @return ImageB 身份证国徽面合成图片。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getImageB() {
@@ -571,9 +666,9 @@ public class ParseNfcDataResponse extends AbstractModel {
     }
 
     /**
-     * Set 身份证国徽面合成图片
+     * Set 身份证国徽面合成图片。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ImageB 身份证国徽面合成图片
+     * @param ImageB 身份证国徽面合成图片。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setImageB(String ImageB) {
@@ -581,9 +676,9 @@ public class ParseNfcDataResponse extends AbstractModel {
     }
 
     /**
-     * Get 对result code的结果描述
+     * Get 对result code的结果描述。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ResultDescription 对result code的结果描述
+     * @return ResultDescription 对result code的结果描述。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResultDescription() {
@@ -591,9 +686,9 @@ public class ParseNfcDataResponse extends AbstractModel {
     }
 
     /**
-     * Set 对result code的结果描述
+     * Set 对result code的结果描述。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResultDescription 对result code的结果描述
+     * @param ResultDescription 对result code的结果描述。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResultDescription(String ResultDescription) {

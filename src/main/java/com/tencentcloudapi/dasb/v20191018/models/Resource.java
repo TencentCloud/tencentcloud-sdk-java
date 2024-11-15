@@ -276,6 +276,34 @@ public class Resource extends AbstractModel {
     private Long DeployModel;
 
     /**
+    * 0 默认值，非内网访问，1 内网访问
+    */
+    @SerializedName("IntranetAccess")
+    @Expose
+    private Long IntranetAccess;
+
+    /**
+    * 内网访问的ip
+    */
+    @SerializedName("IntranetPrivateIpSet")
+    @Expose
+    private String [] IntranetPrivateIpSet;
+
+    /**
+    * 开通内网访问的vpc
+    */
+    @SerializedName("IntranetVpcId")
+    @Expose
+    private String IntranetVpcId;
+
+    /**
+    * 开通内网访问vpc的网段
+    */
+    @SerializedName("IntranetVpcCidr")
+    @Expose
+    private String IntranetVpcCidr;
+
+    /**
      * Get 服务实例ID，如bh-saas-s3ed4r5e 
      * @return ResourceId 服务实例ID，如bh-saas-s3ed4r5e
      */
@@ -851,6 +879,70 @@ public class Resource extends AbstractModel {
         this.DeployModel = DeployModel;
     }
 
+    /**
+     * Get 0 默认值，非内网访问，1 内网访问 
+     * @return IntranetAccess 0 默认值，非内网访问，1 内网访问
+     */
+    public Long getIntranetAccess() {
+        return this.IntranetAccess;
+    }
+
+    /**
+     * Set 0 默认值，非内网访问，1 内网访问
+     * @param IntranetAccess 0 默认值，非内网访问，1 内网访问
+     */
+    public void setIntranetAccess(Long IntranetAccess) {
+        this.IntranetAccess = IntranetAccess;
+    }
+
+    /**
+     * Get 内网访问的ip 
+     * @return IntranetPrivateIpSet 内网访问的ip
+     */
+    public String [] getIntranetPrivateIpSet() {
+        return this.IntranetPrivateIpSet;
+    }
+
+    /**
+     * Set 内网访问的ip
+     * @param IntranetPrivateIpSet 内网访问的ip
+     */
+    public void setIntranetPrivateIpSet(String [] IntranetPrivateIpSet) {
+        this.IntranetPrivateIpSet = IntranetPrivateIpSet;
+    }
+
+    /**
+     * Get 开通内网访问的vpc 
+     * @return IntranetVpcId 开通内网访问的vpc
+     */
+    public String getIntranetVpcId() {
+        return this.IntranetVpcId;
+    }
+
+    /**
+     * Set 开通内网访问的vpc
+     * @param IntranetVpcId 开通内网访问的vpc
+     */
+    public void setIntranetVpcId(String IntranetVpcId) {
+        this.IntranetVpcId = IntranetVpcId;
+    }
+
+    /**
+     * Get 开通内网访问vpc的网段 
+     * @return IntranetVpcCidr 开通内网访问vpc的网段
+     */
+    public String getIntranetVpcCidr() {
+        return this.IntranetVpcCidr;
+    }
+
+    /**
+     * Set 开通内网访问vpc的网段
+     * @param IntranetVpcCidr 开通内网访问vpc的网段
+     */
+    public void setIntranetVpcCidr(String IntranetVpcCidr) {
+        this.IntranetVpcCidr = IntranetVpcCidr;
+    }
+
     public Resource() {
     }
 
@@ -979,6 +1071,21 @@ public class Resource extends AbstractModel {
         if (source.DeployModel != null) {
             this.DeployModel = new Long(source.DeployModel);
         }
+        if (source.IntranetAccess != null) {
+            this.IntranetAccess = new Long(source.IntranetAccess);
+        }
+        if (source.IntranetPrivateIpSet != null) {
+            this.IntranetPrivateIpSet = new String[source.IntranetPrivateIpSet.length];
+            for (int i = 0; i < source.IntranetPrivateIpSet.length; i++) {
+                this.IntranetPrivateIpSet[i] = new String(source.IntranetPrivateIpSet[i]);
+            }
+        }
+        if (source.IntranetVpcId != null) {
+            this.IntranetVpcId = new String(source.IntranetVpcId);
+        }
+        if (source.IntranetVpcCidr != null) {
+            this.IntranetVpcCidr = new String(source.IntranetVpcCidr);
+        }
     }
 
 
@@ -1022,6 +1129,10 @@ public class Resource extends AbstractModel {
         this.setParamSimple(map, prefix + "CdcClusterId", this.CdcClusterId);
         this.setParamSimple(map, prefix + "LogDelivery", this.LogDelivery);
         this.setParamSimple(map, prefix + "DeployModel", this.DeployModel);
+        this.setParamSimple(map, prefix + "IntranetAccess", this.IntranetAccess);
+        this.setParamArraySimple(map, prefix + "IntranetPrivateIpSet.", this.IntranetPrivateIpSet);
+        this.setParamSimple(map, prefix + "IntranetVpcId", this.IntranetVpcId);
+        this.setParamSimple(map, prefix + "IntranetVpcCidr", this.IntranetVpcCidr);
 
     }
 }

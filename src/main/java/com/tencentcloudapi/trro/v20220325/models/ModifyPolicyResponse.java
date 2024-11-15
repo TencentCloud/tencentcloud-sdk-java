@@ -25,7 +25,6 @@ public class ModifyPolicyResponse extends AbstractModel {
 
     /**
     * 添加关联失败的现场设备ID列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FailedInsertIds")
     @Expose
@@ -33,7 +32,6 @@ public class ModifyPolicyResponse extends AbstractModel {
 
     /**
     * 解除关联失败的现场设备ID列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FailedDeleteIds")
     @Expose
@@ -47,10 +45,8 @@ public class ModifyPolicyResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 添加关联失败的现场设备ID列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 添加关联失败的现场设备ID列表 
      * @return FailedInsertIds 添加关联失败的现场设备ID列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getFailedInsertIds() {
         return this.FailedInsertIds;
@@ -58,19 +54,15 @@ public class ModifyPolicyResponse extends AbstractModel {
 
     /**
      * Set 添加关联失败的现场设备ID列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FailedInsertIds 添加关联失败的现场设备ID列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFailedInsertIds(String [] FailedInsertIds) {
         this.FailedInsertIds = FailedInsertIds;
     }
 
     /**
-     * Get 解除关联失败的现场设备ID列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 解除关联失败的现场设备ID列表 
      * @return FailedDeleteIds 解除关联失败的现场设备ID列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getFailedDeleteIds() {
         return this.FailedDeleteIds;
@@ -78,9 +70,7 @@ public class ModifyPolicyResponse extends AbstractModel {
 
     /**
      * Set 解除关联失败的现场设备ID列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FailedDeleteIds 解除关联失败的现场设备ID列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFailedDeleteIds(String [] FailedDeleteIds) {
         this.FailedDeleteIds = FailedDeleteIds;

@@ -419,6 +419,13 @@ https：使用https协议回源
     private String [] Labels;
 
     /**
+    * 拨测状态。 0: 禁用拨测, 1: 启用拨测
+    */
+    @SerializedName("ProbeStatus")
+    @Expose
+    private Long ProbeStatus;
+
+    /**
      * Get 域名 
      * @return Domain 域名
      */
@@ -1398,6 +1405,22 @@ https：使用https协议回源
         this.Labels = Labels;
     }
 
+    /**
+     * Get 拨测状态。 0: 禁用拨测, 1: 启用拨测 
+     * @return ProbeStatus 拨测状态。 0: 禁用拨测, 1: 启用拨测
+     */
+    public Long getProbeStatus() {
+        return this.ProbeStatus;
+    }
+
+    /**
+     * Set 拨测状态。 0: 禁用拨测, 1: 启用拨测
+     * @param ProbeStatus 拨测状态。 0: 禁用拨测, 1: 启用拨测
+     */
+    public void setProbeStatus(Long ProbeStatus) {
+        this.ProbeStatus = ProbeStatus;
+    }
+
     public DomainsPartInfo() {
     }
 
@@ -1574,6 +1597,9 @@ https：使用https协议回源
                 this.Labels[i] = new String(source.Labels[i]);
             }
         }
+        if (source.ProbeStatus != null) {
+            this.ProbeStatus = new Long(source.ProbeStatus);
+        }
     }
 
 
@@ -1631,6 +1657,7 @@ https：使用https协议回源
         this.setParamSimple(map, prefix + "GmEncPrivateKey", this.GmEncPrivateKey);
         this.setParamSimple(map, prefix + "GmSSLId", this.GmSSLId);
         this.setParamArraySimple(map, prefix + "Labels.", this.Labels);
+        this.setParamSimple(map, prefix + "ProbeStatus", this.ProbeStatus);
 
     }
 }

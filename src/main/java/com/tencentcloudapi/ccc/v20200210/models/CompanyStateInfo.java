@@ -80,6 +80,13 @@ public class CompanyStateInfo extends AbstractModel {
     private Long ModifyTime;
 
     /**
+    * 合同编号
+    */
+    @SerializedName("ContractNo")
+    @Expose
+    private String ContractNo;
+
+    /**
      * Get 申请单ID 
      * @return Id 申请单ID
      */
@@ -207,6 +214,22 @@ public class CompanyStateInfo extends AbstractModel {
         this.ModifyTime = ModifyTime;
     }
 
+    /**
+     * Get 合同编号 
+     * @return ContractNo 合同编号
+     */
+    public String getContractNo() {
+        return this.ContractNo;
+    }
+
+    /**
+     * Set 合同编号
+     * @param ContractNo 合同编号
+     */
+    public void setContractNo(String ContractNo) {
+        this.ContractNo = ContractNo;
+    }
+
     public CompanyStateInfo() {
     }
 
@@ -239,6 +262,9 @@ public class CompanyStateInfo extends AbstractModel {
         if (source.ModifyTime != null) {
             this.ModifyTime = new Long(source.ModifyTime);
         }
+        if (source.ContractNo != null) {
+            this.ContractNo = new String(source.ContractNo);
+        }
     }
 
 
@@ -254,6 +280,7 @@ public class CompanyStateInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "State", this.State);
         this.setParamSimple(map, prefix + "BusinessId", this.BusinessId);
         this.setParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
+        this.setParamSimple(map, prefix + "ContractNo", this.ContractNo);
 
     }
 }

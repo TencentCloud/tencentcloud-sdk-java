@@ -59,6 +59,13 @@ public class ModifyVodDomainConfigRequest extends AbstractModel {
     private DomainQUICConfig QUICConfig;
 
     /**
+    * IP 访问限制规则。
+    */
+    @SerializedName("IPFilterPolicy")
+    @Expose
+    private IPFilterPolicy IPFilterPolicy;
+
+    /**
      * Get 域名。 
      * @return Domain 域名。
      */
@@ -138,6 +145,22 @@ public class ModifyVodDomainConfigRequest extends AbstractModel {
         this.QUICConfig = QUICConfig;
     }
 
+    /**
+     * Get IP 访问限制规则。 
+     * @return IPFilterPolicy IP 访问限制规则。
+     */
+    public IPFilterPolicy getIPFilterPolicy() {
+        return this.IPFilterPolicy;
+    }
+
+    /**
+     * Set IP 访问限制规则。
+     * @param IPFilterPolicy IP 访问限制规则。
+     */
+    public void setIPFilterPolicy(IPFilterPolicy IPFilterPolicy) {
+        this.IPFilterPolicy = IPFilterPolicy;
+    }
+
     public ModifyVodDomainConfigRequest() {
     }
 
@@ -161,6 +184,9 @@ public class ModifyVodDomainConfigRequest extends AbstractModel {
         if (source.QUICConfig != null) {
             this.QUICConfig = new DomainQUICConfig(source.QUICConfig);
         }
+        if (source.IPFilterPolicy != null) {
+            this.IPFilterPolicy = new IPFilterPolicy(source.IPFilterPolicy);
+        }
     }
 
 
@@ -173,6 +199,7 @@ public class ModifyVodDomainConfigRequest extends AbstractModel {
         this.setParamObj(map, prefix + "RefererAuthPolicy.", this.RefererAuthPolicy);
         this.setParamObj(map, prefix + "UrlSignatureAuthPolicy.", this.UrlSignatureAuthPolicy);
         this.setParamObj(map, prefix + "QUICConfig.", this.QUICConfig);
+        this.setParamObj(map, prefix + "IPFilterPolicy.", this.IPFilterPolicy);
 
     }
 }

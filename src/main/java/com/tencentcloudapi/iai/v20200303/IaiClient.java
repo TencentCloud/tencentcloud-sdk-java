@@ -164,7 +164,6 @@ public class IaiClient extends AbstractClient{
 
     /**
      *删除该人员库及包含的所有的人员。同时，人员对应的所有人脸信息将被删除。若某人员同时存在多个人员库中，该人员不会被删除，但属于该人员库中的自定义描述字段信息会被删除，属于其他人员库的自定义描述字段信息不受影响。
-
      * @param req DeleteGroupRequest
      * @return DeleteGroupResponse
      * @throws TencentCloudSDKException

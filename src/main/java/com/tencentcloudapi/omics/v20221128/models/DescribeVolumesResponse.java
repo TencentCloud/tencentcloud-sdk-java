@@ -25,7 +25,6 @@ public class DescribeVolumesResponse extends AbstractModel {
 
     /**
     * 缓存卷。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Volumes")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeVolumesResponse extends AbstractModel {
 
     /**
     * 符合条件的数量。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeVolumesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 缓存卷。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 缓存卷。 
      * @return Volumes 缓存卷。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Volume [] getVolumes() {
         return this.Volumes;
@@ -58,19 +54,15 @@ public class DescribeVolumesResponse extends AbstractModel {
 
     /**
      * Set 缓存卷。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Volumes 缓存卷。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVolumes(Volume [] Volumes) {
         this.Volumes = Volumes;
     }
 
     /**
-     * Get 符合条件的数量。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 符合条件的数量。 
      * @return TotalCount 符合条件的数量。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -78,9 +70,7 @@ public class DescribeVolumesResponse extends AbstractModel {
 
     /**
      * Set 符合条件的数量。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 符合条件的数量。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
