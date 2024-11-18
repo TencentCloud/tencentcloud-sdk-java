@@ -52,6 +52,13 @@ public class DescribeRecordFileRequest extends AbstractModel {
     private Long EndTime;
 
     /**
+    * 是否携带每个时间段的播放url
+    */
+    @SerializedName("WithUrl")
+    @Expose
+    private Boolean WithUrl;
+
+    /**
      * Get 通道所属设备ID 
      * @return DeviceId 通道所属设备ID
      */
@@ -115,6 +122,22 @@ public class DescribeRecordFileRequest extends AbstractModel {
         this.EndTime = EndTime;
     }
 
+    /**
+     * Get 是否携带每个时间段的播放url 
+     * @return WithUrl 是否携带每个时间段的播放url
+     */
+    public Boolean getWithUrl() {
+        return this.WithUrl;
+    }
+
+    /**
+     * Set 是否携带每个时间段的播放url
+     * @param WithUrl 是否携带每个时间段的播放url
+     */
+    public void setWithUrl(Boolean WithUrl) {
+        this.WithUrl = WithUrl;
+    }
+
     public DescribeRecordFileRequest() {
     }
 
@@ -135,6 +158,9 @@ public class DescribeRecordFileRequest extends AbstractModel {
         if (source.EndTime != null) {
             this.EndTime = new Long(source.EndTime);
         }
+        if (source.WithUrl != null) {
+            this.WithUrl = new Boolean(source.WithUrl);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class DescribeRecordFileRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ChannelId", this.ChannelId);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
+        this.setParamSimple(map, prefix + "WithUrl", this.WithUrl);
 
     }
 }

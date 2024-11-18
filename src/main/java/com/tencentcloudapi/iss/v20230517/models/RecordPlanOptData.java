@@ -68,6 +68,13 @@ public class RecordPlanOptData extends AbstractModel {
     private String StreamType;
 
     /**
+    * 录像补录模式（0:不启用，1:启用）
+    */
+    @SerializedName("RepairMode")
+    @Expose
+    private Long RepairMode;
+
+    /**
      * Get 上云计划ID 
      * @return PlanId 上云计划ID
      */
@@ -171,6 +178,22 @@ public class RecordPlanOptData extends AbstractModel {
         this.StreamType = StreamType;
     }
 
+    /**
+     * Get 录像补录模式（0:不启用，1:启用） 
+     * @return RepairMode 录像补录模式（0:不启用，1:启用）
+     */
+    public Long getRepairMode() {
+        return this.RepairMode;
+    }
+
+    /**
+     * Set 录像补录模式（0:不启用，1:启用）
+     * @param RepairMode 录像补录模式（0:不启用，1:启用）
+     */
+    public void setRepairMode(Long RepairMode) {
+        this.RepairMode = RepairMode;
+    }
+
     public RecordPlanOptData() {
     }
 
@@ -197,6 +220,9 @@ public class RecordPlanOptData extends AbstractModel {
         if (source.StreamType != null) {
             this.StreamType = new String(source.StreamType);
         }
+        if (source.RepairMode != null) {
+            this.RepairMode = new Long(source.RepairMode);
+        }
     }
 
 
@@ -210,6 +236,7 @@ public class RecordPlanOptData extends AbstractModel {
         this.setParamSimple(map, prefix + "Describe", this.Describe);
         this.setParamObj(map, prefix + "LifeCycle.", this.LifeCycle);
         this.setParamSimple(map, prefix + "StreamType", this.StreamType);
+        this.setParamSimple(map, prefix + "RepairMode", this.RepairMode);
 
     }
 }

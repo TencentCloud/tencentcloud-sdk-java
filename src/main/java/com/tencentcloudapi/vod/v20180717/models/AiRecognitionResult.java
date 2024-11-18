@@ -29,6 +29,7 @@ public class AiRecognitionResult extends AbstractModel {
 <li>AsrWordsRecognition：语音关键词识别，</li>
 <li>OcrWordsRecognition：文本关键词识别，</li>
 <li>AsrFullTextRecognition：语音全文识别，</li>
+<li>AsrTranslateRecognition：语音翻译识别，</li>
 <li>OcrFullTextRecognition：文本全文识别，</li>
 <li>HeadTailRecognition：视频片头片尾识别，</li>
 <li>ObjectRecognition：物体识别。</li>
@@ -83,6 +84,14 @@ public class AiRecognitionResult extends AbstractModel {
     private AiRecognitionTaskAsrFullTextResult AsrFullTextTask;
 
     /**
+    * 语音翻译结果，当 Type 为 AsrTranslateRecognition 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AsrTranslateTask")
+    @Expose
+    private AiRecognitionTaskAsrTranslateResult AsrTranslateTask;
+
+    /**
     * 文本关键词识别结果，当 Type 为
  OcrWordsRecognition 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -115,6 +124,7 @@ public class AiRecognitionResult extends AbstractModel {
 <li>AsrWordsRecognition：语音关键词识别，</li>
 <li>OcrWordsRecognition：文本关键词识别，</li>
 <li>AsrFullTextRecognition：语音全文识别，</li>
+<li>AsrTranslateRecognition：语音翻译识别，</li>
 <li>OcrFullTextRecognition：文本全文识别，</li>
 <li>HeadTailRecognition：视频片头片尾识别，</li>
 <li>ObjectRecognition：物体识别。</li> 
@@ -123,6 +133,7 @@ public class AiRecognitionResult extends AbstractModel {
 <li>AsrWordsRecognition：语音关键词识别，</li>
 <li>OcrWordsRecognition：文本关键词识别，</li>
 <li>AsrFullTextRecognition：语音全文识别，</li>
+<li>AsrTranslateRecognition：语音翻译识别，</li>
 <li>OcrFullTextRecognition：文本全文识别，</li>
 <li>HeadTailRecognition：视频片头片尾识别，</li>
 <li>ObjectRecognition：物体识别。</li>
@@ -137,6 +148,7 @@ public class AiRecognitionResult extends AbstractModel {
 <li>AsrWordsRecognition：语音关键词识别，</li>
 <li>OcrWordsRecognition：文本关键词识别，</li>
 <li>AsrFullTextRecognition：语音全文识别，</li>
+<li>AsrTranslateRecognition：语音翻译识别，</li>
 <li>OcrFullTextRecognition：文本全文识别，</li>
 <li>HeadTailRecognition：视频片头片尾识别，</li>
 <li>ObjectRecognition：物体识别。</li>
@@ -145,6 +157,7 @@ public class AiRecognitionResult extends AbstractModel {
 <li>AsrWordsRecognition：语音关键词识别，</li>
 <li>OcrWordsRecognition：文本关键词识别，</li>
 <li>AsrFullTextRecognition：语音全文识别，</li>
+<li>AsrTranslateRecognition：语音翻译识别，</li>
 <li>OcrFullTextRecognition：文本全文识别，</li>
 <li>HeadTailRecognition：视频片头片尾识别，</li>
 <li>ObjectRecognition：物体识别。</li>
@@ -274,6 +287,26 @@ public class AiRecognitionResult extends AbstractModel {
     }
 
     /**
+     * Get 语音翻译结果，当 Type 为 AsrTranslateRecognition 时有效。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AsrTranslateTask 语音翻译结果，当 Type 为 AsrTranslateRecognition 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AiRecognitionTaskAsrTranslateResult getAsrTranslateTask() {
+        return this.AsrTranslateTask;
+    }
+
+    /**
+     * Set 语音翻译结果，当 Type 为 AsrTranslateRecognition 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AsrTranslateTask 语音翻译结果，当 Type 为 AsrTranslateRecognition 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAsrTranslateTask(AiRecognitionTaskAsrTranslateResult AsrTranslateTask) {
+        this.AsrTranslateTask = AsrTranslateTask;
+    }
+
+    /**
      * Get 文本关键词识别结果，当 Type 为
  OcrWordsRecognition 时有效。
 注意：此字段可能返回 null，表示取不到有效值。 
@@ -371,6 +404,9 @@ public class AiRecognitionResult extends AbstractModel {
         if (source.AsrFullTextTask != null) {
             this.AsrFullTextTask = new AiRecognitionTaskAsrFullTextResult(source.AsrFullTextTask);
         }
+        if (source.AsrTranslateTask != null) {
+            this.AsrTranslateTask = new AiRecognitionTaskAsrTranslateResult(source.AsrTranslateTask);
+        }
         if (source.OcrWordsTask != null) {
             this.OcrWordsTask = new AiRecognitionTaskOcrWordsResult(source.OcrWordsTask);
         }
@@ -393,6 +429,7 @@ public class AiRecognitionResult extends AbstractModel {
         this.setParamObj(map, prefix + "FaceTask.", this.FaceTask);
         this.setParamObj(map, prefix + "AsrWordsTask.", this.AsrWordsTask);
         this.setParamObj(map, prefix + "AsrFullTextTask.", this.AsrFullTextTask);
+        this.setParamObj(map, prefix + "AsrTranslateTask.", this.AsrTranslateTask);
         this.setParamObj(map, prefix + "OcrWordsTask.", this.OcrWordsTask);
         this.setParamObj(map, prefix + "OcrFullTextTask.", this.OcrFullTextTask);
         this.setParamObj(map, prefix + "ObjectTask.", this.ObjectTask);

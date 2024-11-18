@@ -33,7 +33,6 @@ public class DescribeAccessIndexResponse extends AbstractModel {
     /**
     * 索引配置信息
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Rule")
     @Expose
@@ -71,10 +70,8 @@ public class DescribeAccessIndexResponse extends AbstractModel {
 
     /**
      * Get 索引配置信息
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Rule 索引配置信息
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public AccessRuleInfo getRule() {
@@ -84,9 +81,7 @@ public class DescribeAccessIndexResponse extends AbstractModel {
     /**
      * Set 索引配置信息
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Rule 索引配置信息
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRule(AccessRuleInfo Rule) {

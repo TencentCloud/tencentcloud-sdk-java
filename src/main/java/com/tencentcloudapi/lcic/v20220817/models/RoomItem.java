@@ -90,7 +90,7 @@ public class RoomItem extends AbstractModel {
     private Long Resolution;
 
     /**
-    * 最大允许连麦人数
+    * 最大允许连麦人数。已废弃，使用字段 MaxMicNumber
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxRTCMember")
@@ -114,7 +114,7 @@ public class RoomItem extends AbstractModel {
     private String RecordUrl;
 
     /**
-    * 最高房间内人数（不包括老师），0表示不限制，默认为0
+    * 课堂同时最大可与老师进行连麦互动的人数，该参数支持正式上课/开播前调用修改房间修改。小班课取值范围[0,16]，大班课取值范围[0,1]，当取值为0时表示当前课堂/直播，不支持连麦互动。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxMicNumber")
@@ -386,9 +386,9 @@ public class RoomItem extends AbstractModel {
     }
 
     /**
-     * Get 最大允许连麦人数
+     * Get 最大允许连麦人数。已废弃，使用字段 MaxMicNumber
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MaxRTCMember 最大允许连麦人数
+     * @return MaxRTCMember 最大允许连麦人数。已废弃，使用字段 MaxMicNumber
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaxRTCMember() {
@@ -396,9 +396,9 @@ public class RoomItem extends AbstractModel {
     }
 
     /**
-     * Set 最大允许连麦人数
+     * Set 最大允许连麦人数。已废弃，使用字段 MaxMicNumber
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MaxRTCMember 最大允许连麦人数
+     * @param MaxRTCMember 最大允许连麦人数。已废弃，使用字段 MaxMicNumber
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxRTCMember(Long MaxRTCMember) {
@@ -446,9 +446,9 @@ public class RoomItem extends AbstractModel {
     }
 
     /**
-     * Get 最高房间内人数（不包括老师），0表示不限制，默认为0
+     * Get 课堂同时最大可与老师进行连麦互动的人数，该参数支持正式上课/开播前调用修改房间修改。小班课取值范围[0,16]，大班课取值范围[0,1]，当取值为0时表示当前课堂/直播，不支持连麦互动。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MaxMicNumber 最高房间内人数（不包括老师），0表示不限制，默认为0
+     * @return MaxMicNumber 课堂同时最大可与老师进行连麦互动的人数，该参数支持正式上课/开播前调用修改房间修改。小班课取值范围[0,16]，大班课取值范围[0,1]，当取值为0时表示当前课堂/直播，不支持连麦互动。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaxMicNumber() {
@@ -456,9 +456,9 @@ public class RoomItem extends AbstractModel {
     }
 
     /**
-     * Set 最高房间内人数（不包括老师），0表示不限制，默认为0
+     * Set 课堂同时最大可与老师进行连麦互动的人数，该参数支持正式上课/开播前调用修改房间修改。小班课取值范围[0,16]，大班课取值范围[0,1]，当取值为0时表示当前课堂/直播，不支持连麦互动。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MaxMicNumber 最高房间内人数（不包括老师），0表示不限制，默认为0
+     * @param MaxMicNumber 课堂同时最大可与老师进行连麦互动的人数，该参数支持正式上课/开播前调用修改房间修改。小班课取值范围[0,16]，大班课取值范围[0,1]，当取值为0时表示当前课堂/直播，不支持连麦互动。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxMicNumber(Long MaxMicNumber) {

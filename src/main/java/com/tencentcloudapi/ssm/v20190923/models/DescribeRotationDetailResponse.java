@@ -32,7 +32,6 @@ public class DescribeRotationDetailResponse extends AbstractModel {
 
     /**
     * 轮转的频率，以天为单位，默认为1天。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Frequency")
     @Expose
@@ -40,7 +39,6 @@ public class DescribeRotationDetailResponse extends AbstractModel {
 
     /**
     * 最近一次轮转的时间，显式可见的时间字符串，格式 2006-01-02 15:04:05。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LatestRotateTime")
     @Expose
@@ -48,7 +46,6 @@ public class DescribeRotationDetailResponse extends AbstractModel {
 
     /**
     * 下一次开始轮转的时间，显式可见的时间字符串，格式 2006-01-02 15:04:05。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NextRotateBeginTime")
     @Expose
@@ -78,10 +75,8 @@ public class DescribeRotationDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get 轮转的频率，以天为单位，默认为1天。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 轮转的频率，以天为单位，默认为1天。 
      * @return Frequency 轮转的频率，以天为单位，默认为1天。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFrequency() {
         return this.Frequency;
@@ -89,19 +84,15 @@ public class DescribeRotationDetailResponse extends AbstractModel {
 
     /**
      * Set 轮转的频率，以天为单位，默认为1天。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Frequency 轮转的频率，以天为单位，默认为1天。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFrequency(Long Frequency) {
         this.Frequency = Frequency;
     }
 
     /**
-     * Get 最近一次轮转的时间，显式可见的时间字符串，格式 2006-01-02 15:04:05。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最近一次轮转的时间，显式可见的时间字符串，格式 2006-01-02 15:04:05。 
      * @return LatestRotateTime 最近一次轮转的时间，显式可见的时间字符串，格式 2006-01-02 15:04:05。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLatestRotateTime() {
         return this.LatestRotateTime;
@@ -109,19 +100,15 @@ public class DescribeRotationDetailResponse extends AbstractModel {
 
     /**
      * Set 最近一次轮转的时间，显式可见的时间字符串，格式 2006-01-02 15:04:05。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LatestRotateTime 最近一次轮转的时间，显式可见的时间字符串，格式 2006-01-02 15:04:05。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLatestRotateTime(String LatestRotateTime) {
         this.LatestRotateTime = LatestRotateTime;
     }
 
     /**
-     * Get 下一次开始轮转的时间，显式可见的时间字符串，格式 2006-01-02 15:04:05。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 下一次开始轮转的时间，显式可见的时间字符串，格式 2006-01-02 15:04:05。 
      * @return NextRotateBeginTime 下一次开始轮转的时间，显式可见的时间字符串，格式 2006-01-02 15:04:05。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNextRotateBeginTime() {
         return this.NextRotateBeginTime;
@@ -129,9 +116,7 @@ public class DescribeRotationDetailResponse extends AbstractModel {
 
     /**
      * Set 下一次开始轮转的时间，显式可见的时间字符串，格式 2006-01-02 15:04:05。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NextRotateBeginTime 下一次开始轮转的时间，显式可见的时间字符串，格式 2006-01-02 15:04:05。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNextRotateBeginTime(String NextRotateBeginTime) {
         this.NextRotateBeginTime = NextRotateBeginTime;

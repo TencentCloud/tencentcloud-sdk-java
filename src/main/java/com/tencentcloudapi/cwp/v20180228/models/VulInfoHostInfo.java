@@ -25,7 +25,6 @@ public class VulInfoHostInfo extends AbstractModel {
 
     /**
     * 主机名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HostName")
     @Expose
@@ -33,7 +32,6 @@ public class VulInfoHostInfo extends AbstractModel {
 
     /**
     * 主机ip
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HostIp")
     @Expose
@@ -41,7 +39,6 @@ public class VulInfoHostInfo extends AbstractModel {
 
     /**
     * 主机标签
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tags")
     @Expose
@@ -49,7 +46,6 @@ public class VulInfoHostInfo extends AbstractModel {
 
     /**
     * 主机quuid
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Quuid")
     @Expose
@@ -57,7 +53,6 @@ public class VulInfoHostInfo extends AbstractModel {
 
     /**
     * 0 :漏洞不可自动修复，  1：可自动修复， 2：客户端已离线， 3：主机不是旗舰版只能手动修复， 4：机型不允许 ，5：修复中 ，6：已修复， 7：检测中, 9:修复失败, 10:已忽略 ,11:漏洞只支持linux不支持Windows, 12：漏洞只支持Windows不支持linux
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsSupportAutoFix")
     @Expose
@@ -65,7 +60,6 @@ public class VulInfoHostInfo extends AbstractModel {
 
     /**
     * 主机uuid
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Uuid")
     @Expose
@@ -73,17 +67,14 @@ public class VulInfoHostInfo extends AbstractModel {
 
     /**
     * 主机InstanceId
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-     * Get 主机名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主机名 
      * @return HostName 主机名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHostName() {
         return this.HostName;
@@ -91,19 +82,15 @@ public class VulInfoHostInfo extends AbstractModel {
 
     /**
      * Set 主机名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HostName 主机名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHostName(String HostName) {
         this.HostName = HostName;
     }
 
     /**
-     * Get 主机ip
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主机ip 
      * @return HostIp 主机ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHostIp() {
         return this.HostIp;
@@ -111,19 +98,15 @@ public class VulInfoHostInfo extends AbstractModel {
 
     /**
      * Set 主机ip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HostIp 主机ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHostIp(String HostIp) {
         this.HostIp = HostIp;
     }
 
     /**
-     * Get 主机标签
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主机标签 
      * @return Tags 主机标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getTags() {
         return this.Tags;
@@ -131,19 +114,15 @@ public class VulInfoHostInfo extends AbstractModel {
 
     /**
      * Set 主机标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tags 主机标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTags(String [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 主机quuid
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主机quuid 
      * @return Quuid 主机quuid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getQuuid() {
         return this.Quuid;
@@ -151,19 +130,15 @@ public class VulInfoHostInfo extends AbstractModel {
 
     /**
      * Set 主机quuid
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Quuid 主机quuid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQuuid(String Quuid) {
         this.Quuid = Quuid;
     }
 
     /**
-     * Get 0 :漏洞不可自动修复，  1：可自动修复， 2：客户端已离线， 3：主机不是旗舰版只能手动修复， 4：机型不允许 ，5：修复中 ，6：已修复， 7：检测中, 9:修复失败, 10:已忽略 ,11:漏洞只支持linux不支持Windows, 12：漏洞只支持Windows不支持linux
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 0 :漏洞不可自动修复，  1：可自动修复， 2：客户端已离线， 3：主机不是旗舰版只能手动修复， 4：机型不允许 ，5：修复中 ，6：已修复， 7：检测中, 9:修复失败, 10:已忽略 ,11:漏洞只支持linux不支持Windows, 12：漏洞只支持Windows不支持linux 
      * @return IsSupportAutoFix 0 :漏洞不可自动修复，  1：可自动修复， 2：客户端已离线， 3：主机不是旗舰版只能手动修复， 4：机型不允许 ，5：修复中 ，6：已修复， 7：检测中, 9:修复失败, 10:已忽略 ,11:漏洞只支持linux不支持Windows, 12：漏洞只支持Windows不支持linux
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsSupportAutoFix() {
         return this.IsSupportAutoFix;
@@ -171,19 +146,15 @@ public class VulInfoHostInfo extends AbstractModel {
 
     /**
      * Set 0 :漏洞不可自动修复，  1：可自动修复， 2：客户端已离线， 3：主机不是旗舰版只能手动修复， 4：机型不允许 ，5：修复中 ，6：已修复， 7：检测中, 9:修复失败, 10:已忽略 ,11:漏洞只支持linux不支持Windows, 12：漏洞只支持Windows不支持linux
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsSupportAutoFix 0 :漏洞不可自动修复，  1：可自动修复， 2：客户端已离线， 3：主机不是旗舰版只能手动修复， 4：机型不允许 ，5：修复中 ，6：已修复， 7：检测中, 9:修复失败, 10:已忽略 ,11:漏洞只支持linux不支持Windows, 12：漏洞只支持Windows不支持linux
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsSupportAutoFix(Long IsSupportAutoFix) {
         this.IsSupportAutoFix = IsSupportAutoFix;
     }
 
     /**
-     * Get 主机uuid
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主机uuid 
      * @return Uuid 主机uuid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUuid() {
         return this.Uuid;
@@ -191,19 +162,15 @@ public class VulInfoHostInfo extends AbstractModel {
 
     /**
      * Set 主机uuid
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Uuid 主机uuid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUuid(String Uuid) {
         this.Uuid = Uuid;
     }
 
     /**
-     * Get 主机InstanceId
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主机InstanceId 
      * @return InstanceId 主机InstanceId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceId() {
         return this.InstanceId;
@@ -211,9 +178,7 @@ public class VulInfoHostInfo extends AbstractModel {
 
     /**
      * Set 主机InstanceId
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceId 主机InstanceId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

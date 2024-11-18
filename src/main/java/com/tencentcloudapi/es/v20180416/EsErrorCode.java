@@ -186,7 +186,7 @@ public enum EsErrorCode {
     // 节点规格NodeType的取值和预期不符。
      INVALIDPARAMETER_INVALIDNODETYPE("InvalidParameter.InvalidNodeType"),
      
-    // 温热曾数据结构NodeTypeInfos的取值和预期不符。
+    // 温热层数据结构NodeTypeInfos的取值和预期不符。
      INVALIDPARAMETER_INVALIDNODETYPESTORAGEINFO("InvalidParameter.InvalidNodeTypeStorageInfo"),
      
     // 分页起始值Offset的取值和预期不符。
@@ -257,6 +257,9 @@ public enum EsErrorCode {
      
     // 节点类型Type的取值和预期不符。
      INVALIDPARAMETER_INVALIDTYPE("InvalidParameter.InvalidType"),
+     
+    // Uin的取值和预期不符。
+     INVALIDPARAMETER_INVALIDUIN("InvalidParameter.InvalidUin"),
      
     // 更新的索引元数据json UpdateMetaJson的取值和预期不符。
      INVALIDPARAMETER_INVALIDUPDATEMETAJSON("InvalidParameter.InvalidUpdateMetaJson"),
@@ -515,6 +518,9 @@ public enum EsErrorCode {
      
     // 该版本不支持cos备份。集群需要重启来允许cos备份。
      UNSUPPORTEDOPERATION_COSBACKUP("UnsupportedOperation.CosBackUp"),
+     
+    // 有关机的cvm
+     UNSUPPORTEDOPERATION_CVMSTATUSSTOPPED("UnsupportedOperation.CvmStatusStopped"),
      
     // 不支持该智能诊断任务。
      UNSUPPORTEDOPERATION_DIAGNOSEJOB("UnsupportedOperation.DiagnoseJob"),

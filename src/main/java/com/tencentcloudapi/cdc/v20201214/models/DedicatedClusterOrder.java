@@ -174,7 +174,6 @@ public class DedicatedClusterOrder extends AbstractModel {
 
     /**
     * 验收状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CheckStatus")
     @Expose
@@ -182,7 +181,6 @@ public class DedicatedClusterOrder extends AbstractModel {
 
     /**
     * 交付预期时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeliverExpectTime")
     @Expose
@@ -190,7 +188,6 @@ public class DedicatedClusterOrder extends AbstractModel {
 
     /**
     * 交付实际完成时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeliverFinishTime")
     @Expose
@@ -198,7 +195,6 @@ public class DedicatedClusterOrder extends AbstractModel {
 
     /**
     * 验收预期时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CheckExpectTime")
     @Expose
@@ -206,7 +202,6 @@ public class DedicatedClusterOrder extends AbstractModel {
 
     /**
     * 验收实际完成时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CheckFinishTime")
     @Expose
@@ -214,7 +209,6 @@ public class DedicatedClusterOrder extends AbstractModel {
 
     /**
     * 订单SLA
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OrderSLA")
     @Expose
@@ -222,7 +216,6 @@ public class DedicatedClusterOrder extends AbstractModel {
 
     /**
     * 订单支付计划
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OrderPayPlan")
     @Expose
@@ -585,10 +578,8 @@ public class DedicatedClusterOrder extends AbstractModel {
     }
 
     /**
-     * Get 验收状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 验收状态 
      * @return CheckStatus 验收状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCheckStatus() {
         return this.CheckStatus;
@@ -596,19 +587,15 @@ public class DedicatedClusterOrder extends AbstractModel {
 
     /**
      * Set 验收状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CheckStatus 验收状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCheckStatus(String CheckStatus) {
         this.CheckStatus = CheckStatus;
     }
 
     /**
-     * Get 交付预期时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 交付预期时间 
      * @return DeliverExpectTime 交付预期时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDeliverExpectTime() {
         return this.DeliverExpectTime;
@@ -616,19 +603,15 @@ public class DedicatedClusterOrder extends AbstractModel {
 
     /**
      * Set 交付预期时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeliverExpectTime 交付预期时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeliverExpectTime(String DeliverExpectTime) {
         this.DeliverExpectTime = DeliverExpectTime;
     }
 
     /**
-     * Get 交付实际完成时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 交付实际完成时间 
      * @return DeliverFinishTime 交付实际完成时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDeliverFinishTime() {
         return this.DeliverFinishTime;
@@ -636,19 +619,15 @@ public class DedicatedClusterOrder extends AbstractModel {
 
     /**
      * Set 交付实际完成时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeliverFinishTime 交付实际完成时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeliverFinishTime(String DeliverFinishTime) {
         this.DeliverFinishTime = DeliverFinishTime;
     }
 
     /**
-     * Get 验收预期时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 验收预期时间 
      * @return CheckExpectTime 验收预期时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCheckExpectTime() {
         return this.CheckExpectTime;
@@ -656,19 +635,15 @@ public class DedicatedClusterOrder extends AbstractModel {
 
     /**
      * Set 验收预期时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CheckExpectTime 验收预期时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCheckExpectTime(String CheckExpectTime) {
         this.CheckExpectTime = CheckExpectTime;
     }
 
     /**
-     * Get 验收实际完成时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 验收实际完成时间 
      * @return CheckFinishTime 验收实际完成时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCheckFinishTime() {
         return this.CheckFinishTime;
@@ -676,19 +651,15 @@ public class DedicatedClusterOrder extends AbstractModel {
 
     /**
      * Set 验收实际完成时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CheckFinishTime 验收实际完成时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCheckFinishTime(String CheckFinishTime) {
         this.CheckFinishTime = CheckFinishTime;
     }
 
     /**
-     * Get 订单SLA
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 订单SLA 
      * @return OrderSLA 订单SLA
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOrderSLA() {
         return this.OrderSLA;
@@ -696,19 +667,15 @@ public class DedicatedClusterOrder extends AbstractModel {
 
     /**
      * Set 订单SLA
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OrderSLA 订单SLA
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOrderSLA(String OrderSLA) {
         this.OrderSLA = OrderSLA;
     }
 
     /**
-     * Get 订单支付计划
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 订单支付计划 
      * @return OrderPayPlan 订单支付计划
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOrderPayPlan() {
         return this.OrderPayPlan;
@@ -716,9 +683,7 @@ public class DedicatedClusterOrder extends AbstractModel {
 
     /**
      * Set 订单支付计划
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OrderPayPlan 订单支付计划
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOrderPayPlan(String OrderPayPlan) {
         this.OrderPayPlan = OrderPayPlan;

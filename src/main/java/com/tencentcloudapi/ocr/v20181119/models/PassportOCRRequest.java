@@ -48,6 +48,13 @@ public class PassportOCRRequest extends AbstractModel {
     private String Type;
 
     /**
+    * 是否返回头像和位置坐标
+    */
+    @SerializedName("CropPortrait")
+    @Expose
+    private Boolean CropPortrait;
+
+    /**
      * Get 图片的 Base64 值。要求图片经Base64编码后不超过 7M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。
 图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。 
      * @return ImageBase64 图片的 Base64 值。要求图片经Base64编码后不超过 7M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。
@@ -107,6 +114,22 @@ public class PassportOCRRequest extends AbstractModel {
         this.Type = Type;
     }
 
+    /**
+     * Get 是否返回头像和位置坐标 
+     * @return CropPortrait 是否返回头像和位置坐标
+     */
+    public Boolean getCropPortrait() {
+        return this.CropPortrait;
+    }
+
+    /**
+     * Set 是否返回头像和位置坐标
+     * @param CropPortrait 是否返回头像和位置坐标
+     */
+    public void setCropPortrait(Boolean CropPortrait) {
+        this.CropPortrait = CropPortrait;
+    }
+
     public PassportOCRRequest() {
     }
 
@@ -124,6 +147,9 @@ public class PassportOCRRequest extends AbstractModel {
         if (source.Type != null) {
             this.Type = new String(source.Type);
         }
+        if (source.CropPortrait != null) {
+            this.CropPortrait = new Boolean(source.CropPortrait);
+        }
     }
 
 
@@ -134,6 +160,7 @@ public class PassportOCRRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
         this.setParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
         this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "CropPortrait", this.CropPortrait);
 
     }
 }

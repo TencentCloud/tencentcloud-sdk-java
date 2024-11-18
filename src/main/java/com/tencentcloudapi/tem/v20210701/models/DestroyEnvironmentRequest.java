@@ -31,7 +31,7 @@ public class DestroyEnvironmentRequest extends AbstractModel {
     private String EnvironmentId;
 
     /**
-    * Namespace
+    * 来源渠道
     */
     @SerializedName("SourceChannel")
     @Expose
@@ -54,16 +54,16 @@ public class DestroyEnvironmentRequest extends AbstractModel {
     }
 
     /**
-     * Get Namespace 
-     * @return SourceChannel Namespace
+     * Get 来源渠道 
+     * @return SourceChannel 来源渠道
      */
     public Long getSourceChannel() {
         return this.SourceChannel;
     }
 
     /**
-     * Set Namespace
-     * @param SourceChannel Namespace
+     * Set 来源渠道
+     * @param SourceChannel 来源渠道
      */
     public void setSourceChannel(Long SourceChannel) {
         this.SourceChannel = SourceChannel;

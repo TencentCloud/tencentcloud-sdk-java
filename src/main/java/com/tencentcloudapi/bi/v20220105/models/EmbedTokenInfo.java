@@ -144,6 +144,40 @@ public class EmbedTokenInfo extends AbstractModel {
     private String GlobalParam;
 
     /**
+    * embed表示页面看板嵌出，chatBIEmbed表示ChatBI嵌出
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Intention")
+    @Expose
+    private String Intention;
+
+    /**
+    * 100 无绑定用户
+200 单用户单token
+300 单用户 多token
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TokenType")
+    @Expose
+    private Long TokenType;
+
+    /**
+    * token 数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TokenNum")
+    @Expose
+    private Long TokenNum;
+
+    /**
+    * 是否单用户多token
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SingleUserMultiToken")
+    @Expose
+    private Boolean SingleUserMultiToken;
+
+    /**
      * Get 信息标识
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Id 信息标识
@@ -443,6 +477,94 @@ public class EmbedTokenInfo extends AbstractModel {
         this.GlobalParam = GlobalParam;
     }
 
+    /**
+     * Get embed表示页面看板嵌出，chatBIEmbed表示ChatBI嵌出
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Intention embed表示页面看板嵌出，chatBIEmbed表示ChatBI嵌出
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getIntention() {
+        return this.Intention;
+    }
+
+    /**
+     * Set embed表示页面看板嵌出，chatBIEmbed表示ChatBI嵌出
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Intention embed表示页面看板嵌出，chatBIEmbed表示ChatBI嵌出
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIntention(String Intention) {
+        this.Intention = Intention;
+    }
+
+    /**
+     * Get 100 无绑定用户
+200 单用户单token
+300 单用户 多token
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TokenType 100 无绑定用户
+200 单用户单token
+300 单用户 多token
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getTokenType() {
+        return this.TokenType;
+    }
+
+    /**
+     * Set 100 无绑定用户
+200 单用户单token
+300 单用户 多token
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TokenType 100 无绑定用户
+200 单用户单token
+300 单用户 多token
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTokenType(Long TokenType) {
+        this.TokenType = TokenType;
+    }
+
+    /**
+     * Get token 数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TokenNum token 数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getTokenNum() {
+        return this.TokenNum;
+    }
+
+    /**
+     * Set token 数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TokenNum token 数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTokenNum(Long TokenNum) {
+        this.TokenNum = TokenNum;
+    }
+
+    /**
+     * Get 是否单用户多token
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SingleUserMultiToken 是否单用户多token
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getSingleUserMultiToken() {
+        return this.SingleUserMultiToken;
+    }
+
+    /**
+     * Set 是否单用户多token
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SingleUserMultiToken 是否单用户多token
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSingleUserMultiToken(Boolean SingleUserMultiToken) {
+        this.SingleUserMultiToken = SingleUserMultiToken;
+    }
+
     public EmbedTokenInfo() {
     }
 
@@ -496,6 +618,18 @@ public class EmbedTokenInfo extends AbstractModel {
         if (source.GlobalParam != null) {
             this.GlobalParam = new String(source.GlobalParam);
         }
+        if (source.Intention != null) {
+            this.Intention = new String(source.Intention);
+        }
+        if (source.TokenType != null) {
+            this.TokenType = new Long(source.TokenType);
+        }
+        if (source.TokenNum != null) {
+            this.TokenNum = new Long(source.TokenNum);
+        }
+        if (source.SingleUserMultiToken != null) {
+            this.SingleUserMultiToken = new Boolean(source.SingleUserMultiToken);
+        }
     }
 
 
@@ -518,6 +652,10 @@ public class EmbedTokenInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "UserId", this.UserId);
         this.setParamSimple(map, prefix + "TicketNum", this.TicketNum);
         this.setParamSimple(map, prefix + "GlobalParam", this.GlobalParam);
+        this.setParamSimple(map, prefix + "Intention", this.Intention);
+        this.setParamSimple(map, prefix + "TokenType", this.TokenType);
+        this.setParamSimple(map, prefix + "TokenNum", this.TokenNum);
+        this.setParamSimple(map, prefix + "SingleUserMultiToken", this.SingleUserMultiToken);
 
     }
 }

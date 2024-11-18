@@ -38,7 +38,7 @@ public class DeleteListenersRequest extends AbstractModel {
     private Long Force;
 
     /**
-    * 通道组ID，该参数和GroupId必须设置一个，但不能同时设置。
+    * 通道组ID，该参数和ProxyId必须设置一个，但不能同时设置。
     */
     @SerializedName("GroupId")
     @Expose
@@ -84,16 +84,16 @@ public class DeleteListenersRequest extends AbstractModel {
     }
 
     /**
-     * Get 通道组ID，该参数和GroupId必须设置一个，但不能同时设置。 
-     * @return GroupId 通道组ID，该参数和GroupId必须设置一个，但不能同时设置。
+     * Get 通道组ID，该参数和ProxyId必须设置一个，但不能同时设置。 
+     * @return GroupId 通道组ID，该参数和ProxyId必须设置一个，但不能同时设置。
      */
     public String getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set 通道组ID，该参数和GroupId必须设置一个，但不能同时设置。
-     * @param GroupId 通道组ID，该参数和GroupId必须设置一个，但不能同时设置。
+     * Set 通道组ID，该参数和ProxyId必须设置一个，但不能同时设置。
+     * @param GroupId 通道组ID，该参数和ProxyId必须设置一个，但不能同时设置。
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;

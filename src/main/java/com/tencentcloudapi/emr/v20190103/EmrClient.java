@@ -84,9 +84,9 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
-     *本接口（CreateSLInstance）用于创建 Lite HBase 实例
-- 接口调用成功，会创建Lite HBase实例，创建实例请求成功会返回创建实例的 InstaceId 和请求的 RequestID。
-- 接口为异步接口，接口返回时操作并未立即完成，实例操作结果可以通过调用 DescribeInstancesList 查看当前实例的 StatusDesc 状态。
+     *本接口（CreateSLInstance）用于创建Serverless HBase实例
+- 接口调用成功，会创建Serverless HBase实例，创建实例请求成功会返回创建实例的InstaceId和请求的 RequestID。
+- 接口为异步接口，接口返回时操作并未立即完成，实例操作结果可以通过调用DescribeInstancesList查看当前实例的StatusDesc状态。
      * @param req CreateSLInstanceRequest
      * @return CreateSLInstanceResponse
      * @throws TencentCloudSDKException
@@ -240,6 +240,17 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
+     *查询HDFS存储文件信息
+     * @param req DescribeHDFSStorageInfoRequest
+     * @return DescribeHDFSStorageInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeHDFSStorageInfoResponse DescribeHDFSStorageInfo(DescribeHDFSStorageInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeHDFSStorageInfo", DescribeHDFSStorageInfoResponse.class);
+    }
+
+    /**
      *获取hive查询信息
      * @param req DescribeHiveQueriesRequest
      * @return DescribeHiveQueriesResponse
@@ -317,6 +328,17 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
+     *查询Kyuubi查询信息
+     * @param req DescribeKyuubiQueryInfoRequest
+     * @return DescribeKyuubiQueryInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeKyuubiQueryInfoResponse DescribeKyuubiQueryInfo(DescribeKyuubiQueryInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeKyuubiQueryInfo", DescribeKyuubiQueryInfoResponse.class);
+    }
+
+    /**
      *查询YARN资源调度数据信息。已废弃，请使用`DescribeYarnQueue`去查询队列信息。
      * @param req DescribeResourceScheduleRequest
      * @return DescribeResourceScheduleResponse
@@ -339,7 +361,7 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
-     *本接口（DescribeSLInstance）用于查询 Lite HBase 实例基本信息
+     *本接口（DescribeSLInstance）用于查询 Serverless HBase实例基本信息
      * @param req DescribeSLInstanceRequest
      * @return DescribeSLInstanceResponse
      * @throws TencentCloudSDKException
@@ -350,7 +372,7 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
-     *本接口（DescribeSLInstanceList）用于查询 Lite HBase 实例列表详细信息
+     *本接口（DescribeSLInstanceList）用于查询Serverless HBase实例列表详细信息
      * @param req DescribeSLInstanceListRequest
      * @return DescribeSLInstanceListResponse
      * @throws TencentCloudSDKException
@@ -372,7 +394,29 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
-     *获取trino查询结果
+     *查询Spark查询信息列表
+     * @param req DescribeSparkQueriesRequest
+     * @return DescribeSparkQueriesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSparkQueriesResponse DescribeSparkQueries(DescribeSparkQueriesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSparkQueries", DescribeSparkQueriesResponse.class);
+    }
+
+    /**
+     *查询StarRocks查询信息
+     * @param req DescribeStarRocksQueryInfoRequest
+     * @return DescribeStarRocksQueryInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeStarRocksQueryInfoResponse DescribeStarRocksQueryInfo(DescribeStarRocksQueryInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeStarRocksQueryInfo", DescribeStarRocksQueryInfoResponse.class);
+    }
+
+    /**
+     *查询Trino(PrestoSQL)查询信息
      * @param req DescribeTrinoQueryInfoRequest
      * @return DescribeTrinoQueryInfoResponse
      * @throws TencentCloudSDKException
@@ -561,9 +605,9 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
-     *本接口（ModifySLInstance）用于修改Lite HBase 实例节点数。
-- 接口调用成功，会创建Lite HBase实例，创建实例请求成功会返回请求的 RequestID。
-- 接口为异步接口，接口返回时操作并未立即完成，实例操作结果可以通过调用 DescribeInstancesList 查看当前实例的 StatusDesc 状态。
+     *本接口（ModifySLInstance）用于Serverless HBase变配实例。
+- 接口调用成功，会创建Serverless HBase实例，创建实例请求成功会返回请求的 RequestID。
+- 接口为异步接口，接口返回时操作并未立即完成，实例操作结果可以通过调用DescribeInstancesList查看当前实例的StatusDesc状态。
      * @param req ModifySLInstanceRequest
      * @return ModifySLInstanceResponse
      * @throws TencentCloudSDKException
@@ -695,7 +739,7 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
-     *本接口（TerminateSLInstance）用于销毁 Lite HBase 实例
+     *本接口（TerminateSLInstance）用于销毁Serverless HBase实例
      * @param req TerminateSLInstanceRequest
      * @return TerminateSLInstanceResponse
      * @throws TencentCloudSDKException

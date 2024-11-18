@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class RiskInfo extends AbstractModel {
 
     /**
-    * 风险类型
+    * 风险类型。更多详情请参见：[Android](https://cloud.tencent.com/document/product/1628/85898)、[iOS](https://cloud.tencent.com/document/product/1628/85896)、[H5](https://cloud.tencent.com/document/product/1628/85897)、[小程序](https://cloud.tencent.com/document/product/1628/85895)、[场景风险](https://cloud.tencent.com/document/product/1628/88912)
     */
     @SerializedName("Type")
     @Expose
     private Long Type;
 
     /**
-    * 风险等级
+    * [风险等级](https://cloud.tencent.com/document/product/1628/85308)
     */
     @SerializedName("Level")
     @Expose
     private Long Level;
 
     /**
-     * Get 风险类型 
-     * @return Type 风险类型
+     * Get 风险类型。更多详情请参见：[Android](https://cloud.tencent.com/document/product/1628/85898)、[iOS](https://cloud.tencent.com/document/product/1628/85896)、[H5](https://cloud.tencent.com/document/product/1628/85897)、[小程序](https://cloud.tencent.com/document/product/1628/85895)、[场景风险](https://cloud.tencent.com/document/product/1628/88912) 
+     * @return Type 风险类型。更多详情请参见：[Android](https://cloud.tencent.com/document/product/1628/85898)、[iOS](https://cloud.tencent.com/document/product/1628/85896)、[H5](https://cloud.tencent.com/document/product/1628/85897)、[小程序](https://cloud.tencent.com/document/product/1628/85895)、[场景风险](https://cloud.tencent.com/document/product/1628/88912)
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set 风险类型
-     * @param Type 风险类型
+     * Set 风险类型。更多详情请参见：[Android](https://cloud.tencent.com/document/product/1628/85898)、[iOS](https://cloud.tencent.com/document/product/1628/85896)、[H5](https://cloud.tencent.com/document/product/1628/85897)、[小程序](https://cloud.tencent.com/document/product/1628/85895)、[场景风险](https://cloud.tencent.com/document/product/1628/88912)
+     * @param Type 风险类型。更多详情请参见：[Android](https://cloud.tencent.com/document/product/1628/85898)、[iOS](https://cloud.tencent.com/document/product/1628/85896)、[H5](https://cloud.tencent.com/document/product/1628/85897)、[小程序](https://cloud.tencent.com/document/product/1628/85895)、[场景风险](https://cloud.tencent.com/document/product/1628/88912)
      */
     public void setType(Long Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 风险等级 
-     * @return Level 风险等级
+     * Get [风险等级](https://cloud.tencent.com/document/product/1628/85308) 
+     * @return Level [风险等级](https://cloud.tencent.com/document/product/1628/85308)
      */
     public Long getLevel() {
         return this.Level;
     }
 
     /**
-     * Set 风险等级
-     * @param Level 风险等级
+     * Set [风险等级](https://cloud.tencent.com/document/product/1628/85308)
+     * @param Level [风险等级](https://cloud.tencent.com/document/product/1628/85308)
      */
     public void setLevel(Long Level) {
         this.Level = Level;

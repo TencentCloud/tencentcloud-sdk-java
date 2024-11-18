@@ -45,7 +45,7 @@ public class PhoneNumberInfo extends AbstractModel {
     private String NationCode;
 
     /**
-    * 用户号码，去除国家或地区码前缀的普通格式，示例如：13711112222。
+    * 用户号码，去除国家或地区码前缀的普通格式，示例如：18501234444。
     */
     @SerializedName("SubscriberNumber")
     @Expose
@@ -121,16 +121,16 @@ public class PhoneNumberInfo extends AbstractModel {
     }
 
     /**
-     * Get 用户号码，去除国家或地区码前缀的普通格式，示例如：13711112222。 
-     * @return SubscriberNumber 用户号码，去除国家或地区码前缀的普通格式，示例如：13711112222。
+     * Get 用户号码，去除国家或地区码前缀的普通格式，示例如：18501234444。 
+     * @return SubscriberNumber 用户号码，去除国家或地区码前缀的普通格式，示例如：18501234444。
      */
     public String getSubscriberNumber() {
         return this.SubscriberNumber;
     }
 
     /**
-     * Set 用户号码，去除国家或地区码前缀的普通格式，示例如：13711112222。
-     * @param SubscriberNumber 用户号码，去除国家或地区码前缀的普通格式，示例如：13711112222。
+     * Set 用户号码，去除国家或地区码前缀的普通格式，示例如：18501234444。
+     * @param SubscriberNumber 用户号码，去除国家或地区码前缀的普通格式，示例如：18501234444。
      */
     public void setSubscriberNumber(String SubscriberNumber) {
         this.SubscriberNumber = SubscriberNumber;

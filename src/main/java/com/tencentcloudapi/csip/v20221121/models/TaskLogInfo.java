@@ -25,7 +25,6 @@ public class TaskLogInfo extends AbstractModel {
 
     /**
     * 报告名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskLogName")
     @Expose
@@ -40,7 +39,6 @@ public class TaskLogInfo extends AbstractModel {
 
     /**
     * 关联资产个数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AssetsNumber")
     @Expose
@@ -48,7 +46,6 @@ public class TaskLogInfo extends AbstractModel {
 
     /**
     * 安全风险数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RiskNumber")
     @Expose
@@ -56,7 +53,6 @@ public class TaskLogInfo extends AbstractModel {
 
     /**
     * 报告生成时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Time")
     @Expose
@@ -64,7 +60,6 @@ public class TaskLogInfo extends AbstractModel {
 
     /**
     * 任务状态码：0 初始值  1正在扫描  2扫描完成  3扫描出错，4停止，5暂停，6该任务已被重启过
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -72,7 +67,6 @@ public class TaskLogInfo extends AbstractModel {
 
     /**
     * 关联任务名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskName")
     @Expose
@@ -80,7 +74,6 @@ public class TaskLogInfo extends AbstractModel {
 
     /**
     * 扫描开始时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartTime")
     @Expose
@@ -88,7 +81,6 @@ public class TaskLogInfo extends AbstractModel {
 
     /**
     * 任务中心扫描任务ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskCenterTaskId")
     @Expose
@@ -96,7 +88,6 @@ public class TaskLogInfo extends AbstractModel {
 
     /**
     * 租户ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AppId")
     @Expose
@@ -104,7 +95,6 @@ public class TaskLogInfo extends AbstractModel {
 
     /**
     * 主账户ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UIN")
     @Expose
@@ -112,7 +102,6 @@ public class TaskLogInfo extends AbstractModel {
 
     /**
     * 用户名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserName")
     @Expose
@@ -120,7 +109,6 @@ public class TaskLogInfo extends AbstractModel {
 
     /**
     * 报告类型： 1安全体检 2日报 3周报 4月报
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReportType")
     @Expose
@@ -128,17 +116,14 @@ public class TaskLogInfo extends AbstractModel {
 
     /**
     * 报告模板id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TemplateId")
     @Expose
     private Long TemplateId;
 
     /**
-     * Get 报告名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 报告名称 
      * @return TaskLogName 报告名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskLogName() {
         return this.TaskLogName;
@@ -146,9 +131,7 @@ public class TaskLogInfo extends AbstractModel {
 
     /**
      * Set 报告名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskLogName 报告名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskLogName(String TaskLogName) {
         this.TaskLogName = TaskLogName;
@@ -171,10 +154,8 @@ public class TaskLogInfo extends AbstractModel {
     }
 
     /**
-     * Get 关联资产个数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 关联资产个数 
      * @return AssetsNumber 关联资产个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAssetsNumber() {
         return this.AssetsNumber;
@@ -182,19 +163,15 @@ public class TaskLogInfo extends AbstractModel {
 
     /**
      * Set 关联资产个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AssetsNumber 关联资产个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAssetsNumber(Long AssetsNumber) {
         this.AssetsNumber = AssetsNumber;
     }
 
     /**
-     * Get 安全风险数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 安全风险数量 
      * @return RiskNumber 安全风险数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRiskNumber() {
         return this.RiskNumber;
@@ -202,19 +179,15 @@ public class TaskLogInfo extends AbstractModel {
 
     /**
      * Set 安全风险数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RiskNumber 安全风险数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRiskNumber(Long RiskNumber) {
         this.RiskNumber = RiskNumber;
     }
 
     /**
-     * Get 报告生成时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 报告生成时间 
      * @return Time 报告生成时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTime() {
         return this.Time;
@@ -222,19 +195,15 @@ public class TaskLogInfo extends AbstractModel {
 
     /**
      * Set 报告生成时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Time 报告生成时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTime(String Time) {
         this.Time = Time;
     }
 
     /**
-     * Get 任务状态码：0 初始值  1正在扫描  2扫描完成  3扫描出错，4停止，5暂停，6该任务已被重启过
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务状态码：0 初始值  1正在扫描  2扫描完成  3扫描出错，4停止，5暂停，6该任务已被重启过 
      * @return Status 任务状态码：0 初始值  1正在扫描  2扫描完成  3扫描出错，4停止，5暂停，6该任务已被重启过
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
         return this.Status;
@@ -242,19 +211,15 @@ public class TaskLogInfo extends AbstractModel {
 
     /**
      * Set 任务状态码：0 初始值  1正在扫描  2扫描完成  3扫描出错，4停止，5暂停，6该任务已被重启过
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 任务状态码：0 初始值  1正在扫描  2扫描完成  3扫描出错，4停止，5暂停，6该任务已被重启过
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 关联任务名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 关联任务名称 
      * @return TaskName 关联任务名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskName() {
         return this.TaskName;
@@ -262,19 +227,15 @@ public class TaskLogInfo extends AbstractModel {
 
     /**
      * Set 关联任务名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskName 关联任务名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskName(String TaskName) {
         this.TaskName = TaskName;
     }
 
     /**
-     * Get 扫描开始时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 扫描开始时间 
      * @return StartTime 扫描开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStartTime() {
         return this.StartTime;
@@ -282,19 +243,15 @@ public class TaskLogInfo extends AbstractModel {
 
     /**
      * Set 扫描开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StartTime 扫描开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 任务中心扫描任务ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务中心扫描任务ID 
      * @return TaskCenterTaskId 任务中心扫描任务ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskCenterTaskId() {
         return this.TaskCenterTaskId;
@@ -302,19 +259,15 @@ public class TaskLogInfo extends AbstractModel {
 
     /**
      * Set 任务中心扫描任务ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskCenterTaskId 任务中心扫描任务ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskCenterTaskId(String TaskCenterTaskId) {
         this.TaskCenterTaskId = TaskCenterTaskId;
     }
 
     /**
-     * Get 租户ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 租户ID 
      * @return AppId 租户ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAppId() {
         return this.AppId;
@@ -322,19 +275,15 @@ public class TaskLogInfo extends AbstractModel {
 
     /**
      * Set 租户ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AppId 租户ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAppId(String AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get 主账户ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主账户ID 
      * @return UIN 主账户ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUIN() {
         return this.UIN;
@@ -342,19 +291,15 @@ public class TaskLogInfo extends AbstractModel {
 
     /**
      * Set 主账户ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UIN 主账户ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUIN(String UIN) {
         this.UIN = UIN;
     }
 
     /**
-     * Get 用户名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户名称 
      * @return UserName 用户名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUserName() {
         return this.UserName;
@@ -362,19 +307,15 @@ public class TaskLogInfo extends AbstractModel {
 
     /**
      * Set 用户名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UserName 用户名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;
     }
 
     /**
-     * Get 报告类型： 1安全体检 2日报 3周报 4月报
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 报告类型： 1安全体检 2日报 3周报 4月报 
      * @return ReportType 报告类型： 1安全体检 2日报 3周报 4月报
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getReportType() {
         return this.ReportType;
@@ -382,19 +323,15 @@ public class TaskLogInfo extends AbstractModel {
 
     /**
      * Set 报告类型： 1安全体检 2日报 3周报 4月报
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReportType 报告类型： 1安全体检 2日报 3周报 4月报
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReportType(Long ReportType) {
         this.ReportType = ReportType;
     }
 
     /**
-     * Get 报告模板id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 报告模板id 
      * @return TemplateId 报告模板id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTemplateId() {
         return this.TemplateId;
@@ -402,9 +339,7 @@ public class TaskLogInfo extends AbstractModel {
 
     /**
      * Set 报告模板id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TemplateId 报告模板id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTemplateId(Long TemplateId) {
         this.TemplateId = TemplateId;

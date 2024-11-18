@@ -265,6 +265,14 @@ public class DescribeDeviceData extends AbstractModel {
     private String StreamName;
 
     /**
+    * 是否开启静音帧（0：关闭；1 开启）
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SilentFrameSwitch")
+    @Expose
+    private Long SilentFrameSwitch;
+
+    /**
      * Get 设备ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return DeviceId 设备ID
@@ -868,6 +876,26 @@ public class DescribeDeviceData extends AbstractModel {
         this.StreamName = StreamName;
     }
 
+    /**
+     * Get 是否开启静音帧（0：关闭；1 开启）
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SilentFrameSwitch 是否开启静音帧（0：关闭；1 开启）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getSilentFrameSwitch() {
+        return this.SilentFrameSwitch;
+    }
+
+    /**
+     * Set 是否开启静音帧（0：关闭；1 开启）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SilentFrameSwitch 是否开启静音帧（0：关闭；1 开启）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSilentFrameSwitch(Long SilentFrameSwitch) {
+        this.SilentFrameSwitch = SilentFrameSwitch;
+    }
+
     public DescribeDeviceData() {
     }
 
@@ -966,6 +994,9 @@ public class DescribeDeviceData extends AbstractModel {
         if (source.StreamName != null) {
             this.StreamName = new String(source.StreamName);
         }
+        if (source.SilentFrameSwitch != null) {
+            this.SilentFrameSwitch = new Long(source.SilentFrameSwitch);
+        }
     }
 
 
@@ -1003,6 +1034,7 @@ public class DescribeDeviceData extends AbstractModel {
         this.setParamSimple(map, prefix + "SubscribeSwitch", this.SubscribeSwitch);
         this.setParamSimple(map, prefix + "AppName", this.AppName);
         this.setParamSimple(map, prefix + "StreamName", this.StreamName);
+        this.setParamSimple(map, prefix + "SilentFrameSwitch", this.SilentFrameSwitch);
 
     }
 }

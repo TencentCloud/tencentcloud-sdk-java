@@ -25,7 +25,6 @@ public class DescribeScanTaskListResponse extends AbstractModel {
 
     /**
     * 总条数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeScanTaskListResponse extends AbstractModel {
 
     /**
     * 任务日志列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
     @Expose
@@ -41,7 +39,6 @@ public class DescribeScanTaskListResponse extends AbstractModel {
 
     /**
     * 主账户ID列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UINList")
     @Expose
@@ -49,7 +46,6 @@ public class DescribeScanTaskListResponse extends AbstractModel {
 
     /**
     * 体检模式过滤列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskModeList")
     @Expose
@@ -63,10 +59,8 @@ public class DescribeScanTaskListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 总条数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 总条数 
      * @return TotalCount 总条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -74,19 +68,15 @@ public class DescribeScanTaskListResponse extends AbstractModel {
 
     /**
      * Set 总条数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 总条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 任务日志列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务日志列表 
      * @return Data 任务日志列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ScanTaskInfoList [] getData() {
         return this.Data;
@@ -94,19 +84,15 @@ public class DescribeScanTaskListResponse extends AbstractModel {
 
     /**
      * Set 任务日志列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Data 任务日志列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(ScanTaskInfoList [] Data) {
         this.Data = Data;
     }
 
     /**
-     * Get 主账户ID列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主账户ID列表 
      * @return UINList 主账户ID列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getUINList() {
         return this.UINList;
@@ -114,19 +100,15 @@ public class DescribeScanTaskListResponse extends AbstractModel {
 
     /**
      * Set 主账户ID列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UINList 主账户ID列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUINList(String [] UINList) {
         this.UINList = UINList;
     }
 
     /**
-     * Get 体检模式过滤列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 体检模式过滤列表 
      * @return TaskModeList 体检模式过滤列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public FilterDataObject [] getTaskModeList() {
         return this.TaskModeList;
@@ -134,9 +116,7 @@ public class DescribeScanTaskListResponse extends AbstractModel {
 
     /**
      * Set 体检模式过滤列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskModeList 体检模式过滤列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskModeList(FilterDataObject [] TaskModeList) {
         this.TaskModeList = TaskModeList;

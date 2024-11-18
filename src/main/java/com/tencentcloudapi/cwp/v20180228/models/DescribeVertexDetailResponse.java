@@ -25,7 +25,6 @@ public class DescribeVertexDetailResponse extends AbstractModel {
 
     /**
     * 指定点列表的属性信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VertexDetails")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeVertexDetailResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 指定点列表的属性信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 指定点列表的属性信息 
      * @return VertexDetails 指定点列表的属性信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public VertexDetail [] getVertexDetails() {
         return this.VertexDetails;
@@ -50,9 +47,7 @@ public class DescribeVertexDetailResponse extends AbstractModel {
 
     /**
      * Set 指定点列表的属性信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VertexDetails 指定点列表的属性信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVertexDetails(VertexDetail [] VertexDetails) {
         this.VertexDetails = VertexDetails;

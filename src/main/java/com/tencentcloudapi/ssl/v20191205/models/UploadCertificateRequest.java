@@ -73,7 +73,7 @@ public class UploadCertificateRequest extends AbstractModel {
     private Tags [] Tags;
 
     /**
-    * 相同的证书是否允许重复上传
+    * 相同的证书是否允许重复上传； true：允许上传相同指纹的证书；  false：不允许上传相同指纹的证书； 默认值：true
     */
     @SerializedName("Repeatable")
     @Expose
@@ -192,16 +192,16 @@ public class UploadCertificateRequest extends AbstractModel {
     }
 
     /**
-     * Get 相同的证书是否允许重复上传 
-     * @return Repeatable 相同的证书是否允许重复上传
+     * Get 相同的证书是否允许重复上传； true：允许上传相同指纹的证书；  false：不允许上传相同指纹的证书； 默认值：true 
+     * @return Repeatable 相同的证书是否允许重复上传； true：允许上传相同指纹的证书；  false：不允许上传相同指纹的证书； 默认值：true
      */
     public Boolean getRepeatable() {
         return this.Repeatable;
     }
 
     /**
-     * Set 相同的证书是否允许重复上传
-     * @param Repeatable 相同的证书是否允许重复上传
+     * Set 相同的证书是否允许重复上传； true：允许上传相同指纹的证书；  false：不允许上传相同指纹的证书； 默认值：true
+     * @param Repeatable 相同的证书是否允许重复上传； true：允许上传相同指纹的证书；  false：不允许上传相同指纹的证书； 默认值：true
      */
     public void setRepeatable(Boolean Repeatable) {
         this.Repeatable = Repeatable;

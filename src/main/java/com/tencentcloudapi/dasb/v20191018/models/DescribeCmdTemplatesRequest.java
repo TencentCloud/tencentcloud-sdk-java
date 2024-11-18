@@ -38,6 +38,13 @@ public class DescribeCmdTemplatesRequest extends AbstractModel {
     private String Name;
 
     /**
+    * 命令模板类型 1-内置模板  2-自定义模板
+    */
+    @SerializedName("Type")
+    @Expose
+    private Long Type;
+
+    /**
     * 分页偏移位置，默认值为0
     */
     @SerializedName("Offset")
@@ -81,6 +88,22 @@ public class DescribeCmdTemplatesRequest extends AbstractModel {
      */
     public void setName(String Name) {
         this.Name = Name;
+    }
+
+    /**
+     * Get 命令模板类型 1-内置模板  2-自定义模板 
+     * @return Type 命令模板类型 1-内置模板  2-自定义模板
+     */
+    public Long getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set 命令模板类型 1-内置模板  2-自定义模板
+     * @param Type 命令模板类型 1-内置模板  2-自定义模板
+     */
+    public void setType(Long Type) {
+        this.Type = Type;
     }
 
     /**
@@ -132,6 +155,9 @@ public class DescribeCmdTemplatesRequest extends AbstractModel {
         if (source.Name != null) {
             this.Name = new String(source.Name);
         }
+        if (source.Type != null) {
+            this.Type = new Long(source.Type);
+        }
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
         }
@@ -147,6 +173,7 @@ public class DescribeCmdTemplatesRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "IdSet.", this.IdSet);
         this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
 

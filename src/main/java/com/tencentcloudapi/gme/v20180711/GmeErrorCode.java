@@ -48,6 +48,9 @@ public enum GmeErrorCode {
     // RoomId 参数错误
      INVALIDPARAMETERVALUE_INVALIDROOMID("InvalidParameterValue.InvalidRoomId"),
      
+    // 不需要填写StrUid，请填写Uid
+     INVALIDPARAMETERVALUE_INVALIDSTRUIN("InvalidParameterValue.InvalidStrUin"),
+     
     // 黑白名单格式错误
      INVALIDPARAMETERVALUE_INVALIDSUBSCRIBERECORDUSERIDS("InvalidParameterValue.InvalidSubscribeRecordUserIds"),
      
@@ -59,6 +62,9 @@ public enum GmeErrorCode {
      
     // 黑名单个数超过20个
      INVALIDPARAMETERVALUE_INVALIDUNSUBSCRIBEUSERIDS("InvalidParameterValue.InvalidUNSubscribeUserIds"),
+     
+    // 不能同时输入uid和strUid
+     INVALIDPARAMETERVALUE_INVALIDUINORSTRUIN("InvalidParameterValue.InvalidUinOrStrUin"),
      
     // 超过配额限制。
      LIMITEXCEEDED("LimitExceeded"),
@@ -110,6 +116,9 @@ public enum GmeErrorCode {
      
     // 操作不支持。
      UNSUPPORTEDOPERATION("UnsupportedOperation"),
+     
+    // 超过最大踢人数量
+     UNSUPPORTEDOPERATION_LIMITDELETEEXCEEDED("UnsupportedOperation.LimitDeleteExceeded"),
      
     // 语音转文本开关未开启。
      UNSUPPORTEDOPERATION_PTTSWITCHOFF("UnsupportedOperation.PTTSwitchOff"),

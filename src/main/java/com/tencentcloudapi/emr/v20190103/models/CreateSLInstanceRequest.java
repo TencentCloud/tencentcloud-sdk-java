@@ -73,6 +73,13 @@ public class CreateSLInstanceRequest extends AbstractModel {
     private Tag [] Tags;
 
     /**
+    * 预付费参数
+    */
+    @SerializedName("PrePaySetting")
+    @Expose
+    private PrePaySetting PrePaySetting;
+
+    /**
      * Get 实例名称。 
      * @return InstanceName 实例名称。
      */
@@ -184,6 +191,22 @@ public class CreateSLInstanceRequest extends AbstractModel {
         this.Tags = Tags;
     }
 
+    /**
+     * Get 预付费参数 
+     * @return PrePaySetting 预付费参数
+     */
+    public PrePaySetting getPrePaySetting() {
+        return this.PrePaySetting;
+    }
+
+    /**
+     * Set 预付费参数
+     * @param PrePaySetting 预付费参数
+     */
+    public void setPrePaySetting(PrePaySetting PrePaySetting) {
+        this.PrePaySetting = PrePaySetting;
+    }
+
     public CreateSLInstanceRequest() {
     }
 
@@ -219,6 +242,9 @@ public class CreateSLInstanceRequest extends AbstractModel {
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
         }
+        if (source.PrePaySetting != null) {
+            this.PrePaySetting = new PrePaySetting(source.PrePaySetting);
+        }
     }
 
 
@@ -233,6 +259,7 @@ public class CreateSLInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "NodeType", this.NodeType);
         this.setParamArrayObj(map, prefix + "ZoneSettings.", this.ZoneSettings);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamObj(map, prefix + "PrePaySetting.", this.PrePaySetting);
 
     }
 }

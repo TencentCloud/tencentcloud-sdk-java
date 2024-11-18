@@ -24,6 +24,13 @@ import java.util.HashMap;
 public class DescribeSourceAssetRequest extends AbstractModel {
 
     /**
+    * ChooseType为1，查询已经分组的资产；ChooseType不为1查询没有分组的资产
+    */
+    @SerializedName("ChooseType")
+    @Expose
+    private String ChooseType;
+
+    /**
     * 模糊查询
     */
     @SerializedName("FuzzySearch")
@@ -38,20 +45,6 @@ public class DescribeSourceAssetRequest extends AbstractModel {
     private String InsType;
 
     /**
-    * ChooseType为1，查询已经分组的资产；ChooseType不为1查询没有分组的资产
-    */
-    @SerializedName("ChooseType")
-    @Expose
-    private String ChooseType;
-
-    /**
-    * 地域
-    */
-    @SerializedName("Zone")
-    @Expose
-    private String Zone;
-
-    /**
     * 查询单页的最大值；eg：10；则最多返回10条结果
     */
     @SerializedName("Limit")
@@ -64,6 +57,29 @@ public class DescribeSourceAssetRequest extends AbstractModel {
     @SerializedName("Offset")
     @Expose
     private Long Offset;
+
+    /**
+    * 地域
+    */
+    @SerializedName("Zone")
+    @Expose
+    private String Zone;
+
+    /**
+     * Get ChooseType为1，查询已经分组的资产；ChooseType不为1查询没有分组的资产 
+     * @return ChooseType ChooseType为1，查询已经分组的资产；ChooseType不为1查询没有分组的资产
+     */
+    public String getChooseType() {
+        return this.ChooseType;
+    }
+
+    /**
+     * Set ChooseType为1，查询已经分组的资产；ChooseType不为1查询没有分组的资产
+     * @param ChooseType ChooseType为1，查询已经分组的资产；ChooseType不为1查询没有分组的资产
+     */
+    public void setChooseType(String ChooseType) {
+        this.ChooseType = ChooseType;
+    }
 
     /**
      * Get 模糊查询 
@@ -98,38 +114,6 @@ public class DescribeSourceAssetRequest extends AbstractModel {
     }
 
     /**
-     * Get ChooseType为1，查询已经分组的资产；ChooseType不为1查询没有分组的资产 
-     * @return ChooseType ChooseType为1，查询已经分组的资产；ChooseType不为1查询没有分组的资产
-     */
-    public String getChooseType() {
-        return this.ChooseType;
-    }
-
-    /**
-     * Set ChooseType为1，查询已经分组的资产；ChooseType不为1查询没有分组的资产
-     * @param ChooseType ChooseType为1，查询已经分组的资产；ChooseType不为1查询没有分组的资产
-     */
-    public void setChooseType(String ChooseType) {
-        this.ChooseType = ChooseType;
-    }
-
-    /**
-     * Get 地域 
-     * @return Zone 地域
-     */
-    public String getZone() {
-        return this.Zone;
-    }
-
-    /**
-     * Set 地域
-     * @param Zone 地域
-     */
-    public void setZone(String Zone) {
-        this.Zone = Zone;
-    }
-
-    /**
      * Get 查询单页的最大值；eg：10；则最多返回10条结果 
      * @return Limit 查询单页的最大值；eg：10；则最多返回10条结果
      */
@@ -161,6 +145,22 @@ public class DescribeSourceAssetRequest extends AbstractModel {
         this.Offset = Offset;
     }
 
+    /**
+     * Get 地域 
+     * @return Zone 地域
+     */
+    public String getZone() {
+        return this.Zone;
+    }
+
+    /**
+     * Set 地域
+     * @param Zone 地域
+     */
+    public void setZone(String Zone) {
+        this.Zone = Zone;
+    }
+
     public DescribeSourceAssetRequest() {
     }
 
@@ -169,23 +169,23 @@ public class DescribeSourceAssetRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeSourceAssetRequest(DescribeSourceAssetRequest source) {
+        if (source.ChooseType != null) {
+            this.ChooseType = new String(source.ChooseType);
+        }
         if (source.FuzzySearch != null) {
             this.FuzzySearch = new String(source.FuzzySearch);
         }
         if (source.InsType != null) {
             this.InsType = new String(source.InsType);
         }
-        if (source.ChooseType != null) {
-            this.ChooseType = new String(source.ChooseType);
-        }
-        if (source.Zone != null) {
-            this.Zone = new String(source.Zone);
-        }
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
+        }
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
         }
     }
 
@@ -194,12 +194,12 @@ public class DescribeSourceAssetRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "ChooseType", this.ChooseType);
         this.setParamSimple(map, prefix + "FuzzySearch", this.FuzzySearch);
         this.setParamSimple(map, prefix + "InsType", this.InsType);
-        this.setParamSimple(map, prefix + "ChooseType", this.ChooseType);
-        this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "Zone", this.Zone);
 
     }
 }

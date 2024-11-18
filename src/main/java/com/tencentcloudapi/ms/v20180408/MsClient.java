@@ -96,7 +96,9 @@ public class MsClient extends AbstractClient{
     }
 
     /**
-     *用户可以使用该接口自建资源，只支持白名单用户
+     *不再使用
+
+用户可以使用该接口自建资源，只支持白名单用户
      * @param req CreateResourceInstancesRequest
      * @return CreateResourceInstancesResponse
      * @throws TencentCloudSDKException
@@ -201,7 +203,6 @@ public class MsClient extends AbstractClient{
     /**
      *本接口用于查看app列表。
 可以通过指定任务唯一标识ItemId来查询指定app的详细信息，或通过设定过滤器来查询满足过滤条件的app的详细信息。 指定偏移(Offset)和限制(Limit)来选择结果中的一部分，默认返回满足条件的前20个app信息。（注意：根据国家互联网用户实名制相关要求，使用该产品前，需先完成实名认证。）
-
      * @param req DescribeShieldInstancesRequest
      * @return DescribeShieldInstancesResponse
      * @throws TencentCloudSDKException

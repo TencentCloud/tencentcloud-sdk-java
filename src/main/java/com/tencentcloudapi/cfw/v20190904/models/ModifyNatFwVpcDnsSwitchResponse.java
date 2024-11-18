@@ -25,7 +25,6 @@ public class ModifyNatFwVpcDnsSwitchResponse extends AbstractModel {
 
     /**
     * 修改成功
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReturnMsg")
     @Expose
@@ -39,10 +38,8 @@ public class ModifyNatFwVpcDnsSwitchResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 修改成功
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 修改成功 
      * @return ReturnMsg 修改成功
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getReturnMsg() {
         return this.ReturnMsg;
@@ -50,9 +47,7 @@ public class ModifyNatFwVpcDnsSwitchResponse extends AbstractModel {
 
     /**
      * Set 修改成功
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReturnMsg 修改成功
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReturnMsg(String ReturnMsg) {
         this.ReturnMsg = ReturnMsg;

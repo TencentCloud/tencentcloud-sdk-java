@@ -111,6 +111,13 @@ public class ModifyTopicRequest extends AbstractModel {
     private Long PartitionCount;
 
     /**
+    * 取消切换存储任务的id
+    */
+    @SerializedName("CancelTopicAsyncTaskID")
+    @Expose
+    private String CancelTopicAsyncTaskID;
+
+    /**
      * Get 日志主题ID 
      * @return TopicId 日志主题ID
      */
@@ -314,6 +321,22 @@ public class ModifyTopicRequest extends AbstractModel {
         this.PartitionCount = PartitionCount;
     }
 
+    /**
+     * Get 取消切换存储任务的id 
+     * @return CancelTopicAsyncTaskID 取消切换存储任务的id
+     */
+    public String getCancelTopicAsyncTaskID() {
+        return this.CancelTopicAsyncTaskID;
+    }
+
+    /**
+     * Set 取消切换存储任务的id
+     * @param CancelTopicAsyncTaskID 取消切换存储任务的id
+     */
+    public void setCancelTopicAsyncTaskID(String CancelTopicAsyncTaskID) {
+        this.CancelTopicAsyncTaskID = CancelTopicAsyncTaskID;
+    }
+
     public ModifyTopicRequest() {
     }
 
@@ -361,6 +384,9 @@ public class ModifyTopicRequest extends AbstractModel {
         if (source.PartitionCount != null) {
             this.PartitionCount = new Long(source.PartitionCount);
         }
+        if (source.CancelTopicAsyncTaskID != null) {
+            this.CancelTopicAsyncTaskID = new String(source.CancelTopicAsyncTaskID);
+        }
     }
 
 
@@ -380,6 +406,7 @@ public class ModifyTopicRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "IsWebTracking", this.IsWebTracking);
         this.setParamObj(map, prefix + "Extends.", this.Extends);
         this.setParamSimple(map, prefix + "PartitionCount", this.PartitionCount);
+        this.setParamSimple(map, prefix + "CancelTopicAsyncTaskID", this.CancelTopicAsyncTaskID);
 
     }
 }

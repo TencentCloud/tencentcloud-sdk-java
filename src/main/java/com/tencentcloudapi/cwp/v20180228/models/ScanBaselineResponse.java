@@ -25,7 +25,6 @@ public class ScanBaselineResponse extends AbstractModel {
 
     /**
     * 正在扫描中的主机Quuid
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScanningQuuids")
     @Expose
@@ -33,7 +32,6 @@ public class ScanBaselineResponse extends AbstractModel {
 
     /**
     * 任务下发成功返回的TaskId
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskId")
     @Expose
@@ -47,10 +45,8 @@ public class ScanBaselineResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 正在扫描中的主机Quuid
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 正在扫描中的主机Quuid 
      * @return ScanningQuuids 正在扫描中的主机Quuid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getScanningQuuids() {
         return this.ScanningQuuids;
@@ -58,19 +54,15 @@ public class ScanBaselineResponse extends AbstractModel {
 
     /**
      * Set 正在扫描中的主机Quuid
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ScanningQuuids 正在扫描中的主机Quuid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScanningQuuids(String [] ScanningQuuids) {
         this.ScanningQuuids = ScanningQuuids;
     }
 
     /**
-     * Get 任务下发成功返回的TaskId
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务下发成功返回的TaskId 
      * @return TaskId 任务下发成功返回的TaskId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTaskId() {
         return this.TaskId;
@@ -78,9 +70,7 @@ public class ScanBaselineResponse extends AbstractModel {
 
     /**
      * Set 任务下发成功返回的TaskId
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskId 任务下发成功返回的TaskId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;

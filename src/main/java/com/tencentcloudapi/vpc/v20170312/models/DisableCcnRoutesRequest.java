@@ -31,7 +31,7 @@ public class DisableCcnRoutesRequest extends AbstractModel {
     private String CcnId;
 
     /**
-    * CCN路由策略唯一ID。形如：ccnr-f49l6u0z。
+    * CCN路由策略唯一ID。形如：ccnr-f49l6u0z。可通过DescribeCcnRoutes获取。
     */
     @SerializedName("RouteIds")
     @Expose
@@ -54,16 +54,16 @@ public class DisableCcnRoutesRequest extends AbstractModel {
     }
 
     /**
-     * Get CCN路由策略唯一ID。形如：ccnr-f49l6u0z。 
-     * @return RouteIds CCN路由策略唯一ID。形如：ccnr-f49l6u0z。
+     * Get CCN路由策略唯一ID。形如：ccnr-f49l6u0z。可通过DescribeCcnRoutes获取。 
+     * @return RouteIds CCN路由策略唯一ID。形如：ccnr-f49l6u0z。可通过DescribeCcnRoutes获取。
      */
     public String [] getRouteIds() {
         return this.RouteIds;
     }
 
     /**
-     * Set CCN路由策略唯一ID。形如：ccnr-f49l6u0z。
-     * @param RouteIds CCN路由策略唯一ID。形如：ccnr-f49l6u0z。
+     * Set CCN路由策略唯一ID。形如：ccnr-f49l6u0z。可通过DescribeCcnRoutes获取。
+     * @param RouteIds CCN路由策略唯一ID。形如：ccnr-f49l6u0z。可通过DescribeCcnRoutes获取。
      */
     public void setRouteIds(String [] RouteIds) {
         this.RouteIds = RouteIds;

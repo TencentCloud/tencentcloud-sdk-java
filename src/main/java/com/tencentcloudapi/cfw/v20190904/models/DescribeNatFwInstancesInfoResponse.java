@@ -25,7 +25,6 @@ public class DescribeNatFwInstancesInfoResponse extends AbstractModel {
 
     /**
     * 实例卡片信息数组
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NatinsLst")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeNatFwInstancesInfoResponse extends AbstractModel {
 
     /**
     * nat 防火墙个数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Total")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeNatFwInstancesInfoResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 实例卡片信息数组
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例卡片信息数组 
      * @return NatinsLst 实例卡片信息数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public NatInstanceInfo [] getNatinsLst() {
         return this.NatinsLst;
@@ -58,19 +54,15 @@ public class DescribeNatFwInstancesInfoResponse extends AbstractModel {
 
     /**
      * Set 实例卡片信息数组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NatinsLst 实例卡片信息数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNatinsLst(NatInstanceInfo [] NatinsLst) {
         this.NatinsLst = NatinsLst;
     }
 
     /**
-     * Get nat 防火墙个数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get nat 防火墙个数 
      * @return Total nat 防火墙个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotal() {
         return this.Total;
@@ -78,9 +70,7 @@ public class DescribeNatFwInstancesInfoResponse extends AbstractModel {
 
     /**
      * Set nat 防火墙个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Total nat 防火墙个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotal(Long Total) {
         this.Total = Total;

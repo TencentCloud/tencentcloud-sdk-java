@@ -116,7 +116,7 @@ public class ClusterOverview extends AbstractModel {
     private Long LoginNodeCount;
 
     /**
-    * 弹性伸缩类型。取值范围：<li>THPC_AS：集群自动扩缩容由THPC产品内部实现。</li><li>AS：集群自动扩缩容由[弹性伸缩](https://cloud.tencent.com/document/product/377/3154)产品实现。</li>
+    * 弹性伸缩类型。
     */
     @SerializedName("AutoScalingType")
     @Expose
@@ -342,16 +342,16 @@ public class ClusterOverview extends AbstractModel {
     }
 
     /**
-     * Get 弹性伸缩类型。取值范围：<li>THPC_AS：集群自动扩缩容由THPC产品内部实现。</li><li>AS：集群自动扩缩容由[弹性伸缩](https://cloud.tencent.com/document/product/377/3154)产品实现。</li> 
-     * @return AutoScalingType 弹性伸缩类型。取值范围：<li>THPC_AS：集群自动扩缩容由THPC产品内部实现。</li><li>AS：集群自动扩缩容由[弹性伸缩](https://cloud.tencent.com/document/product/377/3154)产品实现。</li>
+     * Get 弹性伸缩类型。 
+     * @return AutoScalingType 弹性伸缩类型。
      */
     public String getAutoScalingType() {
         return this.AutoScalingType;
     }
 
     /**
-     * Set 弹性伸缩类型。取值范围：<li>THPC_AS：集群自动扩缩容由THPC产品内部实现。</li><li>AS：集群自动扩缩容由[弹性伸缩](https://cloud.tencent.com/document/product/377/3154)产品实现。</li>
-     * @param AutoScalingType 弹性伸缩类型。取值范围：<li>THPC_AS：集群自动扩缩容由THPC产品内部实现。</li><li>AS：集群自动扩缩容由[弹性伸缩](https://cloud.tencent.com/document/product/377/3154)产品实现。</li>
+     * Set 弹性伸缩类型。
+     * @param AutoScalingType 弹性伸缩类型。
      */
     public void setAutoScalingType(String AutoScalingType) {
         this.AutoScalingType = AutoScalingType;

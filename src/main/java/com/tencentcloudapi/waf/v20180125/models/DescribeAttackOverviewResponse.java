@@ -67,7 +67,6 @@ public class DescribeAttackOverviewResponse extends AbstractModel {
 
     /**
     * api风险事件数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApiRiskEventCount")
     @Expose
@@ -75,7 +74,6 @@ public class DescribeAttackOverviewResponse extends AbstractModel {
 
     /**
     * 黑名单总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IPBlackCount")
     @Expose
@@ -83,7 +81,6 @@ public class DescribeAttackOverviewResponse extends AbstractModel {
 
     /**
     * 防篡改总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TamperCount")
     @Expose
@@ -91,7 +88,6 @@ public class DescribeAttackOverviewResponse extends AbstractModel {
 
     /**
     * 信息泄露总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LeakCount")
     @Expose
@@ -99,7 +95,6 @@ public class DescribeAttackOverviewResponse extends AbstractModel {
 
     /**
     * API风险事件周环比
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApiRiskEventCircleCount")
     @Expose
@@ -209,10 +204,8 @@ public class DescribeAttackOverviewResponse extends AbstractModel {
     }
 
     /**
-     * Get api风险事件数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get api风险事件数量 
      * @return ApiRiskEventCount api风险事件数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getApiRiskEventCount() {
         return this.ApiRiskEventCount;
@@ -220,19 +213,15 @@ public class DescribeAttackOverviewResponse extends AbstractModel {
 
     /**
      * Set api风险事件数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApiRiskEventCount api风险事件数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApiRiskEventCount(Long ApiRiskEventCount) {
         this.ApiRiskEventCount = ApiRiskEventCount;
     }
 
     /**
-     * Get 黑名单总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 黑名单总数 
      * @return IPBlackCount 黑名单总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIPBlackCount() {
         return this.IPBlackCount;
@@ -240,19 +229,15 @@ public class DescribeAttackOverviewResponse extends AbstractModel {
 
     /**
      * Set 黑名单总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IPBlackCount 黑名单总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIPBlackCount(Long IPBlackCount) {
         this.IPBlackCount = IPBlackCount;
     }
 
     /**
-     * Get 防篡改总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 防篡改总数 
      * @return TamperCount 防篡改总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTamperCount() {
         return this.TamperCount;
@@ -260,19 +245,15 @@ public class DescribeAttackOverviewResponse extends AbstractModel {
 
     /**
      * Set 防篡改总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TamperCount 防篡改总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTamperCount(Long TamperCount) {
         this.TamperCount = TamperCount;
     }
 
     /**
-     * Get 信息泄露总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 信息泄露总数 
      * @return LeakCount 信息泄露总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLeakCount() {
         return this.LeakCount;
@@ -280,19 +261,15 @@ public class DescribeAttackOverviewResponse extends AbstractModel {
 
     /**
      * Set 信息泄露总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LeakCount 信息泄露总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLeakCount(Long LeakCount) {
         this.LeakCount = LeakCount;
     }
 
     /**
-     * Get API风险事件周环比
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get API风险事件周环比 
      * @return ApiRiskEventCircleCount API风险事件周环比
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getApiRiskEventCircleCount() {
         return this.ApiRiskEventCircleCount;
@@ -300,9 +277,7 @@ public class DescribeAttackOverviewResponse extends AbstractModel {
 
     /**
      * Set API风险事件周环比
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApiRiskEventCircleCount API风险事件周环比
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApiRiskEventCircleCount(Long ApiRiskEventCircleCount) {
         this.ApiRiskEventCircleCount = ApiRiskEventCircleCount;

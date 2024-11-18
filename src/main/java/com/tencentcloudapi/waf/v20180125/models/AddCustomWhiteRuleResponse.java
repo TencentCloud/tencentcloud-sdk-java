@@ -32,7 +32,6 @@ public class AddCustomWhiteRuleResponse extends AbstractModel {
 
     /**
     * 添加成功的规则ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleId")
     @Expose
@@ -62,10 +61,8 @@ public class AddCustomWhiteRuleResponse extends AbstractModel {
     }
 
     /**
-     * Get 添加成功的规则ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 添加成功的规则ID 
      * @return RuleId 添加成功的规则ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRuleId() {
         return this.RuleId;
@@ -73,9 +70,7 @@ public class AddCustomWhiteRuleResponse extends AbstractModel {
 
     /**
      * Set 添加成功的规则ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RuleId 添加成功的规则ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleId(Long RuleId) {
         this.RuleId = RuleId;

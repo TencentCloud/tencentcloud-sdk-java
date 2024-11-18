@@ -67,7 +67,6 @@ public class WorkspaceStatusInfo extends AbstractModel {
 
     /**
     * 工作空间图标
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Icon")
     @Expose
@@ -75,7 +74,6 @@ public class WorkspaceStatusInfo extends AbstractModel {
 
     /**
     * 工作空间状态, 异常原因
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StatusReason")
     @Expose
@@ -83,7 +81,6 @@ public class WorkspaceStatusInfo extends AbstractModel {
 
     /**
     * 工作空间描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
     @Expose
@@ -91,7 +88,6 @@ public class WorkspaceStatusInfo extends AbstractModel {
 
     /**
     * 工作空间类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WorkspaceType")
     @Expose
@@ -99,7 +95,6 @@ public class WorkspaceStatusInfo extends AbstractModel {
 
     /**
     * Git 仓库 HTTPS 地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VersionControlUrl")
     @Expose
@@ -107,7 +102,6 @@ public class WorkspaceStatusInfo extends AbstractModel {
 
     /**
     * Git 仓库引用。指定分支使用 /refs/heads/{分支名}, 指定 Tag 用 /refs/tags/{Tag名}
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VersionControlRef")
     @Expose
@@ -115,7 +109,6 @@ public class WorkspaceStatusInfo extends AbstractModel {
 
     /**
     * 最后操作时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LastOpsDate")
     @Expose
@@ -123,7 +116,6 @@ public class WorkspaceStatusInfo extends AbstractModel {
 
     /**
     * 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateDate")
     @Expose
@@ -226,10 +218,8 @@ public class WorkspaceStatusInfo extends AbstractModel {
     }
 
     /**
-     * Get 工作空间图标
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 工作空间图标 
      * @return Icon 工作空间图标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIcon() {
         return this.Icon;
@@ -237,19 +227,15 @@ public class WorkspaceStatusInfo extends AbstractModel {
 
     /**
      * Set 工作空间图标
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Icon 工作空间图标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIcon(String Icon) {
         this.Icon = Icon;
     }
 
     /**
-     * Get 工作空间状态, 异常原因
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 工作空间状态, 异常原因 
      * @return StatusReason 工作空间状态, 异常原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatusReason() {
         return this.StatusReason;
@@ -257,19 +243,15 @@ public class WorkspaceStatusInfo extends AbstractModel {
 
     /**
      * Set 工作空间状态, 异常原因
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StatusReason 工作空间状态, 异常原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatusReason(String StatusReason) {
         this.StatusReason = StatusReason;
     }
 
     /**
-     * Get 工作空间描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 工作空间描述 
      * @return Description 工作空间描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
         return this.Description;
@@ -277,19 +259,15 @@ public class WorkspaceStatusInfo extends AbstractModel {
 
     /**
      * Set 工作空间描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Description 工作空间描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 工作空间类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 工作空间类型 
      * @return WorkspaceType 工作空间类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWorkspaceType() {
         return this.WorkspaceType;
@@ -297,19 +275,15 @@ public class WorkspaceStatusInfo extends AbstractModel {
 
     /**
      * Set 工作空间类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WorkspaceType 工作空间类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWorkspaceType(String WorkspaceType) {
         this.WorkspaceType = WorkspaceType;
     }
 
     /**
-     * Get Git 仓库 HTTPS 地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Git 仓库 HTTPS 地址 
      * @return VersionControlUrl Git 仓库 HTTPS 地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVersionControlUrl() {
         return this.VersionControlUrl;
@@ -317,19 +291,15 @@ public class WorkspaceStatusInfo extends AbstractModel {
 
     /**
      * Set Git 仓库 HTTPS 地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VersionControlUrl Git 仓库 HTTPS 地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVersionControlUrl(String VersionControlUrl) {
         this.VersionControlUrl = VersionControlUrl;
     }
 
     /**
-     * Get Git 仓库引用。指定分支使用 /refs/heads/{分支名}, 指定 Tag 用 /refs/tags/{Tag名}
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Git 仓库引用。指定分支使用 /refs/heads/{分支名}, 指定 Tag 用 /refs/tags/{Tag名} 
      * @return VersionControlRef Git 仓库引用。指定分支使用 /refs/heads/{分支名}, 指定 Tag 用 /refs/tags/{Tag名}
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVersionControlRef() {
         return this.VersionControlRef;
@@ -337,19 +307,15 @@ public class WorkspaceStatusInfo extends AbstractModel {
 
     /**
      * Set Git 仓库引用。指定分支使用 /refs/heads/{分支名}, 指定 Tag 用 /refs/tags/{Tag名}
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VersionControlRef Git 仓库引用。指定分支使用 /refs/heads/{分支名}, 指定 Tag 用 /refs/tags/{Tag名}
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVersionControlRef(String VersionControlRef) {
         this.VersionControlRef = VersionControlRef;
     }
 
     /**
-     * Get 最后操作时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最后操作时间 
      * @return LastOpsDate 最后操作时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLastOpsDate() {
         return this.LastOpsDate;
@@ -357,19 +323,15 @@ public class WorkspaceStatusInfo extends AbstractModel {
 
     /**
      * Set 最后操作时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LastOpsDate 最后操作时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLastOpsDate(String LastOpsDate) {
         this.LastOpsDate = LastOpsDate;
     }
 
     /**
-     * Get 创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间 
      * @return CreateDate 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateDate() {
         return this.CreateDate;
@@ -377,9 +339,7 @@ public class WorkspaceStatusInfo extends AbstractModel {
 
     /**
      * Set 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateDate 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateDate(String CreateDate) {
         this.CreateDate = CreateDate;

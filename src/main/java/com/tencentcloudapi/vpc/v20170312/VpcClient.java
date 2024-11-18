@@ -176,7 +176,7 @@ public class VpcClient extends AbstractClient{
     /**
      *本接口（AssignPrivateIpAddresses）用于弹性网卡申请内网 IP。
 * 一个弹性网卡支持绑定的IP地址是有限制的，更多资源限制信息详见<a href="/document/product/576/18527">弹性网卡使用限制</a>。
-* 可以指定内网IP地址申请，内网IP地址类型不能为主IP，主IP已存在，不能修改，内网IP必须要弹性网卡所在子网内，而且不能被占用。
+* 可以指定内网IP地址申请，内网IP地址类型不能为主IP，主IP已存在，不能修改，内网IP必须要在弹性网卡所在子网内，而且不能被占用。
 * 在弹性网卡上申请一个到多个辅助内网IP，接口会在弹性网卡所在子网网段内返回指定数量的辅助内网IP。
 >?本接口为异步接口，可调用 [DescribeVpcTaskResult](https://cloud.tencent.com/document/api/215/59037) 接口查询任务执行结果，待任务执行成功后再进行其他操作。
 >
@@ -3322,6 +3322,17 @@ LimitTypes取值范围：
     }
 
     /**
+     *调整EIP续费标识
+     * @param req ModifyAddressesRenewFlagRequest
+     * @return ModifyAddressesRenewFlagResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAddressesRenewFlagResponse ModifyAddressesRenewFlag(ModifyAddressesRenewFlagRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyAddressesRenewFlag", ModifyAddressesRenewFlagResponse.class);
+    }
+
+    /**
      *本接口（ModifyAssistantCidr）用于批量修改辅助CIDR，支持新增和删除。
      * @param req ModifyAssistantCidrRequest
      * @return ModifyAssistantCidrResponse
@@ -3341,6 +3352,17 @@ LimitTypes取值范围：
     public ModifyBandwidthPackageAttributeResponse ModifyBandwidthPackageAttribute(ModifyBandwidthPackageAttributeRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyBandwidthPackageAttribute", ModifyBandwidthPackageAttributeResponse.class);
+    }
+
+    /**
+     *接口用于调整[共享带宽包](https://cloud.tencent.com/document/product/684/15245)(BWP)带宽
+     * @param req ModifyBandwidthPackageBandwidthRequest
+     * @return ModifyBandwidthPackageBandwidthResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyBandwidthPackageBandwidthResponse ModifyBandwidthPackageBandwidth(ModifyBandwidthPackageBandwidthRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyBandwidthPackageBandwidth", ModifyBandwidthPackageBandwidthResponse.class);
     }
 
     /**
@@ -4080,7 +4102,7 @@ LimitTypes取值范围：
 
 **路由条件支持以下四种：**
 
-- 实例类型: `instance-type`，可选值：私有网络 `VPC`、专线网关 `DIRECTCONNECT`、专线网关 `VPNGW`
+- 实例类型: `instance-type`，可选值：私有网络 `VPC`、专线网关 `DIRECTCONNECT`、VPN网关 `VPNGW`
 - 实例ID: `instance-id`，例如：`dcg-8zljkrft`、`vpc-jdevjrup`，暂不支持 `Edge` 实例
 - 实例地域: `instance-region`，例如：`ap-guangzhou`<br />产品支持的所有地域列表可通过接口 [DescribeRegions](https://cloud.tencent.com/document/product/1596/77930) 查询，其中参数 `Product` 设置为 `ccn`
 - 路由前缀: `cidr-block`，例如：`10.1.0.0/16`
@@ -4373,7 +4395,7 @@ LimitTypes取值范围：
 
     /**
      *本接口（UnassignPrivateIpAddresses）用于弹性网卡退还内网 IP。
-* 退还弹性网卡上的辅助内网IP，接口自动解关联弹性公网 IP。不能退还弹性网卡的主内网IP。
+* 退还弹性网卡上的辅助内网IP，接口自动解除关联弹性公网 IP。不能退还弹性网卡的主内网IP。
 
 本接口是异步完成，如需查询异步任务执行结果，请使用本接口返回的`RequestId`轮询`DescribeVpcTaskResult`接口。
      * @param req UnassignPrivateIpAddressesRequest

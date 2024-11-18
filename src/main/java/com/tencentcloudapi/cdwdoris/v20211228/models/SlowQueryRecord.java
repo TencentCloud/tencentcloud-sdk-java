@@ -134,6 +134,22 @@ public class SlowQueryRecord extends AbstractModel {
     private Float DurationSec;
 
     /**
+    * 状态
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("State")
+    @Expose
+    private String State;
+
+    /**
+    * Catalog  Name
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CatalogName")
+    @Expose
+    private String CatalogName;
+
+    /**
      * Get 查询用户 
      * @return OsUser 查询用户
      */
@@ -393,6 +409,46 @@ public class SlowQueryRecord extends AbstractModel {
         this.DurationSec = DurationSec;
     }
 
+    /**
+     * Get 状态
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return State 状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getState() {
+        return this.State;
+    }
+
+    /**
+     * Set 状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param State 状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setState(String State) {
+        this.State = State;
+    }
+
+    /**
+     * Get Catalog  Name
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CatalogName Catalog  Name
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCatalogName() {
+        return this.CatalogName;
+    }
+
+    /**
+     * Set Catalog  Name
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CatalogName Catalog  Name
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCatalogName(String CatalogName) {
+        this.CatalogName = CatalogName;
+    }
+
     public SlowQueryRecord() {
     }
 
@@ -446,6 +502,12 @@ public class SlowQueryRecord extends AbstractModel {
         if (source.DurationSec != null) {
             this.DurationSec = new Float(source.DurationSec);
         }
+        if (source.State != null) {
+            this.State = new String(source.State);
+        }
+        if (source.CatalogName != null) {
+            this.CatalogName = new String(source.CatalogName);
+        }
     }
 
 
@@ -468,6 +530,8 @@ public class SlowQueryRecord extends AbstractModel {
         this.setParamSimple(map, prefix + "ResultBytesMB", this.ResultBytesMB);
         this.setParamSimple(map, prefix + "MemoryUsageMB", this.MemoryUsageMB);
         this.setParamSimple(map, prefix + "DurationSec", this.DurationSec);
+        this.setParamSimple(map, prefix + "State", this.State);
+        this.setParamSimple(map, prefix + "CatalogName", this.CatalogName);
 
     }
 }

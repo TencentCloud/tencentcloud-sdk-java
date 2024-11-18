@@ -32,7 +32,6 @@ public class DeleteAllAccessControlRuleResponse extends AbstractModel {
 
     /**
     * 删除了几条访问控制规则
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Info")
     @Expose
@@ -62,10 +61,8 @@ public class DeleteAllAccessControlRuleResponse extends AbstractModel {
     }
 
     /**
-     * Get 删除了几条访问控制规则
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 删除了几条访问控制规则 
      * @return Info 删除了几条访问控制规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getInfo() {
         return this.Info;
@@ -73,9 +70,7 @@ public class DeleteAllAccessControlRuleResponse extends AbstractModel {
 
     /**
      * Set 删除了几条访问控制规则
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Info 删除了几条访问控制规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInfo(Long Info) {
         this.Info = Info;

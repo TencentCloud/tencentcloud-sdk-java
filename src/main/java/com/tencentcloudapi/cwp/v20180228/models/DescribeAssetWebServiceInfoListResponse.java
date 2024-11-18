@@ -25,7 +25,6 @@ public class DescribeAssetWebServiceInfoListResponse extends AbstractModel {
 
     /**
     * 列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WebServices")
     @Expose
@@ -46,10 +45,8 @@ public class DescribeAssetWebServiceInfoListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 列表 
      * @return WebServices 列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AssetWebServiceBaseInfo [] getWebServices() {
         return this.WebServices;
@@ -57,9 +54,7 @@ public class DescribeAssetWebServiceInfoListResponse extends AbstractModel {
 
     /**
      * Set 列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WebServices 列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWebServices(AssetWebServiceBaseInfo [] WebServices) {
         this.WebServices = WebServices;

@@ -52,7 +52,6 @@ public class DescribeCertificateVerifyResultResponse extends AbstractModel {
     * 证书是否改变。
 0：未变化
 1：有变化
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Changed")
     @Expose
@@ -132,12 +131,10 @@ public class DescribeCertificateVerifyResultResponse extends AbstractModel {
     /**
      * Get 证书是否改变。
 0：未变化
-1：有变化
-注意：此字段可能返回 null，表示取不到有效值。 
+1：有变化 
      * @return Changed 证书是否改变。
 0：未变化
 1：有变化
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getChanged() {
         return this.Changed;
@@ -147,11 +144,9 @@ public class DescribeCertificateVerifyResultResponse extends AbstractModel {
      * Set 证书是否改变。
 0：未变化
 1：有变化
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Changed 证书是否改变。
 0：未变化
 1：有变化
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setChanged(Long Changed) {
         this.Changed = Changed;

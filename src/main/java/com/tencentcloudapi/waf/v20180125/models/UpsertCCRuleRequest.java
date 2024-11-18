@@ -80,7 +80,7 @@ public class UpsertCCRuleRequest extends AbstractModel {
     private Long MatchFunc;
 
     /**
-    * 动作，20表示观察，21表示人机识别，22表示拦截，23表示精准拦截
+    * 动作，20表示观察，21表示人机识别，22表示拦截，23表示精准拦截，26表示精准人机识别，27表示JS校验
     */
     @SerializedName("ActionType")
     @Expose
@@ -285,16 +285,16 @@ public class UpsertCCRuleRequest extends AbstractModel {
     }
 
     /**
-     * Get 动作，20表示观察，21表示人机识别，22表示拦截，23表示精准拦截 
-     * @return ActionType 动作，20表示观察，21表示人机识别，22表示拦截，23表示精准拦截
+     * Get 动作，20表示观察，21表示人机识别，22表示拦截，23表示精准拦截，26表示精准人机识别，27表示JS校验 
+     * @return ActionType 动作，20表示观察，21表示人机识别，22表示拦截，23表示精准拦截，26表示精准人机识别，27表示JS校验
      */
     public String getActionType() {
         return this.ActionType;
     }
 
     /**
-     * Set 动作，20表示观察，21表示人机识别，22表示拦截，23表示精准拦截
-     * @param ActionType 动作，20表示观察，21表示人机识别，22表示拦截，23表示精准拦截
+     * Set 动作，20表示观察，21表示人机识别，22表示拦截，23表示精准拦截，26表示精准人机识别，27表示JS校验
+     * @param ActionType 动作，20表示观察，21表示人机识别，22表示拦截，23表示精准拦截，26表示精准人机识别，27表示JS校验
      */
     public void setActionType(String ActionType) {
         this.ActionType = ActionType;

@@ -61,6 +61,13 @@ UserName和Password必须同时填写或同时为空。
     private String Password;
 
     /**
+    * 授权范围：all 授权全部  manual：手动指定
+    */
+    @SerializedName("AuthRange")
+    @Expose
+    private String AuthRange;
+
+    /**
      * Get DSPA实例ID。 
      * @return DspaId DSPA实例ID。
      */
@@ -148,6 +155,22 @@ UserName和Password必须同时填写或同时为空。
         this.Password = Password;
     }
 
+    /**
+     * Get 授权范围：all 授权全部  manual：手动指定 
+     * @return AuthRange 授权范围：all 授权全部  manual：手动指定
+     */
+    public String getAuthRange() {
+        return this.AuthRange;
+    }
+
+    /**
+     * Set 授权范围：all 授权全部  manual：手动指定
+     * @param AuthRange 授权范围：all 授权全部  manual：手动指定
+     */
+    public void setAuthRange(String AuthRange) {
+        this.AuthRange = AuthRange;
+    }
+
     public UpdateDSPASelfBuildResourceRequest() {
     }
 
@@ -171,6 +194,9 @@ UserName和Password必须同时填写或同时为空。
         if (source.Password != null) {
             this.Password = new String(source.Password);
         }
+        if (source.AuthRange != null) {
+            this.AuthRange = new String(source.AuthRange);
+        }
     }
 
 
@@ -183,6 +209,7 @@ UserName和Password必须同时填写或同时为空。
         this.setParamSimple(map, prefix + "ResourceVPort", this.ResourceVPort);
         this.setParamSimple(map, prefix + "UserName", this.UserName);
         this.setParamSimple(map, prefix + "Password", this.Password);
+        this.setParamSimple(map, prefix + "AuthRange", this.AuthRange);
 
     }
 }

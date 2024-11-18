@@ -32,7 +32,6 @@ public class DescribeAttackWhiteRuleResponse extends AbstractModel {
 
     /**
     * 规则白名单列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("List")
     @Expose
@@ -62,10 +61,8 @@ public class DescribeAttackWhiteRuleResponse extends AbstractModel {
     }
 
     /**
-     * Get 规则白名单列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则白名单列表 
      * @return List 规则白名单列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public UserWhiteRule [] getList() {
         return this.List;
@@ -73,9 +70,7 @@ public class DescribeAttackWhiteRuleResponse extends AbstractModel {
 
     /**
      * Set 规则白名单列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param List 规则白名单列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setList(UserWhiteRule [] List) {
         this.List = List;

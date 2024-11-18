@@ -245,6 +245,14 @@ public class LaunchConfiguration extends AbstractModel {
     private String [] DisasterRecoverGroupIds;
 
     /**
+    * 镜像族名称。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ImageFamily")
+    @Expose
+    private String ImageFamily;
+
+    /**
      * Get 实例所属项目ID。 
      * @return ProjectId 实例所属项目ID。
      */
@@ -756,6 +764,26 @@ public class LaunchConfiguration extends AbstractModel {
         this.DisasterRecoverGroupIds = DisasterRecoverGroupIds;
     }
 
+    /**
+     * Get 镜像族名称。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ImageFamily 镜像族名称。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getImageFamily() {
+        return this.ImageFamily;
+    }
+
+    /**
+     * Set 镜像族名称。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ImageFamily 镜像族名称。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setImageFamily(String ImageFamily) {
+        this.ImageFamily = ImageFamily;
+    }
+
     public LaunchConfiguration() {
     }
 
@@ -878,6 +906,9 @@ public class LaunchConfiguration extends AbstractModel {
                 this.DisasterRecoverGroupIds[i] = new String(source.DisasterRecoverGroupIds[i]);
             }
         }
+        if (source.ImageFamily != null) {
+            this.ImageFamily = new String(source.ImageFamily);
+        }
     }
 
 
@@ -916,6 +947,7 @@ public class LaunchConfiguration extends AbstractModel {
         this.setParamSimple(map, prefix + "HpcClusterId", this.HpcClusterId);
         this.setParamObj(map, prefix + "IPv6InternetAccessible.", this.IPv6InternetAccessible);
         this.setParamArraySimple(map, prefix + "DisasterRecoverGroupIds.", this.DisasterRecoverGroupIds);
+        this.setParamSimple(map, prefix + "ImageFamily", this.ImageFamily);
 
     }
 }

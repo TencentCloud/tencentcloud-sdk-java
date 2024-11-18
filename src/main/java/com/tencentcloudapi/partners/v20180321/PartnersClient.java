@@ -163,6 +163,17 @@ public class PartnersClient extends AbstractClient{
     }
 
     /**
+     *根据大订单号查询关联申请合并支付的其他订单号
+     * @param req DescribeAgentRelateBigDealIdsRequest
+     * @return DescribeAgentRelateBigDealIdsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAgentRelateBigDealIdsResponse DescribeAgentRelateBigDealIds(DescribeAgentRelateBigDealIdsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAgentRelateBigDealIds", DescribeAgentRelateBigDealIdsResponse.class);
+    }
+
+    /**
      *查询代理商名下指定代客的自付订单（预付费）
      * @param req DescribeAgentSelfPayDealsV2Request
      * @return DescribeAgentSelfPayDealsV2Response

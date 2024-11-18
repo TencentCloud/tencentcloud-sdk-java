@@ -46,7 +46,6 @@ public class TaskStatus extends AbstractModel {
 
     /**
     * 扫描失败（提示具体原因：扫描超时、客户端版本低、客户端离线）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Stop")
     @Expose
@@ -101,10 +100,8 @@ public class TaskStatus extends AbstractModel {
     }
 
     /**
-     * Get 扫描失败（提示具体原因：扫描超时、客户端版本低、客户端离线）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 扫描失败（提示具体原因：扫描超时、客户端版本低、客户端离线） 
      * @return Stop 扫描失败（提示具体原因：扫描超时、客户端版本低、客户端离线）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStop() {
         return this.Stop;
@@ -112,9 +109,7 @@ public class TaskStatus extends AbstractModel {
 
     /**
      * Set 扫描失败（提示具体原因：扫描超时、客户端版本低、客户端离线）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Stop 扫描失败（提示具体原因：扫描超时、客户端版本低、客户端离线）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStop(String Stop) {
         this.Stop = Stop;

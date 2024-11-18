@@ -25,7 +25,6 @@ public class TLSVersion extends AbstractModel {
 
     /**
     * TLSVERSION的ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VersionId")
     @Expose
@@ -33,17 +32,14 @@ public class TLSVersion extends AbstractModel {
 
     /**
     * TLSVERSION的NAME
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VersionName")
     @Expose
     private String VersionName;
 
     /**
-     * Get TLSVERSION的ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get TLSVERSION的ID 
      * @return VersionId TLSVERSION的ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getVersionId() {
         return this.VersionId;
@@ -51,19 +47,15 @@ public class TLSVersion extends AbstractModel {
 
     /**
      * Set TLSVERSION的ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VersionId TLSVERSION的ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVersionId(Long VersionId) {
         this.VersionId = VersionId;
     }
 
     /**
-     * Get TLSVERSION的NAME
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get TLSVERSION的NAME 
      * @return VersionName TLSVERSION的NAME
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVersionName() {
         return this.VersionName;
@@ -71,9 +63,7 @@ public class TLSVersion extends AbstractModel {
 
     /**
      * Set TLSVERSION的NAME
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VersionName TLSVERSION的NAME
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVersionName(String VersionName) {
         this.VersionName = VersionName;

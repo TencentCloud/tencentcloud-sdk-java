@@ -25,7 +25,6 @@ public class DescribeUndoVulCountsResponse extends AbstractModel {
 
     /**
     * 未处理的漏洞数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UndoVulCount")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeUndoVulCountsResponse extends AbstractModel {
 
     /**
     * 未处理的主机数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UndoHostCount")
     @Expose
@@ -41,7 +39,6 @@ public class DescribeUndoVulCountsResponse extends AbstractModel {
 
     /**
     * 普通版主机数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NotProfessionCount")
     @Expose
@@ -55,10 +52,8 @@ public class DescribeUndoVulCountsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 未处理的漏洞数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 未处理的漏洞数 
      * @return UndoVulCount 未处理的漏洞数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getUndoVulCount() {
         return this.UndoVulCount;
@@ -66,19 +61,15 @@ public class DescribeUndoVulCountsResponse extends AbstractModel {
 
     /**
      * Set 未处理的漏洞数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UndoVulCount 未处理的漏洞数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUndoVulCount(Long UndoVulCount) {
         this.UndoVulCount = UndoVulCount;
     }
 
     /**
-     * Get 未处理的主机数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 未处理的主机数 
      * @return UndoHostCount 未处理的主机数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getUndoHostCount() {
         return this.UndoHostCount;
@@ -86,19 +77,15 @@ public class DescribeUndoVulCountsResponse extends AbstractModel {
 
     /**
      * Set 未处理的主机数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UndoHostCount 未处理的主机数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUndoHostCount(Long UndoHostCount) {
         this.UndoHostCount = UndoHostCount;
     }
 
     /**
-     * Get 普通版主机数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 普通版主机数 
      * @return NotProfessionCount 普通版主机数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getNotProfessionCount() {
         return this.NotProfessionCount;
@@ -106,9 +93,7 @@ public class DescribeUndoVulCountsResponse extends AbstractModel {
 
     /**
      * Set 普通版主机数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NotProfessionCount 普通版主机数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNotProfessionCount(Long NotProfessionCount) {
         this.NotProfessionCount = NotProfessionCount;

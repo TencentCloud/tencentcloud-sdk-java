@@ -24,69 +24,74 @@ import java.util.HashMap;
 public class BankCard2EVerificationRequest extends AbstractModel {
 
     /**
-    * 姓名
+    * 姓名。
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 银行卡
+    * 银行卡。
     */
     @SerializedName("BankCard")
     @Expose
     private String BankCard;
 
     /**
-    * 敏感数据加密信息。对传入信息（姓名、银行卡号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+    * 敏感数据加密信息。
+- 对传入信息（姓名、银行卡号）有加密需求的用户可使用此参数，详情请点击左侧链接。
     */
     @SerializedName("Encryption")
     @Expose
     private Encryption Encryption;
 
     /**
-     * Get 姓名 
-     * @return Name 姓名
+     * Get 姓名。 
+     * @return Name 姓名。
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 姓名
-     * @param Name 姓名
+     * Set 姓名。
+     * @param Name 姓名。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 银行卡 
-     * @return BankCard 银行卡
+     * Get 银行卡。 
+     * @return BankCard 银行卡。
      */
     public String getBankCard() {
         return this.BankCard;
     }
 
     /**
-     * Set 银行卡
-     * @param BankCard 银行卡
+     * Set 银行卡。
+     * @param BankCard 银行卡。
      */
     public void setBankCard(String BankCard) {
         this.BankCard = BankCard;
     }
 
     /**
-     * Get 敏感数据加密信息。对传入信息（姓名、银行卡号）有加密需求的用户可使用此参数，详情请点击左侧链接。 
-     * @return Encryption 敏感数据加密信息。对传入信息（姓名、银行卡号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+     * Get 敏感数据加密信息。
+- 对传入信息（姓名、银行卡号）有加密需求的用户可使用此参数，详情请点击左侧链接。 
+     * @return Encryption 敏感数据加密信息。
+- 对传入信息（姓名、银行卡号）有加密需求的用户可使用此参数，详情请点击左侧链接。
      */
     public Encryption getEncryption() {
         return this.Encryption;
     }
 
     /**
-     * Set 敏感数据加密信息。对传入信息（姓名、银行卡号）有加密需求的用户可使用此参数，详情请点击左侧链接。
-     * @param Encryption 敏感数据加密信息。对传入信息（姓名、银行卡号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+     * Set 敏感数据加密信息。
+- 对传入信息（姓名、银行卡号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+     * @param Encryption 敏感数据加密信息。
+- 对传入信息（姓名、银行卡号）有加密需求的用户可使用此参数，详情请点击左侧链接。
      */
     public void setEncryption(Encryption Encryption) {
         this.Encryption = Encryption;

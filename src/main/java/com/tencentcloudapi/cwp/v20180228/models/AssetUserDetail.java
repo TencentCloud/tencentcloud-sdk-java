@@ -94,14 +94,14 @@ public class AssetUserDetail extends AbstractModel {
     private String Name;
 
     /**
-    * 账号类型：0访客用户，1标准用户，2管理员用户 ,999为空,仅windows
+    * 账号类型：0访客用户，1标准用户，2管理员用户 ,999为空,仅Windows
     */
     @SerializedName("UserType")
     @Expose
     private Long UserType;
 
     /**
-    * 是否域账号：0否， 1是, 999为空  仅windows
+    * 是否域账号：0否， 1是, 999为空  仅Windows
     */
     @SerializedName("IsDomain")
     @Expose
@@ -214,7 +214,6 @@ public class AssetUserDetail extends AbstractModel {
 
     /**
     * 用户公钥列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Keys")
     @Expose
@@ -222,7 +221,6 @@ public class AssetUserDetail extends AbstractModel {
 
     /**
     * 数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -389,32 +387,32 @@ public class AssetUserDetail extends AbstractModel {
     }
 
     /**
-     * Get 账号类型：0访客用户，1标准用户，2管理员用户 ,999为空,仅windows 
-     * @return UserType 账号类型：0访客用户，1标准用户，2管理员用户 ,999为空,仅windows
+     * Get 账号类型：0访客用户，1标准用户，2管理员用户 ,999为空,仅Windows 
+     * @return UserType 账号类型：0访客用户，1标准用户，2管理员用户 ,999为空,仅Windows
      */
     public Long getUserType() {
         return this.UserType;
     }
 
     /**
-     * Set 账号类型：0访客用户，1标准用户，2管理员用户 ,999为空,仅windows
-     * @param UserType 账号类型：0访客用户，1标准用户，2管理员用户 ,999为空,仅windows
+     * Set 账号类型：0访客用户，1标准用户，2管理员用户 ,999为空,仅Windows
+     * @param UserType 账号类型：0访客用户，1标准用户，2管理员用户 ,999为空,仅Windows
      */
     public void setUserType(Long UserType) {
         this.UserType = UserType;
     }
 
     /**
-     * Get 是否域账号：0否， 1是, 999为空  仅windows 
-     * @return IsDomain 是否域账号：0否， 1是, 999为空  仅windows
+     * Get 是否域账号：0否， 1是, 999为空  仅Windows 
+     * @return IsDomain 是否域账号：0否， 1是, 999为空  仅Windows
      */
     public Long getIsDomain() {
         return this.IsDomain;
     }
 
     /**
-     * Set 是否域账号：0否， 1是, 999为空  仅windows
-     * @param IsDomain 是否域账号：0否， 1是, 999为空  仅windows
+     * Set 是否域账号：0否， 1是, 999为空  仅Windows
+     * @param IsDomain 是否域账号：0否， 1是, 999为空  仅Windows
      */
     public void setIsDomain(Long IsDomain) {
         this.IsDomain = IsDomain;
@@ -661,10 +659,8 @@ public class AssetUserDetail extends AbstractModel {
     }
 
     /**
-     * Get 用户公钥列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户公钥列表 
      * @return Keys 用户公钥列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AssetUserKeyInfo [] getKeys() {
         return this.Keys;
@@ -672,19 +668,15 @@ public class AssetUserDetail extends AbstractModel {
 
     /**
      * Set 用户公钥列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Keys 用户公钥列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKeys(AssetUserKeyInfo [] Keys) {
         this.Keys = Keys;
     }
 
     /**
-     * Get 数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据更新时间 
      * @return UpdateTime 数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdateTime() {
         return this.UpdateTime;
@@ -692,9 +684,7 @@ public class AssetUserDetail extends AbstractModel {
 
     /**
      * Set 数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdateTime 数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;

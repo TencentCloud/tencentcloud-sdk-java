@@ -68,6 +68,30 @@ public class Component extends AbstractModel {
     private String LicenseExpression;
 
     /**
+    * 第三方组件的版本信息(如果匹配到版本)
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VersionInfo")
+    @Expose
+    private ComponentVersionInfo VersionInfo;
+
+    /**
+    * 第三方组件的最后更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LastUpdateTime")
+    @Expose
+    private String LastUpdateTime;
+
+    /**
+    * 第三方组件的类型标签
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TagList")
+    @Expose
+    private String [] TagList;
+
+    /**
      * Get 第三方组件的PURL 
      * @return PURL 第三方组件的PURL
      */
@@ -171,6 +195,66 @@ public class Component extends AbstractModel {
         this.LicenseExpression = LicenseExpression;
     }
 
+    /**
+     * Get 第三方组件的版本信息(如果匹配到版本)
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VersionInfo 第三方组件的版本信息(如果匹配到版本)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ComponentVersionInfo getVersionInfo() {
+        return this.VersionInfo;
+    }
+
+    /**
+     * Set 第三方组件的版本信息(如果匹配到版本)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VersionInfo 第三方组件的版本信息(如果匹配到版本)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVersionInfo(ComponentVersionInfo VersionInfo) {
+        this.VersionInfo = VersionInfo;
+    }
+
+    /**
+     * Get 第三方组件的最后更新时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LastUpdateTime 第三方组件的最后更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLastUpdateTime() {
+        return this.LastUpdateTime;
+    }
+
+    /**
+     * Set 第三方组件的最后更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LastUpdateTime 第三方组件的最后更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLastUpdateTime(String LastUpdateTime) {
+        this.LastUpdateTime = LastUpdateTime;
+    }
+
+    /**
+     * Get 第三方组件的类型标签
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TagList 第三方组件的类型标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getTagList() {
+        return this.TagList;
+    }
+
+    /**
+     * Set 第三方组件的类型标签
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TagList 第三方组件的类型标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTagList(String [] TagList) {
+        this.TagList = TagList;
+    }
+
     public Component() {
     }
 
@@ -203,6 +287,18 @@ public class Component extends AbstractModel {
         if (source.LicenseExpression != null) {
             this.LicenseExpression = new String(source.LicenseExpression);
         }
+        if (source.VersionInfo != null) {
+            this.VersionInfo = new ComponentVersionInfo(source.VersionInfo);
+        }
+        if (source.LastUpdateTime != null) {
+            this.LastUpdateTime = new String(source.LastUpdateTime);
+        }
+        if (source.TagList != null) {
+            this.TagList = new String[source.TagList.length];
+            for (int i = 0; i < source.TagList.length; i++) {
+                this.TagList[i] = new String(source.TagList[i]);
+            }
+        }
     }
 
 
@@ -216,6 +312,9 @@ public class Component extends AbstractModel {
         this.setParamArraySimple(map, prefix + "NicknameList.", this.NicknameList);
         this.setParamArraySimple(map, prefix + "CodeLocationList.", this.CodeLocationList);
         this.setParamSimple(map, prefix + "LicenseExpression", this.LicenseExpression);
+        this.setParamObj(map, prefix + "VersionInfo.", this.VersionInfo);
+        this.setParamSimple(map, prefix + "LastUpdateTime", this.LastUpdateTime);
+        this.setParamArraySimple(map, prefix + "TagList.", this.TagList);
 
     }
 }

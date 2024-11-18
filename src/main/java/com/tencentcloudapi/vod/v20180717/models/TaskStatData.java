@@ -38,6 +38,7 @@ public class TaskStatData extends AbstractModel {
 <li> RebuildMedia: 音画质重生</li>
 <li> QualityInspect: 音画质检测</li>
 <li>Transcode: 转码，包含普通转码、极速高清和视频编辑（不推荐使用）</li>
+<li>VoiceTranslation: 语音翻译</li>
     */
     @SerializedName("TaskType")
     @Expose
@@ -123,7 +124,8 @@ public class TaskStatData extends AbstractModel {
 <li> AddTraceWatermark: 添加水印</li>
 <li> RebuildMedia: 音画质重生</li>
 <li> QualityInspect: 音画质检测</li>
-<li>Transcode: 转码，包含普通转码、极速高清和视频编辑（不推荐使用）</li> 
+<li>Transcode: 转码，包含普通转码、极速高清和视频编辑（不推荐使用）</li>
+<li>VoiceTranslation: 语音翻译</li> 
      * @return TaskType 任务类型。
 <li> Transcoding: 普通转码</li>
 <li> Transcoding-TESHD: 极速高清转码</li>
@@ -138,6 +140,7 @@ public class TaskStatData extends AbstractModel {
 <li> RebuildMedia: 音画质重生</li>
 <li> QualityInspect: 音画质检测</li>
 <li>Transcode: 转码，包含普通转码、极速高清和视频编辑（不推荐使用）</li>
+<li>VoiceTranslation: 语音翻译</li>
      */
     public String getTaskType() {
         return this.TaskType;
@@ -158,6 +161,7 @@ public class TaskStatData extends AbstractModel {
 <li> RebuildMedia: 音画质重生</li>
 <li> QualityInspect: 音画质检测</li>
 <li>Transcode: 转码，包含普通转码、极速高清和视频编辑（不推荐使用）</li>
+<li>VoiceTranslation: 语音翻译</li>
      * @param TaskType 任务类型。
 <li> Transcoding: 普通转码</li>
 <li> Transcoding-TESHD: 极速高清转码</li>
@@ -172,6 +176,7 @@ public class TaskStatData extends AbstractModel {
 <li> RebuildMedia: 音画质重生</li>
 <li> QualityInspect: 音画质检测</li>
 <li>Transcode: 转码，包含普通转码、极速高清和视频编辑（不推荐使用）</li>
+<li>VoiceTranslation: 语音翻译</li>
      */
     public void setTaskType(String TaskType) {
         this.TaskType = TaskType;

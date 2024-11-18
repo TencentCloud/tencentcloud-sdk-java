@@ -38,7 +38,7 @@ public class ScreenMachine extends AbstractModel {
     private String MachineOs;
 
     /**
-    * 云镜客户端唯一Uuid，若客户端长时间不在线将返回空字符。
+    * 主机安全Uuid，若客户端长时间不在线将返回空字符。
     */
     @SerializedName("Uuid")
     @Expose
@@ -171,7 +171,6 @@ public class ScreenMachine extends AbstractModel {
 
     /**
     * 附加信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MachineExtraInfo")
     @Expose
@@ -210,16 +209,16 @@ public class ScreenMachine extends AbstractModel {
     }
 
     /**
-     * Get 云镜客户端唯一Uuid，若客户端长时间不在线将返回空字符。 
-     * @return Uuid 云镜客户端唯一Uuid，若客户端长时间不在线将返回空字符。
+     * Get 主机安全Uuid，若客户端长时间不在线将返回空字符。 
+     * @return Uuid 主机安全Uuid，若客户端长时间不在线将返回空字符。
      */
     public String getUuid() {
         return this.Uuid;
     }
 
     /**
-     * Set 云镜客户端唯一Uuid，若客户端长时间不在线将返回空字符。
-     * @param Uuid 云镜客户端唯一Uuid，若客户端长时间不在线将返回空字符。
+     * Set 主机安全Uuid，若客户端长时间不在线将返回空字符。
+     * @param Uuid 主机安全Uuid，若客户端长时间不在线将返回空字符。
      */
     public void setUuid(String Uuid) {
         this.Uuid = Uuid;
@@ -522,10 +521,8 @@ public class ScreenMachine extends AbstractModel {
     }
 
     /**
-     * Get 附加信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 附加信息 
      * @return MachineExtraInfo 附加信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public MachineExtraInfo getMachineExtraInfo() {
         return this.MachineExtraInfo;
@@ -533,9 +530,7 @@ public class ScreenMachine extends AbstractModel {
 
     /**
      * Set 附加信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MachineExtraInfo 附加信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMachineExtraInfo(MachineExtraInfo MachineExtraInfo) {
         this.MachineExtraInfo = MachineExtraInfo;

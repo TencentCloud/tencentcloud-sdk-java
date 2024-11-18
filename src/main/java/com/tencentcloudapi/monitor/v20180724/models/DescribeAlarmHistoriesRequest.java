@@ -167,6 +167,13 @@ public class DescribeAlarmHistoriesRequest extends AbstractModel {
     private String [] ConvergenceHistoryIDs;
 
     /**
+    * 告警类型
+    */
+    @SerializedName("AlarmTypes")
+    @Expose
+    private String [] AlarmTypes;
+
+    /**
      * Get 固定值，为"monitor" 
      * @return Module 固定值，为"monitor"
      */
@@ -498,6 +505,22 @@ public class DescribeAlarmHistoriesRequest extends AbstractModel {
         this.ConvergenceHistoryIDs = ConvergenceHistoryIDs;
     }
 
+    /**
+     * Get 告警类型 
+     * @return AlarmTypes 告警类型
+     */
+    public String [] getAlarmTypes() {
+        return this.AlarmTypes;
+    }
+
+    /**
+     * Set 告警类型
+     * @param AlarmTypes 告警类型
+     */
+    public void setAlarmTypes(String [] AlarmTypes) {
+        this.AlarmTypes = AlarmTypes;
+    }
+
     public DescribeAlarmHistoriesRequest() {
     }
 
@@ -599,6 +622,12 @@ public class DescribeAlarmHistoriesRequest extends AbstractModel {
                 this.ConvergenceHistoryIDs[i] = new String(source.ConvergenceHistoryIDs[i]);
             }
         }
+        if (source.AlarmTypes != null) {
+            this.AlarmTypes = new String[source.AlarmTypes.length];
+            for (int i = 0; i < source.AlarmTypes.length; i++) {
+                this.AlarmTypes[i] = new String(source.AlarmTypes[i]);
+            }
+        }
     }
 
 
@@ -626,6 +655,7 @@ public class DescribeAlarmHistoriesRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "PolicyIds.", this.PolicyIds);
         this.setParamArraySimple(map, prefix + "AlarmLevels.", this.AlarmLevels);
         this.setParamArraySimple(map, prefix + "ConvergenceHistoryIDs.", this.ConvergenceHistoryIDs);
+        this.setParamArraySimple(map, prefix + "AlarmTypes.", this.AlarmTypes);
 
     }
 }

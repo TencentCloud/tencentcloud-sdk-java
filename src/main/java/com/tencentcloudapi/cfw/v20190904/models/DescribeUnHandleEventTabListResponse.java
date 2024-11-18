@@ -25,7 +25,6 @@ public class DescribeUnHandleEventTabListResponse extends AbstractModel {
 
     /**
     * 租户伪攻击链未处置事件
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
     @Expose
@@ -53,10 +52,8 @@ public class DescribeUnHandleEventTabListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 租户伪攻击链未处置事件
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 租户伪攻击链未处置事件 
      * @return Data 租户伪攻击链未处置事件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public UnHandleEvent getData() {
         return this.Data;
@@ -64,9 +61,7 @@ public class DescribeUnHandleEventTabListResponse extends AbstractModel {
 
     /**
      * Set 租户伪攻击链未处置事件
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Data 租户伪攻击链未处置事件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(UnHandleEvent Data) {
         this.Data = Data;

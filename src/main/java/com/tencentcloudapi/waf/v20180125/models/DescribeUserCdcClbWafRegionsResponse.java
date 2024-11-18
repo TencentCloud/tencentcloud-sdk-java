@@ -25,7 +25,6 @@ public class DescribeUserCdcClbWafRegionsResponse extends AbstractModel {
 
     /**
     * CdcRegion的类型描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeUserCdcClbWafRegionsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get CdcRegion的类型描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get CdcRegion的类型描述 
      * @return Data CdcRegion的类型描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CdcRegion [] getData() {
         return this.Data;
@@ -50,9 +47,7 @@ public class DescribeUserCdcClbWafRegionsResponse extends AbstractModel {
 
     /**
      * Set CdcRegion的类型描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Data CdcRegion的类型描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(CdcRegion [] Data) {
         this.Data = Data;

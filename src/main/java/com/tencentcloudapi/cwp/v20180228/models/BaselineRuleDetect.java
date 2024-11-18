@@ -81,7 +81,6 @@ public class BaselineRuleDetect extends AbstractModel {
 
     /**
     * ItemID集合
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ItemIds")
     @Expose
@@ -216,10 +215,8 @@ public class BaselineRuleDetect extends AbstractModel {
     }
 
     /**
-     * Get ItemID集合
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get ItemID集合 
      * @return ItemIds ItemID集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long [] getItemIds() {
         return this.ItemIds;
@@ -227,9 +224,7 @@ public class BaselineRuleDetect extends AbstractModel {
 
     /**
      * Set ItemID集合
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ItemIds ItemID集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setItemIds(Long [] ItemIds) {
         this.ItemIds = ItemIds;

@@ -45,7 +45,7 @@ public class DescribeFindDomainListRequest extends AbstractModel {
     private String Key;
 
     /**
-    * 是否接入waf
+    * 是否接入waf；传"1"返回接入域名的详情，传"0"返回未接入域名的详情，传""返回接入和未接入域名的详情
     */
     @SerializedName("IsWafDomain")
     @Expose
@@ -114,16 +114,16 @@ public class DescribeFindDomainListRequest extends AbstractModel {
     }
 
     /**
-     * Get 是否接入waf 
-     * @return IsWafDomain 是否接入waf
+     * Get 是否接入waf；传"1"返回接入域名的详情，传"0"返回未接入域名的详情，传""返回接入和未接入域名的详情 
+     * @return IsWafDomain 是否接入waf；传"1"返回接入域名的详情，传"0"返回未接入域名的详情，传""返回接入和未接入域名的详情
      */
     public String getIsWafDomain() {
         return this.IsWafDomain;
     }
 
     /**
-     * Set 是否接入waf
-     * @param IsWafDomain 是否接入waf
+     * Set 是否接入waf；传"1"返回接入域名的详情，传"0"返回未接入域名的详情，传""返回接入和未接入域名的详情
+     * @param IsWafDomain 是否接入waf；传"1"返回接入域名的详情，传"0"返回未接入域名的详情，传""返回接入和未接入域名的详情
      */
     public void setIsWafDomain(String IsWafDomain) {
         this.IsWafDomain = IsWafDomain;

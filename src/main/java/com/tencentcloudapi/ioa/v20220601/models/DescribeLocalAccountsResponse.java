@@ -25,7 +25,6 @@ public class DescribeLocalAccountsResponse extends AbstractModel {
 
     /**
     * 获取账号列表响应的分页对象
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeLocalAccountsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 获取账号列表响应的分页对象
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 获取账号列表响应的分页对象 
      * @return Data 获取账号列表响应的分页对象
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DescribeLocalAccountsPage getData() {
         return this.Data;
@@ -50,9 +47,7 @@ public class DescribeLocalAccountsResponse extends AbstractModel {
 
     /**
      * Set 获取账号列表响应的分页对象
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Data 获取账号列表响应的分页对象
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(DescribeLocalAccountsPage Data) {
         this.Data = Data;

@@ -100,6 +100,28 @@ public class SecLogJoinObjectInfo extends AbstractModel {
     private String ClusterMainAddress;
 
     /**
+    * 容器数
+    */
+    @SerializedName("ContainerCnt")
+    @Expose
+    private Long ContainerCnt;
+
+    /**
+    * 集群类型
+    */
+    @SerializedName("ClusterType")
+    @Expose
+    private String ClusterType;
+
+    /**
+    * 集群状态
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ClusterStatus")
+    @Expose
+    private String ClusterStatus;
+
+    /**
      * Get 主机ID 
      * @return HostID 主机ID
      */
@@ -283,6 +305,58 @@ public class SecLogJoinObjectInfo extends AbstractModel {
         this.ClusterMainAddress = ClusterMainAddress;
     }
 
+    /**
+     * Get 容器数 
+     * @return ContainerCnt 容器数
+     */
+    public Long getContainerCnt() {
+        return this.ContainerCnt;
+    }
+
+    /**
+     * Set 容器数
+     * @param ContainerCnt 容器数
+     */
+    public void setContainerCnt(Long ContainerCnt) {
+        this.ContainerCnt = ContainerCnt;
+    }
+
+    /**
+     * Get 集群类型 
+     * @return ClusterType 集群类型
+     */
+    public String getClusterType() {
+        return this.ClusterType;
+    }
+
+    /**
+     * Set 集群类型
+     * @param ClusterType 集群类型
+     */
+    public void setClusterType(String ClusterType) {
+        this.ClusterType = ClusterType;
+    }
+
+    /**
+     * Get 集群状态
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ClusterStatus 集群状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getClusterStatus() {
+        return this.ClusterStatus;
+    }
+
+    /**
+     * Set 集群状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ClusterStatus 集群状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setClusterStatus(String ClusterStatus) {
+        this.ClusterStatus = ClusterStatus;
+    }
+
     public SecLogJoinObjectInfo() {
     }
 
@@ -321,6 +395,15 @@ public class SecLogJoinObjectInfo extends AbstractModel {
         if (source.ClusterMainAddress != null) {
             this.ClusterMainAddress = new String(source.ClusterMainAddress);
         }
+        if (source.ContainerCnt != null) {
+            this.ContainerCnt = new Long(source.ContainerCnt);
+        }
+        if (source.ClusterType != null) {
+            this.ClusterType = new String(source.ClusterType);
+        }
+        if (source.ClusterStatus != null) {
+            this.ClusterStatus = new String(source.ClusterStatus);
+        }
     }
 
 
@@ -338,6 +421,9 @@ public class SecLogJoinObjectInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "JoinState", this.JoinState);
         this.setParamSimple(map, prefix + "ClusterVersion", this.ClusterVersion);
         this.setParamSimple(map, prefix + "ClusterMainAddress", this.ClusterMainAddress);
+        this.setParamSimple(map, prefix + "ContainerCnt", this.ContainerCnt);
+        this.setParamSimple(map, prefix + "ClusterType", this.ClusterType);
+        this.setParamSimple(map, prefix + "ClusterStatus", this.ClusterStatus);
 
     }
 }

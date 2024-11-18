@@ -28,7 +28,6 @@ public class CloudStorage extends AbstractModel {
 0：腾讯云对象存储 COS
 1：AWS
 【注意】目前第三方云存储仅支持AWS，更多第三方云存储陆续支持中
-示例值：0
     */
     @SerializedName("Vendor")
     @Expose
@@ -39,7 +38,6 @@ public class CloudStorage extends AbstractModel {
 示例值：cn-shanghai-1
 
 AWS S3[地域信息]（https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-regions）
-示例值：ap-southeast-3	
     */
     @SerializedName("Region")
     @Expose
@@ -55,7 +53,6 @@ AWS S3[地域信息]（https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using
     /**
     * 云存储的access_key账号信息。
 若存储至腾讯云对象存储COS，请前往https://console.cloud.tencent.com/cam/capi 查看或创建，对应链接中密钥字段的SecretId值。
-示例值：test-accesskey
     */
     @SerializedName("AccessKey")
     @Expose
@@ -64,7 +61,6 @@ AWS S3[地域信息]（https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using
     /**
     * 云存储的secret_key账号信息。
 若存储至腾讯云对象存储COS，请前往https://console.cloud.tencent.com/cam/capi 查看或创建，对应链接中密钥字段的SecretKey值。
-示例值：test-secretkey
     */
     @SerializedName("SecretKey")
     @Expose
@@ -72,7 +68,6 @@ AWS S3[地域信息]（https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using
 
     /**
     * 云存储bucket 的指定位置，由字符串数组组成。合法的字符串范围az,AZ,0~9,'_'和'-'，举个例子，录制文件xxx.m3u8在 ["prefix1", "prefix2"]作用下，会变成prefix1/prefix2/TaskId/xxx.m3u8。
-示例值：["prefix1", "prefix2"]
     */
     @SerializedName("FileNamePrefix")
     @Expose
@@ -82,13 +77,11 @@ AWS S3[地域信息]（https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using
      * Get 腾讯云对象存储COS以及第三方云存储账号信息
 0：腾讯云对象存储 COS
 1：AWS
-【注意】目前第三方云存储仅支持AWS，更多第三方云存储陆续支持中
-示例值：0 
+【注意】目前第三方云存储仅支持AWS，更多第三方云存储陆续支持中 
      * @return Vendor 腾讯云对象存储COS以及第三方云存储账号信息
 0：腾讯云对象存储 COS
 1：AWS
 【注意】目前第三方云存储仅支持AWS，更多第三方云存储陆续支持中
-示例值：0
      */
     public Long getVendor() {
         return this.Vendor;
@@ -99,12 +92,10 @@ AWS S3[地域信息]（https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using
 0：腾讯云对象存储 COS
 1：AWS
 【注意】目前第三方云存储仅支持AWS，更多第三方云存储陆续支持中
-示例值：0
      * @param Vendor 腾讯云对象存储COS以及第三方云存储账号信息
 0：腾讯云对象存储 COS
 1：AWS
 【注意】目前第三方云存储仅支持AWS，更多第三方云存储陆续支持中
-示例值：0
      */
     public void setVendor(Long Vendor) {
         this.Vendor = Vendor;
@@ -114,13 +105,11 @@ AWS S3[地域信息]（https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using
      * Get 腾讯云对象存储的[地域信息]（https://cloud.tencent.com/document/product/436/6224#.E5.9C.B0.E5.9F.9F）。
 示例值：cn-shanghai-1
 
-AWS S3[地域信息]（https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-regions）
-示例值：ap-southeast-3	 
+AWS S3[地域信息]（https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-regions） 
      * @return Region 腾讯云对象存储的[地域信息]（https://cloud.tencent.com/document/product/436/6224#.E5.9C.B0.E5.9F.9F）。
 示例值：cn-shanghai-1
 
 AWS S3[地域信息]（https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-regions）
-示例值：ap-southeast-3	
      */
     public String getRegion() {
         return this.Region;
@@ -131,12 +120,10 @@ AWS S3[地域信息]（https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using
 示例值：cn-shanghai-1
 
 AWS S3[地域信息]（https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-regions）
-示例值：ap-southeast-3	
      * @param Region 腾讯云对象存储的[地域信息]（https://cloud.tencent.com/document/product/436/6224#.E5.9C.B0.E5.9F.9F）。
 示例值：cn-shanghai-1
 
 AWS S3[地域信息]（https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-regions）
-示例值：ap-southeast-3	
      */
     public void setRegion(String Region) {
         this.Region = Region;
@@ -160,11 +147,9 @@ AWS S3[地域信息]（https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using
 
     /**
      * Get 云存储的access_key账号信息。
-若存储至腾讯云对象存储COS，请前往https://console.cloud.tencent.com/cam/capi 查看或创建，对应链接中密钥字段的SecretId值。
-示例值：test-accesskey 
+若存储至腾讯云对象存储COS，请前往https://console.cloud.tencent.com/cam/capi 查看或创建，对应链接中密钥字段的SecretId值。 
      * @return AccessKey 云存储的access_key账号信息。
 若存储至腾讯云对象存储COS，请前往https://console.cloud.tencent.com/cam/capi 查看或创建，对应链接中密钥字段的SecretId值。
-示例值：test-accesskey
      */
     public String getAccessKey() {
         return this.AccessKey;
@@ -173,10 +158,8 @@ AWS S3[地域信息]（https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using
     /**
      * Set 云存储的access_key账号信息。
 若存储至腾讯云对象存储COS，请前往https://console.cloud.tencent.com/cam/capi 查看或创建，对应链接中密钥字段的SecretId值。
-示例值：test-accesskey
      * @param AccessKey 云存储的access_key账号信息。
 若存储至腾讯云对象存储COS，请前往https://console.cloud.tencent.com/cam/capi 查看或创建，对应链接中密钥字段的SecretId值。
-示例值：test-accesskey
      */
     public void setAccessKey(String AccessKey) {
         this.AccessKey = AccessKey;
@@ -184,11 +167,9 @@ AWS S3[地域信息]（https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using
 
     /**
      * Get 云存储的secret_key账号信息。
-若存储至腾讯云对象存储COS，请前往https://console.cloud.tencent.com/cam/capi 查看或创建，对应链接中密钥字段的SecretKey值。
-示例值：test-secretkey 
+若存储至腾讯云对象存储COS，请前往https://console.cloud.tencent.com/cam/capi 查看或创建，对应链接中密钥字段的SecretKey值。 
      * @return SecretKey 云存储的secret_key账号信息。
 若存储至腾讯云对象存储COS，请前往https://console.cloud.tencent.com/cam/capi 查看或创建，对应链接中密钥字段的SecretKey值。
-示例值：test-secretkey
      */
     public String getSecretKey() {
         return this.SecretKey;
@@ -197,20 +178,16 @@ AWS S3[地域信息]（https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using
     /**
      * Set 云存储的secret_key账号信息。
 若存储至腾讯云对象存储COS，请前往https://console.cloud.tencent.com/cam/capi 查看或创建，对应链接中密钥字段的SecretKey值。
-示例值：test-secretkey
      * @param SecretKey 云存储的secret_key账号信息。
 若存储至腾讯云对象存储COS，请前往https://console.cloud.tencent.com/cam/capi 查看或创建，对应链接中密钥字段的SecretKey值。
-示例值：test-secretkey
      */
     public void setSecretKey(String SecretKey) {
         this.SecretKey = SecretKey;
     }
 
     /**
-     * Get 云存储bucket 的指定位置，由字符串数组组成。合法的字符串范围az,AZ,0~9,'_'和'-'，举个例子，录制文件xxx.m3u8在 ["prefix1", "prefix2"]作用下，会变成prefix1/prefix2/TaskId/xxx.m3u8。
-示例值：["prefix1", "prefix2"] 
+     * Get 云存储bucket 的指定位置，由字符串数组组成。合法的字符串范围az,AZ,0~9,'_'和'-'，举个例子，录制文件xxx.m3u8在 ["prefix1", "prefix2"]作用下，会变成prefix1/prefix2/TaskId/xxx.m3u8。 
      * @return FileNamePrefix 云存储bucket 的指定位置，由字符串数组组成。合法的字符串范围az,AZ,0~9,'_'和'-'，举个例子，录制文件xxx.m3u8在 ["prefix1", "prefix2"]作用下，会变成prefix1/prefix2/TaskId/xxx.m3u8。
-示例值：["prefix1", "prefix2"]
      */
     public String [] getFileNamePrefix() {
         return this.FileNamePrefix;
@@ -218,9 +195,7 @@ AWS S3[地域信息]（https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using
 
     /**
      * Set 云存储bucket 的指定位置，由字符串数组组成。合法的字符串范围az,AZ,0~9,'_'和'-'，举个例子，录制文件xxx.m3u8在 ["prefix1", "prefix2"]作用下，会变成prefix1/prefix2/TaskId/xxx.m3u8。
-示例值：["prefix1", "prefix2"]
      * @param FileNamePrefix 云存储bucket 的指定位置，由字符串数组组成。合法的字符串范围az,AZ,0~9,'_'和'-'，举个例子，录制文件xxx.m3u8在 ["prefix1", "prefix2"]作用下，会变成prefix1/prefix2/TaskId/xxx.m3u8。
-示例值：["prefix1", "prefix2"]
      */
     public void setFileNamePrefix(String [] FileNamePrefix) {
         this.FileNamePrefix = FileNamePrefix;

@@ -31,7 +31,7 @@ public class BashEventsInfo extends AbstractModel {
     private Long Id;
 
     /**
-    * 云镜ID
+    * 主机uuid
     */
     @SerializedName("Uuid")
     @Expose
@@ -109,7 +109,6 @@ public class BashEventsInfo extends AbstractModel {
 
     /**
     * 进程名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Exe")
     @Expose
@@ -117,7 +116,6 @@ public class BashEventsInfo extends AbstractModel {
 
     /**
     * 处理时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ModifyTime")
     @Expose
@@ -125,7 +123,6 @@ public class BashEventsInfo extends AbstractModel {
 
     /**
     * 规则类别  0=系统规则，1=用户规则
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleCategory")
     @Expose
@@ -133,7 +130,6 @@ public class BashEventsInfo extends AbstractModel {
 
     /**
     * 自动生成的正则表达式
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RegexBashCmd")
     @Expose
@@ -141,7 +137,6 @@ public class BashEventsInfo extends AbstractModel {
 
     /**
     * 进程树 json  pid:进程id，exe:文件路径 ，account:进程所属用组和用户 ,cmdline:执行命令，ssh_service: SSH服务ip, ssh_soure:登录源
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PsTree")
     @Expose
@@ -149,7 +144,6 @@ public class BashEventsInfo extends AbstractModel {
 
     /**
     * 建议方案
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SuggestScheme")
     @Expose
@@ -157,7 +151,6 @@ public class BashEventsInfo extends AbstractModel {
 
     /**
     * 描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HarmDescribe")
     @Expose
@@ -165,7 +158,6 @@ public class BashEventsInfo extends AbstractModel {
 
     /**
     * 标签
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tags")
     @Expose
@@ -173,7 +165,6 @@ public class BashEventsInfo extends AbstractModel {
 
     /**
     * 参考链接
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("References")
     @Expose
@@ -181,7 +172,6 @@ public class BashEventsInfo extends AbstractModel {
 
     /**
     * 主机外网ip
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MachineWanIp")
     @Expose
@@ -189,7 +179,6 @@ public class BashEventsInfo extends AbstractModel {
 
     /**
     * 主机在线状态 OFFLINE  ONLINE
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MachineStatus")
     @Expose
@@ -197,7 +186,6 @@ public class BashEventsInfo extends AbstractModel {
 
     /**
     * 登录用户
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("User")
     @Expose
@@ -205,7 +193,6 @@ public class BashEventsInfo extends AbstractModel {
 
     /**
     * 进程号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Pid")
     @Expose
@@ -213,7 +200,6 @@ public class BashEventsInfo extends AbstractModel {
 
     /**
     * 数据来源
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DetectBy")
     @Expose
@@ -236,16 +222,16 @@ public class BashEventsInfo extends AbstractModel {
     }
 
     /**
-     * Get 云镜ID 
-     * @return Uuid 云镜ID
+     * Get 主机uuid 
+     * @return Uuid 主机uuid
      */
     public String getUuid() {
         return this.Uuid;
     }
 
     /**
-     * Set 云镜ID
-     * @param Uuid 云镜ID
+     * Set 主机uuid
+     * @param Uuid 主机uuid
      */
     public void setUuid(String Uuid) {
         this.Uuid = Uuid;
@@ -412,10 +398,8 @@ public class BashEventsInfo extends AbstractModel {
     }
 
     /**
-     * Get 进程名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 进程名称 
      * @return Exe 进程名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExe() {
         return this.Exe;
@@ -423,19 +407,15 @@ public class BashEventsInfo extends AbstractModel {
 
     /**
      * Set 进程名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Exe 进程名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExe(String Exe) {
         this.Exe = Exe;
     }
 
     /**
-     * Get 处理时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 处理时间 
      * @return ModifyTime 处理时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getModifyTime() {
         return this.ModifyTime;
@@ -443,19 +423,15 @@ public class BashEventsInfo extends AbstractModel {
 
     /**
      * Set 处理时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ModifyTime 处理时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModifyTime(String ModifyTime) {
         this.ModifyTime = ModifyTime;
     }
 
     /**
-     * Get 规则类别  0=系统规则，1=用户规则
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则类别  0=系统规则，1=用户规则 
      * @return RuleCategory 规则类别  0=系统规则，1=用户规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRuleCategory() {
         return this.RuleCategory;
@@ -463,19 +439,15 @@ public class BashEventsInfo extends AbstractModel {
 
     /**
      * Set 规则类别  0=系统规则，1=用户规则
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RuleCategory 规则类别  0=系统规则，1=用户规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleCategory(Long RuleCategory) {
         this.RuleCategory = RuleCategory;
     }
 
     /**
-     * Get 自动生成的正则表达式
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 自动生成的正则表达式 
      * @return RegexBashCmd 自动生成的正则表达式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegexBashCmd() {
         return this.RegexBashCmd;
@@ -483,19 +455,15 @@ public class BashEventsInfo extends AbstractModel {
 
     /**
      * Set 自动生成的正则表达式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RegexBashCmd 自动生成的正则表达式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegexBashCmd(String RegexBashCmd) {
         this.RegexBashCmd = RegexBashCmd;
     }
 
     /**
-     * Get 进程树 json  pid:进程id，exe:文件路径 ，account:进程所属用组和用户 ,cmdline:执行命令，ssh_service: SSH服务ip, ssh_soure:登录源
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 进程树 json  pid:进程id，exe:文件路径 ，account:进程所属用组和用户 ,cmdline:执行命令，ssh_service: SSH服务ip, ssh_soure:登录源 
      * @return PsTree 进程树 json  pid:进程id，exe:文件路径 ，account:进程所属用组和用户 ,cmdline:执行命令，ssh_service: SSH服务ip, ssh_soure:登录源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPsTree() {
         return this.PsTree;
@@ -503,19 +471,15 @@ public class BashEventsInfo extends AbstractModel {
 
     /**
      * Set 进程树 json  pid:进程id，exe:文件路径 ，account:进程所属用组和用户 ,cmdline:执行命令，ssh_service: SSH服务ip, ssh_soure:登录源
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PsTree 进程树 json  pid:进程id，exe:文件路径 ，account:进程所属用组和用户 ,cmdline:执行命令，ssh_service: SSH服务ip, ssh_soure:登录源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPsTree(String PsTree) {
         this.PsTree = PsTree;
     }
 
     /**
-     * Get 建议方案
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 建议方案 
      * @return SuggestScheme 建议方案
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSuggestScheme() {
         return this.SuggestScheme;
@@ -523,19 +487,15 @@ public class BashEventsInfo extends AbstractModel {
 
     /**
      * Set 建议方案
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SuggestScheme 建议方案
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSuggestScheme(String SuggestScheme) {
         this.SuggestScheme = SuggestScheme;
     }
 
     /**
-     * Get 描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 描述 
      * @return HarmDescribe 描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHarmDescribe() {
         return this.HarmDescribe;
@@ -543,19 +503,15 @@ public class BashEventsInfo extends AbstractModel {
 
     /**
      * Set 描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HarmDescribe 描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHarmDescribe(String HarmDescribe) {
         this.HarmDescribe = HarmDescribe;
     }
 
     /**
-     * Get 标签
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标签 
      * @return Tags 标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getTags() {
         return this.Tags;
@@ -563,19 +519,15 @@ public class BashEventsInfo extends AbstractModel {
 
     /**
      * Set 标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tags 标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTags(String [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 参考链接
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 参考链接 
      * @return References 参考链接
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getReferences() {
         return this.References;
@@ -583,19 +535,15 @@ public class BashEventsInfo extends AbstractModel {
 
     /**
      * Set 参考链接
-注意：此字段可能返回 null，表示取不到有效值。
      * @param References 参考链接
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReferences(String [] References) {
         this.References = References;
     }
 
     /**
-     * Get 主机外网ip
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主机外网ip 
      * @return MachineWanIp 主机外网ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMachineWanIp() {
         return this.MachineWanIp;
@@ -603,19 +551,15 @@ public class BashEventsInfo extends AbstractModel {
 
     /**
      * Set 主机外网ip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MachineWanIp 主机外网ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMachineWanIp(String MachineWanIp) {
         this.MachineWanIp = MachineWanIp;
     }
 
     /**
-     * Get 主机在线状态 OFFLINE  ONLINE
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主机在线状态 OFFLINE  ONLINE 
      * @return MachineStatus 主机在线状态 OFFLINE  ONLINE
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMachineStatus() {
         return this.MachineStatus;
@@ -623,19 +567,15 @@ public class BashEventsInfo extends AbstractModel {
 
     /**
      * Set 主机在线状态 OFFLINE  ONLINE
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MachineStatus 主机在线状态 OFFLINE  ONLINE
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMachineStatus(String MachineStatus) {
         this.MachineStatus = MachineStatus;
     }
 
     /**
-     * Get 登录用户
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 登录用户 
      * @return User 登录用户
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUser() {
         return this.User;
@@ -643,19 +583,15 @@ public class BashEventsInfo extends AbstractModel {
 
     /**
      * Set 登录用户
-注意：此字段可能返回 null，表示取不到有效值。
      * @param User 登录用户
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUser(String User) {
         this.User = User;
     }
 
     /**
-     * Get 进程号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 进程号 
      * @return Pid 进程号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPid() {
         return this.Pid;
@@ -663,19 +599,15 @@ public class BashEventsInfo extends AbstractModel {
 
     /**
      * Set 进程号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Pid 进程号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPid(String Pid) {
         this.Pid = Pid;
     }
 
     /**
-     * Get 数据来源
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据来源 
      * @return DetectBy 数据来源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDetectBy() {
         return this.DetectBy;
@@ -683,9 +615,7 @@ public class BashEventsInfo extends AbstractModel {
 
     /**
      * Set 数据来源
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DetectBy 数据来源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDetectBy(String DetectBy) {
         this.DetectBy = DetectBy;

@@ -25,7 +25,6 @@ public class DescribeBatchIpAccessControlResponse extends AbstractModel {
 
     /**
     * 输出
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeBatchIpAccessControlResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 输出
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 输出 
      * @return Data 输出
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BatchIpAccessControlData getData() {
         return this.Data;
@@ -50,9 +47,7 @@ public class DescribeBatchIpAccessControlResponse extends AbstractModel {
 
     /**
      * Set 输出
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Data 输出
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(BatchIpAccessControlData Data) {
         this.Data = Data;

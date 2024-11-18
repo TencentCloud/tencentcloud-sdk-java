@@ -24,14 +24,21 @@ import java.util.HashMap;
 public class DescribeHTTPListenersRequest extends AbstractModel {
 
     /**
-    * 通道ID
+    * 通道ID。ListenerId、ProxyId、GroupId须至少填写一个，且ProxyId与GroupId至多只能填写其中一个。
     */
     @SerializedName("ProxyId")
     @Expose
     private String ProxyId;
 
     /**
-    * 过滤条件，按照监听器ID进行精确查询
+    * 通道组ID。ListenerId、ProxyId、GroupId须至少填写一个，且ProxyId与GroupId至多只能填写其中一个。
+    */
+    @SerializedName("GroupId")
+    @Expose
+    private String GroupId;
+
+    /**
+    * 过滤条件，按照监听器ID进行精确查询。ListenerId、ProxyId、GroupId须至少填写一个，且ProxyId与GroupId至多只能填写其中一个。
     */
     @SerializedName("ListenerId")
     @Expose
@@ -73,39 +80,48 @@ public class DescribeHTTPListenersRequest extends AbstractModel {
     private String SearchValue;
 
     /**
-    * 通道组ID
-    */
-    @SerializedName("GroupId")
-    @Expose
-    private String GroupId;
-
-    /**
-     * Get 通道ID 
-     * @return ProxyId 通道ID
+     * Get 通道ID。ListenerId、ProxyId、GroupId须至少填写一个，且ProxyId与GroupId至多只能填写其中一个。 
+     * @return ProxyId 通道ID。ListenerId、ProxyId、GroupId须至少填写一个，且ProxyId与GroupId至多只能填写其中一个。
      */
     public String getProxyId() {
         return this.ProxyId;
     }
 
     /**
-     * Set 通道ID
-     * @param ProxyId 通道ID
+     * Set 通道ID。ListenerId、ProxyId、GroupId须至少填写一个，且ProxyId与GroupId至多只能填写其中一个。
+     * @param ProxyId 通道ID。ListenerId、ProxyId、GroupId须至少填写一个，且ProxyId与GroupId至多只能填写其中一个。
      */
     public void setProxyId(String ProxyId) {
         this.ProxyId = ProxyId;
     }
 
     /**
-     * Get 过滤条件，按照监听器ID进行精确查询 
-     * @return ListenerId 过滤条件，按照监听器ID进行精确查询
+     * Get 通道组ID。ListenerId、ProxyId、GroupId须至少填写一个，且ProxyId与GroupId至多只能填写其中一个。 
+     * @return GroupId 通道组ID。ListenerId、ProxyId、GroupId须至少填写一个，且ProxyId与GroupId至多只能填写其中一个。
+     */
+    public String getGroupId() {
+        return this.GroupId;
+    }
+
+    /**
+     * Set 通道组ID。ListenerId、ProxyId、GroupId须至少填写一个，且ProxyId与GroupId至多只能填写其中一个。
+     * @param GroupId 通道组ID。ListenerId、ProxyId、GroupId须至少填写一个，且ProxyId与GroupId至多只能填写其中一个。
+     */
+    public void setGroupId(String GroupId) {
+        this.GroupId = GroupId;
+    }
+
+    /**
+     * Get 过滤条件，按照监听器ID进行精确查询。ListenerId、ProxyId、GroupId须至少填写一个，且ProxyId与GroupId至多只能填写其中一个。 
+     * @return ListenerId 过滤条件，按照监听器ID进行精确查询。ListenerId、ProxyId、GroupId须至少填写一个，且ProxyId与GroupId至多只能填写其中一个。
      */
     public String getListenerId() {
         return this.ListenerId;
     }
 
     /**
-     * Set 过滤条件，按照监听器ID进行精确查询
-     * @param ListenerId 过滤条件，按照监听器ID进行精确查询
+     * Set 过滤条件，按照监听器ID进行精确查询。ListenerId、ProxyId、GroupId须至少填写一个，且ProxyId与GroupId至多只能填写其中一个。
+     * @param ListenerId 过滤条件，按照监听器ID进行精确查询。ListenerId、ProxyId、GroupId须至少填写一个，且ProxyId与GroupId至多只能填写其中一个。
      */
     public void setListenerId(String ListenerId) {
         this.ListenerId = ListenerId;
@@ -191,22 +207,6 @@ public class DescribeHTTPListenersRequest extends AbstractModel {
         this.SearchValue = SearchValue;
     }
 
-    /**
-     * Get 通道组ID 
-     * @return GroupId 通道组ID
-     */
-    public String getGroupId() {
-        return this.GroupId;
-    }
-
-    /**
-     * Set 通道组ID
-     * @param GroupId 通道组ID
-     */
-    public void setGroupId(String GroupId) {
-        this.GroupId = GroupId;
-    }
-
     public DescribeHTTPListenersRequest() {
     }
 
@@ -217,6 +217,9 @@ public class DescribeHTTPListenersRequest extends AbstractModel {
     public DescribeHTTPListenersRequest(DescribeHTTPListenersRequest source) {
         if (source.ProxyId != null) {
             this.ProxyId = new String(source.ProxyId);
+        }
+        if (source.GroupId != null) {
+            this.GroupId = new String(source.GroupId);
         }
         if (source.ListenerId != null) {
             this.ListenerId = new String(source.ListenerId);
@@ -236,9 +239,6 @@ public class DescribeHTTPListenersRequest extends AbstractModel {
         if (source.SearchValue != null) {
             this.SearchValue = new String(source.SearchValue);
         }
-        if (source.GroupId != null) {
-            this.GroupId = new String(source.GroupId);
-        }
     }
 
 
@@ -247,13 +247,13 @@ public class DescribeHTTPListenersRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProxyId", this.ProxyId);
+        this.setParamSimple(map, prefix + "GroupId", this.GroupId);
         this.setParamSimple(map, prefix + "ListenerId", this.ListenerId);
         this.setParamSimple(map, prefix + "ListenerName", this.ListenerName);
         this.setParamSimple(map, prefix + "Port", this.Port);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "SearchValue", this.SearchValue);
-        this.setParamSimple(map, prefix + "GroupId", this.GroupId);
 
     }
 }

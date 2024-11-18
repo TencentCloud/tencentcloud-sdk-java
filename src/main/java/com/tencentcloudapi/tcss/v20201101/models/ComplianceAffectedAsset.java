@@ -119,6 +119,27 @@ RESULT_PASSED: 通过
     private String InstanceId;
 
     /**
+    * 镜像仓库信息
+    */
+    @SerializedName("ImageRegistryInfo")
+    @Expose
+    private ImageRegistryInfo ImageRegistryInfo;
+
+    /**
+    * 集群id
+    */
+    @SerializedName("ClusterID")
+    @Expose
+    private String ClusterID;
+
+    /**
+    * 集群名称
+    */
+    @SerializedName("ClusterName")
+    @Expose
+    private String ClusterName;
+
+    /**
      * Get 为客户分配的唯一的资产项的ID。 
      * @return CustomerAssetId 为客户分配的唯一的资产项的ID。
      */
@@ -366,6 +387,54 @@ RESULT_PASSED: 通过
         this.InstanceId = InstanceId;
     }
 
+    /**
+     * Get 镜像仓库信息 
+     * @return ImageRegistryInfo 镜像仓库信息
+     */
+    public ImageRegistryInfo getImageRegistryInfo() {
+        return this.ImageRegistryInfo;
+    }
+
+    /**
+     * Set 镜像仓库信息
+     * @param ImageRegistryInfo 镜像仓库信息
+     */
+    public void setImageRegistryInfo(ImageRegistryInfo ImageRegistryInfo) {
+        this.ImageRegistryInfo = ImageRegistryInfo;
+    }
+
+    /**
+     * Get 集群id 
+     * @return ClusterID 集群id
+     */
+    public String getClusterID() {
+        return this.ClusterID;
+    }
+
+    /**
+     * Set 集群id
+     * @param ClusterID 集群id
+     */
+    public void setClusterID(String ClusterID) {
+        this.ClusterID = ClusterID;
+    }
+
+    /**
+     * Get 集群名称 
+     * @return ClusterName 集群名称
+     */
+    public String getClusterName() {
+        return this.ClusterName;
+    }
+
+    /**
+     * Set 集群名称
+     * @param ClusterName 集群名称
+     */
+    public void setClusterName(String ClusterName) {
+        this.ClusterName = ClusterName;
+    }
+
     public ComplianceAffectedAsset() {
     }
 
@@ -407,6 +476,15 @@ RESULT_PASSED: 通过
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
         }
+        if (source.ImageRegistryInfo != null) {
+            this.ImageRegistryInfo = new ImageRegistryInfo(source.ImageRegistryInfo);
+        }
+        if (source.ClusterID != null) {
+            this.ClusterID = new String(source.ClusterID);
+        }
+        if (source.ClusterName != null) {
+            this.ClusterName = new String(source.ClusterName);
+        }
     }
 
 
@@ -425,6 +503,9 @@ RESULT_PASSED: 通过
         this.setParamSimple(map, prefix + "ImageTag", this.ImageTag);
         this.setParamSimple(map, prefix + "VerifyInfo", this.VerifyInfo);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamObj(map, prefix + "ImageRegistryInfo.", this.ImageRegistryInfo);
+        this.setParamSimple(map, prefix + "ClusterID", this.ClusterID);
+        this.setParamSimple(map, prefix + "ClusterName", this.ClusterName);
 
     }
 }

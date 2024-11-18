@@ -25,7 +25,6 @@ public class DescribeFileTamperEventsResponse extends AbstractModel {
 
     /**
     * 核心文件事件列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("List")
     @Expose
@@ -46,10 +45,8 @@ public class DescribeFileTamperEventsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 核心文件事件列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 核心文件事件列表 
      * @return List 核心文件事件列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public FileTamperEvent [] getList() {
         return this.List;
@@ -57,9 +54,7 @@ public class DescribeFileTamperEventsResponse extends AbstractModel {
 
     /**
      * Set 核心文件事件列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param List 核心文件事件列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setList(FileTamperEvent [] List) {
         this.List = List;

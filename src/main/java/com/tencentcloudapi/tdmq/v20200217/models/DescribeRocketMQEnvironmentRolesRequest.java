@@ -31,7 +31,7 @@ public class DescribeRocketMQEnvironmentRolesRequest extends AbstractModel {
     private String ClusterId;
 
     /**
-    * 环境（命名空间）名称。
+    * 命名空间
     */
     @SerializedName("EnvironmentId")
     @Expose
@@ -59,10 +59,7 @@ public class DescribeRocketMQEnvironmentRolesRequest extends AbstractModel {
     private String RoleName;
 
     /**
-    * * RoleName
-按照角色名进行过滤，精确查询。
-类型：String
-必选：否
+    * RoleName按照角色名进行过滤，精确查询。类型：String必选：否
     */
     @SerializedName("Filters")
     @Expose
@@ -85,16 +82,16 @@ public class DescribeRocketMQEnvironmentRolesRequest extends AbstractModel {
     }
 
     /**
-     * Get 环境（命名空间）名称。 
-     * @return EnvironmentId 环境（命名空间）名称。
+     * Get 命名空间 
+     * @return EnvironmentId 命名空间
      */
     public String getEnvironmentId() {
         return this.EnvironmentId;
     }
 
     /**
-     * Set 环境（命名空间）名称。
-     * @param EnvironmentId 环境（命名空间）名称。
+     * Set 命名空间
+     * @param EnvironmentId 命名空间
      */
     public void setEnvironmentId(String EnvironmentId) {
         this.EnvironmentId = EnvironmentId;
@@ -149,28 +146,16 @@ public class DescribeRocketMQEnvironmentRolesRequest extends AbstractModel {
     }
 
     /**
-     * Get * RoleName
-按照角色名进行过滤，精确查询。
-类型：String
-必选：否 
-     * @return Filters * RoleName
-按照角色名进行过滤，精确查询。
-类型：String
-必选：否
+     * Get RoleName按照角色名进行过滤，精确查询。类型：String必选：否 
+     * @return Filters RoleName按照角色名进行过滤，精确查询。类型：String必选：否
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set * RoleName
-按照角色名进行过滤，精确查询。
-类型：String
-必选：否
-     * @param Filters * RoleName
-按照角色名进行过滤，精确查询。
-类型：String
-必选：否
+     * Set RoleName按照角色名进行过滤，精确查询。类型：String必选：否
+     * @param Filters RoleName按照角色名进行过滤，精确查询。类型：String必选：否
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

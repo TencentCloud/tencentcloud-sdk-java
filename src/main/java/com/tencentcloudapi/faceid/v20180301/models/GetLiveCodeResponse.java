@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class GetLiveCodeResponse extends AbstractModel {
 
     /**
-    * 数字验证码，如：1234
+    * 数字验证码。
     */
     @SerializedName("LiveCode")
     @Expose
@@ -38,16 +38,16 @@ public class GetLiveCodeResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 数字验证码，如：1234 
-     * @return LiveCode 数字验证码，如：1234
+     * Get 数字验证码。 
+     * @return LiveCode 数字验证码。
      */
     public String getLiveCode() {
         return this.LiveCode;
     }
 
     /**
-     * Set 数字验证码，如：1234
-     * @param LiveCode 数字验证码，如：1234
+     * Set 数字验证码。
+     * @param LiveCode 数字验证码。
      */
     public void setLiveCode(String LiveCode) {
         this.LiveCode = LiveCode;

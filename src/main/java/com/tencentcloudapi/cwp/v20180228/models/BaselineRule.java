@@ -74,7 +74,6 @@ public class BaselineRule extends AbstractModel {
 
     /**
     * [0:所有专业版旗舰版|1:hostID|2:ip]
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AssetType")
     @Expose
@@ -82,7 +81,6 @@ public class BaselineRule extends AbstractModel {
 
     /**
     * 主机Id集合
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HostIds")
     @Expose
@@ -90,7 +88,6 @@ public class BaselineRule extends AbstractModel {
 
     /**
     * 主机IP
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HostIps")
     @Expose
@@ -209,10 +206,8 @@ public class BaselineRule extends AbstractModel {
     }
 
     /**
-     * Get [0:所有专业版旗舰版|1:hostID|2:ip]
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get [0:所有专业版旗舰版|1:hostID|2:ip] 
      * @return AssetType [0:所有专业版旗舰版|1:hostID|2:ip]
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAssetType() {
         return this.AssetType;
@@ -220,19 +215,15 @@ public class BaselineRule extends AbstractModel {
 
     /**
      * Set [0:所有专业版旗舰版|1:hostID|2:ip]
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AssetType [0:所有专业版旗舰版|1:hostID|2:ip]
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAssetType(Long AssetType) {
         this.AssetType = AssetType;
     }
 
     /**
-     * Get 主机Id集合
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主机Id集合 
      * @return HostIds 主机Id集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getHostIds() {
         return this.HostIds;
@@ -240,19 +231,15 @@ public class BaselineRule extends AbstractModel {
 
     /**
      * Set 主机Id集合
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HostIds 主机Id集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHostIds(String [] HostIds) {
         this.HostIds = HostIds;
     }
 
     /**
-     * Get 主机IP
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主机IP 
      * @return HostIps 主机IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getHostIps() {
         return this.HostIps;
@@ -260,9 +247,7 @@ public class BaselineRule extends AbstractModel {
 
     /**
      * Set 主机IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HostIps 主机IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHostIps(String [] HostIps) {
         this.HostIps = HostIps;

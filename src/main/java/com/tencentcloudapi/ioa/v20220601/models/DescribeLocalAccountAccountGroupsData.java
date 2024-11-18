@@ -25,17 +25,14 @@ public class DescribeLocalAccountAccountGroupsData extends AbstractModel {
 
     /**
     * 组Id(只支持32位)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AccountGroupId")
     @Expose
     private Long AccountGroupId;
 
     /**
-     * Get 组Id(只支持32位)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 组Id(只支持32位) 
      * @return AccountGroupId 组Id(只支持32位)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAccountGroupId() {
         return this.AccountGroupId;
@@ -43,9 +40,7 @@ public class DescribeLocalAccountAccountGroupsData extends AbstractModel {
 
     /**
      * Set 组Id(只支持32位)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AccountGroupId 组Id(只支持32位)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAccountGroupId(Long AccountGroupId) {
         this.AccountGroupId = AccountGroupId;

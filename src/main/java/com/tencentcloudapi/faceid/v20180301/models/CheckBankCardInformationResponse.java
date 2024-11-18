@@ -25,33 +25,41 @@ public class CheckBankCardInformationResponse extends AbstractModel {
 
     /**
     * 认证结果码，收费情况如下。
-收费结果码：
+- 收费结果码：
 0: 查询成功
 -1: 未查到信息
-不收费结果码：
+
+- 不收费结果码：
 -2：验证中心服务繁忙
 -3：银行卡不存在
+-4：认证次数超过当日限制，请次日重试
+
     */
     @SerializedName("Result")
     @Expose
     private String Result;
 
     /**
-    * 业务结果描述
+    * 业务结果描述。
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 开户行
+    * 开户行。
     */
     @SerializedName("AccountBank")
     @Expose
     private String AccountBank;
 
     /**
-    * 卡性质：1. 借记卡；2. 贷记卡；3. 预付费卡；4. 准贷记卡
+    * 卡性质。
+- 取值范围：
+1：借记卡。
+2：贷记卡。
+3：预付费卡。
+4：准贷记卡
     */
     @SerializedName("AccountType")
     @Expose
@@ -66,19 +74,25 @@ public class CheckBankCardInformationResponse extends AbstractModel {
 
     /**
      * Get 认证结果码，收费情况如下。
-收费结果码：
+- 收费结果码：
 0: 查询成功
 -1: 未查到信息
-不收费结果码：
--2：验证中心服务繁忙
--3：银行卡不存在 
-     * @return Result 认证结果码，收费情况如下。
-收费结果码：
-0: 查询成功
--1: 未查到信息
-不收费结果码：
+
+- 不收费结果码：
 -2：验证中心服务繁忙
 -3：银行卡不存在
+-4：认证次数超过当日限制，请次日重试
+ 
+     * @return Result 认证结果码，收费情况如下。
+- 收费结果码：
+0: 查询成功
+-1: 未查到信息
+
+- 不收费结果码：
+-2：验证中心服务繁忙
+-3：银行卡不存在
+-4：认证次数超过当日限制，请次日重试
+
      */
     public String getResult() {
         return this.Result;
@@ -86,67 +100,93 @@ public class CheckBankCardInformationResponse extends AbstractModel {
 
     /**
      * Set 认证结果码，收费情况如下。
-收费结果码：
+- 收费结果码：
 0: 查询成功
 -1: 未查到信息
-不收费结果码：
+
+- 不收费结果码：
 -2：验证中心服务繁忙
 -3：银行卡不存在
+-4：认证次数超过当日限制，请次日重试
+
      * @param Result 认证结果码，收费情况如下。
-收费结果码：
+- 收费结果码：
 0: 查询成功
 -1: 未查到信息
-不收费结果码：
+
+- 不收费结果码：
 -2：验证中心服务繁忙
 -3：银行卡不存在
+-4：认证次数超过当日限制，请次日重试
+
      */
     public void setResult(String Result) {
         this.Result = Result;
     }
 
     /**
-     * Get 业务结果描述 
-     * @return Description 业务结果描述
+     * Get 业务结果描述。 
+     * @return Description 业务结果描述。
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 业务结果描述
-     * @param Description 业务结果描述
+     * Set 业务结果描述。
+     * @param Description 业务结果描述。
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 开户行 
-     * @return AccountBank 开户行
+     * Get 开户行。 
+     * @return AccountBank 开户行。
      */
     public String getAccountBank() {
         return this.AccountBank;
     }
 
     /**
-     * Set 开户行
-     * @param AccountBank 开户行
+     * Set 开户行。
+     * @param AccountBank 开户行。
      */
     public void setAccountBank(String AccountBank) {
         this.AccountBank = AccountBank;
     }
 
     /**
-     * Get 卡性质：1. 借记卡；2. 贷记卡；3. 预付费卡；4. 准贷记卡 
-     * @return AccountType 卡性质：1. 借记卡；2. 贷记卡；3. 预付费卡；4. 准贷记卡
+     * Get 卡性质。
+- 取值范围：
+1：借记卡。
+2：贷记卡。
+3：预付费卡。
+4：准贷记卡 
+     * @return AccountType 卡性质。
+- 取值范围：
+1：借记卡。
+2：贷记卡。
+3：预付费卡。
+4：准贷记卡
      */
     public Long getAccountType() {
         return this.AccountType;
     }
 
     /**
-     * Set 卡性质：1. 借记卡；2. 贷记卡；3. 预付费卡；4. 准贷记卡
-     * @param AccountType 卡性质：1. 借记卡；2. 贷记卡；3. 预付费卡；4. 准贷记卡
+     * Set 卡性质。
+- 取值范围：
+1：借记卡。
+2：贷记卡。
+3：预付费卡。
+4：准贷记卡
+     * @param AccountType 卡性质。
+- 取值范围：
+1：借记卡。
+2：贷记卡。
+3：预付费卡。
+4：准贷记卡
      */
     public void setAccountType(Long AccountType) {
         this.AccountType = AccountType;

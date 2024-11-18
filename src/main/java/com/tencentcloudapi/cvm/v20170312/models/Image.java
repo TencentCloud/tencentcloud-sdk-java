@@ -154,6 +154,21 @@ IMPORTFAILED-导入失败
     private String LicenseType;
 
     /**
+    * 镜像族
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ImageFamily")
+    @Expose
+    private String ImageFamily;
+
+    /**
+    * 镜像是否废弃
+    */
+    @SerializedName("ImageDeprecated")
+    @Expose
+    private Boolean ImageDeprecated;
+
+    /**
      * Get 镜像ID 
      * @return ImageId 镜像ID
      */
@@ -469,6 +484,42 @@ IMPORTFAILED-导入失败
         this.LicenseType = LicenseType;
     }
 
+    /**
+     * Get 镜像族
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ImageFamily 镜像族
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getImageFamily() {
+        return this.ImageFamily;
+    }
+
+    /**
+     * Set 镜像族
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ImageFamily 镜像族
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setImageFamily(String ImageFamily) {
+        this.ImageFamily = ImageFamily;
+    }
+
+    /**
+     * Get 镜像是否废弃 
+     * @return ImageDeprecated 镜像是否废弃
+     */
+    public Boolean getImageDeprecated() {
+        return this.ImageDeprecated;
+    }
+
+    /**
+     * Set 镜像是否废弃
+     * @param ImageDeprecated 镜像是否废弃
+     */
+    public void setImageDeprecated(Boolean ImageDeprecated) {
+        this.ImageDeprecated = ImageDeprecated;
+    }
+
     public Image() {
     }
 
@@ -534,6 +585,12 @@ IMPORTFAILED-导入失败
         if (source.LicenseType != null) {
             this.LicenseType = new String(source.LicenseType);
         }
+        if (source.ImageFamily != null) {
+            this.ImageFamily = new String(source.ImageFamily);
+        }
+        if (source.ImageDeprecated != null) {
+            this.ImageDeprecated = new Boolean(source.ImageDeprecated);
+        }
     }
 
 
@@ -558,6 +615,8 @@ IMPORTFAILED-导入失败
         this.setParamArrayObj(map, prefix + "SnapshotSet.", this.SnapshotSet);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "LicenseType", this.LicenseType);
+        this.setParamSimple(map, prefix + "ImageFamily", this.ImageFamily);
+        this.setParamSimple(map, prefix + "ImageDeprecated", this.ImageDeprecated);
 
     }
 }

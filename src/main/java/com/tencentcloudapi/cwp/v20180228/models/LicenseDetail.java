@@ -39,7 +39,6 @@ public class LicenseDetail extends AbstractModel {
 
     /**
     * 授权状态 0 未使用,1 部分使用, 2 已用完, 3 不可用
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LicenseStatus")
     @Expose
@@ -124,7 +123,6 @@ public class LicenseDetail extends AbstractModel {
 
     /**
     * 平台标签
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tags")
     @Expose
@@ -132,7 +130,6 @@ public class LicenseDetail extends AbstractModel {
 
     /**
     * 冻结数,当为0时 为未冻结,非0 则表示冻结授权数额
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FreezeNum")
     @Expose
@@ -171,10 +168,8 @@ public class LicenseDetail extends AbstractModel {
     }
 
     /**
-     * Get 授权状态 0 未使用,1 部分使用, 2 已用完, 3 不可用
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 授权状态 0 未使用,1 部分使用, 2 已用完, 3 不可用 
      * @return LicenseStatus 授权状态 0 未使用,1 部分使用, 2 已用完, 3 不可用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLicenseStatus() {
         return this.LicenseStatus;
@@ -182,9 +177,7 @@ public class LicenseDetail extends AbstractModel {
 
     /**
      * Set 授权状态 0 未使用,1 部分使用, 2 已用完, 3 不可用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LicenseStatus 授权状态 0 未使用,1 部分使用, 2 已用完, 3 不可用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLicenseStatus(Long LicenseStatus) {
         this.LicenseStatus = LicenseStatus;
@@ -367,10 +360,8 @@ public class LicenseDetail extends AbstractModel {
     }
 
     /**
-     * Get 平台标签
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 平台标签 
      * @return Tags 平台标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Tags [] getTags() {
         return this.Tags;
@@ -378,19 +369,15 @@ public class LicenseDetail extends AbstractModel {
 
     /**
      * Set 平台标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tags 平台标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTags(Tags [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 冻结数,当为0时 为未冻结,非0 则表示冻结授权数额
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 冻结数,当为0时 为未冻结,非0 则表示冻结授权数额 
      * @return FreezeNum 冻结数,当为0时 为未冻结,非0 则表示冻结授权数额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFreezeNum() {
         return this.FreezeNum;
@@ -398,9 +385,7 @@ public class LicenseDetail extends AbstractModel {
 
     /**
      * Set 冻结数,当为0时 为未冻结,非0 则表示冻结授权数额
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FreezeNum 冻结数,当为0时 为未冻结,非0 则表示冻结授权数额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFreezeNum(Long FreezeNum) {
         this.FreezeNum = FreezeNum;

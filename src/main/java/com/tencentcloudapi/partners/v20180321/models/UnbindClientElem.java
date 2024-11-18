@@ -46,7 +46,6 @@ public class UnbindClientElem extends AbstractModel {
 
     /**
     * 申请时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApplyTime")
     @Expose
@@ -54,7 +53,6 @@ public class UnbindClientElem extends AbstractModel {
 
     /**
     * 解绑/撤销时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ActionTime")
     @Expose
@@ -109,10 +107,8 @@ public class UnbindClientElem extends AbstractModel {
     }
 
     /**
-     * Get 申请时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 申请时间 
      * @return ApplyTime 申请时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApplyTime() {
         return this.ApplyTime;
@@ -120,19 +116,15 @@ public class UnbindClientElem extends AbstractModel {
 
     /**
      * Set 申请时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplyTime 申请时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApplyTime(String ApplyTime) {
         this.ApplyTime = ApplyTime;
     }
 
     /**
-     * Get 解绑/撤销时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 解绑/撤销时间 
      * @return ActionTime 解绑/撤销时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getActionTime() {
         return this.ActionTime;
@@ -140,9 +132,7 @@ public class UnbindClientElem extends AbstractModel {
 
     /**
      * Set 解绑/撤销时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ActionTime 解绑/撤销时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setActionTime(String ActionTime) {
         this.ActionTime = ActionTime;

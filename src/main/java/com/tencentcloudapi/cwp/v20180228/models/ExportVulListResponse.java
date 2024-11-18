@@ -25,7 +25,6 @@ public class ExportVulListResponse extends AbstractModel {
 
     /**
     * 导出的文件下载url（已弃用！）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DownloadUrl")
     @Expose
@@ -46,10 +45,8 @@ public class ExportVulListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 导出的文件下载url（已弃用！）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 导出的文件下载url（已弃用！） 
      * @return DownloadUrl 导出的文件下载url（已弃用！）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDownloadUrl() {
         return this.DownloadUrl;
@@ -57,9 +54,7 @@ public class ExportVulListResponse extends AbstractModel {
 
     /**
      * Set 导出的文件下载url（已弃用！）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DownloadUrl 导出的文件下载url（已弃用！）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDownloadUrl(String DownloadUrl) {
         this.DownloadUrl = DownloadUrl;

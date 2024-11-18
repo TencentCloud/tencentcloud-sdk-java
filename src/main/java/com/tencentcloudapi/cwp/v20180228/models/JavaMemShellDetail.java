@@ -179,14 +179,13 @@ public class JavaMemShellDetail extends AbstractModel {
 
     /**
     *  主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MachineExtraInfo")
     @Expose
     private MachineExtraInfo MachineExtraInfo;
 
     /**
-    * 实例状态：RUNNING,STOPPED,SHUTDOWN...
+    * agent状态：OFFLINE,ONLINE
     */
     @SerializedName("MachineState")
     @Expose
@@ -545,10 +544,8 @@ public class JavaMemShellDetail extends AbstractModel {
     }
 
     /**
-     * Get  主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get  主机额外信息 
      * @return MachineExtraInfo  主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public MachineExtraInfo getMachineExtraInfo() {
         return this.MachineExtraInfo;
@@ -556,25 +553,23 @@ public class JavaMemShellDetail extends AbstractModel {
 
     /**
      * Set  主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MachineExtraInfo  主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMachineExtraInfo(MachineExtraInfo MachineExtraInfo) {
         this.MachineExtraInfo = MachineExtraInfo;
     }
 
     /**
-     * Get 实例状态：RUNNING,STOPPED,SHUTDOWN... 
-     * @return MachineState 实例状态：RUNNING,STOPPED,SHUTDOWN...
+     * Get agent状态：OFFLINE,ONLINE 
+     * @return MachineState agent状态：OFFLINE,ONLINE
      */
     public String getMachineState() {
         return this.MachineState;
     }
 
     /**
-     * Set 实例状态：RUNNING,STOPPED,SHUTDOWN...
-     * @param MachineState 实例状态：RUNNING,STOPPED,SHUTDOWN...
+     * Set agent状态：OFFLINE,ONLINE
+     * @param MachineState agent状态：OFFLINE,ONLINE
      */
     public void setMachineState(String MachineState) {
         this.MachineState = MachineState;

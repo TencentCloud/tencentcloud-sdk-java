@@ -32,7 +32,6 @@ public class DescribeAssetWebLocationListResponse extends AbstractModel {
 
     /**
     * 站点列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Locations")
     @Expose
@@ -62,10 +61,8 @@ public class DescribeAssetWebLocationListResponse extends AbstractModel {
     }
 
     /**
-     * Get 站点列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 站点列表 
      * @return Locations 站点列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AssetWebLocationBaseInfo [] getLocations() {
         return this.Locations;
@@ -73,9 +70,7 @@ public class DescribeAssetWebLocationListResponse extends AbstractModel {
 
     /**
      * Set 站点列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Locations 站点列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLocations(AssetWebLocationBaseInfo [] Locations) {
         this.Locations = Locations;

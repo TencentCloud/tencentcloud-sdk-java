@@ -25,7 +25,6 @@ public class DescribeBaselineAnalysisDataResponse extends AbstractModel {
 
     /**
     * 最后检测时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LatestScanTime")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeBaselineAnalysisDataResponse extends AbstractModel {
 
     /**
     * 是否全部服务器：1-是 0-否
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsGlobal")
     @Expose
@@ -41,7 +39,6 @@ public class DescribeBaselineAnalysisDataResponse extends AbstractModel {
 
     /**
     * 服务器总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScanHostCount")
     @Expose
@@ -49,7 +46,6 @@ public class DescribeBaselineAnalysisDataResponse extends AbstractModel {
 
     /**
     * 检测项总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScanRuleCount")
     @Expose
@@ -57,7 +53,6 @@ public class DescribeBaselineAnalysisDataResponse extends AbstractModel {
 
     /**
     * 是否是第一次检测  1是 0不是
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IfFirstScan")
     @Expose
@@ -71,10 +66,8 @@ public class DescribeBaselineAnalysisDataResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 最后检测时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最后检测时间 
      * @return LatestScanTime 最后检测时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLatestScanTime() {
         return this.LatestScanTime;
@@ -82,19 +75,15 @@ public class DescribeBaselineAnalysisDataResponse extends AbstractModel {
 
     /**
      * Set 最后检测时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LatestScanTime 最后检测时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLatestScanTime(String LatestScanTime) {
         this.LatestScanTime = LatestScanTime;
     }
 
     /**
-     * Get 是否全部服务器：1-是 0-否
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否全部服务器：1-是 0-否 
      * @return IsGlobal 是否全部服务器：1-是 0-否
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsGlobal() {
         return this.IsGlobal;
@@ -102,19 +91,15 @@ public class DescribeBaselineAnalysisDataResponse extends AbstractModel {
 
     /**
      * Set 是否全部服务器：1-是 0-否
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsGlobal 是否全部服务器：1-是 0-否
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsGlobal(Long IsGlobal) {
         this.IsGlobal = IsGlobal;
     }
 
     /**
-     * Get 服务器总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 服务器总数 
      * @return ScanHostCount 服务器总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getScanHostCount() {
         return this.ScanHostCount;
@@ -122,19 +107,15 @@ public class DescribeBaselineAnalysisDataResponse extends AbstractModel {
 
     /**
      * Set 服务器总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ScanHostCount 服务器总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScanHostCount(Long ScanHostCount) {
         this.ScanHostCount = ScanHostCount;
     }
 
     /**
-     * Get 检测项总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 检测项总数 
      * @return ScanRuleCount 检测项总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getScanRuleCount() {
         return this.ScanRuleCount;
@@ -142,19 +123,15 @@ public class DescribeBaselineAnalysisDataResponse extends AbstractModel {
 
     /**
      * Set 检测项总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ScanRuleCount 检测项总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScanRuleCount(Long ScanRuleCount) {
         this.ScanRuleCount = ScanRuleCount;
     }
 
     /**
-     * Get 是否是第一次检测  1是 0不是
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否是第一次检测  1是 0不是 
      * @return IfFirstScan 是否是第一次检测  1是 0不是
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIfFirstScan() {
         return this.IfFirstScan;
@@ -162,9 +139,7 @@ public class DescribeBaselineAnalysisDataResponse extends AbstractModel {
 
     /**
      * Set 是否是第一次检测  1是 0不是
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IfFirstScan 是否是第一次检测  1是 0不是
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIfFirstScan(Long IfFirstScan) {
         this.IfFirstScan = IfFirstScan;

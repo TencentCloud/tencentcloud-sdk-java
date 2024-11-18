@@ -48,6 +48,14 @@ public class ServerlessIndexOptionsField extends AbstractModel {
     private String SinkCycleAge;
 
     /**
+    * 标准存储时长
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("StandardStorageAge")
+    @Expose
+    private String StandardStorageAge;
+
+    /**
      * Get 过期时间
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ExpireMaxAge 过期时间
@@ -107,6 +115,26 @@ public class ServerlessIndexOptionsField extends AbstractModel {
         this.SinkCycleAge = SinkCycleAge;
     }
 
+    /**
+     * Get 标准存储时长
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return StandardStorageAge 标准存储时长
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getStandardStorageAge() {
+        return this.StandardStorageAge;
+    }
+
+    /**
+     * Set 标准存储时长
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param StandardStorageAge 标准存储时长
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStandardStorageAge(String StandardStorageAge) {
+        this.StandardStorageAge = StandardStorageAge;
+    }
+
     public ServerlessIndexOptionsField() {
     }
 
@@ -124,6 +152,9 @@ public class ServerlessIndexOptionsField extends AbstractModel {
         if (source.SinkCycleAge != null) {
             this.SinkCycleAge = new String(source.SinkCycleAge);
         }
+        if (source.StandardStorageAge != null) {
+            this.StandardStorageAge = new String(source.StandardStorageAge);
+        }
     }
 
 
@@ -134,6 +165,7 @@ public class ServerlessIndexOptionsField extends AbstractModel {
         this.setParamSimple(map, prefix + "ExpireMaxAge", this.ExpireMaxAge);
         this.setParamSimple(map, prefix + "TimestampField", this.TimestampField);
         this.setParamSimple(map, prefix + "SinkCycleAge", this.SinkCycleAge);
+        this.setParamSimple(map, prefix + "StandardStorageAge", this.StandardStorageAge);
 
     }
 }

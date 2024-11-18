@@ -32,7 +32,6 @@ public class DescribeDomainsResponse extends AbstractModel {
 
     /**
     * domain列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Domains")
     @Expose
@@ -62,10 +61,8 @@ public class DescribeDomainsResponse extends AbstractModel {
     }
 
     /**
-     * Get domain列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get domain列表 
      * @return Domains domain列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DomainInfo [] getDomains() {
         return this.Domains;
@@ -73,9 +70,7 @@ public class DescribeDomainsResponse extends AbstractModel {
 
     /**
      * Set domain列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Domains domain列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDomains(DomainInfo [] Domains) {
         this.Domains = Domains;

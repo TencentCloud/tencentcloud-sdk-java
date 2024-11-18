@@ -25,7 +25,6 @@ public class DescribeVpcFwGroupSwitchResponse extends AbstractModel {
 
     /**
     * 开关列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SwitchList")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeVpcFwGroupSwitchResponse extends AbstractModel {
 
     /**
     * 开关总个数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Total")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeVpcFwGroupSwitchResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 开关列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 开关列表 
      * @return SwitchList 开关列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public FwGroupSwitchShow [] getSwitchList() {
         return this.SwitchList;
@@ -58,19 +54,15 @@ public class DescribeVpcFwGroupSwitchResponse extends AbstractModel {
 
     /**
      * Set 开关列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SwitchList 开关列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSwitchList(FwGroupSwitchShow [] SwitchList) {
         this.SwitchList = SwitchList;
     }
 
     /**
-     * Get 开关总个数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 开关总个数 
      * @return Total 开关总个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotal() {
         return this.Total;
@@ -78,9 +70,7 @@ public class DescribeVpcFwGroupSwitchResponse extends AbstractModel {
 
     /**
      * Set 开关总个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Total 开关总个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotal(Long Total) {
         this.Total = Total;

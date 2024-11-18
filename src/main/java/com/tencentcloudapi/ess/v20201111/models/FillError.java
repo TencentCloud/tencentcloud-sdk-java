@@ -40,6 +40,14 @@ public class FillError extends AbstractModel {
     private String ErrMessage;
 
     /**
+    * 合同流程ID，为32位字符串。	
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FlowId")
+    @Expose
+    private String FlowId;
+
+    /**
      * Get 为签署方经办人在签署合同中的参与方ID，与控件绑定，是控件的归属方，ID为32位字符串。与入参中补充的签署人角色ID对应，批量补充部分失败返回对应的错误信息。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return RecipientId 为签署方经办人在签署合同中的参与方ID，与控件绑定，是控件的归属方，ID为32位字符串。与入参中补充的签署人角色ID对应，批量补充部分失败返回对应的错误信息。
@@ -79,6 +87,26 @@ public class FillError extends AbstractModel {
         this.ErrMessage = ErrMessage;
     }
 
+    /**
+     * Get 合同流程ID，为32位字符串。	
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FlowId 合同流程ID，为32位字符串。	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getFlowId() {
+        return this.FlowId;
+    }
+
+    /**
+     * Set 合同流程ID，为32位字符串。	
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FlowId 合同流程ID，为32位字符串。	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFlowId(String FlowId) {
+        this.FlowId = FlowId;
+    }
+
     public FillError() {
     }
 
@@ -93,6 +121,9 @@ public class FillError extends AbstractModel {
         if (source.ErrMessage != null) {
             this.ErrMessage = new String(source.ErrMessage);
         }
+        if (source.FlowId != null) {
+            this.FlowId = new String(source.FlowId);
+        }
     }
 
 
@@ -102,6 +133,7 @@ public class FillError extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RecipientId", this.RecipientId);
         this.setParamSimple(map, prefix + "ErrMessage", this.ErrMessage);
+        this.setParamSimple(map, prefix + "FlowId", this.FlowId);
 
     }
 }

@@ -25,7 +25,6 @@ public class IMSatisfaction extends AbstractModel {
 
     /**
     * 满意度值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
     @Expose
@@ -33,17 +32,14 @@ public class IMSatisfaction extends AbstractModel {
 
     /**
     * 满意度标签
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Label")
     @Expose
     private String Label;
 
     /**
-     * Get 满意度值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 满意度值 
      * @return Id 满意度值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getId() {
         return this.Id;
@@ -51,19 +47,15 @@ public class IMSatisfaction extends AbstractModel {
 
     /**
      * Set 满意度值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Id 满意度值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 满意度标签
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 满意度标签 
      * @return Label 满意度标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLabel() {
         return this.Label;
@@ -71,9 +63,7 @@ public class IMSatisfaction extends AbstractModel {
 
     /**
      * Set 满意度标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Label 满意度标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLabel(String Label) {
         this.Label = Label;

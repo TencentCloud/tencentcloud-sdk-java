@@ -38,30 +38,38 @@ public class GetDetectInfoEnhancedRequest extends AbstractModel {
     private String RuleId;
 
     /**
-    * 指定拉取的结果信息，取值（0：全部；1：文本类；2：身份证信息；3：视频最佳截图信息）。
-如 13表示拉取文本类、视频最佳截图信息。
-默认值：0
+    * 指定拉取的结果信息。
+- 取值（0：全部；1：文本类；2：身份证信息；3：视频最佳截图信息）。
+- 例如 13 表示拉取文本类、视频最佳截图信息。
+- 默认值：0
     */
     @SerializedName("InfoType")
     @Expose
     private String InfoType;
 
     /**
-    * 从活体视频中截取一定张数的最佳帧（仅部分服务支持，若需使用请与慧眼小助手沟通）。默认为0，最大为10，超出10的最多只给10张。（InfoType需要包含3）
+    * 从活体视频中截取一定张数的最佳帧。
+- 仅部分服务支持，若需使用请与慧眼小助手沟通。
+- 默认值为0，最大值为10，超出10的最多只给10张。
+- InfoType需要包含3。
     */
     @SerializedName("BestFramesCount")
     @Expose
     private Long BestFramesCount;
 
     /**
-    * 是否对身份证照片进行裁边。默认为false。（InfoType需要包含2）
+    * 是否对身份证照片进行裁边。
+- 默认为false。
+- InfoType需要包含2。
     */
     @SerializedName("IsCutIdCardImage")
     @Expose
     private Boolean IsCutIdCardImage;
 
     /**
-    * 是否需要从身份证中抠出头像。默认为false。（InfoType需要包含2）
+    * 是否需要从身份证中抠出头像。
+- 默认为false。
+- InfoType需要包含2。
     */
     @SerializedName("IsNeedIdCardAvatar")
     @Expose
@@ -75,14 +83,16 @@ public class GetDetectInfoEnhancedRequest extends AbstractModel {
     private Boolean IsEncrypt;
 
     /**
-    * 是否需要对返回中的敏感信息进行加密。仅指定加密算法Algorithm即可，其余字段传入默认值。其中敏感信息包括：Response.Text.IdCard、Response.Text.Name、Response.Text.OcrIdCard、Response.Text.OcrName
+    * 是否需要对返回中的敏感信息进行加密。
+- 只需指定加密算法Algorithm即可，其余字段传入默认值。
+- 敏感信息包括：Response.Text.IdCard、Response.Text.Name、Response.Text.OcrIdCard、Response.Text.OcrName。
     */
     @SerializedName("Encryption")
     @Expose
     private Encryption Encryption;
 
     /**
-    * 是否对回包整体进行加密
+    * 是否对回包整体进行加密。
     */
     @SerializedName("IsEncryptResponse")
     @Expose
@@ -121,72 +131,104 @@ public class GetDetectInfoEnhancedRequest extends AbstractModel {
     }
 
     /**
-     * Get 指定拉取的结果信息，取值（0：全部；1：文本类；2：身份证信息；3：视频最佳截图信息）。
-如 13表示拉取文本类、视频最佳截图信息。
-默认值：0 
-     * @return InfoType 指定拉取的结果信息，取值（0：全部；1：文本类；2：身份证信息；3：视频最佳截图信息）。
-如 13表示拉取文本类、视频最佳截图信息。
-默认值：0
+     * Get 指定拉取的结果信息。
+- 取值（0：全部；1：文本类；2：身份证信息；3：视频最佳截图信息）。
+- 例如 13 表示拉取文本类、视频最佳截图信息。
+- 默认值：0 
+     * @return InfoType 指定拉取的结果信息。
+- 取值（0：全部；1：文本类；2：身份证信息；3：视频最佳截图信息）。
+- 例如 13 表示拉取文本类、视频最佳截图信息。
+- 默认值：0
      */
     public String getInfoType() {
         return this.InfoType;
     }
 
     /**
-     * Set 指定拉取的结果信息，取值（0：全部；1：文本类；2：身份证信息；3：视频最佳截图信息）。
-如 13表示拉取文本类、视频最佳截图信息。
-默认值：0
-     * @param InfoType 指定拉取的结果信息，取值（0：全部；1：文本类；2：身份证信息；3：视频最佳截图信息）。
-如 13表示拉取文本类、视频最佳截图信息。
-默认值：0
+     * Set 指定拉取的结果信息。
+- 取值（0：全部；1：文本类；2：身份证信息；3：视频最佳截图信息）。
+- 例如 13 表示拉取文本类、视频最佳截图信息。
+- 默认值：0
+     * @param InfoType 指定拉取的结果信息。
+- 取值（0：全部；1：文本类；2：身份证信息；3：视频最佳截图信息）。
+- 例如 13 表示拉取文本类、视频最佳截图信息。
+- 默认值：0
      */
     public void setInfoType(String InfoType) {
         this.InfoType = InfoType;
     }
 
     /**
-     * Get 从活体视频中截取一定张数的最佳帧（仅部分服务支持，若需使用请与慧眼小助手沟通）。默认为0，最大为10，超出10的最多只给10张。（InfoType需要包含3） 
-     * @return BestFramesCount 从活体视频中截取一定张数的最佳帧（仅部分服务支持，若需使用请与慧眼小助手沟通）。默认为0，最大为10，超出10的最多只给10张。（InfoType需要包含3）
+     * Get 从活体视频中截取一定张数的最佳帧。
+- 仅部分服务支持，若需使用请与慧眼小助手沟通。
+- 默认值为0，最大值为10，超出10的最多只给10张。
+- InfoType需要包含3。 
+     * @return BestFramesCount 从活体视频中截取一定张数的最佳帧。
+- 仅部分服务支持，若需使用请与慧眼小助手沟通。
+- 默认值为0，最大值为10，超出10的最多只给10张。
+- InfoType需要包含3。
      */
     public Long getBestFramesCount() {
         return this.BestFramesCount;
     }
 
     /**
-     * Set 从活体视频中截取一定张数的最佳帧（仅部分服务支持，若需使用请与慧眼小助手沟通）。默认为0，最大为10，超出10的最多只给10张。（InfoType需要包含3）
-     * @param BestFramesCount 从活体视频中截取一定张数的最佳帧（仅部分服务支持，若需使用请与慧眼小助手沟通）。默认为0，最大为10，超出10的最多只给10张。（InfoType需要包含3）
+     * Set 从活体视频中截取一定张数的最佳帧。
+- 仅部分服务支持，若需使用请与慧眼小助手沟通。
+- 默认值为0，最大值为10，超出10的最多只给10张。
+- InfoType需要包含3。
+     * @param BestFramesCount 从活体视频中截取一定张数的最佳帧。
+- 仅部分服务支持，若需使用请与慧眼小助手沟通。
+- 默认值为0，最大值为10，超出10的最多只给10张。
+- InfoType需要包含3。
      */
     public void setBestFramesCount(Long BestFramesCount) {
         this.BestFramesCount = BestFramesCount;
     }
 
     /**
-     * Get 是否对身份证照片进行裁边。默认为false。（InfoType需要包含2） 
-     * @return IsCutIdCardImage 是否对身份证照片进行裁边。默认为false。（InfoType需要包含2）
+     * Get 是否对身份证照片进行裁边。
+- 默认为false。
+- InfoType需要包含2。 
+     * @return IsCutIdCardImage 是否对身份证照片进行裁边。
+- 默认为false。
+- InfoType需要包含2。
      */
     public Boolean getIsCutIdCardImage() {
         return this.IsCutIdCardImage;
     }
 
     /**
-     * Set 是否对身份证照片进行裁边。默认为false。（InfoType需要包含2）
-     * @param IsCutIdCardImage 是否对身份证照片进行裁边。默认为false。（InfoType需要包含2）
+     * Set 是否对身份证照片进行裁边。
+- 默认为false。
+- InfoType需要包含2。
+     * @param IsCutIdCardImage 是否对身份证照片进行裁边。
+- 默认为false。
+- InfoType需要包含2。
      */
     public void setIsCutIdCardImage(Boolean IsCutIdCardImage) {
         this.IsCutIdCardImage = IsCutIdCardImage;
     }
 
     /**
-     * Get 是否需要从身份证中抠出头像。默认为false。（InfoType需要包含2） 
-     * @return IsNeedIdCardAvatar 是否需要从身份证中抠出头像。默认为false。（InfoType需要包含2）
+     * Get 是否需要从身份证中抠出头像。
+- 默认为false。
+- InfoType需要包含2。 
+     * @return IsNeedIdCardAvatar 是否需要从身份证中抠出头像。
+- 默认为false。
+- InfoType需要包含2。
      */
     public Boolean getIsNeedIdCardAvatar() {
         return this.IsNeedIdCardAvatar;
     }
 
     /**
-     * Set 是否需要从身份证中抠出头像。默认为false。（InfoType需要包含2）
-     * @param IsNeedIdCardAvatar 是否需要从身份证中抠出头像。默认为false。（InfoType需要包含2）
+     * Set 是否需要从身份证中抠出头像。
+- 默认为false。
+- InfoType需要包含2。
+     * @param IsNeedIdCardAvatar 是否需要从身份证中抠出头像。
+- 默认为false。
+- InfoType需要包含2。
      */
     public void setIsNeedIdCardAvatar(Boolean IsNeedIdCardAvatar) {
         this.IsNeedIdCardAvatar = IsNeedIdCardAvatar;
@@ -209,32 +251,40 @@ public class GetDetectInfoEnhancedRequest extends AbstractModel {
     }
 
     /**
-     * Get 是否需要对返回中的敏感信息进行加密。仅指定加密算法Algorithm即可，其余字段传入默认值。其中敏感信息包括：Response.Text.IdCard、Response.Text.Name、Response.Text.OcrIdCard、Response.Text.OcrName 
-     * @return Encryption 是否需要对返回中的敏感信息进行加密。仅指定加密算法Algorithm即可，其余字段传入默认值。其中敏感信息包括：Response.Text.IdCard、Response.Text.Name、Response.Text.OcrIdCard、Response.Text.OcrName
+     * Get 是否需要对返回中的敏感信息进行加密。
+- 只需指定加密算法Algorithm即可，其余字段传入默认值。
+- 敏感信息包括：Response.Text.IdCard、Response.Text.Name、Response.Text.OcrIdCard、Response.Text.OcrName。 
+     * @return Encryption 是否需要对返回中的敏感信息进行加密。
+- 只需指定加密算法Algorithm即可，其余字段传入默认值。
+- 敏感信息包括：Response.Text.IdCard、Response.Text.Name、Response.Text.OcrIdCard、Response.Text.OcrName。
      */
     public Encryption getEncryption() {
         return this.Encryption;
     }
 
     /**
-     * Set 是否需要对返回中的敏感信息进行加密。仅指定加密算法Algorithm即可，其余字段传入默认值。其中敏感信息包括：Response.Text.IdCard、Response.Text.Name、Response.Text.OcrIdCard、Response.Text.OcrName
-     * @param Encryption 是否需要对返回中的敏感信息进行加密。仅指定加密算法Algorithm即可，其余字段传入默认值。其中敏感信息包括：Response.Text.IdCard、Response.Text.Name、Response.Text.OcrIdCard、Response.Text.OcrName
+     * Set 是否需要对返回中的敏感信息进行加密。
+- 只需指定加密算法Algorithm即可，其余字段传入默认值。
+- 敏感信息包括：Response.Text.IdCard、Response.Text.Name、Response.Text.OcrIdCard、Response.Text.OcrName。
+     * @param Encryption 是否需要对返回中的敏感信息进行加密。
+- 只需指定加密算法Algorithm即可，其余字段传入默认值。
+- 敏感信息包括：Response.Text.IdCard、Response.Text.Name、Response.Text.OcrIdCard、Response.Text.OcrName。
      */
     public void setEncryption(Encryption Encryption) {
         this.Encryption = Encryption;
     }
 
     /**
-     * Get 是否对回包整体进行加密 
-     * @return IsEncryptResponse 是否对回包整体进行加密
+     * Get 是否对回包整体进行加密。 
+     * @return IsEncryptResponse 是否对回包整体进行加密。
      */
     public Boolean getIsEncryptResponse() {
         return this.IsEncryptResponse;
     }
 
     /**
-     * Set 是否对回包整体进行加密
-     * @param IsEncryptResponse 是否对回包整体进行加密
+     * Set 是否对回包整体进行加密。
+     * @param IsEncryptResponse 是否对回包整体进行加密。
      */
     public void setIsEncryptResponse(Boolean IsEncryptResponse) {
         this.IsEncryptResponse = IsEncryptResponse;

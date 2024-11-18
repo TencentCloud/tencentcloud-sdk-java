@@ -25,7 +25,6 @@ public class ModifyBotStatusResponse extends AbstractModel {
 
     /**
     * 正常情况为null
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
     @Expose
@@ -33,7 +32,6 @@ public class ModifyBotStatusResponse extends AbstractModel {
 
     /**
     * 未购买BOT的域名列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UnSupportedList")
     @Expose
@@ -41,7 +39,6 @@ public class ModifyBotStatusResponse extends AbstractModel {
 
     /**
     * 已购买但操作失败的域名列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FailDomainList")
     @Expose
@@ -62,10 +59,8 @@ public class ModifyBotStatusResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 正常情况为null
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 正常情况为null 
      * @return Data 正常情况为null
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getData() {
         return this.Data;
@@ -73,19 +68,15 @@ public class ModifyBotStatusResponse extends AbstractModel {
 
     /**
      * Set 正常情况为null
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Data 正常情况为null
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(String Data) {
         this.Data = Data;
     }
 
     /**
-     * Get 未购买BOT的域名列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 未购买BOT的域名列表 
      * @return UnSupportedList 未购买BOT的域名列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getUnSupportedList() {
         return this.UnSupportedList;
@@ -93,19 +84,15 @@ public class ModifyBotStatusResponse extends AbstractModel {
 
     /**
      * Set 未购买BOT的域名列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UnSupportedList 未购买BOT的域名列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUnSupportedList(String [] UnSupportedList) {
         this.UnSupportedList = UnSupportedList;
     }
 
     /**
-     * Get 已购买但操作失败的域名列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 已购买但操作失败的域名列表 
      * @return FailDomainList 已购买但操作失败的域名列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getFailDomainList() {
         return this.FailDomainList;
@@ -113,9 +100,7 @@ public class ModifyBotStatusResponse extends AbstractModel {
 
     /**
      * Set 已购买但操作失败的域名列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FailDomainList 已购买但操作失败的域名列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFailDomainList(String [] FailDomainList) {
         this.FailDomainList = FailDomainList;

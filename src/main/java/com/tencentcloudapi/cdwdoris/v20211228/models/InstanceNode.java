@@ -105,6 +105,14 @@ public class InstanceNode extends AbstractModel {
     private String UUID;
 
     /**
+    * 可用区
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Zone")
+    @Expose
+    private String Zone;
+
+    /**
      * Get IP地址 
      * @return Ip IP地址
      */
@@ -296,6 +304,26 @@ public class InstanceNode extends AbstractModel {
         this.UUID = UUID;
     }
 
+    /**
+     * Get 可用区
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Zone 可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getZone() {
+        return this.Zone;
+    }
+
+    /**
+     * Set 可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Zone 可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setZone(String Zone) {
+        this.Zone = Zone;
+    }
+
     public InstanceNode() {
     }
 
@@ -337,6 +365,9 @@ public class InstanceNode extends AbstractModel {
         if (source.UUID != null) {
             this.UUID = new String(source.UUID);
         }
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
     }
 
 
@@ -355,6 +386,7 @@ public class InstanceNode extends AbstractModel {
         this.setParamSimple(map, prefix + "Rip", this.Rip);
         this.setParamSimple(map, prefix + "FeRole", this.FeRole);
         this.setParamSimple(map, prefix + "UUID", this.UUID);
+        this.setParamSimple(map, prefix + "Zone", this.Zone);
 
     }
 }

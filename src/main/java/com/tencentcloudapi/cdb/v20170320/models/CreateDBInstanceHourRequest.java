@@ -310,6 +310,13 @@ public class CreateDBInstanceHourRequest extends AbstractModel {
     private String DiskType;
 
     /**
+    * 集群类型:cage——金融围拢，cdc——CDB ON CDC；dedicate——独享集群
+    */
+    @SerializedName("ClusterType")
+    @Expose
+    private String ClusterType;
+
+    /**
      * Get 实例数量，默认值为 1，最小值 1，最大值为 100。 
      * @return GoodsNum 实例数量，默认值为 1，最小值 1，最大值为 100。
      */
@@ -973,6 +980,22 @@ public class CreateDBInstanceHourRequest extends AbstractModel {
         this.DiskType = DiskType;
     }
 
+    /**
+     * Get 集群类型:cage——金融围拢，cdc——CDB ON CDC；dedicate——独享集群 
+     * @return ClusterType 集群类型:cage——金融围拢，cdc——CDB ON CDC；dedicate——独享集群
+     */
+    public String getClusterType() {
+        return this.ClusterType;
+    }
+
+    /**
+     * Set 集群类型:cage——金融围拢，cdc——CDB ON CDC；dedicate——独享集群
+     * @param ClusterType 集群类型:cage——金融围拢，cdc——CDB ON CDC；dedicate——独享集群
+     */
+    public void setClusterType(String ClusterType) {
+        this.ClusterType = ClusterType;
+    }
+
     public CreateDBInstanceHourRequest() {
     }
 
@@ -1119,6 +1142,9 @@ public class CreateDBInstanceHourRequest extends AbstractModel {
         if (source.DiskType != null) {
             this.DiskType = new String(source.DiskType);
         }
+        if (source.ClusterType != null) {
+            this.ClusterType = new String(source.ClusterType);
+        }
     }
 
 
@@ -1166,6 +1192,7 @@ public class CreateDBInstanceHourRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "DataProtectVolume", this.DataProtectVolume);
         this.setParamObj(map, prefix + "ClusterTopology.", this.ClusterTopology);
         this.setParamSimple(map, prefix + "DiskType", this.DiskType);
+        this.setParamSimple(map, prefix + "ClusterType", this.ClusterType);
 
     }
 }

@@ -25,7 +25,6 @@ public class AccessRuleKeyValueInfo extends AbstractModel {
 
     /**
     * 是否大小写敏感
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CaseSensitive")
     @Expose
@@ -33,17 +32,14 @@ public class AccessRuleKeyValueInfo extends AbstractModel {
 
     /**
     * 需要建立索引的键值对信息；最大只能配置100个键值对
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KeyValues")
     @Expose
     private AccessKeyValueInfo [] KeyValues;
 
     /**
-     * Get 是否大小写敏感
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否大小写敏感 
      * @return CaseSensitive 是否大小写敏感
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getCaseSensitive() {
         return this.CaseSensitive;
@@ -51,19 +47,15 @@ public class AccessRuleKeyValueInfo extends AbstractModel {
 
     /**
      * Set 是否大小写敏感
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CaseSensitive 是否大小写敏感
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCaseSensitive(Boolean CaseSensitive) {
         this.CaseSensitive = CaseSensitive;
     }
 
     /**
-     * Get 需要建立索引的键值对信息；最大只能配置100个键值对
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 需要建立索引的键值对信息；最大只能配置100个键值对 
      * @return KeyValues 需要建立索引的键值对信息；最大只能配置100个键值对
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AccessKeyValueInfo [] getKeyValues() {
         return this.KeyValues;
@@ -71,9 +63,7 @@ public class AccessRuleKeyValueInfo extends AbstractModel {
 
     /**
      * Set 需要建立索引的键值对信息；最大只能配置100个键值对
-注意：此字段可能返回 null，表示取不到有效值。
      * @param KeyValues 需要建立索引的键值对信息；最大只能配置100个键值对
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKeyValues(AccessKeyValueInfo [] KeyValues) {
         this.KeyValues = KeyValues;

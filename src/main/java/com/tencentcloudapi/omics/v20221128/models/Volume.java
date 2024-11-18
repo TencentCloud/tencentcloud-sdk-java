@@ -25,7 +25,6 @@ public class Volume extends AbstractModel {
 
     /**
     * 缓存卷ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VolumeId")
     @Expose
@@ -33,7 +32,6 @@ public class Volume extends AbstractModel {
 
     /**
     * 名称。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -41,7 +39,6 @@ public class Volume extends AbstractModel {
 
     /**
     * 描述。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
     @Expose
@@ -49,7 +46,6 @@ public class Volume extends AbstractModel {
 
     /**
     * 环境ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnvironmentId")
     @Expose
@@ -58,7 +54,6 @@ public class Volume extends AbstractModel {
     /**
     * 缓存卷类型，取值范围：
 * SHARED：多点挂载共享存储
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -71,7 +66,6 @@ public class Volume extends AbstractModel {
 - HP：通用性能型
 - TB：turbo标准型
 - TP：turbo性能型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Spec")
     @Expose
@@ -79,7 +73,6 @@ public class Volume extends AbstractModel {
 
     /**
     * 缓存卷大小（GB）。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Capacity")
     @Expose
@@ -87,7 +80,6 @@ public class Volume extends AbstractModel {
 
     /**
     * 缓存卷使用量（Byte）。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Usage")
     @Expose
@@ -95,7 +87,6 @@ public class Volume extends AbstractModel {
 
     /**
     * 缓存卷吞吐上限（MiB/s）。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BandwidthLimit")
     @Expose
@@ -103,7 +94,6 @@ public class Volume extends AbstractModel {
 
     /**
     * 默认挂载路径。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DefaultMountPath")
     @Expose
@@ -111,7 +101,6 @@ public class Volume extends AbstractModel {
 
     /**
     * 是否为默认缓存卷。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsDefault")
     @Expose
@@ -119,17 +108,14 @@ public class Volume extends AbstractModel {
 
     /**
     * 状态。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-     * Get 缓存卷ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 缓存卷ID。 
      * @return VolumeId 缓存卷ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVolumeId() {
         return this.VolumeId;
@@ -137,19 +123,15 @@ public class Volume extends AbstractModel {
 
     /**
      * Set 缓存卷ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VolumeId 缓存卷ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVolumeId(String VolumeId) {
         this.VolumeId = VolumeId;
     }
 
     /**
-     * Get 名称。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 名称。 
      * @return Name 名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -157,19 +139,15 @@ public class Volume extends AbstractModel {
 
     /**
      * Set 名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 描述。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 描述。 
      * @return Description 描述。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
         return this.Description;
@@ -177,19 +155,15 @@ public class Volume extends AbstractModel {
 
     /**
      * Set 描述。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Description 描述。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 环境ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 环境ID。 
      * @return EnvironmentId 环境ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEnvironmentId() {
         return this.EnvironmentId;
@@ -197,9 +171,7 @@ public class Volume extends AbstractModel {
 
     /**
      * Set 环境ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EnvironmentId 环境ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnvironmentId(String EnvironmentId) {
         this.EnvironmentId = EnvironmentId;
@@ -207,11 +179,9 @@ public class Volume extends AbstractModel {
 
     /**
      * Get 缓存卷类型，取值范围：
-* SHARED：多点挂载共享存储
-注意：此字段可能返回 null，表示取不到有效值。 
+* SHARED：多点挂载共享存储 
      * @return Type 缓存卷类型，取值范围：
 * SHARED：多点挂载共享存储
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
         return this.Type;
@@ -220,10 +190,8 @@ public class Volume extends AbstractModel {
     /**
      * Set 缓存卷类型，取值范围：
 * SHARED：多点挂载共享存储
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 缓存卷类型，取值范围：
 * SHARED：多点挂载共享存储
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -235,15 +203,13 @@ public class Volume extends AbstractModel {
 - SD：通用标准型
 - HP：通用性能型
 - TB：turbo标准型
-- TP：turbo性能型
-注意：此字段可能返回 null，表示取不到有效值。 
+- TP：turbo性能型 
      * @return Spec 缓存卷规格，取值范围：
 
 - SD：通用标准型
 - HP：通用性能型
 - TB：turbo标准型
 - TP：turbo性能型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSpec() {
         return this.Spec;
@@ -256,24 +222,20 @@ public class Volume extends AbstractModel {
 - HP：通用性能型
 - TB：turbo标准型
 - TP：turbo性能型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Spec 缓存卷规格，取值范围：
 
 - SD：通用标准型
 - HP：通用性能型
 - TB：turbo标准型
 - TP：turbo性能型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSpec(String Spec) {
         this.Spec = Spec;
     }
 
     /**
-     * Get 缓存卷大小（GB）。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 缓存卷大小（GB）。 
      * @return Capacity 缓存卷大小（GB）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCapacity() {
         return this.Capacity;
@@ -281,19 +243,15 @@ public class Volume extends AbstractModel {
 
     /**
      * Set 缓存卷大小（GB）。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Capacity 缓存卷大小（GB）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCapacity(Long Capacity) {
         this.Capacity = Capacity;
     }
 
     /**
-     * Get 缓存卷使用量（Byte）。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 缓存卷使用量（Byte）。 
      * @return Usage 缓存卷使用量（Byte）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getUsage() {
         return this.Usage;
@@ -301,19 +259,15 @@ public class Volume extends AbstractModel {
 
     /**
      * Set 缓存卷使用量（Byte）。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Usage 缓存卷使用量（Byte）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUsage(Long Usage) {
         this.Usage = Usage;
     }
 
     /**
-     * Get 缓存卷吞吐上限（MiB/s）。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 缓存卷吞吐上限（MiB/s）。 
      * @return BandwidthLimit 缓存卷吞吐上限（MiB/s）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getBandwidthLimit() {
         return this.BandwidthLimit;
@@ -321,19 +275,15 @@ public class Volume extends AbstractModel {
 
     /**
      * Set 缓存卷吞吐上限（MiB/s）。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BandwidthLimit 缓存卷吞吐上限（MiB/s）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBandwidthLimit(Float BandwidthLimit) {
         this.BandwidthLimit = BandwidthLimit;
     }
 
     /**
-     * Get 默认挂载路径。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 默认挂载路径。 
      * @return DefaultMountPath 默认挂载路径。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDefaultMountPath() {
         return this.DefaultMountPath;
@@ -341,19 +291,15 @@ public class Volume extends AbstractModel {
 
     /**
      * Set 默认挂载路径。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DefaultMountPath 默认挂载路径。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDefaultMountPath(String DefaultMountPath) {
         this.DefaultMountPath = DefaultMountPath;
     }
 
     /**
-     * Get 是否为默认缓存卷。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否为默认缓存卷。 
      * @return IsDefault 是否为默认缓存卷。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsDefault() {
         return this.IsDefault;
@@ -361,19 +307,15 @@ public class Volume extends AbstractModel {
 
     /**
      * Set 是否为默认缓存卷。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsDefault 是否为默认缓存卷。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsDefault(Boolean IsDefault) {
         this.IsDefault = IsDefault;
     }
 
     /**
-     * Get 状态。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 状态。 
      * @return Status 状态。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
         return this.Status;
@@ -381,9 +323,7 @@ public class Volume extends AbstractModel {
 
     /**
      * Set 状态。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 状态。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
         this.Status = Status;

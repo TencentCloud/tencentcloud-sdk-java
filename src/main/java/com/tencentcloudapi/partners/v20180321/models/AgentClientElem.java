@@ -45,7 +45,7 @@ public class AgentClientElem extends AbstractModel {
     private Long ApplyTime;
 
     /**
-    * 代客类型，可能值为a/b/c
+    * 代客类型，可能值为a/b/c/other
     */
     @SerializedName("ClientFlag")
     @Expose
@@ -81,7 +81,6 @@ public class AgentClientElem extends AbstractModel {
 
     /**
     * 业务员ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SalesUin")
     @Expose
@@ -89,7 +88,6 @@ public class AgentClientElem extends AbstractModel {
 
     /**
     * 业务员姓名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SalesName")
     @Expose
@@ -97,7 +95,6 @@ public class AgentClientElem extends AbstractModel {
 
     /**
     * 客户名称，此字段和控制台返回一致。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClientName")
     @Expose
@@ -152,16 +149,16 @@ public class AgentClientElem extends AbstractModel {
     }
 
     /**
-     * Get 代客类型，可能值为a/b/c 
-     * @return ClientFlag 代客类型，可能值为a/b/c
+     * Get 代客类型，可能值为a/b/c/other 
+     * @return ClientFlag 代客类型，可能值为a/b/c/other
      */
     public String getClientFlag() {
         return this.ClientFlag;
     }
 
     /**
-     * Set 代客类型，可能值为a/b/c
-     * @param ClientFlag 代客类型，可能值为a/b/c
+     * Set 代客类型，可能值为a/b/c/other
+     * @param ClientFlag 代客类型，可能值为a/b/c/other
      */
     public void setClientFlag(String ClientFlag) {
         this.ClientFlag = ClientFlag;
@@ -232,10 +229,8 @@ public class AgentClientElem extends AbstractModel {
     }
 
     /**
-     * Get 业务员ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 业务员ID 
      * @return SalesUin 业务员ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSalesUin() {
         return this.SalesUin;
@@ -243,19 +238,15 @@ public class AgentClientElem extends AbstractModel {
 
     /**
      * Set 业务员ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SalesUin 业务员ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSalesUin(String SalesUin) {
         this.SalesUin = SalesUin;
     }
 
     /**
-     * Get 业务员姓名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 业务员姓名 
      * @return SalesName 业务员姓名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSalesName() {
         return this.SalesName;
@@ -263,19 +254,15 @@ public class AgentClientElem extends AbstractModel {
 
     /**
      * Set 业务员姓名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SalesName 业务员姓名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSalesName(String SalesName) {
         this.SalesName = SalesName;
     }
 
     /**
-     * Get 客户名称，此字段和控制台返回一致。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 客户名称，此字段和控制台返回一致。 
      * @return ClientName 客户名称，此字段和控制台返回一致。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClientName() {
         return this.ClientName;
@@ -283,9 +270,7 @@ public class AgentClientElem extends AbstractModel {
 
     /**
      * Set 客户名称，此字段和控制台返回一致。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClientName 客户名称，此字段和控制台返回一致。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClientName(String ClientName) {
         this.ClientName = ClientName;

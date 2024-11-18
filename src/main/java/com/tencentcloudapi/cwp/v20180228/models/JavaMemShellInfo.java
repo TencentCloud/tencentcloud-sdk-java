@@ -32,7 +32,6 @@ public class JavaMemShellInfo extends AbstractModel {
 
     /**
     * 服务器名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Alias")
     @Expose
@@ -40,7 +39,6 @@ public class JavaMemShellInfo extends AbstractModel {
 
     /**
     * 服务器IP
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HostIp")
     @Expose
@@ -90,7 +88,6 @@ public class JavaMemShellInfo extends AbstractModel {
 
     /**
     * 主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MachineExtraInfo")
     @Expose
@@ -98,7 +95,6 @@ public class JavaMemShellInfo extends AbstractModel {
 
     /**
     * 服务器uuid
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Uuid")
     @Expose
@@ -106,7 +102,6 @@ public class JavaMemShellInfo extends AbstractModel {
 
     /**
     * 类名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClassName")
     @Expose
@@ -114,7 +109,6 @@ public class JavaMemShellInfo extends AbstractModel {
 
     /**
     * 父类名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SuperClassName")
     @Expose
@@ -122,7 +116,6 @@ public class JavaMemShellInfo extends AbstractModel {
 
     /**
     * 继承的接口
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Interfaces")
     @Expose
@@ -130,7 +123,6 @@ public class JavaMemShellInfo extends AbstractModel {
 
     /**
     * 注释
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Annotations")
     @Expose
@@ -138,7 +130,6 @@ public class JavaMemShellInfo extends AbstractModel {
 
     /**
     * 所属的类加载器
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LoaderClassName")
     @Expose
@@ -161,10 +152,8 @@ public class JavaMemShellInfo extends AbstractModel {
     }
 
     /**
-     * Get 服务器名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 服务器名称 
      * @return Alias 服务器名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAlias() {
         return this.Alias;
@@ -172,19 +161,15 @@ public class JavaMemShellInfo extends AbstractModel {
 
     /**
      * Set 服务器名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Alias 服务器名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAlias(String Alias) {
         this.Alias = Alias;
     }
 
     /**
-     * Get 服务器IP
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 服务器IP 
      * @return HostIp 服务器IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHostIp() {
         return this.HostIp;
@@ -192,9 +177,7 @@ public class JavaMemShellInfo extends AbstractModel {
 
     /**
      * Set 服务器IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HostIp 服务器IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHostIp(String HostIp) {
         this.HostIp = HostIp;
@@ -297,10 +280,8 @@ public class JavaMemShellInfo extends AbstractModel {
     }
 
     /**
-     * Get 主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主机额外信息 
      * @return MachineExtraInfo 主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public MachineExtraInfo getMachineExtraInfo() {
         return this.MachineExtraInfo;
@@ -308,19 +289,15 @@ public class JavaMemShellInfo extends AbstractModel {
 
     /**
      * Set 主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MachineExtraInfo 主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMachineExtraInfo(MachineExtraInfo MachineExtraInfo) {
         this.MachineExtraInfo = MachineExtraInfo;
     }
 
     /**
-     * Get 服务器uuid
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 服务器uuid 
      * @return Uuid 服务器uuid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUuid() {
         return this.Uuid;
@@ -328,19 +305,15 @@ public class JavaMemShellInfo extends AbstractModel {
 
     /**
      * Set 服务器uuid
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Uuid 服务器uuid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUuid(String Uuid) {
         this.Uuid = Uuid;
     }
 
     /**
-     * Get 类名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 类名 
      * @return ClassName 类名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClassName() {
         return this.ClassName;
@@ -348,19 +321,15 @@ public class JavaMemShellInfo extends AbstractModel {
 
     /**
      * Set 类名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClassName 类名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClassName(String ClassName) {
         this.ClassName = ClassName;
     }
 
     /**
-     * Get 父类名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 父类名 
      * @return SuperClassName 父类名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSuperClassName() {
         return this.SuperClassName;
@@ -368,19 +337,15 @@ public class JavaMemShellInfo extends AbstractModel {
 
     /**
      * Set 父类名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SuperClassName 父类名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSuperClassName(String SuperClassName) {
         this.SuperClassName = SuperClassName;
     }
 
     /**
-     * Get 继承的接口
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 继承的接口 
      * @return Interfaces 继承的接口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInterfaces() {
         return this.Interfaces;
@@ -388,19 +353,15 @@ public class JavaMemShellInfo extends AbstractModel {
 
     /**
      * Set 继承的接口
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Interfaces 继承的接口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInterfaces(String Interfaces) {
         this.Interfaces = Interfaces;
     }
 
     /**
-     * Get 注释
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 注释 
      * @return Annotations 注释
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAnnotations() {
         return this.Annotations;
@@ -408,19 +369,15 @@ public class JavaMemShellInfo extends AbstractModel {
 
     /**
      * Set 注释
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Annotations 注释
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAnnotations(String Annotations) {
         this.Annotations = Annotations;
     }
 
     /**
-     * Get 所属的类加载器
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 所属的类加载器 
      * @return LoaderClassName 所属的类加载器
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLoaderClassName() {
         return this.LoaderClassName;
@@ -428,9 +385,7 @@ public class JavaMemShellInfo extends AbstractModel {
 
     /**
      * Set 所属的类加载器
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LoaderClassName 所属的类加载器
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLoaderClassName(String LoaderClassName) {
         this.LoaderClassName = LoaderClassName;

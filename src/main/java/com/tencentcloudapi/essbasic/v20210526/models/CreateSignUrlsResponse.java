@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateSignUrlsResponse extends AbstractModel {
 
     /**
-    * 签署参与者签署H5链接信息数组
+    * 生成的签署参与者的签署链接信息数组。
     */
     @SerializedName("SignUrlInfos")
     @Expose
@@ -45,16 +45,16 @@ public class CreateSignUrlsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 签署参与者签署H5链接信息数组 
-     * @return SignUrlInfos 签署参与者签署H5链接信息数组
+     * Get 生成的签署参与者的签署链接信息数组。 
+     * @return SignUrlInfos 生成的签署参与者的签署链接信息数组。
      */
     public SignUrlInfo [] getSignUrlInfos() {
         return this.SignUrlInfos;
     }
 
     /**
-     * Set 签署参与者签署H5链接信息数组
-     * @param SignUrlInfos 签署参与者签署H5链接信息数组
+     * Set 生成的签署参与者的签署链接信息数组。
+     * @param SignUrlInfos 生成的签署参与者的签署链接信息数组。
      */
     public void setSignUrlInfos(SignUrlInfo [] SignUrlInfos) {
         this.SignUrlInfos = SignUrlInfos;

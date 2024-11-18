@@ -94,7 +94,9 @@ public class ScheduledAction extends AbstractModel {
     private String CreatedTime;
 
     /**
-    * 定时任务的执行类型。取值范围：<br><li>CRONTAB：代表定时任务为重复执行。<br><li>ONCE：代表定时任务为单次执行。
+    * 定时任务的执行类型。取值范围：
+<li>CRONTAB：代表定时任务为重复执行。</li>
+<li>ONCE：代表定时任务为单次执行。</li>
     */
     @SerializedName("ScheduledType")
     @Expose
@@ -261,16 +263,24 @@ public class ScheduledAction extends AbstractModel {
     }
 
     /**
-     * Get 定时任务的执行类型。取值范围：<br><li>CRONTAB：代表定时任务为重复执行。<br><li>ONCE：代表定时任务为单次执行。 
-     * @return ScheduledType 定时任务的执行类型。取值范围：<br><li>CRONTAB：代表定时任务为重复执行。<br><li>ONCE：代表定时任务为单次执行。
+     * Get 定时任务的执行类型。取值范围：
+<li>CRONTAB：代表定时任务为重复执行。</li>
+<li>ONCE：代表定时任务为单次执行。</li> 
+     * @return ScheduledType 定时任务的执行类型。取值范围：
+<li>CRONTAB：代表定时任务为重复执行。</li>
+<li>ONCE：代表定时任务为单次执行。</li>
      */
     public String getScheduledType() {
         return this.ScheduledType;
     }
 
     /**
-     * Set 定时任务的执行类型。取值范围：<br><li>CRONTAB：代表定时任务为重复执行。<br><li>ONCE：代表定时任务为单次执行。
-     * @param ScheduledType 定时任务的执行类型。取值范围：<br><li>CRONTAB：代表定时任务为重复执行。<br><li>ONCE：代表定时任务为单次执行。
+     * Set 定时任务的执行类型。取值范围：
+<li>CRONTAB：代表定时任务为重复执行。</li>
+<li>ONCE：代表定时任务为单次执行。</li>
+     * @param ScheduledType 定时任务的执行类型。取值范围：
+<li>CRONTAB：代表定时任务为重复执行。</li>
+<li>ONCE：代表定时任务为单次执行。</li>
      */
     public void setScheduledType(String ScheduledType) {
         this.ScheduledType = ScheduledType;

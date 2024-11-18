@@ -24,16 +24,14 @@ import java.util.HashMap;
 public class DescribeAccountGroupsData extends AbstractModel {
 
     /**
-    * 名称path
-注意：此字段可能返回 null，表示取不到有效值。
+    * 账号分组名全路径，点分格式
     */
     @SerializedName("NamePath")
     @Expose
     private String NamePath;
 
     /**
-    * id patch数组(只支持32位)
-注意：此字段可能返回 null，表示取不到有效值。
+    * 账号分组ID全路径，数组格式
     */
     @SerializedName("IdPathArr")
     @Expose
@@ -41,7 +39,6 @@ public class DescribeAccountGroupsData extends AbstractModel {
 
     /**
     * 扩展信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExtraInfo")
     @Expose
@@ -49,47 +46,41 @@ public class DescribeAccountGroupsData extends AbstractModel {
 
     /**
     * 最后更新时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Utime")
     @Expose
     private String Utime;
 
     /**
-    * 父id
-注意：此字段可能返回 null，表示取不到有效值。
+    * 父分组ID
     */
     @SerializedName("ParentId")
     @Expose
     private Long ParentId;
 
     /**
-    * 组织id
-注意：此字段可能返回 null，表示取不到有效值。
+    * 源账号组织ID。使用第三方导入用户源时，记录该分组在源组织架构下的分组ID
     */
     @SerializedName("OrgId")
     @Expose
     private String OrgId;
 
     /**
-    * 账户组名称
-注意：此字段可能返回 null，表示取不到有效值。
+    * 分组名称
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * id
-注意：此字段可能返回 null，表示取不到有效值。
+    * 分组ID
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-    * 描述
-注意：此字段可能返回 null，表示取不到有效值。
+    * 分组描述
     */
     @SerializedName("Description")
     @Expose
@@ -97,15 +88,13 @@ public class DescribeAccountGroupsData extends AbstractModel {
 
     /**
     * 同步数据源
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Source")
     @Expose
     private Long Source;
 
     /**
-    * id path
-注意：此字段可能返回 null，表示取不到有效值。
+    * 账号分组ID全路径，点分格式
     */
     @SerializedName("IdPath")
     @Expose
@@ -113,15 +102,13 @@ public class DescribeAccountGroupsData extends AbstractModel {
 
     /**
     * 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Itime")
     @Expose
     private String Itime;
 
     /**
-    * 父组织id
-注意：此字段可能返回 null，表示取不到有效值。
+    * 父源账号组织ID。使用第三方导入用户源时，记录该分组在源组织架构下的分组ID
     */
     @SerializedName("ParentOrgId")
     @Expose
@@ -129,7 +116,6 @@ public class DescribeAccountGroupsData extends AbstractModel {
 
     /**
     * 导入类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ImportType")
     @Expose
@@ -137,15 +123,13 @@ public class DescribeAccountGroupsData extends AbstractModel {
 
     /**
     * miniIAM id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MiniIamId")
     @Expose
     private String MiniIamId;
 
     /**
-    * 该分组下用户总数
-注意：此字段可能返回 null，表示取不到有效值。
+    * 该分组下含子组的所有用户总数
     */
     @SerializedName("UserTotal")
     @Expose
@@ -153,7 +137,6 @@ public class DescribeAccountGroupsData extends AbstractModel {
 
     /**
     * 是否叶子节点
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsLeaf")
     @Expose
@@ -161,7 +144,6 @@ public class DescribeAccountGroupsData extends AbstractModel {
 
     /**
     * 是否该账户的直接权限
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReadOnly")
     @Expose
@@ -169,7 +151,6 @@ public class DescribeAccountGroupsData extends AbstractModel {
 
     /**
     * 最新一次同步任务的结果
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LatestSyncResult")
     @Expose
@@ -177,57 +158,46 @@ public class DescribeAccountGroupsData extends AbstractModel {
 
     /**
     * 最新一次同步任务的结束时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LatestSyncTime")
     @Expose
     private String LatestSyncTime;
 
     /**
-     * Get 名称path
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return NamePath 名称path
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 账号分组名全路径，点分格式 
+     * @return NamePath 账号分组名全路径，点分格式
      */
     public String getNamePath() {
         return this.NamePath;
     }
 
     /**
-     * Set 名称path
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param NamePath 名称path
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 账号分组名全路径，点分格式
+     * @param NamePath 账号分组名全路径，点分格式
      */
     public void setNamePath(String NamePath) {
         this.NamePath = NamePath;
     }
 
     /**
-     * Get id patch数组(只支持32位)
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IdPathArr id patch数组(只支持32位)
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 账号分组ID全路径，数组格式 
+     * @return IdPathArr 账号分组ID全路径，数组格式
      */
     public Long [] getIdPathArr() {
         return this.IdPathArr;
     }
 
     /**
-     * Set id patch数组(只支持32位)
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param IdPathArr id patch数组(只支持32位)
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 账号分组ID全路径，数组格式
+     * @param IdPathArr 账号分组ID全路径，数组格式
      */
     public void setIdPathArr(Long [] IdPathArr) {
         this.IdPathArr = IdPathArr;
     }
 
     /**
-     * Get 扩展信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 扩展信息 
      * @return ExtraInfo 扩展信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExtraInfo() {
         return this.ExtraInfo;
@@ -235,19 +205,15 @@ public class DescribeAccountGroupsData extends AbstractModel {
 
     /**
      * Set 扩展信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExtraInfo 扩展信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExtraInfo(String ExtraInfo) {
         this.ExtraInfo = ExtraInfo;
     }
 
     /**
-     * Get 最后更新时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最后更新时间 
      * @return Utime 最后更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUtime() {
         return this.Utime;
@@ -255,119 +221,95 @@ public class DescribeAccountGroupsData extends AbstractModel {
 
     /**
      * Set 最后更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Utime 最后更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUtime(String Utime) {
         this.Utime = Utime;
     }
 
     /**
-     * Get 父id
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ParentId 父id
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 父分组ID 
+     * @return ParentId 父分组ID
      */
     public Long getParentId() {
         return this.ParentId;
     }
 
     /**
-     * Set 父id
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param ParentId 父id
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 父分组ID
+     * @param ParentId 父分组ID
      */
     public void setParentId(Long ParentId) {
         this.ParentId = ParentId;
     }
 
     /**
-     * Get 组织id
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OrgId 组织id
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 源账号组织ID。使用第三方导入用户源时，记录该分组在源组织架构下的分组ID 
+     * @return OrgId 源账号组织ID。使用第三方导入用户源时，记录该分组在源组织架构下的分组ID
      */
     public String getOrgId() {
         return this.OrgId;
     }
 
     /**
-     * Set 组织id
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param OrgId 组织id
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 源账号组织ID。使用第三方导入用户源时，记录该分组在源组织架构下的分组ID
+     * @param OrgId 源账号组织ID。使用第三方导入用户源时，记录该分组在源组织架构下的分组ID
      */
     public void setOrgId(String OrgId) {
         this.OrgId = OrgId;
     }
 
     /**
-     * Get 账户组名称
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Name 账户组名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 分组名称 
+     * @return Name 分组名称
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 账户组名称
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Name 账户组名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 分组名称
+     * @param Name 分组名称
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get id
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Id id
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 分组ID 
+     * @return Id 分组ID
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set id
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Id id
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 分组ID
+     * @param Id 分组ID
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 描述
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Description 描述
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 分组描述 
+     * @return Description 分组描述
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 描述
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Description 描述
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 分组描述
+     * @param Description 分组描述
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 同步数据源
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 同步数据源 
      * @return Source 同步数据源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSource() {
         return this.Source;
@@ -375,39 +317,31 @@ public class DescribeAccountGroupsData extends AbstractModel {
 
     /**
      * Set 同步数据源
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Source 同步数据源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSource(Long Source) {
         this.Source = Source;
     }
 
     /**
-     * Get id path
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IdPath id path
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 账号分组ID全路径，点分格式 
+     * @return IdPath 账号分组ID全路径，点分格式
      */
     public String getIdPath() {
         return this.IdPath;
     }
 
     /**
-     * Set id path
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param IdPath id path
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 账号分组ID全路径，点分格式
+     * @param IdPath 账号分组ID全路径，点分格式
      */
     public void setIdPath(String IdPath) {
         this.IdPath = IdPath;
     }
 
     /**
-     * Get 创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间 
      * @return Itime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getItime() {
         return this.Itime;
@@ -415,39 +349,31 @@ public class DescribeAccountGroupsData extends AbstractModel {
 
     /**
      * Set 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Itime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setItime(String Itime) {
         this.Itime = Itime;
     }
 
     /**
-     * Get 父组织id
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ParentOrgId 父组织id
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 父源账号组织ID。使用第三方导入用户源时，记录该分组在源组织架构下的分组ID 
+     * @return ParentOrgId 父源账号组织ID。使用第三方导入用户源时，记录该分组在源组织架构下的分组ID
      */
     public String getParentOrgId() {
         return this.ParentOrgId;
     }
 
     /**
-     * Set 父组织id
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param ParentOrgId 父组织id
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 父源账号组织ID。使用第三方导入用户源时，记录该分组在源组织架构下的分组ID
+     * @param ParentOrgId 父源账号组织ID。使用第三方导入用户源时，记录该分组在源组织架构下的分组ID
      */
     public void setParentOrgId(String ParentOrgId) {
         this.ParentOrgId = ParentOrgId;
     }
 
     /**
-     * Get 导入类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 导入类型 
      * @return ImportType 导入类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getImportType() {
         return this.ImportType;
@@ -455,19 +381,15 @@ public class DescribeAccountGroupsData extends AbstractModel {
 
     /**
      * Set 导入类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ImportType 导入类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setImportType(String ImportType) {
         this.ImportType = ImportType;
     }
 
     /**
-     * Get miniIAM id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get miniIAM id 
      * @return MiniIamId miniIAM id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMiniIamId() {
         return this.MiniIamId;
@@ -475,39 +397,31 @@ public class DescribeAccountGroupsData extends AbstractModel {
 
     /**
      * Set miniIAM id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MiniIamId miniIAM id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMiniIamId(String MiniIamId) {
         this.MiniIamId = MiniIamId;
     }
 
     /**
-     * Get 该分组下用户总数
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UserTotal 该分组下用户总数
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 该分组下含子组的所有用户总数 
+     * @return UserTotal 该分组下含子组的所有用户总数
      */
     public Long getUserTotal() {
         return this.UserTotal;
     }
 
     /**
-     * Set 该分组下用户总数
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param UserTotal 该分组下用户总数
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 该分组下含子组的所有用户总数
+     * @param UserTotal 该分组下含子组的所有用户总数
      */
     public void setUserTotal(Long UserTotal) {
         this.UserTotal = UserTotal;
     }
 
     /**
-     * Get 是否叶子节点
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否叶子节点 
      * @return IsLeaf 是否叶子节点
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsLeaf() {
         return this.IsLeaf;
@@ -515,19 +429,15 @@ public class DescribeAccountGroupsData extends AbstractModel {
 
     /**
      * Set 是否叶子节点
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsLeaf 是否叶子节点
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsLeaf(Boolean IsLeaf) {
         this.IsLeaf = IsLeaf;
     }
 
     /**
-     * Get 是否该账户的直接权限
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否该账户的直接权限 
      * @return ReadOnly 是否该账户的直接权限
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getReadOnly() {
         return this.ReadOnly;
@@ -535,19 +445,15 @@ public class DescribeAccountGroupsData extends AbstractModel {
 
     /**
      * Set 是否该账户的直接权限
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReadOnly 是否该账户的直接权限
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReadOnly(Boolean ReadOnly) {
         this.ReadOnly = ReadOnly;
     }
 
     /**
-     * Get 最新一次同步任务的结果
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最新一次同步任务的结果 
      * @return LatestSyncResult 最新一次同步任务的结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLatestSyncResult() {
         return this.LatestSyncResult;
@@ -555,19 +461,15 @@ public class DescribeAccountGroupsData extends AbstractModel {
 
     /**
      * Set 最新一次同步任务的结果
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LatestSyncResult 最新一次同步任务的结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLatestSyncResult(String LatestSyncResult) {
         this.LatestSyncResult = LatestSyncResult;
     }
 
     /**
-     * Get 最新一次同步任务的结束时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最新一次同步任务的结束时间 
      * @return LatestSyncTime 最新一次同步任务的结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLatestSyncTime() {
         return this.LatestSyncTime;
@@ -575,9 +477,7 @@ public class DescribeAccountGroupsData extends AbstractModel {
 
     /**
      * Set 最新一次同步任务的结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LatestSyncTime 最新一次同步任务的结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLatestSyncTime(String LatestSyncTime) {
         this.LatestSyncTime = LatestSyncTime;

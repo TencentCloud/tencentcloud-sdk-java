@@ -25,7 +25,6 @@ public class DescribeAccessFastAnalysisResponse extends AbstractModel {
 
     /**
     * 注意：此字段可能返回 null，表示取不到有效值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FieldValueRatioInfos")
     @Expose
@@ -46,10 +45,8 @@ public class DescribeAccessFastAnalysisResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 注意：此字段可能返回 null，表示取不到有效值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 注意：此字段可能返回 null，表示取不到有效值 
      * @return FieldValueRatioInfos 注意：此字段可能返回 null，表示取不到有效值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AccessFieldValueRatioInfo [] getFieldValueRatioInfos() {
         return this.FieldValueRatioInfos;
@@ -57,9 +54,7 @@ public class DescribeAccessFastAnalysisResponse extends AbstractModel {
 
     /**
      * Set 注意：此字段可能返回 null，表示取不到有效值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FieldValueRatioInfos 注意：此字段可能返回 null，表示取不到有效值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFieldValueRatioInfos(AccessFieldValueRatioInfo [] FieldValueRatioInfos) {
         this.FieldValueRatioInfos = FieldValueRatioInfos;

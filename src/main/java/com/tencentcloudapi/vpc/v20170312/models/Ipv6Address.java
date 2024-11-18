@@ -70,6 +70,22 @@ public class Ipv6Address extends AbstractModel {
     private String State;
 
     /**
+    * 如果 IPv6地址是 ULA 类型，绑定的公网IP地址。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PublicIpAddress")
+    @Expose
+    private String PublicIpAddress;
+
+    /**
+    * `IPv6`地址的类型: `GUA`, `OTHER`, `ULA`
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AddressType")
+    @Expose
+    private String AddressType;
+
+    /**
      * Get `IPv6`地址，形如：`3402:4e00:20:100:0:8cd9:2a67:71f3` 
      * @return Address `IPv6`地址，形如：`3402:4e00:20:100:0:8cd9:2a67:71f3`
      */
@@ -181,6 +197,46 @@ public class Ipv6Address extends AbstractModel {
         this.State = State;
     }
 
+    /**
+     * Get 如果 IPv6地址是 ULA 类型，绑定的公网IP地址。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PublicIpAddress 如果 IPv6地址是 ULA 类型，绑定的公网IP地址。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getPublicIpAddress() {
+        return this.PublicIpAddress;
+    }
+
+    /**
+     * Set 如果 IPv6地址是 ULA 类型，绑定的公网IP地址。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PublicIpAddress 如果 IPv6地址是 ULA 类型，绑定的公网IP地址。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPublicIpAddress(String PublicIpAddress) {
+        this.PublicIpAddress = PublicIpAddress;
+    }
+
+    /**
+     * Get `IPv6`地址的类型: `GUA`, `OTHER`, `ULA`
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AddressType `IPv6`地址的类型: `GUA`, `OTHER`, `ULA`
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAddressType() {
+        return this.AddressType;
+    }
+
+    /**
+     * Set `IPv6`地址的类型: `GUA`, `OTHER`, `ULA`
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AddressType `IPv6`地址的类型: `GUA`, `OTHER`, `ULA`
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAddressType(String AddressType) {
+        this.AddressType = AddressType;
+    }
+
     public Ipv6Address() {
     }
 
@@ -207,6 +263,12 @@ public class Ipv6Address extends AbstractModel {
         if (source.State != null) {
             this.State = new String(source.State);
         }
+        if (source.PublicIpAddress != null) {
+            this.PublicIpAddress = new String(source.PublicIpAddress);
+        }
+        if (source.AddressType != null) {
+            this.AddressType = new String(source.AddressType);
+        }
     }
 
 
@@ -220,6 +282,8 @@ public class Ipv6Address extends AbstractModel {
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "IsWanIpBlocked", this.IsWanIpBlocked);
         this.setParamSimple(map, prefix + "State", this.State);
+        this.setParamSimple(map, prefix + "PublicIpAddress", this.PublicIpAddress);
+        this.setParamSimple(map, prefix + "AddressType", this.AddressType);
 
     }
 }

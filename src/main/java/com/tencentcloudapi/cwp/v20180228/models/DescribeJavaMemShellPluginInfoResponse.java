@@ -25,7 +25,6 @@ public class DescribeJavaMemShellPluginInfoResponse extends AbstractModel {
 
     /**
     * java内存马插件列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("List")
     @Expose
@@ -46,10 +45,8 @@ public class DescribeJavaMemShellPluginInfoResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get java内存马插件列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get java内存马插件列表 
      * @return List java内存马插件列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public JavaMemShellPluginInfo [] getList() {
         return this.List;
@@ -57,9 +54,7 @@ public class DescribeJavaMemShellPluginInfoResponse extends AbstractModel {
 
     /**
      * Set java内存马插件列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param List java内存马插件列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setList(JavaMemShellPluginInfo [] List) {
         this.List = List;

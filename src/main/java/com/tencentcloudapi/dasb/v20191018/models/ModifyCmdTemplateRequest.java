@@ -53,6 +53,13 @@ public class ModifyCmdTemplateRequest extends AbstractModel {
     private Long Encoding;
 
     /**
+    * 命令模板类型 1-内置模板 2-自定义模板
+    */
+    @SerializedName("Type")
+    @Expose
+    private Long Type;
+
+    /**
      * Get 模板名，最长32字符，不能包含空白字符 
      * @return Name 模板名，最长32字符，不能包含空白字符
      */
@@ -120,6 +127,22 @@ public class ModifyCmdTemplateRequest extends AbstractModel {
         this.Encoding = Encoding;
     }
 
+    /**
+     * Get 命令模板类型 1-内置模板 2-自定义模板 
+     * @return Type 命令模板类型 1-内置模板 2-自定义模板
+     */
+    public Long getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set 命令模板类型 1-内置模板 2-自定义模板
+     * @param Type 命令模板类型 1-内置模板 2-自定义模板
+     */
+    public void setType(Long Type) {
+        this.Type = Type;
+    }
+
     public ModifyCmdTemplateRequest() {
     }
 
@@ -140,6 +163,9 @@ public class ModifyCmdTemplateRequest extends AbstractModel {
         if (source.Encoding != null) {
             this.Encoding = new Long(source.Encoding);
         }
+        if (source.Type != null) {
+            this.Type = new Long(source.Type);
+        }
     }
 
 
@@ -151,6 +177,7 @@ public class ModifyCmdTemplateRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "CmdList", this.CmdList);
         this.setParamSimple(map, prefix + "Id", this.Id);
         this.setParamSimple(map, prefix + "Encoding", this.Encoding);
+        this.setParamSimple(map, prefix + "Type", this.Type);
 
     }
 }

@@ -32,7 +32,7 @@ public class Cdc extends AbstractModel {
     private String CageId;
 
     /**
-    * 独享集群状态。取值范围：<br><li>NORMAL：正常；<br><li>CLOSED：关闭，此时将不可使用该独享集群创建新的云硬盘；<br><li>FAULT：独享集群状态异常，此时独享集群将不可操作，腾讯云运维团队将会及时修复该集群；<br><li>ISOLATED：因未及时续费导致独享集群被隔离，此时将不可使用该独享集群创建新的云硬盘，对应的云硬盘也将不可操作。
+    * 独享集群状态。取值范围：<br><li>NORMAL：正常；</li><br><li>CLOSED：关闭，此时将不可使用该独享集群创建新的云硬盘；</li><br><li>FAULT：独享集群状态异常，此时独享集群将不可操作，腾讯云运维团队将会及时修复该集群；</li><br><li>ISOLATED：因未及时续费导致独享集群被隔离，此时将不可使用该独享集群创建新的云硬盘，对应的云硬盘也将不可操作。</li>
     */
     @SerializedName("CdcState")
     @Expose
@@ -69,7 +69,7 @@ public class Cdc extends AbstractModel {
     private String CdcId;
 
     /**
-    * 独享集群类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘集群<br><li>CLOUD_PREMIUM：表示高性能云硬盘集群<br><li>CLOUD_SSD：SSD表示SSD云硬盘集群。
+    * 独享集群类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘集群</li><br><li>CLOUD_PREMIUM：表示高性能云硬盘集群</li><br><li>CLOUD_SSD：SSD表示SSD云硬盘集群。</li>
     */
     @SerializedName("DiskType")
     @Expose
@@ -117,16 +117,16 @@ public class Cdc extends AbstractModel {
     }
 
     /**
-     * Get 独享集群状态。取值范围：<br><li>NORMAL：正常；<br><li>CLOSED：关闭，此时将不可使用该独享集群创建新的云硬盘；<br><li>FAULT：独享集群状态异常，此时独享集群将不可操作，腾讯云运维团队将会及时修复该集群；<br><li>ISOLATED：因未及时续费导致独享集群被隔离，此时将不可使用该独享集群创建新的云硬盘，对应的云硬盘也将不可操作。 
-     * @return CdcState 独享集群状态。取值范围：<br><li>NORMAL：正常；<br><li>CLOSED：关闭，此时将不可使用该独享集群创建新的云硬盘；<br><li>FAULT：独享集群状态异常，此时独享集群将不可操作，腾讯云运维团队将会及时修复该集群；<br><li>ISOLATED：因未及时续费导致独享集群被隔离，此时将不可使用该独享集群创建新的云硬盘，对应的云硬盘也将不可操作。
+     * Get 独享集群状态。取值范围：<br><li>NORMAL：正常；</li><br><li>CLOSED：关闭，此时将不可使用该独享集群创建新的云硬盘；</li><br><li>FAULT：独享集群状态异常，此时独享集群将不可操作，腾讯云运维团队将会及时修复该集群；</li><br><li>ISOLATED：因未及时续费导致独享集群被隔离，此时将不可使用该独享集群创建新的云硬盘，对应的云硬盘也将不可操作。</li> 
+     * @return CdcState 独享集群状态。取值范围：<br><li>NORMAL：正常；</li><br><li>CLOSED：关闭，此时将不可使用该独享集群创建新的云硬盘；</li><br><li>FAULT：独享集群状态异常，此时独享集群将不可操作，腾讯云运维团队将会及时修复该集群；</li><br><li>ISOLATED：因未及时续费导致独享集群被隔离，此时将不可使用该独享集群创建新的云硬盘，对应的云硬盘也将不可操作。</li>
      */
     public String getCdcState() {
         return this.CdcState;
     }
 
     /**
-     * Set 独享集群状态。取值范围：<br><li>NORMAL：正常；<br><li>CLOSED：关闭，此时将不可使用该独享集群创建新的云硬盘；<br><li>FAULT：独享集群状态异常，此时独享集群将不可操作，腾讯云运维团队将会及时修复该集群；<br><li>ISOLATED：因未及时续费导致独享集群被隔离，此时将不可使用该独享集群创建新的云硬盘，对应的云硬盘也将不可操作。
-     * @param CdcState 独享集群状态。取值范围：<br><li>NORMAL：正常；<br><li>CLOSED：关闭，此时将不可使用该独享集群创建新的云硬盘；<br><li>FAULT：独享集群状态异常，此时独享集群将不可操作，腾讯云运维团队将会及时修复该集群；<br><li>ISOLATED：因未及时续费导致独享集群被隔离，此时将不可使用该独享集群创建新的云硬盘，对应的云硬盘也将不可操作。
+     * Set 独享集群状态。取值范围：<br><li>NORMAL：正常；</li><br><li>CLOSED：关闭，此时将不可使用该独享集群创建新的云硬盘；</li><br><li>FAULT：独享集群状态异常，此时独享集群将不可操作，腾讯云运维团队将会及时修复该集群；</li><br><li>ISOLATED：因未及时续费导致独享集群被隔离，此时将不可使用该独享集群创建新的云硬盘，对应的云硬盘也将不可操作。</li>
+     * @param CdcState 独享集群状态。取值范围：<br><li>NORMAL：正常；</li><br><li>CLOSED：关闭，此时将不可使用该独享集群创建新的云硬盘；</li><br><li>FAULT：独享集群状态异常，此时独享集群将不可操作，腾讯云运维团队将会及时修复该集群；</li><br><li>ISOLATED：因未及时续费导致独享集群被隔离，此时将不可使用该独享集群创建新的云硬盘，对应的云硬盘也将不可操作。</li>
      */
     public void setCdcState(String CdcState) {
         this.CdcState = CdcState;
@@ -205,16 +205,16 @@ public class Cdc extends AbstractModel {
     }
 
     /**
-     * Get 独享集群类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘集群<br><li>CLOUD_PREMIUM：表示高性能云硬盘集群<br><li>CLOUD_SSD：SSD表示SSD云硬盘集群。 
-     * @return DiskType 独享集群类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘集群<br><li>CLOUD_PREMIUM：表示高性能云硬盘集群<br><li>CLOUD_SSD：SSD表示SSD云硬盘集群。
+     * Get 独享集群类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘集群</li><br><li>CLOUD_PREMIUM：表示高性能云硬盘集群</li><br><li>CLOUD_SSD：SSD表示SSD云硬盘集群。</li> 
+     * @return DiskType 独享集群类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘集群</li><br><li>CLOUD_PREMIUM：表示高性能云硬盘集群</li><br><li>CLOUD_SSD：SSD表示SSD云硬盘集群。</li>
      */
     public String getDiskType() {
         return this.DiskType;
     }
 
     /**
-     * Set 独享集群类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘集群<br><li>CLOUD_PREMIUM：表示高性能云硬盘集群<br><li>CLOUD_SSD：SSD表示SSD云硬盘集群。
-     * @param DiskType 独享集群类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘集群<br><li>CLOUD_PREMIUM：表示高性能云硬盘集群<br><li>CLOUD_SSD：SSD表示SSD云硬盘集群。
+     * Set 独享集群类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘集群</li><br><li>CLOUD_PREMIUM：表示高性能云硬盘集群</li><br><li>CLOUD_SSD：SSD表示SSD云硬盘集群。</li>
+     * @param DiskType 独享集群类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘集群</li><br><li>CLOUD_PREMIUM：表示高性能云硬盘集群</li><br><li>CLOUD_SSD：SSD表示SSD云硬盘集群。</li>
      */
     public void setDiskType(String DiskType) {
         this.DiskType = DiskType;

@@ -49,7 +49,7 @@ public class ModifyHostsCertificateRequest extends AbstractModel {
     private String Mode;
 
     /**
-    * SSL 证书配置，本参数仅在 mode 为 sslcert 时生效，传入对应证书的 CertId 即可。您可以前往 [SSL 证书列表](https://console.cloud.tencent.com/certoverview) 查看 CertId。
+    * SSL 证书配置，本参数仅在 mode 为 sslcert 时生效，传入对应证书的 CertId 即可。您可以前往 [SSL 证书列表](https://console.cloud.tencent.com/ssl) 查看 CertId。
     */
     @SerializedName("ServerCertInfo")
     @Expose
@@ -66,8 +66,7 @@ public class ModifyHostsCertificateRequest extends AbstractModel {
     private String ApplyType;
 
     /**
-    * 边缘双向认证配置。
-不填写表示边缘双向认证保持原有配置。
+    * 在边缘双向认证场景下，该字段为客户端的 CA 证书，部署在 EO 节点内，用于客户端对 EO 节点进行认证。默认关闭，不填写表示保持原有配置。
     */
     @SerializedName("ClientCertInfo")
     @Expose
@@ -138,16 +137,16 @@ public class ModifyHostsCertificateRequest extends AbstractModel {
     }
 
     /**
-     * Get SSL 证书配置，本参数仅在 mode 为 sslcert 时生效，传入对应证书的 CertId 即可。您可以前往 [SSL 证书列表](https://console.cloud.tencent.com/certoverview) 查看 CertId。 
-     * @return ServerCertInfo SSL 证书配置，本参数仅在 mode 为 sslcert 时生效，传入对应证书的 CertId 即可。您可以前往 [SSL 证书列表](https://console.cloud.tencent.com/certoverview) 查看 CertId。
+     * Get SSL 证书配置，本参数仅在 mode 为 sslcert 时生效，传入对应证书的 CertId 即可。您可以前往 [SSL 证书列表](https://console.cloud.tencent.com/ssl) 查看 CertId。 
+     * @return ServerCertInfo SSL 证书配置，本参数仅在 mode 为 sslcert 时生效，传入对应证书的 CertId 即可。您可以前往 [SSL 证书列表](https://console.cloud.tencent.com/ssl) 查看 CertId。
      */
     public ServerCertInfo [] getServerCertInfo() {
         return this.ServerCertInfo;
     }
 
     /**
-     * Set SSL 证书配置，本参数仅在 mode 为 sslcert 时生效，传入对应证书的 CertId 即可。您可以前往 [SSL 证书列表](https://console.cloud.tencent.com/certoverview) 查看 CertId。
-     * @param ServerCertInfo SSL 证书配置，本参数仅在 mode 为 sslcert 时生效，传入对应证书的 CertId 即可。您可以前往 [SSL 证书列表](https://console.cloud.tencent.com/certoverview) 查看 CertId。
+     * Set SSL 证书配置，本参数仅在 mode 为 sslcert 时生效，传入对应证书的 CertId 即可。您可以前往 [SSL 证书列表](https://console.cloud.tencent.com/ssl) 查看 CertId。
+     * @param ServerCertInfo SSL 证书配置，本参数仅在 mode 为 sslcert 时生效，传入对应证书的 CertId 即可。您可以前往 [SSL 证书列表](https://console.cloud.tencent.com/ssl) 查看 CertId。
      */
     public void setServerCertInfo(ServerCertInfo [] ServerCertInfo) {
         this.ServerCertInfo = ServerCertInfo;
@@ -186,20 +185,16 @@ public class ModifyHostsCertificateRequest extends AbstractModel {
     }
 
     /**
-     * Get 边缘双向认证配置。
-不填写表示边缘双向认证保持原有配置。 
-     * @return ClientCertInfo 边缘双向认证配置。
-不填写表示边缘双向认证保持原有配置。
+     * Get 在边缘双向认证场景下，该字段为客户端的 CA 证书，部署在 EO 节点内，用于客户端对 EO 节点进行认证。默认关闭，不填写表示保持原有配置。 
+     * @return ClientCertInfo 在边缘双向认证场景下，该字段为客户端的 CA 证书，部署在 EO 节点内，用于客户端对 EO 节点进行认证。默认关闭，不填写表示保持原有配置。
      */
     public MutualTLS getClientCertInfo() {
         return this.ClientCertInfo;
     }
 
     /**
-     * Set 边缘双向认证配置。
-不填写表示边缘双向认证保持原有配置。
-     * @param ClientCertInfo 边缘双向认证配置。
-不填写表示边缘双向认证保持原有配置。
+     * Set 在边缘双向认证场景下，该字段为客户端的 CA 证书，部署在 EO 节点内，用于客户端对 EO 节点进行认证。默认关闭，不填写表示保持原有配置。
+     * @param ClientCertInfo 在边缘双向认证场景下，该字段为客户端的 CA 证书，部署在 EO 节点内，用于客户端对 EO 节点进行认证。默认关闭，不填写表示保持原有配置。
      */
     public void setClientCertInfo(MutualTLS ClientCertInfo) {
         this.ClientCertInfo = ClientCertInfo;

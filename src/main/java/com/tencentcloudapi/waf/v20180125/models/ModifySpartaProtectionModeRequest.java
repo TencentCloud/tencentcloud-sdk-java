@@ -54,6 +54,13 @@ public class ModifySpartaProtectionModeRequest extends AbstractModel {
     private Long Type;
 
     /**
+    * 实例id
+    */
+    @SerializedName("InstanceID")
+    @Expose
+    private String InstanceID;
+
+    /**
      * Get 域名 
      * @return Domain 域名
      */
@@ -125,6 +132,22 @@ public class ModifySpartaProtectionModeRequest extends AbstractModel {
         this.Type = Type;
     }
 
+    /**
+     * Get 实例id 
+     * @return InstanceID 实例id
+     */
+    public String getInstanceID() {
+        return this.InstanceID;
+    }
+
+    /**
+     * Set 实例id
+     * @param InstanceID 实例id
+     */
+    public void setInstanceID(String InstanceID) {
+        this.InstanceID = InstanceID;
+    }
+
     public ModifySpartaProtectionModeRequest() {
     }
 
@@ -145,6 +168,9 @@ public class ModifySpartaProtectionModeRequest extends AbstractModel {
         if (source.Type != null) {
             this.Type = new Long(source.Type);
         }
+        if (source.InstanceID != null) {
+            this.InstanceID = new String(source.InstanceID);
+        }
     }
 
 
@@ -156,6 +182,7 @@ public class ModifySpartaProtectionModeRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Mode", this.Mode);
         this.setParamSimple(map, prefix + "Edition", this.Edition);
         this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "InstanceID", this.InstanceID);
 
     }
 }

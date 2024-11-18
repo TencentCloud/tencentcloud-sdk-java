@@ -31,10 +31,10 @@ public class AutoScalingAdvice extends AbstractModel {
     private String AutoScalingGroupId;
 
     /**
-    * 伸缩组警告级别。取值范围：<br>
-<li>NORMAL：正常<br>
-<li>WARNING：警告级别<br>
-<li>CRITICAL：严重级别<br>
+    * 伸缩组警告级别。取值范围：
+<li>NORMAL：正常</li>
+<li>WARNING：警告级别</li>
+<li>CRITICAL：严重级别</li>
     */
     @SerializedName("Level")
     @Expose
@@ -64,28 +64,28 @@ public class AutoScalingAdvice extends AbstractModel {
     }
 
     /**
-     * Get 伸缩组警告级别。取值范围：<br>
-<li>NORMAL：正常<br>
-<li>WARNING：警告级别<br>
-<li>CRITICAL：严重级别<br> 
-     * @return Level 伸缩组警告级别。取值范围：<br>
-<li>NORMAL：正常<br>
-<li>WARNING：警告级别<br>
-<li>CRITICAL：严重级别<br>
+     * Get 伸缩组警告级别。取值范围：
+<li>NORMAL：正常</li>
+<li>WARNING：警告级别</li>
+<li>CRITICAL：严重级别</li> 
+     * @return Level 伸缩组警告级别。取值范围：
+<li>NORMAL：正常</li>
+<li>WARNING：警告级别</li>
+<li>CRITICAL：严重级别</li>
      */
     public String getLevel() {
         return this.Level;
     }
 
     /**
-     * Set 伸缩组警告级别。取值范围：<br>
-<li>NORMAL：正常<br>
-<li>WARNING：警告级别<br>
-<li>CRITICAL：严重级别<br>
-     * @param Level 伸缩组警告级别。取值范围：<br>
-<li>NORMAL：正常<br>
-<li>WARNING：警告级别<br>
-<li>CRITICAL：严重级别<br>
+     * Set 伸缩组警告级别。取值范围：
+<li>NORMAL：正常</li>
+<li>WARNING：警告级别</li>
+<li>CRITICAL：严重级别</li>
+     * @param Level 伸缩组警告级别。取值范围：
+<li>NORMAL：正常</li>
+<li>WARNING：警告级别</li>
+<li>CRITICAL：严重级别</li>
      */
     public void setLevel(String Level) {
         this.Level = Level;

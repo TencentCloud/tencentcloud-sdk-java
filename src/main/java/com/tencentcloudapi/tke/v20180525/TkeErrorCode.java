@@ -207,6 +207,9 @@ public enum TkeErrorCode {
     // 任务当前所处状态不支持此操作。
      FAILEDOPERATION_TASKLIFESTATEERROR("FailedOperation.TaskLifeStateError"),
      
+    // 任务未找到。
+     FAILEDOPERATION_TASKNOTFOUND("FailedOperation.TaskNotFound"),
+     
     // 询价错误。
      FAILEDOPERATION_TRADECOMMON("FailedOperation.TradeCommon"),
      

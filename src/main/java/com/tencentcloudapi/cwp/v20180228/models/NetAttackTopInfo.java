@@ -25,7 +25,6 @@ public class NetAttackTopInfo extends AbstractModel {
 
     /**
     * 网络攻击主机维度top统计数据
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Agent")
     @Expose
@@ -33,7 +32,6 @@ public class NetAttackTopInfo extends AbstractModel {
 
     /**
     * 网络攻击ip来源维度top统计数据
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SrcIp")
     @Expose
@@ -41,7 +39,6 @@ public class NetAttackTopInfo extends AbstractModel {
 
     /**
     * 网络攻击目标端口维度top统计数据
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DstPort")
     @Expose
@@ -49,17 +46,14 @@ public class NetAttackTopInfo extends AbstractModel {
 
     /**
     * 网络攻击漏洞维度top统计数据
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Vul")
     @Expose
     private TopInfo [] Vul;
 
     /**
-     * Get 网络攻击主机维度top统计数据
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网络攻击主机维度top统计数据 
      * @return Agent 网络攻击主机维度top统计数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TopInfo [] getAgent() {
         return this.Agent;
@@ -67,19 +61,15 @@ public class NetAttackTopInfo extends AbstractModel {
 
     /**
      * Set 网络攻击主机维度top统计数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Agent 网络攻击主机维度top统计数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAgent(TopInfo [] Agent) {
         this.Agent = Agent;
     }
 
     /**
-     * Get 网络攻击ip来源维度top统计数据
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网络攻击ip来源维度top统计数据 
      * @return SrcIp 网络攻击ip来源维度top统计数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TopInfo [] getSrcIp() {
         return this.SrcIp;
@@ -87,19 +77,15 @@ public class NetAttackTopInfo extends AbstractModel {
 
     /**
      * Set 网络攻击ip来源维度top统计数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SrcIp 网络攻击ip来源维度top统计数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSrcIp(TopInfo [] SrcIp) {
         this.SrcIp = SrcIp;
     }
 
     /**
-     * Get 网络攻击目标端口维度top统计数据
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网络攻击目标端口维度top统计数据 
      * @return DstPort 网络攻击目标端口维度top统计数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TopInfo [] getDstPort() {
         return this.DstPort;
@@ -107,19 +93,15 @@ public class NetAttackTopInfo extends AbstractModel {
 
     /**
      * Set 网络攻击目标端口维度top统计数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DstPort 网络攻击目标端口维度top统计数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDstPort(TopInfo [] DstPort) {
         this.DstPort = DstPort;
     }
 
     /**
-     * Get 网络攻击漏洞维度top统计数据
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网络攻击漏洞维度top统计数据 
      * @return Vul 网络攻击漏洞维度top统计数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TopInfo [] getVul() {
         return this.Vul;
@@ -127,9 +109,7 @@ public class NetAttackTopInfo extends AbstractModel {
 
     /**
      * Set 网络攻击漏洞维度top统计数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Vul 网络攻击漏洞维度top统计数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVul(TopInfo [] Vul) {
         this.Vul = Vul;

@@ -123,7 +123,6 @@ public class DescribeSecurityEventsCntResponse extends AbstractModel {
 
     /**
     * window 系统漏洞事件总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WindowVul")
     @Expose
@@ -131,7 +130,6 @@ public class DescribeSecurityEventsCntResponse extends AbstractModel {
 
     /**
     * linux系统漏洞事件总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LinuxVul")
     @Expose
@@ -369,10 +367,8 @@ public class DescribeSecurityEventsCntResponse extends AbstractModel {
     }
 
     /**
-     * Get window 系统漏洞事件总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get window 系统漏洞事件总数 
      * @return WindowVul window 系统漏洞事件总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SecurityEventInfo getWindowVul() {
         return this.WindowVul;
@@ -380,19 +376,15 @@ public class DescribeSecurityEventsCntResponse extends AbstractModel {
 
     /**
      * Set window 系统漏洞事件总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WindowVul window 系统漏洞事件总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWindowVul(SecurityEventInfo WindowVul) {
         this.WindowVul = WindowVul;
     }
 
     /**
-     * Get linux系统漏洞事件总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get linux系统漏洞事件总数 
      * @return LinuxVul linux系统漏洞事件总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SecurityEventInfo getLinuxVul() {
         return this.LinuxVul;
@@ -400,9 +392,7 @@ public class DescribeSecurityEventsCntResponse extends AbstractModel {
 
     /**
      * Set linux系统漏洞事件总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LinuxVul linux系统漏洞事件总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLinuxVul(SecurityEventInfo LinuxVul) {
         this.LinuxVul = LinuxVul;

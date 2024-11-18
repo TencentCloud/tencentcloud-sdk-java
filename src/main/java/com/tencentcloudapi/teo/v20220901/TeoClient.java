@@ -207,6 +207,17 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     }
 
     /**
+     *创建负载均衡实例。详情请参考 [快速创建负载均衡实例](https://cloud.tencent.com/document/product/1552/104223)。负载均衡功能内测中，如您需要使用请 [联系我们](https://cloud.tencent.com/online-service)。
+     * @param req CreateLoadBalancerRequest
+     * @return CreateLoadBalancerResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateLoadBalancerResponse CreateLoadBalancer(CreateLoadBalancerRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateLoadBalancer", CreateLoadBalancerResponse.class);
+    }
+
+    /**
      *创建源站组，以源站组的方式管理业务源站。此处配置的源站组可于**添加加速域名**和**四层代理**等功能中引用。
      * @param req CreateOriginGroupRequest
      * @return CreateOriginGroupResponse
@@ -420,6 +431,17 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     public DeleteL4ProxyRulesResponse DeleteL4ProxyRules(DeleteL4ProxyRulesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteL4ProxyRules", DeleteL4ProxyRulesResponse.class);
+    }
+
+    /**
+     *删除负载均衡实例，若负载均衡示例被其他服务（例如：四层代理等）引用的时候，示例无法被删除，需要先解除引用关系。负载均衡功能内测中，如您需要使用请 [联系我们](https://cloud.tencent.com/online-service)。
+     * @param req DeleteLoadBalancerRequest
+     * @return DeleteLoadBalancerResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteLoadBalancerResponse DeleteLoadBalancer(DeleteLoadBalancerRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteLoadBalancer", DeleteLoadBalancerResponse.class);
     }
 
     /**
@@ -753,6 +775,17 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     }
 
     /**
+     *查询负载均衡实例列表。负载均衡功能内测中，如您需要使用请 [联系我们](https://cloud.tencent.com/online-service)。
+     * @param req DescribeLoadBalancerListRequest
+     * @return DescribeLoadBalancerListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLoadBalancerListResponse DescribeLoadBalancerList(DescribeLoadBalancerListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLoadBalancerList", DescribeLoadBalancerListResponse.class);
+    }
+
+    /**
      *获取源站组列表
      * @param req DescribeOriginGroupRequest
      * @return DescribeOriginGroupResponse
@@ -761,6 +794,17 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     public DescribeOriginGroupResponse DescribeOriginGroup(DescribeOriginGroupRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeOriginGroup", DescribeOriginGroupResponse.class);
+    }
+
+    /**
+     *查询负载均衡实例下源站组健康状态。负载均衡功能内测中，如您需要使用请 [联系我们](https://cloud.tencent.com/online-service)。
+     * @param req DescribeOriginGroupHealthStatusRequest
+     * @return DescribeOriginGroupHealthStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeOriginGroupHealthStatusResponse DescribeOriginGroupHealthStatus(DescribeOriginGroupHealthStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeOriginGroupHealthStatus", DescribeOriginGroupHealthStatusResponse.class);
     }
 
     /**
@@ -888,7 +932,7 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     }
 
     /**
-     *本接口（DescribeTimingL7AnalysisData）查询七层数据分析类时序数据。
+     *本接口查询七层域名业务的时序数据。请注意本接口查询数据有 10 分钟左右延迟，建议拉取当前时间 10 分钟以前的数据。
      * @param req DescribeTimingL7AnalysisDataRequest
      * @return DescribeTimingL7AnalysisDataResponse
      * @throws TencentCloudSDKException
@@ -899,7 +943,7 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     }
 
     /**
-     *本接口（DescribeTimingL7CacheData）用于查询七层缓存分析时序类流量数据。
+     *本接口用于查询七层缓存分析时序类流量数据。此接口待废弃，请使用 <a href="https://cloud.tencent.com/document/product/1552/80648">DescribeTimingL7AnalysisData</a> 接口。
      * @param req DescribeTimingL7CacheDataRequest
      * @return DescribeTimingL7CacheDataResponse
      * @throws TencentCloudSDKException
@@ -910,7 +954,7 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     }
 
     /**
-     *本接口（DescribeTopL7AnalysisData）用于查询七层流量前topN的数据。
+     *本接口用于查询七层域名业务按照指定维度的 topN 数据。请注意本接口查询数据有 10 分钟左右延迟，建议拉取当前时间 10 分钟以前的数据。
      * @param req DescribeTopL7AnalysisDataRequest
      * @return DescribeTopL7AnalysisDataResponse
      * @throws TencentCloudSDKException
@@ -921,7 +965,7 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     }
 
     /**
-     *本接口（DescribeTopL7CacheData）用于查询七层缓存分析topN流量数据。
+     *本接口用于查询七层缓存分析 topN 数据。此接口待废弃，请使用 <a href="https://cloud.tencent.com/document/product/1552/80646"> DescribeTopL7AnalysisData</a> 接口。
      * @param req DescribeTopL7CacheDataRequest
      * @return DescribeTopL7CacheDataResponse
      * @throws TencentCloudSDKException
@@ -1218,6 +1262,17 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     public ModifyL4ProxyStatusResponse ModifyL4ProxyStatus(ModifyL4ProxyStatusRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyL4ProxyStatus", ModifyL4ProxyStatusResponse.class);
+    }
+
+    /**
+     *修改负载均衡实例配置。负载均衡功能内测中，如您需要使用请 [联系我们](https://cloud.tencent.com/online-service)。
+     * @param req ModifyLoadBalancerRequest
+     * @return ModifyLoadBalancerResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLoadBalancerResponse ModifyLoadBalancer(ModifyLoadBalancerRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyLoadBalancer", ModifyLoadBalancerResponse.class);
     }
 
     /**

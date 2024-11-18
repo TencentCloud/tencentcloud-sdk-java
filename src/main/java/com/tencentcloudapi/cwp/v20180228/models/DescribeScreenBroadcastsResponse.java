@@ -25,7 +25,6 @@ public class DescribeScreenBroadcastsResponse extends AbstractModel {
 
     /**
     * 播报文章列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("List")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeScreenBroadcastsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 播报文章列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 播报文章列表 
      * @return List 播报文章列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ScreenBroadcasts [] getList() {
         return this.List;
@@ -50,9 +47,7 @@ public class DescribeScreenBroadcastsResponse extends AbstractModel {
 
     /**
      * Set 播报文章列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param List 播报文章列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setList(ScreenBroadcasts [] List) {
         this.List = List;

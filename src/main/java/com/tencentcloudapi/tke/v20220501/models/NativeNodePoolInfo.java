@@ -187,6 +187,14 @@ public class NativeNodePoolInfo extends AbstractModel {
     private DataDisk [] DataDisks;
 
     /**
+    * 原生节点机型 Native, NativeCVM
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MachineType")
+    @Expose
+    private String MachineType;
+
+    /**
      * Get 伸缩配置
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Scaling 伸缩配置
@@ -586,6 +594,26 @@ public class NativeNodePoolInfo extends AbstractModel {
         this.DataDisks = DataDisks;
     }
 
+    /**
+     * Get 原生节点机型 Native, NativeCVM
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MachineType 原生节点机型 Native, NativeCVM
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getMachineType() {
+        return this.MachineType;
+    }
+
+    /**
+     * Set 原生节点机型 Native, NativeCVM
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MachineType 原生节点机型 Native, NativeCVM
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMachineType(String MachineType) {
+        this.MachineType = MachineType;
+    }
+
     public NativeNodePoolInfo() {
     }
 
@@ -675,6 +703,9 @@ public class NativeNodePoolInfo extends AbstractModel {
                 this.DataDisks[i] = new DataDisk(source.DataDisks[i]);
             }
         }
+        if (source.MachineType != null) {
+            this.MachineType = new String(source.MachineType);
+        }
     }
 
 
@@ -703,6 +734,7 @@ public class NativeNodePoolInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "ReadyReplicas", this.ReadyReplicas);
         this.setParamObj(map, prefix + "InternetAccessible.", this.InternetAccessible);
         this.setParamArrayObj(map, prefix + "DataDisks.", this.DataDisks);
+        this.setParamSimple(map, prefix + "MachineType", this.MachineType);
 
     }
 }

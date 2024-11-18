@@ -83,7 +83,6 @@ public class IMCdrInfo extends AbstractModel {
 
     /**
     * 会话ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SessionId")
     @Expose
@@ -91,7 +90,6 @@ public class IMCdrInfo extends AbstractModel {
 
     /**
     * 技能组ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SkillGroupId")
     @Expose
@@ -99,7 +97,6 @@ public class IMCdrInfo extends AbstractModel {
 
     /**
     * 技能组名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SkillGroupName")
     @Expose
@@ -269,10 +266,8 @@ public class IMCdrInfo extends AbstractModel {
     }
 
     /**
-     * Get 会话ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 会话ID 
      * @return SessionId 会话ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSessionId() {
         return this.SessionId;
@@ -280,19 +275,15 @@ public class IMCdrInfo extends AbstractModel {
 
     /**
      * Set 会话ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SessionId 会话ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSessionId(String SessionId) {
         this.SessionId = SessionId;
     }
 
     /**
-     * Get 技能组ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 技能组ID 
      * @return SkillGroupId 技能组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSkillGroupId() {
         return this.SkillGroupId;
@@ -300,19 +291,15 @@ public class IMCdrInfo extends AbstractModel {
 
     /**
      * Set 技能组ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SkillGroupId 技能组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSkillGroupId(String SkillGroupId) {
         this.SkillGroupId = SkillGroupId;
     }
 
     /**
-     * Get 技能组名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 技能组名称 
      * @return SkillGroupName 技能组名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSkillGroupName() {
         return this.SkillGroupName;
@@ -320,9 +307,7 @@ public class IMCdrInfo extends AbstractModel {
 
     /**
      * Set 技能组名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SkillGroupName 技能组名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSkillGroupName(String SkillGroupName) {
         this.SkillGroupName = SkillGroupName;

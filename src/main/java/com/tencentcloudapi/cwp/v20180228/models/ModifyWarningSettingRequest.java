@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class ModifyWarningSettingRequest extends AbstractModel {
 
     /**
-    * 告警设置的修改内容
+    * 修改告警设置的内容
     */
     @SerializedName("WarningObjects")
     @Expose
     private WarningObject [] WarningObjects;
 
     /**
-     * Get 告警设置的修改内容 
-     * @return WarningObjects 告警设置的修改内容
+     * Get 修改告警设置的内容 
+     * @return WarningObjects 修改告警设置的内容
      */
     public WarningObject [] getWarningObjects() {
         return this.WarningObjects;
     }
 
     /**
-     * Set 告警设置的修改内容
-     * @param WarningObjects 告警设置的修改内容
+     * Set 修改告警设置的内容
+     * @param WarningObjects 修改告警设置的内容
      */
     public void setWarningObjects(WarningObject [] WarningObjects) {
         this.WarningObjects = WarningObjects;

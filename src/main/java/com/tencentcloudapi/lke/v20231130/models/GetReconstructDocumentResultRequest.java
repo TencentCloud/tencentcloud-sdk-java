@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class GetReconstructDocumentResultRequest extends AbstractModel {
 
     /**
-    * 任务唯一id
+    * 任务唯一Id。[CreateReconstructDocumentFlow](https://cloud.tencent.com/document/product/1759/107506) 返回的TaskId。
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-     * Get 任务唯一id 
-     * @return TaskId 任务唯一id
+     * Get 任务唯一Id。[CreateReconstructDocumentFlow](https://cloud.tencent.com/document/product/1759/107506) 返回的TaskId。 
+     * @return TaskId 任务唯一Id。[CreateReconstructDocumentFlow](https://cloud.tencent.com/document/product/1759/107506) 返回的TaskId。
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 任务唯一id
-     * @param TaskId 任务唯一id
+     * Set 任务唯一Id。[CreateReconstructDocumentFlow](https://cloud.tencent.com/document/product/1759/107506) 返回的TaskId。
+     * @param TaskId 任务唯一Id。[CreateReconstructDocumentFlow](https://cloud.tencent.com/document/product/1759/107506) 返回的TaskId。
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

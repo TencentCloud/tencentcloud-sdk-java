@@ -25,17 +25,14 @@ public class Clb extends AbstractModel {
 
     /**
     * 负载均衡IP
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClbIp")
     @Expose
     private String ClbIp;
 
     /**
-     * Get 负载均衡IP
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 负载均衡IP 
      * @return ClbIp 负载均衡IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClbIp() {
         return this.ClbIp;
@@ -43,9 +40,7 @@ public class Clb extends AbstractModel {
 
     /**
      * Set 负载均衡IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClbIp 负载均衡IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClbIp(String ClbIp) {
         this.ClbIp = ClbIp;

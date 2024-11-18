@@ -182,19 +182,6 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
-     *云护航计费产品已下线
-
-云护航服务使用完成后，该接口可以确认收货
-     * @param req CreateCloudProtectServiceOrderRecordRequest
-     * @return CreateCloudProtectServiceOrderRecordResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateCloudProtectServiceOrderRecordResponse CreateCloudProtectServiceOrderRecord(CreateCloudProtectServiceOrderRecordRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "CreateCloudProtectServiceOrderRecord", CreateCloudProtectServiceOrderRecordResponse.class);
-    }
-
-    /**
      *创建应急漏洞扫描任务
      * @param req CreateEmergencyVulScanRequest
      * @return CreateEmergencyVulScanResponse
@@ -1375,7 +1362,9 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
-     *按分页形式展示网络攻击日志列表
+     *DescribeAttackEvents 代替
+
+按分页形式展示网络攻击日志列表
      * @param req DescribeAttackLogsRequest
      * @return DescribeAttackLogsResponse
      * @throws TencentCloudSDKException
@@ -1386,7 +1375,9 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
-     *查询攻击溯源
+     *已废弃
+
+查询攻击溯源
      * @param req DescribeAttackSourceRequest
      * @return DescribeAttackSourceResponse
      * @throws TencentCloudSDKException
@@ -1397,7 +1388,9 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
-     *查询攻击溯源事件
+     *已废弃
+
+查询攻击溯源事件
      * @param req DescribeAttackSourceEventsRequest
      * @return DescribeAttackSourceEventsResponse
      * @throws TencentCloudSDKException
@@ -1958,20 +1951,9 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
-     *云护航计费产品已下线
+     *接口已无效
 
-查询云护航服务订单列表
-     * @param req DescribeCloudProtectServiceOrderListRequest
-     * @return DescribeCloudProtectServiceOrderListResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeCloudProtectServiceOrderListResponse DescribeCloudProtectServiceOrderList(DescribeCloudProtectServiceOrderListRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeCloudProtectServiceOrderList", DescribeCloudProtectServiceOrderListResponse.class);
-    }
-
-    /**
-     *本接口 (DescribeComponentStatistics) 用于获取组件统计列表数据。
+本接口 (DescribeComponentStatistics) 用于获取组件统计列表数据。
      * @param req DescribeComponentStatisticsRequest
      * @return DescribeComponentStatisticsResponse
      * @throws TencentCloudSDKException
@@ -4031,7 +4013,6 @@ public class CwpClient extends AbstractClient{
 
     /**
      *编辑反弹Shell规则（支持多服务器选择）
-
      * @param req EditReverseShellRulesRequest
      * @return EditReverseShellRulesResponse
      * @throws TencentCloudSDKException

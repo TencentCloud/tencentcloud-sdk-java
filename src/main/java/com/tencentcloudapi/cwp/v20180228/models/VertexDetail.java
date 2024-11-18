@@ -25,7 +25,6 @@ public class VertexDetail extends AbstractModel {
 
     /**
     * 该节点类型，进程:1；网络:2；文件:3；ssh:4
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -33,7 +32,6 @@ public class VertexDetail extends AbstractModel {
 
     /**
     * 各节点类型用到的时间，2022-11-29 00:00:00 格式
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Time")
     @Expose
@@ -41,7 +39,6 @@ public class VertexDetail extends AbstractModel {
 
     /**
     * 告警信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AlarmInfo")
     @Expose
@@ -49,7 +46,6 @@ public class VertexDetail extends AbstractModel {
 
     /**
     * 进程名，当该节点为进程时生效
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProcName")
     @Expose
@@ -57,7 +53,6 @@ public class VertexDetail extends AbstractModel {
 
     /**
     * 命令行，当该节点为进程时生效
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CmdLine")
     @Expose
@@ -65,7 +60,6 @@ public class VertexDetail extends AbstractModel {
 
     /**
     * 进程id，当该节点为进程时生效
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Pid")
     @Expose
@@ -73,7 +67,6 @@ public class VertexDetail extends AbstractModel {
 
     /**
     * 文件md5，当该节点为文件时生效
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileMd5")
     @Expose
@@ -81,7 +74,6 @@ public class VertexDetail extends AbstractModel {
 
     /**
     * 文件写入内容，当该节点为文件时生效
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileContent")
     @Expose
@@ -89,7 +81,6 @@ public class VertexDetail extends AbstractModel {
 
     /**
     * 文件路径，当该节点为文件时生效
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FilePath")
     @Expose
@@ -97,7 +88,6 @@ public class VertexDetail extends AbstractModel {
 
     /**
     * 文件创建时间，当该节点为文件时生效
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileCreateTime")
     @Expose
@@ -105,7 +95,6 @@ public class VertexDetail extends AbstractModel {
 
     /**
     * 请求目的地址，当该节点为网络时生效
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Address")
     @Expose
@@ -113,7 +102,6 @@ public class VertexDetail extends AbstractModel {
 
     /**
     * 目标端口，当该节点为网络时生效
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DstPort")
     @Expose
@@ -121,7 +109,6 @@ public class VertexDetail extends AbstractModel {
 
     /**
     * 登录源ip，当该节点为ssh时生效
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SrcIP")
     @Expose
@@ -129,7 +116,6 @@ public class VertexDetail extends AbstractModel {
 
     /**
     * 登录用户名用户组，当该节点为ssh时生效
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("User")
     @Expose
@@ -137,7 +123,6 @@ public class VertexDetail extends AbstractModel {
 
     /**
     * 漏洞名称，当该节点为漏洞时生效
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VulName")
     @Expose
@@ -145,7 +130,6 @@ public class VertexDetail extends AbstractModel {
 
     /**
     * 漏洞利用时间，当该节点为漏洞时生效
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VulTime")
     @Expose
@@ -153,7 +137,6 @@ public class VertexDetail extends AbstractModel {
 
     /**
     * http请求内容，当该节点为漏洞时生效
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HttpContent")
     @Expose
@@ -161,7 +144,6 @@ public class VertexDetail extends AbstractModel {
 
     /**
     * 漏洞利用者来源ip，当该节点为漏洞时生效
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VulSrcIP")
     @Expose
@@ -169,17 +151,14 @@ public class VertexDetail extends AbstractModel {
 
     /**
     * 点id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VertexId")
     @Expose
     private String VertexId;
 
     /**
-     * Get 该节点类型，进程:1；网络:2；文件:3；ssh:4
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该节点类型，进程:1；网络:2；文件:3；ssh:4 
      * @return Type 该节点类型，进程:1；网络:2；文件:3；ssh:4
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getType() {
         return this.Type;
@@ -187,19 +166,15 @@ public class VertexDetail extends AbstractModel {
 
     /**
      * Set 该节点类型，进程:1；网络:2；文件:3；ssh:4
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 该节点类型，进程:1；网络:2；文件:3；ssh:4
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(Long Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 各节点类型用到的时间，2022-11-29 00:00:00 格式
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 各节点类型用到的时间，2022-11-29 00:00:00 格式 
      * @return Time 各节点类型用到的时间，2022-11-29 00:00:00 格式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTime() {
         return this.Time;
@@ -207,19 +182,15 @@ public class VertexDetail extends AbstractModel {
 
     /**
      * Set 各节点类型用到的时间，2022-11-29 00:00:00 格式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Time 各节点类型用到的时间，2022-11-29 00:00:00 格式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTime(String Time) {
         this.Time = Time;
     }
 
     /**
-     * Get 告警信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 告警信息 
      * @return AlarmInfo 告警信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AlarmInfo [] getAlarmInfo() {
         return this.AlarmInfo;
@@ -227,19 +198,15 @@ public class VertexDetail extends AbstractModel {
 
     /**
      * Set 告警信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AlarmInfo 告警信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAlarmInfo(AlarmInfo [] AlarmInfo) {
         this.AlarmInfo = AlarmInfo;
     }
 
     /**
-     * Get 进程名，当该节点为进程时生效
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 进程名，当该节点为进程时生效 
      * @return ProcName 进程名，当该节点为进程时生效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProcName() {
         return this.ProcName;
@@ -247,19 +214,15 @@ public class VertexDetail extends AbstractModel {
 
     /**
      * Set 进程名，当该节点为进程时生效
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProcName 进程名，当该节点为进程时生效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProcName(String ProcName) {
         this.ProcName = ProcName;
     }
 
     /**
-     * Get 命令行，当该节点为进程时生效
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 命令行，当该节点为进程时生效 
      * @return CmdLine 命令行，当该节点为进程时生效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCmdLine() {
         return this.CmdLine;
@@ -267,19 +230,15 @@ public class VertexDetail extends AbstractModel {
 
     /**
      * Set 命令行，当该节点为进程时生效
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CmdLine 命令行，当该节点为进程时生效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCmdLine(String CmdLine) {
         this.CmdLine = CmdLine;
     }
 
     /**
-     * Get 进程id，当该节点为进程时生效
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 进程id，当该节点为进程时生效 
      * @return Pid 进程id，当该节点为进程时生效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPid() {
         return this.Pid;
@@ -287,19 +246,15 @@ public class VertexDetail extends AbstractModel {
 
     /**
      * Set 进程id，当该节点为进程时生效
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Pid 进程id，当该节点为进程时生效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPid(String Pid) {
         this.Pid = Pid;
     }
 
     /**
-     * Get 文件md5，当该节点为文件时生效
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文件md5，当该节点为文件时生效 
      * @return FileMd5 文件md5，当该节点为文件时生效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFileMd5() {
         return this.FileMd5;
@@ -307,19 +262,15 @@ public class VertexDetail extends AbstractModel {
 
     /**
      * Set 文件md5，当该节点为文件时生效
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FileMd5 文件md5，当该节点为文件时生效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileMd5(String FileMd5) {
         this.FileMd5 = FileMd5;
     }
 
     /**
-     * Get 文件写入内容，当该节点为文件时生效
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文件写入内容，当该节点为文件时生效 
      * @return FileContent 文件写入内容，当该节点为文件时生效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFileContent() {
         return this.FileContent;
@@ -327,19 +278,15 @@ public class VertexDetail extends AbstractModel {
 
     /**
      * Set 文件写入内容，当该节点为文件时生效
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FileContent 文件写入内容，当该节点为文件时生效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileContent(String FileContent) {
         this.FileContent = FileContent;
     }
 
     /**
-     * Get 文件路径，当该节点为文件时生效
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文件路径，当该节点为文件时生效 
      * @return FilePath 文件路径，当该节点为文件时生效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFilePath() {
         return this.FilePath;
@@ -347,19 +294,15 @@ public class VertexDetail extends AbstractModel {
 
     /**
      * Set 文件路径，当该节点为文件时生效
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FilePath 文件路径，当该节点为文件时生效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFilePath(String FilePath) {
         this.FilePath = FilePath;
     }
 
     /**
-     * Get 文件创建时间，当该节点为文件时生效
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文件创建时间，当该节点为文件时生效 
      * @return FileCreateTime 文件创建时间，当该节点为文件时生效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFileCreateTime() {
         return this.FileCreateTime;
@@ -367,19 +310,15 @@ public class VertexDetail extends AbstractModel {
 
     /**
      * Set 文件创建时间，当该节点为文件时生效
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FileCreateTime 文件创建时间，当该节点为文件时生效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileCreateTime(String FileCreateTime) {
         this.FileCreateTime = FileCreateTime;
     }
 
     /**
-     * Get 请求目的地址，当该节点为网络时生效
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 请求目的地址，当该节点为网络时生效 
      * @return Address 请求目的地址，当该节点为网络时生效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAddress() {
         return this.Address;
@@ -387,19 +326,15 @@ public class VertexDetail extends AbstractModel {
 
     /**
      * Set 请求目的地址，当该节点为网络时生效
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Address 请求目的地址，当该节点为网络时生效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAddress(String Address) {
         this.Address = Address;
     }
 
     /**
-     * Get 目标端口，当该节点为网络时生效
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 目标端口，当该节点为网络时生效 
      * @return DstPort 目标端口，当该节点为网络时生效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDstPort() {
         return this.DstPort;
@@ -407,19 +342,15 @@ public class VertexDetail extends AbstractModel {
 
     /**
      * Set 目标端口，当该节点为网络时生效
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DstPort 目标端口，当该节点为网络时生效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDstPort(Long DstPort) {
         this.DstPort = DstPort;
     }
 
     /**
-     * Get 登录源ip，当该节点为ssh时生效
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 登录源ip，当该节点为ssh时生效 
      * @return SrcIP 登录源ip，当该节点为ssh时生效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSrcIP() {
         return this.SrcIP;
@@ -427,19 +358,15 @@ public class VertexDetail extends AbstractModel {
 
     /**
      * Set 登录源ip，当该节点为ssh时生效
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SrcIP 登录源ip，当该节点为ssh时生效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSrcIP(String SrcIP) {
         this.SrcIP = SrcIP;
     }
 
     /**
-     * Get 登录用户名用户组，当该节点为ssh时生效
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 登录用户名用户组，当该节点为ssh时生效 
      * @return User 登录用户名用户组，当该节点为ssh时生效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUser() {
         return this.User;
@@ -447,19 +374,15 @@ public class VertexDetail extends AbstractModel {
 
     /**
      * Set 登录用户名用户组，当该节点为ssh时生效
-注意：此字段可能返回 null，表示取不到有效值。
      * @param User 登录用户名用户组，当该节点为ssh时生效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUser(String User) {
         this.User = User;
     }
 
     /**
-     * Get 漏洞名称，当该节点为漏洞时生效
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 漏洞名称，当该节点为漏洞时生效 
      * @return VulName 漏洞名称，当该节点为漏洞时生效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVulName() {
         return this.VulName;
@@ -467,19 +390,15 @@ public class VertexDetail extends AbstractModel {
 
     /**
      * Set 漏洞名称，当该节点为漏洞时生效
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VulName 漏洞名称，当该节点为漏洞时生效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVulName(String VulName) {
         this.VulName = VulName;
     }
 
     /**
-     * Get 漏洞利用时间，当该节点为漏洞时生效
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 漏洞利用时间，当该节点为漏洞时生效 
      * @return VulTime 漏洞利用时间，当该节点为漏洞时生效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVulTime() {
         return this.VulTime;
@@ -487,19 +406,15 @@ public class VertexDetail extends AbstractModel {
 
     /**
      * Set 漏洞利用时间，当该节点为漏洞时生效
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VulTime 漏洞利用时间，当该节点为漏洞时生效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVulTime(String VulTime) {
         this.VulTime = VulTime;
     }
 
     /**
-     * Get http请求内容，当该节点为漏洞时生效
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get http请求内容，当该节点为漏洞时生效 
      * @return HttpContent http请求内容，当该节点为漏洞时生效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHttpContent() {
         return this.HttpContent;
@@ -507,19 +422,15 @@ public class VertexDetail extends AbstractModel {
 
     /**
      * Set http请求内容，当该节点为漏洞时生效
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HttpContent http请求内容，当该节点为漏洞时生效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHttpContent(String HttpContent) {
         this.HttpContent = HttpContent;
     }
 
     /**
-     * Get 漏洞利用者来源ip，当该节点为漏洞时生效
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 漏洞利用者来源ip，当该节点为漏洞时生效 
      * @return VulSrcIP 漏洞利用者来源ip，当该节点为漏洞时生效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVulSrcIP() {
         return this.VulSrcIP;
@@ -527,19 +438,15 @@ public class VertexDetail extends AbstractModel {
 
     /**
      * Set 漏洞利用者来源ip，当该节点为漏洞时生效
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VulSrcIP 漏洞利用者来源ip，当该节点为漏洞时生效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVulSrcIP(String VulSrcIP) {
         this.VulSrcIP = VulSrcIP;
     }
 
     /**
-     * Get 点id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 点id 
      * @return VertexId 点id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVertexId() {
         return this.VertexId;
@@ -547,9 +454,7 @@ public class VertexDetail extends AbstractModel {
 
     /**
      * Set 点id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VertexId 点id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVertexId(String VertexId) {
         this.VertexId = VertexId;

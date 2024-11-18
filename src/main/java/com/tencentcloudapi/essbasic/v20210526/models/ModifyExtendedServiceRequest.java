@@ -44,7 +44,6 @@ public class ModifyExtendedServiceRequest extends AbstractModel {
 <li>AUTO_SIGN             企业自动签（自动签署）</li>
 <li>  OVERSEA_SIGN          企业与港澳台居民签署合同</li>
 <li>  MOBILE_CHECK_APPROVER 使用手机号验证签署方身份</li>
-<li> PAGING_SEAL           骑缝章</li>
 <li> DOWNLOAD_FLOW         授权渠道下载合同 </li>
 <li>AGE_LIMIT_EXPANSION 拓宽签署方年龄限制</li>
 <li>HIDE_OPERATOR_DISPLAY 隐藏合同经办人姓名</li>
@@ -70,6 +69,7 @@ public class ModifyExtendedServiceRequest extends AbstractModel {
 <ul>
 <li>WEIXINAPP : 短链直接跳转到电子签小程序  (默认值)</li>
 <li>APP : 第三方APP或小程序跳转电子签小程序</li>
+<li>WEIXIN_QRCODE_URL：直接跳转至电子签小程序的二维码链接，无需通过中转页。<font color="red">您需要自行将其转换为二维码，使用微信扫码后可直接进入。请注意，直接点击链接是无效的。</font></li>
 </ul>
     */
     @SerializedName("Endpoint")
@@ -130,7 +130,6 @@ public class ModifyExtendedServiceRequest extends AbstractModel {
 <li>AUTO_SIGN             企业自动签（自动签署）</li>
 <li>  OVERSEA_SIGN          企业与港澳台居民签署合同</li>
 <li>  MOBILE_CHECK_APPROVER 使用手机号验证签署方身份</li>
-<li> PAGING_SEAL           骑缝章</li>
 <li> DOWNLOAD_FLOW         授权渠道下载合同 </li>
 <li>AGE_LIMIT_EXPANSION 拓宽签署方年龄限制</li>
 <li>HIDE_OPERATOR_DISPLAY 隐藏合同经办人姓名</li>
@@ -140,7 +139,6 @@ public class ModifyExtendedServiceRequest extends AbstractModel {
 <li>AUTO_SIGN             企业自动签（自动签署）</li>
 <li>  OVERSEA_SIGN          企业与港澳台居民签署合同</li>
 <li>  MOBILE_CHECK_APPROVER 使用手机号验证签署方身份</li>
-<li> PAGING_SEAL           骑缝章</li>
 <li> DOWNLOAD_FLOW         授权渠道下载合同 </li>
 <li>AGE_LIMIT_EXPANSION 拓宽签署方年龄限制</li>
 <li>HIDE_OPERATOR_DISPLAY 隐藏合同经办人姓名</li>
@@ -156,7 +154,6 @@ public class ModifyExtendedServiceRequest extends AbstractModel {
 <li>AUTO_SIGN             企业自动签（自动签署）</li>
 <li>  OVERSEA_SIGN          企业与港澳台居民签署合同</li>
 <li>  MOBILE_CHECK_APPROVER 使用手机号验证签署方身份</li>
-<li> PAGING_SEAL           骑缝章</li>
 <li> DOWNLOAD_FLOW         授权渠道下载合同 </li>
 <li>AGE_LIMIT_EXPANSION 拓宽签署方年龄限制</li>
 <li>HIDE_OPERATOR_DISPLAY 隐藏合同经办人姓名</li>
@@ -166,7 +163,6 @@ public class ModifyExtendedServiceRequest extends AbstractModel {
 <li>AUTO_SIGN             企业自动签（自动签署）</li>
 <li>  OVERSEA_SIGN          企业与港澳台居民签署合同</li>
 <li>  MOBILE_CHECK_APPROVER 使用手机号验证签署方身份</li>
-<li> PAGING_SEAL           骑缝章</li>
 <li> DOWNLOAD_FLOW         授权渠道下载合同 </li>
 <li>AGE_LIMIT_EXPANSION 拓宽签署方年龄限制</li>
 <li>HIDE_OPERATOR_DISPLAY 隐藏合同经办人姓名</li>
@@ -213,11 +209,13 @@ public class ModifyExtendedServiceRequest extends AbstractModel {
 <ul>
 <li>WEIXINAPP : 短链直接跳转到电子签小程序  (默认值)</li>
 <li>APP : 第三方APP或小程序跳转电子签小程序</li>
+<li>WEIXIN_QRCODE_URL：直接跳转至电子签小程序的二维码链接，无需通过中转页。<font color="red">您需要自行将其转换为二维码，使用微信扫码后可直接进入。请注意，直接点击链接是无效的。</font></li>
 </ul> 
      * @return Endpoint 链接跳转类型，支持以下类型
 <ul>
 <li>WEIXINAPP : 短链直接跳转到电子签小程序  (默认值)</li>
 <li>APP : 第三方APP或小程序跳转电子签小程序</li>
+<li>WEIXIN_QRCODE_URL：直接跳转至电子签小程序的二维码链接，无需通过中转页。<font color="red">您需要自行将其转换为二维码，使用微信扫码后可直接进入。请注意，直接点击链接是无效的。</font></li>
 </ul>
      */
     public String getEndpoint() {
@@ -229,11 +227,13 @@ public class ModifyExtendedServiceRequest extends AbstractModel {
 <ul>
 <li>WEIXINAPP : 短链直接跳转到电子签小程序  (默认值)</li>
 <li>APP : 第三方APP或小程序跳转电子签小程序</li>
+<li>WEIXIN_QRCODE_URL：直接跳转至电子签小程序的二维码链接，无需通过中转页。<font color="red">您需要自行将其转换为二维码，使用微信扫码后可直接进入。请注意，直接点击链接是无效的。</font></li>
 </ul>
      * @param Endpoint 链接跳转类型，支持以下类型
 <ul>
 <li>WEIXINAPP : 短链直接跳转到电子签小程序  (默认值)</li>
 <li>APP : 第三方APP或小程序跳转电子签小程序</li>
+<li>WEIXIN_QRCODE_URL：直接跳转至电子签小程序的二维码链接，无需通过中转页。<font color="red">您需要自行将其转换为二维码，使用微信扫码后可直接进入。请注意，直接点击链接是无效的。</font></li>
 </ul>
      */
     public void setEndpoint(String Endpoint) {

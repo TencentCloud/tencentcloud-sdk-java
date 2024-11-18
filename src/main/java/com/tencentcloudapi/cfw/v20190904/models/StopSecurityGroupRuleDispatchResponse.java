@@ -25,7 +25,6 @@ public class StopSecurityGroupRuleDispatchResponse extends AbstractModel {
 
     /**
     * true代表成功，false代表错误
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -39,10 +38,8 @@ public class StopSecurityGroupRuleDispatchResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get true代表成功，false代表错误
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get true代表成功，false代表错误 
      * @return Status true代表成功，false代表错误
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getStatus() {
         return this.Status;
@@ -50,9 +47,7 @@ public class StopSecurityGroupRuleDispatchResponse extends AbstractModel {
 
     /**
      * Set true代表成功，false代表错误
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status true代表成功，false代表错误
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Boolean Status) {
         this.Status = Status;

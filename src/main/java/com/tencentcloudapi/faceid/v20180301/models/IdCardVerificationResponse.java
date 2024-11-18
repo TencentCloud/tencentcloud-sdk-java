@@ -25,7 +25,7 @@ public class IdCardVerificationResponse extends AbstractModel {
 
     /**
     * 认证结果码，收费情况如下。
-收费结果码：
+- 收费结果码：
 0: 姓名和身份证号一致
 -1: 姓名和身份证号不一致
 不收费结果码：
@@ -56,7 +56,7 @@ public class IdCardVerificationResponse extends AbstractModel {
 
     /**
      * Get 认证结果码，收费情况如下。
-收费结果码：
+- 收费结果码：
 0: 姓名和身份证号一致
 -1: 姓名和身份证号不一致
 不收费结果码：
@@ -67,7 +67,7 @@ public class IdCardVerificationResponse extends AbstractModel {
 -6: 权威比对系统升级中，请稍后再试
 -7: 认证次数超过当日限制 
      * @return Result 认证结果码，收费情况如下。
-收费结果码：
+- 收费结果码：
 0: 姓名和身份证号一致
 -1: 姓名和身份证号不一致
 不收费结果码：
@@ -84,7 +84,7 @@ public class IdCardVerificationResponse extends AbstractModel {
 
     /**
      * Set 认证结果码，收费情况如下。
-收费结果码：
+- 收费结果码：
 0: 姓名和身份证号一致
 -1: 姓名和身份证号不一致
 不收费结果码：
@@ -95,7 +95,7 @@ public class IdCardVerificationResponse extends AbstractModel {
 -6: 权威比对系统升级中，请稍后再试
 -7: 认证次数超过当日限制
      * @param Result 认证结果码，收费情况如下。
-收费结果码：
+- 收费结果码：
 0: 姓名和身份证号一致
 -1: 姓名和身份证号不一致
 不收费结果码：

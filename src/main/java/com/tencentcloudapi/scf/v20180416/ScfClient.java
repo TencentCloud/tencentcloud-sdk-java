@@ -68,6 +68,17 @@ public class ScfClient extends AbstractClient{
     }
 
     /**
+     *创建自定义域名
+     * @param req CreateCustomDomainRequest
+     * @return CreateCustomDomainResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCustomDomainResponse CreateCustomDomain(CreateCustomDomainRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateCustomDomain", CreateCustomDomainResponse.class);
+    }
+
+    /**
      *该接口根据传入参数创建新的函数。
      * @param req CreateFunctionRequest
      * @return CreateFunctionResponse
@@ -109,6 +120,17 @@ public class ScfClient extends AbstractClient{
     public DeleteAliasResponse DeleteAlias(DeleteAliasRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteAlias", DeleteAliasResponse.class);
+    }
+
+    /**
+     *删除自定义域名
+     * @param req DeleteCustomDomainRequest
+     * @return DeleteCustomDomainResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCustomDomainResponse DeleteCustomDomain(DeleteCustomDomainRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteCustomDomain", DeleteCustomDomainResponse.class);
     }
 
     /**
@@ -208,6 +230,17 @@ public class ScfClient extends AbstractClient{
     public GetAsyncEventStatusResponse GetAsyncEventStatus(GetAsyncEventStatusRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "GetAsyncEventStatus", GetAsyncEventStatusResponse.class);
+    }
+
+    /**
+     *查看云函数自定义域名详情
+     * @param req GetCustomDomainRequest
+     * @return GetCustomDomainResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetCustomDomainResponse GetCustomDomain(GetCustomDomainRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetCustomDomain", GetCustomDomainResponse.class);
     }
 
     /**
@@ -340,6 +373,17 @@ public class ScfClient extends AbstractClient{
     public ListAsyncEventsResponse ListAsyncEvents(ListAsyncEventsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ListAsyncEvents", ListAsyncEventsResponse.class);
+    }
+
+    /**
+     *遍历域名列表信息
+     * @param req ListCustomDomainsRequest
+     * @return ListCustomDomainsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListCustomDomainsResponse ListCustomDomains(ListCustomDomainsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListCustomDomains", ListCustomDomainsResponse.class);
     }
 
     /**
@@ -483,6 +527,17 @@ public class ScfClient extends AbstractClient{
     public UpdateAliasResponse UpdateAlias(UpdateAliasRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "UpdateAlias", UpdateAliasResponse.class);
+    }
+
+    /**
+     *更新自定义域名相关配置
+     * @param req UpdateCustomDomainRequest
+     * @return UpdateCustomDomainResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateCustomDomainResponse UpdateCustomDomain(UpdateCustomDomainRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateCustomDomain", UpdateCustomDomainResponse.class);
     }
 
     /**

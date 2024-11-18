@@ -228,7 +228,6 @@ public class FileTamperEvent extends AbstractModel {
 
     /**
     * 目标文件更新时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TargetModifyTime")
     @Expose
@@ -236,7 +235,6 @@ public class FileTamperEvent extends AbstractModel {
 
     /**
     * 目标文件创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TargetCreatTime")
     @Expose
@@ -272,7 +270,6 @@ public class FileTamperEvent extends AbstractModel {
 
     /**
     * 进程名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExeName")
     @Expose
@@ -280,7 +277,6 @@ public class FileTamperEvent extends AbstractModel {
 
     /**
     *  主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MachineExtraInfo")
     @Expose
@@ -290,7 +286,6 @@ public class FileTamperEvent extends AbstractModel {
     * 文件威胁行为
 <li>read 读取文件</li>
 <li>write 修改文件</li>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileAction")
     @Expose
@@ -761,10 +756,8 @@ public class FileTamperEvent extends AbstractModel {
     }
 
     /**
-     * Get 目标文件更新时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 目标文件更新时间 
      * @return TargetModifyTime 目标文件更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTargetModifyTime() {
         return this.TargetModifyTime;
@@ -772,19 +765,15 @@ public class FileTamperEvent extends AbstractModel {
 
     /**
      * Set 目标文件更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TargetModifyTime 目标文件更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTargetModifyTime(String TargetModifyTime) {
         this.TargetModifyTime = TargetModifyTime;
     }
 
     /**
-     * Get 目标文件创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 目标文件创建时间 
      * @return TargetCreatTime 目标文件创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTargetCreatTime() {
         return this.TargetCreatTime;
@@ -792,9 +781,7 @@ public class FileTamperEvent extends AbstractModel {
 
     /**
      * Set 目标文件创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TargetCreatTime 目标文件创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTargetCreatTime(String TargetCreatTime) {
         this.TargetCreatTime = TargetCreatTime;
@@ -865,10 +852,8 @@ public class FileTamperEvent extends AbstractModel {
     }
 
     /**
-     * Get 进程名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 进程名称 
      * @return ExeName 进程名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExeName() {
         return this.ExeName;
@@ -876,19 +861,15 @@ public class FileTamperEvent extends AbstractModel {
 
     /**
      * Set 进程名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExeName 进程名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExeName(String ExeName) {
         this.ExeName = ExeName;
     }
 
     /**
-     * Get  主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get  主机额外信息 
      * @return MachineExtraInfo  主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public MachineExtraInfo getMachineExtraInfo() {
         return this.MachineExtraInfo;
@@ -896,9 +877,7 @@ public class FileTamperEvent extends AbstractModel {
 
     /**
      * Set  主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MachineExtraInfo  主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMachineExtraInfo(MachineExtraInfo MachineExtraInfo) {
         this.MachineExtraInfo = MachineExtraInfo;
@@ -907,12 +886,10 @@ public class FileTamperEvent extends AbstractModel {
     /**
      * Get 文件威胁行为
 <li>read 读取文件</li>
-<li>write 修改文件</li>
-注意：此字段可能返回 null，表示取不到有效值。 
+<li>write 修改文件</li> 
      * @return FileAction 文件威胁行为
 <li>read 读取文件</li>
 <li>write 修改文件</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFileAction() {
         return this.FileAction;
@@ -922,11 +899,9 @@ public class FileTamperEvent extends AbstractModel {
      * Set 文件威胁行为
 <li>read 读取文件</li>
 <li>write 修改文件</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FileAction 文件威胁行为
 <li>read 读取文件</li>
 <li>write 修改文件</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileAction(String FileAction) {
         this.FileAction = FileAction;

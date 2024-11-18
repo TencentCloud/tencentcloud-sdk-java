@@ -25,7 +25,6 @@ public class BaselineEffectHost extends AbstractModel {
 
     /**
     * 通过项
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PassCount")
     @Expose
@@ -33,7 +32,6 @@ public class BaselineEffectHost extends AbstractModel {
 
     /**
     * 风险项
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FailCount")
     @Expose
@@ -41,7 +39,6 @@ public class BaselineEffectHost extends AbstractModel {
 
     /**
     * 首次检测事件
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FirstScanTime")
     @Expose
@@ -49,7 +46,6 @@ public class BaselineEffectHost extends AbstractModel {
 
     /**
     * 最后检测时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LastScanTime")
     @Expose
@@ -57,7 +53,6 @@ public class BaselineEffectHost extends AbstractModel {
 
     /**
     * 风险项处理状态状态：0-未通过，1-通过
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -65,7 +60,6 @@ public class BaselineEffectHost extends AbstractModel {
 
     /**
     * 主机Quuid
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Quuid")
     @Expose
@@ -73,7 +67,6 @@ public class BaselineEffectHost extends AbstractModel {
 
     /**
     * 主机IP
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HostIp")
     @Expose
@@ -81,7 +74,6 @@ public class BaselineEffectHost extends AbstractModel {
 
     /**
     * 主机别名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AliasName")
     @Expose
@@ -89,7 +81,6 @@ public class BaselineEffectHost extends AbstractModel {
 
     /**
     * 主机Uuid
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Uuid")
     @Expose
@@ -97,17 +88,14 @@ public class BaselineEffectHost extends AbstractModel {
 
     /**
     * 检测中状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxStatus")
     @Expose
     private Long MaxStatus;
 
     /**
-     * Get 通过项
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 通过项 
      * @return PassCount 通过项
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPassCount() {
         return this.PassCount;
@@ -115,19 +103,15 @@ public class BaselineEffectHost extends AbstractModel {
 
     /**
      * Set 通过项
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PassCount 通过项
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPassCount(Long PassCount) {
         this.PassCount = PassCount;
     }
 
     /**
-     * Get 风险项
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 风险项 
      * @return FailCount 风险项
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFailCount() {
         return this.FailCount;
@@ -135,19 +119,15 @@ public class BaselineEffectHost extends AbstractModel {
 
     /**
      * Set 风险项
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FailCount 风险项
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFailCount(Long FailCount) {
         this.FailCount = FailCount;
     }
 
     /**
-     * Get 首次检测事件
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 首次检测事件 
      * @return FirstScanTime 首次检测事件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFirstScanTime() {
         return this.FirstScanTime;
@@ -155,19 +135,15 @@ public class BaselineEffectHost extends AbstractModel {
 
     /**
      * Set 首次检测事件
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FirstScanTime 首次检测事件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFirstScanTime(String FirstScanTime) {
         this.FirstScanTime = FirstScanTime;
     }
 
     /**
-     * Get 最后检测时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最后检测时间 
      * @return LastScanTime 最后检测时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLastScanTime() {
         return this.LastScanTime;
@@ -175,19 +151,15 @@ public class BaselineEffectHost extends AbstractModel {
 
     /**
      * Set 最后检测时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LastScanTime 最后检测时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLastScanTime(String LastScanTime) {
         this.LastScanTime = LastScanTime;
     }
 
     /**
-     * Get 风险项处理状态状态：0-未通过，1-通过
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 风险项处理状态状态：0-未通过，1-通过 
      * @return Status 风险项处理状态状态：0-未通过，1-通过
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
         return this.Status;
@@ -195,19 +167,15 @@ public class BaselineEffectHost extends AbstractModel {
 
     /**
      * Set 风险项处理状态状态：0-未通过，1-通过
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 风险项处理状态状态：0-未通过，1-通过
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 主机Quuid
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主机Quuid 
      * @return Quuid 主机Quuid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getQuuid() {
         return this.Quuid;
@@ -215,19 +183,15 @@ public class BaselineEffectHost extends AbstractModel {
 
     /**
      * Set 主机Quuid
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Quuid 主机Quuid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQuuid(String Quuid) {
         this.Quuid = Quuid;
     }
 
     /**
-     * Get 主机IP
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主机IP 
      * @return HostIp 主机IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHostIp() {
         return this.HostIp;
@@ -235,19 +199,15 @@ public class BaselineEffectHost extends AbstractModel {
 
     /**
      * Set 主机IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HostIp 主机IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHostIp(String HostIp) {
         this.HostIp = HostIp;
     }
 
     /**
-     * Get 主机别名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主机别名 
      * @return AliasName 主机别名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAliasName() {
         return this.AliasName;
@@ -255,19 +215,15 @@ public class BaselineEffectHost extends AbstractModel {
 
     /**
      * Set 主机别名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AliasName 主机别名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAliasName(String AliasName) {
         this.AliasName = AliasName;
     }
 
     /**
-     * Get 主机Uuid
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主机Uuid 
      * @return Uuid 主机Uuid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUuid() {
         return this.Uuid;
@@ -275,19 +231,15 @@ public class BaselineEffectHost extends AbstractModel {
 
     /**
      * Set 主机Uuid
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Uuid 主机Uuid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUuid(String Uuid) {
         this.Uuid = Uuid;
     }
 
     /**
-     * Get 检测中状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 检测中状态 
      * @return MaxStatus 检测中状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaxStatus() {
         return this.MaxStatus;
@@ -295,9 +247,7 @@ public class BaselineEffectHost extends AbstractModel {
 
     /**
      * Set 检测中状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MaxStatus 检测中状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxStatus(Long MaxStatus) {
         this.MaxStatus = MaxStatus;

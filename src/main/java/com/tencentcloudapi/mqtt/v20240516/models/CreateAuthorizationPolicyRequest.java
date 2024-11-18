@@ -101,7 +101,7 @@ public class CreateAuthorizationPolicyRequest extends AbstractModel {
     private String ClientId;
 
     /**
-    * ip
+    * IP地址
     */
     @SerializedName("Ip")
     @Expose
@@ -291,16 +291,16 @@ public class CreateAuthorizationPolicyRequest extends AbstractModel {
     }
 
     /**
-     * Get ip 
-     * @return Ip ip
+     * Get IP地址 
+     * @return Ip IP地址
      */
     public String getIp() {
         return this.Ip;
     }
 
     /**
-     * Set ip
-     * @param Ip ip
+     * Set IP地址
+     * @param Ip IP地址
      */
     public void setIp(String Ip) {
         this.Ip = Ip;

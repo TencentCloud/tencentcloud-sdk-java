@@ -25,7 +25,6 @@ public class ClbListenerListInfo extends AbstractModel {
 
     /**
     * 监听器id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ListenerId")
     @Expose
@@ -33,7 +32,6 @@ public class ClbListenerListInfo extends AbstractModel {
 
     /**
     * 监听器名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ListenerName")
     @Expose
@@ -41,7 +39,6 @@ public class ClbListenerListInfo extends AbstractModel {
 
     /**
     * 负载均衡Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LoadBalancerId")
     @Expose
@@ -49,7 +46,6 @@ public class ClbListenerListInfo extends AbstractModel {
 
     /**
     * 负载均衡名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LoadBalancerName")
     @Expose
@@ -57,7 +53,6 @@ public class ClbListenerListInfo extends AbstractModel {
 
     /**
     * 协议
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Protocol")
     @Expose
@@ -65,7 +60,6 @@ public class ClbListenerListInfo extends AbstractModel {
 
     /**
     * 地域
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Region")
     @Expose
@@ -73,7 +67,6 @@ public class ClbListenerListInfo extends AbstractModel {
 
     /**
     * 负载均衡ip
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Vip")
     @Expose
@@ -81,7 +74,6 @@ public class ClbListenerListInfo extends AbstractModel {
 
     /**
     * 端口
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VPort")
     @Expose
@@ -89,7 +81,6 @@ public class ClbListenerListInfo extends AbstractModel {
 
     /**
     * 区域
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Zone")
     @Expose
@@ -97,7 +88,6 @@ public class ClbListenerListInfo extends AbstractModel {
 
     /**
     * 私有网络id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NumericalVpcId")
     @Expose
@@ -105,7 +95,6 @@ public class ClbListenerListInfo extends AbstractModel {
 
     /**
     * 负载均衡类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LoadBalancerType")
     @Expose
@@ -113,7 +102,6 @@ public class ClbListenerListInfo extends AbstractModel {
 
     /**
     * 监听器域名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Domain")
     @Expose
@@ -121,17 +109,14 @@ public class ClbListenerListInfo extends AbstractModel {
 
     /**
     * 负载均衡域名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LoadBalancerDomain")
     @Expose
     private String LoadBalancerDomain;
 
     /**
-     * Get 监听器id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 监听器id 
      * @return ListenerId 监听器id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getListenerId() {
         return this.ListenerId;
@@ -139,19 +124,15 @@ public class ClbListenerListInfo extends AbstractModel {
 
     /**
      * Set 监听器id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ListenerId 监听器id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setListenerId(String ListenerId) {
         this.ListenerId = ListenerId;
     }
 
     /**
-     * Get 监听器名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 监听器名称 
      * @return ListenerName 监听器名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getListenerName() {
         return this.ListenerName;
@@ -159,19 +140,15 @@ public class ClbListenerListInfo extends AbstractModel {
 
     /**
      * Set 监听器名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ListenerName 监听器名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setListenerName(String ListenerName) {
         this.ListenerName = ListenerName;
     }
 
     /**
-     * Get 负载均衡Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 负载均衡Id 
      * @return LoadBalancerId 负载均衡Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLoadBalancerId() {
         return this.LoadBalancerId;
@@ -179,19 +156,15 @@ public class ClbListenerListInfo extends AbstractModel {
 
     /**
      * Set 负载均衡Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LoadBalancerId 负载均衡Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLoadBalancerId(String LoadBalancerId) {
         this.LoadBalancerId = LoadBalancerId;
     }
 
     /**
-     * Get 负载均衡名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 负载均衡名称 
      * @return LoadBalancerName 负载均衡名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLoadBalancerName() {
         return this.LoadBalancerName;
@@ -199,19 +172,15 @@ public class ClbListenerListInfo extends AbstractModel {
 
     /**
      * Set 负载均衡名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LoadBalancerName 负载均衡名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLoadBalancerName(String LoadBalancerName) {
         this.LoadBalancerName = LoadBalancerName;
     }
 
     /**
-     * Get 协议
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 协议 
      * @return Protocol 协议
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProtocol() {
         return this.Protocol;
@@ -219,19 +188,15 @@ public class ClbListenerListInfo extends AbstractModel {
 
     /**
      * Set 协议
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Protocol 协议
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
     }
 
     /**
-     * Get 地域
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地域 
      * @return Region 地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegion() {
         return this.Region;
@@ -239,19 +204,15 @@ public class ClbListenerListInfo extends AbstractModel {
 
     /**
      * Set 地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Region 地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get 负载均衡ip
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 负载均衡ip 
      * @return Vip 负载均衡ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVip() {
         return this.Vip;
@@ -259,19 +220,15 @@ public class ClbListenerListInfo extends AbstractModel {
 
     /**
      * Set 负载均衡ip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Vip 负载均衡ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVip(String Vip) {
         this.Vip = Vip;
     }
 
     /**
-     * Get 端口
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 端口 
      * @return VPort 端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getVPort() {
         return this.VPort;
@@ -279,19 +236,15 @@ public class ClbListenerListInfo extends AbstractModel {
 
     /**
      * Set 端口
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VPort 端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVPort(Long VPort) {
         this.VPort = VPort;
     }
 
     /**
-     * Get 区域
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 区域 
      * @return Zone 区域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getZone() {
         return this.Zone;
@@ -299,19 +252,15 @@ public class ClbListenerListInfo extends AbstractModel {
 
     /**
      * Set 区域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Zone 区域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get 私有网络id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 私有网络id 
      * @return NumericalVpcId 私有网络id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getNumericalVpcId() {
         return this.NumericalVpcId;
@@ -319,19 +268,15 @@ public class ClbListenerListInfo extends AbstractModel {
 
     /**
      * Set 私有网络id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NumericalVpcId 私有网络id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNumericalVpcId(Long NumericalVpcId) {
         this.NumericalVpcId = NumericalVpcId;
     }
 
     /**
-     * Get 负载均衡类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 负载均衡类型 
      * @return LoadBalancerType 负载均衡类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLoadBalancerType() {
         return this.LoadBalancerType;
@@ -339,19 +284,15 @@ public class ClbListenerListInfo extends AbstractModel {
 
     /**
      * Set 负载均衡类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LoadBalancerType 负载均衡类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLoadBalancerType(String LoadBalancerType) {
         this.LoadBalancerType = LoadBalancerType;
     }
 
     /**
-     * Get 监听器域名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 监听器域名 
      * @return Domain 监听器域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDomain() {
         return this.Domain;
@@ -359,19 +300,15 @@ public class ClbListenerListInfo extends AbstractModel {
 
     /**
      * Set 监听器域名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Domain 监听器域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get 负载均衡域名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 负载均衡域名 
      * @return LoadBalancerDomain 负载均衡域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLoadBalancerDomain() {
         return this.LoadBalancerDomain;
@@ -379,9 +316,7 @@ public class ClbListenerListInfo extends AbstractModel {
 
     /**
      * Set 负载均衡域名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LoadBalancerDomain 负载均衡域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLoadBalancerDomain(String LoadBalancerDomain) {
         this.LoadBalancerDomain = LoadBalancerDomain;

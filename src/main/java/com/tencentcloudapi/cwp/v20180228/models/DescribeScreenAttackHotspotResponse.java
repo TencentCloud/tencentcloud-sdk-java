@@ -25,7 +25,6 @@ public class DescribeScreenAttackHotspotResponse extends AbstractModel {
 
     /**
     * 攻击热点列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("List")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeScreenAttackHotspotResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 攻击热点列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 攻击热点列表 
      * @return List 攻击热点列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ScreenAttackHotspot [] getList() {
         return this.List;
@@ -50,9 +47,7 @@ public class DescribeScreenAttackHotspotResponse extends AbstractModel {
 
     /**
      * Set 攻击热点列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param List 攻击热点列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setList(ScreenAttackHotspot [] List) {
         this.List = List;

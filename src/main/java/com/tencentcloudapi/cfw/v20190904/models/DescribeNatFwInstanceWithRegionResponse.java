@@ -25,7 +25,6 @@ public class DescribeNatFwInstanceWithRegionResponse extends AbstractModel {
 
     /**
     * 实例数组
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NatinsLst")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeNatFwInstanceWithRegionResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 实例数组
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例数组 
      * @return NatinsLst 实例数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public NatFwInstance [] getNatinsLst() {
         return this.NatinsLst;
@@ -50,9 +47,7 @@ public class DescribeNatFwInstanceWithRegionResponse extends AbstractModel {
 
     /**
      * Set 实例数组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NatinsLst 实例数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNatinsLst(NatFwInstance [] NatinsLst) {
         this.NatinsLst = NatinsLst;

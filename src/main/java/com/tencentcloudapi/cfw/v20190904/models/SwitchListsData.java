@@ -25,7 +25,6 @@ public class SwitchListsData extends AbstractModel {
 
     /**
     * 公网IP
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PublicIp")
     @Expose
@@ -33,7 +32,6 @@ public class SwitchListsData extends AbstractModel {
 
     /**
     * 内网IP
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IntranetIp")
     @Expose
@@ -41,7 +39,6 @@ public class SwitchListsData extends AbstractModel {
 
     /**
     * 实例名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceName")
     @Expose
@@ -49,7 +46,6 @@ public class SwitchListsData extends AbstractModel {
 
     /**
     * 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -64,7 +60,6 @@ public class SwitchListsData extends AbstractModel {
 
     /**
     * 地域
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Area")
     @Expose
@@ -86,7 +81,6 @@ public class SwitchListsData extends AbstractModel {
 
     /**
     * 公网 IP 类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PublicIpType")
     @Expose
@@ -94,7 +88,6 @@ public class SwitchListsData extends AbstractModel {
 
     /**
     * 风险端口数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PortTimes")
     @Expose
@@ -102,7 +95,6 @@ public class SwitchListsData extends AbstractModel {
 
     /**
     * 最近扫描时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LastTime")
     @Expose
@@ -110,7 +102,6 @@ public class SwitchListsData extends AbstractModel {
 
     /**
     * 扫描深度
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScanMode")
     @Expose
@@ -118,17 +109,14 @@ public class SwitchListsData extends AbstractModel {
 
     /**
     * 扫描状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScanStatus")
     @Expose
     private Long ScanStatus;
 
     /**
-     * Get 公网IP
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 公网IP 
      * @return PublicIp 公网IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPublicIp() {
         return this.PublicIp;
@@ -136,19 +124,15 @@ public class SwitchListsData extends AbstractModel {
 
     /**
      * Set 公网IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PublicIp 公网IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPublicIp(String PublicIp) {
         this.PublicIp = PublicIp;
     }
 
     /**
-     * Get 内网IP
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 内网IP 
      * @return IntranetIp 内网IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIntranetIp() {
         return this.IntranetIp;
@@ -156,19 +140,15 @@ public class SwitchListsData extends AbstractModel {
 
     /**
      * Set 内网IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IntranetIp 内网IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIntranetIp(String IntranetIp) {
         this.IntranetIp = IntranetIp;
     }
 
     /**
-     * Get 实例名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例名 
      * @return InstanceName 实例名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceName() {
         return this.InstanceName;
@@ -176,19 +156,15 @@ public class SwitchListsData extends AbstractModel {
 
     /**
      * Set 实例名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceName 实例名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get 实例ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例ID 
      * @return InstanceId 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceId() {
         return this.InstanceId;
@@ -196,9 +172,7 @@ public class SwitchListsData extends AbstractModel {
 
     /**
      * Set 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceId 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -221,10 +195,8 @@ public class SwitchListsData extends AbstractModel {
     }
 
     /**
-     * Get 地域
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地域 
      * @return Area 地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getArea() {
         return this.Area;
@@ -232,9 +204,7 @@ public class SwitchListsData extends AbstractModel {
 
     /**
      * Set 地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Area 地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setArea(String Area) {
         this.Area = Area;
@@ -273,10 +243,8 @@ public class SwitchListsData extends AbstractModel {
     }
 
     /**
-     * Get 公网 IP 类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 公网 IP 类型 
      * @return PublicIpType 公网 IP 类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPublicIpType() {
         return this.PublicIpType;
@@ -284,19 +252,15 @@ public class SwitchListsData extends AbstractModel {
 
     /**
      * Set 公网 IP 类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PublicIpType 公网 IP 类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPublicIpType(Long PublicIpType) {
         this.PublicIpType = PublicIpType;
     }
 
     /**
-     * Get 风险端口数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 风险端口数 
      * @return PortTimes 风险端口数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPortTimes() {
         return this.PortTimes;
@@ -304,19 +268,15 @@ public class SwitchListsData extends AbstractModel {
 
     /**
      * Set 风险端口数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PortTimes 风险端口数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPortTimes(Long PortTimes) {
         this.PortTimes = PortTimes;
     }
 
     /**
-     * Get 最近扫描时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最近扫描时间 
      * @return LastTime 最近扫描时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLastTime() {
         return this.LastTime;
@@ -324,19 +284,15 @@ public class SwitchListsData extends AbstractModel {
 
     /**
      * Set 最近扫描时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LastTime 最近扫描时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLastTime(String LastTime) {
         this.LastTime = LastTime;
     }
 
     /**
-     * Get 扫描深度
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 扫描深度 
      * @return ScanMode 扫描深度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getScanMode() {
         return this.ScanMode;
@@ -344,19 +300,15 @@ public class SwitchListsData extends AbstractModel {
 
     /**
      * Set 扫描深度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ScanMode 扫描深度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScanMode(String ScanMode) {
         this.ScanMode = ScanMode;
     }
 
     /**
-     * Get 扫描状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 扫描状态 
      * @return ScanStatus 扫描状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getScanStatus() {
         return this.ScanStatus;
@@ -364,9 +316,7 @@ public class SwitchListsData extends AbstractModel {
 
     /**
      * Set 扫描状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ScanStatus 扫描状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScanStatus(Long ScanStatus) {
         this.ScanStatus = ScanStatus;

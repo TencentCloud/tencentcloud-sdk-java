@@ -32,7 +32,6 @@ public class CCRuleLists extends AbstractModel {
 
     /**
     * 规则
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Res")
     @Expose
@@ -55,10 +54,8 @@ public class CCRuleLists extends AbstractModel {
     }
 
     /**
-     * Get 规则
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则 
      * @return Res 规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CCRuleItems [] getRes() {
         return this.Res;
@@ -66,9 +63,7 @@ public class CCRuleLists extends AbstractModel {
 
     /**
      * Set 规则
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Res 规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRes(CCRuleItems [] Res) {
         this.Res = Res;

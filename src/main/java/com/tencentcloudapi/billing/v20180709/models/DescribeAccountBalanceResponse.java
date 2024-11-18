@@ -94,21 +94,21 @@ public class DescribeAccountBalanceResponse extends AbstractModel {
     private Boolean IsCreditLimited;
 
     /**
-    * 信用额度
+    * 信用额度,单位 分
     */
     @SerializedName("CreditAmount")
     @Expose
     private Float CreditAmount;
 
     /**
-    * 可用信用额度
+    * 可用信用额度,单位 分
     */
     @SerializedName("CreditBalance")
     @Expose
     private Float CreditBalance;
 
     /**
-    * 真实可用信用额度
+    * 真实可用信用额度,单位 分
     */
     @SerializedName("RealCreditBalance")
     @Expose
@@ -282,48 +282,48 @@ public class DescribeAccountBalanceResponse extends AbstractModel {
     }
 
     /**
-     * Get 信用额度 
-     * @return CreditAmount 信用额度
+     * Get 信用额度,单位 分 
+     * @return CreditAmount 信用额度,单位 分
      */
     public Float getCreditAmount() {
         return this.CreditAmount;
     }
 
     /**
-     * Set 信用额度
-     * @param CreditAmount 信用额度
+     * Set 信用额度,单位 分
+     * @param CreditAmount 信用额度,单位 分
      */
     public void setCreditAmount(Float CreditAmount) {
         this.CreditAmount = CreditAmount;
     }
 
     /**
-     * Get 可用信用额度 
-     * @return CreditBalance 可用信用额度
+     * Get 可用信用额度,单位 分 
+     * @return CreditBalance 可用信用额度,单位 分
      */
     public Float getCreditBalance() {
         return this.CreditBalance;
     }
 
     /**
-     * Set 可用信用额度
-     * @param CreditBalance 可用信用额度
+     * Set 可用信用额度,单位 分
+     * @param CreditBalance 可用信用额度,单位 分
      */
     public void setCreditBalance(Float CreditBalance) {
         this.CreditBalance = CreditBalance;
     }
 
     /**
-     * Get 真实可用信用额度 
-     * @return RealCreditBalance 真实可用信用额度
+     * Get 真实可用信用额度,单位 分 
+     * @return RealCreditBalance 真实可用信用额度,单位 分
      */
     public Float getRealCreditBalance() {
         return this.RealCreditBalance;
     }
 
     /**
-     * Set 真实可用信用额度
-     * @param RealCreditBalance 真实可用信用额度
+     * Set 真实可用信用额度,单位 分
+     * @param RealCreditBalance 真实可用信用额度,单位 分
      */
     public void setRealCreditBalance(Float RealCreditBalance) {
         this.RealCreditBalance = RealCreditBalance;

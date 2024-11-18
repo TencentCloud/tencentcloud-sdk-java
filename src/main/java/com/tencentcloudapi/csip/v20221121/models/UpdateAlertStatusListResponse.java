@@ -25,7 +25,6 @@ public class UpdateAlertStatusListResponse extends AbstractModel {
 
     /**
     * 结果信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Msg")
     @Expose
@@ -46,10 +45,8 @@ public class UpdateAlertStatusListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 结果信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 结果信息 
      * @return Msg 结果信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMsg() {
         return this.Msg;
@@ -57,9 +54,7 @@ public class UpdateAlertStatusListResponse extends AbstractModel {
 
     /**
      * Set 结果信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Msg 结果信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMsg(String Msg) {
         this.Msg = Msg;

@@ -24,7 +24,9 @@ import java.util.HashMap;
 public class DetectInfoText extends AbstractModel {
 
     /**
-    * 本次流程最终验证结果。0为成功（仅包含活体人脸核身结果，不包含意愿核身结果）
+    * 本次流程最终验证结果。
+- 取值范围：0为成功。
+- 仅包含活体人脸核身结果，不包含意愿核身结果。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ErrCode")
@@ -32,7 +34,8 @@ public class DetectInfoText extends AbstractModel {
     private Long ErrCode;
 
     /**
-    * 本次流程最终验证结果描述。（仅描述用，文案更新时不会通知。）
+    * 本次流程最终验证结果描述。
+- 仅描述用，文案更新时不会通知。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ErrMsg")
@@ -48,10 +51,11 @@ public class DetectInfoText extends AbstractModel {
     private String IdCard;
 
     /**
-    * 用户认证时使用的证件号码类型：
-0：二代身份证的证件号码
-1：港澳台居住证的证件号码
-2：其他（核验使用的证件号码非合法身份号码）
+    * 用户认证时使用的证件号码类型。
+- 取值范围：
+    0：二代身份证的证件号码。
+    1：港澳台居住证的证件号码。
+    2：其他（核验使用的证件号码非合法身份号码）。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UseIDType")
@@ -83,7 +87,8 @@ public class DetectInfoText extends AbstractModel {
     private String OcrAddress;
 
     /**
-    * 身份校验环节识别结果：生日。格式为：YYYY/M/D
+    * 身份校验环节识别结果：生日。
+- 格式为：YYYY/M/D
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OcrBirth")
@@ -99,7 +104,8 @@ public class DetectInfoText extends AbstractModel {
     private String OcrAuthority;
 
     /**
-    * 身份校验环节识别结果：有效日期。格式为：YYYY.MM.DD-YYYY.MM.DD
+    * 身份校验环节识别结果：有效日期。
+- 格式为：YYYY.MM.DD-YYYY.MM.DD。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OcrValidDate")
@@ -132,7 +138,7 @@ public class DetectInfoText extends AbstractModel {
 
     /**
     * 身份校验环节采用的信息上传方式。
-取值有"NFC"、"OCR"、"手动输入"、"其他"
+- 取值有"NFC"、"OCR"、"手动输入"、"其他"
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IdInfoFrom")
@@ -140,7 +146,8 @@ public class DetectInfoText extends AbstractModel {
     private String IdInfoFrom;
 
     /**
-    * 本次流程最终活体结果。0为成功
+    * 本次流程最终活体结果。
+- 0为成功
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LiveStatus")
@@ -148,7 +155,8 @@ public class DetectInfoText extends AbstractModel {
     private Long LiveStatus;
 
     /**
-    * 本次流程最终活体结果描述。（仅描述用，文案更新时不会通知。）
+    * 本次流程最终活体结果描述。
+- 仅描述用，文案更新时不会通知。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LiveMsg")
@@ -156,7 +164,8 @@ public class DetectInfoText extends AbstractModel {
     private String LiveMsg;
 
     /**
-    * 本次流程最终一比一结果。0为成功
+    * 本次流程最终一比一结果。
+- 0为成功
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Comparestatus")
@@ -164,7 +173,8 @@ public class DetectInfoText extends AbstractModel {
     private Long Comparestatus;
 
     /**
-    * 本次流程最终一比一结果描述。（仅描述用，文案更新时不会通知。）
+    * 本次流程最终一比一结果描述。
+- 仅描述用，文案更新时不会通知。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Comparemsg")
@@ -172,7 +182,10 @@ public class DetectInfoText extends AbstractModel {
     private String Comparemsg;
 
     /**
-    * 本次流程活体一比一的分数，取值范围 [0.00, 100.00]。相似度大于等于70时才判断为同一人，也可根据具体场景自行调整阈值（阈值70的误通过率为千分之一，阈值80的误通过率是万分之一）
+    * 本次流程活体一比一的分数。
+- 取值范围 [0.00, 100.00]。
+- 相似度大于等于70时才判断为同一人，也可根据具体场景自行调整阈值。
+- 阈值70的误通过率为千分之一，阈值80的误通过率是万分之一。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Sim")
@@ -204,6 +217,29 @@ public class DetectInfoText extends AbstractModel {
     private DetectDetail [] LivenessDetail;
 
     /**
+    * 描述当前请求活体阶段被拒绝的详细原因，该参数仅限PLUS版本核身服务返回。
+- 详情如下：
+    01-用户全程闭眼
+    02-用户未完成指定动作
+    03-疑似翻拍攻击
+    04-疑似合成攻击
+    05-疑似黑产模版
+    06-疑似存在水印
+    07-反光校验未通过
+    08-疑似中途换人
+    09-人脸质量过差
+    10-距离校验不通过
+    11-疑似对抗样本攻击
+    12-嘴巴区域疑似存在攻击痕迹
+    13-眼睛区域疑似存在攻击痕迹
+    14-眼睛或嘴巴被遮挡
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LivenessInfoTag")
+    @Expose
+    private String [] LivenessInfoTag;
+
+    /**
     * 手机号码。
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -212,11 +248,12 @@ public class DetectInfoText extends AbstractModel {
     private String Mobile;
 
     /**
-    * 本次流程最终比对库源类型。包括：
-权威库；
-业务方自有库（用户上传照片、客户的混合库、混合部署库）；
-二次验证库；
-人工审核库；
+    * 本次流程最终比对库源类型。
+- 取值范围：
+    权威库。
+    业务方自有库（用户上传照片、客户的混合库、混合部署库）。
+    二次验证库。
+    人工审核库。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CompareLibType")
@@ -224,12 +261,13 @@ public class DetectInfoText extends AbstractModel {
     private String CompareLibType;
 
     /**
-    * 本次流程最终活体类型。包括：
-0：未知
-1：数字活体
-2：动作活体
-3：静默活体
-4：一闪活体（动作+光线）
+    * 本次流程最终活体类型。
+- 取值范围：
+    0：未知
+    1：数字活体
+    2：动作活体
+    3：静默活体
+    4：一闪活体（动作+光线）
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LivenessMode")
@@ -237,7 +275,7 @@ public class DetectInfoText extends AbstractModel {
     private Long LivenessMode;
 
     /**
-    * nfc重复计费requestId列表
+    * nfc重复计费requestId列表。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NFCRequestIds")
@@ -245,7 +283,7 @@ public class DetectInfoText extends AbstractModel {
     private String [] NFCRequestIds;
 
     /**
-    * nfc重复计费计数
+    * nfc重复计费计数。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NFCBillingCounts")
@@ -253,7 +291,7 @@ public class DetectInfoText extends AbstractModel {
     private Long NFCBillingCounts;
 
     /**
-    * 港澳台居住证通行证号码
+    * 港澳台居住证通行证号码。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PassNo")
@@ -261,7 +299,7 @@ public class DetectInfoText extends AbstractModel {
     private String PassNo;
 
     /**
-    * 港澳台居住证签发次数
+    * 港澳台居住证签发次数。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VisaNum")
@@ -269,9 +307,13 @@ public class DetectInfoText extends AbstractModel {
     private String VisaNum;
 
     /**
-     * Get 本次流程最终验证结果。0为成功（仅包含活体人脸核身结果，不包含意愿核身结果）
+     * Get 本次流程最终验证结果。
+- 取值范围：0为成功。
+- 仅包含活体人脸核身结果，不包含意愿核身结果。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ErrCode 本次流程最终验证结果。0为成功（仅包含活体人脸核身结果，不包含意愿核身结果）
+     * @return ErrCode 本次流程最终验证结果。
+- 取值范围：0为成功。
+- 仅包含活体人脸核身结果，不包含意愿核身结果。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getErrCode() {
@@ -279,9 +321,13 @@ public class DetectInfoText extends AbstractModel {
     }
 
     /**
-     * Set 本次流程最终验证结果。0为成功（仅包含活体人脸核身结果，不包含意愿核身结果）
+     * Set 本次流程最终验证结果。
+- 取值范围：0为成功。
+- 仅包含活体人脸核身结果，不包含意愿核身结果。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ErrCode 本次流程最终验证结果。0为成功（仅包含活体人脸核身结果，不包含意愿核身结果）
+     * @param ErrCode 本次流程最终验证结果。
+- 取值范围：0为成功。
+- 仅包含活体人脸核身结果，不包含意愿核身结果。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrCode(Long ErrCode) {
@@ -289,9 +335,11 @@ public class DetectInfoText extends AbstractModel {
     }
 
     /**
-     * Get 本次流程最终验证结果描述。（仅描述用，文案更新时不会通知。）
+     * Get 本次流程最终验证结果描述。
+- 仅描述用，文案更新时不会通知。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ErrMsg 本次流程最终验证结果描述。（仅描述用，文案更新时不会通知。）
+     * @return ErrMsg 本次流程最终验证结果描述。
+- 仅描述用，文案更新时不会通知。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getErrMsg() {
@@ -299,9 +347,11 @@ public class DetectInfoText extends AbstractModel {
     }
 
     /**
-     * Set 本次流程最终验证结果描述。（仅描述用，文案更新时不会通知。）
+     * Set 本次流程最终验证结果描述。
+- 仅描述用，文案更新时不会通知。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ErrMsg 本次流程最终验证结果描述。（仅描述用，文案更新时不会通知。）
+     * @param ErrMsg 本次流程最终验证结果描述。
+- 仅描述用，文案更新时不会通知。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrMsg(String ErrMsg) {
@@ -329,15 +379,17 @@ public class DetectInfoText extends AbstractModel {
     }
 
     /**
-     * Get 用户认证时使用的证件号码类型：
-0：二代身份证的证件号码
-1：港澳台居住证的证件号码
-2：其他（核验使用的证件号码非合法身份号码）
+     * Get 用户认证时使用的证件号码类型。
+- 取值范围：
+    0：二代身份证的证件号码。
+    1：港澳台居住证的证件号码。
+    2：其他（核验使用的证件号码非合法身份号码）。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UseIDType 用户认证时使用的证件号码类型：
-0：二代身份证的证件号码
-1：港澳台居住证的证件号码
-2：其他（核验使用的证件号码非合法身份号码）
+     * @return UseIDType 用户认证时使用的证件号码类型。
+- 取值范围：
+    0：二代身份证的证件号码。
+    1：港澳台居住证的证件号码。
+    2：其他（核验使用的证件号码非合法身份号码）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getUseIDType() {
@@ -345,15 +397,17 @@ public class DetectInfoText extends AbstractModel {
     }
 
     /**
-     * Set 用户认证时使用的证件号码类型：
-0：二代身份证的证件号码
-1：港澳台居住证的证件号码
-2：其他（核验使用的证件号码非合法身份号码）
+     * Set 用户认证时使用的证件号码类型。
+- 取值范围：
+    0：二代身份证的证件号码。
+    1：港澳台居住证的证件号码。
+    2：其他（核验使用的证件号码非合法身份号码）。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UseIDType 用户认证时使用的证件号码类型：
-0：二代身份证的证件号码
-1：港澳台居住证的证件号码
-2：其他（核验使用的证件号码非合法身份号码）
+     * @param UseIDType 用户认证时使用的证件号码类型。
+- 取值范围：
+    0：二代身份证的证件号码。
+    1：港澳台居住证的证件号码。
+    2：其他（核验使用的证件号码非合法身份号码）。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUseIDType(Long UseIDType) {
@@ -421,9 +475,11 @@ public class DetectInfoText extends AbstractModel {
     }
 
     /**
-     * Get 身份校验环节识别结果：生日。格式为：YYYY/M/D
+     * Get 身份校验环节识别结果：生日。
+- 格式为：YYYY/M/D
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OcrBirth 身份校验环节识别结果：生日。格式为：YYYY/M/D
+     * @return OcrBirth 身份校验环节识别结果：生日。
+- 格式为：YYYY/M/D
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOcrBirth() {
@@ -431,9 +487,11 @@ public class DetectInfoText extends AbstractModel {
     }
 
     /**
-     * Set 身份校验环节识别结果：生日。格式为：YYYY/M/D
+     * Set 身份校验环节识别结果：生日。
+- 格式为：YYYY/M/D
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OcrBirth 身份校验环节识别结果：生日。格式为：YYYY/M/D
+     * @param OcrBirth 身份校验环节识别结果：生日。
+- 格式为：YYYY/M/D
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOcrBirth(String OcrBirth) {
@@ -461,9 +519,11 @@ public class DetectInfoText extends AbstractModel {
     }
 
     /**
-     * Get 身份校验环节识别结果：有效日期。格式为：YYYY.MM.DD-YYYY.MM.DD
+     * Get 身份校验环节识别结果：有效日期。
+- 格式为：YYYY.MM.DD-YYYY.MM.DD。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OcrValidDate 身份校验环节识别结果：有效日期。格式为：YYYY.MM.DD-YYYY.MM.DD
+     * @return OcrValidDate 身份校验环节识别结果：有效日期。
+- 格式为：YYYY.MM.DD-YYYY.MM.DD。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOcrValidDate() {
@@ -471,9 +531,11 @@ public class DetectInfoText extends AbstractModel {
     }
 
     /**
-     * Set 身份校验环节识别结果：有效日期。格式为：YYYY.MM.DD-YYYY.MM.DD
+     * Set 身份校验环节识别结果：有效日期。
+- 格式为：YYYY.MM.DD-YYYY.MM.DD。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OcrValidDate 身份校验环节识别结果：有效日期。格式为：YYYY.MM.DD-YYYY.MM.DD
+     * @param OcrValidDate 身份校验环节识别结果：有效日期。
+- 格式为：YYYY.MM.DD-YYYY.MM.DD。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOcrValidDate(String OcrValidDate) {
@@ -542,10 +604,10 @@ public class DetectInfoText extends AbstractModel {
 
     /**
      * Get 身份校验环节采用的信息上传方式。
-取值有"NFC"、"OCR"、"手动输入"、"其他"
+- 取值有"NFC"、"OCR"、"手动输入"、"其他"
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return IdInfoFrom 身份校验环节采用的信息上传方式。
-取值有"NFC"、"OCR"、"手动输入"、"其他"
+- 取值有"NFC"、"OCR"、"手动输入"、"其他"
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIdInfoFrom() {
@@ -554,10 +616,10 @@ public class DetectInfoText extends AbstractModel {
 
     /**
      * Set 身份校验环节采用的信息上传方式。
-取值有"NFC"、"OCR"、"手动输入"、"其他"
+- 取值有"NFC"、"OCR"、"手动输入"、"其他"
 注意：此字段可能返回 null，表示取不到有效值。
      * @param IdInfoFrom 身份校验环节采用的信息上传方式。
-取值有"NFC"、"OCR"、"手动输入"、"其他"
+- 取值有"NFC"、"OCR"、"手动输入"、"其他"
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIdInfoFrom(String IdInfoFrom) {
@@ -565,9 +627,11 @@ public class DetectInfoText extends AbstractModel {
     }
 
     /**
-     * Get 本次流程最终活体结果。0为成功
+     * Get 本次流程最终活体结果。
+- 0为成功
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LiveStatus 本次流程最终活体结果。0为成功
+     * @return LiveStatus 本次流程最终活体结果。
+- 0为成功
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLiveStatus() {
@@ -575,9 +639,11 @@ public class DetectInfoText extends AbstractModel {
     }
 
     /**
-     * Set 本次流程最终活体结果。0为成功
+     * Set 本次流程最终活体结果。
+- 0为成功
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LiveStatus 本次流程最终活体结果。0为成功
+     * @param LiveStatus 本次流程最终活体结果。
+- 0为成功
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLiveStatus(Long LiveStatus) {
@@ -585,9 +651,11 @@ public class DetectInfoText extends AbstractModel {
     }
 
     /**
-     * Get 本次流程最终活体结果描述。（仅描述用，文案更新时不会通知。）
+     * Get 本次流程最终活体结果描述。
+- 仅描述用，文案更新时不会通知。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LiveMsg 本次流程最终活体结果描述。（仅描述用，文案更新时不会通知。）
+     * @return LiveMsg 本次流程最终活体结果描述。
+- 仅描述用，文案更新时不会通知。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLiveMsg() {
@@ -595,9 +663,11 @@ public class DetectInfoText extends AbstractModel {
     }
 
     /**
-     * Set 本次流程最终活体结果描述。（仅描述用，文案更新时不会通知。）
+     * Set 本次流程最终活体结果描述。
+- 仅描述用，文案更新时不会通知。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LiveMsg 本次流程最终活体结果描述。（仅描述用，文案更新时不会通知。）
+     * @param LiveMsg 本次流程最终活体结果描述。
+- 仅描述用，文案更新时不会通知。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLiveMsg(String LiveMsg) {
@@ -605,9 +675,11 @@ public class DetectInfoText extends AbstractModel {
     }
 
     /**
-     * Get 本次流程最终一比一结果。0为成功
+     * Get 本次流程最终一比一结果。
+- 0为成功
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Comparestatus 本次流程最终一比一结果。0为成功
+     * @return Comparestatus 本次流程最终一比一结果。
+- 0为成功
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getComparestatus() {
@@ -615,9 +687,11 @@ public class DetectInfoText extends AbstractModel {
     }
 
     /**
-     * Set 本次流程最终一比一结果。0为成功
+     * Set 本次流程最终一比一结果。
+- 0为成功
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Comparestatus 本次流程最终一比一结果。0为成功
+     * @param Comparestatus 本次流程最终一比一结果。
+- 0为成功
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setComparestatus(Long Comparestatus) {
@@ -625,9 +699,11 @@ public class DetectInfoText extends AbstractModel {
     }
 
     /**
-     * Get 本次流程最终一比一结果描述。（仅描述用，文案更新时不会通知。）
+     * Get 本次流程最终一比一结果描述。
+- 仅描述用，文案更新时不会通知。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Comparemsg 本次流程最终一比一结果描述。（仅描述用，文案更新时不会通知。）
+     * @return Comparemsg 本次流程最终一比一结果描述。
+- 仅描述用，文案更新时不会通知。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getComparemsg() {
@@ -635,9 +711,11 @@ public class DetectInfoText extends AbstractModel {
     }
 
     /**
-     * Set 本次流程最终一比一结果描述。（仅描述用，文案更新时不会通知。）
+     * Set 本次流程最终一比一结果描述。
+- 仅描述用，文案更新时不会通知。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Comparemsg 本次流程最终一比一结果描述。（仅描述用，文案更新时不会通知。）
+     * @param Comparemsg 本次流程最终一比一结果描述。
+- 仅描述用，文案更新时不会通知。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setComparemsg(String Comparemsg) {
@@ -645,9 +723,15 @@ public class DetectInfoText extends AbstractModel {
     }
 
     /**
-     * Get 本次流程活体一比一的分数，取值范围 [0.00, 100.00]。相似度大于等于70时才判断为同一人，也可根据具体场景自行调整阈值（阈值70的误通过率为千分之一，阈值80的误通过率是万分之一）
+     * Get 本次流程活体一比一的分数。
+- 取值范围 [0.00, 100.00]。
+- 相似度大于等于70时才判断为同一人，也可根据具体场景自行调整阈值。
+- 阈值70的误通过率为千分之一，阈值80的误通过率是万分之一。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Sim 本次流程活体一比一的分数，取值范围 [0.00, 100.00]。相似度大于等于70时才判断为同一人，也可根据具体场景自行调整阈值（阈值70的误通过率为千分之一，阈值80的误通过率是万分之一）
+     * @return Sim 本次流程活体一比一的分数。
+- 取值范围 [0.00, 100.00]。
+- 相似度大于等于70时才判断为同一人，也可根据具体场景自行调整阈值。
+- 阈值70的误通过率为千分之一，阈值80的误通过率是万分之一。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSim() {
@@ -655,9 +739,15 @@ public class DetectInfoText extends AbstractModel {
     }
 
     /**
-     * Set 本次流程活体一比一的分数，取值范围 [0.00, 100.00]。相似度大于等于70时才判断为同一人，也可根据具体场景自行调整阈值（阈值70的误通过率为千分之一，阈值80的误通过率是万分之一）
+     * Set 本次流程活体一比一的分数。
+- 取值范围 [0.00, 100.00]。
+- 相似度大于等于70时才判断为同一人，也可根据具体场景自行调整阈值。
+- 阈值70的误通过率为千分之一，阈值80的误通过率是万分之一。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Sim 本次流程活体一比一的分数，取值范围 [0.00, 100.00]。相似度大于等于70时才判断为同一人，也可根据具体场景自行调整阈值（阈值70的误通过率为千分之一，阈值80的误通过率是万分之一）
+     * @param Sim 本次流程活体一比一的分数。
+- 取值范围 [0.00, 100.00]。
+- 相似度大于等于70时才判断为同一人，也可根据具体场景自行调整阈值。
+- 阈值70的误通过率为千分之一，阈值80的误通过率是万分之一。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSim(String Sim) {
@@ -725,6 +815,86 @@ public class DetectInfoText extends AbstractModel {
     }
 
     /**
+     * Get 描述当前请求活体阶段被拒绝的详细原因，该参数仅限PLUS版本核身服务返回。
+- 详情如下：
+    01-用户全程闭眼
+    02-用户未完成指定动作
+    03-疑似翻拍攻击
+    04-疑似合成攻击
+    05-疑似黑产模版
+    06-疑似存在水印
+    07-反光校验未通过
+    08-疑似中途换人
+    09-人脸质量过差
+    10-距离校验不通过
+    11-疑似对抗样本攻击
+    12-嘴巴区域疑似存在攻击痕迹
+    13-眼睛区域疑似存在攻击痕迹
+    14-眼睛或嘴巴被遮挡
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LivenessInfoTag 描述当前请求活体阶段被拒绝的详细原因，该参数仅限PLUS版本核身服务返回。
+- 详情如下：
+    01-用户全程闭眼
+    02-用户未完成指定动作
+    03-疑似翻拍攻击
+    04-疑似合成攻击
+    05-疑似黑产模版
+    06-疑似存在水印
+    07-反光校验未通过
+    08-疑似中途换人
+    09-人脸质量过差
+    10-距离校验不通过
+    11-疑似对抗样本攻击
+    12-嘴巴区域疑似存在攻击痕迹
+    13-眼睛区域疑似存在攻击痕迹
+    14-眼睛或嘴巴被遮挡
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getLivenessInfoTag() {
+        return this.LivenessInfoTag;
+    }
+
+    /**
+     * Set 描述当前请求活体阶段被拒绝的详细原因，该参数仅限PLUS版本核身服务返回。
+- 详情如下：
+    01-用户全程闭眼
+    02-用户未完成指定动作
+    03-疑似翻拍攻击
+    04-疑似合成攻击
+    05-疑似黑产模版
+    06-疑似存在水印
+    07-反光校验未通过
+    08-疑似中途换人
+    09-人脸质量过差
+    10-距离校验不通过
+    11-疑似对抗样本攻击
+    12-嘴巴区域疑似存在攻击痕迹
+    13-眼睛区域疑似存在攻击痕迹
+    14-眼睛或嘴巴被遮挡
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LivenessInfoTag 描述当前请求活体阶段被拒绝的详细原因，该参数仅限PLUS版本核身服务返回。
+- 详情如下：
+    01-用户全程闭眼
+    02-用户未完成指定动作
+    03-疑似翻拍攻击
+    04-疑似合成攻击
+    05-疑似黑产模版
+    06-疑似存在水印
+    07-反光校验未通过
+    08-疑似中途换人
+    09-人脸质量过差
+    10-距离校验不通过
+    11-疑似对抗样本攻击
+    12-嘴巴区域疑似存在攻击痕迹
+    13-眼睛区域疑似存在攻击痕迹
+    14-眼睛或嘴巴被遮挡
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLivenessInfoTag(String [] LivenessInfoTag) {
+        this.LivenessInfoTag = LivenessInfoTag;
+    }
+
+    /**
      * Get 手机号码。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Mobile 手机号码。
@@ -745,17 +915,19 @@ public class DetectInfoText extends AbstractModel {
     }
 
     /**
-     * Get 本次流程最终比对库源类型。包括：
-权威库；
-业务方自有库（用户上传照片、客户的混合库、混合部署库）；
-二次验证库；
-人工审核库；
+     * Get 本次流程最终比对库源类型。
+- 取值范围：
+    权威库。
+    业务方自有库（用户上传照片、客户的混合库、混合部署库）。
+    二次验证库。
+    人工审核库。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CompareLibType 本次流程最终比对库源类型。包括：
-权威库；
-业务方自有库（用户上传照片、客户的混合库、混合部署库）；
-二次验证库；
-人工审核库；
+     * @return CompareLibType 本次流程最终比对库源类型。
+- 取值范围：
+    权威库。
+    业务方自有库（用户上传照片、客户的混合库、混合部署库）。
+    二次验证库。
+    人工审核库。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCompareLibType() {
@@ -763,17 +935,19 @@ public class DetectInfoText extends AbstractModel {
     }
 
     /**
-     * Set 本次流程最终比对库源类型。包括：
-权威库；
-业务方自有库（用户上传照片、客户的混合库、混合部署库）；
-二次验证库；
-人工审核库；
+     * Set 本次流程最终比对库源类型。
+- 取值范围：
+    权威库。
+    业务方自有库（用户上传照片、客户的混合库、混合部署库）。
+    二次验证库。
+    人工审核库。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CompareLibType 本次流程最终比对库源类型。包括：
-权威库；
-业务方自有库（用户上传照片、客户的混合库、混合部署库）；
-二次验证库；
-人工审核库；
+     * @param CompareLibType 本次流程最终比对库源类型。
+- 取值范围：
+    权威库。
+    业务方自有库（用户上传照片、客户的混合库、混合部署库）。
+    二次验证库。
+    人工审核库。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCompareLibType(String CompareLibType) {
@@ -781,19 +955,21 @@ public class DetectInfoText extends AbstractModel {
     }
 
     /**
-     * Get 本次流程最终活体类型。包括：
-0：未知
-1：数字活体
-2：动作活体
-3：静默活体
-4：一闪活体（动作+光线）
+     * Get 本次流程最终活体类型。
+- 取值范围：
+    0：未知
+    1：数字活体
+    2：动作活体
+    3：静默活体
+    4：一闪活体（动作+光线）
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LivenessMode 本次流程最终活体类型。包括：
-0：未知
-1：数字活体
-2：动作活体
-3：静默活体
-4：一闪活体（动作+光线）
+     * @return LivenessMode 本次流程最终活体类型。
+- 取值范围：
+    0：未知
+    1：数字活体
+    2：动作活体
+    3：静默活体
+    4：一闪活体（动作+光线）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLivenessMode() {
@@ -801,19 +977,21 @@ public class DetectInfoText extends AbstractModel {
     }
 
     /**
-     * Set 本次流程最终活体类型。包括：
-0：未知
-1：数字活体
-2：动作活体
-3：静默活体
-4：一闪活体（动作+光线）
+     * Set 本次流程最终活体类型。
+- 取值范围：
+    0：未知
+    1：数字活体
+    2：动作活体
+    3：静默活体
+    4：一闪活体（动作+光线）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LivenessMode 本次流程最终活体类型。包括：
-0：未知
-1：数字活体
-2：动作活体
-3：静默活体
-4：一闪活体（动作+光线）
+     * @param LivenessMode 本次流程最终活体类型。
+- 取值范围：
+    0：未知
+    1：数字活体
+    2：动作活体
+    3：静默活体
+    4：一闪活体（动作+光线）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLivenessMode(Long LivenessMode) {
@@ -821,9 +999,9 @@ public class DetectInfoText extends AbstractModel {
     }
 
     /**
-     * Get nfc重复计费requestId列表
+     * Get nfc重复计费requestId列表。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return NFCRequestIds nfc重复计费requestId列表
+     * @return NFCRequestIds nfc重复计费requestId列表。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getNFCRequestIds() {
@@ -831,9 +1009,9 @@ public class DetectInfoText extends AbstractModel {
     }
 
     /**
-     * Set nfc重复计费requestId列表
+     * Set nfc重复计费requestId列表。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param NFCRequestIds nfc重复计费requestId列表
+     * @param NFCRequestIds nfc重复计费requestId列表。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNFCRequestIds(String [] NFCRequestIds) {
@@ -841,9 +1019,9 @@ public class DetectInfoText extends AbstractModel {
     }
 
     /**
-     * Get nfc重复计费计数
+     * Get nfc重复计费计数。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return NFCBillingCounts nfc重复计费计数
+     * @return NFCBillingCounts nfc重复计费计数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getNFCBillingCounts() {
@@ -851,9 +1029,9 @@ public class DetectInfoText extends AbstractModel {
     }
 
     /**
-     * Set nfc重复计费计数
+     * Set nfc重复计费计数。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param NFCBillingCounts nfc重复计费计数
+     * @param NFCBillingCounts nfc重复计费计数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNFCBillingCounts(Long NFCBillingCounts) {
@@ -861,9 +1039,9 @@ public class DetectInfoText extends AbstractModel {
     }
 
     /**
-     * Get 港澳台居住证通行证号码
+     * Get 港澳台居住证通行证号码。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PassNo 港澳台居住证通行证号码
+     * @return PassNo 港澳台居住证通行证号码。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPassNo() {
@@ -871,9 +1049,9 @@ public class DetectInfoText extends AbstractModel {
     }
 
     /**
-     * Set 港澳台居住证通行证号码
+     * Set 港澳台居住证通行证号码。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PassNo 港澳台居住证通行证号码
+     * @param PassNo 港澳台居住证通行证号码。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPassNo(String PassNo) {
@@ -881,9 +1059,9 @@ public class DetectInfoText extends AbstractModel {
     }
 
     /**
-     * Get 港澳台居住证签发次数
+     * Get 港澳台居住证签发次数。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return VisaNum 港澳台居住证签发次数
+     * @return VisaNum 港澳台居住证签发次数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVisaNum() {
@@ -891,9 +1069,9 @@ public class DetectInfoText extends AbstractModel {
     }
 
     /**
-     * Set 港澳台居住证签发次数
+     * Set 港澳台居住证签发次数。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param VisaNum 港澳台居住证签发次数
+     * @param VisaNum 港澳台居住证签发次数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVisaNum(String VisaNum) {
@@ -977,6 +1155,12 @@ public class DetectInfoText extends AbstractModel {
                 this.LivenessDetail[i] = new DetectDetail(source.LivenessDetail[i]);
             }
         }
+        if (source.LivenessInfoTag != null) {
+            this.LivenessInfoTag = new String[source.LivenessInfoTag.length];
+            for (int i = 0; i < source.LivenessInfoTag.length; i++) {
+                this.LivenessInfoTag[i] = new String(source.LivenessInfoTag[i]);
+            }
+        }
         if (source.Mobile != null) {
             this.Mobile = new String(source.Mobile);
         }
@@ -1030,6 +1214,7 @@ public class DetectInfoText extends AbstractModel {
         this.setParamSimple(map, prefix + "Location", this.Location);
         this.setParamSimple(map, prefix + "Extra", this.Extra);
         this.setParamArrayObj(map, prefix + "LivenessDetail.", this.LivenessDetail);
+        this.setParamArraySimple(map, prefix + "LivenessInfoTag.", this.LivenessInfoTag);
         this.setParamSimple(map, prefix + "Mobile", this.Mobile);
         this.setParamSimple(map, prefix + "CompareLibType", this.CompareLibType);
         this.setParamSimple(map, prefix + "LivenessMode", this.LivenessMode);

@@ -24,7 +24,10 @@ import java.util.HashMap;
 public class DetectAuthRequest extends AbstractModel {
 
     /**
-    * 用于细分客户使用场景，申请开通服务后，可以在腾讯云慧眼人脸核身控制台（https://console.cloud.tencent.com/faceid） 自助接入里面创建，审核通过后即可调用。如有疑问，请添加[腾讯云人脸核身小助手](https://cloud.tencent.com/document/product/1007/56130)进行咨询。
+    * 业务流程ID。
+- 用于细分客户使用场景, 可为业务配置不同的业务流程。
+- 申请开通服务后，登录腾讯云[慧眼人脸核身控制](https://console.cloud.tencent.com/faceid)进行创建，审核通过后即可调用。
+- 如有疑问，请添加[腾讯云人脸核身小助手](https://cloud.tencent.com/document/product/1007/56130)进行咨询。
     */
     @SerializedName("RuleId")
     @Expose
@@ -38,23 +41,26 @@ public class DetectAuthRequest extends AbstractModel {
     private String TerminalType;
 
     /**
-    * 身份标识（是否必传基于[控制台](https://console.cloud.tencent.com/faceid/access)申请业务流程时配置的提示）。
-规则：a-z，A-Z，0-9组合。最长长度32位。
+    * 验证人的身份证号码。
+- 是否必传基于[控制台](https://console.cloud.tencent.com/faceid/access)申请业务流程时配置的提示。
+
     */
     @SerializedName("IdCard")
     @Expose
     private String IdCard;
 
     /**
-    * 姓名。（是否必传基于[控制台](https://console.cloud.tencent.com/faceid/access)申请业务流程时配置的提示）。
-最长长度32位。中文请使用UTF-8编码。
+    * 验证人的姓名。
+- 是否必传基于[控制台](https://console.cloud.tencent.com/faceid/access)申请业务流程时配置的提示。
+- 最长长度32位。中文请使用UTF-8编码。
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 认证结束后重定向的回调链接地址。最长长度1024位。
+    * 认证结束后重定向的回调链接地址。
+- 最长长度1024位。
     */
     @SerializedName("RedirectUrl")
     @Expose
@@ -68,8 +74,10 @@ public class DetectAuthRequest extends AbstractModel {
     private String Extra;
 
     /**
-    * 用于人脸比对的照片，图片的Base64值；
-Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
+    * 用于人脸比对的图像数据，使用base64编码。
+- Base64编码后的图片数据大小不超过3M。
+- 仅支持jpg、png格式。
+- 请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
     */
     @SerializedName("ImageBase64")
     @Expose
@@ -83,44 +91,62 @@ Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。请
     private Encryption Encryption;
 
     /**
-    * 意愿核身（朗读模式）使用的文案，若未使用意愿核身（朗读模式），则该字段无需传入。默认为空，最长可接受120的字符串长度。
+    * 意愿核身（朗读模式）使用的文案。
+- 若未使用意愿核身（朗读模式），则该字段无需传入。
+- 最长可接受120的字符串长度。
     */
     @SerializedName("IntentionVerifyText")
     @Expose
     private String IntentionVerifyText;
 
     /**
-    * 意愿核身语音问答模式（即语音播报+语音回答）使用的文案，包括：系统语音播报的文本、需要核验的标准文本。当前仅支持1轮问答。
+    * 意愿核身（语音播报+语音回答模式）使用的文案。
+- 包括：系统语音播报的文本、需要核验的标准文本。
+- 当前仅支持1轮问答。
     */
     @SerializedName("IntentionQuestions")
     @Expose
     private IntentionQuestion [] IntentionQuestions;
 
     /**
-    * RuleId相关配置
-    */
-    @SerializedName("Config")
-    @Expose
-    private RuleIdConfig Config;
-
-    /**
-    * 意愿核身（点头确认模式）使用的文案，若未使用意愿核身（点头确认模式），则该字段无需传入。当前仅支持一个提示文本。
+    * 意愿核身（点头确认模式）使用的文案。
+- 若未使用意愿核身（点头确认模式），则该字段无需传入。
+- 当前仅支持一个提示文本。
     */
     @SerializedName("IntentionActions")
     @Expose
     private IntentionActionConfig [] IntentionActions;
 
     /**
-     * Get 用于细分客户使用场景，申请开通服务后，可以在腾讯云慧眼人脸核身控制台（https://console.cloud.tencent.com/faceid） 自助接入里面创建，审核通过后即可调用。如有疑问，请添加[腾讯云人脸核身小助手](https://cloud.tencent.com/document/product/1007/56130)进行咨询。 
-     * @return RuleId 用于细分客户使用场景，申请开通服务后，可以在腾讯云慧眼人脸核身控制台（https://console.cloud.tencent.com/faceid） 自助接入里面创建，审核通过后即可调用。如有疑问，请添加[腾讯云人脸核身小助手](https://cloud.tencent.com/document/product/1007/56130)进行咨询。
+    * 意愿核身流程配置。
+    */
+    @SerializedName("Config")
+    @Expose
+    private RuleIdConfig Config;
+
+    /**
+     * Get 业务流程ID。
+- 用于细分客户使用场景, 可为业务配置不同的业务流程。
+- 申请开通服务后，登录腾讯云[慧眼人脸核身控制](https://console.cloud.tencent.com/faceid)进行创建，审核通过后即可调用。
+- 如有疑问，请添加[腾讯云人脸核身小助手](https://cloud.tencent.com/document/product/1007/56130)进行咨询。 
+     * @return RuleId 业务流程ID。
+- 用于细分客户使用场景, 可为业务配置不同的业务流程。
+- 申请开通服务后，登录腾讯云[慧眼人脸核身控制](https://console.cloud.tencent.com/faceid)进行创建，审核通过后即可调用。
+- 如有疑问，请添加[腾讯云人脸核身小助手](https://cloud.tencent.com/document/product/1007/56130)进行咨询。
      */
     public String getRuleId() {
         return this.RuleId;
     }
 
     /**
-     * Set 用于细分客户使用场景，申请开通服务后，可以在腾讯云慧眼人脸核身控制台（https://console.cloud.tencent.com/faceid） 自助接入里面创建，审核通过后即可调用。如有疑问，请添加[腾讯云人脸核身小助手](https://cloud.tencent.com/document/product/1007/56130)进行咨询。
-     * @param RuleId 用于细分客户使用场景，申请开通服务后，可以在腾讯云慧眼人脸核身控制台（https://console.cloud.tencent.com/faceid） 自助接入里面创建，审核通过后即可调用。如有疑问，请添加[腾讯云人脸核身小助手](https://cloud.tencent.com/document/product/1007/56130)进行咨询。
+     * Set 业务流程ID。
+- 用于细分客户使用场景, 可为业务配置不同的业务流程。
+- 申请开通服务后，登录腾讯云[慧眼人脸核身控制](https://console.cloud.tencent.com/faceid)进行创建，审核通过后即可调用。
+- 如有疑问，请添加[腾讯云人脸核身小助手](https://cloud.tencent.com/document/product/1007/56130)进行咨询。
+     * @param RuleId 业务流程ID。
+- 用于细分客户使用场景, 可为业务配置不同的业务流程。
+- 申请开通服务后，登录腾讯云[慧眼人脸核身控制](https://console.cloud.tencent.com/faceid)进行创建，审核通过后即可调用。
+- 如有疑问，请添加[腾讯云人脸核身小助手](https://cloud.tencent.com/document/product/1007/56130)进行咨询。
      */
     public void setRuleId(String RuleId) {
         this.RuleId = RuleId;
@@ -143,56 +169,68 @@ Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。请
     }
 
     /**
-     * Get 身份标识（是否必传基于[控制台](https://console.cloud.tencent.com/faceid/access)申请业务流程时配置的提示）。
-规则：a-z，A-Z，0-9组合。最长长度32位。 
-     * @return IdCard 身份标识（是否必传基于[控制台](https://console.cloud.tencent.com/faceid/access)申请业务流程时配置的提示）。
-规则：a-z，A-Z，0-9组合。最长长度32位。
+     * Get 验证人的身份证号码。
+- 是否必传基于[控制台](https://console.cloud.tencent.com/faceid/access)申请业务流程时配置的提示。
+ 
+     * @return IdCard 验证人的身份证号码。
+- 是否必传基于[控制台](https://console.cloud.tencent.com/faceid/access)申请业务流程时配置的提示。
+
      */
     public String getIdCard() {
         return this.IdCard;
     }
 
     /**
-     * Set 身份标识（是否必传基于[控制台](https://console.cloud.tencent.com/faceid/access)申请业务流程时配置的提示）。
-规则：a-z，A-Z，0-9组合。最长长度32位。
-     * @param IdCard 身份标识（是否必传基于[控制台](https://console.cloud.tencent.com/faceid/access)申请业务流程时配置的提示）。
-规则：a-z，A-Z，0-9组合。最长长度32位。
+     * Set 验证人的身份证号码。
+- 是否必传基于[控制台](https://console.cloud.tencent.com/faceid/access)申请业务流程时配置的提示。
+
+     * @param IdCard 验证人的身份证号码。
+- 是否必传基于[控制台](https://console.cloud.tencent.com/faceid/access)申请业务流程时配置的提示。
+
      */
     public void setIdCard(String IdCard) {
         this.IdCard = IdCard;
     }
 
     /**
-     * Get 姓名。（是否必传基于[控制台](https://console.cloud.tencent.com/faceid/access)申请业务流程时配置的提示）。
-最长长度32位。中文请使用UTF-8编码。 
-     * @return Name 姓名。（是否必传基于[控制台](https://console.cloud.tencent.com/faceid/access)申请业务流程时配置的提示）。
-最长长度32位。中文请使用UTF-8编码。
+     * Get 验证人的姓名。
+- 是否必传基于[控制台](https://console.cloud.tencent.com/faceid/access)申请业务流程时配置的提示。
+- 最长长度32位。中文请使用UTF-8编码。 
+     * @return Name 验证人的姓名。
+- 是否必传基于[控制台](https://console.cloud.tencent.com/faceid/access)申请业务流程时配置的提示。
+- 最长长度32位。中文请使用UTF-8编码。
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 姓名。（是否必传基于[控制台](https://console.cloud.tencent.com/faceid/access)申请业务流程时配置的提示）。
-最长长度32位。中文请使用UTF-8编码。
-     * @param Name 姓名。（是否必传基于[控制台](https://console.cloud.tencent.com/faceid/access)申请业务流程时配置的提示）。
-最长长度32位。中文请使用UTF-8编码。
+     * Set 验证人的姓名。
+- 是否必传基于[控制台](https://console.cloud.tencent.com/faceid/access)申请业务流程时配置的提示。
+- 最长长度32位。中文请使用UTF-8编码。
+     * @param Name 验证人的姓名。
+- 是否必传基于[控制台](https://console.cloud.tencent.com/faceid/access)申请业务流程时配置的提示。
+- 最长长度32位。中文请使用UTF-8编码。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 认证结束后重定向的回调链接地址。最长长度1024位。 
-     * @return RedirectUrl 认证结束后重定向的回调链接地址。最长长度1024位。
+     * Get 认证结束后重定向的回调链接地址。
+- 最长长度1024位。 
+     * @return RedirectUrl 认证结束后重定向的回调链接地址。
+- 最长长度1024位。
      */
     public String getRedirectUrl() {
         return this.RedirectUrl;
     }
 
     /**
-     * Set 认证结束后重定向的回调链接地址。最长长度1024位。
-     * @param RedirectUrl 认证结束后重定向的回调链接地址。最长长度1024位。
+     * Set 认证结束后重定向的回调链接地址。
+- 最长长度1024位。
+     * @param RedirectUrl 认证结束后重定向的回调链接地址。
+- 最长长度1024位。
      */
     public void setRedirectUrl(String RedirectUrl) {
         this.RedirectUrl = RedirectUrl;
@@ -215,20 +253,28 @@ Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。请
     }
 
     /**
-     * Get 用于人脸比对的照片，图片的Base64值；
-Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。 
-     * @return ImageBase64 用于人脸比对的照片，图片的Base64值；
-Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
+     * Get 用于人脸比对的图像数据，使用base64编码。
+- Base64编码后的图片数据大小不超过3M。
+- 仅支持jpg、png格式。
+- 请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。 
+     * @return ImageBase64 用于人脸比对的图像数据，使用base64编码。
+- Base64编码后的图片数据大小不超过3M。
+- 仅支持jpg、png格式。
+- 请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
      */
     public String getImageBase64() {
         return this.ImageBase64;
     }
 
     /**
-     * Set 用于人脸比对的照片，图片的Base64值；
-Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
-     * @param ImageBase64 用于人脸比对的照片，图片的Base64值；
-Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
+     * Set 用于人脸比对的图像数据，使用base64编码。
+- Base64编码后的图片数据大小不超过3M。
+- 仅支持jpg、png格式。
+- 请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
+     * @param ImageBase64 用于人脸比对的图像数据，使用base64编码。
+- Base64编码后的图片数据大小不超过3M。
+- 仅支持jpg、png格式。
+- 请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
      */
     public void setImageBase64(String ImageBase64) {
         this.ImageBase64 = ImageBase64;
@@ -251,67 +297,91 @@ Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。请
     }
 
     /**
-     * Get 意愿核身（朗读模式）使用的文案，若未使用意愿核身（朗读模式），则该字段无需传入。默认为空，最长可接受120的字符串长度。 
-     * @return IntentionVerifyText 意愿核身（朗读模式）使用的文案，若未使用意愿核身（朗读模式），则该字段无需传入。默认为空，最长可接受120的字符串长度。
+     * Get 意愿核身（朗读模式）使用的文案。
+- 若未使用意愿核身（朗读模式），则该字段无需传入。
+- 最长可接受120的字符串长度。 
+     * @return IntentionVerifyText 意愿核身（朗读模式）使用的文案。
+- 若未使用意愿核身（朗读模式），则该字段无需传入。
+- 最长可接受120的字符串长度。
      */
     public String getIntentionVerifyText() {
         return this.IntentionVerifyText;
     }
 
     /**
-     * Set 意愿核身（朗读模式）使用的文案，若未使用意愿核身（朗读模式），则该字段无需传入。默认为空，最长可接受120的字符串长度。
-     * @param IntentionVerifyText 意愿核身（朗读模式）使用的文案，若未使用意愿核身（朗读模式），则该字段无需传入。默认为空，最长可接受120的字符串长度。
+     * Set 意愿核身（朗读模式）使用的文案。
+- 若未使用意愿核身（朗读模式），则该字段无需传入。
+- 最长可接受120的字符串长度。
+     * @param IntentionVerifyText 意愿核身（朗读模式）使用的文案。
+- 若未使用意愿核身（朗读模式），则该字段无需传入。
+- 最长可接受120的字符串长度。
      */
     public void setIntentionVerifyText(String IntentionVerifyText) {
         this.IntentionVerifyText = IntentionVerifyText;
     }
 
     /**
-     * Get 意愿核身语音问答模式（即语音播报+语音回答）使用的文案，包括：系统语音播报的文本、需要核验的标准文本。当前仅支持1轮问答。 
-     * @return IntentionQuestions 意愿核身语音问答模式（即语音播报+语音回答）使用的文案，包括：系统语音播报的文本、需要核验的标准文本。当前仅支持1轮问答。
+     * Get 意愿核身（语音播报+语音回答模式）使用的文案。
+- 包括：系统语音播报的文本、需要核验的标准文本。
+- 当前仅支持1轮问答。 
+     * @return IntentionQuestions 意愿核身（语音播报+语音回答模式）使用的文案。
+- 包括：系统语音播报的文本、需要核验的标准文本。
+- 当前仅支持1轮问答。
      */
     public IntentionQuestion [] getIntentionQuestions() {
         return this.IntentionQuestions;
     }
 
     /**
-     * Set 意愿核身语音问答模式（即语音播报+语音回答）使用的文案，包括：系统语音播报的文本、需要核验的标准文本。当前仅支持1轮问答。
-     * @param IntentionQuestions 意愿核身语音问答模式（即语音播报+语音回答）使用的文案，包括：系统语音播报的文本、需要核验的标准文本。当前仅支持1轮问答。
+     * Set 意愿核身（语音播报+语音回答模式）使用的文案。
+- 包括：系统语音播报的文本、需要核验的标准文本。
+- 当前仅支持1轮问答。
+     * @param IntentionQuestions 意愿核身（语音播报+语音回答模式）使用的文案。
+- 包括：系统语音播报的文本、需要核验的标准文本。
+- 当前仅支持1轮问答。
      */
     public void setIntentionQuestions(IntentionQuestion [] IntentionQuestions) {
         this.IntentionQuestions = IntentionQuestions;
     }
 
     /**
-     * Get RuleId相关配置 
-     * @return Config RuleId相关配置
-     */
-    public RuleIdConfig getConfig() {
-        return this.Config;
-    }
-
-    /**
-     * Set RuleId相关配置
-     * @param Config RuleId相关配置
-     */
-    public void setConfig(RuleIdConfig Config) {
-        this.Config = Config;
-    }
-
-    /**
-     * Get 意愿核身（点头确认模式）使用的文案，若未使用意愿核身（点头确认模式），则该字段无需传入。当前仅支持一个提示文本。 
-     * @return IntentionActions 意愿核身（点头确认模式）使用的文案，若未使用意愿核身（点头确认模式），则该字段无需传入。当前仅支持一个提示文本。
+     * Get 意愿核身（点头确认模式）使用的文案。
+- 若未使用意愿核身（点头确认模式），则该字段无需传入。
+- 当前仅支持一个提示文本。 
+     * @return IntentionActions 意愿核身（点头确认模式）使用的文案。
+- 若未使用意愿核身（点头确认模式），则该字段无需传入。
+- 当前仅支持一个提示文本。
      */
     public IntentionActionConfig [] getIntentionActions() {
         return this.IntentionActions;
     }
 
     /**
-     * Set 意愿核身（点头确认模式）使用的文案，若未使用意愿核身（点头确认模式），则该字段无需传入。当前仅支持一个提示文本。
-     * @param IntentionActions 意愿核身（点头确认模式）使用的文案，若未使用意愿核身（点头确认模式），则该字段无需传入。当前仅支持一个提示文本。
+     * Set 意愿核身（点头确认模式）使用的文案。
+- 若未使用意愿核身（点头确认模式），则该字段无需传入。
+- 当前仅支持一个提示文本。
+     * @param IntentionActions 意愿核身（点头确认模式）使用的文案。
+- 若未使用意愿核身（点头确认模式），则该字段无需传入。
+- 当前仅支持一个提示文本。
      */
     public void setIntentionActions(IntentionActionConfig [] IntentionActions) {
         this.IntentionActions = IntentionActions;
+    }
+
+    /**
+     * Get 意愿核身流程配置。 
+     * @return Config 意愿核身流程配置。
+     */
+    public RuleIdConfig getConfig() {
+        return this.Config;
+    }
+
+    /**
+     * Set 意愿核身流程配置。
+     * @param Config 意愿核身流程配置。
+     */
+    public void setConfig(RuleIdConfig Config) {
+        this.Config = Config;
     }
 
     public DetectAuthRequest() {
@@ -355,14 +425,14 @@ Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。请
                 this.IntentionQuestions[i] = new IntentionQuestion(source.IntentionQuestions[i]);
             }
         }
-        if (source.Config != null) {
-            this.Config = new RuleIdConfig(source.Config);
-        }
         if (source.IntentionActions != null) {
             this.IntentionActions = new IntentionActionConfig[source.IntentionActions.length];
             for (int i = 0; i < source.IntentionActions.length; i++) {
                 this.IntentionActions[i] = new IntentionActionConfig(source.IntentionActions[i]);
             }
+        }
+        if (source.Config != null) {
+            this.Config = new RuleIdConfig(source.Config);
         }
     }
 
@@ -381,8 +451,8 @@ Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。请
         this.setParamObj(map, prefix + "Encryption.", this.Encryption);
         this.setParamSimple(map, prefix + "IntentionVerifyText", this.IntentionVerifyText);
         this.setParamArrayObj(map, prefix + "IntentionQuestions.", this.IntentionQuestions);
-        this.setParamObj(map, prefix + "Config.", this.Config);
         this.setParamArrayObj(map, prefix + "IntentionActions.", this.IntentionActions);
+        this.setParamObj(map, prefix + "Config.", this.Config);
 
     }
 }

@@ -24,11 +24,34 @@ import java.util.HashMap;
 public class DescribeLicenseResponse extends AbstractModel {
 
     /**
+    * 支持功能
+    */
+    @SerializedName("FunctionsEn")
+    @Expose
+    private String [] FunctionsEn;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 支持功能 
+     * @return FunctionsEn 支持功能
+     */
+    public String [] getFunctionsEn() {
+        return this.FunctionsEn;
+    }
+
+    /**
+     * Set 支持功能
+     * @param FunctionsEn 支持功能
+     */
+    public void setFunctionsEn(String [] FunctionsEn) {
+        this.FunctionsEn = FunctionsEn;
+    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -54,6 +77,12 @@ public class DescribeLicenseResponse extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeLicenseResponse(DescribeLicenseResponse source) {
+        if (source.FunctionsEn != null) {
+            this.FunctionsEn = new String[source.FunctionsEn.length];
+            for (int i = 0; i < source.FunctionsEn.length; i++) {
+                this.FunctionsEn[i] = new String(source.FunctionsEn[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -64,6 +93,7 @@ public class DescribeLicenseResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArraySimple(map, prefix + "FunctionsEn.", this.FunctionsEn);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

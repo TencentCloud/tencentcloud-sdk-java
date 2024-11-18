@@ -95,6 +95,13 @@ public class HmtResidentPermitOCRResponse extends AbstractModel {
     private String PassNo;
 
     /**
+    * 头像和坐标信息
+    */
+    @SerializedName("PortraitImageInfo")
+    @Expose
+    private PortraitImageInfo PortraitImageInfo;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -266,6 +273,22 @@ public class HmtResidentPermitOCRResponse extends AbstractModel {
     }
 
     /**
+     * Get 头像和坐标信息 
+     * @return PortraitImageInfo 头像和坐标信息
+     */
+    public PortraitImageInfo getPortraitImageInfo() {
+        return this.PortraitImageInfo;
+    }
+
+    /**
+     * Set 头像和坐标信息
+     * @param PortraitImageInfo 头像和坐标信息
+     */
+    public void setPortraitImageInfo(PortraitImageInfo PortraitImageInfo) {
+        this.PortraitImageInfo = PortraitImageInfo;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -319,6 +342,9 @@ public class HmtResidentPermitOCRResponse extends AbstractModel {
         if (source.PassNo != null) {
             this.PassNo = new String(source.PassNo);
         }
+        if (source.PortraitImageInfo != null) {
+            this.PortraitImageInfo = new PortraitImageInfo(source.PortraitImageInfo);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -339,6 +365,7 @@ public class HmtResidentPermitOCRResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "Authority", this.Authority);
         this.setParamSimple(map, prefix + "VisaNum", this.VisaNum);
         this.setParamSimple(map, prefix + "PassNo", this.PassNo);
+        this.setParamObj(map, prefix + "PortraitImageInfo.", this.PortraitImageInfo);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

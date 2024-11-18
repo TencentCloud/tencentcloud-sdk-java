@@ -270,19 +270,6 @@ public class WafClient extends AbstractClient{
     }
 
     /**
-     *废弃接口，无有效调用
-
-删除访问日志下载记录
-     * @param req DeleteDownloadRecordRequest
-     * @return DeleteDownloadRecordResponse
-     * @throws TencentCloudSDKException
-     */
-    public DeleteDownloadRecordResponse DeleteDownloadRecord(DeleteDownloadRecordRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DeleteDownloadRecord", DeleteDownloadRecordResponse.class);
-    }
-
-    /**
      *删除负载均衡型域名，支持批量操作。
      * @param req DeleteHostRequest
      * @return DeleteHostResponse
@@ -393,32 +380,6 @@ public class WafClient extends AbstractClient{
     }
 
     /**
-     *废弃接口
-
-获取防篡改url
-     * @param req DescribeAntiFakeUrlRequest
-     * @return DescribeAntiFakeUrlResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeAntiFakeUrlResponse DescribeAntiFakeUrl(DescribeAntiFakeUrlRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeAntiFakeUrl", DescribeAntiFakeUrlResponse.class);
-    }
-
-    /**
-     *老接口已经不再使用。
-
-获取信息防泄漏规则列表
-     * @param req DescribeAntiInfoLeakRulesRequest
-     * @return DescribeAntiInfoLeakRulesResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeAntiInfoLeakRulesResponse DescribeAntiInfoLeakRules(DescribeAntiInfoLeakRulesRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeAntiInfoLeakRules", DescribeAntiInfoLeakRulesResponse.class);
-    }
-
-    /**
      *取得信息防泄漏规则列表
      * @param req DescribeAntiInfoLeakageRulesRequest
      * @return DescribeAntiInfoLeakageRulesResponse
@@ -427,6 +388,28 @@ public class WafClient extends AbstractClient{
     public DescribeAntiInfoLeakageRulesResponse DescribeAntiInfoLeakageRules(DescribeAntiInfoLeakageRulesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeAntiInfoLeakageRules", DescribeAntiInfoLeakageRulesResponse.class);
+    }
+
+    /**
+     *获取Api请求详情信息
+     * @param req DescribeApiDetailRequest
+     * @return DescribeApiDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeApiDetailResponse DescribeApiDetail(DescribeApiDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeApiDetail", DescribeApiDetailResponse.class);
+    }
+
+    /**
+     *api资产列表
+     * @param req DescribeApiListVersionTwoRequest
+     * @return DescribeApiListVersionTwoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeApiListVersionTwoResponse DescribeApiListVersionTwo(DescribeApiListVersionTwoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeApiListVersionTwo", DescribeApiListVersionTwoResponse.class);
     }
 
     /**
@@ -826,6 +809,17 @@ public class WafClient extends AbstractClient{
     }
 
     /**
+     *查询Tiga引擎大类规则及其防护模式
+     * @param req DescribeProtectionModesRequest
+     * @return DescribeProtectionModesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeProtectionModesResponse DescribeProtectionModes(DescribeProtectionModesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeProtectionModes", DescribeProtectionModesResponse.class);
+    }
+
+    /**
      *获取各个模块具体的规格限制
      * @param req DescribeRuleLimitRequest
      * @return DescribeRuleLimitResponse
@@ -834,6 +828,17 @@ public class WafClient extends AbstractClient{
     public DescribeRuleLimitResponse DescribeRuleLimit(DescribeRuleLimitRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeRuleLimit", DescribeRuleLimitResponse.class);
+    }
+
+    /**
+     *查询扫描ip
+     * @param req DescribeScanIpRequest
+     * @return DescribeScanIpResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeScanIpResponse DescribeScanIp(DescribeScanIpRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeScanIp", DescribeScanIpResponse.class);
     }
 
     /**
@@ -1451,6 +1456,17 @@ public class WafClient extends AbstractClient{
     public ModifyUserSignatureRuleResponse ModifyUserSignatureRule(ModifyUserSignatureRuleRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyUserSignatureRule", ModifyUserSignatureRuleResponse.class);
+    }
+
+    /**
+     *修改用户防护规则，开启关闭具体的某条规则
+     * @param req ModifyUserSignatureRuleV2Request
+     * @return ModifyUserSignatureRuleV2Response
+     * @throws TencentCloudSDKException
+     */
+    public ModifyUserSignatureRuleV2Response ModifyUserSignatureRuleV2(ModifyUserSignatureRuleV2Request req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyUserSignatureRuleV2", ModifyUserSignatureRuleV2Response.class);
     }
 
     /**

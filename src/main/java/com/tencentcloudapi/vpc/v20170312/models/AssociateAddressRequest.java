@@ -59,6 +59,13 @@ public class AssociateAddressRequest extends AbstractModel {
     private Boolean EipDirectConnection;
 
     /**
+    * 要绑定的实例所在的地域
+    */
+    @SerializedName("InstanceRegion")
+    @Expose
+    private String InstanceRegion;
+
+    /**
      * Get 标识 EIP 的唯一 ID。EIP 唯一 ID 形如：`eip-11112222`。 
      * @return AddressId 标识 EIP 的唯一 ID。EIP 唯一 ID 形如：`eip-11112222`。
      */
@@ -138,6 +145,22 @@ public class AssociateAddressRequest extends AbstractModel {
         this.EipDirectConnection = EipDirectConnection;
     }
 
+    /**
+     * Get 要绑定的实例所在的地域 
+     * @return InstanceRegion 要绑定的实例所在的地域
+     */
+    public String getInstanceRegion() {
+        return this.InstanceRegion;
+    }
+
+    /**
+     * Set 要绑定的实例所在的地域
+     * @param InstanceRegion 要绑定的实例所在的地域
+     */
+    public void setInstanceRegion(String InstanceRegion) {
+        this.InstanceRegion = InstanceRegion;
+    }
+
     public AssociateAddressRequest() {
     }
 
@@ -161,6 +184,9 @@ public class AssociateAddressRequest extends AbstractModel {
         if (source.EipDirectConnection != null) {
             this.EipDirectConnection = new Boolean(source.EipDirectConnection);
         }
+        if (source.InstanceRegion != null) {
+            this.InstanceRegion = new String(source.InstanceRegion);
+        }
     }
 
 
@@ -173,6 +199,7 @@ public class AssociateAddressRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "NetworkInterfaceId", this.NetworkInterfaceId);
         this.setParamSimple(map, prefix + "PrivateIpAddress", this.PrivateIpAddress);
         this.setParamSimple(map, prefix + "EipDirectConnection", this.EipDirectConnection);
+        this.setParamSimple(map, prefix + "InstanceRegion", this.InstanceRegion);
 
     }
 }

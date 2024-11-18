@@ -296,6 +296,31 @@ public class JobV1 extends AbstractModel {
     private String Description;
 
     /**
+    * 0:代表没开启调优任务，1:开启智能调优，2:代表定时调优
+
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ScalingType")
+    @Expose
+    private Long ScalingType;
+
+    /**
+    * 使用CPU数目
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RunningCpu")
+    @Expose
+    private Float RunningCpu;
+
+    /**
+    * 使用内存数量
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RunningMem")
+    @Expose
+    private Float RunningMem;
+
+    /**
      * Get 作业ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return JobId 作业ID
@@ -975,6 +1000,70 @@ public class JobV1 extends AbstractModel {
         this.Description = Description;
     }
 
+    /**
+     * Get 0:代表没开启调优任务，1:开启智能调优，2:代表定时调优
+
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ScalingType 0:代表没开启调优任务，1:开启智能调优，2:代表定时调优
+
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getScalingType() {
+        return this.ScalingType;
+    }
+
+    /**
+     * Set 0:代表没开启调优任务，1:开启智能调优，2:代表定时调优
+
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ScalingType 0:代表没开启调优任务，1:开启智能调优，2:代表定时调优
+
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setScalingType(Long ScalingType) {
+        this.ScalingType = ScalingType;
+    }
+
+    /**
+     * Get 使用CPU数目
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RunningCpu 使用CPU数目
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float getRunningCpu() {
+        return this.RunningCpu;
+    }
+
+    /**
+     * Set 使用CPU数目
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RunningCpu 使用CPU数目
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRunningCpu(Float RunningCpu) {
+        this.RunningCpu = RunningCpu;
+    }
+
+    /**
+     * Get 使用内存数量
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RunningMem 使用内存数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float getRunningMem() {
+        return this.RunningMem;
+    }
+
+    /**
+     * Set 使用内存数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RunningMem 使用内存数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRunningMem(Float RunningMem) {
+        this.RunningMem = RunningMem;
+    }
+
     public JobV1() {
     }
 
@@ -1088,6 +1177,15 @@ public class JobV1 extends AbstractModel {
         if (source.Description != null) {
             this.Description = new String(source.Description);
         }
+        if (source.ScalingType != null) {
+            this.ScalingType = new Long(source.ScalingType);
+        }
+        if (source.RunningCpu != null) {
+            this.RunningCpu = new Float(source.RunningCpu);
+        }
+        if (source.RunningMem != null) {
+            this.RunningMem = new Float(source.RunningMem);
+        }
     }
 
 
@@ -1129,6 +1227,9 @@ public class JobV1 extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamObj(map, prefix + "EventInfo.", this.EventInfo);
         this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "ScalingType", this.ScalingType);
+        this.setParamSimple(map, prefix + "RunningCpu", this.RunningCpu);
+        this.setParamSimple(map, prefix + "RunningMem", this.RunningMem);
 
     }
 }

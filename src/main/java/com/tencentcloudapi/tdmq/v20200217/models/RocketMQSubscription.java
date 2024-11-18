@@ -114,6 +114,8 @@ DeadLetter 死信
 
     /**
     * 消费类型
+0: 广播消费
+1: 集群消费
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConsumeType")
@@ -398,8 +400,12 @@ DeadLetter 死信
 
     /**
      * Get 消费类型
+0: 广播消费
+1: 集群消费
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ConsumeType 消费类型
+0: 广播消费
+1: 集群消费
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getConsumeType() {
@@ -408,8 +414,12 @@ DeadLetter 死信
 
     /**
      * Set 消费类型
+0: 广播消费
+1: 集群消费
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ConsumeType 消费类型
+0: 广播消费
+1: 集群消费
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConsumeType(Long ConsumeType) {

@@ -261,7 +261,6 @@ cdc-clb-waf：CDC环境下负载均衡型WAF实例
 
     /**
     * cdc实例域名接入的集群信息,非cdc实例忽略。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CdcClusters")
     @Expose
@@ -271,7 +270,6 @@ cdc-clb-waf：CDC环境下负载均衡型WAF实例
     * api安全开关状态。
 0：关闭 
 1：开启
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApiStatus")
     @Expose
@@ -281,7 +279,6 @@ cdc-clb-waf：CDC环境下负载均衡型WAF实例
     * 应用型负载均衡类型，默认clb。
 clb：七层负载均衡器类型
 apisix：apisix网关型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AlbType")
     @Expose
@@ -293,7 +290,6 @@ apisix：apisix网关型
 1：非腾讯云源站
 2：安全组绑定失败
 3：安全组发生变更
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SgState")
     @Expose
@@ -301,7 +297,6 @@ apisix：apisix网关型
 
     /**
     * 安全组状态的详细解释
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SgDetail")
     @Expose
@@ -310,7 +305,6 @@ apisix：apisix网关型
     /**
     * 域名云环境。hybrid：混合云域名
 public：公有云域名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CloudType")
     @Expose
@@ -318,7 +312,6 @@ public：公有云域名
 
     /**
     * 域名备注信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Note")
     @Expose
@@ -326,7 +319,6 @@ public：公有云域名
 
     /**
     * SAASWAF源站IP列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SrcList")
     @Expose
@@ -334,7 +326,6 @@ public：公有云域名
 
     /**
     * SAASWAF源站域名列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpstreamDomainList")
     @Expose
@@ -342,7 +333,6 @@ public：公有云域名
 
     /**
     * 安全组ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SgID")
     @Expose
@@ -350,11 +340,17 @@ public：公有云域名
 
     /**
     * clbwaf接入状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AccessStatus")
     @Expose
     private Long AccessStatus;
+
+    /**
+    * 域名标签
+    */
+    @SerializedName("Labels")
+    @Expose
+    private String [] Labels;
 
     /**
      * Get 域名 
@@ -1013,10 +1009,8 @@ cdc-clb-waf：CDC环境下负载均衡型WAF实例
     }
 
     /**
-     * Get cdc实例域名接入的集群信息,非cdc实例忽略。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get cdc实例域名接入的集群信息,非cdc实例忽略。 
      * @return CdcClusters cdc实例域名接入的集群信息,非cdc实例忽略。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCdcClusters() {
         return this.CdcClusters;
@@ -1024,9 +1018,7 @@ cdc-clb-waf：CDC环境下负载均衡型WAF实例
 
     /**
      * Set cdc实例域名接入的集群信息,非cdc实例忽略。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CdcClusters cdc实例域名接入的集群信息,非cdc实例忽略。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCdcClusters(String CdcClusters) {
         this.CdcClusters = CdcClusters;
@@ -1035,12 +1027,10 @@ cdc-clb-waf：CDC环境下负载均衡型WAF实例
     /**
      * Get api安全开关状态。
 0：关闭 
-1：开启
-注意：此字段可能返回 null，表示取不到有效值。 
+1：开启 
      * @return ApiStatus api安全开关状态。
 0：关闭 
 1：开启
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getApiStatus() {
         return this.ApiStatus;
@@ -1050,11 +1040,9 @@ cdc-clb-waf：CDC环境下负载均衡型WAF实例
      * Set api安全开关状态。
 0：关闭 
 1：开启
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApiStatus api安全开关状态。
 0：关闭 
 1：开启
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApiStatus(Long ApiStatus) {
         this.ApiStatus = ApiStatus;
@@ -1063,12 +1051,10 @@ cdc-clb-waf：CDC环境下负载均衡型WAF实例
     /**
      * Get 应用型负载均衡类型，默认clb。
 clb：七层负载均衡器类型
-apisix：apisix网关型
-注意：此字段可能返回 null，表示取不到有效值。 
+apisix：apisix网关型 
      * @return AlbType 应用型负载均衡类型，默认clb。
 clb：七层负载均衡器类型
 apisix：apisix网关型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAlbType() {
         return this.AlbType;
@@ -1078,11 +1064,9 @@ apisix：apisix网关型
      * Set 应用型负载均衡类型，默认clb。
 clb：七层负载均衡器类型
 apisix：apisix网关型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AlbType 应用型负载均衡类型，默认clb。
 clb：七层负载均衡器类型
 apisix：apisix网关型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAlbType(String AlbType) {
         this.AlbType = AlbType;
@@ -1093,14 +1077,12 @@ apisix：apisix网关型
 0：不展示
 1：非腾讯云源站
 2：安全组绑定失败
-3：安全组发生变更
-注意：此字段可能返回 null，表示取不到有效值。 
+3：安全组发生变更 
      * @return SgState 安全组状态。
 0：不展示
 1：非腾讯云源站
 2：安全组绑定失败
 3：安全组发生变更
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSgState() {
         return this.SgState;
@@ -1112,23 +1094,19 @@ apisix：apisix网关型
 1：非腾讯云源站
 2：安全组绑定失败
 3：安全组发生变更
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SgState 安全组状态。
 0：不展示
 1：非腾讯云源站
 2：安全组绑定失败
 3：安全组发生变更
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSgState(Long SgState) {
         this.SgState = SgState;
     }
 
     /**
-     * Get 安全组状态的详细解释
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 安全组状态的详细解释 
      * @return SgDetail 安全组状态的详细解释
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSgDetail() {
         return this.SgDetail;
@@ -1136,9 +1114,7 @@ apisix：apisix网关型
 
     /**
      * Set 安全组状态的详细解释
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SgDetail 安全组状态的详细解释
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSgDetail(String SgDetail) {
         this.SgDetail = SgDetail;
@@ -1146,11 +1122,9 @@ apisix：apisix网关型
 
     /**
      * Get 域名云环境。hybrid：混合云域名
-public：公有云域名
-注意：此字段可能返回 null，表示取不到有效值。 
+public：公有云域名 
      * @return CloudType 域名云环境。hybrid：混合云域名
 public：公有云域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCloudType() {
         return this.CloudType;
@@ -1159,20 +1133,16 @@ public：公有云域名
     /**
      * Set 域名云环境。hybrid：混合云域名
 public：公有云域名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CloudType 域名云环境。hybrid：混合云域名
 public：公有云域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCloudType(String CloudType) {
         this.CloudType = CloudType;
     }
 
     /**
-     * Get 域名备注信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 域名备注信息 
      * @return Note 域名备注信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNote() {
         return this.Note;
@@ -1180,19 +1150,15 @@ public：公有云域名
 
     /**
      * Set 域名备注信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Note 域名备注信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNote(String Note) {
         this.Note = Note;
     }
 
     /**
-     * Get SAASWAF源站IP列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get SAASWAF源站IP列表 
      * @return SrcList SAASWAF源站IP列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getSrcList() {
         return this.SrcList;
@@ -1200,19 +1166,15 @@ public：公有云域名
 
     /**
      * Set SAASWAF源站IP列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SrcList SAASWAF源站IP列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSrcList(String [] SrcList) {
         this.SrcList = SrcList;
     }
 
     /**
-     * Get SAASWAF源站域名列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get SAASWAF源站域名列表 
      * @return UpstreamDomainList SAASWAF源站域名列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getUpstreamDomainList() {
         return this.UpstreamDomainList;
@@ -1220,19 +1182,15 @@ public：公有云域名
 
     /**
      * Set SAASWAF源站域名列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpstreamDomainList SAASWAF源站域名列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpstreamDomainList(String [] UpstreamDomainList) {
         this.UpstreamDomainList = UpstreamDomainList;
     }
 
     /**
-     * Get 安全组ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 安全组ID 
      * @return SgID 安全组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSgID() {
         return this.SgID;
@@ -1240,19 +1198,15 @@ public：公有云域名
 
     /**
      * Set 安全组ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SgID 安全组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSgID(String SgID) {
         this.SgID = SgID;
     }
 
     /**
-     * Get clbwaf接入状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get clbwaf接入状态 
      * @return AccessStatus clbwaf接入状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAccessStatus() {
         return this.AccessStatus;
@@ -1260,12 +1214,26 @@ public：公有云域名
 
     /**
      * Set clbwaf接入状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AccessStatus clbwaf接入状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAccessStatus(Long AccessStatus) {
         this.AccessStatus = AccessStatus;
+    }
+
+    /**
+     * Get 域名标签 
+     * @return Labels 域名标签
+     */
+    public String [] getLabels() {
+        return this.Labels;
+    }
+
+    /**
+     * Set 域名标签
+     * @param Labels 域名标签
+     */
+    public void setLabels(String [] Labels) {
+        this.Labels = Labels;
     }
 
     public DomainInfo() {
@@ -1399,6 +1367,12 @@ public：公有云域名
         if (source.AccessStatus != null) {
             this.AccessStatus = new Long(source.AccessStatus);
         }
+        if (source.Labels != null) {
+            this.Labels = new String[source.Labels.length];
+            for (int i = 0; i < source.Labels.length; i++) {
+                this.Labels[i] = new String(source.Labels[i]);
+            }
+        }
     }
 
 
@@ -1441,6 +1415,7 @@ public：公有云域名
         this.setParamArraySimple(map, prefix + "UpstreamDomainList.", this.UpstreamDomainList);
         this.setParamSimple(map, prefix + "SgID", this.SgID);
         this.setParamSimple(map, prefix + "AccessStatus", this.AccessStatus);
+        this.setParamArraySimple(map, prefix + "Labels.", this.Labels);
 
     }
 }

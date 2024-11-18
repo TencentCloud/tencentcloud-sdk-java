@@ -25,7 +25,6 @@ public class RegisterCodeInfo extends AbstractModel {
 
     /**
     * 注册码ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RegisterCodeId")
     @Expose
@@ -33,7 +32,6 @@ public class RegisterCodeInfo extends AbstractModel {
 
     /**
     * 注册码描述。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
     @Expose
@@ -41,7 +39,6 @@ public class RegisterCodeInfo extends AbstractModel {
 
     /**
     * 注册实例名称前缀。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceNamePrefix")
     @Expose
@@ -49,7 +46,6 @@ public class RegisterCodeInfo extends AbstractModel {
 
     /**
     * 该注册码允许注册的实例数目。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RegisterLimit")
     @Expose
@@ -59,7 +55,6 @@ public class RegisterCodeInfo extends AbstractModel {
     * 该注册码的过期时间，按照 ISO8601 标准表示，并且使用 UTC 时间。 
 格式为： YYYY-MM-DDThh:mm:ssZ。
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExpiredTime")
     @Expose
@@ -67,7 +62,6 @@ public class RegisterCodeInfo extends AbstractModel {
 
     /**
     * 该注册码限制tat_agent只能从IpAddressRange所描述公网出口进行注册。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IpAddressRange")
     @Expose
@@ -75,7 +69,6 @@ public class RegisterCodeInfo extends AbstractModel {
 
     /**
     * 该注册码是否可用。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Enabled")
     @Expose
@@ -83,7 +76,6 @@ public class RegisterCodeInfo extends AbstractModel {
 
     /**
     * 该注册码已注册数目。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RegisteredCount")
     @Expose
@@ -92,7 +84,6 @@ public class RegisterCodeInfo extends AbstractModel {
     /**
     * 注册码创建时间，按照 ISO8601 标准表示，并且使用 UTC 时间。 
 格式为： YYYY-MM-DDThh:mm:ssZ。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreatedTime")
@@ -103,17 +94,14 @@ public class RegisterCodeInfo extends AbstractModel {
     * 注册码最近一次更新时间，按照 ISO8601 标准表示，并且使用 UTC 时间。 
 格式为： YYYY-MM-DDThh:mm:ssZ。
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdatedTime")
     @Expose
     private String UpdatedTime;
 
     /**
-     * Get 注册码ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 注册码ID。 
      * @return RegisterCodeId 注册码ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegisterCodeId() {
         return this.RegisterCodeId;
@@ -121,19 +109,15 @@ public class RegisterCodeInfo extends AbstractModel {
 
     /**
      * Set 注册码ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RegisterCodeId 注册码ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegisterCodeId(String RegisterCodeId) {
         this.RegisterCodeId = RegisterCodeId;
     }
 
     /**
-     * Get 注册码描述。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 注册码描述。 
      * @return Description 注册码描述。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
         return this.Description;
@@ -141,19 +125,15 @@ public class RegisterCodeInfo extends AbstractModel {
 
     /**
      * Set 注册码描述。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Description 注册码描述。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 注册实例名称前缀。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 注册实例名称前缀。 
      * @return InstanceNamePrefix 注册实例名称前缀。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceNamePrefix() {
         return this.InstanceNamePrefix;
@@ -161,19 +141,15 @@ public class RegisterCodeInfo extends AbstractModel {
 
     /**
      * Set 注册实例名称前缀。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceNamePrefix 注册实例名称前缀。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceNamePrefix(String InstanceNamePrefix) {
         this.InstanceNamePrefix = InstanceNamePrefix;
     }
 
     /**
-     * Get 该注册码允许注册的实例数目。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该注册码允许注册的实例数目。 
      * @return RegisterLimit 该注册码允许注册的实例数目。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRegisterLimit() {
         return this.RegisterLimit;
@@ -181,9 +157,7 @@ public class RegisterCodeInfo extends AbstractModel {
 
     /**
      * Set 该注册码允许注册的实例数目。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RegisterLimit 该注册码允许注册的实例数目。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegisterLimit(Long RegisterLimit) {
         this.RegisterLimit = RegisterLimit;
@@ -192,11 +166,9 @@ public class RegisterCodeInfo extends AbstractModel {
     /**
      * Get 该注册码的过期时间，按照 ISO8601 标准表示，并且使用 UTC 时间。 
 格式为： YYYY-MM-DDThh:mm:ssZ。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ExpiredTime 该注册码的过期时间，按照 ISO8601 标准表示，并且使用 UTC 时间。 
 格式为： YYYY-MM-DDThh:mm:ssZ。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExpiredTime() {
@@ -207,10 +179,8 @@ public class RegisterCodeInfo extends AbstractModel {
      * Set 该注册码的过期时间，按照 ISO8601 标准表示，并且使用 UTC 时间。 
 格式为： YYYY-MM-DDThh:mm:ssZ。
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExpiredTime 该注册码的过期时间，按照 ISO8601 标准表示，并且使用 UTC 时间。 
 格式为： YYYY-MM-DDThh:mm:ssZ。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExpiredTime(String ExpiredTime) {
@@ -218,10 +188,8 @@ public class RegisterCodeInfo extends AbstractModel {
     }
 
     /**
-     * Get 该注册码限制tat_agent只能从IpAddressRange所描述公网出口进行注册。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该注册码限制tat_agent只能从IpAddressRange所描述公网出口进行注册。 
      * @return IpAddressRange 该注册码限制tat_agent只能从IpAddressRange所描述公网出口进行注册。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIpAddressRange() {
         return this.IpAddressRange;
@@ -229,19 +197,15 @@ public class RegisterCodeInfo extends AbstractModel {
 
     /**
      * Set 该注册码限制tat_agent只能从IpAddressRange所描述公网出口进行注册。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IpAddressRange 该注册码限制tat_agent只能从IpAddressRange所描述公网出口进行注册。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIpAddressRange(String IpAddressRange) {
         this.IpAddressRange = IpAddressRange;
     }
 
     /**
-     * Get 该注册码是否可用。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该注册码是否可用。 
      * @return Enabled 该注册码是否可用。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getEnabled() {
         return this.Enabled;
@@ -249,19 +213,15 @@ public class RegisterCodeInfo extends AbstractModel {
 
     /**
      * Set 该注册码是否可用。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Enabled 该注册码是否可用。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnabled(Boolean Enabled) {
         this.Enabled = Enabled;
     }
 
     /**
-     * Get 该注册码已注册数目。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该注册码已注册数目。 
      * @return RegisteredCount 该注册码已注册数目。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRegisteredCount() {
         return this.RegisteredCount;
@@ -269,9 +229,7 @@ public class RegisterCodeInfo extends AbstractModel {
 
     /**
      * Set 该注册码已注册数目。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RegisteredCount 该注册码已注册数目。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegisteredCount(Long RegisteredCount) {
         this.RegisteredCount = RegisteredCount;
@@ -280,11 +238,9 @@ public class RegisterCodeInfo extends AbstractModel {
     /**
      * Get 注册码创建时间，按照 ISO8601 标准表示，并且使用 UTC 时间。 
 格式为： YYYY-MM-DDThh:mm:ssZ。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return CreatedTime 注册码创建时间，按照 ISO8601 标准表示，并且使用 UTC 时间。 
 格式为： YYYY-MM-DDThh:mm:ssZ。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreatedTime() {
@@ -295,10 +251,8 @@ public class RegisterCodeInfo extends AbstractModel {
      * Set 注册码创建时间，按照 ISO8601 标准表示，并且使用 UTC 时间。 
 格式为： YYYY-MM-DDThh:mm:ssZ。
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreatedTime 注册码创建时间，按照 ISO8601 标准表示，并且使用 UTC 时间。 
 格式为： YYYY-MM-DDThh:mm:ssZ。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreatedTime(String CreatedTime) {
@@ -308,11 +262,9 @@ public class RegisterCodeInfo extends AbstractModel {
     /**
      * Get 注册码最近一次更新时间，按照 ISO8601 标准表示，并且使用 UTC 时间。 
 格式为： YYYY-MM-DDThh:mm:ssZ。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return UpdatedTime 注册码最近一次更新时间，按照 ISO8601 标准表示，并且使用 UTC 时间。 
 格式为： YYYY-MM-DDThh:mm:ssZ。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdatedTime() {
@@ -323,10 +275,8 @@ public class RegisterCodeInfo extends AbstractModel {
      * Set 注册码最近一次更新时间，按照 ISO8601 标准表示，并且使用 UTC 时间。 
 格式为： YYYY-MM-DDThh:mm:ssZ。
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdatedTime 注册码最近一次更新时间，按照 ISO8601 标准表示，并且使用 UTC 时间。 
 格式为： YYYY-MM-DDThh:mm:ssZ。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdatedTime(String UpdatedTime) {

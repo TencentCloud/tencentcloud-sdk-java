@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ListAttachedUserAllPoliciesResponse extends AbstractModel {
 
     /**
-    * 策略列表数据
+    * 策略列表数据。
     */
     @SerializedName("PolicyList")
     @Expose
     private AttachedUserPolicy [] PolicyList;
 
     /**
-    * 策略总数
+    * 策略总数。
     */
     @SerializedName("TotalNum")
     @Expose
@@ -45,32 +45,32 @@ public class ListAttachedUserAllPoliciesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 策略列表数据 
-     * @return PolicyList 策略列表数据
+     * Get 策略列表数据。 
+     * @return PolicyList 策略列表数据。
      */
     public AttachedUserPolicy [] getPolicyList() {
         return this.PolicyList;
     }
 
     /**
-     * Set 策略列表数据
-     * @param PolicyList 策略列表数据
+     * Set 策略列表数据。
+     * @param PolicyList 策略列表数据。
      */
     public void setPolicyList(AttachedUserPolicy [] PolicyList) {
         this.PolicyList = PolicyList;
     }
 
     /**
-     * Get 策略总数 
-     * @return TotalNum 策略总数
+     * Get 策略总数。 
+     * @return TotalNum 策略总数。
      */
     public Long getTotalNum() {
         return this.TotalNum;
     }
 
     /**
-     * Set 策略总数
-     * @param TotalNum 策略总数
+     * Set 策略总数。
+     * @param TotalNum 策略总数。
      */
     public void setTotalNum(Long TotalNum) {
         this.TotalNum = TotalNum;

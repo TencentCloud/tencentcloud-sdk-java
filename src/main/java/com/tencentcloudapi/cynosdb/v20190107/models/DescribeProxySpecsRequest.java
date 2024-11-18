@@ -23,6 +23,29 @@ import java.util.HashMap;
 
 public class DescribeProxySpecsRequest extends AbstractModel {
 
+    /**
+    * 集群id
+    */
+    @SerializedName("ClusterId")
+    @Expose
+    private String ClusterId;
+
+    /**
+     * Get 集群id 
+     * @return ClusterId 集群id
+     */
+    public String getClusterId() {
+        return this.ClusterId;
+    }
+
+    /**
+     * Set 集群id
+     * @param ClusterId 集群id
+     */
+    public void setClusterId(String ClusterId) {
+        this.ClusterId = ClusterId;
+    }
+
     public DescribeProxySpecsRequest() {
     }
 
@@ -31,6 +54,9 @@ public class DescribeProxySpecsRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeProxySpecsRequest(DescribeProxySpecsRequest source) {
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
     }
 
 
@@ -38,6 +64,7 @@ public class DescribeProxySpecsRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
 
     }
 }

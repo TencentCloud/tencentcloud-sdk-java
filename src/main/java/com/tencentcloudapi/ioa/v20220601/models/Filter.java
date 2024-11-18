@@ -25,15 +25,13 @@ public class Filter extends AbstractModel {
 
     /**
     * 过滤字段
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Field")
     @Expose
     private String Field;
 
     /**
-    * 过滤方式 eq:等于,net:不等于,like,nlike,gt:大于,lt:小于,egt:大于等于,elt:小于等于
-注意：此字段可能返回 null，表示取不到有效值。
+    * 过滤方式： eq:等于,net:不等于,like,nlike,gt:大于,lt:小于,egt:大于等于,elt:小于等于。具体支持哪些过滤方式，结合具体接口字段描述来定
     */
     @SerializedName("Operator")
     @Expose
@@ -41,17 +39,14 @@ public class Filter extends AbstractModel {
 
     /**
     * 过滤条件
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Values")
     @Expose
     private String [] Values;
 
     /**
-     * Get 过滤字段
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 过滤字段 
      * @return Field 过滤字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getField() {
         return this.Field;
@@ -59,39 +54,31 @@ public class Filter extends AbstractModel {
 
     /**
      * Set 过滤字段
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Field 过滤字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setField(String Field) {
         this.Field = Field;
     }
 
     /**
-     * Get 过滤方式 eq:等于,net:不等于,like,nlike,gt:大于,lt:小于,egt:大于等于,elt:小于等于
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Operator 过滤方式 eq:等于,net:不等于,like,nlike,gt:大于,lt:小于,egt:大于等于,elt:小于等于
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 过滤方式： eq:等于,net:不等于,like,nlike,gt:大于,lt:小于,egt:大于等于,elt:小于等于。具体支持哪些过滤方式，结合具体接口字段描述来定 
+     * @return Operator 过滤方式： eq:等于,net:不等于,like,nlike,gt:大于,lt:小于,egt:大于等于,elt:小于等于。具体支持哪些过滤方式，结合具体接口字段描述来定
      */
     public String getOperator() {
         return this.Operator;
     }
 
     /**
-     * Set 过滤方式 eq:等于,net:不等于,like,nlike,gt:大于,lt:小于,egt:大于等于,elt:小于等于
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Operator 过滤方式 eq:等于,net:不等于,like,nlike,gt:大于,lt:小于,egt:大于等于,elt:小于等于
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 过滤方式： eq:等于,net:不等于,like,nlike,gt:大于,lt:小于,egt:大于等于,elt:小于等于。具体支持哪些过滤方式，结合具体接口字段描述来定
+     * @param Operator 过滤方式： eq:等于,net:不等于,like,nlike,gt:大于,lt:小于,egt:大于等于,elt:小于等于。具体支持哪些过滤方式，结合具体接口字段描述来定
      */
     public void setOperator(String Operator) {
         this.Operator = Operator;
     }
 
     /**
-     * Get 过滤条件
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 过滤条件 
      * @return Values 过滤条件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getValues() {
         return this.Values;
@@ -99,9 +86,7 @@ public class Filter extends AbstractModel {
 
     /**
      * Set 过滤条件
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Values 过滤条件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValues(String [] Values) {
         this.Values = Values;

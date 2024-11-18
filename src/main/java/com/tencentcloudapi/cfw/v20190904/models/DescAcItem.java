@@ -25,7 +25,6 @@ public class DescAcItem extends AbstractModel {
 
     /**
     * 访问源
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SourceContent")
     @Expose
@@ -33,7 +32,6 @@ public class DescAcItem extends AbstractModel {
 
     /**
     * 访问目的
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TargetContent")
     @Expose
@@ -41,7 +39,6 @@ public class DescAcItem extends AbstractModel {
 
     /**
     * 协议
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Protocol")
     @Expose
@@ -49,7 +46,6 @@ public class DescAcItem extends AbstractModel {
 
     /**
     * 端口
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Port")
     @Expose
@@ -57,7 +53,6 @@ public class DescAcItem extends AbstractModel {
 
     /**
     * 访问控制策略中设置的流量通过云防火墙的方式。取值： accept：放行 drop：拒绝 log：观察
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleAction")
     @Expose
@@ -65,7 +60,6 @@ public class DescAcItem extends AbstractModel {
 
     /**
     * 描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
     @Expose
@@ -87,7 +81,6 @@ public class DescAcItem extends AbstractModel {
 
     /**
     * 访问源类型：入向规则时类型可以为 ip,net,template,location；出向规则时可以为 ip,net,template,instance,group,tag
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SourceType")
     @Expose
@@ -95,7 +88,6 @@ public class DescAcItem extends AbstractModel {
 
     /**
     * 访问目的类型：入向规则时类型可以为ip,net,template,instance,group,tag；出向规则时可以为 ip,net,domain,template,location,dnsparse
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TargetType")
     @Expose
@@ -103,7 +95,6 @@ public class DescAcItem extends AbstractModel {
 
     /**
     * 规则对应的唯一id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Uuid")
     @Expose
@@ -111,7 +102,6 @@ public class DescAcItem extends AbstractModel {
 
     /**
     * 规则有效性
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Invalid")
     @Expose
@@ -119,7 +109,6 @@ public class DescAcItem extends AbstractModel {
 
     /**
     * 0为正常规则,1为地域规则
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsRegion")
     @Expose
@@ -127,7 +116,6 @@ public class DescAcItem extends AbstractModel {
 
     /**
     * 国家id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CountryCode")
     @Expose
@@ -135,7 +123,6 @@ public class DescAcItem extends AbstractModel {
 
     /**
     * 城市id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CityCode")
     @Expose
@@ -143,7 +130,6 @@ public class DescAcItem extends AbstractModel {
 
     /**
     * 国家名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CountryName")
     @Expose
@@ -151,7 +137,6 @@ public class DescAcItem extends AbstractModel {
 
     /**
     * 省名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CityName")
     @Expose
@@ -159,7 +144,6 @@ public class DescAcItem extends AbstractModel {
 
     /**
     * 云厂商code
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CloudCode")
     @Expose
@@ -167,7 +151,6 @@ public class DescAcItem extends AbstractModel {
 
     /**
     * 0为正常规则,1为云厂商规则
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsCloud")
     @Expose
@@ -175,7 +158,6 @@ public class DescAcItem extends AbstractModel {
 
     /**
     * 规则状态，true表示启用，false表示禁用
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Enable")
     @Expose
@@ -183,7 +165,6 @@ public class DescAcItem extends AbstractModel {
 
     /**
     * 规则方向：1，入向；0，出向
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Direction")
     @Expose
@@ -191,7 +172,6 @@ public class DescAcItem extends AbstractModel {
 
     /**
     * 实例名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceName")
     @Expose
@@ -199,7 +179,6 @@ public class DescAcItem extends AbstractModel {
 
     /**
     * 内部使用的uuid，一般情况下不会使用到该字段
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InternalUuid")
     @Expose
@@ -207,7 +186,6 @@ public class DescAcItem extends AbstractModel {
 
     /**
     * 规则状态，查询规则命中详情时该字段有效，0：新增，1: 已删除, 2: 编辑删除
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -215,7 +193,6 @@ public class DescAcItem extends AbstractModel {
 
     /**
     * 关联任务详情
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BetaList")
     @Expose
@@ -224,7 +201,6 @@ public class DescAcItem extends AbstractModel {
     /**
     * （1）互联网边界防火墙，生效范围：serial，串行；side，旁路；all，全局；
 （2）NAT边界防火墙：ALL，全局生效；ap-guangzhou，生效的地域；cfwnat-xxx，生效基于实例维度
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Scope")
     @Expose
@@ -232,7 +208,6 @@ public class DescAcItem extends AbstractModel {
 
     /**
     * 生效范围描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScopeDesc")
     @Expose
@@ -240,7 +215,6 @@ public class DescAcItem extends AbstractModel {
 
     /**
     * 互联网边界防火墙使用的内部规则id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InternetBorderUuid")
     @Expose
@@ -248,7 +222,6 @@ public class DescAcItem extends AbstractModel {
 
     /**
     * 协议端口组名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ParamTemplateName")
     @Expose
@@ -256,7 +229,6 @@ public class DescAcItem extends AbstractModel {
 
     /**
     * 协议端口组ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ParamTemplateId")
     @Expose
@@ -264,7 +236,6 @@ public class DescAcItem extends AbstractModel {
 
     /**
     * 访问源名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SourceName")
     @Expose
@@ -272,7 +243,6 @@ public class DescAcItem extends AbstractModel {
 
     /**
     * 访问目的名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TargetName")
     @Expose
@@ -280,17 +250,14 @@ public class DescAcItem extends AbstractModel {
 
     /**
     * 规则最近命中时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LastHitTime")
     @Expose
     private String LastHitTime;
 
     /**
-     * Get 访问源
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 访问源 
      * @return SourceContent 访问源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSourceContent() {
         return this.SourceContent;
@@ -298,19 +265,15 @@ public class DescAcItem extends AbstractModel {
 
     /**
      * Set 访问源
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SourceContent 访问源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSourceContent(String SourceContent) {
         this.SourceContent = SourceContent;
     }
 
     /**
-     * Get 访问目的
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 访问目的 
      * @return TargetContent 访问目的
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTargetContent() {
         return this.TargetContent;
@@ -318,19 +281,15 @@ public class DescAcItem extends AbstractModel {
 
     /**
      * Set 访问目的
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TargetContent 访问目的
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTargetContent(String TargetContent) {
         this.TargetContent = TargetContent;
     }
 
     /**
-     * Get 协议
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 协议 
      * @return Protocol 协议
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProtocol() {
         return this.Protocol;
@@ -338,19 +297,15 @@ public class DescAcItem extends AbstractModel {
 
     /**
      * Set 协议
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Protocol 协议
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
     }
 
     /**
-     * Get 端口
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 端口 
      * @return Port 端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPort() {
         return this.Port;
@@ -358,19 +313,15 @@ public class DescAcItem extends AbstractModel {
 
     /**
      * Set 端口
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Port 端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPort(String Port) {
         this.Port = Port;
     }
 
     /**
-     * Get 访问控制策略中设置的流量通过云防火墙的方式。取值： accept：放行 drop：拒绝 log：观察
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 访问控制策略中设置的流量通过云防火墙的方式。取值： accept：放行 drop：拒绝 log：观察 
      * @return RuleAction 访问控制策略中设置的流量通过云防火墙的方式。取值： accept：放行 drop：拒绝 log：观察
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRuleAction() {
         return this.RuleAction;
@@ -378,19 +329,15 @@ public class DescAcItem extends AbstractModel {
 
     /**
      * Set 访问控制策略中设置的流量通过云防火墙的方式。取值： accept：放行 drop：拒绝 log：观察
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RuleAction 访问控制策略中设置的流量通过云防火墙的方式。取值： accept：放行 drop：拒绝 log：观察
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleAction(String RuleAction) {
         this.RuleAction = RuleAction;
     }
 
     /**
-     * Get 描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 描述 
      * @return Description 描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
         return this.Description;
@@ -398,9 +345,7 @@ public class DescAcItem extends AbstractModel {
 
     /**
      * Set 描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Description 描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
         this.Description = Description;
@@ -439,10 +384,8 @@ public class DescAcItem extends AbstractModel {
     }
 
     /**
-     * Get 访问源类型：入向规则时类型可以为 ip,net,template,location；出向规则时可以为 ip,net,template,instance,group,tag
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 访问源类型：入向规则时类型可以为 ip,net,template,location；出向规则时可以为 ip,net,template,instance,group,tag 
      * @return SourceType 访问源类型：入向规则时类型可以为 ip,net,template,location；出向规则时可以为 ip,net,template,instance,group,tag
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSourceType() {
         return this.SourceType;
@@ -450,19 +393,15 @@ public class DescAcItem extends AbstractModel {
 
     /**
      * Set 访问源类型：入向规则时类型可以为 ip,net,template,location；出向规则时可以为 ip,net,template,instance,group,tag
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SourceType 访问源类型：入向规则时类型可以为 ip,net,template,location；出向规则时可以为 ip,net,template,instance,group,tag
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSourceType(String SourceType) {
         this.SourceType = SourceType;
     }
 
     /**
-     * Get 访问目的类型：入向规则时类型可以为ip,net,template,instance,group,tag；出向规则时可以为 ip,net,domain,template,location,dnsparse
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 访问目的类型：入向规则时类型可以为ip,net,template,instance,group,tag；出向规则时可以为 ip,net,domain,template,location,dnsparse 
      * @return TargetType 访问目的类型：入向规则时类型可以为ip,net,template,instance,group,tag；出向规则时可以为 ip,net,domain,template,location,dnsparse
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTargetType() {
         return this.TargetType;
@@ -470,19 +409,15 @@ public class DescAcItem extends AbstractModel {
 
     /**
      * Set 访问目的类型：入向规则时类型可以为ip,net,template,instance,group,tag；出向规则时可以为 ip,net,domain,template,location,dnsparse
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TargetType 访问目的类型：入向规则时类型可以为ip,net,template,instance,group,tag；出向规则时可以为 ip,net,domain,template,location,dnsparse
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTargetType(String TargetType) {
         this.TargetType = TargetType;
     }
 
     /**
-     * Get 规则对应的唯一id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则对应的唯一id 
      * @return Uuid 规则对应的唯一id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getUuid() {
         return this.Uuid;
@@ -490,19 +425,15 @@ public class DescAcItem extends AbstractModel {
 
     /**
      * Set 规则对应的唯一id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Uuid 规则对应的唯一id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUuid(Long Uuid) {
         this.Uuid = Uuid;
     }
 
     /**
-     * Get 规则有效性
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则有效性 
      * @return Invalid 规则有效性
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getInvalid() {
         return this.Invalid;
@@ -510,19 +441,15 @@ public class DescAcItem extends AbstractModel {
 
     /**
      * Set 规则有效性
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Invalid 规则有效性
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInvalid(Long Invalid) {
         this.Invalid = Invalid;
     }
 
     /**
-     * Get 0为正常规则,1为地域规则
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 0为正常规则,1为地域规则 
      * @return IsRegion 0为正常规则,1为地域规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsRegion() {
         return this.IsRegion;
@@ -530,19 +457,15 @@ public class DescAcItem extends AbstractModel {
 
     /**
      * Set 0为正常规则,1为地域规则
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsRegion 0为正常规则,1为地域规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsRegion(Long IsRegion) {
         this.IsRegion = IsRegion;
     }
 
     /**
-     * Get 国家id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 国家id 
      * @return CountryCode 国家id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCountryCode() {
         return this.CountryCode;
@@ -550,19 +473,15 @@ public class DescAcItem extends AbstractModel {
 
     /**
      * Set 国家id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CountryCode 国家id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCountryCode(Long CountryCode) {
         this.CountryCode = CountryCode;
     }
 
     /**
-     * Get 城市id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 城市id 
      * @return CityCode 城市id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCityCode() {
         return this.CityCode;
@@ -570,19 +489,15 @@ public class DescAcItem extends AbstractModel {
 
     /**
      * Set 城市id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CityCode 城市id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCityCode(Long CityCode) {
         this.CityCode = CityCode;
     }
 
     /**
-     * Get 国家名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 国家名称 
      * @return CountryName 国家名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCountryName() {
         return this.CountryName;
@@ -590,19 +505,15 @@ public class DescAcItem extends AbstractModel {
 
     /**
      * Set 国家名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CountryName 国家名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCountryName(String CountryName) {
         this.CountryName = CountryName;
     }
 
     /**
-     * Get 省名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 省名称 
      * @return CityName 省名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCityName() {
         return this.CityName;
@@ -610,19 +521,15 @@ public class DescAcItem extends AbstractModel {
 
     /**
      * Set 省名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CityName 省名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCityName(String CityName) {
         this.CityName = CityName;
     }
 
     /**
-     * Get 云厂商code
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 云厂商code 
      * @return CloudCode 云厂商code
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCloudCode() {
         return this.CloudCode;
@@ -630,19 +537,15 @@ public class DescAcItem extends AbstractModel {
 
     /**
      * Set 云厂商code
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CloudCode 云厂商code
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCloudCode(String CloudCode) {
         this.CloudCode = CloudCode;
     }
 
     /**
-     * Get 0为正常规则,1为云厂商规则
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 0为正常规则,1为云厂商规则 
      * @return IsCloud 0为正常规则,1为云厂商规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsCloud() {
         return this.IsCloud;
@@ -650,19 +553,15 @@ public class DescAcItem extends AbstractModel {
 
     /**
      * Set 0为正常规则,1为云厂商规则
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsCloud 0为正常规则,1为云厂商规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsCloud(Long IsCloud) {
         this.IsCloud = IsCloud;
     }
 
     /**
-     * Get 规则状态，true表示启用，false表示禁用
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则状态，true表示启用，false表示禁用 
      * @return Enable 规则状态，true表示启用，false表示禁用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEnable() {
         return this.Enable;
@@ -670,19 +569,15 @@ public class DescAcItem extends AbstractModel {
 
     /**
      * Set 规则状态，true表示启用，false表示禁用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Enable 规则状态，true表示启用，false表示禁用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnable(String Enable) {
         this.Enable = Enable;
     }
 
     /**
-     * Get 规则方向：1，入向；0，出向
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则方向：1，入向；0，出向 
      * @return Direction 规则方向：1，入向；0，出向
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDirection() {
         return this.Direction;
@@ -690,19 +585,15 @@ public class DescAcItem extends AbstractModel {
 
     /**
      * Set 规则方向：1，入向；0，出向
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Direction 规则方向：1，入向；0，出向
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDirection(Long Direction) {
         this.Direction = Direction;
     }
 
     /**
-     * Get 实例名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例名称 
      * @return InstanceName 实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceName() {
         return this.InstanceName;
@@ -710,19 +601,15 @@ public class DescAcItem extends AbstractModel {
 
     /**
      * Set 实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceName 实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get 内部使用的uuid，一般情况下不会使用到该字段
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 内部使用的uuid，一般情况下不会使用到该字段 
      * @return InternalUuid 内部使用的uuid，一般情况下不会使用到该字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getInternalUuid() {
         return this.InternalUuid;
@@ -730,19 +617,15 @@ public class DescAcItem extends AbstractModel {
 
     /**
      * Set 内部使用的uuid，一般情况下不会使用到该字段
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InternalUuid 内部使用的uuid，一般情况下不会使用到该字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInternalUuid(Long InternalUuid) {
         this.InternalUuid = InternalUuid;
     }
 
     /**
-     * Get 规则状态，查询规则命中详情时该字段有效，0：新增，1: 已删除, 2: 编辑删除
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则状态，查询规则命中详情时该字段有效，0：新增，1: 已删除, 2: 编辑删除 
      * @return Status 规则状态，查询规则命中详情时该字段有效，0：新增，1: 已删除, 2: 编辑删除
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
         return this.Status;
@@ -750,19 +633,15 @@ public class DescAcItem extends AbstractModel {
 
     /**
      * Set 规则状态，查询规则命中详情时该字段有效，0：新增，1: 已删除, 2: 编辑删除
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 规则状态，查询规则命中详情时该字段有效，0：新增，1: 已删除, 2: 编辑删除
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 关联任务详情
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 关联任务详情 
      * @return BetaList 关联任务详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BetaInfoByACL [] getBetaList() {
         return this.BetaList;
@@ -770,9 +649,7 @@ public class DescAcItem extends AbstractModel {
 
     /**
      * Set 关联任务详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BetaList 关联任务详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBetaList(BetaInfoByACL [] BetaList) {
         this.BetaList = BetaList;
@@ -780,11 +657,9 @@ public class DescAcItem extends AbstractModel {
 
     /**
      * Get （1）互联网边界防火墙，生效范围：serial，串行；side，旁路；all，全局；
-（2）NAT边界防火墙：ALL，全局生效；ap-guangzhou，生效的地域；cfwnat-xxx，生效基于实例维度
-注意：此字段可能返回 null，表示取不到有效值。 
+（2）NAT边界防火墙：ALL，全局生效；ap-guangzhou，生效的地域；cfwnat-xxx，生效基于实例维度 
      * @return Scope （1）互联网边界防火墙，生效范围：serial，串行；side，旁路；all，全局；
 （2）NAT边界防火墙：ALL，全局生效；ap-guangzhou，生效的地域；cfwnat-xxx，生效基于实例维度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getScope() {
         return this.Scope;
@@ -793,20 +668,16 @@ public class DescAcItem extends AbstractModel {
     /**
      * Set （1）互联网边界防火墙，生效范围：serial，串行；side，旁路；all，全局；
 （2）NAT边界防火墙：ALL，全局生效；ap-guangzhou，生效的地域；cfwnat-xxx，生效基于实例维度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Scope （1）互联网边界防火墙，生效范围：serial，串行；side，旁路；all，全局；
 （2）NAT边界防火墙：ALL，全局生效；ap-guangzhou，生效的地域；cfwnat-xxx，生效基于实例维度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScope(String Scope) {
         this.Scope = Scope;
     }
 
     /**
-     * Get 生效范围描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 生效范围描述 
      * @return ScopeDesc 生效范围描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getScopeDesc() {
         return this.ScopeDesc;
@@ -814,19 +685,15 @@ public class DescAcItem extends AbstractModel {
 
     /**
      * Set 生效范围描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ScopeDesc 生效范围描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScopeDesc(String ScopeDesc) {
         this.ScopeDesc = ScopeDesc;
     }
 
     /**
-     * Get 互联网边界防火墙使用的内部规则id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 互联网边界防火墙使用的内部规则id 
      * @return InternetBorderUuid 互联网边界防火墙使用的内部规则id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInternetBorderUuid() {
         return this.InternetBorderUuid;
@@ -834,19 +701,15 @@ public class DescAcItem extends AbstractModel {
 
     /**
      * Set 互联网边界防火墙使用的内部规则id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InternetBorderUuid 互联网边界防火墙使用的内部规则id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInternetBorderUuid(String InternetBorderUuid) {
         this.InternetBorderUuid = InternetBorderUuid;
     }
 
     /**
-     * Get 协议端口组名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 协议端口组名称 
      * @return ParamTemplateName 协议端口组名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getParamTemplateName() {
         return this.ParamTemplateName;
@@ -854,19 +717,15 @@ public class DescAcItem extends AbstractModel {
 
     /**
      * Set 协议端口组名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ParamTemplateName 协议端口组名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setParamTemplateName(String ParamTemplateName) {
         this.ParamTemplateName = ParamTemplateName;
     }
 
     /**
-     * Get 协议端口组ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 协议端口组ID 
      * @return ParamTemplateId 协议端口组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getParamTemplateId() {
         return this.ParamTemplateId;
@@ -874,19 +733,15 @@ public class DescAcItem extends AbstractModel {
 
     /**
      * Set 协议端口组ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ParamTemplateId 协议端口组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setParamTemplateId(String ParamTemplateId) {
         this.ParamTemplateId = ParamTemplateId;
     }
 
     /**
-     * Get 访问源名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 访问源名称 
      * @return SourceName 访问源名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSourceName() {
         return this.SourceName;
@@ -894,19 +749,15 @@ public class DescAcItem extends AbstractModel {
 
     /**
      * Set 访问源名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SourceName 访问源名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSourceName(String SourceName) {
         this.SourceName = SourceName;
     }
 
     /**
-     * Get 访问目的名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 访问目的名称 
      * @return TargetName 访问目的名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTargetName() {
         return this.TargetName;
@@ -914,19 +765,15 @@ public class DescAcItem extends AbstractModel {
 
     /**
      * Set 访问目的名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TargetName 访问目的名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTargetName(String TargetName) {
         this.TargetName = TargetName;
     }
 
     /**
-     * Get 规则最近命中时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则最近命中时间 
      * @return LastHitTime 规则最近命中时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLastHitTime() {
         return this.LastHitTime;
@@ -934,9 +781,7 @@ public class DescAcItem extends AbstractModel {
 
     /**
      * Set 规则最近命中时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LastHitTime 规则最近命中时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLastHitTime(String LastHitTime) {
         this.LastHitTime = LastHitTime;

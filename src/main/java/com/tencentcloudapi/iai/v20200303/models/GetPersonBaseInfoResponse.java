@@ -24,21 +24,22 @@ import java.util.HashMap;
 public class GetPersonBaseInfoResponse extends AbstractModel {
 
     /**
-    * 人员名称
+    * 人员名称。
     */
     @SerializedName("PersonName")
     @Expose
     private String PersonName;
 
     /**
-    * 人员性别，0代表未填写，1代表男性，2代表女性
+    * 人员性别。
+- 取值范围：0代表未填写，1代表男性，2代表女性。
     */
     @SerializedName("Gender")
     @Expose
     private Long Gender;
 
     /**
-    * 包含的人脸 ID 列表
+    * 包含的人脸 ID 列表。
     */
     @SerializedName("FaceIds")
     @Expose
@@ -52,48 +53,52 @@ public class GetPersonBaseInfoResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 人员名称 
-     * @return PersonName 人员名称
+     * Get 人员名称。 
+     * @return PersonName 人员名称。
      */
     public String getPersonName() {
         return this.PersonName;
     }
 
     /**
-     * Set 人员名称
-     * @param PersonName 人员名称
+     * Set 人员名称。
+     * @param PersonName 人员名称。
      */
     public void setPersonName(String PersonName) {
         this.PersonName = PersonName;
     }
 
     /**
-     * Get 人员性别，0代表未填写，1代表男性，2代表女性 
-     * @return Gender 人员性别，0代表未填写，1代表男性，2代表女性
+     * Get 人员性别。
+- 取值范围：0代表未填写，1代表男性，2代表女性。 
+     * @return Gender 人员性别。
+- 取值范围：0代表未填写，1代表男性，2代表女性。
      */
     public Long getGender() {
         return this.Gender;
     }
 
     /**
-     * Set 人员性别，0代表未填写，1代表男性，2代表女性
-     * @param Gender 人员性别，0代表未填写，1代表男性，2代表女性
+     * Set 人员性别。
+- 取值范围：0代表未填写，1代表男性，2代表女性。
+     * @param Gender 人员性别。
+- 取值范围：0代表未填写，1代表男性，2代表女性。
      */
     public void setGender(Long Gender) {
         this.Gender = Gender;
     }
 
     /**
-     * Get 包含的人脸 ID 列表 
-     * @return FaceIds 包含的人脸 ID 列表
+     * Get 包含的人脸 ID 列表。 
+     * @return FaceIds 包含的人脸 ID 列表。
      */
     public String [] getFaceIds() {
         return this.FaceIds;
     }
 
     /**
-     * Set 包含的人脸 ID 列表
-     * @param FaceIds 包含的人脸 ID 列表
+     * Set 包含的人脸 ID 列表。
+     * @param FaceIds 包含的人脸 ID 列表。
      */
     public void setFaceIds(String [] FaceIds) {
         this.FaceIds = FaceIds;

@@ -116,7 +116,6 @@ public class AgentAuditedClient extends AbstractModel {
 
     /**
     * 业务员ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SalesUin")
     @Expose
@@ -124,7 +123,6 @@ public class AgentAuditedClient extends AbstractModel {
 
     /**
     * 业务员姓名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SalesName")
     @Expose
@@ -132,7 +130,6 @@ public class AgentAuditedClient extends AbstractModel {
 
     /**
     * 代客邮箱
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Mail")
     @Expose
@@ -140,7 +137,6 @@ public class AgentAuditedClient extends AbstractModel {
 
     /**
     * 交易类型:交易类型 1-原类型 2-代理型  3-代采型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TransactionType")
     @Expose
@@ -355,10 +351,8 @@ public class AgentAuditedClient extends AbstractModel {
     }
 
     /**
-     * Get 业务员ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 业务员ID 
      * @return SalesUin 业务员ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSalesUin() {
         return this.SalesUin;
@@ -366,19 +360,15 @@ public class AgentAuditedClient extends AbstractModel {
 
     /**
      * Set 业务员ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SalesUin 业务员ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSalesUin(String SalesUin) {
         this.SalesUin = SalesUin;
     }
 
     /**
-     * Get 业务员姓名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 业务员姓名 
      * @return SalesName 业务员姓名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSalesName() {
         return this.SalesName;
@@ -386,19 +376,15 @@ public class AgentAuditedClient extends AbstractModel {
 
     /**
      * Set 业务员姓名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SalesName 业务员姓名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSalesName(String SalesName) {
         this.SalesName = SalesName;
     }
 
     /**
-     * Get 代客邮箱
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 代客邮箱 
      * @return Mail 代客邮箱
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMail() {
         return this.Mail;
@@ -406,19 +392,15 @@ public class AgentAuditedClient extends AbstractModel {
 
     /**
      * Set 代客邮箱
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Mail 代客邮箱
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMail(String Mail) {
         this.Mail = Mail;
     }
 
     /**
-     * Get 交易类型:交易类型 1-原类型 2-代理型  3-代采型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 交易类型:交易类型 1-原类型 2-代理型  3-代采型 
      * @return TransactionType 交易类型:交易类型 1-原类型 2-代理型  3-代采型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTransactionType() {
         return this.TransactionType;
@@ -426,9 +408,7 @@ public class AgentAuditedClient extends AbstractModel {
 
     /**
      * Set 交易类型:交易类型 1-原类型 2-代理型  3-代采型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TransactionType 交易类型:交易类型 1-原类型 2-代理型  3-代采型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTransactionType(String TransactionType) {
         this.TransactionType = TransactionType;

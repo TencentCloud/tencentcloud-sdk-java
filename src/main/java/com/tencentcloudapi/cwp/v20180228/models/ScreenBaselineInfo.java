@@ -25,7 +25,6 @@ public class ScreenBaselineInfo extends AbstractModel {
 
     /**
     * 基线名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -33,7 +32,6 @@ public class ScreenBaselineInfo extends AbstractModel {
 
     /**
     * 危害等级：1-低危；2-中危；3-高危；4-严重
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Level")
     @Expose
@@ -41,7 +39,6 @@ public class ScreenBaselineInfo extends AbstractModel {
 
     /**
     * 基线id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CategoryId")
     @Expose
@@ -49,7 +46,6 @@ public class ScreenBaselineInfo extends AbstractModel {
 
     /**
     * 最后检测时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LastScanTime")
     @Expose
@@ -57,7 +53,6 @@ public class ScreenBaselineInfo extends AbstractModel {
 
     /**
     * 基线风险项
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BaselineFailCount")
     @Expose
@@ -65,17 +60,14 @@ public class ScreenBaselineInfo extends AbstractModel {
 
     /**
     * 主机uuid
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Uuid")
     @Expose
     private String Uuid;
 
     /**
-     * Get 基线名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 基线名 
      * @return Name 基线名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -83,19 +75,15 @@ public class ScreenBaselineInfo extends AbstractModel {
 
     /**
      * Set 基线名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 基线名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 危害等级：1-低危；2-中危；3-高危；4-严重
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 危害等级：1-低危；2-中危；3-高危；4-严重 
      * @return Level 危害等级：1-低危；2-中危；3-高危；4-严重
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLevel() {
         return this.Level;
@@ -103,19 +91,15 @@ public class ScreenBaselineInfo extends AbstractModel {
 
     /**
      * Set 危害等级：1-低危；2-中危；3-高危；4-严重
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Level 危害等级：1-低危；2-中危；3-高危；4-严重
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLevel(Long Level) {
         this.Level = Level;
     }
 
     /**
-     * Get 基线id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 基线id 
      * @return CategoryId 基线id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCategoryId() {
         return this.CategoryId;
@@ -123,19 +107,15 @@ public class ScreenBaselineInfo extends AbstractModel {
 
     /**
      * Set 基线id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CategoryId 基线id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCategoryId(Long CategoryId) {
         this.CategoryId = CategoryId;
     }
 
     /**
-     * Get 最后检测时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最后检测时间 
      * @return LastScanTime 最后检测时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLastScanTime() {
         return this.LastScanTime;
@@ -143,19 +123,15 @@ public class ScreenBaselineInfo extends AbstractModel {
 
     /**
      * Set 最后检测时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LastScanTime 最后检测时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLastScanTime(String LastScanTime) {
         this.LastScanTime = LastScanTime;
     }
 
     /**
-     * Get 基线风险项
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 基线风险项 
      * @return BaselineFailCount 基线风险项
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBaselineFailCount() {
         return this.BaselineFailCount;
@@ -163,19 +139,15 @@ public class ScreenBaselineInfo extends AbstractModel {
 
     /**
      * Set 基线风险项
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BaselineFailCount 基线风险项
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBaselineFailCount(Long BaselineFailCount) {
         this.BaselineFailCount = BaselineFailCount;
     }
 
     /**
-     * Get 主机uuid
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主机uuid 
      * @return Uuid 主机uuid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUuid() {
         return this.Uuid;
@@ -183,9 +155,7 @@ public class ScreenBaselineInfo extends AbstractModel {
 
     /**
      * Set 主机uuid
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Uuid 主机uuid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUuid(String Uuid) {
         this.Uuid = Uuid;

@@ -74,7 +74,6 @@ public class JavaMemShellPluginSetting extends AbstractModel {
 
     /**
     * 服务器uuid
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Uuid")
     @Expose
@@ -82,7 +81,6 @@ public class JavaMemShellPluginSetting extends AbstractModel {
 
     /**
     * 主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MachineExtraInfo")
     @Expose
@@ -201,10 +199,8 @@ public class JavaMemShellPluginSetting extends AbstractModel {
     }
 
     /**
-     * Get 服务器uuid
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 服务器uuid 
      * @return Uuid 服务器uuid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUuid() {
         return this.Uuid;
@@ -212,19 +208,15 @@ public class JavaMemShellPluginSetting extends AbstractModel {
 
     /**
      * Set 服务器uuid
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Uuid 服务器uuid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUuid(String Uuid) {
         this.Uuid = Uuid;
     }
 
     /**
-     * Get 主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主机额外信息 
      * @return MachineExtraInfo 主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public MachineExtraInfo getMachineExtraInfo() {
         return this.MachineExtraInfo;
@@ -232,9 +224,7 @@ public class JavaMemShellPluginSetting extends AbstractModel {
 
     /**
      * Set 主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MachineExtraInfo 主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMachineExtraInfo(MachineExtraInfo MachineExtraInfo) {
         this.MachineExtraInfo = MachineExtraInfo;

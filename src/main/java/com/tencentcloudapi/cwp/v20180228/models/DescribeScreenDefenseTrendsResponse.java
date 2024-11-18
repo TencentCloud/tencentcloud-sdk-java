@@ -25,7 +25,6 @@ public class DescribeScreenDefenseTrendsResponse extends AbstractModel {
 
     /**
     * 统计详情图标数据
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TrendsChart")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeScreenDefenseTrendsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 统计详情图标数据
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 统计详情图标数据 
      * @return TrendsChart 统计详情图标数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ScreenTrendsChart [] getTrendsChart() {
         return this.TrendsChart;
@@ -50,9 +47,7 @@ public class DescribeScreenDefenseTrendsResponse extends AbstractModel {
 
     /**
      * Set 统计详情图标数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TrendsChart 统计详情图标数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTrendsChart(ScreenTrendsChart [] TrendsChart) {
         this.TrendsChart = TrendsChart;

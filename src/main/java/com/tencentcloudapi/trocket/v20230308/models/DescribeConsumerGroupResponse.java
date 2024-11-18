@@ -88,6 +88,15 @@ public class DescribeConsumerGroupResponse extends AbstractModel {
     private String Remark;
 
     /**
+    * 消费模式：
+BROADCASTING 广播模式
+CLUSTERING 集群模式
+    */
+    @SerializedName("MessageModel")
+    @Expose
+    private String MessageModel;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -243,6 +252,30 @@ public class DescribeConsumerGroupResponse extends AbstractModel {
     }
 
     /**
+     * Get 消费模式：
+BROADCASTING 广播模式
+CLUSTERING 集群模式 
+     * @return MessageModel 消费模式：
+BROADCASTING 广播模式
+CLUSTERING 集群模式
+     */
+    public String getMessageModel() {
+        return this.MessageModel;
+    }
+
+    /**
+     * Set 消费模式：
+BROADCASTING 广播模式
+CLUSTERING 集群模式
+     * @param MessageModel 消费模式：
+BROADCASTING 广播模式
+CLUSTERING 集群模式
+     */
+    public void setMessageModel(String MessageModel) {
+        this.MessageModel = MessageModel;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -293,6 +326,9 @@ public class DescribeConsumerGroupResponse extends AbstractModel {
         if (source.Remark != null) {
             this.Remark = new String(source.Remark);
         }
+        if (source.MessageModel != null) {
+            this.MessageModel = new String(source.MessageModel);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -312,6 +348,7 @@ public class DescribeConsumerGroupResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "ConsumeEnable", this.ConsumeEnable);
         this.setParamSimple(map, prefix + "MaxRetryTimes", this.MaxRetryTimes);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
+        this.setParamSimple(map, prefix + "MessageModel", this.MessageModel);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

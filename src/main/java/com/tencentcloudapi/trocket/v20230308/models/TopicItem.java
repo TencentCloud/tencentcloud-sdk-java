@@ -39,6 +39,10 @@ public class TopicItem extends AbstractModel {
 
     /**
     * 主题类型
+NORMAL:普通消息,
+FIFO:顺序消息,
+DELAY:延时消息,
+TRANSACTION:事务消息
     */
     @SerializedName("TopicType")
     @Expose
@@ -53,7 +57,6 @@ public class TopicItem extends AbstractModel {
 
     /**
     * 描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Remark")
     @Expose
@@ -132,8 +135,16 @@ public class TopicItem extends AbstractModel {
     }
 
     /**
-     * Get 主题类型 
+     * Get 主题类型
+NORMAL:普通消息,
+FIFO:顺序消息,
+DELAY:延时消息,
+TRANSACTION:事务消息 
      * @return TopicType 主题类型
+NORMAL:普通消息,
+FIFO:顺序消息,
+DELAY:延时消息,
+TRANSACTION:事务消息
      */
     public String getTopicType() {
         return this.TopicType;
@@ -141,7 +152,15 @@ public class TopicItem extends AbstractModel {
 
     /**
      * Set 主题类型
+NORMAL:普通消息,
+FIFO:顺序消息,
+DELAY:延时消息,
+TRANSACTION:事务消息
      * @param TopicType 主题类型
+NORMAL:普通消息,
+FIFO:顺序消息,
+DELAY:延时消息,
+TRANSACTION:事务消息
      */
     public void setTopicType(String TopicType) {
         this.TopicType = TopicType;
@@ -164,10 +183,8 @@ public class TopicItem extends AbstractModel {
     }
 
     /**
-     * Get 描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 描述 
      * @return Remark 描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRemark() {
         return this.Remark;
@@ -175,9 +192,7 @@ public class TopicItem extends AbstractModel {
 
     /**
      * Set 描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Remark 描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;

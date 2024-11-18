@@ -25,7 +25,6 @@ public class DescribeBaselineDetailResponse extends AbstractModel {
 
     /**
     * 基线详情
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BaselineDetail")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeBaselineDetailResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 基线详情
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 基线详情 
      * @return BaselineDetail 基线详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BaselineDetail getBaselineDetail() {
         return this.BaselineDetail;
@@ -50,9 +47,7 @@ public class DescribeBaselineDetailResponse extends AbstractModel {
 
     /**
      * Set 基线详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BaselineDetail 基线详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBaselineDetail(BaselineDetail BaselineDetail) {
         this.BaselineDetail = BaselineDetail;

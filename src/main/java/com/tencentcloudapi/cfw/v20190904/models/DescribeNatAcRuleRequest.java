@@ -45,7 +45,7 @@ public class DescribeNatAcRuleRequest extends AbstractModel {
     private String Index;
 
     /**
-    * 过滤条件组合
+    * 过滤条件组合，Direction 为0时表述查询出向规则，为1时表示查询入向规则
     */
     @SerializedName("Filters")
     @Expose
@@ -66,14 +66,14 @@ public class DescribeNatAcRuleRequest extends AbstractModel {
     private String EndTime;
 
     /**
-    * desc：降序；asc：升序。根据By字段的值进行排序，这里传参的话则By也必须有值
+    * desc：降序；asc：升序。根据By字段的值进行排序，这里传参的话则By也必须有值，默认为asc
     */
     @SerializedName("Order")
     @Expose
     private String Order;
 
     /**
-    * 排序所用到的字段
+    * 排序所用到的字段，默认为sequence
     */
     @SerializedName("By")
     @Expose
@@ -128,16 +128,16 @@ public class DescribeNatAcRuleRequest extends AbstractModel {
     }
 
     /**
-     * Get 过滤条件组合 
-     * @return Filters 过滤条件组合
+     * Get 过滤条件组合，Direction 为0时表述查询出向规则，为1时表示查询入向规则 
+     * @return Filters 过滤条件组合，Direction 为0时表述查询出向规则，为1时表示查询入向规则
      */
     public CommonFilter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤条件组合
-     * @param Filters 过滤条件组合
+     * Set 过滤条件组合，Direction 为0时表述查询出向规则，为1时表示查询入向规则
+     * @param Filters 过滤条件组合，Direction 为0时表述查询出向规则，为1时表示查询入向规则
      */
     public void setFilters(CommonFilter [] Filters) {
         this.Filters = Filters;
@@ -176,32 +176,32 @@ public class DescribeNatAcRuleRequest extends AbstractModel {
     }
 
     /**
-     * Get desc：降序；asc：升序。根据By字段的值进行排序，这里传参的话则By也必须有值 
-     * @return Order desc：降序；asc：升序。根据By字段的值进行排序，这里传参的话则By也必须有值
+     * Get desc：降序；asc：升序。根据By字段的值进行排序，这里传参的话则By也必须有值，默认为asc 
+     * @return Order desc：降序；asc：升序。根据By字段的值进行排序，这里传参的话则By也必须有值，默认为asc
      */
     public String getOrder() {
         return this.Order;
     }
 
     /**
-     * Set desc：降序；asc：升序。根据By字段的值进行排序，这里传参的话则By也必须有值
-     * @param Order desc：降序；asc：升序。根据By字段的值进行排序，这里传参的话则By也必须有值
+     * Set desc：降序；asc：升序。根据By字段的值进行排序，这里传参的话则By也必须有值，默认为asc
+     * @param Order desc：降序；asc：升序。根据By字段的值进行排序，这里传参的话则By也必须有值，默认为asc
      */
     public void setOrder(String Order) {
         this.Order = Order;
     }
 
     /**
-     * Get 排序所用到的字段 
-     * @return By 排序所用到的字段
+     * Get 排序所用到的字段，默认为sequence 
+     * @return By 排序所用到的字段，默认为sequence
      */
     public String getBy() {
         return this.By;
     }
 
     /**
-     * Set 排序所用到的字段
-     * @param By 排序所用到的字段
+     * Set 排序所用到的字段，默认为sequence
+     * @param By 排序所用到的字段，默认为sequence
      */
     public void setBy(String By) {
         this.By = By;

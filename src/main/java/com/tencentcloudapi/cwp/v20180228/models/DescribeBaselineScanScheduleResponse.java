@@ -25,7 +25,6 @@ public class DescribeBaselineScanScheduleResponse extends AbstractModel {
 
     /**
     * 检测进度(百分比)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Schedule")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeBaselineScanScheduleResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 检测进度(百分比)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 检测进度(百分比) 
      * @return Schedule 检测进度(百分比)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSchedule() {
         return this.Schedule;
@@ -50,9 +47,7 @@ public class DescribeBaselineScanScheduleResponse extends AbstractModel {
 
     /**
      * Set 检测进度(百分比)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Schedule 检测进度(百分比)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSchedule(Long Schedule) {
         this.Schedule = Schedule;

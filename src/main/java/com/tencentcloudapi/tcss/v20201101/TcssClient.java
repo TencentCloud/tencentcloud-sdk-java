@@ -902,7 +902,9 @@ public class TcssClient extends AbstractClient{
     }
 
     /**
-     *查询运行时异常进程事件列表信息导出
+     *接口已废弃
+
+查询运行时异常进程事件列表信息导出
      * @param req DescribeAbnormalProcessEventsExportRequest
      * @return DescribeAbnormalProcessEventsExportResponse
      * @throws TencentCloudSDKException
@@ -946,7 +948,9 @@ public class TcssClient extends AbstractClient{
     }
 
     /**
-     *查询运行时异常进程策略列表信息导出
+     *接口已废弃
+
+查询运行时异常进程策略列表信息导出
      * @param req DescribeAbnormalProcessRulesExportRequest
      * @return DescribeAbnormalProcessRulesExportResponse
      * @throws TencentCloudSDKException
@@ -1012,7 +1016,9 @@ public class TcssClient extends AbstractClient{
     }
 
     /**
-     *查询运行时访问控制策略列表导出
+     *接口已废弃
+
+查询运行时访问控制策略列表导出
      * @param req DescribeAccessControlRulesExportRequest
      * @return DescribeAccessControlRulesExportResponse
      * @throws TencentCloudSDKException
@@ -1210,7 +1216,9 @@ public class TcssClient extends AbstractClient{
     }
 
     /**
-     *容器安全搜索查询镜像列表导出
+     *接口已废弃
+
+容器安全搜索查询镜像列表导出
      * @param req DescribeAssetImageListExportRequest
      * @return DescribeAssetImageListExportResponse
      * @throws TencentCloudSDKException
@@ -1815,7 +1823,9 @@ public class TcssClient extends AbstractClient{
     }
 
     /**
-     *DescribeEscapeEventsExport  查询容器逃逸事件列表导出
+     *接口已废弃
+
+DescribeEscapeEventsExport  查询容器逃逸事件列表导出
      * @param req DescribeEscapeEventsExportRequest
      * @return DescribeEscapeEventsExportResponse
      * @throws TencentCloudSDKException
@@ -1892,7 +1902,7 @@ public class TcssClient extends AbstractClient{
     }
 
     /**
-     *查询导出任务的结果
+     *查询导出接口进度
      * @param req DescribeExportJobResultRequest
      * @return DescribeExportJobResultResponse
      * @throws TencentCloudSDKException

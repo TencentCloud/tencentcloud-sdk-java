@@ -38,7 +38,8 @@ public class QueryMetricRequest extends AbstractModel {
     private String TopicId;
 
     /**
-    * 查询时间，秒级Unix时间戳	
+    * 查询时间，秒级Unix时间戳。为空时代表当前时间戳。
+
     */
     @SerializedName("Time")
     @Expose
@@ -77,16 +78,20 @@ public class QueryMetricRequest extends AbstractModel {
     }
 
     /**
-     * Get 查询时间，秒级Unix时间戳	 
-     * @return Time 查询时间，秒级Unix时间戳	
+     * Get 查询时间，秒级Unix时间戳。为空时代表当前时间戳。
+ 
+     * @return Time 查询时间，秒级Unix时间戳。为空时代表当前时间戳。
+
      */
     public Long getTime() {
         return this.Time;
     }
 
     /**
-     * Set 查询时间，秒级Unix时间戳	
-     * @param Time 查询时间，秒级Unix时间戳	
+     * Set 查询时间，秒级Unix时间戳。为空时代表当前时间戳。
+
+     * @param Time 查询时间，秒级Unix时间戳。为空时代表当前时间戳。
+
      */
     public void setTime(Long Time) {
         this.Time = Time;

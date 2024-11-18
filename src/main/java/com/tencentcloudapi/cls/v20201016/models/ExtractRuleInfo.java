@@ -201,6 +201,17 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议。
     private EventLog [] EventLogRules;
 
     /**
+    * 日志过滤规则列表（新版）。
+注意：
+- 2.9.3以下版本LogListener不支持， 请使用FilterKeyRegex配置日志过滤规则。
+- 自建k8s采集配置（CreateConfigExtra、ModifyConfigExtra）不支持此字段。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AdvanceFilterRules")
+    @Expose
+    private AdvanceFilterRuleInfo [] AdvanceFilterRules;
+
+    /**
      * Get 时间字段的key名字，TikeKey和TimeFormat必须成对出现
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TimeKey 时间字段的key名字，TikeKey和TimeFormat必须成对出现
@@ -680,6 +691,38 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议。
         this.EventLogRules = EventLogRules;
     }
 
+    /**
+     * Get 日志过滤规则列表（新版）。
+注意：
+- 2.9.3以下版本LogListener不支持， 请使用FilterKeyRegex配置日志过滤规则。
+- 自建k8s采集配置（CreateConfigExtra、ModifyConfigExtra）不支持此字段。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AdvanceFilterRules 日志过滤规则列表（新版）。
+注意：
+- 2.9.3以下版本LogListener不支持， 请使用FilterKeyRegex配置日志过滤规则。
+- 自建k8s采集配置（CreateConfigExtra、ModifyConfigExtra）不支持此字段。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AdvanceFilterRuleInfo [] getAdvanceFilterRules() {
+        return this.AdvanceFilterRules;
+    }
+
+    /**
+     * Set 日志过滤规则列表（新版）。
+注意：
+- 2.9.3以下版本LogListener不支持， 请使用FilterKeyRegex配置日志过滤规则。
+- 自建k8s采集配置（CreateConfigExtra、ModifyConfigExtra）不支持此字段。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AdvanceFilterRules 日志过滤规则列表（新版）。
+注意：
+- 2.9.3以下版本LogListener不支持， 请使用FilterKeyRegex配置日志过滤规则。
+- 自建k8s采集配置（CreateConfigExtra、ModifyConfigExtra）不支持此字段。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAdvanceFilterRules(AdvanceFilterRuleInfo [] AdvanceFilterRules) {
+        this.AdvanceFilterRules = AdvanceFilterRules;
+    }
+
     public ExtractRuleInfo() {
     }
 
@@ -757,6 +800,12 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议。
                 this.EventLogRules[i] = new EventLog(source.EventLogRules[i]);
             }
         }
+        if (source.AdvanceFilterRules != null) {
+            this.AdvanceFilterRules = new AdvanceFilterRuleInfo[source.AdvanceFilterRules.length];
+            for (int i = 0; i < source.AdvanceFilterRules.length; i++) {
+                this.AdvanceFilterRules[i] = new AdvanceFilterRuleInfo(source.AdvanceFilterRules[i]);
+            }
+        }
     }
 
 
@@ -783,6 +832,7 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议。
         this.setParamSimple(map, prefix + "PathRegex", this.PathRegex);
         this.setParamArrayObj(map, prefix + "MetaTags.", this.MetaTags);
         this.setParamArrayObj(map, prefix + "EventLogRules.", this.EventLogRules);
+        this.setParamArrayObj(map, prefix + "AdvanceFilterRules.", this.AdvanceFilterRules);
 
     }
 }

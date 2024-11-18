@@ -143,6 +143,13 @@ public class CreateCertificateByPackageRequest extends AbstractModel {
     private String VerifyType;
 
     /**
+    * 询价参数
+    */
+    @SerializedName("PriceKey")
+    @Expose
+    private String PriceKey;
+
+    /**
      * Get 证书产品PID。 
      * @return ProductPid 证书产品PID。
      */
@@ -414,6 +421,22 @@ public class CreateCertificateByPackageRequest extends AbstractModel {
         this.VerifyType = VerifyType;
     }
 
+    /**
+     * Get 询价参数 
+     * @return PriceKey 询价参数
+     */
+    public String getPriceKey() {
+        return this.PriceKey;
+    }
+
+    /**
+     * Set 询价参数
+     * @param PriceKey 询价参数
+     */
+    public void setPriceKey(String PriceKey) {
+        this.PriceKey = PriceKey;
+    }
+
     public CreateCertificateByPackageRequest() {
     }
 
@@ -479,6 +502,9 @@ public class CreateCertificateByPackageRequest extends AbstractModel {
         if (source.VerifyType != null) {
             this.VerifyType = new String(source.VerifyType);
         }
+        if (source.PriceKey != null) {
+            this.PriceKey = new String(source.PriceKey);
+        }
     }
 
 
@@ -503,6 +529,7 @@ public class CreateCertificateByPackageRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ManagerId", this.ManagerId);
         this.setParamSimple(map, prefix + "CompanyId", this.CompanyId);
         this.setParamSimple(map, prefix + "VerifyType", this.VerifyType);
+        this.setParamSimple(map, prefix + "PriceKey", this.PriceKey);
 
     }
 }

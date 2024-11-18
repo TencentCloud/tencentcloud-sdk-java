@@ -25,7 +25,6 @@ public class DescribeHostLimitResponse extends AbstractModel {
 
     /**
     * 成功返回的状态码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Success")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeHostLimitResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 成功返回的状态码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 成功返回的状态码 
      * @return Success 成功返回的状态码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ResponseCode getSuccess() {
         return this.Success;
@@ -50,9 +47,7 @@ public class DescribeHostLimitResponse extends AbstractModel {
 
     /**
      * Set 成功返回的状态码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Success 成功返回的状态码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSuccess(ResponseCode Success) {
         this.Success = Success;

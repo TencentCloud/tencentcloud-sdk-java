@@ -183,7 +183,7 @@ public enum CdbErrorCode {
     // 数据库操作失败。
      INTERNALERROR_DBOPERATIONERROR("InternalError.DBOperationError"),
      
-    // 数据库记录不存在。
+    // 数据库实例不存在。
      INTERNALERROR_DBRECORDNOTEXISTERROR("InternalError.DBRecordNotExistError"),
      
     // 数据库内部错误。

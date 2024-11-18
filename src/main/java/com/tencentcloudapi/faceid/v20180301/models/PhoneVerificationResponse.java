@@ -24,17 +24,18 @@ import java.util.HashMap;
 public class PhoneVerificationResponse extends AbstractModel {
 
     /**
-    * 认证结果码:
-收费结果码
-0: 三要素信息一致
--4: 三要素信息不一致
-不收费结果码
--6: 手机号码不合法
--7: 身份证号码有误
--8: 姓名校验不通过
--9: 没有记录
--11: 验证中心服务繁忙
--12: 认证次数超过当日限制，请次日重试
+    * 认证结果码。
+- 收费结果码
+0: 三要素信息一致。
+-4: 三要素信息不一致。
+
+- 不收费结果码
+-6: 手机号码不合法。
+-7: 身份证号码有误。
+-8: 姓名校验不通过。
+-9: 没有记录。
+-11: 验证中心服务繁忙。
+-12: 认证次数超过当日限制，请次日重试。
     */
     @SerializedName("Result")
     @Expose
@@ -49,20 +50,21 @@ public class PhoneVerificationResponse extends AbstractModel {
 
     /**
     * 运营商名称。
-取值范围为["","移动","电信","联通"]
+- 取值范围为["","移动","电信","联通"]
     */
     @SerializedName("Isp")
     @Expose
     private String Isp;
 
     /**
-    * 业务结果详细信息。（当VerifyMode配置"详版"，且Result为"-4: 三要素信息不一致"时返回）
-枚举值：
-PhoneIdCardMismatch：手机号码与姓名一致，与身份证号不一致；
-PhoneNameMismatch：手机号码身份证号一致，与姓名不一致；
-PhoneNameIdCardMismatch：手机号码与姓名和身份证号均不一致；
-NameIdCardMismatch：姓名和身份证号不一致；
-OtherMismatch：其他不一致；
+    * 业务结果详细信息。
+- 当VerifyMode配置"详版"，且Result为"-4: 三要素信息不一致"时返回。
+- 枚举值：
+PhoneIdCardMismatch：手机号码与姓名一致，与身份证号不一致。
+PhoneNameMismatch：手机号码身份证号一致，与姓名不一致。
+PhoneNameIdCardMismatch：手机号码与姓名和身份证号均不一致。
+NameIdCardMismatch：姓名和身份证号不一致。
+OtherMismatch：其他不一致。
     */
     @SerializedName("ResultDetail")
     @Expose
@@ -76,56 +78,60 @@ OtherMismatch：其他不一致；
     private String RequestId;
 
     /**
-     * Get 认证结果码:
-收费结果码
-0: 三要素信息一致
--4: 三要素信息不一致
-不收费结果码
--6: 手机号码不合法
--7: 身份证号码有误
--8: 姓名校验不通过
--9: 没有记录
--11: 验证中心服务繁忙
--12: 认证次数超过当日限制，请次日重试 
-     * @return Result 认证结果码:
-收费结果码
-0: 三要素信息一致
--4: 三要素信息不一致
-不收费结果码
--6: 手机号码不合法
--7: 身份证号码有误
--8: 姓名校验不通过
--9: 没有记录
--11: 验证中心服务繁忙
--12: 认证次数超过当日限制，请次日重试
+     * Get 认证结果码。
+- 收费结果码
+0: 三要素信息一致。
+-4: 三要素信息不一致。
+
+- 不收费结果码
+-6: 手机号码不合法。
+-7: 身份证号码有误。
+-8: 姓名校验不通过。
+-9: 没有记录。
+-11: 验证中心服务繁忙。
+-12: 认证次数超过当日限制，请次日重试。 
+     * @return Result 认证结果码。
+- 收费结果码
+0: 三要素信息一致。
+-4: 三要素信息不一致。
+
+- 不收费结果码
+-6: 手机号码不合法。
+-7: 身份证号码有误。
+-8: 姓名校验不通过。
+-9: 没有记录。
+-11: 验证中心服务繁忙。
+-12: 认证次数超过当日限制，请次日重试。
      */
     public String getResult() {
         return this.Result;
     }
 
     /**
-     * Set 认证结果码:
-收费结果码
-0: 三要素信息一致
--4: 三要素信息不一致
-不收费结果码
--6: 手机号码不合法
--7: 身份证号码有误
--8: 姓名校验不通过
--9: 没有记录
--11: 验证中心服务繁忙
--12: 认证次数超过当日限制，请次日重试
-     * @param Result 认证结果码:
-收费结果码
-0: 三要素信息一致
--4: 三要素信息不一致
-不收费结果码
--6: 手机号码不合法
--7: 身份证号码有误
--8: 姓名校验不通过
--9: 没有记录
--11: 验证中心服务繁忙
--12: 认证次数超过当日限制，请次日重试
+     * Set 认证结果码。
+- 收费结果码
+0: 三要素信息一致。
+-4: 三要素信息不一致。
+
+- 不收费结果码
+-6: 手机号码不合法。
+-7: 身份证号码有误。
+-8: 姓名校验不通过。
+-9: 没有记录。
+-11: 验证中心服务繁忙。
+-12: 认证次数超过当日限制，请次日重试。
+     * @param Result 认证结果码。
+- 收费结果码
+0: 三要素信息一致。
+-4: 三要素信息不一致。
+
+- 不收费结果码
+-6: 手机号码不合法。
+-7: 身份证号码有误。
+-8: 姓名校验不通过。
+-9: 没有记录。
+-11: 验证中心服务繁忙。
+-12: 认证次数超过当日限制，请次日重试。
      */
     public void setResult(String Result) {
         this.Result = Result;
@@ -149,9 +155,9 @@ OtherMismatch：其他不一致；
 
     /**
      * Get 运营商名称。
-取值范围为["","移动","电信","联通"] 
+- 取值范围为["","移动","电信","联通"] 
      * @return Isp 运营商名称。
-取值范围为["","移动","电信","联通"]
+- 取值范围为["","移动","电信","联通"]
      */
     public String getIsp() {
         return this.Isp;
@@ -159,49 +165,53 @@ OtherMismatch：其他不一致；
 
     /**
      * Set 运营商名称。
-取值范围为["","移动","电信","联通"]
+- 取值范围为["","移动","电信","联通"]
      * @param Isp 运营商名称。
-取值范围为["","移动","电信","联通"]
+- 取值范围为["","移动","电信","联通"]
      */
     public void setIsp(String Isp) {
         this.Isp = Isp;
     }
 
     /**
-     * Get 业务结果详细信息。（当VerifyMode配置"详版"，且Result为"-4: 三要素信息不一致"时返回）
-枚举值：
-PhoneIdCardMismatch：手机号码与姓名一致，与身份证号不一致；
-PhoneNameMismatch：手机号码身份证号一致，与姓名不一致；
-PhoneNameIdCardMismatch：手机号码与姓名和身份证号均不一致；
-NameIdCardMismatch：姓名和身份证号不一致；
-OtherMismatch：其他不一致； 
-     * @return ResultDetail 业务结果详细信息。（当VerifyMode配置"详版"，且Result为"-4: 三要素信息不一致"时返回）
-枚举值：
-PhoneIdCardMismatch：手机号码与姓名一致，与身份证号不一致；
-PhoneNameMismatch：手机号码身份证号一致，与姓名不一致；
-PhoneNameIdCardMismatch：手机号码与姓名和身份证号均不一致；
-NameIdCardMismatch：姓名和身份证号不一致；
-OtherMismatch：其他不一致；
+     * Get 业务结果详细信息。
+- 当VerifyMode配置"详版"，且Result为"-4: 三要素信息不一致"时返回。
+- 枚举值：
+PhoneIdCardMismatch：手机号码与姓名一致，与身份证号不一致。
+PhoneNameMismatch：手机号码身份证号一致，与姓名不一致。
+PhoneNameIdCardMismatch：手机号码与姓名和身份证号均不一致。
+NameIdCardMismatch：姓名和身份证号不一致。
+OtherMismatch：其他不一致。 
+     * @return ResultDetail 业务结果详细信息。
+- 当VerifyMode配置"详版"，且Result为"-4: 三要素信息不一致"时返回。
+- 枚举值：
+PhoneIdCardMismatch：手机号码与姓名一致，与身份证号不一致。
+PhoneNameMismatch：手机号码身份证号一致，与姓名不一致。
+PhoneNameIdCardMismatch：手机号码与姓名和身份证号均不一致。
+NameIdCardMismatch：姓名和身份证号不一致。
+OtherMismatch：其他不一致。
      */
     public String getResultDetail() {
         return this.ResultDetail;
     }
 
     /**
-     * Set 业务结果详细信息。（当VerifyMode配置"详版"，且Result为"-4: 三要素信息不一致"时返回）
-枚举值：
-PhoneIdCardMismatch：手机号码与姓名一致，与身份证号不一致；
-PhoneNameMismatch：手机号码身份证号一致，与姓名不一致；
-PhoneNameIdCardMismatch：手机号码与姓名和身份证号均不一致；
-NameIdCardMismatch：姓名和身份证号不一致；
-OtherMismatch：其他不一致；
-     * @param ResultDetail 业务结果详细信息。（当VerifyMode配置"详版"，且Result为"-4: 三要素信息不一致"时返回）
-枚举值：
-PhoneIdCardMismatch：手机号码与姓名一致，与身份证号不一致；
-PhoneNameMismatch：手机号码身份证号一致，与姓名不一致；
-PhoneNameIdCardMismatch：手机号码与姓名和身份证号均不一致；
-NameIdCardMismatch：姓名和身份证号不一致；
-OtherMismatch：其他不一致；
+     * Set 业务结果详细信息。
+- 当VerifyMode配置"详版"，且Result为"-4: 三要素信息不一致"时返回。
+- 枚举值：
+PhoneIdCardMismatch：手机号码与姓名一致，与身份证号不一致。
+PhoneNameMismatch：手机号码身份证号一致，与姓名不一致。
+PhoneNameIdCardMismatch：手机号码与姓名和身份证号均不一致。
+NameIdCardMismatch：姓名和身份证号不一致。
+OtherMismatch：其他不一致。
+     * @param ResultDetail 业务结果详细信息。
+- 当VerifyMode配置"详版"，且Result为"-4: 三要素信息不一致"时返回。
+- 枚举值：
+PhoneIdCardMismatch：手机号码与姓名一致，与身份证号不一致。
+PhoneNameMismatch：手机号码身份证号一致，与姓名不一致。
+PhoneNameIdCardMismatch：手机号码与姓名和身份证号均不一致。
+NameIdCardMismatch：姓名和身份证号不一致。
+OtherMismatch：其他不一致。
      */
     public void setResultDetail(String ResultDetail) {
         this.ResultDetail = ResultDetail;

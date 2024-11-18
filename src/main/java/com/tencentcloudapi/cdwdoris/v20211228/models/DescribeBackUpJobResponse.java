@@ -32,6 +32,22 @@ public class DescribeBackUpJobResponse extends AbstractModel {
     private BackUpJobDisplay [] BackUpJobs;
 
     /**
+    * 错误信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ErrorMsg")
+    @Expose
+    private String ErrorMsg;
+
+    /**
+    * 总数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TotalCount")
+    @Expose
+    private Long TotalCount;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -56,6 +72,46 @@ public class DescribeBackUpJobResponse extends AbstractModel {
      */
     public void setBackUpJobs(BackUpJobDisplay [] BackUpJobs) {
         this.BackUpJobs = BackUpJobs;
+    }
+
+    /**
+     * Get 错误信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ErrorMsg 错误信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getErrorMsg() {
+        return this.ErrorMsg;
+    }
+
+    /**
+     * Set 错误信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ErrorMsg 错误信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setErrorMsg(String ErrorMsg) {
+        this.ErrorMsg = ErrorMsg;
+    }
+
+    /**
+     * Get 总数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TotalCount 总数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getTotalCount() {
+        return this.TotalCount;
+    }
+
+    /**
+     * Set 总数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TotalCount 总数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
     }
 
     /**
@@ -88,6 +144,12 @@ public class DescribeBackUpJobResponse extends AbstractModel {
                 this.BackUpJobs[i] = new BackUpJobDisplay(source.BackUpJobs[i]);
             }
         }
+        if (source.ErrorMsg != null) {
+            this.ErrorMsg = new String(source.ErrorMsg);
+        }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -99,6 +161,8 @@ public class DescribeBackUpJobResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "BackUpJobs.", this.BackUpJobs);
+        this.setParamSimple(map, prefix + "ErrorMsg", this.ErrorMsg);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

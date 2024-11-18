@@ -48,7 +48,15 @@ public class LookUpEventsResponse extends AbstractModel {
     private Boolean ListOver;
 
     /**
-    * 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+    * 数量
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TotalCount")
+    @Expose
+    private Long TotalCount;
+
+    /**
+    * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
@@ -115,16 +123,36 @@ public class LookUpEventsResponse extends AbstractModel {
     }
 
     /**
-     * Get 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。 
-     * @return RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Get 数量
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TotalCount 数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getTotalCount() {
+        return this.TotalCount;
+    }
+
+    /**
+     * Set 数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TotalCount 数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
+    }
+
+    /**
+     * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
+     * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public String getRequestId() {
         return this.RequestId;
     }
 
     /**
-     * Set 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
-     * @param RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+     * Set 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
+     * @param RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public void setRequestId(String RequestId) {
         this.RequestId = RequestId;
@@ -150,6 +178,9 @@ public class LookUpEventsResponse extends AbstractModel {
         if (source.ListOver != null) {
             this.ListOver = new Boolean(source.ListOver);
         }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -163,6 +194,7 @@ public class LookUpEventsResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "NextToken", this.NextToken);
         this.setParamArrayObj(map, prefix + "Events.", this.Events);
         this.setParamSimple(map, prefix + "ListOver", this.ListOver);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

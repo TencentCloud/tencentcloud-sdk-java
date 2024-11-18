@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class GetFaceIdTokenResponse extends AbstractModel {
 
     /**
-    * 有效期 10分钟。只能完成1次核身。
+    * token值。- 有效期 10分钟。- 只能完成1次核身。
     */
     @SerializedName("FaceIdToken")
     @Expose
@@ -38,16 +38,16 @@ public class GetFaceIdTokenResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 有效期 10分钟。只能完成1次核身。 
-     * @return FaceIdToken 有效期 10分钟。只能完成1次核身。
+     * Get token值。- 有效期 10分钟。- 只能完成1次核身。 
+     * @return FaceIdToken token值。- 有效期 10分钟。- 只能完成1次核身。
      */
     public String getFaceIdToken() {
         return this.FaceIdToken;
     }
 
     /**
-     * Set 有效期 10分钟。只能完成1次核身。
-     * @param FaceIdToken 有效期 10分钟。只能完成1次核身。
+     * Set token值。- 有效期 10分钟。- 只能完成1次核身。
+     * @param FaceIdToken token值。- 有效期 10分钟。- 只能完成1次核身。
      */
     public void setFaceIdToken(String FaceIdToken) {
         this.FaceIdToken = FaceIdToken;

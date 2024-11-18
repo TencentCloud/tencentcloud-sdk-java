@@ -25,7 +25,6 @@ public class DescribeImportMachineInfoResponse extends AbstractModel {
 
     /**
     * 有效的机器信息列表：机器名称、机器公网/内网ip、机器标签
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EffectiveMachineInfoList")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeImportMachineInfoResponse extends AbstractModel {
 
     /**
     * 用户批量导入失败的机器列表（例如机器不存在等...）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InvalidMachineList")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeImportMachineInfoResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 有效的机器信息列表：机器名称、机器公网/内网ip、机器标签
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 有效的机器信息列表：机器名称、机器公网/内网ip、机器标签 
      * @return EffectiveMachineInfoList 有效的机器信息列表：机器名称、机器公网/内网ip、机器标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public EffectiveMachineInfo [] getEffectiveMachineInfoList() {
         return this.EffectiveMachineInfoList;
@@ -58,19 +54,15 @@ public class DescribeImportMachineInfoResponse extends AbstractModel {
 
     /**
      * Set 有效的机器信息列表：机器名称、机器公网/内网ip、机器标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EffectiveMachineInfoList 有效的机器信息列表：机器名称、机器公网/内网ip、机器标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEffectiveMachineInfoList(EffectiveMachineInfo [] EffectiveMachineInfoList) {
         this.EffectiveMachineInfoList = EffectiveMachineInfoList;
     }
 
     /**
-     * Get 用户批量导入失败的机器列表（例如机器不存在等...）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户批量导入失败的机器列表（例如机器不存在等...） 
      * @return InvalidMachineList 用户批量导入失败的机器列表（例如机器不存在等...）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getInvalidMachineList() {
         return this.InvalidMachineList;
@@ -78,9 +70,7 @@ public class DescribeImportMachineInfoResponse extends AbstractModel {
 
     /**
      * Set 用户批量导入失败的机器列表（例如机器不存在等...）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InvalidMachineList 用户批量导入失败的机器列表（例如机器不存在等...）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInvalidMachineList(String [] InvalidMachineList) {
         this.InvalidMachineList = InvalidMachineList;

@@ -32,7 +32,6 @@ public class DescribeAccessExportsResponse extends AbstractModel {
 
     /**
     * 日志导出列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Exports")
     @Expose
@@ -62,10 +61,8 @@ public class DescribeAccessExportsResponse extends AbstractModel {
     }
 
     /**
-     * Get 日志导出列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 日志导出列表 
      * @return Exports 日志导出列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ExportAccessInfo [] getExports() {
         return this.Exports;
@@ -73,9 +70,7 @@ public class DescribeAccessExportsResponse extends AbstractModel {
 
     /**
      * Set 日志导出列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Exports 日志导出列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExports(ExportAccessInfo [] Exports) {
         this.Exports = Exports;

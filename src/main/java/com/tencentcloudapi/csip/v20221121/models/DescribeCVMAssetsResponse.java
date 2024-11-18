@@ -24,16 +24,14 @@ import java.util.HashMap;
 public class DescribeCVMAssetsResponse extends AbstractModel {
 
     /**
-    * -
-注意：此字段可能返回 null，表示取不到有效值。
+    * 总数
     */
     @SerializedName("Total")
     @Expose
     private Long Total;
 
     /**
-    * -
-注意：此字段可能返回 null，表示取不到有效值。
+    * 机器列表
     */
     @SerializedName("Data")
     @Expose
@@ -41,7 +39,6 @@ public class DescribeCVMAssetsResponse extends AbstractModel {
 
     /**
     * 地域列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RegionList")
     @Expose
@@ -49,7 +46,6 @@ public class DescribeCVMAssetsResponse extends AbstractModel {
 
     /**
     * 防护状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DefenseStatusList")
     @Expose
@@ -57,7 +53,6 @@ public class DescribeCVMAssetsResponse extends AbstractModel {
 
     /**
     * vpc枚举
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcList")
     @Expose
@@ -65,7 +60,6 @@ public class DescribeCVMAssetsResponse extends AbstractModel {
 
     /**
     * 资产类型枚举
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AssetTypeList")
     @Expose
@@ -73,7 +67,6 @@ public class DescribeCVMAssetsResponse extends AbstractModel {
 
     /**
     * 操作系统枚举
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SystemTypeList")
     @Expose
@@ -81,7 +74,6 @@ public class DescribeCVMAssetsResponse extends AbstractModel {
 
     /**
     * ip列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IpTypeList")
     @Expose
@@ -89,7 +81,6 @@ public class DescribeCVMAssetsResponse extends AbstractModel {
 
     /**
     * appid列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AppIdList")
     @Expose
@@ -97,7 +88,6 @@ public class DescribeCVMAssetsResponse extends AbstractModel {
 
     /**
     * 可用区列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ZoneList")
     @Expose
@@ -105,7 +95,6 @@ public class DescribeCVMAssetsResponse extends AbstractModel {
 
     /**
     * os列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OsList")
     @Expose
@@ -113,7 +102,6 @@ public class DescribeCVMAssetsResponse extends AbstractModel {
 
     /**
     * 资产类型和实例类型的对应关系
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AssetMapInstanceTypeList")
     @Expose
@@ -121,7 +109,6 @@ public class DescribeCVMAssetsResponse extends AbstractModel {
 
     /**
     * 公网内网枚举
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PublicPrivateAttr")
     @Expose
@@ -129,7 +116,6 @@ public class DescribeCVMAssetsResponse extends AbstractModel {
 
     /**
     * 主机防护状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProtectStatusList")
     @Expose
@@ -143,50 +129,40 @@ public class DescribeCVMAssetsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get -
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Total -
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 总数 
+     * @return Total 总数
      */
     public Long getTotal() {
         return this.Total;
     }
 
     /**
-     * Set -
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Total -
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 总数
+     * @param Total 总数
      */
     public void setTotal(Long Total) {
         this.Total = Total;
     }
 
     /**
-     * Get -
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Data -
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 机器列表 
+     * @return Data 机器列表
      */
     public CVMAssetVO [] getData() {
         return this.Data;
     }
 
     /**
-     * Set -
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Data -
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 机器列表
+     * @param Data 机器列表
      */
     public void setData(CVMAssetVO [] Data) {
         this.Data = Data;
     }
 
     /**
-     * Get 地域列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地域列表 
      * @return RegionList 地域列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public FilterDataObject [] getRegionList() {
         return this.RegionList;
@@ -194,19 +170,15 @@ public class DescribeCVMAssetsResponse extends AbstractModel {
 
     /**
      * Set 地域列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RegionList 地域列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegionList(FilterDataObject [] RegionList) {
         this.RegionList = RegionList;
     }
 
     /**
-     * Get 防护状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 防护状态 
      * @return DefenseStatusList 防护状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public FilterDataObject [] getDefenseStatusList() {
         return this.DefenseStatusList;
@@ -214,19 +186,15 @@ public class DescribeCVMAssetsResponse extends AbstractModel {
 
     /**
      * Set 防护状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DefenseStatusList 防护状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDefenseStatusList(FilterDataObject [] DefenseStatusList) {
         this.DefenseStatusList = DefenseStatusList;
     }
 
     /**
-     * Get vpc枚举
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get vpc枚举 
      * @return VpcList vpc枚举
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public FilterDataObject [] getVpcList() {
         return this.VpcList;
@@ -234,19 +202,15 @@ public class DescribeCVMAssetsResponse extends AbstractModel {
 
     /**
      * Set vpc枚举
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VpcList vpc枚举
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcList(FilterDataObject [] VpcList) {
         this.VpcList = VpcList;
     }
 
     /**
-     * Get 资产类型枚举
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资产类型枚举 
      * @return AssetTypeList 资产类型枚举
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public FilterDataObject [] getAssetTypeList() {
         return this.AssetTypeList;
@@ -254,19 +218,15 @@ public class DescribeCVMAssetsResponse extends AbstractModel {
 
     /**
      * Set 资产类型枚举
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AssetTypeList 资产类型枚举
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAssetTypeList(FilterDataObject [] AssetTypeList) {
         this.AssetTypeList = AssetTypeList;
     }
 
     /**
-     * Get 操作系统枚举
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 操作系统枚举 
      * @return SystemTypeList 操作系统枚举
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public FilterDataObject [] getSystemTypeList() {
         return this.SystemTypeList;
@@ -274,19 +234,15 @@ public class DescribeCVMAssetsResponse extends AbstractModel {
 
     /**
      * Set 操作系统枚举
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SystemTypeList 操作系统枚举
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSystemTypeList(FilterDataObject [] SystemTypeList) {
         this.SystemTypeList = SystemTypeList;
     }
 
     /**
-     * Get ip列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get ip列表 
      * @return IpTypeList ip列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public FilterDataObject [] getIpTypeList() {
         return this.IpTypeList;
@@ -294,19 +250,15 @@ public class DescribeCVMAssetsResponse extends AbstractModel {
 
     /**
      * Set ip列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IpTypeList ip列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIpTypeList(FilterDataObject [] IpTypeList) {
         this.IpTypeList = IpTypeList;
     }
 
     /**
-     * Get appid列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get appid列表 
      * @return AppIdList appid列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public FilterDataObject [] getAppIdList() {
         return this.AppIdList;
@@ -314,19 +266,15 @@ public class DescribeCVMAssetsResponse extends AbstractModel {
 
     /**
      * Set appid列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AppIdList appid列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAppIdList(FilterDataObject [] AppIdList) {
         this.AppIdList = AppIdList;
     }
 
     /**
-     * Get 可用区列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 可用区列表 
      * @return ZoneList 可用区列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public FilterDataObject [] getZoneList() {
         return this.ZoneList;
@@ -334,19 +282,15 @@ public class DescribeCVMAssetsResponse extends AbstractModel {
 
     /**
      * Set 可用区列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ZoneList 可用区列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZoneList(FilterDataObject [] ZoneList) {
         this.ZoneList = ZoneList;
     }
 
     /**
-     * Get os列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get os列表 
      * @return OsList os列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public FilterDataObject [] getOsList() {
         return this.OsList;
@@ -354,19 +298,15 @@ public class DescribeCVMAssetsResponse extends AbstractModel {
 
     /**
      * Set os列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OsList os列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOsList(FilterDataObject [] OsList) {
         this.OsList = OsList;
     }
 
     /**
-     * Get 资产类型和实例类型的对应关系
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资产类型和实例类型的对应关系 
      * @return AssetMapInstanceTypeList 资产类型和实例类型的对应关系
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AssetInstanceTypeMap [] getAssetMapInstanceTypeList() {
         return this.AssetMapInstanceTypeList;
@@ -374,19 +314,15 @@ public class DescribeCVMAssetsResponse extends AbstractModel {
 
     /**
      * Set 资产类型和实例类型的对应关系
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AssetMapInstanceTypeList 资产类型和实例类型的对应关系
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAssetMapInstanceTypeList(AssetInstanceTypeMap [] AssetMapInstanceTypeList) {
         this.AssetMapInstanceTypeList = AssetMapInstanceTypeList;
     }
 
     /**
-     * Get 公网内网枚举
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 公网内网枚举 
      * @return PublicPrivateAttr 公网内网枚举
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public FilterDataObject [] getPublicPrivateAttr() {
         return this.PublicPrivateAttr;
@@ -394,19 +330,15 @@ public class DescribeCVMAssetsResponse extends AbstractModel {
 
     /**
      * Set 公网内网枚举
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PublicPrivateAttr 公网内网枚举
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPublicPrivateAttr(FilterDataObject [] PublicPrivateAttr) {
         this.PublicPrivateAttr = PublicPrivateAttr;
     }
 
     /**
-     * Get 主机防护状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主机防护状态 
      * @return ProtectStatusList 主机防护状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public FilterDataObject [] getProtectStatusList() {
         return this.ProtectStatusList;
@@ -414,9 +346,7 @@ public class DescribeCVMAssetsResponse extends AbstractModel {
 
     /**
      * Set 主机防护状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProtectStatusList 主机防护状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProtectStatusList(FilterDataObject [] ProtectStatusList) {
         this.ProtectStatusList = ProtectStatusList;

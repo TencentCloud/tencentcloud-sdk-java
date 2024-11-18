@@ -25,7 +25,6 @@ public class DescribeFwEdgeIpsResponse extends AbstractModel {
 
     /**
     * ip 开关列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeFwEdgeIpsResponse extends AbstractModel {
 
     /**
     * ip 开关列表个数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Total")
     @Expose
@@ -41,7 +39,6 @@ public class DescribeFwEdgeIpsResponse extends AbstractModel {
 
     /**
     * 地域列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RegionLst")
     @Expose
@@ -49,7 +46,6 @@ public class DescribeFwEdgeIpsResponse extends AbstractModel {
 
     /**
     * 实例类型列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceTypeLst")
     @Expose
@@ -63,10 +59,8 @@ public class DescribeFwEdgeIpsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get ip 开关列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get ip 开关列表 
      * @return Data ip 开关列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public EdgeIpInfo [] getData() {
         return this.Data;
@@ -74,19 +68,15 @@ public class DescribeFwEdgeIpsResponse extends AbstractModel {
 
     /**
      * Set ip 开关列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Data ip 开关列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(EdgeIpInfo [] Data) {
         this.Data = Data;
     }
 
     /**
-     * Get ip 开关列表个数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get ip 开关列表个数 
      * @return Total ip 开关列表个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotal() {
         return this.Total;
@@ -94,19 +84,15 @@ public class DescribeFwEdgeIpsResponse extends AbstractModel {
 
     /**
      * Set ip 开关列表个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Total ip 开关列表个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotal(Long Total) {
         this.Total = Total;
     }
 
     /**
-     * Get 地域列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地域列表 
      * @return RegionLst 地域列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getRegionLst() {
         return this.RegionLst;
@@ -114,19 +100,15 @@ public class DescribeFwEdgeIpsResponse extends AbstractModel {
 
     /**
      * Set 地域列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RegionLst 地域列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegionLst(String [] RegionLst) {
         this.RegionLst = RegionLst;
     }
 
     /**
-     * Get 实例类型列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例类型列表 
      * @return InstanceTypeLst 实例类型列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getInstanceTypeLst() {
         return this.InstanceTypeLst;
@@ -134,9 +116,7 @@ public class DescribeFwEdgeIpsResponse extends AbstractModel {
 
     /**
      * Set 实例类型列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceTypeLst 实例类型列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceTypeLst(String [] InstanceTypeLst) {
         this.InstanceTypeLst = InstanceTypeLst;

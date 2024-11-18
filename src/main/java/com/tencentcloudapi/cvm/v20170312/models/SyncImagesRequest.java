@@ -61,6 +61,24 @@ public class SyncImagesRequest extends AbstractModel {
     private Boolean ImageSetRequired;
 
     /**
+    * 是否复制为加密自定义镜像。
+默认值为 false。
+复制加密自定义镜像仅支持同地域。
+    */
+    @SerializedName("Encrypt")
+    @Expose
+    private Boolean Encrypt;
+
+    /**
+    * 加密自定义镜像使用的 KMS 密钥 ID。
+仅当复制加密镜像时，即 Encrypt 为 true 时，此参数有效；
+不指定 KmsKeyId，默认使用 CBS 云产品 KMS 密钥。
+    */
+    @SerializedName("KmsKeyId")
+    @Expose
+    private String KmsKeyId;
+
+    /**
      * Get 镜像ID列表 ，镜像ID可以通过如下方式获取：<br><li>通过[DescribeImages](https://cloud.tencent.com/document/api/213/15715)接口返回的`ImageId`获取。</li><li>通过[镜像控制台](https://console.cloud.tencent.com/cvm/image)获取。<br>镜像ID必须满足限制：</li><li>镜像ID对应的镜像状态必须为`NORMAL`。</li>镜像状态请参考[镜像数据表](https://cloud.tencent.com/document/product/213/15753#Image)。 
      * @return ImageIds 镜像ID列表 ，镜像ID可以通过如下方式获取：<br><li>通过[DescribeImages](https://cloud.tencent.com/document/api/213/15715)接口返回的`ImageId`获取。</li><li>通过[镜像控制台](https://console.cloud.tencent.com/cvm/image)获取。<br>镜像ID必须满足限制：</li><li>镜像ID对应的镜像状态必须为`NORMAL`。</li>镜像状态请参考[镜像数据表](https://cloud.tencent.com/document/product/213/15753#Image)。
      */
@@ -148,6 +166,54 @@ public class SyncImagesRequest extends AbstractModel {
         this.ImageSetRequired = ImageSetRequired;
     }
 
+    /**
+     * Get 是否复制为加密自定义镜像。
+默认值为 false。
+复制加密自定义镜像仅支持同地域。 
+     * @return Encrypt 是否复制为加密自定义镜像。
+默认值为 false。
+复制加密自定义镜像仅支持同地域。
+     */
+    public Boolean getEncrypt() {
+        return this.Encrypt;
+    }
+
+    /**
+     * Set 是否复制为加密自定义镜像。
+默认值为 false。
+复制加密自定义镜像仅支持同地域。
+     * @param Encrypt 是否复制为加密自定义镜像。
+默认值为 false。
+复制加密自定义镜像仅支持同地域。
+     */
+    public void setEncrypt(Boolean Encrypt) {
+        this.Encrypt = Encrypt;
+    }
+
+    /**
+     * Get 加密自定义镜像使用的 KMS 密钥 ID。
+仅当复制加密镜像时，即 Encrypt 为 true 时，此参数有效；
+不指定 KmsKeyId，默认使用 CBS 云产品 KMS 密钥。 
+     * @return KmsKeyId 加密自定义镜像使用的 KMS 密钥 ID。
+仅当复制加密镜像时，即 Encrypt 为 true 时，此参数有效；
+不指定 KmsKeyId，默认使用 CBS 云产品 KMS 密钥。
+     */
+    public String getKmsKeyId() {
+        return this.KmsKeyId;
+    }
+
+    /**
+     * Set 加密自定义镜像使用的 KMS 密钥 ID。
+仅当复制加密镜像时，即 Encrypt 为 true 时，此参数有效；
+不指定 KmsKeyId，默认使用 CBS 云产品 KMS 密钥。
+     * @param KmsKeyId 加密自定义镜像使用的 KMS 密钥 ID。
+仅当复制加密镜像时，即 Encrypt 为 true 时，此参数有效；
+不指定 KmsKeyId，默认使用 CBS 云产品 KMS 密钥。
+     */
+    public void setKmsKeyId(String KmsKeyId) {
+        this.KmsKeyId = KmsKeyId;
+    }
+
     public SyncImagesRequest() {
     }
 
@@ -177,6 +243,12 @@ public class SyncImagesRequest extends AbstractModel {
         if (source.ImageSetRequired != null) {
             this.ImageSetRequired = new Boolean(source.ImageSetRequired);
         }
+        if (source.Encrypt != null) {
+            this.Encrypt = new Boolean(source.Encrypt);
+        }
+        if (source.KmsKeyId != null) {
+            this.KmsKeyId = new String(source.KmsKeyId);
+        }
     }
 
 
@@ -189,6 +261,8 @@ public class SyncImagesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "DryRun", this.DryRun);
         this.setParamSimple(map, prefix + "ImageName", this.ImageName);
         this.setParamSimple(map, prefix + "ImageSetRequired", this.ImageSetRequired);
+        this.setParamSimple(map, prefix + "Encrypt", this.Encrypt);
+        this.setParamSimple(map, prefix + "KmsKeyId", this.KmsKeyId);
 
     }
 }

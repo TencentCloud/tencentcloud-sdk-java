@@ -81,7 +81,6 @@ public class BashPolicy extends AbstractModel {
 
     /**
     * 策略描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Descript")
     @Expose
@@ -89,7 +88,6 @@ public class BashPolicy extends AbstractModel {
 
     /**
     * 事件列表点击“加入白名单”时,需要传EventId 事件的id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EventId")
     @Expose
@@ -97,7 +95,6 @@ public class BashPolicy extends AbstractModel {
 
     /**
     * 是否处理旧事件为白名单 0=不处理 1=处理
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DealOldEvents")
     @Expose
@@ -105,7 +102,6 @@ public class BashPolicy extends AbstractModel {
 
     /**
     * 生效主机的QUUID集合
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Quuids")
     @Expose
@@ -141,7 +137,6 @@ public class BashPolicy extends AbstractModel {
 
     /**
     * 规则表达式
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Rules")
     @Expose
@@ -276,10 +271,8 @@ public class BashPolicy extends AbstractModel {
     }
 
     /**
-     * Get 策略描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 策略描述 
      * @return Descript 策略描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescript() {
         return this.Descript;
@@ -287,19 +280,15 @@ public class BashPolicy extends AbstractModel {
 
     /**
      * Set 策略描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Descript 策略描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescript(String Descript) {
         this.Descript = Descript;
     }
 
     /**
-     * Get 事件列表点击“加入白名单”时,需要传EventId 事件的id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 事件列表点击“加入白名单”时,需要传EventId 事件的id 
      * @return EventId 事件列表点击“加入白名单”时,需要传EventId 事件的id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getEventId() {
         return this.EventId;
@@ -307,19 +296,15 @@ public class BashPolicy extends AbstractModel {
 
     /**
      * Set 事件列表点击“加入白名单”时,需要传EventId 事件的id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EventId 事件列表点击“加入白名单”时,需要传EventId 事件的id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEventId(Long EventId) {
         this.EventId = EventId;
     }
 
     /**
-     * Get 是否处理旧事件为白名单 0=不处理 1=处理
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否处理旧事件为白名单 0=不处理 1=处理 
      * @return DealOldEvents 是否处理旧事件为白名单 0=不处理 1=处理
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDealOldEvents() {
         return this.DealOldEvents;
@@ -327,19 +312,15 @@ public class BashPolicy extends AbstractModel {
 
     /**
      * Set 是否处理旧事件为白名单 0=不处理 1=处理
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DealOldEvents 是否处理旧事件为白名单 0=不处理 1=处理
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDealOldEvents(Long DealOldEvents) {
         this.DealOldEvents = DealOldEvents;
     }
 
     /**
-     * Get 生效主机的QUUID集合
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 生效主机的QUUID集合 
      * @return Quuids 生效主机的QUUID集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getQuuids() {
         return this.Quuids;
@@ -347,9 +328,7 @@ public class BashPolicy extends AbstractModel {
 
     /**
      * Set 生效主机的QUUID集合
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Quuids 生效主机的QUUID集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQuuids(String [] Quuids) {
         this.Quuids = Quuids;
@@ -420,10 +399,8 @@ public class BashPolicy extends AbstractModel {
     }
 
     /**
-     * Get 规则表达式
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则表达式 
      * @return Rules 规则表达式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public PolicyRules getRules() {
         return this.Rules;
@@ -431,9 +408,7 @@ public class BashPolicy extends AbstractModel {
 
     /**
      * Set 规则表达式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Rules 规则表达式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRules(PolicyRules Rules) {
         this.Rules = Rules;

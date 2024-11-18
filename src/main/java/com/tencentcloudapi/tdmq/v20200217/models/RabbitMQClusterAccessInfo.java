@@ -114,8 +114,7 @@ OFF/ON/CREATING/DELETING
     private PrometheusEndpointInfo PrometheusEndpointInfo;
 
     /**
-    * http://amqp-k3eb47gm.dashboard.rabbitmq.cq.public.tencenttdmq.com:15672/
-公网域名接入点
+    * 公网域名接入点
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WebConsoleDomainEndpoint")
@@ -339,11 +338,9 @@ OFF/ON/CREATING/DELETING
     }
 
     /**
-     * Get http://amqp-k3eb47gm.dashboard.rabbitmq.cq.public.tencenttdmq.com:15672/
-公网域名接入点
+     * Get 公网域名接入点
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return WebConsoleDomainEndpoint http://amqp-k3eb47gm.dashboard.rabbitmq.cq.public.tencenttdmq.com:15672/
-公网域名接入点
+     * @return WebConsoleDomainEndpoint 公网域名接入点
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWebConsoleDomainEndpoint() {
@@ -351,11 +348,9 @@ OFF/ON/CREATING/DELETING
     }
 
     /**
-     * Set http://amqp-k3eb47gm.dashboard.rabbitmq.cq.public.tencenttdmq.com:15672/
-公网域名接入点
+     * Set 公网域名接入点
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param WebConsoleDomainEndpoint http://amqp-k3eb47gm.dashboard.rabbitmq.cq.public.tencenttdmq.com:15672/
-公网域名接入点
+     * @param WebConsoleDomainEndpoint 公网域名接入点
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWebConsoleDomainEndpoint(String WebConsoleDomainEndpoint) {

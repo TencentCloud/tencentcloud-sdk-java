@@ -95,7 +95,6 @@ public class WebsiteRisk extends AbstractModel {
 
     /**
     * 用户昵称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Nick")
     @Expose
@@ -103,7 +102,6 @@ public class WebsiteRisk extends AbstractModel {
 
     /**
     * 用户uin
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Uin")
     @Expose
@@ -319,10 +317,8 @@ public class WebsiteRisk extends AbstractModel {
     }
 
     /**
-     * Get 用户昵称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户昵称 
      * @return Nick 用户昵称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNick() {
         return this.Nick;
@@ -330,19 +326,15 @@ public class WebsiteRisk extends AbstractModel {
 
     /**
      * Set 用户昵称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Nick 用户昵称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNick(String Nick) {
         this.Nick = Nick;
     }
 
     /**
-     * Get 用户uin
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户uin 
      * @return Uin 用户uin
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUin() {
         return this.Uin;
@@ -350,9 +342,7 @@ public class WebsiteRisk extends AbstractModel {
 
     /**
      * Set 用户uin
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Uin 用户uin
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUin(String Uin) {
         this.Uin = Uin;

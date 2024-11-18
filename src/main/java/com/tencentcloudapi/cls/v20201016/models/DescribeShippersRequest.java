@@ -24,11 +24,21 @@ import java.util.HashMap;
 public class DescribeShippersRequest extends AbstractModel {
 
     /**
-    * - shipperName：按照【投递规则名称】进行过滤。类型：String。必选：否
-- shipperId：按照【投递规则ID】进行过滤。类型：String。必选：否
-- topicId：按照【日志主题】进行过滤。类型：String。必选：否
+    * - shipperName：按照【投递规则名称】进行过滤。
+    类型：String。
+    必选：否
+- shipperId：按照【投递规则ID】进行过滤。
+    类型：String。
+    必选：否
+- topicId：按照【日志主题】进行过滤。
+    类型：String。
+    必选：否
+- taskStatus
+按照【任务运行状态】进行过滤。 支持`0`：停止，`1`：运行中，`2`：异常
+类型：String
+必选：否
 
-每次请求的Filters的上限为10，Filter.Values的上限为5。
+每次请求的Filters的上限为10，Filter.Values的上限为10。
     */
     @SerializedName("Filters")
     @Expose
@@ -49,32 +59,79 @@ public class DescribeShippersRequest extends AbstractModel {
     private Long Limit;
 
     /**
-     * Get - shipperName：按照【投递规则名称】进行过滤。类型：String。必选：否
-- shipperId：按照【投递规则ID】进行过滤。类型：String。必选：否
-- topicId：按照【日志主题】进行过滤。类型：String。必选：否
+    * 控制Filters相关字段是否为精确匹配。  0: 默认值，shipperName模糊匹配 1: shipperName 精确匹配
+    */
+    @SerializedName("PreciseSearch")
+    @Expose
+    private Long PreciseSearch;
 
-每次请求的Filters的上限为10，Filter.Values的上限为5。 
-     * @return Filters - shipperName：按照【投递规则名称】进行过滤。类型：String。必选：否
-- shipperId：按照【投递规则ID】进行过滤。类型：String。必选：否
-- topicId：按照【日志主题】进行过滤。类型：String。必选：否
+    /**
+     * Get - shipperName：按照【投递规则名称】进行过滤。
+    类型：String。
+    必选：否
+- shipperId：按照【投递规则ID】进行过滤。
+    类型：String。
+    必选：否
+- topicId：按照【日志主题】进行过滤。
+    类型：String。
+    必选：否
+- taskStatus
+按照【任务运行状态】进行过滤。 支持`0`：停止，`1`：运行中，`2`：异常
+类型：String
+必选：否
 
-每次请求的Filters的上限为10，Filter.Values的上限为5。
+每次请求的Filters的上限为10，Filter.Values的上限为10。 
+     * @return Filters - shipperName：按照【投递规则名称】进行过滤。
+    类型：String。
+    必选：否
+- shipperId：按照【投递规则ID】进行过滤。
+    类型：String。
+    必选：否
+- topicId：按照【日志主题】进行过滤。
+    类型：String。
+    必选：否
+- taskStatus
+按照【任务运行状态】进行过滤。 支持`0`：停止，`1`：运行中，`2`：异常
+类型：String
+必选：否
+
+每次请求的Filters的上限为10，Filter.Values的上限为10。
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set - shipperName：按照【投递规则名称】进行过滤。类型：String。必选：否
-- shipperId：按照【投递规则ID】进行过滤。类型：String。必选：否
-- topicId：按照【日志主题】进行过滤。类型：String。必选：否
+     * Set - shipperName：按照【投递规则名称】进行过滤。
+    类型：String。
+    必选：否
+- shipperId：按照【投递规则ID】进行过滤。
+    类型：String。
+    必选：否
+- topicId：按照【日志主题】进行过滤。
+    类型：String。
+    必选：否
+- taskStatus
+按照【任务运行状态】进行过滤。 支持`0`：停止，`1`：运行中，`2`：异常
+类型：String
+必选：否
 
-每次请求的Filters的上限为10，Filter.Values的上限为5。
-     * @param Filters - shipperName：按照【投递规则名称】进行过滤。类型：String。必选：否
-- shipperId：按照【投递规则ID】进行过滤。类型：String。必选：否
-- topicId：按照【日志主题】进行过滤。类型：String。必选：否
+每次请求的Filters的上限为10，Filter.Values的上限为10。
+     * @param Filters - shipperName：按照【投递规则名称】进行过滤。
+    类型：String。
+    必选：否
+- shipperId：按照【投递规则ID】进行过滤。
+    类型：String。
+    必选：否
+- topicId：按照【日志主题】进行过滤。
+    类型：String。
+    必选：否
+- taskStatus
+按照【任务运行状态】进行过滤。 支持`0`：停止，`1`：运行中，`2`：异常
+类型：String
+必选：否
 
-每次请求的Filters的上限为10，Filter.Values的上限为5。
+每次请求的Filters的上限为10，Filter.Values的上限为10。
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
@@ -112,6 +169,22 @@ public class DescribeShippersRequest extends AbstractModel {
         this.Limit = Limit;
     }
 
+    /**
+     * Get 控制Filters相关字段是否为精确匹配。  0: 默认值，shipperName模糊匹配 1: shipperName 精确匹配 
+     * @return PreciseSearch 控制Filters相关字段是否为精确匹配。  0: 默认值，shipperName模糊匹配 1: shipperName 精确匹配
+     */
+    public Long getPreciseSearch() {
+        return this.PreciseSearch;
+    }
+
+    /**
+     * Set 控制Filters相关字段是否为精确匹配。  0: 默认值，shipperName模糊匹配 1: shipperName 精确匹配
+     * @param PreciseSearch 控制Filters相关字段是否为精确匹配。  0: 默认值，shipperName模糊匹配 1: shipperName 精确匹配
+     */
+    public void setPreciseSearch(Long PreciseSearch) {
+        this.PreciseSearch = PreciseSearch;
+    }
+
     public DescribeShippersRequest() {
     }
 
@@ -132,6 +205,9 @@ public class DescribeShippersRequest extends AbstractModel {
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
+        if (source.PreciseSearch != null) {
+            this.PreciseSearch = new Long(source.PreciseSearch);
+        }
     }
 
 
@@ -142,6 +218,7 @@ public class DescribeShippersRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "PreciseSearch", this.PreciseSearch);
 
     }
 }

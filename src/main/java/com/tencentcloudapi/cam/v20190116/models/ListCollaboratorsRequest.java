@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class ListCollaboratorsRequest extends AbstractModel {
 
     /**
-    * 分页条数，缺省为20
+    * 分页的条数，默认是20条。
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 分页起始值，缺省为0
+    * 分页的起始值，默认从0开始。
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-     * Get 分页条数，缺省为20 
-     * @return Limit 分页条数，缺省为20
+     * Get 分页的条数，默认是20条。 
+     * @return Limit 分页的条数，默认是20条。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 分页条数，缺省为20
-     * @param Limit 分页条数，缺省为20
+     * Set 分页的条数，默认是20条。
+     * @param Limit 分页的条数，默认是20条。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 分页起始值，缺省为0 
-     * @return Offset 分页起始值，缺省为0
+     * Get 分页的起始值，默认从0开始。 
+     * @return Offset 分页的起始值，默认从0开始。
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页起始值，缺省为0
-     * @param Offset 分页起始值，缺省为0
+     * Set 分页的起始值，默认从0开始。
+     * @param Offset 分页的起始值，默认从0开始。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

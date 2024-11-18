@@ -782,19 +782,6 @@ MCU 混流转码费用，请参考文档：[云端混流转码计费说明](http
     }
 
     /**
-     *接口不再支持
-
-对转录的文本进行总结。
-     * @param req SummarizeTranscriptionRequest
-     * @return SummarizeTranscriptionResponse
-     * @throws TencentCloudSDKException
-     */
-    public SummarizeTranscriptionResponse SummarizeTranscription(SummarizeTranscriptionRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "SummarizeTranscription", SummarizeTranscriptionResponse.class);
-    }
-
-    /**
      *更新AIConversation参数
      * @param req UpdateAIConversationRequest
      * @return UpdateAIConversationResponse

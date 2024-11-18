@@ -39,7 +39,18 @@ public class IoaClient extends AbstractClient{
     }
 
     /**
-     *以分页的方式查询账户目录列表,私有化调用path为：/capi/Assets/DescribeAccountGroups
+     *创建终端自定义分组，私有化调用path为：/capi/Assets/Device/CreateDeviceVirtualGroup
+     * @param req CreateDeviceVirtualGroupRequest
+     * @return CreateDeviceVirtualGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDeviceVirtualGroupResponse CreateDeviceVirtualGroup(CreateDeviceVirtualGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateDeviceVirtualGroup", CreateDeviceVirtualGroupResponse.class);
+    }
+
+    /**
+     *以分页的方式查询账号分组列表，私有化调用path为：/capi/Assets/DescribeAccountGroups
      * @param req DescribeAccountGroupsRequest
      * @return DescribeAccountGroupsResponse
      * @throws TencentCloudSDKException
@@ -72,7 +83,7 @@ public class IoaClient extends AbstractClient{
     }
 
     /**
-     *查询账户根分组详情，私有化调用path为：capi/Assets/DescribeRootAccountGroup
+     *查询账号根分组详情。对应“用户与授权管理”里内置不可见的全网根账号组，所有新建的目录，都挂在该全网根账号组下。
      * @param req DescribeRootAccountGroupRequest
      * @return DescribeRootAccountGroupResponse
      * @throws TencentCloudSDKException

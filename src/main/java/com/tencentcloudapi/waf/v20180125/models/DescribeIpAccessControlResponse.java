@@ -25,7 +25,6 @@ public class DescribeIpAccessControlResponse extends AbstractModel {
 
     /**
     * 输出
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeIpAccessControlResponse extends AbstractModel {
 
     /**
     * 已经使用的IP黑白名单的IP总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UsedTotal")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeIpAccessControlResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 输出
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 输出 
      * @return Data 输出
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public IpAccessControlData getData() {
         return this.Data;
@@ -58,19 +54,15 @@ public class DescribeIpAccessControlResponse extends AbstractModel {
 
     /**
      * Set 输出
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Data 输出
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(IpAccessControlData Data) {
         this.Data = Data;
     }
 
     /**
-     * Get 已经使用的IP黑白名单的IP总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 已经使用的IP黑白名单的IP总数 
      * @return UsedTotal 已经使用的IP黑白名单的IP总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getUsedTotal() {
         return this.UsedTotal;
@@ -78,9 +70,7 @@ public class DescribeIpAccessControlResponse extends AbstractModel {
 
     /**
      * Set 已经使用的IP黑白名单的IP总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UsedTotal 已经使用的IP黑白名单的IP总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUsedTotal(Long UsedTotal) {
         this.UsedTotal = UsedTotal;

@@ -73,6 +73,13 @@ public class VulDefenceRangeDetail extends AbstractModel {
     private Long VulId;
 
     /**
+    * 状态，0:防御中，1：已加白，指的是在白名单列表中有这个漏洞的，不一定是全局型白名单
+    */
+    @SerializedName("Status")
+    @Expose
+    private Long Status;
+
+    /**
      * Get 漏洞名称 
      * @return VulName 漏洞名称
      */
@@ -184,6 +191,22 @@ public class VulDefenceRangeDetail extends AbstractModel {
         this.VulId = VulId;
     }
 
+    /**
+     * Get 状态，0:防御中，1：已加白，指的是在白名单列表中有这个漏洞的，不一定是全局型白名单 
+     * @return Status 状态，0:防御中，1：已加白，指的是在白名单列表中有这个漏洞的，不一定是全局型白名单
+     */
+    public Long getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 状态，0:防御中，1：已加白，指的是在白名单列表中有这个漏洞的，不一定是全局型白名单
+     * @param Status 状态，0:防御中，1：已加白，指的是在白名单列表中有这个漏洞的，不一定是全局型白名单
+     */
+    public void setStatus(Long Status) {
+        this.Status = Status;
+    }
+
     public VulDefenceRangeDetail() {
     }
 
@@ -213,6 +236,9 @@ public class VulDefenceRangeDetail extends AbstractModel {
         if (source.VulId != null) {
             this.VulId = new Long(source.VulId);
         }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
     }
 
 
@@ -227,6 +253,7 @@ public class VulDefenceRangeDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "CveId", this.CveId);
         this.setParamSimple(map, prefix + "PublishTime", this.PublishTime);
         this.setParamSimple(map, prefix + "VulId", this.VulId);
+        this.setParamSimple(map, prefix + "Status", this.Status);
 
     }
 }

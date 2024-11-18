@@ -25,7 +25,6 @@ public class UploadIvrAudioResponse extends AbstractModel {
 
     /**
     * 上传失败的文件列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FailedFileList")
     @Expose
@@ -33,7 +32,6 @@ public class UploadIvrAudioResponse extends AbstractModel {
 
     /**
     * 上传成功文件列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SuccessFileList")
     @Expose
@@ -47,10 +45,8 @@ public class UploadIvrAudioResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 上传失败的文件列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 上传失败的文件列表 
      * @return FailedFileList 上传失败的文件列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public UploadIvrAudioFailedInfo [] getFailedFileList() {
         return this.FailedFileList;
@@ -58,19 +54,15 @@ public class UploadIvrAudioResponse extends AbstractModel {
 
     /**
      * Set 上传失败的文件列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FailedFileList 上传失败的文件列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFailedFileList(UploadIvrAudioFailedInfo [] FailedFileList) {
         this.FailedFileList = FailedFileList;
     }
 
     /**
-     * Get 上传成功文件列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 上传成功文件列表 
      * @return SuccessFileList 上传成功文件列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AudioFileInfo [] getSuccessFileList() {
         return this.SuccessFileList;
@@ -78,9 +70,7 @@ public class UploadIvrAudioResponse extends AbstractModel {
 
     /**
      * Set 上传成功文件列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SuccessFileList 上传成功文件列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSuccessFileList(AudioFileInfo [] SuccessFileList) {
         this.SuccessFileList = SuccessFileList;

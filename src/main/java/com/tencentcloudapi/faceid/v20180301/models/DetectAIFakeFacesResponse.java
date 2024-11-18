@@ -24,26 +24,26 @@ import java.util.HashMap;
 public class DetectAIFakeFacesResponse extends AbstractModel {
 
     /**
-    * 检测到的图片是否存在攻击：
-Low：无攻击风险
-Mid：中度疑似攻击
-High：高度疑似攻击
+    * 检测到的图片是否存在攻击。
+- Low：无攻击风险。
+- Mid：中度疑似攻击。
+- High：高度疑似攻击。
     */
     @SerializedName("AttackRiskLevel")
     @Expose
     private String AttackRiskLevel;
 
     /**
-    * 检测到疑似的攻击痕迹列表
-说明：未检测到攻击痕迹时，返回空数组
-此出参仅作为结果判断的参考，实际应用仍建议使用AttackRiskLevel的结果。
+    * 检测到疑似的攻击痕迹列表。
+- 说明：未检测到攻击痕迹时，返回空数组。
+- 此出参仅作为结果判断的参考，实际应用仍建议使用AttackRiskLevel的结果。
     */
     @SerializedName("AttackRiskDetailList")
     @Expose
     private AttackRiskDetail [] AttackRiskDetailList;
 
     /**
-    * 额外信息
+    * 额外信息。
     */
     @SerializedName("ExtraInfo")
     @Expose
@@ -57,68 +57,68 @@ High：高度疑似攻击
     private String RequestId;
 
     /**
-     * Get 检测到的图片是否存在攻击：
-Low：无攻击风险
-Mid：中度疑似攻击
-High：高度疑似攻击 
-     * @return AttackRiskLevel 检测到的图片是否存在攻击：
-Low：无攻击风险
-Mid：中度疑似攻击
-High：高度疑似攻击
+     * Get 检测到的图片是否存在攻击。
+- Low：无攻击风险。
+- Mid：中度疑似攻击。
+- High：高度疑似攻击。 
+     * @return AttackRiskLevel 检测到的图片是否存在攻击。
+- Low：无攻击风险。
+- Mid：中度疑似攻击。
+- High：高度疑似攻击。
      */
     public String getAttackRiskLevel() {
         return this.AttackRiskLevel;
     }
 
     /**
-     * Set 检测到的图片是否存在攻击：
-Low：无攻击风险
-Mid：中度疑似攻击
-High：高度疑似攻击
-     * @param AttackRiskLevel 检测到的图片是否存在攻击：
-Low：无攻击风险
-Mid：中度疑似攻击
-High：高度疑似攻击
+     * Set 检测到的图片是否存在攻击。
+- Low：无攻击风险。
+- Mid：中度疑似攻击。
+- High：高度疑似攻击。
+     * @param AttackRiskLevel 检测到的图片是否存在攻击。
+- Low：无攻击风险。
+- Mid：中度疑似攻击。
+- High：高度疑似攻击。
      */
     public void setAttackRiskLevel(String AttackRiskLevel) {
         this.AttackRiskLevel = AttackRiskLevel;
     }
 
     /**
-     * Get 检测到疑似的攻击痕迹列表
-说明：未检测到攻击痕迹时，返回空数组
-此出参仅作为结果判断的参考，实际应用仍建议使用AttackRiskLevel的结果。 
-     * @return AttackRiskDetailList 检测到疑似的攻击痕迹列表
-说明：未检测到攻击痕迹时，返回空数组
-此出参仅作为结果判断的参考，实际应用仍建议使用AttackRiskLevel的结果。
+     * Get 检测到疑似的攻击痕迹列表。
+- 说明：未检测到攻击痕迹时，返回空数组。
+- 此出参仅作为结果判断的参考，实际应用仍建议使用AttackRiskLevel的结果。 
+     * @return AttackRiskDetailList 检测到疑似的攻击痕迹列表。
+- 说明：未检测到攻击痕迹时，返回空数组。
+- 此出参仅作为结果判断的参考，实际应用仍建议使用AttackRiskLevel的结果。
      */
     public AttackRiskDetail [] getAttackRiskDetailList() {
         return this.AttackRiskDetailList;
     }
 
     /**
-     * Set 检测到疑似的攻击痕迹列表
-说明：未检测到攻击痕迹时，返回空数组
-此出参仅作为结果判断的参考，实际应用仍建议使用AttackRiskLevel的结果。
-     * @param AttackRiskDetailList 检测到疑似的攻击痕迹列表
-说明：未检测到攻击痕迹时，返回空数组
-此出参仅作为结果判断的参考，实际应用仍建议使用AttackRiskLevel的结果。
+     * Set 检测到疑似的攻击痕迹列表。
+- 说明：未检测到攻击痕迹时，返回空数组。
+- 此出参仅作为结果判断的参考，实际应用仍建议使用AttackRiskLevel的结果。
+     * @param AttackRiskDetailList 检测到疑似的攻击痕迹列表。
+- 说明：未检测到攻击痕迹时，返回空数组。
+- 此出参仅作为结果判断的参考，实际应用仍建议使用AttackRiskLevel的结果。
      */
     public void setAttackRiskDetailList(AttackRiskDetail [] AttackRiskDetailList) {
         this.AttackRiskDetailList = AttackRiskDetailList;
     }
 
     /**
-     * Get 额外信息 
-     * @return ExtraInfo 额外信息
+     * Get 额外信息。 
+     * @return ExtraInfo 额外信息。
      */
     public ExtraInfo getExtraInfo() {
         return this.ExtraInfo;
     }
 
     /**
-     * Set 额外信息
-     * @param ExtraInfo 额外信息
+     * Set 额外信息。
+     * @param ExtraInfo 额外信息。
      */
     public void setExtraInfo(ExtraInfo ExtraInfo) {
         this.ExtraInfo = ExtraInfo;

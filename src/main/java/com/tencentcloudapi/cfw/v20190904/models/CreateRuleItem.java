@@ -53,6 +53,12 @@ public class CreateRuleItem extends AbstractModel {
 
     /**
     * 协议，可选的值： TCP UDP ICMP ANY HTTP HTTPS HTTP/HTTPS SMTP SMTPS SMTP/SMTPS FTP DNS
+1. 入方向  旁路防火墙/全局规则 仅支持TCP
+
+2.出方向  旁路防火墙/全局规则 仅支持TCP HTTP/HTTPS TLS/SSL
+
+3.domain  请选择七层协议 如HTTP/HTTPS
+
     */
     @SerializedName("Protocol")
     @Expose
@@ -200,8 +206,20 @@ public class CreateRuleItem extends AbstractModel {
     }
 
     /**
-     * Get 协议，可选的值： TCP UDP ICMP ANY HTTP HTTPS HTTP/HTTPS SMTP SMTPS SMTP/SMTPS FTP DNS 
+     * Get 协议，可选的值： TCP UDP ICMP ANY HTTP HTTPS HTTP/HTTPS SMTP SMTPS SMTP/SMTPS FTP DNS
+1. 入方向  旁路防火墙/全局规则 仅支持TCP
+
+2.出方向  旁路防火墙/全局规则 仅支持TCP HTTP/HTTPS TLS/SSL
+
+3.domain  请选择七层协议 如HTTP/HTTPS
+ 
      * @return Protocol 协议，可选的值： TCP UDP ICMP ANY HTTP HTTPS HTTP/HTTPS SMTP SMTPS SMTP/SMTPS FTP DNS
+1. 入方向  旁路防火墙/全局规则 仅支持TCP
+
+2.出方向  旁路防火墙/全局规则 仅支持TCP HTTP/HTTPS TLS/SSL
+
+3.domain  请选择七层协议 如HTTP/HTTPS
+
      */
     public String getProtocol() {
         return this.Protocol;
@@ -209,7 +227,19 @@ public class CreateRuleItem extends AbstractModel {
 
     /**
      * Set 协议，可选的值： TCP UDP ICMP ANY HTTP HTTPS HTTP/HTTPS SMTP SMTPS SMTP/SMTPS FTP DNS
+1. 入方向  旁路防火墙/全局规则 仅支持TCP
+
+2.出方向  旁路防火墙/全局规则 仅支持TCP HTTP/HTTPS TLS/SSL
+
+3.domain  请选择七层协议 如HTTP/HTTPS
+
      * @param Protocol 协议，可选的值： TCP UDP ICMP ANY HTTP HTTPS HTTP/HTTPS SMTP SMTPS SMTP/SMTPS FTP DNS
+1. 入方向  旁路防火墙/全局规则 仅支持TCP
+
+2.出方向  旁路防火墙/全局规则 仅支持TCP HTTP/HTTPS TLS/SSL
+
+3.domain  请选择七层协议 如HTTP/HTTPS
+
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;

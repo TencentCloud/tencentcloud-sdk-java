@@ -48,6 +48,32 @@ public class ActionTimer extends AbstractModel {
     private Externals Externals;
 
     /**
+    * 定时器ID。
+    */
+    @SerializedName("ActionTimerId")
+    @Expose
+    private String ActionTimerId;
+
+    /**
+    * 定时器状态，取值范围：
+
+UNDO：未触发
+DOING：触发中
+DONE：已经触发
+
+    */
+    @SerializedName("Status")
+    @Expose
+    private String Status;
+
+    /**
+    * 定时器对应的实例ID。
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
      * Get 定时器动作，目前仅支持销毁一个值：TerminateInstances。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TimerAction 定时器动作，目前仅支持销毁一个值：TerminateInstances。
@@ -107,6 +133,74 @@ public class ActionTimer extends AbstractModel {
         this.Externals = Externals;
     }
 
+    /**
+     * Get 定时器ID。 
+     * @return ActionTimerId 定时器ID。
+     */
+    public String getActionTimerId() {
+        return this.ActionTimerId;
+    }
+
+    /**
+     * Set 定时器ID。
+     * @param ActionTimerId 定时器ID。
+     */
+    public void setActionTimerId(String ActionTimerId) {
+        this.ActionTimerId = ActionTimerId;
+    }
+
+    /**
+     * Get 定时器状态，取值范围：
+
+UNDO：未触发
+DOING：触发中
+DONE：已经触发
+ 
+     * @return Status 定时器状态，取值范围：
+
+UNDO：未触发
+DOING：触发中
+DONE：已经触发
+
+     */
+    public String getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 定时器状态，取值范围：
+
+UNDO：未触发
+DOING：触发中
+DONE：已经触发
+
+     * @param Status 定时器状态，取值范围：
+
+UNDO：未触发
+DOING：触发中
+DONE：已经触发
+
+     */
+    public void setStatus(String Status) {
+        this.Status = Status;
+    }
+
+    /**
+     * Get 定时器对应的实例ID。 
+     * @return InstanceId 定时器对应的实例ID。
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set 定时器对应的实例ID。
+     * @param InstanceId 定时器对应的实例ID。
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
     public ActionTimer() {
     }
 
@@ -124,6 +218,15 @@ public class ActionTimer extends AbstractModel {
         if (source.Externals != null) {
             this.Externals = new Externals(source.Externals);
         }
+        if (source.ActionTimerId != null) {
+            this.ActionTimerId = new String(source.ActionTimerId);
+        }
+        if (source.Status != null) {
+            this.Status = new String(source.Status);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
     }
 
 
@@ -134,6 +237,9 @@ public class ActionTimer extends AbstractModel {
         this.setParamSimple(map, prefix + "TimerAction", this.TimerAction);
         this.setParamSimple(map, prefix + "ActionTime", this.ActionTime);
         this.setParamObj(map, prefix + "Externals.", this.Externals);
+        this.setParamSimple(map, prefix + "ActionTimerId", this.ActionTimerId);
+        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
 
     }
 }

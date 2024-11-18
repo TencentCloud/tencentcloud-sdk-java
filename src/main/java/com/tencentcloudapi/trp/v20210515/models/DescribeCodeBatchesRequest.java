@@ -73,7 +73,7 @@ public class DescribeCodeBatchesRequest extends AbstractModel {
     private Long CorpId;
 
     /**
-    * 批次状态
+    * 批次状态 0: 未激活 1: 已激活 -1: 已冻结
     */
     @SerializedName("Status")
     @Expose
@@ -192,16 +192,16 @@ public class DescribeCodeBatchesRequest extends AbstractModel {
     }
 
     /**
-     * Get 批次状态 
-     * @return Status 批次状态
+     * Get 批次状态 0: 未激活 1: 已激活 -1: 已冻结 
+     * @return Status 批次状态 0: 未激活 1: 已激活 -1: 已冻结
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 批次状态
-     * @param Status 批次状态
+     * Set 批次状态 0: 未激活 1: 已激活 -1: 已冻结
+     * @param Status 批次状态 0: 未激活 1: 已激活 -1: 已冻结
      */
     public void setStatus(Long Status) {
         this.Status = Status;

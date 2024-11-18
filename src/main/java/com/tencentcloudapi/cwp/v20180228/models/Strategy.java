@@ -25,7 +25,6 @@ public class Strategy extends AbstractModel {
 
     /**
     * 策略名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StrategyName")
     @Expose
@@ -33,7 +32,6 @@ public class Strategy extends AbstractModel {
 
     /**
     * 策略id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StrategyId")
     @Expose
@@ -41,7 +39,6 @@ public class Strategy extends AbstractModel {
 
     /**
     * 基线检测项总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleCount")
     @Expose
@@ -49,7 +46,6 @@ public class Strategy extends AbstractModel {
 
     /**
     * 主机数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HostCount")
     @Expose
@@ -57,7 +53,6 @@ public class Strategy extends AbstractModel {
 
     /**
     * 扫描周期
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScanCycle")
     @Expose
@@ -65,7 +60,6 @@ public class Strategy extends AbstractModel {
 
     /**
     * 扫描时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScanAt")
     @Expose
@@ -73,7 +67,6 @@ public class Strategy extends AbstractModel {
 
     /**
     * 是否可用
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Enabled")
     @Expose
@@ -81,7 +74,6 @@ public class Strategy extends AbstractModel {
 
     /**
     * 通过率
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PassRate")
     @Expose
@@ -89,7 +81,6 @@ public class Strategy extends AbstractModel {
 
     /**
     * 基线id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CategoryIds")
     @Expose
@@ -97,17 +88,14 @@ public class Strategy extends AbstractModel {
 
     /**
     * 是否默认策略
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsDefault")
     @Expose
     private Long IsDefault;
 
     /**
-     * Get 策略名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 策略名 
      * @return StrategyName 策略名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStrategyName() {
         return this.StrategyName;
@@ -115,19 +103,15 @@ public class Strategy extends AbstractModel {
 
     /**
      * Set 策略名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StrategyName 策略名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStrategyName(String StrategyName) {
         this.StrategyName = StrategyName;
     }
 
     /**
-     * Get 策略id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 策略id 
      * @return StrategyId 策略id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStrategyId() {
         return this.StrategyId;
@@ -135,19 +119,15 @@ public class Strategy extends AbstractModel {
 
     /**
      * Set 策略id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StrategyId 策略id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStrategyId(Long StrategyId) {
         this.StrategyId = StrategyId;
     }
 
     /**
-     * Get 基线检测项总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 基线检测项总数 
      * @return RuleCount 基线检测项总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRuleCount() {
         return this.RuleCount;
@@ -155,19 +135,15 @@ public class Strategy extends AbstractModel {
 
     /**
      * Set 基线检测项总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RuleCount 基线检测项总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleCount(Long RuleCount) {
         this.RuleCount = RuleCount;
     }
 
     /**
-     * Get 主机数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主机数量 
      * @return HostCount 主机数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getHostCount() {
         return this.HostCount;
@@ -175,19 +151,15 @@ public class Strategy extends AbstractModel {
 
     /**
      * Set 主机数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HostCount 主机数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHostCount(Long HostCount) {
         this.HostCount = HostCount;
     }
 
     /**
-     * Get 扫描周期
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 扫描周期 
      * @return ScanCycle 扫描周期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getScanCycle() {
         return this.ScanCycle;
@@ -195,19 +167,15 @@ public class Strategy extends AbstractModel {
 
     /**
      * Set 扫描周期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ScanCycle 扫描周期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScanCycle(Long ScanCycle) {
         this.ScanCycle = ScanCycle;
     }
 
     /**
-     * Get 扫描时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 扫描时间 
      * @return ScanAt 扫描时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getScanAt() {
         return this.ScanAt;
@@ -215,19 +183,15 @@ public class Strategy extends AbstractModel {
 
     /**
      * Set 扫描时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ScanAt 扫描时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScanAt(String ScanAt) {
         this.ScanAt = ScanAt;
     }
 
     /**
-     * Get 是否可用
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否可用 
      * @return Enabled 是否可用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getEnabled() {
         return this.Enabled;
@@ -235,19 +199,15 @@ public class Strategy extends AbstractModel {
 
     /**
      * Set 是否可用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Enabled 是否可用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnabled(Long Enabled) {
         this.Enabled = Enabled;
     }
 
     /**
-     * Get 通过率
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 通过率 
      * @return PassRate 通过率
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPassRate() {
         return this.PassRate;
@@ -255,19 +215,15 @@ public class Strategy extends AbstractModel {
 
     /**
      * Set 通过率
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PassRate 通过率
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPassRate(Long PassRate) {
         this.PassRate = PassRate;
     }
 
     /**
-     * Get 基线id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 基线id 
      * @return CategoryIds 基线id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCategoryIds() {
         return this.CategoryIds;
@@ -275,19 +231,15 @@ public class Strategy extends AbstractModel {
 
     /**
      * Set 基线id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CategoryIds 基线id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCategoryIds(String CategoryIds) {
         this.CategoryIds = CategoryIds;
     }
 
     /**
-     * Get 是否默认策略
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否默认策略 
      * @return IsDefault 是否默认策略
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsDefault() {
         return this.IsDefault;
@@ -295,9 +247,7 @@ public class Strategy extends AbstractModel {
 
     /**
      * Set 是否默认策略
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsDefault 是否默认策略
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsDefault(Long IsDefault) {
         this.IsDefault = IsDefault;

@@ -103,6 +103,14 @@ public class OccupiedSeal extends AbstractModel {
     private AuthorizedUser [] AuthorizedUsers;
 
     /**
+    * 印章扩展数据信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ExtendScene")
+    @Expose
+    private ExtendScene ExtendScene;
+
+    /**
      * Get 电子印章编号 
      * @return SealId 电子印章编号
      */
@@ -286,6 +294,26 @@ public class OccupiedSeal extends AbstractModel {
         this.AuthorizedUsers = AuthorizedUsers;
     }
 
+    /**
+     * Get 印章扩展数据信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ExtendScene 印章扩展数据信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ExtendScene getExtendScene() {
+        return this.ExtendScene;
+    }
+
+    /**
+     * Set 印章扩展数据信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExtendScene 印章扩展数据信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExtendScene(ExtendScene ExtendScene) {
+        this.ExtendScene = ExtendScene;
+    }
+
     public OccupiedSeal() {
     }
 
@@ -330,6 +358,9 @@ public class OccupiedSeal extends AbstractModel {
                 this.AuthorizedUsers[i] = new AuthorizedUser(source.AuthorizedUsers[i]);
             }
         }
+        if (source.ExtendScene != null) {
+            this.ExtendScene = new ExtendScene(source.ExtendScene);
+        }
     }
 
 
@@ -348,6 +379,7 @@ public class OccupiedSeal extends AbstractModel {
         this.setParamSimple(map, prefix + "SealType", this.SealType);
         this.setParamSimple(map, prefix + "IsAllTime", this.IsAllTime);
         this.setParamArrayObj(map, prefix + "AuthorizedUsers.", this.AuthorizedUsers);
+        this.setParamObj(map, prefix + "ExtendScene.", this.ExtendScene);
 
     }
 }

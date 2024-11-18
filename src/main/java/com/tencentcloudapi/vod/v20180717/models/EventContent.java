@@ -49,7 +49,8 @@ public class EventContent extends AbstractModel {
 <li>DescribeFileAttributesComplete：获取文件属性完成；</li>
 <li>QualityInspectComplete：音画质检测完成；</li>
 <li>QualityEnhanceComplete：音画质重生任务完成；</li>
-<li>PersistenceComplete：剪辑固化完成。</li>
+<li>PersistenceComplete：剪辑固化完成；</li>
+<li>ComplexAdaptiveDynamicStreamingComplete：复杂自适应码流任务完成。</li>
 <b>兼容 2017 版的事件类型：</b>
 <li>TranscodeComplete：视频转码完成；</li>
 <li>ConcatComplete：视频拼接完成；</li>
@@ -270,6 +271,14 @@ public class EventContent extends AbstractModel {
     private PersistenceCompleteTask PersistenceCompleteEvent;
 
     /**
+    * 自适应码流任务信息，仅当 EventType 为ComplexAdaptiveDynamicStreamingComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ComplexAdaptiveDynamicStreamingCompleteEvent")
+    @Expose
+    private ComplexAdaptiveDynamicStreamingTask ComplexAdaptiveDynamicStreamingCompleteEvent;
+
+    /**
      * Get 事件句柄，调用方必须调用 ConfirmEvents 来确认消息已经收到，确认有效时间 30 秒。失效后，事件可重新被获取。 
      * @return EventHandle 事件句柄，调用方必须调用 ConfirmEvents 来确认消息已经收到，确认有效时间 30 秒。失效后，事件可重新被获取。
      */
@@ -304,7 +313,8 @@ public class EventContent extends AbstractModel {
 <li>DescribeFileAttributesComplete：获取文件属性完成；</li>
 <li>QualityInspectComplete：音画质检测完成；</li>
 <li>QualityEnhanceComplete：音画质重生任务完成；</li>
-<li>PersistenceComplete：剪辑固化完成。</li>
+<li>PersistenceComplete：剪辑固化完成；</li>
+<li>ComplexAdaptiveDynamicStreamingComplete：复杂自适应码流任务完成。</li>
 <b>兼容 2017 版的事件类型：</b>
 <li>TranscodeComplete：视频转码完成；</li>
 <li>ConcatComplete：视频拼接完成；</li>
@@ -329,7 +339,8 @@ public class EventContent extends AbstractModel {
 <li>DescribeFileAttributesComplete：获取文件属性完成；</li>
 <li>QualityInspectComplete：音画质检测完成；</li>
 <li>QualityEnhanceComplete：音画质重生任务完成；</li>
-<li>PersistenceComplete：剪辑固化完成。</li>
+<li>PersistenceComplete：剪辑固化完成；</li>
+<li>ComplexAdaptiveDynamicStreamingComplete：复杂自适应码流任务完成。</li>
 <b>兼容 2017 版的事件类型：</b>
 <li>TranscodeComplete：视频转码完成；</li>
 <li>ConcatComplete：视频拼接完成；</li>
@@ -360,7 +371,8 @@ public class EventContent extends AbstractModel {
 <li>DescribeFileAttributesComplete：获取文件属性完成；</li>
 <li>QualityInspectComplete：音画质检测完成；</li>
 <li>QualityEnhanceComplete：音画质重生任务完成；</li>
-<li>PersistenceComplete：剪辑固化完成。</li>
+<li>PersistenceComplete：剪辑固化完成；</li>
+<li>ComplexAdaptiveDynamicStreamingComplete：复杂自适应码流任务完成。</li>
 <b>兼容 2017 版的事件类型：</b>
 <li>TranscodeComplete：视频转码完成；</li>
 <li>ConcatComplete：视频拼接完成；</li>
@@ -385,7 +397,8 @@ public class EventContent extends AbstractModel {
 <li>DescribeFileAttributesComplete：获取文件属性完成；</li>
 <li>QualityInspectComplete：音画质检测完成；</li>
 <li>QualityEnhanceComplete：音画质重生任务完成；</li>
-<li>PersistenceComplete：剪辑固化完成。</li>
+<li>PersistenceComplete：剪辑固化完成；</li>
+<li>ComplexAdaptiveDynamicStreamingComplete：复杂自适应码流任务完成。</li>
 <b>兼容 2017 版的事件类型：</b>
 <li>TranscodeComplete：视频转码完成；</li>
 <li>ConcatComplete：视频拼接完成；</li>
@@ -917,6 +930,26 @@ public class EventContent extends AbstractModel {
         this.PersistenceCompleteEvent = PersistenceCompleteEvent;
     }
 
+    /**
+     * Get 自适应码流任务信息，仅当 EventType 为ComplexAdaptiveDynamicStreamingComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ComplexAdaptiveDynamicStreamingCompleteEvent 自适应码流任务信息，仅当 EventType 为ComplexAdaptiveDynamicStreamingComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ComplexAdaptiveDynamicStreamingTask getComplexAdaptiveDynamicStreamingCompleteEvent() {
+        return this.ComplexAdaptiveDynamicStreamingCompleteEvent;
+    }
+
+    /**
+     * Set 自适应码流任务信息，仅当 EventType 为ComplexAdaptiveDynamicStreamingComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ComplexAdaptiveDynamicStreamingCompleteEvent 自适应码流任务信息，仅当 EventType 为ComplexAdaptiveDynamicStreamingComplete 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setComplexAdaptiveDynamicStreamingCompleteEvent(ComplexAdaptiveDynamicStreamingTask ComplexAdaptiveDynamicStreamingCompleteEvent) {
+        this.ComplexAdaptiveDynamicStreamingCompleteEvent = ComplexAdaptiveDynamicStreamingCompleteEvent;
+    }
+
     public EventContent() {
     }
 
@@ -1009,6 +1042,9 @@ public class EventContent extends AbstractModel {
         if (source.PersistenceCompleteEvent != null) {
             this.PersistenceCompleteEvent = new PersistenceCompleteTask(source.PersistenceCompleteEvent);
         }
+        if (source.ComplexAdaptiveDynamicStreamingCompleteEvent != null) {
+            this.ComplexAdaptiveDynamicStreamingCompleteEvent = new ComplexAdaptiveDynamicStreamingTask(source.ComplexAdaptiveDynamicStreamingCompleteEvent);
+        }
     }
 
 
@@ -1044,6 +1080,7 @@ public class EventContent extends AbstractModel {
         this.setParamObj(map, prefix + "QualityEnhanceCompleteEvent.", this.QualityEnhanceCompleteEvent);
         this.setParamObj(map, prefix + "MediaCastStatusChangedEvent.", this.MediaCastStatusChangedEvent);
         this.setParamObj(map, prefix + "PersistenceCompleteEvent.", this.PersistenceCompleteEvent);
+        this.setParamObj(map, prefix + "ComplexAdaptiveDynamicStreamingCompleteEvent.", this.ComplexAdaptiveDynamicStreamingCompleteEvent);
 
     }
 }

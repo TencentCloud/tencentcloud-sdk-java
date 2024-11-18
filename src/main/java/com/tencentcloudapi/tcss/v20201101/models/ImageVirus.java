@@ -25,7 +25,6 @@ public class ImageVirus extends AbstractModel {
 
     /**
     * 路径
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Path")
     @Expose
@@ -33,7 +32,6 @@ public class ImageVirus extends AbstractModel {
 
     /**
     * 风险等级
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RiskLevel")
     @Expose
@@ -41,7 +39,6 @@ public class ImageVirus extends AbstractModel {
 
     /**
     * 分类
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Category")
     @Expose
@@ -49,7 +46,6 @@ public class ImageVirus extends AbstractModel {
 
     /**
     * 病毒名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VirusName")
     @Expose
@@ -57,7 +53,6 @@ public class ImageVirus extends AbstractModel {
 
     /**
     * 标签
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tags")
     @Expose
@@ -65,7 +60,6 @@ public class ImageVirus extends AbstractModel {
 
     /**
     * 描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Desc")
     @Expose
@@ -73,7 +67,6 @@ public class ImageVirus extends AbstractModel {
 
     /**
     * 解决方案
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Solution")
     @Expose
@@ -81,7 +74,6 @@ public class ImageVirus extends AbstractModel {
 
     /**
     * 文件类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileType")
     @Expose
@@ -89,7 +81,6 @@ public class ImageVirus extends AbstractModel {
 
     /**
     * 文件路径
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileName")
     @Expose
@@ -97,7 +88,6 @@ public class ImageVirus extends AbstractModel {
 
     /**
     * 文件md5
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileMd5")
     @Expose
@@ -105,7 +95,6 @@ public class ImageVirus extends AbstractModel {
 
     /**
     * 大小
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileSize")
     @Expose
@@ -113,7 +102,6 @@ public class ImageVirus extends AbstractModel {
 
     /**
     * 首次发现时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FirstScanTime")
     @Expose
@@ -121,17 +109,14 @@ public class ImageVirus extends AbstractModel {
 
     /**
     * 最近扫描时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LatestScanTime")
     @Expose
     private String LatestScanTime;
 
     /**
-     * Get 路径
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 路径 
      * @return Path 路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPath() {
         return this.Path;
@@ -139,19 +124,15 @@ public class ImageVirus extends AbstractModel {
 
     /**
      * Set 路径
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Path 路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPath(String Path) {
         this.Path = Path;
     }
 
     /**
-     * Get 风险等级
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 风险等级 
      * @return RiskLevel 风险等级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRiskLevel() {
         return this.RiskLevel;
@@ -159,19 +140,15 @@ public class ImageVirus extends AbstractModel {
 
     /**
      * Set 风险等级
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RiskLevel 风险等级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRiskLevel(String RiskLevel) {
         this.RiskLevel = RiskLevel;
     }
 
     /**
-     * Get 分类
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分类 
      * @return Category 分类
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCategory() {
         return this.Category;
@@ -179,19 +156,15 @@ public class ImageVirus extends AbstractModel {
 
     /**
      * Set 分类
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Category 分类
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCategory(String Category) {
         this.Category = Category;
     }
 
     /**
-     * Get 病毒名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 病毒名称 
      * @return VirusName 病毒名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVirusName() {
         return this.VirusName;
@@ -199,19 +172,15 @@ public class ImageVirus extends AbstractModel {
 
     /**
      * Set 病毒名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VirusName 病毒名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVirusName(String VirusName) {
         this.VirusName = VirusName;
     }
 
     /**
-     * Get 标签
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标签 
      * @return Tags 标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getTags() {
         return this.Tags;
@@ -219,19 +188,15 @@ public class ImageVirus extends AbstractModel {
 
     /**
      * Set 标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tags 标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTags(String [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 描述 
      * @return Desc 描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDesc() {
         return this.Desc;
@@ -239,19 +204,15 @@ public class ImageVirus extends AbstractModel {
 
     /**
      * Set 描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Desc 描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDesc(String Desc) {
         this.Desc = Desc;
     }
 
     /**
-     * Get 解决方案
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 解决方案 
      * @return Solution 解决方案
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSolution() {
         return this.Solution;
@@ -259,19 +220,15 @@ public class ImageVirus extends AbstractModel {
 
     /**
      * Set 解决方案
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Solution 解决方案
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSolution(String Solution) {
         this.Solution = Solution;
     }
 
     /**
-     * Get 文件类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文件类型 
      * @return FileType 文件类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFileType() {
         return this.FileType;
@@ -279,19 +236,15 @@ public class ImageVirus extends AbstractModel {
 
     /**
      * Set 文件类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FileType 文件类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileType(String FileType) {
         this.FileType = FileType;
     }
 
     /**
-     * Get 文件路径
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文件路径 
      * @return FileName 文件路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFileName() {
         return this.FileName;
@@ -299,19 +252,15 @@ public class ImageVirus extends AbstractModel {
 
     /**
      * Set 文件路径
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FileName 文件路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileName(String FileName) {
         this.FileName = FileName;
     }
 
     /**
-     * Get 文件md5
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文件md5 
      * @return FileMd5 文件md5
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFileMd5() {
         return this.FileMd5;
@@ -319,19 +268,15 @@ public class ImageVirus extends AbstractModel {
 
     /**
      * Set 文件md5
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FileMd5 文件md5
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileMd5(String FileMd5) {
         this.FileMd5 = FileMd5;
     }
 
     /**
-     * Get 大小
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 大小 
      * @return FileSize 大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFileSize() {
         return this.FileSize;
@@ -339,19 +284,15 @@ public class ImageVirus extends AbstractModel {
 
     /**
      * Set 大小
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FileSize 大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileSize(Long FileSize) {
         this.FileSize = FileSize;
     }
 
     /**
-     * Get 首次发现时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 首次发现时间 
      * @return FirstScanTime 首次发现时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFirstScanTime() {
         return this.FirstScanTime;
@@ -359,19 +300,15 @@ public class ImageVirus extends AbstractModel {
 
     /**
      * Set 首次发现时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FirstScanTime 首次发现时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFirstScanTime(String FirstScanTime) {
         this.FirstScanTime = FirstScanTime;
     }
 
     /**
-     * Get 最近扫描时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最近扫描时间 
      * @return LatestScanTime 最近扫描时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLatestScanTime() {
         return this.LatestScanTime;
@@ -379,9 +316,7 @@ public class ImageVirus extends AbstractModel {
 
     /**
      * Set 最近扫描时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LatestScanTime 最近扫描时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLatestScanTime(String LatestScanTime) {
         this.LatestScanTime = LatestScanTime;

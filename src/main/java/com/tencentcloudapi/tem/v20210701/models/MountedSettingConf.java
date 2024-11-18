@@ -25,6 +25,7 @@ public class MountedSettingConf extends AbstractModel {
 
     /**
     * 配置名称
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConfigDataName")
     @Expose
@@ -32,6 +33,7 @@ public class MountedSettingConf extends AbstractModel {
 
     /**
     * 挂载路径
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MountedPath")
     @Expose
@@ -39,6 +41,7 @@ public class MountedSettingConf extends AbstractModel {
 
     /**
     * 配置内容
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
     @Expose
@@ -46,14 +49,17 @@ public class MountedSettingConf extends AbstractModel {
 
     /**
     * 加密配置名称
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SecretDataName")
     @Expose
     private String SecretDataName;
 
     /**
-     * Get 配置名称 
+     * Get 配置名称
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ConfigDataName 配置名称
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getConfigDataName() {
         return this.ConfigDataName;
@@ -61,15 +67,19 @@ public class MountedSettingConf extends AbstractModel {
 
     /**
      * Set 配置名称
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ConfigDataName 配置名称
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConfigDataName(String ConfigDataName) {
         this.ConfigDataName = ConfigDataName;
     }
 
     /**
-     * Get 挂载路径 
+     * Get 挂载路径
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return MountedPath 挂载路径
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMountedPath() {
         return this.MountedPath;
@@ -77,15 +87,19 @@ public class MountedSettingConf extends AbstractModel {
 
     /**
      * Set 挂载路径
+注意：此字段可能返回 null，表示取不到有效值。
      * @param MountedPath 挂载路径
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMountedPath(String MountedPath) {
         this.MountedPath = MountedPath;
     }
 
     /**
-     * Get 配置内容 
+     * Get 配置内容
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Data 配置内容
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Pair [] getData() {
         return this.Data;
@@ -93,15 +107,19 @@ public class MountedSettingConf extends AbstractModel {
 
     /**
      * Set 配置内容
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Data 配置内容
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(Pair [] Data) {
         this.Data = Data;
     }
 
     /**
-     * Get 加密配置名称 
+     * Get 加密配置名称
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return SecretDataName 加密配置名称
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSecretDataName() {
         return this.SecretDataName;
@@ -109,7 +127,9 @@ public class MountedSettingConf extends AbstractModel {
 
     /**
      * Set 加密配置名称
+注意：此字段可能返回 null，表示取不到有效值。
      * @param SecretDataName 加密配置名称
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSecretDataName(String SecretDataName) {
         this.SecretDataName = SecretDataName;

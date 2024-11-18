@@ -73,7 +73,7 @@ public class CCRuleItems extends AbstractModel {
     private Long MatchFunc;
 
     /**
-    * 动作
+    * 动作，20表示观察，21表示人机识别，22表示拦截，23表示精准拦截，24表示JS校验
     */
     @SerializedName("ActionType")
     @Expose
@@ -116,7 +116,6 @@ public class CCRuleItems extends AbstractModel {
 
     /**
     * 事件id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EventId")
     @Expose
@@ -124,7 +123,6 @@ public class CCRuleItems extends AbstractModel {
 
     /**
     * 关联的Session规则
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SessionApplied")
     @Expose
@@ -132,7 +130,6 @@ public class CCRuleItems extends AbstractModel {
 
     /**
     * 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -251,16 +248,16 @@ public class CCRuleItems extends AbstractModel {
     }
 
     /**
-     * Get 动作 
-     * @return ActionType 动作
+     * Get 动作，20表示观察，21表示人机识别，22表示拦截，23表示精准拦截，24表示JS校验 
+     * @return ActionType 动作，20表示观察，21表示人机识别，22表示拦截，23表示精准拦截，24表示JS校验
      */
     public Long getActionType() {
         return this.ActionType;
     }
 
     /**
-     * Set 动作
-     * @param ActionType 动作
+     * Set 动作，20表示观察，21表示人机识别，22表示拦截，23表示精准拦截，24表示JS校验
+     * @param ActionType 动作，20表示观察，21表示人机识别，22表示拦截，23表示精准拦截，24表示JS校验
      */
     public void setActionType(Long ActionType) {
         this.ActionType = ActionType;
@@ -347,10 +344,8 @@ public class CCRuleItems extends AbstractModel {
     }
 
     /**
-     * Get 事件id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 事件id 
      * @return EventId 事件id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEventId() {
         return this.EventId;
@@ -358,19 +353,15 @@ public class CCRuleItems extends AbstractModel {
 
     /**
      * Set 事件id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EventId 事件id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEventId(String EventId) {
         this.EventId = EventId;
     }
 
     /**
-     * Get 关联的Session规则
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 关联的Session规则 
      * @return SessionApplied 关联的Session规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long [] getSessionApplied() {
         return this.SessionApplied;
@@ -378,19 +369,15 @@ public class CCRuleItems extends AbstractModel {
 
     /**
      * Set 关联的Session规则
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SessionApplied 关联的Session规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSessionApplied(Long [] SessionApplied) {
         this.SessionApplied = SessionApplied;
     }
 
     /**
-     * Get 创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间 
      * @return CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCreateTime() {
         return this.CreateTime;
@@ -398,9 +385,7 @@ public class CCRuleItems extends AbstractModel {
 
     /**
      * Set 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(Long CreateTime) {
         this.CreateTime = CreateTime;

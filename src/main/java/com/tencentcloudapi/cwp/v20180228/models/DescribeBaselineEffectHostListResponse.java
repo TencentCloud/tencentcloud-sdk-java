@@ -25,7 +25,6 @@ public class DescribeBaselineEffectHostListResponse extends AbstractModel {
 
     /**
     * 记录总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeBaselineEffectHostListResponse extends AbstractModel {
 
     /**
     * 影响服务器列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EffectHostList")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeBaselineEffectHostListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 记录总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 记录总数 
      * @return TotalCount 记录总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -58,19 +54,15 @@ public class DescribeBaselineEffectHostListResponse extends AbstractModel {
 
     /**
      * Set 记录总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 记录总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 影响服务器列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 影响服务器列表 
      * @return EffectHostList 影响服务器列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BaselineEffectHost [] getEffectHostList() {
         return this.EffectHostList;
@@ -78,9 +70,7 @@ public class DescribeBaselineEffectHostListResponse extends AbstractModel {
 
     /**
      * Set 影响服务器列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EffectHostList 影响服务器列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEffectHostList(BaselineEffectHost [] EffectHostList) {
         this.EffectHostList = EffectHostList;

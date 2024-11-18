@@ -25,7 +25,6 @@ public class DeleteStaffResponse extends AbstractModel {
 
     /**
     * 无法删除的状态为在线的客服列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OnlineStaffList")
     @Expose
@@ -39,10 +38,8 @@ public class DeleteStaffResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 无法删除的状态为在线的客服列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 无法删除的状态为在线的客服列表 
      * @return OnlineStaffList 无法删除的状态为在线的客服列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getOnlineStaffList() {
         return this.OnlineStaffList;
@@ -50,9 +47,7 @@ public class DeleteStaffResponse extends AbstractModel {
 
     /**
      * Set 无法删除的状态为在线的客服列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OnlineStaffList 无法删除的状态为在线的客服列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOnlineStaffList(String [] OnlineStaffList) {
         this.OnlineStaffList = OnlineStaffList;

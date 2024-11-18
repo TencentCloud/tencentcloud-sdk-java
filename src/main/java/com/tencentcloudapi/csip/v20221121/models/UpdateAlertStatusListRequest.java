@@ -43,6 +43,13 @@ public class UpdateAlertStatusListRequest extends AbstractModel {
     private Long OperateType;
 
     /**
+    * 集团账号的成员id
+    */
+    @SerializedName("MemberId")
+    @Expose
+    private String [] MemberId;
+
+    /**
     * 被调用的集团账号的成员id
     */
     @SerializedName("OperatedMemberId")
@@ -102,6 +109,22 @@ public class UpdateAlertStatusListRequest extends AbstractModel {
     }
 
     /**
+     * Get 集团账号的成员id 
+     * @return MemberId 集团账号的成员id
+     */
+    public String [] getMemberId() {
+        return this.MemberId;
+    }
+
+    /**
+     * Set 集团账号的成员id
+     * @param MemberId 集团账号的成员id
+     */
+    public void setMemberId(String [] MemberId) {
+        this.MemberId = MemberId;
+    }
+
+    /**
      * Get 被调用的集团账号的成员id 
      * @return OperatedMemberId 被调用的集团账号的成员id
      */
@@ -134,6 +157,12 @@ public class UpdateAlertStatusListRequest extends AbstractModel {
         if (source.OperateType != null) {
             this.OperateType = new Long(source.OperateType);
         }
+        if (source.MemberId != null) {
+            this.MemberId = new String[source.MemberId.length];
+            for (int i = 0; i < source.MemberId.length; i++) {
+                this.MemberId[i] = new String(source.MemberId[i]);
+            }
+        }
         if (source.OperatedMemberId != null) {
             this.OperatedMemberId = new String[source.OperatedMemberId.length];
             for (int i = 0; i < source.OperatedMemberId.length; i++) {
@@ -149,6 +178,7 @@ public class UpdateAlertStatusListRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "ID.", this.ID);
         this.setParamSimple(map, prefix + "OperateType", this.OperateType);
+        this.setParamArraySimple(map, prefix + "MemberId.", this.MemberId);
         this.setParamArraySimple(map, prefix + "OperatedMemberId.", this.OperatedMemberId);
 
     }

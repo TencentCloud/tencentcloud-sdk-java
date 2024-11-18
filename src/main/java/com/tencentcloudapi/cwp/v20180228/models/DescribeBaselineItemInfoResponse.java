@@ -39,7 +39,6 @@ public class DescribeBaselineItemInfoResponse extends AbstractModel {
 
     /**
     * 基线分类列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CategoryList")
     @Expose
@@ -85,10 +84,8 @@ public class DescribeBaselineItemInfoResponse extends AbstractModel {
     }
 
     /**
-     * Get 基线分类列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 基线分类列表 
      * @return CategoryList 基线分类列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BaselineItemsCategory [] getCategoryList() {
         return this.CategoryList;
@@ -96,9 +93,7 @@ public class DescribeBaselineItemInfoResponse extends AbstractModel {
 
     /**
      * Set 基线分类列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CategoryList 基线分类列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCategoryList(BaselineItemsCategory [] CategoryList) {
         this.CategoryList = CategoryList;

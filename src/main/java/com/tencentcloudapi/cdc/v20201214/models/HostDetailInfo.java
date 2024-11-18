@@ -25,7 +25,6 @@ public class HostDetailInfo extends AbstractModel {
 
     /**
     * 类型族
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HostTypeFamily")
     @Expose
@@ -33,7 +32,6 @@ public class HostDetailInfo extends AbstractModel {
 
     /**
     * 总CPU
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CpuTotal")
     @Expose
@@ -41,7 +39,6 @@ public class HostDetailInfo extends AbstractModel {
 
     /**
     * 可用CPU
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CpuAvailable")
     @Expose
@@ -49,7 +46,6 @@ public class HostDetailInfo extends AbstractModel {
 
     /**
     * 总内存
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MemTotal")
     @Expose
@@ -57,17 +53,14 @@ public class HostDetailInfo extends AbstractModel {
 
     /**
     * 可用内存
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MemAvailable")
     @Expose
     private Float MemAvailable;
 
     /**
-     * Get 类型族
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 类型族 
      * @return HostTypeFamily 类型族
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHostTypeFamily() {
         return this.HostTypeFamily;
@@ -75,19 +68,15 @@ public class HostDetailInfo extends AbstractModel {
 
     /**
      * Set 类型族
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HostTypeFamily 类型族
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHostTypeFamily(String HostTypeFamily) {
         this.HostTypeFamily = HostTypeFamily;
     }
 
     /**
-     * Get 总CPU
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 总CPU 
      * @return CpuTotal 总CPU
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getCpuTotal() {
         return this.CpuTotal;
@@ -95,19 +84,15 @@ public class HostDetailInfo extends AbstractModel {
 
     /**
      * Set 总CPU
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CpuTotal 总CPU
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCpuTotal(Float CpuTotal) {
         this.CpuTotal = CpuTotal;
     }
 
     /**
-     * Get 可用CPU
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 可用CPU 
      * @return CpuAvailable 可用CPU
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getCpuAvailable() {
         return this.CpuAvailable;
@@ -115,19 +100,15 @@ public class HostDetailInfo extends AbstractModel {
 
     /**
      * Set 可用CPU
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CpuAvailable 可用CPU
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCpuAvailable(Float CpuAvailable) {
         this.CpuAvailable = CpuAvailable;
     }
 
     /**
-     * Get 总内存
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 总内存 
      * @return MemTotal 总内存
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getMemTotal() {
         return this.MemTotal;
@@ -135,19 +116,15 @@ public class HostDetailInfo extends AbstractModel {
 
     /**
      * Set 总内存
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MemTotal 总内存
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMemTotal(Float MemTotal) {
         this.MemTotal = MemTotal;
     }
 
     /**
-     * Get 可用内存
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 可用内存 
      * @return MemAvailable 可用内存
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getMemAvailable() {
         return this.MemAvailable;
@@ -155,9 +132,7 @@ public class HostDetailInfo extends AbstractModel {
 
     /**
      * Set 可用内存
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MemAvailable 可用内存
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMemAvailable(Float MemAvailable) {
         this.MemAvailable = MemAvailable;

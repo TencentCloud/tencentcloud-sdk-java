@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class DescribeRootAccountGroupResponse extends AbstractModel {
 
     /**
-    * 账户分组详情响应数据
-注意：此字段可能返回 null，表示取不到有效值。
+    * 账号根分组响应详情
     */
     @SerializedName("Data")
     @Expose
@@ -39,20 +38,16 @@ public class DescribeRootAccountGroupResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 账户分组详情响应数据
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Data 账户分组详情响应数据
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 账号根分组响应详情 
+     * @return Data 账号根分组响应详情
      */
     public GetAccountGroupData getData() {
         return this.Data;
     }
 
     /**
-     * Set 账户分组详情响应数据
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Data 账户分组详情响应数据
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 账号根分组响应详情
+     * @param Data 账号根分组响应详情
      */
     public void setData(GetAccountGroupData Data) {
         this.Data = Data;

@@ -25,7 +25,6 @@ public class DescribeRansomDefenseStrategyMachinesResponse extends AbstractModel
 
     /**
     * 主机列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("List")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeRansomDefenseStrategyMachinesResponse extends AbstractModel
 
     /**
     * 分页查询记录总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeRansomDefenseStrategyMachinesResponse extends AbstractModel
     private String RequestId;
 
     /**
-     * Get 主机列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主机列表 
      * @return List 主机列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RansomDefenseStrategyMachineDetail [] getList() {
         return this.List;
@@ -58,19 +54,15 @@ public class DescribeRansomDefenseStrategyMachinesResponse extends AbstractModel
 
     /**
      * Set 主机列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param List 主机列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setList(RansomDefenseStrategyMachineDetail [] List) {
         this.List = List;
     }
 
     /**
-     * Get 分页查询记录总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分页查询记录总数 
      * @return TotalCount 分页查询记录总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -78,9 +70,7 @@ public class DescribeRansomDefenseStrategyMachinesResponse extends AbstractModel
 
     /**
      * Set 分页查询记录总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 分页查询记录总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

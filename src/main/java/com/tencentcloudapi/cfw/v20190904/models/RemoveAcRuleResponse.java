@@ -32,7 +32,6 @@ public class RemoveAcRuleResponse extends AbstractModel {
 
     /**
     * 0代表成功，-1代表失败
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReturnCode")
     @Expose
@@ -40,7 +39,6 @@ public class RemoveAcRuleResponse extends AbstractModel {
 
     /**
     * success代表成功，failed代表失败
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReturnMsg")
     @Expose
@@ -70,10 +68,8 @@ public class RemoveAcRuleResponse extends AbstractModel {
     }
 
     /**
-     * Get 0代表成功，-1代表失败
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 0代表成功，-1代表失败 
      * @return ReturnCode 0代表成功，-1代表失败
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getReturnCode() {
         return this.ReturnCode;
@@ -81,19 +77,15 @@ public class RemoveAcRuleResponse extends AbstractModel {
 
     /**
      * Set 0代表成功，-1代表失败
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReturnCode 0代表成功，-1代表失败
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReturnCode(Long ReturnCode) {
         this.ReturnCode = ReturnCode;
     }
 
     /**
-     * Get success代表成功，failed代表失败
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get success代表成功，failed代表失败 
      * @return ReturnMsg success代表成功，failed代表失败
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getReturnMsg() {
         return this.ReturnMsg;
@@ -101,9 +93,7 @@ public class RemoveAcRuleResponse extends AbstractModel {
 
     /**
      * Set success代表成功，failed代表失败
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReturnMsg success代表成功，failed代表失败
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReturnMsg(String ReturnMsg) {
         this.ReturnMsg = ReturnMsg;

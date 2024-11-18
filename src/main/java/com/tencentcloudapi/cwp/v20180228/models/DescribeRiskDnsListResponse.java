@@ -25,7 +25,6 @@ public class DescribeRiskDnsListResponse extends AbstractModel {
 
     /**
     * 恶意请求列表数组
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RiskDnsList")
     @Expose
@@ -46,10 +45,8 @@ public class DescribeRiskDnsListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 恶意请求列表数组
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 恶意请求列表数组 
      * @return RiskDnsList 恶意请求列表数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RiskDnsList [] getRiskDnsList() {
         return this.RiskDnsList;
@@ -57,9 +54,7 @@ public class DescribeRiskDnsListResponse extends AbstractModel {
 
     /**
      * Set 恶意请求列表数组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RiskDnsList 恶意请求列表数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRiskDnsList(RiskDnsList [] RiskDnsList) {
         this.RiskDnsList = RiskDnsList;

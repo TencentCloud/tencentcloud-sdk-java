@@ -52,7 +52,7 @@ public class ModifySiteDeviceInfoRequest extends AbstractModel {
     private String PowerConnectors;
 
     /**
-    * 从机架上方还是下方供电。
+    * 从机架上方还是下方供电。取值范围：["UP","DOWN"]
     */
     @SerializedName("PowerFeedDrop")
     @Expose
@@ -73,7 +73,7 @@ public class ModifySiteDeviceInfoRequest extends AbstractModel {
     private Long PowerDrawKva;
 
     /**
-    * 网络到腾讯云Region区域的上行链路速度
+    * 网络到腾讯云Region区域的上行链路速度(Gbps)
     */
     @SerializedName("UplinkSpeedGbps")
     @Expose
@@ -201,16 +201,16 @@ public class ModifySiteDeviceInfoRequest extends AbstractModel {
     }
 
     /**
-     * Get 从机架上方还是下方供电。 
-     * @return PowerFeedDrop 从机架上方还是下方供电。
+     * Get 从机架上方还是下方供电。取值范围：["UP","DOWN"] 
+     * @return PowerFeedDrop 从机架上方还是下方供电。取值范围：["UP","DOWN"]
      */
     public String getPowerFeedDrop() {
         return this.PowerFeedDrop;
     }
 
     /**
-     * Set 从机架上方还是下方供电。
-     * @param PowerFeedDrop 从机架上方还是下方供电。
+     * Set 从机架上方还是下方供电。取值范围：["UP","DOWN"]
+     * @param PowerFeedDrop 从机架上方还是下方供电。取值范围：["UP","DOWN"]
      */
     public void setPowerFeedDrop(String PowerFeedDrop) {
         this.PowerFeedDrop = PowerFeedDrop;
@@ -249,16 +249,16 @@ public class ModifySiteDeviceInfoRequest extends AbstractModel {
     }
 
     /**
-     * Get 网络到腾讯云Region区域的上行链路速度 
-     * @return UplinkSpeedGbps 网络到腾讯云Region区域的上行链路速度
+     * Get 网络到腾讯云Region区域的上行链路速度(Gbps) 
+     * @return UplinkSpeedGbps 网络到腾讯云Region区域的上行链路速度(Gbps)
      */
     public Long getUplinkSpeedGbps() {
         return this.UplinkSpeedGbps;
     }
 
     /**
-     * Set 网络到腾讯云Region区域的上行链路速度
-     * @param UplinkSpeedGbps 网络到腾讯云Region区域的上行链路速度
+     * Set 网络到腾讯云Region区域的上行链路速度(Gbps)
+     * @param UplinkSpeedGbps 网络到腾讯云Region区域的上行链路速度(Gbps)
      */
     public void setUplinkSpeedGbps(Long UplinkSpeedGbps) {
         this.UplinkSpeedGbps = UplinkSpeedGbps;

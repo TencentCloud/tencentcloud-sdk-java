@@ -40,6 +40,20 @@ public class HostingConfig extends AbstractModel {
     private Long [] MessageTypes;
 
     /**
+    * 资源替换开始时间
+    */
+    @SerializedName("ReplaceStartTime")
+    @Expose
+    private String ReplaceStartTime;
+
+    /**
+    * 资源替换结束时间
+    */
+    @SerializedName("ReplaceEndTime")
+    @Expose
+    private String ReplaceEndTime;
+
+    /**
      * Get 托管资源替换时间， 默认为证书过期前30天存在续费证书则替换
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ReplaceTime 托管资源替换时间， 默认为证书过期前30天存在续费证书则替换
@@ -79,6 +93,38 @@ public class HostingConfig extends AbstractModel {
         this.MessageTypes = MessageTypes;
     }
 
+    /**
+     * Get 资源替换开始时间 
+     * @return ReplaceStartTime 资源替换开始时间
+     */
+    public String getReplaceStartTime() {
+        return this.ReplaceStartTime;
+    }
+
+    /**
+     * Set 资源替换开始时间
+     * @param ReplaceStartTime 资源替换开始时间
+     */
+    public void setReplaceStartTime(String ReplaceStartTime) {
+        this.ReplaceStartTime = ReplaceStartTime;
+    }
+
+    /**
+     * Get 资源替换结束时间 
+     * @return ReplaceEndTime 资源替换结束时间
+     */
+    public String getReplaceEndTime() {
+        return this.ReplaceEndTime;
+    }
+
+    /**
+     * Set 资源替换结束时间
+     * @param ReplaceEndTime 资源替换结束时间
+     */
+    public void setReplaceEndTime(String ReplaceEndTime) {
+        this.ReplaceEndTime = ReplaceEndTime;
+    }
+
     public HostingConfig() {
     }
 
@@ -96,6 +142,12 @@ public class HostingConfig extends AbstractModel {
                 this.MessageTypes[i] = new Long(source.MessageTypes[i]);
             }
         }
+        if (source.ReplaceStartTime != null) {
+            this.ReplaceStartTime = new String(source.ReplaceStartTime);
+        }
+        if (source.ReplaceEndTime != null) {
+            this.ReplaceEndTime = new String(source.ReplaceEndTime);
+        }
     }
 
 
@@ -105,6 +157,8 @@ public class HostingConfig extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ReplaceTime", this.ReplaceTime);
         this.setParamArraySimple(map, prefix + "MessageTypes.", this.MessageTypes);
+        this.setParamSimple(map, prefix + "ReplaceStartTime", this.ReplaceStartTime);
+        this.setParamSimple(map, prefix + "ReplaceEndTime", this.ReplaceEndTime);
 
     }
 }

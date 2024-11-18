@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeRoGroupsResponse extends AbstractModel {
 
     /**
-    * RO组信息数组，一个实例可关联多个RO组。
+    * RO 组信息数组，一个实例可关联多个 RO 组。
     */
     @SerializedName("RoGroups")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeRoGroupsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get RO组信息数组，一个实例可关联多个RO组。 
-     * @return RoGroups RO组信息数组，一个实例可关联多个RO组。
+     * Get RO 组信息数组，一个实例可关联多个 RO 组。 
+     * @return RoGroups RO 组信息数组，一个实例可关联多个 RO 组。
      */
     public RoGroup [] getRoGroups() {
         return this.RoGroups;
     }
 
     /**
-     * Set RO组信息数组，一个实例可关联多个RO组。
-     * @param RoGroups RO组信息数组，一个实例可关联多个RO组。
+     * Set RO 组信息数组，一个实例可关联多个 RO 组。
+     * @param RoGroups RO 组信息数组，一个实例可关联多个 RO 组。
      */
     public void setRoGroups(RoGroup [] RoGroups) {
         this.RoGroups = RoGroups;

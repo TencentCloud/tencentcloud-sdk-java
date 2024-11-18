@@ -116,6 +116,24 @@ public class ChannelOrganizationInfo extends AbstractModel {
     private String AuthorizationType;
 
     /**
+    * 子企业激活状态。值如下：
+<ul>
+  <li>**0**： 未激活</li>
+  <li>**1**： 已激活</li>
+</ul>
+    */
+    @SerializedName("ActiveStatus")
+    @Expose
+    private Long ActiveStatus;
+
+    /**
+    * 账号过期时间，时间戳
+    */
+    @SerializedName("LicenseExpireTime")
+    @Expose
+    private Long LicenseExpireTime;
+
+    /**
      * Get 电子签平台给企业分配的ID（在不同应用下同一个企业会分配通用的ID） 
      * @return OrganizationId 电子签平台给企业分配的ID（在不同应用下同一个企业会分配通用的ID）
      */
@@ -351,6 +369,54 @@ public class ChannelOrganizationInfo extends AbstractModel {
         this.AuthorizationType = AuthorizationType;
     }
 
+    /**
+     * Get 子企业激活状态。值如下：
+<ul>
+  <li>**0**： 未激活</li>
+  <li>**1**： 已激活</li>
+</ul> 
+     * @return ActiveStatus 子企业激活状态。值如下：
+<ul>
+  <li>**0**： 未激活</li>
+  <li>**1**： 已激活</li>
+</ul>
+     */
+    public Long getActiveStatus() {
+        return this.ActiveStatus;
+    }
+
+    /**
+     * Set 子企业激活状态。值如下：
+<ul>
+  <li>**0**： 未激活</li>
+  <li>**1**： 已激活</li>
+</ul>
+     * @param ActiveStatus 子企业激活状态。值如下：
+<ul>
+  <li>**0**： 未激活</li>
+  <li>**1**： 已激活</li>
+</ul>
+     */
+    public void setActiveStatus(Long ActiveStatus) {
+        this.ActiveStatus = ActiveStatus;
+    }
+
+    /**
+     * Get 账号过期时间，时间戳 
+     * @return LicenseExpireTime 账号过期时间，时间戳
+     */
+    public Long getLicenseExpireTime() {
+        return this.LicenseExpireTime;
+    }
+
+    /**
+     * Set 账号过期时间，时间戳
+     * @param LicenseExpireTime 账号过期时间，时间戳
+     */
+    public void setLicenseExpireTime(Long LicenseExpireTime) {
+        this.LicenseExpireTime = LicenseExpireTime;
+    }
+
     public ChannelOrganizationInfo() {
     }
 
@@ -392,6 +458,12 @@ public class ChannelOrganizationInfo extends AbstractModel {
         if (source.AuthorizationType != null) {
             this.AuthorizationType = new String(source.AuthorizationType);
         }
+        if (source.ActiveStatus != null) {
+            this.ActiveStatus = new Long(source.ActiveStatus);
+        }
+        if (source.LicenseExpireTime != null) {
+            this.LicenseExpireTime = new Long(source.LicenseExpireTime);
+        }
     }
 
 
@@ -410,6 +482,8 @@ public class ChannelOrganizationInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "AdminMobile", this.AdminMobile);
         this.setParamSimple(map, prefix + "AuthorizationStatus", this.AuthorizationStatus);
         this.setParamSimple(map, prefix + "AuthorizationType", this.AuthorizationType);
+        this.setParamSimple(map, prefix + "ActiveStatus", this.ActiveStatus);
+        this.setParamSimple(map, prefix + "LicenseExpireTime", this.LicenseExpireTime);
 
     }
 }

@@ -24,84 +24,84 @@ import java.util.HashMap;
 public class DescribeInstanceUpgradeTypeRequest extends AbstractModel {
 
     /**
-    * 实例id
+    * 实例 ID。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 目标实例cpu
+    * 目标实例 CPU 的核数。
     */
     @SerializedName("DstCpu")
     @Expose
     private Float DstCpu;
 
     /**
-    * 目标实例内存
+    * 目标实例内存大小，单位：MB。
     */
     @SerializedName("DstMemory")
     @Expose
     private Long DstMemory;
 
     /**
-    * 目标实例磁盘
+    * 目标实例磁盘大小，单位：GB。
     */
     @SerializedName("DstDisk")
     @Expose
     private Long DstDisk;
 
     /**
-    * 目标实例版本
+    * 目标实例数据库版本。
     */
     @SerializedName("DstVersion")
     @Expose
     private String DstVersion;
 
     /**
-    * 目标实例部署模型
+    * 目标实例部署模型。
     */
     @SerializedName("DstDeployMode")
     @Expose
     private Long DstDeployMode;
 
     /**
-    * 目标实例复制类型
+    * 目标实例复制类型。
     */
     @SerializedName("DstProtectMode")
     @Expose
     private Long DstProtectMode;
 
     /**
-    * 目标实例备机1可用区
+    * 目标实例备机1可用区。
     */
     @SerializedName("DstSlaveZone")
     @Expose
     private Long DstSlaveZone;
 
     /**
-    * 目标实例备机2可用区
+    * 目标实例备机2可用区。
     */
     @SerializedName("DstBackupZone")
     @Expose
     private Long DstBackupZone;
 
     /**
-    * 目标实例类型
+    * 目标实例类型。
     */
     @SerializedName("DstCdbType")
     @Expose
     private String DstCdbType;
 
     /**
-    * 目标实例主可用区
+    * 目标实例主可用区。
     */
     @SerializedName("DstZoneId")
     @Expose
     private Long DstZoneId;
 
     /**
-    * 独享集群CDB实例的节点分布情况
+    * 独享集群 CDB 实例的节点分布情况。
     */
     @SerializedName("NodeDistribution")
     @Expose
@@ -115,192 +115,192 @@ public class DescribeInstanceUpgradeTypeRequest extends AbstractModel {
     private ClusterTopology ClusterTopology;
 
     /**
-     * Get 实例id 
-     * @return InstanceId 实例id
+     * Get 实例 ID。 
+     * @return InstanceId 实例 ID。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例id
-     * @param InstanceId 实例id
+     * Set 实例 ID。
+     * @param InstanceId 实例 ID。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 目标实例cpu 
-     * @return DstCpu 目标实例cpu
+     * Get 目标实例 CPU 的核数。 
+     * @return DstCpu 目标实例 CPU 的核数。
      */
     public Float getDstCpu() {
         return this.DstCpu;
     }
 
     /**
-     * Set 目标实例cpu
-     * @param DstCpu 目标实例cpu
+     * Set 目标实例 CPU 的核数。
+     * @param DstCpu 目标实例 CPU 的核数。
      */
     public void setDstCpu(Float DstCpu) {
         this.DstCpu = DstCpu;
     }
 
     /**
-     * Get 目标实例内存 
-     * @return DstMemory 目标实例内存
+     * Get 目标实例内存大小，单位：MB。 
+     * @return DstMemory 目标实例内存大小，单位：MB。
      */
     public Long getDstMemory() {
         return this.DstMemory;
     }
 
     /**
-     * Set 目标实例内存
-     * @param DstMemory 目标实例内存
+     * Set 目标实例内存大小，单位：MB。
+     * @param DstMemory 目标实例内存大小，单位：MB。
      */
     public void setDstMemory(Long DstMemory) {
         this.DstMemory = DstMemory;
     }
 
     /**
-     * Get 目标实例磁盘 
-     * @return DstDisk 目标实例磁盘
+     * Get 目标实例磁盘大小，单位：GB。 
+     * @return DstDisk 目标实例磁盘大小，单位：GB。
      */
     public Long getDstDisk() {
         return this.DstDisk;
     }
 
     /**
-     * Set 目标实例磁盘
-     * @param DstDisk 目标实例磁盘
+     * Set 目标实例磁盘大小，单位：GB。
+     * @param DstDisk 目标实例磁盘大小，单位：GB。
      */
     public void setDstDisk(Long DstDisk) {
         this.DstDisk = DstDisk;
     }
 
     /**
-     * Get 目标实例版本 
-     * @return DstVersion 目标实例版本
+     * Get 目标实例数据库版本。 
+     * @return DstVersion 目标实例数据库版本。
      */
     public String getDstVersion() {
         return this.DstVersion;
     }
 
     /**
-     * Set 目标实例版本
-     * @param DstVersion 目标实例版本
+     * Set 目标实例数据库版本。
+     * @param DstVersion 目标实例数据库版本。
      */
     public void setDstVersion(String DstVersion) {
         this.DstVersion = DstVersion;
     }
 
     /**
-     * Get 目标实例部署模型 
-     * @return DstDeployMode 目标实例部署模型
+     * Get 目标实例部署模型。 
+     * @return DstDeployMode 目标实例部署模型。
      */
     public Long getDstDeployMode() {
         return this.DstDeployMode;
     }
 
     /**
-     * Set 目标实例部署模型
-     * @param DstDeployMode 目标实例部署模型
+     * Set 目标实例部署模型。
+     * @param DstDeployMode 目标实例部署模型。
      */
     public void setDstDeployMode(Long DstDeployMode) {
         this.DstDeployMode = DstDeployMode;
     }
 
     /**
-     * Get 目标实例复制类型 
-     * @return DstProtectMode 目标实例复制类型
+     * Get 目标实例复制类型。 
+     * @return DstProtectMode 目标实例复制类型。
      */
     public Long getDstProtectMode() {
         return this.DstProtectMode;
     }
 
     /**
-     * Set 目标实例复制类型
-     * @param DstProtectMode 目标实例复制类型
+     * Set 目标实例复制类型。
+     * @param DstProtectMode 目标实例复制类型。
      */
     public void setDstProtectMode(Long DstProtectMode) {
         this.DstProtectMode = DstProtectMode;
     }
 
     /**
-     * Get 目标实例备机1可用区 
-     * @return DstSlaveZone 目标实例备机1可用区
+     * Get 目标实例备机1可用区。 
+     * @return DstSlaveZone 目标实例备机1可用区。
      */
     public Long getDstSlaveZone() {
         return this.DstSlaveZone;
     }
 
     /**
-     * Set 目标实例备机1可用区
-     * @param DstSlaveZone 目标实例备机1可用区
+     * Set 目标实例备机1可用区。
+     * @param DstSlaveZone 目标实例备机1可用区。
      */
     public void setDstSlaveZone(Long DstSlaveZone) {
         this.DstSlaveZone = DstSlaveZone;
     }
 
     /**
-     * Get 目标实例备机2可用区 
-     * @return DstBackupZone 目标实例备机2可用区
+     * Get 目标实例备机2可用区。 
+     * @return DstBackupZone 目标实例备机2可用区。
      */
     public Long getDstBackupZone() {
         return this.DstBackupZone;
     }
 
     /**
-     * Set 目标实例备机2可用区
-     * @param DstBackupZone 目标实例备机2可用区
+     * Set 目标实例备机2可用区。
+     * @param DstBackupZone 目标实例备机2可用区。
      */
     public void setDstBackupZone(Long DstBackupZone) {
         this.DstBackupZone = DstBackupZone;
     }
 
     /**
-     * Get 目标实例类型 
-     * @return DstCdbType 目标实例类型
+     * Get 目标实例类型。 
+     * @return DstCdbType 目标实例类型。
      */
     public String getDstCdbType() {
         return this.DstCdbType;
     }
 
     /**
-     * Set 目标实例类型
-     * @param DstCdbType 目标实例类型
+     * Set 目标实例类型。
+     * @param DstCdbType 目标实例类型。
      */
     public void setDstCdbType(String DstCdbType) {
         this.DstCdbType = DstCdbType;
     }
 
     /**
-     * Get 目标实例主可用区 
-     * @return DstZoneId 目标实例主可用区
+     * Get 目标实例主可用区。 
+     * @return DstZoneId 目标实例主可用区。
      */
     public Long getDstZoneId() {
         return this.DstZoneId;
     }
 
     /**
-     * Set 目标实例主可用区
-     * @param DstZoneId 目标实例主可用区
+     * Set 目标实例主可用区。
+     * @param DstZoneId 目标实例主可用区。
      */
     public void setDstZoneId(Long DstZoneId) {
         this.DstZoneId = DstZoneId;
     }
 
     /**
-     * Get 独享集群CDB实例的节点分布情况 
-     * @return NodeDistribution 独享集群CDB实例的节点分布情况
+     * Get 独享集群 CDB 实例的节点分布情况。 
+     * @return NodeDistribution 独享集群 CDB 实例的节点分布情况。
      */
     public NodeDistribution getNodeDistribution() {
         return this.NodeDistribution;
     }
 
     /**
-     * Set 独享集群CDB实例的节点分布情况
-     * @param NodeDistribution 独享集群CDB实例的节点分布情况
+     * Set 独享集群 CDB 实例的节点分布情况。
+     * @param NodeDistribution 独享集群 CDB 实例的节点分布情况。
      */
     public void setNodeDistribution(NodeDistribution NodeDistribution) {
         this.NodeDistribution = NodeDistribution;

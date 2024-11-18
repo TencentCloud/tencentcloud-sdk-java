@@ -25,7 +25,6 @@ public class MachineExtraInfo extends AbstractModel {
 
     /**
     * 公网IP
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WanIP")
     @Expose
@@ -33,7 +32,6 @@ public class MachineExtraInfo extends AbstractModel {
 
     /**
     * 内网IP
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PrivateIP")
     @Expose
@@ -41,7 +39,6 @@ public class MachineExtraInfo extends AbstractModel {
 
     /**
     * 网络类型，1:vpc网络 2:基础网络 3:非腾讯云网络
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NetworkType")
     @Expose
@@ -49,7 +46,6 @@ public class MachineExtraInfo extends AbstractModel {
 
     /**
     * 网络名，vpc网络情况下会返回vpc_id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NetworkName")
     @Expose
@@ -57,7 +53,6 @@ public class MachineExtraInfo extends AbstractModel {
 
     /**
     * 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceID")
     @Expose
@@ -65,17 +60,14 @@ public class MachineExtraInfo extends AbstractModel {
 
     /**
     * 主机名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HostName")
     @Expose
     private String HostName;
 
     /**
-     * Get 公网IP
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 公网IP 
      * @return WanIP 公网IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWanIP() {
         return this.WanIP;
@@ -83,19 +75,15 @@ public class MachineExtraInfo extends AbstractModel {
 
     /**
      * Set 公网IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WanIP 公网IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWanIP(String WanIP) {
         this.WanIP = WanIP;
     }
 
     /**
-     * Get 内网IP
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 内网IP 
      * @return PrivateIP 内网IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPrivateIP() {
         return this.PrivateIP;
@@ -103,19 +91,15 @@ public class MachineExtraInfo extends AbstractModel {
 
     /**
      * Set 内网IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PrivateIP 内网IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPrivateIP(String PrivateIP) {
         this.PrivateIP = PrivateIP;
     }
 
     /**
-     * Get 网络类型，1:vpc网络 2:基础网络 3:非腾讯云网络
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网络类型，1:vpc网络 2:基础网络 3:非腾讯云网络 
      * @return NetworkType 网络类型，1:vpc网络 2:基础网络 3:非腾讯云网络
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getNetworkType() {
         return this.NetworkType;
@@ -123,19 +107,15 @@ public class MachineExtraInfo extends AbstractModel {
 
     /**
      * Set 网络类型，1:vpc网络 2:基础网络 3:非腾讯云网络
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NetworkType 网络类型，1:vpc网络 2:基础网络 3:非腾讯云网络
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNetworkType(Long NetworkType) {
         this.NetworkType = NetworkType;
     }
 
     /**
-     * Get 网络名，vpc网络情况下会返回vpc_id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网络名，vpc网络情况下会返回vpc_id 
      * @return NetworkName 网络名，vpc网络情况下会返回vpc_id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNetworkName() {
         return this.NetworkName;
@@ -143,19 +123,15 @@ public class MachineExtraInfo extends AbstractModel {
 
     /**
      * Set 网络名，vpc网络情况下会返回vpc_id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NetworkName 网络名，vpc网络情况下会返回vpc_id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNetworkName(String NetworkName) {
         this.NetworkName = NetworkName;
     }
 
     /**
-     * Get 实例ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例ID 
      * @return InstanceID 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceID() {
         return this.InstanceID;
@@ -163,19 +139,15 @@ public class MachineExtraInfo extends AbstractModel {
 
     /**
      * Set 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceID 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceID(String InstanceID) {
         this.InstanceID = InstanceID;
     }
 
     /**
-     * Get 主机名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主机名 
      * @return HostName 主机名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHostName() {
         return this.HostName;
@@ -183,9 +155,7 @@ public class MachineExtraInfo extends AbstractModel {
 
     /**
      * Set 主机名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HostName 主机名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHostName(String HostName) {
         this.HostName = HostName;

@@ -52,6 +52,13 @@ public class DescribeRecordPlaybackUrlRequest extends AbstractModel {
     private Boolean IsInternal;
 
     /**
+    * 云录像回放时，是否需要开启时间戳矫正，主要解决时间戳反转，会退等问题导致无法播放
+    */
+    @SerializedName("CorrectTimestamp")
+    @Expose
+    private Boolean CorrectTimestamp;
+
+    /**
      * Get 设备通道ID 
      * @return ChannelId 设备通道ID
      */
@@ -115,6 +122,22 @@ public class DescribeRecordPlaybackUrlRequest extends AbstractModel {
         this.IsInternal = IsInternal;
     }
 
+    /**
+     * Get 云录像回放时，是否需要开启时间戳矫正，主要解决时间戳反转，会退等问题导致无法播放 
+     * @return CorrectTimestamp 云录像回放时，是否需要开启时间戳矫正，主要解决时间戳反转，会退等问题导致无法播放
+     */
+    public Boolean getCorrectTimestamp() {
+        return this.CorrectTimestamp;
+    }
+
+    /**
+     * Set 云录像回放时，是否需要开启时间戳矫正，主要解决时间戳反转，会退等问题导致无法播放
+     * @param CorrectTimestamp 云录像回放时，是否需要开启时间戳矫正，主要解决时间戳反转，会退等问题导致无法播放
+     */
+    public void setCorrectTimestamp(Boolean CorrectTimestamp) {
+        this.CorrectTimestamp = CorrectTimestamp;
+    }
+
     public DescribeRecordPlaybackUrlRequest() {
     }
 
@@ -135,6 +158,9 @@ public class DescribeRecordPlaybackUrlRequest extends AbstractModel {
         if (source.IsInternal != null) {
             this.IsInternal = new Boolean(source.IsInternal);
         }
+        if (source.CorrectTimestamp != null) {
+            this.CorrectTimestamp = new Boolean(source.CorrectTimestamp);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class DescribeRecordPlaybackUrlRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "IsInternal", this.IsInternal);
+        this.setParamSimple(map, prefix + "CorrectTimestamp", this.CorrectTimestamp);
 
     }
 }

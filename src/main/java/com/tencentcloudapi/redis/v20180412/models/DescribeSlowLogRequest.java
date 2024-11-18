@@ -32,14 +32,14 @@ public class DescribeSlowLogRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * 预查询慢日志的起始时间。
+    * 预查询慢日志的起始时间，查询时间最大跨度30天。
     */
     @SerializedName("BeginTime")
     @Expose
     private String BeginTime;
 
     /**
-    * 预查询慢日志的结束时间。
+    * 预查询慢日志的结束时间，查询时间最大跨度30天
     */
     @SerializedName("EndTime")
     @Expose
@@ -53,7 +53,7 @@ public class DescribeSlowLogRequest extends AbstractModel {
     private Long MinQueryTime;
 
     /**
-    * 每个页面展示的慢查询条数，默认值为20。取值范围：[20,1000]。
+    * 每个页面展示的慢查询条数，默认值为20，最大100。
     */
     @SerializedName("Limit")
     @Expose
@@ -96,32 +96,32 @@ public class DescribeSlowLogRequest extends AbstractModel {
     }
 
     /**
-     * Get 预查询慢日志的起始时间。 
-     * @return BeginTime 预查询慢日志的起始时间。
+     * Get 预查询慢日志的起始时间，查询时间最大跨度30天。 
+     * @return BeginTime 预查询慢日志的起始时间，查询时间最大跨度30天。
      */
     public String getBeginTime() {
         return this.BeginTime;
     }
 
     /**
-     * Set 预查询慢日志的起始时间。
-     * @param BeginTime 预查询慢日志的起始时间。
+     * Set 预查询慢日志的起始时间，查询时间最大跨度30天。
+     * @param BeginTime 预查询慢日志的起始时间，查询时间最大跨度30天。
      */
     public void setBeginTime(String BeginTime) {
         this.BeginTime = BeginTime;
     }
 
     /**
-     * Get 预查询慢日志的结束时间。 
-     * @return EndTime 预查询慢日志的结束时间。
+     * Get 预查询慢日志的结束时间，查询时间最大跨度30天 
+     * @return EndTime 预查询慢日志的结束时间，查询时间最大跨度30天
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 预查询慢日志的结束时间。
-     * @param EndTime 预查询慢日志的结束时间。
+     * Set 预查询慢日志的结束时间，查询时间最大跨度30天
+     * @param EndTime 预查询慢日志的结束时间，查询时间最大跨度30天
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
@@ -144,16 +144,16 @@ public class DescribeSlowLogRequest extends AbstractModel {
     }
 
     /**
-     * Get 每个页面展示的慢查询条数，默认值为20。取值范围：[20,1000]。 
-     * @return Limit 每个页面展示的慢查询条数，默认值为20。取值范围：[20,1000]。
+     * Get 每个页面展示的慢查询条数，默认值为20，最大100。 
+     * @return Limit 每个页面展示的慢查询条数，默认值为20，最大100。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 每个页面展示的慢查询条数，默认值为20。取值范围：[20,1000]。
-     * @param Limit 每个页面展示的慢查询条数，默认值为20。取值范围：[20,1000]。
+     * Set 每个页面展示的慢查询条数，默认值为20，最大100。
+     * @param Limit 每个页面展示的慢查询条数，默认值为20，最大100。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

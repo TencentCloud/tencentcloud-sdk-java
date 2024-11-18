@@ -81,7 +81,7 @@ public class VulStoreListInfo extends AbstractModel {
 
     /**
     * 漏洞是否支持自动修复
-0-windows/linux均关闭; 1-windows/linux均打开; 2-仅linux; 3-仅windows
+0-Windows/Linux均关闭; 1-Windows/Linux均打开; 2-仅Linux; 3-仅Windows
     */
     @SerializedName("FixSwitch")
     @Expose
@@ -225,9 +225,9 @@ public class VulStoreListInfo extends AbstractModel {
 
     /**
      * Get 漏洞是否支持自动修复
-0-windows/linux均关闭; 1-windows/linux均打开; 2-仅linux; 3-仅windows 
+0-Windows/Linux均关闭; 1-Windows/Linux均打开; 2-仅Linux; 3-仅Windows 
      * @return FixSwitch 漏洞是否支持自动修复
-0-windows/linux均关闭; 1-windows/linux均打开; 2-仅linux; 3-仅windows
+0-Windows/Linux均关闭; 1-Windows/Linux均打开; 2-仅Linux; 3-仅Windows
      */
     public Long getFixSwitch() {
         return this.FixSwitch;
@@ -235,9 +235,9 @@ public class VulStoreListInfo extends AbstractModel {
 
     /**
      * Set 漏洞是否支持自动修复
-0-windows/linux均关闭; 1-windows/linux均打开; 2-仅linux; 3-仅windows
+0-Windows/Linux均关闭; 1-Windows/Linux均打开; 2-仅Linux; 3-仅Windows
      * @param FixSwitch 漏洞是否支持自动修复
-0-windows/linux均关闭; 1-windows/linux均打开; 2-仅linux; 3-仅windows
+0-Windows/Linux均关闭; 1-Windows/Linux均打开; 2-仅Linux; 3-仅Windows
      */
     public void setFixSwitch(Long FixSwitch) {
         this.FixSwitch = FixSwitch;

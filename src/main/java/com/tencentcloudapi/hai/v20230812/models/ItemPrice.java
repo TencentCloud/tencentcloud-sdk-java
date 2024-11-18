@@ -48,7 +48,7 @@ public class ItemPrice extends AbstractModel {
     private Float Discount;
 
     /**
-    * 单位：时
+    * 单位：时/月
 
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -125,10 +125,10 @@ public class ItemPrice extends AbstractModel {
     }
 
     /**
-     * Get 单位：时
+     * Get 单位：时/月
 
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ChargeUnit 单位：时
+     * @return ChargeUnit 单位：时/月
 
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -137,10 +137,10 @@ public class ItemPrice extends AbstractModel {
     }
 
     /**
-     * Set 单位：时
+     * Set 单位：时/月
 
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ChargeUnit 单位：时
+     * @param ChargeUnit 单位：时/月
 
 注意：此字段可能返回 null，表示取不到有效值。
      */

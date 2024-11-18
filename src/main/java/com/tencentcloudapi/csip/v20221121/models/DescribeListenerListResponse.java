@@ -25,7 +25,6 @@ public class DescribeListenerListResponse extends AbstractModel {
 
     /**
     * 总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Total")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeListenerListResponse extends AbstractModel {
 
     /**
     * 监听器列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeListenerListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 总数 
      * @return Total 总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotal() {
         return this.Total;
@@ -58,19 +54,15 @@ public class DescribeListenerListResponse extends AbstractModel {
 
     /**
      * Set 总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Total 总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotal(Long Total) {
         this.Total = Total;
     }
 
     /**
-     * Get 监听器列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 监听器列表 
      * @return Data 监听器列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ClbListenerListInfo [] getData() {
         return this.Data;
@@ -78,9 +70,7 @@ public class DescribeListenerListResponse extends AbstractModel {
 
     /**
      * Set 监听器列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Data 监听器列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(ClbListenerListInfo [] Data) {
         this.Data = Data;

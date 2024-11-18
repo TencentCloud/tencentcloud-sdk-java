@@ -52,7 +52,7 @@ public class AddCustomRuleRequest extends AbstractModel {
     private String Domain;
 
     /**
-    * 动作类型，1代表阻断，2代表人机识别，3代表观察，4代表重定向
+    * 动作类型，1代表阻断，2代表人机识别，3代表观察，4代表重定向，5代表JS校验
     */
     @SerializedName("ActionType")
     @Expose
@@ -80,7 +80,7 @@ public class AddCustomRuleRequest extends AbstractModel {
     private String Edition;
 
     /**
-    * 放行的详情
+    * 放行时是否继续执行其它检查逻辑，继续执行地域封禁防护：geoip、继续执行CC策略防护：cc、继续执行WEB应用防护：owasp、继续执行AI引擎防护：ai、继续执行信息防泄漏防护：antileakage。如果多个勾选那么以,串接。默认是"geoip,cc,owasp,ai,antileakage"
     */
     @SerializedName("Bypass")
     @Expose
@@ -200,16 +200,16 @@ public class AddCustomRuleRequest extends AbstractModel {
     }
 
     /**
-     * Get 动作类型，1代表阻断，2代表人机识别，3代表观察，4代表重定向 
-     * @return ActionType 动作类型，1代表阻断，2代表人机识别，3代表观察，4代表重定向
+     * Get 动作类型，1代表阻断，2代表人机识别，3代表观察，4代表重定向，5代表JS校验 
+     * @return ActionType 动作类型，1代表阻断，2代表人机识别，3代表观察，4代表重定向，5代表JS校验
      */
     public String getActionType() {
         return this.ActionType;
     }
 
     /**
-     * Set 动作类型，1代表阻断，2代表人机识别，3代表观察，4代表重定向
-     * @param ActionType 动作类型，1代表阻断，2代表人机识别，3代表观察，4代表重定向
+     * Set 动作类型，1代表阻断，2代表人机识别，3代表观察，4代表重定向，5代表JS校验
+     * @param ActionType 动作类型，1代表阻断，2代表人机识别，3代表观察，4代表重定向，5代表JS校验
      */
     public void setActionType(String ActionType) {
         this.ActionType = ActionType;
@@ -264,16 +264,16 @@ public class AddCustomRuleRequest extends AbstractModel {
     }
 
     /**
-     * Get 放行的详情 
-     * @return Bypass 放行的详情
+     * Get 放行时是否继续执行其它检查逻辑，继续执行地域封禁防护：geoip、继续执行CC策略防护：cc、继续执行WEB应用防护：owasp、继续执行AI引擎防护：ai、继续执行信息防泄漏防护：antileakage。如果多个勾选那么以,串接。默认是"geoip,cc,owasp,ai,antileakage" 
+     * @return Bypass 放行时是否继续执行其它检查逻辑，继续执行地域封禁防护：geoip、继续执行CC策略防护：cc、继续执行WEB应用防护：owasp、继续执行AI引擎防护：ai、继续执行信息防泄漏防护：antileakage。如果多个勾选那么以,串接。默认是"geoip,cc,owasp,ai,antileakage"
      */
     public String getBypass() {
         return this.Bypass;
     }
 
     /**
-     * Set 放行的详情
-     * @param Bypass 放行的详情
+     * Set 放行时是否继续执行其它检查逻辑，继续执行地域封禁防护：geoip、继续执行CC策略防护：cc、继续执行WEB应用防护：owasp、继续执行AI引擎防护：ai、继续执行信息防泄漏防护：antileakage。如果多个勾选那么以,串接。默认是"geoip,cc,owasp,ai,antileakage"
+     * @param Bypass 放行时是否继续执行其它检查逻辑，继续执行地域封禁防护：geoip、继续执行CC策略防护：cc、继续执行WEB应用防护：owasp、继续执行AI引擎防护：ai、继续执行信息防泄漏防护：antileakage。如果多个勾选那么以,串接。默认是"geoip,cc,owasp,ai,antileakage"
      */
     public void setBypass(String Bypass) {
         this.Bypass = Bypass;

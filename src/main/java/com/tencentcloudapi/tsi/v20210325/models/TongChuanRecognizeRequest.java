@@ -97,6 +97,13 @@ yue：粤语
     private String Data;
 
     /**
+    * TTS播报控制参数	
+    */
+    @SerializedName("TTS")
+    @Expose
+    private TTS TTS;
+
+    /**
      * Get 一段完整的语音对应一个SessionUuid 
      * @return SessionUuid 一段完整的语音对应一个SessionUuid
      */
@@ -280,6 +287,22 @@ yue：粤语
         this.Data = Data;
     }
 
+    /**
+     * Get TTS播报控制参数	 
+     * @return TTS TTS播报控制参数	
+     */
+    public TTS getTTS() {
+        return this.TTS;
+    }
+
+    /**
+     * Set TTS播报控制参数	
+     * @param TTS TTS播报控制参数	
+     */
+    public void setTTS(TTS TTS) {
+        this.TTS = TTS;
+    }
+
     public TongChuanRecognizeRequest() {
     }
 
@@ -315,6 +338,9 @@ yue：粤语
         if (source.Data != null) {
             this.Data = new String(source.Data);
         }
+        if (source.TTS != null) {
+            this.TTS = new TTS(source.TTS);
+        }
     }
 
 
@@ -331,6 +357,7 @@ yue：粤语
         this.setParamSimple(map, prefix + "IsEnd", this.IsEnd);
         this.setParamSimple(map, prefix + "TranslateTime", this.TranslateTime);
         this.setParamSimple(map, prefix + "Data", this.Data);
+        this.setParamObj(map, prefix + "TTS.", this.TTS);
 
     }
 }

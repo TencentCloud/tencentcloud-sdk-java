@@ -23,6 +23,44 @@ import java.util.HashMap;
 
 public class DescribeBackUpSchedulesRequest extends AbstractModel {
 
+    /**
+    * 任务类型
+0-不限制，或使用TypeFilters过滤；
+1-备份恢复（包括周期备份和一次性备份）；
+2-数据迁移（包括跨集群迁移和cos迁移）
+    */
+    @SerializedName("ApplicationType")
+    @Expose
+    private Long ApplicationType;
+
+    /**
+     * Get 任务类型
+0-不限制，或使用TypeFilters过滤；
+1-备份恢复（包括周期备份和一次性备份）；
+2-数据迁移（包括跨集群迁移和cos迁移） 
+     * @return ApplicationType 任务类型
+0-不限制，或使用TypeFilters过滤；
+1-备份恢复（包括周期备份和一次性备份）；
+2-数据迁移（包括跨集群迁移和cos迁移）
+     */
+    public Long getApplicationType() {
+        return this.ApplicationType;
+    }
+
+    /**
+     * Set 任务类型
+0-不限制，或使用TypeFilters过滤；
+1-备份恢复（包括周期备份和一次性备份）；
+2-数据迁移（包括跨集群迁移和cos迁移）
+     * @param ApplicationType 任务类型
+0-不限制，或使用TypeFilters过滤；
+1-备份恢复（包括周期备份和一次性备份）；
+2-数据迁移（包括跨集群迁移和cos迁移）
+     */
+    public void setApplicationType(Long ApplicationType) {
+        this.ApplicationType = ApplicationType;
+    }
+
     public DescribeBackUpSchedulesRequest() {
     }
 
@@ -31,6 +69,9 @@ public class DescribeBackUpSchedulesRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeBackUpSchedulesRequest(DescribeBackUpSchedulesRequest source) {
+        if (source.ApplicationType != null) {
+            this.ApplicationType = new Long(source.ApplicationType);
+        }
     }
 
 
@@ -38,6 +79,7 @@ public class DescribeBackUpSchedulesRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "ApplicationType", this.ApplicationType);
 
     }
 }

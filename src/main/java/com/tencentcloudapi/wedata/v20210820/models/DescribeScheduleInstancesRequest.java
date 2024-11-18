@@ -24,6 +24,13 @@ import java.util.HashMap;
 public class DescribeScheduleInstancesRequest extends AbstractModel {
 
     /**
+    * 请求来源，WEB 前端；CLIENT 客户端
+    */
+    @SerializedName("RequestFromSource")
+    @Expose
+    private String RequestFromSource;
+
+    /**
     * 实例列表
     */
     @SerializedName("Instances")
@@ -148,6 +155,29 @@ public class DescribeScheduleInstancesRequest extends AbstractModel {
     @SerializedName("IsCount")
     @Expose
     private Boolean IsCount;
+
+    /**
+    * 项目ID列表，用于多项目实例列表筛选，请注意，该字段传入时 ProjectId 字段也必须传，且传入的 ProjectIds 中的项目ID必须是当前用户有权限的项目ID，否则会由于权限校验失败报错
+    */
+    @SerializedName("ProjectIds")
+    @Expose
+    private String [] ProjectIds;
+
+    /**
+     * Get 请求来源，WEB 前端；CLIENT 客户端 
+     * @return RequestFromSource 请求来源，WEB 前端；CLIENT 客户端
+     */
+    public String getRequestFromSource() {
+        return this.RequestFromSource;
+    }
+
+    /**
+     * Set 请求来源，WEB 前端；CLIENT 客户端
+     * @param RequestFromSource 请求来源，WEB 前端；CLIENT 客户端
+     */
+    public void setRequestFromSource(String RequestFromSource) {
+        this.RequestFromSource = RequestFromSource;
+    }
 
     /**
      * Get 实例列表 
@@ -437,6 +467,22 @@ public class DescribeScheduleInstancesRequest extends AbstractModel {
         this.IsCount = IsCount;
     }
 
+    /**
+     * Get 项目ID列表，用于多项目实例列表筛选，请注意，该字段传入时 ProjectId 字段也必须传，且传入的 ProjectIds 中的项目ID必须是当前用户有权限的项目ID，否则会由于权限校验失败报错 
+     * @return ProjectIds 项目ID列表，用于多项目实例列表筛选，请注意，该字段传入时 ProjectId 字段也必须传，且传入的 ProjectIds 中的项目ID必须是当前用户有权限的项目ID，否则会由于权限校验失败报错
+     */
+    public String [] getProjectIds() {
+        return this.ProjectIds;
+    }
+
+    /**
+     * Set 项目ID列表，用于多项目实例列表筛选，请注意，该字段传入时 ProjectId 字段也必须传，且传入的 ProjectIds 中的项目ID必须是当前用户有权限的项目ID，否则会由于权限校验失败报错
+     * @param ProjectIds 项目ID列表，用于多项目实例列表筛选，请注意，该字段传入时 ProjectId 字段也必须传，且传入的 ProjectIds 中的项目ID必须是当前用户有权限的项目ID，否则会由于权限校验失败报错
+     */
+    public void setProjectIds(String [] ProjectIds) {
+        this.ProjectIds = ProjectIds;
+    }
+
     public DescribeScheduleInstancesRequest() {
     }
 
@@ -445,6 +491,9 @@ public class DescribeScheduleInstancesRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeScheduleInstancesRequest(DescribeScheduleInstancesRequest source) {
+        if (source.RequestFromSource != null) {
+            this.RequestFromSource = new String(source.RequestFromSource);
+        }
         if (source.Instances != null) {
             this.Instances = new InstanceOpsDto[source.Instances.length];
             for (int i = 0; i < source.Instances.length; i++) {
@@ -502,6 +551,12 @@ public class DescribeScheduleInstancesRequest extends AbstractModel {
         if (source.IsCount != null) {
             this.IsCount = new Boolean(source.IsCount);
         }
+        if (source.ProjectIds != null) {
+            this.ProjectIds = new String[source.ProjectIds.length];
+            for (int i = 0; i < source.ProjectIds.length; i++) {
+                this.ProjectIds[i] = new String(source.ProjectIds[i]);
+            }
+        }
     }
 
 
@@ -509,6 +564,7 @@ public class DescribeScheduleInstancesRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "RequestFromSource", this.RequestFromSource);
         this.setParamArrayObj(map, prefix + "Instances.", this.Instances);
         this.setParamSimple(map, prefix + "CheckFather", this.CheckFather);
         this.setParamSimple(map, prefix + "RerunType", this.RerunType);
@@ -527,6 +583,7 @@ public class DescribeScheduleInstancesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Count", this.Count);
         this.setParamObj(map, prefix + "RequestBaseInfo.", this.RequestBaseInfo);
         this.setParamSimple(map, prefix + "IsCount", this.IsCount);
+        this.setParamArraySimple(map, prefix + "ProjectIds.", this.ProjectIds);
 
     }
 }

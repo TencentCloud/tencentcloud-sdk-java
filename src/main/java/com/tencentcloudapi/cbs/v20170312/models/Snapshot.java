@@ -31,21 +31,37 @@ public class Snapshot extends AbstractModel {
     private Placement Placement;
 
     /**
-    * 是否为跨地域复制的快照。取值范围：<br><li>true：表示为跨地域复制的快照。<br><li>false:本地域的快照。
+    * 是否为跨地域复制的快照。取值范围：
+<ul>
+    <li>true：表示为跨地域复制的快照。</li>
+    <li>false：本地域的快照。</li>
+</ul>
     */
     @SerializedName("CopyFromRemote")
     @Expose
     private Boolean CopyFromRemote;
 
     /**
-    * 快照的状态。取值范围：<br><li>NORMAL：正常<br><li>CREATING：创建中<br><li>ROLLBACKING：回滚中<br><li>COPYING_FROM_REMOTE：跨地域复制中<br><li>CHECKING_COPIED：复制校验中<br><li>TORECYCLE：待回收。
+    * 快照的状态。取值范围：
+<ul>
+    <li>NORMAL：正常</li>
+    <li>CREATING：创建中</li>
+    <li>ROLLBACKING：回滚中</li>
+    <li>COPYING_FROM_REMOTE：跨地域复制中</li>
+    <li>CHECKING_COPIED：复制校验中</li>
+    <li>TORECYCLE：待回收</li>
+</ul>
     */
     @SerializedName("SnapshotState")
     @Expose
     private String SnapshotState;
 
     /**
-    * 是否为永久快照。取值范围：<br><li>true：永久快照<br><li>false：非永久快照。
+    * 是否为永久快照。取值范围：
+<ul>
+    <li>true：永久快照</li>
+    <li>false：非永久快照</li>
+</ul>
     */
     @SerializedName("IsPermanent")
     @Expose
@@ -115,7 +131,11 @@ public class Snapshot extends AbstractModel {
     private String [] CopyingToRegions;
 
     /**
-    * 是否为加密盘创建的快照。取值范围：<br><li>true：该快照为加密盘创建的<br><li>false:非加密盘创建的快照。
+    * 是否为加密盘创建的快照。取值范围：
+<ul>
+    <li>true：该快照为加密盘创建的</li>
+    <li>false：非加密盘创建的快照</li>
+</ul>
     */
     @SerializedName("Encrypt")
     @Expose
@@ -136,7 +156,12 @@ public class Snapshot extends AbstractModel {
     private Long ImageCount;
 
     /**
-    * 创建此快照的云硬盘类型。取值范围：<br><li>SYSTEM_DISK：系统盘<br><li>DATA_DISK：数据盘。
+    * 创建此快照的云硬盘类型。取值范围：
+<ul>
+    <li>SYSTEM_DISK：系统盘</li>
+    <li>DATA_DISK：数据盘</li>
+</ul>
+
     */
     @SerializedName("DiskUsage")
     @Expose
@@ -180,48 +205,112 @@ public class Snapshot extends AbstractModel {
     }
 
     /**
-     * Get 是否为跨地域复制的快照。取值范围：<br><li>true：表示为跨地域复制的快照。<br><li>false:本地域的快照。 
-     * @return CopyFromRemote 是否为跨地域复制的快照。取值范围：<br><li>true：表示为跨地域复制的快照。<br><li>false:本地域的快照。
+     * Get 是否为跨地域复制的快照。取值范围：
+<ul>
+    <li>true：表示为跨地域复制的快照。</li>
+    <li>false：本地域的快照。</li>
+</ul> 
+     * @return CopyFromRemote 是否为跨地域复制的快照。取值范围：
+<ul>
+    <li>true：表示为跨地域复制的快照。</li>
+    <li>false：本地域的快照。</li>
+</ul>
      */
     public Boolean getCopyFromRemote() {
         return this.CopyFromRemote;
     }
 
     /**
-     * Set 是否为跨地域复制的快照。取值范围：<br><li>true：表示为跨地域复制的快照。<br><li>false:本地域的快照。
-     * @param CopyFromRemote 是否为跨地域复制的快照。取值范围：<br><li>true：表示为跨地域复制的快照。<br><li>false:本地域的快照。
+     * Set 是否为跨地域复制的快照。取值范围：
+<ul>
+    <li>true：表示为跨地域复制的快照。</li>
+    <li>false：本地域的快照。</li>
+</ul>
+     * @param CopyFromRemote 是否为跨地域复制的快照。取值范围：
+<ul>
+    <li>true：表示为跨地域复制的快照。</li>
+    <li>false：本地域的快照。</li>
+</ul>
      */
     public void setCopyFromRemote(Boolean CopyFromRemote) {
         this.CopyFromRemote = CopyFromRemote;
     }
 
     /**
-     * Get 快照的状态。取值范围：<br><li>NORMAL：正常<br><li>CREATING：创建中<br><li>ROLLBACKING：回滚中<br><li>COPYING_FROM_REMOTE：跨地域复制中<br><li>CHECKING_COPIED：复制校验中<br><li>TORECYCLE：待回收。 
-     * @return SnapshotState 快照的状态。取值范围：<br><li>NORMAL：正常<br><li>CREATING：创建中<br><li>ROLLBACKING：回滚中<br><li>COPYING_FROM_REMOTE：跨地域复制中<br><li>CHECKING_COPIED：复制校验中<br><li>TORECYCLE：待回收。
+     * Get 快照的状态。取值范围：
+<ul>
+    <li>NORMAL：正常</li>
+    <li>CREATING：创建中</li>
+    <li>ROLLBACKING：回滚中</li>
+    <li>COPYING_FROM_REMOTE：跨地域复制中</li>
+    <li>CHECKING_COPIED：复制校验中</li>
+    <li>TORECYCLE：待回收</li>
+</ul> 
+     * @return SnapshotState 快照的状态。取值范围：
+<ul>
+    <li>NORMAL：正常</li>
+    <li>CREATING：创建中</li>
+    <li>ROLLBACKING：回滚中</li>
+    <li>COPYING_FROM_REMOTE：跨地域复制中</li>
+    <li>CHECKING_COPIED：复制校验中</li>
+    <li>TORECYCLE：待回收</li>
+</ul>
      */
     public String getSnapshotState() {
         return this.SnapshotState;
     }
 
     /**
-     * Set 快照的状态。取值范围：<br><li>NORMAL：正常<br><li>CREATING：创建中<br><li>ROLLBACKING：回滚中<br><li>COPYING_FROM_REMOTE：跨地域复制中<br><li>CHECKING_COPIED：复制校验中<br><li>TORECYCLE：待回收。
-     * @param SnapshotState 快照的状态。取值范围：<br><li>NORMAL：正常<br><li>CREATING：创建中<br><li>ROLLBACKING：回滚中<br><li>COPYING_FROM_REMOTE：跨地域复制中<br><li>CHECKING_COPIED：复制校验中<br><li>TORECYCLE：待回收。
+     * Set 快照的状态。取值范围：
+<ul>
+    <li>NORMAL：正常</li>
+    <li>CREATING：创建中</li>
+    <li>ROLLBACKING：回滚中</li>
+    <li>COPYING_FROM_REMOTE：跨地域复制中</li>
+    <li>CHECKING_COPIED：复制校验中</li>
+    <li>TORECYCLE：待回收</li>
+</ul>
+     * @param SnapshotState 快照的状态。取值范围：
+<ul>
+    <li>NORMAL：正常</li>
+    <li>CREATING：创建中</li>
+    <li>ROLLBACKING：回滚中</li>
+    <li>COPYING_FROM_REMOTE：跨地域复制中</li>
+    <li>CHECKING_COPIED：复制校验中</li>
+    <li>TORECYCLE：待回收</li>
+</ul>
      */
     public void setSnapshotState(String SnapshotState) {
         this.SnapshotState = SnapshotState;
     }
 
     /**
-     * Get 是否为永久快照。取值范围：<br><li>true：永久快照<br><li>false：非永久快照。 
-     * @return IsPermanent 是否为永久快照。取值范围：<br><li>true：永久快照<br><li>false：非永久快照。
+     * Get 是否为永久快照。取值范围：
+<ul>
+    <li>true：永久快照</li>
+    <li>false：非永久快照</li>
+</ul> 
+     * @return IsPermanent 是否为永久快照。取值范围：
+<ul>
+    <li>true：永久快照</li>
+    <li>false：非永久快照</li>
+</ul>
      */
     public Boolean getIsPermanent() {
         return this.IsPermanent;
     }
 
     /**
-     * Set 是否为永久快照。取值范围：<br><li>true：永久快照<br><li>false：非永久快照。
-     * @param IsPermanent 是否为永久快照。取值范围：<br><li>true：永久快照<br><li>false：非永久快照。
+     * Set 是否为永久快照。取值范围：
+<ul>
+    <li>true：永久快照</li>
+    <li>false：非永久快照</li>
+</ul>
+     * @param IsPermanent 是否为永久快照。取值范围：
+<ul>
+    <li>true：永久快照</li>
+    <li>false：非永久快照</li>
+</ul>
      */
     public void setIsPermanent(Boolean IsPermanent) {
         this.IsPermanent = IsPermanent;
@@ -372,16 +461,32 @@ public class Snapshot extends AbstractModel {
     }
 
     /**
-     * Get 是否为加密盘创建的快照。取值范围：<br><li>true：该快照为加密盘创建的<br><li>false:非加密盘创建的快照。 
-     * @return Encrypt 是否为加密盘创建的快照。取值范围：<br><li>true：该快照为加密盘创建的<br><li>false:非加密盘创建的快照。
+     * Get 是否为加密盘创建的快照。取值范围：
+<ul>
+    <li>true：该快照为加密盘创建的</li>
+    <li>false：非加密盘创建的快照</li>
+</ul> 
+     * @return Encrypt 是否为加密盘创建的快照。取值范围：
+<ul>
+    <li>true：该快照为加密盘创建的</li>
+    <li>false：非加密盘创建的快照</li>
+</ul>
      */
     public Boolean getEncrypt() {
         return this.Encrypt;
     }
 
     /**
-     * Set 是否为加密盘创建的快照。取值范围：<br><li>true：该快照为加密盘创建的<br><li>false:非加密盘创建的快照。
-     * @param Encrypt 是否为加密盘创建的快照。取值范围：<br><li>true：该快照为加密盘创建的<br><li>false:非加密盘创建的快照。
+     * Set 是否为加密盘创建的快照。取值范围：
+<ul>
+    <li>true：该快照为加密盘创建的</li>
+    <li>false：非加密盘创建的快照</li>
+</ul>
+     * @param Encrypt 是否为加密盘创建的快照。取值范围：
+<ul>
+    <li>true：该快照为加密盘创建的</li>
+    <li>false：非加密盘创建的快照</li>
+</ul>
      */
     public void setEncrypt(Boolean Encrypt) {
         this.Encrypt = Encrypt;
@@ -420,16 +525,36 @@ public class Snapshot extends AbstractModel {
     }
 
     /**
-     * Get 创建此快照的云硬盘类型。取值范围：<br><li>SYSTEM_DISK：系统盘<br><li>DATA_DISK：数据盘。 
-     * @return DiskUsage 创建此快照的云硬盘类型。取值范围：<br><li>SYSTEM_DISK：系统盘<br><li>DATA_DISK：数据盘。
+     * Get 创建此快照的云硬盘类型。取值范围：
+<ul>
+    <li>SYSTEM_DISK：系统盘</li>
+    <li>DATA_DISK：数据盘</li>
+</ul>
+ 
+     * @return DiskUsage 创建此快照的云硬盘类型。取值范围：
+<ul>
+    <li>SYSTEM_DISK：系统盘</li>
+    <li>DATA_DISK：数据盘</li>
+</ul>
+
      */
     public String getDiskUsage() {
         return this.DiskUsage;
     }
 
     /**
-     * Set 创建此快照的云硬盘类型。取值范围：<br><li>SYSTEM_DISK：系统盘<br><li>DATA_DISK：数据盘。
-     * @param DiskUsage 创建此快照的云硬盘类型。取值范围：<br><li>SYSTEM_DISK：系统盘<br><li>DATA_DISK：数据盘。
+     * Set 创建此快照的云硬盘类型。取值范围：
+<ul>
+    <li>SYSTEM_DISK：系统盘</li>
+    <li>DATA_DISK：数据盘</li>
+</ul>
+
+     * @param DiskUsage 创建此快照的云硬盘类型。取值范围：
+<ul>
+    <li>SYSTEM_DISK：系统盘</li>
+    <li>DATA_DISK：数据盘</li>
+</ul>
+
      */
     public void setDiskUsage(String DiskUsage) {
         this.DiskUsage = DiskUsage;

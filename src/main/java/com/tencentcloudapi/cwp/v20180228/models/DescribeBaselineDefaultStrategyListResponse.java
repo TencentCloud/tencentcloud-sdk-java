@@ -25,7 +25,6 @@ public class DescribeBaselineDefaultStrategyListResponse extends AbstractModel {
 
     /**
     * 默认策略基础信息列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StrategyList")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeBaselineDefaultStrategyListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 默认策略基础信息列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 默认策略基础信息列表 
      * @return StrategyList 默认策略基础信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DefaultStrategyInfo [] getStrategyList() {
         return this.StrategyList;
@@ -50,9 +47,7 @@ public class DescribeBaselineDefaultStrategyListResponse extends AbstractModel {
 
     /**
      * Set 默认策略基础信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StrategyList 默认策略基础信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStrategyList(DefaultStrategyInfo [] StrategyList) {
         this.StrategyList = StrategyList;

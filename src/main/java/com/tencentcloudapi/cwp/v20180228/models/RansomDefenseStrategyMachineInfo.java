@@ -32,7 +32,6 @@ public class RansomDefenseStrategyMachineInfo extends AbstractModel {
 
     /**
     * 指定硬盘列表，为空时表示所有硬盘：disk_id1|disk_name1;disk_id2|disk_name2
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiskInfo")
     @Expose
@@ -55,10 +54,8 @@ public class RansomDefenseStrategyMachineInfo extends AbstractModel {
     }
 
     /**
-     * Get 指定硬盘列表，为空时表示所有硬盘：disk_id1|disk_name1;disk_id2|disk_name2
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 指定硬盘列表，为空时表示所有硬盘：disk_id1|disk_name1;disk_id2|disk_name2 
      * @return DiskInfo 指定硬盘列表，为空时表示所有硬盘：disk_id1|disk_name1;disk_id2|disk_name2
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDiskInfo() {
         return this.DiskInfo;
@@ -66,9 +63,7 @@ public class RansomDefenseStrategyMachineInfo extends AbstractModel {
 
     /**
      * Set 指定硬盘列表，为空时表示所有硬盘：disk_id1|disk_name1;disk_id2|disk_name2
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DiskInfo 指定硬盘列表，为空时表示所有硬盘：disk_id1|disk_name1;disk_id2|disk_name2
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiskInfo(String DiskInfo) {
         this.DiskInfo = DiskInfo;

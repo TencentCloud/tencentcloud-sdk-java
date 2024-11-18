@@ -67,14 +67,13 @@ public class AssetWebServiceBaseInfo extends AbstractModel {
 
     /**
     * 主机标签
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tag")
     @Expose
     private MachineTag [] Tag;
 
     /**
-    * 数据库名
+    * 服务名
     */
     @SerializedName("Name")
     @Expose
@@ -145,7 +144,6 @@ public class AssetWebServiceBaseInfo extends AbstractModel {
 
     /**
     * 数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -167,7 +165,6 @@ public class AssetWebServiceBaseInfo extends AbstractModel {
 
     /**
     *  附加信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MachineExtraInfo")
     @Expose
@@ -270,10 +267,8 @@ public class AssetWebServiceBaseInfo extends AbstractModel {
     }
 
     /**
-     * Get 主机标签
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主机标签 
      * @return Tag 主机标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public MachineTag [] getTag() {
         return this.Tag;
@@ -281,25 +276,23 @@ public class AssetWebServiceBaseInfo extends AbstractModel {
 
     /**
      * Set 主机标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tag 主机标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTag(MachineTag [] Tag) {
         this.Tag = Tag;
     }
 
     /**
-     * Get 数据库名 
-     * @return Name 数据库名
+     * Get 服务名 
+     * @return Name 服务名
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 数据库名
-     * @param Name 数据库名
+     * Set 服务名
+     * @param Name 服务名
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -450,10 +443,8 @@ public class AssetWebServiceBaseInfo extends AbstractModel {
     }
 
     /**
-     * Get 数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据更新时间 
      * @return UpdateTime 数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdateTime() {
         return this.UpdateTime;
@@ -461,9 +452,7 @@ public class AssetWebServiceBaseInfo extends AbstractModel {
 
     /**
      * Set 数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdateTime 数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
@@ -502,10 +491,8 @@ public class AssetWebServiceBaseInfo extends AbstractModel {
     }
 
     /**
-     * Get  附加信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get  附加信息 
      * @return MachineExtraInfo  附加信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public MachineExtraInfo getMachineExtraInfo() {
         return this.MachineExtraInfo;
@@ -513,9 +500,7 @@ public class AssetWebServiceBaseInfo extends AbstractModel {
 
     /**
      * Set  附加信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MachineExtraInfo  附加信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMachineExtraInfo(MachineExtraInfo MachineExtraInfo) {
         this.MachineExtraInfo = MachineExtraInfo;

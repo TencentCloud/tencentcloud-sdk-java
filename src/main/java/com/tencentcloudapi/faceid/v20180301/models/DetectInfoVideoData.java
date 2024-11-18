@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DetectInfoVideoData extends AbstractModel {
 
     /**
-    * 活体视频的base64编码
+    * 活体视频的base64编码。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LivenessVideo")
@@ -32,9 +32,9 @@ public class DetectInfoVideoData extends AbstractModel {
     private String LivenessVideo;
 
     /**
-     * Get 活体视频的base64编码
+     * Get 活体视频的base64编码。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LivenessVideo 活体视频的base64编码
+     * @return LivenessVideo 活体视频的base64编码。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLivenessVideo() {
@@ -42,9 +42,9 @@ public class DetectInfoVideoData extends AbstractModel {
     }
 
     /**
-     * Set 活体视频的base64编码
+     * Set 活体视频的base64编码。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LivenessVideo 活体视频的base64编码
+     * @param LivenessVideo 活体视频的base64编码。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLivenessVideo(String LivenessVideo) {

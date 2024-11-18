@@ -25,7 +25,6 @@ public class DescribeVulDefencePluginExceptionCountResponse extends AbstractMode
 
     /**
     * 当前异常插件数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Count")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeVulDefencePluginExceptionCountResponse extends AbstractMode
     private String RequestId;
 
     /**
-     * Get 当前异常插件数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当前异常插件数 
      * @return Count 当前异常插件数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCount() {
         return this.Count;
@@ -50,9 +47,7 @@ public class DescribeVulDefencePluginExceptionCountResponse extends AbstractMode
 
     /**
      * Set 当前异常插件数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Count 当前异常插件数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCount(Long Count) {
         this.Count = Count;

@@ -80,6 +80,14 @@ public class NodeInfo extends AbstractModel {
     private String Zone;
 
     /**
+    * Id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Id")
+    @Expose
+    private String Id;
+
+    /**
      * Get 用户IP
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Ip 用户IP
@@ -219,6 +227,26 @@ public class NodeInfo extends AbstractModel {
         this.Zone = Zone;
     }
 
+    /**
+     * Get Id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Id Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getId() {
+        return this.Id;
+    }
+
+    /**
+     * Set Id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Id Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setId(String Id) {
+        this.Id = Id;
+    }
+
     public NodeInfo() {
     }
 
@@ -248,6 +276,9 @@ public class NodeInfo extends AbstractModel {
         if (source.Zone != null) {
             this.Zone = new String(source.Zone);
         }
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
     }
 
 
@@ -262,6 +293,7 @@ public class NodeInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "NodeRole", this.NodeRole);
         this.setParamSimple(map, prefix + "LastRestartTime", this.LastRestartTime);
         this.setParamSimple(map, prefix + "Zone", this.Zone);
+        this.setParamSimple(map, prefix + "Id", this.Id);
 
     }
 }

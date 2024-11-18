@@ -85,7 +85,7 @@ public class ChatCompletionsResponse extends SSEResponseModel {
     /**
     * 多媒体信息。
 说明：
-1. 可以用多媒体信息替换回复内容里的占位符，得到完整的图文信息。
+1. 可以用多媒体信息替换回复内容里的占位符，得到完整的消息。
 2. 可能会出现回复内容里存在占位符，但是因为审核等原因没有返回多媒体信息。
     */
     @SerializedName("Replaces")
@@ -242,11 +242,11 @@ public class ChatCompletionsResponse extends SSEResponseModel {
     /**
      * Get 多媒体信息。
 说明：
-1. 可以用多媒体信息替换回复内容里的占位符，得到完整的图文信息。
+1. 可以用多媒体信息替换回复内容里的占位符，得到完整的消息。
 2. 可能会出现回复内容里存在占位符，但是因为审核等原因没有返回多媒体信息。 
      * @return Replaces 多媒体信息。
 说明：
-1. 可以用多媒体信息替换回复内容里的占位符，得到完整的图文信息。
+1. 可以用多媒体信息替换回复内容里的占位符，得到完整的消息。
 2. 可能会出现回复内容里存在占位符，但是因为审核等原因没有返回多媒体信息。
      */
     public Replace [] getReplaces() {
@@ -256,11 +256,11 @@ public class ChatCompletionsResponse extends SSEResponseModel {
     /**
      * Set 多媒体信息。
 说明：
-1. 可以用多媒体信息替换回复内容里的占位符，得到完整的图文信息。
+1. 可以用多媒体信息替换回复内容里的占位符，得到完整的消息。
 2. 可能会出现回复内容里存在占位符，但是因为审核等原因没有返回多媒体信息。
      * @param Replaces 多媒体信息。
 说明：
-1. 可以用多媒体信息替换回复内容里的占位符，得到完整的图文信息。
+1. 可以用多媒体信息替换回复内容里的占位符，得到完整的消息。
 2. 可能会出现回复内容里存在占位符，但是因为审核等原因没有返回多媒体信息。
      */
     public void setReplaces(Replace [] Replaces) {

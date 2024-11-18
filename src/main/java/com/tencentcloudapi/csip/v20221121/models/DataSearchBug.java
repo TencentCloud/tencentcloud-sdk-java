@@ -31,16 +31,14 @@ public class DataSearchBug extends AbstractModel {
     private String StateCode;
 
     /**
-    * 无
-注意：此字段可能返回 null，表示取不到有效值。
+    * 漏洞详情
     */
     @SerializedName("DataBug")
     @Expose
     private BugInfoDetail [] DataBug;
 
     /**
-    * 无
-注意：此字段可能返回 null，表示取不到有效值。
+    * 漏洞影响资产详情
     */
     @SerializedName("DataAsset")
     @Expose
@@ -48,7 +46,6 @@ public class DataSearchBug extends AbstractModel {
 
     /**
     * true支持扫描。false不支持扫描
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VSSScan")
     @Expose
@@ -56,7 +53,6 @@ public class DataSearchBug extends AbstractModel {
 
     /**
     * 0不支持，1支持
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CWPScan")
     @Expose
@@ -64,7 +60,6 @@ public class DataSearchBug extends AbstractModel {
 
     /**
     * 1支持虚拟补丁，0或空不支持
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CFWPatch")
     @Expose
@@ -72,7 +67,6 @@ public class DataSearchBug extends AbstractModel {
 
     /**
     * 0不支持，1支持
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WafPatch")
     @Expose
@@ -80,11 +74,24 @@ public class DataSearchBug extends AbstractModel {
 
     /**
     * 0不支持，1支持
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CWPFix")
     @Expose
     private Long CWPFix;
+
+    /**
+    * 产品支持状态
+    */
+    @SerializedName("DataSupport")
+    @Expose
+    private ProductSupport [] DataSupport;
+
+    /**
+    * cveId
+    */
+    @SerializedName("CveId")
+    @Expose
+    private String CveId;
 
     /**
      * Get 返回查询状态 
@@ -103,50 +110,40 @@ public class DataSearchBug extends AbstractModel {
     }
 
     /**
-     * Get 无
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DataBug 无
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 漏洞详情 
+     * @return DataBug 漏洞详情
      */
     public BugInfoDetail [] getDataBug() {
         return this.DataBug;
     }
 
     /**
-     * Set 无
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param DataBug 无
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 漏洞详情
+     * @param DataBug 漏洞详情
      */
     public void setDataBug(BugInfoDetail [] DataBug) {
         this.DataBug = DataBug;
     }
 
     /**
-     * Get 无
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DataAsset 无
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 漏洞影响资产详情 
+     * @return DataAsset 漏洞影响资产详情
      */
     public AssetInfoDetail [] getDataAsset() {
         return this.DataAsset;
     }
 
     /**
-     * Set 无
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param DataAsset 无
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 漏洞影响资产详情
+     * @param DataAsset 漏洞影响资产详情
      */
     public void setDataAsset(AssetInfoDetail [] DataAsset) {
         this.DataAsset = DataAsset;
     }
 
     /**
-     * Get true支持扫描。false不支持扫描
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get true支持扫描。false不支持扫描 
      * @return VSSScan true支持扫描。false不支持扫描
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getVSSScan() {
         return this.VSSScan;
@@ -154,19 +151,15 @@ public class DataSearchBug extends AbstractModel {
 
     /**
      * Set true支持扫描。false不支持扫描
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VSSScan true支持扫描。false不支持扫描
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVSSScan(Boolean VSSScan) {
         this.VSSScan = VSSScan;
     }
 
     /**
-     * Get 0不支持，1支持
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 0不支持，1支持 
      * @return CWPScan 0不支持，1支持
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCWPScan() {
         return this.CWPScan;
@@ -174,19 +167,15 @@ public class DataSearchBug extends AbstractModel {
 
     /**
      * Set 0不支持，1支持
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CWPScan 0不支持，1支持
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCWPScan(String CWPScan) {
         this.CWPScan = CWPScan;
     }
 
     /**
-     * Get 1支持虚拟补丁，0或空不支持
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 1支持虚拟补丁，0或空不支持 
      * @return CFWPatch 1支持虚拟补丁，0或空不支持
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCFWPatch() {
         return this.CFWPatch;
@@ -194,19 +183,15 @@ public class DataSearchBug extends AbstractModel {
 
     /**
      * Set 1支持虚拟补丁，0或空不支持
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CFWPatch 1支持虚拟补丁，0或空不支持
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCFWPatch(String CFWPatch) {
         this.CFWPatch = CFWPatch;
     }
 
     /**
-     * Get 0不支持，1支持
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 0不支持，1支持 
      * @return WafPatch 0不支持，1支持
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getWafPatch() {
         return this.WafPatch;
@@ -214,19 +199,15 @@ public class DataSearchBug extends AbstractModel {
 
     /**
      * Set 0不支持，1支持
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WafPatch 0不支持，1支持
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWafPatch(Long WafPatch) {
         this.WafPatch = WafPatch;
     }
 
     /**
-     * Get 0不支持，1支持
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 0不支持，1支持 
      * @return CWPFix 0不支持，1支持
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCWPFix() {
         return this.CWPFix;
@@ -234,12 +215,42 @@ public class DataSearchBug extends AbstractModel {
 
     /**
      * Set 0不支持，1支持
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CWPFix 0不支持，1支持
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCWPFix(Long CWPFix) {
         this.CWPFix = CWPFix;
+    }
+
+    /**
+     * Get 产品支持状态 
+     * @return DataSupport 产品支持状态
+     */
+    public ProductSupport [] getDataSupport() {
+        return this.DataSupport;
+    }
+
+    /**
+     * Set 产品支持状态
+     * @param DataSupport 产品支持状态
+     */
+    public void setDataSupport(ProductSupport [] DataSupport) {
+        this.DataSupport = DataSupport;
+    }
+
+    /**
+     * Get cveId 
+     * @return CveId cveId
+     */
+    public String getCveId() {
+        return this.CveId;
+    }
+
+    /**
+     * Set cveId
+     * @param CveId cveId
+     */
+    public void setCveId(String CveId) {
+        this.CveId = CveId;
     }
 
     public DataSearchBug() {
@@ -280,6 +291,15 @@ public class DataSearchBug extends AbstractModel {
         if (source.CWPFix != null) {
             this.CWPFix = new Long(source.CWPFix);
         }
+        if (source.DataSupport != null) {
+            this.DataSupport = new ProductSupport[source.DataSupport.length];
+            for (int i = 0; i < source.DataSupport.length; i++) {
+                this.DataSupport[i] = new ProductSupport(source.DataSupport[i]);
+            }
+        }
+        if (source.CveId != null) {
+            this.CveId = new String(source.CveId);
+        }
     }
 
 
@@ -295,6 +315,8 @@ public class DataSearchBug extends AbstractModel {
         this.setParamSimple(map, prefix + "CFWPatch", this.CFWPatch);
         this.setParamSimple(map, prefix + "WafPatch", this.WafPatch);
         this.setParamSimple(map, prefix + "CWPFix", this.CWPFix);
+        this.setParamArrayObj(map, prefix + "DataSupport.", this.DataSupport);
+        this.setParamSimple(map, prefix + "CveId", this.CveId);
 
     }
 }

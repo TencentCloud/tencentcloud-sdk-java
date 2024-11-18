@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class Filter extends AbstractModel {
 
     /**
-    * 过滤键的名称。
+    * 过滤键的名称
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 一个或者多个过滤值。
+    * 一个或者多个过滤值
     */
     @SerializedName("Values")
     @Expose
     private String [] Values;
 
     /**
-     * Get 过滤键的名称。 
-     * @return Name 过滤键的名称。
+     * Get 过滤键的名称 
+     * @return Name 过滤键的名称
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 过滤键的名称。
-     * @param Name 过滤键的名称。
+     * Set 过滤键的名称
+     * @param Name 过滤键的名称
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 一个或者多个过滤值。 
-     * @return Values 一个或者多个过滤值。
+     * Get 一个或者多个过滤值 
+     * @return Values 一个或者多个过滤值
      */
     public String [] getValues() {
         return this.Values;
     }
 
     /**
-     * Set 一个或者多个过滤值。
-     * @param Values 一个或者多个过滤值。
+     * Set 一个或者多个过滤值
+     * @param Values 一个或者多个过滤值
      */
     public void setValues(String [] Values) {
         this.Values = Values;

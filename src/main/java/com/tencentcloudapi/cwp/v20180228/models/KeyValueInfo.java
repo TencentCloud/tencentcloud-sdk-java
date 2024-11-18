@@ -32,7 +32,6 @@ public class KeyValueInfo extends AbstractModel {
 
     /**
     * 需要建立索引的键值对信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KeyValues")
     @Expose
@@ -55,10 +54,8 @@ public class KeyValueInfo extends AbstractModel {
     }
 
     /**
-     * Get 需要建立索引的键值对信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 需要建立索引的键值对信息 
      * @return KeyValues 需要建立索引的键值对信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public KeyValueArrayInfo [] getKeyValues() {
         return this.KeyValues;
@@ -66,9 +63,7 @@ public class KeyValueInfo extends AbstractModel {
 
     /**
      * Set 需要建立索引的键值对信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param KeyValues 需要建立索引的键值对信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKeyValues(KeyValueArrayInfo [] KeyValues) {
         this.KeyValues = KeyValues;

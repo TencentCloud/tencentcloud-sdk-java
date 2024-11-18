@@ -32,7 +32,6 @@ public class DescribeWhiteBoxKeyDetailsResponse extends AbstractModel {
 
     /**
     * 白盒密钥总数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -62,10 +61,8 @@ public class DescribeWhiteBoxKeyDetailsResponse extends AbstractModel {
     }
 
     /**
-     * Get 白盒密钥总数。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 白盒密钥总数。 
      * @return TotalCount 白盒密钥总数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -73,9 +70,7 @@ public class DescribeWhiteBoxKeyDetailsResponse extends AbstractModel {
 
     /**
      * Set 白盒密钥总数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 白盒密钥总数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

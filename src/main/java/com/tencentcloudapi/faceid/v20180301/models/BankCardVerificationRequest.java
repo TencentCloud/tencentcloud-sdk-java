@@ -24,120 +24,135 @@ import java.util.HashMap;
 public class BankCardVerificationRequest extends AbstractModel {
 
     /**
-    * 开户证件号，与CertType参数的证件类型一致，如：身份证，则传入身份证号。
+    * 开户证件号。
+- 与CertType参数的证件类型一致，如：身份证，则传入身份证号。
     */
     @SerializedName("IdCard")
     @Expose
     private String IdCard;
 
     /**
-    * 姓名
+    * 姓名。
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 银行卡
+    * 银行卡。
     */
     @SerializedName("BankCard")
     @Expose
     private String BankCard;
 
     /**
-    * 证件类型，请确认该证件为开户时使用的证件类型，未用于开户的证件信息不支持验证。
-目前默认：0 身份证，其他证件类型暂不支持。
+    * 证件类型。
+- 请确认该证件为开户时使用的证件类型，未用于开户的证件信息不支持验证。
+- 目前默认：0 身份证，其他证件类型暂不支持。
     */
     @SerializedName("CertType")
     @Expose
     private Long CertType;
 
     /**
-    * 敏感数据加密信息。对传入信息（姓名、身份证号、银行卡号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+    * 敏感数据加密信息。
+- 对传入信息（姓名、身份证号、银行卡号）有加密需求的用户可使用此参数，详情请点击左侧链接。
     */
     @SerializedName("Encryption")
     @Expose
     private Encryption Encryption;
 
     /**
-     * Get 开户证件号，与CertType参数的证件类型一致，如：身份证，则传入身份证号。 
-     * @return IdCard 开户证件号，与CertType参数的证件类型一致，如：身份证，则传入身份证号。
+     * Get 开户证件号。
+- 与CertType参数的证件类型一致，如：身份证，则传入身份证号。 
+     * @return IdCard 开户证件号。
+- 与CertType参数的证件类型一致，如：身份证，则传入身份证号。
      */
     public String getIdCard() {
         return this.IdCard;
     }
 
     /**
-     * Set 开户证件号，与CertType参数的证件类型一致，如：身份证，则传入身份证号。
-     * @param IdCard 开户证件号，与CertType参数的证件类型一致，如：身份证，则传入身份证号。
+     * Set 开户证件号。
+- 与CertType参数的证件类型一致，如：身份证，则传入身份证号。
+     * @param IdCard 开户证件号。
+- 与CertType参数的证件类型一致，如：身份证，则传入身份证号。
      */
     public void setIdCard(String IdCard) {
         this.IdCard = IdCard;
     }
 
     /**
-     * Get 姓名 
-     * @return Name 姓名
+     * Get 姓名。 
+     * @return Name 姓名。
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 姓名
-     * @param Name 姓名
+     * Set 姓名。
+     * @param Name 姓名。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 银行卡 
-     * @return BankCard 银行卡
+     * Get 银行卡。 
+     * @return BankCard 银行卡。
      */
     public String getBankCard() {
         return this.BankCard;
     }
 
     /**
-     * Set 银行卡
-     * @param BankCard 银行卡
+     * Set 银行卡。
+     * @param BankCard 银行卡。
      */
     public void setBankCard(String BankCard) {
         this.BankCard = BankCard;
     }
 
     /**
-     * Get 证件类型，请确认该证件为开户时使用的证件类型，未用于开户的证件信息不支持验证。
-目前默认：0 身份证，其他证件类型暂不支持。 
-     * @return CertType 证件类型，请确认该证件为开户时使用的证件类型，未用于开户的证件信息不支持验证。
-目前默认：0 身份证，其他证件类型暂不支持。
+     * Get 证件类型。
+- 请确认该证件为开户时使用的证件类型，未用于开户的证件信息不支持验证。
+- 目前默认：0 身份证，其他证件类型暂不支持。 
+     * @return CertType 证件类型。
+- 请确认该证件为开户时使用的证件类型，未用于开户的证件信息不支持验证。
+- 目前默认：0 身份证，其他证件类型暂不支持。
      */
     public Long getCertType() {
         return this.CertType;
     }
 
     /**
-     * Set 证件类型，请确认该证件为开户时使用的证件类型，未用于开户的证件信息不支持验证。
-目前默认：0 身份证，其他证件类型暂不支持。
-     * @param CertType 证件类型，请确认该证件为开户时使用的证件类型，未用于开户的证件信息不支持验证。
-目前默认：0 身份证，其他证件类型暂不支持。
+     * Set 证件类型。
+- 请确认该证件为开户时使用的证件类型，未用于开户的证件信息不支持验证。
+- 目前默认：0 身份证，其他证件类型暂不支持。
+     * @param CertType 证件类型。
+- 请确认该证件为开户时使用的证件类型，未用于开户的证件信息不支持验证。
+- 目前默认：0 身份证，其他证件类型暂不支持。
      */
     public void setCertType(Long CertType) {
         this.CertType = CertType;
     }
 
     /**
-     * Get 敏感数据加密信息。对传入信息（姓名、身份证号、银行卡号）有加密需求的用户可使用此参数，详情请点击左侧链接。 
-     * @return Encryption 敏感数据加密信息。对传入信息（姓名、身份证号、银行卡号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+     * Get 敏感数据加密信息。
+- 对传入信息（姓名、身份证号、银行卡号）有加密需求的用户可使用此参数，详情请点击左侧链接。 
+     * @return Encryption 敏感数据加密信息。
+- 对传入信息（姓名、身份证号、银行卡号）有加密需求的用户可使用此参数，详情请点击左侧链接。
      */
     public Encryption getEncryption() {
         return this.Encryption;
     }
 
     /**
-     * Set 敏感数据加密信息。对传入信息（姓名、身份证号、银行卡号）有加密需求的用户可使用此参数，详情请点击左侧链接。
-     * @param Encryption 敏感数据加密信息。对传入信息（姓名、身份证号、银行卡号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+     * Set 敏感数据加密信息。
+- 对传入信息（姓名、身份证号、银行卡号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+     * @param Encryption 敏感数据加密信息。
+- 对传入信息（姓名、身份证号、银行卡号）有加密需求的用户可使用此参数，详情请点击左侧链接。
      */
     public void setEncryption(Encryption Encryption) {
         this.Encryption = Encryption;

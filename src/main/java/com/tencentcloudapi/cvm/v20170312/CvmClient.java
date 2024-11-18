@@ -354,6 +354,17 @@ public class CvmClient extends AbstractClient{
     }
 
     /**
+     *本接口(DescribeImageFromFamily) 用于查看镜像族内可用镜像信息。
+     * @param req DescribeImageFromFamilyRequest
+     * @return DescribeImageFromFamilyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeImageFromFamilyResponse DescribeImageFromFamily(DescribeImageFromFamilyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeImageFromFamily", DescribeImageFromFamilyResponse.class);
+    }
+
+    /**
      *本接口(DescribeImageQuota)用于查询用户账号的镜像配额。
      * @param req DescribeImageQuotaRequest
      * @return DescribeImageQuotaResponse
@@ -717,7 +728,7 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
     }
 
     /**
-     *本接口(ImportImage)用于导入镜像，导入后的镜像可用于创建实例。目前支持 RAW、VHD、QCOW2、VMDK 镜像格式。
+     *本接口(ImportImage)用于导入镜像，导入后的镜像可用于创建实例。目前支持RAW、VHD、QCOW2、VMDK镜像格式。
      * @param req ImportImageRequest
      * @return ImportImageResponse
      * @throws TencentCloudSDKException

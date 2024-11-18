@@ -46,7 +46,6 @@ public class VulDefenceOverview extends AbstractModel {
 
     /**
     * 每日攻击趋势
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AttackCounts")
     @Expose
@@ -54,7 +53,6 @@ public class VulDefenceOverview extends AbstractModel {
 
     /**
     * 每日防御趋势
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DefendCounts")
     @Expose
@@ -62,7 +60,6 @@ public class VulDefenceOverview extends AbstractModel {
 
     /**
     * 日期
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Date")
     @Expose
@@ -117,10 +114,8 @@ public class VulDefenceOverview extends AbstractModel {
     }
 
     /**
-     * Get 每日攻击趋势
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 每日攻击趋势 
      * @return AttackCounts 每日攻击趋势
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long [] getAttackCounts() {
         return this.AttackCounts;
@@ -128,19 +123,15 @@ public class VulDefenceOverview extends AbstractModel {
 
     /**
      * Set 每日攻击趋势
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AttackCounts 每日攻击趋势
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAttackCounts(Long [] AttackCounts) {
         this.AttackCounts = AttackCounts;
     }
 
     /**
-     * Get 每日防御趋势
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 每日防御趋势 
      * @return DefendCounts 每日防御趋势
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long [] getDefendCounts() {
         return this.DefendCounts;
@@ -148,19 +139,15 @@ public class VulDefenceOverview extends AbstractModel {
 
     /**
      * Set 每日防御趋势
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DefendCounts 每日防御趋势
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDefendCounts(Long [] DefendCounts) {
         this.DefendCounts = DefendCounts;
     }
 
     /**
-     * Get 日期
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 日期 
      * @return Date 日期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getDate() {
         return this.Date;
@@ -168,9 +155,7 @@ public class VulDefenceOverview extends AbstractModel {
 
     /**
      * Set 日期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Date 日期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDate(String [] Date) {
         this.Date = Date;

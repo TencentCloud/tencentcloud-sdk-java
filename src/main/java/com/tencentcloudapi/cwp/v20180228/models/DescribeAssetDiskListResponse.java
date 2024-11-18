@@ -25,7 +25,6 @@ public class DescribeAssetDiskListResponse extends AbstractModel {
 
     /**
     * 磁盘分区列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Disks")
     @Expose
@@ -46,10 +45,8 @@ public class DescribeAssetDiskListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 磁盘分区列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 磁盘分区列表 
      * @return Disks 磁盘分区列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AssetDiskPartitionInfo [] getDisks() {
         return this.Disks;
@@ -57,9 +54,7 @@ public class DescribeAssetDiskListResponse extends AbstractModel {
 
     /**
      * Set 磁盘分区列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Disks 磁盘分区列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDisks(AssetDiskPartitionInfo [] Disks) {
         this.Disks = Disks;

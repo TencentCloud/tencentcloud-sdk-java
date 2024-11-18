@@ -31,7 +31,7 @@ public class ModifyProxyGroupAttributeRequest extends AbstractModel {
     private String GroupId;
 
     /**
-    * 修改后的通道组名称：不超过30个字符，超过部分会被截断。
+    * 修改后的通道组名称：不超过30个字符，否则修改失败。
     */
     @SerializedName("GroupName")
     @Expose
@@ -61,16 +61,16 @@ public class ModifyProxyGroupAttributeRequest extends AbstractModel {
     }
 
     /**
-     * Get 修改后的通道组名称：不超过30个字符，超过部分会被截断。 
-     * @return GroupName 修改后的通道组名称：不超过30个字符，超过部分会被截断。
+     * Get 修改后的通道组名称：不超过30个字符，否则修改失败。 
+     * @return GroupName 修改后的通道组名称：不超过30个字符，否则修改失败。
      */
     public String getGroupName() {
         return this.GroupName;
     }
 
     /**
-     * Set 修改后的通道组名称：不超过30个字符，超过部分会被截断。
-     * @param GroupName 修改后的通道组名称：不超过30个字符，超过部分会被截断。
+     * Set 修改后的通道组名称：不超过30个字符，否则修改失败。
+     * @param GroupName 修改后的通道组名称：不超过30个字符，否则修改失败。
      */
     public void setGroupName(String GroupName) {
         this.GroupName = GroupName;

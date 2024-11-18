@@ -32,7 +32,6 @@ public class VulFixStatusSnapshotInfo extends AbstractModel {
 
     /**
     * 主机名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HostName")
     @Expose
@@ -40,7 +39,6 @@ public class VulFixStatusSnapshotInfo extends AbstractModel {
 
     /**
     * 主机ip
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HostIp")
     @Expose
@@ -48,7 +46,6 @@ public class VulFixStatusSnapshotInfo extends AbstractModel {
 
     /**
     * 快照名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SnapshotName")
     @Expose
@@ -56,7 +53,6 @@ public class VulFixStatusSnapshotInfo extends AbstractModel {
 
     /**
     * 快照创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ModifyTime")
     @Expose
@@ -64,7 +60,6 @@ public class VulFixStatusSnapshotInfo extends AbstractModel {
 
     /**
     * 快照id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SnapshotId")
     @Expose
@@ -86,7 +81,6 @@ public class VulFixStatusSnapshotInfo extends AbstractModel {
 
     /**
     * 快照创建失败原因
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FailReason")
     @Expose
@@ -109,10 +103,8 @@ public class VulFixStatusSnapshotInfo extends AbstractModel {
     }
 
     /**
-     * Get 主机名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主机名称 
      * @return HostName 主机名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHostName() {
         return this.HostName;
@@ -120,19 +112,15 @@ public class VulFixStatusSnapshotInfo extends AbstractModel {
 
     /**
      * Set 主机名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HostName 主机名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHostName(String HostName) {
         this.HostName = HostName;
     }
 
     /**
-     * Get 主机ip
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主机ip 
      * @return HostIp 主机ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHostIp() {
         return this.HostIp;
@@ -140,19 +128,15 @@ public class VulFixStatusSnapshotInfo extends AbstractModel {
 
     /**
      * Set 主机ip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HostIp 主机ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHostIp(String HostIp) {
         this.HostIp = HostIp;
     }
 
     /**
-     * Get 快照名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 快照名称 
      * @return SnapshotName 快照名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSnapshotName() {
         return this.SnapshotName;
@@ -160,19 +144,15 @@ public class VulFixStatusSnapshotInfo extends AbstractModel {
 
     /**
      * Set 快照名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SnapshotName 快照名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSnapshotName(String SnapshotName) {
         this.SnapshotName = SnapshotName;
     }
 
     /**
-     * Get 快照创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 快照创建时间 
      * @return ModifyTime 快照创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getModifyTime() {
         return this.ModifyTime;
@@ -180,19 +160,15 @@ public class VulFixStatusSnapshotInfo extends AbstractModel {
 
     /**
      * Set 快照创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ModifyTime 快照创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModifyTime(String ModifyTime) {
         this.ModifyTime = ModifyTime;
     }
 
     /**
-     * Get 快照id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 快照id 
      * @return SnapshotId 快照id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSnapshotId() {
         return this.SnapshotId;
@@ -200,9 +176,7 @@ public class VulFixStatusSnapshotInfo extends AbstractModel {
 
     /**
      * Set 快照id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SnapshotId 快照id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSnapshotId(String SnapshotId) {
         this.SnapshotId = SnapshotId;
@@ -241,10 +215,8 @@ public class VulFixStatusSnapshotInfo extends AbstractModel {
     }
 
     /**
-     * Get 快照创建失败原因
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 快照创建失败原因 
      * @return FailReason 快照创建失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFailReason() {
         return this.FailReason;
@@ -252,9 +224,7 @@ public class VulFixStatusSnapshotInfo extends AbstractModel {
 
     /**
      * Set 快照创建失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FailReason 快照创建失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFailReason(String FailReason) {
         this.FailReason = FailReason;

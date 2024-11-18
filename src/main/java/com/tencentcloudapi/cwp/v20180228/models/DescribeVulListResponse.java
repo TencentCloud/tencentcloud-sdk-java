@@ -25,7 +25,6 @@ public class DescribeVulListResponse extends AbstractModel {
 
     /**
     * 漏洞列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VulInfoList")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeVulListResponse extends AbstractModel {
 
     /**
     * 漏洞总条数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -41,7 +39,6 @@ public class DescribeVulListResponse extends AbstractModel {
 
     /**
     * 重点关注漏洞总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FollowVulCount")
     @Expose
@@ -55,10 +52,8 @@ public class DescribeVulListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 漏洞列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 漏洞列表 
      * @return VulInfoList 漏洞列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public VulInfoList [] getVulInfoList() {
         return this.VulInfoList;
@@ -66,19 +61,15 @@ public class DescribeVulListResponse extends AbstractModel {
 
     /**
      * Set 漏洞列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VulInfoList 漏洞列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVulInfoList(VulInfoList [] VulInfoList) {
         this.VulInfoList = VulInfoList;
     }
 
     /**
-     * Get 漏洞总条数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 漏洞总条数 
      * @return TotalCount 漏洞总条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -86,19 +77,15 @@ public class DescribeVulListResponse extends AbstractModel {
 
     /**
      * Set 漏洞总条数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 漏洞总条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 重点关注漏洞总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 重点关注漏洞总数 
      * @return FollowVulCount 重点关注漏洞总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFollowVulCount() {
         return this.FollowVulCount;
@@ -106,9 +93,7 @@ public class DescribeVulListResponse extends AbstractModel {
 
     /**
      * Set 重点关注漏洞总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FollowVulCount 重点关注漏洞总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFollowVulCount(Long FollowVulCount) {
         this.FollowVulCount = FollowVulCount;

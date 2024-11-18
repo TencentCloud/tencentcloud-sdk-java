@@ -427,6 +427,22 @@ Modify 集群变更中；
     private InstanceDetail Details;
 
     /**
+    * 安全组白名单
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsWhiteSGs")
+    @Expose
+    private Boolean IsWhiteSGs;
+
+    /**
+    * 绑定的安全组
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BindSGs")
+    @Expose
+    private String [] BindSGs;
+
+    /**
      * Get 集群实例ID, "cdw-xxxx" 字符串类型
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return InstanceId 集群实例ID, "cdw-xxxx" 字符串类型
@@ -1438,6 +1454,46 @@ Modify 集群变更中；
         this.Details = Details;
     }
 
+    /**
+     * Get 安全组白名单
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsWhiteSGs 安全组白名单
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getIsWhiteSGs() {
+        return this.IsWhiteSGs;
+    }
+
+    /**
+     * Set 安全组白名单
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsWhiteSGs 安全组白名单
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsWhiteSGs(Boolean IsWhiteSGs) {
+        this.IsWhiteSGs = IsWhiteSGs;
+    }
+
+    /**
+     * Get 绑定的安全组
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BindSGs 绑定的安全组
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getBindSGs() {
+        return this.BindSGs;
+    }
+
+    /**
+     * Set 绑定的安全组
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BindSGs 绑定的安全组
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBindSGs(String [] BindSGs) {
+        this.BindSGs = BindSGs;
+    }
+
     public InstanceInfo() {
     }
 
@@ -1602,6 +1658,15 @@ Modify 集群变更中；
         if (source.Details != null) {
             this.Details = new InstanceDetail(source.Details);
         }
+        if (source.IsWhiteSGs != null) {
+            this.IsWhiteSGs = new Boolean(source.IsWhiteSGs);
+        }
+        if (source.BindSGs != null) {
+            this.BindSGs = new String[source.BindSGs.length];
+            for (int i = 0; i < source.BindSGs.length; i++) {
+                this.BindSGs[i] = new String(source.BindSGs[i]);
+            }
+        }
     }
 
 
@@ -1659,6 +1724,8 @@ Modify 集群变更中；
         this.setParamSimple(map, prefix + "SecondaryZoneInfo", this.SecondaryZoneInfo);
         this.setParamSimple(map, prefix + "ClickHouseKeeper", this.ClickHouseKeeper);
         this.setParamObj(map, prefix + "Details.", this.Details);
+        this.setParamSimple(map, prefix + "IsWhiteSGs", this.IsWhiteSGs);
+        this.setParamArraySimple(map, prefix + "BindSGs.", this.BindSGs);
 
     }
 }

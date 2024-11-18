@@ -221,7 +221,6 @@ public class Resource extends AbstractModel {
 
     /**
     * 日志投递规格信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LogDeliveryArgs")
     @Expose
@@ -229,7 +228,6 @@ public class Resource extends AbstractModel {
 
     /**
     * 堡垒机资源LB
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClbSet")
     @Expose
@@ -237,7 +235,6 @@ public class Resource extends AbstractModel {
 
     /**
     * 网络域个数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DomainCount")
     @Expose
@@ -245,7 +242,6 @@ public class Resource extends AbstractModel {
 
     /**
     * 已使用网络域个数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UsedDomainCount")
     @Expose
@@ -253,11 +249,59 @@ public class Resource extends AbstractModel {
 
     /**
     * 0 非试用版，1 试用版
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Trial")
     @Expose
     private Long Trial;
+
+    /**
+    * cdc集群id
+    */
+    @SerializedName("CdcClusterId")
+    @Expose
+    private String CdcClusterId;
+
+    /**
+    * 日志投递规格信息
+    */
+    @SerializedName("LogDelivery")
+    @Expose
+    private String LogDelivery;
+
+    /**
+    * 部署模式
+    */
+    @SerializedName("DeployModel")
+    @Expose
+    private Long DeployModel;
+
+    /**
+    * 0 默认值，非内网访问，1 内网访问
+    */
+    @SerializedName("IntranetAccess")
+    @Expose
+    private Long IntranetAccess;
+
+    /**
+    * 内网访问的ip
+    */
+    @SerializedName("IntranetPrivateIpSet")
+    @Expose
+    private String [] IntranetPrivateIpSet;
+
+    /**
+    * 开通内网访问的vpc
+    */
+    @SerializedName("IntranetVpcId")
+    @Expose
+    private String IntranetVpcId;
+
+    /**
+    * 开通内网访问vpc的网段
+    */
+    @SerializedName("IntranetVpcCidr")
+    @Expose
+    private String IntranetVpcCidr;
 
     /**
      * Get 服务实例ID，如bh-saas-s3ed4r5e 
@@ -708,10 +752,8 @@ public class Resource extends AbstractModel {
     }
 
     /**
-     * Get 日志投递规格信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 日志投递规格信息 
      * @return LogDeliveryArgs 日志投递规格信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLogDeliveryArgs() {
         return this.LogDeliveryArgs;
@@ -719,19 +761,15 @@ public class Resource extends AbstractModel {
 
     /**
      * Set 日志投递规格信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LogDeliveryArgs 日志投递规格信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLogDeliveryArgs(String LogDeliveryArgs) {
         this.LogDeliveryArgs = LogDeliveryArgs;
     }
 
     /**
-     * Get 堡垒机资源LB
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 堡垒机资源LB 
      * @return ClbSet 堡垒机资源LB
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Clb [] getClbSet() {
         return this.ClbSet;
@@ -739,19 +777,15 @@ public class Resource extends AbstractModel {
 
     /**
      * Set 堡垒机资源LB
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClbSet 堡垒机资源LB
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClbSet(Clb [] ClbSet) {
         this.ClbSet = ClbSet;
     }
 
     /**
-     * Get 网络域个数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网络域个数 
      * @return DomainCount 网络域个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDomainCount() {
         return this.DomainCount;
@@ -759,19 +793,15 @@ public class Resource extends AbstractModel {
 
     /**
      * Set 网络域个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DomainCount 网络域个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDomainCount(Long DomainCount) {
         this.DomainCount = DomainCount;
     }
 
     /**
-     * Get 已使用网络域个数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 已使用网络域个数 
      * @return UsedDomainCount 已使用网络域个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getUsedDomainCount() {
         return this.UsedDomainCount;
@@ -779,19 +809,15 @@ public class Resource extends AbstractModel {
 
     /**
      * Set 已使用网络域个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UsedDomainCount 已使用网络域个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUsedDomainCount(Long UsedDomainCount) {
         this.UsedDomainCount = UsedDomainCount;
     }
 
     /**
-     * Get 0 非试用版，1 试用版
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 0 非试用版，1 试用版 
      * @return Trial 0 非试用版，1 试用版
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTrial() {
         return this.Trial;
@@ -799,12 +825,122 @@ public class Resource extends AbstractModel {
 
     /**
      * Set 0 非试用版，1 试用版
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Trial 0 非试用版，1 试用版
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTrial(Long Trial) {
         this.Trial = Trial;
+    }
+
+    /**
+     * Get cdc集群id 
+     * @return CdcClusterId cdc集群id
+     */
+    public String getCdcClusterId() {
+        return this.CdcClusterId;
+    }
+
+    /**
+     * Set cdc集群id
+     * @param CdcClusterId cdc集群id
+     */
+    public void setCdcClusterId(String CdcClusterId) {
+        this.CdcClusterId = CdcClusterId;
+    }
+
+    /**
+     * Get 日志投递规格信息 
+     * @return LogDelivery 日志投递规格信息
+     */
+    public String getLogDelivery() {
+        return this.LogDelivery;
+    }
+
+    /**
+     * Set 日志投递规格信息
+     * @param LogDelivery 日志投递规格信息
+     */
+    public void setLogDelivery(String LogDelivery) {
+        this.LogDelivery = LogDelivery;
+    }
+
+    /**
+     * Get 部署模式 
+     * @return DeployModel 部署模式
+     */
+    public Long getDeployModel() {
+        return this.DeployModel;
+    }
+
+    /**
+     * Set 部署模式
+     * @param DeployModel 部署模式
+     */
+    public void setDeployModel(Long DeployModel) {
+        this.DeployModel = DeployModel;
+    }
+
+    /**
+     * Get 0 默认值，非内网访问，1 内网访问 
+     * @return IntranetAccess 0 默认值，非内网访问，1 内网访问
+     */
+    public Long getIntranetAccess() {
+        return this.IntranetAccess;
+    }
+
+    /**
+     * Set 0 默认值，非内网访问，1 内网访问
+     * @param IntranetAccess 0 默认值，非内网访问，1 内网访问
+     */
+    public void setIntranetAccess(Long IntranetAccess) {
+        this.IntranetAccess = IntranetAccess;
+    }
+
+    /**
+     * Get 内网访问的ip 
+     * @return IntranetPrivateIpSet 内网访问的ip
+     */
+    public String [] getIntranetPrivateIpSet() {
+        return this.IntranetPrivateIpSet;
+    }
+
+    /**
+     * Set 内网访问的ip
+     * @param IntranetPrivateIpSet 内网访问的ip
+     */
+    public void setIntranetPrivateIpSet(String [] IntranetPrivateIpSet) {
+        this.IntranetPrivateIpSet = IntranetPrivateIpSet;
+    }
+
+    /**
+     * Get 开通内网访问的vpc 
+     * @return IntranetVpcId 开通内网访问的vpc
+     */
+    public String getIntranetVpcId() {
+        return this.IntranetVpcId;
+    }
+
+    /**
+     * Set 开通内网访问的vpc
+     * @param IntranetVpcId 开通内网访问的vpc
+     */
+    public void setIntranetVpcId(String IntranetVpcId) {
+        this.IntranetVpcId = IntranetVpcId;
+    }
+
+    /**
+     * Get 开通内网访问vpc的网段 
+     * @return IntranetVpcCidr 开通内网访问vpc的网段
+     */
+    public String getIntranetVpcCidr() {
+        return this.IntranetVpcCidr;
+    }
+
+    /**
+     * Set 开通内网访问vpc的网段
+     * @param IntranetVpcCidr 开通内网访问vpc的网段
+     */
+    public void setIntranetVpcCidr(String IntranetVpcCidr) {
+        this.IntranetVpcCidr = IntranetVpcCidr;
     }
 
     public Resource() {
@@ -926,6 +1062,30 @@ public class Resource extends AbstractModel {
         if (source.Trial != null) {
             this.Trial = new Long(source.Trial);
         }
+        if (source.CdcClusterId != null) {
+            this.CdcClusterId = new String(source.CdcClusterId);
+        }
+        if (source.LogDelivery != null) {
+            this.LogDelivery = new String(source.LogDelivery);
+        }
+        if (source.DeployModel != null) {
+            this.DeployModel = new Long(source.DeployModel);
+        }
+        if (source.IntranetAccess != null) {
+            this.IntranetAccess = new Long(source.IntranetAccess);
+        }
+        if (source.IntranetPrivateIpSet != null) {
+            this.IntranetPrivateIpSet = new String[source.IntranetPrivateIpSet.length];
+            for (int i = 0; i < source.IntranetPrivateIpSet.length; i++) {
+                this.IntranetPrivateIpSet[i] = new String(source.IntranetPrivateIpSet[i]);
+            }
+        }
+        if (source.IntranetVpcId != null) {
+            this.IntranetVpcId = new String(source.IntranetVpcId);
+        }
+        if (source.IntranetVpcCidr != null) {
+            this.IntranetVpcCidr = new String(source.IntranetVpcCidr);
+        }
     }
 
 
@@ -966,6 +1126,13 @@ public class Resource extends AbstractModel {
         this.setParamSimple(map, prefix + "DomainCount", this.DomainCount);
         this.setParamSimple(map, prefix + "UsedDomainCount", this.UsedDomainCount);
         this.setParamSimple(map, prefix + "Trial", this.Trial);
+        this.setParamSimple(map, prefix + "CdcClusterId", this.CdcClusterId);
+        this.setParamSimple(map, prefix + "LogDelivery", this.LogDelivery);
+        this.setParamSimple(map, prefix + "DeployModel", this.DeployModel);
+        this.setParamSimple(map, prefix + "IntranetAccess", this.IntranetAccess);
+        this.setParamArraySimple(map, prefix + "IntranetPrivateIpSet.", this.IntranetPrivateIpSet);
+        this.setParamSimple(map, prefix + "IntranetVpcId", this.IntranetVpcId);
+        this.setParamSimple(map, prefix + "IntranetVpcCidr", this.IntranetVpcCidr);
 
     }
 }

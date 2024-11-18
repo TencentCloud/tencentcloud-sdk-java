@@ -25,7 +25,6 @@ public class StaffInfo extends AbstractModel {
 
     /**
     * 座席名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -40,7 +39,6 @@ public class StaffInfo extends AbstractModel {
 
     /**
     * 座席电话号码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Phone")
     @Expose
@@ -48,7 +46,6 @@ public class StaffInfo extends AbstractModel {
 
     /**
     * 座席昵称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Nick")
     @Expose
@@ -56,7 +53,6 @@ public class StaffInfo extends AbstractModel {
 
     /**
     * 座席工号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StaffNumber")
     @Expose
@@ -71,7 +67,6 @@ public class StaffInfo extends AbstractModel {
 
     /**
     * 所属技能组列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SkillGroupList")
     @Expose
@@ -79,17 +74,14 @@ public class StaffInfo extends AbstractModel {
 
     /**
     * 最后修改时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LastModifyTimestamp")
     @Expose
     private Long LastModifyTimestamp;
 
     /**
-     * Get 座席名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 座席名称 
      * @return Name 座席名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -97,9 +89,7 @@ public class StaffInfo extends AbstractModel {
 
     /**
      * Set 座席名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 座席名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -122,10 +112,8 @@ public class StaffInfo extends AbstractModel {
     }
 
     /**
-     * Get 座席电话号码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 座席电话号码 
      * @return Phone 座席电话号码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPhone() {
         return this.Phone;
@@ -133,19 +121,15 @@ public class StaffInfo extends AbstractModel {
 
     /**
      * Set 座席电话号码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Phone 座席电话号码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPhone(String Phone) {
         this.Phone = Phone;
     }
 
     /**
-     * Get 座席昵称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 座席昵称 
      * @return Nick 座席昵称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNick() {
         return this.Nick;
@@ -153,19 +137,15 @@ public class StaffInfo extends AbstractModel {
 
     /**
      * Set 座席昵称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Nick 座席昵称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNick(String Nick) {
         this.Nick = Nick;
     }
 
     /**
-     * Get 座席工号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 座席工号 
      * @return StaffNumber 座席工号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStaffNumber() {
         return this.StaffNumber;
@@ -173,9 +153,7 @@ public class StaffInfo extends AbstractModel {
 
     /**
      * Set 座席工号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StaffNumber 座席工号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStaffNumber(String StaffNumber) {
         this.StaffNumber = StaffNumber;
@@ -198,10 +176,8 @@ public class StaffInfo extends AbstractModel {
     }
 
     /**
-     * Get 所属技能组列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 所属技能组列表 
      * @return SkillGroupList 所属技能组列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SkillGroupItem [] getSkillGroupList() {
         return this.SkillGroupList;
@@ -209,19 +185,15 @@ public class StaffInfo extends AbstractModel {
 
     /**
      * Set 所属技能组列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SkillGroupList 所属技能组列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSkillGroupList(SkillGroupItem [] SkillGroupList) {
         this.SkillGroupList = SkillGroupList;
     }
 
     /**
-     * Get 最后修改时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最后修改时间 
      * @return LastModifyTimestamp 最后修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLastModifyTimestamp() {
         return this.LastModifyTimestamp;
@@ -229,9 +201,7 @@ public class StaffInfo extends AbstractModel {
 
     /**
      * Set 最后修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LastModifyTimestamp 最后修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLastModifyTimestamp(Long LastModifyTimestamp) {
         this.LastModifyTimestamp = LastModifyTimestamp;

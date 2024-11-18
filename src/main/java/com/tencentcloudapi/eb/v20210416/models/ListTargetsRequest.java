@@ -31,18 +31,18 @@ public class ListTargetsRequest extends AbstractModel {
     private String EventBusId;
 
     /**
-    * 根据哪个字段进行返回结果排序,支持以下字段：AddTime（创建时间）, ModTime（修改时间）
-    */
-    @SerializedName("OrderBy")
-    @Expose
-    private String OrderBy;
-
-    /**
     * 事件规则ID
     */
     @SerializedName("RuleId")
     @Expose
     private String RuleId;
+
+    /**
+    * 根据哪个字段进行返回结果排序,支持以下字段：AddTime（创建时间）, ModTime（修改时间）
+    */
+    @SerializedName("OrderBy")
+    @Expose
+    private String OrderBy;
 
     /**
     * 返回数量，默认为20，最大值为100。
@@ -82,22 +82,6 @@ public class ListTargetsRequest extends AbstractModel {
     }
 
     /**
-     * Get 根据哪个字段进行返回结果排序,支持以下字段：AddTime（创建时间）, ModTime（修改时间） 
-     * @return OrderBy 根据哪个字段进行返回结果排序,支持以下字段：AddTime（创建时间）, ModTime（修改时间）
-     */
-    public String getOrderBy() {
-        return this.OrderBy;
-    }
-
-    /**
-     * Set 根据哪个字段进行返回结果排序,支持以下字段：AddTime（创建时间）, ModTime（修改时间）
-     * @param OrderBy 根据哪个字段进行返回结果排序,支持以下字段：AddTime（创建时间）, ModTime（修改时间）
-     */
-    public void setOrderBy(String OrderBy) {
-        this.OrderBy = OrderBy;
-    }
-
-    /**
      * Get 事件规则ID 
      * @return RuleId 事件规则ID
      */
@@ -111,6 +95,22 @@ public class ListTargetsRequest extends AbstractModel {
      */
     public void setRuleId(String RuleId) {
         this.RuleId = RuleId;
+    }
+
+    /**
+     * Get 根据哪个字段进行返回结果排序,支持以下字段：AddTime（创建时间）, ModTime（修改时间） 
+     * @return OrderBy 根据哪个字段进行返回结果排序,支持以下字段：AddTime（创建时间）, ModTime（修改时间）
+     */
+    public String getOrderBy() {
+        return this.OrderBy;
+    }
+
+    /**
+     * Set 根据哪个字段进行返回结果排序,支持以下字段：AddTime（创建时间）, ModTime（修改时间）
+     * @param OrderBy 根据哪个字段进行返回结果排序,支持以下字段：AddTime（创建时间）, ModTime（修改时间）
+     */
+    public void setOrderBy(String OrderBy) {
+        this.OrderBy = OrderBy;
     }
 
     /**
@@ -172,11 +172,11 @@ public class ListTargetsRequest extends AbstractModel {
         if (source.EventBusId != null) {
             this.EventBusId = new String(source.EventBusId);
         }
-        if (source.OrderBy != null) {
-            this.OrderBy = new String(source.OrderBy);
-        }
         if (source.RuleId != null) {
             this.RuleId = new String(source.RuleId);
+        }
+        if (source.OrderBy != null) {
+            this.OrderBy = new String(source.OrderBy);
         }
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
@@ -195,8 +195,8 @@ public class ListTargetsRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EventBusId", this.EventBusId);
-        this.setParamSimple(map, prefix + "OrderBy", this.OrderBy);
         this.setParamSimple(map, prefix + "RuleId", this.RuleId);
+        this.setParamSimple(map, prefix + "OrderBy", this.OrderBy);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Order", this.Order);

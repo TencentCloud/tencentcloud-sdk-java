@@ -176,6 +176,54 @@ public class DatabaseMeta extends AbstractModel {
     private String CreateTime;
 
     /**
+    * 总表数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TableCount")
+    @Expose
+    private Long TableCount;
+
+    /**
+    * 数据源信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DatasourceList")
+    @Expose
+    private GovDatasourceInfo [] DatasourceList;
+
+    /**
+    * 采集任务id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CollectJobId")
+    @Expose
+    private String CollectJobId;
+
+    /**
+    * 采集任务名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CollectJobName")
+    @Expose
+    private String CollectJobName;
+
+    /**
+    * 引擎id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ClusterId")
+    @Expose
+    private String ClusterId;
+
+    /**
+    * 引擎名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ClusterName")
+    @Expose
+    private String ClusterName;
+
+    /**
      * Get 项目Id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ProjectId 项目Id
@@ -555,6 +603,126 @@ public class DatabaseMeta extends AbstractModel {
         this.CreateTime = CreateTime;
     }
 
+    /**
+     * Get 总表数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TableCount 总表数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getTableCount() {
+        return this.TableCount;
+    }
+
+    /**
+     * Set 总表数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TableCount 总表数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTableCount(Long TableCount) {
+        this.TableCount = TableCount;
+    }
+
+    /**
+     * Get 数据源信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DatasourceList 数据源信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public GovDatasourceInfo [] getDatasourceList() {
+        return this.DatasourceList;
+    }
+
+    /**
+     * Set 数据源信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DatasourceList 数据源信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDatasourceList(GovDatasourceInfo [] DatasourceList) {
+        this.DatasourceList = DatasourceList;
+    }
+
+    /**
+     * Get 采集任务id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CollectJobId 采集任务id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCollectJobId() {
+        return this.CollectJobId;
+    }
+
+    /**
+     * Set 采集任务id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CollectJobId 采集任务id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCollectJobId(String CollectJobId) {
+        this.CollectJobId = CollectJobId;
+    }
+
+    /**
+     * Get 采集任务名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CollectJobName 采集任务名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCollectJobName() {
+        return this.CollectJobName;
+    }
+
+    /**
+     * Set 采集任务名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CollectJobName 采集任务名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCollectJobName(String CollectJobName) {
+        this.CollectJobName = CollectJobName;
+    }
+
+    /**
+     * Get 引擎id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ClusterId 引擎id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getClusterId() {
+        return this.ClusterId;
+    }
+
+    /**
+     * Set 引擎id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ClusterId 引擎id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setClusterId(String ClusterId) {
+        this.ClusterId = ClusterId;
+    }
+
+    /**
+     * Get 引擎名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ClusterName 引擎名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getClusterName() {
+        return this.ClusterName;
+    }
+
+    /**
+     * Set 引擎名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ClusterName 引擎名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setClusterName(String ClusterName) {
+        this.ClusterName = ClusterName;
+    }
+
     public DatabaseMeta() {
     }
 
@@ -620,6 +788,27 @@ public class DatabaseMeta extends AbstractModel {
         if (source.CreateTime != null) {
             this.CreateTime = new String(source.CreateTime);
         }
+        if (source.TableCount != null) {
+            this.TableCount = new Long(source.TableCount);
+        }
+        if (source.DatasourceList != null) {
+            this.DatasourceList = new GovDatasourceInfo[source.DatasourceList.length];
+            for (int i = 0; i < source.DatasourceList.length; i++) {
+                this.DatasourceList[i] = new GovDatasourceInfo(source.DatasourceList[i]);
+            }
+        }
+        if (source.CollectJobId != null) {
+            this.CollectJobId = new String(source.CollectJobId);
+        }
+        if (source.CollectJobName != null) {
+            this.CollectJobName = new String(source.CollectJobName);
+        }
+        if (source.ClusterId != null) {
+            this.ClusterId = new String(source.ClusterId);
+        }
+        if (source.ClusterName != null) {
+            this.ClusterName = new String(source.ClusterName);
+        }
     }
 
 
@@ -646,6 +835,12 @@ public class DatabaseMeta extends AbstractModel {
         this.setParamSimple(map, prefix + "StorageSize", this.StorageSize);
         this.setParamSimple(map, prefix + "StorageSizeWithUnit", this.StorageSizeWithUnit);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "TableCount", this.TableCount);
+        this.setParamArrayObj(map, prefix + "DatasourceList.", this.DatasourceList);
+        this.setParamSimple(map, prefix + "CollectJobId", this.CollectJobId);
+        this.setParamSimple(map, prefix + "CollectJobName", this.CollectJobName);
+        this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
+        this.setParamSimple(map, prefix + "ClusterName", this.ClusterName);
 
     }
 }

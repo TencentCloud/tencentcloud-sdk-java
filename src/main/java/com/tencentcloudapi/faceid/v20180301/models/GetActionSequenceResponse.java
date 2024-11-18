@@ -24,7 +24,8 @@ import java.util.HashMap;
 public class GetActionSequenceResponse extends AbstractModel {
 
     /**
-    * 动作顺序(2,1 or 1,2) 。1代表张嘴，2代表闭眼。
+    * 动作顺序，例如：2,1 or 1,2。
+- 1代表张嘴，2代表闭眼。
     */
     @SerializedName("ActionSequence")
     @Expose
@@ -38,16 +39,20 @@ public class GetActionSequenceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 动作顺序(2,1 or 1,2) 。1代表张嘴，2代表闭眼。 
-     * @return ActionSequence 动作顺序(2,1 or 1,2) 。1代表张嘴，2代表闭眼。
+     * Get 动作顺序，例如：2,1 or 1,2。
+- 1代表张嘴，2代表闭眼。 
+     * @return ActionSequence 动作顺序，例如：2,1 or 1,2。
+- 1代表张嘴，2代表闭眼。
      */
     public String getActionSequence() {
         return this.ActionSequence;
     }
 
     /**
-     * Set 动作顺序(2,1 or 1,2) 。1代表张嘴，2代表闭眼。
-     * @param ActionSequence 动作顺序(2,1 or 1,2) 。1代表张嘴，2代表闭眼。
+     * Set 动作顺序，例如：2,1 or 1,2。
+- 1代表张嘴，2代表闭眼。
+     * @param ActionSequence 动作顺序，例如：2,1 or 1,2。
+- 1代表张嘴，2代表闭眼。
      */
     public void setActionSequence(String ActionSequence) {
         this.ActionSequence = ActionSequence;

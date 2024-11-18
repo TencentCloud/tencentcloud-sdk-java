@@ -32,7 +32,6 @@ public class DescribeLoginWhiteCombinedListResponse extends AbstractModel {
 
     /**
     * 合并后的白名单列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LoginWhiteCombinedInfos")
     @Expose
@@ -62,10 +61,8 @@ public class DescribeLoginWhiteCombinedListResponse extends AbstractModel {
     }
 
     /**
-     * Get 合并后的白名单列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 合并后的白名单列表 
      * @return LoginWhiteCombinedInfos 合并后的白名单列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public LoginWhiteCombinedInfo [] getLoginWhiteCombinedInfos() {
         return this.LoginWhiteCombinedInfos;
@@ -73,9 +70,7 @@ public class DescribeLoginWhiteCombinedListResponse extends AbstractModel {
 
     /**
      * Set 合并后的白名单列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LoginWhiteCombinedInfos 合并后的白名单列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLoginWhiteCombinedInfos(LoginWhiteCombinedInfo [] LoginWhiteCombinedInfos) {
         this.LoginWhiteCombinedInfos = LoginWhiteCombinedInfos;

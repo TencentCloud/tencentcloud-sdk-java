@@ -38,7 +38,7 @@ public class PullSmsReplyStatus extends AbstractModel {
     private String CountryCode;
 
     /**
-    * 手机号码，E.164标准，+[国家或地区码][手机号] ，示例如：+8613711112222， 其中前面有一个+号 ，86为国家码，13711112222为手机号。
+    * 手机号码，E.164标准，+[国家或地区码][手机号] ，示例如：+8618501234444， 其中前面有一个+号 ，86为国家码，18501234444为手机号。
     */
     @SerializedName("PhoneNumber")
     @Expose
@@ -66,7 +66,7 @@ public class PullSmsReplyStatus extends AbstractModel {
     private Long ReplyTime;
 
     /**
-    * 用户号码，普通格式，示例如：13711112222。
+    * 用户号码，普通格式，示例如：18501234444。
     */
     @SerializedName("SubscriberNumber")
     @Expose
@@ -105,16 +105,16 @@ public class PullSmsReplyStatus extends AbstractModel {
     }
 
     /**
-     * Get 手机号码，E.164标准，+[国家或地区码][手机号] ，示例如：+8613711112222， 其中前面有一个+号 ，86为国家码，13711112222为手机号。 
-     * @return PhoneNumber 手机号码，E.164标准，+[国家或地区码][手机号] ，示例如：+8613711112222， 其中前面有一个+号 ，86为国家码，13711112222为手机号。
+     * Get 手机号码，E.164标准，+[国家或地区码][手机号] ，示例如：+8618501234444， 其中前面有一个+号 ，86为国家码，18501234444为手机号。 
+     * @return PhoneNumber 手机号码，E.164标准，+[国家或地区码][手机号] ，示例如：+8618501234444， 其中前面有一个+号 ，86为国家码，18501234444为手机号。
      */
     public String getPhoneNumber() {
         return this.PhoneNumber;
     }
 
     /**
-     * Set 手机号码，E.164标准，+[国家或地区码][手机号] ，示例如：+8613711112222， 其中前面有一个+号 ，86为国家码，13711112222为手机号。
-     * @param PhoneNumber 手机号码，E.164标准，+[国家或地区码][手机号] ，示例如：+8613711112222， 其中前面有一个+号 ，86为国家码，13711112222为手机号。
+     * Set 手机号码，E.164标准，+[国家或地区码][手机号] ，示例如：+8618501234444， 其中前面有一个+号 ，86为国家码，18501234444为手机号。
+     * @param PhoneNumber 手机号码，E.164标准，+[国家或地区码][手机号] ，示例如：+8618501234444， 其中前面有一个+号 ，86为国家码，18501234444为手机号。
      */
     public void setPhoneNumber(String PhoneNumber) {
         this.PhoneNumber = PhoneNumber;
@@ -169,16 +169,16 @@ public class PullSmsReplyStatus extends AbstractModel {
     }
 
     /**
-     * Get 用户号码，普通格式，示例如：13711112222。 
-     * @return SubscriberNumber 用户号码，普通格式，示例如：13711112222。
+     * Get 用户号码，普通格式，示例如：18501234444。 
+     * @return SubscriberNumber 用户号码，普通格式，示例如：18501234444。
      */
     public String getSubscriberNumber() {
         return this.SubscriberNumber;
     }
 
     /**
-     * Set 用户号码，普通格式，示例如：13711112222。
-     * @param SubscriberNumber 用户号码，普通格式，示例如：13711112222。
+     * Set 用户号码，普通格式，示例如：18501234444。
+     * @param SubscriberNumber 用户号码，普通格式，示例如：18501234444。
      */
     public void setSubscriberNumber(String SubscriberNumber) {
         this.SubscriberNumber = SubscriberNumber;

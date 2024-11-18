@@ -57,7 +57,7 @@ public class SecurityGroupPolicy extends AbstractModel {
     private ServiceTemplateSpecification ServiceTemplate;
 
     /**
-    * 网段或IP(互斥)，特殊说明：0.0.0.0/n 都会映射为0.0.0.0/0。
+    * 网段或IP(互斥)，特殊说明：0.0.0.0/n 都会映射为0.0.0.0/0。作为入参时，可使用字符串`MY_PUBLIC_IP`指代发起请求的公网IP地址。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CidrBlock")
@@ -65,7 +65,7 @@ public class SecurityGroupPolicy extends AbstractModel {
     private String CidrBlock;
 
     /**
-    * 网段或IPv6(互斥)。
+    * 网段或IPv6(互斥)。作为入参时，可使用字符串`MY_PUBLIC_IP`指代发起请求的公网IPv6地址。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Ipv6CidrBlock")
@@ -97,7 +97,7 @@ public class SecurityGroupPolicy extends AbstractModel {
     private String Action;
 
     /**
-    * 安全组规则描述。
+    * 安全组规则描述。作为入参时，当未传递该参数或值为空，且参数CidrBlock或Ipv6CidrBlock值为MY_PUBLIC_IP时，该参数的值将会被自动填充为Replaced-From-MY_PUBLIC_IP。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PolicyDescription")
@@ -197,9 +197,9 @@ public class SecurityGroupPolicy extends AbstractModel {
     }
 
     /**
-     * Get 网段或IP(互斥)，特殊说明：0.0.0.0/n 都会映射为0.0.0.0/0。
+     * Get 网段或IP(互斥)，特殊说明：0.0.0.0/n 都会映射为0.0.0.0/0。作为入参时，可使用字符串`MY_PUBLIC_IP`指代发起请求的公网IP地址。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CidrBlock 网段或IP(互斥)，特殊说明：0.0.0.0/n 都会映射为0.0.0.0/0。
+     * @return CidrBlock 网段或IP(互斥)，特殊说明：0.0.0.0/n 都会映射为0.0.0.0/0。作为入参时，可使用字符串`MY_PUBLIC_IP`指代发起请求的公网IP地址。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCidrBlock() {
@@ -207,9 +207,9 @@ public class SecurityGroupPolicy extends AbstractModel {
     }
 
     /**
-     * Set 网段或IP(互斥)，特殊说明：0.0.0.0/n 都会映射为0.0.0.0/0。
+     * Set 网段或IP(互斥)，特殊说明：0.0.0.0/n 都会映射为0.0.0.0/0。作为入参时，可使用字符串`MY_PUBLIC_IP`指代发起请求的公网IP地址。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CidrBlock 网段或IP(互斥)，特殊说明：0.0.0.0/n 都会映射为0.0.0.0/0。
+     * @param CidrBlock 网段或IP(互斥)，特殊说明：0.0.0.0/n 都会映射为0.0.0.0/0。作为入参时，可使用字符串`MY_PUBLIC_IP`指代发起请求的公网IP地址。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCidrBlock(String CidrBlock) {
@@ -217,9 +217,9 @@ public class SecurityGroupPolicy extends AbstractModel {
     }
 
     /**
-     * Get 网段或IPv6(互斥)。
+     * Get 网段或IPv6(互斥)。作为入参时，可使用字符串`MY_PUBLIC_IP`指代发起请求的公网IPv6地址。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Ipv6CidrBlock 网段或IPv6(互斥)。
+     * @return Ipv6CidrBlock 网段或IPv6(互斥)。作为入参时，可使用字符串`MY_PUBLIC_IP`指代发起请求的公网IPv6地址。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIpv6CidrBlock() {
@@ -227,9 +227,9 @@ public class SecurityGroupPolicy extends AbstractModel {
     }
 
     /**
-     * Set 网段或IPv6(互斥)。
+     * Set 网段或IPv6(互斥)。作为入参时，可使用字符串`MY_PUBLIC_IP`指代发起请求的公网IPv6地址。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Ipv6CidrBlock 网段或IPv6(互斥)。
+     * @param Ipv6CidrBlock 网段或IPv6(互斥)。作为入参时，可使用字符串`MY_PUBLIC_IP`指代发起请求的公网IPv6地址。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIpv6CidrBlock(String Ipv6CidrBlock) {
@@ -297,9 +297,9 @@ public class SecurityGroupPolicy extends AbstractModel {
     }
 
     /**
-     * Get 安全组规则描述。
+     * Get 安全组规则描述。作为入参时，当未传递该参数或值为空，且参数CidrBlock或Ipv6CidrBlock值为MY_PUBLIC_IP时，该参数的值将会被自动填充为Replaced-From-MY_PUBLIC_IP。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PolicyDescription 安全组规则描述。
+     * @return PolicyDescription 安全组规则描述。作为入参时，当未传递该参数或值为空，且参数CidrBlock或Ipv6CidrBlock值为MY_PUBLIC_IP时，该参数的值将会被自动填充为Replaced-From-MY_PUBLIC_IP。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPolicyDescription() {
@@ -307,9 +307,9 @@ public class SecurityGroupPolicy extends AbstractModel {
     }
 
     /**
-     * Set 安全组规则描述。
+     * Set 安全组规则描述。作为入参时，当未传递该参数或值为空，且参数CidrBlock或Ipv6CidrBlock值为MY_PUBLIC_IP时，该参数的值将会被自动填充为Replaced-From-MY_PUBLIC_IP。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PolicyDescription 安全组规则描述。
+     * @param PolicyDescription 安全组规则描述。作为入参时，当未传递该参数或值为空，且参数CidrBlock或Ipv6CidrBlock值为MY_PUBLIC_IP时，该参数的值将会被自动填充为Replaced-From-MY_PUBLIC_IP。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPolicyDescription(String PolicyDescription) {

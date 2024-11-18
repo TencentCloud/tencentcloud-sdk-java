@@ -25,7 +25,6 @@ public class RegisterInstanceInfo extends AbstractModel {
 
     /**
     * 注册码ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RegisterCodeId")
     @Expose
@@ -33,7 +32,6 @@ public class RegisterInstanceInfo extends AbstractModel {
 
     /**
     * 实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -41,7 +39,6 @@ public class RegisterInstanceInfo extends AbstractModel {
 
     /**
     * 实例名。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceName")
     @Expose
@@ -49,7 +46,6 @@ public class RegisterInstanceInfo extends AbstractModel {
 
     /**
     * 机器ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MachineId")
     @Expose
@@ -57,7 +53,6 @@ public class RegisterInstanceInfo extends AbstractModel {
 
     /**
     * 系统名。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SystemName")
     @Expose
@@ -65,7 +60,6 @@ public class RegisterInstanceInfo extends AbstractModel {
 
     /**
     * 主机名。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HostName")
     @Expose
@@ -73,7 +67,6 @@ public class RegisterInstanceInfo extends AbstractModel {
 
     /**
     * 内网IP。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LocalIp")
     @Expose
@@ -81,7 +74,6 @@ public class RegisterInstanceInfo extends AbstractModel {
 
     /**
     * 公钥。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PublicKey")
     @Expose
@@ -97,7 +89,6 @@ public class RegisterInstanceInfo extends AbstractModel {
 
     /**
     * 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreatedTime")
     @Expose
@@ -105,17 +96,14 @@ public class RegisterInstanceInfo extends AbstractModel {
 
     /**
     * 上次更新时间。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdatedTime")
     @Expose
     private String UpdatedTime;
 
     /**
-     * Get 注册码ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 注册码ID。 
      * @return RegisterCodeId 注册码ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegisterCodeId() {
         return this.RegisterCodeId;
@@ -123,19 +111,15 @@ public class RegisterInstanceInfo extends AbstractModel {
 
     /**
      * Set 注册码ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RegisterCodeId 注册码ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegisterCodeId(String RegisterCodeId) {
         this.RegisterCodeId = RegisterCodeId;
     }
 
     /**
-     * Get 实例ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例ID。 
      * @return InstanceId 实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceId() {
         return this.InstanceId;
@@ -143,19 +127,15 @@ public class RegisterInstanceInfo extends AbstractModel {
 
     /**
      * Set 实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceId 实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 实例名。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例名。 
      * @return InstanceName 实例名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceName() {
         return this.InstanceName;
@@ -163,19 +143,15 @@ public class RegisterInstanceInfo extends AbstractModel {
 
     /**
      * Set 实例名。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceName 实例名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get 机器ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 机器ID。 
      * @return MachineId 机器ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMachineId() {
         return this.MachineId;
@@ -183,19 +159,15 @@ public class RegisterInstanceInfo extends AbstractModel {
 
     /**
      * Set 机器ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MachineId 机器ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMachineId(String MachineId) {
         this.MachineId = MachineId;
     }
 
     /**
-     * Get 系统名。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 系统名。 
      * @return SystemName 系统名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSystemName() {
         return this.SystemName;
@@ -203,19 +175,15 @@ public class RegisterInstanceInfo extends AbstractModel {
 
     /**
      * Set 系统名。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SystemName 系统名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSystemName(String SystemName) {
         this.SystemName = SystemName;
     }
 
     /**
-     * Get 主机名。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主机名。 
      * @return HostName 主机名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHostName() {
         return this.HostName;
@@ -223,19 +191,15 @@ public class RegisterInstanceInfo extends AbstractModel {
 
     /**
      * Set 主机名。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HostName 主机名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHostName(String HostName) {
         this.HostName = HostName;
     }
 
     /**
-     * Get 内网IP。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 内网IP。 
      * @return LocalIp 内网IP。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLocalIp() {
         return this.LocalIp;
@@ -243,19 +207,15 @@ public class RegisterInstanceInfo extends AbstractModel {
 
     /**
      * Set 内网IP。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LocalIp 内网IP。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLocalIp(String LocalIp) {
         this.LocalIp = LocalIp;
     }
 
     /**
-     * Get 公钥。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 公钥。 
      * @return PublicKey 公钥。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPublicKey() {
         return this.PublicKey;
@@ -263,9 +223,7 @@ public class RegisterInstanceInfo extends AbstractModel {
 
     /**
      * Set 公钥。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PublicKey 公钥。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPublicKey(String PublicKey) {
         this.PublicKey = PublicKey;
@@ -292,10 +250,8 @@ public class RegisterInstanceInfo extends AbstractModel {
     }
 
     /**
-     * Get 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间。 
      * @return CreatedTime 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreatedTime() {
         return this.CreatedTime;
@@ -303,19 +259,15 @@ public class RegisterInstanceInfo extends AbstractModel {
 
     /**
      * Set 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreatedTime 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreatedTime(String CreatedTime) {
         this.CreatedTime = CreatedTime;
     }
 
     /**
-     * Get 上次更新时间。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 上次更新时间。 
      * @return UpdatedTime 上次更新时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdatedTime() {
         return this.UpdatedTime;
@@ -323,9 +275,7 @@ public class RegisterInstanceInfo extends AbstractModel {
 
     /**
      * Set 上次更新时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdatedTime 上次更新时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdatedTime(String UpdatedTime) {
         this.UpdatedTime = UpdatedTime;

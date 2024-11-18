@@ -39,7 +39,6 @@ public class DomainURI extends AbstractModel {
 
     /**
     * 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceID")
     @Expose
@@ -78,10 +77,8 @@ public class DomainURI extends AbstractModel {
     }
 
     /**
-     * Get 实例ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例ID 
      * @return InstanceID 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceID() {
         return this.InstanceID;
@@ -89,9 +86,7 @@ public class DomainURI extends AbstractModel {
 
     /**
      * Set 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceID 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceID(String InstanceID) {
         this.InstanceID = InstanceID;

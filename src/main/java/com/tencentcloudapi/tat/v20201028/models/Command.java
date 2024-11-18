@@ -102,7 +102,6 @@ public class Command extends AbstractModel {
 
     /**
     * 自定义参数的默认取值。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DefaultParameterConfs")
     @Expose
@@ -110,7 +109,6 @@ public class Command extends AbstractModel {
 
     /**
     * 命令关联的场景
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Scenes")
     @Expose
@@ -335,10 +333,8 @@ public class Command extends AbstractModel {
     }
 
     /**
-     * Get 自定义参数的默认取值。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 自定义参数的默认取值。 
      * @return DefaultParameterConfs 自定义参数的默认取值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DefaultParameterConf [] getDefaultParameterConfs() {
         return this.DefaultParameterConfs;
@@ -346,19 +342,15 @@ public class Command extends AbstractModel {
 
     /**
      * Set 自定义参数的默认取值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DefaultParameterConfs 自定义参数的默认取值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDefaultParameterConfs(DefaultParameterConf [] DefaultParameterConfs) {
         this.DefaultParameterConfs = DefaultParameterConfs;
     }
 
     /**
-     * Get 命令关联的场景
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 命令关联的场景 
      * @return Scenes 命令关联的场景
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getScenes() {
         return this.Scenes;
@@ -366,9 +358,7 @@ public class Command extends AbstractModel {
 
     /**
      * Set 命令关联的场景
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Scenes 命令关联的场景
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScenes(String [] Scenes) {
         this.Scenes = Scenes;

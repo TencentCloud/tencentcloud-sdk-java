@@ -31,7 +31,7 @@ public class UpdateUserDeviceRequest extends AbstractModel {
     private String DeviceId;
 
     /**
-    * 设备名称（仅支持中文、英文、数字、_、-，长度不超过32个字符）
+    * 设备名称（仅支持中文、英文、数字、空格、中英文括号、_、-, 长度不超过128位）
     */
     @SerializedName("Name")
     @Expose
@@ -45,14 +45,14 @@ public class UpdateUserDeviceRequest extends AbstractModel {
     private Long TransportProtocol;
 
     /**
-    * 设备密码（仅国标，网关设备支持）
+    * 设备密码（仅国标，网关设备支持，长度不超过 64 位）
     */
     @SerializedName("Password")
     @Expose
     private String Password;
 
     /**
-    * 设备描述（仅支持中文、英文、数字、_、-，长度不超过128位）
+    * 设备描述（长度不超过128位）
     */
     @SerializedName("Description")
     @Expose
@@ -101,6 +101,13 @@ public class UpdateUserDeviceRequest extends AbstractModel {
     private Long SubscribeSwitch;
 
     /**
+    * 是否开启静音帧（0：关闭；1 开启）
+    */
+    @SerializedName("SilentFrameSwitch")
+    @Expose
+    private Long SilentFrameSwitch;
+
+    /**
      * Get 设备ID（从获取设备列表接口ListDevices中获取） 
      * @return DeviceId 设备ID（从获取设备列表接口ListDevices中获取）
      */
@@ -117,16 +124,16 @@ public class UpdateUserDeviceRequest extends AbstractModel {
     }
 
     /**
-     * Get 设备名称（仅支持中文、英文、数字、_、-，长度不超过32个字符） 
-     * @return Name 设备名称（仅支持中文、英文、数字、_、-，长度不超过32个字符）
+     * Get 设备名称（仅支持中文、英文、数字、空格、中英文括号、_、-, 长度不超过128位） 
+     * @return Name 设备名称（仅支持中文、英文、数字、空格、中英文括号、_、-, 长度不超过128位）
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 设备名称（仅支持中文、英文、数字、_、-，长度不超过32个字符）
-     * @param Name 设备名称（仅支持中文、英文、数字、_、-，长度不超过32个字符）
+     * Set 设备名称（仅支持中文、英文、数字、空格、中英文括号、_、-, 长度不超过128位）
+     * @param Name 设备名称（仅支持中文、英文、数字、空格、中英文括号、_、-, 长度不超过128位）
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -149,32 +156,32 @@ public class UpdateUserDeviceRequest extends AbstractModel {
     }
 
     /**
-     * Get 设备密码（仅国标，网关设备支持） 
-     * @return Password 设备密码（仅国标，网关设备支持）
+     * Get 设备密码（仅国标，网关设备支持，长度不超过 64 位） 
+     * @return Password 设备密码（仅国标，网关设备支持，长度不超过 64 位）
      */
     public String getPassword() {
         return this.Password;
     }
 
     /**
-     * Set 设备密码（仅国标，网关设备支持）
-     * @param Password 设备密码（仅国标，网关设备支持）
+     * Set 设备密码（仅国标，网关设备支持，长度不超过 64 位）
+     * @param Password 设备密码（仅国标，网关设备支持，长度不超过 64 位）
      */
     public void setPassword(String Password) {
         this.Password = Password;
     }
 
     /**
-     * Get 设备描述（仅支持中文、英文、数字、_、-，长度不超过128位） 
-     * @return Description 设备描述（仅支持中文、英文、数字、_、-，长度不超过128位）
+     * Get 设备描述（长度不超过128位） 
+     * @return Description 设备描述（长度不超过128位）
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 设备描述（仅支持中文、英文、数字、_、-，长度不超过128位）
-     * @param Description 设备描述（仅支持中文、英文、数字、_、-，长度不超过128位）
+     * Set 设备描述（长度不超过128位）
+     * @param Description 设备描述（长度不超过128位）
      */
     public void setDescription(String Description) {
         this.Description = Description;
@@ -276,6 +283,22 @@ public class UpdateUserDeviceRequest extends AbstractModel {
         this.SubscribeSwitch = SubscribeSwitch;
     }
 
+    /**
+     * Get 是否开启静音帧（0：关闭；1 开启） 
+     * @return SilentFrameSwitch 是否开启静音帧（0：关闭；1 开启）
+     */
+    public Long getSilentFrameSwitch() {
+        return this.SilentFrameSwitch;
+    }
+
+    /**
+     * Set 是否开启静音帧（0：关闭；1 开启）
+     * @param SilentFrameSwitch 是否开启静音帧（0：关闭；1 开启）
+     */
+    public void setSilentFrameSwitch(Long SilentFrameSwitch) {
+        this.SilentFrameSwitch = SilentFrameSwitch;
+    }
+
     public UpdateUserDeviceRequest() {
     }
 
@@ -317,6 +340,9 @@ public class UpdateUserDeviceRequest extends AbstractModel {
         if (source.SubscribeSwitch != null) {
             this.SubscribeSwitch = new Long(source.SubscribeSwitch);
         }
+        if (source.SilentFrameSwitch != null) {
+            this.SilentFrameSwitch = new Long(source.SilentFrameSwitch);
+        }
     }
 
 
@@ -335,6 +361,7 @@ public class UpdateUserDeviceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ProtocolType", this.ProtocolType);
         this.setParamSimple(map, prefix + "AudioSwitch", this.AudioSwitch);
         this.setParamSimple(map, prefix + "SubscribeSwitch", this.SubscribeSwitch);
+        this.setParamSimple(map, prefix + "SilentFrameSwitch", this.SilentFrameSwitch);
 
     }
 }

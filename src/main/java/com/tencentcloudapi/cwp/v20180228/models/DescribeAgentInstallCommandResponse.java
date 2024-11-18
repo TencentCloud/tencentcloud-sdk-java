@@ -60,7 +60,6 @@ public class DescribeAgentInstallCommandResponse extends AbstractModel {
 
     /**
     * Arm安装命令
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ARMCommand")
     @Expose
@@ -154,10 +153,8 @@ public class DescribeAgentInstallCommandResponse extends AbstractModel {
     }
 
     /**
-     * Get Arm安装命令
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Arm安装命令 
      * @return ARMCommand Arm安装命令
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getARMCommand() {
         return this.ARMCommand;
@@ -165,9 +162,7 @@ public class DescribeAgentInstallCommandResponse extends AbstractModel {
 
     /**
      * Set Arm安装命令
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ARMCommand Arm安装命令
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setARMCommand(String ARMCommand) {
         this.ARMCommand = ARMCommand;

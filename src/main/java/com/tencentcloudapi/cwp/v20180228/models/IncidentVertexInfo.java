@@ -25,7 +25,6 @@ public class IncidentVertexInfo extends AbstractModel {
 
     /**
     * 事件id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IncidentId")
     @Expose
@@ -33,7 +32,6 @@ public class IncidentVertexInfo extends AbstractModel {
 
     /**
     * 事件所在表名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TableName")
     @Expose
@@ -41,7 +39,6 @@ public class IncidentVertexInfo extends AbstractModel {
 
     /**
     * 节点信息列表，数组项中包含节点详细信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Vertex")
     @Expose
@@ -49,17 +46,14 @@ public class IncidentVertexInfo extends AbstractModel {
 
     /**
     * 节点总个数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VertexCount")
     @Expose
     private Long VertexCount;
 
     /**
-     * Get 事件id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 事件id 
      * @return IncidentId 事件id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIncidentId() {
         return this.IncidentId;
@@ -67,19 +61,15 @@ public class IncidentVertexInfo extends AbstractModel {
 
     /**
      * Set 事件id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IncidentId 事件id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIncidentId(String IncidentId) {
         this.IncidentId = IncidentId;
     }
 
     /**
-     * Get 事件所在表名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 事件所在表名 
      * @return TableName 事件所在表名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTableName() {
         return this.TableName;
@@ -87,19 +77,15 @@ public class IncidentVertexInfo extends AbstractModel {
 
     /**
      * Set 事件所在表名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TableName 事件所在表名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTableName(String TableName) {
         this.TableName = TableName;
     }
 
     /**
-     * Get 节点信息列表，数组项中包含节点详细信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 节点信息列表，数组项中包含节点详细信息 
      * @return Vertex 节点信息列表，数组项中包含节点详细信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public VertexInfo [] getVertex() {
         return this.Vertex;
@@ -107,19 +93,15 @@ public class IncidentVertexInfo extends AbstractModel {
 
     /**
      * Set 节点信息列表，数组项中包含节点详细信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Vertex 节点信息列表，数组项中包含节点详细信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVertex(VertexInfo [] Vertex) {
         this.Vertex = Vertex;
     }
 
     /**
-     * Get 节点总个数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 节点总个数 
      * @return VertexCount 节点总个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getVertexCount() {
         return this.VertexCount;
@@ -127,9 +109,7 @@ public class IncidentVertexInfo extends AbstractModel {
 
     /**
      * Set 节点总个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VertexCount 节点总个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVertexCount(Long VertexCount) {
         this.VertexCount = VertexCount;

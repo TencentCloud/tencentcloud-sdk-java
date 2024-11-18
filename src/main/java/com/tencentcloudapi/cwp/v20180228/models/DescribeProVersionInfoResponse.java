@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeProVersionInfoResponse extends AbstractModel {
 
     /**
-    * 后付费昨日扣费
+    * 昨日【专业版-按量付费】扣费明细,(实际已账单为准)
     */
     @SerializedName("PostPayCost")
     @Expose
@@ -38,7 +38,7 @@ public class DescribeProVersionInfoResponse extends AbstractModel {
     private Boolean IsAutoOpenProVersion;
 
     /**
-    * 开通专业版主机数
+    * 专业版主机数
     */
     @SerializedName("ProVersionNum")
     @Expose
@@ -52,16 +52,16 @@ public class DescribeProVersionInfoResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 后付费昨日扣费 
-     * @return PostPayCost 后付费昨日扣费
+     * Get 昨日【专业版-按量付费】扣费明细,(实际已账单为准) 
+     * @return PostPayCost 昨日【专业版-按量付费】扣费明细,(实际已账单为准)
      */
     public Long getPostPayCost() {
         return this.PostPayCost;
     }
 
     /**
-     * Set 后付费昨日扣费
-     * @param PostPayCost 后付费昨日扣费
+     * Set 昨日【专业版-按量付费】扣费明细,(实际已账单为准)
+     * @param PostPayCost 昨日【专业版-按量付费】扣费明细,(实际已账单为准)
      */
     public void setPostPayCost(Long PostPayCost) {
         this.PostPayCost = PostPayCost;
@@ -84,16 +84,16 @@ public class DescribeProVersionInfoResponse extends AbstractModel {
     }
 
     /**
-     * Get 开通专业版主机数 
-     * @return ProVersionNum 开通专业版主机数
+     * Get 专业版主机数 
+     * @return ProVersionNum 专业版主机数
      */
     public Long getProVersionNum() {
         return this.ProVersionNum;
     }
 
     /**
-     * Set 开通专业版主机数
-     * @param ProVersionNum 开通专业版主机数
+     * Set 专业版主机数
+     * @param ProVersionNum 专业版主机数
      */
     public void setProVersionNum(Long ProVersionNum) {
         this.ProVersionNum = ProVersionNum;

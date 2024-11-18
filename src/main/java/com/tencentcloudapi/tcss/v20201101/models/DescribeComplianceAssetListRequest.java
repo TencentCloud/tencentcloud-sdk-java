@@ -25,6 +25,10 @@ public class DescribeComplianceAssetListRequest extends AbstractModel {
 
     /**
     * 资产类型列表。
+ASSET_CONTAINER, 容器
+ASSET_IMAGE, 镜像
+ASSET_HOST, 主机
+ASSET_K8S, K8S资产
     */
     @SerializedName("AssetTypeSet")
     @Expose
@@ -52,8 +56,16 @@ public class DescribeComplianceAssetListRequest extends AbstractModel {
     private ComplianceFilters [] Filters;
 
     /**
-     * Get 资产类型列表。 
+     * Get 资产类型列表。
+ASSET_CONTAINER, 容器
+ASSET_IMAGE, 镜像
+ASSET_HOST, 主机
+ASSET_K8S, K8S资产 
      * @return AssetTypeSet 资产类型列表。
+ASSET_CONTAINER, 容器
+ASSET_IMAGE, 镜像
+ASSET_HOST, 主机
+ASSET_K8S, K8S资产
      */
     public String [] getAssetTypeSet() {
         return this.AssetTypeSet;
@@ -61,7 +73,15 @@ public class DescribeComplianceAssetListRequest extends AbstractModel {
 
     /**
      * Set 资产类型列表。
+ASSET_CONTAINER, 容器
+ASSET_IMAGE, 镜像
+ASSET_HOST, 主机
+ASSET_K8S, K8S资产
      * @param AssetTypeSet 资产类型列表。
+ASSET_CONTAINER, 容器
+ASSET_IMAGE, 镜像
+ASSET_HOST, 主机
+ASSET_K8S, K8S资产
      */
     public void setAssetTypeSet(String [] AssetTypeSet) {
         this.AssetTypeSet = AssetTypeSet;

@@ -25,7 +25,6 @@ public class BroadcastInfo extends AbstractModel {
 
     /**
     * 文章名字
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Title")
     @Expose
@@ -33,7 +32,6 @@ public class BroadcastInfo extends AbstractModel {
 
     /**
     * 跳转位置：0=不跳转，1=文件查杀，2=漏洞扫描，3=安全基线
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GotoType")
     @Expose
@@ -75,10 +73,8 @@ public class BroadcastInfo extends AbstractModel {
     private Long Type;
 
     /**
-     * Get 文章名字
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文章名字 
      * @return Title 文章名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTitle() {
         return this.Title;
@@ -86,19 +82,15 @@ public class BroadcastInfo extends AbstractModel {
 
     /**
      * Set 文章名字
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Title 文章名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTitle(String Title) {
         this.Title = Title;
     }
 
     /**
-     * Get 跳转位置：0=不跳转，1=文件查杀，2=漏洞扫描，3=安全基线
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 跳转位置：0=不跳转，1=文件查杀，2=漏洞扫描，3=安全基线 
      * @return GotoType 跳转位置：0=不跳转，1=文件查杀，2=漏洞扫描，3=安全基线
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getGotoType() {
         return this.GotoType;
@@ -106,9 +98,7 @@ public class BroadcastInfo extends AbstractModel {
 
     /**
      * Set 跳转位置：0=不跳转，1=文件查杀，2=漏洞扫描，3=安全基线
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GotoType 跳转位置：0=不跳转，1=文件查杀，2=漏洞扫描，3=安全基线
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGotoType(Long GotoType) {
         this.GotoType = GotoType;

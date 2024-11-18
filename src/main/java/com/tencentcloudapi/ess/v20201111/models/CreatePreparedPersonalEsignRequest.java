@@ -89,7 +89,7 @@ public class CreatePreparedPersonalEsignRequest extends AbstractModel {
     private String Mobile;
 
     /**
-    * 是否开通自动签，该功能需联系运营工作人员开通后使用
+    * 此字段已废弃，请勿继续使用。
     */
     @SerializedName("EnableAutoSign")
     @Expose
@@ -322,16 +322,16 @@ BLUE 蓝色。
     }
 
     /**
-     * Get 是否开通自动签，该功能需联系运营工作人员开通后使用 
-     * @return EnableAutoSign 是否开通自动签，该功能需联系运营工作人员开通后使用
+     * Get 此字段已废弃，请勿继续使用。 
+     * @return EnableAutoSign 此字段已废弃，请勿继续使用。
      */
     public Boolean getEnableAutoSign() {
         return this.EnableAutoSign;
     }
 
     /**
-     * Set 是否开通自动签，该功能需联系运营工作人员开通后使用
-     * @param EnableAutoSign 是否开通自动签，该功能需联系运营工作人员开通后使用
+     * Set 此字段已废弃，请勿继续使用。
+     * @param EnableAutoSign 此字段已废弃，请勿继续使用。
      */
     public void setEnableAutoSign(Boolean EnableAutoSign) {
         this.EnableAutoSign = EnableAutoSign;

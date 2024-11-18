@@ -61,6 +61,13 @@ public class AsrFullTextConfigureInfoForUpdate extends AbstractModel {
     private String SrcLanguage;
 
     /**
+    * 指定字幕名称，长度限制：64 个字符。该值将用于播放器展示。
+    */
+    @SerializedName("SubtitleName")
+    @Expose
+    private String SubtitleName;
+
+    /**
      * Get 语音全文识别任务开关，可选值：
 <li>ON：开启智能语音全文识别任务；</li>
 <li>OFF：关闭智能语音全文识别任务。</li> 
@@ -160,6 +167,22 @@ public class AsrFullTextConfigureInfoForUpdate extends AbstractModel {
         this.SrcLanguage = SrcLanguage;
     }
 
+    /**
+     * Get 指定字幕名称，长度限制：64 个字符。该值将用于播放器展示。 
+     * @return SubtitleName 指定字幕名称，长度限制：64 个字符。该值将用于播放器展示。
+     */
+    public String getSubtitleName() {
+        return this.SubtitleName;
+    }
+
+    /**
+     * Set 指定字幕名称，长度限制：64 个字符。该值将用于播放器展示。
+     * @param SubtitleName 指定字幕名称，长度限制：64 个字符。该值将用于播放器展示。
+     */
+    public void setSubtitleName(String SubtitleName) {
+        this.SubtitleName = SubtitleName;
+    }
+
     public AsrFullTextConfigureInfoForUpdate() {
     }
 
@@ -180,6 +203,9 @@ public class AsrFullTextConfigureInfoForUpdate extends AbstractModel {
         if (source.SrcLanguage != null) {
             this.SrcLanguage = new String(source.SrcLanguage);
         }
+        if (source.SubtitleName != null) {
+            this.SubtitleName = new String(source.SubtitleName);
+        }
     }
 
 
@@ -191,6 +217,7 @@ public class AsrFullTextConfigureInfoForUpdate extends AbstractModel {
         this.setParamObj(map, prefix + "SubtitleFormatsOperation.", this.SubtitleFormatsOperation);
         this.setParamSimple(map, prefix + "SubtitleFormat", this.SubtitleFormat);
         this.setParamSimple(map, prefix + "SrcLanguage", this.SrcLanguage);
+        this.setParamSimple(map, prefix + "SubtitleName", this.SubtitleName);
 
     }
 }

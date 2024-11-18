@@ -52,7 +52,7 @@ public class DescribeTraceDataListRequest extends AbstractModel {
     private Long PageNumber;
 
     /**
-    * 二维码
+    * 溯源码
     */
     @SerializedName("Code")
     @Expose
@@ -137,16 +137,16 @@ public class DescribeTraceDataListRequest extends AbstractModel {
     }
 
     /**
-     * Get 二维码 
-     * @return Code 二维码
+     * Get 溯源码 
+     * @return Code 溯源码
      */
     public String getCode() {
         return this.Code;
     }
 
     /**
-     * Set 二维码
-     * @param Code 二维码
+     * Set 溯源码
+     * @param Code 溯源码
      */
     public void setCode(String Code) {
         this.Code = Code;

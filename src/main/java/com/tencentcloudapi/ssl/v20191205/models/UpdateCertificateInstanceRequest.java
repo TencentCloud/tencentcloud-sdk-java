@@ -38,7 +38,7 @@ public class UpdateCertificateInstanceRequest extends AbstractModel {
     private String [] ResourceTypes;
 
     /**
-    * 一键更新新证书ID，不传该则证书公钥和私钥必传
+    * 一键更新新证书ID，不传则证书公钥和私钥必传
     */
     @SerializedName("CertificateId")
     @Expose
@@ -140,16 +140,16 @@ public class UpdateCertificateInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get 一键更新新证书ID，不传该则证书公钥和私钥必传 
-     * @return CertificateId 一键更新新证书ID，不传该则证书公钥和私钥必传
+     * Get 一键更新新证书ID，不传则证书公钥和私钥必传 
+     * @return CertificateId 一键更新新证书ID，不传则证书公钥和私钥必传
      */
     public String getCertificateId() {
         return this.CertificateId;
     }
 
     /**
-     * Set 一键更新新证书ID，不传该则证书公钥和私钥必传
-     * @param CertificateId 一键更新新证书ID，不传该则证书公钥和私钥必传
+     * Set 一键更新新证书ID，不传则证书公钥和私钥必传
+     * @param CertificateId 一键更新新证书ID，不传则证书公钥和私钥必传
      */
     public void setCertificateId(String CertificateId) {
         this.CertificateId = CertificateId;

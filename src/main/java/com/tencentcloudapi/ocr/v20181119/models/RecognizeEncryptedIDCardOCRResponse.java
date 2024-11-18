@@ -112,7 +112,7 @@ WarnInfos，告警信息，Code 告警码列表和释义：
     private ReflectDetailInfo [] ReflectDetailInfos;
 
     /**
-    * 加密后的数据
+    * 加密后的数据（Base64编码）
     */
     @SerializedName("EncryptedBody")
     @Expose
@@ -365,16 +365,16 @@ WarnInfos，告警信息，Code 告警码列表和释义：
     }
 
     /**
-     * Get 加密后的数据 
-     * @return EncryptedBody 加密后的数据
+     * Get 加密后的数据（Base64编码） 
+     * @return EncryptedBody 加密后的数据（Base64编码）
      */
     public String getEncryptedBody() {
         return this.EncryptedBody;
     }
 
     /**
-     * Set 加密后的数据
-     * @param EncryptedBody 加密后的数据
+     * Set 加密后的数据（Base64编码）
+     * @param EncryptedBody 加密后的数据（Base64编码）
      */
     public void setEncryptedBody(String EncryptedBody) {
         this.EncryptedBody = EncryptedBody;

@@ -150,6 +150,9 @@ public enum VclmErrorCode {
     // 不支持的音频时长。
      INVALIDPARAMETERVALUE_INVALIDAUDIODURATION("InvalidParameterValue.InvalidAudioDuration"),
      
+    // 不支持的音频格式。
+     INVALIDPARAMETERVALUE_INVALIDAUDIOFORMAT("InvalidParameterValue.InvalidAudioFormat"),
+     
     // 不支持的图片长宽比。
      INVALIDPARAMETERVALUE_INVALIDIMAGEASPECTRATIO("InvalidParameterValue.InvalidImageAspectRatio"),
      
@@ -161,6 +164,9 @@ public enum VclmErrorCode {
      
     // 不支持的图片大小
      INVALIDPARAMETERVALUE_INVALIDIMAGESIZE("InvalidParameterValue.InvalidImageSize"),
+     
+    // 不支持的模型。
+     INVALIDPARAMETERVALUE_INVALIDMODEL("InvalidParameterValue.InvalidModel"),
      
     // 不支持的视频宽高比。
      INVALIDPARAMETERVALUE_INVALIDVIDEOASPECTRATIO("InvalidParameterValue.InvalidVideoAspectRatio"),

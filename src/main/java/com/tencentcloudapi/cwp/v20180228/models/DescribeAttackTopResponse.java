@@ -25,7 +25,6 @@ public class DescribeAttackTopResponse extends AbstractModel {
 
     /**
     * top统计数据
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NetAttackTopInfo")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeAttackTopResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get top统计数据
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get top统计数据 
      * @return NetAttackTopInfo top统计数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public NetAttackTopInfo getNetAttackTopInfo() {
         return this.NetAttackTopInfo;
@@ -50,9 +47,7 @@ public class DescribeAttackTopResponse extends AbstractModel {
 
     /**
      * Set top统计数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NetAttackTopInfo top统计数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNetAttackTopInfo(NetAttackTopInfo NetAttackTopInfo) {
         this.NetAttackTopInfo = NetAttackTopInfo;

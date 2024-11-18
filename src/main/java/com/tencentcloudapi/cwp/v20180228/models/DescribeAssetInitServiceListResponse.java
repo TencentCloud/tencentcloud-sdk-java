@@ -25,7 +25,6 @@ public class DescribeAssetInitServiceListResponse extends AbstractModel {
 
     /**
     * 列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Services")
     @Expose
@@ -46,10 +45,8 @@ public class DescribeAssetInitServiceListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 列表 
      * @return Services 列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AssetInitServiceBaseInfo [] getServices() {
         return this.Services;
@@ -57,9 +54,7 @@ public class DescribeAssetInitServiceListResponse extends AbstractModel {
 
     /**
      * Set 列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Services 列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setServices(AssetInitServiceBaseInfo [] Services) {
         this.Services = Services;

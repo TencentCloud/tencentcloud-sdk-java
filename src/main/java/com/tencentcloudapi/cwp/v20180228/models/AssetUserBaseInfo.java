@@ -122,14 +122,14 @@ public class AssetUserBaseInfo extends AbstractModel {
     private Long ProjectId;
 
     /**
-    * 账号类型：0访客用户，1标准用户，2管理员用户 ,999为空,仅windows
+    * 账号类型：0访客用户，1标准用户，2管理员用户 ,999为空,仅Windows
     */
     @SerializedName("UserType")
     @Expose
     private Long UserType;
 
     /**
-    * 是否域账号：0否， 1是，2否, 999为空  仅windows
+    * 是否域账号：0否， 1是，2否, 999为空  仅Windows
     */
     @SerializedName("IsDomain")
     @Expose
@@ -200,7 +200,6 @@ public class AssetUserBaseInfo extends AbstractModel {
 
     /**
     * 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -223,7 +222,6 @@ public class AssetUserBaseInfo extends AbstractModel {
     /**
     * 
  附加信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MachineExtraInfo")
     @Expose
@@ -454,32 +452,32 @@ public class AssetUserBaseInfo extends AbstractModel {
     }
 
     /**
-     * Get 账号类型：0访客用户，1标准用户，2管理员用户 ,999为空,仅windows 
-     * @return UserType 账号类型：0访客用户，1标准用户，2管理员用户 ,999为空,仅windows
+     * Get 账号类型：0访客用户，1标准用户，2管理员用户 ,999为空,仅Windows 
+     * @return UserType 账号类型：0访客用户，1标准用户，2管理员用户 ,999为空,仅Windows
      */
     public Long getUserType() {
         return this.UserType;
     }
 
     /**
-     * Set 账号类型：0访客用户，1标准用户，2管理员用户 ,999为空,仅windows
-     * @param UserType 账号类型：0访客用户，1标准用户，2管理员用户 ,999为空,仅windows
+     * Set 账号类型：0访客用户，1标准用户，2管理员用户 ,999为空,仅Windows
+     * @param UserType 账号类型：0访客用户，1标准用户，2管理员用户 ,999为空,仅Windows
      */
     public void setUserType(Long UserType) {
         this.UserType = UserType;
     }
 
     /**
-     * Get 是否域账号：0否， 1是，2否, 999为空  仅windows 
-     * @return IsDomain 是否域账号：0否， 1是，2否, 999为空  仅windows
+     * Get 是否域账号：0否， 1是，2否, 999为空  仅Windows 
+     * @return IsDomain 是否域账号：0否， 1是，2否, 999为空  仅Windows
      */
     public Long getIsDomain() {
         return this.IsDomain;
     }
 
     /**
-     * Set 是否域账号：0否， 1是，2否, 999为空  仅windows
-     * @param IsDomain 是否域账号：0否， 1是，2否, 999为空  仅windows
+     * Set 是否域账号：0否， 1是，2否, 999为空  仅Windows
+     * @param IsDomain 是否域账号：0否， 1是，2否, 999为空  仅Windows
      */
     public void setIsDomain(Long IsDomain) {
         this.IsDomain = IsDomain;
@@ -630,10 +628,8 @@ public class AssetUserBaseInfo extends AbstractModel {
     }
 
     /**
-     * Get 更新时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 更新时间 
      * @return UpdateTime 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdateTime() {
         return this.UpdateTime;
@@ -641,9 +637,7 @@ public class AssetUserBaseInfo extends AbstractModel {
 
     /**
      * Set 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdateTime 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
@@ -683,11 +677,9 @@ public class AssetUserBaseInfo extends AbstractModel {
 
     /**
      * Get 
- 附加信息
-注意：此字段可能返回 null，表示取不到有效值。 
+ 附加信息 
      * @return MachineExtraInfo 
  附加信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public MachineExtraInfo getMachineExtraInfo() {
         return this.MachineExtraInfo;
@@ -696,10 +688,8 @@ public class AssetUserBaseInfo extends AbstractModel {
     /**
      * Set 
  附加信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MachineExtraInfo 
  附加信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMachineExtraInfo(MachineExtraInfo MachineExtraInfo) {
         this.MachineExtraInfo = MachineExtraInfo;

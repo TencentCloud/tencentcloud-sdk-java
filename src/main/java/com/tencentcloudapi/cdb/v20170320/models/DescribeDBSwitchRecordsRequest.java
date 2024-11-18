@@ -38,7 +38,7 @@ public class DescribeDBSwitchRecordsRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * 分页大小，默认值为 50，最小值为 1，最大值为 2000。
+    * 分页大小，默认值为50，最小值为1，最大值为1000。
     */
     @SerializedName("Limit")
     @Expose
@@ -77,16 +77,16 @@ public class DescribeDBSwitchRecordsRequest extends AbstractModel {
     }
 
     /**
-     * Get 分页大小，默认值为 50，最小值为 1，最大值为 2000。 
-     * @return Limit 分页大小，默认值为 50，最小值为 1，最大值为 2000。
+     * Get 分页大小，默认值为50，最小值为1，最大值为1000。 
+     * @return Limit 分页大小，默认值为50，最小值为1，最大值为1000。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 分页大小，默认值为 50，最小值为 1，最大值为 2000。
-     * @param Limit 分页大小，默认值为 50，最小值为 1，最大值为 2000。
+     * Set 分页大小，默认值为50，最小值为1，最大值为1000。
+     * @param Limit 分页大小，默认值为50，最小值为1，最大值为1000。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

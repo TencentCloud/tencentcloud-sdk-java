@@ -40,6 +40,14 @@ public class ComponentVersion extends AbstractModel {
     private String LicenseExpression;
 
     /**
+    * 组件的版本信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VersionInfo")
+    @Expose
+    private ComponentVersionInfo VersionInfo;
+
+    /**
      * Get 该组件的PURL
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return PURL 该组件的PURL
@@ -79,6 +87,26 @@ public class ComponentVersion extends AbstractModel {
         this.LicenseExpression = LicenseExpression;
     }
 
+    /**
+     * Get 组件的版本信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VersionInfo 组件的版本信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ComponentVersionInfo getVersionInfo() {
+        return this.VersionInfo;
+    }
+
+    /**
+     * Set 组件的版本信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VersionInfo 组件的版本信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVersionInfo(ComponentVersionInfo VersionInfo) {
+        this.VersionInfo = VersionInfo;
+    }
+
     public ComponentVersion() {
     }
 
@@ -93,6 +121,9 @@ public class ComponentVersion extends AbstractModel {
         if (source.LicenseExpression != null) {
             this.LicenseExpression = new String(source.LicenseExpression);
         }
+        if (source.VersionInfo != null) {
+            this.VersionInfo = new ComponentVersionInfo(source.VersionInfo);
+        }
     }
 
 
@@ -102,6 +133,7 @@ public class ComponentVersion extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "PURL.", this.PURL);
         this.setParamSimple(map, prefix + "LicenseExpression", this.LicenseExpression);
+        this.setParamObj(map, prefix + "VersionInfo.", this.VersionInfo);
 
     }
 }

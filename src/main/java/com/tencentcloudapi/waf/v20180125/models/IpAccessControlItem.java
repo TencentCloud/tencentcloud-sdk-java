@@ -25,7 +25,6 @@ public class IpAccessControlItem extends AbstractModel {
 
     /**
     * mongo表自增Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
     @Expose
@@ -61,7 +60,6 @@ public class IpAccessControlItem extends AbstractModel {
 
     /**
     * 更新时间戳
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TsVersion")
     @Expose
@@ -76,7 +74,6 @@ public class IpAccessControlItem extends AbstractModel {
 
     /**
     * 生效状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ValidStatus")
     @Expose
@@ -84,7 +81,6 @@ public class IpAccessControlItem extends AbstractModel {
 
     /**
     * 55000001
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleId")
     @Expose
@@ -92,7 +88,6 @@ public class IpAccessControlItem extends AbstractModel {
 
     /**
     * IP列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IpList")
     @Expose
@@ -100,7 +95,6 @@ public class IpAccessControlItem extends AbstractModel {
 
     /**
     * 规则创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -108,7 +102,6 @@ public class IpAccessControlItem extends AbstractModel {
 
     /**
     * 定时任务类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("JobType")
     @Expose
@@ -116,7 +109,6 @@ public class IpAccessControlItem extends AbstractModel {
 
     /**
     * 周期任务类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CronType")
     @Expose
@@ -124,17 +116,14 @@ public class IpAccessControlItem extends AbstractModel {
 
     /**
     * 定时任务配置详情
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("JobDateTime")
     @Expose
     private JobDateTime JobDateTime;
 
     /**
-     * Get mongo表自增Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get mongo表自增Id 
      * @return Id mongo表自增Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getId() {
         return this.Id;
@@ -142,9 +131,7 @@ public class IpAccessControlItem extends AbstractModel {
 
     /**
      * Set mongo表自增Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Id mongo表自增Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(String Id) {
         this.Id = Id;
@@ -215,10 +202,8 @@ public class IpAccessControlItem extends AbstractModel {
     }
 
     /**
-     * Get 更新时间戳
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 更新时间戳 
      * @return TsVersion 更新时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTsVersion() {
         return this.TsVersion;
@@ -226,9 +211,7 @@ public class IpAccessControlItem extends AbstractModel {
 
     /**
      * Set 更新时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TsVersion 更新时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTsVersion(Long TsVersion) {
         this.TsVersion = TsVersion;
@@ -251,10 +234,8 @@ public class IpAccessControlItem extends AbstractModel {
     }
 
     /**
-     * Get 生效状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 生效状态 
      * @return ValidStatus 生效状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getValidStatus() {
         return this.ValidStatus;
@@ -262,19 +243,15 @@ public class IpAccessControlItem extends AbstractModel {
 
     /**
      * Set 生效状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ValidStatus 生效状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValidStatus(Long ValidStatus) {
         this.ValidStatus = ValidStatus;
     }
 
     /**
-     * Get 55000001
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 55000001 
      * @return RuleId 55000001
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRuleId() {
         return this.RuleId;
@@ -282,19 +259,15 @@ public class IpAccessControlItem extends AbstractModel {
 
     /**
      * Set 55000001
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RuleId 55000001
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleId(Long RuleId) {
         this.RuleId = RuleId;
     }
 
     /**
-     * Get IP列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get IP列表 
      * @return IpList IP列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getIpList() {
         return this.IpList;
@@ -302,19 +275,15 @@ public class IpAccessControlItem extends AbstractModel {
 
     /**
      * Set IP列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IpList IP列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIpList(String [] IpList) {
         this.IpList = IpList;
     }
 
     /**
-     * Get 规则创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则创建时间 
      * @return CreateTime 规则创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCreateTime() {
         return this.CreateTime;
@@ -322,19 +291,15 @@ public class IpAccessControlItem extends AbstractModel {
 
     /**
      * Set 规则创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 规则创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(Long CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 定时任务类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 定时任务类型 
      * @return JobType 定时任务类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getJobType() {
         return this.JobType;
@@ -342,19 +307,15 @@ public class IpAccessControlItem extends AbstractModel {
 
     /**
      * Set 定时任务类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param JobType 定时任务类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setJobType(String JobType) {
         this.JobType = JobType;
     }
 
     /**
-     * Get 周期任务类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 周期任务类型 
      * @return CronType 周期任务类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCronType() {
         return this.CronType;
@@ -362,19 +323,15 @@ public class IpAccessControlItem extends AbstractModel {
 
     /**
      * Set 周期任务类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CronType 周期任务类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCronType(String CronType) {
         this.CronType = CronType;
     }
 
     /**
-     * Get 定时任务配置详情
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 定时任务配置详情 
      * @return JobDateTime 定时任务配置详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public JobDateTime getJobDateTime() {
         return this.JobDateTime;
@@ -382,9 +339,7 @@ public class IpAccessControlItem extends AbstractModel {
 
     /**
      * Set 定时任务配置详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param JobDateTime 定时任务配置详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setJobDateTime(JobDateTime JobDateTime) {
         this.JobDateTime = JobDateTime;

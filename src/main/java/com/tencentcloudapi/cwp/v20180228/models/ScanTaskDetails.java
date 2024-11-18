@@ -80,7 +80,7 @@ public class ScanTaskDetails extends AbstractModel {
     private String Quuid;
 
     /**
-    * 状态码
+    * 状态码Scanning、Ok、Fail
     */
     @SerializedName("Status")
     @Expose
@@ -101,7 +101,7 @@ public class ScanTaskDetails extends AbstractModel {
     private Long Id;
 
     /**
-    * 失败详情
+    * 失败类型  3离线、4超时、5失败、8agent版本过低
     */
     @SerializedName("FailType")
     @Expose
@@ -116,7 +116,6 @@ public class ScanTaskDetails extends AbstractModel {
 
     /**
     * 附加信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MachineExtraInfo")
     @Expose
@@ -251,16 +250,16 @@ public class ScanTaskDetails extends AbstractModel {
     }
 
     /**
-     * Get 状态码 
-     * @return Status 状态码
+     * Get 状态码Scanning、Ok、Fail 
+     * @return Status 状态码Scanning、Ok、Fail
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 状态码
-     * @param Status 状态码
+     * Set 状态码Scanning、Ok、Fail
+     * @param Status 状态码Scanning、Ok、Fail
      */
     public void setStatus(String Status) {
         this.Status = Status;
@@ -299,16 +298,16 @@ public class ScanTaskDetails extends AbstractModel {
     }
 
     /**
-     * Get 失败详情 
-     * @return FailType 失败详情
+     * Get 失败类型  3离线、4超时、5失败、8agent版本过低 
+     * @return FailType 失败类型  3离线、4超时、5失败、8agent版本过低
      */
     public Long getFailType() {
         return this.FailType;
     }
 
     /**
-     * Set 失败详情
-     * @param FailType 失败详情
+     * Set 失败类型  3离线、4超时、5失败、8agent版本过低
+     * @param FailType 失败类型  3离线、4超时、5失败、8agent版本过低
      */
     public void setFailType(Long FailType) {
         this.FailType = FailType;
@@ -331,10 +330,8 @@ public class ScanTaskDetails extends AbstractModel {
     }
 
     /**
-     * Get 附加信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 附加信息 
      * @return MachineExtraInfo 附加信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public MachineExtraInfo getMachineExtraInfo() {
         return this.MachineExtraInfo;
@@ -342,9 +339,7 @@ public class ScanTaskDetails extends AbstractModel {
 
     /**
      * Set 附加信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MachineExtraInfo 附加信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMachineExtraInfo(MachineExtraInfo MachineExtraInfo) {
         this.MachineExtraInfo = MachineExtraInfo;

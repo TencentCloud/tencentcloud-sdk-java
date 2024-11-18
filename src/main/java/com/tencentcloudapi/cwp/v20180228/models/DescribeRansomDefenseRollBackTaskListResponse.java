@@ -25,7 +25,6 @@ public class DescribeRansomDefenseRollBackTaskListResponse extends AbstractModel
 
     /**
     * 任务列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("List")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeRansomDefenseRollBackTaskListResponse extends AbstractModel
 
     /**
     * 分页查询记录总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeRansomDefenseRollBackTaskListResponse extends AbstractModel
     private String RequestId;
 
     /**
-     * Get 任务列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务列表 
      * @return List 任务列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RansomDefenseRollbackTask [] getList() {
         return this.List;
@@ -58,19 +54,15 @@ public class DescribeRansomDefenseRollBackTaskListResponse extends AbstractModel
 
     /**
      * Set 任务列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param List 任务列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setList(RansomDefenseRollbackTask [] List) {
         this.List = List;
     }
 
     /**
-     * Get 分页查询记录总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分页查询记录总数 
      * @return TotalCount 分页查询记录总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -78,9 +70,7 @@ public class DescribeRansomDefenseRollBackTaskListResponse extends AbstractModel
 
     /**
      * Set 分页查询记录总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 分页查询记录总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

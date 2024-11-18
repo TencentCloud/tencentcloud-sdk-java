@@ -25,7 +25,6 @@ public class DescribeIgnoreBaselineRuleResponse extends AbstractModel {
 
     /**
     * 忽略基线检测项列表信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IgnoreBaselineRuleList")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeIgnoreBaselineRuleResponse extends AbstractModel {
 
     /**
     * 分页查询记录总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeIgnoreBaselineRuleResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 忽略基线检测项列表信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 忽略基线检测项列表信息 
      * @return IgnoreBaselineRuleList 忽略基线检测项列表信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public IgnoreBaselineRule [] getIgnoreBaselineRuleList() {
         return this.IgnoreBaselineRuleList;
@@ -58,19 +54,15 @@ public class DescribeIgnoreBaselineRuleResponse extends AbstractModel {
 
     /**
      * Set 忽略基线检测项列表信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IgnoreBaselineRuleList 忽略基线检测项列表信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIgnoreBaselineRuleList(IgnoreBaselineRule [] IgnoreBaselineRuleList) {
         this.IgnoreBaselineRuleList = IgnoreBaselineRuleList;
     }
 
     /**
-     * Get 分页查询记录总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分页查询记录总数 
      * @return TotalCount 分页查询记录总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -78,9 +70,7 @@ public class DescribeIgnoreBaselineRuleResponse extends AbstractModel {
 
     /**
      * Set 分页查询记录总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 分页查询记录总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

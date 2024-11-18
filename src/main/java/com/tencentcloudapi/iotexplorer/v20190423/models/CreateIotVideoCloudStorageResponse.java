@@ -24,11 +24,67 @@ import java.util.HashMap;
 public class CreateIotVideoCloudStorageResponse extends AbstractModel {
 
     /**
+    * 订单金额，单位为分
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Price")
+    @Expose
+    private Long Price;
+
+    /**
+    * 支付金额，单位为分
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Amount")
+    @Expose
+    private Long Amount;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 订单金额，单位为分
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Price 订单金额，单位为分
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getPrice() {
+        return this.Price;
+    }
+
+    /**
+     * Set 订单金额，单位为分
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Price 订单金额，单位为分
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPrice(Long Price) {
+        this.Price = Price;
+    }
+
+    /**
+     * Get 支付金额，单位为分
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Amount 支付金额，单位为分
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getAmount() {
+        return this.Amount;
+    }
+
+    /**
+     * Set 支付金额，单位为分
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Amount 支付金额，单位为分
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAmount(Long Amount) {
+        this.Amount = Amount;
+    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -54,6 +110,12 @@ public class CreateIotVideoCloudStorageResponse extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreateIotVideoCloudStorageResponse(CreateIotVideoCloudStorageResponse source) {
+        if (source.Price != null) {
+            this.Price = new Long(source.Price);
+        }
+        if (source.Amount != null) {
+            this.Amount = new Long(source.Amount);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -64,6 +126,8 @@ public class CreateIotVideoCloudStorageResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Price", this.Price);
+        this.setParamSimple(map, prefix + "Amount", this.Amount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

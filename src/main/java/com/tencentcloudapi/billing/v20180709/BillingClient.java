@@ -182,6 +182,17 @@ public class BillingClient extends AbstractClient{
     }
 
     /**
+     *可以通过API获取当前UIN是否有调账，客户可以更快地主动地获取调账情况。
+     * @param req DescribeBillAdjustInfoRequest
+     * @return DescribeBillAdjustInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBillAdjustInfoResponse DescribeBillAdjustInfo(DescribeBillAdjustInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBillAdjustInfo", DescribeBillAdjustInfoResponse.class);
+    }
+
+    /**
      *获取账单明细数据。
 注意事项：
 1.在请求接口时，由于网络不稳定或其它异常，可能会导致请求失败。如果您遇到这种情况，我们建议您在接口请求失败时，手动发起重试操作，这样可以更好地确保您的接口请求能够成功执行。

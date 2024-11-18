@@ -146,6 +146,20 @@ public class UpgradeDBInstanceRequest extends AbstractModel {
     private String RoTransType;
 
     /**
+    * 集群版节点拓扑配置。
+    */
+    @SerializedName("ClusterTopology")
+    @Expose
+    private ClusterTopology ClusterTopology;
+
+    /**
+    * 检查原地升级是否需要重启，1 检查， 0 不检查。如果值为1，检查为原地升级需要重启，则会停止升级并进行返回提示，如果为原地升级不重启，则正常执行升级流程。
+    */
+    @SerializedName("CheckFastUpgradeReboot")
+    @Expose
+    private Long CheckFastUpgradeReboot;
+
+    /**
      * Get 实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同，可使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。 
      * @return InstanceId 实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同，可使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。
      */
@@ -429,6 +443,38 @@ public class UpgradeDBInstanceRequest extends AbstractModel {
         this.RoTransType = RoTransType;
     }
 
+    /**
+     * Get 集群版节点拓扑配置。 
+     * @return ClusterTopology 集群版节点拓扑配置。
+     */
+    public ClusterTopology getClusterTopology() {
+        return this.ClusterTopology;
+    }
+
+    /**
+     * Set 集群版节点拓扑配置。
+     * @param ClusterTopology 集群版节点拓扑配置。
+     */
+    public void setClusterTopology(ClusterTopology ClusterTopology) {
+        this.ClusterTopology = ClusterTopology;
+    }
+
+    /**
+     * Get 检查原地升级是否需要重启，1 检查， 0 不检查。如果值为1，检查为原地升级需要重启，则会停止升级并进行返回提示，如果为原地升级不重启，则正常执行升级流程。 
+     * @return CheckFastUpgradeReboot 检查原地升级是否需要重启，1 检查， 0 不检查。如果值为1，检查为原地升级需要重启，则会停止升级并进行返回提示，如果为原地升级不重启，则正常执行升级流程。
+     */
+    public Long getCheckFastUpgradeReboot() {
+        return this.CheckFastUpgradeReboot;
+    }
+
+    /**
+     * Set 检查原地升级是否需要重启，1 检查， 0 不检查。如果值为1，检查为原地升级需要重启，则会停止升级并进行返回提示，如果为原地升级不重启，则正常执行升级流程。
+     * @param CheckFastUpgradeReboot 检查原地升级是否需要重启，1 检查， 0 不检查。如果值为1，检查为原地升级需要重启，则会停止升级并进行返回提示，如果为原地升级不重启，则正常执行升级流程。
+     */
+    public void setCheckFastUpgradeReboot(Long CheckFastUpgradeReboot) {
+        this.CheckFastUpgradeReboot = CheckFastUpgradeReboot;
+    }
+
     public UpgradeDBInstanceRequest() {
     }
 
@@ -488,6 +534,12 @@ public class UpgradeDBInstanceRequest extends AbstractModel {
         if (source.RoTransType != null) {
             this.RoTransType = new String(source.RoTransType);
         }
+        if (source.ClusterTopology != null) {
+            this.ClusterTopology = new ClusterTopology(source.ClusterTopology);
+        }
+        if (source.CheckFastUpgradeReboot != null) {
+            this.CheckFastUpgradeReboot = new Long(source.CheckFastUpgradeReboot);
+        }
     }
 
 
@@ -512,6 +564,8 @@ public class UpgradeDBInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "CrossCluster", this.CrossCluster);
         this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
         this.setParamSimple(map, prefix + "RoTransType", this.RoTransType);
+        this.setParamObj(map, prefix + "ClusterTopology.", this.ClusterTopology);
+        this.setParamSimple(map, prefix + "CheckFastUpgradeReboot", this.CheckFastUpgradeReboot);
 
     }
 }

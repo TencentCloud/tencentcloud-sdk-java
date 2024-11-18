@@ -52,7 +52,7 @@ public class ModifyMerchantRequest extends AbstractModel {
     private Long CorpId;
 
     /**
-    * 码包来源 0:自建, 1:第三码包，暂不支持修改
+    * 码包来源 0:自建, 1:第三方码包，暂不支持修改
     */
     @SerializedName("CodeType")
     @Expose
@@ -130,16 +130,16 @@ public class ModifyMerchantRequest extends AbstractModel {
     }
 
     /**
-     * Get 码包来源 0:自建, 1:第三码包，暂不支持修改 
-     * @return CodeType 码包来源 0:自建, 1:第三码包，暂不支持修改
+     * Get 码包来源 0:自建, 1:第三方码包，暂不支持修改 
+     * @return CodeType 码包来源 0:自建, 1:第三方码包，暂不支持修改
      */
     public Long getCodeType() {
         return this.CodeType;
     }
 
     /**
-     * Set 码包来源 0:自建, 1:第三码包，暂不支持修改
-     * @param CodeType 码包来源 0:自建, 1:第三码包，暂不支持修改
+     * Set 码包来源 0:自建, 1:第三方码包，暂不支持修改
+     * @param CodeType 码包来源 0:自建, 1:第三方码包，暂不支持修改
      */
     public void setCodeType(Long CodeType) {
         this.CodeType = CodeType;

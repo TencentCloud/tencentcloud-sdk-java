@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class GetPersonListNumResponse extends AbstractModel {
 
     /**
-    * 人员数量
+    * 人员数量。
     */
     @SerializedName("PersonNum")
     @Expose
     private Long PersonNum;
 
     /**
-    * 人脸数量
+    * 人脸数量。
     */
     @SerializedName("FaceNum")
     @Expose
@@ -45,32 +45,32 @@ public class GetPersonListNumResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 人员数量 
-     * @return PersonNum 人员数量
+     * Get 人员数量。 
+     * @return PersonNum 人员数量。
      */
     public Long getPersonNum() {
         return this.PersonNum;
     }
 
     /**
-     * Set 人员数量
-     * @param PersonNum 人员数量
+     * Set 人员数量。
+     * @param PersonNum 人员数量。
      */
     public void setPersonNum(Long PersonNum) {
         this.PersonNum = PersonNum;
     }
 
     /**
-     * Get 人脸数量 
-     * @return FaceNum 人脸数量
+     * Get 人脸数量。 
+     * @return FaceNum 人脸数量。
      */
     public Long getFaceNum() {
         return this.FaceNum;
     }
 
     /**
-     * Set 人脸数量
-     * @param FaceNum 人脸数量
+     * Set 人脸数量。
+     * @param FaceNum 人脸数量。
      */
     public void setFaceNum(Long FaceNum) {
         this.FaceNum = FaceNum;

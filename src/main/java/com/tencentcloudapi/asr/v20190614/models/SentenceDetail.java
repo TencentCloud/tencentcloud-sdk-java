@@ -89,6 +89,7 @@ public class SentenceDetail extends AbstractModel {
 
     /**
     * 声道或说话人 Id（请求中如果设置了 speaker_diarization或者ChannelNum为双声道，可区分说话人或声道）
+单声道话者分离时不同的值代表不同的说话人； 8k双声道话者分离时speakerId的值为0代表左声道，值为1代表右声道。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SpeakerId")
@@ -112,7 +113,7 @@ public class SentenceDetail extends AbstractModel {
     private Long SilenceTime;
 
     /**
-    * 情绪类型（可能为空）
+    * 情绪类型（可能为空，有2种情况 1、没有对应资源包；2、情绪跟语音效果相关，如果情绪不够强烈时可能无法识别）
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EmotionType")
@@ -289,8 +290,10 @@ public class SentenceDetail extends AbstractModel {
 
     /**
      * Get 声道或说话人 Id（请求中如果设置了 speaker_diarization或者ChannelNum为双声道，可区分说话人或声道）
+单声道话者分离时不同的值代表不同的说话人； 8k双声道话者分离时speakerId的值为0代表左声道，值为1代表右声道。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return SpeakerId 声道或说话人 Id（请求中如果设置了 speaker_diarization或者ChannelNum为双声道，可区分说话人或声道）
+单声道话者分离时不同的值代表不同的说话人； 8k双声道话者分离时speakerId的值为0代表左声道，值为1代表右声道。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSpeakerId() {
@@ -299,8 +302,10 @@ public class SentenceDetail extends AbstractModel {
 
     /**
      * Set 声道或说话人 Id（请求中如果设置了 speaker_diarization或者ChannelNum为双声道，可区分说话人或声道）
+单声道话者分离时不同的值代表不同的说话人； 8k双声道话者分离时speakerId的值为0代表左声道，值为1代表右声道。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SpeakerId 声道或说话人 Id（请求中如果设置了 speaker_diarization或者ChannelNum为双声道，可区分说话人或声道）
+单声道话者分离时不同的值代表不同的说话人； 8k双声道话者分离时speakerId的值为0代表左声道，值为1代表右声道。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSpeakerId(Long SpeakerId) {
@@ -348,9 +353,9 @@ public class SentenceDetail extends AbstractModel {
     }
 
     /**
-     * Get 情绪类型（可能为空）
+     * Get 情绪类型（可能为空，有2种情况 1、没有对应资源包；2、情绪跟语音效果相关，如果情绪不够强烈时可能无法识别）
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EmotionType 情绪类型（可能为空）
+     * @return EmotionType 情绪类型（可能为空，有2种情况 1、没有对应资源包；2、情绪跟语音效果相关，如果情绪不够强烈时可能无法识别）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getEmotionType() {
@@ -358,9 +363,9 @@ public class SentenceDetail extends AbstractModel {
     }
 
     /**
-     * Set 情绪类型（可能为空）
+     * Set 情绪类型（可能为空，有2种情况 1、没有对应资源包；2、情绪跟语音效果相关，如果情绪不够强烈时可能无法识别）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EmotionType 情绪类型（可能为空）
+     * @param EmotionType 情绪类型（可能为空，有2种情况 1、没有对应资源包；2、情绪跟语音效果相关，如果情绪不够强烈时可能无法识别）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEmotionType(String [] EmotionType) {

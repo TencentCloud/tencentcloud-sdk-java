@@ -45,7 +45,7 @@ https：强制 https 跳转
 
     /**
     * 强制跳转时返回状态码 
-支持 301、302
+支持 301、302、307、308
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RedirectStatusCode")
@@ -118,10 +118,10 @@ https：强制 https 跳转
 
     /**
      * Get 强制跳转时返回状态码 
-支持 301、302
+支持 301、302、307、308
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return RedirectStatusCode 强制跳转时返回状态码 
-支持 301、302
+支持 301、302、307、308
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRedirectStatusCode() {
@@ -130,10 +130,10 @@ https：强制 https 跳转
 
     /**
      * Set 强制跳转时返回状态码 
-支持 301、302
+支持 301、302、307、308
 注意：此字段可能返回 null，表示取不到有效值。
      * @param RedirectStatusCode 强制跳转时返回状态码 
-支持 301、302
+支持 301、302、307、308
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRedirectStatusCode(Long RedirectStatusCode) {

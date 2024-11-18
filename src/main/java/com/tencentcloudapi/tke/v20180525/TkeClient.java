@@ -842,6 +842,17 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *查询批量修改标签状态
+     * @param req DescribeBatchModifyTagsStatusRequest
+     * @return DescribeBatchModifyTagsStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBatchModifyTagsStatusResponse DescribeBatchModifyTagsStatus(DescribeBatchModifyTagsStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBatchModifyTagsStatus", DescribeBatchModifyTagsStatusResponse.class);
+    }
+
+    /**
      *集群弹性伸缩配置
      * @param req DescribeClusterAsGroupOptionRequest
      * @return DescribeClusterAsGroupOptionResponse
@@ -1312,19 +1323,6 @@ public class TkeClient extends AbstractClient{
     public DescribeExistedInstancesResponse DescribeExistedInstances(DescribeExistedInstancesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeExistedInstances", DescribeExistedInstancesResponse.class);
-    }
-
-    /**
-     *tdcc接口已迁移至tdcc产品下，tke下的接口下线
-
-获取导入第三方集群YAML定义
-     * @param req DescribeExternalClusterSpecRequest
-     * @return DescribeExternalClusterSpecResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeExternalClusterSpecResponse DescribeExternalClusterSpec(DescribeExternalClusterSpecRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeExternalClusterSpec", DescribeExternalClusterSpecResponse.class);
     }
 
     /**
@@ -2109,6 +2107,17 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *修改集群镜像
+     * @param req ModifyClusterImageRequest
+     * @return ModifyClusterImageResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyClusterImageResponse ModifyClusterImage(ModifyClusterImageRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyClusterImage", ModifyClusterImageResponse.class);
+    }
+
+    /**
      *编辑节点池
      * @param req ModifyClusterNodePoolRequest
      * @return ModifyClusterNodePoolResponse
@@ -2128,6 +2137,17 @@ public class TkeClient extends AbstractClient{
     public ModifyClusterRuntimeConfigResponse ModifyClusterRuntimeConfig(ModifyClusterRuntimeConfigRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyClusterRuntimeConfig", ModifyClusterRuntimeConfigResponse.class);
+    }
+
+    /**
+     *修改集群标签
+     * @param req ModifyClusterTagsRequest
+     * @return ModifyClusterTagsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyClusterTagsResponse ModifyClusterTags(ModifyClusterTagsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyClusterTags", ModifyClusterTagsResponse.class);
     }
 
     /**

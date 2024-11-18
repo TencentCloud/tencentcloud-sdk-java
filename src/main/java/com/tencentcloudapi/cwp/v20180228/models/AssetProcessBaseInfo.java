@@ -67,7 +67,6 @@ public class AssetProcessBaseInfo extends AbstractModel {
 
     /**
     * 主机标签
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tag")
     @Expose
@@ -172,7 +171,7 @@ public class AssetProcessBaseInfo extends AbstractModel {
     private String Status;
 
     /**
-    * 数字签名:0无，1有， 999 空，仅windows
+    * 数字签名:0无，1有， 999 空，仅Windows
     */
     @SerializedName("HasSign")
     @Expose
@@ -201,7 +200,6 @@ public class AssetProcessBaseInfo extends AbstractModel {
 
     /**
     * 数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -225,7 +223,6 @@ public class AssetProcessBaseInfo extends AbstractModel {
     * 
  附加信息
 
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MachineExtraInfo")
     @Expose
@@ -328,10 +325,8 @@ public class AssetProcessBaseInfo extends AbstractModel {
     }
 
     /**
-     * Get 主机标签
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主机标签 
      * @return Tag 主机标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public MachineTag [] getTag() {
         return this.Tag;
@@ -339,9 +334,7 @@ public class AssetProcessBaseInfo extends AbstractModel {
 
     /**
      * Set 主机标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tag 主机标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTag(MachineTag [] Tag) {
         this.Tag = Tag;
@@ -572,16 +565,16 @@ public class AssetProcessBaseInfo extends AbstractModel {
     }
 
     /**
-     * Get 数字签名:0无，1有， 999 空，仅windows 
-     * @return HasSign 数字签名:0无，1有， 999 空，仅windows
+     * Get 数字签名:0无，1有， 999 空，仅Windows 
+     * @return HasSign 数字签名:0无，1有， 999 空，仅Windows
      */
     public Long getHasSign() {
         return this.HasSign;
     }
 
     /**
-     * Set 数字签名:0无，1有， 999 空，仅windows
-     * @param HasSign 数字签名:0无，1有， 999 空，仅windows
+     * Set 数字签名:0无，1有， 999 空，仅Windows
+     * @param HasSign 数字签名:0无，1有， 999 空，仅Windows
      */
     public void setHasSign(Long HasSign) {
         this.HasSign = HasSign;
@@ -636,10 +629,8 @@ public class AssetProcessBaseInfo extends AbstractModel {
     }
 
     /**
-     * Get 数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据更新时间 
      * @return UpdateTime 数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdateTime() {
         return this.UpdateTime;
@@ -647,9 +638,7 @@ public class AssetProcessBaseInfo extends AbstractModel {
 
     /**
      * Set 数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdateTime 数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
@@ -690,12 +679,10 @@ public class AssetProcessBaseInfo extends AbstractModel {
     /**
      * Get 
  附加信息
-
-注意：此字段可能返回 null，表示取不到有效值。 
+ 
      * @return MachineExtraInfo 
  附加信息
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public MachineExtraInfo getMachineExtraInfo() {
         return this.MachineExtraInfo;
@@ -705,11 +692,9 @@ public class AssetProcessBaseInfo extends AbstractModel {
      * Set 
  附加信息
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MachineExtraInfo 
  附加信息
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMachineExtraInfo(MachineExtraInfo MachineExtraInfo) {
         this.MachineExtraInfo = MachineExtraInfo;

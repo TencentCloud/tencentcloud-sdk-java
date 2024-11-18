@@ -88,7 +88,6 @@ public class ProtectDirInfo extends AbstractModel {
 
     /**
     * 首次开启防护时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FirstProtectTime")
     @Expose
@@ -96,7 +95,6 @@ public class ProtectDirInfo extends AbstractModel {
 
     /**
     * 最近开启防护时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LatestProtectTime")
     @Expose
@@ -104,7 +102,6 @@ public class ProtectDirInfo extends AbstractModel {
 
     /**
     * 防护文件类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProtectFileType")
     @Expose
@@ -112,7 +109,6 @@ public class ProtectDirInfo extends AbstractModel {
 
     /**
     * 防护文件总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProtectFilesCount")
     @Expose
@@ -263,10 +259,8 @@ public class ProtectDirInfo extends AbstractModel {
     }
 
     /**
-     * Get 首次开启防护时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 首次开启防护时间 
      * @return FirstProtectTime 首次开启防护时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFirstProtectTime() {
         return this.FirstProtectTime;
@@ -274,19 +268,15 @@ public class ProtectDirInfo extends AbstractModel {
 
     /**
      * Set 首次开启防护时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FirstProtectTime 首次开启防护时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFirstProtectTime(String FirstProtectTime) {
         this.FirstProtectTime = FirstProtectTime;
     }
 
     /**
-     * Get 最近开启防护时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最近开启防护时间 
      * @return LatestProtectTime 最近开启防护时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLatestProtectTime() {
         return this.LatestProtectTime;
@@ -294,19 +284,15 @@ public class ProtectDirInfo extends AbstractModel {
 
     /**
      * Set 最近开启防护时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LatestProtectTime 最近开启防护时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLatestProtectTime(String LatestProtectTime) {
         this.LatestProtectTime = LatestProtectTime;
     }
 
     /**
-     * Get 防护文件类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 防护文件类型 
      * @return ProtectFileType 防护文件类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProtectFileType() {
         return this.ProtectFileType;
@@ -314,19 +300,15 @@ public class ProtectDirInfo extends AbstractModel {
 
     /**
      * Set 防护文件类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProtectFileType 防护文件类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProtectFileType(String ProtectFileType) {
         this.ProtectFileType = ProtectFileType;
     }
 
     /**
-     * Get 防护文件总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 防护文件总数 
      * @return ProtectFilesCount 防护文件总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getProtectFilesCount() {
         return this.ProtectFilesCount;
@@ -334,9 +316,7 @@ public class ProtectDirInfo extends AbstractModel {
 
     /**
      * Set 防护文件总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProtectFilesCount 防护文件总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProtectFilesCount(Long ProtectFilesCount) {
         this.ProtectFilesCount = ProtectFilesCount;

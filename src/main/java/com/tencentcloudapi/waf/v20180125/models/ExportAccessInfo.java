@@ -25,7 +25,6 @@ public class ExportAccessInfo extends AbstractModel {
 
     /**
     * 日志导出任务ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExportId")
     @Expose
@@ -33,7 +32,6 @@ public class ExportAccessInfo extends AbstractModel {
 
     /**
     * 日志导出查询语句
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Query")
     @Expose
@@ -41,7 +39,6 @@ public class ExportAccessInfo extends AbstractModel {
 
     /**
     * 日志导出文件名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileName")
     @Expose
@@ -56,7 +53,6 @@ public class ExportAccessInfo extends AbstractModel {
 
     /**
     * 日志导出时间排序
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Order")
     @Expose
@@ -64,7 +60,6 @@ public class ExportAccessInfo extends AbstractModel {
 
     /**
     * 日志导出格式
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Format")
     @Expose
@@ -72,7 +67,6 @@ public class ExportAccessInfo extends AbstractModel {
 
     /**
     * 日志导出数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Count")
     @Expose
@@ -114,10 +108,8 @@ public class ExportAccessInfo extends AbstractModel {
     private String CreateTime;
 
     /**
-     * Get 日志导出任务ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 日志导出任务ID 
      * @return ExportId 日志导出任务ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExportId() {
         return this.ExportId;
@@ -125,19 +117,15 @@ public class ExportAccessInfo extends AbstractModel {
 
     /**
      * Set 日志导出任务ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExportId 日志导出任务ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExportId(String ExportId) {
         this.ExportId = ExportId;
     }
 
     /**
-     * Get 日志导出查询语句
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 日志导出查询语句 
      * @return Query 日志导出查询语句
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getQuery() {
         return this.Query;
@@ -145,19 +133,15 @@ public class ExportAccessInfo extends AbstractModel {
 
     /**
      * Set 日志导出查询语句
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Query 日志导出查询语句
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQuery(String Query) {
         this.Query = Query;
     }
 
     /**
-     * Get 日志导出文件名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 日志导出文件名 
      * @return FileName 日志导出文件名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFileName() {
         return this.FileName;
@@ -165,9 +149,7 @@ public class ExportAccessInfo extends AbstractModel {
 
     /**
      * Set 日志导出文件名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FileName 日志导出文件名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileName(String FileName) {
         this.FileName = FileName;
@@ -190,10 +172,8 @@ public class ExportAccessInfo extends AbstractModel {
     }
 
     /**
-     * Get 日志导出时间排序
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 日志导出时间排序 
      * @return Order 日志导出时间排序
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOrder() {
         return this.Order;
@@ -201,19 +181,15 @@ public class ExportAccessInfo extends AbstractModel {
 
     /**
      * Set 日志导出时间排序
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Order 日志导出时间排序
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOrder(String Order) {
         this.Order = Order;
     }
 
     /**
-     * Get 日志导出格式
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 日志导出格式 
      * @return Format 日志导出格式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFormat() {
         return this.Format;
@@ -221,19 +197,15 @@ public class ExportAccessInfo extends AbstractModel {
 
     /**
      * Set 日志导出格式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Format 日志导出格式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFormat(String Format) {
         this.Format = Format;
     }
 
     /**
-     * Get 日志导出数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 日志导出数量 
      * @return Count 日志导出数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCount() {
         return this.Count;
@@ -241,9 +213,7 @@ public class ExportAccessInfo extends AbstractModel {
 
     /**
      * Set 日志导出数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Count 日志导出数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCount(Long Count) {
         this.Count = Count;

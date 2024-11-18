@@ -25,7 +25,6 @@ public class UpsertCCRuleResponse extends AbstractModel {
 
     /**
     * 一般为null
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
     @Expose
@@ -46,10 +45,8 @@ public class UpsertCCRuleResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 一般为null
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 一般为null 
      * @return Data 一般为null
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getData() {
         return this.Data;
@@ -57,9 +54,7 @@ public class UpsertCCRuleResponse extends AbstractModel {
 
     /**
      * Set 一般为null
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Data 一般为null
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(String Data) {
         this.Data = Data;

@@ -25,7 +25,6 @@ public class TaskLogURL extends AbstractModel {
 
     /**
     * 报告下载临时链接
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("URL")
     @Expose
@@ -33,7 +32,6 @@ public class TaskLogURL extends AbstractModel {
 
     /**
     * 任务报告id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LogId")
     @Expose
@@ -41,7 +39,6 @@ public class TaskLogURL extends AbstractModel {
 
     /**
     * 任务报告名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskLogName")
     @Expose
@@ -49,17 +46,14 @@ public class TaskLogURL extends AbstractModel {
 
     /**
     * APP ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AppId")
     @Expose
     private String AppId;
 
     /**
-     * Get 报告下载临时链接
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 报告下载临时链接 
      * @return URL 报告下载临时链接
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getURL() {
         return this.URL;
@@ -67,19 +61,15 @@ public class TaskLogURL extends AbstractModel {
 
     /**
      * Set 报告下载临时链接
-注意：此字段可能返回 null，表示取不到有效值。
      * @param URL 报告下载临时链接
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setURL(String URL) {
         this.URL = URL;
     }
 
     /**
-     * Get 任务报告id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务报告id 
      * @return LogId 任务报告id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLogId() {
         return this.LogId;
@@ -87,19 +77,15 @@ public class TaskLogURL extends AbstractModel {
 
     /**
      * Set 任务报告id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LogId 任务报告id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLogId(String LogId) {
         this.LogId = LogId;
     }
 
     /**
-     * Get 任务报告名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务报告名称 
      * @return TaskLogName 任务报告名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskLogName() {
         return this.TaskLogName;
@@ -107,19 +93,15 @@ public class TaskLogURL extends AbstractModel {
 
     /**
      * Set 任务报告名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskLogName 任务报告名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskLogName(String TaskLogName) {
         this.TaskLogName = TaskLogName;
     }
 
     /**
-     * Get APP ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get APP ID 
      * @return AppId APP ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAppId() {
         return this.AppId;
@@ -127,9 +109,7 @@ public class TaskLogURL extends AbstractModel {
 
     /**
      * Set APP ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AppId APP ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAppId(String AppId) {
         this.AppId = AppId;

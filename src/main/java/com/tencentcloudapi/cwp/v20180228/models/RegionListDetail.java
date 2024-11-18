@@ -30,7 +30,6 @@ LH 腾讯云轻量服务器
 ECM 腾讯云边缘计算服务器
 BM 腾讯云黑石1.0 服务器
 Other  其他服务器(非腾讯云)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MachineType")
     @Expose
@@ -46,7 +45,6 @@ Other  其他服务器(非腾讯云)
 6 Google
 7 Oracle
 8 Digital Ocean
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CloudFrom")
     @Expose
@@ -54,7 +52,6 @@ Other  其他服务器(非腾讯云)
 
     /**
     * 地域列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RegionList")
     @Expose
@@ -66,15 +63,13 @@ CVM 腾讯云云服务器
 LH 腾讯云轻量服务器
 ECM 腾讯云边缘计算服务器
 BM 腾讯云黑石1.0 服务器
-Other  其他服务器(非腾讯云)
-注意：此字段可能返回 null，表示取不到有效值。 
+Other  其他服务器(非腾讯云) 
      * @return MachineType 机器类型
 CVM 腾讯云云服务器
 LH 腾讯云轻量服务器
 ECM 腾讯云边缘计算服务器
 BM 腾讯云黑石1.0 服务器
 Other  其他服务器(非腾讯云)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMachineType() {
         return this.MachineType;
@@ -87,14 +82,12 @@ LH 腾讯云轻量服务器
 ECM 腾讯云边缘计算服务器
 BM 腾讯云黑石1.0 服务器
 Other  其他服务器(非腾讯云)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MachineType 机器类型
 CVM 腾讯云云服务器
 LH 腾讯云轻量服务器
 ECM 腾讯云边缘计算服务器
 BM 腾讯云黑石1.0 服务器
 Other  其他服务器(非腾讯云)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMachineType(String MachineType) {
         this.MachineType = MachineType;
@@ -109,8 +102,7 @@ Other  其他服务器(非腾讯云)
 5 微软
 6 Google
 7 Oracle
-8 Digital Ocean
-注意：此字段可能返回 null，表示取不到有效值。 
+8 Digital Ocean 
      * @return CloudFrom 0 腾讯云
 1 IDC机房
 2 阿里云
@@ -120,7 +112,6 @@ Other  其他服务器(非腾讯云)
 6 Google
 7 Oracle
 8 Digital Ocean
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCloudFrom() {
         return this.CloudFrom;
@@ -136,7 +127,6 @@ Other  其他服务器(非腾讯云)
 6 Google
 7 Oracle
 8 Digital Ocean
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CloudFrom 0 腾讯云
 1 IDC机房
 2 阿里云
@@ -146,17 +136,14 @@ Other  其他服务器(非腾讯云)
 6 Google
 7 Oracle
 8 Digital Ocean
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCloudFrom(Long CloudFrom) {
         this.CloudFrom = CloudFrom;
     }
 
     /**
-     * Get 地域列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地域列表 
      * @return RegionList 地域列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RegionInfo [] getRegionList() {
         return this.RegionList;
@@ -164,9 +151,7 @@ Other  其他服务器(非腾讯云)
 
     /**
      * Set 地域列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RegionList 地域列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegionList(RegionInfo [] RegionList) {
         this.RegionList = RegionList;

@@ -25,7 +25,6 @@ public class AssociatedInstanceInfo extends AbstractModel {
 
     /**
     * 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -33,7 +32,6 @@ public class AssociatedInstanceInfo extends AbstractModel {
 
     /**
     * 实例名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceName")
     @Expose
@@ -41,7 +39,6 @@ public class AssociatedInstanceInfo extends AbstractModel {
 
     /**
     * 实例类型，3是cvm实例,4是clb实例,5是eni实例,6是云数据库
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -49,7 +46,6 @@ public class AssociatedInstanceInfo extends AbstractModel {
 
     /**
     * 私有网络ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcId")
     @Expose
@@ -57,7 +53,6 @@ public class AssociatedInstanceInfo extends AbstractModel {
 
     /**
     * 私有网络名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcName")
     @Expose
@@ -65,7 +60,6 @@ public class AssociatedInstanceInfo extends AbstractModel {
 
     /**
     * 公网IP
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PublicIp")
     @Expose
@@ -73,7 +67,6 @@ public class AssociatedInstanceInfo extends AbstractModel {
 
     /**
     * 内网IP
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Ip")
     @Expose
@@ -81,7 +74,6 @@ public class AssociatedInstanceInfo extends AbstractModel {
 
     /**
     * 关联安全组数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SecurityGroupCount")
     @Expose
@@ -89,7 +81,6 @@ public class AssociatedInstanceInfo extends AbstractModel {
 
     /**
     * 关联安全组规则数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SecurityGroupRuleCount")
     @Expose
@@ -97,17 +88,14 @@ public class AssociatedInstanceInfo extends AbstractModel {
 
     /**
     * 关联数据库代理Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CdbId")
     @Expose
     private String CdbId;
 
     /**
-     * Get 实例ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例ID 
      * @return InstanceId 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceId() {
         return this.InstanceId;
@@ -115,19 +103,15 @@ public class AssociatedInstanceInfo extends AbstractModel {
 
     /**
      * Set 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceId 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 实例名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例名称 
      * @return InstanceName 实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceName() {
         return this.InstanceName;
@@ -135,19 +119,15 @@ public class AssociatedInstanceInfo extends AbstractModel {
 
     /**
      * Set 实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceName 实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get 实例类型，3是cvm实例,4是clb实例,5是eni实例,6是云数据库
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例类型，3是cvm实例,4是clb实例,5是eni实例,6是云数据库 
      * @return Type 实例类型，3是cvm实例,4是clb实例,5是eni实例,6是云数据库
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getType() {
         return this.Type;
@@ -155,19 +135,15 @@ public class AssociatedInstanceInfo extends AbstractModel {
 
     /**
      * Set 实例类型，3是cvm实例,4是clb实例,5是eni实例,6是云数据库
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 实例类型，3是cvm实例,4是clb实例,5是eni实例,6是云数据库
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(Long Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 私有网络ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 私有网络ID 
      * @return VpcId 私有网络ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVpcId() {
         return this.VpcId;
@@ -175,19 +151,15 @@ public class AssociatedInstanceInfo extends AbstractModel {
 
     /**
      * Set 私有网络ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VpcId 私有网络ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 私有网络名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 私有网络名称 
      * @return VpcName 私有网络名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVpcName() {
         return this.VpcName;
@@ -195,19 +167,15 @@ public class AssociatedInstanceInfo extends AbstractModel {
 
     /**
      * Set 私有网络名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VpcName 私有网络名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcName(String VpcName) {
         this.VpcName = VpcName;
     }
 
     /**
-     * Get 公网IP
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 公网IP 
      * @return PublicIp 公网IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPublicIp() {
         return this.PublicIp;
@@ -215,19 +183,15 @@ public class AssociatedInstanceInfo extends AbstractModel {
 
     /**
      * Set 公网IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PublicIp 公网IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPublicIp(String PublicIp) {
         this.PublicIp = PublicIp;
     }
 
     /**
-     * Get 内网IP
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 内网IP 
      * @return Ip 内网IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIp() {
         return this.Ip;
@@ -235,19 +199,15 @@ public class AssociatedInstanceInfo extends AbstractModel {
 
     /**
      * Set 内网IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Ip 内网IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIp(String Ip) {
         this.Ip = Ip;
     }
 
     /**
-     * Get 关联安全组数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 关联安全组数量 
      * @return SecurityGroupCount 关联安全组数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSecurityGroupCount() {
         return this.SecurityGroupCount;
@@ -255,19 +215,15 @@ public class AssociatedInstanceInfo extends AbstractModel {
 
     /**
      * Set 关联安全组数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SecurityGroupCount 关联安全组数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSecurityGroupCount(Long SecurityGroupCount) {
         this.SecurityGroupCount = SecurityGroupCount;
     }
 
     /**
-     * Get 关联安全组规则数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 关联安全组规则数量 
      * @return SecurityGroupRuleCount 关联安全组规则数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSecurityGroupRuleCount() {
         return this.SecurityGroupRuleCount;
@@ -275,19 +231,15 @@ public class AssociatedInstanceInfo extends AbstractModel {
 
     /**
      * Set 关联安全组规则数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SecurityGroupRuleCount 关联安全组规则数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSecurityGroupRuleCount(Long SecurityGroupRuleCount) {
         this.SecurityGroupRuleCount = SecurityGroupRuleCount;
     }
 
     /**
-     * Get 关联数据库代理Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 关联数据库代理Id 
      * @return CdbId 关联数据库代理Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCdbId() {
         return this.CdbId;
@@ -295,9 +247,7 @@ public class AssociatedInstanceInfo extends AbstractModel {
 
     /**
      * Set 关联数据库代理Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CdbId 关联数据库代理Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCdbId(String CdbId) {
         this.CdbId = CdbId;

@@ -139,6 +139,22 @@ public class DspaInstance extends AbstractModel {
     private String Channel;
 
     /**
+    * 已授权的实例数量
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InsAuthCount")
+    @Expose
+    private Long InsAuthCount;
+
+    /**
+    * 已购买的实例数量
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InsTotalQuota")
+    @Expose
+    private Long InsTotalQuota;
+
+    /**
      * Get DSPA实例ID。 
      * @return DspaId DSPA实例ID。
      */
@@ -406,6 +422,46 @@ public class DspaInstance extends AbstractModel {
         this.Channel = Channel;
     }
 
+    /**
+     * Get 已授权的实例数量
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InsAuthCount 已授权的实例数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getInsAuthCount() {
+        return this.InsAuthCount;
+    }
+
+    /**
+     * Set 已授权的实例数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InsAuthCount 已授权的实例数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInsAuthCount(Long InsAuthCount) {
+        this.InsAuthCount = InsAuthCount;
+    }
+
+    /**
+     * Get 已购买的实例数量
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InsTotalQuota 已购买的实例数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getInsTotalQuota() {
+        return this.InsTotalQuota;
+    }
+
+    /**
+     * Set 已购买的实例数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InsTotalQuota 已购买的实例数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInsTotalQuota(Long InsTotalQuota) {
+        this.InsTotalQuota = InsTotalQuota;
+    }
+
     public DspaInstance() {
     }
 
@@ -462,6 +518,12 @@ public class DspaInstance extends AbstractModel {
         if (source.Channel != null) {
             this.Channel = new String(source.Channel);
         }
+        if (source.InsAuthCount != null) {
+            this.InsAuthCount = new Long(source.InsAuthCount);
+        }
+        if (source.InsTotalQuota != null) {
+            this.InsTotalQuota = new Long(source.InsTotalQuota);
+        }
     }
 
 
@@ -485,6 +547,8 @@ public class DspaInstance extends AbstractModel {
         this.setParamSimple(map, prefix + "CosQuotaUnit", this.CosQuotaUnit);
         this.setParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
         this.setParamSimple(map, prefix + "Channel", this.Channel);
+        this.setParamSimple(map, prefix + "InsAuthCount", this.InsAuthCount);
+        this.setParamSimple(map, prefix + "InsTotalQuota", this.InsTotalQuota);
 
     }
 }

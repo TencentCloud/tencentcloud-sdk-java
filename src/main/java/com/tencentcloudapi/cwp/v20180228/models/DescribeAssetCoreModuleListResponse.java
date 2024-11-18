@@ -25,7 +25,6 @@ public class DescribeAssetCoreModuleListResponse extends AbstractModel {
 
     /**
     * 列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Modules")
     @Expose
@@ -46,10 +45,8 @@ public class DescribeAssetCoreModuleListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 列表 
      * @return Modules 列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AssetCoreModuleBaseInfo [] getModules() {
         return this.Modules;
@@ -57,9 +54,7 @@ public class DescribeAssetCoreModuleListResponse extends AbstractModel {
 
     /**
      * Set 列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Modules 列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModules(AssetCoreModuleBaseInfo [] Modules) {
         this.Modules = Modules;

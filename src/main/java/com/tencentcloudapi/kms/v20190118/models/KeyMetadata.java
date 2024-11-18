@@ -102,7 +102,6 @@ public class KeyMetadata extends AbstractModel {
 
     /**
     * 计划删除的时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeletionDate")
     @Expose
@@ -110,7 +109,6 @@ public class KeyMetadata extends AbstractModel {
 
     /**
     * CMK 密钥材料类型，由KMS创建的为： TENCENT_KMS， 由用户导入的类型为：EXTERNAL
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Origin")
     @Expose
@@ -118,7 +116,6 @@ public class KeyMetadata extends AbstractModel {
 
     /**
     * 在Origin为  EXTERNAL 时有效，表示密钥材料的有效日期， 0 表示不过期
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ValidTo")
     @Expose
@@ -133,11 +130,24 @@ public class KeyMetadata extends AbstractModel {
 
     /**
     * HSM 集群 ID（仅对 KMS 独占版/托管版服务实例有效）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HsmClusterId")
     @Expose
     private String HsmClusterId;
+
+    /**
+    * 密钥轮转周期（天）
+    */
+    @SerializedName("RotateDays")
+    @Expose
+    private Long RotateDays;
+
+    /**
+    * 上次乱转时间（Unix timestamp）
+    */
+    @SerializedName("LastRotateTime")
+    @Expose
+    private Long LastRotateTime;
 
     /**
      * Get CMK的全局唯一标识 
@@ -316,10 +326,8 @@ public class KeyMetadata extends AbstractModel {
     }
 
     /**
-     * Get 计划删除的时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 计划删除的时间 
      * @return DeletionDate 计划删除的时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDeletionDate() {
         return this.DeletionDate;
@@ -327,19 +335,15 @@ public class KeyMetadata extends AbstractModel {
 
     /**
      * Set 计划删除的时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeletionDate 计划删除的时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeletionDate(Long DeletionDate) {
         this.DeletionDate = DeletionDate;
     }
 
     /**
-     * Get CMK 密钥材料类型，由KMS创建的为： TENCENT_KMS， 由用户导入的类型为：EXTERNAL
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get CMK 密钥材料类型，由KMS创建的为： TENCENT_KMS， 由用户导入的类型为：EXTERNAL 
      * @return Origin CMK 密钥材料类型，由KMS创建的为： TENCENT_KMS， 由用户导入的类型为：EXTERNAL
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOrigin() {
         return this.Origin;
@@ -347,19 +351,15 @@ public class KeyMetadata extends AbstractModel {
 
     /**
      * Set CMK 密钥材料类型，由KMS创建的为： TENCENT_KMS， 由用户导入的类型为：EXTERNAL
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Origin CMK 密钥材料类型，由KMS创建的为： TENCENT_KMS， 由用户导入的类型为：EXTERNAL
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOrigin(String Origin) {
         this.Origin = Origin;
     }
 
     /**
-     * Get 在Origin为  EXTERNAL 时有效，表示密钥材料的有效日期， 0 表示不过期
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 在Origin为  EXTERNAL 时有效，表示密钥材料的有效日期， 0 表示不过期 
      * @return ValidTo 在Origin为  EXTERNAL 时有效，表示密钥材料的有效日期， 0 表示不过期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getValidTo() {
         return this.ValidTo;
@@ -367,9 +367,7 @@ public class KeyMetadata extends AbstractModel {
 
     /**
      * Set 在Origin为  EXTERNAL 时有效，表示密钥材料的有效日期， 0 表示不过期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ValidTo 在Origin为  EXTERNAL 时有效，表示密钥材料的有效日期， 0 表示不过期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValidTo(Long ValidTo) {
         this.ValidTo = ValidTo;
@@ -392,10 +390,8 @@ public class KeyMetadata extends AbstractModel {
     }
 
     /**
-     * Get HSM 集群 ID（仅对 KMS 独占版/托管版服务实例有效）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get HSM 集群 ID（仅对 KMS 独占版/托管版服务实例有效） 
      * @return HsmClusterId HSM 集群 ID（仅对 KMS 独占版/托管版服务实例有效）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHsmClusterId() {
         return this.HsmClusterId;
@@ -403,12 +399,42 @@ public class KeyMetadata extends AbstractModel {
 
     /**
      * Set HSM 集群 ID（仅对 KMS 独占版/托管版服务实例有效）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HsmClusterId HSM 集群 ID（仅对 KMS 独占版/托管版服务实例有效）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHsmClusterId(String HsmClusterId) {
         this.HsmClusterId = HsmClusterId;
+    }
+
+    /**
+     * Get 密钥轮转周期（天） 
+     * @return RotateDays 密钥轮转周期（天）
+     */
+    public Long getRotateDays() {
+        return this.RotateDays;
+    }
+
+    /**
+     * Set 密钥轮转周期（天）
+     * @param RotateDays 密钥轮转周期（天）
+     */
+    public void setRotateDays(Long RotateDays) {
+        this.RotateDays = RotateDays;
+    }
+
+    /**
+     * Get 上次乱转时间（Unix timestamp） 
+     * @return LastRotateTime 上次乱转时间（Unix timestamp）
+     */
+    public Long getLastRotateTime() {
+        return this.LastRotateTime;
+    }
+
+    /**
+     * Set 上次乱转时间（Unix timestamp）
+     * @param LastRotateTime 上次乱转时间（Unix timestamp）
+     */
+    public void setLastRotateTime(Long LastRotateTime) {
+        this.LastRotateTime = LastRotateTime;
     }
 
     public KeyMetadata() {
@@ -467,6 +493,12 @@ public class KeyMetadata extends AbstractModel {
         if (source.HsmClusterId != null) {
             this.HsmClusterId = new String(source.HsmClusterId);
         }
+        if (source.RotateDays != null) {
+            this.RotateDays = new Long(source.RotateDays);
+        }
+        if (source.LastRotateTime != null) {
+            this.LastRotateTime = new Long(source.LastRotateTime);
+        }
     }
 
 
@@ -490,6 +522,8 @@ public class KeyMetadata extends AbstractModel {
         this.setParamSimple(map, prefix + "ValidTo", this.ValidTo);
         this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
         this.setParamSimple(map, prefix + "HsmClusterId", this.HsmClusterId);
+        this.setParamSimple(map, prefix + "RotateDays", this.RotateDays);
+        this.setParamSimple(map, prefix + "LastRotateTime", this.LastRotateTime);
 
     }
 }

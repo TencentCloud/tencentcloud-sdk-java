@@ -25,7 +25,6 @@ public class DescribeAssetWebLocationPathListResponse extends AbstractModel {
 
     /**
     * 总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Total")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeAssetWebLocationPathListResponse extends AbstractModel {
 
     /**
     * 列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Paths")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeAssetWebLocationPathListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 总数 
      * @return Total 总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotal() {
         return this.Total;
@@ -58,19 +54,15 @@ public class DescribeAssetWebLocationPathListResponse extends AbstractModel {
 
     /**
      * Set 总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Total 总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotal(Long Total) {
         this.Total = Total;
     }
 
     /**
-     * Get 列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 列表 
      * @return Paths 列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AssetWebLocationPath [] getPaths() {
         return this.Paths;
@@ -78,9 +70,7 @@ public class DescribeAssetWebLocationPathListResponse extends AbstractModel {
 
     /**
      * Set 列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Paths 列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPaths(AssetWebLocationPath [] Paths) {
         this.Paths = Paths;

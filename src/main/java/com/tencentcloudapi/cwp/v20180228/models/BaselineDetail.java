@@ -25,7 +25,6 @@ public class BaselineDetail extends AbstractModel {
 
     /**
     * 基线描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
     @Expose
@@ -33,7 +32,6 @@ public class BaselineDetail extends AbstractModel {
 
     /**
     * 危害等级
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Level")
     @Expose
@@ -41,7 +39,6 @@ public class BaselineDetail extends AbstractModel {
 
     /**
     * package名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PackageName")
     @Expose
@@ -49,7 +46,6 @@ public class BaselineDetail extends AbstractModel {
 
     /**
     * 父级id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ParentId")
     @Expose
@@ -57,17 +53,14 @@ public class BaselineDetail extends AbstractModel {
 
     /**
     * 基线名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-     * Get 基线描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 基线描述 
      * @return Description 基线描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
         return this.Description;
@@ -75,19 +68,15 @@ public class BaselineDetail extends AbstractModel {
 
     /**
      * Set 基线描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Description 基线描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 危害等级
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 危害等级 
      * @return Level 危害等级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLevel() {
         return this.Level;
@@ -95,19 +84,15 @@ public class BaselineDetail extends AbstractModel {
 
     /**
      * Set 危害等级
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Level 危害等级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLevel(Long Level) {
         this.Level = Level;
     }
 
     /**
-     * Get package名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get package名 
      * @return PackageName package名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPackageName() {
         return this.PackageName;
@@ -115,19 +100,15 @@ public class BaselineDetail extends AbstractModel {
 
     /**
      * Set package名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PackageName package名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPackageName(String PackageName) {
         this.PackageName = PackageName;
     }
 
     /**
-     * Get 父级id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 父级id 
      * @return ParentId 父级id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getParentId() {
         return this.ParentId;
@@ -135,19 +116,15 @@ public class BaselineDetail extends AbstractModel {
 
     /**
      * Set 父级id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ParentId 父级id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setParentId(Long ParentId) {
         this.ParentId = ParentId;
     }
 
     /**
-     * Get 基线名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 基线名 
      * @return Name 基线名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -155,9 +132,7 @@ public class BaselineDetail extends AbstractModel {
 
     /**
      * Set 基线名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 基线名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;

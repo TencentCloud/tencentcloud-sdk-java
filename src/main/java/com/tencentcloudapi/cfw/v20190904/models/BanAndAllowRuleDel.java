@@ -25,7 +25,6 @@ public class BanAndAllowRuleDel extends AbstractModel {
 
     /**
     * 封禁和放通对象
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Ioc")
     @Expose
@@ -33,7 +32,6 @@ public class BanAndAllowRuleDel extends AbstractModel {
 
     /**
     * 0互联网出站 1互联网入站 5内网访问源 6内网访问目的 （DeleteBlockIgnoreRuleNew接口，该字段无效）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DirectionList")
     @Expose
@@ -41,17 +39,15 @@ public class BanAndAllowRuleDel extends AbstractModel {
 
     /**
     * 规则类型
-注意：此字段可能返回 null，表示取不到有效值。
+RuleType: 1黑名单 2外部IP 3域名 4情报 5资产 6自定义规则  7入侵防御规则
     */
     @SerializedName("RuleType")
     @Expose
     private Long RuleType;
 
     /**
-     * Get 封禁和放通对象
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 封禁和放通对象 
      * @return Ioc 封禁和放通对象
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIoc() {
         return this.Ioc;
@@ -59,19 +55,15 @@ public class BanAndAllowRuleDel extends AbstractModel {
 
     /**
      * Set 封禁和放通对象
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Ioc 封禁和放通对象
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIoc(String Ioc) {
         this.Ioc = Ioc;
     }
 
     /**
-     * Get 0互联网出站 1互联网入站 5内网访问源 6内网访问目的 （DeleteBlockIgnoreRuleNew接口，该字段无效）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 0互联网出站 1互联网入站 5内网访问源 6内网访问目的 （DeleteBlockIgnoreRuleNew接口，该字段无效） 
      * @return DirectionList 0互联网出站 1互联网入站 5内网访问源 6内网访问目的 （DeleteBlockIgnoreRuleNew接口，该字段无效）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDirectionList() {
         return this.DirectionList;
@@ -79,9 +71,7 @@ public class BanAndAllowRuleDel extends AbstractModel {
 
     /**
      * Set 0互联网出站 1互联网入站 5内网访问源 6内网访问目的 （DeleteBlockIgnoreRuleNew接口，该字段无效）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DirectionList 0互联网出站 1互联网入站 5内网访问源 6内网访问目的 （DeleteBlockIgnoreRuleNew接口，该字段无效）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDirectionList(String DirectionList) {
         this.DirectionList = DirectionList;
@@ -89,9 +79,9 @@ public class BanAndAllowRuleDel extends AbstractModel {
 
     /**
      * Get 规则类型
-注意：此字段可能返回 null，表示取不到有效值。 
+RuleType: 1黑名单 2外部IP 3域名 4情报 5资产 6自定义规则  7入侵防御规则 
      * @return RuleType 规则类型
-注意：此字段可能返回 null，表示取不到有效值。
+RuleType: 1黑名单 2外部IP 3域名 4情报 5资产 6自定义规则  7入侵防御规则
      */
     public Long getRuleType() {
         return this.RuleType;
@@ -99,9 +89,9 @@ public class BanAndAllowRuleDel extends AbstractModel {
 
     /**
      * Set 规则类型
-注意：此字段可能返回 null，表示取不到有效值。
+RuleType: 1黑名单 2外部IP 3域名 4情报 5资产 6自定义规则  7入侵防御规则
      * @param RuleType 规则类型
-注意：此字段可能返回 null，表示取不到有效值。
+RuleType: 1黑名单 2外部IP 3域名 4情报 5资产 6自定义规则  7入侵防御规则
      */
     public void setRuleType(Long RuleType) {
         this.RuleType = RuleType;

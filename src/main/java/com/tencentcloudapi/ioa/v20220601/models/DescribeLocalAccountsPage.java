@@ -25,7 +25,6 @@ public class DescribeLocalAccountsPage extends AbstractModel {
 
     /**
     * 公共分页对象
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Page")
     @Expose
@@ -33,17 +32,14 @@ public class DescribeLocalAccountsPage extends AbstractModel {
 
     /**
     * 获取账号列表响应的单个对象
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Items")
     @Expose
     private DescribeLocalAccountsData [] Items;
 
     /**
-     * Get 公共分页对象
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 公共分页对象 
      * @return Page 公共分页对象
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Paging getPage() {
         return this.Page;
@@ -51,19 +47,15 @@ public class DescribeLocalAccountsPage extends AbstractModel {
 
     /**
      * Set 公共分页对象
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Page 公共分页对象
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPage(Paging Page) {
         this.Page = Page;
     }
 
     /**
-     * Get 获取账号列表响应的单个对象
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 获取账号列表响应的单个对象 
      * @return Items 获取账号列表响应的单个对象
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DescribeLocalAccountsData [] getItems() {
         return this.Items;
@@ -71,9 +63,7 @@ public class DescribeLocalAccountsPage extends AbstractModel {
 
     /**
      * Set 获取账号列表响应的单个对象
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Items 获取账号列表响应的单个对象
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setItems(DescribeLocalAccountsData [] Items) {
         this.Items = Items;

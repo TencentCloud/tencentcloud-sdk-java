@@ -74,7 +74,6 @@ public class WarningInfoObj extends AbstractModel {
 
     /**
     * 告警主机范围类型，0:全部主机，1:按所属项目选，2:按腾讯云标签选，3:按主机安全标签选，4:自选主机
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HostRange")
     @Expose
@@ -82,7 +81,6 @@ public class WarningInfoObj extends AbstractModel {
 
     /**
     * 配置的告警范围主机个数，前端用此判断展示提示信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Count")
     @Expose
@@ -201,10 +199,8 @@ public class WarningInfoObj extends AbstractModel {
     }
 
     /**
-     * Get 告警主机范围类型，0:全部主机，1:按所属项目选，2:按腾讯云标签选，3:按主机安全标签选，4:自选主机
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 告警主机范围类型，0:全部主机，1:按所属项目选，2:按腾讯云标签选，3:按主机安全标签选，4:自选主机 
      * @return HostRange 告警主机范围类型，0:全部主机，1:按所属项目选，2:按腾讯云标签选，3:按主机安全标签选，4:自选主机
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getHostRange() {
         return this.HostRange;
@@ -212,19 +208,15 @@ public class WarningInfoObj extends AbstractModel {
 
     /**
      * Set 告警主机范围类型，0:全部主机，1:按所属项目选，2:按腾讯云标签选，3:按主机安全标签选，4:自选主机
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HostRange 告警主机范围类型，0:全部主机，1:按所属项目选，2:按腾讯云标签选，3:按主机安全标签选，4:自选主机
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHostRange(Long HostRange) {
         this.HostRange = HostRange;
     }
 
     /**
-     * Get 配置的告警范围主机个数，前端用此判断展示提示信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 配置的告警范围主机个数，前端用此判断展示提示信息 
      * @return Count 配置的告警范围主机个数，前端用此判断展示提示信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCount() {
         return this.Count;
@@ -232,9 +224,7 @@ public class WarningInfoObj extends AbstractModel {
 
     /**
      * Set 配置的告警范围主机个数，前端用此判断展示提示信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Count 配置的告警范围主机个数，前端用此判断展示提示信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCount(Long Count) {
         this.Count = Count;

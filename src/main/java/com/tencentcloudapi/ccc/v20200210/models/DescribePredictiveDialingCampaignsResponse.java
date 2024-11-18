@@ -25,7 +25,6 @@ public class DescribePredictiveDialingCampaignsResponse extends AbstractModel {
 
     /**
     * 数据总量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -33,7 +32,6 @@ public class DescribePredictiveDialingCampaignsResponse extends AbstractModel {
 
     /**
     * 数据
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CampaignList")
     @Expose
@@ -47,10 +45,8 @@ public class DescribePredictiveDialingCampaignsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 数据总量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据总量 
      * @return TotalCount 数据总量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -58,19 +54,15 @@ public class DescribePredictiveDialingCampaignsResponse extends AbstractModel {
 
     /**
      * Set 数据总量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 数据总量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 数据
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据 
      * @return CampaignList 数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DescribePredictiveDialingCampaignsElement [] getCampaignList() {
         return this.CampaignList;
@@ -78,9 +70,7 @@ public class DescribePredictiveDialingCampaignsResponse extends AbstractModel {
 
     /**
      * Set 数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CampaignList 数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCampaignList(DescribePredictiveDialingCampaignsElement [] CampaignList) {
         this.CampaignList = CampaignList;

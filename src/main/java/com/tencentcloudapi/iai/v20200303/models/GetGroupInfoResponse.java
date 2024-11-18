@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class GetGroupInfoResponse extends AbstractModel {
 
     /**
-    * 人员库名称
+    * 人员库名称。
     */
     @SerializedName("GroupName")
     @Expose
     private String GroupName;
 
     /**
-    * 人员库ID
+    * 人员库ID。
     */
     @SerializedName("GroupId")
     @Expose
     private String GroupId;
 
     /**
-    * 人员库自定义描述字段
+    * 人员库自定义描述字段。
     */
     @SerializedName("GroupExDescriptions")
     @Expose
     private String [] GroupExDescriptions;
 
     /**
-    * 人员库信息备注
+    * 人员库信息备注。
     */
     @SerializedName("Tag")
     @Expose
@@ -73,64 +73,64 @@ public class GetGroupInfoResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 人员库名称 
-     * @return GroupName 人员库名称
+     * Get 人员库名称。 
+     * @return GroupName 人员库名称。
      */
     public String getGroupName() {
         return this.GroupName;
     }
 
     /**
-     * Set 人员库名称
-     * @param GroupName 人员库名称
+     * Set 人员库名称。
+     * @param GroupName 人员库名称。
      */
     public void setGroupName(String GroupName) {
         this.GroupName = GroupName;
     }
 
     /**
-     * Get 人员库ID 
-     * @return GroupId 人员库ID
+     * Get 人员库ID。 
+     * @return GroupId 人员库ID。
      */
     public String getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set 人员库ID
-     * @param GroupId 人员库ID
+     * Set 人员库ID。
+     * @param GroupId 人员库ID。
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;
     }
 
     /**
-     * Get 人员库自定义描述字段 
-     * @return GroupExDescriptions 人员库自定义描述字段
+     * Get 人员库自定义描述字段。 
+     * @return GroupExDescriptions 人员库自定义描述字段。
      */
     public String [] getGroupExDescriptions() {
         return this.GroupExDescriptions;
     }
 
     /**
-     * Set 人员库自定义描述字段
-     * @param GroupExDescriptions 人员库自定义描述字段
+     * Set 人员库自定义描述字段。
+     * @param GroupExDescriptions 人员库自定义描述字段。
      */
     public void setGroupExDescriptions(String [] GroupExDescriptions) {
         this.GroupExDescriptions = GroupExDescriptions;
     }
 
     /**
-     * Get 人员库信息备注 
-     * @return Tag 人员库信息备注
+     * Get 人员库信息备注。 
+     * @return Tag 人员库信息备注。
      */
     public String getTag() {
         return this.Tag;
     }
 
     /**
-     * Set 人员库信息备注
-     * @param Tag 人员库信息备注
+     * Set 人员库信息备注。
+     * @param Tag 人员库信息备注。
      */
     public void setTag(String Tag) {
         this.Tag = Tag;

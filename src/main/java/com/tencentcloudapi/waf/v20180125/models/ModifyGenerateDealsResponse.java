@@ -25,7 +25,6 @@ public class ModifyGenerateDealsResponse extends AbstractModel {
 
     /**
     * 计费下单响应结构体
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
     @Expose
@@ -40,7 +39,6 @@ public class ModifyGenerateDealsResponse extends AbstractModel {
 
     /**
     * 返回message
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReturnMessage")
     @Expose
@@ -54,10 +52,8 @@ public class ModifyGenerateDealsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 计费下单响应结构体
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 计费下单响应结构体 
      * @return Data 计费下单响应结构体
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DealData getData() {
         return this.Data;
@@ -65,9 +61,7 @@ public class ModifyGenerateDealsResponse extends AbstractModel {
 
     /**
      * Set 计费下单响应结构体
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Data 计费下单响应结构体
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(DealData Data) {
         this.Data = Data;
@@ -90,10 +84,8 @@ public class ModifyGenerateDealsResponse extends AbstractModel {
     }
 
     /**
-     * Get 返回message
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 返回message 
      * @return ReturnMessage 返回message
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getReturnMessage() {
         return this.ReturnMessage;
@@ -101,9 +93,7 @@ public class ModifyGenerateDealsResponse extends AbstractModel {
 
     /**
      * Set 返回message
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReturnMessage 返回message
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReturnMessage(String ReturnMessage) {
         this.ReturnMessage = ReturnMessage;

@@ -32,7 +32,6 @@ public class DescribeAssetWebFrameListResponse extends AbstractModel {
 
     /**
     * 列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WebFrames")
     @Expose
@@ -62,10 +61,8 @@ public class DescribeAssetWebFrameListResponse extends AbstractModel {
     }
 
     /**
-     * Get 列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 列表 
      * @return WebFrames 列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AssetWebFrameBaseInfo [] getWebFrames() {
         return this.WebFrames;
@@ -73,9 +70,7 @@ public class DescribeAssetWebFrameListResponse extends AbstractModel {
 
     /**
      * Set 列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WebFrames 列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWebFrames(AssetWebFrameBaseInfo [] WebFrames) {
         this.WebFrames = WebFrames;

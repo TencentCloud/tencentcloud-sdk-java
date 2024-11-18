@@ -52,6 +52,13 @@ public class DescribeImageAnimateJobResponse extends AbstractModel {
     private String ResultVideoUrl;
 
     /**
+    * 掩码视频链接
+    */
+    @SerializedName("MaskVideoUrl")
+    @Expose
+    private String MaskVideoUrl;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -123,6 +130,22 @@ public class DescribeImageAnimateJobResponse extends AbstractModel {
     }
 
     /**
+     * Get 掩码视频链接 
+     * @return MaskVideoUrl 掩码视频链接
+     */
+    public String getMaskVideoUrl() {
+        return this.MaskVideoUrl;
+    }
+
+    /**
+     * Set 掩码视频链接
+     * @param MaskVideoUrl 掩码视频链接
+     */
+    public void setMaskVideoUrl(String MaskVideoUrl) {
+        this.MaskVideoUrl = MaskVideoUrl;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -158,6 +181,9 @@ public class DescribeImageAnimateJobResponse extends AbstractModel {
         if (source.ResultVideoUrl != null) {
             this.ResultVideoUrl = new String(source.ResultVideoUrl);
         }
+        if (source.MaskVideoUrl != null) {
+            this.MaskVideoUrl = new String(source.MaskVideoUrl);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -172,6 +198,7 @@ public class DescribeImageAnimateJobResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "ErrorCode", this.ErrorCode);
         this.setParamSimple(map, prefix + "ErrorMessage", this.ErrorMessage);
         this.setParamSimple(map, prefix + "ResultVideoUrl", this.ResultVideoUrl);
+        this.setParamSimple(map, prefix + "MaskVideoUrl", this.MaskVideoUrl);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

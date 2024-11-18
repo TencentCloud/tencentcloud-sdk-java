@@ -25,7 +25,6 @@ public class VpcFwInstanceInfo extends AbstractModel {
 
     /**
     * VPC防火墙实例名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FwInsName")
     @Expose
@@ -33,7 +32,6 @@ public class VpcFwInstanceInfo extends AbstractModel {
 
     /**
     * VPC防火墙实例ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FwInsId")
     @Expose
@@ -41,7 +39,6 @@ public class VpcFwInstanceInfo extends AbstractModel {
 
     /**
     * VPC防火墙实例模式 0: 旧VPC模式防火墙 1: CCN模式防火墙
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FwMode")
     @Expose
@@ -49,7 +46,6 @@ public class VpcFwInstanceInfo extends AbstractModel {
 
     /**
     * VPC防火墙接入网络实例个数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("JoinInsNum")
     @Expose
@@ -57,7 +53,6 @@ public class VpcFwInstanceInfo extends AbstractModel {
 
     /**
     * VPC防火墙开关个数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FwSwitchNum")
     @Expose
@@ -65,7 +60,6 @@ public class VpcFwInstanceInfo extends AbstractModel {
 
     /**
     * VPC防火墙状态 0:正常 ， 1：创建中 2: 变更中
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -73,7 +67,6 @@ public class VpcFwInstanceInfo extends AbstractModel {
 
     /**
     * VPC防火墙创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Time")
     @Expose
@@ -81,7 +74,6 @@ public class VpcFwInstanceInfo extends AbstractModel {
 
     /**
     * VPC 相关云联网ID列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CcnId")
     @Expose
@@ -89,7 +81,6 @@ public class VpcFwInstanceInfo extends AbstractModel {
 
     /**
     * VPC 相关云联网名称列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CcnName")
     @Expose
@@ -97,7 +88,6 @@ public class VpcFwInstanceInfo extends AbstractModel {
 
     /**
     * VPC 相关对等连接ID列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PeerConnectionId")
     @Expose
@@ -105,7 +95,6 @@ public class VpcFwInstanceInfo extends AbstractModel {
 
     /**
     * VPC 相关对等连接名称列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PeerConnectionName")
     @Expose
@@ -113,7 +102,6 @@ public class VpcFwInstanceInfo extends AbstractModel {
 
     /**
     * VPC防火墙CVM的列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FwCvmLst")
     @Expose
@@ -121,7 +109,6 @@ public class VpcFwInstanceInfo extends AbstractModel {
 
     /**
     * VPC防火墙接入网络实例类型列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("JoinInsLst")
     @Expose
@@ -129,7 +116,6 @@ public class VpcFwInstanceInfo extends AbstractModel {
 
     /**
     * 防火墙网关信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FwGateway")
     @Expose
@@ -137,7 +123,6 @@ public class VpcFwInstanceInfo extends AbstractModel {
 
     /**
     * 防火墙(组)ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FwGroupId")
     @Expose
@@ -145,7 +130,6 @@ public class VpcFwInstanceInfo extends AbstractModel {
 
     /**
     * 已使用规则数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleUsed")
     @Expose
@@ -153,7 +137,6 @@ public class VpcFwInstanceInfo extends AbstractModel {
 
     /**
     * 最大规则数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleMax")
     @Expose
@@ -161,7 +144,6 @@ public class VpcFwInstanceInfo extends AbstractModel {
 
     /**
     * 防火墙实例带宽
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Width")
     @Expose
@@ -169,7 +151,6 @@ public class VpcFwInstanceInfo extends AbstractModel {
 
     /**
     * 用户VPC墙总带宽
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserVpcWidth")
     @Expose
@@ -177,7 +158,6 @@ public class VpcFwInstanceInfo extends AbstractModel {
 
     /**
     * 接入的vpc列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("JoinInsIdLst")
     @Expose
@@ -192,7 +172,6 @@ public class VpcFwInstanceInfo extends AbstractModel {
 
     /**
     * 实例引擎版本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EngineVersion")
     @Expose
@@ -200,7 +179,6 @@ public class VpcFwInstanceInfo extends AbstractModel {
 
     /**
     * 引擎是否可升级：0，不可升级；1，可升级
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateEnable")
     @Expose
@@ -208,7 +186,6 @@ public class VpcFwInstanceInfo extends AbstractModel {
 
     /**
     * 引擎运行模式，Normal:正常, OnlyRoute:透明模式
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TrafficMode")
     @Expose
@@ -216,7 +193,6 @@ public class VpcFwInstanceInfo extends AbstractModel {
 
     /**
     * 引擎预约升级时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReserveTime")
     @Expose
@@ -224,7 +200,6 @@ public class VpcFwInstanceInfo extends AbstractModel {
 
     /**
     * 预约引擎升级版本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReserveVersion")
     @Expose
@@ -232,7 +207,6 @@ public class VpcFwInstanceInfo extends AbstractModel {
 
     /**
     * 引擎预约升级版本状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReserveVersionState")
     @Expose
@@ -240,7 +214,6 @@ public class VpcFwInstanceInfo extends AbstractModel {
 
     /**
     * 弹性开关 1打开 0关闭
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ElasticSwitch")
     @Expose
@@ -248,7 +221,6 @@ public class VpcFwInstanceInfo extends AbstractModel {
 
     /**
     * 弹性带宽，单位Mbps
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ElasticBandwidth")
     @Expose
@@ -258,17 +230,14 @@ public class VpcFwInstanceInfo extends AbstractModel {
     * 是否首次开通按量付费
 1 是
 0 不是
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsFirstAfterPay")
     @Expose
     private Long IsFirstAfterPay;
 
     /**
-     * Get VPC防火墙实例名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get VPC防火墙实例名称 
      * @return FwInsName VPC防火墙实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFwInsName() {
         return this.FwInsName;
@@ -276,19 +245,15 @@ public class VpcFwInstanceInfo extends AbstractModel {
 
     /**
      * Set VPC防火墙实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FwInsName VPC防火墙实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFwInsName(String FwInsName) {
         this.FwInsName = FwInsName;
     }
 
     /**
-     * Get VPC防火墙实例ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get VPC防火墙实例ID 
      * @return FwInsId VPC防火墙实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFwInsId() {
         return this.FwInsId;
@@ -296,19 +261,15 @@ public class VpcFwInstanceInfo extends AbstractModel {
 
     /**
      * Set VPC防火墙实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FwInsId VPC防火墙实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFwInsId(String FwInsId) {
         this.FwInsId = FwInsId;
     }
 
     /**
-     * Get VPC防火墙实例模式 0: 旧VPC模式防火墙 1: CCN模式防火墙
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get VPC防火墙实例模式 0: 旧VPC模式防火墙 1: CCN模式防火墙 
      * @return FwMode VPC防火墙实例模式 0: 旧VPC模式防火墙 1: CCN模式防火墙
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFwMode() {
         return this.FwMode;
@@ -316,19 +277,15 @@ public class VpcFwInstanceInfo extends AbstractModel {
 
     /**
      * Set VPC防火墙实例模式 0: 旧VPC模式防火墙 1: CCN模式防火墙
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FwMode VPC防火墙实例模式 0: 旧VPC模式防火墙 1: CCN模式防火墙
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFwMode(Long FwMode) {
         this.FwMode = FwMode;
     }
 
     /**
-     * Get VPC防火墙接入网络实例个数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get VPC防火墙接入网络实例个数 
      * @return JoinInsNum VPC防火墙接入网络实例个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getJoinInsNum() {
         return this.JoinInsNum;
@@ -336,19 +293,15 @@ public class VpcFwInstanceInfo extends AbstractModel {
 
     /**
      * Set VPC防火墙接入网络实例个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param JoinInsNum VPC防火墙接入网络实例个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setJoinInsNum(Long JoinInsNum) {
         this.JoinInsNum = JoinInsNum;
     }
 
     /**
-     * Get VPC防火墙开关个数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get VPC防火墙开关个数 
      * @return FwSwitchNum VPC防火墙开关个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFwSwitchNum() {
         return this.FwSwitchNum;
@@ -356,19 +309,15 @@ public class VpcFwInstanceInfo extends AbstractModel {
 
     /**
      * Set VPC防火墙开关个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FwSwitchNum VPC防火墙开关个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFwSwitchNum(Long FwSwitchNum) {
         this.FwSwitchNum = FwSwitchNum;
     }
 
     /**
-     * Get VPC防火墙状态 0:正常 ， 1：创建中 2: 变更中
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get VPC防火墙状态 0:正常 ， 1：创建中 2: 变更中 
      * @return Status VPC防火墙状态 0:正常 ， 1：创建中 2: 变更中
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
         return this.Status;
@@ -376,19 +325,15 @@ public class VpcFwInstanceInfo extends AbstractModel {
 
     /**
      * Set VPC防火墙状态 0:正常 ， 1：创建中 2: 变更中
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status VPC防火墙状态 0:正常 ， 1：创建中 2: 变更中
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get VPC防火墙创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get VPC防火墙创建时间 
      * @return Time VPC防火墙创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTime() {
         return this.Time;
@@ -396,19 +341,15 @@ public class VpcFwInstanceInfo extends AbstractModel {
 
     /**
      * Set VPC防火墙创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Time VPC防火墙创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTime(String Time) {
         this.Time = Time;
     }
 
     /**
-     * Get VPC 相关云联网ID列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get VPC 相关云联网ID列表 
      * @return CcnId VPC 相关云联网ID列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getCcnId() {
         return this.CcnId;
@@ -416,19 +357,15 @@ public class VpcFwInstanceInfo extends AbstractModel {
 
     /**
      * Set VPC 相关云联网ID列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CcnId VPC 相关云联网ID列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCcnId(String [] CcnId) {
         this.CcnId = CcnId;
     }
 
     /**
-     * Get VPC 相关云联网名称列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get VPC 相关云联网名称列表 
      * @return CcnName VPC 相关云联网名称列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getCcnName() {
         return this.CcnName;
@@ -436,19 +373,15 @@ public class VpcFwInstanceInfo extends AbstractModel {
 
     /**
      * Set VPC 相关云联网名称列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CcnName VPC 相关云联网名称列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCcnName(String [] CcnName) {
         this.CcnName = CcnName;
     }
 
     /**
-     * Get VPC 相关对等连接ID列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get VPC 相关对等连接ID列表 
      * @return PeerConnectionId VPC 相关对等连接ID列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getPeerConnectionId() {
         return this.PeerConnectionId;
@@ -456,19 +389,15 @@ public class VpcFwInstanceInfo extends AbstractModel {
 
     /**
      * Set VPC 相关对等连接ID列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PeerConnectionId VPC 相关对等连接ID列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPeerConnectionId(String [] PeerConnectionId) {
         this.PeerConnectionId = PeerConnectionId;
     }
 
     /**
-     * Get VPC 相关对等连接名称列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get VPC 相关对等连接名称列表 
      * @return PeerConnectionName VPC 相关对等连接名称列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getPeerConnectionName() {
         return this.PeerConnectionName;
@@ -476,19 +405,15 @@ public class VpcFwInstanceInfo extends AbstractModel {
 
     /**
      * Set VPC 相关对等连接名称列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PeerConnectionName VPC 相关对等连接名称列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPeerConnectionName(String [] PeerConnectionName) {
         this.PeerConnectionName = PeerConnectionName;
     }
 
     /**
-     * Get VPC防火墙CVM的列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get VPC防火墙CVM的列表 
      * @return FwCvmLst VPC防火墙CVM的列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public VpcFwCvmInsInfo [] getFwCvmLst() {
         return this.FwCvmLst;
@@ -496,19 +421,15 @@ public class VpcFwInstanceInfo extends AbstractModel {
 
     /**
      * Set VPC防火墙CVM的列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FwCvmLst VPC防火墙CVM的列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFwCvmLst(VpcFwCvmInsInfo [] FwCvmLst) {
         this.FwCvmLst = FwCvmLst;
     }
 
     /**
-     * Get VPC防火墙接入网络实例类型列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get VPC防火墙接入网络实例类型列表 
      * @return JoinInsLst VPC防火墙接入网络实例类型列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public VpcFwJoinInstanceType [] getJoinInsLst() {
         return this.JoinInsLst;
@@ -516,19 +437,15 @@ public class VpcFwInstanceInfo extends AbstractModel {
 
     /**
      * Set VPC防火墙接入网络实例类型列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param JoinInsLst VPC防火墙接入网络实例类型列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setJoinInsLst(VpcFwJoinInstanceType [] JoinInsLst) {
         this.JoinInsLst = JoinInsLst;
     }
 
     /**
-     * Get 防火墙网关信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 防火墙网关信息 
      * @return FwGateway 防火墙网关信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public FwGateway [] getFwGateway() {
         return this.FwGateway;
@@ -536,19 +453,15 @@ public class VpcFwInstanceInfo extends AbstractModel {
 
     /**
      * Set 防火墙网关信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FwGateway 防火墙网关信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFwGateway(FwGateway [] FwGateway) {
         this.FwGateway = FwGateway;
     }
 
     /**
-     * Get 防火墙(组)ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 防火墙(组)ID 
      * @return FwGroupId 防火墙(组)ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFwGroupId() {
         return this.FwGroupId;
@@ -556,19 +469,15 @@ public class VpcFwInstanceInfo extends AbstractModel {
 
     /**
      * Set 防火墙(组)ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FwGroupId 防火墙(组)ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFwGroupId(String FwGroupId) {
         this.FwGroupId = FwGroupId;
     }
 
     /**
-     * Get 已使用规则数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 已使用规则数 
      * @return RuleUsed 已使用规则数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRuleUsed() {
         return this.RuleUsed;
@@ -576,19 +485,15 @@ public class VpcFwInstanceInfo extends AbstractModel {
 
     /**
      * Set 已使用规则数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RuleUsed 已使用规则数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleUsed(Long RuleUsed) {
         this.RuleUsed = RuleUsed;
     }
 
     /**
-     * Get 最大规则数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最大规则数 
      * @return RuleMax 最大规则数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRuleMax() {
         return this.RuleMax;
@@ -596,19 +501,15 @@ public class VpcFwInstanceInfo extends AbstractModel {
 
     /**
      * Set 最大规则数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RuleMax 最大规则数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleMax(Long RuleMax) {
         this.RuleMax = RuleMax;
     }
 
     /**
-     * Get 防火墙实例带宽
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 防火墙实例带宽 
      * @return Width 防火墙实例带宽
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getWidth() {
         return this.Width;
@@ -616,19 +517,15 @@ public class VpcFwInstanceInfo extends AbstractModel {
 
     /**
      * Set 防火墙实例带宽
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Width 防火墙实例带宽
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWidth(Long Width) {
         this.Width = Width;
     }
 
     /**
-     * Get 用户VPC墙总带宽
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户VPC墙总带宽 
      * @return UserVpcWidth 用户VPC墙总带宽
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getUserVpcWidth() {
         return this.UserVpcWidth;
@@ -636,19 +533,15 @@ public class VpcFwInstanceInfo extends AbstractModel {
 
     /**
      * Set 用户VPC墙总带宽
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UserVpcWidth 用户VPC墙总带宽
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserVpcWidth(Long UserVpcWidth) {
         this.UserVpcWidth = UserVpcWidth;
     }
 
     /**
-     * Get 接入的vpc列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 接入的vpc列表 
      * @return JoinInsIdLst 接入的vpc列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getJoinInsIdLst() {
         return this.JoinInsIdLst;
@@ -656,9 +549,7 @@ public class VpcFwInstanceInfo extends AbstractModel {
 
     /**
      * Set 接入的vpc列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param JoinInsIdLst 接入的vpc列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setJoinInsIdLst(String [] JoinInsIdLst) {
         this.JoinInsIdLst = JoinInsIdLst;
@@ -681,10 +572,8 @@ public class VpcFwInstanceInfo extends AbstractModel {
     }
 
     /**
-     * Get 实例引擎版本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例引擎版本 
      * @return EngineVersion 实例引擎版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEngineVersion() {
         return this.EngineVersion;
@@ -692,19 +581,15 @@ public class VpcFwInstanceInfo extends AbstractModel {
 
     /**
      * Set 实例引擎版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EngineVersion 实例引擎版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEngineVersion(String EngineVersion) {
         this.EngineVersion = EngineVersion;
     }
 
     /**
-     * Get 引擎是否可升级：0，不可升级；1，可升级
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 引擎是否可升级：0，不可升级；1，可升级 
      * @return UpdateEnable 引擎是否可升级：0，不可升级；1，可升级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getUpdateEnable() {
         return this.UpdateEnable;
@@ -712,19 +597,15 @@ public class VpcFwInstanceInfo extends AbstractModel {
 
     /**
      * Set 引擎是否可升级：0，不可升级；1，可升级
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdateEnable 引擎是否可升级：0，不可升级；1，可升级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateEnable(Long UpdateEnable) {
         this.UpdateEnable = UpdateEnable;
     }
 
     /**
-     * Get 引擎运行模式，Normal:正常, OnlyRoute:透明模式
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 引擎运行模式，Normal:正常, OnlyRoute:透明模式 
      * @return TrafficMode 引擎运行模式，Normal:正常, OnlyRoute:透明模式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTrafficMode() {
         return this.TrafficMode;
@@ -732,19 +613,15 @@ public class VpcFwInstanceInfo extends AbstractModel {
 
     /**
      * Set 引擎运行模式，Normal:正常, OnlyRoute:透明模式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TrafficMode 引擎运行模式，Normal:正常, OnlyRoute:透明模式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTrafficMode(String TrafficMode) {
         this.TrafficMode = TrafficMode;
     }
 
     /**
-     * Get 引擎预约升级时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 引擎预约升级时间 
      * @return ReserveTime 引擎预约升级时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getReserveTime() {
         return this.ReserveTime;
@@ -752,19 +629,15 @@ public class VpcFwInstanceInfo extends AbstractModel {
 
     /**
      * Set 引擎预约升级时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReserveTime 引擎预约升级时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReserveTime(String ReserveTime) {
         this.ReserveTime = ReserveTime;
     }
 
     /**
-     * Get 预约引擎升级版本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 预约引擎升级版本 
      * @return ReserveVersion 预约引擎升级版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getReserveVersion() {
         return this.ReserveVersion;
@@ -772,19 +645,15 @@ public class VpcFwInstanceInfo extends AbstractModel {
 
     /**
      * Set 预约引擎升级版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReserveVersion 预约引擎升级版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReserveVersion(String ReserveVersion) {
         this.ReserveVersion = ReserveVersion;
     }
 
     /**
-     * Get 引擎预约升级版本状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 引擎预约升级版本状态 
      * @return ReserveVersionState 引擎预约升级版本状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getReserveVersionState() {
         return this.ReserveVersionState;
@@ -792,19 +661,15 @@ public class VpcFwInstanceInfo extends AbstractModel {
 
     /**
      * Set 引擎预约升级版本状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReserveVersionState 引擎预约升级版本状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReserveVersionState(String ReserveVersionState) {
         this.ReserveVersionState = ReserveVersionState;
     }
 
     /**
-     * Get 弹性开关 1打开 0关闭
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 弹性开关 1打开 0关闭 
      * @return ElasticSwitch 弹性开关 1打开 0关闭
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getElasticSwitch() {
         return this.ElasticSwitch;
@@ -812,19 +677,15 @@ public class VpcFwInstanceInfo extends AbstractModel {
 
     /**
      * Set 弹性开关 1打开 0关闭
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ElasticSwitch 弹性开关 1打开 0关闭
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setElasticSwitch(Long ElasticSwitch) {
         this.ElasticSwitch = ElasticSwitch;
     }
 
     /**
-     * Get 弹性带宽，单位Mbps
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 弹性带宽，单位Mbps 
      * @return ElasticBandwidth 弹性带宽，单位Mbps
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getElasticBandwidth() {
         return this.ElasticBandwidth;
@@ -832,9 +693,7 @@ public class VpcFwInstanceInfo extends AbstractModel {
 
     /**
      * Set 弹性带宽，单位Mbps
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ElasticBandwidth 弹性带宽，单位Mbps
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setElasticBandwidth(Long ElasticBandwidth) {
         this.ElasticBandwidth = ElasticBandwidth;
@@ -843,12 +702,10 @@ public class VpcFwInstanceInfo extends AbstractModel {
     /**
      * Get 是否首次开通按量付费
 1 是
-0 不是
-注意：此字段可能返回 null，表示取不到有效值。 
+0 不是 
      * @return IsFirstAfterPay 是否首次开通按量付费
 1 是
 0 不是
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsFirstAfterPay() {
         return this.IsFirstAfterPay;
@@ -858,11 +715,9 @@ public class VpcFwInstanceInfo extends AbstractModel {
      * Set 是否首次开通按量付费
 1 是
 0 不是
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsFirstAfterPay 是否首次开通按量付费
 1 是
 0 不是
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsFirstAfterPay(Long IsFirstAfterPay) {
         this.IsFirstAfterPay = IsFirstAfterPay;

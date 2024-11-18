@@ -163,17 +163,6 @@ public class IssClient extends AbstractClient{
     }
 
     /**
-     *用于检测域名是否备案。
-     * @param req CheckDomainRequest
-     * @return CheckDomainResponse
-     * @throws TencentCloudSDKException
-     */
-    public CheckDomainResponse CheckDomain(CheckDomainRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "CheckDomain", CheckDomainResponse.class);
-    }
-
-    /**
      *用于设备通道云台控制，包括转动、变倍、变焦、光圈等。
      * @param req ControlDevicePTZRequest
      * @return ControlDevicePTZResponse
@@ -824,7 +813,7 @@ public class IssClient extends AbstractClient{
     }
 
     /**
-     *用于刷新国标设备的通道（接口调用后，触发向设备请求通道列表，新增的通道入库，设备上已删除的通道需自行删除、后台不自动删除）。
+     *用于同步国标设备的通道（接口调用后，触发向设备请求通道列表，新增的通道入库，设备上已删除的通道需自行删除、后台不自动删除）。
      * @param req RefreshDeviceChannelRequest
      * @return RefreshDeviceChannelResponse
      * @throws TencentCloudSDKException

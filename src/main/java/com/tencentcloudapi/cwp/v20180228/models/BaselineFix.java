@@ -67,7 +67,6 @@ public class BaselineFix extends AbstractModel {
 
     /**
     * 主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MachineExtraInfo")
     @Expose
@@ -170,10 +169,8 @@ public class BaselineFix extends AbstractModel {
     }
 
     /**
-     * Get 主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主机额外信息 
      * @return MachineExtraInfo 主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public MachineExtraInfo getMachineExtraInfo() {
         return this.MachineExtraInfo;
@@ -181,9 +178,7 @@ public class BaselineFix extends AbstractModel {
 
     /**
      * Set 主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MachineExtraInfo 主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMachineExtraInfo(MachineExtraInfo MachineExtraInfo) {
         this.MachineExtraInfo = MachineExtraInfo;

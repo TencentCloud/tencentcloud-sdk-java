@@ -25,7 +25,6 @@ public class DescribeAssetRecentMachineInfoResponse extends AbstractModel {
 
     /**
     * 总数量列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalList")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeAssetRecentMachineInfoResponse extends AbstractModel {
 
     /**
     * 在线数量列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LiveList")
     @Expose
@@ -41,7 +39,6 @@ public class DescribeAssetRecentMachineInfoResponse extends AbstractModel {
 
     /**
     * 离线数量列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OfflineList")
     @Expose
@@ -49,7 +46,6 @@ public class DescribeAssetRecentMachineInfoResponse extends AbstractModel {
 
     /**
     * 风险数量列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RiskList")
     @Expose
@@ -63,10 +59,8 @@ public class DescribeAssetRecentMachineInfoResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 总数量列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 总数量列表 
      * @return TotalList 总数量列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AssetKeyVal [] getTotalList() {
         return this.TotalList;
@@ -74,19 +68,15 @@ public class DescribeAssetRecentMachineInfoResponse extends AbstractModel {
 
     /**
      * Set 总数量列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalList 总数量列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalList(AssetKeyVal [] TotalList) {
         this.TotalList = TotalList;
     }
 
     /**
-     * Get 在线数量列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 在线数量列表 
      * @return LiveList 在线数量列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AssetKeyVal [] getLiveList() {
         return this.LiveList;
@@ -94,19 +84,15 @@ public class DescribeAssetRecentMachineInfoResponse extends AbstractModel {
 
     /**
      * Set 在线数量列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LiveList 在线数量列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLiveList(AssetKeyVal [] LiveList) {
         this.LiveList = LiveList;
     }
 
     /**
-     * Get 离线数量列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 离线数量列表 
      * @return OfflineList 离线数量列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AssetKeyVal [] getOfflineList() {
         return this.OfflineList;
@@ -114,19 +100,15 @@ public class DescribeAssetRecentMachineInfoResponse extends AbstractModel {
 
     /**
      * Set 离线数量列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OfflineList 离线数量列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOfflineList(AssetKeyVal [] OfflineList) {
         this.OfflineList = OfflineList;
     }
 
     /**
-     * Get 风险数量列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 风险数量列表 
      * @return RiskList 风险数量列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AssetKeyVal [] getRiskList() {
         return this.RiskList;
@@ -134,9 +116,7 @@ public class DescribeAssetRecentMachineInfoResponse extends AbstractModel {
 
     /**
      * Set 风险数量列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RiskList 风险数量列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRiskList(AssetKeyVal [] RiskList) {
         this.RiskList = RiskList;

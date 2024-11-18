@@ -25,7 +25,6 @@ public class DescribeSecurityBroadcastInfoResponse extends AbstractModel {
 
     /**
     * 安全播报文章详情
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BroadcastInfo")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeSecurityBroadcastInfoResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 安全播报文章详情
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 安全播报文章详情 
      * @return BroadcastInfo 安全播报文章详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BroadcastInfo getBroadcastInfo() {
         return this.BroadcastInfo;
@@ -50,9 +47,7 @@ public class DescribeSecurityBroadcastInfoResponse extends AbstractModel {
 
     /**
      * Set 安全播报文章详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BroadcastInfo 安全播报文章详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBroadcastInfo(BroadcastInfo BroadcastInfo) {
         this.BroadcastInfo = BroadcastInfo;

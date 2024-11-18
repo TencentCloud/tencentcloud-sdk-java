@@ -24,13 +24,6 @@ import java.util.HashMap;
 public class DescribeBlockStaticListRequest extends AbstractModel {
 
     /**
-    * 开始时间
-    */
-    @SerializedName("StartTime")
-    @Expose
-    private String StartTime;
-
-    /**
     * 结束时间
     */
     @SerializedName("EndTime")
@@ -45,6 +38,13 @@ public class DescribeBlockStaticListRequest extends AbstractModel {
     private String QueryType;
 
     /**
+    * 开始时间
+    */
+    @SerializedName("StartTime")
+    @Expose
+    private String StartTime;
+
+    /**
     * top数
     */
     @SerializedName("Top")
@@ -57,22 +57,6 @@ public class DescribeBlockStaticListRequest extends AbstractModel {
     @SerializedName("SearchValue")
     @Expose
     private String SearchValue;
-
-    /**
-     * Get 开始时间 
-     * @return StartTime 开始时间
-     */
-    public String getStartTime() {
-        return this.StartTime;
-    }
-
-    /**
-     * Set 开始时间
-     * @param StartTime 开始时间
-     */
-    public void setStartTime(String StartTime) {
-        this.StartTime = StartTime;
-    }
 
     /**
      * Get 结束时间 
@@ -104,6 +88,22 @@ public class DescribeBlockStaticListRequest extends AbstractModel {
      */
     public void setQueryType(String QueryType) {
         this.QueryType = QueryType;
+    }
+
+    /**
+     * Get 开始时间 
+     * @return StartTime 开始时间
+     */
+    public String getStartTime() {
+        return this.StartTime;
+    }
+
+    /**
+     * Set 开始时间
+     * @param StartTime 开始时间
+     */
+    public void setStartTime(String StartTime) {
+        this.StartTime = StartTime;
     }
 
     /**
@@ -146,14 +146,14 @@ public class DescribeBlockStaticListRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeBlockStaticListRequest(DescribeBlockStaticListRequest source) {
-        if (source.StartTime != null) {
-            this.StartTime = new String(source.StartTime);
-        }
         if (source.EndTime != null) {
             this.EndTime = new String(source.EndTime);
         }
         if (source.QueryType != null) {
             this.QueryType = new String(source.QueryType);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
         }
         if (source.Top != null) {
             this.Top = new Long(source.Top);
@@ -168,9 +168,9 @@ public class DescribeBlockStaticListRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "QueryType", this.QueryType);
+        this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "Top", this.Top);
         this.setParamSimple(map, prefix + "SearchValue", this.SearchValue);
 

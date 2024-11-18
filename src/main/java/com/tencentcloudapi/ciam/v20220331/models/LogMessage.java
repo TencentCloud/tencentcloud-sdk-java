@@ -162,6 +162,14 @@ public class LogMessage extends AbstractModel {
     private String Detail;
 
     /**
+    * 日志结果
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ActionResult")
+    @Expose
+    private String ActionResult;
+
+    /**
      * Get 日志标识 
      * @return LogId 日志标识
      */
@@ -509,6 +517,26 @@ public class LogMessage extends AbstractModel {
         this.Detail = Detail;
     }
 
+    /**
+     * Get 日志结果
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ActionResult 日志结果
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getActionResult() {
+        return this.ActionResult;
+    }
+
+    /**
+     * Set 日志结果
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ActionResult 日志结果
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setActionResult(String ActionResult) {
+        this.ActionResult = ActionResult;
+    }
+
     public LogMessage() {
     }
 
@@ -568,6 +596,9 @@ public class LogMessage extends AbstractModel {
         if (source.Detail != null) {
             this.Detail = new String(source.Detail);
         }
+        if (source.ActionResult != null) {
+            this.ActionResult = new String(source.ActionResult);
+        }
     }
 
 
@@ -592,6 +623,7 @@ public class LogMessage extends AbstractModel {
         this.setParamSimple(map, prefix + "UserAgent", this.UserAgent);
         this.setParamSimple(map, prefix + "UserId", this.UserId);
         this.setParamSimple(map, prefix + "Detail", this.Detail);
+        this.setParamSimple(map, prefix + "ActionResult", this.ActionResult);
 
     }
 }

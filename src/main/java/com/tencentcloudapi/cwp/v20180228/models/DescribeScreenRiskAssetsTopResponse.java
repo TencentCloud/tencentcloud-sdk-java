@@ -25,7 +25,6 @@ public class DescribeScreenRiskAssetsTopResponse extends AbstractModel {
 
     /**
     * 统计详情图标数据 Name：展示主机ip 和地域， value：事件数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Chart")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeScreenRiskAssetsTopResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 统计详情图标数据 Name：展示主机ip 和地域， value：事件数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 统计详情图标数据 Name：展示主机ip 和地域， value：事件数量 
      * @return Chart 统计详情图标数据 Name：展示主机ip 和地域， value：事件数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ScreenNameValue [] getChart() {
         return this.Chart;
@@ -50,9 +47,7 @@ public class DescribeScreenRiskAssetsTopResponse extends AbstractModel {
 
     /**
      * Set 统计详情图标数据 Name：展示主机ip 和地域， value：事件数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Chart 统计详情图标数据 Name：展示主机ip 和地域， value：事件数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setChart(ScreenNameValue [] Chart) {
         this.Chart = Chart;

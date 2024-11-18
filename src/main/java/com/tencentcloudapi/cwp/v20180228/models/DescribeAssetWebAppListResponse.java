@@ -32,7 +32,6 @@ public class DescribeAssetWebAppListResponse extends AbstractModel {
 
     /**
     * 列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WebApps")
     @Expose
@@ -62,10 +61,8 @@ public class DescribeAssetWebAppListResponse extends AbstractModel {
     }
 
     /**
-     * Get 列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 列表 
      * @return WebApps 列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AssetWebAppBaseInfo [] getWebApps() {
         return this.WebApps;
@@ -73,9 +70,7 @@ public class DescribeAssetWebAppListResponse extends AbstractModel {
 
     /**
      * Set 列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WebApps 列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWebApps(AssetWebAppBaseInfo [] WebApps) {
         this.WebApps = WebApps;

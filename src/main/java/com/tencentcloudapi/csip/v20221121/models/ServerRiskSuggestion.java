@@ -25,7 +25,6 @@ public class ServerRiskSuggestion extends AbstractModel {
 
     /**
     * 标题
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Title")
     @Expose
@@ -33,17 +32,14 @@ public class ServerRiskSuggestion extends AbstractModel {
 
     /**
     * 详情
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Body")
     @Expose
     private String Body;
 
     /**
-     * Get 标题
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标题 
      * @return Title 标题
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTitle() {
         return this.Title;
@@ -51,19 +47,15 @@ public class ServerRiskSuggestion extends AbstractModel {
 
     /**
      * Set 标题
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Title 标题
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTitle(String Title) {
         this.Title = Title;
     }
 
     /**
-     * Get 详情
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 详情 
      * @return Body 详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBody() {
         return this.Body;
@@ -71,9 +63,7 @@ public class ServerRiskSuggestion extends AbstractModel {
 
     /**
      * Set 详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Body 详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBody(String Body) {
         this.Body = Body;

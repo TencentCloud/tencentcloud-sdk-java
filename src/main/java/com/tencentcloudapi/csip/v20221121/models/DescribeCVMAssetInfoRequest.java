@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeCVMAssetInfoRequest extends AbstractModel {
 
     /**
-    * -
+    * 资产id
     */
     @SerializedName("AssetId")
     @Expose
     private String AssetId;
 
     /**
-     * Get - 
-     * @return AssetId -
+     * Get 资产id 
+     * @return AssetId 资产id
      */
     public String getAssetId() {
         return this.AssetId;
     }
 
     /**
-     * Set -
-     * @param AssetId -
+     * Set 资产id
+     * @param AssetId 资产id
      */
     public void setAssetId(String AssetId) {
         this.AssetId = AssetId;

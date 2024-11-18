@@ -25,7 +25,6 @@ public class DescribeRansomDefenseStrategyDetailResponse extends AbstractModel {
 
     /**
     * 策略详情
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Strategy")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeRansomDefenseStrategyDetailResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 策略详情
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 策略详情 
      * @return Strategy 策略详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RansomDefenseStrategyDetail getStrategy() {
         return this.Strategy;
@@ -50,9 +47,7 @@ public class DescribeRansomDefenseStrategyDetailResponse extends AbstractModel {
 
     /**
      * Set 策略详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Strategy 策略详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStrategy(RansomDefenseStrategyDetail Strategy) {
         this.Strategy = Strategy;

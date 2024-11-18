@@ -32,7 +32,6 @@ public class DescribeVulEffectHostListResponse extends AbstractModel {
 
     /**
     * 影响主机列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VulEffectHostList")
     @Expose
@@ -62,10 +61,8 @@ public class DescribeVulEffectHostListResponse extends AbstractModel {
     }
 
     /**
-     * Get 影响主机列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 影响主机列表 
      * @return VulEffectHostList 影响主机列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public VulEffectHostList [] getVulEffectHostList() {
         return this.VulEffectHostList;
@@ -73,9 +70,7 @@ public class DescribeVulEffectHostListResponse extends AbstractModel {
 
     /**
      * Set 影响主机列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VulEffectHostList 影响主机列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVulEffectHostList(VulEffectHostList [] VulEffectHostList) {
         this.VulEffectHostList = VulEffectHostList;

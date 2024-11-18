@@ -25,7 +25,6 @@ public class WebHookReceiver extends AbstractModel {
 
     /**
     * id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
     @Expose
@@ -33,7 +32,6 @@ public class WebHookReceiver extends AbstractModel {
 
     /**
     * 接收人名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -41,17 +39,14 @@ public class WebHookReceiver extends AbstractModel {
 
     /**
     * webhook地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Addr")
     @Expose
     private String Addr;
 
     /**
-     * Get id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get id 
      * @return Id id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getId() {
         return this.Id;
@@ -59,19 +54,15 @@ public class WebHookReceiver extends AbstractModel {
 
     /**
      * Set id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Id id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 接收人名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 接收人名称 
      * @return Name 接收人名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -79,19 +70,15 @@ public class WebHookReceiver extends AbstractModel {
 
     /**
      * Set 接收人名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 接收人名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get webhook地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get webhook地址 
      * @return Addr webhook地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAddr() {
         return this.Addr;
@@ -99,9 +86,7 @@ public class WebHookReceiver extends AbstractModel {
 
     /**
      * Set webhook地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Addr webhook地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAddr(String Addr) {
         this.Addr = Addr;

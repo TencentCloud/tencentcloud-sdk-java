@@ -25,7 +25,6 @@ public class DescribeAssetAppListResponse extends AbstractModel {
 
     /**
     * 应用列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Apps")
     @Expose
@@ -46,10 +45,8 @@ public class DescribeAssetAppListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 应用列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 应用列表 
      * @return Apps 应用列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AssetAppBaseInfo [] getApps() {
         return this.Apps;
@@ -57,9 +54,7 @@ public class DescribeAssetAppListResponse extends AbstractModel {
 
     /**
      * Set 应用列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Apps 应用列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApps(AssetAppBaseInfo [] Apps) {
         this.Apps = Apps;

@@ -59,6 +59,20 @@ public class AuthorizeDSPAMetaResourcesRequest extends AbstractModel {
     private DspaResourceAccount [] ResourcesAccount;
 
     /**
+    * 创建默认主模板扫描任务
+    */
+    @SerializedName("CreateDefaultTask")
+    @Expose
+    private Boolean CreateDefaultTask;
+
+    /**
+    * 授权范围（all:授权整个数据源 manual:手动指定数据库）
+    */
+    @SerializedName("AuthRange")
+    @Expose
+    private String AuthRange;
+
+    /**
      * Get DSPA实例ID。 
      * @return DspaId DSPA实例ID。
      */
@@ -138,6 +152,38 @@ public class AuthorizeDSPAMetaResourcesRequest extends AbstractModel {
         this.ResourcesAccount = ResourcesAccount;
     }
 
+    /**
+     * Get 创建默认主模板扫描任务 
+     * @return CreateDefaultTask 创建默认主模板扫描任务
+     */
+    public Boolean getCreateDefaultTask() {
+        return this.CreateDefaultTask;
+    }
+
+    /**
+     * Set 创建默认主模板扫描任务
+     * @param CreateDefaultTask 创建默认主模板扫描任务
+     */
+    public void setCreateDefaultTask(Boolean CreateDefaultTask) {
+        this.CreateDefaultTask = CreateDefaultTask;
+    }
+
+    /**
+     * Get 授权范围（all:授权整个数据源 manual:手动指定数据库） 
+     * @return AuthRange 授权范围（all:授权整个数据源 manual:手动指定数据库）
+     */
+    public String getAuthRange() {
+        return this.AuthRange;
+    }
+
+    /**
+     * Set 授权范围（all:授权整个数据源 manual:手动指定数据库）
+     * @param AuthRange 授权范围（all:授权整个数据源 manual:手动指定数据库）
+     */
+    public void setAuthRange(String AuthRange) {
+        this.AuthRange = AuthRange;
+    }
+
     public AuthorizeDSPAMetaResourcesRequest() {
     }
 
@@ -164,6 +210,12 @@ public class AuthorizeDSPAMetaResourcesRequest extends AbstractModel {
                 this.ResourcesAccount[i] = new DspaResourceAccount(source.ResourcesAccount[i]);
             }
         }
+        if (source.CreateDefaultTask != null) {
+            this.CreateDefaultTask = new Boolean(source.CreateDefaultTask);
+        }
+        if (source.AuthRange != null) {
+            this.AuthRange = new String(source.AuthRange);
+        }
     }
 
 
@@ -176,6 +228,8 @@ public class AuthorizeDSPAMetaResourcesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "MetaType", this.MetaType);
         this.setParamSimple(map, prefix + "ResourceRegion", this.ResourceRegion);
         this.setParamArrayObj(map, prefix + "ResourcesAccount.", this.ResourcesAccount);
+        this.setParamSimple(map, prefix + "CreateDefaultTask", this.CreateDefaultTask);
+        this.setParamSimple(map, prefix + "AuthRange", this.AuthRange);
 
     }
 }

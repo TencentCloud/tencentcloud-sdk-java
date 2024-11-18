@@ -45,11 +45,18 @@ public class DeleteRoomMemberRequest extends AbstractModel {
     private Long BizId;
 
     /**
-    * 要剔除的用户列表
+    * 要剔除的用户列表（整型）
     */
     @SerializedName("Uids")
     @Expose
     private String [] Uids;
+
+    /**
+    * 要剔除的用户列表（字符串类型）
+    */
+    @SerializedName("StrUids")
+    @Expose
+    private String [] StrUids;
 
     /**
      * Get 要操作的房间id 
@@ -100,19 +107,35 @@ public class DeleteRoomMemberRequest extends AbstractModel {
     }
 
     /**
-     * Get 要剔除的用户列表 
-     * @return Uids 要剔除的用户列表
+     * Get 要剔除的用户列表（整型） 
+     * @return Uids 要剔除的用户列表（整型）
      */
     public String [] getUids() {
         return this.Uids;
     }
 
     /**
-     * Set 要剔除的用户列表
-     * @param Uids 要剔除的用户列表
+     * Set 要剔除的用户列表（整型）
+     * @param Uids 要剔除的用户列表（整型）
      */
     public void setUids(String [] Uids) {
         this.Uids = Uids;
+    }
+
+    /**
+     * Get 要剔除的用户列表（字符串类型） 
+     * @return StrUids 要剔除的用户列表（字符串类型）
+     */
+    public String [] getStrUids() {
+        return this.StrUids;
+    }
+
+    /**
+     * Set 要剔除的用户列表（字符串类型）
+     * @param StrUids 要剔除的用户列表（字符串类型）
+     */
+    public void setStrUids(String [] StrUids) {
+        this.StrUids = StrUids;
     }
 
     public DeleteRoomMemberRequest() {
@@ -138,6 +161,12 @@ public class DeleteRoomMemberRequest extends AbstractModel {
                 this.Uids[i] = new String(source.Uids[i]);
             }
         }
+        if (source.StrUids != null) {
+            this.StrUids = new String[source.StrUids.length];
+            for (int i = 0; i < source.StrUids.length; i++) {
+                this.StrUids[i] = new String(source.StrUids[i]);
+            }
+        }
     }
 
 
@@ -149,6 +178,7 @@ public class DeleteRoomMemberRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "DeleteType", this.DeleteType);
         this.setParamSimple(map, prefix + "BizId", this.BizId);
         this.setParamArraySimple(map, prefix + "Uids.", this.Uids);
+        this.setParamArraySimple(map, prefix + "StrUids.", this.StrUids);
 
     }
 }

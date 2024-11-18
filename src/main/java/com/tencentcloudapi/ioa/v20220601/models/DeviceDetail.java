@@ -25,7 +25,6 @@ public class DeviceDetail extends AbstractModel {
 
     /**
     * 设备ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
     @Expose
@@ -33,7 +32,6 @@ public class DeviceDetail extends AbstractModel {
 
     /**
     * 设备唯一标识码，在ioa中每个设备有唯一标识码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Mid")
     @Expose
@@ -41,7 +39,6 @@ public class DeviceDetail extends AbstractModel {
 
     /**
     * 终端名（设备名）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -49,7 +46,6 @@ public class DeviceDetail extends AbstractModel {
 
     /**
     * 设备所在分组ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupId")
     @Expose
@@ -57,7 +53,6 @@ public class DeviceDetail extends AbstractModel {
 
     /**
     * OS平台，0：Windows 、1： Linux、 2：macOS 、4： Android、 5: iOS。默认是0
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OsType")
     @Expose
@@ -65,7 +60,6 @@ public class DeviceDetail extends AbstractModel {
 
     /**
     * 设备IP地址（出口IP）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Ip")
     @Expose
@@ -73,7 +67,6 @@ public class DeviceDetail extends AbstractModel {
 
     /**
     * 在线状态，2：在线、0或者1:离线
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OnlineStatus")
     @Expose
@@ -81,7 +74,6 @@ public class DeviceDetail extends AbstractModel {
 
     /**
     * 客户端版本号-大整数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Version")
     @Expose
@@ -89,7 +81,6 @@ public class DeviceDetail extends AbstractModel {
 
     /**
     * 客户端版本号-点分字符串
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StrVersion")
     @Expose
@@ -97,7 +88,6 @@ public class DeviceDetail extends AbstractModel {
 
     /**
     * 首次在线时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Itime")
     @Expose
@@ -105,7 +95,6 @@ public class DeviceDetail extends AbstractModel {
 
     /**
     * 最后一次在线时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConnActiveTime")
     @Expose
@@ -113,7 +102,6 @@ public class DeviceDetail extends AbstractModel {
 
     /**
     * 设备是否加锁 ，1：锁定 0或者2：未锁定。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Locked")
     @Expose
@@ -121,15 +109,13 @@ public class DeviceDetail extends AbstractModel {
 
     /**
     * 设备本地IP列表, 包括IP
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LocalIpList")
     @Expose
     private String LocalIpList;
 
     /**
-    * 主机ID(只支持32位)
-注意：此字段可能返回 null，表示取不到有效值。
+    * 宿主机id（需要宿主机也安装iOA才能显示）
     */
     @SerializedName("HostId")
     @Expose
@@ -137,7 +123,6 @@ public class DeviceDetail extends AbstractModel {
 
     /**
     * 设备所属分组名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupName")
     @Expose
@@ -145,7 +130,6 @@ public class DeviceDetail extends AbstractModel {
 
     /**
     * 设备所属分组路径
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GroupNamePath")
     @Expose
@@ -153,7 +137,6 @@ public class DeviceDetail extends AbstractModel {
 
     /**
     * 未修复高危漏洞数(只支持32位)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CriticalVulListCount")
     @Expose
@@ -161,7 +144,6 @@ public class DeviceDetail extends AbstractModel {
 
     /**
     * 设备名，和Name相同
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ComputerName")
     @Expose
@@ -169,7 +151,6 @@ public class DeviceDetail extends AbstractModel {
 
     /**
     * 登录域名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DomainName")
     @Expose
@@ -177,7 +158,6 @@ public class DeviceDetail extends AbstractModel {
 
     /**
     * MAC地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MacAddr")
     @Expose
@@ -185,7 +165,6 @@ public class DeviceDetail extends AbstractModel {
 
     /**
     * 漏洞数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VulCount")
     @Expose
@@ -193,7 +172,6 @@ public class DeviceDetail extends AbstractModel {
 
     /**
     * 病毒风险数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RiskCount")
     @Expose
@@ -201,7 +179,6 @@ public class DeviceDetail extends AbstractModel {
 
     /**
     * 病毒库版本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VirusVer")
     @Expose
@@ -209,7 +186,6 @@ public class DeviceDetail extends AbstractModel {
 
     /**
     * 漏洞库版本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VulVersion")
     @Expose
@@ -217,7 +193,6 @@ public class DeviceDetail extends AbstractModel {
 
     /**
     * 系统修复引擎版本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SysRepVersion")
     @Expose
@@ -225,7 +200,6 @@ public class DeviceDetail extends AbstractModel {
 
     /**
     * 高危补丁列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VulCriticalList")
     @Expose
@@ -233,7 +207,6 @@ public class DeviceDetail extends AbstractModel {
 
     /**
     * 标签
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tags")
     @Expose
@@ -241,7 +214,6 @@ public class DeviceDetail extends AbstractModel {
 
     /**
     * 终端用户名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserName")
     @Expose
@@ -249,7 +221,6 @@ public class DeviceDetail extends AbstractModel {
 
     /**
     * 防火墙状态，不等于0表示开启
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FirewallStatus")
     @Expose
@@ -257,7 +228,6 @@ public class DeviceDetail extends AbstractModel {
 
     /**
     * SN序列号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SerialNum")
     @Expose
@@ -265,7 +235,6 @@ public class DeviceDetail extends AbstractModel {
 
     /**
     * 设备管控策略版本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeviceStrategyVer")
     @Expose
@@ -273,7 +242,6 @@ public class DeviceDetail extends AbstractModel {
 
     /**
     * NGN策略版本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NGNStrategyVer")
     @Expose
@@ -281,7 +249,6 @@ public class DeviceDetail extends AbstractModel {
 
     /**
     * 最近登录账户的账号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IOAUserName")
     @Expose
@@ -289,7 +256,6 @@ public class DeviceDetail extends AbstractModel {
 
     /**
     * 设备管控新策略
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeviceNewStrategyVer")
     @Expose
@@ -297,15 +263,13 @@ public class DeviceDetail extends AbstractModel {
 
     /**
     * NGN策略新版本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NGNNewStrategyVer")
     @Expose
     private String NGNNewStrategyVer;
 
     /**
-    * 主机名称
-注意：此字段可能返回 null，表示取不到有效值。
+    * 宿主机名称（需要宿主机也安装iOA才能显示）
     */
     @SerializedName("HostName")
     @Expose
@@ -313,15 +277,13 @@ public class DeviceDetail extends AbstractModel {
 
     /**
     * 主板序列号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BaseBoardSn")
     @Expose
     private String BaseBoardSn;
 
     /**
-    * 绑定账户只有名字
-注意：此字段可能返回 null，表示取不到有效值。
+    * 绑定账户名称
     */
     @SerializedName("AccountUsers")
     @Expose
@@ -329,7 +291,6 @@ public class DeviceDetail extends AbstractModel {
 
     /**
     * 身份策略版本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IdentityStrategyVer")
     @Expose
@@ -337,7 +298,6 @@ public class DeviceDetail extends AbstractModel {
 
     /**
     * 身份策略新版本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IdentityNewStrategyVer")
     @Expose
@@ -345,7 +305,6 @@ public class DeviceDetail extends AbstractModel {
 
     /**
     * 最近登录账号部门
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AccountGroupName")
     @Expose
@@ -353,7 +312,6 @@ public class DeviceDetail extends AbstractModel {
 
     /**
     * 最近登录账户的姓名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AccountName")
     @Expose
@@ -361,17 +319,14 @@ public class DeviceDetail extends AbstractModel {
 
     /**
     * 账号组id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AccountGroupId")
     @Expose
     private Long AccountGroupId;
 
     /**
-     * Get 设备ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备ID 
      * @return Id 设备ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getId() {
         return this.Id;
@@ -379,19 +334,15 @@ public class DeviceDetail extends AbstractModel {
 
     /**
      * Set 设备ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Id 设备ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 设备唯一标识码，在ioa中每个设备有唯一标识码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备唯一标识码，在ioa中每个设备有唯一标识码 
      * @return Mid 设备唯一标识码，在ioa中每个设备有唯一标识码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMid() {
         return this.Mid;
@@ -399,19 +350,15 @@ public class DeviceDetail extends AbstractModel {
 
     /**
      * Set 设备唯一标识码，在ioa中每个设备有唯一标识码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Mid 设备唯一标识码，在ioa中每个设备有唯一标识码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMid(String Mid) {
         this.Mid = Mid;
     }
 
     /**
-     * Get 终端名（设备名）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 终端名（设备名） 
      * @return Name 终端名（设备名）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -419,19 +366,15 @@ public class DeviceDetail extends AbstractModel {
 
     /**
      * Set 终端名（设备名）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 终端名（设备名）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 设备所在分组ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备所在分组ID 
      * @return GroupId 设备所在分组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getGroupId() {
         return this.GroupId;
@@ -439,19 +382,15 @@ public class DeviceDetail extends AbstractModel {
 
     /**
      * Set 设备所在分组ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupId 设备所在分组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupId(Long GroupId) {
         this.GroupId = GroupId;
     }
 
     /**
-     * Get OS平台，0：Windows 、1： Linux、 2：macOS 、4： Android、 5: iOS。默认是0
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get OS平台，0：Windows 、1： Linux、 2：macOS 、4： Android、 5: iOS。默认是0 
      * @return OsType OS平台，0：Windows 、1： Linux、 2：macOS 、4： Android、 5: iOS。默认是0
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getOsType() {
         return this.OsType;
@@ -459,19 +398,15 @@ public class DeviceDetail extends AbstractModel {
 
     /**
      * Set OS平台，0：Windows 、1： Linux、 2：macOS 、4： Android、 5: iOS。默认是0
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OsType OS平台，0：Windows 、1： Linux、 2：macOS 、4： Android、 5: iOS。默认是0
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOsType(Long OsType) {
         this.OsType = OsType;
     }
 
     /**
-     * Get 设备IP地址（出口IP）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备IP地址（出口IP） 
      * @return Ip 设备IP地址（出口IP）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIp() {
         return this.Ip;
@@ -479,19 +414,15 @@ public class DeviceDetail extends AbstractModel {
 
     /**
      * Set 设备IP地址（出口IP）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Ip 设备IP地址（出口IP）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIp(String Ip) {
         this.Ip = Ip;
     }
 
     /**
-     * Get 在线状态，2：在线、0或者1:离线
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 在线状态，2：在线、0或者1:离线 
      * @return OnlineStatus 在线状态，2：在线、0或者1:离线
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getOnlineStatus() {
         return this.OnlineStatus;
@@ -499,19 +430,15 @@ public class DeviceDetail extends AbstractModel {
 
     /**
      * Set 在线状态，2：在线、0或者1:离线
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OnlineStatus 在线状态，2：在线、0或者1:离线
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOnlineStatus(Long OnlineStatus) {
         this.OnlineStatus = OnlineStatus;
     }
 
     /**
-     * Get 客户端版本号-大整数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 客户端版本号-大整数 
      * @return Version 客户端版本号-大整数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVersion() {
         return this.Version;
@@ -519,19 +446,15 @@ public class DeviceDetail extends AbstractModel {
 
     /**
      * Set 客户端版本号-大整数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Version 客户端版本号-大整数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVersion(String Version) {
         this.Version = Version;
     }
 
     /**
-     * Get 客户端版本号-点分字符串
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 客户端版本号-点分字符串 
      * @return StrVersion 客户端版本号-点分字符串
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStrVersion() {
         return this.StrVersion;
@@ -539,19 +462,15 @@ public class DeviceDetail extends AbstractModel {
 
     /**
      * Set 客户端版本号-点分字符串
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StrVersion 客户端版本号-点分字符串
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStrVersion(String StrVersion) {
         this.StrVersion = StrVersion;
     }
 
     /**
-     * Get 首次在线时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 首次在线时间 
      * @return Itime 首次在线时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getItime() {
         return this.Itime;
@@ -559,19 +478,15 @@ public class DeviceDetail extends AbstractModel {
 
     /**
      * Set 首次在线时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Itime 首次在线时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setItime(String Itime) {
         this.Itime = Itime;
     }
 
     /**
-     * Get 最后一次在线时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最后一次在线时间 
      * @return ConnActiveTime 最后一次在线时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getConnActiveTime() {
         return this.ConnActiveTime;
@@ -579,19 +494,15 @@ public class DeviceDetail extends AbstractModel {
 
     /**
      * Set 最后一次在线时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ConnActiveTime 最后一次在线时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConnActiveTime(String ConnActiveTime) {
         this.ConnActiveTime = ConnActiveTime;
     }
 
     /**
-     * Get 设备是否加锁 ，1：锁定 0或者2：未锁定。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备是否加锁 ，1：锁定 0或者2：未锁定。 
      * @return Locked 设备是否加锁 ，1：锁定 0或者2：未锁定。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLocked() {
         return this.Locked;
@@ -599,19 +510,15 @@ public class DeviceDetail extends AbstractModel {
 
     /**
      * Set 设备是否加锁 ，1：锁定 0或者2：未锁定。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Locked 设备是否加锁 ，1：锁定 0或者2：未锁定。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLocked(Long Locked) {
         this.Locked = Locked;
     }
 
     /**
-     * Get 设备本地IP列表, 包括IP
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备本地IP列表, 包括IP 
      * @return LocalIpList 设备本地IP列表, 包括IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLocalIpList() {
         return this.LocalIpList;
@@ -619,39 +526,31 @@ public class DeviceDetail extends AbstractModel {
 
     /**
      * Set 设备本地IP列表, 包括IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LocalIpList 设备本地IP列表, 包括IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLocalIpList(String LocalIpList) {
         this.LocalIpList = LocalIpList;
     }
 
     /**
-     * Get 主机ID(只支持32位)
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return HostId 主机ID(只支持32位)
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 宿主机id（需要宿主机也安装iOA才能显示） 
+     * @return HostId 宿主机id（需要宿主机也安装iOA才能显示）
      */
     public Long getHostId() {
         return this.HostId;
     }
 
     /**
-     * Set 主机ID(只支持32位)
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param HostId 主机ID(只支持32位)
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 宿主机id（需要宿主机也安装iOA才能显示）
+     * @param HostId 宿主机id（需要宿主机也安装iOA才能显示）
      */
     public void setHostId(Long HostId) {
         this.HostId = HostId;
     }
 
     /**
-     * Get 设备所属分组名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备所属分组名 
      * @return GroupName 设备所属分组名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGroupName() {
         return this.GroupName;
@@ -659,19 +558,15 @@ public class DeviceDetail extends AbstractModel {
 
     /**
      * Set 设备所属分组名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupName 设备所属分组名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupName(String GroupName) {
         this.GroupName = GroupName;
     }
 
     /**
-     * Get 设备所属分组路径
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备所属分组路径 
      * @return GroupNamePath 设备所属分组路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGroupNamePath() {
         return this.GroupNamePath;
@@ -679,19 +574,15 @@ public class DeviceDetail extends AbstractModel {
 
     /**
      * Set 设备所属分组路径
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupNamePath 设备所属分组路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroupNamePath(String GroupNamePath) {
         this.GroupNamePath = GroupNamePath;
     }
 
     /**
-     * Get 未修复高危漏洞数(只支持32位)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 未修复高危漏洞数(只支持32位) 
      * @return CriticalVulListCount 未修复高危漏洞数(只支持32位)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCriticalVulListCount() {
         return this.CriticalVulListCount;
@@ -699,19 +590,15 @@ public class DeviceDetail extends AbstractModel {
 
     /**
      * Set 未修复高危漏洞数(只支持32位)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CriticalVulListCount 未修复高危漏洞数(只支持32位)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCriticalVulListCount(Long CriticalVulListCount) {
         this.CriticalVulListCount = CriticalVulListCount;
     }
 
     /**
-     * Get 设备名，和Name相同
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备名，和Name相同 
      * @return ComputerName 设备名，和Name相同
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getComputerName() {
         return this.ComputerName;
@@ -719,19 +606,15 @@ public class DeviceDetail extends AbstractModel {
 
     /**
      * Set 设备名，和Name相同
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ComputerName 设备名，和Name相同
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setComputerName(String ComputerName) {
         this.ComputerName = ComputerName;
     }
 
     /**
-     * Get 登录域名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 登录域名 
      * @return DomainName 登录域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDomainName() {
         return this.DomainName;
@@ -739,19 +622,15 @@ public class DeviceDetail extends AbstractModel {
 
     /**
      * Set 登录域名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DomainName 登录域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDomainName(String DomainName) {
         this.DomainName = DomainName;
     }
 
     /**
-     * Get MAC地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get MAC地址 
      * @return MacAddr MAC地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMacAddr() {
         return this.MacAddr;
@@ -759,19 +638,15 @@ public class DeviceDetail extends AbstractModel {
 
     /**
      * Set MAC地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MacAddr MAC地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMacAddr(String MacAddr) {
         this.MacAddr = MacAddr;
     }
 
     /**
-     * Get 漏洞数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 漏洞数 
      * @return VulCount 漏洞数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getVulCount() {
         return this.VulCount;
@@ -779,19 +654,15 @@ public class DeviceDetail extends AbstractModel {
 
     /**
      * Set 漏洞数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VulCount 漏洞数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVulCount(Long VulCount) {
         this.VulCount = VulCount;
     }
 
     /**
-     * Get 病毒风险数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 病毒风险数 
      * @return RiskCount 病毒风险数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRiskCount() {
         return this.RiskCount;
@@ -799,19 +670,15 @@ public class DeviceDetail extends AbstractModel {
 
     /**
      * Set 病毒风险数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RiskCount 病毒风险数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRiskCount(Long RiskCount) {
         this.RiskCount = RiskCount;
     }
 
     /**
-     * Get 病毒库版本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 病毒库版本 
      * @return VirusVer 病毒库版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVirusVer() {
         return this.VirusVer;
@@ -819,19 +686,15 @@ public class DeviceDetail extends AbstractModel {
 
     /**
      * Set 病毒库版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VirusVer 病毒库版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVirusVer(String VirusVer) {
         this.VirusVer = VirusVer;
     }
 
     /**
-     * Get 漏洞库版本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 漏洞库版本 
      * @return VulVersion 漏洞库版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVulVersion() {
         return this.VulVersion;
@@ -839,19 +702,15 @@ public class DeviceDetail extends AbstractModel {
 
     /**
      * Set 漏洞库版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VulVersion 漏洞库版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVulVersion(String VulVersion) {
         this.VulVersion = VulVersion;
     }
 
     /**
-     * Get 系统修复引擎版本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 系统修复引擎版本 
      * @return SysRepVersion 系统修复引擎版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSysRepVersion() {
         return this.SysRepVersion;
@@ -859,19 +718,15 @@ public class DeviceDetail extends AbstractModel {
 
     /**
      * Set 系统修复引擎版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SysRepVersion 系统修复引擎版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSysRepVersion(String SysRepVersion) {
         this.SysRepVersion = SysRepVersion;
     }
 
     /**
-     * Get 高危补丁列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 高危补丁列表 
      * @return VulCriticalList 高危补丁列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getVulCriticalList() {
         return this.VulCriticalList;
@@ -879,19 +734,15 @@ public class DeviceDetail extends AbstractModel {
 
     /**
      * Set 高危补丁列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VulCriticalList 高危补丁列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVulCriticalList(String [] VulCriticalList) {
         this.VulCriticalList = VulCriticalList;
     }
 
     /**
-     * Get 标签
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标签 
      * @return Tags 标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTags() {
         return this.Tags;
@@ -899,19 +750,15 @@ public class DeviceDetail extends AbstractModel {
 
     /**
      * Set 标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tags 标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTags(String Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 终端用户名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 终端用户名 
      * @return UserName 终端用户名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUserName() {
         return this.UserName;
@@ -919,19 +766,15 @@ public class DeviceDetail extends AbstractModel {
 
     /**
      * Set 终端用户名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UserName 终端用户名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;
     }
 
     /**
-     * Get 防火墙状态，不等于0表示开启
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 防火墙状态，不等于0表示开启 
      * @return FirewallStatus 防火墙状态，不等于0表示开启
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFirewallStatus() {
         return this.FirewallStatus;
@@ -939,19 +782,15 @@ public class DeviceDetail extends AbstractModel {
 
     /**
      * Set 防火墙状态，不等于0表示开启
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FirewallStatus 防火墙状态，不等于0表示开启
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFirewallStatus(Long FirewallStatus) {
         this.FirewallStatus = FirewallStatus;
     }
 
     /**
-     * Get SN序列号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get SN序列号 
      * @return SerialNum SN序列号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSerialNum() {
         return this.SerialNum;
@@ -959,19 +798,15 @@ public class DeviceDetail extends AbstractModel {
 
     /**
      * Set SN序列号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SerialNum SN序列号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSerialNum(String SerialNum) {
         this.SerialNum = SerialNum;
     }
 
     /**
-     * Get 设备管控策略版本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备管控策略版本 
      * @return DeviceStrategyVer 设备管控策略版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDeviceStrategyVer() {
         return this.DeviceStrategyVer;
@@ -979,19 +814,15 @@ public class DeviceDetail extends AbstractModel {
 
     /**
      * Set 设备管控策略版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeviceStrategyVer 设备管控策略版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeviceStrategyVer(String DeviceStrategyVer) {
         this.DeviceStrategyVer = DeviceStrategyVer;
     }
 
     /**
-     * Get NGN策略版本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get NGN策略版本 
      * @return NGNStrategyVer NGN策略版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNGNStrategyVer() {
         return this.NGNStrategyVer;
@@ -999,19 +830,15 @@ public class DeviceDetail extends AbstractModel {
 
     /**
      * Set NGN策略版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NGNStrategyVer NGN策略版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNGNStrategyVer(String NGNStrategyVer) {
         this.NGNStrategyVer = NGNStrategyVer;
     }
 
     /**
-     * Get 最近登录账户的账号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最近登录账户的账号 
      * @return IOAUserName 最近登录账户的账号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIOAUserName() {
         return this.IOAUserName;
@@ -1019,19 +846,15 @@ public class DeviceDetail extends AbstractModel {
 
     /**
      * Set 最近登录账户的账号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IOAUserName 最近登录账户的账号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIOAUserName(String IOAUserName) {
         this.IOAUserName = IOAUserName;
     }
 
     /**
-     * Get 设备管控新策略
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备管控新策略 
      * @return DeviceNewStrategyVer 设备管控新策略
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDeviceNewStrategyVer() {
         return this.DeviceNewStrategyVer;
@@ -1039,19 +862,15 @@ public class DeviceDetail extends AbstractModel {
 
     /**
      * Set 设备管控新策略
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeviceNewStrategyVer 设备管控新策略
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeviceNewStrategyVer(String DeviceNewStrategyVer) {
         this.DeviceNewStrategyVer = DeviceNewStrategyVer;
     }
 
     /**
-     * Get NGN策略新版本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get NGN策略新版本 
      * @return NGNNewStrategyVer NGN策略新版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNGNNewStrategyVer() {
         return this.NGNNewStrategyVer;
@@ -1059,39 +878,31 @@ public class DeviceDetail extends AbstractModel {
 
     /**
      * Set NGN策略新版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NGNNewStrategyVer NGN策略新版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNGNNewStrategyVer(String NGNNewStrategyVer) {
         this.NGNNewStrategyVer = NGNNewStrategyVer;
     }
 
     /**
-     * Get 主机名称
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return HostName 主机名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 宿主机名称（需要宿主机也安装iOA才能显示） 
+     * @return HostName 宿主机名称（需要宿主机也安装iOA才能显示）
      */
     public String getHostName() {
         return this.HostName;
     }
 
     /**
-     * Set 主机名称
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param HostName 主机名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 宿主机名称（需要宿主机也安装iOA才能显示）
+     * @param HostName 宿主机名称（需要宿主机也安装iOA才能显示）
      */
     public void setHostName(String HostName) {
         this.HostName = HostName;
     }
 
     /**
-     * Get 主板序列号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主板序列号 
      * @return BaseBoardSn 主板序列号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBaseBoardSn() {
         return this.BaseBoardSn;
@@ -1099,39 +910,31 @@ public class DeviceDetail extends AbstractModel {
 
     /**
      * Set 主板序列号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BaseBoardSn 主板序列号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBaseBoardSn(String BaseBoardSn) {
         this.BaseBoardSn = BaseBoardSn;
     }
 
     /**
-     * Get 绑定账户只有名字
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AccountUsers 绑定账户只有名字
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 绑定账户名称 
+     * @return AccountUsers 绑定账户名称
      */
     public String getAccountUsers() {
         return this.AccountUsers;
     }
 
     /**
-     * Set 绑定账户只有名字
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param AccountUsers 绑定账户只有名字
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 绑定账户名称
+     * @param AccountUsers 绑定账户名称
      */
     public void setAccountUsers(String AccountUsers) {
         this.AccountUsers = AccountUsers;
     }
 
     /**
-     * Get 身份策略版本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 身份策略版本 
      * @return IdentityStrategyVer 身份策略版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIdentityStrategyVer() {
         return this.IdentityStrategyVer;
@@ -1139,19 +942,15 @@ public class DeviceDetail extends AbstractModel {
 
     /**
      * Set 身份策略版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IdentityStrategyVer 身份策略版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIdentityStrategyVer(String IdentityStrategyVer) {
         this.IdentityStrategyVer = IdentityStrategyVer;
     }
 
     /**
-     * Get 身份策略新版本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 身份策略新版本 
      * @return IdentityNewStrategyVer 身份策略新版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIdentityNewStrategyVer() {
         return this.IdentityNewStrategyVer;
@@ -1159,19 +958,15 @@ public class DeviceDetail extends AbstractModel {
 
     /**
      * Set 身份策略新版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IdentityNewStrategyVer 身份策略新版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIdentityNewStrategyVer(String IdentityNewStrategyVer) {
         this.IdentityNewStrategyVer = IdentityNewStrategyVer;
     }
 
     /**
-     * Get 最近登录账号部门
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最近登录账号部门 
      * @return AccountGroupName 最近登录账号部门
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAccountGroupName() {
         return this.AccountGroupName;
@@ -1179,19 +974,15 @@ public class DeviceDetail extends AbstractModel {
 
     /**
      * Set 最近登录账号部门
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AccountGroupName 最近登录账号部门
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAccountGroupName(String AccountGroupName) {
         this.AccountGroupName = AccountGroupName;
     }
 
     /**
-     * Get 最近登录账户的姓名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最近登录账户的姓名 
      * @return AccountName 最近登录账户的姓名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAccountName() {
         return this.AccountName;
@@ -1199,19 +990,15 @@ public class DeviceDetail extends AbstractModel {
 
     /**
      * Set 最近登录账户的姓名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AccountName 最近登录账户的姓名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAccountName(String AccountName) {
         this.AccountName = AccountName;
     }
 
     /**
-     * Get 账号组id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 账号组id 
      * @return AccountGroupId 账号组id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAccountGroupId() {
         return this.AccountGroupId;
@@ -1219,9 +1006,7 @@ public class DeviceDetail extends AbstractModel {
 
     /**
      * Set 账号组id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AccountGroupId 账号组id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAccountGroupId(Long AccountGroupId) {
         this.AccountGroupId = AccountGroupId;

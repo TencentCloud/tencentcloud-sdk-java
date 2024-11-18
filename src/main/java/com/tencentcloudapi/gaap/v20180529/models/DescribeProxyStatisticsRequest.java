@@ -45,7 +45,18 @@ public class DescribeProxyStatisticsRequest extends AbstractModel {
     private String EndTime;
 
     /**
-    * 统计指标名称列表，支持: 入带宽:InBandwidth, 出带宽:OutBandwidth, 并发:Concurrent, 入包量:InPackets, 出包量:OutPackets, 丢包率:PacketLoss, 延迟:Latency，http请求量：HttpQPS, Https请求量：HttpsQPS
+    * 统计指标名称列表，支持: 
+入带宽:InBandwidth, 
+出带宽:OutBandwidth, 
+并发:Concurrent, 
+入包量:InPackets, 
+出包量:OutPackets, 
+丢包率:PacketLoss, 
+延迟:Latency，
+HTTP请求量：HttpQPS, 
+HTTP请求量利用率：HttpQPSPercent,
+HTTPS请求量：HttpsQPS,
+HTTPS请求量利用率：HttpsQPSPercent
     */
     @SerializedName("MetricNames")
     @Expose
@@ -117,16 +128,60 @@ public class DescribeProxyStatisticsRequest extends AbstractModel {
     }
 
     /**
-     * Get 统计指标名称列表，支持: 入带宽:InBandwidth, 出带宽:OutBandwidth, 并发:Concurrent, 入包量:InPackets, 出包量:OutPackets, 丢包率:PacketLoss, 延迟:Latency，http请求量：HttpQPS, Https请求量：HttpsQPS 
-     * @return MetricNames 统计指标名称列表，支持: 入带宽:InBandwidth, 出带宽:OutBandwidth, 并发:Concurrent, 入包量:InPackets, 出包量:OutPackets, 丢包率:PacketLoss, 延迟:Latency，http请求量：HttpQPS, Https请求量：HttpsQPS
+     * Get 统计指标名称列表，支持: 
+入带宽:InBandwidth, 
+出带宽:OutBandwidth, 
+并发:Concurrent, 
+入包量:InPackets, 
+出包量:OutPackets, 
+丢包率:PacketLoss, 
+延迟:Latency，
+HTTP请求量：HttpQPS, 
+HTTP请求量利用率：HttpQPSPercent,
+HTTPS请求量：HttpsQPS,
+HTTPS请求量利用率：HttpsQPSPercent 
+     * @return MetricNames 统计指标名称列表，支持: 
+入带宽:InBandwidth, 
+出带宽:OutBandwidth, 
+并发:Concurrent, 
+入包量:InPackets, 
+出包量:OutPackets, 
+丢包率:PacketLoss, 
+延迟:Latency，
+HTTP请求量：HttpQPS, 
+HTTP请求量利用率：HttpQPSPercent,
+HTTPS请求量：HttpsQPS,
+HTTPS请求量利用率：HttpsQPSPercent
      */
     public String [] getMetricNames() {
         return this.MetricNames;
     }
 
     /**
-     * Set 统计指标名称列表，支持: 入带宽:InBandwidth, 出带宽:OutBandwidth, 并发:Concurrent, 入包量:InPackets, 出包量:OutPackets, 丢包率:PacketLoss, 延迟:Latency，http请求量：HttpQPS, Https请求量：HttpsQPS
-     * @param MetricNames 统计指标名称列表，支持: 入带宽:InBandwidth, 出带宽:OutBandwidth, 并发:Concurrent, 入包量:InPackets, 出包量:OutPackets, 丢包率:PacketLoss, 延迟:Latency，http请求量：HttpQPS, Https请求量：HttpsQPS
+     * Set 统计指标名称列表，支持: 
+入带宽:InBandwidth, 
+出带宽:OutBandwidth, 
+并发:Concurrent, 
+入包量:InPackets, 
+出包量:OutPackets, 
+丢包率:PacketLoss, 
+延迟:Latency，
+HTTP请求量：HttpQPS, 
+HTTP请求量利用率：HttpQPSPercent,
+HTTPS请求量：HttpsQPS,
+HTTPS请求量利用率：HttpsQPSPercent
+     * @param MetricNames 统计指标名称列表，支持: 
+入带宽:InBandwidth, 
+出带宽:OutBandwidth, 
+并发:Concurrent, 
+入包量:InPackets, 
+出包量:OutPackets, 
+丢包率:PacketLoss, 
+延迟:Latency，
+HTTP请求量：HttpQPS, 
+HTTP请求量利用率：HttpQPSPercent,
+HTTPS请求量：HttpsQPS,
+HTTPS请求量利用率：HttpsQPSPercent
      */
     public void setMetricNames(String [] MetricNames) {
         this.MetricNames = MetricNames;

@@ -31,7 +31,7 @@ public class AttachNodesRequest extends AbstractModel {
     private String ClusterId;
 
     /**
-    * 节点的资源类型。<li>CVM：CVM实例类型资源</li><li>WORKSPACE：工作空间类型实例资源</li>默认值：CVM。
+    * 节点的实例id列表
     */
     @SerializedName("ResourceSet")
     @Expose
@@ -77,16 +77,16 @@ SGE默认队列为：all.q。
     }
 
     /**
-     * Get 节点的资源类型。<li>CVM：CVM实例类型资源</li><li>WORKSPACE：工作空间类型实例资源</li>默认值：CVM。 
-     * @return ResourceSet 节点的资源类型。<li>CVM：CVM实例类型资源</li><li>WORKSPACE：工作空间类型实例资源</li>默认值：CVM。
+     * Get 节点的实例id列表 
+     * @return ResourceSet 节点的实例id列表
      */
     public String [] getResourceSet() {
         return this.ResourceSet;
     }
 
     /**
-     * Set 节点的资源类型。<li>CVM：CVM实例类型资源</li><li>WORKSPACE：工作空间类型实例资源</li>默认值：CVM。
-     * @param ResourceSet 节点的资源类型。<li>CVM：CVM实例类型资源</li><li>WORKSPACE：工作空间类型实例资源</li>默认值：CVM。
+     * Set 节点的实例id列表
+     * @param ResourceSet 节点的实例id列表
      */
     public void setResourceSet(String [] ResourceSet) {
         this.ResourceSet = ResourceSet;

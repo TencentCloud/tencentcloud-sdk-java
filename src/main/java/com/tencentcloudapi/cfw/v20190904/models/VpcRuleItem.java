@@ -69,7 +69,6 @@ SMTP/SMTPS
 FTP
 DNS
 TLS/SSL
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Protocol")
     @Expose
@@ -89,7 +88,6 @@ log：观察
     * 访问控制策略的端口。取值：
 -1/-1：全部端口
 80：80端口
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Port")
     @Expose
@@ -110,13 +108,6 @@ log：观察
     private Long OrderIndex;
 
     /**
-    * 规则对应的唯一id
-    */
-    @SerializedName("Uuid")
-    @Expose
-    private Long Uuid;
-
-    /**
     * 规则状态，true表示启用，false表示禁用
     */
     @SerializedName("Enable")
@@ -129,6 +120,13 @@ log：观察
     @SerializedName("EdgeId")
     @Expose
     private String EdgeId;
+
+    /**
+    * 规则对应的唯一id，添加规则时忽略该字段，修改该规则时需要填写Uuid;查询返回时会返回该参数
+    */
+    @SerializedName("Uuid")
+    @Expose
+    private Long Uuid;
 
     /**
     * 规则的命中次数，增删改查规则时无需传入此参数，主要用于返回查询结果数据
@@ -160,7 +158,6 @@ log：观察
 
     /**
     * 规则生效的防火墙实例ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FwGroupId")
     @Expose
@@ -168,7 +165,6 @@ log：观察
 
     /**
     * 防火墙名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FwGroupName")
     @Expose
@@ -176,7 +172,6 @@ log：观察
 
     /**
     * beta任务详情
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BetaList")
     @Expose
@@ -184,7 +179,6 @@ log：观察
 
     /**
     * 端口协议组ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ParamTemplateId")
     @Expose
@@ -192,7 +186,6 @@ log：观察
 
     /**
     * 端口协议组名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ParamTemplateName")
     @Expose
@@ -200,7 +193,6 @@ log：观察
 
     /**
     * 访问目的名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TargetName")
     @Expose
@@ -208,11 +200,24 @@ log：观察
 
     /**
     * 访问源名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SourceName")
     @Expose
     private String SourceName;
+
+    /**
+    * Ip版本，0：IPv4，1：IPv6，默认为IPv4
+    */
+    @SerializedName("IpVersion")
+    @Expose
+    private Long IpVersion;
+
+    /**
+    * 是否是无效规则，0 表示有效规则，1 表示无效规则，出参场景返回使用
+    */
+    @SerializedName("Invalid")
+    @Expose
+    private Long Invalid;
 
     /**
      * Get 访问源示例：
@@ -304,8 +309,7 @@ SMTPS
 SMTP/SMTPS
 FTP
 DNS
-TLS/SSL
-注意：此字段可能返回 null，表示取不到有效值。 
+TLS/SSL 
      * @return Protocol 协议，可选的值：
 TCP
 UDP
@@ -320,7 +324,6 @@ SMTP/SMTPS
 FTP
 DNS
 TLS/SSL
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProtocol() {
         return this.Protocol;
@@ -341,7 +344,6 @@ SMTP/SMTPS
 FTP
 DNS
 TLS/SSL
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Protocol 协议，可选的值：
 TCP
 UDP
@@ -356,7 +358,6 @@ SMTP/SMTPS
 FTP
 DNS
 TLS/SSL
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
@@ -393,12 +394,10 @@ log：观察
     /**
      * Get 访问控制策略的端口。取值：
 -1/-1：全部端口
-80：80端口
-注意：此字段可能返回 null，表示取不到有效值。 
+80：80端口 
      * @return Port 访问控制策略的端口。取值：
 -1/-1：全部端口
 80：80端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPort() {
         return this.Port;
@@ -408,11 +407,9 @@ log：观察
      * Set 访问控制策略的端口。取值：
 -1/-1：全部端口
 80：80端口
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Port 访问控制策略的端口。取值：
 -1/-1：全部端口
 80：80端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPort(String Port) {
         this.Port = Port;
@@ -451,22 +448,6 @@ log：观察
     }
 
     /**
-     * Get 规则对应的唯一id 
-     * @return Uuid 规则对应的唯一id
-     */
-    public Long getUuid() {
-        return this.Uuid;
-    }
-
-    /**
-     * Set 规则对应的唯一id
-     * @param Uuid 规则对应的唯一id
-     */
-    public void setUuid(Long Uuid) {
-        this.Uuid = Uuid;
-    }
-
-    /**
      * Get 规则状态，true表示启用，false表示禁用 
      * @return Enable 规则状态，true表示启用，false表示禁用
      */
@@ -496,6 +477,22 @@ log：观察
      */
     public void setEdgeId(String EdgeId) {
         this.EdgeId = EdgeId;
+    }
+
+    /**
+     * Get 规则对应的唯一id，添加规则时忽略该字段，修改该规则时需要填写Uuid;查询返回时会返回该参数 
+     * @return Uuid 规则对应的唯一id，添加规则时忽略该字段，修改该规则时需要填写Uuid;查询返回时会返回该参数
+     */
+    public Long getUuid() {
+        return this.Uuid;
+    }
+
+    /**
+     * Set 规则对应的唯一id，添加规则时忽略该字段，修改该规则时需要填写Uuid;查询返回时会返回该参数
+     * @param Uuid 规则对应的唯一id，添加规则时忽略该字段，修改该规则时需要填写Uuid;查询返回时会返回该参数
+     */
+    public void setUuid(Long Uuid) {
+        this.Uuid = Uuid;
     }
 
     /**
@@ -563,10 +560,8 @@ log：观察
     }
 
     /**
-     * Get 规则生效的防火墙实例ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则生效的防火墙实例ID 
      * @return FwGroupId 规则生效的防火墙实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFwGroupId() {
         return this.FwGroupId;
@@ -574,19 +569,15 @@ log：观察
 
     /**
      * Set 规则生效的防火墙实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FwGroupId 规则生效的防火墙实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFwGroupId(String FwGroupId) {
         this.FwGroupId = FwGroupId;
     }
 
     /**
-     * Get 防火墙名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 防火墙名称 
      * @return FwGroupName 防火墙名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFwGroupName() {
         return this.FwGroupName;
@@ -594,19 +585,15 @@ log：观察
 
     /**
      * Set 防火墙名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FwGroupName 防火墙名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFwGroupName(String FwGroupName) {
         this.FwGroupName = FwGroupName;
     }
 
     /**
-     * Get beta任务详情
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get beta任务详情 
      * @return BetaList beta任务详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BetaInfoByACL [] getBetaList() {
         return this.BetaList;
@@ -614,19 +601,15 @@ log：观察
 
     /**
      * Set beta任务详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BetaList beta任务详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBetaList(BetaInfoByACL [] BetaList) {
         this.BetaList = BetaList;
     }
 
     /**
-     * Get 端口协议组ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 端口协议组ID 
      * @return ParamTemplateId 端口协议组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getParamTemplateId() {
         return this.ParamTemplateId;
@@ -634,19 +617,15 @@ log：观察
 
     /**
      * Set 端口协议组ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ParamTemplateId 端口协议组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setParamTemplateId(String ParamTemplateId) {
         this.ParamTemplateId = ParamTemplateId;
     }
 
     /**
-     * Get 端口协议组名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 端口协议组名称 
      * @return ParamTemplateName 端口协议组名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getParamTemplateName() {
         return this.ParamTemplateName;
@@ -654,19 +633,15 @@ log：观察
 
     /**
      * Set 端口协议组名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ParamTemplateName 端口协议组名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setParamTemplateName(String ParamTemplateName) {
         this.ParamTemplateName = ParamTemplateName;
     }
 
     /**
-     * Get 访问目的名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 访问目的名称 
      * @return TargetName 访问目的名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTargetName() {
         return this.TargetName;
@@ -674,19 +649,15 @@ log：观察
 
     /**
      * Set 访问目的名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TargetName 访问目的名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTargetName(String TargetName) {
         this.TargetName = TargetName;
     }
 
     /**
-     * Get 访问源名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 访问源名称 
      * @return SourceName 访问源名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSourceName() {
         return this.SourceName;
@@ -694,12 +665,42 @@ log：观察
 
     /**
      * Set 访问源名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SourceName 访问源名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSourceName(String SourceName) {
         this.SourceName = SourceName;
+    }
+
+    /**
+     * Get Ip版本，0：IPv4，1：IPv6，默认为IPv4 
+     * @return IpVersion Ip版本，0：IPv4，1：IPv6，默认为IPv4
+     */
+    public Long getIpVersion() {
+        return this.IpVersion;
+    }
+
+    /**
+     * Set Ip版本，0：IPv4，1：IPv6，默认为IPv4
+     * @param IpVersion Ip版本，0：IPv4，1：IPv6，默认为IPv4
+     */
+    public void setIpVersion(Long IpVersion) {
+        this.IpVersion = IpVersion;
+    }
+
+    /**
+     * Get 是否是无效规则，0 表示有效规则，1 表示无效规则，出参场景返回使用 
+     * @return Invalid 是否是无效规则，0 表示有效规则，1 表示无效规则，出参场景返回使用
+     */
+    public Long getInvalid() {
+        return this.Invalid;
+    }
+
+    /**
+     * Set 是否是无效规则，0 表示有效规则，1 表示无效规则，出参场景返回使用
+     * @param Invalid 是否是无效规则，0 表示有效规则，1 表示无效规则，出参场景返回使用
+     */
+    public void setInvalid(Long Invalid) {
+        this.Invalid = Invalid;
     }
 
     public VpcRuleItem() {
@@ -737,14 +738,14 @@ log：观察
         if (source.OrderIndex != null) {
             this.OrderIndex = new Long(source.OrderIndex);
         }
-        if (source.Uuid != null) {
-            this.Uuid = new Long(source.Uuid);
-        }
         if (source.Enable != null) {
             this.Enable = new String(source.Enable);
         }
         if (source.EdgeId != null) {
             this.EdgeId = new String(source.EdgeId);
+        }
+        if (source.Uuid != null) {
+            this.Uuid = new Long(source.Uuid);
         }
         if (source.DetectedTimes != null) {
             this.DetectedTimes = new Long(source.DetectedTimes);
@@ -782,6 +783,12 @@ log：观察
         if (source.SourceName != null) {
             this.SourceName = new String(source.SourceName);
         }
+        if (source.IpVersion != null) {
+            this.IpVersion = new Long(source.IpVersion);
+        }
+        if (source.Invalid != null) {
+            this.Invalid = new Long(source.Invalid);
+        }
     }
 
 
@@ -798,9 +805,9 @@ log：观察
         this.setParamSimple(map, prefix + "Port", this.Port);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "OrderIndex", this.OrderIndex);
-        this.setParamSimple(map, prefix + "Uuid", this.Uuid);
         this.setParamSimple(map, prefix + "Enable", this.Enable);
         this.setParamSimple(map, prefix + "EdgeId", this.EdgeId);
+        this.setParamSimple(map, prefix + "Uuid", this.Uuid);
         this.setParamSimple(map, prefix + "DetectedTimes", this.DetectedTimes);
         this.setParamSimple(map, prefix + "EdgeName", this.EdgeName);
         this.setParamSimple(map, prefix + "InternalUuid", this.InternalUuid);
@@ -812,6 +819,8 @@ log：观察
         this.setParamSimple(map, prefix + "ParamTemplateName", this.ParamTemplateName);
         this.setParamSimple(map, prefix + "TargetName", this.TargetName);
         this.setParamSimple(map, prefix + "SourceName", this.SourceName);
+        this.setParamSimple(map, prefix + "IpVersion", this.IpVersion);
+        this.setParamSimple(map, prefix + "Invalid", this.Invalid);
 
     }
 }

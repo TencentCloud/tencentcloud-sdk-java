@@ -64,6 +64,13 @@ public class ChemicalProductInfoName extends AbstractModel {
     private String Pinyin;
 
     /**
+    * 品牌名
+    */
+    @SerializedName("BrandName")
+    @Expose
+    private String BrandName;
+
+    /**
      * Get 文本内容
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Text 文本内容
@@ -108,7 +115,9 @@ public class ChemicalProductInfoName extends AbstractModel {
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return BarndName 品牌名
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public String getBarndName() {
         return this.BarndName;
     }
@@ -118,7 +127,9 @@ public class ChemicalProductInfoName extends AbstractModel {
 注意：此字段可能返回 null，表示取不到有效值。
      * @param BarndName 品牌名
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public void setBarndName(String BarndName) {
         this.BarndName = BarndName;
     }
@@ -163,6 +174,22 @@ public class ChemicalProductInfoName extends AbstractModel {
         this.Pinyin = Pinyin;
     }
 
+    /**
+     * Get 品牌名 
+     * @return BrandName 品牌名
+     */
+    public String getBrandName() {
+        return this.BrandName;
+    }
+
+    /**
+     * Set 品牌名
+     * @param BrandName 品牌名
+     */
+    public void setBrandName(String BrandName) {
+        this.BrandName = BrandName;
+    }
+
     public ChemicalProductInfoName() {
     }
 
@@ -186,6 +213,9 @@ public class ChemicalProductInfoName extends AbstractModel {
         if (source.Pinyin != null) {
             this.Pinyin = new String(source.Pinyin);
         }
+        if (source.BrandName != null) {
+            this.BrandName = new String(source.BrandName);
+        }
     }
 
 
@@ -198,6 +228,7 @@ public class ChemicalProductInfoName extends AbstractModel {
         this.setParamSimple(map, prefix + "BarndName", this.BarndName);
         this.setParamSimple(map, prefix + "EnName", this.EnName);
         this.setParamSimple(map, prefix + "Pinyin", this.Pinyin);
+        this.setParamSimple(map, prefix + "BrandName", this.BrandName);
 
     }
 }

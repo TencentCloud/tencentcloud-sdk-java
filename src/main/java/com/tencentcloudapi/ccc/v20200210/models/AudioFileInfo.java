@@ -25,7 +25,6 @@ public class AudioFileInfo extends AbstractModel {
 
     /**
     * 文件ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileId")
     @Expose
@@ -33,7 +32,6 @@ public class AudioFileInfo extends AbstractModel {
 
     /**
     * 文件别名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CustomFileName")
     @Expose
@@ -41,7 +39,6 @@ public class AudioFileInfo extends AbstractModel {
 
     /**
     * 文件名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AudioFileName")
     @Expose
@@ -49,17 +46,14 @@ public class AudioFileInfo extends AbstractModel {
 
     /**
     * 审核状态，0-未审核，1-审核通过，2-审核拒绝
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-     * Get 文件ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文件ID 
      * @return FileId 文件ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFileId() {
         return this.FileId;
@@ -67,19 +61,15 @@ public class AudioFileInfo extends AbstractModel {
 
     /**
      * Set 文件ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FileId 文件ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileId(Long FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get 文件别名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文件别名 
      * @return CustomFileName 文件别名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCustomFileName() {
         return this.CustomFileName;
@@ -87,19 +77,15 @@ public class AudioFileInfo extends AbstractModel {
 
     /**
      * Set 文件别名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CustomFileName 文件别名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCustomFileName(String CustomFileName) {
         this.CustomFileName = CustomFileName;
     }
 
     /**
-     * Get 文件名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文件名 
      * @return AudioFileName 文件名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAudioFileName() {
         return this.AudioFileName;
@@ -107,19 +93,15 @@ public class AudioFileInfo extends AbstractModel {
 
     /**
      * Set 文件名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AudioFileName 文件名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAudioFileName(String AudioFileName) {
         this.AudioFileName = AudioFileName;
     }
 
     /**
-     * Get 审核状态，0-未审核，1-审核通过，2-审核拒绝
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 审核状态，0-未审核，1-审核通过，2-审核拒绝 
      * @return Status 审核状态，0-未审核，1-审核通过，2-审核拒绝
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
         return this.Status;
@@ -127,9 +109,7 @@ public class AudioFileInfo extends AbstractModel {
 
     /**
      * Set 审核状态，0-未审核，1-审核通过，2-审核拒绝
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 审核状态，0-未审核，1-审核通过，2-审核拒绝
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
         this.Status = Status;

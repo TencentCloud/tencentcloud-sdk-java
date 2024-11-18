@@ -193,7 +193,9 @@ public class CreateBackUpScheduleRequest extends AbstractModel {
 废弃：使用ScheduleInfo 
      * @return WeekDays 选择的星期 逗号分隔
 废弃：使用ScheduleInfo
+     * @deprecated
      */
+    @Deprecated
     public String getWeekDays() {
         return this.WeekDays;
     }
@@ -203,7 +205,9 @@ public class CreateBackUpScheduleRequest extends AbstractModel {
 废弃：使用ScheduleInfo
      * @param WeekDays 选择的星期 逗号分隔
 废弃：使用ScheduleInfo
+     * @deprecated
      */
+    @Deprecated
     public void setWeekDays(String WeekDays) {
         this.WeekDays = WeekDays;
     }
@@ -213,7 +217,9 @@ public class CreateBackUpScheduleRequest extends AbstractModel {
 废弃：使用ScheduleInfo 
      * @return ExecuteHour 执行小时
 废弃：使用ScheduleInfo
+     * @deprecated
      */
+    @Deprecated
     public Long getExecuteHour() {
         return this.ExecuteHour;
     }
@@ -223,7 +229,9 @@ public class CreateBackUpScheduleRequest extends AbstractModel {
 废弃：使用ScheduleInfo
      * @param ExecuteHour 执行小时
 废弃：使用ScheduleInfo
+     * @deprecated
      */
+    @Deprecated
     public void setExecuteHour(Long ExecuteHour) {
         this.ExecuteHour = ExecuteHour;
     }

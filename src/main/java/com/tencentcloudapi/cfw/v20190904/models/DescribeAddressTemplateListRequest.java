@@ -38,14 +38,14 @@ public class DescribeAddressTemplateListRequest extends AbstractModel {
     private Long Limit;
 
     /**
-    * 排序字段，取值 'UpdateTime' | 'RulesNum'
+    * 排序字段，取值：UpdateTime最近更新时间，RulesNum关联规则数
     */
     @SerializedName("By")
     @Expose
     private String By;
 
     /**
-    * 排序，取值 'asc'|'desc'
+    * 排序，取值 ：asc正序，desc逆序
     */
     @SerializedName("Order")
     @Expose
@@ -66,7 +66,7 @@ public class DescribeAddressTemplateListRequest extends AbstractModel {
     private String Uuid;
 
     /**
-    * 1：ip模板，5：域名模板，6：协议端口模板
+    * 模板类型，取值：1：ip模板，5：域名模板，6：协议端口模板
     */
     @SerializedName("TemplateType")
     @Expose
@@ -112,32 +112,32 @@ public class DescribeAddressTemplateListRequest extends AbstractModel {
     }
 
     /**
-     * Get 排序字段，取值 'UpdateTime' | 'RulesNum' 
-     * @return By 排序字段，取值 'UpdateTime' | 'RulesNum'
+     * Get 排序字段，取值：UpdateTime最近更新时间，RulesNum关联规则数 
+     * @return By 排序字段，取值：UpdateTime最近更新时间，RulesNum关联规则数
      */
     public String getBy() {
         return this.By;
     }
 
     /**
-     * Set 排序字段，取值 'UpdateTime' | 'RulesNum'
-     * @param By 排序字段，取值 'UpdateTime' | 'RulesNum'
+     * Set 排序字段，取值：UpdateTime最近更新时间，RulesNum关联规则数
+     * @param By 排序字段，取值：UpdateTime最近更新时间，RulesNum关联规则数
      */
     public void setBy(String By) {
         this.By = By;
     }
 
     /**
-     * Get 排序，取值 'asc'|'desc' 
-     * @return Order 排序，取值 'asc'|'desc'
+     * Get 排序，取值 ：asc正序，desc逆序 
+     * @return Order 排序，取值 ：asc正序，desc逆序
      */
     public String getOrder() {
         return this.Order;
     }
 
     /**
-     * Set 排序，取值 'asc'|'desc'
-     * @param Order 排序，取值 'asc'|'desc'
+     * Set 排序，取值 ：asc正序，desc逆序
+     * @param Order 排序，取值 ：asc正序，desc逆序
      */
     public void setOrder(String Order) {
         this.Order = Order;
@@ -176,16 +176,16 @@ public class DescribeAddressTemplateListRequest extends AbstractModel {
     }
 
     /**
-     * Get 1：ip模板，5：域名模板，6：协议端口模板 
-     * @return TemplateType 1：ip模板，5：域名模板，6：协议端口模板
+     * Get 模板类型，取值：1：ip模板，5：域名模板，6：协议端口模板 
+     * @return TemplateType 模板类型，取值：1：ip模板，5：域名模板，6：协议端口模板
      */
     public String getTemplateType() {
         return this.TemplateType;
     }
 
     /**
-     * Set 1：ip模板，5：域名模板，6：协议端口模板
-     * @param TemplateType 1：ip模板，5：域名模板，6：协议端口模板
+     * Set 模板类型，取值：1：ip模板，5：域名模板，6：协议端口模板
+     * @param TemplateType 模板类型，取值：1：ip模板，5：域名模板，6：协议端口模板
      */
     public void setTemplateType(String TemplateType) {
         this.TemplateType = TemplateType;

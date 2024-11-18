@@ -25,7 +25,6 @@ public class CreateNatFwInstanceWithDomainResponse extends AbstractModel {
 
     /**
     * nat实例信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CfwInsId")
     @Expose
@@ -39,10 +38,8 @@ public class CreateNatFwInstanceWithDomainResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get nat实例信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get nat实例信息 
      * @return CfwInsId nat实例信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCfwInsId() {
         return this.CfwInsId;
@@ -50,9 +47,7 @@ public class CreateNatFwInstanceWithDomainResponse extends AbstractModel {
 
     /**
      * Set nat实例信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CfwInsId nat实例信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCfwInsId(String CfwInsId) {
         this.CfwInsId = CfwInsId;

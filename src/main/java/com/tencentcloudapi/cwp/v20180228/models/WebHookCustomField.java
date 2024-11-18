@@ -25,7 +25,6 @@ public class WebHookCustomField extends AbstractModel {
 
     /**
     * key
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Key")
     @Expose
@@ -33,17 +32,14 @@ public class WebHookCustomField extends AbstractModel {
 
     /**
     * value
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Value")
     @Expose
     private String Value;
 
     /**
-     * Get key
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get key 
      * @return Key key
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKey() {
         return this.Key;
@@ -51,19 +47,15 @@ public class WebHookCustomField extends AbstractModel {
 
     /**
      * Set key
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Key key
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKey(String Key) {
         this.Key = Key;
     }
 
     /**
-     * Get value
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get value 
      * @return Value value
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getValue() {
         return this.Value;
@@ -71,9 +63,7 @@ public class WebHookCustomField extends AbstractModel {
 
     /**
      * Set value
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Value value
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValue(String Value) {
         this.Value = Value;

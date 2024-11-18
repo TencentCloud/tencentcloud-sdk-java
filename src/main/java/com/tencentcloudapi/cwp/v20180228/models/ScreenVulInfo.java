@@ -60,7 +60,6 @@ public class ScreenVulInfo extends AbstractModel {
 
     /**
     * 漏洞类型 1: web-cms漏洞, 2:应用漏洞, 4: Linux软件漏洞, 5: Windows系统漏洞
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Category")
     @Expose
@@ -68,7 +67,6 @@ public class ScreenVulInfo extends AbstractModel {
 
     /**
     * 主机UUID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Uuid")
     @Expose
@@ -155,10 +153,8 @@ public class ScreenVulInfo extends AbstractModel {
     }
 
     /**
-     * Get 漏洞类型 1: web-cms漏洞, 2:应用漏洞, 4: Linux软件漏洞, 5: Windows系统漏洞
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 漏洞类型 1: web-cms漏洞, 2:应用漏洞, 4: Linux软件漏洞, 5: Windows系统漏洞 
      * @return Category 漏洞类型 1: web-cms漏洞, 2:应用漏洞, 4: Linux软件漏洞, 5: Windows系统漏洞
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCategory() {
         return this.Category;
@@ -166,19 +162,15 @@ public class ScreenVulInfo extends AbstractModel {
 
     /**
      * Set 漏洞类型 1: web-cms漏洞, 2:应用漏洞, 4: Linux软件漏洞, 5: Windows系统漏洞
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Category 漏洞类型 1: web-cms漏洞, 2:应用漏洞, 4: Linux软件漏洞, 5: Windows系统漏洞
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCategory(Long Category) {
         this.Category = Category;
     }
 
     /**
-     * Get 主机UUID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主机UUID 
      * @return Uuid 主机UUID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUuid() {
         return this.Uuid;
@@ -186,9 +178,7 @@ public class ScreenVulInfo extends AbstractModel {
 
     /**
      * Set 主机UUID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Uuid 主机UUID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUuid(String Uuid) {
         this.Uuid = Uuid;

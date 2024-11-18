@@ -151,7 +151,6 @@ public class AssetViewCFGRisk extends AbstractModel {
 
     /**
     * 用户昵称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Nick")
     @Expose
@@ -159,11 +158,17 @@ public class AssetViewCFGRisk extends AbstractModel {
 
     /**
     * 用户uin
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Uin")
     @Expose
     private String Uin;
+
+    /**
+    * 当资产类型为LBL的时候，展示该字段，方便定位具体的LB
+    */
+    @SerializedName("ClbId")
+    @Expose
+    private String ClbId;
 
     /**
      * Get 唯一id 
@@ -454,10 +459,8 @@ public class AssetViewCFGRisk extends AbstractModel {
     }
 
     /**
-     * Get 用户昵称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户昵称 
      * @return Nick 用户昵称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNick() {
         return this.Nick;
@@ -465,19 +468,15 @@ public class AssetViewCFGRisk extends AbstractModel {
 
     /**
      * Set 用户昵称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Nick 用户昵称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNick(String Nick) {
         this.Nick = Nick;
     }
 
     /**
-     * Get 用户uin
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户uin 
      * @return Uin 用户uin
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUin() {
         return this.Uin;
@@ -485,12 +484,26 @@ public class AssetViewCFGRisk extends AbstractModel {
 
     /**
      * Set 用户uin
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Uin 用户uin
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUin(String Uin) {
         this.Uin = Uin;
+    }
+
+    /**
+     * Get 当资产类型为LBL的时候，展示该字段，方便定位具体的LB 
+     * @return ClbId 当资产类型为LBL的时候，展示该字段，方便定位具体的LB
+     */
+    public String getClbId() {
+        return this.ClbId;
+    }
+
+    /**
+     * Set 当资产类型为LBL的时候，展示该字段，方便定位具体的LB
+     * @param ClbId 当资产类型为LBL的时候，展示该字段，方便定位具体的LB
+     */
+    public void setClbId(String ClbId) {
+        this.ClbId = ClbId;
     }
 
     public AssetViewCFGRisk() {
@@ -561,6 +574,9 @@ public class AssetViewCFGRisk extends AbstractModel {
         if (source.Uin != null) {
             this.Uin = new String(source.Uin);
         }
+        if (source.ClbId != null) {
+            this.ClbId = new String(source.ClbId);
+        }
     }
 
 
@@ -588,6 +604,7 @@ public class AssetViewCFGRisk extends AbstractModel {
         this.setParamSimple(map, prefix + "AppId", this.AppId);
         this.setParamSimple(map, prefix + "Nick", this.Nick);
         this.setParamSimple(map, prefix + "Uin", this.Uin);
+        this.setParamSimple(map, prefix + "ClbId", this.ClbId);
 
     }
 }

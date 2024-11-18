@@ -25,7 +25,6 @@ public class RefundMap extends AbstractModel {
 
     /**
     * 退款单关联的原始子订单号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DealName")
     @Expose
@@ -33,17 +32,14 @@ public class RefundMap extends AbstractModel {
 
     /**
     * 退款金额，单位分
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RefundAmount")
     @Expose
     private Long RefundAmount;
 
     /**
-     * Get 退款单关联的原始子订单号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 退款单关联的原始子订单号 
      * @return DealName 退款单关联的原始子订单号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDealName() {
         return this.DealName;
@@ -51,19 +47,15 @@ public class RefundMap extends AbstractModel {
 
     /**
      * Set 退款单关联的原始子订单号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DealName 退款单关联的原始子订单号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDealName(String DealName) {
         this.DealName = DealName;
     }
 
     /**
-     * Get 退款金额，单位分
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 退款金额，单位分 
      * @return RefundAmount 退款金额，单位分
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRefundAmount() {
         return this.RefundAmount;
@@ -71,9 +63,7 @@ public class RefundMap extends AbstractModel {
 
     /**
      * Set 退款金额，单位分
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RefundAmount 退款金额，单位分
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRefundAmount(Long RefundAmount) {
         this.RefundAmount = RefundAmount;

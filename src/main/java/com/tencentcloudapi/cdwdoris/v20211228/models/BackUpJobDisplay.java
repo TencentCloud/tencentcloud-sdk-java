@@ -114,6 +114,14 @@ public class BackUpJobDisplay extends AbstractModel {
     private BackupCosInfo BackupCosInfo;
 
     /**
+    * 是否使用的自定义桶
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsUserDefineBucket")
+    @Expose
+    private Boolean IsUserDefineBucket;
+
+    /**
      * Get 备份实例id 
      * @return JobId 备份实例id
      */
@@ -329,6 +337,26 @@ public class BackUpJobDisplay extends AbstractModel {
         this.BackupCosInfo = BackupCosInfo;
     }
 
+    /**
+     * Get 是否使用的自定义桶
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsUserDefineBucket 是否使用的自定义桶
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getIsUserDefineBucket() {
+        return this.IsUserDefineBucket;
+    }
+
+    /**
+     * Set 是否使用的自定义桶
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsUserDefineBucket 是否使用的自定义桶
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsUserDefineBucket(Boolean IsUserDefineBucket) {
+        this.IsUserDefineBucket = IsUserDefineBucket;
+    }
+
     public BackUpJobDisplay() {
     }
 
@@ -373,6 +401,9 @@ public class BackUpJobDisplay extends AbstractModel {
         if (source.BackupCosInfo != null) {
             this.BackupCosInfo = new BackupCosInfo(source.BackupCosInfo);
         }
+        if (source.IsUserDefineBucket != null) {
+            this.IsUserDefineBucket = new Boolean(source.IsUserDefineBucket);
+        }
     }
 
 
@@ -392,6 +423,7 @@ public class BackUpJobDisplay extends AbstractModel {
         this.setParamObj(map, prefix + "DorisSourceInfo.", this.DorisSourceInfo);
         this.setParamSimple(map, prefix + "JobStatusNum", this.JobStatusNum);
         this.setParamObj(map, prefix + "BackupCosInfo.", this.BackupCosInfo);
+        this.setParamSimple(map, prefix + "IsUserDefineBucket", this.IsUserDefineBucket);
 
     }
 }

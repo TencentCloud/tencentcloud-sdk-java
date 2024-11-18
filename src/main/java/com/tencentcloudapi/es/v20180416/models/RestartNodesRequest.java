@@ -80,6 +80,20 @@ public class RestartNodesRequest extends AbstractModel {
     private Long ShardAllocationBytes;
 
     /**
+    * 是否开启置放群组异步任务
+    */
+    @SerializedName("EnableScheduleRecoverGroup")
+    @Expose
+    private Boolean EnableScheduleRecoverGroup;
+
+    /**
+    * 置放群组异步任务时间段
+    */
+    @SerializedName("EnableScheduleOperationDuration")
+    @Expose
+    private EnableScheduleOperationDuration EnableScheduleOperationDuration;
+
+    /**
      * Get 集群实例ID 
      * @return InstanceId 集群实例ID
      */
@@ -207,6 +221,38 @@ public class RestartNodesRequest extends AbstractModel {
         this.ShardAllocationBytes = ShardAllocationBytes;
     }
 
+    /**
+     * Get 是否开启置放群组异步任务 
+     * @return EnableScheduleRecoverGroup 是否开启置放群组异步任务
+     */
+    public Boolean getEnableScheduleRecoverGroup() {
+        return this.EnableScheduleRecoverGroup;
+    }
+
+    /**
+     * Set 是否开启置放群组异步任务
+     * @param EnableScheduleRecoverGroup 是否开启置放群组异步任务
+     */
+    public void setEnableScheduleRecoverGroup(Boolean EnableScheduleRecoverGroup) {
+        this.EnableScheduleRecoverGroup = EnableScheduleRecoverGroup;
+    }
+
+    /**
+     * Get 置放群组异步任务时间段 
+     * @return EnableScheduleOperationDuration 置放群组异步任务时间段
+     */
+    public EnableScheduleOperationDuration getEnableScheduleOperationDuration() {
+        return this.EnableScheduleOperationDuration;
+    }
+
+    /**
+     * Set 置放群组异步任务时间段
+     * @param EnableScheduleOperationDuration 置放群组异步任务时间段
+     */
+    public void setEnableScheduleOperationDuration(EnableScheduleOperationDuration EnableScheduleOperationDuration) {
+        this.EnableScheduleOperationDuration = EnableScheduleOperationDuration;
+    }
+
     public RestartNodesRequest() {
     }
 
@@ -242,6 +288,12 @@ public class RestartNodesRequest extends AbstractModel {
         if (source.ShardAllocationBytes != null) {
             this.ShardAllocationBytes = new Long(source.ShardAllocationBytes);
         }
+        if (source.EnableScheduleRecoverGroup != null) {
+            this.EnableScheduleRecoverGroup = new Boolean(source.EnableScheduleRecoverGroup);
+        }
+        if (source.EnableScheduleOperationDuration != null) {
+            this.EnableScheduleOperationDuration = new EnableScheduleOperationDuration(source.EnableScheduleOperationDuration);
+        }
     }
 
 
@@ -257,6 +309,8 @@ public class RestartNodesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "CvmDelayOnlineTime", this.CvmDelayOnlineTime);
         this.setParamSimple(map, prefix + "ShardAllocationConcurrents", this.ShardAllocationConcurrents);
         this.setParamSimple(map, prefix + "ShardAllocationBytes", this.ShardAllocationBytes);
+        this.setParamSimple(map, prefix + "EnableScheduleRecoverGroup", this.EnableScheduleRecoverGroup);
+        this.setParamObj(map, prefix + "EnableScheduleOperationDuration.", this.EnableScheduleOperationDuration);
 
     }
 }

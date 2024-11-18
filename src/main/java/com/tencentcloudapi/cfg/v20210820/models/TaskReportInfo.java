@@ -82,6 +82,14 @@ public class TaskReportInfo extends AbstractModel {
     private String ArchiveTime;
 
     /**
+    * 归档ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ArchiveUuid")
+    @Expose
+    private String ArchiveUuid;
+
+    /**
      * Get 0--未开始，1--正在导出，2--导出成功，3--导出失败 
      * @return Stage 0--未开始，1--正在导出，2--导出成功，3--导出失败
      */
@@ -217,6 +225,26 @@ public class TaskReportInfo extends AbstractModel {
         this.ArchiveTime = ArchiveTime;
     }
 
+    /**
+     * Get 归档ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ArchiveUuid 归档ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getArchiveUuid() {
+        return this.ArchiveUuid;
+    }
+
+    /**
+     * Set 归档ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ArchiveUuid 归档ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setArchiveUuid(String ArchiveUuid) {
+        this.ArchiveUuid = ArchiveUuid;
+    }
+
     public TaskReportInfo() {
     }
 
@@ -249,6 +277,9 @@ public class TaskReportInfo extends AbstractModel {
         if (source.ArchiveTime != null) {
             this.ArchiveTime = new String(source.ArchiveTime);
         }
+        if (source.ArchiveUuid != null) {
+            this.ArchiveUuid = new String(source.ArchiveUuid);
+        }
     }
 
 
@@ -264,6 +295,7 @@ public class TaskReportInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Log", this.Log);
         this.setParamSimple(map, prefix + "ArchiveStage", this.ArchiveStage);
         this.setParamSimple(map, prefix + "ArchiveTime", this.ArchiveTime);
+        this.setParamSimple(map, prefix + "ArchiveUuid", this.ArchiveUuid);
 
     }
 }

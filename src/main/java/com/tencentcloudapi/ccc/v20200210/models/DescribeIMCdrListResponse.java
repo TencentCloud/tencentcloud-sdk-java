@@ -32,7 +32,6 @@ public class DescribeIMCdrListResponse extends AbstractModel {
 
     /**
     * 服务记录列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IMCdrList")
     @Expose
@@ -62,10 +61,8 @@ public class DescribeIMCdrListResponse extends AbstractModel {
     }
 
     /**
-     * Get 服务记录列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 服务记录列表 
      * @return IMCdrList 服务记录列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public IMCdrInfo [] getIMCdrList() {
         return this.IMCdrList;
@@ -73,9 +70,7 @@ public class DescribeIMCdrListResponse extends AbstractModel {
 
     /**
      * Set 服务记录列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IMCdrList 服务记录列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIMCdrList(IMCdrInfo [] IMCdrList) {
         this.IMCdrList = IMCdrList;

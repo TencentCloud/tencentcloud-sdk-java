@@ -25,7 +25,6 @@ public class AlertInfo extends AbstractModel {
 
     /**
     * 告警ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ID")
     @Expose
@@ -33,7 +32,6 @@ public class AlertInfo extends AbstractModel {
 
     /**
     * 告警名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -45,7 +43,6 @@ CFW:云防火墙
 WAF:Web应用防火墙
 CWP:主机安全
 CSIP:云安全中心
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Source")
     @Expose
@@ -58,7 +55,6 @@ CSIP:云安全中心
 3:中危
 4:高危
 5:严重
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Level")
     @Expose
@@ -66,7 +62,6 @@ CSIP:云安全中心
 
     /**
     * 攻击者
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Attacker")
     @Expose
@@ -74,15 +69,13 @@ CSIP:云安全中心
 
     /**
     * 受害者
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Victim")
     @Expose
     private RoleInfo Victim;
 
     /**
-    * 证据数据(例如攻击内容等)
-注意：此字段可能返回 null，表示取不到有效值。
+    * 证据数据(例如攻击内容等，base64编码)
     */
     @SerializedName("EvidenceData")
     @Expose
@@ -90,7 +83,6 @@ CSIP:云安全中心
 
     /**
     * 证据位置(例如协议端口)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EvidenceLocation")
     @Expose
@@ -98,7 +90,6 @@ CSIP:云安全中心
 
     /**
     * 证据路径
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EvidencePath")
     @Expose
@@ -106,7 +97,6 @@ CSIP:云安全中心
 
     /**
     * 首次告警时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -114,7 +104,6 @@ CSIP:云安全中心
 
     /**
     * 最近告警时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -122,7 +111,6 @@ CSIP:云安全中心
 
     /**
     * 告警次数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Count")
     @Expose
@@ -130,7 +118,6 @@ CSIP:云安全中心
 
     /**
     * 紧急缓解建议
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UrgentSuggestion")
     @Expose
@@ -138,7 +125,6 @@ CSIP:云安全中心
 
     /**
     * 根治建议
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RemediationSuggestion")
     @Expose
@@ -147,7 +133,6 @@ CSIP:云安全中心
     /**
     * 处理状态
 0：未处置，1：已忽略，2：已处置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -155,7 +140,6 @@ CSIP:云安全中心
 
     /**
     * 告警处理类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProcessType")
     @Expose
@@ -163,7 +147,6 @@ CSIP:云安全中心
 
     /**
     * 告警大类
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -171,7 +154,6 @@ CSIP:云安全中心
 
     /**
     * 告警小类
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubType")
     @Expose
@@ -179,7 +161,6 @@ CSIP:云安全中心
 
     /**
     * 下拉字段
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExtraInfo")
     @Expose
@@ -187,7 +168,6 @@ CSIP:云安全中心
 
     /**
     * 聚合字段
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Key")
     @Expose
@@ -195,7 +175,6 @@ CSIP:云安全中心
 
     /**
     * 告警日期
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Date")
     @Expose
@@ -203,7 +182,6 @@ CSIP:云安全中心
 
     /**
     * appid
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AppID")
     @Expose
@@ -211,7 +189,6 @@ CSIP:云安全中心
 
     /**
     * 账户名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NickName")
     @Expose
@@ -219,7 +196,6 @@ CSIP:云安全中心
 
     /**
     * 账户ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Uin")
     @Expose
@@ -227,7 +203,6 @@ CSIP:云安全中心
 
     /**
     * 行为
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Action")
     @Expose
@@ -235,7 +210,6 @@ CSIP:云安全中心
 
     /**
     * 风险排查
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RiskInvestigation")
     @Expose
@@ -243,7 +217,6 @@ CSIP:云安全中心
 
     /**
     * 风险处置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RiskTreatment")
     @Expose
@@ -251,7 +224,6 @@ CSIP:云安全中心
 
     /**
     * 日志类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LogType")
     @Expose
@@ -259,17 +231,14 @@ CSIP:云安全中心
 
     /**
     * 语句检索
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LogSearch")
     @Expose
     private String LogSearch;
 
     /**
-     * Get 告警ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 告警ID 
      * @return ID 告警ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getID() {
         return this.ID;
@@ -277,19 +246,15 @@ CSIP:云安全中心
 
     /**
      * Set 告警ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ID 告警ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setID(String ID) {
         this.ID = ID;
     }
 
     /**
-     * Get 告警名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 告警名称 
      * @return Name 告警名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -297,9 +262,7 @@ CSIP:云安全中心
 
     /**
      * Set 告警名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 告警名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -310,14 +273,12 @@ CSIP:云安全中心
 CFW:云防火墙
 WAF:Web应用防火墙
 CWP:主机安全
-CSIP:云安全中心
-注意：此字段可能返回 null，表示取不到有效值。 
+CSIP:云安全中心 
      * @return Source 告警来源
 CFW:云防火墙
 WAF:Web应用防火墙
 CWP:主机安全
 CSIP:云安全中心
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSource() {
         return this.Source;
@@ -329,13 +290,11 @@ CFW:云防火墙
 WAF:Web应用防火墙
 CWP:主机安全
 CSIP:云安全中心
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Source 告警来源
 CFW:云防火墙
 WAF:Web应用防火墙
 CWP:主机安全
 CSIP:云安全中心
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSource(String Source) {
         this.Source = Source;
@@ -347,15 +306,13 @@ CSIP:云安全中心
 2:低危
 3:中危
 4:高危
-5:严重
-注意：此字段可能返回 null，表示取不到有效值。 
+5:严重 
      * @return Level 告警等级
 1:提示
 2:低危
 3:中危
 4:高危
 5:严重
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLevel() {
         return this.Level;
@@ -368,24 +325,20 @@ CSIP:云安全中心
 3:中危
 4:高危
 5:严重
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Level 告警等级
 1:提示
 2:低危
 3:中危
 4:高危
 5:严重
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLevel(Long Level) {
         this.Level = Level;
     }
 
     /**
-     * Get 攻击者
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 攻击者 
      * @return Attacker 攻击者
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RoleInfo getAttacker() {
         return this.Attacker;
@@ -393,19 +346,15 @@ CSIP:云安全中心
 
     /**
      * Set 攻击者
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Attacker 攻击者
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAttacker(RoleInfo Attacker) {
         this.Attacker = Attacker;
     }
 
     /**
-     * Get 受害者
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 受害者 
      * @return Victim 受害者
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RoleInfo getVictim() {
         return this.Victim;
@@ -413,39 +362,31 @@ CSIP:云安全中心
 
     /**
      * Set 受害者
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Victim 受害者
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVictim(RoleInfo Victim) {
         this.Victim = Victim;
     }
 
     /**
-     * Get 证据数据(例如攻击内容等)
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EvidenceData 证据数据(例如攻击内容等)
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 证据数据(例如攻击内容等，base64编码) 
+     * @return EvidenceData 证据数据(例如攻击内容等，base64编码)
      */
     public String getEvidenceData() {
         return this.EvidenceData;
     }
 
     /**
-     * Set 证据数据(例如攻击内容等)
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param EvidenceData 证据数据(例如攻击内容等)
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 证据数据(例如攻击内容等，base64编码)
+     * @param EvidenceData 证据数据(例如攻击内容等，base64编码)
      */
     public void setEvidenceData(String EvidenceData) {
         this.EvidenceData = EvidenceData;
     }
 
     /**
-     * Get 证据位置(例如协议端口)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 证据位置(例如协议端口) 
      * @return EvidenceLocation 证据位置(例如协议端口)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEvidenceLocation() {
         return this.EvidenceLocation;
@@ -453,19 +394,15 @@ CSIP:云安全中心
 
     /**
      * Set 证据位置(例如协议端口)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EvidenceLocation 证据位置(例如协议端口)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEvidenceLocation(String EvidenceLocation) {
         this.EvidenceLocation = EvidenceLocation;
     }
 
     /**
-     * Get 证据路径
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 证据路径 
      * @return EvidencePath 证据路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEvidencePath() {
         return this.EvidencePath;
@@ -473,19 +410,15 @@ CSIP:云安全中心
 
     /**
      * Set 证据路径
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EvidencePath 证据路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEvidencePath(String EvidencePath) {
         this.EvidencePath = EvidencePath;
     }
 
     /**
-     * Get 首次告警时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 首次告警时间 
      * @return CreateTime 首次告警时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -493,19 +426,15 @@ CSIP:云安全中心
 
     /**
      * Set 首次告警时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 首次告警时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 最近告警时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最近告警时间 
      * @return UpdateTime 最近告警时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdateTime() {
         return this.UpdateTime;
@@ -513,19 +442,15 @@ CSIP:云安全中心
 
     /**
      * Set 最近告警时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdateTime 最近告警时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get 告警次数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 告警次数 
      * @return Count 告警次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCount() {
         return this.Count;
@@ -533,19 +458,15 @@ CSIP:云安全中心
 
     /**
      * Set 告警次数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Count 告警次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCount(Long Count) {
         this.Count = Count;
     }
 
     /**
-     * Get 紧急缓解建议
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 紧急缓解建议 
      * @return UrgentSuggestion 紧急缓解建议
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUrgentSuggestion() {
         return this.UrgentSuggestion;
@@ -553,19 +474,15 @@ CSIP:云安全中心
 
     /**
      * Set 紧急缓解建议
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UrgentSuggestion 紧急缓解建议
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUrgentSuggestion(String UrgentSuggestion) {
         this.UrgentSuggestion = UrgentSuggestion;
     }
 
     /**
-     * Get 根治建议
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 根治建议 
      * @return RemediationSuggestion 根治建议
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRemediationSuggestion() {
         return this.RemediationSuggestion;
@@ -573,9 +490,7 @@ CSIP:云安全中心
 
     /**
      * Set 根治建议
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RemediationSuggestion 根治建议
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemediationSuggestion(String RemediationSuggestion) {
         this.RemediationSuggestion = RemediationSuggestion;
@@ -583,11 +498,9 @@ CSIP:云安全中心
 
     /**
      * Get 处理状态
-0：未处置，1：已忽略，2：已处置
-注意：此字段可能返回 null，表示取不到有效值。 
+0：未处置，1：已忽略，2：已处置 
      * @return Status 处理状态
 0：未处置，1：已忽略，2：已处置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
         return this.Status;
@@ -596,20 +509,16 @@ CSIP:云安全中心
     /**
      * Set 处理状态
 0：未处置，1：已忽略，2：已处置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 处理状态
 0：未处置，1：已忽略，2：已处置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 告警处理类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 告警处理类型 
      * @return ProcessType 告警处理类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProcessType() {
         return this.ProcessType;
@@ -617,19 +526,15 @@ CSIP:云安全中心
 
     /**
      * Set 告警处理类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProcessType 告警处理类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProcessType(String ProcessType) {
         this.ProcessType = ProcessType;
     }
 
     /**
-     * Get 告警大类
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 告警大类 
      * @return Type 告警大类
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
         return this.Type;
@@ -637,19 +542,15 @@ CSIP:云安全中心
 
     /**
      * Set 告警大类
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 告警大类
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 告警小类
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 告警小类 
      * @return SubType 告警小类
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubType() {
         return this.SubType;
@@ -657,19 +558,15 @@ CSIP:云安全中心
 
     /**
      * Set 告警小类
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubType 告警小类
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubType(String SubType) {
         this.SubType = SubType;
     }
 
     /**
-     * Get 下拉字段
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 下拉字段 
      * @return ExtraInfo 下拉字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AlertExtraInfo getExtraInfo() {
         return this.ExtraInfo;
@@ -677,19 +574,15 @@ CSIP:云安全中心
 
     /**
      * Set 下拉字段
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExtraInfo 下拉字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExtraInfo(AlertExtraInfo ExtraInfo) {
         this.ExtraInfo = ExtraInfo;
     }
 
     /**
-     * Get 聚合字段
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 聚合字段 
      * @return Key 聚合字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKey() {
         return this.Key;
@@ -697,19 +590,15 @@ CSIP:云安全中心
 
     /**
      * Set 聚合字段
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Key 聚合字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKey(String Key) {
         this.Key = Key;
     }
 
     /**
-     * Get 告警日期
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 告警日期 
      * @return Date 告警日期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDate() {
         return this.Date;
@@ -717,19 +606,15 @@ CSIP:云安全中心
 
     /**
      * Set 告警日期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Date 告警日期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDate(String Date) {
         this.Date = Date;
     }
 
     /**
-     * Get appid
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get appid 
      * @return AppID appid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAppID() {
         return this.AppID;
@@ -737,19 +622,15 @@ CSIP:云安全中心
 
     /**
      * Set appid
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AppID appid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAppID(String AppID) {
         this.AppID = AppID;
     }
 
     /**
-     * Get 账户名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 账户名称 
      * @return NickName 账户名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNickName() {
         return this.NickName;
@@ -757,19 +638,15 @@ CSIP:云安全中心
 
     /**
      * Set 账户名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NickName 账户名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNickName(String NickName) {
         this.NickName = NickName;
     }
 
     /**
-     * Get 账户ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 账户ID 
      * @return Uin 账户ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUin() {
         return this.Uin;
@@ -777,19 +654,15 @@ CSIP:云安全中心
 
     /**
      * Set 账户ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Uin 账户ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUin(String Uin) {
         this.Uin = Uin;
     }
 
     /**
-     * Get 行为
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 行为 
      * @return Action 行为
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAction() {
         return this.Action;
@@ -797,19 +670,15 @@ CSIP:云安全中心
 
     /**
      * Set 行为
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Action 行为
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAction(Long Action) {
         this.Action = Action;
     }
 
     /**
-     * Get 风险排查
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 风险排查 
      * @return RiskInvestigation 风险排查
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRiskInvestigation() {
         return this.RiskInvestigation;
@@ -817,19 +686,15 @@ CSIP:云安全中心
 
     /**
      * Set 风险排查
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RiskInvestigation 风险排查
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRiskInvestigation(String RiskInvestigation) {
         this.RiskInvestigation = RiskInvestigation;
     }
 
     /**
-     * Get 风险处置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 风险处置 
      * @return RiskTreatment 风险处置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRiskTreatment() {
         return this.RiskTreatment;
@@ -837,19 +702,15 @@ CSIP:云安全中心
 
     /**
      * Set 风险处置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RiskTreatment 风险处置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRiskTreatment(String RiskTreatment) {
         this.RiskTreatment = RiskTreatment;
     }
 
     /**
-     * Get 日志类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 日志类型 
      * @return LogType 日志类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLogType() {
         return this.LogType;
@@ -857,19 +718,15 @@ CSIP:云安全中心
 
     /**
      * Set 日志类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LogType 日志类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLogType(String LogType) {
         this.LogType = LogType;
     }
 
     /**
-     * Get 语句检索
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 语句检索 
      * @return LogSearch 语句检索
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLogSearch() {
         return this.LogSearch;
@@ -877,9 +734,7 @@ CSIP:云安全中心
 
     /**
      * Set 语句检索
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LogSearch 语句检索
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLogSearch(String LogSearch) {
         this.LogSearch = LogSearch;

@@ -25,7 +25,6 @@ public class CreateStaffResponse extends AbstractModel {
 
     /**
     * 错误坐席列表及错误信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ErrorStaffList")
     @Expose
@@ -39,10 +38,8 @@ public class CreateStaffResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 错误坐席列表及错误信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 错误坐席列表及错误信息 
      * @return ErrorStaffList 错误坐席列表及错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ErrStaffItem [] getErrorStaffList() {
         return this.ErrorStaffList;
@@ -50,9 +47,7 @@ public class CreateStaffResponse extends AbstractModel {
 
     /**
      * Set 错误坐席列表及错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ErrorStaffList 错误坐席列表及错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrorStaffList(ErrStaffItem [] ErrorStaffList) {
         this.ErrorStaffList = ErrorStaffList;

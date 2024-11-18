@@ -24,13 +24,6 @@ import java.util.HashMap;
 public class NetworkInterfaceAttachment extends AbstractModel {
 
     /**
-    * 云主机实例ID。
-    */
-    @SerializedName("InstanceId")
-    @Expose
-    private String InstanceId;
-
-    /**
     * 网卡在云主机实例内的序号。
     */
     @SerializedName("DeviceIndex")
@@ -52,20 +45,11 @@ public class NetworkInterfaceAttachment extends AbstractModel {
     private String AttachTime;
 
     /**
-     * Get 云主机实例ID。 
-     * @return InstanceId 云主机实例ID。
-     */
-    public String getInstanceId() {
-        return this.InstanceId;
-    }
-
-    /**
-     * Set 云主机实例ID。
-     * @param InstanceId 云主机实例ID。
-     */
-    public void setInstanceId(String InstanceId) {
-        this.InstanceId = InstanceId;
-    }
+    * 云主机实例ID。
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
 
     /**
      * Get 网卡在云主机实例内的序号。 
@@ -115,6 +99,22 @@ public class NetworkInterfaceAttachment extends AbstractModel {
         this.AttachTime = AttachTime;
     }
 
+    /**
+     * Get 云主机实例ID。 
+     * @return InstanceId 云主机实例ID。
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set 云主机实例ID。
+     * @param InstanceId 云主机实例ID。
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
     public NetworkInterfaceAttachment() {
     }
 
@@ -123,9 +123,6 @@ public class NetworkInterfaceAttachment extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public NetworkInterfaceAttachment(NetworkInterfaceAttachment source) {
-        if (source.InstanceId != null) {
-            this.InstanceId = new String(source.InstanceId);
-        }
         if (source.DeviceIndex != null) {
             this.DeviceIndex = new Long(source.DeviceIndex);
         }
@@ -135,6 +132,9 @@ public class NetworkInterfaceAttachment extends AbstractModel {
         if (source.AttachTime != null) {
             this.AttachTime = new String(source.AttachTime);
         }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
     }
 
 
@@ -142,10 +142,10 @@ public class NetworkInterfaceAttachment extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "DeviceIndex", this.DeviceIndex);
         this.setParamSimple(map, prefix + "InstanceAccountId", this.InstanceAccountId);
         this.setParamSimple(map, prefix + "AttachTime", this.AttachTime);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
 
     }
 }

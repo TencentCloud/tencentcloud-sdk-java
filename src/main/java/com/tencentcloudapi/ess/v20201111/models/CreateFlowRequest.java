@@ -159,6 +159,10 @@ public class CreateFlowRequest extends AbstractModel {
 
     /**
     * 合同流程的抄送人列表，最多可支持50个抄送人，抄送人可查看合同内容及签署进度，但无需参与合同签署。
+
+<b>注</b>
+1. 抄送人名单中可以包括自然人以及本企业的员工。
+2. 请确保抄送人列表中的成员不与任何签署人重复。
     */
     @SerializedName("CcInfos")
     @Expose
@@ -579,8 +583,16 @@ public class CreateFlowRequest extends AbstractModel {
     }
 
     /**
-     * Get 合同流程的抄送人列表，最多可支持50个抄送人，抄送人可查看合同内容及签署进度，但无需参与合同签署。 
+     * Get 合同流程的抄送人列表，最多可支持50个抄送人，抄送人可查看合同内容及签署进度，但无需参与合同签署。
+
+<b>注</b>
+1. 抄送人名单中可以包括自然人以及本企业的员工。
+2. 请确保抄送人列表中的成员不与任何签署人重复。 
      * @return CcInfos 合同流程的抄送人列表，最多可支持50个抄送人，抄送人可查看合同内容及签署进度，但无需参与合同签署。
+
+<b>注</b>
+1. 抄送人名单中可以包括自然人以及本企业的员工。
+2. 请确保抄送人列表中的成员不与任何签署人重复。
      */
     public CcInfo [] getCcInfos() {
         return this.CcInfos;
@@ -588,7 +600,15 @@ public class CreateFlowRequest extends AbstractModel {
 
     /**
      * Set 合同流程的抄送人列表，最多可支持50个抄送人，抄送人可查看合同内容及签署进度，但无需参与合同签署。
+
+<b>注</b>
+1. 抄送人名单中可以包括自然人以及本企业的员工。
+2. 请确保抄送人列表中的成员不与任何签署人重复。
      * @param CcInfos 合同流程的抄送人列表，最多可支持50个抄送人，抄送人可查看合同内容及签署进度，但无需参与合同签署。
+
+<b>注</b>
+1. 抄送人名单中可以包括自然人以及本企业的员工。
+2. 请确保抄送人列表中的成员不与任何签署人重复。
      */
     public void setCcInfos(CcInfo [] CcInfos) {
         this.CcInfos = CcInfos;

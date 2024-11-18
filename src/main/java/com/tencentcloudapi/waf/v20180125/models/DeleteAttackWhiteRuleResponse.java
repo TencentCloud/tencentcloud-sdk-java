@@ -25,7 +25,6 @@ public class DeleteAttackWhiteRuleResponse extends AbstractModel {
 
     /**
     * 删除失败的规则序号组
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FailIds")
     @Expose
@@ -39,10 +38,8 @@ public class DeleteAttackWhiteRuleResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 删除失败的规则序号组
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 删除失败的规则序号组 
      * @return FailIds 删除失败的规则序号组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long [] getFailIds() {
         return this.FailIds;
@@ -50,9 +47,7 @@ public class DeleteAttackWhiteRuleResponse extends AbstractModel {
 
     /**
      * Set 删除失败的规则序号组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FailIds 删除失败的规则序号组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFailIds(Long [] FailIds) {
         this.FailIds = FailIds;

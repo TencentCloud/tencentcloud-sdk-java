@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ConflictItem extends AbstractModel {
 
     /**
-    * 冲突资源的ID
+    * 冲突资源的ID。已废弃
     */
     @SerializedName("ConfilctId")
     @Expose
@@ -38,16 +38,23 @@ public class ConflictItem extends AbstractModel {
     private String DestinationItem;
 
     /**
-     * Get 冲突资源的ID 
-     * @return ConfilctId 冲突资源的ID
+    * 冲突资源的ID
+    */
+    @SerializedName("ConflictId")
+    @Expose
+    private String ConflictId;
+
+    /**
+     * Get 冲突资源的ID。已废弃 
+     * @return ConfilctId 冲突资源的ID。已废弃
      */
     public String getConfilctId() {
         return this.ConfilctId;
     }
 
     /**
-     * Set 冲突资源的ID
-     * @param ConfilctId 冲突资源的ID
+     * Set 冲突资源的ID。已废弃
+     * @param ConfilctId 冲突资源的ID。已废弃
      */
     public void setConfilctId(String ConfilctId) {
         this.ConfilctId = ConfilctId;
@@ -69,6 +76,22 @@ public class ConflictItem extends AbstractModel {
         this.DestinationItem = DestinationItem;
     }
 
+    /**
+     * Get 冲突资源的ID 
+     * @return ConflictId 冲突资源的ID
+     */
+    public String getConflictId() {
+        return this.ConflictId;
+    }
+
+    /**
+     * Set 冲突资源的ID
+     * @param ConflictId 冲突资源的ID
+     */
+    public void setConflictId(String ConflictId) {
+        this.ConflictId = ConflictId;
+    }
+
     public ConflictItem() {
     }
 
@@ -83,6 +106,9 @@ public class ConflictItem extends AbstractModel {
         if (source.DestinationItem != null) {
             this.DestinationItem = new String(source.DestinationItem);
         }
+        if (source.ConflictId != null) {
+            this.ConflictId = new String(source.ConflictId);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class ConflictItem extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ConfilctId", this.ConfilctId);
         this.setParamSimple(map, prefix + "DestinationItem", this.DestinationItem);
+        this.setParamSimple(map, prefix + "ConflictId", this.ConflictId);
 
     }
 }

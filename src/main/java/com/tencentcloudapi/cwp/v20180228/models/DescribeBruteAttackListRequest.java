@@ -49,7 +49,9 @@ public class DescribeBruteAttackListRequest extends AbstractModel {
 <li>CreateEndTime - String - 是否必填：否 - 首次攻击时间筛选，结束时间</li>
 <li>ModifyBeginTime - String - 是否必填：否 - 最近攻击时间筛选，开始时间</li>
 <li>ModifyEndTime - String - 是否必填：否 - 最近攻击时间筛选，结束时间</li>
-<li>Banned - String - 是否必填：否 - 阻断状态筛选，多个用","分割：0-未阻断（全局ZK开关关闭），82-未阻断(非专业版)，83-未阻断(已加白名单)，1-已阻断，2-未阻断-程序异常，3-未阻断-内网攻击暂不支持阻断，4-未阻断-安平暂不支持阻断</li>
+<li>Banned - String - 是否必填：否 - 阻断状态筛选，多个用","分割：0-未阻断（全局ZK开关关闭），82-未阻断(非专业版)，83-未阻断(已加白名单)，1-阻断成功(已完成)，2-未阻断-程序异常，3-未阻断-内网攻击暂不支持阻断，4-未阻断-安平暂不支持阻断，10-阻断成功(生效中)</li>
+<li>DataFrom - Int - 命中规则：0-登录规则，1-情报规则</li>
+<li>EventType - String - 是否必填：否 - 破解状态筛选：200-破解失败(密码错误),300-破解成功,400-破解失败(账号不存在)</li>
     */
     @SerializedName("Filters")
     @Expose
@@ -113,7 +115,9 @@ public class DescribeBruteAttackListRequest extends AbstractModel {
 <li>CreateEndTime - String - 是否必填：否 - 首次攻击时间筛选，结束时间</li>
 <li>ModifyBeginTime - String - 是否必填：否 - 最近攻击时间筛选，开始时间</li>
 <li>ModifyEndTime - String - 是否必填：否 - 最近攻击时间筛选，结束时间</li>
-<li>Banned - String - 是否必填：否 - 阻断状态筛选，多个用","分割：0-未阻断（全局ZK开关关闭），82-未阻断(非专业版)，83-未阻断(已加白名单)，1-已阻断，2-未阻断-程序异常，3-未阻断-内网攻击暂不支持阻断，4-未阻断-安平暂不支持阻断</li> 
+<li>Banned - String - 是否必填：否 - 阻断状态筛选，多个用","分割：0-未阻断（全局ZK开关关闭），82-未阻断(非专业版)，83-未阻断(已加白名单)，1-阻断成功(已完成)，2-未阻断-程序异常，3-未阻断-内网攻击暂不支持阻断，4-未阻断-安平暂不支持阻断，10-阻断成功(生效中)</li>
+<li>DataFrom - Int - 命中规则：0-登录规则，1-情报规则</li>
+<li>EventType - String - 是否必填：否 - 破解状态筛选：200-破解失败(密码错误),300-破解成功,400-破解失败(账号不存在)</li> 
      * @return Filters 过滤条件。
 <li>IpOrAlias - String - 是否必填：否 - 主机ip或别名筛选</li>
 <li>Uuid - String - 是否必填：否 - 主机安全唯一Uuid</li>
@@ -125,7 +129,9 @@ public class DescribeBruteAttackListRequest extends AbstractModel {
 <li>CreateEndTime - String - 是否必填：否 - 首次攻击时间筛选，结束时间</li>
 <li>ModifyBeginTime - String - 是否必填：否 - 最近攻击时间筛选，开始时间</li>
 <li>ModifyEndTime - String - 是否必填：否 - 最近攻击时间筛选，结束时间</li>
-<li>Banned - String - 是否必填：否 - 阻断状态筛选，多个用","分割：0-未阻断（全局ZK开关关闭），82-未阻断(非专业版)，83-未阻断(已加白名单)，1-已阻断，2-未阻断-程序异常，3-未阻断-内网攻击暂不支持阻断，4-未阻断-安平暂不支持阻断</li>
+<li>Banned - String - 是否必填：否 - 阻断状态筛选，多个用","分割：0-未阻断（全局ZK开关关闭），82-未阻断(非专业版)，83-未阻断(已加白名单)，1-阻断成功(已完成)，2-未阻断-程序异常，3-未阻断-内网攻击暂不支持阻断，4-未阻断-安平暂不支持阻断，10-阻断成功(生效中)</li>
+<li>DataFrom - Int - 命中规则：0-登录规则，1-情报规则</li>
+<li>EventType - String - 是否必填：否 - 破解状态筛选：200-破解失败(密码错误),300-破解成功,400-破解失败(账号不存在)</li>
      */
     public Filter [] getFilters() {
         return this.Filters;
@@ -143,7 +149,9 @@ public class DescribeBruteAttackListRequest extends AbstractModel {
 <li>CreateEndTime - String - 是否必填：否 - 首次攻击时间筛选，结束时间</li>
 <li>ModifyBeginTime - String - 是否必填：否 - 最近攻击时间筛选，开始时间</li>
 <li>ModifyEndTime - String - 是否必填：否 - 最近攻击时间筛选，结束时间</li>
-<li>Banned - String - 是否必填：否 - 阻断状态筛选，多个用","分割：0-未阻断（全局ZK开关关闭），82-未阻断(非专业版)，83-未阻断(已加白名单)，1-已阻断，2-未阻断-程序异常，3-未阻断-内网攻击暂不支持阻断，4-未阻断-安平暂不支持阻断</li>
+<li>Banned - String - 是否必填：否 - 阻断状态筛选，多个用","分割：0-未阻断（全局ZK开关关闭），82-未阻断(非专业版)，83-未阻断(已加白名单)，1-阻断成功(已完成)，2-未阻断-程序异常，3-未阻断-内网攻击暂不支持阻断，4-未阻断-安平暂不支持阻断，10-阻断成功(生效中)</li>
+<li>DataFrom - Int - 命中规则：0-登录规则，1-情报规则</li>
+<li>EventType - String - 是否必填：否 - 破解状态筛选：200-破解失败(密码错误),300-破解成功,400-破解失败(账号不存在)</li>
      * @param Filters 过滤条件。
 <li>IpOrAlias - String - 是否必填：否 - 主机ip或别名筛选</li>
 <li>Uuid - String - 是否必填：否 - 主机安全唯一Uuid</li>
@@ -155,7 +163,9 @@ public class DescribeBruteAttackListRequest extends AbstractModel {
 <li>CreateEndTime - String - 是否必填：否 - 首次攻击时间筛选，结束时间</li>
 <li>ModifyBeginTime - String - 是否必填：否 - 最近攻击时间筛选，开始时间</li>
 <li>ModifyEndTime - String - 是否必填：否 - 最近攻击时间筛选，结束时间</li>
-<li>Banned - String - 是否必填：否 - 阻断状态筛选，多个用","分割：0-未阻断（全局ZK开关关闭），82-未阻断(非专业版)，83-未阻断(已加白名单)，1-已阻断，2-未阻断-程序异常，3-未阻断-内网攻击暂不支持阻断，4-未阻断-安平暂不支持阻断</li>
+<li>Banned - String - 是否必填：否 - 阻断状态筛选，多个用","分割：0-未阻断（全局ZK开关关闭），82-未阻断(非专业版)，83-未阻断(已加白名单)，1-阻断成功(已完成)，2-未阻断-程序异常，3-未阻断-内网攻击暂不支持阻断，4-未阻断-安平暂不支持阻断，10-阻断成功(生效中)</li>
+<li>DataFrom - Int - 命中规则：0-登录规则，1-情报规则</li>
+<li>EventType - String - 是否必填：否 - 破解状态筛选：200-破解失败(密码错误),300-破解成功,400-破解失败(账号不存在)</li>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

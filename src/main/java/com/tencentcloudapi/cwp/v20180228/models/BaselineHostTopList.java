@@ -25,7 +25,6 @@ public class BaselineHostTopList extends AbstractModel {
 
     /**
     * 事件等级与次数列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EventLevelList")
     @Expose
@@ -33,7 +32,6 @@ public class BaselineHostTopList extends AbstractModel {
 
     /**
     * 主机名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HostName")
     @Expose
@@ -41,7 +39,6 @@ public class BaselineHostTopList extends AbstractModel {
 
     /**
     * 主机Quuid
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Quuid")
     @Expose
@@ -49,17 +46,14 @@ public class BaselineHostTopList extends AbstractModel {
 
     /**
     * 计算权重的分数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Score")
     @Expose
     private Long Score;
 
     /**
-     * Get 事件等级与次数列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 事件等级与次数列表 
      * @return EventLevelList 事件等级与次数列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BaselineEventLevelInfo [] getEventLevelList() {
         return this.EventLevelList;
@@ -67,19 +61,15 @@ public class BaselineHostTopList extends AbstractModel {
 
     /**
      * Set 事件等级与次数列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EventLevelList 事件等级与次数列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEventLevelList(BaselineEventLevelInfo [] EventLevelList) {
         this.EventLevelList = EventLevelList;
     }
 
     /**
-     * Get 主机名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主机名称 
      * @return HostName 主机名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHostName() {
         return this.HostName;
@@ -87,19 +77,15 @@ public class BaselineHostTopList extends AbstractModel {
 
     /**
      * Set 主机名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HostName 主机名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHostName(String HostName) {
         this.HostName = HostName;
     }
 
     /**
-     * Get 主机Quuid
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主机Quuid 
      * @return Quuid 主机Quuid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getQuuid() {
         return this.Quuid;
@@ -107,19 +93,15 @@ public class BaselineHostTopList extends AbstractModel {
 
     /**
      * Set 主机Quuid
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Quuid 主机Quuid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQuuid(String Quuid) {
         this.Quuid = Quuid;
     }
 
     /**
-     * Get 计算权重的分数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 计算权重的分数 
      * @return Score 计算权重的分数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getScore() {
         return this.Score;
@@ -127,9 +109,7 @@ public class BaselineHostTopList extends AbstractModel {
 
     /**
      * Set 计算权重的分数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Score 计算权重的分数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScore(Long Score) {
         this.Score = Score;

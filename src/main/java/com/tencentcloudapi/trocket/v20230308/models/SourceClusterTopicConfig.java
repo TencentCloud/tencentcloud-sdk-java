@@ -97,6 +97,30 @@ Failure 失败
     private String ImportStatus;
 
     /**
+    * 4.x的命名空间，出参使用
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NamespaceV4")
+    @Expose
+    private String NamespaceV4;
+
+    /**
+    * 4.x的主题名，出参使用
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TopicNameV4")
+    @Expose
+    private String TopicNameV4;
+
+    /**
+    * 4.x的完整命名空间，出参使用
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FullNamespaceV4")
+    @Expose
+    private String FullNamespaceV4;
+
+    /**
      * Get 主题名称
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TopicName 主题名称
@@ -304,6 +328,66 @@ Failure 失败
         this.ImportStatus = ImportStatus;
     }
 
+    /**
+     * Get 4.x的命名空间，出参使用
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NamespaceV4 4.x的命名空间，出参使用
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getNamespaceV4() {
+        return this.NamespaceV4;
+    }
+
+    /**
+     * Set 4.x的命名空间，出参使用
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NamespaceV4 4.x的命名空间，出参使用
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNamespaceV4(String NamespaceV4) {
+        this.NamespaceV4 = NamespaceV4;
+    }
+
+    /**
+     * Get 4.x的主题名，出参使用
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TopicNameV4 4.x的主题名，出参使用
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTopicNameV4() {
+        return this.TopicNameV4;
+    }
+
+    /**
+     * Set 4.x的主题名，出参使用
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TopicNameV4 4.x的主题名，出参使用
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTopicNameV4(String TopicNameV4) {
+        this.TopicNameV4 = TopicNameV4;
+    }
+
+    /**
+     * Get 4.x的完整命名空间，出参使用
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FullNamespaceV4 4.x的完整命名空间，出参使用
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getFullNamespaceV4() {
+        return this.FullNamespaceV4;
+    }
+
+    /**
+     * Set 4.x的完整命名空间，出参使用
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FullNamespaceV4 4.x的完整命名空间，出参使用
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFullNamespaceV4(String FullNamespaceV4) {
+        this.FullNamespaceV4 = FullNamespaceV4;
+    }
+
     public SourceClusterTopicConfig() {
     }
 
@@ -333,6 +417,15 @@ Failure 失败
         if (source.ImportStatus != null) {
             this.ImportStatus = new String(source.ImportStatus);
         }
+        if (source.NamespaceV4 != null) {
+            this.NamespaceV4 = new String(source.NamespaceV4);
+        }
+        if (source.TopicNameV4 != null) {
+            this.TopicNameV4 = new String(source.TopicNameV4);
+        }
+        if (source.FullNamespaceV4 != null) {
+            this.FullNamespaceV4 = new String(source.FullNamespaceV4);
+        }
     }
 
 
@@ -347,6 +440,9 @@ Failure 失败
         this.setParamSimple(map, prefix + "Imported", this.Imported);
         this.setParamSimple(map, prefix + "Namespace", this.Namespace);
         this.setParamSimple(map, prefix + "ImportStatus", this.ImportStatus);
+        this.setParamSimple(map, prefix + "NamespaceV4", this.NamespaceV4);
+        this.setParamSimple(map, prefix + "TopicNameV4", this.TopicNameV4);
+        this.setParamSimple(map, prefix + "FullNamespaceV4", this.FullNamespaceV4);
 
     }
 }

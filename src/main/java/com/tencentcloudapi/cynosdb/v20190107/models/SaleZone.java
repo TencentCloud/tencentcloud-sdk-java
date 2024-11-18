@@ -85,6 +85,13 @@ public class SaleZone extends AbstractModel {
     private String IsWholeRdmaZone;
 
     /**
+    * 当前可用区是否允许新购集群，1:允许，0:不允许
+    */
+    @SerializedName("IsSupportCreateCluster")
+    @Expose
+    private Long IsSupportCreateCluster;
+
+    /**
      * Get 可用区英文名 
      * @return Zone 可用区英文名
      */
@@ -232,6 +239,22 @@ public class SaleZone extends AbstractModel {
         this.IsWholeRdmaZone = IsWholeRdmaZone;
     }
 
+    /**
+     * Get 当前可用区是否允许新购集群，1:允许，0:不允许 
+     * @return IsSupportCreateCluster 当前可用区是否允许新购集群，1:允许，0:不允许
+     */
+    public Long getIsSupportCreateCluster() {
+        return this.IsSupportCreateCluster;
+    }
+
+    /**
+     * Set 当前可用区是否允许新购集群，1:允许，0:不允许
+     * @param IsSupportCreateCluster 当前可用区是否允许新购集群，1:允许，0:不允许
+     */
+    public void setIsSupportCreateCluster(Long IsSupportCreateCluster) {
+        this.IsSupportCreateCluster = IsSupportCreateCluster;
+    }
+
     public SaleZone() {
     }
 
@@ -264,6 +287,9 @@ public class SaleZone extends AbstractModel {
         if (source.IsWholeRdmaZone != null) {
             this.IsWholeRdmaZone = new String(source.IsWholeRdmaZone);
         }
+        if (source.IsSupportCreateCluster != null) {
+            this.IsSupportCreateCluster = new Long(source.IsSupportCreateCluster);
+        }
     }
 
 
@@ -279,6 +305,7 @@ public class SaleZone extends AbstractModel {
         this.setParamSimple(map, prefix + "PhysicalZone", this.PhysicalZone);
         this.setParamSimple(map, prefix + "HasPermission", this.HasPermission);
         this.setParamSimple(map, prefix + "IsWholeRdmaZone", this.IsWholeRdmaZone);
+        this.setParamSimple(map, prefix + "IsSupportCreateCluster", this.IsSupportCreateCluster);
 
     }
 }

@@ -39,21 +39,6 @@ public class CloudauditClient extends AbstractClient{
     }
 
     /**
-     *参数要求：
-1、如果IsCreateNewBucket的值存在的话，cosRegion和cosBucketName都是必填参数。
-2、如果IsEnableCmqNotify的值是1的话，IsCreateNewQueue、CmqRegion和CmqQueueName都是必填参数。
-3、如果IsEnableCmqNotify的值是0的话，IsCreateNewQueue、CmqRegion和CmqQueueName都不能传。
-4、如果IsEnableKmsEncry的值是1的话，KmsRegion和KeyId属于必填项
-     * @param req CreateAuditRequest
-     * @return CreateAuditResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateAuditResponse CreateAudit(CreateAuditRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "CreateAudit", CreateAuditResponse.class);
-    }
-
-    /**
      *创建操作审计跟踪集
      * @param req CreateAuditTrackRequest
      * @return CreateAuditTrackResponse
@@ -65,14 +50,14 @@ public class CloudauditClient extends AbstractClient{
     }
 
     /**
-     *删除跟踪集
-     * @param req DeleteAuditRequest
-     * @return DeleteAuditResponse
+     *创建操作审计跟踪集
+     * @param req CreateEventsAuditTrackRequest
+     * @return CreateEventsAuditTrackResponse
      * @throws TencentCloudSDKException
      */
-    public DeleteAuditResponse DeleteAudit(DeleteAuditRequest req) throws TencentCloudSDKException{
+    public CreateEventsAuditTrackResponse CreateEventsAuditTrack(CreateEventsAuditTrackRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
-        return this.internalRequest(req, "DeleteAudit", DeleteAuditResponse.class);
+        return this.internalRequest(req, "CreateEventsAuditTrack", CreateEventsAuditTrackResponse.class);
     }
 
     /**
@@ -164,7 +149,7 @@ public class CloudauditClient extends AbstractClient{
     }
 
     /**
-     *查询云审计支持的cmq的可用区
+     *查询操作审计支持的cmq的可用区
      * @param req ListCmqEnableRegionRequest
      * @return ListCmqEnableRegionResponse
      * @throws TencentCloudSDKException
@@ -175,7 +160,7 @@ public class CloudauditClient extends AbstractClient{
     }
 
     /**
-     *查询云审计支持的cos可用区
+     *查询操作审计支持的cos可用区
      * @param req ListCosEnableRegionRequest
      * @return ListCosEnableRegionResponse
      * @throws TencentCloudSDKException
@@ -216,6 +201,17 @@ public class CloudauditClient extends AbstractClient{
     public ModifyAuditTrackResponse ModifyAuditTrack(ModifyAuditTrackRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyAuditTrack", ModifyAuditTrackResponse.class);
+    }
+
+    /**
+     *修改操作审计跟踪集
+     * @param req ModifyEventsAuditTrackRequest
+     * @return ModifyEventsAuditTrackResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyEventsAuditTrackResponse ModifyEventsAuditTrack(ModifyEventsAuditTrackRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyEventsAuditTrack", ModifyEventsAuditTrackResponse.class);
     }
 
     /**

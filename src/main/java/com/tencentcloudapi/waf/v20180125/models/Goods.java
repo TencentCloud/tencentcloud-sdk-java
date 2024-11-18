@@ -46,7 +46,6 @@ public class Goods extends AbstractModel {
 
     /**
     * 默认为0
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProjectId")
     @Expose
@@ -54,7 +53,6 @@ public class Goods extends AbstractModel {
 
     /**
     * 计费类目ID，对应cid
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GoodsCategoryId")
     @Expose
@@ -62,7 +60,6 @@ public class Goods extends AbstractModel {
 
     /**
     * 平台类型，默认1
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Platform")
     @Expose
@@ -70,7 +67,6 @@ public class Goods extends AbstractModel {
 
     /**
     * 购买waf实例区域ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RegionId")
     @Expose
@@ -125,10 +121,8 @@ public class Goods extends AbstractModel {
     }
 
     /**
-     * Get 默认为0
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 默认为0 
      * @return ProjectId 默认为0
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getProjectId() {
         return this.ProjectId;
@@ -136,19 +130,15 @@ public class Goods extends AbstractModel {
 
     /**
      * Set 默认为0
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProjectId 默认为0
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 计费类目ID，对应cid
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 计费类目ID，对应cid 
      * @return GoodsCategoryId 计费类目ID，对应cid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getGoodsCategoryId() {
         return this.GoodsCategoryId;
@@ -156,19 +146,15 @@ public class Goods extends AbstractModel {
 
     /**
      * Set 计费类目ID，对应cid
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GoodsCategoryId 计费类目ID，对应cid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGoodsCategoryId(Long GoodsCategoryId) {
         this.GoodsCategoryId = GoodsCategoryId;
     }
 
     /**
-     * Get 平台类型，默认1
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 平台类型，默认1 
      * @return Platform 平台类型，默认1
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPlatform() {
         return this.Platform;
@@ -176,19 +162,15 @@ public class Goods extends AbstractModel {
 
     /**
      * Set 平台类型，默认1
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Platform 平台类型，默认1
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPlatform(Long Platform) {
         this.Platform = Platform;
     }
 
     /**
-     * Get 购买waf实例区域ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 购买waf实例区域ID 
      * @return RegionId 购买waf实例区域ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRegionId() {
         return this.RegionId;
@@ -196,9 +178,7 @@ public class Goods extends AbstractModel {
 
     /**
      * Set 购买waf实例区域ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RegionId 购买waf实例区域ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegionId(Long RegionId) {
         this.RegionId = RegionId;

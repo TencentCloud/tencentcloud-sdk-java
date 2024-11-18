@@ -31,6 +31,13 @@ public class GetEmbeddingRequest extends AbstractModel {
     private String Input;
 
     /**
+    * 输入文本数组。输入数组总长度不超过 200 。
+    */
+    @SerializedName("InputList")
+    @Expose
+    private String [] InputList;
+
+    /**
      * Get 输入文本。总长度不超过 1024 个 Token，超过则会截断最后面的内容。 
      * @return Input 输入文本。总长度不超过 1024 个 Token，超过则会截断最后面的内容。
      */
@@ -46,6 +53,22 @@ public class GetEmbeddingRequest extends AbstractModel {
         this.Input = Input;
     }
 
+    /**
+     * Get 输入文本数组。输入数组总长度不超过 200 。 
+     * @return InputList 输入文本数组。输入数组总长度不超过 200 。
+     */
+    public String [] getInputList() {
+        return this.InputList;
+    }
+
+    /**
+     * Set 输入文本数组。输入数组总长度不超过 200 。
+     * @param InputList 输入文本数组。输入数组总长度不超过 200 。
+     */
+    public void setInputList(String [] InputList) {
+        this.InputList = InputList;
+    }
+
     public GetEmbeddingRequest() {
     }
 
@@ -57,6 +80,12 @@ public class GetEmbeddingRequest extends AbstractModel {
         if (source.Input != null) {
             this.Input = new String(source.Input);
         }
+        if (source.InputList != null) {
+            this.InputList = new String[source.InputList.length];
+            for (int i = 0; i < source.InputList.length; i++) {
+                this.InputList[i] = new String(source.InputList[i]);
+            }
+        }
     }
 
 
@@ -65,6 +94,7 @@ public class GetEmbeddingRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Input", this.Input);
+        this.setParamArraySimple(map, prefix + "InputList.", this.InputList);
 
     }
 }

@@ -164,7 +164,7 @@ public class AssetMachineDetail extends AbstractModel {
     private String CoreVersion;
 
     /**
-    * linux/windows
+    * Linux/Windows
     */
     @SerializedName("OsType")
     @Expose
@@ -249,7 +249,6 @@ public class AssetMachineDetail extends AbstractModel {
 
     /**
     * 离线时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OfflineTime")
     @Expose
@@ -257,7 +256,6 @@ public class AssetMachineDetail extends AbstractModel {
 
     /**
     * 主机ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -265,7 +263,6 @@ public class AssetMachineDetail extends AbstractModel {
 
     /**
     * 数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -273,7 +270,6 @@ public class AssetMachineDetail extends AbstractModel {
 
     /**
     * 主机二外信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MachineExtraInfo")
     @Expose
@@ -281,7 +277,6 @@ public class AssetMachineDetail extends AbstractModel {
 
     /**
     * CpuLoadVul
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CpuLoadVul")
     @Expose
@@ -289,7 +284,6 @@ public class AssetMachineDetail extends AbstractModel {
 
     /**
     * 时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FirstTime")
     @Expose
@@ -616,16 +610,16 @@ public class AssetMachineDetail extends AbstractModel {
     }
 
     /**
-     * Get linux/windows 
-     * @return OsType linux/windows
+     * Get Linux/Windows 
+     * @return OsType Linux/Windows
      */
     public String getOsType() {
         return this.OsType;
     }
 
     /**
-     * Set linux/windows
-     * @param OsType linux/windows
+     * Set Linux/Windows
+     * @param OsType Linux/Windows
      */
     public void setOsType(String OsType) {
         this.OsType = OsType;
@@ -808,10 +802,8 @@ public class AssetMachineDetail extends AbstractModel {
     }
 
     /**
-     * Get 离线时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 离线时间 
      * @return OfflineTime 离线时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOfflineTime() {
         return this.OfflineTime;
@@ -819,19 +811,15 @@ public class AssetMachineDetail extends AbstractModel {
 
     /**
      * Set 离线时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OfflineTime 离线时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOfflineTime(String OfflineTime) {
         this.OfflineTime = OfflineTime;
     }
 
     /**
-     * Get 主机ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主机ID 
      * @return InstanceId 主机ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceId() {
         return this.InstanceId;
@@ -839,19 +827,15 @@ public class AssetMachineDetail extends AbstractModel {
 
     /**
      * Set 主机ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceId 主机ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据更新时间 
      * @return UpdateTime 数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdateTime() {
         return this.UpdateTime;
@@ -859,19 +843,15 @@ public class AssetMachineDetail extends AbstractModel {
 
     /**
      * Set 数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdateTime 数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get 主机二外信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主机二外信息 
      * @return MachineExtraInfo 主机二外信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public MachineExtraInfo getMachineExtraInfo() {
         return this.MachineExtraInfo;
@@ -879,19 +859,15 @@ public class AssetMachineDetail extends AbstractModel {
 
     /**
      * Set 主机二外信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MachineExtraInfo 主机二外信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMachineExtraInfo(MachineExtraInfo MachineExtraInfo) {
         this.MachineExtraInfo = MachineExtraInfo;
     }
 
     /**
-     * Get CpuLoadVul
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get CpuLoadVul 
      * @return CpuLoadVul CpuLoadVul
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCpuLoadVul() {
         return this.CpuLoadVul;
@@ -899,19 +875,15 @@ public class AssetMachineDetail extends AbstractModel {
 
     /**
      * Set CpuLoadVul
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CpuLoadVul CpuLoadVul
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCpuLoadVul(String CpuLoadVul) {
         this.CpuLoadVul = CpuLoadVul;
     }
 
     /**
-     * Get 时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 时间 
      * @return FirstTime 时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFirstTime() {
         return this.FirstTime;
@@ -919,9 +891,7 @@ public class AssetMachineDetail extends AbstractModel {
 
     /**
      * Set 时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FirstTime 时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFirstTime(String FirstTime) {
         this.FirstTime = FirstTime;

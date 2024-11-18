@@ -31,14 +31,14 @@ public class SetTlsVersionRequest extends AbstractModel {
     private String ListenerId;
 
     /**
-    * TLS版本
+    * TLS版本,可选TLSv1、TLSv1.1、TLSv1.2、TLSv1.3
     */
     @SerializedName("TLSSupportVersion")
     @Expose
     private String [] TLSSupportVersion;
 
     /**
-    * 密码套件包
+    * 密码套件包,可选 GAAP_TLS_CIPHERS_STRICT，GAAP_TLS_CIPHERS_GENERAL，GAAP_TLS_CIPHERS_WIDE(默认)
     */
     @SerializedName("TLSCiphers")
     @Expose
@@ -61,32 +61,32 @@ public class SetTlsVersionRequest extends AbstractModel {
     }
 
     /**
-     * Get TLS版本 
-     * @return TLSSupportVersion TLS版本
+     * Get TLS版本,可选TLSv1、TLSv1.1、TLSv1.2、TLSv1.3 
+     * @return TLSSupportVersion TLS版本,可选TLSv1、TLSv1.1、TLSv1.2、TLSv1.3
      */
     public String [] getTLSSupportVersion() {
         return this.TLSSupportVersion;
     }
 
     /**
-     * Set TLS版本
-     * @param TLSSupportVersion TLS版本
+     * Set TLS版本,可选TLSv1、TLSv1.1、TLSv1.2、TLSv1.3
+     * @param TLSSupportVersion TLS版本,可选TLSv1、TLSv1.1、TLSv1.2、TLSv1.3
      */
     public void setTLSSupportVersion(String [] TLSSupportVersion) {
         this.TLSSupportVersion = TLSSupportVersion;
     }
 
     /**
-     * Get 密码套件包 
-     * @return TLSCiphers 密码套件包
+     * Get 密码套件包,可选 GAAP_TLS_CIPHERS_STRICT，GAAP_TLS_CIPHERS_GENERAL，GAAP_TLS_CIPHERS_WIDE(默认) 
+     * @return TLSCiphers 密码套件包,可选 GAAP_TLS_CIPHERS_STRICT，GAAP_TLS_CIPHERS_GENERAL，GAAP_TLS_CIPHERS_WIDE(默认)
      */
     public String getTLSCiphers() {
         return this.TLSCiphers;
     }
 
     /**
-     * Set 密码套件包
-     * @param TLSCiphers 密码套件包
+     * Set 密码套件包,可选 GAAP_TLS_CIPHERS_STRICT，GAAP_TLS_CIPHERS_GENERAL，GAAP_TLS_CIPHERS_WIDE(默认)
+     * @param TLSCiphers 密码套件包,可选 GAAP_TLS_CIPHERS_STRICT，GAAP_TLS_CIPHERS_GENERAL，GAAP_TLS_CIPHERS_WIDE(默认)
      */
     public void setTLSCiphers(String TLSCiphers) {
         this.TLSCiphers = TLSCiphers;

@@ -87,6 +87,13 @@ public class RecognizeForeignPermanentResidentIdCardResponse extends AbstractMod
     private String IssuedAuthority;
 
     /**
+    * 头像和坐标信息。
+    */
+    @SerializedName("PortraitImageInfo")
+    @Expose
+    private PortraitImageInfo PortraitImageInfo;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -238,6 +245,22 @@ public class RecognizeForeignPermanentResidentIdCardResponse extends AbstractMod
     }
 
     /**
+     * Get 头像和坐标信息。 
+     * @return PortraitImageInfo 头像和坐标信息。
+     */
+    public PortraitImageInfo getPortraitImageInfo() {
+        return this.PortraitImageInfo;
+    }
+
+    /**
+     * Set 头像和坐标信息。
+     * @param PortraitImageInfo 头像和坐标信息。
+     */
+    public void setPortraitImageInfo(PortraitImageInfo PortraitImageInfo) {
+        this.PortraitImageInfo = PortraitImageInfo;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -288,6 +311,9 @@ public class RecognizeForeignPermanentResidentIdCardResponse extends AbstractMod
         if (source.IssuedAuthority != null) {
             this.IssuedAuthority = new String(source.IssuedAuthority);
         }
+        if (source.PortraitImageInfo != null) {
+            this.PortraitImageInfo = new PortraitImageInfo(source.PortraitImageInfo);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -307,6 +333,7 @@ public class RecognizeForeignPermanentResidentIdCardResponse extends AbstractMod
         this.setParamSimple(map, prefix + "No", this.No);
         this.setParamSimple(map, prefix + "PreviousNumber", this.PreviousNumber);
         this.setParamSimple(map, prefix + "IssuedAuthority", this.IssuedAuthority);
+        this.setParamObj(map, prefix + "PortraitImageInfo.", this.PortraitImageInfo);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

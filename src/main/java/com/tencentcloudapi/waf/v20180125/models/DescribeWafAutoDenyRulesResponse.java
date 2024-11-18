@@ -54,7 +54,6 @@ public class DescribeWafAutoDenyRulesResponse extends AbstractModel {
     /**
     * 数据来源Source字段 custom-自定义(默认)、batch-domain-批量域名
 
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Source")
     @Expose
@@ -140,11 +139,9 @@ public class DescribeWafAutoDenyRulesResponse extends AbstractModel {
 
     /**
      * Get 数据来源Source字段 custom-自定义(默认)、batch-domain-批量域名
-
-注意：此字段可能返回 null，表示取不到有效值。 
+ 
      * @return Source 数据来源Source字段 custom-自定义(默认)、batch-domain-批量域名
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSource() {
         return this.Source;
@@ -153,10 +150,8 @@ public class DescribeWafAutoDenyRulesResponse extends AbstractModel {
     /**
      * Set 数据来源Source字段 custom-自定义(默认)、batch-domain-批量域名
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Source 数据来源Source字段 custom-自定义(默认)、batch-domain-批量域名
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSource(String Source) {
         this.Source = Source;

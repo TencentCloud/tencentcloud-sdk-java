@@ -24,62 +24,36 @@ import java.util.HashMap;
 public class CustomWhiteRule extends AbstractModel {
 
     /**
-    * 访问源
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("SrcIP")
-    @Expose
-    private String SrcIP;
-
-    /**
     * 访问目的
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DstIP")
     @Expose
     private String DstIP;
 
     /**
-    * 规则名称
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("IdsRuleName")
-    @Expose
-    private String IdsRuleName;
-
-    /**
     * 规则ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IdsRuleId")
     @Expose
     private String IdsRuleId;
 
     /**
-     * Get 访问源
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SrcIP 访问源
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getSrcIP() {
-        return this.SrcIP;
-    }
+    * 规则名称
+    */
+    @SerializedName("IdsRuleName")
+    @Expose
+    private String IdsRuleName;
 
     /**
-     * Set 访问源
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param SrcIP 访问源
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setSrcIP(String SrcIP) {
-        this.SrcIP = SrcIP;
-    }
+    * 访问源
+    */
+    @SerializedName("SrcIP")
+    @Expose
+    private String SrcIP;
 
     /**
-     * Get 访问目的
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 访问目的 
      * @return DstIP 访问目的
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDstIP() {
         return this.DstIP;
@@ -87,39 +61,15 @@ public class CustomWhiteRule extends AbstractModel {
 
     /**
      * Set 访问目的
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DstIP 访问目的
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDstIP(String DstIP) {
         this.DstIP = DstIP;
     }
 
     /**
-     * Get 规则名称
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IdsRuleName 规则名称
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getIdsRuleName() {
-        return this.IdsRuleName;
-    }
-
-    /**
-     * Set 规则名称
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param IdsRuleName 规则名称
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setIdsRuleName(String IdsRuleName) {
-        this.IdsRuleName = IdsRuleName;
-    }
-
-    /**
-     * Get 规则ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则ID 
      * @return IdsRuleId 规则ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIdsRuleId() {
         return this.IdsRuleId;
@@ -127,12 +77,42 @@ public class CustomWhiteRule extends AbstractModel {
 
     /**
      * Set 规则ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IdsRuleId 规则ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIdsRuleId(String IdsRuleId) {
         this.IdsRuleId = IdsRuleId;
+    }
+
+    /**
+     * Get 规则名称 
+     * @return IdsRuleName 规则名称
+     */
+    public String getIdsRuleName() {
+        return this.IdsRuleName;
+    }
+
+    /**
+     * Set 规则名称
+     * @param IdsRuleName 规则名称
+     */
+    public void setIdsRuleName(String IdsRuleName) {
+        this.IdsRuleName = IdsRuleName;
+    }
+
+    /**
+     * Get 访问源 
+     * @return SrcIP 访问源
+     */
+    public String getSrcIP() {
+        return this.SrcIP;
+    }
+
+    /**
+     * Set 访问源
+     * @param SrcIP 访问源
+     */
+    public void setSrcIP(String SrcIP) {
+        this.SrcIP = SrcIP;
     }
 
     public CustomWhiteRule() {
@@ -143,17 +123,17 @@ public class CustomWhiteRule extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CustomWhiteRule(CustomWhiteRule source) {
-        if (source.SrcIP != null) {
-            this.SrcIP = new String(source.SrcIP);
-        }
         if (source.DstIP != null) {
             this.DstIP = new String(source.DstIP);
+        }
+        if (source.IdsRuleId != null) {
+            this.IdsRuleId = new String(source.IdsRuleId);
         }
         if (source.IdsRuleName != null) {
             this.IdsRuleName = new String(source.IdsRuleName);
         }
-        if (source.IdsRuleId != null) {
-            this.IdsRuleId = new String(source.IdsRuleId);
+        if (source.SrcIP != null) {
+            this.SrcIP = new String(source.SrcIP);
         }
     }
 
@@ -162,10 +142,10 @@ public class CustomWhiteRule extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "SrcIP", this.SrcIP);
         this.setParamSimple(map, prefix + "DstIP", this.DstIP);
-        this.setParamSimple(map, prefix + "IdsRuleName", this.IdsRuleName);
         this.setParamSimple(map, prefix + "IdsRuleId", this.IdsRuleId);
+        this.setParamSimple(map, prefix + "IdsRuleName", this.IdsRuleName);
+        this.setParamSimple(map, prefix + "SrcIP", this.SrcIP);
 
     }
 }

@@ -422,7 +422,9 @@ public class RoomInfo extends AbstractModel {
     /**
      * Get rtc人数。 
      * @return RTCAudienceNumber rtc人数。
+     * @deprecated
      */
+    @Deprecated
     public Long getRTCAudienceNumber() {
         return this.RTCAudienceNumber;
     }
@@ -430,7 +432,9 @@ public class RoomInfo extends AbstractModel {
     /**
      * Set rtc人数。
      * @param RTCAudienceNumber rtc人数。
+     * @deprecated
      */
+    @Deprecated
     public void setRTCAudienceNumber(Long RTCAudienceNumber) {
         this.RTCAudienceNumber = RTCAudienceNumber;
     }

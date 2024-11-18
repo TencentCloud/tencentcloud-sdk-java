@@ -59,6 +59,13 @@ public class GetCosTokenRequest extends AbstractModel {
     private String RemotePath;
 
     /**
+    * 地域
+    */
+    @SerializedName("RemoteRegion")
+    @Expose
+    private String RemoteRegion;
+
+    /**
      * Get 项目id 
      * @return ProjectId 项目id
      */
@@ -138,6 +145,22 @@ public class GetCosTokenRequest extends AbstractModel {
         this.RemotePath = RemotePath;
     }
 
+    /**
+     * Get 地域 
+     * @return RemoteRegion 地域
+     */
+    public String getRemoteRegion() {
+        return this.RemoteRegion;
+    }
+
+    /**
+     * Set 地域
+     * @param RemoteRegion 地域
+     */
+    public void setRemoteRegion(String RemoteRegion) {
+        this.RemoteRegion = RemoteRegion;
+    }
+
     public GetCosTokenRequest() {
     }
 
@@ -161,6 +184,9 @@ public class GetCosTokenRequest extends AbstractModel {
         if (source.RemotePath != null) {
             this.RemotePath = new String(source.RemotePath);
         }
+        if (source.RemoteRegion != null) {
+            this.RemoteRegion = new String(source.RemoteRegion);
+        }
     }
 
 
@@ -173,6 +199,7 @@ public class GetCosTokenRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "CrossFlag", this.CrossFlag);
         this.setParamSimple(map, prefix + "BucketName", this.BucketName);
         this.setParamSimple(map, prefix + "RemotePath", this.RemotePath);
+        this.setParamSimple(map, prefix + "RemoteRegion", this.RemoteRegion);
 
     }
 }

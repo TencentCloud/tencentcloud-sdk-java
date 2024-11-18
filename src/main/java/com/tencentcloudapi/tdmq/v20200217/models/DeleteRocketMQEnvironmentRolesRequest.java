@@ -38,7 +38,7 @@ public class DeleteRocketMQEnvironmentRolesRequest extends AbstractModel {
     private String [] RoleNames;
 
     /**
-    * 必填字段，集群的ID
+    * 集群的ID
     */
     @SerializedName("ClusterId")
     @Expose
@@ -77,16 +77,16 @@ public class DeleteRocketMQEnvironmentRolesRequest extends AbstractModel {
     }
 
     /**
-     * Get 必填字段，集群的ID 
-     * @return ClusterId 必填字段，集群的ID
+     * Get 集群的ID 
+     * @return ClusterId 集群的ID
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 必填字段，集群的ID
-     * @param ClusterId 必填字段，集群的ID
+     * Set 集群的ID
+     * @param ClusterId 集群的ID
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;

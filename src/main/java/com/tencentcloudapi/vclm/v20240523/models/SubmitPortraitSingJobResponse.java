@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class SubmitPortraitSingJobResponse extends AbstractModel {
 
     /**
-    * 任务ID
+    * 任务ID。任务有效期为48小时。
     */
     @SerializedName("JobId")
     @Expose
@@ -38,16 +38,16 @@ public class SubmitPortraitSingJobResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 任务ID 
-     * @return JobId 任务ID
+     * Get 任务ID。任务有效期为48小时。 
+     * @return JobId 任务ID。任务有效期为48小时。
      */
     public String getJobId() {
         return this.JobId;
     }
 
     /**
-     * Set 任务ID
-     * @param JobId 任务ID
+     * Set 任务ID。任务有效期为48小时。
+     * @param JobId 任务ID。任务有效期为48小时。
      */
     public void setJobId(String JobId) {
         this.JobId = JobId;

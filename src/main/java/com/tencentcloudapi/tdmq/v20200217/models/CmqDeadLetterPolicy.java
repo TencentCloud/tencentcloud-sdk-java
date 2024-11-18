@@ -32,7 +32,7 @@ public class CmqDeadLetterPolicy extends AbstractModel {
     private String DeadLetterQueue;
 
     /**
-    * 死信队列策略。
+    * 死信队列策略。0:最大接收次数;1:最大未消费时间
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Policy")
@@ -48,7 +48,7 @@ public class CmqDeadLetterPolicy extends AbstractModel {
     private Long MaxTimeToLive;
 
     /**
-    * 最大接收次数。
+    * 最大接收次数。Policy为0时必选，范围在1到1000。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxReceiveCount")
@@ -76,9 +76,9 @@ public class CmqDeadLetterPolicy extends AbstractModel {
     }
 
     /**
-     * Get 死信队列策略。
+     * Get 死信队列策略。0:最大接收次数;1:最大未消费时间
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Policy 死信队列策略。
+     * @return Policy 死信队列策略。0:最大接收次数;1:最大未消费时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPolicy() {
@@ -86,9 +86,9 @@ public class CmqDeadLetterPolicy extends AbstractModel {
     }
 
     /**
-     * Set 死信队列策略。
+     * Set 死信队列策略。0:最大接收次数;1:最大未消费时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Policy 死信队列策略。
+     * @param Policy 死信队列策略。0:最大接收次数;1:最大未消费时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPolicy(Long Policy) {
@@ -116,9 +116,9 @@ public class CmqDeadLetterPolicy extends AbstractModel {
     }
 
     /**
-     * Get 最大接收次数。
+     * Get 最大接收次数。Policy为0时必选，范围在1到1000。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MaxReceiveCount 最大接收次数。
+     * @return MaxReceiveCount 最大接收次数。Policy为0时必选，范围在1到1000。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaxReceiveCount() {
@@ -126,9 +126,9 @@ public class CmqDeadLetterPolicy extends AbstractModel {
     }
 
     /**
-     * Set 最大接收次数。
+     * Set 最大接收次数。Policy为0时必选，范围在1到1000。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MaxReceiveCount 最大接收次数。
+     * @param MaxReceiveCount 最大接收次数。Policy为0时必选，范围在1到1000。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxReceiveCount(Long MaxReceiveCount) {

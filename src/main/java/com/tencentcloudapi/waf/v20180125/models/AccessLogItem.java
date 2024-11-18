@@ -25,7 +25,6 @@ public class AccessLogItem extends AbstractModel {
 
     /**
     * 日记Key
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Key")
     @Expose
@@ -33,17 +32,14 @@ public class AccessLogItem extends AbstractModel {
 
     /**
     * 日志Value
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Value")
     @Expose
     private String Value;
 
     /**
-     * Get 日记Key
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 日记Key 
      * @return Key 日记Key
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKey() {
         return this.Key;
@@ -51,19 +47,15 @@ public class AccessLogItem extends AbstractModel {
 
     /**
      * Set 日记Key
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Key 日记Key
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKey(String Key) {
         this.Key = Key;
     }
 
     /**
-     * Get 日志Value
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 日志Value 
      * @return Value 日志Value
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getValue() {
         return this.Value;
@@ -71,9 +63,7 @@ public class AccessLogItem extends AbstractModel {
 
     /**
      * Set 日志Value
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Value 日志Value
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValue(String Value) {
         this.Value = Value;

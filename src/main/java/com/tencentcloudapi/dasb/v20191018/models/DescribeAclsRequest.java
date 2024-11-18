@@ -87,6 +87,13 @@ public class DescribeAclsRequest extends AbstractModel {
     private String DepartmentId;
 
     /**
+    * 过滤数组
+    */
+    @SerializedName("Filters")
+    @Expose
+    private Filter [] Filters;
+
+    /**
      * Get 访问权限ID集合 
      * @return IdSet 访问权限ID集合
      */
@@ -230,6 +237,22 @@ public class DescribeAclsRequest extends AbstractModel {
         this.DepartmentId = DepartmentId;
     }
 
+    /**
+     * Get 过滤数组 
+     * @return Filters 过滤数组
+     */
+    public Filter [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * Set 过滤数组
+     * @param Filters 过滤数组
+     */
+    public void setFilters(Filter [] Filters) {
+        this.Filters = Filters;
+    }
+
     public DescribeAclsRequest() {
     }
 
@@ -274,6 +297,12 @@ public class DescribeAclsRequest extends AbstractModel {
         if (source.DepartmentId != null) {
             this.DepartmentId = new String(source.DepartmentId);
         }
+        if (source.Filters != null) {
+            this.Filters = new Filter[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new Filter(source.Filters[i]);
+            }
+        }
     }
 
 
@@ -290,6 +319,7 @@ public class DescribeAclsRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "AuthorizedDeviceIdSet.", this.AuthorizedDeviceIdSet);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "DepartmentId", this.DepartmentId);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
 
     }
 }

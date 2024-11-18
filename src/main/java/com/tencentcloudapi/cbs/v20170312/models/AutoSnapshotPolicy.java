@@ -38,7 +38,11 @@ public class AutoSnapshotPolicy extends AbstractModel {
     private Boolean IsActivated;
 
     /**
-    * 定期快照策略的状态。取值范围：<br><li>NORMAL：正常<br><li>ISOLATED：已隔离。
+    * 定期快照策略的状态。取值范围：
+<ul>
+  <li>NORMAL：正常</li>
+  <li>ISOLATED：已隔离</li>
+</ul>
     */
     @SerializedName("AutoSnapshotPolicyState")
     @Expose
@@ -190,16 +194,32 @@ public class AutoSnapshotPolicy extends AbstractModel {
     }
 
     /**
-     * Get 定期快照策略的状态。取值范围：<br><li>NORMAL：正常<br><li>ISOLATED：已隔离。 
-     * @return AutoSnapshotPolicyState 定期快照策略的状态。取值范围：<br><li>NORMAL：正常<br><li>ISOLATED：已隔离。
+     * Get 定期快照策略的状态。取值范围：
+<ul>
+  <li>NORMAL：正常</li>
+  <li>ISOLATED：已隔离</li>
+</ul> 
+     * @return AutoSnapshotPolicyState 定期快照策略的状态。取值范围：
+<ul>
+  <li>NORMAL：正常</li>
+  <li>ISOLATED：已隔离</li>
+</ul>
      */
     public String getAutoSnapshotPolicyState() {
         return this.AutoSnapshotPolicyState;
     }
 
     /**
-     * Set 定期快照策略的状态。取值范围：<br><li>NORMAL：正常<br><li>ISOLATED：已隔离。
-     * @param AutoSnapshotPolicyState 定期快照策略的状态。取值范围：<br><li>NORMAL：正常<br><li>ISOLATED：已隔离。
+     * Set 定期快照策略的状态。取值范围：
+<ul>
+  <li>NORMAL：正常</li>
+  <li>ISOLATED：已隔离</li>
+</ul>
+     * @param AutoSnapshotPolicyState 定期快照策略的状态。取值范围：
+<ul>
+  <li>NORMAL：正常</li>
+  <li>ISOLATED：已隔离</li>
+</ul>
      */
     public void setAutoSnapshotPolicyState(String AutoSnapshotPolicyState) {
         this.AutoSnapshotPolicyState = AutoSnapshotPolicyState;

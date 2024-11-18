@@ -24,46 +24,71 @@ import java.util.HashMap;
 public class ModifyDBInstanceProjectRequest extends AbstractModel {
 
     /**
-    * 实例 ID 数组，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同，可使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。
+    * 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同，可使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。
+说明：可输入多个实例 ID 进行修改，json 格式如下。
+[
+    "cdb-30z11v8s",
+    "cdb-93h11efg"
+  ]
     */
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
 
     /**
-    * 项目的 ID。
+    * 实例所属项目的 ID，可在账号中心下的项目管理页面查询。
     */
     @SerializedName("NewProjectId")
     @Expose
     private Long NewProjectId;
 
     /**
-     * Get 实例 ID 数组，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同，可使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。 
-     * @return InstanceIds 实例 ID 数组，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同，可使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。
+     * Get 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同，可使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。
+说明：可输入多个实例 ID 进行修改，json 格式如下。
+[
+    "cdb-30z11v8s",
+    "cdb-93h11efg"
+  ] 
+     * @return InstanceIds 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同，可使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。
+说明：可输入多个实例 ID 进行修改，json 格式如下。
+[
+    "cdb-30z11v8s",
+    "cdb-93h11efg"
+  ]
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set 实例 ID 数组，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同，可使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。
-     * @param InstanceIds 实例 ID 数组，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同，可使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。
+     * Set 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同，可使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。
+说明：可输入多个实例 ID 进行修改，json 格式如下。
+[
+    "cdb-30z11v8s",
+    "cdb-93h11efg"
+  ]
+     * @param InstanceIds 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同，可使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。
+说明：可输入多个实例 ID 进行修改，json 格式如下。
+[
+    "cdb-30z11v8s",
+    "cdb-93h11efg"
+  ]
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
     }
 
     /**
-     * Get 项目的 ID。 
-     * @return NewProjectId 项目的 ID。
+     * Get 实例所属项目的 ID，可在账号中心下的项目管理页面查询。 
+     * @return NewProjectId 实例所属项目的 ID，可在账号中心下的项目管理页面查询。
      */
     public Long getNewProjectId() {
         return this.NewProjectId;
     }
 
     /**
-     * Set 项目的 ID。
-     * @param NewProjectId 项目的 ID。
+     * Set 实例所属项目的 ID，可在账号中心下的项目管理页面查询。
+     * @param NewProjectId 实例所属项目的 ID，可在账号中心下的项目管理页面查询。
      */
     public void setNewProjectId(Long NewProjectId) {
         this.NewProjectId = NewProjectId;

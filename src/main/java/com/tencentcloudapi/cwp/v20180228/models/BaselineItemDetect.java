@@ -25,7 +25,6 @@ public class BaselineItemDetect extends AbstractModel {
 
     /**
     * 项Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ItemId")
     @Expose
@@ -33,7 +32,6 @@ public class BaselineItemDetect extends AbstractModel {
 
     /**
     * 项名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ItemName")
     @Expose
@@ -41,7 +39,6 @@ public class BaselineItemDetect extends AbstractModel {
 
     /**
     * 项描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ItemDesc")
     @Expose
@@ -49,7 +46,6 @@ public class BaselineItemDetect extends AbstractModel {
 
     /**
     * 修复方法
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FixMethod")
     @Expose
@@ -57,7 +53,6 @@ public class BaselineItemDetect extends AbstractModel {
 
     /**
     * 所属规则
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleName")
     @Expose
@@ -65,7 +60,6 @@ public class BaselineItemDetect extends AbstractModel {
 
     /**
     * 0:未通过 1:忽略 3:通过 5:检测中
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DetectStatus")
     @Expose
@@ -73,7 +67,6 @@ public class BaselineItemDetect extends AbstractModel {
 
     /**
     * 风险等级
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Level")
     @Expose
@@ -81,7 +74,6 @@ public class BaselineItemDetect extends AbstractModel {
 
     /**
     * 影响服务器数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HostCount")
     @Expose
@@ -89,7 +81,6 @@ public class BaselineItemDetect extends AbstractModel {
 
     /**
     * 首次检测时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FirstTime")
     @Expose
@@ -97,7 +88,6 @@ public class BaselineItemDetect extends AbstractModel {
 
     /**
     * 最后检测时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LastTime")
     @Expose
@@ -105,7 +95,6 @@ public class BaselineItemDetect extends AbstractModel {
 
     /**
     * 检测结果,Json字符串
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DetectResult")
     @Expose
@@ -113,7 +102,6 @@ public class BaselineItemDetect extends AbstractModel {
 
     /**
     * 所属规则ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleId")
     @Expose
@@ -121,7 +109,6 @@ public class BaselineItemDetect extends AbstractModel {
 
     /**
     * 通过的服务器数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PassedHostCount")
     @Expose
@@ -129,17 +116,14 @@ public class BaselineItemDetect extends AbstractModel {
 
     /**
     * 未通过的服务器数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NotPassedHostCount")
     @Expose
     private Long NotPassedHostCount;
 
     /**
-     * Get 项Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 项Id 
      * @return ItemId 项Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getItemId() {
         return this.ItemId;
@@ -147,19 +131,15 @@ public class BaselineItemDetect extends AbstractModel {
 
     /**
      * Set 项Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ItemId 项Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setItemId(Long ItemId) {
         this.ItemId = ItemId;
     }
 
     /**
-     * Get 项名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 项名称 
      * @return ItemName 项名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getItemName() {
         return this.ItemName;
@@ -167,19 +147,15 @@ public class BaselineItemDetect extends AbstractModel {
 
     /**
      * Set 项名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ItemName 项名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setItemName(String ItemName) {
         this.ItemName = ItemName;
     }
 
     /**
-     * Get 项描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 项描述 
      * @return ItemDesc 项描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getItemDesc() {
         return this.ItemDesc;
@@ -187,19 +163,15 @@ public class BaselineItemDetect extends AbstractModel {
 
     /**
      * Set 项描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ItemDesc 项描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setItemDesc(String ItemDesc) {
         this.ItemDesc = ItemDesc;
     }
 
     /**
-     * Get 修复方法
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 修复方法 
      * @return FixMethod 修复方法
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFixMethod() {
         return this.FixMethod;
@@ -207,19 +179,15 @@ public class BaselineItemDetect extends AbstractModel {
 
     /**
      * Set 修复方法
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FixMethod 修复方法
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFixMethod(String FixMethod) {
         this.FixMethod = FixMethod;
     }
 
     /**
-     * Get 所属规则
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 所属规则 
      * @return RuleName 所属规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRuleName() {
         return this.RuleName;
@@ -227,19 +195,15 @@ public class BaselineItemDetect extends AbstractModel {
 
     /**
      * Set 所属规则
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RuleName 所属规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleName(String RuleName) {
         this.RuleName = RuleName;
     }
 
     /**
-     * Get 0:未通过 1:忽略 3:通过 5:检测中
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 0:未通过 1:忽略 3:通过 5:检测中 
      * @return DetectStatus 0:未通过 1:忽略 3:通过 5:检测中
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDetectStatus() {
         return this.DetectStatus;
@@ -247,19 +211,15 @@ public class BaselineItemDetect extends AbstractModel {
 
     /**
      * Set 0:未通过 1:忽略 3:通过 5:检测中
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DetectStatus 0:未通过 1:忽略 3:通过 5:检测中
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDetectStatus(Long DetectStatus) {
         this.DetectStatus = DetectStatus;
     }
 
     /**
-     * Get 风险等级
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 风险等级 
      * @return Level 风险等级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLevel() {
         return this.Level;
@@ -267,19 +227,15 @@ public class BaselineItemDetect extends AbstractModel {
 
     /**
      * Set 风险等级
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Level 风险等级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLevel(Long Level) {
         this.Level = Level;
     }
 
     /**
-     * Get 影响服务器数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 影响服务器数 
      * @return HostCount 影响服务器数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getHostCount() {
         return this.HostCount;
@@ -287,19 +243,15 @@ public class BaselineItemDetect extends AbstractModel {
 
     /**
      * Set 影响服务器数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HostCount 影响服务器数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHostCount(Long HostCount) {
         this.HostCount = HostCount;
     }
 
     /**
-     * Get 首次检测时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 首次检测时间 
      * @return FirstTime 首次检测时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFirstTime() {
         return this.FirstTime;
@@ -307,19 +259,15 @@ public class BaselineItemDetect extends AbstractModel {
 
     /**
      * Set 首次检测时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FirstTime 首次检测时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFirstTime(String FirstTime) {
         this.FirstTime = FirstTime;
     }
 
     /**
-     * Get 最后检测时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最后检测时间 
      * @return LastTime 最后检测时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLastTime() {
         return this.LastTime;
@@ -327,19 +275,15 @@ public class BaselineItemDetect extends AbstractModel {
 
     /**
      * Set 最后检测时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LastTime 最后检测时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLastTime(String LastTime) {
         this.LastTime = LastTime;
     }
 
     /**
-     * Get 检测结果,Json字符串
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 检测结果,Json字符串 
      * @return DetectResult 检测结果,Json字符串
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDetectResult() {
         return this.DetectResult;
@@ -347,19 +291,15 @@ public class BaselineItemDetect extends AbstractModel {
 
     /**
      * Set 检测结果,Json字符串
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DetectResult 检测结果,Json字符串
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDetectResult(String DetectResult) {
         this.DetectResult = DetectResult;
     }
 
     /**
-     * Get 所属规则ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 所属规则ID 
      * @return RuleId 所属规则ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRuleId() {
         return this.RuleId;
@@ -367,19 +307,15 @@ public class BaselineItemDetect extends AbstractModel {
 
     /**
      * Set 所属规则ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RuleId 所属规则ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleId(Long RuleId) {
         this.RuleId = RuleId;
     }
 
     /**
-     * Get 通过的服务器数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 通过的服务器数 
      * @return PassedHostCount 通过的服务器数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPassedHostCount() {
         return this.PassedHostCount;
@@ -387,19 +323,15 @@ public class BaselineItemDetect extends AbstractModel {
 
     /**
      * Set 通过的服务器数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PassedHostCount 通过的服务器数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPassedHostCount(Long PassedHostCount) {
         this.PassedHostCount = PassedHostCount;
     }
 
     /**
-     * Get 未通过的服务器数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 未通过的服务器数 
      * @return NotPassedHostCount 未通过的服务器数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getNotPassedHostCount() {
         return this.NotPassedHostCount;
@@ -407,9 +339,7 @@ public class BaselineItemDetect extends AbstractModel {
 
     /**
      * Set 未通过的服务器数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NotPassedHostCount 未通过的服务器数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNotPassedHostCount(Long NotPassedHostCount) {
         this.NotPassedHostCount = NotPassedHostCount;

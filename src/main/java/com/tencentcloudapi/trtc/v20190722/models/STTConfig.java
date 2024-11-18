@@ -46,10 +46,12 @@ public class STTConfig extends AbstractModel {
 18.     German = "de" # 德语
 19.     Italian = "it" # 意大利语
 20.     Russian = "ru" # 俄语
+21.     Swedish = "sv" # 瑞典语
+22.     Danish = "da" # 丹麦语
+23.     Norwegian = "no" # 挪威语
 
 注意：
 如果缺少满足您需求的语言，请联系我们技术人员。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Language")
     @Expose
@@ -59,15 +61,21 @@ public class STTConfig extends AbstractModel {
     * 发起模糊识别额外可能替代语言类型,最多填写3种语言类型, 
 注：Language指定为"zh-dialect" # 中国方言 时，不支持模糊识别，该字段无效
 
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AlternativeLanguage")
     @Expose
     private String [] AlternativeLanguage;
 
     /**
+    * 自定义参数，联系后台使用
+
+    */
+    @SerializedName("CustomParam")
+    @Expose
+    private String CustomParam;
+
+    /**
     * 语音识别vad的时间，范围为240-2000，默认为1000，单位为ms。更小的值会让语音识别分句更快。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VadSilenceTime")
     @Expose
@@ -96,10 +104,12 @@ public class STTConfig extends AbstractModel {
 18.     German = "de" # 德语
 19.     Italian = "it" # 意大利语
 20.     Russian = "ru" # 俄语
+21.     Swedish = "sv" # 瑞典语
+22.     Danish = "da" # 丹麦语
+23.     Norwegian = "no" # 挪威语
 
 注意：
-如果缺少满足您需求的语言，请联系我们技术人员。
-注意：此字段可能返回 null，表示取不到有效值。 
+如果缺少满足您需求的语言，请联系我们技术人员。 
      * @return Language 语音识别支持的语言，默认是"zh" 中文
 目前全量支持的语言如下，等号左面是语言英文名，右面是Language字段需要填写的值，该值遵循[ISO639](https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes)：
 1.     Chinese = "zh" # 中文
@@ -122,10 +132,12 @@ public class STTConfig extends AbstractModel {
 18.     German = "de" # 德语
 19.     Italian = "it" # 意大利语
 20.     Russian = "ru" # 俄语
+21.     Swedish = "sv" # 瑞典语
+22.     Danish = "da" # 丹麦语
+23.     Norwegian = "no" # 挪威语
 
 注意：
 如果缺少满足您需求的语言，请联系我们技术人员。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLanguage() {
         return this.Language;
@@ -154,10 +166,12 @@ public class STTConfig extends AbstractModel {
 18.     German = "de" # 德语
 19.     Italian = "it" # 意大利语
 20.     Russian = "ru" # 俄语
+21.     Swedish = "sv" # 瑞典语
+22.     Danish = "da" # 丹麦语
+23.     Norwegian = "no" # 挪威语
 
 注意：
 如果缺少满足您需求的语言，请联系我们技术人员。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Language 语音识别支持的语言，默认是"zh" 中文
 目前全量支持的语言如下，等号左面是语言英文名，右面是Language字段需要填写的值，该值遵循[ISO639](https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes)：
 1.     Chinese = "zh" # 中文
@@ -180,10 +194,12 @@ public class STTConfig extends AbstractModel {
 18.     German = "de" # 德语
 19.     Italian = "it" # 意大利语
 20.     Russian = "ru" # 俄语
+21.     Swedish = "sv" # 瑞典语
+22.     Danish = "da" # 丹麦语
+23.     Norwegian = "no" # 挪威语
 
 注意：
 如果缺少满足您需求的语言，请联系我们技术人员。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLanguage(String Language) {
         this.Language = Language;
@@ -192,12 +208,10 @@ public class STTConfig extends AbstractModel {
     /**
      * Get 发起模糊识别额外可能替代语言类型,最多填写3种语言类型, 
 注：Language指定为"zh-dialect" # 中国方言 时，不支持模糊识别，该字段无效
-
-注意：此字段可能返回 null，表示取不到有效值。 
+ 
      * @return AlternativeLanguage 发起模糊识别额外可能替代语言类型,最多填写3种语言类型, 
 注：Language指定为"zh-dialect" # 中国方言 时，不支持模糊识别，该字段无效
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getAlternativeLanguage() {
         return this.AlternativeLanguage;
@@ -207,21 +221,37 @@ public class STTConfig extends AbstractModel {
      * Set 发起模糊识别额外可能替代语言类型,最多填写3种语言类型, 
 注：Language指定为"zh-dialect" # 中国方言 时，不支持模糊识别，该字段无效
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AlternativeLanguage 发起模糊识别额外可能替代语言类型,最多填写3种语言类型, 
 注：Language指定为"zh-dialect" # 中国方言 时，不支持模糊识别，该字段无效
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAlternativeLanguage(String [] AlternativeLanguage) {
         this.AlternativeLanguage = AlternativeLanguage;
     }
 
     /**
-     * Get 语音识别vad的时间，范围为240-2000，默认为1000，单位为ms。更小的值会让语音识别分句更快。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 自定义参数，联系后台使用
+ 
+     * @return CustomParam 自定义参数，联系后台使用
+
+     */
+    public String getCustomParam() {
+        return this.CustomParam;
+    }
+
+    /**
+     * Set 自定义参数，联系后台使用
+
+     * @param CustomParam 自定义参数，联系后台使用
+
+     */
+    public void setCustomParam(String CustomParam) {
+        this.CustomParam = CustomParam;
+    }
+
+    /**
+     * Get 语音识别vad的时间，范围为240-2000，默认为1000，单位为ms。更小的值会让语音识别分句更快。 
      * @return VadSilenceTime 语音识别vad的时间，范围为240-2000，默认为1000，单位为ms。更小的值会让语音识别分句更快。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getVadSilenceTime() {
         return this.VadSilenceTime;
@@ -229,9 +259,7 @@ public class STTConfig extends AbstractModel {
 
     /**
      * Set 语音识别vad的时间，范围为240-2000，默认为1000，单位为ms。更小的值会让语音识别分句更快。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VadSilenceTime 语音识别vad的时间，范围为240-2000，默认为1000，单位为ms。更小的值会让语音识别分句更快。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVadSilenceTime(Long VadSilenceTime) {
         this.VadSilenceTime = VadSilenceTime;
@@ -254,6 +282,9 @@ public class STTConfig extends AbstractModel {
                 this.AlternativeLanguage[i] = new String(source.AlternativeLanguage[i]);
             }
         }
+        if (source.CustomParam != null) {
+            this.CustomParam = new String(source.CustomParam);
+        }
         if (source.VadSilenceTime != null) {
             this.VadSilenceTime = new Long(source.VadSilenceTime);
         }
@@ -266,6 +297,7 @@ public class STTConfig extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Language", this.Language);
         this.setParamArraySimple(map, prefix + "AlternativeLanguage.", this.AlternativeLanguage);
+        this.setParamSimple(map, prefix + "CustomParam", this.CustomParam);
         this.setParamSimple(map, prefix + "VadSilenceTime", this.VadSilenceTime);
 
     }

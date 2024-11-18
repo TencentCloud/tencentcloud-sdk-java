@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class ModifyNatAcRuleRequest extends AbstractModel {
 
     /**
-    * 需要编辑的规则数组
+    * 需要编辑的规则数组,基于Uuid唯一id来修改该规则
     */
     @SerializedName("Rules")
     @Expose
     private CreateNatRuleItem [] Rules;
 
     /**
-     * Get 需要编辑的规则数组 
-     * @return Rules 需要编辑的规则数组
+     * Get 需要编辑的规则数组,基于Uuid唯一id来修改该规则 
+     * @return Rules 需要编辑的规则数组,基于Uuid唯一id来修改该规则
      */
     public CreateNatRuleItem [] getRules() {
         return this.Rules;
     }
 
     /**
-     * Set 需要编辑的规则数组
-     * @param Rules 需要编辑的规则数组
+     * Set 需要编辑的规则数组,基于Uuid唯一id来修改该规则
+     * @param Rules 需要编辑的规则数组,基于Uuid唯一id来修改该规则
      */
     public void setRules(CreateNatRuleItem [] Rules) {
         this.Rules = Rules;

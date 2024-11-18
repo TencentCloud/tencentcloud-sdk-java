@@ -25,7 +25,6 @@ public class DescribeCanFixVulMachineResponse extends AbstractModel {
 
     /**
     * 主机漏洞修护信息列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VulInfo")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeCanFixVulMachineResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 主机漏洞修护信息列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主机漏洞修护信息列表 
      * @return VulInfo 主机漏洞修护信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CanFixVulInfo [] getVulInfo() {
         return this.VulInfo;
@@ -50,9 +47,7 @@ public class DescribeCanFixVulMachineResponse extends AbstractModel {
 
     /**
      * Set 主机漏洞修护信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VulInfo 主机漏洞修护信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVulInfo(CanFixVulInfo [] VulInfo) {
         this.VulInfo = VulInfo;

@@ -25,7 +25,6 @@ public class VpcFwJoinInstanceType extends AbstractModel {
 
     /**
     * 接入实例类型，VPC、DIRECTCONNECT、 VPNGW 等
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("JoinType")
     @Expose
@@ -33,17 +32,14 @@ public class VpcFwJoinInstanceType extends AbstractModel {
 
     /**
     * 接入的对应网络实例类型的数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Num")
     @Expose
     private Long Num;
 
     /**
-     * Get 接入实例类型，VPC、DIRECTCONNECT、 VPNGW 等
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 接入实例类型，VPC、DIRECTCONNECT、 VPNGW 等 
      * @return JoinType 接入实例类型，VPC、DIRECTCONNECT、 VPNGW 等
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getJoinType() {
         return this.JoinType;
@@ -51,19 +47,15 @@ public class VpcFwJoinInstanceType extends AbstractModel {
 
     /**
      * Set 接入实例类型，VPC、DIRECTCONNECT、 VPNGW 等
-注意：此字段可能返回 null，表示取不到有效值。
      * @param JoinType 接入实例类型，VPC、DIRECTCONNECT、 VPNGW 等
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setJoinType(String JoinType) {
         this.JoinType = JoinType;
     }
 
     /**
-     * Get 接入的对应网络实例类型的数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 接入的对应网络实例类型的数量 
      * @return Num 接入的对应网络实例类型的数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getNum() {
         return this.Num;
@@ -71,9 +63,7 @@ public class VpcFwJoinInstanceType extends AbstractModel {
 
     /**
      * Set 接入的对应网络实例类型的数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Num 接入的对应网络实例类型的数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNum(Long Num) {
         this.Num = Num;

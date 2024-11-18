@@ -31,6 +31,13 @@ public class DescribeESAggregationsRequest extends AbstractModel {
     private String Query;
 
     /**
+    * 日志类型列表
+    */
+    @SerializedName("LogTypes")
+    @Expose
+    private String [] LogTypes;
+
+    /**
      * Get ES聚合条件JSON 
      * @return Query ES聚合条件JSON
      */
@@ -46,6 +53,22 @@ public class DescribeESAggregationsRequest extends AbstractModel {
         this.Query = Query;
     }
 
+    /**
+     * Get 日志类型列表 
+     * @return LogTypes 日志类型列表
+     */
+    public String [] getLogTypes() {
+        return this.LogTypes;
+    }
+
+    /**
+     * Set 日志类型列表
+     * @param LogTypes 日志类型列表
+     */
+    public void setLogTypes(String [] LogTypes) {
+        this.LogTypes = LogTypes;
+    }
+
     public DescribeESAggregationsRequest() {
     }
 
@@ -57,6 +80,12 @@ public class DescribeESAggregationsRequest extends AbstractModel {
         if (source.Query != null) {
             this.Query = new String(source.Query);
         }
+        if (source.LogTypes != null) {
+            this.LogTypes = new String[source.LogTypes.length];
+            for (int i = 0; i < source.LogTypes.length; i++) {
+                this.LogTypes[i] = new String(source.LogTypes[i]);
+            }
+        }
     }
 
 
@@ -65,6 +94,7 @@ public class DescribeESAggregationsRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Query", this.Query);
+        this.setParamArraySimple(map, prefix + "LogTypes.", this.LogTypes);
 
     }
 }

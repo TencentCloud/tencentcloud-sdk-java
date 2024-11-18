@@ -25,7 +25,6 @@ public class DescribeBashEventsInfoResponse extends AbstractModel {
 
     /**
     * 事件详情
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BashEventsInfo")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeBashEventsInfoResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 事件详情
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 事件详情 
      * @return BashEventsInfo 事件详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BashEventsInfo getBashEventsInfo() {
         return this.BashEventsInfo;
@@ -50,9 +47,7 @@ public class DescribeBashEventsInfoResponse extends AbstractModel {
 
     /**
      * Set 事件详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BashEventsInfo 事件详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBashEventsInfo(BashEventsInfo BashEventsInfo) {
         this.BashEventsInfo = BashEventsInfo;

@@ -46,7 +46,6 @@ public class DescribeScreenHostInvasionResponse extends AbstractModel {
 
     /**
     * 基线事件列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Baseline")
     @Expose
@@ -108,10 +107,8 @@ public class DescribeScreenHostInvasionResponse extends AbstractModel {
     }
 
     /**
-     * Get 基线事件列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 基线事件列表 
      * @return Baseline 基线事件列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ScreenBaselineInfo [] getBaseline() {
         return this.Baseline;
@@ -119,9 +116,7 @@ public class DescribeScreenHostInvasionResponse extends AbstractModel {
 
     /**
      * Set 基线事件列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Baseline 基线事件列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBaseline(ScreenBaselineInfo [] Baseline) {
         this.Baseline = Baseline;

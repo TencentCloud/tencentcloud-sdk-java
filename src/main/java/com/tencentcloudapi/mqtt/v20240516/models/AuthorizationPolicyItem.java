@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class AuthorizationPolicyItem extends AbstractModel {
 
     /**
-    * 规则id
+    * 规则ID
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-    * 集群id
+    * 集群ID
     */
     @SerializedName("InstanceId")
     @Expose
@@ -102,7 +102,7 @@ public class AuthorizationPolicyItem extends AbstractModel {
     private String Username;
 
     /**
-    * ip地址
+    * IP地址
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Ip")
@@ -118,7 +118,9 @@ public class AuthorizationPolicyItem extends AbstractModel {
     private String Qos;
 
     /**
-    * 1、2、3
+    * 1：表示匹配retain消息
+2：表示匹配非retain消息
+3：表示匹配retain和非retain消息
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Retain")
@@ -148,32 +150,32 @@ public class AuthorizationPolicyItem extends AbstractModel {
     private Long UpdateTime;
 
     /**
-     * Get 规则id 
-     * @return Id 规则id
+     * Get 规则ID 
+     * @return Id 规则ID
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set 规则id
-     * @param Id 规则id
+     * Set 规则ID
+     * @param Id 规则ID
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 集群id 
-     * @return InstanceId 集群id
+     * Get 集群ID 
+     * @return InstanceId 集群ID
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 集群id
-     * @param InstanceId 集群id
+     * Set 集群ID
+     * @param InstanceId 集群ID
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -340,9 +342,9 @@ public class AuthorizationPolicyItem extends AbstractModel {
     }
 
     /**
-     * Get ip地址
+     * Get IP地址
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Ip ip地址
+     * @return Ip IP地址
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIp() {
@@ -350,9 +352,9 @@ public class AuthorizationPolicyItem extends AbstractModel {
     }
 
     /**
-     * Set ip地址
+     * Set IP地址
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Ip ip地址
+     * @param Ip IP地址
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIp(String Ip) {
@@ -380,9 +382,13 @@ public class AuthorizationPolicyItem extends AbstractModel {
     }
 
     /**
-     * Get 1、2、3
+     * Get 1：表示匹配retain消息
+2：表示匹配非retain消息
+3：表示匹配retain和非retain消息
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Retain 1、2、3
+     * @return Retain 1：表示匹配retain消息
+2：表示匹配非retain消息
+3：表示匹配retain和非retain消息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRetain() {
@@ -390,9 +396,13 @@ public class AuthorizationPolicyItem extends AbstractModel {
     }
 
     /**
-     * Set 1、2、3
+     * Set 1：表示匹配retain消息
+2：表示匹配非retain消息
+3：表示匹配retain和非retain消息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Retain 1、2、3
+     * @param Retain 1：表示匹配retain消息
+2：表示匹配非retain消息
+3：表示匹配retain和非retain消息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRetain(Long Retain) {

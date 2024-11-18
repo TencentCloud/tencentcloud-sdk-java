@@ -32,7 +32,6 @@ public class SearchFileResponse extends AbstractModel {
 
     /**
     * 文件操作列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Files")
     @Expose
@@ -62,10 +61,8 @@ public class SearchFileResponse extends AbstractModel {
     }
 
     /**
-     * Get 文件操作列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文件操作列表 
      * @return Files 文件操作列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SearchFileResult [] getFiles() {
         return this.Files;
@@ -73,9 +70,7 @@ public class SearchFileResponse extends AbstractModel {
 
     /**
      * Set 文件操作列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Files 文件操作列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFiles(SearchFileResult [] Files) {
         this.Files = Files;

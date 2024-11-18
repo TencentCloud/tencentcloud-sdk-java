@@ -95,7 +95,7 @@ public class CreateDBInstanceRequest extends AbstractModel {
     private String InstanceRole;
 
     /**
-    * 实例 ID，购买只读实例时必填，该字段表示只读实例的主实例ID，请使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口查询云数据库实例 ID。
+    * 实例 ID，购买只读实例时必填，该字段表示只读实例的主实例 ID，请使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口查询云数据库实例 ID。
     */
     @SerializedName("MasterInstanceId")
     @Expose
@@ -482,16 +482,16 @@ public class CreateDBInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get 实例 ID，购买只读实例时必填，该字段表示只读实例的主实例ID，请使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口查询云数据库实例 ID。 
-     * @return MasterInstanceId 实例 ID，购买只读实例时必填，该字段表示只读实例的主实例ID，请使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口查询云数据库实例 ID。
+     * Get 实例 ID，购买只读实例时必填，该字段表示只读实例的主实例 ID，请使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口查询云数据库实例 ID。 
+     * @return MasterInstanceId 实例 ID，购买只读实例时必填，该字段表示只读实例的主实例 ID，请使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口查询云数据库实例 ID。
      */
     public String getMasterInstanceId() {
         return this.MasterInstanceId;
     }
 
     /**
-     * Set 实例 ID，购买只读实例时必填，该字段表示只读实例的主实例ID，请使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口查询云数据库实例 ID。
-     * @param MasterInstanceId 实例 ID，购买只读实例时必填，该字段表示只读实例的主实例ID，请使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口查询云数据库实例 ID。
+     * Set 实例 ID，购买只读实例时必填，该字段表示只读实例的主实例 ID，请使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口查询云数据库实例 ID。
+     * @param MasterInstanceId 实例 ID，购买只读实例时必填，该字段表示只读实例的主实例 ID，请使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口查询云数据库实例 ID。
      */
     public void setMasterInstanceId(String MasterInstanceId) {
         this.MasterInstanceId = MasterInstanceId;

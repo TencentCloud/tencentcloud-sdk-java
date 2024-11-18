@@ -32,14 +32,14 @@ public class DescribeProxySlowLogRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * 慢查询的开始时间。
+    * 慢查询的开始时间，查询时间最大跨度30天。
     */
     @SerializedName("BeginTime")
     @Expose
     private String BeginTime;
 
     /**
-    * 慢查询的结束时间。
+    * 慢查询的结束时间，查询时间最大跨度30天。
     */
     @SerializedName("EndTime")
     @Expose
@@ -53,14 +53,14 @@ public class DescribeProxySlowLogRequest extends AbstractModel {
     private Long MinQueryTime;
 
     /**
-    * 分页大小。默认为 20，取值范围[20,1000]。
+    * 每页输出的任务列表大小，默认为 20，最多输出100条。
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 偏移量，取Limit整数倍。
+    * 分页偏移量，取Limit整数倍，计算公式：offset=limit*(页码-1)。
     */
     @SerializedName("Offset")
     @Expose
@@ -87,32 +87,32 @@ public class DescribeProxySlowLogRequest extends AbstractModel {
     }
 
     /**
-     * Get 慢查询的开始时间。 
-     * @return BeginTime 慢查询的开始时间。
+     * Get 慢查询的开始时间，查询时间最大跨度30天。 
+     * @return BeginTime 慢查询的开始时间，查询时间最大跨度30天。
      */
     public String getBeginTime() {
         return this.BeginTime;
     }
 
     /**
-     * Set 慢查询的开始时间。
-     * @param BeginTime 慢查询的开始时间。
+     * Set 慢查询的开始时间，查询时间最大跨度30天。
+     * @param BeginTime 慢查询的开始时间，查询时间最大跨度30天。
      */
     public void setBeginTime(String BeginTime) {
         this.BeginTime = BeginTime;
     }
 
     /**
-     * Get 慢查询的结束时间。 
-     * @return EndTime 慢查询的结束时间。
+     * Get 慢查询的结束时间，查询时间最大跨度30天。 
+     * @return EndTime 慢查询的结束时间，查询时间最大跨度30天。
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 慢查询的结束时间。
-     * @param EndTime 慢查询的结束时间。
+     * Set 慢查询的结束时间，查询时间最大跨度30天。
+     * @param EndTime 慢查询的结束时间，查询时间最大跨度30天。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
@@ -135,32 +135,32 @@ public class DescribeProxySlowLogRequest extends AbstractModel {
     }
 
     /**
-     * Get 分页大小。默认为 20，取值范围[20,1000]。 
-     * @return Limit 分页大小。默认为 20，取值范围[20,1000]。
+     * Get 每页输出的任务列表大小，默认为 20，最多输出100条。 
+     * @return Limit 每页输出的任务列表大小，默认为 20，最多输出100条。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 分页大小。默认为 20，取值范围[20,1000]。
-     * @param Limit 分页大小。默认为 20，取值范围[20,1000]。
+     * Set 每页输出的任务列表大小，默认为 20，最多输出100条。
+     * @param Limit 每页输出的任务列表大小，默认为 20，最多输出100条。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 偏移量，取Limit整数倍。 
-     * @return Offset 偏移量，取Limit整数倍。
+     * Get 分页偏移量，取Limit整数倍，计算公式：offset=limit*(页码-1)。 
+     * @return Offset 分页偏移量，取Limit整数倍，计算公式：offset=limit*(页码-1)。
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量，取Limit整数倍。
-     * @param Offset 偏移量，取Limit整数倍。
+     * Set 分页偏移量，取Limit整数倍，计算公式：offset=limit*(页码-1)。
+     * @param Offset 分页偏移量，取Limit整数倍，计算公式：offset=limit*(页码-1)。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

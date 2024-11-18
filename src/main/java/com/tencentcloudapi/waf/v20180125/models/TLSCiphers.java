@@ -25,7 +25,6 @@ public class TLSCiphers extends AbstractModel {
 
     /**
     * TLS版本ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VersionId")
     @Expose
@@ -33,7 +32,6 @@ public class TLSCiphers extends AbstractModel {
 
     /**
     * 加密套件ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CipherId")
     @Expose
@@ -41,17 +39,14 @@ public class TLSCiphers extends AbstractModel {
 
     /**
     * 加密套件
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CipherName")
     @Expose
     private String CipherName;
 
     /**
-     * Get TLS版本ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get TLS版本ID 
      * @return VersionId TLS版本ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getVersionId() {
         return this.VersionId;
@@ -59,19 +54,15 @@ public class TLSCiphers extends AbstractModel {
 
     /**
      * Set TLS版本ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VersionId TLS版本ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVersionId(Long VersionId) {
         this.VersionId = VersionId;
     }
 
     /**
-     * Get 加密套件ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 加密套件ID 
      * @return CipherId 加密套件ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCipherId() {
         return this.CipherId;
@@ -79,19 +70,15 @@ public class TLSCiphers extends AbstractModel {
 
     /**
      * Set 加密套件ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CipherId 加密套件ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCipherId(Long CipherId) {
         this.CipherId = CipherId;
     }
 
     /**
-     * Get 加密套件
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 加密套件 
      * @return CipherName 加密套件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCipherName() {
         return this.CipherName;
@@ -99,9 +86,7 @@ public class TLSCiphers extends AbstractModel {
 
     /**
      * Set 加密套件
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CipherName 加密套件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCipherName(String CipherName) {
         this.CipherName = CipherName;

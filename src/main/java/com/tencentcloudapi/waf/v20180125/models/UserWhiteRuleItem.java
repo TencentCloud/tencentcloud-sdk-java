@@ -46,7 +46,6 @@ public class UserWhiteRuleItem extends AbstractModel {
 
     /**
     * 匹配参数名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MatchParams")
     @Expose
@@ -101,10 +100,8 @@ public class UserWhiteRuleItem extends AbstractModel {
     }
 
     /**
-     * Get 匹配参数名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 匹配参数名 
      * @return MatchParams 匹配参数名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMatchParams() {
         return this.MatchParams;
@@ -112,9 +109,7 @@ public class UserWhiteRuleItem extends AbstractModel {
 
     /**
      * Set 匹配参数名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MatchParams 匹配参数名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMatchParams(String MatchParams) {
         this.MatchParams = MatchParams;

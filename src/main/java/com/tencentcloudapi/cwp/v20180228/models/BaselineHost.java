@@ -32,7 +32,6 @@ public class BaselineHost extends AbstractModel {
 
     /**
     * 主机名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HostName")
     @Expose
@@ -40,7 +39,6 @@ public class BaselineHost extends AbstractModel {
 
     /**
     * 主机标签
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HostTag")
     @Expose
@@ -48,7 +46,6 @@ public class BaselineHost extends AbstractModel {
 
     /**
     * 内网Ip
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HostIp")
     @Expose
@@ -56,7 +53,6 @@ public class BaselineHost extends AbstractModel {
 
     /**
     * 外网Ip
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WanIp")
     @Expose
@@ -64,7 +60,6 @@ public class BaselineHost extends AbstractModel {
 
     /**
     * 主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MachineExtraInfo")
     @Expose
@@ -87,10 +82,8 @@ public class BaselineHost extends AbstractModel {
     }
 
     /**
-     * Get 主机名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主机名称 
      * @return HostName 主机名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHostName() {
         return this.HostName;
@@ -98,19 +91,15 @@ public class BaselineHost extends AbstractModel {
 
     /**
      * Set 主机名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HostName 主机名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHostName(String HostName) {
         this.HostName = HostName;
     }
 
     /**
-     * Get 主机标签
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主机标签 
      * @return HostTag 主机标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHostTag() {
         return this.HostTag;
@@ -118,19 +107,15 @@ public class BaselineHost extends AbstractModel {
 
     /**
      * Set 主机标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HostTag 主机标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHostTag(String HostTag) {
         this.HostTag = HostTag;
     }
 
     /**
-     * Get 内网Ip
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 内网Ip 
      * @return HostIp 内网Ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHostIp() {
         return this.HostIp;
@@ -138,19 +123,15 @@ public class BaselineHost extends AbstractModel {
 
     /**
      * Set 内网Ip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HostIp 内网Ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHostIp(String HostIp) {
         this.HostIp = HostIp;
     }
 
     /**
-     * Get 外网Ip
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 外网Ip 
      * @return WanIp 外网Ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWanIp() {
         return this.WanIp;
@@ -158,19 +139,15 @@ public class BaselineHost extends AbstractModel {
 
     /**
      * Set 外网Ip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WanIp 外网Ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWanIp(String WanIp) {
         this.WanIp = WanIp;
     }
 
     /**
-     * Get 主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主机额外信息 
      * @return MachineExtraInfo 主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public MachineExtraInfo getMachineExtraInfo() {
         return this.MachineExtraInfo;
@@ -178,9 +155,7 @@ public class BaselineHost extends AbstractModel {
 
     /**
      * Set 主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MachineExtraInfo 主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMachineExtraInfo(MachineExtraInfo MachineExtraInfo) {
         this.MachineExtraInfo = MachineExtraInfo;

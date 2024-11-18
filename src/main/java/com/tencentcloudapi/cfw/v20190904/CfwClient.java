@@ -39,7 +39,9 @@ public class CfwClient extends AbstractClient{
     }
 
     /**
-     *添加互联网边界规则
+     *接口不再使用，已有新接口AddAclRule
+
+添加互联网边界规则
      * @param req AddAcRuleRequest
      * @return AddAcRuleResponse
      * @throws TencentCloudSDKException
@@ -72,7 +74,7 @@ public class CfwClient extends AbstractClient{
     }
 
     /**
-     *添加nat访问控制规则(地域必填)
+     *添加nat访问控制规则
      * @param req AddNatAcRuleRequest
      * @return AddNatAcRuleResponse
      * @throws TencentCloudSDKException
@@ -425,7 +427,6 @@ public class CfwClient extends AbstractClient{
 
     /**
      *DescribeBlockByIpTimesList 告警中心阻断IP折线图
-
      * @param req DescribeBlockByIpTimesListRequest
      * @return DescribeBlockByIpTimesListResponse
      * @throws TencentCloudSDKException
@@ -448,7 +449,6 @@ public class CfwClient extends AbstractClient{
 
     /**
      *DescribeBlockStaticList 告警中心柱形图
-
      * @param req DescribeBlockStaticListRequest
      * @return DescribeBlockStaticListResponse
      * @throws TencentCloudSDKException
@@ -668,17 +668,6 @@ public class CfwClient extends AbstractClient{
     }
 
     /**
-     *查询NAT边界防火墙开关列表
-     * @param req DescribeNatSwitchListRequest
-     * @return DescribeNatSwitchListResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeNatSwitchListResponse DescribeNatSwitchList(DescribeNatSwitchListRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeNatSwitchList", DescribeNatSwitchListResponse.class);
-    }
-
-    /**
      *DescribeResourceGroup资产中心资产树信息
      * @param req DescribeResourceGroupRequest
      * @return DescribeResourceGroupResponse
@@ -690,7 +679,7 @@ public class CfwClient extends AbstractClient{
     }
 
     /**
-     *DescribeResourceGroupNew资产中心资产树信息
+     *资产中心资产组数数据信息查询
      * @param req DescribeResourceGroupNewRequest
      * @return DescribeResourceGroupNewResponse
      * @throws TencentCloudSDKException
@@ -745,8 +734,7 @@ public class CfwClient extends AbstractClient{
     }
 
     /**
-     *DescribeTLogInfo告警中心概况
-
+     *DescribeTLogInfo告警中心概况查询
      * @param req DescribeTLogInfoRequest
      * @return DescribeTLogInfoResponse
      * @throws TencentCloudSDKException
@@ -758,7 +746,6 @@ public class CfwClient extends AbstractClient{
 
     /**
      *DescribeTLogIpList告警中心IP柱形图
-
      * @param req DescribeTLogIpListRequest
      * @return DescribeTLogIpListResponse
      * @throws TencentCloudSDKException
@@ -879,7 +866,9 @@ public class CfwClient extends AbstractClient{
     }
 
     /**
-     *VPC防火墙一键开关
+     *该接口已不再使用
+
+VPC防火墙一键开关
      * @param req ModifyAllVPCSwitchStatusRequest
      * @return ModifyAllVPCSwitchStatusResponse
      * @throws TencentCloudSDKException
@@ -1082,8 +1071,6 @@ VPC间规则需指定EdgeId。Nat边界规则需指定地域Region与Direction�
 
     /**
      *ModifyResourceGroup-资产中心资产组信息修改
-
-
      * @param req ModifyResourceGroupRequest
      * @return ModifyResourceGroupResponse
      * @throws TencentCloudSDKException

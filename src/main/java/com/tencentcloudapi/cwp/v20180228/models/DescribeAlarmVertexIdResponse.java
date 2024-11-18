@@ -25,7 +25,6 @@ public class DescribeAlarmVertexIdResponse extends AbstractModel {
 
     /**
     * 告警点id列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AlarmVertexIds")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeAlarmVertexIdResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 告警点id列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 告警点id列表 
      * @return AlarmVertexIds 告警点id列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getAlarmVertexIds() {
         return this.AlarmVertexIds;
@@ -50,9 +47,7 @@ public class DescribeAlarmVertexIdResponse extends AbstractModel {
 
     /**
      * Set 告警点id列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AlarmVertexIds 告警点id列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAlarmVertexIds(String [] AlarmVertexIds) {
         this.AlarmVertexIds = AlarmVertexIds;

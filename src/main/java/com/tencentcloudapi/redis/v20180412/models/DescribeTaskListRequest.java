@@ -122,14 +122,14 @@ public class DescribeTaskListRequest extends AbstractModel {
     private String [] TaskTypes;
 
     /**
-    * 任务执行的起始时间。格式如：2021-12-30 00:00:00。
+    * 任务执行的起始时间，格式如：2021-12-30 00:00:00，支持查询近30天内数据。
     */
     @SerializedName("BeginTime")
     @Expose
     private String BeginTime;
 
     /**
-    * 任务运行的终止时间。格式如：2021-12-30 20:59:35
+    * 任务运行的终止时间。格式如：2021-12-30 20:59:35，支持查询近30天内数据。
     */
     @SerializedName("EndTime")
     @Expose
@@ -488,32 +488,32 @@ public class DescribeTaskListRequest extends AbstractModel {
     }
 
     /**
-     * Get 任务执行的起始时间。格式如：2021-12-30 00:00:00。 
-     * @return BeginTime 任务执行的起始时间。格式如：2021-12-30 00:00:00。
+     * Get 任务执行的起始时间，格式如：2021-12-30 00:00:00，支持查询近30天内数据。 
+     * @return BeginTime 任务执行的起始时间，格式如：2021-12-30 00:00:00，支持查询近30天内数据。
      */
     public String getBeginTime() {
         return this.BeginTime;
     }
 
     /**
-     * Set 任务执行的起始时间。格式如：2021-12-30 00:00:00。
-     * @param BeginTime 任务执行的起始时间。格式如：2021-12-30 00:00:00。
+     * Set 任务执行的起始时间，格式如：2021-12-30 00:00:00，支持查询近30天内数据。
+     * @param BeginTime 任务执行的起始时间，格式如：2021-12-30 00:00:00，支持查询近30天内数据。
      */
     public void setBeginTime(String BeginTime) {
         this.BeginTime = BeginTime;
     }
 
     /**
-     * Get 任务运行的终止时间。格式如：2021-12-30 20:59:35 
-     * @return EndTime 任务运行的终止时间。格式如：2021-12-30 20:59:35
+     * Get 任务运行的终止时间。格式如：2021-12-30 20:59:35，支持查询近30天内数据。 
+     * @return EndTime 任务运行的终止时间。格式如：2021-12-30 20:59:35，支持查询近30天内数据。
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 任务运行的终止时间。格式如：2021-12-30 20:59:35
-     * @param EndTime 任务运行的终止时间。格式如：2021-12-30 20:59:35
+     * Set 任务运行的终止时间。格式如：2021-12-30 20:59:35，支持查询近30天内数据。
+     * @param EndTime 任务运行的终止时间。格式如：2021-12-30 20:59:35，支持查询近30天内数据。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

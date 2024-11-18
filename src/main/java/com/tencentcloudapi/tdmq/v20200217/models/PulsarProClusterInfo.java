@@ -105,6 +105,23 @@ public class PulsarProClusterInfo extends AbstractModel {
     private Long ExpireTime;
 
     /**
+    * 是否开启自动创建主题
+true就是开启了，false是关闭
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AutoCreateTopicStatus")
+    @Expose
+    private Boolean AutoCreateTopicStatus;
+
+    /**
+    * 自动创建主题的默认分区数，如果没开启就是0
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DefaultPartitionNumber")
+    @Expose
+    private Long DefaultPartitionNumber;
+
+    /**
      * Get 集群Id。 
      * @return ClusterId 集群Id。
      */
@@ -296,6 +313,50 @@ public class PulsarProClusterInfo extends AbstractModel {
         this.ExpireTime = ExpireTime;
     }
 
+    /**
+     * Get 是否开启自动创建主题
+true就是开启了，false是关闭
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AutoCreateTopicStatus 是否开启自动创建主题
+true就是开启了，false是关闭
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getAutoCreateTopicStatus() {
+        return this.AutoCreateTopicStatus;
+    }
+
+    /**
+     * Set 是否开启自动创建主题
+true就是开启了，false是关闭
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AutoCreateTopicStatus 是否开启自动创建主题
+true就是开启了，false是关闭
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAutoCreateTopicStatus(Boolean AutoCreateTopicStatus) {
+        this.AutoCreateTopicStatus = AutoCreateTopicStatus;
+    }
+
+    /**
+     * Get 自动创建主题的默认分区数，如果没开启就是0
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DefaultPartitionNumber 自动创建主题的默认分区数，如果没开启就是0
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getDefaultPartitionNumber() {
+        return this.DefaultPartitionNumber;
+    }
+
+    /**
+     * Set 自动创建主题的默认分区数，如果没开启就是0
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DefaultPartitionNumber 自动创建主题的默认分区数，如果没开启就是0
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDefaultPartitionNumber(Long DefaultPartitionNumber) {
+        this.DefaultPartitionNumber = DefaultPartitionNumber;
+    }
+
     public PulsarProClusterInfo() {
     }
 
@@ -340,6 +401,12 @@ public class PulsarProClusterInfo extends AbstractModel {
         if (source.ExpireTime != null) {
             this.ExpireTime = new Long(source.ExpireTime);
         }
+        if (source.AutoCreateTopicStatus != null) {
+            this.AutoCreateTopicStatus = new Boolean(source.AutoCreateTopicStatus);
+        }
+        if (source.DefaultPartitionNumber != null) {
+            this.DefaultPartitionNumber = new Long(source.DefaultPartitionNumber);
+        }
     }
 
 
@@ -358,6 +425,8 @@ public class PulsarProClusterInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "CanEditRoute", this.CanEditRoute);
         this.setParamSimple(map, prefix + "BillingLabelVersion", this.BillingLabelVersion);
         this.setParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
+        this.setParamSimple(map, prefix + "AutoCreateTopicStatus", this.AutoCreateTopicStatus);
+        this.setParamSimple(map, prefix + "DefaultPartitionNumber", this.DefaultPartitionNumber);
 
     }
 }

@@ -24,92 +24,97 @@ import java.util.HashMap;
 public class PhoneVerificationCMCCRequest extends AbstractModel {
 
     /**
-    * 身份证号
+    * 身份证号。
     */
     @SerializedName("IdCard")
     @Expose
     private String IdCard;
 
     /**
-    * 姓名
+    * 姓名。
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 手机号
+    * 手机号。
     */
     @SerializedName("Phone")
     @Expose
     private String Phone;
 
     /**
-    * 敏感数据加密信息。对传入信息（姓名、身份证号、手机号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+    * 敏感数据加密信息。
+- 对传入信息（姓名、身份证号、手机号）有加密需求的用户可使用此参数，详情请点击左侧链接。
     */
     @SerializedName("Encryption")
     @Expose
     private Encryption Encryption;
 
     /**
-     * Get 身份证号 
-     * @return IdCard 身份证号
+     * Get 身份证号。 
+     * @return IdCard 身份证号。
      */
     public String getIdCard() {
         return this.IdCard;
     }
 
     /**
-     * Set 身份证号
-     * @param IdCard 身份证号
+     * Set 身份证号。
+     * @param IdCard 身份证号。
      */
     public void setIdCard(String IdCard) {
         this.IdCard = IdCard;
     }
 
     /**
-     * Get 姓名 
-     * @return Name 姓名
+     * Get 姓名。 
+     * @return Name 姓名。
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 姓名
-     * @param Name 姓名
+     * Set 姓名。
+     * @param Name 姓名。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 手机号 
-     * @return Phone 手机号
+     * Get 手机号。 
+     * @return Phone 手机号。
      */
     public String getPhone() {
         return this.Phone;
     }
 
     /**
-     * Set 手机号
-     * @param Phone 手机号
+     * Set 手机号。
+     * @param Phone 手机号。
      */
     public void setPhone(String Phone) {
         this.Phone = Phone;
     }
 
     /**
-     * Get 敏感数据加密信息。对传入信息（姓名、身份证号、手机号）有加密需求的用户可使用此参数，详情请点击左侧链接。 
-     * @return Encryption 敏感数据加密信息。对传入信息（姓名、身份证号、手机号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+     * Get 敏感数据加密信息。
+- 对传入信息（姓名、身份证号、手机号）有加密需求的用户可使用此参数，详情请点击左侧链接。 
+     * @return Encryption 敏感数据加密信息。
+- 对传入信息（姓名、身份证号、手机号）有加密需求的用户可使用此参数，详情请点击左侧链接。
      */
     public Encryption getEncryption() {
         return this.Encryption;
     }
 
     /**
-     * Set 敏感数据加密信息。对传入信息（姓名、身份证号、手机号）有加密需求的用户可使用此参数，详情请点击左侧链接。
-     * @param Encryption 敏感数据加密信息。对传入信息（姓名、身份证号、手机号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+     * Set 敏感数据加密信息。
+- 对传入信息（姓名、身份证号、手机号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+     * @param Encryption 敏感数据加密信息。
+- 对传入信息（姓名、身份证号、手机号）有加密需求的用户可使用此参数，详情请点击左侧链接。
      */
     public void setEncryption(Encryption Encryption) {
         this.Encryption = Encryption;

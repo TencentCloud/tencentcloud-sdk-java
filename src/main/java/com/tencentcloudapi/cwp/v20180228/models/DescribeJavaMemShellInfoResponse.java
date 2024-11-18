@@ -25,7 +25,6 @@ public class DescribeJavaMemShellInfoResponse extends AbstractModel {
 
     /**
     * java内存马事件详细信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Info")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeJavaMemShellInfoResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get java内存马事件详细信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get java内存马事件详细信息 
      * @return Info java内存马事件详细信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public JavaMemShellDetail getInfo() {
         return this.Info;
@@ -50,9 +47,7 @@ public class DescribeJavaMemShellInfoResponse extends AbstractModel {
 
     /**
      * Set java内存马事件详细信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Info java内存马事件详细信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInfo(JavaMemShellDetail Info) {
         this.Info = Info;

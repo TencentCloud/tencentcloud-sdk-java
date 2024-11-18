@@ -25,7 +25,6 @@ public class CronJob extends AbstractModel {
 
     /**
     * 每个月的几号执行
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Days")
     @Expose
@@ -33,7 +32,6 @@ public class CronJob extends AbstractModel {
 
     /**
     * 每个星期的星期几执行
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WDays")
     @Expose
@@ -41,7 +39,6 @@ public class CronJob extends AbstractModel {
 
     /**
     * 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartTime")
     @Expose
@@ -49,17 +46,14 @@ public class CronJob extends AbstractModel {
 
     /**
     * 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-     * Get 每个月的几号执行
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 每个月的几号执行 
      * @return Days 每个月的几号执行
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long [] getDays() {
         return this.Days;
@@ -67,19 +61,15 @@ public class CronJob extends AbstractModel {
 
     /**
      * Set 每个月的几号执行
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Days 每个月的几号执行
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDays(Long [] Days) {
         this.Days = Days;
     }
 
     /**
-     * Get 每个星期的星期几执行
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 每个星期的星期几执行 
      * @return WDays 每个星期的星期几执行
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long [] getWDays() {
         return this.WDays;
@@ -87,19 +77,15 @@ public class CronJob extends AbstractModel {
 
     /**
      * Set 每个星期的星期几执行
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WDays 每个星期的星期几执行
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWDays(Long [] WDays) {
         this.WDays = WDays;
     }
 
     /**
-     * Get 开始时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 开始时间 
      * @return StartTime 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStartTime() {
         return this.StartTime;
@@ -107,19 +93,15 @@ public class CronJob extends AbstractModel {
 
     /**
      * Set 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StartTime 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 结束时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 结束时间 
      * @return EndTime 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEndTime() {
         return this.EndTime;
@@ -127,9 +109,7 @@ public class CronJob extends AbstractModel {
 
     /**
      * Set 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EndTime 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

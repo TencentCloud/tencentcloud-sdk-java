@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class MQTTAuthenticatorItem extends AbstractModel {
 
     /**
-    * 认证器类型
+    * 认证器类型: JWT：JWT认证器 JWKS：JWKS认证器 BYOC：一端一证认证器
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
@@ -64,9 +64,9 @@ public class MQTTAuthenticatorItem extends AbstractModel {
     private String Remark;
 
     /**
-     * Get 认证器类型
+     * Get 认证器类型: JWT：JWT认证器 JWKS：JWKS认证器 BYOC：一端一证认证器
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Type 认证器类型
+     * @return Type 认证器类型: JWT：JWT认证器 JWKS：JWKS认证器 BYOC：一端一证认证器
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
@@ -74,9 +74,9 @@ public class MQTTAuthenticatorItem extends AbstractModel {
     }
 
     /**
-     * Set 认证器类型
+     * Set 认证器类型: JWT：JWT认证器 JWKS：JWKS认证器 BYOC：一端一证认证器
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Type 认证器类型
+     * @param Type 认证器类型: JWT：JWT认证器 JWKS：JWKS认证器 BYOC：一端一证认证器
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {

@@ -25,7 +25,6 @@ public class RelatedEvent extends AbstractModel {
 
     /**
     * 事件ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EventID")
     @Expose
@@ -33,7 +32,6 @@ public class RelatedEvent extends AbstractModel {
 
     /**
     * 事件描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
     @Expose
@@ -41,17 +39,14 @@ public class RelatedEvent extends AbstractModel {
 
     /**
     * 与事件关联的告警数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RelatedCount")
     @Expose
     private Long RelatedCount;
 
     /**
-     * Get 事件ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 事件ID 
      * @return EventID 事件ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEventID() {
         return this.EventID;
@@ -59,19 +54,15 @@ public class RelatedEvent extends AbstractModel {
 
     /**
      * Set 事件ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EventID 事件ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEventID(String EventID) {
         this.EventID = EventID;
     }
 
     /**
-     * Get 事件描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 事件描述 
      * @return Description 事件描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
         return this.Description;
@@ -79,19 +70,15 @@ public class RelatedEvent extends AbstractModel {
 
     /**
      * Set 事件描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Description 事件描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 与事件关联的告警数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 与事件关联的告警数量 
      * @return RelatedCount 与事件关联的告警数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRelatedCount() {
         return this.RelatedCount;
@@ -99,9 +86,7 @@ public class RelatedEvent extends AbstractModel {
 
     /**
      * Set 与事件关联的告警数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RelatedCount 与事件关联的告警数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRelatedCount(Long RelatedCount) {
         this.RelatedCount = RelatedCount;

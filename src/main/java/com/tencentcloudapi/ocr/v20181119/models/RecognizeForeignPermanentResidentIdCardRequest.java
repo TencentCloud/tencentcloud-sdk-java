@@ -63,6 +63,13 @@ public class RecognizeForeignPermanentResidentIdCardRequest extends AbstractMode
     private Long PdfPageNumber;
 
     /**
+    * 是否返回头像和位置坐标
+    */
+    @SerializedName("CropPortrait")
+    @Expose
+    private Boolean CropPortrait;
+
+    /**
      * Get 图片的 Url 地址。
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
 支持的图片大小：所下载图片经 Base64 编码后不超过 7M。图片下载时间不超过 3 秒。
@@ -170,6 +177,22 @@ public class RecognizeForeignPermanentResidentIdCardRequest extends AbstractMode
         this.PdfPageNumber = PdfPageNumber;
     }
 
+    /**
+     * Get 是否返回头像和位置坐标 
+     * @return CropPortrait 是否返回头像和位置坐标
+     */
+    public Boolean getCropPortrait() {
+        return this.CropPortrait;
+    }
+
+    /**
+     * Set 是否返回头像和位置坐标
+     * @param CropPortrait 是否返回头像和位置坐标
+     */
+    public void setCropPortrait(Boolean CropPortrait) {
+        this.CropPortrait = CropPortrait;
+    }
+
     public RecognizeForeignPermanentResidentIdCardRequest() {
     }
 
@@ -190,6 +213,9 @@ public class RecognizeForeignPermanentResidentIdCardRequest extends AbstractMode
         if (source.PdfPageNumber != null) {
             this.PdfPageNumber = new Long(source.PdfPageNumber);
         }
+        if (source.CropPortrait != null) {
+            this.CropPortrait = new Boolean(source.CropPortrait);
+        }
     }
 
 
@@ -201,6 +227,7 @@ public class RecognizeForeignPermanentResidentIdCardRequest extends AbstractMode
         this.setParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
         this.setParamSimple(map, prefix + "EnablePdf", this.EnablePdf);
         this.setParamSimple(map, prefix + "PdfPageNumber", this.PdfPageNumber);
+        this.setParamSimple(map, prefix + "CropPortrait", this.CropPortrait);
 
     }
 }

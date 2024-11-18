@@ -180,7 +180,7 @@ public class CCN extends AbstractModel {
     */
     @SerializedName("Ipv6Flag")
     @Expose
-    private String Ipv6Flag;
+    private Boolean Ipv6Flag;
 
     /**
     * 是否支持路由表聚合策略
@@ -568,7 +568,7 @@ public class CCN extends AbstractModel {
      * @return Ipv6Flag 是否支持ipv6路由表
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getIpv6Flag() {
+    public Boolean getIpv6Flag() {
         return this.Ipv6Flag;
     }
 
@@ -578,7 +578,7 @@ public class CCN extends AbstractModel {
      * @param Ipv6Flag 是否支持ipv6路由表
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setIpv6Flag(String Ipv6Flag) {
+    public void setIpv6Flag(Boolean Ipv6Flag) {
         this.Ipv6Flag = Ipv6Flag;
     }
 
@@ -694,7 +694,7 @@ public class CCN extends AbstractModel {
             this.DirectConnectAccelerateChannelFlag = new Boolean(source.DirectConnectAccelerateChannelFlag);
         }
         if (source.Ipv6Flag != null) {
-            this.Ipv6Flag = new String(source.Ipv6Flag);
+            this.Ipv6Flag = new Boolean(source.Ipv6Flag);
         }
         if (source.MrtbAggregatePolicyFlag != null) {
             this.MrtbAggregatePolicyFlag = new Boolean(source.MrtbAggregatePolicyFlag);

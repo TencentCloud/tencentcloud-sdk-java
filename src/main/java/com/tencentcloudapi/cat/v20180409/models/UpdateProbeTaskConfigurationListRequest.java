@@ -74,6 +74,13 @@ public class UpdateProbeTaskConfigurationListRequest extends AbstractModel {
     private Long NodeIpType;
 
     /**
+    * 批量任务名-地址
+    */
+    @SerializedName("BatchTasks")
+    @Expose
+    private ProbeTaskBasicConfiguration [] BatchTasks;
+
+    /**
      * Get 任务 ID，如task-n1wchki8 
      * @return TaskIds 任务 ID，如task-n1wchki8
      */
@@ -189,6 +196,22 @@ public class UpdateProbeTaskConfigurationListRequest extends AbstractModel {
         this.NodeIpType = NodeIpType;
     }
 
+    /**
+     * Get 批量任务名-地址 
+     * @return BatchTasks 批量任务名-地址
+     */
+    public ProbeTaskBasicConfiguration [] getBatchTasks() {
+        return this.BatchTasks;
+    }
+
+    /**
+     * Set 批量任务名-地址
+     * @param BatchTasks 批量任务名-地址
+     */
+    public void setBatchTasks(ProbeTaskBasicConfiguration [] BatchTasks) {
+        this.BatchTasks = BatchTasks;
+    }
+
     public UpdateProbeTaskConfigurationListRequest() {
     }
 
@@ -227,6 +250,12 @@ public class UpdateProbeTaskConfigurationListRequest extends AbstractModel {
         if (source.NodeIpType != null) {
             this.NodeIpType = new Long(source.NodeIpType);
         }
+        if (source.BatchTasks != null) {
+            this.BatchTasks = new ProbeTaskBasicConfiguration[source.BatchTasks.length];
+            for (int i = 0; i < source.BatchTasks.length; i++) {
+                this.BatchTasks[i] = new ProbeTaskBasicConfiguration(source.BatchTasks[i]);
+            }
+        }
     }
 
 
@@ -241,6 +270,7 @@ public class UpdateProbeTaskConfigurationListRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Cron", this.Cron);
         this.setParamArraySimple(map, prefix + "ResourceIDs.", this.ResourceIDs);
         this.setParamSimple(map, prefix + "NodeIpType", this.NodeIpType);
+        this.setParamArrayObj(map, prefix + "BatchTasks.", this.BatchTasks);
 
     }
 }

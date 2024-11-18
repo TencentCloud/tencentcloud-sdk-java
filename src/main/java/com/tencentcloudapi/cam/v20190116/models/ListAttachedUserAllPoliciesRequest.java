@@ -24,35 +24,35 @@ import java.util.HashMap;
 public class ListAttachedUserAllPoliciesRequest extends AbstractModel {
 
     /**
-    * 目标用户ID
+    * 目标用户Uin
     */
     @SerializedName("TargetUin")
     @Expose
     private Long TargetUin;
 
     /**
-    * 每页数量，必须大于 0 且小于或等于 200
+    * 每页数量，必须大于 0 且小于等于 200。
     */
     @SerializedName("Rp")
     @Expose
     private Long Rp;
 
     /**
-    * 页码，从 1开始，不能大于 200
+    * 页码，从 1开始，不能大于 200。
     */
     @SerializedName("Page")
     @Expose
     private Long Page;
 
     /**
-    * 0:返回直接关联和随组关联策略，1:只返回直接关联策略，2:只返回随组关联策略
+    * 关联类型。0:返回直接关联和随组关联策略，1:只返回直接关联策略，2:只返回随组关联策略。
     */
     @SerializedName("AttachType")
     @Expose
     private Long AttachType;
 
     /**
-    * 策略类型
+    * 策略类型。1表示自定义策略，2表示预设策略。
     */
     @SerializedName("StrategyType")
     @Expose
@@ -66,80 +66,80 @@ public class ListAttachedUserAllPoliciesRequest extends AbstractModel {
     private String Keyword;
 
     /**
-     * Get 目标用户ID 
-     * @return TargetUin 目标用户ID
+     * Get 目标用户Uin 
+     * @return TargetUin 目标用户Uin
      */
     public Long getTargetUin() {
         return this.TargetUin;
     }
 
     /**
-     * Set 目标用户ID
-     * @param TargetUin 目标用户ID
+     * Set 目标用户Uin
+     * @param TargetUin 目标用户Uin
      */
     public void setTargetUin(Long TargetUin) {
         this.TargetUin = TargetUin;
     }
 
     /**
-     * Get 每页数量，必须大于 0 且小于或等于 200 
-     * @return Rp 每页数量，必须大于 0 且小于或等于 200
+     * Get 每页数量，必须大于 0 且小于等于 200。 
+     * @return Rp 每页数量，必须大于 0 且小于等于 200。
      */
     public Long getRp() {
         return this.Rp;
     }
 
     /**
-     * Set 每页数量，必须大于 0 且小于或等于 200
-     * @param Rp 每页数量，必须大于 0 且小于或等于 200
+     * Set 每页数量，必须大于 0 且小于等于 200。
+     * @param Rp 每页数量，必须大于 0 且小于等于 200。
      */
     public void setRp(Long Rp) {
         this.Rp = Rp;
     }
 
     /**
-     * Get 页码，从 1开始，不能大于 200 
-     * @return Page 页码，从 1开始，不能大于 200
+     * Get 页码，从 1开始，不能大于 200。 
+     * @return Page 页码，从 1开始，不能大于 200。
      */
     public Long getPage() {
         return this.Page;
     }
 
     /**
-     * Set 页码，从 1开始，不能大于 200
-     * @param Page 页码，从 1开始，不能大于 200
+     * Set 页码，从 1开始，不能大于 200。
+     * @param Page 页码，从 1开始，不能大于 200。
      */
     public void setPage(Long Page) {
         this.Page = Page;
     }
 
     /**
-     * Get 0:返回直接关联和随组关联策略，1:只返回直接关联策略，2:只返回随组关联策略 
-     * @return AttachType 0:返回直接关联和随组关联策略，1:只返回直接关联策略，2:只返回随组关联策略
+     * Get 关联类型。0:返回直接关联和随组关联策略，1:只返回直接关联策略，2:只返回随组关联策略。 
+     * @return AttachType 关联类型。0:返回直接关联和随组关联策略，1:只返回直接关联策略，2:只返回随组关联策略。
      */
     public Long getAttachType() {
         return this.AttachType;
     }
 
     /**
-     * Set 0:返回直接关联和随组关联策略，1:只返回直接关联策略，2:只返回随组关联策略
-     * @param AttachType 0:返回直接关联和随组关联策略，1:只返回直接关联策略，2:只返回随组关联策略
+     * Set 关联类型。0:返回直接关联和随组关联策略，1:只返回直接关联策略，2:只返回随组关联策略。
+     * @param AttachType 关联类型。0:返回直接关联和随组关联策略，1:只返回直接关联策略，2:只返回随组关联策略。
      */
     public void setAttachType(Long AttachType) {
         this.AttachType = AttachType;
     }
 
     /**
-     * Get 策略类型 
-     * @return StrategyType 策略类型
+     * Get 策略类型。1表示自定义策略，2表示预设策略。 
+     * @return StrategyType 策略类型。1表示自定义策略，2表示预设策略。
      */
     public Long getStrategyType() {
         return this.StrategyType;
     }
 
     /**
-     * Set 策略类型
-     * @param StrategyType 策略类型
+     * Set 策略类型。1表示自定义策略，2表示预设策略。
+     * @param StrategyType 策略类型。1表示自定义策略，2表示预设策略。
      */
     public void setStrategyType(Long StrategyType) {
         this.StrategyType = StrategyType;

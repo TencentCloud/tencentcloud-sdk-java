@@ -182,6 +182,17 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
+     *创建外部视频 AI 分析任务
+     * @param req CreateExternalSourceAIServiceTaskRequest
+     * @return CreateExternalSourceAIServiceTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateExternalSourceAIServiceTaskResponse CreateExternalSourceAIServiceTask(CreateExternalSourceAIServiceTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateExternalSourceAIServiceTask", CreateExternalSourceAIServiceTaskResponse.class);
+    }
+
+    /**
      *创建围栏绑定信息
      * @param req CreateFenceBindRequest
      * @return CreateFenceBindResponse
@@ -1213,6 +1224,17 @@ public class IotexplorerClient extends AbstractClient{
     public InheritCloudStorageUserResponse InheritCloudStorageUser(InheritCloudStorageUserRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "InheritCloudStorageUser", InheritCloudStorageUserResponse.class);
+    }
+
+    /**
+     *创建外部视频 AI 分析任务
+     * @param req InvokeExternalSourceAIServiceTaskRequest
+     * @return InvokeExternalSourceAIServiceTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public InvokeExternalSourceAIServiceTaskResponse InvokeExternalSourceAIServiceTask(InvokeExternalSourceAIServiceTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "InvokeExternalSourceAIServiceTask", InvokeExternalSourceAIServiceTaskResponse.class);
     }
 
     /**

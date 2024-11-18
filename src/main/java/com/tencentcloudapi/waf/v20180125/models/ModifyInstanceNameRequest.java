@@ -38,7 +38,7 @@ public class ModifyInstanceNameRequest extends AbstractModel {
     private String InstanceID;
 
     /**
-    * 版本
+    * 实例版本，支持clb-waf、sparta-waf
     */
     @SerializedName("Edition")
     @Expose
@@ -77,16 +77,16 @@ public class ModifyInstanceNameRequest extends AbstractModel {
     }
 
     /**
-     * Get 版本 
-     * @return Edition 版本
+     * Get 实例版本，支持clb-waf、sparta-waf 
+     * @return Edition 实例版本，支持clb-waf、sparta-waf
      */
     public String getEdition() {
         return this.Edition;
     }
 
     /**
-     * Set 版本
-     * @param Edition 版本
+     * Set 实例版本，支持clb-waf、sparta-waf
+     * @param Edition 实例版本，支持clb-waf、sparta-waf
      */
     public void setEdition(String Edition) {
         this.Edition = Edition;

@@ -328,6 +328,17 @@ public class MariadbClient extends AbstractClient{
     }
 
     /**
+     *本接口（DescribeDBSyncMode）用于查询云数据库实例的同步模式。
+     * @param req DescribeDBSyncModeRequest
+     * @return DescribeDBSyncModeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBSyncModeResponse DescribeDBSyncMode(DescribeDBSyncModeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDBSyncMode", DescribeDBSyncModeResponse.class);
+    }
+
+    /**
      *本接口（DescribeDBTmpInstances）用于获取实例回档生成的临时实例
      * @param req DescribeDBTmpInstancesRequest
      * @return DescribeDBTmpInstancesResponse

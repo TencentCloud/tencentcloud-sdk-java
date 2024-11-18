@@ -25,7 +25,6 @@ public class BaselineRiskItem extends AbstractModel {
 
     /**
     * 检测项Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ItemId")
     @Expose
@@ -53,10 +52,8 @@ public class BaselineRiskItem extends AbstractModel {
     private Long HostCount;
 
     /**
-     * Get 检测项Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 检测项Id 
      * @return ItemId 检测项Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getItemId() {
         return this.ItemId;
@@ -64,9 +61,7 @@ public class BaselineRiskItem extends AbstractModel {
 
     /**
      * Set 检测项Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ItemId 检测项Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setItemId(Long ItemId) {
         this.ItemId = ItemId;

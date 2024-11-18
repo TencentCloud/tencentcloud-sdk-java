@@ -84,6 +84,37 @@ public class PulsarNetworkAccessPointInfo extends AbstractModel {
     private String AccessPointsType;
 
     /**
+    * 带宽，目前只有公网会有这个值
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Bandwidth")
+    @Expose
+    private Long Bandwidth;
+
+    /**
+    * 类
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SecurityPolicy")
+    @Expose
+    private SecurityPolicy [] SecurityPolicy;
+
+    /**
+    * 是否是标准的接入点 true是标准的 false不是标准的
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("StandardAccessPoint")
+    @Expose
+    private Boolean StandardAccessPoint;
+
+    /**
+    * 可用区信息
+    */
+    @SerializedName("ZoneName")
+    @Expose
+    private String ZoneName;
+
+    /**
      * Get vpc的id，支撑网和公网接入点，该字段为空
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return VpcId vpc的id，支撑网和公网接入点，该字段为空
@@ -239,6 +270,82 @@ public class PulsarNetworkAccessPointInfo extends AbstractModel {
         this.AccessPointsType = AccessPointsType;
     }
 
+    /**
+     * Get 带宽，目前只有公网会有这个值
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Bandwidth 带宽，目前只有公网会有这个值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getBandwidth() {
+        return this.Bandwidth;
+    }
+
+    /**
+     * Set 带宽，目前只有公网会有这个值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Bandwidth 带宽，目前只有公网会有这个值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBandwidth(Long Bandwidth) {
+        this.Bandwidth = Bandwidth;
+    }
+
+    /**
+     * Get 类
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SecurityPolicy 类
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public SecurityPolicy [] getSecurityPolicy() {
+        return this.SecurityPolicy;
+    }
+
+    /**
+     * Set 类
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SecurityPolicy 类
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSecurityPolicy(SecurityPolicy [] SecurityPolicy) {
+        this.SecurityPolicy = SecurityPolicy;
+    }
+
+    /**
+     * Get 是否是标准的接入点 true是标准的 false不是标准的
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return StandardAccessPoint 是否是标准的接入点 true是标准的 false不是标准的
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getStandardAccessPoint() {
+        return this.StandardAccessPoint;
+    }
+
+    /**
+     * Set 是否是标准的接入点 true是标准的 false不是标准的
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param StandardAccessPoint 是否是标准的接入点 true是标准的 false不是标准的
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStandardAccessPoint(Boolean StandardAccessPoint) {
+        this.StandardAccessPoint = StandardAccessPoint;
+    }
+
+    /**
+     * Get 可用区信息 
+     * @return ZoneName 可用区信息
+     */
+    public String getZoneName() {
+        return this.ZoneName;
+    }
+
+    /**
+     * Set 可用区信息
+     * @param ZoneName 可用区信息
+     */
+    public void setZoneName(String ZoneName) {
+        this.ZoneName = ZoneName;
+    }
+
     public PulsarNetworkAccessPointInfo() {
     }
 
@@ -268,6 +375,21 @@ public class PulsarNetworkAccessPointInfo extends AbstractModel {
         if (source.AccessPointsType != null) {
             this.AccessPointsType = new String(source.AccessPointsType);
         }
+        if (source.Bandwidth != null) {
+            this.Bandwidth = new Long(source.Bandwidth);
+        }
+        if (source.SecurityPolicy != null) {
+            this.SecurityPolicy = new SecurityPolicy[source.SecurityPolicy.length];
+            for (int i = 0; i < source.SecurityPolicy.length; i++) {
+                this.SecurityPolicy[i] = new SecurityPolicy(source.SecurityPolicy[i]);
+            }
+        }
+        if (source.StandardAccessPoint != null) {
+            this.StandardAccessPoint = new Boolean(source.StandardAccessPoint);
+        }
+        if (source.ZoneName != null) {
+            this.ZoneName = new String(source.ZoneName);
+        }
     }
 
 
@@ -282,6 +404,10 @@ public class PulsarNetworkAccessPointInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "RouteType", this.RouteType);
         this.setParamSimple(map, prefix + "OperationType", this.OperationType);
         this.setParamSimple(map, prefix + "AccessPointsType", this.AccessPointsType);
+        this.setParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
+        this.setParamArrayObj(map, prefix + "SecurityPolicy.", this.SecurityPolicy);
+        this.setParamSimple(map, prefix + "StandardAccessPoint", this.StandardAccessPoint);
+        this.setParamSimple(map, prefix + "ZoneName", this.ZoneName);
 
     }
 }

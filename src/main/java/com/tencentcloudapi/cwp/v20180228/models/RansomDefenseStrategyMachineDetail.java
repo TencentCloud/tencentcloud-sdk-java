@@ -60,7 +60,6 @@ public class RansomDefenseStrategyMachineDetail extends AbstractModel {
 
     /**
     * 外网ip
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MachineWanIp")
     @Expose
@@ -68,7 +67,6 @@ public class RansomDefenseStrategyMachineDetail extends AbstractModel {
 
     /**
     * 云标签
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CloudTags")
     @Expose
@@ -76,7 +74,6 @@ public class RansomDefenseStrategyMachineDetail extends AbstractModel {
 
     /**
     * 可用区信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RegionInfo")
     @Expose
@@ -84,7 +81,6 @@ public class RansomDefenseStrategyMachineDetail extends AbstractModel {
 
     /**
     * 主机安全标签
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tag")
     @Expose
@@ -92,7 +88,6 @@ public class RansomDefenseStrategyMachineDetail extends AbstractModel {
 
     /**
     * 防护状态：0关闭，1开启
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -100,7 +95,6 @@ public class RansomDefenseStrategyMachineDetail extends AbstractModel {
 
     /**
     * 策略id，为0时未绑定策略
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StrategyId")
     @Expose
@@ -109,7 +103,6 @@ public class RansomDefenseStrategyMachineDetail extends AbstractModel {
     /**
     * 硬盘信息，为空时所有硬盘生效：
 ;分割 diskId1|diskName1;diskId2|diskName2
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiskInfo")
     @Expose
@@ -117,7 +110,6 @@ public class RansomDefenseStrategyMachineDetail extends AbstractModel {
 
     /**
     * 版本信息：0-基础版 1-专业版 2-旗舰版 3-普惠版
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HostVersion")
     @Expose
@@ -125,7 +117,6 @@ public class RansomDefenseStrategyMachineDetail extends AbstractModel {
 
     /**
     * 策略名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StrategyName")
     @Expose
@@ -212,10 +203,8 @@ public class RansomDefenseStrategyMachineDetail extends AbstractModel {
     }
 
     /**
-     * Get 外网ip
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 外网ip 
      * @return MachineWanIp 外网ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMachineWanIp() {
         return this.MachineWanIp;
@@ -223,19 +212,15 @@ public class RansomDefenseStrategyMachineDetail extends AbstractModel {
 
     /**
      * Set 外网ip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MachineWanIp 外网ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMachineWanIp(String MachineWanIp) {
         this.MachineWanIp = MachineWanIp;
     }
 
     /**
-     * Get 云标签
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 云标签 
      * @return CloudTags 云标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Tag [] getCloudTags() {
         return this.CloudTags;
@@ -243,19 +228,15 @@ public class RansomDefenseStrategyMachineDetail extends AbstractModel {
 
     /**
      * Set 云标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CloudTags 云标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCloudTags(Tag [] CloudTags) {
         this.CloudTags = CloudTags;
     }
 
     /**
-     * Get 可用区信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 可用区信息 
      * @return RegionInfo 可用区信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RegionInfo getRegionInfo() {
         return this.RegionInfo;
@@ -263,19 +244,15 @@ public class RansomDefenseStrategyMachineDetail extends AbstractModel {
 
     /**
      * Set 可用区信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RegionInfo 可用区信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegionInfo(RegionInfo RegionInfo) {
         this.RegionInfo = RegionInfo;
     }
 
     /**
-     * Get 主机安全标签
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主机安全标签 
      * @return Tag 主机安全标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public MachineTag [] getTag() {
         return this.Tag;
@@ -283,19 +260,15 @@ public class RansomDefenseStrategyMachineDetail extends AbstractModel {
 
     /**
      * Set 主机安全标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tag 主机安全标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTag(MachineTag [] Tag) {
         this.Tag = Tag;
     }
 
     /**
-     * Get 防护状态：0关闭，1开启
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 防护状态：0关闭，1开启 
      * @return Status 防护状态：0关闭，1开启
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
         return this.Status;
@@ -303,19 +276,15 @@ public class RansomDefenseStrategyMachineDetail extends AbstractModel {
 
     /**
      * Set 防护状态：0关闭，1开启
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 防护状态：0关闭，1开启
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 策略id，为0时未绑定策略
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 策略id，为0时未绑定策略 
      * @return StrategyId 策略id，为0时未绑定策略
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStrategyId() {
         return this.StrategyId;
@@ -323,9 +292,7 @@ public class RansomDefenseStrategyMachineDetail extends AbstractModel {
 
     /**
      * Set 策略id，为0时未绑定策略
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StrategyId 策略id，为0时未绑定策略
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStrategyId(Long StrategyId) {
         this.StrategyId = StrategyId;
@@ -333,11 +300,9 @@ public class RansomDefenseStrategyMachineDetail extends AbstractModel {
 
     /**
      * Get 硬盘信息，为空时所有硬盘生效：
-;分割 diskId1|diskName1;diskId2|diskName2
-注意：此字段可能返回 null，表示取不到有效值。 
+;分割 diskId1|diskName1;diskId2|diskName2 
      * @return DiskInfo 硬盘信息，为空时所有硬盘生效：
 ;分割 diskId1|diskName1;diskId2|diskName2
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDiskInfo() {
         return this.DiskInfo;
@@ -346,20 +311,16 @@ public class RansomDefenseStrategyMachineDetail extends AbstractModel {
     /**
      * Set 硬盘信息，为空时所有硬盘生效：
 ;分割 diskId1|diskName1;diskId2|diskName2
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DiskInfo 硬盘信息，为空时所有硬盘生效：
 ;分割 diskId1|diskName1;diskId2|diskName2
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiskInfo(String DiskInfo) {
         this.DiskInfo = DiskInfo;
     }
 
     /**
-     * Get 版本信息：0-基础版 1-专业版 2-旗舰版 3-普惠版
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 版本信息：0-基础版 1-专业版 2-旗舰版 3-普惠版 
      * @return HostVersion 版本信息：0-基础版 1-专业版 2-旗舰版 3-普惠版
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getHostVersion() {
         return this.HostVersion;
@@ -367,19 +328,15 @@ public class RansomDefenseStrategyMachineDetail extends AbstractModel {
 
     /**
      * Set 版本信息：0-基础版 1-专业版 2-旗舰版 3-普惠版
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HostVersion 版本信息：0-基础版 1-专业版 2-旗舰版 3-普惠版
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHostVersion(Long HostVersion) {
         this.HostVersion = HostVersion;
     }
 
     /**
-     * Get 策略名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 策略名称 
      * @return StrategyName 策略名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStrategyName() {
         return this.StrategyName;
@@ -387,9 +344,7 @@ public class RansomDefenseStrategyMachineDetail extends AbstractModel {
 
     /**
      * Set 策略名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StrategyName 策略名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStrategyName(String StrategyName) {
         this.StrategyName = StrategyName;

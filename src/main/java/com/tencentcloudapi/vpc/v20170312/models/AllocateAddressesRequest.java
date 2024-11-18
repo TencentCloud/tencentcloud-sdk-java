@@ -90,6 +90,13 @@ public class AllocateAddressesRequest extends AbstractModel {
     private String AnycastZone;
 
     /**
+    * 指定IP地址申请EIP，每个账户每个月只有三次配额
+    */
+    @SerializedName("VipCluster")
+    @Expose
+    private String [] VipCluster;
+
+    /**
     * <b>[已废弃]</b> AnycastEIP不再区分是否负载均衡。原参数说明如下：
 AnycastEIP是否用于绑定负载均衡。
 <ul style="margin:0"><li>已开通Anycast公网加速白名单的用户，可选值：<ul><li>TRUE：AnycastEIP可绑定对象为负载均衡</li>
@@ -329,6 +336,22 @@ AnycastEIP是否用于绑定负载均衡。
     }
 
     /**
+     * Get 指定IP地址申请EIP，每个账户每个月只有三次配额 
+     * @return VipCluster 指定IP地址申请EIP，每个账户每个月只有三次配额
+     */
+    public String [] getVipCluster() {
+        return this.VipCluster;
+    }
+
+    /**
+     * Set 指定IP地址申请EIP，每个账户每个月只有三次配额
+     * @param VipCluster 指定IP地址申请EIP，每个账户每个月只有三次配额
+     */
+    public void setVipCluster(String [] VipCluster) {
+        this.VipCluster = VipCluster;
+    }
+
+    /**
      * Get <b>[已废弃]</b> AnycastEIP不再区分是否负载均衡。原参数说明如下：
 AnycastEIP是否用于绑定负载均衡。
 <ul style="margin:0"><li>已开通Anycast公网加速白名单的用户，可选值：<ul><li>TRUE：AnycastEIP可绑定对象为负载均衡</li>
@@ -497,6 +520,12 @@ AnycastEIP是否用于绑定负载均衡。
         if (source.AnycastZone != null) {
             this.AnycastZone = new String(source.AnycastZone);
         }
+        if (source.VipCluster != null) {
+            this.VipCluster = new String[source.VipCluster.length];
+            for (int i = 0; i < source.VipCluster.length; i++) {
+                this.VipCluster[i] = new String(source.VipCluster[i]);
+            }
+        }
         if (source.ApplicableForCLB != null) {
             this.ApplicableForCLB = new Boolean(source.ApplicableForCLB);
         }
@@ -538,6 +567,7 @@ AnycastEIP是否用于绑定负载均衡。
         this.setParamObj(map, prefix + "AddressChargePrepaid.", this.AddressChargePrepaid);
         this.setParamSimple(map, prefix + "AddressType", this.AddressType);
         this.setParamSimple(map, prefix + "AnycastZone", this.AnycastZone);
+        this.setParamArraySimple(map, prefix + "VipCluster.", this.VipCluster);
         this.setParamSimple(map, prefix + "ApplicableForCLB", this.ApplicableForCLB);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "BandwidthPackageId", this.BandwidthPackageId);

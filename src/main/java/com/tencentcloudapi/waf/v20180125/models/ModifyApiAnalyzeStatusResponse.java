@@ -25,7 +25,6 @@ public class ModifyApiAnalyzeStatusResponse extends AbstractModel {
 
     /**
     * 已经开启的数量,如果返回值为3（大于支持的域名开启数量），则表示开启失败
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Count")
     @Expose
@@ -33,7 +32,6 @@ public class ModifyApiAnalyzeStatusResponse extends AbstractModel {
 
     /**
     * 不支持开启的域名列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UnSupportedList")
     @Expose
@@ -41,7 +39,6 @@ public class ModifyApiAnalyzeStatusResponse extends AbstractModel {
 
     /**
     * 开启/关闭失败的域名列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FailDomainList")
     @Expose
@@ -55,10 +52,8 @@ public class ModifyApiAnalyzeStatusResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 已经开启的数量,如果返回值为3（大于支持的域名开启数量），则表示开启失败
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 已经开启的数量,如果返回值为3（大于支持的域名开启数量），则表示开启失败 
      * @return Count 已经开启的数量,如果返回值为3（大于支持的域名开启数量），则表示开启失败
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCount() {
         return this.Count;
@@ -66,19 +61,15 @@ public class ModifyApiAnalyzeStatusResponse extends AbstractModel {
 
     /**
      * Set 已经开启的数量,如果返回值为3（大于支持的域名开启数量），则表示开启失败
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Count 已经开启的数量,如果返回值为3（大于支持的域名开启数量），则表示开启失败
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCount(Long Count) {
         this.Count = Count;
     }
 
     /**
-     * Get 不支持开启的域名列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 不支持开启的域名列表 
      * @return UnSupportedList 不支持开启的域名列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getUnSupportedList() {
         return this.UnSupportedList;
@@ -86,19 +77,15 @@ public class ModifyApiAnalyzeStatusResponse extends AbstractModel {
 
     /**
      * Set 不支持开启的域名列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UnSupportedList 不支持开启的域名列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUnSupportedList(String [] UnSupportedList) {
         this.UnSupportedList = UnSupportedList;
     }
 
     /**
-     * Get 开启/关闭失败的域名列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 开启/关闭失败的域名列表 
      * @return FailDomainList 开启/关闭失败的域名列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getFailDomainList() {
         return this.FailDomainList;
@@ -106,9 +93,7 @@ public class ModifyApiAnalyzeStatusResponse extends AbstractModel {
 
     /**
      * Set 开启/关闭失败的域名列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FailDomainList 开启/关闭失败的域名列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFailDomainList(String [] FailDomainList) {
         this.FailDomainList = FailDomainList;

@@ -24,69 +24,74 @@ import java.util.HashMap;
 public class CheckPhoneAndNameRequest extends AbstractModel {
 
     /**
-    * ⼿机号
+    * ⼿机号。
     */
     @SerializedName("Mobile")
     @Expose
     private String Mobile;
 
     /**
-    * 姓名
+    * 姓名。
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 敏感数据加密信息。对传入信息（姓名、手机号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+    * 敏感数据加密信息。
+- 对传入信息（姓名、手机号）有加密需求的用户可使用此参数，详情请点击左侧链接。
     */
     @SerializedName("Encryption")
     @Expose
     private Encryption Encryption;
 
     /**
-     * Get ⼿机号 
-     * @return Mobile ⼿机号
+     * Get ⼿机号。 
+     * @return Mobile ⼿机号。
      */
     public String getMobile() {
         return this.Mobile;
     }
 
     /**
-     * Set ⼿机号
-     * @param Mobile ⼿机号
+     * Set ⼿机号。
+     * @param Mobile ⼿机号。
      */
     public void setMobile(String Mobile) {
         this.Mobile = Mobile;
     }
 
     /**
-     * Get 姓名 
-     * @return Name 姓名
+     * Get 姓名。 
+     * @return Name 姓名。
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 姓名
-     * @param Name 姓名
+     * Set 姓名。
+     * @param Name 姓名。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 敏感数据加密信息。对传入信息（姓名、手机号）有加密需求的用户可使用此参数，详情请点击左侧链接。 
-     * @return Encryption 敏感数据加密信息。对传入信息（姓名、手机号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+     * Get 敏感数据加密信息。
+- 对传入信息（姓名、手机号）有加密需求的用户可使用此参数，详情请点击左侧链接。 
+     * @return Encryption 敏感数据加密信息。
+- 对传入信息（姓名、手机号）有加密需求的用户可使用此参数，详情请点击左侧链接。
      */
     public Encryption getEncryption() {
         return this.Encryption;
     }
 
     /**
-     * Set 敏感数据加密信息。对传入信息（姓名、手机号）有加密需求的用户可使用此参数，详情请点击左侧链接。
-     * @param Encryption 敏感数据加密信息。对传入信息（姓名、手机号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+     * Set 敏感数据加密信息。
+- 对传入信息（姓名、手机号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+     * @param Encryption 敏感数据加密信息。
+- 对传入信息（姓名、手机号）有加密需求的用户可使用此参数，详情请点击左侧链接。
      */
     public void setEncryption(Encryption Encryption) {
         this.Encryption = Encryption;

@@ -31,14 +31,14 @@ public class PrivilegeEventInfo extends AbstractModel {
     private Long Id;
 
     /**
-    * 云镜ID
+    * 主机安全uuid
     */
     @SerializedName("Uuid")
     @Expose
     private String Uuid;
 
     /**
-    * 主机ID
+    * 主机uuid
     */
     @SerializedName("Quuid")
     @Expose
@@ -222,32 +222,32 @@ public class PrivilegeEventInfo extends AbstractModel {
     }
 
     /**
-     * Get 云镜ID 
-     * @return Uuid 云镜ID
+     * Get 主机安全uuid 
+     * @return Uuid 主机安全uuid
      */
     public String getUuid() {
         return this.Uuid;
     }
 
     /**
-     * Set 云镜ID
-     * @param Uuid 云镜ID
+     * Set 主机安全uuid
+     * @param Uuid 主机安全uuid
      */
     public void setUuid(String Uuid) {
         this.Uuid = Uuid;
     }
 
     /**
-     * Get 主机ID 
-     * @return Quuid 主机ID
+     * Get 主机uuid 
+     * @return Quuid 主机uuid
      */
     public String getQuuid() {
         return this.Quuid;
     }
 
     /**
-     * Set 主机ID
-     * @param Quuid 主机ID
+     * Set 主机uuid
+     * @param Quuid 主机uuid
      */
     public void setQuuid(String Quuid) {
         this.Quuid = Quuid;

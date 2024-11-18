@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class GetEmbeddingResponse extends AbstractModel {
 
     /**
-    * 返回的 Embedding 信息。当前不支持批量，所以数组元素数目为 1。
+    * 返回的 Embedding 信息。
     */
     @SerializedName("Data")
     @Expose
@@ -45,16 +45,16 @@ public class GetEmbeddingResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 返回的 Embedding 信息。当前不支持批量，所以数组元素数目为 1。 
-     * @return Data 返回的 Embedding 信息。当前不支持批量，所以数组元素数目为 1。
+     * Get 返回的 Embedding 信息。 
+     * @return Data 返回的 Embedding 信息。
      */
     public EmbeddingData [] getData() {
         return this.Data;
     }
 
     /**
-     * Set 返回的 Embedding 信息。当前不支持批量，所以数组元素数目为 1。
-     * @param Data 返回的 Embedding 信息。当前不支持批量，所以数组元素数目为 1。
+     * Set 返回的 Embedding 信息。
+     * @param Data 返回的 Embedding 信息。
      */
     public void setData(EmbeddingData [] Data) {
         this.Data = Data;

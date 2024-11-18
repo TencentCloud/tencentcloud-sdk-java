@@ -73,6 +73,13 @@ public class DisplayInfo extends AbstractModel {
     private Boolean IsEnd;
 
     /**
+    * base64编码的wav/mp3音频数据
+    */
+    @SerializedName("Audio")
+    @Expose
+    private String Audio;
+
+    /**
      * Get 句子 ID 
      * @return SeId 句子 ID
      */
@@ -184,6 +191,22 @@ public class DisplayInfo extends AbstractModel {
         this.IsEnd = IsEnd;
     }
 
+    /**
+     * Get base64编码的wav/mp3音频数据 
+     * @return Audio base64编码的wav/mp3音频数据
+     */
+    public String getAudio() {
+        return this.Audio;
+    }
+
+    /**
+     * Set base64编码的wav/mp3音频数据
+     * @param Audio base64编码的wav/mp3音频数据
+     */
+    public void setAudio(String Audio) {
+        this.Audio = Audio;
+    }
+
     public DisplayInfo() {
     }
 
@@ -213,6 +236,9 @@ public class DisplayInfo extends AbstractModel {
         if (source.IsEnd != null) {
             this.IsEnd = new Boolean(source.IsEnd);
         }
+        if (source.Audio != null) {
+            this.Audio = new String(source.Audio);
+        }
     }
 
 
@@ -227,6 +253,7 @@ public class DisplayInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "IsEnd", this.IsEnd);
+        this.setParamSimple(map, prefix + "Audio", this.Audio);
 
     }
 }

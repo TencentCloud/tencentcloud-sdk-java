@@ -32,7 +32,6 @@ public class DescribeNatAcRuleResponse extends AbstractModel {
 
     /**
     * nat访问控制列表数据
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
     @Expose
@@ -69,10 +68,8 @@ public class DescribeNatAcRuleResponse extends AbstractModel {
     }
 
     /**
-     * Get nat访问控制列表数据
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get nat访问控制列表数据 
      * @return Data nat访问控制列表数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DescAcItem [] getData() {
         return this.Data;
@@ -80,9 +77,7 @@ public class DescribeNatAcRuleResponse extends AbstractModel {
 
     /**
      * Set nat访问控制列表数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Data nat访问控制列表数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(DescAcItem [] Data) {
         this.Data = Data;

@@ -72,7 +72,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *本接口 (AssociateSecurityGroups) 用于安全组批量绑定多个指定实例。
+     *本接口 (AssociateSecurityGroups) 用于将一个安全组绑定于一个或多个数据库实例。创建实例时，未配置安全组，建议通过该接口，绑定安全组。
      * @param req AssociateSecurityGroupsRequest
      * @return AssociateSecurityGroupsResponse
      * @throws TencentCloudSDKException
@@ -226,7 +226,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *移除复制组成员 注：接口下线中，请使用 RemoveReplicationInstance
+     *移除复制组成员。注：该接口下线中，请使用 [RemoveReplicationInstance](https://cloud.tencent.com/document/product/239/90099)。
      * @param req DeleteReplicationInstanceRequest
      * @return DeleteReplicationInstanceResponse
      * @throws TencentCloudSDKException
@@ -733,6 +733,8 @@ public class RedisClient extends AbstractClient{
 
     /**
      *本接口（DescribeTaskList）用于查询指定实例的任务列表信息。
+
+- 可查询近30天内任务列表数据。
      * @param req DescribeTaskListRequest
      * @return DescribeTaskListResponse
      * @throws TencentCloudSDKException
@@ -864,7 +866,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *本接口（ModfiyInstancePassword）用于修改实例访问密码。
+     *本接口（ModfiyInstancePassword）用于修改实例访问密码。鉴于该接口名存在拼写错误，现已更正为（[ModifyInstancePassword](https://cloud.tencent.com/document/product/239/111555)）接口，推荐使用更正后的接口。
      * @param req ModfiyInstancePasswordRequest
      * @return ModfiyInstancePasswordResponse
      * @throws TencentCloudSDKException
@@ -908,7 +910,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *本接口(ModifyDBInstanceSecurityGroups)用于修改实例绑定的安全组。
+     *本接口（ModifyDBInstanceSecurityGroups）用于对实例原有的安全组列表进行修改。
      * @param req ModifyDBInstanceSecurityGroupsRequest
      * @return ModifyDBInstanceSecurityGroupsResponse
      * @throws TencentCloudSDKException
@@ -982,6 +984,17 @@ public class RedisClient extends AbstractClient{
     public ModifyInstanceParamsResponse ModifyInstanceParams(ModifyInstanceParamsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyInstanceParams", ModifyInstanceParamsResponse.class);
+    }
+
+    /**
+     *本接口（ModifyInstancePassword）用于修改实例访问密码。
+     * @param req ModifyInstancePasswordRequest
+     * @return ModifyInstancePasswordResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyInstancePasswordResponse ModifyInstancePassword(ModifyInstancePasswordRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyInstancePassword", ModifyInstancePasswordResponse.class);
     }
 
     /**

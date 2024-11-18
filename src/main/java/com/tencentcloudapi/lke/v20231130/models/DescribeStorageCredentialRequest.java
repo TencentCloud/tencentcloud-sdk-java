@@ -38,7 +38,7 @@ public class DescribeStorageCredentialRequest extends AbstractModel {
     private String FileType;
 
     /**
-    * IsPublic为空用于上传文件时选择场景，当上传为图片文件是IsPublic为true，上传文档文件时场景IsPublic为false
+    * IsPublic用于上传文件时选择场景，当上传为对话端文件时IsPublic为true，上传文档库文件时场景IsPublic为false
     */
     @SerializedName("IsPublic")
     @Expose
@@ -84,16 +84,16 @@ public class DescribeStorageCredentialRequest extends AbstractModel {
     }
 
     /**
-     * Get IsPublic为空用于上传文件时选择场景，当上传为图片文件是IsPublic为true，上传文档文件时场景IsPublic为false 
-     * @return IsPublic IsPublic为空用于上传文件时选择场景，当上传为图片文件是IsPublic为true，上传文档文件时场景IsPublic为false
+     * Get IsPublic用于上传文件时选择场景，当上传为对话端文件时IsPublic为true，上传文档库文件时场景IsPublic为false 
+     * @return IsPublic IsPublic用于上传文件时选择场景，当上传为对话端文件时IsPublic为true，上传文档库文件时场景IsPublic为false
      */
     public Boolean getIsPublic() {
         return this.IsPublic;
     }
 
     /**
-     * Set IsPublic为空用于上传文件时选择场景，当上传为图片文件是IsPublic为true，上传文档文件时场景IsPublic为false
-     * @param IsPublic IsPublic为空用于上传文件时选择场景，当上传为图片文件是IsPublic为true，上传文档文件时场景IsPublic为false
+     * Set IsPublic用于上传文件时选择场景，当上传为对话端文件时IsPublic为true，上传文档库文件时场景IsPublic为false
+     * @param IsPublic IsPublic用于上传文件时选择场景，当上传为对话端文件时IsPublic为true，上传文档库文件时场景IsPublic为false
      */
     public void setIsPublic(Boolean IsPublic) {
         this.IsPublic = IsPublic;

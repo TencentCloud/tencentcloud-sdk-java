@@ -24,48 +24,7 @@ import java.util.HashMap;
 public class DescribeMqMsgTraceResponse extends AbstractModel {
 
     /**
-    * [
-    {
-        "Stage": "produce",
-        "Data": {
-            "ProducerName": "生产者名",
-            "ProduceTime": "消息生产时间",
-            "ProducerAddr": "客户端地址",
-            "Duration": "耗时ms",
-            "Status": "状态（0：成功，1：失败）"
-        }
-    },
-    {
-        "Stage": "persist",
-        "Data": {
-            "PersistTime": "存储时间",
-            "Duration": "耗时ms",
-            "Status": "状态（0：成功，1：失败）"
-        }
-    },
-    {
-        "Stage": "consume",
-        "Data": {
-            "TotalCount": 2,
-            "RocketMqConsumeLogs": [
-                {
-                    "ConsumerGroup": "消费组",
-                    "ConsumeModel": "消费模式",
-                    "ConsumerAddr": "消费者地址",
-                    "ConsumeTime": "推送时间",
-                    "Status": "状态（0:已推送未确认, 2:已确认, 3:转入重试, 4:已重试未确认, 5:已转入死信队列）"
-                },
-                {
-                    "ConsumerGroup": "消费组",
-                    "ConsumeModel": "消费模式",
-                    "ConsumerAddr": "消费者地址",
-                    "ConsumeTime": "推送时间",
-                    "Status": "状态（0:已推送未确认, 2:已确认, 3:转入重试, 4:已重试未确认, 5:已转入死信队列）"
-                }
-            ]    
-        }
-    }
-]
+    * 消息内容
     */
     @SerializedName("Result")
     @Expose
@@ -86,180 +45,16 @@ public class DescribeMqMsgTraceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get [
-    {
-        "Stage": "produce",
-        "Data": {
-            "ProducerName": "生产者名",
-            "ProduceTime": "消息生产时间",
-            "ProducerAddr": "客户端地址",
-            "Duration": "耗时ms",
-            "Status": "状态（0：成功，1：失败）"
-        }
-    },
-    {
-        "Stage": "persist",
-        "Data": {
-            "PersistTime": "存储时间",
-            "Duration": "耗时ms",
-            "Status": "状态（0：成功，1：失败）"
-        }
-    },
-    {
-        "Stage": "consume",
-        "Data": {
-            "TotalCount": 2,
-            "RocketMqConsumeLogs": [
-                {
-                    "ConsumerGroup": "消费组",
-                    "ConsumeModel": "消费模式",
-                    "ConsumerAddr": "消费者地址",
-                    "ConsumeTime": "推送时间",
-                    "Status": "状态（0:已推送未确认, 2:已确认, 3:转入重试, 4:已重试未确认, 5:已转入死信队列）"
-                },
-                {
-                    "ConsumerGroup": "消费组",
-                    "ConsumeModel": "消费模式",
-                    "ConsumerAddr": "消费者地址",
-                    "ConsumeTime": "推送时间",
-                    "Status": "状态（0:已推送未确认, 2:已确认, 3:转入重试, 4:已重试未确认, 5:已转入死信队列）"
-                }
-            ]    
-        }
-    }
-] 
-     * @return Result [
-    {
-        "Stage": "produce",
-        "Data": {
-            "ProducerName": "生产者名",
-            "ProduceTime": "消息生产时间",
-            "ProducerAddr": "客户端地址",
-            "Duration": "耗时ms",
-            "Status": "状态（0：成功，1：失败）"
-        }
-    },
-    {
-        "Stage": "persist",
-        "Data": {
-            "PersistTime": "存储时间",
-            "Duration": "耗时ms",
-            "Status": "状态（0：成功，1：失败）"
-        }
-    },
-    {
-        "Stage": "consume",
-        "Data": {
-            "TotalCount": 2,
-            "RocketMqConsumeLogs": [
-                {
-                    "ConsumerGroup": "消费组",
-                    "ConsumeModel": "消费模式",
-                    "ConsumerAddr": "消费者地址",
-                    "ConsumeTime": "推送时间",
-                    "Status": "状态（0:已推送未确认, 2:已确认, 3:转入重试, 4:已重试未确认, 5:已转入死信队列）"
-                },
-                {
-                    "ConsumerGroup": "消费组",
-                    "ConsumeModel": "消费模式",
-                    "ConsumerAddr": "消费者地址",
-                    "ConsumeTime": "推送时间",
-                    "Status": "状态（0:已推送未确认, 2:已确认, 3:转入重试, 4:已重试未确认, 5:已转入死信队列）"
-                }
-            ]    
-        }
-    }
-]
+     * Get 消息内容 
+     * @return Result 消息内容
      */
     public TraceResult [] getResult() {
         return this.Result;
     }
 
     /**
-     * Set [
-    {
-        "Stage": "produce",
-        "Data": {
-            "ProducerName": "生产者名",
-            "ProduceTime": "消息生产时间",
-            "ProducerAddr": "客户端地址",
-            "Duration": "耗时ms",
-            "Status": "状态（0：成功，1：失败）"
-        }
-    },
-    {
-        "Stage": "persist",
-        "Data": {
-            "PersistTime": "存储时间",
-            "Duration": "耗时ms",
-            "Status": "状态（0：成功，1：失败）"
-        }
-    },
-    {
-        "Stage": "consume",
-        "Data": {
-            "TotalCount": 2,
-            "RocketMqConsumeLogs": [
-                {
-                    "ConsumerGroup": "消费组",
-                    "ConsumeModel": "消费模式",
-                    "ConsumerAddr": "消费者地址",
-                    "ConsumeTime": "推送时间",
-                    "Status": "状态（0:已推送未确认, 2:已确认, 3:转入重试, 4:已重试未确认, 5:已转入死信队列）"
-                },
-                {
-                    "ConsumerGroup": "消费组",
-                    "ConsumeModel": "消费模式",
-                    "ConsumerAddr": "消费者地址",
-                    "ConsumeTime": "推送时间",
-                    "Status": "状态（0:已推送未确认, 2:已确认, 3:转入重试, 4:已重试未确认, 5:已转入死信队列）"
-                }
-            ]    
-        }
-    }
-]
-     * @param Result [
-    {
-        "Stage": "produce",
-        "Data": {
-            "ProducerName": "生产者名",
-            "ProduceTime": "消息生产时间",
-            "ProducerAddr": "客户端地址",
-            "Duration": "耗时ms",
-            "Status": "状态（0：成功，1：失败）"
-        }
-    },
-    {
-        "Stage": "persist",
-        "Data": {
-            "PersistTime": "存储时间",
-            "Duration": "耗时ms",
-            "Status": "状态（0：成功，1：失败）"
-        }
-    },
-    {
-        "Stage": "consume",
-        "Data": {
-            "TotalCount": 2,
-            "RocketMqConsumeLogs": [
-                {
-                    "ConsumerGroup": "消费组",
-                    "ConsumeModel": "消费模式",
-                    "ConsumerAddr": "消费者地址",
-                    "ConsumeTime": "推送时间",
-                    "Status": "状态（0:已推送未确认, 2:已确认, 3:转入重试, 4:已重试未确认, 5:已转入死信队列）"
-                },
-                {
-                    "ConsumerGroup": "消费组",
-                    "ConsumeModel": "消费模式",
-                    "ConsumerAddr": "消费者地址",
-                    "ConsumeTime": "推送时间",
-                    "Status": "状态（0:已推送未确认, 2:已确认, 3:转入重试, 4:已重试未确认, 5:已转入死信队列）"
-                }
-            ]    
-        }
-    }
-]
+     * Set 消息内容
+     * @param Result 消息内容
      */
     public void setResult(TraceResult [] Result) {
         this.Result = Result;

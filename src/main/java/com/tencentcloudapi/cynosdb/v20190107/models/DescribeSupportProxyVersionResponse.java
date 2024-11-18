@@ -40,6 +40,13 @@ public class DescribeSupportProxyVersionResponse extends AbstractModel {
     private String CurrentProxyVersion;
 
     /**
+    * 代理版本详情
+    */
+    @SerializedName("SupportProxyVersionDetail")
+    @Expose
+    private ProxyVersionInfo [] SupportProxyVersionDetail;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -87,6 +94,22 @@ public class DescribeSupportProxyVersionResponse extends AbstractModel {
     }
 
     /**
+     * Get 代理版本详情 
+     * @return SupportProxyVersionDetail 代理版本详情
+     */
+    public ProxyVersionInfo [] getSupportProxyVersionDetail() {
+        return this.SupportProxyVersionDetail;
+    }
+
+    /**
+     * Set 代理版本详情
+     * @param SupportProxyVersionDetail 代理版本详情
+     */
+    public void setSupportProxyVersionDetail(ProxyVersionInfo [] SupportProxyVersionDetail) {
+        this.SupportProxyVersionDetail = SupportProxyVersionDetail;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -119,6 +142,12 @@ public class DescribeSupportProxyVersionResponse extends AbstractModel {
         if (source.CurrentProxyVersion != null) {
             this.CurrentProxyVersion = new String(source.CurrentProxyVersion);
         }
+        if (source.SupportProxyVersionDetail != null) {
+            this.SupportProxyVersionDetail = new ProxyVersionInfo[source.SupportProxyVersionDetail.length];
+            for (int i = 0; i < source.SupportProxyVersionDetail.length; i++) {
+                this.SupportProxyVersionDetail[i] = new ProxyVersionInfo(source.SupportProxyVersionDetail[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -131,6 +160,7 @@ public class DescribeSupportProxyVersionResponse extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "SupportProxyVersions.", this.SupportProxyVersions);
         this.setParamSimple(map, prefix + "CurrentProxyVersion", this.CurrentProxyVersion);
+        this.setParamArrayObj(map, prefix + "SupportProxyVersionDetail.", this.SupportProxyVersionDetail);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

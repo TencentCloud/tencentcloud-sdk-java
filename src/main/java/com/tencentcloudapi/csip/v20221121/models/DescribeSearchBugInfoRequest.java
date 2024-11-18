@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeSearchBugInfoRequest extends AbstractModel {
 
     /**
-    * 无
+    * 1的时候返回应急漏洞，2的时候返回应急漏洞列表，3的时候搭配输入CVEId字段展示该漏洞数据
     */
     @SerializedName("Id")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeSearchBugInfoRequest extends AbstractModel {
     private String CVEId;
 
     /**
-     * Get 无 
-     * @return Id 无
+     * Get 1的时候返回应急漏洞，2的时候返回应急漏洞列表，3的时候搭配输入CVEId字段展示该漏洞数据 
+     * @return Id 1的时候返回应急漏洞，2的时候返回应急漏洞列表，3的时候搭配输入CVEId字段展示该漏洞数据
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set 无
-     * @param Id 无
+     * Set 1的时候返回应急漏洞，2的时候返回应急漏洞列表，3的时候搭配输入CVEId字段展示该漏洞数据
+     * @param Id 1的时候返回应急漏洞，2的时候返回应急漏洞列表，3的时候搭配输入CVEId字段展示该漏洞数据
      */
     public void setId(String Id) {
         this.Id = Id;

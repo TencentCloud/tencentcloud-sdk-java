@@ -32,7 +32,6 @@ public class DescribeAntiFakeRulesResponse extends AbstractModel {
 
     /**
     * 返回值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
     @Expose
@@ -62,10 +61,8 @@ public class DescribeAntiFakeRulesResponse extends AbstractModel {
     }
 
     /**
-     * Get 返回值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 返回值 
      * @return Data 返回值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CacheUrlItems [] getData() {
         return this.Data;
@@ -73,9 +70,7 @@ public class DescribeAntiFakeRulesResponse extends AbstractModel {
 
     /**
      * Set 返回值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Data 返回值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(CacheUrlItems [] Data) {
         this.Data = Data;

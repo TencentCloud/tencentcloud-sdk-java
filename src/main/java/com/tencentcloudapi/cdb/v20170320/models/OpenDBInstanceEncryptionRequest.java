@@ -31,14 +31,14 @@ public class OpenDBInstanceEncryptionRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * 用户自定义密钥ID，CMK唯一标识符。该值为空时，将使用腾讯云自动生成的密钥KMS-CDB。
+    * 用户自定义密钥 ID，CMK 唯一标识符。该值为空时，将使用腾讯云自动生成的密钥 KMS-CDB。
     */
     @SerializedName("KeyId")
     @Expose
     private String KeyId;
 
     /**
-    * 用户自定义密钥的存储地域。如：ap-guangzhou 。KeyId不为空时，该参数必填。
+    * 用户自定义密钥的存储地域。如：ap-guangzhou 。KeyId 不为空时，该参数必填。
     */
     @SerializedName("KeyRegion")
     @Expose
@@ -61,32 +61,32 @@ public class OpenDBInstanceEncryptionRequest extends AbstractModel {
     }
 
     /**
-     * Get 用户自定义密钥ID，CMK唯一标识符。该值为空时，将使用腾讯云自动生成的密钥KMS-CDB。 
-     * @return KeyId 用户自定义密钥ID，CMK唯一标识符。该值为空时，将使用腾讯云自动生成的密钥KMS-CDB。
+     * Get 用户自定义密钥 ID，CMK 唯一标识符。该值为空时，将使用腾讯云自动生成的密钥 KMS-CDB。 
+     * @return KeyId 用户自定义密钥 ID，CMK 唯一标识符。该值为空时，将使用腾讯云自动生成的密钥 KMS-CDB。
      */
     public String getKeyId() {
         return this.KeyId;
     }
 
     /**
-     * Set 用户自定义密钥ID，CMK唯一标识符。该值为空时，将使用腾讯云自动生成的密钥KMS-CDB。
-     * @param KeyId 用户自定义密钥ID，CMK唯一标识符。该值为空时，将使用腾讯云自动生成的密钥KMS-CDB。
+     * Set 用户自定义密钥 ID，CMK 唯一标识符。该值为空时，将使用腾讯云自动生成的密钥 KMS-CDB。
+     * @param KeyId 用户自定义密钥 ID，CMK 唯一标识符。该值为空时，将使用腾讯云自动生成的密钥 KMS-CDB。
      */
     public void setKeyId(String KeyId) {
         this.KeyId = KeyId;
     }
 
     /**
-     * Get 用户自定义密钥的存储地域。如：ap-guangzhou 。KeyId不为空时，该参数必填。 
-     * @return KeyRegion 用户自定义密钥的存储地域。如：ap-guangzhou 。KeyId不为空时，该参数必填。
+     * Get 用户自定义密钥的存储地域。如：ap-guangzhou 。KeyId 不为空时，该参数必填。 
+     * @return KeyRegion 用户自定义密钥的存储地域。如：ap-guangzhou 。KeyId 不为空时，该参数必填。
      */
     public String getKeyRegion() {
         return this.KeyRegion;
     }
 
     /**
-     * Set 用户自定义密钥的存储地域。如：ap-guangzhou 。KeyId不为空时，该参数必填。
-     * @param KeyRegion 用户自定义密钥的存储地域。如：ap-guangzhou 。KeyId不为空时，该参数必填。
+     * Set 用户自定义密钥的存储地域。如：ap-guangzhou 。KeyId 不为空时，该参数必填。
+     * @param KeyRegion 用户自定义密钥的存储地域。如：ap-guangzhou 。KeyId 不为空时，该参数必填。
      */
     public void setKeyRegion(String KeyRegion) {
         this.KeyRegion = KeyRegion;

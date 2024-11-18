@@ -39,7 +39,6 @@ public class Domain extends AbstractModel {
 
     /**
     * 网络域名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DomainName")
     @Expose
@@ -47,7 +46,6 @@ public class Domain extends AbstractModel {
 
     /**
     * 堡垒机id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceId")
     @Expose
@@ -55,7 +53,6 @@ public class Domain extends AbstractModel {
 
     /**
     * ip，网段
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WhiteIpSet")
     @Expose
@@ -63,7 +60,6 @@ public class Domain extends AbstractModel {
 
     /**
     * 是否启用  默认 1启用 0禁用
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Enabled")
     @Expose
@@ -71,7 +67,6 @@ public class Domain extends AbstractModel {
 
     /**
     * 状态 0-已断开  1-已连接
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -79,7 +74,6 @@ public class Domain extends AbstractModel {
 
     /**
     * 网络域创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -87,7 +81,6 @@ public class Domain extends AbstractModel {
 
     /**
     * 是否资源默认网络域 1-资源默认网络域 0-用户添加网络域
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Default")
     @Expose
@@ -126,10 +119,8 @@ public class Domain extends AbstractModel {
     }
 
     /**
-     * Get 网络域名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网络域名称 
      * @return DomainName 网络域名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDomainName() {
         return this.DomainName;
@@ -137,19 +128,15 @@ public class Domain extends AbstractModel {
 
     /**
      * Set 网络域名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DomainName 网络域名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDomainName(String DomainName) {
         this.DomainName = DomainName;
     }
 
     /**
-     * Get 堡垒机id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 堡垒机id 
      * @return ResourceId 堡垒机id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceId() {
         return this.ResourceId;
@@ -157,19 +144,15 @@ public class Domain extends AbstractModel {
 
     /**
      * Set 堡垒机id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceId 堡垒机id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
     }
 
     /**
-     * Get ip，网段
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get ip，网段 
      * @return WhiteIpSet ip，网段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getWhiteIpSet() {
         return this.WhiteIpSet;
@@ -177,19 +160,15 @@ public class Domain extends AbstractModel {
 
     /**
      * Set ip，网段
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WhiteIpSet ip，网段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWhiteIpSet(String [] WhiteIpSet) {
         this.WhiteIpSet = WhiteIpSet;
     }
 
     /**
-     * Get 是否启用  默认 1启用 0禁用
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否启用  默认 1启用 0禁用 
      * @return Enabled 是否启用  默认 1启用 0禁用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getEnabled() {
         return this.Enabled;
@@ -197,19 +176,15 @@ public class Domain extends AbstractModel {
 
     /**
      * Set 是否启用  默认 1启用 0禁用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Enabled 是否启用  默认 1启用 0禁用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnabled(Long Enabled) {
         this.Enabled = Enabled;
     }
 
     /**
-     * Get 状态 0-已断开  1-已连接
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 状态 0-已断开  1-已连接 
      * @return Status 状态 0-已断开  1-已连接
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
         return this.Status;
@@ -217,19 +192,15 @@ public class Domain extends AbstractModel {
 
     /**
      * Set 状态 0-已断开  1-已连接
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 状态 0-已断开  1-已连接
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 网络域创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网络域创建时间 
      * @return CreateTime 网络域创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -237,19 +208,15 @@ public class Domain extends AbstractModel {
 
     /**
      * Set 网络域创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 网络域创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 是否资源默认网络域 1-资源默认网络域 0-用户添加网络域
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否资源默认网络域 1-资源默认网络域 0-用户添加网络域 
      * @return Default 是否资源默认网络域 1-资源默认网络域 0-用户添加网络域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDefault() {
         return this.Default;
@@ -257,9 +224,7 @@ public class Domain extends AbstractModel {
 
     /**
      * Set 是否资源默认网络域 1-资源默认网络域 0-用户添加网络域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Default 是否资源默认网络域 1-资源默认网络域 0-用户添加网络域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDefault(Long Default) {
         this.Default = Default;

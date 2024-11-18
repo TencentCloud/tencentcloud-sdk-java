@@ -172,6 +172,35 @@ public class ResultListItem extends AbstractModel {
     private String ErrMsg;
 
     /**
+    * 应用错误码：0、1-表示正常；                  
+
+2表示System Error(engine analysis error).
+
+3表示App analysis error, please confirm it.
+
+4表示App have not cert, please confirm it.
+
+5表示App size is zero, please confirm it.
+
+6表示App have not package name, please confirm it.
+
+7表示App build time is empty, please confirm it.
+
+8表示App have not valid cert, please confirm it.
+
+99表示Other error.
+
+1000表示App downloadlink download fail, please confirm it.
+
+1001表示APP md5 different between real md5, please confirm it.
+
+1002表示App md5 uncollect, please offer downloadlink.
+    */
+    @SerializedName("ErrNo")
+    @Expose
+    private String ErrNo;
+
+    /**
      * Get banner广告软件标记，分别为-1-不确定，0-否，1-是 
      * @return Banner banner广告软件标记，分别为-1-不确定，0-否，1-是
      */
@@ -474,7 +503,9 @@ public class ResultListItem extends AbstractModel {
 1001表示APP md5 different between real md5, please confirm it.
 
 1002表示App md5 uncollect, please offer downloadlink.
+     * @deprecated
      */
+    @Deprecated
     public String getErrno() {
         return this.Errno;
     }
@@ -526,7 +557,9 @@ public class ResultListItem extends AbstractModel {
 1001表示APP md5 different between real md5, please confirm it.
 
 1002表示App md5 uncollect, please offer downloadlink.
+     * @deprecated
      */
+    @Deprecated
     public void setErrno(String Errno) {
         this.Errno = Errno;
     }
@@ -545,6 +578,110 @@ public class ResultListItem extends AbstractModel {
      */
     public void setErrMsg(String ErrMsg) {
         this.ErrMsg = ErrMsg;
+    }
+
+    /**
+     * Get 应用错误码：0、1-表示正常；                  
+
+2表示System Error(engine analysis error).
+
+3表示App analysis error, please confirm it.
+
+4表示App have not cert, please confirm it.
+
+5表示App size is zero, please confirm it.
+
+6表示App have not package name, please confirm it.
+
+7表示App build time is empty, please confirm it.
+
+8表示App have not valid cert, please confirm it.
+
+99表示Other error.
+
+1000表示App downloadlink download fail, please confirm it.
+
+1001表示APP md5 different between real md5, please confirm it.
+
+1002表示App md5 uncollect, please offer downloadlink. 
+     * @return ErrNo 应用错误码：0、1-表示正常；                  
+
+2表示System Error(engine analysis error).
+
+3表示App analysis error, please confirm it.
+
+4表示App have not cert, please confirm it.
+
+5表示App size is zero, please confirm it.
+
+6表示App have not package name, please confirm it.
+
+7表示App build time is empty, please confirm it.
+
+8表示App have not valid cert, please confirm it.
+
+99表示Other error.
+
+1000表示App downloadlink download fail, please confirm it.
+
+1001表示APP md5 different between real md5, please confirm it.
+
+1002表示App md5 uncollect, please offer downloadlink.
+     */
+    public String getErrNo() {
+        return this.ErrNo;
+    }
+
+    /**
+     * Set 应用错误码：0、1-表示正常；                  
+
+2表示System Error(engine analysis error).
+
+3表示App analysis error, please confirm it.
+
+4表示App have not cert, please confirm it.
+
+5表示App size is zero, please confirm it.
+
+6表示App have not package name, please confirm it.
+
+7表示App build time is empty, please confirm it.
+
+8表示App have not valid cert, please confirm it.
+
+99表示Other error.
+
+1000表示App downloadlink download fail, please confirm it.
+
+1001表示APP md5 different between real md5, please confirm it.
+
+1002表示App md5 uncollect, please offer downloadlink.
+     * @param ErrNo 应用错误码：0、1-表示正常；                  
+
+2表示System Error(engine analysis error).
+
+3表示App analysis error, please confirm it.
+
+4表示App have not cert, please confirm it.
+
+5表示App size is zero, please confirm it.
+
+6表示App have not package name, please confirm it.
+
+7表示App build time is empty, please confirm it.
+
+8表示App have not valid cert, please confirm it.
+
+99表示Other error.
+
+1000表示App downloadlink download fail, please confirm it.
+
+1001表示APP md5 different between real md5, please confirm it.
+
+1002表示App md5 uncollect, please offer downloadlink.
+     */
+    public void setErrNo(String ErrNo) {
+        this.ErrNo = ErrNo;
     }
 
     public ResultListItem() {
@@ -615,6 +752,9 @@ public class ResultListItem extends AbstractModel {
         if (source.ErrMsg != null) {
             this.ErrMsg = new String(source.ErrMsg);
         }
+        if (source.ErrNo != null) {
+            this.ErrNo = new String(source.ErrNo);
+        }
     }
 
 
@@ -640,6 +780,7 @@ public class ResultListItem extends AbstractModel {
         this.setParamSimple(map, prefix + "RepackageStatus", this.RepackageStatus);
         this.setParamSimple(map, prefix + "Errno", this.Errno);
         this.setParamSimple(map, prefix + "ErrMsg", this.ErrMsg);
+        this.setParamSimple(map, prefix + "ErrNo", this.ErrNo);
 
     }
 }

@@ -38,18 +38,18 @@ public class CreateApplicationAutoscalerRequest extends AbstractModel {
     private String EnvironmentId;
 
     /**
-    * 来源渠道
-    */
-    @SerializedName("SourceChannel")
-    @Expose
-    private Long SourceChannel;
-
-    /**
     * 弹性伸缩策略
     */
     @SerializedName("Autoscaler")
     @Expose
     private Autoscaler Autoscaler;
+
+    /**
+    * 来源渠道
+    */
+    @SerializedName("SourceChannel")
+    @Expose
+    private Long SourceChannel;
 
     /**
      * Get 服务id 
@@ -84,22 +84,6 @@ public class CreateApplicationAutoscalerRequest extends AbstractModel {
     }
 
     /**
-     * Get 来源渠道 
-     * @return SourceChannel 来源渠道
-     */
-    public Long getSourceChannel() {
-        return this.SourceChannel;
-    }
-
-    /**
-     * Set 来源渠道
-     * @param SourceChannel 来源渠道
-     */
-    public void setSourceChannel(Long SourceChannel) {
-        this.SourceChannel = SourceChannel;
-    }
-
-    /**
      * Get 弹性伸缩策略 
      * @return Autoscaler 弹性伸缩策略
      */
@@ -113,6 +97,22 @@ public class CreateApplicationAutoscalerRequest extends AbstractModel {
      */
     public void setAutoscaler(Autoscaler Autoscaler) {
         this.Autoscaler = Autoscaler;
+    }
+
+    /**
+     * Get 来源渠道 
+     * @return SourceChannel 来源渠道
+     */
+    public Long getSourceChannel() {
+        return this.SourceChannel;
+    }
+
+    /**
+     * Set 来源渠道
+     * @param SourceChannel 来源渠道
+     */
+    public void setSourceChannel(Long SourceChannel) {
+        this.SourceChannel = SourceChannel;
     }
 
     public CreateApplicationAutoscalerRequest() {
@@ -129,11 +129,11 @@ public class CreateApplicationAutoscalerRequest extends AbstractModel {
         if (source.EnvironmentId != null) {
             this.EnvironmentId = new String(source.EnvironmentId);
         }
-        if (source.SourceChannel != null) {
-            this.SourceChannel = new Long(source.SourceChannel);
-        }
         if (source.Autoscaler != null) {
             this.Autoscaler = new Autoscaler(source.Autoscaler);
+        }
+        if (source.SourceChannel != null) {
+            this.SourceChannel = new Long(source.SourceChannel);
         }
     }
 
@@ -144,8 +144,8 @@ public class CreateApplicationAutoscalerRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
         this.setParamSimple(map, prefix + "EnvironmentId", this.EnvironmentId);
-        this.setParamSimple(map, prefix + "SourceChannel", this.SourceChannel);
         this.setParamObj(map, prefix + "Autoscaler.", this.Autoscaler);
+        this.setParamSimple(map, prefix + "SourceChannel", this.SourceChannel);
 
     }
 }

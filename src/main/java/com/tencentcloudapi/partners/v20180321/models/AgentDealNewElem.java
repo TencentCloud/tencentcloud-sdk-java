@@ -53,7 +53,6 @@ public class AgentDealNewElem extends AbstractModel {
 
     /**
     * 订单所有者对应 appId
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AppId")
     @Expose
@@ -61,7 +60,6 @@ public class AgentDealNewElem extends AbstractModel {
 
     /**
     * 商品数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GoodsNum")
     @Expose
@@ -69,7 +67,6 @@ public class AgentDealNewElem extends AbstractModel {
 
     /**
     * 价格详情
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GoodsPrice")
     @Expose
@@ -77,7 +74,6 @@ public class AgentDealNewElem extends AbstractModel {
 
     /**
     * 下单人
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Creater")
     @Expose
@@ -85,7 +81,6 @@ public class AgentDealNewElem extends AbstractModel {
 
     /**
     * 下单时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreatTime")
     @Expose
@@ -93,7 +88,6 @@ public class AgentDealNewElem extends AbstractModel {
 
     /**
     * 支付结束时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PayEndTime")
     @Expose
@@ -101,7 +95,6 @@ public class AgentDealNewElem extends AbstractModel {
 
     /**
     * 扣费流水号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BillId")
     @Expose
@@ -109,7 +102,6 @@ public class AgentDealNewElem extends AbstractModel {
 
     /**
     * 支付人
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Payer")
     @Expose
@@ -117,7 +109,6 @@ public class AgentDealNewElem extends AbstractModel {
 
     /**
     * 订单状态，中文描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DealStatus")
     @Expose
@@ -125,7 +116,6 @@ public class AgentDealNewElem extends AbstractModel {
 
     /**
     * 订单的状态(1：未支付;2：已支付;3：发货中;4：已发货;5：发货失败;6：已退款;7：已关单;8：订单过期;9：订单已失效;10：产品已失效;11：代付拒绝;12：支付中)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -133,7 +123,6 @@ public class AgentDealNewElem extends AbstractModel {
 
     /**
     * 产品名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GoodsName")
     @Expose
@@ -141,7 +130,6 @@ public class AgentDealNewElem extends AbstractModel {
 
     /**
     * 客户备注
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClientRemark")
     @Expose
@@ -149,7 +137,6 @@ public class AgentDealNewElem extends AbstractModel {
 
     /**
     * 订单操作类型，"purchase":"新购","upgrade":"升配","upConvertExpire":"升配","downgrade":"降配","downConvertExpire":"降配","renew":"续费","refund":"退货","modifyNetworkMode":"调整带宽模式","modifyNetworkSize":"调整带宽大小","preMoveOut":"资源迁出","preMoveIn":"资源迁入","preToPost":"包年包月转按量","modify":"变配","postMoveOut":"资源迁出","postMoveIn":"资源迁入","recoverRefundForward":"调账补偿","recoverPayReserve":"调账补偿","recoverPayForward":"调账扣费","recoverRefundReserve":"调账扣费"
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ActionType")
     @Expose
@@ -157,7 +144,6 @@ public class AgentDealNewElem extends AbstractModel {
 
     /**
     * 代金券抵扣金额，单位分
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VoucherDecline")
     @Expose
@@ -165,7 +151,6 @@ public class AgentDealNewElem extends AbstractModel {
 
     /**
     * 大订单号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BigDealId")
     @Expose
@@ -173,7 +158,6 @@ public class AgentDealNewElem extends AbstractModel {
 
     /**
     * 客户类型（new：自拓；old：官网；assign：指派；direct：直销；direct_newopp：直销(新商机)）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClientType")
     @Expose
@@ -181,7 +165,6 @@ public class AgentDealNewElem extends AbstractModel {
 
     /**
     * 项目类型（self：自拓；repeat：直销；platform：官网合作）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProjectType")
     @Expose
@@ -189,7 +172,6 @@ public class AgentDealNewElem extends AbstractModel {
 
     /**
     * 业务员账号ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SalesUin")
     @Expose
@@ -197,7 +179,6 @@ public class AgentDealNewElem extends AbstractModel {
 
     /**
     * 支付方式，0：自付；1：代付
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PayerMode")
     @Expose
@@ -205,7 +186,6 @@ public class AgentDealNewElem extends AbstractModel {
 
     /**
     * 活动ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ActivityId")
     @Expose
@@ -213,7 +193,6 @@ public class AgentDealNewElem extends AbstractModel {
 
     /**
     * 订单过期时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OverdueTime")
     @Expose
@@ -221,7 +200,6 @@ public class AgentDealNewElem extends AbstractModel {
 
     /**
     * 产品详情
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProductInfo")
     @Expose
@@ -229,7 +207,6 @@ public class AgentDealNewElem extends AbstractModel {
 
     /**
     * 付款方式
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PaymentMethod")
     @Expose
@@ -237,7 +214,6 @@ public class AgentDealNewElem extends AbstractModel {
 
     /**
     * 订单更新时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -245,7 +221,6 @@ public class AgentDealNewElem extends AbstractModel {
 
     /**
     * 资源id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceIds")
     @Expose
@@ -253,7 +228,6 @@ public class AgentDealNewElem extends AbstractModel {
 
     /**
     * 退款单的原订单信息。当前仅 DescribeClientDealsByCache 接口会返回该字段
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RefundMap")
     @Expose
@@ -261,7 +235,6 @@ public class AgentDealNewElem extends AbstractModel {
 
     /**
     * 子产品名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubGoodsName")
     @Expose
@@ -332,10 +305,8 @@ public class AgentDealNewElem extends AbstractModel {
     }
 
     /**
-     * Get 订单所有者对应 appId
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 订单所有者对应 appId 
      * @return AppId 订单所有者对应 appId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAppId() {
         return this.AppId;
@@ -343,19 +314,15 @@ public class AgentDealNewElem extends AbstractModel {
 
     /**
      * Set 订单所有者对应 appId
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AppId 订单所有者对应 appId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAppId(String AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get 商品数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 商品数量 
      * @return GoodsNum 商品数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGoodsNum() {
         return this.GoodsNum;
@@ -363,19 +330,15 @@ public class AgentDealNewElem extends AbstractModel {
 
     /**
      * Set 商品数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GoodsNum 商品数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGoodsNum(String GoodsNum) {
         this.GoodsNum = GoodsNum;
     }
 
     /**
-     * Get 价格详情
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 价格详情 
      * @return GoodsPrice 价格详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DealGoodsPriceNewElem getGoodsPrice() {
         return this.GoodsPrice;
@@ -383,19 +346,15 @@ public class AgentDealNewElem extends AbstractModel {
 
     /**
      * Set 价格详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GoodsPrice 价格详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGoodsPrice(DealGoodsPriceNewElem GoodsPrice) {
         this.GoodsPrice = GoodsPrice;
     }
 
     /**
-     * Get 下单人
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 下单人 
      * @return Creater 下单人
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreater() {
         return this.Creater;
@@ -403,19 +362,15 @@ public class AgentDealNewElem extends AbstractModel {
 
     /**
      * Set 下单人
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Creater 下单人
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreater(String Creater) {
         this.Creater = Creater;
     }
 
     /**
-     * Get 下单时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 下单时间 
      * @return CreatTime 下单时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreatTime() {
         return this.CreatTime;
@@ -423,19 +378,15 @@ public class AgentDealNewElem extends AbstractModel {
 
     /**
      * Set 下单时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreatTime 下单时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreatTime(String CreatTime) {
         this.CreatTime = CreatTime;
     }
 
     /**
-     * Get 支付结束时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 支付结束时间 
      * @return PayEndTime 支付结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPayEndTime() {
         return this.PayEndTime;
@@ -443,19 +394,15 @@ public class AgentDealNewElem extends AbstractModel {
 
     /**
      * Set 支付结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PayEndTime 支付结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPayEndTime(String PayEndTime) {
         this.PayEndTime = PayEndTime;
     }
 
     /**
-     * Get 扣费流水号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 扣费流水号 
      * @return BillId 扣费流水号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBillId() {
         return this.BillId;
@@ -463,19 +410,15 @@ public class AgentDealNewElem extends AbstractModel {
 
     /**
      * Set 扣费流水号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BillId 扣费流水号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBillId(String BillId) {
         this.BillId = BillId;
     }
 
     /**
-     * Get 支付人
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 支付人 
      * @return Payer 支付人
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPayer() {
         return this.Payer;
@@ -483,19 +426,15 @@ public class AgentDealNewElem extends AbstractModel {
 
     /**
      * Set 支付人
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Payer 支付人
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPayer(String Payer) {
         this.Payer = Payer;
     }
 
     /**
-     * Get 订单状态，中文描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 订单状态，中文描述 
      * @return DealStatus 订单状态，中文描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDealStatus() {
         return this.DealStatus;
@@ -503,19 +442,15 @@ public class AgentDealNewElem extends AbstractModel {
 
     /**
      * Set 订单状态，中文描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DealStatus 订单状态，中文描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDealStatus(String DealStatus) {
         this.DealStatus = DealStatus;
     }
 
     /**
-     * Get 订单的状态(1：未支付;2：已支付;3：发货中;4：已发货;5：发货失败;6：已退款;7：已关单;8：订单过期;9：订单已失效;10：产品已失效;11：代付拒绝;12：支付中)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 订单的状态(1：未支付;2：已支付;3：发货中;4：已发货;5：发货失败;6：已退款;7：已关单;8：订单过期;9：订单已失效;10：产品已失效;11：代付拒绝;12：支付中) 
      * @return Status 订单的状态(1：未支付;2：已支付;3：发货中;4：已发货;5：发货失败;6：已退款;7：已关单;8：订单过期;9：订单已失效;10：产品已失效;11：代付拒绝;12：支付中)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
         return this.Status;
@@ -523,19 +458,15 @@ public class AgentDealNewElem extends AbstractModel {
 
     /**
      * Set 订单的状态(1：未支付;2：已支付;3：发货中;4：已发货;5：发货失败;6：已退款;7：已关单;8：订单过期;9：订单已失效;10：产品已失效;11：代付拒绝;12：支付中)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 订单的状态(1：未支付;2：已支付;3：发货中;4：已发货;5：发货失败;6：已退款;7：已关单;8：订单过期;9：订单已失效;10：产品已失效;11：代付拒绝;12：支付中)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 产品名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 产品名称 
      * @return GoodsName 产品名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGoodsName() {
         return this.GoodsName;
@@ -543,19 +474,15 @@ public class AgentDealNewElem extends AbstractModel {
 
     /**
      * Set 产品名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GoodsName 产品名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGoodsName(String GoodsName) {
         this.GoodsName = GoodsName;
     }
 
     /**
-     * Get 客户备注
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 客户备注 
      * @return ClientRemark 客户备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClientRemark() {
         return this.ClientRemark;
@@ -563,19 +490,15 @@ public class AgentDealNewElem extends AbstractModel {
 
     /**
      * Set 客户备注
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClientRemark 客户备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClientRemark(String ClientRemark) {
         this.ClientRemark = ClientRemark;
     }
 
     /**
-     * Get 订单操作类型，"purchase":"新购","upgrade":"升配","upConvertExpire":"升配","downgrade":"降配","downConvertExpire":"降配","renew":"续费","refund":"退货","modifyNetworkMode":"调整带宽模式","modifyNetworkSize":"调整带宽大小","preMoveOut":"资源迁出","preMoveIn":"资源迁入","preToPost":"包年包月转按量","modify":"变配","postMoveOut":"资源迁出","postMoveIn":"资源迁入","recoverRefundForward":"调账补偿","recoverPayReserve":"调账补偿","recoverPayForward":"调账扣费","recoverRefundReserve":"调账扣费"
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 订单操作类型，"purchase":"新购","upgrade":"升配","upConvertExpire":"升配","downgrade":"降配","downConvertExpire":"降配","renew":"续费","refund":"退货","modifyNetworkMode":"调整带宽模式","modifyNetworkSize":"调整带宽大小","preMoveOut":"资源迁出","preMoveIn":"资源迁入","preToPost":"包年包月转按量","modify":"变配","postMoveOut":"资源迁出","postMoveIn":"资源迁入","recoverRefundForward":"调账补偿","recoverPayReserve":"调账补偿","recoverPayForward":"调账扣费","recoverRefundReserve":"调账扣费" 
      * @return ActionType 订单操作类型，"purchase":"新购","upgrade":"升配","upConvertExpire":"升配","downgrade":"降配","downConvertExpire":"降配","renew":"续费","refund":"退货","modifyNetworkMode":"调整带宽模式","modifyNetworkSize":"调整带宽大小","preMoveOut":"资源迁出","preMoveIn":"资源迁入","preToPost":"包年包月转按量","modify":"变配","postMoveOut":"资源迁出","postMoveIn":"资源迁入","recoverRefundForward":"调账补偿","recoverPayReserve":"调账补偿","recoverPayForward":"调账扣费","recoverRefundReserve":"调账扣费"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getActionType() {
         return this.ActionType;
@@ -583,19 +506,15 @@ public class AgentDealNewElem extends AbstractModel {
 
     /**
      * Set 订单操作类型，"purchase":"新购","upgrade":"升配","upConvertExpire":"升配","downgrade":"降配","downConvertExpire":"降配","renew":"续费","refund":"退货","modifyNetworkMode":"调整带宽模式","modifyNetworkSize":"调整带宽大小","preMoveOut":"资源迁出","preMoveIn":"资源迁入","preToPost":"包年包月转按量","modify":"变配","postMoveOut":"资源迁出","postMoveIn":"资源迁入","recoverRefundForward":"调账补偿","recoverPayReserve":"调账补偿","recoverPayForward":"调账扣费","recoverRefundReserve":"调账扣费"
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ActionType 订单操作类型，"purchase":"新购","upgrade":"升配","upConvertExpire":"升配","downgrade":"降配","downConvertExpire":"降配","renew":"续费","refund":"退货","modifyNetworkMode":"调整带宽模式","modifyNetworkSize":"调整带宽大小","preMoveOut":"资源迁出","preMoveIn":"资源迁入","preToPost":"包年包月转按量","modify":"变配","postMoveOut":"资源迁出","postMoveIn":"资源迁入","recoverRefundForward":"调账补偿","recoverPayReserve":"调账补偿","recoverPayForward":"调账扣费","recoverRefundReserve":"调账扣费"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setActionType(String ActionType) {
         this.ActionType = ActionType;
     }
 
     /**
-     * Get 代金券抵扣金额，单位分
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 代金券抵扣金额，单位分 
      * @return VoucherDecline 代金券抵扣金额，单位分
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVoucherDecline() {
         return this.VoucherDecline;
@@ -603,19 +522,15 @@ public class AgentDealNewElem extends AbstractModel {
 
     /**
      * Set 代金券抵扣金额，单位分
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VoucherDecline 代金券抵扣金额，单位分
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVoucherDecline(String VoucherDecline) {
         this.VoucherDecline = VoucherDecline;
     }
 
     /**
-     * Get 大订单号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 大订单号 
      * @return BigDealId 大订单号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBigDealId() {
         return this.BigDealId;
@@ -623,19 +538,15 @@ public class AgentDealNewElem extends AbstractModel {
 
     /**
      * Set 大订单号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BigDealId 大订单号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBigDealId(String BigDealId) {
         this.BigDealId = BigDealId;
     }
 
     /**
-     * Get 客户类型（new：自拓；old：官网；assign：指派；direct：直销；direct_newopp：直销(新商机)）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 客户类型（new：自拓；old：官网；assign：指派；direct：直销；direct_newopp：直销(新商机)） 
      * @return ClientType 客户类型（new：自拓；old：官网；assign：指派；direct：直销；direct_newopp：直销(新商机)）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClientType() {
         return this.ClientType;
@@ -643,19 +554,15 @@ public class AgentDealNewElem extends AbstractModel {
 
     /**
      * Set 客户类型（new：自拓；old：官网；assign：指派；direct：直销；direct_newopp：直销(新商机)）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClientType 客户类型（new：自拓；old：官网；assign：指派；direct：直销；direct_newopp：直销(新商机)）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClientType(String ClientType) {
         this.ClientType = ClientType;
     }
 
     /**
-     * Get 项目类型（self：自拓；repeat：直销；platform：官网合作）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 项目类型（self：自拓；repeat：直销；platform：官网合作） 
      * @return ProjectType 项目类型（self：自拓；repeat：直销；platform：官网合作）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProjectType() {
         return this.ProjectType;
@@ -663,19 +570,15 @@ public class AgentDealNewElem extends AbstractModel {
 
     /**
      * Set 项目类型（self：自拓；repeat：直销；platform：官网合作）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProjectType 项目类型（self：自拓；repeat：直销；platform：官网合作）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProjectType(String ProjectType) {
         this.ProjectType = ProjectType;
     }
 
     /**
-     * Get 业务员账号ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 业务员账号ID 
      * @return SalesUin 业务员账号ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSalesUin() {
         return this.SalesUin;
@@ -683,19 +586,15 @@ public class AgentDealNewElem extends AbstractModel {
 
     /**
      * Set 业务员账号ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SalesUin 业务员账号ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSalesUin(String SalesUin) {
         this.SalesUin = SalesUin;
     }
 
     /**
-     * Get 支付方式，0：自付；1：代付
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 支付方式，0：自付；1：代付 
      * @return PayerMode 支付方式，0：自付；1：代付
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPayerMode() {
         return this.PayerMode;
@@ -703,19 +602,15 @@ public class AgentDealNewElem extends AbstractModel {
 
     /**
      * Set 支付方式，0：自付；1：代付
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PayerMode 支付方式，0：自付；1：代付
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPayerMode(String PayerMode) {
         this.PayerMode = PayerMode;
     }
 
     /**
-     * Get 活动ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 活动ID 
      * @return ActivityId 活动ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getActivityId() {
         return this.ActivityId;
@@ -723,19 +618,15 @@ public class AgentDealNewElem extends AbstractModel {
 
     /**
      * Set 活动ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ActivityId 活动ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setActivityId(String ActivityId) {
         this.ActivityId = ActivityId;
     }
 
     /**
-     * Get 订单过期时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 订单过期时间 
      * @return OverdueTime 订单过期时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOverdueTime() {
         return this.OverdueTime;
@@ -743,19 +634,15 @@ public class AgentDealNewElem extends AbstractModel {
 
     /**
      * Set 订单过期时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OverdueTime 订单过期时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOverdueTime(String OverdueTime) {
         this.OverdueTime = OverdueTime;
     }
 
     /**
-     * Get 产品详情
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 产品详情 
      * @return ProductInfo 产品详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ProductInfoElem [] getProductInfo() {
         return this.ProductInfo;
@@ -763,19 +650,15 @@ public class AgentDealNewElem extends AbstractModel {
 
     /**
      * Set 产品详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProductInfo 产品详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProductInfo(ProductInfoElem [] ProductInfo) {
         this.ProductInfo = ProductInfo;
     }
 
     /**
-     * Get 付款方式
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 付款方式 
      * @return PaymentMethod 付款方式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPaymentMethod() {
         return this.PaymentMethod;
@@ -783,19 +666,15 @@ public class AgentDealNewElem extends AbstractModel {
 
     /**
      * Set 付款方式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PaymentMethod 付款方式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPaymentMethod(String PaymentMethod) {
         this.PaymentMethod = PaymentMethod;
     }
 
     /**
-     * Get 订单更新时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 订单更新时间 
      * @return UpdateTime 订单更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdateTime() {
         return this.UpdateTime;
@@ -803,19 +682,15 @@ public class AgentDealNewElem extends AbstractModel {
 
     /**
      * Set 订单更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdateTime 订单更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get 资源id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源id 
      * @return ResourceIds 资源id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getResourceIds() {
         return this.ResourceIds;
@@ -823,19 +698,15 @@ public class AgentDealNewElem extends AbstractModel {
 
     /**
      * Set 资源id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceIds 资源id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceIds(String [] ResourceIds) {
         this.ResourceIds = ResourceIds;
     }
 
     /**
-     * Get 退款单的原订单信息。当前仅 DescribeClientDealsByCache 接口会返回该字段
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 退款单的原订单信息。当前仅 DescribeClientDealsByCache 接口会返回该字段 
      * @return RefundMap 退款单的原订单信息。当前仅 DescribeClientDealsByCache 接口会返回该字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RefundMap [] getRefundMap() {
         return this.RefundMap;
@@ -843,19 +714,15 @@ public class AgentDealNewElem extends AbstractModel {
 
     /**
      * Set 退款单的原订单信息。当前仅 DescribeClientDealsByCache 接口会返回该字段
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RefundMap 退款单的原订单信息。当前仅 DescribeClientDealsByCache 接口会返回该字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRefundMap(RefundMap [] RefundMap) {
         this.RefundMap = RefundMap;
     }
 
     /**
-     * Get 子产品名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子产品名称 
      * @return SubGoodsName 子产品名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubGoodsName() {
         return this.SubGoodsName;
@@ -863,9 +730,7 @@ public class AgentDealNewElem extends AbstractModel {
 
     /**
      * Set 子产品名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubGoodsName 子产品名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubGoodsName(String SubGoodsName) {
         this.SubGoodsName = SubGoodsName;

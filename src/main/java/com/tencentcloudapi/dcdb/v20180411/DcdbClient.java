@@ -150,6 +150,17 @@ public class DcdbClient extends AbstractClient{
     }
 
     /**
+     *创建在线DDL任务
+     * @param req CreateOnlineDDLJobRequest
+     * @return CreateOnlineDDLJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateOnlineDDLJobResponse CreateOnlineDDLJob(CreateOnlineDDLJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateOnlineDDLJob", CreateOnlineDDLJobResponse.class);
+    }
+
+    /**
      *回档TDSQL实例
      * @param req CreateTmpDCDBInstanceRequest
      * @return CreateTmpDCDBInstanceResponse

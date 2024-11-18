@@ -25,7 +25,6 @@ public class TimedJob extends AbstractModel {
 
     /**
     * 开始时间戳，单位为秒
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartDateTime")
     @Expose
@@ -33,17 +32,14 @@ public class TimedJob extends AbstractModel {
 
     /**
     * 结束时间戳，单位为秒
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndDateTime")
     @Expose
     private Long EndDateTime;
 
     /**
-     * Get 开始时间戳，单位为秒
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 开始时间戳，单位为秒 
      * @return StartDateTime 开始时间戳，单位为秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStartDateTime() {
         return this.StartDateTime;
@@ -51,19 +47,15 @@ public class TimedJob extends AbstractModel {
 
     /**
      * Set 开始时间戳，单位为秒
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StartDateTime 开始时间戳，单位为秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartDateTime(Long StartDateTime) {
         this.StartDateTime = StartDateTime;
     }
 
     /**
-     * Get 结束时间戳，单位为秒
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 结束时间戳，单位为秒 
      * @return EndDateTime 结束时间戳，单位为秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getEndDateTime() {
         return this.EndDateTime;
@@ -71,9 +63,7 @@ public class TimedJob extends AbstractModel {
 
     /**
      * Set 结束时间戳，单位为秒
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EndDateTime 结束时间戳，单位为秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndDateTime(Long EndDateTime) {
         this.EndDateTime = EndDateTime;

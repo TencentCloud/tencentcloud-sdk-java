@@ -46,7 +46,6 @@ public class DescribeSecurityGroupListResponse extends AbstractModel {
 
     /**
     * 访问控制规则全部启用/全部停用
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Enable")
     @Expose
@@ -108,10 +107,8 @@ public class DescribeSecurityGroupListResponse extends AbstractModel {
     }
 
     /**
-     * Get 访问控制规则全部启用/全部停用
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 访问控制规则全部启用/全部停用 
      * @return Enable 访问控制规则全部启用/全部停用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getEnable() {
         return this.Enable;
@@ -119,9 +116,7 @@ public class DescribeSecurityGroupListResponse extends AbstractModel {
 
     /**
      * Set 访问控制规则全部启用/全部停用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Enable 访问控制规则全部启用/全部停用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnable(Long Enable) {
         this.Enable = Enable;

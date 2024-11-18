@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CertificateInfo extends AbstractModel {
 
     /**
-    * 证书 ID。
+    * 证书 ID。来源于 SSL 侧，您可以前往 [SSL 证书列表](https://console.cloud.tencent.com/ssl) 查看 CertId。
     */
     @SerializedName("CertId")
     @Expose
@@ -81,16 +81,16 @@ public class CertificateInfo extends AbstractModel {
     private String Status;
 
     /**
-     * Get 证书 ID。 
-     * @return CertId 证书 ID。
+     * Get 证书 ID。来源于 SSL 侧，您可以前往 [SSL 证书列表](https://console.cloud.tencent.com/ssl) 查看 CertId。 
+     * @return CertId 证书 ID。来源于 SSL 侧，您可以前往 [SSL 证书列表](https://console.cloud.tencent.com/ssl) 查看 CertId。
      */
     public String getCertId() {
         return this.CertId;
     }
 
     /**
-     * Set 证书 ID。
-     * @param CertId 证书 ID。
+     * Set 证书 ID。来源于 SSL 侧，您可以前往 [SSL 证书列表](https://console.cloud.tencent.com/ssl) 查看 CertId。
+     * @param CertId 证书 ID。来源于 SSL 侧，您可以前往 [SSL 证书列表](https://console.cloud.tencent.com/ssl) 查看 CertId。
      */
     public void setCertId(String CertId) {
         this.CertId = CertId;

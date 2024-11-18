@@ -176,6 +176,30 @@ HotPeriod=0为没有开启日志沉降。
     private TopicExtendInfo Extends;
 
     /**
+    * 异步迁移任务ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TopicAsyncTaskID")
+    @Expose
+    private String TopicAsyncTaskID;
+
+    /**
+    * 异步迁移状态
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MigrationStatus")
+    @Expose
+    private Long MigrationStatus;
+
+    /**
+    * 异步迁移完成后，预计生效日期
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EffectiveDate")
+    @Expose
+    private String EffectiveDate;
+
+    /**
      * Get 日志集ID 
      * @return LogsetId 日志集ID
      */
@@ -555,6 +579,66 @@ HotPeriod=0为没有开启日志沉降。
         this.Extends = Extends;
     }
 
+    /**
+     * Get 异步迁移任务ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TopicAsyncTaskID 异步迁移任务ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTopicAsyncTaskID() {
+        return this.TopicAsyncTaskID;
+    }
+
+    /**
+     * Set 异步迁移任务ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TopicAsyncTaskID 异步迁移任务ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTopicAsyncTaskID(String TopicAsyncTaskID) {
+        this.TopicAsyncTaskID = TopicAsyncTaskID;
+    }
+
+    /**
+     * Get 异步迁移状态
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MigrationStatus 异步迁移状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getMigrationStatus() {
+        return this.MigrationStatus;
+    }
+
+    /**
+     * Set 异步迁移状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MigrationStatus 异步迁移状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMigrationStatus(Long MigrationStatus) {
+        this.MigrationStatus = MigrationStatus;
+    }
+
+    /**
+     * Get 异步迁移完成后，预计生效日期
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EffectiveDate 异步迁移完成后，预计生效日期
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getEffectiveDate() {
+        return this.EffectiveDate;
+    }
+
+    /**
+     * Set 异步迁移完成后，预计生效日期
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EffectiveDate 异步迁移完成后，预计生效日期
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEffectiveDate(String EffectiveDate) {
+        this.EffectiveDate = EffectiveDate;
+    }
+
     public TopicInfo() {
     }
 
@@ -623,6 +707,15 @@ HotPeriod=0为没有开启日志沉降。
         if (source.Extends != null) {
             this.Extends = new TopicExtendInfo(source.Extends);
         }
+        if (source.TopicAsyncTaskID != null) {
+            this.TopicAsyncTaskID = new String(source.TopicAsyncTaskID);
+        }
+        if (source.MigrationStatus != null) {
+            this.MigrationStatus = new Long(source.MigrationStatus);
+        }
+        if (source.EffectiveDate != null) {
+            this.EffectiveDate = new String(source.EffectiveDate);
+        }
     }
 
 
@@ -649,6 +742,9 @@ HotPeriod=0为没有开启日志沉降。
         this.setParamSimple(map, prefix + "BizType", this.BizType);
         this.setParamSimple(map, prefix + "IsWebTracking", this.IsWebTracking);
         this.setParamObj(map, prefix + "Extends.", this.Extends);
+        this.setParamSimple(map, prefix + "TopicAsyncTaskID", this.TopicAsyncTaskID);
+        this.setParamSimple(map, prefix + "MigrationStatus", this.MigrationStatus);
+        this.setParamSimple(map, prefix + "EffectiveDate", this.EffectiveDate);
 
     }
 }

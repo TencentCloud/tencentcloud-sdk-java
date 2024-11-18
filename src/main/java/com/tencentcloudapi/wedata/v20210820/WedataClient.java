@@ -314,6 +314,17 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *创建数据建模，提供给云应用使用，实现“Wedata数据建模”的下单发货
+     * @param req CreateDataModelRequest
+     * @return CreateDataModelResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDataModelResponse CreateDataModel(CreateDataModelRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateDataModel", CreateDataModelResponse.class);
+    }
+
+    /**
      *创建数据源
      * @param req CreateDataSourceRequest
      * @return CreateDataSourceResponse
@@ -498,6 +509,17 @@ public class WedataClient extends AbstractClient{
     public DeleteCustomFunctionResponse DeleteCustomFunction(DeleteCustomFunctionRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteCustomFunction", DeleteCustomFunctionResponse.class);
+    }
+
+    /**
+     *销毁数据建模，提供给云应用使用，实现“Wedata数据建模”的销毁
+     * @param req DeleteDataModelRequest
+     * @return DeleteDataModelResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteDataModelResponse DeleteDataModel(DeleteDataModelRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteDataModel", DeleteDataModelResponse.class);
     }
 
     /**
@@ -784,6 +806,28 @@ public class WedataClient extends AbstractClient{
     public DescribeDataCheckStatResponse DescribeDataCheckStat(DescribeDataCheckStatRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeDataCheckStat", DescribeDataCheckStatResponse.class);
+    }
+
+    /**
+     *查询数据服务API的发布态信息
+     * @param req DescribeDataServicePublishedApiDetailRequest
+     * @return DescribeDataServicePublishedApiDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDataServicePublishedApiDetailResponse DescribeDataServicePublishedApiDetail(DescribeDataServicePublishedApiDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDataServicePublishedApiDetail", DescribeDataServicePublishedApiDetailResponse.class);
+    }
+
+    /**
+     *获取数据服务API的发布态信息列表
+     * @param req DescribeDataServicePublishedApiListRequest
+     * @return DescribeDataServicePublishedApiListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDataServicePublishedApiListResponse DescribeDataServicePublishedApiList(DescribeDataServicePublishedApiListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDataServicePublishedApiList", DescribeDataServicePublishedApiListResponse.class);
     }
 
     /**
@@ -1301,6 +1345,17 @@ public class WedataClient extends AbstractClient{
     public DescribeProjectResponse DescribeProject(DescribeProjectRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeProject", DescribeProjectResponse.class);
+    }
+
+    /**
+     *获取项目下的用户，分页返回
+     * @param req DescribeProjectUsersRequest
+     * @return DescribeProjectUsersResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeProjectUsersResponse DescribeProjectUsers(DescribeProjectUsersRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeProjectUsers", DescribeProjectUsersResponse.class);
     }
 
     /**
@@ -2577,6 +2632,17 @@ public class WedataClient extends AbstractClient{
     public UnlockIntegrationTaskResponse UnlockIntegrationTask(UnlockIntegrationTaskRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "UnlockIntegrationTask", UnlockIntegrationTaskResponse.class);
+    }
+
+    /**
+     *数语向wedata注册，提供自身cam角色信息，跳转域名、ip、端口信息等
+     * @param req UpdateDataModelRegistryInfoRequest
+     * @return UpdateDataModelRegistryInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateDataModelRegistryInfoResponse UpdateDataModelRegistryInfo(UpdateDataModelRegistryInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateDataModelRegistryInfo", UpdateDataModelRegistryInfoResponse.class);
     }
 
     /**

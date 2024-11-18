@@ -24,13 +24,6 @@ import java.util.HashMap;
 public class DescribeBlockByIpTimesListRequest extends AbstractModel {
 
     /**
-    * 开始时间
-    */
-    @SerializedName("StartTime")
-    @Expose
-    private String StartTime;
-
-    /**
     * 结束时间
     */
     @SerializedName("EndTime")
@@ -45,11 +38,11 @@ public class DescribeBlockByIpTimesListRequest extends AbstractModel {
     private String Ip;
 
     /**
-    * 地域
+    * 开始时间
     */
-    @SerializedName("Zone")
+    @SerializedName("StartTime")
     @Expose
-    private String Zone;
+    private String StartTime;
 
     /**
     * 方向
@@ -57,13 +50,6 @@ public class DescribeBlockByIpTimesListRequest extends AbstractModel {
     @SerializedName("Direction")
     @Expose
     private String Direction;
-
-    /**
-    * 来源
-    */
-    @SerializedName("Source")
-    @Expose
-    private String Source;
 
     /**
     * vpc间防火墙开关边id
@@ -80,20 +66,18 @@ public class DescribeBlockByIpTimesListRequest extends AbstractModel {
     private String LogSource;
 
     /**
-     * Get 开始时间 
-     * @return StartTime 开始时间
-     */
-    public String getStartTime() {
-        return this.StartTime;
-    }
+    * 来源
+    */
+    @SerializedName("Source")
+    @Expose
+    private String Source;
 
     /**
-     * Set 开始时间
-     * @param StartTime 开始时间
-     */
-    public void setStartTime(String StartTime) {
-        this.StartTime = StartTime;
-    }
+    * 地域
+    */
+    @SerializedName("Zone")
+    @Expose
+    private String Zone;
 
     /**
      * Get 结束时间 
@@ -128,19 +112,19 @@ public class DescribeBlockByIpTimesListRequest extends AbstractModel {
     }
 
     /**
-     * Get 地域 
-     * @return Zone 地域
+     * Get 开始时间 
+     * @return StartTime 开始时间
      */
-    public String getZone() {
-        return this.Zone;
+    public String getStartTime() {
+        return this.StartTime;
     }
 
     /**
-     * Set 地域
-     * @param Zone 地域
+     * Set 开始时间
+     * @param StartTime 开始时间
      */
-    public void setZone(String Zone) {
-        this.Zone = Zone;
+    public void setStartTime(String StartTime) {
+        this.StartTime = StartTime;
     }
 
     /**
@@ -157,22 +141,6 @@ public class DescribeBlockByIpTimesListRequest extends AbstractModel {
      */
     public void setDirection(String Direction) {
         this.Direction = Direction;
-    }
-
-    /**
-     * Get 来源 
-     * @return Source 来源
-     */
-    public String getSource() {
-        return this.Source;
-    }
-
-    /**
-     * Set 来源
-     * @param Source 来源
-     */
-    public void setSource(String Source) {
-        this.Source = Source;
     }
 
     /**
@@ -207,6 +175,38 @@ public class DescribeBlockByIpTimesListRequest extends AbstractModel {
         this.LogSource = LogSource;
     }
 
+    /**
+     * Get 来源 
+     * @return Source 来源
+     */
+    public String getSource() {
+        return this.Source;
+    }
+
+    /**
+     * Set 来源
+     * @param Source 来源
+     */
+    public void setSource(String Source) {
+        this.Source = Source;
+    }
+
+    /**
+     * Get 地域 
+     * @return Zone 地域
+     */
+    public String getZone() {
+        return this.Zone;
+    }
+
+    /**
+     * Set 地域
+     * @param Zone 地域
+     */
+    public void setZone(String Zone) {
+        this.Zone = Zone;
+    }
+
     public DescribeBlockByIpTimesListRequest() {
     }
 
@@ -215,29 +215,29 @@ public class DescribeBlockByIpTimesListRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeBlockByIpTimesListRequest(DescribeBlockByIpTimesListRequest source) {
-        if (source.StartTime != null) {
-            this.StartTime = new String(source.StartTime);
-        }
         if (source.EndTime != null) {
             this.EndTime = new String(source.EndTime);
         }
         if (source.Ip != null) {
             this.Ip = new String(source.Ip);
         }
-        if (source.Zone != null) {
-            this.Zone = new String(source.Zone);
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
         }
         if (source.Direction != null) {
             this.Direction = new String(source.Direction);
-        }
-        if (source.Source != null) {
-            this.Source = new String(source.Source);
         }
         if (source.EdgeId != null) {
             this.EdgeId = new String(source.EdgeId);
         }
         if (source.LogSource != null) {
             this.LogSource = new String(source.LogSource);
+        }
+        if (source.Source != null) {
+            this.Source = new String(source.Source);
+        }
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
         }
     }
 
@@ -246,14 +246,14 @@ public class DescribeBlockByIpTimesListRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "Ip", this.Ip);
-        this.setParamSimple(map, prefix + "Zone", this.Zone);
+        this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "Direction", this.Direction);
-        this.setParamSimple(map, prefix + "Source", this.Source);
         this.setParamSimple(map, prefix + "EdgeId", this.EdgeId);
         this.setParamSimple(map, prefix + "LogSource", this.LogSource);
+        this.setParamSimple(map, prefix + "Source", this.Source);
+        this.setParamSimple(map, prefix + "Zone", this.Zone);
 
     }
 }

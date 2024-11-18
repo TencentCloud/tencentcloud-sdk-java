@@ -45,6 +45,20 @@ public class ModifyImageAttributeRequest extends AbstractModel {
     private String ImageDescription;
 
     /**
+    * 设置镜像族；
+    */
+    @SerializedName("ImageFamily")
+    @Expose
+    private String ImageFamily;
+
+    /**
+    * 设置镜像是否废弃；
+    */
+    @SerializedName("ImageDeprecated")
+    @Expose
+    private Boolean ImageDeprecated;
+
+    /**
      * Get 镜像ID，形如`img-gvbnzy6f`。镜像ID可以通过如下方式获取：<li>通过[DescribeImages](https://cloud.tencent.com/document/api/213/15715)接口返回的`ImageId`获取。</li><li>通过[镜像控制台](https://console.cloud.tencent.com/cvm/image)获取。</li> 
      * @return ImageId 镜像ID，形如`img-gvbnzy6f`。镜像ID可以通过如下方式获取：<li>通过[DescribeImages](https://cloud.tencent.com/document/api/213/15715)接口返回的`ImageId`获取。</li><li>通过[镜像控制台](https://console.cloud.tencent.com/cvm/image)获取。</li>
      */
@@ -92,6 +106,38 @@ public class ModifyImageAttributeRequest extends AbstractModel {
         this.ImageDescription = ImageDescription;
     }
 
+    /**
+     * Get 设置镜像族； 
+     * @return ImageFamily 设置镜像族；
+     */
+    public String getImageFamily() {
+        return this.ImageFamily;
+    }
+
+    /**
+     * Set 设置镜像族；
+     * @param ImageFamily 设置镜像族；
+     */
+    public void setImageFamily(String ImageFamily) {
+        this.ImageFamily = ImageFamily;
+    }
+
+    /**
+     * Get 设置镜像是否废弃； 
+     * @return ImageDeprecated 设置镜像是否废弃；
+     */
+    public Boolean getImageDeprecated() {
+        return this.ImageDeprecated;
+    }
+
+    /**
+     * Set 设置镜像是否废弃；
+     * @param ImageDeprecated 设置镜像是否废弃；
+     */
+    public void setImageDeprecated(Boolean ImageDeprecated) {
+        this.ImageDeprecated = ImageDeprecated;
+    }
+
     public ModifyImageAttributeRequest() {
     }
 
@@ -109,6 +155,12 @@ public class ModifyImageAttributeRequest extends AbstractModel {
         if (source.ImageDescription != null) {
             this.ImageDescription = new String(source.ImageDescription);
         }
+        if (source.ImageFamily != null) {
+            this.ImageFamily = new String(source.ImageFamily);
+        }
+        if (source.ImageDeprecated != null) {
+            this.ImageDeprecated = new Boolean(source.ImageDeprecated);
+        }
     }
 
 
@@ -119,6 +171,8 @@ public class ModifyImageAttributeRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ImageId", this.ImageId);
         this.setParamSimple(map, prefix + "ImageName", this.ImageName);
         this.setParamSimple(map, prefix + "ImageDescription", this.ImageDescription);
+        this.setParamSimple(map, prefix + "ImageFamily", this.ImageFamily);
+        this.setParamSimple(map, prefix + "ImageDeprecated", this.ImageDeprecated);
 
     }
 }

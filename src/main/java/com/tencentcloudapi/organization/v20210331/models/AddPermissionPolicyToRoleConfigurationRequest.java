@@ -66,6 +66,13 @@ public class AddPermissionPolicyToRoleConfigurationRequest extends AbstractModel
     private String CustomPolicyDocument;
 
     /**
+    * 自定义策略内容列表（跟RolePolicyNames一一对应）
+    */
+    @SerializedName("CustomPolicyDocuments")
+    @Expose
+    private String [] CustomPolicyDocuments;
+
+    /**
      * Get 空间 ID 
      * @return ZoneId 空间 ID
      */
@@ -161,6 +168,22 @@ public class AddPermissionPolicyToRoleConfigurationRequest extends AbstractModel
         this.CustomPolicyDocument = CustomPolicyDocument;
     }
 
+    /**
+     * Get 自定义策略内容列表（跟RolePolicyNames一一对应） 
+     * @return CustomPolicyDocuments 自定义策略内容列表（跟RolePolicyNames一一对应）
+     */
+    public String [] getCustomPolicyDocuments() {
+        return this.CustomPolicyDocuments;
+    }
+
+    /**
+     * Set 自定义策略内容列表（跟RolePolicyNames一一对应）
+     * @param CustomPolicyDocuments 自定义策略内容列表（跟RolePolicyNames一一对应）
+     */
+    public void setCustomPolicyDocuments(String [] CustomPolicyDocuments) {
+        this.CustomPolicyDocuments = CustomPolicyDocuments;
+    }
+
     public AddPermissionPolicyToRoleConfigurationRequest() {
     }
 
@@ -193,6 +216,12 @@ public class AddPermissionPolicyToRoleConfigurationRequest extends AbstractModel
         if (source.CustomPolicyDocument != null) {
             this.CustomPolicyDocument = new String(source.CustomPolicyDocument);
         }
+        if (source.CustomPolicyDocuments != null) {
+            this.CustomPolicyDocuments = new String[source.CustomPolicyDocuments.length];
+            for (int i = 0; i < source.CustomPolicyDocuments.length; i++) {
+                this.CustomPolicyDocuments[i] = new String(source.CustomPolicyDocuments[i]);
+            }
+        }
     }
 
 
@@ -206,6 +235,7 @@ public class AddPermissionPolicyToRoleConfigurationRequest extends AbstractModel
         this.setParamArraySimple(map, prefix + "RolePolicyNames.", this.RolePolicyNames);
         this.setParamArrayObj(map, prefix + "RolePolicies.", this.RolePolicies);
         this.setParamSimple(map, prefix + "CustomPolicyDocument", this.CustomPolicyDocument);
+        this.setParamArraySimple(map, prefix + "CustomPolicyDocuments.", this.CustomPolicyDocuments);
 
     }
 }

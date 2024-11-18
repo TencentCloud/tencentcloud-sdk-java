@@ -38,8 +38,9 @@ public class ResultsReturnsByGroup extends AbstractModel {
     private GroupCandidate [] GroupCandidates;
 
     /**
-    * 检测出的人脸图片状态返回码。0 表示正常。 
--1601代表不符合图片质量控制要求，此时Candidate内容为空。
+    * 检测出的人脸图片状态返回码。
+- 0 表示正常。 
+- -1601代表不符合图片质量控制要求，此时Candidate内容为空。
     */
     @SerializedName("RetCode")
     @Expose
@@ -78,20 +79,24 @@ public class ResultsReturnsByGroup extends AbstractModel {
     }
 
     /**
-     * Get 检测出的人脸图片状态返回码。0 表示正常。 
--1601代表不符合图片质量控制要求，此时Candidate内容为空。 
-     * @return RetCode 检测出的人脸图片状态返回码。0 表示正常。 
--1601代表不符合图片质量控制要求，此时Candidate内容为空。
+     * Get 检测出的人脸图片状态返回码。
+- 0 表示正常。 
+- -1601代表不符合图片质量控制要求，此时Candidate内容为空。 
+     * @return RetCode 检测出的人脸图片状态返回码。
+- 0 表示正常。 
+- -1601代表不符合图片质量控制要求，此时Candidate内容为空。
      */
     public Long getRetCode() {
         return this.RetCode;
     }
 
     /**
-     * Set 检测出的人脸图片状态返回码。0 表示正常。 
--1601代表不符合图片质量控制要求，此时Candidate内容为空。
-     * @param RetCode 检测出的人脸图片状态返回码。0 表示正常。 
--1601代表不符合图片质量控制要求，此时Candidate内容为空。
+     * Set 检测出的人脸图片状态返回码。
+- 0 表示正常。 
+- -1601代表不符合图片质量控制要求，此时Candidate内容为空。
+     * @param RetCode 检测出的人脸图片状态返回码。
+- 0 表示正常。 
+- -1601代表不符合图片质量控制要求，此时Candidate内容为空。
      */
     public void setRetCode(Long RetCode) {
         this.RetCode = RetCode;

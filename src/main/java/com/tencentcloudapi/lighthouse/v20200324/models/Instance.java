@@ -246,6 +246,14 @@ FAILED：表示操作失败
     private String InitInvocationId;
 
     /**
+    * 实例违规详情。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InstanceViolationDetail")
+    @Expose
+    private InstanceViolationDetail InstanceViolationDetail;
+
+    /**
      * Get 实例 ID。 
      * @return InstanceId 实例 ID。
      */
@@ -785,6 +793,26 @@ FAILED：表示操作失败
         this.InitInvocationId = InitInvocationId;
     }
 
+    /**
+     * Get 实例违规详情。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InstanceViolationDetail 实例违规详情。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public InstanceViolationDetail getInstanceViolationDetail() {
+        return this.InstanceViolationDetail;
+    }
+
+    /**
+     * Set 实例违规详情。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstanceViolationDetail 实例违规详情。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInstanceViolationDetail(InstanceViolationDetail InstanceViolationDetail) {
+        this.InstanceViolationDetail = InstanceViolationDetail;
+    }
+
     public Instance() {
     }
 
@@ -889,6 +917,9 @@ FAILED：表示操作失败
         if (source.InitInvocationId != null) {
             this.InitInvocationId = new String(source.InitInvocationId);
         }
+        if (source.InstanceViolationDetail != null) {
+            this.InstanceViolationDetail = new InstanceViolationDetail(source.InstanceViolationDetail);
+        }
     }
 
 
@@ -925,6 +956,7 @@ FAILED：表示操作失败
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "InstanceRestrictState", this.InstanceRestrictState);
         this.setParamSimple(map, prefix + "InitInvocationId", this.InitInvocationId);
+        this.setParamObj(map, prefix + "InstanceViolationDetail.", this.InstanceViolationDetail);
 
     }
 }

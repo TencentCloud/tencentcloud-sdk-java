@@ -32,7 +32,6 @@ public class DescribeHostLoginListResponse extends AbstractModel {
 
     /**
     * 登录审计列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HostLoginList")
     @Expose
@@ -62,10 +61,8 @@ public class DescribeHostLoginListResponse extends AbstractModel {
     }
 
     /**
-     * Get 登录审计列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 登录审计列表 
      * @return HostLoginList 登录审计列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public HostLoginList [] getHostLoginList() {
         return this.HostLoginList;
@@ -73,9 +70,7 @@ public class DescribeHostLoginListResponse extends AbstractModel {
 
     /**
      * Set 登录审计列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HostLoginList 登录审计列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHostLoginList(HostLoginList [] HostLoginList) {
         this.HostLoginList = HostLoginList;

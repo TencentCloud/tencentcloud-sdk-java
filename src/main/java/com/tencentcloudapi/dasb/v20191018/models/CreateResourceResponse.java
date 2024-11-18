@@ -25,7 +25,6 @@ public class CreateResourceResponse extends AbstractModel {
 
     /**
     * 实例Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceId")
     @Expose
@@ -39,10 +38,8 @@ public class CreateResourceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 实例Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例Id 
      * @return ResourceId 实例Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceId() {
         return this.ResourceId;
@@ -50,9 +47,7 @@ public class CreateResourceResponse extends AbstractModel {
 
     /**
      * Set 实例Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceId 实例Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;

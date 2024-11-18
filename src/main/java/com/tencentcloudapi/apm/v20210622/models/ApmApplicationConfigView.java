@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ApmApplicationConfigView extends AbstractModel {
 
     /**
-    * 实例ID	
+    * 业务系统ID	
     */
     @SerializedName("InstanceKey")
     @Expose
     private String InstanceKey;
 
     /**
-    * 服务名	
+    * 应用名	
     */
     @SerializedName("ServiceName")
     @Expose
@@ -45,21 +45,21 @@ public class ApmApplicationConfigView extends AbstractModel {
     private String OperationNameFilter;
 
     /**
-    * 异常过滤
+    * 错误类型过滤
     */
     @SerializedName("ExceptionFilter")
     @Expose
     private String ExceptionFilter;
 
     /**
-    * 错误码过滤	
+    * HTTP状态码过滤
     */
     @SerializedName("ErrorCodeFilter")
     @Expose
     private String ErrorCodeFilter;
 
     /**
-    * 应用诊断开关
+    * 应用诊断开关（已废弃）
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EventEnable")
@@ -102,7 +102,7 @@ public class ApmApplicationConfigView extends AbstractModel {
     private Long IsRelatedLog;
 
     /**
-    * 日志来源	
+    * 日志源	
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LogSource")
@@ -110,42 +110,42 @@ public class ApmApplicationConfigView extends AbstractModel {
     private String LogSource;
 
     /**
-    * CLS日志集 
+    * 日志集 
     */
     @SerializedName("LogSet")
     @Expose
     private String LogSet;
 
     /**
-    * 日志主题ID
+    * 日志主题
     */
     @SerializedName("LogTopicID")
     @Expose
     private String LogTopicID;
 
     /**
-    * 线程剖析开关
+    * 方法栈快照开关 true 开启 false 关闭
     */
     @SerializedName("SnapshotEnable")
     @Expose
     private Boolean SnapshotEnable;
 
     /**
-    * 线程剖析超时阈值	
+    * 慢调用监听触发阈值
     */
     @SerializedName("SnapshotTimeout")
     @Expose
     private Long SnapshotTimeout;
 
     /**
-    * 探针开启开关
+    * 探针总开关
     */
     @SerializedName("AgentEnable")
     @Expose
     private Boolean AgentEnable;
 
     /**
-    * 组件列表开关
+    * 组件列表开关（已废弃）
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstrumentList")
@@ -153,39 +153,39 @@ public class ApmApplicationConfigView extends AbstractModel {
     private Instrument [] InstrumentList;
 
     /**
-    * 链路压缩开关
+    * 链路压缩开关（已废弃）
     */
     @SerializedName("TraceSquash")
     @Expose
     private Boolean TraceSquash;
 
     /**
-     * Get 实例ID	 
-     * @return InstanceKey 实例ID	
+     * Get 业务系统ID	 
+     * @return InstanceKey 业务系统ID	
      */
     public String getInstanceKey() {
         return this.InstanceKey;
     }
 
     /**
-     * Set 实例ID	
-     * @param InstanceKey 实例ID	
+     * Set 业务系统ID	
+     * @param InstanceKey 业务系统ID	
      */
     public void setInstanceKey(String InstanceKey) {
         this.InstanceKey = InstanceKey;
     }
 
     /**
-     * Get 服务名	 
-     * @return ServiceName 服务名	
+     * Get 应用名	 
+     * @return ServiceName 应用名	
      */
     public String getServiceName() {
         return this.ServiceName;
     }
 
     /**
-     * Set 服务名	
-     * @param ServiceName 服务名	
+     * Set 应用名	
+     * @param ServiceName 应用名	
      */
     public void setServiceName(String ServiceName) {
         this.ServiceName = ServiceName;
@@ -208,41 +208,41 @@ public class ApmApplicationConfigView extends AbstractModel {
     }
 
     /**
-     * Get 异常过滤 
-     * @return ExceptionFilter 异常过滤
+     * Get 错误类型过滤 
+     * @return ExceptionFilter 错误类型过滤
      */
     public String getExceptionFilter() {
         return this.ExceptionFilter;
     }
 
     /**
-     * Set 异常过滤
-     * @param ExceptionFilter 异常过滤
+     * Set 错误类型过滤
+     * @param ExceptionFilter 错误类型过滤
      */
     public void setExceptionFilter(String ExceptionFilter) {
         this.ExceptionFilter = ExceptionFilter;
     }
 
     /**
-     * Get 错误码过滤	 
-     * @return ErrorCodeFilter 错误码过滤	
+     * Get HTTP状态码过滤 
+     * @return ErrorCodeFilter HTTP状态码过滤
      */
     public String getErrorCodeFilter() {
         return this.ErrorCodeFilter;
     }
 
     /**
-     * Set 错误码过滤	
-     * @param ErrorCodeFilter 错误码过滤	
+     * Set HTTP状态码过滤
+     * @param ErrorCodeFilter HTTP状态码过滤
      */
     public void setErrorCodeFilter(String ErrorCodeFilter) {
         this.ErrorCodeFilter = ErrorCodeFilter;
     }
 
     /**
-     * Get 应用诊断开关
+     * Get 应用诊断开关（已废弃）
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return EventEnable 应用诊断开关
+     * @return EventEnable 应用诊断开关（已废弃）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getEventEnable() {
@@ -250,9 +250,9 @@ public class ApmApplicationConfigView extends AbstractModel {
     }
 
     /**
-     * Set 应用诊断开关
+     * Set 应用诊断开关（已废弃）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param EventEnable 应用诊断开关
+     * @param EventEnable 应用诊断开关（已废弃）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEventEnable(Boolean EventEnable) {
@@ -340,9 +340,9 @@ public class ApmApplicationConfigView extends AbstractModel {
     }
 
     /**
-     * Get 日志来源	
+     * Get 日志源	
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LogSource 日志来源	
+     * @return LogSource 日志源	
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLogSource() {
@@ -350,9 +350,9 @@ public class ApmApplicationConfigView extends AbstractModel {
     }
 
     /**
-     * Set 日志来源	
+     * Set 日志源	
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LogSource 日志来源	
+     * @param LogSource 日志源	
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLogSource(String LogSource) {
@@ -360,89 +360,89 @@ public class ApmApplicationConfigView extends AbstractModel {
     }
 
     /**
-     * Get CLS日志集  
-     * @return LogSet CLS日志集 
+     * Get 日志集  
+     * @return LogSet 日志集 
      */
     public String getLogSet() {
         return this.LogSet;
     }
 
     /**
-     * Set CLS日志集 
-     * @param LogSet CLS日志集 
+     * Set 日志集 
+     * @param LogSet 日志集 
      */
     public void setLogSet(String LogSet) {
         this.LogSet = LogSet;
     }
 
     /**
-     * Get 日志主题ID 
-     * @return LogTopicID 日志主题ID
+     * Get 日志主题 
+     * @return LogTopicID 日志主题
      */
     public String getLogTopicID() {
         return this.LogTopicID;
     }
 
     /**
-     * Set 日志主题ID
-     * @param LogTopicID 日志主题ID
+     * Set 日志主题
+     * @param LogTopicID 日志主题
      */
     public void setLogTopicID(String LogTopicID) {
         this.LogTopicID = LogTopicID;
     }
 
     /**
-     * Get 线程剖析开关 
-     * @return SnapshotEnable 线程剖析开关
+     * Get 方法栈快照开关 true 开启 false 关闭 
+     * @return SnapshotEnable 方法栈快照开关 true 开启 false 关闭
      */
     public Boolean getSnapshotEnable() {
         return this.SnapshotEnable;
     }
 
     /**
-     * Set 线程剖析开关
-     * @param SnapshotEnable 线程剖析开关
+     * Set 方法栈快照开关 true 开启 false 关闭
+     * @param SnapshotEnable 方法栈快照开关 true 开启 false 关闭
      */
     public void setSnapshotEnable(Boolean SnapshotEnable) {
         this.SnapshotEnable = SnapshotEnable;
     }
 
     /**
-     * Get 线程剖析超时阈值	 
-     * @return SnapshotTimeout 线程剖析超时阈值	
+     * Get 慢调用监听触发阈值 
+     * @return SnapshotTimeout 慢调用监听触发阈值
      */
     public Long getSnapshotTimeout() {
         return this.SnapshotTimeout;
     }
 
     /**
-     * Set 线程剖析超时阈值	
-     * @param SnapshotTimeout 线程剖析超时阈值	
+     * Set 慢调用监听触发阈值
+     * @param SnapshotTimeout 慢调用监听触发阈值
      */
     public void setSnapshotTimeout(Long SnapshotTimeout) {
         this.SnapshotTimeout = SnapshotTimeout;
     }
 
     /**
-     * Get 探针开启开关 
-     * @return AgentEnable 探针开启开关
+     * Get 探针总开关 
+     * @return AgentEnable 探针总开关
      */
     public Boolean getAgentEnable() {
         return this.AgentEnable;
     }
 
     /**
-     * Set 探针开启开关
-     * @param AgentEnable 探针开启开关
+     * Set 探针总开关
+     * @param AgentEnable 探针总开关
      */
     public void setAgentEnable(Boolean AgentEnable) {
         this.AgentEnable = AgentEnable;
     }
 
     /**
-     * Get 组件列表开关
+     * Get 组件列表开关（已废弃）
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InstrumentList 组件列表开关
+     * @return InstrumentList 组件列表开关（已废弃）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Instrument [] getInstrumentList() {
@@ -450,9 +450,9 @@ public class ApmApplicationConfigView extends AbstractModel {
     }
 
     /**
-     * Set 组件列表开关
+     * Set 组件列表开关（已废弃）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InstrumentList 组件列表开关
+     * @param InstrumentList 组件列表开关（已废弃）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstrumentList(Instrument [] InstrumentList) {
@@ -460,16 +460,16 @@ public class ApmApplicationConfigView extends AbstractModel {
     }
 
     /**
-     * Get 链路压缩开关 
-     * @return TraceSquash 链路压缩开关
+     * Get 链路压缩开关（已废弃） 
+     * @return TraceSquash 链路压缩开关（已废弃）
      */
     public Boolean getTraceSquash() {
         return this.TraceSquash;
     }
 
     /**
-     * Set 链路压缩开关
-     * @param TraceSquash 链路压缩开关
+     * Set 链路压缩开关（已废弃）
+     * @param TraceSquash 链路压缩开关（已废弃）
      */
     public void setTraceSquash(Boolean TraceSquash) {
         this.TraceSquash = TraceSquash;

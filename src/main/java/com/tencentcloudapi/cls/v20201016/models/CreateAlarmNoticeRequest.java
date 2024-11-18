@@ -31,55 +31,79 @@ public class CreateAlarmNoticeRequest extends AbstractModel {
     private String Name;
 
     /**
-    * 通知类型。可选值：
+    * 标签描述列表，通过指定该参数可以同时绑定标签到相应的通知渠道组。最大支持50个标签键值对，并且不能有重复的键值对。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
+    * 【简易模式】（简易模式/告警模式二选一，分别配置相应参数）
+需要发送通知的告警类型。可选值：
 - Trigger - 告警触发
 - Recovery - 告警恢复
 - All - 告警触发和告警恢复
-
-
- 注意:  
-- Type、NoticeReceivers和WebCallbacks是一组rule配置，其中Type必填，NoticeReceivers和WebCallbacks至少一个不为空；NoticeRules是另一组rule配置，其中rule不许为空
-- 2组rule配置互斥
-- rule配置 与 deliver配置（DeliverStatus与DeliverConfig）至少填写一组配置
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 通知接收对象。
- 注意:  
-- Type、NoticeReceivers和WebCallbacks是一组rule配置，其中Type必填，NoticeReceivers和WebCallbacks至少一个不为空；NoticeRules是另一组rule配置，其中rule不许为空
-- 2组rule配置互斥
-- rule配置 与 deliver配置（DeliverStatus与DeliverConfig）至少填写一组配置
+    * 【简易模式】（简易模式/告警模式二选一，分别配置相应参数）
+通知接收对象。
     */
     @SerializedName("NoticeReceivers")
     @Expose
     private NoticeReceiver [] NoticeReceivers;
 
     /**
-    * 接口回调信息（包括企业微信）。
- 注意:  
-- Type、NoticeReceivers和WebCallbacks是一组rule配置，其中Type必填，NoticeReceivers和WebCallbacks至少一个不为空；NoticeRules是另一组rule配置，其中rule不许为空
-- 2组rule配置互斥
-- rule配置 与 deliver配置（DeliverStatus与DeliverConfig）至少填写一组配置
+    * 【简易模式】（简易模式/告警模式二选一，分别配置相应参数）
+接口回调信息（包括企业微信、钉钉、飞书）。
     */
     @SerializedName("WebCallbacks")
     @Expose
     private WebCallback [] WebCallbacks;
 
     /**
-    * 通知规则。
- 注意:  
-- Type、NoticeReceivers和WebCallbacks是一组rule配置，其中Type必填，NoticeReceivers和WebCallbacks至少一个不为空；NoticeRules是另一组rule配置，其中rule不许为空
-- 2组rule配置互斥
-- rule配置 与 deliver配置（DeliverStatus与DeliverConfig）至少填写一组配置
-
-
+    * 【高级模式】（简易模式/告警模式二选一，分别配置相应参数）
+通知规则。
     */
     @SerializedName("NoticeRules")
     @Expose
     private NoticeRule [] NoticeRules;
+
+    /**
+    * 查询数据链接。http:// 或者 https:// 开头，不能/结尾
+    */
+    @SerializedName("JumpDomain")
+    @Expose
+    private String JumpDomain;
+
+    /**
+    * 投递日志开关。可取值如下：
+1：关闭（默认值）；
+2：开启 
+投递日志开关开启时， DeliverConfig参数必填。
+    */
+    @SerializedName("DeliverStatus")
+    @Expose
+    private Long DeliverStatus;
+
+    /**
+    * 投递日志配置参数。当DeliverStatus开启时，必填。
+    */
+    @SerializedName("DeliverConfig")
+    @Expose
+    private DeliverConfig DeliverConfig;
+
+    /**
+    * 免登录操作告警开关。可取值如下：
+-      1：关闭
+-      2：开启（默认值）
+    */
+    @SerializedName("AlarmShieldStatus")
+    @Expose
+    private Long AlarmShieldStatus;
 
     /**
      * Get 通知渠道组名称。 
@@ -98,159 +122,195 @@ public class CreateAlarmNoticeRequest extends AbstractModel {
     }
 
     /**
-     * Get 通知类型。可选值：
+     * Get 标签描述列表，通过指定该参数可以同时绑定标签到相应的通知渠道组。最大支持50个标签键值对，并且不能有重复的键值对。 
+     * @return Tags 标签描述列表，通过指定该参数可以同时绑定标签到相应的通知渠道组。最大支持50个标签键值对，并且不能有重复的键值对。
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 标签描述列表，通过指定该参数可以同时绑定标签到相应的通知渠道组。最大支持50个标签键值对，并且不能有重复的键值对。
+     * @param Tags 标签描述列表，通过指定该参数可以同时绑定标签到相应的通知渠道组。最大支持50个标签键值对，并且不能有重复的键值对。
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
+     * Get 【简易模式】（简易模式/告警模式二选一，分别配置相应参数）
+需要发送通知的告警类型。可选值：
+- Trigger - 告警触发
+- Recovery - 告警恢复
+- All - 告警触发和告警恢复 
+     * @return Type 【简易模式】（简易模式/告警模式二选一，分别配置相应参数）
+需要发送通知的告警类型。可选值：
 - Trigger - 告警触发
 - Recovery - 告警恢复
 - All - 告警触发和告警恢复
-
-
- 注意:  
-- Type、NoticeReceivers和WebCallbacks是一组rule配置，其中Type必填，NoticeReceivers和WebCallbacks至少一个不为空；NoticeRules是另一组rule配置，其中rule不许为空
-- 2组rule配置互斥
-- rule配置 与 deliver配置（DeliverStatus与DeliverConfig）至少填写一组配置 
-     * @return Type 通知类型。可选值：
-- Trigger - 告警触发
-- Recovery - 告警恢复
-- All - 告警触发和告警恢复
-
-
- 注意:  
-- Type、NoticeReceivers和WebCallbacks是一组rule配置，其中Type必填，NoticeReceivers和WebCallbacks至少一个不为空；NoticeRules是另一组rule配置，其中rule不许为空
-- 2组rule配置互斥
-- rule配置 与 deliver配置（DeliverStatus与DeliverConfig）至少填写一组配置
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 通知类型。可选值：
+     * Set 【简易模式】（简易模式/告警模式二选一，分别配置相应参数）
+需要发送通知的告警类型。可选值：
 - Trigger - 告警触发
 - Recovery - 告警恢复
 - All - 告警触发和告警恢复
-
-
- 注意:  
-- Type、NoticeReceivers和WebCallbacks是一组rule配置，其中Type必填，NoticeReceivers和WebCallbacks至少一个不为空；NoticeRules是另一组rule配置，其中rule不许为空
-- 2组rule配置互斥
-- rule配置 与 deliver配置（DeliverStatus与DeliverConfig）至少填写一组配置
-     * @param Type 通知类型。可选值：
+     * @param Type 【简易模式】（简易模式/告警模式二选一，分别配置相应参数）
+需要发送通知的告警类型。可选值：
 - Trigger - 告警触发
 - Recovery - 告警恢复
 - All - 告警触发和告警恢复
-
-
- 注意:  
-- Type、NoticeReceivers和WebCallbacks是一组rule配置，其中Type必填，NoticeReceivers和WebCallbacks至少一个不为空；NoticeRules是另一组rule配置，其中rule不许为空
-- 2组rule配置互斥
-- rule配置 与 deliver配置（DeliverStatus与DeliverConfig）至少填写一组配置
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 通知接收对象。
- 注意:  
-- Type、NoticeReceivers和WebCallbacks是一组rule配置，其中Type必填，NoticeReceivers和WebCallbacks至少一个不为空；NoticeRules是另一组rule配置，其中rule不许为空
-- 2组rule配置互斥
-- rule配置 与 deliver配置（DeliverStatus与DeliverConfig）至少填写一组配置 
-     * @return NoticeReceivers 通知接收对象。
- 注意:  
-- Type、NoticeReceivers和WebCallbacks是一组rule配置，其中Type必填，NoticeReceivers和WebCallbacks至少一个不为空；NoticeRules是另一组rule配置，其中rule不许为空
-- 2组rule配置互斥
-- rule配置 与 deliver配置（DeliverStatus与DeliverConfig）至少填写一组配置
+     * Get 【简易模式】（简易模式/告警模式二选一，分别配置相应参数）
+通知接收对象。 
+     * @return NoticeReceivers 【简易模式】（简易模式/告警模式二选一，分别配置相应参数）
+通知接收对象。
      */
     public NoticeReceiver [] getNoticeReceivers() {
         return this.NoticeReceivers;
     }
 
     /**
-     * Set 通知接收对象。
- 注意:  
-- Type、NoticeReceivers和WebCallbacks是一组rule配置，其中Type必填，NoticeReceivers和WebCallbacks至少一个不为空；NoticeRules是另一组rule配置，其中rule不许为空
-- 2组rule配置互斥
-- rule配置 与 deliver配置（DeliverStatus与DeliverConfig）至少填写一组配置
-     * @param NoticeReceivers 通知接收对象。
- 注意:  
-- Type、NoticeReceivers和WebCallbacks是一组rule配置，其中Type必填，NoticeReceivers和WebCallbacks至少一个不为空；NoticeRules是另一组rule配置，其中rule不许为空
-- 2组rule配置互斥
-- rule配置 与 deliver配置（DeliverStatus与DeliverConfig）至少填写一组配置
+     * Set 【简易模式】（简易模式/告警模式二选一，分别配置相应参数）
+通知接收对象。
+     * @param NoticeReceivers 【简易模式】（简易模式/告警模式二选一，分别配置相应参数）
+通知接收对象。
      */
     public void setNoticeReceivers(NoticeReceiver [] NoticeReceivers) {
         this.NoticeReceivers = NoticeReceivers;
     }
 
     /**
-     * Get 接口回调信息（包括企业微信）。
- 注意:  
-- Type、NoticeReceivers和WebCallbacks是一组rule配置，其中Type必填，NoticeReceivers和WebCallbacks至少一个不为空；NoticeRules是另一组rule配置，其中rule不许为空
-- 2组rule配置互斥
-- rule配置 与 deliver配置（DeliverStatus与DeliverConfig）至少填写一组配置 
-     * @return WebCallbacks 接口回调信息（包括企业微信）。
- 注意:  
-- Type、NoticeReceivers和WebCallbacks是一组rule配置，其中Type必填，NoticeReceivers和WebCallbacks至少一个不为空；NoticeRules是另一组rule配置，其中rule不许为空
-- 2组rule配置互斥
-- rule配置 与 deliver配置（DeliverStatus与DeliverConfig）至少填写一组配置
+     * Get 【简易模式】（简易模式/告警模式二选一，分别配置相应参数）
+接口回调信息（包括企业微信、钉钉、飞书）。 
+     * @return WebCallbacks 【简易模式】（简易模式/告警模式二选一，分别配置相应参数）
+接口回调信息（包括企业微信、钉钉、飞书）。
      */
     public WebCallback [] getWebCallbacks() {
         return this.WebCallbacks;
     }
 
     /**
-     * Set 接口回调信息（包括企业微信）。
- 注意:  
-- Type、NoticeReceivers和WebCallbacks是一组rule配置，其中Type必填，NoticeReceivers和WebCallbacks至少一个不为空；NoticeRules是另一组rule配置，其中rule不许为空
-- 2组rule配置互斥
-- rule配置 与 deliver配置（DeliverStatus与DeliverConfig）至少填写一组配置
-     * @param WebCallbacks 接口回调信息（包括企业微信）。
- 注意:  
-- Type、NoticeReceivers和WebCallbacks是一组rule配置，其中Type必填，NoticeReceivers和WebCallbacks至少一个不为空；NoticeRules是另一组rule配置，其中rule不许为空
-- 2组rule配置互斥
-- rule配置 与 deliver配置（DeliverStatus与DeliverConfig）至少填写一组配置
+     * Set 【简易模式】（简易模式/告警模式二选一，分别配置相应参数）
+接口回调信息（包括企业微信、钉钉、飞书）。
+     * @param WebCallbacks 【简易模式】（简易模式/告警模式二选一，分别配置相应参数）
+接口回调信息（包括企业微信、钉钉、飞书）。
      */
     public void setWebCallbacks(WebCallback [] WebCallbacks) {
         this.WebCallbacks = WebCallbacks;
     }
 
     /**
-     * Get 通知规则。
- 注意:  
-- Type、NoticeReceivers和WebCallbacks是一组rule配置，其中Type必填，NoticeReceivers和WebCallbacks至少一个不为空；NoticeRules是另一组rule配置，其中rule不许为空
-- 2组rule配置互斥
-- rule配置 与 deliver配置（DeliverStatus与DeliverConfig）至少填写一组配置
-
- 
-     * @return NoticeRules 通知规则。
- 注意:  
-- Type、NoticeReceivers和WebCallbacks是一组rule配置，其中Type必填，NoticeReceivers和WebCallbacks至少一个不为空；NoticeRules是另一组rule配置，其中rule不许为空
-- 2组rule配置互斥
-- rule配置 与 deliver配置（DeliverStatus与DeliverConfig）至少填写一组配置
-
-
+     * Get 【高级模式】（简易模式/告警模式二选一，分别配置相应参数）
+通知规则。 
+     * @return NoticeRules 【高级模式】（简易模式/告警模式二选一，分别配置相应参数）
+通知规则。
      */
     public NoticeRule [] getNoticeRules() {
         return this.NoticeRules;
     }
 
     /**
-     * Set 通知规则。
- 注意:  
-- Type、NoticeReceivers和WebCallbacks是一组rule配置，其中Type必填，NoticeReceivers和WebCallbacks至少一个不为空；NoticeRules是另一组rule配置，其中rule不许为空
-- 2组rule配置互斥
-- rule配置 与 deliver配置（DeliverStatus与DeliverConfig）至少填写一组配置
-
-
-     * @param NoticeRules 通知规则。
- 注意:  
-- Type、NoticeReceivers和WebCallbacks是一组rule配置，其中Type必填，NoticeReceivers和WebCallbacks至少一个不为空；NoticeRules是另一组rule配置，其中rule不许为空
-- 2组rule配置互斥
-- rule配置 与 deliver配置（DeliverStatus与DeliverConfig）至少填写一组配置
-
-
+     * Set 【高级模式】（简易模式/告警模式二选一，分别配置相应参数）
+通知规则。
+     * @param NoticeRules 【高级模式】（简易模式/告警模式二选一，分别配置相应参数）
+通知规则。
      */
     public void setNoticeRules(NoticeRule [] NoticeRules) {
         this.NoticeRules = NoticeRules;
+    }
+
+    /**
+     * Get 查询数据链接。http:// 或者 https:// 开头，不能/结尾 
+     * @return JumpDomain 查询数据链接。http:// 或者 https:// 开头，不能/结尾
+     */
+    public String getJumpDomain() {
+        return this.JumpDomain;
+    }
+
+    /**
+     * Set 查询数据链接。http:// 或者 https:// 开头，不能/结尾
+     * @param JumpDomain 查询数据链接。http:// 或者 https:// 开头，不能/结尾
+     */
+    public void setJumpDomain(String JumpDomain) {
+        this.JumpDomain = JumpDomain;
+    }
+
+    /**
+     * Get 投递日志开关。可取值如下：
+1：关闭（默认值）；
+2：开启 
+投递日志开关开启时， DeliverConfig参数必填。 
+     * @return DeliverStatus 投递日志开关。可取值如下：
+1：关闭（默认值）；
+2：开启 
+投递日志开关开启时， DeliverConfig参数必填。
+     */
+    public Long getDeliverStatus() {
+        return this.DeliverStatus;
+    }
+
+    /**
+     * Set 投递日志开关。可取值如下：
+1：关闭（默认值）；
+2：开启 
+投递日志开关开启时， DeliverConfig参数必填。
+     * @param DeliverStatus 投递日志开关。可取值如下：
+1：关闭（默认值）；
+2：开启 
+投递日志开关开启时， DeliverConfig参数必填。
+     */
+    public void setDeliverStatus(Long DeliverStatus) {
+        this.DeliverStatus = DeliverStatus;
+    }
+
+    /**
+     * Get 投递日志配置参数。当DeliverStatus开启时，必填。 
+     * @return DeliverConfig 投递日志配置参数。当DeliverStatus开启时，必填。
+     */
+    public DeliverConfig getDeliverConfig() {
+        return this.DeliverConfig;
+    }
+
+    /**
+     * Set 投递日志配置参数。当DeliverStatus开启时，必填。
+     * @param DeliverConfig 投递日志配置参数。当DeliverStatus开启时，必填。
+     */
+    public void setDeliverConfig(DeliverConfig DeliverConfig) {
+        this.DeliverConfig = DeliverConfig;
+    }
+
+    /**
+     * Get 免登录操作告警开关。可取值如下：
+-      1：关闭
+-      2：开启（默认值） 
+     * @return AlarmShieldStatus 免登录操作告警开关。可取值如下：
+-      1：关闭
+-      2：开启（默认值）
+     */
+    public Long getAlarmShieldStatus() {
+        return this.AlarmShieldStatus;
+    }
+
+    /**
+     * Set 免登录操作告警开关。可取值如下：
+-      1：关闭
+-      2：开启（默认值）
+     * @param AlarmShieldStatus 免登录操作告警开关。可取值如下：
+-      1：关闭
+-      2：开启（默认值）
+     */
+    public void setAlarmShieldStatus(Long AlarmShieldStatus) {
+        this.AlarmShieldStatus = AlarmShieldStatus;
     }
 
     public CreateAlarmNoticeRequest() {
@@ -263,6 +323,12 @@ public class CreateAlarmNoticeRequest extends AbstractModel {
     public CreateAlarmNoticeRequest(CreateAlarmNoticeRequest source) {
         if (source.Name != null) {
             this.Name = new String(source.Name);
+        }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
         }
         if (source.Type != null) {
             this.Type = new String(source.Type);
@@ -285,6 +351,18 @@ public class CreateAlarmNoticeRequest extends AbstractModel {
                 this.NoticeRules[i] = new NoticeRule(source.NoticeRules[i]);
             }
         }
+        if (source.JumpDomain != null) {
+            this.JumpDomain = new String(source.JumpDomain);
+        }
+        if (source.DeliverStatus != null) {
+            this.DeliverStatus = new Long(source.DeliverStatus);
+        }
+        if (source.DeliverConfig != null) {
+            this.DeliverConfig = new DeliverConfig(source.DeliverConfig);
+        }
+        if (source.AlarmShieldStatus != null) {
+            this.AlarmShieldStatus = new Long(source.AlarmShieldStatus);
+        }
     }
 
 
@@ -293,10 +371,15 @@ public class CreateAlarmNoticeRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamArrayObj(map, prefix + "NoticeReceivers.", this.NoticeReceivers);
         this.setParamArrayObj(map, prefix + "WebCallbacks.", this.WebCallbacks);
         this.setParamArrayObj(map, prefix + "NoticeRules.", this.NoticeRules);
+        this.setParamSimple(map, prefix + "JumpDomain", this.JumpDomain);
+        this.setParamSimple(map, prefix + "DeliverStatus", this.DeliverStatus);
+        this.setParamObj(map, prefix + "DeliverConfig.", this.DeliverConfig);
+        this.setParamSimple(map, prefix + "AlarmShieldStatus", this.AlarmShieldStatus);
 
     }
 }

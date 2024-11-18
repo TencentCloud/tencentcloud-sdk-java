@@ -25,7 +25,6 @@ public class ModifySequenceRulesResponse extends AbstractModel {
 
     /**
     * 0: 修改成功, 非0: 修改失败
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -39,10 +38,8 @@ public class ModifySequenceRulesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 0: 修改成功, 非0: 修改失败
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 0: 修改成功, 非0: 修改失败 
      * @return Status 0: 修改成功, 非0: 修改失败
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
         return this.Status;
@@ -50,9 +47,7 @@ public class ModifySequenceRulesResponse extends AbstractModel {
 
     /**
      * Set 0: 修改成功, 非0: 修改失败
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 0: 修改成功, 非0: 修改失败
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
         this.Status = Status;

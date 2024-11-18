@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class DescribeInstancesRequest extends AbstractModel {
 
     /**
-    * （过滤条件）按照实例ID过滤
+    * （查询条件）按照ckafka集群实例Id过滤
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * （过滤条件）按照实例名称过滤，支持模糊查询
+    * 搜索词   ex:（查询条件）按照实例名称过滤，支持模糊查询
     */
     @SerializedName("SearchWord")
     @Expose
     private String SearchWord;
 
     /**
-    * （过滤条件）实例的状态。0：创建中，1：运行中，2：删除中，不填默认返回全部
+    * （查询条件）实例的状态  0：创建中，1：运行中，2：删除中，5: 隔离中,  7:升级中 不填默认返回全部
     */
     @SerializedName("Status")
     @Expose
@@ -66,55 +66,55 @@ public class DescribeInstancesRequest extends AbstractModel {
     private String TagKey;
 
     /**
-    * 私有网络Id
+    * （查询条件）私有网络Id
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-     * Get （过滤条件）按照实例ID过滤 
-     * @return InstanceId （过滤条件）按照实例ID过滤
+     * Get （查询条件）按照ckafka集群实例Id过滤 
+     * @return InstanceId （查询条件）按照ckafka集群实例Id过滤
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set （过滤条件）按照实例ID过滤
-     * @param InstanceId （过滤条件）按照实例ID过滤
+     * Set （查询条件）按照ckafka集群实例Id过滤
+     * @param InstanceId （查询条件）按照ckafka集群实例Id过滤
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get （过滤条件）按照实例名称过滤，支持模糊查询 
-     * @return SearchWord （过滤条件）按照实例名称过滤，支持模糊查询
+     * Get 搜索词   ex:（查询条件）按照实例名称过滤，支持模糊查询 
+     * @return SearchWord 搜索词   ex:（查询条件）按照实例名称过滤，支持模糊查询
      */
     public String getSearchWord() {
         return this.SearchWord;
     }
 
     /**
-     * Set （过滤条件）按照实例名称过滤，支持模糊查询
-     * @param SearchWord （过滤条件）按照实例名称过滤，支持模糊查询
+     * Set 搜索词   ex:（查询条件）按照实例名称过滤，支持模糊查询
+     * @param SearchWord 搜索词   ex:（查询条件）按照实例名称过滤，支持模糊查询
      */
     public void setSearchWord(String SearchWord) {
         this.SearchWord = SearchWord;
     }
 
     /**
-     * Get （过滤条件）实例的状态。0：创建中，1：运行中，2：删除中，不填默认返回全部 
-     * @return Status （过滤条件）实例的状态。0：创建中，1：运行中，2：删除中，不填默认返回全部
+     * Get （查询条件）实例的状态  0：创建中，1：运行中，2：删除中，5: 隔离中,  7:升级中 不填默认返回全部 
+     * @return Status （查询条件）实例的状态  0：创建中，1：运行中，2：删除中，5: 隔离中,  7:升级中 不填默认返回全部
      */
     public Long [] getStatus() {
         return this.Status;
     }
 
     /**
-     * Set （过滤条件）实例的状态。0：创建中，1：运行中，2：删除中，不填默认返回全部
-     * @param Status （过滤条件）实例的状态。0：创建中，1：运行中，2：删除中，不填默认返回全部
+     * Set （查询条件）实例的状态  0：创建中，1：运行中，2：删除中，5: 隔离中,  7:升级中 不填默认返回全部
+     * @param Status （查询条件）实例的状态  0：创建中，1：运行中，2：删除中，5: 隔离中,  7:升级中 不填默认返回全部
      */
     public void setStatus(Long [] Status) {
         this.Status = Status;
@@ -169,16 +169,16 @@ public class DescribeInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get 私有网络Id 
-     * @return VpcId 私有网络Id
+     * Get （查询条件）私有网络Id 
+     * @return VpcId （查询条件）私有网络Id
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set 私有网络Id
-     * @param VpcId 私有网络Id
+     * Set （查询条件）私有网络Id
+     * @param VpcId （查询条件）私有网络Id
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;

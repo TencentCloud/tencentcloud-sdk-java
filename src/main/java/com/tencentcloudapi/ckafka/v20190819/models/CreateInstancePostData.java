@@ -40,7 +40,7 @@ public class CreateInstancePostData extends AbstractModel {
     private String [] DealNames;
 
     /**
-    * 实例Id，当购买多个实例时，默认返回购买的第一个实例 id
+    * ckafka集群实例Id，当购买多个实例时，默认返回购买的第一个实例 id
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceId")
@@ -96,9 +96,9 @@ public class CreateInstancePostData extends AbstractModel {
     }
 
     /**
-     * Get 实例Id，当购买多个实例时，默认返回购买的第一个实例 id
+     * Get ckafka集群实例Id，当购买多个实例时，默认返回购买的第一个实例 id
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InstanceId 实例Id，当购买多个实例时，默认返回购买的第一个实例 id
+     * @return InstanceId ckafka集群实例Id，当购买多个实例时，默认返回购买的第一个实例 id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceId() {
@@ -106,9 +106,9 @@ public class CreateInstancePostData extends AbstractModel {
     }
 
     /**
-     * Set 实例Id，当购买多个实例时，默认返回购买的第一个实例 id
+     * Set ckafka集群实例Id，当购买多个实例时，默认返回购买的第一个实例 id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InstanceId 实例Id，当购买多个实例时，默认返回购买的第一个实例 id
+     * @param InstanceId ckafka集群实例Id，当购买多个实例时，默认返回购买的第一个实例 id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceId(String InstanceId) {

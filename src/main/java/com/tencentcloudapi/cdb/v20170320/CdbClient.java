@@ -39,7 +39,7 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
-     *本接口(AddTimeWindow)用于添加云数据库实例的维护时间窗口，以指定实例在哪些时间段可以自动执行切换访问操作。
+     *本接口（AddTimeWindow）用于添加云数据库实例的维护时间窗口，以指定实例在哪些时间段可以自动执行切换访问操作。
      * @param req AddTimeWindowRequest
      * @return AddTimeWindowResponse
      * @throws TencentCloudSDKException
@@ -61,7 +61,7 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
-     *调整数据库代理地址配置
+     *本接口（AdjustCdbProxyAddress）用于调整数据库代理地址配置。
      * @param req AdjustCdbProxyAddressRequest
      * @return AdjustCdbProxyAddressResponse
      * @throws TencentCloudSDKException
@@ -105,7 +105,7 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
-     *高可用实例一键迁移到集群版校验
+     *本接口（CheckMigrateCluster）用于高可用实例一键迁移到集群版校验。
      * @param req CheckMigrateClusterRequest
      * @return CheckMigrateClusterResponse
      * @throws TencentCloudSDKException
@@ -283,7 +283,7 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
-     *本接口(CreateDBInstance)用于创建包年包月的云数据库实例（包括主实例、灾备实例和只读实例），可通过传入实例规格、MySQL 版本号、购买时长和数量等信息创建云数据库实例。
+     *本接口（CreateDBInstance）用于创建包年包月的云数据库实例（包括主实例、灾备实例和只读实例），可通过传入实例规格、MySQL 版本号、购买时长和数量等信息创建云数据库实例。
 
 该接口为异步接口，您还可以使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口查询该实例的详细信息。当该实例的 Status 为1，且 TaskStatus 为0，表示实例已经发货成功。
 
@@ -303,7 +303,7 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
-     *本接口(CreateDBInstanceHour)用于创建按量计费的实例，可通过传入实例规格、MySQL 版本号和数量等信息创建云数据库实例，支持主实例、灾备实例和只读实例的创建。
+     *本接口（CreateDBInstanceHour）用于创建按量计费的实例，可通过传入实例规格、MySQL 版本号和数量等信息创建云数据库实例，支持主实例、灾备实例和只读实例的创建。
 
 该接口为异步接口，您还可以使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口查询该实例的详细信息。当该实例的 Status 为 1，且 TaskStatus 为 0，表示实例已经发货成功。
 
@@ -751,7 +751,7 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
-     *本接口(DescribeClusterInfo)用于查询集群版实例信息。
+     *本接口（DescribeClusterInfo）用于查询集群版实例信息。
      * @param req DescribeClusterInfoRequest
      * @return DescribeClusterInfoResponse
      * @throws TencentCloudSDKException
@@ -773,7 +773,7 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
-     *本接口(DescribeDBFeatures)用于查询云数据库版本属性，包括是否支持数据库加密、数据库审计等功能。
+     *本接口（DescribeDBFeatures）用于查询云数据库版本属性，包括是否支持数据库加密、数据库审计等功能。
      * @param req DescribeDBFeaturesRequest
      * @return DescribeDBFeaturesResponse
      * @throws TencentCloudSDKException
@@ -828,7 +828,7 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
-     *查询实例基本信息（实例 ID ，实例名称，是否开通加密 ）
+     *本接口（DescribeDBInstanceInfo）用于查询实例基本信息（实例 ID，实例名称，是否开通加密）。
      * @param req DescribeDBInstanceInfoRequest
      * @return DescribeDBInstanceInfoResponse
      * @throws TencentCloudSDKException
@@ -850,7 +850,7 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
-     *本接口(DescribeDBInstanceRebootTime)用于查询云数据库实例重启预计所需的时间。
+     *本接口（DescribeDBInstanceRebootTime）用于查询云数据库实例重启预计所需的时间。
      * @param req DescribeDBInstanceRebootTimeRequest
      * @return DescribeDBInstanceRebootTimeResponse
      * @throws TencentCloudSDKException
@@ -872,7 +872,7 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
-     *本接口(DescribeDBPrice)用于查询购买或续费云数据库实例的价格，支持查询按量计费或者包年包月的价格。可传入实例类型、购买时长、购买数量、内存大小、硬盘大小和可用区信息等来查询实例价格。可传入实例名称来查询实例续费价格。
+     *本接口（DescribeDBPrice）用于查询购买或续费云数据库实例的价格，支持查询按量计费或者包年包月的价格。可传入实例类型、购买时长、购买数量、内存大小、硬盘大小和可用区信息等来查询实例价格。可传入实例名称来查询实例续费价格。
 
 注意：对某个地域进行询价，请使用对应地域的接入点，接入点信息请参照 <a href="https://cloud.tencent.com/document/api/236/15832">服务地址</a> 文档。例如：对广州地域进行询价，请把请求发到：cdb.ap-guangzhou.tencentcloudapi.com。同理对上海地域询价，把请求发到：cdb.ap-shanghai.tencentcloudapi.com。
      * @param req DescribeDBPriceRequest
@@ -974,7 +974,7 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
-     *查询实例发生的事件信息
+     *本接口（DescribeInstanceAlarmEvents）用于查询实例发生的事件信息。
      * @param req DescribeInstanceAlarmEventsRequest
      * @return DescribeInstanceAlarmEventsResponse
      * @throws TencentCloudSDKException
@@ -1018,7 +1018,7 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
-     *本接口(DescribeInstanceUpgradeType)用于查询数据库实例升级类型。
+     *本接口（DescribeInstanceUpgradeType）用于查询数据库实例升级类型。
      * @param req DescribeInstanceUpgradeTypeRequest
      * @return DescribeInstanceUpgradeTypeResponse
      * @throws TencentCloudSDKException
@@ -1106,7 +1106,7 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
-     *本接口(DescribeRoGroups)用于查询云数据库实例的所有的RO组的信息。
+     *本接口（DescribeRoGroups）用于查询云数据库实例的所有的 RO 组的信息。
      * @param req DescribeRoGroupsRequest
      * @return DescribeRoGroupsResponse
      * @throws TencentCloudSDKException
@@ -1261,19 +1261,6 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
-     *该接口不再维护，参考CreateDBInstance+API文档，在发货时即可完成初始化。
-
-本接口(InitDBInstances)用于初始化云数据库实例，包括初始化密码、默认字符集、实例端口号等。该接口已经废弃，在发货接口CreateDBInstance、CreateDBInstanceHour可以直接使用参数Password设置密码，使用参数ParamList设置字符集，使用参数Port设置端口号。
-     * @param req InitDBInstancesRequest
-     * @return InitDBInstancesResponse
-     * @throws TencentCloudSDKException
-     */
-    public InitDBInstancesResponse InitDBInstances(InitDBInstancesRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "InitDBInstances", InitDBInstancesResponse.class);
-    }
-
-    /**
      *本接口(InquiryPriceUpgradeInstances)用于查询云数据库实例升级的价格，支持查询按量计费或者包年包月实例的升级价格，实例类型支持主实例、灾备实例和只读实例。
      * @param req InquiryPriceUpgradeInstancesRequest
      * @return InquiryPriceUpgradeInstancesResponse
@@ -1398,7 +1385,7 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
-     *本接口(ModifyAutoRenewFlag)用于修改云数据库实例的自动续费标记。仅支持包年包月的实例设置自动续费标记。
+     *本接口（ModifyAutoRenewFlag）用于修改云数据库实例的自动续费标记。仅支持包年包月的实例设置自动续费标记。
      * @param req ModifyAutoRenewFlagRequest
      * @return ModifyAutoRenewFlagResponse
      * @throws TencentCloudSDKException
@@ -1505,6 +1492,17 @@ public class CdbClient extends AbstractClient{
     public ModifyDBInstanceProjectResponse ModifyDBInstanceProject(ModifyDBInstanceProjectRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyDBInstanceProject", ModifyDBInstanceProjectResponse.class);
+    }
+
+    /**
+     *本接口（ModifyDBInstanceReadOnlyStatus）用户设置MySQL云数据库实例为只读
+     * @param req ModifyDBInstanceReadOnlyStatusRequest
+     * @return ModifyDBInstanceReadOnlyStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDBInstanceReadOnlyStatusResponse ModifyDBInstanceReadOnlyStatus(ModifyDBInstanceReadOnlyStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDBInstanceReadOnlyStatus", ModifyDBInstanceReadOnlyStatusResponse.class);
     }
 
     /**
@@ -1655,7 +1653,7 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
-     *本接口(OpenDBInstanceEncryption)用于启用实例数据存储加密功能，支持用户指定自定义密钥。
+     *本接口（OpenDBInstanceEncryption）用于启用实例数据存储加密功能，支持用户指定自定义密钥。
 
 注意，启用实例数据存储加密之前，需要进行以下操作：
 
@@ -1766,10 +1764,10 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
-     *本接口(RestartDBInstances)用于重启云数据库实例。
+     *本接口（RestartDBInstances）用于重启云数据库实例。
 
 注意：
-1、本接口只支持主实例进行重启操作；
+1、本接口支持主实例、只读实例、灾备实例进行重启操作。
 2、实例状态必须为正常，并且没有其他异步任务在执行中。
      * @param req RestartDBInstancesRequest
      * @return RestartDBInstancesResponse
@@ -1803,7 +1801,7 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
-     *开启 RO 复制，从主实例同步数据。
+     *本接口（StartReplication）用于开启 RO 复制，从主实例同步数据。
      * @param req StartReplicationRequest
      * @return StartReplicationResponse
      * @throws TencentCloudSDKException
@@ -1836,7 +1834,7 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
-     *停止 RO 复制，中断从主实例同步数据。
+     *本接口（StopReplication）用于停止 RO 复制，中断从主实例同步数据。
      * @param req StopReplicationRequest
      * @return StopReplicationResponse
      * @throws TencentCloudSDKException
@@ -1891,7 +1889,7 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
-     *本接口(SwitchDrInstanceToMaster)用于将云数据库灾备实例切换为主实例，注意请求必须发到灾备实例所在的地域。
+     *本接口（SwitchDrInstanceToMaster）用于将云数据库灾备实例切换为主实例，注意请求必须发到灾备实例所在的地域。
      * @param req SwitchDrInstanceToMasterRequest
      * @return SwitchDrInstanceToMasterResponse
      * @throws TencentCloudSDKException

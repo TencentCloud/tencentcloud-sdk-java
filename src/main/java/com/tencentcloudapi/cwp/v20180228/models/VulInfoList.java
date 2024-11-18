@@ -81,7 +81,6 @@ public class VulInfoList extends AbstractModel {
 
     /**
     * 废弃字段
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("From")
     @Expose
@@ -89,7 +88,6 @@ public class VulInfoList extends AbstractModel {
 
     /**
     * 描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Descript")
     @Expose
@@ -97,7 +95,6 @@ public class VulInfoList extends AbstractModel {
 
     /**
     * 废弃字段
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PublishTimeWisteria")
     @Expose
@@ -105,7 +102,6 @@ public class VulInfoList extends AbstractModel {
 
     /**
     * 废弃字段
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NameWisteria")
     @Expose
@@ -113,7 +109,6 @@ public class VulInfoList extends AbstractModel {
 
     /**
     * 废弃字段
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DescriptWisteria")
     @Expose
@@ -121,7 +116,6 @@ public class VulInfoList extends AbstractModel {
 
     /**
     * 聚合后事件状态串
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StatusStr")
     @Expose
@@ -129,7 +123,6 @@ public class VulInfoList extends AbstractModel {
 
     /**
     * cve编号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CveId")
     @Expose
@@ -137,7 +130,6 @@ public class VulInfoList extends AbstractModel {
 
     /**
     * CVSS评分
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CvssScore")
     @Expose
@@ -145,7 +137,6 @@ public class VulInfoList extends AbstractModel {
 
     /**
     * 漏洞标签 多个逗号分割
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Labels")
     @Expose
@@ -153,7 +144,6 @@ public class VulInfoList extends AbstractModel {
 
     /**
     * 是否能自动修复且包含能自动修复的主机， 0=否  1=是
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FixSwitch")
     @Expose
@@ -161,7 +151,6 @@ public class VulInfoList extends AbstractModel {
 
     /**
     * 最后扫描任务的id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskId")
     @Expose
@@ -169,7 +158,6 @@ public class VulInfoList extends AbstractModel {
 
     /**
     * 是否支持防御， 0:不支持 1:支持
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsSupportDefense")
     @Expose
@@ -177,7 +165,6 @@ public class VulInfoList extends AbstractModel {
 
     /**
     * 已防御的攻击次数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DefenseAttackCount")
     @Expose
@@ -185,7 +172,6 @@ public class VulInfoList extends AbstractModel {
 
     /**
     * 首次出现时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FirstAppearTime")
     @Expose
@@ -193,7 +179,6 @@ public class VulInfoList extends AbstractModel {
 
     /**
     * 漏洞类别 1: web-cms漏洞 2:应用漏洞  4: Linux软件漏洞 5: Windows系统漏洞
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VulCategory")
     @Expose
@@ -201,7 +186,6 @@ public class VulInfoList extends AbstractModel {
 
     /**
     * 攻击热度级别
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AttackLevel")
     @Expose
@@ -209,7 +193,6 @@ public class VulInfoList extends AbstractModel {
 
     /**
     * 漏洞修复后是否需要重启
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FixNoNeedRestart")
     @Expose
@@ -217,11 +200,17 @@ public class VulInfoList extends AbstractModel {
 
     /**
     * 检测方式0 - 版本比对, 1 - POC验证
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Method")
     @Expose
     private Long Method;
+
+    /**
+    * 漏洞是否支持修复 0不支持，1支持
+    */
+    @SerializedName("VulFixSwitch")
+    @Expose
+    private Long VulFixSwitch;
 
     /**
      * Get 漏洞包含的事件id串，多个用“,”分割 
@@ -352,10 +341,8 @@ public class VulInfoList extends AbstractModel {
     }
 
     /**
-     * Get 废弃字段
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 废弃字段 
      * @return From 废弃字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFrom() {
         return this.From;
@@ -363,19 +350,15 @@ public class VulInfoList extends AbstractModel {
 
     /**
      * Set 废弃字段
-注意：此字段可能返回 null，表示取不到有效值。
      * @param From 废弃字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFrom(Long From) {
         this.From = From;
     }
 
     /**
-     * Get 描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 描述 
      * @return Descript 描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescript() {
         return this.Descript;
@@ -383,19 +366,15 @@ public class VulInfoList extends AbstractModel {
 
     /**
      * Set 描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Descript 描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescript(String Descript) {
         this.Descript = Descript;
     }
 
     /**
-     * Get 废弃字段
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 废弃字段 
      * @return PublishTimeWisteria 废弃字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPublishTimeWisteria() {
         return this.PublishTimeWisteria;
@@ -403,19 +382,15 @@ public class VulInfoList extends AbstractModel {
 
     /**
      * Set 废弃字段
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PublishTimeWisteria 废弃字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPublishTimeWisteria(String PublishTimeWisteria) {
         this.PublishTimeWisteria = PublishTimeWisteria;
     }
 
     /**
-     * Get 废弃字段
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 废弃字段 
      * @return NameWisteria 废弃字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNameWisteria() {
         return this.NameWisteria;
@@ -423,19 +398,15 @@ public class VulInfoList extends AbstractModel {
 
     /**
      * Set 废弃字段
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NameWisteria 废弃字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNameWisteria(String NameWisteria) {
         this.NameWisteria = NameWisteria;
     }
 
     /**
-     * Get 废弃字段
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 废弃字段 
      * @return DescriptWisteria 废弃字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescriptWisteria() {
         return this.DescriptWisteria;
@@ -443,19 +414,15 @@ public class VulInfoList extends AbstractModel {
 
     /**
      * Set 废弃字段
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DescriptWisteria 废弃字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescriptWisteria(String DescriptWisteria) {
         this.DescriptWisteria = DescriptWisteria;
     }
 
     /**
-     * Get 聚合后事件状态串
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 聚合后事件状态串 
      * @return StatusStr 聚合后事件状态串
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatusStr() {
         return this.StatusStr;
@@ -463,19 +430,15 @@ public class VulInfoList extends AbstractModel {
 
     /**
      * Set 聚合后事件状态串
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StatusStr 聚合后事件状态串
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatusStr(String StatusStr) {
         this.StatusStr = StatusStr;
     }
 
     /**
-     * Get cve编号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get cve编号 
      * @return CveId cve编号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCveId() {
         return this.CveId;
@@ -483,19 +446,15 @@ public class VulInfoList extends AbstractModel {
 
     /**
      * Set cve编号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CveId cve编号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCveId(String CveId) {
         this.CveId = CveId;
     }
 
     /**
-     * Get CVSS评分
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get CVSS评分 
      * @return CvssScore CVSS评分
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getCvssScore() {
         return this.CvssScore;
@@ -503,19 +462,15 @@ public class VulInfoList extends AbstractModel {
 
     /**
      * Set CVSS评分
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CvssScore CVSS评分
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCvssScore(Float CvssScore) {
         this.CvssScore = CvssScore;
     }
 
     /**
-     * Get 漏洞标签 多个逗号分割
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 漏洞标签 多个逗号分割 
      * @return Labels 漏洞标签 多个逗号分割
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLabels() {
         return this.Labels;
@@ -523,19 +478,15 @@ public class VulInfoList extends AbstractModel {
 
     /**
      * Set 漏洞标签 多个逗号分割
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Labels 漏洞标签 多个逗号分割
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLabels(String Labels) {
         this.Labels = Labels;
     }
 
     /**
-     * Get 是否能自动修复且包含能自动修复的主机， 0=否  1=是
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否能自动修复且包含能自动修复的主机， 0=否  1=是 
      * @return FixSwitch 是否能自动修复且包含能自动修复的主机， 0=否  1=是
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFixSwitch() {
         return this.FixSwitch;
@@ -543,19 +494,15 @@ public class VulInfoList extends AbstractModel {
 
     /**
      * Set 是否能自动修复且包含能自动修复的主机， 0=否  1=是
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FixSwitch 是否能自动修复且包含能自动修复的主机， 0=否  1=是
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFixSwitch(Long FixSwitch) {
         this.FixSwitch = FixSwitch;
     }
 
     /**
-     * Get 最后扫描任务的id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最后扫描任务的id 
      * @return TaskId 最后扫描任务的id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTaskId() {
         return this.TaskId;
@@ -563,19 +510,15 @@ public class VulInfoList extends AbstractModel {
 
     /**
      * Set 最后扫描任务的id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskId 最后扫描任务的id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get 是否支持防御， 0:不支持 1:支持
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否支持防御， 0:不支持 1:支持 
      * @return IsSupportDefense 是否支持防御， 0:不支持 1:支持
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsSupportDefense() {
         return this.IsSupportDefense;
@@ -583,19 +526,15 @@ public class VulInfoList extends AbstractModel {
 
     /**
      * Set 是否支持防御， 0:不支持 1:支持
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsSupportDefense 是否支持防御， 0:不支持 1:支持
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsSupportDefense(Long IsSupportDefense) {
         this.IsSupportDefense = IsSupportDefense;
     }
 
     /**
-     * Get 已防御的攻击次数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 已防御的攻击次数 
      * @return DefenseAttackCount 已防御的攻击次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDefenseAttackCount() {
         return this.DefenseAttackCount;
@@ -603,19 +542,15 @@ public class VulInfoList extends AbstractModel {
 
     /**
      * Set 已防御的攻击次数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DefenseAttackCount 已防御的攻击次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDefenseAttackCount(Long DefenseAttackCount) {
         this.DefenseAttackCount = DefenseAttackCount;
     }
 
     /**
-     * Get 首次出现时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 首次出现时间 
      * @return FirstAppearTime 首次出现时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFirstAppearTime() {
         return this.FirstAppearTime;
@@ -623,19 +558,15 @@ public class VulInfoList extends AbstractModel {
 
     /**
      * Set 首次出现时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FirstAppearTime 首次出现时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFirstAppearTime(String FirstAppearTime) {
         this.FirstAppearTime = FirstAppearTime;
     }
 
     /**
-     * Get 漏洞类别 1: web-cms漏洞 2:应用漏洞  4: Linux软件漏洞 5: Windows系统漏洞
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 漏洞类别 1: web-cms漏洞 2:应用漏洞  4: Linux软件漏洞 5: Windows系统漏洞 
      * @return VulCategory 漏洞类别 1: web-cms漏洞 2:应用漏洞  4: Linux软件漏洞 5: Windows系统漏洞
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getVulCategory() {
         return this.VulCategory;
@@ -643,19 +574,15 @@ public class VulInfoList extends AbstractModel {
 
     /**
      * Set 漏洞类别 1: web-cms漏洞 2:应用漏洞  4: Linux软件漏洞 5: Windows系统漏洞
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VulCategory 漏洞类别 1: web-cms漏洞 2:应用漏洞  4: Linux软件漏洞 5: Windows系统漏洞
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVulCategory(Long VulCategory) {
         this.VulCategory = VulCategory;
     }
 
     /**
-     * Get 攻击热度级别
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 攻击热度级别 
      * @return AttackLevel 攻击热度级别
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAttackLevel() {
         return this.AttackLevel;
@@ -663,19 +590,15 @@ public class VulInfoList extends AbstractModel {
 
     /**
      * Set 攻击热度级别
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AttackLevel 攻击热度级别
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAttackLevel(Long AttackLevel) {
         this.AttackLevel = AttackLevel;
     }
 
     /**
-     * Get 漏洞修复后是否需要重启
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 漏洞修复后是否需要重启 
      * @return FixNoNeedRestart 漏洞修复后是否需要重启
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getFixNoNeedRestart() {
         return this.FixNoNeedRestart;
@@ -683,19 +606,15 @@ public class VulInfoList extends AbstractModel {
 
     /**
      * Set 漏洞修复后是否需要重启
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FixNoNeedRestart 漏洞修复后是否需要重启
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFixNoNeedRestart(Boolean FixNoNeedRestart) {
         this.FixNoNeedRestart = FixNoNeedRestart;
     }
 
     /**
-     * Get 检测方式0 - 版本比对, 1 - POC验证
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 检测方式0 - 版本比对, 1 - POC验证 
      * @return Method 检测方式0 - 版本比对, 1 - POC验证
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMethod() {
         return this.Method;
@@ -703,12 +622,26 @@ public class VulInfoList extends AbstractModel {
 
     /**
      * Set 检测方式0 - 版本比对, 1 - POC验证
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Method 检测方式0 - 版本比对, 1 - POC验证
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMethod(Long Method) {
         this.Method = Method;
+    }
+
+    /**
+     * Get 漏洞是否支持修复 0不支持，1支持 
+     * @return VulFixSwitch 漏洞是否支持修复 0不支持，1支持
+     */
+    public Long getVulFixSwitch() {
+        return this.VulFixSwitch;
+    }
+
+    /**
+     * Set 漏洞是否支持修复 0不支持，1支持
+     * @param VulFixSwitch 漏洞是否支持修复 0不支持，1支持
+     */
+    public void setVulFixSwitch(Long VulFixSwitch) {
+        this.VulFixSwitch = VulFixSwitch;
     }
 
     public VulInfoList() {
@@ -797,6 +730,9 @@ public class VulInfoList extends AbstractModel {
         if (source.Method != null) {
             this.Method = new Long(source.Method);
         }
+        if (source.VulFixSwitch != null) {
+            this.VulFixSwitch = new Long(source.VulFixSwitch);
+        }
     }
 
 
@@ -830,6 +766,7 @@ public class VulInfoList extends AbstractModel {
         this.setParamSimple(map, prefix + "AttackLevel", this.AttackLevel);
         this.setParamSimple(map, prefix + "FixNoNeedRestart", this.FixNoNeedRestart);
         this.setParamSimple(map, prefix + "Method", this.Method);
+        this.setParamSimple(map, prefix + "VulFixSwitch", this.VulFixSwitch);
 
     }
 }

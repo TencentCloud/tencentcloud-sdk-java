@@ -31,11 +31,7 @@ public class ActivtyRelatedInstance extends AbstractModel {
     private String InstanceId;
 
     /**
-    * 实例在伸缩活动中的状态。取值如下：
-<li>INIT：初始化中
-<li>RUNNING：实例操作中
-<li>SUCCESSFUL：活动成功
-<li>FAILED：活动失败
+    * 实例在伸缩活动中的状态。取值如下：<br><li>INIT：初始化中</li><li>RUNNING：实例操作中</li><li>SUCCESSFUL：活动成功</li><li>FAILED：活动失败
     */
     @SerializedName("InstanceStatus")
     @Expose
@@ -58,32 +54,16 @@ public class ActivtyRelatedInstance extends AbstractModel {
     }
 
     /**
-     * Get 实例在伸缩活动中的状态。取值如下：
-<li>INIT：初始化中
-<li>RUNNING：实例操作中
-<li>SUCCESSFUL：活动成功
-<li>FAILED：活动失败 
-     * @return InstanceStatus 实例在伸缩活动中的状态。取值如下：
-<li>INIT：初始化中
-<li>RUNNING：实例操作中
-<li>SUCCESSFUL：活动成功
-<li>FAILED：活动失败
+     * Get 实例在伸缩活动中的状态。取值如下：<br><li>INIT：初始化中</li><li>RUNNING：实例操作中</li><li>SUCCESSFUL：活动成功</li><li>FAILED：活动失败 
+     * @return InstanceStatus 实例在伸缩活动中的状态。取值如下：<br><li>INIT：初始化中</li><li>RUNNING：实例操作中</li><li>SUCCESSFUL：活动成功</li><li>FAILED：活动失败
      */
     public String getInstanceStatus() {
         return this.InstanceStatus;
     }
 
     /**
-     * Set 实例在伸缩活动中的状态。取值如下：
-<li>INIT：初始化中
-<li>RUNNING：实例操作中
-<li>SUCCESSFUL：活动成功
-<li>FAILED：活动失败
-     * @param InstanceStatus 实例在伸缩活动中的状态。取值如下：
-<li>INIT：初始化中
-<li>RUNNING：实例操作中
-<li>SUCCESSFUL：活动成功
-<li>FAILED：活动失败
+     * Set 实例在伸缩活动中的状态。取值如下：<br><li>INIT：初始化中</li><li>RUNNING：实例操作中</li><li>SUCCESSFUL：活动成功</li><li>FAILED：活动失败
+     * @param InstanceStatus 实例在伸缩活动中的状态。取值如下：<br><li>INIT：初始化中</li><li>RUNNING：实例操作中</li><li>SUCCESSFUL：活动成功</li><li>FAILED：活动失败
      */
     public void setInstanceStatus(String InstanceStatus) {
         this.InstanceStatus = InstanceStatus;

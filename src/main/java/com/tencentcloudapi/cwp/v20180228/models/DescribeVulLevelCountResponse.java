@@ -25,7 +25,6 @@ public class DescribeVulLevelCountResponse extends AbstractModel {
 
     /**
     * 统计结果
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VulLevelList")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeVulLevelCountResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 统计结果
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 统计结果 
      * @return VulLevelList 统计结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public VulLevelInfo [] getVulLevelList() {
         return this.VulLevelList;
@@ -50,9 +47,7 @@ public class DescribeVulLevelCountResponse extends AbstractModel {
 
     /**
      * Set 统计结果
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VulLevelList 统计结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVulLevelList(VulLevelInfo [] VulLevelList) {
         this.VulLevelList = VulLevelList;

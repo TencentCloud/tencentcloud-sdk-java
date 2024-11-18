@@ -73,6 +73,13 @@ public class DescribeClusterDetailResponse extends AbstractModel {
     private String ClusterStatus;
 
     /**
+    * 集群运行子状态
+    */
+    @SerializedName("ClusterSubStatus")
+    @Expose
+    private String ClusterSubStatus;
+
+    /**
     * 集群类型：为托管集群MANAGED_CLUSTER、独立集群INDEPENDENT_CLUSTER
     */
     @SerializedName("ClusterType")
@@ -315,6 +322,22 @@ public class DescribeClusterDetailResponse extends AbstractModel {
      */
     public void setClusterStatus(String ClusterStatus) {
         this.ClusterStatus = ClusterStatus;
+    }
+
+    /**
+     * Get 集群运行子状态 
+     * @return ClusterSubStatus 集群运行子状态
+     */
+    public String getClusterSubStatus() {
+        return this.ClusterSubStatus;
+    }
+
+    /**
+     * Set 集群运行子状态
+     * @param ClusterSubStatus 集群运行子状态
+     */
+    public void setClusterSubStatus(String ClusterSubStatus) {
+        this.ClusterSubStatus = ClusterSubStatus;
     }
 
     /**
@@ -650,6 +673,9 @@ public class DescribeClusterDetailResponse extends AbstractModel {
         if (source.ClusterStatus != null) {
             this.ClusterStatus = new String(source.ClusterStatus);
         }
+        if (source.ClusterSubStatus != null) {
+            this.ClusterSubStatus = new String(source.ClusterSubStatus);
+        }
         if (source.ClusterType != null) {
             this.ClusterType = new String(source.ClusterType);
         }
@@ -721,6 +747,7 @@ public class DescribeClusterDetailResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "ContainerRuntime", this.ContainerRuntime);
         this.setParamSimple(map, prefix + "ClusterNodeNum", this.ClusterNodeNum);
         this.setParamSimple(map, prefix + "ClusterStatus", this.ClusterStatus);
+        this.setParamSimple(map, prefix + "ClusterSubStatus", this.ClusterSubStatus);
         this.setParamSimple(map, prefix + "ClusterType", this.ClusterType);
         this.setParamSimple(map, prefix + "Region", this.Region);
         this.setParamSimple(map, prefix + "SeriousRiskCount", this.SeriousRiskCount);

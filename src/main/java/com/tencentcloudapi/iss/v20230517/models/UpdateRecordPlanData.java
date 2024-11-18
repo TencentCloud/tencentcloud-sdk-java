@@ -80,6 +80,13 @@ public class UpdateRecordPlanData extends AbstractModel {
     private String [] OrganizationId;
 
     /**
+    * 录像补录模式（0:不启用，1:启用）
+    */
+    @SerializedName("RepairMode")
+    @Expose
+    private Long RepairMode;
+
+    /**
      * Get 上云计划名称，仅支持中文、英文、数字、_、-，长度不超过32个字符，计划名称全局唯一，不能为空，不能重复，不修改名称时，不需要该字段 
      * @return PlanName 上云计划名称，仅支持中文、英文、数字、_、-，长度不超过32个字符，计划名称全局唯一，不能为空，不能重复，不修改名称时，不需要该字段
      */
@@ -207,6 +214,22 @@ public class UpdateRecordPlanData extends AbstractModel {
         this.OrganizationId = OrganizationId;
     }
 
+    /**
+     * Get 录像补录模式（0:不启用，1:启用） 
+     * @return RepairMode 录像补录模式（0:不启用，1:启用）
+     */
+    public Long getRepairMode() {
+        return this.RepairMode;
+    }
+
+    /**
+     * Set 录像补录模式（0:不启用，1:启用）
+     * @param RepairMode 录像补录模式（0:不启用，1:启用）
+     */
+    public void setRepairMode(Long RepairMode) {
+        this.RepairMode = RepairMode;
+    }
+
     public UpdateRecordPlanData() {
     }
 
@@ -248,6 +271,9 @@ public class UpdateRecordPlanData extends AbstractModel {
                 this.OrganizationId[i] = new String(source.OrganizationId[i]);
             }
         }
+        if (source.RepairMode != null) {
+            this.RepairMode = new Long(source.RepairMode);
+        }
     }
 
 
@@ -263,6 +289,7 @@ public class UpdateRecordPlanData extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Add.", this.Add);
         this.setParamArraySimple(map, prefix + "Del.", this.Del);
         this.setParamArraySimple(map, prefix + "OrganizationId.", this.OrganizationId);
+        this.setParamSimple(map, prefix + "RepairMode", this.RepairMode);
 
     }
 }

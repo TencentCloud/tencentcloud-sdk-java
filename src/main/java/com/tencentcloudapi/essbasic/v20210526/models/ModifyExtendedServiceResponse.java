@@ -24,11 +24,13 @@ import java.util.HashMap;
 public class ModifyExtendedServiceResponse extends AbstractModel {
 
     /**
-    * 操作跳转链接，有效期24小时
-若操作时没有返回跳转链接，表示无需跳转操作，此时会直接开通/关闭服务。
+    * 操作跳转链接
+<ul><li><strong>链接有效期：</strong> 跳转链接的有效期为24小时。</li>
+<li><strong>没有返回链接的情形：</strong> 如果在操作时没有返回跳转链接，说明此次操作无需进行跳转，服务将会直接被开通或关闭。</li>
+<li><strong>返回链接的情形：</strong> 当操作类型为<b>OPEN（开通服务）</b>，并且扩展服务类型为<b>AUTO_SIGN（ 企业自动签署）</b>、<b>DOWNLOAD_FLOW（授权渠道下载合同）</b>时，系统将返回一个操作链接。收到操作链接后，贵方需主动联系超级管理员（超管）或法人。<font color="red"><b>由超管或法人点击链接</b></font>，以完成服务的开通操作。</li>
+</ul>
 
-当操作类型是 OPEN 且 扩展服务类型是 AUTO_SIGN 或 DOWNLOAD_FLOW 或者 OVERSEA_SIGN 时返回操作链接，
-返回的链接需要平台方自行触达超管或法人，超管或法人点击链接完成服务开通操作
+
     */
     @SerializedName("OperateUrl")
     @Expose
@@ -42,32 +44,40 @@ public class ModifyExtendedServiceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 操作跳转链接，有效期24小时
-若操作时没有返回跳转链接，表示无需跳转操作，此时会直接开通/关闭服务。
+     * Get 操作跳转链接
+<ul><li><strong>链接有效期：</strong> 跳转链接的有效期为24小时。</li>
+<li><strong>没有返回链接的情形：</strong> 如果在操作时没有返回跳转链接，说明此次操作无需进行跳转，服务将会直接被开通或关闭。</li>
+<li><strong>返回链接的情形：</strong> 当操作类型为<b>OPEN（开通服务）</b>，并且扩展服务类型为<b>AUTO_SIGN（ 企业自动签署）</b>、<b>DOWNLOAD_FLOW（授权渠道下载合同）</b>时，系统将返回一个操作链接。收到操作链接后，贵方需主动联系超级管理员（超管）或法人。<font color="red"><b>由超管或法人点击链接</b></font>，以完成服务的开通操作。</li>
+</ul>
 
-当操作类型是 OPEN 且 扩展服务类型是 AUTO_SIGN 或 DOWNLOAD_FLOW 或者 OVERSEA_SIGN 时返回操作链接，
-返回的链接需要平台方自行触达超管或法人，超管或法人点击链接完成服务开通操作 
-     * @return OperateUrl 操作跳转链接，有效期24小时
-若操作时没有返回跳转链接，表示无需跳转操作，此时会直接开通/关闭服务。
+ 
+     * @return OperateUrl 操作跳转链接
+<ul><li><strong>链接有效期：</strong> 跳转链接的有效期为24小时。</li>
+<li><strong>没有返回链接的情形：</strong> 如果在操作时没有返回跳转链接，说明此次操作无需进行跳转，服务将会直接被开通或关闭。</li>
+<li><strong>返回链接的情形：</strong> 当操作类型为<b>OPEN（开通服务）</b>，并且扩展服务类型为<b>AUTO_SIGN（ 企业自动签署）</b>、<b>DOWNLOAD_FLOW（授权渠道下载合同）</b>时，系统将返回一个操作链接。收到操作链接后，贵方需主动联系超级管理员（超管）或法人。<font color="red"><b>由超管或法人点击链接</b></font>，以完成服务的开通操作。</li>
+</ul>
 
-当操作类型是 OPEN 且 扩展服务类型是 AUTO_SIGN 或 DOWNLOAD_FLOW 或者 OVERSEA_SIGN 时返回操作链接，
-返回的链接需要平台方自行触达超管或法人，超管或法人点击链接完成服务开通操作
+
      */
     public String getOperateUrl() {
         return this.OperateUrl;
     }
 
     /**
-     * Set 操作跳转链接，有效期24小时
-若操作时没有返回跳转链接，表示无需跳转操作，此时会直接开通/关闭服务。
+     * Set 操作跳转链接
+<ul><li><strong>链接有效期：</strong> 跳转链接的有效期为24小时。</li>
+<li><strong>没有返回链接的情形：</strong> 如果在操作时没有返回跳转链接，说明此次操作无需进行跳转，服务将会直接被开通或关闭。</li>
+<li><strong>返回链接的情形：</strong> 当操作类型为<b>OPEN（开通服务）</b>，并且扩展服务类型为<b>AUTO_SIGN（ 企业自动签署）</b>、<b>DOWNLOAD_FLOW（授权渠道下载合同）</b>时，系统将返回一个操作链接。收到操作链接后，贵方需主动联系超级管理员（超管）或法人。<font color="red"><b>由超管或法人点击链接</b></font>，以完成服务的开通操作。</li>
+</ul>
 
-当操作类型是 OPEN 且 扩展服务类型是 AUTO_SIGN 或 DOWNLOAD_FLOW 或者 OVERSEA_SIGN 时返回操作链接，
-返回的链接需要平台方自行触达超管或法人，超管或法人点击链接完成服务开通操作
-     * @param OperateUrl 操作跳转链接，有效期24小时
-若操作时没有返回跳转链接，表示无需跳转操作，此时会直接开通/关闭服务。
 
-当操作类型是 OPEN 且 扩展服务类型是 AUTO_SIGN 或 DOWNLOAD_FLOW 或者 OVERSEA_SIGN 时返回操作链接，
-返回的链接需要平台方自行触达超管或法人，超管或法人点击链接完成服务开通操作
+     * @param OperateUrl 操作跳转链接
+<ul><li><strong>链接有效期：</strong> 跳转链接的有效期为24小时。</li>
+<li><strong>没有返回链接的情形：</strong> 如果在操作时没有返回跳转链接，说明此次操作无需进行跳转，服务将会直接被开通或关闭。</li>
+<li><strong>返回链接的情形：</strong> 当操作类型为<b>OPEN（开通服务）</b>，并且扩展服务类型为<b>AUTO_SIGN（ 企业自动签署）</b>、<b>DOWNLOAD_FLOW（授权渠道下载合同）</b>时，系统将返回一个操作链接。收到操作链接后，贵方需主动联系超级管理员（超管）或法人。<font color="red"><b>由超管或法人点击链接</b></font>，以完成服务的开通操作。</li>
+</ul>
+
+
      */
     public void setOperateUrl(String OperateUrl) {
         this.OperateUrl = OperateUrl;

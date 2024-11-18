@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class EidInfo extends AbstractModel {
 
     /**
-    * 商户方 appeIDcode 的数字证书
+    * 商户方 appeIDcode 的数字证书。
     */
     @SerializedName("EidCode")
     @Expose
     private String EidCode;
 
     /**
-    * Eid中心针对商户方EidCode的电子签名
+    * Eid中心针对商户方EidCode的电子签名。
     */
     @SerializedName("EidSign")
     @Expose
     private String EidSign;
 
     /**
-    * 商户方公钥加密的会话密钥的base64字符串，[指引详见](https://cloud.tencent.com/document/product/1007/63370)
+    * 商户方公钥加密的会话密钥的base64字符串，[指引详见](https://cloud.tencent.com/document/product/1007/63370)。
     */
     @SerializedName("DesKey")
     @Expose
     private String DesKey;
 
     /**
-    * 会话密钥sm2加密后的base64字符串，[指引详见](https://cloud.tencent.com/document/product/1007/63370)
+    * 会话密钥sm2加密后的base64字符串，[指引详见](https://cloud.tencent.com/document/product/1007/63370)。
     */
     @SerializedName("UserInfo")
     @Expose
     private String UserInfo;
 
     /**
-     * Get 商户方 appeIDcode 的数字证书 
-     * @return EidCode 商户方 appeIDcode 的数字证书
+     * Get 商户方 appeIDcode 的数字证书。 
+     * @return EidCode 商户方 appeIDcode 的数字证书。
      */
     public String getEidCode() {
         return this.EidCode;
     }
 
     /**
-     * Set 商户方 appeIDcode 的数字证书
-     * @param EidCode 商户方 appeIDcode 的数字证书
+     * Set 商户方 appeIDcode 的数字证书。
+     * @param EidCode 商户方 appeIDcode 的数字证书。
      */
     public void setEidCode(String EidCode) {
         this.EidCode = EidCode;
     }
 
     /**
-     * Get Eid中心针对商户方EidCode的电子签名 
-     * @return EidSign Eid中心针对商户方EidCode的电子签名
+     * Get Eid中心针对商户方EidCode的电子签名。 
+     * @return EidSign Eid中心针对商户方EidCode的电子签名。
      */
     public String getEidSign() {
         return this.EidSign;
     }
 
     /**
-     * Set Eid中心针对商户方EidCode的电子签名
-     * @param EidSign Eid中心针对商户方EidCode的电子签名
+     * Set Eid中心针对商户方EidCode的电子签名。
+     * @param EidSign Eid中心针对商户方EidCode的电子签名。
      */
     public void setEidSign(String EidSign) {
         this.EidSign = EidSign;
     }
 
     /**
-     * Get 商户方公钥加密的会话密钥的base64字符串，[指引详见](https://cloud.tencent.com/document/product/1007/63370) 
-     * @return DesKey 商户方公钥加密的会话密钥的base64字符串，[指引详见](https://cloud.tencent.com/document/product/1007/63370)
+     * Get 商户方公钥加密的会话密钥的base64字符串，[指引详见](https://cloud.tencent.com/document/product/1007/63370)。 
+     * @return DesKey 商户方公钥加密的会话密钥的base64字符串，[指引详见](https://cloud.tencent.com/document/product/1007/63370)。
      */
     public String getDesKey() {
         return this.DesKey;
     }
 
     /**
-     * Set 商户方公钥加密的会话密钥的base64字符串，[指引详见](https://cloud.tencent.com/document/product/1007/63370)
-     * @param DesKey 商户方公钥加密的会话密钥的base64字符串，[指引详见](https://cloud.tencent.com/document/product/1007/63370)
+     * Set 商户方公钥加密的会话密钥的base64字符串，[指引详见](https://cloud.tencent.com/document/product/1007/63370)。
+     * @param DesKey 商户方公钥加密的会话密钥的base64字符串，[指引详见](https://cloud.tencent.com/document/product/1007/63370)。
      */
     public void setDesKey(String DesKey) {
         this.DesKey = DesKey;
     }
 
     /**
-     * Get 会话密钥sm2加密后的base64字符串，[指引详见](https://cloud.tencent.com/document/product/1007/63370) 
-     * @return UserInfo 会话密钥sm2加密后的base64字符串，[指引详见](https://cloud.tencent.com/document/product/1007/63370)
+     * Get 会话密钥sm2加密后的base64字符串，[指引详见](https://cloud.tencent.com/document/product/1007/63370)。 
+     * @return UserInfo 会话密钥sm2加密后的base64字符串，[指引详见](https://cloud.tencent.com/document/product/1007/63370)。
      */
     public String getUserInfo() {
         return this.UserInfo;
     }
 
     /**
-     * Set 会话密钥sm2加密后的base64字符串，[指引详见](https://cloud.tencent.com/document/product/1007/63370)
-     * @param UserInfo 会话密钥sm2加密后的base64字符串，[指引详见](https://cloud.tencent.com/document/product/1007/63370)
+     * Set 会话密钥sm2加密后的base64字符串，[指引详见](https://cloud.tencent.com/document/product/1007/63370)。
+     * @param UserInfo 会话密钥sm2加密后的base64字符串，[指引详见](https://cloud.tencent.com/document/product/1007/63370)。
      */
     public void setUserInfo(String UserInfo) {
         this.UserInfo = UserInfo;

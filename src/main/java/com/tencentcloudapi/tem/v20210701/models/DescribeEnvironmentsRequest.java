@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeEnvironmentsRequest extends AbstractModel {
 
     /**
-    * 分页limit
+    * 分页limit，默认：20
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 分页下标
+    * 分页下标，默认：0
     */
     @SerializedName("Offset")
     @Expose
@@ -66,32 +66,32 @@ public class DescribeEnvironmentsRequest extends AbstractModel {
     private String EnvironmentId;
 
     /**
-     * Get 分页limit 
-     * @return Limit 分页limit
+     * Get 分页limit，默认：20 
+     * @return Limit 分页limit，默认：20
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 分页limit
-     * @param Limit 分页limit
+     * Set 分页limit，默认：20
+     * @param Limit 分页limit，默认：20
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 分页下标 
-     * @return Offset 分页下标
+     * Get 分页下标，默认：0 
+     * @return Offset 分页下标，默认：0
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页下标
-     * @param Offset 分页下标
+     * Set 分页下标，默认：0
+     * @param Offset 分页下标，默认：0
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

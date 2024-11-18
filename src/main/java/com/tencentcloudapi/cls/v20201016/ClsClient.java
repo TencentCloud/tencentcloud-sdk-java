@@ -105,7 +105,14 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
-     *该接口用于创建通知渠道组。
+     *该接口用于创建通知渠道组，提供两种配置模式，二选一：
+1，简易模式，提供最基本的通知渠道功能。需填写如下参数：
+- Type
+- NoticeReceivers
+- WebCallbacks
+
+2，高级模式，在简易模式基础上，支持设定规则，为不同类型的告警分别设定通知渠道，并支持告警升级功能。需填写如下参数：
+- NoticeRules
      * @param req CreateAlarmNoticeRequest
      * @return CreateAlarmNoticeResponse
      * @throws TencentCloudSDKException
@@ -124,6 +131,17 @@ public class ClsClient extends AbstractClient{
     public CreateAlarmShieldResponse CreateAlarmShield(CreateAlarmShieldRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateAlarmShield", CreateAlarmShieldResponse.class);
+    }
+
+    /**
+     *内部云产品接入使用相关接口
+     * @param req CreateCloudProductLogTaskRequest
+     * @return CreateCloudProductLogTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCloudProductLogTaskResponse CreateCloudProductLogTask(CreateCloudProductLogTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateCloudProductLogTask", CreateCloudProductLogTaskResponse.class);
     }
 
     /**
@@ -270,6 +288,17 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
+     *该接口用于创建通知内容。
+     * @param req CreateNoticeContentRequest
+     * @return CreateNoticeContentResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateNoticeContentResponse CreateNoticeContent(CreateNoticeContentRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateNoticeContent", CreateNoticeContentResponse.class);
+    }
+
+    /**
      *本接口用于创建定时SQL分析任务
      * @param req CreateScheduledSqlRequest
      * @return CreateScheduledSqlResponse
@@ -333,6 +362,17 @@ public class ClsClient extends AbstractClient{
     public DeleteAlarmShieldResponse DeleteAlarmShield(DeleteAlarmShieldRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteAlarmShield", DeleteAlarmShieldResponse.class);
+    }
+
+    /**
+     *内部云产品接入使用相关接口
+     * @param req DeleteCloudProductLogTaskRequest
+     * @return DeleteCloudProductLogTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCloudProductLogTaskResponse DeleteCloudProductLogTask(DeleteCloudProductLogTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteCloudProductLogTask", DeleteCloudProductLogTaskResponse.class);
     }
 
     /**
@@ -479,6 +519,17 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
+     *该接口用于删除通知内容配置
+     * @param req DeleteNoticeContentRequest
+     * @return DeleteNoticeContentResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteNoticeContentResponse DeleteNoticeContent(DeleteNoticeContentRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteNoticeContent", DeleteNoticeContentResponse.class);
+    }
+
+    /**
      *本接口用于删除定时SQL分析任务
      * @param req DeleteScheduledSqlRequest
      * @return DeleteScheduledSqlResponse
@@ -553,6 +604,17 @@ public class ClsClient extends AbstractClient{
     public DescribeAlertRecordHistoryResponse DescribeAlertRecordHistory(DescribeAlertRecordHistoryRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeAlertRecordHistory", DescribeAlertRecordHistoryResponse.class);
+    }
+
+    /**
+     *云产品接入使用相关接口
+     * @param req DescribeCloudProductLogTasksRequest
+     * @return DescribeCloudProductLogTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCloudProductLogTasksResponse DescribeCloudProductLogTasks(DescribeCloudProductLogTasksRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCloudProductLogTasks", DescribeCloudProductLogTasksResponse.class);
     }
 
     /**
@@ -766,6 +828,17 @@ API返回数据包最大49MB，建议启用 gzip 压缩（HTTP Request Header Ac
     }
 
     /**
+     *获取通知内容列表
+     * @param req DescribeNoticeContentsRequest
+     * @return DescribeNoticeContentsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeNoticeContentsResponse DescribeNoticeContents(DescribeNoticeContentsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeNoticeContents", DescribeNoticeContentsResponse.class);
+    }
+
+    /**
      *该接口已废弃，如需获取分区数量，请使用DescribeTopics接口。
      * @param req DescribePartitionsRequest
      * @return DescribePartitionsResponse
@@ -873,6 +946,17 @@ API返回数据包最大49MB，建议启用 gzip 压缩（HTTP Request Header Ac
     public ModifyAlarmShieldResponse ModifyAlarmShield(ModifyAlarmShieldRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyAlarmShield", ModifyAlarmShieldResponse.class);
+    }
+
+    /**
+     *内部云产品接入使用相关接口
+     * @param req ModifyCloudProductLogTaskRequest
+     * @return ModifyCloudProductLogTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCloudProductLogTaskResponse ModifyCloudProductLogTask(ModifyCloudProductLogTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyCloudProductLogTask", ModifyCloudProductLogTaskResponse.class);
     }
 
     /**
@@ -1008,6 +1092,17 @@ API返回数据包最大49MB，建议启用 gzip 压缩（HTTP Request Header Ac
     }
 
     /**
+     *该接口用于修改通知内容配置
+     * @param req ModifyNoticeContentRequest
+     * @return ModifyNoticeContentResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyNoticeContentResponse ModifyNoticeContent(ModifyNoticeContentRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyNoticeContent", ModifyNoticeContentResponse.class);
+    }
+
+    /**
      *本接口用于修改定时SQL分析任务
      * @param req ModifyScheduledSqlRequest
      * @return ModifyScheduledSqlResponse
@@ -1063,7 +1158,8 @@ API返回数据包最大49MB，建议启用 gzip 压缩（HTTP Request Header Ac
     }
 
     /**
-     *查询指定时刻指标的最新值
+     *查询指定时刻指标的最新值。
+如果该时刻向前推5分钟内均无指标数据，则无相应的查询结果。
      * @param req QueryMetricRequest
      * @return QueryMetricResponse
      * @throws TencentCloudSDKException

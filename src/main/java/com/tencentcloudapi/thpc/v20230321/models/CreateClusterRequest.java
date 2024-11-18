@@ -76,7 +76,7 @@ public class CreateClusterRequest extends AbstractModel {
     private String SchedulerVersion;
 
     /**
-    * 指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-xxx`。目前支持部分公有镜像和自定义镜像。
+    * 指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-xxx`。目前支持部分公有镜像和自定义镜像。公共镜像请参考[镜像限制](https://cloud.tencent.com/document/product/1527/64818)
     */
     @SerializedName("ImageId")
     @Expose
@@ -165,7 +165,7 @@ false（默认）：发送正常请求，通过检查后直接创建实例
     private Tag [] Tags;
 
     /**
-    * 弹性伸缩类型。默认值：THPC_AS<li>THPC_AS：集群自动扩缩容由THPC产品内部实现。</li><li>AS：集群自动扩缩容由[弹性伸缩](https://cloud.tencent.com/document/product/377/3154)产品实现。</li>
+    * 弹性伸缩类型。默认值：THPC_AS
     */
     @SerializedName("AutoScalingType")
     @Expose
@@ -310,16 +310,16 @@ false（默认）：发送正常请求，通过检查后直接创建实例
     }
 
     /**
-     * Get 指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-xxx`。目前支持部分公有镜像和自定义镜像。 
-     * @return ImageId 指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-xxx`。目前支持部分公有镜像和自定义镜像。
+     * Get 指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-xxx`。目前支持部分公有镜像和自定义镜像。公共镜像请参考[镜像限制](https://cloud.tencent.com/document/product/1527/64818) 
+     * @return ImageId 指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-xxx`。目前支持部分公有镜像和自定义镜像。公共镜像请参考[镜像限制](https://cloud.tencent.com/document/product/1527/64818)
      */
     public String getImageId() {
         return this.ImageId;
     }
 
     /**
-     * Set 指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-xxx`。目前支持部分公有镜像和自定义镜像。
-     * @param ImageId 指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-xxx`。目前支持部分公有镜像和自定义镜像。
+     * Set 指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-xxx`。目前支持部分公有镜像和自定义镜像。公共镜像请参考[镜像限制](https://cloud.tencent.com/document/product/1527/64818)
+     * @param ImageId 指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-xxx`。目前支持部分公有镜像和自定义镜像。公共镜像请参考[镜像限制](https://cloud.tencent.com/document/product/1527/64818)
      */
     public void setImageId(String ImageId) {
         this.ImageId = ImageId;
@@ -522,16 +522,16 @@ false（默认）：发送正常请求，通过检查后直接创建实例
     }
 
     /**
-     * Get 弹性伸缩类型。默认值：THPC_AS<li>THPC_AS：集群自动扩缩容由THPC产品内部实现。</li><li>AS：集群自动扩缩容由[弹性伸缩](https://cloud.tencent.com/document/product/377/3154)产品实现。</li> 
-     * @return AutoScalingType 弹性伸缩类型。默认值：THPC_AS<li>THPC_AS：集群自动扩缩容由THPC产品内部实现。</li><li>AS：集群自动扩缩容由[弹性伸缩](https://cloud.tencent.com/document/product/377/3154)产品实现。</li>
+     * Get 弹性伸缩类型。默认值：THPC_AS 
+     * @return AutoScalingType 弹性伸缩类型。默认值：THPC_AS
      */
     public String getAutoScalingType() {
         return this.AutoScalingType;
     }
 
     /**
-     * Set 弹性伸缩类型。默认值：THPC_AS<li>THPC_AS：集群自动扩缩容由THPC产品内部实现。</li><li>AS：集群自动扩缩容由[弹性伸缩](https://cloud.tencent.com/document/product/377/3154)产品实现。</li>
-     * @param AutoScalingType 弹性伸缩类型。默认值：THPC_AS<li>THPC_AS：集群自动扩缩容由THPC产品内部实现。</li><li>AS：集群自动扩缩容由[弹性伸缩](https://cloud.tencent.com/document/product/377/3154)产品实现。</li>
+     * Set 弹性伸缩类型。默认值：THPC_AS
+     * @param AutoScalingType 弹性伸缩类型。默认值：THPC_AS
      */
     public void setAutoScalingType(String AutoScalingType) {
         this.AutoScalingType = AutoScalingType;

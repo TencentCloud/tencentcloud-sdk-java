@@ -31,7 +31,7 @@ public class ReportConversionRequest extends AbstractModel {
     private String SmsSdkAppId;
 
     /**
-    * 发送短信返回的流水号。
+    * 发送短信返回的流水号。对应SendSms接口返回的SendStatusSet参数中的SerialNo字段。 
     */
     @SerializedName("SerialNo")
     @Expose
@@ -61,16 +61,16 @@ public class ReportConversionRequest extends AbstractModel {
     }
 
     /**
-     * Get 发送短信返回的流水号。 
-     * @return SerialNo 发送短信返回的流水号。
+     * Get 发送短信返回的流水号。对应SendSms接口返回的SendStatusSet参数中的SerialNo字段。  
+     * @return SerialNo 发送短信返回的流水号。对应SendSms接口返回的SendStatusSet参数中的SerialNo字段。 
      */
     public String getSerialNo() {
         return this.SerialNo;
     }
 
     /**
-     * Set 发送短信返回的流水号。
-     * @param SerialNo 发送短信返回的流水号。
+     * Set 发送短信返回的流水号。对应SendSms接口返回的SendStatusSet参数中的SerialNo字段。 
+     * @param SerialNo 发送短信返回的流水号。对应SendSms接口返回的SendStatusSet参数中的SerialNo字段。 
      */
     public void setSerialNo(String SerialNo) {
         this.SerialNo = SerialNo;

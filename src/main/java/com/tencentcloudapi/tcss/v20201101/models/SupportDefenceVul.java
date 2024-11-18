@@ -73,6 +73,22 @@ public class SupportDefenceVul extends AbstractModel {
     private String SubmitTime;
 
     /**
+    * 漏洞id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VulId")
+    @Expose
+    private Long VulId;
+
+    /**
+    * 状态，0:防御中，1：已加白，指的是在白名单列表中有这个漏洞的，不一定是全局型白名单
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Status")
+    @Expose
+    private Long Status;
+
+    /**
      * Get 漏洞PocID 
      * @return PocID 漏洞PocID
      */
@@ -184,6 +200,46 @@ public class SupportDefenceVul extends AbstractModel {
         this.SubmitTime = SubmitTime;
     }
 
+    /**
+     * Get 漏洞id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VulId 漏洞id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getVulId() {
+        return this.VulId;
+    }
+
+    /**
+     * Set 漏洞id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VulId 漏洞id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVulId(Long VulId) {
+        this.VulId = VulId;
+    }
+
+    /**
+     * Get 状态，0:防御中，1：已加白，指的是在白名单列表中有这个漏洞的，不一定是全局型白名单
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Status 状态，0:防御中，1：已加白，指的是在白名单列表中有这个漏洞的，不一定是全局型白名单
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 状态，0:防御中，1：已加白，指的是在白名单列表中有这个漏洞的，不一定是全局型白名单
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Status 状态，0:防御中，1：已加白，指的是在白名单列表中有这个漏洞的，不一定是全局型白名单
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStatus(Long Status) {
+        this.Status = Status;
+    }
+
     public SupportDefenceVul() {
     }
 
@@ -216,6 +272,12 @@ public class SupportDefenceVul extends AbstractModel {
         if (source.SubmitTime != null) {
             this.SubmitTime = new String(source.SubmitTime);
         }
+        if (source.VulId != null) {
+            this.VulId = new Long(source.VulId);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
     }
 
 
@@ -230,6 +292,8 @@ public class SupportDefenceVul extends AbstractModel {
         this.setParamSimple(map, prefix + "Level", this.Level);
         this.setParamSimple(map, prefix + "CVEID", this.CVEID);
         this.setParamSimple(map, prefix + "SubmitTime", this.SubmitTime);
+        this.setParamSimple(map, prefix + "VulId", this.VulId);
+        this.setParamSimple(map, prefix + "Status", this.Status);
 
     }
 }

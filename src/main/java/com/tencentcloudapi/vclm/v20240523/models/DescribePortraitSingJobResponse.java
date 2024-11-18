@@ -49,8 +49,21 @@ public class DescribePortraitSingJobResponse extends AbstractModel {
     private String StatusMsg;
 
     /**
-    * 生成视频的URL地址
-有效期24小时
+    * 任务执行错误码。当任务状态不为FAIL时，该值为""。
+    */
+    @SerializedName("ErrorCode")
+    @Expose
+    private String ErrorCode;
+
+    /**
+    * 任务执行错误信息。当任务状态不为FAIL时，该值为""。
+    */
+    @SerializedName("ErrorMessage")
+    @Expose
+    private String ErrorMessage;
+
+    /**
+    * 生成视频的URL地址。有效期24小时。
     */
     @SerializedName("ResultVideoUrl")
     @Expose
@@ -128,20 +141,48 @@ public class DescribePortraitSingJobResponse extends AbstractModel {
     }
 
     /**
-     * Get 生成视频的URL地址
-有效期24小时 
-     * @return ResultVideoUrl 生成视频的URL地址
-有效期24小时
+     * Get 任务执行错误码。当任务状态不为FAIL时，该值为""。 
+     * @return ErrorCode 任务执行错误码。当任务状态不为FAIL时，该值为""。
+     */
+    public String getErrorCode() {
+        return this.ErrorCode;
+    }
+
+    /**
+     * Set 任务执行错误码。当任务状态不为FAIL时，该值为""。
+     * @param ErrorCode 任务执行错误码。当任务状态不为FAIL时，该值为""。
+     */
+    public void setErrorCode(String ErrorCode) {
+        this.ErrorCode = ErrorCode;
+    }
+
+    /**
+     * Get 任务执行错误信息。当任务状态不为FAIL时，该值为""。 
+     * @return ErrorMessage 任务执行错误信息。当任务状态不为FAIL时，该值为""。
+     */
+    public String getErrorMessage() {
+        return this.ErrorMessage;
+    }
+
+    /**
+     * Set 任务执行错误信息。当任务状态不为FAIL时，该值为""。
+     * @param ErrorMessage 任务执行错误信息。当任务状态不为FAIL时，该值为""。
+     */
+    public void setErrorMessage(String ErrorMessage) {
+        this.ErrorMessage = ErrorMessage;
+    }
+
+    /**
+     * Get 生成视频的URL地址。有效期24小时。 
+     * @return ResultVideoUrl 生成视频的URL地址。有效期24小时。
      */
     public String getResultVideoUrl() {
         return this.ResultVideoUrl;
     }
 
     /**
-     * Set 生成视频的URL地址
-有效期24小时
-     * @param ResultVideoUrl 生成视频的URL地址
-有效期24小时
+     * Set 生成视频的URL地址。有效期24小时。
+     * @param ResultVideoUrl 生成视频的URL地址。有效期24小时。
      */
     public void setResultVideoUrl(String ResultVideoUrl) {
         this.ResultVideoUrl = ResultVideoUrl;
@@ -180,6 +221,12 @@ public class DescribePortraitSingJobResponse extends AbstractModel {
         if (source.StatusMsg != null) {
             this.StatusMsg = new String(source.StatusMsg);
         }
+        if (source.ErrorCode != null) {
+            this.ErrorCode = new String(source.ErrorCode);
+        }
+        if (source.ErrorMessage != null) {
+            this.ErrorMessage = new String(source.ErrorMessage);
+        }
         if (source.ResultVideoUrl != null) {
             this.ResultVideoUrl = new String(source.ResultVideoUrl);
         }
@@ -196,6 +243,8 @@ public class DescribePortraitSingJobResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "JobId", this.JobId);
         this.setParamSimple(map, prefix + "StatusCode", this.StatusCode);
         this.setParamSimple(map, prefix + "StatusMsg", this.StatusMsg);
+        this.setParamSimple(map, prefix + "ErrorCode", this.ErrorCode);
+        this.setParamSimple(map, prefix + "ErrorMessage", this.ErrorMessage);
         this.setParamSimple(map, prefix + "ResultVideoUrl", this.ResultVideoUrl);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 

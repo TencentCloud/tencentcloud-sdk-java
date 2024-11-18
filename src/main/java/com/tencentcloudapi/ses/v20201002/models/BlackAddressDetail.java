@@ -25,7 +25,6 @@ public class BlackAddressDetail extends AbstractModel {
 
     /**
     * 黑名单地址id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
     @Expose
@@ -33,7 +32,6 @@ public class BlackAddressDetail extends AbstractModel {
 
     /**
     * 邮箱地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Email")
     @Expose
@@ -41,7 +39,6 @@ public class BlackAddressDetail extends AbstractModel {
 
     /**
     * 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -49,7 +46,6 @@ public class BlackAddressDetail extends AbstractModel {
 
     /**
     * 过期时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExpireDate")
     @Expose
@@ -57,17 +53,14 @@ public class BlackAddressDetail extends AbstractModel {
 
     /**
     * 黑名单状态，0:已过期，1:生效中
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-     * Get 黑名单地址id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 黑名单地址id 
      * @return Id 黑名单地址id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getId() {
         return this.Id;
@@ -75,19 +68,15 @@ public class BlackAddressDetail extends AbstractModel {
 
     /**
      * Set 黑名单地址id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Id 黑名单地址id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 邮箱地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 邮箱地址 
      * @return Email 邮箱地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEmail() {
         return this.Email;
@@ -95,19 +84,15 @@ public class BlackAddressDetail extends AbstractModel {
 
     /**
      * Set 邮箱地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Email 邮箱地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEmail(String Email) {
         this.Email = Email;
     }
 
     /**
-     * Get 创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间 
      * @return CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -115,19 +100,15 @@ public class BlackAddressDetail extends AbstractModel {
 
     /**
      * Set 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 过期时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 过期时间 
      * @return ExpireDate 过期时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExpireDate() {
         return this.ExpireDate;
@@ -135,19 +116,15 @@ public class BlackAddressDetail extends AbstractModel {
 
     /**
      * Set 过期时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExpireDate 过期时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExpireDate(String ExpireDate) {
         this.ExpireDate = ExpireDate;
     }
 
     /**
-     * Get 黑名单状态，0:已过期，1:生效中
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 黑名单状态，0:已过期，1:生效中 
      * @return Status 黑名单状态，0:已过期，1:生效中
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
         return this.Status;
@@ -155,9 +132,7 @@ public class BlackAddressDetail extends AbstractModel {
 
     /**
      * Set 黑名单状态，0:已过期，1:生效中
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 黑名单状态，0:已过期，1:生效中
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
         this.Status = Status;

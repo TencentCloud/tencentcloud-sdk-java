@@ -45,6 +45,13 @@ public class CreateGroupRequest extends AbstractModel {
     private String Description;
 
     /**
+    * 用户组类型  Manual：手动创建，Synchronized：外部导入
+    */
+    @SerializedName("GroupType")
+    @Expose
+    private String GroupType;
+
+    /**
      * Get 空间 ID。 
      * @return ZoneId 空间 ID。
      */
@@ -92,6 +99,22 @@ public class CreateGroupRequest extends AbstractModel {
         this.Description = Description;
     }
 
+    /**
+     * Get 用户组类型  Manual：手动创建，Synchronized：外部导入 
+     * @return GroupType 用户组类型  Manual：手动创建，Synchronized：外部导入
+     */
+    public String getGroupType() {
+        return this.GroupType;
+    }
+
+    /**
+     * Set 用户组类型  Manual：手动创建，Synchronized：外部导入
+     * @param GroupType 用户组类型  Manual：手动创建，Synchronized：外部导入
+     */
+    public void setGroupType(String GroupType) {
+        this.GroupType = GroupType;
+    }
+
     public CreateGroupRequest() {
     }
 
@@ -109,6 +132,9 @@ public class CreateGroupRequest extends AbstractModel {
         if (source.Description != null) {
             this.Description = new String(source.Description);
         }
+        if (source.GroupType != null) {
+            this.GroupType = new String(source.GroupType);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class CreateGroupRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
         this.setParamSimple(map, prefix + "GroupName", this.GroupName);
         this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "GroupType", this.GroupType);
 
     }
 }

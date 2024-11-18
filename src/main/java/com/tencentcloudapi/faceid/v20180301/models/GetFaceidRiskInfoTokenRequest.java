@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class GetFaceidRiskInfoTokenRequest extends AbstractModel {
 
     /**
-    * SDK中生成的Meta字符串
+    * SDK中生成的Meta字符串。
     */
     @SerializedName("Meta")
     @Expose
     private String Meta;
 
     /**
-    * 透传参数 1000长度字符串
+    * 透传参数 1000长度字符串。
     */
     @SerializedName("Extra")
     @Expose
     private String Extra;
 
     /**
-     * Get SDK中生成的Meta字符串 
-     * @return Meta SDK中生成的Meta字符串
+     * Get SDK中生成的Meta字符串。 
+     * @return Meta SDK中生成的Meta字符串。
      */
     public String getMeta() {
         return this.Meta;
     }
 
     /**
-     * Set SDK中生成的Meta字符串
-     * @param Meta SDK中生成的Meta字符串
+     * Set SDK中生成的Meta字符串。
+     * @param Meta SDK中生成的Meta字符串。
      */
     public void setMeta(String Meta) {
         this.Meta = Meta;
     }
 
     /**
-     * Get 透传参数 1000长度字符串 
-     * @return Extra 透传参数 1000长度字符串
+     * Get 透传参数 1000长度字符串。 
+     * @return Extra 透传参数 1000长度字符串。
      */
     public String getExtra() {
         return this.Extra;
     }
 
     /**
-     * Set 透传参数 1000长度字符串
-     * @param Extra 透传参数 1000长度字符串
+     * Set 透传参数 1000长度字符串。
+     * @param Extra 透传参数 1000长度字符串。
      */
     public void setExtra(String Extra) {
         this.Extra = Extra;

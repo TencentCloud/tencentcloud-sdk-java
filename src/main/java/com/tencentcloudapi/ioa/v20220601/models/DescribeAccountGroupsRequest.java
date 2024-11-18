@@ -24,89 +24,124 @@ import java.util.HashMap;
 public class DescribeAccountGroupsRequest extends AbstractModel {
 
     /**
-    * 搜索范围,0-仅搜直接子组,1-深层搜索(只支持32位)
+    * 搜索范围：0-仅当前分组的直接子组，1-当前分组的所有子组。默认为0。
     */
     @SerializedName("Deepin")
     @Expose
     private Long Deepin;
 
     /**
-    * 滤条件、分页参数
-<li>Name - String - 是否必填：否 - 操作符: like  - 排序支持：否- 按账号分组过滤。</li>
+    * 查询条件
+
+过滤参数
+1、Name，string类型，按分组名过滤
+是否必填：否
+操作符: like
+
 排序条件
-<li>Itime - string - 是否必填：否 - 排序支持：是 - 按账号分组创建时间排序。</li>
-<li>Utime - string - 是否必填：否 - 排序支持：是 - 按账号分组更新时间排序。</li>
+1、Itime，string类型，按分组创建时间排序
+是否必填：否
+2、Utime，string类型，按分组更新时间排序
+是否必填：否
     */
     @SerializedName("Condition")
     @Expose
     private Condition Condition;
 
     /**
-    * 父分组id
+    * 父分组ID，获取该分组下的子组信息。默认查询全网根分组下子组信息。
     */
     @SerializedName("ParentId")
     @Expose
     private Long ParentId;
 
     /**
-     * Get 搜索范围,0-仅搜直接子组,1-深层搜索(只支持32位) 
-     * @return Deepin 搜索范围,0-仅搜直接子组,1-深层搜索(只支持32位)
+     * Get 搜索范围：0-仅当前分组的直接子组，1-当前分组的所有子组。默认为0。 
+     * @return Deepin 搜索范围：0-仅当前分组的直接子组，1-当前分组的所有子组。默认为0。
      */
     public Long getDeepin() {
         return this.Deepin;
     }
 
     /**
-     * Set 搜索范围,0-仅搜直接子组,1-深层搜索(只支持32位)
-     * @param Deepin 搜索范围,0-仅搜直接子组,1-深层搜索(只支持32位)
+     * Set 搜索范围：0-仅当前分组的直接子组，1-当前分组的所有子组。默认为0。
+     * @param Deepin 搜索范围：0-仅当前分组的直接子组，1-当前分组的所有子组。默认为0。
      */
     public void setDeepin(Long Deepin) {
         this.Deepin = Deepin;
     }
 
     /**
-     * Get 滤条件、分页参数
-<li>Name - String - 是否必填：否 - 操作符: like  - 排序支持：否- 按账号分组过滤。</li>
+     * Get 查询条件
+
+过滤参数
+1、Name，string类型，按分组名过滤
+是否必填：否
+操作符: like
+
 排序条件
-<li>Itime - string - 是否必填：否 - 排序支持：是 - 按账号分组创建时间排序。</li>
-<li>Utime - string - 是否必填：否 - 排序支持：是 - 按账号分组更新时间排序。</li> 
-     * @return Condition 滤条件、分页参数
-<li>Name - String - 是否必填：否 - 操作符: like  - 排序支持：否- 按账号分组过滤。</li>
+1、Itime，string类型，按分组创建时间排序
+是否必填：否
+2、Utime，string类型，按分组更新时间排序
+是否必填：否 
+     * @return Condition 查询条件
+
+过滤参数
+1、Name，string类型，按分组名过滤
+是否必填：否
+操作符: like
+
 排序条件
-<li>Itime - string - 是否必填：否 - 排序支持：是 - 按账号分组创建时间排序。</li>
-<li>Utime - string - 是否必填：否 - 排序支持：是 - 按账号分组更新时间排序。</li>
+1、Itime，string类型，按分组创建时间排序
+是否必填：否
+2、Utime，string类型，按分组更新时间排序
+是否必填：否
      */
     public Condition getCondition() {
         return this.Condition;
     }
 
     /**
-     * Set 滤条件、分页参数
-<li>Name - String - 是否必填：否 - 操作符: like  - 排序支持：否- 按账号分组过滤。</li>
+     * Set 查询条件
+
+过滤参数
+1、Name，string类型，按分组名过滤
+是否必填：否
+操作符: like
+
 排序条件
-<li>Itime - string - 是否必填：否 - 排序支持：是 - 按账号分组创建时间排序。</li>
-<li>Utime - string - 是否必填：否 - 排序支持：是 - 按账号分组更新时间排序。</li>
-     * @param Condition 滤条件、分页参数
-<li>Name - String - 是否必填：否 - 操作符: like  - 排序支持：否- 按账号分组过滤。</li>
+1、Itime，string类型，按分组创建时间排序
+是否必填：否
+2、Utime，string类型，按分组更新时间排序
+是否必填：否
+     * @param Condition 查询条件
+
+过滤参数
+1、Name，string类型，按分组名过滤
+是否必填：否
+操作符: like
+
 排序条件
-<li>Itime - string - 是否必填：否 - 排序支持：是 - 按账号分组创建时间排序。</li>
-<li>Utime - string - 是否必填：否 - 排序支持：是 - 按账号分组更新时间排序。</li>
+1、Itime，string类型，按分组创建时间排序
+是否必填：否
+2、Utime，string类型，按分组更新时间排序
+是否必填：否
      */
     public void setCondition(Condition Condition) {
         this.Condition = Condition;
     }
 
     /**
-     * Get 父分组id 
-     * @return ParentId 父分组id
+     * Get 父分组ID，获取该分组下的子组信息。默认查询全网根分组下子组信息。 
+     * @return ParentId 父分组ID，获取该分组下的子组信息。默认查询全网根分组下子组信息。
      */
     public Long getParentId() {
         return this.ParentId;
     }
 
     /**
-     * Set 父分组id
-     * @param ParentId 父分组id
+     * Set 父分组ID，获取该分组下的子组信息。默认查询全网根分组下子组信息。
+     * @param ParentId 父分组ID，获取该分组下的子组信息。默认查询全网根分组下子组信息。
      */
     public void setParentId(Long ParentId) {
         this.ParentId = ParentId;

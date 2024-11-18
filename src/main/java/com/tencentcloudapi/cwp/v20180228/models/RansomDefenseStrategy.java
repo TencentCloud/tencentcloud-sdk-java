@@ -32,7 +32,6 @@ public class RansomDefenseStrategy extends AbstractModel {
 
     /**
     * 操作uin
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Uin")
     @Expose
@@ -47,7 +46,6 @@ public class RansomDefenseStrategy extends AbstractModel {
 
     /**
     * 策略备注
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
     @Expose
@@ -69,7 +67,6 @@ public class RansomDefenseStrategy extends AbstractModel {
 
     /**
     * 包含目录，用;分隔
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IncludeDir")
     @Expose
@@ -77,7 +74,6 @@ public class RansomDefenseStrategy extends AbstractModel {
 
     /**
     * 包含目录，用;分隔
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExcludeDir")
     @Expose
@@ -85,7 +81,6 @@ public class RansomDefenseStrategy extends AbstractModel {
 
     /**
     * 备份模式： 0按周，1按天
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BackupType")
     @Expose
@@ -93,7 +88,6 @@ public class RansomDefenseStrategy extends AbstractModel {
 
     /**
     * 备份星期天数（1-7）：1;2;3;4
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Weekday")
     @Expose
@@ -115,7 +109,6 @@ public class RansomDefenseStrategy extends AbstractModel {
 
     /**
     * 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -123,7 +116,6 @@ public class RansomDefenseStrategy extends AbstractModel {
 
     /**
     * 最近修改时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ModifyTime")
     @Expose
@@ -131,7 +123,6 @@ public class RansomDefenseStrategy extends AbstractModel {
 
     /**
     * 绑定机器数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MachineCount")
     @Expose
@@ -154,10 +145,8 @@ public class RansomDefenseStrategy extends AbstractModel {
     }
 
     /**
-     * Get 操作uin
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 操作uin 
      * @return Uin 操作uin
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUin() {
         return this.Uin;
@@ -165,9 +154,7 @@ public class RansomDefenseStrategy extends AbstractModel {
 
     /**
      * Set 操作uin
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Uin 操作uin
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUin(String Uin) {
         this.Uin = Uin;
@@ -190,10 +177,8 @@ public class RansomDefenseStrategy extends AbstractModel {
     }
 
     /**
-     * Get 策略备注
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 策略备注 
      * @return Description 策略备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
         return this.Description;
@@ -201,9 +186,7 @@ public class RansomDefenseStrategy extends AbstractModel {
 
     /**
      * Set 策略备注
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Description 策略备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
         this.Description = Description;
@@ -242,10 +225,8 @@ public class RansomDefenseStrategy extends AbstractModel {
     }
 
     /**
-     * Get 包含目录，用;分隔
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 包含目录，用;分隔 
      * @return IncludeDir 包含目录，用;分隔
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIncludeDir() {
         return this.IncludeDir;
@@ -253,19 +234,15 @@ public class RansomDefenseStrategy extends AbstractModel {
 
     /**
      * Set 包含目录，用;分隔
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IncludeDir 包含目录，用;分隔
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIncludeDir(String IncludeDir) {
         this.IncludeDir = IncludeDir;
     }
 
     /**
-     * Get 包含目录，用;分隔
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 包含目录，用;分隔 
      * @return ExcludeDir 包含目录，用;分隔
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExcludeDir() {
         return this.ExcludeDir;
@@ -273,19 +250,15 @@ public class RansomDefenseStrategy extends AbstractModel {
 
     /**
      * Set 包含目录，用;分隔
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExcludeDir 包含目录，用;分隔
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExcludeDir(String ExcludeDir) {
         this.ExcludeDir = ExcludeDir;
     }
 
     /**
-     * Get 备份模式： 0按周，1按天
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 备份模式： 0按周，1按天 
      * @return BackupType 备份模式： 0按周，1按天
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBackupType() {
         return this.BackupType;
@@ -293,19 +266,15 @@ public class RansomDefenseStrategy extends AbstractModel {
 
     /**
      * Set 备份模式： 0按周，1按天
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BackupType 备份模式： 0按周，1按天
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBackupType(Long BackupType) {
         this.BackupType = BackupType;
     }
 
     /**
-     * Get 备份星期天数（1-7）：1;2;3;4
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 备份星期天数（1-7）：1;2;3;4 
      * @return Weekday 备份星期天数（1-7）：1;2;3;4
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWeekday() {
         return this.Weekday;
@@ -313,9 +282,7 @@ public class RansomDefenseStrategy extends AbstractModel {
 
     /**
      * Set 备份星期天数（1-7）：1;2;3;4
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Weekday 备份星期天数（1-7）：1;2;3;4
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWeekday(String Weekday) {
         this.Weekday = Weekday;
@@ -354,10 +321,8 @@ public class RansomDefenseStrategy extends AbstractModel {
     }
 
     /**
-     * Get 创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间 
      * @return CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -365,19 +330,15 @@ public class RansomDefenseStrategy extends AbstractModel {
 
     /**
      * Set 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 最近修改时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最近修改时间 
      * @return ModifyTime 最近修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getModifyTime() {
         return this.ModifyTime;
@@ -385,19 +346,15 @@ public class RansomDefenseStrategy extends AbstractModel {
 
     /**
      * Set 最近修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ModifyTime 最近修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModifyTime(String ModifyTime) {
         this.ModifyTime = ModifyTime;
     }
 
     /**
-     * Get 绑定机器数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 绑定机器数 
      * @return MachineCount 绑定机器数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMachineCount() {
         return this.MachineCount;
@@ -405,9 +362,7 @@ public class RansomDefenseStrategy extends AbstractModel {
 
     /**
      * Set 绑定机器数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MachineCount 绑定机器数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMachineCount(Long MachineCount) {
         this.MachineCount = MachineCount;

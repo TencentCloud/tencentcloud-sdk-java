@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ChatCompletionsRequest extends AbstractModel {
 
     /**
-    * 模型名称，可选值包括 hunyuan-lite、hunyuan-standard、hunyuan-standard-256K、hunyuan-pro、 hunyuan-code、 hunyuan-role、 hunyuan-functioncall、 hunyuan-vision、 hunyuan-turbo。
+    * 模型名称，可选值包括 hunyuan-lite、hunyuan-standard、hunyuan-standard-256K、hunyuan-pro、 hunyuan-code、 hunyuan-role、 hunyuan-functioncall、 hunyuan-vision、 hunyuan-turbo、 hunyuan-turbo-latest、 hunyuan-large。
 各模型介绍请阅读 [产品概述](https://cloud.tencent.com/document/product/1729/104753) 中的说明。
 
 注意：
@@ -38,8 +38,8 @@ public class ChatCompletionsRequest extends AbstractModel {
     * 聊天上下文信息。
 说明：
 1. 长度最多为 40，按对话时间从旧到新在数组中排列。
-2. Message.Role 可选值：system、user、assistant、 tool。
-其中，system 角色可选，如存在则必须位于列表的最开始。user（tool） 和 assistant 需交替出现（一问一答），以 user 提问开始，user（tool）提问结束，且 Content 不能为空。Role 的顺序示例：[system（可选） user assistant user assistant user ...]。
+2. Message.Role 可选值：system、user、assistant、 tool（functioncall场景）。
+其中，system 角色可选，如存在则必须位于列表的最开始。user（tool） 和 assistant 需交替出现（一问一答），以 user 提问开始，user（tool）提问结束，其中tool可以连续出现多次，且 Content 不能为空。Role 的顺序示例：[system（可选） user assistant user（tool tool ...） assistant user（tool tool ...） ...]。
 3. Messages 中 Content 总长度不能超过模型输入长度上限（可参考 [产品概述](https://cloud.tencent.com/document/product/1729/104753) 文档），超过则会截断最前面的内容，只保留尾部内容。
     */
     @SerializedName("Messages")
@@ -159,25 +159,40 @@ public class ChatCompletionsRequest extends AbstractModel {
     private Boolean EnableSpeedSearch;
 
     /**
-    * 图文并茂开关。
-详细介绍请阅读 [图文并茂](https://cloud.tencent.com/document/product/1729/111178) 中的说明。
+    * 多媒体开关。
+详细介绍请阅读 [多媒体介绍](https://cloud.tencent.com/document/product/1729/111178) 中的说明。
 说明：
-1. 该参数仅在功能增强（如搜索）开关开启（EnableEnhancement=true）时生效。
-2. hunyuan-lite 无图文并茂能力，该参数对 hunyuan-lite 版本不生效。
-3. 未传值时默认关闭。
-4. 开启并搜索到对应的多媒体信息时，会输出对应的多媒体地址，可以定制个性化的图文消息。
+1. 该参数目前仅对白名单内用户生效，如您想体验该功能请 [联系我们](https://cloud.tencent.com/act/event/Online_service)。
+2. 该参数仅在功能增强（如搜索）开关开启（EnableEnhancement=true）并且极速版搜索开关关闭（EnableSpeedSearch=false）时生效。
+3. hunyuan-lite 无多媒体能力，该参数对 hunyuan-lite 版本不生效。
+4. 未传值时默认关闭。
+5. 开启并搜索到对应的多媒体信息时，会输出对应的多媒体地址，可以定制个性化的图文消息。
     */
     @SerializedName("EnableMultimedia")
     @Expose
     private Boolean EnableMultimedia;
 
     /**
-     * Get 模型名称，可选值包括 hunyuan-lite、hunyuan-standard、hunyuan-standard-256K、hunyuan-pro、 hunyuan-code、 hunyuan-role、 hunyuan-functioncall、 hunyuan-vision、 hunyuan-turbo。
+    * 是否开启深度研究该问题，默认是false，在值为true且命中深度研究该问题时，会返回深度研究该问题信息。
+    */
+    @SerializedName("EnableDeepSearch")
+    @Expose
+    private Boolean EnableDeepSearch;
+
+    /**
+    * 说明： 1. 确保模型的输出是可复现的。 2. 取值区间为非0正整数，最大值10000。 3. 非必要不建议使用，不合理的取值会影响效果。
+    */
+    @SerializedName("Seed")
+    @Expose
+    private Long Seed;
+
+    /**
+     * Get 模型名称，可选值包括 hunyuan-lite、hunyuan-standard、hunyuan-standard-256K、hunyuan-pro、 hunyuan-code、 hunyuan-role、 hunyuan-functioncall、 hunyuan-vision、 hunyuan-turbo、 hunyuan-turbo-latest、 hunyuan-large。
 各模型介绍请阅读 [产品概述](https://cloud.tencent.com/document/product/1729/104753) 中的说明。
 
 注意：
 不同的模型计费不同，请根据 [购买指南](https://cloud.tencent.com/document/product/1729/97731) 按需调用。 
-     * @return Model 模型名称，可选值包括 hunyuan-lite、hunyuan-standard、hunyuan-standard-256K、hunyuan-pro、 hunyuan-code、 hunyuan-role、 hunyuan-functioncall、 hunyuan-vision、 hunyuan-turbo。
+     * @return Model 模型名称，可选值包括 hunyuan-lite、hunyuan-standard、hunyuan-standard-256K、hunyuan-pro、 hunyuan-code、 hunyuan-role、 hunyuan-functioncall、 hunyuan-vision、 hunyuan-turbo、 hunyuan-turbo-latest、 hunyuan-large。
 各模型介绍请阅读 [产品概述](https://cloud.tencent.com/document/product/1729/104753) 中的说明。
 
 注意：
@@ -188,12 +203,12 @@ public class ChatCompletionsRequest extends AbstractModel {
     }
 
     /**
-     * Set 模型名称，可选值包括 hunyuan-lite、hunyuan-standard、hunyuan-standard-256K、hunyuan-pro、 hunyuan-code、 hunyuan-role、 hunyuan-functioncall、 hunyuan-vision、 hunyuan-turbo。
+     * Set 模型名称，可选值包括 hunyuan-lite、hunyuan-standard、hunyuan-standard-256K、hunyuan-pro、 hunyuan-code、 hunyuan-role、 hunyuan-functioncall、 hunyuan-vision、 hunyuan-turbo、 hunyuan-turbo-latest、 hunyuan-large。
 各模型介绍请阅读 [产品概述](https://cloud.tencent.com/document/product/1729/104753) 中的说明。
 
 注意：
 不同的模型计费不同，请根据 [购买指南](https://cloud.tencent.com/document/product/1729/97731) 按需调用。
-     * @param Model 模型名称，可选值包括 hunyuan-lite、hunyuan-standard、hunyuan-standard-256K、hunyuan-pro、 hunyuan-code、 hunyuan-role、 hunyuan-functioncall、 hunyuan-vision、 hunyuan-turbo。
+     * @param Model 模型名称，可选值包括 hunyuan-lite、hunyuan-standard、hunyuan-standard-256K、hunyuan-pro、 hunyuan-code、 hunyuan-role、 hunyuan-functioncall、 hunyuan-vision、 hunyuan-turbo、 hunyuan-turbo-latest、 hunyuan-large。
 各模型介绍请阅读 [产品概述](https://cloud.tencent.com/document/product/1729/104753) 中的说明。
 
 注意：
@@ -207,14 +222,14 @@ public class ChatCompletionsRequest extends AbstractModel {
      * Get 聊天上下文信息。
 说明：
 1. 长度最多为 40，按对话时间从旧到新在数组中排列。
-2. Message.Role 可选值：system、user、assistant、 tool。
-其中，system 角色可选，如存在则必须位于列表的最开始。user（tool） 和 assistant 需交替出现（一问一答），以 user 提问开始，user（tool）提问结束，且 Content 不能为空。Role 的顺序示例：[system（可选） user assistant user assistant user ...]。
+2. Message.Role 可选值：system、user、assistant、 tool（functioncall场景）。
+其中，system 角色可选，如存在则必须位于列表的最开始。user（tool） 和 assistant 需交替出现（一问一答），以 user 提问开始，user（tool）提问结束，其中tool可以连续出现多次，且 Content 不能为空。Role 的顺序示例：[system（可选） user assistant user（tool tool ...） assistant user（tool tool ...） ...]。
 3. Messages 中 Content 总长度不能超过模型输入长度上限（可参考 [产品概述](https://cloud.tencent.com/document/product/1729/104753) 文档），超过则会截断最前面的内容，只保留尾部内容。 
      * @return Messages 聊天上下文信息。
 说明：
 1. 长度最多为 40，按对话时间从旧到新在数组中排列。
-2. Message.Role 可选值：system、user、assistant、 tool。
-其中，system 角色可选，如存在则必须位于列表的最开始。user（tool） 和 assistant 需交替出现（一问一答），以 user 提问开始，user（tool）提问结束，且 Content 不能为空。Role 的顺序示例：[system（可选） user assistant user assistant user ...]。
+2. Message.Role 可选值：system、user、assistant、 tool（functioncall场景）。
+其中，system 角色可选，如存在则必须位于列表的最开始。user（tool） 和 assistant 需交替出现（一问一答），以 user 提问开始，user（tool）提问结束，其中tool可以连续出现多次，且 Content 不能为空。Role 的顺序示例：[system（可选） user assistant user（tool tool ...） assistant user（tool tool ...） ...]。
 3. Messages 中 Content 总长度不能超过模型输入长度上限（可参考 [产品概述](https://cloud.tencent.com/document/product/1729/104753) 文档），超过则会截断最前面的内容，只保留尾部内容。
      */
     public Message [] getMessages() {
@@ -225,14 +240,14 @@ public class ChatCompletionsRequest extends AbstractModel {
      * Set 聊天上下文信息。
 说明：
 1. 长度最多为 40，按对话时间从旧到新在数组中排列。
-2. Message.Role 可选值：system、user、assistant、 tool。
-其中，system 角色可选，如存在则必须位于列表的最开始。user（tool） 和 assistant 需交替出现（一问一答），以 user 提问开始，user（tool）提问结束，且 Content 不能为空。Role 的顺序示例：[system（可选） user assistant user assistant user ...]。
+2. Message.Role 可选值：system、user、assistant、 tool（functioncall场景）。
+其中，system 角色可选，如存在则必须位于列表的最开始。user（tool） 和 assistant 需交替出现（一问一答），以 user 提问开始，user（tool）提问结束，其中tool可以连续出现多次，且 Content 不能为空。Role 的顺序示例：[system（可选） user assistant user（tool tool ...） assistant user（tool tool ...） ...]。
 3. Messages 中 Content 总长度不能超过模型输入长度上限（可参考 [产品概述](https://cloud.tencent.com/document/product/1729/104753) 文档），超过则会截断最前面的内容，只保留尾部内容。
      * @param Messages 聊天上下文信息。
 说明：
 1. 长度最多为 40，按对话时间从旧到新在数组中排列。
-2. Message.Role 可选值：system、user、assistant、 tool。
-其中，system 角色可选，如存在则必须位于列表的最开始。user（tool） 和 assistant 需交替出现（一问一答），以 user 提问开始，user（tool）提问结束，且 Content 不能为空。Role 的顺序示例：[system（可选） user assistant user assistant user ...]。
+2. Message.Role 可选值：system、user、assistant、 tool（functioncall场景）。
+其中，system 角色可选，如存在则必须位于列表的最开始。user（tool） 和 assistant 需交替出现（一问一答），以 user 提问开始，user（tool）提问结束，其中tool可以连续出现多次，且 Content 不能为空。Role 的顺序示例：[system（可选） user assistant user（tool tool ...） assistant user（tool tool ...） ...]。
 3. Messages 中 Content 总长度不能超过模型输入长度上限（可参考 [产品概述](https://cloud.tencent.com/document/product/1729/104753) 文档），超过则会截断最前面的内容，只保留尾部内容。
      */
     public void setMessages(Message [] Messages) {
@@ -556,43 +571,79 @@ public class ChatCompletionsRequest extends AbstractModel {
     }
 
     /**
-     * Get 图文并茂开关。
-详细介绍请阅读 [图文并茂](https://cloud.tencent.com/document/product/1729/111178) 中的说明。
+     * Get 多媒体开关。
+详细介绍请阅读 [多媒体介绍](https://cloud.tencent.com/document/product/1729/111178) 中的说明。
 说明：
-1. 该参数仅在功能增强（如搜索）开关开启（EnableEnhancement=true）时生效。
-2. hunyuan-lite 无图文并茂能力，该参数对 hunyuan-lite 版本不生效。
-3. 未传值时默认关闭。
-4. 开启并搜索到对应的多媒体信息时，会输出对应的多媒体地址，可以定制个性化的图文消息。 
-     * @return EnableMultimedia 图文并茂开关。
-详细介绍请阅读 [图文并茂](https://cloud.tencent.com/document/product/1729/111178) 中的说明。
+1. 该参数目前仅对白名单内用户生效，如您想体验该功能请 [联系我们](https://cloud.tencent.com/act/event/Online_service)。
+2. 该参数仅在功能增强（如搜索）开关开启（EnableEnhancement=true）并且极速版搜索开关关闭（EnableSpeedSearch=false）时生效。
+3. hunyuan-lite 无多媒体能力，该参数对 hunyuan-lite 版本不生效。
+4. 未传值时默认关闭。
+5. 开启并搜索到对应的多媒体信息时，会输出对应的多媒体地址，可以定制个性化的图文消息。 
+     * @return EnableMultimedia 多媒体开关。
+详细介绍请阅读 [多媒体介绍](https://cloud.tencent.com/document/product/1729/111178) 中的说明。
 说明：
-1. 该参数仅在功能增强（如搜索）开关开启（EnableEnhancement=true）时生效。
-2. hunyuan-lite 无图文并茂能力，该参数对 hunyuan-lite 版本不生效。
-3. 未传值时默认关闭。
-4. 开启并搜索到对应的多媒体信息时，会输出对应的多媒体地址，可以定制个性化的图文消息。
+1. 该参数目前仅对白名单内用户生效，如您想体验该功能请 [联系我们](https://cloud.tencent.com/act/event/Online_service)。
+2. 该参数仅在功能增强（如搜索）开关开启（EnableEnhancement=true）并且极速版搜索开关关闭（EnableSpeedSearch=false）时生效。
+3. hunyuan-lite 无多媒体能力，该参数对 hunyuan-lite 版本不生效。
+4. 未传值时默认关闭。
+5. 开启并搜索到对应的多媒体信息时，会输出对应的多媒体地址，可以定制个性化的图文消息。
      */
     public Boolean getEnableMultimedia() {
         return this.EnableMultimedia;
     }
 
     /**
-     * Set 图文并茂开关。
-详细介绍请阅读 [图文并茂](https://cloud.tencent.com/document/product/1729/111178) 中的说明。
+     * Set 多媒体开关。
+详细介绍请阅读 [多媒体介绍](https://cloud.tencent.com/document/product/1729/111178) 中的说明。
 说明：
-1. 该参数仅在功能增强（如搜索）开关开启（EnableEnhancement=true）时生效。
-2. hunyuan-lite 无图文并茂能力，该参数对 hunyuan-lite 版本不生效。
-3. 未传值时默认关闭。
-4. 开启并搜索到对应的多媒体信息时，会输出对应的多媒体地址，可以定制个性化的图文消息。
-     * @param EnableMultimedia 图文并茂开关。
-详细介绍请阅读 [图文并茂](https://cloud.tencent.com/document/product/1729/111178) 中的说明。
+1. 该参数目前仅对白名单内用户生效，如您想体验该功能请 [联系我们](https://cloud.tencent.com/act/event/Online_service)。
+2. 该参数仅在功能增强（如搜索）开关开启（EnableEnhancement=true）并且极速版搜索开关关闭（EnableSpeedSearch=false）时生效。
+3. hunyuan-lite 无多媒体能力，该参数对 hunyuan-lite 版本不生效。
+4. 未传值时默认关闭。
+5. 开启并搜索到对应的多媒体信息时，会输出对应的多媒体地址，可以定制个性化的图文消息。
+     * @param EnableMultimedia 多媒体开关。
+详细介绍请阅读 [多媒体介绍](https://cloud.tencent.com/document/product/1729/111178) 中的说明。
 说明：
-1. 该参数仅在功能增强（如搜索）开关开启（EnableEnhancement=true）时生效。
-2. hunyuan-lite 无图文并茂能力，该参数对 hunyuan-lite 版本不生效。
-3. 未传值时默认关闭。
-4. 开启并搜索到对应的多媒体信息时，会输出对应的多媒体地址，可以定制个性化的图文消息。
+1. 该参数目前仅对白名单内用户生效，如您想体验该功能请 [联系我们](https://cloud.tencent.com/act/event/Online_service)。
+2. 该参数仅在功能增强（如搜索）开关开启（EnableEnhancement=true）并且极速版搜索开关关闭（EnableSpeedSearch=false）时生效。
+3. hunyuan-lite 无多媒体能力，该参数对 hunyuan-lite 版本不生效。
+4. 未传值时默认关闭。
+5. 开启并搜索到对应的多媒体信息时，会输出对应的多媒体地址，可以定制个性化的图文消息。
      */
     public void setEnableMultimedia(Boolean EnableMultimedia) {
         this.EnableMultimedia = EnableMultimedia;
+    }
+
+    /**
+     * Get 是否开启深度研究该问题，默认是false，在值为true且命中深度研究该问题时，会返回深度研究该问题信息。 
+     * @return EnableDeepSearch 是否开启深度研究该问题，默认是false，在值为true且命中深度研究该问题时，会返回深度研究该问题信息。
+     */
+    public Boolean getEnableDeepSearch() {
+        return this.EnableDeepSearch;
+    }
+
+    /**
+     * Set 是否开启深度研究该问题，默认是false，在值为true且命中深度研究该问题时，会返回深度研究该问题信息。
+     * @param EnableDeepSearch 是否开启深度研究该问题，默认是false，在值为true且命中深度研究该问题时，会返回深度研究该问题信息。
+     */
+    public void setEnableDeepSearch(Boolean EnableDeepSearch) {
+        this.EnableDeepSearch = EnableDeepSearch;
+    }
+
+    /**
+     * Get 说明： 1. 确保模型的输出是可复现的。 2. 取值区间为非0正整数，最大值10000。 3. 非必要不建议使用，不合理的取值会影响效果。 
+     * @return Seed 说明： 1. 确保模型的输出是可复现的。 2. 取值区间为非0正整数，最大值10000。 3. 非必要不建议使用，不合理的取值会影响效果。
+     */
+    public Long getSeed() {
+        return this.Seed;
+    }
+
+    /**
+     * Set 说明： 1. 确保模型的输出是可复现的。 2. 取值区间为非0正整数，最大值10000。 3. 非必要不建议使用，不合理的取值会影响效果。
+     * @param Seed 说明： 1. 确保模型的输出是可复现的。 2. 取值区间为非0正整数，最大值10000。 3. 非必要不建议使用，不合理的取值会影响效果。
+     */
+    public void setSeed(Long Seed) {
+        this.Seed = Seed;
     }
 
     public ChatCompletionsRequest() {
@@ -651,6 +702,12 @@ public class ChatCompletionsRequest extends AbstractModel {
         if (source.EnableMultimedia != null) {
             this.EnableMultimedia = new Boolean(source.EnableMultimedia);
         }
+        if (source.EnableDeepSearch != null) {
+            this.EnableDeepSearch = new Boolean(source.EnableDeepSearch);
+        }
+        if (source.Seed != null) {
+            this.Seed = new Long(source.Seed);
+        }
     }
 
 
@@ -672,6 +729,8 @@ public class ChatCompletionsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Citation", this.Citation);
         this.setParamSimple(map, prefix + "EnableSpeedSearch", this.EnableSpeedSearch);
         this.setParamSimple(map, prefix + "EnableMultimedia", this.EnableMultimedia);
+        this.setParamSimple(map, prefix + "EnableDeepSearch", this.EnableDeepSearch);
+        this.setParamSimple(map, prefix + "Seed", this.Seed);
 
     }
 }

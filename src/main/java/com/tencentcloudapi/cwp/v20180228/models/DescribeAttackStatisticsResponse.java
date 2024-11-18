@@ -25,7 +25,6 @@ public class DescribeAttackStatisticsResponse extends AbstractModel {
 
     /**
     * 总攻击次数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PendingAttackCount")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeAttackStatisticsResponse extends AbstractModel {
 
     /**
     * 总尝试攻击次数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PendingTryAttackCount")
     @Expose
@@ -41,7 +39,6 @@ public class DescribeAttackStatisticsResponse extends AbstractModel {
 
     /**
     * 总攻击成功次数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PendingSuccAttackCount")
     @Expose
@@ -49,7 +46,6 @@ public class DescribeAttackStatisticsResponse extends AbstractModel {
 
     /**
     * 今日新增攻击次数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PendingNewAttackCount")
     @Expose
@@ -57,7 +53,6 @@ public class DescribeAttackStatisticsResponse extends AbstractModel {
 
     /**
     * 总受攻击资产数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AttackedAssetCount")
     @Expose
@@ -65,7 +60,6 @@ public class DescribeAttackStatisticsResponse extends AbstractModel {
 
     /**
     * 今日新增受攻击资产数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NewAttackedAssetCount")
     @Expose
@@ -73,7 +67,6 @@ public class DescribeAttackStatisticsResponse extends AbstractModel {
 
     /**
     * 总受攻击端口数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AttackedPortCount")
     @Expose
@@ -81,7 +74,6 @@ public class DescribeAttackStatisticsResponse extends AbstractModel {
 
     /**
     * 今日新增受攻击端口数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NewAttackedPortCount")
     @Expose
@@ -89,7 +81,6 @@ public class DescribeAttackStatisticsResponse extends AbstractModel {
 
     /**
     * 总攻击来源ip数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AttackSrcIpCount")
     @Expose
@@ -97,7 +88,6 @@ public class DescribeAttackStatisticsResponse extends AbstractModel {
 
     /**
     * 今日新增攻击来源ip数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NewAttackSrcIpCount")
     @Expose
@@ -111,10 +101,8 @@ public class DescribeAttackStatisticsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 总攻击次数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 总攻击次数 
      * @return PendingAttackCount 总攻击次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPendingAttackCount() {
         return this.PendingAttackCount;
@@ -122,19 +110,15 @@ public class DescribeAttackStatisticsResponse extends AbstractModel {
 
     /**
      * Set 总攻击次数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PendingAttackCount 总攻击次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPendingAttackCount(Long PendingAttackCount) {
         this.PendingAttackCount = PendingAttackCount;
     }
 
     /**
-     * Get 总尝试攻击次数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 总尝试攻击次数 
      * @return PendingTryAttackCount 总尝试攻击次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPendingTryAttackCount() {
         return this.PendingTryAttackCount;
@@ -142,19 +126,15 @@ public class DescribeAttackStatisticsResponse extends AbstractModel {
 
     /**
      * Set 总尝试攻击次数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PendingTryAttackCount 总尝试攻击次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPendingTryAttackCount(Long PendingTryAttackCount) {
         this.PendingTryAttackCount = PendingTryAttackCount;
     }
 
     /**
-     * Get 总攻击成功次数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 总攻击成功次数 
      * @return PendingSuccAttackCount 总攻击成功次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPendingSuccAttackCount() {
         return this.PendingSuccAttackCount;
@@ -162,19 +142,15 @@ public class DescribeAttackStatisticsResponse extends AbstractModel {
 
     /**
      * Set 总攻击成功次数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PendingSuccAttackCount 总攻击成功次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPendingSuccAttackCount(Long PendingSuccAttackCount) {
         this.PendingSuccAttackCount = PendingSuccAttackCount;
     }
 
     /**
-     * Get 今日新增攻击次数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 今日新增攻击次数 
      * @return PendingNewAttackCount 今日新增攻击次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPendingNewAttackCount() {
         return this.PendingNewAttackCount;
@@ -182,19 +158,15 @@ public class DescribeAttackStatisticsResponse extends AbstractModel {
 
     /**
      * Set 今日新增攻击次数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PendingNewAttackCount 今日新增攻击次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPendingNewAttackCount(Long PendingNewAttackCount) {
         this.PendingNewAttackCount = PendingNewAttackCount;
     }
 
     /**
-     * Get 总受攻击资产数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 总受攻击资产数量 
      * @return AttackedAssetCount 总受攻击资产数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAttackedAssetCount() {
         return this.AttackedAssetCount;
@@ -202,19 +174,15 @@ public class DescribeAttackStatisticsResponse extends AbstractModel {
 
     /**
      * Set 总受攻击资产数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AttackedAssetCount 总受攻击资产数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAttackedAssetCount(Long AttackedAssetCount) {
         this.AttackedAssetCount = AttackedAssetCount;
     }
 
     /**
-     * Get 今日新增受攻击资产数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 今日新增受攻击资产数量 
      * @return NewAttackedAssetCount 今日新增受攻击资产数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getNewAttackedAssetCount() {
         return this.NewAttackedAssetCount;
@@ -222,19 +190,15 @@ public class DescribeAttackStatisticsResponse extends AbstractModel {
 
     /**
      * Set 今日新增受攻击资产数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NewAttackedAssetCount 今日新增受攻击资产数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNewAttackedAssetCount(Long NewAttackedAssetCount) {
         this.NewAttackedAssetCount = NewAttackedAssetCount;
     }
 
     /**
-     * Get 总受攻击端口数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 总受攻击端口数量 
      * @return AttackedPortCount 总受攻击端口数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAttackedPortCount() {
         return this.AttackedPortCount;
@@ -242,19 +206,15 @@ public class DescribeAttackStatisticsResponse extends AbstractModel {
 
     /**
      * Set 总受攻击端口数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AttackedPortCount 总受攻击端口数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAttackedPortCount(Long AttackedPortCount) {
         this.AttackedPortCount = AttackedPortCount;
     }
 
     /**
-     * Get 今日新增受攻击端口数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 今日新增受攻击端口数量 
      * @return NewAttackedPortCount 今日新增受攻击端口数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getNewAttackedPortCount() {
         return this.NewAttackedPortCount;
@@ -262,19 +222,15 @@ public class DescribeAttackStatisticsResponse extends AbstractModel {
 
     /**
      * Set 今日新增受攻击端口数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NewAttackedPortCount 今日新增受攻击端口数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNewAttackedPortCount(Long NewAttackedPortCount) {
         this.NewAttackedPortCount = NewAttackedPortCount;
     }
 
     /**
-     * Get 总攻击来源ip数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 总攻击来源ip数量 
      * @return AttackSrcIpCount 总攻击来源ip数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAttackSrcIpCount() {
         return this.AttackSrcIpCount;
@@ -282,19 +238,15 @@ public class DescribeAttackStatisticsResponse extends AbstractModel {
 
     /**
      * Set 总攻击来源ip数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AttackSrcIpCount 总攻击来源ip数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAttackSrcIpCount(Long AttackSrcIpCount) {
         this.AttackSrcIpCount = AttackSrcIpCount;
     }
 
     /**
-     * Get 今日新增攻击来源ip数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 今日新增攻击来源ip数量 
      * @return NewAttackSrcIpCount 今日新增攻击来源ip数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getNewAttackSrcIpCount() {
         return this.NewAttackSrcIpCount;
@@ -302,9 +254,7 @@ public class DescribeAttackStatisticsResponse extends AbstractModel {
 
     /**
      * Set 今日新增攻击来源ip数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NewAttackSrcIpCount 今日新增攻击来源ip数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNewAttackSrcIpCount(Long NewAttackSrcIpCount) {
         this.NewAttackSrcIpCount = NewAttackSrcIpCount;

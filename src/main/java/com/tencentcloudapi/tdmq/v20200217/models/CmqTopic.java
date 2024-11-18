@@ -48,7 +48,7 @@ public class CmqTopic extends AbstractModel {
     private Long MsgRetentionSeconds;
 
     /**
-    * 消息最大长度。取值范围1024 - 1048576Byte（即1 - 1024K），默认值为65536。
+    * 消息最大长度。取值范围1024 - 1048576Byte（即1 - 1024K），默认值为1048576。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxMsgSize")
@@ -222,9 +222,9 @@ FilterType = 2表示用户使用 BindingKey 过滤。
     }
 
     /**
-     * Get 消息最大长度。取值范围1024 - 1048576Byte（即1 - 1024K），默认值为65536。
+     * Get 消息最大长度。取值范围1024 - 1048576Byte（即1 - 1024K），默认值为1048576。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MaxMsgSize 消息最大长度。取值范围1024 - 1048576Byte（即1 - 1024K），默认值为65536。
+     * @return MaxMsgSize 消息最大长度。取值范围1024 - 1048576Byte（即1 - 1024K），默认值为1048576。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaxMsgSize() {
@@ -232,9 +232,9 @@ FilterType = 2表示用户使用 BindingKey 过滤。
     }
 
     /**
-     * Set 消息最大长度。取值范围1024 - 1048576Byte（即1 - 1024K），默认值为65536。
+     * Set 消息最大长度。取值范围1024 - 1048576Byte（即1 - 1024K），默认值为1048576。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MaxMsgSize 消息最大长度。取值范围1024 - 1048576Byte（即1 - 1024K），默认值为65536。
+     * @param MaxMsgSize 消息最大长度。取值范围1024 - 1048576Byte（即1 - 1024K），默认值为1048576。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxMsgSize(Long MaxMsgSize) {

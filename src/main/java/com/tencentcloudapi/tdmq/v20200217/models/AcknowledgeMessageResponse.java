@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AcknowledgeMessageResponse extends AbstractModel {
 
     /**
-    * 如果为“”，则说明没有错误返回
+    * 如果为""，则说明没有错误返回，否则返回具体的错误信息。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ErrorMsg")
@@ -39,9 +39,9 @@ public class AcknowledgeMessageResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 如果为“”，则说明没有错误返回
+     * Get 如果为""，则说明没有错误返回，否则返回具体的错误信息。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ErrorMsg 如果为“”，则说明没有错误返回
+     * @return ErrorMsg 如果为""，则说明没有错误返回，否则返回具体的错误信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getErrorMsg() {
@@ -49,9 +49,9 @@ public class AcknowledgeMessageResponse extends AbstractModel {
     }
 
     /**
-     * Set 如果为“”，则说明没有错误返回
+     * Set 如果为""，则说明没有错误返回，否则返回具体的错误信息。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ErrorMsg 如果为“”，则说明没有错误返回
+     * @param ErrorMsg 如果为""，则说明没有错误返回，否则返回具体的错误信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrorMsg(String ErrorMsg) {

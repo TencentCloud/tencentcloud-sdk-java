@@ -25,7 +25,6 @@ public class MachineFileTamperRule extends AbstractModel {
 
     /**
     * 规则名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -53,10 +52,8 @@ public class MachineFileTamperRule extends AbstractModel {
     private Long Id;
 
     /**
-     * Get 规则名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则名称 
      * @return Name 规则名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -64,9 +61,7 @@ public class MachineFileTamperRule extends AbstractModel {
 
     /**
      * Set 规则名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 规则名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;

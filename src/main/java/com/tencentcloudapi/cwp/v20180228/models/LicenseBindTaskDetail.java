@@ -53,7 +53,6 @@ public class LicenseBindTaskDetail extends AbstractModel {
 
     /**
     * 机器额外信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MachineExtraInfo")
     @Expose
@@ -124,10 +123,8 @@ public class LicenseBindTaskDetail extends AbstractModel {
     }
 
     /**
-     * Get 机器额外信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 机器额外信息 
      * @return MachineExtraInfo 机器额外信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public MachineExtraInfo getMachineExtraInfo() {
         return this.MachineExtraInfo;
@@ -135,9 +132,7 @@ public class LicenseBindTaskDetail extends AbstractModel {
 
     /**
      * Set 机器额外信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MachineExtraInfo 机器额外信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMachineExtraInfo(MachineExtraInfo MachineExtraInfo) {
         this.MachineExtraInfo = MachineExtraInfo;

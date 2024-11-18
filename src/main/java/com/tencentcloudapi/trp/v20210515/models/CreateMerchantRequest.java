@@ -45,7 +45,7 @@ public class CreateMerchantRequest extends AbstractModel {
     private Long CorpId;
 
     /**
-    * 码包来源 0:自建, 1:第三发
+    * 码包来源 0:自建, 1:第三方
     */
     @SerializedName("CodeType")
     @Expose
@@ -107,16 +107,16 @@ public class CreateMerchantRequest extends AbstractModel {
     }
 
     /**
-     * Get 码包来源 0:自建, 1:第三发 
-     * @return CodeType 码包来源 0:自建, 1:第三发
+     * Get 码包来源 0:自建, 1:第三方 
+     * @return CodeType 码包来源 0:自建, 1:第三方
      */
     public Long getCodeType() {
         return this.CodeType;
     }
 
     /**
-     * Set 码包来源 0:自建, 1:第三发
-     * @param CodeType 码包来源 0:自建, 1:第三发
+     * Set 码包来源 0:自建, 1:第三方
+     * @param CodeType 码包来源 0:自建, 1:第三方
      */
     public void setCodeType(Long CodeType) {
         this.CodeType = CodeType;

@@ -52,7 +52,7 @@ public class SwitchDBInstanceMasterSlaveRequest extends AbstractModel {
     private Boolean WaitSwitch;
 
     /**
-    * 集群版实例指定节点id发起主从切换。
+    * 集群版实例指定节点 ID 发起主从切换。
     */
     @SerializedName("DstNodeId")
     @Expose
@@ -123,16 +123,16 @@ public class SwitchDBInstanceMasterSlaveRequest extends AbstractModel {
     }
 
     /**
-     * Get 集群版实例指定节点id发起主从切换。 
-     * @return DstNodeId 集群版实例指定节点id发起主从切换。
+     * Get 集群版实例指定节点 ID 发起主从切换。 
+     * @return DstNodeId 集群版实例指定节点 ID 发起主从切换。
      */
     public String getDstNodeId() {
         return this.DstNodeId;
     }
 
     /**
-     * Set 集群版实例指定节点id发起主从切换。
-     * @param DstNodeId 集群版实例指定节点id发起主从切换。
+     * Set 集群版实例指定节点 ID 发起主从切换。
+     * @param DstNodeId 集群版实例指定节点 ID 发起主从切换。
      */
     public void setDstNodeId(String DstNodeId) {
         this.DstNodeId = DstNodeId;

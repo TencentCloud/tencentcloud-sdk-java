@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyInstanceRequest extends AbstractModel {
 
     /**
-    * 实例ID
+    * 集群ID
     */
     @SerializedName("InstanceId")
     @Expose
@@ -73,6 +73,13 @@ public class ModifyInstanceRequest extends AbstractModel {
     private Boolean ScaledTpsEnabled;
 
     /**
+    * 是否开启ACL
+    */
+    @SerializedName("AclEnabled")
+    @Expose
+    private Boolean AclEnabled;
+
+    /**
     * 最大可创建主题数
     */
     @SerializedName("MaxTopicNum")
@@ -80,16 +87,23 @@ public class ModifyInstanceRequest extends AbstractModel {
     private Long MaxTopicNum;
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+    * 免费额度之外的主题个数
+    */
+    @SerializedName("ExtraTopicNum")
+    @Expose
+    private String ExtraTopicNum;
+
+    /**
+     * Get 集群ID 
+     * @return InstanceId 集群ID
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set 集群ID
+     * @param InstanceId 集群ID
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -192,6 +206,22 @@ public class ModifyInstanceRequest extends AbstractModel {
     }
 
     /**
+     * Get 是否开启ACL 
+     * @return AclEnabled 是否开启ACL
+     */
+    public Boolean getAclEnabled() {
+        return this.AclEnabled;
+    }
+
+    /**
+     * Set 是否开启ACL
+     * @param AclEnabled 是否开启ACL
+     */
+    public void setAclEnabled(Boolean AclEnabled) {
+        this.AclEnabled = AclEnabled;
+    }
+
+    /**
      * Get 最大可创建主题数 
      * @return MaxTopicNum 最大可创建主题数
      */
@@ -205,6 +235,22 @@ public class ModifyInstanceRequest extends AbstractModel {
      */
     public void setMaxTopicNum(Long MaxTopicNum) {
         this.MaxTopicNum = MaxTopicNum;
+    }
+
+    /**
+     * Get 免费额度之外的主题个数 
+     * @return ExtraTopicNum 免费额度之外的主题个数
+     */
+    public String getExtraTopicNum() {
+        return this.ExtraTopicNum;
+    }
+
+    /**
+     * Set 免费额度之外的主题个数
+     * @param ExtraTopicNum 免费额度之外的主题个数
+     */
+    public void setExtraTopicNum(String ExtraTopicNum) {
+        this.ExtraTopicNum = ExtraTopicNum;
     }
 
     public ModifyInstanceRequest() {
@@ -236,8 +282,14 @@ public class ModifyInstanceRequest extends AbstractModel {
         if (source.ScaledTpsEnabled != null) {
             this.ScaledTpsEnabled = new Boolean(source.ScaledTpsEnabled);
         }
+        if (source.AclEnabled != null) {
+            this.AclEnabled = new Boolean(source.AclEnabled);
+        }
         if (source.MaxTopicNum != null) {
             this.MaxTopicNum = new Long(source.MaxTopicNum);
+        }
+        if (source.ExtraTopicNum != null) {
+            this.ExtraTopicNum = new String(source.ExtraTopicNum);
         }
     }
 
@@ -253,7 +305,9 @@ public class ModifyInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SkuCode", this.SkuCode);
         this.setParamSimple(map, prefix + "MessageRetention", this.MessageRetention);
         this.setParamSimple(map, prefix + "ScaledTpsEnabled", this.ScaledTpsEnabled);
+        this.setParamSimple(map, prefix + "AclEnabled", this.AclEnabled);
         this.setParamSimple(map, prefix + "MaxTopicNum", this.MaxTopicNum);
+        this.setParamSimple(map, prefix + "ExtraTopicNum", this.ExtraTopicNum);
 
     }
 }

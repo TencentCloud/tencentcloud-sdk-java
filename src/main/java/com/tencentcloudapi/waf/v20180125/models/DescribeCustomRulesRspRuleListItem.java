@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeCustomRulesRspRuleListItem extends AbstractModel {
 
     /**
-    * 动作类型
+    * 动作类型，1代表阻断，2代表人机识别，3代表观察，4代表重定向，5代表JS校验
     */
     @SerializedName("ActionType")
     @Expose
@@ -95,7 +95,6 @@ public class DescribeCustomRulesRspRuleListItem extends AbstractModel {
 
     /**
     * 事件id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EventId")
     @Expose
@@ -103,7 +102,6 @@ public class DescribeCustomRulesRspRuleListItem extends AbstractModel {
 
     /**
     * 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ModifyTime")
     @Expose
@@ -111,7 +109,6 @@ public class DescribeCustomRulesRspRuleListItem extends AbstractModel {
 
     /**
     * 生效状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ValidStatus")
     @Expose
@@ -119,7 +116,6 @@ public class DescribeCustomRulesRspRuleListItem extends AbstractModel {
 
     /**
     * 来源
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Source")
     @Expose
@@ -127,7 +123,6 @@ public class DescribeCustomRulesRspRuleListItem extends AbstractModel {
 
     /**
     * 定时任务类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("JobType")
     @Expose
@@ -135,7 +130,6 @@ public class DescribeCustomRulesRspRuleListItem extends AbstractModel {
 
     /**
     * 定时任务配置信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("JobDateTime")
     @Expose
@@ -143,7 +137,6 @@ public class DescribeCustomRulesRspRuleListItem extends AbstractModel {
 
     /**
     * 周期任务粒度
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CronType")
     @Expose
@@ -151,7 +144,6 @@ public class DescribeCustomRulesRspRuleListItem extends AbstractModel {
 
     /**
     * 自定义标签，风控规则用，用来表示是内置规则还是用户自定义的
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Label")
     @Expose
@@ -159,7 +151,6 @@ public class DescribeCustomRulesRspRuleListItem extends AbstractModel {
 
     /**
     * 拦截页面id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PageId")
     @Expose
@@ -167,23 +158,22 @@ public class DescribeCustomRulesRspRuleListItem extends AbstractModel {
 
     /**
     * 域名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-     * Get 动作类型 
-     * @return ActionType 动作类型
+     * Get 动作类型，1代表阻断，2代表人机识别，3代表观察，4代表重定向，5代表JS校验 
+     * @return ActionType 动作类型，1代表阻断，2代表人机识别，3代表观察，4代表重定向，5代表JS校验
      */
     public String getActionType() {
         return this.ActionType;
     }
 
     /**
-     * Set 动作类型
-     * @param ActionType 动作类型
+     * Set 动作类型，1代表阻断，2代表人机识别，3代表观察，4代表重定向，5代表JS校验
+     * @param ActionType 动作类型，1代表阻断，2代表人机识别，3代表观察，4代表重定向，5代表JS校验
      */
     public void setActionType(String ActionType) {
         this.ActionType = ActionType;
@@ -334,10 +324,8 @@ public class DescribeCustomRulesRspRuleListItem extends AbstractModel {
     }
 
     /**
-     * Get 事件id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 事件id 
      * @return EventId 事件id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEventId() {
         return this.EventId;
@@ -345,19 +333,15 @@ public class DescribeCustomRulesRspRuleListItem extends AbstractModel {
 
     /**
      * Set 事件id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EventId 事件id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEventId(String EventId) {
         this.EventId = EventId;
     }
 
     /**
-     * Get 修改时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 修改时间 
      * @return ModifyTime 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getModifyTime() {
         return this.ModifyTime;
@@ -365,19 +349,15 @@ public class DescribeCustomRulesRspRuleListItem extends AbstractModel {
 
     /**
      * Set 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ModifyTime 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModifyTime(String ModifyTime) {
         this.ModifyTime = ModifyTime;
     }
 
     /**
-     * Get 生效状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 生效状态 
      * @return ValidStatus 生效状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getValidStatus() {
         return this.ValidStatus;
@@ -385,19 +365,15 @@ public class DescribeCustomRulesRspRuleListItem extends AbstractModel {
 
     /**
      * Set 生效状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ValidStatus 生效状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValidStatus(Long ValidStatus) {
         this.ValidStatus = ValidStatus;
     }
 
     /**
-     * Get 来源
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 来源 
      * @return Source 来源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSource() {
         return this.Source;
@@ -405,19 +381,15 @@ public class DescribeCustomRulesRspRuleListItem extends AbstractModel {
 
     /**
      * Set 来源
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Source 来源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSource(String Source) {
         this.Source = Source;
     }
 
     /**
-     * Get 定时任务类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 定时任务类型 
      * @return JobType 定时任务类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getJobType() {
         return this.JobType;
@@ -425,19 +397,15 @@ public class DescribeCustomRulesRspRuleListItem extends AbstractModel {
 
     /**
      * Set 定时任务类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param JobType 定时任务类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setJobType(String JobType) {
         this.JobType = JobType;
     }
 
     /**
-     * Get 定时任务配置信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 定时任务配置信息 
      * @return JobDateTime 定时任务配置信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public JobDateTime getJobDateTime() {
         return this.JobDateTime;
@@ -445,19 +413,15 @@ public class DescribeCustomRulesRspRuleListItem extends AbstractModel {
 
     /**
      * Set 定时任务配置信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param JobDateTime 定时任务配置信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setJobDateTime(JobDateTime JobDateTime) {
         this.JobDateTime = JobDateTime;
     }
 
     /**
-     * Get 周期任务粒度
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 周期任务粒度 
      * @return CronType 周期任务粒度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCronType() {
         return this.CronType;
@@ -465,19 +429,15 @@ public class DescribeCustomRulesRspRuleListItem extends AbstractModel {
 
     /**
      * Set 周期任务粒度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CronType 周期任务粒度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCronType(String CronType) {
         this.CronType = CronType;
     }
 
     /**
-     * Get 自定义标签，风控规则用，用来表示是内置规则还是用户自定义的
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 自定义标签，风控规则用，用来表示是内置规则还是用户自定义的 
      * @return Label 自定义标签，风控规则用，用来表示是内置规则还是用户自定义的
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLabel() {
         return this.Label;
@@ -485,19 +445,15 @@ public class DescribeCustomRulesRspRuleListItem extends AbstractModel {
 
     /**
      * Set 自定义标签，风控规则用，用来表示是内置规则还是用户自定义的
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Label 自定义标签，风控规则用，用来表示是内置规则还是用户自定义的
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLabel(String Label) {
         this.Label = Label;
     }
 
     /**
-     * Get 拦截页面id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 拦截页面id 
      * @return PageId 拦截页面id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPageId() {
         return this.PageId;
@@ -505,19 +461,15 @@ public class DescribeCustomRulesRspRuleListItem extends AbstractModel {
 
     /**
      * Set 拦截页面id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PageId 拦截页面id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPageId(String PageId) {
         this.PageId = PageId;
     }
 
     /**
-     * Get 域名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 域名 
      * @return Domain 域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDomain() {
         return this.Domain;
@@ -525,9 +477,7 @@ public class DescribeCustomRulesRspRuleListItem extends AbstractModel {
 
     /**
      * Set 域名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Domain 域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;

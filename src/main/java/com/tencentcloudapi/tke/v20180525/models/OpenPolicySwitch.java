@@ -38,7 +38,7 @@ public class OpenPolicySwitch extends AbstractModel {
     private String Name;
 
     /**
-    * 策略模版类型
+    * 策略模板类型
     */
     @SerializedName("Kind")
     @Expose
@@ -91,16 +91,16 @@ public class OpenPolicySwitch extends AbstractModel {
     }
 
     /**
-     * Get 策略模版类型 
-     * @return Kind 策略模版类型
+     * Get 策略模板类型 
+     * @return Kind 策略模板类型
      */
     public String getKind() {
         return this.Kind;
     }
 
     /**
-     * Set 策略模版类型
-     * @param Kind 策略模版类型
+     * Set 策略模板类型
+     * @param Kind 策略模板类型
      */
     public void setKind(String Kind) {
         this.Kind = Kind;

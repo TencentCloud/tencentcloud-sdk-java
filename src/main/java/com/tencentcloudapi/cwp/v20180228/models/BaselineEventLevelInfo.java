@@ -25,7 +25,6 @@ public class BaselineEventLevelInfo extends AbstractModel {
 
     /**
     * 危害等级：1-低危；2-中危；3-高危；4-严重
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EventLevel")
     @Expose
@@ -33,17 +32,14 @@ public class BaselineEventLevelInfo extends AbstractModel {
 
     /**
     * 漏洞数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EventCount")
     @Expose
     private Long EventCount;
 
     /**
-     * Get 危害等级：1-低危；2-中危；3-高危；4-严重
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 危害等级：1-低危；2-中危；3-高危；4-严重 
      * @return EventLevel 危害等级：1-低危；2-中危；3-高危；4-严重
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getEventLevel() {
         return this.EventLevel;
@@ -51,19 +47,15 @@ public class BaselineEventLevelInfo extends AbstractModel {
 
     /**
      * Set 危害等级：1-低危；2-中危；3-高危；4-严重
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EventLevel 危害等级：1-低危；2-中危；3-高危；4-严重
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEventLevel(Long EventLevel) {
         this.EventLevel = EventLevel;
     }
 
     /**
-     * Get 漏洞数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 漏洞数量 
      * @return EventCount 漏洞数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getEventCount() {
         return this.EventCount;
@@ -71,9 +63,7 @@ public class BaselineEventLevelInfo extends AbstractModel {
 
     /**
      * Set 漏洞数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EventCount 漏洞数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEventCount(Long EventCount) {
         this.EventCount = EventCount;

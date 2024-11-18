@@ -32,7 +32,6 @@ public class SearchFileBySidResponse extends AbstractModel {
 
     /**
     * 某会话的文件操作列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SearchFileBySidResult")
     @Expose
@@ -62,10 +61,8 @@ public class SearchFileBySidResponse extends AbstractModel {
     }
 
     /**
-     * Get 某会话的文件操作列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 某会话的文件操作列表 
      * @return SearchFileBySidResult 某会话的文件操作列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SearchFileBySidResult [] getSearchFileBySidResult() {
         return this.SearchFileBySidResult;
@@ -73,9 +70,7 @@ public class SearchFileBySidResponse extends AbstractModel {
 
     /**
      * Set 某会话的文件操作列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SearchFileBySidResult 某会话的文件操作列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSearchFileBySidResult(SearchFileBySidResult [] SearchFileBySidResult) {
         this.SearchFileBySidResult = SearchFileBySidResult;

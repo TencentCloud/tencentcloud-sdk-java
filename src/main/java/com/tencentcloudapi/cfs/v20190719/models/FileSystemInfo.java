@@ -156,6 +156,20 @@ public class FileSystemInfo extends AbstractModel {
     private Float BandwidthLimit;
 
     /**
+    * 文件系统关联的快照策略
+    */
+    @SerializedName("AutoSnapshotPolicyId")
+    @Expose
+    private String AutoSnapshotPolicyId;
+
+    /**
+    * 文件系统处理快照状态
+    */
+    @SerializedName("SnapStatus")
+    @Expose
+    private String SnapStatus;
+
+    /**
     * 文件系统容量规格上限
 单位:GiB
     */
@@ -186,6 +200,22 @@ Available:可用
     @SerializedName("TieringDetail")
     @Expose
     private TieringDetailInfo TieringDetail;
+
+    /**
+    * 文件系统自动扩容策略
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AutoScaleUpRule")
+    @Expose
+    private AutoScaleUpRule AutoScaleUpRule;
+
+    /**
+    * 文件系统版本
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Version")
+    @Expose
+    private String Version;
 
     /**
      * Get 创建时间 
@@ -500,6 +530,38 @@ Available:可用
     }
 
     /**
+     * Get 文件系统关联的快照策略 
+     * @return AutoSnapshotPolicyId 文件系统关联的快照策略
+     */
+    public String getAutoSnapshotPolicyId() {
+        return this.AutoSnapshotPolicyId;
+    }
+
+    /**
+     * Set 文件系统关联的快照策略
+     * @param AutoSnapshotPolicyId 文件系统关联的快照策略
+     */
+    public void setAutoSnapshotPolicyId(String AutoSnapshotPolicyId) {
+        this.AutoSnapshotPolicyId = AutoSnapshotPolicyId;
+    }
+
+    /**
+     * Get 文件系统处理快照状态 
+     * @return SnapStatus 文件系统处理快照状态
+     */
+    public String getSnapStatus() {
+        return this.SnapStatus;
+    }
+
+    /**
+     * Set 文件系统处理快照状态
+     * @param SnapStatus 文件系统处理快照状态
+     */
+    public void setSnapStatus(String SnapStatus) {
+        this.SnapStatus = SnapStatus;
+    }
+
+    /**
      * Get 文件系统容量规格上限
 单位:GiB 
      * @return Capacity 文件系统容量规格上限
@@ -579,6 +641,46 @@ Available:可用
         this.TieringDetail = TieringDetail;
     }
 
+    /**
+     * Get 文件系统自动扩容策略
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AutoScaleUpRule 文件系统自动扩容策略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public AutoScaleUpRule getAutoScaleUpRule() {
+        return this.AutoScaleUpRule;
+    }
+
+    /**
+     * Set 文件系统自动扩容策略
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AutoScaleUpRule 文件系统自动扩容策略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAutoScaleUpRule(AutoScaleUpRule AutoScaleUpRule) {
+        this.AutoScaleUpRule = AutoScaleUpRule;
+    }
+
+    /**
+     * Get 文件系统版本
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Version 文件系统版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getVersion() {
+        return this.Version;
+    }
+
+    /**
+     * Set 文件系统版本
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Version 文件系统版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVersion(String Version) {
+        this.Version = Version;
+    }
+
     public FileSystemInfo() {
     }
 
@@ -641,6 +743,12 @@ Available:可用
         if (source.BandwidthLimit != null) {
             this.BandwidthLimit = new Float(source.BandwidthLimit);
         }
+        if (source.AutoSnapshotPolicyId != null) {
+            this.AutoSnapshotPolicyId = new String(source.AutoSnapshotPolicyId);
+        }
+        if (source.SnapStatus != null) {
+            this.SnapStatus = new String(source.SnapStatus);
+        }
         if (source.Capacity != null) {
             this.Capacity = new Long(source.Capacity);
         }
@@ -655,6 +763,12 @@ Available:可用
         }
         if (source.TieringDetail != null) {
             this.TieringDetail = new TieringDetailInfo(source.TieringDetail);
+        }
+        if (source.AutoScaleUpRule != null) {
+            this.AutoScaleUpRule = new AutoScaleUpRule(source.AutoScaleUpRule);
+        }
+        if (source.Version != null) {
+            this.Version = new String(source.Version);
         }
     }
 
@@ -681,10 +795,14 @@ Available:可用
         this.setParamSimple(map, prefix + "KmsKeyId", this.KmsKeyId);
         this.setParamSimple(map, prefix + "AppId", this.AppId);
         this.setParamSimple(map, prefix + "BandwidthLimit", this.BandwidthLimit);
+        this.setParamSimple(map, prefix + "AutoSnapshotPolicyId", this.AutoSnapshotPolicyId);
+        this.setParamSimple(map, prefix + "SnapStatus", this.SnapStatus);
         this.setParamSimple(map, prefix + "Capacity", this.Capacity);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "TieringState", this.TieringState);
         this.setParamObj(map, prefix + "TieringDetail.", this.TieringDetail);
+        this.setParamObj(map, prefix + "AutoScaleUpRule.", this.AutoScaleUpRule);
+        this.setParamSimple(map, prefix + "Version", this.Version);
 
     }
 }

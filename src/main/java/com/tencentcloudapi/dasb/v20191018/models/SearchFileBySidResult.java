@@ -53,7 +53,6 @@ public class SearchFileBySidResult extends AbstractModel {
 
     /**
     * method为重命名、移动文件时代表移动后的新位置.其他情况为null
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileNew")
     @Expose
@@ -61,7 +60,6 @@ public class SearchFileBySidResult extends AbstractModel {
 
     /**
     * method为上传文件、下载文件、删除文件时显示文件大小。其他情况为null
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Size")
     @Expose
@@ -139,10 +137,8 @@ public class SearchFileBySidResult extends AbstractModel {
     }
 
     /**
-     * Get method为重命名、移动文件时代表移动后的新位置.其他情况为null
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get method为重命名、移动文件时代表移动后的新位置.其他情况为null 
      * @return FileNew method为重命名、移动文件时代表移动后的新位置.其他情况为null
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFileNew() {
         return this.FileNew;
@@ -150,19 +146,15 @@ public class SearchFileBySidResult extends AbstractModel {
 
     /**
      * Set method为重命名、移动文件时代表移动后的新位置.其他情况为null
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FileNew method为重命名、移动文件时代表移动后的新位置.其他情况为null
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileNew(String FileNew) {
         this.FileNew = FileNew;
     }
 
     /**
-     * Get method为上传文件、下载文件、删除文件时显示文件大小。其他情况为null
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get method为上传文件、下载文件、删除文件时显示文件大小。其他情况为null 
      * @return Size method为上传文件、下载文件、删除文件时显示文件大小。其他情况为null
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSize() {
         return this.Size;
@@ -170,9 +162,7 @@ public class SearchFileBySidResult extends AbstractModel {
 
     /**
      * Set method为上传文件、下载文件、删除文件时显示文件大小。其他情况为null
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Size method为上传文件、下载文件、删除文件时显示文件大小。其他情况为null
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSize(Long Size) {
         this.Size = Size;

@@ -157,6 +157,13 @@ public class DescribeMachineGeneralResponse extends AbstractModel {
     private Long MachineDestroyAfterOfflineHours;
 
     /**
+    * 云服务器类型数组
+    */
+    @SerializedName("CloudFrom")
+    @Expose
+    private CloudFromCnt [] CloudFrom;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -182,7 +189,9 @@ public class DescribeMachineGeneralResponse extends AbstractModel {
     /**
      * Get 腾讯云服务商机器数 
      * @return TencentCloudMachineCnt 腾讯云服务商机器数
+     * @deprecated
      */
+    @Deprecated
     public Long getTencentCloudMachineCnt() {
         return this.TencentCloudMachineCnt;
     }
@@ -190,7 +199,9 @@ public class DescribeMachineGeneralResponse extends AbstractModel {
     /**
      * Set 腾讯云服务商机器数
      * @param TencentCloudMachineCnt 腾讯云服务商机器数
+     * @deprecated
      */
+    @Deprecated
     public void setTencentCloudMachineCnt(Long TencentCloudMachineCnt) {
         this.TencentCloudMachineCnt = TencentCloudMachineCnt;
     }
@@ -198,7 +209,9 @@ public class DescribeMachineGeneralResponse extends AbstractModel {
     /**
      * Get 阿里云服务商机器数 
      * @return AliCloudMachineCnt 阿里云服务商机器数
+     * @deprecated
      */
+    @Deprecated
     public Long getAliCloudMachineCnt() {
         return this.AliCloudMachineCnt;
     }
@@ -206,7 +219,9 @@ public class DescribeMachineGeneralResponse extends AbstractModel {
     /**
      * Set 阿里云服务商机器数
      * @param AliCloudMachineCnt 阿里云服务商机器数
+     * @deprecated
      */
+    @Deprecated
     public void setAliCloudMachineCnt(Long AliCloudMachineCnt) {
         this.AliCloudMachineCnt = AliCloudMachineCnt;
     }
@@ -214,7 +229,9 @@ public class DescribeMachineGeneralResponse extends AbstractModel {
     /**
      * Get 百度云服务商机器数 
      * @return BaiduCloudMachineCnt 百度云服务商机器数
+     * @deprecated
      */
+    @Deprecated
     public Long getBaiduCloudMachineCnt() {
         return this.BaiduCloudMachineCnt;
     }
@@ -222,7 +239,9 @@ public class DescribeMachineGeneralResponse extends AbstractModel {
     /**
      * Set 百度云服务商机器数
      * @param BaiduCloudMachineCnt 百度云服务商机器数
+     * @deprecated
      */
+    @Deprecated
     public void setBaiduCloudMachineCnt(Long BaiduCloudMachineCnt) {
         this.BaiduCloudMachineCnt = BaiduCloudMachineCnt;
     }
@@ -230,7 +249,9 @@ public class DescribeMachineGeneralResponse extends AbstractModel {
     /**
      * Get IDC机器数 
      * @return IDCMachineCnt IDC机器数
+     * @deprecated
      */
+    @Deprecated
     public Long getIDCMachineCnt() {
         return this.IDCMachineCnt;
     }
@@ -238,7 +259,9 @@ public class DescribeMachineGeneralResponse extends AbstractModel {
     /**
      * Set IDC机器数
      * @param IDCMachineCnt IDC机器数
+     * @deprecated
      */
+    @Deprecated
     public void setIDCMachineCnt(Long IDCMachineCnt) {
         this.IDCMachineCnt = IDCMachineCnt;
     }
@@ -246,7 +269,9 @@ public class DescribeMachineGeneralResponse extends AbstractModel {
     /**
      * Get 其他云服务商机器数 
      * @return OtherCloudMachineCnt 其他云服务商机器数
+     * @deprecated
      */
+    @Deprecated
     public Long getOtherCloudMachineCnt() {
         return this.OtherCloudMachineCnt;
     }
@@ -254,7 +279,9 @@ public class DescribeMachineGeneralResponse extends AbstractModel {
     /**
      * Set 其他云服务商机器数
      * @param OtherCloudMachineCnt 其他云服务商机器数
+     * @deprecated
      */
+    @Deprecated
     public void setOtherCloudMachineCnt(Long OtherCloudMachineCnt) {
         this.OtherCloudMachineCnt = OtherCloudMachineCnt;
     }
@@ -468,6 +495,22 @@ public class DescribeMachineGeneralResponse extends AbstractModel {
     }
 
     /**
+     * Get 云服务器类型数组 
+     * @return CloudFrom 云服务器类型数组
+     */
+    public CloudFromCnt [] getCloudFrom() {
+        return this.CloudFrom;
+    }
+
+    /**
+     * Set 云服务器类型数组
+     * @param CloudFrom 云服务器类型数组
+     */
+    public void setCloudFrom(CloudFromCnt [] CloudFrom) {
+        this.CloudFrom = CloudFrom;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -548,6 +591,12 @@ public class DescribeMachineGeneralResponse extends AbstractModel {
         if (source.MachineDestroyAfterOfflineHours != null) {
             this.MachineDestroyAfterOfflineHours = new Long(source.MachineDestroyAfterOfflineHours);
         }
+        if (source.CloudFrom != null) {
+            this.CloudFrom = new CloudFromCnt[source.CloudFrom.length];
+            for (int i = 0; i < source.CloudFrom.length; i++) {
+                this.CloudFrom[i] = new CloudFromCnt(source.CloudFrom[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -577,6 +626,7 @@ public class DescribeMachineGeneralResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "LHGeneralDiscountCnt", this.LHGeneralDiscountCnt);
         this.setParamSimple(map, prefix + "CompareYesterdayMachineCnt", this.CompareYesterdayMachineCnt);
         this.setParamSimple(map, prefix + "MachineDestroyAfterOfflineHours", this.MachineDestroyAfterOfflineHours);
+        this.setParamArrayObj(map, prefix + "CloudFrom.", this.CloudFrom);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

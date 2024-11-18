@@ -25,7 +25,6 @@ public class DescribeAssociatedInstanceListResponse extends AbstractModel {
 
     /**
     * 实例数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Total")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeAssociatedInstanceListResponse extends AbstractModel {
 
     /**
     * 实例列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeAssociatedInstanceListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 实例数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例数量 
      * @return Total 实例数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotal() {
         return this.Total;
@@ -58,19 +54,15 @@ public class DescribeAssociatedInstanceListResponse extends AbstractModel {
 
     /**
      * Set 实例数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Total 实例数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotal(Long Total) {
         this.Total = Total;
     }
 
     /**
-     * Get 实例列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例列表 
      * @return Data 实例列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AssociatedInstanceInfo [] getData() {
         return this.Data;
@@ -78,9 +70,7 @@ public class DescribeAssociatedInstanceListResponse extends AbstractModel {
 
     /**
      * Set 实例列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Data 实例列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(AssociatedInstanceInfo [] Data) {
         this.Data = Data;

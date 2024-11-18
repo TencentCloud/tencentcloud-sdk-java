@@ -32,7 +32,6 @@ public class NatFwEipsInfo extends AbstractModel {
 
     /**
     * 所属的Nat网关Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NatGatewayId")
     @Expose
@@ -40,7 +39,6 @@ public class NatFwEipsInfo extends AbstractModel {
 
     /**
     * Nat网关名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NatGatewayName")
     @Expose
@@ -63,10 +61,8 @@ public class NatFwEipsInfo extends AbstractModel {
     }
 
     /**
-     * Get 所属的Nat网关Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 所属的Nat网关Id 
      * @return NatGatewayId 所属的Nat网关Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNatGatewayId() {
         return this.NatGatewayId;
@@ -74,19 +70,15 @@ public class NatFwEipsInfo extends AbstractModel {
 
     /**
      * Set 所属的Nat网关Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NatGatewayId 所属的Nat网关Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNatGatewayId(String NatGatewayId) {
         this.NatGatewayId = NatGatewayId;
     }
 
     /**
-     * Get Nat网关名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Nat网关名称 
      * @return NatGatewayName Nat网关名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNatGatewayName() {
         return this.NatGatewayName;
@@ -94,9 +86,7 @@ public class NatFwEipsInfo extends AbstractModel {
 
     /**
      * Set Nat网关名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NatGatewayName Nat网关名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNatGatewayName(String NatGatewayName) {
         this.NatGatewayName = NatGatewayName;

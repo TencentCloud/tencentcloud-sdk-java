@@ -83,7 +83,9 @@ public class ApproverInfo extends AbstractModel {
 
 
 
-注: `其他证件类型为白名单功能，使用前请联系对接的客户经理沟通。`
+注: 
+1. <b>其他证件类型为白名单功能</b>，使用前请联系对接的客户经理沟通。
+2. 港澳居民来往内地通行证 和  港澳台居民居住证 类型的签署人<b>至少要过一次大陆的海关</b>才能使用。
     */
     @SerializedName("ApproverIdCardType")
     @Expose
@@ -427,7 +429,9 @@ public class ApproverInfo extends AbstractModel {
 
 
 
-注: `其他证件类型为白名单功能，使用前请联系对接的客户经理沟通。` 
+注: 
+1. <b>其他证件类型为白名单功能</b>，使用前请联系对接的客户经理沟通。
+2. 港澳居民来往内地通行证 和  港澳台居民居住证 类型的签署人<b>至少要过一次大陆的海关</b>才能使用。 
      * @return ApproverIdCardType 签署方经办人的证件类型，支持以下类型，样式可以参考<a href="https://qian.tencent.com/developers/partner/id_card_support/" target="_blank">常见个人证件类型介绍</a>
 <ul><li>ID_CARD 中国大陆居民身份证  (默认值)</li>
 <li>HONGKONG_AND_MACAO 港澳居民来往内地通行证</li>
@@ -437,7 +441,9 @@ public class ApproverInfo extends AbstractModel {
 
 
 
-注: `其他证件类型为白名单功能，使用前请联系对接的客户经理沟通。`
+注: 
+1. <b>其他证件类型为白名单功能</b>，使用前请联系对接的客户经理沟通。
+2. 港澳居民来往内地通行证 和  港澳台居民居住证 类型的签署人<b>至少要过一次大陆的海关</b>才能使用。
      */
     public String getApproverIdCardType() {
         return this.ApproverIdCardType;
@@ -453,7 +459,9 @@ public class ApproverInfo extends AbstractModel {
 
 
 
-注: `其他证件类型为白名单功能，使用前请联系对接的客户经理沟通。`
+注: 
+1. <b>其他证件类型为白名单功能</b>，使用前请联系对接的客户经理沟通。
+2. 港澳居民来往内地通行证 和  港澳台居民居住证 类型的签署人<b>至少要过一次大陆的海关</b>才能使用。
      * @param ApproverIdCardType 签署方经办人的证件类型，支持以下类型，样式可以参考<a href="https://qian.tencent.com/developers/partner/id_card_support/" target="_blank">常见个人证件类型介绍</a>
 <ul><li>ID_CARD 中国大陆居民身份证  (默认值)</li>
 <li>HONGKONG_AND_MACAO 港澳居民来往内地通行证</li>
@@ -463,7 +471,9 @@ public class ApproverInfo extends AbstractModel {
 
 
 
-注: `其他证件类型为白名单功能，使用前请联系对接的客户经理沟通。`
+注: 
+1. <b>其他证件类型为白名单功能</b>，使用前请联系对接的客户经理沟通。
+2. 港澳居民来往内地通行证 和  港澳台居民居住证 类型的签署人<b>至少要过一次大陆的海关</b>才能使用。
      */
     public void setApproverIdCardType(String ApproverIdCardType) {
         this.ApproverIdCardType = ApproverIdCardType;

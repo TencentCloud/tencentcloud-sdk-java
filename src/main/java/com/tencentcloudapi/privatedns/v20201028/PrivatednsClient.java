@@ -50,6 +50,39 @@ public class PrivatednsClient extends AbstractClient{
     }
 
     /**
+     *创建终端节点
+     * @param req CreateEndPointRequest
+     * @return CreateEndPointResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateEndPointResponse CreateEndPoint(CreateEndPointRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateEndPoint", CreateEndPointResponse.class);
+    }
+
+    /**
+     *同时创建终端节点和终端节点服务
+     * @param req CreateEndPointAndEndPointServiceRequest
+     * @return CreateEndPointAndEndPointServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateEndPointAndEndPointServiceResponse CreateEndPointAndEndPointService(CreateEndPointAndEndPointServiceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateEndPointAndEndPointService", CreateEndPointAndEndPointServiceResponse.class);
+    }
+
+    /**
+     *创建自定义转发规则
+     * @param req CreateForwardRuleRequest
+     * @return CreateForwardRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateForwardRuleResponse CreateForwardRule(CreateForwardRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateForwardRule", CreateForwardRuleResponse.class);
+    }
+
+    /**
      *创建私有域解析账号
      * @param req CreatePrivateDNSAccountRequest
      * @return CreatePrivateDNSAccountResponse
@@ -91,6 +124,17 @@ public class PrivatednsClient extends AbstractClient{
     public DeleteEndPointResponse DeleteEndPoint(DeleteEndPointRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteEndPoint", DeleteEndPointResponse.class);
+    }
+
+    /**
+     *删除转发规则并停止转发
+     * @param req DeleteForwardRuleRequest
+     * @return DeleteForwardRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteForwardRuleResponse DeleteForwardRule(DeleteForwardRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteForwardRule", DeleteForwardRuleResponse.class);
     }
 
     /**
@@ -171,6 +215,50 @@ public class PrivatednsClient extends AbstractClient{
     }
 
     /**
+     *获取终端节点列表
+     * @param req DescribeEndPointListRequest
+     * @return DescribeEndPointListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEndPointListResponse DescribeEndPointList(DescribeEndPointListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeEndPointList", DescribeEndPointListResponse.class);
+    }
+
+    /**
+     *查询终端节点已经启用了的地域
+     * @param req DescribeEndPointRegionRequest
+     * @return DescribeEndPointRegionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEndPointRegionResponse DescribeEndPointRegion(DescribeEndPointRegionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeEndPointRegion", DescribeEndPointRegionResponse.class);
+    }
+
+    /**
+     *查询转发规则
+     * @param req DescribeForwardRuleRequest
+     * @return DescribeForwardRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeForwardRuleResponse DescribeForwardRule(DescribeForwardRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeForwardRule", DescribeForwardRuleResponse.class);
+    }
+
+    /**
+     *查询转发规则列表
+     * @param req DescribeForwardRuleListRequest
+     * @return DescribeForwardRuleListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeForwardRuleListResponse DescribeForwardRuleList(DescribeForwardRuleListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeForwardRuleList", DescribeForwardRuleListResponse.class);
+    }
+
+    /**
      *获取私有域解析账号列表
      * @param req DescribePrivateDNSAccountListRequest
      * @return DescribePrivateDNSAccountListResponse
@@ -245,6 +333,17 @@ public class PrivatednsClient extends AbstractClient{
     public DescribeRequestDataResponse DescribeRequestData(DescribeRequestDataRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeRequestData", DescribeRequestDataResponse.class);
+    }
+
+    /**
+     *修改转发规则
+     * @param req ModifyForwardRuleRequest
+     * @return ModifyForwardRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyForwardRuleResponse ModifyForwardRule(ModifyForwardRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyForwardRule", ModifyForwardRuleResponse.class);
     }
 
     /**

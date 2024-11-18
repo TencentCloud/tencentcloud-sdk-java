@@ -32,7 +32,6 @@ public class DescribeAssetProcessInfoListResponse extends AbstractModel {
 
     /**
     * 列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Process")
     @Expose
@@ -62,10 +61,8 @@ public class DescribeAssetProcessInfoListResponse extends AbstractModel {
     }
 
     /**
-     * Get 列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 列表 
      * @return Process 列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AssetProcessBaseInfo [] getProcess() {
         return this.Process;
@@ -73,9 +70,7 @@ public class DescribeAssetProcessInfoListResponse extends AbstractModel {
 
     /**
      * Set 列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Process 列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProcess(AssetProcessBaseInfo [] Process) {
         this.Process = Process;

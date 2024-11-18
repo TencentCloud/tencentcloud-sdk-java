@@ -59,7 +59,7 @@ public class VerifyRocketMQConsumeRequest extends AbstractModel {
     private String ClientId;
 
     /**
-    * topic名称
+    * 主题名称
     */
     @SerializedName("TopicName")
     @Expose
@@ -146,16 +146,16 @@ public class VerifyRocketMQConsumeRequest extends AbstractModel {
     }
 
     /**
-     * Get topic名称 
-     * @return TopicName topic名称
+     * Get 主题名称 
+     * @return TopicName 主题名称
      */
     public String getTopicName() {
         return this.TopicName;
     }
 
     /**
-     * Set topic名称
-     * @param TopicName topic名称
+     * Set 主题名称
+     * @param TopicName 主题名称
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;

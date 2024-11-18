@@ -111,6 +111,13 @@ public class ChannelCreateMultiFlowSignQRCodeRequest extends AbstractModel {
     private UserInfo Operator;
 
     /**
+    * 禁止个人用户重复签署，默认不禁止，即同一用户可多次扫码签署多份合同。若要求同一用户仅能扫码签署一份合同，请传入true。
+    */
+    @SerializedName("ForbidPersonalMultipleSign")
+    @Expose
+    private Boolean ForbidPersonalMultipleSign;
+
+    /**
      * Get 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
 
 此接口下面信息必填。
@@ -338,6 +345,22 @@ public class ChannelCreateMultiFlowSignQRCodeRequest extends AbstractModel {
         this.Operator = Operator;
     }
 
+    /**
+     * Get 禁止个人用户重复签署，默认不禁止，即同一用户可多次扫码签署多份合同。若要求同一用户仅能扫码签署一份合同，请传入true。 
+     * @return ForbidPersonalMultipleSign 禁止个人用户重复签署，默认不禁止，即同一用户可多次扫码签署多份合同。若要求同一用户仅能扫码签署一份合同，请传入true。
+     */
+    public Boolean getForbidPersonalMultipleSign() {
+        return this.ForbidPersonalMultipleSign;
+    }
+
+    /**
+     * Set 禁止个人用户重复签署，默认不禁止，即同一用户可多次扫码签署多份合同。若要求同一用户仅能扫码签署一份合同，请传入true。
+     * @param ForbidPersonalMultipleSign 禁止个人用户重复签署，默认不禁止，即同一用户可多次扫码签署多份合同。若要求同一用户仅能扫码签署一份合同，请传入true。
+     */
+    public void setForbidPersonalMultipleSign(Boolean ForbidPersonalMultipleSign) {
+        this.ForbidPersonalMultipleSign = ForbidPersonalMultipleSign;
+    }
+
     public ChannelCreateMultiFlowSignQRCodeRequest() {
     }
 
@@ -385,6 +408,9 @@ public class ChannelCreateMultiFlowSignQRCodeRequest extends AbstractModel {
         if (source.Operator != null) {
             this.Operator = new UserInfo(source.Operator);
         }
+        if (source.ForbidPersonalMultipleSign != null) {
+            this.ForbidPersonalMultipleSign = new Boolean(source.ForbidPersonalMultipleSign);
+        }
     }
 
 
@@ -403,6 +429,7 @@ public class ChannelCreateMultiFlowSignQRCodeRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
         this.setParamObj(map, prefix + "ApproverRestrictions.", this.ApproverRestrictions);
         this.setParamObj(map, prefix + "Operator.", this.Operator);
+        this.setParamSimple(map, prefix + "ForbidPersonalMultipleSign", this.ForbidPersonalMultipleSign);
 
     }
 }

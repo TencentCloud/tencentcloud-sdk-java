@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeRotationHistoryResponse extends AbstractModel {
 
     /**
-    * 版本号列表。
+    * 版本号列表
     */
     @SerializedName("VersionIDs")
     @Expose
@@ -45,16 +45,16 @@ public class DescribeRotationHistoryResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 版本号列表。 
-     * @return VersionIDs 版本号列表。
+     * Get 版本号列表 
+     * @return VersionIDs 版本号列表
      */
     public String [] getVersionIDs() {
         return this.VersionIDs;
     }
 
     /**
-     * Set 版本号列表。
-     * @param VersionIDs 版本号列表。
+     * Set 版本号列表
+     * @param VersionIDs 版本号列表
      */
     public void setVersionIDs(String [] VersionIDs) {
         this.VersionIDs = VersionIDs;

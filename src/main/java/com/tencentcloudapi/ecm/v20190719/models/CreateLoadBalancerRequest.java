@@ -95,7 +95,7 @@ public class CreateLoadBalancerRequest extends AbstractModel {
     private String AddressIPVersion;
 
     /**
-    * 在购买IPV6负载均衡实例的情况下，必须指定子网 ID, 此参数必填。
+    * 在购买IPV6负载均衡实例的情况下，必须指定子网 ID, 此参数必填；IPv4实例不支持该参数。
     */
     @SerializedName("SubnetId")
     @Expose
@@ -266,16 +266,16 @@ public class CreateLoadBalancerRequest extends AbstractModel {
     }
 
     /**
-     * Get 在购买IPV6负载均衡实例的情况下，必须指定子网 ID, 此参数必填。 
-     * @return SubnetId 在购买IPV6负载均衡实例的情况下，必须指定子网 ID, 此参数必填。
+     * Get 在购买IPV6负载均衡实例的情况下，必须指定子网 ID, 此参数必填；IPv4实例不支持该参数。 
+     * @return SubnetId 在购买IPV6负载均衡实例的情况下，必须指定子网 ID, 此参数必填；IPv4实例不支持该参数。
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 在购买IPV6负载均衡实例的情况下，必须指定子网 ID, 此参数必填。
-     * @param SubnetId 在购买IPV6负载均衡实例的情况下，必须指定子网 ID, 此参数必填。
+     * Set 在购买IPV6负载均衡实例的情况下，必须指定子网 ID, 此参数必填；IPv4实例不支持该参数。
+     * @param SubnetId 在购买IPV6负载均衡实例的情况下，必须指定子网 ID, 此参数必填；IPv4实例不支持该参数。
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;

@@ -45,6 +45,27 @@ public class DescribeInstanceLogDetailRequest extends AbstractModel {
     private String CurRunDate;
 
     /**
+    * 日志级别，Info/Debug/Warn/Error/All
+    */
+    @SerializedName("LogLevelType")
+    @Expose
+    private String LogLevelType;
+
+    /**
+    * 文件类型,Log/Code
+    */
+    @SerializedName("ExecutionFileType")
+    @Expose
+    private String ExecutionFileType;
+
+    /**
+    * 统一执行平台执行id
+    */
+    @SerializedName("ExecutionJobId")
+    @Expose
+    private String ExecutionJobId;
+
+    /**
     * 服务器Ip
     */
     @SerializedName("BrokerIp")
@@ -71,6 +92,20 @@ public class DescribeInstanceLogDetailRequest extends AbstractModel {
     @SerializedName("LineCount")
     @Expose
     private Long LineCount;
+
+    /**
+    * 查询日志扩展信息,通过统一执行平台接口分页查询日志时需要带上,第一页时为null
+    */
+    @SerializedName("ExtInfo")
+    @Expose
+    private String ExtInfo;
+
+    /**
+    * 请求来源，WEB 前端；CLIENT 客户端
+    */
+    @SerializedName("RequestFromSource")
+    @Expose
+    private String RequestFromSource;
 
     /**
      * Get 项目ID 
@@ -118,6 +153,54 @@ public class DescribeInstanceLogDetailRequest extends AbstractModel {
      */
     public void setCurRunDate(String CurRunDate) {
         this.CurRunDate = CurRunDate;
+    }
+
+    /**
+     * Get 日志级别，Info/Debug/Warn/Error/All 
+     * @return LogLevelType 日志级别，Info/Debug/Warn/Error/All
+     */
+    public String getLogLevelType() {
+        return this.LogLevelType;
+    }
+
+    /**
+     * Set 日志级别，Info/Debug/Warn/Error/All
+     * @param LogLevelType 日志级别，Info/Debug/Warn/Error/All
+     */
+    public void setLogLevelType(String LogLevelType) {
+        this.LogLevelType = LogLevelType;
+    }
+
+    /**
+     * Get 文件类型,Log/Code 
+     * @return ExecutionFileType 文件类型,Log/Code
+     */
+    public String getExecutionFileType() {
+        return this.ExecutionFileType;
+    }
+
+    /**
+     * Set 文件类型,Log/Code
+     * @param ExecutionFileType 文件类型,Log/Code
+     */
+    public void setExecutionFileType(String ExecutionFileType) {
+        this.ExecutionFileType = ExecutionFileType;
+    }
+
+    /**
+     * Get 统一执行平台执行id 
+     * @return ExecutionJobId 统一执行平台执行id
+     */
+    public String getExecutionJobId() {
+        return this.ExecutionJobId;
+    }
+
+    /**
+     * Set 统一执行平台执行id
+     * @param ExecutionJobId 统一执行平台执行id
+     */
+    public void setExecutionJobId(String ExecutionJobId) {
+        this.ExecutionJobId = ExecutionJobId;
     }
 
     /**
@@ -184,6 +267,38 @@ public class DescribeInstanceLogDetailRequest extends AbstractModel {
         this.LineCount = LineCount;
     }
 
+    /**
+     * Get 查询日志扩展信息,通过统一执行平台接口分页查询日志时需要带上,第一页时为null 
+     * @return ExtInfo 查询日志扩展信息,通过统一执行平台接口分页查询日志时需要带上,第一页时为null
+     */
+    public String getExtInfo() {
+        return this.ExtInfo;
+    }
+
+    /**
+     * Set 查询日志扩展信息,通过统一执行平台接口分页查询日志时需要带上,第一页时为null
+     * @param ExtInfo 查询日志扩展信息,通过统一执行平台接口分页查询日志时需要带上,第一页时为null
+     */
+    public void setExtInfo(String ExtInfo) {
+        this.ExtInfo = ExtInfo;
+    }
+
+    /**
+     * Get 请求来源，WEB 前端；CLIENT 客户端 
+     * @return RequestFromSource 请求来源，WEB 前端；CLIENT 客户端
+     */
+    public String getRequestFromSource() {
+        return this.RequestFromSource;
+    }
+
+    /**
+     * Set 请求来源，WEB 前端；CLIENT 客户端
+     * @param RequestFromSource 请求来源，WEB 前端；CLIENT 客户端
+     */
+    public void setRequestFromSource(String RequestFromSource) {
+        this.RequestFromSource = RequestFromSource;
+    }
+
     public DescribeInstanceLogDetailRequest() {
     }
 
@@ -201,6 +316,15 @@ public class DescribeInstanceLogDetailRequest extends AbstractModel {
         if (source.CurRunDate != null) {
             this.CurRunDate = new String(source.CurRunDate);
         }
+        if (source.LogLevelType != null) {
+            this.LogLevelType = new String(source.LogLevelType);
+        }
+        if (source.ExecutionFileType != null) {
+            this.ExecutionFileType = new String(source.ExecutionFileType);
+        }
+        if (source.ExecutionJobId != null) {
+            this.ExecutionJobId = new String(source.ExecutionJobId);
+        }
         if (source.BrokerIp != null) {
             this.BrokerIp = new String(source.BrokerIp);
         }
@@ -213,6 +337,12 @@ public class DescribeInstanceLogDetailRequest extends AbstractModel {
         if (source.LineCount != null) {
             this.LineCount = new Long(source.LineCount);
         }
+        if (source.ExtInfo != null) {
+            this.ExtInfo = new String(source.ExtInfo);
+        }
+        if (source.RequestFromSource != null) {
+            this.RequestFromSource = new String(source.RequestFromSource);
+        }
     }
 
 
@@ -223,10 +353,15 @@ public class DescribeInstanceLogDetailRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "CurRunDate", this.CurRunDate);
+        this.setParamSimple(map, prefix + "LogLevelType", this.LogLevelType);
+        this.setParamSimple(map, prefix + "ExecutionFileType", this.ExecutionFileType);
+        this.setParamSimple(map, prefix + "ExecutionJobId", this.ExecutionJobId);
         this.setParamSimple(map, prefix + "BrokerIp", this.BrokerIp);
         this.setParamSimple(map, prefix + "OriginFileName", this.OriginFileName);
         this.setParamSimple(map, prefix + "StartCount", this.StartCount);
         this.setParamSimple(map, prefix + "LineCount", this.LineCount);
+        this.setParamSimple(map, prefix + "ExtInfo", this.ExtInfo);
+        this.setParamSimple(map, prefix + "RequestFromSource", this.RequestFromSource);
 
     }
 }

@@ -25,7 +25,6 @@ public class Element extends AbstractModel {
 
     /**
     * 统计类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Key")
     @Expose
@@ -33,17 +32,14 @@ public class Element extends AbstractModel {
 
     /**
     * 统计对象
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Value")
     @Expose
     private String Value;
 
     /**
-     * Get 统计类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 统计类型 
      * @return Key 统计类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKey() {
         return this.Key;
@@ -51,19 +47,15 @@ public class Element extends AbstractModel {
 
     /**
      * Set 统计类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Key 统计类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKey(String Key) {
         this.Key = Key;
     }
 
     /**
-     * Get 统计对象
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 统计对象 
      * @return Value 统计对象
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getValue() {
         return this.Value;
@@ -71,9 +63,7 @@ public class Element extends AbstractModel {
 
     /**
      * Set 统计对象
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Value 统计对象
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValue(String Value) {
         this.Value = Value;

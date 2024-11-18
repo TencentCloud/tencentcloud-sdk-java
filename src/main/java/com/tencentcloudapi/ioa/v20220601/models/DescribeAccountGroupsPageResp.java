@@ -25,7 +25,6 @@ public class DescribeAccountGroupsPageResp extends AbstractModel {
 
     /**
     * 账户分响应对象集合
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Items")
     @Expose
@@ -33,17 +32,14 @@ public class DescribeAccountGroupsPageResp extends AbstractModel {
 
     /**
     * 分页公共对象
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Page")
     @Expose
     private Paging Page;
 
     /**
-     * Get 账户分响应对象集合
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 账户分响应对象集合 
      * @return Items 账户分响应对象集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DescribeAccountGroupsData [] getItems() {
         return this.Items;
@@ -51,19 +47,15 @@ public class DescribeAccountGroupsPageResp extends AbstractModel {
 
     /**
      * Set 账户分响应对象集合
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Items 账户分响应对象集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setItems(DescribeAccountGroupsData [] Items) {
         this.Items = Items;
     }
 
     /**
-     * Get 分页公共对象
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分页公共对象 
      * @return Page 分页公共对象
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Paging getPage() {
         return this.Page;
@@ -71,9 +63,7 @@ public class DescribeAccountGroupsPageResp extends AbstractModel {
 
     /**
      * Set 分页公共对象
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Page 分页公共对象
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPage(Paging Page) {
         this.Page = Page;

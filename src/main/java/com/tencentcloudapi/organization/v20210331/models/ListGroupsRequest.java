@@ -73,11 +73,18 @@ public class ListGroupsRequest extends AbstractModel {
     private String SortField;
 
     /**
-    * 排序类型：Desc 倒序 Asc  正序，需要你和SortField一起设置
+    * 排序类型：Desc 倒序 Asc  正序，需要您和SortField一起设置
     */
     @SerializedName("SortType")
     @Expose
     private String SortType;
+
+    /**
+    * 翻页offset. 不要与NextToken同时使用，优先使用NextToken
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
 
     /**
      * Get 空间 ID。 
@@ -192,19 +199,35 @@ public class ListGroupsRequest extends AbstractModel {
     }
 
     /**
-     * Get 排序类型：Desc 倒序 Asc  正序，需要你和SortField一起设置 
-     * @return SortType 排序类型：Desc 倒序 Asc  正序，需要你和SortField一起设置
+     * Get 排序类型：Desc 倒序 Asc  正序，需要您和SortField一起设置 
+     * @return SortType 排序类型：Desc 倒序 Asc  正序，需要您和SortField一起设置
      */
     public String getSortType() {
         return this.SortType;
     }
 
     /**
-     * Set 排序类型：Desc 倒序 Asc  正序，需要你和SortField一起设置
-     * @param SortType 排序类型：Desc 倒序 Asc  正序，需要你和SortField一起设置
+     * Set 排序类型：Desc 倒序 Asc  正序，需要您和SortField一起设置
+     * @param SortType 排序类型：Desc 倒序 Asc  正序，需要您和SortField一起设置
      */
     public void setSortType(String SortType) {
         this.SortType = SortType;
+    }
+
+    /**
+     * Get 翻页offset. 不要与NextToken同时使用，优先使用NextToken 
+     * @return Offset 翻页offset. 不要与NextToken同时使用，优先使用NextToken
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set 翻页offset. 不要与NextToken同时使用，优先使用NextToken
+     * @param Offset 翻页offset. 不要与NextToken同时使用，优先使用NextToken
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
     }
 
     public ListGroupsRequest() {
@@ -242,6 +265,9 @@ public class ListGroupsRequest extends AbstractModel {
         if (source.SortType != null) {
             this.SortType = new String(source.SortType);
         }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
     }
 
 
@@ -257,6 +283,7 @@ public class ListGroupsRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "FilterUsers.", this.FilterUsers);
         this.setParamSimple(map, prefix + "SortField", this.SortField);
         this.setParamSimple(map, prefix + "SortType", this.SortType);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
 
     }
 }

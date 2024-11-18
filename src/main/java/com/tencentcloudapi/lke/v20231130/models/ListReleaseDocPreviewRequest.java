@@ -52,7 +52,7 @@ public class ListReleaseDocPreviewRequest extends AbstractModel {
     private String Query;
 
     /**
-    * 发布业务ID
+    * 发布单ID
     */
     @SerializedName("ReleaseBizId")
     @Expose
@@ -144,16 +144,16 @@ public class ListReleaseDocPreviewRequest extends AbstractModel {
     }
 
     /**
-     * Get 发布业务ID 
-     * @return ReleaseBizId 发布业务ID
+     * Get 发布单ID 
+     * @return ReleaseBizId 发布单ID
      */
     public String getReleaseBizId() {
         return this.ReleaseBizId;
     }
 
     /**
-     * Set 发布业务ID
-     * @param ReleaseBizId 发布业务ID
+     * Set 发布单ID
+     * @param ReleaseBizId 发布单ID
      */
     public void setReleaseBizId(String ReleaseBizId) {
         this.ReleaseBizId = ReleaseBizId;

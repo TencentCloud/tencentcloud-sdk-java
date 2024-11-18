@@ -24,69 +24,84 @@ import java.util.HashMap;
 public class GetFaceIdResultRequest extends AbstractModel {
 
     /**
-    * SDK人脸核身流程的标识，调用GetFaceIdToken接口时生成。
+    * SDK人脸核身流程的标识。
+- 调用GetFaceIdToken接口时生成。
     */
     @SerializedName("FaceIdToken")
     @Expose
     private String FaceIdToken;
 
     /**
-    * 是否需要拉取视频，默认false不需要
+    * 是否需要拉取视频。
+- 默认false：不需要。
     */
     @SerializedName("IsNeedVideo")
     @Expose
     private Boolean IsNeedVideo;
 
     /**
-    * 是否需要拉取截帧，默认false不需要
+    * 是否需要拉取截帧。
+- 默认false：不需要。
     */
     @SerializedName("IsNeedBestFrame")
     @Expose
     private Boolean IsNeedBestFrame;
 
     /**
-     * Get SDK人脸核身流程的标识，调用GetFaceIdToken接口时生成。 
-     * @return FaceIdToken SDK人脸核身流程的标识，调用GetFaceIdToken接口时生成。
+     * Get SDK人脸核身流程的标识。
+- 调用GetFaceIdToken接口时生成。 
+     * @return FaceIdToken SDK人脸核身流程的标识。
+- 调用GetFaceIdToken接口时生成。
      */
     public String getFaceIdToken() {
         return this.FaceIdToken;
     }
 
     /**
-     * Set SDK人脸核身流程的标识，调用GetFaceIdToken接口时生成。
-     * @param FaceIdToken SDK人脸核身流程的标识，调用GetFaceIdToken接口时生成。
+     * Set SDK人脸核身流程的标识。
+- 调用GetFaceIdToken接口时生成。
+     * @param FaceIdToken SDK人脸核身流程的标识。
+- 调用GetFaceIdToken接口时生成。
      */
     public void setFaceIdToken(String FaceIdToken) {
         this.FaceIdToken = FaceIdToken;
     }
 
     /**
-     * Get 是否需要拉取视频，默认false不需要 
-     * @return IsNeedVideo 是否需要拉取视频，默认false不需要
+     * Get 是否需要拉取视频。
+- 默认false：不需要。 
+     * @return IsNeedVideo 是否需要拉取视频。
+- 默认false：不需要。
      */
     public Boolean getIsNeedVideo() {
         return this.IsNeedVideo;
     }
 
     /**
-     * Set 是否需要拉取视频，默认false不需要
-     * @param IsNeedVideo 是否需要拉取视频，默认false不需要
+     * Set 是否需要拉取视频。
+- 默认false：不需要。
+     * @param IsNeedVideo 是否需要拉取视频。
+- 默认false：不需要。
      */
     public void setIsNeedVideo(Boolean IsNeedVideo) {
         this.IsNeedVideo = IsNeedVideo;
     }
 
     /**
-     * Get 是否需要拉取截帧，默认false不需要 
-     * @return IsNeedBestFrame 是否需要拉取截帧，默认false不需要
+     * Get 是否需要拉取截帧。
+- 默认false：不需要。 
+     * @return IsNeedBestFrame 是否需要拉取截帧。
+- 默认false：不需要。
      */
     public Boolean getIsNeedBestFrame() {
         return this.IsNeedBestFrame;
     }
 
     /**
-     * Set 是否需要拉取截帧，默认false不需要
-     * @param IsNeedBestFrame 是否需要拉取截帧，默认false不需要
+     * Set 是否需要拉取截帧。
+- 默认false：不需要。
+     * @param IsNeedBestFrame 是否需要拉取截帧。
+- 默认false：不需要。
      */
     public void setIsNeedBestFrame(Boolean IsNeedBestFrame) {
         this.IsNeedBestFrame = IsNeedBestFrame;

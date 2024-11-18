@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class DescribeCVMAssetInfoResponse extends AbstractModel {
 
     /**
-    * -
-注意：此字段可能返回 null，表示取不到有效值。
+    * 数据
     */
     @SerializedName("Data")
     @Expose
@@ -39,20 +38,16 @@ public class DescribeCVMAssetInfoResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get -
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Data -
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 数据 
+     * @return Data 数据
      */
     public AssetBaseInfoResponse getData() {
         return this.Data;
     }
 
     /**
-     * Set -
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Data -
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 数据
+     * @param Data 数据
      */
     public void setData(AssetBaseInfoResponse Data) {
         this.Data = Data;

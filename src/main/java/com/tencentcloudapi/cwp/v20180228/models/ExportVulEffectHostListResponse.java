@@ -25,7 +25,6 @@ public class ExportVulEffectHostListResponse extends AbstractModel {
 
     /**
     * 已废弃
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DownloadUrl")
     @Expose
@@ -46,10 +45,8 @@ public class ExportVulEffectHostListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 已废弃
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 已废弃 
      * @return DownloadUrl 已废弃
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDownloadUrl() {
         return this.DownloadUrl;
@@ -57,9 +54,7 @@ public class ExportVulEffectHostListResponse extends AbstractModel {
 
     /**
      * Set 已废弃
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DownloadUrl 已废弃
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDownloadUrl(String DownloadUrl) {
         this.DownloadUrl = DownloadUrl;

@@ -25,8 +25,8 @@ public class FaceInfo extends AbstractModel {
 
     /**
     * 人脸框左上角横坐标。
-人脸框包含人脸五官位置并在此基础上进行一定的扩展，若人脸框超出图片范围，会导致坐标负值。 
-若需截取完整人脸，可以在完整分completeness满足需求的情况下，将负值坐标取0。
+- 人脸框包含人脸五官位置并在此基础上进行一定的扩展，若人脸框超出图片范围，会导致坐标负值。 
+- 若需截取完整人脸，可以在完整分completeness满足需求的情况下，将负值坐标取0。
     */
     @SerializedName("X")
     @Expose
@@ -34,8 +34,8 @@ public class FaceInfo extends AbstractModel {
 
     /**
     * 人脸框左上角纵坐标。 
-人脸框包含人脸五官位置并在此基础上进行一定的扩展，若人脸框超出图片范围，会导致坐标负值。 
-若需截取完整人脸，可以在完整分completeness满足需求的情况下，将负值坐标取0。
+- 人脸框包含人脸五官位置并在此基础上进行一定的扩展，若人脸框超出图片范围，会导致坐标负值。 
+- 若需截取完整人脸，可以在完整分completeness满足需求的情况下，将负值坐标取0。
     */
     @SerializedName("Y")
     @Expose
@@ -56,15 +56,18 @@ public class FaceInfo extends AbstractModel {
     private Long Height;
 
     /**
-    * 人脸属性信息，包含性别( gender )、年龄( age )、表情( expression )、 
-魅力( beauty )、眼镜( glass )、口罩（mask）、头发（hair）和姿态 (pitch，roll，yaw )。只有当 NeedFaceAttributes 设为 1 时才返回有效信息。
+    * 人脸属性信息。
+- 包含性别( gender )、年龄( age )、表情( expression )、魅力( beauty )、眼镜( glass )、口罩（mask）、头发（hair）和姿态 (pitch，roll，yaw )。
+- 只有当 NeedFaceAttributes 设为 1 时才返回有效信息。
     */
     @SerializedName("FaceAttributesInfo")
     @Expose
     private FaceAttributesInfo FaceAttributesInfo;
 
     /**
-    * 人脸质量信息，包含质量分（score）、模糊分（sharpness）、光照分（brightness）、遮挡分（completeness）。只有当NeedFaceDetection设为1时才返回有效信息。
+    * 人脸质量信息。
+- 包含质量分（score）、模糊分（sharpness）、光照分（brightness）、遮挡分（completeness）。
+- 只有当NeedFaceDetection设为1时才返回有效信息。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FaceQualityInfo")
@@ -73,11 +76,11 @@ public class FaceInfo extends AbstractModel {
 
     /**
      * Get 人脸框左上角横坐标。
-人脸框包含人脸五官位置并在此基础上进行一定的扩展，若人脸框超出图片范围，会导致坐标负值。 
-若需截取完整人脸，可以在完整分completeness满足需求的情况下，将负值坐标取0。 
+- 人脸框包含人脸五官位置并在此基础上进行一定的扩展，若人脸框超出图片范围，会导致坐标负值。 
+- 若需截取完整人脸，可以在完整分completeness满足需求的情况下，将负值坐标取0。 
      * @return X 人脸框左上角横坐标。
-人脸框包含人脸五官位置并在此基础上进行一定的扩展，若人脸框超出图片范围，会导致坐标负值。 
-若需截取完整人脸，可以在完整分completeness满足需求的情况下，将负值坐标取0。
+- 人脸框包含人脸五官位置并在此基础上进行一定的扩展，若人脸框超出图片范围，会导致坐标负值。 
+- 若需截取完整人脸，可以在完整分completeness满足需求的情况下，将负值坐标取0。
      */
     public Long getX() {
         return this.X;
@@ -85,11 +88,11 @@ public class FaceInfo extends AbstractModel {
 
     /**
      * Set 人脸框左上角横坐标。
-人脸框包含人脸五官位置并在此基础上进行一定的扩展，若人脸框超出图片范围，会导致坐标负值。 
-若需截取完整人脸，可以在完整分completeness满足需求的情况下，将负值坐标取0。
+- 人脸框包含人脸五官位置并在此基础上进行一定的扩展，若人脸框超出图片范围，会导致坐标负值。 
+- 若需截取完整人脸，可以在完整分completeness满足需求的情况下，将负值坐标取0。
      * @param X 人脸框左上角横坐标。
-人脸框包含人脸五官位置并在此基础上进行一定的扩展，若人脸框超出图片范围，会导致坐标负值。 
-若需截取完整人脸，可以在完整分completeness满足需求的情况下，将负值坐标取0。
+- 人脸框包含人脸五官位置并在此基础上进行一定的扩展，若人脸框超出图片范围，会导致坐标负值。 
+- 若需截取完整人脸，可以在完整分completeness满足需求的情况下，将负值坐标取0。
      */
     public void setX(Long X) {
         this.X = X;
@@ -97,11 +100,11 @@ public class FaceInfo extends AbstractModel {
 
     /**
      * Get 人脸框左上角纵坐标。 
-人脸框包含人脸五官位置并在此基础上进行一定的扩展，若人脸框超出图片范围，会导致坐标负值。 
-若需截取完整人脸，可以在完整分completeness满足需求的情况下，将负值坐标取0。 
+- 人脸框包含人脸五官位置并在此基础上进行一定的扩展，若人脸框超出图片范围，会导致坐标负值。 
+- 若需截取完整人脸，可以在完整分completeness满足需求的情况下，将负值坐标取0。 
      * @return Y 人脸框左上角纵坐标。 
-人脸框包含人脸五官位置并在此基础上进行一定的扩展，若人脸框超出图片范围，会导致坐标负值。 
-若需截取完整人脸，可以在完整分completeness满足需求的情况下，将负值坐标取0。
+- 人脸框包含人脸五官位置并在此基础上进行一定的扩展，若人脸框超出图片范围，会导致坐标负值。 
+- 若需截取完整人脸，可以在完整分completeness满足需求的情况下，将负值坐标取0。
      */
     public Long getY() {
         return this.Y;
@@ -109,11 +112,11 @@ public class FaceInfo extends AbstractModel {
 
     /**
      * Set 人脸框左上角纵坐标。 
-人脸框包含人脸五官位置并在此基础上进行一定的扩展，若人脸框超出图片范围，会导致坐标负值。 
-若需截取完整人脸，可以在完整分completeness满足需求的情况下，将负值坐标取0。
+- 人脸框包含人脸五官位置并在此基础上进行一定的扩展，若人脸框超出图片范围，会导致坐标负值。 
+- 若需截取完整人脸，可以在完整分completeness满足需求的情况下，将负值坐标取0。
      * @param Y 人脸框左上角纵坐标。 
-人脸框包含人脸五官位置并在此基础上进行一定的扩展，若人脸框超出图片范围，会导致坐标负值。 
-若需截取完整人脸，可以在完整分completeness满足需求的情况下，将负值坐标取0。
+- 人脸框包含人脸五官位置并在此基础上进行一定的扩展，若人脸框超出图片范围，会导致坐标负值。 
+- 若需截取完整人脸，可以在完整分completeness满足需求的情况下，将负值坐标取0。
      */
     public void setY(Long Y) {
         this.Y = Y;
@@ -152,29 +155,37 @@ public class FaceInfo extends AbstractModel {
     }
 
     /**
-     * Get 人脸属性信息，包含性别( gender )、年龄( age )、表情( expression )、 
-魅力( beauty )、眼镜( glass )、口罩（mask）、头发（hair）和姿态 (pitch，roll，yaw )。只有当 NeedFaceAttributes 设为 1 时才返回有效信息。 
-     * @return FaceAttributesInfo 人脸属性信息，包含性别( gender )、年龄( age )、表情( expression )、 
-魅力( beauty )、眼镜( glass )、口罩（mask）、头发（hair）和姿态 (pitch，roll，yaw )。只有当 NeedFaceAttributes 设为 1 时才返回有效信息。
+     * Get 人脸属性信息。
+- 包含性别( gender )、年龄( age )、表情( expression )、魅力( beauty )、眼镜( glass )、口罩（mask）、头发（hair）和姿态 (pitch，roll，yaw )。
+- 只有当 NeedFaceAttributes 设为 1 时才返回有效信息。 
+     * @return FaceAttributesInfo 人脸属性信息。
+- 包含性别( gender )、年龄( age )、表情( expression )、魅力( beauty )、眼镜( glass )、口罩（mask）、头发（hair）和姿态 (pitch，roll，yaw )。
+- 只有当 NeedFaceAttributes 设为 1 时才返回有效信息。
      */
     public FaceAttributesInfo getFaceAttributesInfo() {
         return this.FaceAttributesInfo;
     }
 
     /**
-     * Set 人脸属性信息，包含性别( gender )、年龄( age )、表情( expression )、 
-魅力( beauty )、眼镜( glass )、口罩（mask）、头发（hair）和姿态 (pitch，roll，yaw )。只有当 NeedFaceAttributes 设为 1 时才返回有效信息。
-     * @param FaceAttributesInfo 人脸属性信息，包含性别( gender )、年龄( age )、表情( expression )、 
-魅力( beauty )、眼镜( glass )、口罩（mask）、头发（hair）和姿态 (pitch，roll，yaw )。只有当 NeedFaceAttributes 设为 1 时才返回有效信息。
+     * Set 人脸属性信息。
+- 包含性别( gender )、年龄( age )、表情( expression )、魅力( beauty )、眼镜( glass )、口罩（mask）、头发（hair）和姿态 (pitch，roll，yaw )。
+- 只有当 NeedFaceAttributes 设为 1 时才返回有效信息。
+     * @param FaceAttributesInfo 人脸属性信息。
+- 包含性别( gender )、年龄( age )、表情( expression )、魅力( beauty )、眼镜( glass )、口罩（mask）、头发（hair）和姿态 (pitch，roll，yaw )。
+- 只有当 NeedFaceAttributes 设为 1 时才返回有效信息。
      */
     public void setFaceAttributesInfo(FaceAttributesInfo FaceAttributesInfo) {
         this.FaceAttributesInfo = FaceAttributesInfo;
     }
 
     /**
-     * Get 人脸质量信息，包含质量分（score）、模糊分（sharpness）、光照分（brightness）、遮挡分（completeness）。只有当NeedFaceDetection设为1时才返回有效信息。
+     * Get 人脸质量信息。
+- 包含质量分（score）、模糊分（sharpness）、光照分（brightness）、遮挡分（completeness）。
+- 只有当NeedFaceDetection设为1时才返回有效信息。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FaceQualityInfo 人脸质量信息，包含质量分（score）、模糊分（sharpness）、光照分（brightness）、遮挡分（completeness）。只有当NeedFaceDetection设为1时才返回有效信息。
+     * @return FaceQualityInfo 人脸质量信息。
+- 包含质量分（score）、模糊分（sharpness）、光照分（brightness）、遮挡分（completeness）。
+- 只有当NeedFaceDetection设为1时才返回有效信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public FaceQualityInfo getFaceQualityInfo() {
@@ -182,9 +193,13 @@ public class FaceInfo extends AbstractModel {
     }
 
     /**
-     * Set 人脸质量信息，包含质量分（score）、模糊分（sharpness）、光照分（brightness）、遮挡分（completeness）。只有当NeedFaceDetection设为1时才返回有效信息。
+     * Set 人脸质量信息。
+- 包含质量分（score）、模糊分（sharpness）、光照分（brightness）、遮挡分（completeness）。
+- 只有当NeedFaceDetection设为1时才返回有效信息。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FaceQualityInfo 人脸质量信息，包含质量分（score）、模糊分（sharpness）、光照分（brightness）、遮挡分（completeness）。只有当NeedFaceDetection设为1时才返回有效信息。
+     * @param FaceQualityInfo 人脸质量信息。
+- 包含质量分（score）、模糊分（sharpness）、光照分（brightness）、遮挡分（completeness）。
+- 只有当NeedFaceDetection设为1时才返回有效信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFaceQualityInfo(FaceQualityInfo FaceQualityInfo) {

@@ -25,7 +25,6 @@ public class GenerateDealsAndPayNewResponse extends AbstractModel {
 
     /**
     * 计费下单响应结构体
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
     @Expose
@@ -40,7 +39,6 @@ public class GenerateDealsAndPayNewResponse extends AbstractModel {
 
     /**
     * 返回message
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReturnMessage")
     @Expose
@@ -48,7 +46,6 @@ public class GenerateDealsAndPayNewResponse extends AbstractModel {
 
     /**
     * 购买的实例ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -62,10 +59,8 @@ public class GenerateDealsAndPayNewResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 计费下单响应结构体
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 计费下单响应结构体 
      * @return Data 计费下单响应结构体
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DealData getData() {
         return this.Data;
@@ -73,9 +68,7 @@ public class GenerateDealsAndPayNewResponse extends AbstractModel {
 
     /**
      * Set 计费下单响应结构体
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Data 计费下单响应结构体
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(DealData Data) {
         this.Data = Data;
@@ -98,10 +91,8 @@ public class GenerateDealsAndPayNewResponse extends AbstractModel {
     }
 
     /**
-     * Get 返回message
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 返回message 
      * @return ReturnMessage 返回message
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getReturnMessage() {
         return this.ReturnMessage;
@@ -109,19 +100,15 @@ public class GenerateDealsAndPayNewResponse extends AbstractModel {
 
     /**
      * Set 返回message
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReturnMessage 返回message
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReturnMessage(String ReturnMessage) {
         this.ReturnMessage = ReturnMessage;
     }
 
     /**
-     * Get 购买的实例ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 购买的实例ID 
      * @return InstanceId 购买的实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceId() {
         return this.InstanceId;
@@ -129,9 +116,7 @@ public class GenerateDealsAndPayNewResponse extends AbstractModel {
 
     /**
      * Set 购买的实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceId 购买的实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

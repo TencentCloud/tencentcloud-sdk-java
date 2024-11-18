@@ -38,7 +38,7 @@ public class MachineSimple extends AbstractModel {
     private String MachineOs;
 
     /**
-    * 云镜客户端唯一Uuid，若客户端长时间不在线将返回空字符。
+    * 主机安全uuid，若客户端长时间不在线将返回空字符。
     */
     @SerializedName("Uuid")
     @Expose
@@ -98,7 +98,8 @@ public class MachineSimple extends AbstractModel {
     private RegionInfo RegionInfo;
 
     /**
-    * 实例状态 TERMINATED_PRO_VERSION 已销毁
+    * 实例状态请参考CVM实例列表InstanceState值
+https://cloud.tencent.com/document/api/213/15753#Instance
     */
     @SerializedName("InstanceState")
     @Expose
@@ -134,7 +135,6 @@ public class MachineSimple extends AbstractModel {
 
     /**
     * 授权订单对象
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LicenseOrder")
     @Expose
@@ -142,7 +142,6 @@ public class MachineSimple extends AbstractModel {
 
     /**
     * 云标签信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CloudTags")
     @Expose
@@ -150,7 +149,6 @@ public class MachineSimple extends AbstractModel {
 
     /**
     * 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -189,16 +187,16 @@ public class MachineSimple extends AbstractModel {
     }
 
     /**
-     * Get 云镜客户端唯一Uuid，若客户端长时间不在线将返回空字符。 
-     * @return Uuid 云镜客户端唯一Uuid，若客户端长时间不在线将返回空字符。
+     * Get 主机安全uuid，若客户端长时间不在线将返回空字符。 
+     * @return Uuid 主机安全uuid，若客户端长时间不在线将返回空字符。
      */
     public String getUuid() {
         return this.Uuid;
     }
 
     /**
-     * Set 云镜客户端唯一Uuid，若客户端长时间不在线将返回空字符。
-     * @param Uuid 云镜客户端唯一Uuid，若客户端长时间不在线将返回空字符。
+     * Set 主机安全uuid，若客户端长时间不在线将返回空字符。
+     * @param Uuid 主机安全uuid，若客户端长时间不在线将返回空字符。
      */
     public void setUuid(String Uuid) {
         this.Uuid = Uuid;
@@ -333,16 +331,20 @@ public class MachineSimple extends AbstractModel {
     }
 
     /**
-     * Get 实例状态 TERMINATED_PRO_VERSION 已销毁 
-     * @return InstanceState 实例状态 TERMINATED_PRO_VERSION 已销毁
+     * Get 实例状态请参考CVM实例列表InstanceState值
+https://cloud.tencent.com/document/api/213/15753#Instance 
+     * @return InstanceState 实例状态请参考CVM实例列表InstanceState值
+https://cloud.tencent.com/document/api/213/15753#Instance
      */
     public String getInstanceState() {
         return this.InstanceState;
     }
 
     /**
-     * Set 实例状态 TERMINATED_PRO_VERSION 已销毁
-     * @param InstanceState 实例状态 TERMINATED_PRO_VERSION 已销毁
+     * Set 实例状态请参考CVM实例列表InstanceState值
+https://cloud.tencent.com/document/api/213/15753#Instance
+     * @param InstanceState 实例状态请参考CVM实例列表InstanceState值
+https://cloud.tencent.com/document/api/213/15753#Instance
      */
     public void setInstanceState(String InstanceState) {
         this.InstanceState = InstanceState;
@@ -413,10 +415,8 @@ public class MachineSimple extends AbstractModel {
     }
 
     /**
-     * Get 授权订单对象
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 授权订单对象 
      * @return LicenseOrder 授权订单对象
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public LicenseOrder getLicenseOrder() {
         return this.LicenseOrder;
@@ -424,19 +424,15 @@ public class MachineSimple extends AbstractModel {
 
     /**
      * Set 授权订单对象
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LicenseOrder 授权订单对象
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLicenseOrder(LicenseOrder LicenseOrder) {
         this.LicenseOrder = LicenseOrder;
     }
 
     /**
-     * Get 云标签信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 云标签信息 
      * @return CloudTags 云标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Tags [] getCloudTags() {
         return this.CloudTags;
@@ -444,19 +440,15 @@ public class MachineSimple extends AbstractModel {
 
     /**
      * Set 云标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CloudTags 云标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCloudTags(Tags [] CloudTags) {
         this.CloudTags = CloudTags;
     }
 
     /**
-     * Get 实例ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例ID 
      * @return InstanceId 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceId() {
         return this.InstanceId;
@@ -464,9 +456,7 @@ public class MachineSimple extends AbstractModel {
 
     /**
      * Set 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceId 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

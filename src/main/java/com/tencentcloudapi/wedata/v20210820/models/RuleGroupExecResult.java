@@ -192,6 +192,44 @@ public class RuleGroupExecResult extends AbstractModel {
     private String DsEnvType;
 
     /**
+    * 项目id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProjectId")
+    @Expose
+    private String ProjectId;
+
+    /**
+    * 项目名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProjectName")
+    @Expose
+    private String ProjectName;
+
+    /**
+    * 实例状态
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InstanceStatus")
+    @Expose
+    private String InstanceStatus;
+
+    /**
+    * 实例运行的开始时间
+    */
+    @SerializedName("StartTime")
+    @Expose
+    private String StartTime;
+
+    /**
+    * 实例运行的结束时间
+    */
+    @SerializedName("FinishTime")
+    @Expose
+    private String FinishTime;
+
+    /**
      * Get 规则组执行ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return RuleGroupExecId 规则组执行ID
@@ -611,6 +649,98 @@ public class RuleGroupExecResult extends AbstractModel {
         this.DsEnvType = DsEnvType;
     }
 
+    /**
+     * Get 项目id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProjectId 项目id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getProjectId() {
+        return this.ProjectId;
+    }
+
+    /**
+     * Set 项目id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProjectId 项目id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProjectId(String ProjectId) {
+        this.ProjectId = ProjectId;
+    }
+
+    /**
+     * Get 项目名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProjectName 项目名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getProjectName() {
+        return this.ProjectName;
+    }
+
+    /**
+     * Set 项目名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProjectName 项目名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProjectName(String ProjectName) {
+        this.ProjectName = ProjectName;
+    }
+
+    /**
+     * Get 实例状态
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InstanceStatus 实例状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getInstanceStatus() {
+        return this.InstanceStatus;
+    }
+
+    /**
+     * Set 实例状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstanceStatus 实例状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInstanceStatus(String InstanceStatus) {
+        this.InstanceStatus = InstanceStatus;
+    }
+
+    /**
+     * Get 实例运行的开始时间 
+     * @return StartTime 实例运行的开始时间
+     */
+    public String getStartTime() {
+        return this.StartTime;
+    }
+
+    /**
+     * Set 实例运行的开始时间
+     * @param StartTime 实例运行的开始时间
+     */
+    public void setStartTime(String StartTime) {
+        this.StartTime = StartTime;
+    }
+
+    /**
+     * Get 实例运行的结束时间 
+     * @return FinishTime 实例运行的结束时间
+     */
+    public String getFinishTime() {
+        return this.FinishTime;
+    }
+
+    /**
+     * Set 实例运行的结束时间
+     * @param FinishTime 实例运行的结束时间
+     */
+    public void setFinishTime(String FinishTime) {
+        this.FinishTime = FinishTime;
+    }
+
     public RuleGroupExecResult() {
     }
 
@@ -685,6 +815,21 @@ public class RuleGroupExecResult extends AbstractModel {
         if (source.DsEnvType != null) {
             this.DsEnvType = new String(source.DsEnvType);
         }
+        if (source.ProjectId != null) {
+            this.ProjectId = new String(source.ProjectId);
+        }
+        if (source.ProjectName != null) {
+            this.ProjectName = new String(source.ProjectName);
+        }
+        if (source.InstanceStatus != null) {
+            this.InstanceStatus = new String(source.InstanceStatus);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.FinishTime != null) {
+            this.FinishTime = new String(source.FinishTime);
+        }
     }
 
 
@@ -713,6 +858,11 @@ public class RuleGroupExecResult extends AbstractModel {
         this.setParamSimple(map, prefix + "ClusterDeployType", this.ClusterDeployType);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "DsEnvType", this.DsEnvType);
+        this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
+        this.setParamSimple(map, prefix + "ProjectName", this.ProjectName);
+        this.setParamSimple(map, prefix + "InstanceStatus", this.InstanceStatus);
+        this.setParamSimple(map, prefix + "StartTime", this.StartTime);
+        this.setParamSimple(map, prefix + "FinishTime", this.FinishTime);
 
     }
 }

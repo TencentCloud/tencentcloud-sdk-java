@@ -82,6 +82,13 @@ public class RecordPlanBaseInfo extends AbstractModel {
     private Long ChannelCount;
 
     /**
+    * 录像补录模式（0:不启用，1:启用）
+    */
+    @SerializedName("RepairMode")
+    @Expose
+    private Long RepairMode;
+
+    /**
      * Get 上云计划ID 
      * @return PlanId 上云计划ID
      */
@@ -217,6 +224,22 @@ public class RecordPlanBaseInfo extends AbstractModel {
         this.ChannelCount = ChannelCount;
     }
 
+    /**
+     * Get 录像补录模式（0:不启用，1:启用） 
+     * @return RepairMode 录像补录模式（0:不启用，1:启用）
+     */
+    public Long getRepairMode() {
+        return this.RepairMode;
+    }
+
+    /**
+     * Set 录像补录模式（0:不启用，1:启用）
+     * @param RepairMode 录像补录模式（0:不启用，1:启用）
+     */
+    public void setRepairMode(Long RepairMode) {
+        this.RepairMode = RepairMode;
+    }
+
     public RecordPlanBaseInfo() {
     }
 
@@ -249,6 +272,9 @@ public class RecordPlanBaseInfo extends AbstractModel {
         if (source.ChannelCount != null) {
             this.ChannelCount = new Long(source.ChannelCount);
         }
+        if (source.RepairMode != null) {
+            this.RepairMode = new Long(source.RepairMode);
+        }
     }
 
 
@@ -264,6 +290,7 @@ public class RecordPlanBaseInfo extends AbstractModel {
         this.setParamObj(map, prefix + "LifeCycle.", this.LifeCycle);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "ChannelCount", this.ChannelCount);
+        this.setParamSimple(map, prefix + "RepairMode", this.RepairMode);
 
     }
 }

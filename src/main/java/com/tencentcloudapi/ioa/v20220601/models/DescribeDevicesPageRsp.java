@@ -25,7 +25,6 @@ public class DescribeDevicesPageRsp extends AbstractModel {
 
     /**
     * 数据分页信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Paging")
     @Expose
@@ -33,17 +32,14 @@ public class DescribeDevicesPageRsp extends AbstractModel {
 
     /**
     * 业务响应数据
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Items")
     @Expose
     private DeviceDetail [] Items;
 
     /**
-     * Get 数据分页信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据分页信息 
      * @return Paging 数据分页信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Paging getPaging() {
         return this.Paging;
@@ -51,19 +47,15 @@ public class DescribeDevicesPageRsp extends AbstractModel {
 
     /**
      * Set 数据分页信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Paging 数据分页信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPaging(Paging Paging) {
         this.Paging = Paging;
     }
 
     /**
-     * Get 业务响应数据
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 业务响应数据 
      * @return Items 业务响应数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DeviceDetail [] getItems() {
         return this.Items;
@@ -71,9 +63,7 @@ public class DescribeDevicesPageRsp extends AbstractModel {
 
     /**
      * Set 业务响应数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Items 业务响应数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setItems(DeviceDetail [] Items) {
         this.Items = Items;

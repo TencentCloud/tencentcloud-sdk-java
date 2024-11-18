@@ -298,6 +298,20 @@ public class CreateInstanceRequest extends AbstractModel {
     private Long ReadWriteMode;
 
     /**
+    * 置放群组是否开启异步任务
+    */
+    @SerializedName("EnableScheduleRecoverGroup")
+    @Expose
+    private Boolean EnableScheduleRecoverGroup;
+
+    /**
+    * 置放群组开启异步任务的可维护时间段
+    */
+    @SerializedName("EnableScheduleOperationDuration")
+    @Expose
+    private EnableScheduleOperationDuration EnableScheduleOperationDuration;
+
+    /**
      * Get 可用区 
      * @return Zone 可用区
      */
@@ -937,6 +951,38 @@ public class CreateInstanceRequest extends AbstractModel {
         this.ReadWriteMode = ReadWriteMode;
     }
 
+    /**
+     * Get 置放群组是否开启异步任务 
+     * @return EnableScheduleRecoverGroup 置放群组是否开启异步任务
+     */
+    public Boolean getEnableScheduleRecoverGroup() {
+        return this.EnableScheduleRecoverGroup;
+    }
+
+    /**
+     * Set 置放群组是否开启异步任务
+     * @param EnableScheduleRecoverGroup 置放群组是否开启异步任务
+     */
+    public void setEnableScheduleRecoverGroup(Boolean EnableScheduleRecoverGroup) {
+        this.EnableScheduleRecoverGroup = EnableScheduleRecoverGroup;
+    }
+
+    /**
+     * Get 置放群组开启异步任务的可维护时间段 
+     * @return EnableScheduleOperationDuration 置放群组开启异步任务的可维护时间段
+     */
+    public EnableScheduleOperationDuration getEnableScheduleOperationDuration() {
+        return this.EnableScheduleOperationDuration;
+    }
+
+    /**
+     * Set 置放群组开启异步任务的可维护时间段
+     * @param EnableScheduleOperationDuration 置放群组开启异步任务的可维护时间段
+     */
+    public void setEnableScheduleOperationDuration(EnableScheduleOperationDuration EnableScheduleOperationDuration) {
+        this.EnableScheduleOperationDuration = EnableScheduleOperationDuration;
+    }
+
     public CreateInstanceRequest() {
     }
 
@@ -1071,6 +1117,12 @@ public class CreateInstanceRequest extends AbstractModel {
         if (source.ReadWriteMode != null) {
             this.ReadWriteMode = new Long(source.ReadWriteMode);
         }
+        if (source.EnableScheduleRecoverGroup != null) {
+            this.EnableScheduleRecoverGroup = new Boolean(source.EnableScheduleRecoverGroup);
+        }
+        if (source.EnableScheduleOperationDuration != null) {
+            this.EnableScheduleOperationDuration = new EnableScheduleOperationDuration(source.EnableScheduleOperationDuration);
+        }
     }
 
 
@@ -1116,6 +1168,8 @@ public class CreateInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "DisasterRecoverGroupAffinity", this.DisasterRecoverGroupAffinity);
         this.setParamSimple(map, prefix + "SubProductCode", this.SubProductCode);
         this.setParamSimple(map, prefix + "ReadWriteMode", this.ReadWriteMode);
+        this.setParamSimple(map, prefix + "EnableScheduleRecoverGroup", this.EnableScheduleRecoverGroup);
+        this.setParamObj(map, prefix + "EnableScheduleOperationDuration.", this.EnableScheduleOperationDuration);
 
     }
 }

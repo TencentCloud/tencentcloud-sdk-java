@@ -25,7 +25,6 @@ public class Broadcasts extends AbstractModel {
 
     /**
     * 文章名字
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Title")
     @Expose
@@ -33,7 +32,6 @@ public class Broadcasts extends AbstractModel {
 
     /**
     * 类型：0=紧急通知，1=功能更新，2=行业荣誉，3=版本发布
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -68,10 +66,8 @@ public class Broadcasts extends AbstractModel {
     private Long Level;
 
     /**
-     * Get 文章名字
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文章名字 
      * @return Title 文章名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTitle() {
         return this.Title;
@@ -79,19 +75,15 @@ public class Broadcasts extends AbstractModel {
 
     /**
      * Set 文章名字
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Title 文章名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTitle(String Title) {
         this.Title = Title;
     }
 
     /**
-     * Get 类型：0=紧急通知，1=功能更新，2=行业荣誉，3=版本发布
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 类型：0=紧急通知，1=功能更新，2=行业荣誉，3=版本发布 
      * @return Type 类型：0=紧急通知，1=功能更新，2=行业荣誉，3=版本发布
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getType() {
         return this.Type;
@@ -99,9 +91,7 @@ public class Broadcasts extends AbstractModel {
 
     /**
      * Set 类型：0=紧急通知，1=功能更新，2=行业荣誉，3=版本发布
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 类型：0=紧急通知，1=功能更新，2=行业荣誉，3=版本发布
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(Long Type) {
         this.Type = Type;

@@ -25,7 +25,6 @@ public class UpsertIpAccessControlResponse extends AbstractModel {
 
     /**
     * 添加或修改失败的条目
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FailedItems")
     @Expose
@@ -33,7 +32,6 @@ public class UpsertIpAccessControlResponse extends AbstractModel {
 
     /**
     * 添加或修改失败的数目
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FailedCount")
     @Expose
@@ -41,7 +39,6 @@ public class UpsertIpAccessControlResponse extends AbstractModel {
 
     /**
     * 添加或修改的IP数据Id列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Ids")
     @Expose
@@ -55,10 +52,8 @@ public class UpsertIpAccessControlResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 添加或修改失败的条目
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 添加或修改失败的条目 
      * @return FailedItems 添加或修改失败的条目
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFailedItems() {
         return this.FailedItems;
@@ -66,19 +61,15 @@ public class UpsertIpAccessControlResponse extends AbstractModel {
 
     /**
      * Set 添加或修改失败的条目
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FailedItems 添加或修改失败的条目
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFailedItems(String FailedItems) {
         this.FailedItems = FailedItems;
     }
 
     /**
-     * Get 添加或修改失败的数目
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 添加或修改失败的数目 
      * @return FailedCount 添加或修改失败的数目
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFailedCount() {
         return this.FailedCount;
@@ -86,19 +77,15 @@ public class UpsertIpAccessControlResponse extends AbstractModel {
 
     /**
      * Set 添加或修改失败的数目
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FailedCount 添加或修改失败的数目
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFailedCount(Long FailedCount) {
         this.FailedCount = FailedCount;
     }
 
     /**
-     * Get 添加或修改的IP数据Id列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 添加或修改的IP数据Id列表 
      * @return Ids 添加或修改的IP数据Id列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getIds() {
         return this.Ids;
@@ -106,9 +93,7 @@ public class UpsertIpAccessControlResponse extends AbstractModel {
 
     /**
      * Set 添加或修改的IP数据Id列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Ids 添加或修改的IP数据Id列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIds(String [] Ids) {
         this.Ids = Ids;

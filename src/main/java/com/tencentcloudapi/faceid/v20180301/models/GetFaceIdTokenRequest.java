@@ -24,51 +24,62 @@ import java.util.HashMap;
 public class GetFaceIdTokenRequest extends AbstractModel {
 
     /**
-    * 本地上传照片(LOCAL)、商业库(BUSINESS)
+    * 比对库。
+- 取值范围：
+LOCAL：本地上传照片。
+BUSINESS：商业库。
     */
     @SerializedName("CompareLib")
     @Expose
     private String CompareLib;
 
     /**
-    * CompareLib为商业库时必传。
+    * 身份证。
+- CompareLib为商业库时必传。
     */
     @SerializedName("IdCard")
     @Expose
     private String IdCard;
 
     /**
-    * CompareLib为商业库时必传。
+    * 姓名。
+- CompareLib为商业库时必传。
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * CompareLib为上传照片比对时必传，Base64后图片最大8MB。
-请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
+    * 图片的Base64。
+- CompareLib为上传照片比对时必传。
+- Base64后图片最大8MB。
+- 请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
     */
     @SerializedName("ImageBase64")
     @Expose
     private String ImageBase64;
 
     /**
-    * SDK中生成的Meta字符串
+    * SDK中生成的Meta字符串。
     */
     @SerializedName("Meta")
     @Expose
     private String Meta;
 
     /**
-    * 透传参数 1000长度字符串
+    * 透传参数。
+- 1000长度字符串
     */
     @SerializedName("Extra")
     @Expose
     private String Extra;
 
     /**
-    * 默认为false，设置该参数为true后，核身过程中的视频图片将会存储在人脸核身控制台授权cos的bucket中，拉取结果时会返回对应资源完整cos地址。开通地址见https://console.cloud.tencent.com/faceid/cos
-【注意】选择该参数为true后将不返回base64数据，请根据接入情况谨慎修改。
+    * 是否使用cos桶。
+- 默认为false。
+- 设置该参数为true后，核身过程中的视频图片将会存储在人脸核身控制台授权cos的bucket中，拉取结果时会返回对应资源完整cos地址。
+- 开通地址见https://console.cloud.tencent.com/faceid/cos
+- 【注意】选择该参数为true后将不返回base64数据，请根据接入情况谨慎修改。
     */
     @SerializedName("UseCos")
     @Expose
@@ -82,128 +93,173 @@ public class GetFaceIdTokenRequest extends AbstractModel {
     private Encryption Encryption;
 
     /**
-    * 用于细分客户使用场景，申请开通服务后，可以在腾讯云慧眼人脸核身控制台（https://console.cloud.tencent.com/faceid） 自助接入里面创建，审核通过后即可调用。如有疑问，请添加腾讯云人脸核身小助手进行咨询。
-示例值：1
+    * 用于细分客户使用场景。
+- 申请开通服务后，可以在腾讯云慧眼人脸核身控制台（https://console.cloud.tencent.com/faceid） 自助接入里面创建，审核通过后即可调用。
+- 如有疑问，请添加腾讯云人脸核身小助手进行咨询。
     */
     @SerializedName("RuleId")
     @Expose
     private String RuleId;
 
     /**
-     * Get 本地上传照片(LOCAL)、商业库(BUSINESS) 
-     * @return CompareLib 本地上传照片(LOCAL)、商业库(BUSINESS)
+     * Get 比对库。
+- 取值范围：
+LOCAL：本地上传照片。
+BUSINESS：商业库。 
+     * @return CompareLib 比对库。
+- 取值范围：
+LOCAL：本地上传照片。
+BUSINESS：商业库。
      */
     public String getCompareLib() {
         return this.CompareLib;
     }
 
     /**
-     * Set 本地上传照片(LOCAL)、商业库(BUSINESS)
-     * @param CompareLib 本地上传照片(LOCAL)、商业库(BUSINESS)
+     * Set 比对库。
+- 取值范围：
+LOCAL：本地上传照片。
+BUSINESS：商业库。
+     * @param CompareLib 比对库。
+- 取值范围：
+LOCAL：本地上传照片。
+BUSINESS：商业库。
      */
     public void setCompareLib(String CompareLib) {
         this.CompareLib = CompareLib;
     }
 
     /**
-     * Get CompareLib为商业库时必传。 
-     * @return IdCard CompareLib为商业库时必传。
+     * Get 身份证。
+- CompareLib为商业库时必传。 
+     * @return IdCard 身份证。
+- CompareLib为商业库时必传。
      */
     public String getIdCard() {
         return this.IdCard;
     }
 
     /**
-     * Set CompareLib为商业库时必传。
-     * @param IdCard CompareLib为商业库时必传。
+     * Set 身份证。
+- CompareLib为商业库时必传。
+     * @param IdCard 身份证。
+- CompareLib为商业库时必传。
      */
     public void setIdCard(String IdCard) {
         this.IdCard = IdCard;
     }
 
     /**
-     * Get CompareLib为商业库时必传。 
-     * @return Name CompareLib为商业库时必传。
+     * Get 姓名。
+- CompareLib为商业库时必传。 
+     * @return Name 姓名。
+- CompareLib为商业库时必传。
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set CompareLib为商业库时必传。
-     * @param Name CompareLib为商业库时必传。
+     * Set 姓名。
+- CompareLib为商业库时必传。
+     * @param Name 姓名。
+- CompareLib为商业库时必传。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get CompareLib为上传照片比对时必传，Base64后图片最大8MB。
-请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。 
-     * @return ImageBase64 CompareLib为上传照片比对时必传，Base64后图片最大8MB。
-请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
+     * Get 图片的Base64。
+- CompareLib为上传照片比对时必传。
+- Base64后图片最大8MB。
+- 请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。 
+     * @return ImageBase64 图片的Base64。
+- CompareLib为上传照片比对时必传。
+- Base64后图片最大8MB。
+- 请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
      */
     public String getImageBase64() {
         return this.ImageBase64;
     }
 
     /**
-     * Set CompareLib为上传照片比对时必传，Base64后图片最大8MB。
-请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
-     * @param ImageBase64 CompareLib为上传照片比对时必传，Base64后图片最大8MB。
-请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
+     * Set 图片的Base64。
+- CompareLib为上传照片比对时必传。
+- Base64后图片最大8MB。
+- 请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
+     * @param ImageBase64 图片的Base64。
+- CompareLib为上传照片比对时必传。
+- Base64后图片最大8MB。
+- 请使用标准的Base64编码方式(带=补位)，编码规范参考RFC4648。
      */
     public void setImageBase64(String ImageBase64) {
         this.ImageBase64 = ImageBase64;
     }
 
     /**
-     * Get SDK中生成的Meta字符串 
-     * @return Meta SDK中生成的Meta字符串
+     * Get SDK中生成的Meta字符串。 
+     * @return Meta SDK中生成的Meta字符串。
      */
     public String getMeta() {
         return this.Meta;
     }
 
     /**
-     * Set SDK中生成的Meta字符串
-     * @param Meta SDK中生成的Meta字符串
+     * Set SDK中生成的Meta字符串。
+     * @param Meta SDK中生成的Meta字符串。
      */
     public void setMeta(String Meta) {
         this.Meta = Meta;
     }
 
     /**
-     * Get 透传参数 1000长度字符串 
-     * @return Extra 透传参数 1000长度字符串
+     * Get 透传参数。
+- 1000长度字符串 
+     * @return Extra 透传参数。
+- 1000长度字符串
      */
     public String getExtra() {
         return this.Extra;
     }
 
     /**
-     * Set 透传参数 1000长度字符串
-     * @param Extra 透传参数 1000长度字符串
+     * Set 透传参数。
+- 1000长度字符串
+     * @param Extra 透传参数。
+- 1000长度字符串
      */
     public void setExtra(String Extra) {
         this.Extra = Extra;
     }
 
     /**
-     * Get 默认为false，设置该参数为true后，核身过程中的视频图片将会存储在人脸核身控制台授权cos的bucket中，拉取结果时会返回对应资源完整cos地址。开通地址见https://console.cloud.tencent.com/faceid/cos
-【注意】选择该参数为true后将不返回base64数据，请根据接入情况谨慎修改。 
-     * @return UseCos 默认为false，设置该参数为true后，核身过程中的视频图片将会存储在人脸核身控制台授权cos的bucket中，拉取结果时会返回对应资源完整cos地址。开通地址见https://console.cloud.tencent.com/faceid/cos
-【注意】选择该参数为true后将不返回base64数据，请根据接入情况谨慎修改。
+     * Get 是否使用cos桶。
+- 默认为false。
+- 设置该参数为true后，核身过程中的视频图片将会存储在人脸核身控制台授权cos的bucket中，拉取结果时会返回对应资源完整cos地址。
+- 开通地址见https://console.cloud.tencent.com/faceid/cos
+- 【注意】选择该参数为true后将不返回base64数据，请根据接入情况谨慎修改。 
+     * @return UseCos 是否使用cos桶。
+- 默认为false。
+- 设置该参数为true后，核身过程中的视频图片将会存储在人脸核身控制台授权cos的bucket中，拉取结果时会返回对应资源完整cos地址。
+- 开通地址见https://console.cloud.tencent.com/faceid/cos
+- 【注意】选择该参数为true后将不返回base64数据，请根据接入情况谨慎修改。
      */
     public Boolean getUseCos() {
         return this.UseCos;
     }
 
     /**
-     * Set 默认为false，设置该参数为true后，核身过程中的视频图片将会存储在人脸核身控制台授权cos的bucket中，拉取结果时会返回对应资源完整cos地址。开通地址见https://console.cloud.tencent.com/faceid/cos
-【注意】选择该参数为true后将不返回base64数据，请根据接入情况谨慎修改。
-     * @param UseCos 默认为false，设置该参数为true后，核身过程中的视频图片将会存储在人脸核身控制台授权cos的bucket中，拉取结果时会返回对应资源完整cos地址。开通地址见https://console.cloud.tencent.com/faceid/cos
-【注意】选择该参数为true后将不返回base64数据，请根据接入情况谨慎修改。
+     * Set 是否使用cos桶。
+- 默认为false。
+- 设置该参数为true后，核身过程中的视频图片将会存储在人脸核身控制台授权cos的bucket中，拉取结果时会返回对应资源完整cos地址。
+- 开通地址见https://console.cloud.tencent.com/faceid/cos
+- 【注意】选择该参数为true后将不返回base64数据，请根据接入情况谨慎修改。
+     * @param UseCos 是否使用cos桶。
+- 默认为false。
+- 设置该参数为true后，核身过程中的视频图片将会存储在人脸核身控制台授权cos的bucket中，拉取结果时会返回对应资源完整cos地址。
+- 开通地址见https://console.cloud.tencent.com/faceid/cos
+- 【注意】选择该参数为true后将不返回base64数据，请根据接入情况谨慎修改。
      */
     public void setUseCos(Boolean UseCos) {
         this.UseCos = UseCos;
@@ -226,20 +282,24 @@ public class GetFaceIdTokenRequest extends AbstractModel {
     }
 
     /**
-     * Get 用于细分客户使用场景，申请开通服务后，可以在腾讯云慧眼人脸核身控制台（https://console.cloud.tencent.com/faceid） 自助接入里面创建，审核通过后即可调用。如有疑问，请添加腾讯云人脸核身小助手进行咨询。
-示例值：1 
-     * @return RuleId 用于细分客户使用场景，申请开通服务后，可以在腾讯云慧眼人脸核身控制台（https://console.cloud.tencent.com/faceid） 自助接入里面创建，审核通过后即可调用。如有疑问，请添加腾讯云人脸核身小助手进行咨询。
-示例值：1
+     * Get 用于细分客户使用场景。
+- 申请开通服务后，可以在腾讯云慧眼人脸核身控制台（https://console.cloud.tencent.com/faceid） 自助接入里面创建，审核通过后即可调用。
+- 如有疑问，请添加腾讯云人脸核身小助手进行咨询。 
+     * @return RuleId 用于细分客户使用场景。
+- 申请开通服务后，可以在腾讯云慧眼人脸核身控制台（https://console.cloud.tencent.com/faceid） 自助接入里面创建，审核通过后即可调用。
+- 如有疑问，请添加腾讯云人脸核身小助手进行咨询。
      */
     public String getRuleId() {
         return this.RuleId;
     }
 
     /**
-     * Set 用于细分客户使用场景，申请开通服务后，可以在腾讯云慧眼人脸核身控制台（https://console.cloud.tencent.com/faceid） 自助接入里面创建，审核通过后即可调用。如有疑问，请添加腾讯云人脸核身小助手进行咨询。
-示例值：1
-     * @param RuleId 用于细分客户使用场景，申请开通服务后，可以在腾讯云慧眼人脸核身控制台（https://console.cloud.tencent.com/faceid） 自助接入里面创建，审核通过后即可调用。如有疑问，请添加腾讯云人脸核身小助手进行咨询。
-示例值：1
+     * Set 用于细分客户使用场景。
+- 申请开通服务后，可以在腾讯云慧眼人脸核身控制台（https://console.cloud.tencent.com/faceid） 自助接入里面创建，审核通过后即可调用。
+- 如有疑问，请添加腾讯云人脸核身小助手进行咨询。
+     * @param RuleId 用于细分客户使用场景。
+- 申请开通服务后，可以在腾讯云慧眼人脸核身控制台（https://console.cloud.tencent.com/faceid） 自助接入里面创建，审核通过后即可调用。
+- 如有疑问，请添加腾讯云人脸核身小助手进行咨询。
      */
     public void setRuleId(String RuleId) {
         this.RuleId = RuleId;

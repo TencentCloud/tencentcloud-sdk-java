@@ -116,7 +116,6 @@ public class Device extends AbstractModel {
 
     /**
     * 堡垒机服务信息，注意没有绑定服务时为null
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Resource")
     @Expose
@@ -124,7 +123,6 @@ public class Device extends AbstractModel {
 
     /**
     * 资产所属部门
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Department")
     @Expose
@@ -132,7 +130,6 @@ public class Device extends AbstractModel {
 
     /**
     * 数据库资产的多节点
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IpPortSet")
     @Expose
@@ -140,7 +137,6 @@ public class Device extends AbstractModel {
 
     /**
     * 网络域Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DomainId")
     @Expose
@@ -148,11 +144,24 @@ public class Device extends AbstractModel {
 
     /**
     * 网络域名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DomainName")
     @Expose
     private String DomainName;
+
+    /**
+    * 是否启用SSL，仅支持Redis资产。0：禁用 1：启用
+    */
+    @SerializedName("EnableSSL")
+    @Expose
+    private Long EnableSSL;
+
+    /**
+    * 已上传的SSL证书名称
+    */
+    @SerializedName("SSLCertName")
+    @Expose
+    private String SSLCertName;
 
     /**
      * Get 资产ID 
@@ -363,10 +372,8 @@ public class Device extends AbstractModel {
     }
 
     /**
-     * Get 堡垒机服务信息，注意没有绑定服务时为null
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 堡垒机服务信息，注意没有绑定服务时为null 
      * @return Resource 堡垒机服务信息，注意没有绑定服务时为null
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Resource getResource() {
         return this.Resource;
@@ -374,19 +381,15 @@ public class Device extends AbstractModel {
 
     /**
      * Set 堡垒机服务信息，注意没有绑定服务时为null
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Resource 堡垒机服务信息，注意没有绑定服务时为null
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResource(Resource Resource) {
         this.Resource = Resource;
     }
 
     /**
-     * Get 资产所属部门
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资产所属部门 
      * @return Department 资产所属部门
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Department getDepartment() {
         return this.Department;
@@ -394,19 +397,15 @@ public class Device extends AbstractModel {
 
     /**
      * Set 资产所属部门
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Department 资产所属部门
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDepartment(Department Department) {
         this.Department = Department;
     }
 
     /**
-     * Get 数据库资产的多节点
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据库资产的多节点 
      * @return IpPortSet 数据库资产的多节点
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getIpPortSet() {
         return this.IpPortSet;
@@ -414,19 +413,15 @@ public class Device extends AbstractModel {
 
     /**
      * Set 数据库资产的多节点
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IpPortSet 数据库资产的多节点
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIpPortSet(String [] IpPortSet) {
         this.IpPortSet = IpPortSet;
     }
 
     /**
-     * Get 网络域Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网络域Id 
      * @return DomainId 网络域Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDomainId() {
         return this.DomainId;
@@ -434,19 +429,15 @@ public class Device extends AbstractModel {
 
     /**
      * Set 网络域Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DomainId 网络域Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDomainId(String DomainId) {
         this.DomainId = DomainId;
     }
 
     /**
-     * Get 网络域名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网络域名称 
      * @return DomainName 网络域名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDomainName() {
         return this.DomainName;
@@ -454,12 +445,42 @@ public class Device extends AbstractModel {
 
     /**
      * Set 网络域名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DomainName 网络域名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDomainName(String DomainName) {
         this.DomainName = DomainName;
+    }
+
+    /**
+     * Get 是否启用SSL，仅支持Redis资产。0：禁用 1：启用 
+     * @return EnableSSL 是否启用SSL，仅支持Redis资产。0：禁用 1：启用
+     */
+    public Long getEnableSSL() {
+        return this.EnableSSL;
+    }
+
+    /**
+     * Set 是否启用SSL，仅支持Redis资产。0：禁用 1：启用
+     * @param EnableSSL 是否启用SSL，仅支持Redis资产。0：禁用 1：启用
+     */
+    public void setEnableSSL(Long EnableSSL) {
+        this.EnableSSL = EnableSSL;
+    }
+
+    /**
+     * Get 已上传的SSL证书名称 
+     * @return SSLCertName 已上传的SSL证书名称
+     */
+    public String getSSLCertName() {
+        return this.SSLCertName;
+    }
+
+    /**
+     * Set 已上传的SSL证书名称
+     * @param SSLCertName 已上传的SSL证书名称
+     */
+    public void setSSLCertName(String SSLCertName) {
+        this.SSLCertName = SSLCertName;
     }
 
     public Device() {
@@ -530,6 +551,12 @@ public class Device extends AbstractModel {
         if (source.DomainName != null) {
             this.DomainName = new String(source.DomainName);
         }
+        if (source.EnableSSL != null) {
+            this.EnableSSL = new Long(source.EnableSSL);
+        }
+        if (source.SSLCertName != null) {
+            this.SSLCertName = new String(source.SSLCertName);
+        }
     }
 
 
@@ -555,6 +582,8 @@ public class Device extends AbstractModel {
         this.setParamArraySimple(map, prefix + "IpPortSet.", this.IpPortSet);
         this.setParamSimple(map, prefix + "DomainId", this.DomainId);
         this.setParamSimple(map, prefix + "DomainName", this.DomainName);
+        this.setParamSimple(map, prefix + "EnableSSL", this.EnableSSL);
+        this.setParamSimple(map, prefix + "SSLCertName", this.SSLCertName);
 
     }
 }

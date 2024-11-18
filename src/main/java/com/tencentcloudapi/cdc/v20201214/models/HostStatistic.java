@@ -60,7 +60,6 @@ public class HostStatistic extends AbstractModel {
 
     /**
     * 平均cpu负载百分比
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CpuAverage")
     @Expose
@@ -68,7 +67,6 @@ public class HostStatistic extends AbstractModel {
 
     /**
     * 平均内存使用率百分比
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MemAverage")
     @Expose
@@ -76,7 +74,6 @@ public class HostStatistic extends AbstractModel {
 
     /**
     * 平均网络流量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NetAverage")
     @Expose
@@ -84,7 +81,6 @@ public class HostStatistic extends AbstractModel {
 
     /**
     * cpu详细监控数据
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CpuDetailData")
     @Expose
@@ -92,7 +88,6 @@ public class HostStatistic extends AbstractModel {
 
     /**
     * 内存详细数据
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MemDetailData")
     @Expose
@@ -100,7 +95,6 @@ public class HostStatistic extends AbstractModel {
 
     /**
     * 网络速率详细数据
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NetRateDetailData")
     @Expose
@@ -108,7 +102,6 @@ public class HostStatistic extends AbstractModel {
 
     /**
     * 网速包详细数据
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NetPacketDetailData")
     @Expose
@@ -195,10 +188,8 @@ public class HostStatistic extends AbstractModel {
     }
 
     /**
-     * Get 平均cpu负载百分比
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 平均cpu负载百分比 
      * @return CpuAverage 平均cpu负载百分比
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getCpuAverage() {
         return this.CpuAverage;
@@ -206,19 +197,15 @@ public class HostStatistic extends AbstractModel {
 
     /**
      * Set 平均cpu负载百分比
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CpuAverage 平均cpu负载百分比
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCpuAverage(Float CpuAverage) {
         this.CpuAverage = CpuAverage;
     }
 
     /**
-     * Get 平均内存使用率百分比
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 平均内存使用率百分比 
      * @return MemAverage 平均内存使用率百分比
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getMemAverage() {
         return this.MemAverage;
@@ -226,19 +213,15 @@ public class HostStatistic extends AbstractModel {
 
     /**
      * Set 平均内存使用率百分比
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MemAverage 平均内存使用率百分比
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMemAverage(Float MemAverage) {
         this.MemAverage = MemAverage;
     }
 
     /**
-     * Get 平均网络流量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 平均网络流量 
      * @return NetAverage 平均网络流量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getNetAverage() {
         return this.NetAverage;
@@ -246,19 +229,15 @@ public class HostStatistic extends AbstractModel {
 
     /**
      * Set 平均网络流量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NetAverage 平均网络流量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNetAverage(Float NetAverage) {
         this.NetAverage = NetAverage;
     }
 
     /**
-     * Get cpu详细监控数据
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get cpu详细监控数据 
      * @return CpuDetailData cpu详细监控数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DetailData getCpuDetailData() {
         return this.CpuDetailData;
@@ -266,19 +245,15 @@ public class HostStatistic extends AbstractModel {
 
     /**
      * Set cpu详细监控数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CpuDetailData cpu详细监控数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCpuDetailData(DetailData CpuDetailData) {
         this.CpuDetailData = CpuDetailData;
     }
 
     /**
-     * Get 内存详细数据
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 内存详细数据 
      * @return MemDetailData 内存详细数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DetailData getMemDetailData() {
         return this.MemDetailData;
@@ -286,19 +261,15 @@ public class HostStatistic extends AbstractModel {
 
     /**
      * Set 内存详细数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MemDetailData 内存详细数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMemDetailData(DetailData MemDetailData) {
         this.MemDetailData = MemDetailData;
     }
 
     /**
-     * Get 网络速率详细数据
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网络速率详细数据 
      * @return NetRateDetailData 网络速率详细数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DetailData getNetRateDetailData() {
         return this.NetRateDetailData;
@@ -306,19 +277,15 @@ public class HostStatistic extends AbstractModel {
 
     /**
      * Set 网络速率详细数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NetRateDetailData 网络速率详细数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNetRateDetailData(DetailData NetRateDetailData) {
         this.NetRateDetailData = NetRateDetailData;
     }
 
     /**
-     * Get 网速包详细数据
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网速包详细数据 
      * @return NetPacketDetailData 网速包详细数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DetailData getNetPacketDetailData() {
         return this.NetPacketDetailData;
@@ -326,9 +293,7 @@ public class HostStatistic extends AbstractModel {
 
     /**
      * Set 网速包详细数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NetPacketDetailData 网速包详细数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNetPacketDetailData(DetailData NetPacketDetailData) {
         this.NetPacketDetailData = NetPacketDetailData;

@@ -25,7 +25,6 @@ public class DescribeRansomDefenseStrategyListResponse extends AbstractModel {
 
     /**
     * 策略列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("List")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeRansomDefenseStrategyListResponse extends AbstractModel {
 
     /**
     * 分页查询记录总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeRansomDefenseStrategyListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 策略列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 策略列表 
      * @return List 策略列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RansomDefenseStrategy [] getList() {
         return this.List;
@@ -58,19 +54,15 @@ public class DescribeRansomDefenseStrategyListResponse extends AbstractModel {
 
     /**
      * Set 策略列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param List 策略列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setList(RansomDefenseStrategy [] List) {
         this.List = List;
     }
 
     /**
-     * Get 分页查询记录总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分页查询记录总数 
      * @return TotalCount 分页查询记录总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -78,9 +70,7 @@ public class DescribeRansomDefenseStrategyListResponse extends AbstractModel {
 
     /**
      * Set 分页查询记录总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 分页查询记录总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

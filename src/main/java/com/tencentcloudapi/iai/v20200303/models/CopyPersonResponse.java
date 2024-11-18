@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class CopyPersonResponse extends AbstractModel {
 
     /**
-    * 成功加入的人员库数量
+    * 成功加入的人员库数量。
     */
     @SerializedName("SucGroupNum")
     @Expose
     private Long SucGroupNum;
 
     /**
-    * 成功加入的人员库列表
+    * 成功加入的人员库列表。
     */
     @SerializedName("SucGroupIds")
     @Expose
@@ -45,32 +45,32 @@ public class CopyPersonResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 成功加入的人员库数量 
-     * @return SucGroupNum 成功加入的人员库数量
+     * Get 成功加入的人员库数量。 
+     * @return SucGroupNum 成功加入的人员库数量。
      */
     public Long getSucGroupNum() {
         return this.SucGroupNum;
     }
 
     /**
-     * Set 成功加入的人员库数量
-     * @param SucGroupNum 成功加入的人员库数量
+     * Set 成功加入的人员库数量。
+     * @param SucGroupNum 成功加入的人员库数量。
      */
     public void setSucGroupNum(Long SucGroupNum) {
         this.SucGroupNum = SucGroupNum;
     }
 
     /**
-     * Get 成功加入的人员库列表 
-     * @return SucGroupIds 成功加入的人员库列表
+     * Get 成功加入的人员库列表。 
+     * @return SucGroupIds 成功加入的人员库列表。
      */
     public String [] getSucGroupIds() {
         return this.SucGroupIds;
     }
 
     /**
-     * Set 成功加入的人员库列表
-     * @param SucGroupIds 成功加入的人员库列表
+     * Set 成功加入的人员库列表。
+     * @param SucGroupIds 成功加入的人员库列表。
      */
     public void setSucGroupIds(String [] SucGroupIds) {
         this.SucGroupIds = SucGroupIds;

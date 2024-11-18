@@ -95,7 +95,6 @@ public class DescribeScanTaskDetailsResponse extends AbstractModel {
 
     /**
     * 漏洞信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VulInfo")
     @Expose
@@ -103,7 +102,6 @@ public class DescribeScanTaskDetailsResponse extends AbstractModel {
 
     /**
     * 风险事件个数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RiskEventCount")
     @Expose
@@ -111,7 +109,6 @@ public class DescribeScanTaskDetailsResponse extends AbstractModel {
 
     /**
     * 0一键检测 1定时检测
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -119,7 +116,6 @@ public class DescribeScanTaskDetailsResponse extends AbstractModel {
 
     /**
     * 任务是否全部正在被停止 ture是
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StoppingAll")
     @Expose
@@ -127,7 +123,6 @@ public class DescribeScanTaskDetailsResponse extends AbstractModel {
 
     /**
     * 扫描出漏洞个数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VulCount")
     @Expose
@@ -301,10 +296,8 @@ public class DescribeScanTaskDetailsResponse extends AbstractModel {
     }
 
     /**
-     * Get 漏洞信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 漏洞信息 
      * @return VulInfo 漏洞信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public VulDetailInfo [] getVulInfo() {
         return this.VulInfo;
@@ -312,19 +305,15 @@ public class DescribeScanTaskDetailsResponse extends AbstractModel {
 
     /**
      * Set 漏洞信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VulInfo 漏洞信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVulInfo(VulDetailInfo [] VulInfo) {
         this.VulInfo = VulInfo;
     }
 
     /**
-     * Get 风险事件个数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 风险事件个数 
      * @return RiskEventCount 风险事件个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRiskEventCount() {
         return this.RiskEventCount;
@@ -332,19 +321,15 @@ public class DescribeScanTaskDetailsResponse extends AbstractModel {
 
     /**
      * Set 风险事件个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RiskEventCount 风险事件个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRiskEventCount(Long RiskEventCount) {
         this.RiskEventCount = RiskEventCount;
     }
 
     /**
-     * Get 0一键检测 1定时检测
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 0一键检测 1定时检测 
      * @return Type 0一键检测 1定时检测
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getType() {
         return this.Type;
@@ -352,19 +337,15 @@ public class DescribeScanTaskDetailsResponse extends AbstractModel {
 
     /**
      * Set 0一键检测 1定时检测
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 0一键检测 1定时检测
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(Long Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 任务是否全部正在被停止 ture是
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务是否全部正在被停止 ture是 
      * @return StoppingAll 任务是否全部正在被停止 ture是
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getStoppingAll() {
         return this.StoppingAll;
@@ -372,19 +353,15 @@ public class DescribeScanTaskDetailsResponse extends AbstractModel {
 
     /**
      * Set 任务是否全部正在被停止 ture是
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StoppingAll 任务是否全部正在被停止 ture是
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStoppingAll(Boolean StoppingAll) {
         this.StoppingAll = StoppingAll;
     }
 
     /**
-     * Get 扫描出漏洞个数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 扫描出漏洞个数 
      * @return VulCount 扫描出漏洞个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getVulCount() {
         return this.VulCount;
@@ -392,9 +369,7 @@ public class DescribeScanTaskDetailsResponse extends AbstractModel {
 
     /**
      * Set 扫描出漏洞个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VulCount 扫描出漏洞个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVulCount(Long VulCount) {
         this.VulCount = VulCount;

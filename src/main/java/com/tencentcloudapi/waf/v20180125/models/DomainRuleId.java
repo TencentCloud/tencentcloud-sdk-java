@@ -25,7 +25,6 @@ public class DomainRuleId extends AbstractModel {
 
     /**
     * 域名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Domain")
     @Expose
@@ -33,17 +32,14 @@ public class DomainRuleId extends AbstractModel {
 
     /**
     * 规则id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleId")
     @Expose
     private String RuleId;
 
     /**
-     * Get 域名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 域名 
      * @return Domain 域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDomain() {
         return this.Domain;
@@ -51,19 +47,15 @@ public class DomainRuleId extends AbstractModel {
 
     /**
      * Set 域名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Domain 域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get 规则id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则id 
      * @return RuleId 规则id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRuleId() {
         return this.RuleId;
@@ -71,9 +63,7 @@ public class DomainRuleId extends AbstractModel {
 
     /**
      * Set 规则id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RuleId 规则id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleId(String RuleId) {
         this.RuleId = RuleId;

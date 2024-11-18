@@ -25,7 +25,6 @@ public class DescribeVULRiskAdvanceCFGListResponse extends AbstractModel {
 
     /**
     * 配置项列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Data")
     @Expose
@@ -40,7 +39,6 @@ public class DescribeVULRiskAdvanceCFGListResponse extends AbstractModel {
 
     /**
     * 风险等级过滤列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RiskLevelLists")
     @Expose
@@ -48,7 +46,6 @@ public class DescribeVULRiskAdvanceCFGListResponse extends AbstractModel {
 
     /**
     * 漏洞类型过滤列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VULTypeLists")
     @Expose
@@ -56,7 +53,6 @@ public class DescribeVULRiskAdvanceCFGListResponse extends AbstractModel {
 
     /**
     * 识别来源过滤列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CheckFromLists")
     @Expose
@@ -64,7 +60,6 @@ public class DescribeVULRiskAdvanceCFGListResponse extends AbstractModel {
 
     /**
     * 漏洞标签列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VulTagList")
     @Expose
@@ -78,10 +73,8 @@ public class DescribeVULRiskAdvanceCFGListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 配置项列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 配置项列表 
      * @return Data 配置项列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public VULRiskAdvanceCFGList [] getData() {
         return this.Data;
@@ -89,9 +82,7 @@ public class DescribeVULRiskAdvanceCFGListResponse extends AbstractModel {
 
     /**
      * Set 配置项列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Data 配置项列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setData(VULRiskAdvanceCFGList [] Data) {
         this.Data = Data;
@@ -114,10 +105,8 @@ public class DescribeVULRiskAdvanceCFGListResponse extends AbstractModel {
     }
 
     /**
-     * Get 风险等级过滤列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 风险等级过滤列表 
      * @return RiskLevelLists 风险等级过滤列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public FilterDataObject [] getRiskLevelLists() {
         return this.RiskLevelLists;
@@ -125,19 +114,15 @@ public class DescribeVULRiskAdvanceCFGListResponse extends AbstractModel {
 
     /**
      * Set 风险等级过滤列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RiskLevelLists 风险等级过滤列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRiskLevelLists(FilterDataObject [] RiskLevelLists) {
         this.RiskLevelLists = RiskLevelLists;
     }
 
     /**
-     * Get 漏洞类型过滤列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 漏洞类型过滤列表 
      * @return VULTypeLists 漏洞类型过滤列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public FilterDataObject [] getVULTypeLists() {
         return this.VULTypeLists;
@@ -145,19 +130,15 @@ public class DescribeVULRiskAdvanceCFGListResponse extends AbstractModel {
 
     /**
      * Set 漏洞类型过滤列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VULTypeLists 漏洞类型过滤列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVULTypeLists(FilterDataObject [] VULTypeLists) {
         this.VULTypeLists = VULTypeLists;
     }
 
     /**
-     * Get 识别来源过滤列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 识别来源过滤列表 
      * @return CheckFromLists 识别来源过滤列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public FilterDataObject [] getCheckFromLists() {
         return this.CheckFromLists;
@@ -165,19 +146,15 @@ public class DescribeVULRiskAdvanceCFGListResponse extends AbstractModel {
 
     /**
      * Set 识别来源过滤列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CheckFromLists 识别来源过滤列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCheckFromLists(FilterDataObject [] CheckFromLists) {
         this.CheckFromLists = CheckFromLists;
     }
 
     /**
-     * Get 漏洞标签列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 漏洞标签列表 
      * @return VulTagList 漏洞标签列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public FilterDataObject [] getVulTagList() {
         return this.VulTagList;
@@ -185,9 +162,7 @@ public class DescribeVULRiskAdvanceCFGListResponse extends AbstractModel {
 
     /**
      * Set 漏洞标签列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VulTagList 漏洞标签列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVulTagList(FilterDataObject [] VulTagList) {
         this.VulTagList = VulTagList;

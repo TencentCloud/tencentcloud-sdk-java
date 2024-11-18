@@ -93,6 +93,10 @@ public class CreateFlowByFilesRequest extends AbstractModel {
     /**
     * 合同流程的抄送人列表，最多可支持50个抄送人，抄送人可查看合同内容及签署进度，但无需参与合同签署。
 
+<b>注</b>
+1. 抄送人名单中可以包括自然人以及本企业的员工。
+2. 请确保抄送人列表中的成员不与任何签署人重复。
+
     */
     @SerializedName("CcInfos")
     @Expose
@@ -240,6 +244,15 @@ public class CreateFlowByFilesRequest extends AbstractModel {
     @SerializedName("FlowDisplayType")
     @Expose
     private Long FlowDisplayType;
+
+    /**
+    * 是否开启动态签署合同：
+<ul><li> **true**：开启动态签署合同，可在签署过程中追加签署人（必须满足：1，发起方企业开启了模块化计费能力；2，发起方企业在企业应用管理中开启了动态签署人2.0能力）    。</li>
+<li> **false**：不开启动态签署合同。</li></ul>
+    */
+    @SerializedName("OpenDynamicSignFlow")
+    @Expose
+    private Boolean OpenDynamicSignFlow;
 
     /**
      * Get 执行本接口操作的员工信息。使用此接口时，必须填写userId。
@@ -427,8 +440,16 @@ public class CreateFlowByFilesRequest extends AbstractModel {
 
     /**
      * Get 合同流程的抄送人列表，最多可支持50个抄送人，抄送人可查看合同内容及签署进度，但无需参与合同签署。
+
+<b>注</b>
+1. 抄送人名单中可以包括自然人以及本企业的员工。
+2. 请确保抄送人列表中的成员不与任何签署人重复。
  
      * @return CcInfos 合同流程的抄送人列表，最多可支持50个抄送人，抄送人可查看合同内容及签署进度，但无需参与合同签署。
+
+<b>注</b>
+1. 抄送人名单中可以包括自然人以及本企业的员工。
+2. 请确保抄送人列表中的成员不与任何签署人重复。
 
      */
     public CcInfo [] getCcInfos() {
@@ -438,7 +459,15 @@ public class CreateFlowByFilesRequest extends AbstractModel {
     /**
      * Set 合同流程的抄送人列表，最多可支持50个抄送人，抄送人可查看合同内容及签署进度，但无需参与合同签署。
 
+<b>注</b>
+1. 抄送人名单中可以包括自然人以及本企业的员工。
+2. 请确保抄送人列表中的成员不与任何签署人重复。
+
      * @param CcInfos 合同流程的抄送人列表，最多可支持50个抄送人，抄送人可查看合同内容及签署进度，但无需参与合同签署。
+
+<b>注</b>
+1. 抄送人名单中可以包括自然人以及本企业的员工。
+2. 请确保抄送人列表中的成员不与任何签署人重复。
 
      */
     public void setCcInfos(CcInfo [] CcInfos) {
@@ -849,6 +878,30 @@ public class CreateFlowByFilesRequest extends AbstractModel {
         this.FlowDisplayType = FlowDisplayType;
     }
 
+    /**
+     * Get 是否开启动态签署合同：
+<ul><li> **true**：开启动态签署合同，可在签署过程中追加签署人（必须满足：1，发起方企业开启了模块化计费能力；2，发起方企业在企业应用管理中开启了动态签署人2.0能力）    。</li>
+<li> **false**：不开启动态签署合同。</li></ul> 
+     * @return OpenDynamicSignFlow 是否开启动态签署合同：
+<ul><li> **true**：开启动态签署合同，可在签署过程中追加签署人（必须满足：1，发起方企业开启了模块化计费能力；2，发起方企业在企业应用管理中开启了动态签署人2.0能力）    。</li>
+<li> **false**：不开启动态签署合同。</li></ul>
+     */
+    public Boolean getOpenDynamicSignFlow() {
+        return this.OpenDynamicSignFlow;
+    }
+
+    /**
+     * Set 是否开启动态签署合同：
+<ul><li> **true**：开启动态签署合同，可在签署过程中追加签署人（必须满足：1，发起方企业开启了模块化计费能力；2，发起方企业在企业应用管理中开启了动态签署人2.0能力）    。</li>
+<li> **false**：不开启动态签署合同。</li></ul>
+     * @param OpenDynamicSignFlow 是否开启动态签署合同：
+<ul><li> **true**：开启动态签署合同，可在签署过程中追加签署人（必须满足：1，发起方企业开启了模块化计费能力；2，发起方企业在企业应用管理中开启了动态签署人2.0能力）    。</li>
+<li> **false**：不开启动态签署合同。</li></ul>
+     */
+    public void setOpenDynamicSignFlow(Boolean OpenDynamicSignFlow) {
+        this.OpenDynamicSignFlow = OpenDynamicSignFlow;
+    }
+
     public CreateFlowByFilesRequest() {
     }
 
@@ -935,6 +988,9 @@ public class CreateFlowByFilesRequest extends AbstractModel {
         if (source.FlowDisplayType != null) {
             this.FlowDisplayType = new Long(source.FlowDisplayType);
         }
+        if (source.OpenDynamicSignFlow != null) {
+            this.OpenDynamicSignFlow = new Boolean(source.OpenDynamicSignFlow);
+        }
     }
 
 
@@ -964,6 +1020,7 @@ public class CreateFlowByFilesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "AutoSignScene", this.AutoSignScene);
         this.setParamSimple(map, prefix + "NeedSignReview", this.NeedSignReview);
         this.setParamSimple(map, prefix + "FlowDisplayType", this.FlowDisplayType);
+        this.setParamSimple(map, prefix + "OpenDynamicSignFlow", this.OpenDynamicSignFlow);
 
     }
 }

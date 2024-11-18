@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class StopAutoCalloutTaskRequest extends AbstractModel {
 
     /**
-    * 呼叫中心实例Id
+    * 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
     */
     @SerializedName("SdkAppId")
     @Expose
@@ -38,16 +38,16 @@ public class StopAutoCalloutTaskRequest extends AbstractModel {
     private Long TaskId;
 
     /**
-     * Get 呼叫中心实例Id 
-     * @return SdkAppId 呼叫中心实例Id
+     * Get 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc 
+     * @return SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      */
     public Long getSdkAppId() {
         return this.SdkAppId;
     }
 
     /**
-     * Set 呼叫中心实例Id
-     * @param SdkAppId 呼叫中心实例Id
+     * Set 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
+     * @param SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      */
     public void setSdkAppId(Long SdkAppId) {
         this.SdkAppId = SdkAppId;

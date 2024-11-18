@@ -211,6 +211,13 @@ InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定�
     private InstanceTag [] InstanceTags;
 
     /**
+    * 镜像族名称。
+    */
+    @SerializedName("ImageFamily")
+    @Expose
+    private String ImageFamily;
+
+    /**
      * Get 启动配置ID 
      * @return LaunchConfigurationId 启动配置ID
      */
@@ -682,6 +689,22 @@ InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定�
         this.InstanceTags = InstanceTags;
     }
 
+    /**
+     * Get 镜像族名称。 
+     * @return ImageFamily 镜像族名称。
+     */
+    public String getImageFamily() {
+        return this.ImageFamily;
+    }
+
+    /**
+     * Set 镜像族名称。
+     * @param ImageFamily 镜像族名称。
+     */
+    public void setImageFamily(String ImageFamily) {
+        this.ImageFamily = ImageFamily;
+    }
+
     public ModifyLaunchConfigurationAttributesRequest() {
     }
 
@@ -774,6 +797,9 @@ InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定�
                 this.InstanceTags[i] = new InstanceTag(source.InstanceTags[i]);
             }
         }
+        if (source.ImageFamily != null) {
+            this.ImageFamily = new String(source.ImageFamily);
+        }
     }
 
 
@@ -804,6 +830,7 @@ InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定�
         this.setParamArraySimple(map, prefix + "DisasterRecoverGroupIds.", this.DisasterRecoverGroupIds);
         this.setParamObj(map, prefix + "LoginSettings.", this.LoginSettings);
         this.setParamArrayObj(map, prefix + "InstanceTags.", this.InstanceTags);
+        this.setParamSimple(map, prefix + "ImageFamily", this.ImageFamily);
 
     }
 }

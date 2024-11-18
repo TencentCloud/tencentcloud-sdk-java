@@ -3,6 +3,9 @@ public enum LighthouseErrorCode {
     // CAM签名/鉴权错误。
      AUTHFAILURE("AuthFailure"),
      
+    // 请求头中的 Uin 无效
+     AUTHFAILURE_INVALIDHEADERUIN("AuthFailure.InvalidHeaderUin"),
+     
     // 该地域尚未开放，请选择其他地域。
      AUTHFAILURE_INVALIDREGION("AuthFailure.InvalidRegion"),
      
@@ -282,6 +285,9 @@ public enum LighthouseErrorCode {
     // 防火墙规则描述长度超出限制。
      INVALIDPARAMETERVALUE_FIREWALLRULEDESCRIPTIONTOOLONG("InvalidParameterValue.FirewallRuleDescriptionTooLong"),
      
+    // 防火墙模板ID格式非法。
+     INVALIDPARAMETERVALUE_FIREWALLTEMPLATEIDMALFORMED("InvalidParameterValue.FirewallTemplateIdMalformed"),
+     
     // 参数值非法，实例 ID 格式非法。
      INVALIDPARAMETERVALUE_INSTANCEIDMALFORMED("InvalidParameterValue.InstanceIdMalformed"),
      
@@ -359,6 +365,9 @@ public enum LighthouseErrorCode {
      
     // 指定的公钥格式错误。
      INVALIDPARAMETERVALUE_KEYPAIRPUBLICKEYMALFORMED("InvalidParameterValue.KeyPairPublicKeyMalformed"),
+     
+    // 参数取值长度不合法。
+     INVALIDPARAMETERVALUE_LENGTH("InvalidParameterValue.Length"),
      
     // 参数值非法，参数值的数量超过最大限制。
      INVALIDPARAMETERVALUE_LIMITEXCEEDED("InvalidParameterValue.LimitExceeded"),

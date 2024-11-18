@@ -31,7 +31,8 @@ public class ApplyEmbedIntervalRequest extends AbstractModel {
     private Long ProjectId;
 
     /**
-    * 分享页面id，嵌出看板时此为空值0
+    * 分享页面id，嵌出看板时此为空值0，ChatBI嵌出时不传
+
     */
     @SerializedName("PageId")
     @Expose
@@ -52,7 +53,16 @@ public class ApplyEmbedIntervalRequest extends AbstractModel {
     private String ExtraParam;
 
     /**
-    * panel,看板；page，页面
+    * embed：页面/看板嵌出
+chatBIEmbed：ChatBI嵌出
+    */
+    @SerializedName("Intention")
+    @Expose
+    private String Intention;
+
+    /**
+    * panel, 看板；page，页面
+project，ChatBI嵌出时
     */
     @SerializedName("Scope")
     @Expose
@@ -75,16 +85,20 @@ public class ApplyEmbedIntervalRequest extends AbstractModel {
     }
 
     /**
-     * Get 分享页面id，嵌出看板时此为空值0 
-     * @return PageId 分享页面id，嵌出看板时此为空值0
+     * Get 分享页面id，嵌出看板时此为空值0，ChatBI嵌出时不传
+ 
+     * @return PageId 分享页面id，嵌出看板时此为空值0，ChatBI嵌出时不传
+
      */
     public Long getPageId() {
         return this.PageId;
     }
 
     /**
-     * Set 分享页面id，嵌出看板时此为空值0
-     * @param PageId 分享页面id，嵌出看板时此为空值0
+     * Set 分享页面id，嵌出看板时此为空值0，ChatBI嵌出时不传
+
+     * @param PageId 分享页面id，嵌出看板时此为空值0，ChatBI嵌出时不传
+
      */
     public void setPageId(Long PageId) {
         this.PageId = PageId;
@@ -123,16 +137,40 @@ public class ApplyEmbedIntervalRequest extends AbstractModel {
     }
 
     /**
-     * Get panel,看板；page，页面 
-     * @return Scope panel,看板；page，页面
+     * Get embed：页面/看板嵌出
+chatBIEmbed：ChatBI嵌出 
+     * @return Intention embed：页面/看板嵌出
+chatBIEmbed：ChatBI嵌出
+     */
+    public String getIntention() {
+        return this.Intention;
+    }
+
+    /**
+     * Set embed：页面/看板嵌出
+chatBIEmbed：ChatBI嵌出
+     * @param Intention embed：页面/看板嵌出
+chatBIEmbed：ChatBI嵌出
+     */
+    public void setIntention(String Intention) {
+        this.Intention = Intention;
+    }
+
+    /**
+     * Get panel, 看板；page，页面
+project，ChatBI嵌出时 
+     * @return Scope panel, 看板；page，页面
+project，ChatBI嵌出时
      */
     public String getScope() {
         return this.Scope;
     }
 
     /**
-     * Set panel,看板；page，页面
-     * @param Scope panel,看板；page，页面
+     * Set panel, 看板；page，页面
+project，ChatBI嵌出时
+     * @param Scope panel, 看板；page，页面
+project，ChatBI嵌出时
      */
     public void setScope(String Scope) {
         this.Scope = Scope;
@@ -158,6 +196,9 @@ public class ApplyEmbedIntervalRequest extends AbstractModel {
         if (source.ExtraParam != null) {
             this.ExtraParam = new String(source.ExtraParam);
         }
+        if (source.Intention != null) {
+            this.Intention = new String(source.Intention);
+        }
         if (source.Scope != null) {
             this.Scope = new String(source.Scope);
         }
@@ -172,6 +213,7 @@ public class ApplyEmbedIntervalRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "PageId", this.PageId);
         this.setParamSimple(map, prefix + "BIToken", this.BIToken);
         this.setParamSimple(map, prefix + "ExtraParam", this.ExtraParam);
+        this.setParamSimple(map, prefix + "Intention", this.Intention);
         this.setParamSimple(map, prefix + "Scope", this.Scope);
 
     }

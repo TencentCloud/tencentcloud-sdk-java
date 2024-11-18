@@ -88,7 +88,6 @@ drop：拒绝
 
     /**
     * 协议；TCP/UDP/ICMP/ANY
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Protocol")
     @Expose
@@ -98,7 +97,6 @@ drop：拒绝
     * 访问控制策略的端口。取值：
 -1/-1：全部端口
 80：80端口
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Port")
     @Expose
@@ -106,7 +104,6 @@ drop：拒绝
 
     /**
     * 端口协议类型参数模板id；协议端口模板id；与Protocol,Port互斥
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ServiceTemplateId")
     @Expose
@@ -303,10 +300,8 @@ drop：拒绝
     }
 
     /**
-     * Get 协议；TCP/UDP/ICMP/ANY
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 协议；TCP/UDP/ICMP/ANY 
      * @return Protocol 协议；TCP/UDP/ICMP/ANY
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProtocol() {
         return this.Protocol;
@@ -314,9 +309,7 @@ drop：拒绝
 
     /**
      * Set 协议；TCP/UDP/ICMP/ANY
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Protocol 协议；TCP/UDP/ICMP/ANY
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
@@ -325,12 +318,10 @@ drop：拒绝
     /**
      * Get 访问控制策略的端口。取值：
 -1/-1：全部端口
-80：80端口
-注意：此字段可能返回 null，表示取不到有效值。 
+80：80端口 
      * @return Port 访问控制策略的端口。取值：
 -1/-1：全部端口
 80：80端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPort() {
         return this.Port;
@@ -340,21 +331,17 @@ drop：拒绝
      * Set 访问控制策略的端口。取值：
 -1/-1：全部端口
 80：80端口
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Port 访问控制策略的端口。取值：
 -1/-1：全部端口
 80：80端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPort(String Port) {
         this.Port = Port;
     }
 
     /**
-     * Get 端口协议类型参数模板id；协议端口模板id；与Protocol,Port互斥
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 端口协议类型参数模板id；协议端口模板id；与Protocol,Port互斥 
      * @return ServiceTemplateId 端口协议类型参数模板id；协议端口模板id；与Protocol,Port互斥
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getServiceTemplateId() {
         return this.ServiceTemplateId;
@@ -362,9 +349,7 @@ drop：拒绝
 
     /**
      * Set 端口协议类型参数模板id；协议端口模板id；与Protocol,Port互斥
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ServiceTemplateId 端口协议类型参数模板id；协议端口模板id；与Protocol,Port互斥
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setServiceTemplateId(String ServiceTemplateId) {
         this.ServiceTemplateId = ServiceTemplateId;

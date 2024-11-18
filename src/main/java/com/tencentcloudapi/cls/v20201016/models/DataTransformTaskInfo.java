@@ -123,6 +123,22 @@ public class DataTransformTaskInfo extends AbstractModel {
     private Long DataTransformType;
 
     /**
+    * 保留失败日志状态。 1:不保留，2:保留
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("KeepFailureLog")
+    @Expose
+    private Long KeepFailureLog;
+
+    /**
+    * 失败日志的字段名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FailureLogKey")
+    @Expose
+    private String FailureLogKey;
+
+    /**
      * Get 数据加工任务名称 
      * @return Name 数据加工任务名称
      */
@@ -350,6 +366,46 @@ public class DataTransformTaskInfo extends AbstractModel {
         this.DataTransformType = DataTransformType;
     }
 
+    /**
+     * Get 保留失败日志状态。 1:不保留，2:保留
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return KeepFailureLog 保留失败日志状态。 1:不保留，2:保留
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getKeepFailureLog() {
+        return this.KeepFailureLog;
+    }
+
+    /**
+     * Set 保留失败日志状态。 1:不保留，2:保留
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param KeepFailureLog 保留失败日志状态。 1:不保留，2:保留
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setKeepFailureLog(Long KeepFailureLog) {
+        this.KeepFailureLog = KeepFailureLog;
+    }
+
+    /**
+     * Get 失败日志的字段名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FailureLogKey 失败日志的字段名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getFailureLogKey() {
+        return this.FailureLogKey;
+    }
+
+    /**
+     * Set 失败日志的字段名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FailureLogKey 失败日志的字段名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFailureLogKey(String FailureLogKey) {
+        this.FailureLogKey = FailureLogKey;
+    }
+
     public DataTransformTaskInfo() {
     }
 
@@ -403,6 +459,12 @@ public class DataTransformTaskInfo extends AbstractModel {
         if (source.DataTransformType != null) {
             this.DataTransformType = new Long(source.DataTransformType);
         }
+        if (source.KeepFailureLog != null) {
+            this.KeepFailureLog = new Long(source.KeepFailureLog);
+        }
+        if (source.FailureLogKey != null) {
+            this.FailureLogKey = new String(source.FailureLogKey);
+        }
     }
 
 
@@ -424,6 +486,8 @@ public class DataTransformTaskInfo extends AbstractModel {
         this.setParamArrayObj(map, prefix + "DstResources.", this.DstResources);
         this.setParamSimple(map, prefix + "EtlContent", this.EtlContent);
         this.setParamSimple(map, prefix + "DataTransformType", this.DataTransformType);
+        this.setParamSimple(map, prefix + "KeepFailureLog", this.KeepFailureLog);
+        this.setParamSimple(map, prefix + "FailureLogKey", this.FailureLogKey);
 
     }
 }

@@ -66,6 +66,22 @@ public class DescribeBatchProductionResponse extends AbstractModel {
     private String UploadUrl;
 
     /**
+    * 成功数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SuccessCount")
+    @Expose
+    private Long SuccessCount;
+
+    /**
+    * 量产最后失败原因
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LastFailedReason")
+    @Expose
+    private String LastFailedReason;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -169,6 +185,46 @@ public class DescribeBatchProductionResponse extends AbstractModel {
     }
 
     /**
+     * Get 成功数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SuccessCount 成功数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getSuccessCount() {
+        return this.SuccessCount;
+    }
+
+    /**
+     * Set 成功数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SuccessCount 成功数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSuccessCount(Long SuccessCount) {
+        this.SuccessCount = SuccessCount;
+    }
+
+    /**
+     * Get 量产最后失败原因
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LastFailedReason 量产最后失败原因
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLastFailedReason() {
+        return this.LastFailedReason;
+    }
+
+    /**
+     * Set 量产最后失败原因
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LastFailedReason 量产最后失败原因
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLastFailedReason(String LastFailedReason) {
+        this.LastFailedReason = LastFailedReason;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -210,6 +266,12 @@ public class DescribeBatchProductionResponse extends AbstractModel {
         if (source.UploadUrl != null) {
             this.UploadUrl = new String(source.UploadUrl);
         }
+        if (source.SuccessCount != null) {
+            this.SuccessCount = new Long(source.SuccessCount);
+        }
+        if (source.LastFailedReason != null) {
+            this.LastFailedReason = new String(source.LastFailedReason);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -226,6 +288,8 @@ public class DescribeBatchProductionResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "DownloadUrl", this.DownloadUrl);
         this.setParamSimple(map, prefix + "GenerationMethod", this.GenerationMethod);
         this.setParamSimple(map, prefix + "UploadUrl", this.UploadUrl);
+        this.setParamSimple(map, prefix + "SuccessCount", this.SuccessCount);
+        this.setParamSimple(map, prefix + "LastFailedReason", this.LastFailedReason);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

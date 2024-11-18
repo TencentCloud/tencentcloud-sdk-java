@@ -25,7 +25,6 @@ public class DescribeVulEmergentMsgResponse extends AbstractModel {
 
     /**
     * 漏洞紧急通知数据
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EmergentMsgList")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeVulEmergentMsgResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 漏洞紧急通知数据
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 漏洞紧急通知数据 
      * @return EmergentMsgList 漏洞紧急通知数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public VulEmergentMsgInfo [] getEmergentMsgList() {
         return this.EmergentMsgList;
@@ -50,9 +47,7 @@ public class DescribeVulEmergentMsgResponse extends AbstractModel {
 
     /**
      * Set 漏洞紧急通知数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EmergentMsgList 漏洞紧急通知数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEmergentMsgList(VulEmergentMsgInfo [] EmergentMsgList) {
         this.EmergentMsgList = EmergentMsgList;

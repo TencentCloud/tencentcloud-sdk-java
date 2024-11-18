@@ -24,84 +24,129 @@ import java.util.HashMap;
 public class DescribeLocalAccountsRequest extends AbstractModel {
 
     /**
-    * 滤条件、分页参数
-<li>UserName - String - 是否必填：否 - 操作符: eq,like  - 排序支持：否- 按账号UserName过滤。</li>
-<li>UserId - string - 是否必填：否 - 操作符: eq,like  - 排序支持：否 - 按账号UserNd过滤。</li>
-<li>Phone - string - 是否必填：否 - 操作符: eq,like - 排序支持：否 - 按手机号过滤。</li>
+    * 查询条件：过滤或排序
+1、UserName，string类型，姓名
+是否必填：否
+过滤支持：是，支持eq、like、ilike
+排序支持：否
+2、UserId，string类型，账户
+是否必填：否
+过滤支持：是，支持eq、like、ilike
+排序支持：否
+3、Phone，string类型，手机号
+是否必填：否
+过滤支持：是，支持eq、like、ilike
+排序支持：否
     */
     @SerializedName("Condition")
     @Expose
     private Condition Condition;
 
     /**
-    * 获取账号的分组Id，不传默认获取全部(只支持32位)
+    * 获取账号的分组ID，不传默认获取全网根账号组
     */
     @SerializedName("AccountGroupId")
     @Expose
     private Long AccountGroupId;
 
     /**
-    * 是否仅展示当前目录下用户 1： 递归显示 2：仅显示当前目录下用户(只支持32位)
+    * 是否仅展示当前目录下用户 1： 递归显示 2：仅显示当前目录下用户
     */
     @SerializedName("ShowFlag")
     @Expose
     private Long ShowFlag;
 
     /**
-     * Get 滤条件、分页参数
-<li>UserName - String - 是否必填：否 - 操作符: eq,like  - 排序支持：否- 按账号UserName过滤。</li>
-<li>UserId - string - 是否必填：否 - 操作符: eq,like  - 排序支持：否 - 按账号UserNd过滤。</li>
-<li>Phone - string - 是否必填：否 - 操作符: eq,like - 排序支持：否 - 按手机号过滤。</li> 
-     * @return Condition 滤条件、分页参数
-<li>UserName - String - 是否必填：否 - 操作符: eq,like  - 排序支持：否- 按账号UserName过滤。</li>
-<li>UserId - string - 是否必填：否 - 操作符: eq,like  - 排序支持：否 - 按账号UserNd过滤。</li>
-<li>Phone - string - 是否必填：否 - 操作符: eq,like - 排序支持：否 - 按手机号过滤。</li>
+     * Get 查询条件：过滤或排序
+1、UserName，string类型，姓名
+是否必填：否
+过滤支持：是，支持eq、like、ilike
+排序支持：否
+2、UserId，string类型，账户
+是否必填：否
+过滤支持：是，支持eq、like、ilike
+排序支持：否
+3、Phone，string类型，手机号
+是否必填：否
+过滤支持：是，支持eq、like、ilike
+排序支持：否 
+     * @return Condition 查询条件：过滤或排序
+1、UserName，string类型，姓名
+是否必填：否
+过滤支持：是，支持eq、like、ilike
+排序支持：否
+2、UserId，string类型，账户
+是否必填：否
+过滤支持：是，支持eq、like、ilike
+排序支持：否
+3、Phone，string类型，手机号
+是否必填：否
+过滤支持：是，支持eq、like、ilike
+排序支持：否
      */
     public Condition getCondition() {
         return this.Condition;
     }
 
     /**
-     * Set 滤条件、分页参数
-<li>UserName - String - 是否必填：否 - 操作符: eq,like  - 排序支持：否- 按账号UserName过滤。</li>
-<li>UserId - string - 是否必填：否 - 操作符: eq,like  - 排序支持：否 - 按账号UserNd过滤。</li>
-<li>Phone - string - 是否必填：否 - 操作符: eq,like - 排序支持：否 - 按手机号过滤。</li>
-     * @param Condition 滤条件、分页参数
-<li>UserName - String - 是否必填：否 - 操作符: eq,like  - 排序支持：否- 按账号UserName过滤。</li>
-<li>UserId - string - 是否必填：否 - 操作符: eq,like  - 排序支持：否 - 按账号UserNd过滤。</li>
-<li>Phone - string - 是否必填：否 - 操作符: eq,like - 排序支持：否 - 按手机号过滤。</li>
+     * Set 查询条件：过滤或排序
+1、UserName，string类型，姓名
+是否必填：否
+过滤支持：是，支持eq、like、ilike
+排序支持：否
+2、UserId，string类型，账户
+是否必填：否
+过滤支持：是，支持eq、like、ilike
+排序支持：否
+3、Phone，string类型，手机号
+是否必填：否
+过滤支持：是，支持eq、like、ilike
+排序支持：否
+     * @param Condition 查询条件：过滤或排序
+1、UserName，string类型，姓名
+是否必填：否
+过滤支持：是，支持eq、like、ilike
+排序支持：否
+2、UserId，string类型，账户
+是否必填：否
+过滤支持：是，支持eq、like、ilike
+排序支持：否
+3、Phone，string类型，手机号
+是否必填：否
+过滤支持：是，支持eq、like、ilike
+排序支持：否
      */
     public void setCondition(Condition Condition) {
         this.Condition = Condition;
     }
 
     /**
-     * Get 获取账号的分组Id，不传默认获取全部(只支持32位) 
-     * @return AccountGroupId 获取账号的分组Id，不传默认获取全部(只支持32位)
+     * Get 获取账号的分组ID，不传默认获取全网根账号组 
+     * @return AccountGroupId 获取账号的分组ID，不传默认获取全网根账号组
      */
     public Long getAccountGroupId() {
         return this.AccountGroupId;
     }
 
     /**
-     * Set 获取账号的分组Id，不传默认获取全部(只支持32位)
-     * @param AccountGroupId 获取账号的分组Id，不传默认获取全部(只支持32位)
+     * Set 获取账号的分组ID，不传默认获取全网根账号组
+     * @param AccountGroupId 获取账号的分组ID，不传默认获取全网根账号组
      */
     public void setAccountGroupId(Long AccountGroupId) {
         this.AccountGroupId = AccountGroupId;
     }
 
     /**
-     * Get 是否仅展示当前目录下用户 1： 递归显示 2：仅显示当前目录下用户(只支持32位) 
-     * @return ShowFlag 是否仅展示当前目录下用户 1： 递归显示 2：仅显示当前目录下用户(只支持32位)
+     * Get 是否仅展示当前目录下用户 1： 递归显示 2：仅显示当前目录下用户 
+     * @return ShowFlag 是否仅展示当前目录下用户 1： 递归显示 2：仅显示当前目录下用户
      */
     public Long getShowFlag() {
         return this.ShowFlag;
     }
 
     /**
-     * Set 是否仅展示当前目录下用户 1： 递归显示 2：仅显示当前目录下用户(只支持32位)
-     * @param ShowFlag 是否仅展示当前目录下用户 1： 递归显示 2：仅显示当前目录下用户(只支持32位)
+     * Set 是否仅展示当前目录下用户 1： 递归显示 2：仅显示当前目录下用户
+     * @param ShowFlag 是否仅展示当前目录下用户 1： 递归显示 2：仅显示当前目录下用户
      */
     public void setShowFlag(Long ShowFlag) {
         this.ShowFlag = ShowFlag;

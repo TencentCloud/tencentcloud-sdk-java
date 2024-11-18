@@ -32,7 +32,6 @@ public class DescribeAssetPortInfoListResponse extends AbstractModel {
 
     /**
     * 列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Ports")
     @Expose
@@ -62,10 +61,8 @@ public class DescribeAssetPortInfoListResponse extends AbstractModel {
     }
 
     /**
-     * Get 列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 列表 
      * @return Ports 列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AssetPortBaseInfo [] getPorts() {
         return this.Ports;
@@ -73,9 +70,7 @@ public class DescribeAssetPortInfoListResponse extends AbstractModel {
 
     /**
      * Set 列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Ports 列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPorts(AssetPortBaseInfo [] Ports) {
         this.Ports = Ports;

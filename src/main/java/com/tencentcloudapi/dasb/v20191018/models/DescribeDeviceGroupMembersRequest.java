@@ -24,18 +24,25 @@ import java.util.HashMap;
 public class DescribeDeviceGroupMembersRequest extends AbstractModel {
 
     /**
-    * 资产组ID
+    * true - 查询已在该资产组的资产，false - 查询未在该资产组的资产
+    */
+    @SerializedName("Bound")
+    @Expose
+    private Boolean Bound;
+
+    /**
+    * 资产组ID，Id和IdSet二选一
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-    * true - 查询已在该资产组的资产，false - 查询未在该资产组的资产
+    * 资产组ID集合，传Id，IdSet不生效。
     */
-    @SerializedName("Bound")
+    @SerializedName("IdSet")
     @Expose
-    private Boolean Bound;
+    private Long [] IdSet;
 
     /**
     * 资产名或资产IP，模糊查询
@@ -80,22 +87,6 @@ public class DescribeDeviceGroupMembersRequest extends AbstractModel {
     private TagFilter [] TagFilters;
 
     /**
-     * Get 资产组ID 
-     * @return Id 资产组ID
-     */
-    public Long getId() {
-        return this.Id;
-    }
-
-    /**
-     * Set 资产组ID
-     * @param Id 资产组ID
-     */
-    public void setId(Long Id) {
-        this.Id = Id;
-    }
-
-    /**
      * Get true - 查询已在该资产组的资产，false - 查询未在该资产组的资产 
      * @return Bound true - 查询已在该资产组的资产，false - 查询未在该资产组的资产
      */
@@ -109,6 +100,38 @@ public class DescribeDeviceGroupMembersRequest extends AbstractModel {
      */
     public void setBound(Boolean Bound) {
         this.Bound = Bound;
+    }
+
+    /**
+     * Get 资产组ID，Id和IdSet二选一 
+     * @return Id 资产组ID，Id和IdSet二选一
+     */
+    public Long getId() {
+        return this.Id;
+    }
+
+    /**
+     * Set 资产组ID，Id和IdSet二选一
+     * @param Id 资产组ID，Id和IdSet二选一
+     */
+    public void setId(Long Id) {
+        this.Id = Id;
+    }
+
+    /**
+     * Get 资产组ID集合，传Id，IdSet不生效。 
+     * @return IdSet 资产组ID集合，传Id，IdSet不生效。
+     */
+    public Long [] getIdSet() {
+        return this.IdSet;
+    }
+
+    /**
+     * Set 资产组ID集合，传Id，IdSet不生效。
+     * @param IdSet 资产组ID集合，传Id，IdSet不生效。
+     */
+    public void setIdSet(Long [] IdSet) {
+        this.IdSet = IdSet;
     }
 
     /**
@@ -215,11 +238,17 @@ public class DescribeDeviceGroupMembersRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeDeviceGroupMembersRequest(DescribeDeviceGroupMembersRequest source) {
+        if (source.Bound != null) {
+            this.Bound = new Boolean(source.Bound);
+        }
         if (source.Id != null) {
             this.Id = new Long(source.Id);
         }
-        if (source.Bound != null) {
-            this.Bound = new Boolean(source.Bound);
+        if (source.IdSet != null) {
+            this.IdSet = new Long[source.IdSet.length];
+            for (int i = 0; i < source.IdSet.length; i++) {
+                this.IdSet[i] = new Long(source.IdSet[i]);
+            }
         }
         if (source.Name != null) {
             this.Name = new String(source.Name);
@@ -249,8 +278,9 @@ public class DescribeDeviceGroupMembersRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Id", this.Id);
         this.setParamSimple(map, prefix + "Bound", this.Bound);
+        this.setParamSimple(map, prefix + "Id", this.Id);
+        this.setParamArraySimple(map, prefix + "IdSet.", this.IdSet);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);

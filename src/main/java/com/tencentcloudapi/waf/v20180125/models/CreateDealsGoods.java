@@ -51,7 +51,6 @@ public class CreateDealsGoods extends AbstractModel {
 域名包-CLB: 101207(新购),101208(续费),101209(变配)
 业务扩展包-CLB: 101210(新购),101211(续费),101212(变配)
 
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GoodsCategoryId")
     @Expose
@@ -61,7 +60,6 @@ public class CreateDealsGoods extends AbstractModel {
     * 购买waf实例区域ID
 1 表示购买大陆资源;
 9表示购买非中国大陆资源
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RegionId")
     @Expose
@@ -112,8 +110,7 @@ public class CreateDealsGoods extends AbstractModel {
 旗舰版-CLB : 101201(新购),101202(续费),101203(变配)
 域名包-CLB: 101207(新购),101208(续费),101209(变配)
 业务扩展包-CLB: 101210(新购),101211(续费),101212(变配)
-
-注意：此字段可能返回 null，表示取不到有效值。 
+ 
      * @return GoodsCategoryId 订单类型ID，用来唯一标识一个业务的一种场景（总共三种场景：新购、配置变更、续费）
 高级版: 102375(新购),102376(续费),102377(变配)
 企业版 : 102378(新购),102379(续费),102380(变配)
@@ -127,7 +124,6 @@ public class CreateDealsGoods extends AbstractModel {
 域名包-CLB: 101207(新购),101208(续费),101209(变配)
 业务扩展包-CLB: 101210(新购),101211(续费),101212(变配)
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getGoodsCategoryId() {
         return this.GoodsCategoryId;
@@ -147,7 +143,6 @@ public class CreateDealsGoods extends AbstractModel {
 域名包-CLB: 101207(新购),101208(续费),101209(变配)
 业务扩展包-CLB: 101210(新购),101211(续费),101212(变配)
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GoodsCategoryId 订单类型ID，用来唯一标识一个业务的一种场景（总共三种场景：新购、配置变更、续费）
 高级版: 102375(新购),102376(续费),102377(变配)
 企业版 : 102378(新购),102379(续费),102380(变配)
@@ -161,7 +156,6 @@ public class CreateDealsGoods extends AbstractModel {
 域名包-CLB: 101207(新购),101208(续费),101209(变配)
 业务扩展包-CLB: 101210(新购),101211(续费),101212(变配)
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGoodsCategoryId(Long GoodsCategoryId) {
         this.GoodsCategoryId = GoodsCategoryId;
@@ -170,12 +164,10 @@ public class CreateDealsGoods extends AbstractModel {
     /**
      * Get 购买waf实例区域ID
 1 表示购买大陆资源;
-9表示购买非中国大陆资源
-注意：此字段可能返回 null，表示取不到有效值。 
+9表示购买非中国大陆资源 
      * @return RegionId 购买waf实例区域ID
 1 表示购买大陆资源;
 9表示购买非中国大陆资源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRegionId() {
         return this.RegionId;
@@ -185,11 +177,9 @@ public class CreateDealsGoods extends AbstractModel {
      * Set 购买waf实例区域ID
 1 表示购买大陆资源;
 9表示购买非中国大陆资源
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RegionId 购买waf实例区域ID
 1 表示购买大陆资源;
 9表示购买非中国大陆资源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegionId(Long RegionId) {
         this.RegionId = RegionId;

@@ -38,7 +38,8 @@ public class DetectFaceResponse extends AbstractModel {
     private Long ImageHeight;
 
     /**
-    * 人脸信息列表。包含人脸坐标信息、属性信息（若需要）、质量分信息（若需要）。
+    * 人脸信息列表。
+- 包含人脸坐标信息、属性信息（若需要）、质量分信息（若需要）。
     */
     @SerializedName("FaceInfos")
     @Expose
@@ -91,16 +92,20 @@ public class DetectFaceResponse extends AbstractModel {
     }
 
     /**
-     * Get 人脸信息列表。包含人脸坐标信息、属性信息（若需要）、质量分信息（若需要）。 
-     * @return FaceInfos 人脸信息列表。包含人脸坐标信息、属性信息（若需要）、质量分信息（若需要）。
+     * Get 人脸信息列表。
+- 包含人脸坐标信息、属性信息（若需要）、质量分信息（若需要）。 
+     * @return FaceInfos 人脸信息列表。
+- 包含人脸坐标信息、属性信息（若需要）、质量分信息（若需要）。
      */
     public FaceInfo [] getFaceInfos() {
         return this.FaceInfos;
     }
 
     /**
-     * Set 人脸信息列表。包含人脸坐标信息、属性信息（若需要）、质量分信息（若需要）。
-     * @param FaceInfos 人脸信息列表。包含人脸坐标信息、属性信息（若需要）、质量分信息（若需要）。
+     * Set 人脸信息列表。
+- 包含人脸坐标信息、属性信息（若需要）、质量分信息（若需要）。
+     * @param FaceInfos 人脸信息列表。
+- 包含人脸坐标信息、属性信息（若需要）、质量分信息（若需要）。
      */
     public void setFaceInfos(FaceInfo [] FaceInfos) {
         this.FaceInfos = FaceInfos;

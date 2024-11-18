@@ -32,7 +32,6 @@ public class ListSecretVersionIdsResponse extends AbstractModel {
 
     /**
     * VersionId列表。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Versions")
     @Expose
@@ -62,10 +61,8 @@ public class ListSecretVersionIdsResponse extends AbstractModel {
     }
 
     /**
-     * Get VersionId列表。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get VersionId列表。 
      * @return Versions VersionId列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public VersionInfo [] getVersions() {
         return this.Versions;
@@ -73,9 +70,7 @@ public class ListSecretVersionIdsResponse extends AbstractModel {
 
     /**
      * Set VersionId列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Versions VersionId列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVersions(VersionInfo [] Versions) {
         this.Versions = Versions;

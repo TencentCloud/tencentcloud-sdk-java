@@ -59,7 +59,7 @@ public class AddEnterpriseSecurityGroupRulesRequest extends AbstractModel {
     private String From;
 
     /**
-    * 是否使用id 默认不需要
+    * 是否复用rule id，1为是，默认不需要
     */
     @SerializedName("IsUseId")
     @Expose
@@ -146,16 +146,16 @@ public class AddEnterpriseSecurityGroupRulesRequest extends AbstractModel {
     }
 
     /**
-     * Get 是否使用id 默认不需要 
-     * @return IsUseId 是否使用id 默认不需要
+     * Get 是否复用rule id，1为是，默认不需要 
+     * @return IsUseId 是否复用rule id，1为是，默认不需要
      */
     public Long getIsUseId() {
         return this.IsUseId;
     }
 
     /**
-     * Set 是否使用id 默认不需要
-     * @param IsUseId 是否使用id 默认不需要
+     * Set 是否复用rule id，1为是，默认不需要
+     * @param IsUseId 是否复用rule id，1为是，默认不需要
      */
     public void setIsUseId(Long IsUseId) {
         this.IsUseId = IsUseId;

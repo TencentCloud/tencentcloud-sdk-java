@@ -38,7 +38,7 @@ public class Tag extends AbstractModel {
     private String Value;
 
     /**
-    * 标签绑定的资源类型，当前支持类型："auto-scaling-group
+    * 标签绑定的资源类型，当前支持类型："auto-scaling-group", "launch-configuration"
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceType")
@@ -78,9 +78,9 @@ public class Tag extends AbstractModel {
     }
 
     /**
-     * Get 标签绑定的资源类型，当前支持类型："auto-scaling-group
+     * Get 标签绑定的资源类型，当前支持类型："auto-scaling-group", "launch-configuration"
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ResourceType 标签绑定的资源类型，当前支持类型："auto-scaling-group
+     * @return ResourceType 标签绑定的资源类型，当前支持类型："auto-scaling-group", "launch-configuration"
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceType() {
@@ -88,9 +88,9 @@ public class Tag extends AbstractModel {
     }
 
     /**
-     * Set 标签绑定的资源类型，当前支持类型："auto-scaling-group
+     * Set 标签绑定的资源类型，当前支持类型："auto-scaling-group", "launch-configuration"
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResourceType 标签绑定的资源类型，当前支持类型："auto-scaling-group
+     * @param ResourceType 标签绑定的资源类型，当前支持类型："auto-scaling-group", "launch-configuration"
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceType(String ResourceType) {

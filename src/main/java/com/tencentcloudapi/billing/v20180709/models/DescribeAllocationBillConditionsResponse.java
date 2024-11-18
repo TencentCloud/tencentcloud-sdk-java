@@ -144,6 +144,14 @@ public class DescribeAllocationBillConditionsResponse extends AbstractModel {
     private AllocationTreeNode [] AllocationTreeNode;
 
     /**
+    * 分账标签键
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TagKey")
+    @Expose
+    private String [] TagKey;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -451,6 +459,26 @@ public class DescribeAllocationBillConditionsResponse extends AbstractModel {
     }
 
     /**
+     * Get 分账标签键
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TagKey 分账标签键
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getTagKey() {
+        return this.TagKey;
+    }
+
+    /**
+     * Set 分账标签键
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TagKey 分账标签键
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTagKey(String [] TagKey) {
+        this.TagKey = TagKey;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -564,6 +592,12 @@ public class DescribeAllocationBillConditionsResponse extends AbstractModel {
                 this.AllocationTreeNode[i] = new AllocationTreeNode(source.AllocationTreeNode[i]);
             }
         }
+        if (source.TagKey != null) {
+            this.TagKey = new String[source.TagKey.length];
+            for (int i = 0; i < source.TagKey.length; i++) {
+                this.TagKey[i] = new String(source.TagKey[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -589,6 +623,7 @@ public class DescribeAllocationBillConditionsResponse extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Component.", this.Component);
         this.setParamArrayObj(map, prefix + "Zone.", this.Zone);
         this.setParamArrayObj(map, prefix + "AllocationTreeNode.", this.AllocationTreeNode);
+        this.setParamArraySimple(map, prefix + "TagKey.", this.TagKey);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeTlsVersionResponse extends AbstractModel {
 
     /**
-    * TLS key value
+    * TLS信息
     */
     @SerializedName("TLS")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeTlsVersionResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get TLS key value 
-     * @return TLS TLS key value
+     * Get TLS信息 
+     * @return TLS TLS信息
      */
     public TLSVersion [] getTLS() {
         return this.TLS;
     }
 
     /**
-     * Set TLS key value
-     * @param TLS TLS key value
+     * Set TLS信息
+     * @param TLS TLS信息
      */
     public void setTLS(TLSVersion [] TLS) {
         this.TLS = TLS;

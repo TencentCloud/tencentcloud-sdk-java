@@ -49,10 +49,18 @@ public class CreateEmbedWebUrlRequest extends AbstractModel {
 
     /**
     * WEB嵌入的业务资源ID
-<ul><li>PREVIEW_SEAL_DETAIL，必填，取值为印章id</li>
-<li>MODIFY_TEMPLATE，PREVIEW_TEMPLATE，必填，取值为模板id</li>
-<li>PREVIEW_FLOW，PREVIEW_FLOW_DETAIL，必填，取值为合同id</li>
+
+当EmbedType取值
+<ul>
+<li>为PREVIEW_SEAL_DETAIL，必填，取值为印章id。</li>
+<li>为CREATE_TEMPLATE，非必填，取值为资源id。*资源Id获取可使用接口[上传文件](https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles)*</li>
+<li>为MODIFY_TEMPLATE，PREVIEW_TEMPLATE，必填，取值为模板id。</li>
+<li>为PREVIEW_FLOW，PREVIEW_FLOW_DETAIL，必填，取值为合同id。</li>
 </ul>
+
+注意：
+ 1. CREATE_TEMPLATE中的BusinessId仅支持PDF文件类型， 如果您的文件不是PDF， 请使用接口[创建文件转换任务
+](https://qian.tencent.com/developers/companyApis/templatesAndFiles/CreateConvertTaskApi) 和[查询转换任务状态](https://qian.tencent.com/developers/companyApis/templatesAndFiles/GetTaskResultApi) 来进行转换成PDF资源。
     */
     @SerializedName("BusinessId")
     @Expose
@@ -161,15 +169,31 @@ public class CreateEmbedWebUrlRequest extends AbstractModel {
 
     /**
      * Get WEB嵌入的业务资源ID
-<ul><li>PREVIEW_SEAL_DETAIL，必填，取值为印章id</li>
-<li>MODIFY_TEMPLATE，PREVIEW_TEMPLATE，必填，取值为模板id</li>
-<li>PREVIEW_FLOW，PREVIEW_FLOW_DETAIL，必填，取值为合同id</li>
-</ul> 
-     * @return BusinessId WEB嵌入的业务资源ID
-<ul><li>PREVIEW_SEAL_DETAIL，必填，取值为印章id</li>
-<li>MODIFY_TEMPLATE，PREVIEW_TEMPLATE，必填，取值为模板id</li>
-<li>PREVIEW_FLOW，PREVIEW_FLOW_DETAIL，必填，取值为合同id</li>
+
+当EmbedType取值
+<ul>
+<li>为PREVIEW_SEAL_DETAIL，必填，取值为印章id。</li>
+<li>为CREATE_TEMPLATE，非必填，取值为资源id。*资源Id获取可使用接口[上传文件](https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles)*</li>
+<li>为MODIFY_TEMPLATE，PREVIEW_TEMPLATE，必填，取值为模板id。</li>
+<li>为PREVIEW_FLOW，PREVIEW_FLOW_DETAIL，必填，取值为合同id。</li>
 </ul>
+
+注意：
+ 1. CREATE_TEMPLATE中的BusinessId仅支持PDF文件类型， 如果您的文件不是PDF， 请使用接口[创建文件转换任务
+](https://qian.tencent.com/developers/companyApis/templatesAndFiles/CreateConvertTaskApi) 和[查询转换任务状态](https://qian.tencent.com/developers/companyApis/templatesAndFiles/GetTaskResultApi) 来进行转换成PDF资源。 
+     * @return BusinessId WEB嵌入的业务资源ID
+
+当EmbedType取值
+<ul>
+<li>为PREVIEW_SEAL_DETAIL，必填，取值为印章id。</li>
+<li>为CREATE_TEMPLATE，非必填，取值为资源id。*资源Id获取可使用接口[上传文件](https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles)*</li>
+<li>为MODIFY_TEMPLATE，PREVIEW_TEMPLATE，必填，取值为模板id。</li>
+<li>为PREVIEW_FLOW，PREVIEW_FLOW_DETAIL，必填，取值为合同id。</li>
+</ul>
+
+注意：
+ 1. CREATE_TEMPLATE中的BusinessId仅支持PDF文件类型， 如果您的文件不是PDF， 请使用接口[创建文件转换任务
+](https://qian.tencent.com/developers/companyApis/templatesAndFiles/CreateConvertTaskApi) 和[查询转换任务状态](https://qian.tencent.com/developers/companyApis/templatesAndFiles/GetTaskResultApi) 来进行转换成PDF资源。
      */
     public String getBusinessId() {
         return this.BusinessId;
@@ -177,15 +201,31 @@ public class CreateEmbedWebUrlRequest extends AbstractModel {
 
     /**
      * Set WEB嵌入的业务资源ID
-<ul><li>PREVIEW_SEAL_DETAIL，必填，取值为印章id</li>
-<li>MODIFY_TEMPLATE，PREVIEW_TEMPLATE，必填，取值为模板id</li>
-<li>PREVIEW_FLOW，PREVIEW_FLOW_DETAIL，必填，取值为合同id</li>
+
+当EmbedType取值
+<ul>
+<li>为PREVIEW_SEAL_DETAIL，必填，取值为印章id。</li>
+<li>为CREATE_TEMPLATE，非必填，取值为资源id。*资源Id获取可使用接口[上传文件](https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles)*</li>
+<li>为MODIFY_TEMPLATE，PREVIEW_TEMPLATE，必填，取值为模板id。</li>
+<li>为PREVIEW_FLOW，PREVIEW_FLOW_DETAIL，必填，取值为合同id。</li>
 </ul>
+
+注意：
+ 1. CREATE_TEMPLATE中的BusinessId仅支持PDF文件类型， 如果您的文件不是PDF， 请使用接口[创建文件转换任务
+](https://qian.tencent.com/developers/companyApis/templatesAndFiles/CreateConvertTaskApi) 和[查询转换任务状态](https://qian.tencent.com/developers/companyApis/templatesAndFiles/GetTaskResultApi) 来进行转换成PDF资源。
      * @param BusinessId WEB嵌入的业务资源ID
-<ul><li>PREVIEW_SEAL_DETAIL，必填，取值为印章id</li>
-<li>MODIFY_TEMPLATE，PREVIEW_TEMPLATE，必填，取值为模板id</li>
-<li>PREVIEW_FLOW，PREVIEW_FLOW_DETAIL，必填，取值为合同id</li>
+
+当EmbedType取值
+<ul>
+<li>为PREVIEW_SEAL_DETAIL，必填，取值为印章id。</li>
+<li>为CREATE_TEMPLATE，非必填，取值为资源id。*资源Id获取可使用接口[上传文件](https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles)*</li>
+<li>为MODIFY_TEMPLATE，PREVIEW_TEMPLATE，必填，取值为模板id。</li>
+<li>为PREVIEW_FLOW，PREVIEW_FLOW_DETAIL，必填，取值为合同id。</li>
 </ul>
+
+注意：
+ 1. CREATE_TEMPLATE中的BusinessId仅支持PDF文件类型， 如果您的文件不是PDF， 请使用接口[创建文件转换任务
+](https://qian.tencent.com/developers/companyApis/templatesAndFiles/CreateConvertTaskApi) 和[查询转换任务状态](https://qian.tencent.com/developers/companyApis/templatesAndFiles/GetTaskResultApi) 来进行转换成PDF资源。
      */
     public void setBusinessId(String BusinessId) {
         this.BusinessId = BusinessId;

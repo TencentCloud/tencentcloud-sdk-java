@@ -24,24 +24,21 @@ import java.util.HashMap;
 public class Paging extends AbstractModel {
 
     /**
-    * 每页条数(只支持32位)
-注意：此字段可能返回 null，表示取不到有效值。
+    * 每页条数
     */
     @SerializedName("PageSize")
     @Expose
     private Long PageSize;
 
     /**
-    * 页码(只支持32位)
-注意：此字段可能返回 null，表示取不到有效值。
+    * 页码
     */
     @SerializedName("PageNum")
     @Expose
     private Long PageNum;
 
     /**
-    * 总页数(只支持32位)
-注意：此字段可能返回 null，表示取不到有效值。
+    * 总页数
     */
     @SerializedName("PageCount")
     @Expose
@@ -49,77 +46,62 @@ public class Paging extends AbstractModel {
 
     /**
     * 记录总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Total")
     @Expose
     private Long Total;
 
     /**
-     * Get 每页条数(只支持32位)
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PageSize 每页条数(只支持32位)
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 每页条数 
+     * @return PageSize 每页条数
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set 每页条数(只支持32位)
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param PageSize 每页条数(只支持32位)
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 每页条数
+     * @param PageSize 每页条数
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
     }
 
     /**
-     * Get 页码(只支持32位)
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PageNum 页码(只支持32位)
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 页码 
+     * @return PageNum 页码
      */
     public Long getPageNum() {
         return this.PageNum;
     }
 
     /**
-     * Set 页码(只支持32位)
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param PageNum 页码(只支持32位)
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 页码
+     * @param PageNum 页码
      */
     public void setPageNum(Long PageNum) {
         this.PageNum = PageNum;
     }
 
     /**
-     * Get 总页数(只支持32位)
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PageCount 总页数(只支持32位)
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 总页数 
+     * @return PageCount 总页数
      */
     public Long getPageCount() {
         return this.PageCount;
     }
 
     /**
-     * Set 总页数(只支持32位)
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param PageCount 总页数(只支持32位)
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 总页数
+     * @param PageCount 总页数
      */
     public void setPageCount(Long PageCount) {
         this.PageCount = PageCount;
     }
 
     /**
-     * Get 记录总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 记录总数 
      * @return Total 记录总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotal() {
         return this.Total;
@@ -127,9 +109,7 @@ public class Paging extends AbstractModel {
 
     /**
      * Set 记录总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Total 记录总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotal(Long Total) {
         this.Total = Total;

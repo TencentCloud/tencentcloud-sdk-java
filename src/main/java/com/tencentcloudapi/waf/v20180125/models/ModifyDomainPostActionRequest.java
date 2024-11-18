@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyDomainPostActionRequest extends AbstractModel {
 
     /**
-    * www.tx.com
+    * 域名
     */
     @SerializedName("Domain")
     @Expose
@@ -45,16 +45,16 @@ public class ModifyDomainPostActionRequest extends AbstractModel {
     private Long PostCKafkaAction;
 
     /**
-     * Get www.tx.com 
-     * @return Domain www.tx.com
+     * Get 域名 
+     * @return Domain 域名
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set www.tx.com
-     * @param Domain www.tx.com
+     * Set 域名
+     * @param Domain 域名
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;

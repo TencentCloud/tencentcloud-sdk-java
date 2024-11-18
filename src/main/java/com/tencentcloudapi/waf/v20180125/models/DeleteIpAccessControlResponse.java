@@ -25,7 +25,6 @@ public class DeleteIpAccessControlResponse extends AbstractModel {
 
     /**
     * 删除失败的条目
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FailedItems")
     @Expose
@@ -33,7 +32,6 @@ public class DeleteIpAccessControlResponse extends AbstractModel {
 
     /**
     * 删除失败的条目数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FailedCount")
     @Expose
@@ -47,10 +45,8 @@ public class DeleteIpAccessControlResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 删除失败的条目
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 删除失败的条目 
      * @return FailedItems 删除失败的条目
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFailedItems() {
         return this.FailedItems;
@@ -58,19 +54,15 @@ public class DeleteIpAccessControlResponse extends AbstractModel {
 
     /**
      * Set 删除失败的条目
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FailedItems 删除失败的条目
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFailedItems(String FailedItems) {
         this.FailedItems = FailedItems;
     }
 
     /**
-     * Get 删除失败的条目数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 删除失败的条目数 
      * @return FailedCount 删除失败的条目数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFailedCount() {
         return this.FailedCount;
@@ -78,9 +70,7 @@ public class DeleteIpAccessControlResponse extends AbstractModel {
 
     /**
      * Set 删除失败的条目数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FailedCount 删除失败的条目数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFailedCount(Long FailedCount) {
         this.FailedCount = FailedCount;

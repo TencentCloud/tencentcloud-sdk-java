@@ -94,6 +94,41 @@ public class EditBashRulesRequest extends AbstractModel {
     private Long DealOldEvents;
 
     /**
+    * 策略描述
+    */
+    @SerializedName("Descript")
+    @Expose
+    private String Descript;
+
+    /**
+    * 生效与否  0:不生效 1:生效
+    */
+    @SerializedName("Status")
+    @Expose
+    private Long Status;
+
+    /**
+    * 0:告警  1:白名单  2:拦截
+    */
+    @SerializedName("BashAction")
+    @Expose
+    private Long BashAction;
+
+    /**
+    * 生效范围（0:一组quuid 1:所有专业版 2:所有专业版+旗舰版 3:所有主机）
+    */
+    @SerializedName("Scope")
+    @Expose
+    private Long Scope;
+
+    /**
+    * 生效主机的QUUID集合
+    */
+    @SerializedName("Quuids")
+    @Expose
+    private String [] Quuids;
+
+    /**
      * Get 规则ID（新增时不填） 
      * @return Id 规则ID（新增时不填）
      */
@@ -253,6 +288,86 @@ public class EditBashRulesRequest extends AbstractModel {
         this.DealOldEvents = DealOldEvents;
     }
 
+    /**
+     * Get 策略描述 
+     * @return Descript 策略描述
+     */
+    public String getDescript() {
+        return this.Descript;
+    }
+
+    /**
+     * Set 策略描述
+     * @param Descript 策略描述
+     */
+    public void setDescript(String Descript) {
+        this.Descript = Descript;
+    }
+
+    /**
+     * Get 生效与否  0:不生效 1:生效 
+     * @return Status 生效与否  0:不生效 1:生效
+     */
+    public Long getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 生效与否  0:不生效 1:生效
+     * @param Status 生效与否  0:不生效 1:生效
+     */
+    public void setStatus(Long Status) {
+        this.Status = Status;
+    }
+
+    /**
+     * Get 0:告警  1:白名单  2:拦截 
+     * @return BashAction 0:告警  1:白名单  2:拦截
+     */
+    public Long getBashAction() {
+        return this.BashAction;
+    }
+
+    /**
+     * Set 0:告警  1:白名单  2:拦截
+     * @param BashAction 0:告警  1:白名单  2:拦截
+     */
+    public void setBashAction(Long BashAction) {
+        this.BashAction = BashAction;
+    }
+
+    /**
+     * Get 生效范围（0:一组quuid 1:所有专业版 2:所有专业版+旗舰版 3:所有主机） 
+     * @return Scope 生效范围（0:一组quuid 1:所有专业版 2:所有专业版+旗舰版 3:所有主机）
+     */
+    public Long getScope() {
+        return this.Scope;
+    }
+
+    /**
+     * Set 生效范围（0:一组quuid 1:所有专业版 2:所有专业版+旗舰版 3:所有主机）
+     * @param Scope 生效范围（0:一组quuid 1:所有专业版 2:所有专业版+旗舰版 3:所有主机）
+     */
+    public void setScope(Long Scope) {
+        this.Scope = Scope;
+    }
+
+    /**
+     * Get 生效主机的QUUID集合 
+     * @return Quuids 生效主机的QUUID集合
+     */
+    public String [] getQuuids() {
+        return this.Quuids;
+    }
+
+    /**
+     * Set 生效主机的QUUID集合
+     * @param Quuids 生效主机的QUUID集合
+     */
+    public void setQuuids(String [] Quuids) {
+        this.Quuids = Quuids;
+    }
+
     public EditBashRulesRequest() {
     }
 
@@ -294,6 +409,24 @@ public class EditBashRulesRequest extends AbstractModel {
         if (source.DealOldEvents != null) {
             this.DealOldEvents = new Long(source.DealOldEvents);
         }
+        if (source.Descript != null) {
+            this.Descript = new String(source.Descript);
+        }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.BashAction != null) {
+            this.BashAction = new Long(source.BashAction);
+        }
+        if (source.Scope != null) {
+            this.Scope = new Long(source.Scope);
+        }
+        if (source.Quuids != null) {
+            this.Quuids = new String[source.Quuids.length];
+            for (int i = 0; i < source.Quuids.length; i++) {
+                this.Quuids[i] = new String(source.Quuids[i]);
+            }
+        }
     }
 
 
@@ -311,6 +444,11 @@ public class EditBashRulesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "White", this.White);
         this.setParamSimple(map, prefix + "EventId", this.EventId);
         this.setParamSimple(map, prefix + "DealOldEvents", this.DealOldEvents);
+        this.setParamSimple(map, prefix + "Descript", this.Descript);
+        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "BashAction", this.BashAction);
+        this.setParamSimple(map, prefix + "Scope", this.Scope);
+        this.setParamArraySimple(map, prefix + "Quuids.", this.Quuids);
 
     }
 }
