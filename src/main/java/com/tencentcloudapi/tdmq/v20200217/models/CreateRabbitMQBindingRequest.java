@@ -31,7 +31,7 @@ public class CreateRabbitMQBindingRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * Vhost参数
+    * Vhost名称
     */
     @SerializedName("VirtualHost")
     @Expose
@@ -59,7 +59,7 @@ public class CreateRabbitMQBindingRequest extends AbstractModel {
     private String Destination;
 
     /**
-    * 绑定key
+    * 路由键
     */
     @SerializedName("RoutingKey")
     @Expose
@@ -82,16 +82,16 @@ public class CreateRabbitMQBindingRequest extends AbstractModel {
     }
 
     /**
-     * Get Vhost参数 
-     * @return VirtualHost Vhost参数
+     * Get Vhost名称 
+     * @return VirtualHost Vhost名称
      */
     public String getVirtualHost() {
         return this.VirtualHost;
     }
 
     /**
-     * Set Vhost参数
-     * @param VirtualHost Vhost参数
+     * Set Vhost名称
+     * @param VirtualHost Vhost名称
      */
     public void setVirtualHost(String VirtualHost) {
         this.VirtualHost = VirtualHost;
@@ -146,16 +146,16 @@ public class CreateRabbitMQBindingRequest extends AbstractModel {
     }
 
     /**
-     * Get 绑定key 
-     * @return RoutingKey 绑定key
+     * Get 路由键 
+     * @return RoutingKey 路由键
      */
     public String getRoutingKey() {
         return this.RoutingKey;
     }
 
     /**
-     * Set 绑定key
-     * @param RoutingKey 绑定key
+     * Set 路由键
+     * @param RoutingKey 路由键
      */
     public void setRoutingKey(String RoutingKey) {
         this.RoutingKey = RoutingKey;

@@ -31,7 +31,7 @@ public class DescribeRabbitMQBindingsRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * Vhost参数
+    * Vhost名称
     */
     @SerializedName("VirtualHost")
     @Expose
@@ -96,16 +96,16 @@ public class DescribeRabbitMQBindingsRequest extends AbstractModel {
     }
 
     /**
-     * Get Vhost参数 
-     * @return VirtualHost Vhost参数
+     * Get Vhost名称 
+     * @return VirtualHost Vhost名称
      */
     public String getVirtualHost() {
         return this.VirtualHost;
     }
 
     /**
-     * Set Vhost参数
-     * @param VirtualHost Vhost参数
+     * Set Vhost名称
+     * @param VirtualHost Vhost名称
      */
     public void setVirtualHost(String VirtualHost) {
         this.VirtualHost = VirtualHost;

@@ -45,6 +45,13 @@ public class DescribeReleaseFileSignRequest extends AbstractModel {
     private Long Site;
 
     /**
+    * ProjectID
+    */
+    @SerializedName("ID")
+    @Expose
+    private Long ID;
+
+    /**
      * Get 超时时间，不填默认是 5 分钟 
      * @return Timeout 超时时间，不填默认是 5 分钟
      */
@@ -92,6 +99,22 @@ public class DescribeReleaseFileSignRequest extends AbstractModel {
         this.Site = Site;
     }
 
+    /**
+     * Get ProjectID 
+     * @return ID ProjectID
+     */
+    public Long getID() {
+        return this.ID;
+    }
+
+    /**
+     * Set ProjectID
+     * @param ID ProjectID
+     */
+    public void setID(Long ID) {
+        this.ID = ID;
+    }
+
     public DescribeReleaseFileSignRequest() {
     }
 
@@ -109,6 +132,9 @@ public class DescribeReleaseFileSignRequest extends AbstractModel {
         if (source.Site != null) {
             this.Site = new Long(source.Site);
         }
+        if (source.ID != null) {
+            this.ID = new Long(source.ID);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class DescribeReleaseFileSignRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Timeout", this.Timeout);
         this.setParamSimple(map, prefix + "FileType", this.FileType);
         this.setParamSimple(map, prefix + "Site", this.Site);
+        this.setParamSimple(map, prefix + "ID", this.ID);
 
     }
 }

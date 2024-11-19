@@ -276,7 +276,7 @@ public class Resource extends AbstractModel {
     private Long DeployModel;
 
     /**
-    * 0 默认值，非内网访问，1 内网访问
+    * 0 默认值，非内网访问，1 内网访问，2 内网访问开通中，3 内网访问关闭中
     */
     @SerializedName("IntranetAccess")
     @Expose
@@ -880,16 +880,16 @@ public class Resource extends AbstractModel {
     }
 
     /**
-     * Get 0 默认值，非内网访问，1 内网访问 
-     * @return IntranetAccess 0 默认值，非内网访问，1 内网访问
+     * Get 0 默认值，非内网访问，1 内网访问，2 内网访问开通中，3 内网访问关闭中 
+     * @return IntranetAccess 0 默认值，非内网访问，1 内网访问，2 内网访问开通中，3 内网访问关闭中
      */
     public Long getIntranetAccess() {
         return this.IntranetAccess;
     }
 
     /**
-     * Set 0 默认值，非内网访问，1 内网访问
-     * @param IntranetAccess 0 默认值，非内网访问，1 内网访问
+     * Set 0 默认值，非内网访问，1 内网访问，2 内网访问开通中，3 内网访问关闭中
+     * @param IntranetAccess 0 默认值，非内网访问，1 内网访问，2 内网访问开通中，3 内网访问关闭中
      */
     public void setIntranetAccess(Long IntranetAccess) {
         this.IntranetAccess = IntranetAccess;

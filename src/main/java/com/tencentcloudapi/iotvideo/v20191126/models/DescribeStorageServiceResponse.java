@@ -84,7 +84,7 @@ public class DescribeStorageServiceResponse extends AbstractModel {
     private Long Status;
 
     /**
-    * 云存定单列表
+    * 云存订单列表
     */
     @SerializedName("Data")
     @Expose
@@ -242,16 +242,16 @@ public class DescribeStorageServiceResponse extends AbstractModel {
     }
 
     /**
-     * Get 云存定单列表 
-     * @return Data 云存定单列表
+     * Get 云存订单列表 
+     * @return Data 云存订单列表
      */
     public StorageOrder [] getData() {
         return this.Data;
     }
 
     /**
-     * Set 云存定单列表
-     * @param Data 云存定单列表
+     * Set 云存订单列表
+     * @param Data 云存订单列表
      */
     public void setData(StorageOrder [] Data) {
         this.Data = Data;

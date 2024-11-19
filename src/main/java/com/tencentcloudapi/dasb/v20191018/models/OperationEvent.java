@@ -73,6 +73,13 @@ public class OperationEvent extends AbstractModel {
     private Long Result;
 
     /**
+    * 签名值
+    */
+    @SerializedName("SignValue")
+    @Expose
+    private String SignValue;
+
+    /**
      * Get 用户名 
      * @return UserName 用户名
      */
@@ -184,6 +191,22 @@ public class OperationEvent extends AbstractModel {
         this.Result = Result;
     }
 
+    /**
+     * Get 签名值 
+     * @return SignValue 签名值
+     */
+    public String getSignValue() {
+        return this.SignValue;
+    }
+
+    /**
+     * Set 签名值
+     * @param SignValue 签名值
+     */
+    public void setSignValue(String SignValue) {
+        this.SignValue = SignValue;
+    }
+
     public OperationEvent() {
     }
 
@@ -213,6 +236,9 @@ public class OperationEvent extends AbstractModel {
         if (source.Result != null) {
             this.Result = new Long(source.Result);
         }
+        if (source.SignValue != null) {
+            this.SignValue = new String(source.SignValue);
+        }
     }
 
 
@@ -227,6 +253,7 @@ public class OperationEvent extends AbstractModel {
         this.setParamSimple(map, prefix + "Kind", this.Kind);
         this.setParamSimple(map, prefix + "Operation", this.Operation);
         this.setParamSimple(map, prefix + "Result", this.Result);
+        this.setParamSimple(map, prefix + "SignValue", this.SignValue);
 
     }
 }

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class OperateResponseData extends AbstractModel {
 
     /**
-    * FlowId11
+    * 流程Id
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FlowId")
@@ -40,9 +40,9 @@ public class OperateResponseData extends AbstractModel {
     private RouteDTO RouteDTO;
 
     /**
-     * Get FlowId11
+     * Get 流程Id
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FlowId FlowId11
+     * @return FlowId 流程Id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFlowId() {
@@ -50,9 +50,9 @@ public class OperateResponseData extends AbstractModel {
     }
 
     /**
-     * Set FlowId11
+     * Set 流程Id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FlowId FlowId11
+     * @param FlowId 流程Id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFlowId(Long FlowId) {

@@ -101,6 +101,13 @@ public class SearchFileResult extends AbstractModel {
     private String FileNew;
 
     /**
+    * 签名值
+    */
+    @SerializedName("SignValue")
+    @Expose
+    private String SignValue;
+
+    /**
      * Get 文件传输的时间 
      * @return Time 文件传输的时间
      */
@@ -276,6 +283,22 @@ public class SearchFileResult extends AbstractModel {
         this.FileNew = FileNew;
     }
 
+    /**
+     * Get 签名值 
+     * @return SignValue 签名值
+     */
+    public String getSignValue() {
+        return this.SignValue;
+    }
+
+    /**
+     * Set 签名值
+     * @param SignValue 签名值
+     */
+    public void setSignValue(String SignValue) {
+        this.SignValue = SignValue;
+    }
+
     public SearchFileResult() {
     }
 
@@ -317,6 +340,9 @@ public class SearchFileResult extends AbstractModel {
         if (source.FileNew != null) {
             this.FileNew = new String(source.FileNew);
         }
+        if (source.SignValue != null) {
+            this.SignValue = new String(source.SignValue);
+        }
     }
 
 
@@ -335,6 +361,7 @@ public class SearchFileResult extends AbstractModel {
         this.setParamSimple(map, prefix + "Method", this.Method);
         this.setParamSimple(map, prefix + "FileCurr", this.FileCurr);
         this.setParamSimple(map, prefix + "FileNew", this.FileNew);
+        this.setParamSimple(map, prefix + "SignValue", this.SignValue);
 
     }
 }

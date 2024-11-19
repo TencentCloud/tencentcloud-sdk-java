@@ -52,7 +52,7 @@ public class TargetHealth extends AbstractModel {
     private String TargetId;
 
     /**
-    * 当前健康状态的详细信息。如：Alive、Dead、Unknown。Alive状态为健康，Dead状态为异常，Unknown状态包括尚未开始探测、探测中、状态未知。
+    * 当前健康状态的详细信息。如：Alive、Dead、Unknown、Close。Alive状态为健康，Dead状态为异常，Unknown状态包括尚未开始探测、探测中、状态未知，Close表示健康检查关闭或监听器状态停止。
     */
     @SerializedName("HealthStatusDetail")
     @Expose
@@ -64,6 +64,14 @@ public class TargetHealth extends AbstractModel {
     @SerializedName("HealthStatusDetial")
     @Expose
     private String HealthStatusDetial;
+
+    /**
+    * 目标组唯一ID。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TargetGroupId")
+    @Expose
+    private String TargetGroupId;
 
     /**
      * Get Target的内网IP 
@@ -130,16 +138,16 @@ public class TargetHealth extends AbstractModel {
     }
 
     /**
-     * Get 当前健康状态的详细信息。如：Alive、Dead、Unknown。Alive状态为健康，Dead状态为异常，Unknown状态包括尚未开始探测、探测中、状态未知。 
-     * @return HealthStatusDetail 当前健康状态的详细信息。如：Alive、Dead、Unknown。Alive状态为健康，Dead状态为异常，Unknown状态包括尚未开始探测、探测中、状态未知。
+     * Get 当前健康状态的详细信息。如：Alive、Dead、Unknown、Close。Alive状态为健康，Dead状态为异常，Unknown状态包括尚未开始探测、探测中、状态未知，Close表示健康检查关闭或监听器状态停止。 
+     * @return HealthStatusDetail 当前健康状态的详细信息。如：Alive、Dead、Unknown、Close。Alive状态为健康，Dead状态为异常，Unknown状态包括尚未开始探测、探测中、状态未知，Close表示健康检查关闭或监听器状态停止。
      */
     public String getHealthStatusDetail() {
         return this.HealthStatusDetail;
     }
 
     /**
-     * Set 当前健康状态的详细信息。如：Alive、Dead、Unknown。Alive状态为健康，Dead状态为异常，Unknown状态包括尚未开始探测、探测中、状态未知。
-     * @param HealthStatusDetail 当前健康状态的详细信息。如：Alive、Dead、Unknown。Alive状态为健康，Dead状态为异常，Unknown状态包括尚未开始探测、探测中、状态未知。
+     * Set 当前健康状态的详细信息。如：Alive、Dead、Unknown、Close。Alive状态为健康，Dead状态为异常，Unknown状态包括尚未开始探测、探测中、状态未知，Close表示健康检查关闭或监听器状态停止。
+     * @param HealthStatusDetail 当前健康状态的详细信息。如：Alive、Dead、Unknown、Close。Alive状态为健康，Dead状态为异常，Unknown状态包括尚未开始探测、探测中、状态未知，Close表示健康检查关闭或监听器状态停止。
      */
     public void setHealthStatusDetail(String HealthStatusDetail) {
         this.HealthStatusDetail = HealthStatusDetail;
@@ -163,6 +171,26 @@ public class TargetHealth extends AbstractModel {
     @Deprecated
     public void setHealthStatusDetial(String HealthStatusDetial) {
         this.HealthStatusDetial = HealthStatusDetial;
+    }
+
+    /**
+     * Get 目标组唯一ID。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TargetGroupId 目标组唯一ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getTargetGroupId() {
+        return this.TargetGroupId;
+    }
+
+    /**
+     * Set 目标组唯一ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TargetGroupId 目标组唯一ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTargetGroupId(String TargetGroupId) {
+        this.TargetGroupId = TargetGroupId;
     }
 
     public TargetHealth() {
@@ -191,6 +219,9 @@ public class TargetHealth extends AbstractModel {
         if (source.HealthStatusDetial != null) {
             this.HealthStatusDetial = new String(source.HealthStatusDetial);
         }
+        if (source.TargetGroupId != null) {
+            this.TargetGroupId = new String(source.TargetGroupId);
+        }
     }
 
 
@@ -204,6 +235,7 @@ public class TargetHealth extends AbstractModel {
         this.setParamSimple(map, prefix + "TargetId", this.TargetId);
         this.setParamSimple(map, prefix + "HealthStatusDetail", this.HealthStatusDetail);
         this.setParamSimple(map, prefix + "HealthStatusDetial", this.HealthStatusDetial);
+        this.setParamSimple(map, prefix + "TargetGroupId", this.TargetGroupId);
 
     }
 }

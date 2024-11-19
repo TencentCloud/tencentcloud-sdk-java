@@ -67,7 +67,6 @@ public class RunGroup extends AbstractModel {
 
     /**
     * 应用版本。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApplicationVersion")
     @Expose
@@ -77,7 +76,6 @@ public class RunGroup extends AbstractModel {
     * 应用访问类型：
 - PRIVATE 私有应用
 - PUBLIC 公共应用
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AccessMode")
     @Expose
@@ -99,7 +97,6 @@ public class RunGroup extends AbstractModel {
 
     /**
     * 表格ID，单例运行为空。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TableId")
     @Expose
@@ -130,7 +127,6 @@ public class RunGroup extends AbstractModel {
     * 任务批次类型 ：
 - WDL
 - NEXTFLOW
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -138,7 +134,6 @@ public class RunGroup extends AbstractModel {
 
     /**
     * 工作目录。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WorkDir")
     @Expose
@@ -156,7 +151,6 @@ public class RunGroup extends AbstractModel {
 - JSON: 导入JSON
 - MANUAL: 手动输入
 - COS: COS文件
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InputType")
     @Expose
@@ -164,7 +158,6 @@ public class RunGroup extends AbstractModel {
 
     /**
     * 输入COS地址。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InputCosUri")
     @Expose
@@ -172,7 +165,6 @@ public class RunGroup extends AbstractModel {
 
     /**
     * 输入模版ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InputTemplateId")
     @Expose
@@ -187,7 +179,6 @@ public class RunGroup extends AbstractModel {
 
     /**
     * Nextflow运行选项。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NFOption")
     @Expose
@@ -195,7 +186,6 @@ public class RunGroup extends AbstractModel {
 
     /**
     * 使用的缓存卷。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Volumes")
     @Expose
@@ -231,7 +221,6 @@ public class RunGroup extends AbstractModel {
 
     /**
     * 运行结果通知方式。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResultNotify")
     @Expose
@@ -253,7 +242,6 @@ public class RunGroup extends AbstractModel {
 
     /**
     * 创建者。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Creator")
     @Expose
@@ -261,7 +249,6 @@ public class RunGroup extends AbstractModel {
 
     /**
     * 创建者ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreatorId")
     @Expose
@@ -364,10 +351,8 @@ public class RunGroup extends AbstractModel {
     }
 
     /**
-     * Get 应用版本。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 应用版本。 
      * @return ApplicationVersion 应用版本。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ApplicationVersion getApplicationVersion() {
         return this.ApplicationVersion;
@@ -375,9 +360,7 @@ public class RunGroup extends AbstractModel {
 
     /**
      * Set 应用版本。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplicationVersion 应用版本。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApplicationVersion(ApplicationVersion ApplicationVersion) {
         this.ApplicationVersion = ApplicationVersion;
@@ -386,12 +369,10 @@ public class RunGroup extends AbstractModel {
     /**
      * Get 应用访问类型：
 - PRIVATE 私有应用
-- PUBLIC 公共应用
-注意：此字段可能返回 null，表示取不到有效值。 
+- PUBLIC 公共应用 
      * @return AccessMode 应用访问类型：
 - PRIVATE 私有应用
 - PUBLIC 公共应用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAccessMode() {
         return this.AccessMode;
@@ -401,11 +382,9 @@ public class RunGroup extends AbstractModel {
      * Set 应用访问类型：
 - PRIVATE 私有应用
 - PUBLIC 公共应用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AccessMode 应用访问类型：
 - PRIVATE 私有应用
 - PUBLIC 公共应用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAccessMode(String AccessMode) {
         this.AccessMode = AccessMode;
@@ -444,10 +423,8 @@ public class RunGroup extends AbstractModel {
     }
 
     /**
-     * Get 表格ID，单例运行为空。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 表格ID，单例运行为空。 
      * @return TableId 表格ID，单例运行为空。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTableId() {
         return this.TableId;
@@ -455,9 +432,7 @@ public class RunGroup extends AbstractModel {
 
     /**
      * Set 表格ID，单例运行为空。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TableId 表格ID，单例运行为空。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTableId(String TableId) {
         this.TableId = TableId;
@@ -514,12 +489,10 @@ public class RunGroup extends AbstractModel {
     /**
      * Get 任务批次类型 ：
 - WDL
-- NEXTFLOW
-注意：此字段可能返回 null，表示取不到有效值。 
+- NEXTFLOW 
      * @return Type 任务批次类型 ：
 - WDL
 - NEXTFLOW
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
         return this.Type;
@@ -529,21 +502,17 @@ public class RunGroup extends AbstractModel {
      * Set 任务批次类型 ：
 - WDL
 - NEXTFLOW
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 任务批次类型 ：
 - WDL
 - NEXTFLOW
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 工作目录。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 工作目录。 
      * @return WorkDir 工作目录。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWorkDir() {
         return this.WorkDir;
@@ -551,9 +520,7 @@ public class RunGroup extends AbstractModel {
 
     /**
      * Set 工作目录。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WorkDir 工作目录。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWorkDir(String WorkDir) {
         this.WorkDir = WorkDir;
@@ -579,13 +546,11 @@ public class RunGroup extends AbstractModel {
      * Get 任务输入类型：
 - JSON: 导入JSON
 - MANUAL: 手动输入
-- COS: COS文件
-注意：此字段可能返回 null，表示取不到有效值。 
+- COS: COS文件 
      * @return InputType 任务输入类型：
 - JSON: 导入JSON
 - MANUAL: 手动输入
 - COS: COS文件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInputType() {
         return this.InputType;
@@ -596,22 +561,18 @@ public class RunGroup extends AbstractModel {
 - JSON: 导入JSON
 - MANUAL: 手动输入
 - COS: COS文件
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InputType 任务输入类型：
 - JSON: 导入JSON
 - MANUAL: 手动输入
 - COS: COS文件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInputType(String InputType) {
         this.InputType = InputType;
     }
 
     /**
-     * Get 输入COS地址。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 输入COS地址。 
      * @return InputCosUri 输入COS地址。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInputCosUri() {
         return this.InputCosUri;
@@ -619,19 +580,15 @@ public class RunGroup extends AbstractModel {
 
     /**
      * Set 输入COS地址。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InputCosUri 输入COS地址。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInputCosUri(String InputCosUri) {
         this.InputCosUri = InputCosUri;
     }
 
     /**
-     * Get 输入模版ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 输入模版ID。 
      * @return InputTemplateId 输入模版ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInputTemplateId() {
         return this.InputTemplateId;
@@ -639,9 +596,7 @@ public class RunGroup extends AbstractModel {
 
     /**
      * Set 输入模版ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InputTemplateId 输入模版ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInputTemplateId(String InputTemplateId) {
         this.InputTemplateId = InputTemplateId;
@@ -664,10 +619,8 @@ public class RunGroup extends AbstractModel {
     }
 
     /**
-     * Get Nextflow运行选项。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Nextflow运行选项。 
      * @return NFOption Nextflow运行选项。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public NFOption getNFOption() {
         return this.NFOption;
@@ -675,19 +628,15 @@ public class RunGroup extends AbstractModel {
 
     /**
      * Set Nextflow运行选项。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NFOption Nextflow运行选项。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNFOption(NFOption NFOption) {
         this.NFOption = NFOption;
     }
 
     /**
-     * Get 使用的缓存卷。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 使用的缓存卷。 
      * @return Volumes 使用的缓存卷。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public VolumeInfo [] getVolumes() {
         return this.Volumes;
@@ -695,9 +644,7 @@ public class RunGroup extends AbstractModel {
 
     /**
      * Set 使用的缓存卷。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Volumes 使用的缓存卷。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVolumes(VolumeInfo [] Volumes) {
         this.Volumes = Volumes;
@@ -768,10 +715,8 @@ public class RunGroup extends AbstractModel {
     }
 
     /**
-     * Get 运行结果通知方式。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 运行结果通知方式。 
      * @return ResultNotify 运行结果通知方式。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResultNotify() {
         return this.ResultNotify;
@@ -779,9 +724,7 @@ public class RunGroup extends AbstractModel {
 
     /**
      * Set 运行结果通知方式。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResultNotify 运行结果通知方式。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResultNotify(String ResultNotify) {
         this.ResultNotify = ResultNotify;
@@ -820,10 +763,8 @@ public class RunGroup extends AbstractModel {
     }
 
     /**
-     * Get 创建者。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建者。 
      * @return Creator 创建者。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreator() {
         return this.Creator;
@@ -831,19 +772,15 @@ public class RunGroup extends AbstractModel {
 
     /**
      * Set 创建者。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Creator 创建者。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreator(String Creator) {
         this.Creator = Creator;
     }
 
     /**
-     * Get 创建者ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建者ID。 
      * @return CreatorId 创建者ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreatorId() {
         return this.CreatorId;
@@ -851,9 +788,7 @@ public class RunGroup extends AbstractModel {
 
     /**
      * Set 创建者ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreatorId 创建者ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreatorId(String CreatorId) {
         this.CreatorId = CreatorId;

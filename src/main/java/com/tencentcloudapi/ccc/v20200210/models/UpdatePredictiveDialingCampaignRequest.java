@@ -122,6 +122,27 @@ public class UpdatePredictiveDialingCampaignRequest extends AbstractModel {
     private Long RetryTimes;
 
     /**
+    * 自定义变量
+    */
+    @SerializedName("Variables")
+    @Expose
+    private Variable [] Variables;
+
+    /**
+    * 	UUI
+    */
+    @SerializedName("UUI")
+    @Expose
+    private String UUI;
+
+    /**
+    * 被叫属性
+    */
+    @SerializedName("CalleeAttributes")
+    @Expose
+    private CalleeAttribute [] CalleeAttributes;
+
+    /**
      * Get 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc 
      * @return SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      */
@@ -345,6 +366,54 @@ public class UpdatePredictiveDialingCampaignRequest extends AbstractModel {
         this.RetryTimes = RetryTimes;
     }
 
+    /**
+     * Get 自定义变量 
+     * @return Variables 自定义变量
+     */
+    public Variable [] getVariables() {
+        return this.Variables;
+    }
+
+    /**
+     * Set 自定义变量
+     * @param Variables 自定义变量
+     */
+    public void setVariables(Variable [] Variables) {
+        this.Variables = Variables;
+    }
+
+    /**
+     * Get 	UUI 
+     * @return UUI 	UUI
+     */
+    public String getUUI() {
+        return this.UUI;
+    }
+
+    /**
+     * Set 	UUI
+     * @param UUI 	UUI
+     */
+    public void setUUI(String UUI) {
+        this.UUI = UUI;
+    }
+
+    /**
+     * Get 被叫属性 
+     * @return CalleeAttributes 被叫属性
+     */
+    public CalleeAttribute [] getCalleeAttributes() {
+        return this.CalleeAttributes;
+    }
+
+    /**
+     * Set 被叫属性
+     * @param CalleeAttributes 被叫属性
+     */
+    public void setCalleeAttributes(CalleeAttribute [] CalleeAttributes) {
+        this.CalleeAttributes = CalleeAttributes;
+    }
+
     public UpdatePredictiveDialingCampaignRequest() {
     }
 
@@ -401,6 +470,21 @@ public class UpdatePredictiveDialingCampaignRequest extends AbstractModel {
         if (source.RetryTimes != null) {
             this.RetryTimes = new Long(source.RetryTimes);
         }
+        if (source.Variables != null) {
+            this.Variables = new Variable[source.Variables.length];
+            for (int i = 0; i < source.Variables.length; i++) {
+                this.Variables[i] = new Variable(source.Variables[i]);
+            }
+        }
+        if (source.UUI != null) {
+            this.UUI = new String(source.UUI);
+        }
+        if (source.CalleeAttributes != null) {
+            this.CalleeAttributes = new CalleeAttribute[source.CalleeAttributes.length];
+            for (int i = 0; i < source.CalleeAttributes.length; i++) {
+                this.CalleeAttributes[i] = new CalleeAttribute(source.CalleeAttributes[i]);
+            }
+        }
     }
 
 
@@ -422,6 +506,9 @@ public class UpdatePredictiveDialingCampaignRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "IVRId", this.IVRId);
         this.setParamSimple(map, prefix + "RetryTimes", this.RetryTimes);
+        this.setParamArrayObj(map, prefix + "Variables.", this.Variables);
+        this.setParamSimple(map, prefix + "UUI", this.UUI);
+        this.setParamArrayObj(map, prefix + "CalleeAttributes.", this.CalleeAttributes);
 
     }
 }

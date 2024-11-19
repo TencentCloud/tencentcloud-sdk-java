@@ -45,7 +45,7 @@ public class ModifyVpcEndPointServiceAttributeRequest extends AbstractModel {
     private String EndPointServiceName;
 
     /**
-    * 是否自动接受终端节点的连接请求。<ui><li>true：自动接受<li>false：不自动接受</ul>
+    * 是否自动接受终端节点的连接请求。<ul><li>true：自动接受</li><li>false：不自动接受</li></ul>
     */
     @SerializedName("AutoAcceptFlag")
     @Expose
@@ -107,16 +107,16 @@ public class ModifyVpcEndPointServiceAttributeRequest extends AbstractModel {
     }
 
     /**
-     * Get 是否自动接受终端节点的连接请求。<ui><li>true：自动接受<li>false：不自动接受</ul> 
-     * @return AutoAcceptFlag 是否自动接受终端节点的连接请求。<ui><li>true：自动接受<li>false：不自动接受</ul>
+     * Get 是否自动接受终端节点的连接请求。<ul><li>true：自动接受</li><li>false：不自动接受</li></ul> 
+     * @return AutoAcceptFlag 是否自动接受终端节点的连接请求。<ul><li>true：自动接受</li><li>false：不自动接受</li></ul>
      */
     public Boolean getAutoAcceptFlag() {
         return this.AutoAcceptFlag;
     }
 
     /**
-     * Set 是否自动接受终端节点的连接请求。<ui><li>true：自动接受<li>false：不自动接受</ul>
-     * @param AutoAcceptFlag 是否自动接受终端节点的连接请求。<ui><li>true：自动接受<li>false：不自动接受</ul>
+     * Set 是否自动接受终端节点的连接请求。<ul><li>true：自动接受</li><li>false：不自动接受</li></ul>
+     * @param AutoAcceptFlag 是否自动接受终端节点的连接请求。<ul><li>true：自动接受</li><li>false：不自动接受</li></ul>
      */
     public void setAutoAcceptFlag(Boolean AutoAcceptFlag) {
         this.AutoAcceptFlag = AutoAcceptFlag;

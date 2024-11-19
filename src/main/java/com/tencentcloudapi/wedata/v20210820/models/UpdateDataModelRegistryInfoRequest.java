@@ -40,16 +40,16 @@ public class UpdateDataModelRegistryInfoRequest extends AbstractModel {
     /**
     * 数语的ip
     */
-    @SerializedName("Vip")
+    @SerializedName("Ip")
     @Expose
-    private String Vip;
+    private String Ip;
 
     /**
     * 数语的端口
     */
-    @SerializedName("Vport")
+    @SerializedName("Port")
     @Expose
-    private Long Vport;
+    private Long Port;
 
     /**
     * 数语的CAM角色id
@@ -113,34 +113,34 @@ public class UpdateDataModelRegistryInfoRequest extends AbstractModel {
 
     /**
      * Get 数语的ip 
-     * @return Vip 数语的ip
+     * @return Ip 数语的ip
      */
-    public String getVip() {
-        return this.Vip;
+    public String getIp() {
+        return this.Ip;
     }
 
     /**
      * Set 数语的ip
-     * @param Vip 数语的ip
+     * @param Ip 数语的ip
      */
-    public void setVip(String Vip) {
-        this.Vip = Vip;
+    public void setIp(String Ip) {
+        this.Ip = Ip;
     }
 
     /**
      * Get 数语的端口 
-     * @return Vport 数语的端口
+     * @return Port 数语的端口
      */
-    public Long getVport() {
-        return this.Vport;
+    public Long getPort() {
+        return this.Port;
     }
 
     /**
      * Set 数语的端口
-     * @param Vport 数语的端口
+     * @param Port 数语的端口
      */
-    public void setVport(Long Vport) {
-        this.Vport = Vport;
+    public void setPort(Long Port) {
+        this.Port = Port;
     }
 
     /**
@@ -221,11 +221,11 @@ public class UpdateDataModelRegistryInfoRequest extends AbstractModel {
         if (source.AppCamRole != null) {
             this.AppCamRole = new String(source.AppCamRole);
         }
-        if (source.Vip != null) {
-            this.Vip = new String(source.Vip);
+        if (source.Ip != null) {
+            this.Ip = new String(source.Ip);
         }
-        if (source.Vport != null) {
-            this.Vport = new Long(source.Vport);
+        if (source.Port != null) {
+            this.Port = new Long(source.Port);
         }
         if (source.AppCamRoleId != null) {
             this.AppCamRoleId = new String(source.AppCamRoleId);
@@ -248,8 +248,8 @@ public class UpdateDataModelRegistryInfoRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CloudappId", this.CloudappId);
         this.setParamSimple(map, prefix + "AppCamRole", this.AppCamRole);
-        this.setParamSimple(map, prefix + "Vip", this.Vip);
-        this.setParamSimple(map, prefix + "Vport", this.Vport);
+        this.setParamSimple(map, prefix + "Ip", this.Ip);
+        this.setParamSimple(map, prefix + "Port", this.Port);
         this.setParamSimple(map, prefix + "AppCamRoleId", this.AppCamRoleId);
         this.setParamSimple(map, prefix + "Provider", this.Provider);
         this.setParamSimple(map, prefix + "TenantId", this.TenantId);

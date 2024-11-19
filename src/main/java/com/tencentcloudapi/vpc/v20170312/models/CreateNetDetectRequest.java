@@ -87,6 +87,13 @@ NONEXTHOP：无下一跳；
     private String NetDetectDescription;
 
     /**
+    * 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get `VPC`实例`ID`。形如：`vpc-12345678`。 
      * @return VpcId `VPC`实例`ID`。形如：`vpc-12345678`。
      */
@@ -254,6 +261,22 @@ NONEXTHOP：无下一跳；
         this.NetDetectDescription = NetDetectDescription;
     }
 
+    /**
+     * Get 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。 
+     * @return Tags 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
+     * @param Tags 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public CreateNetDetectRequest() {
     }
 
@@ -286,6 +309,12 @@ NONEXTHOP：无下一跳；
         if (source.NetDetectDescription != null) {
             this.NetDetectDescription = new String(source.NetDetectDescription);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -300,6 +329,7 @@ NONEXTHOP：无下一跳；
         this.setParamSimple(map, prefix + "NextHopType", this.NextHopType);
         this.setParamSimple(map, prefix + "NextHopDestination", this.NextHopDestination);
         this.setParamSimple(map, prefix + "NetDetectDescription", this.NetDetectDescription);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

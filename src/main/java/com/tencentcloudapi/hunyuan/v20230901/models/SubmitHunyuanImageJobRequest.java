@@ -33,6 +33,13 @@ public class SubmitHunyuanImageJobRequest extends AbstractModel {
     private String Prompt;
 
     /**
+    * 反向提示词。 推荐使用中文。最多可传1024个 utf-8 字符。
+    */
+    @SerializedName("NegativePrompt")
+    @Expose
+    private String NegativePrompt;
+
+    /**
     * 绘画风格。
 请在 [混元生图风格列表](https://cloud.tencent.com/document/product/1729/105846) 中选择期望的风格，传入风格编号。
 不传默认不指定风格。
@@ -117,6 +124,22 @@ public class SubmitHunyuanImageJobRequest extends AbstractModel {
      */
     public void setPrompt(String Prompt) {
         this.Prompt = Prompt;
+    }
+
+    /**
+     * Get 反向提示词。 推荐使用中文。最多可传1024个 utf-8 字符。 
+     * @return NegativePrompt 反向提示词。 推荐使用中文。最多可传1024个 utf-8 字符。
+     */
+    public String getNegativePrompt() {
+        return this.NegativePrompt;
+    }
+
+    /**
+     * Set 反向提示词。 推荐使用中文。最多可传1024个 utf-8 字符。
+     * @param NegativePrompt 反向提示词。 推荐使用中文。最多可传1024个 utf-8 字符。
+     */
+    public void setNegativePrompt(String NegativePrompt) {
+        this.NegativePrompt = NegativePrompt;
     }
 
     /**
@@ -298,6 +321,9 @@ public class SubmitHunyuanImageJobRequest extends AbstractModel {
         if (source.Prompt != null) {
             this.Prompt = new String(source.Prompt);
         }
+        if (source.NegativePrompt != null) {
+            this.NegativePrompt = new String(source.NegativePrompt);
+        }
         if (source.Style != null) {
             this.Style = new String(source.Style);
         }
@@ -327,6 +353,7 @@ public class SubmitHunyuanImageJobRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Prompt", this.Prompt);
+        this.setParamSimple(map, prefix + "NegativePrompt", this.NegativePrompt);
         this.setParamSimple(map, prefix + "Style", this.Style);
         this.setParamSimple(map, prefix + "Resolution", this.Resolution);
         this.setParamSimple(map, prefix + "Num", this.Num);

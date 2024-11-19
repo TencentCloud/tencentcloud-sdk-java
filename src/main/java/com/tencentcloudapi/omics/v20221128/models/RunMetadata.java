@@ -25,7 +25,6 @@ public class RunMetadata extends AbstractModel {
 
     /**
     * 任务类型。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RunType")
     @Expose
@@ -33,7 +32,6 @@ public class RunMetadata extends AbstractModel {
 
     /**
     * 任务ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RunId")
     @Expose
@@ -41,7 +39,6 @@ public class RunMetadata extends AbstractModel {
 
     /**
     * 父层ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ParentId")
     @Expose
@@ -49,7 +46,6 @@ public class RunMetadata extends AbstractModel {
 
     /**
     * 作业ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("JobId")
     @Expose
@@ -57,7 +53,6 @@ public class RunMetadata extends AbstractModel {
 
     /**
     * 作业名称。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CallName")
     @Expose
@@ -65,7 +60,6 @@ public class RunMetadata extends AbstractModel {
 
     /**
     * Scatter索引。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScatterIndex")
     @Expose
@@ -73,7 +67,6 @@ public class RunMetadata extends AbstractModel {
 
     /**
     * 输入。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Input")
     @Expose
@@ -81,7 +74,6 @@ public class RunMetadata extends AbstractModel {
 
     /**
     * 输出。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Output")
     @Expose
@@ -89,7 +81,6 @@ public class RunMetadata extends AbstractModel {
 
     /**
     * 状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -97,7 +88,6 @@ public class RunMetadata extends AbstractModel {
 
     /**
     * 错误信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ErrorMessage")
     @Expose
@@ -105,7 +95,6 @@ public class RunMetadata extends AbstractModel {
 
     /**
     * 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartTime")
     @Expose
@@ -113,7 +102,6 @@ public class RunMetadata extends AbstractModel {
 
     /**
     * 提交时间。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubmitTime")
     @Expose
@@ -121,7 +109,6 @@ public class RunMetadata extends AbstractModel {
 
     /**
     * 结束时间。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndTime")
     @Expose
@@ -129,7 +116,6 @@ public class RunMetadata extends AbstractModel {
 
     /**
     * 命令行。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Command")
     @Expose
@@ -137,7 +123,6 @@ public class RunMetadata extends AbstractModel {
 
     /**
     * 运行时。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Runtime")
     @Expose
@@ -145,7 +130,6 @@ public class RunMetadata extends AbstractModel {
 
     /**
     * 预处理。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Preprocess")
     @Expose
@@ -153,7 +137,6 @@ public class RunMetadata extends AbstractModel {
 
     /**
     * 后处理。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PostProcess")
     @Expose
@@ -161,7 +144,6 @@ public class RunMetadata extends AbstractModel {
 
     /**
     * Cache命中
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CallCached")
     @Expose
@@ -169,7 +151,6 @@ public class RunMetadata extends AbstractModel {
 
     /**
     * 工作目录。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WorkDir")
     @Expose
@@ -177,7 +158,6 @@ public class RunMetadata extends AbstractModel {
 
     /**
     * 标准输出。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Stdout")
     @Expose
@@ -185,7 +165,6 @@ public class RunMetadata extends AbstractModel {
 
     /**
     * 错误输出。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Stderr")
     @Expose
@@ -193,17 +172,14 @@ public class RunMetadata extends AbstractModel {
 
     /**
     * 其他信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Meta")
     @Expose
     private String Meta;
 
     /**
-     * Get 任务类型。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务类型。 
      * @return RunType 任务类型。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRunType() {
         return this.RunType;
@@ -211,19 +187,15 @@ public class RunMetadata extends AbstractModel {
 
     /**
      * Set 任务类型。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RunType 任务类型。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRunType(String RunType) {
         this.RunType = RunType;
     }
 
     /**
-     * Get 任务ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务ID。 
      * @return RunId 任务ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRunId() {
         return this.RunId;
@@ -231,19 +203,15 @@ public class RunMetadata extends AbstractModel {
 
     /**
      * Set 任务ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RunId 任务ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRunId(String RunId) {
         this.RunId = RunId;
     }
 
     /**
-     * Get 父层ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 父层ID。 
      * @return ParentId 父层ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getParentId() {
         return this.ParentId;
@@ -251,19 +219,15 @@ public class RunMetadata extends AbstractModel {
 
     /**
      * Set 父层ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ParentId 父层ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setParentId(String ParentId) {
         this.ParentId = ParentId;
     }
 
     /**
-     * Get 作业ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 作业ID。 
      * @return JobId 作业ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getJobId() {
         return this.JobId;
@@ -271,19 +235,15 @@ public class RunMetadata extends AbstractModel {
 
     /**
      * Set 作业ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param JobId 作业ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setJobId(String JobId) {
         this.JobId = JobId;
     }
 
     /**
-     * Get 作业名称。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 作业名称。 
      * @return CallName 作业名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCallName() {
         return this.CallName;
@@ -291,19 +251,15 @@ public class RunMetadata extends AbstractModel {
 
     /**
      * Set 作业名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CallName 作业名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCallName(String CallName) {
         this.CallName = CallName;
     }
 
     /**
-     * Get Scatter索引。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Scatter索引。 
      * @return ScatterIndex Scatter索引。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getScatterIndex() {
         return this.ScatterIndex;
@@ -311,19 +267,15 @@ public class RunMetadata extends AbstractModel {
 
     /**
      * Set Scatter索引。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ScatterIndex Scatter索引。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScatterIndex(String ScatterIndex) {
         this.ScatterIndex = ScatterIndex;
     }
 
     /**
-     * Get 输入。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 输入。 
      * @return Input 输入。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInput() {
         return this.Input;
@@ -331,19 +283,15 @@ public class RunMetadata extends AbstractModel {
 
     /**
      * Set 输入。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Input 输入。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInput(String Input) {
         this.Input = Input;
     }
 
     /**
-     * Get 输出。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 输出。 
      * @return Output 输出。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOutput() {
         return this.Output;
@@ -351,19 +299,15 @@ public class RunMetadata extends AbstractModel {
 
     /**
      * Set 输出。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Output 输出。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutput(String Output) {
         this.Output = Output;
     }
 
     /**
-     * Get 状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 状态 
      * @return Status 状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
         return this.Status;
@@ -371,19 +315,15 @@ public class RunMetadata extends AbstractModel {
 
     /**
      * Set 状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 错误信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 错误信息。 
      * @return ErrorMessage 错误信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getErrorMessage() {
         return this.ErrorMessage;
@@ -391,19 +331,15 @@ public class RunMetadata extends AbstractModel {
 
     /**
      * Set 错误信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ErrorMessage 错误信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrorMessage(String ErrorMessage) {
         this.ErrorMessage = ErrorMessage;
     }
 
     /**
-     * Get 开始时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 开始时间 
      * @return StartTime 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStartTime() {
         return this.StartTime;
@@ -411,19 +347,15 @@ public class RunMetadata extends AbstractModel {
 
     /**
      * Set 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StartTime 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 提交时间。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 提交时间。 
      * @return SubmitTime 提交时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubmitTime() {
         return this.SubmitTime;
@@ -431,19 +363,15 @@ public class RunMetadata extends AbstractModel {
 
     /**
      * Set 提交时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubmitTime 提交时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubmitTime(String SubmitTime) {
         this.SubmitTime = SubmitTime;
     }
 
     /**
-     * Get 结束时间。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 结束时间。 
      * @return EndTime 结束时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEndTime() {
         return this.EndTime;
@@ -451,19 +379,15 @@ public class RunMetadata extends AbstractModel {
 
     /**
      * Set 结束时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EndTime 结束时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 命令行。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 命令行。 
      * @return Command 命令行。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCommand() {
         return this.Command;
@@ -471,19 +395,15 @@ public class RunMetadata extends AbstractModel {
 
     /**
      * Set 命令行。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Command 命令行。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCommand(String Command) {
         this.Command = Command;
     }
 
     /**
-     * Get 运行时。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 运行时。 
      * @return Runtime 运行时。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRuntime() {
         return this.Runtime;
@@ -491,19 +411,15 @@ public class RunMetadata extends AbstractModel {
 
     /**
      * Set 运行时。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Runtime 运行时。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuntime(String Runtime) {
         this.Runtime = Runtime;
     }
 
     /**
-     * Get 预处理。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 预处理。 
      * @return Preprocess 预处理。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getPreprocess() {
         return this.Preprocess;
@@ -511,19 +427,15 @@ public class RunMetadata extends AbstractModel {
 
     /**
      * Set 预处理。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Preprocess 预处理。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPreprocess(Boolean Preprocess) {
         this.Preprocess = Preprocess;
     }
 
     /**
-     * Get 后处理。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 后处理。 
      * @return PostProcess 后处理。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getPostProcess() {
         return this.PostProcess;
@@ -531,19 +443,15 @@ public class RunMetadata extends AbstractModel {
 
     /**
      * Set 后处理。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PostProcess 后处理。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPostProcess(Boolean PostProcess) {
         this.PostProcess = PostProcess;
     }
 
     /**
-     * Get Cache命中
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Cache命中 
      * @return CallCached Cache命中
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getCallCached() {
         return this.CallCached;
@@ -551,19 +459,15 @@ public class RunMetadata extends AbstractModel {
 
     /**
      * Set Cache命中
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CallCached Cache命中
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCallCached(Boolean CallCached) {
         this.CallCached = CallCached;
     }
 
     /**
-     * Get 工作目录。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 工作目录。 
      * @return WorkDir 工作目录。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWorkDir() {
         return this.WorkDir;
@@ -571,19 +475,15 @@ public class RunMetadata extends AbstractModel {
 
     /**
      * Set 工作目录。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WorkDir 工作目录。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWorkDir(String WorkDir) {
         this.WorkDir = WorkDir;
     }
 
     /**
-     * Get 标准输出。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标准输出。 
      * @return Stdout 标准输出。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStdout() {
         return this.Stdout;
@@ -591,19 +491,15 @@ public class RunMetadata extends AbstractModel {
 
     /**
      * Set 标准输出。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Stdout 标准输出。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStdout(String Stdout) {
         this.Stdout = Stdout;
     }
 
     /**
-     * Get 错误输出。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 错误输出。 
      * @return Stderr 错误输出。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStderr() {
         return this.Stderr;
@@ -611,19 +507,15 @@ public class RunMetadata extends AbstractModel {
 
     /**
      * Set 错误输出。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Stderr 错误输出。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStderr(String Stderr) {
         this.Stderr = Stderr;
     }
 
     /**
-     * Get 其他信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 其他信息。 
      * @return Meta 其他信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMeta() {
         return this.Meta;
@@ -631,9 +523,7 @@ public class RunMetadata extends AbstractModel {
 
     /**
      * Set 其他信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Meta 其他信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMeta(String Meta) {
         this.Meta = Meta;

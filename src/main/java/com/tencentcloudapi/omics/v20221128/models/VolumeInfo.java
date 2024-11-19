@@ -25,7 +25,6 @@ public class VolumeInfo extends AbstractModel {
 
     /**
     * 缓存卷ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VolumeId")
     @Expose
@@ -33,7 +32,6 @@ public class VolumeInfo extends AbstractModel {
 
     /**
     * 名称。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -41,17 +39,14 @@ public class VolumeInfo extends AbstractModel {
 
     /**
     * 挂载路径。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MountPath")
     @Expose
     private String MountPath;
 
     /**
-     * Get 缓存卷ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 缓存卷ID。 
      * @return VolumeId 缓存卷ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVolumeId() {
         return this.VolumeId;
@@ -59,19 +54,15 @@ public class VolumeInfo extends AbstractModel {
 
     /**
      * Set 缓存卷ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VolumeId 缓存卷ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVolumeId(String VolumeId) {
         this.VolumeId = VolumeId;
     }
 
     /**
-     * Get 名称。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 名称。 
      * @return Name 名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -79,19 +70,15 @@ public class VolumeInfo extends AbstractModel {
 
     /**
      * Set 名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 挂载路径。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 挂载路径。 
      * @return MountPath 挂载路径。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMountPath() {
         return this.MountPath;
@@ -99,9 +86,7 @@ public class VolumeInfo extends AbstractModel {
 
     /**
      * Set 挂载路径。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MountPath 挂载路径。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMountPath(String MountPath) {
         this.MountPath = MountPath;

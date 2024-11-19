@@ -48,7 +48,6 @@ public class RunOption extends AbstractModel {
 
     /**
     * 输出归档COS路径。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FinalWorkflowOutputsDir")
     @Expose
@@ -56,7 +55,6 @@ public class RunOption extends AbstractModel {
 
     /**
     * 是否使用相对目录归档输出。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UseRelativeOutputPaths")
     @Expose
@@ -64,7 +62,6 @@ public class RunOption extends AbstractModel {
 
     /**
     * 是否添加运行信息到输出目录中
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AddRunInfoToOutputDir")
     @Expose
@@ -127,10 +124,8 @@ public class RunOption extends AbstractModel {
     }
 
     /**
-     * Get 输出归档COS路径。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 输出归档COS路径。 
      * @return FinalWorkflowOutputsDir 输出归档COS路径。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFinalWorkflowOutputsDir() {
         return this.FinalWorkflowOutputsDir;
@@ -138,19 +133,15 @@ public class RunOption extends AbstractModel {
 
     /**
      * Set 输出归档COS路径。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FinalWorkflowOutputsDir 输出归档COS路径。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFinalWorkflowOutputsDir(String FinalWorkflowOutputsDir) {
         this.FinalWorkflowOutputsDir = FinalWorkflowOutputsDir;
     }
 
     /**
-     * Get 是否使用相对目录归档输出。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否使用相对目录归档输出。 
      * @return UseRelativeOutputPaths 是否使用相对目录归档输出。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getUseRelativeOutputPaths() {
         return this.UseRelativeOutputPaths;
@@ -158,19 +149,15 @@ public class RunOption extends AbstractModel {
 
     /**
      * Set 是否使用相对目录归档输出。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UseRelativeOutputPaths 是否使用相对目录归档输出。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUseRelativeOutputPaths(Boolean UseRelativeOutputPaths) {
         this.UseRelativeOutputPaths = UseRelativeOutputPaths;
     }
 
     /**
-     * Get 是否添加运行信息到输出目录中
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否添加运行信息到输出目录中 
      * @return AddRunInfoToOutputDir 是否添加运行信息到输出目录中
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getAddRunInfoToOutputDir() {
         return this.AddRunInfoToOutputDir;
@@ -178,9 +165,7 @@ public class RunOption extends AbstractModel {
 
     /**
      * Set 是否添加运行信息到输出目录中
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AddRunInfoToOutputDir 是否添加运行信息到输出目录中
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAddRunInfoToOutputDir(Boolean AddRunInfoToOutputDir) {
         this.AddRunInfoToOutputDir = AddRunInfoToOutputDir;

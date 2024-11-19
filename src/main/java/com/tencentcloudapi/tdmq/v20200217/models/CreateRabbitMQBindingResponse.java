@@ -32,7 +32,7 @@ public class CreateRabbitMQBindingResponse extends AbstractModel {
     private String InstanceId;
 
     /**
-    * vhost参数
+    * vhost名称
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VirtualHost")
@@ -75,9 +75,9 @@ public class CreateRabbitMQBindingResponse extends AbstractModel {
     }
 
     /**
-     * Get vhost参数
+     * Get vhost名称
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return VirtualHost vhost参数
+     * @return VirtualHost vhost名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVirtualHost() {
@@ -85,9 +85,9 @@ public class CreateRabbitMQBindingResponse extends AbstractModel {
     }
 
     /**
-     * Set vhost参数
+     * Set vhost名称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param VirtualHost vhost参数
+     * @param VirtualHost vhost名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVirtualHost(String VirtualHost) {

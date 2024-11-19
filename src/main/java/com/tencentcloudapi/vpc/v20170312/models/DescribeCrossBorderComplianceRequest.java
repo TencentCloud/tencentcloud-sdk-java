@@ -59,6 +59,13 @@ public class DescribeCrossBorderComplianceRequest extends AbstractModel {
     private String LegalPerson;
 
     /**
+    * （精确查询）法人身份证号。
+    */
+    @SerializedName("LegalPersonId")
+    @Expose
+    private String LegalPersonId;
+
+    /**
     * （模糊查询）发证机关。
     */
     @SerializedName("IssuingAuthority")
@@ -227,6 +234,22 @@ public class DescribeCrossBorderComplianceRequest extends AbstractModel {
      */
     public void setLegalPerson(String LegalPerson) {
         this.LegalPerson = LegalPerson;
+    }
+
+    /**
+     * Get （精确查询）法人身份证号。 
+     * @return LegalPersonId （精确查询）法人身份证号。
+     */
+    public String getLegalPersonId() {
+        return this.LegalPersonId;
+    }
+
+    /**
+     * Set （精确查询）法人身份证号。
+     * @param LegalPersonId （精确查询）法人身份证号。
+     */
+    public void setLegalPersonId(String LegalPersonId) {
+        this.LegalPersonId = LegalPersonId;
     }
 
     /**
@@ -460,6 +483,9 @@ public class DescribeCrossBorderComplianceRequest extends AbstractModel {
         if (source.LegalPerson != null) {
             this.LegalPerson = new String(source.LegalPerson);
         }
+        if (source.LegalPersonId != null) {
+            this.LegalPersonId = new String(source.LegalPersonId);
+        }
         if (source.IssuingAuthority != null) {
             this.IssuingAuthority = new String(source.IssuingAuthority);
         }
@@ -511,6 +537,7 @@ public class DescribeCrossBorderComplianceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Company", this.Company);
         this.setParamSimple(map, prefix + "UniformSocialCreditCode", this.UniformSocialCreditCode);
         this.setParamSimple(map, prefix + "LegalPerson", this.LegalPerson);
+        this.setParamSimple(map, prefix + "LegalPersonId", this.LegalPersonId);
         this.setParamSimple(map, prefix + "IssuingAuthority", this.IssuingAuthority);
         this.setParamSimple(map, prefix + "BusinessAddress", this.BusinessAddress);
         this.setParamSimple(map, prefix + "PostCode", this.PostCode);

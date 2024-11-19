@@ -193,6 +193,13 @@ public class RabbitMQClusterInfo extends AbstractModel {
     private Long PayMode;
 
     /**
+    * 实例类型，0 专享版、1 Serverless 版
+    */
+    @SerializedName("InstanceType")
+    @Expose
+    private Long InstanceType;
+
+    /**
      * Get 集群ID 
      * @return ClusterId 集群ID
      */
@@ -592,6 +599,22 @@ public class RabbitMQClusterInfo extends AbstractModel {
         this.PayMode = PayMode;
     }
 
+    /**
+     * Get 实例类型，0 专享版、1 Serverless 版 
+     * @return InstanceType 实例类型，0 专享版、1 Serverless 版
+     */
+    public Long getInstanceType() {
+        return this.InstanceType;
+    }
+
+    /**
+     * Set 实例类型，0 专享版、1 Serverless 版
+     * @param InstanceType 实例类型，0 专享版、1 Serverless 版
+     */
+    public void setInstanceType(Long InstanceType) {
+        this.InstanceType = InstanceType;
+    }
+
     public RabbitMQClusterInfo() {
     }
 
@@ -675,6 +698,9 @@ public class RabbitMQClusterInfo extends AbstractModel {
         if (source.PayMode != null) {
             this.PayMode = new Long(source.PayMode);
         }
+        if (source.InstanceType != null) {
+            this.InstanceType = new Long(source.InstanceType);
+        }
     }
 
 
@@ -705,6 +731,7 @@ public class RabbitMQClusterInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "MessageConsumeRate", this.MessageConsumeRate);
         this.setParamSimple(map, prefix + "ClusterVersion", this.ClusterVersion);
         this.setParamSimple(map, prefix + "PayMode", this.PayMode);
+        this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
 
     }
 }

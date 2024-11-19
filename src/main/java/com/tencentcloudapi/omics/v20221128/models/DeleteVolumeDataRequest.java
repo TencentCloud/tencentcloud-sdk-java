@@ -31,7 +31,7 @@ public class DeleteVolumeDataRequest extends AbstractModel {
     private String VolumeId;
 
     /**
-    * 需要删除的路径
+    * 需要删除的路径。
     */
     @SerializedName("Path")
     @Expose
@@ -54,16 +54,16 @@ public class DeleteVolumeDataRequest extends AbstractModel {
     }
 
     /**
-     * Get 需要删除的路径 
-     * @return Path 需要删除的路径
+     * Get 需要删除的路径。 
+     * @return Path 需要删除的路径。
      */
     public String getPath() {
         return this.Path;
     }
 
     /**
-     * Set 需要删除的路径
-     * @param Path 需要删除的路径
+     * Set 需要删除的路径。
+     * @param Path 需要删除的路径。
      */
     public void setPath(String Path) {
         this.Path = Path;

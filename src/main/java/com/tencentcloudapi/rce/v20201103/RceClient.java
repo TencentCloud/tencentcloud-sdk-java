@@ -105,6 +105,17 @@ public class RceClient extends AbstractClient{
     }
 
     /**
+     *RCE控制台预付费和后付费次数展示
+     * @param req DescribeUserUsageCntRequest
+     * @return DescribeUserUsageCntResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUserUsageCntResponse DescribeUserUsageCnt(DescribeUserUsageCntRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeUserUsageCnt", DescribeUserUsageCntResponse.class);
+    }
+
+    /**
      *新增黑白名单数据，所有黑白名单数据总量上限为10000
      * @param req ImportNameListDataRequest
      * @return ImportNameListDataResponse

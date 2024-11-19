@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class RouteDTO extends AbstractModel {
 
     /**
-    * RouteId11
+    * 路由Id
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RouteId")
@@ -32,9 +32,9 @@ public class RouteDTO extends AbstractModel {
     private Long RouteId;
 
     /**
-     * Get RouteId11
+     * Get 路由Id
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RouteId RouteId11
+     * @return RouteId 路由Id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRouteId() {
@@ -42,9 +42,9 @@ public class RouteDTO extends AbstractModel {
     }
 
     /**
-     * Set RouteId11
+     * Set 路由Id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RouteId RouteId11
+     * @param RouteId 路由Id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRouteId(Long RouteId) {

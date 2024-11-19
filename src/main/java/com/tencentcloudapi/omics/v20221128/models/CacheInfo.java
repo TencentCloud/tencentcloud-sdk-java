@@ -25,7 +25,6 @@ public class CacheInfo extends AbstractModel {
 
     /**
     * 缓存清理时间(小时)。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CacheClearDelay")
     @Expose
@@ -33,7 +32,6 @@ public class CacheInfo extends AbstractModel {
 
     /**
     * 缓存清理计划时间。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CacheClearTime")
     @Expose
@@ -41,17 +39,14 @@ public class CacheInfo extends AbstractModel {
 
     /**
     * 缓存是否已被清理。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CacheCleared")
     @Expose
     private Boolean CacheCleared;
 
     /**
-     * Get 缓存清理时间(小时)。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 缓存清理时间(小时)。 
      * @return CacheClearDelay 缓存清理时间(小时)。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCacheClearDelay() {
         return this.CacheClearDelay;
@@ -59,19 +54,15 @@ public class CacheInfo extends AbstractModel {
 
     /**
      * Set 缓存清理时间(小时)。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CacheClearDelay 缓存清理时间(小时)。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCacheClearDelay(Long CacheClearDelay) {
         this.CacheClearDelay = CacheClearDelay;
     }
 
     /**
-     * Get 缓存清理计划时间。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 缓存清理计划时间。 
      * @return CacheClearTime 缓存清理计划时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCacheClearTime() {
         return this.CacheClearTime;
@@ -79,19 +70,15 @@ public class CacheInfo extends AbstractModel {
 
     /**
      * Set 缓存清理计划时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CacheClearTime 缓存清理计划时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCacheClearTime(String CacheClearTime) {
         this.CacheClearTime = CacheClearTime;
     }
 
     /**
-     * Get 缓存是否已被清理。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 缓存是否已被清理。 
      * @return CacheCleared 缓存是否已被清理。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getCacheCleared() {
         return this.CacheCleared;
@@ -99,9 +86,7 @@ public class CacheInfo extends AbstractModel {
 
     /**
      * Set 缓存是否已被清理。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CacheCleared 缓存是否已被清理。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCacheCleared(Boolean CacheCleared) {
         this.CacheCleared = CacheCleared;

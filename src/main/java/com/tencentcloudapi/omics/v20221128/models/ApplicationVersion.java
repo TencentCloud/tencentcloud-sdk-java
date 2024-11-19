@@ -25,7 +25,6 @@ public class ApplicationVersion extends AbstractModel {
 
     /**
     * 版本类型。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -33,7 +32,6 @@ public class ApplicationVersion extends AbstractModel {
 
     /**
     * 版本ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApplicationVersionId")
     @Expose
@@ -41,7 +39,6 @@ public class ApplicationVersion extends AbstractModel {
 
     /**
     * 发布名称。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -49,7 +46,6 @@ public class ApplicationVersion extends AbstractModel {
 
     /**
     * 发布描述。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
     @Expose
@@ -57,7 +53,6 @@ public class ApplicationVersion extends AbstractModel {
 
     /**
     * 入口文件。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Entrypoint")
     @Expose
@@ -65,7 +60,6 @@ public class ApplicationVersion extends AbstractModel {
 
     /**
     * 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -73,7 +67,6 @@ public class ApplicationVersion extends AbstractModel {
 
     /**
     * 创建者名称。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreatorName")
     @Expose
@@ -81,7 +74,6 @@ public class ApplicationVersion extends AbstractModel {
 
     /**
     * 创建者ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreatorId")
     @Expose
@@ -89,7 +81,6 @@ public class ApplicationVersion extends AbstractModel {
 
     /**
     * Git信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GitInfo")
     @Expose
@@ -97,17 +88,21 @@ public class ApplicationVersion extends AbstractModel {
 
     /**
     * Git信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GitSource")
     @Expose
     private GitInfo GitSource;
 
     /**
-     * Get 版本类型。
-注意：此字段可能返回 null，表示取不到有效值。 
+    * COS信息。
+    */
+    @SerializedName("CosSource")
+    @Expose
+    private CosFileInfo CosSource;
+
+    /**
+     * Get 版本类型。 
      * @return Type 版本类型。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
         return this.Type;
@@ -115,19 +110,15 @@ public class ApplicationVersion extends AbstractModel {
 
     /**
      * Set 版本类型。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 版本类型。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 版本ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 版本ID。 
      * @return ApplicationVersionId 版本ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getApplicationVersionId() {
         return this.ApplicationVersionId;
@@ -135,19 +126,15 @@ public class ApplicationVersion extends AbstractModel {
 
     /**
      * Set 版本ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplicationVersionId 版本ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApplicationVersionId(String ApplicationVersionId) {
         this.ApplicationVersionId = ApplicationVersionId;
     }
 
     /**
-     * Get 发布名称。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 发布名称。 
      * @return Name 发布名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -155,19 +142,15 @@ public class ApplicationVersion extends AbstractModel {
 
     /**
      * Set 发布名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 发布名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 发布描述。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 发布描述。 
      * @return Description 发布描述。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
         return this.Description;
@@ -175,19 +158,15 @@ public class ApplicationVersion extends AbstractModel {
 
     /**
      * Set 发布描述。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Description 发布描述。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 入口文件。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 入口文件。 
      * @return Entrypoint 入口文件。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEntrypoint() {
         return this.Entrypoint;
@@ -195,19 +174,15 @@ public class ApplicationVersion extends AbstractModel {
 
     /**
      * Set 入口文件。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Entrypoint 入口文件。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEntrypoint(String Entrypoint) {
         this.Entrypoint = Entrypoint;
     }
 
     /**
-     * Get 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间。 
      * @return CreateTime 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -215,19 +190,15 @@ public class ApplicationVersion extends AbstractModel {
 
     /**
      * Set 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 创建者名称。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建者名称。 
      * @return CreatorName 创建者名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreatorName() {
         return this.CreatorName;
@@ -235,19 +206,15 @@ public class ApplicationVersion extends AbstractModel {
 
     /**
      * Set 创建者名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreatorName 创建者名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreatorName(String CreatorName) {
         this.CreatorName = CreatorName;
     }
 
     /**
-     * Get 创建者ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建者ID。 
      * @return CreatorId 创建者ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreatorId() {
         return this.CreatorId;
@@ -255,19 +222,15 @@ public class ApplicationVersion extends AbstractModel {
 
     /**
      * Set 创建者ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreatorId 创建者ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreatorId(String CreatorId) {
         this.CreatorId = CreatorId;
     }
 
     /**
-     * Get Git信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Git信息。 
      * @return GitInfo Git信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @deprecated
      */
     @Deprecated
@@ -277,9 +240,7 @@ public class ApplicationVersion extends AbstractModel {
 
     /**
      * Set Git信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GitInfo Git信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @deprecated
      */
     @Deprecated
@@ -288,10 +249,8 @@ public class ApplicationVersion extends AbstractModel {
     }
 
     /**
-     * Get Git信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Git信息。 
      * @return GitSource Git信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public GitInfo getGitSource() {
         return this.GitSource;
@@ -299,12 +258,26 @@ public class ApplicationVersion extends AbstractModel {
 
     /**
      * Set Git信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GitSource Git信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGitSource(GitInfo GitSource) {
         this.GitSource = GitSource;
+    }
+
+    /**
+     * Get COS信息。 
+     * @return CosSource COS信息。
+     */
+    public CosFileInfo getCosSource() {
+        return this.CosSource;
+    }
+
+    /**
+     * Set COS信息。
+     * @param CosSource COS信息。
+     */
+    public void setCosSource(CosFileInfo CosSource) {
+        this.CosSource = CosSource;
     }
 
     public ApplicationVersion() {
@@ -345,6 +318,9 @@ public class ApplicationVersion extends AbstractModel {
         if (source.GitSource != null) {
             this.GitSource = new GitInfo(source.GitSource);
         }
+        if (source.CosSource != null) {
+            this.CosSource = new CosFileInfo(source.CosSource);
+        }
     }
 
 
@@ -362,6 +338,7 @@ public class ApplicationVersion extends AbstractModel {
         this.setParamSimple(map, prefix + "CreatorId", this.CreatorId);
         this.setParamSimple(map, prefix + "GitInfo", this.GitInfo);
         this.setParamObj(map, prefix + "GitSource.", this.GitSource);
+        this.setParamObj(map, prefix + "CosSource.", this.CosSource);
 
     }
 }

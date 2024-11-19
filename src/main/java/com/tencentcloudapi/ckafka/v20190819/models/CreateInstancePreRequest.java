@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateInstancePreRequest extends AbstractModel {
 
     /**
-    * 实例名称，是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
+    * ckafka集群实例Name，是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
     */
     @SerializedName("InstanceName")
     @Expose
@@ -52,7 +52,7 @@ public class CreateInstancePreRequest extends AbstractModel {
     private Long InstanceType;
 
     /**
-    * vpcId，必填
+    * 私有网络Id，必填
     */
     @SerializedName("VpcId")
     @Expose
@@ -108,7 +108,7 @@ public class CreateInstancePreRequest extends AbstractModel {
     private Long DiskSize;
 
     /**
-    * 带宽，如果跟控制台规格配比不相符，则无法创建成功
+    * 实例带宽,单位MB/s; 最小值:20MB/s, 高级版最大值:360MB/s,专业版最大值:100000MB/s  标准版固定带宽规格: 40MB/s, 100MB/s, 150MB/s
     */
     @SerializedName("BandWidth")
     @Expose
@@ -171,16 +171,23 @@ public class CreateInstancePreRequest extends AbstractModel {
     private Long AutoVoucher;
 
     /**
-     * Get 实例名称，是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-) 
-     * @return InstanceName 实例名称，是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
+    * 弹性带宽开关 0不开启  1开启（0默认）
+    */
+    @SerializedName("ElasticBandwidthSwitch")
+    @Expose
+    private Long ElasticBandwidthSwitch;
+
+    /**
+     * Get ckafka集群实例Name，是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-) 
+     * @return InstanceName ckafka集群实例Name，是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set 实例名称，是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
-     * @param InstanceName 实例名称，是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
+     * Set ckafka集群实例Name，是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
+     * @param InstanceName ckafka集群实例Name，是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
@@ -235,16 +242,16 @@ public class CreateInstancePreRequest extends AbstractModel {
     }
 
     /**
-     * Get vpcId，必填 
-     * @return VpcId vpcId，必填
+     * Get 私有网络Id，必填 
+     * @return VpcId 私有网络Id，必填
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set vpcId，必填
-     * @param VpcId vpcId，必填
+     * Set 私有网络Id，必填
+     * @param VpcId 私有网络Id，必填
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
@@ -363,16 +370,16 @@ public class CreateInstancePreRequest extends AbstractModel {
     }
 
     /**
-     * Get 带宽，如果跟控制台规格配比不相符，则无法创建成功 
-     * @return BandWidth 带宽，如果跟控制台规格配比不相符，则无法创建成功
+     * Get 实例带宽,单位MB/s; 最小值:20MB/s, 高级版最大值:360MB/s,专业版最大值:100000MB/s  标准版固定带宽规格: 40MB/s, 100MB/s, 150MB/s 
+     * @return BandWidth 实例带宽,单位MB/s; 最小值:20MB/s, 高级版最大值:360MB/s,专业版最大值:100000MB/s  标准版固定带宽规格: 40MB/s, 100MB/s, 150MB/s
      */
     public Long getBandWidth() {
         return this.BandWidth;
     }
 
     /**
-     * Set 带宽，如果跟控制台规格配比不相符，则无法创建成功
-     * @param BandWidth 带宽，如果跟控制台规格配比不相符，则无法创建成功
+     * Set 实例带宽,单位MB/s; 最小值:20MB/s, 高级版最大值:360MB/s,专业版最大值:100000MB/s  标准版固定带宽规格: 40MB/s, 100MB/s, 150MB/s
+     * @param BandWidth 实例带宽,单位MB/s; 最小值:20MB/s, 高级版最大值:360MB/s,专业版最大值:100000MB/s  标准版固定带宽规格: 40MB/s, 100MB/s, 150MB/s
      */
     public void setBandWidth(Long BandWidth) {
         this.BandWidth = BandWidth;
@@ -506,6 +513,22 @@ public class CreateInstancePreRequest extends AbstractModel {
         this.AutoVoucher = AutoVoucher;
     }
 
+    /**
+     * Get 弹性带宽开关 0不开启  1开启（0默认） 
+     * @return ElasticBandwidthSwitch 弹性带宽开关 0不开启  1开启（0默认）
+     */
+    public Long getElasticBandwidthSwitch() {
+        return this.ElasticBandwidthSwitch;
+    }
+
+    /**
+     * Set 弹性带宽开关 0不开启  1开启（0默认）
+     * @param ElasticBandwidthSwitch 弹性带宽开关 0不开启  1开启（0默认）
+     */
+    public void setElasticBandwidthSwitch(Long ElasticBandwidthSwitch) {
+        this.ElasticBandwidthSwitch = ElasticBandwidthSwitch;
+    }
+
     public CreateInstancePreRequest() {
     }
 
@@ -583,6 +606,9 @@ public class CreateInstancePreRequest extends AbstractModel {
         if (source.AutoVoucher != null) {
             this.AutoVoucher = new Long(source.AutoVoucher);
         }
+        if (source.ElasticBandwidthSwitch != null) {
+            this.ElasticBandwidthSwitch = new Long(source.ElasticBandwidthSwitch);
+        }
     }
 
 
@@ -611,6 +637,7 @@ public class CreateInstancePreRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "PublicNetworkMonthly", this.PublicNetworkMonthly);
         this.setParamSimple(map, prefix + "InstanceNum", this.InstanceNum);
         this.setParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
+        this.setParamSimple(map, prefix + "ElasticBandwidthSwitch", this.ElasticBandwidthSwitch);
 
     }
 }

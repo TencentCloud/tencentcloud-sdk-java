@@ -25,7 +25,6 @@ public class ImageToObjectResponse extends AbstractModel {
 
     /**
     * 报告结构化结果
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Template")
     @Expose
@@ -33,7 +32,6 @@ public class ImageToObjectResponse extends AbstractModel {
 
     /**
     * 多级分类结果
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TextTypeList")
     @Expose
@@ -47,10 +45,8 @@ public class ImageToObjectResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 报告结构化结果
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 报告结构化结果 
      * @return Template 报告结构化结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Template getTemplate() {
         return this.Template;
@@ -58,19 +54,15 @@ public class ImageToObjectResponse extends AbstractModel {
 
     /**
      * Set 报告结构化结果
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Template 报告结构化结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTemplate(Template Template) {
         this.Template = Template;
     }
 
     /**
-     * Get 多级分类结果
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 多级分类结果 
      * @return TextTypeList 多级分类结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TextType [] getTextTypeList() {
         return this.TextTypeList;
@@ -78,9 +70,7 @@ public class ImageToObjectResponse extends AbstractModel {
 
     /**
      * Set 多级分类结果
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TextTypeList 多级分类结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTextTypeList(TextType [] TextTypeList) {
         this.TextTypeList = TextTypeList;

@@ -118,6 +118,13 @@ public class ChannelCreateMultiFlowSignQRCodeRequest extends AbstractModel {
     private Boolean ForbidPersonalMultipleSign;
 
     /**
+    * 合同流程名称是否应包含扫码签署人的信息，且遵循特定格式（flowname-姓名-手机号后四位）。 例如，通过参数FlowName设定的扫码发起合同名称为“员工入职合同”，当扫码人张三（手机号18800009527）扫码签署时，合同名称将自动生成为“员工入职合同-张三-9527”。
+    */
+    @SerializedName("FlowNameAppendScannerInfo")
+    @Expose
+    private Boolean FlowNameAppendScannerInfo;
+
+    /**
      * Get 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
 
 此接口下面信息必填。
@@ -361,6 +368,22 @@ public class ChannelCreateMultiFlowSignQRCodeRequest extends AbstractModel {
         this.ForbidPersonalMultipleSign = ForbidPersonalMultipleSign;
     }
 
+    /**
+     * Get 合同流程名称是否应包含扫码签署人的信息，且遵循特定格式（flowname-姓名-手机号后四位）。 例如，通过参数FlowName设定的扫码发起合同名称为“员工入职合同”，当扫码人张三（手机号18800009527）扫码签署时，合同名称将自动生成为“员工入职合同-张三-9527”。 
+     * @return FlowNameAppendScannerInfo 合同流程名称是否应包含扫码签署人的信息，且遵循特定格式（flowname-姓名-手机号后四位）。 例如，通过参数FlowName设定的扫码发起合同名称为“员工入职合同”，当扫码人张三（手机号18800009527）扫码签署时，合同名称将自动生成为“员工入职合同-张三-9527”。
+     */
+    public Boolean getFlowNameAppendScannerInfo() {
+        return this.FlowNameAppendScannerInfo;
+    }
+
+    /**
+     * Set 合同流程名称是否应包含扫码签署人的信息，且遵循特定格式（flowname-姓名-手机号后四位）。 例如，通过参数FlowName设定的扫码发起合同名称为“员工入职合同”，当扫码人张三（手机号18800009527）扫码签署时，合同名称将自动生成为“员工入职合同-张三-9527”。
+     * @param FlowNameAppendScannerInfo 合同流程名称是否应包含扫码签署人的信息，且遵循特定格式（flowname-姓名-手机号后四位）。 例如，通过参数FlowName设定的扫码发起合同名称为“员工入职合同”，当扫码人张三（手机号18800009527）扫码签署时，合同名称将自动生成为“员工入职合同-张三-9527”。
+     */
+    public void setFlowNameAppendScannerInfo(Boolean FlowNameAppendScannerInfo) {
+        this.FlowNameAppendScannerInfo = FlowNameAppendScannerInfo;
+    }
+
     public ChannelCreateMultiFlowSignQRCodeRequest() {
     }
 
@@ -411,6 +434,9 @@ public class ChannelCreateMultiFlowSignQRCodeRequest extends AbstractModel {
         if (source.ForbidPersonalMultipleSign != null) {
             this.ForbidPersonalMultipleSign = new Boolean(source.ForbidPersonalMultipleSign);
         }
+        if (source.FlowNameAppendScannerInfo != null) {
+            this.FlowNameAppendScannerInfo = new Boolean(source.FlowNameAppendScannerInfo);
+        }
     }
 
 
@@ -430,6 +456,7 @@ public class ChannelCreateMultiFlowSignQRCodeRequest extends AbstractModel {
         this.setParamObj(map, prefix + "ApproverRestrictions.", this.ApproverRestrictions);
         this.setParamObj(map, prefix + "Operator.", this.Operator);
         this.setParamSimple(map, prefix + "ForbidPersonalMultipleSign", this.ForbidPersonalMultipleSign);
+        this.setParamSimple(map, prefix + "FlowNameAppendScannerInfo", this.FlowNameAppendScannerInfo);
 
     }
 }

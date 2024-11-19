@@ -45,6 +45,13 @@ public class CreateLocalGatewayRequest extends AbstractModel {
     private String CdcId;
 
     /**
+    * 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get 本地网关名称。 
      * @return LocalGatewayName 本地网关名称。
      */
@@ -92,6 +99,22 @@ public class CreateLocalGatewayRequest extends AbstractModel {
         this.CdcId = CdcId;
     }
 
+    /**
+     * Get 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。 
+     * @return Tags 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
+     * @param Tags 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public CreateLocalGatewayRequest() {
     }
 
@@ -109,6 +132,12 @@ public class CreateLocalGatewayRequest extends AbstractModel {
         if (source.CdcId != null) {
             this.CdcId = new String(source.CdcId);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -119,6 +148,7 @@ public class CreateLocalGatewayRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "LocalGatewayName", this.LocalGatewayName);
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "CdcId", this.CdcId);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

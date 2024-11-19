@@ -60,7 +60,6 @@ public class Run extends AbstractModel {
 
     /**
     * 用户定义ID，单例运行为空。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserDefinedId")
     @Expose
@@ -68,7 +67,6 @@ public class Run extends AbstractModel {
 
     /**
     * 表格ID，单例运行为空。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TableId")
     @Expose
@@ -76,7 +74,6 @@ public class Run extends AbstractModel {
 
     /**
     * 表格行UUID，单例运行为空。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TableRowUuid")
     @Expose
@@ -112,7 +109,6 @@ public class Run extends AbstractModel {
 
     /**
     * 缓存信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Cache")
     @Expose
@@ -220,10 +216,8 @@ public class Run extends AbstractModel {
     }
 
     /**
-     * Get 用户定义ID，单例运行为空。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户定义ID，单例运行为空。 
      * @return UserDefinedId 用户定义ID，单例运行为空。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUserDefinedId() {
         return this.UserDefinedId;
@@ -231,19 +225,15 @@ public class Run extends AbstractModel {
 
     /**
      * Set 用户定义ID，单例运行为空。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UserDefinedId 用户定义ID，单例运行为空。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserDefinedId(String UserDefinedId) {
         this.UserDefinedId = UserDefinedId;
     }
 
     /**
-     * Get 表格ID，单例运行为空。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 表格ID，单例运行为空。 
      * @return TableId 表格ID，单例运行为空。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTableId() {
         return this.TableId;
@@ -251,19 +241,15 @@ public class Run extends AbstractModel {
 
     /**
      * Set 表格ID，单例运行为空。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TableId 表格ID，单例运行为空。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTableId(String TableId) {
         this.TableId = TableId;
     }
 
     /**
-     * Get 表格行UUID，单例运行为空。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 表格行UUID，单例运行为空。 
      * @return TableRowUuid 表格行UUID，单例运行为空。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTableRowUuid() {
         return this.TableRowUuid;
@@ -271,9 +257,7 @@ public class Run extends AbstractModel {
 
     /**
      * Set 表格行UUID，单例运行为空。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TableRowUuid 表格行UUID，单例运行为空。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTableRowUuid(String TableRowUuid) {
         this.TableRowUuid = TableRowUuid;
@@ -348,10 +332,8 @@ public class Run extends AbstractModel {
     }
 
     /**
-     * Get 缓存信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 缓存信息。 
      * @return Cache 缓存信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CacheInfo getCache() {
         return this.Cache;
@@ -359,9 +341,7 @@ public class Run extends AbstractModel {
 
     /**
      * Set 缓存信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Cache 缓存信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCache(CacheInfo Cache) {
         this.Cache = Cache;

@@ -40,7 +40,7 @@ public class WXIoTDeviceInfo extends AbstractModel {
     private String SNTicket;
 
     /**
-    * 模版ID
+    * 模板ID
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ModelId")
@@ -88,9 +88,9 @@ public class WXIoTDeviceInfo extends AbstractModel {
     }
 
     /**
-     * Get 模版ID
+     * Get 模板ID
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ModelId 模版ID
+     * @return ModelId 模板ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getModelId() {
@@ -98,9 +98,9 @@ public class WXIoTDeviceInfo extends AbstractModel {
     }
 
     /**
-     * Set 模版ID
+     * Set 模板ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ModelId 模版ID
+     * @param ModelId 模板ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModelId(String ModelId) {

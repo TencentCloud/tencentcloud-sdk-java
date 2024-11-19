@@ -32,7 +32,6 @@ public class GetRunMetadataFileResponse extends AbstractModel {
 
     /**
     * 批量文件预签名链接，一分钟内有效。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CosSignedUrls")
     @Expose
@@ -62,10 +61,8 @@ public class GetRunMetadataFileResponse extends AbstractModel {
     }
 
     /**
-     * Get 批量文件预签名链接，一分钟内有效。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 批量文件预签名链接，一分钟内有效。 
      * @return CosSignedUrls 批量文件预签名链接，一分钟内有效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getCosSignedUrls() {
         return this.CosSignedUrls;
@@ -73,9 +70,7 @@ public class GetRunMetadataFileResponse extends AbstractModel {
 
     /**
      * Set 批量文件预签名链接，一分钟内有效。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CosSignedUrls 批量文件预签名链接，一分钟内有效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCosSignedUrls(String [] CosSignedUrls) {
         this.CosSignedUrls = CosSignedUrls;

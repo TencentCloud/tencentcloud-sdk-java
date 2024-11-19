@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class ComplexAdaptiveDynamicStreamingTaskStreamPara extends AbstractModel {
 
     /**
-    * 自适应码流模版 ID。
+    * 自适应码流模板 ID。
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-     * Get 自适应码流模版 ID。 
-     * @return Definition 自适应码流模版 ID。
+     * Get 自适应码流模板 ID。 
+     * @return Definition 自适应码流模板 ID。
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 自适应码流模版 ID。
-     * @param Definition 自适应码流模版 ID。
+     * Set 自适应码流模板 ID。
+     * @param Definition 自适应码流模板 ID。
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;

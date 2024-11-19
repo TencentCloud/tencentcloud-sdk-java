@@ -124,6 +124,13 @@ public class User extends AbstractModel {
     private Long LockStatus;
 
     /**
+    * ukey绑定状态 0 - 未绑定 1 - 已绑定
+    */
+    @SerializedName("UKeyStatus")
+    @Expose
+    private Long UKeyStatus;
+
+    /**
     * 状态 与Filter中一致
     */
     @SerializedName("Status")
@@ -370,6 +377,22 @@ public class User extends AbstractModel {
     }
 
     /**
+     * Get ukey绑定状态 0 - 未绑定 1 - 已绑定 
+     * @return UKeyStatus ukey绑定状态 0 - 未绑定 1 - 已绑定
+     */
+    public Long getUKeyStatus() {
+        return this.UKeyStatus;
+    }
+
+    /**
+     * Set ukey绑定状态 0 - 未绑定 1 - 已绑定
+     * @param UKeyStatus ukey绑定状态 0 - 未绑定 1 - 已绑定
+     */
+    public void setUKeyStatus(Long UKeyStatus) {
+        this.UKeyStatus = UKeyStatus;
+    }
+
+    /**
      * Get 状态 与Filter中一致 
      * @return Status 状态 与Filter中一致
      */
@@ -454,6 +477,9 @@ public class User extends AbstractModel {
         if (source.LockStatus != null) {
             this.LockStatus = new Long(source.LockStatus);
         }
+        if (source.UKeyStatus != null) {
+            this.UKeyStatus = new Long(source.UKeyStatus);
+        }
         if (source.Status != null) {
             this.Status = new String(source.Status);
         }
@@ -481,6 +507,7 @@ public class User extends AbstractModel {
         this.setParamSimple(map, prefix + "DepartmentId", this.DepartmentId);
         this.setParamSimple(map, prefix + "ActiveStatus", this.ActiveStatus);
         this.setParamSimple(map, prefix + "LockStatus", this.LockStatus);
+        this.setParamSimple(map, prefix + "UKeyStatus", this.UKeyStatus);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "AclVersion", this.AclVersion);
 

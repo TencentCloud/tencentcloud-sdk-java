@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class Backend extends AbstractModel {
 
     /**
-    * 后端服务的类型，可取：CVM、ENI、CCN
+    * 后端服务的类型，可取：CVM、ENI、CCN、EVM、GLOBALROUTE、NAT、SRV等
     */
     @SerializedName("Type")
     @Expose
@@ -100,16 +100,16 @@ public class Backend extends AbstractModel {
     private String Tag;
 
     /**
-     * Get 后端服务的类型，可取：CVM、ENI、CCN 
-     * @return Type 后端服务的类型，可取：CVM、ENI、CCN
+     * Get 后端服务的类型，可取：CVM、ENI、CCN、EVM、GLOBALROUTE、NAT、SRV等 
+     * @return Type 后端服务的类型，可取：CVM、ENI、CCN、EVM、GLOBALROUTE、NAT、SRV等
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 后端服务的类型，可取：CVM、ENI、CCN
-     * @param Type 后端服务的类型，可取：CVM、ENI、CCN
+     * Set 后端服务的类型，可取：CVM、ENI、CCN、EVM、GLOBALROUTE、NAT、SRV等
+     * @param Type 后端服务的类型，可取：CVM、ENI、CCN、EVM、GLOBALROUTE、NAT、SRV等
      */
     public void setType(String Type) {
         this.Type = Type;

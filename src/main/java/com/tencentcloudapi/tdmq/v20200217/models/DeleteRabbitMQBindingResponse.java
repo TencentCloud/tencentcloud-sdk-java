@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DeleteRabbitMQBindingResponse extends AbstractModel {
 
     /**
-    * 队列名称
+    * 实例名称
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceId")
@@ -55,9 +55,9 @@ public class DeleteRabbitMQBindingResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 队列名称
+     * Get 实例名称
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InstanceId 队列名称
+     * @return InstanceId 实例名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceId() {
@@ -65,9 +65,9 @@ public class DeleteRabbitMQBindingResponse extends AbstractModel {
     }
 
     /**
-     * Set 队列名称
+     * Set 实例名称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InstanceId 队列名称
+     * @param InstanceId 实例名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceId(String InstanceId) {

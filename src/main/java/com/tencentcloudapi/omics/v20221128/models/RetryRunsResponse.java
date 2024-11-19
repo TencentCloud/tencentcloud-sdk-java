@@ -25,7 +25,6 @@ public class RetryRunsResponse extends AbstractModel {
 
     /**
     * 新的任务批次ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RunGroupId")
     @Expose
@@ -39,10 +38,8 @@ public class RetryRunsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 新的任务批次ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 新的任务批次ID。 
      * @return RunGroupId 新的任务批次ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRunGroupId() {
         return this.RunGroupId;
@@ -50,9 +47,7 @@ public class RetryRunsResponse extends AbstractModel {
 
     /**
      * Set 新的任务批次ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RunGroupId 新的任务批次ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRunGroupId(String RunGroupId) {
         this.RunGroupId = RunGroupId;

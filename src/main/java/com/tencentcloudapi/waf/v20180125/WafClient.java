@@ -127,6 +127,17 @@ public class WafClient extends AbstractClient{
     }
 
     /**
+     *批量操作tiga子规则
+     * @param req BatchOperateUserSignatureRulesRequest
+     * @return BatchOperateUserSignatureRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public BatchOperateUserSignatureRulesResponse BatchOperateUserSignatureRules(BatchOperateUserSignatureRulesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "BatchOperateUserSignatureRules", BatchOperateUserSignatureRulesResponse.class);
+    }
+
+    /**
      *本接口用于创建访问日志导出
      * @param req CreateAccessExportRequest
      * @return CreateAccessExportResponse
@@ -930,6 +941,17 @@ public class WafClient extends AbstractClient{
     }
 
     /**
+     *查询Tiga引擎规则类型及状态
+     * @param req DescribeUserSignatureClassRequest
+     * @return DescribeUserSignatureClassResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUserSignatureClassResponse DescribeUserSignatureClass(DescribeUserSignatureClassRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeUserSignatureClass", DescribeUserSignatureClassResponse.class);
+    }
+
+    /**
      *获取用户特征规则列表
      * @param req DescribeUserSignatureRuleRequest
      * @return DescribeUserSignatureRuleResponse
@@ -938,6 +960,17 @@ public class WafClient extends AbstractClient{
     public DescribeUserSignatureRuleResponse DescribeUserSignatureRule(DescribeUserSignatureRuleRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeUserSignatureRule", DescribeUserSignatureRuleResponse.class);
+    }
+
+    /**
+     *获取用户特征规则列表
+     * @param req DescribeUserSignatureRuleV2Request
+     * @return DescribeUserSignatureRuleV2Response
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUserSignatureRuleV2Response DescribeUserSignatureRuleV2(DescribeUserSignatureRuleV2Request req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeUserSignatureRuleV2", DescribeUserSignatureRuleV2Response.class);
     }
 
     /**

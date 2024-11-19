@@ -25,7 +25,6 @@ public class TableRow extends AbstractModel {
 
     /**
     * 表格行UUID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TableRowUuid")
     @Expose
@@ -33,17 +32,14 @@ public class TableRow extends AbstractModel {
 
     /**
     * 表格行内容。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Content")
     @Expose
     private String [] Content;
 
     /**
-     * Get 表格行UUID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 表格行UUID。 
      * @return TableRowUuid 表格行UUID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTableRowUuid() {
         return this.TableRowUuid;
@@ -51,19 +47,15 @@ public class TableRow extends AbstractModel {
 
     /**
      * Set 表格行UUID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TableRowUuid 表格行UUID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTableRowUuid(String TableRowUuid) {
         this.TableRowUuid = TableRowUuid;
     }
 
     /**
-     * Get 表格行内容。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 表格行内容。 
      * @return Content 表格行内容。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getContent() {
         return this.Content;
@@ -71,9 +63,7 @@ public class TableRow extends AbstractModel {
 
     /**
      * Set 表格行内容。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Content 表格行内容。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContent(String [] Content) {
         this.Content = Content;

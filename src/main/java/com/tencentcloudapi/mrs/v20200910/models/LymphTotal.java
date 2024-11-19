@@ -37,7 +37,7 @@ public class LymphTotal extends AbstractModel {
     */
     @SerializedName("TransferNum")
     @Expose
-    private String TransferNum;
+    private Long TransferNum;
 
     /**
     * 总数量
@@ -45,7 +45,7 @@ public class LymphTotal extends AbstractModel {
     */
     @SerializedName("Total")
     @Expose
-    private String Total;
+    private Long Total;
 
     /**
     * 原文
@@ -97,7 +97,7 @@ public class LymphTotal extends AbstractModel {
      * @return TransferNum 转移数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getTransferNum() {
+    public Long getTransferNum() {
         return this.TransferNum;
     }
 
@@ -107,7 +107,7 @@ public class LymphTotal extends AbstractModel {
      * @param TransferNum 转移数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setTransferNum(String TransferNum) {
+    public void setTransferNum(Long TransferNum) {
         this.TransferNum = TransferNum;
     }
 
@@ -117,7 +117,7 @@ public class LymphTotal extends AbstractModel {
      * @return Total 总数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String getTotal() {
+    public Long getTotal() {
         return this.Total;
     }
 
@@ -127,7 +127,7 @@ public class LymphTotal extends AbstractModel {
      * @param Total 总数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setTotal(String Total) {
+    public void setTotal(Long Total) {
         this.Total = Total;
     }
 
@@ -203,10 +203,10 @@ public class LymphTotal extends AbstractModel {
             this.Name = new String(source.Name);
         }
         if (source.TransferNum != null) {
-            this.TransferNum = new String(source.TransferNum);
+            this.TransferNum = new Long(source.TransferNum);
         }
         if (source.Total != null) {
-            this.Total = new String(source.Total);
+            this.Total = new Long(source.Total);
         }
         if (source.Src != null) {
             this.Src = new String(source.Src);

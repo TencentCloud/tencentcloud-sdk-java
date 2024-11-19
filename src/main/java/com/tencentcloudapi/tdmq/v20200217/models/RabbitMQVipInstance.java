@@ -164,6 +164,13 @@ public class RabbitMQVipInstance extends AbstractModel {
     private Long CreateTime;
 
     /**
+    * 实例类型，0 专享版、1 Serverless 版
+    */
+    @SerializedName("InstanceType")
+    @Expose
+    private Long InstanceType;
+
+    /**
      * Get 实例id 
      * @return InstanceId 实例id
      */
@@ -495,6 +502,22 @@ public class RabbitMQVipInstance extends AbstractModel {
         this.CreateTime = CreateTime;
     }
 
+    /**
+     * Get 实例类型，0 专享版、1 Serverless 版 
+     * @return InstanceType 实例类型，0 专享版、1 Serverless 版
+     */
+    public Long getInstanceType() {
+        return this.InstanceType;
+    }
+
+    /**
+     * Set 实例类型，0 专享版、1 Serverless 版
+     * @param InstanceType 实例类型，0 专享版、1 Serverless 版
+     */
+    public void setInstanceType(Long InstanceType) {
+        this.InstanceType = InstanceType;
+    }
+
     public RabbitMQVipInstance() {
     }
 
@@ -563,6 +586,9 @@ public class RabbitMQVipInstance extends AbstractModel {
         if (source.CreateTime != null) {
             this.CreateTime = new Long(source.CreateTime);
         }
+        if (source.InstanceType != null) {
+            this.InstanceType = new Long(source.InstanceType);
+        }
     }
 
 
@@ -589,6 +615,7 @@ public class RabbitMQVipInstance extends AbstractModel {
         this.setParamSimple(map, prefix + "PublicAccessEndpoint", this.PublicAccessEndpoint);
         this.setParamArrayObj(map, prefix + "Vpcs.", this.Vpcs);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
 
     }
 }

@@ -171,6 +171,13 @@ public class SearchCommandResult extends AbstractModel {
     private Long Size;
 
     /**
+    * 签名值
+    */
+    @SerializedName("SignValue")
+    @Expose
+    private String SignValue;
+
+    /**
      * Get 命令输入的时间 
      * @return Time 命令输入的时间
      */
@@ -510,6 +517,22 @@ public class SearchCommandResult extends AbstractModel {
         this.Size = Size;
     }
 
+    /**
+     * Get 签名值 
+     * @return SignValue 签名值
+     */
+    public String getSignValue() {
+        return this.SignValue;
+    }
+
+    /**
+     * Set 签名值
+     * @param SignValue 签名值
+     */
+    public void setSignValue(String SignValue) {
+        this.SignValue = SignValue;
+    }
+
     public SearchCommandResult() {
     }
 
@@ -581,6 +604,9 @@ public class SearchCommandResult extends AbstractModel {
         if (source.Size != null) {
             this.Size = new Long(source.Size);
         }
+        if (source.SignValue != null) {
+            this.SignValue = new String(source.SignValue);
+        }
     }
 
 
@@ -609,6 +635,7 @@ public class SearchCommandResult extends AbstractModel {
         this.setParamSimple(map, prefix + "DeviceDepartmentId", this.DeviceDepartmentId);
         this.setParamSimple(map, prefix + "DeviceDepartmentName", this.DeviceDepartmentName);
         this.setParamSimple(map, prefix + "Size", this.Size);
+        this.setParamSimple(map, prefix + "SignValue", this.SignValue);
 
     }
 }

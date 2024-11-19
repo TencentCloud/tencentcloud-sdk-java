@@ -50,6 +50,13 @@ tool_calls 标识函数调用。
     private Message Message;
 
     /**
+    * 索引值，流式调用时使用该字段。
+    */
+    @SerializedName("Index")
+    @Expose
+    private Long Index;
+
+    /**
      * Get 结束标志位，可能为 stop、 sensitive或者tool_calls。
 stop 表示输出正常结束。
 sensitive 只在开启流式输出审核时会出现，表示安全审核未通过。
@@ -117,6 +124,22 @@ tool_calls 标识函数调用。
         this.Message = Message;
     }
 
+    /**
+     * Get 索引值，流式调用时使用该字段。 
+     * @return Index 索引值，流式调用时使用该字段。
+     */
+    public Long getIndex() {
+        return this.Index;
+    }
+
+    /**
+     * Set 索引值，流式调用时使用该字段。
+     * @param Index 索引值，流式调用时使用该字段。
+     */
+    public void setIndex(Long Index) {
+        this.Index = Index;
+    }
+
     public Choice() {
     }
 
@@ -134,6 +157,9 @@ tool_calls 标识函数调用。
         if (source.Message != null) {
             this.Message = new Message(source.Message);
         }
+        if (source.Index != null) {
+            this.Index = new Long(source.Index);
+        }
     }
 
 
@@ -144,6 +170,7 @@ tool_calls 标识函数调用。
         this.setParamSimple(map, prefix + "FinishReason", this.FinishReason);
         this.setParamObj(map, prefix + "Delta.", this.Delta);
         this.setParamObj(map, prefix + "Message.", this.Message);
+        this.setParamSimple(map, prefix + "Index", this.Index);
 
     }
 }

@@ -253,6 +253,13 @@ public class LaunchConfiguration extends AbstractModel {
     private String ImageFamily;
 
     /**
+    * 本地专用集群 ID。
+    */
+    @SerializedName("DedicatedClusterId")
+    @Expose
+    private String DedicatedClusterId;
+
+    /**
      * Get 实例所属项目ID。 
      * @return ProjectId 实例所属项目ID。
      */
@@ -784,6 +791,22 @@ public class LaunchConfiguration extends AbstractModel {
         this.ImageFamily = ImageFamily;
     }
 
+    /**
+     * Get 本地专用集群 ID。 
+     * @return DedicatedClusterId 本地专用集群 ID。
+     */
+    public String getDedicatedClusterId() {
+        return this.DedicatedClusterId;
+    }
+
+    /**
+     * Set 本地专用集群 ID。
+     * @param DedicatedClusterId 本地专用集群 ID。
+     */
+    public void setDedicatedClusterId(String DedicatedClusterId) {
+        this.DedicatedClusterId = DedicatedClusterId;
+    }
+
     public LaunchConfiguration() {
     }
 
@@ -909,6 +932,9 @@ public class LaunchConfiguration extends AbstractModel {
         if (source.ImageFamily != null) {
             this.ImageFamily = new String(source.ImageFamily);
         }
+        if (source.DedicatedClusterId != null) {
+            this.DedicatedClusterId = new String(source.DedicatedClusterId);
+        }
     }
 
 
@@ -948,6 +974,7 @@ public class LaunchConfiguration extends AbstractModel {
         this.setParamObj(map, prefix + "IPv6InternetAccessible.", this.IPv6InternetAccessible);
         this.setParamArraySimple(map, prefix + "DisasterRecoverGroupIds.", this.DisasterRecoverGroupIds);
         this.setParamSimple(map, prefix + "ImageFamily", this.ImageFamily);
+        this.setParamSimple(map, prefix + "DedicatedClusterId", this.DedicatedClusterId);
 
     }
 }

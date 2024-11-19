@@ -39,7 +39,7 @@ public class LoadBalancerDetail extends AbstractModel {
 
     /**
     * 负载均衡实例的网络类型：
-OPEN：公网属性，INTERNAL：内网属性。
+OPEN：公网属性，INTERNAL：内网属性；对于内网属性的负载均衡，可通过绑定EIP出公网，具体可参考EIP文档。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LoadBalancerType")
@@ -394,10 +394,10 @@ OPEN：公网属性，INTERNAL：内网属性。
 
     /**
      * Get 负载均衡实例的网络类型：
-OPEN：公网属性，INTERNAL：内网属性。
+OPEN：公网属性，INTERNAL：内网属性；对于内网属性的负载均衡，可通过绑定EIP出公网，具体可参考EIP文档。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return LoadBalancerType 负载均衡实例的网络类型：
-OPEN：公网属性，INTERNAL：内网属性。
+OPEN：公网属性，INTERNAL：内网属性；对于内网属性的负载均衡，可通过绑定EIP出公网，具体可参考EIP文档。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLoadBalancerType() {
@@ -406,10 +406,10 @@ OPEN：公网属性，INTERNAL：内网属性。
 
     /**
      * Set 负载均衡实例的网络类型：
-OPEN：公网属性，INTERNAL：内网属性。
+OPEN：公网属性，INTERNAL：内网属性；对于内网属性的负载均衡，可通过绑定EIP出公网，具体可参考EIP文档。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param LoadBalancerType 负载均衡实例的网络类型：
-OPEN：公网属性，INTERNAL：内网属性。
+OPEN：公网属性，INTERNAL：内网属性；对于内网属性的负载均衡，可通过绑定EIP出公网，具体可参考EIP文档。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLoadBalancerType(String LoadBalancerType) {

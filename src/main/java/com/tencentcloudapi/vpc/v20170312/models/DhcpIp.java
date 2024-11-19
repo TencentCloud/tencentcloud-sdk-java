@@ -96,6 +96,14 @@ public class DhcpIp extends AbstractModel {
     private String CreatedTime;
 
     /**
+    * 标签键值对。	
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TagSet")
+    @Expose
+    private Tag [] TagSet;
+
+    /**
      * Get `DhcpIp`的`ID`，是`DhcpIp`的唯一标识。 
      * @return DhcpIpId `DhcpIp`的`ID`，是`DhcpIp`的唯一标识。
      */
@@ -263,6 +271,26 @@ public class DhcpIp extends AbstractModel {
         this.CreatedTime = CreatedTime;
     }
 
+    /**
+     * Get 标签键值对。	
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TagSet 标签键值对。	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Tag [] getTagSet() {
+        return this.TagSet;
+    }
+
+    /**
+     * Set 标签键值对。	
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TagSet 标签键值对。	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTagSet(Tag [] TagSet) {
+        this.TagSet = TagSet;
+    }
+
     public DhcpIp() {
     }
 
@@ -301,6 +329,12 @@ public class DhcpIp extends AbstractModel {
         if (source.CreatedTime != null) {
             this.CreatedTime = new String(source.CreatedTime);
         }
+        if (source.TagSet != null) {
+            this.TagSet = new Tag[source.TagSet.length];
+            for (int i = 0; i < source.TagSet.length; i++) {
+                this.TagSet[i] = new Tag(source.TagSet[i]);
+            }
+        }
     }
 
 
@@ -318,6 +352,7 @@ public class DhcpIp extends AbstractModel {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "State", this.State);
         this.setParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
+        this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
 
     }
 }

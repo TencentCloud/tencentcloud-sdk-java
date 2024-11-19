@@ -25,7 +25,6 @@ public class NFOption extends AbstractModel {
 
     /**
     * Config。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Config")
     @Expose
@@ -33,7 +32,6 @@ public class NFOption extends AbstractModel {
 
     /**
     * Profile。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Profile")
     @Expose
@@ -41,7 +39,6 @@ public class NFOption extends AbstractModel {
 
     /**
     * Report。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Report")
     @Expose
@@ -49,7 +46,6 @@ public class NFOption extends AbstractModel {
 
     /**
     * Resume。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Resume")
     @Expose
@@ -59,7 +55,6 @@ public class NFOption extends AbstractModel {
     * Nextflow引擎版本，取值范围：
 - 22.10.7
 - 23.10.1
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NFVersion")
     @Expose
@@ -67,17 +62,14 @@ public class NFOption extends AbstractModel {
 
     /**
     * 启动路径。可填写指定缓存卷内的绝对路径，nextflow run 命令将在此路径执行。当WorkDir为COS路径时必填；当WorkDir为缓存卷路径时选填，不填默认使用WorkDir作为LaunchDir。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LaunchDir")
     @Expose
     private String LaunchDir;
 
     /**
-     * Get Config。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Config。 
      * @return Config Config。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getConfig() {
         return this.Config;
@@ -85,19 +77,15 @@ public class NFOption extends AbstractModel {
 
     /**
      * Set Config。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Config Config。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConfig(String Config) {
         this.Config = Config;
     }
 
     /**
-     * Get Profile。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Profile。 
      * @return Profile Profile。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProfile() {
         return this.Profile;
@@ -105,19 +93,15 @@ public class NFOption extends AbstractModel {
 
     /**
      * Set Profile。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Profile Profile。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProfile(String Profile) {
         this.Profile = Profile;
     }
 
     /**
-     * Get Report。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Report。 
      * @return Report Report。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getReport() {
         return this.Report;
@@ -125,19 +109,15 @@ public class NFOption extends AbstractModel {
 
     /**
      * Set Report。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Report Report。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReport(Boolean Report) {
         this.Report = Report;
     }
 
     /**
-     * Get Resume。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Resume。 
      * @return Resume Resume。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getResume() {
         return this.Resume;
@@ -145,9 +125,7 @@ public class NFOption extends AbstractModel {
 
     /**
      * Set Resume。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Resume Resume。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResume(Boolean Resume) {
         this.Resume = Resume;
@@ -156,12 +134,10 @@ public class NFOption extends AbstractModel {
     /**
      * Get Nextflow引擎版本，取值范围：
 - 22.10.7
-- 23.10.1
-注意：此字段可能返回 null，表示取不到有效值。 
+- 23.10.1 
      * @return NFVersion Nextflow引擎版本，取值范围：
 - 22.10.7
 - 23.10.1
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNFVersion() {
         return this.NFVersion;
@@ -171,21 +147,17 @@ public class NFOption extends AbstractModel {
      * Set Nextflow引擎版本，取值范围：
 - 22.10.7
 - 23.10.1
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NFVersion Nextflow引擎版本，取值范围：
 - 22.10.7
 - 23.10.1
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNFVersion(String NFVersion) {
         this.NFVersion = NFVersion;
     }
 
     /**
-     * Get 启动路径。可填写指定缓存卷内的绝对路径，nextflow run 命令将在此路径执行。当WorkDir为COS路径时必填；当WorkDir为缓存卷路径时选填，不填默认使用WorkDir作为LaunchDir。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 启动路径。可填写指定缓存卷内的绝对路径，nextflow run 命令将在此路径执行。当WorkDir为COS路径时必填；当WorkDir为缓存卷路径时选填，不填默认使用WorkDir作为LaunchDir。 
      * @return LaunchDir 启动路径。可填写指定缓存卷内的绝对路径，nextflow run 命令将在此路径执行。当WorkDir为COS路径时必填；当WorkDir为缓存卷路径时选填，不填默认使用WorkDir作为LaunchDir。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLaunchDir() {
         return this.LaunchDir;
@@ -193,9 +165,7 @@ public class NFOption extends AbstractModel {
 
     /**
      * Set 启动路径。可填写指定缓存卷内的绝对路径，nextflow run 命令将在此路径执行。当WorkDir为COS路径时必填；当WorkDir为缓存卷路径时选填，不填默认使用WorkDir作为LaunchDir。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LaunchDir 启动路径。可填写指定缓存卷内的绝对路径，nextflow run 命令将在此路径执行。当WorkDir为COS路径时必填；当WorkDir为缓存卷路径时选填，不填默认使用WorkDir作为LaunchDir。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLaunchDir(String LaunchDir) {
         this.LaunchDir = LaunchDir;

@@ -91,6 +91,7 @@ InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定�
 <li>POSTPAID_BY_HOUR：按小时后付费</li>
 <li>SPOTPAID：竞价付费</li>
 <li>PREPAID：预付费，即包年包月</li>
+<li>CDCPAID：专用集群付费</li>
     */
     @SerializedName("InstanceChargeType")
     @Expose
@@ -216,6 +217,13 @@ InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定�
     @SerializedName("ImageFamily")
     @Expose
     private String ImageFamily;
+
+    /**
+    * 本地专用集群ID。
+    */
+    @SerializedName("DedicatedClusterId")
+    @Expose
+    private String DedicatedClusterId;
 
     /**
      * Get 启动配置ID 
@@ -377,11 +385,13 @@ InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定�
      * Get 实例计费类型。具体取值范围如下：
 <li>POSTPAID_BY_HOUR：按小时后付费</li>
 <li>SPOTPAID：竞价付费</li>
-<li>PREPAID：预付费，即包年包月</li> 
+<li>PREPAID：预付费，即包年包月</li>
+<li>CDCPAID：专用集群付费</li> 
      * @return InstanceChargeType 实例计费类型。具体取值范围如下：
 <li>POSTPAID_BY_HOUR：按小时后付费</li>
 <li>SPOTPAID：竞价付费</li>
 <li>PREPAID：预付费，即包年包月</li>
+<li>CDCPAID：专用集群付费</li>
      */
     public String getInstanceChargeType() {
         return this.InstanceChargeType;
@@ -392,10 +402,12 @@ InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定�
 <li>POSTPAID_BY_HOUR：按小时后付费</li>
 <li>SPOTPAID：竞价付费</li>
 <li>PREPAID：预付费，即包年包月</li>
+<li>CDCPAID：专用集群付费</li>
      * @param InstanceChargeType 实例计费类型。具体取值范围如下：
 <li>POSTPAID_BY_HOUR：按小时后付费</li>
 <li>SPOTPAID：竞价付费</li>
 <li>PREPAID：预付费，即包年包月</li>
+<li>CDCPAID：专用集群付费</li>
      */
     public void setInstanceChargeType(String InstanceChargeType) {
         this.InstanceChargeType = InstanceChargeType;
@@ -705,6 +717,22 @@ InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定�
         this.ImageFamily = ImageFamily;
     }
 
+    /**
+     * Get 本地专用集群ID。 
+     * @return DedicatedClusterId 本地专用集群ID。
+     */
+    public String getDedicatedClusterId() {
+        return this.DedicatedClusterId;
+    }
+
+    /**
+     * Set 本地专用集群ID。
+     * @param DedicatedClusterId 本地专用集群ID。
+     */
+    public void setDedicatedClusterId(String DedicatedClusterId) {
+        this.DedicatedClusterId = DedicatedClusterId;
+    }
+
     public ModifyLaunchConfigurationAttributesRequest() {
     }
 
@@ -800,6 +828,9 @@ InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定�
         if (source.ImageFamily != null) {
             this.ImageFamily = new String(source.ImageFamily);
         }
+        if (source.DedicatedClusterId != null) {
+            this.DedicatedClusterId = new String(source.DedicatedClusterId);
+        }
     }
 
 
@@ -831,6 +862,7 @@ InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定�
         this.setParamObj(map, prefix + "LoginSettings.", this.LoginSettings);
         this.setParamArrayObj(map, prefix + "InstanceTags.", this.InstanceTags);
         this.setParamSimple(map, prefix + "ImageFamily", this.ImageFamily);
+        this.setParamSimple(map, prefix + "DedicatedClusterId", this.DedicatedClusterId);
 
     }
 }

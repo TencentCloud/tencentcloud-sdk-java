@@ -107,6 +107,7 @@ public class CreateLaunchConfigurationRequest extends AbstractModel {
 <li>POSTPAID_BY_HOUR：按小时后付费</li>
 <li>SPOTPAID：竞价付费</li>
 <li>PREPAID：预付费，即包年包月</li>
+<li>CDCPAID：专用集群付费</li>
     */
     @SerializedName("InstanceChargeType")
     @Expose
@@ -219,6 +220,13 @@ public class CreateLaunchConfigurationRequest extends AbstractModel {
     @SerializedName("ImageFamily")
     @Expose
     private String ImageFamily;
+
+    /**
+    * 本地专用集群ID。
+    */
+    @SerializedName("DedicatedClusterId")
+    @Expose
+    private String DedicatedClusterId;
 
     /**
      * Get 启动配置显示名称。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超60个字节。 
@@ -408,11 +416,13 @@ public class CreateLaunchConfigurationRequest extends AbstractModel {
      * Get 实例计费类型，CVM默认值按照POSTPAID_BY_HOUR处理。
 <li>POSTPAID_BY_HOUR：按小时后付费</li>
 <li>SPOTPAID：竞价付费</li>
-<li>PREPAID：预付费，即包年包月</li> 
+<li>PREPAID：预付费，即包年包月</li>
+<li>CDCPAID：专用集群付费</li> 
      * @return InstanceChargeType 实例计费类型，CVM默认值按照POSTPAID_BY_HOUR处理。
 <li>POSTPAID_BY_HOUR：按小时后付费</li>
 <li>SPOTPAID：竞价付费</li>
 <li>PREPAID：预付费，即包年包月</li>
+<li>CDCPAID：专用集群付费</li>
      */
     public String getInstanceChargeType() {
         return this.InstanceChargeType;
@@ -423,10 +433,12 @@ public class CreateLaunchConfigurationRequest extends AbstractModel {
 <li>POSTPAID_BY_HOUR：按小时后付费</li>
 <li>SPOTPAID：竞价付费</li>
 <li>PREPAID：预付费，即包年包月</li>
+<li>CDCPAID：专用集群付费</li>
      * @param InstanceChargeType 实例计费类型，CVM默认值按照POSTPAID_BY_HOUR处理。
 <li>POSTPAID_BY_HOUR：按小时后付费</li>
 <li>SPOTPAID：竞价付费</li>
 <li>PREPAID：预付费，即包年包月</li>
+<li>CDCPAID：专用集群付费</li>
      */
     public void setInstanceChargeType(String InstanceChargeType) {
         this.InstanceChargeType = InstanceChargeType;
@@ -696,6 +708,22 @@ public class CreateLaunchConfigurationRequest extends AbstractModel {
         this.ImageFamily = ImageFamily;
     }
 
+    /**
+     * Get 本地专用集群ID。 
+     * @return DedicatedClusterId 本地专用集群ID。
+     */
+    public String getDedicatedClusterId() {
+        return this.DedicatedClusterId;
+    }
+
+    /**
+     * Set 本地专用集群ID。
+     * @param DedicatedClusterId 本地专用集群ID。
+     */
+    public void setDedicatedClusterId(String DedicatedClusterId) {
+        this.DedicatedClusterId = DedicatedClusterId;
+    }
+
     public CreateLaunchConfigurationRequest() {
     }
 
@@ -800,6 +828,9 @@ public class CreateLaunchConfigurationRequest extends AbstractModel {
         if (source.ImageFamily != null) {
             this.ImageFamily = new String(source.ImageFamily);
         }
+        if (source.DedicatedClusterId != null) {
+            this.DedicatedClusterId = new String(source.DedicatedClusterId);
+        }
     }
 
 
@@ -833,6 +864,7 @@ public class CreateLaunchConfigurationRequest extends AbstractModel {
         this.setParamObj(map, prefix + "IPv6InternetAccessible.", this.IPv6InternetAccessible);
         this.setParamArraySimple(map, prefix + "DisasterRecoverGroupIds.", this.DisasterRecoverGroupIds);
         this.setParamSimple(map, prefix + "ImageFamily", this.ImageFamily);
+        this.setParamSimple(map, prefix + "DedicatedClusterId", this.DedicatedClusterId);
 
     }
 }

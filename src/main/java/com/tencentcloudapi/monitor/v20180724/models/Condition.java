@@ -127,6 +127,14 @@ public class Condition extends AbstractModel {
     private AlarmHierarchicalValue HierarchicalValue;
 
     /**
+    * 指标类型，用于区分动态指标
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RuleType")
+    @Expose
+    private String RuleType;
+
+    /**
      * Get 告警通知频率 
      * @return AlarmNotifyPeriod 告警通知频率
      */
@@ -370,6 +378,26 @@ public class Condition extends AbstractModel {
         this.HierarchicalValue = HierarchicalValue;
     }
 
+    /**
+     * Get 指标类型，用于区分动态指标
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RuleType 指标类型，用于区分动态指标
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRuleType() {
+        return this.RuleType;
+    }
+
+    /**
+     * Set 指标类型，用于区分动态指标
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RuleType 指标类型，用于区分动态指标
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRuleType(String RuleType) {
+        this.RuleType = RuleType;
+    }
+
     public Condition() {
     }
 
@@ -420,6 +448,9 @@ public class Condition extends AbstractModel {
         if (source.HierarchicalValue != null) {
             this.HierarchicalValue = new AlarmHierarchicalValue(source.HierarchicalValue);
         }
+        if (source.RuleType != null) {
+            this.RuleType = new String(source.RuleType);
+        }
     }
 
 
@@ -441,6 +472,7 @@ public class Condition extends AbstractModel {
         this.setParamSimple(map, prefix + "IsOpen", this.IsOpen);
         this.setParamSimple(map, prefix + "ProductId", this.ProductId);
         this.setParamObj(map, prefix + "HierarchicalValue.", this.HierarchicalValue);
+        this.setParamSimple(map, prefix + "RuleType", this.RuleType);
 
     }
 }
