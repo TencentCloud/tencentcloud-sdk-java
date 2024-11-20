@@ -31,7 +31,7 @@ public class AddClusterStorageOptionRequest extends AbstractModel {
     private String ClusterId;
 
     /**
-    * 集群存储选项。
+    * 集群存储选项；集群已存在的节点和新增节点都会挂载此存储。
     */
     @SerializedName("StorageOption")
     @Expose
@@ -54,16 +54,16 @@ public class AddClusterStorageOptionRequest extends AbstractModel {
     }
 
     /**
-     * Get 集群存储选项。 
-     * @return StorageOption 集群存储选项。
+     * Get 集群存储选项；集群已存在的节点和新增节点都会挂载此存储。 
+     * @return StorageOption 集群存储选项；集群已存在的节点和新增节点都会挂载此存储。
      */
     public StorageOption getStorageOption() {
         return this.StorageOption;
     }
 
     /**
-     * Set 集群存储选项。
-     * @param StorageOption 集群存储选项。
+     * Set 集群存储选项；集群已存在的节点和新增节点都会挂载此存储。
+     * @param StorageOption 集群存储选项；集群已存在的节点和新增节点都会挂载此存储。
      */
     public void setStorageOption(StorageOption StorageOption) {
         this.StorageOption = StorageOption;

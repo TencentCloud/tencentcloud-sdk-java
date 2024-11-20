@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyNetworkConfigRequest extends AbstractModel {
 
     /**
-    * 实例 ID。
+    * 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -49,14 +49,19 @@ public class ModifyNetworkConfigRequest extends AbstractModel {
     private String Vip;
 
     /**
-    * 指修改后的私有网络 ID，当**Operation**为**changeVpc**或**changeBaseToVpc**时，需配置该参数。
+    * 指修改后的私有网络 ID。
+- 当**Operation**为**changeVpc**或**changeBaseToVpc**时，需配置该参数。
+- 请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)，切换至**实例详情**页面，在**网络信息**区域，单击所属网络后面的私有网络名称，获取私有网络 ID。
+
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 指修改后的私有网络所属子网 ID，当**Operation**为**changeVpc**或**changeBaseToVpc**时，需配置该参数。
+    * 指修改后的私有网络所属子网 ID。
+- 当**Operation**为**changeVpc**或**changeBaseToVpc**时，需配置该参数。
+- 请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)，切换至**实例详情**页面，在**网络信息**区域，单击所属网络后面的子网名称，获取子网ID。
     */
     @SerializedName("SubnetId")
     @Expose
@@ -66,7 +71,6 @@ public class ModifyNetworkConfigRequest extends AbstractModel {
     * 原内网 IPv4 地址保留时长。
 - 单位：天。
 - 取值范围：0、1、2、3、7、15。
-
 **说明**：设置原地址保留时长需最新版SDK，否则原地址将立即释放，查看SDK版本，请参见 [SDK中心](https://cloud.tencent.com/document/sdk)。
     */
     @SerializedName("Recycle")
@@ -81,16 +85,16 @@ public class ModifyNetworkConfigRequest extends AbstractModel {
     private Long VPort;
 
     /**
-     * Get 实例 ID。 
-     * @return InstanceId 实例 ID。
+     * Get 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。 
+     * @return InstanceId 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例 ID。
-     * @param InstanceId 实例 ID。
+     * Set 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
+     * @param InstanceId 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -145,32 +149,52 @@ public class ModifyNetworkConfigRequest extends AbstractModel {
     }
 
     /**
-     * Get 指修改后的私有网络 ID，当**Operation**为**changeVpc**或**changeBaseToVpc**时，需配置该参数。 
-     * @return VpcId 指修改后的私有网络 ID，当**Operation**为**changeVpc**或**changeBaseToVpc**时，需配置该参数。
+     * Get 指修改后的私有网络 ID。
+- 当**Operation**为**changeVpc**或**changeBaseToVpc**时，需配置该参数。
+- 请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)，切换至**实例详情**页面，在**网络信息**区域，单击所属网络后面的私有网络名称，获取私有网络 ID。
+ 
+     * @return VpcId 指修改后的私有网络 ID。
+- 当**Operation**为**changeVpc**或**changeBaseToVpc**时，需配置该参数。
+- 请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)，切换至**实例详情**页面，在**网络信息**区域，单击所属网络后面的私有网络名称，获取私有网络 ID。
+
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set 指修改后的私有网络 ID，当**Operation**为**changeVpc**或**changeBaseToVpc**时，需配置该参数。
-     * @param VpcId 指修改后的私有网络 ID，当**Operation**为**changeVpc**或**changeBaseToVpc**时，需配置该参数。
+     * Set 指修改后的私有网络 ID。
+- 当**Operation**为**changeVpc**或**changeBaseToVpc**时，需配置该参数。
+- 请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)，切换至**实例详情**页面，在**网络信息**区域，单击所属网络后面的私有网络名称，获取私有网络 ID。
+
+     * @param VpcId 指修改后的私有网络 ID。
+- 当**Operation**为**changeVpc**或**changeBaseToVpc**时，需配置该参数。
+- 请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)，切换至**实例详情**页面，在**网络信息**区域，单击所属网络后面的私有网络名称，获取私有网络 ID。
+
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 指修改后的私有网络所属子网 ID，当**Operation**为**changeVpc**或**changeBaseToVpc**时，需配置该参数。 
-     * @return SubnetId 指修改后的私有网络所属子网 ID，当**Operation**为**changeVpc**或**changeBaseToVpc**时，需配置该参数。
+     * Get 指修改后的私有网络所属子网 ID。
+- 当**Operation**为**changeVpc**或**changeBaseToVpc**时，需配置该参数。
+- 请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)，切换至**实例详情**页面，在**网络信息**区域，单击所属网络后面的子网名称，获取子网ID。 
+     * @return SubnetId 指修改后的私有网络所属子网 ID。
+- 当**Operation**为**changeVpc**或**changeBaseToVpc**时，需配置该参数。
+- 请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)，切换至**实例详情**页面，在**网络信息**区域，单击所属网络后面的子网名称，获取子网ID。
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 指修改后的私有网络所属子网 ID，当**Operation**为**changeVpc**或**changeBaseToVpc**时，需配置该参数。
-     * @param SubnetId 指修改后的私有网络所属子网 ID，当**Operation**为**changeVpc**或**changeBaseToVpc**时，需配置该参数。
+     * Set 指修改后的私有网络所属子网 ID。
+- 当**Operation**为**changeVpc**或**changeBaseToVpc**时，需配置该参数。
+- 请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)，切换至**实例详情**页面，在**网络信息**区域，单击所属网络后面的子网名称，获取子网ID。
+     * @param SubnetId 指修改后的私有网络所属子网 ID。
+- 当**Operation**为**changeVpc**或**changeBaseToVpc**时，需配置该参数。
+- 请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)，切换至**实例详情**页面，在**网络信息**区域，单击所属网络后面的子网名称，获取子网ID。
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
@@ -180,12 +204,10 @@ public class ModifyNetworkConfigRequest extends AbstractModel {
      * Get 原内网 IPv4 地址保留时长。
 - 单位：天。
 - 取值范围：0、1、2、3、7、15。
-
 **说明**：设置原地址保留时长需最新版SDK，否则原地址将立即释放，查看SDK版本，请参见 [SDK中心](https://cloud.tencent.com/document/sdk)。 
      * @return Recycle 原内网 IPv4 地址保留时长。
 - 单位：天。
 - 取值范围：0、1、2、3、7、15。
-
 **说明**：设置原地址保留时长需最新版SDK，否则原地址将立即释放，查看SDK版本，请参见 [SDK中心](https://cloud.tencent.com/document/sdk)。
      */
     public Long getRecycle() {
@@ -196,12 +218,10 @@ public class ModifyNetworkConfigRequest extends AbstractModel {
      * Set 原内网 IPv4 地址保留时长。
 - 单位：天。
 - 取值范围：0、1、2、3、7、15。
-
 **说明**：设置原地址保留时长需最新版SDK，否则原地址将立即释放，查看SDK版本，请参见 [SDK中心](https://cloud.tencent.com/document/sdk)。
      * @param Recycle 原内网 IPv4 地址保留时长。
 - 单位：天。
 - 取值范围：0、1、2、3、7、15。
-
 **说明**：设置原地址保留时长需最新版SDK，否则原地址将立即释放，查看SDK版本，请参见 [SDK中心](https://cloud.tencent.com/document/sdk)。
      */
     public void setRecycle(Long Recycle) {

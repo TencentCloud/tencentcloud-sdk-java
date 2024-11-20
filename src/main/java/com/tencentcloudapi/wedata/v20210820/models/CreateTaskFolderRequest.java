@@ -38,7 +38,7 @@ public class CreateTaskFolderRequest extends AbstractModel {
     private String FolderName;
 
     /**
-    * 工作量ID
+    * 工作流ID
     */
     @SerializedName("WorkflowId")
     @Expose
@@ -50,6 +50,13 @@ public class CreateTaskFolderRequest extends AbstractModel {
     @SerializedName("ParentFolderId")
     @Expose
     private String ParentFolderId;
+
+    /**
+    * 目录分类
+    */
+    @SerializedName("TaskNodeType")
+    @Expose
+    private String TaskNodeType;
 
     /**
      * Get 项目Id 
@@ -84,16 +91,16 @@ public class CreateTaskFolderRequest extends AbstractModel {
     }
 
     /**
-     * Get 工作量ID 
-     * @return WorkflowId 工作量ID
+     * Get 工作流ID 
+     * @return WorkflowId 工作流ID
      */
     public String getWorkflowId() {
         return this.WorkflowId;
     }
 
     /**
-     * Set 工作量ID
-     * @param WorkflowId 工作量ID
+     * Set 工作流ID
+     * @param WorkflowId 工作流ID
      */
     public void setWorkflowId(String WorkflowId) {
         this.WorkflowId = WorkflowId;
@@ -113,6 +120,22 @@ public class CreateTaskFolderRequest extends AbstractModel {
      */
     public void setParentFolderId(String ParentFolderId) {
         this.ParentFolderId = ParentFolderId;
+    }
+
+    /**
+     * Get 目录分类 
+     * @return TaskNodeType 目录分类
+     */
+    public String getTaskNodeType() {
+        return this.TaskNodeType;
+    }
+
+    /**
+     * Set 目录分类
+     * @param TaskNodeType 目录分类
+     */
+    public void setTaskNodeType(String TaskNodeType) {
+        this.TaskNodeType = TaskNodeType;
     }
 
     public CreateTaskFolderRequest() {
@@ -135,6 +158,9 @@ public class CreateTaskFolderRequest extends AbstractModel {
         if (source.ParentFolderId != null) {
             this.ParentFolderId = new String(source.ParentFolderId);
         }
+        if (source.TaskNodeType != null) {
+            this.TaskNodeType = new String(source.TaskNodeType);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class CreateTaskFolderRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "FolderName", this.FolderName);
         this.setParamSimple(map, prefix + "WorkflowId", this.WorkflowId);
         this.setParamSimple(map, prefix + "ParentFolderId", this.ParentFolderId);
+        this.setParamSimple(map, prefix + "TaskNodeType", this.TaskNodeType);
 
     }
 }

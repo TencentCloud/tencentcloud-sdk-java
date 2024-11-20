@@ -72,6 +72,13 @@ LOCAL_GATEWAY：本地网关。
     private String Limit;
 
     /**
+    * 是否需要获取路由策略信息，默认获取，当控制台不需要拉取路由策略信息时，改为False。
+    */
+    @SerializedName("NeedRouterInfo")
+    @Expose
+    private Boolean NeedRouterInfo;
+
+    /**
      * Get 过滤条件，参数不支持同时指定RouteTableIds和Filters。
 <li>route-table-id - String - （过滤条件）路由表实例ID。</li>
 <li>route-table-name - String - （过滤条件）路由表名称。</li>
@@ -215,6 +222,22 @@ LOCAL_GATEWAY：本地网关。
         this.Limit = Limit;
     }
 
+    /**
+     * Get 是否需要获取路由策略信息，默认获取，当控制台不需要拉取路由策略信息时，改为False。 
+     * @return NeedRouterInfo 是否需要获取路由策略信息，默认获取，当控制台不需要拉取路由策略信息时，改为False。
+     */
+    public Boolean getNeedRouterInfo() {
+        return this.NeedRouterInfo;
+    }
+
+    /**
+     * Set 是否需要获取路由策略信息，默认获取，当控制台不需要拉取路由策略信息时，改为False。
+     * @param NeedRouterInfo 是否需要获取路由策略信息，默认获取，当控制台不需要拉取路由策略信息时，改为False。
+     */
+    public void setNeedRouterInfo(Boolean NeedRouterInfo) {
+        this.NeedRouterInfo = NeedRouterInfo;
+    }
+
     public DescribeRouteTablesRequest() {
     }
 
@@ -241,6 +264,9 @@ LOCAL_GATEWAY：本地网关。
         if (source.Limit != null) {
             this.Limit = new String(source.Limit);
         }
+        if (source.NeedRouterInfo != null) {
+            this.NeedRouterInfo = new Boolean(source.NeedRouterInfo);
+        }
     }
 
 
@@ -252,6 +278,7 @@ LOCAL_GATEWAY：本地网关。
         this.setParamArraySimple(map, prefix + "RouteTableIds.", this.RouteTableIds);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "NeedRouterInfo", this.NeedRouterInfo);
 
     }
 }

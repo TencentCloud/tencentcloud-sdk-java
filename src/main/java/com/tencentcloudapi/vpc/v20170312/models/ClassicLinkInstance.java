@@ -25,6 +25,7 @@ public class ClassicLinkInstance extends AbstractModel {
 
     /**
     * VPC实例ID
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcId")
     @Expose
@@ -32,14 +33,17 @@ public class ClassicLinkInstance extends AbstractModel {
 
     /**
     * 云服务器实例唯一ID
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-     * Get VPC实例ID 
+     * Get VPC实例ID
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return VpcId VPC实例ID
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVpcId() {
         return this.VpcId;
@@ -47,15 +51,19 @@ public class ClassicLinkInstance extends AbstractModel {
 
     /**
      * Set VPC实例ID
+注意：此字段可能返回 null，表示取不到有效值。
      * @param VpcId VPC实例ID
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 云服务器实例唯一ID 
+     * Get 云服务器实例唯一ID
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return InstanceId 云服务器实例唯一ID
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceId() {
         return this.InstanceId;
@@ -63,7 +71,9 @@ public class ClassicLinkInstance extends AbstractModel {
 
     /**
      * Set 云服务器实例唯一ID
+注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceId 云服务器实例唯一ID
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class ModifyReplicationGroupRequest extends AbstractModel {
 
     /**
-    * 复制组字符串ID
+    * 复制组ID。请登录[Redis控制台的全球复制](https://console.cloud.tencent.com/redis/replication)页面获取复制组 ID。
     */
     @SerializedName("GroupId")
     @Expose
     private String GroupId;
 
     /**
-    * 复制组名称
+    * 修改后的复制组名称。
     */
     @SerializedName("GroupName")
     @Expose
     private String GroupName;
 
     /**
-    * 备注
+    * 备注描述。
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-     * Get 复制组字符串ID 
-     * @return GroupId 复制组字符串ID
+     * Get 复制组ID。请登录[Redis控制台的全球复制](https://console.cloud.tencent.com/redis/replication)页面获取复制组 ID。 
+     * @return GroupId 复制组ID。请登录[Redis控制台的全球复制](https://console.cloud.tencent.com/redis/replication)页面获取复制组 ID。
      */
     public String getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set 复制组字符串ID
-     * @param GroupId 复制组字符串ID
+     * Set 复制组ID。请登录[Redis控制台的全球复制](https://console.cloud.tencent.com/redis/replication)页面获取复制组 ID。
+     * @param GroupId 复制组ID。请登录[Redis控制台的全球复制](https://console.cloud.tencent.com/redis/replication)页面获取复制组 ID。
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;
     }
 
     /**
-     * Get 复制组名称 
-     * @return GroupName 复制组名称
+     * Get 修改后的复制组名称。 
+     * @return GroupName 修改后的复制组名称。
      */
     public String getGroupName() {
         return this.GroupName;
     }
 
     /**
-     * Set 复制组名称
-     * @param GroupName 复制组名称
+     * Set 修改后的复制组名称。
+     * @param GroupName 修改后的复制组名称。
      */
     public void setGroupName(String GroupName) {
         this.GroupName = GroupName;
     }
 
     /**
-     * Get 备注 
-     * @return Remark 备注
+     * Get 备注描述。 
+     * @return Remark 备注描述。
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set 备注
-     * @param Remark 备注
+     * Set 备注描述。
+     * @param Remark 备注描述。
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;

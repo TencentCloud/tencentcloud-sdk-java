@@ -186,6 +186,16 @@ public class CreateOrganizationAuthUrlRequest extends AbstractModel {
     private String Endpoint;
 
     /**
+    * 指定企业初始化引导，现在可以配置如下的选项：
+
+<b>1</b>: 启用此选项后，在企业认证的最终步骤将添加创建印章的引导。如下图的位置
+![image](https://qcloudimg.tencent-cloud.cn/raw/88e0b45095a5c589de8995462ad755dc.jpg)
+    */
+    @SerializedName("Initialization")
+    @Expose
+    private Long [] Initialization;
+
+    /**
      * Get 操作人信息 
      * @return Operator 操作人信息
      */
@@ -605,6 +615,34 @@ public class CreateOrganizationAuthUrlRequest extends AbstractModel {
         this.Endpoint = Endpoint;
     }
 
+    /**
+     * Get 指定企业初始化引导，现在可以配置如下的选项：
+
+<b>1</b>: 启用此选项后，在企业认证的最终步骤将添加创建印章的引导。如下图的位置
+![image](https://qcloudimg.tencent-cloud.cn/raw/88e0b45095a5c589de8995462ad755dc.jpg) 
+     * @return Initialization 指定企业初始化引导，现在可以配置如下的选项：
+
+<b>1</b>: 启用此选项后，在企业认证的最终步骤将添加创建印章的引导。如下图的位置
+![image](https://qcloudimg.tencent-cloud.cn/raw/88e0b45095a5c589de8995462ad755dc.jpg)
+     */
+    public Long [] getInitialization() {
+        return this.Initialization;
+    }
+
+    /**
+     * Set 指定企业初始化引导，现在可以配置如下的选项：
+
+<b>1</b>: 启用此选项后，在企业认证的最终步骤将添加创建印章的引导。如下图的位置
+![image](https://qcloudimg.tencent-cloud.cn/raw/88e0b45095a5c589de8995462ad755dc.jpg)
+     * @param Initialization 指定企业初始化引导，现在可以配置如下的选项：
+
+<b>1</b>: 启用此选项后，在企业认证的最终步骤将添加创建印章的引导。如下图的位置
+![image](https://qcloudimg.tencent-cloud.cn/raw/88e0b45095a5c589de8995462ad755dc.jpg)
+     */
+    public void setInitialization(Long [] Initialization) {
+        this.Initialization = Initialization;
+    }
+
     public CreateOrganizationAuthUrlRequest() {
     }
 
@@ -673,6 +711,12 @@ public class CreateOrganizationAuthUrlRequest extends AbstractModel {
         if (source.Endpoint != null) {
             this.Endpoint = new String(source.Endpoint);
         }
+        if (source.Initialization != null) {
+            this.Initialization = new Long[source.Initialization.length];
+            for (int i = 0; i < source.Initialization.length; i++) {
+                this.Initialization[i] = new Long(source.Initialization[i]);
+            }
+        }
     }
 
 
@@ -699,6 +743,7 @@ public class CreateOrganizationAuthUrlRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "OrganizationNameSame", this.OrganizationNameSame);
         this.setParamSimple(map, prefix + "BusinessLicense", this.BusinessLicense);
         this.setParamSimple(map, prefix + "Endpoint", this.Endpoint);
+        this.setParamArraySimple(map, prefix + "Initialization.", this.Initialization);
 
     }
 }

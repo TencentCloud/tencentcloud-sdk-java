@@ -80,7 +80,7 @@ public class DescribeDBPriceRequest extends AbstractModel {
     private Long ProtectMode;
 
     /**
-    * 实例隔离类型。支持值包括： "UNIVERSAL" - 通用型实例， "EXCLUSIVE" - 独享型实例， "BASIC_V2" - 单节点云盘版实例。 不指定则默认为通用型实例。
+    * 实例隔离类型。支持值包括： "UNIVERSAL" - 通用型实例， "EXCLUSIVE" - 独享型实例， "BASIC_V2" - 单节点云盘版实例。 "CLOUD_NATIVE_CLUSTER" - 集群版标准型， "CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - 集群版加强型。   不指定则默认为通用型实例。
     */
     @SerializedName("DeviceType")
     @Expose
@@ -113,6 +113,13 @@ public class DescribeDBPriceRequest extends AbstractModel {
     @SerializedName("Ladder")
     @Expose
     private Long Ladder;
+
+    /**
+    * 磁盘类型，查询集群版、单节点云盘版实例价格可以指定该参数。支持值包括： "CLOUD_SSD" - SSD云硬盘， "CLOUD_HSSD" - 增强型SSD云硬盘。  默认为 SSD云硬盘。
+    */
+    @SerializedName("DiskType")
+    @Expose
+    private String DiskType;
 
     /**
      * Get 实例时长，单位：月，最小值 1，最大值为 36；查询按量计费价格时，该字段无效。 
@@ -243,16 +250,16 @@ public class DescribeDBPriceRequest extends AbstractModel {
     }
 
     /**
-     * Get 实例隔离类型。支持值包括： "UNIVERSAL" - 通用型实例， "EXCLUSIVE" - 独享型实例， "BASIC_V2" - 单节点云盘版实例。 不指定则默认为通用型实例。 
-     * @return DeviceType 实例隔离类型。支持值包括： "UNIVERSAL" - 通用型实例， "EXCLUSIVE" - 独享型实例， "BASIC_V2" - 单节点云盘版实例。 不指定则默认为通用型实例。
+     * Get 实例隔离类型。支持值包括： "UNIVERSAL" - 通用型实例， "EXCLUSIVE" - 独享型实例， "BASIC_V2" - 单节点云盘版实例。 "CLOUD_NATIVE_CLUSTER" - 集群版标准型， "CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - 集群版加强型。   不指定则默认为通用型实例。 
+     * @return DeviceType 实例隔离类型。支持值包括： "UNIVERSAL" - 通用型实例， "EXCLUSIVE" - 独享型实例， "BASIC_V2" - 单节点云盘版实例。 "CLOUD_NATIVE_CLUSTER" - 集群版标准型， "CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - 集群版加强型。   不指定则默认为通用型实例。
      */
     public String getDeviceType() {
         return this.DeviceType;
     }
 
     /**
-     * Set 实例隔离类型。支持值包括： "UNIVERSAL" - 通用型实例， "EXCLUSIVE" - 独享型实例， "BASIC_V2" - 单节点云盘版实例。 不指定则默认为通用型实例。
-     * @param DeviceType 实例隔离类型。支持值包括： "UNIVERSAL" - 通用型实例， "EXCLUSIVE" - 独享型实例， "BASIC_V2" - 单节点云盘版实例。 不指定则默认为通用型实例。
+     * Set 实例隔离类型。支持值包括： "UNIVERSAL" - 通用型实例， "EXCLUSIVE" - 独享型实例， "BASIC_V2" - 单节点云盘版实例。 "CLOUD_NATIVE_CLUSTER" - 集群版标准型， "CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - 集群版加强型。   不指定则默认为通用型实例。
+     * @param DeviceType 实例隔离类型。支持值包括： "UNIVERSAL" - 通用型实例， "EXCLUSIVE" - 独享型实例， "BASIC_V2" - 单节点云盘版实例。 "CLOUD_NATIVE_CLUSTER" - 集群版标准型， "CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - 集群版加强型。   不指定则默认为通用型实例。
      */
     public void setDeviceType(String DeviceType) {
         this.DeviceType = DeviceType;
@@ -322,6 +329,22 @@ public class DescribeDBPriceRequest extends AbstractModel {
         this.Ladder = Ladder;
     }
 
+    /**
+     * Get 磁盘类型，查询集群版、单节点云盘版实例价格可以指定该参数。支持值包括： "CLOUD_SSD" - SSD云硬盘， "CLOUD_HSSD" - 增强型SSD云硬盘。  默认为 SSD云硬盘。 
+     * @return DiskType 磁盘类型，查询集群版、单节点云盘版实例价格可以指定该参数。支持值包括： "CLOUD_SSD" - SSD云硬盘， "CLOUD_HSSD" - 增强型SSD云硬盘。  默认为 SSD云硬盘。
+     */
+    public String getDiskType() {
+        return this.DiskType;
+    }
+
+    /**
+     * Set 磁盘类型，查询集群版、单节点云盘版实例价格可以指定该参数。支持值包括： "CLOUD_SSD" - SSD云硬盘， "CLOUD_HSSD" - 增强型SSD云硬盘。  默认为 SSD云硬盘。
+     * @param DiskType 磁盘类型，查询集群版、单节点云盘版实例价格可以指定该参数。支持值包括： "CLOUD_SSD" - SSD云硬盘， "CLOUD_HSSD" - 增强型SSD云硬盘。  默认为 SSD云硬盘。
+     */
+    public void setDiskType(String DiskType) {
+        this.DiskType = DiskType;
+    }
+
     public DescribeDBPriceRequest() {
     }
 
@@ -369,6 +392,9 @@ public class DescribeDBPriceRequest extends AbstractModel {
         if (source.Ladder != null) {
             this.Ladder = new Long(source.Ladder);
         }
+        if (source.DiskType != null) {
+            this.DiskType = new String(source.DiskType);
+        }
     }
 
 
@@ -389,6 +415,7 @@ public class DescribeDBPriceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Cpu", this.Cpu);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "Ladder", this.Ladder);
+        this.setParamSimple(map, prefix + "DiskType", this.DiskType);
 
     }
 }

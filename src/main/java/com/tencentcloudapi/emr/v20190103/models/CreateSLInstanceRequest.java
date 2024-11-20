@@ -45,7 +45,7 @@ public class CreateSLInstanceRequest extends AbstractModel {
     private String DiskType;
 
     /**
-    * 实例单节点磁盘容量，单位GB，单节点磁盘容量需大于等于100，小于等于10000，容量调整步长为20。
+    * 实例单节点磁盘容量，单位GB，单节点磁盘容量需大于等于100，小于等于250*CPU核心数，容量调整步长为100。
     */
     @SerializedName("DiskSize")
     @Expose
@@ -128,16 +128,16 @@ public class CreateSLInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get 实例单节点磁盘容量，单位GB，单节点磁盘容量需大于等于100，小于等于10000，容量调整步长为20。 
-     * @return DiskSize 实例单节点磁盘容量，单位GB，单节点磁盘容量需大于等于100，小于等于10000，容量调整步长为20。
+     * Get 实例单节点磁盘容量，单位GB，单节点磁盘容量需大于等于100，小于等于250*CPU核心数，容量调整步长为100。 
+     * @return DiskSize 实例单节点磁盘容量，单位GB，单节点磁盘容量需大于等于100，小于等于250*CPU核心数，容量调整步长为100。
      */
     public Long getDiskSize() {
         return this.DiskSize;
     }
 
     /**
-     * Set 实例单节点磁盘容量，单位GB，单节点磁盘容量需大于等于100，小于等于10000，容量调整步长为20。
-     * @param DiskSize 实例单节点磁盘容量，单位GB，单节点磁盘容量需大于等于100，小于等于10000，容量调整步长为20。
+     * Set 实例单节点磁盘容量，单位GB，单节点磁盘容量需大于等于100，小于等于250*CPU核心数，容量调整步长为100。
+     * @param DiskSize 实例单节点磁盘容量，单位GB，单节点磁盘容量需大于等于100，小于等于250*CPU核心数，容量调整步长为100。
      */
     public void setDiskSize(Long DiskSize) {
         this.DiskSize = DiskSize;

@@ -80,7 +80,6 @@ public class PublicMaterialInfos extends AbstractModel {
 
     /**
     * 审核原因
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AuditResult")
     @Expose
@@ -235,10 +234,8 @@ public class PublicMaterialInfos extends AbstractModel {
     }
 
     /**
-     * Get 审核原因
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 审核原因 
      * @return AuditResult 审核原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAuditResult() {
         return this.AuditResult;
@@ -246,9 +243,7 @@ public class PublicMaterialInfos extends AbstractModel {
 
     /**
      * Set 审核原因
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AuditResult 审核原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAuditResult(String AuditResult) {
         this.AuditResult = AuditResult;

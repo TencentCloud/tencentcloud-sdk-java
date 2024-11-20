@@ -52,7 +52,7 @@ public class ModifyNetworkConfigResponse extends AbstractModel {
     private String Vip;
 
     /**
-    * 任务 ID。可获取**taskId**，通过接口 **DescribeTaskInfo **查询任务执行状态。
+    * 任务 ID。获取**taskId**，通过接口 [DescribeTaskInfo](https://cloud.tencent.com/document/product/239/30601) 查询任务执行状态。
     */
     @SerializedName("TaskId")
     @Expose
@@ -130,16 +130,16 @@ public class ModifyNetworkConfigResponse extends AbstractModel {
     }
 
     /**
-     * Get 任务 ID。可获取**taskId**，通过接口 **DescribeTaskInfo **查询任务执行状态。 
-     * @return TaskId 任务 ID。可获取**taskId**，通过接口 **DescribeTaskInfo **查询任务执行状态。
+     * Get 任务 ID。获取**taskId**，通过接口 [DescribeTaskInfo](https://cloud.tencent.com/document/product/239/30601) 查询任务执行状态。 
+     * @return TaskId 任务 ID。获取**taskId**，通过接口 [DescribeTaskInfo](https://cloud.tencent.com/document/product/239/30601) 查询任务执行状态。
      */
     public Long getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 任务 ID。可获取**taskId**，通过接口 **DescribeTaskInfo **查询任务执行状态。
-     * @param TaskId 任务 ID。可获取**taskId**，通过接口 **DescribeTaskInfo **查询任务执行状态。
+     * Set 任务 ID。获取**taskId**，通过接口 [DescribeTaskInfo](https://cloud.tencent.com/document/product/239/30601) 查询任务执行状态。
+     * @param TaskId 任务 ID。获取**taskId**，通过接口 [DescribeTaskInfo](https://cloud.tencent.com/document/product/239/30601) 查询任务执行状态。
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;

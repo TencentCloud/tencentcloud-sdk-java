@@ -50,7 +50,9 @@ public class BillingClient extends AbstractClient{
     }
 
     /**
-     *创建节省计划订单，创建订单完成需调用PayDeals接口完成订单支付
+     *接口迁移到其他业务
+
+创建节省计划订单，创建订单完成需调用PayDeals接口完成订单支付
      * @param req CreateSavingPlanOrderRequest
      * @return CreateSavingPlanOrderResponse
      * @throws TencentCloudSDKException
@@ -475,7 +477,9 @@ public class BillingClient extends AbstractClient{
     }
 
     /**
-     *查用当前用户明细节省计划总览查询时段内的使用情况
+     *接口迁移到其他业务
+
+查用当前用户明细节省计划总览查询时段内的使用情况
      * @param req DescribeSavingPlanOverviewRequest
      * @return DescribeSavingPlanOverviewResponse
      * @throws TencentCloudSDKException
@@ -497,7 +501,9 @@ public class BillingClient extends AbstractClient{
     }
 
     /**
-     *查用当前用户明细节省计划查询时段内的使用情况
+     *接口迁移到其他业务
+
+查用当前用户明细节省计划查询时段内的使用情况
      * @param req DescribeSavingPlanUsageRequest
      * @return DescribeSavingPlanUsageResponse
      * @throws TencentCloudSDKException

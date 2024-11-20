@@ -1042,7 +1042,7 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
-     *修改复制组信息
+     *本接口（ModifyReplicationGroup）用于修改复制组信息。
      * @param req ModifyReplicationGroupRequest
      * @return ModifyReplicationGroupResponse
      * @throws TencentCloudSDKException

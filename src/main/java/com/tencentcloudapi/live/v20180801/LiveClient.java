@@ -667,6 +667,39 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     }
 
     /**
+     *该接口用来查询账号下所有的导播台列表
+     * @param req DescribeCasterListRequest
+     * @return DescribeCasterListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCasterListResponse DescribeCasterList(DescribeCasterListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCasterList", DescribeCasterListResponse.class);
+    }
+
+    /**
+     *该接口用来获取所有的转场名称及其对应的素材url。
+     * @param req DescribeCasterTransitionTypesRequest
+     * @return DescribeCasterTransitionTypesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCasterTransitionTypesResponse DescribeCasterTransitionTypes(DescribeCasterTransitionTypesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCasterTransitionTypes", DescribeCasterTransitionTypesResponse.class);
+    }
+
+    /**
+     *本接口用来查询当前APPID导播台业务状态
+     * @param req DescribeCasterUserStatusRequest
+     * @return DescribeCasterUserStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCasterUserStatusResponse DescribeCasterUserStatus(DescribeCasterUserStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCasterUserStatus", DescribeCasterUserStatusResponse.class);
+    }
+
+    /**
      *查询并发录制路数，对慢直播和普通直播适用。
      * @param req DescribeConcurrentRecordStreamNumRequest
      * @return DescribeConcurrentRecordStreamNumResponse
