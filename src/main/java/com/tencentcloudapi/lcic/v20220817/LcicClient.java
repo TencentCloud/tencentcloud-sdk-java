@@ -404,6 +404,17 @@ public class LcicClient extends AbstractClient{
     }
 
     /**
+     *查询录制信息
+     * @param req DescribeRecordRequest
+     * @return DescribeRecordResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRecordResponse DescribeRecord(DescribeRecordRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRecord", DescribeRecordResponse.class);
+    }
+
+    /**
      *录制流查询
      * @param req DescribeRecordStreamRequest
      * @return DescribeRecordStreamResponse
@@ -692,6 +703,17 @@ public class LcicClient extends AbstractClient{
     }
 
     /**
+     *开始录制
+     * @param req StartRecordRequest
+     * @return StartRecordResponse
+     * @throws TencentCloudSDKException
+     */
+    public StartRecordResponse StartRecord(StartRecordRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "StartRecord", StartRecordResponse.class);
+    }
+
+    /**
      *开始房间的直播。 说明：开始房间接口调用之前需要有用户进入课堂初始化课堂信息。
      * @param req StartRoomRequest
      * @return StartRoomResponse
@@ -700,6 +722,17 @@ public class LcicClient extends AbstractClient{
     public StartRoomResponse StartRoom(StartRoomRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "StartRoom", StartRoomResponse.class);
+    }
+
+    /**
+     *停止录制
+     * @param req StopRecordRequest
+     * @return StopRecordResponse
+     * @throws TencentCloudSDKException
+     */
+    public StopRecordResponse StopRecord(StopRecordRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "StopRecord", StopRecordResponse.class);
     }
 
     /**

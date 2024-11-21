@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ConfirmVideoTranslateJobRequest extends AbstractModel {
 
     /**
-    * 视频翻译任务 ID
+    * 视频转译任务 ID
     */
     @SerializedName("JobId")
     @Expose
@@ -38,16 +38,16 @@ public class ConfirmVideoTranslateJobRequest extends AbstractModel {
     private TranslateResult [] TranslateResults;
 
     /**
-     * Get 视频翻译任务 ID 
-     * @return JobId 视频翻译任务 ID
+     * Get 视频转译任务 ID 
+     * @return JobId 视频转译任务 ID
      */
     public String getJobId() {
         return this.JobId;
     }
 
     /**
-     * Set 视频翻译任务 ID
-     * @param JobId 视频翻译任务 ID
+     * Set 视频转译任务 ID
+     * @param JobId 视频转译任务 ID
      */
     public void setJobId(String JobId) {
         this.JobId = JobId;

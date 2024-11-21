@@ -38,21 +38,21 @@ public class PrometheusClusterAgentBasic extends AbstractModel {
     private String ClusterType;
 
     /**
-    * 集群ID
+    * 集群 ID
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * 是否开启公网CLB
+    * 是否开启公网 CLB
     */
     @SerializedName("EnableExternal")
     @Expose
     private Boolean EnableExternal;
 
     /**
-    * 集群内部署组件的pod配置
+    * 集群内部署组件的pod 配置
     */
     @SerializedName("InClusterPodConfig")
     @Expose
@@ -66,18 +66,25 @@ public class PrometheusClusterAgentBasic extends AbstractModel {
     private Label [] ExternalLabels;
 
     /**
-    * 是否安装默认采集配置
+    * 是否安装默认采集 exporter 和采集配置
     */
     @SerializedName("NotInstallBasicScrape")
     @Expose
     private Boolean NotInstallBasicScrape;
 
     /**
-    * 是否采集指标，true代表drop所有指标，false代表采集默认指标
+    * 是否安装采集配置，true 只安装采集 exporter 不会安装采集配置，false 会同时安装采集配置
     */
     @SerializedName("NotScrape")
     @Expose
     private Boolean NotScrape;
+
+    /**
+    * 是否丢弃所有指标，true 代表丢弃所有指标，false 代表采集默认指标
+    */
+    @SerializedName("DropAll")
+    @Expose
+    private Boolean DropAll;
 
     /**
     * 是否开启默认预聚合规则
@@ -119,48 +126,48 @@ public class PrometheusClusterAgentBasic extends AbstractModel {
     }
 
     /**
-     * Get 集群ID 
-     * @return ClusterId 集群ID
+     * Get 集群 ID 
+     * @return ClusterId 集群 ID
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群ID
-     * @param ClusterId 集群ID
+     * Set 集群 ID
+     * @param ClusterId 集群 ID
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get 是否开启公网CLB 
-     * @return EnableExternal 是否开启公网CLB
+     * Get 是否开启公网 CLB 
+     * @return EnableExternal 是否开启公网 CLB
      */
     public Boolean getEnableExternal() {
         return this.EnableExternal;
     }
 
     /**
-     * Set 是否开启公网CLB
-     * @param EnableExternal 是否开启公网CLB
+     * Set 是否开启公网 CLB
+     * @param EnableExternal 是否开启公网 CLB
      */
     public void setEnableExternal(Boolean EnableExternal) {
         this.EnableExternal = EnableExternal;
     }
 
     /**
-     * Get 集群内部署组件的pod配置 
-     * @return InClusterPodConfig 集群内部署组件的pod配置
+     * Get 集群内部署组件的pod 配置 
+     * @return InClusterPodConfig 集群内部署组件的pod 配置
      */
     public PrometheusClusterAgentPodConfig getInClusterPodConfig() {
         return this.InClusterPodConfig;
     }
 
     /**
-     * Set 集群内部署组件的pod配置
-     * @param InClusterPodConfig 集群内部署组件的pod配置
+     * Set 集群内部署组件的pod 配置
+     * @param InClusterPodConfig 集群内部署组件的pod 配置
      */
     public void setInClusterPodConfig(PrometheusClusterAgentPodConfig InClusterPodConfig) {
         this.InClusterPodConfig = InClusterPodConfig;
@@ -183,35 +190,51 @@ public class PrometheusClusterAgentBasic extends AbstractModel {
     }
 
     /**
-     * Get 是否安装默认采集配置 
-     * @return NotInstallBasicScrape 是否安装默认采集配置
+     * Get 是否安装默认采集 exporter 和采集配置 
+     * @return NotInstallBasicScrape 是否安装默认采集 exporter 和采集配置
      */
     public Boolean getNotInstallBasicScrape() {
         return this.NotInstallBasicScrape;
     }
 
     /**
-     * Set 是否安装默认采集配置
-     * @param NotInstallBasicScrape 是否安装默认采集配置
+     * Set 是否安装默认采集 exporter 和采集配置
+     * @param NotInstallBasicScrape 是否安装默认采集 exporter 和采集配置
      */
     public void setNotInstallBasicScrape(Boolean NotInstallBasicScrape) {
         this.NotInstallBasicScrape = NotInstallBasicScrape;
     }
 
     /**
-     * Get 是否采集指标，true代表drop所有指标，false代表采集默认指标 
-     * @return NotScrape 是否采集指标，true代表drop所有指标，false代表采集默认指标
+     * Get 是否安装采集配置，true 只安装采集 exporter 不会安装采集配置，false 会同时安装采集配置 
+     * @return NotScrape 是否安装采集配置，true 只安装采集 exporter 不会安装采集配置，false 会同时安装采集配置
      */
     public Boolean getNotScrape() {
         return this.NotScrape;
     }
 
     /**
-     * Set 是否采集指标，true代表drop所有指标，false代表采集默认指标
-     * @param NotScrape 是否采集指标，true代表drop所有指标，false代表采集默认指标
+     * Set 是否安装采集配置，true 只安装采集 exporter 不会安装采集配置，false 会同时安装采集配置
+     * @param NotScrape 是否安装采集配置，true 只安装采集 exporter 不会安装采集配置，false 会同时安装采集配置
      */
     public void setNotScrape(Boolean NotScrape) {
         this.NotScrape = NotScrape;
+    }
+
+    /**
+     * Get 是否丢弃所有指标，true 代表丢弃所有指标，false 代表采集默认指标 
+     * @return DropAll 是否丢弃所有指标，true 代表丢弃所有指标，false 代表采集默认指标
+     */
+    public Boolean getDropAll() {
+        return this.DropAll;
+    }
+
+    /**
+     * Set 是否丢弃所有指标，true 代表丢弃所有指标，false 代表采集默认指标
+     * @param DropAll 是否丢弃所有指标，true 代表丢弃所有指标，false 代表采集默认指标
+     */
+    public void setDropAll(Boolean DropAll) {
+        this.DropAll = DropAll;
     }
 
     /**
@@ -265,6 +288,9 @@ public class PrometheusClusterAgentBasic extends AbstractModel {
         if (source.NotScrape != null) {
             this.NotScrape = new Boolean(source.NotScrape);
         }
+        if (source.DropAll != null) {
+            this.DropAll = new Boolean(source.DropAll);
+        }
         if (source.OpenDefaultRecord != null) {
             this.OpenDefaultRecord = new Boolean(source.OpenDefaultRecord);
         }
@@ -283,6 +309,7 @@ public class PrometheusClusterAgentBasic extends AbstractModel {
         this.setParamArrayObj(map, prefix + "ExternalLabels.", this.ExternalLabels);
         this.setParamSimple(map, prefix + "NotInstallBasicScrape", this.NotInstallBasicScrape);
         this.setParamSimple(map, prefix + "NotScrape", this.NotScrape);
+        this.setParamSimple(map, prefix + "DropAll", this.DropAll);
         this.setParamSimple(map, prefix + "OpenDefaultRecord", this.OpenDefaultRecord);
 
     }

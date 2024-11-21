@@ -45,7 +45,7 @@ public class ModifyOutputInfo extends AbstractModel {
     private String Description;
 
     /**
-    * 输出的转推协议，支持SRT|RTP|RTMP。
+    * 输出的转推协议，支持SRT|RTP|RTMP|RTMP_PULL|RTSP|RIST。
     */
     @SerializedName("Protocol")
     @Expose
@@ -102,6 +102,13 @@ public class ModifyOutputInfo extends AbstractModel {
     private String [] Zones;
 
     /**
+    * 转推RIST的配置。
+    */
+    @SerializedName("RISTSettings")
+    @Expose
+    private CreateOutputRistSettings RISTSettings;
+
+    /**
      * Get 需要修改的Output的Id。 
      * @return OutputId 需要修改的Output的Id。
      */
@@ -150,16 +157,16 @@ public class ModifyOutputInfo extends AbstractModel {
     }
 
     /**
-     * Get 输出的转推协议，支持SRT|RTP|RTMP。 
-     * @return Protocol 输出的转推协议，支持SRT|RTP|RTMP。
+     * Get 输出的转推协议，支持SRT|RTP|RTMP|RTMP_PULL|RTSP|RIST。 
+     * @return Protocol 输出的转推协议，支持SRT|RTP|RTMP|RTMP_PULL|RTSP|RIST。
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set 输出的转推协议，支持SRT|RTP|RTMP。
-     * @param Protocol 输出的转推协议，支持SRT|RTP|RTMP。
+     * Set 输出的转推协议，支持SRT|RTP|RTMP|RTMP_PULL|RTSP|RIST。
+     * @param Protocol 输出的转推协议，支持SRT|RTP|RTMP|RTMP_PULL|RTSP|RIST。
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
@@ -281,6 +288,22 @@ public class ModifyOutputInfo extends AbstractModel {
         this.Zones = Zones;
     }
 
+    /**
+     * Get 转推RIST的配置。 
+     * @return RISTSettings 转推RIST的配置。
+     */
+    public CreateOutputRistSettings getRISTSettings() {
+        return this.RISTSettings;
+    }
+
+    /**
+     * Set 转推RIST的配置。
+     * @param RISTSettings 转推RIST的配置。
+     */
+    public void setRISTSettings(CreateOutputRistSettings RISTSettings) {
+        this.RISTSettings = RISTSettings;
+    }
+
     public ModifyOutputInfo() {
     }
 
@@ -331,6 +354,9 @@ public class ModifyOutputInfo extends AbstractModel {
                 this.Zones[i] = new String(source.Zones[i]);
             }
         }
+        if (source.RISTSettings != null) {
+            this.RISTSettings = new CreateOutputRistSettings(source.RISTSettings);
+        }
     }
 
 
@@ -349,6 +375,7 @@ public class ModifyOutputInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "MaxConcurrent", this.MaxConcurrent);
         this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
         this.setParamArraySimple(map, prefix + "Zones.", this.Zones);
+        this.setParamObj(map, prefix + "RISTSettings.", this.RISTSettings);
 
     }
 }

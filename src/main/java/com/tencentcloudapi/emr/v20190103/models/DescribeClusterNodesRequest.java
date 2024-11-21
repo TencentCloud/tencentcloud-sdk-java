@@ -84,14 +84,14 @@ public class DescribeClusterNodesRequest extends AbstractModel {
     private SearchItem [] SearchFields;
 
     /**
-    * 无
+    * 排序字段
     */
     @SerializedName("OrderField")
     @Expose
     private String OrderField;
 
     /**
-    * 无
+    * 是否升序，1:升序，0:降序
     */
     @SerializedName("Asc")
     @Expose
@@ -254,32 +254,32 @@ public class DescribeClusterNodesRequest extends AbstractModel {
     }
 
     /**
-     * Get 无 
-     * @return OrderField 无
+     * Get 排序字段 
+     * @return OrderField 排序字段
      */
     public String getOrderField() {
         return this.OrderField;
     }
 
     /**
-     * Set 无
-     * @param OrderField 无
+     * Set 排序字段
+     * @param OrderField 排序字段
      */
     public void setOrderField(String OrderField) {
         this.OrderField = OrderField;
     }
 
     /**
-     * Get 无 
-     * @return Asc 无
+     * Get 是否升序，1:升序，0:降序 
+     * @return Asc 是否升序，1:升序，0:降序
      */
     public Long getAsc() {
         return this.Asc;
     }
 
     /**
-     * Set 无
-     * @param Asc 无
+     * Set 是否升序，1:升序，0:降序
+     * @param Asc 是否升序，1:升序，0:降序
      */
     public void setAsc(Long Asc) {
         this.Asc = Asc;

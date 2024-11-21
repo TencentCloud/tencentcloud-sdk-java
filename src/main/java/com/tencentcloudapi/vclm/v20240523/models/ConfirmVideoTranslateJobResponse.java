@@ -24,35 +24,35 @@ import java.util.HashMap;
 public class ConfirmVideoTranslateJobResponse extends AbstractModel {
 
     /**
-    * 视频翻译任务 ID
+    * 视频转译任务 ID。
     */
     @SerializedName("JobId")
     @Expose
     private String JobId;
 
     /**
-    * 音频转换任务 ID
+    * 音频转译任务 ID。
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * 音频翻译结果确认 session	
+    * 音频转译结果确认 session。	
     */
     @SerializedName("SessionId")
     @Expose
     private String SessionId;
 
     /**
-    * 视频转译任务状态	
+    * 该字段与 DescribeVideoTranslateJob 接口的 Status 功能相同，均表示任务状态。0：任务初始化。1：音频翻译中。 2：音频翻译失败。 3：音频翻译成功。 4：音频结果待确认。 5：音频结果已确认完毕。6：视频翻译中。 7：视频翻译失败。 8：视频翻译成功。
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 视频转译任务信息	
+    * 视频转译任务信息。	
     */
     @SerializedName("Message")
     @Expose
@@ -66,80 +66,80 @@ public class ConfirmVideoTranslateJobResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 视频翻译任务 ID 
-     * @return JobId 视频翻译任务 ID
+     * Get 视频转译任务 ID。 
+     * @return JobId 视频转译任务 ID。
      */
     public String getJobId() {
         return this.JobId;
     }
 
     /**
-     * Set 视频翻译任务 ID
-     * @param JobId 视频翻译任务 ID
+     * Set 视频转译任务 ID。
+     * @param JobId 视频转译任务 ID。
      */
     public void setJobId(String JobId) {
         this.JobId = JobId;
     }
 
     /**
-     * Get 音频转换任务 ID 
-     * @return TaskId 音频转换任务 ID
+     * Get 音频转译任务 ID。 
+     * @return TaskId 音频转译任务 ID。
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 音频转换任务 ID
-     * @param TaskId 音频转换任务 ID
+     * Set 音频转译任务 ID。
+     * @param TaskId 音频转译任务 ID。
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get 音频翻译结果确认 session	 
-     * @return SessionId 音频翻译结果确认 session	
+     * Get 音频转译结果确认 session。	 
+     * @return SessionId 音频转译结果确认 session。	
      */
     public String getSessionId() {
         return this.SessionId;
     }
 
     /**
-     * Set 音频翻译结果确认 session	
-     * @param SessionId 音频翻译结果确认 session	
+     * Set 音频转译结果确认 session。	
+     * @param SessionId 音频转译结果确认 session。	
      */
     public void setSessionId(String SessionId) {
         this.SessionId = SessionId;
     }
 
     /**
-     * Get 视频转译任务状态	 
-     * @return Status 视频转译任务状态	
+     * Get 该字段与 DescribeVideoTranslateJob 接口的 Status 功能相同，均表示任务状态。0：任务初始化。1：音频翻译中。 2：音频翻译失败。 3：音频翻译成功。 4：音频结果待确认。 5：音频结果已确认完毕。6：视频翻译中。 7：视频翻译失败。 8：视频翻译成功。 
+     * @return Status 该字段与 DescribeVideoTranslateJob 接口的 Status 功能相同，均表示任务状态。0：任务初始化。1：音频翻译中。 2：音频翻译失败。 3：音频翻译成功。 4：音频结果待确认。 5：音频结果已确认完毕。6：视频翻译中。 7：视频翻译失败。 8：视频翻译成功。
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 视频转译任务状态	
-     * @param Status 视频转译任务状态	
+     * Set 该字段与 DescribeVideoTranslateJob 接口的 Status 功能相同，均表示任务状态。0：任务初始化。1：音频翻译中。 2：音频翻译失败。 3：音频翻译成功。 4：音频结果待确认。 5：音频结果已确认完毕。6：视频翻译中。 7：视频翻译失败。 8：视频翻译成功。
+     * @param Status 该字段与 DescribeVideoTranslateJob 接口的 Status 功能相同，均表示任务状态。0：任务初始化。1：音频翻译中。 2：音频翻译失败。 3：音频翻译成功。 4：音频结果待确认。 5：音频结果已确认完毕。6：视频翻译中。 7：视频翻译失败。 8：视频翻译成功。
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 视频转译任务信息	 
-     * @return Message 视频转译任务信息	
+     * Get 视频转译任务信息。	 
+     * @return Message 视频转译任务信息。	
      */
     public String getMessage() {
         return this.Message;
     }
 
     /**
-     * Set 视频转译任务信息	
-     * @param Message 视频转译任务信息	
+     * Set 视频转译任务信息。	
+     * @param Message 视频转译任务信息。	
      */
     public void setMessage(String Message) {
         this.Message = Message;

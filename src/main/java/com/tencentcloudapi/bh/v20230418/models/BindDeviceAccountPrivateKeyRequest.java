@@ -31,7 +31,7 @@ public class BindDeviceAccountPrivateKeyRequest extends AbstractModel {
     private Long Id;
 
     /**
-    * 主机账号私钥，最新长度128字节，最大长度8192字节
+    * 主机账号私钥，最小长度128字节，最大长度8192字节
     */
     @SerializedName("PrivateKey")
     @Expose
@@ -61,16 +61,16 @@ public class BindDeviceAccountPrivateKeyRequest extends AbstractModel {
     }
 
     /**
-     * Get 主机账号私钥，最新长度128字节，最大长度8192字节 
-     * @return PrivateKey 主机账号私钥，最新长度128字节，最大长度8192字节
+     * Get 主机账号私钥，最小长度128字节，最大长度8192字节 
+     * @return PrivateKey 主机账号私钥，最小长度128字节，最大长度8192字节
      */
     public String getPrivateKey() {
         return this.PrivateKey;
     }
 
     /**
-     * Set 主机账号私钥，最新长度128字节，最大长度8192字节
-     * @param PrivateKey 主机账号私钥，最新长度128字节，最大长度8192字节
+     * Set 主机账号私钥，最小长度128字节，最大长度8192字节
+     * @param PrivateKey 主机账号私钥，最小长度128字节，最大长度8192字节
      */
     public void setPrivateKey(String PrivateKey) {
         this.PrivateKey = PrivateKey;

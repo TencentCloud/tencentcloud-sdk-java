@@ -66,7 +66,7 @@ public class ModifyInput extends AbstractModel {
     private CreateInputRTPSettings RTPSettings;
 
     /**
-    * 输入的协议，可选[SRT|RTP|RTMP]。
+    * 输入的协议，可选[SRT|RTP|RTMP|RTMP_PULL|RTSP_PULL|RIST]。
 当输出包含RTP时，输入只能是RTP。
 当输出包含RTMP时，输入可以是SRT/RTMP。
 当输出包含SRT时，输入只能是SRT。
@@ -123,6 +123,20 @@ public class ModifyInput extends AbstractModel {
     @SerializedName("Zones")
     @Expose
     private String [] Zones;
+
+    /**
+    * RIST的配置信息。
+    */
+    @SerializedName("RISTSettings")
+    @Expose
+    private CreateInputRISTSettings RISTSettings;
+
+    /**
+    * 输入节点的地区
+    */
+    @SerializedName("InputRegion")
+    @Expose
+    private String InputRegion;
 
     /**
      * Get 输入Id。 
@@ -221,11 +235,11 @@ public class ModifyInput extends AbstractModel {
     }
 
     /**
-     * Get 输入的协议，可选[SRT|RTP|RTMP]。
+     * Get 输入的协议，可选[SRT|RTP|RTMP|RTMP_PULL|RTSP_PULL|RIST]。
 当输出包含RTP时，输入只能是RTP。
 当输出包含RTMP时，输入可以是SRT/RTMP。
 当输出包含SRT时，输入只能是SRT。 
-     * @return Protocol 输入的协议，可选[SRT|RTP|RTMP]。
+     * @return Protocol 输入的协议，可选[SRT|RTP|RTMP|RTMP_PULL|RTSP_PULL|RIST]。
 当输出包含RTP时，输入只能是RTP。
 当输出包含RTMP时，输入可以是SRT/RTMP。
 当输出包含SRT时，输入只能是SRT。
@@ -235,11 +249,11 @@ public class ModifyInput extends AbstractModel {
     }
 
     /**
-     * Set 输入的协议，可选[SRT|RTP|RTMP]。
+     * Set 输入的协议，可选[SRT|RTP|RTMP|RTMP_PULL|RTSP_PULL|RIST]。
 当输出包含RTP时，输入只能是RTP。
 当输出包含RTMP时，输入可以是SRT/RTMP。
 当输出包含SRT时，输入只能是SRT。
-     * @param Protocol 输入的协议，可选[SRT|RTP|RTMP]。
+     * @param Protocol 输入的协议，可选[SRT|RTP|RTMP|RTMP_PULL|RTSP_PULL|RIST]。
 当输出包含RTP时，输入只能是RTP。
 当输出包含RTMP时，输入可以是SRT/RTMP。
 当输出包含SRT时，输入只能是SRT。
@@ -360,6 +374,38 @@ public class ModifyInput extends AbstractModel {
         this.Zones = Zones;
     }
 
+    /**
+     * Get RIST的配置信息。 
+     * @return RISTSettings RIST的配置信息。
+     */
+    public CreateInputRISTSettings getRISTSettings() {
+        return this.RISTSettings;
+    }
+
+    /**
+     * Set RIST的配置信息。
+     * @param RISTSettings RIST的配置信息。
+     */
+    public void setRISTSettings(CreateInputRISTSettings RISTSettings) {
+        this.RISTSettings = RISTSettings;
+    }
+
+    /**
+     * Get 输入节点的地区 
+     * @return InputRegion 输入节点的地区
+     */
+    public String getInputRegion() {
+        return this.InputRegion;
+    }
+
+    /**
+     * Set 输入节点的地区
+     * @param InputRegion 输入节点的地区
+     */
+    public void setInputRegion(String InputRegion) {
+        this.InputRegion = InputRegion;
+    }
+
     public ModifyInput() {
     }
 
@@ -419,6 +465,12 @@ public class ModifyInput extends AbstractModel {
                 this.Zones[i] = new String(source.Zones[i]);
             }
         }
+        if (source.RISTSettings != null) {
+            this.RISTSettings = new CreateInputRISTSettings(source.RISTSettings);
+        }
+        if (source.InputRegion != null) {
+            this.InputRegion = new String(source.InputRegion);
+        }
     }
 
 
@@ -440,6 +492,8 @@ public class ModifyInput extends AbstractModel {
         this.setParamObj(map, prefix + "ResilientStream.", this.ResilientStream);
         this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
         this.setParamArraySimple(map, prefix + "Zones.", this.Zones);
+        this.setParamObj(map, prefix + "RISTSettings.", this.RISTSettings);
+        this.setParamSimple(map, prefix + "InputRegion", this.InputRegion);
 
     }
 }

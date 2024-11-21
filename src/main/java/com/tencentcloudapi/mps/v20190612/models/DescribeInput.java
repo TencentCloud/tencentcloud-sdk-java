@@ -152,6 +152,14 @@ public class DescribeInput extends AbstractModel {
     private String [] Zones;
 
     /**
+    * 输入的RIST配置信息。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RISTSettings")
+    @Expose
+    private DescribeInputRISTSettings RISTSettings;
+
+    /**
      * Get 输入Id。 
      * @return InputId 输入Id。
      */
@@ -459,6 +467,26 @@ public class DescribeInput extends AbstractModel {
         this.Zones = Zones;
     }
 
+    /**
+     * Get 输入的RIST配置信息。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RISTSettings 输入的RIST配置信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public DescribeInputRISTSettings getRISTSettings() {
+        return this.RISTSettings;
+    }
+
+    /**
+     * Set 输入的RIST配置信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RISTSettings 输入的RIST配置信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRISTSettings(DescribeInputRISTSettings RISTSettings) {
+        this.RISTSettings = RISTSettings;
+    }
+
     public DescribeInput() {
     }
 
@@ -530,6 +558,9 @@ public class DescribeInput extends AbstractModel {
                 this.Zones[i] = new String(source.Zones[i]);
             }
         }
+        if (source.RISTSettings != null) {
+            this.RISTSettings = new DescribeInputRISTSettings(source.RISTSettings);
+        }
     }
 
 
@@ -554,6 +585,7 @@ public class DescribeInput extends AbstractModel {
         this.setParamObj(map, prefix + "ResilientStream.", this.ResilientStream);
         this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
         this.setParamArraySimple(map, prefix + "Zones.", this.Zones);
+        this.setParamObj(map, prefix + "RISTSettings.", this.RISTSettings);
 
     }
 }

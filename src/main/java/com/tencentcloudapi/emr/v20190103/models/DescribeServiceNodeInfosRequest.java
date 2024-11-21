@@ -100,13 +100,7 @@ public class DescribeServiceNodeInfosRequest extends AbstractModel {
     private String ServiceName;
 
     /**
-    * 节点名称
-master
-core
-task
-common
-router
-
+    * 节点名称master,core,task,common,router
     */
     @SerializedName("NodeTypeName")
     @Expose
@@ -325,40 +319,16 @@ router
     }
 
     /**
-     * Get 节点名称
-master
-core
-task
-common
-router
- 
-     * @return NodeTypeName 节点名称
-master
-core
-task
-common
-router
-
+     * Get 节点名称master,core,task,common,router 
+     * @return NodeTypeName 节点名称master,core,task,common,router
      */
     public String getNodeTypeName() {
         return this.NodeTypeName;
     }
 
     /**
-     * Set 节点名称
-master
-core
-task
-common
-router
-
-     * @param NodeTypeName 节点名称
-master
-core
-task
-common
-router
-
+     * Set 节点名称master,core,task,common,router
+     * @param NodeTypeName 节点名称master,core,task,common,router
      */
     public void setNodeTypeName(String NodeTypeName) {
         this.NodeTypeName = NodeTypeName;

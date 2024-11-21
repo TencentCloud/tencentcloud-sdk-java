@@ -60,6 +60,7 @@ public class DescribeDBFeaturesResponse extends AbstractModel {
 
     /**
     * 主实例所在地域。
+说明：此参数可能返回空值，您可忽略此出参返回值。如需获取实例所在地域详情，您可调用 [查询实例列表](https://cloud.tencent.com/document/product/236/15872) 接口查询。
     */
     @SerializedName("MasterRegion")
     @Expose
@@ -174,8 +175,10 @@ public class DescribeDBFeaturesResponse extends AbstractModel {
     }
 
     /**
-     * Get 主实例所在地域。 
+     * Get 主实例所在地域。
+说明：此参数可能返回空值，您可忽略此出参返回值。如需获取实例所在地域详情，您可调用 [查询实例列表](https://cloud.tencent.com/document/product/236/15872) 接口查询。 
      * @return MasterRegion 主实例所在地域。
+说明：此参数可能返回空值，您可忽略此出参返回值。如需获取实例所在地域详情，您可调用 [查询实例列表](https://cloud.tencent.com/document/product/236/15872) 接口查询。
      */
     public String getMasterRegion() {
         return this.MasterRegion;
@@ -183,7 +186,9 @@ public class DescribeDBFeaturesResponse extends AbstractModel {
 
     /**
      * Set 主实例所在地域。
+说明：此参数可能返回空值，您可忽略此出参返回值。如需获取实例所在地域详情，您可调用 [查询实例列表](https://cloud.tencent.com/document/product/236/15872) 接口查询。
      * @param MasterRegion 主实例所在地域。
+说明：此参数可能返回空值，您可忽略此出参返回值。如需获取实例所在地域详情，您可调用 [查询实例列表](https://cloud.tencent.com/document/product/236/15872) 接口查询。
      */
     public void setMasterRegion(String MasterRegion) {
         this.MasterRegion = MasterRegion;

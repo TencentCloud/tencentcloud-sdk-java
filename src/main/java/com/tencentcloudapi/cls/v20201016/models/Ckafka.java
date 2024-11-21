@@ -24,6 +24,20 @@ import java.util.HashMap;
 public class Ckafka extends AbstractModel {
 
     /**
+    * Ckafka 的 InstanceId
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
+    * Ckafka 的 TopicName
+    */
+    @SerializedName("TopicName")
+    @Expose
+    private String TopicName;
+
+    /**
     * Ckafka 的 Vip
     */
     @SerializedName("Vip")
@@ -36,13 +50,6 @@ public class Ckafka extends AbstractModel {
     @SerializedName("Vport")
     @Expose
     private String Vport;
-
-    /**
-    * Ckafka 的 InstanceId
-    */
-    @SerializedName("InstanceId")
-    @Expose
-    private String InstanceId;
 
     /**
     * Ckafka 的 InstanceName
@@ -59,11 +66,36 @@ public class Ckafka extends AbstractModel {
     private String TopicId;
 
     /**
-    * Ckafka 的 TopicName
-    */
-    @SerializedName("TopicName")
-    @Expose
-    private String TopicName;
+     * Get Ckafka 的 InstanceId 
+     * @return InstanceId Ckafka 的 InstanceId
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set Ckafka 的 InstanceId
+     * @param InstanceId Ckafka 的 InstanceId
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
+    /**
+     * Get Ckafka 的 TopicName 
+     * @return TopicName Ckafka 的 TopicName
+     */
+    public String getTopicName() {
+        return this.TopicName;
+    }
+
+    /**
+     * Set Ckafka 的 TopicName
+     * @param TopicName Ckafka 的 TopicName
+     */
+    public void setTopicName(String TopicName) {
+        this.TopicName = TopicName;
+    }
 
     /**
      * Get Ckafka 的 Vip 
@@ -98,22 +130,6 @@ public class Ckafka extends AbstractModel {
     }
 
     /**
-     * Get Ckafka 的 InstanceId 
-     * @return InstanceId Ckafka 的 InstanceId
-     */
-    public String getInstanceId() {
-        return this.InstanceId;
-    }
-
-    /**
-     * Set Ckafka 的 InstanceId
-     * @param InstanceId Ckafka 的 InstanceId
-     */
-    public void setInstanceId(String InstanceId) {
-        this.InstanceId = InstanceId;
-    }
-
-    /**
      * Get Ckafka 的 InstanceName 
      * @return InstanceName Ckafka 的 InstanceName
      */
@@ -145,22 +161,6 @@ public class Ckafka extends AbstractModel {
         this.TopicId = TopicId;
     }
 
-    /**
-     * Get Ckafka 的 TopicName 
-     * @return TopicName Ckafka 的 TopicName
-     */
-    public String getTopicName() {
-        return this.TopicName;
-    }
-
-    /**
-     * Set Ckafka 的 TopicName
-     * @param TopicName Ckafka 的 TopicName
-     */
-    public void setTopicName(String TopicName) {
-        this.TopicName = TopicName;
-    }
-
     public Ckafka() {
     }
 
@@ -169,23 +169,23 @@ public class Ckafka extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public Ckafka(Ckafka source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.TopicName != null) {
+            this.TopicName = new String(source.TopicName);
+        }
         if (source.Vip != null) {
             this.Vip = new String(source.Vip);
         }
         if (source.Vport != null) {
             this.Vport = new String(source.Vport);
         }
-        if (source.InstanceId != null) {
-            this.InstanceId = new String(source.InstanceId);
-        }
         if (source.InstanceName != null) {
             this.InstanceName = new String(source.InstanceName);
         }
         if (source.TopicId != null) {
             this.TopicId = new String(source.TopicId);
-        }
-        if (source.TopicName != null) {
-            this.TopicName = new String(source.TopicName);
         }
     }
 
@@ -194,12 +194,12 @@ public class Ckafka extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "TopicName", this.TopicName);
         this.setParamSimple(map, prefix + "Vip", this.Vip);
         this.setParamSimple(map, prefix + "Vport", this.Vport);
-        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);
         this.setParamSimple(map, prefix + "TopicId", this.TopicId);
-        this.setParamSimple(map, prefix + "TopicName", this.TopicName);
 
     }
 }

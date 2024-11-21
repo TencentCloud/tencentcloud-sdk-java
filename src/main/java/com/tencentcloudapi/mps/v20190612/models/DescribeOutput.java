@@ -154,6 +154,14 @@ public class DescribeOutput extends AbstractModel {
     private String [] Zones;
 
     /**
+    * 输出的RIST配置信息。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RISTSettings")
+    @Expose
+    private DescribeOutputRISTSettings RISTSettings;
+
+    /**
      * Get 输出Id。 
      * @return OutputId 输出Id。
      */
@@ -469,6 +477,26 @@ public class DescribeOutput extends AbstractModel {
         this.Zones = Zones;
     }
 
+    /**
+     * Get 输出的RIST配置信息。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RISTSettings 输出的RIST配置信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public DescribeOutputRISTSettings getRISTSettings() {
+        return this.RISTSettings;
+    }
+
+    /**
+     * Set 输出的RIST配置信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RISTSettings 输出的RIST配置信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRISTSettings(DescribeOutputRISTSettings RISTSettings) {
+        this.RISTSettings = RISTSettings;
+    }
+
     public DescribeOutput() {
     }
 
@@ -540,6 +568,9 @@ public class DescribeOutput extends AbstractModel {
                 this.Zones[i] = new String(source.Zones[i]);
             }
         }
+        if (source.RISTSettings != null) {
+            this.RISTSettings = new DescribeOutputRISTSettings(source.RISTSettings);
+        }
     }
 
 
@@ -564,6 +595,7 @@ public class DescribeOutput extends AbstractModel {
         this.setParamSimple(map, prefix + "MaxConcurrent", this.MaxConcurrent);
         this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
         this.setParamArraySimple(map, prefix + "Zones.", this.Zones);
+        this.setParamObj(map, prefix + "RISTSettings.", this.RISTSettings);
 
     }
 }

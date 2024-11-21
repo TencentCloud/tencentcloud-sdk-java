@@ -128,6 +128,13 @@ public class StartStreamIngestRequest extends AbstractModel {
     private Long MaxDuration;
 
     /**
+    * 音量，取值范围[0, 100]，默认100，表示原音量。
+    */
+    @SerializedName("Volume")
+    @Expose
+    private Long Volume;
+
+    /**
      * Get TRTC的[SdkAppId](https://cloud.tencent.com/document/product/647/46351#sdkappid)，和TRTC的房间所对应的SdkAppId相同。 
      * @return SdkAppId TRTC的[SdkAppId](https://cloud.tencent.com/document/product/647/46351#sdkappid)，和TRTC的房间所对应的SdkAppId相同。
      */
@@ -387,6 +394,22 @@ public class StartStreamIngestRequest extends AbstractModel {
         this.MaxDuration = MaxDuration;
     }
 
+    /**
+     * Get 音量，取值范围[0, 100]，默认100，表示原音量。 
+     * @return Volume 音量，取值范围[0, 100]，默认100，表示原音量。
+     */
+    public Long getVolume() {
+        return this.Volume;
+    }
+
+    /**
+     * Set 音量，取值范围[0, 100]，默认100，表示原音量。
+     * @param Volume 音量，取值范围[0, 100]，默认100，表示原音量。
+     */
+    public void setVolume(Long Volume) {
+        this.Volume = Volume;
+    }
+
     public StartStreamIngestRequest() {
     }
 
@@ -440,6 +463,9 @@ public class StartStreamIngestRequest extends AbstractModel {
         if (source.MaxDuration != null) {
             this.MaxDuration = new Long(source.MaxDuration);
         }
+        if (source.Volume != null) {
+            this.Volume = new Long(source.Volume);
+        }
     }
 
 
@@ -461,6 +487,7 @@ public class StartStreamIngestRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "AutoPush", this.AutoPush);
         this.setParamSimple(map, prefix + "RepeatNum", this.RepeatNum);
         this.setParamSimple(map, prefix + "MaxDuration", this.MaxDuration);
+        this.setParamSimple(map, prefix + "Volume", this.Volume);
 
     }
 }

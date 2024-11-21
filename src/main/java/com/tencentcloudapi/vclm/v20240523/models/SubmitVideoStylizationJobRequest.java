@@ -24,7 +24,11 @@ import java.util.HashMap;
 public class SubmitVideoStylizationJobRequest extends AbstractModel {
 
     /**
-    * 风格ID，取值说明：2d_anime 2D动漫；3d_cartoon 3D卡通；3d_china 3D国潮；pixel_art	像素风。
+    * 风格ID。取值说明：
+2d_anime：2D动漫；
+3d_cartoon：3D卡通；
+3d_china：3D国潮；
+pixel_art：像素风。
     */
     @SerializedName("StyleId")
     @Expose
@@ -43,25 +47,43 @@ public class SubmitVideoStylizationJobRequest extends AbstractModel {
     private String VideoUrl;
 
     /**
-    * 风格化强度 可选参数["low","medium","high"] 
-"low":风格化强度弱,"medium":"风格化强度中等","high":"风格化强度强" 
-默认为medium
+    * 风格化强度。取值说明：
+low：风格化强度弱；
+medium：风格化强度中等；
+high：风格化强度强。
+默认值为medium。
     */
     @SerializedName("StyleStrength")
     @Expose
     private String StyleStrength;
 
     /**
-     * Get 风格ID，取值说明：2d_anime 2D动漫；3d_cartoon 3D卡通；3d_china 3D国潮；pixel_art	像素风。 
-     * @return StyleId 风格ID，取值说明：2d_anime 2D动漫；3d_cartoon 3D卡通；3d_china 3D国潮；pixel_art	像素风。
+     * Get 风格ID。取值说明：
+2d_anime：2D动漫；
+3d_cartoon：3D卡通；
+3d_china：3D国潮；
+pixel_art：像素风。 
+     * @return StyleId 风格ID。取值说明：
+2d_anime：2D动漫；
+3d_cartoon：3D卡通；
+3d_china：3D国潮；
+pixel_art：像素风。
      */
     public String getStyleId() {
         return this.StyleId;
     }
 
     /**
-     * Set 风格ID，取值说明：2d_anime 2D动漫；3d_cartoon 3D卡通；3d_china 3D国潮；pixel_art	像素风。
-     * @param StyleId 风格ID，取值说明：2d_anime 2D动漫；3d_cartoon 3D卡通；3d_china 3D国潮；pixel_art	像素风。
+     * Set 风格ID。取值说明：
+2d_anime：2D动漫；
+3d_cartoon：3D卡通；
+3d_china：3D国潮；
+pixel_art：像素风。
+     * @param StyleId 风格ID。取值说明：
+2d_anime：2D动漫；
+3d_cartoon：3D卡通；
+3d_china：3D国潮；
+pixel_art：像素风。
      */
     public void setStyleId(String StyleId) {
         this.StyleId = StyleId;
@@ -104,24 +126,32 @@ public class SubmitVideoStylizationJobRequest extends AbstractModel {
     }
 
     /**
-     * Get 风格化强度 可选参数["low","medium","high"] 
-"low":风格化强度弱,"medium":"风格化强度中等","high":"风格化强度强" 
-默认为medium 
-     * @return StyleStrength 风格化强度 可选参数["low","medium","high"] 
-"low":风格化强度弱,"medium":"风格化强度中等","high":"风格化强度强" 
-默认为medium
+     * Get 风格化强度。取值说明：
+low：风格化强度弱；
+medium：风格化强度中等；
+high：风格化强度强。
+默认值为medium。 
+     * @return StyleStrength 风格化强度。取值说明：
+low：风格化强度弱；
+medium：风格化强度中等；
+high：风格化强度强。
+默认值为medium。
      */
     public String getStyleStrength() {
         return this.StyleStrength;
     }
 
     /**
-     * Set 风格化强度 可选参数["low","medium","high"] 
-"low":风格化强度弱,"medium":"风格化强度中等","high":"风格化强度强" 
-默认为medium
-     * @param StyleStrength 风格化强度 可选参数["low","medium","high"] 
-"low":风格化强度弱,"medium":"风格化强度中等","high":"风格化强度强" 
-默认为medium
+     * Set 风格化强度。取值说明：
+low：风格化强度弱；
+medium：风格化强度中等；
+high：风格化强度强。
+默认值为medium。
+     * @param StyleStrength 风格化强度。取值说明：
+low：风格化强度弱；
+medium：风格化强度中等；
+high：风格化强度强。
+默认值为medium。
      */
     public void setStyleStrength(String StyleStrength) {
         this.StyleStrength = StyleStrength;

@@ -38,11 +38,18 @@ public class UpdateStreamIngestRequest extends AbstractModel {
     private String TaskId;
 
     /**
-    * 源流URL【必填】。
+    * 源流URL。
     */
     @SerializedName("StreamUrl")
     @Expose
     private String StreamUrl;
+
+    /**
+    * 音量，取值范围[0, 100]，默认100，表示原音量。
+    */
+    @SerializedName("Volume")
+    @Expose
+    private Long Volume;
 
     /**
      * Get TRTC的SDKAppId，和任务的房间所对应的SDKAppId相同 
@@ -77,19 +84,35 @@ public class UpdateStreamIngestRequest extends AbstractModel {
     }
 
     /**
-     * Get 源流URL【必填】。 
-     * @return StreamUrl 源流URL【必填】。
+     * Get 源流URL。 
+     * @return StreamUrl 源流URL。
      */
     public String getStreamUrl() {
         return this.StreamUrl;
     }
 
     /**
-     * Set 源流URL【必填】。
-     * @param StreamUrl 源流URL【必填】。
+     * Set 源流URL。
+     * @param StreamUrl 源流URL。
      */
     public void setStreamUrl(String StreamUrl) {
         this.StreamUrl = StreamUrl;
+    }
+
+    /**
+     * Get 音量，取值范围[0, 100]，默认100，表示原音量。 
+     * @return Volume 音量，取值范围[0, 100]，默认100，表示原音量。
+     */
+    public Long getVolume() {
+        return this.Volume;
+    }
+
+    /**
+     * Set 音量，取值范围[0, 100]，默认100，表示原音量。
+     * @param Volume 音量，取值范围[0, 100]，默认100，表示原音量。
+     */
+    public void setVolume(Long Volume) {
+        this.Volume = Volume;
     }
 
     public UpdateStreamIngestRequest() {
@@ -109,6 +132,9 @@ public class UpdateStreamIngestRequest extends AbstractModel {
         if (source.StreamUrl != null) {
             this.StreamUrl = new String(source.StreamUrl);
         }
+        if (source.Volume != null) {
+            this.Volume = new Long(source.Volume);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class UpdateStreamIngestRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "StreamUrl", this.StreamUrl);
+        this.setParamSimple(map, prefix + "Volume", this.Volume);
 
     }
 }

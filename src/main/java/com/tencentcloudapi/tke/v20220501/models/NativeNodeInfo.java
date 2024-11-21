@@ -187,6 +187,17 @@ public class NativeNodeInfo extends AbstractModel {
     private String OsImage;
 
     /**
+    * **原生节点对应的实例 ID**
+
+- ins-q47ofw6 表示这个实例是一个 CVM 的实例
+- eks-f8mvyaep 表示这个实例是一个 CXM 的实例
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
      * Get 节点名称 
      * @return MachineName 节点名称
      */
@@ -574,6 +585,38 @@ public class NativeNodeInfo extends AbstractModel {
         this.OsImage = OsImage;
     }
 
+    /**
+     * Get **原生节点对应的实例 ID**
+
+- ins-q47ofw6 表示这个实例是一个 CVM 的实例
+- eks-f8mvyaep 表示这个实例是一个 CXM 的实例
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InstanceId **原生节点对应的实例 ID**
+
+- ins-q47ofw6 表示这个实例是一个 CVM 的实例
+- eks-f8mvyaep 表示这个实例是一个 CXM 的实例
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set **原生节点对应的实例 ID**
+
+- ins-q47ofw6 表示这个实例是一个 CVM 的实例
+- eks-f8mvyaep 表示这个实例是一个 CXM 的实例
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstanceId **原生节点对应的实例 ID**
+
+- ins-q47ofw6 表示这个实例是一个 CVM 的实例
+- eks-f8mvyaep 表示这个实例是一个 CXM 的实例
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
     public NativeNodeInfo() {
     }
 
@@ -651,6 +694,9 @@ public class NativeNodeInfo extends AbstractModel {
         if (source.OsImage != null) {
             this.OsImage = new String(source.OsImage);
         }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
     }
 
 
@@ -680,6 +726,7 @@ public class NativeNodeInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
         this.setParamSimple(map, prefix + "OsImage", this.OsImage);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
 
     }
 }

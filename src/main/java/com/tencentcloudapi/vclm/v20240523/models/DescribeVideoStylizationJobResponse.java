@@ -31,11 +31,11 @@ public class DescribeVideoStylizationJobResponse extends AbstractModel {
     private String JobId;
 
     /**
-    * 任务状态码：
-JobInit:  "初始化中"
-JobModerationFailed: "审核失败",
-JobRunning: "处理中",
-JobFailed: "处理失败",
+    * 任务状态码。取值说明：
+JobInit:  "初始化中"；
+JobModerationFailed: "审核失败"；
+JobRunning: "处理中"；
+JobFailed: "处理失败"；
 JobSuccess: "处理完成"。
     */
     @SerializedName("StatusCode")
@@ -43,7 +43,12 @@ JobSuccess: "处理完成"。
     private String StatusCode;
 
     /**
-    * 任务状态描述。
+    * 任务状态描述。取值说明：
+JobInit:  "初始化中"；
+JobModerationFailed: "审核失败"；
+JobRunning: "处理中"；
+JobFailed: "处理失败"；
+JobSuccess: "处理完成"。
     */
     @SerializedName("StatusMsg")
     @Expose
@@ -80,17 +85,17 @@ JobSuccess: "处理完成"。
     }
 
     /**
-     * Get 任务状态码：
-JobInit:  "初始化中"
-JobModerationFailed: "审核失败",
-JobRunning: "处理中",
-JobFailed: "处理失败",
+     * Get 任务状态码。取值说明：
+JobInit:  "初始化中"；
+JobModerationFailed: "审核失败"；
+JobRunning: "处理中"；
+JobFailed: "处理失败"；
 JobSuccess: "处理完成"。 
-     * @return StatusCode 任务状态码：
-JobInit:  "初始化中"
-JobModerationFailed: "审核失败",
-JobRunning: "处理中",
-JobFailed: "处理失败",
+     * @return StatusCode 任务状态码。取值说明：
+JobInit:  "初始化中"；
+JobModerationFailed: "审核失败"；
+JobRunning: "处理中"；
+JobFailed: "处理失败"；
 JobSuccess: "处理完成"。
      */
     public String getStatusCode() {
@@ -98,17 +103,17 @@ JobSuccess: "处理完成"。
     }
 
     /**
-     * Set 任务状态码：
-JobInit:  "初始化中"
-JobModerationFailed: "审核失败",
-JobRunning: "处理中",
-JobFailed: "处理失败",
+     * Set 任务状态码。取值说明：
+JobInit:  "初始化中"；
+JobModerationFailed: "审核失败"；
+JobRunning: "处理中"；
+JobFailed: "处理失败"；
 JobSuccess: "处理完成"。
-     * @param StatusCode 任务状态码：
-JobInit:  "初始化中"
-JobModerationFailed: "审核失败",
-JobRunning: "处理中",
-JobFailed: "处理失败",
+     * @param StatusCode 任务状态码。取值说明：
+JobInit:  "初始化中"；
+JobModerationFailed: "审核失败"；
+JobRunning: "处理中"；
+JobFailed: "处理失败"；
 JobSuccess: "处理完成"。
      */
     public void setStatusCode(String StatusCode) {
@@ -116,16 +121,36 @@ JobSuccess: "处理完成"。
     }
 
     /**
-     * Get 任务状态描述。 
-     * @return StatusMsg 任务状态描述。
+     * Get 任务状态描述。取值说明：
+JobInit:  "初始化中"；
+JobModerationFailed: "审核失败"；
+JobRunning: "处理中"；
+JobFailed: "处理失败"；
+JobSuccess: "处理完成"。 
+     * @return StatusMsg 任务状态描述。取值说明：
+JobInit:  "初始化中"；
+JobModerationFailed: "审核失败"；
+JobRunning: "处理中"；
+JobFailed: "处理失败"；
+JobSuccess: "处理完成"。
      */
     public String getStatusMsg() {
         return this.StatusMsg;
     }
 
     /**
-     * Set 任务状态描述。
-     * @param StatusMsg 任务状态描述。
+     * Set 任务状态描述。取值说明：
+JobInit:  "初始化中"；
+JobModerationFailed: "审核失败"；
+JobRunning: "处理中"；
+JobFailed: "处理失败"；
+JobSuccess: "处理完成"。
+     * @param StatusMsg 任务状态描述。取值说明：
+JobInit:  "初始化中"；
+JobModerationFailed: "审核失败"；
+JobRunning: "处理中"；
+JobFailed: "处理失败"；
+JobSuccess: "处理完成"。
      */
     public void setStatusMsg(String StatusMsg) {
         this.StatusMsg = StatusMsg;

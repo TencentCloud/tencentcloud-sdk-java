@@ -33,7 +33,8 @@ public class SubmitHunyuanImageJobRequest extends AbstractModel {
     private String Prompt;
 
     /**
-    * 反向提示词。 推荐使用中文。最多可传1024个 utf-8 字符。
+    * 反向提示词。 
+推荐使用中文。最多可传1024个 utf-8 字符。
     */
     @SerializedName("NegativePrompt")
     @Expose
@@ -127,16 +128,20 @@ public class SubmitHunyuanImageJobRequest extends AbstractModel {
     }
 
     /**
-     * Get 反向提示词。 推荐使用中文。最多可传1024个 utf-8 字符。 
-     * @return NegativePrompt 反向提示词。 推荐使用中文。最多可传1024个 utf-8 字符。
+     * Get 反向提示词。 
+推荐使用中文。最多可传1024个 utf-8 字符。 
+     * @return NegativePrompt 反向提示词。 
+推荐使用中文。最多可传1024个 utf-8 字符。
      */
     public String getNegativePrompt() {
         return this.NegativePrompt;
     }
 
     /**
-     * Set 反向提示词。 推荐使用中文。最多可传1024个 utf-8 字符。
-     * @param NegativePrompt 反向提示词。 推荐使用中文。最多可传1024个 utf-8 字符。
+     * Set 反向提示词。 
+推荐使用中文。最多可传1024个 utf-8 字符。
+     * @param NegativePrompt 反向提示词。 
+推荐使用中文。最多可传1024个 utf-8 字符。
      */
     public void setNegativePrompt(String NegativePrompt) {
         this.NegativePrompt = NegativePrompt;

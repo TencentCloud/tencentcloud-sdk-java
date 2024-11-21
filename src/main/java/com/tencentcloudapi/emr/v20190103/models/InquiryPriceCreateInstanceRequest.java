@@ -127,11 +127,7 @@ public class InquiryPriceCreateInstanceRequest extends AbstractModel {
     private Long ProductId;
 
     /**
-    * 场景化取值：
-Hadoop-Kudu
-Hadoop-Zookeeper
-Hadoop-Presto
-Hadoop-Hbase
+    * 场景化取值：Hadoop-Kudu，Hadoop-Zookeeper，Hadoop-Presto，Hadoop-Hbase
     */
     @SerializedName("SceneName")
     @Expose
@@ -415,32 +411,16 @@ Hadoop-Hbase
     }
 
     /**
-     * Get 场景化取值：
-Hadoop-Kudu
-Hadoop-Zookeeper
-Hadoop-Presto
-Hadoop-Hbase 
-     * @return SceneName 场景化取值：
-Hadoop-Kudu
-Hadoop-Zookeeper
-Hadoop-Presto
-Hadoop-Hbase
+     * Get 场景化取值：Hadoop-Kudu，Hadoop-Zookeeper，Hadoop-Presto，Hadoop-Hbase 
+     * @return SceneName 场景化取值：Hadoop-Kudu，Hadoop-Zookeeper，Hadoop-Presto，Hadoop-Hbase
      */
     public String getSceneName() {
         return this.SceneName;
     }
 
     /**
-     * Set 场景化取值：
-Hadoop-Kudu
-Hadoop-Zookeeper
-Hadoop-Presto
-Hadoop-Hbase
-     * @param SceneName 场景化取值：
-Hadoop-Kudu
-Hadoop-Zookeeper
-Hadoop-Presto
-Hadoop-Hbase
+     * Set 场景化取值：Hadoop-Kudu，Hadoop-Zookeeper，Hadoop-Presto，Hadoop-Hbase
+     * @param SceneName 场景化取值：Hadoop-Kudu，Hadoop-Zookeeper，Hadoop-Presto，Hadoop-Hbase
      */
     public void setSceneName(String SceneName) {
         this.SceneName = SceneName;

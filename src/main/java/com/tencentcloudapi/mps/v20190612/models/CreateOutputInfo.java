@@ -38,7 +38,7 @@ public class CreateOutputInfo extends AbstractModel {
     private String Description;
 
     /**
-    * 输出协议，可选[SRT|RTP|RTMP|RTMP_PULL]。
+    * 输出的转推协议，支持SRT|RTP|RTMP|RTMP_PULL|RTSP|RIST。
     */
     @SerializedName("Protocol")
     @Expose
@@ -102,6 +102,20 @@ public class CreateOutputInfo extends AbstractModel {
     private String [] Zones;
 
     /**
+    * 输出类型：Internet/TencentCSS/StreamLive
+    */
+    @SerializedName("OutputType")
+    @Expose
+    private String OutputType;
+
+    /**
+    * 输出的RIST的配置。
+    */
+    @SerializedName("RISTSettings")
+    @Expose
+    private CreateOutputRistSettings RISTSettings;
+
+    /**
      * Get 输出的名称。 
      * @return OutputName 输出的名称。
      */
@@ -134,16 +148,16 @@ public class CreateOutputInfo extends AbstractModel {
     }
 
     /**
-     * Get 输出协议，可选[SRT|RTP|RTMP|RTMP_PULL]。 
-     * @return Protocol 输出协议，可选[SRT|RTP|RTMP|RTMP_PULL]。
+     * Get 输出的转推协议，支持SRT|RTP|RTMP|RTMP_PULL|RTSP|RIST。 
+     * @return Protocol 输出的转推协议，支持SRT|RTP|RTMP|RTMP_PULL|RTSP|RIST。
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set 输出协议，可选[SRT|RTP|RTMP|RTMP_PULL]。
-     * @param Protocol 输出协议，可选[SRT|RTP|RTMP|RTMP_PULL]。
+     * Set 输出的转推协议，支持SRT|RTP|RTMP|RTMP_PULL|RTSP|RIST。
+     * @param Protocol 输出的转推协议，支持SRT|RTP|RTMP|RTMP_PULL|RTSP|RIST。
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
@@ -281,6 +295,38 @@ public class CreateOutputInfo extends AbstractModel {
         this.Zones = Zones;
     }
 
+    /**
+     * Get 输出类型：Internet/TencentCSS/StreamLive 
+     * @return OutputType 输出类型：Internet/TencentCSS/StreamLive
+     */
+    public String getOutputType() {
+        return this.OutputType;
+    }
+
+    /**
+     * Set 输出类型：Internet/TencentCSS/StreamLive
+     * @param OutputType 输出类型：Internet/TencentCSS/StreamLive
+     */
+    public void setOutputType(String OutputType) {
+        this.OutputType = OutputType;
+    }
+
+    /**
+     * Get 输出的RIST的配置。 
+     * @return RISTSettings 输出的RIST的配置。
+     */
+    public CreateOutputRistSettings getRISTSettings() {
+        return this.RISTSettings;
+    }
+
+    /**
+     * Set 输出的RIST的配置。
+     * @param RISTSettings 输出的RIST的配置。
+     */
+    public void setRISTSettings(CreateOutputRistSettings RISTSettings) {
+        this.RISTSettings = RISTSettings;
+    }
+
     public CreateOutputInfo() {
     }
 
@@ -331,6 +377,12 @@ public class CreateOutputInfo extends AbstractModel {
                 this.Zones[i] = new String(source.Zones[i]);
             }
         }
+        if (source.OutputType != null) {
+            this.OutputType = new String(source.OutputType);
+        }
+        if (source.RISTSettings != null) {
+            this.RISTSettings = new CreateOutputRistSettings(source.RISTSettings);
+        }
     }
 
 
@@ -349,6 +401,8 @@ public class CreateOutputInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "MaxConcurrent", this.MaxConcurrent);
         this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
         this.setParamArraySimple(map, prefix + "Zones.", this.Zones);
+        this.setParamSimple(map, prefix + "OutputType", this.OutputType);
+        this.setParamObj(map, prefix + "RISTSettings.", this.RISTSettings);
 
     }
 }
