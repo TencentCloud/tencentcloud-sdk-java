@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class CreateInstanceAccountRequest extends AbstractModel {
 
     /**
-    * 实例 ID。
+    * 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 自定义访问数据库的名称。
+    * 自定义的访问数据库的账号名称。
 - 仅由字母、数字、下划线、中划线组成。
 - 长度不能大于32位。
     */
@@ -76,26 +76,26 @@ public class CreateInstanceAccountRequest extends AbstractModel {
     private String Remark;
 
     /**
-     * Get 实例 ID。 
-     * @return InstanceId 实例 ID。
+     * Get 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。 
+     * @return InstanceId 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例 ID。
-     * @param InstanceId 实例 ID。
+     * Set 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
+     * @param InstanceId 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 自定义访问数据库的名称。
+     * Get 自定义的访问数据库的账号名称。
 - 仅由字母、数字、下划线、中划线组成。
 - 长度不能大于32位。 
-     * @return AccountName 自定义访问数据库的名称。
+     * @return AccountName 自定义的访问数据库的账号名称。
 - 仅由字母、数字、下划线、中划线组成。
 - 长度不能大于32位。
      */
@@ -104,10 +104,10 @@ public class CreateInstanceAccountRequest extends AbstractModel {
     }
 
     /**
-     * Set 自定义访问数据库的名称。
+     * Set 自定义的访问数据库的账号名称。
 - 仅由字母、数字、下划线、中划线组成。
 - 长度不能大于32位。
-     * @param AccountName 自定义访问数据库的名称。
+     * @param AccountName 自定义的访问数据库的账号名称。
 - 仅由字母、数字、下划线、中划线组成。
 - 长度不能大于32位。
      */

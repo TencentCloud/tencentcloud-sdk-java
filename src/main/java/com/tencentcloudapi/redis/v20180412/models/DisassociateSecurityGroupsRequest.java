@@ -31,14 +31,14 @@ public class DisassociateSecurityGroupsRequest extends AbstractModel {
     private String Product;
 
     /**
-    * 安全组 ID。
+    * 安全组 ID，请通过接口[DescribeInstanceSecurityGroup](https://cloud.tencent.com/document/product/239/34447)的返回参数InstanceSecurityGroupsDetail 的子参数**SecurityGroupId**获取。
     */
     @SerializedName("SecurityGroupId")
     @Expose
     private String SecurityGroupId;
 
     /**
-    * 实例ID列表，一个或者多个实例 ID 组成的数组。
+    * 实例ID列表，一个或者多个实例 ID 组成的数组。请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
     */
     @SerializedName("InstanceIds")
     @Expose
@@ -61,32 +61,32 @@ public class DisassociateSecurityGroupsRequest extends AbstractModel {
     }
 
     /**
-     * Get 安全组 ID。 
-     * @return SecurityGroupId 安全组 ID。
+     * Get 安全组 ID，请通过接口[DescribeInstanceSecurityGroup](https://cloud.tencent.com/document/product/239/34447)的返回参数InstanceSecurityGroupsDetail 的子参数**SecurityGroupId**获取。 
+     * @return SecurityGroupId 安全组 ID，请通过接口[DescribeInstanceSecurityGroup](https://cloud.tencent.com/document/product/239/34447)的返回参数InstanceSecurityGroupsDetail 的子参数**SecurityGroupId**获取。
      */
     public String getSecurityGroupId() {
         return this.SecurityGroupId;
     }
 
     /**
-     * Set 安全组 ID。
-     * @param SecurityGroupId 安全组 ID。
+     * Set 安全组 ID，请通过接口[DescribeInstanceSecurityGroup](https://cloud.tencent.com/document/product/239/34447)的返回参数InstanceSecurityGroupsDetail 的子参数**SecurityGroupId**获取。
+     * @param SecurityGroupId 安全组 ID，请通过接口[DescribeInstanceSecurityGroup](https://cloud.tencent.com/document/product/239/34447)的返回参数InstanceSecurityGroupsDetail 的子参数**SecurityGroupId**获取。
      */
     public void setSecurityGroupId(String SecurityGroupId) {
         this.SecurityGroupId = SecurityGroupId;
     }
 
     /**
-     * Get 实例ID列表，一个或者多个实例 ID 组成的数组。 
-     * @return InstanceIds 实例ID列表，一个或者多个实例 ID 组成的数组。
+     * Get 实例ID列表，一个或者多个实例 ID 组成的数组。请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。 
+     * @return InstanceIds 实例ID列表，一个或者多个实例 ID 组成的数组。请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set 实例ID列表，一个或者多个实例 ID 组成的数组。
-     * @param InstanceIds 实例ID列表，一个或者多个实例 ID 组成的数组。
+     * Set 实例ID列表，一个或者多个实例 ID 组成的数组。请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
+     * @param InstanceIds 实例ID列表，一个或者多个实例 ID 组成的数组。请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;

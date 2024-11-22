@@ -24,49 +24,56 @@ import java.util.HashMap;
 public class DescribeRedisClustersRequest extends AbstractModel {
 
     /**
-    * Redis独享集群id
+    * Redis独享集群 ID。请登录[专用集群控制台](https://console.cloud.tencent.com/cdc/dedicatedcluster/index?rid=1
+)切换至**云服务管理**页面，在下拉框选择**云数据库 Redis**，可获取独享集群ID。
     */
     @SerializedName("RedisClusterIds")
     @Expose
     private String [] RedisClusterIds;
 
     /**
-    * 集群状态：1-流程中，2-运行中，3-已隔离
+    * 集群状态。
+- 1：流程。
+- 2：运行中。
+- 3：已隔离。
     */
     @SerializedName("Status")
     @Expose
     private Long [] Status;
 
     /**
-    * 项目ID数组
+    * 项目ID数组。请登录[项目管理](https://console.cloud.tencent.com/project)页面，在**项目名称**中复制项目 ID。
     */
     @SerializedName("ProjectIds")
     @Expose
     private Long [] ProjectIds;
 
     /**
-    * 续费模式：0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
+    * 续费模式。
+- 0：默认状态，手动续费。
+- 1：自动续费。
+- 2：明确不自动续费。
     */
     @SerializedName("AutoRenewFlag")
     @Expose
     private Long [] AutoRenewFlag;
 
     /**
-    * Redis独享集群名称
+    * Redis 独享集群名称。
     */
     @SerializedName("ClusterName")
     @Expose
     private String ClusterName;
 
     /**
-    * 搜索关键词：支持集群Id、集群名称
+    * 搜索关键词：支持集群 ID、集群名称。
     */
     @SerializedName("SearchKey")
     @Expose
     private String SearchKey;
 
     /**
-    * 分页限制返回大小，不传则默认为20
+    * 分页限制返回大小，不传则默认为20。
     */
     @SerializedName("Limit")
     @Expose
@@ -80,119 +87,148 @@ public class DescribeRedisClustersRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * 本地专用集群id
+    * 本地专用集群 ID，请登录[专用集群控制台](https://console.cloud.tencent.com/cdc/dedicatedcluster/index?rid=1
+)实例列表获取集群 ID。
     */
     @SerializedName("DedicatedClusterId")
     @Expose
     private String DedicatedClusterId;
 
     /**
-     * Get Redis独享集群id 
-     * @return RedisClusterIds Redis独享集群id
+     * Get Redis独享集群 ID。请登录[专用集群控制台](https://console.cloud.tencent.com/cdc/dedicatedcluster/index?rid=1
+)切换至**云服务管理**页面，在下拉框选择**云数据库 Redis**，可获取独享集群ID。 
+     * @return RedisClusterIds Redis独享集群 ID。请登录[专用集群控制台](https://console.cloud.tencent.com/cdc/dedicatedcluster/index?rid=1
+)切换至**云服务管理**页面，在下拉框选择**云数据库 Redis**，可获取独享集群ID。
      */
     public String [] getRedisClusterIds() {
         return this.RedisClusterIds;
     }
 
     /**
-     * Set Redis独享集群id
-     * @param RedisClusterIds Redis独享集群id
+     * Set Redis独享集群 ID。请登录[专用集群控制台](https://console.cloud.tencent.com/cdc/dedicatedcluster/index?rid=1
+)切换至**云服务管理**页面，在下拉框选择**云数据库 Redis**，可获取独享集群ID。
+     * @param RedisClusterIds Redis独享集群 ID。请登录[专用集群控制台](https://console.cloud.tencent.com/cdc/dedicatedcluster/index?rid=1
+)切换至**云服务管理**页面，在下拉框选择**云数据库 Redis**，可获取独享集群ID。
      */
     public void setRedisClusterIds(String [] RedisClusterIds) {
         this.RedisClusterIds = RedisClusterIds;
     }
 
     /**
-     * Get 集群状态：1-流程中，2-运行中，3-已隔离 
-     * @return Status 集群状态：1-流程中，2-运行中，3-已隔离
+     * Get 集群状态。
+- 1：流程。
+- 2：运行中。
+- 3：已隔离。 
+     * @return Status 集群状态。
+- 1：流程。
+- 2：运行中。
+- 3：已隔离。
      */
     public Long [] getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 集群状态：1-流程中，2-运行中，3-已隔离
-     * @param Status 集群状态：1-流程中，2-运行中，3-已隔离
+     * Set 集群状态。
+- 1：流程。
+- 2：运行中。
+- 3：已隔离。
+     * @param Status 集群状态。
+- 1：流程。
+- 2：运行中。
+- 3：已隔离。
      */
     public void setStatus(Long [] Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 项目ID数组 
-     * @return ProjectIds 项目ID数组
+     * Get 项目ID数组。请登录[项目管理](https://console.cloud.tencent.com/project)页面，在**项目名称**中复制项目 ID。 
+     * @return ProjectIds 项目ID数组。请登录[项目管理](https://console.cloud.tencent.com/project)页面，在**项目名称**中复制项目 ID。
      */
     public Long [] getProjectIds() {
         return this.ProjectIds;
     }
 
     /**
-     * Set 项目ID数组
-     * @param ProjectIds 项目ID数组
+     * Set 项目ID数组。请登录[项目管理](https://console.cloud.tencent.com/project)页面，在**项目名称**中复制项目 ID。
+     * @param ProjectIds 项目ID数组。请登录[项目管理](https://console.cloud.tencent.com/project)页面，在**项目名称**中复制项目 ID。
      */
     public void setProjectIds(Long [] ProjectIds) {
         this.ProjectIds = ProjectIds;
     }
 
     /**
-     * Get 续费模式：0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费 
-     * @return AutoRenewFlag 续费模式：0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
+     * Get 续费模式。
+- 0：默认状态，手动续费。
+- 1：自动续费。
+- 2：明确不自动续费。 
+     * @return AutoRenewFlag 续费模式。
+- 0：默认状态，手动续费。
+- 1：自动续费。
+- 2：明确不自动续费。
      */
     public Long [] getAutoRenewFlag() {
         return this.AutoRenewFlag;
     }
 
     /**
-     * Set 续费模式：0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
-     * @param AutoRenewFlag 续费模式：0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
+     * Set 续费模式。
+- 0：默认状态，手动续费。
+- 1：自动续费。
+- 2：明确不自动续费。
+     * @param AutoRenewFlag 续费模式。
+- 0：默认状态，手动续费。
+- 1：自动续费。
+- 2：明确不自动续费。
      */
     public void setAutoRenewFlag(Long [] AutoRenewFlag) {
         this.AutoRenewFlag = AutoRenewFlag;
     }
 
     /**
-     * Get Redis独享集群名称 
-     * @return ClusterName Redis独享集群名称
+     * Get Redis 独享集群名称。 
+     * @return ClusterName Redis 独享集群名称。
      */
     public String getClusterName() {
         return this.ClusterName;
     }
 
     /**
-     * Set Redis独享集群名称
-     * @param ClusterName Redis独享集群名称
+     * Set Redis 独享集群名称。
+     * @param ClusterName Redis 独享集群名称。
      */
     public void setClusterName(String ClusterName) {
         this.ClusterName = ClusterName;
     }
 
     /**
-     * Get 搜索关键词：支持集群Id、集群名称 
-     * @return SearchKey 搜索关键词：支持集群Id、集群名称
+     * Get 搜索关键词：支持集群 ID、集群名称。 
+     * @return SearchKey 搜索关键词：支持集群 ID、集群名称。
      */
     public String getSearchKey() {
         return this.SearchKey;
     }
 
     /**
-     * Set 搜索关键词：支持集群Id、集群名称
-     * @param SearchKey 搜索关键词：支持集群Id、集群名称
+     * Set 搜索关键词：支持集群 ID、集群名称。
+     * @param SearchKey 搜索关键词：支持集群 ID、集群名称。
      */
     public void setSearchKey(String SearchKey) {
         this.SearchKey = SearchKey;
     }
 
     /**
-     * Get 分页限制返回大小，不传则默认为20 
-     * @return Limit 分页限制返回大小，不传则默认为20
+     * Get 分页限制返回大小，不传则默认为20。 
+     * @return Limit 分页限制返回大小，不传则默认为20。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 分页限制返回大小，不传则默认为20
-     * @param Limit 分页限制返回大小，不传则默认为20
+     * Set 分页限制返回大小，不传则默认为20。
+     * @param Limit 分页限制返回大小，不传则默认为20。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
@@ -215,16 +251,20 @@ public class DescribeRedisClustersRequest extends AbstractModel {
     }
 
     /**
-     * Get 本地专用集群id 
-     * @return DedicatedClusterId 本地专用集群id
+     * Get 本地专用集群 ID，请登录[专用集群控制台](https://console.cloud.tencent.com/cdc/dedicatedcluster/index?rid=1
+)实例列表获取集群 ID。 
+     * @return DedicatedClusterId 本地专用集群 ID，请登录[专用集群控制台](https://console.cloud.tencent.com/cdc/dedicatedcluster/index?rid=1
+)实例列表获取集群 ID。
      */
     public String getDedicatedClusterId() {
         return this.DedicatedClusterId;
     }
 
     /**
-     * Set 本地专用集群id
-     * @param DedicatedClusterId 本地专用集群id
+     * Set 本地专用集群 ID，请登录[专用集群控制台](https://console.cloud.tencent.com/cdc/dedicatedcluster/index?rid=1
+)实例列表获取集群 ID。
+     * @param DedicatedClusterId 本地专用集群 ID，请登录[专用集群控制台](https://console.cloud.tencent.com/cdc/dedicatedcluster/index?rid=1
+)实例列表获取集群 ID。
      */
     public void setDedicatedClusterId(String DedicatedClusterId) {
         this.DedicatedClusterId = DedicatedClusterId;

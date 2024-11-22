@@ -392,7 +392,7 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
-     *本接口（CloneSecurityGroup）用于根据存量的安全组，克隆创建出同样规则配置的安全组。仅克隆安全组及其规则信息，不会克隆安全组标签信息。
+     *本接口（CloneSecurityGroup）用于根据存量的安全组，克隆创建出同样规则配置的安全组。默认仅克隆安全组及其规则信息，可通过入参开启克隆安全组标签信息。
      * @param req CloneSecurityGroupRequest
      * @return CloneSecurityGroupResponse
      * @throws TencentCloudSDKException
@@ -793,6 +793,17 @@ public class VpcClient extends AbstractClient{
     public CreatePrivateNatGatewayTranslationNatRuleResponse CreatePrivateNatGatewayTranslationNatRule(CreatePrivateNatGatewayTranslationNatRuleRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreatePrivateNatGatewayTranslationNatRule", CreatePrivateNatGatewayTranslationNatRuleResponse.class);
+    }
+
+    /**
+     *创建内网保留IP
+     * @param req CreateReserveIpAddressesRequest
+     * @return CreateReserveIpAddressesResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateReserveIpAddressesResponse CreateReserveIpAddresses(CreateReserveIpAddressesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateReserveIpAddresses", CreateReserveIpAddressesResponse.class);
     }
 
     /**
@@ -1425,6 +1436,17 @@ public class VpcClient extends AbstractClient{
     public DeletePrivateNatGatewayTranslationNatRuleResponse DeletePrivateNatGatewayTranslationNatRule(DeletePrivateNatGatewayTranslationNatRuleRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeletePrivateNatGatewayTranslationNatRule", DeletePrivateNatGatewayTranslationNatRuleResponse.class);
+    }
+
+    /**
+     *删除内网保留IP
+     * @param req DeleteReserveIpAddressesRequest
+     * @return DeleteReserveIpAddressesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteReserveIpAddressesResponse DeleteReserveIpAddresses(DeleteReserveIpAddressesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteReserveIpAddresses", DeleteReserveIpAddressesResponse.class);
     }
 
     /**
@@ -2327,6 +2349,17 @@ public class VpcClient extends AbstractClient{
     public DescribeProductQuotaResponse DescribeProductQuota(DescribeProductQuotaRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeProductQuota", DescribeProductQuotaResponse.class);
+    }
+
+    /**
+     *查询内网保留 IP
+     * @param req DescribeReserveIpAddressesRequest
+     * @return DescribeReserveIpAddressesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeReserveIpAddressesResponse DescribeReserveIpAddresses(DescribeReserveIpAddressesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeReserveIpAddresses", DescribeReserveIpAddressesResponse.class);
     }
 
     /**
@@ -3745,6 +3778,17 @@ LimitTypes取值范围：
     public ModifyPrivateNatGatewayTranslationNatRuleResponse ModifyPrivateNatGatewayTranslationNatRule(ModifyPrivateNatGatewayTranslationNatRuleRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyPrivateNatGatewayTranslationNatRule", ModifyPrivateNatGatewayTranslationNatRuleResponse.class);
+    }
+
+    /**
+     *修改内网保留 IP
+     * @param req ModifyReserveIpAddressRequest
+     * @return ModifyReserveIpAddressResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyReserveIpAddressResponse ModifyReserveIpAddress(ModifyReserveIpAddressRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyReserveIpAddress", ModifyReserveIpAddressResponse.class);
     }
 
     /**

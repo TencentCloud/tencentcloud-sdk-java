@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeTendisSlowLogRequest extends AbstractModel {
 
     /**
-    * 实例Id：crs-ngvou0i1
+    * 实例 ID，请登录[Tendis控制台](https://console.cloud.tencent.com/tendis)在实例列表复制实例 ID。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -66,16 +66,16 @@ public class DescribeTendisSlowLogRequest extends AbstractModel {
     private Long Offset;
 
     /**
-     * Get 实例Id：crs-ngvou0i1 
-     * @return InstanceId 实例Id：crs-ngvou0i1
+     * Get 实例 ID，请登录[Tendis控制台](https://console.cloud.tencent.com/tendis)在实例列表复制实例 ID。 
+     * @return InstanceId 实例 ID，请登录[Tendis控制台](https://console.cloud.tencent.com/tendis)在实例列表复制实例 ID。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例Id：crs-ngvou0i1
-     * @param InstanceId 实例Id：crs-ngvou0i1
+     * Set 实例 ID，请登录[Tendis控制台](https://console.cloud.tencent.com/tendis)在实例列表复制实例 ID。
+     * @param InstanceId 实例 ID，请登录[Tendis控制台](https://console.cloud.tencent.com/tendis)在实例列表复制实例 ID。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

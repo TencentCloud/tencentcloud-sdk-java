@@ -45,7 +45,7 @@ public class DescribeConfigFilesRequest extends AbstractModel {
     private String Group;
 
     /**
-    * 名称
+    * 配置文件名称
     */
     @SerializedName("Name")
     @Expose
@@ -71,6 +71,13 @@ public class DescribeConfigFilesRequest extends AbstractModel {
     @SerializedName("Offset")
     @Expose
     private Long Offset;
+
+    /**
+    * 配置文件ID
+    */
+    @SerializedName("Id")
+    @Expose
+    private String Id;
 
     /**
      * Get 命名空间名称 
@@ -121,16 +128,16 @@ public class DescribeConfigFilesRequest extends AbstractModel {
     }
 
     /**
-     * Get 名称 
-     * @return Name 名称
+     * Get 配置文件名称 
+     * @return Name 配置文件名称
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 名称
-     * @param Name 名称
+     * Set 配置文件名称
+     * @param Name 配置文件名称
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -184,6 +191,22 @@ public class DescribeConfigFilesRequest extends AbstractModel {
         this.Offset = Offset;
     }
 
+    /**
+     * Get 配置文件ID 
+     * @return Id 配置文件ID
+     */
+    public String getId() {
+        return this.Id;
+    }
+
+    /**
+     * Set 配置文件ID
+     * @param Id 配置文件ID
+     */
+    public void setId(String Id) {
+        this.Id = Id;
+    }
+
     public DescribeConfigFilesRequest() {
     }
 
@@ -216,6 +239,9 @@ public class DescribeConfigFilesRequest extends AbstractModel {
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
         }
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
     }
 
 
@@ -230,6 +256,7 @@ public class DescribeConfigFilesRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "Id", this.Id);
 
     }
 }

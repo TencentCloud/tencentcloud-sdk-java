@@ -31,14 +31,14 @@ public class AssociateSecurityGroupsRequest extends AbstractModel {
     private String Product;
 
     /**
-    * 要绑定的安全组ID，类似sg-efil73jd。
+    * 要绑定的安全组ID，请在[控制台安全组](https://console.cloud.tencent.com/vpc/security-group)页面获取安全组 ID。
     */
     @SerializedName("SecurityGroupId")
     @Expose
     private String SecurityGroupId;
 
     /**
-    * 被绑定的实例ID，类似ins-lesecurk，支持指定多个实例。
+    * 被绑定的实例ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID，支持指定多个实例。
     */
     @SerializedName("InstanceIds")
     @Expose
@@ -61,32 +61,32 @@ public class AssociateSecurityGroupsRequest extends AbstractModel {
     }
 
     /**
-     * Get 要绑定的安全组ID，类似sg-efil73jd。 
-     * @return SecurityGroupId 要绑定的安全组ID，类似sg-efil73jd。
+     * Get 要绑定的安全组ID，请在[控制台安全组](https://console.cloud.tencent.com/vpc/security-group)页面获取安全组 ID。 
+     * @return SecurityGroupId 要绑定的安全组ID，请在[控制台安全组](https://console.cloud.tencent.com/vpc/security-group)页面获取安全组 ID。
      */
     public String getSecurityGroupId() {
         return this.SecurityGroupId;
     }
 
     /**
-     * Set 要绑定的安全组ID，类似sg-efil73jd。
-     * @param SecurityGroupId 要绑定的安全组ID，类似sg-efil73jd。
+     * Set 要绑定的安全组ID，请在[控制台安全组](https://console.cloud.tencent.com/vpc/security-group)页面获取安全组 ID。
+     * @param SecurityGroupId 要绑定的安全组ID，请在[控制台安全组](https://console.cloud.tencent.com/vpc/security-group)页面获取安全组 ID。
      */
     public void setSecurityGroupId(String SecurityGroupId) {
         this.SecurityGroupId = SecurityGroupId;
     }
 
     /**
-     * Get 被绑定的实例ID，类似ins-lesecurk，支持指定多个实例。 
-     * @return InstanceIds 被绑定的实例ID，类似ins-lesecurk，支持指定多个实例。
+     * Get 被绑定的实例ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID，支持指定多个实例。 
+     * @return InstanceIds 被绑定的实例ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID，支持指定多个实例。
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set 被绑定的实例ID，类似ins-lesecurk，支持指定多个实例。
-     * @param InstanceIds 被绑定的实例ID，类似ins-lesecurk，支持指定多个实例。
+     * Set 被绑定的实例ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID，支持指定多个实例。
+     * @param InstanceIds 被绑定的实例ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID，支持指定多个实例。
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;

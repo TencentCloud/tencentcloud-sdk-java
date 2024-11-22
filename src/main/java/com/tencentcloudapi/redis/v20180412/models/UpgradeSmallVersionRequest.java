@@ -24,92 +24,102 @@ import java.util.HashMap;
 public class UpgradeSmallVersionRequest extends AbstractModel {
 
     /**
-    * 实例ID
+    * 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 当前redis版本
+    * 当前 Redis 小版本。小版本信息，请参见[升级实例版本](https://cloud.tencent.com/document/product/239/46457)。
     */
     @SerializedName("CurrentRedisVersion")
     @Expose
     private String CurrentRedisVersion;
 
     /**
-    * 可升级的redis版本
+    * 升级后的 Redis 小版本。小版本信息，请参见[升级实例版本](https://cloud.tencent.com/document/product/239/46457)。
     */
     @SerializedName("UpgradeRedisVersion")
     @Expose
     private String UpgradeRedisVersion;
 
     /**
-    * 1-立即升级   0-维护时间窗口升级
+    * 指定是否立即升级。
+- 1：立即升级。
+- 0：维护时间窗口升级。
     */
     @SerializedName("InstanceTypeUpgradeNow")
     @Expose
     private Long InstanceTypeUpgradeNow;
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+     * Get 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。 
+     * @return InstanceId 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
+     * @param InstanceId 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 当前redis版本 
-     * @return CurrentRedisVersion 当前redis版本
+     * Get 当前 Redis 小版本。小版本信息，请参见[升级实例版本](https://cloud.tencent.com/document/product/239/46457)。 
+     * @return CurrentRedisVersion 当前 Redis 小版本。小版本信息，请参见[升级实例版本](https://cloud.tencent.com/document/product/239/46457)。
      */
     public String getCurrentRedisVersion() {
         return this.CurrentRedisVersion;
     }
 
     /**
-     * Set 当前redis版本
-     * @param CurrentRedisVersion 当前redis版本
+     * Set 当前 Redis 小版本。小版本信息，请参见[升级实例版本](https://cloud.tencent.com/document/product/239/46457)。
+     * @param CurrentRedisVersion 当前 Redis 小版本。小版本信息，请参见[升级实例版本](https://cloud.tencent.com/document/product/239/46457)。
      */
     public void setCurrentRedisVersion(String CurrentRedisVersion) {
         this.CurrentRedisVersion = CurrentRedisVersion;
     }
 
     /**
-     * Get 可升级的redis版本 
-     * @return UpgradeRedisVersion 可升级的redis版本
+     * Get 升级后的 Redis 小版本。小版本信息，请参见[升级实例版本](https://cloud.tencent.com/document/product/239/46457)。 
+     * @return UpgradeRedisVersion 升级后的 Redis 小版本。小版本信息，请参见[升级实例版本](https://cloud.tencent.com/document/product/239/46457)。
      */
     public String getUpgradeRedisVersion() {
         return this.UpgradeRedisVersion;
     }
 
     /**
-     * Set 可升级的redis版本
-     * @param UpgradeRedisVersion 可升级的redis版本
+     * Set 升级后的 Redis 小版本。小版本信息，请参见[升级实例版本](https://cloud.tencent.com/document/product/239/46457)。
+     * @param UpgradeRedisVersion 升级后的 Redis 小版本。小版本信息，请参见[升级实例版本](https://cloud.tencent.com/document/product/239/46457)。
      */
     public void setUpgradeRedisVersion(String UpgradeRedisVersion) {
         this.UpgradeRedisVersion = UpgradeRedisVersion;
     }
 
     /**
-     * Get 1-立即升级   0-维护时间窗口升级 
-     * @return InstanceTypeUpgradeNow 1-立即升级   0-维护时间窗口升级
+     * Get 指定是否立即升级。
+- 1：立即升级。
+- 0：维护时间窗口升级。 
+     * @return InstanceTypeUpgradeNow 指定是否立即升级。
+- 1：立即升级。
+- 0：维护时间窗口升级。
      */
     public Long getInstanceTypeUpgradeNow() {
         return this.InstanceTypeUpgradeNow;
     }
 
     /**
-     * Set 1-立即升级   0-维护时间窗口升级
-     * @param InstanceTypeUpgradeNow 1-立即升级   0-维护时间窗口升级
+     * Set 指定是否立即升级。
+- 1：立即升级。
+- 0：维护时间窗口升级。
+     * @param InstanceTypeUpgradeNow 指定是否立即升级。
+- 1：立即升级。
+- 0：维护时间窗口升级。
      */
     public void setInstanceTypeUpgradeNow(Long InstanceTypeUpgradeNow) {
         this.InstanceTypeUpgradeNow = InstanceTypeUpgradeNow;

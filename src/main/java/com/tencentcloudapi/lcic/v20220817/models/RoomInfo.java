@@ -45,7 +45,10 @@ public class RoomInfo extends AbstractModel {
     private Long EndTime;
 
     /**
-    * 分辨率。可以有如下取值： 1 标清 2 高清 3 全高清
+    * 头像区域，摄像头视频画面的分辨率。可以有如下取值：
+1 标清
+2 高清
+3 全高清
     */
     @SerializedName("Resolution")
     @Expose
@@ -276,16 +279,28 @@ public class RoomInfo extends AbstractModel {
     }
 
     /**
-     * Get 分辨率。可以有如下取值： 1 标清 2 高清 3 全高清 
-     * @return Resolution 分辨率。可以有如下取值： 1 标清 2 高清 3 全高清
+     * Get 头像区域，摄像头视频画面的分辨率。可以有如下取值：
+1 标清
+2 高清
+3 全高清 
+     * @return Resolution 头像区域，摄像头视频画面的分辨率。可以有如下取值：
+1 标清
+2 高清
+3 全高清
      */
     public Long getResolution() {
         return this.Resolution;
     }
 
     /**
-     * Set 分辨率。可以有如下取值： 1 标清 2 高清 3 全高清
-     * @param Resolution 分辨率。可以有如下取值： 1 标清 2 高清 3 全高清
+     * Set 头像区域，摄像头视频画面的分辨率。可以有如下取值：
+1 标清
+2 高清
+3 全高清
+     * @param Resolution 头像区域，摄像头视频画面的分辨率。可以有如下取值：
+1 标清
+2 高清
+3 全高清
      */
     public void setResolution(Long Resolution) {
         this.Resolution = Resolution;

@@ -25,7 +25,6 @@ public class CloneSecurityGroupResponse extends AbstractModel {
 
     /**
     * 安全组对象。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SecurityGroup")
     @Expose
@@ -39,10 +38,8 @@ public class CloneSecurityGroupResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 安全组对象。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 安全组对象。 
      * @return SecurityGroup 安全组对象。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SecurityGroup getSecurityGroup() {
         return this.SecurityGroup;
@@ -50,9 +47,7 @@ public class CloneSecurityGroupResponse extends AbstractModel {
 
     /**
      * Set 安全组对象。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SecurityGroup 安全组对象。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSecurityGroup(SecurityGroup SecurityGroup) {
         this.SecurityGroup = SecurityGroup;

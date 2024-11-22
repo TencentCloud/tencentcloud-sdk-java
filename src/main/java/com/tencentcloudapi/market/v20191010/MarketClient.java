@@ -51,7 +51,6 @@ public class MarketClient extends AbstractClient{
 
     /**
      *该接口可以根据InstanceId查询实例的api的使用情况。
-
      * @param req GetUsagePlanUsageAmountRequest
      * @return GetUsagePlanUsageAmountResponse
      * @throws TencentCloudSDKException

@@ -137,6 +137,14 @@ public class VulInfoList extends AbstractModel {
 
     /**
     * 漏洞标签 多个逗号分割
+
+存在EXP:EXP
+在野攻击:KNOWN_EXPLOITED
+本地利用:LOCAL
+必修漏洞:NEED_FIX
+远程利用:NETWORK
+存在POC:POC
+系统重启:RESTART
     */
     @SerializedName("Labels")
     @Expose
@@ -469,8 +477,24 @@ public class VulInfoList extends AbstractModel {
     }
 
     /**
-     * Get 漏洞标签 多个逗号分割 
+     * Get 漏洞标签 多个逗号分割
+
+存在EXP:EXP
+在野攻击:KNOWN_EXPLOITED
+本地利用:LOCAL
+必修漏洞:NEED_FIX
+远程利用:NETWORK
+存在POC:POC
+系统重启:RESTART 
      * @return Labels 漏洞标签 多个逗号分割
+
+存在EXP:EXP
+在野攻击:KNOWN_EXPLOITED
+本地利用:LOCAL
+必修漏洞:NEED_FIX
+远程利用:NETWORK
+存在POC:POC
+系统重启:RESTART
      */
     public String getLabels() {
         return this.Labels;
@@ -478,7 +502,23 @@ public class VulInfoList extends AbstractModel {
 
     /**
      * Set 漏洞标签 多个逗号分割
+
+存在EXP:EXP
+在野攻击:KNOWN_EXPLOITED
+本地利用:LOCAL
+必修漏洞:NEED_FIX
+远程利用:NETWORK
+存在POC:POC
+系统重启:RESTART
      * @param Labels 漏洞标签 多个逗号分割
+
+存在EXP:EXP
+在野攻击:KNOWN_EXPLOITED
+本地利用:LOCAL
+必修漏洞:NEED_FIX
+远程利用:NETWORK
+存在POC:POC
+系统重启:RESTART
      */
     public void setLabels(String Labels) {
         this.Labels = Labels;

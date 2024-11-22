@@ -56,6 +56,14 @@ public class ConfigFileReleaseDeletion extends AbstractModel {
     private String ReleaseVersion;
 
     /**
+    * 配置发布ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Id")
+    @Expose
+    private Long Id;
+
+    /**
      * Get 命名空间
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Namespace 命名空间
@@ -135,6 +143,26 @@ public class ConfigFileReleaseDeletion extends AbstractModel {
         this.ReleaseVersion = ReleaseVersion;
     }
 
+    /**
+     * Get 配置发布ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Id 配置发布ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getId() {
+        return this.Id;
+    }
+
+    /**
+     * Set 配置发布ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Id 配置发布ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setId(Long Id) {
+        this.Id = Id;
+    }
+
     public ConfigFileReleaseDeletion() {
     }
 
@@ -155,6 +183,9 @@ public class ConfigFileReleaseDeletion extends AbstractModel {
         if (source.ReleaseVersion != null) {
             this.ReleaseVersion = new String(source.ReleaseVersion);
         }
+        if (source.Id != null) {
+            this.Id = new Long(source.Id);
+        }
     }
 
 
@@ -166,6 +197,7 @@ public class ConfigFileReleaseDeletion extends AbstractModel {
         this.setParamSimple(map, prefix + "Group", this.Group);
         this.setParamSimple(map, prefix + "FileName", this.FileName);
         this.setParamSimple(map, prefix + "ReleaseVersion", this.ReleaseVersion);
+        this.setParamSimple(map, prefix + "Id", this.Id);
 
     }
 }

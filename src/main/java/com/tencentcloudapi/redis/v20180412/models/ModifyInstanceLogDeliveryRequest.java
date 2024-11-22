@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyInstanceLogDeliveryRequest extends AbstractModel {
 
     /**
-    * 实例ID。
+    * 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -47,14 +47,14 @@ public class ModifyInstanceLogDeliveryRequest extends AbstractModel {
     private Boolean Enabled;
 
     /**
-    * 投递的日志集ID。
+    * 投递的日志集ID。通过接口[DescribeInstanceLogDelivery](https://cloud.tencent.com/document/product/239/110878)的返回参数 **SlowLog** 的子参数 **LogsetId** 获取。
     */
     @SerializedName("LogsetId")
     @Expose
     private String LogsetId;
 
     /**
-    * 投递的日志主题ID。
+    * 投递的日志主题ID。请通过接口[DescribeInstanceLogDelivery](https://cloud.tencent.com/document/product/239/110878)的返回参数 **SlowLog** 的子参数 **TopicId** 获取。
     */
     @SerializedName("TopicId")
     @Expose
@@ -96,16 +96,16 @@ public class ModifyInstanceLogDeliveryRequest extends AbstractModel {
     private Boolean CreateIndex;
 
     /**
-     * Get 实例ID。 
-     * @return InstanceId 实例ID。
+     * Get 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。 
+     * @return InstanceId 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID。
-     * @param InstanceId 实例ID。
+     * Set 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
+     * @param InstanceId 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -152,32 +152,32 @@ public class ModifyInstanceLogDeliveryRequest extends AbstractModel {
     }
 
     /**
-     * Get 投递的日志集ID。 
-     * @return LogsetId 投递的日志集ID。
+     * Get 投递的日志集ID。通过接口[DescribeInstanceLogDelivery](https://cloud.tencent.com/document/product/239/110878)的返回参数 **SlowLog** 的子参数 **LogsetId** 获取。 
+     * @return LogsetId 投递的日志集ID。通过接口[DescribeInstanceLogDelivery](https://cloud.tencent.com/document/product/239/110878)的返回参数 **SlowLog** 的子参数 **LogsetId** 获取。
      */
     public String getLogsetId() {
         return this.LogsetId;
     }
 
     /**
-     * Set 投递的日志集ID。
-     * @param LogsetId 投递的日志集ID。
+     * Set 投递的日志集ID。通过接口[DescribeInstanceLogDelivery](https://cloud.tencent.com/document/product/239/110878)的返回参数 **SlowLog** 的子参数 **LogsetId** 获取。
+     * @param LogsetId 投递的日志集ID。通过接口[DescribeInstanceLogDelivery](https://cloud.tencent.com/document/product/239/110878)的返回参数 **SlowLog** 的子参数 **LogsetId** 获取。
      */
     public void setLogsetId(String LogsetId) {
         this.LogsetId = LogsetId;
     }
 
     /**
-     * Get 投递的日志主题ID。 
-     * @return TopicId 投递的日志主题ID。
+     * Get 投递的日志主题ID。请通过接口[DescribeInstanceLogDelivery](https://cloud.tencent.com/document/product/239/110878)的返回参数 **SlowLog** 的子参数 **TopicId** 获取。 
+     * @return TopicId 投递的日志主题ID。请通过接口[DescribeInstanceLogDelivery](https://cloud.tencent.com/document/product/239/110878)的返回参数 **SlowLog** 的子参数 **TopicId** 获取。
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set 投递的日志主题ID。
-     * @param TopicId 投递的日志主题ID。
+     * Set 投递的日志主题ID。请通过接口[DescribeInstanceLogDelivery](https://cloud.tencent.com/document/product/239/110878)的返回参数 **SlowLog** 的子参数 **TopicId** 获取。
+     * @param TopicId 投递的日志主题ID。请通过接口[DescribeInstanceLogDelivery](https://cloud.tencent.com/document/product/239/110878)的返回参数 **SlowLog** 的子参数 **TopicId** 获取。
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;

@@ -66,7 +66,7 @@ public class DescribeRoomResponse extends AbstractModel {
     private Long AudienceType;
 
     /**
-    * 分辨率。可以有如下取值：
+    * 头像区域，摄像头视频画面的分辨率。可以有如下取值：
 1 标清
 2 高清
 3 全高清
@@ -370,11 +370,11 @@ video 纯视频
     }
 
     /**
-     * Get 分辨率。可以有如下取值：
+     * Get 头像区域，摄像头视频画面的分辨率。可以有如下取值：
 1 标清
 2 高清
 3 全高清 
-     * @return Resolution 分辨率。可以有如下取值：
+     * @return Resolution 头像区域，摄像头视频画面的分辨率。可以有如下取值：
 1 标清
 2 高清
 3 全高清
@@ -384,11 +384,11 @@ video 纯视频
     }
 
     /**
-     * Set 分辨率。可以有如下取值：
+     * Set 头像区域，摄像头视频画面的分辨率。可以有如下取值：
 1 标清
 2 高清
 3 全高清
-     * @param Resolution 分辨率。可以有如下取值：
+     * @param Resolution 头像区域，摄像头视频画面的分辨率。可以有如下取值：
 1 标清
 2 高清
 3 全高清

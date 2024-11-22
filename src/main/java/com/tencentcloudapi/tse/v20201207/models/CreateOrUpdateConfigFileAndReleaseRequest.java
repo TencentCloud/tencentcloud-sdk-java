@@ -38,6 +38,13 @@ public class CreateOrUpdateConfigFileAndReleaseRequest extends AbstractModel {
     private ConfigFilePublishInfo ConfigFilePublishInfo;
 
     /**
+    * 控制开启校验配置版本是否已经存在
+    */
+    @SerializedName("StrictEnable")
+    @Expose
+    private Boolean StrictEnable;
+
+    /**
      * Get 实例id 
      * @return InstanceId 实例id
      */
@@ -69,6 +76,22 @@ public class CreateOrUpdateConfigFileAndReleaseRequest extends AbstractModel {
         this.ConfigFilePublishInfo = ConfigFilePublishInfo;
     }
 
+    /**
+     * Get 控制开启校验配置版本是否已经存在 
+     * @return StrictEnable 控制开启校验配置版本是否已经存在
+     */
+    public Boolean getStrictEnable() {
+        return this.StrictEnable;
+    }
+
+    /**
+     * Set 控制开启校验配置版本是否已经存在
+     * @param StrictEnable 控制开启校验配置版本是否已经存在
+     */
+    public void setStrictEnable(Boolean StrictEnable) {
+        this.StrictEnable = StrictEnable;
+    }
+
     public CreateOrUpdateConfigFileAndReleaseRequest() {
     }
 
@@ -83,6 +106,9 @@ public class CreateOrUpdateConfigFileAndReleaseRequest extends AbstractModel {
         if (source.ConfigFilePublishInfo != null) {
             this.ConfigFilePublishInfo = new ConfigFilePublishInfo(source.ConfigFilePublishInfo);
         }
+        if (source.StrictEnable != null) {
+            this.StrictEnable = new Boolean(source.StrictEnable);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class CreateOrUpdateConfigFileAndReleaseRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamObj(map, prefix + "ConfigFilePublishInfo.", this.ConfigFilePublishInfo);
+        this.setParamSimple(map, prefix + "StrictEnable", this.StrictEnable);
 
     }
 }

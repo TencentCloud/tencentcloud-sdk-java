@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class ModifyInstanceAccountRequest extends AbstractModel {
 
     /**
-    * 实例ID
+    * 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 子账号名称，如果要修改主账号，填root
+    * 子账号名称，如果要修改主账号，填 root。
     */
     @SerializedName("AccountName")
     @Expose
     private String AccountName;
 
     /**
-    * 子账号密码
+    * 子账号密码。
     */
     @SerializedName("AccountPassword")
     @Expose
@@ -52,69 +52,76 @@ public class ModifyInstanceAccountRequest extends AbstractModel {
     private String Remark;
 
     /**
-    * 路由策略：填写master或者replication，表示主节点或者从节点
+    * 账号读写路由策略。
+- master：表示主节点。
+- replication：表示从节点。
     */
     @SerializedName("ReadonlyPolicy")
     @Expose
     private String [] ReadonlyPolicy;
 
     /**
-    * 子账号读写策略：填写r、w、rw，表示只读，只写，读写策略
+    * 子账号读写策略。
+- r：只读。
+- w：只写。
+- rw：读写。
     */
     @SerializedName("Privilege")
     @Expose
     private String Privilege;
 
     /**
-    * true表示将主账号切换为免密账号，这里只适用于主账号，子账号不可免密。
+    * 指定是否将主账号切换为免密账号。这里只适用于主账号，子账号不可免密。
+- true：将主账号切换为免密账号。
+- false：不切换。
     */
     @SerializedName("NoAuth")
     @Expose
     private Boolean NoAuth;
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+     * Get 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。 
+     * @return InstanceId 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
+     * @param InstanceId 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 子账号名称，如果要修改主账号，填root 
-     * @return AccountName 子账号名称，如果要修改主账号，填root
+     * Get 子账号名称，如果要修改主账号，填 root。 
+     * @return AccountName 子账号名称，如果要修改主账号，填 root。
      */
     public String getAccountName() {
         return this.AccountName;
     }
 
     /**
-     * Set 子账号名称，如果要修改主账号，填root
-     * @param AccountName 子账号名称，如果要修改主账号，填root
+     * Set 子账号名称，如果要修改主账号，填 root。
+     * @param AccountName 子账号名称，如果要修改主账号，填 root。
      */
     public void setAccountName(String AccountName) {
         this.AccountName = AccountName;
     }
 
     /**
-     * Get 子账号密码 
-     * @return AccountPassword 子账号密码
+     * Get 子账号密码。 
+     * @return AccountPassword 子账号密码。
      */
     public String getAccountPassword() {
         return this.AccountPassword;
     }
 
     /**
-     * Set 子账号密码
-     * @param AccountPassword 子账号密码
+     * Set 子账号密码。
+     * @param AccountPassword 子账号密码。
      */
     public void setAccountPassword(String AccountPassword) {
         this.AccountPassword = AccountPassword;
@@ -137,48 +144,76 @@ public class ModifyInstanceAccountRequest extends AbstractModel {
     }
 
     /**
-     * Get 路由策略：填写master或者replication，表示主节点或者从节点 
-     * @return ReadonlyPolicy 路由策略：填写master或者replication，表示主节点或者从节点
+     * Get 账号读写路由策略。
+- master：表示主节点。
+- replication：表示从节点。 
+     * @return ReadonlyPolicy 账号读写路由策略。
+- master：表示主节点。
+- replication：表示从节点。
      */
     public String [] getReadonlyPolicy() {
         return this.ReadonlyPolicy;
     }
 
     /**
-     * Set 路由策略：填写master或者replication，表示主节点或者从节点
-     * @param ReadonlyPolicy 路由策略：填写master或者replication，表示主节点或者从节点
+     * Set 账号读写路由策略。
+- master：表示主节点。
+- replication：表示从节点。
+     * @param ReadonlyPolicy 账号读写路由策略。
+- master：表示主节点。
+- replication：表示从节点。
      */
     public void setReadonlyPolicy(String [] ReadonlyPolicy) {
         this.ReadonlyPolicy = ReadonlyPolicy;
     }
 
     /**
-     * Get 子账号读写策略：填写r、w、rw，表示只读，只写，读写策略 
-     * @return Privilege 子账号读写策略：填写r、w、rw，表示只读，只写，读写策略
+     * Get 子账号读写策略。
+- r：只读。
+- w：只写。
+- rw：读写。 
+     * @return Privilege 子账号读写策略。
+- r：只读。
+- w：只写。
+- rw：读写。
      */
     public String getPrivilege() {
         return this.Privilege;
     }
 
     /**
-     * Set 子账号读写策略：填写r、w、rw，表示只读，只写，读写策略
-     * @param Privilege 子账号读写策略：填写r、w、rw，表示只读，只写，读写策略
+     * Set 子账号读写策略。
+- r：只读。
+- w：只写。
+- rw：读写。
+     * @param Privilege 子账号读写策略。
+- r：只读。
+- w：只写。
+- rw：读写。
      */
     public void setPrivilege(String Privilege) {
         this.Privilege = Privilege;
     }
 
     /**
-     * Get true表示将主账号切换为免密账号，这里只适用于主账号，子账号不可免密。 
-     * @return NoAuth true表示将主账号切换为免密账号，这里只适用于主账号，子账号不可免密。
+     * Get 指定是否将主账号切换为免密账号。这里只适用于主账号，子账号不可免密。
+- true：将主账号切换为免密账号。
+- false：不切换。 
+     * @return NoAuth 指定是否将主账号切换为免密账号。这里只适用于主账号，子账号不可免密。
+- true：将主账号切换为免密账号。
+- false：不切换。
      */
     public Boolean getNoAuth() {
         return this.NoAuth;
     }
 
     /**
-     * Set true表示将主账号切换为免密账号，这里只适用于主账号，子账号不可免密。
-     * @param NoAuth true表示将主账号切换为免密账号，这里只适用于主账号，子账号不可免密。
+     * Set 指定是否将主账号切换为免密账号。这里只适用于主账号，子账号不可免密。
+- true：将主账号切换为免密账号。
+- false：不切换。
+     * @param NoAuth 指定是否将主账号切换为免密账号。这里只适用于主账号，子账号不可免密。
+- true：将主账号切换为免密账号。
+- false：不切换。
      */
     public void setNoAuth(Boolean NoAuth) {
         this.NoAuth = NoAuth;

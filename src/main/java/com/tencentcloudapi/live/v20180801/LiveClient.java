@@ -96,6 +96,28 @@ public class LiveClient extends AbstractClient{
     }
 
     /**
+     *该接口用来复制导播台配置
+     * @param req CopyCasterRequest
+     * @return CopyCasterResponse
+     * @throws TencentCloudSDKException
+     */
+    public CopyCasterResponse CopyCaster(CopyCasterRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CopyCaster", CopyCasterResponse.class);
+    }
+
+    /**
+     *该接口用来创建新的导播台
+     * @param req CreateCasterRequest
+     * @return CreateCasterResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCasterResponse CreateCaster(CreateCasterRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateCaster", CreateCasterResponse.class);
+    }
+
+    /**
      *该接口用来创建通用混流。用法与旧接口 mix_streamv2.start_mix_stream_advanced 基本一致。
 注意：当前最多支持16路混流。
 最佳实践：https://cloud.tencent.com/document/product/267/45566
@@ -368,6 +390,18 @@ public class LiveClient extends AbstractClient{
     public CreateScreenshotTaskResponse CreateScreenshotTask(CreateScreenshotTaskRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateScreenshotTask", CreateScreenshotTaskResponse.class);
+    }
+
+    /**
+     *该接口用来删除一个导播台的所有信息。
+注意，调用该接口后，所有的导播台信息将被清除，包括正在直播的内容也将直接中断。
+     * @param req DeleteCasterRequest
+     * @return DeleteCasterResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCasterResponse DeleteCaster(DeleteCasterRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteCaster", DeleteCasterResponse.class);
     }
 
     /**
@@ -667,6 +701,28 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     }
 
     /**
+     *查询导播台信息接口，用来查询导播台状态、描述、输出长、宽等信息
+     * @param req DescribeCasterRequest
+     * @return DescribeCasterResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCasterResponse DescribeCaster(DescribeCasterRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCaster", DescribeCasterResponse.class);
+    }
+
+    /**
+     *查询导播台PVW任务和PGM任务的展示信息，包括使用的布局、水印、字幕等信息。
+     * @param req DescribeCasterDisplayInfoRequest
+     * @return DescribeCasterDisplayInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCasterDisplayInfoResponse DescribeCasterDisplayInfo(DescribeCasterDisplayInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCasterDisplayInfo", DescribeCasterDisplayInfoResponse.class);
+    }
+
+    /**
      *该接口用来查询账号下所有的导播台列表
      * @param req DescribeCasterListRequest
      * @return DescribeCasterListResponse
@@ -675,6 +731,17 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public DescribeCasterListResponse DescribeCasterList(DescribeCasterListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeCasterList", DescribeCasterListResponse.class);
+    }
+
+    /**
+     *该接口用来获取导播台视频流的播放url，用来在页面上拉流展示。
+     * @param req DescribeCasterPlayUrlRequest
+     * @return DescribeCasterPlayUrlResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCasterPlayUrlResponse DescribeCasterPlayUrl(DescribeCasterPlayUrlRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCasterPlayUrl", DescribeCasterPlayUrlResponse.class);
     }
 
     /**
@@ -1201,6 +1268,17 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     }
 
     /**
+     *支持直播时移写入量数据查询。
+     * @param req DescribeLiveTimeShiftWriteSizeInfoListRequest
+     * @return DescribeLiveTimeShiftWriteSizeInfoListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLiveTimeShiftWriteSizeInfoListResponse DescribeLiveTimeShiftWriteSizeInfoList(DescribeLiveTimeShiftWriteSizeInfoListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLiveTimeShiftWriteSizeInfoList", DescribeLiveTimeShiftWriteSizeInfoListResponse.class);
+    }
+
+    /**
      *该接口为监控数据接口，数据采集及统计方式与计费数据不同，仅供运营分析使用，不能用于计费对账参考。
 支持查询某天或某段时间的转码详细信息。由于转码数据量较大，如果查询时间跨度太长可能会拉不到数据，可以尝试将查询时间范围缩小些再重试。
      * @param req DescribeLiveTranscodeDetailInfoRequest
@@ -1609,6 +1687,17 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public ForbidLiveStreamResponse ForbidLiveStream(ForbidLiveStreamRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ForbidLiveStream", ForbidLiveStreamResponse.class);
+    }
+
+    /**
+     *该接口用来设置导播台的描述、名称、录制模板id等参数。
+     * @param req ModifyCasterRequest
+     * @return ModifyCasterResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCasterResponse ModifyCaster(ModifyCasterRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyCaster", ModifyCasterResponse.class);
     }
 
     /**

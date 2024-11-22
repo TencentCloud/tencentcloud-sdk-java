@@ -45,11 +45,18 @@ public class DescribeConfigFileRequest extends AbstractModel {
     private String Group;
 
     /**
-    * 名称
+    * 配置文件名称
     */
     @SerializedName("Name")
     @Expose
     private String Name;
+
+    /**
+    * 配置文件Id
+    */
+    @SerializedName("Id")
+    @Expose
+    private String Id;
 
     /**
      * Get TSE实例id 
@@ -100,19 +107,35 @@ public class DescribeConfigFileRequest extends AbstractModel {
     }
 
     /**
-     * Get 名称 
-     * @return Name 名称
+     * Get 配置文件名称 
+     * @return Name 配置文件名称
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 名称
-     * @param Name 名称
+     * Set 配置文件名称
+     * @param Name 配置文件名称
      */
     public void setName(String Name) {
         this.Name = Name;
+    }
+
+    /**
+     * Get 配置文件Id 
+     * @return Id 配置文件Id
+     */
+    public String getId() {
+        return this.Id;
+    }
+
+    /**
+     * Set 配置文件Id
+     * @param Id 配置文件Id
+     */
+    public void setId(String Id) {
+        this.Id = Id;
     }
 
     public DescribeConfigFileRequest() {
@@ -135,6 +158,9 @@ public class DescribeConfigFileRequest extends AbstractModel {
         if (source.Name != null) {
             this.Name = new String(source.Name);
         }
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class DescribeConfigFileRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Namespace", this.Namespace);
         this.setParamSimple(map, prefix + "Group", this.Group);
         this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "Id", this.Id);
 
     }
 }

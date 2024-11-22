@@ -24,69 +24,84 @@ import java.util.HashMap;
 public class RemoveReplicationInstanceRequest extends AbstractModel {
 
     /**
-    * 复制组ID
+    * 复制组 ID。例如：crs-rpl-m3zt****。请登录[Redis 控制台](https://console.cloud.tencent.com/redis/replication)的全球复制组列表获取复制组 ID。
+
     */
     @SerializedName("GroupId")
     @Expose
     private String GroupId;
 
     /**
-    * 实例ID
+    * 指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 数据同步类型，true:需要数据强同步,false:不需要强同步，仅限删除主实例
+    * 数据同步类型。
+- true：需数据强同步。
+- false：无需强同步，仅限删除主实例。
     */
     @SerializedName("SyncType")
     @Expose
     private Boolean SyncType;
 
     /**
-     * Get 复制组ID 
-     * @return GroupId 复制组ID
+     * Get 复制组 ID。例如：crs-rpl-m3zt****。请登录[Redis 控制台](https://console.cloud.tencent.com/redis/replication)的全球复制组列表获取复制组 ID。
+ 
+     * @return GroupId 复制组 ID。例如：crs-rpl-m3zt****。请登录[Redis 控制台](https://console.cloud.tencent.com/redis/replication)的全球复制组列表获取复制组 ID。
+
      */
     public String getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set 复制组ID
-     * @param GroupId 复制组ID
+     * Set 复制组 ID。例如：crs-rpl-m3zt****。请登录[Redis 控制台](https://console.cloud.tencent.com/redis/replication)的全球复制组列表获取复制组 ID。
+
+     * @param GroupId 复制组 ID。例如：crs-rpl-m3zt****。请登录[Redis 控制台](https://console.cloud.tencent.com/redis/replication)的全球复制组列表获取复制组 ID。
+
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;
     }
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+     * Get 指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。 
+     * @return InstanceId 指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set 指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
+     * @param InstanceId 指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 数据同步类型，true:需要数据强同步,false:不需要强同步，仅限删除主实例 
-     * @return SyncType 数据同步类型，true:需要数据强同步,false:不需要强同步，仅限删除主实例
+     * Get 数据同步类型。
+- true：需数据强同步。
+- false：无需强同步，仅限删除主实例。 
+     * @return SyncType 数据同步类型。
+- true：需数据强同步。
+- false：无需强同步，仅限删除主实例。
      */
     public Boolean getSyncType() {
         return this.SyncType;
     }
 
     /**
-     * Set 数据同步类型，true:需要数据强同步,false:不需要强同步，仅限删除主实例
-     * @param SyncType 数据同步类型，true:需要数据强同步,false:不需要强同步，仅限删除主实例
+     * Set 数据同步类型。
+- true：需数据强同步。
+- false：无需强同步，仅限删除主实例。
+     * @param SyncType 数据同步类型。
+- true：需数据强同步。
+- false：无需强同步，仅限删除主实例。
      */
     public void setSyncType(Boolean SyncType) {
         this.SyncType = SyncType;

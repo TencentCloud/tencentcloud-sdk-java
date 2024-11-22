@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class CreateReplicationGroupRequest extends AbstractModel {
 
     /**
-    * 指定复制组中的主实例ID。
+    * 指定复制组中的主实例ID。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 复制组名称。名称只支持长度为2-64个字符的中文、英文、数字、下划线_、分隔符-。
+    * 配置复制组名称。仅支持长度为2-64个字符的中文、英文、数字、下划线_、分隔符-。
     */
     @SerializedName("GroupName")
     @Expose
@@ -45,32 +45,32 @@ public class CreateReplicationGroupRequest extends AbstractModel {
     private String Remark;
 
     /**
-     * Get 指定复制组中的主实例ID。 
-     * @return InstanceId 指定复制组中的主实例ID。
+     * Get 指定复制组中的主实例ID。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。 
+     * @return InstanceId 指定复制组中的主实例ID。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 指定复制组中的主实例ID。
-     * @param InstanceId 指定复制组中的主实例ID。
+     * Set 指定复制组中的主实例ID。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
+     * @param InstanceId 指定复制组中的主实例ID。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 复制组名称。名称只支持长度为2-64个字符的中文、英文、数字、下划线_、分隔符-。 
-     * @return GroupName 复制组名称。名称只支持长度为2-64个字符的中文、英文、数字、下划线_、分隔符-。
+     * Get 配置复制组名称。仅支持长度为2-64个字符的中文、英文、数字、下划线_、分隔符-。 
+     * @return GroupName 配置复制组名称。仅支持长度为2-64个字符的中文、英文、数字、下划线_、分隔符-。
      */
     public String getGroupName() {
         return this.GroupName;
     }
 
     /**
-     * Set 复制组名称。名称只支持长度为2-64个字符的中文、英文、数字、下划线_、分隔符-。
-     * @param GroupName 复制组名称。名称只支持长度为2-64个字符的中文、英文、数字、下划线_、分隔符-。
+     * Set 配置复制组名称。仅支持长度为2-64个字符的中文、英文、数字、下划线_、分隔符-。
+     * @param GroupName 配置复制组名称。仅支持长度为2-64个字符的中文、英文、数字、下划线_、分隔符-。
      */
     public void setGroupName(String GroupName) {
         this.GroupName = GroupName;

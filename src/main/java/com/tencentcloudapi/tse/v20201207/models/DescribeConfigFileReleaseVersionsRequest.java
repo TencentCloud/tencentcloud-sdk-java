@@ -52,6 +52,13 @@ public class DescribeConfigFileReleaseVersionsRequest extends AbstractModel {
     private String FileName;
 
     /**
+    * 配置文件ID
+    */
+    @SerializedName("ConfigFileId")
+    @Expose
+    private String ConfigFileId;
+
+    /**
      * Get 实例id 
      * @return InstanceId 实例id
      */
@@ -115,6 +122,22 @@ public class DescribeConfigFileReleaseVersionsRequest extends AbstractModel {
         this.FileName = FileName;
     }
 
+    /**
+     * Get 配置文件ID 
+     * @return ConfigFileId 配置文件ID
+     */
+    public String getConfigFileId() {
+        return this.ConfigFileId;
+    }
+
+    /**
+     * Set 配置文件ID
+     * @param ConfigFileId 配置文件ID
+     */
+    public void setConfigFileId(String ConfigFileId) {
+        this.ConfigFileId = ConfigFileId;
+    }
+
     public DescribeConfigFileReleaseVersionsRequest() {
     }
 
@@ -135,6 +158,9 @@ public class DescribeConfigFileReleaseVersionsRequest extends AbstractModel {
         if (source.FileName != null) {
             this.FileName = new String(source.FileName);
         }
+        if (source.ConfigFileId != null) {
+            this.ConfigFileId = new String(source.ConfigFileId);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class DescribeConfigFileReleaseVersionsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Namespace", this.Namespace);
         this.setParamSimple(map, prefix + "Group", this.Group);
         this.setParamSimple(map, prefix + "FileName", this.FileName);
+        this.setParamSimple(map, prefix + "ConfigFileId", this.ConfigFileId);
 
     }
 }

@@ -48,6 +48,14 @@ public class DescribeLivePullStreamTasksRequest extends AbstractModel {
     private Long PageSize;
 
     /**
+    * 使用指定任务 ID 查询任务信息。
+注意：仅供使用指定 ID 创建的任务查询。
+    */
+    @SerializedName("SpecifyTaskId")
+    @Expose
+    private String SpecifyTaskId;
+
+    /**
      * Get 任务 ID。 
 来源：调用 CreateLivePullStreamTask 接口时返回。
 不填默认查询所有任务，按更新时间倒序排序。 
@@ -107,6 +115,26 @@ public class DescribeLivePullStreamTasksRequest extends AbstractModel {
         this.PageSize = PageSize;
     }
 
+    /**
+     * Get 使用指定任务 ID 查询任务信息。
+注意：仅供使用指定 ID 创建的任务查询。 
+     * @return SpecifyTaskId 使用指定任务 ID 查询任务信息。
+注意：仅供使用指定 ID 创建的任务查询。
+     */
+    public String getSpecifyTaskId() {
+        return this.SpecifyTaskId;
+    }
+
+    /**
+     * Set 使用指定任务 ID 查询任务信息。
+注意：仅供使用指定 ID 创建的任务查询。
+     * @param SpecifyTaskId 使用指定任务 ID 查询任务信息。
+注意：仅供使用指定 ID 创建的任务查询。
+     */
+    public void setSpecifyTaskId(String SpecifyTaskId) {
+        this.SpecifyTaskId = SpecifyTaskId;
+    }
+
     public DescribeLivePullStreamTasksRequest() {
     }
 
@@ -124,6 +152,9 @@ public class DescribeLivePullStreamTasksRequest extends AbstractModel {
         if (source.PageSize != null) {
             this.PageSize = new Long(source.PageSize);
         }
+        if (source.SpecifyTaskId != null) {
+            this.SpecifyTaskId = new String(source.SpecifyTaskId);
+        }
     }
 
 
@@ -134,6 +165,7 @@ public class DescribeLivePullStreamTasksRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "PageNum", this.PageNum);
         this.setParamSimple(map, prefix + "PageSize", this.PageSize);
+        this.setParamSimple(map, prefix + "SpecifyTaskId", this.SpecifyTaskId);
 
     }
 }

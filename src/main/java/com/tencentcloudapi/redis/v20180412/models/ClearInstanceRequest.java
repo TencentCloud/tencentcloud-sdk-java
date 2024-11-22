@@ -24,46 +24,56 @@ import java.util.HashMap;
 public class ClearInstanceRequest extends AbstractModel {
 
     /**
-    * 实例ID
+    * 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * redis的实例密码（免密实例不需要传密码，非免密实例必传）
+    * 实例访问密码。
+- 免密访问：无需配置。
+- 密码认证：必须配置。字符个数为[8,64]，至少包含小写字母、大写字母、数字和字符 ()`~!@#$%^&*-+=_|{}[]:;<>,.?/ 中的2种，不能以"/"开头。
     */
     @SerializedName("Password")
     @Expose
     private String Password;
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+     * Get 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。 
+     * @return InstanceId 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
+     * @param InstanceId 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get redis的实例密码（免密实例不需要传密码，非免密实例必传） 
-     * @return Password redis的实例密码（免密实例不需要传密码，非免密实例必传）
+     * Get 实例访问密码。
+- 免密访问：无需配置。
+- 密码认证：必须配置。字符个数为[8,64]，至少包含小写字母、大写字母、数字和字符 ()`~!@#$%^&*-+=_|{}[]:;<>,.?/ 中的2种，不能以"/"开头。 
+     * @return Password 实例访问密码。
+- 免密访问：无需配置。
+- 密码认证：必须配置。字符个数为[8,64]，至少包含小写字母、大写字母、数字和字符 ()`~!@#$%^&*-+=_|{}[]:;<>,.?/ 中的2种，不能以"/"开头。
      */
     public String getPassword() {
         return this.Password;
     }
 
     /**
-     * Set redis的实例密码（免密实例不需要传密码，非免密实例必传）
-     * @param Password redis的实例密码（免密实例不需要传密码，非免密实例必传）
+     * Set 实例访问密码。
+- 免密访问：无需配置。
+- 密码认证：必须配置。字符个数为[8,64]，至少包含小写字母、大写字母、数字和字符 ()`~!@#$%^&*-+=_|{}[]:;<>,.?/ 中的2种，不能以"/"开头。
+     * @param Password 实例访问密码。
+- 免密访问：无需配置。
+- 密码认证：必须配置。字符个数为[8,64]，至少包含小写字母、大写字母、数字和字符 ()`~!@#$%^&*-+=_|{}[]:;<>,.?/ 中的2种，不能以"/"开头。
      */
     public void setPassword(String Password) {
         this.Password = Password;

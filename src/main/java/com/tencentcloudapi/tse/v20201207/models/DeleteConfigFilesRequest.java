@@ -52,6 +52,13 @@ public class DeleteConfigFilesRequest extends AbstractModel {
     private String Name;
 
     /**
+    * 配置文件Id
+    */
+    @SerializedName("Id")
+    @Expose
+    private String Id;
+
+    /**
      * Get TSE实例id 
      * @return InstanceId TSE实例id
      */
@@ -115,6 +122,22 @@ public class DeleteConfigFilesRequest extends AbstractModel {
         this.Name = Name;
     }
 
+    /**
+     * Get 配置文件Id 
+     * @return Id 配置文件Id
+     */
+    public String getId() {
+        return this.Id;
+    }
+
+    /**
+     * Set 配置文件Id
+     * @param Id 配置文件Id
+     */
+    public void setId(String Id) {
+        this.Id = Id;
+    }
+
     public DeleteConfigFilesRequest() {
     }
 
@@ -135,6 +158,9 @@ public class DeleteConfigFilesRequest extends AbstractModel {
         if (source.Name != null) {
             this.Name = new String(source.Name);
         }
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class DeleteConfigFilesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Namespace", this.Namespace);
         this.setParamSimple(map, prefix + "Group", this.Group);
         this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "Id", this.Id);
 
     }
 }

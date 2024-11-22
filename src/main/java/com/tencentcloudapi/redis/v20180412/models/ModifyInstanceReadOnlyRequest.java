@@ -24,46 +24,56 @@ import java.util.HashMap;
 public class ModifyInstanceReadOnlyRequest extends AbstractModel {
 
     /**
-    * 实例ID
+    * 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 实例输入模式，0：读写 1：只读
+    * 实例输入模式。
+- 0：读写。
+- 1：只读。
     */
     @SerializedName("InputMode")
     @Expose
     private String InputMode;
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+     * Get 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。 
+     * @return InstanceId 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
+     * @param InstanceId 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 实例输入模式，0：读写 1：只读 
-     * @return InputMode 实例输入模式，0：读写 1：只读
+     * Get 实例输入模式。
+- 0：读写。
+- 1：只读。 
+     * @return InputMode 实例输入模式。
+- 0：读写。
+- 1：只读。
      */
     public String getInputMode() {
         return this.InputMode;
     }
 
     /**
-     * Set 实例输入模式，0：读写 1：只读
-     * @param InputMode 实例输入模式，0：读写 1：只读
+     * Set 实例输入模式。
+- 0：读写。
+- 1：只读。
+     * @param InputMode 实例输入模式。
+- 0：读写。
+- 1：只读。
      */
     public void setInputMode(String InputMode) {
         this.InputMode = InputMode;

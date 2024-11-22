@@ -24,23 +24,28 @@ import java.util.HashMap;
 public class DescribeRedisClusterOverviewRequest extends AbstractModel {
 
     /**
-    * 本地专用集群id
+    * 本地专用集群 ID，请登录[专用集群控制台](https://console.cloud.tencent.com/cdc/dedicatedcluster/index?rid=1
+)实例列表获取集群 ID。
     */
     @SerializedName("DedicatedClusterId")
     @Expose
     private String DedicatedClusterId;
 
     /**
-     * Get 本地专用集群id 
-     * @return DedicatedClusterId 本地专用集群id
+     * Get 本地专用集群 ID，请登录[专用集群控制台](https://console.cloud.tencent.com/cdc/dedicatedcluster/index?rid=1
+)实例列表获取集群 ID。 
+     * @return DedicatedClusterId 本地专用集群 ID，请登录[专用集群控制台](https://console.cloud.tencent.com/cdc/dedicatedcluster/index?rid=1
+)实例列表获取集群 ID。
      */
     public String getDedicatedClusterId() {
         return this.DedicatedClusterId;
     }
 
     /**
-     * Set 本地专用集群id
-     * @param DedicatedClusterId 本地专用集群id
+     * Set 本地专用集群 ID，请登录[专用集群控制台](https://console.cloud.tencent.com/cdc/dedicatedcluster/index?rid=1
+)实例列表获取集群 ID。
+     * @param DedicatedClusterId 本地专用集群 ID，请登录[专用集群控制台](https://console.cloud.tencent.com/cdc/dedicatedcluster/index?rid=1
+)实例列表获取集群 ID。
      */
     public void setDedicatedClusterId(String DedicatedClusterId) {
         this.DedicatedClusterId = DedicatedClusterId;

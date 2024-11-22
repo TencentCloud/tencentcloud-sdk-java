@@ -59,6 +59,13 @@ public class DescribeConfigFileReleaseHistoriesRequest extends AbstractModel {
     private Long EndId;
 
     /**
+    * 配置文件ID
+    */
+    @SerializedName("ConfigFileId")
+    @Expose
+    private String ConfigFileId;
+
+    /**
     * 返回数量，默认为20，最大值为100。	
     */
     @SerializedName("Limit")
@@ -153,6 +160,22 @@ public class DescribeConfigFileReleaseHistoriesRequest extends AbstractModel {
     }
 
     /**
+     * Get 配置文件ID 
+     * @return ConfigFileId 配置文件ID
+     */
+    public String getConfigFileId() {
+        return this.ConfigFileId;
+    }
+
+    /**
+     * Set 配置文件ID
+     * @param ConfigFileId 配置文件ID
+     */
+    public void setConfigFileId(String ConfigFileId) {
+        this.ConfigFileId = ConfigFileId;
+    }
+
+    /**
      * Get 返回数量，默认为20，最大值为100。	 
      * @return Limit 返回数量，默认为20，最大值为100。	
      */
@@ -207,6 +230,9 @@ public class DescribeConfigFileReleaseHistoriesRequest extends AbstractModel {
         if (source.EndId != null) {
             this.EndId = new Long(source.EndId);
         }
+        if (source.ConfigFileId != null) {
+            this.ConfigFileId = new String(source.ConfigFileId);
+        }
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
@@ -225,6 +251,7 @@ public class DescribeConfigFileReleaseHistoriesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Group", this.Group);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "EndId", this.EndId);
+        this.setParamSimple(map, prefix + "ConfigFileId", this.ConfigFileId);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
 

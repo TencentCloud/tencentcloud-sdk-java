@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class ModifyMaintenanceWindowRequest extends AbstractModel {
 
     /**
-    * 实例ID
+    * 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 维护时间窗起始时间，如：17:00
+    * 维护时间窗起始时间，如：17:00。
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 维护时间窗结束时间，如：19:00
+    * 维护时间窗结束时间，如：19:00。
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+     * Get 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。 
+     * @return InstanceId 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
+     * @param InstanceId 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 维护时间窗起始时间，如：17:00 
-     * @return StartTime 维护时间窗起始时间，如：17:00
+     * Get 维护时间窗起始时间，如：17:00。 
+     * @return StartTime 维护时间窗起始时间，如：17:00。
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 维护时间窗起始时间，如：17:00
-     * @param StartTime 维护时间窗起始时间，如：17:00
+     * Set 维护时间窗起始时间，如：17:00。
+     * @param StartTime 维护时间窗起始时间，如：17:00。
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 维护时间窗结束时间，如：19:00 
-     * @return EndTime 维护时间窗结束时间，如：19:00
+     * Get 维护时间窗结束时间，如：19:00。 
+     * @return EndTime 维护时间窗结束时间，如：19:00。
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 维护时间窗结束时间，如：19:00
-     * @param EndTime 维护时间窗结束时间，如：19:00
+     * Set 维护时间窗结束时间，如：19:00。
+     * @param EndTime 维护时间窗结束时间，如：19:00。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

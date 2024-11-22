@@ -97,7 +97,7 @@ public class RunCommandRequest extends AbstractModel {
     private Boolean EnableParameter;
 
     /**
-    * 启用自定义参数功能时，自定义参数的默认取值。字段类型为json encoded string。如：{\"varA\": \"222\"}。
+    * 启用自定义参数功能时，自定义参数的默认取值。字段类型为json encoded string。如：{"varA": "222"}。
 key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。
 如果 Parameters 未提供，将使用这里的默认值进行替换。
 自定义参数最多20个。
@@ -115,7 +115,7 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
     private DefaultParameterConf [] DefaultParameterConfs;
 
     /**
-    * Command 的自定义参数。字段类型为json encoded string。如：{\"varA\": \"222\"}。
+    * Command 的自定义参数。字段类型为json encoded string。如：{"varA": "222"}。
 key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。
 如果未提供该参数取值，将使用 DefaultParameters 进行替换。
 自定义参数最多20个。
@@ -342,12 +342,12 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
     }
 
     /**
-     * Get 启用自定义参数功能时，自定义参数的默认取值。字段类型为json encoded string。如：{\"varA\": \"222\"}。
+     * Get 启用自定义参数功能时，自定义参数的默认取值。字段类型为json encoded string。如：{"varA": "222"}。
 key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。
 如果 Parameters 未提供，将使用这里的默认值进行替换。
 自定义参数最多20个。
 自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。 
-     * @return DefaultParameters 启用自定义参数功能时，自定义参数的默认取值。字段类型为json encoded string。如：{\"varA\": \"222\"}。
+     * @return DefaultParameters 启用自定义参数功能时，自定义参数的默认取值。字段类型为json encoded string。如：{"varA": "222"}。
 key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。
 如果 Parameters 未提供，将使用这里的默认值进行替换。
 自定义参数最多20个。
@@ -358,12 +358,12 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
     }
 
     /**
-     * Set 启用自定义参数功能时，自定义参数的默认取值。字段类型为json encoded string。如：{\"varA\": \"222\"}。
+     * Set 启用自定义参数功能时，自定义参数的默认取值。字段类型为json encoded string。如：{"varA": "222"}。
 key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。
 如果 Parameters 未提供，将使用这里的默认值进行替换。
 自定义参数最多20个。
 自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。
-     * @param DefaultParameters 启用自定义参数功能时，自定义参数的默认取值。字段类型为json encoded string。如：{\"varA\": \"222\"}。
+     * @param DefaultParameters 启用自定义参数功能时，自定义参数的默认取值。字段类型为json encoded string。如：{"varA": "222"}。
 key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。
 如果 Parameters 未提供，将使用这里的默认值进行替换。
 自定义参数最多20个。
@@ -390,12 +390,12 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
     }
 
     /**
-     * Get Command 的自定义参数。字段类型为json encoded string。如：{\"varA\": \"222\"}。
+     * Get Command 的自定义参数。字段类型为json encoded string。如：{"varA": "222"}。
 key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。
 如果未提供该参数取值，将使用 DefaultParameters 进行替换。
 自定义参数最多20个。
 自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。 
-     * @return Parameters Command 的自定义参数。字段类型为json encoded string。如：{\"varA\": \"222\"}。
+     * @return Parameters Command 的自定义参数。字段类型为json encoded string。如：{"varA": "222"}。
 key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。
 如果未提供该参数取值，将使用 DefaultParameters 进行替换。
 自定义参数最多20个。
@@ -406,12 +406,12 @@ key为自定义参数名称，value为该参数的默认取值。kv均为字符�
     }
 
     /**
-     * Set Command 的自定义参数。字段类型为json encoded string。如：{\"varA\": \"222\"}。
+     * Set Command 的自定义参数。字段类型为json encoded string。如：{"varA": "222"}。
 key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。
 如果未提供该参数取值，将使用 DefaultParameters 进行替换。
 自定义参数最多20个。
 自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。
-     * @param Parameters Command 的自定义参数。字段类型为json encoded string。如：{\"varA\": \"222\"}。
+     * @param Parameters Command 的自定义参数。字段类型为json encoded string。如：{"varA": "222"}。
 key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。
 如果未提供该参数取值，将使用 DefaultParameters 进行替换。
 自定义参数最多20个。

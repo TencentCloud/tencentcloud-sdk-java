@@ -25,7 +25,6 @@ public class DescribeNetDetectsResponse extends AbstractModel {
 
     /**
     * 符合条件的网络探测对象数组。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NetDetectSet")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeNetDetectsResponse extends AbstractModel {
 
     /**
     * 符合条件的网络探测对象数量。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeNetDetectsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 符合条件的网络探测对象数组。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 符合条件的网络探测对象数组。 
      * @return NetDetectSet 符合条件的网络探测对象数组。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public NetDetect [] getNetDetectSet() {
         return this.NetDetectSet;
@@ -58,19 +54,15 @@ public class DescribeNetDetectsResponse extends AbstractModel {
 
     /**
      * Set 符合条件的网络探测对象数组。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NetDetectSet 符合条件的网络探测对象数组。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNetDetectSet(NetDetect [] NetDetectSet) {
         this.NetDetectSet = NetDetectSet;
     }
 
     /**
-     * Get 符合条件的网络探测对象数量。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 符合条件的网络探测对象数量。 
      * @return TotalCount 符合条件的网络探测对象数量。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -78,9 +70,7 @@ public class DescribeNetDetectsResponse extends AbstractModel {
 
     /**
      * Set 符合条件的网络探测对象数量。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 符合条件的网络探测对象数量。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

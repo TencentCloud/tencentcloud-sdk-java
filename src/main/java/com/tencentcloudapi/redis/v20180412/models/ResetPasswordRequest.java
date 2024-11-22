@@ -24,69 +24,79 @@ import java.util.HashMap;
 public class ResetPasswordRequest extends AbstractModel {
 
     /**
-    * Redis实例ID
+    * 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 重置的密码（切换为免密实例时，可不传；其他情况必传）
+    * 重置的密码。若切换为免密实例时，可不配置该参数。其他情况必须配置。
     */
     @SerializedName("Password")
     @Expose
     private String Password;
 
     /**
-    * 是否切换免密实例，false-切换为非免密码实例，true-切换为免密码实例；默认false
+    * 是否切换免密实例。
+- false：切换为非免密码实例。
+- true：切换为免密码实例。默认 false。
     */
     @SerializedName("NoAuth")
     @Expose
     private Boolean NoAuth;
 
     /**
-     * Get Redis实例ID 
-     * @return InstanceId Redis实例ID
+     * Get 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。 
+     * @return InstanceId 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Redis实例ID
-     * @param InstanceId Redis实例ID
+     * Set 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
+     * @param InstanceId 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 重置的密码（切换为免密实例时，可不传；其他情况必传） 
-     * @return Password 重置的密码（切换为免密实例时，可不传；其他情况必传）
+     * Get 重置的密码。若切换为免密实例时，可不配置该参数。其他情况必须配置。 
+     * @return Password 重置的密码。若切换为免密实例时，可不配置该参数。其他情况必须配置。
      */
     public String getPassword() {
         return this.Password;
     }
 
     /**
-     * Set 重置的密码（切换为免密实例时，可不传；其他情况必传）
-     * @param Password 重置的密码（切换为免密实例时，可不传；其他情况必传）
+     * Set 重置的密码。若切换为免密实例时，可不配置该参数。其他情况必须配置。
+     * @param Password 重置的密码。若切换为免密实例时，可不配置该参数。其他情况必须配置。
      */
     public void setPassword(String Password) {
         this.Password = Password;
     }
 
     /**
-     * Get 是否切换免密实例，false-切换为非免密码实例，true-切换为免密码实例；默认false 
-     * @return NoAuth 是否切换免密实例，false-切换为非免密码实例，true-切换为免密码实例；默认false
+     * Get 是否切换免密实例。
+- false：切换为非免密码实例。
+- true：切换为免密码实例。默认 false。 
+     * @return NoAuth 是否切换免密实例。
+- false：切换为非免密码实例。
+- true：切换为免密码实例。默认 false。
      */
     public Boolean getNoAuth() {
         return this.NoAuth;
     }
 
     /**
-     * Set 是否切换免密实例，false-切换为非免密码实例，true-切换为免密码实例；默认false
-     * @param NoAuth 是否切换免密实例，false-切换为非免密码实例，true-切换为免密码实例；默认false
+     * Set 是否切换免密实例。
+- false：切换为非免密码实例。
+- true：切换为免密码实例。默认 false。
+     * @param NoAuth 是否切换免密实例。
+- false：切换为非免密码实例。
+- true：切换为免密码实例。默认 false。
      */
     public void setNoAuth(Boolean NoAuth) {
         this.NoAuth = NoAuth;

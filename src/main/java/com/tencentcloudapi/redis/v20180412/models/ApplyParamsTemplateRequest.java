@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class ApplyParamsTemplateRequest extends AbstractModel {
 
     /**
-    * 实例ID列表
+    * 实例 ID 列表，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
     */
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
 
     /**
-    * 应用的参数模板ID
+    * 应用的参数模板ID，请通过接口[DescribeParamTemplateInfo](https://cloud.tencent.com/document/product/239/58748)的返回参数 **TemplateId** 获取参数模板 ID。
     */
     @SerializedName("TemplateId")
     @Expose
     private String TemplateId;
 
     /**
-     * Get 实例ID列表 
-     * @return InstanceIds 实例ID列表
+     * Get 实例 ID 列表，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。 
+     * @return InstanceIds 实例 ID 列表，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set 实例ID列表
-     * @param InstanceIds 实例ID列表
+     * Set 实例 ID 列表，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
+     * @param InstanceIds 实例 ID 列表，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
     }
 
     /**
-     * Get 应用的参数模板ID 
-     * @return TemplateId 应用的参数模板ID
+     * Get 应用的参数模板ID，请通过接口[DescribeParamTemplateInfo](https://cloud.tencent.com/document/product/239/58748)的返回参数 **TemplateId** 获取参数模板 ID。 
+     * @return TemplateId 应用的参数模板ID，请通过接口[DescribeParamTemplateInfo](https://cloud.tencent.com/document/product/239/58748)的返回参数 **TemplateId** 获取参数模板 ID。
      */
     public String getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set 应用的参数模板ID
-     * @param TemplateId 应用的参数模板ID
+     * Set 应用的参数模板ID，请通过接口[DescribeParamTemplateInfo](https://cloud.tencent.com/document/product/239/58748)的返回参数 **TemplateId** 获取参数模板 ID。
+     * @param TemplateId 应用的参数模板ID，请通过接口[DescribeParamTemplateInfo](https://cloud.tencent.com/document/product/239/58748)的返回参数 **TemplateId** 获取参数模板 ID。
      */
     public void setTemplateId(String TemplateId) {
         this.TemplateId = TemplateId;

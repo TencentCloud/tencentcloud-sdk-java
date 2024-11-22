@@ -24,42 +24,48 @@ import java.util.HashMap;
 public class ModifyInstanceRequest extends AbstractModel {
 
     /**
-    * 修改实例操作，如填写：rename-表示实例重命名；modifyProject-修改实例所属项目；modifyAutoRenew-修改实例续费标记
+    * 修改实例操作。如填写：
+- rename：表示实例重命名。
+- modifyProject：修改实例所属项目。
+- modifyAutoRenew：修改实例续费标记。
     */
     @SerializedName("Operation")
     @Expose
     private String Operation;
 
     /**
-    * 实例Id，每次请求的实例的上限为10。
+    * 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。每次请求的实例数量的上限为10。
     */
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
 
     /**
-    * 实例的新名称
+    * 实例的新名称。
     */
     @SerializedName("InstanceNames")
     @Expose
     private String [] InstanceNames;
 
     /**
-    * 项目Id
+    * 项目 ID，请登录[Redis控制台的项目管理](https://console.cloud.tencent.com/project)页面，在**项目名称**中复制项目 ID。
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
 
     /**
-    * 自动续费标识。0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
+    * 自动续费标识。
+- 0：默认状态，指手动续费。
+- 1：自动续费。
+- 2：明确不自动续费。
     */
     @SerializedName("AutoRenews")
     @Expose
     private Long [] AutoRenews;
 
     /**
-    * 已经废弃
+    * 目前在废弃中，存量用户还可以使用，建议新用户使用 InstanceIds。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -73,103 +79,127 @@ public class ModifyInstanceRequest extends AbstractModel {
     private String InstanceName;
 
     /**
-    * 已经废弃
+    * 已经废弃。
     */
     @SerializedName("AutoRenew")
     @Expose
     private Long AutoRenew;
 
     /**
-     * Get 修改实例操作，如填写：rename-表示实例重命名；modifyProject-修改实例所属项目；modifyAutoRenew-修改实例续费标记 
-     * @return Operation 修改实例操作，如填写：rename-表示实例重命名；modifyProject-修改实例所属项目；modifyAutoRenew-修改实例续费标记
+     * Get 修改实例操作。如填写：
+- rename：表示实例重命名。
+- modifyProject：修改实例所属项目。
+- modifyAutoRenew：修改实例续费标记。 
+     * @return Operation 修改实例操作。如填写：
+- rename：表示实例重命名。
+- modifyProject：修改实例所属项目。
+- modifyAutoRenew：修改实例续费标记。
      */
     public String getOperation() {
         return this.Operation;
     }
 
     /**
-     * Set 修改实例操作，如填写：rename-表示实例重命名；modifyProject-修改实例所属项目；modifyAutoRenew-修改实例续费标记
-     * @param Operation 修改实例操作，如填写：rename-表示实例重命名；modifyProject-修改实例所属项目；modifyAutoRenew-修改实例续费标记
+     * Set 修改实例操作。如填写：
+- rename：表示实例重命名。
+- modifyProject：修改实例所属项目。
+- modifyAutoRenew：修改实例续费标记。
+     * @param Operation 修改实例操作。如填写：
+- rename：表示实例重命名。
+- modifyProject：修改实例所属项目。
+- modifyAutoRenew：修改实例续费标记。
      */
     public void setOperation(String Operation) {
         this.Operation = Operation;
     }
 
     /**
-     * Get 实例Id，每次请求的实例的上限为10。 
-     * @return InstanceIds 实例Id，每次请求的实例的上限为10。
+     * Get 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。每次请求的实例数量的上限为10。 
+     * @return InstanceIds 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。每次请求的实例数量的上限为10。
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set 实例Id，每次请求的实例的上限为10。
-     * @param InstanceIds 实例Id，每次请求的实例的上限为10。
+     * Set 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。每次请求的实例数量的上限为10。
+     * @param InstanceIds 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。每次请求的实例数量的上限为10。
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
     }
 
     /**
-     * Get 实例的新名称 
-     * @return InstanceNames 实例的新名称
+     * Get 实例的新名称。 
+     * @return InstanceNames 实例的新名称。
      */
     public String [] getInstanceNames() {
         return this.InstanceNames;
     }
 
     /**
-     * Set 实例的新名称
-     * @param InstanceNames 实例的新名称
+     * Set 实例的新名称。
+     * @param InstanceNames 实例的新名称。
      */
     public void setInstanceNames(String [] InstanceNames) {
         this.InstanceNames = InstanceNames;
     }
 
     /**
-     * Get 项目Id 
-     * @return ProjectId 项目Id
+     * Get 项目 ID，请登录[Redis控制台的项目管理](https://console.cloud.tencent.com/project)页面，在**项目名称**中复制项目 ID。 
+     * @return ProjectId 项目 ID，请登录[Redis控制台的项目管理](https://console.cloud.tencent.com/project)页面，在**项目名称**中复制项目 ID。
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 项目Id
-     * @param ProjectId 项目Id
+     * Set 项目 ID，请登录[Redis控制台的项目管理](https://console.cloud.tencent.com/project)页面，在**项目名称**中复制项目 ID。
+     * @param ProjectId 项目 ID，请登录[Redis控制台的项目管理](https://console.cloud.tencent.com/project)页面，在**项目名称**中复制项目 ID。
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 自动续费标识。0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费 
-     * @return AutoRenews 自动续费标识。0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
+     * Get 自动续费标识。
+- 0：默认状态，指手动续费。
+- 1：自动续费。
+- 2：明确不自动续费。 
+     * @return AutoRenews 自动续费标识。
+- 0：默认状态，指手动续费。
+- 1：自动续费。
+- 2：明确不自动续费。
      */
     public Long [] getAutoRenews() {
         return this.AutoRenews;
     }
 
     /**
-     * Set 自动续费标识。0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
-     * @param AutoRenews 自动续费标识。0 - 默认状态（手动续费）；1 - 自动续费；2 - 明确不自动续费
+     * Set 自动续费标识。
+- 0：默认状态，指手动续费。
+- 1：自动续费。
+- 2：明确不自动续费。
+     * @param AutoRenews 自动续费标识。
+- 0：默认状态，指手动续费。
+- 1：自动续费。
+- 2：明确不自动续费。
      */
     public void setAutoRenews(Long [] AutoRenews) {
         this.AutoRenews = AutoRenews;
     }
 
     /**
-     * Get 已经废弃 
-     * @return InstanceId 已经废弃
+     * Get 目前在废弃中，存量用户还可以使用，建议新用户使用 InstanceIds。 
+     * @return InstanceId 目前在废弃中，存量用户还可以使用，建议新用户使用 InstanceIds。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 已经废弃
-     * @param InstanceId 已经废弃
+     * Set 目前在废弃中，存量用户还可以使用，建议新用户使用 InstanceIds。
+     * @param InstanceId 目前在废弃中，存量用户还可以使用，建议新用户使用 InstanceIds。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -192,16 +222,16 @@ public class ModifyInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get 已经废弃 
-     * @return AutoRenew 已经废弃
+     * Get 已经废弃。 
+     * @return AutoRenew 已经废弃。
      */
     public Long getAutoRenew() {
         return this.AutoRenew;
     }
 
     /**
-     * Set 已经废弃
-     * @param AutoRenew 已经废弃
+     * Set 已经废弃。
+     * @param AutoRenew 已经废弃。
      */
     public void setAutoRenew(Long AutoRenew) {
         this.AutoRenew = AutoRenew;

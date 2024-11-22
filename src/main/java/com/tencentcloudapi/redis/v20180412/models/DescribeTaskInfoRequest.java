@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeTaskInfoRequest extends AbstractModel {
 
     /**
-    * 任务 ID。
+    * 任务 ID, 请通过接口[DescribeTaskList](https://cloud.tencent.com/document/product/239/39374) 的返回参数 **Tasks** 的子参数 **TaskId** 获取。
     */
     @SerializedName("TaskId")
     @Expose
     private Long TaskId;
 
     /**
-     * Get 任务 ID。 
-     * @return TaskId 任务 ID。
+     * Get 任务 ID, 请通过接口[DescribeTaskList](https://cloud.tencent.com/document/product/239/39374) 的返回参数 **Tasks** 的子参数 **TaskId** 获取。 
+     * @return TaskId 任务 ID, 请通过接口[DescribeTaskList](https://cloud.tencent.com/document/product/239/39374) 的返回参数 **Tasks** 的子参数 **TaskId** 获取。
      */
     public Long getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 任务 ID。
-     * @param TaskId 任务 ID。
+     * Set 任务 ID, 请通过接口[DescribeTaskList](https://cloud.tencent.com/document/product/239/39374) 的返回参数 **Tasks** 的子参数 **TaskId** 获取。
+     * @param TaskId 任务 ID, 请通过接口[DescribeTaskList](https://cloud.tencent.com/document/product/239/39374) 的返回参数 **Tasks** 的子参数 **TaskId** 获取。
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;

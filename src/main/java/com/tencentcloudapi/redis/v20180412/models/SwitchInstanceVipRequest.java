@@ -24,28 +24,30 @@ import java.util.HashMap;
 public class SwitchInstanceVipRequest extends AbstractModel {
 
     /**
-    * 源实例ID
+    * 源实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
     */
     @SerializedName("SrcInstanceId")
     @Expose
     private String SrcInstanceId;
 
     /**
-    * 目标实例ID
+    * 目标实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
     */
     @SerializedName("DstInstanceId")
     @Expose
     private String DstInstanceId;
 
     /**
-    * 单位为秒。源实例与目标实例间DTS已断开时间，如果DTS断开时间大于TimeDelay，则不切换VIP，建议尽量根据业务设置一个可接受的值。
+    * 单位为秒。源实例与目标实例间DTS已断开时间。如果 DTS 断开时间大于TimeDelay，则不切换VIP，建议尽量根据业务设置一个可接受的值。
     */
     @SerializedName("TimeDelay")
     @Expose
     private Long TimeDelay;
 
     /**
-    * 在DTS断开的情况下是否强制切换。1：强制切换，0：不强制切换
+    * 在 DTS 断开的情况下是否强制切换。
+- 1：强制切换。
+- 0：不强制切换。
     */
     @SerializedName("ForceSwitch")
     @Expose
@@ -59,64 +61,72 @@ public class SwitchInstanceVipRequest extends AbstractModel {
     private String SwitchTime;
 
     /**
-     * Get 源实例ID 
-     * @return SrcInstanceId 源实例ID
+     * Get 源实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。 
+     * @return SrcInstanceId 源实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
      */
     public String getSrcInstanceId() {
         return this.SrcInstanceId;
     }
 
     /**
-     * Set 源实例ID
-     * @param SrcInstanceId 源实例ID
+     * Set 源实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
+     * @param SrcInstanceId 源实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
      */
     public void setSrcInstanceId(String SrcInstanceId) {
         this.SrcInstanceId = SrcInstanceId;
     }
 
     /**
-     * Get 目标实例ID 
-     * @return DstInstanceId 目标实例ID
+     * Get 目标实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。 
+     * @return DstInstanceId 目标实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
      */
     public String getDstInstanceId() {
         return this.DstInstanceId;
     }
 
     /**
-     * Set 目标实例ID
-     * @param DstInstanceId 目标实例ID
+     * Set 目标实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
+     * @param DstInstanceId 目标实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
      */
     public void setDstInstanceId(String DstInstanceId) {
         this.DstInstanceId = DstInstanceId;
     }
 
     /**
-     * Get 单位为秒。源实例与目标实例间DTS已断开时间，如果DTS断开时间大于TimeDelay，则不切换VIP，建议尽量根据业务设置一个可接受的值。 
-     * @return TimeDelay 单位为秒。源实例与目标实例间DTS已断开时间，如果DTS断开时间大于TimeDelay，则不切换VIP，建议尽量根据业务设置一个可接受的值。
+     * Get 单位为秒。源实例与目标实例间DTS已断开时间。如果 DTS 断开时间大于TimeDelay，则不切换VIP，建议尽量根据业务设置一个可接受的值。 
+     * @return TimeDelay 单位为秒。源实例与目标实例间DTS已断开时间。如果 DTS 断开时间大于TimeDelay，则不切换VIP，建议尽量根据业务设置一个可接受的值。
      */
     public Long getTimeDelay() {
         return this.TimeDelay;
     }
 
     /**
-     * Set 单位为秒。源实例与目标实例间DTS已断开时间，如果DTS断开时间大于TimeDelay，则不切换VIP，建议尽量根据业务设置一个可接受的值。
-     * @param TimeDelay 单位为秒。源实例与目标实例间DTS已断开时间，如果DTS断开时间大于TimeDelay，则不切换VIP，建议尽量根据业务设置一个可接受的值。
+     * Set 单位为秒。源实例与目标实例间DTS已断开时间。如果 DTS 断开时间大于TimeDelay，则不切换VIP，建议尽量根据业务设置一个可接受的值。
+     * @param TimeDelay 单位为秒。源实例与目标实例间DTS已断开时间。如果 DTS 断开时间大于TimeDelay，则不切换VIP，建议尽量根据业务设置一个可接受的值。
      */
     public void setTimeDelay(Long TimeDelay) {
         this.TimeDelay = TimeDelay;
     }
 
     /**
-     * Get 在DTS断开的情况下是否强制切换。1：强制切换，0：不强制切换 
-     * @return ForceSwitch 在DTS断开的情况下是否强制切换。1：强制切换，0：不强制切换
+     * Get 在 DTS 断开的情况下是否强制切换。
+- 1：强制切换。
+- 0：不强制切换。 
+     * @return ForceSwitch 在 DTS 断开的情况下是否强制切换。
+- 1：强制切换。
+- 0：不强制切换。
      */
     public Long getForceSwitch() {
         return this.ForceSwitch;
     }
 
     /**
-     * Set 在DTS断开的情况下是否强制切换。1：强制切换，0：不强制切换
-     * @param ForceSwitch 在DTS断开的情况下是否强制切换。1：强制切换，0：不强制切换
+     * Set 在 DTS 断开的情况下是否强制切换。
+- 1：强制切换。
+- 0：不强制切换。
+     * @param ForceSwitch 在 DTS 断开的情况下是否强制切换。
+- 1：强制切换。
+- 0：不强制切换。
      */
     public void setForceSwitch(Long ForceSwitch) {
         this.ForceSwitch = ForceSwitch;

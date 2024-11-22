@@ -24,46 +24,61 @@ import java.util.HashMap;
 public class EnableReplicaReadonlyRequest extends AbstractModel {
 
     /**
-    * 实例序号ID
+    * 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 账号路由策略：填写master或者replication，表示路由主节点，从节点；不填路由策略默认为写主节点，读从节点
+    * 只读路由策略。
+- master：表示只读路由至主节点。
+- replication：表示只读路由至从节点。
+- 默认策略：表示写主节点，读从节点。
     */
     @SerializedName("ReadonlyPolicy")
     @Expose
     private String [] ReadonlyPolicy;
 
     /**
-     * Get 实例序号ID 
-     * @return InstanceId 实例序号ID
+     * Get 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。 
+     * @return InstanceId 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例序号ID
-     * @param InstanceId 实例序号ID
+     * Set 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
+     * @param InstanceId 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 账号路由策略：填写master或者replication，表示路由主节点，从节点；不填路由策略默认为写主节点，读从节点 
-     * @return ReadonlyPolicy 账号路由策略：填写master或者replication，表示路由主节点，从节点；不填路由策略默认为写主节点，读从节点
+     * Get 只读路由策略。
+- master：表示只读路由至主节点。
+- replication：表示只读路由至从节点。
+- 默认策略：表示写主节点，读从节点。 
+     * @return ReadonlyPolicy 只读路由策略。
+- master：表示只读路由至主节点。
+- replication：表示只读路由至从节点。
+- 默认策略：表示写主节点，读从节点。
      */
     public String [] getReadonlyPolicy() {
         return this.ReadonlyPolicy;
     }
 
     /**
-     * Set 账号路由策略：填写master或者replication，表示路由主节点，从节点；不填路由策略默认为写主节点，读从节点
-     * @param ReadonlyPolicy 账号路由策略：填写master或者replication，表示路由主节点，从节点；不填路由策略默认为写主节点，读从节点
+     * Set 只读路由策略。
+- master：表示只读路由至主节点。
+- replication：表示只读路由至从节点。
+- 默认策略：表示写主节点，读从节点。
+     * @param ReadonlyPolicy 只读路由策略。
+- master：表示只读路由至主节点。
+- replication：表示只读路由至从节点。
+- 默认策略：表示写主节点，读从节点。
      */
     public void setReadonlyPolicy(String [] ReadonlyPolicy) {
         this.ReadonlyPolicy = ReadonlyPolicy;

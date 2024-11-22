@@ -152,6 +152,14 @@ public class ConfigFileRelease extends AbstractModel {
     private String Format;
 
     /**
+    * 配置文件ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ConfigFileId")
+    @Expose
+    private String ConfigFileId;
+
+    /**
      * Get 配置文件发布id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Id 配置文件发布id
@@ -471,6 +479,26 @@ public class ConfigFileRelease extends AbstractModel {
         this.Format = Format;
     }
 
+    /**
+     * Get 配置文件ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ConfigFileId 配置文件ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getConfigFileId() {
+        return this.ConfigFileId;
+    }
+
+    /**
+     * Set 配置文件ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ConfigFileId 配置文件ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setConfigFileId(String ConfigFileId) {
+        this.ConfigFileId = ConfigFileId;
+    }
+
     public ConfigFileRelease() {
     }
 
@@ -527,6 +555,9 @@ public class ConfigFileRelease extends AbstractModel {
         if (source.Format != null) {
             this.Format = new String(source.Format);
         }
+        if (source.ConfigFileId != null) {
+            this.ConfigFileId = new String(source.ConfigFileId);
+        }
     }
 
 
@@ -550,6 +581,7 @@ public class ConfigFileRelease extends AbstractModel {
         this.setParamSimple(map, prefix + "ReleaseDescription", this.ReleaseDescription);
         this.setParamSimple(map, prefix + "Active", this.Active);
         this.setParamSimple(map, prefix + "Format", this.Format);
+        this.setParamSimple(map, prefix + "ConfigFileId", this.ConfigFileId);
 
     }
 }

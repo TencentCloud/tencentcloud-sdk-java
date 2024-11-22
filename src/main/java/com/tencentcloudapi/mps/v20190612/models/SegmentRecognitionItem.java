@@ -53,6 +53,14 @@ public class SegmentRecognitionItem extends AbstractModel {
     private String SegmentUrl;
 
     /**
+    * 拆条片段封面。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CovImgUrl")
+    @Expose
+    private String CovImgUrl;
+
+    /**
     * 分段标题。
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -67,6 +75,13 @@ public class SegmentRecognitionItem extends AbstractModel {
     @SerializedName("Summary")
     @Expose
     private String Summary;
+
+    /**
+    * 分段关键词。
+    */
+    @SerializedName("Keywords")
+    @Expose
+    private String [] Keywords;
 
     /**
     * 直播切片对应直播起始时间点，采用 ISO 日期格式。
@@ -153,6 +168,26 @@ public class SegmentRecognitionItem extends AbstractModel {
     }
 
     /**
+     * Get 拆条片段封面。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CovImgUrl 拆条片段封面。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCovImgUrl() {
+        return this.CovImgUrl;
+    }
+
+    /**
+     * Set 拆条片段封面。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CovImgUrl 拆条片段封面。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCovImgUrl(String CovImgUrl) {
+        this.CovImgUrl = CovImgUrl;
+    }
+
+    /**
      * Get 分段标题。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Title 分段标题。
@@ -190,6 +225,22 @@ public class SegmentRecognitionItem extends AbstractModel {
      */
     public void setSummary(String Summary) {
         this.Summary = Summary;
+    }
+
+    /**
+     * Get 分段关键词。 
+     * @return Keywords 分段关键词。
+     */
+    public String [] getKeywords() {
+        return this.Keywords;
+    }
+
+    /**
+     * Set 分段关键词。
+     * @param Keywords 分段关键词。
+     */
+    public void setKeywords(String [] Keywords) {
+        this.Keywords = Keywords;
     }
 
     /**
@@ -252,11 +303,20 @@ public class SegmentRecognitionItem extends AbstractModel {
         if (source.SegmentUrl != null) {
             this.SegmentUrl = new String(source.SegmentUrl);
         }
+        if (source.CovImgUrl != null) {
+            this.CovImgUrl = new String(source.CovImgUrl);
+        }
         if (source.Title != null) {
             this.Title = new String(source.Title);
         }
         if (source.Summary != null) {
             this.Summary = new String(source.Summary);
+        }
+        if (source.Keywords != null) {
+            this.Keywords = new String[source.Keywords.length];
+            for (int i = 0; i < source.Keywords.length; i++) {
+                this.Keywords[i] = new String(source.Keywords[i]);
+            }
         }
         if (source.BeginTime != null) {
             this.BeginTime = new String(source.BeginTime);
@@ -275,8 +335,10 @@ public class SegmentRecognitionItem extends AbstractModel {
         this.setParamSimple(map, prefix + "StartTimeOffset", this.StartTimeOffset);
         this.setParamSimple(map, prefix + "EndTimeOffset", this.EndTimeOffset);
         this.setParamSimple(map, prefix + "SegmentUrl", this.SegmentUrl);
+        this.setParamSimple(map, prefix + "CovImgUrl", this.CovImgUrl);
         this.setParamSimple(map, prefix + "Title", this.Title);
         this.setParamSimple(map, prefix + "Summary", this.Summary);
+        this.setParamArraySimple(map, prefix + "Keywords.", this.Keywords);
         this.setParamSimple(map, prefix + "BeginTime", this.BeginTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
 

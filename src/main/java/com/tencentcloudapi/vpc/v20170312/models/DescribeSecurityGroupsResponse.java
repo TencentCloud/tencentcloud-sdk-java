@@ -25,7 +25,6 @@ public class DescribeSecurityGroupsResponse extends AbstractModel {
 
     /**
     * 安全组对象。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SecurityGroupSet")
     @Expose
@@ -46,10 +45,8 @@ public class DescribeSecurityGroupsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 安全组对象。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 安全组对象。 
      * @return SecurityGroupSet 安全组对象。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SecurityGroup [] getSecurityGroupSet() {
         return this.SecurityGroupSet;
@@ -57,9 +54,7 @@ public class DescribeSecurityGroupsResponse extends AbstractModel {
 
     /**
      * Set 安全组对象。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SecurityGroupSet 安全组对象。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSecurityGroupSet(SecurityGroup [] SecurityGroupSet) {
         this.SecurityGroupSet = SecurityGroupSet;

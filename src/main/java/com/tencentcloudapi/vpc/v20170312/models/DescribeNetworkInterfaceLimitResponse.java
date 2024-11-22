@@ -39,7 +39,6 @@ public class DescribeNetworkInterfaceLimitResponse extends AbstractModel {
 
     /**
     * 扩展型网卡配额。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExtendEniQuantity")
     @Expose
@@ -47,7 +46,6 @@ public class DescribeNetworkInterfaceLimitResponse extends AbstractModel {
 
     /**
     * 每个扩展型弹性网卡可以分配的IP配额。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExtendEniPrivateIpAddressQuantity")
     @Expose
@@ -55,7 +53,6 @@ public class DescribeNetworkInterfaceLimitResponse extends AbstractModel {
 
     /**
     * 中继网卡配额。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubEniQuantity")
     @Expose
@@ -63,7 +60,6 @@ public class DescribeNetworkInterfaceLimitResponse extends AbstractModel {
 
     /**
     * 每个中继网卡可以分配的IP配额。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubEniPrivateIpAddressQuantity")
     @Expose
@@ -109,10 +105,8 @@ public class DescribeNetworkInterfaceLimitResponse extends AbstractModel {
     }
 
     /**
-     * Get 扩展型网卡配额。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 扩展型网卡配额。 
      * @return ExtendEniQuantity 扩展型网卡配额。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getExtendEniQuantity() {
         return this.ExtendEniQuantity;
@@ -120,19 +114,15 @@ public class DescribeNetworkInterfaceLimitResponse extends AbstractModel {
 
     /**
      * Set 扩展型网卡配额。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExtendEniQuantity 扩展型网卡配额。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExtendEniQuantity(Long ExtendEniQuantity) {
         this.ExtendEniQuantity = ExtendEniQuantity;
     }
 
     /**
-     * Get 每个扩展型弹性网卡可以分配的IP配额。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 每个扩展型弹性网卡可以分配的IP配额。 
      * @return ExtendEniPrivateIpAddressQuantity 每个扩展型弹性网卡可以分配的IP配额。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getExtendEniPrivateIpAddressQuantity() {
         return this.ExtendEniPrivateIpAddressQuantity;
@@ -140,19 +130,15 @@ public class DescribeNetworkInterfaceLimitResponse extends AbstractModel {
 
     /**
      * Set 每个扩展型弹性网卡可以分配的IP配额。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExtendEniPrivateIpAddressQuantity 每个扩展型弹性网卡可以分配的IP配额。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExtendEniPrivateIpAddressQuantity(Long ExtendEniPrivateIpAddressQuantity) {
         this.ExtendEniPrivateIpAddressQuantity = ExtendEniPrivateIpAddressQuantity;
     }
 
     /**
-     * Get 中继网卡配额。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 中继网卡配额。 
      * @return SubEniQuantity 中继网卡配额。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSubEniQuantity() {
         return this.SubEniQuantity;
@@ -160,19 +146,15 @@ public class DescribeNetworkInterfaceLimitResponse extends AbstractModel {
 
     /**
      * Set 中继网卡配额。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubEniQuantity 中继网卡配额。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubEniQuantity(Long SubEniQuantity) {
         this.SubEniQuantity = SubEniQuantity;
     }
 
     /**
-     * Get 每个中继网卡可以分配的IP配额。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 每个中继网卡可以分配的IP配额。 
      * @return SubEniPrivateIpAddressQuantity 每个中继网卡可以分配的IP配额。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSubEniPrivateIpAddressQuantity() {
         return this.SubEniPrivateIpAddressQuantity;
@@ -180,9 +162,7 @@ public class DescribeNetworkInterfaceLimitResponse extends AbstractModel {
 
     /**
      * Set 每个中继网卡可以分配的IP配额。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubEniPrivateIpAddressQuantity 每个中继网卡可以分配的IP配额。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubEniPrivateIpAddressQuantity(Long SubEniPrivateIpAddressQuantity) {
         this.SubEniPrivateIpAddressQuantity = SubEniPrivateIpAddressQuantity;

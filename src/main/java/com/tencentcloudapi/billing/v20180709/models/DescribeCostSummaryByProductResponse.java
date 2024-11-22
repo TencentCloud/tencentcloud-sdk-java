@@ -46,7 +46,7 @@ public class DescribeCostSummaryByProductResponse extends AbstractModel {
     private ConsumptionBusinessSummaryDataItem [] Data;
 
     /**
-    * 记录数量，NeedRecordNum为0是返回null
+    * 记录数量，NeedRecordNum为0时返回null
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RecordNum")
@@ -113,9 +113,9 @@ public class DescribeCostSummaryByProductResponse extends AbstractModel {
     }
 
     /**
-     * Get 记录数量，NeedRecordNum为0是返回null
+     * Get 记录数量，NeedRecordNum为0时返回null
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RecordNum 记录数量，NeedRecordNum为0是返回null
+     * @return RecordNum 记录数量，NeedRecordNum为0时返回null
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRecordNum() {
@@ -123,9 +123,9 @@ public class DescribeCostSummaryByProductResponse extends AbstractModel {
     }
 
     /**
-     * Set 记录数量，NeedRecordNum为0是返回null
+     * Set 记录数量，NeedRecordNum为0时返回null
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RecordNum 记录数量，NeedRecordNum为0是返回null
+     * @param RecordNum 记录数量，NeedRecordNum为0时返回null
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRecordNum(Long RecordNum) {

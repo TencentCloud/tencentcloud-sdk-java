@@ -25,7 +25,6 @@ public class CreateAssistantCidrResponse extends AbstractModel {
 
     /**
     * 辅助CIDR数组。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AssistantCidrSet")
     @Expose
@@ -39,10 +38,8 @@ public class CreateAssistantCidrResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 辅助CIDR数组。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 辅助CIDR数组。 
      * @return AssistantCidrSet 辅助CIDR数组。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AssistantCidr [] getAssistantCidrSet() {
         return this.AssistantCidrSet;
@@ -50,9 +47,7 @@ public class CreateAssistantCidrResponse extends AbstractModel {
 
     /**
      * Set 辅助CIDR数组。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AssistantCidrSet 辅助CIDR数组。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAssistantCidrSet(AssistantCidr [] AssistantCidrSet) {
         this.AssistantCidrSet = AssistantCidrSet;

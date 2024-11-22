@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class UpgradeVersionToMultiAvailabilityZonesRequest extends AbstractModel {
 
     /**
-    * 实例ID。
+    * 实例ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -39,16 +39,16 @@ public class UpgradeVersionToMultiAvailabilityZonesRequest extends AbstractModel
     private Boolean UpgradeProxyAndRedisServer;
 
     /**
-     * Get 实例ID。 
-     * @return InstanceId 实例ID。
+     * Get 实例ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。 
+     * @return InstanceId 实例ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID。
-     * @param InstanceId 实例ID。
+     * Set 实例ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
+     * @param InstanceId 实例ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

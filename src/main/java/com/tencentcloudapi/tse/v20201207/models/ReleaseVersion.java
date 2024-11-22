@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ReleaseVersion extends AbstractModel {
 
     /**
-    * 名称
+    * 配置发布的版本
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
@@ -40,9 +40,41 @@ public class ReleaseVersion extends AbstractModel {
     private Boolean Active;
 
     /**
-     * Get 名称
+    * 配置发布的ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Id")
+    @Expose
+    private String Id;
+
+    /**
+    * 配置发布的命名空间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Namespace")
+    @Expose
+    private String Namespace;
+
+    /**
+    * 配置发布的分组
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Group")
+    @Expose
+    private String Group;
+
+    /**
+    * 配置发布的文件名
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FileName")
+    @Expose
+    private String FileName;
+
+    /**
+     * Get 配置发布的版本
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Name 名称
+     * @return Name 配置发布的版本
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
@@ -50,9 +82,9 @@ public class ReleaseVersion extends AbstractModel {
     }
 
     /**
-     * Set 名称
+     * Set 配置发布的版本
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Name 名称
+     * @param Name 配置发布的版本
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
@@ -79,6 +111,86 @@ public class ReleaseVersion extends AbstractModel {
         this.Active = Active;
     }
 
+    /**
+     * Get 配置发布的ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Id 配置发布的ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getId() {
+        return this.Id;
+    }
+
+    /**
+     * Set 配置发布的ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Id 配置发布的ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setId(String Id) {
+        this.Id = Id;
+    }
+
+    /**
+     * Get 配置发布的命名空间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Namespace 配置发布的命名空间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getNamespace() {
+        return this.Namespace;
+    }
+
+    /**
+     * Set 配置发布的命名空间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Namespace 配置发布的命名空间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNamespace(String Namespace) {
+        this.Namespace = Namespace;
+    }
+
+    /**
+     * Get 配置发布的分组
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Group 配置发布的分组
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getGroup() {
+        return this.Group;
+    }
+
+    /**
+     * Set 配置发布的分组
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Group 配置发布的分组
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setGroup(String Group) {
+        this.Group = Group;
+    }
+
+    /**
+     * Get 配置发布的文件名
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FileName 配置发布的文件名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getFileName() {
+        return this.FileName;
+    }
+
+    /**
+     * Set 配置发布的文件名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FileName 配置发布的文件名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFileName(String FileName) {
+        this.FileName = FileName;
+    }
+
     public ReleaseVersion() {
     }
 
@@ -93,6 +205,18 @@ public class ReleaseVersion extends AbstractModel {
         if (source.Active != null) {
             this.Active = new Boolean(source.Active);
         }
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
+        if (source.Namespace != null) {
+            this.Namespace = new String(source.Namespace);
+        }
+        if (source.Group != null) {
+            this.Group = new String(source.Group);
+        }
+        if (source.FileName != null) {
+            this.FileName = new String(source.FileName);
+        }
     }
 
 
@@ -102,6 +226,10 @@ public class ReleaseVersion extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Active", this.Active);
+        this.setParamSimple(map, prefix + "Id", this.Id);
+        this.setParamSimple(map, prefix + "Namespace", this.Namespace);
+        this.setParamSimple(map, prefix + "Group", this.Group);
+        this.setParamSimple(map, prefix + "FileName", this.FileName);
 
     }
 }

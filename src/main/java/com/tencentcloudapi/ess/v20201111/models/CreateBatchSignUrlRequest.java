@@ -135,6 +135,19 @@ public class CreateBatchSignUrlRequest extends AbstractModel {
     private FlowBatchUrlInfo FlowBatchUrlInfo;
 
     /**
+    * 签署完成后是否自动回跳
+<ul><li>false：否, 签署完成不会自动跳转回来(默认)</li><li>true：是, 签署完成会自动跳转回来</li></ul>
+
+注: 
+1. 该参数<font color="red">只针对APP类型（电子签小程序跳转贵方小程序）场景</font> 的签署链接有效
+2. <font color="red">手机应用APP 或 微信小程序需要监控界面的返回走后序逻辑</font>, 微信小程序的文档可以参考[这个](https://developers.weixin.qq.com/miniprogram/dev/reference/api/App.html#onShow-Object-object)
+3. <font color="red">电子签小程序跳转贵方APP，不支持自动跳转，必需用户手动点击完成按钮（微信的限制）</font> 
+    */
+    @SerializedName("AutoJumpBack")
+    @Expose
+    private Boolean AutoJumpBack;
+
+    /**
      * Get 执行本接口操作的员工信息。
 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。` 
      * @return Operator 执行本接口操作的员工信息。
@@ -446,6 +459,46 @@ public class CreateBatchSignUrlRequest extends AbstractModel {
         this.FlowBatchUrlInfo = FlowBatchUrlInfo;
     }
 
+    /**
+     * Get 签署完成后是否自动回跳
+<ul><li>false：否, 签署完成不会自动跳转回来(默认)</li><li>true：是, 签署完成会自动跳转回来</li></ul>
+
+注: 
+1. 该参数<font color="red">只针对APP类型（电子签小程序跳转贵方小程序）场景</font> 的签署链接有效
+2. <font color="red">手机应用APP 或 微信小程序需要监控界面的返回走后序逻辑</font>, 微信小程序的文档可以参考[这个](https://developers.weixin.qq.com/miniprogram/dev/reference/api/App.html#onShow-Object-object)
+3. <font color="red">电子签小程序跳转贵方APP，不支持自动跳转，必需用户手动点击完成按钮（微信的限制）</font>  
+     * @return AutoJumpBack 签署完成后是否自动回跳
+<ul><li>false：否, 签署完成不会自动跳转回来(默认)</li><li>true：是, 签署完成会自动跳转回来</li></ul>
+
+注: 
+1. 该参数<font color="red">只针对APP类型（电子签小程序跳转贵方小程序）场景</font> 的签署链接有效
+2. <font color="red">手机应用APP 或 微信小程序需要监控界面的返回走后序逻辑</font>, 微信小程序的文档可以参考[这个](https://developers.weixin.qq.com/miniprogram/dev/reference/api/App.html#onShow-Object-object)
+3. <font color="red">电子签小程序跳转贵方APP，不支持自动跳转，必需用户手动点击完成按钮（微信的限制）</font> 
+     */
+    public Boolean getAutoJumpBack() {
+        return this.AutoJumpBack;
+    }
+
+    /**
+     * Set 签署完成后是否自动回跳
+<ul><li>false：否, 签署完成不会自动跳转回来(默认)</li><li>true：是, 签署完成会自动跳转回来</li></ul>
+
+注: 
+1. 该参数<font color="red">只针对APP类型（电子签小程序跳转贵方小程序）场景</font> 的签署链接有效
+2. <font color="red">手机应用APP 或 微信小程序需要监控界面的返回走后序逻辑</font>, 微信小程序的文档可以参考[这个](https://developers.weixin.qq.com/miniprogram/dev/reference/api/App.html#onShow-Object-object)
+3. <font color="red">电子签小程序跳转贵方APP，不支持自动跳转，必需用户手动点击完成按钮（微信的限制）</font> 
+     * @param AutoJumpBack 签署完成后是否自动回跳
+<ul><li>false：否, 签署完成不会自动跳转回来(默认)</li><li>true：是, 签署完成会自动跳转回来</li></ul>
+
+注: 
+1. 该参数<font color="red">只针对APP类型（电子签小程序跳转贵方小程序）场景</font> 的签署链接有效
+2. <font color="red">手机应用APP 或 微信小程序需要监控界面的返回走后序逻辑</font>, 微信小程序的文档可以参考[这个](https://developers.weixin.qq.com/miniprogram/dev/reference/api/App.html#onShow-Object-object)
+3. <font color="red">电子签小程序跳转贵方APP，不支持自动跳转，必需用户手动点击完成按钮（微信的限制）</font> 
+     */
+    public void setAutoJumpBack(Boolean AutoJumpBack) {
+        this.AutoJumpBack = AutoJumpBack;
+    }
+
     public CreateBatchSignUrlRequest() {
     }
 
@@ -490,6 +543,9 @@ public class CreateBatchSignUrlRequest extends AbstractModel {
         if (source.FlowBatchUrlInfo != null) {
             this.FlowBatchUrlInfo = new FlowBatchUrlInfo(source.FlowBatchUrlInfo);
         }
+        if (source.AutoJumpBack != null) {
+            this.AutoJumpBack = new Boolean(source.AutoJumpBack);
+        }
     }
 
 
@@ -508,6 +564,7 @@ public class CreateBatchSignUrlRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "OrganizationName", this.OrganizationName);
         this.setParamSimple(map, prefix + "JumpToDetail", this.JumpToDetail);
         this.setParamObj(map, prefix + "FlowBatchUrlInfo.", this.FlowBatchUrlInfo);
+        this.setParamSimple(map, prefix + "AutoJumpBack", this.AutoJumpBack);
 
     }
 }

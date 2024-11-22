@@ -24,92 +24,102 @@ import java.util.HashMap;
 public class UpgradeProxyVersionRequest extends AbstractModel {
 
     /**
-    * 实例ID
+    * 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 当前proxy版本
+    * 当前 Proxy 版本。
     */
     @SerializedName("CurrentProxyVersion")
     @Expose
     private String CurrentProxyVersion;
 
     /**
-    * 可升级的redis版本
+    * 可升级的 Redis 版本。
     */
     @SerializedName("UpgradeProxyVersion")
     @Expose
     private String UpgradeProxyVersion;
 
     /**
-    * 1-立即升级   0-维护时间窗口升级
+    * 指定是否立即升级。
+- 1：立即升级。
+- 0：维护时间窗口升级。
     */
     @SerializedName("InstanceTypeUpgradeNow")
     @Expose
     private Long InstanceTypeUpgradeNow;
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+     * Get 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。 
+     * @return InstanceId 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
+     * @param InstanceId 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 当前proxy版本 
-     * @return CurrentProxyVersion 当前proxy版本
+     * Get 当前 Proxy 版本。 
+     * @return CurrentProxyVersion 当前 Proxy 版本。
      */
     public String getCurrentProxyVersion() {
         return this.CurrentProxyVersion;
     }
 
     /**
-     * Set 当前proxy版本
-     * @param CurrentProxyVersion 当前proxy版本
+     * Set 当前 Proxy 版本。
+     * @param CurrentProxyVersion 当前 Proxy 版本。
      */
     public void setCurrentProxyVersion(String CurrentProxyVersion) {
         this.CurrentProxyVersion = CurrentProxyVersion;
     }
 
     /**
-     * Get 可升级的redis版本 
-     * @return UpgradeProxyVersion 可升级的redis版本
+     * Get 可升级的 Redis 版本。 
+     * @return UpgradeProxyVersion 可升级的 Redis 版本。
      */
     public String getUpgradeProxyVersion() {
         return this.UpgradeProxyVersion;
     }
 
     /**
-     * Set 可升级的redis版本
-     * @param UpgradeProxyVersion 可升级的redis版本
+     * Set 可升级的 Redis 版本。
+     * @param UpgradeProxyVersion 可升级的 Redis 版本。
      */
     public void setUpgradeProxyVersion(String UpgradeProxyVersion) {
         this.UpgradeProxyVersion = UpgradeProxyVersion;
     }
 
     /**
-     * Get 1-立即升级   0-维护时间窗口升级 
-     * @return InstanceTypeUpgradeNow 1-立即升级   0-维护时间窗口升级
+     * Get 指定是否立即升级。
+- 1：立即升级。
+- 0：维护时间窗口升级。 
+     * @return InstanceTypeUpgradeNow 指定是否立即升级。
+- 1：立即升级。
+- 0：维护时间窗口升级。
      */
     public Long getInstanceTypeUpgradeNow() {
         return this.InstanceTypeUpgradeNow;
     }
 
     /**
-     * Set 1-立即升级   0-维护时间窗口升级
-     * @param InstanceTypeUpgradeNow 1-立即升级   0-维护时间窗口升级
+     * Set 指定是否立即升级。
+- 1：立即升级。
+- 0：维护时间窗口升级。
+     * @param InstanceTypeUpgradeNow 指定是否立即升级。
+- 1：立即升级。
+- 0：维护时间窗口升级。
      */
     public void setInstanceTypeUpgradeNow(Long InstanceTypeUpgradeNow) {
         this.InstanceTypeUpgradeNow = InstanceTypeUpgradeNow;

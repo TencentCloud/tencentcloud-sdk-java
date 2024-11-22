@@ -59,6 +59,13 @@ public class DescribeConfigFileReleaseRequest extends AbstractModel {
     private String ReleaseName;
 
     /**
+    * 配置文件发布Id
+    */
+    @SerializedName("Id")
+    @Expose
+    private String Id;
+
+    /**
      * Get TSE实例id 
      * @return InstanceId TSE实例id
      */
@@ -138,6 +145,22 @@ public class DescribeConfigFileReleaseRequest extends AbstractModel {
         this.ReleaseName = ReleaseName;
     }
 
+    /**
+     * Get 配置文件发布Id 
+     * @return Id 配置文件发布Id
+     */
+    public String getId() {
+        return this.Id;
+    }
+
+    /**
+     * Set 配置文件发布Id
+     * @param Id 配置文件发布Id
+     */
+    public void setId(String Id) {
+        this.Id = Id;
+    }
+
     public DescribeConfigFileReleaseRequest() {
     }
 
@@ -161,6 +184,9 @@ public class DescribeConfigFileReleaseRequest extends AbstractModel {
         if (source.ReleaseName != null) {
             this.ReleaseName = new String(source.ReleaseName);
         }
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
     }
 
 
@@ -173,6 +199,7 @@ public class DescribeConfigFileReleaseRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Group", this.Group);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "ReleaseName", this.ReleaseName);
+        this.setParamSimple(map, prefix + "Id", this.Id);
 
     }
 }

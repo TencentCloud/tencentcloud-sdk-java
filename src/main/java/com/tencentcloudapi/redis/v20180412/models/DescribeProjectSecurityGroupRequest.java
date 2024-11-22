@@ -24,46 +24,61 @@ import java.util.HashMap;
 public class DescribeProjectSecurityGroupRequest extends AbstractModel {
 
     /**
-    * 0:默认项目；-1 所有项目; >0: 特定项目
+    * 指定查询的项目 ID。
+- 0：默认项目。
+- -1：所有项目。
+- 大于0：特定项目。请登录[Redis控制台的项目管理](https://console.cloud.tencent.com/project)页面，在**项目名称**中复制项目 ID。
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
 
     /**
-    * 安全组Id
+    * 安全组 ID，通过接口[DescribeInstanceSecurityGroup](https://cloud.tencent.com/document/product/239/34447)的返回参数 **InstanceSecurityGroupsDetail** 的子参数 **SecurityGroupId** 获取。
     */
     @SerializedName("SecurityGroupId")
     @Expose
     private String SecurityGroupId;
 
     /**
-     * Get 0:默认项目；-1 所有项目; >0: 特定项目 
-     * @return ProjectId 0:默认项目；-1 所有项目; >0: 特定项目
+     * Get 指定查询的项目 ID。
+- 0：默认项目。
+- -1：所有项目。
+- 大于0：特定项目。请登录[Redis控制台的项目管理](https://console.cloud.tencent.com/project)页面，在**项目名称**中复制项目 ID。 
+     * @return ProjectId 指定查询的项目 ID。
+- 0：默认项目。
+- -1：所有项目。
+- 大于0：特定项目。请登录[Redis控制台的项目管理](https://console.cloud.tencent.com/project)页面，在**项目名称**中复制项目 ID。
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 0:默认项目；-1 所有项目; >0: 特定项目
-     * @param ProjectId 0:默认项目；-1 所有项目; >0: 特定项目
+     * Set 指定查询的项目 ID。
+- 0：默认项目。
+- -1：所有项目。
+- 大于0：特定项目。请登录[Redis控制台的项目管理](https://console.cloud.tencent.com/project)页面，在**项目名称**中复制项目 ID。
+     * @param ProjectId 指定查询的项目 ID。
+- 0：默认项目。
+- -1：所有项目。
+- 大于0：特定项目。请登录[Redis控制台的项目管理](https://console.cloud.tencent.com/project)页面，在**项目名称**中复制项目 ID。
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 安全组Id 
-     * @return SecurityGroupId 安全组Id
+     * Get 安全组 ID，通过接口[DescribeInstanceSecurityGroup](https://cloud.tencent.com/document/product/239/34447)的返回参数 **InstanceSecurityGroupsDetail** 的子参数 **SecurityGroupId** 获取。 
+     * @return SecurityGroupId 安全组 ID，通过接口[DescribeInstanceSecurityGroup](https://cloud.tencent.com/document/product/239/34447)的返回参数 **InstanceSecurityGroupsDetail** 的子参数 **SecurityGroupId** 获取。
      */
     public String getSecurityGroupId() {
         return this.SecurityGroupId;
     }
 
     /**
-     * Set 安全组Id
-     * @param SecurityGroupId 安全组Id
+     * Set 安全组 ID，通过接口[DescribeInstanceSecurityGroup](https://cloud.tencent.com/document/product/239/34447)的返回参数 **InstanceSecurityGroupsDetail** 的子参数 **SecurityGroupId** 获取。
+     * @param SecurityGroupId 安全组 ID，通过接口[DescribeInstanceSecurityGroup](https://cloud.tencent.com/document/product/239/34447)的返回参数 **InstanceSecurityGroupsDetail** 的子参数 **SecurityGroupId** 获取。
      */
     public void setSecurityGroupId(String SecurityGroupId) {
         this.SecurityGroupId = SecurityGroupId;

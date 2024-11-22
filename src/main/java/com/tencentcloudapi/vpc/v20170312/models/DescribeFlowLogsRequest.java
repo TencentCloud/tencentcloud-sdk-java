@@ -80,14 +80,14 @@ public class DescribeFlowLogsRequest extends AbstractModel {
     private String CloudLogState;
 
     /**
-    * 按某个字段排序,支持字段：flowLogName,createTime，默认按createTime。
+    * 按某个字段排序,支持字段：flowLogName,createTime，默认按CreatedTime。
     */
     @SerializedName("OrderField")
     @Expose
     private String OrderField;
 
     /**
-    * 升序（asc）还是降序（desc）,默认：desc。
+    * 升序（ASC）还是降序（DESC）,默认：DESC。
     */
     @SerializedName("OrderDirection")
     @Expose
@@ -252,32 +252,32 @@ public class DescribeFlowLogsRequest extends AbstractModel {
     }
 
     /**
-     * Get 按某个字段排序,支持字段：flowLogName,createTime，默认按createTime。 
-     * @return OrderField 按某个字段排序,支持字段：flowLogName,createTime，默认按createTime。
+     * Get 按某个字段排序,支持字段：flowLogName,createTime，默认按CreatedTime。 
+     * @return OrderField 按某个字段排序,支持字段：flowLogName,createTime，默认按CreatedTime。
      */
     public String getOrderField() {
         return this.OrderField;
     }
 
     /**
-     * Set 按某个字段排序,支持字段：flowLogName,createTime，默认按createTime。
-     * @param OrderField 按某个字段排序,支持字段：flowLogName,createTime，默认按createTime。
+     * Set 按某个字段排序,支持字段：flowLogName,createTime，默认按CreatedTime。
+     * @param OrderField 按某个字段排序,支持字段：flowLogName,createTime，默认按CreatedTime。
      */
     public void setOrderField(String OrderField) {
         this.OrderField = OrderField;
     }
 
     /**
-     * Get 升序（asc）还是降序（desc）,默认：desc。 
-     * @return OrderDirection 升序（asc）还是降序（desc）,默认：desc。
+     * Get 升序（ASC）还是降序（DESC）,默认：DESC。 
+     * @return OrderDirection 升序（ASC）还是降序（DESC）,默认：DESC。
      */
     public String getOrderDirection() {
         return this.OrderDirection;
     }
 
     /**
-     * Set 升序（asc）还是降序（desc）,默认：desc。
-     * @param OrderDirection 升序（asc）还是降序（desc）,默认：desc。
+     * Set 升序（ASC）还是降序（DESC）,默认：DESC。
+     * @param OrderDirection 升序（ASC）还是降序（DESC）,默认：DESC。
      */
     public void setOrderDirection(String OrderDirection) {
         this.OrderDirection = OrderDirection;
