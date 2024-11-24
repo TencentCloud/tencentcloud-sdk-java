@@ -38,14 +38,14 @@ public class UpdateDataModelRegistryInfoRequest extends AbstractModel {
     private String AppCamRole;
 
     /**
-    * 数语的ip
+    * 数语的公网访问ip
     */
     @SerializedName("Ip")
     @Expose
     private String Ip;
 
     /**
-    * 数语的端口
+    * 数语的公网访问端口
     */
     @SerializedName("Port")
     @Expose
@@ -80,6 +80,41 @@ public class UpdateDataModelRegistryInfoRequest extends AbstractModel {
     private String OwnId;
 
     /**
+    * VpcId
+    */
+    @SerializedName("VpcId")
+    @Expose
+    private String VpcId;
+
+    /**
+    * Vpc地域
+    */
+    @SerializedName("VpcRegion")
+    @Expose
+    private String VpcRegion;
+
+    /**
+    * 数语的内网访问ip
+    */
+    @SerializedName("Pip")
+    @Expose
+    private String Pip;
+
+    /**
+    * 数语的内网访问端口
+    */
+    @SerializedName("Pport")
+    @Expose
+    private Long Pport;
+
+    /**
+    * 是否开放公网访问数语, 1:是，0:否，默认1开放
+    */
+    @SerializedName("IsPublic")
+    @Expose
+    private Long IsPublic;
+
+    /**
      * Get 云应用的实例id 
      * @return CloudappId 云应用的实例id
      */
@@ -112,32 +147,32 @@ public class UpdateDataModelRegistryInfoRequest extends AbstractModel {
     }
 
     /**
-     * Get 数语的ip 
-     * @return Ip 数语的ip
+     * Get 数语的公网访问ip 
+     * @return Ip 数语的公网访问ip
      */
     public String getIp() {
         return this.Ip;
     }
 
     /**
-     * Set 数语的ip
-     * @param Ip 数语的ip
+     * Set 数语的公网访问ip
+     * @param Ip 数语的公网访问ip
      */
     public void setIp(String Ip) {
         this.Ip = Ip;
     }
 
     /**
-     * Get 数语的端口 
-     * @return Port 数语的端口
+     * Get 数语的公网访问端口 
+     * @return Port 数语的公网访问端口
      */
     public Long getPort() {
         return this.Port;
     }
 
     /**
-     * Set 数语的端口
-     * @param Port 数语的端口
+     * Set 数语的公网访问端口
+     * @param Port 数语的公网访问端口
      */
     public void setPort(Long Port) {
         this.Port = Port;
@@ -207,6 +242,86 @@ public class UpdateDataModelRegistryInfoRequest extends AbstractModel {
         this.OwnId = OwnId;
     }
 
+    /**
+     * Get VpcId 
+     * @return VpcId VpcId
+     */
+    public String getVpcId() {
+        return this.VpcId;
+    }
+
+    /**
+     * Set VpcId
+     * @param VpcId VpcId
+     */
+    public void setVpcId(String VpcId) {
+        this.VpcId = VpcId;
+    }
+
+    /**
+     * Get Vpc地域 
+     * @return VpcRegion Vpc地域
+     */
+    public String getVpcRegion() {
+        return this.VpcRegion;
+    }
+
+    /**
+     * Set Vpc地域
+     * @param VpcRegion Vpc地域
+     */
+    public void setVpcRegion(String VpcRegion) {
+        this.VpcRegion = VpcRegion;
+    }
+
+    /**
+     * Get 数语的内网访问ip 
+     * @return Pip 数语的内网访问ip
+     */
+    public String getPip() {
+        return this.Pip;
+    }
+
+    /**
+     * Set 数语的内网访问ip
+     * @param Pip 数语的内网访问ip
+     */
+    public void setPip(String Pip) {
+        this.Pip = Pip;
+    }
+
+    /**
+     * Get 数语的内网访问端口 
+     * @return Pport 数语的内网访问端口
+     */
+    public Long getPport() {
+        return this.Pport;
+    }
+
+    /**
+     * Set 数语的内网访问端口
+     * @param Pport 数语的内网访问端口
+     */
+    public void setPport(Long Pport) {
+        this.Pport = Pport;
+    }
+
+    /**
+     * Get 是否开放公网访问数语, 1:是，0:否，默认1开放 
+     * @return IsPublic 是否开放公网访问数语, 1:是，0:否，默认1开放
+     */
+    public Long getIsPublic() {
+        return this.IsPublic;
+    }
+
+    /**
+     * Set 是否开放公网访问数语, 1:是，0:否，默认1开放
+     * @param IsPublic 是否开放公网访问数语, 1:是，0:否，默认1开放
+     */
+    public void setIsPublic(Long IsPublic) {
+        this.IsPublic = IsPublic;
+    }
+
     public UpdateDataModelRegistryInfoRequest() {
     }
 
@@ -239,6 +354,21 @@ public class UpdateDataModelRegistryInfoRequest extends AbstractModel {
         if (source.OwnId != null) {
             this.OwnId = new String(source.OwnId);
         }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.VpcRegion != null) {
+            this.VpcRegion = new String(source.VpcRegion);
+        }
+        if (source.Pip != null) {
+            this.Pip = new String(source.Pip);
+        }
+        if (source.Pport != null) {
+            this.Pport = new Long(source.Pport);
+        }
+        if (source.IsPublic != null) {
+            this.IsPublic = new Long(source.IsPublic);
+        }
     }
 
 
@@ -254,6 +384,11 @@ public class UpdateDataModelRegistryInfoRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Provider", this.Provider);
         this.setParamSimple(map, prefix + "TenantId", this.TenantId);
         this.setParamSimple(map, prefix + "OwnId", this.OwnId);
+        this.setParamSimple(map, prefix + "VpcId", this.VpcId);
+        this.setParamSimple(map, prefix + "VpcRegion", this.VpcRegion);
+        this.setParamSimple(map, prefix + "Pip", this.Pip);
+        this.setParamSimple(map, prefix + "Pport", this.Pport);
+        this.setParamSimple(map, prefix + "IsPublic", this.IsPublic);
 
     }
 }

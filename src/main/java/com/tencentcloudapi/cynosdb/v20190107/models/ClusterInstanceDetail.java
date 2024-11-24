@@ -143,6 +143,13 @@ public class ClusterInstanceDetail extends AbstractModel {
     private String InstanceStorageType;
 
     /**
+    * 数据库类型
+    */
+    @SerializedName("DbMode")
+    @Expose
+    private String DbMode;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -426,6 +433,22 @@ public class ClusterInstanceDetail extends AbstractModel {
         this.InstanceStorageType = InstanceStorageType;
     }
 
+    /**
+     * Get 数据库类型 
+     * @return DbMode 数据库类型
+     */
+    public String getDbMode() {
+        return this.DbMode;
+    }
+
+    /**
+     * Set 数据库类型
+     * @param DbMode 数据库类型
+     */
+    public void setDbMode(String DbMode) {
+        this.DbMode = DbMode;
+    }
+
     public ClusterInstanceDetail() {
     }
 
@@ -488,6 +511,9 @@ public class ClusterInstanceDetail extends AbstractModel {
         if (source.InstanceStorageType != null) {
             this.InstanceStorageType = new String(source.InstanceStorageType);
         }
+        if (source.DbMode != null) {
+            this.DbMode = new String(source.DbMode);
+        }
     }
 
 
@@ -511,6 +537,7 @@ public class ClusterInstanceDetail extends AbstractModel {
         this.setParamArrayObj(map, prefix + "InstanceTasks.", this.InstanceTasks);
         this.setParamSimple(map, prefix + "InstanceDeviceType", this.InstanceDeviceType);
         this.setParamSimple(map, prefix + "InstanceStorageType", this.InstanceStorageType);
+        this.setParamSimple(map, prefix + "DbMode", this.DbMode);
 
     }
 }

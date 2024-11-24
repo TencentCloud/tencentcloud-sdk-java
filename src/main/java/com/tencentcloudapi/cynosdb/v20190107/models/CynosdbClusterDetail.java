@@ -174,7 +174,7 @@ pausing
     private String DbType;
 
     /**
-    * 数据库类型，normal，serverless
+    * Db类型：<li>NORMAL</li><li>SERVERLESS</li>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DbMode")
@@ -764,9 +764,9 @@ pausing
     }
 
     /**
-     * Get 数据库类型，normal，serverless
+     * Get Db类型：<li>NORMAL</li><li>SERVERLESS</li>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DbMode 数据库类型，normal，serverless
+     * @return DbMode Db类型：<li>NORMAL</li><li>SERVERLESS</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDbMode() {
@@ -774,9 +774,9 @@ pausing
     }
 
     /**
-     * Set 数据库类型，normal，serverless
+     * Set Db类型：<li>NORMAL</li><li>SERVERLESS</li>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DbMode 数据库类型，normal，serverless
+     * @param DbMode Db类型：<li>NORMAL</li><li>SERVERLESS</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDbMode(String DbMode) {

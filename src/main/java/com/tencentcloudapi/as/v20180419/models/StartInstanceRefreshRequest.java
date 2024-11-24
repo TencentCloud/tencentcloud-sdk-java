@@ -38,7 +38,9 @@ public class StartInstanceRefreshRequest extends AbstractModel {
     private RefreshSettings RefreshSettings;
 
     /**
-    * 刷新模式，目前仅支持滚动更新，默认值为 ROLLING_UPDATE_RESET。
+    * 刷新模式。取值范围：
+<li>ROLLING_UPDATE_RESET：重装系统进行滚动更新</li>
+<li>ROLLING_UPDATE_REPLACE：新建实例替换进行滚动更新，该模式暂不支持回滚接口</li>
     */
     @SerializedName("RefreshMode")
     @Expose
@@ -77,16 +79,24 @@ public class StartInstanceRefreshRequest extends AbstractModel {
     }
 
     /**
-     * Get 刷新模式，目前仅支持滚动更新，默认值为 ROLLING_UPDATE_RESET。 
-     * @return RefreshMode 刷新模式，目前仅支持滚动更新，默认值为 ROLLING_UPDATE_RESET。
+     * Get 刷新模式。取值范围：
+<li>ROLLING_UPDATE_RESET：重装系统进行滚动更新</li>
+<li>ROLLING_UPDATE_REPLACE：新建实例替换进行滚动更新，该模式暂不支持回滚接口</li> 
+     * @return RefreshMode 刷新模式。取值范围：
+<li>ROLLING_UPDATE_RESET：重装系统进行滚动更新</li>
+<li>ROLLING_UPDATE_REPLACE：新建实例替换进行滚动更新，该模式暂不支持回滚接口</li>
      */
     public String getRefreshMode() {
         return this.RefreshMode;
     }
 
     /**
-     * Set 刷新模式，目前仅支持滚动更新，默认值为 ROLLING_UPDATE_RESET。
-     * @param RefreshMode 刷新模式，目前仅支持滚动更新，默认值为 ROLLING_UPDATE_RESET。
+     * Set 刷新模式。取值范围：
+<li>ROLLING_UPDATE_RESET：重装系统进行滚动更新</li>
+<li>ROLLING_UPDATE_REPLACE：新建实例替换进行滚动更新，该模式暂不支持回滚接口</li>
+     * @param RefreshMode 刷新模式。取值范围：
+<li>ROLLING_UPDATE_RESET：重装系统进行滚动更新</li>
+<li>ROLLING_UPDATE_REPLACE：新建实例替换进行滚动更新，该模式暂不支持回滚接口</li>
      */
     public void setRefreshMode(String RefreshMode) {
         this.RefreshMode = RefreshMode;

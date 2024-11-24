@@ -33,9 +33,12 @@ public class CreateBatchInitOrganizationUrlRequest extends AbstractModel {
 
     /**
     * 初始化操作类型
-<ul><li>CREATE_SEAL : 创建印章</li>
+<ul>
+<li>CREATE_SEAL : 创建印章</li>
 <li>AUTH_JOIN_ORGANIZATION_GROUP : 加入集团企业</li>
-<li>OPEN_AUTO_SIGN :开通企业自动签署</li></ul>
+<li>OPEN_AUTO_SIGN :开通企业自动签署</li>
+<li>PARTNER_AUTO_SIGN_AUTH :合作方企业授权自动签</li>
+</ul>
     */
     @SerializedName("OperateTypes")
     @Expose
@@ -54,6 +57,17 @@ public class CreateBatchInitOrganizationUrlRequest extends AbstractModel {
     @SerializedName("Agent")
     @Expose
     private Agent Agent;
+
+    /**
+    * 被授权的合作方企业在电子签的企业电子签账号，当操作类型包含 PARTNER_AUTO_SIGN_AUTH （合作方企业授权自动签）时必传。
+
+企业电子签账号可在[电子签的网页端](https://qian.tencent.com/console/company-settings/company-center) ，于企业设置-企业信息菜单栏下复制获取。
+
+![企业电子签账号](https://qcloudimg.tencent-cloud.cn/raw/4e6b30ee92f00671f7f1c5bd127c27db.png)
+    */
+    @SerializedName("AuthorizedOrganizationId")
+    @Expose
+    private String AuthorizedOrganizationId;
 
     /**
      * Get 执行本接口操作的员工信息。
@@ -77,13 +91,19 @@ public class CreateBatchInitOrganizationUrlRequest extends AbstractModel {
 
     /**
      * Get 初始化操作类型
-<ul><li>CREATE_SEAL : 创建印章</li>
+<ul>
+<li>CREATE_SEAL : 创建印章</li>
 <li>AUTH_JOIN_ORGANIZATION_GROUP : 加入集团企业</li>
-<li>OPEN_AUTO_SIGN :开通企业自动签署</li></ul> 
+<li>OPEN_AUTO_SIGN :开通企业自动签署</li>
+<li>PARTNER_AUTO_SIGN_AUTH :合作方企业授权自动签</li>
+</ul> 
      * @return OperateTypes 初始化操作类型
-<ul><li>CREATE_SEAL : 创建印章</li>
+<ul>
+<li>CREATE_SEAL : 创建印章</li>
 <li>AUTH_JOIN_ORGANIZATION_GROUP : 加入集团企业</li>
-<li>OPEN_AUTO_SIGN :开通企业自动签署</li></ul>
+<li>OPEN_AUTO_SIGN :开通企业自动签署</li>
+<li>PARTNER_AUTO_SIGN_AUTH :合作方企业授权自动签</li>
+</ul>
      */
     public String [] getOperateTypes() {
         return this.OperateTypes;
@@ -91,13 +111,19 @@ public class CreateBatchInitOrganizationUrlRequest extends AbstractModel {
 
     /**
      * Set 初始化操作类型
-<ul><li>CREATE_SEAL : 创建印章</li>
+<ul>
+<li>CREATE_SEAL : 创建印章</li>
 <li>AUTH_JOIN_ORGANIZATION_GROUP : 加入集团企业</li>
-<li>OPEN_AUTO_SIGN :开通企业自动签署</li></ul>
+<li>OPEN_AUTO_SIGN :开通企业自动签署</li>
+<li>PARTNER_AUTO_SIGN_AUTH :合作方企业授权自动签</li>
+</ul>
      * @param OperateTypes 初始化操作类型
-<ul><li>CREATE_SEAL : 创建印章</li>
+<ul>
+<li>CREATE_SEAL : 创建印章</li>
 <li>AUTH_JOIN_ORGANIZATION_GROUP : 加入集团企业</li>
-<li>OPEN_AUTO_SIGN :开通企业自动签署</li></ul>
+<li>OPEN_AUTO_SIGN :开通企业自动签署</li>
+<li>PARTNER_AUTO_SIGN_AUTH :合作方企业授权自动签</li>
+</ul>
      */
     public void setOperateTypes(String [] OperateTypes) {
         this.OperateTypes = OperateTypes;
@@ -135,6 +161,38 @@ public class CreateBatchInitOrganizationUrlRequest extends AbstractModel {
         this.Agent = Agent;
     }
 
+    /**
+     * Get 被授权的合作方企业在电子签的企业电子签账号，当操作类型包含 PARTNER_AUTO_SIGN_AUTH （合作方企业授权自动签）时必传。
+
+企业电子签账号可在[电子签的网页端](https://qian.tencent.com/console/company-settings/company-center) ，于企业设置-企业信息菜单栏下复制获取。
+
+![企业电子签账号](https://qcloudimg.tencent-cloud.cn/raw/4e6b30ee92f00671f7f1c5bd127c27db.png) 
+     * @return AuthorizedOrganizationId 被授权的合作方企业在电子签的企业电子签账号，当操作类型包含 PARTNER_AUTO_SIGN_AUTH （合作方企业授权自动签）时必传。
+
+企业电子签账号可在[电子签的网页端](https://qian.tencent.com/console/company-settings/company-center) ，于企业设置-企业信息菜单栏下复制获取。
+
+![企业电子签账号](https://qcloudimg.tencent-cloud.cn/raw/4e6b30ee92f00671f7f1c5bd127c27db.png)
+     */
+    public String getAuthorizedOrganizationId() {
+        return this.AuthorizedOrganizationId;
+    }
+
+    /**
+     * Set 被授权的合作方企业在电子签的企业电子签账号，当操作类型包含 PARTNER_AUTO_SIGN_AUTH （合作方企业授权自动签）时必传。
+
+企业电子签账号可在[电子签的网页端](https://qian.tencent.com/console/company-settings/company-center) ，于企业设置-企业信息菜单栏下复制获取。
+
+![企业电子签账号](https://qcloudimg.tencent-cloud.cn/raw/4e6b30ee92f00671f7f1c5bd127c27db.png)
+     * @param AuthorizedOrganizationId 被授权的合作方企业在电子签的企业电子签账号，当操作类型包含 PARTNER_AUTO_SIGN_AUTH （合作方企业授权自动签）时必传。
+
+企业电子签账号可在[电子签的网页端](https://qian.tencent.com/console/company-settings/company-center) ，于企业设置-企业信息菜单栏下复制获取。
+
+![企业电子签账号](https://qcloudimg.tencent-cloud.cn/raw/4e6b30ee92f00671f7f1c5bd127c27db.png)
+     */
+    public void setAuthorizedOrganizationId(String AuthorizedOrganizationId) {
+        this.AuthorizedOrganizationId = AuthorizedOrganizationId;
+    }
+
     public CreateBatchInitOrganizationUrlRequest() {
     }
 
@@ -161,6 +219,9 @@ public class CreateBatchInitOrganizationUrlRequest extends AbstractModel {
         if (source.Agent != null) {
             this.Agent = new Agent(source.Agent);
         }
+        if (source.AuthorizedOrganizationId != null) {
+            this.AuthorizedOrganizationId = new String(source.AuthorizedOrganizationId);
+        }
     }
 
 
@@ -172,6 +233,7 @@ public class CreateBatchInitOrganizationUrlRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "OperateTypes.", this.OperateTypes);
         this.setParamArraySimple(map, prefix + "OrganizationIds.", this.OrganizationIds);
         this.setParamObj(map, prefix + "Agent.", this.Agent);
+        this.setParamSimple(map, prefix + "AuthorizedOrganizationId", this.AuthorizedOrganizationId);
 
     }
 }

@@ -1195,6 +1195,19 @@ public class MpsClient extends AbstractClient{
     }
 
     /**
+     *发起图片处理，功能包括：
+1. 格式转换；
+2. 图像增强；
+     * @param req ProcessImageRequest
+     * @return ProcessImageResponse
+     * @throws TencentCloudSDKException
+     */
+    public ProcessImageResponse ProcessImage(ProcessImageRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ProcessImage", ProcessImageResponse.class);
+    }
+
+    /**
      *对直播流媒体发起处理任务，功能包括：
 
 * 智能内容审核（画面鉴黄、敏感信息检测、声音鉴黄）；

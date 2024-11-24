@@ -314,6 +314,17 @@ public class CdwchClient extends AbstractClient{
     }
 
     /**
+     *open-api接口提供弹性伸缩云原生集群能力
+     * @param req ScaleCNOutUpInstanceRequest
+     * @return ScaleCNOutUpInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ScaleCNOutUpInstanceResponse ScaleCNOutUpInstance(ScaleCNOutUpInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ScaleCNOutUpInstance", ScaleCNOutUpInstanceResponse.class);
+    }
+
+    /**
      *调整clickhouse节点数量
      * @param req ScaleOutInstanceRequest
      * @return ScaleOutInstanceResponse

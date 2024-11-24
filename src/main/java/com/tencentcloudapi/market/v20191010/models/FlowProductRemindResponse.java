@@ -39,7 +39,6 @@ public class FlowProductRemindResponse extends AbstractModel {
 
     /**
     * 消息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Info")
     @Expose
@@ -85,10 +84,8 @@ public class FlowProductRemindResponse extends AbstractModel {
     }
 
     /**
-     * Get 消息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 消息 
      * @return Info 消息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInfo() {
         return this.Info;
@@ -96,9 +93,7 @@ public class FlowProductRemindResponse extends AbstractModel {
 
     /**
      * Set 消息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Info 消息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInfo(String Info) {
         this.Info = Info;
