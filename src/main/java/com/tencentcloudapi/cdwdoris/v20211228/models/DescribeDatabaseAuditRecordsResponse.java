@@ -38,6 +38,14 @@ public class DescribeDatabaseAuditRecordsResponse extends AbstractModel {
     private DataBaseAuditRecord SlowQueryRecords;
 
     /**
+    * 记录列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Records")
+    @Expose
+    private DataBaseAuditRecord [] Records;
+
+    /**
     * 错误信息
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -82,6 +90,26 @@ public class DescribeDatabaseAuditRecordsResponse extends AbstractModel {
      */
     public void setSlowQueryRecords(DataBaseAuditRecord SlowQueryRecords) {
         this.SlowQueryRecords = SlowQueryRecords;
+    }
+
+    /**
+     * Get 记录列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Records 记录列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public DataBaseAuditRecord [] getRecords() {
+        return this.Records;
+    }
+
+    /**
+     * Set 记录列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Records 记录列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRecords(DataBaseAuditRecord [] Records) {
+        this.Records = Records;
     }
 
     /**
@@ -134,6 +162,12 @@ public class DescribeDatabaseAuditRecordsResponse extends AbstractModel {
         if (source.SlowQueryRecords != null) {
             this.SlowQueryRecords = new DataBaseAuditRecord(source.SlowQueryRecords);
         }
+        if (source.Records != null) {
+            this.Records = new DataBaseAuditRecord[source.Records.length];
+            for (int i = 0; i < source.Records.length; i++) {
+                this.Records[i] = new DataBaseAuditRecord(source.Records[i]);
+            }
+        }
         if (source.ErrorMsg != null) {
             this.ErrorMsg = new String(source.ErrorMsg);
         }
@@ -149,6 +183,7 @@ public class DescribeDatabaseAuditRecordsResponse extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamObj(map, prefix + "SlowQueryRecords.", this.SlowQueryRecords);
+        this.setParamArrayObj(map, prefix + "Records.", this.Records);
         this.setParamSimple(map, prefix + "ErrorMsg", this.ErrorMsg);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 

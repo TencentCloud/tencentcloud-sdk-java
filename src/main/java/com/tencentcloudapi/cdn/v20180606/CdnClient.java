@@ -557,8 +557,6 @@ DescribeDiagnoseReport 用于获取指定报告id的内容。
 
 注意：
 + 仅支持 90 天内数据查询，且从2021年09月20日开始有数据
-+ 本接口为beta版，尚未正式全量发布
-
      * @param req DescribeTopDataRequest
      * @return DescribeTopDataResponse
      * @throws TencentCloudSDKException

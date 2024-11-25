@@ -135,6 +135,21 @@ public class RecognizeThaiIDCardOCRResponse extends AbstractModel {
     private Long [] WarnCardInfos;
 
     /**
+    * 字段置信度：
+{
+    "ID": {
+        "Confidence": 0.9999
+    },
+    "ThaiName": {
+        "Confidence": 0.9996
+    }
+}
+    */
+    @SerializedName("AdvancedInfo")
+    @Expose
+    private String AdvancedInfo;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -406,6 +421,54 @@ public class RecognizeThaiIDCardOCRResponse extends AbstractModel {
     }
 
     /**
+     * Get 字段置信度：
+{
+    "ID": {
+        "Confidence": 0.9999
+    },
+    "ThaiName": {
+        "Confidence": 0.9996
+    }
+} 
+     * @return AdvancedInfo 字段置信度：
+{
+    "ID": {
+        "Confidence": 0.9999
+    },
+    "ThaiName": {
+        "Confidence": 0.9996
+    }
+}
+     */
+    public String getAdvancedInfo() {
+        return this.AdvancedInfo;
+    }
+
+    /**
+     * Set 字段置信度：
+{
+    "ID": {
+        "Confidence": 0.9999
+    },
+    "ThaiName": {
+        "Confidence": 0.9996
+    }
+}
+     * @param AdvancedInfo 字段置信度：
+{
+    "ID": {
+        "Confidence": 0.9999
+    },
+    "ThaiName": {
+        "Confidence": 0.9996
+    }
+}
+     */
+    public void setAdvancedInfo(String AdvancedInfo) {
+        this.AdvancedInfo = AdvancedInfo;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -477,6 +540,9 @@ public class RecognizeThaiIDCardOCRResponse extends AbstractModel {
                 this.WarnCardInfos[i] = new Long(source.WarnCardInfos[i]);
             }
         }
+        if (source.AdvancedInfo != null) {
+            this.AdvancedInfo = new String(source.AdvancedInfo);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -502,6 +568,7 @@ public class RecognizeThaiIDCardOCRResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "Address", this.Address);
         this.setParamSimple(map, prefix + "PortraitImage", this.PortraitImage);
         this.setParamArraySimple(map, prefix + "WarnCardInfos.", this.WarnCardInfos);
+        this.setParamSimple(map, prefix + "AdvancedInfo", this.AdvancedInfo);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

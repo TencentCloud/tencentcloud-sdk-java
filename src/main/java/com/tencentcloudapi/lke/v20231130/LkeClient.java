@@ -994,6 +994,17 @@ public class LkeClient extends AbstractClient{
     }
 
     /**
+     *重排序
+     * @param req RunReRankRequest
+     * @return RunReRankResponse
+     * @throws TencentCloudSDKException
+     */
+    public RunReRankResponse RunReRank(RunReRankRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RunReRank", RunReRankResponse.class);
+    }
+
+    /**
      *保存文档
      * @param req SaveDocRequest
      * @return SaveDocResponse

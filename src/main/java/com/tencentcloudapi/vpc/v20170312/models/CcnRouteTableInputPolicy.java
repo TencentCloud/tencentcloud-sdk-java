@@ -46,7 +46,6 @@ public class CcnRouteTableInputPolicy extends AbstractModel {
 
     /**
     * as-path操作
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OperateAsPath")
     @Expose
@@ -54,7 +53,6 @@ public class CcnRouteTableInputPolicy extends AbstractModel {
 
     /**
     * as-path操作模式
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AsPathOperateMode")
     @Expose
@@ -109,10 +107,8 @@ public class CcnRouteTableInputPolicy extends AbstractModel {
     }
 
     /**
-     * Get as-path操作
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get as-path操作 
      * @return OperateAsPath as-path操作
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOperateAsPath() {
         return this.OperateAsPath;
@@ -120,19 +116,15 @@ public class CcnRouteTableInputPolicy extends AbstractModel {
 
     /**
      * Set as-path操作
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OperateAsPath as-path操作
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOperateAsPath(String OperateAsPath) {
         this.OperateAsPath = OperateAsPath;
     }
 
     /**
-     * Get as-path操作模式
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get as-path操作模式 
      * @return AsPathOperateMode as-path操作模式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAsPathOperateMode() {
         return this.AsPathOperateMode;
@@ -140,9 +132,7 @@ public class CcnRouteTableInputPolicy extends AbstractModel {
 
     /**
      * Set as-path操作模式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AsPathOperateMode as-path操作模式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAsPathOperateMode(String AsPathOperateMode) {
         this.AsPathOperateMode = AsPathOperateMode;

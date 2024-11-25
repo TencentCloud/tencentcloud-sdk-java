@@ -31,6 +31,30 @@ public class DescribeBackUpTablesResponse extends AbstractModel {
     private BackupTableContent [] AvailableTables;
 
     /**
+    * msg
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Msg")
+    @Expose
+    private String Msg;
+
+    /**
+    * 未知version
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsUnknownVersion")
+    @Expose
+    private Boolean IsUnknownVersion;
+
+    /**
+    * 错误信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ErrorMsg")
+    @Expose
+    private String ErrorMsg;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -51,6 +75,66 @@ public class DescribeBackUpTablesResponse extends AbstractModel {
      */
     public void setAvailableTables(BackupTableContent [] AvailableTables) {
         this.AvailableTables = AvailableTables;
+    }
+
+    /**
+     * Get msg
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Msg msg
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getMsg() {
+        return this.Msg;
+    }
+
+    /**
+     * Set msg
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Msg msg
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMsg(String Msg) {
+        this.Msg = Msg;
+    }
+
+    /**
+     * Get 未知version
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsUnknownVersion 未知version
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getIsUnknownVersion() {
+        return this.IsUnknownVersion;
+    }
+
+    /**
+     * Set 未知version
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsUnknownVersion 未知version
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsUnknownVersion(Boolean IsUnknownVersion) {
+        this.IsUnknownVersion = IsUnknownVersion;
+    }
+
+    /**
+     * Get 错误信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ErrorMsg 错误信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getErrorMsg() {
+        return this.ErrorMsg;
+    }
+
+    /**
+     * Set 错误信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ErrorMsg 错误信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setErrorMsg(String ErrorMsg) {
+        this.ErrorMsg = ErrorMsg;
     }
 
     /**
@@ -83,6 +167,15 @@ public class DescribeBackUpTablesResponse extends AbstractModel {
                 this.AvailableTables[i] = new BackupTableContent(source.AvailableTables[i]);
             }
         }
+        if (source.Msg != null) {
+            this.Msg = new String(source.Msg);
+        }
+        if (source.IsUnknownVersion != null) {
+            this.IsUnknownVersion = new Boolean(source.IsUnknownVersion);
+        }
+        if (source.ErrorMsg != null) {
+            this.ErrorMsg = new String(source.ErrorMsg);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -94,6 +187,9 @@ public class DescribeBackUpTablesResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "AvailableTables.", this.AvailableTables);
+        this.setParamSimple(map, prefix + "Msg", this.Msg);
+        this.setParamSimple(map, prefix + "IsUnknownVersion", this.IsUnknownVersion);
+        this.setParamSimple(map, prefix + "ErrorMsg", this.ErrorMsg);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -264,6 +264,14 @@ pause
     private Float MaxCpu;
 
     /**
+    * Db类型:<li>NORMAL</li><li>SERVERLESS</li>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DbMode")
+    @Expose
+    private String DbMode;
+
+    /**
      * Get 用户Uin 
      * @return Uin 用户Uin
      */
@@ -815,6 +823,26 @@ pause
         this.MaxCpu = MaxCpu;
     }
 
+    /**
+     * Get Db类型:<li>NORMAL</li><li>SERVERLESS</li>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DbMode Db类型:<li>NORMAL</li><li>SERVERLESS</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDbMode() {
+        return this.DbMode;
+    }
+
+    /**
+     * Set Db类型:<li>NORMAL</li><li>SERVERLESS</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DbMode Db类型:<li>NORMAL</li><li>SERVERLESS</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDbMode(String DbMode) {
+        this.DbMode = DbMode;
+    }
+
     public CynosdbInstanceDetail() {
     }
 
@@ -925,6 +953,9 @@ pause
         if (source.MaxCpu != null) {
             this.MaxCpu = new Float(source.MaxCpu);
         }
+        if (source.DbMode != null) {
+            this.DbMode = new String(source.DbMode);
+        }
     }
 
 
@@ -966,6 +997,7 @@ pause
         this.setParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
         this.setParamSimple(map, prefix + "MinCpu", this.MinCpu);
         this.setParamSimple(map, prefix + "MaxCpu", this.MaxCpu);
+        this.setParamSimple(map, prefix + "DbMode", this.DbMode);
 
     }
 }

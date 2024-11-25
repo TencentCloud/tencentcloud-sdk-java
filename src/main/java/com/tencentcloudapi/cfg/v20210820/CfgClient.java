@@ -50,6 +50,17 @@ public class CfgClient extends AbstractClient{
     }
 
     /**
+     *以多个动作创建演练
+     * @param req CreateTaskFromMultiActionRequest
+     * @return CreateTaskFromMultiActionResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateTaskFromMultiActionResponse CreateTaskFromMultiAction(CreateTaskFromMultiActionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateTaskFromMultiAction", CreateTaskFromMultiActionResponse.class);
+    }
+
+    /**
      *从经验库创建演练
      * @param req CreateTaskFromTemplateRequest
      * @return CreateTaskFromTemplateResponse

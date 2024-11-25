@@ -139,7 +139,7 @@ public class DescribeTemplatesRequest extends AbstractModel {
 
 设置为true之后， 返回参数PdfUrl，为模板PDF文件链接，有效期5分钟, 可以用于将PDF文件下载到本地
 
-注: `此功能为白名单功能，使用前请联系对接的客户经理沟通。`
+注: `此功能需要开通功能白名单【第三方应用集成企业获取模版PDF下载链接】，使用前请联系对接的客户经理沟通。`
     */
     @SerializedName("WithPdfUrl")
     @Expose
@@ -472,7 +472,7 @@ public class DescribeTemplatesRequest extends AbstractModel {
 
 设置为true之后， 返回参数PdfUrl，为模板PDF文件链接，有效期5分钟, 可以用于将PDF文件下载到本地
 
-注: `此功能为白名单功能，使用前请联系对接的客户经理沟通。` 
+注: `此功能需要开通功能白名单【第三方应用集成企业获取模版PDF下载链接】，使用前请联系对接的客户经理沟通。` 
      * @return WithPdfUrl 是否获取模板的PDF文件链接。
 
 <ul><li>**false**：不获取（默认）</li>
@@ -480,7 +480,7 @@ public class DescribeTemplatesRequest extends AbstractModel {
 
 设置为true之后， 返回参数PdfUrl，为模板PDF文件链接，有效期5分钟, 可以用于将PDF文件下载到本地
 
-注: `此功能为白名单功能，使用前请联系对接的客户经理沟通。`
+注: `此功能需要开通功能白名单【第三方应用集成企业获取模版PDF下载链接】，使用前请联系对接的客户经理沟通。`
      */
     public Boolean getWithPdfUrl() {
         return this.WithPdfUrl;
@@ -494,7 +494,7 @@ public class DescribeTemplatesRequest extends AbstractModel {
 
 设置为true之后， 返回参数PdfUrl，为模板PDF文件链接，有效期5分钟, 可以用于将PDF文件下载到本地
 
-注: `此功能为白名单功能，使用前请联系对接的客户经理沟通。`
+注: `此功能需要开通功能白名单【第三方应用集成企业获取模版PDF下载链接】，使用前请联系对接的客户经理沟通。`
      * @param WithPdfUrl 是否获取模板的PDF文件链接。
 
 <ul><li>**false**：不获取（默认）</li>
@@ -502,7 +502,7 @@ public class DescribeTemplatesRequest extends AbstractModel {
 
 设置为true之后， 返回参数PdfUrl，为模板PDF文件链接，有效期5分钟, 可以用于将PDF文件下载到本地
 
-注: `此功能为白名单功能，使用前请联系对接的客户经理沟通。`
+注: `此功能需要开通功能白名单【第三方应用集成企业获取模版PDF下载链接】，使用前请联系对接的客户经理沟通。`
      */
     public void setWithPdfUrl(Boolean WithPdfUrl) {
         this.WithPdfUrl = WithPdfUrl;
