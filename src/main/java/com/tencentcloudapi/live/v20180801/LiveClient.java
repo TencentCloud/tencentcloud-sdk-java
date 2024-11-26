@@ -39,6 +39,39 @@ public class LiveClient extends AbstractClient{
     }
 
     /**
+     *该接口用来向导播台中添加一个输入源，该输入源可以是拉流地址、或是一个文件链接
+     * @param req AddCasterInputInfoRequest
+     * @return AddCasterInputInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddCasterInputInfoResponse AddCasterInputInfo(AddCasterInputInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AddCasterInputInfo", AddCasterInputInfoResponse.class);
+    }
+
+    /**
+     *该接口用来增加导播台的布局参数。
+     * @param req AddCasterLayoutInfoRequest
+     * @return AddCasterLayoutInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddCasterLayoutInfoResponse AddCasterLayoutInfo(AddCasterLayoutInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AddCasterLayoutInfo", AddCasterLayoutInfoResponse.class);
+    }
+
+    /**
+     *该接口用来新增导播台推流信息。导播台主监启动后，将会将主监画面推向该接口设置的地址。
+     * @param req AddCasterOutputInfoRequest
+     * @return AddCasterOutputInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddCasterOutputInfoResponse AddCasterOutputInfo(AddCasterOutputInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AddCasterOutputInfo", AddCasterOutputInfoResponse.class);
+    }
+
+    /**
      *针对大型活动直播，通过对直播流设置延时来控制现场与观众播放画面的时间间隔，避免突发状况造成影响。
 
 注意：如果在推流前设置延播，需要提前5分钟设置，目前该接口只支持流粒度。
@@ -115,6 +148,17 @@ public class LiveClient extends AbstractClient{
     public CreateCasterResponse CreateCaster(CreateCasterRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateCaster", CreateCasterResponse.class);
+    }
+
+    /**
+     *该接口用来生成导播台推流地址
+     * @param req CreateCasterInputPushUrlRequest
+     * @return CreateCasterInputPushUrlResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCasterInputPushUrlResponse CreateCasterInputPushUrl(CreateCasterInputPushUrlRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateCasterInputPushUrl", CreateCasterInputPushUrlResponse.class);
     }
 
     /**
@@ -402,6 +446,40 @@ public class LiveClient extends AbstractClient{
     public DeleteCasterResponse DeleteCaster(DeleteCasterRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteCaster", DeleteCasterResponse.class);
+    }
+
+    /**
+     *该接口用来删除导播台中的输入源信息。
+     * @param req DeleteCasterInputInfoRequest
+     * @return DeleteCasterInputInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCasterInputInfoResponse DeleteCasterInputInfo(DeleteCasterInputInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteCasterInputInfo", DeleteCasterInputInfoResponse.class);
+    }
+
+    /**
+     *该接口用来将布局信息从导播台中删除
+     * @param req DeleteCasterLayoutInfoRequest
+     * @return DeleteCasterLayoutInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCasterLayoutInfoResponse DeleteCasterLayoutInfo(DeleteCasterLayoutInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteCasterLayoutInfo", DeleteCasterLayoutInfoResponse.class);
+    }
+
+    /**
+     *该接口用来删除导播台的推流信息。
+注：若删除推流到腾讯云直播源站配置，即OutputIndex为0，OutputType为1的推流配置，在重新启动主监后，系统会自动重新生成一个推流到腾讯云直播源站配置。
+     * @param req DeleteCasterOutputInfoRequest
+     * @return DeleteCasterOutputInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCasterOutputInfoResponse DeleteCasterOutputInfo(DeleteCasterOutputInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteCasterOutputInfo", DeleteCasterOutputInfoResponse.class);
     }
 
     /**
@@ -723,6 +801,28 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     }
 
     /**
+     *该接口用来查询导播台的输入源信息列表。
+     * @param req DescribeCasterInputInfosRequest
+     * @return DescribeCasterInputInfosResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCasterInputInfosResponse DescribeCasterInputInfos(DescribeCasterInputInfosRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCasterInputInfos", DescribeCasterInputInfosResponse.class);
+    }
+
+    /**
+     *该接口用来查询某个导播台的布局列表
+     * @param req DescribeCasterLayoutInfosRequest
+     * @return DescribeCasterLayoutInfosResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCasterLayoutInfosResponse DescribeCasterLayoutInfos(DescribeCasterLayoutInfosRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCasterLayoutInfos", DescribeCasterLayoutInfosResponse.class);
+    }
+
+    /**
      *该接口用来查询账号下所有的导播台列表
      * @param req DescribeCasterListRequest
      * @return DescribeCasterListResponse
@@ -731,6 +831,17 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public DescribeCasterListResponse DescribeCasterList(DescribeCasterListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeCasterList", DescribeCasterListResponse.class);
+    }
+
+    /**
+     *该接口用来查询某个导播台的推流信息列表。
+     * @param req DescribeCasterOutputInfosRequest
+     * @return DescribeCasterOutputInfosResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCasterOutputInfosResponse DescribeCasterOutputInfos(DescribeCasterOutputInfosRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCasterOutputInfos", DescribeCasterOutputInfosResponse.class);
     }
 
     /**
@@ -1698,6 +1809,41 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public ModifyCasterResponse ModifyCaster(ModifyCasterRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyCaster", ModifyCasterResponse.class);
+    }
+
+    /**
+     *该接口用来修改已经设置过的输入源信息，如源地址，源类型等。
+设置前，需保证待修改的输入源已经存在。若不存在，需使用AddCasterInputInfo接口。
+     * @param req ModifyCasterInputInfoRequest
+     * @return ModifyCasterInputInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCasterInputInfoResponse ModifyCasterInputInfo(ModifyCasterInputInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyCasterInputInfo", ModifyCasterInputInfoResponse.class);
+    }
+
+    /**
+     *该接口用来修改布局参数
+     * @param req ModifyCasterLayoutInfoRequest
+     * @return ModifyCasterLayoutInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCasterLayoutInfoResponse ModifyCasterLayoutInfo(ModifyCasterLayoutInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyCasterLayoutInfo", ModifyCasterLayoutInfoResponse.class);
+    }
+
+    /**
+     *该接口用来修改导播台的推流信息。
+注：只有在主监启动前设置才生效，主监启动后设置，下次推流生效。
+     * @param req ModifyCasterOutputInfoRequest
+     * @return ModifyCasterOutputInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCasterOutputInfoResponse ModifyCasterOutputInfo(ModifyCasterOutputInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyCasterOutputInfo", ModifyCasterOutputInfoResponse.class);
     }
 
     /**

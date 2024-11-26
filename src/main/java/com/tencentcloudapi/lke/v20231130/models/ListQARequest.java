@@ -94,6 +94,13 @@ public class ListQARequest extends AbstractModel {
     private String [] QaBizIds;
 
     /**
+    * 查询类型 filename 名称、 attribute 标签
+    */
+    @SerializedName("QueryType")
+    @Expose
+    private String QueryType;
+
+    /**
      * Get 应用ID 
      * @return BotBizId 应用ID
      */
@@ -253,6 +260,22 @@ public class ListQARequest extends AbstractModel {
         this.QaBizIds = QaBizIds;
     }
 
+    /**
+     * Get 查询类型 filename 名称、 attribute 标签 
+     * @return QueryType 查询类型 filename 名称、 attribute 标签
+     */
+    public String getQueryType() {
+        return this.QueryType;
+    }
+
+    /**
+     * Set 查询类型 filename 名称、 attribute 标签
+     * @param QueryType 查询类型 filename 名称、 attribute 标签
+     */
+    public void setQueryType(String QueryType) {
+        this.QueryType = QueryType;
+    }
+
     public ListQARequest() {
     }
 
@@ -300,6 +323,9 @@ public class ListQARequest extends AbstractModel {
                 this.QaBizIds[i] = new String(source.QaBizIds[i]);
             }
         }
+        if (source.QueryType != null) {
+            this.QueryType = new String(source.QueryType);
+        }
     }
 
 
@@ -317,6 +343,7 @@ public class ListQARequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Source", this.Source);
         this.setParamSimple(map, prefix + "QueryAnswer", this.QueryAnswer);
         this.setParamArraySimple(map, prefix + "QaBizIds.", this.QaBizIds);
+        this.setParamSimple(map, prefix + "QueryType", this.QueryType);
 
     }
 }

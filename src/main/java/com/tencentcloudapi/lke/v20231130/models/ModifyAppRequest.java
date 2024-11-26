@@ -45,18 +45,18 @@ public class ModifyAppRequest extends AbstractModel {
     private BaseConfig BaseConfig;
 
     /**
-    * 登录用户子账号(集成商模式必填)	
-    */
-    @SerializedName("LoginSubAccountUin")
-    @Expose
-    private String LoginSubAccountUin;
-
-    /**
     * 应用配置
     */
     @SerializedName("AppConfig")
     @Expose
     private AppConfig AppConfig;
+
+    /**
+    * 登录用户子账号(集成商模式必填)	
+    */
+    @SerializedName("LoginSubAccountUin")
+    @Expose
+    private String LoginSubAccountUin;
 
     /**
      * Get 应用 ID 
@@ -107,22 +107,6 @@ public class ModifyAppRequest extends AbstractModel {
     }
 
     /**
-     * Get 登录用户子账号(集成商模式必填)	 
-     * @return LoginSubAccountUin 登录用户子账号(集成商模式必填)	
-     */
-    public String getLoginSubAccountUin() {
-        return this.LoginSubAccountUin;
-    }
-
-    /**
-     * Set 登录用户子账号(集成商模式必填)	
-     * @param LoginSubAccountUin 登录用户子账号(集成商模式必填)	
-     */
-    public void setLoginSubAccountUin(String LoginSubAccountUin) {
-        this.LoginSubAccountUin = LoginSubAccountUin;
-    }
-
-    /**
      * Get 应用配置 
      * @return AppConfig 应用配置
      */
@@ -136,6 +120,22 @@ public class ModifyAppRequest extends AbstractModel {
      */
     public void setAppConfig(AppConfig AppConfig) {
         this.AppConfig = AppConfig;
+    }
+
+    /**
+     * Get 登录用户子账号(集成商模式必填)	 
+     * @return LoginSubAccountUin 登录用户子账号(集成商模式必填)	
+     */
+    public String getLoginSubAccountUin() {
+        return this.LoginSubAccountUin;
+    }
+
+    /**
+     * Set 登录用户子账号(集成商模式必填)	
+     * @param LoginSubAccountUin 登录用户子账号(集成商模式必填)	
+     */
+    public void setLoginSubAccountUin(String LoginSubAccountUin) {
+        this.LoginSubAccountUin = LoginSubAccountUin;
     }
 
     public ModifyAppRequest() {
@@ -155,11 +155,11 @@ public class ModifyAppRequest extends AbstractModel {
         if (source.BaseConfig != null) {
             this.BaseConfig = new BaseConfig(source.BaseConfig);
         }
-        if (source.LoginSubAccountUin != null) {
-            this.LoginSubAccountUin = new String(source.LoginSubAccountUin);
-        }
         if (source.AppConfig != null) {
             this.AppConfig = new AppConfig(source.AppConfig);
+        }
+        if (source.LoginSubAccountUin != null) {
+            this.LoginSubAccountUin = new String(source.LoginSubAccountUin);
         }
     }
 
@@ -171,8 +171,8 @@ public class ModifyAppRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "AppBizId", this.AppBizId);
         this.setParamSimple(map, prefix + "AppType", this.AppType);
         this.setParamObj(map, prefix + "BaseConfig.", this.BaseConfig);
-        this.setParamSimple(map, prefix + "LoginSubAccountUin", this.LoginSubAccountUin);
         this.setParamObj(map, prefix + "AppConfig.", this.AppConfig);
+        this.setParamSimple(map, prefix + "LoginSubAccountUin", this.LoginSubAccountUin);
 
     }
 }

@@ -64,6 +64,30 @@ public class ModelInfo extends AbstractModel {
     private String PromptWordsLimit;
 
     /**
+    * 通过核心采样控制内容生成的多样性，较高的Top P值会导致生成更多样的内容
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TopP")
+    @Expose
+    private ModelParameter TopP;
+
+    /**
+    * 温度控制随机性
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Temperature")
+    @Expose
+    private ModelParameter Temperature;
+
+    /**
+    * 最多能生成的token数量
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MaxTokens")
+    @Expose
+    private ModelParameter MaxTokens;
+
+    /**
      * Get 模型名称
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ModelName 模型名称
@@ -163,6 +187,66 @@ public class ModelInfo extends AbstractModel {
         this.PromptWordsLimit = PromptWordsLimit;
     }
 
+    /**
+     * Get 通过核心采样控制内容生成的多样性，较高的Top P值会导致生成更多样的内容
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TopP 通过核心采样控制内容生成的多样性，较高的Top P值会导致生成更多样的内容
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ModelParameter getTopP() {
+        return this.TopP;
+    }
+
+    /**
+     * Set 通过核心采样控制内容生成的多样性，较高的Top P值会导致生成更多样的内容
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TopP 通过核心采样控制内容生成的多样性，较高的Top P值会导致生成更多样的内容
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTopP(ModelParameter TopP) {
+        this.TopP = TopP;
+    }
+
+    /**
+     * Get 温度控制随机性
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Temperature 温度控制随机性
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ModelParameter getTemperature() {
+        return this.Temperature;
+    }
+
+    /**
+     * Set 温度控制随机性
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Temperature 温度控制随机性
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTemperature(ModelParameter Temperature) {
+        this.Temperature = Temperature;
+    }
+
+    /**
+     * Get 最多能生成的token数量
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MaxTokens 最多能生成的token数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ModelParameter getMaxTokens() {
+        return this.MaxTokens;
+    }
+
+    /**
+     * Set 最多能生成的token数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MaxTokens 最多能生成的token数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMaxTokens(ModelParameter MaxTokens) {
+        this.MaxTokens = MaxTokens;
+    }
+
     public ModelInfo() {
     }
 
@@ -186,6 +270,15 @@ public class ModelInfo extends AbstractModel {
         if (source.PromptWordsLimit != null) {
             this.PromptWordsLimit = new String(source.PromptWordsLimit);
         }
+        if (source.TopP != null) {
+            this.TopP = new ModelParameter(source.TopP);
+        }
+        if (source.Temperature != null) {
+            this.Temperature = new ModelParameter(source.Temperature);
+        }
+        if (source.MaxTokens != null) {
+            this.MaxTokens = new ModelParameter(source.MaxTokens);
+        }
     }
 
 
@@ -198,6 +291,9 @@ public class ModelInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "AliasName", this.AliasName);
         this.setParamSimple(map, prefix + "ResourceStatus", this.ResourceStatus);
         this.setParamSimple(map, prefix + "PromptWordsLimit", this.PromptWordsLimit);
+        this.setParamObj(map, prefix + "TopP.", this.TopP);
+        this.setParamObj(map, prefix + "Temperature.", this.Temperature);
+        this.setParamObj(map, prefix + "MaxTokens.", this.MaxTokens);
 
     }
 }

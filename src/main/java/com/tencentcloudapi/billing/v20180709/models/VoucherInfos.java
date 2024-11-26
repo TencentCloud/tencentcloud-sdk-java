@@ -88,7 +88,6 @@ public class VoucherInfos extends AbstractModel {
 
     /**
     * 适用商品信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ApplicableProducts")
     @Expose
@@ -96,7 +95,6 @@ public class VoucherInfos extends AbstractModel {
 
     /**
     * 不适用商品信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExcludedProducts")
     @Expose
@@ -247,10 +245,8 @@ public class VoucherInfos extends AbstractModel {
     }
 
     /**
-     * Get 适用商品信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 适用商品信息 
      * @return ApplicableProducts 适用商品信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ApplicableProducts getApplicableProducts() {
         return this.ApplicableProducts;
@@ -258,19 +254,15 @@ public class VoucherInfos extends AbstractModel {
 
     /**
      * Set 适用商品信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApplicableProducts 适用商品信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApplicableProducts(ApplicableProducts ApplicableProducts) {
         this.ApplicableProducts = ApplicableProducts;
     }
 
     /**
-     * Get 不适用商品信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 不适用商品信息 
      * @return ExcludedProducts 不适用商品信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ExcludedProducts [] getExcludedProducts() {
         return this.ExcludedProducts;
@@ -278,9 +270,7 @@ public class VoucherInfos extends AbstractModel {
 
     /**
      * Set 不适用商品信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExcludedProducts 不适用商品信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExcludedProducts(ExcludedProducts [] ExcludedProducts) {
         this.ExcludedProducts = ExcludedProducts;

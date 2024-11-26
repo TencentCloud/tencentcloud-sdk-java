@@ -45,7 +45,7 @@ public class CreateQARequest extends AbstractModel {
     private String Answer;
 
     /**
-    * 属性标签适用范围 1：全部，2：按条件
+    * 标签适用范围 1：全部，2：按条件
     */
     @SerializedName("AttrRange")
     @Expose
@@ -59,7 +59,7 @@ public class CreateQARequest extends AbstractModel {
     private String CustomParam;
 
     /**
-    * 属性标签引用
+    * 标签引用
     */
     @SerializedName("AttrLabels")
     @Expose
@@ -99,6 +99,13 @@ public class CreateQARequest extends AbstractModel {
     @SerializedName("SimilarQuestions")
     @Expose
     private String [] SimilarQuestions;
+
+    /**
+    * 问题描述
+    */
+    @SerializedName("QuestionDesc")
+    @Expose
+    private String QuestionDesc;
 
     /**
      * Get 应用ID 
@@ -149,16 +156,16 @@ public class CreateQARequest extends AbstractModel {
     }
 
     /**
-     * Get 属性标签适用范围 1：全部，2：按条件 
-     * @return AttrRange 属性标签适用范围 1：全部，2：按条件
+     * Get 标签适用范围 1：全部，2：按条件 
+     * @return AttrRange 标签适用范围 1：全部，2：按条件
      */
     public Long getAttrRange() {
         return this.AttrRange;
     }
 
     /**
-     * Set 属性标签适用范围 1：全部，2：按条件
-     * @param AttrRange 属性标签适用范围 1：全部，2：按条件
+     * Set 标签适用范围 1：全部，2：按条件
+     * @param AttrRange 标签适用范围 1：全部，2：按条件
      */
     public void setAttrRange(Long AttrRange) {
         this.AttrRange = AttrRange;
@@ -181,16 +188,16 @@ public class CreateQARequest extends AbstractModel {
     }
 
     /**
-     * Get 属性标签引用 
-     * @return AttrLabels 属性标签引用
+     * Get 标签引用 
+     * @return AttrLabels 标签引用
      */
     public AttrLabelRefer [] getAttrLabels() {
         return this.AttrLabels;
     }
 
     /**
-     * Set 属性标签引用
-     * @param AttrLabels 属性标签引用
+     * Set 标签引用
+     * @param AttrLabels 标签引用
      */
     public void setAttrLabels(AttrLabelRefer [] AttrLabels) {
         this.AttrLabels = AttrLabels;
@@ -276,6 +283,22 @@ public class CreateQARequest extends AbstractModel {
         this.SimilarQuestions = SimilarQuestions;
     }
 
+    /**
+     * Get 问题描述 
+     * @return QuestionDesc 问题描述
+     */
+    public String getQuestionDesc() {
+        return this.QuestionDesc;
+    }
+
+    /**
+     * Set 问题描述
+     * @param QuestionDesc 问题描述
+     */
+    public void setQuestionDesc(String QuestionDesc) {
+        this.QuestionDesc = QuestionDesc;
+    }
+
     public CreateQARequest() {
     }
 
@@ -323,6 +346,9 @@ public class CreateQARequest extends AbstractModel {
                 this.SimilarQuestions[i] = new String(source.SimilarQuestions[i]);
             }
         }
+        if (source.QuestionDesc != null) {
+            this.QuestionDesc = new String(source.QuestionDesc);
+        }
     }
 
 
@@ -341,6 +367,7 @@ public class CreateQARequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ExpireStart", this.ExpireStart);
         this.setParamSimple(map, prefix + "ExpireEnd", this.ExpireEnd);
         this.setParamArraySimple(map, prefix + "SimilarQuestions.", this.SimilarQuestions);
+        this.setParamSimple(map, prefix + "QuestionDesc", this.QuestionDesc);
 
     }
 }

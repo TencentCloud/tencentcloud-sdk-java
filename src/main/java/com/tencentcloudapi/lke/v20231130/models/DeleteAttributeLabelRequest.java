@@ -31,7 +31,7 @@ public class DeleteAttributeLabelRequest extends AbstractModel {
     private String BotBizId;
 
     /**
-    * 属性ID
+    * 标签ID
     */
     @SerializedName("AttributeBizIds")
     @Expose
@@ -68,16 +68,16 @@ public class DeleteAttributeLabelRequest extends AbstractModel {
     }
 
     /**
-     * Get 属性ID 
-     * @return AttributeBizIds 属性ID
+     * Get 标签ID 
+     * @return AttributeBizIds 标签ID
      */
     public String [] getAttributeBizIds() {
         return this.AttributeBizIds;
     }
 
     /**
-     * Set 属性ID
-     * @param AttributeBizIds 属性ID
+     * Set 标签ID
+     * @param AttributeBizIds 标签ID
      */
     public void setAttributeBizIds(String [] AttributeBizIds) {
         this.AttributeBizIds = AttributeBizIds;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeCallStatsGraphResponse extends AbstractModel {
 
     /**
-    * 统计信息
+    * 接口调用次数统计信息
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("List")
@@ -39,9 +39,9 @@ public class DescribeCallStatsGraphResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 统计信息
+     * Get 接口调用次数统计信息
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return List 统计信息
+     * @return List 接口调用次数统计信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Stat [] getList() {
@@ -49,9 +49,9 @@ public class DescribeCallStatsGraphResponse extends AbstractModel {
     }
 
     /**
-     * Set 统计信息
+     * Set 接口调用次数统计信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param List 统计信息
+     * @param List 接口调用次数统计信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setList(Stat [] List) {

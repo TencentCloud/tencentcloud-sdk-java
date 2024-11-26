@@ -32,6 +32,14 @@ public class CreateAppResponse extends AbstractModel {
     private String AppBizId;
 
     /**
+    * 判断账户应用列表权限是否是自定义的，用户交互提示
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsCustomList")
+    @Expose
+    private Boolean IsCustomList;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -56,6 +64,26 @@ public class CreateAppResponse extends AbstractModel {
      */
     public void setAppBizId(String AppBizId) {
         this.AppBizId = AppBizId;
+    }
+
+    /**
+     * Get 判断账户应用列表权限是否是自定义的，用户交互提示
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsCustomList 判断账户应用列表权限是否是自定义的，用户交互提示
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getIsCustomList() {
+        return this.IsCustomList;
+    }
+
+    /**
+     * Set 判断账户应用列表权限是否是自定义的，用户交互提示
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsCustomList 判断账户应用列表权限是否是自定义的，用户交互提示
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsCustomList(Boolean IsCustomList) {
+        this.IsCustomList = IsCustomList;
     }
 
     /**
@@ -85,6 +113,9 @@ public class CreateAppResponse extends AbstractModel {
         if (source.AppBizId != null) {
             this.AppBizId = new String(source.AppBizId);
         }
+        if (source.IsCustomList != null) {
+            this.IsCustomList = new Boolean(source.IsCustomList);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -96,6 +127,7 @@ public class CreateAppResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AppBizId", this.AppBizId);
+        this.setParamSimple(map, prefix + "IsCustomList", this.IsCustomList);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

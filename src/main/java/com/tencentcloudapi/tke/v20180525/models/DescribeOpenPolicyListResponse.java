@@ -32,6 +32,13 @@ public class DescribeOpenPolicyListResponse extends AbstractModel {
     private OpenPolicyInfo [] OpenPolicyInfoList;
 
     /**
+    * 集群内是否安装了gatekeeper addon
+    */
+    @SerializedName("GatekeeperStatus")
+    @Expose
+    private Long GatekeeperStatus;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -56,6 +63,22 @@ public class DescribeOpenPolicyListResponse extends AbstractModel {
      */
     public void setOpenPolicyInfoList(OpenPolicyInfo [] OpenPolicyInfoList) {
         this.OpenPolicyInfoList = OpenPolicyInfoList;
+    }
+
+    /**
+     * Get 集群内是否安装了gatekeeper addon 
+     * @return GatekeeperStatus 集群内是否安装了gatekeeper addon
+     */
+    public Long getGatekeeperStatus() {
+        return this.GatekeeperStatus;
+    }
+
+    /**
+     * Set 集群内是否安装了gatekeeper addon
+     * @param GatekeeperStatus 集群内是否安装了gatekeeper addon
+     */
+    public void setGatekeeperStatus(Long GatekeeperStatus) {
+        this.GatekeeperStatus = GatekeeperStatus;
     }
 
     /**
@@ -88,6 +111,9 @@ public class DescribeOpenPolicyListResponse extends AbstractModel {
                 this.OpenPolicyInfoList[i] = new OpenPolicyInfo(source.OpenPolicyInfoList[i]);
             }
         }
+        if (source.GatekeeperStatus != null) {
+            this.GatekeeperStatus = new Long(source.GatekeeperStatus);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -99,6 +125,7 @@ public class DescribeOpenPolicyListResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "OpenPolicyInfoList.", this.OpenPolicyInfoList);
+        this.setParamSimple(map, prefix + "GatekeeperStatus", this.GatekeeperStatus);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

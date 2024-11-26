@@ -59,21 +59,21 @@ public class DescribeInstanceLogDetailRequest extends AbstractModel {
     private String ExecutionFileType;
 
     /**
-    * 统一执行平台执行id
+    * 统一执行平台执行id, 注意: ExecutionJobId 跟 "BrokerIp+OriginFileName" 必须有一个不为空
     */
     @SerializedName("ExecutionJobId")
     @Expose
     private String ExecutionJobId;
 
     /**
-    * 服务器Ip
+    * 服务器Ip, 注意: "BrokerIp+OriginFileName"跟ExecutionJobId必须有一个不为空
     */
     @SerializedName("BrokerIp")
     @Expose
     private String BrokerIp;
 
     /**
-    * 文件Name
+    * 文件Name, 注意: "BrokerIp+OriginFileName"跟ExecutionJobId必须有一个不为空
     */
     @SerializedName("OriginFileName")
     @Expose
@@ -188,48 +188,48 @@ public class DescribeInstanceLogDetailRequest extends AbstractModel {
     }
 
     /**
-     * Get 统一执行平台执行id 
-     * @return ExecutionJobId 统一执行平台执行id
+     * Get 统一执行平台执行id, 注意: ExecutionJobId 跟 "BrokerIp+OriginFileName" 必须有一个不为空 
+     * @return ExecutionJobId 统一执行平台执行id, 注意: ExecutionJobId 跟 "BrokerIp+OriginFileName" 必须有一个不为空
      */
     public String getExecutionJobId() {
         return this.ExecutionJobId;
     }
 
     /**
-     * Set 统一执行平台执行id
-     * @param ExecutionJobId 统一执行平台执行id
+     * Set 统一执行平台执行id, 注意: ExecutionJobId 跟 "BrokerIp+OriginFileName" 必须有一个不为空
+     * @param ExecutionJobId 统一执行平台执行id, 注意: ExecutionJobId 跟 "BrokerIp+OriginFileName" 必须有一个不为空
      */
     public void setExecutionJobId(String ExecutionJobId) {
         this.ExecutionJobId = ExecutionJobId;
     }
 
     /**
-     * Get 服务器Ip 
-     * @return BrokerIp 服务器Ip
+     * Get 服务器Ip, 注意: "BrokerIp+OriginFileName"跟ExecutionJobId必须有一个不为空 
+     * @return BrokerIp 服务器Ip, 注意: "BrokerIp+OriginFileName"跟ExecutionJobId必须有一个不为空
      */
     public String getBrokerIp() {
         return this.BrokerIp;
     }
 
     /**
-     * Set 服务器Ip
-     * @param BrokerIp 服务器Ip
+     * Set 服务器Ip, 注意: "BrokerIp+OriginFileName"跟ExecutionJobId必须有一个不为空
+     * @param BrokerIp 服务器Ip, 注意: "BrokerIp+OriginFileName"跟ExecutionJobId必须有一个不为空
      */
     public void setBrokerIp(String BrokerIp) {
         this.BrokerIp = BrokerIp;
     }
 
     /**
-     * Get 文件Name 
-     * @return OriginFileName 文件Name
+     * Get 文件Name, 注意: "BrokerIp+OriginFileName"跟ExecutionJobId必须有一个不为空 
+     * @return OriginFileName 文件Name, 注意: "BrokerIp+OriginFileName"跟ExecutionJobId必须有一个不为空
      */
     public String getOriginFileName() {
         return this.OriginFileName;
     }
 
     /**
-     * Set 文件Name
-     * @param OriginFileName 文件Name
+     * Set 文件Name, 注意: "BrokerIp+OriginFileName"跟ExecutionJobId必须有一个不为空
+     * @param OriginFileName 文件Name, 注意: "BrokerIp+OriginFileName"跟ExecutionJobId必须有一个不为空
      */
     public void setOriginFileName(String OriginFileName) {
         this.OriginFileName = OriginFileName;

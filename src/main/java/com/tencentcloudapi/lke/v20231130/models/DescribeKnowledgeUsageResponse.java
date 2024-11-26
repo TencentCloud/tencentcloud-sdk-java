@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeKnowledgeUsageResponse extends AbstractModel {
 
     /**
-    * 可用字符数
+    * 可用字符数上限
     */
     @SerializedName("AvailableCharSize")
     @Expose
     private String AvailableCharSize;
 
     /**
-    * 超量字符数
+    * 超过可用字符数上限的字符数
     */
     @SerializedName("ExceedCharSize")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeKnowledgeUsageResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 可用字符数 
-     * @return AvailableCharSize 可用字符数
+     * Get 可用字符数上限 
+     * @return AvailableCharSize 可用字符数上限
      */
     public String getAvailableCharSize() {
         return this.AvailableCharSize;
     }
 
     /**
-     * Set 可用字符数
-     * @param AvailableCharSize 可用字符数
+     * Set 可用字符数上限
+     * @param AvailableCharSize 可用字符数上限
      */
     public void setAvailableCharSize(String AvailableCharSize) {
         this.AvailableCharSize = AvailableCharSize;
     }
 
     /**
-     * Get 超量字符数 
-     * @return ExceedCharSize 超量字符数
+     * Get 超过可用字符数上限的字符数 
+     * @return ExceedCharSize 超过可用字符数上限的字符数
      */
     public String getExceedCharSize() {
         return this.ExceedCharSize;
     }
 
     /**
-     * Set 超量字符数
-     * @param ExceedCharSize 超量字符数
+     * Set 超过可用字符数上限的字符数
+     * @param ExceedCharSize 超过可用字符数上限的字符数
      */
     public void setExceedCharSize(String ExceedCharSize) {
         this.ExceedCharSize = ExceedCharSize;

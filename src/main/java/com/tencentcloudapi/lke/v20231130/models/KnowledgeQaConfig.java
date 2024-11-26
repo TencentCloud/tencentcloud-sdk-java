@@ -64,6 +64,22 @@ public class KnowledgeQaConfig extends AbstractModel {
     private KnowledgeQaOutput Output;
 
     /**
+    * 工作流程配置
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Workflow")
+    @Expose
+    private KnowledgeWorkflow Workflow;
+
+    /**
+    * 检索范围
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SearchRange")
+    @Expose
+    private SearchRange SearchRange;
+
+    /**
      * Get 欢迎语，200字符以内
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Greeting 欢迎语，200字符以内
@@ -163,6 +179,46 @@ public class KnowledgeQaConfig extends AbstractModel {
         this.Output = Output;
     }
 
+    /**
+     * Get 工作流程配置
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Workflow 工作流程配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public KnowledgeWorkflow getWorkflow() {
+        return this.Workflow;
+    }
+
+    /**
+     * Set 工作流程配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Workflow 工作流程配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWorkflow(KnowledgeWorkflow Workflow) {
+        this.Workflow = Workflow;
+    }
+
+    /**
+     * Get 检索范围
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SearchRange 检索范围
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public SearchRange getSearchRange() {
+        return this.SearchRange;
+    }
+
+    /**
+     * Set 检索范围
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SearchRange 检索范围
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSearchRange(SearchRange SearchRange) {
+        this.SearchRange = SearchRange;
+    }
+
     public KnowledgeQaConfig() {
     }
 
@@ -189,6 +245,12 @@ public class KnowledgeQaConfig extends AbstractModel {
         if (source.Output != null) {
             this.Output = new KnowledgeQaOutput(source.Output);
         }
+        if (source.Workflow != null) {
+            this.Workflow = new KnowledgeWorkflow(source.Workflow);
+        }
+        if (source.SearchRange != null) {
+            this.SearchRange = new SearchRange(source.SearchRange);
+        }
     }
 
 
@@ -201,6 +263,8 @@ public class KnowledgeQaConfig extends AbstractModel {
         this.setParamObj(map, prefix + "Model.", this.Model);
         this.setParamArrayObj(map, prefix + "Search.", this.Search);
         this.setParamObj(map, prefix + "Output.", this.Output);
+        this.setParamObj(map, prefix + "Workflow.", this.Workflow);
+        this.setParamObj(map, prefix + "SearchRange.", this.SearchRange);
 
     }
 }

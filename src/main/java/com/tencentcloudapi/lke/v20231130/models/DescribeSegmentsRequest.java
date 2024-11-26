@@ -31,7 +31,7 @@ public class DescribeSegmentsRequest extends AbstractModel {
     private String BotBizId;
 
     /**
-    * 文档ID
+    * 文档片段ID
     */
     @SerializedName("SegBizId")
     @Expose
@@ -54,16 +54,16 @@ public class DescribeSegmentsRequest extends AbstractModel {
     }
 
     /**
-     * Get 文档ID 
-     * @return SegBizId 文档ID
+     * Get 文档片段ID 
+     * @return SegBizId 文档片段ID
      */
     public String [] getSegBizId() {
         return this.SegBizId;
     }
 
     /**
-     * Set 文档ID
-     * @param SegBizId 文档ID
+     * Set 文档片段ID
+     * @param SegBizId 文档片段ID
      */
     public void setSegBizId(String [] SegBizId) {
         this.SegBizId = SegBizId;

@@ -31,25 +31,25 @@ public class CreateAttributeLabelRequest extends AbstractModel {
     private String BotBizId;
 
     /**
-    * 属性标识
-    */
-    @SerializedName("AttrKey")
-    @Expose
-    private String AttrKey;
-
-    /**
-    * 属性名称
+    * 标签名
     */
     @SerializedName("AttrName")
     @Expose
     private String AttrName;
 
     /**
-    * 属性标签
+    * 标签值
     */
     @SerializedName("Labels")
     @Expose
     private AttributeLabel [] Labels;
+
+    /**
+    * 标签标识（不生效，无需填写） 已作废
+    */
+    @SerializedName("AttrKey")
+    @Expose
+    private String AttrKey;
 
     /**
     * 登录用户主账号(集成商模式必填)
@@ -82,51 +82,51 @@ public class CreateAttributeLabelRequest extends AbstractModel {
     }
 
     /**
-     * Get 属性标识 
-     * @return AttrKey 属性标识
-     */
-    public String getAttrKey() {
-        return this.AttrKey;
-    }
-
-    /**
-     * Set 属性标识
-     * @param AttrKey 属性标识
-     */
-    public void setAttrKey(String AttrKey) {
-        this.AttrKey = AttrKey;
-    }
-
-    /**
-     * Get 属性名称 
-     * @return AttrName 属性名称
+     * Get 标签名 
+     * @return AttrName 标签名
      */
     public String getAttrName() {
         return this.AttrName;
     }
 
     /**
-     * Set 属性名称
-     * @param AttrName 属性名称
+     * Set 标签名
+     * @param AttrName 标签名
      */
     public void setAttrName(String AttrName) {
         this.AttrName = AttrName;
     }
 
     /**
-     * Get 属性标签 
-     * @return Labels 属性标签
+     * Get 标签值 
+     * @return Labels 标签值
      */
     public AttributeLabel [] getLabels() {
         return this.Labels;
     }
 
     /**
-     * Set 属性标签
-     * @param Labels 属性标签
+     * Set 标签值
+     * @param Labels 标签值
      */
     public void setLabels(AttributeLabel [] Labels) {
         this.Labels = Labels;
+    }
+
+    /**
+     * Get 标签标识（不生效，无需填写） 已作废 
+     * @return AttrKey 标签标识（不生效，无需填写） 已作废
+     */
+    public String getAttrKey() {
+        return this.AttrKey;
+    }
+
+    /**
+     * Set 标签标识（不生效，无需填写） 已作废
+     * @param AttrKey 标签标识（不生效，无需填写） 已作废
+     */
+    public void setAttrKey(String AttrKey) {
+        this.AttrKey = AttrKey;
     }
 
     /**
@@ -172,9 +172,6 @@ public class CreateAttributeLabelRequest extends AbstractModel {
         if (source.BotBizId != null) {
             this.BotBizId = new String(source.BotBizId);
         }
-        if (source.AttrKey != null) {
-            this.AttrKey = new String(source.AttrKey);
-        }
         if (source.AttrName != null) {
             this.AttrName = new String(source.AttrName);
         }
@@ -183,6 +180,9 @@ public class CreateAttributeLabelRequest extends AbstractModel {
             for (int i = 0; i < source.Labels.length; i++) {
                 this.Labels[i] = new AttributeLabel(source.Labels[i]);
             }
+        }
+        if (source.AttrKey != null) {
+            this.AttrKey = new String(source.AttrKey);
         }
         if (source.LoginUin != null) {
             this.LoginUin = new String(source.LoginUin);
@@ -198,9 +198,9 @@ public class CreateAttributeLabelRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "BotBizId", this.BotBizId);
-        this.setParamSimple(map, prefix + "AttrKey", this.AttrKey);
         this.setParamSimple(map, prefix + "AttrName", this.AttrName);
         this.setParamArrayObj(map, prefix + "Labels.", this.Labels);
+        this.setParamSimple(map, prefix + "AttrKey", this.AttrKey);
         this.setParamSimple(map, prefix + "LoginUin", this.LoginUin);
         this.setParamSimple(map, prefix + "LoginSubAccountUin", this.LoginSubAccountUin);
 

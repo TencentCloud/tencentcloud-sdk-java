@@ -171,18 +171,25 @@ public class DescribeDocResponse extends AbstractModel {
     private Boolean IsAllowEdit;
 
     /**
-    * 属性标签适用范围 1：全部，2：按条件范围
+    * 标签适用范围 1：全部，2：按条件范围
     */
     @SerializedName("AttrRange")
     @Expose
     private Long AttrRange;
 
     /**
-    * 属性标签
+    * 标签
     */
     @SerializedName("AttrLabels")
     @Expose
     private AttrLabel [] AttrLabels;
+
+    /**
+    * 分类ID
+    */
+    @SerializedName("CateBizId")
+    @Expose
+    private String CateBizId;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -528,35 +535,51 @@ public class DescribeDocResponse extends AbstractModel {
     }
 
     /**
-     * Get 属性标签适用范围 1：全部，2：按条件范围 
-     * @return AttrRange 属性标签适用范围 1：全部，2：按条件范围
+     * Get 标签适用范围 1：全部，2：按条件范围 
+     * @return AttrRange 标签适用范围 1：全部，2：按条件范围
      */
     public Long getAttrRange() {
         return this.AttrRange;
     }
 
     /**
-     * Set 属性标签适用范围 1：全部，2：按条件范围
-     * @param AttrRange 属性标签适用范围 1：全部，2：按条件范围
+     * Set 标签适用范围 1：全部，2：按条件范围
+     * @param AttrRange 标签适用范围 1：全部，2：按条件范围
      */
     public void setAttrRange(Long AttrRange) {
         this.AttrRange = AttrRange;
     }
 
     /**
-     * Get 属性标签 
-     * @return AttrLabels 属性标签
+     * Get 标签 
+     * @return AttrLabels 标签
      */
     public AttrLabel [] getAttrLabels() {
         return this.AttrLabels;
     }
 
     /**
-     * Set 属性标签
-     * @param AttrLabels 属性标签
+     * Set 标签
+     * @param AttrLabels 标签
      */
     public void setAttrLabels(AttrLabel [] AttrLabels) {
         this.AttrLabels = AttrLabels;
+    }
+
+    /**
+     * Get 分类ID 
+     * @return CateBizId 分类ID
+     */
+    public String getCateBizId() {
+        return this.CateBizId;
+    }
+
+    /**
+     * Set 分类ID
+     * @param CateBizId 分类ID
+     */
+    public void setCateBizId(String CateBizId) {
+        this.CateBizId = CateBizId;
     }
 
     /**
@@ -655,6 +678,9 @@ public class DescribeDocResponse extends AbstractModel {
                 this.AttrLabels[i] = new AttrLabel(source.AttrLabels[i]);
             }
         }
+        if (source.CateBizId != null) {
+            this.CateBizId = new String(source.CateBizId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -688,6 +714,7 @@ public class DescribeDocResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "IsAllowEdit", this.IsAllowEdit);
         this.setParamSimple(map, prefix + "AttrRange", this.AttrRange);
         this.setParamArrayObj(map, prefix + "AttrLabels.", this.AttrLabels);
+        this.setParamSimple(map, prefix + "CateBizId", this.CateBizId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -59,14 +59,14 @@ public class DescribeSearchStatsGraphRequest extends AbstractModel {
     private String ModelName;
 
     /**
-    * 开始时间
+    * 开始时间戳, 单位为秒
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 结束时间
+    * 结束时间戳, 单位为秒
     */
     @SerializedName("EndTime")
     @Expose
@@ -160,32 +160,32 @@ public class DescribeSearchStatsGraphRequest extends AbstractModel {
     }
 
     /**
-     * Get 开始时间 
-     * @return StartTime 开始时间
+     * Get 开始时间戳, 单位为秒 
+     * @return StartTime 开始时间戳, 单位为秒
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 开始时间
-     * @param StartTime 开始时间
+     * Set 开始时间戳, 单位为秒
+     * @param StartTime 开始时间戳, 单位为秒
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 结束时间 
-     * @return EndTime 结束时间
+     * Get 结束时间戳, 单位为秒 
+     * @return EndTime 结束时间戳, 单位为秒
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间
-     * @param EndTime 结束时间
+     * Set 结束时间戳, 单位为秒
+     * @param EndTime 结束时间戳, 单位为秒
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

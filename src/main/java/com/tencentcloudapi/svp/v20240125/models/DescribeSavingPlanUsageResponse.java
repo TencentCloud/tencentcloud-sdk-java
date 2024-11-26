@@ -32,7 +32,6 @@ public class DescribeSavingPlanUsageResponse extends AbstractModel {
 
     /**
     * 节省计划使用率数据
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Usages")
     @Expose
@@ -62,10 +61,8 @@ public class DescribeSavingPlanUsageResponse extends AbstractModel {
     }
 
     /**
-     * Get 节省计划使用率数据
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 节省计划使用率数据 
      * @return Usages 节省计划使用率数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SavingPlanUsageDetail [] getUsages() {
         return this.Usages;
@@ -73,9 +70,7 @@ public class DescribeSavingPlanUsageResponse extends AbstractModel {
 
     /**
      * Set 节省计划使用率数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Usages 节省计划使用率数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUsages(SavingPlanUsageDetail [] Usages) {
         this.Usages = Usages;

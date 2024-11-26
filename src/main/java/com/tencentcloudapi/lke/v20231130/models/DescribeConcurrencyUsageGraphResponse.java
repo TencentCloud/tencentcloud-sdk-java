@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeConcurrencyUsageGraphResponse extends AbstractModel {
 
     /**
-    * 统计信息
+    * X轴: 时间区域；根据查询条件的粒度返回“分/小时/日”两种区间范围
     */
     @SerializedName("X")
     @Expose
@@ -52,16 +52,16 @@ public class DescribeConcurrencyUsageGraphResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 统计信息 
-     * @return X 统计信息
+     * Get X轴: 时间区域；根据查询条件的粒度返回“分/小时/日”两种区间范围 
+     * @return X X轴: 时间区域；根据查询条件的粒度返回“分/小时/日”两种区间范围
      */
     public String [] getX() {
         return this.X;
     }
 
     /**
-     * Set 统计信息
-     * @param X 统计信息
+     * Set X轴: 时间区域；根据查询条件的粒度返回“分/小时/日”两种区间范围
+     * @param X X轴: 时间区域；根据查询条件的粒度返回“分/小时/日”两种区间范围
      */
     public void setX(String [] X) {
         this.X = X;

@@ -24,11 +24,34 @@ import java.util.HashMap;
 public class CreateAttributeLabelResponse extends AbstractModel {
 
     /**
+    * 标签ID
+    */
+    @SerializedName("AttrBizId")
+    @Expose
+    private String AttrBizId;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 标签ID 
+     * @return AttrBizId 标签ID
+     */
+    public String getAttrBizId() {
+        return this.AttrBizId;
+    }
+
+    /**
+     * Set 标签ID
+     * @param AttrBizId 标签ID
+     */
+    public void setAttrBizId(String AttrBizId) {
+        this.AttrBizId = AttrBizId;
+    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -54,6 +77,9 @@ public class CreateAttributeLabelResponse extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreateAttributeLabelResponse(CreateAttributeLabelResponse source) {
+        if (source.AttrBizId != null) {
+            this.AttrBizId = new String(source.AttrBizId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -64,6 +90,7 @@ public class CreateAttributeLabelResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "AttrBizId", this.AttrBizId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

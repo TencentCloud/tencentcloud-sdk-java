@@ -31,25 +31,25 @@ public class ModifyAttributeLabelRequest extends AbstractModel {
     private String BotBizId;
 
     /**
-    * 属性ID
+    * 标签ID
     */
     @SerializedName("AttributeBizId")
     @Expose
     private String AttributeBizId;
 
     /**
-    * 属性标识
-    */
-    @SerializedName("AttrKey")
-    @Expose
-    private String AttrKey;
-
-    /**
-    * 属性名称
+    * 标签名称
     */
     @SerializedName("AttrName")
     @Expose
     private String AttrName;
+
+    /**
+    * 标签标识 （已作废）
+    */
+    @SerializedName("AttrKey")
+    @Expose
+    private String AttrKey;
 
     /**
     * 登录用户主账号(集成商模式必填)
@@ -66,14 +66,14 @@ public class ModifyAttributeLabelRequest extends AbstractModel {
     private String LoginSubAccountUin;
 
     /**
-    * 删除的属性标签
+    * 删除的标签值
     */
     @SerializedName("DeleteLabelBizIds")
     @Expose
     private String [] DeleteLabelBizIds;
 
     /**
-    * 新增或编辑的属性标签
+    * 新增或编辑的标签
     */
     @SerializedName("Labels")
     @Expose
@@ -96,51 +96,51 @@ public class ModifyAttributeLabelRequest extends AbstractModel {
     }
 
     /**
-     * Get 属性ID 
-     * @return AttributeBizId 属性ID
+     * Get 标签ID 
+     * @return AttributeBizId 标签ID
      */
     public String getAttributeBizId() {
         return this.AttributeBizId;
     }
 
     /**
-     * Set 属性ID
-     * @param AttributeBizId 属性ID
+     * Set 标签ID
+     * @param AttributeBizId 标签ID
      */
     public void setAttributeBizId(String AttributeBizId) {
         this.AttributeBizId = AttributeBizId;
     }
 
     /**
-     * Get 属性标识 
-     * @return AttrKey 属性标识
-     */
-    public String getAttrKey() {
-        return this.AttrKey;
-    }
-
-    /**
-     * Set 属性标识
-     * @param AttrKey 属性标识
-     */
-    public void setAttrKey(String AttrKey) {
-        this.AttrKey = AttrKey;
-    }
-
-    /**
-     * Get 属性名称 
-     * @return AttrName 属性名称
+     * Get 标签名称 
+     * @return AttrName 标签名称
      */
     public String getAttrName() {
         return this.AttrName;
     }
 
     /**
-     * Set 属性名称
-     * @param AttrName 属性名称
+     * Set 标签名称
+     * @param AttrName 标签名称
      */
     public void setAttrName(String AttrName) {
         this.AttrName = AttrName;
+    }
+
+    /**
+     * Get 标签标识 （已作废） 
+     * @return AttrKey 标签标识 （已作废）
+     */
+    public String getAttrKey() {
+        return this.AttrKey;
+    }
+
+    /**
+     * Set 标签标识 （已作废）
+     * @param AttrKey 标签标识 （已作废）
+     */
+    public void setAttrKey(String AttrKey) {
+        this.AttrKey = AttrKey;
     }
 
     /**
@@ -176,32 +176,32 @@ public class ModifyAttributeLabelRequest extends AbstractModel {
     }
 
     /**
-     * Get 删除的属性标签 
-     * @return DeleteLabelBizIds 删除的属性标签
+     * Get 删除的标签值 
+     * @return DeleteLabelBizIds 删除的标签值
      */
     public String [] getDeleteLabelBizIds() {
         return this.DeleteLabelBizIds;
     }
 
     /**
-     * Set 删除的属性标签
-     * @param DeleteLabelBizIds 删除的属性标签
+     * Set 删除的标签值
+     * @param DeleteLabelBizIds 删除的标签值
      */
     public void setDeleteLabelBizIds(String [] DeleteLabelBizIds) {
         this.DeleteLabelBizIds = DeleteLabelBizIds;
     }
 
     /**
-     * Get 新增或编辑的属性标签 
-     * @return Labels 新增或编辑的属性标签
+     * Get 新增或编辑的标签 
+     * @return Labels 新增或编辑的标签
      */
     public AttributeLabel [] getLabels() {
         return this.Labels;
     }
 
     /**
-     * Set 新增或编辑的属性标签
-     * @param Labels 新增或编辑的属性标签
+     * Set 新增或编辑的标签
+     * @param Labels 新增或编辑的标签
      */
     public void setLabels(AttributeLabel [] Labels) {
         this.Labels = Labels;
@@ -221,11 +221,11 @@ public class ModifyAttributeLabelRequest extends AbstractModel {
         if (source.AttributeBizId != null) {
             this.AttributeBizId = new String(source.AttributeBizId);
         }
-        if (source.AttrKey != null) {
-            this.AttrKey = new String(source.AttrKey);
-        }
         if (source.AttrName != null) {
             this.AttrName = new String(source.AttrName);
+        }
+        if (source.AttrKey != null) {
+            this.AttrKey = new String(source.AttrKey);
         }
         if (source.LoginUin != null) {
             this.LoginUin = new String(source.LoginUin);
@@ -254,8 +254,8 @@ public class ModifyAttributeLabelRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "BotBizId", this.BotBizId);
         this.setParamSimple(map, prefix + "AttributeBizId", this.AttributeBizId);
-        this.setParamSimple(map, prefix + "AttrKey", this.AttrKey);
         this.setParamSimple(map, prefix + "AttrName", this.AttrName);
+        this.setParamSimple(map, prefix + "AttrKey", this.AttrKey);
         this.setParamSimple(map, prefix + "LoginUin", this.LoginUin);
         this.setParamSimple(map, prefix + "LoginSubAccountUin", this.LoginSubAccountUin);
         this.setParamArraySimple(map, prefix + "DeleteLabelBizIds.", this.DeleteLabelBizIds);

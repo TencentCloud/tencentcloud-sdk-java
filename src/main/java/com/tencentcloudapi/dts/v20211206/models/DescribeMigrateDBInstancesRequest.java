@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeMigrateDBInstancesRequest extends AbstractModel {
 
     /**
-    * 数据库类型，如mysql
+    * 数据库类型，如mysql,redis等
     */
     @SerializedName("DatabaseType")
     @Expose
@@ -94,16 +94,16 @@ public class DescribeMigrateDBInstancesRequest extends AbstractModel {
     private String TmpToken;
 
     /**
-     * Get 数据库类型，如mysql 
-     * @return DatabaseType 数据库类型，如mysql
+     * Get 数据库类型，如mysql,redis等 
+     * @return DatabaseType 数据库类型，如mysql,redis等
      */
     public String getDatabaseType() {
         return this.DatabaseType;
     }
 
     /**
-     * Set 数据库类型，如mysql
-     * @param DatabaseType 数据库类型，如mysql
+     * Set 数据库类型，如mysql,redis等
+     * @param DatabaseType 数据库类型，如mysql,redis等
      */
     public void setDatabaseType(String DatabaseType) {
         this.DatabaseType = DatabaseType;

@@ -59,14 +59,14 @@ public class ModifyQARequest extends AbstractModel {
     private String CustomParam;
 
     /**
-    * 属性标签适用范围 1：全部，2：按条件
+    * 标签适用范围 1：全部，2：按条件
     */
     @SerializedName("AttrRange")
     @Expose
     private Long AttrRange;
 
     /**
-    * 属性标签引用
+    * 标签引用
     */
     @SerializedName("AttrLabels")
     @Expose
@@ -106,6 +106,13 @@ public class ModifyQARequest extends AbstractModel {
     @SerializedName("SimilarQuestionModify")
     @Expose
     private SimilarQuestionModify SimilarQuestionModify;
+
+    /**
+    * 问题描述
+    */
+    @SerializedName("QuestionDesc")
+    @Expose
+    private String QuestionDesc;
 
     /**
      * Get 应用ID 
@@ -188,32 +195,32 @@ public class ModifyQARequest extends AbstractModel {
     }
 
     /**
-     * Get 属性标签适用范围 1：全部，2：按条件 
-     * @return AttrRange 属性标签适用范围 1：全部，2：按条件
+     * Get 标签适用范围 1：全部，2：按条件 
+     * @return AttrRange 标签适用范围 1：全部，2：按条件
      */
     public Long getAttrRange() {
         return this.AttrRange;
     }
 
     /**
-     * Set 属性标签适用范围 1：全部，2：按条件
-     * @param AttrRange 属性标签适用范围 1：全部，2：按条件
+     * Set 标签适用范围 1：全部，2：按条件
+     * @param AttrRange 标签适用范围 1：全部，2：按条件
      */
     public void setAttrRange(Long AttrRange) {
         this.AttrRange = AttrRange;
     }
 
     /**
-     * Get 属性标签引用 
-     * @return AttrLabels 属性标签引用
+     * Get 标签引用 
+     * @return AttrLabels 标签引用
      */
     public AttrLabelRefer [] getAttrLabels() {
         return this.AttrLabels;
     }
 
     /**
-     * Set 属性标签引用
-     * @param AttrLabels 属性标签引用
+     * Set 标签引用
+     * @param AttrLabels 标签引用
      */
     public void setAttrLabels(AttrLabelRefer [] AttrLabels) {
         this.AttrLabels = AttrLabels;
@@ -299,6 +306,22 @@ public class ModifyQARequest extends AbstractModel {
         this.SimilarQuestionModify = SimilarQuestionModify;
     }
 
+    /**
+     * Get 问题描述 
+     * @return QuestionDesc 问题描述
+     */
+    public String getQuestionDesc() {
+        return this.QuestionDesc;
+    }
+
+    /**
+     * Set 问题描述
+     * @param QuestionDesc 问题描述
+     */
+    public void setQuestionDesc(String QuestionDesc) {
+        this.QuestionDesc = QuestionDesc;
+    }
+
     public ModifyQARequest() {
     }
 
@@ -346,6 +369,9 @@ public class ModifyQARequest extends AbstractModel {
         if (source.SimilarQuestionModify != null) {
             this.SimilarQuestionModify = new SimilarQuestionModify(source.SimilarQuestionModify);
         }
+        if (source.QuestionDesc != null) {
+            this.QuestionDesc = new String(source.QuestionDesc);
+        }
     }
 
 
@@ -365,6 +391,7 @@ public class ModifyQARequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ExpireStart", this.ExpireStart);
         this.setParamSimple(map, prefix + "ExpireEnd", this.ExpireEnd);
         this.setParamObj(map, prefix + "SimilarQuestionModify.", this.SimilarQuestionModify);
+        this.setParamSimple(map, prefix + "QuestionDesc", this.QuestionDesc);
 
     }
 }

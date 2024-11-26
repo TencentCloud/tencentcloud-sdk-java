@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class DescribeTokenUsageGraphResponse extends AbstractModel {
 
     /**
-    * 总消耗
+    * Token消耗总量
     */
     @SerializedName("Total")
     @Expose
     private Stat [] Total;
 
     /**
-    * 输入消耗
+    * 输入Token消耗量
     */
     @SerializedName("Input")
     @Expose
     private Stat [] Input;
 
     /**
-    * 输出消耗
+    * 输出Token消耗量
     */
     @SerializedName("Output")
     @Expose
@@ -52,48 +52,48 @@ public class DescribeTokenUsageGraphResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 总消耗 
-     * @return Total 总消耗
+     * Get Token消耗总量 
+     * @return Total Token消耗总量
      */
     public Stat [] getTotal() {
         return this.Total;
     }
 
     /**
-     * Set 总消耗
-     * @param Total 总消耗
+     * Set Token消耗总量
+     * @param Total Token消耗总量
      */
     public void setTotal(Stat [] Total) {
         this.Total = Total;
     }
 
     /**
-     * Get 输入消耗 
-     * @return Input 输入消耗
+     * Get 输入Token消耗量 
+     * @return Input 输入Token消耗量
      */
     public Stat [] getInput() {
         return this.Input;
     }
 
     /**
-     * Set 输入消耗
-     * @param Input 输入消耗
+     * Set 输入Token消耗量
+     * @param Input 输入Token消耗量
      */
     public void setInput(Stat [] Input) {
         this.Input = Input;
     }
 
     /**
-     * Get 输出消耗 
-     * @return Output 输出消耗
+     * Get 输出Token消耗量 
+     * @return Output 输出Token消耗量
      */
     public Stat [] getOutput() {
         return this.Output;
     }
 
     /**
-     * Set 输出消耗
-     * @param Output 输出消耗
+     * Set 输出Token消耗量
+     * @param Output 输出Token消耗量
      */
     public void setOutput(Stat [] Output) {
         this.Output = Output;

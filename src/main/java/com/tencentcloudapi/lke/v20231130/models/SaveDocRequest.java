@@ -73,7 +73,7 @@ public class SaveDocRequest extends AbstractModel {
     private String Size;
 
     /**
-    * 属性标签适用范围 1：全部，2：按条件范围
+    * 标签适用范围 1：全部，2：按条件范围
     */
     @SerializedName("AttrRange")
     @Expose
@@ -94,7 +94,7 @@ public class SaveDocRequest extends AbstractModel {
     private String WebUrl;
 
     /**
-    * 属性标签引用
+    * 标签引用
     */
     @SerializedName("AttrLabels")
     @Expose
@@ -135,6 +135,13 @@ public class SaveDocRequest extends AbstractModel {
     @SerializedName("Opt")
     @Expose
     private Long Opt;
+
+    /**
+    * 分类ID
+    */
+    @SerializedName("CateBizId")
+    @Expose
+    private String CateBizId;
 
     /**
      * Get 应用ID 
@@ -249,16 +256,16 @@ public class SaveDocRequest extends AbstractModel {
     }
 
     /**
-     * Get 属性标签适用范围 1：全部，2：按条件范围 
-     * @return AttrRange 属性标签适用范围 1：全部，2：按条件范围
+     * Get 标签适用范围 1：全部，2：按条件范围 
+     * @return AttrRange 标签适用范围 1：全部，2：按条件范围
      */
     public Long getAttrRange() {
         return this.AttrRange;
     }
 
     /**
-     * Set 属性标签适用范围 1：全部，2：按条件范围
-     * @param AttrRange 属性标签适用范围 1：全部，2：按条件范围
+     * Set 标签适用范围 1：全部，2：按条件范围
+     * @param AttrRange 标签适用范围 1：全部，2：按条件范围
      */
     public void setAttrRange(Long AttrRange) {
         this.AttrRange = AttrRange;
@@ -297,16 +304,16 @@ public class SaveDocRequest extends AbstractModel {
     }
 
     /**
-     * Get 属性标签引用 
-     * @return AttrLabels 属性标签引用
+     * Get 标签引用 
+     * @return AttrLabels 标签引用
      */
     public AttrLabelRefer [] getAttrLabels() {
         return this.AttrLabels;
     }
 
     /**
-     * Set 属性标签引用
-     * @param AttrLabels 属性标签引用
+     * Set 标签引用
+     * @param AttrLabels 标签引用
      */
     public void setAttrLabels(AttrLabelRefer [] AttrLabels) {
         this.AttrLabels = AttrLabels;
@@ -396,6 +403,22 @@ public class SaveDocRequest extends AbstractModel {
         this.Opt = Opt;
     }
 
+    /**
+     * Get 分类ID 
+     * @return CateBizId 分类ID
+     */
+    public String getCateBizId() {
+        return this.CateBizId;
+    }
+
+    /**
+     * Set 分类ID
+     * @param CateBizId 分类ID
+     */
+    public void setCateBizId(String CateBizId) {
+        this.CateBizId = CateBizId;
+    }
+
     public SaveDocRequest() {
     }
 
@@ -455,6 +478,9 @@ public class SaveDocRequest extends AbstractModel {
         if (source.Opt != null) {
             this.Opt = new Long(source.Opt);
         }
+        if (source.CateBizId != null) {
+            this.CateBizId = new String(source.CateBizId);
+        }
     }
 
 
@@ -478,6 +504,7 @@ public class SaveDocRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ExpireEnd", this.ExpireEnd);
         this.setParamSimple(map, prefix + "IsRefer", this.IsRefer);
         this.setParamSimple(map, prefix + "Opt", this.Opt);
+        this.setParamSimple(map, prefix + "CateBizId", this.CateBizId);
 
     }
 }

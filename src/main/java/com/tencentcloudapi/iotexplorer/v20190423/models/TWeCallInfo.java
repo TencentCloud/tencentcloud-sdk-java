@@ -24,14 +24,6 @@ import java.util.HashMap;
 public class TWeCallInfo extends AbstractModel {
 
     /**
-    * 小程序ID
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("ModelId")
-    @Expose
-    private String ModelId;
-
-    /**
     * Sn信息，SN格式：产品ID_设备名
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -40,32 +32,20 @@ public class TWeCallInfo extends AbstractModel {
     private String Sn;
 
     /**
+    * 小程序ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ModelId")
+    @Expose
+    private String ModelId;
+
+    /**
     * 激活数
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ActiveNum")
     @Expose
     private Long ActiveNum;
-
-    /**
-     * Get 小程序ID
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ModelId 小程序ID
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getModelId() {
-        return this.ModelId;
-    }
-
-    /**
-     * Set 小程序ID
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param ModelId 小程序ID
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setModelId(String ModelId) {
-        this.ModelId = ModelId;
-    }
 
     /**
      * Get Sn信息，SN格式：产品ID_设备名
@@ -85,6 +65,26 @@ public class TWeCallInfo extends AbstractModel {
      */
     public void setSn(String Sn) {
         this.Sn = Sn;
+    }
+
+    /**
+     * Get 小程序ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ModelId 小程序ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getModelId() {
+        return this.ModelId;
+    }
+
+    /**
+     * Set 小程序ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ModelId 小程序ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setModelId(String ModelId) {
+        this.ModelId = ModelId;
     }
 
     /**
@@ -115,11 +115,11 @@ public class TWeCallInfo extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public TWeCallInfo(TWeCallInfo source) {
-        if (source.ModelId != null) {
-            this.ModelId = new String(source.ModelId);
-        }
         if (source.Sn != null) {
             this.Sn = new String(source.Sn);
+        }
+        if (source.ModelId != null) {
+            this.ModelId = new String(source.ModelId);
         }
         if (source.ActiveNum != null) {
             this.ActiveNum = new Long(source.ActiveNum);
@@ -131,8 +131,8 @@ public class TWeCallInfo extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ModelId", this.ModelId);
         this.setParamSimple(map, prefix + "Sn", this.Sn);
+        this.setParamSimple(map, prefix + "ModelId", this.ModelId);
         this.setParamSimple(map, prefix + "ActiveNum", this.ActiveNum);
 
     }

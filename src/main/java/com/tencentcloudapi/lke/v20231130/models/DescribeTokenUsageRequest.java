@@ -59,14 +59,14 @@ public class DescribeTokenUsageRequest extends AbstractModel {
     private String ModelName;
 
     /**
-    * 开始时间
+    * 开始时间戳, 单位为秒
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 结束时间
+    * 结束时间戳, 单位为秒
     */
     @SerializedName("EndTime")
     @Expose
@@ -78,6 +78,13 @@ public class DescribeTokenUsageRequest extends AbstractModel {
     @SerializedName("AppBizIds")
     @Expose
     private String [] AppBizIds;
+
+    /**
+    * 筛选子场景(文档解析场景使用)
+    */
+    @SerializedName("SubScenes")
+    @Expose
+    private String [] SubScenes;
 
     /**
      * Get 腾讯云主账号 
@@ -160,32 +167,32 @@ public class DescribeTokenUsageRequest extends AbstractModel {
     }
 
     /**
-     * Get 开始时间 
-     * @return StartTime 开始时间
+     * Get 开始时间戳, 单位为秒 
+     * @return StartTime 开始时间戳, 单位为秒
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 开始时间
-     * @param StartTime 开始时间
+     * Set 开始时间戳, 单位为秒
+     * @param StartTime 开始时间戳, 单位为秒
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 结束时间 
-     * @return EndTime 结束时间
+     * Get 结束时间戳, 单位为秒 
+     * @return EndTime 结束时间戳, 单位为秒
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间
-     * @param EndTime 结束时间
+     * Set 结束时间戳, 单位为秒
+     * @param EndTime 结束时间戳, 单位为秒
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
@@ -205,6 +212,22 @@ public class DescribeTokenUsageRequest extends AbstractModel {
      */
     public void setAppBizIds(String [] AppBizIds) {
         this.AppBizIds = AppBizIds;
+    }
+
+    /**
+     * Get 筛选子场景(文档解析场景使用) 
+     * @return SubScenes 筛选子场景(文档解析场景使用)
+     */
+    public String [] getSubScenes() {
+        return this.SubScenes;
+    }
+
+    /**
+     * Set 筛选子场景(文档解析场景使用)
+     * @param SubScenes 筛选子场景(文档解析场景使用)
+     */
+    public void setSubScenes(String [] SubScenes) {
+        this.SubScenes = SubScenes;
     }
 
     public DescribeTokenUsageRequest() {
@@ -245,6 +268,12 @@ public class DescribeTokenUsageRequest extends AbstractModel {
                 this.AppBizIds[i] = new String(source.AppBizIds[i]);
             }
         }
+        if (source.SubScenes != null) {
+            this.SubScenes = new String[source.SubScenes.length];
+            for (int i = 0; i < source.SubScenes.length; i++) {
+                this.SubScenes[i] = new String(source.SubScenes[i]);
+            }
+        }
     }
 
 
@@ -260,6 +289,7 @@ public class DescribeTokenUsageRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamArraySimple(map, prefix + "AppBizIds.", this.AppBizIds);
+        this.setParamArraySimple(map, prefix + "SubScenes.", this.SubScenes);
 
     }
 }

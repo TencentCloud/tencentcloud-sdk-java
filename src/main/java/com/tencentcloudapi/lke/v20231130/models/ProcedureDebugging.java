@@ -64,6 +64,14 @@ public class ProcedureDebugging extends AbstractModel {
     private TaskFlowSummary TaskFlow;
 
     /**
+    * 工作流调试信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("WorkFlow")
+    @Expose
+    private WorkFlowSummary WorkFlow;
+
+    /**
      * Get 检索query
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Content 检索query
@@ -163,6 +171,26 @@ public class ProcedureDebugging extends AbstractModel {
         this.TaskFlow = TaskFlow;
     }
 
+    /**
+     * Get 工作流调试信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WorkFlow 工作流调试信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public WorkFlowSummary getWorkFlow() {
+        return this.WorkFlow;
+    }
+
+    /**
+     * Set 工作流调试信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WorkFlow 工作流调试信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWorkFlow(WorkFlowSummary WorkFlow) {
+        this.WorkFlow = WorkFlow;
+    }
+
     public ProcedureDebugging() {
     }
 
@@ -192,6 +220,9 @@ public class ProcedureDebugging extends AbstractModel {
         if (source.TaskFlow != null) {
             this.TaskFlow = new TaskFlowSummary(source.TaskFlow);
         }
+        if (source.WorkFlow != null) {
+            this.WorkFlow = new WorkFlowSummary(source.WorkFlow);
+        }
     }
 
 
@@ -204,6 +235,7 @@ public class ProcedureDebugging extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Histories.", this.Histories);
         this.setParamArrayObj(map, prefix + "Knowledge.", this.Knowledge);
         this.setParamObj(map, prefix + "TaskFlow.", this.TaskFlow);
+        this.setParamObj(map, prefix + "WorkFlow.", this.WorkFlow);
 
     }
 }

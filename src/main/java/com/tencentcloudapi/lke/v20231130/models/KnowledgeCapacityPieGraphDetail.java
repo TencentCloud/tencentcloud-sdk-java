@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class KnowledgeCapacityPieGraphDetail extends AbstractModel {
 
     /**
-    * 应用名称
+    * 当前应用名称
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AppName")
@@ -32,7 +32,7 @@ public class KnowledgeCapacityPieGraphDetail extends AbstractModel {
     private String AppName;
 
     /**
-    * 应用使用的字符数
+    * 当前应用使用的字符数
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UsedCharSize")
@@ -40,7 +40,7 @@ public class KnowledgeCapacityPieGraphDetail extends AbstractModel {
     private String UsedCharSize;
 
     /**
-    * 应用占比
+    * 当前应用对于总用量的占比
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Proportion")
@@ -48,9 +48,9 @@ public class KnowledgeCapacityPieGraphDetail extends AbstractModel {
     private Float Proportion;
 
     /**
-     * Get 应用名称
+     * Get 当前应用名称
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AppName 应用名称
+     * @return AppName 当前应用名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAppName() {
@@ -58,9 +58,9 @@ public class KnowledgeCapacityPieGraphDetail extends AbstractModel {
     }
 
     /**
-     * Set 应用名称
+     * Set 当前应用名称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AppName 应用名称
+     * @param AppName 当前应用名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAppName(String AppName) {
@@ -68,9 +68,9 @@ public class KnowledgeCapacityPieGraphDetail extends AbstractModel {
     }
 
     /**
-     * Get 应用使用的字符数
+     * Get 当前应用使用的字符数
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UsedCharSize 应用使用的字符数
+     * @return UsedCharSize 当前应用使用的字符数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUsedCharSize() {
@@ -78,9 +78,9 @@ public class KnowledgeCapacityPieGraphDetail extends AbstractModel {
     }
 
     /**
-     * Set 应用使用的字符数
+     * Set 当前应用使用的字符数
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UsedCharSize 应用使用的字符数
+     * @param UsedCharSize 当前应用使用的字符数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUsedCharSize(String UsedCharSize) {
@@ -88,9 +88,9 @@ public class KnowledgeCapacityPieGraphDetail extends AbstractModel {
     }
 
     /**
-     * Get 应用占比
+     * Get 当前应用对于总用量的占比
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Proportion 应用占比
+     * @return Proportion 当前应用对于总用量的占比
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getProportion() {
@@ -98,9 +98,9 @@ public class KnowledgeCapacityPieGraphDetail extends AbstractModel {
     }
 
     /**
-     * Set 应用占比
+     * Set 当前应用对于总用量的占比
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Proportion 应用占比
+     * @param Proportion 当前应用对于总用量的占比
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProportion(Float Proportion) {

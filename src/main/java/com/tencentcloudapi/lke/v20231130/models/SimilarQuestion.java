@@ -40,6 +40,14 @@ public class SimilarQuestion extends AbstractModel {
     private String Question;
 
     /**
+    * 相似问审核状态，1审核失败
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AuditStatus")
+    @Expose
+    private Long AuditStatus;
+
+    /**
      * Get 相似问ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return SimBizId 相似问ID
@@ -79,6 +87,26 @@ public class SimilarQuestion extends AbstractModel {
         this.Question = Question;
     }
 
+    /**
+     * Get 相似问审核状态，1审核失败
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AuditStatus 相似问审核状态，1审核失败
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getAuditStatus() {
+        return this.AuditStatus;
+    }
+
+    /**
+     * Set 相似问审核状态，1审核失败
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AuditStatus 相似问审核状态，1审核失败
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAuditStatus(Long AuditStatus) {
+        this.AuditStatus = AuditStatus;
+    }
+
     public SimilarQuestion() {
     }
 
@@ -93,6 +121,9 @@ public class SimilarQuestion extends AbstractModel {
         if (source.Question != null) {
             this.Question = new String(source.Question);
         }
+        if (source.AuditStatus != null) {
+            this.AuditStatus = new Long(source.AuditStatus);
+        }
     }
 
 
@@ -102,6 +133,7 @@ public class SimilarQuestion extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SimBizId", this.SimBizId);
         this.setParamSimple(map, prefix + "Question", this.Question);
+        this.setParamSimple(map, prefix + "AuditStatus", this.AuditStatus);
 
     }
 }

@@ -31,21 +31,21 @@ public class DescribeNativeGatewayServerGroupsRequest extends AbstractModel {
     private String GatewayId;
 
     /**
-    * 翻页从第几个开始获取
+    * 偏移量，默认为 0。
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 翻页获取多少个
+    * 返回数量，默认为 20。
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 过滤参数
+    * 过滤参数，支持按照分组名称、分组ID（Name、GroupId）筛选
     */
     @SerializedName("Filters")
     @Expose
@@ -68,48 +68,48 @@ public class DescribeNativeGatewayServerGroupsRequest extends AbstractModel {
     }
 
     /**
-     * Get 翻页从第几个开始获取 
-     * @return Offset 翻页从第几个开始获取
+     * Get 偏移量，默认为 0。 
+     * @return Offset 偏移量，默认为 0。
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 翻页从第几个开始获取
-     * @param Offset 翻页从第几个开始获取
+     * Set 偏移量，默认为 0。
+     * @param Offset 偏移量，默认为 0。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 翻页获取多少个 
-     * @return Limit 翻页获取多少个
+     * Get 返回数量，默认为 20。 
+     * @return Limit 返回数量，默认为 20。
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 翻页获取多少个
-     * @param Limit 翻页获取多少个
+     * Set 返回数量，默认为 20。
+     * @param Limit 返回数量，默认为 20。
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 过滤参数 
-     * @return Filters 过滤参数
+     * Get 过滤参数，支持按照分组名称、分组ID（Name、GroupId）筛选 
+     * @return Filters 过滤参数，支持按照分组名称、分组ID（Name、GroupId）筛选
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤参数
-     * @param Filters 过滤参数
+     * Set 过滤参数，支持按照分组名称、分组ID（Name、GroupId）筛选
+     * @param Filters 过滤参数，支持按照分组名称、分组ID（Name、GroupId）筛选
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

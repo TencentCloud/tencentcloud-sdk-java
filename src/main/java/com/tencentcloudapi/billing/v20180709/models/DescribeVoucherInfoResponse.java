@@ -39,7 +39,6 @@ public class DescribeVoucherInfoResponse extends AbstractModel {
 
     /**
     * 代金券相关信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VoucherInfos")
     @Expose
@@ -85,10 +84,8 @@ public class DescribeVoucherInfoResponse extends AbstractModel {
     }
 
     /**
-     * Get 代金券相关信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 代金券相关信息 
      * @return VoucherInfos 代金券相关信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public VoucherInfos [] getVoucherInfos() {
         return this.VoucherInfos;
@@ -96,9 +93,7 @@ public class DescribeVoucherInfoResponse extends AbstractModel {
 
     /**
      * Set 代金券相关信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VoucherInfos 代金券相关信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVoucherInfos(VoucherInfos [] VoucherInfos) {
         this.VoucherInfos = VoucherInfos;

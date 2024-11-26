@@ -28,7 +28,7 @@ public class OpenClusterReadOnlyInstanceGroupAccessResponse extends AbstractMode
     */
     @SerializedName("FlowId")
     @Expose
-    private String FlowId;
+    private Long FlowId;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -41,7 +41,7 @@ public class OpenClusterReadOnlyInstanceGroupAccessResponse extends AbstractMode
      * Get 开启流程ID 
      * @return FlowId 开启流程ID
      */
-    public String getFlowId() {
+    public Long getFlowId() {
         return this.FlowId;
     }
 
@@ -49,7 +49,7 @@ public class OpenClusterReadOnlyInstanceGroupAccessResponse extends AbstractMode
      * Set 开启流程ID
      * @param FlowId 开启流程ID
      */
-    public void setFlowId(String FlowId) {
+    public void setFlowId(Long FlowId) {
         this.FlowId = FlowId;
     }
 
@@ -78,7 +78,7 @@ public class OpenClusterReadOnlyInstanceGroupAccessResponse extends AbstractMode
      */
     public OpenClusterReadOnlyInstanceGroupAccessResponse(OpenClusterReadOnlyInstanceGroupAccessResponse source) {
         if (source.FlowId != null) {
-            this.FlowId = new String(source.FlowId);
+            this.FlowId = new Long(source.FlowId);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);

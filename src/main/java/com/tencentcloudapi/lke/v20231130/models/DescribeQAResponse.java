@@ -181,15 +181,14 @@ public class DescribeQAResponse extends AbstractModel {
     private String OrgData;
 
     /**
-    * 属性标签适用范围
-
+    * 标签适用范围
     */
     @SerializedName("AttrRange")
     @Expose
     private Long AttrRange;
 
     /**
-    * 属性标签
+    * 标签
     */
     @SerializedName("AttrLabels")
     @Expose
@@ -215,6 +214,34 @@ public class DescribeQAResponse extends AbstractModel {
     @SerializedName("SimilarQuestions")
     @Expose
     private SimilarQuestion [] SimilarQuestions;
+
+    /**
+    * 问题和答案文本审核状态 1审核失败
+    */
+    @SerializedName("QaAuditStatus")
+    @Expose
+    private Long QaAuditStatus;
+
+    /**
+    * 答案中的图片审核状态 1审核失败
+    */
+    @SerializedName("PicAuditStatus")
+    @Expose
+    private Long PicAuditStatus;
+
+    /**
+    * 答案中的视频审核状态 1审核失败
+    */
+    @SerializedName("VideoAuditStatus")
+    @Expose
+    private Long VideoAuditStatus;
+
+    /**
+    * 问题描述
+    */
+    @SerializedName("QuestionDesc")
+    @Expose
+    private String QuestionDesc;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -612,36 +639,32 @@ public class DescribeQAResponse extends AbstractModel {
     }
 
     /**
-     * Get 属性标签适用范围
- 
-     * @return AttrRange 属性标签适用范围
-
+     * Get 标签适用范围 
+     * @return AttrRange 标签适用范围
      */
     public Long getAttrRange() {
         return this.AttrRange;
     }
 
     /**
-     * Set 属性标签适用范围
-
-     * @param AttrRange 属性标签适用范围
-
+     * Set 标签适用范围
+     * @param AttrRange 标签适用范围
      */
     public void setAttrRange(Long AttrRange) {
         this.AttrRange = AttrRange;
     }
 
     /**
-     * Get 属性标签 
-     * @return AttrLabels 属性标签
+     * Get 标签 
+     * @return AttrLabels 标签
      */
     public AttrLabel [] getAttrLabels() {
         return this.AttrLabels;
     }
 
     /**
-     * Set 属性标签
-     * @param AttrLabels 属性标签
+     * Set 标签
+     * @param AttrLabels 标签
      */
     public void setAttrLabels(AttrLabel [] AttrLabels) {
         this.AttrLabels = AttrLabels;
@@ -693,6 +716,70 @@ public class DescribeQAResponse extends AbstractModel {
      */
     public void setSimilarQuestions(SimilarQuestion [] SimilarQuestions) {
         this.SimilarQuestions = SimilarQuestions;
+    }
+
+    /**
+     * Get 问题和答案文本审核状态 1审核失败 
+     * @return QaAuditStatus 问题和答案文本审核状态 1审核失败
+     */
+    public Long getQaAuditStatus() {
+        return this.QaAuditStatus;
+    }
+
+    /**
+     * Set 问题和答案文本审核状态 1审核失败
+     * @param QaAuditStatus 问题和答案文本审核状态 1审核失败
+     */
+    public void setQaAuditStatus(Long QaAuditStatus) {
+        this.QaAuditStatus = QaAuditStatus;
+    }
+
+    /**
+     * Get 答案中的图片审核状态 1审核失败 
+     * @return PicAuditStatus 答案中的图片审核状态 1审核失败
+     */
+    public Long getPicAuditStatus() {
+        return this.PicAuditStatus;
+    }
+
+    /**
+     * Set 答案中的图片审核状态 1审核失败
+     * @param PicAuditStatus 答案中的图片审核状态 1审核失败
+     */
+    public void setPicAuditStatus(Long PicAuditStatus) {
+        this.PicAuditStatus = PicAuditStatus;
+    }
+
+    /**
+     * Get 答案中的视频审核状态 1审核失败 
+     * @return VideoAuditStatus 答案中的视频审核状态 1审核失败
+     */
+    public Long getVideoAuditStatus() {
+        return this.VideoAuditStatus;
+    }
+
+    /**
+     * Set 答案中的视频审核状态 1审核失败
+     * @param VideoAuditStatus 答案中的视频审核状态 1审核失败
+     */
+    public void setVideoAuditStatus(Long VideoAuditStatus) {
+        this.VideoAuditStatus = VideoAuditStatus;
+    }
+
+    /**
+     * Get 问题描述 
+     * @return QuestionDesc 问题描述
+     */
+    public String getQuestionDesc() {
+        return this.QuestionDesc;
+    }
+
+    /**
+     * Set 问题描述
+     * @param QuestionDesc 问题描述
+     */
+    public void setQuestionDesc(String QuestionDesc) {
+        this.QuestionDesc = QuestionDesc;
     }
 
     /**
@@ -803,6 +890,18 @@ public class DescribeQAResponse extends AbstractModel {
                 this.SimilarQuestions[i] = new SimilarQuestion(source.SimilarQuestions[i]);
             }
         }
+        if (source.QaAuditStatus != null) {
+            this.QaAuditStatus = new Long(source.QaAuditStatus);
+        }
+        if (source.PicAuditStatus != null) {
+            this.PicAuditStatus = new Long(source.PicAuditStatus);
+        }
+        if (source.VideoAuditStatus != null) {
+            this.VideoAuditStatus = new Long(source.VideoAuditStatus);
+        }
+        if (source.QuestionDesc != null) {
+            this.QuestionDesc = new String(source.QuestionDesc);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -838,6 +937,10 @@ public class DescribeQAResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "ExpireStart", this.ExpireStart);
         this.setParamSimple(map, prefix + "ExpireEnd", this.ExpireEnd);
         this.setParamArrayObj(map, prefix + "SimilarQuestions.", this.SimilarQuestions);
+        this.setParamSimple(map, prefix + "QaAuditStatus", this.QaAuditStatus);
+        this.setParamSimple(map, prefix + "PicAuditStatus", this.PicAuditStatus);
+        this.setParamSimple(map, prefix + "VideoAuditStatus", this.VideoAuditStatus);
+        this.setParamSimple(map, prefix + "QuestionDesc", this.QuestionDesc);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -59,6 +59,20 @@ public class ListDocRequest extends AbstractModel {
     private Long [] Status;
 
     /**
+    * 查询类型 filename 文档、 attribute 标签
+    */
+    @SerializedName("QueryType")
+    @Expose
+    private String QueryType;
+
+    /**
+    * 分类ID
+    */
+    @SerializedName("CateBizId")
+    @Expose
+    private String CateBizId;
+
+    /**
      * Get 应用ID 
      * @return BotBizId 应用ID
      */
@@ -138,6 +152,38 @@ public class ListDocRequest extends AbstractModel {
         this.Status = Status;
     }
 
+    /**
+     * Get 查询类型 filename 文档、 attribute 标签 
+     * @return QueryType 查询类型 filename 文档、 attribute 标签
+     */
+    public String getQueryType() {
+        return this.QueryType;
+    }
+
+    /**
+     * Set 查询类型 filename 文档、 attribute 标签
+     * @param QueryType 查询类型 filename 文档、 attribute 标签
+     */
+    public void setQueryType(String QueryType) {
+        this.QueryType = QueryType;
+    }
+
+    /**
+     * Get 分类ID 
+     * @return CateBizId 分类ID
+     */
+    public String getCateBizId() {
+        return this.CateBizId;
+    }
+
+    /**
+     * Set 分类ID
+     * @param CateBizId 分类ID
+     */
+    public void setCateBizId(String CateBizId) {
+        this.CateBizId = CateBizId;
+    }
+
     public ListDocRequest() {
     }
 
@@ -164,6 +210,12 @@ public class ListDocRequest extends AbstractModel {
                 this.Status[i] = new Long(source.Status[i]);
             }
         }
+        if (source.QueryType != null) {
+            this.QueryType = new String(source.QueryType);
+        }
+        if (source.CateBizId != null) {
+            this.CateBizId = new String(source.CateBizId);
+        }
     }
 
 
@@ -176,6 +228,8 @@ public class ListDocRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "PageSize", this.PageSize);
         this.setParamSimple(map, prefix + "Query", this.Query);
         this.setParamArraySimple(map, prefix + "Status.", this.Status);
+        this.setParamSimple(map, prefix + "QueryType", this.QueryType);
+        this.setParamSimple(map, prefix + "CateBizId", this.CateBizId);
 
     }
 }

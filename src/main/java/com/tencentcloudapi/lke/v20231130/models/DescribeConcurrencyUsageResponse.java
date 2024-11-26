@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeConcurrencyUsageResponse extends AbstractModel {
 
     /**
-    * 可用并发数
+    * 可用并发数上限
     */
     @SerializedName("AvailableConcurrency")
     @Expose
@@ -38,7 +38,7 @@ public class DescribeConcurrencyUsageResponse extends AbstractModel {
     private Long ConcurrencyPeak;
 
     /**
-    * 调用超可用次数
+    * 超出可用并发数上限的次数
     */
     @SerializedName("ExceedUsageTime")
     @Expose
@@ -52,16 +52,16 @@ public class DescribeConcurrencyUsageResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 可用并发数 
-     * @return AvailableConcurrency 可用并发数
+     * Get 可用并发数上限 
+     * @return AvailableConcurrency 可用并发数上限
      */
     public Long getAvailableConcurrency() {
         return this.AvailableConcurrency;
     }
 
     /**
-     * Set 可用并发数
-     * @param AvailableConcurrency 可用并发数
+     * Set 可用并发数上限
+     * @param AvailableConcurrency 可用并发数上限
      */
     public void setAvailableConcurrency(Long AvailableConcurrency) {
         this.AvailableConcurrency = AvailableConcurrency;
@@ -84,16 +84,16 @@ public class DescribeConcurrencyUsageResponse extends AbstractModel {
     }
 
     /**
-     * Get 调用超可用次数 
-     * @return ExceedUsageTime 调用超可用次数
+     * Get 超出可用并发数上限的次数 
+     * @return ExceedUsageTime 超出可用并发数上限的次数
      */
     public Long getExceedUsageTime() {
         return this.ExceedUsageTime;
     }
 
     /**
-     * Set 调用超可用次数
-     * @param ExceedUsageTime 调用超可用次数
+     * Set 超出可用并发数上限的次数
+     * @param ExceedUsageTime 超出可用并发数上限的次数
      */
     public void setExceedUsageTime(Long ExceedUsageTime) {
         this.ExceedUsageTime = ExceedUsageTime;

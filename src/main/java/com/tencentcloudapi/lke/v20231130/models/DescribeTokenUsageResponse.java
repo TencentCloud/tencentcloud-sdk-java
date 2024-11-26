@@ -59,6 +59,13 @@ public class DescribeTokenUsageResponse extends AbstractModel {
     private Float SearchUsage;
 
     /**
+    * 文档解析消耗页数
+    */
+    @SerializedName("PageUsage")
+    @Expose
+    private Long PageUsage;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -146,6 +153,22 @@ public class DescribeTokenUsageResponse extends AbstractModel {
     }
 
     /**
+     * Get 文档解析消耗页数 
+     * @return PageUsage 文档解析消耗页数
+     */
+    public Long getPageUsage() {
+        return this.PageUsage;
+    }
+
+    /**
+     * Set 文档解析消耗页数
+     * @param PageUsage 文档解析消耗页数
+     */
+    public void setPageUsage(Long PageUsage) {
+        this.PageUsage = PageUsage;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -184,6 +207,9 @@ public class DescribeTokenUsageResponse extends AbstractModel {
         if (source.SearchUsage != null) {
             this.SearchUsage = new Float(source.SearchUsage);
         }
+        if (source.PageUsage != null) {
+            this.PageUsage = new Long(source.PageUsage);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -199,6 +225,7 @@ public class DescribeTokenUsageResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "OutputTokenUsage", this.OutputTokenUsage);
         this.setParamSimple(map, prefix + "ApiCallStats", this.ApiCallStats);
         this.setParamSimple(map, prefix + "SearchUsage", this.SearchUsage);
+        this.setParamSimple(map, prefix + "PageUsage", this.PageUsage);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

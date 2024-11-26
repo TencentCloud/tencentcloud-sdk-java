@@ -45,7 +45,7 @@ public class ModifyDocRequest extends AbstractModel {
     private Boolean IsRefer;
 
     /**
-    * 属性标签适用范围 1：全部，2：按条件
+    * 标签适用范围 1：全部，2：按条件
     */
     @SerializedName("AttrRange")
     @Expose
@@ -66,7 +66,7 @@ public class ModifyDocRequest extends AbstractModel {
     private String LoginSubAccountUin;
 
     /**
-    * 适用范围，关联的属性标签
+    * 关联的标签
     */
     @SerializedName("AttrLabels")
     @Expose
@@ -100,6 +100,13 @@ public class ModifyDocRequest extends AbstractModel {
     @SerializedName("ExpireEnd")
     @Expose
     private String ExpireEnd;
+
+    /**
+    * 分类ID
+    */
+    @SerializedName("CateBizId")
+    @Expose
+    private String CateBizId;
 
     /**
      * Get 应用ID 
@@ -150,16 +157,16 @@ public class ModifyDocRequest extends AbstractModel {
     }
 
     /**
-     * Get 属性标签适用范围 1：全部，2：按条件 
-     * @return AttrRange 属性标签适用范围 1：全部，2：按条件
+     * Get 标签适用范围 1：全部，2：按条件 
+     * @return AttrRange 标签适用范围 1：全部，2：按条件
      */
     public Long getAttrRange() {
         return this.AttrRange;
     }
 
     /**
-     * Set 属性标签适用范围 1：全部，2：按条件
-     * @param AttrRange 属性标签适用范围 1：全部，2：按条件
+     * Set 标签适用范围 1：全部，2：按条件
+     * @param AttrRange 标签适用范围 1：全部，2：按条件
      */
     public void setAttrRange(Long AttrRange) {
         this.AttrRange = AttrRange;
@@ -198,16 +205,16 @@ public class ModifyDocRequest extends AbstractModel {
     }
 
     /**
-     * Get 适用范围，关联的属性标签 
-     * @return AttrLabels 适用范围，关联的属性标签
+     * Get 关联的标签 
+     * @return AttrLabels 关联的标签
      */
     public AttrLabelRefer [] getAttrLabels() {
         return this.AttrLabels;
     }
 
     /**
-     * Set 适用范围，关联的属性标签
-     * @param AttrLabels 适用范围，关联的属性标签
+     * Set 关联的标签
+     * @param AttrLabels 关联的标签
      */
     public void setAttrLabels(AttrLabelRefer [] AttrLabels) {
         this.AttrLabels = AttrLabels;
@@ -281,6 +288,22 @@ public class ModifyDocRequest extends AbstractModel {
         this.ExpireEnd = ExpireEnd;
     }
 
+    /**
+     * Get 分类ID 
+     * @return CateBizId 分类ID
+     */
+    public String getCateBizId() {
+        return this.CateBizId;
+    }
+
+    /**
+     * Set 分类ID
+     * @param CateBizId 分类ID
+     */
+    public void setCateBizId(String CateBizId) {
+        this.CateBizId = CateBizId;
+    }
+
     public ModifyDocRequest() {
     }
 
@@ -325,6 +348,9 @@ public class ModifyDocRequest extends AbstractModel {
         if (source.ExpireEnd != null) {
             this.ExpireEnd = new String(source.ExpireEnd);
         }
+        if (source.CateBizId != null) {
+            this.CateBizId = new String(source.CateBizId);
+        }
     }
 
 
@@ -343,6 +369,7 @@ public class ModifyDocRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ReferUrlType", this.ReferUrlType);
         this.setParamSimple(map, prefix + "ExpireStart", this.ExpireStart);
         this.setParamSimple(map, prefix + "ExpireEnd", this.ExpireEnd);
+        this.setParamSimple(map, prefix + "CateBizId", this.CateBizId);
 
     }
 }

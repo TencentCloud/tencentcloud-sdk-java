@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class Stat extends AbstractModel {
 
     /**
-    * x轴时间戳
+    * X轴: 时间区域；根据查询条件的粒度返回“分/小时/日”三种区间范围
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("X")
@@ -32,7 +32,7 @@ public class Stat extends AbstractModel {
     private String X;
 
     /**
-    * y轴统计值
+    * Y轴: 该时间区域内的统计值，如token消耗量，调用次数或使用量等信息
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Y")
@@ -40,9 +40,9 @@ public class Stat extends AbstractModel {
     private Float Y;
 
     /**
-     * Get x轴时间戳
+     * Get X轴: 时间区域；根据查询条件的粒度返回“分/小时/日”三种区间范围
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return X x轴时间戳
+     * @return X X轴: 时间区域；根据查询条件的粒度返回“分/小时/日”三种区间范围
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getX() {
@@ -50,9 +50,9 @@ public class Stat extends AbstractModel {
     }
 
     /**
-     * Set x轴时间戳
+     * Set X轴: 时间区域；根据查询条件的粒度返回“分/小时/日”三种区间范围
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param X x轴时间戳
+     * @param X X轴: 时间区域；根据查询条件的粒度返回“分/小时/日”三种区间范围
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setX(String X) {
@@ -60,9 +60,9 @@ public class Stat extends AbstractModel {
     }
 
     /**
-     * Get y轴统计值
+     * Get Y轴: 该时间区域内的统计值，如token消耗量，调用次数或使用量等信息
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Y y轴统计值
+     * @return Y Y轴: 该时间区域内的统计值，如token消耗量，调用次数或使用量等信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getY() {
@@ -70,9 +70,9 @@ public class Stat extends AbstractModel {
     }
 
     /**
-     * Set y轴统计值
+     * Set Y轴: 该时间区域内的统计值，如token消耗量，调用次数或使用量等信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Y y轴统计值
+     * @param Y Y轴: 该时间区域内的统计值，如token消耗量，调用次数或使用量等信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setY(Float Y) {
