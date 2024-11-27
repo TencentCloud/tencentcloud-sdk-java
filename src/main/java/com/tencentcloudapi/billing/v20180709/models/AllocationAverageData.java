@@ -25,7 +25,6 @@ public class AllocationAverageData extends AbstractModel {
 
     /**
     * 起始月份
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BeginMonth")
     @Expose
@@ -33,7 +32,6 @@ public class AllocationAverageData extends AbstractModel {
 
     /**
     * 结束月份
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndMonth")
     @Expose
@@ -41,17 +39,14 @@ public class AllocationAverageData extends AbstractModel {
 
     /**
     * 合计费用(折后总额)平均值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RealTotalCost")
     @Expose
     private String RealTotalCost;
 
     /**
-     * Get 起始月份
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 起始月份 
      * @return BeginMonth 起始月份
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBeginMonth() {
         return this.BeginMonth;
@@ -59,19 +54,15 @@ public class AllocationAverageData extends AbstractModel {
 
     /**
      * Set 起始月份
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BeginMonth 起始月份
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBeginMonth(String BeginMonth) {
         this.BeginMonth = BeginMonth;
     }
 
     /**
-     * Get 结束月份
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 结束月份 
      * @return EndMonth 结束月份
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEndMonth() {
         return this.EndMonth;
@@ -79,19 +70,15 @@ public class AllocationAverageData extends AbstractModel {
 
     /**
      * Set 结束月份
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EndMonth 结束月份
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndMonth(String EndMonth) {
         this.EndMonth = EndMonth;
     }
 
     /**
-     * Get 合计费用(折后总额)平均值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 合计费用(折后总额)平均值 
      * @return RealTotalCost 合计费用(折后总额)平均值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRealTotalCost() {
         return this.RealTotalCost;
@@ -99,9 +86,7 @@ public class AllocationAverageData extends AbstractModel {
 
     /**
      * Set 合计费用(折后总额)平均值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RealTotalCost 合计费用(折后总额)平均值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRealTotalCost(String RealTotalCost) {
         this.RealTotalCost = RealTotalCost;

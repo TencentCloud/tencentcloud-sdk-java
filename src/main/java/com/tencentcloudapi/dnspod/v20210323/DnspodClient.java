@@ -196,6 +196,17 @@ public class DnspodClient extends AbstractClient{
     }
 
     /**
+     *创建添加子域名 Zone 域解析时所需要的 TXT 记录值
+     * @param req CreateSubdomainValidateTXTValueRequest
+     * @return CreateSubdomainValidateTXTValueResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateSubdomainValidateTXTValueResponse CreateSubdomainValidateTXTValue(CreateSubdomainValidateTXTValueRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateSubdomainValidateTXTValue", CreateSubdomainValidateTXTValueResponse.class);
+    }
+
+    /**
      *添加TXT记录
 备注：新添加的解析记录存在短暂的索引延迟，如果查询不到新增记录，请在 30 秒后重试
      * @param req CreateTXTRecordRequest
@@ -653,6 +664,17 @@ public class DnspodClient extends AbstractClient{
     public DescribeSubdomainAnalyticsResponse DescribeSubdomainAnalytics(DescribeSubdomainAnalyticsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeSubdomainAnalytics", DescribeSubdomainAnalyticsResponse.class);
+    }
+
+    /**
+     *查看添加子域名 Zone 域解析 TXT 记录值验证状态
+     * @param req DescribeSubdomainValidateStatusRequest
+     * @return DescribeSubdomainValidateStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSubdomainValidateStatusResponse DescribeSubdomainValidateStatus(DescribeSubdomainValidateStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSubdomainValidateStatus", DescribeSubdomainValidateStatusResponse.class);
     }
 
     /**

@@ -162,6 +162,40 @@ public class LiveClient extends AbstractClient{
     }
 
     /**
+     *该接口用来启动主监任务，并将获取主监画面的播放地址。
+     * @param req CreateCasterPgmRequest
+     * @return CreateCasterPgmResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCasterPgmResponse CreateCasterPgm(CreateCasterPgmRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateCasterPgm", CreateCasterPgmResponse.class);
+    }
+
+    /**
+     *该接口用来将预监画面的布局、水印、字幕等配置，复制到主监画面中。
+该接口使用时，预监任务需处于运行状态。
+     * @param req CreateCasterPgmFromPvwRequest
+     * @return CreateCasterPgmFromPvwResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCasterPgmFromPvwResponse CreateCasterPgmFromPvw(CreateCasterPgmFromPvwRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateCasterPgmFromPvw", CreateCasterPgmFromPvwResponse.class);
+    }
+
+    /**
+     *该接口用来启动预监任务，并将获取预监画面的播放地址。
+     * @param req CreateCasterPvwRequest
+     * @return CreateCasterPvwResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCasterPvwResponse CreateCasterPvw(CreateCasterPvwRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateCasterPvw", CreateCasterPvwResponse.class);
+    }
+
+    /**
      *该接口用来创建通用混流。用法与旧接口 mix_streamv2.start_mix_stream_advanced 基本一致。
 注意：当前最多支持16路混流。
 最佳实践：https://cloud.tencent.com/document/product/267/45566
@@ -2015,6 +2049,19 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     }
 
     /**
+     *调用该接口，释放导播台实例，但保留所有的配置。
+执行该接口，预监与主监画面停止，第三方推流停止。
+点播文件与直播地址将停止展示，客户自行推到导播台的流需要手动停止。
+     * @param req ReleaseCasterRequest
+     * @return ReleaseCasterResponse
+     * @throws TencentCloudSDKException
+     */
+    public ReleaseCasterResponse ReleaseCaster(ReleaseCasterRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ReleaseCaster", ReleaseCasterResponse.class);
+    }
+
+    /**
      *将正在运行的拉流转推任务进行重启。
 注意：
 1. 重启任务会造成推流中断。
@@ -2059,6 +2106,29 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public StartLiveStreamMonitorResponse StartLiveStreamMonitor(StartLiveStreamMonitorRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "StartLiveStreamMonitor", StartLiveStreamMonitorResponse.class);
+    }
+
+    /**
+     *该接口用来停止导播台的主监输出。
+停止主监后，对应的推流到腾讯云直播源站和推流到其他第三方平台均将会停止。
+     * @param req StopCasterPgmRequest
+     * @return StopCasterPgmResponse
+     * @throws TencentCloudSDKException
+     */
+    public StopCasterPgmResponse StopCasterPgm(StopCasterPgmRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "StopCasterPgm", StopCasterPgmResponse.class);
+    }
+
+    /**
+     *该接口用来停止导播台的预监任务。
+     * @param req StopCasterPvwRequest
+     * @return StopCasterPvwResponse
+     * @throws TencentCloudSDKException
+     */
+    public StopCasterPvwResponse StopCasterPvw(StopCasterPvwRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "StopCasterPvw", StopCasterPvwResponse.class);
     }
 
     /**

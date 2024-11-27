@@ -25,7 +25,6 @@ public class AllocationBillTrendDetail extends AbstractModel {
 
     /**
     * 账单月份
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Month")
     @Expose
@@ -33,7 +32,6 @@ public class AllocationBillTrendDetail extends AbstractModel {
 
     /**
     * 账单月份展示名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -41,17 +39,14 @@ public class AllocationBillTrendDetail extends AbstractModel {
 
     /**
     * 合计费用(折后总额)：分账单元总费用，归集费用(折后总额) + 分摊费用(折后总额)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RealTotalCost")
     @Expose
     private String RealTotalCost;
 
     /**
-     * Get 账单月份
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 账单月份 
      * @return Month 账单月份
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMonth() {
         return this.Month;
@@ -59,19 +54,15 @@ public class AllocationBillTrendDetail extends AbstractModel {
 
     /**
      * Set 账单月份
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Month 账单月份
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMonth(String Month) {
         this.Month = Month;
     }
 
     /**
-     * Get 账单月份展示名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 账单月份展示名称 
      * @return Name 账单月份展示名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -79,19 +70,15 @@ public class AllocationBillTrendDetail extends AbstractModel {
 
     /**
      * Set 账单月份展示名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 账单月份展示名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 合计费用(折后总额)：分账单元总费用，归集费用(折后总额) + 分摊费用(折后总额)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 合计费用(折后总额)：分账单元总费用，归集费用(折后总额) + 分摊费用(折后总额) 
      * @return RealTotalCost 合计费用(折后总额)：分账单元总费用，归集费用(折后总额) + 分摊费用(折后总额)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRealTotalCost() {
         return this.RealTotalCost;
@@ -99,9 +86,7 @@ public class AllocationBillTrendDetail extends AbstractModel {
 
     /**
      * Set 合计费用(折后总额)：分账单元总费用，归集费用(折后总额) + 分摊费用(折后总额)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RealTotalCost 合计费用(折后总额)：分账单元总费用，归集费用(折后总额) + 分摊费用(折后总额)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRealTotalCost(String RealTotalCost) {
         this.RealTotalCost = RealTotalCost;

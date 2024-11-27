@@ -25,7 +25,6 @@ public class AnalysePayModeDetail extends AbstractModel {
 
     /**
     * 计费模式code
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PayMode")
     @Expose
@@ -33,17 +32,14 @@ public class AnalysePayModeDetail extends AbstractModel {
 
     /**
     * 计费模式Name
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PayModeName")
     @Expose
     private String PayModeName;
 
     /**
-     * Get 计费模式code
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 计费模式code 
      * @return PayMode 计费模式code
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPayMode() {
         return this.PayMode;
@@ -51,19 +47,15 @@ public class AnalysePayModeDetail extends AbstractModel {
 
     /**
      * Set 计费模式code
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PayMode 计费模式code
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPayMode(String PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get 计费模式Name
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 计费模式Name 
      * @return PayModeName 计费模式Name
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPayModeName() {
         return this.PayModeName;
@@ -71,9 +63,7 @@ public class AnalysePayModeDetail extends AbstractModel {
 
     /**
      * Set 计费模式Name
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PayModeName 计费模式Name
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPayModeName(String PayModeName) {
         this.PayModeName = PayModeName;

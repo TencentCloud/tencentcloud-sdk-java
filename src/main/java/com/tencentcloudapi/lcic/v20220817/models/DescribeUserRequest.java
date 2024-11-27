@@ -31,6 +31,13 @@ public class DescribeUserRequest extends AbstractModel {
     private String UserId;
 
     /**
+    * 客户端用户 id,如果未指定则为用户 id。
+    */
+    @SerializedName("OriginId")
+    @Expose
+    private String OriginId;
+
+    /**
      * Get 用户Id。 
      * @return UserId 用户Id。
      */
@@ -46,6 +53,22 @@ public class DescribeUserRequest extends AbstractModel {
         this.UserId = UserId;
     }
 
+    /**
+     * Get 客户端用户 id,如果未指定则为用户 id。 
+     * @return OriginId 客户端用户 id,如果未指定则为用户 id。
+     */
+    public String getOriginId() {
+        return this.OriginId;
+    }
+
+    /**
+     * Set 客户端用户 id,如果未指定则为用户 id。
+     * @param OriginId 客户端用户 id,如果未指定则为用户 id。
+     */
+    public void setOriginId(String OriginId) {
+        this.OriginId = OriginId;
+    }
+
     public DescribeUserRequest() {
     }
 
@@ -57,6 +80,9 @@ public class DescribeUserRequest extends AbstractModel {
         if (source.UserId != null) {
             this.UserId = new String(source.UserId);
         }
+        if (source.OriginId != null) {
+            this.OriginId = new String(source.OriginId);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class DescribeUserRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "UserId", this.UserId);
+        this.setParamSimple(map, prefix + "OriginId", this.OriginId);
 
     }
 }

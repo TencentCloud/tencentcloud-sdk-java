@@ -97,6 +97,13 @@ public class DomainDetailInfo extends AbstractModel {
     private IPFilterPolicy IPFilterPolicy;
 
     /**
+    * 域名类型，取值有： <li>VOD：使用 VOD 产品分发的域名；</li> <li>EdgeOne：使用 EdgeOne 产品分发的域名。</li>
+    */
+    @SerializedName("Type")
+    @Expose
+    private String Type;
+
+    /**
      * Get 域名名称。 
      * @return Domain 域名名称。
      */
@@ -280,6 +287,22 @@ public class DomainDetailInfo extends AbstractModel {
         this.IPFilterPolicy = IPFilterPolicy;
     }
 
+    /**
+     * Get 域名类型，取值有： <li>VOD：使用 VOD 产品分发的域名；</li> <li>EdgeOne：使用 EdgeOne 产品分发的域名。</li> 
+     * @return Type 域名类型，取值有： <li>VOD：使用 VOD 产品分发的域名；</li> <li>EdgeOne：使用 EdgeOne 产品分发的域名。</li>
+     */
+    public String getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set 域名类型，取值有： <li>VOD：使用 VOD 产品分发的域名；</li> <li>EdgeOne：使用 EdgeOne 产品分发的域名。</li>
+     * @param Type 域名类型，取值有： <li>VOD：使用 VOD 产品分发的域名；</li> <li>EdgeOne：使用 EdgeOne 产品分发的域名。</li>
+     */
+    public void setType(String Type) {
+        this.Type = Type;
+    }
+
     public DomainDetailInfo() {
     }
 
@@ -318,6 +341,9 @@ public class DomainDetailInfo extends AbstractModel {
         if (source.IPFilterPolicy != null) {
             this.IPFilterPolicy = new IPFilterPolicy(source.IPFilterPolicy);
         }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
     }
 
 
@@ -334,6 +360,7 @@ public class DomainDetailInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamObj(map, prefix + "QUICConfig.", this.QUICConfig);
         this.setParamObj(map, prefix + "IPFilterPolicy.", this.IPFilterPolicy);
+        this.setParamSimple(map, prefix + "Type", this.Type);
 
     }
 }

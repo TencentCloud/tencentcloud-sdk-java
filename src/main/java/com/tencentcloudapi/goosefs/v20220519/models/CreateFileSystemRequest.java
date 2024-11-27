@@ -87,6 +87,13 @@ public class CreateFileSystemRequest extends AbstractModel {
     private String SecurityGroupId;
 
     /**
+    * 集群ssh通信端口，默认是22
+    */
+    @SerializedName("ClusterPort")
+    @Expose
+    private Long ClusterPort;
+
+    /**
      * Get 文件系统类型, 可填goosefs和goosefsx 
      * @return Type 文件系统类型, 可填goosefs和goosefsx
      */
@@ -230,6 +237,22 @@ public class CreateFileSystemRequest extends AbstractModel {
         this.SecurityGroupId = SecurityGroupId;
     }
 
+    /**
+     * Get 集群ssh通信端口，默认是22 
+     * @return ClusterPort 集群ssh通信端口，默认是22
+     */
+    public Long getClusterPort() {
+        return this.ClusterPort;
+    }
+
+    /**
+     * Set 集群ssh通信端口，默认是22
+     * @param ClusterPort 集群ssh通信端口，默认是22
+     */
+    public void setClusterPort(Long ClusterPort) {
+        this.ClusterPort = ClusterPort;
+    }
+
     public CreateFileSystemRequest() {
     }
 
@@ -268,6 +291,9 @@ public class CreateFileSystemRequest extends AbstractModel {
         if (source.SecurityGroupId != null) {
             this.SecurityGroupId = new String(source.SecurityGroupId);
         }
+        if (source.ClusterPort != null) {
+            this.ClusterPort = new Long(source.ClusterPort);
+        }
     }
 
 
@@ -284,6 +310,7 @@ public class CreateFileSystemRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Tag.", this.Tag);
         this.setParamObj(map, prefix + "GooseFSxBuildElements.", this.GooseFSxBuildElements);
         this.setParamSimple(map, prefix + "SecurityGroupId", this.SecurityGroupId);
+        this.setParamSimple(map, prefix + "ClusterPort", this.ClusterPort);
 
     }
 }

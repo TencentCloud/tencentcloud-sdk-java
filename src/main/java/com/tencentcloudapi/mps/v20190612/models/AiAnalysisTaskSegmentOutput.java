@@ -31,6 +31,14 @@ public class AiAnalysisTaskSegmentOutput extends AbstractModel {
     private SegmentRecognitionItem [] SegmentSet;
 
     /**
+    * 视频摘要，离线场景用。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Abstract")
+    @Expose
+    private String Abstract;
+
+    /**
      * Get 智能拆条子片段列表。 
      * @return SegmentSet 智能拆条子片段列表。
      */
@@ -44,6 +52,26 @@ public class AiAnalysisTaskSegmentOutput extends AbstractModel {
      */
     public void setSegmentSet(SegmentRecognitionItem [] SegmentSet) {
         this.SegmentSet = SegmentSet;
+    }
+
+    /**
+     * Get 视频摘要，离线场景用。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Abstract 视频摘要，离线场景用。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAbstract() {
+        return this.Abstract;
+    }
+
+    /**
+     * Set 视频摘要，离线场景用。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Abstract 视频摘要，离线场景用。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAbstract(String Abstract) {
+        this.Abstract = Abstract;
     }
 
     public AiAnalysisTaskSegmentOutput() {
@@ -60,6 +88,9 @@ public class AiAnalysisTaskSegmentOutput extends AbstractModel {
                 this.SegmentSet[i] = new SegmentRecognitionItem(source.SegmentSet[i]);
             }
         }
+        if (source.Abstract != null) {
+            this.Abstract = new String(source.Abstract);
+        }
     }
 
 
@@ -68,6 +99,7 @@ public class AiAnalysisTaskSegmentOutput extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "SegmentSet.", this.SegmentSet);
+        this.setParamSimple(map, prefix + "Abstract", this.Abstract);
 
     }
 }

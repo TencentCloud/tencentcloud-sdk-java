@@ -64,6 +64,22 @@ public class AttrLabelDetail extends AbstractModel {
     private Boolean IsUpdating;
 
     /**
+    * 状态
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Status")
+    @Expose
+    private Long Status;
+
+    /**
+    * 状态描述
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("StatusDesc")
+    @Expose
+    private String StatusDesc;
+
+    /**
      * Get 属性ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return AttrBizId 属性ID
@@ -163,6 +179,46 @@ public class AttrLabelDetail extends AbstractModel {
         this.IsUpdating = IsUpdating;
     }
 
+    /**
+     * Get 状态
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Status 状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Status 状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStatus(Long Status) {
+        this.Status = Status;
+    }
+
+    /**
+     * Get 状态描述
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return StatusDesc 状态描述
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getStatusDesc() {
+        return this.StatusDesc;
+    }
+
+    /**
+     * Set 状态描述
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param StatusDesc 状态描述
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStatusDesc(String StatusDesc) {
+        this.StatusDesc = StatusDesc;
+    }
+
     public AttrLabelDetail() {
     }
 
@@ -189,6 +245,12 @@ public class AttrLabelDetail extends AbstractModel {
         if (source.IsUpdating != null) {
             this.IsUpdating = new Boolean(source.IsUpdating);
         }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.StatusDesc != null) {
+            this.StatusDesc = new String(source.StatusDesc);
+        }
     }
 
 
@@ -201,6 +263,8 @@ public class AttrLabelDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "AttrName", this.AttrName);
         this.setParamArraySimple(map, prefix + "LabelNames.", this.LabelNames);
         this.setParamSimple(map, prefix + "IsUpdating", this.IsUpdating);
+        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "StatusDesc", this.StatusDesc);
 
     }
 }

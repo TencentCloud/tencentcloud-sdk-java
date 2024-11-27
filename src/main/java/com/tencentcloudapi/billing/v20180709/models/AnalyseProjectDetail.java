@@ -25,7 +25,6 @@ public class AnalyseProjectDetail extends AbstractModel {
 
     /**
     * 项目id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProjectId")
     @Expose
@@ -33,17 +32,14 @@ public class AnalyseProjectDetail extends AbstractModel {
 
     /**
     * 默认项目
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProjectName")
     @Expose
     private String ProjectName;
 
     /**
-     * Get 项目id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 项目id 
      * @return ProjectId 项目id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProjectId() {
         return this.ProjectId;
@@ -51,19 +47,15 @@ public class AnalyseProjectDetail extends AbstractModel {
 
     /**
      * Set 项目id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProjectId 项目id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProjectId(String ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 默认项目
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 默认项目 
      * @return ProjectName 默认项目
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProjectName() {
         return this.ProjectName;
@@ -71,9 +63,7 @@ public class AnalyseProjectDetail extends AbstractModel {
 
     /**
      * Set 默认项目
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProjectName 默认项目
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProjectName(String ProjectName) {
         this.ProjectName = ProjectName;

@@ -25,7 +25,6 @@ public class AnalyseTimeDetail extends AbstractModel {
 
     /**
     * 日期
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Time")
     @Expose
@@ -33,17 +32,14 @@ public class AnalyseTimeDetail extends AbstractModel {
 
     /**
     * 金额
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Money")
     @Expose
     private String Money;
 
     /**
-     * Get 日期
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 日期 
      * @return Time 日期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTime() {
         return this.Time;
@@ -51,19 +47,15 @@ public class AnalyseTimeDetail extends AbstractModel {
 
     /**
      * Set 日期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Time 日期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTime(String Time) {
         this.Time = Time;
     }
 
     /**
-     * Get 金额
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 金额 
      * @return Money 金额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMoney() {
         return this.Money;
@@ -71,9 +63,7 @@ public class AnalyseTimeDetail extends AbstractModel {
 
     /**
      * Set 金额
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Money 金额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMoney(String Money) {
         this.Money = Money;

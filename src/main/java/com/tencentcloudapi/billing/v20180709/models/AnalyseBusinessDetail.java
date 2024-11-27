@@ -25,7 +25,6 @@ public class AnalyseBusinessDetail extends AbstractModel {
 
     /**
     * 产品码code
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BusinessCode")
     @Expose
@@ -33,17 +32,14 @@ public class AnalyseBusinessDetail extends AbstractModel {
 
     /**
     * 产品名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BusinessCodeName")
     @Expose
     private String BusinessCodeName;
 
     /**
-     * Get 产品码code
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 产品码code 
      * @return BusinessCode 产品码code
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBusinessCode() {
         return this.BusinessCode;
@@ -51,19 +47,15 @@ public class AnalyseBusinessDetail extends AbstractModel {
 
     /**
      * Set 产品码code
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BusinessCode 产品码code
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBusinessCode(String BusinessCode) {
         this.BusinessCode = BusinessCode;
     }
 
     /**
-     * Get 产品名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 产品名称 
      * @return BusinessCodeName 产品名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBusinessCodeName() {
         return this.BusinessCodeName;
@@ -71,9 +63,7 @@ public class AnalyseBusinessDetail extends AbstractModel {
 
     /**
      * Set 产品名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BusinessCodeName 产品名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBusinessCodeName(String BusinessCodeName) {
         this.BusinessCodeName = BusinessCodeName;

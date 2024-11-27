@@ -73,6 +73,13 @@ public class DescribePrivateNatGatewayTranslationAclRulesRequest extends Abstrac
     private Long Limit;
 
     /**
+    * ACL规则描述
+    */
+    @SerializedName("Description")
+    @Expose
+    private String Description;
+
+    /**
      * Get 私网网关唯一`ID`，形如：`intranat-xxxxxxxx`。 
      * @return NatGatewayId 私网网关唯一`ID`，形如：`intranat-xxxxxxxx`。
      */
@@ -184,6 +191,22 @@ public class DescribePrivateNatGatewayTranslationAclRulesRequest extends Abstrac
         this.Limit = Limit;
     }
 
+    /**
+     * Get ACL规则描述 
+     * @return Description ACL规则描述
+     */
+    public String getDescription() {
+        return this.Description;
+    }
+
+    /**
+     * Set ACL规则描述
+     * @param Description ACL规则描述
+     */
+    public void setDescription(String Description) {
+        this.Description = Description;
+    }
+
     public DescribePrivateNatGatewayTranslationAclRulesRequest() {
     }
 
@@ -213,6 +236,9 @@ public class DescribePrivateNatGatewayTranslationAclRulesRequest extends Abstrac
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
     }
 
 
@@ -227,6 +253,7 @@ public class DescribePrivateNatGatewayTranslationAclRulesRequest extends Abstrac
         this.setParamSimple(map, prefix + "OriginalIp", this.OriginalIp);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "Description", this.Description);
 
     }
 }

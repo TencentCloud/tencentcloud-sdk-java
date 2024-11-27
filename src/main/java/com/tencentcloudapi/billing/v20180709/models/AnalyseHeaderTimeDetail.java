@@ -25,17 +25,14 @@ public class AnalyseHeaderTimeDetail extends AbstractModel {
 
     /**
     * 日期
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-     * Get 日期
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 日期 
      * @return Name 日期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -43,9 +40,7 @@ public class AnalyseHeaderTimeDetail extends AbstractModel {
 
     /**
      * Set 日期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 日期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;

@@ -49,6 +49,13 @@ public class CreateVodDomainRequest extends AbstractModel {
     private String AccelerateArea;
 
     /**
+    * 域名类型，取值有： <li>VOD：使用 VOD 产品分发的域名；</li> <li>EdgeOne：使用 EdgeOne 产品分发的域名。</li>不填默认取值为 VOD 。
+    */
+    @SerializedName("Type")
+    @Expose
+    private String Type;
+
+    /**
      * Get 需要接入点播的加速域名。注意：不支持填写泛域名。 
      * @return Domain 需要接入点播的加速域名。注意：不支持填写泛域名。
      */
@@ -112,6 +119,22 @@ public class CreateVodDomainRequest extends AbstractModel {
         this.AccelerateArea = AccelerateArea;
     }
 
+    /**
+     * Get 域名类型，取值有： <li>VOD：使用 VOD 产品分发的域名；</li> <li>EdgeOne：使用 EdgeOne 产品分发的域名。</li>不填默认取值为 VOD 。 
+     * @return Type 域名类型，取值有： <li>VOD：使用 VOD 产品分发的域名；</li> <li>EdgeOne：使用 EdgeOne 产品分发的域名。</li>不填默认取值为 VOD 。
+     */
+    public String getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set 域名类型，取值有： <li>VOD：使用 VOD 产品分发的域名；</li> <li>EdgeOne：使用 EdgeOne 产品分发的域名。</li>不填默认取值为 VOD 。
+     * @param Type 域名类型，取值有： <li>VOD：使用 VOD 产品分发的域名；</li> <li>EdgeOne：使用 EdgeOne 产品分发的域名。</li>不填默认取值为 VOD 。
+     */
+    public void setType(String Type) {
+        this.Type = Type;
+    }
+
     public CreateVodDomainRequest() {
     }
 
@@ -129,6 +152,9 @@ public class CreateVodDomainRequest extends AbstractModel {
         if (source.AccelerateArea != null) {
             this.AccelerateArea = new String(source.AccelerateArea);
         }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
     }
 
 
@@ -139,6 +165,7 @@ public class CreateVodDomainRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Domain", this.Domain);
         this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
         this.setParamSimple(map, prefix + "AccelerateArea", this.AccelerateArea);
+        this.setParamSimple(map, prefix + "Type", this.Type);
 
     }
 }

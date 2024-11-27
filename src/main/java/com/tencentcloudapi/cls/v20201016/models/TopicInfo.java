@@ -108,6 +108,9 @@ public class TopicInfo extends AbstractModel {
 
     /**
     * 主题的存储类型
+
+- hot: 标准存储
+- cold: 低频存储
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StorageType")
@@ -401,8 +404,14 @@ HotPeriod=0为没有开启日志沉降。
 
     /**
      * Get 主题的存储类型
+
+- hot: 标准存储
+- cold: 低频存储
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return StorageType 主题的存储类型
+
+- hot: 标准存储
+- cold: 低频存储
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStorageType() {
@@ -411,8 +420,14 @@ HotPeriod=0为没有开启日志沉降。
 
     /**
      * Set 主题的存储类型
+
+- hot: 标准存储
+- cold: 低频存储
 注意：此字段可能返回 null，表示取不到有效值。
      * @param StorageType 主题的存储类型
+
+- hot: 标准存储
+- cold: 低频存储
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStorageType(String StorageType) {

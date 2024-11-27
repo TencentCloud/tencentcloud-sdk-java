@@ -383,6 +383,13 @@ public class Cluster extends AbstractModel {
     private Long MemRatio;
 
     /**
+    * 是否开启跨租户弹性网卡
+    */
+    @SerializedName("CrossTenantEniMode")
+    @Expose
+    private Long CrossTenantEniMode;
+
+    /**
      * Get 集群 ID 
      * @return ClusterId 集群 ID
      */
@@ -1254,6 +1261,22 @@ public class Cluster extends AbstractModel {
         this.MemRatio = MemRatio;
     }
 
+    /**
+     * Get 是否开启跨租户弹性网卡 
+     * @return CrossTenantEniMode 是否开启跨租户弹性网卡
+     */
+    public Long getCrossTenantEniMode() {
+        return this.CrossTenantEniMode;
+    }
+
+    /**
+     * Set 是否开启跨租户弹性网卡
+     * @param CrossTenantEniMode 是否开启跨租户弹性网卡
+     */
+    public void setCrossTenantEniMode(Long CrossTenantEniMode) {
+        this.CrossTenantEniMode = CrossTenantEniMode;
+    }
+
     public Cluster() {
     }
 
@@ -1421,6 +1444,9 @@ public class Cluster extends AbstractModel {
         if (source.MemRatio != null) {
             this.MemRatio = new Long(source.MemRatio);
         }
+        if (source.CrossTenantEniMode != null) {
+            this.CrossTenantEniMode = new Long(source.CrossTenantEniMode);
+        }
     }
 
 
@@ -1475,6 +1501,7 @@ public class Cluster extends AbstractModel {
         this.setParamSimple(map, prefix + "ResourceType", this.ResourceType);
         this.setParamSimple(map, prefix + "BillingResourceMode", this.BillingResourceMode);
         this.setParamSimple(map, prefix + "MemRatio", this.MemRatio);
+        this.setParamSimple(map, prefix + "CrossTenantEniMode", this.CrossTenantEniMode);
 
     }
 }

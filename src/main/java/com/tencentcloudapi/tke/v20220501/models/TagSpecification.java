@@ -24,7 +24,9 @@ import java.util.HashMap;
 public class TagSpecification extends AbstractModel {
 
     /**
-    * 标签绑定的资源类型，当前支持类型："cluster"
+    * 标签绑定的资源类型，当前支持类型：
+1.cluster：集群相关接口，TagSpecification 的 ResourceType 传参为 cluster
+2.machine：节点池相关接口，如：CreateNodePool, DescribeNodePools 等，TagSpecification 的 ResourceType 传参为 machine
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceType")
@@ -40,9 +42,13 @@ public class TagSpecification extends AbstractModel {
     private Tag [] Tags;
 
     /**
-     * Get 标签绑定的资源类型，当前支持类型："cluster"
+     * Get 标签绑定的资源类型，当前支持类型：
+1.cluster：集群相关接口，TagSpecification 的 ResourceType 传参为 cluster
+2.machine：节点池相关接口，如：CreateNodePool, DescribeNodePools 等，TagSpecification 的 ResourceType 传参为 machine
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ResourceType 标签绑定的资源类型，当前支持类型："cluster"
+     * @return ResourceType 标签绑定的资源类型，当前支持类型：
+1.cluster：集群相关接口，TagSpecification 的 ResourceType 传参为 cluster
+2.machine：节点池相关接口，如：CreateNodePool, DescribeNodePools 等，TagSpecification 的 ResourceType 传参为 machine
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceType() {
@@ -50,9 +56,13 @@ public class TagSpecification extends AbstractModel {
     }
 
     /**
-     * Set 标签绑定的资源类型，当前支持类型："cluster"
+     * Set 标签绑定的资源类型，当前支持类型：
+1.cluster：集群相关接口，TagSpecification 的 ResourceType 传参为 cluster
+2.machine：节点池相关接口，如：CreateNodePool, DescribeNodePools 等，TagSpecification 的 ResourceType 传参为 machine
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ResourceType 标签绑定的资源类型，当前支持类型："cluster"
+     * @param ResourceType 标签绑定的资源类型，当前支持类型：
+1.cluster：集群相关接口，TagSpecification 的 ResourceType 传参为 cluster
+2.machine：节点池相关接口，如：CreateNodePool, DescribeNodePools 等，TagSpecification 的 ResourceType 传参为 machine
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceType(String ResourceType) {

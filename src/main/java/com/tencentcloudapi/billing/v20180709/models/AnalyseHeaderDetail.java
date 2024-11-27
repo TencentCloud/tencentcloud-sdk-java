@@ -25,7 +25,6 @@ public class AnalyseHeaderDetail extends AbstractModel {
 
     /**
     * 表头日期
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HeadDetail")
     @Expose
@@ -33,7 +32,6 @@ public class AnalyseHeaderDetail extends AbstractModel {
 
     /**
     * 时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -41,17 +39,14 @@ public class AnalyseHeaderDetail extends AbstractModel {
 
     /**
     * 总计
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Total")
     @Expose
     private String Total;
 
     /**
-     * Get 表头日期
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 表头日期 
      * @return HeadDetail 表头日期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AnalyseHeaderTimeDetail [] getHeadDetail() {
         return this.HeadDetail;
@@ -59,19 +54,15 @@ public class AnalyseHeaderDetail extends AbstractModel {
 
     /**
      * Set 表头日期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HeadDetail 表头日期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHeadDetail(AnalyseHeaderTimeDetail [] HeadDetail) {
         this.HeadDetail = HeadDetail;
     }
 
     /**
-     * Get 时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 时间 
      * @return Name 时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -79,19 +70,15 @@ public class AnalyseHeaderDetail extends AbstractModel {
 
     /**
      * Set 时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 总计
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 总计 
      * @return Total 总计
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTotal() {
         return this.Total;
@@ -99,9 +86,7 @@ public class AnalyseHeaderDetail extends AbstractModel {
 
     /**
      * Set 总计
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Total 总计
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotal(String Total) {
         this.Total = Total;

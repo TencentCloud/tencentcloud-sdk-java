@@ -66,6 +66,13 @@ WARN_DRIVER_LICENSE_BORDER_INCOMPLETE 边框不完整告警
     private String [] RecognizeWarnMsg;
 
     /**
+    * 行驶证类型 电子行驶证：Electronic 普通行驶证：Normal
+    */
+    @SerializedName("VehicleLicenseType")
+    @Expose
+    private String VehicleLicenseType;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -193,6 +200,22 @@ WARN_DRIVER_LICENSE_BORDER_INCOMPLETE 边框不完整告警
     }
 
     /**
+     * Get 行驶证类型 电子行驶证：Electronic 普通行驶证：Normal 
+     * @return VehicleLicenseType 行驶证类型 电子行驶证：Electronic 普通行驶证：Normal
+     */
+    public String getVehicleLicenseType() {
+        return this.VehicleLicenseType;
+    }
+
+    /**
+     * Set 行驶证类型 电子行驶证：Electronic 普通行驶证：Normal
+     * @param VehicleLicenseType 行驶证类型 电子行驶证：Electronic 普通行驶证：Normal
+     */
+    public void setVehicleLicenseType(String VehicleLicenseType) {
+        this.VehicleLicenseType = VehicleLicenseType;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -234,6 +257,9 @@ WARN_DRIVER_LICENSE_BORDER_INCOMPLETE 边框不完整告警
                 this.RecognizeWarnMsg[i] = new String(source.RecognizeWarnMsg[i]);
             }
         }
+        if (source.VehicleLicenseType != null) {
+            this.VehicleLicenseType = new String(source.VehicleLicenseType);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -248,6 +274,7 @@ WARN_DRIVER_LICENSE_BORDER_INCOMPLETE 边框不完整告警
         this.setParamObj(map, prefix + "BackInfo.", this.BackInfo);
         this.setParamArraySimple(map, prefix + "RecognizeWarnCode.", this.RecognizeWarnCode);
         this.setParamArraySimple(map, prefix + "RecognizeWarnMsg.", this.RecognizeWarnMsg);
+        this.setParamSimple(map, prefix + "VehicleLicenseType", this.VehicleLicenseType);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

@@ -25,17 +25,14 @@ public class AnalyseOwnerUinDetail extends AbstractModel {
 
     /**
     * 使用者uin
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OwnerUin")
     @Expose
     private String OwnerUin;
 
     /**
-     * Get 使用者uin
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 使用者uin 
      * @return OwnerUin 使用者uin
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOwnerUin() {
         return this.OwnerUin;
@@ -43,9 +40,7 @@ public class AnalyseOwnerUinDetail extends AbstractModel {
 
     /**
      * Set 使用者uin
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OwnerUin 使用者uin
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOwnerUin(String OwnerUin) {
         this.OwnerUin = OwnerUin;

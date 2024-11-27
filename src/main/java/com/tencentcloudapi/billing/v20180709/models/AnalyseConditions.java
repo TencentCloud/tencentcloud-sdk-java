@@ -25,7 +25,6 @@ public class AnalyseConditions extends AbstractModel {
 
     /**
     * 产品名称代码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BusinessCodes")
     @Expose
@@ -33,7 +32,6 @@ public class AnalyseConditions extends AbstractModel {
 
     /**
     * 子产品名称代码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProductCodes")
     @Expose
@@ -41,7 +39,6 @@ public class AnalyseConditions extends AbstractModel {
 
     /**
     * 组件类型代码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ComponentCode")
     @Expose
@@ -49,7 +46,6 @@ public class AnalyseConditions extends AbstractModel {
 
     /**
     * 可用区ID：资源所属可用区ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ZoneIds")
     @Expose
@@ -57,7 +53,6 @@ public class AnalyseConditions extends AbstractModel {
 
     /**
     * 地域ID:资源所属地域ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RegionIds")
     @Expose
@@ -65,7 +60,6 @@ public class AnalyseConditions extends AbstractModel {
 
     /**
     * 项目ID:资源所属项目ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProjectIds")
     @Expose
@@ -73,7 +67,6 @@ public class AnalyseConditions extends AbstractModel {
 
     /**
     * 计费模式 prePay(表示包年包月)/postPay(表示按量计费)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PayModes")
     @Expose
@@ -81,7 +74,6 @@ public class AnalyseConditions extends AbstractModel {
 
     /**
     * 交易类型，查询交易类型（请使用交易类型code入参）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ActionTypes")
     @Expose
@@ -89,7 +81,6 @@ public class AnalyseConditions extends AbstractModel {
 
     /**
     * 分账标签键
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tags")
     @Expose
@@ -102,7 +93,6 @@ incentivePayAmount:赠送金
 voucherPayAmount:优惠券 
 tax:税金 
 costBeforeTax:税前价
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FeeType")
     @Expose
@@ -110,7 +100,6 @@ costBeforeTax:税前价
 
     /**
     * 查询成本分析数据的用户UIN
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PayerUins")
     @Expose
@@ -118,7 +107,6 @@ costBeforeTax:税前价
 
     /**
     * 使用资源的用户UIN
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OwnerUins")
     @Expose
@@ -126,17 +114,14 @@ costBeforeTax:税前价
 
     /**
     * 消耗类型，查询消耗类型（请使用消耗类型code入参）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConsumptionTypes")
     @Expose
     private String ConsumptionTypes;
 
     /**
-     * Get 产品名称代码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 产品名称代码 
      * @return BusinessCodes 产品名称代码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBusinessCodes() {
         return this.BusinessCodes;
@@ -144,19 +129,15 @@ costBeforeTax:税前价
 
     /**
      * Set 产品名称代码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BusinessCodes 产品名称代码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBusinessCodes(String BusinessCodes) {
         this.BusinessCodes = BusinessCodes;
     }
 
     /**
-     * Get 子产品名称代码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子产品名称代码 
      * @return ProductCodes 子产品名称代码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProductCodes() {
         return this.ProductCodes;
@@ -164,19 +145,15 @@ costBeforeTax:税前价
 
     /**
      * Set 子产品名称代码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProductCodes 子产品名称代码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProductCodes(String ProductCodes) {
         this.ProductCodes = ProductCodes;
     }
 
     /**
-     * Get 组件类型代码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 组件类型代码 
      * @return ComponentCode 组件类型代码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getComponentCode() {
         return this.ComponentCode;
@@ -184,19 +161,15 @@ costBeforeTax:税前价
 
     /**
      * Set 组件类型代码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ComponentCode 组件类型代码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setComponentCode(String ComponentCode) {
         this.ComponentCode = ComponentCode;
     }
 
     /**
-     * Get 可用区ID：资源所属可用区ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 可用区ID：资源所属可用区ID 
      * @return ZoneIds 可用区ID：资源所属可用区ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getZoneIds() {
         return this.ZoneIds;
@@ -204,19 +177,15 @@ costBeforeTax:税前价
 
     /**
      * Set 可用区ID：资源所属可用区ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ZoneIds 可用区ID：资源所属可用区ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZoneIds(String ZoneIds) {
         this.ZoneIds = ZoneIds;
     }
 
     /**
-     * Get 地域ID:资源所属地域ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地域ID:资源所属地域ID 
      * @return RegionIds 地域ID:资源所属地域ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegionIds() {
         return this.RegionIds;
@@ -224,19 +193,15 @@ costBeforeTax:税前价
 
     /**
      * Set 地域ID:资源所属地域ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RegionIds 地域ID:资源所属地域ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegionIds(String RegionIds) {
         this.RegionIds = RegionIds;
     }
 
     /**
-     * Get 项目ID:资源所属项目ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 项目ID:资源所属项目ID 
      * @return ProjectIds 项目ID:资源所属项目ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProjectIds() {
         return this.ProjectIds;
@@ -244,19 +209,15 @@ costBeforeTax:税前价
 
     /**
      * Set 项目ID:资源所属项目ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProjectIds 项目ID:资源所属项目ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProjectIds(String ProjectIds) {
         this.ProjectIds = ProjectIds;
     }
 
     /**
-     * Get 计费模式 prePay(表示包年包月)/postPay(表示按量计费)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 计费模式 prePay(表示包年包月)/postPay(表示按量计费) 
      * @return PayModes 计费模式 prePay(表示包年包月)/postPay(表示按量计费)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPayModes() {
         return this.PayModes;
@@ -264,19 +225,15 @@ costBeforeTax:税前价
 
     /**
      * Set 计费模式 prePay(表示包年包月)/postPay(表示按量计费)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PayModes 计费模式 prePay(表示包年包月)/postPay(表示按量计费)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPayModes(String PayModes) {
         this.PayModes = PayModes;
     }
 
     /**
-     * Get 交易类型，查询交易类型（请使用交易类型code入参）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 交易类型，查询交易类型（请使用交易类型code入参） 
      * @return ActionTypes 交易类型，查询交易类型（请使用交易类型code入参）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getActionTypes() {
         return this.ActionTypes;
@@ -284,19 +241,15 @@ costBeforeTax:税前价
 
     /**
      * Set 交易类型，查询交易类型（请使用交易类型code入参）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ActionTypes 交易类型，查询交易类型（请使用交易类型code入参）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setActionTypes(String ActionTypes) {
         this.ActionTypes = ActionTypes;
     }
 
     /**
-     * Get 分账标签键
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分账标签键 
      * @return Tags 分账标签键
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTags() {
         return this.Tags;
@@ -304,9 +257,7 @@ costBeforeTax:税前价
 
     /**
      * Set 分账标签键
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tags 分账标签键
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTags(String Tags) {
         this.Tags = Tags;
@@ -318,15 +269,13 @@ cashPayAmount:现金
 incentivePayAmount:赠送金 
 voucherPayAmount:优惠券 
 tax:税金 
-costBeforeTax:税前价
-注意：此字段可能返回 null，表示取不到有效值。 
+costBeforeTax:税前价 
      * @return FeeType 费用类型，查询费用类型（请使用费用类型code入参)入参枚举如下：
 cashPayAmount:现金 
 incentivePayAmount:赠送金 
 voucherPayAmount:优惠券 
 tax:税金 
 costBeforeTax:税前价
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFeeType() {
         return this.FeeType;
@@ -339,24 +288,20 @@ incentivePayAmount:赠送金
 voucherPayAmount:优惠券 
 tax:税金 
 costBeforeTax:税前价
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FeeType 费用类型，查询费用类型（请使用费用类型code入参)入参枚举如下：
 cashPayAmount:现金 
 incentivePayAmount:赠送金 
 voucherPayAmount:优惠券 
 tax:税金 
 costBeforeTax:税前价
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFeeType(String FeeType) {
         this.FeeType = FeeType;
     }
 
     /**
-     * Get 查询成本分析数据的用户UIN
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 查询成本分析数据的用户UIN 
      * @return PayerUins 查询成本分析数据的用户UIN
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPayerUins() {
         return this.PayerUins;
@@ -364,19 +309,15 @@ costBeforeTax:税前价
 
     /**
      * Set 查询成本分析数据的用户UIN
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PayerUins 查询成本分析数据的用户UIN
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPayerUins(String PayerUins) {
         this.PayerUins = PayerUins;
     }
 
     /**
-     * Get 使用资源的用户UIN
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 使用资源的用户UIN 
      * @return OwnerUins 使用资源的用户UIN
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOwnerUins() {
         return this.OwnerUins;
@@ -384,19 +325,15 @@ costBeforeTax:税前价
 
     /**
      * Set 使用资源的用户UIN
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OwnerUins 使用资源的用户UIN
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOwnerUins(String OwnerUins) {
         this.OwnerUins = OwnerUins;
     }
 
     /**
-     * Get 消耗类型，查询消耗类型（请使用消耗类型code入参）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 消耗类型，查询消耗类型（请使用消耗类型code入参） 
      * @return ConsumptionTypes 消耗类型，查询消耗类型（请使用消耗类型code入参）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getConsumptionTypes() {
         return this.ConsumptionTypes;
@@ -404,9 +341,7 @@ costBeforeTax:税前价
 
     /**
      * Set 消耗类型，查询消耗类型（请使用消耗类型code入参）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ConsumptionTypes 消耗类型，查询消耗类型（请使用消耗类型code入参）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConsumptionTypes(String ConsumptionTypes) {
         this.ConsumptionTypes = ConsumptionTypes;

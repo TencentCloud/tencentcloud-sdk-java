@@ -62,6 +62,14 @@ public class Message extends AbstractModel {
     private ToolCall [] ToolCalls;
 
     /**
+    * 文件标识符。单次最大 50 个文件。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FileIDs")
+    @Expose
+    private String [] FileIDs;
+
+    /**
      * Get 角色，可选值包括 system、user、assistant、 tool。 
      * @return Role 角色，可选值包括 system、user、assistant、 tool。
      */
@@ -153,6 +161,26 @@ public class Message extends AbstractModel {
         this.ToolCalls = ToolCalls;
     }
 
+    /**
+     * Get 文件标识符。单次最大 50 个文件。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FileIDs 文件标识符。单次最大 50 个文件。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getFileIDs() {
+        return this.FileIDs;
+    }
+
+    /**
+     * Set 文件标识符。单次最大 50 个文件。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FileIDs 文件标识符。单次最大 50 个文件。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFileIDs(String [] FileIDs) {
+        this.FileIDs = FileIDs;
+    }
+
     public Message() {
     }
 
@@ -182,6 +210,12 @@ public class Message extends AbstractModel {
                 this.ToolCalls[i] = new ToolCall(source.ToolCalls[i]);
             }
         }
+        if (source.FileIDs != null) {
+            this.FileIDs = new String[source.FileIDs.length];
+            for (int i = 0; i < source.FileIDs.length; i++) {
+                this.FileIDs[i] = new String(source.FileIDs[i]);
+            }
+        }
     }
 
 
@@ -194,6 +228,7 @@ public class Message extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Contents.", this.Contents);
         this.setParamSimple(map, prefix + "ToolCallId", this.ToolCallId);
         this.setParamArrayObj(map, prefix + "ToolCalls.", this.ToolCalls);
+        this.setParamArraySimple(map, prefix + "FileIDs.", this.FileIDs);
 
     }
 }

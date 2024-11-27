@@ -73,6 +73,13 @@ public class TranslationAclRule extends AbstractModel {
     private Long Action;
 
     /**
+    * ACL规则描述
+    */
+    @SerializedName("Description")
+    @Expose
+    private String Description;
+
+    /**
      * Get ACL协议类型，可选值:"ALL","TCP","UDP" 
      * @return Protocol ACL协议类型，可选值:"ALL","TCP","UDP"
      */
@@ -184,6 +191,22 @@ public class TranslationAclRule extends AbstractModel {
         this.Action = Action;
     }
 
+    /**
+     * Get ACL规则描述 
+     * @return Description ACL规则描述
+     */
+    public String getDescription() {
+        return this.Description;
+    }
+
+    /**
+     * Set ACL规则描述
+     * @param Description ACL规则描述
+     */
+    public void setDescription(String Description) {
+        this.Description = Description;
+    }
+
     public TranslationAclRule() {
     }
 
@@ -213,6 +236,9 @@ public class TranslationAclRule extends AbstractModel {
         if (source.Action != null) {
             this.Action = new Long(source.Action);
         }
+        if (source.Description != null) {
+            this.Description = new String(source.Description);
+        }
     }
 
 
@@ -227,6 +253,7 @@ public class TranslationAclRule extends AbstractModel {
         this.setParamSimple(map, prefix + "DestinationCidr", this.DestinationCidr);
         this.setParamSimple(map, prefix + "AclRuleId", this.AclRuleId);
         this.setParamSimple(map, prefix + "Action", this.Action);
+        this.setParamSimple(map, prefix + "Description", this.Description);
 
     }
 }

@@ -25,7 +25,6 @@ public class AnalyseRegionDetail extends AbstractModel {
 
     /**
     * 地域id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RegionId")
     @Expose
@@ -33,17 +32,14 @@ public class AnalyseRegionDetail extends AbstractModel {
 
     /**
     * 地域名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RegionName")
     @Expose
     private String RegionName;
 
     /**
-     * Get 地域id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地域id 
      * @return RegionId 地域id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegionId() {
         return this.RegionId;
@@ -51,19 +47,15 @@ public class AnalyseRegionDetail extends AbstractModel {
 
     /**
      * Set 地域id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RegionId 地域id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegionId(String RegionId) {
         this.RegionId = RegionId;
     }
 
     /**
-     * Get 地域名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地域名称 
      * @return RegionName 地域名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegionName() {
         return this.RegionName;
@@ -71,9 +63,7 @@ public class AnalyseRegionDetail extends AbstractModel {
 
     /**
      * Set 地域名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RegionName 地域名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegionName(String RegionName) {
         this.RegionName = RegionName;

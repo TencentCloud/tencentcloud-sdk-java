@@ -25,7 +25,6 @@ public class AnalyseAmountDetail extends AbstractModel {
 
     /**
     * 费用类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Key")
     @Expose
@@ -33,17 +32,14 @@ public class AnalyseAmountDetail extends AbstractModel {
 
     /**
     * 是否展示
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Display")
     @Expose
     private Long Display;
 
     /**
-     * Get 费用类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 费用类型 
      * @return Key 费用类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKey() {
         return this.Key;
@@ -51,19 +47,15 @@ public class AnalyseAmountDetail extends AbstractModel {
 
     /**
      * Set 费用类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Key 费用类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKey(String Key) {
         this.Key = Key;
     }
 
     /**
-     * Get 是否展示
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否展示 
      * @return Display 是否展示
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDisplay() {
         return this.Display;
@@ -71,9 +63,7 @@ public class AnalyseAmountDetail extends AbstractModel {
 
     /**
      * Set 是否展示
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Display 是否展示
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDisplay(Long Display) {
         this.Display = Display;
