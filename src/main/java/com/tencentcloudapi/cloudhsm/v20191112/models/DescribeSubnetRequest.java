@@ -45,7 +45,7 @@ public class DescribeSubnetRequest extends AbstractModel {
     private String VpcId;
 
     /**
-    * 查找关键字
+    * 过滤条件
     */
     @SerializedName("SearchWord")
     @Expose
@@ -100,16 +100,16 @@ public class DescribeSubnetRequest extends AbstractModel {
     }
 
     /**
-     * Get 查找关键字 
-     * @return SearchWord 查找关键字
+     * Get 过滤条件 
+     * @return SearchWord 过滤条件
      */
     public String getSearchWord() {
         return this.SearchWord;
     }
 
     /**
-     * Set 查找关键字
-     * @param SearchWord 查找关键字
+     * Set 过滤条件
+     * @param SearchWord 过滤条件
      */
     public void setSearchWord(String SearchWord) {
         this.SearchWord = SearchWord;

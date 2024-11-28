@@ -164,6 +164,17 @@ API 网关中每个服务都会提供一个默认的域名供用户调用，但�
     }
 
     /**
+     *创建专享实例
+     * @param req CreateExclusiveInstancesRequest
+     * @return CreateExclusiveInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateExclusiveInstancesResponse CreateExclusiveInstances(CreateExclusiveInstancesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateExclusiveInstances", CreateExclusiveInstancesResponse.class);
+    }
+
+    /**
      *本接口（CreateIPStrategy）用于创建服务IP策略。
      * @param req CreateIPStrategyRequest
      * @return CreateIPStrategyResponse
@@ -576,6 +587,17 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
     public DescribeIPStrategysStatusResponse DescribeIPStrategysStatus(DescribeIPStrategysStatusRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeIPStrategysStatus", DescribeIPStrategysStatusResponse.class);
+    }
+
+    /**
+     *获取专享实例网络配置列表
+     * @param req DescribeInstancesNetworkConfigRequest
+     * @return DescribeInstancesNetworkConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstancesNetworkConfigResponse DescribeInstancesNetworkConfig(DescribeInstancesNetworkConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeInstancesNetworkConfig", DescribeInstancesNetworkConfigResponse.class);
     }
 
     /**

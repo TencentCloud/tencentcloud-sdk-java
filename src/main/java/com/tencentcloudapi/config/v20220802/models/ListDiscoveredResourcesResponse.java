@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.ocr.v20181119.models;
+package com.tencentcloudapi.config.v20220802.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,35 +21,22 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class RecognizePhilippinesSssIDOCRResponse extends AbstractModel {
+public class ListDiscoveredResourcesResponse extends AbstractModel {
 
     /**
-    * 人像照片Base64后的结果
+    * 详情
     */
-    @SerializedName("HeadPortrait")
+    @SerializedName("Items")
     @Expose
-    private TextDetectionResult HeadPortrait;
+    private ResourceListInfo [] Items;
 
     /**
-    * 编号
+    * 下一页
+注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("LicenseNumber")
+    @SerializedName("NextToken")
     @Expose
-    private TextDetectionResult LicenseNumber;
-
-    /**
-    * 姓名
-    */
-    @SerializedName("FullName")
-    @Expose
-    private TextDetectionResult FullName;
-
-    /**
-    * 生日
-    */
-    @SerializedName("Birthday")
-    @Expose
-    private TextDetectionResult Birthday;
+    private String NextToken;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -59,67 +46,39 @@ public class RecognizePhilippinesSssIDOCRResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 人像照片Base64后的结果 
-     * @return HeadPortrait 人像照片Base64后的结果
+     * Get 详情 
+     * @return Items 详情
      */
-    public TextDetectionResult getHeadPortrait() {
-        return this.HeadPortrait;
+    public ResourceListInfo [] getItems() {
+        return this.Items;
     }
 
     /**
-     * Set 人像照片Base64后的结果
-     * @param HeadPortrait 人像照片Base64后的结果
+     * Set 详情
+     * @param Items 详情
      */
-    public void setHeadPortrait(TextDetectionResult HeadPortrait) {
-        this.HeadPortrait = HeadPortrait;
+    public void setItems(ResourceListInfo [] Items) {
+        this.Items = Items;
     }
 
     /**
-     * Get 编号 
-     * @return LicenseNumber 编号
+     * Get 下一页
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NextToken 下一页
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public TextDetectionResult getLicenseNumber() {
-        return this.LicenseNumber;
+    public String getNextToken() {
+        return this.NextToken;
     }
 
     /**
-     * Set 编号
-     * @param LicenseNumber 编号
+     * Set 下一页
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NextToken 下一页
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setLicenseNumber(TextDetectionResult LicenseNumber) {
-        this.LicenseNumber = LicenseNumber;
-    }
-
-    /**
-     * Get 姓名 
-     * @return FullName 姓名
-     */
-    public TextDetectionResult getFullName() {
-        return this.FullName;
-    }
-
-    /**
-     * Set 姓名
-     * @param FullName 姓名
-     */
-    public void setFullName(TextDetectionResult FullName) {
-        this.FullName = FullName;
-    }
-
-    /**
-     * Get 生日 
-     * @return Birthday 生日
-     */
-    public TextDetectionResult getBirthday() {
-        return this.Birthday;
-    }
-
-    /**
-     * Set 生日
-     * @param Birthday 生日
-     */
-    public void setBirthday(TextDetectionResult Birthday) {
-        this.Birthday = Birthday;
+    public void setNextToken(String NextToken) {
+        this.NextToken = NextToken;
     }
 
     /**
@@ -138,25 +97,22 @@ public class RecognizePhilippinesSssIDOCRResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public RecognizePhilippinesSssIDOCRResponse() {
+    public ListDiscoveredResourcesResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public RecognizePhilippinesSssIDOCRResponse(RecognizePhilippinesSssIDOCRResponse source) {
-        if (source.HeadPortrait != null) {
-            this.HeadPortrait = new TextDetectionResult(source.HeadPortrait);
+    public ListDiscoveredResourcesResponse(ListDiscoveredResourcesResponse source) {
+        if (source.Items != null) {
+            this.Items = new ResourceListInfo[source.Items.length];
+            for (int i = 0; i < source.Items.length; i++) {
+                this.Items[i] = new ResourceListInfo(source.Items[i]);
+            }
         }
-        if (source.LicenseNumber != null) {
-            this.LicenseNumber = new TextDetectionResult(source.LicenseNumber);
-        }
-        if (source.FullName != null) {
-            this.FullName = new TextDetectionResult(source.FullName);
-        }
-        if (source.Birthday != null) {
-            this.Birthday = new TextDetectionResult(source.Birthday);
+        if (source.NextToken != null) {
+            this.NextToken = new String(source.NextToken);
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -168,10 +124,8 @@ public class RecognizePhilippinesSssIDOCRResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "HeadPortrait.", this.HeadPortrait);
-        this.setParamObj(map, prefix + "LicenseNumber.", this.LicenseNumber);
-        this.setParamObj(map, prefix + "FullName.", this.FullName);
-        this.setParamObj(map, prefix + "Birthday.", this.Birthday);
+        this.setParamArrayObj(map, prefix + "Items.", this.Items);
+        this.setParamSimple(map, prefix + "NextToken", this.NextToken);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

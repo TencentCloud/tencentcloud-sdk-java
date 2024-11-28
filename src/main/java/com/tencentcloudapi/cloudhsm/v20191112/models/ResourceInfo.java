@@ -25,7 +25,6 @@ public class ResourceInfo extends AbstractModel {
 
     /**
     * 资源Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceId")
     @Expose
@@ -33,7 +32,6 @@ public class ResourceInfo extends AbstractModel {
 
     /**
     * 资源名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceName")
     @Expose
@@ -41,7 +39,6 @@ public class ResourceInfo extends AbstractModel {
 
     /**
     * 资源状态，1-正常，2-隔离，3-销毁
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -49,7 +46,6 @@ public class ResourceInfo extends AbstractModel {
 
     /**
     * 资源IP
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Vip")
     @Expose
@@ -57,7 +53,6 @@ public class ResourceInfo extends AbstractModel {
 
     /**
     * 资源所属Vpc
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcId")
     @Expose
@@ -65,7 +60,6 @@ public class ResourceInfo extends AbstractModel {
 
     /**
     * 资源所属子网
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubnetId")
     @Expose
@@ -73,7 +67,6 @@ public class ResourceInfo extends AbstractModel {
 
     /**
     * 资源所属HSM规格
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Model")
     @Expose
@@ -81,7 +74,6 @@ public class ResourceInfo extends AbstractModel {
 
     /**
     * 云加密机类型id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VsmType")
     @Expose
@@ -89,7 +81,6 @@ public class ResourceInfo extends AbstractModel {
 
     /**
     * 地域Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RegionId")
     @Expose
@@ -97,7 +88,6 @@ public class ResourceInfo extends AbstractModel {
 
     /**
     * 区域Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ZoneId")
     @Expose
@@ -105,7 +95,6 @@ public class ResourceInfo extends AbstractModel {
 
     /**
     * 过期时间（Epoch Unix Timestamp）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExpireTime")
     @Expose
@@ -113,7 +102,6 @@ public class ResourceInfo extends AbstractModel {
 
     /**
     * 地域名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RegionName")
     @Expose
@@ -121,7 +109,6 @@ public class ResourceInfo extends AbstractModel {
 
     /**
     * 区域名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ZoneName")
     @Expose
@@ -129,7 +116,6 @@ public class ResourceInfo extends AbstractModel {
 
     /**
     * 实例的安全组列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SgList")
     @Expose
@@ -137,7 +123,6 @@ public class ResourceInfo extends AbstractModel {
 
     /**
     * 子网名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubnetName")
     @Expose
@@ -145,7 +130,6 @@ public class ResourceInfo extends AbstractModel {
 
     /**
     * 当前实例是否已经过期
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Expired")
     @Expose
@@ -153,7 +137,6 @@ public class ResourceInfo extends AbstractModel {
 
     /**
     * 为正数表示实例距离过期时间还剩余多少秒，为负数表示已经过期多少秒
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RemainSeconds")
     @Expose
@@ -161,7 +144,6 @@ public class ResourceInfo extends AbstractModel {
 
     /**
     * Vpc名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcName")
     @Expose
@@ -169,7 +151,6 @@ public class ResourceInfo extends AbstractModel {
 
     /**
     * 创建者Uin账号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateUin")
     @Expose
@@ -177,7 +158,6 @@ public class ResourceInfo extends AbstractModel {
 
     /**
     * 自动续费状态标识， 0-手动续费，1-自动续费，2-到期不续
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RenewFlag")
     @Expose
@@ -185,7 +165,6 @@ public class ResourceInfo extends AbstractModel {
 
     /**
     * 标签列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tags")
     @Expose
@@ -193,7 +172,6 @@ public class ResourceInfo extends AbstractModel {
 
     /**
     * 厂商
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Manufacturer")
     @Expose
@@ -201,17 +179,14 @@ public class ResourceInfo extends AbstractModel {
 
     /**
     * 告警状态，0：停用，1：启用
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AlarmStatus")
     @Expose
     private Long AlarmStatus;
 
     /**
-     * Get 资源Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源Id 
      * @return ResourceId 资源Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceId() {
         return this.ResourceId;
@@ -219,19 +194,15 @@ public class ResourceInfo extends AbstractModel {
 
     /**
      * Set 资源Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceId 资源Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
     }
 
     /**
-     * Get 资源名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源名称 
      * @return ResourceName 资源名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceName() {
         return this.ResourceName;
@@ -239,19 +210,15 @@ public class ResourceInfo extends AbstractModel {
 
     /**
      * Set 资源名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceName 资源名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceName(String ResourceName) {
         this.ResourceName = ResourceName;
     }
 
     /**
-     * Get 资源状态，1-正常，2-隔离，3-销毁
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源状态，1-正常，2-隔离，3-销毁 
      * @return Status 资源状态，1-正常，2-隔离，3-销毁
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
         return this.Status;
@@ -259,19 +226,15 @@ public class ResourceInfo extends AbstractModel {
 
     /**
      * Set 资源状态，1-正常，2-隔离，3-销毁
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 资源状态，1-正常，2-隔离，3-销毁
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 资源IP
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源IP 
      * @return Vip 资源IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVip() {
         return this.Vip;
@@ -279,19 +242,15 @@ public class ResourceInfo extends AbstractModel {
 
     /**
      * Set 资源IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Vip 资源IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVip(String Vip) {
         this.Vip = Vip;
     }
 
     /**
-     * Get 资源所属Vpc
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源所属Vpc 
      * @return VpcId 资源所属Vpc
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVpcId() {
         return this.VpcId;
@@ -299,19 +258,15 @@ public class ResourceInfo extends AbstractModel {
 
     /**
      * Set 资源所属Vpc
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VpcId 资源所属Vpc
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 资源所属子网
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源所属子网 
      * @return SubnetId 资源所属子网
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubnetId() {
         return this.SubnetId;
@@ -319,19 +274,15 @@ public class ResourceInfo extends AbstractModel {
 
     /**
      * Set 资源所属子网
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubnetId 资源所属子网
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get 资源所属HSM规格
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源所属HSM规格 
      * @return Model 资源所属HSM规格
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getModel() {
         return this.Model;
@@ -339,19 +290,15 @@ public class ResourceInfo extends AbstractModel {
 
     /**
      * Set 资源所属HSM规格
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Model 资源所属HSM规格
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModel(String Model) {
         this.Model = Model;
     }
 
     /**
-     * Get 云加密机类型id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 云加密机类型id 
      * @return VsmType 云加密机类型id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getVsmType() {
         return this.VsmType;
@@ -359,19 +306,15 @@ public class ResourceInfo extends AbstractModel {
 
     /**
      * Set 云加密机类型id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VsmType 云加密机类型id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVsmType(Long VsmType) {
         this.VsmType = VsmType;
     }
 
     /**
-     * Get 地域Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地域Id 
      * @return RegionId 地域Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRegionId() {
         return this.RegionId;
@@ -379,19 +322,15 @@ public class ResourceInfo extends AbstractModel {
 
     /**
      * Set 地域Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RegionId 地域Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegionId(Long RegionId) {
         this.RegionId = RegionId;
     }
 
     /**
-     * Get 区域Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 区域Id 
      * @return ZoneId 区域Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getZoneId() {
         return this.ZoneId;
@@ -399,19 +338,15 @@ public class ResourceInfo extends AbstractModel {
 
     /**
      * Set 区域Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ZoneId 区域Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZoneId(Long ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get 过期时间（Epoch Unix Timestamp）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 过期时间（Epoch Unix Timestamp） 
      * @return ExpireTime 过期时间（Epoch Unix Timestamp）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getExpireTime() {
         return this.ExpireTime;
@@ -419,19 +354,15 @@ public class ResourceInfo extends AbstractModel {
 
     /**
      * Set 过期时间（Epoch Unix Timestamp）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExpireTime 过期时间（Epoch Unix Timestamp）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExpireTime(Long ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 
     /**
-     * Get 地域名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地域名 
      * @return RegionName 地域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegionName() {
         return this.RegionName;
@@ -439,19 +370,15 @@ public class ResourceInfo extends AbstractModel {
 
     /**
      * Set 地域名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RegionName 地域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegionName(String RegionName) {
         this.RegionName = RegionName;
     }
 
     /**
-     * Get 区域名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 区域名 
      * @return ZoneName 区域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getZoneName() {
         return this.ZoneName;
@@ -459,19 +386,15 @@ public class ResourceInfo extends AbstractModel {
 
     /**
      * Set 区域名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ZoneName 区域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZoneName(String ZoneName) {
         this.ZoneName = ZoneName;
     }
 
     /**
-     * Get 实例的安全组列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例的安全组列表 
      * @return SgList 实例的安全组列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SgUnit [] getSgList() {
         return this.SgList;
@@ -479,19 +402,15 @@ public class ResourceInfo extends AbstractModel {
 
     /**
      * Set 实例的安全组列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SgList 实例的安全组列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSgList(SgUnit [] SgList) {
         this.SgList = SgList;
     }
 
     /**
-     * Get 子网名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子网名称 
      * @return SubnetName 子网名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubnetName() {
         return this.SubnetName;
@@ -499,19 +418,15 @@ public class ResourceInfo extends AbstractModel {
 
     /**
      * Set 子网名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubnetName 子网名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubnetName(String SubnetName) {
         this.SubnetName = SubnetName;
     }
 
     /**
-     * Get 当前实例是否已经过期
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当前实例是否已经过期 
      * @return Expired 当前实例是否已经过期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getExpired() {
         return this.Expired;
@@ -519,19 +434,15 @@ public class ResourceInfo extends AbstractModel {
 
     /**
      * Set 当前实例是否已经过期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Expired 当前实例是否已经过期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExpired(Boolean Expired) {
         this.Expired = Expired;
     }
 
     /**
-     * Get 为正数表示实例距离过期时间还剩余多少秒，为负数表示已经过期多少秒
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 为正数表示实例距离过期时间还剩余多少秒，为负数表示已经过期多少秒 
      * @return RemainSeconds 为正数表示实例距离过期时间还剩余多少秒，为负数表示已经过期多少秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRemainSeconds() {
         return this.RemainSeconds;
@@ -539,19 +450,15 @@ public class ResourceInfo extends AbstractModel {
 
     /**
      * Set 为正数表示实例距离过期时间还剩余多少秒，为负数表示已经过期多少秒
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RemainSeconds 为正数表示实例距离过期时间还剩余多少秒，为负数表示已经过期多少秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemainSeconds(Long RemainSeconds) {
         this.RemainSeconds = RemainSeconds;
     }
 
     /**
-     * Get Vpc名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Vpc名称 
      * @return VpcName Vpc名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVpcName() {
         return this.VpcName;
@@ -559,19 +466,15 @@ public class ResourceInfo extends AbstractModel {
 
     /**
      * Set Vpc名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VpcName Vpc名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcName(String VpcName) {
         this.VpcName = VpcName;
     }
 
     /**
-     * Get 创建者Uin账号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建者Uin账号 
      * @return CreateUin 创建者Uin账号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateUin() {
         return this.CreateUin;
@@ -579,19 +482,15 @@ public class ResourceInfo extends AbstractModel {
 
     /**
      * Set 创建者Uin账号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateUin 创建者Uin账号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateUin(String CreateUin) {
         this.CreateUin = CreateUin;
     }
 
     /**
-     * Get 自动续费状态标识， 0-手动续费，1-自动续费，2-到期不续
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 自动续费状态标识， 0-手动续费，1-自动续费，2-到期不续 
      * @return RenewFlag 自动续费状态标识， 0-手动续费，1-自动续费，2-到期不续
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRenewFlag() {
         return this.RenewFlag;
@@ -599,19 +498,15 @@ public class ResourceInfo extends AbstractModel {
 
     /**
      * Set 自动续费状态标识， 0-手动续费，1-自动续费，2-到期不续
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RenewFlag 自动续费状态标识， 0-手动续费，1-自动续费，2-到期不续
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRenewFlag(Long RenewFlag) {
         this.RenewFlag = RenewFlag;
     }
 
     /**
-     * Get 标签列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标签列表 
      * @return Tags 标签列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Tag [] getTags() {
         return this.Tags;
@@ -619,19 +514,15 @@ public class ResourceInfo extends AbstractModel {
 
     /**
      * Set 标签列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tags 标签列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 厂商
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 厂商 
      * @return Manufacturer 厂商
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getManufacturer() {
         return this.Manufacturer;
@@ -639,19 +530,15 @@ public class ResourceInfo extends AbstractModel {
 
     /**
      * Set 厂商
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Manufacturer 厂商
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setManufacturer(String Manufacturer) {
         this.Manufacturer = Manufacturer;
     }
 
     /**
-     * Get 告警状态，0：停用，1：启用
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 告警状态，0：停用，1：启用 
      * @return AlarmStatus 告警状态，0：停用，1：启用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAlarmStatus() {
         return this.AlarmStatus;
@@ -659,9 +546,7 @@ public class ResourceInfo extends AbstractModel {
 
     /**
      * Set 告警状态，0：停用，1：启用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AlarmStatus 告警状态，0：停用，1：启用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAlarmStatus(Long AlarmStatus) {
         this.AlarmStatus = AlarmStatus;

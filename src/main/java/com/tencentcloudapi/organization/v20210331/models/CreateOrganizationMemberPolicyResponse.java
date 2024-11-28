@@ -25,7 +25,6 @@ public class CreateOrganizationMemberPolicyResponse extends AbstractModel {
 
     /**
     * 策略ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PolicyId")
     @Expose
@@ -39,10 +38,8 @@ public class CreateOrganizationMemberPolicyResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 策略ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 策略ID。 
      * @return PolicyId 策略ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPolicyId() {
         return this.PolicyId;
@@ -50,9 +47,7 @@ public class CreateOrganizationMemberPolicyResponse extends AbstractModel {
 
     /**
      * Set 策略ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PolicyId 策略ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPolicyId(Long PolicyId) {
         this.PolicyId = PolicyId;

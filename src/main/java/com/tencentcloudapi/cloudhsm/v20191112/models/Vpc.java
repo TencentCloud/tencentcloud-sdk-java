@@ -25,7 +25,6 @@ public class Vpc extends AbstractModel {
 
     /**
     * Vpc名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcName")
     @Expose
@@ -33,7 +32,6 @@ public class Vpc extends AbstractModel {
 
     /**
     * VpcId
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcId")
     @Expose
@@ -41,7 +39,6 @@ public class Vpc extends AbstractModel {
 
     /**
     * 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreatedTime")
     @Expose
@@ -49,17 +46,14 @@ public class Vpc extends AbstractModel {
 
     /**
     * 是否为默认VPC
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsDefault")
     @Expose
     private Boolean IsDefault;
 
     /**
-     * Get Vpc名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Vpc名称 
      * @return VpcName Vpc名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVpcName() {
         return this.VpcName;
@@ -67,19 +61,15 @@ public class Vpc extends AbstractModel {
 
     /**
      * Set Vpc名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VpcName Vpc名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcName(String VpcName) {
         this.VpcName = VpcName;
     }
 
     /**
-     * Get VpcId
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get VpcId 
      * @return VpcId VpcId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVpcId() {
         return this.VpcId;
@@ -87,19 +77,15 @@ public class Vpc extends AbstractModel {
 
     /**
      * Set VpcId
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VpcId VpcId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间 
      * @return CreatedTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreatedTime() {
         return this.CreatedTime;
@@ -107,19 +93,15 @@ public class Vpc extends AbstractModel {
 
     /**
      * Set 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreatedTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreatedTime(String CreatedTime) {
         this.CreatedTime = CreatedTime;
     }
 
     /**
-     * Get 是否为默认VPC
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否为默认VPC 
      * @return IsDefault 是否为默认VPC
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsDefault() {
         return this.IsDefault;
@@ -127,9 +109,7 @@ public class Vpc extends AbstractModel {
 
     /**
      * Set 是否为默认VPC
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsDefault 是否为默认VPC
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsDefault(Boolean IsDefault) {
         this.IsDefault = IsDefault;

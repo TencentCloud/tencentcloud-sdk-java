@@ -25,7 +25,6 @@ public class NotAllowReason extends AbstractModel {
 
     /**
     * 是否创建的成员。true-是、false-否；成员不是创建的成员不允许删除
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsCreateMember")
     @Expose
@@ -33,7 +32,6 @@ public class NotAllowReason extends AbstractModel {
 
     /**
     * 成员删除许可。true-开启、false-关闭；成员删除许可关闭时不允许删除
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeletionPermission")
     @Expose
@@ -41,7 +39,6 @@ public class NotAllowReason extends AbstractModel {
 
     /**
     * 是否可信服务委派管理员。true-是、false-否；成员是可信服务委派管理员不允许删除
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsAssignManager")
     @Expose
@@ -49,7 +46,6 @@ public class NotAllowReason extends AbstractModel {
 
     /**
     * 是否主体管理员。true-是、false-否；成员是主体管理员不允许删除
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsAuthManager")
     @Expose
@@ -57,7 +53,6 @@ public class NotAllowReason extends AbstractModel {
 
     /**
     * 是否共享资源管理员。true-是、false-否；成员是共享资源管理员不允许删除
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsShareManager")
     @Expose
@@ -65,7 +60,6 @@ public class NotAllowReason extends AbstractModel {
 
     /**
     * 成员是否设置了操作审批。true-是、false-否；成员设置了操作审批时不允许删除
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OperateProcess")
     @Expose
@@ -73,7 +67,6 @@ public class NotAllowReason extends AbstractModel {
 
     /**
     * 是否允许解除成员财务权限。true-是、false-否；成员不能解除财务权限时不允许删除
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BillingPermission")
     @Expose
@@ -81,7 +74,6 @@ public class NotAllowReason extends AbstractModel {
 
     /**
     * 存在的资源列表。账号存在资源时不允许删除
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExistResources")
     @Expose
@@ -89,17 +81,14 @@ public class NotAllowReason extends AbstractModel {
 
     /**
     * 检测失败的资源列表。账号有资源检测失败时不允许删除。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DetectFailedResources")
     @Expose
     private String [] DetectFailedResources;
 
     /**
-     * Get 是否创建的成员。true-是、false-否；成员不是创建的成员不允许删除
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否创建的成员。true-是、false-否；成员不是创建的成员不允许删除 
      * @return IsCreateMember 是否创建的成员。true-是、false-否；成员不是创建的成员不允许删除
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsCreateMember() {
         return this.IsCreateMember;
@@ -107,19 +96,15 @@ public class NotAllowReason extends AbstractModel {
 
     /**
      * Set 是否创建的成员。true-是、false-否；成员不是创建的成员不允许删除
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsCreateMember 是否创建的成员。true-是、false-否；成员不是创建的成员不允许删除
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsCreateMember(Boolean IsCreateMember) {
         this.IsCreateMember = IsCreateMember;
     }
 
     /**
-     * Get 成员删除许可。true-开启、false-关闭；成员删除许可关闭时不允许删除
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 成员删除许可。true-开启、false-关闭；成员删除许可关闭时不允许删除 
      * @return DeletionPermission 成员删除许可。true-开启、false-关闭；成员删除许可关闭时不允许删除
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getDeletionPermission() {
         return this.DeletionPermission;
@@ -127,19 +112,15 @@ public class NotAllowReason extends AbstractModel {
 
     /**
      * Set 成员删除许可。true-开启、false-关闭；成员删除许可关闭时不允许删除
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeletionPermission 成员删除许可。true-开启、false-关闭；成员删除许可关闭时不允许删除
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeletionPermission(Boolean DeletionPermission) {
         this.DeletionPermission = DeletionPermission;
     }
 
     /**
-     * Get 是否可信服务委派管理员。true-是、false-否；成员是可信服务委派管理员不允许删除
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否可信服务委派管理员。true-是、false-否；成员是可信服务委派管理员不允许删除 
      * @return IsAssignManager 是否可信服务委派管理员。true-是、false-否；成员是可信服务委派管理员不允许删除
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsAssignManager() {
         return this.IsAssignManager;
@@ -147,19 +128,15 @@ public class NotAllowReason extends AbstractModel {
 
     /**
      * Set 是否可信服务委派管理员。true-是、false-否；成员是可信服务委派管理员不允许删除
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsAssignManager 是否可信服务委派管理员。true-是、false-否；成员是可信服务委派管理员不允许删除
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsAssignManager(Boolean IsAssignManager) {
         this.IsAssignManager = IsAssignManager;
     }
 
     /**
-     * Get 是否主体管理员。true-是、false-否；成员是主体管理员不允许删除
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否主体管理员。true-是、false-否；成员是主体管理员不允许删除 
      * @return IsAuthManager 是否主体管理员。true-是、false-否；成员是主体管理员不允许删除
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsAuthManager() {
         return this.IsAuthManager;
@@ -167,19 +144,15 @@ public class NotAllowReason extends AbstractModel {
 
     /**
      * Set 是否主体管理员。true-是、false-否；成员是主体管理员不允许删除
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsAuthManager 是否主体管理员。true-是、false-否；成员是主体管理员不允许删除
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsAuthManager(Boolean IsAuthManager) {
         this.IsAuthManager = IsAuthManager;
     }
 
     /**
-     * Get 是否共享资源管理员。true-是、false-否；成员是共享资源管理员不允许删除
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否共享资源管理员。true-是、false-否；成员是共享资源管理员不允许删除 
      * @return IsShareManager 是否共享资源管理员。true-是、false-否；成员是共享资源管理员不允许删除
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsShareManager() {
         return this.IsShareManager;
@@ -187,19 +160,15 @@ public class NotAllowReason extends AbstractModel {
 
     /**
      * Set 是否共享资源管理员。true-是、false-否；成员是共享资源管理员不允许删除
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsShareManager 是否共享资源管理员。true-是、false-否；成员是共享资源管理员不允许删除
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsShareManager(Boolean IsShareManager) {
         this.IsShareManager = IsShareManager;
     }
 
     /**
-     * Get 成员是否设置了操作审批。true-是、false-否；成员设置了操作审批时不允许删除
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 成员是否设置了操作审批。true-是、false-否；成员设置了操作审批时不允许删除 
      * @return OperateProcess 成员是否设置了操作审批。true-是、false-否；成员设置了操作审批时不允许删除
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getOperateProcess() {
         return this.OperateProcess;
@@ -207,19 +176,15 @@ public class NotAllowReason extends AbstractModel {
 
     /**
      * Set 成员是否设置了操作审批。true-是、false-否；成员设置了操作审批时不允许删除
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OperateProcess 成员是否设置了操作审批。true-是、false-否；成员设置了操作审批时不允许删除
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOperateProcess(Boolean OperateProcess) {
         this.OperateProcess = OperateProcess;
     }
 
     /**
-     * Get 是否允许解除成员财务权限。true-是、false-否；成员不能解除财务权限时不允许删除
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否允许解除成员财务权限。true-是、false-否；成员不能解除财务权限时不允许删除 
      * @return BillingPermission 是否允许解除成员财务权限。true-是、false-否；成员不能解除财务权限时不允许删除
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getBillingPermission() {
         return this.BillingPermission;
@@ -227,19 +192,15 @@ public class NotAllowReason extends AbstractModel {
 
     /**
      * Set 是否允许解除成员财务权限。true-是、false-否；成员不能解除财务权限时不允许删除
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BillingPermission 是否允许解除成员财务权限。true-是、false-否；成员不能解除财务权限时不允许删除
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBillingPermission(Boolean BillingPermission) {
         this.BillingPermission = BillingPermission;
     }
 
     /**
-     * Get 存在的资源列表。账号存在资源时不允许删除
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 存在的资源列表。账号存在资源时不允许删除 
      * @return ExistResources 存在的资源列表。账号存在资源时不允许删除
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getExistResources() {
         return this.ExistResources;
@@ -247,19 +208,15 @@ public class NotAllowReason extends AbstractModel {
 
     /**
      * Set 存在的资源列表。账号存在资源时不允许删除
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExistResources 存在的资源列表。账号存在资源时不允许删除
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExistResources(String [] ExistResources) {
         this.ExistResources = ExistResources;
     }
 
     /**
-     * Get 检测失败的资源列表。账号有资源检测失败时不允许删除。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 检测失败的资源列表。账号有资源检测失败时不允许删除。 
      * @return DetectFailedResources 检测失败的资源列表。账号有资源检测失败时不允许删除。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getDetectFailedResources() {
         return this.DetectFailedResources;
@@ -267,9 +224,7 @@ public class NotAllowReason extends AbstractModel {
 
     /**
      * Set 检测失败的资源列表。账号有资源检测失败时不允许删除。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DetectFailedResources 检测失败的资源列表。账号有资源检测失败时不允许删除。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDetectFailedResources(String [] DetectFailedResources) {
         this.DetectFailedResources = DetectFailedResources;

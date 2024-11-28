@@ -1146,19 +1146,6 @@ public class OcrClient extends AbstractClient{
     }
 
     /**
-     *印尼身份证识别
-
-默认接口请求频率限制：5次/秒。
-     * @param req RecognizeIndonesiaIDCardOCRRequest
-     * @return RecognizeIndonesiaIDCardOCRResponse
-     * @throws TencentCloudSDKException
-     */
-    public RecognizeIndonesiaIDCardOCRResponse RecognizeIndonesiaIDCardOCR(RecognizeIndonesiaIDCardOCRRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "RecognizeIndonesiaIDCardOCR", RecognizeIndonesiaIDCardOCRResponse.class);
-    }
-
-    /**
      *韩国驾驶证识别
      * @param req RecognizeKoreanDrivingLicenseOCRRequest
      * @return RecognizeKoreanDrivingLicenseOCRResponse
@@ -1167,17 +1154,6 @@ public class OcrClient extends AbstractClient{
     public RecognizeKoreanDrivingLicenseOCRResponse RecognizeKoreanDrivingLicenseOCR(RecognizeKoreanDrivingLicenseOCRRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "RecognizeKoreanDrivingLicenseOCR", RecognizeKoreanDrivingLicenseOCRResponse.class);
-    }
-
-    /**
-     *韩国身份证识别
-     * @param req RecognizeKoreanIDCardOCRRequest
-     * @return RecognizeKoreanIDCardOCRResponse
-     * @throws TencentCloudSDKException
-     */
-    public RecognizeKoreanIDCardOCRResponse RecognizeKoreanIDCardOCR(RecognizeKoreanIDCardOCRRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "RecognizeKoreanIDCardOCR", RecognizeKoreanIDCardOCRResponse.class);
     }
 
     /**
@@ -1204,65 +1180,6 @@ public class OcrClient extends AbstractClient{
     public RecognizeOnlineTaxiItineraryOCRResponse RecognizeOnlineTaxiItineraryOCR(RecognizeOnlineTaxiItineraryOCRRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "RecognizeOnlineTaxiItineraryOCR", RecognizeOnlineTaxiItineraryOCRResponse.class);
-    }
-
-    /**
-     *菲律宾驾驶证识别
-
-默认接口请求频率限制：20次/秒。
-     * @param req RecognizePhilippinesDrivingLicenseOCRRequest
-     * @return RecognizePhilippinesDrivingLicenseOCRResponse
-     * @throws TencentCloudSDKException
-     */
-    public RecognizePhilippinesDrivingLicenseOCRResponse RecognizePhilippinesDrivingLicenseOCR(RecognizePhilippinesDrivingLicenseOCRRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "RecognizePhilippinesDrivingLicenseOCR", RecognizePhilippinesDrivingLicenseOCRResponse.class);
-    }
-
-    /**
-     *菲律宾SSSID/UMID识别
-     * @param req RecognizePhilippinesSssIDOCRRequest
-     * @return RecognizePhilippinesSssIDOCRResponse
-     * @throws TencentCloudSDKException
-     */
-    public RecognizePhilippinesSssIDOCRResponse RecognizePhilippinesSssIDOCR(RecognizePhilippinesSssIDOCRRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "RecognizePhilippinesSssIDOCR", RecognizePhilippinesSssIDOCRResponse.class);
-    }
-
-    /**
-     *菲律宾TinID识别
-     * @param req RecognizePhilippinesTinIDOCRRequest
-     * @return RecognizePhilippinesTinIDOCRResponse
-     * @throws TencentCloudSDKException
-     */
-    public RecognizePhilippinesTinIDOCRResponse RecognizePhilippinesTinIDOCR(RecognizePhilippinesTinIDOCRRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "RecognizePhilippinesTinIDOCR", RecognizePhilippinesTinIDOCRResponse.class);
-    }
-
-    /**
-     *菲律宾UMID识别
-     * @param req RecognizePhilippinesUMIDOCRRequest
-     * @return RecognizePhilippinesUMIDOCRResponse
-     * @throws TencentCloudSDKException
-     */
-    public RecognizePhilippinesUMIDOCRResponse RecognizePhilippinesUMIDOCR(RecognizePhilippinesUMIDOCRRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "RecognizePhilippinesUMIDOCR", RecognizePhilippinesUMIDOCRResponse.class);
-    }
-
-    /**
-     *本接口支持菲律宾VoteID识别，识别字段包括姓名、姓氏、出生日期、婚姻状况、国籍、地址、地区、菲律宾VoteID的VIN等。
-
-默认接口请求频率限制：20次/秒。
-     * @param req RecognizePhilippinesVoteIDOCRRequest
-     * @return RecognizePhilippinesVoteIDOCRResponse
-     * @throws TencentCloudSDKException
-     */
-    public RecognizePhilippinesVoteIDOCRResponse RecognizePhilippinesVoteIDOCR(RecognizePhilippinesVoteIDOCRRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "RecognizePhilippinesVoteIDOCR", RecognizePhilippinesVoteIDOCRResponse.class);
     }
 
     /**

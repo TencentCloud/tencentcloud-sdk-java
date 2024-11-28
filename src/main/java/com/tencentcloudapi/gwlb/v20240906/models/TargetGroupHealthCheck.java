@@ -41,7 +41,7 @@ public class TargetGroupHealthCheck extends AbstractModel {
     private String Protocol;
 
     /**
-    * 健康检查端口，探测协议未tcp时，该参数必填。
+    * 健康检查端口，探测协议为tcp时，该参数必填。
 
     */
     @SerializedName("Port")
@@ -121,9 +121,9 @@ public class TargetGroupHealthCheck extends AbstractModel {
     }
 
     /**
-     * Get 健康检查端口，探测协议未tcp时，该参数必填。
+     * Get 健康检查端口，探测协议为tcp时，该参数必填。
  
-     * @return Port 健康检查端口，探测协议未tcp时，该参数必填。
+     * @return Port 健康检查端口，探测协议为tcp时，该参数必填。
 
      */
     public Long getPort() {
@@ -131,9 +131,9 @@ public class TargetGroupHealthCheck extends AbstractModel {
     }
 
     /**
-     * Set 健康检查端口，探测协议未tcp时，该参数必填。
+     * Set 健康检查端口，探测协议为tcp时，该参数必填。
 
-     * @param Port 健康检查端口，探测协议未tcp时，该参数必填。
+     * @param Port 健康检查端口，探测协议为tcp时，该参数必填。
 
      */
     public void setPort(Long Port) {

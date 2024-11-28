@@ -25,7 +25,6 @@ public class DescribeEffectivePolicyResponse extends AbstractModel {
 
     /**
     * 有效策略。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EffectivePolicy")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeEffectivePolicyResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 有效策略。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 有效策略。 
      * @return EffectivePolicy 有效策略。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public EffectivePolicy getEffectivePolicy() {
         return this.EffectivePolicy;
@@ -50,9 +47,7 @@ public class DescribeEffectivePolicyResponse extends AbstractModel {
 
     /**
      * Set 有效策略。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EffectivePolicy 有效策略。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEffectivePolicy(EffectivePolicy EffectivePolicy) {
         this.EffectivePolicy = EffectivePolicy;

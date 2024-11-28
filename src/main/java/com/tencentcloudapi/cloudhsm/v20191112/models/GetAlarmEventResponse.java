@@ -25,7 +25,6 @@ public class GetAlarmEventResponse extends AbstractModel {
 
     /**
     * 用户所有的告警策略
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AlarmConfig")
     @Expose
@@ -39,10 +38,8 @@ public class GetAlarmEventResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 用户所有的告警策略
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户所有的告警策略 
      * @return AlarmConfig 用户所有的告警策略
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AlarmPolicy [] getAlarmConfig() {
         return this.AlarmConfig;
@@ -50,9 +47,7 @@ public class GetAlarmEventResponse extends AbstractModel {
 
     /**
      * Set 用户所有的告警策略
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AlarmConfig 用户所有的告警策略
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAlarmConfig(AlarmPolicy [] AlarmConfig) {
         this.AlarmConfig = AlarmConfig;

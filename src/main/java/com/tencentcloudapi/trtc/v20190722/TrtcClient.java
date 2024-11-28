@@ -51,6 +51,18 @@ public class TrtcClient extends AbstractClient{
 
     /**
      *接口说明：
+启动终端审核功能，完成房间内的音频审核。
+     * @param req CreateBasicModerationRequest
+     * @return CreateBasicModerationResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateBasicModerationResponse CreateBasicModeration(CreateBasicModerationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateBasicModeration", CreateBasicModerationResponse.class);
+    }
+
+    /**
+     *接口说明：
 启动云端录制功能，完成房间内的音视频录制，并上传到指定的云存储。您可以通过此 API 接口把TRTC 房间中的每一路音视频流做单独的录制又或者多路视频画面合流混成一路。
 
 您可以通过此接口实现如下目标：
@@ -80,6 +92,17 @@ public class TrtcClient extends AbstractClient{
     public CreatePictureResponse CreatePicture(CreatePictureRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreatePicture", CreatePictureResponse.class);
+    }
+
+    /**
+     *成功开启审核任务后，可以使用此接口来停止任务。
+     * @param req DeleteBasicModerationRequest
+     * @return DeleteBasicModerationResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteBasicModerationResponse DeleteBasicModeration(DeleteBasicModerationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteBasicModeration", DeleteBasicModerationResponse.class);
     }
 
     /**

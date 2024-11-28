@@ -24,11 +24,57 @@ import java.util.HashMap;
 public class BillBusinessLink extends AbstractModel {
 
     /**
+    * 产品编码
+    */
+    @SerializedName("BusinessCode")
+    @Expose
+    private String BusinessCode;
+
+    /**
+    * 产品名称
+    */
+    @SerializedName("BusinessCodeName")
+    @Expose
+    private String BusinessCodeName;
+
+    /**
     * 子产品
     */
     @SerializedName("Children")
     @Expose
     private BillProductLink [] Children;
+
+    /**
+     * Get 产品编码 
+     * @return BusinessCode 产品编码
+     */
+    public String getBusinessCode() {
+        return this.BusinessCode;
+    }
+
+    /**
+     * Set 产品编码
+     * @param BusinessCode 产品编码
+     */
+    public void setBusinessCode(String BusinessCode) {
+        this.BusinessCode = BusinessCode;
+    }
+
+    /**
+     * Get 产品名称 
+     * @return BusinessCodeName 产品名称
+     */
+    public String getBusinessCodeName() {
+        return this.BusinessCodeName;
+    }
+
+    /**
+     * Set 产品名称
+     * @param BusinessCodeName 产品名称
+     */
+    public void setBusinessCodeName(String BusinessCodeName) {
+        this.BusinessCodeName = BusinessCodeName;
+    }
 
     /**
      * Get 子产品 
@@ -54,6 +100,12 @@ public class BillBusinessLink extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public BillBusinessLink(BillBusinessLink source) {
+        if (source.BusinessCode != null) {
+            this.BusinessCode = new String(source.BusinessCode);
+        }
+        if (source.BusinessCodeName != null) {
+            this.BusinessCodeName = new String(source.BusinessCodeName);
+        }
         if (source.Children != null) {
             this.Children = new BillProductLink[source.Children.length];
             for (int i = 0; i < source.Children.length; i++) {
@@ -67,6 +119,8 @@ public class BillBusinessLink extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "BusinessCode", this.BusinessCode);
+        this.setParamSimple(map, prefix + "BusinessCodeName", this.BusinessCodeName);
         this.setParamArrayObj(map, prefix + "Children.", this.Children);
 
     }

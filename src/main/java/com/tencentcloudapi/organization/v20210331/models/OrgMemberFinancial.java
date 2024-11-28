@@ -25,7 +25,6 @@ public class OrgMemberFinancial extends AbstractModel {
 
     /**
     * 成员Uin。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MemberUin")
     @Expose
@@ -33,7 +32,6 @@ public class OrgMemberFinancial extends AbstractModel {
 
     /**
     * 成员名称。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MemberName")
     @Expose
@@ -41,7 +39,6 @@ public class OrgMemberFinancial extends AbstractModel {
 
     /**
     * 消耗金额，单位：元。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCost")
     @Expose
@@ -49,17 +46,14 @@ public class OrgMemberFinancial extends AbstractModel {
 
     /**
     * 占比%。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Ratio")
     @Expose
     private String Ratio;
 
     /**
-     * Get 成员Uin。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 成员Uin。 
      * @return MemberUin 成员Uin。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMemberUin() {
         return this.MemberUin;
@@ -67,19 +61,15 @@ public class OrgMemberFinancial extends AbstractModel {
 
     /**
      * Set 成员Uin。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MemberUin 成员Uin。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMemberUin(Long MemberUin) {
         this.MemberUin = MemberUin;
     }
 
     /**
-     * Get 成员名称。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 成员名称。 
      * @return MemberName 成员名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMemberName() {
         return this.MemberName;
@@ -87,19 +77,15 @@ public class OrgMemberFinancial extends AbstractModel {
 
     /**
      * Set 成员名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MemberName 成员名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMemberName(String MemberName) {
         this.MemberName = MemberName;
     }
 
     /**
-     * Get 消耗金额，单位：元。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 消耗金额，单位：元。 
      * @return TotalCost 消耗金额，单位：元。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getTotalCost() {
         return this.TotalCost;
@@ -107,19 +93,15 @@ public class OrgMemberFinancial extends AbstractModel {
 
     /**
      * Set 消耗金额，单位：元。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCost 消耗金额，单位：元。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCost(Float TotalCost) {
         this.TotalCost = TotalCost;
     }
 
     /**
-     * Get 占比%。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 占比%。 
      * @return Ratio 占比%。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRatio() {
         return this.Ratio;
@@ -127,9 +109,7 @@ public class OrgMemberFinancial extends AbstractModel {
 
     /**
      * Set 占比%。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Ratio 占比%。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRatio(String Ratio) {
         this.Ratio = Ratio;

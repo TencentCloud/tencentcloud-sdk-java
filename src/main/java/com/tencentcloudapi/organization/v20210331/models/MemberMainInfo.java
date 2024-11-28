@@ -25,25 +25,21 @@ public class MemberMainInfo extends AbstractModel {
 
     /**
     * 成员uin
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MemberUin")
     @Expose
     private Long MemberUin;
 
     /**
-    * 成员名称j
-注意：此字段可能返回 null，表示取不到有效值。
+    * 成员名称
     */
     @SerializedName("MemberName")
     @Expose
     private String MemberName;
 
     /**
-     * Get 成员uin
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 成员uin 
      * @return MemberUin 成员uin
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMemberUin() {
         return this.MemberUin;
@@ -51,29 +47,23 @@ public class MemberMainInfo extends AbstractModel {
 
     /**
      * Set 成员uin
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MemberUin 成员uin
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMemberUin(Long MemberUin) {
         this.MemberUin = MemberUin;
     }
 
     /**
-     * Get 成员名称j
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MemberName 成员名称j
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 成员名称 
+     * @return MemberName 成员名称
      */
     public String getMemberName() {
         return this.MemberName;
     }
 
     /**
-     * Set 成员名称j
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param MemberName 成员名称j
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 成员名称
+     * @param MemberName 成员名称
      */
     public void setMemberName(String MemberName) {
         this.MemberName = MemberName;

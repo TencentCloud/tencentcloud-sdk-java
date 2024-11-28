@@ -25,7 +25,6 @@ public class OrgMemberAuthIdentity extends AbstractModel {
 
     /**
     * 身份ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IdentityId")
     @Expose
@@ -33,7 +32,6 @@ public class OrgMemberAuthIdentity extends AbstractModel {
 
     /**
     * 身份的角色名。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IdentityRoleName")
     @Expose
@@ -41,7 +39,6 @@ public class OrgMemberAuthIdentity extends AbstractModel {
 
     /**
     * 身份的角色别名。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IdentityRoleAliasName")
     @Expose
@@ -49,7 +46,6 @@ public class OrgMemberAuthIdentity extends AbstractModel {
 
     /**
     * 身份描述。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
     @Expose
@@ -57,7 +53,6 @@ public class OrgMemberAuthIdentity extends AbstractModel {
 
     /**
     * 首次配置成功的时间。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -65,7 +60,6 @@ public class OrgMemberAuthIdentity extends AbstractModel {
 
     /**
     * 最后一次配置成功的时间。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -73,7 +67,6 @@ public class OrgMemberAuthIdentity extends AbstractModel {
 
     /**
     * 身份类型。取值： 1-预设身份  2-自定义身份
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IdentityType")
     @Expose
@@ -81,7 +74,6 @@ public class OrgMemberAuthIdentity extends AbstractModel {
 
     /**
     * 配置状态。取值：1-配置完成 2-需重新配置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -89,7 +81,6 @@ public class OrgMemberAuthIdentity extends AbstractModel {
 
     /**
     * 成员Uin。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MemberUin")
     @Expose
@@ -97,17 +88,14 @@ public class OrgMemberAuthIdentity extends AbstractModel {
 
     /**
     * 成员名称。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MemberName")
     @Expose
     private String MemberName;
 
     /**
-     * Get 身份ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 身份ID。 
      * @return IdentityId 身份ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIdentityId() {
         return this.IdentityId;
@@ -115,19 +103,15 @@ public class OrgMemberAuthIdentity extends AbstractModel {
 
     /**
      * Set 身份ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IdentityId 身份ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIdentityId(Long IdentityId) {
         this.IdentityId = IdentityId;
     }
 
     /**
-     * Get 身份的角色名。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 身份的角色名。 
      * @return IdentityRoleName 身份的角色名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIdentityRoleName() {
         return this.IdentityRoleName;
@@ -135,19 +119,15 @@ public class OrgMemberAuthIdentity extends AbstractModel {
 
     /**
      * Set 身份的角色名。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IdentityRoleName 身份的角色名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIdentityRoleName(String IdentityRoleName) {
         this.IdentityRoleName = IdentityRoleName;
     }
 
     /**
-     * Get 身份的角色别名。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 身份的角色别名。 
      * @return IdentityRoleAliasName 身份的角色别名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIdentityRoleAliasName() {
         return this.IdentityRoleAliasName;
@@ -155,19 +135,15 @@ public class OrgMemberAuthIdentity extends AbstractModel {
 
     /**
      * Set 身份的角色别名。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IdentityRoleAliasName 身份的角色别名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIdentityRoleAliasName(String IdentityRoleAliasName) {
         this.IdentityRoleAliasName = IdentityRoleAliasName;
     }
 
     /**
-     * Get 身份描述。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 身份描述。 
      * @return Description 身份描述。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
         return this.Description;
@@ -175,19 +151,15 @@ public class OrgMemberAuthIdentity extends AbstractModel {
 
     /**
      * Set 身份描述。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Description 身份描述。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 首次配置成功的时间。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 首次配置成功的时间。 
      * @return CreateTime 首次配置成功的时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -195,19 +167,15 @@ public class OrgMemberAuthIdentity extends AbstractModel {
 
     /**
      * Set 首次配置成功的时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 首次配置成功的时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 最后一次配置成功的时间。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最后一次配置成功的时间。 
      * @return UpdateTime 最后一次配置成功的时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdateTime() {
         return this.UpdateTime;
@@ -215,19 +183,15 @@ public class OrgMemberAuthIdentity extends AbstractModel {
 
     /**
      * Set 最后一次配置成功的时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdateTime 最后一次配置成功的时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get 身份类型。取值： 1-预设身份  2-自定义身份
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 身份类型。取值： 1-预设身份  2-自定义身份 
      * @return IdentityType 身份类型。取值： 1-预设身份  2-自定义身份
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIdentityType() {
         return this.IdentityType;
@@ -235,19 +199,15 @@ public class OrgMemberAuthIdentity extends AbstractModel {
 
     /**
      * Set 身份类型。取值： 1-预设身份  2-自定义身份
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IdentityType 身份类型。取值： 1-预设身份  2-自定义身份
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIdentityType(Long IdentityType) {
         this.IdentityType = IdentityType;
     }
 
     /**
-     * Get 配置状态。取值：1-配置完成 2-需重新配置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 配置状态。取值：1-配置完成 2-需重新配置 
      * @return Status 配置状态。取值：1-配置完成 2-需重新配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
         return this.Status;
@@ -255,19 +215,15 @@ public class OrgMemberAuthIdentity extends AbstractModel {
 
     /**
      * Set 配置状态。取值：1-配置完成 2-需重新配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 配置状态。取值：1-配置完成 2-需重新配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 成员Uin。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 成员Uin。 
      * @return MemberUin 成员Uin。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMemberUin() {
         return this.MemberUin;
@@ -275,19 +231,15 @@ public class OrgMemberAuthIdentity extends AbstractModel {
 
     /**
      * Set 成员Uin。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MemberUin 成员Uin。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMemberUin(Long MemberUin) {
         this.MemberUin = MemberUin;
     }
 
     /**
-     * Get 成员名称。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 成员名称。 
      * @return MemberName 成员名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMemberName() {
         return this.MemberName;
@@ -295,9 +247,7 @@ public class OrgMemberAuthIdentity extends AbstractModel {
 
     /**
      * Set 成员名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MemberName 成员名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMemberName(String MemberName) {
         this.MemberName = MemberName;

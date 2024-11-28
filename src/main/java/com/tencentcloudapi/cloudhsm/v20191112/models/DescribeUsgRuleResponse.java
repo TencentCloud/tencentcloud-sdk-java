@@ -25,7 +25,6 @@ public class DescribeUsgRuleResponse extends AbstractModel {
 
     /**
     * 安全组详情
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SgRules")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeUsgRuleResponse extends AbstractModel {
 
     /**
     * 安全组详情数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeUsgRuleResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 安全组详情
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 安全组详情 
      * @return SgRules 安全组详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public UsgRuleDetail [] getSgRules() {
         return this.SgRules;
@@ -58,19 +54,15 @@ public class DescribeUsgRuleResponse extends AbstractModel {
 
     /**
      * Set 安全组详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SgRules 安全组详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSgRules(UsgRuleDetail [] SgRules) {
         this.SgRules = SgRules;
     }
 
     /**
-     * Get 安全组详情数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 安全组详情数量 
      * @return TotalCount 安全组详情数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -78,9 +70,7 @@ public class DescribeUsgRuleResponse extends AbstractModel {
 
     /**
      * Set 安全组详情数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 安全组详情数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

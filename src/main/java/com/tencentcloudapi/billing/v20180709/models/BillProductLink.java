@@ -23,6 +23,90 @@ import java.util.HashMap;
 
 public class BillProductLink extends AbstractModel {
 
+    /**
+    * 子产品编码
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProductCode")
+    @Expose
+    private String ProductCode;
+
+    /**
+    * 子产品名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProductCodeName")
+    @Expose
+    private String ProductCodeName;
+
+    /**
+    * 组件名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Children")
+    @Expose
+    private BillItem [] Children;
+
+    /**
+     * Get 子产品编码
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProductCode 子产品编码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getProductCode() {
+        return this.ProductCode;
+    }
+
+    /**
+     * Set 子产品编码
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProductCode 子产品编码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProductCode(String ProductCode) {
+        this.ProductCode = ProductCode;
+    }
+
+    /**
+     * Get 子产品名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProductCodeName 子产品名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getProductCodeName() {
+        return this.ProductCodeName;
+    }
+
+    /**
+     * Set 子产品名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProductCodeName 子产品名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProductCodeName(String ProductCodeName) {
+        this.ProductCodeName = ProductCodeName;
+    }
+
+    /**
+     * Get 组件名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Children 组件名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public BillItem [] getChildren() {
+        return this.Children;
+    }
+
+    /**
+     * Set 组件名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Children 组件名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setChildren(BillItem [] Children) {
+        this.Children = Children;
+    }
+
     public BillProductLink() {
     }
 
@@ -31,6 +115,18 @@ public class BillProductLink extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public BillProductLink(BillProductLink source) {
+        if (source.ProductCode != null) {
+            this.ProductCode = new String(source.ProductCode);
+        }
+        if (source.ProductCodeName != null) {
+            this.ProductCodeName = new String(source.ProductCodeName);
+        }
+        if (source.Children != null) {
+            this.Children = new BillItem[source.Children.length];
+            for (int i = 0; i < source.Children.length; i++) {
+                this.Children[i] = new BillItem(source.Children[i]);
+            }
+        }
     }
 
 
@@ -38,6 +134,9 @@ public class BillProductLink extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "ProductCode", this.ProductCode);
+        this.setParamSimple(map, prefix + "ProductCodeName", this.ProductCodeName);
+        this.setParamArrayObj(map, prefix + "Children.", this.Children);
 
     }
 }

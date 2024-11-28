@@ -25,7 +25,6 @@ public class OrgMemberPolicy extends AbstractModel {
 
     /**
     * 策略ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PolicyId")
     @Expose
@@ -33,7 +32,6 @@ public class OrgMemberPolicy extends AbstractModel {
 
     /**
     * 策略名。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PolicyName")
     @Expose
@@ -41,7 +39,6 @@ public class OrgMemberPolicy extends AbstractModel {
 
     /**
     * 身份ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IdentityId")
     @Expose
@@ -49,7 +46,6 @@ public class OrgMemberPolicy extends AbstractModel {
 
     /**
     * 身份角色名。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IdentityRoleName")
     @Expose
@@ -57,7 +53,6 @@ public class OrgMemberPolicy extends AbstractModel {
 
     /**
     * 身份角色别名。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IdentityRoleAliasName")
     @Expose
@@ -65,7 +60,6 @@ public class OrgMemberPolicy extends AbstractModel {
 
     /**
     * 描述。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
     @Expose
@@ -73,7 +67,6 @@ public class OrgMemberPolicy extends AbstractModel {
 
     /**
     * 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -81,17 +74,14 @@ public class OrgMemberPolicy extends AbstractModel {
 
     /**
     * 更新时间。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-     * Get 策略ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 策略ID。 
      * @return PolicyId 策略ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPolicyId() {
         return this.PolicyId;
@@ -99,19 +89,15 @@ public class OrgMemberPolicy extends AbstractModel {
 
     /**
      * Set 策略ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PolicyId 策略ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPolicyId(Long PolicyId) {
         this.PolicyId = PolicyId;
     }
 
     /**
-     * Get 策略名。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 策略名。 
      * @return PolicyName 策略名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPolicyName() {
         return this.PolicyName;
@@ -119,19 +105,15 @@ public class OrgMemberPolicy extends AbstractModel {
 
     /**
      * Set 策略名。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PolicyName 策略名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPolicyName(String PolicyName) {
         this.PolicyName = PolicyName;
     }
 
     /**
-     * Get 身份ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 身份ID。 
      * @return IdentityId 身份ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIdentityId() {
         return this.IdentityId;
@@ -139,19 +121,15 @@ public class OrgMemberPolicy extends AbstractModel {
 
     /**
      * Set 身份ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IdentityId 身份ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIdentityId(Long IdentityId) {
         this.IdentityId = IdentityId;
     }
 
     /**
-     * Get 身份角色名。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 身份角色名。 
      * @return IdentityRoleName 身份角色名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIdentityRoleName() {
         return this.IdentityRoleName;
@@ -159,19 +137,15 @@ public class OrgMemberPolicy extends AbstractModel {
 
     /**
      * Set 身份角色名。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IdentityRoleName 身份角色名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIdentityRoleName(String IdentityRoleName) {
         this.IdentityRoleName = IdentityRoleName;
     }
 
     /**
-     * Get 身份角色别名。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 身份角色别名。 
      * @return IdentityRoleAliasName 身份角色别名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIdentityRoleAliasName() {
         return this.IdentityRoleAliasName;
@@ -179,19 +153,15 @@ public class OrgMemberPolicy extends AbstractModel {
 
     /**
      * Set 身份角色别名。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IdentityRoleAliasName 身份角色别名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIdentityRoleAliasName(String IdentityRoleAliasName) {
         this.IdentityRoleAliasName = IdentityRoleAliasName;
     }
 
     /**
-     * Get 描述。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 描述。 
      * @return Description 描述。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
         return this.Description;
@@ -199,19 +169,15 @@ public class OrgMemberPolicy extends AbstractModel {
 
     /**
      * Set 描述。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Description 描述。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间。 
      * @return CreateTime 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -219,19 +185,15 @@ public class OrgMemberPolicy extends AbstractModel {
 
     /**
      * Set 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 更新时间。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 更新时间。 
      * @return UpdateTime 更新时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdateTime() {
         return this.UpdateTime;
@@ -239,9 +201,7 @@ public class OrgMemberPolicy extends AbstractModel {
 
     /**
      * Set 更新时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdateTime 更新时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;

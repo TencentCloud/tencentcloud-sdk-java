@@ -32,7 +32,6 @@ public class DescribeVsmsResponse extends AbstractModel {
 
     /**
     * 资源信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VsmList")
     @Expose
@@ -62,10 +61,8 @@ public class DescribeVsmsResponse extends AbstractModel {
     }
 
     /**
-     * Get 资源信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源信息 
      * @return VsmList 资源信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ResourceInfo [] getVsmList() {
         return this.VsmList;
@@ -73,9 +70,7 @@ public class DescribeVsmsResponse extends AbstractModel {
 
     /**
      * Set 资源信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VsmList 资源信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVsmList(ResourceInfo [] VsmList) {
         this.VsmList = VsmList;

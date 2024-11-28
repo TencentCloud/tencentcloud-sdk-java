@@ -171,6 +171,17 @@ public class BiClient extends AbstractClient{
     }
 
     /**
+     *查询页面组件信息
+     * @param req DescribePageWidgetListRequest
+     * @return DescribePageWidgetListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePageWidgetListResponse DescribePageWidgetList(DescribePageWidgetListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribePageWidgetList", DescribePageWidgetListResponse.class);
+    }
+
+    /**
      *项目详情接口
      * @param req DescribeProjectInfoRequest
      * @return DescribeProjectInfoResponse
@@ -223,6 +234,17 @@ public class BiClient extends AbstractClient{
     public DescribeUserRoleProjectListResponse DescribeUserRoleProjectList(DescribeUserRoleProjectListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeUserRoleProjectList", DescribeUserRoleProjectListResponse.class);
+    }
+
+    /**
+     *页面截图导出
+     * @param req ExportScreenPageRequest
+     * @return ExportScreenPageResponse
+     * @throws TencentCloudSDKException
+     */
+    public ExportScreenPageResponse ExportScreenPage(ExportScreenPageRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ExportScreenPage", ExportScreenPageResponse.class);
     }
 
     /**

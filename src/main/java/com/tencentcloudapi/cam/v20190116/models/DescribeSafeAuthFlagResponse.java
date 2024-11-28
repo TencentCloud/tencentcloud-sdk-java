@@ -45,7 +45,7 @@ public class DescribeSafeAuthFlagResponse extends AbstractModel {
     private OffsiteFlag OffsiteFlag;
 
     /**
-    * 1: 提示7天信任设备 0: 不提示
+    * 是否提示信任设备：1: 提示  0: 不提示
     */
     @SerializedName("PromptTrust")
     @Expose
@@ -107,16 +107,16 @@ public class DescribeSafeAuthFlagResponse extends AbstractModel {
     }
 
     /**
-     * Get 1: 提示7天信任设备 0: 不提示 
-     * @return PromptTrust 1: 提示7天信任设备 0: 不提示
+     * Get 是否提示信任设备：1: 提示  0: 不提示 
+     * @return PromptTrust 是否提示信任设备：1: 提示  0: 不提示
      */
     public Long getPromptTrust() {
         return this.PromptTrust;
     }
 
     /**
-     * Set 1: 提示7天信任设备 0: 不提示
-     * @param PromptTrust 1: 提示7天信任设备 0: 不提示
+     * Set 是否提示信任设备：1: 提示  0: 不提示
+     * @param PromptTrust 是否提示信任设备：1: 提示  0: 不提示
      */
     public void setPromptTrust(Long PromptTrust) {
         this.PromptTrust = PromptTrust;

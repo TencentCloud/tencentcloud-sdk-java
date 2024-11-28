@@ -25,7 +25,6 @@ public class DescribeUsgResponse extends AbstractModel {
 
     /**
     * 用户的安全组列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SgList")
     @Expose
@@ -46,10 +45,8 @@ public class DescribeUsgResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 用户的安全组列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户的安全组列表 
      * @return SgList 用户的安全组列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SgUnit [] getSgList() {
         return this.SgList;
@@ -57,9 +54,7 @@ public class DescribeUsgResponse extends AbstractModel {
 
     /**
      * Set 用户的安全组列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SgList 用户的安全组列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSgList(SgUnit [] SgList) {
         this.SgList = SgList;

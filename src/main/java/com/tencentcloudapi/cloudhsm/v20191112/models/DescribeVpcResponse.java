@@ -32,7 +32,6 @@ public class DescribeVpcResponse extends AbstractModel {
 
     /**
     * Vpc对象列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcList")
     @Expose
@@ -62,10 +61,8 @@ public class DescribeVpcResponse extends AbstractModel {
     }
 
     /**
-     * Get Vpc对象列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Vpc对象列表 
      * @return VpcList Vpc对象列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Vpc [] getVpcList() {
         return this.VpcList;
@@ -73,9 +70,7 @@ public class DescribeVpcResponse extends AbstractModel {
 
     /**
      * Set Vpc对象列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VpcList Vpc对象列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcList(Vpc [] VpcList) {
         this.VpcList = VpcList;

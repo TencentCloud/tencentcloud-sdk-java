@@ -25,7 +25,6 @@ public class UsgPolicy extends AbstractModel {
 
     /**
     * cidr格式地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Ip")
     @Expose
@@ -33,7 +32,6 @@ public class UsgPolicy extends AbstractModel {
 
     /**
     * 安全组id代表的地址集合
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
     @Expose
@@ -41,7 +39,6 @@ public class UsgPolicy extends AbstractModel {
 
     /**
     * 地址组id代表的地址集合
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AddressModule")
     @Expose
@@ -49,7 +46,6 @@ public class UsgPolicy extends AbstractModel {
 
     /**
     * 协议
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Proto")
     @Expose
@@ -57,7 +53,6 @@ public class UsgPolicy extends AbstractModel {
 
     /**
     * 端口
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Port")
     @Expose
@@ -65,7 +60,6 @@ public class UsgPolicy extends AbstractModel {
 
     /**
     * 服务组id代表的协议和端口集合
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ServiceModule")
     @Expose
@@ -73,7 +67,6 @@ public class UsgPolicy extends AbstractModel {
 
     /**
     * 备注
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Desc")
     @Expose
@@ -81,17 +74,14 @@ public class UsgPolicy extends AbstractModel {
 
     /**
     * 匹配后行为:ACCEPT/DROP
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Action")
     @Expose
     private String Action;
 
     /**
-     * Get cidr格式地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get cidr格式地址 
      * @return Ip cidr格式地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIp() {
         return this.Ip;
@@ -99,19 +89,15 @@ public class UsgPolicy extends AbstractModel {
 
     /**
      * Set cidr格式地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Ip cidr格式地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIp(String Ip) {
         this.Ip = Ip;
     }
 
     /**
-     * Get 安全组id代表的地址集合
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 安全组id代表的地址集合 
      * @return Id 安全组id代表的地址集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getId() {
         return this.Id;
@@ -119,19 +105,15 @@ public class UsgPolicy extends AbstractModel {
 
     /**
      * Set 安全组id代表的地址集合
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Id 安全组id代表的地址集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 地址组id代表的地址集合
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地址组id代表的地址集合 
      * @return AddressModule 地址组id代表的地址集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAddressModule() {
         return this.AddressModule;
@@ -139,19 +121,15 @@ public class UsgPolicy extends AbstractModel {
 
     /**
      * Set 地址组id代表的地址集合
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AddressModule 地址组id代表的地址集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAddressModule(String AddressModule) {
         this.AddressModule = AddressModule;
     }
 
     /**
-     * Get 协议
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 协议 
      * @return Proto 协议
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProto() {
         return this.Proto;
@@ -159,19 +137,15 @@ public class UsgPolicy extends AbstractModel {
 
     /**
      * Set 协议
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Proto 协议
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProto(String Proto) {
         this.Proto = Proto;
     }
 
     /**
-     * Get 端口
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 端口 
      * @return Port 端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPort() {
         return this.Port;
@@ -179,19 +153,15 @@ public class UsgPolicy extends AbstractModel {
 
     /**
      * Set 端口
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Port 端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPort(String Port) {
         this.Port = Port;
     }
 
     /**
-     * Get 服务组id代表的协议和端口集合
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 服务组id代表的协议和端口集合 
      * @return ServiceModule 服务组id代表的协议和端口集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getServiceModule() {
         return this.ServiceModule;
@@ -199,19 +169,15 @@ public class UsgPolicy extends AbstractModel {
 
     /**
      * Set 服务组id代表的协议和端口集合
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ServiceModule 服务组id代表的协议和端口集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setServiceModule(String ServiceModule) {
         this.ServiceModule = ServiceModule;
     }
 
     /**
-     * Get 备注
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 备注 
      * @return Desc 备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDesc() {
         return this.Desc;
@@ -219,19 +185,15 @@ public class UsgPolicy extends AbstractModel {
 
     /**
      * Set 备注
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Desc 备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDesc(String Desc) {
         this.Desc = Desc;
     }
 
     /**
-     * Get 匹配后行为:ACCEPT/DROP
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 匹配后行为:ACCEPT/DROP 
      * @return Action 匹配后行为:ACCEPT/DROP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAction() {
         return this.Action;
@@ -239,9 +201,7 @@ public class UsgPolicy extends AbstractModel {
 
     /**
      * Set 匹配后行为:ACCEPT/DROP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Action 匹配后行为:ACCEPT/DROP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAction(String Action) {
         this.Action = Action;

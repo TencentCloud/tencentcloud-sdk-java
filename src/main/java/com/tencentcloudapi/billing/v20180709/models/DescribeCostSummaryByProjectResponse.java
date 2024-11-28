@@ -45,7 +45,7 @@ public class DescribeCostSummaryByProjectResponse extends AbstractModel {
     private ConsumptionProjectSummaryDataItem [] Data;
 
     /**
-    * 记录数量，NeedRecordNum为0是返回null
+    * 记录数量，NeedRecordNum为0时返回null
     */
     @SerializedName("RecordNum")
     @Expose
@@ -107,16 +107,16 @@ public class DescribeCostSummaryByProjectResponse extends AbstractModel {
     }
 
     /**
-     * Get 记录数量，NeedRecordNum为0是返回null 
-     * @return RecordNum 记录数量，NeedRecordNum为0是返回null
+     * Get 记录数量，NeedRecordNum为0时返回null 
+     * @return RecordNum 记录数量，NeedRecordNum为0时返回null
      */
     public Long getRecordNum() {
         return this.RecordNum;
     }
 
     /**
-     * Set 记录数量，NeedRecordNum为0是返回null
-     * @param RecordNum 记录数量，NeedRecordNum为0是返回null
+     * Set 记录数量，NeedRecordNum为0时返回null
+     * @param RecordNum 记录数量，NeedRecordNum为0时返回null
      */
     public void setRecordNum(Long RecordNum) {
         this.RecordNum = RecordNum;

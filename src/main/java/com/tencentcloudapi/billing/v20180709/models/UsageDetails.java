@@ -25,7 +25,6 @@ public class UsageDetails extends AbstractModel {
 
     /**
     * 商品名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProductName")
     @Expose
@@ -33,7 +32,6 @@ public class UsageDetails extends AbstractModel {
 
     /**
     * 商品细节
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubProductName")
     @Expose
@@ -41,7 +39,6 @@ public class UsageDetails extends AbstractModel {
 
     /**
     * 产品码	
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProductCode")
     @Expose
@@ -49,7 +46,6 @@ public class UsageDetails extends AbstractModel {
 
     /**
     * 子产品码	
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubProductCode")
     @Expose
@@ -57,7 +53,6 @@ public class UsageDetails extends AbstractModel {
 
     /**
     * 计费项码	
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BillingItemCode")
     @Expose
@@ -65,7 +60,6 @@ public class UsageDetails extends AbstractModel {
 
     /**
     * 计费细项码	
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubBillingItemCode")
     @Expose
@@ -73,7 +67,6 @@ public class UsageDetails extends AbstractModel {
 
     /**
     * 产品英文名	
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProductEnName")
     @Expose
@@ -81,7 +74,6 @@ public class UsageDetails extends AbstractModel {
 
     /**
     * 子产品英文名	
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubProductEnName")
     @Expose
@@ -89,7 +81,6 @@ public class UsageDetails extends AbstractModel {
 
     /**
     * 结算周期	
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CalcUnit")
     @Expose
@@ -97,17 +88,14 @@ public class UsageDetails extends AbstractModel {
 
     /**
     * payMode为prepay 且 payScene为common的情况下存在
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Action")
     @Expose
     private String Action;
 
     /**
-     * Get 商品名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 商品名 
      * @return ProductName 商品名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProductName() {
         return this.ProductName;
@@ -115,19 +103,15 @@ public class UsageDetails extends AbstractModel {
 
     /**
      * Set 商品名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProductName 商品名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProductName(String ProductName) {
         this.ProductName = ProductName;
     }
 
     /**
-     * Get 商品细节
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 商品细节 
      * @return SubProductName 商品细节
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubProductName() {
         return this.SubProductName;
@@ -135,19 +119,15 @@ public class UsageDetails extends AbstractModel {
 
     /**
      * Set 商品细节
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubProductName 商品细节
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubProductName(String SubProductName) {
         this.SubProductName = SubProductName;
     }
 
     /**
-     * Get 产品码	
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 产品码	 
      * @return ProductCode 产品码	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProductCode() {
         return this.ProductCode;
@@ -155,19 +135,15 @@ public class UsageDetails extends AbstractModel {
 
     /**
      * Set 产品码	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProductCode 产品码	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProductCode(String ProductCode) {
         this.ProductCode = ProductCode;
     }
 
     /**
-     * Get 子产品码	
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子产品码	 
      * @return SubProductCode 子产品码	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubProductCode() {
         return this.SubProductCode;
@@ -175,19 +151,15 @@ public class UsageDetails extends AbstractModel {
 
     /**
      * Set 子产品码	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubProductCode 子产品码	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubProductCode(String SubProductCode) {
         this.SubProductCode = SubProductCode;
     }
 
     /**
-     * Get 计费项码	
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 计费项码	 
      * @return BillingItemCode 计费项码	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBillingItemCode() {
         return this.BillingItemCode;
@@ -195,19 +167,15 @@ public class UsageDetails extends AbstractModel {
 
     /**
      * Set 计费项码	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BillingItemCode 计费项码	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBillingItemCode(String BillingItemCode) {
         this.BillingItemCode = BillingItemCode;
     }
 
     /**
-     * Get 计费细项码	
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 计费细项码	 
      * @return SubBillingItemCode 计费细项码	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubBillingItemCode() {
         return this.SubBillingItemCode;
@@ -215,19 +183,15 @@ public class UsageDetails extends AbstractModel {
 
     /**
      * Set 计费细项码	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubBillingItemCode 计费细项码	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubBillingItemCode(String SubBillingItemCode) {
         this.SubBillingItemCode = SubBillingItemCode;
     }
 
     /**
-     * Get 产品英文名	
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 产品英文名	 
      * @return ProductEnName 产品英文名	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProductEnName() {
         return this.ProductEnName;
@@ -235,19 +199,15 @@ public class UsageDetails extends AbstractModel {
 
     /**
      * Set 产品英文名	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProductEnName 产品英文名	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProductEnName(String ProductEnName) {
         this.ProductEnName = ProductEnName;
     }
 
     /**
-     * Get 子产品英文名	
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子产品英文名	 
      * @return SubProductEnName 子产品英文名	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubProductEnName() {
         return this.SubProductEnName;
@@ -255,19 +215,15 @@ public class UsageDetails extends AbstractModel {
 
     /**
      * Set 子产品英文名	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubProductEnName 子产品英文名	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubProductEnName(String SubProductEnName) {
         this.SubProductEnName = SubProductEnName;
     }
 
     /**
-     * Get 结算周期	
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 结算周期	 
      * @return CalcUnit 结算周期	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCalcUnit() {
         return this.CalcUnit;
@@ -275,19 +231,15 @@ public class UsageDetails extends AbstractModel {
 
     /**
      * Set 结算周期	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CalcUnit 结算周期	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCalcUnit(String CalcUnit) {
         this.CalcUnit = CalcUnit;
     }
 
     /**
-     * Get payMode为prepay 且 payScene为common的情况下存在
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get payMode为prepay 且 payScene为common的情况下存在 
      * @return Action payMode为prepay 且 payScene为common的情况下存在
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAction() {
         return this.Action;
@@ -295,9 +247,7 @@ public class UsageDetails extends AbstractModel {
 
     /**
      * Set payMode为prepay 且 payScene为common的情况下存在
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Action payMode为prepay 且 payScene为common的情况下存在
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAction(String Action) {
         this.Action = Action;

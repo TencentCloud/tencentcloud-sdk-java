@@ -393,6 +393,17 @@ public class LcicClient extends AbstractClient{
     }
 
     /**
+     *查询跑马灯配置
+     * @param req DescribeMarqueeRequest
+     * @return DescribeMarqueeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMarqueeResponse DescribeMarquee(DescribeMarqueeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMarquee", DescribeMarqueeResponse.class);
+    }
+
+    /**
      *获取房间提问列表
      * @param req DescribeQuestionListRequest
      * @return DescribeQuestionListResponse
@@ -689,6 +700,17 @@ public class LcicClient extends AbstractClient{
     public SetAppCustomContentResponse SetAppCustomContent(SetAppCustomContentRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "SetAppCustomContent", SetAppCustomContentResponse.class);
+    }
+
+    /**
+     *设置跑马灯参数设置
+     * @param req SetMarqueeRequest
+     * @return SetMarqueeResponse
+     * @throws TencentCloudSDKException
+     */
+    public SetMarqueeResponse SetMarquee(SetMarqueeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SetMarquee", SetMarqueeResponse.class);
     }
 
     /**

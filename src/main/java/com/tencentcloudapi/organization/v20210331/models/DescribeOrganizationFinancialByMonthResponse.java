@@ -25,7 +25,6 @@ public class DescribeOrganizationFinancialByMonthResponse extends AbstractModel 
 
     /**
     * 产品消耗详情。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Items")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeOrganizationFinancialByMonthResponse extends AbstractModel 
     private String RequestId;
 
     /**
-     * Get 产品消耗详情。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 产品消耗详情。 
      * @return Items 产品消耗详情。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public OrgFinancialByMonth [] getItems() {
         return this.Items;
@@ -50,9 +47,7 @@ public class DescribeOrganizationFinancialByMonthResponse extends AbstractModel 
 
     /**
      * Set 产品消耗详情。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Items 产品消耗详情。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setItems(OrgFinancialByMonth [] Items) {
         this.Items = Items;

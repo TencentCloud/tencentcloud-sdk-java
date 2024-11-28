@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeUsgRuleRequest extends AbstractModel {
 
     /**
-    * 根据安全组Id获取安全组详情
+    * 安全组Id列表
     */
     @SerializedName("SgIds")
     @Expose
     private String [] SgIds;
 
     /**
-     * Get 根据安全组Id获取安全组详情 
-     * @return SgIds 根据安全组Id获取安全组详情
+     * Get 安全组Id列表 
+     * @return SgIds 安全组Id列表
      */
     public String [] getSgIds() {
         return this.SgIds;
     }
 
     /**
-     * Set 根据安全组Id获取安全组详情
-     * @param SgIds 根据安全组Id获取安全组详情
+     * Set 安全组Id列表
+     * @param SgIds 安全组Id列表
      */
     public void setSgIds(String [] SgIds) {
         this.SgIds = SgIds;

@@ -25,7 +25,6 @@ public class DescribeOrganizationFinancialByMemberResponse extends AbstractModel
 
     /**
     * 当月总消耗。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCost")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeOrganizationFinancialByMemberResponse extends AbstractModel
 
     /**
     * 成员消耗详情。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Items")
     @Expose
@@ -41,7 +39,6 @@ public class DescribeOrganizationFinancialByMemberResponse extends AbstractModel
 
     /**
     * 总数目。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Total")
     @Expose
@@ -55,10 +52,8 @@ public class DescribeOrganizationFinancialByMemberResponse extends AbstractModel
     private String RequestId;
 
     /**
-     * Get 当月总消耗。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当月总消耗。 
      * @return TotalCost 当月总消耗。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getTotalCost() {
         return this.TotalCost;
@@ -66,19 +61,15 @@ public class DescribeOrganizationFinancialByMemberResponse extends AbstractModel
 
     /**
      * Set 当月总消耗。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCost 当月总消耗。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCost(Float TotalCost) {
         this.TotalCost = TotalCost;
     }
 
     /**
-     * Get 成员消耗详情。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 成员消耗详情。 
      * @return Items 成员消耗详情。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public OrgMemberFinancial [] getItems() {
         return this.Items;
@@ -86,19 +77,15 @@ public class DescribeOrganizationFinancialByMemberResponse extends AbstractModel
 
     /**
      * Set 成员消耗详情。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Items 成员消耗详情。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setItems(OrgMemberFinancial [] Items) {
         this.Items = Items;
     }
 
     /**
-     * Get 总数目。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 总数目。 
      * @return Total 总数目。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotal() {
         return this.Total;
@@ -106,9 +93,7 @@ public class DescribeOrganizationFinancialByMemberResponse extends AbstractModel
 
     /**
      * Set 总数目。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Total 总数目。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotal(Long Total) {
         this.Total = Total;

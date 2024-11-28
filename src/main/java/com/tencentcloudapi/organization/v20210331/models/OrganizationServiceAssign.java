@@ -25,7 +25,6 @@ public class OrganizationServiceAssign extends AbstractModel {
 
     /**
     * 集团服务ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ServiceId")
     @Expose
@@ -33,7 +32,6 @@ public class OrganizationServiceAssign extends AbstractModel {
 
     /**
     * 集团服务产品名称。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProductName")
     @Expose
@@ -41,7 +39,6 @@ public class OrganizationServiceAssign extends AbstractModel {
 
     /**
     * 是否支持委派。取值: 1-是  2-否
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsAssign")
     @Expose
@@ -49,7 +46,6 @@ public class OrganizationServiceAssign extends AbstractModel {
 
     /**
     * 集团服务描述。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
     @Expose
@@ -57,7 +53,6 @@ public class OrganizationServiceAssign extends AbstractModel {
 
     /**
     * 当前委派管理员数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MemberNum")
     @Expose
@@ -65,7 +60,6 @@ public class OrganizationServiceAssign extends AbstractModel {
 
     /**
     * 帮助文档。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Document")
     @Expose
@@ -73,7 +67,6 @@ public class OrganizationServiceAssign extends AbstractModel {
 
     /**
     * 集团服务产品控制台路径。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConsoleUrl")
     @Expose
@@ -82,7 +75,6 @@ public class OrganizationServiceAssign extends AbstractModel {
     /**
     * 是否接入使用状态。取值: 1-是 
  2-否
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsUsageStatus")
     @Expose
@@ -90,7 +82,6 @@ public class OrganizationServiceAssign extends AbstractModel {
 
     /**
     * 委派管理员数量限制。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CanAssignCount")
     @Expose
@@ -98,7 +89,6 @@ public class OrganizationServiceAssign extends AbstractModel {
 
     /**
     * 集团服务产品标识。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Product")
     @Expose
@@ -106,7 +96,6 @@ public class OrganizationServiceAssign extends AbstractModel {
 
     /**
     * 是否支持集团服务授权。取值 1-是、2-否
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ServiceGrant")
     @Expose
@@ -114,7 +103,6 @@ public class OrganizationServiceAssign extends AbstractModel {
 
     /**
     * 集团服务授权启用状态。ServiceGrant值为1时该字段有效 ，取值：Enabled-开启  Disabled-关闭 
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GrantStatus")
     @Expose
@@ -122,17 +110,14 @@ public class OrganizationServiceAssign extends AbstractModel {
 
     /**
     * 是否支持设置委派管理范围。取值: 1-是  2-否
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsSetManagementScope")
     @Expose
     private Long IsSetManagementScope;
 
     /**
-     * Get 集团服务ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集团服务ID。 
      * @return ServiceId 集团服务ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getServiceId() {
         return this.ServiceId;
@@ -140,19 +125,15 @@ public class OrganizationServiceAssign extends AbstractModel {
 
     /**
      * Set 集团服务ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ServiceId 集团服务ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setServiceId(Long ServiceId) {
         this.ServiceId = ServiceId;
     }
 
     /**
-     * Get 集团服务产品名称。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集团服务产品名称。 
      * @return ProductName 集团服务产品名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProductName() {
         return this.ProductName;
@@ -160,19 +141,15 @@ public class OrganizationServiceAssign extends AbstractModel {
 
     /**
      * Set 集团服务产品名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProductName 集团服务产品名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProductName(String ProductName) {
         this.ProductName = ProductName;
     }
 
     /**
-     * Get 是否支持委派。取值: 1-是  2-否
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否支持委派。取值: 1-是  2-否 
      * @return IsAssign 是否支持委派。取值: 1-是  2-否
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsAssign() {
         return this.IsAssign;
@@ -180,19 +157,15 @@ public class OrganizationServiceAssign extends AbstractModel {
 
     /**
      * Set 是否支持委派。取值: 1-是  2-否
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsAssign 是否支持委派。取值: 1-是  2-否
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsAssign(Long IsAssign) {
         this.IsAssign = IsAssign;
     }
 
     /**
-     * Get 集团服务描述。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集团服务描述。 
      * @return Description 集团服务描述。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
         return this.Description;
@@ -200,19 +173,15 @@ public class OrganizationServiceAssign extends AbstractModel {
 
     /**
      * Set 集团服务描述。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Description 集团服务描述。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 当前委派管理员数。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当前委派管理员数。 
      * @return MemberNum 当前委派管理员数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMemberNum() {
         return this.MemberNum;
@@ -220,19 +189,15 @@ public class OrganizationServiceAssign extends AbstractModel {
 
     /**
      * Set 当前委派管理员数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MemberNum 当前委派管理员数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMemberNum(String MemberNum) {
         this.MemberNum = MemberNum;
     }
 
     /**
-     * Get 帮助文档。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 帮助文档。 
      * @return Document 帮助文档。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDocument() {
         return this.Document;
@@ -240,19 +205,15 @@ public class OrganizationServiceAssign extends AbstractModel {
 
     /**
      * Set 帮助文档。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Document 帮助文档。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDocument(String Document) {
         this.Document = Document;
     }
 
     /**
-     * Get 集团服务产品控制台路径。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集团服务产品控制台路径。 
      * @return ConsoleUrl 集团服务产品控制台路径。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getConsoleUrl() {
         return this.ConsoleUrl;
@@ -260,9 +221,7 @@ public class OrganizationServiceAssign extends AbstractModel {
 
     /**
      * Set 集团服务产品控制台路径。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ConsoleUrl 集团服务产品控制台路径。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConsoleUrl(String ConsoleUrl) {
         this.ConsoleUrl = ConsoleUrl;
@@ -270,11 +229,9 @@ public class OrganizationServiceAssign extends AbstractModel {
 
     /**
      * Get 是否接入使用状态。取值: 1-是 
- 2-否
-注意：此字段可能返回 null，表示取不到有效值。 
+ 2-否 
      * @return IsUsageStatus 是否接入使用状态。取值: 1-是 
  2-否
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsUsageStatus() {
         return this.IsUsageStatus;
@@ -283,20 +240,16 @@ public class OrganizationServiceAssign extends AbstractModel {
     /**
      * Set 是否接入使用状态。取值: 1-是 
  2-否
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsUsageStatus 是否接入使用状态。取值: 1-是 
  2-否
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsUsageStatus(Long IsUsageStatus) {
         this.IsUsageStatus = IsUsageStatus;
     }
 
     /**
-     * Get 委派管理员数量限制。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 委派管理员数量限制。 
      * @return CanAssignCount 委派管理员数量限制。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCanAssignCount() {
         return this.CanAssignCount;
@@ -304,19 +257,15 @@ public class OrganizationServiceAssign extends AbstractModel {
 
     /**
      * Set 委派管理员数量限制。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CanAssignCount 委派管理员数量限制。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCanAssignCount(Long CanAssignCount) {
         this.CanAssignCount = CanAssignCount;
     }
 
     /**
-     * Get 集团服务产品标识。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集团服务产品标识。 
      * @return Product 集团服务产品标识。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProduct() {
         return this.Product;
@@ -324,19 +273,15 @@ public class OrganizationServiceAssign extends AbstractModel {
 
     /**
      * Set 集团服务产品标识。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Product 集团服务产品标识。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProduct(String Product) {
         this.Product = Product;
     }
 
     /**
-     * Get 是否支持集团服务授权。取值 1-是、2-否
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否支持集团服务授权。取值 1-是、2-否 
      * @return ServiceGrant 是否支持集团服务授权。取值 1-是、2-否
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getServiceGrant() {
         return this.ServiceGrant;
@@ -344,19 +289,15 @@ public class OrganizationServiceAssign extends AbstractModel {
 
     /**
      * Set 是否支持集团服务授权。取值 1-是、2-否
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ServiceGrant 是否支持集团服务授权。取值 1-是、2-否
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setServiceGrant(Long ServiceGrant) {
         this.ServiceGrant = ServiceGrant;
     }
 
     /**
-     * Get 集团服务授权启用状态。ServiceGrant值为1时该字段有效 ，取值：Enabled-开启  Disabled-关闭 
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集团服务授权启用状态。ServiceGrant值为1时该字段有效 ，取值：Enabled-开启  Disabled-关闭  
      * @return GrantStatus 集团服务授权启用状态。ServiceGrant值为1时该字段有效 ，取值：Enabled-开启  Disabled-关闭 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGrantStatus() {
         return this.GrantStatus;
@@ -364,19 +305,15 @@ public class OrganizationServiceAssign extends AbstractModel {
 
     /**
      * Set 集团服务授权启用状态。ServiceGrant值为1时该字段有效 ，取值：Enabled-开启  Disabled-关闭 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GrantStatus 集团服务授权启用状态。ServiceGrant值为1时该字段有效 ，取值：Enabled-开启  Disabled-关闭 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGrantStatus(String GrantStatus) {
         this.GrantStatus = GrantStatus;
     }
 
     /**
-     * Get 是否支持设置委派管理范围。取值: 1-是  2-否
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否支持设置委派管理范围。取值: 1-是  2-否 
      * @return IsSetManagementScope 是否支持设置委派管理范围。取值: 1-是  2-否
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsSetManagementScope() {
         return this.IsSetManagementScope;
@@ -384,9 +321,7 @@ public class OrganizationServiceAssign extends AbstractModel {
 
     /**
      * Set 是否支持设置委派管理范围。取值: 1-是  2-否
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsSetManagementScope 是否支持设置委派管理范围。取值: 1-是  2-否
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsSetManagementScope(Long IsSetManagementScope) {
         this.IsSetManagementScope = IsSetManagementScope;

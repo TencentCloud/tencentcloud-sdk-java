@@ -26,7 +26,6 @@ public class ResourceTagMapping extends AbstractModel {
     /**
     * 资源六段式。腾讯云使用资源六段式描述一个资源。
 例如：qcs::${ServiceType}:${Region}:${Account}:${ResourcePreifx}/${ResourceId}。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Resource")
     @Expose
@@ -34,7 +33,6 @@ public class ResourceTagMapping extends AbstractModel {
 
     /**
     * 合规详情。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ComplianceDetails")
     @Expose
@@ -42,7 +40,6 @@ public class ResourceTagMapping extends AbstractModel {
 
     /**
     * 资源标签。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tags")
     @Expose
@@ -50,11 +47,9 @@ public class ResourceTagMapping extends AbstractModel {
 
     /**
      * Get 资源六段式。腾讯云使用资源六段式描述一个资源。
-例如：qcs::${ServiceType}:${Region}:${Account}:${ResourcePreifx}/${ResourceId}。
-注意：此字段可能返回 null，表示取不到有效值。 
+例如：qcs::${ServiceType}:${Region}:${Account}:${ResourcePreifx}/${ResourceId}。 
      * @return Resource 资源六段式。腾讯云使用资源六段式描述一个资源。
 例如：qcs::${ServiceType}:${Region}:${Account}:${ResourcePreifx}/${ResourceId}。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResource() {
         return this.Resource;
@@ -63,20 +58,16 @@ public class ResourceTagMapping extends AbstractModel {
     /**
      * Set 资源六段式。腾讯云使用资源六段式描述一个资源。
 例如：qcs::${ServiceType}:${Region}:${Account}:${ResourcePreifx}/${ResourceId}。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Resource 资源六段式。腾讯云使用资源六段式描述一个资源。
 例如：qcs::${ServiceType}:${Region}:${Account}:${ResourcePreifx}/${ResourceId}。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResource(String Resource) {
         this.Resource = Resource;
     }
 
     /**
-     * Get 合规详情。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 合规详情。 
      * @return ComplianceDetails 合规详情。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TagComplianceDetails getComplianceDetails() {
         return this.ComplianceDetails;
@@ -84,19 +75,15 @@ public class ResourceTagMapping extends AbstractModel {
 
     /**
      * Set 合规详情。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ComplianceDetails 合规详情。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setComplianceDetails(TagComplianceDetails ComplianceDetails) {
         this.ComplianceDetails = ComplianceDetails;
     }
 
     /**
-     * Get 资源标签。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源标签。 
      * @return Tags 资源标签。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Tags [] getTags() {
         return this.Tags;
@@ -104,9 +91,7 @@ public class ResourceTagMapping extends AbstractModel {
 
     /**
      * Set 资源标签。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tags 资源标签。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTags(Tags [] Tags) {
         this.Tags = Tags;

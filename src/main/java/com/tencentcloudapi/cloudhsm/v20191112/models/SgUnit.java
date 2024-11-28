@@ -25,7 +25,6 @@ public class SgUnit extends AbstractModel {
 
     /**
     * 安全组Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SgId")
     @Expose
@@ -33,7 +32,6 @@ public class SgUnit extends AbstractModel {
 
     /**
     * 安全组名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SgName")
     @Expose
@@ -41,7 +39,6 @@ public class SgUnit extends AbstractModel {
 
     /**
     * 备注
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SgRemark")
     @Expose
@@ -49,17 +46,14 @@ public class SgUnit extends AbstractModel {
 
     /**
     * 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-     * Get 安全组Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 安全组Id 
      * @return SgId 安全组Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSgId() {
         return this.SgId;
@@ -67,19 +61,15 @@ public class SgUnit extends AbstractModel {
 
     /**
      * Set 安全组Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SgId 安全组Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSgId(String SgId) {
         this.SgId = SgId;
     }
 
     /**
-     * Get 安全组名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 安全组名称 
      * @return SgName 安全组名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSgName() {
         return this.SgName;
@@ -87,19 +77,15 @@ public class SgUnit extends AbstractModel {
 
     /**
      * Set 安全组名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SgName 安全组名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSgName(String SgName) {
         this.SgName = SgName;
     }
 
     /**
-     * Get 备注
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 备注 
      * @return SgRemark 备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSgRemark() {
         return this.SgRemark;
@@ -107,19 +93,15 @@ public class SgUnit extends AbstractModel {
 
     /**
      * Set 备注
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SgRemark 备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSgRemark(String SgRemark) {
         this.SgRemark = SgRemark;
     }
 
     /**
-     * Get 创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间 
      * @return CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -127,9 +109,7 @@ public class SgUnit extends AbstractModel {
 
     /**
      * Set 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;

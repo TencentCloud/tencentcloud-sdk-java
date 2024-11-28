@@ -25,7 +25,6 @@ public class TagComplianceDetails extends AbstractModel {
 
     /**
     * 合规状态。true-合规，false-不合规
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ComplianceStatus")
     @Expose
@@ -33,7 +32,6 @@ public class TagComplianceDetails extends AbstractModel {
 
     /**
     * 值不合规的标签键列表。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KeysWithNonCompliantValues")
     @Expose
@@ -41,17 +39,14 @@ public class TagComplianceDetails extends AbstractModel {
 
     /**
     * 键不合规的标签键列表。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NonCompliantKeys")
     @Expose
     private String [] NonCompliantKeys;
 
     /**
-     * Get 合规状态。true-合规，false-不合规
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 合规状态。true-合规，false-不合规 
      * @return ComplianceStatus 合规状态。true-合规，false-不合规
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getComplianceStatus() {
         return this.ComplianceStatus;
@@ -59,19 +54,15 @@ public class TagComplianceDetails extends AbstractModel {
 
     /**
      * Set 合规状态。true-合规，false-不合规
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ComplianceStatus 合规状态。true-合规，false-不合规
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setComplianceStatus(Boolean ComplianceStatus) {
         this.ComplianceStatus = ComplianceStatus;
     }
 
     /**
-     * Get 值不合规的标签键列表。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 值不合规的标签键列表。 
      * @return KeysWithNonCompliantValues 值不合规的标签键列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getKeysWithNonCompliantValues() {
         return this.KeysWithNonCompliantValues;
@@ -79,19 +70,15 @@ public class TagComplianceDetails extends AbstractModel {
 
     /**
      * Set 值不合规的标签键列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param KeysWithNonCompliantValues 值不合规的标签键列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKeysWithNonCompliantValues(String [] KeysWithNonCompliantValues) {
         this.KeysWithNonCompliantValues = KeysWithNonCompliantValues;
     }
 
     /**
-     * Get 键不合规的标签键列表。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 键不合规的标签键列表。 
      * @return NonCompliantKeys 键不合规的标签键列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getNonCompliantKeys() {
         return this.NonCompliantKeys;
@@ -99,9 +86,7 @@ public class TagComplianceDetails extends AbstractModel {
 
     /**
      * Set 键不合规的标签键列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NonCompliantKeys 键不合规的标签键列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNonCompliantKeys(String [] NonCompliantKeys) {
         this.NonCompliantKeys = NonCompliantKeys;

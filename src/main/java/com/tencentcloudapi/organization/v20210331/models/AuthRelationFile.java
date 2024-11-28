@@ -25,7 +25,6 @@ public class AuthRelationFile extends AbstractModel {
 
     /**
     * 文件名。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -33,17 +32,14 @@ public class AuthRelationFile extends AbstractModel {
 
     /**
     * 文件路径。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-     * Get 文件名。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文件名。 
      * @return Name 文件名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -51,19 +47,15 @@ public class AuthRelationFile extends AbstractModel {
 
     /**
      * Set 文件名。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 文件名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 文件路径。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文件路径。 
      * @return Url 文件路径。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUrl() {
         return this.Url;
@@ -71,9 +63,7 @@ public class AuthRelationFile extends AbstractModel {
 
     /**
      * Set 文件路径。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Url 文件路径。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUrl(String Url) {
         this.Url = Url;

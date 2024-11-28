@@ -32,7 +32,6 @@ public class DescribeSubnetResponse extends AbstractModel {
 
     /**
     * 返回的子网实例列表。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubnetList")
     @Expose
@@ -62,10 +61,8 @@ public class DescribeSubnetResponse extends AbstractModel {
     }
 
     /**
-     * Get 返回的子网实例列表。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 返回的子网实例列表。 
      * @return SubnetList 返回的子网实例列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Subnet [] getSubnetList() {
         return this.SubnetList;
@@ -73,9 +70,7 @@ public class DescribeSubnetResponse extends AbstractModel {
 
     /**
      * Set 返回的子网实例列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubnetList 返回的子网实例列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubnetList(Subnet [] SubnetList) {
         this.SubnetList = SubnetList;

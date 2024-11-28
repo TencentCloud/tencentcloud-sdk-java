@@ -25,7 +25,6 @@ public class OrgIdentity extends AbstractModel {
 
     /**
     * 身份ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IdentityId")
     @Expose
@@ -33,7 +32,6 @@ public class OrgIdentity extends AbstractModel {
 
     /**
     * 身份名称。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IdentityAliasName")
     @Expose
@@ -41,7 +39,6 @@ public class OrgIdentity extends AbstractModel {
 
     /**
     * 描述。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
     @Expose
@@ -49,7 +46,6 @@ public class OrgIdentity extends AbstractModel {
 
     /**
     * 身份策略。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IdentityPolicy")
     @Expose
@@ -57,7 +53,6 @@ public class OrgIdentity extends AbstractModel {
 
     /**
     * 身份类型。 1-预设、 2-自定义
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IdentityType")
     @Expose
@@ -65,17 +60,14 @@ public class OrgIdentity extends AbstractModel {
 
     /**
     * 更新时间。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-     * Get 身份ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 身份ID。 
      * @return IdentityId 身份ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIdentityId() {
         return this.IdentityId;
@@ -83,19 +75,15 @@ public class OrgIdentity extends AbstractModel {
 
     /**
      * Set 身份ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IdentityId 身份ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIdentityId(Long IdentityId) {
         this.IdentityId = IdentityId;
     }
 
     /**
-     * Get 身份名称。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 身份名称。 
      * @return IdentityAliasName 身份名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIdentityAliasName() {
         return this.IdentityAliasName;
@@ -103,19 +91,15 @@ public class OrgIdentity extends AbstractModel {
 
     /**
      * Set 身份名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IdentityAliasName 身份名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIdentityAliasName(String IdentityAliasName) {
         this.IdentityAliasName = IdentityAliasName;
     }
 
     /**
-     * Get 描述。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 描述。 
      * @return Description 描述。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
         return this.Description;
@@ -123,19 +107,15 @@ public class OrgIdentity extends AbstractModel {
 
     /**
      * Set 描述。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Description 描述。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 身份策略。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 身份策略。 
      * @return IdentityPolicy 身份策略。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public IdentityPolicy [] getIdentityPolicy() {
         return this.IdentityPolicy;
@@ -143,19 +123,15 @@ public class OrgIdentity extends AbstractModel {
 
     /**
      * Set 身份策略。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IdentityPolicy 身份策略。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIdentityPolicy(IdentityPolicy [] IdentityPolicy) {
         this.IdentityPolicy = IdentityPolicy;
     }
 
     /**
-     * Get 身份类型。 1-预设、 2-自定义
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 身份类型。 1-预设、 2-自定义 
      * @return IdentityType 身份类型。 1-预设、 2-自定义
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIdentityType() {
         return this.IdentityType;
@@ -163,19 +139,15 @@ public class OrgIdentity extends AbstractModel {
 
     /**
      * Set 身份类型。 1-预设、 2-自定义
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IdentityType 身份类型。 1-预设、 2-自定义
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIdentityType(Long IdentityType) {
         this.IdentityType = IdentityType;
     }
 
     /**
-     * Get 更新时间。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 更新时间。 
      * @return UpdateTime 更新时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdateTime() {
         return this.UpdateTime;
@@ -183,9 +155,7 @@ public class OrgIdentity extends AbstractModel {
 
     /**
      * Set 更新时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdateTime 更新时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;

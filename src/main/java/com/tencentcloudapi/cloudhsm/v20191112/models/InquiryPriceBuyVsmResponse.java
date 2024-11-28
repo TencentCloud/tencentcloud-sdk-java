@@ -25,7 +25,6 @@ public class InquiryPriceBuyVsmResponse extends AbstractModel {
 
     /**
     * 原始总金额，浮点型参数，精确到小数点后两位，如：2000.99
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCost")
     @Expose
@@ -33,7 +32,6 @@ public class InquiryPriceBuyVsmResponse extends AbstractModel {
 
     /**
     * 购买的实例数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GoodsNum")
     @Expose
@@ -41,7 +39,6 @@ public class InquiryPriceBuyVsmResponse extends AbstractModel {
 
     /**
     * 商品的时间大小，整型参数，举例：当TimeSpan为1，TImeUnit为m时，表示询价购买时长为1个月时的价格
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TimeSpan")
     @Expose
@@ -49,7 +46,6 @@ public class InquiryPriceBuyVsmResponse extends AbstractModel {
 
     /**
     * 商品的时间单位，m表示月，y表示年
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TimeUnit")
     @Expose
@@ -57,7 +53,6 @@ public class InquiryPriceBuyVsmResponse extends AbstractModel {
 
     /**
     * 应付总金额，浮点型参数，精确到小数点后两位，如：2000.99
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OriginalCost")
     @Expose
@@ -71,10 +66,8 @@ public class InquiryPriceBuyVsmResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 原始总金额，浮点型参数，精确到小数点后两位，如：2000.99
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 原始总金额，浮点型参数，精确到小数点后两位，如：2000.99 
      * @return TotalCost 原始总金额，浮点型参数，精确到小数点后两位，如：2000.99
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getTotalCost() {
         return this.TotalCost;
@@ -82,19 +75,15 @@ public class InquiryPriceBuyVsmResponse extends AbstractModel {
 
     /**
      * Set 原始总金额，浮点型参数，精确到小数点后两位，如：2000.99
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCost 原始总金额，浮点型参数，精确到小数点后两位，如：2000.99
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCost(Float TotalCost) {
         this.TotalCost = TotalCost;
     }
 
     /**
-     * Get 购买的实例数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 购买的实例数量 
      * @return GoodsNum 购买的实例数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getGoodsNum() {
         return this.GoodsNum;
@@ -102,19 +91,15 @@ public class InquiryPriceBuyVsmResponse extends AbstractModel {
 
     /**
      * Set 购买的实例数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GoodsNum 购买的实例数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGoodsNum(Long GoodsNum) {
         this.GoodsNum = GoodsNum;
     }
 
     /**
-     * Get 商品的时间大小，整型参数，举例：当TimeSpan为1，TImeUnit为m时，表示询价购买时长为1个月时的价格
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 商品的时间大小，整型参数，举例：当TimeSpan为1，TImeUnit为m时，表示询价购买时长为1个月时的价格 
      * @return TimeSpan 商品的时间大小，整型参数，举例：当TimeSpan为1，TImeUnit为m时，表示询价购买时长为1个月时的价格
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTimeSpan() {
         return this.TimeSpan;
@@ -122,19 +107,15 @@ public class InquiryPriceBuyVsmResponse extends AbstractModel {
 
     /**
      * Set 商品的时间大小，整型参数，举例：当TimeSpan为1，TImeUnit为m时，表示询价购买时长为1个月时的价格
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TimeSpan 商品的时间大小，整型参数，举例：当TimeSpan为1，TImeUnit为m时，表示询价购买时长为1个月时的价格
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimeSpan(String TimeSpan) {
         this.TimeSpan = TimeSpan;
     }
 
     /**
-     * Get 商品的时间单位，m表示月，y表示年
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 商品的时间单位，m表示月，y表示年 
      * @return TimeUnit 商品的时间单位，m表示月，y表示年
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTimeUnit() {
         return this.TimeUnit;
@@ -142,19 +123,15 @@ public class InquiryPriceBuyVsmResponse extends AbstractModel {
 
     /**
      * Set 商品的时间单位，m表示月，y表示年
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TimeUnit 商品的时间单位，m表示月，y表示年
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimeUnit(String TimeUnit) {
         this.TimeUnit = TimeUnit;
     }
 
     /**
-     * Get 应付总金额，浮点型参数，精确到小数点后两位，如：2000.99
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 应付总金额，浮点型参数，精确到小数点后两位，如：2000.99 
      * @return OriginalCost 应付总金额，浮点型参数，精确到小数点后两位，如：2000.99
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getOriginalCost() {
         return this.OriginalCost;
@@ -162,9 +139,7 @@ public class InquiryPriceBuyVsmResponse extends AbstractModel {
 
     /**
      * Set 应付总金额，浮点型参数，精确到小数点后两位，如：2000.99
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OriginalCost 应付总金额，浮点型参数，精确到小数点后两位，如：2000.99
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOriginalCost(Float OriginalCost) {
         this.OriginalCost = OriginalCost;

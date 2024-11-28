@@ -25,7 +25,6 @@ public class DescribeShareAreasResponse extends AbstractModel {
 
     /**
     * 详情
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Items")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeShareAreasResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 详情
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 详情 
      * @return Items 详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ShareArea [] getItems() {
         return this.Items;
@@ -50,9 +47,7 @@ public class DescribeShareAreasResponse extends AbstractModel {
 
     /**
      * Set 详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Items 详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setItems(ShareArea [] Items) {
         this.Items = Items;

@@ -25,7 +25,6 @@ public class DescribeOrganizationMemberAuthIdentitiesResponse extends AbstractMo
 
     /**
     * 授权身份列表。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Items")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeOrganizationMemberAuthIdentitiesResponse extends AbstractMo
 
     /**
     * 总数目。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Total")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeOrganizationMemberAuthIdentitiesResponse extends AbstractMo
     private String RequestId;
 
     /**
-     * Get 授权身份列表。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 授权身份列表。 
      * @return Items 授权身份列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public OrgMemberAuthIdentity [] getItems() {
         return this.Items;
@@ -58,19 +54,15 @@ public class DescribeOrganizationMemberAuthIdentitiesResponse extends AbstractMo
 
     /**
      * Set 授权身份列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Items 授权身份列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setItems(OrgMemberAuthIdentity [] Items) {
         this.Items = Items;
     }
 
     /**
-     * Get 总数目。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 总数目。 
      * @return Total 总数目。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotal() {
         return this.Total;
@@ -78,9 +70,7 @@ public class DescribeOrganizationMemberAuthIdentitiesResponse extends AbstractMo
 
     /**
      * Set 总数目。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Total 总数目。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotal(Long Total) {
         this.Total = Total;

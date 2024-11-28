@@ -25,7 +25,6 @@ public class AuthNode extends AbstractModel {
 
     /**
     * 互信主体关系ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RelationId")
     @Expose
@@ -33,7 +32,6 @@ public class AuthNode extends AbstractModel {
 
     /**
     * 互信主体名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AuthName")
     @Expose
@@ -41,17 +39,14 @@ public class AuthNode extends AbstractModel {
 
     /**
     * 主体管理员
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Manager")
     @Expose
     private MemberMainInfo Manager;
 
     /**
-     * Get 互信主体关系ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 互信主体关系ID 
      * @return RelationId 互信主体关系ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRelationId() {
         return this.RelationId;
@@ -59,19 +54,15 @@ public class AuthNode extends AbstractModel {
 
     /**
      * Set 互信主体关系ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RelationId 互信主体关系ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRelationId(Long RelationId) {
         this.RelationId = RelationId;
     }
 
     /**
-     * Get 互信主体名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 互信主体名称 
      * @return AuthName 互信主体名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAuthName() {
         return this.AuthName;
@@ -79,19 +70,15 @@ public class AuthNode extends AbstractModel {
 
     /**
      * Set 互信主体名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AuthName 互信主体名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAuthName(String AuthName) {
         this.AuthName = AuthName;
     }
 
     /**
-     * Get 主体管理员
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主体管理员 
      * @return Manager 主体管理员
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public MemberMainInfo getManager() {
         return this.Manager;
@@ -99,9 +86,7 @@ public class AuthNode extends AbstractModel {
 
     /**
      * Set 主体管理员
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Manager 主体管理员
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setManager(MemberMainInfo Manager) {
         this.Manager = Manager;

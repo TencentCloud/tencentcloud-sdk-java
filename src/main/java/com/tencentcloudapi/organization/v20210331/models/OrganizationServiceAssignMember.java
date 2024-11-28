@@ -25,7 +25,6 @@ public class OrganizationServiceAssignMember extends AbstractModel {
 
     /**
     * 集团服务ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ServiceId")
     @Expose
@@ -33,7 +32,6 @@ public class OrganizationServiceAssignMember extends AbstractModel {
 
     /**
     * 集团服务产品名称。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProductName")
     @Expose
@@ -41,7 +39,6 @@ public class OrganizationServiceAssignMember extends AbstractModel {
 
     /**
     * 委派管理员Uin。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MemberUin")
     @Expose
@@ -49,7 +46,6 @@ public class OrganizationServiceAssignMember extends AbstractModel {
 
     /**
     * 委派管理员名称。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MemberName")
     @Expose
@@ -57,7 +53,6 @@ public class OrganizationServiceAssignMember extends AbstractModel {
 
     /**
     * 启用状态 。取值：0-服务无启用状态  1-已启用  2-未启用
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UsageStatus")
     @Expose
@@ -65,7 +60,6 @@ public class OrganizationServiceAssignMember extends AbstractModel {
 
     /**
     * 委派时间。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -73,7 +67,6 @@ public class OrganizationServiceAssignMember extends AbstractModel {
 
     /**
     * 委派管理员管理范围。取值: 1-全部成员  2-部分成员
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ManagementScope")
     @Expose
@@ -81,7 +74,6 @@ public class OrganizationServiceAssignMember extends AbstractModel {
 
     /**
     * 管理的成员Uin列表。ManagementScope值为2时该参数有效
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ManagementScopeMembers")
     @Expose
@@ -89,17 +81,14 @@ public class OrganizationServiceAssignMember extends AbstractModel {
 
     /**
     * 管理的部门ID列表。ManagementScope值为2时该参数有效
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ManagementScopeNodes")
     @Expose
     private NodeMainInfo [] ManagementScopeNodes;
 
     /**
-     * Get 集团服务ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集团服务ID。 
      * @return ServiceId 集团服务ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getServiceId() {
         return this.ServiceId;
@@ -107,19 +96,15 @@ public class OrganizationServiceAssignMember extends AbstractModel {
 
     /**
      * Set 集团服务ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ServiceId 集团服务ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setServiceId(Long ServiceId) {
         this.ServiceId = ServiceId;
     }
 
     /**
-     * Get 集团服务产品名称。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集团服务产品名称。 
      * @return ProductName 集团服务产品名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProductName() {
         return this.ProductName;
@@ -127,19 +112,15 @@ public class OrganizationServiceAssignMember extends AbstractModel {
 
     /**
      * Set 集团服务产品名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProductName 集团服务产品名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProductName(String ProductName) {
         this.ProductName = ProductName;
     }
 
     /**
-     * Get 委派管理员Uin。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 委派管理员Uin。 
      * @return MemberUin 委派管理员Uin。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMemberUin() {
         return this.MemberUin;
@@ -147,19 +128,15 @@ public class OrganizationServiceAssignMember extends AbstractModel {
 
     /**
      * Set 委派管理员Uin。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MemberUin 委派管理员Uin。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMemberUin(Long MemberUin) {
         this.MemberUin = MemberUin;
     }
 
     /**
-     * Get 委派管理员名称。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 委派管理员名称。 
      * @return MemberName 委派管理员名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMemberName() {
         return this.MemberName;
@@ -167,19 +144,15 @@ public class OrganizationServiceAssignMember extends AbstractModel {
 
     /**
      * Set 委派管理员名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MemberName 委派管理员名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMemberName(String MemberName) {
         this.MemberName = MemberName;
     }
 
     /**
-     * Get 启用状态 。取值：0-服务无启用状态  1-已启用  2-未启用
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 启用状态 。取值：0-服务无启用状态  1-已启用  2-未启用 
      * @return UsageStatus 启用状态 。取值：0-服务无启用状态  1-已启用  2-未启用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getUsageStatus() {
         return this.UsageStatus;
@@ -187,19 +160,15 @@ public class OrganizationServiceAssignMember extends AbstractModel {
 
     /**
      * Set 启用状态 。取值：0-服务无启用状态  1-已启用  2-未启用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UsageStatus 启用状态 。取值：0-服务无启用状态  1-已启用  2-未启用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUsageStatus(Long UsageStatus) {
         this.UsageStatus = UsageStatus;
     }
 
     /**
-     * Get 委派时间。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 委派时间。 
      * @return CreateTime 委派时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -207,19 +176,15 @@ public class OrganizationServiceAssignMember extends AbstractModel {
 
     /**
      * Set 委派时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 委派时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 委派管理员管理范围。取值: 1-全部成员  2-部分成员
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 委派管理员管理范围。取值: 1-全部成员  2-部分成员 
      * @return ManagementScope 委派管理员管理范围。取值: 1-全部成员  2-部分成员
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getManagementScope() {
         return this.ManagementScope;
@@ -227,19 +192,15 @@ public class OrganizationServiceAssignMember extends AbstractModel {
 
     /**
      * Set 委派管理员管理范围。取值: 1-全部成员  2-部分成员
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ManagementScope 委派管理员管理范围。取值: 1-全部成员  2-部分成员
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setManagementScope(Long ManagementScope) {
         this.ManagementScope = ManagementScope;
     }
 
     /**
-     * Get 管理的成员Uin列表。ManagementScope值为2时该参数有效
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 管理的成员Uin列表。ManagementScope值为2时该参数有效 
      * @return ManagementScopeMembers 管理的成员Uin列表。ManagementScope值为2时该参数有效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public MemberMainInfo [] getManagementScopeMembers() {
         return this.ManagementScopeMembers;
@@ -247,19 +208,15 @@ public class OrganizationServiceAssignMember extends AbstractModel {
 
     /**
      * Set 管理的成员Uin列表。ManagementScope值为2时该参数有效
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ManagementScopeMembers 管理的成员Uin列表。ManagementScope值为2时该参数有效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setManagementScopeMembers(MemberMainInfo [] ManagementScopeMembers) {
         this.ManagementScopeMembers = ManagementScopeMembers;
     }
 
     /**
-     * Get 管理的部门ID列表。ManagementScope值为2时该参数有效
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 管理的部门ID列表。ManagementScope值为2时该参数有效 
      * @return ManagementScopeNodes 管理的部门ID列表。ManagementScope值为2时该参数有效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public NodeMainInfo [] getManagementScopeNodes() {
         return this.ManagementScopeNodes;
@@ -267,9 +224,7 @@ public class OrganizationServiceAssignMember extends AbstractModel {
 
     /**
      * Set 管理的部门ID列表。ManagementScope值为2时该参数有效
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ManagementScopeNodes 管理的部门ID列表。ManagementScope值为2时该参数有效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setManagementScopeNodes(NodeMainInfo [] ManagementScopeNodes) {
         this.ManagementScopeNodes = ManagementScopeNodes;

@@ -25,7 +25,6 @@ public class Subnet extends AbstractModel {
 
     /**
     * VPC实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcId")
     @Expose
@@ -33,7 +32,6 @@ public class Subnet extends AbstractModel {
 
     /**
     * 子网实例ID，例如：subnet-bthucmmy。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubnetId")
     @Expose
@@ -41,7 +39,6 @@ public class Subnet extends AbstractModel {
 
     /**
     * 子网名称。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubnetName")
     @Expose
@@ -49,7 +46,6 @@ public class Subnet extends AbstractModel {
 
     /**
     * 子网的 IPv4 CIDR。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CidrBlock")
     @Expose
@@ -57,7 +53,6 @@ public class Subnet extends AbstractModel {
 
     /**
     * 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreatedTime")
     @Expose
@@ -65,7 +60,6 @@ public class Subnet extends AbstractModel {
 
     /**
     * 可用IP数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AvailableIpAddressCount")
     @Expose
@@ -73,7 +67,6 @@ public class Subnet extends AbstractModel {
 
     /**
     * 子网的 IPv6 CIDR。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Ipv6CidrBlock")
     @Expose
@@ -81,7 +74,6 @@ public class Subnet extends AbstractModel {
 
     /**
     * 总IP数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalIpAddressCount")
     @Expose
@@ -89,17 +81,14 @@ public class Subnet extends AbstractModel {
 
     /**
     * 是否为默认Subnet
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsDefault")
     @Expose
     private Boolean IsDefault;
 
     /**
-     * Get VPC实例ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get VPC实例ID。 
      * @return VpcId VPC实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVpcId() {
         return this.VpcId;
@@ -107,19 +96,15 @@ public class Subnet extends AbstractModel {
 
     /**
      * Set VPC实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VpcId VPC实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 子网实例ID，例如：subnet-bthucmmy。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子网实例ID，例如：subnet-bthucmmy。 
      * @return SubnetId 子网实例ID，例如：subnet-bthucmmy。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubnetId() {
         return this.SubnetId;
@@ -127,19 +112,15 @@ public class Subnet extends AbstractModel {
 
     /**
      * Set 子网实例ID，例如：subnet-bthucmmy。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubnetId 子网实例ID，例如：subnet-bthucmmy。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get 子网名称。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子网名称。 
      * @return SubnetName 子网名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubnetName() {
         return this.SubnetName;
@@ -147,19 +128,15 @@ public class Subnet extends AbstractModel {
 
     /**
      * Set 子网名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubnetName 子网名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubnetName(String SubnetName) {
         this.SubnetName = SubnetName;
     }
 
     /**
-     * Get 子网的 IPv4 CIDR。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子网的 IPv4 CIDR。 
      * @return CidrBlock 子网的 IPv4 CIDR。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCidrBlock() {
         return this.CidrBlock;
@@ -167,19 +144,15 @@ public class Subnet extends AbstractModel {
 
     /**
      * Set 子网的 IPv4 CIDR。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CidrBlock 子网的 IPv4 CIDR。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCidrBlock(String CidrBlock) {
         this.CidrBlock = CidrBlock;
     }
 
     /**
-     * Get 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间。 
      * @return CreatedTime 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreatedTime() {
         return this.CreatedTime;
@@ -187,19 +160,15 @@ public class Subnet extends AbstractModel {
 
     /**
      * Set 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreatedTime 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreatedTime(String CreatedTime) {
         this.CreatedTime = CreatedTime;
     }
 
     /**
-     * Get 可用IP数。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 可用IP数。 
      * @return AvailableIpAddressCount 可用IP数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAvailableIpAddressCount() {
         return this.AvailableIpAddressCount;
@@ -207,19 +176,15 @@ public class Subnet extends AbstractModel {
 
     /**
      * Set 可用IP数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AvailableIpAddressCount 可用IP数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAvailableIpAddressCount(Long AvailableIpAddressCount) {
         this.AvailableIpAddressCount = AvailableIpAddressCount;
     }
 
     /**
-     * Get 子网的 IPv6 CIDR。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子网的 IPv6 CIDR。 
      * @return Ipv6CidrBlock 子网的 IPv6 CIDR。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIpv6CidrBlock() {
         return this.Ipv6CidrBlock;
@@ -227,19 +192,15 @@ public class Subnet extends AbstractModel {
 
     /**
      * Set 子网的 IPv6 CIDR。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Ipv6CidrBlock 子网的 IPv6 CIDR。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIpv6CidrBlock(String Ipv6CidrBlock) {
         this.Ipv6CidrBlock = Ipv6CidrBlock;
     }
 
     /**
-     * Get 总IP数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 总IP数 
      * @return TotalIpAddressCount 总IP数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalIpAddressCount() {
         return this.TotalIpAddressCount;
@@ -247,19 +208,15 @@ public class Subnet extends AbstractModel {
 
     /**
      * Set 总IP数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalIpAddressCount 总IP数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalIpAddressCount(Long TotalIpAddressCount) {
         this.TotalIpAddressCount = TotalIpAddressCount;
     }
 
     /**
-     * Get 是否为默认Subnet
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否为默认Subnet 
      * @return IsDefault 是否为默认Subnet
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsDefault() {
         return this.IsDefault;
@@ -267,9 +224,7 @@ public class Subnet extends AbstractModel {
 
     /**
      * Set 是否为默认Subnet
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsDefault 是否为默认Subnet
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsDefault(Boolean IsDefault) {
         this.IsDefault = IsDefault;

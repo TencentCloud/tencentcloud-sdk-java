@@ -39,7 +39,6 @@ public class DescribeVoucherUsageDetailsResponse extends AbstractModel {
 
     /**
     * 代金券使用记录细节
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UsageRecords")
     @Expose
@@ -85,10 +84,8 @@ public class DescribeVoucherUsageDetailsResponse extends AbstractModel {
     }
 
     /**
-     * Get 代金券使用记录细节
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 代金券使用记录细节 
      * @return UsageRecords 代金券使用记录细节
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public UsageRecords [] getUsageRecords() {
         return this.UsageRecords;
@@ -96,9 +93,7 @@ public class DescribeVoucherUsageDetailsResponse extends AbstractModel {
 
     /**
      * Set 代金券使用记录细节
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UsageRecords 代金券使用记录细节
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUsageRecords(UsageRecords [] UsageRecords) {
         this.UsageRecords = UsageRecords;

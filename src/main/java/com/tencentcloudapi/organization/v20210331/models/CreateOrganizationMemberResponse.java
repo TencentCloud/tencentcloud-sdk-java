@@ -25,7 +25,6 @@ public class CreateOrganizationMemberResponse extends AbstractModel {
 
     /**
     * 成员Uin。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Uin")
     @Expose
@@ -39,10 +38,8 @@ public class CreateOrganizationMemberResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 成员Uin。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 成员Uin。 
      * @return Uin 成员Uin。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getUin() {
         return this.Uin;
@@ -50,9 +47,7 @@ public class CreateOrganizationMemberResponse extends AbstractModel {
 
     /**
      * Set 成员Uin。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Uin 成员Uin。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUin(Long Uin) {
         this.Uin = Uin;

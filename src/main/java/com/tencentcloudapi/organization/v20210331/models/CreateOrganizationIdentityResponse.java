@@ -25,7 +25,6 @@ public class CreateOrganizationIdentityResponse extends AbstractModel {
 
     /**
     * 身份ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IdentityId")
     @Expose
@@ -39,10 +38,8 @@ public class CreateOrganizationIdentityResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 身份ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 身份ID 
      * @return IdentityId 身份ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIdentityId() {
         return this.IdentityId;
@@ -50,9 +47,7 @@ public class CreateOrganizationIdentityResponse extends AbstractModel {
 
     /**
      * Set 身份ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IdentityId 身份ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIdentityId(Long IdentityId) {
         this.IdentityId = IdentityId;

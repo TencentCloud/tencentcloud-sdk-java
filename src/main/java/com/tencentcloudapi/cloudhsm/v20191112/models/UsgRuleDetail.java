@@ -25,7 +25,6 @@ public class UsgRuleDetail extends AbstractModel {
 
     /**
     * 入站规则
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InBound")
     @Expose
@@ -33,7 +32,6 @@ public class UsgRuleDetail extends AbstractModel {
 
     /**
     * 出站规则
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OutBound")
     @Expose
@@ -41,7 +39,6 @@ public class UsgRuleDetail extends AbstractModel {
 
     /**
     * 安全组Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SgId")
     @Expose
@@ -49,7 +46,6 @@ public class UsgRuleDetail extends AbstractModel {
 
     /**
     * 安全组名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SgName")
     @Expose
@@ -57,7 +53,6 @@ public class UsgRuleDetail extends AbstractModel {
 
     /**
     * 备注
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SgRemark")
     @Expose
@@ -65,7 +60,6 @@ public class UsgRuleDetail extends AbstractModel {
 
     /**
     * 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -73,17 +67,14 @@ public class UsgRuleDetail extends AbstractModel {
 
     /**
     * 版本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Version")
     @Expose
     private Long Version;
 
     /**
-     * Get 入站规则
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 入站规则 
      * @return InBound 入站规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public UsgPolicy [] getInBound() {
         return this.InBound;
@@ -91,19 +82,15 @@ public class UsgRuleDetail extends AbstractModel {
 
     /**
      * Set 入站规则
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InBound 入站规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInBound(UsgPolicy [] InBound) {
         this.InBound = InBound;
     }
 
     /**
-     * Get 出站规则
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 出站规则 
      * @return OutBound 出站规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public UsgPolicy [] getOutBound() {
         return this.OutBound;
@@ -111,19 +98,15 @@ public class UsgRuleDetail extends AbstractModel {
 
     /**
      * Set 出站规则
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OutBound 出站规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutBound(UsgPolicy [] OutBound) {
         this.OutBound = OutBound;
     }
 
     /**
-     * Get 安全组Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 安全组Id 
      * @return SgId 安全组Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSgId() {
         return this.SgId;
@@ -131,19 +114,15 @@ public class UsgRuleDetail extends AbstractModel {
 
     /**
      * Set 安全组Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SgId 安全组Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSgId(String SgId) {
         this.SgId = SgId;
     }
 
     /**
-     * Get 安全组名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 安全组名称 
      * @return SgName 安全组名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSgName() {
         return this.SgName;
@@ -151,19 +130,15 @@ public class UsgRuleDetail extends AbstractModel {
 
     /**
      * Set 安全组名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SgName 安全组名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSgName(String SgName) {
         this.SgName = SgName;
     }
 
     /**
-     * Get 备注
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 备注 
      * @return SgRemark 备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSgRemark() {
         return this.SgRemark;
@@ -171,19 +146,15 @@ public class UsgRuleDetail extends AbstractModel {
 
     /**
      * Set 备注
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SgRemark 备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSgRemark(String SgRemark) {
         this.SgRemark = SgRemark;
     }
 
     /**
-     * Get 创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间 
      * @return CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -191,19 +162,15 @@ public class UsgRuleDetail extends AbstractModel {
 
     /**
      * Set 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 版本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 版本 
      * @return Version 版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getVersion() {
         return this.Version;
@@ -211,9 +178,7 @@ public class UsgRuleDetail extends AbstractModel {
 
     /**
      * Set 版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Version 版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVersion(Long Version) {
         this.Version = Version;

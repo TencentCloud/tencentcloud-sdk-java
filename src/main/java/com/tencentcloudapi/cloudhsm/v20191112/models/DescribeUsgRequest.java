@@ -38,7 +38,7 @@ public class DescribeUsgRequest extends AbstractModel {
     private Long Limit;
 
     /**
-    * 搜索关键字
+    * 过滤条件，支持安全组id
     */
     @SerializedName("SearchWord")
     @Expose
@@ -77,16 +77,16 @@ public class DescribeUsgRequest extends AbstractModel {
     }
 
     /**
-     * Get 搜索关键字 
-     * @return SearchWord 搜索关键字
+     * Get 过滤条件，支持安全组id 
+     * @return SearchWord 过滤条件，支持安全组id
      */
     public String getSearchWord() {
         return this.SearchWord;
     }
 
     /**
-     * Set 搜索关键字
-     * @param SearchWord 搜索关键字
+     * Set 过滤条件，支持安全组id
+     * @param SearchWord 过滤条件，支持安全组id
      */
     public void setSearchWord(String SearchWord) {
         this.SearchWord = SearchWord;

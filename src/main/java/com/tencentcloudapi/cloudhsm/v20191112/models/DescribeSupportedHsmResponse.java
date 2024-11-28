@@ -25,7 +25,6 @@ public class DescribeSupportedHsmResponse extends AbstractModel {
 
     /**
     * 当前地域所支持的设备列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeviceTypes")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeSupportedHsmResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 当前地域所支持的设备列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当前地域所支持的设备列表 
      * @return DeviceTypes 当前地域所支持的设备列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DeviceInfo [] getDeviceTypes() {
         return this.DeviceTypes;
@@ -50,9 +47,7 @@ public class DescribeSupportedHsmResponse extends AbstractModel {
 
     /**
      * Set 当前地域所支持的设备列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeviceTypes 当前地域所支持的设备列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeviceTypes(DeviceInfo [] DeviceTypes) {
         this.DeviceTypes = DeviceTypes;
