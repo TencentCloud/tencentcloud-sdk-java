@@ -58,14 +58,17 @@ public abstract class AbstractModel {
         JsonObject jopublic = gson.toJsonTree(obj).getAsJsonObject();
         for (Map.Entry<String, JsonElement> entry : jopublic.entrySet()) {
             Object fo = null;
-            try {
-                Field f = obj.getClass().getDeclaredField(entry.getKey());
-                f.setAccessible(true);
-                fo = f.get(obj);
-            } catch (Exception e) {
-                // this should never happen
-                e.printStackTrace();
-            }
+            Class<?> current = obj.getClass();
+            do {
+            	try {
+            		Field f = current.getDeclaredField(entry.getKey());
+            		f.setAccessible(true);
+            		fo = f.get(obj);
+            		break;
+            	} catch (Exception e) {
+            		//e.printStackTrace();
+            	}
+            } while ((current = current.getSuperclass()) != null);
             if (fo instanceof AbstractModel) {
                 joall.add(entry.getKey(), toJsonObject((AbstractModel) fo));
             } else {
