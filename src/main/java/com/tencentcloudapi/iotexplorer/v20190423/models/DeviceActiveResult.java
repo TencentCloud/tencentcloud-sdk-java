@@ -60,7 +60,9 @@ public class DeviceActiveResult extends AbstractModel {
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ModelId 模板ID
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public String getModelId() {
         return this.ModelId;
     }
@@ -70,7 +72,9 @@ public class DeviceActiveResult extends AbstractModel {
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ModelId 模板ID
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public void setModelId(String ModelId) {
         this.ModelId = ModelId;
     }

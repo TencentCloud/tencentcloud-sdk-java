@@ -25,7 +25,6 @@ public class RelapseDateBlock extends AbstractModel {
 
     /**
     * 名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -33,7 +32,6 @@ public class RelapseDateBlock extends AbstractModel {
 
     /**
     * 原文
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Src")
     @Expose
@@ -41,7 +39,6 @@ public class RelapseDateBlock extends AbstractModel {
 
     /**
     * 疾病名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiseaseName")
     @Expose
@@ -49,7 +46,6 @@ public class RelapseDateBlock extends AbstractModel {
 
     /**
     * 类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -57,7 +53,6 @@ public class RelapseDateBlock extends AbstractModel {
 
     /**
     * 归一化值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Norm")
     @Expose
@@ -65,7 +60,6 @@ public class RelapseDateBlock extends AbstractModel {
 
     /**
     * 单位
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Unit")
     @Expose
@@ -73,7 +67,6 @@ public class RelapseDateBlock extends AbstractModel {
 
     /**
     * 时间戳
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Timestamp")
     @Expose
@@ -81,17 +74,14 @@ public class RelapseDateBlock extends AbstractModel {
 
     /**
     * 对外输出值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Value")
     @Expose
     private String Value;
 
     /**
-     * Get 名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 名称 
      * @return Name 名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -99,19 +89,15 @@ public class RelapseDateBlock extends AbstractModel {
 
     /**
      * Set 名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 原文
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 原文 
      * @return Src 原文
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSrc() {
         return this.Src;
@@ -119,19 +105,15 @@ public class RelapseDateBlock extends AbstractModel {
 
     /**
      * Set 原文
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Src 原文
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSrc(String Src) {
         this.Src = Src;
     }
 
     /**
-     * Get 疾病名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 疾病名称 
      * @return DiseaseName 疾病名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDiseaseName() {
         return this.DiseaseName;
@@ -139,19 +121,15 @@ public class RelapseDateBlock extends AbstractModel {
 
     /**
      * Set 疾病名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DiseaseName 疾病名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiseaseName(String DiseaseName) {
         this.DiseaseName = DiseaseName;
     }
 
     /**
-     * Get 类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 类型 
      * @return Type 类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
         return this.Type;
@@ -159,19 +137,15 @@ public class RelapseDateBlock extends AbstractModel {
 
     /**
      * Set 类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 归一化值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 归一化值 
      * @return Norm 归一化值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNorm() {
         return this.Norm;
@@ -179,19 +153,15 @@ public class RelapseDateBlock extends AbstractModel {
 
     /**
      * Set 归一化值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Norm 归一化值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNorm(String Norm) {
         this.Norm = Norm;
     }
 
     /**
-     * Get 单位
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 单位 
      * @return Unit 单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUnit() {
         return this.Unit;
@@ -199,19 +169,15 @@ public class RelapseDateBlock extends AbstractModel {
 
     /**
      * Set 单位
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Unit 单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUnit(String Unit) {
         this.Unit = Unit;
     }
 
     /**
-     * Get 时间戳
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 时间戳 
      * @return Timestamp 时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTimestamp() {
         return this.Timestamp;
@@ -219,19 +185,15 @@ public class RelapseDateBlock extends AbstractModel {
 
     /**
      * Set 时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Timestamp 时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimestamp(String Timestamp) {
         this.Timestamp = Timestamp;
     }
 
     /**
-     * Get 对外输出值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 对外输出值 
      * @return Value 对外输出值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getValue() {
         return this.Value;
@@ -239,9 +201,7 @@ public class RelapseDateBlock extends AbstractModel {
 
     /**
      * Set 对外输出值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Value 对外输出值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValue(String Value) {
         this.Value = Value;

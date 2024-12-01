@@ -25,7 +25,6 @@ public class DrugInstructionObjectResponse extends AbstractModel {
 
     /**
     * 药品说明书消息定义
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ChemicalProductInfo")
     @Expose
@@ -33,7 +32,6 @@ public class DrugInstructionObjectResponse extends AbstractModel {
 
     /**
     * 预防用生物制品说明书
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BiologicalProductInfo")
     @Expose
@@ -47,10 +45,8 @@ public class DrugInstructionObjectResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 药品说明书消息定义
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 药品说明书消息定义 
      * @return ChemicalProductInfo 药品说明书消息定义
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ChemicalProductInfo getChemicalProductInfo() {
         return this.ChemicalProductInfo;
@@ -58,19 +54,15 @@ public class DrugInstructionObjectResponse extends AbstractModel {
 
     /**
      * Set 药品说明书消息定义
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ChemicalProductInfo 药品说明书消息定义
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setChemicalProductInfo(ChemicalProductInfo ChemicalProductInfo) {
         this.ChemicalProductInfo = ChemicalProductInfo;
     }
 
     /**
-     * Get 预防用生物制品说明书
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 预防用生物制品说明书 
      * @return BiologicalProductInfo 预防用生物制品说明书
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BiologicalProductInfo getBiologicalProductInfo() {
         return this.BiologicalProductInfo;
@@ -78,9 +70,7 @@ public class DrugInstructionObjectResponse extends AbstractModel {
 
     /**
      * Set 预防用生物制品说明书
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BiologicalProductInfo 预防用生物制品说明书
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBiologicalProductInfo(BiologicalProductInfo BiologicalProductInfo) {
         this.BiologicalProductInfo = BiologicalProductInfo;

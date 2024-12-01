@@ -25,7 +25,6 @@ public class Rectangle extends AbstractModel {
 
     /**
     * x坐标
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("X")
     @Expose
@@ -33,7 +32,6 @@ public class Rectangle extends AbstractModel {
 
     /**
     * y坐标
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Y")
     @Expose
@@ -41,7 +39,6 @@ public class Rectangle extends AbstractModel {
 
     /**
     * 宽
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("W")
     @Expose
@@ -49,17 +46,14 @@ public class Rectangle extends AbstractModel {
 
     /**
     * 高
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("H")
     @Expose
     private Long H;
 
     /**
-     * Get x坐标
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get x坐标 
      * @return X x坐标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getX() {
         return this.X;
@@ -67,19 +61,15 @@ public class Rectangle extends AbstractModel {
 
     /**
      * Set x坐标
-注意：此字段可能返回 null，表示取不到有效值。
      * @param X x坐标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setX(Long X) {
         this.X = X;
     }
 
     /**
-     * Get y坐标
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get y坐标 
      * @return Y y坐标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getY() {
         return this.Y;
@@ -87,19 +77,15 @@ public class Rectangle extends AbstractModel {
 
     /**
      * Set y坐标
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Y y坐标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setY(Long Y) {
         this.Y = Y;
     }
 
     /**
-     * Get 宽
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 宽 
      * @return W 宽
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getW() {
         return this.W;
@@ -107,19 +93,15 @@ public class Rectangle extends AbstractModel {
 
     /**
      * Set 宽
-注意：此字段可能返回 null，表示取不到有效值。
      * @param W 宽
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setW(Long W) {
         this.W = W;
     }
 
     /**
-     * Get 高
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 高 
      * @return H 高
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getH() {
         return this.H;
@@ -127,9 +109,7 @@ public class Rectangle extends AbstractModel {
 
     /**
      * Set 高
-注意：此字段可能返回 null，表示取不到有效值。
      * @param H 高
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setH(Long H) {
         this.H = H;

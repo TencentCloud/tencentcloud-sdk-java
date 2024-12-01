@@ -25,7 +25,6 @@ public class SurgeryHistoryBlock extends AbstractModel {
 
     /**
     * 名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -33,7 +32,6 @@ public class SurgeryHistoryBlock extends AbstractModel {
 
     /**
     * 原文
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Src")
     @Expose
@@ -41,7 +39,6 @@ public class SurgeryHistoryBlock extends AbstractModel {
 
     /**
     * 值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Value")
     @Expose
@@ -49,17 +46,14 @@ public class SurgeryHistoryBlock extends AbstractModel {
 
     /**
     * 手术列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Surgerylist")
     @Expose
     private SurgeryListBlock [] Surgerylist;
 
     /**
-     * Get 名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 名称 
      * @return Name 名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -67,19 +61,15 @@ public class SurgeryHistoryBlock extends AbstractModel {
 
     /**
      * Set 名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 原文
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 原文 
      * @return Src 原文
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSrc() {
         return this.Src;
@@ -87,19 +77,15 @@ public class SurgeryHistoryBlock extends AbstractModel {
 
     /**
      * Set 原文
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Src 原文
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSrc(String Src) {
         this.Src = Src;
     }
 
     /**
-     * Get 值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 值 
      * @return Value 值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getValue() {
         return this.Value;
@@ -107,19 +93,15 @@ public class SurgeryHistoryBlock extends AbstractModel {
 
     /**
      * Set 值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Value 值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValue(String Value) {
         this.Value = Value;
     }
 
     /**
-     * Get 手术列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 手术列表 
      * @return Surgerylist 手术列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SurgeryListBlock [] getSurgerylist() {
         return this.Surgerylist;
@@ -127,9 +109,7 @@ public class SurgeryHistoryBlock extends AbstractModel {
 
     /**
      * Set 手术列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Surgerylist 手术列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSurgerylist(SurgeryListBlock [] Surgerylist) {
         this.Surgerylist = Surgerylist;

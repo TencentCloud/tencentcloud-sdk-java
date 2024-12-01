@@ -25,7 +25,6 @@ public class EyeItemsInfo extends AbstractModel {
 
     /**
     * 眼科报告
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EyeItems")
     @Expose
@@ -33,7 +32,6 @@ public class EyeItemsInfo extends AbstractModel {
 
     /**
     * 版本号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Version")
     @Expose
@@ -41,17 +39,14 @@ public class EyeItemsInfo extends AbstractModel {
 
     /**
     * 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Page")
     @Expose
     private Long Page;
 
     /**
-     * Get 眼科报告
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 眼科报告 
      * @return EyeItems 眼科报告
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public EyeItem getEyeItems() {
         return this.EyeItems;
@@ -59,19 +54,15 @@ public class EyeItemsInfo extends AbstractModel {
 
     /**
      * Set 眼科报告
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EyeItems 眼科报告
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEyeItems(EyeItem EyeItems) {
         this.EyeItems = EyeItems;
     }
 
     /**
-     * Get 版本号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 版本号 
      * @return Version 版本号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVersion() {
         return this.Version;
@@ -79,19 +70,15 @@ public class EyeItemsInfo extends AbstractModel {
 
     /**
      * Set 版本号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Version 版本号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVersion(String Version) {
         this.Version = Version;
     }
 
     /**
-     * Get 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据在原PDF文件中的第几页 
      * @return Page 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPage() {
         return this.Page;
@@ -99,9 +86,7 @@ public class EyeItemsInfo extends AbstractModel {
 
     /**
      * Set 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Page 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPage(Long Page) {
         this.Page = Page;

@@ -25,7 +25,6 @@ public class MenstrualHistoryBlock extends AbstractModel {
 
     /**
     * 末次月经
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LastMenstrualPeriod")
     @Expose
@@ -33,7 +32,6 @@ public class MenstrualHistoryBlock extends AbstractModel {
 
     /**
     * 月经量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MenstrualFlow")
     @Expose
@@ -41,7 +39,6 @@ public class MenstrualHistoryBlock extends AbstractModel {
 
     /**
     * 初潮时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MenarcheAge")
     @Expose
@@ -49,7 +46,6 @@ public class MenstrualHistoryBlock extends AbstractModel {
 
     /**
     * 是否绝经
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MenstruationOrNot")
     @Expose
@@ -57,7 +53,6 @@ public class MenstrualHistoryBlock extends AbstractModel {
 
     /**
     * 月经周期
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MenstrualCycles")
     @Expose
@@ -65,17 +60,14 @@ public class MenstrualHistoryBlock extends AbstractModel {
 
     /**
     * 月经经期
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MenstrualPeriod")
     @Expose
     private MenstrualPeriodBlock MenstrualPeriod;
 
     /**
-     * Get 末次月经
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 末次月经 
      * @return LastMenstrualPeriod 末次月经
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public LastMenstrualPeriodBlock getLastMenstrualPeriod() {
         return this.LastMenstrualPeriod;
@@ -83,19 +75,15 @@ public class MenstrualHistoryBlock extends AbstractModel {
 
     /**
      * Set 末次月经
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LastMenstrualPeriod 末次月经
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLastMenstrualPeriod(LastMenstrualPeriodBlock LastMenstrualPeriod) {
         this.LastMenstrualPeriod = LastMenstrualPeriod;
     }
 
     /**
-     * Get 月经量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 月经量 
      * @return MenstrualFlow 月经量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public MenstrualFlowBlock getMenstrualFlow() {
         return this.MenstrualFlow;
@@ -103,19 +91,15 @@ public class MenstrualHistoryBlock extends AbstractModel {
 
     /**
      * Set 月经量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MenstrualFlow 月经量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMenstrualFlow(MenstrualFlowBlock MenstrualFlow) {
         this.MenstrualFlow = MenstrualFlow;
     }
 
     /**
-     * Get 初潮时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 初潮时间 
      * @return MenarcheAge 初潮时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public LastMenstrualPeriodBlock getMenarcheAge() {
         return this.MenarcheAge;
@@ -123,19 +107,15 @@ public class MenstrualHistoryBlock extends AbstractModel {
 
     /**
      * Set 初潮时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MenarcheAge 初潮时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMenarcheAge(LastMenstrualPeriodBlock MenarcheAge) {
         this.MenarcheAge = MenarcheAge;
     }
 
     /**
-     * Get 是否绝经
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否绝经 
      * @return MenstruationOrNot 是否绝经
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public MenstruationOrNotBlock getMenstruationOrNot() {
         return this.MenstruationOrNot;
@@ -143,19 +123,15 @@ public class MenstrualHistoryBlock extends AbstractModel {
 
     /**
      * Set 是否绝经
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MenstruationOrNot 是否绝经
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMenstruationOrNot(MenstruationOrNotBlock MenstruationOrNot) {
         this.MenstruationOrNot = MenstruationOrNot;
     }
 
     /**
-     * Get 月经周期
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 月经周期 
      * @return MenstrualCycles 月经周期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public LastMenstrualPeriodBlock getMenstrualCycles() {
         return this.MenstrualCycles;
@@ -163,19 +139,15 @@ public class MenstrualHistoryBlock extends AbstractModel {
 
     /**
      * Set 月经周期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MenstrualCycles 月经周期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMenstrualCycles(LastMenstrualPeriodBlock MenstrualCycles) {
         this.MenstrualCycles = MenstrualCycles;
     }
 
     /**
-     * Get 月经经期
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 月经经期 
      * @return MenstrualPeriod 月经经期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public MenstrualPeriodBlock getMenstrualPeriod() {
         return this.MenstrualPeriod;
@@ -183,9 +155,7 @@ public class MenstrualHistoryBlock extends AbstractModel {
 
     /**
      * Set 月经经期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MenstrualPeriod 月经经期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMenstrualPeriod(MenstrualPeriodBlock MenstrualPeriod) {
         this.MenstrualPeriod = MenstrualPeriod;

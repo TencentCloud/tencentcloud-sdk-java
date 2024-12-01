@@ -277,6 +277,27 @@ public class BillDetail extends AbstractModel {
     private String ReserveDetail;
 
     /**
+    * 优惠对象
+    */
+    @SerializedName("DiscountObject")
+    @Expose
+    private String DiscountObject;
+
+    /**
+    * 优惠类型
+    */
+    @SerializedName("DiscountType")
+    @Expose
+    private String DiscountType;
+
+    /**
+    * 优惠内容
+    */
+    @SerializedName("DiscountContent")
+    @Expose
+    private String DiscountContent;
+
+    /**
      * Get 产品名称：用户所采购的各类云产品，例如：云服务器 CVM 
      * @return BusinessCodeName 产品名称：用户所采购的各类云产品，例如：云服务器 CVM
      */
@@ -880,6 +901,54 @@ public class BillDetail extends AbstractModel {
         this.ReserveDetail = ReserveDetail;
     }
 
+    /**
+     * Get 优惠对象 
+     * @return DiscountObject 优惠对象
+     */
+    public String getDiscountObject() {
+        return this.DiscountObject;
+    }
+
+    /**
+     * Set 优惠对象
+     * @param DiscountObject 优惠对象
+     */
+    public void setDiscountObject(String DiscountObject) {
+        this.DiscountObject = DiscountObject;
+    }
+
+    /**
+     * Get 优惠类型 
+     * @return DiscountType 优惠类型
+     */
+    public String getDiscountType() {
+        return this.DiscountType;
+    }
+
+    /**
+     * Set 优惠类型
+     * @param DiscountType 优惠类型
+     */
+    public void setDiscountType(String DiscountType) {
+        this.DiscountType = DiscountType;
+    }
+
+    /**
+     * Get 优惠内容 
+     * @return DiscountContent 优惠内容
+     */
+    public String getDiscountContent() {
+        return this.DiscountContent;
+    }
+
+    /**
+     * Set 优惠内容
+     * @param DiscountContent 优惠内容
+     */
+    public void setDiscountContent(String DiscountContent) {
+        this.DiscountContent = DiscountContent;
+    }
+
     public BillDetail() {
     }
 
@@ -999,6 +1068,15 @@ public class BillDetail extends AbstractModel {
         if (source.ReserveDetail != null) {
             this.ReserveDetail = new String(source.ReserveDetail);
         }
+        if (source.DiscountObject != null) {
+            this.DiscountObject = new String(source.DiscountObject);
+        }
+        if (source.DiscountType != null) {
+            this.DiscountType = new String(source.DiscountType);
+        }
+        if (source.DiscountContent != null) {
+            this.DiscountContent = new String(source.DiscountContent);
+        }
     }
 
 
@@ -1040,6 +1118,9 @@ public class BillDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "RegionType", this.RegionType);
         this.setParamSimple(map, prefix + "RegionTypeName", this.RegionTypeName);
         this.setParamSimple(map, prefix + "ReserveDetail", this.ReserveDetail);
+        this.setParamSimple(map, prefix + "DiscountObject", this.DiscountObject);
+        this.setParamSimple(map, prefix + "DiscountType", this.DiscountType);
+        this.setParamSimple(map, prefix + "DiscountContent", this.DiscountContent);
 
     }
 }

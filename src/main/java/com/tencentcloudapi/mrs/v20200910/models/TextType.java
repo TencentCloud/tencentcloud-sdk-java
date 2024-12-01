@@ -25,7 +25,6 @@ public class TextType extends AbstractModel {
 
     /**
     * 类别Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
     @Expose
@@ -33,7 +32,6 @@ public class TextType extends AbstractModel {
 
     /**
     * 类别层级
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Level")
     @Expose
@@ -41,17 +39,14 @@ public class TextType extends AbstractModel {
 
     /**
     * 类别名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-     * Get 类别Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 类别Id 
      * @return Id 类别Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getId() {
         return this.Id;
@@ -59,19 +54,15 @@ public class TextType extends AbstractModel {
 
     /**
      * Set 类别Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Id 类别Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 类别层级
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 类别层级 
      * @return Level 类别层级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLevel() {
         return this.Level;
@@ -79,19 +70,15 @@ public class TextType extends AbstractModel {
 
     /**
      * Set 类别层级
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Level 类别层级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLevel(Long Level) {
         this.Level = Level;
     }
 
     /**
-     * Get 类别名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 类别名 
      * @return Name 类别名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -99,9 +86,7 @@ public class TextType extends AbstractModel {
 
     /**
      * Set 类别名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 类别名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;

@@ -25,7 +25,6 @@ public class Desc extends AbstractModel {
 
     /**
     * 描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Text")
     @Expose
@@ -33,7 +32,6 @@ public class Desc extends AbstractModel {
 
     /**
     * 器官
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Organ")
     @Expose
@@ -41,7 +39,6 @@ public class Desc extends AbstractModel {
 
     /**
     * 结节
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tuber")
     @Expose
@@ -49,17 +46,14 @@ public class Desc extends AbstractModel {
 
     /**
     * 坐标
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Coords")
     @Expose
     private Coord [] Coords;
 
     /**
-     * Get 描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 描述 
      * @return Text 描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getText() {
         return this.Text;
@@ -67,19 +61,15 @@ public class Desc extends AbstractModel {
 
     /**
      * Set 描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Text 描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setText(String Text) {
         this.Text = Text;
     }
 
     /**
-     * Get 器官
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 器官 
      * @return Organ 器官
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Organ [] getOrgan() {
         return this.Organ;
@@ -87,19 +77,15 @@ public class Desc extends AbstractModel {
 
     /**
      * Set 器官
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Organ 器官
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOrgan(Organ [] Organ) {
         this.Organ = Organ;
     }
 
     /**
-     * Get 结节
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 结节 
      * @return Tuber 结节
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TuberInfo [] getTuber() {
         return this.Tuber;
@@ -107,19 +93,15 @@ public class Desc extends AbstractModel {
 
     /**
      * Set 结节
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tuber 结节
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTuber(TuberInfo [] Tuber) {
         this.Tuber = Tuber;
     }
 
     /**
-     * Get 坐标
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 坐标 
      * @return Coords 坐标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Coord [] getCoords() {
         return this.Coords;
@@ -127,9 +109,7 @@ public class Desc extends AbstractModel {
 
     /**
      * Set 坐标
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Coords 坐标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCoords(Coord [] Coords) {
         this.Coords = Coords;

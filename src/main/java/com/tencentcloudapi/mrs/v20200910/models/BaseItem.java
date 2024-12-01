@@ -25,7 +25,6 @@ public class BaseItem extends AbstractModel {
 
     /**
     * 类型名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -33,7 +32,6 @@ public class BaseItem extends AbstractModel {
 
     /**
     * 原始文本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Src")
     @Expose
@@ -41,7 +39,6 @@ public class BaseItem extends AbstractModel {
 
     /**
     * 归一化后值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Value")
     @Expose
@@ -49,7 +46,6 @@ public class BaseItem extends AbstractModel {
 
     /**
     * 别名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Alias")
     @Expose
@@ -57,17 +53,14 @@ public class BaseItem extends AbstractModel {
 
     /**
     * 四点坐标
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Coords")
     @Expose
     private Coord [] Coords;
 
     /**
-     * Get 类型名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 类型名称 
      * @return Name 类型名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -75,19 +68,15 @@ public class BaseItem extends AbstractModel {
 
     /**
      * Set 类型名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 类型名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 原始文本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 原始文本 
      * @return Src 原始文本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSrc() {
         return this.Src;
@@ -95,19 +84,15 @@ public class BaseItem extends AbstractModel {
 
     /**
      * Set 原始文本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Src 原始文本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSrc(String Src) {
         this.Src = Src;
     }
 
     /**
-     * Get 归一化后值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 归一化后值 
      * @return Value 归一化后值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getValue() {
         return this.Value;
@@ -115,19 +100,15 @@ public class BaseItem extends AbstractModel {
 
     /**
      * Set 归一化后值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Value 归一化后值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValue(String Value) {
         this.Value = Value;
     }
 
     /**
-     * Get 别名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 别名 
      * @return Alias 别名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAlias() {
         return this.Alias;
@@ -135,19 +116,15 @@ public class BaseItem extends AbstractModel {
 
     /**
      * Set 别名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Alias 别名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAlias(String Alias) {
         this.Alias = Alias;
     }
 
     /**
-     * Get 四点坐标
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 四点坐标 
      * @return Coords 四点坐标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Coord [] getCoords() {
         return this.Coords;
@@ -155,9 +132,7 @@ public class BaseItem extends AbstractModel {
 
     /**
      * Set 四点坐标
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Coords 四点坐标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCoords(Coord [] Coords) {
         this.Coords = Coords;

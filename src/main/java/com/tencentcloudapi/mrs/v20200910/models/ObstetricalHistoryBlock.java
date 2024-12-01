@@ -25,7 +25,6 @@ public class ObstetricalHistoryBlock extends AbstractModel {
 
     /**
     * 婚姻史
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MarriageHistory")
     @Expose
@@ -33,17 +32,14 @@ public class ObstetricalHistoryBlock extends AbstractModel {
 
     /**
     * 婚育史
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FertilityHistory")
     @Expose
     private FertilityHistoryBlock FertilityHistory;
 
     /**
-     * Get 婚姻史
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 婚姻史 
      * @return MarriageHistory 婚姻史
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public MenstrualHistoryDetailBlock getMarriageHistory() {
         return this.MarriageHistory;
@@ -51,19 +47,15 @@ public class ObstetricalHistoryBlock extends AbstractModel {
 
     /**
      * Set 婚姻史
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MarriageHistory 婚姻史
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMarriageHistory(MenstrualHistoryDetailBlock MarriageHistory) {
         this.MarriageHistory = MarriageHistory;
     }
 
     /**
-     * Get 婚育史
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 婚育史 
      * @return FertilityHistory 婚育史
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public FertilityHistoryBlock getFertilityHistory() {
         return this.FertilityHistory;
@@ -71,9 +63,7 @@ public class ObstetricalHistoryBlock extends AbstractModel {
 
     /**
      * Set 婚育史
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FertilityHistory 婚育史
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFertilityHistory(FertilityHistoryBlock FertilityHistory) {
         this.FertilityHistory = FertilityHistory;

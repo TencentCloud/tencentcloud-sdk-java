@@ -25,7 +25,6 @@ public class OtolaryngologyEar extends AbstractModel {
 
     /**
     * 耳总体描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Text")
     @Expose
@@ -33,17 +32,14 @@ public class OtolaryngologyEar extends AbstractModel {
 
     /**
     * 听力
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Hearing")
     @Expose
     private HearingItem Hearing;
 
     /**
-     * Get 耳总体描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 耳总体描述 
      * @return Text 耳总体描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public KeyValueItem getText() {
         return this.Text;
@@ -51,19 +47,15 @@ public class OtolaryngologyEar extends AbstractModel {
 
     /**
      * Set 耳总体描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Text 耳总体描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setText(KeyValueItem Text) {
         this.Text = Text;
     }
 
     /**
-     * Get 听力
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 听力 
      * @return Hearing 听力
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public HearingItem getHearing() {
         return this.Hearing;
@@ -71,9 +63,7 @@ public class OtolaryngologyEar extends AbstractModel {
 
     /**
      * Set 听力
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Hearing 听力
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHearing(HearingItem Hearing) {
         this.Hearing = Hearing;

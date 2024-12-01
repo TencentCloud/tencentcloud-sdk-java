@@ -25,7 +25,6 @@ public class Size extends AbstractModel {
 
     /**
     * 原文位置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Index")
     @Expose
@@ -33,7 +32,6 @@ public class Size extends AbstractModel {
 
     /**
     * 标准大小
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NormSize")
     @Expose
@@ -41,7 +39,6 @@ public class Size extends AbstractModel {
 
     /**
     * 原文
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Src")
     @Expose
@@ -49,7 +46,6 @@ public class Size extends AbstractModel {
 
     /**
     * 值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Value")
     @Expose
@@ -57,17 +53,14 @@ public class Size extends AbstractModel {
 
     /**
     * 名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-     * Get 原文位置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 原文位置 
      * @return Index 原文位置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long [] getIndex() {
         return this.Index;
@@ -75,19 +68,15 @@ public class Size extends AbstractModel {
 
     /**
      * Set 原文位置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Index 原文位置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIndex(Long [] Index) {
         this.Index = Index;
     }
 
     /**
-     * Get 标准大小
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标准大小 
      * @return NormSize 标准大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public NormSize getNormSize() {
         return this.NormSize;
@@ -95,19 +84,15 @@ public class Size extends AbstractModel {
 
     /**
      * Set 标准大小
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NormSize 标准大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNormSize(NormSize NormSize) {
         this.NormSize = NormSize;
     }
 
     /**
-     * Get 原文
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 原文 
      * @return Src 原文
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSrc() {
         return this.Src;
@@ -115,19 +100,15 @@ public class Size extends AbstractModel {
 
     /**
      * Set 原文
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Src 原文
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSrc(String Src) {
         this.Src = Src;
     }
 
     /**
-     * Get 值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 值 
      * @return Value 值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getValue() {
         return this.Value;
@@ -135,19 +116,15 @@ public class Size extends AbstractModel {
 
     /**
      * Set 值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Value 值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValue(String Value) {
         this.Value = Value;
     }
 
     /**
-     * Get 名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 名称 
      * @return Name 名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -155,9 +132,7 @@ public class Size extends AbstractModel {
 
     /**
      * Set 名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;

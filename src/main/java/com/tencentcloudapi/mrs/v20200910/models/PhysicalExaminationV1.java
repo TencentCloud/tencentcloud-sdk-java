@@ -25,7 +25,6 @@ public class PhysicalExaminationV1 extends AbstractModel {
 
     /**
     * 体检报告信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PhysicalExaminationMulti")
     @Expose
@@ -33,17 +32,14 @@ public class PhysicalExaminationV1 extends AbstractModel {
 
     /**
     * 版本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Version")
     @Expose
     private String Version;
 
     /**
-     * Get 体检报告信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 体检报告信息 
      * @return PhysicalExaminationMulti 体检报告信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public PhysicalExamination getPhysicalExaminationMulti() {
         return this.PhysicalExaminationMulti;
@@ -51,19 +47,15 @@ public class PhysicalExaminationV1 extends AbstractModel {
 
     /**
      * Set 体检报告信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PhysicalExaminationMulti 体检报告信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPhysicalExaminationMulti(PhysicalExamination PhysicalExaminationMulti) {
         this.PhysicalExaminationMulti = PhysicalExaminationMulti;
     }
 
     /**
-     * Get 版本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 版本 
      * @return Version 版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVersion() {
         return this.Version;
@@ -71,9 +63,7 @@ public class PhysicalExaminationV1 extends AbstractModel {
 
     /**
      * Set 版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Version 版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVersion(String Version) {
         this.Version = Version;

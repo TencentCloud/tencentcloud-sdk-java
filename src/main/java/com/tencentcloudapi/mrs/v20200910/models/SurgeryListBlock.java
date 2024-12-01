@@ -25,7 +25,6 @@ public class SurgeryListBlock extends AbstractModel {
 
     /**
     * 时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Time")
     @Expose
@@ -33,7 +32,6 @@ public class SurgeryListBlock extends AbstractModel {
 
     /**
     * 类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TimeType")
     @Expose
@@ -41,7 +39,6 @@ public class SurgeryListBlock extends AbstractModel {
 
     /**
     * 名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -49,17 +46,14 @@ public class SurgeryListBlock extends AbstractModel {
 
     /**
     * 部位
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Part")
     @Expose
     private String Part;
 
     /**
-     * Get 时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 时间 
      * @return Time 时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTime() {
         return this.Time;
@@ -67,19 +61,15 @@ public class SurgeryListBlock extends AbstractModel {
 
     /**
      * Set 时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Time 时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTime(String Time) {
         this.Time = Time;
     }
 
     /**
-     * Get 类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 类型 
      * @return TimeType 类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTimeType() {
         return this.TimeType;
@@ -87,19 +77,15 @@ public class SurgeryListBlock extends AbstractModel {
 
     /**
      * Set 类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TimeType 类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimeType(String TimeType) {
         this.TimeType = TimeType;
     }
 
     /**
-     * Get 名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 名称 
      * @return Name 名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getName() {
         return this.Name;
@@ -107,19 +93,15 @@ public class SurgeryListBlock extends AbstractModel {
 
     /**
      * Set 名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String [] Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 部位
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 部位 
      * @return Part 部位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPart() {
         return this.Part;
@@ -127,9 +109,7 @@ public class SurgeryListBlock extends AbstractModel {
 
     /**
      * Set 部位
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Part 部位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPart(String Part) {
         this.Part = Part;

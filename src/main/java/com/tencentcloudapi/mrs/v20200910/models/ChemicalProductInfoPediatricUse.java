@@ -25,17 +25,14 @@ public class ChemicalProductInfoPediatricUse extends AbstractModel {
 
     /**
     * 文本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Text")
     @Expose
     private String Text;
 
     /**
-     * Get 文本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文本 
      * @return Text 文本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getText() {
         return this.Text;
@@ -43,9 +40,7 @@ public class ChemicalProductInfoPediatricUse extends AbstractModel {
 
     /**
      * Set 文本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Text 文本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setText(String Text) {
         this.Text = Text;

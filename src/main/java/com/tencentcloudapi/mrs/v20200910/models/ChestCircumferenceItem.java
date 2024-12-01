@@ -25,7 +25,6 @@ public class ChestCircumferenceItem extends AbstractModel {
 
     /**
     * 类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -33,7 +32,6 @@ public class ChestCircumferenceItem extends AbstractModel {
 
     /**
     * 项目原文
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Item")
     @Expose
@@ -41,7 +39,6 @@ public class ChestCircumferenceItem extends AbstractModel {
 
     /**
     * 数值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Result")
     @Expose
@@ -49,7 +46,6 @@ public class ChestCircumferenceItem extends AbstractModel {
 
     /**
     * 单位
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Unit")
     @Expose
@@ -57,17 +53,14 @@ public class ChestCircumferenceItem extends AbstractModel {
 
     /**
     * 呼吸状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("State")
     @Expose
     private PhysicalBaseItem State;
 
     /**
-     * Get 类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 类型 
      * @return Name 类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -75,19 +68,15 @@ public class ChestCircumferenceItem extends AbstractModel {
 
     /**
      * Set 类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 项目原文
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 项目原文 
      * @return Item 项目原文
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public PhysicalBaseItem getItem() {
         return this.Item;
@@ -95,19 +84,15 @@ public class ChestCircumferenceItem extends AbstractModel {
 
     /**
      * Set 项目原文
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Item 项目原文
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setItem(PhysicalBaseItem Item) {
         this.Item = Item;
     }
 
     /**
-     * Get 数值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数值 
      * @return Result 数值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public PhysicalBaseItem getResult() {
         return this.Result;
@@ -115,19 +100,15 @@ public class ChestCircumferenceItem extends AbstractModel {
 
     /**
      * Set 数值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Result 数值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResult(PhysicalBaseItem Result) {
         this.Result = Result;
     }
 
     /**
-     * Get 单位
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 单位 
      * @return Unit 单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public PhysicalBaseItem getUnit() {
         return this.Unit;
@@ -135,19 +116,15 @@ public class ChestCircumferenceItem extends AbstractModel {
 
     /**
      * Set 单位
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Unit 单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUnit(PhysicalBaseItem Unit) {
         this.Unit = Unit;
     }
 
     /**
-     * Get 呼吸状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 呼吸状态 
      * @return State 呼吸状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public PhysicalBaseItem getState() {
         return this.State;
@@ -155,9 +132,7 @@ public class ChestCircumferenceItem extends AbstractModel {
 
     /**
      * Set 呼吸状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param State 呼吸状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setState(PhysicalBaseItem State) {
         this.State = State;

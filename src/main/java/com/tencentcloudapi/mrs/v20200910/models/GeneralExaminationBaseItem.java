@@ -25,7 +25,6 @@ public class GeneralExaminationBaseItem extends AbstractModel {
 
     /**
     * 生命体征
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VitalSign")
     @Expose
@@ -33,7 +32,6 @@ public class GeneralExaminationBaseItem extends AbstractModel {
 
     /**
     * 其他
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Others")
     @Expose
@@ -41,17 +39,14 @@ public class GeneralExaminationBaseItem extends AbstractModel {
 
     /**
     * 小结
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BriefSummary")
     @Expose
     private GeneralExaminationBriefSummary BriefSummary;
 
     /**
-     * Get 生命体征
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 生命体征 
      * @return VitalSign 生命体征
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public GeneralExaminationVitalSign getVitalSign() {
         return this.VitalSign;
@@ -59,19 +54,15 @@ public class GeneralExaminationBaseItem extends AbstractModel {
 
     /**
      * Set 生命体征
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VitalSign 生命体征
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVitalSign(GeneralExaminationVitalSign VitalSign) {
         this.VitalSign = VitalSign;
     }
 
     /**
-     * Get 其他
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 其他 
      * @return Others 其他
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public GeneralExaminationOthers getOthers() {
         return this.Others;
@@ -79,19 +70,15 @@ public class GeneralExaminationBaseItem extends AbstractModel {
 
     /**
      * Set 其他
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Others 其他
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOthers(GeneralExaminationOthers Others) {
         this.Others = Others;
     }
 
     /**
-     * Get 小结
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 小结 
      * @return BriefSummary 小结
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public GeneralExaminationBriefSummary getBriefSummary() {
         return this.BriefSummary;
@@ -99,9 +86,7 @@ public class GeneralExaminationBaseItem extends AbstractModel {
 
     /**
      * Set 小结
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BriefSummary 小结
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBriefSummary(GeneralExaminationBriefSummary BriefSummary) {
         this.BriefSummary = BriefSummary;

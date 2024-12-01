@@ -25,7 +25,6 @@ public class CovidItem extends AbstractModel {
 
     /**
     * 采样时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SampleTime")
     @Expose
@@ -33,7 +32,6 @@ public class CovidItem extends AbstractModel {
 
     /**
     * 检测时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TestTime")
     @Expose
@@ -41,7 +39,6 @@ public class CovidItem extends AbstractModel {
 
     /**
     * 检测机构
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TestOrganization")
     @Expose
@@ -49,7 +46,6 @@ public class CovidItem extends AbstractModel {
 
     /**
     * 检测结果
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TestResult")
     @Expose
@@ -57,17 +53,14 @@ public class CovidItem extends AbstractModel {
 
     /**
     * 健康码颜色
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CodeColor")
     @Expose
     private BaseItem CodeColor;
 
     /**
-     * Get 采样时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 采样时间 
      * @return SampleTime 采样时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BaseItem getSampleTime() {
         return this.SampleTime;
@@ -75,19 +68,15 @@ public class CovidItem extends AbstractModel {
 
     /**
      * Set 采样时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SampleTime 采样时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSampleTime(BaseItem SampleTime) {
         this.SampleTime = SampleTime;
     }
 
     /**
-     * Get 检测时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 检测时间 
      * @return TestTime 检测时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BaseItem getTestTime() {
         return this.TestTime;
@@ -95,19 +84,15 @@ public class CovidItem extends AbstractModel {
 
     /**
      * Set 检测时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TestTime 检测时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTestTime(BaseItem TestTime) {
         this.TestTime = TestTime;
     }
 
     /**
-     * Get 检测机构
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 检测机构 
      * @return TestOrganization 检测机构
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BaseItem getTestOrganization() {
         return this.TestOrganization;
@@ -115,19 +100,15 @@ public class CovidItem extends AbstractModel {
 
     /**
      * Set 检测机构
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TestOrganization 检测机构
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTestOrganization(BaseItem TestOrganization) {
         this.TestOrganization = TestOrganization;
     }
 
     /**
-     * Get 检测结果
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 检测结果 
      * @return TestResult 检测结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BaseItem getTestResult() {
         return this.TestResult;
@@ -135,19 +116,15 @@ public class CovidItem extends AbstractModel {
 
     /**
      * Set 检测结果
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TestResult 检测结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTestResult(BaseItem TestResult) {
         this.TestResult = TestResult;
     }
 
     /**
-     * Get 健康码颜色
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 健康码颜色 
      * @return CodeColor 健康码颜色
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BaseItem getCodeColor() {
         return this.CodeColor;
@@ -155,9 +132,7 @@ public class CovidItem extends AbstractModel {
 
     /**
      * Set 健康码颜色
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CodeColor 健康码颜色
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCodeColor(BaseItem CodeColor) {
         this.CodeColor = CodeColor;

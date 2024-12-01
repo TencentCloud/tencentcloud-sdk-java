@@ -25,7 +25,6 @@ public class MolecularValue extends AbstractModel {
 
     /**
     * 外显子
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Exon")
     @Expose
@@ -33,7 +32,6 @@ public class MolecularValue extends AbstractModel {
 
     /**
     * 点位
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Position")
     @Expose
@@ -41,7 +39,6 @@ public class MolecularValue extends AbstractModel {
 
     /**
     * 类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -49,7 +46,6 @@ public class MolecularValue extends AbstractModel {
 
     /**
     * 阳性或阴性
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Positive")
     @Expose
@@ -57,17 +53,14 @@ public class MolecularValue extends AbstractModel {
 
     /**
     * 基因名称原文
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Src")
     @Expose
     private String Src;
 
     /**
-     * Get 外显子
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 外显子 
      * @return Exon 外显子
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExon() {
         return this.Exon;
@@ -75,19 +68,15 @@ public class MolecularValue extends AbstractModel {
 
     /**
      * Set 外显子
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Exon 外显子
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExon(String Exon) {
         this.Exon = Exon;
     }
 
     /**
-     * Get 点位
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 点位 
      * @return Position 点位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPosition() {
         return this.Position;
@@ -95,19 +84,15 @@ public class MolecularValue extends AbstractModel {
 
     /**
      * Set 点位
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Position 点位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPosition(String Position) {
         this.Position = Position;
     }
 
     /**
-     * Get 类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 类型 
      * @return Type 类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
         return this.Type;
@@ -115,19 +100,15 @@ public class MolecularValue extends AbstractModel {
 
     /**
      * Set 类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 阳性或阴性
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 阳性或阴性 
      * @return Positive 阳性或阴性
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPositive() {
         return this.Positive;
@@ -135,19 +116,15 @@ public class MolecularValue extends AbstractModel {
 
     /**
      * Set 阳性或阴性
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Positive 阳性或阴性
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPositive(String Positive) {
         this.Positive = Positive;
     }
 
     /**
-     * Get 基因名称原文
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 基因名称原文 
      * @return Src 基因名称原文
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSrc() {
         return this.Src;
@@ -155,9 +132,7 @@ public class MolecularValue extends AbstractModel {
 
     /**
      * Set 基因名称原文
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Src 基因名称原文
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSrc(String Src) {
         this.Src = Src;

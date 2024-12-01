@@ -25,7 +25,6 @@ public class Summary extends AbstractModel {
 
     /**
     * 症状
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Symptom")
     @Expose
@@ -33,7 +32,6 @@ public class Summary extends AbstractModel {
 
     /**
     * 文本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Text")
     @Expose
@@ -41,17 +39,14 @@ public class Summary extends AbstractModel {
 
     /**
     * 坐标
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Coords")
     @Expose
     private Coord [] Coords;
 
     /**
-     * Get 症状
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 症状 
      * @return Symptom 症状
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SymptomInfo [] getSymptom() {
         return this.Symptom;
@@ -59,19 +54,15 @@ public class Summary extends AbstractModel {
 
     /**
      * Set 症状
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Symptom 症状
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSymptom(SymptomInfo [] Symptom) {
         this.Symptom = Symptom;
     }
 
     /**
-     * Get 文本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文本 
      * @return Text 文本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getText() {
         return this.Text;
@@ -79,19 +70,15 @@ public class Summary extends AbstractModel {
 
     /**
      * Set 文本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Text 文本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setText(String Text) {
         this.Text = Text;
     }
 
     /**
-     * Get 坐标
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 坐标 
      * @return Coords 坐标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Coord [] getCoords() {
         return this.Coords;
@@ -99,9 +86,7 @@ public class Summary extends AbstractModel {
 
     /**
      * Set 坐标
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Coords 坐标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCoords(Coord [] Coords) {
         this.Coords = Coords;

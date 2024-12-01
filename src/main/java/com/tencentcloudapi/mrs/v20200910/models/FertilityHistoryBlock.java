@@ -25,7 +25,6 @@ public class FertilityHistoryBlock extends AbstractModel {
 
     /**
     * 名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -33,7 +32,6 @@ public class FertilityHistoryBlock extends AbstractModel {
 
     /**
     * 原文
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Src")
     @Expose
@@ -41,7 +39,6 @@ public class FertilityHistoryBlock extends AbstractModel {
 
     /**
     * 状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("State")
     @Expose
@@ -49,7 +46,6 @@ public class FertilityHistoryBlock extends AbstractModel {
 
     /**
     * 归一化值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Norm")
     @Expose
@@ -57,7 +53,6 @@ public class FertilityHistoryBlock extends AbstractModel {
 
     /**
     * 对外输出值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Value")
     @Expose
@@ -65,7 +60,6 @@ public class FertilityHistoryBlock extends AbstractModel {
 
     /**
     * 妊娠次数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PregCount")
     @Expose
@@ -73,17 +67,14 @@ public class FertilityHistoryBlock extends AbstractModel {
 
     /**
     * 生产次数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProduCount")
     @Expose
     private String ProduCount;
 
     /**
-     * Get 名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 名称 
      * @return Name 名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -91,19 +82,15 @@ public class FertilityHistoryBlock extends AbstractModel {
 
     /**
      * Set 名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 原文
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 原文 
      * @return Src 原文
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSrc() {
         return this.Src;
@@ -111,19 +98,15 @@ public class FertilityHistoryBlock extends AbstractModel {
 
     /**
      * Set 原文
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Src 原文
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSrc(String Src) {
         this.Src = Src;
     }
 
     /**
-     * Get 状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 状态 
      * @return State 状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getState() {
         return this.State;
@@ -131,19 +114,15 @@ public class FertilityHistoryBlock extends AbstractModel {
 
     /**
      * Set 状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param State 状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setState(String State) {
         this.State = State;
     }
 
     /**
-     * Get 归一化值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 归一化值 
      * @return Norm 归一化值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNorm() {
         return this.Norm;
@@ -151,19 +130,15 @@ public class FertilityHistoryBlock extends AbstractModel {
 
     /**
      * Set 归一化值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Norm 归一化值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNorm(String Norm) {
         this.Norm = Norm;
     }
 
     /**
-     * Get 对外输出值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 对外输出值 
      * @return Value 对外输出值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getValue() {
         return this.Value;
@@ -171,19 +146,15 @@ public class FertilityHistoryBlock extends AbstractModel {
 
     /**
      * Set 对外输出值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Value 对外输出值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValue(String Value) {
         this.Value = Value;
     }
 
     /**
-     * Get 妊娠次数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 妊娠次数 
      * @return PregCount 妊娠次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPregCount() {
         return this.PregCount;
@@ -191,19 +162,15 @@ public class FertilityHistoryBlock extends AbstractModel {
 
     /**
      * Set 妊娠次数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PregCount 妊娠次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPregCount(String PregCount) {
         this.PregCount = PregCount;
     }
 
     /**
-     * Get 生产次数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 生产次数 
      * @return ProduCount 生产次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProduCount() {
         return this.ProduCount;
@@ -211,9 +178,7 @@ public class FertilityHistoryBlock extends AbstractModel {
 
     /**
      * Set 生产次数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProduCount 生产次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProduCount(String ProduCount) {
         this.ProduCount = ProduCount;

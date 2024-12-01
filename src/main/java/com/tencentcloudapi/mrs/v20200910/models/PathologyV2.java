@@ -25,7 +25,6 @@ public class PathologyV2 extends AbstractModel {
 
     /**
     * 报告类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PathologicalReportType")
     @Expose
@@ -33,7 +32,6 @@ public class PathologyV2 extends AbstractModel {
 
     /**
     * 描述段落
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Desc")
     @Expose
@@ -41,7 +39,6 @@ public class PathologyV2 extends AbstractModel {
 
     /**
     * 诊断结论
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Summary")
     @Expose
@@ -49,7 +46,6 @@ public class PathologyV2 extends AbstractModel {
 
     /**
     * 报告全文
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReportText")
     @Expose
@@ -57,7 +53,6 @@ public class PathologyV2 extends AbstractModel {
 
     /**
     * 淋巴结总计转移信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LymphTotal")
     @Expose
@@ -65,7 +60,6 @@ public class PathologyV2 extends AbstractModel {
 
     /**
     * 单淋巴结转移信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LymphNodes")
     @Expose
@@ -73,7 +67,6 @@ public class PathologyV2 extends AbstractModel {
 
     /**
     * ihc信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Ihc")
     @Expose
@@ -81,7 +74,6 @@ public class PathologyV2 extends AbstractModel {
 
     /**
     * 临床诊断
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Clinical")
     @Expose
@@ -89,7 +81,6 @@ public class PathologyV2 extends AbstractModel {
 
     /**
     * 是否癌前病变
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Precancer")
     @Expose
@@ -97,7 +88,6 @@ public class PathologyV2 extends AbstractModel {
 
     /**
     * 是否恶性肿瘤
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Malignant")
     @Expose
@@ -105,7 +95,6 @@ public class PathologyV2 extends AbstractModel {
 
     /**
     * 是否良性肿瘤
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Benigntumor")
     @Expose
@@ -113,7 +102,6 @@ public class PathologyV2 extends AbstractModel {
 
     /**
     * 送检材料
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SampleType")
     @Expose
@@ -121,7 +109,6 @@ public class PathologyV2 extends AbstractModel {
 
     /**
     * 淋巴结大小
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LymphSize")
     @Expose
@@ -129,7 +116,6 @@ public class PathologyV2 extends AbstractModel {
 
     /**
     * 分子病理
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Molecular")
     @Expose
@@ -137,17 +123,14 @@ public class PathologyV2 extends AbstractModel {
 
     /**
     * 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Page")
     @Expose
     private Long Page;
 
     /**
-     * Get 报告类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 报告类型 
      * @return PathologicalReportType 报告类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Report getPathologicalReportType() {
         return this.PathologicalReportType;
@@ -155,19 +138,15 @@ public class PathologyV2 extends AbstractModel {
 
     /**
      * Set 报告类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PathologicalReportType 报告类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPathologicalReportType(Report PathologicalReportType) {
         this.PathologicalReportType = PathologicalReportType;
     }
 
     /**
-     * Get 描述段落
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 描述段落 
      * @return Desc 描述段落
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DescInfo getDesc() {
         return this.Desc;
@@ -175,19 +154,15 @@ public class PathologyV2 extends AbstractModel {
 
     /**
      * Set 描述段落
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Desc 描述段落
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDesc(DescInfo Desc) {
         this.Desc = Desc;
     }
 
     /**
-     * Get 诊断结论
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 诊断结论 
      * @return Summary 诊断结论
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SummaryInfo getSummary() {
         return this.Summary;
@@ -195,19 +170,15 @@ public class PathologyV2 extends AbstractModel {
 
     /**
      * Set 诊断结论
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Summary 诊断结论
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSummary(SummaryInfo Summary) {
         this.Summary = Summary;
     }
 
     /**
-     * Get 报告全文
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 报告全文 
      * @return ReportText 报告全文
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getReportText() {
         return this.ReportText;
@@ -215,19 +186,15 @@ public class PathologyV2 extends AbstractModel {
 
     /**
      * Set 报告全文
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReportText 报告全文
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReportText(String ReportText) {
         this.ReportText = ReportText;
     }
 
     /**
-     * Get 淋巴结总计转移信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 淋巴结总计转移信息 
      * @return LymphTotal 淋巴结总计转移信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public LymphTotal [] getLymphTotal() {
         return this.LymphTotal;
@@ -235,19 +202,15 @@ public class PathologyV2 extends AbstractModel {
 
     /**
      * Set 淋巴结总计转移信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LymphTotal 淋巴结总计转移信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLymphTotal(LymphTotal [] LymphTotal) {
         this.LymphTotal = LymphTotal;
     }
 
     /**
-     * Get 单淋巴结转移信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 单淋巴结转移信息 
      * @return LymphNodes 单淋巴结转移信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public LymphNode [] getLymphNodes() {
         return this.LymphNodes;
@@ -255,19 +218,15 @@ public class PathologyV2 extends AbstractModel {
 
     /**
      * Set 单淋巴结转移信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LymphNodes 单淋巴结转移信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLymphNodes(LymphNode [] LymphNodes) {
         this.LymphNodes = LymphNodes;
     }
 
     /**
-     * Get ihc信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get ihc信息 
      * @return Ihc ihc信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public IHCV2 [] getIhc() {
         return this.Ihc;
@@ -275,19 +234,15 @@ public class PathologyV2 extends AbstractModel {
 
     /**
      * Set ihc信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Ihc ihc信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIhc(IHCV2 [] Ihc) {
         this.Ihc = Ihc;
     }
 
     /**
-     * Get 临床诊断
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 临床诊断 
      * @return Clinical 临床诊断
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BaseInfo getClinical() {
         return this.Clinical;
@@ -295,19 +250,15 @@ public class PathologyV2 extends AbstractModel {
 
     /**
      * Set 临床诊断
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Clinical 临床诊断
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClinical(BaseInfo Clinical) {
         this.Clinical = Clinical;
     }
 
     /**
-     * Get 是否癌前病变
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否癌前病变 
      * @return Precancer 是否癌前病变
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public HistologyClass getPrecancer() {
         return this.Precancer;
@@ -315,19 +266,15 @@ public class PathologyV2 extends AbstractModel {
 
     /**
      * Set 是否癌前病变
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Precancer 是否癌前病变
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPrecancer(HistologyClass Precancer) {
         this.Precancer = Precancer;
     }
 
     /**
-     * Get 是否恶性肿瘤
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否恶性肿瘤 
      * @return Malignant 是否恶性肿瘤
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public HistologyClass getMalignant() {
         return this.Malignant;
@@ -335,19 +282,15 @@ public class PathologyV2 extends AbstractModel {
 
     /**
      * Set 是否恶性肿瘤
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Malignant 是否恶性肿瘤
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMalignant(HistologyClass Malignant) {
         this.Malignant = Malignant;
     }
 
     /**
-     * Get 是否良性肿瘤
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否良性肿瘤 
      * @return Benigntumor 是否良性肿瘤
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public HistologyClass getBenigntumor() {
         return this.Benigntumor;
@@ -355,19 +298,15 @@ public class PathologyV2 extends AbstractModel {
 
     /**
      * Set 是否良性肿瘤
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Benigntumor 是否良性肿瘤
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBenigntumor(HistologyClass Benigntumor) {
         this.Benigntumor = Benigntumor;
     }
 
     /**
-     * Get 送检材料
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 送检材料 
      * @return SampleType 送检材料
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BaseInfo getSampleType() {
         return this.SampleType;
@@ -375,19 +314,15 @@ public class PathologyV2 extends AbstractModel {
 
     /**
      * Set 送检材料
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SampleType 送检材料
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSampleType(BaseInfo SampleType) {
         this.SampleType = SampleType;
     }
 
     /**
-     * Get 淋巴结大小
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 淋巴结大小 
      * @return LymphSize 淋巴结大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Size [] getLymphSize() {
         return this.LymphSize;
@@ -395,19 +330,15 @@ public class PathologyV2 extends AbstractModel {
 
     /**
      * Set 淋巴结大小
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LymphSize 淋巴结大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLymphSize(Size [] LymphSize) {
         this.LymphSize = LymphSize;
     }
 
     /**
-     * Get 分子病理
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分子病理 
      * @return Molecular 分子病理
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Molecular [] getMolecular() {
         return this.Molecular;
@@ -415,19 +346,15 @@ public class PathologyV2 extends AbstractModel {
 
     /**
      * Set 分子病理
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Molecular 分子病理
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMolecular(Molecular [] Molecular) {
         this.Molecular = Molecular;
     }
 
     /**
-     * Get 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据在原PDF文件中的第几页 
      * @return Page 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPage() {
         return this.Page;
@@ -435,9 +362,7 @@ public class PathologyV2 extends AbstractModel {
 
     /**
      * Set 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Page 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPage(Long Page) {
         this.Page = Page;

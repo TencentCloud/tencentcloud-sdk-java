@@ -25,7 +25,6 @@ public class PTNM extends AbstractModel {
 
     /**
     * 项目名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -33,7 +32,6 @@ public class PTNM extends AbstractModel {
 
     /**
     * 索引
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Index")
     @Expose
@@ -41,7 +39,6 @@ public class PTNM extends AbstractModel {
 
     /**
     * 原文
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Src")
     @Expose
@@ -49,7 +46,6 @@ public class PTNM extends AbstractModel {
 
     /**
     * 归一化值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Value")
     @Expose
@@ -57,7 +53,6 @@ public class PTNM extends AbstractModel {
 
     /**
     * pT
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PT")
     @Expose
@@ -65,7 +60,6 @@ public class PTNM extends AbstractModel {
 
     /**
     * pN
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PN")
     @Expose
@@ -73,7 +67,6 @@ public class PTNM extends AbstractModel {
 
     /**
     * pM
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PM")
     @Expose
@@ -81,17 +74,14 @@ public class PTNM extends AbstractModel {
 
     /**
     * 原文对应坐标
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Coords")
     @Expose
     private Coord [] Coords;
 
     /**
-     * Get 项目名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 项目名称 
      * @return Name 项目名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -99,19 +89,15 @@ public class PTNM extends AbstractModel {
 
     /**
      * Set 项目名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 项目名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 索引
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 索引 
      * @return Index 索引
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long [] getIndex() {
         return this.Index;
@@ -119,19 +105,15 @@ public class PTNM extends AbstractModel {
 
     /**
      * Set 索引
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Index 索引
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIndex(Long [] Index) {
         this.Index = Index;
     }
 
     /**
-     * Get 原文
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 原文 
      * @return Src 原文
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSrc() {
         return this.Src;
@@ -139,19 +121,15 @@ public class PTNM extends AbstractModel {
 
     /**
      * Set 原文
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Src 原文
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSrc(String Src) {
         this.Src = Src;
     }
 
     /**
-     * Get 归一化值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 归一化值 
      * @return Value 归一化值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getValue() {
         return this.Value;
@@ -159,19 +137,15 @@ public class PTNM extends AbstractModel {
 
     /**
      * Set 归一化值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Value 归一化值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValue(String Value) {
         this.Value = Value;
     }
 
     /**
-     * Get pT
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get pT 
      * @return PT pT
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPT() {
         return this.PT;
@@ -179,19 +153,15 @@ public class PTNM extends AbstractModel {
 
     /**
      * Set pT
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PT pT
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPT(String PT) {
         this.PT = PT;
     }
 
     /**
-     * Get pN
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get pN 
      * @return PN pN
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPN() {
         return this.PN;
@@ -199,19 +169,15 @@ public class PTNM extends AbstractModel {
 
     /**
      * Set pN
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PN pN
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPN(String PN) {
         this.PN = PN;
     }
 
     /**
-     * Get pM
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get pM 
      * @return PM pM
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPM() {
         return this.PM;
@@ -219,19 +185,15 @@ public class PTNM extends AbstractModel {
 
     /**
      * Set pM
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PM pM
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPM(String PM) {
         this.PM = PM;
     }
 
     /**
-     * Get 原文对应坐标
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 原文对应坐标 
      * @return Coords 原文对应坐标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Coord [] getCoords() {
         return this.Coords;
@@ -239,9 +201,7 @@ public class PTNM extends AbstractModel {
 
     /**
      * Set 原文对应坐标
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Coords 原文对应坐标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCoords(Coord [] Coords) {
         this.Coords = Coords;

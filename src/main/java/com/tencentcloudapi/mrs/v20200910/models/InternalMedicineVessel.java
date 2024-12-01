@@ -25,7 +25,6 @@ public class InternalMedicineVessel extends AbstractModel {
 
     /**
     * 血管总体描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Text")
     @Expose
@@ -33,7 +32,6 @@ public class InternalMedicineVessel extends AbstractModel {
 
     /**
     * 血管杂音
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VascularMurmur")
     @Expose
@@ -41,17 +39,14 @@ public class InternalMedicineVessel extends AbstractModel {
 
     /**
     * 外周血管
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PeripheralVessel")
     @Expose
     private KeyValueItem PeripheralVessel;
 
     /**
-     * Get 血管总体描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 血管总体描述 
      * @return Text 血管总体描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public KeyValueItem getText() {
         return this.Text;
@@ -59,19 +54,15 @@ public class InternalMedicineVessel extends AbstractModel {
 
     /**
      * Set 血管总体描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Text 血管总体描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setText(KeyValueItem Text) {
         this.Text = Text;
     }
 
     /**
-     * Get 血管杂音
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 血管杂音 
      * @return VascularMurmur 血管杂音
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public KeyValueItem getVascularMurmur() {
         return this.VascularMurmur;
@@ -79,19 +70,15 @@ public class InternalMedicineVessel extends AbstractModel {
 
     /**
      * Set 血管杂音
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VascularMurmur 血管杂音
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVascularMurmur(KeyValueItem VascularMurmur) {
         this.VascularMurmur = VascularMurmur;
     }
 
     /**
-     * Get 外周血管
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 外周血管 
      * @return PeripheralVessel 外周血管
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public KeyValueItem getPeripheralVessel() {
         return this.PeripheralVessel;
@@ -99,9 +86,7 @@ public class InternalMedicineVessel extends AbstractModel {
 
     /**
      * Set 外周血管
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PeripheralVessel 外周血管
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPeripheralVessel(KeyValueItem PeripheralVessel) {
         this.PeripheralVessel = PeripheralVessel;

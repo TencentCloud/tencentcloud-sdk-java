@@ -25,7 +25,6 @@ public class Fp2NdItem extends AbstractModel {
 
     /**
     * 手术编码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Code")
     @Expose
@@ -33,7 +32,6 @@ public class Fp2NdItem extends AbstractModel {
 
     /**
     * 手术名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -41,7 +39,6 @@ public class Fp2NdItem extends AbstractModel {
 
     /**
     * 手术开始时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartTime")
     @Expose
@@ -49,7 +46,6 @@ public class Fp2NdItem extends AbstractModel {
 
     /**
     * 手术结束时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndTime")
     @Expose
@@ -57,7 +53,6 @@ public class Fp2NdItem extends AbstractModel {
 
     /**
     * 手术等级
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Level")
     @Expose
@@ -65,7 +60,6 @@ public class Fp2NdItem extends AbstractModel {
 
     /**
     * 手术类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -73,7 +67,6 @@ public class Fp2NdItem extends AbstractModel {
 
     /**
     * 醉愈合方式
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IncisionHealingGrade")
     @Expose
@@ -81,17 +74,14 @@ public class Fp2NdItem extends AbstractModel {
 
     /**
     * 麻醉方法
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AnesthesiaMethod")
     @Expose
     private BaseItem AnesthesiaMethod;
 
     /**
-     * Get 手术编码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 手术编码 
      * @return Code 手术编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BaseItem getCode() {
         return this.Code;
@@ -99,19 +89,15 @@ public class Fp2NdItem extends AbstractModel {
 
     /**
      * Set 手术编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Code 手术编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCode(BaseItem Code) {
         this.Code = Code;
     }
 
     /**
-     * Get 手术名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 手术名称 
      * @return Name 手术名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BaseItem getName() {
         return this.Name;
@@ -119,19 +105,15 @@ public class Fp2NdItem extends AbstractModel {
 
     /**
      * Set 手术名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 手术名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(BaseItem Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 手术开始时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 手术开始时间 
      * @return StartTime 手术开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BaseItem getStartTime() {
         return this.StartTime;
@@ -139,19 +121,15 @@ public class Fp2NdItem extends AbstractModel {
 
     /**
      * Set 手术开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StartTime 手术开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartTime(BaseItem StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 手术结束时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 手术结束时间 
      * @return EndTime 手术结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BaseItem getEndTime() {
         return this.EndTime;
@@ -159,19 +137,15 @@ public class Fp2NdItem extends AbstractModel {
 
     /**
      * Set 手术结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EndTime 手术结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndTime(BaseItem EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 手术等级
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 手术等级 
      * @return Level 手术等级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BaseItem getLevel() {
         return this.Level;
@@ -179,19 +153,15 @@ public class Fp2NdItem extends AbstractModel {
 
     /**
      * Set 手术等级
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Level 手术等级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLevel(BaseItem Level) {
         this.Level = Level;
     }
 
     /**
-     * Get 手术类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 手术类型 
      * @return Type 手术类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BaseItem getType() {
         return this.Type;
@@ -199,19 +169,15 @@ public class Fp2NdItem extends AbstractModel {
 
     /**
      * Set 手术类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 手术类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(BaseItem Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 醉愈合方式
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 醉愈合方式 
      * @return IncisionHealingGrade 醉愈合方式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BaseItem getIncisionHealingGrade() {
         return this.IncisionHealingGrade;
@@ -219,19 +185,15 @@ public class Fp2NdItem extends AbstractModel {
 
     /**
      * Set 醉愈合方式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IncisionHealingGrade 醉愈合方式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIncisionHealingGrade(BaseItem IncisionHealingGrade) {
         this.IncisionHealingGrade = IncisionHealingGrade;
     }
 
     /**
-     * Get 麻醉方法
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 麻醉方法 
      * @return AnesthesiaMethod 麻醉方法
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BaseItem getAnesthesiaMethod() {
         return this.AnesthesiaMethod;
@@ -239,9 +201,7 @@ public class Fp2NdItem extends AbstractModel {
 
     /**
      * Set 麻醉方法
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AnesthesiaMethod 麻醉方法
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAnesthesiaMethod(BaseItem AnesthesiaMethod) {
         this.AnesthesiaMethod = AnesthesiaMethod;

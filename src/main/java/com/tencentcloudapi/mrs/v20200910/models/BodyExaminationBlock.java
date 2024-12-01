@@ -25,7 +25,6 @@ public class BodyExaminationBlock extends AbstractModel {
 
     /**
     * 体温
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BodyTemperature")
     @Expose
@@ -33,7 +32,6 @@ public class BodyExaminationBlock extends AbstractModel {
 
     /**
     * 脉搏
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Pulse")
     @Expose
@@ -41,7 +39,6 @@ public class BodyExaminationBlock extends AbstractModel {
 
     /**
     * 呼吸
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Breathe")
     @Expose
@@ -49,17 +46,14 @@ public class BodyExaminationBlock extends AbstractModel {
 
     /**
     * 血压
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BloodPressure")
     @Expose
     private BloodPressureBlock BloodPressure;
 
     /**
-     * Get 体温
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 体温 
      * @return BodyTemperature 体温
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BodyTemperatureBlock getBodyTemperature() {
         return this.BodyTemperature;
@@ -67,19 +61,15 @@ public class BodyExaminationBlock extends AbstractModel {
 
     /**
      * Set 体温
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BodyTemperature 体温
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBodyTemperature(BodyTemperatureBlock BodyTemperature) {
         this.BodyTemperature = BodyTemperature;
     }
 
     /**
-     * Get 脉搏
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 脉搏 
      * @return Pulse 脉搏
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BodyTemperatureBlock getPulse() {
         return this.Pulse;
@@ -87,19 +77,15 @@ public class BodyExaminationBlock extends AbstractModel {
 
     /**
      * Set 脉搏
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Pulse 脉搏
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPulse(BodyTemperatureBlock Pulse) {
         this.Pulse = Pulse;
     }
 
     /**
-     * Get 呼吸
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 呼吸 
      * @return Breathe 呼吸
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BodyTemperatureBlock getBreathe() {
         return this.Breathe;
@@ -107,19 +93,15 @@ public class BodyExaminationBlock extends AbstractModel {
 
     /**
      * Set 呼吸
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Breathe 呼吸
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBreathe(BodyTemperatureBlock Breathe) {
         this.Breathe = Breathe;
     }
 
     /**
-     * Get 血压
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 血压 
      * @return BloodPressure 血压
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BloodPressureBlock getBloodPressure() {
         return this.BloodPressure;
@@ -127,9 +109,7 @@ public class BodyExaminationBlock extends AbstractModel {
 
     /**
      * Set 血压
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BloodPressure 血压
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBloodPressure(BloodPressureBlock BloodPressure) {
         this.BloodPressure = BloodPressure;

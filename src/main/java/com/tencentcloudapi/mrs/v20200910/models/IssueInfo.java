@@ -25,7 +25,6 @@ public class IssueInfo extends AbstractModel {
 
     /**
     * 编号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CertNumber")
     @Expose
@@ -33,7 +32,6 @@ public class IssueInfo extends AbstractModel {
 
     /**
     * 签发机构
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IssuedAuthority")
     @Expose
@@ -41,17 +39,14 @@ public class IssueInfo extends AbstractModel {
 
     /**
     * 签发日期
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IssuedDate")
     @Expose
     private String IssuedDate;
 
     /**
-     * Get 编号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 编号 
      * @return CertNumber 编号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCertNumber() {
         return this.CertNumber;
@@ -59,19 +54,15 @@ public class IssueInfo extends AbstractModel {
 
     /**
      * Set 编号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CertNumber 编号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCertNumber(String CertNumber) {
         this.CertNumber = CertNumber;
     }
 
     /**
-     * Get 签发机构
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 签发机构 
      * @return IssuedAuthority 签发机构
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIssuedAuthority() {
         return this.IssuedAuthority;
@@ -79,19 +70,15 @@ public class IssueInfo extends AbstractModel {
 
     /**
      * Set 签发机构
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IssuedAuthority 签发机构
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIssuedAuthority(String IssuedAuthority) {
         this.IssuedAuthority = IssuedAuthority;
     }
 
     /**
-     * Get 签发日期
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 签发日期 
      * @return IssuedDate 签发日期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIssuedDate() {
         return this.IssuedDate;
@@ -99,9 +86,7 @@ public class IssueInfo extends AbstractModel {
 
     /**
      * Set 签发日期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IssuedDate 签发日期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIssuedDate(String IssuedDate) {
         this.IssuedDate = IssuedDate;

@@ -25,7 +25,6 @@ public class DischargeInfoBlock extends AbstractModel {
 
     /**
     * 疾病史
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiseaseHistory")
     @Expose
@@ -33,7 +32,6 @@ public class DischargeInfoBlock extends AbstractModel {
 
     /**
     * 个人史
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PersonalHistory")
     @Expose
@@ -41,7 +39,6 @@ public class DischargeInfoBlock extends AbstractModel {
 
     /**
     * 药物史
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DrugHistory")
     @Expose
@@ -49,7 +46,6 @@ public class DischargeInfoBlock extends AbstractModel {
 
     /**
     * 治疗相关
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TreatmentRecord")
     @Expose
@@ -57,7 +53,6 @@ public class DischargeInfoBlock extends AbstractModel {
 
     /**
     * 文本段落
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ParagraphBlock")
     @Expose
@@ -65,17 +60,14 @@ public class DischargeInfoBlock extends AbstractModel {
 
     /**
     * 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Page")
     @Expose
     private Long Page;
 
     /**
-     * Get 疾病史
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 疾病史 
      * @return DiseaseHistory 疾病史
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DiseaseHistoryBlock getDiseaseHistory() {
         return this.DiseaseHistory;
@@ -83,19 +75,15 @@ public class DischargeInfoBlock extends AbstractModel {
 
     /**
      * Set 疾病史
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DiseaseHistory 疾病史
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiseaseHistory(DiseaseHistoryBlock DiseaseHistory) {
         this.DiseaseHistory = DiseaseHistory;
     }
 
     /**
-     * Get 个人史
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 个人史 
      * @return PersonalHistory 个人史
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public PersonalHistoryBlock getPersonalHistory() {
         return this.PersonalHistory;
@@ -103,19 +91,15 @@ public class DischargeInfoBlock extends AbstractModel {
 
     /**
      * Set 个人史
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PersonalHistory 个人史
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPersonalHistory(PersonalHistoryBlock PersonalHistory) {
         this.PersonalHistory = PersonalHistory;
     }
 
     /**
-     * Get 药物史
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 药物史 
      * @return DrugHistory 药物史
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DrugHistoryBlock getDrugHistory() {
         return this.DrugHistory;
@@ -123,19 +107,15 @@ public class DischargeInfoBlock extends AbstractModel {
 
     /**
      * Set 药物史
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DrugHistory 药物史
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDrugHistory(DrugHistoryBlock DrugHistory) {
         this.DrugHistory = DrugHistory;
     }
 
     /**
-     * Get 治疗相关
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 治疗相关 
      * @return TreatmentRecord 治疗相关
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TreatmentRecordBlock getTreatmentRecord() {
         return this.TreatmentRecord;
@@ -143,19 +123,15 @@ public class DischargeInfoBlock extends AbstractModel {
 
     /**
      * Set 治疗相关
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TreatmentRecord 治疗相关
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTreatmentRecord(TreatmentRecordBlock TreatmentRecord) {
         this.TreatmentRecord = TreatmentRecord;
     }
 
     /**
-     * Get 文本段落
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文本段落 
      * @return ParagraphBlock 文本段落
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ParagraphBlock getParagraphBlock() {
         return this.ParagraphBlock;
@@ -163,19 +139,15 @@ public class DischargeInfoBlock extends AbstractModel {
 
     /**
      * Set 文本段落
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ParagraphBlock 文本段落
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setParagraphBlock(ParagraphBlock ParagraphBlock) {
         this.ParagraphBlock = ParagraphBlock;
     }
 
     /**
-     * Get 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据在原PDF文件中的第几页 
      * @return Page 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPage() {
         return this.Page;
@@ -183,9 +155,7 @@ public class DischargeInfoBlock extends AbstractModel {
 
     /**
      * Set 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Page 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPage(Long Page) {
         this.Page = Page;

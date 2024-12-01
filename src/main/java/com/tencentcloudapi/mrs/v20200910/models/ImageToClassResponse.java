@@ -25,7 +25,6 @@ public class ImageToClassResponse extends AbstractModel {
 
     /**
     * 分类结果
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TextTypeList")
     @Expose
@@ -39,10 +38,8 @@ public class ImageToClassResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 分类结果
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分类结果 
      * @return TextTypeList 分类结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TextType [] getTextTypeList() {
         return this.TextTypeList;
@@ -50,9 +47,7 @@ public class ImageToClassResponse extends AbstractModel {
 
     /**
      * Set 分类结果
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TextTypeList 分类结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTextTypeList(TextType [] TextTypeList) {
         this.TextTypeList = TextTypeList;

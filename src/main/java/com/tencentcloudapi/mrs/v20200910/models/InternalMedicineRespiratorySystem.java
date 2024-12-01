@@ -25,7 +25,6 @@ public class InternalMedicineRespiratorySystem extends AbstractModel {
 
     /**
     * 呼吸系统总体描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Text")
     @Expose
@@ -33,7 +32,6 @@ public class InternalMedicineRespiratorySystem extends AbstractModel {
 
     /**
     * 胸廓
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Thoracic")
     @Expose
@@ -41,7 +39,6 @@ public class InternalMedicineRespiratorySystem extends AbstractModel {
 
     /**
     * 痰量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Sputum")
     @Expose
@@ -49,7 +46,6 @@ public class InternalMedicineRespiratorySystem extends AbstractModel {
 
     /**
     * 肺部叩诊
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LungPercussion")
     @Expose
@@ -57,17 +53,14 @@ public class InternalMedicineRespiratorySystem extends AbstractModel {
 
     /**
     * 肺部听诊其他
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LungAuscultation")
     @Expose
     private KeyValueItem [] LungAuscultation;
 
     /**
-     * Get 呼吸系统总体描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 呼吸系统总体描述 
      * @return Text 呼吸系统总体描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public KeyValueItem getText() {
         return this.Text;
@@ -75,19 +68,15 @@ public class InternalMedicineRespiratorySystem extends AbstractModel {
 
     /**
      * Set 呼吸系统总体描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Text 呼吸系统总体描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setText(KeyValueItem Text) {
         this.Text = Text;
     }
 
     /**
-     * Get 胸廓
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 胸廓 
      * @return Thoracic 胸廓
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public KeyValueItem getThoracic() {
         return this.Thoracic;
@@ -95,19 +84,15 @@ public class InternalMedicineRespiratorySystem extends AbstractModel {
 
     /**
      * Set 胸廓
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Thoracic 胸廓
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setThoracic(KeyValueItem Thoracic) {
         this.Thoracic = Thoracic;
     }
 
     /**
-     * Get 痰量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 痰量 
      * @return Sputum 痰量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public KeyValueItem getSputum() {
         return this.Sputum;
@@ -115,19 +100,15 @@ public class InternalMedicineRespiratorySystem extends AbstractModel {
 
     /**
      * Set 痰量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Sputum 痰量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSputum(KeyValueItem Sputum) {
         this.Sputum = Sputum;
     }
 
     /**
-     * Get 肺部叩诊
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 肺部叩诊 
      * @return LungPercussion 肺部叩诊
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public KeyValueItem getLungPercussion() {
         return this.LungPercussion;
@@ -135,19 +116,15 @@ public class InternalMedicineRespiratorySystem extends AbstractModel {
 
     /**
      * Set 肺部叩诊
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LungPercussion 肺部叩诊
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLungPercussion(KeyValueItem LungPercussion) {
         this.LungPercussion = LungPercussion;
     }
 
     /**
-     * Get 肺部听诊其他
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 肺部听诊其他 
      * @return LungAuscultation 肺部听诊其他
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public KeyValueItem [] getLungAuscultation() {
         return this.LungAuscultation;
@@ -155,9 +132,7 @@ public class InternalMedicineRespiratorySystem extends AbstractModel {
 
     /**
      * Set 肺部听诊其他
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LungAuscultation 肺部听诊其他
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLungAuscultation(KeyValueItem [] LungAuscultation) {
         this.LungAuscultation = LungAuscultation;

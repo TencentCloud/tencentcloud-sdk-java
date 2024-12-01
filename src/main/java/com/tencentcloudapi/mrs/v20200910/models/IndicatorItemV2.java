@@ -25,7 +25,6 @@ public class IndicatorItemV2 extends AbstractModel {
 
     /**
     * 项目名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Item")
     @Expose
@@ -33,7 +32,6 @@ public class IndicatorItemV2 extends AbstractModel {
 
     /**
     * 英文编码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Code")
     @Expose
@@ -41,7 +39,6 @@ public class IndicatorItemV2 extends AbstractModel {
 
     /**
     * 结果
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Result")
     @Expose
@@ -49,7 +46,6 @@ public class IndicatorItemV2 extends AbstractModel {
 
     /**
     * 单位
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Unit")
     @Expose
@@ -57,7 +53,6 @@ public class IndicatorItemV2 extends AbstractModel {
 
     /**
     * 参考范围
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Range")
     @Expose
@@ -65,7 +60,6 @@ public class IndicatorItemV2 extends AbstractModel {
 
     /**
     * 上下箭头
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Arrow")
     @Expose
@@ -73,7 +67,6 @@ public class IndicatorItemV2 extends AbstractModel {
 
     /**
     * 检测方法
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Method")
     @Expose
@@ -81,7 +74,6 @@ public class IndicatorItemV2 extends AbstractModel {
 
     /**
     * 结果是否异常
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Normal")
     @Expose
@@ -89,7 +81,6 @@ public class IndicatorItemV2 extends AbstractModel {
 
     /**
     * ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
     @Expose
@@ -97,7 +88,6 @@ public class IndicatorItemV2 extends AbstractModel {
 
     /**
     * 序号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Order")
     @Expose
@@ -105,17 +95,14 @@ public class IndicatorItemV2 extends AbstractModel {
 
     /**
     * 推测结果是否异常
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InferNormal")
     @Expose
     private String InferNormal;
 
     /**
-     * Get 项目名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 项目名称 
      * @return Item 项目名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BaseItem getItem() {
         return this.Item;
@@ -123,19 +110,15 @@ public class IndicatorItemV2 extends AbstractModel {
 
     /**
      * Set 项目名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Item 项目名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setItem(BaseItem Item) {
         this.Item = Item;
     }
 
     /**
-     * Get 英文编码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 英文编码 
      * @return Code 英文编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BaseItem getCode() {
         return this.Code;
@@ -143,19 +126,15 @@ public class IndicatorItemV2 extends AbstractModel {
 
     /**
      * Set 英文编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Code 英文编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCode(BaseItem Code) {
         this.Code = Code;
     }
 
     /**
-     * Get 结果
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 结果 
      * @return Result 结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BaseItem getResult() {
         return this.Result;
@@ -163,19 +142,15 @@ public class IndicatorItemV2 extends AbstractModel {
 
     /**
      * Set 结果
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Result 结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResult(BaseItem Result) {
         this.Result = Result;
     }
 
     /**
-     * Get 单位
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 单位 
      * @return Unit 单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BaseItem getUnit() {
         return this.Unit;
@@ -183,19 +158,15 @@ public class IndicatorItemV2 extends AbstractModel {
 
     /**
      * Set 单位
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Unit 单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUnit(BaseItem Unit) {
         this.Unit = Unit;
     }
 
     /**
-     * Get 参考范围
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 参考范围 
      * @return Range 参考范围
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BaseItem getRange() {
         return this.Range;
@@ -203,19 +174,15 @@ public class IndicatorItemV2 extends AbstractModel {
 
     /**
      * Set 参考范围
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Range 参考范围
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRange(BaseItem Range) {
         this.Range = Range;
     }
 
     /**
-     * Get 上下箭头
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 上下箭头 
      * @return Arrow 上下箭头
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BaseItem getArrow() {
         return this.Arrow;
@@ -223,19 +190,15 @@ public class IndicatorItemV2 extends AbstractModel {
 
     /**
      * Set 上下箭头
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Arrow 上下箭头
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setArrow(BaseItem Arrow) {
         this.Arrow = Arrow;
     }
 
     /**
-     * Get 检测方法
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 检测方法 
      * @return Method 检测方法
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BaseItem getMethod() {
         return this.Method;
@@ -243,19 +206,15 @@ public class IndicatorItemV2 extends AbstractModel {
 
     /**
      * Set 检测方法
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Method 检测方法
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMethod(BaseItem Method) {
         this.Method = Method;
     }
 
     /**
-     * Get 结果是否异常
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 结果是否异常 
      * @return Normal 结果是否异常
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getNormal() {
         return this.Normal;
@@ -263,19 +222,15 @@ public class IndicatorItemV2 extends AbstractModel {
 
     /**
      * Set 结果是否异常
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Normal 结果是否异常
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNormal(Boolean Normal) {
         this.Normal = Normal;
     }
 
     /**
-     * Get ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get ID 
      * @return Id ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getId() {
         return this.Id;
@@ -283,19 +238,15 @@ public class IndicatorItemV2 extends AbstractModel {
 
     /**
      * Set ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Id ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 序号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 序号 
      * @return Order 序号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getOrder() {
         return this.Order;
@@ -303,19 +254,15 @@ public class IndicatorItemV2 extends AbstractModel {
 
     /**
      * Set 序号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Order 序号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOrder(Long Order) {
         this.Order = Order;
     }
 
     /**
-     * Get 推测结果是否异常
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 推测结果是否异常 
      * @return InferNormal 推测结果是否异常
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInferNormal() {
         return this.InferNormal;
@@ -323,9 +270,7 @@ public class IndicatorItemV2 extends AbstractModel {
 
     /**
      * Set 推测结果是否异常
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InferNormal 推测结果是否异常
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInferNormal(String InferNormal) {
         this.InferNormal = InferNormal;

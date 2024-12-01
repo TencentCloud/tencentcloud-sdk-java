@@ -25,7 +25,6 @@ public class BirthCert extends AbstractModel {
 
     /**
     * 新生儿信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NeonatalInfo")
     @Expose
@@ -33,7 +32,6 @@ public class BirthCert extends AbstractModel {
 
     /**
     * 母亲信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MotherInfo")
     @Expose
@@ -41,7 +39,6 @@ public class BirthCert extends AbstractModel {
 
     /**
     * 父亲信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FatherInfo")
     @Expose
@@ -49,7 +46,6 @@ public class BirthCert extends AbstractModel {
 
     /**
     * 签发信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IssueInfo")
     @Expose
@@ -57,17 +53,14 @@ public class BirthCert extends AbstractModel {
 
     /**
     * 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Page")
     @Expose
     private Long Page;
 
     /**
-     * Get 新生儿信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 新生儿信息 
      * @return NeonatalInfo 新生儿信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public NeonatalInfo getNeonatalInfo() {
         return this.NeonatalInfo;
@@ -75,19 +68,15 @@ public class BirthCert extends AbstractModel {
 
     /**
      * Set 新生儿信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NeonatalInfo 新生儿信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNeonatalInfo(NeonatalInfo NeonatalInfo) {
         this.NeonatalInfo = NeonatalInfo;
     }
 
     /**
-     * Get 母亲信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 母亲信息 
      * @return MotherInfo 母亲信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ParentInfo getMotherInfo() {
         return this.MotherInfo;
@@ -95,19 +84,15 @@ public class BirthCert extends AbstractModel {
 
     /**
      * Set 母亲信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MotherInfo 母亲信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMotherInfo(ParentInfo MotherInfo) {
         this.MotherInfo = MotherInfo;
     }
 
     /**
-     * Get 父亲信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 父亲信息 
      * @return FatherInfo 父亲信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ParentInfo getFatherInfo() {
         return this.FatherInfo;
@@ -115,19 +100,15 @@ public class BirthCert extends AbstractModel {
 
     /**
      * Set 父亲信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FatherInfo 父亲信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFatherInfo(ParentInfo FatherInfo) {
         this.FatherInfo = FatherInfo;
     }
 
     /**
-     * Get 签发信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 签发信息 
      * @return IssueInfo 签发信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public IssueInfo getIssueInfo() {
         return this.IssueInfo;
@@ -135,19 +116,15 @@ public class BirthCert extends AbstractModel {
 
     /**
      * Set 签发信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IssueInfo 签发信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIssueInfo(IssueInfo IssueInfo) {
         this.IssueInfo = IssueInfo;
     }
 
     /**
-     * Get 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据在原PDF文件中的第几页 
      * @return Page 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPage() {
         return this.Page;
@@ -155,9 +132,7 @@ public class BirthCert extends AbstractModel {
 
     /**
      * Set 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Page 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPage(Long Page) {
         this.Page = Page;

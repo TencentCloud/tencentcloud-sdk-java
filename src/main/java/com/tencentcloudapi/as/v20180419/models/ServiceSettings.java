@@ -59,6 +59,13 @@ RESET：对原有不健康实例进行重装系统操作，可保持数据盘、
     private String ReplaceMode;
 
     /**
+    * 自动更新实例标签。默认取值为 false，配置后如伸缩组标签发生更新，会同步更新（同步更新仅支持新增、修改标签，暂不支持删除标签）伸缩组内运行中状态实例的标签，同步更新非立即生效，存在一定延迟。
+    */
+    @SerializedName("AutoUpdateInstanceTags")
+    @Expose
+    private Boolean AutoUpdateInstanceTags;
+
+    /**
      * Get 开启监控不健康替换服务。若开启则对于云监控标记为不健康的实例，弹性伸缩服务会进行替换。若不指定该参数，则默认为 False。 
      * @return ReplaceMonitorUnhealthy 开启监控不健康替换服务。若开启则对于云监控标记为不健康的实例，弹性伸缩服务会进行替换。若不指定该参数，则默认为 False。
      */
@@ -150,6 +157,22 @@ RESET：对原有不健康实例进行重装系统操作，可保持数据盘、
         this.ReplaceMode = ReplaceMode;
     }
 
+    /**
+     * Get 自动更新实例标签。默认取值为 false，配置后如伸缩组标签发生更新，会同步更新（同步更新仅支持新增、修改标签，暂不支持删除标签）伸缩组内运行中状态实例的标签，同步更新非立即生效，存在一定延迟。 
+     * @return AutoUpdateInstanceTags 自动更新实例标签。默认取值为 false，配置后如伸缩组标签发生更新，会同步更新（同步更新仅支持新增、修改标签，暂不支持删除标签）伸缩组内运行中状态实例的标签，同步更新非立即生效，存在一定延迟。
+     */
+    public Boolean getAutoUpdateInstanceTags() {
+        return this.AutoUpdateInstanceTags;
+    }
+
+    /**
+     * Set 自动更新实例标签。默认取值为 false，配置后如伸缩组标签发生更新，会同步更新（同步更新仅支持新增、修改标签，暂不支持删除标签）伸缩组内运行中状态实例的标签，同步更新非立即生效，存在一定延迟。
+     * @param AutoUpdateInstanceTags 自动更新实例标签。默认取值为 false，配置后如伸缩组标签发生更新，会同步更新（同步更新仅支持新增、修改标签，暂不支持删除标签）伸缩组内运行中状态实例的标签，同步更新非立即生效，存在一定延迟。
+     */
+    public void setAutoUpdateInstanceTags(Boolean AutoUpdateInstanceTags) {
+        this.AutoUpdateInstanceTags = AutoUpdateInstanceTags;
+    }
+
     public ServiceSettings() {
     }
 
@@ -170,6 +193,9 @@ RESET：对原有不健康实例进行重装系统操作，可保持数据盘、
         if (source.ReplaceMode != null) {
             this.ReplaceMode = new String(source.ReplaceMode);
         }
+        if (source.AutoUpdateInstanceTags != null) {
+            this.AutoUpdateInstanceTags = new Boolean(source.AutoUpdateInstanceTags);
+        }
     }
 
 
@@ -181,6 +207,7 @@ RESET：对原有不健康实例进行重装系统操作，可保持数据盘、
         this.setParamSimple(map, prefix + "ScalingMode", this.ScalingMode);
         this.setParamSimple(map, prefix + "ReplaceLoadBalancerUnhealthy", this.ReplaceLoadBalancerUnhealthy);
         this.setParamSimple(map, prefix + "ReplaceMode", this.ReplaceMode);
+        this.setParamSimple(map, prefix + "AutoUpdateInstanceTags", this.AutoUpdateInstanceTags);
 
     }
 }

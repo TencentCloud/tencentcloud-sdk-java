@@ -25,17 +25,14 @@ public class SurgeryLymphNode extends AbstractModel {
 
     /**
     * 浅表淋巴结总体描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Text")
     @Expose
     private KeyValueItem Text;
 
     /**
-     * Get 浅表淋巴结总体描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 浅表淋巴结总体描述 
      * @return Text 浅表淋巴结总体描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public KeyValueItem getText() {
         return this.Text;
@@ -43,9 +40,7 @@ public class SurgeryLymphNode extends AbstractModel {
 
     /**
      * Set 浅表淋巴结总体描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Text 浅表淋巴结总体描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setText(KeyValueItem Text) {
         this.Text = Text;

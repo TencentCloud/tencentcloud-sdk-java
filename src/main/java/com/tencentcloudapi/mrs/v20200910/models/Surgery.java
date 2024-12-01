@@ -25,7 +25,6 @@ public class Surgery extends AbstractModel {
 
     /**
     * 手术史
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SurgeryHistory")
     @Expose
@@ -33,7 +32,6 @@ public class Surgery extends AbstractModel {
 
     /**
     * 其他信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OtherInfo")
     @Expose
@@ -41,17 +39,14 @@ public class Surgery extends AbstractModel {
 
     /**
     * 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Page")
     @Expose
     private Long Page;
 
     /**
-     * Get 手术史
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 手术史 
      * @return SurgeryHistory 手术史
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SurgeryHistory getSurgeryHistory() {
         return this.SurgeryHistory;
@@ -59,19 +54,15 @@ public class Surgery extends AbstractModel {
 
     /**
      * Set 手术史
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SurgeryHistory 手术史
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSurgeryHistory(SurgeryHistory SurgeryHistory) {
         this.SurgeryHistory = SurgeryHistory;
     }
 
     /**
-     * Get 其他信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 其他信息 
      * @return OtherInfo 其他信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public OtherInfo getOtherInfo() {
         return this.OtherInfo;
@@ -79,19 +70,15 @@ public class Surgery extends AbstractModel {
 
     /**
      * Set 其他信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OtherInfo 其他信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOtherInfo(OtherInfo OtherInfo) {
         this.OtherInfo = OtherInfo;
     }
 
     /**
-     * Get 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据在原PDF文件中的第几页 
      * @return Page 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPage() {
         return this.Page;
@@ -99,9 +86,7 @@ public class Surgery extends AbstractModel {
 
     /**
      * Set 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Page 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPage(Long Page) {
         this.Page = Page;

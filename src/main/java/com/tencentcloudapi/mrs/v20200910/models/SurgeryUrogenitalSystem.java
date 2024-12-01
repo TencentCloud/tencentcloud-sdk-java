@@ -25,7 +25,6 @@ public class SurgeryUrogenitalSystem extends AbstractModel {
 
     /**
     * 泌尿生殖系统总体描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Text")
     @Expose
@@ -33,7 +32,6 @@ public class SurgeryUrogenitalSystem extends AbstractModel {
 
     /**
     * 前列腺
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Prostate")
     @Expose
@@ -41,17 +39,14 @@ public class SurgeryUrogenitalSystem extends AbstractModel {
 
     /**
     * 外生殖器（男性）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExternalReproductiveOrgans")
     @Expose
     private KeyValueItem ExternalReproductiveOrgans;
 
     /**
-     * Get 泌尿生殖系统总体描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 泌尿生殖系统总体描述 
      * @return Text 泌尿生殖系统总体描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public KeyValueItem getText() {
         return this.Text;
@@ -59,19 +54,15 @@ public class SurgeryUrogenitalSystem extends AbstractModel {
 
     /**
      * Set 泌尿生殖系统总体描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Text 泌尿生殖系统总体描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setText(KeyValueItem Text) {
         this.Text = Text;
     }
 
     /**
-     * Get 前列腺
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 前列腺 
      * @return Prostate 前列腺
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public KeyValueItem getProstate() {
         return this.Prostate;
@@ -79,19 +70,15 @@ public class SurgeryUrogenitalSystem extends AbstractModel {
 
     /**
      * Set 前列腺
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Prostate 前列腺
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProstate(KeyValueItem Prostate) {
         this.Prostate = Prostate;
     }
 
     /**
-     * Get 外生殖器（男性）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 外生殖器（男性） 
      * @return ExternalReproductiveOrgans 外生殖器（男性）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public KeyValueItem getExternalReproductiveOrgans() {
         return this.ExternalReproductiveOrgans;
@@ -99,9 +86,7 @@ public class SurgeryUrogenitalSystem extends AbstractModel {
 
     /**
      * Set 外生殖器（男性）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExternalReproductiveOrgans 外生殖器（男性）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExternalReproductiveOrgans(KeyValueItem ExternalReproductiveOrgans) {
         this.ExternalReproductiveOrgans = ExternalReproductiveOrgans;

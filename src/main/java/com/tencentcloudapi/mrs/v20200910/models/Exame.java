@@ -25,7 +25,6 @@ public class Exame extends AbstractModel {
 
     /**
     * 结论段落
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OverView")
     @Expose
@@ -33,17 +32,14 @@ public class Exame extends AbstractModel {
 
     /**
     * 异常与建议段落
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Abnormality")
     @Expose
     private ResultInfo [] Abnormality;
 
     /**
-     * Get 结论段落
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 结论段落 
      * @return OverView 结论段落
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ResultInfo [] getOverView() {
         return this.OverView;
@@ -51,19 +47,15 @@ public class Exame extends AbstractModel {
 
     /**
      * Set 结论段落
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OverView 结论段落
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOverView(ResultInfo [] OverView) {
         this.OverView = OverView;
     }
 
     /**
-     * Get 异常与建议段落
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 异常与建议段落 
      * @return Abnormality 异常与建议段落
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ResultInfo [] getAbnormality() {
         return this.Abnormality;
@@ -71,9 +63,7 @@ public class Exame extends AbstractModel {
 
     /**
      * Set 异常与建议段落
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Abnormality 异常与建议段落
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAbnormality(ResultInfo [] Abnormality) {
         this.Abnormality = Abnormality;

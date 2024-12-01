@@ -25,17 +25,14 @@ public class OtolaryngologyBriefSummary extends AbstractModel {
 
     /**
     * 耳鼻喉小结
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Text")
     @Expose
     private KeyValueItem Text;
 
     /**
-     * Get 耳鼻喉小结
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 耳鼻喉小结 
      * @return Text 耳鼻喉小结
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public KeyValueItem getText() {
         return this.Text;
@@ -43,9 +40,7 @@ public class OtolaryngologyBriefSummary extends AbstractModel {
 
     /**
      * Set 耳鼻喉小结
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Text 耳鼻喉小结
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setText(KeyValueItem Text) {
         this.Text = Text;

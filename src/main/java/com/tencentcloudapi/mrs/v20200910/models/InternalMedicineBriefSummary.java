@@ -25,17 +25,14 @@ public class InternalMedicineBriefSummary extends AbstractModel {
 
     /**
     * 内科小结
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Text")
     @Expose
     private KeyValueItem Text;
 
     /**
-     * Get 内科小结
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 内科小结 
      * @return Text 内科小结
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public KeyValueItem getText() {
         return this.Text;
@@ -43,9 +40,7 @@ public class InternalMedicineBriefSummary extends AbstractModel {
 
     /**
      * Set 内科小结
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Text 内科小结
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setText(KeyValueItem Text) {
         this.Text = Text;

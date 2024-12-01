@@ -25,7 +25,6 @@ public class DrugHistoryBlock extends AbstractModel {
 
     /**
     * 药品名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -33,7 +32,6 @@ public class DrugHistoryBlock extends AbstractModel {
 
     /**
     * 原文
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Src")
     @Expose
@@ -41,7 +39,6 @@ public class DrugHistoryBlock extends AbstractModel {
 
     /**
     * 药物列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DrugList")
     @Expose
@@ -49,17 +46,14 @@ public class DrugHistoryBlock extends AbstractModel {
 
     /**
     * 归一化值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Value")
     @Expose
     private String Value;
 
     /**
-     * Get 药品名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 药品名称 
      * @return Name 药品名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -67,19 +61,15 @@ public class DrugHistoryBlock extends AbstractModel {
 
     /**
      * Set 药品名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 药品名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 原文
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 原文 
      * @return Src 原文
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSrc() {
         return this.Src;
@@ -87,19 +77,15 @@ public class DrugHistoryBlock extends AbstractModel {
 
     /**
      * Set 原文
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Src 原文
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSrc(String Src) {
         this.Src = Src;
     }
 
     /**
-     * Get 药物列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 药物列表 
      * @return DrugList 药物列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DrugListBlock [] getDrugList() {
         return this.DrugList;
@@ -107,19 +93,15 @@ public class DrugHistoryBlock extends AbstractModel {
 
     /**
      * Set 药物列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DrugList 药物列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDrugList(DrugListBlock [] DrugList) {
         this.DrugList = DrugList;
     }
 
     /**
-     * Get 归一化值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 归一化值 
      * @return Value 归一化值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getValue() {
         return this.Value;
@@ -127,9 +109,7 @@ public class DrugHistoryBlock extends AbstractModel {
 
     /**
      * Set 归一化值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Value 归一化值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValue(String Value) {
         this.Value = Value;

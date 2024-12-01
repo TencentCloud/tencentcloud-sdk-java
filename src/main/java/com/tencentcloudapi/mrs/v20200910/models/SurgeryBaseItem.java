@@ -25,7 +25,6 @@ public class SurgeryBaseItem extends AbstractModel {
 
     /**
     * 体检报告-外科-头颈部
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HeadNeck")
     @Expose
@@ -33,7 +32,6 @@ public class SurgeryBaseItem extends AbstractModel {
 
     /**
     * 体检报告-外科-甲状腺
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Thyroid")
     @Expose
@@ -41,7 +39,6 @@ public class SurgeryBaseItem extends AbstractModel {
 
     /**
     * 体检报告-外科-乳房
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Breast")
     @Expose
@@ -49,7 +46,6 @@ public class SurgeryBaseItem extends AbstractModel {
 
     /**
     * 体检报告-外科-浅表淋巴结
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LymphNode")
     @Expose
@@ -57,7 +53,6 @@ public class SurgeryBaseItem extends AbstractModel {
 
     /**
     * 体检报告-外科-脊柱
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SpinalExtremities")
     @Expose
@@ -65,7 +60,6 @@ public class SurgeryBaseItem extends AbstractModel {
 
     /**
     * 体检报告-外科-皮肤
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Skin")
     @Expose
@@ -73,7 +67,6 @@ public class SurgeryBaseItem extends AbstractModel {
 
     /**
     * 体检报告-外科-肛门直肠
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Anorectal")
     @Expose
@@ -81,7 +74,6 @@ public class SurgeryBaseItem extends AbstractModel {
 
     /**
     * 体检报告-外科-泌尿生殖系统
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UrogenitalSystem")
     @Expose
@@ -89,7 +81,6 @@ public class SurgeryBaseItem extends AbstractModel {
 
     /**
     * 体检报告-外科-外科其他
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Others")
     @Expose
@@ -97,17 +88,14 @@ public class SurgeryBaseItem extends AbstractModel {
 
     /**
     * 体检报告-外科-小结
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BriefSummary")
     @Expose
     private SurgeryBriefSummary BriefSummary;
 
     /**
-     * Get 体检报告-外科-头颈部
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 体检报告-外科-头颈部 
      * @return HeadNeck 体检报告-外科-头颈部
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SurgeryHeadNeck getHeadNeck() {
         return this.HeadNeck;
@@ -115,19 +103,15 @@ public class SurgeryBaseItem extends AbstractModel {
 
     /**
      * Set 体检报告-外科-头颈部
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HeadNeck 体检报告-外科-头颈部
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHeadNeck(SurgeryHeadNeck HeadNeck) {
         this.HeadNeck = HeadNeck;
     }
 
     /**
-     * Get 体检报告-外科-甲状腺
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 体检报告-外科-甲状腺 
      * @return Thyroid 体检报告-外科-甲状腺
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SurgeryThyroid getThyroid() {
         return this.Thyroid;
@@ -135,19 +119,15 @@ public class SurgeryBaseItem extends AbstractModel {
 
     /**
      * Set 体检报告-外科-甲状腺
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Thyroid 体检报告-外科-甲状腺
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setThyroid(SurgeryThyroid Thyroid) {
         this.Thyroid = Thyroid;
     }
 
     /**
-     * Get 体检报告-外科-乳房
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 体检报告-外科-乳房 
      * @return Breast 体检报告-外科-乳房
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SurgeryBreast getBreast() {
         return this.Breast;
@@ -155,19 +135,15 @@ public class SurgeryBaseItem extends AbstractModel {
 
     /**
      * Set 体检报告-外科-乳房
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Breast 体检报告-外科-乳房
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBreast(SurgeryBreast Breast) {
         this.Breast = Breast;
     }
 
     /**
-     * Get 体检报告-外科-浅表淋巴结
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 体检报告-外科-浅表淋巴结 
      * @return LymphNode 体检报告-外科-浅表淋巴结
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SurgeryLymphNode getLymphNode() {
         return this.LymphNode;
@@ -175,19 +151,15 @@ public class SurgeryBaseItem extends AbstractModel {
 
     /**
      * Set 体检报告-外科-浅表淋巴结
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LymphNode 体检报告-外科-浅表淋巴结
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLymphNode(SurgeryLymphNode LymphNode) {
         this.LymphNode = LymphNode;
     }
 
     /**
-     * Get 体检报告-外科-脊柱
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 体检报告-外科-脊柱 
      * @return SpinalExtremities 体检报告-外科-脊柱
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SurgerySpinalExtremities getSpinalExtremities() {
         return this.SpinalExtremities;
@@ -195,19 +167,15 @@ public class SurgeryBaseItem extends AbstractModel {
 
     /**
      * Set 体检报告-外科-脊柱
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SpinalExtremities 体检报告-外科-脊柱
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSpinalExtremities(SurgerySpinalExtremities SpinalExtremities) {
         this.SpinalExtremities = SpinalExtremities;
     }
 
     /**
-     * Get 体检报告-外科-皮肤
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 体检报告-外科-皮肤 
      * @return Skin 体检报告-外科-皮肤
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SurgerySkin getSkin() {
         return this.Skin;
@@ -215,19 +183,15 @@ public class SurgeryBaseItem extends AbstractModel {
 
     /**
      * Set 体检报告-外科-皮肤
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Skin 体检报告-外科-皮肤
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSkin(SurgerySkin Skin) {
         this.Skin = Skin;
     }
 
     /**
-     * Get 体检报告-外科-肛门直肠
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 体检报告-外科-肛门直肠 
      * @return Anorectal 体检报告-外科-肛门直肠
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SurgeryAnorectal getAnorectal() {
         return this.Anorectal;
@@ -235,19 +199,15 @@ public class SurgeryBaseItem extends AbstractModel {
 
     /**
      * Set 体检报告-外科-肛门直肠
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Anorectal 体检报告-外科-肛门直肠
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAnorectal(SurgeryAnorectal Anorectal) {
         this.Anorectal = Anorectal;
     }
 
     /**
-     * Get 体检报告-外科-泌尿生殖系统
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 体检报告-外科-泌尿生殖系统 
      * @return UrogenitalSystem 体检报告-外科-泌尿生殖系统
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SurgeryUrogenitalSystem getUrogenitalSystem() {
         return this.UrogenitalSystem;
@@ -255,19 +215,15 @@ public class SurgeryBaseItem extends AbstractModel {
 
     /**
      * Set 体检报告-外科-泌尿生殖系统
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UrogenitalSystem 体检报告-外科-泌尿生殖系统
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUrogenitalSystem(SurgeryUrogenitalSystem UrogenitalSystem) {
         this.UrogenitalSystem = UrogenitalSystem;
     }
 
     /**
-     * Get 体检报告-外科-外科其他
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 体检报告-外科-外科其他 
      * @return Others 体检报告-外科-外科其他
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public KeyValueItem [] getOthers() {
         return this.Others;
@@ -275,19 +231,15 @@ public class SurgeryBaseItem extends AbstractModel {
 
     /**
      * Set 体检报告-外科-外科其他
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Others 体检报告-外科-外科其他
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOthers(KeyValueItem [] Others) {
         this.Others = Others;
     }
 
     /**
-     * Get 体检报告-外科-小结
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 体检报告-外科-小结 
      * @return BriefSummary 体检报告-外科-小结
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SurgeryBriefSummary getBriefSummary() {
         return this.BriefSummary;
@@ -295,9 +247,7 @@ public class SurgeryBaseItem extends AbstractModel {
 
     /**
      * Set 体检报告-外科-小结
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BriefSummary 体检报告-外科-小结
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBriefSummary(SurgeryBriefSummary BriefSummary) {
         this.BriefSummary = BriefSummary;

@@ -25,7 +25,6 @@ public class ResultInfo extends AbstractModel {
 
     /**
     * 段落文本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Text")
     @Expose
@@ -33,7 +32,6 @@ public class ResultInfo extends AbstractModel {
 
     /**
     * 结论详情
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Items")
     @Expose
@@ -41,17 +39,14 @@ public class ResultInfo extends AbstractModel {
 
     /**
     * 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Page")
     @Expose
     private Long Page;
 
     /**
-     * Get 段落文本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 段落文本 
      * @return Text 段落文本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BaseInfo getText() {
         return this.Text;
@@ -59,19 +54,15 @@ public class ResultInfo extends AbstractModel {
 
     /**
      * Set 段落文本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Text 段落文本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setText(BaseInfo Text) {
         this.Text = Text;
     }
 
     /**
-     * Get 结论详情
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 结论详情 
      * @return Items 结论详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BaseInfo [] getItems() {
         return this.Items;
@@ -79,19 +70,15 @@ public class ResultInfo extends AbstractModel {
 
     /**
      * Set 结论详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Items 结论详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setItems(BaseInfo [] Items) {
         this.Items = Items;
     }
 
     /**
-     * Get 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据在原PDF文件中的第几页 
      * @return Page 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPage() {
         return this.Page;
@@ -99,9 +86,7 @@ public class ResultInfo extends AbstractModel {
 
     /**
      * Set 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Page 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPage(Long Page) {
         this.Page = Page;

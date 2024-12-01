@@ -25,7 +25,6 @@ public class EyeChildItem extends AbstractModel {
 
     /**
     * 球镜
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Sph")
     @Expose
@@ -33,7 +32,6 @@ public class EyeChildItem extends AbstractModel {
 
     /**
     * 柱镜
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Cyl")
     @Expose
@@ -41,7 +39,6 @@ public class EyeChildItem extends AbstractModel {
 
     /**
     * 轴位
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Ax")
     @Expose
@@ -49,17 +46,14 @@ public class EyeChildItem extends AbstractModel {
 
     /**
     * 等效球镜
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Se")
     @Expose
     private BaseItem2 Se;
 
     /**
-     * Get 球镜
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 球镜 
      * @return Sph 球镜
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BaseItem3 [] getSph() {
         return this.Sph;
@@ -67,19 +61,15 @@ public class EyeChildItem extends AbstractModel {
 
     /**
      * Set 球镜
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Sph 球镜
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSph(BaseItem3 [] Sph) {
         this.Sph = Sph;
     }
 
     /**
-     * Get 柱镜
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 柱镜 
      * @return Cyl 柱镜
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BaseItem3 [] getCyl() {
         return this.Cyl;
@@ -87,19 +77,15 @@ public class EyeChildItem extends AbstractModel {
 
     /**
      * Set 柱镜
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Cyl 柱镜
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCyl(BaseItem3 [] Cyl) {
         this.Cyl = Cyl;
     }
 
     /**
-     * Get 轴位
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 轴位 
      * @return Ax 轴位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BaseItem3 [] getAx() {
         return this.Ax;
@@ -107,19 +93,15 @@ public class EyeChildItem extends AbstractModel {
 
     /**
      * Set 轴位
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Ax 轴位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAx(BaseItem3 [] Ax) {
         this.Ax = Ax;
     }
 
     /**
-     * Get 等效球镜
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 等效球镜 
      * @return Se 等效球镜
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BaseItem2 getSe() {
         return this.Se;
@@ -127,9 +109,7 @@ public class EyeChildItem extends AbstractModel {
 
     /**
      * Set 等效球镜
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Se 等效球镜
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSe(BaseItem2 Se) {
         this.Se = Se;

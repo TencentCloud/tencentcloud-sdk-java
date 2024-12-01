@@ -25,17 +25,14 @@ public class SurgeryBriefSummary extends AbstractModel {
 
     /**
     * 外科小结
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Text")
     @Expose
     private KeyValueItem Text;
 
     /**
-     * Get 外科小结
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 外科小结 
      * @return Text 外科小结
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public KeyValueItem getText() {
         return this.Text;
@@ -43,9 +40,7 @@ public class SurgeryBriefSummary extends AbstractModel {
 
     /**
      * Set 外科小结
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Text 外科小结
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setText(KeyValueItem Text) {
         this.Text = Text;

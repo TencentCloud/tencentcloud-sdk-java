@@ -25,7 +25,6 @@ public class SurgerySpinalExtremities extends AbstractModel {
 
     /**
     * 脊柱四肢总体描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Text")
     @Expose
@@ -33,7 +32,6 @@ public class SurgerySpinalExtremities extends AbstractModel {
 
     /**
     * 脊柱
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SpinalColumn")
     @Expose
@@ -41,7 +39,6 @@ public class SurgerySpinalExtremities extends AbstractModel {
 
     /**
     * 四肢和关节
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LimbJoint")
     @Expose
@@ -49,7 +46,6 @@ public class SurgerySpinalExtremities extends AbstractModel {
 
     /**
     * 平跛足
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Foot")
     @Expose
@@ -57,7 +53,6 @@ public class SurgerySpinalExtremities extends AbstractModel {
 
     /**
     * 骨骼
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Bone")
     @Expose
@@ -65,7 +60,6 @@ public class SurgerySpinalExtremities extends AbstractModel {
 
     /**
     * 步态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Gait")
     @Expose
@@ -73,17 +67,14 @@ public class SurgerySpinalExtremities extends AbstractModel {
 
     /**
     * 残疾或畸形
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Deformity")
     @Expose
     private KeyValueItem Deformity;
 
     /**
-     * Get 脊柱四肢总体描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 脊柱四肢总体描述 
      * @return Text 脊柱四肢总体描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public KeyValueItem getText() {
         return this.Text;
@@ -91,19 +82,15 @@ public class SurgerySpinalExtremities extends AbstractModel {
 
     /**
      * Set 脊柱四肢总体描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Text 脊柱四肢总体描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setText(KeyValueItem Text) {
         this.Text = Text;
     }
 
     /**
-     * Get 脊柱
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 脊柱 
      * @return SpinalColumn 脊柱
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public KeyValueItem getSpinalColumn() {
         return this.SpinalColumn;
@@ -111,19 +98,15 @@ public class SurgerySpinalExtremities extends AbstractModel {
 
     /**
      * Set 脊柱
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SpinalColumn 脊柱
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSpinalColumn(KeyValueItem SpinalColumn) {
         this.SpinalColumn = SpinalColumn;
     }
 
     /**
-     * Get 四肢和关节
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 四肢和关节 
      * @return LimbJoint 四肢和关节
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public KeyValueItem getLimbJoint() {
         return this.LimbJoint;
@@ -131,19 +114,15 @@ public class SurgerySpinalExtremities extends AbstractModel {
 
     /**
      * Set 四肢和关节
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LimbJoint 四肢和关节
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLimbJoint(KeyValueItem LimbJoint) {
         this.LimbJoint = LimbJoint;
     }
 
     /**
-     * Get 平跛足
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 平跛足 
      * @return Foot 平跛足
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public KeyValueItem getFoot() {
         return this.Foot;
@@ -151,19 +130,15 @@ public class SurgerySpinalExtremities extends AbstractModel {
 
     /**
      * Set 平跛足
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Foot 平跛足
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFoot(KeyValueItem Foot) {
         this.Foot = Foot;
     }
 
     /**
-     * Get 骨骼
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 骨骼 
      * @return Bone 骨骼
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public KeyValueItem getBone() {
         return this.Bone;
@@ -171,19 +146,15 @@ public class SurgerySpinalExtremities extends AbstractModel {
 
     /**
      * Set 骨骼
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Bone 骨骼
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBone(KeyValueItem Bone) {
         this.Bone = Bone;
     }
 
     /**
-     * Get 步态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 步态 
      * @return Gait 步态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public KeyValueItem getGait() {
         return this.Gait;
@@ -191,19 +162,15 @@ public class SurgerySpinalExtremities extends AbstractModel {
 
     /**
      * Set 步态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Gait 步态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGait(KeyValueItem Gait) {
         this.Gait = Gait;
     }
 
     /**
-     * Get 残疾或畸形
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 残疾或畸形 
      * @return Deformity 残疾或畸形
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public KeyValueItem getDeformity() {
         return this.Deformity;
@@ -211,9 +178,7 @@ public class SurgerySpinalExtremities extends AbstractModel {
 
     /**
      * Set 残疾或畸形
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Deformity 残疾或畸形
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeformity(KeyValueItem Deformity) {
         this.Deformity = Deformity;

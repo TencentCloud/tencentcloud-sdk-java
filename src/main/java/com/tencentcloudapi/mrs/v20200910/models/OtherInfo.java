@@ -25,7 +25,6 @@ public class OtherInfo extends AbstractModel {
 
     /**
     * 麻醉方法
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Anesthesia")
     @Expose
@@ -33,7 +32,6 @@ public class OtherInfo extends AbstractModel {
 
     /**
     * 术中出血
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BloodLoss")
     @Expose
@@ -41,7 +39,6 @@ public class OtherInfo extends AbstractModel {
 
     /**
     * 输血
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BloodTransfusion")
     @Expose
@@ -49,7 +46,6 @@ public class OtherInfo extends AbstractModel {
 
     /**
     * 手术用时
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Duration")
     @Expose
@@ -57,7 +53,6 @@ public class OtherInfo extends AbstractModel {
 
     /**
     * 手术开始时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndTime")
     @Expose
@@ -65,17 +60,14 @@ public class OtherInfo extends AbstractModel {
 
     /**
     * 手术结束时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartTime")
     @Expose
     private SurgeryAttr StartTime;
 
     /**
-     * Get 麻醉方法
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 麻醉方法 
      * @return Anesthesia 麻醉方法
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SurgeryAttr getAnesthesia() {
         return this.Anesthesia;
@@ -83,19 +75,15 @@ public class OtherInfo extends AbstractModel {
 
     /**
      * Set 麻醉方法
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Anesthesia 麻醉方法
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAnesthesia(SurgeryAttr Anesthesia) {
         this.Anesthesia = Anesthesia;
     }
 
     /**
-     * Get 术中出血
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 术中出血 
      * @return BloodLoss 术中出血
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SurgeryAttr getBloodLoss() {
         return this.BloodLoss;
@@ -103,19 +91,15 @@ public class OtherInfo extends AbstractModel {
 
     /**
      * Set 术中出血
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BloodLoss 术中出血
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBloodLoss(SurgeryAttr BloodLoss) {
         this.BloodLoss = BloodLoss;
     }
 
     /**
-     * Get 输血
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 输血 
      * @return BloodTransfusion 输血
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SurgeryAttr getBloodTransfusion() {
         return this.BloodTransfusion;
@@ -123,19 +107,15 @@ public class OtherInfo extends AbstractModel {
 
     /**
      * Set 输血
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BloodTransfusion 输血
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBloodTransfusion(SurgeryAttr BloodTransfusion) {
         this.BloodTransfusion = BloodTransfusion;
     }
 
     /**
-     * Get 手术用时
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 手术用时 
      * @return Duration 手术用时
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SurgeryAttr getDuration() {
         return this.Duration;
@@ -143,19 +123,15 @@ public class OtherInfo extends AbstractModel {
 
     /**
      * Set 手术用时
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Duration 手术用时
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDuration(SurgeryAttr Duration) {
         this.Duration = Duration;
     }
 
     /**
-     * Get 手术开始时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 手术开始时间 
      * @return EndTime 手术开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SurgeryAttr getEndTime() {
         return this.EndTime;
@@ -163,19 +139,15 @@ public class OtherInfo extends AbstractModel {
 
     /**
      * Set 手术开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EndTime 手术开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndTime(SurgeryAttr EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 手术结束时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 手术结束时间 
      * @return StartTime 手术结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SurgeryAttr getStartTime() {
         return this.StartTime;
@@ -183,9 +155,7 @@ public class OtherInfo extends AbstractModel {
 
     /**
      * Set 手术结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StartTime 手术结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartTime(SurgeryAttr StartTime) {
         this.StartTime = StartTime;

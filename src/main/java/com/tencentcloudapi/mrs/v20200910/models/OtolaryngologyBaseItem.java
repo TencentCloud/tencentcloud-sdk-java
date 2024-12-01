@@ -25,7 +25,6 @@ public class OtolaryngologyBaseItem extends AbstractModel {
 
     /**
     * 耳朵
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Ear")
     @Expose
@@ -33,7 +32,6 @@ public class OtolaryngologyBaseItem extends AbstractModel {
 
     /**
     * 鼻
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Nose")
     @Expose
@@ -41,7 +39,6 @@ public class OtolaryngologyBaseItem extends AbstractModel {
 
     /**
     * 喉
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Larynx")
     @Expose
@@ -49,7 +46,6 @@ public class OtolaryngologyBaseItem extends AbstractModel {
 
     /**
     * 耳鼻喉其他
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Others")
     @Expose
@@ -57,17 +53,14 @@ public class OtolaryngologyBaseItem extends AbstractModel {
 
     /**
     * 小结
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BriefSummary")
     @Expose
     private OtolaryngologyBriefSummary BriefSummary;
 
     /**
-     * Get 耳朵
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 耳朵 
      * @return Ear 耳朵
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public OtolaryngologyEar getEar() {
         return this.Ear;
@@ -75,19 +68,15 @@ public class OtolaryngologyBaseItem extends AbstractModel {
 
     /**
      * Set 耳朵
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Ear 耳朵
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEar(OtolaryngologyEar Ear) {
         this.Ear = Ear;
     }
 
     /**
-     * Get 鼻
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 鼻 
      * @return Nose 鼻
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public OtolaryngologyNose getNose() {
         return this.Nose;
@@ -95,19 +84,15 @@ public class OtolaryngologyBaseItem extends AbstractModel {
 
     /**
      * Set 鼻
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Nose 鼻
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNose(OtolaryngologyNose Nose) {
         this.Nose = Nose;
     }
 
     /**
-     * Get 喉
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 喉 
      * @return Larynx 喉
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public OtolaryngologyLarynx getLarynx() {
         return this.Larynx;
@@ -115,19 +100,15 @@ public class OtolaryngologyBaseItem extends AbstractModel {
 
     /**
      * Set 喉
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Larynx 喉
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLarynx(OtolaryngologyLarynx Larynx) {
         this.Larynx = Larynx;
     }
 
     /**
-     * Get 耳鼻喉其他
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 耳鼻喉其他 
      * @return Others 耳鼻喉其他
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public KeyValueItem [] getOthers() {
         return this.Others;
@@ -135,19 +116,15 @@ public class OtolaryngologyBaseItem extends AbstractModel {
 
     /**
      * Set 耳鼻喉其他
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Others 耳鼻喉其他
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOthers(KeyValueItem [] Others) {
         this.Others = Others;
     }
 
     /**
-     * Get 小结
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 小结 
      * @return BriefSummary 小结
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public OtolaryngologyBriefSummary getBriefSummary() {
         return this.BriefSummary;
@@ -155,9 +132,7 @@ public class OtolaryngologyBaseItem extends AbstractModel {
 
     /**
      * Set 小结
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BriefSummary 小结
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBriefSummary(OtolaryngologyBriefSummary BriefSummary) {
         this.BriefSummary = BriefSummary;

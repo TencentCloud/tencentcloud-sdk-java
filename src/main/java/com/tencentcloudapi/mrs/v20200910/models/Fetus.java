@@ -25,7 +25,6 @@ public class Fetus extends AbstractModel {
 
     /**
     * 双顶径
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BPD")
     @Expose
@@ -33,7 +32,6 @@ public class Fetus extends AbstractModel {
 
     /**
     * 腹前后径
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("APTD")
     @Expose
@@ -41,7 +39,6 @@ public class Fetus extends AbstractModel {
 
     /**
     * 腹左右径
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TTD")
     @Expose
@@ -49,7 +46,6 @@ public class Fetus extends AbstractModel {
 
     /**
     * 头臀径
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CRL")
     @Expose
@@ -57,7 +53,6 @@ public class Fetus extends AbstractModel {
 
     /**
     * 头围
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HC")
     @Expose
@@ -65,7 +60,6 @@ public class Fetus extends AbstractModel {
 
     /**
     * 腹围
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AC")
     @Expose
@@ -73,7 +67,6 @@ public class Fetus extends AbstractModel {
 
     /**
     * 股骨长
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FL")
     @Expose
@@ -81,7 +74,6 @@ public class Fetus extends AbstractModel {
 
     /**
     * 肱骨长
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HL")
     @Expose
@@ -89,7 +81,6 @@ public class Fetus extends AbstractModel {
 
     /**
     * 胎儿重量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Weight")
     @Expose
@@ -97,7 +88,6 @@ public class Fetus extends AbstractModel {
 
     /**
     * 颈项透明层
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NT")
     @Expose
@@ -105,7 +95,6 @@ public class Fetus extends AbstractModel {
 
     /**
     * 脐动脉血流
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UmbilicalCord")
     @Expose
@@ -113,7 +102,6 @@ public class Fetus extends AbstractModel {
 
     /**
     * 羊水最大深度
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WaterDeep")
     @Expose
@@ -121,7 +109,6 @@ public class Fetus extends AbstractModel {
 
     /**
     * 羊水四象限测量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WaterQuad")
     @Expose
@@ -129,7 +116,6 @@ public class Fetus extends AbstractModel {
 
     /**
     * 羊水指数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AFI")
     @Expose
@@ -137,7 +123,6 @@ public class Fetus extends AbstractModel {
 
     /**
     * 胎心
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FHR")
     @Expose
@@ -145,7 +130,6 @@ public class Fetus extends AbstractModel {
 
     /**
     * 胎动
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Movement")
     @Expose
@@ -153,7 +137,6 @@ public class Fetus extends AbstractModel {
 
     /**
     * 胎数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Num")
     @Expose
@@ -161,7 +144,6 @@ public class Fetus extends AbstractModel {
 
     /**
     * 胎位
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Position")
     @Expose
@@ -169,7 +151,6 @@ public class Fetus extends AbstractModel {
 
     /**
     * 是否活胎
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Alive")
     @Expose
@@ -177,7 +158,6 @@ public class Fetus extends AbstractModel {
 
     /**
     * 胎盘位置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PlacentaLocation")
     @Expose
@@ -185,7 +165,6 @@ public class Fetus extends AbstractModel {
 
     /**
     * 胎盘厚度
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PlacentaThickness")
     @Expose
@@ -193,7 +172,6 @@ public class Fetus extends AbstractModel {
 
     /**
     * 胎盘成熟度
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PlacentaGrade")
     @Expose
@@ -201,7 +179,6 @@ public class Fetus extends AbstractModel {
 
     /**
     * 妊娠时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GestationTime")
     @Expose
@@ -209,7 +186,6 @@ public class Fetus extends AbstractModel {
 
     /**
     * 妊娠周期
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GestationPeriod")
     @Expose
@@ -217,7 +193,6 @@ public class Fetus extends AbstractModel {
 
     /**
     * 绕颈
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AroundNeck")
     @Expose
@@ -225,7 +200,6 @@ public class Fetus extends AbstractModel {
 
     /**
     * 病变
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Sym")
     @Expose
@@ -233,17 +207,14 @@ public class Fetus extends AbstractModel {
 
     /**
     * 原文内容
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Src")
     @Expose
     private String Src;
 
     /**
-     * Get 双顶径
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 双顶径 
      * @return BPD 双顶径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public FieldInfo getBPD() {
         return this.BPD;
@@ -251,19 +222,15 @@ public class Fetus extends AbstractModel {
 
     /**
      * Set 双顶径
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BPD 双顶径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBPD(FieldInfo BPD) {
         this.BPD = BPD;
     }
 
     /**
-     * Get 腹前后径
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 腹前后径 
      * @return APTD 腹前后径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public FieldInfo getAPTD() {
         return this.APTD;
@@ -271,19 +238,15 @@ public class Fetus extends AbstractModel {
 
     /**
      * Set 腹前后径
-注意：此字段可能返回 null，表示取不到有效值。
      * @param APTD 腹前后径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAPTD(FieldInfo APTD) {
         this.APTD = APTD;
     }
 
     /**
-     * Get 腹左右径
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 腹左右径 
      * @return TTD 腹左右径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public FieldInfo getTTD() {
         return this.TTD;
@@ -291,19 +254,15 @@ public class Fetus extends AbstractModel {
 
     /**
      * Set 腹左右径
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TTD 腹左右径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTTD(FieldInfo TTD) {
         this.TTD = TTD;
     }
 
     /**
-     * Get 头臀径
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 头臀径 
      * @return CRL 头臀径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public FieldInfo getCRL() {
         return this.CRL;
@@ -311,19 +270,15 @@ public class Fetus extends AbstractModel {
 
     /**
      * Set 头臀径
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CRL 头臀径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCRL(FieldInfo CRL) {
         this.CRL = CRL;
     }
 
     /**
-     * Get 头围
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 头围 
      * @return HC 头围
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public FieldInfo getHC() {
         return this.HC;
@@ -331,19 +286,15 @@ public class Fetus extends AbstractModel {
 
     /**
      * Set 头围
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HC 头围
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHC(FieldInfo HC) {
         this.HC = HC;
     }
 
     /**
-     * Get 腹围
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 腹围 
      * @return AC 腹围
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public FieldInfo getAC() {
         return this.AC;
@@ -351,19 +302,15 @@ public class Fetus extends AbstractModel {
 
     /**
      * Set 腹围
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AC 腹围
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAC(FieldInfo AC) {
         this.AC = AC;
     }
 
     /**
-     * Get 股骨长
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 股骨长 
      * @return FL 股骨长
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public FieldInfo getFL() {
         return this.FL;
@@ -371,19 +318,15 @@ public class Fetus extends AbstractModel {
 
     /**
      * Set 股骨长
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FL 股骨长
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFL(FieldInfo FL) {
         this.FL = FL;
     }
 
     /**
-     * Get 肱骨长
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 肱骨长 
      * @return HL 肱骨长
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public FieldInfo getHL() {
         return this.HL;
@@ -391,19 +334,15 @@ public class Fetus extends AbstractModel {
 
     /**
      * Set 肱骨长
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HL 肱骨长
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHL(FieldInfo HL) {
         this.HL = HL;
     }
 
     /**
-     * Get 胎儿重量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 胎儿重量 
      * @return Weight 胎儿重量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public FieldInfo getWeight() {
         return this.Weight;
@@ -411,19 +350,15 @@ public class Fetus extends AbstractModel {
 
     /**
      * Set 胎儿重量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Weight 胎儿重量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWeight(FieldInfo Weight) {
         this.Weight = Weight;
     }
 
     /**
-     * Get 颈项透明层
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 颈项透明层 
      * @return NT 颈项透明层
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public FieldInfo getNT() {
         return this.NT;
@@ -431,19 +366,15 @@ public class Fetus extends AbstractModel {
 
     /**
      * Set 颈项透明层
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NT 颈项透明层
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNT(FieldInfo NT) {
         this.NT = NT;
     }
 
     /**
-     * Get 脐动脉血流
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 脐动脉血流 
      * @return UmbilicalCord 脐动脉血流
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public FieldInfo getUmbilicalCord() {
         return this.UmbilicalCord;
@@ -451,19 +382,15 @@ public class Fetus extends AbstractModel {
 
     /**
      * Set 脐动脉血流
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UmbilicalCord 脐动脉血流
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUmbilicalCord(FieldInfo UmbilicalCord) {
         this.UmbilicalCord = UmbilicalCord;
     }
 
     /**
-     * Get 羊水最大深度
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 羊水最大深度 
      * @return WaterDeep 羊水最大深度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public FieldInfo getWaterDeep() {
         return this.WaterDeep;
@@ -471,19 +398,15 @@ public class Fetus extends AbstractModel {
 
     /**
      * Set 羊水最大深度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WaterDeep 羊水最大深度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWaterDeep(FieldInfo WaterDeep) {
         this.WaterDeep = WaterDeep;
     }
 
     /**
-     * Get 羊水四象限测量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 羊水四象限测量 
      * @return WaterQuad 羊水四象限测量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public FieldInfo getWaterQuad() {
         return this.WaterQuad;
@@ -491,19 +414,15 @@ public class Fetus extends AbstractModel {
 
     /**
      * Set 羊水四象限测量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WaterQuad 羊水四象限测量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWaterQuad(FieldInfo WaterQuad) {
         this.WaterQuad = WaterQuad;
     }
 
     /**
-     * Get 羊水指数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 羊水指数 
      * @return AFI 羊水指数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public FieldInfo getAFI() {
         return this.AFI;
@@ -511,19 +430,15 @@ public class Fetus extends AbstractModel {
 
     /**
      * Set 羊水指数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AFI 羊水指数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAFI(FieldInfo AFI) {
         this.AFI = AFI;
     }
 
     /**
-     * Get 胎心
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 胎心 
      * @return FHR 胎心
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public FieldInfo getFHR() {
         return this.FHR;
@@ -531,19 +446,15 @@ public class Fetus extends AbstractModel {
 
     /**
      * Set 胎心
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FHR 胎心
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFHR(FieldInfo FHR) {
         this.FHR = FHR;
     }
 
     /**
-     * Get 胎动
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 胎动 
      * @return Movement 胎动
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public FieldInfo getMovement() {
         return this.Movement;
@@ -551,19 +462,15 @@ public class Fetus extends AbstractModel {
 
     /**
      * Set 胎动
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Movement 胎动
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMovement(FieldInfo Movement) {
         this.Movement = Movement;
     }
 
     /**
-     * Get 胎数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 胎数 
      * @return Num 胎数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public FieldInfo getNum() {
         return this.Num;
@@ -571,19 +478,15 @@ public class Fetus extends AbstractModel {
 
     /**
      * Set 胎数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Num 胎数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNum(FieldInfo Num) {
         this.Num = Num;
     }
 
     /**
-     * Get 胎位
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 胎位 
      * @return Position 胎位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public FieldInfo getPosition() {
         return this.Position;
@@ -591,19 +494,15 @@ public class Fetus extends AbstractModel {
 
     /**
      * Set 胎位
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Position 胎位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPosition(FieldInfo Position) {
         this.Position = Position;
     }
 
     /**
-     * Get 是否活胎
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否活胎 
      * @return Alive 是否活胎
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public FieldInfo getAlive() {
         return this.Alive;
@@ -611,19 +510,15 @@ public class Fetus extends AbstractModel {
 
     /**
      * Set 是否活胎
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Alive 是否活胎
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAlive(FieldInfo Alive) {
         this.Alive = Alive;
     }
 
     /**
-     * Get 胎盘位置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 胎盘位置 
      * @return PlacentaLocation 胎盘位置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public FieldInfo getPlacentaLocation() {
         return this.PlacentaLocation;
@@ -631,19 +526,15 @@ public class Fetus extends AbstractModel {
 
     /**
      * Set 胎盘位置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PlacentaLocation 胎盘位置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPlacentaLocation(FieldInfo PlacentaLocation) {
         this.PlacentaLocation = PlacentaLocation;
     }
 
     /**
-     * Get 胎盘厚度
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 胎盘厚度 
      * @return PlacentaThickness 胎盘厚度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public FieldInfo getPlacentaThickness() {
         return this.PlacentaThickness;
@@ -651,19 +542,15 @@ public class Fetus extends AbstractModel {
 
     /**
      * Set 胎盘厚度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PlacentaThickness 胎盘厚度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPlacentaThickness(FieldInfo PlacentaThickness) {
         this.PlacentaThickness = PlacentaThickness;
     }
 
     /**
-     * Get 胎盘成熟度
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 胎盘成熟度 
      * @return PlacentaGrade 胎盘成熟度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public FieldInfo getPlacentaGrade() {
         return this.PlacentaGrade;
@@ -671,19 +558,15 @@ public class Fetus extends AbstractModel {
 
     /**
      * Set 胎盘成熟度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PlacentaGrade 胎盘成熟度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPlacentaGrade(FieldInfo PlacentaGrade) {
         this.PlacentaGrade = PlacentaGrade;
     }
 
     /**
-     * Get 妊娠时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 妊娠时间 
      * @return GestationTime 妊娠时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public FieldInfo getGestationTime() {
         return this.GestationTime;
@@ -691,19 +574,15 @@ public class Fetus extends AbstractModel {
 
     /**
      * Set 妊娠时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GestationTime 妊娠时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGestationTime(FieldInfo GestationTime) {
         this.GestationTime = GestationTime;
     }
 
     /**
-     * Get 妊娠周期
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 妊娠周期 
      * @return GestationPeriod 妊娠周期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public FieldInfo getGestationPeriod() {
         return this.GestationPeriod;
@@ -711,19 +590,15 @@ public class Fetus extends AbstractModel {
 
     /**
      * Set 妊娠周期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GestationPeriod 妊娠周期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGestationPeriod(FieldInfo GestationPeriod) {
         this.GestationPeriod = GestationPeriod;
     }
 
     /**
-     * Get 绕颈
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 绕颈 
      * @return AroundNeck 绕颈
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public FieldInfo getAroundNeck() {
         return this.AroundNeck;
@@ -731,19 +606,15 @@ public class Fetus extends AbstractModel {
 
     /**
      * Set 绕颈
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AroundNeck 绕颈
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAroundNeck(FieldInfo AroundNeck) {
         this.AroundNeck = AroundNeck;
     }
 
     /**
-     * Get 病变
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 病变 
      * @return Sym 病变
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public FieldInfo [] getSym() {
         return this.Sym;
@@ -751,19 +622,15 @@ public class Fetus extends AbstractModel {
 
     /**
      * Set 病变
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Sym 病变
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSym(FieldInfo [] Sym) {
         this.Sym = Sym;
     }
 
     /**
-     * Get 原文内容
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 原文内容 
      * @return Src 原文内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSrc() {
         return this.Src;
@@ -771,9 +638,7 @@ public class Fetus extends AbstractModel {
 
     /**
      * Set 原文内容
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Src 原文内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSrc(String Src) {
         this.Src = Src;

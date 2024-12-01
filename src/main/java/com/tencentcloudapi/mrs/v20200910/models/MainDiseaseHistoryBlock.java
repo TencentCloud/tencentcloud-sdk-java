@@ -25,7 +25,6 @@ public class MainDiseaseHistoryBlock extends AbstractModel {
 
     /**
     * 名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -33,7 +32,6 @@ public class MainDiseaseHistoryBlock extends AbstractModel {
 
     /**
     * 原文
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Src")
     @Expose
@@ -41,7 +39,6 @@ public class MainDiseaseHistoryBlock extends AbstractModel {
 
     /**
     * 状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("State")
     @Expose
@@ -49,7 +46,6 @@ public class MainDiseaseHistoryBlock extends AbstractModel {
 
     /**
     * 对外输出值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Value")
     @Expose
@@ -57,7 +53,6 @@ public class MainDiseaseHistoryBlock extends AbstractModel {
 
     /**
     * 否定列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Neglist")
     @Expose
@@ -65,17 +60,14 @@ public class MainDiseaseHistoryBlock extends AbstractModel {
 
     /**
     * 肯定列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Poslist")
     @Expose
     private PoslistBlock Poslist;
 
     /**
-     * Get 名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 名称 
      * @return Name 名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -83,19 +75,15 @@ public class MainDiseaseHistoryBlock extends AbstractModel {
 
     /**
      * Set 名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 原文
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 原文 
      * @return Src 原文
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSrc() {
         return this.Src;
@@ -103,19 +91,15 @@ public class MainDiseaseHistoryBlock extends AbstractModel {
 
     /**
      * Set 原文
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Src 原文
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSrc(String Src) {
         this.Src = Src;
     }
 
     /**
-     * Get 状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 状态 
      * @return State 状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getState() {
         return this.State;
@@ -123,19 +107,15 @@ public class MainDiseaseHistoryBlock extends AbstractModel {
 
     /**
      * Set 状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param State 状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setState(Boolean State) {
         this.State = State;
     }
 
     /**
-     * Get 对外输出值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 对外输出值 
      * @return Value 对外输出值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getValue() {
         return this.Value;
@@ -143,19 +123,15 @@ public class MainDiseaseHistoryBlock extends AbstractModel {
 
     /**
      * Set 对外输出值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Value 对外输出值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValue(String Value) {
         this.Value = Value;
     }
 
     /**
-     * Get 否定列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 否定列表 
      * @return Neglist 否定列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public NeglistBlock getNeglist() {
         return this.Neglist;
@@ -163,19 +139,15 @@ public class MainDiseaseHistoryBlock extends AbstractModel {
 
     /**
      * Set 否定列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Neglist 否定列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNeglist(NeglistBlock Neglist) {
         this.Neglist = Neglist;
     }
 
     /**
-     * Get 肯定列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 肯定列表 
      * @return Poslist 肯定列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public PoslistBlock getPoslist() {
         return this.Poslist;
@@ -183,9 +155,7 @@ public class MainDiseaseHistoryBlock extends AbstractModel {
 
     /**
      * Set 肯定列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Poslist 肯定列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPoslist(PoslistBlock Poslist) {
         this.Poslist = Poslist;

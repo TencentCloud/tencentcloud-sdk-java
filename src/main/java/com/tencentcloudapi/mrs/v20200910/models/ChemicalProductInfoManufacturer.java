@@ -25,7 +25,6 @@ public class ChemicalProductInfoManufacturer extends AbstractModel {
 
     /**
     * 文本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Text")
     @Expose
@@ -33,7 +32,6 @@ public class ChemicalProductInfoManufacturer extends AbstractModel {
 
     /**
     * 企业名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -41,7 +39,6 @@ public class ChemicalProductInfoManufacturer extends AbstractModel {
 
     /**
     * 生产地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Address")
     @Expose
@@ -49,7 +46,6 @@ public class ChemicalProductInfoManufacturer extends AbstractModel {
 
     /**
     * 邮政编码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PostalCode")
     @Expose
@@ -57,7 +53,6 @@ public class ChemicalProductInfoManufacturer extends AbstractModel {
 
     /**
     * 电话，包含区号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Phone")
     @Expose
@@ -65,7 +60,6 @@ public class ChemicalProductInfoManufacturer extends AbstractModel {
 
     /**
     * 传真，包含区号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Fax")
     @Expose
@@ -73,17 +67,14 @@ public class ChemicalProductInfoManufacturer extends AbstractModel {
 
     /**
     * 网址，如无则不填写
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Website")
     @Expose
     private String Website;
 
     /**
-     * Get 文本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文本 
      * @return Text 文本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getText() {
         return this.Text;
@@ -91,19 +82,15 @@ public class ChemicalProductInfoManufacturer extends AbstractModel {
 
     /**
      * Set 文本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Text 文本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setText(String Text) {
         this.Text = Text;
     }
 
     /**
-     * Get 企业名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 企业名称 
      * @return Name 企业名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -111,19 +98,15 @@ public class ChemicalProductInfoManufacturer extends AbstractModel {
 
     /**
      * Set 企业名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 企业名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 生产地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 生产地址 
      * @return Address 生产地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAddress() {
         return this.Address;
@@ -131,19 +114,15 @@ public class ChemicalProductInfoManufacturer extends AbstractModel {
 
     /**
      * Set 生产地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Address 生产地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAddress(String Address) {
         this.Address = Address;
     }
 
     /**
-     * Get 邮政编码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 邮政编码 
      * @return PostalCode 邮政编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPostalCode() {
         return this.PostalCode;
@@ -151,19 +130,15 @@ public class ChemicalProductInfoManufacturer extends AbstractModel {
 
     /**
      * Set 邮政编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PostalCode 邮政编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPostalCode(String PostalCode) {
         this.PostalCode = PostalCode;
     }
 
     /**
-     * Get 电话，包含区号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 电话，包含区号 
      * @return Phone 电话，包含区号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPhone() {
         return this.Phone;
@@ -171,19 +146,15 @@ public class ChemicalProductInfoManufacturer extends AbstractModel {
 
     /**
      * Set 电话，包含区号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Phone 电话，包含区号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPhone(String Phone) {
         this.Phone = Phone;
     }
 
     /**
-     * Get 传真，包含区号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 传真，包含区号 
      * @return Fax 传真，包含区号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFax() {
         return this.Fax;
@@ -191,19 +162,15 @@ public class ChemicalProductInfoManufacturer extends AbstractModel {
 
     /**
      * Set 传真，包含区号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Fax 传真，包含区号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFax(String Fax) {
         this.Fax = Fax;
     }
 
     /**
-     * Get 网址，如无则不填写
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 网址，如无则不填写 
      * @return Website 网址，如无则不填写
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWebsite() {
         return this.Website;
@@ -211,9 +178,7 @@ public class ChemicalProductInfoManufacturer extends AbstractModel {
 
     /**
      * Set 网址，如无则不填写
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Website 网址，如无则不填写
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWebsite(String Website) {
         this.Website = Website;

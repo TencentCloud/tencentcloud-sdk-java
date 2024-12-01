@@ -25,7 +25,6 @@ public class GeneralExaminationVitalSignBloodPressure extends AbstractModel {
 
     /**
     * 血压
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Text")
     @Expose
@@ -33,7 +32,6 @@ public class GeneralExaminationVitalSignBloodPressure extends AbstractModel {
 
     /**
     * 收缩压/舒张压
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SystolicDiastolicPressure")
     @Expose
@@ -41,7 +39,6 @@ public class GeneralExaminationVitalSignBloodPressure extends AbstractModel {
 
     /**
     * 收缩压
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SystolicPressure")
     @Expose
@@ -49,17 +46,14 @@ public class GeneralExaminationVitalSignBloodPressure extends AbstractModel {
 
     /**
     * 舒张压
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiastolicPressure")
     @Expose
     private BloodPressureItem [] DiastolicPressure;
 
     /**
-     * Get 血压
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 血压 
      * @return Text 血压
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BloodPressureItem getText() {
         return this.Text;
@@ -67,19 +61,15 @@ public class GeneralExaminationVitalSignBloodPressure extends AbstractModel {
 
     /**
      * Set 血压
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Text 血压
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setText(BloodPressureItem Text) {
         this.Text = Text;
     }
 
     /**
-     * Get 收缩压/舒张压
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 收缩压/舒张压 
      * @return SystolicDiastolicPressure 收缩压/舒张压
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BloodPressureItem [] getSystolicDiastolicPressure() {
         return this.SystolicDiastolicPressure;
@@ -87,19 +77,15 @@ public class GeneralExaminationVitalSignBloodPressure extends AbstractModel {
 
     /**
      * Set 收缩压/舒张压
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SystolicDiastolicPressure 收缩压/舒张压
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSystolicDiastolicPressure(BloodPressureItem [] SystolicDiastolicPressure) {
         this.SystolicDiastolicPressure = SystolicDiastolicPressure;
     }
 
     /**
-     * Get 收缩压
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 收缩压 
      * @return SystolicPressure 收缩压
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BloodPressureItem [] getSystolicPressure() {
         return this.SystolicPressure;
@@ -107,19 +93,15 @@ public class GeneralExaminationVitalSignBloodPressure extends AbstractModel {
 
     /**
      * Set 收缩压
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SystolicPressure 收缩压
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSystolicPressure(BloodPressureItem [] SystolicPressure) {
         this.SystolicPressure = SystolicPressure;
     }
 
     /**
-     * Get 舒张压
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 舒张压 
      * @return DiastolicPressure 舒张压
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BloodPressureItem [] getDiastolicPressure() {
         return this.DiastolicPressure;
@@ -127,9 +109,7 @@ public class GeneralExaminationVitalSignBloodPressure extends AbstractModel {
 
     /**
      * Set 舒张压
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DiastolicPressure 舒张压
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiastolicPressure(BloodPressureItem [] DiastolicPressure) {
         this.DiastolicPressure = DiastolicPressure;

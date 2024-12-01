@@ -25,7 +25,6 @@ public class Check extends AbstractModel {
 
     /**
     * 描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Desc")
     @Expose
@@ -33,7 +32,6 @@ public class Check extends AbstractModel {
 
     /**
     * 结论
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Summary")
     @Expose
@@ -41,7 +39,6 @@ public class Check extends AbstractModel {
 
     /**
     * 检查报告块标题
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BlockTitle")
     @Expose
@@ -49,17 +46,14 @@ public class Check extends AbstractModel {
 
     /**
     * 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Page")
     @Expose
     private Long Page;
 
     /**
-     * Get 描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 描述 
      * @return Desc 描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Desc getDesc() {
         return this.Desc;
@@ -67,19 +61,15 @@ public class Check extends AbstractModel {
 
     /**
      * Set 描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Desc 描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDesc(Desc Desc) {
         this.Desc = Desc;
     }
 
     /**
-     * Get 结论
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 结论 
      * @return Summary 结论
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Summary getSummary() {
         return this.Summary;
@@ -87,19 +77,15 @@ public class Check extends AbstractModel {
 
     /**
      * Set 结论
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Summary 结论
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSummary(Summary Summary) {
         this.Summary = Summary;
     }
 
     /**
-     * Get 检查报告块标题
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 检查报告块标题 
      * @return BlockTitle 检查报告块标题
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BlockTitle [] getBlockTitle() {
         return this.BlockTitle;
@@ -107,19 +93,15 @@ public class Check extends AbstractModel {
 
     /**
      * Set 检查报告块标题
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BlockTitle 检查报告块标题
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBlockTitle(BlockTitle [] BlockTitle) {
         this.BlockTitle = BlockTitle;
     }
 
     /**
-     * Get 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据在原PDF文件中的第几页 
      * @return Page 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPage() {
         return this.Page;
@@ -127,9 +109,7 @@ public class Check extends AbstractModel {
 
     /**
      * Set 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Page 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPage(Long Page) {
         this.Page = Page;

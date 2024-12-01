@@ -25,7 +25,6 @@ public class PathologicalDiagnosisDetailBlock extends AbstractModel {
 
     /**
     * 部位
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Part")
     @Expose
@@ -33,7 +32,6 @@ public class PathologicalDiagnosisDetailBlock extends AbstractModel {
 
     /**
     * 类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HistologicalType")
     @Expose
@@ -41,17 +39,14 @@ public class PathologicalDiagnosisDetailBlock extends AbstractModel {
 
     /**
     * 等级
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HistologicalGrade")
     @Expose
     private String HistologicalGrade;
 
     /**
-     * Get 部位
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 部位 
      * @return Part 部位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPart() {
         return this.Part;
@@ -59,19 +54,15 @@ public class PathologicalDiagnosisDetailBlock extends AbstractModel {
 
     /**
      * Set 部位
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Part 部位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPart(String Part) {
         this.Part = Part;
     }
 
     /**
-     * Get 类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 类型 
      * @return HistologicalType 类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHistologicalType() {
         return this.HistologicalType;
@@ -79,19 +70,15 @@ public class PathologicalDiagnosisDetailBlock extends AbstractModel {
 
     /**
      * Set 类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HistologicalType 类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHistologicalType(String HistologicalType) {
         this.HistologicalType = HistologicalType;
     }
 
     /**
-     * Get 等级
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 等级 
      * @return HistologicalGrade 等级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHistologicalGrade() {
         return this.HistologicalGrade;
@@ -99,9 +86,7 @@ public class PathologicalDiagnosisDetailBlock extends AbstractModel {
 
     /**
      * Set 等级
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HistologicalGrade 等级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHistologicalGrade(String HistologicalGrade) {
         this.HistologicalGrade = HistologicalGrade;

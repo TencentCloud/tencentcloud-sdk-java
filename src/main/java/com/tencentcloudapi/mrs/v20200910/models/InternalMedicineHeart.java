@@ -25,7 +25,6 @@ public class InternalMedicineHeart extends AbstractModel {
 
     /**
     * 心脏总体描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Text")
     @Expose
@@ -33,7 +32,6 @@ public class InternalMedicineHeart extends AbstractModel {
 
     /**
     * 心律
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HeartRhythm")
     @Expose
@@ -41,7 +39,6 @@ public class InternalMedicineHeart extends AbstractModel {
 
     /**
     * 心率
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HeartRate")
     @Expose
@@ -49,17 +46,14 @@ public class InternalMedicineHeart extends AbstractModel {
 
     /**
     * 心脏听诊
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HeartAuscultation")
     @Expose
     private KeyValueItem HeartAuscultation;
 
     /**
-     * Get 心脏总体描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 心脏总体描述 
      * @return Text 心脏总体描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public KeyValueItem getText() {
         return this.Text;
@@ -67,19 +61,15 @@ public class InternalMedicineHeart extends AbstractModel {
 
     /**
      * Set 心脏总体描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Text 心脏总体描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setText(KeyValueItem Text) {
         this.Text = Text;
     }
 
     /**
-     * Get 心律
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 心律 
      * @return HeartRhythm 心律
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public KeyValueItem getHeartRhythm() {
         return this.HeartRhythm;
@@ -87,19 +77,15 @@ public class InternalMedicineHeart extends AbstractModel {
 
     /**
      * Set 心律
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HeartRhythm 心律
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHeartRhythm(KeyValueItem HeartRhythm) {
         this.HeartRhythm = HeartRhythm;
     }
 
     /**
-     * Get 心率
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 心率 
      * @return HeartRate 心率
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ValueUnitItem getHeartRate() {
         return this.HeartRate;
@@ -107,19 +93,15 @@ public class InternalMedicineHeart extends AbstractModel {
 
     /**
      * Set 心率
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HeartRate 心率
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHeartRate(ValueUnitItem HeartRate) {
         this.HeartRate = HeartRate;
     }
 
     /**
-     * Get 心脏听诊
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 心脏听诊 
      * @return HeartAuscultation 心脏听诊
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public KeyValueItem getHeartAuscultation() {
         return this.HeartAuscultation;
@@ -127,9 +109,7 @@ public class InternalMedicineHeart extends AbstractModel {
 
     /**
      * Set 心脏听诊
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HeartAuscultation 心脏听诊
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHeartAuscultation(KeyValueItem HeartAuscultation) {
         this.HeartAuscultation = HeartAuscultation;

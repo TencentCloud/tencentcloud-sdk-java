@@ -25,7 +25,6 @@ public class CovidItemsInfo extends AbstractModel {
 
     /**
     * 核酸报告结论
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CovidItems")
     @Expose
@@ -33,7 +32,6 @@ public class CovidItemsInfo extends AbstractModel {
 
     /**
     * 版本号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Version")
     @Expose
@@ -41,17 +39,14 @@ public class CovidItemsInfo extends AbstractModel {
 
     /**
     * 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Page")
     @Expose
     private Long Page;
 
     /**
-     * Get 核酸报告结论
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 核酸报告结论 
      * @return CovidItems 核酸报告结论
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CovidItem [] getCovidItems() {
         return this.CovidItems;
@@ -59,19 +54,15 @@ public class CovidItemsInfo extends AbstractModel {
 
     /**
      * Set 核酸报告结论
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CovidItems 核酸报告结论
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCovidItems(CovidItem [] CovidItems) {
         this.CovidItems = CovidItems;
     }
 
     /**
-     * Get 版本号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 版本号 
      * @return Version 版本号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVersion() {
         return this.Version;
@@ -79,19 +70,15 @@ public class CovidItemsInfo extends AbstractModel {
 
     /**
      * Set 版本号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Version 版本号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVersion(String Version) {
         this.Version = Version;
     }
 
     /**
-     * Get 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据在原PDF文件中的第几页 
      * @return Page 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPage() {
         return this.Page;
@@ -99,9 +86,7 @@ public class CovidItemsInfo extends AbstractModel {
 
     /**
      * Set 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Page 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPage(Long Page) {
         this.Page = Page;

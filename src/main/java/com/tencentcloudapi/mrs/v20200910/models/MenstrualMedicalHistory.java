@@ -25,7 +25,6 @@ public class MenstrualMedicalHistory extends AbstractModel {
 
     /**
     * 末次月经时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LastMenstrualPeriod")
     @Expose
@@ -33,7 +32,6 @@ public class MenstrualMedicalHistory extends AbstractModel {
 
     /**
     * 经量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MenstrualFlow")
     @Expose
@@ -41,7 +39,6 @@ public class MenstrualMedicalHistory extends AbstractModel {
 
     /**
     * 月经初潮年龄
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MenarcheAge")
     @Expose
@@ -49,7 +46,6 @@ public class MenstrualMedicalHistory extends AbstractModel {
 
     /**
     * 是否来月经
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MenstruationOrNot")
     @Expose
@@ -57,7 +53,6 @@ public class MenstrualMedicalHistory extends AbstractModel {
 
     /**
     * 月经周期
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MenstrualCycles")
     @Expose
@@ -65,17 +60,14 @@ public class MenstrualMedicalHistory extends AbstractModel {
 
     /**
     * 月经持续天数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MenstrualPeriod")
     @Expose
     private String MenstrualPeriod;
 
     /**
-     * Get 末次月经时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 末次月经时间 
      * @return LastMenstrualPeriod 末次月经时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLastMenstrualPeriod() {
         return this.LastMenstrualPeriod;
@@ -83,19 +75,15 @@ public class MenstrualMedicalHistory extends AbstractModel {
 
     /**
      * Set 末次月经时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LastMenstrualPeriod 末次月经时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLastMenstrualPeriod(String LastMenstrualPeriod) {
         this.LastMenstrualPeriod = LastMenstrualPeriod;
     }
 
     /**
-     * Get 经量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 经量 
      * @return MenstrualFlow 经量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMenstrualFlow() {
         return this.MenstrualFlow;
@@ -103,19 +91,15 @@ public class MenstrualMedicalHistory extends AbstractModel {
 
     /**
      * Set 经量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MenstrualFlow 经量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMenstrualFlow(String MenstrualFlow) {
         this.MenstrualFlow = MenstrualFlow;
     }
 
     /**
-     * Get 月经初潮年龄
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 月经初潮年龄 
      * @return MenarcheAge 月经初潮年龄
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMenarcheAge() {
         return this.MenarcheAge;
@@ -123,19 +107,15 @@ public class MenstrualMedicalHistory extends AbstractModel {
 
     /**
      * Set 月经初潮年龄
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MenarcheAge 月经初潮年龄
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMenarcheAge(String MenarcheAge) {
         this.MenarcheAge = MenarcheAge;
     }
 
     /**
-     * Get 是否来月经
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否来月经 
      * @return MenstruationOrNot 是否来月经
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMenstruationOrNot() {
         return this.MenstruationOrNot;
@@ -143,19 +123,15 @@ public class MenstrualMedicalHistory extends AbstractModel {
 
     /**
      * Set 是否来月经
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MenstruationOrNot 是否来月经
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMenstruationOrNot(String MenstruationOrNot) {
         this.MenstruationOrNot = MenstruationOrNot;
     }
 
     /**
-     * Get 月经周期
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 月经周期 
      * @return MenstrualCycles 月经周期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMenstrualCycles() {
         return this.MenstrualCycles;
@@ -163,19 +139,15 @@ public class MenstrualMedicalHistory extends AbstractModel {
 
     /**
      * Set 月经周期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MenstrualCycles 月经周期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMenstrualCycles(String MenstrualCycles) {
         this.MenstrualCycles = MenstrualCycles;
     }
 
     /**
-     * Get 月经持续天数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 月经持续天数 
      * @return MenstrualPeriod 月经持续天数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMenstrualPeriod() {
         return this.MenstrualPeriod;
@@ -183,9 +155,7 @@ public class MenstrualMedicalHistory extends AbstractModel {
 
     /**
      * Set 月经持续天数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MenstrualPeriod 月经持续天数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMenstrualPeriod(String MenstrualPeriod) {
         this.MenstrualPeriod = MenstrualPeriod;

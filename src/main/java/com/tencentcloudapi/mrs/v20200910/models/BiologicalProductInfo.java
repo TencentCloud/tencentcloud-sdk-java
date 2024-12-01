@@ -25,7 +25,6 @@ public class BiologicalProductInfo extends AbstractModel {
 
     /**
     * 药品名称，包括通用名和商品名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -33,7 +32,6 @@ public class BiologicalProductInfo extends AbstractModel {
 
     /**
     * 成份和性状
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IngredientAndAppearance")
     @Expose
@@ -41,7 +39,6 @@ public class BiologicalProductInfo extends AbstractModel {
 
     /**
     * 接种对象
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VaccinationTarget")
     @Expose
@@ -49,7 +46,6 @@ public class BiologicalProductInfo extends AbstractModel {
 
     /**
     * 作用与用途
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Indications")
     @Expose
@@ -57,7 +53,6 @@ public class BiologicalProductInfo extends AbstractModel {
 
     /**
     * 规格
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Brochure")
     @Expose
@@ -65,7 +60,6 @@ public class BiologicalProductInfo extends AbstractModel {
 
     /**
     * 免疫程序和剂量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Dosage")
     @Expose
@@ -73,7 +67,6 @@ public class BiologicalProductInfo extends AbstractModel {
 
     /**
     * 不良反应
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AdverseReaction")
     @Expose
@@ -81,7 +74,6 @@ public class BiologicalProductInfo extends AbstractModel {
 
     /**
     * 禁忌情况
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Contraindications")
     @Expose
@@ -89,7 +81,6 @@ public class BiologicalProductInfo extends AbstractModel {
 
     /**
     * 注意事项
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Precautions")
     @Expose
@@ -97,7 +88,6 @@ public class BiologicalProductInfo extends AbstractModel {
 
     /**
     * 储存条件
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Storage")
     @Expose
@@ -105,7 +95,6 @@ public class BiologicalProductInfo extends AbstractModel {
 
     /**
     * 包装信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Packaging")
     @Expose
@@ -113,7 +102,6 @@ public class BiologicalProductInfo extends AbstractModel {
 
     /**
     * 有效期
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ValidityPeriod")
     @Expose
@@ -121,7 +109,6 @@ public class BiologicalProductInfo extends AbstractModel {
 
     /**
     * 执行标准
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExecutiveStandards")
     @Expose
@@ -129,7 +116,6 @@ public class BiologicalProductInfo extends AbstractModel {
 
     /**
     * 批准文号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Approval")
     @Expose
@@ -137,17 +123,14 @@ public class BiologicalProductInfo extends AbstractModel {
 
     /**
     * 生产企业名称和地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Manufacturer")
     @Expose
     private BiologicalProductInfoManufacturer Manufacturer;
 
     /**
-     * Get 药品名称，包括通用名和商品名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 药品名称，包括通用名和商品名 
      * @return Name 药品名称，包括通用名和商品名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BiologicalProductInfoName getName() {
         return this.Name;
@@ -155,19 +138,15 @@ public class BiologicalProductInfo extends AbstractModel {
 
     /**
      * Set 药品名称，包括通用名和商品名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 药品名称，包括通用名和商品名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(BiologicalProductInfoName Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 成份和性状
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 成份和性状 
      * @return IngredientAndAppearance 成份和性状
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BiologicalProductInfoIngredientAndAppearance getIngredientAndAppearance() {
         return this.IngredientAndAppearance;
@@ -175,19 +154,15 @@ public class BiologicalProductInfo extends AbstractModel {
 
     /**
      * Set 成份和性状
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IngredientAndAppearance 成份和性状
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIngredientAndAppearance(BiologicalProductInfoIngredientAndAppearance IngredientAndAppearance) {
         this.IngredientAndAppearance = IngredientAndAppearance;
     }
 
     /**
-     * Get 接种对象
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 接种对象 
      * @return VaccinationTarget 接种对象
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BiologicalProductInfoVaccinationTarget getVaccinationTarget() {
         return this.VaccinationTarget;
@@ -195,19 +170,15 @@ public class BiologicalProductInfo extends AbstractModel {
 
     /**
      * Set 接种对象
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VaccinationTarget 接种对象
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVaccinationTarget(BiologicalProductInfoVaccinationTarget VaccinationTarget) {
         this.VaccinationTarget = VaccinationTarget;
     }
 
     /**
-     * Get 作用与用途
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 作用与用途 
      * @return Indications 作用与用途
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BiologicalProductInfoIndications getIndications() {
         return this.Indications;
@@ -215,19 +186,15 @@ public class BiologicalProductInfo extends AbstractModel {
 
     /**
      * Set 作用与用途
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Indications 作用与用途
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIndications(BiologicalProductInfoIndications Indications) {
         this.Indications = Indications;
     }
 
     /**
-     * Get 规格
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规格 
      * @return Brochure 规格
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BiologicalProductInfoBrochure getBrochure() {
         return this.Brochure;
@@ -235,19 +202,15 @@ public class BiologicalProductInfo extends AbstractModel {
 
     /**
      * Set 规格
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Brochure 规格
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBrochure(BiologicalProductInfoBrochure Brochure) {
         this.Brochure = Brochure;
     }
 
     /**
-     * Get 免疫程序和剂量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 免疫程序和剂量 
      * @return Dosage 免疫程序和剂量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BiologicalProductInfoDosage getDosage() {
         return this.Dosage;
@@ -255,19 +218,15 @@ public class BiologicalProductInfo extends AbstractModel {
 
     /**
      * Set 免疫程序和剂量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Dosage 免疫程序和剂量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDosage(BiologicalProductInfoDosage Dosage) {
         this.Dosage = Dosage;
     }
 
     /**
-     * Get 不良反应
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 不良反应 
      * @return AdverseReaction 不良反应
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BiologicalProductInfoAdverseReaction getAdverseReaction() {
         return this.AdverseReaction;
@@ -275,19 +234,15 @@ public class BiologicalProductInfo extends AbstractModel {
 
     /**
      * Set 不良反应
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AdverseReaction 不良反应
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAdverseReaction(BiologicalProductInfoAdverseReaction AdverseReaction) {
         this.AdverseReaction = AdverseReaction;
     }
 
     /**
-     * Get 禁忌情况
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 禁忌情况 
      * @return Contraindications 禁忌情况
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BiologicalProductInfoContraindications getContraindications() {
         return this.Contraindications;
@@ -295,19 +250,15 @@ public class BiologicalProductInfo extends AbstractModel {
 
     /**
      * Set 禁忌情况
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Contraindications 禁忌情况
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContraindications(BiologicalProductInfoContraindications Contraindications) {
         this.Contraindications = Contraindications;
     }
 
     /**
-     * Get 注意事项
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 注意事项 
      * @return Precautions 注意事项
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BiologicalProductInfoPrecautions getPrecautions() {
         return this.Precautions;
@@ -315,19 +266,15 @@ public class BiologicalProductInfo extends AbstractModel {
 
     /**
      * Set 注意事项
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Precautions 注意事项
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPrecautions(BiologicalProductInfoPrecautions Precautions) {
         this.Precautions = Precautions;
     }
 
     /**
-     * Get 储存条件
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 储存条件 
      * @return Storage 储存条件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BiologicalProductInfoStorage getStorage() {
         return this.Storage;
@@ -335,19 +282,15 @@ public class BiologicalProductInfo extends AbstractModel {
 
     /**
      * Set 储存条件
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Storage 储存条件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStorage(BiologicalProductInfoStorage Storage) {
         this.Storage = Storage;
     }
 
     /**
-     * Get 包装信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 包装信息 
      * @return Packaging 包装信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BiologicalProductInfoPackaging getPackaging() {
         return this.Packaging;
@@ -355,19 +298,15 @@ public class BiologicalProductInfo extends AbstractModel {
 
     /**
      * Set 包装信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Packaging 包装信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPackaging(BiologicalProductInfoPackaging Packaging) {
         this.Packaging = Packaging;
     }
 
     /**
-     * Get 有效期
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 有效期 
      * @return ValidityPeriod 有效期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BiologicalProductInfoValidityPeriod getValidityPeriod() {
         return this.ValidityPeriod;
@@ -375,19 +314,15 @@ public class BiologicalProductInfo extends AbstractModel {
 
     /**
      * Set 有效期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ValidityPeriod 有效期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValidityPeriod(BiologicalProductInfoValidityPeriod ValidityPeriod) {
         this.ValidityPeriod = ValidityPeriod;
     }
 
     /**
-     * Get 执行标准
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 执行标准 
      * @return ExecutiveStandards 执行标准
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BiologicalProductInfoExecutiveStandards getExecutiveStandards() {
         return this.ExecutiveStandards;
@@ -395,19 +330,15 @@ public class BiologicalProductInfo extends AbstractModel {
 
     /**
      * Set 执行标准
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExecutiveStandards 执行标准
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExecutiveStandards(BiologicalProductInfoExecutiveStandards ExecutiveStandards) {
         this.ExecutiveStandards = ExecutiveStandards;
     }
 
     /**
-     * Get 批准文号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 批准文号 
      * @return Approval 批准文号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BiologicalProductInfoApproval getApproval() {
         return this.Approval;
@@ -415,19 +346,15 @@ public class BiologicalProductInfo extends AbstractModel {
 
     /**
      * Set 批准文号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Approval 批准文号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApproval(BiologicalProductInfoApproval Approval) {
         this.Approval = Approval;
     }
 
     /**
-     * Get 生产企业名称和地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 生产企业名称和地址 
      * @return Manufacturer 生产企业名称和地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BiologicalProductInfoManufacturer getManufacturer() {
         return this.Manufacturer;
@@ -435,9 +362,7 @@ public class BiologicalProductInfo extends AbstractModel {
 
     /**
      * Set 生产企业名称和地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Manufacturer 生产企业名称和地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setManufacturer(BiologicalProductInfoManufacturer Manufacturer) {
         this.Manufacturer = Manufacturer;

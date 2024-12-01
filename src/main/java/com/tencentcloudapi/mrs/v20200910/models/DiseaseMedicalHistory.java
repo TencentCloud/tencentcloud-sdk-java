@@ -25,7 +25,6 @@ public class DiseaseMedicalHistory extends AbstractModel {
 
     /**
     * 主病史
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MainDiseaseHistory")
     @Expose
@@ -33,7 +32,6 @@ public class DiseaseMedicalHistory extends AbstractModel {
 
     /**
     * 过敏史
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AllergyHistory")
     @Expose
@@ -41,7 +39,6 @@ public class DiseaseMedicalHistory extends AbstractModel {
 
     /**
     * 传染疾病史
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InfectHistory")
     @Expose
@@ -49,7 +46,6 @@ public class DiseaseMedicalHistory extends AbstractModel {
 
     /**
     * 手术史
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OperationHistory")
     @Expose
@@ -57,17 +53,14 @@ public class DiseaseMedicalHistory extends AbstractModel {
 
     /**
     * 输血史
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TransfusionHistory")
     @Expose
     private String TransfusionHistory;
 
     /**
-     * Get 主病史
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主病史 
      * @return MainDiseaseHistory 主病史
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMainDiseaseHistory() {
         return this.MainDiseaseHistory;
@@ -75,19 +68,15 @@ public class DiseaseMedicalHistory extends AbstractModel {
 
     /**
      * Set 主病史
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MainDiseaseHistory 主病史
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMainDiseaseHistory(String MainDiseaseHistory) {
         this.MainDiseaseHistory = MainDiseaseHistory;
     }
 
     /**
-     * Get 过敏史
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 过敏史 
      * @return AllergyHistory 过敏史
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAllergyHistory() {
         return this.AllergyHistory;
@@ -95,19 +84,15 @@ public class DiseaseMedicalHistory extends AbstractModel {
 
     /**
      * Set 过敏史
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AllergyHistory 过敏史
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAllergyHistory(String AllergyHistory) {
         this.AllergyHistory = AllergyHistory;
     }
 
     /**
-     * Get 传染疾病史
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 传染疾病史 
      * @return InfectHistory 传染疾病史
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInfectHistory() {
         return this.InfectHistory;
@@ -115,19 +100,15 @@ public class DiseaseMedicalHistory extends AbstractModel {
 
     /**
      * Set 传染疾病史
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InfectHistory 传染疾病史
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInfectHistory(String InfectHistory) {
         this.InfectHistory = InfectHistory;
     }
 
     /**
-     * Get 手术史
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 手术史 
      * @return OperationHistory 手术史
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOperationHistory() {
         return this.OperationHistory;
@@ -135,19 +116,15 @@ public class DiseaseMedicalHistory extends AbstractModel {
 
     /**
      * Set 手术史
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OperationHistory 手术史
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOperationHistory(String OperationHistory) {
         this.OperationHistory = OperationHistory;
     }
 
     /**
-     * Get 输血史
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 输血史 
      * @return TransfusionHistory 输血史
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTransfusionHistory() {
         return this.TransfusionHistory;
@@ -155,9 +132,7 @@ public class DiseaseMedicalHistory extends AbstractModel {
 
     /**
      * Set 输血史
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TransfusionHistory 输血史
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTransfusionHistory(String TransfusionHistory) {
         this.TransfusionHistory = TransfusionHistory;

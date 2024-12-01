@@ -25,7 +25,6 @@ public class ChemicalProductInfoName extends AbstractModel {
 
     /**
     * 文本内容
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Text")
     @Expose
@@ -33,7 +32,6 @@ public class ChemicalProductInfoName extends AbstractModel {
 
     /**
     * 通用名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GenericName")
     @Expose
@@ -49,7 +47,6 @@ public class ChemicalProductInfoName extends AbstractModel {
 
     /**
     * 英文名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EnName")
     @Expose
@@ -57,7 +54,6 @@ public class ChemicalProductInfoName extends AbstractModel {
 
     /**
     * 拼音
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Pinyin")
     @Expose
@@ -71,10 +67,8 @@ public class ChemicalProductInfoName extends AbstractModel {
     private String BrandName;
 
     /**
-     * Get 文本内容
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文本内容 
      * @return Text 文本内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getText() {
         return this.Text;
@@ -82,19 +76,15 @@ public class ChemicalProductInfoName extends AbstractModel {
 
     /**
      * Set 文本内容
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Text 文本内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setText(String Text) {
         this.Text = Text;
     }
 
     /**
-     * Get 通用名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 通用名 
      * @return GenericName 通用名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getGenericName() {
         return this.GenericName;
@@ -102,9 +92,7 @@ public class ChemicalProductInfoName extends AbstractModel {
 
     /**
      * Set 通用名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GenericName 通用名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGenericName(String GenericName) {
         this.GenericName = GenericName;
@@ -135,10 +123,8 @@ public class ChemicalProductInfoName extends AbstractModel {
     }
 
     /**
-     * Get 英文名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 英文名 
      * @return EnName 英文名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEnName() {
         return this.EnName;
@@ -146,19 +132,15 @@ public class ChemicalProductInfoName extends AbstractModel {
 
     /**
      * Set 英文名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EnName 英文名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnName(String EnName) {
         this.EnName = EnName;
     }
 
     /**
-     * Get 拼音
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 拼音 
      * @return Pinyin 拼音
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPinyin() {
         return this.Pinyin;
@@ -166,9 +148,7 @@ public class ChemicalProductInfoName extends AbstractModel {
 
     /**
      * Set 拼音
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Pinyin 拼音
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPinyin(String Pinyin) {
         this.Pinyin = Pinyin;

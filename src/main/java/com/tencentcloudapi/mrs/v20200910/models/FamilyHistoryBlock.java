@@ -25,7 +25,6 @@ public class FamilyHistoryBlock extends AbstractModel {
 
     /**
     * 家庭成员
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RelativeHistory")
     @Expose
@@ -33,7 +32,6 @@ public class FamilyHistoryBlock extends AbstractModel {
 
     /**
     * 家族肿瘤史
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RelativeCancerHistory")
     @Expose
@@ -41,17 +39,14 @@ public class FamilyHistoryBlock extends AbstractModel {
 
     /**
     * 家族遗传史
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GeneticHistory")
     @Expose
     private GeneticHistoryBlock GeneticHistory;
 
     /**
-     * Get 家庭成员
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 家庭成员 
      * @return RelativeHistory 家庭成员
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RelativeHistoryBlock getRelativeHistory() {
         return this.RelativeHistory;
@@ -59,19 +54,15 @@ public class FamilyHistoryBlock extends AbstractModel {
 
     /**
      * Set 家庭成员
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RelativeHistory 家庭成员
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRelativeHistory(RelativeHistoryBlock RelativeHistory) {
         this.RelativeHistory = RelativeHistory;
     }
 
     /**
-     * Get 家族肿瘤史
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 家族肿瘤史 
      * @return RelativeCancerHistory 家族肿瘤史
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RelativeCancerHistoryBlock getRelativeCancerHistory() {
         return this.RelativeCancerHistory;
@@ -79,19 +70,15 @@ public class FamilyHistoryBlock extends AbstractModel {
 
     /**
      * Set 家族肿瘤史
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RelativeCancerHistory 家族肿瘤史
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRelativeCancerHistory(RelativeCancerHistoryBlock RelativeCancerHistory) {
         this.RelativeCancerHistory = RelativeCancerHistory;
     }
 
     /**
-     * Get 家族遗传史
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 家族遗传史 
      * @return GeneticHistory 家族遗传史
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public GeneticHistoryBlock getGeneticHistory() {
         return this.GeneticHistory;
@@ -99,9 +86,7 @@ public class FamilyHistoryBlock extends AbstractModel {
 
     /**
      * Set 家族遗传史
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GeneticHistory 家族遗传史
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGeneticHistory(GeneticHistoryBlock GeneticHistory) {
         this.GeneticHistory = GeneticHistory;

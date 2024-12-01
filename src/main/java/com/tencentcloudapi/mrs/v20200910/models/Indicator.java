@@ -25,7 +25,6 @@ public class Indicator extends AbstractModel {
 
     /**
     * 检验指标项
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Indicators")
     @Expose
@@ -33,7 +32,6 @@ public class Indicator extends AbstractModel {
 
     /**
     * 检验报告块标题
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BlockTitle")
     @Expose
@@ -41,17 +39,14 @@ public class Indicator extends AbstractModel {
 
     /**
     * 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Page")
     @Expose
     private Long Page;
 
     /**
-     * Get 检验指标项
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 检验指标项 
      * @return Indicators 检验指标项
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public IndicatorItem [] getIndicators() {
         return this.Indicators;
@@ -59,19 +54,15 @@ public class Indicator extends AbstractModel {
 
     /**
      * Set 检验指标项
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Indicators 检验指标项
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIndicators(IndicatorItem [] Indicators) {
         this.Indicators = Indicators;
     }
 
     /**
-     * Get 检验报告块标题
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 检验报告块标题 
      * @return BlockTitle 检验报告块标题
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BlockTitle [] getBlockTitle() {
         return this.BlockTitle;
@@ -79,19 +70,15 @@ public class Indicator extends AbstractModel {
 
     /**
      * Set 检验报告块标题
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BlockTitle 检验报告块标题
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBlockTitle(BlockTitle [] BlockTitle) {
         this.BlockTitle = BlockTitle;
     }
 
     /**
-     * Get 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据在原PDF文件中的第几页 
      * @return Page 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPage() {
         return this.Page;
@@ -99,9 +86,7 @@ public class Indicator extends AbstractModel {
 
     /**
      * Set 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Page 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPage(Long Page) {
         this.Page = Page;

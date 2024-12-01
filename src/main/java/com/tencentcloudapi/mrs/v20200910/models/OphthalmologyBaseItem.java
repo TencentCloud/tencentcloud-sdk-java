@@ -25,7 +25,6 @@ public class OphthalmologyBaseItem extends AbstractModel {
 
     /**
     * 裸眼视力
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BareEyeSight")
     @Expose
@@ -33,7 +32,6 @@ public class OphthalmologyBaseItem extends AbstractModel {
 
     /**
     * 矫正视力
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CorrectedVisualAcuity")
     @Expose
@@ -41,7 +39,6 @@ public class OphthalmologyBaseItem extends AbstractModel {
 
     /**
     * 色觉
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ColourVision")
     @Expose
@@ -49,7 +46,6 @@ public class OphthalmologyBaseItem extends AbstractModel {
 
     /**
     * 眼底
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Fundoscopy")
     @Expose
@@ -57,7 +53,6 @@ public class OphthalmologyBaseItem extends AbstractModel {
 
     /**
     * 眼科其他
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Others")
     @Expose
@@ -65,17 +60,14 @@ public class OphthalmologyBaseItem extends AbstractModel {
 
     /**
     * 眼科小结
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BriefSummary")
     @Expose
     private OphthalmologyBriefSummary BriefSummary;
 
     /**
-     * Get 裸眼视力
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 裸眼视力 
      * @return BareEyeSight 裸眼视力
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public OphthalmologyBareEyeSight getBareEyeSight() {
         return this.BareEyeSight;
@@ -83,19 +75,15 @@ public class OphthalmologyBaseItem extends AbstractModel {
 
     /**
      * Set 裸眼视力
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BareEyeSight 裸眼视力
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBareEyeSight(OphthalmologyBareEyeSight BareEyeSight) {
         this.BareEyeSight = BareEyeSight;
     }
 
     /**
-     * Get 矫正视力
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 矫正视力 
      * @return CorrectedVisualAcuity 矫正视力
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public OphthalmologyCorrectedVisualAcuity getCorrectedVisualAcuity() {
         return this.CorrectedVisualAcuity;
@@ -103,19 +91,15 @@ public class OphthalmologyBaseItem extends AbstractModel {
 
     /**
      * Set 矫正视力
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CorrectedVisualAcuity 矫正视力
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCorrectedVisualAcuity(OphthalmologyCorrectedVisualAcuity CorrectedVisualAcuity) {
         this.CorrectedVisualAcuity = CorrectedVisualAcuity;
     }
 
     /**
-     * Get 色觉
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 色觉 
      * @return ColourVision 色觉
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public OphthalmologyColourVision getColourVision() {
         return this.ColourVision;
@@ -123,19 +107,15 @@ public class OphthalmologyBaseItem extends AbstractModel {
 
     /**
      * Set 色觉
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ColourVision 色觉
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setColourVision(OphthalmologyColourVision ColourVision) {
         this.ColourVision = ColourVision;
     }
 
     /**
-     * Get 眼底
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 眼底 
      * @return Fundoscopy 眼底
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public OphthalmologyFundoscopy getFundoscopy() {
         return this.Fundoscopy;
@@ -143,19 +123,15 @@ public class OphthalmologyBaseItem extends AbstractModel {
 
     /**
      * Set 眼底
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Fundoscopy 眼底
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFundoscopy(OphthalmologyFundoscopy Fundoscopy) {
         this.Fundoscopy = Fundoscopy;
     }
 
     /**
-     * Get 眼科其他
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 眼科其他 
      * @return Others 眼科其他
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public KeyValueItem [] getOthers() {
         return this.Others;
@@ -163,19 +139,15 @@ public class OphthalmologyBaseItem extends AbstractModel {
 
     /**
      * Set 眼科其他
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Others 眼科其他
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOthers(KeyValueItem [] Others) {
         this.Others = Others;
     }
 
     /**
-     * Get 眼科小结
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 眼科小结 
      * @return BriefSummary 眼科小结
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public OphthalmologyBriefSummary getBriefSummary() {
         return this.BriefSummary;
@@ -183,9 +155,7 @@ public class OphthalmologyBaseItem extends AbstractModel {
 
     /**
      * Set 眼科小结
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BriefSummary 眼科小结
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBriefSummary(OphthalmologyBriefSummary BriefSummary) {
         this.BriefSummary = BriefSummary;

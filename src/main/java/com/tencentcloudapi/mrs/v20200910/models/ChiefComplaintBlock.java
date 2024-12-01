@@ -25,7 +25,6 @@ public class ChiefComplaintBlock extends AbstractModel {
 
     /**
     * 名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -33,7 +32,6 @@ public class ChiefComplaintBlock extends AbstractModel {
 
     /**
     * 原文
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Src")
     @Expose
@@ -41,7 +39,6 @@ public class ChiefComplaintBlock extends AbstractModel {
 
     /**
     * 单位输出值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Value")
     @Expose
@@ -49,17 +46,14 @@ public class ChiefComplaintBlock extends AbstractModel {
 
     /**
     * 主诉详情
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Detail")
     @Expose
     private ChiefComplaintDetailBlock [] Detail;
 
     /**
-     * Get 名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 名称 
      * @return Name 名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -67,19 +61,15 @@ public class ChiefComplaintBlock extends AbstractModel {
 
     /**
      * Set 名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 原文
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 原文 
      * @return Src 原文
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSrc() {
         return this.Src;
@@ -87,19 +77,15 @@ public class ChiefComplaintBlock extends AbstractModel {
 
     /**
      * Set 原文
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Src 原文
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSrc(String Src) {
         this.Src = Src;
     }
 
     /**
-     * Get 单位输出值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 单位输出值 
      * @return Value 单位输出值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getValue() {
         return this.Value;
@@ -107,19 +93,15 @@ public class ChiefComplaintBlock extends AbstractModel {
 
     /**
      * Set 单位输出值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Value 单位输出值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValue(String Value) {
         this.Value = Value;
     }
 
     /**
-     * Get 主诉详情
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主诉详情 
      * @return Detail 主诉详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ChiefComplaintDetailBlock [] getDetail() {
         return this.Detail;
@@ -127,9 +109,7 @@ public class ChiefComplaintBlock extends AbstractModel {
 
     /**
      * Set 主诉详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Detail 主诉详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDetail(ChiefComplaintDetailBlock [] Detail) {
         this.Detail = Detail;

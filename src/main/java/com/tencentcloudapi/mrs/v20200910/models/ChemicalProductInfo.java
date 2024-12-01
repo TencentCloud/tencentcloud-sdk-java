@@ -25,7 +25,6 @@ public class ChemicalProductInfo extends AbstractModel {
 
     /**
     * 药品名称，包括通用名和商品名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -33,7 +32,6 @@ public class ChemicalProductInfo extends AbstractModel {
 
     /**
     * 活性成份消息定义，如果是复方制剂，可以不列出每个活性成份的详细信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ActiveIngredient")
     @Expose
@@ -41,7 +39,6 @@ public class ChemicalProductInfo extends AbstractModel {
 
     /**
     * 性状
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Appearance")
     @Expose
@@ -49,7 +46,6 @@ public class ChemicalProductInfo extends AbstractModel {
 
     /**
     * 适应症描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Indications")
     @Expose
@@ -57,7 +53,6 @@ public class ChemicalProductInfo extends AbstractModel {
 
     /**
     * 规格
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Brochure")
     @Expose
@@ -65,7 +60,6 @@ public class ChemicalProductInfo extends AbstractModel {
 
     /**
     * 用法用量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Dosage")
     @Expose
@@ -73,7 +67,6 @@ public class ChemicalProductInfo extends AbstractModel {
 
     /**
     * 不良反应
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AdverseReaction")
     @Expose
@@ -81,7 +74,6 @@ public class ChemicalProductInfo extends AbstractModel {
 
     /**
     * 禁忌情况
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Contraindications")
     @Expose
@@ -89,7 +81,6 @@ public class ChemicalProductInfo extends AbstractModel {
 
     /**
     * 注意事项
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Precautions")
     @Expose
@@ -97,7 +88,6 @@ public class ChemicalProductInfo extends AbstractModel {
 
     /**
     * 孕妇及哺乳期妇女用药
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PregnancyLactationUse")
     @Expose
@@ -105,7 +95,6 @@ public class ChemicalProductInfo extends AbstractModel {
 
     /**
     * 儿童用药
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PediatricUse")
     @Expose
@@ -113,7 +102,6 @@ public class ChemicalProductInfo extends AbstractModel {
 
     /**
     * 老年用药
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GeriatricUse")
     @Expose
@@ -121,7 +109,6 @@ public class ChemicalProductInfo extends AbstractModel {
 
     /**
     * 药品的药物相互作用
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Interactions")
     @Expose
@@ -129,7 +116,6 @@ public class ChemicalProductInfo extends AbstractModel {
 
     /**
     * 药物过量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Overdose")
     @Expose
@@ -137,7 +123,6 @@ public class ChemicalProductInfo extends AbstractModel {
 
     /**
     * 临床试验
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClinicalTrial")
     @Expose
@@ -145,7 +130,6 @@ public class ChemicalProductInfo extends AbstractModel {
 
     /**
     * 药理毒理
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PharmacologyToxicology")
     @Expose
@@ -153,7 +137,6 @@ public class ChemicalProductInfo extends AbstractModel {
 
     /**
     * 药代动力学
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Pharmacokinetics")
     @Expose
@@ -161,7 +144,6 @@ public class ChemicalProductInfo extends AbstractModel {
 
     /**
     * 储存条件
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Storage")
     @Expose
@@ -169,7 +151,6 @@ public class ChemicalProductInfo extends AbstractModel {
 
     /**
     * 包装信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Packaging")
     @Expose
@@ -177,7 +158,6 @@ public class ChemicalProductInfo extends AbstractModel {
 
     /**
     * 有效期
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ValidityPeriod")
     @Expose
@@ -185,7 +165,6 @@ public class ChemicalProductInfo extends AbstractModel {
 
     /**
     * 执行标准
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExecutiveStandards")
     @Expose
@@ -193,7 +172,6 @@ public class ChemicalProductInfo extends AbstractModel {
 
     /**
     * 批准文号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Approval")
     @Expose
@@ -201,17 +179,14 @@ public class ChemicalProductInfo extends AbstractModel {
 
     /**
     * 生产企业名称和地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Manufacturer")
     @Expose
     private ChemicalProductInfoManufacturer Manufacturer;
 
     /**
-     * Get 药品名称，包括通用名和商品名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 药品名称，包括通用名和商品名 
      * @return Name 药品名称，包括通用名和商品名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ChemicalProductInfoName getName() {
         return this.Name;
@@ -219,19 +194,15 @@ public class ChemicalProductInfo extends AbstractModel {
 
     /**
      * Set 药品名称，包括通用名和商品名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 药品名称，包括通用名和商品名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(ChemicalProductInfoName Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 活性成份消息定义，如果是复方制剂，可以不列出每个活性成份的详细信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 活性成份消息定义，如果是复方制剂，可以不列出每个活性成份的详细信息 
      * @return ActiveIngredient 活性成份消息定义，如果是复方制剂，可以不列出每个活性成份的详细信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ChemicalProductInfoActiveIngredient getActiveIngredient() {
         return this.ActiveIngredient;
@@ -239,19 +210,15 @@ public class ChemicalProductInfo extends AbstractModel {
 
     /**
      * Set 活性成份消息定义，如果是复方制剂，可以不列出每个活性成份的详细信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ActiveIngredient 活性成份消息定义，如果是复方制剂，可以不列出每个活性成份的详细信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setActiveIngredient(ChemicalProductInfoActiveIngredient ActiveIngredient) {
         this.ActiveIngredient = ActiveIngredient;
     }
 
     /**
-     * Get 性状
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 性状 
      * @return Appearance 性状
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ChemicalProductInfoAppearance getAppearance() {
         return this.Appearance;
@@ -259,19 +226,15 @@ public class ChemicalProductInfo extends AbstractModel {
 
     /**
      * Set 性状
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Appearance 性状
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAppearance(ChemicalProductInfoAppearance Appearance) {
         this.Appearance = Appearance;
     }
 
     /**
-     * Get 适应症描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 适应症描述 
      * @return Indications 适应症描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ChemicalProductInfoIndications getIndications() {
         return this.Indications;
@@ -279,19 +242,15 @@ public class ChemicalProductInfo extends AbstractModel {
 
     /**
      * Set 适应症描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Indications 适应症描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIndications(ChemicalProductInfoIndications Indications) {
         this.Indications = Indications;
     }
 
     /**
-     * Get 规格
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规格 
      * @return Brochure 规格
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ChemicalProductInfoBrochure getBrochure() {
         return this.Brochure;
@@ -299,19 +258,15 @@ public class ChemicalProductInfo extends AbstractModel {
 
     /**
      * Set 规格
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Brochure 规格
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBrochure(ChemicalProductInfoBrochure Brochure) {
         this.Brochure = Brochure;
     }
 
     /**
-     * Get 用法用量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用法用量 
      * @return Dosage 用法用量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ChemicalProductInfoDosage getDosage() {
         return this.Dosage;
@@ -319,19 +274,15 @@ public class ChemicalProductInfo extends AbstractModel {
 
     /**
      * Set 用法用量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Dosage 用法用量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDosage(ChemicalProductInfoDosage Dosage) {
         this.Dosage = Dosage;
     }
 
     /**
-     * Get 不良反应
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 不良反应 
      * @return AdverseReaction 不良反应
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ChemicalProductInfoAdverseReaction getAdverseReaction() {
         return this.AdverseReaction;
@@ -339,19 +290,15 @@ public class ChemicalProductInfo extends AbstractModel {
 
     /**
      * Set 不良反应
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AdverseReaction 不良反应
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAdverseReaction(ChemicalProductInfoAdverseReaction AdverseReaction) {
         this.AdverseReaction = AdverseReaction;
     }
 
     /**
-     * Get 禁忌情况
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 禁忌情况 
      * @return Contraindications 禁忌情况
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ChemicalProductInfoContraindications getContraindications() {
         return this.Contraindications;
@@ -359,19 +306,15 @@ public class ChemicalProductInfo extends AbstractModel {
 
     /**
      * Set 禁忌情况
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Contraindications 禁忌情况
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContraindications(ChemicalProductInfoContraindications Contraindications) {
         this.Contraindications = Contraindications;
     }
 
     /**
-     * Get 注意事项
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 注意事项 
      * @return Precautions 注意事项
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ChemicalProductInfoPrecautions getPrecautions() {
         return this.Precautions;
@@ -379,19 +322,15 @@ public class ChemicalProductInfo extends AbstractModel {
 
     /**
      * Set 注意事项
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Precautions 注意事项
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPrecautions(ChemicalProductInfoPrecautions Precautions) {
         this.Precautions = Precautions;
     }
 
     /**
-     * Get 孕妇及哺乳期妇女用药
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 孕妇及哺乳期妇女用药 
      * @return PregnancyLactationUse 孕妇及哺乳期妇女用药
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ChemicalProductInfoPregnancyLactationUse getPregnancyLactationUse() {
         return this.PregnancyLactationUse;
@@ -399,19 +338,15 @@ public class ChemicalProductInfo extends AbstractModel {
 
     /**
      * Set 孕妇及哺乳期妇女用药
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PregnancyLactationUse 孕妇及哺乳期妇女用药
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPregnancyLactationUse(ChemicalProductInfoPregnancyLactationUse PregnancyLactationUse) {
         this.PregnancyLactationUse = PregnancyLactationUse;
     }
 
     /**
-     * Get 儿童用药
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 儿童用药 
      * @return PediatricUse 儿童用药
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ChemicalProductInfoPediatricUse getPediatricUse() {
         return this.PediatricUse;
@@ -419,19 +354,15 @@ public class ChemicalProductInfo extends AbstractModel {
 
     /**
      * Set 儿童用药
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PediatricUse 儿童用药
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPediatricUse(ChemicalProductInfoPediatricUse PediatricUse) {
         this.PediatricUse = PediatricUse;
     }
 
     /**
-     * Get 老年用药
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 老年用药 
      * @return GeriatricUse 老年用药
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ChemicalProductInfoGeriatricUse getGeriatricUse() {
         return this.GeriatricUse;
@@ -439,19 +370,15 @@ public class ChemicalProductInfo extends AbstractModel {
 
     /**
      * Set 老年用药
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GeriatricUse 老年用药
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGeriatricUse(ChemicalProductInfoGeriatricUse GeriatricUse) {
         this.GeriatricUse = GeriatricUse;
     }
 
     /**
-     * Get 药品的药物相互作用
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 药品的药物相互作用 
      * @return Interactions 药品的药物相互作用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ChemicalProductInfoInteractions getInteractions() {
         return this.Interactions;
@@ -459,19 +386,15 @@ public class ChemicalProductInfo extends AbstractModel {
 
     /**
      * Set 药品的药物相互作用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Interactions 药品的药物相互作用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInteractions(ChemicalProductInfoInteractions Interactions) {
         this.Interactions = Interactions;
     }
 
     /**
-     * Get 药物过量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 药物过量 
      * @return Overdose 药物过量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ChemicalProductInfoOverdose getOverdose() {
         return this.Overdose;
@@ -479,19 +402,15 @@ public class ChemicalProductInfo extends AbstractModel {
 
     /**
      * Set 药物过量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Overdose 药物过量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOverdose(ChemicalProductInfoOverdose Overdose) {
         this.Overdose = Overdose;
     }
 
     /**
-     * Get 临床试验
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 临床试验 
      * @return ClinicalTrial 临床试验
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ChemicalProductInfoClinicalTrial getClinicalTrial() {
         return this.ClinicalTrial;
@@ -499,19 +418,15 @@ public class ChemicalProductInfo extends AbstractModel {
 
     /**
      * Set 临床试验
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClinicalTrial 临床试验
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClinicalTrial(ChemicalProductInfoClinicalTrial ClinicalTrial) {
         this.ClinicalTrial = ClinicalTrial;
     }
 
     /**
-     * Get 药理毒理
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 药理毒理 
      * @return PharmacologyToxicology 药理毒理
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ChemicalProductInfoPharmacologyToxicology getPharmacologyToxicology() {
         return this.PharmacologyToxicology;
@@ -519,19 +434,15 @@ public class ChemicalProductInfo extends AbstractModel {
 
     /**
      * Set 药理毒理
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PharmacologyToxicology 药理毒理
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPharmacologyToxicology(ChemicalProductInfoPharmacologyToxicology PharmacologyToxicology) {
         this.PharmacologyToxicology = PharmacologyToxicology;
     }
 
     /**
-     * Get 药代动力学
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 药代动力学 
      * @return Pharmacokinetics 药代动力学
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ChemicalProductInfoPharmacokinetics getPharmacokinetics() {
         return this.Pharmacokinetics;
@@ -539,19 +450,15 @@ public class ChemicalProductInfo extends AbstractModel {
 
     /**
      * Set 药代动力学
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Pharmacokinetics 药代动力学
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPharmacokinetics(ChemicalProductInfoPharmacokinetics Pharmacokinetics) {
         this.Pharmacokinetics = Pharmacokinetics;
     }
 
     /**
-     * Get 储存条件
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 储存条件 
      * @return Storage 储存条件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ChemicalProductInfoStorage getStorage() {
         return this.Storage;
@@ -559,19 +466,15 @@ public class ChemicalProductInfo extends AbstractModel {
 
     /**
      * Set 储存条件
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Storage 储存条件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStorage(ChemicalProductInfoStorage Storage) {
         this.Storage = Storage;
     }
 
     /**
-     * Get 包装信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 包装信息 
      * @return Packaging 包装信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ChemicalProductInfoPackaging getPackaging() {
         return this.Packaging;
@@ -579,19 +482,15 @@ public class ChemicalProductInfo extends AbstractModel {
 
     /**
      * Set 包装信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Packaging 包装信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPackaging(ChemicalProductInfoPackaging Packaging) {
         this.Packaging = Packaging;
     }
 
     /**
-     * Get 有效期
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 有效期 
      * @return ValidityPeriod 有效期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ChemicalProductInfoValidityPeriod getValidityPeriod() {
         return this.ValidityPeriod;
@@ -599,19 +498,15 @@ public class ChemicalProductInfo extends AbstractModel {
 
     /**
      * Set 有效期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ValidityPeriod 有效期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValidityPeriod(ChemicalProductInfoValidityPeriod ValidityPeriod) {
         this.ValidityPeriod = ValidityPeriod;
     }
 
     /**
-     * Get 执行标准
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 执行标准 
      * @return ExecutiveStandards 执行标准
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ChemicalProductInfoExecutiveStandards getExecutiveStandards() {
         return this.ExecutiveStandards;
@@ -619,19 +514,15 @@ public class ChemicalProductInfo extends AbstractModel {
 
     /**
      * Set 执行标准
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExecutiveStandards 执行标准
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExecutiveStandards(ChemicalProductInfoExecutiveStandards ExecutiveStandards) {
         this.ExecutiveStandards = ExecutiveStandards;
     }
 
     /**
-     * Get 批准文号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 批准文号 
      * @return Approval 批准文号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ChemicalProductInfoApproval getApproval() {
         return this.Approval;
@@ -639,19 +530,15 @@ public class ChemicalProductInfo extends AbstractModel {
 
     /**
      * Set 批准文号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Approval 批准文号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setApproval(ChemicalProductInfoApproval Approval) {
         this.Approval = Approval;
     }
 
     /**
-     * Get 生产企业名称和地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 生产企业名称和地址 
      * @return Manufacturer 生产企业名称和地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ChemicalProductInfoManufacturer getManufacturer() {
         return this.Manufacturer;
@@ -659,9 +546,7 @@ public class ChemicalProductInfo extends AbstractModel {
 
     /**
      * Set 生产企业名称和地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Manufacturer 生产企业名称和地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setManufacturer(ChemicalProductInfoManufacturer Manufacturer) {
         this.Manufacturer = Manufacturer;

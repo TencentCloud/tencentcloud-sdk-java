@@ -25,7 +25,6 @@ public class AspectRatio extends AbstractModel {
 
     /**
     * 原文位置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Index")
     @Expose
@@ -33,7 +32,6 @@ public class AspectRatio extends AbstractModel {
 
     /**
     * 数值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Number")
     @Expose
@@ -41,7 +39,6 @@ public class AspectRatio extends AbstractModel {
 
     /**
     * 关系
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Relation")
     @Expose
@@ -49,7 +46,6 @@ public class AspectRatio extends AbstractModel {
 
     /**
     * 原文
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Src")
     @Expose
@@ -57,17 +53,14 @@ public class AspectRatio extends AbstractModel {
 
     /**
     * 值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Value")
     @Expose
     private String Value;
 
     /**
-     * Get 原文位置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 原文位置 
      * @return Index 原文位置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long [] getIndex() {
         return this.Index;
@@ -75,19 +68,15 @@ public class AspectRatio extends AbstractModel {
 
     /**
      * Set 原文位置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Index 原文位置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIndex(Long [] Index) {
         this.Index = Index;
     }
 
     /**
-     * Get 数值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数值 
      * @return Number 数值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNumber() {
         return this.Number;
@@ -95,19 +84,15 @@ public class AspectRatio extends AbstractModel {
 
     /**
      * Set 数值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Number 数值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNumber(String Number) {
         this.Number = Number;
     }
 
     /**
-     * Get 关系
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 关系 
      * @return Relation 关系
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRelation() {
         return this.Relation;
@@ -115,19 +100,15 @@ public class AspectRatio extends AbstractModel {
 
     /**
      * Set 关系
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Relation 关系
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRelation(String Relation) {
         this.Relation = Relation;
     }
 
     /**
-     * Get 原文
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 原文 
      * @return Src 原文
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSrc() {
         return this.Src;
@@ -135,19 +116,15 @@ public class AspectRatio extends AbstractModel {
 
     /**
      * Set 原文
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Src 原文
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSrc(String Src) {
         this.Src = Src;
     }
 
     /**
-     * Get 值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 值 
      * @return Value 值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getValue() {
         return this.Value;
@@ -155,9 +132,7 @@ public class AspectRatio extends AbstractModel {
 
     /**
      * Set 值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Value 值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValue(String Value) {
         this.Value = Value;

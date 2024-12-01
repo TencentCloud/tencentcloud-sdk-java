@@ -25,7 +25,6 @@ public class ChemicalProductInfoActiveIngredient extends AbstractModel {
 
     /**
     * 文本内容
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Text")
     @Expose
@@ -33,7 +32,6 @@ public class ChemicalProductInfoActiveIngredient extends AbstractModel {
 
     /**
     * 活性成份的化学名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ChemicalName")
     @Expose
@@ -41,7 +39,6 @@ public class ChemicalProductInfoActiveIngredient extends AbstractModel {
 
     /**
     * 活性成份的化学结构式
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ChemicalFormula")
     @Expose
@@ -49,7 +46,6 @@ public class ChemicalProductInfoActiveIngredient extends AbstractModel {
 
     /**
     * 活性成份的分子式
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MolecularFormula")
     @Expose
@@ -57,17 +53,14 @@ public class ChemicalProductInfoActiveIngredient extends AbstractModel {
 
     /**
     * 活性成份的分子量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MolecularWeight")
     @Expose
     private String MolecularWeight;
 
     /**
-     * Get 文本内容
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文本内容 
      * @return Text 文本内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getText() {
         return this.Text;
@@ -75,19 +68,15 @@ public class ChemicalProductInfoActiveIngredient extends AbstractModel {
 
     /**
      * Set 文本内容
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Text 文本内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setText(String Text) {
         this.Text = Text;
     }
 
     /**
-     * Get 活性成份的化学名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 活性成份的化学名称 
      * @return ChemicalName 活性成份的化学名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getChemicalName() {
         return this.ChemicalName;
@@ -95,19 +84,15 @@ public class ChemicalProductInfoActiveIngredient extends AbstractModel {
 
     /**
      * Set 活性成份的化学名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ChemicalName 活性成份的化学名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setChemicalName(String ChemicalName) {
         this.ChemicalName = ChemicalName;
     }
 
     /**
-     * Get 活性成份的化学结构式
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 活性成份的化学结构式 
      * @return ChemicalFormula 活性成份的化学结构式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getChemicalFormula() {
         return this.ChemicalFormula;
@@ -115,19 +100,15 @@ public class ChemicalProductInfoActiveIngredient extends AbstractModel {
 
     /**
      * Set 活性成份的化学结构式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ChemicalFormula 活性成份的化学结构式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setChemicalFormula(String ChemicalFormula) {
         this.ChemicalFormula = ChemicalFormula;
     }
 
     /**
-     * Get 活性成份的分子式
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 活性成份的分子式 
      * @return MolecularFormula 活性成份的分子式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMolecularFormula() {
         return this.MolecularFormula;
@@ -135,19 +116,15 @@ public class ChemicalProductInfoActiveIngredient extends AbstractModel {
 
     /**
      * Set 活性成份的分子式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MolecularFormula 活性成份的分子式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMolecularFormula(String MolecularFormula) {
         this.MolecularFormula = MolecularFormula;
     }
 
     /**
-     * Get 活性成份的分子量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 活性成份的分子量 
      * @return MolecularWeight 活性成份的分子量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMolecularWeight() {
         return this.MolecularWeight;
@@ -155,9 +132,7 @@ public class ChemicalProductInfoActiveIngredient extends AbstractModel {
 
     /**
      * Set 活性成份的分子量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MolecularWeight 活性成份的分子量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMolecularWeight(String MolecularWeight) {
         this.MolecularWeight = MolecularWeight;

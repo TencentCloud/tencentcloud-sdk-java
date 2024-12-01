@@ -25,7 +25,6 @@ public class BlockInfo extends AbstractModel {
 
     /**
     * 原文位置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Index")
     @Expose
@@ -33,7 +32,6 @@ public class BlockInfo extends AbstractModel {
 
     /**
     * 阳性
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Positive")
     @Expose
@@ -41,7 +39,6 @@ public class BlockInfo extends AbstractModel {
 
     /**
     * 原文
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Src")
     @Expose
@@ -49,7 +46,6 @@ public class BlockInfo extends AbstractModel {
 
     /**
     * 值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Value")
     @Expose
@@ -57,7 +53,6 @@ public class BlockInfo extends AbstractModel {
 
     /**
     * 类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -65,7 +60,6 @@ public class BlockInfo extends AbstractModel {
 
     /**
     * 名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -73,17 +67,14 @@ public class BlockInfo extends AbstractModel {
 
     /**
     * 大小
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Size")
     @Expose
     private Size [] Size;
 
     /**
-     * Get 原文位置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 原文位置 
      * @return Index 原文位置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long [] getIndex() {
         return this.Index;
@@ -91,19 +82,15 @@ public class BlockInfo extends AbstractModel {
 
     /**
      * Set 原文位置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Index 原文位置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIndex(Long [] Index) {
         this.Index = Index;
     }
 
     /**
-     * Get 阳性
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 阳性 
      * @return Positive 阳性
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPositive() {
         return this.Positive;
@@ -111,19 +98,15 @@ public class BlockInfo extends AbstractModel {
 
     /**
      * Set 阳性
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Positive 阳性
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPositive(String Positive) {
         this.Positive = Positive;
     }
 
     /**
-     * Get 原文
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 原文 
      * @return Src 原文
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSrc() {
         return this.Src;
@@ -131,19 +114,15 @@ public class BlockInfo extends AbstractModel {
 
     /**
      * Set 原文
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Src 原文
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSrc(String Src) {
         this.Src = Src;
     }
 
     /**
-     * Get 值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 值 
      * @return Value 值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getValue() {
         return this.Value;
@@ -151,19 +130,15 @@ public class BlockInfo extends AbstractModel {
 
     /**
      * Set 值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Value 值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValue(String Value) {
         this.Value = Value;
     }
 
     /**
-     * Get 类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 类型 
      * @return Type 类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
         return this.Type;
@@ -171,19 +146,15 @@ public class BlockInfo extends AbstractModel {
 
     /**
      * Set 类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 名称 
      * @return Name 名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -191,19 +162,15 @@ public class BlockInfo extends AbstractModel {
 
     /**
      * Set 名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 大小
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 大小 
      * @return Size 大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Size [] getSize() {
         return this.Size;
@@ -211,9 +178,7 @@ public class BlockInfo extends AbstractModel {
 
     /**
      * Set 大小
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Size 大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSize(Size [] Size) {
         this.Size = Size;

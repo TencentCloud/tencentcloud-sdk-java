@@ -32,7 +32,7 @@ public class TWeCallInfo extends AbstractModel {
     private String Sn;
 
     /**
-    * 小程序ID
+    * 小程序ID，参数已弃用，不用传参
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ModelId")
@@ -68,21 +68,25 @@ public class TWeCallInfo extends AbstractModel {
     }
 
     /**
-     * Get 小程序ID
+     * Get 小程序ID，参数已弃用，不用传参
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ModelId 小程序ID
+     * @return ModelId 小程序ID，参数已弃用，不用传参
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public String getModelId() {
         return this.ModelId;
     }
 
     /**
-     * Set 小程序ID
+     * Set 小程序ID，参数已弃用，不用传参
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ModelId 小程序ID
+     * @param ModelId 小程序ID，参数已弃用，不用传参
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public void setModelId(String ModelId) {
         this.ModelId = ModelId;
     }
@@ -92,7 +96,9 @@ public class TWeCallInfo extends AbstractModel {
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ActiveNum 激活数
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public Long getActiveNum() {
         return this.ActiveNum;
     }
@@ -102,7 +108,9 @@ public class TWeCallInfo extends AbstractModel {
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ActiveNum 激活数
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public void setActiveNum(Long ActiveNum) {
         this.ActiveNum = ActiveNum;
     }

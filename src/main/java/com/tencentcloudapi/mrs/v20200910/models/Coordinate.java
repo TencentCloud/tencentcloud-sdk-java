@@ -25,7 +25,6 @@ public class Coordinate extends AbstractModel {
 
     /**
     * 左上角x坐标
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("X")
     @Expose
@@ -33,7 +32,6 @@ public class Coordinate extends AbstractModel {
 
     /**
     * 左上角y坐标
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Y")
     @Expose
@@ -41,7 +39,6 @@ public class Coordinate extends AbstractModel {
 
     /**
     * 宽度，单位像素
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Width")
     @Expose
@@ -49,17 +46,14 @@ public class Coordinate extends AbstractModel {
 
     /**
     * 高度，单位像素
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Height")
     @Expose
     private Long Height;
 
     /**
-     * Get 左上角x坐标
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 左上角x坐标 
      * @return X 左上角x坐标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getX() {
         return this.X;
@@ -67,19 +61,15 @@ public class Coordinate extends AbstractModel {
 
     /**
      * Set 左上角x坐标
-注意：此字段可能返回 null，表示取不到有效值。
      * @param X 左上角x坐标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setX(Long X) {
         this.X = X;
     }
 
     /**
-     * Get 左上角y坐标
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 左上角y坐标 
      * @return Y 左上角y坐标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getY() {
         return this.Y;
@@ -87,19 +77,15 @@ public class Coordinate extends AbstractModel {
 
     /**
      * Set 左上角y坐标
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Y 左上角y坐标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setY(Long Y) {
         this.Y = Y;
     }
 
     /**
-     * Get 宽度，单位像素
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 宽度，单位像素 
      * @return Width 宽度，单位像素
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getWidth() {
         return this.Width;
@@ -107,19 +93,15 @@ public class Coordinate extends AbstractModel {
 
     /**
      * Set 宽度，单位像素
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Width 宽度，单位像素
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWidth(Long Width) {
         this.Width = Width;
     }
 
     /**
-     * Get 高度，单位像素
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 高度，单位像素 
      * @return Height 高度，单位像素
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getHeight() {
         return this.Height;
@@ -127,9 +109,7 @@ public class Coordinate extends AbstractModel {
 
     /**
      * Set 高度，单位像素
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Height 高度，单位像素
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHeight(Long Height) {
         this.Height = Height;

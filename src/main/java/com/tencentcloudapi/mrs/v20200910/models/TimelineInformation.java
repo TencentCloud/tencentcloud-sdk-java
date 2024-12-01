@@ -25,7 +25,6 @@ public class TimelineInformation extends AbstractModel {
 
     /**
     * 时间轴
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Timeline")
     @Expose
@@ -33,17 +32,14 @@ public class TimelineInformation extends AbstractModel {
 
     /**
     * 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Page")
     @Expose
     private Long Page;
 
     /**
-     * Get 时间轴
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 时间轴 
      * @return Timeline 时间轴
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TimelineEvent [] getTimeline() {
         return this.Timeline;
@@ -51,19 +47,15 @@ public class TimelineInformation extends AbstractModel {
 
     /**
      * Set 时间轴
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Timeline 时间轴
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimeline(TimelineEvent [] Timeline) {
         this.Timeline = Timeline;
     }
 
     /**
-     * Get 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据在原PDF文件中的第几页 
      * @return Page 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPage() {
         return this.Page;
@@ -71,9 +63,7 @@ public class TimelineInformation extends AbstractModel {
 
     /**
      * Set 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Page 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPage(Long Page) {
         this.Page = Page;

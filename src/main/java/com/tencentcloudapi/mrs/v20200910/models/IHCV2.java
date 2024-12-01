@@ -25,7 +25,6 @@ public class IHCV2 extends AbstractModel {
 
     /**
     * 索引
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Index")
     @Expose
@@ -33,7 +32,6 @@ public class IHCV2 extends AbstractModel {
 
     /**
     * 原文
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Src")
     @Expose
@@ -41,7 +39,6 @@ public class IHCV2 extends AbstractModel {
 
     /**
     * ihc归一化
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -49,7 +46,6 @@ public class IHCV2 extends AbstractModel {
 
     /**
     * ihc详情
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Value")
     @Expose
@@ -57,17 +53,14 @@ public class IHCV2 extends AbstractModel {
 
     /**
     * 原文对应坐标
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Coords")
     @Expose
     private Coord [] Coords;
 
     /**
-     * Get 索引
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 索引 
      * @return Index 索引
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long [] getIndex() {
         return this.Index;
@@ -75,19 +68,15 @@ public class IHCV2 extends AbstractModel {
 
     /**
      * Set 索引
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Index 索引
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIndex(Long [] Index) {
         this.Index = Index;
     }
 
     /**
-     * Get 原文
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 原文 
      * @return Src 原文
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSrc() {
         return this.Src;
@@ -95,19 +84,15 @@ public class IHCV2 extends AbstractModel {
 
     /**
      * Set 原文
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Src 原文
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSrc(String Src) {
         this.Src = Src;
     }
 
     /**
-     * Get ihc归一化
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get ihc归一化 
      * @return Name ihc归一化
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -115,19 +100,15 @@ public class IHCV2 extends AbstractModel {
 
     /**
      * Set ihc归一化
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name ihc归一化
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get ihc详情
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get ihc详情 
      * @return Value ihc详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Value getValue() {
         return this.Value;
@@ -135,19 +116,15 @@ public class IHCV2 extends AbstractModel {
 
     /**
      * Set ihc详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Value ihc详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValue(Value Value) {
         this.Value = Value;
     }
 
     /**
-     * Get 原文对应坐标
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 原文对应坐标 
      * @return Coords 原文对应坐标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Coord [] getCoords() {
         return this.Coords;
@@ -155,9 +132,7 @@ public class IHCV2 extends AbstractModel {
 
     /**
      * Set 原文对应坐标
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Coords 原文对应坐标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCoords(Coord [] Coords) {
         this.Coords = Coords;

@@ -25,7 +25,6 @@ public class LymphTotal extends AbstractModel {
 
     /**
     * 项目名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -33,7 +32,6 @@ public class LymphTotal extends AbstractModel {
 
     /**
     * 转移数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TransferNum")
     @Expose
@@ -41,7 +39,6 @@ public class LymphTotal extends AbstractModel {
 
     /**
     * 总数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Total")
     @Expose
@@ -49,7 +46,6 @@ public class LymphTotal extends AbstractModel {
 
     /**
     * 原文
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Src")
     @Expose
@@ -57,7 +53,6 @@ public class LymphTotal extends AbstractModel {
 
     /**
     * 索引
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Index")
     @Expose
@@ -65,17 +60,14 @@ public class LymphTotal extends AbstractModel {
 
     /**
     * 原文对应坐标
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Coords")
     @Expose
     private Coord [] Coords;
 
     /**
-     * Get 项目名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 项目名称 
      * @return Name 项目名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -83,19 +75,15 @@ public class LymphTotal extends AbstractModel {
 
     /**
      * Set 项目名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 项目名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 转移数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 转移数量 
      * @return TransferNum 转移数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTransferNum() {
         return this.TransferNum;
@@ -103,19 +91,15 @@ public class LymphTotal extends AbstractModel {
 
     /**
      * Set 转移数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TransferNum 转移数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTransferNum(Long TransferNum) {
         this.TransferNum = TransferNum;
     }
 
     /**
-     * Get 总数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 总数量 
      * @return Total 总数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotal() {
         return this.Total;
@@ -123,19 +107,15 @@ public class LymphTotal extends AbstractModel {
 
     /**
      * Set 总数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Total 总数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotal(Long Total) {
         this.Total = Total;
     }
 
     /**
-     * Get 原文
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 原文 
      * @return Src 原文
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSrc() {
         return this.Src;
@@ -143,19 +123,15 @@ public class LymphTotal extends AbstractModel {
 
     /**
      * Set 原文
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Src 原文
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSrc(String Src) {
         this.Src = Src;
     }
 
     /**
-     * Get 索引
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 索引 
      * @return Index 索引
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long [] getIndex() {
         return this.Index;
@@ -163,19 +139,15 @@ public class LymphTotal extends AbstractModel {
 
     /**
      * Set 索引
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Index 索引
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIndex(Long [] Index) {
         this.Index = Index;
     }
 
     /**
-     * Get 原文对应坐标
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 原文对应坐标 
      * @return Coords 原文对应坐标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Coord [] getCoords() {
         return this.Coords;
@@ -183,9 +155,7 @@ public class LymphTotal extends AbstractModel {
 
     /**
      * Set 原文对应坐标
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Coords 原文对应坐标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCoords(Coord [] Coords) {
         this.Coords = Coords;

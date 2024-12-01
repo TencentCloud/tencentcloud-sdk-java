@@ -61,6 +61,28 @@ public class LiveClient extends AbstractClient{
     }
 
     /**
+     *该接口用来新增图片水印。
+     * @param req AddCasterMarkPicInfoRequest
+     * @return AddCasterMarkPicInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddCasterMarkPicInfoResponse AddCasterMarkPicInfo(AddCasterMarkPicInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AddCasterMarkPicInfo", AddCasterMarkPicInfoResponse.class);
+    }
+
+    /**
+     *为导播台添加文本配置。
+     * @param req AddCasterMarkWordInfoRequest
+     * @return AddCasterMarkWordInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddCasterMarkWordInfoResponse AddCasterMarkWordInfo(AddCasterMarkWordInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AddCasterMarkWordInfo", AddCasterMarkWordInfoResponse.class);
+    }
+
+    /**
      *该接口用来新增导播台推流信息。导播台主监启动后，将会将主监画面推向该接口设置的地址。
      * @param req AddCasterOutputInfoRequest
      * @return AddCasterOutputInfoResponse
@@ -505,6 +527,28 @@ public class LiveClient extends AbstractClient{
     }
 
     /**
+     *该接口用来删除导播台某个Index对应的水印。
+     * @param req DeleteCasterMarkPicInfoRequest
+     * @return DeleteCasterMarkPicInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCasterMarkPicInfoResponse DeleteCasterMarkPicInfo(DeleteCasterMarkPicInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteCasterMarkPicInfo", DeleteCasterMarkPicInfoResponse.class);
+    }
+
+    /**
+     *该接口用来删除导播台的文本配置。
+     * @param req DeleteCasterMarkWordInfoRequest
+     * @return DeleteCasterMarkWordInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCasterMarkWordInfoResponse DeleteCasterMarkWordInfo(DeleteCasterMarkWordInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteCasterMarkWordInfo", DeleteCasterMarkWordInfoResponse.class);
+    }
+
+    /**
      *该接口用来删除导播台的推流信息。
 注：若删除推流到腾讯云直播源站配置，即OutputIndex为0，OutputType为1的推流配置，在重新启动主监后，系统会自动重新生成一个推流到腾讯云直播源站配置。
      * @param req DeleteCasterOutputInfoRequest
@@ -865,6 +909,28 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public DescribeCasterListResponse DescribeCasterList(DescribeCasterListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeCasterList", DescribeCasterListResponse.class);
+    }
+
+    /**
+     *该接口用来查询某个导播台的水印列表。
+     * @param req DescribeCasterMarkPicInfosRequest
+     * @return DescribeCasterMarkPicInfosResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCasterMarkPicInfosResponse DescribeCasterMarkPicInfos(DescribeCasterMarkPicInfosRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCasterMarkPicInfos", DescribeCasterMarkPicInfosResponse.class);
+    }
+
+    /**
+     *该接口用来查询某个导播台的文本列表。
+     * @param req DescribeCasterMarkWordInfosRequest
+     * @return DescribeCasterMarkWordInfosResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCasterMarkWordInfosResponse DescribeCasterMarkWordInfos(DescribeCasterMarkWordInfosRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCasterMarkWordInfos", DescribeCasterMarkWordInfosResponse.class);
     }
 
     /**
@@ -1866,6 +1932,29 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     public ModifyCasterLayoutInfoResponse ModifyCasterLayoutInfo(ModifyCasterLayoutInfoRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyCasterLayoutInfo", ModifyCasterLayoutInfoResponse.class);
+    }
+
+    /**
+     *该接口用来修改导播台水印信息。
+注意，修改的Index对应的水印需已存在
+     * @param req ModifyCasterMarkPicInfoRequest
+     * @return ModifyCasterMarkPicInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCasterMarkPicInfoResponse ModifyCasterMarkPicInfo(ModifyCasterMarkPicInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyCasterMarkPicInfo", ModifyCasterMarkPicInfoResponse.class);
+    }
+
+    /**
+     *该接口用来修改导播台文本配置。
+     * @param req ModifyCasterMarkWordInfoRequest
+     * @return ModifyCasterMarkWordInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyCasterMarkWordInfoResponse ModifyCasterMarkWordInfo(ModifyCasterMarkWordInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyCasterMarkWordInfo", ModifyCasterMarkWordInfoResponse.class);
     }
 
     /**

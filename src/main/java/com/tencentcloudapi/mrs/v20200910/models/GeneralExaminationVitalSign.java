@@ -25,7 +25,6 @@ public class GeneralExaminationVitalSign extends AbstractModel {
 
     /**
     * 生命体征总体描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Text")
     @Expose
@@ -33,7 +32,6 @@ public class GeneralExaminationVitalSign extends AbstractModel {
 
     /**
     * 体温
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BodyTemperature")
     @Expose
@@ -41,7 +39,6 @@ public class GeneralExaminationVitalSign extends AbstractModel {
 
     /**
     * 脉率
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Pulse")
     @Expose
@@ -49,7 +46,6 @@ public class GeneralExaminationVitalSign extends AbstractModel {
 
     /**
     * 心率
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HeartRate")
     @Expose
@@ -57,7 +53,6 @@ public class GeneralExaminationVitalSign extends AbstractModel {
 
     /**
     * 呼吸频率
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BreathingRate")
     @Expose
@@ -65,7 +60,6 @@ public class GeneralExaminationVitalSign extends AbstractModel {
 
     /**
     * 身高
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BodyHeight")
     @Expose
@@ -73,7 +67,6 @@ public class GeneralExaminationVitalSign extends AbstractModel {
 
     /**
     * 体重
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BodyWeight")
     @Expose
@@ -81,7 +74,6 @@ public class GeneralExaminationVitalSign extends AbstractModel {
 
     /**
     * 体质指数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BodyMassIndex")
     @Expose
@@ -89,7 +81,6 @@ public class GeneralExaminationVitalSign extends AbstractModel {
 
     /**
     * 腰围
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Waistline")
     @Expose
@@ -97,17 +88,14 @@ public class GeneralExaminationVitalSign extends AbstractModel {
 
     /**
     * 血压
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BloodPressure")
     @Expose
     private GeneralExaminationVitalSignBloodPressure BloodPressure;
 
     /**
-     * Get 生命体征总体描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 生命体征总体描述 
      * @return Text 生命体征总体描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ValueUnitItem getText() {
         return this.Text;
@@ -115,19 +103,15 @@ public class GeneralExaminationVitalSign extends AbstractModel {
 
     /**
      * Set 生命体征总体描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Text 生命体征总体描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setText(ValueUnitItem Text) {
         this.Text = Text;
     }
 
     /**
-     * Get 体温
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 体温 
      * @return BodyTemperature 体温
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ValueUnitItem getBodyTemperature() {
         return this.BodyTemperature;
@@ -135,19 +119,15 @@ public class GeneralExaminationVitalSign extends AbstractModel {
 
     /**
      * Set 体温
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BodyTemperature 体温
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBodyTemperature(ValueUnitItem BodyTemperature) {
         this.BodyTemperature = BodyTemperature;
     }
 
     /**
-     * Get 脉率
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 脉率 
      * @return Pulse 脉率
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ValueUnitItem getPulse() {
         return this.Pulse;
@@ -155,19 +135,15 @@ public class GeneralExaminationVitalSign extends AbstractModel {
 
     /**
      * Set 脉率
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Pulse 脉率
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPulse(ValueUnitItem Pulse) {
         this.Pulse = Pulse;
     }
 
     /**
-     * Get 心率
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 心率 
      * @return HeartRate 心率
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ValueUnitItem getHeartRate() {
         return this.HeartRate;
@@ -175,19 +151,15 @@ public class GeneralExaminationVitalSign extends AbstractModel {
 
     /**
      * Set 心率
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HeartRate 心率
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHeartRate(ValueUnitItem HeartRate) {
         this.HeartRate = HeartRate;
     }
 
     /**
-     * Get 呼吸频率
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 呼吸频率 
      * @return BreathingRate 呼吸频率
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ValueUnitItem getBreathingRate() {
         return this.BreathingRate;
@@ -195,19 +167,15 @@ public class GeneralExaminationVitalSign extends AbstractModel {
 
     /**
      * Set 呼吸频率
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BreathingRate 呼吸频率
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBreathingRate(ValueUnitItem BreathingRate) {
         this.BreathingRate = BreathingRate;
     }
 
     /**
-     * Get 身高
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 身高 
      * @return BodyHeight 身高
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ValueUnitItem getBodyHeight() {
         return this.BodyHeight;
@@ -215,19 +183,15 @@ public class GeneralExaminationVitalSign extends AbstractModel {
 
     /**
      * Set 身高
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BodyHeight 身高
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBodyHeight(ValueUnitItem BodyHeight) {
         this.BodyHeight = BodyHeight;
     }
 
     /**
-     * Get 体重
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 体重 
      * @return BodyWeight 体重
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ValueUnitItem getBodyWeight() {
         return this.BodyWeight;
@@ -235,19 +199,15 @@ public class GeneralExaminationVitalSign extends AbstractModel {
 
     /**
      * Set 体重
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BodyWeight 体重
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBodyWeight(ValueUnitItem BodyWeight) {
         this.BodyWeight = BodyWeight;
     }
 
     /**
-     * Get 体质指数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 体质指数 
      * @return BodyMassIndex 体质指数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ValueUnitItem getBodyMassIndex() {
         return this.BodyMassIndex;
@@ -255,19 +215,15 @@ public class GeneralExaminationVitalSign extends AbstractModel {
 
     /**
      * Set 体质指数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BodyMassIndex 体质指数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBodyMassIndex(ValueUnitItem BodyMassIndex) {
         this.BodyMassIndex = BodyMassIndex;
     }
 
     /**
-     * Get 腰围
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 腰围 
      * @return Waistline 腰围
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ValueUnitItem getWaistline() {
         return this.Waistline;
@@ -275,19 +231,15 @@ public class GeneralExaminationVitalSign extends AbstractModel {
 
     /**
      * Set 腰围
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Waistline 腰围
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWaistline(ValueUnitItem Waistline) {
         this.Waistline = Waistline;
     }
 
     /**
-     * Get 血压
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 血压 
      * @return BloodPressure 血压
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public GeneralExaminationVitalSignBloodPressure getBloodPressure() {
         return this.BloodPressure;
@@ -295,9 +247,7 @@ public class GeneralExaminationVitalSign extends AbstractModel {
 
     /**
      * Set 血压
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BloodPressure 血压
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBloodPressure(GeneralExaminationVitalSignBloodPressure BloodPressure) {
         this.BloodPressure = BloodPressure;

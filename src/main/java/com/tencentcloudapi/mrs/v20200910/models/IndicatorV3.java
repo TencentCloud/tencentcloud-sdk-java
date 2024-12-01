@@ -33,7 +33,6 @@ public class IndicatorV3 extends AbstractModel {
 
     /**
     * 版本号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Version")
     @Expose
@@ -41,7 +40,6 @@ public class IndicatorV3 extends AbstractModel {
 
     /**
     * 检验报告V3结论
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TableIndicators")
     @Expose
@@ -49,7 +47,6 @@ public class IndicatorV3 extends AbstractModel {
 
     /**
     * 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Page")
     @Expose
@@ -80,10 +77,8 @@ public class IndicatorV3 extends AbstractModel {
     }
 
     /**
-     * Get 版本号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 版本号 
      * @return Version 版本号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVersion() {
         return this.Version;
@@ -91,19 +86,15 @@ public class IndicatorV3 extends AbstractModel {
 
     /**
      * Set 版本号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Version 版本号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVersion(String Version) {
         this.Version = Version;
     }
 
     /**
-     * Get 检验报告V3结论
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 检验报告V3结论 
      * @return TableIndicators 检验报告V3结论
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TableIndicators [] getTableIndicators() {
         return this.TableIndicators;
@@ -111,19 +102,15 @@ public class IndicatorV3 extends AbstractModel {
 
     /**
      * Set 检验报告V3结论
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TableIndicators 检验报告V3结论
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTableIndicators(TableIndicators [] TableIndicators) {
         this.TableIndicators = TableIndicators;
     }
 
     /**
-     * Get 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据在原PDF文件中的第几页 
      * @return Page 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPage() {
         return this.Page;
@@ -131,9 +118,7 @@ public class IndicatorV3 extends AbstractModel {
 
     /**
      * Set 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Page 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPage(Long Page) {
         this.Page = Page;

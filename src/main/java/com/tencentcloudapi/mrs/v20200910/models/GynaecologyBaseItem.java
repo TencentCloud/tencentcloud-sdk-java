@@ -25,7 +25,6 @@ public class GynaecologyBaseItem extends AbstractModel {
 
     /**
     * 外阴
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Vulva")
     @Expose
@@ -33,7 +32,6 @@ public class GynaecologyBaseItem extends AbstractModel {
 
     /**
     * 阴道
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Vagina")
     @Expose
@@ -41,7 +39,6 @@ public class GynaecologyBaseItem extends AbstractModel {
 
     /**
     * 子宫颈
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Cervix")
     @Expose
@@ -49,7 +46,6 @@ public class GynaecologyBaseItem extends AbstractModel {
 
     /**
     * 子宫
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Uterus")
     @Expose
@@ -57,7 +53,6 @@ public class GynaecologyBaseItem extends AbstractModel {
 
     /**
     * 子宫附件
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Adnexal")
     @Expose
@@ -65,7 +60,6 @@ public class GynaecologyBaseItem extends AbstractModel {
 
     /**
     * 盆腔
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PelvicCavity")
     @Expose
@@ -73,7 +67,6 @@ public class GynaecologyBaseItem extends AbstractModel {
 
     /**
     * 妇科其他
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Others")
     @Expose
@@ -81,7 +74,6 @@ public class GynaecologyBaseItem extends AbstractModel {
 
     /**
     * 月经史
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MenstrualHistory")
     @Expose
@@ -89,17 +81,14 @@ public class GynaecologyBaseItem extends AbstractModel {
 
     /**
     * 小结
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BriefSummary")
     @Expose
     private GynaecologyBriefSummary BriefSummary;
 
     /**
-     * Get 外阴
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 外阴 
      * @return Vulva 外阴
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public GynaecologyVulva getVulva() {
         return this.Vulva;
@@ -107,19 +96,15 @@ public class GynaecologyBaseItem extends AbstractModel {
 
     /**
      * Set 外阴
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Vulva 外阴
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVulva(GynaecologyVulva Vulva) {
         this.Vulva = Vulva;
     }
 
     /**
-     * Get 阴道
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 阴道 
      * @return Vagina 阴道
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public GynaecologyVagina getVagina() {
         return this.Vagina;
@@ -127,19 +112,15 @@ public class GynaecologyBaseItem extends AbstractModel {
 
     /**
      * Set 阴道
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Vagina 阴道
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVagina(GynaecologyVagina Vagina) {
         this.Vagina = Vagina;
     }
 
     /**
-     * Get 子宫颈
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子宫颈 
      * @return Cervix 子宫颈
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public GynaecologyCervix getCervix() {
         return this.Cervix;
@@ -147,19 +128,15 @@ public class GynaecologyBaseItem extends AbstractModel {
 
     /**
      * Set 子宫颈
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Cervix 子宫颈
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCervix(GynaecologyCervix Cervix) {
         this.Cervix = Cervix;
     }
 
     /**
-     * Get 子宫
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子宫 
      * @return Uterus 子宫
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public GynaecologyUterus getUterus() {
         return this.Uterus;
@@ -167,19 +144,15 @@ public class GynaecologyBaseItem extends AbstractModel {
 
     /**
      * Set 子宫
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Uterus 子宫
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUterus(GynaecologyUterus Uterus) {
         this.Uterus = Uterus;
     }
 
     /**
-     * Get 子宫附件
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子宫附件 
      * @return Adnexal 子宫附件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public GynaecologyAdnexal getAdnexal() {
         return this.Adnexal;
@@ -187,19 +160,15 @@ public class GynaecologyBaseItem extends AbstractModel {
 
     /**
      * Set 子宫附件
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Adnexal 子宫附件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAdnexal(GynaecologyAdnexal Adnexal) {
         this.Adnexal = Adnexal;
     }
 
     /**
-     * Get 盆腔
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 盆腔 
      * @return PelvicCavity 盆腔
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public GynaecologyPelvicCavity getPelvicCavity() {
         return this.PelvicCavity;
@@ -207,19 +176,15 @@ public class GynaecologyBaseItem extends AbstractModel {
 
     /**
      * Set 盆腔
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PelvicCavity 盆腔
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPelvicCavity(GynaecologyPelvicCavity PelvicCavity) {
         this.PelvicCavity = PelvicCavity;
     }
 
     /**
-     * Get 妇科其他
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 妇科其他 
      * @return Others 妇科其他
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public KeyValueItem [] getOthers() {
         return this.Others;
@@ -227,19 +192,15 @@ public class GynaecologyBaseItem extends AbstractModel {
 
     /**
      * Set 妇科其他
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Others 妇科其他
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOthers(KeyValueItem [] Others) {
         this.Others = Others;
     }
 
     /**
-     * Get 月经史
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 月经史 
      * @return MenstrualHistory 月经史
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public GynaecologyMenstrualHistory getMenstrualHistory() {
         return this.MenstrualHistory;
@@ -247,19 +208,15 @@ public class GynaecologyBaseItem extends AbstractModel {
 
     /**
      * Set 月经史
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MenstrualHistory 月经史
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMenstrualHistory(GynaecologyMenstrualHistory MenstrualHistory) {
         this.MenstrualHistory = MenstrualHistory;
     }
 
     /**
-     * Get 小结
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 小结 
      * @return BriefSummary 小结
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public GynaecologyBriefSummary getBriefSummary() {
         return this.BriefSummary;
@@ -267,9 +224,7 @@ public class GynaecologyBaseItem extends AbstractModel {
 
     /**
      * Set 小结
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BriefSummary 小结
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBriefSummary(GynaecologyBriefSummary BriefSummary) {
         this.BriefSummary = BriefSummary;

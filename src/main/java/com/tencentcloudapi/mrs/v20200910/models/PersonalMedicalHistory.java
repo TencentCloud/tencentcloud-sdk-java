@@ -25,7 +25,6 @@ public class PersonalMedicalHistory extends AbstractModel {
 
     /**
     * 出生史
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BirthPlace")
     @Expose
@@ -33,7 +32,6 @@ public class PersonalMedicalHistory extends AbstractModel {
 
     /**
     * 居住史
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LivePlace")
     @Expose
@@ -41,7 +39,6 @@ public class PersonalMedicalHistory extends AbstractModel {
 
     /**
     * 工作史
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Job")
     @Expose
@@ -49,7 +46,6 @@ public class PersonalMedicalHistory extends AbstractModel {
 
     /**
     * 吸烟史
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SmokeHistory")
     @Expose
@@ -57,17 +53,14 @@ public class PersonalMedicalHistory extends AbstractModel {
 
     /**
     * 饮酒史
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AlcoholicHistory")
     @Expose
     private String AlcoholicHistory;
 
     /**
-     * Get 出生史
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 出生史 
      * @return BirthPlace 出生史
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBirthPlace() {
         return this.BirthPlace;
@@ -75,19 +68,15 @@ public class PersonalMedicalHistory extends AbstractModel {
 
     /**
      * Set 出生史
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BirthPlace 出生史
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBirthPlace(String BirthPlace) {
         this.BirthPlace = BirthPlace;
     }
 
     /**
-     * Get 居住史
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 居住史 
      * @return LivePlace 居住史
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLivePlace() {
         return this.LivePlace;
@@ -95,19 +84,15 @@ public class PersonalMedicalHistory extends AbstractModel {
 
     /**
      * Set 居住史
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LivePlace 居住史
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLivePlace(String LivePlace) {
         this.LivePlace = LivePlace;
     }
 
     /**
-     * Get 工作史
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 工作史 
      * @return Job 工作史
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getJob() {
         return this.Job;
@@ -115,19 +100,15 @@ public class PersonalMedicalHistory extends AbstractModel {
 
     /**
      * Set 工作史
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Job 工作史
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setJob(String Job) {
         this.Job = Job;
     }
 
     /**
-     * Get 吸烟史
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 吸烟史 
      * @return SmokeHistory 吸烟史
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSmokeHistory() {
         return this.SmokeHistory;
@@ -135,19 +116,15 @@ public class PersonalMedicalHistory extends AbstractModel {
 
     /**
      * Set 吸烟史
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SmokeHistory 吸烟史
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSmokeHistory(String SmokeHistory) {
         this.SmokeHistory = SmokeHistory;
     }
 
     /**
-     * Get 饮酒史
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 饮酒史 
      * @return AlcoholicHistory 饮酒史
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAlcoholicHistory() {
         return this.AlcoholicHistory;
@@ -155,9 +132,7 @@ public class PersonalMedicalHistory extends AbstractModel {
 
     /**
      * Set 饮酒史
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AlcoholicHistory 饮酒史
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAlcoholicHistory(String AlcoholicHistory) {
         this.AlcoholicHistory = AlcoholicHistory;

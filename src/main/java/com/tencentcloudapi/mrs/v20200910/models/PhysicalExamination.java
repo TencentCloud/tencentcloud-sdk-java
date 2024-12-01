@@ -25,7 +25,6 @@ public class PhysicalExamination extends AbstractModel {
 
     /**
     * 一般检查
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GeneralExamination")
     @Expose
@@ -33,7 +32,6 @@ public class PhysicalExamination extends AbstractModel {
 
     /**
     * 内科
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InternalMedicine")
     @Expose
@@ -41,7 +39,6 @@ public class PhysicalExamination extends AbstractModel {
 
     /**
     * 外科
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Surgery")
     @Expose
@@ -49,7 +46,6 @@ public class PhysicalExamination extends AbstractModel {
 
     /**
     * 口腔科
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Stomatology")
     @Expose
@@ -57,7 +53,6 @@ public class PhysicalExamination extends AbstractModel {
 
     /**
     * 眼科
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Ophthalmology")
     @Expose
@@ -65,7 +60,6 @@ public class PhysicalExamination extends AbstractModel {
 
     /**
     * 耳鼻喉科
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Otolaryngology")
     @Expose
@@ -73,7 +67,6 @@ public class PhysicalExamination extends AbstractModel {
 
     /**
     * 妇科
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Gynaecology")
     @Expose
@@ -81,17 +74,14 @@ public class PhysicalExamination extends AbstractModel {
 
     /**
     * 未标准化
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Unclassified")
     @Expose
     private KeyValueItem [] Unclassified;
 
     /**
-     * Get 一般检查
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 一般检查 
      * @return GeneralExamination 一般检查
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public GeneralExaminationBaseItem getGeneralExamination() {
         return this.GeneralExamination;
@@ -99,19 +89,15 @@ public class PhysicalExamination extends AbstractModel {
 
     /**
      * Set 一般检查
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GeneralExamination 一般检查
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGeneralExamination(GeneralExaminationBaseItem GeneralExamination) {
         this.GeneralExamination = GeneralExamination;
     }
 
     /**
-     * Get 内科
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 内科 
      * @return InternalMedicine 内科
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public InternalMedicineBaseItem getInternalMedicine() {
         return this.InternalMedicine;
@@ -119,19 +105,15 @@ public class PhysicalExamination extends AbstractModel {
 
     /**
      * Set 内科
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InternalMedicine 内科
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInternalMedicine(InternalMedicineBaseItem InternalMedicine) {
         this.InternalMedicine = InternalMedicine;
     }
 
     /**
-     * Get 外科
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 外科 
      * @return Surgery 外科
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SurgeryBaseItem getSurgery() {
         return this.Surgery;
@@ -139,19 +121,15 @@ public class PhysicalExamination extends AbstractModel {
 
     /**
      * Set 外科
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Surgery 外科
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSurgery(SurgeryBaseItem Surgery) {
         this.Surgery = Surgery;
     }
 
     /**
-     * Get 口腔科
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 口腔科 
      * @return Stomatology 口腔科
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public StomatologyBaseItem getStomatology() {
         return this.Stomatology;
@@ -159,19 +137,15 @@ public class PhysicalExamination extends AbstractModel {
 
     /**
      * Set 口腔科
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Stomatology 口腔科
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStomatology(StomatologyBaseItem Stomatology) {
         this.Stomatology = Stomatology;
     }
 
     /**
-     * Get 眼科
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 眼科 
      * @return Ophthalmology 眼科
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public OphthalmologyBaseItem getOphthalmology() {
         return this.Ophthalmology;
@@ -179,19 +153,15 @@ public class PhysicalExamination extends AbstractModel {
 
     /**
      * Set 眼科
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Ophthalmology 眼科
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOphthalmology(OphthalmologyBaseItem Ophthalmology) {
         this.Ophthalmology = Ophthalmology;
     }
 
     /**
-     * Get 耳鼻喉科
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 耳鼻喉科 
      * @return Otolaryngology 耳鼻喉科
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public OtolaryngologyBaseItem getOtolaryngology() {
         return this.Otolaryngology;
@@ -199,19 +169,15 @@ public class PhysicalExamination extends AbstractModel {
 
     /**
      * Set 耳鼻喉科
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Otolaryngology 耳鼻喉科
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOtolaryngology(OtolaryngologyBaseItem Otolaryngology) {
         this.Otolaryngology = Otolaryngology;
     }
 
     /**
-     * Get 妇科
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 妇科 
      * @return Gynaecology 妇科
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public GynaecologyBaseItem getGynaecology() {
         return this.Gynaecology;
@@ -219,19 +185,15 @@ public class PhysicalExamination extends AbstractModel {
 
     /**
      * Set 妇科
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Gynaecology 妇科
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGynaecology(GynaecologyBaseItem Gynaecology) {
         this.Gynaecology = Gynaecology;
     }
 
     /**
-     * Get 未标准化
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 未标准化 
      * @return Unclassified 未标准化
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public KeyValueItem [] getUnclassified() {
         return this.Unclassified;
@@ -239,9 +201,7 @@ public class PhysicalExamination extends AbstractModel {
 
     /**
      * Set 未标准化
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Unclassified 未标准化
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUnclassified(KeyValueItem [] Unclassified) {
         this.Unclassified = Unclassified;

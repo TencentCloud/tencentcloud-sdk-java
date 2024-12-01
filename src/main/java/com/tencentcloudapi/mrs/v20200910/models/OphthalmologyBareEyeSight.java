@@ -25,7 +25,6 @@ public class OphthalmologyBareEyeSight extends AbstractModel {
 
     /**
     * 左眼视力
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LeftEyeVisual")
     @Expose
@@ -33,7 +32,6 @@ public class OphthalmologyBareEyeSight extends AbstractModel {
 
     /**
     * 裸眼视力
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Text")
     @Expose
@@ -41,17 +39,14 @@ public class OphthalmologyBareEyeSight extends AbstractModel {
 
     /**
     * 右眼视力
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RightEyeVisual")
     @Expose
     private KeyValueItem RightEyeVisual;
 
     /**
-     * Get 左眼视力
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 左眼视力 
      * @return LeftEyeVisual 左眼视力
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public KeyValueItem getLeftEyeVisual() {
         return this.LeftEyeVisual;
@@ -59,19 +54,15 @@ public class OphthalmologyBareEyeSight extends AbstractModel {
 
     /**
      * Set 左眼视力
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LeftEyeVisual 左眼视力
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLeftEyeVisual(KeyValueItem LeftEyeVisual) {
         this.LeftEyeVisual = LeftEyeVisual;
     }
 
     /**
-     * Get 裸眼视力
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 裸眼视力 
      * @return Text 裸眼视力
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public KeyValueItem getText() {
         return this.Text;
@@ -79,19 +70,15 @@ public class OphthalmologyBareEyeSight extends AbstractModel {
 
     /**
      * Set 裸眼视力
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Text 裸眼视力
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setText(KeyValueItem Text) {
         this.Text = Text;
     }
 
     /**
-     * Get 右眼视力
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 右眼视力 
      * @return RightEyeVisual 右眼视力
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public KeyValueItem getRightEyeVisual() {
         return this.RightEyeVisual;
@@ -99,9 +86,7 @@ public class OphthalmologyBareEyeSight extends AbstractModel {
 
     /**
      * Set 右眼视力
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RightEyeVisual 右眼视力
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRightEyeVisual(KeyValueItem RightEyeVisual) {
         this.RightEyeVisual = RightEyeVisual;

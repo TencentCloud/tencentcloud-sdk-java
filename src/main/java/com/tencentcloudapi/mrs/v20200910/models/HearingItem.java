@@ -25,7 +25,6 @@ public class HearingItem extends AbstractModel {
 
     /**
     * 类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -33,7 +32,6 @@ public class HearingItem extends AbstractModel {
 
     /**
     * 项目原文
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Item")
     @Expose
@@ -41,7 +39,6 @@ public class HearingItem extends AbstractModel {
 
     /**
     * 方位
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Location")
     @Expose
@@ -49,17 +46,14 @@ public class HearingItem extends AbstractModel {
 
     /**
     * 描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Result")
     @Expose
     private PhysicalBaseItem Result;
 
     /**
-     * Get 类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 类型 
      * @return Name 类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -67,19 +61,15 @@ public class HearingItem extends AbstractModel {
 
     /**
      * Set 类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 项目原文
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 项目原文 
      * @return Item 项目原文
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public PhysicalBaseItem getItem() {
         return this.Item;
@@ -87,19 +77,15 @@ public class HearingItem extends AbstractModel {
 
     /**
      * Set 项目原文
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Item 项目原文
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setItem(PhysicalBaseItem Item) {
         this.Item = Item;
     }
 
     /**
-     * Get 方位
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 方位 
      * @return Location 方位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public PhysicalBaseItem getLocation() {
         return this.Location;
@@ -107,19 +93,15 @@ public class HearingItem extends AbstractModel {
 
     /**
      * Set 方位
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Location 方位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLocation(PhysicalBaseItem Location) {
         this.Location = Location;
     }
 
     /**
-     * Get 描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 描述 
      * @return Result 描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public PhysicalBaseItem getResult() {
         return this.Result;
@@ -127,9 +109,7 @@ public class HearingItem extends AbstractModel {
 
     /**
      * Set 描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Result 描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResult(PhysicalBaseItem Result) {
         this.Result = Result;

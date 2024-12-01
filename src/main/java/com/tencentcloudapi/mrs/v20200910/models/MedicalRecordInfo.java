@@ -25,7 +25,6 @@ public class MedicalRecordInfo extends AbstractModel {
 
     /**
     * 就诊日期
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiagnosisTime")
     @Expose
@@ -33,7 +32,6 @@ public class MedicalRecordInfo extends AbstractModel {
 
     /**
     * 就诊科室
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiagnosisDepartmentName")
     @Expose
@@ -41,7 +39,6 @@ public class MedicalRecordInfo extends AbstractModel {
 
     /**
     * 就诊医生
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiagnosisDoctorName")
     @Expose
@@ -49,7 +46,6 @@ public class MedicalRecordInfo extends AbstractModel {
 
     /**
     * 临床诊断
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClinicalDiagnosis")
     @Expose
@@ -57,7 +53,6 @@ public class MedicalRecordInfo extends AbstractModel {
 
     /**
     * 主述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MainNarration")
     @Expose
@@ -65,7 +60,6 @@ public class MedicalRecordInfo extends AbstractModel {
 
     /**
     * 体格检查
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PhysicalExamination")
     @Expose
@@ -73,7 +67,6 @@ public class MedicalRecordInfo extends AbstractModel {
 
     /**
     * 检查结论
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InspectionFindings")
     @Expose
@@ -81,7 +74,6 @@ public class MedicalRecordInfo extends AbstractModel {
 
     /**
     * 治疗意见
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TreatmentOpinion")
     @Expose
@@ -89,17 +81,14 @@ public class MedicalRecordInfo extends AbstractModel {
 
     /**
     * 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Page")
     @Expose
     private Long Page;
 
     /**
-     * Get 就诊日期
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 就诊日期 
      * @return DiagnosisTime 就诊日期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDiagnosisTime() {
         return this.DiagnosisTime;
@@ -107,19 +96,15 @@ public class MedicalRecordInfo extends AbstractModel {
 
     /**
      * Set 就诊日期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DiagnosisTime 就诊日期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiagnosisTime(String DiagnosisTime) {
         this.DiagnosisTime = DiagnosisTime;
     }
 
     /**
-     * Get 就诊科室
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 就诊科室 
      * @return DiagnosisDepartmentName 就诊科室
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDiagnosisDepartmentName() {
         return this.DiagnosisDepartmentName;
@@ -127,19 +112,15 @@ public class MedicalRecordInfo extends AbstractModel {
 
     /**
      * Set 就诊科室
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DiagnosisDepartmentName 就诊科室
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiagnosisDepartmentName(String DiagnosisDepartmentName) {
         this.DiagnosisDepartmentName = DiagnosisDepartmentName;
     }
 
     /**
-     * Get 就诊医生
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 就诊医生 
      * @return DiagnosisDoctorName 就诊医生
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDiagnosisDoctorName() {
         return this.DiagnosisDoctorName;
@@ -147,19 +128,15 @@ public class MedicalRecordInfo extends AbstractModel {
 
     /**
      * Set 就诊医生
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DiagnosisDoctorName 就诊医生
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiagnosisDoctorName(String DiagnosisDoctorName) {
         this.DiagnosisDoctorName = DiagnosisDoctorName;
     }
 
     /**
-     * Get 临床诊断
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 临床诊断 
      * @return ClinicalDiagnosis 临床诊断
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClinicalDiagnosis() {
         return this.ClinicalDiagnosis;
@@ -167,19 +144,15 @@ public class MedicalRecordInfo extends AbstractModel {
 
     /**
      * Set 临床诊断
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClinicalDiagnosis 临床诊断
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClinicalDiagnosis(String ClinicalDiagnosis) {
         this.ClinicalDiagnosis = ClinicalDiagnosis;
     }
 
     /**
-     * Get 主述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主述 
      * @return MainNarration 主述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMainNarration() {
         return this.MainNarration;
@@ -187,19 +160,15 @@ public class MedicalRecordInfo extends AbstractModel {
 
     /**
      * Set 主述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MainNarration 主述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMainNarration(String MainNarration) {
         this.MainNarration = MainNarration;
     }
 
     /**
-     * Get 体格检查
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 体格检查 
      * @return PhysicalExamination 体格检查
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPhysicalExamination() {
         return this.PhysicalExamination;
@@ -207,19 +176,15 @@ public class MedicalRecordInfo extends AbstractModel {
 
     /**
      * Set 体格检查
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PhysicalExamination 体格检查
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPhysicalExamination(String PhysicalExamination) {
         this.PhysicalExamination = PhysicalExamination;
     }
 
     /**
-     * Get 检查结论
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 检查结论 
      * @return InspectionFindings 检查结论
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInspectionFindings() {
         return this.InspectionFindings;
@@ -227,19 +192,15 @@ public class MedicalRecordInfo extends AbstractModel {
 
     /**
      * Set 检查结论
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InspectionFindings 检查结论
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInspectionFindings(String InspectionFindings) {
         this.InspectionFindings = InspectionFindings;
     }
 
     /**
-     * Get 治疗意见
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 治疗意见 
      * @return TreatmentOpinion 治疗意见
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTreatmentOpinion() {
         return this.TreatmentOpinion;
@@ -247,19 +208,15 @@ public class MedicalRecordInfo extends AbstractModel {
 
     /**
      * Set 治疗意见
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TreatmentOpinion 治疗意见
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTreatmentOpinion(String TreatmentOpinion) {
         this.TreatmentOpinion = TreatmentOpinion;
     }
 
     /**
-     * Get 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据在原PDF文件中的第几页 
      * @return Page 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPage() {
         return this.Page;
@@ -267,9 +224,7 @@ public class MedicalRecordInfo extends AbstractModel {
 
     /**
      * Set 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Page 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPage(Long Page) {
         this.Page = Page;

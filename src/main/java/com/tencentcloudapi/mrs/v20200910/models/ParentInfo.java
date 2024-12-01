@@ -25,7 +25,6 @@ public class ParentInfo extends AbstractModel {
 
     /**
     * 名字
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -33,7 +32,6 @@ public class ParentInfo extends AbstractModel {
 
     /**
     * 年龄
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Age")
     @Expose
@@ -41,7 +39,6 @@ public class ParentInfo extends AbstractModel {
 
     /**
     * 证件号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IdCard")
     @Expose
@@ -49,7 +46,6 @@ public class ParentInfo extends AbstractModel {
 
     /**
     * 民族
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Ethnicity")
     @Expose
@@ -57,7 +53,6 @@ public class ParentInfo extends AbstractModel {
 
     /**
     * 国籍
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Nationality")
     @Expose
@@ -65,17 +60,14 @@ public class ParentInfo extends AbstractModel {
 
     /**
     * 地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Address")
     @Expose
     private String Address;
 
     /**
-     * Get 名字
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 名字 
      * @return Name 名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -83,19 +75,15 @@ public class ParentInfo extends AbstractModel {
 
     /**
      * Set 名字
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 年龄
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 年龄 
      * @return Age 年龄
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAge() {
         return this.Age;
@@ -103,19 +91,15 @@ public class ParentInfo extends AbstractModel {
 
     /**
      * Set 年龄
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Age 年龄
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAge(String Age) {
         this.Age = Age;
     }
 
     /**
-     * Get 证件号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 证件号 
      * @return IdCard 证件号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIdCard() {
         return this.IdCard;
@@ -123,19 +107,15 @@ public class ParentInfo extends AbstractModel {
 
     /**
      * Set 证件号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IdCard 证件号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIdCard(String IdCard) {
         this.IdCard = IdCard;
     }
 
     /**
-     * Get 民族
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 民族 
      * @return Ethnicity 民族
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEthnicity() {
         return this.Ethnicity;
@@ -143,19 +123,15 @@ public class ParentInfo extends AbstractModel {
 
     /**
      * Set 民族
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Ethnicity 民族
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEthnicity(String Ethnicity) {
         this.Ethnicity = Ethnicity;
     }
 
     /**
-     * Get 国籍
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 国籍 
      * @return Nationality 国籍
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNationality() {
         return this.Nationality;
@@ -163,19 +139,15 @@ public class ParentInfo extends AbstractModel {
 
     /**
      * Set 国籍
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Nationality 国籍
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNationality(String Nationality) {
         this.Nationality = Nationality;
     }
 
     /**
-     * Get 地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地址 
      * @return Address 地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAddress() {
         return this.Address;
@@ -183,9 +155,7 @@ public class ParentInfo extends AbstractModel {
 
     /**
      * Set 地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Address 地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAddress(String Address) {
         this.Address = Address;

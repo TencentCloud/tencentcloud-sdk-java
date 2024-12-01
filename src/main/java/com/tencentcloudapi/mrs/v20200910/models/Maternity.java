@@ -25,7 +25,6 @@ public class Maternity extends AbstractModel {
 
     /**
     * 描述部分
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Desc")
     @Expose
@@ -33,7 +32,6 @@ public class Maternity extends AbstractModel {
 
     /**
     * 结论部分
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Summary")
     @Expose
@@ -41,7 +39,6 @@ public class Maternity extends AbstractModel {
 
     /**
     * 报告原文
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OcrText")
     @Expose
@@ -49,17 +46,14 @@ public class Maternity extends AbstractModel {
 
     /**
     * 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Page")
     @Expose
     private Long Page;
 
     /**
-     * Get 描述部分
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 描述部分 
      * @return Desc 描述部分
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public MaternityDesc getDesc() {
         return this.Desc;
@@ -67,19 +61,15 @@ public class Maternity extends AbstractModel {
 
     /**
      * Set 描述部分
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Desc 描述部分
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDesc(MaternityDesc Desc) {
         this.Desc = Desc;
     }
 
     /**
-     * Get 结论部分
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 结论部分 
      * @return Summary 结论部分
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public MaternitySummary getSummary() {
         return this.Summary;
@@ -87,19 +77,15 @@ public class Maternity extends AbstractModel {
 
     /**
      * Set 结论部分
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Summary 结论部分
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSummary(MaternitySummary Summary) {
         this.Summary = Summary;
     }
 
     /**
-     * Get 报告原文
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 报告原文 
      * @return OcrText 报告原文
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOcrText() {
         return this.OcrText;
@@ -107,19 +93,15 @@ public class Maternity extends AbstractModel {
 
     /**
      * Set 报告原文
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OcrText 报告原文
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOcrText(String OcrText) {
         this.OcrText = OcrText;
     }
 
     /**
-     * Get 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据在原PDF文件中的第几页 
      * @return Page 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPage() {
         return this.Page;
@@ -127,9 +109,7 @@ public class Maternity extends AbstractModel {
 
     /**
      * Set 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Page 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPage(Long Page) {
         this.Page = Page;

@@ -25,7 +25,6 @@ public class ReportInfo extends AbstractModel {
 
     /**
     * 医院名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Hospital")
     @Expose
@@ -33,7 +32,6 @@ public class ReportInfo extends AbstractModel {
 
     /**
     * 科室名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DepartmentName")
     @Expose
@@ -41,7 +39,6 @@ public class ReportInfo extends AbstractModel {
 
     /**
     * 申请时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BillingTime")
     @Expose
@@ -49,7 +46,6 @@ public class ReportInfo extends AbstractModel {
 
     /**
     * 报告时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReportTime")
     @Expose
@@ -57,7 +53,6 @@ public class ReportInfo extends AbstractModel {
 
     /**
     * 检查时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InspectTime")
     @Expose
@@ -65,7 +60,6 @@ public class ReportInfo extends AbstractModel {
 
     /**
     * 检查号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CheckNum")
     @Expose
@@ -73,7 +67,6 @@ public class ReportInfo extends AbstractModel {
 
     /**
     * 影像号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ImageNum")
     @Expose
@@ -81,7 +74,6 @@ public class ReportInfo extends AbstractModel {
 
     /**
     * 放射号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RadiationNum")
     @Expose
@@ -89,7 +81,6 @@ public class ReportInfo extends AbstractModel {
 
     /**
     * 检验号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TestNum")
     @Expose
@@ -97,7 +88,6 @@ public class ReportInfo extends AbstractModel {
 
     /**
     * 门诊号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OutpatientNum")
     @Expose
@@ -105,7 +95,6 @@ public class ReportInfo extends AbstractModel {
 
     /**
     * 病理号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PathologyNum")
     @Expose
@@ -113,7 +102,6 @@ public class ReportInfo extends AbstractModel {
 
     /**
     * 住院号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InHospitalNum")
     @Expose
@@ -121,7 +109,6 @@ public class ReportInfo extends AbstractModel {
 
     /**
     * 样本号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SampleNum")
     @Expose
@@ -129,7 +116,6 @@ public class ReportInfo extends AbstractModel {
 
     /**
     * 标本种类
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SampleType")
     @Expose
@@ -137,7 +123,6 @@ public class ReportInfo extends AbstractModel {
 
     /**
     * 病历号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MedicalRecordNum")
     @Expose
@@ -145,7 +130,6 @@ public class ReportInfo extends AbstractModel {
 
     /**
     * 报告名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReportName")
     @Expose
@@ -153,7 +137,6 @@ public class ReportInfo extends AbstractModel {
 
     /**
     * 超声号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UltraNum")
     @Expose
@@ -161,7 +144,6 @@ public class ReportInfo extends AbstractModel {
 
     /**
     * 临床诊断
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Diagnose")
     @Expose
@@ -169,7 +151,6 @@ public class ReportInfo extends AbstractModel {
 
     /**
     * 检查项目
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CheckItem")
     @Expose
@@ -177,7 +158,6 @@ public class ReportInfo extends AbstractModel {
 
     /**
     * 检查方法
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CheckMethod")
     @Expose
@@ -185,7 +165,6 @@ public class ReportInfo extends AbstractModel {
 
     /**
     * 诊断时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiagnoseTime")
     @Expose
@@ -193,7 +172,6 @@ public class ReportInfo extends AbstractModel {
 
     /**
     * 体检号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HealthCheckupNum")
     @Expose
@@ -201,7 +179,6 @@ public class ReportInfo extends AbstractModel {
 
     /**
     * 其它时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OtherTime")
     @Expose
@@ -209,7 +186,6 @@ public class ReportInfo extends AbstractModel {
 
     /**
     * 打印时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PrintTime")
     @Expose
@@ -217,7 +193,6 @@ public class ReportInfo extends AbstractModel {
 
     /**
     * 未归类时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Times")
     @Expose
@@ -225,17 +200,14 @@ public class ReportInfo extends AbstractModel {
 
     /**
     * 床号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BedNo")
     @Expose
     private String BedNo;
 
     /**
-     * Get 医院名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 医院名称 
      * @return Hospital 医院名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHospital() {
         return this.Hospital;
@@ -243,19 +215,15 @@ public class ReportInfo extends AbstractModel {
 
     /**
      * Set 医院名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Hospital 医院名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHospital(String Hospital) {
         this.Hospital = Hospital;
     }
 
     /**
-     * Get 科室名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 科室名称 
      * @return DepartmentName 科室名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDepartmentName() {
         return this.DepartmentName;
@@ -263,19 +231,15 @@ public class ReportInfo extends AbstractModel {
 
     /**
      * Set 科室名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DepartmentName 科室名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDepartmentName(String DepartmentName) {
         this.DepartmentName = DepartmentName;
     }
 
     /**
-     * Get 申请时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 申请时间 
      * @return BillingTime 申请时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBillingTime() {
         return this.BillingTime;
@@ -283,19 +247,15 @@ public class ReportInfo extends AbstractModel {
 
     /**
      * Set 申请时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BillingTime 申请时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBillingTime(String BillingTime) {
         this.BillingTime = BillingTime;
     }
 
     /**
-     * Get 报告时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 报告时间 
      * @return ReportTime 报告时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getReportTime() {
         return this.ReportTime;
@@ -303,19 +263,15 @@ public class ReportInfo extends AbstractModel {
 
     /**
      * Set 报告时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReportTime 报告时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReportTime(String ReportTime) {
         this.ReportTime = ReportTime;
     }
 
     /**
-     * Get 检查时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 检查时间 
      * @return InspectTime 检查时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInspectTime() {
         return this.InspectTime;
@@ -323,19 +279,15 @@ public class ReportInfo extends AbstractModel {
 
     /**
      * Set 检查时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InspectTime 检查时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInspectTime(String InspectTime) {
         this.InspectTime = InspectTime;
     }
 
     /**
-     * Get 检查号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 检查号 
      * @return CheckNum 检查号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCheckNum() {
         return this.CheckNum;
@@ -343,19 +295,15 @@ public class ReportInfo extends AbstractModel {
 
     /**
      * Set 检查号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CheckNum 检查号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCheckNum(String CheckNum) {
         this.CheckNum = CheckNum;
     }
 
     /**
-     * Get 影像号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 影像号 
      * @return ImageNum 影像号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getImageNum() {
         return this.ImageNum;
@@ -363,19 +311,15 @@ public class ReportInfo extends AbstractModel {
 
     /**
      * Set 影像号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ImageNum 影像号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setImageNum(String ImageNum) {
         this.ImageNum = ImageNum;
     }
 
     /**
-     * Get 放射号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 放射号 
      * @return RadiationNum 放射号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRadiationNum() {
         return this.RadiationNum;
@@ -383,19 +327,15 @@ public class ReportInfo extends AbstractModel {
 
     /**
      * Set 放射号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RadiationNum 放射号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRadiationNum(String RadiationNum) {
         this.RadiationNum = RadiationNum;
     }
 
     /**
-     * Get 检验号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 检验号 
      * @return TestNum 检验号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTestNum() {
         return this.TestNum;
@@ -403,19 +343,15 @@ public class ReportInfo extends AbstractModel {
 
     /**
      * Set 检验号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TestNum 检验号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTestNum(String TestNum) {
         this.TestNum = TestNum;
     }
 
     /**
-     * Get 门诊号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 门诊号 
      * @return OutpatientNum 门诊号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOutpatientNum() {
         return this.OutpatientNum;
@@ -423,19 +359,15 @@ public class ReportInfo extends AbstractModel {
 
     /**
      * Set 门诊号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OutpatientNum 门诊号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutpatientNum(String OutpatientNum) {
         this.OutpatientNum = OutpatientNum;
     }
 
     /**
-     * Get 病理号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 病理号 
      * @return PathologyNum 病理号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPathologyNum() {
         return this.PathologyNum;
@@ -443,19 +375,15 @@ public class ReportInfo extends AbstractModel {
 
     /**
      * Set 病理号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PathologyNum 病理号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPathologyNum(String PathologyNum) {
         this.PathologyNum = PathologyNum;
     }
 
     /**
-     * Get 住院号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 住院号 
      * @return InHospitalNum 住院号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInHospitalNum() {
         return this.InHospitalNum;
@@ -463,19 +391,15 @@ public class ReportInfo extends AbstractModel {
 
     /**
      * Set 住院号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InHospitalNum 住院号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInHospitalNum(String InHospitalNum) {
         this.InHospitalNum = InHospitalNum;
     }
 
     /**
-     * Get 样本号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 样本号 
      * @return SampleNum 样本号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSampleNum() {
         return this.SampleNum;
@@ -483,19 +407,15 @@ public class ReportInfo extends AbstractModel {
 
     /**
      * Set 样本号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SampleNum 样本号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSampleNum(String SampleNum) {
         this.SampleNum = SampleNum;
     }
 
     /**
-     * Get 标本种类
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标本种类 
      * @return SampleType 标本种类
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSampleType() {
         return this.SampleType;
@@ -503,19 +423,15 @@ public class ReportInfo extends AbstractModel {
 
     /**
      * Set 标本种类
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SampleType 标本种类
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSampleType(String SampleType) {
         this.SampleType = SampleType;
     }
 
     /**
-     * Get 病历号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 病历号 
      * @return MedicalRecordNum 病历号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMedicalRecordNum() {
         return this.MedicalRecordNum;
@@ -523,19 +439,15 @@ public class ReportInfo extends AbstractModel {
 
     /**
      * Set 病历号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MedicalRecordNum 病历号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMedicalRecordNum(String MedicalRecordNum) {
         this.MedicalRecordNum = MedicalRecordNum;
     }
 
     /**
-     * Get 报告名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 报告名称 
      * @return ReportName 报告名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getReportName() {
         return this.ReportName;
@@ -543,19 +455,15 @@ public class ReportInfo extends AbstractModel {
 
     /**
      * Set 报告名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReportName 报告名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReportName(String ReportName) {
         this.ReportName = ReportName;
     }
 
     /**
-     * Get 超声号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 超声号 
      * @return UltraNum 超声号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUltraNum() {
         return this.UltraNum;
@@ -563,19 +471,15 @@ public class ReportInfo extends AbstractModel {
 
     /**
      * Set 超声号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UltraNum 超声号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUltraNum(String UltraNum) {
         this.UltraNum = UltraNum;
     }
 
     /**
-     * Get 临床诊断
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 临床诊断 
      * @return Diagnose 临床诊断
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDiagnose() {
         return this.Diagnose;
@@ -583,19 +487,15 @@ public class ReportInfo extends AbstractModel {
 
     /**
      * Set 临床诊断
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Diagnose 临床诊断
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiagnose(String Diagnose) {
         this.Diagnose = Diagnose;
     }
 
     /**
-     * Get 检查项目
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 检查项目 
      * @return CheckItem 检查项目
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCheckItem() {
         return this.CheckItem;
@@ -603,19 +503,15 @@ public class ReportInfo extends AbstractModel {
 
     /**
      * Set 检查项目
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CheckItem 检查项目
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCheckItem(String CheckItem) {
         this.CheckItem = CheckItem;
     }
 
     /**
-     * Get 检查方法
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 检查方法 
      * @return CheckMethod 检查方法
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCheckMethod() {
         return this.CheckMethod;
@@ -623,19 +519,15 @@ public class ReportInfo extends AbstractModel {
 
     /**
      * Set 检查方法
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CheckMethod 检查方法
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCheckMethod(String CheckMethod) {
         this.CheckMethod = CheckMethod;
     }
 
     /**
-     * Get 诊断时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 诊断时间 
      * @return DiagnoseTime 诊断时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDiagnoseTime() {
         return this.DiagnoseTime;
@@ -643,19 +535,15 @@ public class ReportInfo extends AbstractModel {
 
     /**
      * Set 诊断时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DiagnoseTime 诊断时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiagnoseTime(String DiagnoseTime) {
         this.DiagnoseTime = DiagnoseTime;
     }
 
     /**
-     * Get 体检号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 体检号 
      * @return HealthCheckupNum 体检号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHealthCheckupNum() {
         return this.HealthCheckupNum;
@@ -663,19 +551,15 @@ public class ReportInfo extends AbstractModel {
 
     /**
      * Set 体检号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HealthCheckupNum 体检号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHealthCheckupNum(String HealthCheckupNum) {
         this.HealthCheckupNum = HealthCheckupNum;
     }
 
     /**
-     * Get 其它时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 其它时间 
      * @return OtherTime 其它时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOtherTime() {
         return this.OtherTime;
@@ -683,19 +567,15 @@ public class ReportInfo extends AbstractModel {
 
     /**
      * Set 其它时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OtherTime 其它时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOtherTime(String OtherTime) {
         this.OtherTime = OtherTime;
     }
 
     /**
-     * Get 打印时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 打印时间 
      * @return PrintTime 打印时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPrintTime() {
         return this.PrintTime;
@@ -703,19 +583,15 @@ public class ReportInfo extends AbstractModel {
 
     /**
      * Set 打印时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PrintTime 打印时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPrintTime(String PrintTime) {
         this.PrintTime = PrintTime;
     }
 
     /**
-     * Get 未归类时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 未归类时间 
      * @return Times 未归类时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Time [] getTimes() {
         return this.Times;
@@ -723,19 +599,15 @@ public class ReportInfo extends AbstractModel {
 
     /**
      * Set 未归类时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Times 未归类时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimes(Time [] Times) {
         this.Times = Times;
     }
 
     /**
-     * Get 床号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 床号 
      * @return BedNo 床号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBedNo() {
         return this.BedNo;
@@ -743,9 +615,7 @@ public class ReportInfo extends AbstractModel {
 
     /**
      * Set 床号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BedNo 床号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBedNo(String BedNo) {
         this.BedNo = BedNo;

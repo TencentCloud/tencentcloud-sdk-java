@@ -25,7 +25,6 @@ public class Hospitalization extends AbstractModel {
 
     /**
     * 入院时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AdmissionTime")
     @Expose
@@ -33,7 +32,6 @@ public class Hospitalization extends AbstractModel {
 
     /**
     * 出院时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DischargeTime")
     @Expose
@@ -41,7 +39,6 @@ public class Hospitalization extends AbstractModel {
 
     /**
     * 住院天数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AdmissionDays")
     @Expose
@@ -57,7 +54,6 @@ public class Hospitalization extends AbstractModel {
 
     /**
     * 入院情况
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AdmissionCondition")
     @Expose
@@ -65,7 +61,6 @@ public class Hospitalization extends AbstractModel {
 
     /**
     * 诊疗经过
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiagnosisTreatment")
     @Expose
@@ -73,7 +68,6 @@ public class Hospitalization extends AbstractModel {
 
     /**
     * 出院诊断
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DischargeDiagnosis")
     @Expose
@@ -81,7 +75,6 @@ public class Hospitalization extends AbstractModel {
 
     /**
     * 出院医嘱
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DischargeInstruction")
     @Expose
@@ -89,7 +82,6 @@ public class Hospitalization extends AbstractModel {
 
     /**
     * 入院诊断
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AdmissionDiagnosis")
     @Expose
@@ -97,17 +89,14 @@ public class Hospitalization extends AbstractModel {
 
     /**
     * 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Page")
     @Expose
     private Long Page;
 
     /**
-     * Get 入院时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 入院时间 
      * @return AdmissionTime 入院时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAdmissionTime() {
         return this.AdmissionTime;
@@ -115,19 +104,15 @@ public class Hospitalization extends AbstractModel {
 
     /**
      * Set 入院时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AdmissionTime 入院时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAdmissionTime(String AdmissionTime) {
         this.AdmissionTime = AdmissionTime;
     }
 
     /**
-     * Get 出院时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 出院时间 
      * @return DischargeTime 出院时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDischargeTime() {
         return this.DischargeTime;
@@ -135,19 +120,15 @@ public class Hospitalization extends AbstractModel {
 
     /**
      * Set 出院时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DischargeTime 出院时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDischargeTime(String DischargeTime) {
         this.DischargeTime = DischargeTime;
     }
 
     /**
-     * Get 住院天数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 住院天数 
      * @return AdmissionDays 住院天数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAdmissionDays() {
         return this.AdmissionDays;
@@ -155,9 +136,7 @@ public class Hospitalization extends AbstractModel {
 
     /**
      * Set 住院天数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AdmissionDays 住院天数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAdmissionDays(String AdmissionDays) {
         this.AdmissionDays = AdmissionDays;
@@ -188,10 +167,8 @@ public class Hospitalization extends AbstractModel {
     }
 
     /**
-     * Get 入院情况
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 入院情况 
      * @return AdmissionCondition 入院情况
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAdmissionCondition() {
         return this.AdmissionCondition;
@@ -199,19 +176,15 @@ public class Hospitalization extends AbstractModel {
 
     /**
      * Set 入院情况
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AdmissionCondition 入院情况
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAdmissionCondition(String AdmissionCondition) {
         this.AdmissionCondition = AdmissionCondition;
     }
 
     /**
-     * Get 诊疗经过
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 诊疗经过 
      * @return DiagnosisTreatment 诊疗经过
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDiagnosisTreatment() {
         return this.DiagnosisTreatment;
@@ -219,19 +192,15 @@ public class Hospitalization extends AbstractModel {
 
     /**
      * Set 诊疗经过
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DiagnosisTreatment 诊疗经过
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiagnosisTreatment(String DiagnosisTreatment) {
         this.DiagnosisTreatment = DiagnosisTreatment;
     }
 
     /**
-     * Get 出院诊断
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 出院诊断 
      * @return DischargeDiagnosis 出院诊断
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDischargeDiagnosis() {
         return this.DischargeDiagnosis;
@@ -239,19 +208,15 @@ public class Hospitalization extends AbstractModel {
 
     /**
      * Set 出院诊断
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DischargeDiagnosis 出院诊断
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDischargeDiagnosis(String DischargeDiagnosis) {
         this.DischargeDiagnosis = DischargeDiagnosis;
     }
 
     /**
-     * Get 出院医嘱
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 出院医嘱 
      * @return DischargeInstruction 出院医嘱
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDischargeInstruction() {
         return this.DischargeInstruction;
@@ -259,19 +224,15 @@ public class Hospitalization extends AbstractModel {
 
     /**
      * Set 出院医嘱
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DischargeInstruction 出院医嘱
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDischargeInstruction(String DischargeInstruction) {
         this.DischargeInstruction = DischargeInstruction;
     }
 
     /**
-     * Get 入院诊断
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 入院诊断 
      * @return AdmissionDiagnosis 入院诊断
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAdmissionDiagnosis() {
         return this.AdmissionDiagnosis;
@@ -279,19 +240,15 @@ public class Hospitalization extends AbstractModel {
 
     /**
      * Set 入院诊断
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AdmissionDiagnosis 入院诊断
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAdmissionDiagnosis(String AdmissionDiagnosis) {
         this.AdmissionDiagnosis = AdmissionDiagnosis;
     }
 
     /**
-     * Get 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据在原PDF文件中的第几页 
      * @return Page 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPage() {
         return this.Page;
@@ -299,9 +256,7 @@ public class Hospitalization extends AbstractModel {
 
     /**
      * Set 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Page 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPage(Long Page) {
         this.Page = Page;

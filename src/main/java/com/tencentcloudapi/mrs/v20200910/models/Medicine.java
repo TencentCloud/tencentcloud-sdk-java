@@ -25,7 +25,6 @@ public class Medicine extends AbstractModel {
 
     /**
     * 药品名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -33,7 +32,6 @@ public class Medicine extends AbstractModel {
 
     /**
     * 商品名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TradeName")
     @Expose
@@ -41,7 +39,6 @@ public class Medicine extends AbstractModel {
 
     /**
     * 厂商
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Firm")
     @Expose
@@ -49,7 +46,6 @@ public class Medicine extends AbstractModel {
 
     /**
     * 医保类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Category")
     @Expose
@@ -57,7 +53,6 @@ public class Medicine extends AbstractModel {
 
     /**
     * 规格
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Specification")
     @Expose
@@ -65,7 +60,6 @@ public class Medicine extends AbstractModel {
 
     /**
     * 最小包装数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MinQuantity")
     @Expose
@@ -73,7 +67,6 @@ public class Medicine extends AbstractModel {
 
     /**
     * 最小制剂单位
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DosageUnit")
     @Expose
@@ -81,17 +74,14 @@ public class Medicine extends AbstractModel {
 
     /**
     * 最小包装单位
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PackingUnit")
     @Expose
     private String PackingUnit;
 
     /**
-     * Get 药品名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 药品名 
      * @return Name 药品名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -99,19 +89,15 @@ public class Medicine extends AbstractModel {
 
     /**
      * Set 药品名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 药品名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 商品名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 商品名 
      * @return TradeName 商品名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTradeName() {
         return this.TradeName;
@@ -119,19 +105,15 @@ public class Medicine extends AbstractModel {
 
     /**
      * Set 商品名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TradeName 商品名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTradeName(String TradeName) {
         this.TradeName = TradeName;
     }
 
     /**
-     * Get 厂商
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 厂商 
      * @return Firm 厂商
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFirm() {
         return this.Firm;
@@ -139,19 +121,15 @@ public class Medicine extends AbstractModel {
 
     /**
      * Set 厂商
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Firm 厂商
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFirm(String Firm) {
         this.Firm = Firm;
     }
 
     /**
-     * Get 医保类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 医保类型 
      * @return Category 医保类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCategory() {
         return this.Category;
@@ -159,19 +137,15 @@ public class Medicine extends AbstractModel {
 
     /**
      * Set 医保类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Category 医保类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCategory(String Category) {
         this.Category = Category;
     }
 
     /**
-     * Get 规格
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规格 
      * @return Specification 规格
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSpecification() {
         return this.Specification;
@@ -179,19 +153,15 @@ public class Medicine extends AbstractModel {
 
     /**
      * Set 规格
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Specification 规格
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSpecification(String Specification) {
         this.Specification = Specification;
     }
 
     /**
-     * Get 最小包装数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最小包装数量 
      * @return MinQuantity 最小包装数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMinQuantity() {
         return this.MinQuantity;
@@ -199,19 +169,15 @@ public class Medicine extends AbstractModel {
 
     /**
      * Set 最小包装数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MinQuantity 最小包装数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMinQuantity(String MinQuantity) {
         this.MinQuantity = MinQuantity;
     }
 
     /**
-     * Get 最小制剂单位
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最小制剂单位 
      * @return DosageUnit 最小制剂单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDosageUnit() {
         return this.DosageUnit;
@@ -219,19 +185,15 @@ public class Medicine extends AbstractModel {
 
     /**
      * Set 最小制剂单位
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DosageUnit 最小制剂单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDosageUnit(String DosageUnit) {
         this.DosageUnit = DosageUnit;
     }
 
     /**
-     * Get 最小包装单位
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最小包装单位 
      * @return PackingUnit 最小包装单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPackingUnit() {
         return this.PackingUnit;
@@ -239,9 +201,7 @@ public class Medicine extends AbstractModel {
 
     /**
      * Set 最小包装单位
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PackingUnit 最小包装单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPackingUnit(String PackingUnit) {
         this.PackingUnit = PackingUnit;

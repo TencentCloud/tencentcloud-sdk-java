@@ -25,7 +25,6 @@ public class EyeItem extends AbstractModel {
 
     /**
     * 左眼
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Left")
     @Expose
@@ -33,7 +32,6 @@ public class EyeItem extends AbstractModel {
 
     /**
     * 右眼
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Right")
     @Expose
@@ -41,17 +39,14 @@ public class EyeItem extends AbstractModel {
 
     /**
     * 瞳距
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Pd")
     @Expose
     private BaseItem2 Pd;
 
     /**
-     * Get 左眼
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 左眼 
      * @return Left 左眼
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public EyeChildItem getLeft() {
         return this.Left;
@@ -59,19 +54,15 @@ public class EyeItem extends AbstractModel {
 
     /**
      * Set 左眼
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Left 左眼
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLeft(EyeChildItem Left) {
         this.Left = Left;
     }
 
     /**
-     * Get 右眼
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 右眼 
      * @return Right 右眼
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public EyeChildItem getRight() {
         return this.Right;
@@ -79,19 +70,15 @@ public class EyeItem extends AbstractModel {
 
     /**
      * Set 右眼
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Right 右眼
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRight(EyeChildItem Right) {
         this.Right = Right;
     }
 
     /**
-     * Get 瞳距
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 瞳距 
      * @return Pd 瞳距
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BaseItem2 getPd() {
         return this.Pd;
@@ -99,9 +86,7 @@ public class EyeItem extends AbstractModel {
 
     /**
      * Set 瞳距
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Pd 瞳距
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPd(BaseItem2 Pd) {
         this.Pd = Pd;

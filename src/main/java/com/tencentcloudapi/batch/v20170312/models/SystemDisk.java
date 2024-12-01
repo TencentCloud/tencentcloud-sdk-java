@@ -63,6 +63,16 @@ public class SystemDisk extends AbstractModel {
     private String CdcId;
 
     /**
+    * 磁盘名称，长度不超过128 个字符。
+
+该参数正在邀测中，暂未开放使用。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DiskName")
+    @Expose
+    private String DiskName;
+
+    /**
      * Get 系统盘类型。系统盘类型限制详见[存储概述](https://cloud.tencent.com/document/product/213/4952)。取值范围：<br>
 <li>LOCAL_BASIC：本地硬盘</li>
 <li>LOCAL_SSD：本地SSD硬盘</li>
@@ -170,6 +180,34 @@ public class SystemDisk extends AbstractModel {
         this.CdcId = CdcId;
     }
 
+    /**
+     * Get 磁盘名称，长度不超过128 个字符。
+
+该参数正在邀测中，暂未开放使用。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DiskName 磁盘名称，长度不超过128 个字符。
+
+该参数正在邀测中，暂未开放使用。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDiskName() {
+        return this.DiskName;
+    }
+
+    /**
+     * Set 磁盘名称，长度不超过128 个字符。
+
+该参数正在邀测中，暂未开放使用。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DiskName 磁盘名称，长度不超过128 个字符。
+
+该参数正在邀测中，暂未开放使用。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDiskName(String DiskName) {
+        this.DiskName = DiskName;
+    }
+
     public SystemDisk() {
     }
 
@@ -190,6 +228,9 @@ public class SystemDisk extends AbstractModel {
         if (source.CdcId != null) {
             this.CdcId = new String(source.CdcId);
         }
+        if (source.DiskName != null) {
+            this.DiskName = new String(source.DiskName);
+        }
     }
 
 
@@ -201,6 +242,7 @@ public class SystemDisk extends AbstractModel {
         this.setParamSimple(map, prefix + "DiskId", this.DiskId);
         this.setParamSimple(map, prefix + "DiskSize", this.DiskSize);
         this.setParamSimple(map, prefix + "CdcId", this.CdcId);
+        this.setParamSimple(map, prefix + "DiskName", this.DiskName);
 
     }
 }

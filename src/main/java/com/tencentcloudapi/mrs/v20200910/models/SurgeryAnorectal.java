@@ -25,7 +25,6 @@ public class SurgeryAnorectal extends AbstractModel {
 
     /**
     * 肛门直肠总体描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Text")
     @Expose
@@ -33,7 +32,6 @@ public class SurgeryAnorectal extends AbstractModel {
 
     /**
     * 直肠指检
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DigitalRectalExamination")
     @Expose
@@ -41,17 +39,14 @@ public class SurgeryAnorectal extends AbstractModel {
 
     /**
     * 痔疮
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Hemorrhoid")
     @Expose
     private KeyValueItem Hemorrhoid;
 
     /**
-     * Get 肛门直肠总体描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 肛门直肠总体描述 
      * @return Text 肛门直肠总体描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public KeyValueItem getText() {
         return this.Text;
@@ -59,19 +54,15 @@ public class SurgeryAnorectal extends AbstractModel {
 
     /**
      * Set 肛门直肠总体描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Text 肛门直肠总体描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setText(KeyValueItem Text) {
         this.Text = Text;
     }
 
     /**
-     * Get 直肠指检
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 直肠指检 
      * @return DigitalRectalExamination 直肠指检
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public KeyValueItem getDigitalRectalExamination() {
         return this.DigitalRectalExamination;
@@ -79,19 +70,15 @@ public class SurgeryAnorectal extends AbstractModel {
 
     /**
      * Set 直肠指检
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DigitalRectalExamination 直肠指检
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDigitalRectalExamination(KeyValueItem DigitalRectalExamination) {
         this.DigitalRectalExamination = DigitalRectalExamination;
     }
 
     /**
-     * Get 痔疮
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 痔疮 
      * @return Hemorrhoid 痔疮
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public KeyValueItem getHemorrhoid() {
         return this.Hemorrhoid;
@@ -99,9 +86,7 @@ public class SurgeryAnorectal extends AbstractModel {
 
     /**
      * Set 痔疮
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Hemorrhoid 痔疮
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHemorrhoid(KeyValueItem Hemorrhoid) {
         this.Hemorrhoid = Hemorrhoid;

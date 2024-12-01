@@ -976,6 +976,17 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     }
 
     /**
+     *查询站点配置项导入结果接口，本接口用于站点配置导入接口（ImportZoneConfig）的结果查询。该功能仅支持标准版或企业版套餐的站点使用。
+     * @param req DescribeZoneConfigImportResultRequest
+     * @return DescribeZoneConfigImportResultResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeZoneConfigImportResultResponse DescribeZoneConfigImportResult(DescribeZoneConfigImportResultRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeZoneConfigImportResult", DescribeZoneConfigImportResultResponse.class);
+    }
+
+    /**
      *用于查询站点的所有配置信息。
      * @param req DescribeZoneSettingRequest
      * @return DescribeZoneSettingResponse
@@ -1038,6 +1049,17 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     }
 
     /**
+     *导出站点配置接口，本接口支持用户根据需要的配置项进行配置导出，导出的配置用于导入站点配置接口（ImportZoneConfig）进行配置导入。该功能仅支持标准版和企业版套餐站点使用。
+     * @param req ExportZoneConfigRequest
+     * @return ExportZoneConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public ExportZoneConfigResponse ExportZoneConfig(ExportZoneConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ExportZoneConfig", ExportZoneConfigResponse.class);
+    }
+
+    /**
      *操作边缘函数运行环境，支持环境变量的相关设置。
 设置环境变量后，可在函数代码中使用，具体参考 [边缘函数引入环境变量](https://cloud.tencent.com/document/product/1552/109151#0151fd9a-8b0e-407b-ae37-54553a60ded6)。
      * @param req HandleFunctionRuntimeEnvironmentRequest
@@ -1058,6 +1080,17 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     public IdentifyZoneResponse IdentifyZone(IdentifyZoneRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "IdentifyZone", IdentifyZoneResponse.class);
+    }
+
+    /**
+     *导入站点配置接口，本接口支持站点配置文件的快速导入，发起导入后接口会返回对应的任务 ID（TaskId），用户需通过查询站点配置导入结果接口（DescribeZoneConfigImportResult）获取本次导入任务执行的结果。该功能仅支持标准版和企业版套餐站点使用。
+     * @param req ImportZoneConfigRequest
+     * @return ImportZoneConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public ImportZoneConfigResponse ImportZoneConfig(ImportZoneConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ImportZoneConfig", ImportZoneConfigResponse.class);
     }
 
     /**

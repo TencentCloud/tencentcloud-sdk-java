@@ -25,7 +25,6 @@ public class PathologyReport extends AbstractModel {
 
     /**
     * 癌症部位
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CancerPart")
     @Expose
@@ -33,7 +32,6 @@ public class PathologyReport extends AbstractModel {
 
     /**
     * 癌症部位大小
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CancerSize")
     @Expose
@@ -41,7 +39,6 @@ public class PathologyReport extends AbstractModel {
 
     /**
     * 描述文本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DescText")
     @Expose
@@ -49,7 +46,6 @@ public class PathologyReport extends AbstractModel {
 
     /**
     * 组织学等级
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HistologyLevel")
     @Expose
@@ -57,7 +53,6 @@ public class PathologyReport extends AbstractModel {
 
     /**
     * 组织学类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HistologyType")
     @Expose
@@ -65,7 +60,6 @@ public class PathologyReport extends AbstractModel {
 
     /**
     * IHC信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IHC")
     @Expose
@@ -73,7 +67,6 @@ public class PathologyReport extends AbstractModel {
 
     /**
     * 浸润深度
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InfiltrationDepth")
     @Expose
@@ -81,7 +74,6 @@ public class PathologyReport extends AbstractModel {
 
     /**
     * 肿瘤扩散
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Invasive")
     @Expose
@@ -89,7 +81,6 @@ public class PathologyReport extends AbstractModel {
 
     /**
     * 淋巴结
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LymphNodes")
     @Expose
@@ -97,7 +88,6 @@ public class PathologyReport extends AbstractModel {
 
     /**
     * PTNM信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PTNM")
     @Expose
@@ -105,7 +95,6 @@ public class PathologyReport extends AbstractModel {
 
     /**
     * 病理报告类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PathologicalReportType")
     @Expose
@@ -113,7 +102,6 @@ public class PathologyReport extends AbstractModel {
 
     /**
     * 报告原文
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReportText")
     @Expose
@@ -121,7 +109,6 @@ public class PathologyReport extends AbstractModel {
 
     /**
     * 标本类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SampleType")
     @Expose
@@ -129,17 +116,14 @@ public class PathologyReport extends AbstractModel {
 
     /**
     * 结论文本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SummaryText")
     @Expose
     private String SummaryText;
 
     /**
-     * Get 癌症部位
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 癌症部位 
      * @return CancerPart 癌症部位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Part getCancerPart() {
         return this.CancerPart;
@@ -147,19 +131,15 @@ public class PathologyReport extends AbstractModel {
 
     /**
      * Set 癌症部位
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CancerPart 癌症部位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCancerPart(Part CancerPart) {
         this.CancerPart = CancerPart;
     }
 
     /**
-     * Get 癌症部位大小
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 癌症部位大小 
      * @return CancerSize 癌症部位大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Size [] getCancerSize() {
         return this.CancerSize;
@@ -167,19 +147,15 @@ public class PathologyReport extends AbstractModel {
 
     /**
      * Set 癌症部位大小
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CancerSize 癌症部位大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCancerSize(Size [] CancerSize) {
         this.CancerSize = CancerSize;
     }
 
     /**
-     * Get 描述文本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 描述文本 
      * @return DescText 描述文本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescText() {
         return this.DescText;
@@ -187,19 +163,15 @@ public class PathologyReport extends AbstractModel {
 
     /**
      * Set 描述文本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DescText 描述文本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescText(String DescText) {
         this.DescText = DescText;
     }
 
     /**
-     * Get 组织学等级
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 组织学等级 
      * @return HistologyLevel 组织学等级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public HistologyLevel getHistologyLevel() {
         return this.HistologyLevel;
@@ -207,19 +179,15 @@ public class PathologyReport extends AbstractModel {
 
     /**
      * Set 组织学等级
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HistologyLevel 组织学等级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHistologyLevel(HistologyLevel HistologyLevel) {
         this.HistologyLevel = HistologyLevel;
     }
 
     /**
-     * Get 组织学类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 组织学类型 
      * @return HistologyType 组织学类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public HistologyType getHistologyType() {
         return this.HistologyType;
@@ -227,19 +195,15 @@ public class PathologyReport extends AbstractModel {
 
     /**
      * Set 组织学类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HistologyType 组织学类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHistologyType(HistologyType HistologyType) {
         this.HistologyType = HistologyType;
     }
 
     /**
-     * Get IHC信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get IHC信息 
      * @return IHC IHC信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public IHCInfo [] getIHC() {
         return this.IHC;
@@ -247,19 +211,15 @@ public class PathologyReport extends AbstractModel {
 
     /**
      * Set IHC信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IHC IHC信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIHC(IHCInfo [] IHC) {
         this.IHC = IHC;
     }
 
     /**
-     * Get 浸润深度
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 浸润深度 
      * @return InfiltrationDepth 浸润深度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BlockInfo getInfiltrationDepth() {
         return this.InfiltrationDepth;
@@ -267,19 +227,15 @@ public class PathologyReport extends AbstractModel {
 
     /**
      * Set 浸润深度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InfiltrationDepth 浸润深度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInfiltrationDepth(BlockInfo InfiltrationDepth) {
         this.InfiltrationDepth = InfiltrationDepth;
     }
 
     /**
-     * Get 肿瘤扩散
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 肿瘤扩散 
      * @return Invasive 肿瘤扩散
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Invas [] getInvasive() {
         return this.Invasive;
@@ -287,19 +243,15 @@ public class PathologyReport extends AbstractModel {
 
     /**
      * Set 肿瘤扩散
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Invasive 肿瘤扩散
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInvasive(Invas [] Invasive) {
         this.Invasive = Invasive;
     }
 
     /**
-     * Get 淋巴结
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 淋巴结 
      * @return LymphNodes 淋巴结
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Lymph [] getLymphNodes() {
         return this.LymphNodes;
@@ -307,19 +259,15 @@ public class PathologyReport extends AbstractModel {
 
     /**
      * Set 淋巴结
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LymphNodes 淋巴结
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLymphNodes(Lymph [] LymphNodes) {
         this.LymphNodes = LymphNodes;
     }
 
     /**
-     * Get PTNM信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get PTNM信息 
      * @return PTNM PTNM信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BlockInfo getPTNM() {
         return this.PTNM;
@@ -327,19 +275,15 @@ public class PathologyReport extends AbstractModel {
 
     /**
      * Set PTNM信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PTNM PTNM信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPTNM(BlockInfo PTNM) {
         this.PTNM = PTNM;
     }
 
     /**
-     * Get 病理报告类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 病理报告类型 
      * @return PathologicalReportType 病理报告类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BlockInfo getPathologicalReportType() {
         return this.PathologicalReportType;
@@ -347,19 +291,15 @@ public class PathologyReport extends AbstractModel {
 
     /**
      * Set 病理报告类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PathologicalReportType 病理报告类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPathologicalReportType(BlockInfo PathologicalReportType) {
         this.PathologicalReportType = PathologicalReportType;
     }
 
     /**
-     * Get 报告原文
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 报告原文 
      * @return ReportText 报告原文
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getReportText() {
         return this.ReportText;
@@ -367,19 +307,15 @@ public class PathologyReport extends AbstractModel {
 
     /**
      * Set 报告原文
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReportText 报告原文
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReportText(String ReportText) {
         this.ReportText = ReportText;
     }
 
     /**
-     * Get 标本类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标本类型 
      * @return SampleType 标本类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BlockInfo getSampleType() {
         return this.SampleType;
@@ -387,19 +323,15 @@ public class PathologyReport extends AbstractModel {
 
     /**
      * Set 标本类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SampleType 标本类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSampleType(BlockInfo SampleType) {
         this.SampleType = SampleType;
     }
 
     /**
-     * Get 结论文本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 结论文本 
      * @return SummaryText 结论文本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSummaryText() {
         return this.SummaryText;
@@ -407,9 +339,7 @@ public class PathologyReport extends AbstractModel {
 
     /**
      * Set 结论文本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SummaryText 结论文本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSummaryText(String SummaryText) {
         this.SummaryText = SummaryText;

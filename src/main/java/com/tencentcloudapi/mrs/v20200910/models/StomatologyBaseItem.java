@@ -25,7 +25,6 @@ public class StomatologyBaseItem extends AbstractModel {
 
     /**
     * 龋齿
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ToothDecay")
     @Expose
@@ -33,7 +32,6 @@ public class StomatologyBaseItem extends AbstractModel {
 
     /**
     * 牙龈
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Gingiva")
     @Expose
@@ -41,7 +39,6 @@ public class StomatologyBaseItem extends AbstractModel {
 
     /**
     * 牙周
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Periodontics")
     @Expose
@@ -49,7 +46,6 @@ public class StomatologyBaseItem extends AbstractModel {
 
     /**
     * 口腔其他
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Others")
     @Expose
@@ -57,17 +53,14 @@ public class StomatologyBaseItem extends AbstractModel {
 
     /**
     * 小结
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BriefSummary")
     @Expose
     private StomatologyBriefSummary BriefSummary;
 
     /**
-     * Get 龋齿
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 龋齿 
      * @return ToothDecay 龋齿
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public StomatologyToothDecay getToothDecay() {
         return this.ToothDecay;
@@ -75,19 +68,15 @@ public class StomatologyBaseItem extends AbstractModel {
 
     /**
      * Set 龋齿
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ToothDecay 龋齿
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setToothDecay(StomatologyToothDecay ToothDecay) {
         this.ToothDecay = ToothDecay;
     }
 
     /**
-     * Get 牙龈
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 牙龈 
      * @return Gingiva 牙龈
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public StomatologyGingiva getGingiva() {
         return this.Gingiva;
@@ -95,19 +84,15 @@ public class StomatologyBaseItem extends AbstractModel {
 
     /**
      * Set 牙龈
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Gingiva 牙龈
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGingiva(StomatologyGingiva Gingiva) {
         this.Gingiva = Gingiva;
     }
 
     /**
-     * Get 牙周
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 牙周 
      * @return Periodontics 牙周
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public StomatologyPeriodontics getPeriodontics() {
         return this.Periodontics;
@@ -115,19 +100,15 @@ public class StomatologyBaseItem extends AbstractModel {
 
     /**
      * Set 牙周
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Periodontics 牙周
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPeriodontics(StomatologyPeriodontics Periodontics) {
         this.Periodontics = Periodontics;
     }
 
     /**
-     * Get 口腔其他
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 口腔其他 
      * @return Others 口腔其他
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public KeyValueItem [] getOthers() {
         return this.Others;
@@ -135,19 +116,15 @@ public class StomatologyBaseItem extends AbstractModel {
 
     /**
      * Set 口腔其他
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Others 口腔其他
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOthers(KeyValueItem [] Others) {
         this.Others = Others;
     }
 
     /**
-     * Get 小结
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 小结 
      * @return BriefSummary 小结
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public StomatologyBriefSummary getBriefSummary() {
         return this.BriefSummary;
@@ -155,9 +132,7 @@ public class StomatologyBaseItem extends AbstractModel {
 
     /**
      * Set 小结
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BriefSummary 小结
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBriefSummary(StomatologyBriefSummary BriefSummary) {
         this.BriefSummary = BriefSummary;

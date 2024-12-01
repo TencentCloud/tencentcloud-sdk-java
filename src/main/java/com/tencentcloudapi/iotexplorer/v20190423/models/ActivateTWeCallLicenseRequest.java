@@ -31,7 +31,7 @@ public class ActivateTWeCallLicenseRequest extends AbstractModel {
     private Long PkgType;
 
     /**
-    * appId
+    * 参数已弃用，不用传参
     */
     @SerializedName("MiniProgramAppId")
     @Expose
@@ -61,17 +61,21 @@ public class ActivateTWeCallLicenseRequest extends AbstractModel {
     }
 
     /**
-     * Get appId 
-     * @return MiniProgramAppId appId
+     * Get 参数已弃用，不用传参 
+     * @return MiniProgramAppId 参数已弃用，不用传参
+     * @deprecated
      */
+    @Deprecated
     public String getMiniProgramAppId() {
         return this.MiniProgramAppId;
     }
 
     /**
-     * Set appId
-     * @param MiniProgramAppId appId
+     * Set 参数已弃用，不用传参
+     * @param MiniProgramAppId 参数已弃用，不用传参
+     * @deprecated
      */
+    @Deprecated
     public void setMiniProgramAppId(String MiniProgramAppId) {
         this.MiniProgramAppId = MiniProgramAppId;
     }

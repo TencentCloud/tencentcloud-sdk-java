@@ -25,7 +25,6 @@ public class PatientInfo extends AbstractModel {
 
     /**
     * 患者姓名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -33,7 +32,6 @@ public class PatientInfo extends AbstractModel {
 
     /**
     * 患者性别
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Sex")
     @Expose
@@ -41,7 +39,6 @@ public class PatientInfo extends AbstractModel {
 
     /**
     * 患者年龄
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Age")
     @Expose
@@ -49,7 +46,6 @@ public class PatientInfo extends AbstractModel {
 
     /**
     * 患者手机号码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Phone")
     @Expose
@@ -57,7 +53,6 @@ public class PatientInfo extends AbstractModel {
 
     /**
     * 患者地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Address")
     @Expose
@@ -65,7 +60,6 @@ public class PatientInfo extends AbstractModel {
 
     /**
     * 患者身份证
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IdCard")
     @Expose
@@ -73,7 +67,6 @@ public class PatientInfo extends AbstractModel {
 
     /**
     * 健康卡号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HealthCardNo")
     @Expose
@@ -81,7 +74,6 @@ public class PatientInfo extends AbstractModel {
 
     /**
     * 社保卡号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SocialSecurityCardNo")
     @Expose
@@ -89,7 +81,6 @@ public class PatientInfo extends AbstractModel {
 
     /**
     * 出生日期
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Birthday")
     @Expose
@@ -97,7 +88,6 @@ public class PatientInfo extends AbstractModel {
 
     /**
     * 民族
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Ethnicity")
     @Expose
@@ -105,7 +95,6 @@ public class PatientInfo extends AbstractModel {
 
     /**
     * 婚姻状况
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Married")
     @Expose
@@ -113,7 +102,6 @@ public class PatientInfo extends AbstractModel {
 
     /**
     * 职业
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Profession")
     @Expose
@@ -121,7 +109,6 @@ public class PatientInfo extends AbstractModel {
 
     /**
     * 教育程度
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EducationBackground")
     @Expose
@@ -129,7 +116,6 @@ public class PatientInfo extends AbstractModel {
 
     /**
     * 国籍
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Nationality")
     @Expose
@@ -137,7 +123,6 @@ public class PatientInfo extends AbstractModel {
 
     /**
     * 籍贯
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BirthPlace")
     @Expose
@@ -145,7 +130,6 @@ public class PatientInfo extends AbstractModel {
 
     /**
     * 医保类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MedicalInsuranceType")
     @Expose
@@ -153,7 +137,6 @@ public class PatientInfo extends AbstractModel {
 
     /**
     * 标准化年龄
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AgeNorm")
     @Expose
@@ -169,7 +152,6 @@ public class PatientInfo extends AbstractModel {
 
     /**
     * 婚姻代码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MarriedCode")
     @Expose
@@ -177,7 +159,6 @@ public class PatientInfo extends AbstractModel {
 
     /**
     * 职业代码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProfessionCode")
     @Expose
@@ -185,7 +166,6 @@ public class PatientInfo extends AbstractModel {
 
     /**
     * 居民医保代码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MedicalInsuranceTypeCode")
     @Expose
@@ -193,17 +173,14 @@ public class PatientInfo extends AbstractModel {
 
     /**
     * 床号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BedNo")
     @Expose
     private String BedNo;
 
     /**
-     * Get 患者姓名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 患者姓名 
      * @return Name 患者姓名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -211,19 +188,15 @@ public class PatientInfo extends AbstractModel {
 
     /**
      * Set 患者姓名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 患者姓名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 患者性别
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 患者性别 
      * @return Sex 患者性别
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSex() {
         return this.Sex;
@@ -231,19 +204,15 @@ public class PatientInfo extends AbstractModel {
 
     /**
      * Set 患者性别
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Sex 患者性别
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSex(String Sex) {
         this.Sex = Sex;
     }
 
     /**
-     * Get 患者年龄
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 患者年龄 
      * @return Age 患者年龄
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAge() {
         return this.Age;
@@ -251,19 +220,15 @@ public class PatientInfo extends AbstractModel {
 
     /**
      * Set 患者年龄
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Age 患者年龄
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAge(String Age) {
         this.Age = Age;
     }
 
     /**
-     * Get 患者手机号码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 患者手机号码 
      * @return Phone 患者手机号码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPhone() {
         return this.Phone;
@@ -271,19 +236,15 @@ public class PatientInfo extends AbstractModel {
 
     /**
      * Set 患者手机号码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Phone 患者手机号码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPhone(String Phone) {
         this.Phone = Phone;
     }
 
     /**
-     * Get 患者地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 患者地址 
      * @return Address 患者地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAddress() {
         return this.Address;
@@ -291,19 +252,15 @@ public class PatientInfo extends AbstractModel {
 
     /**
      * Set 患者地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Address 患者地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAddress(String Address) {
         this.Address = Address;
     }
 
     /**
-     * Get 患者身份证
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 患者身份证 
      * @return IdCard 患者身份证
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIdCard() {
         return this.IdCard;
@@ -311,19 +268,15 @@ public class PatientInfo extends AbstractModel {
 
     /**
      * Set 患者身份证
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IdCard 患者身份证
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIdCard(String IdCard) {
         this.IdCard = IdCard;
     }
 
     /**
-     * Get 健康卡号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 健康卡号 
      * @return HealthCardNo 健康卡号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHealthCardNo() {
         return this.HealthCardNo;
@@ -331,19 +284,15 @@ public class PatientInfo extends AbstractModel {
 
     /**
      * Set 健康卡号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HealthCardNo 健康卡号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHealthCardNo(String HealthCardNo) {
         this.HealthCardNo = HealthCardNo;
     }
 
     /**
-     * Get 社保卡号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 社保卡号 
      * @return SocialSecurityCardNo 社保卡号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSocialSecurityCardNo() {
         return this.SocialSecurityCardNo;
@@ -351,19 +300,15 @@ public class PatientInfo extends AbstractModel {
 
     /**
      * Set 社保卡号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SocialSecurityCardNo 社保卡号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSocialSecurityCardNo(String SocialSecurityCardNo) {
         this.SocialSecurityCardNo = SocialSecurityCardNo;
     }
 
     /**
-     * Get 出生日期
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 出生日期 
      * @return Birthday 出生日期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBirthday() {
         return this.Birthday;
@@ -371,19 +316,15 @@ public class PatientInfo extends AbstractModel {
 
     /**
      * Set 出生日期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Birthday 出生日期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBirthday(String Birthday) {
         this.Birthday = Birthday;
     }
 
     /**
-     * Get 民族
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 民族 
      * @return Ethnicity 民族
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEthnicity() {
         return this.Ethnicity;
@@ -391,19 +332,15 @@ public class PatientInfo extends AbstractModel {
 
     /**
      * Set 民族
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Ethnicity 民族
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEthnicity(String Ethnicity) {
         this.Ethnicity = Ethnicity;
     }
 
     /**
-     * Get 婚姻状况
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 婚姻状况 
      * @return Married 婚姻状况
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMarried() {
         return this.Married;
@@ -411,19 +348,15 @@ public class PatientInfo extends AbstractModel {
 
     /**
      * Set 婚姻状况
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Married 婚姻状况
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMarried(String Married) {
         this.Married = Married;
     }
 
     /**
-     * Get 职业
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 职业 
      * @return Profession 职业
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProfession() {
         return this.Profession;
@@ -431,19 +364,15 @@ public class PatientInfo extends AbstractModel {
 
     /**
      * Set 职业
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Profession 职业
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProfession(String Profession) {
         this.Profession = Profession;
     }
 
     /**
-     * Get 教育程度
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 教育程度 
      * @return EducationBackground 教育程度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEducationBackground() {
         return this.EducationBackground;
@@ -451,19 +380,15 @@ public class PatientInfo extends AbstractModel {
 
     /**
      * Set 教育程度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EducationBackground 教育程度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEducationBackground(String EducationBackground) {
         this.EducationBackground = EducationBackground;
     }
 
     /**
-     * Get 国籍
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 国籍 
      * @return Nationality 国籍
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNationality() {
         return this.Nationality;
@@ -471,19 +396,15 @@ public class PatientInfo extends AbstractModel {
 
     /**
      * Set 国籍
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Nationality 国籍
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNationality(String Nationality) {
         this.Nationality = Nationality;
     }
 
     /**
-     * Get 籍贯
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 籍贯 
      * @return BirthPlace 籍贯
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBirthPlace() {
         return this.BirthPlace;
@@ -491,19 +412,15 @@ public class PatientInfo extends AbstractModel {
 
     /**
      * Set 籍贯
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BirthPlace 籍贯
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBirthPlace(String BirthPlace) {
         this.BirthPlace = BirthPlace;
     }
 
     /**
-     * Get 医保类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 医保类型 
      * @return MedicalInsuranceType 医保类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMedicalInsuranceType() {
         return this.MedicalInsuranceType;
@@ -511,19 +428,15 @@ public class PatientInfo extends AbstractModel {
 
     /**
      * Set 医保类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MedicalInsuranceType 医保类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMedicalInsuranceType(String MedicalInsuranceType) {
         this.MedicalInsuranceType = MedicalInsuranceType;
     }
 
     /**
-     * Get 标准化年龄
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标准化年龄 
      * @return AgeNorm 标准化年龄
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAgeNorm() {
         return this.AgeNorm;
@@ -531,9 +444,7 @@ public class PatientInfo extends AbstractModel {
 
     /**
      * Set 标准化年龄
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AgeNorm 标准化年龄
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAgeNorm(String AgeNorm) {
         this.AgeNorm = AgeNorm;
@@ -564,10 +475,8 @@ public class PatientInfo extends AbstractModel {
     }
 
     /**
-     * Get 婚姻代码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 婚姻代码 
      * @return MarriedCode 婚姻代码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMarriedCode() {
         return this.MarriedCode;
@@ -575,19 +484,15 @@ public class PatientInfo extends AbstractModel {
 
     /**
      * Set 婚姻代码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MarriedCode 婚姻代码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMarriedCode(String MarriedCode) {
         this.MarriedCode = MarriedCode;
     }
 
     /**
-     * Get 职业代码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 职业代码 
      * @return ProfessionCode 职业代码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProfessionCode() {
         return this.ProfessionCode;
@@ -595,19 +500,15 @@ public class PatientInfo extends AbstractModel {
 
     /**
      * Set 职业代码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProfessionCode 职业代码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProfessionCode(String ProfessionCode) {
         this.ProfessionCode = ProfessionCode;
     }
 
     /**
-     * Get 居民医保代码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 居民医保代码 
      * @return MedicalInsuranceTypeCode 居民医保代码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMedicalInsuranceTypeCode() {
         return this.MedicalInsuranceTypeCode;
@@ -615,19 +516,15 @@ public class PatientInfo extends AbstractModel {
 
     /**
      * Set 居民医保代码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MedicalInsuranceTypeCode 居民医保代码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMedicalInsuranceTypeCode(String MedicalInsuranceTypeCode) {
         this.MedicalInsuranceTypeCode = MedicalInsuranceTypeCode;
     }
 
     /**
-     * Get 床号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 床号 
      * @return BedNo 床号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBedNo() {
         return this.BedNo;
@@ -635,9 +532,7 @@ public class PatientInfo extends AbstractModel {
 
     /**
      * Set 床号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BedNo 床号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBedNo(String BedNo) {
         this.BedNo = BedNo;

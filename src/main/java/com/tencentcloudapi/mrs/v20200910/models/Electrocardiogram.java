@@ -25,7 +25,6 @@ public class Electrocardiogram extends AbstractModel {
 
     /**
     * 心电图详情
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EcgDescription")
     @Expose
@@ -33,7 +32,6 @@ public class Electrocardiogram extends AbstractModel {
 
     /**
     * 心电图诊断
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EcgDiagnosis")
     @Expose
@@ -41,17 +39,14 @@ public class Electrocardiogram extends AbstractModel {
 
     /**
     * 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Page")
     @Expose
     private Long Page;
 
     /**
-     * Get 心电图详情
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 心电图详情 
      * @return EcgDescription 心电图详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public EcgDescription getEcgDescription() {
         return this.EcgDescription;
@@ -59,19 +54,15 @@ public class Electrocardiogram extends AbstractModel {
 
     /**
      * Set 心电图详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EcgDescription 心电图详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEcgDescription(EcgDescription EcgDescription) {
         this.EcgDescription = EcgDescription;
     }
 
     /**
-     * Get 心电图诊断
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 心电图诊断 
      * @return EcgDiagnosis 心电图诊断
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public EcgDiagnosis getEcgDiagnosis() {
         return this.EcgDiagnosis;
@@ -79,19 +70,15 @@ public class Electrocardiogram extends AbstractModel {
 
     /**
      * Set 心电图诊断
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EcgDiagnosis 心电图诊断
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEcgDiagnosis(EcgDiagnosis EcgDiagnosis) {
         this.EcgDiagnosis = EcgDiagnosis;
     }
 
     /**
-     * Get 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据在原PDF文件中的第几页 
      * @return Page 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPage() {
         return this.Page;
@@ -99,9 +86,7 @@ public class Electrocardiogram extends AbstractModel {
 
     /**
      * Set 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Page 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPage(Long Page) {
         this.Page = Page;

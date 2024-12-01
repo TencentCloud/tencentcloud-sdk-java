@@ -25,17 +25,14 @@ public class OphthalmologyFundoscopy extends AbstractModel {
 
     /**
     * 眼底检查总体描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Text")
     @Expose
     private KeyValueItem Text;
 
     /**
-     * Get 眼底检查总体描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 眼底检查总体描述 
      * @return Text 眼底检查总体描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public KeyValueItem getText() {
         return this.Text;
@@ -43,9 +40,7 @@ public class OphthalmologyFundoscopy extends AbstractModel {
 
     /**
      * Set 眼底检查总体描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Text 眼底检查总体描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setText(KeyValueItem Text) {
         this.Text = Text;

@@ -25,7 +25,6 @@ public class TimelineEvent extends AbstractModel {
 
     /**
     * 事件类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -33,7 +32,6 @@ public class TimelineEvent extends AbstractModel {
 
     /**
     * 原文本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Src")
     @Expose
@@ -41,7 +39,6 @@ public class TimelineEvent extends AbstractModel {
 
     /**
     * 事件子类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubType")
     @Expose
@@ -49,7 +46,6 @@ public class TimelineEvent extends AbstractModel {
 
     /**
     * 事件发生时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Time")
     @Expose
@@ -57,7 +53,6 @@ public class TimelineEvent extends AbstractModel {
 
     /**
     * 事件值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Value")
     @Expose
@@ -65,7 +60,6 @@ public class TimelineEvent extends AbstractModel {
 
     /**
     * 位置坐标
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Rectangle")
     @Expose
@@ -73,7 +67,6 @@ public class TimelineEvent extends AbstractModel {
 
     /**
     * 事件发生地点
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Place")
     @Expose
@@ -81,17 +74,14 @@ public class TimelineEvent extends AbstractModel {
 
     /**
     * 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-     * Get 事件类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 事件类型 
      * @return Type 事件类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
         return this.Type;
@@ -99,19 +89,15 @@ public class TimelineEvent extends AbstractModel {
 
     /**
      * Set 事件类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 事件类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 原文本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 原文本 
      * @return Src 原文本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSrc() {
         return this.Src;
@@ -119,19 +105,15 @@ public class TimelineEvent extends AbstractModel {
 
     /**
      * Set 原文本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Src 原文本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSrc(String Src) {
         this.Src = Src;
     }
 
     /**
-     * Get 事件子类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 事件子类型 
      * @return SubType 事件子类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubType() {
         return this.SubType;
@@ -139,19 +121,15 @@ public class TimelineEvent extends AbstractModel {
 
     /**
      * Set 事件子类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubType 事件子类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubType(String SubType) {
         this.SubType = SubType;
     }
 
     /**
-     * Get 事件发生时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 事件发生时间 
      * @return Time 事件发生时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTime() {
         return this.Time;
@@ -159,19 +137,15 @@ public class TimelineEvent extends AbstractModel {
 
     /**
      * Set 事件发生时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Time 事件发生时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTime(String Time) {
         this.Time = Time;
     }
 
     /**
-     * Get 事件值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 事件值 
      * @return Value 事件值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getValue() {
         return this.Value;
@@ -179,19 +153,15 @@ public class TimelineEvent extends AbstractModel {
 
     /**
      * Set 事件值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Value 事件值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValue(String Value) {
         this.Value = Value;
     }
 
     /**
-     * Get 位置坐标
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 位置坐标 
      * @return Rectangle 位置坐标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Rectangle getRectangle() {
         return this.Rectangle;
@@ -199,19 +169,15 @@ public class TimelineEvent extends AbstractModel {
 
     /**
      * Set 位置坐标
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Rectangle 位置坐标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRectangle(Rectangle Rectangle) {
         this.Rectangle = Rectangle;
     }
 
     /**
-     * Get 事件发生地点
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 事件发生地点 
      * @return Place 事件发生地点
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPlace() {
         return this.Place;
@@ -219,19 +185,15 @@ public class TimelineEvent extends AbstractModel {
 
     /**
      * Set 事件发生地点
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Place 事件发生地点
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPlace(String Place) {
         this.Place = Place;
     }
 
     /**
-     * Get 结束时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 结束时间 
      * @return EndTime 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEndTime() {
         return this.EndTime;
@@ -239,9 +201,7 @@ public class TimelineEvent extends AbstractModel {
 
     /**
      * Set 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EndTime 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

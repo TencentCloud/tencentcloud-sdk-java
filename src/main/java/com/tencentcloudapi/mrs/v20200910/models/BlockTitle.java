@@ -25,7 +25,6 @@ public class BlockTitle extends AbstractModel {
 
     /**
     * name
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -33,7 +32,6 @@ public class BlockTitle extends AbstractModel {
 
     /**
     * src
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Src")
     @Expose
@@ -41,17 +39,14 @@ public class BlockTitle extends AbstractModel {
 
     /**
     * value
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Value")
     @Expose
     private String Value;
 
     /**
-     * Get name
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get name 
      * @return Name name
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -59,19 +54,15 @@ public class BlockTitle extends AbstractModel {
 
     /**
      * Set name
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name name
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get src
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get src 
      * @return Src src
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSrc() {
         return this.Src;
@@ -79,19 +70,15 @@ public class BlockTitle extends AbstractModel {
 
     /**
      * Set src
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Src src
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSrc(String Src) {
         this.Src = Src;
     }
 
     /**
-     * Get value
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get value 
      * @return Value value
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getValue() {
         return this.Value;
@@ -99,9 +86,7 @@ public class BlockTitle extends AbstractModel {
 
     /**
      * Set value
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Value value
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValue(String Value) {
         this.Value = Value;

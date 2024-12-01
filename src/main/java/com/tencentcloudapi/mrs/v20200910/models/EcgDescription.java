@@ -25,7 +25,6 @@ public class EcgDescription extends AbstractModel {
 
     /**
     * 心率
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HeartRate")
     @Expose
@@ -33,7 +32,6 @@ public class EcgDescription extends AbstractModel {
 
     /**
     * 心房率
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AuricularRate")
     @Expose
@@ -41,7 +39,6 @@ public class EcgDescription extends AbstractModel {
 
     /**
     * 心室率
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VentricularRate")
     @Expose
@@ -49,7 +46,6 @@ public class EcgDescription extends AbstractModel {
 
     /**
     * 节律
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Rhythm")
     @Expose
@@ -57,7 +53,6 @@ public class EcgDescription extends AbstractModel {
 
     /**
     * P波时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PDuration")
     @Expose
@@ -65,7 +60,6 @@ public class EcgDescription extends AbstractModel {
 
     /**
     * QRS时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("QrsDuration")
     @Expose
@@ -73,7 +67,6 @@ public class EcgDescription extends AbstractModel {
 
     /**
     * QRS电轴
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("QrsAxis")
     @Expose
@@ -81,7 +74,6 @@ public class EcgDescription extends AbstractModel {
 
     /**
     * P-R间期
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PRInterval")
     @Expose
@@ -89,7 +81,6 @@ public class EcgDescription extends AbstractModel {
 
     /**
     * P-P间期
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PPInterval")
     @Expose
@@ -97,7 +88,6 @@ public class EcgDescription extends AbstractModel {
 
     /**
     * R-R间期
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RRInterval")
     @Expose
@@ -105,7 +95,6 @@ public class EcgDescription extends AbstractModel {
 
     /**
     * P-J间期
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PJInterval")
     @Expose
@@ -113,7 +102,6 @@ public class EcgDescription extends AbstractModel {
 
     /**
     * Q-T间期
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("QTInterval")
     @Expose
@@ -121,7 +109,6 @@ public class EcgDescription extends AbstractModel {
 
     /**
     * qt/qtc间期
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("QTCInterval")
     @Expose
@@ -129,7 +116,6 @@ public class EcgDescription extends AbstractModel {
 
     /**
     * RV5/SV1振幅
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Rv5SV1Amplitude")
     @Expose
@@ -137,7 +123,6 @@ public class EcgDescription extends AbstractModel {
 
     /**
     * RV5+SV1振幅
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Rv5AddSV1Amplitude")
     @Expose
@@ -145,7 +130,6 @@ public class EcgDescription extends AbstractModel {
 
     /**
     * PRT电轴
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PRTAxis")
     @Expose
@@ -153,7 +137,6 @@ public class EcgDescription extends AbstractModel {
 
     /**
     * RV5振幅
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Rv5Amplitude")
     @Expose
@@ -161,7 +144,6 @@ public class EcgDescription extends AbstractModel {
 
     /**
     * SV1振幅
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SV1Amplitude")
     @Expose
@@ -169,7 +151,6 @@ public class EcgDescription extends AbstractModel {
 
     /**
     * RV6/SV2
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RV6SV2")
     @Expose
@@ -177,17 +158,14 @@ public class EcgDescription extends AbstractModel {
 
     /**
     * P/QRS/T电轴
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PQRSTAxis")
     @Expose
     private EcgItem PQRSTAxis;
 
     /**
-     * Get 心率
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 心率 
      * @return HeartRate 心率
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public EcgItem getHeartRate() {
         return this.HeartRate;
@@ -195,19 +173,15 @@ public class EcgDescription extends AbstractModel {
 
     /**
      * Set 心率
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HeartRate 心率
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHeartRate(EcgItem HeartRate) {
         this.HeartRate = HeartRate;
     }
 
     /**
-     * Get 心房率
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 心房率 
      * @return AuricularRate 心房率
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public EcgItem getAuricularRate() {
         return this.AuricularRate;
@@ -215,19 +189,15 @@ public class EcgDescription extends AbstractModel {
 
     /**
      * Set 心房率
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AuricularRate 心房率
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAuricularRate(EcgItem AuricularRate) {
         this.AuricularRate = AuricularRate;
     }
 
     /**
-     * Get 心室率
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 心室率 
      * @return VentricularRate 心室率
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public EcgItem getVentricularRate() {
         return this.VentricularRate;
@@ -235,19 +205,15 @@ public class EcgDescription extends AbstractModel {
 
     /**
      * Set 心室率
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VentricularRate 心室率
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVentricularRate(EcgItem VentricularRate) {
         this.VentricularRate = VentricularRate;
     }
 
     /**
-     * Get 节律
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 节律 
      * @return Rhythm 节律
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public EcgItem getRhythm() {
         return this.Rhythm;
@@ -255,19 +221,15 @@ public class EcgDescription extends AbstractModel {
 
     /**
      * Set 节律
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Rhythm 节律
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRhythm(EcgItem Rhythm) {
         this.Rhythm = Rhythm;
     }
 
     /**
-     * Get P波时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get P波时间 
      * @return PDuration P波时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public EcgItem getPDuration() {
         return this.PDuration;
@@ -275,19 +237,15 @@ public class EcgDescription extends AbstractModel {
 
     /**
      * Set P波时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PDuration P波时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPDuration(EcgItem PDuration) {
         this.PDuration = PDuration;
     }
 
     /**
-     * Get QRS时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get QRS时间 
      * @return QrsDuration QRS时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public EcgItem getQrsDuration() {
         return this.QrsDuration;
@@ -295,19 +253,15 @@ public class EcgDescription extends AbstractModel {
 
     /**
      * Set QRS时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param QrsDuration QRS时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQrsDuration(EcgItem QrsDuration) {
         this.QrsDuration = QrsDuration;
     }
 
     /**
-     * Get QRS电轴
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get QRS电轴 
      * @return QrsAxis QRS电轴
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public EcgItem getQrsAxis() {
         return this.QrsAxis;
@@ -315,19 +269,15 @@ public class EcgDescription extends AbstractModel {
 
     /**
      * Set QRS电轴
-注意：此字段可能返回 null，表示取不到有效值。
      * @param QrsAxis QRS电轴
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQrsAxis(EcgItem QrsAxis) {
         this.QrsAxis = QrsAxis;
     }
 
     /**
-     * Get P-R间期
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get P-R间期 
      * @return PRInterval P-R间期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public EcgItem getPRInterval() {
         return this.PRInterval;
@@ -335,19 +285,15 @@ public class EcgDescription extends AbstractModel {
 
     /**
      * Set P-R间期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PRInterval P-R间期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPRInterval(EcgItem PRInterval) {
         this.PRInterval = PRInterval;
     }
 
     /**
-     * Get P-P间期
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get P-P间期 
      * @return PPInterval P-P间期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public EcgItem getPPInterval() {
         return this.PPInterval;
@@ -355,19 +301,15 @@ public class EcgDescription extends AbstractModel {
 
     /**
      * Set P-P间期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PPInterval P-P间期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPPInterval(EcgItem PPInterval) {
         this.PPInterval = PPInterval;
     }
 
     /**
-     * Get R-R间期
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get R-R间期 
      * @return RRInterval R-R间期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public EcgItem getRRInterval() {
         return this.RRInterval;
@@ -375,19 +317,15 @@ public class EcgDescription extends AbstractModel {
 
     /**
      * Set R-R间期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RRInterval R-R间期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRRInterval(EcgItem RRInterval) {
         this.RRInterval = RRInterval;
     }
 
     /**
-     * Get P-J间期
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get P-J间期 
      * @return PJInterval P-J间期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public EcgItem getPJInterval() {
         return this.PJInterval;
@@ -395,19 +333,15 @@ public class EcgDescription extends AbstractModel {
 
     /**
      * Set P-J间期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PJInterval P-J间期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPJInterval(EcgItem PJInterval) {
         this.PJInterval = PJInterval;
     }
 
     /**
-     * Get Q-T间期
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Q-T间期 
      * @return QTInterval Q-T间期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public EcgItem getQTInterval() {
         return this.QTInterval;
@@ -415,19 +349,15 @@ public class EcgDescription extends AbstractModel {
 
     /**
      * Set Q-T间期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param QTInterval Q-T间期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQTInterval(EcgItem QTInterval) {
         this.QTInterval = QTInterval;
     }
 
     /**
-     * Get qt/qtc间期
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get qt/qtc间期 
      * @return QTCInterval qt/qtc间期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public EcgItem getQTCInterval() {
         return this.QTCInterval;
@@ -435,19 +365,15 @@ public class EcgDescription extends AbstractModel {
 
     /**
      * Set qt/qtc间期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param QTCInterval qt/qtc间期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQTCInterval(EcgItem QTCInterval) {
         this.QTCInterval = QTCInterval;
     }
 
     /**
-     * Get RV5/SV1振幅
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get RV5/SV1振幅 
      * @return Rv5SV1Amplitude RV5/SV1振幅
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public EcgItem getRv5SV1Amplitude() {
         return this.Rv5SV1Amplitude;
@@ -455,19 +381,15 @@ public class EcgDescription extends AbstractModel {
 
     /**
      * Set RV5/SV1振幅
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Rv5SV1Amplitude RV5/SV1振幅
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRv5SV1Amplitude(EcgItem Rv5SV1Amplitude) {
         this.Rv5SV1Amplitude = Rv5SV1Amplitude;
     }
 
     /**
-     * Get RV5+SV1振幅
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get RV5+SV1振幅 
      * @return Rv5AddSV1Amplitude RV5+SV1振幅
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public EcgItem getRv5AddSV1Amplitude() {
         return this.Rv5AddSV1Amplitude;
@@ -475,19 +397,15 @@ public class EcgDescription extends AbstractModel {
 
     /**
      * Set RV5+SV1振幅
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Rv5AddSV1Amplitude RV5+SV1振幅
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRv5AddSV1Amplitude(EcgItem Rv5AddSV1Amplitude) {
         this.Rv5AddSV1Amplitude = Rv5AddSV1Amplitude;
     }
 
     /**
-     * Get PRT电轴
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get PRT电轴 
      * @return PRTAxis PRT电轴
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public EcgItem getPRTAxis() {
         return this.PRTAxis;
@@ -495,19 +413,15 @@ public class EcgDescription extends AbstractModel {
 
     /**
      * Set PRT电轴
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PRTAxis PRT电轴
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPRTAxis(EcgItem PRTAxis) {
         this.PRTAxis = PRTAxis;
     }
 
     /**
-     * Get RV5振幅
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get RV5振幅 
      * @return Rv5Amplitude RV5振幅
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public EcgItem getRv5Amplitude() {
         return this.Rv5Amplitude;
@@ -515,19 +429,15 @@ public class EcgDescription extends AbstractModel {
 
     /**
      * Set RV5振幅
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Rv5Amplitude RV5振幅
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRv5Amplitude(EcgItem Rv5Amplitude) {
         this.Rv5Amplitude = Rv5Amplitude;
     }
 
     /**
-     * Get SV1振幅
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get SV1振幅 
      * @return SV1Amplitude SV1振幅
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public EcgItem getSV1Amplitude() {
         return this.SV1Amplitude;
@@ -535,19 +445,15 @@ public class EcgDescription extends AbstractModel {
 
     /**
      * Set SV1振幅
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SV1Amplitude SV1振幅
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSV1Amplitude(EcgItem SV1Amplitude) {
         this.SV1Amplitude = SV1Amplitude;
     }
 
     /**
-     * Get RV6/SV2
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get RV6/SV2 
      * @return RV6SV2 RV6/SV2
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public EcgItem getRV6SV2() {
         return this.RV6SV2;
@@ -555,19 +461,15 @@ public class EcgDescription extends AbstractModel {
 
     /**
      * Set RV6/SV2
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RV6SV2 RV6/SV2
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRV6SV2(EcgItem RV6SV2) {
         this.RV6SV2 = RV6SV2;
     }
 
     /**
-     * Get P/QRS/T电轴
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get P/QRS/T电轴 
      * @return PQRSTAxis P/QRS/T电轴
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public EcgItem getPQRSTAxis() {
         return this.PQRSTAxis;
@@ -575,9 +477,7 @@ public class EcgDescription extends AbstractModel {
 
     /**
      * Set P/QRS/T电轴
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PQRSTAxis P/QRS/T电轴
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPQRSTAxis(EcgItem PQRSTAxis) {
         this.PQRSTAxis = PQRSTAxis;

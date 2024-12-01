@@ -25,7 +25,6 @@ public class Vaccination extends AbstractModel {
 
     /**
     * 序号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
     @Expose
@@ -33,7 +32,6 @@ public class Vaccination extends AbstractModel {
 
     /**
     * 疫苗名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Vaccine")
     @Expose
@@ -41,7 +39,6 @@ public class Vaccination extends AbstractModel {
 
     /**
     * 剂次
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Dose")
     @Expose
@@ -49,7 +46,6 @@ public class Vaccination extends AbstractModel {
 
     /**
     * 接种日期
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Date")
     @Expose
@@ -57,7 +53,6 @@ public class Vaccination extends AbstractModel {
 
     /**
     * 疫苗批号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LotNumber")
     @Expose
@@ -65,7 +60,6 @@ public class Vaccination extends AbstractModel {
 
     /**
     * 生产企业
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Manufacturer")
     @Expose
@@ -73,7 +67,6 @@ public class Vaccination extends AbstractModel {
 
     /**
     * 接种单位
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Clinic")
     @Expose
@@ -81,7 +74,6 @@ public class Vaccination extends AbstractModel {
 
     /**
     * 接种部位
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Site")
     @Expose
@@ -89,7 +81,6 @@ public class Vaccination extends AbstractModel {
 
     /**
     * 接种者
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Provider")
     @Expose
@@ -97,17 +88,14 @@ public class Vaccination extends AbstractModel {
 
     /**
     * 疫苗批号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Lot")
     @Expose
     private String Lot;
 
     /**
-     * Get 序号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 序号 
      * @return Id 序号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getId() {
         return this.Id;
@@ -115,19 +103,15 @@ public class Vaccination extends AbstractModel {
 
     /**
      * Set 序号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Id 序号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 疫苗名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 疫苗名称 
      * @return Vaccine 疫苗名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVaccine() {
         return this.Vaccine;
@@ -135,19 +119,15 @@ public class Vaccination extends AbstractModel {
 
     /**
      * Set 疫苗名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Vaccine 疫苗名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVaccine(String Vaccine) {
         this.Vaccine = Vaccine;
     }
 
     /**
-     * Get 剂次
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 剂次 
      * @return Dose 剂次
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDose() {
         return this.Dose;
@@ -155,19 +135,15 @@ public class Vaccination extends AbstractModel {
 
     /**
      * Set 剂次
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Dose 剂次
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDose(String Dose) {
         this.Dose = Dose;
     }
 
     /**
-     * Get 接种日期
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 接种日期 
      * @return Date 接种日期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDate() {
         return this.Date;
@@ -175,19 +151,15 @@ public class Vaccination extends AbstractModel {
 
     /**
      * Set 接种日期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Date 接种日期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDate(String Date) {
         this.Date = Date;
     }
 
     /**
-     * Get 疫苗批号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 疫苗批号 
      * @return LotNumber 疫苗批号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLotNumber() {
         return this.LotNumber;
@@ -195,19 +167,15 @@ public class Vaccination extends AbstractModel {
 
     /**
      * Set 疫苗批号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LotNumber 疫苗批号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLotNumber(String LotNumber) {
         this.LotNumber = LotNumber;
     }
 
     /**
-     * Get 生产企业
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 生产企业 
      * @return Manufacturer 生产企业
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getManufacturer() {
         return this.Manufacturer;
@@ -215,19 +183,15 @@ public class Vaccination extends AbstractModel {
 
     /**
      * Set 生产企业
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Manufacturer 生产企业
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setManufacturer(String Manufacturer) {
         this.Manufacturer = Manufacturer;
     }
 
     /**
-     * Get 接种单位
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 接种单位 
      * @return Clinic 接种单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClinic() {
         return this.Clinic;
@@ -235,19 +199,15 @@ public class Vaccination extends AbstractModel {
 
     /**
      * Set 接种单位
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Clinic 接种单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClinic(String Clinic) {
         this.Clinic = Clinic;
     }
 
     /**
-     * Get 接种部位
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 接种部位 
      * @return Site 接种部位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSite() {
         return this.Site;
@@ -255,19 +215,15 @@ public class Vaccination extends AbstractModel {
 
     /**
      * Set 接种部位
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Site 接种部位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSite(String Site) {
         this.Site = Site;
     }
 
     /**
-     * Get 接种者
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 接种者 
      * @return Provider 接种者
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProvider() {
         return this.Provider;
@@ -275,19 +231,15 @@ public class Vaccination extends AbstractModel {
 
     /**
      * Set 接种者
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Provider 接种者
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProvider(String Provider) {
         this.Provider = Provider;
     }
 
     /**
-     * Get 疫苗批号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 疫苗批号 
      * @return Lot 疫苗批号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLot() {
         return this.Lot;
@@ -295,9 +247,7 @@ public class Vaccination extends AbstractModel {
 
     /**
      * Set 疫苗批号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Lot 疫苗批号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLot(String Lot) {
         this.Lot = Lot;

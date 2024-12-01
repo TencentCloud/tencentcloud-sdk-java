@@ -25,7 +25,6 @@ public class KeyValueItem extends AbstractModel {
 
     /**
     * 类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -33,7 +32,6 @@ public class KeyValueItem extends AbstractModel {
 
     /**
     * 项目原文
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Item")
     @Expose
@@ -41,7 +39,6 @@ public class KeyValueItem extends AbstractModel {
 
     /**
     * 结果
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Result")
     @Expose
@@ -49,17 +46,14 @@ public class KeyValueItem extends AbstractModel {
 
     /**
     * 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Page")
     @Expose
     private Long Page;
 
     /**
-     * Get 类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 类型 
      * @return Name 类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -67,19 +61,15 @@ public class KeyValueItem extends AbstractModel {
 
     /**
      * Set 类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 项目原文
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 项目原文 
      * @return Item 项目原文
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public PhysicalBaseItem getItem() {
         return this.Item;
@@ -87,19 +77,15 @@ public class KeyValueItem extends AbstractModel {
 
     /**
      * Set 项目原文
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Item 项目原文
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setItem(PhysicalBaseItem Item) {
         this.Item = Item;
     }
 
     /**
-     * Get 结果
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 结果 
      * @return Result 结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public PhysicalBaseItem getResult() {
         return this.Result;
@@ -107,19 +93,15 @@ public class KeyValueItem extends AbstractModel {
 
     /**
      * Set 结果
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Result 结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResult(PhysicalBaseItem Result) {
         this.Result = Result;
     }
 
     /**
-     * Get 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据在原PDF文件中的第几页 
      * @return Page 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPage() {
         return this.Page;
@@ -127,9 +109,7 @@ public class KeyValueItem extends AbstractModel {
 
     /**
      * Set 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Page 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPage(Long Page) {
         this.Page = Page;

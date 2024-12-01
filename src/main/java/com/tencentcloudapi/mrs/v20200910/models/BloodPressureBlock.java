@@ -25,7 +25,6 @@ public class BloodPressureBlock extends AbstractModel {
 
     /**
     * 名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -33,7 +32,6 @@ public class BloodPressureBlock extends AbstractModel {
 
     /**
     * 原文
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Src")
     @Expose
@@ -41,7 +39,6 @@ public class BloodPressureBlock extends AbstractModel {
 
     /**
     * 归一化值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Norm")
     @Expose
@@ -49,7 +46,6 @@ public class BloodPressureBlock extends AbstractModel {
 
     /**
     * 单位
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Unit")
     @Expose
@@ -57,7 +53,6 @@ public class BloodPressureBlock extends AbstractModel {
 
     /**
     * 对外输出值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Value")
     @Expose
@@ -65,7 +60,6 @@ public class BloodPressureBlock extends AbstractModel {
 
     /**
     * 舒张压
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NormDiastolic")
     @Expose
@@ -73,17 +67,14 @@ public class BloodPressureBlock extends AbstractModel {
 
     /**
     * 收缩压
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NormSystolic")
     @Expose
     private String NormSystolic;
 
     /**
-     * Get 名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 名称 
      * @return Name 名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -91,19 +82,15 @@ public class BloodPressureBlock extends AbstractModel {
 
     /**
      * Set 名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 原文
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 原文 
      * @return Src 原文
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSrc() {
         return this.Src;
@@ -111,19 +98,15 @@ public class BloodPressureBlock extends AbstractModel {
 
     /**
      * Set 原文
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Src 原文
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSrc(String Src) {
         this.Src = Src;
     }
 
     /**
-     * Get 归一化值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 归一化值 
      * @return Norm 归一化值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNorm() {
         return this.Norm;
@@ -131,19 +114,15 @@ public class BloodPressureBlock extends AbstractModel {
 
     /**
      * Set 归一化值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Norm 归一化值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNorm(String Norm) {
         this.Norm = Norm;
     }
 
     /**
-     * Get 单位
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 单位 
      * @return Unit 单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUnit() {
         return this.Unit;
@@ -151,19 +130,15 @@ public class BloodPressureBlock extends AbstractModel {
 
     /**
      * Set 单位
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Unit 单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUnit(String Unit) {
         this.Unit = Unit;
     }
 
     /**
-     * Get 对外输出值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 对外输出值 
      * @return Value 对外输出值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getValue() {
         return this.Value;
@@ -171,19 +146,15 @@ public class BloodPressureBlock extends AbstractModel {
 
     /**
      * Set 对外输出值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Value 对外输出值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValue(String Value) {
         this.Value = Value;
     }
 
     /**
-     * Get 舒张压
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 舒张压 
      * @return NormDiastolic 舒张压
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNormDiastolic() {
         return this.NormDiastolic;
@@ -191,19 +162,15 @@ public class BloodPressureBlock extends AbstractModel {
 
     /**
      * Set 舒张压
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NormDiastolic 舒张压
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNormDiastolic(String NormDiastolic) {
         this.NormDiastolic = NormDiastolic;
     }
 
     /**
-     * Get 收缩压
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 收缩压 
      * @return NormSystolic 收缩压
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNormSystolic() {
         return this.NormSystolic;
@@ -211,9 +178,7 @@ public class BloodPressureBlock extends AbstractModel {
 
     /**
      * Set 收缩压
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NormSystolic 收缩压
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNormSystolic(String NormSystolic) {
         this.NormSystolic = NormSystolic;

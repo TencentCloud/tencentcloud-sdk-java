@@ -25,7 +25,6 @@ public class RelativeHistoryDetailBlock extends AbstractModel {
 
     /**
     * 名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -33,7 +32,6 @@ public class RelativeHistoryDetailBlock extends AbstractModel {
 
     /**
     * 关系
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Relation")
     @Expose
@@ -41,7 +39,6 @@ public class RelativeHistoryDetailBlock extends AbstractModel {
 
     /**
     * 死亡时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TimeOfDeath")
     @Expose
@@ -49,17 +46,14 @@ public class RelativeHistoryDetailBlock extends AbstractModel {
 
     /**
     * 时间类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TimeType")
     @Expose
     private String TimeType;
 
     /**
-     * Get 名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 名称 
      * @return Name 名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -67,19 +61,15 @@ public class RelativeHistoryDetailBlock extends AbstractModel {
 
     /**
      * Set 名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 关系
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 关系 
      * @return Relation 关系
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRelation() {
         return this.Relation;
@@ -87,19 +77,15 @@ public class RelativeHistoryDetailBlock extends AbstractModel {
 
     /**
      * Set 关系
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Relation 关系
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRelation(String Relation) {
         this.Relation = Relation;
     }
 
     /**
-     * Get 死亡时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 死亡时间 
      * @return TimeOfDeath 死亡时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTimeOfDeath() {
         return this.TimeOfDeath;
@@ -107,19 +93,15 @@ public class RelativeHistoryDetailBlock extends AbstractModel {
 
     /**
      * Set 死亡时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TimeOfDeath 死亡时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimeOfDeath(String TimeOfDeath) {
         this.TimeOfDeath = TimeOfDeath;
     }
 
     /**
-     * Get 时间类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 时间类型 
      * @return TimeType 时间类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTimeType() {
         return this.TimeType;
@@ -127,9 +109,7 @@ public class RelativeHistoryDetailBlock extends AbstractModel {
 
     /**
      * Set 时间类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TimeType 时间类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimeType(String TimeType) {
         this.TimeType = TimeType;

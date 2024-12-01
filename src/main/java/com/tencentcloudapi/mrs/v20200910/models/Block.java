@@ -25,7 +25,6 @@ public class Block extends AbstractModel {
 
     /**
     * 诊断信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Check")
     @Expose
@@ -33,7 +32,6 @@ public class Block extends AbstractModel {
 
     /**
     * 病理报告
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Pathology")
     @Expose
@@ -41,7 +39,6 @@ public class Block extends AbstractModel {
 
     /**
     * 医学资料
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MedDoc")
     @Expose
@@ -49,7 +46,6 @@ public class Block extends AbstractModel {
 
     /**
     * 诊断证明
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiagCert")
     @Expose
@@ -57,7 +53,6 @@ public class Block extends AbstractModel {
 
     /**
     * 病案首页
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FirstPage")
     @Expose
@@ -65,7 +60,6 @@ public class Block extends AbstractModel {
 
     /**
     * 检验报告
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Indicator")
     @Expose
@@ -73,7 +67,6 @@ public class Block extends AbstractModel {
 
     /**
     * 门诊病历信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MedicalRecordInfo")
     @Expose
@@ -81,7 +74,6 @@ public class Block extends AbstractModel {
 
     /**
     * 出入院信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Hospitalization")
     @Expose
@@ -89,7 +81,6 @@ public class Block extends AbstractModel {
 
     /**
     * 手术记录
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Surgery")
     @Expose
@@ -97,7 +88,6 @@ public class Block extends AbstractModel {
 
     /**
     * 处方单
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Prescription")
     @Expose
@@ -105,7 +95,6 @@ public class Block extends AbstractModel {
 
     /**
     * 免疫接种证明
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VaccineCertificate")
     @Expose
@@ -113,7 +102,6 @@ public class Block extends AbstractModel {
 
     /**
     * 心电图
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Electrocardiogram")
     @Expose
@@ -121,7 +109,6 @@ public class Block extends AbstractModel {
 
     /**
     * 病理报告v2
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PathologyV2")
     @Expose
@@ -129,7 +116,6 @@ public class Block extends AbstractModel {
 
     /**
     * 内窥镜报告
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Endoscopy")
     @Expose
@@ -137,7 +123,6 @@ public class Block extends AbstractModel {
 
     /**
     * C14检验报告
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("C14")
     @Expose
@@ -145,7 +130,6 @@ public class Block extends AbstractModel {
 
     /**
     * 体检结论
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Exame")
     @Expose
@@ -153,7 +137,6 @@ public class Block extends AbstractModel {
 
     /**
     * 出入院结构体
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MedDocV2")
     @Expose
@@ -161,7 +144,6 @@ public class Block extends AbstractModel {
 
     /**
     * 检验报告v3
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IndicatorV3")
     @Expose
@@ -169,7 +151,6 @@ public class Block extends AbstractModel {
 
     /**
     * 孕产报告
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Maternity")
     @Expose
@@ -177,7 +158,6 @@ public class Block extends AbstractModel {
 
     /**
     * 时间轴
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Timeline")
     @Expose
@@ -185,7 +165,6 @@ public class Block extends AbstractModel {
 
     /**
     * 核酸报告结论
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Covid")
     @Expose
@@ -193,7 +172,6 @@ public class Block extends AbstractModel {
 
     /**
     * 眼科报告结构体
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Eye")
     @Expose
@@ -201,7 +179,6 @@ public class Block extends AbstractModel {
 
     /**
     * 出生证明结构化信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BirthCert")
     @Expose
@@ -209,7 +186,6 @@ public class Block extends AbstractModel {
 
     /**
     * 文本类型列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TextTypeListBlocks")
     @Expose
@@ -217,17 +193,14 @@ public class Block extends AbstractModel {
 
     /**
     * 体检报告信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PhysicalExamination")
     @Expose
     private PhysicalExaminationV1 PhysicalExamination;
 
     /**
-     * Get 诊断信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 诊断信息 
      * @return Check 诊断信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Check [] getCheck() {
         return this.Check;
@@ -235,19 +208,15 @@ public class Block extends AbstractModel {
 
     /**
      * Set 诊断信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Check 诊断信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCheck(Check [] Check) {
         this.Check = Check;
     }
 
     /**
-     * Get 病理报告
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 病理报告 
      * @return Pathology 病理报告
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public PathologyReport [] getPathology() {
         return this.Pathology;
@@ -255,19 +224,15 @@ public class Block extends AbstractModel {
 
     /**
      * Set 病理报告
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Pathology 病理报告
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPathology(PathologyReport [] Pathology) {
         this.Pathology = Pathology;
     }
 
     /**
-     * Get 医学资料
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 医学资料 
      * @return MedDoc 医学资料
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public MedDoc [] getMedDoc() {
         return this.MedDoc;
@@ -275,19 +240,15 @@ public class Block extends AbstractModel {
 
     /**
      * Set 医学资料
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MedDoc 医学资料
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMedDoc(MedDoc [] MedDoc) {
         this.MedDoc = MedDoc;
     }
 
     /**
-     * Get 诊断证明
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 诊断证明 
      * @return DiagCert 诊断证明
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DiagCert [] getDiagCert() {
         return this.DiagCert;
@@ -295,19 +256,15 @@ public class Block extends AbstractModel {
 
     /**
      * Set 诊断证明
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DiagCert 诊断证明
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiagCert(DiagCert [] DiagCert) {
         this.DiagCert = DiagCert;
     }
 
     /**
-     * Get 病案首页
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 病案首页 
      * @return FirstPage 病案首页
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public FirstPage [] getFirstPage() {
         return this.FirstPage;
@@ -315,19 +272,15 @@ public class Block extends AbstractModel {
 
     /**
      * Set 病案首页
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FirstPage 病案首页
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFirstPage(FirstPage [] FirstPage) {
         this.FirstPage = FirstPage;
     }
 
     /**
-     * Get 检验报告
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 检验报告 
      * @return Indicator 检验报告
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Indicator [] getIndicator() {
         return this.Indicator;
@@ -335,19 +288,15 @@ public class Block extends AbstractModel {
 
     /**
      * Set 检验报告
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Indicator 检验报告
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIndicator(Indicator [] Indicator) {
         this.Indicator = Indicator;
     }
 
     /**
-     * Get 门诊病历信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 门诊病历信息 
      * @return MedicalRecordInfo 门诊病历信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public MedicalRecordInfo [] getMedicalRecordInfo() {
         return this.MedicalRecordInfo;
@@ -355,19 +304,15 @@ public class Block extends AbstractModel {
 
     /**
      * Set 门诊病历信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MedicalRecordInfo 门诊病历信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMedicalRecordInfo(MedicalRecordInfo [] MedicalRecordInfo) {
         this.MedicalRecordInfo = MedicalRecordInfo;
     }
 
     /**
-     * Get 出入院信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 出入院信息 
      * @return Hospitalization 出入院信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Hospitalization [] getHospitalization() {
         return this.Hospitalization;
@@ -375,19 +320,15 @@ public class Block extends AbstractModel {
 
     /**
      * Set 出入院信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Hospitalization 出入院信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHospitalization(Hospitalization [] Hospitalization) {
         this.Hospitalization = Hospitalization;
     }
 
     /**
-     * Get 手术记录
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 手术记录 
      * @return Surgery 手术记录
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Surgery [] getSurgery() {
         return this.Surgery;
@@ -395,19 +336,15 @@ public class Block extends AbstractModel {
 
     /**
      * Set 手术记录
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Surgery 手术记录
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSurgery(Surgery [] Surgery) {
         this.Surgery = Surgery;
     }
 
     /**
-     * Get 处方单
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 处方单 
      * @return Prescription 处方单
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Prescription [] getPrescription() {
         return this.Prescription;
@@ -415,19 +352,15 @@ public class Block extends AbstractModel {
 
     /**
      * Set 处方单
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Prescription 处方单
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPrescription(Prescription [] Prescription) {
         this.Prescription = Prescription;
     }
 
     /**
-     * Get 免疫接种证明
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 免疫接种证明 
      * @return VaccineCertificate 免疫接种证明
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public VaccineCertificate [] getVaccineCertificate() {
         return this.VaccineCertificate;
@@ -435,19 +368,15 @@ public class Block extends AbstractModel {
 
     /**
      * Set 免疫接种证明
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VaccineCertificate 免疫接种证明
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVaccineCertificate(VaccineCertificate [] VaccineCertificate) {
         this.VaccineCertificate = VaccineCertificate;
     }
 
     /**
-     * Get 心电图
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 心电图 
      * @return Electrocardiogram 心电图
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Electrocardiogram [] getElectrocardiogram() {
         return this.Electrocardiogram;
@@ -455,19 +384,15 @@ public class Block extends AbstractModel {
 
     /**
      * Set 心电图
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Electrocardiogram 心电图
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setElectrocardiogram(Electrocardiogram [] Electrocardiogram) {
         this.Electrocardiogram = Electrocardiogram;
     }
 
     /**
-     * Get 病理报告v2
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 病理报告v2 
      * @return PathologyV2 病理报告v2
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public PathologyV2 [] getPathologyV2() {
         return this.PathologyV2;
@@ -475,19 +400,15 @@ public class Block extends AbstractModel {
 
     /**
      * Set 病理报告v2
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PathologyV2 病理报告v2
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPathologyV2(PathologyV2 [] PathologyV2) {
         this.PathologyV2 = PathologyV2;
     }
 
     /**
-     * Get 内窥镜报告
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 内窥镜报告 
      * @return Endoscopy 内窥镜报告
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Endoscopy [] getEndoscopy() {
         return this.Endoscopy;
@@ -495,19 +416,15 @@ public class Block extends AbstractModel {
 
     /**
      * Set 内窥镜报告
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Endoscopy 内窥镜报告
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndoscopy(Endoscopy [] Endoscopy) {
         this.Endoscopy = Endoscopy;
     }
 
     /**
-     * Get C14检验报告
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get C14检验报告 
      * @return C14 C14检验报告
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Indicator [] getC14() {
         return this.C14;
@@ -515,19 +432,15 @@ public class Block extends AbstractModel {
 
     /**
      * Set C14检验报告
-注意：此字段可能返回 null，表示取不到有效值。
      * @param C14 C14检验报告
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setC14(Indicator [] C14) {
         this.C14 = C14;
     }
 
     /**
-     * Get 体检结论
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 体检结论 
      * @return Exame 体检结论
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Exame [] getExame() {
         return this.Exame;
@@ -535,19 +448,15 @@ public class Block extends AbstractModel {
 
     /**
      * Set 体检结论
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Exame 体检结论
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExame(Exame [] Exame) {
         this.Exame = Exame;
     }
 
     /**
-     * Get 出入院结构体
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 出入院结构体 
      * @return MedDocV2 出入院结构体
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DischargeInfoBlock [] getMedDocV2() {
         return this.MedDocV2;
@@ -555,19 +464,15 @@ public class Block extends AbstractModel {
 
     /**
      * Set 出入院结构体
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MedDocV2 出入院结构体
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMedDocV2(DischargeInfoBlock [] MedDocV2) {
         this.MedDocV2 = MedDocV2;
     }
 
     /**
-     * Get 检验报告v3
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 检验报告v3 
      * @return IndicatorV3 检验报告v3
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public IndicatorV3 [] getIndicatorV3() {
         return this.IndicatorV3;
@@ -575,19 +480,15 @@ public class Block extends AbstractModel {
 
     /**
      * Set 检验报告v3
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IndicatorV3 检验报告v3
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIndicatorV3(IndicatorV3 [] IndicatorV3) {
         this.IndicatorV3 = IndicatorV3;
     }
 
     /**
-     * Get 孕产报告
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 孕产报告 
      * @return Maternity 孕产报告
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Maternity [] getMaternity() {
         return this.Maternity;
@@ -595,19 +496,15 @@ public class Block extends AbstractModel {
 
     /**
      * Set 孕产报告
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Maternity 孕产报告
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaternity(Maternity [] Maternity) {
         this.Maternity = Maternity;
     }
 
     /**
-     * Get 时间轴
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 时间轴 
      * @return Timeline 时间轴
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TimelineInformation [] getTimeline() {
         return this.Timeline;
@@ -615,19 +512,15 @@ public class Block extends AbstractModel {
 
     /**
      * Set 时间轴
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Timeline 时间轴
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimeline(TimelineInformation [] Timeline) {
         this.Timeline = Timeline;
     }
 
     /**
-     * Get 核酸报告结论
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 核酸报告结论 
      * @return Covid 核酸报告结论
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CovidItemsInfo [] getCovid() {
         return this.Covid;
@@ -635,19 +528,15 @@ public class Block extends AbstractModel {
 
     /**
      * Set 核酸报告结论
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Covid 核酸报告结论
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCovid(CovidItemsInfo [] Covid) {
         this.Covid = Covid;
     }
 
     /**
-     * Get 眼科报告结构体
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 眼科报告结构体 
      * @return Eye 眼科报告结构体
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public EyeItemsInfo [] getEye() {
         return this.Eye;
@@ -655,19 +544,15 @@ public class Block extends AbstractModel {
 
     /**
      * Set 眼科报告结构体
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Eye 眼科报告结构体
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEye(EyeItemsInfo [] Eye) {
         this.Eye = Eye;
     }
 
     /**
-     * Get 出生证明结构化信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 出生证明结构化信息 
      * @return BirthCert 出生证明结构化信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BirthCert [] getBirthCert() {
         return this.BirthCert;
@@ -675,19 +560,15 @@ public class Block extends AbstractModel {
 
     /**
      * Set 出生证明结构化信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BirthCert 出生证明结构化信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBirthCert(BirthCert [] BirthCert) {
         this.BirthCert = BirthCert;
     }
 
     /**
-     * Get 文本类型列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文本类型列表 
      * @return TextTypeListBlocks 文本类型列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TextTypeListBlock [] getTextTypeListBlocks() {
         return this.TextTypeListBlocks;
@@ -695,19 +576,15 @@ public class Block extends AbstractModel {
 
     /**
      * Set 文本类型列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TextTypeListBlocks 文本类型列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTextTypeListBlocks(TextTypeListBlock [] TextTypeListBlocks) {
         this.TextTypeListBlocks = TextTypeListBlocks;
     }
 
     /**
-     * Get 体检报告信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 体检报告信息 
      * @return PhysicalExamination 体检报告信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public PhysicalExaminationV1 getPhysicalExamination() {
         return this.PhysicalExamination;
@@ -715,9 +592,7 @@ public class Block extends AbstractModel {
 
     /**
      * Set 体检报告信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PhysicalExamination 体检报告信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPhysicalExamination(PhysicalExaminationV1 PhysicalExamination) {
         this.PhysicalExamination = PhysicalExamination;

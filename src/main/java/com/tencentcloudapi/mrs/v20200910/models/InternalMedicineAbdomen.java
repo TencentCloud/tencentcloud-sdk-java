@@ -25,7 +25,6 @@ public class InternalMedicineAbdomen extends AbstractModel {
 
     /**
     * 内科腹部小结
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Text")
     @Expose
@@ -33,7 +32,6 @@ public class InternalMedicineAbdomen extends AbstractModel {
 
     /**
     * 肝脏
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Liver")
     @Expose
@@ -41,7 +39,6 @@ public class InternalMedicineAbdomen extends AbstractModel {
 
     /**
     * 胆囊
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GallBladder")
     @Expose
@@ -49,7 +46,6 @@ public class InternalMedicineAbdomen extends AbstractModel {
 
     /**
     * 胰腺
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Pancreas")
     @Expose
@@ -57,7 +53,6 @@ public class InternalMedicineAbdomen extends AbstractModel {
 
     /**
     * 脾脏
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Spleen")
     @Expose
@@ -65,7 +60,6 @@ public class InternalMedicineAbdomen extends AbstractModel {
 
     /**
     * 肾脏
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Kidney")
     @Expose
@@ -73,17 +67,14 @@ public class InternalMedicineAbdomen extends AbstractModel {
 
     /**
     * 腹部其他
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Others")
     @Expose
     private KeyValueItem [] Others;
 
     /**
-     * Get 内科腹部小结
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 内科腹部小结 
      * @return Text 内科腹部小结
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public KeyValueItem getText() {
         return this.Text;
@@ -91,19 +82,15 @@ public class InternalMedicineAbdomen extends AbstractModel {
 
     /**
      * Set 内科腹部小结
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Text 内科腹部小结
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setText(KeyValueItem Text) {
         this.Text = Text;
     }
 
     /**
-     * Get 肝脏
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 肝脏 
      * @return Liver 肝脏
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public InternalMedicineAbdomenLiver getLiver() {
         return this.Liver;
@@ -111,19 +98,15 @@ public class InternalMedicineAbdomen extends AbstractModel {
 
     /**
      * Set 肝脏
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Liver 肝脏
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLiver(InternalMedicineAbdomenLiver Liver) {
         this.Liver = Liver;
     }
 
     /**
-     * Get 胆囊
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 胆囊 
      * @return GallBladder 胆囊
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public InternalMedicineAbdomenGallBladder getGallBladder() {
         return this.GallBladder;
@@ -131,19 +114,15 @@ public class InternalMedicineAbdomen extends AbstractModel {
 
     /**
      * Set 胆囊
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GallBladder 胆囊
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGallBladder(InternalMedicineAbdomenGallBladder GallBladder) {
         this.GallBladder = GallBladder;
     }
 
     /**
-     * Get 胰腺
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 胰腺 
      * @return Pancreas 胰腺
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public InternalMedicineAbdomenPancreas getPancreas() {
         return this.Pancreas;
@@ -151,19 +130,15 @@ public class InternalMedicineAbdomen extends AbstractModel {
 
     /**
      * Set 胰腺
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Pancreas 胰腺
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPancreas(InternalMedicineAbdomenPancreas Pancreas) {
         this.Pancreas = Pancreas;
     }
 
     /**
-     * Get 脾脏
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 脾脏 
      * @return Spleen 脾脏
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public InternalMedicineAbdomenSpleen getSpleen() {
         return this.Spleen;
@@ -171,19 +146,15 @@ public class InternalMedicineAbdomen extends AbstractModel {
 
     /**
      * Set 脾脏
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Spleen 脾脏
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSpleen(InternalMedicineAbdomenSpleen Spleen) {
         this.Spleen = Spleen;
     }
 
     /**
-     * Get 肾脏
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 肾脏 
      * @return Kidney 肾脏
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public InternalMedicineAbdomenKidney getKidney() {
         return this.Kidney;
@@ -191,19 +162,15 @@ public class InternalMedicineAbdomen extends AbstractModel {
 
     /**
      * Set 肾脏
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Kidney 肾脏
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKidney(InternalMedicineAbdomenKidney Kidney) {
         this.Kidney = Kidney;
     }
 
     /**
-     * Get 腹部其他
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 腹部其他 
      * @return Others 腹部其他
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public KeyValueItem [] getOthers() {
         return this.Others;
@@ -211,9 +178,7 @@ public class InternalMedicineAbdomen extends AbstractModel {
 
     /**
      * Set 腹部其他
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Others 腹部其他
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOthers(KeyValueItem [] Others) {
         this.Others = Others;

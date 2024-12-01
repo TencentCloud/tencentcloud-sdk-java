@@ -25,7 +25,6 @@ public class NumValue extends AbstractModel {
 
     /**
     * 数值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Num")
     @Expose
@@ -33,17 +32,14 @@ public class NumValue extends AbstractModel {
 
     /**
     * 单位
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Unit")
     @Expose
     private String Unit;
 
     /**
-     * Get 数值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数值 
      * @return Num 数值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNum() {
         return this.Num;
@@ -51,19 +47,15 @@ public class NumValue extends AbstractModel {
 
     /**
      * Set 数值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Num 数值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNum(String Num) {
         this.Num = Num;
     }
 
     /**
-     * Get 单位
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 单位 
      * @return Unit 单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUnit() {
         return this.Unit;
@@ -71,9 +63,7 @@ public class NumValue extends AbstractModel {
 
     /**
      * Set 单位
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Unit 单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUnit(String Unit) {
         this.Unit = Unit;

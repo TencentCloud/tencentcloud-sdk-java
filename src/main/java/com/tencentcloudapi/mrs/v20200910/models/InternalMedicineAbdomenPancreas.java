@@ -25,7 +25,6 @@ public class InternalMedicineAbdomenPancreas extends AbstractModel {
 
     /**
     * 胰腺总体描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Src")
     @Expose
@@ -33,7 +32,6 @@ public class InternalMedicineAbdomenPancreas extends AbstractModel {
 
     /**
     * 胰腺大小
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Size")
     @Expose
@@ -41,7 +39,6 @@ public class InternalMedicineAbdomenPancreas extends AbstractModel {
 
     /**
     * 胰腺触诊
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Palpation")
     @Expose
@@ -49,7 +46,6 @@ public class InternalMedicineAbdomenPancreas extends AbstractModel {
 
     /**
     * 胰腺叩诊
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Percussion")
     @Expose
@@ -57,7 +53,6 @@ public class InternalMedicineAbdomenPancreas extends AbstractModel {
 
     /**
     * 肝脏压痛
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tenderness")
     @Expose
@@ -65,17 +60,14 @@ public class InternalMedicineAbdomenPancreas extends AbstractModel {
 
     /**
     * 胰腺质地
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Consistency")
     @Expose
     private KeyValueItem Consistency;
 
     /**
-     * Get 胰腺总体描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 胰腺总体描述 
      * @return Src 胰腺总体描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public KeyValueItem getSrc() {
         return this.Src;
@@ -83,19 +75,15 @@ public class InternalMedicineAbdomenPancreas extends AbstractModel {
 
     /**
      * Set 胰腺总体描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Src 胰腺总体描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSrc(KeyValueItem Src) {
         this.Src = Src;
     }
 
     /**
-     * Get 胰腺大小
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 胰腺大小 
      * @return Size 胰腺大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public KeyValueItem getSize() {
         return this.Size;
@@ -103,19 +91,15 @@ public class InternalMedicineAbdomenPancreas extends AbstractModel {
 
     /**
      * Set 胰腺大小
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Size 胰腺大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSize(KeyValueItem Size) {
         this.Size = Size;
     }
 
     /**
-     * Get 胰腺触诊
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 胰腺触诊 
      * @return Palpation 胰腺触诊
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public KeyValueItem getPalpation() {
         return this.Palpation;
@@ -123,19 +107,15 @@ public class InternalMedicineAbdomenPancreas extends AbstractModel {
 
     /**
      * Set 胰腺触诊
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Palpation 胰腺触诊
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPalpation(KeyValueItem Palpation) {
         this.Palpation = Palpation;
     }
 
     /**
-     * Get 胰腺叩诊
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 胰腺叩诊 
      * @return Percussion 胰腺叩诊
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public KeyValueItem getPercussion() {
         return this.Percussion;
@@ -143,19 +123,15 @@ public class InternalMedicineAbdomenPancreas extends AbstractModel {
 
     /**
      * Set 胰腺叩诊
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Percussion 胰腺叩诊
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPercussion(KeyValueItem Percussion) {
         this.Percussion = Percussion;
     }
 
     /**
-     * Get 肝脏压痛
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 肝脏压痛 
      * @return Tenderness 肝脏压痛
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public KeyValueItem getTenderness() {
         return this.Tenderness;
@@ -163,19 +139,15 @@ public class InternalMedicineAbdomenPancreas extends AbstractModel {
 
     /**
      * Set 肝脏压痛
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tenderness 肝脏压痛
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTenderness(KeyValueItem Tenderness) {
         this.Tenderness = Tenderness;
     }
 
     /**
-     * Get 胰腺质地
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 胰腺质地 
      * @return Consistency 胰腺质地
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public KeyValueItem getConsistency() {
         return this.Consistency;
@@ -183,9 +155,7 @@ public class InternalMedicineAbdomenPancreas extends AbstractModel {
 
     /**
      * Set 胰腺质地
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Consistency 胰腺质地
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConsistency(KeyValueItem Consistency) {
         this.Consistency = Consistency;

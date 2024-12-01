@@ -25,7 +25,6 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
     * 免疫组化
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Immunohistochemistry")
     @Expose
@@ -33,7 +32,6 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
     * 主诉
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ChiefComplaint")
     @Expose
@@ -41,7 +39,6 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
     * 入院情况
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AdmissionCondition")
     @Expose
@@ -49,7 +46,6 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
     * 查体
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BodyExamination")
     @Expose
@@ -57,7 +53,6 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
     * 入院诊断
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AdmissionDiagnosis")
     @Expose
@@ -65,7 +60,6 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
     * 入院中医诊断
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AdmissionTraditionalDiagnosis")
     @Expose
@@ -73,7 +67,6 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
     * 入院西医诊断
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AdmissionModernDiagnosis")
     @Expose
@@ -81,7 +74,6 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
     * 病理诊断
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PathologicalDiagnosis")
     @Expose
@@ -89,7 +81,6 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
     * 现病史
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiseasePresent")
     @Expose
@@ -97,7 +88,6 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
     * 体征
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SymptomsAndSigns")
     @Expose
@@ -105,7 +95,6 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
     * 辅助检查
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AuxiliaryExamination")
     @Expose
@@ -113,7 +102,6 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
     * 特殊检查
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SpecialistExamination")
     @Expose
@@ -121,7 +109,6 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
     * 精神检查
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MentalExamination")
     @Expose
@@ -129,7 +116,6 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
     * 检查记录
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CheckRecord")
     @Expose
@@ -137,7 +123,6 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
     * 检查结果
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InspectResult")
     @Expose
@@ -145,7 +130,6 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
     * 治疗经过
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CheckAndTreatmentProcess")
     @Expose
@@ -153,7 +137,6 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
     * 手术经过
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SurgeryCondition")
     @Expose
@@ -161,7 +144,6 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
     * 切口愈合
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IncisionHealing")
     @Expose
@@ -169,7 +151,6 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
     * 出院诊断
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DischargeDiagnosis")
     @Expose
@@ -177,7 +158,6 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
     * 出院中医诊断
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DischargeTraditionalDiagnosis")
     @Expose
@@ -185,7 +165,6 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
     * 出院西医诊断
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DischargeModernDiagnosis")
     @Expose
@@ -193,7 +172,6 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
     * 出院情况
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DischargeCondition")
     @Expose
@@ -201,7 +179,6 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
     * 出院医嘱
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DischargeInstructions")
     @Expose
@@ -209,7 +186,6 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
     * 治疗建议
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TreatmentSuggestion")
     @Expose
@@ -217,7 +193,6 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
     * 随访
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FollowUpRequirements")
     @Expose
@@ -225,7 +200,6 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
     * 治疗情况变化
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConditionChanges")
     @Expose
@@ -233,7 +207,6 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
     * 收缩压
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PulmonaryArterySystolicPressure")
     @Expose
@@ -241,7 +214,6 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
     * bclc分期
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BCLC")
     @Expose
@@ -249,7 +221,6 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
     * PTNM分期
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PTNM")
     @Expose
@@ -257,7 +228,6 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
     * ECOG评分
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ECOG")
     @Expose
@@ -265,7 +235,6 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
     * NRS评分
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NRS")
     @Expose
@@ -273,7 +242,6 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
     * kps评分
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KPS")
     @Expose
@@ -281,7 +249,6 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
     * 癌症分期
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Cancerstaging")
     @Expose
@@ -289,7 +256,6 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
     * 死亡时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeathDate")
     @Expose
@@ -297,7 +263,6 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
     * 复发日期
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RelapseDate")
     @Expose
@@ -305,7 +270,6 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
     * 观察日期
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ObservationDays")
     @Expose
@@ -313,7 +277,6 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
     * 切口愈合情况
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IncisionHealingText")
     @Expose
@@ -321,7 +284,6 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
     * 辅助检查
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AuxiliaryExaminationText")
     @Expose
@@ -329,7 +291,6 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
     * 特殊检查
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SpecialExamText")
     @Expose
@@ -337,7 +298,6 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
     * 门诊诊断
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OutpatientDiagnosisText")
     @Expose
@@ -345,7 +305,6 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
     * 入院情况
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AdmissionConditionText")
     @Expose
@@ -353,7 +312,6 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
     * 诊疗经过
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CheckAndTreatmentProcessText")
     @Expose
@@ -361,7 +319,6 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
     * 体征
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SymptomsAndSignsText")
     @Expose
@@ -369,7 +326,6 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
     * 出院医嘱
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DischargeInstructionsText")
     @Expose
@@ -377,7 +333,6 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
     * 入院诊断
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AdmissionDiagnosisText")
     @Expose
@@ -385,7 +340,6 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
     * 手术情况
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SurgeryConditionText")
     @Expose
@@ -393,7 +347,6 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
     * 病理诊断
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PathologicalDiagnosisText")
     @Expose
@@ -401,7 +354,6 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
     * 出院情况
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DischargeConditionText")
     @Expose
@@ -409,7 +361,6 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
     * 检查记录
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CheckRecordText")
     @Expose
@@ -417,7 +368,6 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
     * 主诉
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ChiefComplaintText")
     @Expose
@@ -425,17 +375,14 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
     * 出院诊断
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DischargeDiagnosisText")
     @Expose
     private String DischargeDiagnosisText;
 
     /**
-     * Get 免疫组化
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 免疫组化 
      * @return Immunohistochemistry 免疫组化
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ImmunohistochemistryBlock getImmunohistochemistry() {
         return this.Immunohistochemistry;
@@ -443,19 +390,15 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
      * Set 免疫组化
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Immunohistochemistry 免疫组化
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setImmunohistochemistry(ImmunohistochemistryBlock Immunohistochemistry) {
         this.Immunohistochemistry = Immunohistochemistry;
     }
 
     /**
-     * Get 主诉
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主诉 
      * @return ChiefComplaint 主诉
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ChiefComplaintBlock getChiefComplaint() {
         return this.ChiefComplaint;
@@ -463,19 +406,15 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
      * Set 主诉
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ChiefComplaint 主诉
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setChiefComplaint(ChiefComplaintBlock ChiefComplaint) {
         this.ChiefComplaint = ChiefComplaint;
     }
 
     /**
-     * Get 入院情况
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 入院情况 
      * @return AdmissionCondition 入院情况
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AdmissionConditionBlock getAdmissionCondition() {
         return this.AdmissionCondition;
@@ -483,19 +422,15 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
      * Set 入院情况
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AdmissionCondition 入院情况
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAdmissionCondition(AdmissionConditionBlock AdmissionCondition) {
         this.AdmissionCondition = AdmissionCondition;
     }
 
     /**
-     * Get 查体
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 查体 
      * @return BodyExamination 查体
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BodyExaminationBlock getBodyExamination() {
         return this.BodyExamination;
@@ -503,19 +438,15 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
      * Set 查体
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BodyExamination 查体
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBodyExamination(BodyExaminationBlock BodyExamination) {
         this.BodyExamination = BodyExamination;
     }
 
     /**
-     * Get 入院诊断
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 入院诊断 
      * @return AdmissionDiagnosis 入院诊断
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AdmissionDiagnosisBlock getAdmissionDiagnosis() {
         return this.AdmissionDiagnosis;
@@ -523,19 +454,15 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
      * Set 入院诊断
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AdmissionDiagnosis 入院诊断
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAdmissionDiagnosis(AdmissionDiagnosisBlock AdmissionDiagnosis) {
         this.AdmissionDiagnosis = AdmissionDiagnosis;
     }
 
     /**
-     * Get 入院中医诊断
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 入院中医诊断 
      * @return AdmissionTraditionalDiagnosis 入院中医诊断
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AdmissionDiagnosisBlock getAdmissionTraditionalDiagnosis() {
         return this.AdmissionTraditionalDiagnosis;
@@ -543,19 +470,15 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
      * Set 入院中医诊断
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AdmissionTraditionalDiagnosis 入院中医诊断
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAdmissionTraditionalDiagnosis(AdmissionDiagnosisBlock AdmissionTraditionalDiagnosis) {
         this.AdmissionTraditionalDiagnosis = AdmissionTraditionalDiagnosis;
     }
 
     /**
-     * Get 入院西医诊断
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 入院西医诊断 
      * @return AdmissionModernDiagnosis 入院西医诊断
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AdmissionDiagnosisBlock getAdmissionModernDiagnosis() {
         return this.AdmissionModernDiagnosis;
@@ -563,19 +486,15 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
      * Set 入院西医诊断
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AdmissionModernDiagnosis 入院西医诊断
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAdmissionModernDiagnosis(AdmissionDiagnosisBlock AdmissionModernDiagnosis) {
         this.AdmissionModernDiagnosis = AdmissionModernDiagnosis;
     }
 
     /**
-     * Get 病理诊断
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 病理诊断 
      * @return PathologicalDiagnosis 病理诊断
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public PathologicalDiagnosisBlock getPathologicalDiagnosis() {
         return this.PathologicalDiagnosis;
@@ -583,19 +502,15 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
      * Set 病理诊断
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PathologicalDiagnosis 病理诊断
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPathologicalDiagnosis(PathologicalDiagnosisBlock PathologicalDiagnosis) {
         this.PathologicalDiagnosis = PathologicalDiagnosis;
     }
 
     /**
-     * Get 现病史
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 现病史 
      * @return DiseasePresent 现病史
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DiseasePresentBlock getDiseasePresent() {
         return this.DiseasePresent;
@@ -603,19 +518,15 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
      * Set 现病史
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DiseasePresent 现病史
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiseasePresent(DiseasePresentBlock DiseasePresent) {
         this.DiseasePresent = DiseasePresent;
     }
 
     /**
-     * Get 体征
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 体征 
      * @return SymptomsAndSigns 体征
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DiseasePresentBlock getSymptomsAndSigns() {
         return this.SymptomsAndSigns;
@@ -623,19 +534,15 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
      * Set 体征
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SymptomsAndSigns 体征
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSymptomsAndSigns(DiseasePresentBlock SymptomsAndSigns) {
         this.SymptomsAndSigns = SymptomsAndSigns;
     }
 
     /**
-     * Get 辅助检查
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 辅助检查 
      * @return AuxiliaryExamination 辅助检查
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DiseasePresentBlock getAuxiliaryExamination() {
         return this.AuxiliaryExamination;
@@ -643,19 +550,15 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
      * Set 辅助检查
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AuxiliaryExamination 辅助检查
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAuxiliaryExamination(DiseasePresentBlock AuxiliaryExamination) {
         this.AuxiliaryExamination = AuxiliaryExamination;
     }
 
     /**
-     * Get 特殊检查
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 特殊检查 
      * @return SpecialistExamination 特殊检查
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DiseasePresentBlock getSpecialistExamination() {
         return this.SpecialistExamination;
@@ -663,19 +566,15 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
      * Set 特殊检查
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SpecialistExamination 特殊检查
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSpecialistExamination(DiseasePresentBlock SpecialistExamination) {
         this.SpecialistExamination = SpecialistExamination;
     }
 
     /**
-     * Get 精神检查
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 精神检查 
      * @return MentalExamination 精神检查
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DiseasePresentBlock getMentalExamination() {
         return this.MentalExamination;
@@ -683,19 +582,15 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
      * Set 精神检查
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MentalExamination 精神检查
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMentalExamination(DiseasePresentBlock MentalExamination) {
         this.MentalExamination = MentalExamination;
     }
 
     /**
-     * Get 检查记录
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 检查记录 
      * @return CheckRecord 检查记录
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DiseasePresentBlock getCheckRecord() {
         return this.CheckRecord;
@@ -703,19 +598,15 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
      * Set 检查记录
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CheckRecord 检查记录
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCheckRecord(DiseasePresentBlock CheckRecord) {
         this.CheckRecord = CheckRecord;
     }
 
     /**
-     * Get 检查结果
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 检查结果 
      * @return InspectResult 检查结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DiseasePresentBlock getInspectResult() {
         return this.InspectResult;
@@ -723,19 +614,15 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
      * Set 检查结果
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InspectResult 检查结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInspectResult(DiseasePresentBlock InspectResult) {
         this.InspectResult = InspectResult;
     }
 
     /**
-     * Get 治疗经过
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 治疗经过 
      * @return CheckAndTreatmentProcess 治疗经过
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DiseasePresentBlock getCheckAndTreatmentProcess() {
         return this.CheckAndTreatmentProcess;
@@ -743,19 +630,15 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
      * Set 治疗经过
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CheckAndTreatmentProcess 治疗经过
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCheckAndTreatmentProcess(DiseasePresentBlock CheckAndTreatmentProcess) {
         this.CheckAndTreatmentProcess = CheckAndTreatmentProcess;
     }
 
     /**
-     * Get 手术经过
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 手术经过 
      * @return SurgeryCondition 手术经过
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SurgeryConditionBlock getSurgeryCondition() {
         return this.SurgeryCondition;
@@ -763,19 +646,15 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
      * Set 手术经过
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SurgeryCondition 手术经过
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSurgeryCondition(SurgeryConditionBlock SurgeryCondition) {
         this.SurgeryCondition = SurgeryCondition;
     }
 
     /**
-     * Get 切口愈合
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 切口愈合 
      * @return IncisionHealing 切口愈合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DiseasePresentBlock getIncisionHealing() {
         return this.IncisionHealing;
@@ -783,19 +662,15 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
      * Set 切口愈合
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IncisionHealing 切口愈合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIncisionHealing(DiseasePresentBlock IncisionHealing) {
         this.IncisionHealing = IncisionHealing;
     }
 
     /**
-     * Get 出院诊断
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 出院诊断 
      * @return DischargeDiagnosis 出院诊断
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DischargeDiagnosisBlock getDischargeDiagnosis() {
         return this.DischargeDiagnosis;
@@ -803,19 +678,15 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
      * Set 出院诊断
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DischargeDiagnosis 出院诊断
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDischargeDiagnosis(DischargeDiagnosisBlock DischargeDiagnosis) {
         this.DischargeDiagnosis = DischargeDiagnosis;
     }
 
     /**
-     * Get 出院中医诊断
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 出院中医诊断 
      * @return DischargeTraditionalDiagnosis 出院中医诊断
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DiseasePresentBlock getDischargeTraditionalDiagnosis() {
         return this.DischargeTraditionalDiagnosis;
@@ -823,19 +694,15 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
      * Set 出院中医诊断
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DischargeTraditionalDiagnosis 出院中医诊断
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDischargeTraditionalDiagnosis(DiseasePresentBlock DischargeTraditionalDiagnosis) {
         this.DischargeTraditionalDiagnosis = DischargeTraditionalDiagnosis;
     }
 
     /**
-     * Get 出院西医诊断
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 出院西医诊断 
      * @return DischargeModernDiagnosis 出院西医诊断
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DischargeDiagnosisBlock getDischargeModernDiagnosis() {
         return this.DischargeModernDiagnosis;
@@ -843,19 +710,15 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
      * Set 出院西医诊断
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DischargeModernDiagnosis 出院西医诊断
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDischargeModernDiagnosis(DischargeDiagnosisBlock DischargeModernDiagnosis) {
         this.DischargeModernDiagnosis = DischargeModernDiagnosis;
     }
 
     /**
-     * Get 出院情况
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 出院情况 
      * @return DischargeCondition 出院情况
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DischargeConditionBlock getDischargeCondition() {
         return this.DischargeCondition;
@@ -863,19 +726,15 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
      * Set 出院情况
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DischargeCondition 出院情况
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDischargeCondition(DischargeConditionBlock DischargeCondition) {
         this.DischargeCondition = DischargeCondition;
     }
 
     /**
-     * Get 出院医嘱
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 出院医嘱 
      * @return DischargeInstructions 出院医嘱
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DiseasePresentBlock getDischargeInstructions() {
         return this.DischargeInstructions;
@@ -883,19 +742,15 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
      * Set 出院医嘱
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DischargeInstructions 出院医嘱
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDischargeInstructions(DiseasePresentBlock DischargeInstructions) {
         this.DischargeInstructions = DischargeInstructions;
     }
 
     /**
-     * Get 治疗建议
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 治疗建议 
      * @return TreatmentSuggestion 治疗建议
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DiseasePresentBlock getTreatmentSuggestion() {
         return this.TreatmentSuggestion;
@@ -903,19 +758,15 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
      * Set 治疗建议
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TreatmentSuggestion 治疗建议
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTreatmentSuggestion(DiseasePresentBlock TreatmentSuggestion) {
         this.TreatmentSuggestion = TreatmentSuggestion;
     }
 
     /**
-     * Get 随访
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 随访 
      * @return FollowUpRequirements 随访
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DiseasePresentBlock getFollowUpRequirements() {
         return this.FollowUpRequirements;
@@ -923,19 +774,15 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
      * Set 随访
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FollowUpRequirements 随访
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFollowUpRequirements(DiseasePresentBlock FollowUpRequirements) {
         this.FollowUpRequirements = FollowUpRequirements;
     }
 
     /**
-     * Get 治疗情况变化
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 治疗情况变化 
      * @return ConditionChanges 治疗情况变化
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DiseasePresentBlock getConditionChanges() {
         return this.ConditionChanges;
@@ -943,19 +790,15 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
      * Set 治疗情况变化
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ConditionChanges 治疗情况变化
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConditionChanges(DiseasePresentBlock ConditionChanges) {
         this.ConditionChanges = ConditionChanges;
     }
 
     /**
-     * Get 收缩压
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 收缩压 
      * @return PulmonaryArterySystolicPressure 收缩压
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DiseasePresentBlock getPulmonaryArterySystolicPressure() {
         return this.PulmonaryArterySystolicPressure;
@@ -963,19 +806,15 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
      * Set 收缩压
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PulmonaryArterySystolicPressure 收缩压
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPulmonaryArterySystolicPressure(DiseasePresentBlock PulmonaryArterySystolicPressure) {
         this.PulmonaryArterySystolicPressure = PulmonaryArterySystolicPressure;
     }
 
     /**
-     * Get bclc分期
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get bclc分期 
      * @return BCLC bclc分期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DiseasePresentBlock getBCLC() {
         return this.BCLC;
@@ -983,19 +822,15 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
      * Set bclc分期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BCLC bclc分期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBCLC(DiseasePresentBlock BCLC) {
         this.BCLC = BCLC;
     }
 
     /**
-     * Get PTNM分期
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get PTNM分期 
      * @return PTNM PTNM分期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public PTNMBlock getPTNM() {
         return this.PTNM;
@@ -1003,19 +838,15 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
      * Set PTNM分期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PTNM PTNM分期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPTNM(PTNMBlock PTNM) {
         this.PTNM = PTNM;
     }
 
     /**
-     * Get ECOG评分
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get ECOG评分 
      * @return ECOG ECOG评分
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DiseasePresentBlock getECOG() {
         return this.ECOG;
@@ -1023,19 +854,15 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
      * Set ECOG评分
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ECOG ECOG评分
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setECOG(DiseasePresentBlock ECOG) {
         this.ECOG = ECOG;
     }
 
     /**
-     * Get NRS评分
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get NRS评分 
      * @return NRS NRS评分
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DiseasePresentBlock getNRS() {
         return this.NRS;
@@ -1043,19 +870,15 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
      * Set NRS评分
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NRS NRS评分
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNRS(DiseasePresentBlock NRS) {
         this.NRS = NRS;
     }
 
     /**
-     * Get kps评分
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get kps评分 
      * @return KPS kps评分
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DiseasePresentBlock getKPS() {
         return this.KPS;
@@ -1063,19 +886,15 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
      * Set kps评分
-注意：此字段可能返回 null，表示取不到有效值。
      * @param KPS kps评分
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKPS(DiseasePresentBlock KPS) {
         this.KPS = KPS;
     }
 
     /**
-     * Get 癌症分期
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 癌症分期 
      * @return Cancerstaging 癌症分期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ClinicalStaging getCancerstaging() {
         return this.Cancerstaging;
@@ -1083,19 +902,15 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
      * Set 癌症分期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Cancerstaging 癌症分期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCancerstaging(ClinicalStaging Cancerstaging) {
         this.Cancerstaging = Cancerstaging;
     }
 
     /**
-     * Get 死亡时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 死亡时间 
      * @return DeathDate 死亡时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DeathDateBlock getDeathDate() {
         return this.DeathDate;
@@ -1103,19 +918,15 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
      * Set 死亡时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeathDate 死亡时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeathDate(DeathDateBlock DeathDate) {
         this.DeathDate = DeathDate;
     }
 
     /**
-     * Get 复发日期
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 复发日期 
      * @return RelapseDate 复发日期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RelapseDateBlock getRelapseDate() {
         return this.RelapseDate;
@@ -1123,19 +934,15 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
      * Set 复发日期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RelapseDate 复发日期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRelapseDate(RelapseDateBlock RelapseDate) {
         this.RelapseDate = RelapseDate;
     }
 
     /**
-     * Get 观察日期
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 观察日期 
      * @return ObservationDays 观察日期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DeathDateBlock getObservationDays() {
         return this.ObservationDays;
@@ -1143,19 +950,15 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
      * Set 观察日期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ObservationDays 观察日期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setObservationDays(DeathDateBlock ObservationDays) {
         this.ObservationDays = ObservationDays;
     }
 
     /**
-     * Get 切口愈合情况
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 切口愈合情况 
      * @return IncisionHealingText 切口愈合情况
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIncisionHealingText() {
         return this.IncisionHealingText;
@@ -1163,19 +966,15 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
      * Set 切口愈合情况
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IncisionHealingText 切口愈合情况
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIncisionHealingText(String IncisionHealingText) {
         this.IncisionHealingText = IncisionHealingText;
     }
 
     /**
-     * Get 辅助检查
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 辅助检查 
      * @return AuxiliaryExaminationText 辅助检查
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAuxiliaryExaminationText() {
         return this.AuxiliaryExaminationText;
@@ -1183,19 +982,15 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
      * Set 辅助检查
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AuxiliaryExaminationText 辅助检查
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAuxiliaryExaminationText(String AuxiliaryExaminationText) {
         this.AuxiliaryExaminationText = AuxiliaryExaminationText;
     }
 
     /**
-     * Get 特殊检查
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 特殊检查 
      * @return SpecialExamText 特殊检查
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSpecialExamText() {
         return this.SpecialExamText;
@@ -1203,19 +998,15 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
      * Set 特殊检查
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SpecialExamText 特殊检查
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSpecialExamText(String SpecialExamText) {
         this.SpecialExamText = SpecialExamText;
     }
 
     /**
-     * Get 门诊诊断
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 门诊诊断 
      * @return OutpatientDiagnosisText 门诊诊断
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOutpatientDiagnosisText() {
         return this.OutpatientDiagnosisText;
@@ -1223,19 +1014,15 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
      * Set 门诊诊断
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OutpatientDiagnosisText 门诊诊断
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutpatientDiagnosisText(String OutpatientDiagnosisText) {
         this.OutpatientDiagnosisText = OutpatientDiagnosisText;
     }
 
     /**
-     * Get 入院情况
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 入院情况 
      * @return AdmissionConditionText 入院情况
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAdmissionConditionText() {
         return this.AdmissionConditionText;
@@ -1243,19 +1030,15 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
      * Set 入院情况
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AdmissionConditionText 入院情况
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAdmissionConditionText(String AdmissionConditionText) {
         this.AdmissionConditionText = AdmissionConditionText;
     }
 
     /**
-     * Get 诊疗经过
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 诊疗经过 
      * @return CheckAndTreatmentProcessText 诊疗经过
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCheckAndTreatmentProcessText() {
         return this.CheckAndTreatmentProcessText;
@@ -1263,19 +1046,15 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
      * Set 诊疗经过
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CheckAndTreatmentProcessText 诊疗经过
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCheckAndTreatmentProcessText(String CheckAndTreatmentProcessText) {
         this.CheckAndTreatmentProcessText = CheckAndTreatmentProcessText;
     }
 
     /**
-     * Get 体征
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 体征 
      * @return SymptomsAndSignsText 体征
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSymptomsAndSignsText() {
         return this.SymptomsAndSignsText;
@@ -1283,19 +1062,15 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
      * Set 体征
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SymptomsAndSignsText 体征
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSymptomsAndSignsText(String SymptomsAndSignsText) {
         this.SymptomsAndSignsText = SymptomsAndSignsText;
     }
 
     /**
-     * Get 出院医嘱
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 出院医嘱 
      * @return DischargeInstructionsText 出院医嘱
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDischargeInstructionsText() {
         return this.DischargeInstructionsText;
@@ -1303,19 +1078,15 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
      * Set 出院医嘱
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DischargeInstructionsText 出院医嘱
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDischargeInstructionsText(String DischargeInstructionsText) {
         this.DischargeInstructionsText = DischargeInstructionsText;
     }
 
     /**
-     * Get 入院诊断
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 入院诊断 
      * @return AdmissionDiagnosisText 入院诊断
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAdmissionDiagnosisText() {
         return this.AdmissionDiagnosisText;
@@ -1323,19 +1094,15 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
      * Set 入院诊断
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AdmissionDiagnosisText 入院诊断
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAdmissionDiagnosisText(String AdmissionDiagnosisText) {
         this.AdmissionDiagnosisText = AdmissionDiagnosisText;
     }
 
     /**
-     * Get 手术情况
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 手术情况 
      * @return SurgeryConditionText 手术情况
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSurgeryConditionText() {
         return this.SurgeryConditionText;
@@ -1343,19 +1110,15 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
      * Set 手术情况
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SurgeryConditionText 手术情况
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSurgeryConditionText(String SurgeryConditionText) {
         this.SurgeryConditionText = SurgeryConditionText;
     }
 
     /**
-     * Get 病理诊断
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 病理诊断 
      * @return PathologicalDiagnosisText 病理诊断
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPathologicalDiagnosisText() {
         return this.PathologicalDiagnosisText;
@@ -1363,19 +1126,15 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
      * Set 病理诊断
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PathologicalDiagnosisText 病理诊断
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPathologicalDiagnosisText(String PathologicalDiagnosisText) {
         this.PathologicalDiagnosisText = PathologicalDiagnosisText;
     }
 
     /**
-     * Get 出院情况
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 出院情况 
      * @return DischargeConditionText 出院情况
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDischargeConditionText() {
         return this.DischargeConditionText;
@@ -1383,19 +1142,15 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
      * Set 出院情况
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DischargeConditionText 出院情况
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDischargeConditionText(String DischargeConditionText) {
         this.DischargeConditionText = DischargeConditionText;
     }
 
     /**
-     * Get 检查记录
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 检查记录 
      * @return CheckRecordText 检查记录
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCheckRecordText() {
         return this.CheckRecordText;
@@ -1403,19 +1158,15 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
      * Set 检查记录
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CheckRecordText 检查记录
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCheckRecordText(String CheckRecordText) {
         this.CheckRecordText = CheckRecordText;
     }
 
     /**
-     * Get 主诉
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主诉 
      * @return ChiefComplaintText 主诉
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getChiefComplaintText() {
         return this.ChiefComplaintText;
@@ -1423,19 +1174,15 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
      * Set 主诉
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ChiefComplaintText 主诉
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setChiefComplaintText(String ChiefComplaintText) {
         this.ChiefComplaintText = ChiefComplaintText;
     }
 
     /**
-     * Get 出院诊断
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 出院诊断 
      * @return DischargeDiagnosisText 出院诊断
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDischargeDiagnosisText() {
         return this.DischargeDiagnosisText;
@@ -1443,9 +1190,7 @@ public class TreatmentRecordBlock extends AbstractModel {
 
     /**
      * Set 出院诊断
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DischargeDiagnosisText 出院诊断
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDischargeDiagnosisText(String DischargeDiagnosisText) {
         this.DischargeDiagnosisText = DischargeDiagnosisText;

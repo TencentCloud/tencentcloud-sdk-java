@@ -25,7 +25,6 @@ public class InternalMedicineBaseItem extends AbstractModel {
 
     /**
     * 体检报告-内科-腹部
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Abdomen")
     @Expose
@@ -33,7 +32,6 @@ public class InternalMedicineBaseItem extends AbstractModel {
 
     /**
     * 体检报告-内科-心脏
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Heart")
     @Expose
@@ -41,7 +39,6 @@ public class InternalMedicineBaseItem extends AbstractModel {
 
     /**
     * 体检报告-内科-血管
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Vessel")
     @Expose
@@ -49,7 +46,6 @@ public class InternalMedicineBaseItem extends AbstractModel {
 
     /**
     * 体检报告-内科-呼吸系统
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RespiratorySystem")
     @Expose
@@ -57,7 +53,6 @@ public class InternalMedicineBaseItem extends AbstractModel {
 
     /**
     * 体检报告-内科-内科其他
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Others")
     @Expose
@@ -65,17 +60,14 @@ public class InternalMedicineBaseItem extends AbstractModel {
 
     /**
     * 体检报告-内科-小结
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BriefSummary")
     @Expose
     private InternalMedicineBriefSummary BriefSummary;
 
     /**
-     * Get 体检报告-内科-腹部
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 体检报告-内科-腹部 
      * @return Abdomen 体检报告-内科-腹部
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public InternalMedicineAbdomen getAbdomen() {
         return this.Abdomen;
@@ -83,19 +75,15 @@ public class InternalMedicineBaseItem extends AbstractModel {
 
     /**
      * Set 体检报告-内科-腹部
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Abdomen 体检报告-内科-腹部
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAbdomen(InternalMedicineAbdomen Abdomen) {
         this.Abdomen = Abdomen;
     }
 
     /**
-     * Get 体检报告-内科-心脏
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 体检报告-内科-心脏 
      * @return Heart 体检报告-内科-心脏
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public InternalMedicineHeart getHeart() {
         return this.Heart;
@@ -103,19 +91,15 @@ public class InternalMedicineBaseItem extends AbstractModel {
 
     /**
      * Set 体检报告-内科-心脏
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Heart 体检报告-内科-心脏
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHeart(InternalMedicineHeart Heart) {
         this.Heart = Heart;
     }
 
     /**
-     * Get 体检报告-内科-血管
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 体检报告-内科-血管 
      * @return Vessel 体检报告-内科-血管
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public InternalMedicineVessel getVessel() {
         return this.Vessel;
@@ -123,19 +107,15 @@ public class InternalMedicineBaseItem extends AbstractModel {
 
     /**
      * Set 体检报告-内科-血管
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Vessel 体检报告-内科-血管
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVessel(InternalMedicineVessel Vessel) {
         this.Vessel = Vessel;
     }
 
     /**
-     * Get 体检报告-内科-呼吸系统
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 体检报告-内科-呼吸系统 
      * @return RespiratorySystem 体检报告-内科-呼吸系统
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public InternalMedicineRespiratorySystem getRespiratorySystem() {
         return this.RespiratorySystem;
@@ -143,19 +123,15 @@ public class InternalMedicineBaseItem extends AbstractModel {
 
     /**
      * Set 体检报告-内科-呼吸系统
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RespiratorySystem 体检报告-内科-呼吸系统
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRespiratorySystem(InternalMedicineRespiratorySystem RespiratorySystem) {
         this.RespiratorySystem = RespiratorySystem;
     }
 
     /**
-     * Get 体检报告-内科-内科其他
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 体检报告-内科-内科其他 
      * @return Others 体检报告-内科-内科其他
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public KeyValueItem [] getOthers() {
         return this.Others;
@@ -163,19 +139,15 @@ public class InternalMedicineBaseItem extends AbstractModel {
 
     /**
      * Set 体检报告-内科-内科其他
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Others 体检报告-内科-内科其他
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOthers(KeyValueItem [] Others) {
         this.Others = Others;
     }
 
     /**
-     * Get 体检报告-内科-小结
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 体检报告-内科-小结 
      * @return BriefSummary 体检报告-内科-小结
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public InternalMedicineBriefSummary getBriefSummary() {
         return this.BriefSummary;
@@ -183,9 +155,7 @@ public class InternalMedicineBaseItem extends AbstractModel {
 
     /**
      * Set 体检报告-内科-小结
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BriefSummary 体检报告-内科-小结
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBriefSummary(InternalMedicineBriefSummary BriefSummary) {
         this.BriefSummary = BriefSummary;

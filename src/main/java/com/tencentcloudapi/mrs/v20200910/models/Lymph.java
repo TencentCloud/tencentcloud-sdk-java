@@ -25,7 +25,6 @@ public class Lymph extends AbstractModel {
 
     /**
     * 原文
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Src")
     @Expose
@@ -33,7 +32,6 @@ public class Lymph extends AbstractModel {
 
     /**
     * 原文位置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Index")
     @Expose
@@ -41,7 +39,6 @@ public class Lymph extends AbstractModel {
 
     /**
     * 部位
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Part")
     @Expose
@@ -49,7 +46,6 @@ public class Lymph extends AbstractModel {
 
     /**
     * 总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Total")
     @Expose
@@ -57,17 +53,14 @@ public class Lymph extends AbstractModel {
 
     /**
     * 转移数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TransferNum")
     @Expose
     private Long TransferNum;
 
     /**
-     * Get 原文
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 原文 
      * @return Src 原文
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSrc() {
         return this.Src;
@@ -75,19 +68,15 @@ public class Lymph extends AbstractModel {
 
     /**
      * Set 原文
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Src 原文
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSrc(String Src) {
         this.Src = Src;
     }
 
     /**
-     * Get 原文位置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 原文位置 
      * @return Index 原文位置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long [] getIndex() {
         return this.Index;
@@ -95,19 +84,15 @@ public class Lymph extends AbstractModel {
 
     /**
      * Set 原文位置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Index 原文位置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIndex(Long [] Index) {
         this.Index = Index;
     }
 
     /**
-     * Get 部位
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 部位 
      * @return Part 部位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Part getPart() {
         return this.Part;
@@ -115,19 +100,15 @@ public class Lymph extends AbstractModel {
 
     /**
      * Set 部位
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Part 部位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPart(Part Part) {
         this.Part = Part;
     }
 
     /**
-     * Get 总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 总数 
      * @return Total 总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotal() {
         return this.Total;
@@ -135,19 +116,15 @@ public class Lymph extends AbstractModel {
 
     /**
      * Set 总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Total 总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotal(Long Total) {
         this.Total = Total;
     }
 
     /**
-     * Get 转移数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 转移数 
      * @return TransferNum 转移数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTransferNum() {
         return this.TransferNum;
@@ -155,9 +132,7 @@ public class Lymph extends AbstractModel {
 
     /**
      * Set 转移数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TransferNum 转移数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTransferNum(Long TransferNum) {
         this.TransferNum = TransferNum;

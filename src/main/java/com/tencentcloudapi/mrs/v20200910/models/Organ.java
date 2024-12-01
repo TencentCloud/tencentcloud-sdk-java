@@ -25,7 +25,6 @@ public class Organ extends AbstractModel {
 
     /**
     * 部位
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Part")
     @Expose
@@ -33,7 +32,6 @@ public class Organ extends AbstractModel {
 
     /**
     * 大小
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Size")
     @Expose
@@ -41,7 +39,6 @@ public class Organ extends AbstractModel {
 
     /**
     * 包膜
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Envelope")
     @Expose
@@ -49,7 +46,6 @@ public class Organ extends AbstractModel {
 
     /**
     * 边缘
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Edge")
     @Expose
@@ -57,7 +53,6 @@ public class Organ extends AbstractModel {
 
     /**
     * 内部回声
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InnerEcho")
     @Expose
@@ -65,7 +60,6 @@ public class Organ extends AbstractModel {
 
     /**
     * 腺体
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Gland")
     @Expose
@@ -73,7 +67,6 @@ public class Organ extends AbstractModel {
 
     /**
     * 形状
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Shape")
     @Expose
@@ -81,7 +74,6 @@ public class Organ extends AbstractModel {
 
     /**
     * 厚度
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Thickness")
     @Expose
@@ -89,7 +81,6 @@ public class Organ extends AbstractModel {
 
     /**
     * 形态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ShapeAttr")
     @Expose
@@ -97,7 +88,6 @@ public class Organ extends AbstractModel {
 
     /**
     * 血液cdfi
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CDFI")
     @Expose
@@ -105,7 +95,6 @@ public class Organ extends AbstractModel {
 
     /**
     * 描述信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SymDesc")
     @Expose
@@ -113,7 +102,6 @@ public class Organ extends AbstractModel {
 
     /**
     * 大小状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SizeStatus")
     @Expose
@@ -121,7 +109,6 @@ public class Organ extends AbstractModel {
 
     /**
     * 轮廓
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Outline")
     @Expose
@@ -129,7 +116,6 @@ public class Organ extends AbstractModel {
 
     /**
     * 结构
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Structure")
     @Expose
@@ -137,7 +123,6 @@ public class Organ extends AbstractModel {
 
     /**
     * 密度
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Density")
     @Expose
@@ -145,7 +130,6 @@ public class Organ extends AbstractModel {
 
     /**
     * 血管
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Vas")
     @Expose
@@ -153,7 +137,6 @@ public class Organ extends AbstractModel {
 
     /**
     * 囊壁
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Cysticwall")
     @Expose
@@ -161,7 +144,6 @@ public class Organ extends AbstractModel {
 
     /**
     * 被膜
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Capsule")
     @Expose
@@ -177,7 +159,6 @@ public class Organ extends AbstractModel {
 
     /**
     * 内部回声分布
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InnerEchoDistribution")
     @Expose
@@ -185,7 +166,6 @@ public class Organ extends AbstractModel {
 
     /**
     * 原文
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Src")
     @Expose
@@ -193,7 +173,6 @@ public class Organ extends AbstractModel {
 
     /**
     * 原文位置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Index")
     @Expose
@@ -201,7 +180,6 @@ public class Organ extends AbstractModel {
 
     /**
     * 透声度
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Transparent")
     @Expose
@@ -209,7 +187,6 @@ public class Organ extends AbstractModel {
 
     /**
     * MRI ADC
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MriAdc")
     @Expose
@@ -217,7 +194,6 @@ public class Organ extends AbstractModel {
 
     /**
     * MRI DWI
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MriDwi")
     @Expose
@@ -225,7 +201,6 @@ public class Organ extends AbstractModel {
 
     /**
     * MRI T1信号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MriT1")
     @Expose
@@ -233,7 +208,6 @@ public class Organ extends AbstractModel {
 
     /**
     * MRI T2信号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MriT2")
     @Expose
@@ -241,7 +215,6 @@ public class Organ extends AbstractModel {
 
     /**
     * CT HU值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CtHu")
     @Expose
@@ -249,7 +222,6 @@ public class Organ extends AbstractModel {
 
     /**
     * SUmax值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Suvmax")
     @Expose
@@ -257,7 +229,6 @@ public class Organ extends AbstractModel {
 
     /**
     * 代谢情况
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Metabolism")
     @Expose
@@ -265,7 +236,6 @@ public class Organ extends AbstractModel {
 
     /**
     * 放射性摄取
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RadioactiveUptake")
     @Expose
@@ -273,7 +243,6 @@ public class Organ extends AbstractModel {
 
     /**
     * 淋巴结情况
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LymphEnlargement")
     @Expose
@@ -281,7 +250,6 @@ public class Organ extends AbstractModel {
 
     /**
     * 影像特征
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ImageFeature")
     @Expose
@@ -289,7 +257,6 @@ public class Organ extends AbstractModel {
 
     /**
     * 导管
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Duct")
     @Expose
@@ -297,7 +264,6 @@ public class Organ extends AbstractModel {
 
     /**
     * 趋势
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Trend")
     @Expose
@@ -305,7 +271,6 @@ public class Organ extends AbstractModel {
 
     /**
     * 手术情况
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Operation")
     @Expose
@@ -313,7 +278,6 @@ public class Organ extends AbstractModel {
 
     /**
     * 器官在报告图片中的坐标
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Coords")
     @Expose
@@ -321,17 +285,14 @@ public class Organ extends AbstractModel {
 
     /**
     * 峡部厚度
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsthmusThickness")
     @Expose
     private Size IsthmusThickness;
 
     /**
-     * Get 部位
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 部位 
      * @return Part 部位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Part getPart() {
         return this.Part;
@@ -339,19 +300,15 @@ public class Organ extends AbstractModel {
 
     /**
      * Set 部位
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Part 部位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPart(Part Part) {
         this.Part = Part;
     }
 
     /**
-     * Get 大小
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 大小 
      * @return Size 大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Size [] getSize() {
         return this.Size;
@@ -359,19 +316,15 @@ public class Organ extends AbstractModel {
 
     /**
      * Set 大小
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Size 大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSize(Size [] Size) {
         this.Size = Size;
     }
 
     /**
-     * Get 包膜
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 包膜 
      * @return Envelope 包膜
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BlockInfo getEnvelope() {
         return this.Envelope;
@@ -379,19 +332,15 @@ public class Organ extends AbstractModel {
 
     /**
      * Set 包膜
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Envelope 包膜
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnvelope(BlockInfo Envelope) {
         this.Envelope = Envelope;
     }
 
     /**
-     * Get 边缘
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 边缘 
      * @return Edge 边缘
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BlockInfo getEdge() {
         return this.Edge;
@@ -399,19 +348,15 @@ public class Organ extends AbstractModel {
 
     /**
      * Set 边缘
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Edge 边缘
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEdge(BlockInfo Edge) {
         this.Edge = Edge;
     }
 
     /**
-     * Get 内部回声
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 内部回声 
      * @return InnerEcho 内部回声
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BlockInfo getInnerEcho() {
         return this.InnerEcho;
@@ -419,19 +364,15 @@ public class Organ extends AbstractModel {
 
     /**
      * Set 内部回声
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InnerEcho 内部回声
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInnerEcho(BlockInfo InnerEcho) {
         this.InnerEcho = InnerEcho;
     }
 
     /**
-     * Get 腺体
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 腺体 
      * @return Gland 腺体
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BlockInfo getGland() {
         return this.Gland;
@@ -439,19 +380,15 @@ public class Organ extends AbstractModel {
 
     /**
      * Set 腺体
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Gland 腺体
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGland(BlockInfo Gland) {
         this.Gland = Gland;
     }
 
     /**
-     * Get 形状
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 形状 
      * @return Shape 形状
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BlockInfo getShape() {
         return this.Shape;
@@ -459,19 +396,15 @@ public class Organ extends AbstractModel {
 
     /**
      * Set 形状
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Shape 形状
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setShape(BlockInfo Shape) {
         this.Shape = Shape;
     }
 
     /**
-     * Get 厚度
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 厚度 
      * @return Thickness 厚度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BlockInfo getThickness() {
         return this.Thickness;
@@ -479,19 +412,15 @@ public class Organ extends AbstractModel {
 
     /**
      * Set 厚度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Thickness 厚度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setThickness(BlockInfo Thickness) {
         this.Thickness = Thickness;
     }
 
     /**
-     * Get 形态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 形态 
      * @return ShapeAttr 形态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BlockInfo getShapeAttr() {
         return this.ShapeAttr;
@@ -499,19 +428,15 @@ public class Organ extends AbstractModel {
 
     /**
      * Set 形态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ShapeAttr 形态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setShapeAttr(BlockInfo ShapeAttr) {
         this.ShapeAttr = ShapeAttr;
     }
 
     /**
-     * Get 血液cdfi
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 血液cdfi 
      * @return CDFI 血液cdfi
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BlockInfo getCDFI() {
         return this.CDFI;
@@ -519,19 +444,15 @@ public class Organ extends AbstractModel {
 
     /**
      * Set 血液cdfi
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CDFI 血液cdfi
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCDFI(BlockInfo CDFI) {
         this.CDFI = CDFI;
     }
 
     /**
-     * Get 描述信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 描述信息 
      * @return SymDesc 描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BlockInfo getSymDesc() {
         return this.SymDesc;
@@ -539,19 +460,15 @@ public class Organ extends AbstractModel {
 
     /**
      * Set 描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SymDesc 描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSymDesc(BlockInfo SymDesc) {
         this.SymDesc = SymDesc;
     }
 
     /**
-     * Get 大小状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 大小状态 
      * @return SizeStatus 大小状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BlockInfo getSizeStatus() {
         return this.SizeStatus;
@@ -559,19 +476,15 @@ public class Organ extends AbstractModel {
 
     /**
      * Set 大小状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SizeStatus 大小状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSizeStatus(BlockInfo SizeStatus) {
         this.SizeStatus = SizeStatus;
     }
 
     /**
-     * Get 轮廓
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 轮廓 
      * @return Outline 轮廓
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BlockInfo getOutline() {
         return this.Outline;
@@ -579,19 +492,15 @@ public class Organ extends AbstractModel {
 
     /**
      * Set 轮廓
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Outline 轮廓
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutline(BlockInfo Outline) {
         this.Outline = Outline;
     }
 
     /**
-     * Get 结构
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 结构 
      * @return Structure 结构
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BlockInfo getStructure() {
         return this.Structure;
@@ -599,19 +508,15 @@ public class Organ extends AbstractModel {
 
     /**
      * Set 结构
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Structure 结构
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStructure(BlockInfo Structure) {
         this.Structure = Structure;
     }
 
     /**
-     * Get 密度
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 密度 
      * @return Density 密度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BlockInfo getDensity() {
         return this.Density;
@@ -619,19 +524,15 @@ public class Organ extends AbstractModel {
 
     /**
      * Set 密度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Density 密度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDensity(BlockInfo Density) {
         this.Density = Density;
     }
 
     /**
-     * Get 血管
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 血管 
      * @return Vas 血管
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BlockInfo getVas() {
         return this.Vas;
@@ -639,19 +540,15 @@ public class Organ extends AbstractModel {
 
     /**
      * Set 血管
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Vas 血管
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVas(BlockInfo Vas) {
         this.Vas = Vas;
     }
 
     /**
-     * Get 囊壁
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 囊壁 
      * @return Cysticwall 囊壁
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BlockInfo getCysticwall() {
         return this.Cysticwall;
@@ -659,19 +556,15 @@ public class Organ extends AbstractModel {
 
     /**
      * Set 囊壁
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Cysticwall 囊壁
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCysticwall(BlockInfo Cysticwall) {
         this.Cysticwall = Cysticwall;
     }
 
     /**
-     * Get 被膜
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 被膜 
      * @return Capsule 被膜
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BlockInfo getCapsule() {
         return this.Capsule;
@@ -679,9 +572,7 @@ public class Organ extends AbstractModel {
 
     /**
      * Set 被膜
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Capsule 被膜
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCapsule(BlockInfo Capsule) {
         this.Capsule = Capsule;
@@ -712,10 +603,8 @@ public class Organ extends AbstractModel {
     }
 
     /**
-     * Get 内部回声分布
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 内部回声分布 
      * @return InnerEchoDistribution 内部回声分布
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BlockInfo getInnerEchoDistribution() {
         return this.InnerEchoDistribution;
@@ -723,19 +612,15 @@ public class Organ extends AbstractModel {
 
     /**
      * Set 内部回声分布
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InnerEchoDistribution 内部回声分布
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInnerEchoDistribution(BlockInfo InnerEchoDistribution) {
         this.InnerEchoDistribution = InnerEchoDistribution;
     }
 
     /**
-     * Get 原文
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 原文 
      * @return Src 原文
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSrc() {
         return this.Src;
@@ -743,19 +628,15 @@ public class Organ extends AbstractModel {
 
     /**
      * Set 原文
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Src 原文
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSrc(String Src) {
         this.Src = Src;
     }
 
     /**
-     * Get 原文位置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 原文位置 
      * @return Index 原文位置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long [] getIndex() {
         return this.Index;
@@ -763,19 +644,15 @@ public class Organ extends AbstractModel {
 
     /**
      * Set 原文位置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Index 原文位置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIndex(Long [] Index) {
         this.Index = Index;
     }
 
     /**
-     * Get 透声度
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 透声度 
      * @return Transparent 透声度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BlockInfo getTransparent() {
         return this.Transparent;
@@ -783,19 +660,15 @@ public class Organ extends AbstractModel {
 
     /**
      * Set 透声度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Transparent 透声度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTransparent(BlockInfo Transparent) {
         this.Transparent = Transparent;
     }
 
     /**
-     * Get MRI ADC
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get MRI ADC 
      * @return MriAdc MRI ADC
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BlockInfo getMriAdc() {
         return this.MriAdc;
@@ -803,19 +676,15 @@ public class Organ extends AbstractModel {
 
     /**
      * Set MRI ADC
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MriAdc MRI ADC
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMriAdc(BlockInfo MriAdc) {
         this.MriAdc = MriAdc;
     }
 
     /**
-     * Get MRI DWI
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get MRI DWI 
      * @return MriDwi MRI DWI
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BlockInfo getMriDwi() {
         return this.MriDwi;
@@ -823,19 +692,15 @@ public class Organ extends AbstractModel {
 
     /**
      * Set MRI DWI
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MriDwi MRI DWI
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMriDwi(BlockInfo MriDwi) {
         this.MriDwi = MriDwi;
     }
 
     /**
-     * Get MRI T1信号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get MRI T1信号 
      * @return MriT1 MRI T1信号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BlockInfo getMriT1() {
         return this.MriT1;
@@ -843,19 +708,15 @@ public class Organ extends AbstractModel {
 
     /**
      * Set MRI T1信号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MriT1 MRI T1信号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMriT1(BlockInfo MriT1) {
         this.MriT1 = MriT1;
     }
 
     /**
-     * Get MRI T2信号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get MRI T2信号 
      * @return MriT2 MRI T2信号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BlockInfo getMriT2() {
         return this.MriT2;
@@ -863,19 +724,15 @@ public class Organ extends AbstractModel {
 
     /**
      * Set MRI T2信号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MriT2 MRI T2信号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMriT2(BlockInfo MriT2) {
         this.MriT2 = MriT2;
     }
 
     /**
-     * Get CT HU值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get CT HU值 
      * @return CtHu CT HU值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BlockInfo getCtHu() {
         return this.CtHu;
@@ -883,19 +740,15 @@ public class Organ extends AbstractModel {
 
     /**
      * Set CT HU值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CtHu CT HU值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCtHu(BlockInfo CtHu) {
         this.CtHu = CtHu;
     }
 
     /**
-     * Get SUmax值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get SUmax值 
      * @return Suvmax SUmax值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BlockInfo getSuvmax() {
         return this.Suvmax;
@@ -903,19 +756,15 @@ public class Organ extends AbstractModel {
 
     /**
      * Set SUmax值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Suvmax SUmax值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSuvmax(BlockInfo Suvmax) {
         this.Suvmax = Suvmax;
     }
 
     /**
-     * Get 代谢情况
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 代谢情况 
      * @return Metabolism 代谢情况
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BlockInfo getMetabolism() {
         return this.Metabolism;
@@ -923,19 +772,15 @@ public class Organ extends AbstractModel {
 
     /**
      * Set 代谢情况
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Metabolism 代谢情况
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMetabolism(BlockInfo Metabolism) {
         this.Metabolism = Metabolism;
     }
 
     /**
-     * Get 放射性摄取
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 放射性摄取 
      * @return RadioactiveUptake 放射性摄取
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BlockInfo getRadioactiveUptake() {
         return this.RadioactiveUptake;
@@ -943,19 +788,15 @@ public class Organ extends AbstractModel {
 
     /**
      * Set 放射性摄取
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RadioactiveUptake 放射性摄取
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRadioactiveUptake(BlockInfo RadioactiveUptake) {
         this.RadioactiveUptake = RadioactiveUptake;
     }
 
     /**
-     * Get 淋巴结情况
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 淋巴结情况 
      * @return LymphEnlargement 淋巴结情况
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BlockInfo getLymphEnlargement() {
         return this.LymphEnlargement;
@@ -963,19 +804,15 @@ public class Organ extends AbstractModel {
 
     /**
      * Set 淋巴结情况
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LymphEnlargement 淋巴结情况
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLymphEnlargement(BlockInfo LymphEnlargement) {
         this.LymphEnlargement = LymphEnlargement;
     }
 
     /**
-     * Get 影像特征
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 影像特征 
      * @return ImageFeature 影像特征
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BlockInfo getImageFeature() {
         return this.ImageFeature;
@@ -983,19 +820,15 @@ public class Organ extends AbstractModel {
 
     /**
      * Set 影像特征
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ImageFeature 影像特征
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setImageFeature(BlockInfo ImageFeature) {
         this.ImageFeature = ImageFeature;
     }
 
     /**
-     * Get 导管
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 导管 
      * @return Duct 导管
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BlockInfo getDuct() {
         return this.Duct;
@@ -1003,19 +836,15 @@ public class Organ extends AbstractModel {
 
     /**
      * Set 导管
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Duct 导管
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDuct(BlockInfo Duct) {
         this.Duct = Duct;
     }
 
     /**
-     * Get 趋势
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 趋势 
      * @return Trend 趋势
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BlockInfo getTrend() {
         return this.Trend;
@@ -1023,19 +852,15 @@ public class Organ extends AbstractModel {
 
     /**
      * Set 趋势
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Trend 趋势
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTrend(BlockInfo Trend) {
         this.Trend = Trend;
     }
 
     /**
-     * Get 手术情况
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 手术情况 
      * @return Operation 手术情况
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BlockInfo getOperation() {
         return this.Operation;
@@ -1043,19 +868,15 @@ public class Organ extends AbstractModel {
 
     /**
      * Set 手术情况
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Operation 手术情况
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOperation(BlockInfo Operation) {
         this.Operation = Operation;
     }
 
     /**
-     * Get 器官在报告图片中的坐标
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 器官在报告图片中的坐标 
      * @return Coords 器官在报告图片中的坐标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Coord [] getCoords() {
         return this.Coords;
@@ -1063,19 +884,15 @@ public class Organ extends AbstractModel {
 
     /**
      * Set 器官在报告图片中的坐标
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Coords 器官在报告图片中的坐标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCoords(Coord [] Coords) {
         this.Coords = Coords;
     }
 
     /**
-     * Get 峡部厚度
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 峡部厚度 
      * @return IsthmusThickness 峡部厚度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Size getIsthmusThickness() {
         return this.IsthmusThickness;
@@ -1083,9 +900,7 @@ public class Organ extends AbstractModel {
 
     /**
      * Set 峡部厚度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsthmusThickness 峡部厚度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsthmusThickness(Size IsthmusThickness) {
         this.IsthmusThickness = IsthmusThickness;

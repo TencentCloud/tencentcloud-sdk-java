@@ -25,7 +25,6 @@ public class VaccineCertificate extends AbstractModel {
 
     /**
     * 免疫接种列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VaccineList")
     @Expose
@@ -33,17 +32,14 @@ public class VaccineCertificate extends AbstractModel {
 
     /**
     * 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Page")
     @Expose
     private Long Page;
 
     /**
-     * Get 免疫接种列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 免疫接种列表 
      * @return VaccineList 免疫接种列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Vaccination [] getVaccineList() {
         return this.VaccineList;
@@ -51,19 +47,15 @@ public class VaccineCertificate extends AbstractModel {
 
     /**
      * Set 免疫接种列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VaccineList 免疫接种列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVaccineList(Vaccination [] VaccineList) {
         this.VaccineList = VaccineList;
     }
 
     /**
-     * Get 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据在原PDF文件中的第几页 
      * @return Page 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPage() {
         return this.Page;
@@ -71,9 +63,7 @@ public class VaccineCertificate extends AbstractModel {
 
     /**
      * Set 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Page 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPage(Long Page) {
         this.Page = Page;

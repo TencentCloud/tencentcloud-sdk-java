@@ -25,7 +25,6 @@ public class DescInfo extends AbstractModel {
 
     /**
     * 描述段落文本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Text")
     @Expose
@@ -33,17 +32,14 @@ public class DescInfo extends AbstractModel {
 
     /**
     * 描述段落详情
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Infos")
     @Expose
     private DetailInformation [] Infos;
 
     /**
-     * Get 描述段落文本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 描述段落文本 
      * @return Text 描述段落文本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BaseInfo getText() {
         return this.Text;
@@ -51,19 +47,15 @@ public class DescInfo extends AbstractModel {
 
     /**
      * Set 描述段落文本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Text 描述段落文本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setText(BaseInfo Text) {
         this.Text = Text;
     }
 
     /**
-     * Get 描述段落详情
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 描述段落详情 
      * @return Infos 描述段落详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DetailInformation [] getInfos() {
         return this.Infos;
@@ -71,9 +63,7 @@ public class DescInfo extends AbstractModel {
 
     /**
      * Set 描述段落详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Infos 描述段落详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInfos(DetailInformation [] Infos) {
         this.Infos = Infos;

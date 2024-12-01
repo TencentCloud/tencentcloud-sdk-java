@@ -25,17 +25,14 @@ public class GynaecologyUterus extends AbstractModel {
 
     /**
     * 子宫总体描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Text")
     @Expose
     private KeyValueItem Text;
 
     /**
-     * Get 子宫总体描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子宫总体描述 
      * @return Text 子宫总体描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public KeyValueItem getText() {
         return this.Text;
@@ -43,9 +40,7 @@ public class GynaecologyUterus extends AbstractModel {
 
     /**
      * Set 子宫总体描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Text 子宫总体描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setText(KeyValueItem Text) {
         this.Text = Text;

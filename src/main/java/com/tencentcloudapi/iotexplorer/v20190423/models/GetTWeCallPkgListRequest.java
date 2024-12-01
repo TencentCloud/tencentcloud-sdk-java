@@ -61,7 +61,9 @@ public class GetTWeCallPkgListRequest extends AbstractModel {
     /**
      * Get appId 
      * @return MiniProgramAppId appId
+     * @deprecated
      */
+    @Deprecated
     public String getMiniProgramAppId() {
         return this.MiniProgramAppId;
     }
@@ -69,7 +71,9 @@ public class GetTWeCallPkgListRequest extends AbstractModel {
     /**
      * Set appId
      * @param MiniProgramAppId appId
+     * @deprecated
      */
+    @Deprecated
     public void setMiniProgramAppId(String MiniProgramAppId) {
         this.MiniProgramAppId = MiniProgramAppId;
     }

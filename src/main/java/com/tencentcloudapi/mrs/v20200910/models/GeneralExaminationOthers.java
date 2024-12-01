@@ -25,7 +25,6 @@ public class GeneralExaminationOthers extends AbstractModel {
 
     /**
     * 面容与表情
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Countenance")
     @Expose
@@ -33,7 +32,6 @@ public class GeneralExaminationOthers extends AbstractModel {
 
     /**
     * 精神状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MentalStatus")
     @Expose
@@ -41,7 +39,6 @@ public class GeneralExaminationOthers extends AbstractModel {
 
     /**
     * 发育及营养状况
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DevelopmentCondition")
     @Expose
@@ -49,7 +46,6 @@ public class GeneralExaminationOthers extends AbstractModel {
 
     /**
     * 记忆力
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Memory")
     @Expose
@@ -57,7 +53,6 @@ public class GeneralExaminationOthers extends AbstractModel {
 
     /**
     * 臀围
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Hipline")
     @Expose
@@ -65,7 +60,6 @@ public class GeneralExaminationOthers extends AbstractModel {
 
     /**
     * 腰臀比
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WaistHipRatio")
     @Expose
@@ -73,7 +67,6 @@ public class GeneralExaminationOthers extends AbstractModel {
 
     /**
     * 生活嗜好
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Addiction")
     @Expose
@@ -81,7 +74,6 @@ public class GeneralExaminationOthers extends AbstractModel {
 
     /**
     * 生活能力评定
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AbilityOfLifeADL")
     @Expose
@@ -89,7 +81,6 @@ public class GeneralExaminationOthers extends AbstractModel {
 
     /**
     * 一般检查其他
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Others")
     @Expose
@@ -97,17 +88,14 @@ public class GeneralExaminationOthers extends AbstractModel {
 
     /**
     * 胸围
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ChestCircumference")
     @Expose
     private ChestCircumferenceItem ChestCircumference;
 
     /**
-     * Get 面容与表情
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 面容与表情 
      * @return Countenance 面容与表情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public KeyValueItem getCountenance() {
         return this.Countenance;
@@ -115,19 +103,15 @@ public class GeneralExaminationOthers extends AbstractModel {
 
     /**
      * Set 面容与表情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Countenance 面容与表情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCountenance(KeyValueItem Countenance) {
         this.Countenance = Countenance;
     }
 
     /**
-     * Get 精神状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 精神状态 
      * @return MentalStatus 精神状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public KeyValueItem getMentalStatus() {
         return this.MentalStatus;
@@ -135,19 +119,15 @@ public class GeneralExaminationOthers extends AbstractModel {
 
     /**
      * Set 精神状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MentalStatus 精神状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMentalStatus(KeyValueItem MentalStatus) {
         this.MentalStatus = MentalStatus;
     }
 
     /**
-     * Get 发育及营养状况
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 发育及营养状况 
      * @return DevelopmentCondition 发育及营养状况
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public KeyValueItem getDevelopmentCondition() {
         return this.DevelopmentCondition;
@@ -155,19 +135,15 @@ public class GeneralExaminationOthers extends AbstractModel {
 
     /**
      * Set 发育及营养状况
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DevelopmentCondition 发育及营养状况
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDevelopmentCondition(KeyValueItem DevelopmentCondition) {
         this.DevelopmentCondition = DevelopmentCondition;
     }
 
     /**
-     * Get 记忆力
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 记忆力 
      * @return Memory 记忆力
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public KeyValueItem getMemory() {
         return this.Memory;
@@ -175,19 +151,15 @@ public class GeneralExaminationOthers extends AbstractModel {
 
     /**
      * Set 记忆力
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Memory 记忆力
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMemory(KeyValueItem Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * Get 臀围
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 臀围 
      * @return Hipline 臀围
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ValueUnitItem getHipline() {
         return this.Hipline;
@@ -195,19 +167,15 @@ public class GeneralExaminationOthers extends AbstractModel {
 
     /**
      * Set 臀围
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Hipline 臀围
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHipline(ValueUnitItem Hipline) {
         this.Hipline = Hipline;
     }
 
     /**
-     * Get 腰臀比
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 腰臀比 
      * @return WaistHipRatio 腰臀比
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ValueUnitItem getWaistHipRatio() {
         return this.WaistHipRatio;
@@ -215,19 +183,15 @@ public class GeneralExaminationOthers extends AbstractModel {
 
     /**
      * Set 腰臀比
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WaistHipRatio 腰臀比
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWaistHipRatio(ValueUnitItem WaistHipRatio) {
         this.WaistHipRatio = WaistHipRatio;
     }
 
     /**
-     * Get 生活嗜好
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 生活嗜好 
      * @return Addiction 生活嗜好
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public KeyValueItem getAddiction() {
         return this.Addiction;
@@ -235,19 +199,15 @@ public class GeneralExaminationOthers extends AbstractModel {
 
     /**
      * Set 生活嗜好
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Addiction 生活嗜好
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAddiction(KeyValueItem Addiction) {
         this.Addiction = Addiction;
     }
 
     /**
-     * Get 生活能力评定
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 生活能力评定 
      * @return AbilityOfLifeADL 生活能力评定
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public KeyValueItem getAbilityOfLifeADL() {
         return this.AbilityOfLifeADL;
@@ -255,19 +215,15 @@ public class GeneralExaminationOthers extends AbstractModel {
 
     /**
      * Set 生活能力评定
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AbilityOfLifeADL 生活能力评定
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAbilityOfLifeADL(KeyValueItem AbilityOfLifeADL) {
         this.AbilityOfLifeADL = AbilityOfLifeADL;
     }
 
     /**
-     * Get 一般检查其他
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 一般检查其他 
      * @return Others 一般检查其他
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public KeyValueItem [] getOthers() {
         return this.Others;
@@ -275,19 +231,15 @@ public class GeneralExaminationOthers extends AbstractModel {
 
     /**
      * Set 一般检查其他
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Others 一般检查其他
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOthers(KeyValueItem [] Others) {
         this.Others = Others;
     }
 
     /**
-     * Get 胸围
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 胸围 
      * @return ChestCircumference 胸围
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ChestCircumferenceItem getChestCircumference() {
         return this.ChestCircumference;
@@ -295,9 +247,7 @@ public class GeneralExaminationOthers extends AbstractModel {
 
     /**
      * Set 胸围
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ChestCircumference 胸围
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setChestCircumference(ChestCircumferenceItem ChestCircumference) {
         this.ChestCircumference = ChestCircumference;

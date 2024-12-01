@@ -25,7 +25,6 @@ public class FieldInfo extends AbstractModel {
 
     /**
     * 名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -33,7 +32,6 @@ public class FieldInfo extends AbstractModel {
 
     /**
     * 值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Value")
     @Expose
@@ -41,7 +39,6 @@ public class FieldInfo extends AbstractModel {
 
     /**
     * 数值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Nums")
     @Expose
@@ -49,17 +46,14 @@ public class FieldInfo extends AbstractModel {
 
     /**
     * 原文
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Src")
     @Expose
     private String Src;
 
     /**
-     * Get 名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 名称 
      * @return Name 名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -67,19 +61,15 @@ public class FieldInfo extends AbstractModel {
 
     /**
      * Set 名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 值 
      * @return Value 值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getValue() {
         return this.Value;
@@ -87,19 +77,15 @@ public class FieldInfo extends AbstractModel {
 
     /**
      * Set 值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Value 值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValue(String Value) {
         this.Value = Value;
     }
 
     /**
-     * Get 数值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数值 
      * @return Nums 数值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public NumValue [] getNums() {
         return this.Nums;
@@ -107,19 +93,15 @@ public class FieldInfo extends AbstractModel {
 
     /**
      * Set 数值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Nums 数值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNums(NumValue [] Nums) {
         this.Nums = Nums;
     }
 
     /**
-     * Get 原文
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 原文 
      * @return Src 原文
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSrc() {
         return this.Src;
@@ -127,9 +109,7 @@ public class FieldInfo extends AbstractModel {
 
     /**
      * Set 原文
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Src 原文
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSrc(String Src) {
         this.Src = Src;
