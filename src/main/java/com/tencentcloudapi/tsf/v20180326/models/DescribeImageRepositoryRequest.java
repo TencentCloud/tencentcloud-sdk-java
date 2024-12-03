@@ -66,7 +66,7 @@ public class DescribeImageRepositoryRequest extends AbstractModel {
     private TcrRepoInfo TcrRepoInfo;
 
     /**
-    * 镜像仓库
+    * 镜像仓库名称
     */
     @SerializedName("RepoName")
     @Expose
@@ -169,16 +169,16 @@ public class DescribeImageRepositoryRequest extends AbstractModel {
     }
 
     /**
-     * Get 镜像仓库 
-     * @return RepoName 镜像仓库
+     * Get 镜像仓库名称 
+     * @return RepoName 镜像仓库名称
      */
     public String getRepoName() {
         return this.RepoName;
     }
 
     /**
-     * Set 镜像仓库
-     * @param RepoName 镜像仓库
+     * Set 镜像仓库名称
+     * @param RepoName 镜像仓库名称
      */
     public void setRepoName(String RepoName) {
         this.RepoName = RepoName;

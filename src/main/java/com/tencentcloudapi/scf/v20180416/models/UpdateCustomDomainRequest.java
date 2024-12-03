@@ -52,7 +52,7 @@ public class UpdateCustomDomainRequest extends AbstractModel {
     private WafConf WafConfig;
 
     /**
-    * 	路由配置
+    * 路由配置
     */
     @SerializedName("EndpointsConfig")
     @Expose
@@ -123,16 +123,16 @@ public class UpdateCustomDomainRequest extends AbstractModel {
     }
 
     /**
-     * Get 	路由配置 
-     * @return EndpointsConfig 	路由配置
+     * Get 路由配置 
+     * @return EndpointsConfig 路由配置
      */
     public EndpointsConf [] getEndpointsConfig() {
         return this.EndpointsConfig;
     }
 
     /**
-     * Set 	路由配置
-     * @param EndpointsConfig 	路由配置
+     * Set 路由配置
+     * @param EndpointsConfig 路由配置
      */
     public void setEndpointsConfig(EndpointsConf [] EndpointsConfig) {
         this.EndpointsConfig = EndpointsConfig;

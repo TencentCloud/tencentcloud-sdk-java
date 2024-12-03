@@ -39,6 +39,17 @@ public class VclmClient extends AbstractClient{
     }
 
     /**
+     *检查图片跳舞输入图
+     * @param req CheckAnimateImageJobRequest
+     * @return CheckAnimateImageJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public CheckAnimateImageJobResponse CheckAnimateImageJob(CheckAnimateImageJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CheckAnimateImageJob", CheckAnimateImageJobResponse.class);
+    }
+
+    /**
      *确认视频转译结果
      * @param req ConfirmVideoTranslateJobRequest
      * @return ConfirmVideoTranslateJobResponse

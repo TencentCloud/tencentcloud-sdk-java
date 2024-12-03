@@ -73,6 +73,13 @@ public class CreateGroupRequest extends AbstractModel {
     private String Alias;
 
     /**
+    * 标签列表
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get 部署组所属的应用ID 
      * @return ApplicationId 部署组所属的应用ID
      */
@@ -184,6 +191,22 @@ public class CreateGroupRequest extends AbstractModel {
         this.Alias = Alias;
     }
 
+    /**
+     * Get 标签列表 
+     * @return Tags 标签列表
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 标签列表
+     * @param Tags 标签列表
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public CreateGroupRequest() {
     }
 
@@ -213,6 +236,12 @@ public class CreateGroupRequest extends AbstractModel {
         if (source.Alias != null) {
             this.Alias = new String(source.Alias);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -227,6 +256,7 @@ public class CreateGroupRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "GroupDesc", this.GroupDesc);
         this.setParamSimple(map, prefix + "GroupResourceType", this.GroupResourceType);
         this.setParamSimple(map, prefix + "Alias", this.Alias);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

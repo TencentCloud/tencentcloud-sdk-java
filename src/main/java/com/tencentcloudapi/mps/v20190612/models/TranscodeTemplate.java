@@ -132,6 +132,14 @@ public class TranscodeTemplate extends AbstractModel {
     private EnhanceConfig EnhanceConfig;
 
     /**
+    * 转码模板别名称。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AliasName")
+    @Expose
+    private String AliasName;
+
+    /**
      * Get 转码模板唯一标识。 
      * @return Definition 转码模板唯一标识。
      */
@@ -395,6 +403,26 @@ public class TranscodeTemplate extends AbstractModel {
         this.EnhanceConfig = EnhanceConfig;
     }
 
+    /**
+     * Get 转码模板别名称。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AliasName 转码模板别名称。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAliasName() {
+        return this.AliasName;
+    }
+
+    /**
+     * Set 转码模板别名称。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AliasName 转码模板别名称。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAliasName(String AliasName) {
+        this.AliasName = AliasName;
+    }
+
     public TranscodeTemplate() {
     }
 
@@ -445,6 +473,9 @@ public class TranscodeTemplate extends AbstractModel {
         if (source.EnhanceConfig != null) {
             this.EnhanceConfig = new EnhanceConfig(source.EnhanceConfig);
         }
+        if (source.AliasName != null) {
+            this.AliasName = new String(source.AliasName);
+        }
     }
 
 
@@ -466,6 +497,7 @@ public class TranscodeTemplate extends AbstractModel {
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamObj(map, prefix + "EnhanceConfig.", this.EnhanceConfig);
+        this.setParamSimple(map, prefix + "AliasName", this.AliasName);
 
     }
 }

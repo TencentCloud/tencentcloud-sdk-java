@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class InstanceDetail extends AbstractModel {
 
     /**
-    * 实例id
+    * ckafka集群实例Id
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 实例名称
+    * ckafka集群实例名称
     */
     @SerializedName("InstanceName")
     @Expose
@@ -59,7 +59,7 @@ public class InstanceDetail extends AbstractModel {
     private VipEntity [] VipList;
 
     /**
-    * 实例的状态。0：创建中，1：运行中，2：删除中：5隔离中， -1 创建失败
+    * 实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败 
     */
     @SerializedName("Status")
     @Expose
@@ -73,7 +73,7 @@ public class InstanceDetail extends AbstractModel {
     private Long Bandwidth;
 
     /**
-    * 实例的存储大小，单位GB
+    * ckafka集群实例磁盘大小，单位G
     */
     @SerializedName("DiskSize")
     @Expose
@@ -181,7 +181,7 @@ public class InstanceDetail extends AbstractModel {
     private Long Cvm;
 
     /**
-    * ckafka实例类型
+    * ckafka集群实例类型
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceType")
@@ -189,7 +189,7 @@ public class InstanceDetail extends AbstractModel {
     private String InstanceType;
 
     /**
-    * 磁盘类型
+    * ckafka集群实例磁盘类型
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiskType")
@@ -229,7 +229,7 @@ public class InstanceDetail extends AbstractModel {
     private Long PartitionNumber;
 
     /**
-    * 公网带宽类型
+    * ckafka集群实例公网带宽类型
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PublicNetworkChargeType")
@@ -237,7 +237,7 @@ public class InstanceDetail extends AbstractModel {
     private String PublicNetworkChargeType;
 
     /**
-    * 公网带宽值
+    * 公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PublicNetwork")
@@ -245,7 +245,7 @@ public class InstanceDetail extends AbstractModel {
     private Long PublicNetwork;
 
     /**
-    * 实例类型
+    * ckafka集群实例底层集群类型
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterType")
@@ -261,32 +261,32 @@ public class InstanceDetail extends AbstractModel {
     private String [] Features;
 
     /**
-     * Get 实例id 
-     * @return InstanceId 实例id
+     * Get ckafka集群实例Id 
+     * @return InstanceId ckafka集群实例Id
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例id
-     * @param InstanceId 实例id
+     * Set ckafka集群实例Id
+     * @param InstanceId ckafka集群实例Id
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 实例名称 
-     * @return InstanceName 实例名称
+     * Get ckafka集群实例名称 
+     * @return InstanceName ckafka集群实例名称
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set 实例名称
-     * @param InstanceName 实例名称
+     * Set ckafka集群实例名称
+     * @param InstanceName ckafka集群实例名称
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
@@ -341,16 +341,16 @@ public class InstanceDetail extends AbstractModel {
     }
 
     /**
-     * Get 实例的状态。0：创建中，1：运行中，2：删除中：5隔离中， -1 创建失败 
-     * @return Status 实例的状态。0：创建中，1：运行中，2：删除中：5隔离中， -1 创建失败
+     * Get 实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败  
+     * @return Status 实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败 
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 实例的状态。0：创建中，1：运行中，2：删除中：5隔离中， -1 创建失败
-     * @param Status 实例的状态。0：创建中，1：运行中，2：删除中：5隔离中， -1 创建失败
+     * Set 实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败 
+     * @param Status 实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败 
      */
     public void setStatus(Long Status) {
         this.Status = Status;
@@ -373,16 +373,16 @@ public class InstanceDetail extends AbstractModel {
     }
 
     /**
-     * Get 实例的存储大小，单位GB 
-     * @return DiskSize 实例的存储大小，单位GB
+     * Get ckafka集群实例磁盘大小，单位G 
+     * @return DiskSize ckafka集群实例磁盘大小，单位G
      */
     public Long getDiskSize() {
         return this.DiskSize;
     }
 
     /**
-     * Set 实例的存储大小，单位GB
-     * @param DiskSize 实例的存储大小，单位GB
+     * Set ckafka集群实例磁盘大小，单位G
+     * @param DiskSize ckafka集群实例磁盘大小，单位G
      */
     public void setDiskSize(Long DiskSize) {
         this.DiskSize = DiskSize;
@@ -625,9 +625,9 @@ public class InstanceDetail extends AbstractModel {
     }
 
     /**
-     * Get ckafka实例类型
+     * Get ckafka集群实例类型
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InstanceType ckafka实例类型
+     * @return InstanceType ckafka集群实例类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceType() {
@@ -635,9 +635,9 @@ public class InstanceDetail extends AbstractModel {
     }
 
     /**
-     * Set ckafka实例类型
+     * Set ckafka集群实例类型
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InstanceType ckafka实例类型
+     * @param InstanceType ckafka集群实例类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceType(String InstanceType) {
@@ -645,9 +645,9 @@ public class InstanceDetail extends AbstractModel {
     }
 
     /**
-     * Get 磁盘类型
+     * Get ckafka集群实例磁盘类型
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DiskType 磁盘类型
+     * @return DiskType ckafka集群实例磁盘类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDiskType() {
@@ -655,9 +655,9 @@ public class InstanceDetail extends AbstractModel {
     }
 
     /**
-     * Set 磁盘类型
+     * Set ckafka集群实例磁盘类型
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DiskType 磁盘类型
+     * @param DiskType ckafka集群实例磁盘类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiskType(String DiskType) {
@@ -745,9 +745,9 @@ public class InstanceDetail extends AbstractModel {
     }
 
     /**
-     * Get 公网带宽类型
+     * Get ckafka集群实例公网带宽类型
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PublicNetworkChargeType 公网带宽类型
+     * @return PublicNetworkChargeType ckafka集群实例公网带宽类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPublicNetworkChargeType() {
@@ -755,9 +755,9 @@ public class InstanceDetail extends AbstractModel {
     }
 
     /**
-     * Set 公网带宽类型
+     * Set ckafka集群实例公网带宽类型
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PublicNetworkChargeType 公网带宽类型
+     * @param PublicNetworkChargeType ckafka集群实例公网带宽类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPublicNetworkChargeType(String PublicNetworkChargeType) {
@@ -765,9 +765,9 @@ public class InstanceDetail extends AbstractModel {
     }
 
     /**
-     * Get 公网带宽值
+     * Get 公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PublicNetwork 公网带宽值
+     * @return PublicNetwork 公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPublicNetwork() {
@@ -775,9 +775,9 @@ public class InstanceDetail extends AbstractModel {
     }
 
     /**
-     * Set 公网带宽值
+     * Set 公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PublicNetwork 公网带宽值
+     * @param PublicNetwork 公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPublicNetwork(Long PublicNetwork) {
@@ -785,9 +785,9 @@ public class InstanceDetail extends AbstractModel {
     }
 
     /**
-     * Get 实例类型
+     * Get ckafka集群实例底层集群类型
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ClusterType 实例类型
+     * @return ClusterType ckafka集群实例底层集群类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClusterType() {
@@ -795,9 +795,9 @@ public class InstanceDetail extends AbstractModel {
     }
 
     /**
-     * Set 实例类型
+     * Set ckafka集群实例底层集群类型
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ClusterType 实例类型
+     * @param ClusterType ckafka集群实例底层集群类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterType(String ClusterType) {

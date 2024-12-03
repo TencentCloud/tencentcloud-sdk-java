@@ -48,7 +48,7 @@ public class MySQLParam extends AbstractModel {
     private String Resource;
 
     /**
-    * 复制存量信息(schema_only不复制, initial全量)，默认位initial
+    * 复制存量信息(schema_only不复制, initial全量)，默认值initial
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SnapshotMode")
@@ -308,9 +308,9 @@ public class MySQLParam extends AbstractModel {
     }
 
     /**
-     * Get 复制存量信息(schema_only不复制, initial全量)，默认位initial
+     * Get 复制存量信息(schema_only不复制, initial全量)，默认值initial
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SnapshotMode 复制存量信息(schema_only不复制, initial全量)，默认位initial
+     * @return SnapshotMode 复制存量信息(schema_only不复制, initial全量)，默认值initial
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSnapshotMode() {
@@ -318,9 +318,9 @@ public class MySQLParam extends AbstractModel {
     }
 
     /**
-     * Set 复制存量信息(schema_only不复制, initial全量)，默认位initial
+     * Set 复制存量信息(schema_only不复制, initial全量)，默认值initial
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SnapshotMode 复制存量信息(schema_only不复制, initial全量)，默认位initial
+     * @param SnapshotMode 复制存量信息(schema_only不复制, initial全量)，默认值initial
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSnapshotMode(String SnapshotMode) {

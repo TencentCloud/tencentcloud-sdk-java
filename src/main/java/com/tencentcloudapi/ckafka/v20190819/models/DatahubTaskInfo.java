@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DatahubTaskInfo extends AbstractModel {
 
     /**
-    * 任务ID
+    * 任务Id
     */
     @SerializedName("TaskId")
     @Expose
@@ -116,16 +116,16 @@ public class DatahubTaskInfo extends AbstractModel {
     private String [] StepList;
 
     /**
-     * Get 任务ID 
-     * @return TaskId 任务ID
+     * Get 任务Id 
+     * @return TaskId 任务Id
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 任务ID
-     * @param TaskId 任务ID
+     * Set 任务Id
+     * @param TaskId 任务Id
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

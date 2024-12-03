@@ -61,7 +61,7 @@ public class Region extends AbstractModel {
     private String RegionCodeV3;
 
     /**
-    * NONE:默认值不支持任何特殊机型\nCVM:支持CVM类型
+    * NONE:默认值不支持任何特殊类型 实例类型
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Support")
@@ -173,9 +173,9 @@ public class Region extends AbstractModel {
     }
 
     /**
-     * Get NONE:默认值不支持任何特殊机型\nCVM:支持CVM类型
+     * Get NONE:默认值不支持任何特殊类型 实例类型
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Support NONE:默认值不支持任何特殊机型\nCVM:支持CVM类型
+     * @return Support NONE:默认值不支持任何特殊类型 实例类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSupport() {
@@ -183,9 +183,9 @@ public class Region extends AbstractModel {
     }
 
     /**
-     * Set NONE:默认值不支持任何特殊机型\nCVM:支持CVM类型
+     * Set NONE:默认值不支持任何特殊类型 实例类型
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Support NONE:默认值不支持任何特殊机型\nCVM:支持CVM类型
+     * @param Support NONE:默认值不支持任何特殊类型 实例类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSupport(String Support) {

@@ -31,6 +31,20 @@ public class SubsErr extends AbstractModel {
     private String Message;
 
     /**
+    * 报错原因
+    */
+    @SerializedName("Reason")
+    @Expose
+    private String Reason;
+
+    /**
+    * 建议的修复方案
+    */
+    @SerializedName("Solution")
+    @Expose
+    private String Solution;
+
+    /**
      * Get 报错信息 
      * @return Message 报错信息
      */
@@ -46,6 +60,38 @@ public class SubsErr extends AbstractModel {
         this.Message = Message;
     }
 
+    /**
+     * Get 报错原因 
+     * @return Reason 报错原因
+     */
+    public String getReason() {
+        return this.Reason;
+    }
+
+    /**
+     * Set 报错原因
+     * @param Reason 报错原因
+     */
+    public void setReason(String Reason) {
+        this.Reason = Reason;
+    }
+
+    /**
+     * Get 建议的修复方案 
+     * @return Solution 建议的修复方案
+     */
+    public String getSolution() {
+        return this.Solution;
+    }
+
+    /**
+     * Set 建议的修复方案
+     * @param Solution 建议的修复方案
+     */
+    public void setSolution(String Solution) {
+        this.Solution = Solution;
+    }
+
     public SubsErr() {
     }
 
@@ -57,6 +103,12 @@ public class SubsErr extends AbstractModel {
         if (source.Message != null) {
             this.Message = new String(source.Message);
         }
+        if (source.Reason != null) {
+            this.Reason = new String(source.Reason);
+        }
+        if (source.Solution != null) {
+            this.Solution = new String(source.Solution);
+        }
     }
 
 
@@ -65,6 +117,8 @@ public class SubsErr extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Message", this.Message);
+        this.setParamSimple(map, prefix + "Reason", this.Reason);
+        this.setParamSimple(map, prefix + "Solution", this.Solution);
 
     }
 }

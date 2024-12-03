@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class PartitionOffset extends AbstractModel {
 
     /**
-    * Partition,例如"0"或"1"
+    * 分区
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Partition")
@@ -32,7 +32,7 @@ public class PartitionOffset extends AbstractModel {
     private String Partition;
 
     /**
-    * Offset,例如100
+    * 位点偏移量
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Offset")
@@ -40,9 +40,9 @@ public class PartitionOffset extends AbstractModel {
     private Long Offset;
 
     /**
-     * Get Partition,例如"0"或"1"
+     * Get 分区
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Partition Partition,例如"0"或"1"
+     * @return Partition 分区
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPartition() {
@@ -50,9 +50,9 @@ public class PartitionOffset extends AbstractModel {
     }
 
     /**
-     * Set Partition,例如"0"或"1"
+     * Set 分区
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Partition Partition,例如"0"或"1"
+     * @param Partition 分区
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPartition(String Partition) {
@@ -60,9 +60,9 @@ public class PartitionOffset extends AbstractModel {
     }
 
     /**
-     * Get Offset,例如100
+     * Get 位点偏移量
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Offset Offset,例如100
+     * @return Offset 位点偏移量
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getOffset() {
@@ -70,9 +70,9 @@ public class PartitionOffset extends AbstractModel {
     }
 
     /**
-     * Set Offset,例如100
+     * Set 位点偏移量
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Offset Offset,例如100
+     * @param Offset 位点偏移量
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOffset(Long Offset) {

@@ -112,6 +112,22 @@ public class SimpleApplication extends AbstractModel {
     private String ApplicationRuntimeType;
 
     /**
+    * Apm业务系统id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AmpInstanceId")
+    @Expose
+    private String AmpInstanceId;
+
+    /**
+    * Apm业务系统Name
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ApmInstanceName")
+    @Expose
+    private String ApmInstanceName;
+
+    /**
      * Get 应用ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ApplicationId 应用ID
@@ -331,6 +347,46 @@ public class SimpleApplication extends AbstractModel {
         this.ApplicationRuntimeType = ApplicationRuntimeType;
     }
 
+    /**
+     * Get Apm业务系统id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AmpInstanceId Apm业务系统id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAmpInstanceId() {
+        return this.AmpInstanceId;
+    }
+
+    /**
+     * Set Apm业务系统id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AmpInstanceId Apm业务系统id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAmpInstanceId(String AmpInstanceId) {
+        this.AmpInstanceId = AmpInstanceId;
+    }
+
+    /**
+     * Get Apm业务系统Name
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ApmInstanceName Apm业务系统Name
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getApmInstanceName() {
+        return this.ApmInstanceName;
+    }
+
+    /**
+     * Set Apm业务系统Name
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ApmInstanceName Apm业务系统Name
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setApmInstanceName(String ApmInstanceName) {
+        this.ApmInstanceName = ApmInstanceName;
+    }
+
     public SimpleApplication() {
     }
 
@@ -372,6 +428,12 @@ public class SimpleApplication extends AbstractModel {
         if (source.ApplicationRuntimeType != null) {
             this.ApplicationRuntimeType = new String(source.ApplicationRuntimeType);
         }
+        if (source.AmpInstanceId != null) {
+            this.AmpInstanceId = new String(source.AmpInstanceId);
+        }
+        if (source.ApmInstanceName != null) {
+            this.ApmInstanceName = new String(source.ApmInstanceName);
+        }
     }
 
 
@@ -390,6 +452,8 @@ public class SimpleApplication extends AbstractModel {
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "ApigatewayServiceId", this.ApigatewayServiceId);
         this.setParamSimple(map, prefix + "ApplicationRuntimeType", this.ApplicationRuntimeType);
+        this.setParamSimple(map, prefix + "AmpInstanceId", this.AmpInstanceId);
+        this.setParamSimple(map, prefix + "ApmInstanceName", this.ApmInstanceName);
 
     }
 }

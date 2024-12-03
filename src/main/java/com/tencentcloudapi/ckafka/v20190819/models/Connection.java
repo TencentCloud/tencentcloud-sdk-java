@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class Connection extends AbstractModel {
 
     /**
-    * Topic名称
+    * 主题名
     */
     @SerializedName("TopicName")
     @Expose
@@ -38,23 +38,23 @@ public class Connection extends AbstractModel {
     private String GroupId;
 
     /**
-    * Topic的Id
+    * 主题Id
     */
     @SerializedName("TopicId")
     @Expose
     private String TopicId;
 
     /**
-     * Get Topic名称 
-     * @return TopicName Topic名称
+     * Get 主题名 
+     * @return TopicName 主题名
      */
     public String getTopicName() {
         return this.TopicName;
     }
 
     /**
-     * Set Topic名称
-     * @param TopicName Topic名称
+     * Set 主题名
+     * @param TopicName 主题名
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;
@@ -77,16 +77,16 @@ public class Connection extends AbstractModel {
     }
 
     /**
-     * Get Topic的Id 
-     * @return TopicId Topic的Id
+     * Get 主题Id 
+     * @return TopicId 主题Id
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set Topic的Id
-     * @param TopicId Topic的Id
+     * Set 主题Id
+     * @param TopicId 主题Id
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;

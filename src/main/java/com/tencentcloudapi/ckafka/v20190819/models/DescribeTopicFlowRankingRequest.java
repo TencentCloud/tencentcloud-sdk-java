@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeTopicFlowRankingRequest extends AbstractModel {
 
     /**
-    * 实例ID
+    * ckafka集群实例Id
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 排行类别(PRO-Topic生产流量/CON-Topic消费流量)
+    * 排行类别，PRO：Topic生产流量；CON：Topic消费流量
     */
     @SerializedName("RankingType")
     @Expose
@@ -59,32 +59,32 @@ public class DescribeTopicFlowRankingRequest extends AbstractModel {
     private String BrokerIp;
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+     * Get ckafka集群实例Id 
+     * @return InstanceId ckafka集群实例Id
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set ckafka集群实例Id
+     * @param InstanceId ckafka集群实例Id
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 排行类别(PRO-Topic生产流量/CON-Topic消费流量) 
-     * @return RankingType 排行类别(PRO-Topic生产流量/CON-Topic消费流量)
+     * Get 排行类别，PRO：Topic生产流量；CON：Topic消费流量 
+     * @return RankingType 排行类别，PRO：Topic生产流量；CON：Topic消费流量
      */
     public String getRankingType() {
         return this.RankingType;
     }
 
     /**
-     * Set 排行类别(PRO-Topic生产流量/CON-Topic消费流量)
-     * @param RankingType 排行类别(PRO-Topic生产流量/CON-Topic消费流量)
+     * Set 排行类别，PRO：Topic生产流量；CON：Topic消费流量
+     * @param RankingType 排行类别，PRO：Topic生产流量；CON：Topic消费流量
      */
     public void setRankingType(String RankingType) {
         this.RankingType = RankingType;

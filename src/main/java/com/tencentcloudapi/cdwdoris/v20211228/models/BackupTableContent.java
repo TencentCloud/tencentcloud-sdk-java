@@ -72,7 +72,7 @@ public class BackupTableContent extends AbstractModel {
     private String BackupErrorMsg;
 
     /**
-    * 改库表是否绑定降冷策略
+    * 该库表是否绑定降冷策略
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsOpenCoolDown")
@@ -200,9 +200,9 @@ public class BackupTableContent extends AbstractModel {
     }
 
     /**
-     * Get 改库表是否绑定降冷策略
+     * Get 该库表是否绑定降冷策略
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IsOpenCoolDown 改库表是否绑定降冷策略
+     * @return IsOpenCoolDown 该库表是否绑定降冷策略
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsOpenCoolDown() {
@@ -210,9 +210,9 @@ public class BackupTableContent extends AbstractModel {
     }
 
     /**
-     * Set 改库表是否绑定降冷策略
+     * Set 该库表是否绑定降冷策略
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param IsOpenCoolDown 改库表是否绑定降冷策略
+     * @param IsOpenCoolDown 该库表是否绑定降冷策略
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsOpenCoolDown(Boolean IsOpenCoolDown) {

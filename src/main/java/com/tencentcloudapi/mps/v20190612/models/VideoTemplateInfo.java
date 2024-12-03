@@ -290,6 +290,46 @@ VCRF（Constant Rate Factor）：恒定质量因子，通过设定一个质量�
     private SegmentSpecificInfo SegmentSpecificInfo;
 
     /**
+    * 模版是否开启场景化 
+0：不开启 
+1：开启 
+默认值：0	
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ScenarioBased")
+    @Expose
+    private Long ScenarioBased;
+
+    /**
+    * 视频场景化，可选值： 
+normal：通用转码场景：通用转码压缩场景。
+pgc：PGC高清影视：压缩时会注重影视剧的观看体验，根据影视剧特性进行ROI编码，同时保留高质量的视频内容和音频。 
+materials_video：高清素材：素材资源类场景，对画质要求极高，较多透明画面内容，在压缩的同时接近视觉无损。 
+ugc：UGC内容：适用于广泛的UGC/短视频场景，针对短视频的特性优化编码码率， 画质提升，提升业务QOS/QOE指标。 
+e-commerce_video：秀场/电商类：压缩时会强调细节清晰度和ROI区域提升，尤其注重保持人脸区域的画质。 
+educational_video：教育类：压缩时会强调文字和图像的清晰度和可读性，以便学生更好地理解内容，确保讲解内容清晰传达。 
+默认值：normal
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SceneType")
+    @Expose
+    private String SceneType;
+
+    /**
+    * 转码策略，可选值： 
+ultra_compress：极致压缩：相比标准压缩，该策略能在保证一定画质的基础上最大限度压缩码率，极大节约带宽和存储成本。 
+standard_compress：综合最优：平衡压缩率与画质，在保证主观画质没有明显降低的情况下尽可能压缩文件。该策略仅收取音视频极速高清转码费用。 
+high_compress：码率优先：优先保证降低文件体积大小，可能有一定画质损失。该策略仅收取音视频极速高清转码费用。 
+low_compress：画质优先：优先保证画质，压缩出来的文件体积可能相对较大。该策略仅收取音视频极速高清转码费用。 
+默认值：standard_compress 
+注：若需要在电视上观看视频，不建议使用ultra_compress策略。ultra_compress策略计费标准为极速高清转码 + 音视频增强-去毛刺。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CompressType")
+    @Expose
+    private String CompressType;
+
+    /**
      * Get 视频流的编码格式，可选值：
 <li>h264：H.264 编码</li>
 <li>h265：H.265 编码</li>
@@ -1065,6 +1105,130 @@ VCRF（Constant Rate Factor）：恒定质量因子，通过设定一个质量�
         this.SegmentSpecificInfo = SegmentSpecificInfo;
     }
 
+    /**
+     * Get 模版是否开启场景化 
+0：不开启 
+1：开启 
+默认值：0	
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ScenarioBased 模版是否开启场景化 
+0：不开启 
+1：开启 
+默认值：0	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getScenarioBased() {
+        return this.ScenarioBased;
+    }
+
+    /**
+     * Set 模版是否开启场景化 
+0：不开启 
+1：开启 
+默认值：0	
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ScenarioBased 模版是否开启场景化 
+0：不开启 
+1：开启 
+默认值：0	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setScenarioBased(Long ScenarioBased) {
+        this.ScenarioBased = ScenarioBased;
+    }
+
+    /**
+     * Get 视频场景化，可选值： 
+normal：通用转码场景：通用转码压缩场景。
+pgc：PGC高清影视：压缩时会注重影视剧的观看体验，根据影视剧特性进行ROI编码，同时保留高质量的视频内容和音频。 
+materials_video：高清素材：素材资源类场景，对画质要求极高，较多透明画面内容，在压缩的同时接近视觉无损。 
+ugc：UGC内容：适用于广泛的UGC/短视频场景，针对短视频的特性优化编码码率， 画质提升，提升业务QOS/QOE指标。 
+e-commerce_video：秀场/电商类：压缩时会强调细节清晰度和ROI区域提升，尤其注重保持人脸区域的画质。 
+educational_video：教育类：压缩时会强调文字和图像的清晰度和可读性，以便学生更好地理解内容，确保讲解内容清晰传达。 
+默认值：normal
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SceneType 视频场景化，可选值： 
+normal：通用转码场景：通用转码压缩场景。
+pgc：PGC高清影视：压缩时会注重影视剧的观看体验，根据影视剧特性进行ROI编码，同时保留高质量的视频内容和音频。 
+materials_video：高清素材：素材资源类场景，对画质要求极高，较多透明画面内容，在压缩的同时接近视觉无损。 
+ugc：UGC内容：适用于广泛的UGC/短视频场景，针对短视频的特性优化编码码率， 画质提升，提升业务QOS/QOE指标。 
+e-commerce_video：秀场/电商类：压缩时会强调细节清晰度和ROI区域提升，尤其注重保持人脸区域的画质。 
+educational_video：教育类：压缩时会强调文字和图像的清晰度和可读性，以便学生更好地理解内容，确保讲解内容清晰传达。 
+默认值：normal
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSceneType() {
+        return this.SceneType;
+    }
+
+    /**
+     * Set 视频场景化，可选值： 
+normal：通用转码场景：通用转码压缩场景。
+pgc：PGC高清影视：压缩时会注重影视剧的观看体验，根据影视剧特性进行ROI编码，同时保留高质量的视频内容和音频。 
+materials_video：高清素材：素材资源类场景，对画质要求极高，较多透明画面内容，在压缩的同时接近视觉无损。 
+ugc：UGC内容：适用于广泛的UGC/短视频场景，针对短视频的特性优化编码码率， 画质提升，提升业务QOS/QOE指标。 
+e-commerce_video：秀场/电商类：压缩时会强调细节清晰度和ROI区域提升，尤其注重保持人脸区域的画质。 
+educational_video：教育类：压缩时会强调文字和图像的清晰度和可读性，以便学生更好地理解内容，确保讲解内容清晰传达。 
+默认值：normal
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SceneType 视频场景化，可选值： 
+normal：通用转码场景：通用转码压缩场景。
+pgc：PGC高清影视：压缩时会注重影视剧的观看体验，根据影视剧特性进行ROI编码，同时保留高质量的视频内容和音频。 
+materials_video：高清素材：素材资源类场景，对画质要求极高，较多透明画面内容，在压缩的同时接近视觉无损。 
+ugc：UGC内容：适用于广泛的UGC/短视频场景，针对短视频的特性优化编码码率， 画质提升，提升业务QOS/QOE指标。 
+e-commerce_video：秀场/电商类：压缩时会强调细节清晰度和ROI区域提升，尤其注重保持人脸区域的画质。 
+educational_video：教育类：压缩时会强调文字和图像的清晰度和可读性，以便学生更好地理解内容，确保讲解内容清晰传达。 
+默认值：normal
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSceneType(String SceneType) {
+        this.SceneType = SceneType;
+    }
+
+    /**
+     * Get 转码策略，可选值： 
+ultra_compress：极致压缩：相比标准压缩，该策略能在保证一定画质的基础上最大限度压缩码率，极大节约带宽和存储成本。 
+standard_compress：综合最优：平衡压缩率与画质，在保证主观画质没有明显降低的情况下尽可能压缩文件。该策略仅收取音视频极速高清转码费用。 
+high_compress：码率优先：优先保证降低文件体积大小，可能有一定画质损失。该策略仅收取音视频极速高清转码费用。 
+low_compress：画质优先：优先保证画质，压缩出来的文件体积可能相对较大。该策略仅收取音视频极速高清转码费用。 
+默认值：standard_compress 
+注：若需要在电视上观看视频，不建议使用ultra_compress策略。ultra_compress策略计费标准为极速高清转码 + 音视频增强-去毛刺。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CompressType 转码策略，可选值： 
+ultra_compress：极致压缩：相比标准压缩，该策略能在保证一定画质的基础上最大限度压缩码率，极大节约带宽和存储成本。 
+standard_compress：综合最优：平衡压缩率与画质，在保证主观画质没有明显降低的情况下尽可能压缩文件。该策略仅收取音视频极速高清转码费用。 
+high_compress：码率优先：优先保证降低文件体积大小，可能有一定画质损失。该策略仅收取音视频极速高清转码费用。 
+low_compress：画质优先：优先保证画质，压缩出来的文件体积可能相对较大。该策略仅收取音视频极速高清转码费用。 
+默认值：standard_compress 
+注：若需要在电视上观看视频，不建议使用ultra_compress策略。ultra_compress策略计费标准为极速高清转码 + 音视频增强-去毛刺。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCompressType() {
+        return this.CompressType;
+    }
+
+    /**
+     * Set 转码策略，可选值： 
+ultra_compress：极致压缩：相比标准压缩，该策略能在保证一定画质的基础上最大限度压缩码率，极大节约带宽和存储成本。 
+standard_compress：综合最优：平衡压缩率与画质，在保证主观画质没有明显降低的情况下尽可能压缩文件。该策略仅收取音视频极速高清转码费用。 
+high_compress：码率优先：优先保证降低文件体积大小，可能有一定画质损失。该策略仅收取音视频极速高清转码费用。 
+low_compress：画质优先：优先保证画质，压缩出来的文件体积可能相对较大。该策略仅收取音视频极速高清转码费用。 
+默认值：standard_compress 
+注：若需要在电视上观看视频，不建议使用ultra_compress策略。ultra_compress策略计费标准为极速高清转码 + 音视频增强-去毛刺。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CompressType 转码策略，可选值： 
+ultra_compress：极致压缩：相比标准压缩，该策略能在保证一定画质的基础上最大限度压缩码率，极大节约带宽和存储成本。 
+standard_compress：综合最优：平衡压缩率与画质，在保证主观画质没有明显降低的情况下尽可能压缩文件。该策略仅收取音视频极速高清转码费用。 
+high_compress：码率优先：优先保证降低文件体积大小，可能有一定画质损失。该策略仅收取音视频极速高清转码费用。 
+low_compress：画质优先：优先保证画质，压缩出来的文件体积可能相对较大。该策略仅收取音视频极速高清转码费用。 
+默认值：standard_compress 
+注：若需要在电视上观看视频，不建议使用ultra_compress策略。ultra_compress策略计费标准为极速高清转码 + 音视频增强-去毛刺。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCompressType(String CompressType) {
+        this.CompressType = CompressType;
+    }
+
     public VideoTemplateInfo() {
     }
 
@@ -1145,6 +1309,15 @@ VCRF（Constant Rate Factor）：恒定质量因子，通过设定一个质量�
         if (source.SegmentSpecificInfo != null) {
             this.SegmentSpecificInfo = new SegmentSpecificInfo(source.SegmentSpecificInfo);
         }
+        if (source.ScenarioBased != null) {
+            this.ScenarioBased = new Long(source.ScenarioBased);
+        }
+        if (source.SceneType != null) {
+            this.SceneType = new String(source.SceneType);
+        }
+        if (source.CompressType != null) {
+            this.CompressType = new String(source.CompressType);
+        }
     }
 
 
@@ -1176,6 +1349,9 @@ VCRF（Constant Rate Factor）：恒定质量因子，通过设定一个质量�
         this.setParamSimple(map, prefix + "RawPts", this.RawPts);
         this.setParamSimple(map, prefix + "Compress", this.Compress);
         this.setParamObj(map, prefix + "SegmentSpecificInfo.", this.SegmentSpecificInfo);
+        this.setParamSimple(map, prefix + "ScenarioBased", this.ScenarioBased);
+        this.setParamSimple(map, prefix + "SceneType", this.SceneType);
+        this.setParamSimple(map, prefix + "CompressType", this.CompressType);
 
     }
 }

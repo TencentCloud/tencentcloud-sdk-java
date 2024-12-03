@@ -56,6 +56,20 @@ public class Network extends AbstractModel {
     private Long Port;
 
     /**
+    * 旧 ip 保留时长，单位天
+    */
+    @SerializedName("PreserveDuration")
+    @Expose
+    private Long PreserveDuration;
+
+    /**
+    * 旧 ip 到期时间
+    */
+    @SerializedName("ExpireTime")
+    @Expose
+    private String ExpireTime;
+
+    /**
      * Get VpcId(VPC网络下有效)
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return VpcId VpcId(VPC网络下有效)
@@ -135,6 +149,38 @@ public class Network extends AbstractModel {
         this.Port = Port;
     }
 
+    /**
+     * Get 旧 ip 保留时长，单位天 
+     * @return PreserveDuration 旧 ip 保留时长，单位天
+     */
+    public Long getPreserveDuration() {
+        return this.PreserveDuration;
+    }
+
+    /**
+     * Set 旧 ip 保留时长，单位天
+     * @param PreserveDuration 旧 ip 保留时长，单位天
+     */
+    public void setPreserveDuration(Long PreserveDuration) {
+        this.PreserveDuration = PreserveDuration;
+    }
+
+    /**
+     * Get 旧 ip 到期时间 
+     * @return ExpireTime 旧 ip 到期时间
+     */
+    public String getExpireTime() {
+        return this.ExpireTime;
+    }
+
+    /**
+     * Set 旧 ip 到期时间
+     * @param ExpireTime 旧 ip 到期时间
+     */
+    public void setExpireTime(String ExpireTime) {
+        this.ExpireTime = ExpireTime;
+    }
+
     public Network() {
     }
 
@@ -155,6 +201,12 @@ public class Network extends AbstractModel {
         if (source.Port != null) {
             this.Port = new Long(source.Port);
         }
+        if (source.PreserveDuration != null) {
+            this.PreserveDuration = new Long(source.PreserveDuration);
+        }
+        if (source.ExpireTime != null) {
+            this.ExpireTime = new String(source.ExpireTime);
+        }
     }
 
 
@@ -166,6 +218,8 @@ public class Network extends AbstractModel {
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
         this.setParamSimple(map, prefix + "Vip", this.Vip);
         this.setParamSimple(map, prefix + "Port", this.Port);
+        this.setParamSimple(map, prefix + "PreserveDuration", this.PreserveDuration);
+        this.setParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
 
     }
 }

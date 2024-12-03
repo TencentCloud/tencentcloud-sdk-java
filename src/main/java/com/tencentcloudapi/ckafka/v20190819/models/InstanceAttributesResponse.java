@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class InstanceAttributesResponse extends AbstractModel {
 
     /**
-    * 实例ID
+    * ckafka集群实例Id
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 实例名称
+    * ckafka集群实例Name
     */
     @SerializedName("InstanceName")
     @Expose
@@ -59,7 +59,7 @@ public class InstanceAttributesResponse extends AbstractModel {
     private String Vport;
 
     /**
-    * 实例的状态。0：创建中，1：运行中，2：删除中
+    * 实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败 
     */
     @SerializedName("Status")
     @Expose
@@ -180,7 +180,7 @@ public class InstanceAttributesResponse extends AbstractModel {
     private Long ExpireTime;
 
     /**
-    * 跨可用区
+    * 可用区列表
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ZoneIds")
@@ -188,7 +188,7 @@ public class InstanceAttributesResponse extends AbstractModel {
     private Long [] ZoneIds;
 
     /**
-    * kafka版本信息
+    * ckafka集群实例版本
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Version")
@@ -292,32 +292,55 @@ public class InstanceAttributesResponse extends AbstractModel {
     private String InstanceChargeType;
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+    * 集群类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ClusterType")
+    @Expose
+    private String ClusterType;
+
+    /**
+    * 免费分区数量
+    */
+    @SerializedName("FreePartitionNumber")
+    @Expose
+    private Long FreePartitionNumber;
+
+    /**
+    * 弹性带宽上浮值
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ElasticFloatBandwidth")
+    @Expose
+    private Long ElasticFloatBandwidth;
+
+    /**
+     * Get ckafka集群实例Id 
+     * @return InstanceId ckafka集群实例Id
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set ckafka集群实例Id
+     * @param InstanceId ckafka集群实例Id
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 实例名称 
-     * @return InstanceName 实例名称
+     * Get ckafka集群实例Name 
+     * @return InstanceName ckafka集群实例Name
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set 实例名称
-     * @param InstanceName 实例名称
+     * Set ckafka集群实例Name
+     * @param InstanceName ckafka集群实例Name
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
@@ -372,16 +395,16 @@ public class InstanceAttributesResponse extends AbstractModel {
     }
 
     /**
-     * Get 实例的状态。0：创建中，1：运行中，2：删除中 
-     * @return Status 实例的状态。0：创建中，1：运行中，2：删除中
+     * Get 实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败  
+     * @return Status 实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败 
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 实例的状态。0：创建中，1：运行中，2：删除中
-     * @param Status 实例的状态。0：创建中，1：运行中，2：删除中
+     * Set 实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败 
+     * @param Status 实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败 
      */
     public void setStatus(Long Status) {
         this.Status = Status;
@@ -652,9 +675,9 @@ public class InstanceAttributesResponse extends AbstractModel {
     }
 
     /**
-     * Get 跨可用区
+     * Get 可用区列表
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ZoneIds 跨可用区
+     * @return ZoneIds 可用区列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long [] getZoneIds() {
@@ -662,9 +685,9 @@ public class InstanceAttributesResponse extends AbstractModel {
     }
 
     /**
-     * Set 跨可用区
+     * Set 可用区列表
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ZoneIds 跨可用区
+     * @param ZoneIds 可用区列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZoneIds(Long [] ZoneIds) {
@@ -672,9 +695,9 @@ public class InstanceAttributesResponse extends AbstractModel {
     }
 
     /**
-     * Get kafka版本信息
+     * Get ckafka集群实例版本
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Version kafka版本信息
+     * @return Version ckafka集群实例版本
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVersion() {
@@ -682,9 +705,9 @@ public class InstanceAttributesResponse extends AbstractModel {
     }
 
     /**
-     * Set kafka版本信息
+     * Set ckafka集群实例版本
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Version kafka版本信息
+     * @param Version ckafka集群实例版本
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVersion(String Version) {
@@ -931,6 +954,62 @@ public class InstanceAttributesResponse extends AbstractModel {
         this.InstanceChargeType = InstanceChargeType;
     }
 
+    /**
+     * Get 集群类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ClusterType 集群类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getClusterType() {
+        return this.ClusterType;
+    }
+
+    /**
+     * Set 集群类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ClusterType 集群类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setClusterType(String ClusterType) {
+        this.ClusterType = ClusterType;
+    }
+
+    /**
+     * Get 免费分区数量 
+     * @return FreePartitionNumber 免费分区数量
+     */
+    public Long getFreePartitionNumber() {
+        return this.FreePartitionNumber;
+    }
+
+    /**
+     * Set 免费分区数量
+     * @param FreePartitionNumber 免费分区数量
+     */
+    public void setFreePartitionNumber(Long FreePartitionNumber) {
+        this.FreePartitionNumber = FreePartitionNumber;
+    }
+
+    /**
+     * Get 弹性带宽上浮值
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ElasticFloatBandwidth 弹性带宽上浮值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getElasticFloatBandwidth() {
+        return this.ElasticFloatBandwidth;
+    }
+
+    /**
+     * Set 弹性带宽上浮值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ElasticFloatBandwidth 弹性带宽上浮值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setElasticFloatBandwidth(Long ElasticFloatBandwidth) {
+        this.ElasticFloatBandwidth = ElasticFloatBandwidth;
+    }
+
     public InstanceAttributesResponse() {
     }
 
@@ -1059,6 +1138,15 @@ public class InstanceAttributesResponse extends AbstractModel {
         if (source.InstanceChargeType != null) {
             this.InstanceChargeType = new String(source.InstanceChargeType);
         }
+        if (source.ClusterType != null) {
+            this.ClusterType = new String(source.ClusterType);
+        }
+        if (source.FreePartitionNumber != null) {
+            this.FreePartitionNumber = new Long(source.FreePartitionNumber);
+        }
+        if (source.ElasticFloatBandwidth != null) {
+            this.ElasticFloatBandwidth = new Long(source.ElasticFloatBandwidth);
+        }
     }
 
 
@@ -1102,6 +1190,9 @@ public class InstanceAttributesResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "RemainingTopics", this.RemainingTopics);
         this.setParamObj(map, prefix + "DynamicDiskConfig.", this.DynamicDiskConfig);
         this.setParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
+        this.setParamSimple(map, prefix + "ClusterType", this.ClusterType);
+        this.setParamSimple(map, prefix + "FreePartitionNumber", this.FreePartitionNumber);
+        this.setParamSimple(map, prefix + "ElasticFloatBandwidth", this.ElasticFloatBandwidth);
 
     }
 }

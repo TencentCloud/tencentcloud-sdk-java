@@ -32,7 +32,7 @@ public class BrokerTopicData extends AbstractModel {
     private String TopicName;
 
     /**
-    * 主题ID
+    * 主题Id
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TopicId")
@@ -68,9 +68,9 @@ public class BrokerTopicData extends AbstractModel {
     }
 
     /**
-     * Get 主题ID
+     * Get 主题Id
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TopicId 主题ID
+     * @return TopicId 主题Id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTopicId() {
@@ -78,9 +78,9 @@ public class BrokerTopicData extends AbstractModel {
     }
 
     /**
-     * Set 主题ID
+     * Set 主题Id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TopicId 主题ID
+     * @param TopicId 主题Id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTopicId(String TopicId) {

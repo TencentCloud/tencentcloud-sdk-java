@@ -88,6 +88,110 @@ public class ServiceSetting extends AbstractModel {
     private Long SessionAffinityTimeoutSeconds;
 
     /**
+    * 服务名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ServiceName")
+    @Expose
+    private String ServiceName;
+
+    /**
+    * 外部流量策略
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ExternalTrafficStrategy")
+    @Expose
+    private String ExternalTrafficStrategy;
+
+    /**
+    * 外部流量策略
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ExternalTrafficPolicy")
+    @Expose
+    private String ExternalTrafficPolicy;
+
+    /**
+    * 负载均衡提供者
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LoadBalancerProvisioner")
+    @Expose
+    private String LoadBalancerProvisioner;
+
+    /**
+    * 负载均衡类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LoadBalancingType")
+    @Expose
+    private String LoadBalancingType;
+
+    /**
+    * k8s负载均衡内网vip
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ClusterIp")
+    @Expose
+    private String ClusterIp;
+
+    /**
+    * 禁用服务Int记录
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DisableServiceInt")
+    @Expose
+    private Long DisableServiceInt;
+
+    /**
+    * 开启SessionAffinity Int记录
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OpenSessionAffinityInt")
+    @Expose
+    private Long OpenSessionAffinityInt;
+
+    /**
+    * 开启HeadlessService int记录
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("HeadlessServiceInt")
+    @Expose
+    private Long HeadlessServiceInt;
+
+    /**
+    * 服务名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Name")
+    @Expose
+    private String Name;
+
+    /**
+    * VPC网络ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("VpcId")
+    @Expose
+    private String VpcId;
+
+    /**
+    * 负载均衡VIP
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LoadBalancingIp")
+    @Expose
+    private String LoadBalancingIp;
+
+    /**
+    * 负载均衡id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LoadBalancerId")
+    @Expose
+    private String LoadBalancerId;
+
+    /**
      * Get 0:公网, 1:集群内访问, 2：NodePort, 3: VPC 内网访问
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return AccessType 0:公网, 1:集群内访问, 2：NodePort, 3: VPC 内网访问
@@ -247,6 +351,266 @@ public class ServiceSetting extends AbstractModel {
         this.SessionAffinityTimeoutSeconds = SessionAffinityTimeoutSeconds;
     }
 
+    /**
+     * Get 服务名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ServiceName 服务名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getServiceName() {
+        return this.ServiceName;
+    }
+
+    /**
+     * Set 服务名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ServiceName 服务名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setServiceName(String ServiceName) {
+        this.ServiceName = ServiceName;
+    }
+
+    /**
+     * Get 外部流量策略
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ExternalTrafficStrategy 外部流量策略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getExternalTrafficStrategy() {
+        return this.ExternalTrafficStrategy;
+    }
+
+    /**
+     * Set 外部流量策略
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExternalTrafficStrategy 外部流量策略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExternalTrafficStrategy(String ExternalTrafficStrategy) {
+        this.ExternalTrafficStrategy = ExternalTrafficStrategy;
+    }
+
+    /**
+     * Get 外部流量策略
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ExternalTrafficPolicy 外部流量策略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getExternalTrafficPolicy() {
+        return this.ExternalTrafficPolicy;
+    }
+
+    /**
+     * Set 外部流量策略
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExternalTrafficPolicy 外部流量策略
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setExternalTrafficPolicy(String ExternalTrafficPolicy) {
+        this.ExternalTrafficPolicy = ExternalTrafficPolicy;
+    }
+
+    /**
+     * Get 负载均衡提供者
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LoadBalancerProvisioner 负载均衡提供者
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLoadBalancerProvisioner() {
+        return this.LoadBalancerProvisioner;
+    }
+
+    /**
+     * Set 负载均衡提供者
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LoadBalancerProvisioner 负载均衡提供者
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLoadBalancerProvisioner(String LoadBalancerProvisioner) {
+        this.LoadBalancerProvisioner = LoadBalancerProvisioner;
+    }
+
+    /**
+     * Get 负载均衡类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LoadBalancingType 负载均衡类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLoadBalancingType() {
+        return this.LoadBalancingType;
+    }
+
+    /**
+     * Set 负载均衡类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LoadBalancingType 负载均衡类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLoadBalancingType(String LoadBalancingType) {
+        this.LoadBalancingType = LoadBalancingType;
+    }
+
+    /**
+     * Get k8s负载均衡内网vip
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ClusterIp k8s负载均衡内网vip
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getClusterIp() {
+        return this.ClusterIp;
+    }
+
+    /**
+     * Set k8s负载均衡内网vip
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ClusterIp k8s负载均衡内网vip
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setClusterIp(String ClusterIp) {
+        this.ClusterIp = ClusterIp;
+    }
+
+    /**
+     * Get 禁用服务Int记录
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DisableServiceInt 禁用服务Int记录
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getDisableServiceInt() {
+        return this.DisableServiceInt;
+    }
+
+    /**
+     * Set 禁用服务Int记录
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DisableServiceInt 禁用服务Int记录
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDisableServiceInt(Long DisableServiceInt) {
+        this.DisableServiceInt = DisableServiceInt;
+    }
+
+    /**
+     * Get 开启SessionAffinity Int记录
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OpenSessionAffinityInt 开启SessionAffinity Int记录
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getOpenSessionAffinityInt() {
+        return this.OpenSessionAffinityInt;
+    }
+
+    /**
+     * Set 开启SessionAffinity Int记录
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OpenSessionAffinityInt 开启SessionAffinity Int记录
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOpenSessionAffinityInt(Long OpenSessionAffinityInt) {
+        this.OpenSessionAffinityInt = OpenSessionAffinityInt;
+    }
+
+    /**
+     * Get 开启HeadlessService int记录
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return HeadlessServiceInt 开启HeadlessService int记录
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getHeadlessServiceInt() {
+        return this.HeadlessServiceInt;
+    }
+
+    /**
+     * Set 开启HeadlessService int记录
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param HeadlessServiceInt 开启HeadlessService int记录
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setHeadlessServiceInt(Long HeadlessServiceInt) {
+        this.HeadlessServiceInt = HeadlessServiceInt;
+    }
+
+    /**
+     * Get 服务名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Name 服务名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getName() {
+        return this.Name;
+    }
+
+    /**
+     * Set 服务名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Name 服务名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setName(String Name) {
+        this.Name = Name;
+    }
+
+    /**
+     * Get VPC网络ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return VpcId VPC网络ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getVpcId() {
+        return this.VpcId;
+    }
+
+    /**
+     * Set VPC网络ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VpcId VPC网络ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setVpcId(String VpcId) {
+        this.VpcId = VpcId;
+    }
+
+    /**
+     * Get 负载均衡VIP
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LoadBalancingIp 负载均衡VIP
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLoadBalancingIp() {
+        return this.LoadBalancingIp;
+    }
+
+    /**
+     * Set 负载均衡VIP
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LoadBalancingIp 负载均衡VIP
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLoadBalancingIp(String LoadBalancingIp) {
+        this.LoadBalancingIp = LoadBalancingIp;
+    }
+
+    /**
+     * Get 负载均衡id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LoadBalancerId 负载均衡id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLoadBalancerId() {
+        return this.LoadBalancerId;
+    }
+
+    /**
+     * Set 负载均衡id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LoadBalancerId 负载均衡id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLoadBalancerId(String LoadBalancerId) {
+        this.LoadBalancerId = LoadBalancerId;
+    }
+
     public ServiceSetting() {
     }
 
@@ -282,6 +646,45 @@ public class ServiceSetting extends AbstractModel {
         if (source.SessionAffinityTimeoutSeconds != null) {
             this.SessionAffinityTimeoutSeconds = new Long(source.SessionAffinityTimeoutSeconds);
         }
+        if (source.ServiceName != null) {
+            this.ServiceName = new String(source.ServiceName);
+        }
+        if (source.ExternalTrafficStrategy != null) {
+            this.ExternalTrafficStrategy = new String(source.ExternalTrafficStrategy);
+        }
+        if (source.ExternalTrafficPolicy != null) {
+            this.ExternalTrafficPolicy = new String(source.ExternalTrafficPolicy);
+        }
+        if (source.LoadBalancerProvisioner != null) {
+            this.LoadBalancerProvisioner = new String(source.LoadBalancerProvisioner);
+        }
+        if (source.LoadBalancingType != null) {
+            this.LoadBalancingType = new String(source.LoadBalancingType);
+        }
+        if (source.ClusterIp != null) {
+            this.ClusterIp = new String(source.ClusterIp);
+        }
+        if (source.DisableServiceInt != null) {
+            this.DisableServiceInt = new Long(source.DisableServiceInt);
+        }
+        if (source.OpenSessionAffinityInt != null) {
+            this.OpenSessionAffinityInt = new Long(source.OpenSessionAffinityInt);
+        }
+        if (source.HeadlessServiceInt != null) {
+            this.HeadlessServiceInt = new Long(source.HeadlessServiceInt);
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.VpcId != null) {
+            this.VpcId = new String(source.VpcId);
+        }
+        if (source.LoadBalancingIp != null) {
+            this.LoadBalancingIp = new String(source.LoadBalancingIp);
+        }
+        if (source.LoadBalancerId != null) {
+            this.LoadBalancerId = new String(source.LoadBalancerId);
+        }
     }
 
 
@@ -297,6 +700,19 @@ public class ServiceSetting extends AbstractModel {
         this.setParamSimple(map, prefix + "AllowDeleteService", this.AllowDeleteService);
         this.setParamSimple(map, prefix + "OpenSessionAffinity", this.OpenSessionAffinity);
         this.setParamSimple(map, prefix + "SessionAffinityTimeoutSeconds", this.SessionAffinityTimeoutSeconds);
+        this.setParamSimple(map, prefix + "ServiceName", this.ServiceName);
+        this.setParamSimple(map, prefix + "ExternalTrafficStrategy", this.ExternalTrafficStrategy);
+        this.setParamSimple(map, prefix + "ExternalTrafficPolicy", this.ExternalTrafficPolicy);
+        this.setParamSimple(map, prefix + "LoadBalancerProvisioner", this.LoadBalancerProvisioner);
+        this.setParamSimple(map, prefix + "LoadBalancingType", this.LoadBalancingType);
+        this.setParamSimple(map, prefix + "ClusterIp", this.ClusterIp);
+        this.setParamSimple(map, prefix + "DisableServiceInt", this.DisableServiceInt);
+        this.setParamSimple(map, prefix + "OpenSessionAffinityInt", this.OpenSessionAffinityInt);
+        this.setParamSimple(map, prefix + "HeadlessServiceInt", this.HeadlessServiceInt);
+        this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "VpcId", this.VpcId);
+        this.setParamSimple(map, prefix + "LoadBalancingIp", this.LoadBalancingIp);
+        this.setParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);
 
     }
 }

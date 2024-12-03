@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class BrokerTopicFlowData extends AbstractModel {
 
     /**
-    * Topic 名称
+    * 主题名
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TopicName")
@@ -32,7 +32,7 @@ public class BrokerTopicFlowData extends AbstractModel {
     private String TopicName;
 
     /**
-    * Topic Id
+    * 主题Id
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TopicId")
@@ -48,9 +48,9 @@ public class BrokerTopicFlowData extends AbstractModel {
     private String TopicTraffic;
 
     /**
-     * Get Topic 名称
+     * Get 主题名
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TopicName Topic 名称
+     * @return TopicName 主题名
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTopicName() {
@@ -58,9 +58,9 @@ public class BrokerTopicFlowData extends AbstractModel {
     }
 
     /**
-     * Set Topic 名称
+     * Set 主题名
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TopicName Topic 名称
+     * @param TopicName 主题名
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTopicName(String TopicName) {
@@ -68,9 +68,9 @@ public class BrokerTopicFlowData extends AbstractModel {
     }
 
     /**
-     * Get Topic Id
+     * Get 主题Id
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TopicId Topic Id
+     * @return TopicId 主题Id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTopicId() {
@@ -78,9 +78,9 @@ public class BrokerTopicFlowData extends AbstractModel {
     }
 
     /**
-     * Set Topic Id
+     * Set 主题Id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TopicId Topic Id
+     * @param TopicId 主题Id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTopicId(String TopicId) {

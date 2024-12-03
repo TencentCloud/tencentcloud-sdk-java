@@ -136,6 +136,14 @@ public class GroupPod extends AbstractModel {
     private String NodeInstanceId;
 
     /**
+    * 预期副本数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SpecTotalCount")
+    @Expose
+    private String SpecTotalCount;
+
+    /**
      * Get 实例名称(对应到kubernetes的pod名称)
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return PodName 实例名称(对应到kubernetes的pod名称)
@@ -415,6 +423,26 @@ public class GroupPod extends AbstractModel {
         this.NodeInstanceId = NodeInstanceId;
     }
 
+    /**
+     * Get 预期副本数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SpecTotalCount 预期副本数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSpecTotalCount() {
+        return this.SpecTotalCount;
+    }
+
+    /**
+     * Set 预期副本数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SpecTotalCount 预期副本数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSpecTotalCount(String SpecTotalCount) {
+        this.SpecTotalCount = SpecTotalCount;
+    }
+
     public GroupPod() {
     }
 
@@ -465,6 +493,9 @@ public class GroupPod extends AbstractModel {
         if (source.NodeInstanceId != null) {
             this.NodeInstanceId = new String(source.NodeInstanceId);
         }
+        if (source.SpecTotalCount != null) {
+            this.SpecTotalCount = new String(source.SpecTotalCount);
+        }
     }
 
 
@@ -486,6 +517,7 @@ public class GroupPod extends AbstractModel {
         this.setParamSimple(map, prefix + "InstanceAvailableStatus", this.InstanceAvailableStatus);
         this.setParamSimple(map, prefix + "InstanceStatus", this.InstanceStatus);
         this.setParamSimple(map, prefix + "NodeInstanceId", this.NodeInstanceId);
+        this.setParamSimple(map, prefix + "SpecTotalCount", this.SpecTotalCount);
 
     }
 }

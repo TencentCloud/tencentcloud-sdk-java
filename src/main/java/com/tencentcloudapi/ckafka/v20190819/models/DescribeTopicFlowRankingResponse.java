@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeTopicFlowRankingResponse extends AbstractModel {
 
     /**
-    * 流量排行
+    * 流量排行返回结果
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeTopicFlowRankingResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 流量排行 
-     * @return Result 流量排行
+     * Get 流量排行返回结果 
+     * @return Result 流量排行返回结果
      */
     public TopicFlowRankingResult getResult() {
         return this.Result;
     }
 
     /**
-     * Set 流量排行
-     * @param Result 流量排行
+     * Set 流量排行返回结果
+     * @param Result 流量排行返回结果
      */
     public void setResult(TopicFlowRankingResult Result) {
         this.Result = Result;

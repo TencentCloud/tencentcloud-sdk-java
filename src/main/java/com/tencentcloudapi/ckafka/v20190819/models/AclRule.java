@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AclRule extends AbstractModel {
 
     /**
-    * Acl规则名称
+    * ACL规则名
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleName")
@@ -32,7 +32,7 @@ public class AclRule extends AbstractModel {
     private String RuleName;
 
     /**
-    * 实例ID
+    * ckafka集群实例Id
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceId")
@@ -40,7 +40,7 @@ public class AclRule extends AbstractModel {
     private String InstanceId;
 
     /**
-    * 匹配类型，目前只支持前缀匹配，枚举值列表：PREFIXED
+    * ACL规则匹配类型，目前只支持前缀匹配，枚举值列表：PREFIXED
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PatternType")
@@ -128,9 +128,9 @@ public class AclRule extends AbstractModel {
     private String PatternTypeTitle;
 
     /**
-     * Get Acl规则名称
+     * Get ACL规则名
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RuleName Acl规则名称
+     * @return RuleName ACL规则名
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRuleName() {
@@ -138,9 +138,9 @@ public class AclRule extends AbstractModel {
     }
 
     /**
-     * Set Acl规则名称
+     * Set ACL规则名
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RuleName Acl规则名称
+     * @param RuleName ACL规则名
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleName(String RuleName) {
@@ -148,9 +148,9 @@ public class AclRule extends AbstractModel {
     }
 
     /**
-     * Get 实例ID
+     * Get ckafka集群实例Id
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InstanceId 实例ID
+     * @return InstanceId ckafka集群实例Id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceId() {
@@ -158,9 +158,9 @@ public class AclRule extends AbstractModel {
     }
 
     /**
-     * Set 实例ID
+     * Set ckafka集群实例Id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InstanceId 实例ID
+     * @param InstanceId ckafka集群实例Id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceId(String InstanceId) {
@@ -168,9 +168,9 @@ public class AclRule extends AbstractModel {
     }
 
     /**
-     * Get 匹配类型，目前只支持前缀匹配，枚举值列表：PREFIXED
+     * Get ACL规则匹配类型，目前只支持前缀匹配，枚举值列表：PREFIXED
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PatternType 匹配类型，目前只支持前缀匹配，枚举值列表：PREFIXED
+     * @return PatternType ACL规则匹配类型，目前只支持前缀匹配，枚举值列表：PREFIXED
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPatternType() {
@@ -178,9 +178,9 @@ public class AclRule extends AbstractModel {
     }
 
     /**
-     * Set 匹配类型，目前只支持前缀匹配，枚举值列表：PREFIXED
+     * Set ACL规则匹配类型，目前只支持前缀匹配，枚举值列表：PREFIXED
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PatternType 匹配类型，目前只支持前缀匹配，枚举值列表：PREFIXED
+     * @param PatternType ACL规则匹配类型，目前只支持前缀匹配，枚举值列表：PREFIXED
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPatternType(String PatternType) {

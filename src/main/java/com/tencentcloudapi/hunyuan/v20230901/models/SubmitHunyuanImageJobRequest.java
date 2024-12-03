@@ -75,6 +75,15 @@ public class SubmitHunyuanImageJobRequest extends AbstractModel {
     private Long Seed;
 
     /**
+    * 超分选项，默认不做超分，可选开启。
+ x2：2倍超分
+ x4：4倍超分
+    */
+    @SerializedName("Clarity")
+    @Expose
+    private String Clarity;
+
+    /**
     * prompt 扩写开关。1为开启，0为关闭，不传默认开启。
 开启扩写后，将自动扩写原始输入的 prompt 并使用扩写后的 prompt 生成图片，返回生成图片结果时将一并返回扩写后的 prompt 文本。
 如果关闭扩写，将直接使用原始输入的 prompt 生成图片。
@@ -236,6 +245,30 @@ public class SubmitHunyuanImageJobRequest extends AbstractModel {
     }
 
     /**
+     * Get 超分选项，默认不做超分，可选开启。
+ x2：2倍超分
+ x4：4倍超分 
+     * @return Clarity 超分选项，默认不做超分，可选开启。
+ x2：2倍超分
+ x4：4倍超分
+     */
+    public String getClarity() {
+        return this.Clarity;
+    }
+
+    /**
+     * Set 超分选项，默认不做超分，可选开启。
+ x2：2倍超分
+ x4：4倍超分
+     * @param Clarity 超分选项，默认不做超分，可选开启。
+ x2：2倍超分
+ x4：4倍超分
+     */
+    public void setClarity(String Clarity) {
+        this.Clarity = Clarity;
+    }
+
+    /**
      * Get prompt 扩写开关。1为开启，0为关闭，不传默认开启。
 开启扩写后，将自动扩写原始输入的 prompt 并使用扩写后的 prompt 生成图片，返回生成图片结果时将一并返回扩写后的 prompt 文本。
 如果关闭扩写，将直接使用原始输入的 prompt 生成图片。
@@ -341,6 +374,9 @@ public class SubmitHunyuanImageJobRequest extends AbstractModel {
         if (source.Seed != null) {
             this.Seed = new Long(source.Seed);
         }
+        if (source.Clarity != null) {
+            this.Clarity = new String(source.Clarity);
+        }
         if (source.Revise != null) {
             this.Revise = new Long(source.Revise);
         }
@@ -363,6 +399,7 @@ public class SubmitHunyuanImageJobRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Resolution", this.Resolution);
         this.setParamSimple(map, prefix + "Num", this.Num);
         this.setParamSimple(map, prefix + "Seed", this.Seed);
+        this.setParamSimple(map, prefix + "Clarity", this.Clarity);
         this.setParamSimple(map, prefix + "Revise", this.Revise);
         this.setParamSimple(map, prefix + "LogoAdd", this.LogoAdd);
         this.setParamObj(map, prefix + "LogoParam.", this.LogoParam);

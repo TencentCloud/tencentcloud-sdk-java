@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class TopicPartitionDO extends AbstractModel {
 
     /**
-    * Partition ID
+    * Partition 分区ID
     */
     @SerializedName("Partition")
     @Expose
@@ -52,16 +52,16 @@ public class TopicPartitionDO extends AbstractModel {
     private Long ReplicaNum;
 
     /**
-     * Get Partition ID 
-     * @return Partition Partition ID
+     * Get Partition 分区ID 
+     * @return Partition Partition 分区ID
      */
     public Long getPartition() {
         return this.Partition;
     }
 
     /**
-     * Set Partition ID
-     * @param Partition Partition ID
+     * Set Partition 分区ID
+     * @param Partition Partition 分区ID
      */
     public void setPartition(Long Partition) {
         this.Partition = Partition;

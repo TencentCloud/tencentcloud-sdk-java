@@ -45,6 +45,22 @@ public class VolumeInfo extends AbstractModel {
     private String VolumeConfig;
 
     /**
+    * -
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ConfigMapOptions")
+    @Expose
+    private ConfigMapOption [] ConfigMapOptions;
+
+    /**
+    * -
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EmptyDirOption")
+    @Expose
+    private EmptyDirOption EmptyDirOption;
+
+    /**
      * Get 数据卷类型 
      * @return VolumeType 数据卷类型
      */
@@ -92,6 +108,46 @@ public class VolumeInfo extends AbstractModel {
         this.VolumeConfig = VolumeConfig;
     }
 
+    /**
+     * Get -
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ConfigMapOptions -
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ConfigMapOption [] getConfigMapOptions() {
+        return this.ConfigMapOptions;
+    }
+
+    /**
+     * Set -
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ConfigMapOptions -
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setConfigMapOptions(ConfigMapOption [] ConfigMapOptions) {
+        this.ConfigMapOptions = ConfigMapOptions;
+    }
+
+    /**
+     * Get -
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EmptyDirOption -
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public EmptyDirOption getEmptyDirOption() {
+        return this.EmptyDirOption;
+    }
+
+    /**
+     * Set -
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EmptyDirOption -
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEmptyDirOption(EmptyDirOption EmptyDirOption) {
+        this.EmptyDirOption = EmptyDirOption;
+    }
+
     public VolumeInfo() {
     }
 
@@ -109,6 +165,15 @@ public class VolumeInfo extends AbstractModel {
         if (source.VolumeConfig != null) {
             this.VolumeConfig = new String(source.VolumeConfig);
         }
+        if (source.ConfigMapOptions != null) {
+            this.ConfigMapOptions = new ConfigMapOption[source.ConfigMapOptions.length];
+            for (int i = 0; i < source.ConfigMapOptions.length; i++) {
+                this.ConfigMapOptions[i] = new ConfigMapOption(source.ConfigMapOptions[i]);
+            }
+        }
+        if (source.EmptyDirOption != null) {
+            this.EmptyDirOption = new EmptyDirOption(source.EmptyDirOption);
+        }
     }
 
 
@@ -119,6 +184,8 @@ public class VolumeInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "VolumeType", this.VolumeType);
         this.setParamSimple(map, prefix + "VolumeName", this.VolumeName);
         this.setParamSimple(map, prefix + "VolumeConfig", this.VolumeConfig);
+        this.setParamArrayObj(map, prefix + "ConfigMapOptions.", this.ConfigMapOptions);
+        this.setParamObj(map, prefix + "EmptyDirOption.", this.EmptyDirOption);
 
     }
 }

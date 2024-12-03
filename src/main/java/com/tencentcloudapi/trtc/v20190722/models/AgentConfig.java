@@ -73,6 +73,15 @@ public class AgentConfig extends AbstractModel {
     private Long InterruptSpeechDuration;
 
     /**
+    * 控制新一轮对话的触发方式，默认为0。
+- 0表示当服务端语音识别检测出的完整一句话后，自动触发一轮新的对话。
+- 1表示客户端在收到字幕消息后，自行决定是否手动发送聊天信令触发一轮新的对话。
+    */
+    @SerializedName("TurnDetectionMode")
+    @Expose
+    private Long TurnDetectionMode;
+
+    /**
      * Get 机器人的UserId，用于进房发起任务。【注意】这个UserId不能与当前房间内的主播观众[UserId](https://cloud.tencent.com/document/product/647/46351#userid)重复。如果一个房间发起多个任务时，机器人的UserId也不能相互重复，否则会中断前一个任务。需要保证机器人UserId在房间内唯一。 
      * @return UserId 机器人的UserId，用于进房发起任务。【注意】这个UserId不能与当前房间内的主播观众[UserId](https://cloud.tencent.com/document/product/647/46351#userid)重复。如果一个房间发起多个任务时，机器人的UserId也不能相互重复，否则会中断前一个任务。需要保证机器人UserId在房间内唯一。
      */
@@ -184,6 +193,30 @@ public class AgentConfig extends AbstractModel {
         this.InterruptSpeechDuration = InterruptSpeechDuration;
     }
 
+    /**
+     * Get 控制新一轮对话的触发方式，默认为0。
+- 0表示当服务端语音识别检测出的完整一句话后，自动触发一轮新的对话。
+- 1表示客户端在收到字幕消息后，自行决定是否手动发送聊天信令触发一轮新的对话。 
+     * @return TurnDetectionMode 控制新一轮对话的触发方式，默认为0。
+- 0表示当服务端语音识别检测出的完整一句话后，自动触发一轮新的对话。
+- 1表示客户端在收到字幕消息后，自行决定是否手动发送聊天信令触发一轮新的对话。
+     */
+    public Long getTurnDetectionMode() {
+        return this.TurnDetectionMode;
+    }
+
+    /**
+     * Set 控制新一轮对话的触发方式，默认为0。
+- 0表示当服务端语音识别检测出的完整一句话后，自动触发一轮新的对话。
+- 1表示客户端在收到字幕消息后，自行决定是否手动发送聊天信令触发一轮新的对话。
+     * @param TurnDetectionMode 控制新一轮对话的触发方式，默认为0。
+- 0表示当服务端语音识别检测出的完整一句话后，自动触发一轮新的对话。
+- 1表示客户端在收到字幕消息后，自行决定是否手动发送聊天信令触发一轮新的对话。
+     */
+    public void setTurnDetectionMode(Long TurnDetectionMode) {
+        this.TurnDetectionMode = TurnDetectionMode;
+    }
+
     public AgentConfig() {
     }
 
@@ -213,6 +246,9 @@ public class AgentConfig extends AbstractModel {
         if (source.InterruptSpeechDuration != null) {
             this.InterruptSpeechDuration = new Long(source.InterruptSpeechDuration);
         }
+        if (source.TurnDetectionMode != null) {
+            this.TurnDetectionMode = new Long(source.TurnDetectionMode);
+        }
     }
 
 
@@ -227,6 +263,7 @@ public class AgentConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "WelcomeMessage", this.WelcomeMessage);
         this.setParamSimple(map, prefix + "InterruptMode", this.InterruptMode);
         this.setParamSimple(map, prefix + "InterruptSpeechDuration", this.InterruptSpeechDuration);
+        this.setParamSimple(map, prefix + "TurnDetectionMode", this.TurnDetectionMode);
 
     }
 }

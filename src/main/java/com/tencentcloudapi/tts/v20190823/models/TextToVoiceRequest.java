@@ -128,7 +128,7 @@ public class TextToVoiceRequest extends AbstractModel {
     private Long EmotionIntensity;
 
     /**
-    * 一句话版声音复刻音色ID，使用一句话版声音复刻音色时需填写。
+    * 一句话版声音复刻音色ID，使用一句话版声音复刻音色时需填写。【已废弃】
     */
     @SerializedName("FastVoiceType")
     @Expose
@@ -383,16 +383,16 @@ public class TextToVoiceRequest extends AbstractModel {
     }
 
     /**
-     * Get 一句话版声音复刻音色ID，使用一句话版声音复刻音色时需填写。 
-     * @return FastVoiceType 一句话版声音复刻音色ID，使用一句话版声音复刻音色时需填写。
+     * Get 一句话版声音复刻音色ID，使用一句话版声音复刻音色时需填写。【已废弃】 
+     * @return FastVoiceType 一句话版声音复刻音色ID，使用一句话版声音复刻音色时需填写。【已废弃】
      */
     public String getFastVoiceType() {
         return this.FastVoiceType;
     }
 
     /**
-     * Set 一句话版声音复刻音色ID，使用一句话版声音复刻音色时需填写。
-     * @param FastVoiceType 一句话版声音复刻音色ID，使用一句话版声音复刻音色时需填写。
+     * Set 一句话版声音复刻音色ID，使用一句话版声音复刻音色时需填写。【已废弃】
+     * @param FastVoiceType 一句话版声音复刻音色ID，使用一句话版声音复刻音色时需填写。【已废弃】
      */
     public void setFastVoiceType(String FastVoiceType) {
         this.FastVoiceType = FastVoiceType;

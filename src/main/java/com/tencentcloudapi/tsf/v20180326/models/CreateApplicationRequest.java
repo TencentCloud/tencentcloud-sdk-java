@@ -101,6 +101,41 @@ public class CreateApplicationRequest extends AbstractModel {
     private String [] ProgramIdList;
 
     /**
+    * apm业务系统id
+    */
+    @SerializedName("ApmInstanceId")
+    @Expose
+    private String ApmInstanceId;
+
+    /**
+    * 编程语言
+    */
+    @SerializedName("ProgramLanguage")
+    @Expose
+    private String ProgramLanguage;
+
+    /**
+    * 开发框架
+    */
+    @SerializedName("FrameworkType")
+    @Expose
+    private String FrameworkType;
+
+    /**
+    * 注册配置治理
+    */
+    @SerializedName("ServiceGovernanceConfig")
+    @Expose
+    private ServiceGovernanceConfig ServiceGovernanceConfig;
+
+    /**
+    * 是否创建并关联同名镜像仓库
+    */
+    @SerializedName("CreateSameNameImageRepository")
+    @Expose
+    private Boolean CreateSameNameImageRepository;
+
+    /**
      * Get 应用名称 
      * @return ApplicationName 应用名称
      */
@@ -276,6 +311,86 @@ public class CreateApplicationRequest extends AbstractModel {
         this.ProgramIdList = ProgramIdList;
     }
 
+    /**
+     * Get apm业务系统id 
+     * @return ApmInstanceId apm业务系统id
+     */
+    public String getApmInstanceId() {
+        return this.ApmInstanceId;
+    }
+
+    /**
+     * Set apm业务系统id
+     * @param ApmInstanceId apm业务系统id
+     */
+    public void setApmInstanceId(String ApmInstanceId) {
+        this.ApmInstanceId = ApmInstanceId;
+    }
+
+    /**
+     * Get 编程语言 
+     * @return ProgramLanguage 编程语言
+     */
+    public String getProgramLanguage() {
+        return this.ProgramLanguage;
+    }
+
+    /**
+     * Set 编程语言
+     * @param ProgramLanguage 编程语言
+     */
+    public void setProgramLanguage(String ProgramLanguage) {
+        this.ProgramLanguage = ProgramLanguage;
+    }
+
+    /**
+     * Get 开发框架 
+     * @return FrameworkType 开发框架
+     */
+    public String getFrameworkType() {
+        return this.FrameworkType;
+    }
+
+    /**
+     * Set 开发框架
+     * @param FrameworkType 开发框架
+     */
+    public void setFrameworkType(String FrameworkType) {
+        this.FrameworkType = FrameworkType;
+    }
+
+    /**
+     * Get 注册配置治理 
+     * @return ServiceGovernanceConfig 注册配置治理
+     */
+    public ServiceGovernanceConfig getServiceGovernanceConfig() {
+        return this.ServiceGovernanceConfig;
+    }
+
+    /**
+     * Set 注册配置治理
+     * @param ServiceGovernanceConfig 注册配置治理
+     */
+    public void setServiceGovernanceConfig(ServiceGovernanceConfig ServiceGovernanceConfig) {
+        this.ServiceGovernanceConfig = ServiceGovernanceConfig;
+    }
+
+    /**
+     * Get 是否创建并关联同名镜像仓库 
+     * @return CreateSameNameImageRepository 是否创建并关联同名镜像仓库
+     */
+    public Boolean getCreateSameNameImageRepository() {
+        return this.CreateSameNameImageRepository;
+    }
+
+    /**
+     * Set 是否创建并关联同名镜像仓库
+     * @param CreateSameNameImageRepository 是否创建并关联同名镜像仓库
+     */
+    public void setCreateSameNameImageRepository(Boolean CreateSameNameImageRepository) {
+        this.CreateSameNameImageRepository = CreateSameNameImageRepository;
+    }
+
     public CreateApplicationRequest() {
     }
 
@@ -323,6 +438,21 @@ public class CreateApplicationRequest extends AbstractModel {
                 this.ProgramIdList[i] = new String(source.ProgramIdList[i]);
             }
         }
+        if (source.ApmInstanceId != null) {
+            this.ApmInstanceId = new String(source.ApmInstanceId);
+        }
+        if (source.ProgramLanguage != null) {
+            this.ProgramLanguage = new String(source.ProgramLanguage);
+        }
+        if (source.FrameworkType != null) {
+            this.FrameworkType = new String(source.FrameworkType);
+        }
+        if (source.ServiceGovernanceConfig != null) {
+            this.ServiceGovernanceConfig = new ServiceGovernanceConfig(source.ServiceGovernanceConfig);
+        }
+        if (source.CreateSameNameImageRepository != null) {
+            this.CreateSameNameImageRepository = new Boolean(source.CreateSameNameImageRepository);
+        }
     }
 
 
@@ -341,6 +471,11 @@ public class CreateApplicationRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "ServiceConfigList.", this.ServiceConfigList);
         this.setParamSimple(map, prefix + "IgnoreCreateImageRepository", this.IgnoreCreateImageRepository);
         this.setParamArraySimple(map, prefix + "ProgramIdList.", this.ProgramIdList);
+        this.setParamSimple(map, prefix + "ApmInstanceId", this.ApmInstanceId);
+        this.setParamSimple(map, prefix + "ProgramLanguage", this.ProgramLanguage);
+        this.setParamSimple(map, prefix + "FrameworkType", this.FrameworkType);
+        this.setParamObj(map, prefix + "ServiceGovernanceConfig.", this.ServiceGovernanceConfig);
+        this.setParamSimple(map, prefix + "CreateSameNameImageRepository", this.CreateSameNameImageRepository);
 
     }
 }

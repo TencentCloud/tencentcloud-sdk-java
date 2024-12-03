@@ -31,14 +31,14 @@ public class KafkaParam extends AbstractModel {
     private Boolean SelfBuilt;
 
     /**
-    * 实例资源
+    * ckafka集群实例Id
     */
     @SerializedName("Resource")
     @Expose
     private String Resource;
 
     /**
-    * Topic名称，多个以“,”分隔
+    * 主题名，多个以“,”分隔
     */
     @SerializedName("Topic")
     @Expose
@@ -69,7 +69,7 @@ public class KafkaParam extends AbstractModel {
     private String ResourceName;
 
     /**
-    * Zone ID
+    * 可用区
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ZoneId")
@@ -77,7 +77,7 @@ public class KafkaParam extends AbstractModel {
     private Long ZoneId;
 
     /**
-    * Topic的Id
+    * 主题Id
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TopicId")
@@ -181,32 +181,32 @@ public class KafkaParam extends AbstractModel {
     }
 
     /**
-     * Get 实例资源 
-     * @return Resource 实例资源
+     * Get ckafka集群实例Id 
+     * @return Resource ckafka集群实例Id
      */
     public String getResource() {
         return this.Resource;
     }
 
     /**
-     * Set 实例资源
-     * @param Resource 实例资源
+     * Set ckafka集群实例Id
+     * @param Resource ckafka集群实例Id
      */
     public void setResource(String Resource) {
         this.Resource = Resource;
     }
 
     /**
-     * Get Topic名称，多个以“,”分隔 
-     * @return Topic Topic名称，多个以“,”分隔
+     * Get 主题名，多个以“,”分隔 
+     * @return Topic 主题名，多个以“,”分隔
      */
     public String getTopic() {
         return this.Topic;
     }
 
     /**
-     * Set Topic名称，多个以“,”分隔
-     * @param Topic Topic名称，多个以“,”分隔
+     * Set 主题名，多个以“,”分隔
+     * @param Topic 主题名，多个以“,”分隔
      */
     public void setTopic(String Topic) {
         this.Topic = Topic;
@@ -273,9 +273,9 @@ public class KafkaParam extends AbstractModel {
     }
 
     /**
-     * Get Zone ID
+     * Get 可用区
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ZoneId Zone ID
+     * @return ZoneId 可用区
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getZoneId() {
@@ -283,9 +283,9 @@ public class KafkaParam extends AbstractModel {
     }
 
     /**
-     * Set Zone ID
+     * Set 可用区
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ZoneId Zone ID
+     * @param ZoneId 可用区
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZoneId(Long ZoneId) {
@@ -293,9 +293,9 @@ public class KafkaParam extends AbstractModel {
     }
 
     /**
-     * Get Topic的Id
+     * Get 主题Id
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TopicId Topic的Id
+     * @return TopicId 主题Id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTopicId() {
@@ -303,9 +303,9 @@ public class KafkaParam extends AbstractModel {
     }
 
     /**
-     * Set Topic的Id
+     * Set 主题Id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TopicId Topic的Id
+     * @param TopicId 主题Id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTopicId(String TopicId) {

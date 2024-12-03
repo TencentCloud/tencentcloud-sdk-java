@@ -187,6 +187,16 @@ public class ChatCompletionsRequest extends AbstractModel {
     private Long Seed;
 
     /**
+    * 强制搜索增强开关。
+说明：
+1. 未传值时默认关闭。
+2. 开启后，将强制走AI搜索，当AI搜索结果为空时，由大模型回复兜底话术。
+    */
+    @SerializedName("ForceSearchEnhancement")
+    @Expose
+    private Boolean ForceSearchEnhancement;
+
+    /**
      * Get 模型名称，可选值包括 hunyuan-lite、hunyuan-standard、hunyuan-standard-256K、hunyuan-pro、 hunyuan-code、 hunyuan-role、 hunyuan-functioncall、 hunyuan-vision、 hunyuan-turbo、 hunyuan-turbo-latest、 hunyuan-large、 hunyuan-large-longcontext、 hunyuan-turbo-vision。
 各模型介绍请阅读 [产品概述](https://cloud.tencent.com/document/product/1729/104753) 中的说明。
 
@@ -646,6 +656,34 @@ public class ChatCompletionsRequest extends AbstractModel {
         this.Seed = Seed;
     }
 
+    /**
+     * Get 强制搜索增强开关。
+说明：
+1. 未传值时默认关闭。
+2. 开启后，将强制走AI搜索，当AI搜索结果为空时，由大模型回复兜底话术。 
+     * @return ForceSearchEnhancement 强制搜索增强开关。
+说明：
+1. 未传值时默认关闭。
+2. 开启后，将强制走AI搜索，当AI搜索结果为空时，由大模型回复兜底话术。
+     */
+    public Boolean getForceSearchEnhancement() {
+        return this.ForceSearchEnhancement;
+    }
+
+    /**
+     * Set 强制搜索增强开关。
+说明：
+1. 未传值时默认关闭。
+2. 开启后，将强制走AI搜索，当AI搜索结果为空时，由大模型回复兜底话术。
+     * @param ForceSearchEnhancement 强制搜索增强开关。
+说明：
+1. 未传值时默认关闭。
+2. 开启后，将强制走AI搜索，当AI搜索结果为空时，由大模型回复兜底话术。
+     */
+    public void setForceSearchEnhancement(Boolean ForceSearchEnhancement) {
+        this.ForceSearchEnhancement = ForceSearchEnhancement;
+    }
+
     public ChatCompletionsRequest() {
     }
 
@@ -708,6 +746,9 @@ public class ChatCompletionsRequest extends AbstractModel {
         if (source.Seed != null) {
             this.Seed = new Long(source.Seed);
         }
+        if (source.ForceSearchEnhancement != null) {
+            this.ForceSearchEnhancement = new Boolean(source.ForceSearchEnhancement);
+        }
     }
 
 
@@ -731,6 +772,7 @@ public class ChatCompletionsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "EnableMultimedia", this.EnableMultimedia);
         this.setParamSimple(map, prefix + "EnableDeepSearch", this.EnableDeepSearch);
         this.setParamSimple(map, prefix + "Seed", this.Seed);
+        this.setParamSimple(map, prefix + "ForceSearchEnhancement", this.ForceSearchEnhancement);
 
     }
 }

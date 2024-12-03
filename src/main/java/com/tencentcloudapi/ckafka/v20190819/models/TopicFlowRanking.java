@@ -52,7 +52,7 @@ public class TopicFlowRanking extends AbstractModel {
     private Long ReplicaNum;
 
     /**
-    * Topic 流量
+    * Topic 流量,单位MB(设置date时以sum方式聚合)
     */
     @SerializedName("TopicTraffic")
     @Expose
@@ -130,16 +130,16 @@ public class TopicFlowRanking extends AbstractModel {
     }
 
     /**
-     * Get Topic 流量 
-     * @return TopicTraffic Topic 流量
+     * Get Topic 流量,单位MB(设置date时以sum方式聚合) 
+     * @return TopicTraffic Topic 流量,单位MB(设置date时以sum方式聚合)
      */
     public String getTopicTraffic() {
         return this.TopicTraffic;
     }
 
     /**
-     * Set Topic 流量
-     * @param TopicTraffic Topic 流量
+     * Set Topic 流量,单位MB(设置date时以sum方式聚合)
+     * @param TopicTraffic Topic 流量,单位MB(设置date时以sum方式聚合)
      */
     public void setTopicTraffic(String TopicTraffic) {
         this.TopicTraffic = TopicTraffic;

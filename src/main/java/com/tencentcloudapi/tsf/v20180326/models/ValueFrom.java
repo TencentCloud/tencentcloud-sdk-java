@@ -40,6 +40,22 @@ public class ValueFrom extends AbstractModel {
     private ResourceFieldRef ResourceFieldRef;
 
     /**
+    * k8s env的configMapKeyRef
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ConfigMapKeyRef")
+    @Expose
+    private CommonRef ConfigMapKeyRef;
+
+    /**
+    * k8s env 的 secretKeyRef
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SecretKeyRef")
+    @Expose
+    private CommonRef SecretKeyRef;
+
+    /**
      * Get k8s env 的 FieldRef
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return FieldRef k8s env 的 FieldRef
@@ -79,6 +95,46 @@ public class ValueFrom extends AbstractModel {
         this.ResourceFieldRef = ResourceFieldRef;
     }
 
+    /**
+     * Get k8s env的configMapKeyRef
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ConfigMapKeyRef k8s env的configMapKeyRef
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public CommonRef getConfigMapKeyRef() {
+        return this.ConfigMapKeyRef;
+    }
+
+    /**
+     * Set k8s env的configMapKeyRef
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ConfigMapKeyRef k8s env的configMapKeyRef
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setConfigMapKeyRef(CommonRef ConfigMapKeyRef) {
+        this.ConfigMapKeyRef = ConfigMapKeyRef;
+    }
+
+    /**
+     * Get k8s env 的 secretKeyRef
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SecretKeyRef k8s env 的 secretKeyRef
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public CommonRef getSecretKeyRef() {
+        return this.SecretKeyRef;
+    }
+
+    /**
+     * Set k8s env 的 secretKeyRef
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SecretKeyRef k8s env 的 secretKeyRef
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSecretKeyRef(CommonRef SecretKeyRef) {
+        this.SecretKeyRef = SecretKeyRef;
+    }
+
     public ValueFrom() {
     }
 
@@ -93,6 +149,12 @@ public class ValueFrom extends AbstractModel {
         if (source.ResourceFieldRef != null) {
             this.ResourceFieldRef = new ResourceFieldRef(source.ResourceFieldRef);
         }
+        if (source.ConfigMapKeyRef != null) {
+            this.ConfigMapKeyRef = new CommonRef(source.ConfigMapKeyRef);
+        }
+        if (source.SecretKeyRef != null) {
+            this.SecretKeyRef = new CommonRef(source.SecretKeyRef);
+        }
     }
 
 
@@ -102,6 +164,8 @@ public class ValueFrom extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "FieldRef.", this.FieldRef);
         this.setParamObj(map, prefix + "ResourceFieldRef.", this.ResourceFieldRef);
+        this.setParamObj(map, prefix + "ConfigMapKeyRef.", this.ConfigMapKeyRef);
+        this.setParamObj(map, prefix + "SecretKeyRef.", this.SecretKeyRef);
 
     }
 }

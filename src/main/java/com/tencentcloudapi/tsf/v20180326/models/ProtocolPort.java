@@ -53,6 +53,14 @@ public class ProtocolPort extends AbstractModel {
     private Long NodePort;
 
     /**
+    * 端口名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Name")
+    @Expose
+    private String Name;
+
+    /**
      * Get TCP UDP 
      * @return Protocol TCP UDP
      */
@@ -120,6 +128,26 @@ public class ProtocolPort extends AbstractModel {
         this.NodePort = NodePort;
     }
 
+    /**
+     * Get 端口名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Name 端口名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getName() {
+        return this.Name;
+    }
+
+    /**
+     * Set 端口名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Name 端口名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setName(String Name) {
+        this.Name = Name;
+    }
+
     public ProtocolPort() {
     }
 
@@ -140,6 +168,9 @@ public class ProtocolPort extends AbstractModel {
         if (source.NodePort != null) {
             this.NodePort = new Long(source.NodePort);
         }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
     }
 
 
@@ -151,6 +182,7 @@ public class ProtocolPort extends AbstractModel {
         this.setParamSimple(map, prefix + "Port", this.Port);
         this.setParamSimple(map, prefix + "TargetPort", this.TargetPort);
         this.setParamSimple(map, prefix + "NodePort", this.NodePort);
+        this.setParamSimple(map, prefix + "Name", this.Name);
 
     }
 }

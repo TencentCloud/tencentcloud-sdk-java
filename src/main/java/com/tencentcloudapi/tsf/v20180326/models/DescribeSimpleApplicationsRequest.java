@@ -80,6 +80,13 @@ public class DescribeSimpleApplicationsRequest extends AbstractModel {
     private Boolean DisableProgramAuthCheck;
 
     /**
+    * 查询指定微服务类型的应用列表
+    */
+    @SerializedName("MicroserviceTypeList")
+    @Expose
+    private String [] MicroserviceTypeList;
+
+    /**
      * Get 应用ID列表 
      * @return ApplicationIdList 应用ID列表
      */
@@ -207,6 +214,22 @@ public class DescribeSimpleApplicationsRequest extends AbstractModel {
         this.DisableProgramAuthCheck = DisableProgramAuthCheck;
     }
 
+    /**
+     * Get 查询指定微服务类型的应用列表 
+     * @return MicroserviceTypeList 查询指定微服务类型的应用列表
+     */
+    public String [] getMicroserviceTypeList() {
+        return this.MicroserviceTypeList;
+    }
+
+    /**
+     * Set 查询指定微服务类型的应用列表
+     * @param MicroserviceTypeList 查询指定微服务类型的应用列表
+     */
+    public void setMicroserviceTypeList(String [] MicroserviceTypeList) {
+        this.MicroserviceTypeList = MicroserviceTypeList;
+    }
+
     public DescribeSimpleApplicationsRequest() {
     }
 
@@ -245,6 +268,12 @@ public class DescribeSimpleApplicationsRequest extends AbstractModel {
         if (source.DisableProgramAuthCheck != null) {
             this.DisableProgramAuthCheck = new Boolean(source.DisableProgramAuthCheck);
         }
+        if (source.MicroserviceTypeList != null) {
+            this.MicroserviceTypeList = new String[source.MicroserviceTypeList.length];
+            for (int i = 0; i < source.MicroserviceTypeList.length; i++) {
+                this.MicroserviceTypeList[i] = new String(source.MicroserviceTypeList[i]);
+            }
+        }
     }
 
 
@@ -260,6 +289,7 @@ public class DescribeSimpleApplicationsRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "ApplicationResourceTypeList.", this.ApplicationResourceTypeList);
         this.setParamSimple(map, prefix + "SearchWord", this.SearchWord);
         this.setParamSimple(map, prefix + "DisableProgramAuthCheck", this.DisableProgramAuthCheck);
+        this.setParamArraySimple(map, prefix + "MicroserviceTypeList.", this.MicroserviceTypeList);
 
     }
 }

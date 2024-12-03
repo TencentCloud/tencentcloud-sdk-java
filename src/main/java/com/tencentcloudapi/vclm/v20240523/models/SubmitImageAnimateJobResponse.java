@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class SubmitImageAnimateJobResponse extends AbstractModel {
 
     /**
-    * 任务ID。
+    * 图片跳舞任务ID。
     */
     @SerializedName("JobId")
     @Expose
@@ -38,16 +38,16 @@ public class SubmitImageAnimateJobResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 任务ID。 
-     * @return JobId 任务ID。
+     * Get 图片跳舞任务ID。 
+     * @return JobId 图片跳舞任务ID。
      */
     public String getJobId() {
         return this.JobId;
     }
 
     /**
-     * Set 任务ID。
-     * @param JobId 任务ID。
+     * Set 图片跳舞任务ID。
+     * @param JobId 图片跳舞任务ID。
      */
     public void setJobId(String JobId) {
         this.JobId = JobId;

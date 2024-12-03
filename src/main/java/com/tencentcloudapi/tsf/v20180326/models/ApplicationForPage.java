@@ -136,6 +136,78 @@ public class ApplicationForPage extends AbstractModel {
     private Boolean IgnoreCreateImageRepository;
 
     /**
+    * Apm业务系统id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ApmInstanceId")
+    @Expose
+    private String ApmInstanceId;
+
+    /**
+    * Apm业务系统Name
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ApmInstanceName")
+    @Expose
+    private String ApmInstanceName;
+
+    /**
+    * 同步删除镜像仓库
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SyncDeleteImageRepository")
+    @Expose
+    private Boolean SyncDeleteImageRepository;
+
+    /**
+    * 应用微服务子类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MicroserviceSubType")
+    @Expose
+    private String MicroserviceSubType;
+
+    /**
+    * 应用编程语言类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ProgramLanguage")
+    @Expose
+    private String ProgramLanguage;
+
+    /**
+    * 开发框架类型[SpringCloud，Dubbo，Go-GRPC，Other]
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FrameworkType")
+    @Expose
+    private String FrameworkType;
+
+    /**
+    * 注册配置治理信息
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ServiceGovernanceConfig")
+    @Expose
+    private ServiceGovernanceConfig ServiceGovernanceConfig;
+
+    /**
+    * 微服务类型列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MicroserviceTypeList")
+    @Expose
+    private String [] MicroserviceTypeList;
+
+    /**
+    * 是否同时创建镜像仓库
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CreateSameNameImageRepository")
+    @Expose
+    private Boolean CreateSameNameImageRepository;
+
+    /**
      * Get 应用ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ApplicationId 应用ID
@@ -415,6 +487,186 @@ public class ApplicationForPage extends AbstractModel {
         this.IgnoreCreateImageRepository = IgnoreCreateImageRepository;
     }
 
+    /**
+     * Get Apm业务系统id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ApmInstanceId Apm业务系统id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getApmInstanceId() {
+        return this.ApmInstanceId;
+    }
+
+    /**
+     * Set Apm业务系统id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ApmInstanceId Apm业务系统id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setApmInstanceId(String ApmInstanceId) {
+        this.ApmInstanceId = ApmInstanceId;
+    }
+
+    /**
+     * Get Apm业务系统Name
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ApmInstanceName Apm业务系统Name
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getApmInstanceName() {
+        return this.ApmInstanceName;
+    }
+
+    /**
+     * Set Apm业务系统Name
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ApmInstanceName Apm业务系统Name
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setApmInstanceName(String ApmInstanceName) {
+        this.ApmInstanceName = ApmInstanceName;
+    }
+
+    /**
+     * Get 同步删除镜像仓库
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SyncDeleteImageRepository 同步删除镜像仓库
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getSyncDeleteImageRepository() {
+        return this.SyncDeleteImageRepository;
+    }
+
+    /**
+     * Set 同步删除镜像仓库
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SyncDeleteImageRepository 同步删除镜像仓库
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSyncDeleteImageRepository(Boolean SyncDeleteImageRepository) {
+        this.SyncDeleteImageRepository = SyncDeleteImageRepository;
+    }
+
+    /**
+     * Get 应用微服务子类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MicroserviceSubType 应用微服务子类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getMicroserviceSubType() {
+        return this.MicroserviceSubType;
+    }
+
+    /**
+     * Set 应用微服务子类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MicroserviceSubType 应用微服务子类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMicroserviceSubType(String MicroserviceSubType) {
+        this.MicroserviceSubType = MicroserviceSubType;
+    }
+
+    /**
+     * Get 应用编程语言类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ProgramLanguage 应用编程语言类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getProgramLanguage() {
+        return this.ProgramLanguage;
+    }
+
+    /**
+     * Set 应用编程语言类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ProgramLanguage 应用编程语言类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProgramLanguage(String ProgramLanguage) {
+        this.ProgramLanguage = ProgramLanguage;
+    }
+
+    /**
+     * Get 开发框架类型[SpringCloud，Dubbo，Go-GRPC，Other]
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FrameworkType 开发框架类型[SpringCloud，Dubbo，Go-GRPC，Other]
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getFrameworkType() {
+        return this.FrameworkType;
+    }
+
+    /**
+     * Set 开发框架类型[SpringCloud，Dubbo，Go-GRPC，Other]
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FrameworkType 开发框架类型[SpringCloud，Dubbo，Go-GRPC，Other]
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFrameworkType(String FrameworkType) {
+        this.FrameworkType = FrameworkType;
+    }
+
+    /**
+     * Get 注册配置治理信息
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ServiceGovernanceConfig 注册配置治理信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ServiceGovernanceConfig getServiceGovernanceConfig() {
+        return this.ServiceGovernanceConfig;
+    }
+
+    /**
+     * Set 注册配置治理信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ServiceGovernanceConfig 注册配置治理信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setServiceGovernanceConfig(ServiceGovernanceConfig ServiceGovernanceConfig) {
+        this.ServiceGovernanceConfig = ServiceGovernanceConfig;
+    }
+
+    /**
+     * Get 微服务类型列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MicroserviceTypeList 微服务类型列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getMicroserviceTypeList() {
+        return this.MicroserviceTypeList;
+    }
+
+    /**
+     * Set 微服务类型列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MicroserviceTypeList 微服务类型列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMicroserviceTypeList(String [] MicroserviceTypeList) {
+        this.MicroserviceTypeList = MicroserviceTypeList;
+    }
+
+    /**
+     * Get 是否同时创建镜像仓库
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CreateSameNameImageRepository 是否同时创建镜像仓库
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getCreateSameNameImageRepository() {
+        return this.CreateSameNameImageRepository;
+    }
+
+    /**
+     * Set 是否同时创建镜像仓库
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CreateSameNameImageRepository 是否同时创建镜像仓库
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCreateSameNameImageRepository(Boolean CreateSameNameImageRepository) {
+        this.CreateSameNameImageRepository = CreateSameNameImageRepository;
+    }
+
     public ApplicationForPage() {
     }
 
@@ -468,6 +720,36 @@ public class ApplicationForPage extends AbstractModel {
         if (source.IgnoreCreateImageRepository != null) {
             this.IgnoreCreateImageRepository = new Boolean(source.IgnoreCreateImageRepository);
         }
+        if (source.ApmInstanceId != null) {
+            this.ApmInstanceId = new String(source.ApmInstanceId);
+        }
+        if (source.ApmInstanceName != null) {
+            this.ApmInstanceName = new String(source.ApmInstanceName);
+        }
+        if (source.SyncDeleteImageRepository != null) {
+            this.SyncDeleteImageRepository = new Boolean(source.SyncDeleteImageRepository);
+        }
+        if (source.MicroserviceSubType != null) {
+            this.MicroserviceSubType = new String(source.MicroserviceSubType);
+        }
+        if (source.ProgramLanguage != null) {
+            this.ProgramLanguage = new String(source.ProgramLanguage);
+        }
+        if (source.FrameworkType != null) {
+            this.FrameworkType = new String(source.FrameworkType);
+        }
+        if (source.ServiceGovernanceConfig != null) {
+            this.ServiceGovernanceConfig = new ServiceGovernanceConfig(source.ServiceGovernanceConfig);
+        }
+        if (source.MicroserviceTypeList != null) {
+            this.MicroserviceTypeList = new String[source.MicroserviceTypeList.length];
+            for (int i = 0; i < source.MicroserviceTypeList.length; i++) {
+                this.MicroserviceTypeList[i] = new String(source.MicroserviceTypeList[i]);
+            }
+        }
+        if (source.CreateSameNameImageRepository != null) {
+            this.CreateSameNameImageRepository = new Boolean(source.CreateSameNameImageRepository);
+        }
     }
 
 
@@ -489,6 +771,15 @@ public class ApplicationForPage extends AbstractModel {
         this.setParamSimple(map, prefix + "ApplicationRemarkName", this.ApplicationRemarkName);
         this.setParamArrayObj(map, prefix + "ServiceConfigList.", this.ServiceConfigList);
         this.setParamSimple(map, prefix + "IgnoreCreateImageRepository", this.IgnoreCreateImageRepository);
+        this.setParamSimple(map, prefix + "ApmInstanceId", this.ApmInstanceId);
+        this.setParamSimple(map, prefix + "ApmInstanceName", this.ApmInstanceName);
+        this.setParamSimple(map, prefix + "SyncDeleteImageRepository", this.SyncDeleteImageRepository);
+        this.setParamSimple(map, prefix + "MicroserviceSubType", this.MicroserviceSubType);
+        this.setParamSimple(map, prefix + "ProgramLanguage", this.ProgramLanguage);
+        this.setParamSimple(map, prefix + "FrameworkType", this.FrameworkType);
+        this.setParamObj(map, prefix + "ServiceGovernanceConfig.", this.ServiceGovernanceConfig);
+        this.setParamArraySimple(map, prefix + "MicroserviceTypeList.", this.MicroserviceTypeList);
+        this.setParamSimple(map, prefix + "CreateSameNameImageRepository", this.CreateSameNameImageRepository);
 
     }
 }

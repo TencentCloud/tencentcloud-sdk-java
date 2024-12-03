@@ -52,6 +52,20 @@ public class DescribePodInstancesRequest extends AbstractModel {
     private String [] PodNameList;
 
     /**
+    * 新老版本pod批次标识
+    */
+    @SerializedName("DeployVersion")
+    @Expose
+    private String DeployVersion;
+
+    /**
+    * 任务ID
+    */
+    @SerializedName("TaskId")
+    @Expose
+    private String TaskId;
+
+    /**
      * Get 实例所属groupId 
      * @return GroupId 实例所属groupId
      */
@@ -115,6 +129,38 @@ public class DescribePodInstancesRequest extends AbstractModel {
         this.PodNameList = PodNameList;
     }
 
+    /**
+     * Get 新老版本pod批次标识 
+     * @return DeployVersion 新老版本pod批次标识
+     */
+    public String getDeployVersion() {
+        return this.DeployVersion;
+    }
+
+    /**
+     * Set 新老版本pod批次标识
+     * @param DeployVersion 新老版本pod批次标识
+     */
+    public void setDeployVersion(String DeployVersion) {
+        this.DeployVersion = DeployVersion;
+    }
+
+    /**
+     * Get 任务ID 
+     * @return TaskId 任务ID
+     */
+    public String getTaskId() {
+        return this.TaskId;
+    }
+
+    /**
+     * Set 任务ID
+     * @param TaskId 任务ID
+     */
+    public void setTaskId(String TaskId) {
+        this.TaskId = TaskId;
+    }
+
     public DescribePodInstancesRequest() {
     }
 
@@ -138,6 +184,12 @@ public class DescribePodInstancesRequest extends AbstractModel {
                 this.PodNameList[i] = new String(source.PodNameList[i]);
             }
         }
+        if (source.DeployVersion != null) {
+            this.DeployVersion = new String(source.DeployVersion);
+        }
+        if (source.TaskId != null) {
+            this.TaskId = new String(source.TaskId);
+        }
     }
 
 
@@ -149,6 +201,8 @@ public class DescribePodInstancesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamArraySimple(map, prefix + "PodNameList.", this.PodNameList);
+        this.setParamSimple(map, prefix + "DeployVersion", this.DeployVersion);
+        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
 
     }
 }

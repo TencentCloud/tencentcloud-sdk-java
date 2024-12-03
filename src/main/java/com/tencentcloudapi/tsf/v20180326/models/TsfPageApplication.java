@@ -40,6 +40,14 @@ public class TsfPageApplication extends AbstractModel {
     private ApplicationForPage [] Content;
 
     /**
+    * 获取部署组实例列表返回的原始批次个数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SpecTotalCount")
+    @Expose
+    private Long SpecTotalCount;
+
+    /**
      * Get 应用总数目
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TotalCount 应用总数目
@@ -79,6 +87,26 @@ public class TsfPageApplication extends AbstractModel {
         this.Content = Content;
     }
 
+    /**
+     * Get 获取部署组实例列表返回的原始批次个数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SpecTotalCount 获取部署组实例列表返回的原始批次个数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getSpecTotalCount() {
+        return this.SpecTotalCount;
+    }
+
+    /**
+     * Set 获取部署组实例列表返回的原始批次个数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SpecTotalCount 获取部署组实例列表返回的原始批次个数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSpecTotalCount(Long SpecTotalCount) {
+        this.SpecTotalCount = SpecTotalCount;
+    }
+
     public TsfPageApplication() {
     }
 
@@ -96,6 +124,9 @@ public class TsfPageApplication extends AbstractModel {
                 this.Content[i] = new ApplicationForPage(source.Content[i]);
             }
         }
+        if (source.SpecTotalCount != null) {
+            this.SpecTotalCount = new Long(source.SpecTotalCount);
+        }
     }
 
 
@@ -105,6 +136,7 @@ public class TsfPageApplication extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamArrayObj(map, prefix + "Content.", this.Content);
+        this.setParamSimple(map, prefix + "SpecTotalCount", this.SpecTotalCount);
 
     }
 }

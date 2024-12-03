@@ -35,7 +35,7 @@ public class Route extends AbstractModel {
     private Long AccessType;
 
     /**
-    * 路由ID
+    * 路由Id
     */
     @SerializedName("RouteId")
     @Expose
@@ -80,7 +80,7 @@ public class Route extends AbstractModel {
     private String DeleteTimestamp;
 
     /**
-    * 子网信息
+    * 子网Id
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Subnet")
@@ -96,7 +96,7 @@ public class Route extends AbstractModel {
     private VipEntity [] BrokerVipList;
 
     /**
-    * vpc信息
+    * 私有网络Id
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcId")
@@ -136,16 +136,16 @@ public class Route extends AbstractModel {
     }
 
     /**
-     * Get 路由ID 
-     * @return RouteId 路由ID
+     * Get 路由Id 
+     * @return RouteId 路由Id
      */
     public Long getRouteId() {
         return this.RouteId;
     }
 
     /**
-     * Set 路由ID
-     * @param RouteId 路由ID
+     * Set 路由Id
+     * @param RouteId 路由Id
      */
     public void setRouteId(Long RouteId) {
         this.RouteId = RouteId;
@@ -244,9 +244,9 @@ public class Route extends AbstractModel {
     }
 
     /**
-     * Get 子网信息
+     * Get 子网Id
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Subnet 子网信息
+     * @return Subnet 子网Id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubnet() {
@@ -254,9 +254,9 @@ public class Route extends AbstractModel {
     }
 
     /**
-     * Set 子网信息
+     * Set 子网Id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Subnet 子网信息
+     * @param Subnet 子网Id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubnet(String Subnet) {
@@ -284,9 +284,9 @@ public class Route extends AbstractModel {
     }
 
     /**
-     * Get vpc信息
+     * Get 私有网络Id
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return VpcId vpc信息
+     * @return VpcId 私有网络Id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVpcId() {
@@ -294,9 +294,9 @@ public class Route extends AbstractModel {
     }
 
     /**
-     * Set vpc信息
+     * Set 私有网络Id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param VpcId vpc信息
+     * @param VpcId 私有网络Id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcId(String VpcId) {

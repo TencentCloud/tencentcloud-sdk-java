@@ -59,6 +59,13 @@ public class AiRecognitionTaskTransTextSegmentItem extends AbstractModel {
     private String Trans;
 
     /**
+    * 字词时间戳信息。
+    */
+    @SerializedName("Wordlist")
+    @Expose
+    private WordResult [] Wordlist;
+
+    /**
      * Get 识别片段置信度。取值：0~100。 
      * @return Confidence 识别片段置信度。取值：0~100。
      */
@@ -138,6 +145,22 @@ public class AiRecognitionTaskTransTextSegmentItem extends AbstractModel {
         this.Trans = Trans;
     }
 
+    /**
+     * Get 字词时间戳信息。 
+     * @return Wordlist 字词时间戳信息。
+     */
+    public WordResult [] getWordlist() {
+        return this.Wordlist;
+    }
+
+    /**
+     * Set 字词时间戳信息。
+     * @param Wordlist 字词时间戳信息。
+     */
+    public void setWordlist(WordResult [] Wordlist) {
+        this.Wordlist = Wordlist;
+    }
+
     public AiRecognitionTaskTransTextSegmentItem() {
     }
 
@@ -161,6 +184,12 @@ public class AiRecognitionTaskTransTextSegmentItem extends AbstractModel {
         if (source.Trans != null) {
             this.Trans = new String(source.Trans);
         }
+        if (source.Wordlist != null) {
+            this.Wordlist = new WordResult[source.Wordlist.length];
+            for (int i = 0; i < source.Wordlist.length; i++) {
+                this.Wordlist[i] = new WordResult(source.Wordlist[i]);
+            }
+        }
     }
 
 
@@ -173,6 +202,7 @@ public class AiRecognitionTaskTransTextSegmentItem extends AbstractModel {
         this.setParamSimple(map, prefix + "EndTimeOffset", this.EndTimeOffset);
         this.setParamSimple(map, prefix + "Text", this.Text);
         this.setParamSimple(map, prefix + "Trans", this.Trans);
+        this.setParamArrayObj(map, prefix + "Wordlist.", this.Wordlist);
 
     }
 }

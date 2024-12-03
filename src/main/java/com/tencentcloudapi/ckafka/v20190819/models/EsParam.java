@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class EsParam extends AbstractModel {
 
     /**
-    * 实例资源
+    * Es实例资源Id
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Resource")
@@ -184,9 +184,9 @@ public class EsParam extends AbstractModel {
     private String RecordMappingMode;
 
     /**
-     * Get 实例资源
+     * Get Es实例资源Id
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Resource 实例资源
+     * @return Resource Es实例资源Id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResource() {
@@ -194,9 +194,9 @@ public class EsParam extends AbstractModel {
     }
 
     /**
-     * Set 实例资源
+     * Set Es实例资源Id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Resource 实例资源
+     * @param Resource Es实例资源Id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResource(String Resource) {

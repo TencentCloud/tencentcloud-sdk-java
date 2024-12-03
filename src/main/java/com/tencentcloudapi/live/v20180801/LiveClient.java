@@ -1170,6 +1170,17 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     }
 
     /**
+     *查询直播增强用量明细信息。
+     * @param req DescribeLiveEnhanceInfoListRequest
+     * @return DescribeLiveEnhanceInfoListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLiveEnhanceInfoListResponse DescribeLiveEnhanceInfoList(DescribeLiveEnhanceInfoListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLiveEnhanceInfoList", DescribeLiveEnhanceInfoListResponse.class);
+    }
+
+    /**
      *获取禁推流列表。
 
 注意：该接口仅作为直播辅助查询接口，重要业务场景不可强依赖该接口。
@@ -1391,7 +1402,6 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
 注意：
 1. 该接口仅提供辅助查询在线流列表功能，业务重要场景不可强依赖该接口。
 2. 该接口仅适用于流数少于2万路的情况，对于流数较大用户请联系售后。
-
      * @param req DescribeLiveStreamOnlineListRequest
      * @return DescribeLiveStreamOnlineListResponse
      * @throws TencentCloudSDKException

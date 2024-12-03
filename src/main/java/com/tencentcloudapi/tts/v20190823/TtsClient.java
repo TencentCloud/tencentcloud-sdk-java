@@ -87,7 +87,7 @@ public class TtsClient extends AbstractClient{
 默认接口请求频率限制：
 精品音色和标准音色：20次/秒
 大模型音色：10次/秒
-一句话复刻音色：5次/秒
+一句话复刻音色：暂不支持
      * @param req TextToVoiceRequest
      * @return TextToVoiceResponse
      * @throws TencentCloudSDKException

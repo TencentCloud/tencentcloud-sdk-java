@@ -99,7 +99,7 @@ public class ZoneResponse extends AbstractModel {
     private String Physical;
 
     /**
-    * 公网带宽
+    * 公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PublicNetwork")
@@ -115,7 +115,7 @@ public class ZoneResponse extends AbstractModel {
     private String PublicNetworkLimit;
 
     /**
-    * 请求ID
+    * 请求Id
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RequestId")
@@ -335,9 +335,9 @@ public class ZoneResponse extends AbstractModel {
     }
 
     /**
-     * Get 公网带宽
+     * Get 公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PublicNetwork 公网带宽
+     * @return PublicNetwork 公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPublicNetwork() {
@@ -345,9 +345,9 @@ public class ZoneResponse extends AbstractModel {
     }
 
     /**
-     * Set 公网带宽
+     * Set 公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PublicNetwork 公网带宽
+     * @param PublicNetwork 公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPublicNetwork(String PublicNetwork) {
@@ -375,9 +375,9 @@ public class ZoneResponse extends AbstractModel {
     }
 
     /**
-     * Get 请求ID
+     * Get 请求Id
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RequestId 请求ID
+     * @return RequestId 请求Id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRequestId() {
@@ -385,9 +385,9 @@ public class ZoneResponse extends AbstractModel {
     }
 
     /**
-     * Set 请求ID
+     * Set 请求Id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RequestId 请求ID
+     * @param RequestId 请求Id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRequestId(String RequestId) {

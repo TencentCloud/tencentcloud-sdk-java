@@ -24,8 +24,8 @@ import java.util.HashMap;
 public class SubmitImageAnimateJobRequest extends AbstractModel {
 
     /**
-    * 图片格式：支持PNG、JPG、JPEG格式；
-图片分辨率：长边分辨率不超过2056；
+    * 图片格式：支持PNG、JPG、JPEG、BMP、WEBP格式；
+图片分辨率：长边分辨率范围【192，4096】；
 图片大小：不超过10M；
 图片宽高比：【宽：高】数值在 1:2 到 1:1.2 范围内
     */
@@ -34,7 +34,11 @@ public class SubmitImageAnimateJobRequest extends AbstractModel {
     private String ImageUrl;
 
     /**
-    * 图片base64数据。图片格式：支持PNG、JPG、JPEG格式；图片分辨率：长边分辨率不超过2056；图片大小：不超过10M；图片宽高比：【宽：高】数值在 1:2 到 1:1.2 范围内
+    * 图片base64数据。
+图片格式：支持PNG、JPG、JPEG、BMP、WEBP格式；
+图片分辨率：长边分辨率范围【192，4096】；
+图片大小：不超过10M；
+图片宽高比：【宽：高】数值在 1:2 到 1:1.2 范围内
     */
     @SerializedName("ImageBase64")
     @Expose
@@ -63,7 +67,7 @@ public class SubmitImageAnimateJobRequest extends AbstractModel {
     private Boolean EnableBodyJoins;
 
     /**
-    * 最终视频是否保留原图的背景（该模式对于tuziwu、huajiangwu不生效）
+    * 最终视频是否保留原图的背景，默认不保留。
 
     */
     @SerializedName("EnableSegment")
@@ -90,12 +94,12 @@ public class SubmitImageAnimateJobRequest extends AbstractModel {
     private LogoParam LogoParam;
 
     /**
-     * Get 图片格式：支持PNG、JPG、JPEG格式；
-图片分辨率：长边分辨率不超过2056；
+     * Get 图片格式：支持PNG、JPG、JPEG、BMP、WEBP格式；
+图片分辨率：长边分辨率范围【192，4096】；
 图片大小：不超过10M；
 图片宽高比：【宽：高】数值在 1:2 到 1:1.2 范围内 
-     * @return ImageUrl 图片格式：支持PNG、JPG、JPEG格式；
-图片分辨率：长边分辨率不超过2056；
+     * @return ImageUrl 图片格式：支持PNG、JPG、JPEG、BMP、WEBP格式；
+图片分辨率：长边分辨率范围【192，4096】；
 图片大小：不超过10M；
 图片宽高比：【宽：高】数值在 1:2 到 1:1.2 范围内
      */
@@ -104,12 +108,12 @@ public class SubmitImageAnimateJobRequest extends AbstractModel {
     }
 
     /**
-     * Set 图片格式：支持PNG、JPG、JPEG格式；
-图片分辨率：长边分辨率不超过2056；
+     * Set 图片格式：支持PNG、JPG、JPEG、BMP、WEBP格式；
+图片分辨率：长边分辨率范围【192，4096】；
 图片大小：不超过10M；
 图片宽高比：【宽：高】数值在 1:2 到 1:1.2 范围内
-     * @param ImageUrl 图片格式：支持PNG、JPG、JPEG格式；
-图片分辨率：长边分辨率不超过2056；
+     * @param ImageUrl 图片格式：支持PNG、JPG、JPEG、BMP、WEBP格式；
+图片分辨率：长边分辨率范围【192，4096】；
 图片大小：不超过10M；
 图片宽高比：【宽：高】数值在 1:2 到 1:1.2 范围内
      */
@@ -118,16 +122,32 @@ public class SubmitImageAnimateJobRequest extends AbstractModel {
     }
 
     /**
-     * Get 图片base64数据。图片格式：支持PNG、JPG、JPEG格式；图片分辨率：长边分辨率不超过2056；图片大小：不超过10M；图片宽高比：【宽：高】数值在 1:2 到 1:1.2 范围内 
-     * @return ImageBase64 图片base64数据。图片格式：支持PNG、JPG、JPEG格式；图片分辨率：长边分辨率不超过2056；图片大小：不超过10M；图片宽高比：【宽：高】数值在 1:2 到 1:1.2 范围内
+     * Get 图片base64数据。
+图片格式：支持PNG、JPG、JPEG、BMP、WEBP格式；
+图片分辨率：长边分辨率范围【192，4096】；
+图片大小：不超过10M；
+图片宽高比：【宽：高】数值在 1:2 到 1:1.2 范围内 
+     * @return ImageBase64 图片base64数据。
+图片格式：支持PNG、JPG、JPEG、BMP、WEBP格式；
+图片分辨率：长边分辨率范围【192，4096】；
+图片大小：不超过10M；
+图片宽高比：【宽：高】数值在 1:2 到 1:1.2 范围内
      */
     public String getImageBase64() {
         return this.ImageBase64;
     }
 
     /**
-     * Set 图片base64数据。图片格式：支持PNG、JPG、JPEG格式；图片分辨率：长边分辨率不超过2056；图片大小：不超过10M；图片宽高比：【宽：高】数值在 1:2 到 1:1.2 范围内
-     * @param ImageBase64 图片base64数据。图片格式：支持PNG、JPG、JPEG格式；图片分辨率：长边分辨率不超过2056；图片大小：不超过10M；图片宽高比：【宽：高】数值在 1:2 到 1:1.2 范围内
+     * Set 图片base64数据。
+图片格式：支持PNG、JPG、JPEG、BMP、WEBP格式；
+图片分辨率：长边分辨率范围【192，4096】；
+图片大小：不超过10M；
+图片宽高比：【宽：高】数值在 1:2 到 1:1.2 范围内
+     * @param ImageBase64 图片base64数据。
+图片格式：支持PNG、JPG、JPEG、BMP、WEBP格式；
+图片分辨率：长边分辨率范围【192，4096】；
+图片大小：不超过10M；
+图片宽高比：【宽：高】数值在 1:2 到 1:1.2 范围内
      */
     public void setImageBase64(String ImageBase64) {
         this.ImageBase64 = ImageBase64;
@@ -186,9 +206,9 @@ public class SubmitImageAnimateJobRequest extends AbstractModel {
     }
 
     /**
-     * Get 最终视频是否保留原图的背景（该模式对于tuziwu、huajiangwu不生效）
+     * Get 最终视频是否保留原图的背景，默认不保留。
  
-     * @return EnableSegment 最终视频是否保留原图的背景（该模式对于tuziwu、huajiangwu不生效）
+     * @return EnableSegment 最终视频是否保留原图的背景，默认不保留。
 
      */
     public Boolean getEnableSegment() {
@@ -196,9 +216,9 @@ public class SubmitImageAnimateJobRequest extends AbstractModel {
     }
 
     /**
-     * Set 最终视频是否保留原图的背景（该模式对于tuziwu、huajiangwu不生效）
+     * Set 最终视频是否保留原图的背景，默认不保留。
 
-     * @param EnableSegment 最终视频是否保留原图的背景（该模式对于tuziwu、huajiangwu不生效）
+     * @param EnableSegment 最终视频是否保留原图的背景，默认不保留。
 
      */
     public void setEnableSegment(Boolean EnableSegment) {

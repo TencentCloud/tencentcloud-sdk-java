@@ -160,6 +160,22 @@ public class ImageRepository extends AbstractModel {
     private Long Public;
 
     /**
+    * 创建方式：manual | automatic
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CreateMode")
+    @Expose
+    private String CreateMode;
+
+    /**
+    * 仓库名，等同reponame字段
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RepoName")
+    @Expose
+    private String RepoName;
+
+    /**
      * Get 仓库名,含命名空间,如tsf/nginx
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Reponame 仓库名,含命名空间,如tsf/nginx
@@ -499,6 +515,46 @@ public class ImageRepository extends AbstractModel {
         this.Public = Public;
     }
 
+    /**
+     * Get 创建方式：manual | automatic
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CreateMode 创建方式：manual | automatic
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCreateMode() {
+        return this.CreateMode;
+    }
+
+    /**
+     * Set 创建方式：manual | automatic
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CreateMode 创建方式：manual | automatic
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCreateMode(String CreateMode) {
+        this.CreateMode = CreateMode;
+    }
+
+    /**
+     * Get 仓库名，等同reponame字段
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RepoName 仓库名，等同reponame字段
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRepoName() {
+        return this.RepoName;
+    }
+
+    /**
+     * Set 仓库名，等同reponame字段
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RepoName 仓库名，等同reponame字段
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRepoName(String RepoName) {
+        this.RepoName = RepoName;
+    }
+
     public ImageRepository() {
     }
 
@@ -558,6 +614,12 @@ public class ImageRepository extends AbstractModel {
         if (source.Public != null) {
             this.Public = new Long(source.Public);
         }
+        if (source.CreateMode != null) {
+            this.CreateMode = new String(source.CreateMode);
+        }
+        if (source.RepoName != null) {
+            this.RepoName = new String(source.RepoName);
+        }
     }
 
 
@@ -582,6 +644,8 @@ public class ImageRepository extends AbstractModel {
         this.setParamObj(map, prefix + "ApplicationName.", this.ApplicationName);
         this.setParamSimple(map, prefix + "ApplicationNameReal", this.ApplicationNameReal);
         this.setParamSimple(map, prefix + "Public", this.Public);
+        this.setParamSimple(map, prefix + "CreateMode", this.CreateMode);
+        this.setParamSimple(map, prefix + "RepoName", this.RepoName);
 
     }
 }

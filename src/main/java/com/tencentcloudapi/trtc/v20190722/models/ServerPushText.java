@@ -45,6 +45,15 @@ public class ServerPushText extends AbstractModel {
     private Boolean StopAfterPlay;
 
     /**
+    * 服务端推送播报音频
+    格式说明：音频以16KHz采样率的单声道格式提供，编码为Base64字符串。
+    输入规则：当提供Audio字段时，将不接受Text字段的输入。系统将直接播放Audio字段中的音频内容。
+    */
+    @SerializedName("Audio")
+    @Expose
+    private String Audio;
+
+    /**
      * Get 服务端推送播报文本 
      * @return Text 服务端推送播报文本
      */
@@ -92,6 +101,30 @@ public class ServerPushText extends AbstractModel {
         this.StopAfterPlay = StopAfterPlay;
     }
 
+    /**
+     * Get 服务端推送播报音频
+    格式说明：音频以16KHz采样率的单声道格式提供，编码为Base64字符串。
+    输入规则：当提供Audio字段时，将不接受Text字段的输入。系统将直接播放Audio字段中的音频内容。 
+     * @return Audio 服务端推送播报音频
+    格式说明：音频以16KHz采样率的单声道格式提供，编码为Base64字符串。
+    输入规则：当提供Audio字段时，将不接受Text字段的输入。系统将直接播放Audio字段中的音频内容。
+     */
+    public String getAudio() {
+        return this.Audio;
+    }
+
+    /**
+     * Set 服务端推送播报音频
+    格式说明：音频以16KHz采样率的单声道格式提供，编码为Base64字符串。
+    输入规则：当提供Audio字段时，将不接受Text字段的输入。系统将直接播放Audio字段中的音频内容。
+     * @param Audio 服务端推送播报音频
+    格式说明：音频以16KHz采样率的单声道格式提供，编码为Base64字符串。
+    输入规则：当提供Audio字段时，将不接受Text字段的输入。系统将直接播放Audio字段中的音频内容。
+     */
+    public void setAudio(String Audio) {
+        this.Audio = Audio;
+    }
+
     public ServerPushText() {
     }
 
@@ -109,6 +142,9 @@ public class ServerPushText extends AbstractModel {
         if (source.StopAfterPlay != null) {
             this.StopAfterPlay = new Boolean(source.StopAfterPlay);
         }
+        if (source.Audio != null) {
+            this.Audio = new String(source.Audio);
+        }
     }
 
 
@@ -119,6 +155,7 @@ public class ServerPushText extends AbstractModel {
         this.setParamSimple(map, prefix + "Text", this.Text);
         this.setParamSimple(map, prefix + "Interrupt", this.Interrupt);
         this.setParamSimple(map, prefix + "StopAfterPlay", this.StopAfterPlay);
+        this.setParamSimple(map, prefix + "Audio", this.Audio);
 
     }
 }

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ZoneInfo extends AbstractModel {
 
     /**
-    * zone的id
+    * 可用区
     */
     @SerializedName("ZoneId")
     @Expose
@@ -38,7 +38,7 @@ public class ZoneInfo extends AbstractModel {
     private Long IsInternalApp;
 
     /**
-    * app id
+    * 应用标识
     */
     @SerializedName("AppId")
     @Expose
@@ -52,14 +52,14 @@ public class ZoneInfo extends AbstractModel {
     private Boolean Flag;
 
     /**
-    * zone名称
+    * 可用区名称
     */
     @SerializedName("ZoneName")
     @Expose
     private String ZoneName;
 
     /**
-    * zone状态
+    * 可用区状态
     */
     @SerializedName("ZoneStatus")
     @Expose
@@ -73,7 +73,7 @@ public class ZoneInfo extends AbstractModel {
     private String Exflag;
 
     /**
-    * json对象，key为机型，value true为售罄，false为未售罄
+    * true为售罄，false为未售罄
     */
     @SerializedName("SoldOut")
     @Expose
@@ -95,16 +95,16 @@ public class ZoneInfo extends AbstractModel {
     private String ExtraFlag;
 
     /**
-     * Get zone的id 
-     * @return ZoneId zone的id
+     * Get 可用区 
+     * @return ZoneId 可用区
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set zone的id
-     * @param ZoneId zone的id
+     * Set 可用区
+     * @param ZoneId 可用区
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
@@ -127,16 +127,16 @@ public class ZoneInfo extends AbstractModel {
     }
 
     /**
-     * Get app id 
-     * @return AppId app id
+     * Get 应用标识 
+     * @return AppId 应用标识
      */
     public Long getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set app id
-     * @param AppId app id
+     * Set 应用标识
+     * @param AppId 应用标识
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
@@ -159,32 +159,32 @@ public class ZoneInfo extends AbstractModel {
     }
 
     /**
-     * Get zone名称 
-     * @return ZoneName zone名称
+     * Get 可用区名称 
+     * @return ZoneName 可用区名称
      */
     public String getZoneName() {
         return this.ZoneName;
     }
 
     /**
-     * Set zone名称
-     * @param ZoneName zone名称
+     * Set 可用区名称
+     * @param ZoneName 可用区名称
      */
     public void setZoneName(String ZoneName) {
         this.ZoneName = ZoneName;
     }
 
     /**
-     * Get zone状态 
-     * @return ZoneStatus zone状态
+     * Get 可用区状态 
+     * @return ZoneStatus 可用区状态
      */
     public Long getZoneStatus() {
         return this.ZoneStatus;
     }
 
     /**
-     * Set zone状态
-     * @param ZoneStatus zone状态
+     * Set 可用区状态
+     * @param ZoneStatus 可用区状态
      */
     public void setZoneStatus(Long ZoneStatus) {
         this.ZoneStatus = ZoneStatus;
@@ -211,16 +211,16 @@ public class ZoneInfo extends AbstractModel {
     }
 
     /**
-     * Get json对象，key为机型，value true为售罄，false为未售罄 
-     * @return SoldOut json对象，key为机型，value true为售罄，false为未售罄
+     * Get true为售罄，false为未售罄 
+     * @return SoldOut true为售罄，false为未售罄
      */
     public String getSoldOut() {
         return this.SoldOut;
     }
 
     /**
-     * Set json对象，key为机型，value true为售罄，false为未售罄
-     * @param SoldOut json对象，key为机型，value true为售罄，false为未售罄
+     * Set true为售罄，false为未售罄
+     * @param SoldOut true为售罄，false为未售罄
      */
     public void setSoldOut(String SoldOut) {
         this.SoldOut = SoldOut;
