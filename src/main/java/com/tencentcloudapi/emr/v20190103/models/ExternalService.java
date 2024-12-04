@@ -31,13 +31,6 @@ public class ExternalService extends AbstractModel {
     private String ShareType;
 
     /**
-    * 自定义参数集合
-    */
-    @SerializedName("CustomServiceDefineList")
-    @Expose
-    private CustomServiceDefine [] CustomServiceDefineList;
-
-    /**
     * 共用组件名
     */
     @SerializedName("Service")
@@ -50,6 +43,13 @@ public class ExternalService extends AbstractModel {
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
+
+    /**
+    * 自定义参数集合
+    */
+    @SerializedName("CustomServiceDefineList")
+    @Expose
+    private CustomServiceDefine [] CustomServiceDefineList;
 
     /**
      * Get 共用组件类型，EMR/CUSTOM 
@@ -65,22 +65,6 @@ public class ExternalService extends AbstractModel {
      */
     public void setShareType(String ShareType) {
         this.ShareType = ShareType;
-    }
-
-    /**
-     * Get 自定义参数集合 
-     * @return CustomServiceDefineList 自定义参数集合
-     */
-    public CustomServiceDefine [] getCustomServiceDefineList() {
-        return this.CustomServiceDefineList;
-    }
-
-    /**
-     * Set 自定义参数集合
-     * @param CustomServiceDefineList 自定义参数集合
-     */
-    public void setCustomServiceDefineList(CustomServiceDefine [] CustomServiceDefineList) {
-        this.CustomServiceDefineList = CustomServiceDefineList;
     }
 
     /**
@@ -115,6 +99,22 @@ public class ExternalService extends AbstractModel {
         this.InstanceId = InstanceId;
     }
 
+    /**
+     * Get 自定义参数集合 
+     * @return CustomServiceDefineList 自定义参数集合
+     */
+    public CustomServiceDefine [] getCustomServiceDefineList() {
+        return this.CustomServiceDefineList;
+    }
+
+    /**
+     * Set 自定义参数集合
+     * @param CustomServiceDefineList 自定义参数集合
+     */
+    public void setCustomServiceDefineList(CustomServiceDefine [] CustomServiceDefineList) {
+        this.CustomServiceDefineList = CustomServiceDefineList;
+    }
+
     public ExternalService() {
     }
 
@@ -126,17 +126,17 @@ public class ExternalService extends AbstractModel {
         if (source.ShareType != null) {
             this.ShareType = new String(source.ShareType);
         }
-        if (source.CustomServiceDefineList != null) {
-            this.CustomServiceDefineList = new CustomServiceDefine[source.CustomServiceDefineList.length];
-            for (int i = 0; i < source.CustomServiceDefineList.length; i++) {
-                this.CustomServiceDefineList[i] = new CustomServiceDefine(source.CustomServiceDefineList[i]);
-            }
-        }
         if (source.Service != null) {
             this.Service = new String(source.Service);
         }
         if (source.InstanceId != null) {
             this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.CustomServiceDefineList != null) {
+            this.CustomServiceDefineList = new CustomServiceDefine[source.CustomServiceDefineList.length];
+            for (int i = 0; i < source.CustomServiceDefineList.length; i++) {
+                this.CustomServiceDefineList[i] = new CustomServiceDefine(source.CustomServiceDefineList[i]);
+            }
         }
     }
 
@@ -146,9 +146,9 @@ public class ExternalService extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ShareType", this.ShareType);
-        this.setParamArrayObj(map, prefix + "CustomServiceDefineList.", this.CustomServiceDefineList);
         this.setParamSimple(map, prefix + "Service", this.Service);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamArrayObj(map, prefix + "CustomServiceDefineList.", this.CustomServiceDefineList);
 
     }
 }

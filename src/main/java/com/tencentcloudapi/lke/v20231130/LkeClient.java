@@ -107,6 +107,17 @@ public class LkeClient extends AbstractClient{
     }
 
     /**
+     *创建Doc分类
+     * @param req CreateDocCateRequest
+     * @return CreateDocCateResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDocCateResponse CreateDocCate(CreateDocCateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateDocCate", CreateDocCateResponse.class);
+    }
+
+    /**
      *录入问答
      * @param req CreateQARequest
      * @return CreateQAResponse
@@ -195,6 +206,17 @@ public class LkeClient extends AbstractClient{
     public DeleteDocResponse DeleteDoc(DeleteDocRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteDoc", DeleteDocResponse.class);
+    }
+
+    /**
+     *Doc分类删除
+     * @param req DeleteDocCateRequest
+     * @return DeleteDocCateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteDocCateResponse DeleteDocCate(DeleteDocCateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteDocCate", DeleteDocCateResponse.class);
     }
 
     /**
@@ -606,6 +628,17 @@ public class LkeClient extends AbstractClient{
     }
 
     /**
+     *Doc分组
+     * @param req GroupDocRequest
+     * @return GroupDocResponse
+     * @throws TencentCloudSDKException
+     */
+    public GroupDocResponse GroupDoc(GroupDocRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GroupDoc", GroupDocResponse.class);
+    }
+
+    /**
      *QA分组
      * @param req GroupQARequest
      * @return GroupQAResponse
@@ -661,6 +694,17 @@ public class LkeClient extends AbstractClient{
     }
 
     /**
+     *列表查询知识库容量详情
+     * @param req ListAppKnowledgeDetailRequest
+     * @return ListAppKnowledgeDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListAppKnowledgeDetailResponse ListAppKnowledgeDetail(ListAppKnowledgeDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListAppKnowledgeDetail", ListAppKnowledgeDetailResponse.class);
+    }
+
+    /**
      *查询属性标签列表
      * @param req ListAttributeLabelRequest
      * @return ListAttributeLabelResponse
@@ -680,6 +724,17 @@ public class LkeClient extends AbstractClient{
     public ListDocResponse ListDoc(ListDocRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ListDoc", ListDocResponse.class);
+    }
+
+    /**
+     *获取Doc分类
+     * @param req ListDocCateRequest
+     * @return ListDocCateResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListDocCateResponse ListDocCate(ListDocCateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListDocCate", ListDocCateResponse.class);
     }
 
     /**
@@ -804,6 +859,17 @@ public class LkeClient extends AbstractClient{
     }
 
     /**
+     *列表查询单次调用明细
+     * @param req ListUsageCallDetailRequest
+     * @return ListUsageCallDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListUsageCallDetailResponse ListUsageCallDetail(ListUsageCallDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListUsageCallDetail", ListUsageCallDetailResponse.class);
+    }
+
+    /**
      *修改应用请求结构体
      * @param req ModifyAppRequest
      * @return ModifyAppResponse
@@ -845,6 +911,17 @@ public class LkeClient extends AbstractClient{
     public ModifyDocAttrRangeResponse ModifyDocAttrRange(ModifyDocAttrRangeRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyDocAttrRange", ModifyDocAttrRangeResponse.class);
+    }
+
+    /**
+     *修改Doc分类
+     * @param req ModifyDocCateRequest
+     * @return ModifyDocCateResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDocCateResponse ModifyDocCate(ModifyDocCateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDocCate", ModifyDocCateResponse.class);
     }
 
     /**

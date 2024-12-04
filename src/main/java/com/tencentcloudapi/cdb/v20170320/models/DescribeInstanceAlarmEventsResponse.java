@@ -24,11 +24,62 @@ import java.util.HashMap;
 public class DescribeInstanceAlarmEventsResponse extends AbstractModel {
 
     /**
+    * 事件数。
+    */
+    @SerializedName("TotalCount")
+    @Expose
+    private Long TotalCount;
+
+    /**
+    * 事件信息。查询不到信息时，Items为null。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Items")
+    @Expose
+    private InstEventInfo [] Items;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
+
+    /**
+     * Get 事件数。 
+     * @return TotalCount 事件数。
+     */
+    public Long getTotalCount() {
+        return this.TotalCount;
+    }
+
+    /**
+     * Set 事件数。
+     * @param TotalCount 事件数。
+     */
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
+    }
+
+    /**
+     * Get 事件信息。查询不到信息时，Items为null。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Items 事件信息。查询不到信息时，Items为null。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public InstEventInfo [] getItems() {
+        return this.Items;
+    }
+
+    /**
+     * Set 事件信息。查询不到信息时，Items为null。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Items 事件信息。查询不到信息时，Items为null。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setItems(InstEventInfo [] Items) {
+        this.Items = Items;
+    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -54,6 +105,15 @@ public class DescribeInstanceAlarmEventsResponse extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeInstanceAlarmEventsResponse(DescribeInstanceAlarmEventsResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.Items != null) {
+            this.Items = new InstEventInfo[source.Items.length];
+            for (int i = 0; i < source.Items.length; i++) {
+                this.Items[i] = new InstEventInfo(source.Items[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -64,6 +124,8 @@ public class DescribeInstanceAlarmEventsResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "Items.", this.Items);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

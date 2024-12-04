@@ -83,6 +83,13 @@ public class ModifyRoundPlayRequest extends AbstractModel {
     private String PlayBackMode;
 
     /**
+    * 过期时间，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)，过期后将停止播放。“9999-12-31T23:59:59+08:00”表示不过期。
+    */
+    @SerializedName("ExpiredTime")
+    @Expose
+    private String ExpiredTime;
+
+    /**
      * Get 轮播播单唯一标识。 
      * @return RoundPlayId 轮播播单唯一标识。
      */
@@ -222,6 +229,22 @@ public class ModifyRoundPlayRequest extends AbstractModel {
         this.PlayBackMode = PlayBackMode;
     }
 
+    /**
+     * Get 过期时间，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)，过期后将停止播放。“9999-12-31T23:59:59+08:00”表示不过期。 
+     * @return ExpiredTime 过期时间，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)，过期后将停止播放。“9999-12-31T23:59:59+08:00”表示不过期。
+     */
+    public String getExpiredTime() {
+        return this.ExpiredTime;
+    }
+
+    /**
+     * Set 过期时间，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)，过期后将停止播放。“9999-12-31T23:59:59+08:00”表示不过期。
+     * @param ExpiredTime 过期时间，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)，过期后将停止播放。“9999-12-31T23:59:59+08:00”表示不过期。
+     */
+    public void setExpiredTime(String ExpiredTime) {
+        this.ExpiredTime = ExpiredTime;
+    }
+
     public ModifyRoundPlayRequest() {
     }
 
@@ -257,6 +280,9 @@ public class ModifyRoundPlayRequest extends AbstractModel {
         if (source.PlayBackMode != null) {
             this.PlayBackMode = new String(source.PlayBackMode);
         }
+        if (source.ExpiredTime != null) {
+            this.ExpiredTime = new String(source.ExpiredTime);
+        }
     }
 
 
@@ -272,6 +298,7 @@ public class ModifyRoundPlayRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Desc", this.Desc);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "PlayBackMode", this.PlayBackMode);
+        this.setParamSimple(map, prefix + "ExpiredTime", this.ExpiredTime);
 
     }
 }

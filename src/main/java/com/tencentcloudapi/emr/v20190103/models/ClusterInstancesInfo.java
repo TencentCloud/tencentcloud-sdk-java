@@ -403,6 +403,14 @@ public class ClusterInstancesInfo extends AbstractModel {
     private EmrProductConfigDetail ConfigDetail;
 
     /**
+    * 集群绑定的文件系统数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BindFileSystemNum")
+    @Expose
+    private Long BindFileSystemNum;
+
+    /**
      * Get ID号
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Id ID号
@@ -1398,6 +1406,26 @@ public class ClusterInstancesInfo extends AbstractModel {
         this.ConfigDetail = ConfigDetail;
     }
 
+    /**
+     * Get 集群绑定的文件系统数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BindFileSystemNum 集群绑定的文件系统数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getBindFileSystemNum() {
+        return this.BindFileSystemNum;
+    }
+
+    /**
+     * Set 集群绑定的文件系统数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BindFileSystemNum 集群绑定的文件系统数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBindFileSystemNum(Long BindFileSystemNum) {
+        this.BindFileSystemNum = BindFileSystemNum;
+    }
+
     public ClusterInstancesInfo() {
     }
 
@@ -1547,6 +1575,9 @@ public class ClusterInstancesInfo extends AbstractModel {
         if (source.ConfigDetail != null) {
             this.ConfigDetail = new EmrProductConfigDetail(source.ConfigDetail);
         }
+        if (source.BindFileSystemNum != null) {
+            this.BindFileSystemNum = new Long(source.BindFileSystemNum);
+        }
     }
 
 
@@ -1598,6 +1629,7 @@ public class ClusterInstancesInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "IsCvmReplace", this.IsCvmReplace);
         this.setParamSimple(map, prefix + "ClusterTitle", this.ClusterTitle);
         this.setParamObj(map, prefix + "ConfigDetail.", this.ConfigDetail);
+        this.setParamSimple(map, prefix + "BindFileSystemNum", this.BindFileSystemNum);
 
     }
 }

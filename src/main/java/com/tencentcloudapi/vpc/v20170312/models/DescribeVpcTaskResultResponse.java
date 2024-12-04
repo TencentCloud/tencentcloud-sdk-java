@@ -39,7 +39,6 @@ public class DescribeVpcTaskResultResponse extends AbstractModel {
 
     /**
     * 异步任务详细结果。只用于特殊场景，如批量删除弹性网卡时查询成功的网卡列表和失败的列表。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Result")
     @Expose
@@ -85,10 +84,8 @@ public class DescribeVpcTaskResultResponse extends AbstractModel {
     }
 
     /**
-     * Get 异步任务详细结果。只用于特殊场景，如批量删除弹性网卡时查询成功的网卡列表和失败的列表。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 异步任务详细结果。只用于特殊场景，如批量删除弹性网卡时查询成功的网卡列表和失败的列表。 
      * @return Result 异步任务详细结果。只用于特殊场景，如批量删除弹性网卡时查询成功的网卡列表和失败的列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public VpcTaskResultDetailInfo [] getResult() {
         return this.Result;
@@ -96,9 +93,7 @@ public class DescribeVpcTaskResultResponse extends AbstractModel {
 
     /**
      * Set 异步任务详细结果。只用于特殊场景，如批量删除弹性网卡时查询成功的网卡列表和失败的列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Result 异步任务详细结果。只用于特殊场景，如批量删除弹性网卡时查询成功的网卡列表和失败的列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResult(VpcTaskResultDetailInfo [] Result) {
         this.Result = Result;

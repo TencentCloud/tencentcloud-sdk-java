@@ -611,6 +611,17 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *查询集群透明加密信息
+     * @param req DescribeClusterTransparentEncryptInfoRequest
+     * @return DescribeClusterTransparentEncryptInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClusterTransparentEncryptInfoResponse DescribeClusterTransparentEncryptInfo(DescribeClusterTransparentEncryptInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeClusterTransparentEncryptInfo", DescribeClusterTransparentEncryptInfoResponse.class);
+    }
+
+    /**
      *本接口（DescribeClusters）用于查询集群列表。
      * @param req DescribeClustersRequest
      * @return DescribeClustersResponse
@@ -1389,6 +1400,17 @@ public class CynosdbClient extends AbstractClient{
     public OpenClusterReadOnlyInstanceGroupAccessResponse OpenClusterReadOnlyInstanceGroupAccess(OpenClusterReadOnlyInstanceGroupAccessRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "OpenClusterReadOnlyInstanceGroupAccess", OpenClusterReadOnlyInstanceGroupAccessResponse.class);
+    }
+
+    /**
+     *开通集群透明加密
+     * @param req OpenClusterTransparentEncryptRequest
+     * @return OpenClusterTransparentEncryptResponse
+     * @throws TencentCloudSDKException
+     */
+    public OpenClusterTransparentEncryptResponse OpenClusterTransparentEncrypt(OpenClusterTransparentEncryptRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "OpenClusterTransparentEncrypt", OpenClusterTransparentEncryptResponse.class);
     }
 
     /**

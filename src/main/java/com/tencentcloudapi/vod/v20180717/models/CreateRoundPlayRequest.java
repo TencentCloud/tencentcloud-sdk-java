@@ -70,6 +70,20 @@ public class CreateRoundPlayRequest extends AbstractModel {
     private String PlayBackMode;
 
     /**
+    * 播单唯一标识 ID，长度限制为64个字符，只允许包含大小写英文字母（a-zA-Z）、数字（0-9）和连字符（-）。如果存在相同 RoundPlayId 的播单，返回 InvalidParameterValue.RoundPlayAlreadyExists 错误。默认取值为空，表示由系统分配。
+    */
+    @SerializedName("RoundPlayId")
+    @Expose
+    private String RoundPlayId;
+
+    /**
+    * 过期时间，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)。过期后的播单将停止播放，“9999-12-31T23:59:59+08:00“表示不过期。默认值：9999-12-31T23:59:59+08:00。
+    */
+    @SerializedName("ExpiredTime")
+    @Expose
+    private String ExpiredTime;
+
+    /**
      * Get 启播时间，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)。 
      * @return StartTime 启播时间，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)。
      */
@@ -181,6 +195,38 @@ public class CreateRoundPlayRequest extends AbstractModel {
         this.PlayBackMode = PlayBackMode;
     }
 
+    /**
+     * Get 播单唯一标识 ID，长度限制为64个字符，只允许包含大小写英文字母（a-zA-Z）、数字（0-9）和连字符（-）。如果存在相同 RoundPlayId 的播单，返回 InvalidParameterValue.RoundPlayAlreadyExists 错误。默认取值为空，表示由系统分配。 
+     * @return RoundPlayId 播单唯一标识 ID，长度限制为64个字符，只允许包含大小写英文字母（a-zA-Z）、数字（0-9）和连字符（-）。如果存在相同 RoundPlayId 的播单，返回 InvalidParameterValue.RoundPlayAlreadyExists 错误。默认取值为空，表示由系统分配。
+     */
+    public String getRoundPlayId() {
+        return this.RoundPlayId;
+    }
+
+    /**
+     * Set 播单唯一标识 ID，长度限制为64个字符，只允许包含大小写英文字母（a-zA-Z）、数字（0-9）和连字符（-）。如果存在相同 RoundPlayId 的播单，返回 InvalidParameterValue.RoundPlayAlreadyExists 错误。默认取值为空，表示由系统分配。
+     * @param RoundPlayId 播单唯一标识 ID，长度限制为64个字符，只允许包含大小写英文字母（a-zA-Z）、数字（0-9）和连字符（-）。如果存在相同 RoundPlayId 的播单，返回 InvalidParameterValue.RoundPlayAlreadyExists 错误。默认取值为空，表示由系统分配。
+     */
+    public void setRoundPlayId(String RoundPlayId) {
+        this.RoundPlayId = RoundPlayId;
+    }
+
+    /**
+     * Get 过期时间，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)。过期后的播单将停止播放，“9999-12-31T23:59:59+08:00“表示不过期。默认值：9999-12-31T23:59:59+08:00。 
+     * @return ExpiredTime 过期时间，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)。过期后的播单将停止播放，“9999-12-31T23:59:59+08:00“表示不过期。默认值：9999-12-31T23:59:59+08:00。
+     */
+    public String getExpiredTime() {
+        return this.ExpiredTime;
+    }
+
+    /**
+     * Set 过期时间，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)。过期后的播单将停止播放，“9999-12-31T23:59:59+08:00“表示不过期。默认值：9999-12-31T23:59:59+08:00。
+     * @param ExpiredTime 过期时间，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)。过期后的播单将停止播放，“9999-12-31T23:59:59+08:00“表示不过期。默认值：9999-12-31T23:59:59+08:00。
+     */
+    public void setExpiredTime(String ExpiredTime) {
+        this.ExpiredTime = ExpiredTime;
+    }
+
     public CreateRoundPlayRequest() {
     }
 
@@ -210,6 +256,12 @@ public class CreateRoundPlayRequest extends AbstractModel {
         if (source.PlayBackMode != null) {
             this.PlayBackMode = new String(source.PlayBackMode);
         }
+        if (source.RoundPlayId != null) {
+            this.RoundPlayId = new String(source.RoundPlayId);
+        }
+        if (source.ExpiredTime != null) {
+            this.ExpiredTime = new String(source.ExpiredTime);
+        }
     }
 
 
@@ -223,6 +275,8 @@ public class CreateRoundPlayRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Desc", this.Desc);
         this.setParamSimple(map, prefix + "PlayBackMode", this.PlayBackMode);
+        this.setParamSimple(map, prefix + "RoundPlayId", this.RoundPlayId);
+        this.setParamSimple(map, prefix + "ExpiredTime", this.ExpiredTime);
 
     }
 }

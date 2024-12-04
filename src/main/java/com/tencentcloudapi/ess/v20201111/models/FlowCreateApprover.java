@@ -345,6 +345,14 @@ public class FlowCreateApprover extends AbstractModel {
     private Intention Intention;
 
     /**
+    * 进入签署流程的限制，目前支持以下选项：
+<ul><li> <b>空值（默认）</b> :无限制，可在任何场景进入签署流程。</li><li> <b>link</b> :选择此选项后，将无法通过控制台或电子签小程序列表进入填写或签署操作，仅可预览合同。填写或签署流程只能通过短信或发起方提供的专用链接进行。</li></ul>
+    */
+    @SerializedName("SignEndpoints")
+    @Expose
+    private String [] SignEndpoints;
+
+    /**
      * Get 在指定签署方时，可以选择企业B端或个人C端等不同的参与者类型，可选类型如下：
 
 <ul><li> <b>0</b> :企业B端。</li>
@@ -1296,6 +1304,26 @@ public class FlowCreateApprover extends AbstractModel {
         this.Intention = Intention;
     }
 
+    /**
+     * Get 进入签署流程的限制，目前支持以下选项：
+<ul><li> <b>空值（默认）</b> :无限制，可在任何场景进入签署流程。</li><li> <b>link</b> :选择此选项后，将无法通过控制台或电子签小程序列表进入填写或签署操作，仅可预览合同。填写或签署流程只能通过短信或发起方提供的专用链接进行。</li></ul> 
+     * @return SignEndpoints 进入签署流程的限制，目前支持以下选项：
+<ul><li> <b>空值（默认）</b> :无限制，可在任何场景进入签署流程。</li><li> <b>link</b> :选择此选项后，将无法通过控制台或电子签小程序列表进入填写或签署操作，仅可预览合同。填写或签署流程只能通过短信或发起方提供的专用链接进行。</li></ul>
+     */
+    public String [] getSignEndpoints() {
+        return this.SignEndpoints;
+    }
+
+    /**
+     * Set 进入签署流程的限制，目前支持以下选项：
+<ul><li> <b>空值（默认）</b> :无限制，可在任何场景进入签署流程。</li><li> <b>link</b> :选择此选项后，将无法通过控制台或电子签小程序列表进入填写或签署操作，仅可预览合同。填写或签署流程只能通过短信或发起方提供的专用链接进行。</li></ul>
+     * @param SignEndpoints 进入签署流程的限制，目前支持以下选项：
+<ul><li> <b>空值（默认）</b> :无限制，可在任何场景进入签署流程。</li><li> <b>link</b> :选择此选项后，将无法通过控制台或电子签小程序列表进入填写或签署操作，仅可预览合同。填写或签署流程只能通过短信或发起方提供的专用链接进行。</li></ul>
+     */
+    public void setSignEndpoints(String [] SignEndpoints) {
+        this.SignEndpoints = SignEndpoints;
+    }
+
     public FlowCreateApprover() {
     }
 
@@ -1406,6 +1434,12 @@ public class FlowCreateApprover extends AbstractModel {
         if (source.Intention != null) {
             this.Intention = new Intention(source.Intention);
         }
+        if (source.SignEndpoints != null) {
+            this.SignEndpoints = new String[source.SignEndpoints.length];
+            for (int i = 0; i < source.SignEndpoints.length; i++) {
+                this.SignEndpoints[i] = new String(source.SignEndpoints[i]);
+            }
+        }
     }
 
 
@@ -1441,6 +1475,7 @@ public class FlowCreateApprover extends AbstractModel {
         this.setParamSimple(map, prefix + "SignTypeSelector", this.SignTypeSelector);
         this.setParamSimple(map, prefix + "Deadline", this.Deadline);
         this.setParamObj(map, prefix + "Intention.", this.Intention);
+        this.setParamArraySimple(map, prefix + "SignEndpoints.", this.SignEndpoints);
 
     }
 }

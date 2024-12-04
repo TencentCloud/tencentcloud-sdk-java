@@ -102,6 +102,13 @@ public class RoundPlayInfo extends AbstractModel {
     private String UpdateTime;
 
     /**
+    * 过期时间，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)，过期后将停止播单的播放。“9999-12-31T23:59:59+08:00”表示永不过期。
+    */
+    @SerializedName("ExpiredTime")
+    @Expose
+    private String ExpiredTime;
+
+    /**
      * Get 轮播播单标识。 
      * @return RoundPlayId 轮播播单标识。
      */
@@ -293,6 +300,22 @@ public class RoundPlayInfo extends AbstractModel {
         this.UpdateTime = UpdateTime;
     }
 
+    /**
+     * Get 过期时间，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)，过期后将停止播单的播放。“9999-12-31T23:59:59+08:00”表示永不过期。 
+     * @return ExpiredTime 过期时间，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)，过期后将停止播单的播放。“9999-12-31T23:59:59+08:00”表示永不过期。
+     */
+    public String getExpiredTime() {
+        return this.ExpiredTime;
+    }
+
+    /**
+     * Set 过期时间，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)，过期后将停止播单的播放。“9999-12-31T23:59:59+08:00”表示永不过期。
+     * @param ExpiredTime 过期时间，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)，过期后将停止播单的播放。“9999-12-31T23:59:59+08:00”表示永不过期。
+     */
+    public void setExpiredTime(String ExpiredTime) {
+        this.ExpiredTime = ExpiredTime;
+    }
+
     public RoundPlayInfo() {
     }
 
@@ -334,6 +357,9 @@ public class RoundPlayInfo extends AbstractModel {
         if (source.UpdateTime != null) {
             this.UpdateTime = new String(source.UpdateTime);
         }
+        if (source.ExpiredTime != null) {
+            this.ExpiredTime = new String(source.ExpiredTime);
+        }
     }
 
 
@@ -351,6 +377,7 @@ public class RoundPlayInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Url", this.Url);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamSimple(map, prefix + "ExpiredTime", this.ExpiredTime);
 
     }
 }

@@ -72,7 +72,7 @@ public class InstanceItemExtraInfo extends AbstractModel {
     private Long MaxStorage;
 
     /**
-    * 专享集群最大保留时间
+    * 专享集群最大保留时间，单位：小时
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxRetention")
@@ -80,7 +80,7 @@ public class InstanceItemExtraInfo extends AbstractModel {
     private Long MaxRetention;
 
     /**
-    * 专项集群最大保留时间
+    * 专项集群最大保留时间，单位：小时
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MinRetention")
@@ -88,7 +88,7 @@ public class InstanceItemExtraInfo extends AbstractModel {
     private Long MinRetention;
 
     /**
-    * 4.0共享集群
+    * 4.0共享集群状态
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceStatus")
@@ -216,9 +216,9 @@ public class InstanceItemExtraInfo extends AbstractModel {
     }
 
     /**
-     * Get 专享集群最大保留时间
+     * Get 专享集群最大保留时间，单位：小时
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MaxRetention 专享集群最大保留时间
+     * @return MaxRetention 专享集群最大保留时间，单位：小时
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaxRetention() {
@@ -226,9 +226,9 @@ public class InstanceItemExtraInfo extends AbstractModel {
     }
 
     /**
-     * Set 专享集群最大保留时间
+     * Set 专享集群最大保留时间，单位：小时
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MaxRetention 专享集群最大保留时间
+     * @param MaxRetention 专享集群最大保留时间，单位：小时
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxRetention(Long MaxRetention) {
@@ -236,9 +236,9 @@ public class InstanceItemExtraInfo extends AbstractModel {
     }
 
     /**
-     * Get 专项集群最大保留时间
+     * Get 专项集群最大保留时间，单位：小时
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MinRetention 专项集群最大保留时间
+     * @return MinRetention 专项集群最大保留时间，单位：小时
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMinRetention() {
@@ -246,9 +246,9 @@ public class InstanceItemExtraInfo extends AbstractModel {
     }
 
     /**
-     * Set 专项集群最大保留时间
+     * Set 专项集群最大保留时间，单位：小时
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param MinRetention 专项集群最大保留时间
+     * @param MinRetention 专项集群最大保留时间，单位：小时
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMinRetention(Long MinRetention) {
@@ -256,9 +256,9 @@ public class InstanceItemExtraInfo extends AbstractModel {
     }
 
     /**
-     * Get 4.0共享集群
+     * Get 4.0共享集群状态
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InstanceStatus 4.0共享集群
+     * @return InstanceStatus 4.0共享集群状态
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getInstanceStatus() {
@@ -266,9 +266,9 @@ public class InstanceItemExtraInfo extends AbstractModel {
     }
 
     /**
-     * Set 4.0共享集群
+     * Set 4.0共享集群状态
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InstanceStatus 4.0共享集群
+     * @param InstanceStatus 4.0共享集群状态
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceStatus(Long InstanceStatus) {

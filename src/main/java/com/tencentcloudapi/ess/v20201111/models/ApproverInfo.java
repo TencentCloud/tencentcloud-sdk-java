@@ -282,6 +282,14 @@ public class ApproverInfo extends AbstractModel {
     private Component [] Components;
 
     /**
+    * 进入签署流程的限制，目前支持以下选项：
+<ul><li> <b>空值（默认）</b> :无限制，可在任何场景进入签署流程。</li><li> <b>link</b> :选择此选项后，将无法通过控制台或电子签小程序列表进入填写或签署操作，仅可预览合同。填写或签署流程只能通过短信或发起方提供的专用链接进行。</li></ul>
+    */
+    @SerializedName("SignEndpoints")
+    @Expose
+    private String [] SignEndpoints;
+
+    /**
      * Get 在指定签署方时，可选择企业B端或个人C端等不同的参与者类型，可选类型如下:
 **0**：企业
 **1**：个人
@@ -1037,6 +1045,26 @@ public class ApproverInfo extends AbstractModel {
         this.Components = Components;
     }
 
+    /**
+     * Get 进入签署流程的限制，目前支持以下选项：
+<ul><li> <b>空值（默认）</b> :无限制，可在任何场景进入签署流程。</li><li> <b>link</b> :选择此选项后，将无法通过控制台或电子签小程序列表进入填写或签署操作，仅可预览合同。填写或签署流程只能通过短信或发起方提供的专用链接进行。</li></ul> 
+     * @return SignEndpoints 进入签署流程的限制，目前支持以下选项：
+<ul><li> <b>空值（默认）</b> :无限制，可在任何场景进入签署流程。</li><li> <b>link</b> :选择此选项后，将无法通过控制台或电子签小程序列表进入填写或签署操作，仅可预览合同。填写或签署流程只能通过短信或发起方提供的专用链接进行。</li></ul>
+     */
+    public String [] getSignEndpoints() {
+        return this.SignEndpoints;
+    }
+
+    /**
+     * Set 进入签署流程的限制，目前支持以下选项：
+<ul><li> <b>空值（默认）</b> :无限制，可在任何场景进入签署流程。</li><li> <b>link</b> :选择此选项后，将无法通过控制台或电子签小程序列表进入填写或签署操作，仅可预览合同。填写或签署流程只能通过短信或发起方提供的专用链接进行。</li></ul>
+     * @param SignEndpoints 进入签署流程的限制，目前支持以下选项：
+<ul><li> <b>空值（默认）</b> :无限制，可在任何场景进入签署流程。</li><li> <b>link</b> :选择此选项后，将无法通过控制台或电子签小程序列表进入填写或签署操作，仅可预览合同。填写或签署流程只能通过短信或发起方提供的专用链接进行。</li></ul>
+     */
+    public void setSignEndpoints(String [] SignEndpoints) {
+        this.SignEndpoints = SignEndpoints;
+    }
+
     public ApproverInfo() {
     }
 
@@ -1132,6 +1160,12 @@ public class ApproverInfo extends AbstractModel {
                 this.Components[i] = new Component(source.Components[i]);
             }
         }
+        if (source.SignEndpoints != null) {
+            this.SignEndpoints = new String[source.SignEndpoints.length];
+            for (int i = 0; i < source.SignEndpoints.length; i++) {
+                this.SignEndpoints[i] = new String(source.SignEndpoints[i]);
+            }
+        }
     }
 
 
@@ -1162,6 +1196,7 @@ public class ApproverInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "SignInstructionContent", this.SignInstructionContent);
         this.setParamSimple(map, prefix + "Deadline", this.Deadline);
         this.setParamArrayObj(map, prefix + "Components.", this.Components);
+        this.setParamArraySimple(map, prefix + "SignEndpoints.", this.SignEndpoints);
 
     }
 }

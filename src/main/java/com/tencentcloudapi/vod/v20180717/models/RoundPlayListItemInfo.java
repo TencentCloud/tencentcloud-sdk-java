@@ -48,7 +48,7 @@ Type 对应的格式必须为 HLS 格式。
     private String ItemId;
 
     /**
-    * 指定播放的转码模版，当 AudioVideoType 为 Transcode 时必须指定。
+    * 指定播放的转码模板，当 AudioVideoType 为 Transcode 时必须指定。
     */
     @SerializedName("Definition")
     @Expose
@@ -115,16 +115,16 @@ Type 对应的格式必须为 HLS 格式。
     }
 
     /**
-     * Get 指定播放的转码模版，当 AudioVideoType 为 Transcode 时必须指定。 
-     * @return Definition 指定播放的转码模版，当 AudioVideoType 为 Transcode 时必须指定。
+     * Get 指定播放的转码模板，当 AudioVideoType 为 Transcode 时必须指定。 
+     * @return Definition 指定播放的转码模板，当 AudioVideoType 为 Transcode 时必须指定。
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 指定播放的转码模版，当 AudioVideoType 为 Transcode 时必须指定。
-     * @param Definition 指定播放的转码模版，当 AudioVideoType 为 Transcode 时必须指定。
+     * Set 指定播放的转码模板，当 AudioVideoType 为 Transcode 时必须指定。
+     * @param Definition 指定播放的转码模板，当 AudioVideoType 为 Transcode 时必须指定。
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;

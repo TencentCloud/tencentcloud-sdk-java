@@ -119,6 +119,14 @@ public class PrivateZoneRecord extends AbstractModel {
     private Long Enabled;
 
     /**
+    * 备注
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Remark")
+    @Expose
+    private String Remark;
+
+    /**
      * Get 记录id 
      * @return RecordId 记录id
      */
@@ -342,6 +350,26 @@ public class PrivateZoneRecord extends AbstractModel {
         this.Enabled = Enabled;
     }
 
+    /**
+     * Get 备注
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Remark 备注
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRemark() {
+        return this.Remark;
+    }
+
+    /**
+     * Set 备注
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Remark 备注
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRemark(String Remark) {
+        this.Remark = Remark;
+    }
+
     public PrivateZoneRecord() {
     }
 
@@ -389,6 +417,9 @@ public class PrivateZoneRecord extends AbstractModel {
         if (source.Enabled != null) {
             this.Enabled = new Long(source.Enabled);
         }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
+        }
     }
 
 
@@ -409,6 +440,7 @@ public class PrivateZoneRecord extends AbstractModel {
         this.setParamSimple(map, prefix + "UpdatedOn", this.UpdatedOn);
         this.setParamSimple(map, prefix + "Extra", this.Extra);
         this.setParamSimple(map, prefix + "Enabled", this.Enabled);
+        this.setParamSimple(map, prefix + "Remark", this.Remark);
 
     }
 }

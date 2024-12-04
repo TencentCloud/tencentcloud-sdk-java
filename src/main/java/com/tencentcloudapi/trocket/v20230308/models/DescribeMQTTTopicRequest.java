@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DescribeMQTTTopicRequest extends AbstractModel {
 
     /**
-    * 实例ID
+    * 集群ID
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 主题
+    * 主题名称
     */
     @SerializedName("Topic")
     @Expose
     private String Topic;
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+     * Get 集群ID 
+     * @return InstanceId 集群ID
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set 集群ID
+     * @param InstanceId 集群ID
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 主题 
-     * @return Topic 主题
+     * Get 主题名称 
+     * @return Topic 主题名称
      */
     public String getTopic() {
         return this.Topic;
     }
 
     /**
-     * Set 主题
-     * @param Topic 主题
+     * Set 主题名称
+     * @param Topic 主题名称
      */
     public void setTopic(String Topic) {
         this.Topic = Topic;

@@ -258,6 +258,9 @@ public enum VodErrorCode {
     // 参数值错误：ExpireTime 格式错误。
      INVALIDPARAMETERVALUE_EXPIRETIME("InvalidParameterValue.ExpireTime"),
      
+    // ExpiredTime 错误。
+     INVALIDPARAMETERVALUE_EXPIREDTIME("InvalidParameterValue.ExpiredTime"),
+     
     // 参数值错误：人脸重复。
      INVALIDPARAMETERVALUE_FACEDUPLICATE("InvalidParameterValue.FaceDuplicate"),
      
@@ -446,6 +449,9 @@ public enum VodErrorCode {
      
     // 参数值错误：ReviewWallSwitch 参数取值非法。
      INVALIDPARAMETERVALUE_REVIEWWALLSWITCH("InvalidParameterValue.ReviewWallSwitch"),
+     
+    // 相同 ID 的播单已经存在。
+     INVALIDPARAMETERVALUE_ROUNDPLAYALREADYEXISTS("InvalidParameterValue.RoundPlayAlreadyExists"),
      
     // RoundPlayId 参数错误。
      INVALIDPARAMETERVALUE_ROUNDPLAYID("InvalidParameterValue.RoundPlayId"),

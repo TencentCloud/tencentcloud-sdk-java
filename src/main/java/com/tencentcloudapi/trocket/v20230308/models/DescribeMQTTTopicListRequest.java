@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeMQTTTopicListRequest extends AbstractModel {
 
     /**
-    * 实例ID
+    * 集群ID
     */
     @SerializedName("InstanceId")
     @Expose
@@ -52,16 +52,16 @@ public class DescribeMQTTTopicListRequest extends AbstractModel {
     private Long Limit;
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+     * Get 集群ID 
+     * @return InstanceId 集群ID
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set 集群ID
+     * @param InstanceId 集群ID
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class Filter extends AbstractModel {
 
     /**
-    * 过滤条件名
+    * 过滤条件参数名
     */
     @SerializedName("Name")
     @Expose
@@ -38,16 +38,16 @@ public class Filter extends AbstractModel {
     private String [] Values;
 
     /**
-     * Get 过滤条件名 
-     * @return Name 过滤条件名
+     * Get 过滤条件参数名 
+     * @return Name 过滤条件参数名
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 过滤条件名
-     * @param Name 过滤条件名
+     * Set 过滤条件参数名
+     * @param Name 过滤条件参数名
      */
     public void setName(String Name) {
         this.Name = Name;

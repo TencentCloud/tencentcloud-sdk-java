@@ -80,6 +80,13 @@ public class ModifyPrivateZoneRecordRequest extends AbstractModel {
     private Long TTL;
 
     /**
+    * 备注
+    */
+    @SerializedName("Remark")
+    @Expose
+    private String Remark;
+
+    /**
      * Get 私有域ID 
      * @return ZoneId 私有域ID
      */
@@ -207,6 +214,22 @@ public class ModifyPrivateZoneRecordRequest extends AbstractModel {
         this.TTL = TTL;
     }
 
+    /**
+     * Get 备注 
+     * @return Remark 备注
+     */
+    public String getRemark() {
+        return this.Remark;
+    }
+
+    /**
+     * Set 备注
+     * @param Remark 备注
+     */
+    public void setRemark(String Remark) {
+        this.Remark = Remark;
+    }
+
     public ModifyPrivateZoneRecordRequest() {
     }
 
@@ -239,6 +262,9 @@ public class ModifyPrivateZoneRecordRequest extends AbstractModel {
         if (source.TTL != null) {
             this.TTL = new Long(source.TTL);
         }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
+        }
     }
 
 
@@ -254,6 +280,7 @@ public class ModifyPrivateZoneRecordRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Weight", this.Weight);
         this.setParamSimple(map, prefix + "MX", this.MX);
         this.setParamSimple(map, prefix + "TTL", this.TTL);
+        this.setParamSimple(map, prefix + "Remark", this.Remark);
 
     }
 }

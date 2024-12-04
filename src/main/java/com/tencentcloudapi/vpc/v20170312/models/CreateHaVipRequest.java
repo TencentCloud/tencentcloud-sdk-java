@@ -73,6 +73,20 @@ public class CreateHaVipRequest extends AbstractModel {
     private Tag [] Tags;
 
     /**
+    * HaVip绑定的子机或网卡。最多支持10个实例。
+    */
+    @SerializedName("HaVipAssociationSet")
+    @Expose
+    private HaVipAssociation [] HaVipAssociationSet;
+
+    /**
+    * 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
+    */
+    @SerializedName("ClientToken")
+    @Expose
+    private String ClientToken;
+
+    /**
      * Get `HAVIP`所在私有网络`ID`。 
      * @return VpcId `HAVIP`所在私有网络`ID`。
      */
@@ -184,6 +198,38 @@ public class CreateHaVipRequest extends AbstractModel {
         this.Tags = Tags;
     }
 
+    /**
+     * Get HaVip绑定的子机或网卡。最多支持10个实例。 
+     * @return HaVipAssociationSet HaVip绑定的子机或网卡。最多支持10个实例。
+     */
+    public HaVipAssociation [] getHaVipAssociationSet() {
+        return this.HaVipAssociationSet;
+    }
+
+    /**
+     * Set HaVip绑定的子机或网卡。最多支持10个实例。
+     * @param HaVipAssociationSet HaVip绑定的子机或网卡。最多支持10个实例。
+     */
+    public void setHaVipAssociationSet(HaVipAssociation [] HaVipAssociationSet) {
+        this.HaVipAssociationSet = HaVipAssociationSet;
+    }
+
+    /**
+     * Get 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。 
+     * @return ClientToken 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
+     */
+    public String getClientToken() {
+        return this.ClientToken;
+    }
+
+    /**
+     * Set 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
+     * @param ClientToken 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
+     */
+    public void setClientToken(String ClientToken) {
+        this.ClientToken = ClientToken;
+    }
+
     public CreateHaVipRequest() {
     }
 
@@ -216,6 +262,15 @@ public class CreateHaVipRequest extends AbstractModel {
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
         }
+        if (source.HaVipAssociationSet != null) {
+            this.HaVipAssociationSet = new HaVipAssociation[source.HaVipAssociationSet.length];
+            for (int i = 0; i < source.HaVipAssociationSet.length; i++) {
+                this.HaVipAssociationSet[i] = new HaVipAssociation(source.HaVipAssociationSet[i]);
+            }
+        }
+        if (source.ClientToken != null) {
+            this.ClientToken = new String(source.ClientToken);
+        }
     }
 
 
@@ -230,6 +285,8 @@ public class CreateHaVipRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "NetworkInterfaceId", this.NetworkInterfaceId);
         this.setParamSimple(map, prefix + "CheckAssociate", this.CheckAssociate);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamArrayObj(map, prefix + "HaVipAssociationSet.", this.HaVipAssociationSet);
+        this.setParamSimple(map, prefix + "ClientToken", this.ClientToken);
 
     }
 }

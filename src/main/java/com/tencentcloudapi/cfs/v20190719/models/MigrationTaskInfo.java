@@ -215,6 +215,13 @@ public class MigrationTaskInfo extends AbstractModel {
     private String BucketPath;
 
     /**
+    * 迁移方向。0: 对象存储迁移至文件系统，1: 文件系统迁移至对象存储。默认 0
+    */
+    @SerializedName("Direction")
+    @Expose
+    private Long Direction;
+
+    /**
      * Get 迁移任务名称 
      * @return TaskName 迁移任务名称
      */
@@ -678,6 +685,22 @@ public class MigrationTaskInfo extends AbstractModel {
         this.BucketPath = BucketPath;
     }
 
+    /**
+     * Get 迁移方向。0: 对象存储迁移至文件系统，1: 文件系统迁移至对象存储。默认 0 
+     * @return Direction 迁移方向。0: 对象存储迁移至文件系统，1: 文件系统迁移至对象存储。默认 0
+     */
+    public Long getDirection() {
+        return this.Direction;
+    }
+
+    /**
+     * Set 迁移方向。0: 对象存储迁移至文件系统，1: 文件系统迁移至对象存储。默认 0
+     * @param Direction 迁移方向。0: 对象存储迁移至文件系统，1: 文件系统迁移至对象存储。默认 0
+     */
+    public void setDirection(Long Direction) {
+        this.Direction = Direction;
+    }
+
     public MigrationTaskInfo() {
     }
 
@@ -761,6 +784,9 @@ public class MigrationTaskInfo extends AbstractModel {
         if (source.BucketPath != null) {
             this.BucketPath = new String(source.BucketPath);
         }
+        if (source.Direction != null) {
+            this.Direction = new Long(source.Direction);
+        }
     }
 
 
@@ -793,6 +819,7 @@ public class MigrationTaskInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "FileCompletedList", this.FileCompletedList);
         this.setParamSimple(map, prefix + "FileFailedList", this.FileFailedList);
         this.setParamSimple(map, prefix + "BucketPath", this.BucketPath);
+        this.setParamSimple(map, prefix + "Direction", this.Direction);
 
     }
 }
