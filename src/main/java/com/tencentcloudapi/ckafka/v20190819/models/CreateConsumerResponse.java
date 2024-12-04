@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateConsumerResponse extends AbstractModel {
 
     /**
-    * 创建group描述
+    * 创建消费者组返回结果
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +38,16 @@ public class CreateConsumerResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 创建group描述 
-     * @return Result 创建group描述
+     * Get 创建消费者组返回结果 
+     * @return Result 创建消费者组返回结果
      */
     public JgwOperateResponse getResult() {
         return this.Result;
     }
 
     /**
-     * Set 创建group描述
-     * @param Result 创建group描述
+     * Set 创建消费者组返回结果
+     * @param Result 创建消费者组返回结果
      */
     public void setResult(JgwOperateResponse Result) {
         this.Result = Result;

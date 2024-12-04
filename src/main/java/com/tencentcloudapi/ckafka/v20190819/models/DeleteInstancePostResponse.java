@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DeleteInstancePostResponse extends AbstractModel {
 
     /**
-    * 返回的结果集
+    * 返回结果
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +38,16 @@ public class DeleteInstancePostResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 返回的结果集 
-     * @return Result 返回的结果集
+     * Get 返回结果 
+     * @return Result 返回结果
      */
     public InstanceDeleteResponse getResult() {
         return this.Result;
     }
 
     /**
-     * Set 返回的结果集
-     * @param Result 返回的结果集
+     * Set 返回结果
+     * @param Result 返回结果
      */
     public void setResult(InstanceDeleteResponse Result) {
         this.Result = Result;

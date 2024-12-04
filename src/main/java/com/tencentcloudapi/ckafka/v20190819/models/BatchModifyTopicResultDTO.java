@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class BatchModifyTopicResultDTO extends AbstractModel {
 
     /**
-    * 实例id
+    * ckafka集群实例Id
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceId")
@@ -32,7 +32,7 @@ public class BatchModifyTopicResultDTO extends AbstractModel {
     private String InstanceId;
 
     /**
-    * topic名称
+    * 主题名
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TopicName")
@@ -40,7 +40,7 @@ public class BatchModifyTopicResultDTO extends AbstractModel {
     private String TopicName;
 
     /**
-    * 状态码
+    * 操作返回码
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReturnCode")
@@ -48,16 +48,16 @@ public class BatchModifyTopicResultDTO extends AbstractModel {
     private String ReturnCode;
 
     /**
-    * 状态消息
+    * 操作返回信息
     */
     @SerializedName("Message")
     @Expose
     private String Message;
 
     /**
-     * Get 实例id
+     * Get ckafka集群实例Id
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InstanceId 实例id
+     * @return InstanceId ckafka集群实例Id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceId() {
@@ -65,9 +65,9 @@ public class BatchModifyTopicResultDTO extends AbstractModel {
     }
 
     /**
-     * Set 实例id
+     * Set ckafka集群实例Id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InstanceId 实例id
+     * @param InstanceId ckafka集群实例Id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceId(String InstanceId) {
@@ -75,9 +75,9 @@ public class BatchModifyTopicResultDTO extends AbstractModel {
     }
 
     /**
-     * Get topic名称
+     * Get 主题名
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TopicName topic名称
+     * @return TopicName 主题名
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTopicName() {
@@ -85,9 +85,9 @@ public class BatchModifyTopicResultDTO extends AbstractModel {
     }
 
     /**
-     * Set topic名称
+     * Set 主题名
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TopicName topic名称
+     * @param TopicName 主题名
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTopicName(String TopicName) {
@@ -95,9 +95,9 @@ public class BatchModifyTopicResultDTO extends AbstractModel {
     }
 
     /**
-     * Get 状态码
+     * Get 操作返回码
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ReturnCode 状态码
+     * @return ReturnCode 操作返回码
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getReturnCode() {
@@ -105,9 +105,9 @@ public class BatchModifyTopicResultDTO extends AbstractModel {
     }
 
     /**
-     * Set 状态码
+     * Set 操作返回码
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ReturnCode 状态码
+     * @param ReturnCode 操作返回码
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReturnCode(String ReturnCode) {
@@ -115,16 +115,16 @@ public class BatchModifyTopicResultDTO extends AbstractModel {
     }
 
     /**
-     * Get 状态消息 
-     * @return Message 状态消息
+     * Get 操作返回信息 
+     * @return Message 操作返回信息
      */
     public String getMessage() {
         return this.Message;
     }
 
     /**
-     * Set 状态消息
-     * @param Message 状态消息
+     * Set 操作返回信息
+     * @param Message 操作返回信息
      */
     public void setMessage(String Message) {
         this.Message = Message;

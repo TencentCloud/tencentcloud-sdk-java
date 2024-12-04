@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class CreateConsumerRequest extends AbstractModel {
 
     /**
-    * 实例id
+    * ckafka集群实例Id
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * group名称
+    * 消费分组名称
     */
     @SerializedName("GroupName")
     @Expose
     private String GroupName;
 
     /**
-    * topic名称，TopicName、TopicNameList 需要显示指定一个存在的topic名称
+    * 主题名，TopicName、TopicNameList 需要显示指定一个存在的主题名
     */
     @SerializedName("TopicName")
     @Expose
     private String TopicName;
 
     /**
-    * topic名称数组
+    * 主题名列表
     */
     @SerializedName("TopicNameList")
     @Expose
     private String [] TopicNameList;
 
     /**
-     * Get 实例id 
-     * @return InstanceId 实例id
+     * Get ckafka集群实例Id 
+     * @return InstanceId ckafka集群实例Id
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例id
-     * @param InstanceId 实例id
+     * Set ckafka集群实例Id
+     * @param InstanceId ckafka集群实例Id
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get group名称 
-     * @return GroupName group名称
+     * Get 消费分组名称 
+     * @return GroupName 消费分组名称
      */
     public String getGroupName() {
         return this.GroupName;
     }
 
     /**
-     * Set group名称
-     * @param GroupName group名称
+     * Set 消费分组名称
+     * @param GroupName 消费分组名称
      */
     public void setGroupName(String GroupName) {
         this.GroupName = GroupName;
     }
 
     /**
-     * Get topic名称，TopicName、TopicNameList 需要显示指定一个存在的topic名称 
-     * @return TopicName topic名称，TopicName、TopicNameList 需要显示指定一个存在的topic名称
+     * Get 主题名，TopicName、TopicNameList 需要显示指定一个存在的主题名 
+     * @return TopicName 主题名，TopicName、TopicNameList 需要显示指定一个存在的主题名
      */
     public String getTopicName() {
         return this.TopicName;
     }
 
     /**
-     * Set topic名称，TopicName、TopicNameList 需要显示指定一个存在的topic名称
-     * @param TopicName topic名称，TopicName、TopicNameList 需要显示指定一个存在的topic名称
+     * Set 主题名，TopicName、TopicNameList 需要显示指定一个存在的主题名
+     * @param TopicName 主题名，TopicName、TopicNameList 需要显示指定一个存在的主题名
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;
     }
 
     /**
-     * Get topic名称数组 
-     * @return TopicNameList topic名称数组
+     * Get 主题名列表 
+     * @return TopicNameList 主题名列表
      */
     public String [] getTopicNameList() {
         return this.TopicNameList;
     }
 
     /**
-     * Set topic名称数组
-     * @param TopicNameList topic名称数组
+     * Set 主题名列表
+     * @param TopicNameList 主题名列表
      */
     public void setTopicNameList(String [] TopicNameList) {
         this.TopicNameList = TopicNameList;

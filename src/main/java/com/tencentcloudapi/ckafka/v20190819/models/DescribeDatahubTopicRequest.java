@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeDatahubTopicRequest extends AbstractModel {
 
     /**
-    * 名称
+    * 弹性topic名称
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-     * Get 名称 
-     * @return Name 名称
+     * Get 弹性topic名称 
+     * @return Name 弹性topic名称
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 名称
-     * @param Name 名称
+     * Set 弹性topic名称
+     * @param Name 弹性topic名称
      */
     public void setName(String Name) {
         this.Name = Name;

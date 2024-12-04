@@ -32,7 +32,6 @@ public class ListPoliciesResponse extends AbstractModel {
 
     /**
     * 策略列表数据
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("List")
     @Expose
@@ -62,10 +61,8 @@ public class ListPoliciesResponse extends AbstractModel {
     }
 
     /**
-     * Get 策略列表数据
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 策略列表数据 
      * @return List 策略列表数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ListPolicyNode [] getList() {
         return this.List;
@@ -73,9 +70,7 @@ public class ListPoliciesResponse extends AbstractModel {
 
     /**
      * Set 策略列表数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param List 策略列表数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setList(ListPolicyNode [] List) {
         this.List = List;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeAclRuleRequest extends AbstractModel {
 
     /**
-    * 实例Id
+    * ckafka集群实例Id
     */
     @SerializedName("InstanceId")
     @Expose
@@ -52,16 +52,16 @@ public class DescribeAclRuleRequest extends AbstractModel {
     private Boolean IsSimplified;
 
     /**
-     * Get 实例Id 
-     * @return InstanceId 实例Id
+     * Get ckafka集群实例Id 
+     * @return InstanceId ckafka集群实例Id
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例Id
-     * @param InstanceId 实例Id
+     * Set ckafka集群实例Id
+     * @param InstanceId ckafka集群实例Id
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

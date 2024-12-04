@@ -213,7 +213,7 @@ public enum MpsErrorCode {
     // DTS抖动过大配置错误
      INVALIDPARAMETERVALUE_DTSJITTER("InvalidParameterValue.DtsJitter"),
      
-    // 模板配置的使能检测项为空
+    // 模板开启的检测项为空。
      INVALIDPARAMETERVALUE_EMPTYDETECTITEM("InvalidParameterValue.EmptyDetectItem"),
      
     // 参数值错误：人脸重复。
@@ -471,7 +471,7 @@ public enum MpsErrorCode {
     // 参数错误：Type 参数值错误。
      INVALIDPARAMETERVALUE_TYPE("InvalidParameterValue.Type"),
      
-    // 未知诊断类别
+    // 未知的检测类别。
      INVALIDPARAMETERVALUE_UNKNOWNCATEGORY("InvalidParameterValue.UnknownCategory"),
      
     // 参数值错误：人脸用户自定义库过滤标签非法。

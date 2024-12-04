@@ -93,7 +93,6 @@ Bucket的格式参考为 `bucketName-123456.cos.ap-shanghai.myqcloud.com`
 输入人物名称，基本信息，分类信息与人脸图片，创建自定义人物
 
 人脸图片可使用图片数据(base64编码的图片数据)或者图片URL(推荐使用COS以减少下载时间，其他地址也支持)，原始图片优先，也即如果同时指定了图片数据和图片URL，接口将仅使用图片数据
-
      * @param req CreateCustomPersonRequest
      * @return CreateCustomPersonResponse
      * @throws TencentCloudSDKException
@@ -118,7 +117,6 @@ Bucket的格式参考为 `bucketName-123456.cos.ap-shanghai.myqcloud.com`
      *创建智能标签任务。
 
 请注意，本接口为异步接口，**返回TaskId只代表任务创建成功，不代表任务执行成功**。
-
      * @param req CreateTaskRequest
      * @return CreateTaskResponse
      * @throws TencentCloudSDKException
@@ -302,8 +300,6 @@ Bucket的格式参考为 `bucketName-123456.cos.ap-shanghai.myqcloud.com`
      *描述智能标签任务进度。
 
 请注意，**此接口仅返回任务执行状态信息，不返回任务执行结果**
-
-
      * @param req DescribeTaskRequest
      * @return DescribeTaskResponse
      * @throws TencentCloudSDKException

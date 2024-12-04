@@ -52,7 +52,7 @@ public class CreateCdcClusterRequest extends AbstractModel {
     private Long ZoneId;
 
     /**
-    * cdc集群的总带宽
+    * 实例带宽,单位MB/s; 最小值:20MB/s, 高级版最大值:360MB/s,专业版最大值:100000MB/s  标准版固定带宽规格: 40MB/s, 100MB/s, 150MB/s
     */
     @SerializedName("Bandwidth")
     @Expose
@@ -66,7 +66,7 @@ public class CreateCdcClusterRequest extends AbstractModel {
     private Long DiskSize;
 
     /**
-    * 数据盘类型
+    * ckafka集群实例磁盘类型
     */
     @SerializedName("DiskType")
     @Expose
@@ -144,16 +144,16 @@ public class CreateCdcClusterRequest extends AbstractModel {
     }
 
     /**
-     * Get cdc集群的总带宽 
-     * @return Bandwidth cdc集群的总带宽
+     * Get 实例带宽,单位MB/s; 最小值:20MB/s, 高级版最大值:360MB/s,专业版最大值:100000MB/s  标准版固定带宽规格: 40MB/s, 100MB/s, 150MB/s 
+     * @return Bandwidth 实例带宽,单位MB/s; 最小值:20MB/s, 高级版最大值:360MB/s,专业版最大值:100000MB/s  标准版固定带宽规格: 40MB/s, 100MB/s, 150MB/s
      */
     public Long getBandwidth() {
         return this.Bandwidth;
     }
 
     /**
-     * Set cdc集群的总带宽
-     * @param Bandwidth cdc集群的总带宽
+     * Set 实例带宽,单位MB/s; 最小值:20MB/s, 高级版最大值:360MB/s,专业版最大值:100000MB/s  标准版固定带宽规格: 40MB/s, 100MB/s, 150MB/s
+     * @param Bandwidth 实例带宽,单位MB/s; 最小值:20MB/s, 高级版最大值:360MB/s,专业版最大值:100000MB/s  标准版固定带宽规格: 40MB/s, 100MB/s, 150MB/s
      */
     public void setBandwidth(Long Bandwidth) {
         this.Bandwidth = Bandwidth;
@@ -176,16 +176,16 @@ public class CreateCdcClusterRequest extends AbstractModel {
     }
 
     /**
-     * Get 数据盘类型 
-     * @return DiskType 数据盘类型
+     * Get ckafka集群实例磁盘类型 
+     * @return DiskType ckafka集群实例磁盘类型
      */
     public String getDiskType() {
         return this.DiskType;
     }
 
     /**
-     * Set 数据盘类型
-     * @param DiskType 数据盘类型
+     * Set ckafka集群实例磁盘类型
+     * @param DiskType ckafka集群实例磁盘类型
      */
     public void setDiskType(String DiskType) {
         this.DiskType = DiskType;

@@ -160,6 +160,13 @@ public class UpdateNativeNodePoolParam extends AbstractModel {
     private String [] KeyIds;
 
     /**
+    * 节点池 GPU 配置
+    */
+    @SerializedName("GPUConfigs")
+    @Expose
+    private GPUConfig [] GPUConfigs;
+
+    /**
      * Get 伸缩配置 
      * @return Scaling 伸缩配置
      */
@@ -475,6 +482,22 @@ public class UpdateNativeNodePoolParam extends AbstractModel {
         this.KeyIds = KeyIds;
     }
 
+    /**
+     * Get 节点池 GPU 配置 
+     * @return GPUConfigs 节点池 GPU 配置
+     */
+    public GPUConfig [] getGPUConfigs() {
+        return this.GPUConfigs;
+    }
+
+    /**
+     * Set 节点池 GPU 配置
+     * @param GPUConfigs 节点池 GPU 配置
+     */
+    public void setGPUConfigs(GPUConfig [] GPUConfigs) {
+        this.GPUConfigs = GPUConfigs;
+    }
+
     public UpdateNativeNodePoolParam() {
     }
 
@@ -558,6 +581,12 @@ public class UpdateNativeNodePoolParam extends AbstractModel {
                 this.KeyIds[i] = new String(source.KeyIds[i]);
             }
         }
+        if (source.GPUConfigs != null) {
+            this.GPUConfigs = new GPUConfig[source.GPUConfigs.length];
+            for (int i = 0; i < source.GPUConfigs.length; i++) {
+                this.GPUConfigs[i] = new GPUConfig(source.GPUConfigs[i]);
+            }
+        }
     }
 
 
@@ -584,6 +613,7 @@ public class UpdateNativeNodePoolParam extends AbstractModel {
         this.setParamSimple(map, prefix + "Replicas", this.Replicas);
         this.setParamArrayObj(map, prefix + "DataDisks.", this.DataDisks);
         this.setParamArraySimple(map, prefix + "KeyIds.", this.KeyIds);
+        this.setParamArrayObj(map, prefix + "GPUConfigs.", this.GPUConfigs);
 
     }
 }

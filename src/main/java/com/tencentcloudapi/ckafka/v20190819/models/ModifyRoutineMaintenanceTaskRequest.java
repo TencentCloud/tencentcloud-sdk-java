@@ -45,7 +45,7 @@ public class ModifyRoutineMaintenanceTaskRequest extends AbstractModel {
     private String MaintenanceSubtype;
 
     /**
-    * 主题名称
+    * 主题名
     */
     @SerializedName("TopicName")
     @Expose
@@ -149,16 +149,16 @@ public class ModifyRoutineMaintenanceTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get 主题名称 
-     * @return TopicName 主题名称
+     * Get 主题名 
+     * @return TopicName 主题名
      */
     public String getTopicName() {
         return this.TopicName;
     }
 
     /**
-     * Set 主题名称
-     * @param TopicName 主题名称
+     * Set 主题名
+     * @param TopicName 主题名
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;

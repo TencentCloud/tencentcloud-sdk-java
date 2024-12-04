@@ -102,7 +102,7 @@ public class DataAuthorizationInfo extends AbstractModel {
     private String PrivacyPolicyLink;
 
     /**
-    * 是否是用户个人敏感数据。
+    * 是否是用户个人敏感数据（不推荐使用）。
 
 固定填：1。
 
@@ -341,12 +341,12 @@ public class DataAuthorizationInfo extends AbstractModel {
     }
 
     /**
-     * Get 是否是用户个人敏感数据。
+     * Get 是否是用户个人敏感数据（不推荐使用）。
 
 固定填：1。
 
 示例值：1 
-     * @return IsPersonalData 是否是用户个人敏感数据。
+     * @return IsPersonalData 是否是用户个人敏感数据（不推荐使用）。
 
 固定填：1。
 
@@ -357,12 +357,12 @@ public class DataAuthorizationInfo extends AbstractModel {
     }
 
     /**
-     * Set 是否是用户个人敏感数据。
+     * Set 是否是用户个人敏感数据（不推荐使用）。
 
 固定填：1。
 
 示例值：1
-     * @param IsPersonalData 是否是用户个人敏感数据。
+     * @param IsPersonalData 是否是用户个人敏感数据（不推荐使用）。
 
 固定填：1。
 

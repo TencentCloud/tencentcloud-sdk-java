@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class TopicDetail extends AbstractModel {
 
     /**
-    * 主题名称
+    * 主题名
     */
     @SerializedName("TopicName")
     @Expose
     private String TopicName;
 
     /**
-    * 主题ID
+    * 主题Id
     */
     @SerializedName("TopicId")
     @Expose
@@ -45,7 +45,7 @@ public class TopicDetail extends AbstractModel {
     private Long PartitionNum;
 
     /**
-    * 副本数
+    * topic副本数  最小值 1,最大值 3
     */
     @SerializedName("ReplicaNum")
     @Expose
@@ -135,32 +135,32 @@ public class TopicDetail extends AbstractModel {
     private Tag [] Tags;
 
     /**
-     * Get 主题名称 
-     * @return TopicName 主题名称
+     * Get 主题名 
+     * @return TopicName 主题名
      */
     public String getTopicName() {
         return this.TopicName;
     }
 
     /**
-     * Set 主题名称
-     * @param TopicName 主题名称
+     * Set 主题名
+     * @param TopicName 主题名
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;
     }
 
     /**
-     * Get 主题ID 
-     * @return TopicId 主题ID
+     * Get 主题Id 
+     * @return TopicId 主题Id
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set 主题ID
-     * @param TopicId 主题ID
+     * Set 主题Id
+     * @param TopicId 主题Id
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
@@ -183,16 +183,16 @@ public class TopicDetail extends AbstractModel {
     }
 
     /**
-     * Get 副本数 
-     * @return ReplicaNum 副本数
+     * Get topic副本数  最小值 1,最大值 3 
+     * @return ReplicaNum topic副本数  最小值 1,最大值 3
      */
     public Long getReplicaNum() {
         return this.ReplicaNum;
     }
 
     /**
-     * Set 副本数
-     * @param ReplicaNum 副本数
+     * Set topic副本数  最小值 1,最大值 3
+     * @param ReplicaNum topic副本数  最小值 1,最大值 3
      */
     public void setReplicaNum(Long ReplicaNum) {
         this.ReplicaNum = ReplicaNum;

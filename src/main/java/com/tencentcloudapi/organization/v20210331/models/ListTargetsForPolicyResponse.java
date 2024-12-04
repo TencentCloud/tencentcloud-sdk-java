@@ -32,7 +32,6 @@ public class ListTargetsForPolicyResponse extends AbstractModel {
 
     /**
     * 指定SCP策略关联目标列表。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("List")
     @Expose
@@ -62,10 +61,8 @@ public class ListTargetsForPolicyResponse extends AbstractModel {
     }
 
     /**
-     * Get 指定SCP策略关联目标列表。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 指定SCP策略关联目标列表。 
      * @return List 指定SCP策略关联目标列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ListTargetsForPolicyNode [] getList() {
         return this.List;
@@ -73,9 +70,7 @@ public class ListTargetsForPolicyResponse extends AbstractModel {
 
     /**
      * Set 指定SCP策略关联目标列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param List 指定SCP策略关联目标列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setList(ListTargetsForPolicyNode [] List) {
         this.List = List;

@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ModifyTopicAttributesRequest extends AbstractModel {
 
     /**
-    * 实例 ID。
+    * ckafka集群实例Id
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 主题名称。
+    * 主题名
     */
     @SerializedName("TopicName")
     @Expose
@@ -108,7 +108,7 @@ public class ModifyTopicAttributesRequest extends AbstractModel {
     private Long EnableAclRule;
 
     /**
-    * 预设ACL规则的名称
+    * ACL规则名
     */
     @SerializedName("AclRuleName")
     @Expose
@@ -143,39 +143,39 @@ public class ModifyTopicAttributesRequest extends AbstractModel {
     private Long QuotaConsumerByteRate;
 
     /**
-    * 调整topic副本数
+    * topic副本数  最小值 1,最大值 3
     */
     @SerializedName("ReplicaNum")
     @Expose
     private Long ReplicaNum;
 
     /**
-     * Get 实例 ID。 
-     * @return InstanceId 实例 ID。
+     * Get ckafka集群实例Id 
+     * @return InstanceId ckafka集群实例Id
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例 ID。
-     * @param InstanceId 实例 ID。
+     * Set ckafka集群实例Id
+     * @param InstanceId ckafka集群实例Id
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 主题名称。 
-     * @return TopicName 主题名称。
+     * Get 主题名 
+     * @return TopicName 主题名
      */
     public String getTopicName() {
         return this.TopicName;
     }
 
     /**
-     * Set 主题名称。
-     * @param TopicName 主题名称。
+     * Set 主题名
+     * @param TopicName 主题名
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;
@@ -342,16 +342,16 @@ public class ModifyTopicAttributesRequest extends AbstractModel {
     }
 
     /**
-     * Get 预设ACL规则的名称 
-     * @return AclRuleName 预设ACL规则的名称
+     * Get ACL规则名 
+     * @return AclRuleName ACL规则名
      */
     public String getAclRuleName() {
         return this.AclRuleName;
     }
 
     /**
-     * Set 预设ACL规则的名称
-     * @param AclRuleName 预设ACL规则的名称
+     * Set ACL规则名
+     * @param AclRuleName ACL规则名
      */
     public void setAclRuleName(String AclRuleName) {
         this.AclRuleName = AclRuleName;
@@ -422,16 +422,16 @@ public class ModifyTopicAttributesRequest extends AbstractModel {
     }
 
     /**
-     * Get 调整topic副本数 
-     * @return ReplicaNum 调整topic副本数
+     * Get topic副本数  最小值 1,最大值 3 
+     * @return ReplicaNum topic副本数  最小值 1,最大值 3
      */
     public Long getReplicaNum() {
         return this.ReplicaNum;
     }
 
     /**
-     * Set 调整topic副本数
-     * @param ReplicaNum 调整topic副本数
+     * Set topic副本数  最小值 1,最大值 3
+     * @param ReplicaNum topic副本数  最小值 1,最大值 3
      */
     public void setReplicaNum(Long ReplicaNum) {
         this.ReplicaNum = ReplicaNum;

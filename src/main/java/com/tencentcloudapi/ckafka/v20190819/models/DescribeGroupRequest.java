@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeGroupRequest extends AbstractModel {
 
     /**
-    * 实例ID
+    * ckafka集群实例Id
     */
     @SerializedName("InstanceId")
     @Expose
@@ -52,16 +52,23 @@ public class DescribeGroupRequest extends AbstractModel {
     private Long Limit;
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+    * 仅支持 GroupState 筛选,   支持的筛选状态有 Empty/Stable  注意：该参数只能在2.8/3.2 版本生效
+    */
+    @SerializedName("Filters")
+    @Expose
+    private Filter [] Filters;
+
+    /**
+     * Get ckafka集群实例Id 
+     * @return InstanceId ckafka集群实例Id
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set ckafka集群实例Id
+     * @param InstanceId ckafka集群实例Id
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -115,6 +122,22 @@ public class DescribeGroupRequest extends AbstractModel {
         this.Limit = Limit;
     }
 
+    /**
+     * Get 仅支持 GroupState 筛选,   支持的筛选状态有 Empty/Stable  注意：该参数只能在2.8/3.2 版本生效 
+     * @return Filters 仅支持 GroupState 筛选,   支持的筛选状态有 Empty/Stable  注意：该参数只能在2.8/3.2 版本生效
+     */
+    public Filter [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * Set 仅支持 GroupState 筛选,   支持的筛选状态有 Empty/Stable  注意：该参数只能在2.8/3.2 版本生效
+     * @param Filters 仅支持 GroupState 筛选,   支持的筛选状态有 Empty/Stable  注意：该参数只能在2.8/3.2 版本生效
+     */
+    public void setFilters(Filter [] Filters) {
+        this.Filters = Filters;
+    }
+
     public DescribeGroupRequest() {
     }
 
@@ -135,6 +158,12 @@ public class DescribeGroupRequest extends AbstractModel {
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
+        if (source.Filters != null) {
+            this.Filters = new Filter[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new Filter(source.Filters[i]);
+            }
+        }
     }
 
 
@@ -146,6 +175,7 @@ public class DescribeGroupRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SearchWord", this.SearchWord);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
 
     }
 }

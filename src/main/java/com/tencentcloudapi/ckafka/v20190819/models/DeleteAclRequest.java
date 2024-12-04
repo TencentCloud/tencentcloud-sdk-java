@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DeleteAclRequest extends AbstractModel {
 
     /**
-    * 实例id信息
+    * ckafka集群实例Id
     */
     @SerializedName("InstanceId")
     @Expose
@@ -73,16 +73,16 @@ public class DeleteAclRequest extends AbstractModel {
     private String Principal;
 
     /**
-     * Get 实例id信息 
-     * @return InstanceId 实例id信息
+     * Get ckafka集群实例Id 
+     * @return InstanceId ckafka集群实例Id
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例id信息
-     * @param InstanceId 实例id信息
+     * Set ckafka集群实例Id
+     * @param InstanceId ckafka集群实例Id
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

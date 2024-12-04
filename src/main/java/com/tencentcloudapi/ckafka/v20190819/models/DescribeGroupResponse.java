@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeGroupResponse extends AbstractModel {
 
     /**
-    * 返回结果集列表
+    * 返回结果
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeGroupResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 返回结果集列表 
-     * @return Result 返回结果集列表
+     * Get 返回结果 
+     * @return Result 返回结果
      */
     public GroupResponse getResult() {
         return this.Result;
     }
 
     /**
-     * Set 返回结果集列表
-     * @param Result 返回结果集列表
+     * Set 返回结果
+     * @param Result 返回结果
      */
     public void setResult(GroupResponse Result) {
         this.Result = Result;

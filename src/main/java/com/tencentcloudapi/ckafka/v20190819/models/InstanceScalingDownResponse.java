@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class InstanceScalingDownResponse extends AbstractModel {
 
     /**
-    * 缩容应答
+    * 返回结果
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Result")
@@ -39,9 +39,9 @@ public class InstanceScalingDownResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 缩容应答
+     * Get 返回结果
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Result 缩容应答
+     * @return Result 返回结果
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ScalingDownResp getResult() {
@@ -49,9 +49,9 @@ public class InstanceScalingDownResponse extends AbstractModel {
     }
 
     /**
-     * Set 缩容应答
+     * Set 返回结果
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Result 缩容应答
+     * @param Result 返回结果
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResult(ScalingDownResp Result) {

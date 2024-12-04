@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DescribeTopicProduceConnectionRequest extends AbstractModel {
 
     /**
-    * 实例id
+    * ckafka集群实例Id
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * topic名称
+    * 主题名
     */
     @SerializedName("TopicName")
     @Expose
     private String TopicName;
 
     /**
-     * Get 实例id 
-     * @return InstanceId 实例id
+     * Get ckafka集群实例Id 
+     * @return InstanceId ckafka集群实例Id
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例id
-     * @param InstanceId 实例id
+     * Set ckafka集群实例Id
+     * @param InstanceId ckafka集群实例Id
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get topic名称 
-     * @return TopicName topic名称
+     * Get 主题名 
+     * @return TopicName 主题名
      */
     public String getTopicName() {
         return this.TopicName;
     }
 
     /**
-     * Set topic名称
-     * @param TopicName topic名称
+     * Set 主题名
+     * @param TopicName 主题名
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;

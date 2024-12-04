@@ -157,7 +157,7 @@ public class CreatePostPaidInstanceRequest extends AbstractModel {
     private Tag [] Tags;
 
     /**
-    * 弹性带宽开关 0不开启  1开启（0默认
+    * 弹性带宽开关 0不开启  1开启（0默认)
     */
     @SerializedName("ElasticBandwidthSwitch")
     @Expose
@@ -468,16 +468,16 @@ public class CreatePostPaidInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get 弹性带宽开关 0不开启  1开启（0默认 
-     * @return ElasticBandwidthSwitch 弹性带宽开关 0不开启  1开启（0默认
+     * Get 弹性带宽开关 0不开启  1开启（0默认) 
+     * @return ElasticBandwidthSwitch 弹性带宽开关 0不开启  1开启（0默认)
      */
     public Long getElasticBandwidthSwitch() {
         return this.ElasticBandwidthSwitch;
     }
 
     /**
-     * Set 弹性带宽开关 0不开启  1开启（0默认
-     * @param ElasticBandwidthSwitch 弹性带宽开关 0不开启  1开启（0默认
+     * Set 弹性带宽开关 0不开启  1开启（0默认)
+     * @param ElasticBandwidthSwitch 弹性带宽开关 0不开启  1开启（0默认)
      */
     public void setElasticBandwidthSwitch(Long ElasticBandwidthSwitch) {
         this.ElasticBandwidthSwitch = ElasticBandwidthSwitch;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DeleteRouteRequest extends AbstractModel {
 
     /**
-    * 实例唯一id
+    * ckafka集群实例Id
     */
     @SerializedName("InstanceId")
     @Expose
@@ -45,23 +45,23 @@ public class DeleteRouteRequest extends AbstractModel {
     private Long CallerAppid;
 
     /**
-    * 删除路由时间
+    * 设置定时删除路由时间,若DeleteRouteTime < now ,设置时间小于当前接口提交时间则立即执行;DeleteRouteTime > now,设置时间大于当前接口提交时间,则按照设置的时间,定时执行删除;  该参数设置提交后,无法撤销!!!
     */
     @SerializedName("DeleteRouteTime")
     @Expose
     private String DeleteRouteTime;
 
     /**
-     * Get 实例唯一id 
-     * @return InstanceId 实例唯一id
+     * Get ckafka集群实例Id 
+     * @return InstanceId ckafka集群实例Id
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例唯一id
-     * @param InstanceId 实例唯一id
+     * Set ckafka集群实例Id
+     * @param InstanceId ckafka集群实例Id
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -100,16 +100,16 @@ public class DeleteRouteRequest extends AbstractModel {
     }
 
     /**
-     * Get 删除路由时间 
-     * @return DeleteRouteTime 删除路由时间
+     * Get 设置定时删除路由时间,若DeleteRouteTime < now ,设置时间小于当前接口提交时间则立即执行;DeleteRouteTime > now,设置时间大于当前接口提交时间,则按照设置的时间,定时执行删除;  该参数设置提交后,无法撤销!!! 
+     * @return DeleteRouteTime 设置定时删除路由时间,若DeleteRouteTime < now ,设置时间小于当前接口提交时间则立即执行;DeleteRouteTime > now,设置时间大于当前接口提交时间,则按照设置的时间,定时执行删除;  该参数设置提交后,无法撤销!!!
      */
     public String getDeleteRouteTime() {
         return this.DeleteRouteTime;
     }
 
     /**
-     * Set 删除路由时间
-     * @param DeleteRouteTime 删除路由时间
+     * Set 设置定时删除路由时间,若DeleteRouteTime < now ,设置时间小于当前接口提交时间则立即执行;DeleteRouteTime > now,设置时间大于当前接口提交时间,则按照设置的时间,定时执行删除;  该参数设置提交后,无法撤销!!!
+     * @param DeleteRouteTime 设置定时删除路由时间,若DeleteRouteTime < now ,设置时间小于当前接口提交时间则立即执行;DeleteRouteTime > now,设置时间大于当前接口提交时间,则按照设置的时间,定时执行删除;  该参数设置提交后,无法撤销!!!
      */
     public void setDeleteRouteTime(String DeleteRouteTime) {
         this.DeleteRouteTime = DeleteRouteTime;

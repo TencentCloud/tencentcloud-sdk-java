@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeTopicAttributesRequest extends AbstractModel {
 
     /**
-    * 实例 ID
+    * ckafka集群实例Id
     */
     @SerializedName("InstanceId")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeTopicAttributesRequest extends AbstractModel {
     private String TopicName;
 
     /**
-     * Get 实例 ID 
-     * @return InstanceId 实例 ID
+     * Get ckafka集群实例Id 
+     * @return InstanceId ckafka集群实例Id
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例 ID
-     * @param InstanceId 实例 ID
+     * Set ckafka集群实例Id
+     * @param InstanceId ckafka集群实例Id
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

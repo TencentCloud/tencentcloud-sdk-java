@@ -2618,6 +2618,17 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
+     *查询流量调度规则
+     * @param req DescribeTrafficQosPolicyRequest
+     * @return DescribeTrafficQosPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTrafficQosPolicyResponse DescribeTrafficQosPolicy(DescribeTrafficQosPolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTrafficQosPolicy", DescribeTrafficQosPolicyResponse.class);
+    }
+
+    /**
      *本接口(DescribeUsedIpAddress)用于查询Subnet或者Vpc内的ip的使用情况，
 如ip被占用，返回占用ip的资源类别与id；如未被占用，返回空值
      * @param req DescribeUsedIpAddressRequest

@@ -25,7 +25,6 @@ public class ListOrganizationServiceResponse extends AbstractModel {
 
     /**
     * 总数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Total")
     @Expose
@@ -33,7 +32,6 @@ public class ListOrganizationServiceResponse extends AbstractModel {
 
     /**
     * 集团服务列表。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Items")
     @Expose
@@ -47,10 +45,8 @@ public class ListOrganizationServiceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 总数。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 总数。 
      * @return Total 总数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotal() {
         return this.Total;
@@ -58,19 +54,15 @@ public class ListOrganizationServiceResponse extends AbstractModel {
 
     /**
      * Set 总数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Total 总数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotal(Long Total) {
         this.Total = Total;
     }
 
     /**
-     * Get 集团服务列表。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 集团服务列表。 
      * @return Items 集团服务列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public OrganizationServiceAssign [] getItems() {
         return this.Items;
@@ -78,9 +70,7 @@ public class ListOrganizationServiceResponse extends AbstractModel {
 
     /**
      * Set 集团服务列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Items 集团服务列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setItems(OrganizationServiceAssign [] Items) {
         this.Items = Items;

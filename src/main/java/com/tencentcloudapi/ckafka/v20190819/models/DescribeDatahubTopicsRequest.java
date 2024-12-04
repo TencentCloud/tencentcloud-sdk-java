@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeDatahubTopicsRequest extends AbstractModel {
 
     /**
-    * 查询值
+    * 搜索词
     */
     @SerializedName("SearchWord")
     @Expose
@@ -45,16 +45,16 @@ public class DescribeDatahubTopicsRequest extends AbstractModel {
     private Long Limit;
 
     /**
-     * Get 查询值 
-     * @return SearchWord 查询值
+     * Get 搜索词 
+     * @return SearchWord 搜索词
      */
     public String getSearchWord() {
         return this.SearchWord;
     }
 
     /**
-     * Set 查询值
-     * @param SearchWord 查询值
+     * Set 搜索词
+     * @param SearchWord 搜索词
      */
     public void setSearchWord(String SearchWord) {
         this.SearchWord = SearchWord;

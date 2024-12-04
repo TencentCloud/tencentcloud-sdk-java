@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AttributeLabel extends AbstractModel {
 
     /**
-    * 标签ID
+    * 标准词ID
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LabelBizId")
@@ -32,7 +32,7 @@ public class AttributeLabel extends AbstractModel {
     private String LabelBizId;
 
     /**
-    * 标签名称
+    * 标准词名称
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LabelName")
@@ -40,7 +40,7 @@ public class AttributeLabel extends AbstractModel {
     private String LabelName;
 
     /**
-    * 相似标签名称
+    * 同义词名称
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SimilarLabels")
@@ -48,9 +48,9 @@ public class AttributeLabel extends AbstractModel {
     private String [] SimilarLabels;
 
     /**
-     * Get 标签ID
+     * Get 标准词ID
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LabelBizId 标签ID
+     * @return LabelBizId 标准词ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLabelBizId() {
@@ -58,9 +58,9 @@ public class AttributeLabel extends AbstractModel {
     }
 
     /**
-     * Set 标签ID
+     * Set 标准词ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LabelBizId 标签ID
+     * @param LabelBizId 标准词ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLabelBizId(String LabelBizId) {
@@ -68,9 +68,9 @@ public class AttributeLabel extends AbstractModel {
     }
 
     /**
-     * Get 标签名称
+     * Get 标准词名称
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LabelName 标签名称
+     * @return LabelName 标准词名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLabelName() {
@@ -78,9 +78,9 @@ public class AttributeLabel extends AbstractModel {
     }
 
     /**
-     * Set 标签名称
+     * Set 标准词名称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LabelName 标签名称
+     * @param LabelName 标准词名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLabelName(String LabelName) {
@@ -88,9 +88,9 @@ public class AttributeLabel extends AbstractModel {
     }
 
     /**
-     * Get 相似标签名称
+     * Get 同义词名称
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SimilarLabels 相似标签名称
+     * @return SimilarLabels 同义词名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getSimilarLabels() {
@@ -98,9 +98,9 @@ public class AttributeLabel extends AbstractModel {
     }
 
     /**
-     * Set 相似标签名称
+     * Set 同义词名称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SimilarLabels 相似标签名称
+     * @param SimilarLabels 同义词名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSimilarLabels(String [] SimilarLabels) {

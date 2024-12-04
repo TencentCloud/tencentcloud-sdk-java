@@ -25,7 +25,6 @@ public class ListOrgServiceAssignMemberResponse extends AbstractModel {
 
     /**
     * 总数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Total")
     @Expose
@@ -33,7 +32,6 @@ public class ListOrgServiceAssignMemberResponse extends AbstractModel {
 
     /**
     * 委派管理员列表。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Items")
     @Expose
@@ -47,10 +45,8 @@ public class ListOrgServiceAssignMemberResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 总数。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 总数。 
      * @return Total 总数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotal() {
         return this.Total;
@@ -58,19 +54,15 @@ public class ListOrgServiceAssignMemberResponse extends AbstractModel {
 
     /**
      * Set 总数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Total 总数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotal(Long Total) {
         this.Total = Total;
     }
 
     /**
-     * Get 委派管理员列表。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 委派管理员列表。 
      * @return Items 委派管理员列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public OrganizationServiceAssignMember [] getItems() {
         return this.Items;
@@ -78,9 +70,7 @@ public class ListOrgServiceAssignMemberResponse extends AbstractModel {
 
     /**
      * Set 委派管理员列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Items 委派管理员列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setItems(OrganizationServiceAssignMember [] Items) {
         this.Items = Items;

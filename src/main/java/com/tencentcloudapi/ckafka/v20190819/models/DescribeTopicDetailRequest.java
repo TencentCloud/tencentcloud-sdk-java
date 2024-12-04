@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeTopicDetailRequest extends AbstractModel {
 
     /**
-    * 实例id
+    * ckafka集群实例Id
     */
     @SerializedName("InstanceId")
     @Expose
@@ -59,16 +59,37 @@ public class DescribeTopicDetailRequest extends AbstractModel {
     private String AclRuleName;
 
     /**
-     * Get 实例id 
-     * @return InstanceId 实例id
+    * 根据特定的属性排序(目前支持PartitionNum/CreateTime)
+    */
+    @SerializedName("OrderBy")
+    @Expose
+    private String OrderBy;
+
+    /**
+    * 0-顺序、1-倒序
+    */
+    @SerializedName("OrderType")
+    @Expose
+    private Long OrderType;
+
+    /**
+    * 目前支持 ReplicaNum （副本数）筛选
+    */
+    @SerializedName("Filters")
+    @Expose
+    private Filter [] Filters;
+
+    /**
+     * Get ckafka集群实例Id 
+     * @return InstanceId ckafka集群实例Id
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例id
-     * @param InstanceId 实例id
+     * Set ckafka集群实例Id
+     * @param InstanceId ckafka集群实例Id
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -138,6 +159,54 @@ public class DescribeTopicDetailRequest extends AbstractModel {
         this.AclRuleName = AclRuleName;
     }
 
+    /**
+     * Get 根据特定的属性排序(目前支持PartitionNum/CreateTime) 
+     * @return OrderBy 根据特定的属性排序(目前支持PartitionNum/CreateTime)
+     */
+    public String getOrderBy() {
+        return this.OrderBy;
+    }
+
+    /**
+     * Set 根据特定的属性排序(目前支持PartitionNum/CreateTime)
+     * @param OrderBy 根据特定的属性排序(目前支持PartitionNum/CreateTime)
+     */
+    public void setOrderBy(String OrderBy) {
+        this.OrderBy = OrderBy;
+    }
+
+    /**
+     * Get 0-顺序、1-倒序 
+     * @return OrderType 0-顺序、1-倒序
+     */
+    public Long getOrderType() {
+        return this.OrderType;
+    }
+
+    /**
+     * Set 0-顺序、1-倒序
+     * @param OrderType 0-顺序、1-倒序
+     */
+    public void setOrderType(Long OrderType) {
+        this.OrderType = OrderType;
+    }
+
+    /**
+     * Get 目前支持 ReplicaNum （副本数）筛选 
+     * @return Filters 目前支持 ReplicaNum （副本数）筛选
+     */
+    public Filter [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * Set 目前支持 ReplicaNum （副本数）筛选
+     * @param Filters 目前支持 ReplicaNum （副本数）筛选
+     */
+    public void setFilters(Filter [] Filters) {
+        this.Filters = Filters;
+    }
+
     public DescribeTopicDetailRequest() {
     }
 
@@ -161,6 +230,18 @@ public class DescribeTopicDetailRequest extends AbstractModel {
         if (source.AclRuleName != null) {
             this.AclRuleName = new String(source.AclRuleName);
         }
+        if (source.OrderBy != null) {
+            this.OrderBy = new String(source.OrderBy);
+        }
+        if (source.OrderType != null) {
+            this.OrderType = new Long(source.OrderType);
+        }
+        if (source.Filters != null) {
+            this.Filters = new Filter[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new Filter(source.Filters[i]);
+            }
+        }
     }
 
 
@@ -173,6 +254,9 @@ public class DescribeTopicDetailRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "AclRuleName", this.AclRuleName);
+        this.setParamSimple(map, prefix + "OrderBy", this.OrderBy);
+        this.setParamSimple(map, prefix + "OrderType", this.OrderType);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
 
     }
 }

@@ -89,6 +89,14 @@ delete：日志按保存时间删除；compact：日志按 key 压缩；compact,
     private Long RetentionBytes;
 
     /**
+    * 消息保存的时间类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("LogMsgTimestampType")
+    @Expose
+    private String LogMsgTimestampType;
+
+    /**
      * Get 消息保留时间
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Retention 消息保留时间
@@ -252,6 +260,26 @@ delete：日志按保存时间删除；compact：日志按 key 压缩；compact,
         this.RetentionBytes = RetentionBytes;
     }
 
+    /**
+     * Get 消息保存的时间类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LogMsgTimestampType 消息保存的时间类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getLogMsgTimestampType() {
+        return this.LogMsgTimestampType;
+    }
+
+    /**
+     * Set 消息保存的时间类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LogMsgTimestampType 消息保存的时间类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLogMsgTimestampType(String LogMsgTimestampType) {
+        this.LogMsgTimestampType = LogMsgTimestampType;
+    }
+
     public Config() {
     }
 
@@ -284,6 +312,9 @@ delete：日志按保存时间删除；compact：日志按 key 压缩；compact,
         if (source.RetentionBytes != null) {
             this.RetentionBytes = new Long(source.RetentionBytes);
         }
+        if (source.LogMsgTimestampType != null) {
+            this.LogMsgTimestampType = new String(source.LogMsgTimestampType);
+        }
     }
 
 
@@ -299,6 +330,7 @@ delete：日志按保存时间删除；compact：日志按 key 压缩；compact,
         this.setParamSimple(map, prefix + "SegmentBytes", this.SegmentBytes);
         this.setParamSimple(map, prefix + "MaxMessageBytes", this.MaxMessageBytes);
         this.setParamSimple(map, prefix + "RetentionBytes", this.RetentionBytes);
+        this.setParamSimple(map, prefix + "LogMsgTimestampType", this.LogMsgTimestampType);
 
     }
 }

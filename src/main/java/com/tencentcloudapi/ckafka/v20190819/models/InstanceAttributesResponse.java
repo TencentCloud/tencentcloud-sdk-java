@@ -315,6 +315,13 @@ public class InstanceAttributesResponse extends AbstractModel {
     private Long ElasticFloatBandwidth;
 
     /**
+    * ssl自定义证书id
+    */
+    @SerializedName("CustomCertId")
+    @Expose
+    private String CustomCertId;
+
+    /**
      * Get ckafka集群实例Id 
      * @return InstanceId ckafka集群实例Id
      */
@@ -1010,6 +1017,22 @@ public class InstanceAttributesResponse extends AbstractModel {
         this.ElasticFloatBandwidth = ElasticFloatBandwidth;
     }
 
+    /**
+     * Get ssl自定义证书id 
+     * @return CustomCertId ssl自定义证书id
+     */
+    public String getCustomCertId() {
+        return this.CustomCertId;
+    }
+
+    /**
+     * Set ssl自定义证书id
+     * @param CustomCertId ssl自定义证书id
+     */
+    public void setCustomCertId(String CustomCertId) {
+        this.CustomCertId = CustomCertId;
+    }
+
     public InstanceAttributesResponse() {
     }
 
@@ -1147,6 +1170,9 @@ public class InstanceAttributesResponse extends AbstractModel {
         if (source.ElasticFloatBandwidth != null) {
             this.ElasticFloatBandwidth = new Long(source.ElasticFloatBandwidth);
         }
+        if (source.CustomCertId != null) {
+            this.CustomCertId = new String(source.CustomCertId);
+        }
     }
 
 
@@ -1193,6 +1219,7 @@ public class InstanceAttributesResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "ClusterType", this.ClusterType);
         this.setParamSimple(map, prefix + "FreePartitionNumber", this.FreePartitionNumber);
         this.setParamSimple(map, prefix + "ElasticFloatBandwidth", this.ElasticFloatBandwidth);
+        this.setParamSimple(map, prefix + "CustomCertId", this.CustomCertId);
 
     }
 }

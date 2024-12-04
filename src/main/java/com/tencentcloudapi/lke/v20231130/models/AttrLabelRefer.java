@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class AttrLabelRefer extends AbstractModel {
 
     /**
-    * 属性标签来源，1：属性标签
+    * 标签来源，1：标签
     */
     @SerializedName("Source")
     @Expose
     private Long Source;
 
     /**
-    * 属性ID
+    * 标签ID
     */
     @SerializedName("AttributeBizId")
     @Expose
     private String AttributeBizId;
 
     /**
-    * 标签ID
+    * 标签值ID
     */
     @SerializedName("LabelBizIds")
     @Expose
     private String [] LabelBizIds;
 
     /**
-     * Get 属性标签来源，1：属性标签 
-     * @return Source 属性标签来源，1：属性标签
+     * Get 标签来源，1：标签 
+     * @return Source 标签来源，1：标签
      */
     public Long getSource() {
         return this.Source;
     }
 
     /**
-     * Set 属性标签来源，1：属性标签
-     * @param Source 属性标签来源，1：属性标签
+     * Set 标签来源，1：标签
+     * @param Source 标签来源，1：标签
      */
     public void setSource(Long Source) {
         this.Source = Source;
     }
 
     /**
-     * Get 属性ID 
-     * @return AttributeBizId 属性ID
+     * Get 标签ID 
+     * @return AttributeBizId 标签ID
      */
     public String getAttributeBizId() {
         return this.AttributeBizId;
     }
 
     /**
-     * Set 属性ID
-     * @param AttributeBizId 属性ID
+     * Set 标签ID
+     * @param AttributeBizId 标签ID
      */
     public void setAttributeBizId(String AttributeBizId) {
         this.AttributeBizId = AttributeBizId;
     }
 
     /**
-     * Get 标签ID 
-     * @return LabelBizIds 标签ID
+     * Get 标签值ID 
+     * @return LabelBizIds 标签值ID
      */
     public String [] getLabelBizIds() {
         return this.LabelBizIds;
     }
 
     /**
-     * Set 标签ID
-     * @param LabelBizIds 标签ID
+     * Set 标签值ID
+     * @param LabelBizIds 标签值ID
      */
     public void setLabelBizIds(String [] LabelBizIds) {
         this.LabelBizIds = LabelBizIds;

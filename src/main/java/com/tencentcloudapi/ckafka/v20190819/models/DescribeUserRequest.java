@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeUserRequest extends AbstractModel {
 
     /**
-    * 实例Id
+    * ckafka集群实例Id
     */
     @SerializedName("InstanceId")
     @Expose
@@ -38,30 +38,30 @@ public class DescribeUserRequest extends AbstractModel {
     private String SearchWord;
 
     /**
-    * 偏移
+    * 偏移量
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 本次返回个数
+    * 返回数量
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get 实例Id 
-     * @return InstanceId 实例Id
+     * Get ckafka集群实例Id 
+     * @return InstanceId ckafka集群实例Id
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例Id
-     * @param InstanceId 实例Id
+     * Set ckafka集群实例Id
+     * @param InstanceId ckafka集群实例Id
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -84,32 +84,32 @@ public class DescribeUserRequest extends AbstractModel {
     }
 
     /**
-     * Get 偏移 
-     * @return Offset 偏移
+     * Get 偏移量 
+     * @return Offset 偏移量
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移
-     * @param Offset 偏移
+     * Set 偏移量
+     * @param Offset 偏移量
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 本次返回个数 
-     * @return Limit 本次返回个数
+     * Get 返回数量 
+     * @return Limit 返回数量
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 本次返回个数
-     * @param Limit 本次返回个数
+     * Set 返回数量
+     * @param Limit 返回数量
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribePolicyRequest extends AbstractModel {
 
     /**
-    * 策略Id。
+    * 策略Id。可以调用[ListPolicies](https://cloud.tencent.com/document/product/850/105311)获取
     */
     @SerializedName("PolicyId")
     @Expose
@@ -38,16 +38,16 @@ public class DescribePolicyRequest extends AbstractModel {
     private String PolicyType;
 
     /**
-     * Get 策略Id。 
-     * @return PolicyId 策略Id。
+     * Get 策略Id。可以调用[ListPolicies](https://cloud.tencent.com/document/product/850/105311)获取 
+     * @return PolicyId 策略Id。可以调用[ListPolicies](https://cloud.tencent.com/document/product/850/105311)获取
      */
     public Long getPolicyId() {
         return this.PolicyId;
     }
 
     /**
-     * Set 策略Id。
-     * @param PolicyId 策略Id。
+     * Set 策略Id。可以调用[ListPolicies](https://cloud.tencent.com/document/product/850/105311)获取
+     * @param PolicyId 策略Id。可以调用[ListPolicies](https://cloud.tencent.com/document/product/850/105311)获取
      */
     public void setPolicyId(Long PolicyId) {
         this.PolicyId = PolicyId;

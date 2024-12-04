@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AttrLabel extends AbstractModel {
 
     /**
-    * 属性标签来源
+    * 标签来源
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Source")
@@ -32,7 +32,7 @@ public class AttrLabel extends AbstractModel {
     private Long Source;
 
     /**
-    * 属性ID
+    * 标签ID
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AttrBizId")
@@ -40,7 +40,7 @@ public class AttrLabel extends AbstractModel {
     private String AttrBizId;
 
     /**
-    * 属性标识
+    * 标签标识
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AttrKey")
@@ -48,7 +48,7 @@ public class AttrLabel extends AbstractModel {
     private String AttrKey;
 
     /**
-    * 属性名称
+    * 标签名称
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AttrName")
@@ -56,7 +56,7 @@ public class AttrLabel extends AbstractModel {
     private String AttrName;
 
     /**
-    * 标签ID
+    * 标签值
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Labels")
@@ -64,9 +64,9 @@ public class AttrLabel extends AbstractModel {
     private Label [] Labels;
 
     /**
-     * Get 属性标签来源
+     * Get 标签来源
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Source 属性标签来源
+     * @return Source 标签来源
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSource() {
@@ -74,9 +74,9 @@ public class AttrLabel extends AbstractModel {
     }
 
     /**
-     * Set 属性标签来源
+     * Set 标签来源
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Source 属性标签来源
+     * @param Source 标签来源
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSource(Long Source) {
@@ -84,9 +84,9 @@ public class AttrLabel extends AbstractModel {
     }
 
     /**
-     * Get 属性ID
+     * Get 标签ID
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AttrBizId 属性ID
+     * @return AttrBizId 标签ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAttrBizId() {
@@ -94,9 +94,9 @@ public class AttrLabel extends AbstractModel {
     }
 
     /**
-     * Set 属性ID
+     * Set 标签ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AttrBizId 属性ID
+     * @param AttrBizId 标签ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAttrBizId(String AttrBizId) {
@@ -104,9 +104,9 @@ public class AttrLabel extends AbstractModel {
     }
 
     /**
-     * Get 属性标识
+     * Get 标签标识
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AttrKey 属性标识
+     * @return AttrKey 标签标识
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAttrKey() {
@@ -114,9 +114,9 @@ public class AttrLabel extends AbstractModel {
     }
 
     /**
-     * Set 属性标识
+     * Set 标签标识
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AttrKey 属性标识
+     * @param AttrKey 标签标识
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAttrKey(String AttrKey) {
@@ -124,9 +124,9 @@ public class AttrLabel extends AbstractModel {
     }
 
     /**
-     * Get 属性名称
+     * Get 标签名称
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AttrName 属性名称
+     * @return AttrName 标签名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAttrName() {
@@ -134,9 +134,9 @@ public class AttrLabel extends AbstractModel {
     }
 
     /**
-     * Set 属性名称
+     * Set 标签名称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AttrName 属性名称
+     * @param AttrName 标签名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAttrName(String AttrName) {
@@ -144,9 +144,9 @@ public class AttrLabel extends AbstractModel {
     }
 
     /**
-     * Get 标签ID
+     * Get 标签值
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Labels 标签ID
+     * @return Labels 标签值
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Label [] getLabels() {
@@ -154,9 +154,9 @@ public class AttrLabel extends AbstractModel {
     }
 
     /**
-     * Set 标签ID
+     * Set 标签值
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Labels 标签ID
+     * @param Labels 标签值
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLabels(Label [] Labels) {

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateAclRuleRequest extends AbstractModel {
 
     /**
-    * 实例id信息
+    * ckafka集群实例Id
     */
     @SerializedName("InstanceId")
     @Expose
@@ -38,7 +38,7 @@ public class CreateAclRuleRequest extends AbstractModel {
     private String ResourceType;
 
     /**
-    * 匹配类型，目前支持前缀匹配与预设策略，枚举值列表：PREFIXED/PRESET
+    * ACL规则匹配类型，目前支持前缀匹配与预设策略，枚举值列表：PREFIXED/PRESET
     */
     @SerializedName("PatternType")
     @Expose
@@ -80,16 +80,16 @@ public class CreateAclRuleRequest extends AbstractModel {
     private String Comment;
 
     /**
-     * Get 实例id信息 
-     * @return InstanceId 实例id信息
+     * Get ckafka集群实例Id 
+     * @return InstanceId ckafka集群实例Id
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例id信息
-     * @param InstanceId 实例id信息
+     * Set ckafka集群实例Id
+     * @param InstanceId ckafka集群实例Id
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -112,16 +112,16 @@ public class CreateAclRuleRequest extends AbstractModel {
     }
 
     /**
-     * Get 匹配类型，目前支持前缀匹配与预设策略，枚举值列表：PREFIXED/PRESET 
-     * @return PatternType 匹配类型，目前支持前缀匹配与预设策略，枚举值列表：PREFIXED/PRESET
+     * Get ACL规则匹配类型，目前支持前缀匹配与预设策略，枚举值列表：PREFIXED/PRESET 
+     * @return PatternType ACL规则匹配类型，目前支持前缀匹配与预设策略，枚举值列表：PREFIXED/PRESET
      */
     public String getPatternType() {
         return this.PatternType;
     }
 
     /**
-     * Set 匹配类型，目前支持前缀匹配与预设策略，枚举值列表：PREFIXED/PRESET
-     * @param PatternType 匹配类型，目前支持前缀匹配与预设策略，枚举值列表：PREFIXED/PRESET
+     * Set ACL规则匹配类型，目前支持前缀匹配与预设策略，枚举值列表：PREFIXED/PRESET
+     * @param PatternType ACL规则匹配类型，目前支持前缀匹配与预设策略，枚举值列表：PREFIXED/PRESET
      */
     public void setPatternType(String PatternType) {
         this.PatternType = PatternType;

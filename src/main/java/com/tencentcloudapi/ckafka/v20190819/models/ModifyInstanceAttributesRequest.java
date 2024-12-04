@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class ModifyInstanceAttributesRequest extends AbstractModel {
 
     /**
-    * 实例id
+    * ckafka集群实例Id
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 实例日志的最长保留时间，单位分钟，最大30天，0代表不开启日志保留时间回收策略
+    * 实例日志的最长保留时间，单位分钟，最大90天，0代表不开启日志保留时间回收策略
     */
     @SerializedName("MsgRetentionTime")
     @Expose
     private Long MsgRetentionTime;
 
     /**
-    * 实例名称，是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
+    * ckafka集群实例Name
     */
     @SerializedName("InstanceName")
     @Expose
@@ -59,14 +59,14 @@ public class ModifyInstanceAttributesRequest extends AbstractModel {
     private DynamicRetentionTime DynamicRetentionConfig;
 
     /**
-    * 升配Rebalance时间
+    * 升配Rebalance时间 参数已废弃,忽略不填!!!
     */
     @SerializedName("RebalanceTime")
     @Expose
     private Long RebalanceTime;
 
     /**
-    * 公网带宽
+    * 公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写
     */
     @SerializedName("PublicNetwork")
     @Expose
@@ -80,55 +80,55 @@ public class ModifyInstanceAttributesRequest extends AbstractModel {
     private DynamicDiskConfig DynamicDiskConfig;
 
     /**
-    * 实例级别单条消息大小（单位byte)
+    * 实例级别单条消息大小（单位byte)  最大 12582912(不包含)  最小1024(不包含)
     */
     @SerializedName("MaxMessageByte")
     @Expose
     private Long MaxMessageByte;
 
     /**
-     * Get 实例id 
-     * @return InstanceId 实例id
+     * Get ckafka集群实例Id 
+     * @return InstanceId ckafka集群实例Id
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例id
-     * @param InstanceId 实例id
+     * Set ckafka集群实例Id
+     * @param InstanceId ckafka集群实例Id
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 实例日志的最长保留时间，单位分钟，最大30天，0代表不开启日志保留时间回收策略 
-     * @return MsgRetentionTime 实例日志的最长保留时间，单位分钟，最大30天，0代表不开启日志保留时间回收策略
+     * Get 实例日志的最长保留时间，单位分钟，最大90天，0代表不开启日志保留时间回收策略 
+     * @return MsgRetentionTime 实例日志的最长保留时间，单位分钟，最大90天，0代表不开启日志保留时间回收策略
      */
     public Long getMsgRetentionTime() {
         return this.MsgRetentionTime;
     }
 
     /**
-     * Set 实例日志的最长保留时间，单位分钟，最大30天，0代表不开启日志保留时间回收策略
-     * @param MsgRetentionTime 实例日志的最长保留时间，单位分钟，最大30天，0代表不开启日志保留时间回收策略
+     * Set 实例日志的最长保留时间，单位分钟，最大90天，0代表不开启日志保留时间回收策略
+     * @param MsgRetentionTime 实例日志的最长保留时间，单位分钟，最大90天，0代表不开启日志保留时间回收策略
      */
     public void setMsgRetentionTime(Long MsgRetentionTime) {
         this.MsgRetentionTime = MsgRetentionTime;
     }
 
     /**
-     * Get 实例名称，是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-) 
-     * @return InstanceName 实例名称，是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
+     * Get ckafka集群实例Name 
+     * @return InstanceName ckafka集群实例Name
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set 实例名称，是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
-     * @param InstanceName 实例名称，是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
+     * Set ckafka集群实例Name
+     * @param InstanceName ckafka集群实例Name
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
@@ -167,32 +167,32 @@ public class ModifyInstanceAttributesRequest extends AbstractModel {
     }
 
     /**
-     * Get 升配Rebalance时间 
-     * @return RebalanceTime 升配Rebalance时间
+     * Get 升配Rebalance时间 参数已废弃,忽略不填!!! 
+     * @return RebalanceTime 升配Rebalance时间 参数已废弃,忽略不填!!!
      */
     public Long getRebalanceTime() {
         return this.RebalanceTime;
     }
 
     /**
-     * Set 升配Rebalance时间
-     * @param RebalanceTime 升配Rebalance时间
+     * Set 升配Rebalance时间 参数已废弃,忽略不填!!!
+     * @param RebalanceTime 升配Rebalance时间 参数已废弃,忽略不填!!!
      */
     public void setRebalanceTime(Long RebalanceTime) {
         this.RebalanceTime = RebalanceTime;
     }
 
     /**
-     * Get 公网带宽 
-     * @return PublicNetwork 公网带宽
+     * Get 公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写 
+     * @return PublicNetwork 公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写
      */
     public Long getPublicNetwork() {
         return this.PublicNetwork;
     }
 
     /**
-     * Set 公网带宽
-     * @param PublicNetwork 公网带宽
+     * Set 公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写
+     * @param PublicNetwork 公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写
      */
     public void setPublicNetwork(Long PublicNetwork) {
         this.PublicNetwork = PublicNetwork;
@@ -219,16 +219,16 @@ public class ModifyInstanceAttributesRequest extends AbstractModel {
     }
 
     /**
-     * Get 实例级别单条消息大小（单位byte) 
-     * @return MaxMessageByte 实例级别单条消息大小（单位byte)
+     * Get 实例级别单条消息大小（单位byte)  最大 12582912(不包含)  最小1024(不包含) 
+     * @return MaxMessageByte 实例级别单条消息大小（单位byte)  最大 12582912(不包含)  最小1024(不包含)
      */
     public Long getMaxMessageByte() {
         return this.MaxMessageByte;
     }
 
     /**
-     * Set 实例级别单条消息大小（单位byte)
-     * @param MaxMessageByte 实例级别单条消息大小（单位byte)
+     * Set 实例级别单条消息大小（单位byte)  最大 12582912(不包含)  最小1024(不包含)
+     * @param MaxMessageByte 实例级别单条消息大小（单位byte)  最大 12582912(不包含)  最小1024(不包含)
      */
     public void setMaxMessageByte(Long MaxMessageByte) {
         this.MaxMessageByte = MaxMessageByte;

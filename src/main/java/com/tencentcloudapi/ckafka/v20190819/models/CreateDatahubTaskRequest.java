@@ -80,7 +80,7 @@ public class CreateDatahubTaskRequest extends AbstractModel {
     private TransformsParam TransformsParam;
 
     /**
-    * 任务ID
+    * 任务Id
     */
     @SerializedName("TaskId")
     @Expose
@@ -222,16 +222,16 @@ public class CreateDatahubTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get 任务ID 
-     * @return TaskId 任务ID
+     * Get 任务Id 
+     * @return TaskId 任务Id
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 任务ID
-     * @param TaskId 任务ID
+     * Set 任务Id
+     * @param TaskId 任务Id
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

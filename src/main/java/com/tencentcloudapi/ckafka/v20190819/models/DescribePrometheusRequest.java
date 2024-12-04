@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribePrometheusRequest extends AbstractModel {
 
     /**
-    * ckafka实例Id
+    * ckafka集群实例Id
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-     * Get ckafka实例Id 
-     * @return InstanceId ckafka实例Id
+     * Get ckafka集群实例Id 
+     * @return InstanceId ckafka集群实例Id
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set ckafka实例Id
-     * @param InstanceId ckafka实例Id
+     * Set ckafka集群实例Id
+     * @param InstanceId ckafka集群实例Id
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DatahubTopicResp extends AbstractModel {
 
     /**
-    * Topic名称
+    * 主题名称
     */
     @SerializedName("TopicName")
     @Expose
     private String TopicName;
 
     /**
-    * TopicId
+    * 主题Id
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TopicId")
@@ -39,25 +39,25 @@ public class DatahubTopicResp extends AbstractModel {
     private String TopicId;
 
     /**
-     * Get Topic名称 
-     * @return TopicName Topic名称
+     * Get 主题名称 
+     * @return TopicName 主题名称
      */
     public String getTopicName() {
         return this.TopicName;
     }
 
     /**
-     * Set Topic名称
-     * @param TopicName Topic名称
+     * Set 主题名称
+     * @param TopicName 主题名称
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;
     }
 
     /**
-     * Get TopicId
+     * Get 主题Id
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TopicId TopicId
+     * @return TopicId 主题Id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTopicId() {
@@ -65,9 +65,9 @@ public class DatahubTopicResp extends AbstractModel {
     }
 
     /**
-     * Set TopicId
+     * Set 主题Id
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TopicId TopicId
+     * @param TopicId 主题Id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTopicId(String TopicId) {

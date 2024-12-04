@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeGroupOffsetsResponse extends AbstractModel {
 
     /**
-    * 返回的结果对象
+    * 返回结果
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeGroupOffsetsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 返回的结果对象 
-     * @return Result 返回的结果对象
+     * Get 返回结果 
+     * @return Result 返回结果
      */
     public GroupOffsetResponse getResult() {
         return this.Result;
     }
 
     /**
-     * Set 返回的结果对象
-     * @param Result 返回的结果对象
+     * Set 返回结果
+     * @param Result 返回结果
      */
     public void setResult(GroupOffsetResponse Result) {
         this.Result = Result;

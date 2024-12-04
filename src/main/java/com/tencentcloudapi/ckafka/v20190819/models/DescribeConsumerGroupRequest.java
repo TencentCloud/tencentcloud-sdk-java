@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeConsumerGroupRequest extends AbstractModel {
 
     /**
-    * ckafka实例id。
+    * ckafka集群实例Id
     */
     @SerializedName("InstanceId")
     @Expose
@@ -59,16 +59,16 @@ public class DescribeConsumerGroupRequest extends AbstractModel {
     private Long Offset;
 
     /**
-     * Get ckafka实例id。 
-     * @return InstanceId ckafka实例id。
+     * Get ckafka集群实例Id 
+     * @return InstanceId ckafka集群实例Id
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set ckafka实例id。
-     * @param InstanceId ckafka实例id。
+     * Set ckafka集群实例Id
+     * @param InstanceId ckafka集群实例Id
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

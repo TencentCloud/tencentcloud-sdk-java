@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyDatahubTopicRequest extends AbstractModel {
 
     /**
-    * 名称
+    * 弹性topic名称
     */
     @SerializedName("Name")
     @Expose
@@ -52,16 +52,16 @@ public class ModifyDatahubTopicRequest extends AbstractModel {
     private Tag [] Tags;
 
     /**
-     * Get 名称 
-     * @return Name 名称
+     * Get 弹性topic名称 
+     * @return Name 弹性topic名称
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 名称
-     * @param Name 名称
+     * Set 弹性topic名称
+     * @param Name 弹性topic名称
      */
     public void setName(String Name) {
         this.Name = Name;

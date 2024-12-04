@@ -40,6 +40,14 @@ public class UnknownPerson extends AbstractModel {
     private Boolean PutLibraryAllowed;
 
     /**
+    * 内容审核结果: 0-正常;1-涉政;其他待确定
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AuditClass")
+    @Expose
+    private Long AuditClass;
+
+    /**
      * Get 视觉出现信息
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return VideoAppearSet 视觉出现信息
@@ -79,6 +87,26 @@ public class UnknownPerson extends AbstractModel {
         this.PutLibraryAllowed = PutLibraryAllowed;
     }
 
+    /**
+     * Get 内容审核结果: 0-正常;1-涉政;其他待确定
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AuditClass 内容审核结果: 0-正常;1-涉政;其他待确定
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getAuditClass() {
+        return this.AuditClass;
+    }
+
+    /**
+     * Set 内容审核结果: 0-正常;1-涉政;其他待确定
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AuditClass 内容审核结果: 0-正常;1-涉政;其他待确定
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAuditClass(Long AuditClass) {
+        this.AuditClass = AuditClass;
+    }
+
     public UnknownPerson() {
     }
 
@@ -96,6 +124,9 @@ public class UnknownPerson extends AbstractModel {
         if (source.PutLibraryAllowed != null) {
             this.PutLibraryAllowed = new Boolean(source.PutLibraryAllowed);
         }
+        if (source.AuditClass != null) {
+            this.AuditClass = new Long(source.AuditClass);
+        }
     }
 
 
@@ -105,6 +136,7 @@ public class UnknownPerson extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "VideoAppearSet.", this.VideoAppearSet);
         this.setParamSimple(map, prefix + "PutLibraryAllowed", this.PutLibraryAllowed);
+        this.setParamSimple(map, prefix + "AuditClass", this.AuditClass);
 
     }
 }

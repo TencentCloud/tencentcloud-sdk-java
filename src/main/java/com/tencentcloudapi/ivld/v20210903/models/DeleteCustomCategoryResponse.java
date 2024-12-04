@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DeleteCustomCategoryResponse extends AbstractModel {
 
     /**
-    * 123
+    * 自定义分类ID
     */
     @SerializedName("CategoryId")
     @Expose
@@ -38,16 +38,16 @@ public class DeleteCustomCategoryResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 123 
-     * @return CategoryId 123
+     * Get 自定义分类ID 
+     * @return CategoryId 自定义分类ID
      */
     public String getCategoryId() {
         return this.CategoryId;
     }
 
     /**
-     * Set 123
-     * @param CategoryId 123
+     * Set 自定义分类ID
+     * @param CategoryId 自定义分类ID
      */
     public void setCategoryId(String CategoryId) {
         this.CategoryId = CategoryId;

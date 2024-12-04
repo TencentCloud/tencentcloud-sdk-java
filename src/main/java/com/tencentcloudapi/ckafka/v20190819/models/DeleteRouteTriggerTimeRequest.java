@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DeleteRouteTriggerTimeRequest extends AbstractModel {
 
     /**
-    * 实例id
+    * ckafka集群实例Id
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 修改时间
+    * 修改删除路由的定时时间
     */
     @SerializedName("DelayTime")
     @Expose
     private String DelayTime;
 
     /**
-     * Get 实例id 
-     * @return InstanceId 实例id
+     * Get ckafka集群实例Id 
+     * @return InstanceId ckafka集群实例Id
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例id
-     * @param InstanceId 实例id
+     * Set ckafka集群实例Id
+     * @param InstanceId ckafka集群实例Id
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 修改时间 
-     * @return DelayTime 修改时间
+     * Get 修改删除路由的定时时间 
+     * @return DelayTime 修改删除路由的定时时间
      */
     public String getDelayTime() {
         return this.DelayTime;
     }
 
     /**
-     * Set 修改时间
-     * @param DelayTime 修改时间
+     * Set 修改删除路由的定时时间
+     * @param DelayTime 修改删除路由的定时时间
      */
     public void setDelayTime(String DelayTime) {
         this.DelayTime = DelayTime;

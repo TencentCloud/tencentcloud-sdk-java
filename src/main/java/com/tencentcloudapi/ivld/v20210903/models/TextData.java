@@ -48,6 +48,14 @@ public class TextData extends AbstractModel {
     private MultiLevelTag TextTagSet;
 
     /**
+    * 文档下载地址
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("WebMediaURL")
+    @Expose
+    private String WebMediaURL;
+
+    /**
      * Get 文本内容信息
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Content 文本内容信息
@@ -107,6 +115,26 @@ public class TextData extends AbstractModel {
         this.TextTagSet = TextTagSet;
     }
 
+    /**
+     * Get 文档下载地址
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return WebMediaURL 文档下载地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getWebMediaURL() {
+        return this.WebMediaURL;
+    }
+
+    /**
+     * Set 文档下载地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WebMediaURL 文档下载地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setWebMediaURL(String WebMediaURL) {
+        this.WebMediaURL = WebMediaURL;
+    }
+
     public TextData() {
     }
 
@@ -124,6 +152,9 @@ public class TextData extends AbstractModel {
         if (source.TextTagSet != null) {
             this.TextTagSet = new MultiLevelTag(source.TextTagSet);
         }
+        if (source.WebMediaURL != null) {
+            this.WebMediaURL = new String(source.WebMediaURL);
+        }
     }
 
 
@@ -134,6 +165,7 @@ public class TextData extends AbstractModel {
         this.setParamSimple(map, prefix + "Content", this.Content);
         this.setParamSimple(map, prefix + "Summary", this.Summary);
         this.setParamObj(map, prefix + "TextTagSet.", this.TextTagSet);
+        this.setParamSimple(map, prefix + "WebMediaURL", this.WebMediaURL);
 
     }
 }

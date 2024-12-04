@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class InquireCkafkaPriceResponse extends AbstractModel {
 
     /**
-    * 出参
+    * 返回结果
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +38,16 @@ public class InquireCkafkaPriceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 出参 
-     * @return Result 出参
+     * Get 返回结果 
+     * @return Result 返回结果
      */
     public InquireCkafkaPriceResp getResult() {
         return this.Result;
     }
 
     /**
-     * Set 出参
-     * @param Result 出参
+     * Set 返回结果
+     * @param Result 返回结果
      */
     public void setResult(InquireCkafkaPriceResp Result) {
         this.Result = Result;

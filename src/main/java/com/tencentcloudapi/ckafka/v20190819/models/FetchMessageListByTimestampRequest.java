@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class FetchMessageListByTimestampRequest extends AbstractModel {
 
     /**
-    * 实例Id
+    * ckafka集群实例Id
     */
     @SerializedName("InstanceId")
     @Expose
@@ -52,23 +52,23 @@ public class FetchMessageListByTimestampRequest extends AbstractModel {
     private Long StartTime;
 
     /**
-    * 最大查询条数，默认20，最大20
+    * 最大查询条数，默认20，最大20, 最小1
     */
     @SerializedName("SinglePartitionRecordNumber")
     @Expose
     private Long SinglePartitionRecordNumber;
 
     /**
-     * Get 实例Id 
-     * @return InstanceId 实例Id
+     * Get ckafka集群实例Id 
+     * @return InstanceId ckafka集群实例Id
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例Id
-     * @param InstanceId 实例Id
+     * Set ckafka集群实例Id
+     * @param InstanceId ckafka集群实例Id
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -123,16 +123,16 @@ public class FetchMessageListByTimestampRequest extends AbstractModel {
     }
 
     /**
-     * Get 最大查询条数，默认20，最大20 
-     * @return SinglePartitionRecordNumber 最大查询条数，默认20，最大20
+     * Get 最大查询条数，默认20，最大20, 最小1 
+     * @return SinglePartitionRecordNumber 最大查询条数，默认20，最大20, 最小1
      */
     public Long getSinglePartitionRecordNumber() {
         return this.SinglePartitionRecordNumber;
     }
 
     /**
-     * Set 最大查询条数，默认20，最大20
-     * @param SinglePartitionRecordNumber 最大查询条数，默认20，最大20
+     * Set 最大查询条数，默认20，最大20, 最小1
+     * @param SinglePartitionRecordNumber 最大查询条数，默认20，最大20, 最小1
      */
     public void setSinglePartitionRecordNumber(Long SinglePartitionRecordNumber) {
         this.SinglePartitionRecordNumber = SinglePartitionRecordNumber;

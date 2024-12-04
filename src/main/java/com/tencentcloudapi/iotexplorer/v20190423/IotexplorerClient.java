@@ -1227,6 +1227,17 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
+     *同步执行设备云存 AI 分析任务
+     * @param req InvokeCloudStorageAIServiceTaskRequest
+     * @return InvokeCloudStorageAIServiceTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public InvokeCloudStorageAIServiceTaskResponse InvokeCloudStorageAIServiceTask(InvokeCloudStorageAIServiceTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "InvokeCloudStorageAIServiceTask", InvokeCloudStorageAIServiceTaskResponse.class);
+    }
+
+    /**
      *创建外部视频 AI 分析任务
      * @param req InvokeExternalSourceAIServiceTaskRequest
      * @return InvokeExternalSourceAIServiceTaskResponse

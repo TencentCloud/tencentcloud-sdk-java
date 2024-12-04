@@ -71,7 +71,7 @@ public class ModifyNetworkConfigRequest extends AbstractModel {
     * 原内网 IPv4 地址保留时长。
 - 单位：天。
 - 取值范围：0、1、2、3、7、15。
-**说明**：设置原地址保留时长需最新版SDK，否则原地址将立即释放，查看SDK版本，请参见 [SDK中心](https://cloud.tencent.com/document/sdk)。
+**说明**：保留时长不设置或者设置为0，原网络地址将立即释放。
     */
     @SerializedName("Recycle")
     @Expose
@@ -204,11 +204,11 @@ public class ModifyNetworkConfigRequest extends AbstractModel {
      * Get 原内网 IPv4 地址保留时长。
 - 单位：天。
 - 取值范围：0、1、2、3、7、15。
-**说明**：设置原地址保留时长需最新版SDK，否则原地址将立即释放，查看SDK版本，请参见 [SDK中心](https://cloud.tencent.com/document/sdk)。 
+**说明**：保留时长不设置或者设置为0，原网络地址将立即释放。 
      * @return Recycle 原内网 IPv4 地址保留时长。
 - 单位：天。
 - 取值范围：0、1、2、3、7、15。
-**说明**：设置原地址保留时长需最新版SDK，否则原地址将立即释放，查看SDK版本，请参见 [SDK中心](https://cloud.tencent.com/document/sdk)。
+**说明**：保留时长不设置或者设置为0，原网络地址将立即释放。
      */
     public Long getRecycle() {
         return this.Recycle;
@@ -218,11 +218,11 @@ public class ModifyNetworkConfigRequest extends AbstractModel {
      * Set 原内网 IPv4 地址保留时长。
 - 单位：天。
 - 取值范围：0、1、2、3、7、15。
-**说明**：设置原地址保留时长需最新版SDK，否则原地址将立即释放，查看SDK版本，请参见 [SDK中心](https://cloud.tencent.com/document/sdk)。
+**说明**：保留时长不设置或者设置为0，原网络地址将立即释放。
      * @param Recycle 原内网 IPv4 地址保留时长。
 - 单位：天。
 - 取值范围：0、1、2、3、7、15。
-**说明**：设置原地址保留时长需最新版SDK，否则原地址将立即释放，查看SDK版本，请参见 [SDK中心](https://cloud.tencent.com/document/sdk)。
+**说明**：保留时长不设置或者设置为0，原网络地址将立即释放。
      */
     public void setRecycle(Long Recycle) {
         this.Recycle = Recycle;

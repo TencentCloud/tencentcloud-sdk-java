@@ -66,6 +66,13 @@ public class DescribeInstancesRequest extends AbstractModel {
     private String [] EngineVersions;
 
     /**
+    * 按照api版本筛选实例
+    */
+    @SerializedName("ApiVersions")
+    @Expose
+    private String [] ApiVersions;
+
+    /**
     * 按照创建时间筛选实例。
     */
     @SerializedName("CreateAt")
@@ -208,6 +215,22 @@ public class DescribeInstancesRequest extends AbstractModel {
      */
     public void setEngineVersions(String [] EngineVersions) {
         this.EngineVersions = EngineVersions;
+    }
+
+    /**
+     * Get 按照api版本筛选实例 
+     * @return ApiVersions 按照api版本筛选实例
+     */
+    public String [] getApiVersions() {
+        return this.ApiVersions;
+    }
+
+    /**
+     * Set 按照api版本筛选实例
+     * @param ApiVersions 按照api版本筛选实例
+     */
+    public void setApiVersions(String [] ApiVersions) {
+        this.ApiVersions = ApiVersions;
     }
 
     /**
@@ -366,6 +389,12 @@ public class DescribeInstancesRequest extends AbstractModel {
                 this.EngineVersions[i] = new String(source.EngineVersions[i]);
             }
         }
+        if (source.ApiVersions != null) {
+            this.ApiVersions = new String[source.ApiVersions.length];
+            for (int i = 0; i < source.ApiVersions.length; i++) {
+                this.ApiVersions[i] = new String(source.ApiVersions[i]);
+            }
+        }
         if (source.CreateAt != null) {
             this.CreateAt = new String(source.CreateAt);
         }
@@ -406,6 +435,7 @@ public class DescribeInstancesRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "Status.", this.Status);
         this.setParamArraySimple(map, prefix + "EngineNames.", this.EngineNames);
         this.setParamArraySimple(map, prefix + "EngineVersions.", this.EngineVersions);
+        this.setParamArraySimple(map, prefix + "ApiVersions.", this.ApiVersions);
         this.setParamSimple(map, prefix + "CreateAt", this.CreateAt);
         this.setParamArraySimple(map, prefix + "Zones.", this.Zones);
         this.setParamSimple(map, prefix + "OrderBy", this.OrderBy);

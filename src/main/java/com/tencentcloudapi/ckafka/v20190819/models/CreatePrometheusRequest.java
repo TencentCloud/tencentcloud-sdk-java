@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class CreatePrometheusRequest extends AbstractModel {
 
     /**
-    * ckafka实例id
+    * ckafka集群实例Id
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * vpc地址
+    * 私有网络Id
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 子网地址
+    * 子网Id
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-     * Get ckafka实例id 
-     * @return InstanceId ckafka实例id
+     * Get ckafka集群实例Id 
+     * @return InstanceId ckafka集群实例Id
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set ckafka实例id
-     * @param InstanceId ckafka实例id
+     * Set ckafka集群实例Id
+     * @param InstanceId ckafka集群实例Id
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get vpc地址 
-     * @return VpcId vpc地址
+     * Get 私有网络Id 
+     * @return VpcId 私有网络Id
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set vpc地址
-     * @param VpcId vpc地址
+     * Set 私有网络Id
+     * @param VpcId 私有网络Id
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get 子网地址 
-     * @return SubnetId 子网地址
+     * Get 子网Id 
+     * @return SubnetId 子网Id
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 子网地址
-     * @param SubnetId 子网地址
+     * Set 子网Id
+     * @param SubnetId 子网Id
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;

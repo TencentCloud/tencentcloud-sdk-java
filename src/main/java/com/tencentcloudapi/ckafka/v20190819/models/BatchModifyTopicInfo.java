@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class BatchModifyTopicInfo extends AbstractModel {
 
     /**
-    * topic名称
+    * 主题名
     */
     @SerializedName("TopicName")
     @Expose
@@ -101,16 +101,23 @@ public class BatchModifyTopicInfo extends AbstractModel {
     private Long MaxMessageBytes;
 
     /**
-     * Get topic名称 
-     * @return TopicName topic名称
+    * 消息保存的时间类型：CreateTime/LogAppendTime
+    */
+    @SerializedName("LogMsgTimestampType")
+    @Expose
+    private String LogMsgTimestampType;
+
+    /**
+     * Get 主题名 
+     * @return TopicName 主题名
      */
     public String getTopicName() {
         return this.TopicName;
     }
 
     /**
-     * Set topic名称
-     * @param TopicName topic名称
+     * Set 主题名
+     * @param TopicName 主题名
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;
@@ -276,6 +283,22 @@ public class BatchModifyTopicInfo extends AbstractModel {
         this.MaxMessageBytes = MaxMessageBytes;
     }
 
+    /**
+     * Get 消息保存的时间类型：CreateTime/LogAppendTime 
+     * @return LogMsgTimestampType 消息保存的时间类型：CreateTime/LogAppendTime
+     */
+    public String getLogMsgTimestampType() {
+        return this.LogMsgTimestampType;
+    }
+
+    /**
+     * Set 消息保存的时间类型：CreateTime/LogAppendTime
+     * @param LogMsgTimestampType 消息保存的时间类型：CreateTime/LogAppendTime
+     */
+    public void setLogMsgTimestampType(String LogMsgTimestampType) {
+        this.LogMsgTimestampType = LogMsgTimestampType;
+    }
+
     public BatchModifyTopicInfo() {
     }
 
@@ -317,6 +340,9 @@ public class BatchModifyTopicInfo extends AbstractModel {
         if (source.MaxMessageBytes != null) {
             this.MaxMessageBytes = new Long(source.MaxMessageBytes);
         }
+        if (source.LogMsgTimestampType != null) {
+            this.LogMsgTimestampType = new String(source.LogMsgTimestampType);
+        }
     }
 
 
@@ -335,6 +361,7 @@ public class BatchModifyTopicInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "RetentionBytes", this.RetentionBytes);
         this.setParamSimple(map, prefix + "SegmentMs", this.SegmentMs);
         this.setParamSimple(map, prefix + "MaxMessageBytes", this.MaxMessageBytes);
+        this.setParamSimple(map, prefix + "LogMsgTimestampType", this.LogMsgTimestampType);
 
     }
 }

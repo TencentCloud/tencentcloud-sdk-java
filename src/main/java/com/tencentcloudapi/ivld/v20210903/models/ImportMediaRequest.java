@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class ImportMediaRequest extends AbstractModel {
 
     /**
-    * 待分析视频的URL，目前只支持*不带签名的*COS地址，长度最长1KB
+    * 待分析视频的URL，目前只支持*不带签名的*COS地址，字段输入内容最大为1KB
     */
     @SerializedName("URL")
     @Expose
     private String URL;
 
     /**
-    * 待分析视频的MD5，为空时不做校验，否则会做MD5校验，长度必须为32B
+    * 待分析视频的MD5，为空时不做校验，否则会做MD5校验，长度必须为32
     */
     @SerializedName("MD5")
     @Expose
     private String MD5;
 
     /**
-    * 待分析视频的名称，指定后可支持筛选，最多64B
+    * 待分析视频的名称，指定后可支持筛选，视频名称的大小长度不能超过64
     */
     @SerializedName("Name")
     @Expose
@@ -75,48 +75,48 @@ public class ImportMediaRequest extends AbstractModel {
     private Long MediaType;
 
     /**
-     * Get 待分析视频的URL，目前只支持*不带签名的*COS地址，长度最长1KB 
-     * @return URL 待分析视频的URL，目前只支持*不带签名的*COS地址，长度最长1KB
+     * Get 待分析视频的URL，目前只支持*不带签名的*COS地址，字段输入内容最大为1KB 
+     * @return URL 待分析视频的URL，目前只支持*不带签名的*COS地址，字段输入内容最大为1KB
      */
     public String getURL() {
         return this.URL;
     }
 
     /**
-     * Set 待分析视频的URL，目前只支持*不带签名的*COS地址，长度最长1KB
-     * @param URL 待分析视频的URL，目前只支持*不带签名的*COS地址，长度最长1KB
+     * Set 待分析视频的URL，目前只支持*不带签名的*COS地址，字段输入内容最大为1KB
+     * @param URL 待分析视频的URL，目前只支持*不带签名的*COS地址，字段输入内容最大为1KB
      */
     public void setURL(String URL) {
         this.URL = URL;
     }
 
     /**
-     * Get 待分析视频的MD5，为空时不做校验，否则会做MD5校验，长度必须为32B 
-     * @return MD5 待分析视频的MD5，为空时不做校验，否则会做MD5校验，长度必须为32B
+     * Get 待分析视频的MD5，为空时不做校验，否则会做MD5校验，长度必须为32 
+     * @return MD5 待分析视频的MD5，为空时不做校验，否则会做MD5校验，长度必须为32
      */
     public String getMD5() {
         return this.MD5;
     }
 
     /**
-     * Set 待分析视频的MD5，为空时不做校验，否则会做MD5校验，长度必须为32B
-     * @param MD5 待分析视频的MD5，为空时不做校验，否则会做MD5校验，长度必须为32B
+     * Set 待分析视频的MD5，为空时不做校验，否则会做MD5校验，长度必须为32
+     * @param MD5 待分析视频的MD5，为空时不做校验，否则会做MD5校验，长度必须为32
      */
     public void setMD5(String MD5) {
         this.MD5 = MD5;
     }
 
     /**
-     * Get 待分析视频的名称，指定后可支持筛选，最多64B 
-     * @return Name 待分析视频的名称，指定后可支持筛选，最多64B
+     * Get 待分析视频的名称，指定后可支持筛选，视频名称的大小长度不能超过64 
+     * @return Name 待分析视频的名称，指定后可支持筛选，视频名称的大小长度不能超过64
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 待分析视频的名称，指定后可支持筛选，最多64B
-     * @param Name 待分析视频的名称，指定后可支持筛选，最多64B
+     * Set 待分析视频的名称，指定后可支持筛选，视频名称的大小长度不能超过64
+     * @param Name 待分析视频的名称，指定后可支持筛选，视频名称的大小长度不能超过64
      */
     public void setName(String Name) {
         this.Name = Name;

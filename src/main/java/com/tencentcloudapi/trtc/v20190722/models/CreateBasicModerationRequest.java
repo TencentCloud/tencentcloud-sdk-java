@@ -52,6 +52,13 @@ public class CreateBasicModerationRequest extends AbstractModel {
     private Long RoomIdType;
 
     /**
+    * 音频文件上传到云存储的参数
+    */
+    @SerializedName("AuditStorageParams")
+    @Expose
+    private AuditStorageParams AuditStorageParams;
+
+    /**
      * Get TRTC的[SdkAppId](https://cloud.tencent.com/document/product/647/46351#sdkappid)，和TRTC的房间所对应的SdkAppId相同。 
      * @return SdkAppId TRTC的[SdkAppId](https://cloud.tencent.com/document/product/647/46351#sdkappid)，和TRTC的房间所对应的SdkAppId相同。
      */
@@ -115,6 +122,22 @@ public class CreateBasicModerationRequest extends AbstractModel {
         this.RoomIdType = RoomIdType;
     }
 
+    /**
+     * Get 音频文件上传到云存储的参数 
+     * @return AuditStorageParams 音频文件上传到云存储的参数
+     */
+    public AuditStorageParams getAuditStorageParams() {
+        return this.AuditStorageParams;
+    }
+
+    /**
+     * Set 音频文件上传到云存储的参数
+     * @param AuditStorageParams 音频文件上传到云存储的参数
+     */
+    public void setAuditStorageParams(AuditStorageParams AuditStorageParams) {
+        this.AuditStorageParams = AuditStorageParams;
+    }
+
     public CreateBasicModerationRequest() {
     }
 
@@ -135,6 +158,9 @@ public class CreateBasicModerationRequest extends AbstractModel {
         if (source.RoomIdType != null) {
             this.RoomIdType = new Long(source.RoomIdType);
         }
+        if (source.AuditStorageParams != null) {
+            this.AuditStorageParams = new AuditStorageParams(source.AuditStorageParams);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class CreateBasicModerationRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "RoomId", this.RoomId);
         this.setParamSimple(map, prefix + "UserId", this.UserId);
         this.setParamSimple(map, prefix + "RoomIdType", this.RoomIdType);
+        this.setParamObj(map, prefix + "AuditStorageParams.", this.AuditStorageParams);
 
     }
 }

@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ModifyAclRuleRequest extends AbstractModel {
 
     /**
-    * 实例Id
+    * ckafka集群实例Id
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * ACL策略名
+    * ACL规则名
     */
     @SerializedName("RuleName")
     @Expose
@@ -45,32 +45,32 @@ public class ModifyAclRuleRequest extends AbstractModel {
     private Long IsApplied;
 
     /**
-     * Get 实例Id 
-     * @return InstanceId 实例Id
+     * Get ckafka集群实例Id 
+     * @return InstanceId ckafka集群实例Id
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例Id
-     * @param InstanceId 实例Id
+     * Set ckafka集群实例Id
+     * @param InstanceId ckafka集群实例Id
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get ACL策略名 
-     * @return RuleName ACL策略名
+     * Get ACL规则名 
+     * @return RuleName ACL规则名
      */
     public String getRuleName() {
         return this.RuleName;
     }
 
     /**
-     * Set ACL策略名
-     * @param RuleName ACL策略名
+     * Set ACL规则名
+     * @param RuleName ACL规则名
      */
     public void setRuleName(String RuleName) {
         this.RuleName = RuleName;

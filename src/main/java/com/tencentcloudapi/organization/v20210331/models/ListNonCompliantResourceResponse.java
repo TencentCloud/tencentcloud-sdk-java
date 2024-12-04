@@ -25,7 +25,6 @@ public class ListNonCompliantResourceResponse extends AbstractModel {
 
     /**
     * 资源及标签合规信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Items")
     @Expose
@@ -33,7 +32,6 @@ public class ListNonCompliantResourceResponse extends AbstractModel {
 
     /**
     * 获取的下一页的Token值。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PaginationToken")
     @Expose
@@ -47,10 +45,8 @@ public class ListNonCompliantResourceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 资源及标签合规信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源及标签合规信息。 
      * @return Items 资源及标签合规信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ResourceTagMapping [] getItems() {
         return this.Items;
@@ -58,19 +54,15 @@ public class ListNonCompliantResourceResponse extends AbstractModel {
 
     /**
      * Set 资源及标签合规信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Items 资源及标签合规信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setItems(ResourceTagMapping [] Items) {
         this.Items = Items;
     }
 
     /**
-     * Get 获取的下一页的Token值。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 获取的下一页的Token值。 
      * @return PaginationToken 获取的下一页的Token值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPaginationToken() {
         return this.PaginationToken;
@@ -78,9 +70,7 @@ public class ListNonCompliantResourceResponse extends AbstractModel {
 
     /**
      * Set 获取的下一页的Token值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PaginationToken 获取的下一页的Token值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPaginationToken(String PaginationToken) {
         this.PaginationToken = PaginationToken;

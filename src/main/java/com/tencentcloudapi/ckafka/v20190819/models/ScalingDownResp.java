@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ScalingDownResp extends AbstractModel {
 
     /**
-    * 订单号
+    * 订单号列表
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DealNames")
@@ -32,9 +32,9 @@ public class ScalingDownResp extends AbstractModel {
     private String [] DealNames;
 
     /**
-     * Get 订单号
+     * Get 订单号列表
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DealNames 订单号
+     * @return DealNames 订单号列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getDealNames() {
@@ -42,9 +42,9 @@ public class ScalingDownResp extends AbstractModel {
     }
 
     /**
-     * Set 订单号
+     * Set 订单号列表
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DealNames 订单号
+     * @param DealNames 订单号列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDealNames(String [] DealNames) {

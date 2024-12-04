@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ModifyGroupOffsetsRequest extends AbstractModel {
 
     /**
-    * kafka实例id
+    * ckafka集群实例Id
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * kafka 消费分组
+    * 消费分组名称
     */
     @SerializedName("Group")
     @Expose
@@ -45,7 +45,7 @@ public class ModifyGroupOffsetsRequest extends AbstractModel {
     private Long Strategy;
 
     /**
-    * 表示需要重置的topics， 不填表示全部
+    * 需要重置的主题名列表， 不填表示全部
     */
     @SerializedName("Topics")
     @Expose
@@ -80,32 +80,32 @@ public class ModifyGroupOffsetsRequest extends AbstractModel {
     private Long [] Partitions;
 
     /**
-     * Get kafka实例id 
-     * @return InstanceId kafka实例id
+     * Get ckafka集群实例Id 
+     * @return InstanceId ckafka集群实例Id
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set kafka实例id
-     * @param InstanceId kafka实例id
+     * Set ckafka集群实例Id
+     * @param InstanceId ckafka集群实例Id
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get kafka 消费分组 
-     * @return Group kafka 消费分组
+     * Get 消费分组名称 
+     * @return Group 消费分组名称
      */
     public String getGroup() {
         return this.Group;
     }
 
     /**
-     * Set kafka 消费分组
-     * @param Group kafka 消费分组
+     * Set 消费分组名称
+     * @param Group 消费分组名称
      */
     public void setGroup(String Group) {
         this.Group = Group;
@@ -128,16 +128,16 @@ public class ModifyGroupOffsetsRequest extends AbstractModel {
     }
 
     /**
-     * Get 表示需要重置的topics， 不填表示全部 
-     * @return Topics 表示需要重置的topics， 不填表示全部
+     * Get 需要重置的主题名列表， 不填表示全部 
+     * @return Topics 需要重置的主题名列表， 不填表示全部
      */
     public String [] getTopics() {
         return this.Topics;
     }
 
     /**
-     * Set 表示需要重置的topics， 不填表示全部
-     * @param Topics 表示需要重置的topics， 不填表示全部
+     * Set 需要重置的主题名列表， 不填表示全部
+     * @param Topics 需要重置的主题名列表， 不填表示全部
      */
     public void setTopics(String [] Topics) {
         this.Topics = Topics;

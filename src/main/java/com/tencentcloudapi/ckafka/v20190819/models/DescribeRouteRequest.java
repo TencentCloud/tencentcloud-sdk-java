@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DescribeRouteRequest extends AbstractModel {
 
     /**
-    * 实例唯一id
+    * ckafka集群实例Id
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 路由id
+    * 路由Id
     */
     @SerializedName("RouteId")
     @Expose
     private Long RouteId;
 
     /**
-     * Get 实例唯一id 
-     * @return InstanceId 实例唯一id
+     * Get ckafka集群实例Id 
+     * @return InstanceId ckafka集群实例Id
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例唯一id
-     * @param InstanceId 实例唯一id
+     * Set ckafka集群实例Id
+     * @param InstanceId ckafka集群实例Id
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 路由id 
-     * @return RouteId 路由id
+     * Get 路由Id 
+     * @return RouteId 路由Id
      */
     public Long getRouteId() {
         return this.RouteId;
     }
 
     /**
-     * Set 路由id
-     * @param RouteId 路由id
+     * Set 路由Id
+     * @param RouteId 路由Id
      */
     public void setRouteId(Long RouteId) {
         this.RouteId = RouteId;
