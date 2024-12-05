@@ -104,7 +104,11 @@ public abstract class SSEResponseModel extends AbstractModel implements Iterable
                         if (sb.length() > 0) {
                             sb.append('\n');
                         }
-                        sb.append(line.substring(colonIdx + 1));
+                        line = line.substring(colonIdx + 1);
+                        if (line.charAt(0) == ' ') {
+                            line = line.substring(1);
+                        }
+                        sb.append(line);
                         break;
                     case "retry":
                         e.Retry = Integer.parseInt(line.substring(colonIdx + 1));
