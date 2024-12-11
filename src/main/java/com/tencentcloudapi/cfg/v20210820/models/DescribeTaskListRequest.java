@@ -122,6 +122,13 @@ public class DescribeTaskListRequest extends AbstractModel {
     private Long [] TaskStatusList;
 
     /**
+    * 架构ID
+    */
+    @SerializedName("ArchId")
+    @Expose
+    private String ArchId;
+
+    /**
      * Get 分页Limit 
      * @return Limit 分页Limit
      */
@@ -345,6 +352,22 @@ public class DescribeTaskListRequest extends AbstractModel {
         this.TaskStatusList = TaskStatusList;
     }
 
+    /**
+     * Get 架构ID 
+     * @return ArchId 架构ID
+     */
+    public String getArchId() {
+        return this.ArchId;
+    }
+
+    /**
+     * Set 架构ID
+     * @param ArchId 架构ID
+     */
+    public void setArchId(String ArchId) {
+        this.ArchId = ArchId;
+    }
+
     public DescribeTaskListRequest() {
     }
 
@@ -416,6 +439,9 @@ public class DescribeTaskListRequest extends AbstractModel {
                 this.TaskStatusList[i] = new Long(source.TaskStatusList[i]);
             }
         }
+        if (source.ArchId != null) {
+            this.ArchId = new String(source.ArchId);
+        }
     }
 
 
@@ -437,6 +463,7 @@ public class DescribeTaskListRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "ApplicationId.", this.ApplicationId);
         this.setParamArraySimple(map, prefix + "ApplicationName.", this.ApplicationName);
         this.setParamArraySimple(map, prefix + "TaskStatusList.", this.TaskStatusList);
+        this.setParamSimple(map, prefix + "ArchId", this.ArchId);
 
     }
 }

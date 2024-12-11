@@ -534,7 +534,9 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
-     *获取amqp集群列表
+     *历史原因，该接口位于tdmq-manager，目前rabbitmq产品没有使用该接口，当前使用的是DescribeRabbitMQVipInstances。不过从调用链上看，线网还有请求流程，所以走预下线流程。
+
+获取amqp集群列表
      * @param req DescribeAMQPClustersRequest
      * @return DescribeAMQPClustersResponse
      * @throws TencentCloudSDKException
@@ -597,19 +599,6 @@ public class TdmqClient extends AbstractClient{
     public DescribeClustersResponse DescribeClusters(DescribeClustersRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeClusters", DescribeClustersResponse.class);
-    }
-
-    /**
-     *接口很久之前已删除，需下线
-
-枚举cmq死信队列源队列
-     * @param req DescribeCmqDeadLetterSourceQueuesRequest
-     * @return DescribeCmqDeadLetterSourceQueuesResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeCmqDeadLetterSourceQueuesResponse DescribeCmqDeadLetterSourceQueues(DescribeCmqDeadLetterSourceQueuesRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeCmqDeadLetterSourceQueues", DescribeCmqDeadLetterSourceQueuesResponse.class);
     }
 
     /**
@@ -899,7 +888,9 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
-     *RabbitMQ专享版查询虚拟主机列表
+     *消息队列TDMQ RabbitMQ 有一个存量旧接口没下线，目前实际上已经不在产品中使用：DescribeRabbitMQVirtualHostList，这个接口很久前已经被 DescribeRabbitMQVirtualHost 替换掉。已无用户在调用。
+
+RabbitMQ专享版查询虚拟主机列表
      * @param req DescribeRabbitMQVirtualHostListRequest
      * @return DescribeRabbitMQVirtualHostListResponse
      * @throws TencentCloudSDKException
@@ -1262,7 +1253,9 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
-     *更新Amqp集群信息
+     *历史原因，该接口位于tdmq-manager，目前rabbitmq产品没有使用该接口，当前使用的是ModifyRabbitMQVipInstance。不过从调用链上看，线网还有请求流程，所以走预下线流程。
+
+更新Amqp集群信息
      * @param req ModifyAMQPClusterRequest
      * @return ModifyAMQPClusterResponse
      * @throws TencentCloudSDKException

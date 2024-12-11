@@ -103,20 +103,6 @@ public class ModifyServerlessStrategyRequest extends AbstractModel {
     private Long MaxRoCount;
 
     /**
-    * 集群是否允许扩容，可选范围<li>yes</li><li>no</li>
-    */
-    @SerializedName("AutoScaleUp")
-    @Expose
-    private String AutoScaleUp;
-
-    /**
-    * 集群是否允许缩容，可选范围<li>yes</li><li>no</li>
-    */
-    @SerializedName("AutoScaleDown")
-    @Expose
-    private String AutoScaleDown;
-
-    /**
      * Get serverless集群id 
      * @return ClusterId serverless集群id
      */
@@ -300,38 +286,6 @@ public class ModifyServerlessStrategyRequest extends AbstractModel {
         this.MaxRoCount = MaxRoCount;
     }
 
-    /**
-     * Get 集群是否允许扩容，可选范围<li>yes</li><li>no</li> 
-     * @return AutoScaleUp 集群是否允许扩容，可选范围<li>yes</li><li>no</li>
-     */
-    public String getAutoScaleUp() {
-        return this.AutoScaleUp;
-    }
-
-    /**
-     * Set 集群是否允许扩容，可选范围<li>yes</li><li>no</li>
-     * @param AutoScaleUp 集群是否允许扩容，可选范围<li>yes</li><li>no</li>
-     */
-    public void setAutoScaleUp(String AutoScaleUp) {
-        this.AutoScaleUp = AutoScaleUp;
-    }
-
-    /**
-     * Get 集群是否允许缩容，可选范围<li>yes</li><li>no</li> 
-     * @return AutoScaleDown 集群是否允许缩容，可选范围<li>yes</li><li>no</li>
-     */
-    public String getAutoScaleDown() {
-        return this.AutoScaleDown;
-    }
-
-    /**
-     * Set 集群是否允许缩容，可选范围<li>yes</li><li>no</li>
-     * @param AutoScaleDown 集群是否允许缩容，可选范围<li>yes</li><li>no</li>
-     */
-    public void setAutoScaleDown(String AutoScaleDown) {
-        this.AutoScaleDown = AutoScaleDown;
-    }
-
     public ModifyServerlessStrategyRequest() {
     }
 
@@ -373,12 +327,6 @@ public class ModifyServerlessStrategyRequest extends AbstractModel {
         if (source.MaxRoCount != null) {
             this.MaxRoCount = new Long(source.MaxRoCount);
         }
-        if (source.AutoScaleUp != null) {
-            this.AutoScaleUp = new String(source.AutoScaleUp);
-        }
-        if (source.AutoScaleDown != null) {
-            this.AutoScaleDown = new String(source.AutoScaleDown);
-        }
     }
 
 
@@ -397,8 +345,6 @@ public class ModifyServerlessStrategyRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "MaxRoCpu", this.MaxRoCpu);
         this.setParamSimple(map, prefix + "MinRoCount", this.MinRoCount);
         this.setParamSimple(map, prefix + "MaxRoCount", this.MaxRoCount);
-        this.setParamSimple(map, prefix + "AutoScaleUp", this.AutoScaleUp);
-        this.setParamSimple(map, prefix + "AutoScaleDown", this.AutoScaleDown);
 
     }
 }

@@ -73,6 +73,13 @@ public class Operation extends AbstractModel {
     private Float Progress;
 
     /**
+    * 回滚标记， 0未回滚 ，1回滚中，2已回滚
+    */
+    @SerializedName("RollbackTag")
+    @Expose
+    private Long RollbackTag;
+
+    /**
     * 操作者Uin
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -193,6 +200,22 @@ public class Operation extends AbstractModel {
     }
 
     /**
+     * Get 回滚标记， 0未回滚 ，1回滚中，2已回滚 
+     * @return RollbackTag 回滚标记， 0未回滚 ，1回滚中，2已回滚
+     */
+    public Long getRollbackTag() {
+        return this.RollbackTag;
+    }
+
+    /**
+     * Set 回滚标记， 0未回滚 ，1回滚中，2已回滚
+     * @param RollbackTag 回滚标记， 0未回滚 ，1回滚中，2已回滚
+     */
+    public void setRollbackTag(Long RollbackTag) {
+        this.RollbackTag = RollbackTag;
+    }
+
+    /**
      * Get 操作者Uin
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return SubAccountUin 操作者Uin
@@ -244,6 +267,9 @@ public class Operation extends AbstractModel {
         if (source.Progress != null) {
             this.Progress = new Float(source.Progress);
         }
+        if (source.RollbackTag != null) {
+            this.RollbackTag = new Long(source.RollbackTag);
+        }
         if (source.SubAccountUin != null) {
             this.SubAccountUin = new String(source.SubAccountUin);
         }
@@ -261,6 +287,7 @@ public class Operation extends AbstractModel {
         this.setParamSimple(map, prefix + "Result", this.Result);
         this.setParamArrayObj(map, prefix + "Tasks.", this.Tasks);
         this.setParamSimple(map, prefix + "Progress", this.Progress);
+        this.setParamSimple(map, prefix + "RollbackTag", this.RollbackTag);
         this.setParamSimple(map, prefix + "SubAccountUin", this.SubAccountUin);
 
     }

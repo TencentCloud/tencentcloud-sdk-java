@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeManagersRequest extends AbstractModel {
 
     /**
-    * 公司ID
+    * 公司ID,可以从DescribeCompanies接口获取
     */
     @SerializedName("CompanyId")
     @Expose
@@ -80,16 +80,16 @@ public class DescribeManagersRequest extends AbstractModel {
     private String SearchKey;
 
     /**
-     * Get 公司ID 
-     * @return CompanyId 公司ID
+     * Get 公司ID,可以从DescribeCompanies接口获取 
+     * @return CompanyId 公司ID,可以从DescribeCompanies接口获取
      */
     public Long getCompanyId() {
         return this.CompanyId;
     }
 
     /**
-     * Set 公司ID
-     * @param CompanyId 公司ID
+     * Set 公司ID,可以从DescribeCompanies接口获取
+     * @param CompanyId 公司ID,可以从DescribeCompanies接口获取
      */
     public void setCompanyId(Long CompanyId) {
         this.CompanyId = CompanyId;

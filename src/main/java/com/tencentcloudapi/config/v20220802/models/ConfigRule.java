@@ -188,7 +188,7 @@ ConfigurationItemChangeNotification：变更触发
     private InputParameterForManage [] ManageInputParameter;
 
     /**
-    * 规则名称
+    * 合规包名称
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CompliancePackName")
@@ -681,9 +681,9 @@ ConfigurationItemChangeNotification：变更触发
     }
 
     /**
-     * Get 规则名称
+     * Get 合规包名称
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CompliancePackName 规则名称
+     * @return CompliancePackName 合规包名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCompliancePackName() {
@@ -691,9 +691,9 @@ ConfigurationItemChangeNotification：变更触发
     }
 
     /**
-     * Set 规则名称
+     * Set 合规包名称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CompliancePackName 规则名称
+     * @param CompliancePackName 合规包名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCompliancePackName(String CompliancePackName) {

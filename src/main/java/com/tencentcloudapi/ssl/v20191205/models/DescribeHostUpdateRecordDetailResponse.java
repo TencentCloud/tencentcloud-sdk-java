@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeHostUpdateRecordDetailResponse extends AbstractModel {
 
     /**
-    * 总数
+    * 总数,如果取不到返回0
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
@@ -32,7 +32,7 @@ public class DescribeHostUpdateRecordDetailResponse extends AbstractModel {
     private Long TotalCount;
 
     /**
-    * 证书部署记录列表
+    * 证书部署记录列表，如果取不到值返回空数组
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RecordDetailList")
@@ -40,7 +40,7 @@ public class DescribeHostUpdateRecordDetailResponse extends AbstractModel {
     private UpdateRecordDetails [] RecordDetailList;
 
     /**
-    * 成功总数
+    * 成功总数,如果取不到返回0
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SuccessTotalCount")
@@ -48,7 +48,7 @@ public class DescribeHostUpdateRecordDetailResponse extends AbstractModel {
     private Long SuccessTotalCount;
 
     /**
-    * 失败总数
+    * 失败总数,如果取不到返回0
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FailedTotalCount")
@@ -56,7 +56,7 @@ public class DescribeHostUpdateRecordDetailResponse extends AbstractModel {
     private Long FailedTotalCount;
 
     /**
-    * 部署中总数
+    * 部署中总数,如果取不到返回0
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RunningTotalCount")
@@ -71,9 +71,9 @@ public class DescribeHostUpdateRecordDetailResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 总数
+     * Get 总数,如果取不到返回0
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TotalCount 总数
+     * @return TotalCount 总数,如果取不到返回0
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
@@ -81,9 +81,9 @@ public class DescribeHostUpdateRecordDetailResponse extends AbstractModel {
     }
 
     /**
-     * Set 总数
+     * Set 总数,如果取不到返回0
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TotalCount 总数
+     * @param TotalCount 总数,如果取不到返回0
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
@@ -91,9 +91,9 @@ public class DescribeHostUpdateRecordDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get 证书部署记录列表
+     * Get 证书部署记录列表，如果取不到值返回空数组
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RecordDetailList 证书部署记录列表
+     * @return RecordDetailList 证书部署记录列表，如果取不到值返回空数组
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public UpdateRecordDetails [] getRecordDetailList() {
@@ -101,9 +101,9 @@ public class DescribeHostUpdateRecordDetailResponse extends AbstractModel {
     }
 
     /**
-     * Set 证书部署记录列表
+     * Set 证书部署记录列表，如果取不到值返回空数组
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RecordDetailList 证书部署记录列表
+     * @param RecordDetailList 证书部署记录列表，如果取不到值返回空数组
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRecordDetailList(UpdateRecordDetails [] RecordDetailList) {
@@ -111,9 +111,9 @@ public class DescribeHostUpdateRecordDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get 成功总数
+     * Get 成功总数,如果取不到返回0
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SuccessTotalCount 成功总数
+     * @return SuccessTotalCount 成功总数,如果取不到返回0
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSuccessTotalCount() {
@@ -121,9 +121,9 @@ public class DescribeHostUpdateRecordDetailResponse extends AbstractModel {
     }
 
     /**
-     * Set 成功总数
+     * Set 成功总数,如果取不到返回0
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SuccessTotalCount 成功总数
+     * @param SuccessTotalCount 成功总数,如果取不到返回0
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSuccessTotalCount(Long SuccessTotalCount) {
@@ -131,9 +131,9 @@ public class DescribeHostUpdateRecordDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get 失败总数
+     * Get 失败总数,如果取不到返回0
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FailedTotalCount 失败总数
+     * @return FailedTotalCount 失败总数,如果取不到返回0
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFailedTotalCount() {
@@ -141,9 +141,9 @@ public class DescribeHostUpdateRecordDetailResponse extends AbstractModel {
     }
 
     /**
-     * Set 失败总数
+     * Set 失败总数,如果取不到返回0
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FailedTotalCount 失败总数
+     * @param FailedTotalCount 失败总数,如果取不到返回0
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFailedTotalCount(Long FailedTotalCount) {
@@ -151,9 +151,9 @@ public class DescribeHostUpdateRecordDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get 部署中总数
+     * Get 部署中总数,如果取不到返回0
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return RunningTotalCount 部署中总数
+     * @return RunningTotalCount 部署中总数,如果取不到返回0
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRunningTotalCount() {
@@ -161,9 +161,9 @@ public class DescribeHostUpdateRecordDetailResponse extends AbstractModel {
     }
 
     /**
-     * Set 部署中总数
+     * Set 部署中总数,如果取不到返回0
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RunningTotalCount 部署中总数
+     * @param RunningTotalCount 部署中总数,如果取不到返回0
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRunningTotalCount(Long RunningTotalCount) {

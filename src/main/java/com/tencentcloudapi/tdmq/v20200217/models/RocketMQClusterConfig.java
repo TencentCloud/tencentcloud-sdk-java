@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class RocketMQClusterConfig extends AbstractModel {
 
     /**
-    * 单命名空间TPS上线
+    * 单命名空间TPS上限
     */
     @SerializedName("MaxTpsPerNamespace")
     @Expose
@@ -103,17 +103,21 @@ public class RocketMQClusterConfig extends AbstractModel {
     private RocketMQTopicDistribution [] TopicDistribution;
 
     /**
-     * Get 单命名空间TPS上线 
-     * @return MaxTpsPerNamespace 单命名空间TPS上线
+     * Get 单命名空间TPS上限 
+     * @return MaxTpsPerNamespace 单命名空间TPS上限
+     * @deprecated
      */
+    @Deprecated
     public Long getMaxTpsPerNamespace() {
         return this.MaxTpsPerNamespace;
     }
 
     /**
-     * Set 单命名空间TPS上线
-     * @param MaxTpsPerNamespace 单命名空间TPS上线
+     * Set 单命名空间TPS上限
+     * @param MaxTpsPerNamespace 单命名空间TPS上限
+     * @deprecated
      */
+    @Deprecated
     public void setMaxTpsPerNamespace(Long MaxTpsPerNamespace) {
         this.MaxTpsPerNamespace = MaxTpsPerNamespace;
     }

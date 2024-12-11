@@ -47,7 +47,7 @@ public class AttachPolicyInfo extends AbstractModel {
     private String AddTime;
 
     /**
-    * 创建来源，1 通过控制台创建, 2 通过策略语法创建。
+    * 创建来源，1 通过控制台创建, 2 通过策略语法创建
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateMode")
@@ -55,7 +55,7 @@ public class AttachPolicyInfo extends AbstractModel {
     private Long CreateMode;
 
     /**
-    * 取值为user和QCS
+    * 取值为User和QCS。User代表自定义策略，QCS代表系统策略
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PolicyType")
@@ -87,7 +87,7 @@ public class AttachPolicyInfo extends AbstractModel {
     private String OperateUin;
 
     /**
-    * UinType为0表示OperateUin字段是子账号Uin，如果UinType为1表示OperateUin字段是角色ID
+    * 取值为0和1。OperateUinType为0表示OperateUin字段是子账号Uin。如果OperateUinType为1表示OperateUin字段是角色ID
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OperateUinType")
@@ -95,7 +95,7 @@ public class AttachPolicyInfo extends AbstractModel {
     private Long OperateUinType;
 
     /**
-    * 是否已下线
+    * 是否已下线，1代表已下线，0代表未下线
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Deactived")
@@ -167,9 +167,9 @@ public class AttachPolicyInfo extends AbstractModel {
     }
 
     /**
-     * Get 创建来源，1 通过控制台创建, 2 通过策略语法创建。
+     * Get 创建来源，1 通过控制台创建, 2 通过策略语法创建
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreateMode 创建来源，1 通过控制台创建, 2 通过策略语法创建。
+     * @return CreateMode 创建来源，1 通过控制台创建, 2 通过策略语法创建
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCreateMode() {
@@ -177,9 +177,9 @@ public class AttachPolicyInfo extends AbstractModel {
     }
 
     /**
-     * Set 创建来源，1 通过控制台创建, 2 通过策略语法创建。
+     * Set 创建来源，1 通过控制台创建, 2 通过策略语法创建
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreateMode 创建来源，1 通过控制台创建, 2 通过策略语法创建。
+     * @param CreateMode 创建来源，1 通过控制台创建, 2 通过策略语法创建
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateMode(Long CreateMode) {
@@ -187,9 +187,9 @@ public class AttachPolicyInfo extends AbstractModel {
     }
 
     /**
-     * Get 取值为user和QCS
+     * Get 取值为User和QCS。User代表自定义策略，QCS代表系统策略
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PolicyType 取值为user和QCS
+     * @return PolicyType 取值为User和QCS。User代表自定义策略，QCS代表系统策略
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPolicyType() {
@@ -197,9 +197,9 @@ public class AttachPolicyInfo extends AbstractModel {
     }
 
     /**
-     * Set 取值为user和QCS
+     * Set 取值为User和QCS。User代表自定义策略，QCS代表系统策略
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PolicyType 取值为user和QCS
+     * @param PolicyType 取值为User和QCS。User代表自定义策略，QCS代表系统策略
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPolicyType(String PolicyType) {
@@ -267,9 +267,9 @@ public class AttachPolicyInfo extends AbstractModel {
     }
 
     /**
-     * Get UinType为0表示OperateUin字段是子账号Uin，如果UinType为1表示OperateUin字段是角色ID
+     * Get 取值为0和1。OperateUinType为0表示OperateUin字段是子账号Uin。如果OperateUinType为1表示OperateUin字段是角色ID
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OperateUinType UinType为0表示OperateUin字段是子账号Uin，如果UinType为1表示OperateUin字段是角色ID
+     * @return OperateUinType 取值为0和1。OperateUinType为0表示OperateUin字段是子账号Uin。如果OperateUinType为1表示OperateUin字段是角色ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getOperateUinType() {
@@ -277,9 +277,9 @@ public class AttachPolicyInfo extends AbstractModel {
     }
 
     /**
-     * Set UinType为0表示OperateUin字段是子账号Uin，如果UinType为1表示OperateUin字段是角色ID
+     * Set 取值为0和1。OperateUinType为0表示OperateUin字段是子账号Uin。如果OperateUinType为1表示OperateUin字段是角色ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param OperateUinType UinType为0表示OperateUin字段是子账号Uin，如果UinType为1表示OperateUin字段是角色ID
+     * @param OperateUinType 取值为0和1。OperateUinType为0表示OperateUin字段是子账号Uin。如果OperateUinType为1表示OperateUin字段是角色ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOperateUinType(Long OperateUinType) {
@@ -287,9 +287,9 @@ public class AttachPolicyInfo extends AbstractModel {
     }
 
     /**
-     * Get 是否已下线
+     * Get 是否已下线，1代表已下线，0代表未下线
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Deactived 是否已下线
+     * @return Deactived 是否已下线，1代表已下线，0代表未下线
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDeactived() {
@@ -297,9 +297,9 @@ public class AttachPolicyInfo extends AbstractModel {
     }
 
     /**
-     * Set 是否已下线
+     * Set 是否已下线，1代表已下线，0代表未下线
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Deactived 是否已下线
+     * @param Deactived 是否已下线，1代表已下线，0代表未下线
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeactived(Long Deactived) {

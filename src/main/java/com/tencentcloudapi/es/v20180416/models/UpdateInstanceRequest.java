@@ -346,6 +346,13 @@ CLOSE 关闭
     private EnableScheduleOperationDuration EnableScheduleOperationDuration;
 
     /**
+    * 开启集群保护：OPEN-开启，CLOSE-关闭
+    */
+    @SerializedName("EnableDestroyProtection")
+    @Expose
+    private String EnableDestroyProtection;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -1117,6 +1124,22 @@ CLOSE 关闭
         this.EnableScheduleOperationDuration = EnableScheduleOperationDuration;
     }
 
+    /**
+     * Get 开启集群保护：OPEN-开启，CLOSE-关闭 
+     * @return EnableDestroyProtection 开启集群保护：OPEN-开启，CLOSE-关闭
+     */
+    public String getEnableDestroyProtection() {
+        return this.EnableDestroyProtection;
+    }
+
+    /**
+     * Set 开启集群保护：OPEN-开启，CLOSE-关闭
+     * @param EnableDestroyProtection 开启集群保护：OPEN-开启，CLOSE-关闭
+     */
+    public void setEnableDestroyProtection(String EnableDestroyProtection) {
+        this.EnableDestroyProtection = EnableDestroyProtection;
+    }
+
     public UpdateInstanceRequest() {
     }
 
@@ -1263,6 +1286,9 @@ CLOSE 关闭
         if (source.EnableScheduleOperationDuration != null) {
             this.EnableScheduleOperationDuration = new EnableScheduleOperationDuration(source.EnableScheduleOperationDuration);
         }
+        if (source.EnableDestroyProtection != null) {
+            this.EnableDestroyProtection = new String(source.EnableDestroyProtection);
+        }
     }
 
 
@@ -1313,6 +1339,7 @@ CLOSE 关闭
         this.setParamSimple(map, prefix + "ReadWriteMode", this.ReadWriteMode);
         this.setParamSimple(map, prefix + "EnableScheduleRecoverGroup", this.EnableScheduleRecoverGroup);
         this.setParamObj(map, prefix + "EnableScheduleOperationDuration.", this.EnableScheduleOperationDuration);
+        this.setParamSimple(map, prefix + "EnableDestroyProtection", this.EnableDestroyProtection);
 
     }
 }

@@ -45,7 +45,7 @@ public class ConfirmVideoTranslateJobResponse extends AbstractModel {
     private String SessionId;
 
     /**
-    * 该字段与 DescribeVideoTranslateJob 接口的 Status 功能相同，均表示任务状态。0：任务初始化。1：音频翻译中。 2：音频翻译失败。 3：音频翻译成功。 4：音频结果待确认。 5：音频结果已确认完毕。6：视频翻译中。 7：视频翻译失败。 8：视频翻译成功。
+    * 任务状态。0：任务初始化。1：音频翻译中。 2：音频翻译失败。 3：音频翻译成功。 4：音频结果待确认。 5：音频结果已确认完毕。6：视频翻译中。 7：视频翻译失败。 8：视频翻译成功。
     */
     @SerializedName("Status")
     @Expose
@@ -57,6 +57,13 @@ public class ConfirmVideoTranslateJobResponse extends AbstractModel {
     @SerializedName("Message")
     @Expose
     private String Message;
+
+    /**
+    * 任务状态。0：任务初始化。1：音频翻译中。 2：音频翻译失败。 3：音频翻译成功。 4：音频结果待确认。 5：音频结果已确认完毕。6：视频翻译中。 7：视频翻译失败。 8：视频翻译成功。
+    */
+    @SerializedName("JobStatus")
+    @Expose
+    private Long JobStatus;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -84,7 +91,9 @@ public class ConfirmVideoTranslateJobResponse extends AbstractModel {
     /**
      * Get 音频转译任务 ID。 
      * @return TaskId 音频转译任务 ID。
+     * @deprecated
      */
+    @Deprecated
     public String getTaskId() {
         return this.TaskId;
     }
@@ -92,7 +101,9 @@ public class ConfirmVideoTranslateJobResponse extends AbstractModel {
     /**
      * Set 音频转译任务 ID。
      * @param TaskId 音频转译任务 ID。
+     * @deprecated
      */
+    @Deprecated
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
@@ -100,7 +111,9 @@ public class ConfirmVideoTranslateJobResponse extends AbstractModel {
     /**
      * Get 音频转译结果确认 session。	 
      * @return SessionId 音频转译结果确认 session。	
+     * @deprecated
      */
+    @Deprecated
     public String getSessionId() {
         return this.SessionId;
     }
@@ -108,23 +121,29 @@ public class ConfirmVideoTranslateJobResponse extends AbstractModel {
     /**
      * Set 音频转译结果确认 session。	
      * @param SessionId 音频转译结果确认 session。	
+     * @deprecated
      */
+    @Deprecated
     public void setSessionId(String SessionId) {
         this.SessionId = SessionId;
     }
 
     /**
-     * Get 该字段与 DescribeVideoTranslateJob 接口的 Status 功能相同，均表示任务状态。0：任务初始化。1：音频翻译中。 2：音频翻译失败。 3：音频翻译成功。 4：音频结果待确认。 5：音频结果已确认完毕。6：视频翻译中。 7：视频翻译失败。 8：视频翻译成功。 
-     * @return Status 该字段与 DescribeVideoTranslateJob 接口的 Status 功能相同，均表示任务状态。0：任务初始化。1：音频翻译中。 2：音频翻译失败。 3：音频翻译成功。 4：音频结果待确认。 5：音频结果已确认完毕。6：视频翻译中。 7：视频翻译失败。 8：视频翻译成功。
+     * Get 任务状态。0：任务初始化。1：音频翻译中。 2：音频翻译失败。 3：音频翻译成功。 4：音频结果待确认。 5：音频结果已确认完毕。6：视频翻译中。 7：视频翻译失败。 8：视频翻译成功。 
+     * @return Status 任务状态。0：任务初始化。1：音频翻译中。 2：音频翻译失败。 3：音频翻译成功。 4：音频结果待确认。 5：音频结果已确认完毕。6：视频翻译中。 7：视频翻译失败。 8：视频翻译成功。
+     * @deprecated
      */
+    @Deprecated
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 该字段与 DescribeVideoTranslateJob 接口的 Status 功能相同，均表示任务状态。0：任务初始化。1：音频翻译中。 2：音频翻译失败。 3：音频翻译成功。 4：音频结果待确认。 5：音频结果已确认完毕。6：视频翻译中。 7：视频翻译失败。 8：视频翻译成功。
-     * @param Status 该字段与 DescribeVideoTranslateJob 接口的 Status 功能相同，均表示任务状态。0：任务初始化。1：音频翻译中。 2：音频翻译失败。 3：音频翻译成功。 4：音频结果待确认。 5：音频结果已确认完毕。6：视频翻译中。 7：视频翻译失败。 8：视频翻译成功。
+     * Set 任务状态。0：任务初始化。1：音频翻译中。 2：音频翻译失败。 3：音频翻译成功。 4：音频结果待确认。 5：音频结果已确认完毕。6：视频翻译中。 7：视频翻译失败。 8：视频翻译成功。
+     * @param Status 任务状态。0：任务初始化。1：音频翻译中。 2：音频翻译失败。 3：音频翻译成功。 4：音频结果待确认。 5：音频结果已确认完毕。6：视频翻译中。 7：视频翻译失败。 8：视频翻译成功。
+     * @deprecated
      */
+    @Deprecated
     public void setStatus(Long Status) {
         this.Status = Status;
     }
@@ -132,7 +151,9 @@ public class ConfirmVideoTranslateJobResponse extends AbstractModel {
     /**
      * Get 视频转译任务信息。	 
      * @return Message 视频转译任务信息。	
+     * @deprecated
      */
+    @Deprecated
     public String getMessage() {
         return this.Message;
     }
@@ -140,9 +161,27 @@ public class ConfirmVideoTranslateJobResponse extends AbstractModel {
     /**
      * Set 视频转译任务信息。	
      * @param Message 视频转译任务信息。	
+     * @deprecated
      */
+    @Deprecated
     public void setMessage(String Message) {
         this.Message = Message;
+    }
+
+    /**
+     * Get 任务状态。0：任务初始化。1：音频翻译中。 2：音频翻译失败。 3：音频翻译成功。 4：音频结果待确认。 5：音频结果已确认完毕。6：视频翻译中。 7：视频翻译失败。 8：视频翻译成功。 
+     * @return JobStatus 任务状态。0：任务初始化。1：音频翻译中。 2：音频翻译失败。 3：音频翻译成功。 4：音频结果待确认。 5：音频结果已确认完毕。6：视频翻译中。 7：视频翻译失败。 8：视频翻译成功。
+     */
+    public Long getJobStatus() {
+        return this.JobStatus;
+    }
+
+    /**
+     * Set 任务状态。0：任务初始化。1：音频翻译中。 2：音频翻译失败。 3：音频翻译成功。 4：音频结果待确认。 5：音频结果已确认完毕。6：视频翻译中。 7：视频翻译失败。 8：视频翻译成功。
+     * @param JobStatus 任务状态。0：任务初始化。1：音频翻译中。 2：音频翻译失败。 3：音频翻译成功。 4：音频结果待确认。 5：音频结果已确认完毕。6：视频翻译中。 7：视频翻译失败。 8：视频翻译成功。
+     */
+    public void setJobStatus(Long JobStatus) {
+        this.JobStatus = JobStatus;
     }
 
     /**
@@ -184,6 +223,9 @@ public class ConfirmVideoTranslateJobResponse extends AbstractModel {
         if (source.Message != null) {
             this.Message = new String(source.Message);
         }
+        if (source.JobStatus != null) {
+            this.JobStatus = new Long(source.JobStatus);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -199,6 +241,7 @@ public class ConfirmVideoTranslateJobResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "Message", this.Message);
+        this.setParamSimple(map, prefix + "JobStatus", this.JobStatus);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

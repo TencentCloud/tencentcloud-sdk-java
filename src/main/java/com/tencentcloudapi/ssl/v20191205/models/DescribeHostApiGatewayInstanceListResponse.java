@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeHostApiGatewayInstanceListResponse extends AbstractModel {
 
     /**
-    * apiGateway实例列表
+    * apiGateway实例列表,如取不到值返回空数组
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceList")
@@ -32,7 +32,7 @@ public class DescribeHostApiGatewayInstanceListResponse extends AbstractModel {
     private ApiGatewayInstanceDetail [] InstanceList;
 
     /**
-    * 总数
+    * 总数，如取不到值返回0
     */
     @SerializedName("TotalCount")
     @Expose
@@ -46,9 +46,9 @@ public class DescribeHostApiGatewayInstanceListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get apiGateway实例列表
+     * Get apiGateway实例列表,如取不到值返回空数组
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InstanceList apiGateway实例列表
+     * @return InstanceList apiGateway实例列表,如取不到值返回空数组
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ApiGatewayInstanceDetail [] getInstanceList() {
@@ -56,9 +56,9 @@ public class DescribeHostApiGatewayInstanceListResponse extends AbstractModel {
     }
 
     /**
-     * Set apiGateway实例列表
+     * Set apiGateway实例列表,如取不到值返回空数组
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InstanceList apiGateway实例列表
+     * @param InstanceList apiGateway实例列表,如取不到值返回空数组
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceList(ApiGatewayInstanceDetail [] InstanceList) {
@@ -66,16 +66,16 @@ public class DescribeHostApiGatewayInstanceListResponse extends AbstractModel {
     }
 
     /**
-     * Get 总数 
-     * @return TotalCount 总数
+     * Get 总数，如取不到值返回0 
+     * @return TotalCount 总数，如取不到值返回0
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 总数
-     * @param TotalCount 总数
+     * Set 总数，如取不到值返回0
+     * @param TotalCount 总数，如取不到值返回0
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

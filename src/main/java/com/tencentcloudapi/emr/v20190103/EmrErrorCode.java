@@ -141,6 +141,9 @@ public enum EmrErrorCode {
     // 无效的引导脚本。
      INVALIDPARAMETER_INVALIDBOOTSTRAPACTION("InvalidParameter.InvalidBootstrapAction"),
      
+    // ExternalAccess.ClbSetting.VpcSetting参数无效。
+     INVALIDPARAMETER_INVALIDCLBSERVERVPCSETTING("InvalidParameter.InvalidCLBServerVpcSetting"),
+     
     // 无效的ClickHouse集群。
      INVALIDPARAMETER_INVALIDCLICKHOUSECLUSTER("InvalidParameter.InvalidClickHouseCluster"),
      
@@ -198,6 +201,9 @@ public enum EmrErrorCode {
     // CustomConfig参数值无效。
      INVALIDPARAMETER_INVALIDEXTENDFIELD("InvalidParameter.InvalidExtendField"),
      
+    // 无效组件依赖集群vpc。
+     INVALIDPARAMETER_INVALIDEXTERNALSERVICEVPCID("InvalidParameter.InvalidExternalServiceVpcId"),
+     
     // 无效的任务失败处理策略。
      INVALIDPARAMETER_INVALIDFAILUREPOLICY("InvalidParameter.InvalidFailurePolicy"),
      
@@ -233,6 +239,9 @@ public enum EmrErrorCode {
      
     // 无效的元数据库URL。
      INVALIDPARAMETER_INVALIDMETADATAJDBCURL("InvalidParameter.InvalidMetaDataJdbcUrl"),
+     
+    // 无效的元数据库实例Id。
+     INVALIDPARAMETER_INVALIDMETAINSTANCEID("InvalidParameter.InvalidMetaInstanceId"),
      
     // 无效的元数据表类型。
      INVALIDPARAMETER_INVALIDMETATYPE("InvalidParameter.InvalidMetaType"),
@@ -303,6 +312,9 @@ public enum EmrErrorCode {
     // 参数ServiceNodeInfo无效或错误。
      INVALIDPARAMETER_INVALIDSERVICENODEINFO("InvalidParameter.InvalidServiceNodeInfo"),
      
+    // 参数错误。
+     INVALIDPARAMETER_INVALIDSERVICETYPE("InvalidParameter.InvalidServiceType"),
+     
     // 参数InvalidSoftDeployInfo无效或错误。
      INVALIDPARAMETER_INVALIDSOFTDEPLOYINFO("InvalidParameter.InvalidSoftDeployInfo"),
      
@@ -366,6 +378,9 @@ public enum EmrErrorCode {
     // 无效的统一元数据库。
      INVALIDPARAMETER_INVALIDUNIFYMETA("InvalidParameter.InvalidUnifyMeta"),
      
+    // 参数错误。
+     INVALIDPARAMETER_INVALIDVOLUMETYPE("InvalidParameter.InvalidVolumeType"),
+     
     // 无效的私有网络ID。
      INVALIDPARAMETER_INVALIDVPCID("InvalidParameter.InvalidVpcId"),
      
@@ -414,6 +429,15 @@ public enum EmrErrorCode {
     // 引导脚本数量超过限制。
      LIMITEXCEEDED_BOOTSTRAPACTIONSNUMLIMITEXCEEDED("LimitExceeded.BootstrapActionsNumLimitExceeded"),
      
+    // Pod Cpu请求数量超过集群限制。
+     LIMITEXCEEDED_PODCPULIMITEXCEEDEDAVAILABLECPU("LimitExceeded.PodCpuLimitExceededAvailableCpu"),
+     
+    // Pod Cpu请求数量超过节点限制。
+     LIMITEXCEEDED_PODCPULIMITEXCEEDEDNODEAVAILABLECPU("LimitExceeded.PodCpuLimitExceededNodeAvailableCpu"),
+     
+    // Pod 内存请求数量超过集群限制。
+     LIMITEXCEEDED_PODMEMORYLIMITEXCEEDEDAVAILABLEMEMORY("LimitExceeded.PodMemoryLimitExceededAvailableMemory"),
+     
     // 安全组数量超过限制。
      LIMITEXCEEDED_SECURITYGROUPNUMLIMITEXCEEDED("LimitExceeded.SecurityGroupNumLimitExceeded"),
      
@@ -450,6 +474,9 @@ public enum EmrErrorCode {
     // 无法找到监控元数据。
      RESOURCENOTFOUND_RESOURCENOTFOUND("ResourceNotFound.ResourceNotFound"),
      
+    // 无法找到该服务组件。
+     RESOURCENOTFOUND_SERVICEGROUPNOTFOUND("ResourceNotFound.ServiceGroupNotFound"),
+     
     // 未找到相应扩缩容规则。
      RESOURCENOTFOUND_STRATEGYNOTFOUND("ResourceNotFound.StrategyNotFound"),
      
@@ -461,6 +488,9 @@ public enum EmrErrorCode {
      
     // 没有查找到指定标签。
      RESOURCENOTFOUND_TAGSNOTFOUND("ResourceNotFound.TagsNotFound"),
+     
+    // 资源不可用。
+     RESOURCEUNAVAILABLE_NOTSUPPORTCLUSTERTYPE("ResourceUnavailable.NotSupportClusterType"),
      
     // 当前资源规格不存在默认规格。
      RESOURCEUNAVAILABLE_RESOURCESPECNOTDEFAULTSPEC("ResourceUnavailable.ResourceSpecNotDefaultSpec"),
@@ -476,6 +506,9 @@ public enum EmrErrorCode {
      
     // 云服务器已售罄。
      RESOURCESSOLDOUT_CVMSOLDOUT("ResourcesSoldOut.CvmSoldOut"),
+     
+    // 未授权操作。
+     UNAUTHORIZEDOPERATION("UnauthorizedOperation"),
      
     // appid不一致。
      UNAUTHORIZEDOPERATION_APPIDMISMATCHED("UnauthorizedOperation.AppIdMismatched"),

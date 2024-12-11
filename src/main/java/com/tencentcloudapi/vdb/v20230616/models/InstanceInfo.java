@@ -492,7 +492,9 @@ public class InstanceInfo extends AbstractModel {
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return HealthScore 健康得分。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public Float getHealthScore() {
         return this.HealthScore;
     }
@@ -502,7 +504,9 @@ public class InstanceInfo extends AbstractModel {
 注意：此字段可能返回 null，表示取不到有效值。
      * @param HealthScore 健康得分。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public void setHealthScore(Float HealthScore) {
         this.HealthScore = HealthScore;
     }
@@ -512,7 +516,9 @@ public class InstanceInfo extends AbstractModel {
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Warning 异常告警。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public Long getWarning() {
         return this.Warning;
     }
@@ -522,7 +528,9 @@ public class InstanceInfo extends AbstractModel {
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Warning 异常告警。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public void setWarning(Long Warning) {
         this.Warning = Warning;
     }
@@ -532,7 +540,9 @@ public class InstanceInfo extends AbstractModel {
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Project 所属项目。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public String getProject() {
         return this.Project;
     }
@@ -542,7 +552,9 @@ public class InstanceInfo extends AbstractModel {
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Project 所属项目。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public void setProject(String Project) {
         this.Project = Project;
     }

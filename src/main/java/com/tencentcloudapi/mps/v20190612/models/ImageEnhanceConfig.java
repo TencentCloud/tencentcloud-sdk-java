@@ -32,6 +32,30 @@ public class ImageEnhanceConfig extends AbstractModel {
     private SuperResolutionConfig SuperResolution;
 
     /**
+    * 色彩增强配置。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ColorEnhance")
+    @Expose
+    private ColorEnhanceConfig ColorEnhance;
+
+    /**
+    * 细节增强配置。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SharpEnhance")
+    @Expose
+    private SharpEnhanceConfig SharpEnhance;
+
+    /**
+    * 人脸增强配置。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("FaceEnhance")
+    @Expose
+    private FaceEnhanceConfig FaceEnhance;
+
+    /**
      * Get 超分配置。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return SuperResolution 超分配置。
@@ -51,6 +75,66 @@ public class ImageEnhanceConfig extends AbstractModel {
         this.SuperResolution = SuperResolution;
     }
 
+    /**
+     * Get 色彩增强配置。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ColorEnhance 色彩增强配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ColorEnhanceConfig getColorEnhance() {
+        return this.ColorEnhance;
+    }
+
+    /**
+     * Set 色彩增强配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ColorEnhance 色彩增强配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setColorEnhance(ColorEnhanceConfig ColorEnhance) {
+        this.ColorEnhance = ColorEnhance;
+    }
+
+    /**
+     * Get 细节增强配置。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SharpEnhance 细节增强配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public SharpEnhanceConfig getSharpEnhance() {
+        return this.SharpEnhance;
+    }
+
+    /**
+     * Set 细节增强配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SharpEnhance 细节增强配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSharpEnhance(SharpEnhanceConfig SharpEnhance) {
+        this.SharpEnhance = SharpEnhance;
+    }
+
+    /**
+     * Get 人脸增强配置。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FaceEnhance 人脸增强配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public FaceEnhanceConfig getFaceEnhance() {
+        return this.FaceEnhance;
+    }
+
+    /**
+     * Set 人脸增强配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FaceEnhance 人脸增强配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFaceEnhance(FaceEnhanceConfig FaceEnhance) {
+        this.FaceEnhance = FaceEnhance;
+    }
+
     public ImageEnhanceConfig() {
     }
 
@@ -62,6 +146,15 @@ public class ImageEnhanceConfig extends AbstractModel {
         if (source.SuperResolution != null) {
             this.SuperResolution = new SuperResolutionConfig(source.SuperResolution);
         }
+        if (source.ColorEnhance != null) {
+            this.ColorEnhance = new ColorEnhanceConfig(source.ColorEnhance);
+        }
+        if (source.SharpEnhance != null) {
+            this.SharpEnhance = new SharpEnhanceConfig(source.SharpEnhance);
+        }
+        if (source.FaceEnhance != null) {
+            this.FaceEnhance = new FaceEnhanceConfig(source.FaceEnhance);
+        }
     }
 
 
@@ -70,6 +163,9 @@ public class ImageEnhanceConfig extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "SuperResolution.", this.SuperResolution);
+        this.setParamObj(map, prefix + "ColorEnhance.", this.ColorEnhance);
+        this.setParamObj(map, prefix + "SharpEnhance.", this.SharpEnhance);
+        this.setParamObj(map, prefix + "FaceEnhance.", this.FaceEnhance);
 
     }
 }

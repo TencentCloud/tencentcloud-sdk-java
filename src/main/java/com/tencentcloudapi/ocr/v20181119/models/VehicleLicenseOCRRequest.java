@@ -50,6 +50,13 @@ DOUBLE 为行驶证主页正面和副页正面。
     private String CardSide;
 
     /**
+    * FRONT为行驶证主页正面（有红色印章的一面），BACK 为拖拉机行驶证副页正面识别
+    */
+    @SerializedName("TractorCardSide")
+    @Expose
+    private String TractorCardSide;
+
+    /**
      * Get 图片的 Base64 值。要求图片经Base64编码后不超过 7M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。
 图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。 
      * @return ImageBase64 图片的 Base64 值。要求图片经Base64编码后不超过 7M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。
@@ -117,6 +124,22 @@ DOUBLE 为行驶证主页正面和副页正面。
         this.CardSide = CardSide;
     }
 
+    /**
+     * Get FRONT为行驶证主页正面（有红色印章的一面），BACK 为拖拉机行驶证副页正面识别 
+     * @return TractorCardSide FRONT为行驶证主页正面（有红色印章的一面），BACK 为拖拉机行驶证副页正面识别
+     */
+    public String getTractorCardSide() {
+        return this.TractorCardSide;
+    }
+
+    /**
+     * Set FRONT为行驶证主页正面（有红色印章的一面），BACK 为拖拉机行驶证副页正面识别
+     * @param TractorCardSide FRONT为行驶证主页正面（有红色印章的一面），BACK 为拖拉机行驶证副页正面识别
+     */
+    public void setTractorCardSide(String TractorCardSide) {
+        this.TractorCardSide = TractorCardSide;
+    }
+
     public VehicleLicenseOCRRequest() {
     }
 
@@ -134,6 +157,9 @@ DOUBLE 为行驶证主页正面和副页正面。
         if (source.CardSide != null) {
             this.CardSide = new String(source.CardSide);
         }
+        if (source.TractorCardSide != null) {
+            this.TractorCardSide = new String(source.TractorCardSide);
+        }
     }
 
 
@@ -144,6 +170,7 @@ DOUBLE 为行驶证主页正面和副页正面。
         this.setParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
         this.setParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
         this.setParamSimple(map, prefix + "CardSide", this.CardSide);
+        this.setParamSimple(map, prefix + "TractorCardSide", this.TractorCardSide);
 
     }
 }

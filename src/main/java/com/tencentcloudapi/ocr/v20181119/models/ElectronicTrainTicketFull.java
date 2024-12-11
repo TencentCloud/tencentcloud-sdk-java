@@ -164,6 +164,13 @@ public class ElectronicTrainTicketFull extends AbstractModel {
     private String OriginalNumber;
 
     /**
+    * 标识信息
+    */
+    @SerializedName("IDInfo")
+    @Expose
+    private String IDInfo;
+
+    /**
      * Get 电子发票类型 
      * @return TypeOfVoucher 电子发票类型
      */
@@ -483,6 +490,22 @@ public class ElectronicTrainTicketFull extends AbstractModel {
         this.OriginalNumber = OriginalNumber;
     }
 
+    /**
+     * Get 标识信息 
+     * @return IDInfo 标识信息
+     */
+    public String getIDInfo() {
+        return this.IDInfo;
+    }
+
+    /**
+     * Set 标识信息
+     * @param IDInfo 标识信息
+     */
+    public void setIDInfo(String IDInfo) {
+        this.IDInfo = IDInfo;
+    }
+
     public ElectronicTrainTicketFull() {
     }
 
@@ -551,6 +574,9 @@ public class ElectronicTrainTicketFull extends AbstractModel {
         if (source.OriginalNumber != null) {
             this.OriginalNumber = new String(source.OriginalNumber);
         }
+        if (source.IDInfo != null) {
+            this.IDInfo = new String(source.IDInfo);
+        }
     }
 
 
@@ -578,6 +604,7 @@ public class ElectronicTrainTicketFull extends AbstractModel {
         this.setParamSimple(map, prefix + "Buyer", this.Buyer);
         this.setParamSimple(map, prefix + "BuyerTaxID", this.BuyerTaxID);
         this.setParamSimple(map, prefix + "OriginalNumber", this.OriginalNumber);
+        this.setParamSimple(map, prefix + "IDInfo", this.IDInfo);
 
     }
 }

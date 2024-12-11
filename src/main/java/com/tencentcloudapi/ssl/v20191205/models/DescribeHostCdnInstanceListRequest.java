@@ -31,13 +31,6 @@ public class DescribeHostCdnInstanceListRequest extends AbstractModel {
     private String CertificateId;
 
     /**
-    * 部署资源类型
-    */
-    @SerializedName("ResourceType")
-    @Expose
-    private String ResourceType;
-
-    /**
     * 是否查询缓存，1：是； 0：否， 默认为查询缓存，缓存半小时
     */
     @SerializedName("IsCache")
@@ -50,6 +43,13 @@ public class DescribeHostCdnInstanceListRequest extends AbstractModel {
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
+
+    /**
+    * 部署资源类型cdn
+    */
+    @SerializedName("ResourceType")
+    @Expose
+    private String ResourceType;
 
     /**
     * 原证书ID
@@ -73,7 +73,7 @@ public class DescribeHostCdnInstanceListRequest extends AbstractModel {
     private Long Limit;
 
     /**
-    * 是否异步
+    * 是否异步,0表示否，1表示是，默认为0
     */
     @SerializedName("AsyncCache")
     @Expose
@@ -93,22 +93,6 @@ public class DescribeHostCdnInstanceListRequest extends AbstractModel {
      */
     public void setCertificateId(String CertificateId) {
         this.CertificateId = CertificateId;
-    }
-
-    /**
-     * Get 部署资源类型 
-     * @return ResourceType 部署资源类型
-     */
-    public String getResourceType() {
-        return this.ResourceType;
-    }
-
-    /**
-     * Set 部署资源类型
-     * @param ResourceType 部署资源类型
-     */
-    public void setResourceType(String ResourceType) {
-        this.ResourceType = ResourceType;
     }
 
     /**
@@ -141,6 +125,22 @@ public class DescribeHostCdnInstanceListRequest extends AbstractModel {
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
+    }
+
+    /**
+     * Get 部署资源类型cdn 
+     * @return ResourceType 部署资源类型cdn
+     */
+    public String getResourceType() {
+        return this.ResourceType;
+    }
+
+    /**
+     * Set 部署资源类型cdn
+     * @param ResourceType 部署资源类型cdn
+     */
+    public void setResourceType(String ResourceType) {
+        this.ResourceType = ResourceType;
     }
 
     /**
@@ -192,16 +192,16 @@ public class DescribeHostCdnInstanceListRequest extends AbstractModel {
     }
 
     /**
-     * Get 是否异步 
-     * @return AsyncCache 是否异步
+     * Get 是否异步,0表示否，1表示是，默认为0 
+     * @return AsyncCache 是否异步,0表示否，1表示是，默认为0
      */
     public Long getAsyncCache() {
         return this.AsyncCache;
     }
 
     /**
-     * Set 是否异步
-     * @param AsyncCache 是否异步
+     * Set 是否异步,0表示否，1表示是，默认为0
+     * @param AsyncCache 是否异步,0表示否，1表示是，默认为0
      */
     public void setAsyncCache(Long AsyncCache) {
         this.AsyncCache = AsyncCache;
@@ -218,9 +218,6 @@ public class DescribeHostCdnInstanceListRequest extends AbstractModel {
         if (source.CertificateId != null) {
             this.CertificateId = new String(source.CertificateId);
         }
-        if (source.ResourceType != null) {
-            this.ResourceType = new String(source.ResourceType);
-        }
         if (source.IsCache != null) {
             this.IsCache = new Long(source.IsCache);
         }
@@ -229,6 +226,9 @@ public class DescribeHostCdnInstanceListRequest extends AbstractModel {
             for (int i = 0; i < source.Filters.length; i++) {
                 this.Filters[i] = new Filter(source.Filters[i]);
             }
+        }
+        if (source.ResourceType != null) {
+            this.ResourceType = new String(source.ResourceType);
         }
         if (source.OldCertificateId != null) {
             this.OldCertificateId = new String(source.OldCertificateId);
@@ -250,9 +250,9 @@ public class DescribeHostCdnInstanceListRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CertificateId", this.CertificateId);
-        this.setParamSimple(map, prefix + "ResourceType", this.ResourceType);
         this.setParamSimple(map, prefix + "IsCache", this.IsCache);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamSimple(map, prefix + "ResourceType", this.ResourceType);
         this.setParamSimple(map, prefix + "OldCertificateId", this.OldCertificateId);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);

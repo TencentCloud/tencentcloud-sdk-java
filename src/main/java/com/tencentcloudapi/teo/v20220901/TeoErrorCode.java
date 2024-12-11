@@ -51,6 +51,9 @@ public enum TeoErrorCode {
     // 边缘客户端证书已过期，暂不支持下发过期证书。
      FAILEDOPERATION_EDGECLIENTCERTIFICATEHASEXPIRED("FailedOperation.EdgeClientCertificateHasExpired"),
      
+    // 调用 DNSPod 失败，请稍后重试，若无法解决，请联系智能客服或提交工单。
+     FAILEDOPERATION_FAILEDTOCALLDNSPOD("FailedOperation.FailedToCallDNSPod"),
+     
     // 有其他任务正在部署中，请稍后重试。
      FAILEDOPERATION_FUNCTIONDEPLOYING("FailedOperation.FunctionDeploying"),
      
@@ -95,9 +98,6 @@ public enum TeoErrorCode {
      
     // 获取配置失败。
      INTERNALERROR_DOMAINCONFIG("InternalError.DomainConfig"),
-     
-    // 调用 DNSPod 失败，请稍后重试，若无法解决，请联系智能客服或提交工单。
-     INTERNALERROR_FAILEDTOCALLDNSPOD("InternalError.FailedToCallDNSPod"),
      
     // 上传链接生成失败。
      INTERNALERROR_FAILEDTOGENERATEURL("InternalError.FailedToGenerateUrl"),

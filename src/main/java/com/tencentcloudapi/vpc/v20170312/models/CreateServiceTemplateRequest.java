@@ -45,6 +45,13 @@ public class CreateServiceTemplateRequest extends AbstractModel {
     private ServicesInfo [] ServicesExtra;
 
     /**
+    * 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get 协议端口模板名称。 
      * @return ServiceTemplateName 协议端口模板名称。
      */
@@ -92,6 +99,22 @@ public class CreateServiceTemplateRequest extends AbstractModel {
         this.ServicesExtra = ServicesExtra;
     }
 
+    /**
+     * Get 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。 
+     * @return Tags 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
+     * @param Tags 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public CreateServiceTemplateRequest() {
     }
 
@@ -115,6 +138,12 @@ public class CreateServiceTemplateRequest extends AbstractModel {
                 this.ServicesExtra[i] = new ServicesInfo(source.ServicesExtra[i]);
             }
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -125,6 +154,7 @@ public class CreateServiceTemplateRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ServiceTemplateName", this.ServiceTemplateName);
         this.setParamArraySimple(map, prefix + "Services.", this.Services);
         this.setParamArrayObj(map, prefix + "ServicesExtra.", this.ServicesExtra);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeCertificateBindResourceTaskResultRequest extends AbstractModel {
 
     /**
-    * 任务ID，根据任务ID查询绑定云资源结果， 最大支持100个
+    * 任务ID，根据CreateCertificateBindResourceSyncTask得到的任务ID查询绑定云资源结果， 最大支持100个
     */
     @SerializedName("TaskIds")
     @Expose
     private String [] TaskIds;
 
     /**
-     * Get 任务ID，根据任务ID查询绑定云资源结果， 最大支持100个 
-     * @return TaskIds 任务ID，根据任务ID查询绑定云资源结果， 最大支持100个
+     * Get 任务ID，根据CreateCertificateBindResourceSyncTask得到的任务ID查询绑定云资源结果， 最大支持100个 
+     * @return TaskIds 任务ID，根据CreateCertificateBindResourceSyncTask得到的任务ID查询绑定云资源结果， 最大支持100个
      */
     public String [] getTaskIds() {
         return this.TaskIds;
     }
 
     /**
-     * Set 任务ID，根据任务ID查询绑定云资源结果， 最大支持100个
-     * @param TaskIds 任务ID，根据任务ID查询绑定云资源结果， 最大支持100个
+     * Set 任务ID，根据CreateCertificateBindResourceSyncTask得到的任务ID查询绑定云资源结果， 最大支持100个
+     * @param TaskIds 任务ID，根据CreateCertificateBindResourceSyncTask得到的任务ID查询绑定云资源结果， 最大支持100个
      */
     public void setTaskIds(String [] TaskIds) {
         this.TaskIds = TaskIds;

@@ -721,6 +721,30 @@ RENEW_FLAG_DEFAULT：不自动续费
     private Long ReadWriteMode;
 
     /**
+    * 是否有置放群组异步调度任务
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EnableScheduleRecoverGroup")
+    @Expose
+    private Boolean EnableScheduleRecoverGroup;
+
+    /**
+    * 异步调度任务的时间
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EnableScheduleOperationDuration")
+    @Expose
+    private EnableScheduleOperationDuration EnableScheduleOperationDuration;
+
+    /**
+    * 开启集群保护：OPEN-开启，CLOSE-关闭
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("EnableDestroyProtection")
+    @Expose
+    private String EnableDestroyProtection;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -2416,6 +2440,66 @@ RENEW_FLAG_DEFAULT：不自动续费
         this.ReadWriteMode = ReadWriteMode;
     }
 
+    /**
+     * Get 是否有置放群组异步调度任务
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EnableScheduleRecoverGroup 是否有置放群组异步调度任务
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getEnableScheduleRecoverGroup() {
+        return this.EnableScheduleRecoverGroup;
+    }
+
+    /**
+     * Set 是否有置放群组异步调度任务
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EnableScheduleRecoverGroup 是否有置放群组异步调度任务
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEnableScheduleRecoverGroup(Boolean EnableScheduleRecoverGroup) {
+        this.EnableScheduleRecoverGroup = EnableScheduleRecoverGroup;
+    }
+
+    /**
+     * Get 异步调度任务的时间
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EnableScheduleOperationDuration 异步调度任务的时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public EnableScheduleOperationDuration getEnableScheduleOperationDuration() {
+        return this.EnableScheduleOperationDuration;
+    }
+
+    /**
+     * Set 异步调度任务的时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EnableScheduleOperationDuration 异步调度任务的时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEnableScheduleOperationDuration(EnableScheduleOperationDuration EnableScheduleOperationDuration) {
+        this.EnableScheduleOperationDuration = EnableScheduleOperationDuration;
+    }
+
+    /**
+     * Get 开启集群保护：OPEN-开启，CLOSE-关闭
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return EnableDestroyProtection 开启集群保护：OPEN-开启，CLOSE-关闭
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getEnableDestroyProtection() {
+        return this.EnableDestroyProtection;
+    }
+
+    /**
+     * Set 开启集群保护：OPEN-开启，CLOSE-关闭
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EnableDestroyProtection 开启集群保护：OPEN-开启，CLOSE-关闭
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setEnableDestroyProtection(String EnableDestroyProtection) {
+        this.EnableDestroyProtection = EnableDestroyProtection;
+    }
+
     public InstanceInfo() {
     }
 
@@ -2718,6 +2802,15 @@ RENEW_FLAG_DEFAULT：不自动续费
         if (source.ReadWriteMode != null) {
             this.ReadWriteMode = new Long(source.ReadWriteMode);
         }
+        if (source.EnableScheduleRecoverGroup != null) {
+            this.EnableScheduleRecoverGroup = new Boolean(source.EnableScheduleRecoverGroup);
+        }
+        if (source.EnableScheduleOperationDuration != null) {
+            this.EnableScheduleOperationDuration = new EnableScheduleOperationDuration(source.EnableScheduleOperationDuration);
+        }
+        if (source.EnableDestroyProtection != null) {
+            this.EnableDestroyProtection = new String(source.EnableDestroyProtection);
+        }
     }
 
 
@@ -2816,6 +2909,9 @@ RENEW_FLAG_DEFAULT：不自动续费
         this.setParamSimple(map, prefix + "SubProductCode", this.SubProductCode);
         this.setParamSimple(map, prefix + "CosBucketStorageSize", this.CosBucketStorageSize);
         this.setParamSimple(map, prefix + "ReadWriteMode", this.ReadWriteMode);
+        this.setParamSimple(map, prefix + "EnableScheduleRecoverGroup", this.EnableScheduleRecoverGroup);
+        this.setParamObj(map, prefix + "EnableScheduleOperationDuration.", this.EnableScheduleOperationDuration);
+        this.setParamSimple(map, prefix + "EnableDestroyProtection", this.EnableDestroyProtection);
 
     }
 }

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeBlockStaticListResponse extends AbstractModel {
 
     /**
-    * 无
+    * 查询结果
     */
     @SerializedName("Data")
     @Expose
@@ -45,16 +45,16 @@ public class DescribeBlockStaticListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 无 
-     * @return Data 无
+     * Get 查询结果 
+     * @return Data 查询结果
      */
     public StaticInfo [] getData() {
         return this.Data;
     }
 
     /**
-     * Set 无
-     * @param Data 无
+     * Set 查询结果
+     * @param Data 查询结果
      */
     public void setData(StaticInfo [] Data) {
         this.Data = Data;

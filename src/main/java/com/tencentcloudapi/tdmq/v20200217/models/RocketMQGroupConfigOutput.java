@@ -40,7 +40,7 @@ public class RocketMQGroupConfigOutput extends AbstractModel {
     private String GroupName;
 
     /**
-    * 导入状态
+    * 是否已导入
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Imported")
@@ -96,9 +96,9 @@ public class RocketMQGroupConfigOutput extends AbstractModel {
     }
 
     /**
-     * Get 导入状态
+     * Get 是否已导入
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Imported 导入状态
+     * @return Imported 是否已导入
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getImported() {
@@ -106,9 +106,9 @@ public class RocketMQGroupConfigOutput extends AbstractModel {
     }
 
     /**
-     * Set 导入状态
+     * Set 是否已导入
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Imported 导入状态
+     * @param Imported 是否已导入
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setImported(Boolean Imported) {

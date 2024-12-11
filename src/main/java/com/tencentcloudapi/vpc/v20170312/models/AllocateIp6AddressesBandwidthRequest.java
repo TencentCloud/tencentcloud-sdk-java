@@ -52,6 +52,13 @@ public class AllocateIp6AddressesBandwidthRequest extends AbstractModel {
     private String BandwidthPackageId;
 
     /**
+    * 需要关联的标签列表。	
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get 需要开通公网访问能力的IPV6地址 
      * @return Ip6Addresses 需要开通公网访问能力的IPV6地址
      */
@@ -115,6 +122,22 @@ public class AllocateIp6AddressesBandwidthRequest extends AbstractModel {
         this.BandwidthPackageId = BandwidthPackageId;
     }
 
+    /**
+     * Get 需要关联的标签列表。	 
+     * @return Tags 需要关联的标签列表。	
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 需要关联的标签列表。	
+     * @param Tags 需要关联的标签列表。	
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public AllocateIp6AddressesBandwidthRequest() {
     }
 
@@ -138,6 +161,12 @@ public class AllocateIp6AddressesBandwidthRequest extends AbstractModel {
         if (source.BandwidthPackageId != null) {
             this.BandwidthPackageId = new String(source.BandwidthPackageId);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -149,6 +178,7 @@ public class AllocateIp6AddressesBandwidthRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "InternetMaxBandwidthOut", this.InternetMaxBandwidthOut);
         this.setParamSimple(map, prefix + "InternetChargeType", this.InternetChargeType);
         this.setParamSimple(map, prefix + "BandwidthPackageId", this.BandwidthPackageId);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeHostLighthouseInstanceListResponse extends AbstractModel {
 
     /**
-    * Lighthouse实例列表
+    * Lighthouse实例列表,如取不到返回空数组
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceList")
@@ -32,7 +32,7 @@ public class DescribeHostLighthouseInstanceListResponse extends AbstractModel {
     private LighthouseInstanceDetail [] InstanceList;
 
     /**
-    * 总数
+    * 总数，如取不到返回0
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
@@ -47,9 +47,9 @@ public class DescribeHostLighthouseInstanceListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Lighthouse实例列表
+     * Get Lighthouse实例列表,如取不到返回空数组
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InstanceList Lighthouse实例列表
+     * @return InstanceList Lighthouse实例列表,如取不到返回空数组
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public LighthouseInstanceDetail [] getInstanceList() {
@@ -57,9 +57,9 @@ public class DescribeHostLighthouseInstanceListResponse extends AbstractModel {
     }
 
     /**
-     * Set Lighthouse实例列表
+     * Set Lighthouse实例列表,如取不到返回空数组
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InstanceList Lighthouse实例列表
+     * @param InstanceList Lighthouse实例列表,如取不到返回空数组
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceList(LighthouseInstanceDetail [] InstanceList) {
@@ -67,9 +67,9 @@ public class DescribeHostLighthouseInstanceListResponse extends AbstractModel {
     }
 
     /**
-     * Get 总数
+     * Get 总数，如取不到返回0
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TotalCount 总数
+     * @return TotalCount 总数，如取不到返回0
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
@@ -77,9 +77,9 @@ public class DescribeHostLighthouseInstanceListResponse extends AbstractModel {
     }
 
     /**
-     * Set 总数
+     * Set 总数，如取不到返回0
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TotalCount 总数
+     * @param TotalCount 总数，如取不到返回0
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {

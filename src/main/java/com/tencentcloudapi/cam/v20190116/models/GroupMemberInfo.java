@@ -101,6 +101,14 @@ public class GroupMemberInfo extends AbstractModel {
     private Long IsReceiverOwner;
 
     /**
+    * 昵称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Remark")
+    @Expose
+    private String Remark;
+
+    /**
      * Get 子用户 Uid。 
      * @return Uid 子用户 Uid。
      */
@@ -276,6 +284,26 @@ public class GroupMemberInfo extends AbstractModel {
         this.IsReceiverOwner = IsReceiverOwner;
     }
 
+    /**
+     * Get 昵称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Remark 昵称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRemark() {
+        return this.Remark;
+    }
+
+    /**
+     * Set 昵称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Remark 昵称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRemark(String Remark) {
+        this.Remark = Remark;
+    }
+
     public GroupMemberInfo() {
     }
 
@@ -317,6 +345,9 @@ public class GroupMemberInfo extends AbstractModel {
         if (source.IsReceiverOwner != null) {
             this.IsReceiverOwner = new Long(source.IsReceiverOwner);
         }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
+        }
     }
 
 
@@ -335,6 +366,7 @@ public class GroupMemberInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "UserType", this.UserType);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "IsReceiverOwner", this.IsReceiverOwner);
+        this.setParamSimple(map, prefix + "Remark", this.Remark);
 
     }
 }

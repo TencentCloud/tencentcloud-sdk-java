@@ -39,6 +39,17 @@ public class MqttClient extends AbstractClient{
     }
 
     /**
+     *生效设备证书
+     * @param req ActivateDeviceCertificateRequest
+     * @return ActivateDeviceCertificateResponse
+     * @throws TencentCloudSDKException
+     */
+    public ActivateDeviceCertificateResponse ActivateDeviceCertificate(ActivateDeviceCertificateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ActivateDeviceCertificate", ActivateDeviceCertificateResponse.class);
+    }
+
+    /**
      *创建MQTT实例的性能测试任务
      * @param req CreateAuthorizationPolicyRequest
      * @return CreateAuthorizationPolicyResponse
@@ -83,6 +94,17 @@ public class MqttClient extends AbstractClient{
     }
 
     /**
+     *失效Ca证书
+     * @param req DeactivateDeviceCertificateRequest
+     * @return DeactivateDeviceCertificateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeactivateDeviceCertificateResponse DeactivateDeviceCertificate(DeactivateDeviceCertificateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeactivateDeviceCertificate", DeactivateDeviceCertificateResponse.class);
+    }
+
+    /**
      *根据认证器类型删除一个MQTT认证器
      * @param req DeleteAuthenticatorRequest
      * @return DeleteAuthenticatorResponse
@@ -102,6 +124,17 @@ public class MqttClient extends AbstractClient{
     public DeleteAuthorizationPolicyResponse DeleteAuthorizationPolicy(DeleteAuthorizationPolicyRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteAuthorizationPolicy", DeleteAuthorizationPolicyResponse.class);
+    }
+
+    /**
+     *删除设备证书
+     * @param req DeleteDeviceCertificateRequest
+     * @return DeleteDeviceCertificateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteDeviceCertificateResponse DeleteDeviceCertificate(DeleteDeviceCertificateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteDeviceCertificate", DeleteDeviceCertificateResponse.class);
     }
 
     /**
@@ -138,6 +171,28 @@ public class MqttClient extends AbstractClient{
     }
 
     /**
+     *查询设备证书详情接口
+     * @param req DescribeDeviceCertificateRequest
+     * @return DescribeDeviceCertificateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDeviceCertificateResponse DescribeDeviceCertificate(DescribeDeviceCertificateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDeviceCertificate", DescribeDeviceCertificateResponse.class);
+    }
+
+    /**
+     *分页查询设备证书
+     * @param req DescribeDeviceCertificatesRequest
+     * @return DescribeDeviceCertificatesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDeviceCertificatesResponse DescribeDeviceCertificates(DescribeDeviceCertificatesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDeviceCertificates", DescribeDeviceCertificatesResponse.class);
+    }
+
+    /**
      *查询实例信息
      * @param req DescribeInstanceRequest
      * @return DescribeInstanceResponse
@@ -152,7 +207,6 @@ public class MqttClient extends AbstractClient{
      *获取实例列表，Filters参数使用说明如下：
 1. InstanceName, 名称模糊查询
 2. InstanceId，实例ID查询
-3. InstanceType, 实例类型查询，支持多选
 3. InstanceStatus，实例状态查询，支持多选
 
 当使用TagFilters查询时，Filters参数失效。
@@ -243,6 +297,17 @@ public class MqttClient extends AbstractClient{
     public RegisterDeviceCertificateResponse RegisterDeviceCertificate(RegisterDeviceCertificateRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "RegisterDeviceCertificate", RegisterDeviceCertificateResponse.class);
+    }
+
+    /**
+     *吊销设备证书
+     * @param req RevokedDeviceCertificateRequest
+     * @return RevokedDeviceCertificateResponse
+     * @throws TencentCloudSDKException
+     */
+    public RevokedDeviceCertificateResponse RevokedDeviceCertificate(RevokedDeviceCertificateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RevokedDeviceCertificate", RevokedDeviceCertificateResponse.class);
     }
 
     /**

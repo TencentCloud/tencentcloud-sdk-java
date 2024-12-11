@@ -31,7 +31,7 @@ public class DescribeCertificatesRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * 每页数量，默认10。最大1000
+    * 每页数量，默认10。最大值1000，如超过1000按1000处理
     */
     @SerializedName("Limit")
     @Expose
@@ -129,7 +129,7 @@ public class DescribeCertificatesRequest extends AbstractModel {
     private Tags [] Tags;
 
     /**
-    * //是否筛选等待签发的证书，传1是筛选，0和null不筛选
+    * 是否筛选等待签发的证书，传1是筛选，0和null不筛选
     */
     @SerializedName("IsPendingIssue")
     @Expose
@@ -152,16 +152,16 @@ public class DescribeCertificatesRequest extends AbstractModel {
     }
 
     /**
-     * Get 每页数量，默认10。最大1000 
-     * @return Limit 每页数量，默认10。最大1000
+     * Get 每页数量，默认10。最大值1000，如超过1000按1000处理 
+     * @return Limit 每页数量，默认10。最大值1000，如超过1000按1000处理
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 每页数量，默认10。最大1000
-     * @param Limit 每页数量，默认10。最大1000
+     * Set 每页数量，默认10。最大值1000，如超过1000按1000处理
+     * @param Limit 每页数量，默认10。最大值1000，如超过1000按1000处理
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
@@ -376,16 +376,16 @@ public class DescribeCertificatesRequest extends AbstractModel {
     }
 
     /**
-     * Get //是否筛选等待签发的证书，传1是筛选，0和null不筛选 
-     * @return IsPendingIssue //是否筛选等待签发的证书，传1是筛选，0和null不筛选
+     * Get 是否筛选等待签发的证书，传1是筛选，0和null不筛选 
+     * @return IsPendingIssue 是否筛选等待签发的证书，传1是筛选，0和null不筛选
      */
     public Long getIsPendingIssue() {
         return this.IsPendingIssue;
     }
 
     /**
-     * Set //是否筛选等待签发的证书，传1是筛选，0和null不筛选
-     * @param IsPendingIssue //是否筛选等待签发的证书，传1是筛选，0和null不筛选
+     * Set 是否筛选等待签发的证书，传1是筛选，0和null不筛选
+     * @param IsPendingIssue 是否筛选等待签发的证书，传1是筛选，0和null不筛选
      */
     public void setIsPendingIssue(Long IsPendingIssue) {
         this.IsPendingIssue = IsPendingIssue;

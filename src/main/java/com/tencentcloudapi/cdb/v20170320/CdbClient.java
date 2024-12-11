@@ -204,7 +204,9 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
-     *本接口(CreateAuditRule)用于创建用户在当前地域的审计规则。
+     *不再支持审计规则创建
+
+本接口(CreateAuditRule)用于创建用户在当前地域的审计规则。
      * @param req CreateAuditRuleRequest
      * @return CreateAuditRuleResponse
      * @throws TencentCloudSDKException
@@ -408,7 +410,9 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
-     *本接口(DeleteAuditRule)用于删除用户的审计规则。
+     *不再支持审计规则创建
+
+本接口(DeleteAuditRule)用于删除用户的审计规则。
      * @param req DeleteAuditRuleRequest
      * @return DeleteAuditRuleResponse
      * @throws TencentCloudSDKException
@@ -606,7 +610,9 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
-     *本接口(DescribeAuditRules)用于查询用户在当前地域的审计规则。
+     *不再支持审计规则创建
+
+本接口(DescribeAuditRules)用于查询用户在当前地域的审计规则。
      * @param req DescribeAuditRulesRequest
      * @return DescribeAuditRulesResponse
      * @throws TencentCloudSDKException
@@ -1350,7 +1356,9 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
-     *本接口(ModifyAuditRule)用于修改用户的审计规则。
+     *不再支持审计规则创建
+
+本接口(ModifyAuditRule)用于修改用户的审计规则。
      * @param req ModifyAuditRuleRequest
      * @return ModifyAuditRuleResponse
      * @throws TencentCloudSDKException

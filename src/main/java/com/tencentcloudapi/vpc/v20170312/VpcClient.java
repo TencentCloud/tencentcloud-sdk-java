@@ -121,7 +121,25 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
-     *该接口用于给IPv6地址初次分配公网带宽
+     *本接口（AllocateIPv6Addresses）用于申请一个或多个弹性公网IPv6（简称EIPv6）实例。
+
+- EIPv6 是您在腾讯云某个地域可以独立申请和持有的，固定不变的公网 IPv6 地址，提供与弹性公网 IPv4 一致的产品体验。
+- 通过弹性公网 IPv6，您可以快速将 EIPv6 实例绑定到云资源的内网 IPv6 地址上，实现为云资源快速开通 IPv6 公网带宽。
+- 您还可以按需将 EIPv6 实例绑定到其他云资源上，从而屏蔽实例故障。
+     * @param req AllocateIPv6AddressesRequest
+     * @return AllocateIPv6AddressesResponse
+     * @throws TencentCloudSDKException
+     */
+    public AllocateIPv6AddressesResponse AllocateIPv6Addresses(AllocateIPv6AddressesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AllocateIPv6Addresses", AllocateIPv6AddressesResponse.class);
+    }
+
+    /**
+     *本接口（AllocateIp6AddressesBandwidth）用于为传统弹性公网 IPv6 实例开通 IPv6 公网带宽。
+
+- 传统弹性公网 IPv6 实例默认仅具备 IPv6 内网通信能力，需为 IPv6 地址分配公网带宽后，才具备 IPv6 公网通信能力。
+- 支持为一个或多个传统弹性公网 IPv6 实例开通公网带宽。
      * @param req AllocateIp6AddressesBandwidthRequest
      * @return AllocateIp6AddressesBandwidthResponse
      * @throws TencentCloudSDKException
@@ -229,6 +247,20 @@ public class VpcClient extends AbstractClient{
     public AssociateDirectConnectGatewayNatGatewayResponse AssociateDirectConnectGatewayNatGateway(AssociateDirectConnectGatewayNatGatewayRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "AssociateDirectConnectGatewayNatGateway", AssociateDirectConnectGatewayNatGatewayResponse.class);
+    }
+
+    /**
+     *本接口（AssociateIPv6Address）用于将弹性公网IPv6（简称EIPv6）实例绑定到 CVM 或弹性网卡配置的内网 IPv6 地址上。
+
+- 将 EIPv6 绑定到 CVM 上，其本质是将 EIPv6 绑定到 CVM 弹性网卡所配置的内网 IPv6 地址上。
+- 将 EIPv6 绑定到指定网卡的内网 IPv6 时，需确保该内网 IPv6 地址为未绑定状态，才能执行绑定操作。
+     * @param req AssociateIPv6AddressRequest
+     * @return AssociateIPv6AddressResponse
+     * @throws TencentCloudSDKException
+     */
+    public AssociateIPv6AddressResponse AssociateIPv6Address(AssociateIPv6AddressRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AssociateIPv6Address", AssociateIPv6AddressResponse.class);
     }
 
     /**
@@ -2085,7 +2117,21 @@ public class VpcClient extends AbstractClient{
     }
 
     /**
-     *该接口用于查询IPV6地址信息
+     *本接口（DescribeIPv6Addresses）用于查询一个或多个弹性公网 IPv6（简称 EIPv6）实例的详细信息。
+
+- 支持查询您在指定地域的弹性公网 IPv6 和传统弹性公网 IPv6 实例信息
+- 如果参数为空，返回当前用户一定数量（Limit所指定的数量，默认为20）的 EIPv6。
+     * @param req DescribeIPv6AddressesRequest
+     * @return DescribeIPv6AddressesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeIPv6AddressesResponse DescribeIPv6Addresses(DescribeIPv6AddressesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeIPv6Addresses", DescribeIPv6AddressesResponse.class);
+    }
+
+    /**
+     *本接口（DescribeIp6Addresses）用于查询一个或多个传统弹性公网 IPv6 实例的详细信息。
      * @param req DescribeIp6AddressesRequest
      * @return DescribeIp6AddressesResponse
      * @throws TencentCloudSDKException
@@ -3019,6 +3065,20 @@ LimitTypes取值范围：
     }
 
     /**
+     *本接口（DisassociateIPv6Address）用于解绑弹性公网 IPv6（简称EIPv6）实例。
+
+- 支持对 CVM、弹性网卡绑定的 EIPv6 实例进行解绑操作。
+- 只有状态为 BIND 和 BIND_ENI 的 EIPv6 实例才能进行解绑操作。
+     * @param req DisassociateIPv6AddressRequest
+     * @return DisassociateIPv6AddressResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisassociateIPv6AddressResponse DisassociateIPv6Address(DisassociateIPv6AddressRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DisassociateIPv6Address", DisassociateIPv6AddressResponse.class);
+    }
+
+    /**
      *本接口（DisassociateNatGatewayAddress）用于NAT网关解绑弹性IP。
      * @param req DisassociateNatGatewayAddressRequest
      * @return DisassociateNatGatewayAddressResponse
@@ -3272,8 +3332,6 @@ LimitTypes取值范围：
 该接口一般用来封禁出口限速的云联网实例, 目前联通内部运营系统通过云API调用, 因为出口限速无法按地域间封禁, 只能按更粗的云联网实例粒度封禁, 如果是地域间限速, 一般可以通过更细的限速实例粒度封禁（LockCcnBandwidths）
 
 如有需要, 可以封禁任意限速实例, 可接入到内部运营系统
-
-
      * @param req LockCcnsRequest
      * @return LockCcnsResponse
      * @throws TencentCloudSDKException
@@ -3581,7 +3639,34 @@ LimitTypes取值范围：
     }
 
     /**
-     *该接口用于修改IPV6地址访问internet的带宽
+     *本接口（ModifyIPv6AddressesAttributes）用于修改弹性公网 IPv6（简称EIPv6）实例名称。
+
+- 支持对弹性公网 IPv6 和传统弹性公网 IPv6 实例名称进行修改。
+     * @param req ModifyIPv6AddressesAttributesRequest
+     * @return ModifyIPv6AddressesAttributesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyIPv6AddressesAttributesResponse ModifyIPv6AddressesAttributes(ModifyIPv6AddressesAttributesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyIPv6AddressesAttributes", ModifyIPv6AddressesAttributesResponse.class);
+    }
+
+    /**
+     *本接口（ModifyIPv6AddressesBandwidth）用于调整弹性公网 IPv6（简称EIPv6）实例的带宽上限。
+     * @param req ModifyIPv6AddressesBandwidthRequest
+     * @return ModifyIPv6AddressesBandwidthResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyIPv6AddressesBandwidthResponse ModifyIPv6AddressesBandwidth(ModifyIPv6AddressesBandwidthRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyIPv6AddressesBandwidth", ModifyIPv6AddressesBandwidthResponse.class);
+    }
+
+    /**
+     *本接口（ModifyIp6AddressesBandwidth）用于调整传统弹性公网 IPv6 实例的带宽上限。
+
+- 仅支持对传统弹性公网 IPv6 实例的带宽上限进行调整。
+- 如需调整弹性公网 IPv6 实例的带宽上限，请使用 ModifyIPv6AddressesBandwidth 接口。
      * @param req ModifyIp6AddressesBandwidthRequest
      * @return ModifyIp6AddressesBandwidthResponse
      * @throws TencentCloudSDKException
@@ -4100,7 +4185,24 @@ LimitTypes取值范围：
     }
 
     /**
-     *该接口用于给弹性公网IPv6地址释放带宽。
+     *本接口（ReleaseIPv6Addresses）用于释放一个或多个弹性公网IPv6（简称EIPv6）实例。
+
+- 支持对已申请到的弹性公网 IPv6 实例进行释放操作，如需再次使用，请重新申请。
+- 只有状态为 UNBIND 的 EIPv6 实例才能进行释放操作。
+     * @param req ReleaseIPv6AddressesRequest
+     * @return ReleaseIPv6AddressesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ReleaseIPv6AddressesResponse ReleaseIPv6Addresses(ReleaseIPv6AddressesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ReleaseIPv6Addresses", ReleaseIPv6AddressesResponse.class);
+    }
+
+    /**
+     *本接口（ReleaseIp6AddressesBandwidth）用于为传统弹性公网 IPv6 实例关闭 IPv6 公网带宽。
+
+- 传统弹性公网 IPv6 实例关闭公网带宽后，仍具备 IPv6 内网通信能力。
+- 如需再次开通 IPv6 公网带宽，请使用 AllocateIp6AddressesBandwidth 接口进行开通。
      * @param req ReleaseIp6AddressesBandwidthRequest
      * @return ReleaseIp6AddressesBandwidthResponse
      * @throws TencentCloudSDKException
@@ -4326,8 +4428,7 @@ LimitTypes取值范围：
     }
 
     /**
-     *本接口（ResetRoutes）用于对某个路由表名称和所有路由策略（Route）进行重新设置。<br />
-注意: 调用本接口是先删除当前路由表中所有路由策略, 再保存新提交的路由策略内容, 会引起网络中断。
+     *本接口（ResetRoutes）用于对某个路由表名称和所有路由策略（Route）进行重新设置。<br /> 注意: 调用本接口时先删除当前路由表中所有路由策略, 再保存新提交的路由策略内容, 会引起网络中断。
      * @param req ResetRoutesRequest
      * @return ResetRoutesResponse
      * @throws TencentCloudSDKException

@@ -62,6 +62,17 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
+     *创建EMR容器集群实例
+     * @param req CreateCloudInstanceRequest
+     * @return CreateCloudInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCloudInstanceResponse CreateCloudInstance(CreateCloudInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateCloudInstance", CreateCloudInstanceResponse.class);
+    }
+
+    /**
      *创建EMR集群实例
      * @param req CreateClusterRequest
      * @return CreateClusterResponse
@@ -558,6 +569,17 @@ public class EmrClient extends AbstractClient{
     public ModifyGlobalConfigResponse ModifyGlobalConfig(ModifyGlobalConfigRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyGlobalConfig", ModifyGlobalConfigResponse.class);
+    }
+
+    /**
+     *调整Pod数量
+     * @param req ModifyPodNumRequest
+     * @return ModifyPodNumResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyPodNumResponse ModifyPodNum(ModifyPodNumRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyPodNum", ModifyPodNumResponse.class);
     }
 
     /**

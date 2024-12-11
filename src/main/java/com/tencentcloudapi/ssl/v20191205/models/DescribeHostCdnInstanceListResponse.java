@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeHostCdnInstanceListResponse extends AbstractModel {
 
     /**
-    * CDN实例列表
+    * CDN实例列表，如取不到值返回空数组
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceList")
@@ -32,7 +32,7 @@ public class DescribeHostCdnInstanceListResponse extends AbstractModel {
     private CdnInstanceDetail [] InstanceList;
 
     /**
-    * CDN域名总数
+    * CDN域名总数，如取不到值返回0
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
@@ -40,7 +40,7 @@ public class DescribeHostCdnInstanceListResponse extends AbstractModel {
     private Long TotalCount;
 
     /**
-    * 异步刷新总数	
+    * 异步刷新总数，如取不到值返回0
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AsyncTotalNum")
@@ -48,7 +48,7 @@ public class DescribeHostCdnInstanceListResponse extends AbstractModel {
     private Long AsyncTotalNum;
 
     /**
-    * 异步刷新当前执行数	
+    * 异步刷新当前执行数，如取不到值返回0
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AsyncOffset")
@@ -71,9 +71,9 @@ public class DescribeHostCdnInstanceListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get CDN实例列表
+     * Get CDN实例列表，如取不到值返回空数组
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InstanceList CDN实例列表
+     * @return InstanceList CDN实例列表，如取不到值返回空数组
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public CdnInstanceDetail [] getInstanceList() {
@@ -81,9 +81,9 @@ public class DescribeHostCdnInstanceListResponse extends AbstractModel {
     }
 
     /**
-     * Set CDN实例列表
+     * Set CDN实例列表，如取不到值返回空数组
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InstanceList CDN实例列表
+     * @param InstanceList CDN实例列表，如取不到值返回空数组
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceList(CdnInstanceDetail [] InstanceList) {
@@ -91,9 +91,9 @@ public class DescribeHostCdnInstanceListResponse extends AbstractModel {
     }
 
     /**
-     * Get CDN域名总数
+     * Get CDN域名总数，如取不到值返回0
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TotalCount CDN域名总数
+     * @return TotalCount CDN域名总数，如取不到值返回0
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
@@ -101,9 +101,9 @@ public class DescribeHostCdnInstanceListResponse extends AbstractModel {
     }
 
     /**
-     * Set CDN域名总数
+     * Set CDN域名总数，如取不到值返回0
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TotalCount CDN域名总数
+     * @param TotalCount CDN域名总数，如取不到值返回0
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
@@ -111,9 +111,9 @@ public class DescribeHostCdnInstanceListResponse extends AbstractModel {
     }
 
     /**
-     * Get 异步刷新总数	
+     * Get 异步刷新总数，如取不到值返回0
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AsyncTotalNum 异步刷新总数	
+     * @return AsyncTotalNum 异步刷新总数，如取不到值返回0
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAsyncTotalNum() {
@@ -121,9 +121,9 @@ public class DescribeHostCdnInstanceListResponse extends AbstractModel {
     }
 
     /**
-     * Set 异步刷新总数	
+     * Set 异步刷新总数，如取不到值返回0
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AsyncTotalNum 异步刷新总数	
+     * @param AsyncTotalNum 异步刷新总数，如取不到值返回0
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAsyncTotalNum(Long AsyncTotalNum) {
@@ -131,9 +131,9 @@ public class DescribeHostCdnInstanceListResponse extends AbstractModel {
     }
 
     /**
-     * Get 异步刷新当前执行数	
+     * Get 异步刷新当前执行数，如取不到值返回0
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AsyncOffset 异步刷新当前执行数	
+     * @return AsyncOffset 异步刷新当前执行数，如取不到值返回0
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAsyncOffset() {
@@ -141,9 +141,9 @@ public class DescribeHostCdnInstanceListResponse extends AbstractModel {
     }
 
     /**
-     * Set 异步刷新当前执行数	
+     * Set 异步刷新当前执行数，如取不到值返回0
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AsyncOffset 异步刷新当前执行数	
+     * @param AsyncOffset 异步刷新当前执行数，如取不到值返回0
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAsyncOffset(Long AsyncOffset) {

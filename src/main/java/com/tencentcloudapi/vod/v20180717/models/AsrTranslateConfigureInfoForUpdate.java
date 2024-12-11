@@ -24,9 +24,9 @@ import java.util.HashMap;
 public class AsrTranslateConfigureInfoForUpdate extends AbstractModel {
 
     /**
-    * 语音翻译任务开关，可选值：
+    * 语音翻译识别任务开关，可选值：
 <li>ON：开启；</li>
-<li>OFF：关闭。</li>
+<li>OFF：关闭。</li><font color=red>注意：</font>语音翻译识别任务本身会返回 ASR 全文识别结果，为避免重复收费，因此禁止同时开启语音翻译识别和 ASR 全文识别功能项。
     */
     @SerializedName("Switch")
     @Expose
@@ -54,6 +54,8 @@ public class AsrTranslateConfigureInfoForUpdate extends AbstractModel {
 
     /**
     * 翻译目标语言。
+若此参数填写空字符串，则表示只进行语音全文识别，不进行翻译（计费项与 AsrFullTextConfigure 语音全文识别一致）；
+否则，此参数的取值范围分为如下几种情况：
 当 SrcLanguage 为 zh（中文）时，取值范围：
 <li>en：英文；</li>
 <li>ja：日文；</li>
@@ -155,24 +157,24 @@ public class AsrTranslateConfigureInfoForUpdate extends AbstractModel {
     private String SubtitleName;
 
     /**
-     * Get 语音翻译任务开关，可选值：
+     * Get 语音翻译识别任务开关，可选值：
 <li>ON：开启；</li>
-<li>OFF：关闭。</li> 
-     * @return Switch 语音翻译任务开关，可选值：
+<li>OFF：关闭。</li><font color=red>注意：</font>语音翻译识别任务本身会返回 ASR 全文识别结果，为避免重复收费，因此禁止同时开启语音翻译识别和 ASR 全文识别功能项。 
+     * @return Switch 语音翻译识别任务开关，可选值：
 <li>ON：开启；</li>
-<li>OFF：关闭。</li>
+<li>OFF：关闭。</li><font color=red>注意：</font>语音翻译识别任务本身会返回 ASR 全文识别结果，为避免重复收费，因此禁止同时开启语音翻译识别和 ASR 全文识别功能项。
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set 语音翻译任务开关，可选值：
+     * Set 语音翻译识别任务开关，可选值：
 <li>ON：开启；</li>
-<li>OFF：关闭。</li>
-     * @param Switch 语音翻译任务开关，可选值：
+<li>OFF：关闭。</li><font color=red>注意：</font>语音翻译识别任务本身会返回 ASR 全文识别结果，为避免重复收费，因此禁止同时开启语音翻译识别和 ASR 全文识别功能项。
+     * @param Switch 语音翻译识别任务开关，可选值：
 <li>ON：开启；</li>
-<li>OFF：关闭。</li>
+<li>OFF：关闭。</li><font color=red>注意：</font>语音翻译识别任务本身会返回 ASR 全文识别结果，为避免重复收费，因此禁止同时开启语音翻译识别和 ASR 全文识别功能项。
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
@@ -248,6 +250,8 @@ public class AsrTranslateConfigureInfoForUpdate extends AbstractModel {
 
     /**
      * Get 翻译目标语言。
+若此参数填写空字符串，则表示只进行语音全文识别，不进行翻译（计费项与 AsrFullTextConfigure 语音全文识别一致）；
+否则，此参数的取值范围分为如下几种情况：
 当 SrcLanguage 为 zh（中文）时，取值范围：
 <li>en：英文；</li>
 <li>ja：日文；</li>
@@ -330,6 +334,8 @@ public class AsrTranslateConfigureInfoForUpdate extends AbstractModel {
 <li>ru：俄语；</li>
 <li>pt：葡萄牙语。</li> 
      * @return DstLanguage 翻译目标语言。
+若此参数填写空字符串，则表示只进行语音全文识别，不进行翻译（计费项与 AsrFullTextConfigure 语音全文识别一致）；
+否则，此参数的取值范围分为如下几种情况：
 当 SrcLanguage 为 zh（中文）时，取值范围：
 <li>en：英文；</li>
 <li>ja：日文；</li>
@@ -418,6 +424,8 @@ public class AsrTranslateConfigureInfoForUpdate extends AbstractModel {
 
     /**
      * Set 翻译目标语言。
+若此参数填写空字符串，则表示只进行语音全文识别，不进行翻译（计费项与 AsrFullTextConfigure 语音全文识别一致）；
+否则，此参数的取值范围分为如下几种情况：
 当 SrcLanguage 为 zh（中文）时，取值范围：
 <li>en：英文；</li>
 <li>ja：日文；</li>
@@ -500,6 +508,8 @@ public class AsrTranslateConfigureInfoForUpdate extends AbstractModel {
 <li>ru：俄语；</li>
 <li>pt：葡萄牙语。</li>
      * @param DstLanguage 翻译目标语言。
+若此参数填写空字符串，则表示只进行语音全文识别，不进行翻译（计费项与 AsrFullTextConfigure 语音全文识别一致）；
+否则，此参数的取值范围分为如下几种情况：
 当 SrcLanguage 为 zh（中文）时，取值范围：
 <li>en：英文；</li>
 <li>ja：日文；</li>

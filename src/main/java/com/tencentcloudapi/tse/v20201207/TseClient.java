@@ -248,6 +248,17 @@ public class TseClient extends AbstractClient{
     }
 
     /**
+     *创建网关服务来源
+     * @param req CreateNativeGatewayServiceSourceRequest
+     * @return CreateNativeGatewayServiceSourceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateNativeGatewayServiceSourceResponse CreateNativeGatewayServiceSource(CreateNativeGatewayServiceSourceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateNativeGatewayServiceSource", CreateNativeGatewayServiceSourceResponse.class);
+    }
+
+    /**
      *创建或更新配置文件并发布配置
      * @param req CreateOrUpdateConfigFileAndReleaseRequest
      * @return CreateOrUpdateConfigFileAndReleaseResponse
@@ -476,6 +487,17 @@ public class TseClient extends AbstractClient{
     public DeleteNativeGatewayServerGroupResponse DeleteNativeGatewayServerGroup(DeleteNativeGatewayServerGroupRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteNativeGatewayServerGroup", DeleteNativeGatewayServerGroupResponse.class);
+    }
+
+    /**
+     *删除网关服务来源实例
+     * @param req DeleteNativeGatewayServiceSourceRequest
+     * @return DeleteNativeGatewayServiceSourceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteNativeGatewayServiceSourceResponse DeleteNativeGatewayServiceSource(DeleteNativeGatewayServiceSourceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteNativeGatewayServiceSource", DeleteNativeGatewayServiceSourceResponse.class);
     }
 
     /**
@@ -864,6 +886,17 @@ public class TseClient extends AbstractClient{
     }
 
     /**
+     *查询网关服务来源实例列表
+     * @param req DescribeNativeGatewayServiceSourcesRequest
+     * @return DescribeNativeGatewayServiceSourcesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeNativeGatewayServiceSourcesResponse DescribeNativeGatewayServiceSources(DescribeNativeGatewayServiceSourcesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeNativeGatewayServiceSources", DescribeNativeGatewayServiceSourcesResponse.class);
+    }
+
+    /**
      *获取云原生网关服务详情
      * @param req DescribeOneCloudNativeAPIGatewayServiceRequest
      * @return DescribeOneCloudNativeAPIGatewayServiceResponse
@@ -1147,6 +1180,17 @@ public class TseClient extends AbstractClient{
     public ModifyNativeGatewayServerGroupResponse ModifyNativeGatewayServerGroup(ModifyNativeGatewayServerGroupRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyNativeGatewayServerGroup", ModifyNativeGatewayServerGroupResponse.class);
+    }
+
+    /**
+     *修改网关服务来源
+     * @param req ModifyNativeGatewayServiceSourceRequest
+     * @return ModifyNativeGatewayServiceSourceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyNativeGatewayServiceSourceResponse ModifyNativeGatewayServiceSource(ModifyNativeGatewayServiceSourceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyNativeGatewayServiceSource", ModifyNativeGatewayServiceSourceResponse.class);
     }
 
     /**

@@ -24,8 +24,18 @@ import java.util.HashMap;
 public class GenerateAvatarRequest extends AbstractModel {
 
     /**
-    * 头像风格。
-请在  [百变头像风格列表](https://cloud.tencent.com/document/product/1668/107741) 中选择期望的风格，必须传入风格编号。
+    * 图像类型，默认为人像。
+human：人像头像，仅支持人像图片输入，建议避免上传无人、多人、人像过小的图片。
+pet：萌宠贴纸，仅支持动物图片输入，建议避免上传无动物、多动物、动物过小的图片。
+    */
+    @SerializedName("Type")
+    @Expose
+    private String Type;
+
+    /**
+    * 头像风格，仅在人像模式下生效。
+若使用人像模式，请在  [百变头像风格列表](https://cloud.tencent.com/document/product/1668/107741) 中选择期望的风格，传入风格编号，不传默认使用 flower 风格。
+若使用萌宠贴纸模式，无需选择风格，该参数不生效。
     */
     @SerializedName("Style")
     @Expose
@@ -50,7 +60,7 @@ Base64 和 Url 必须提供一个，如果都提供以 Url 为准。
     private String InputUrl;
 
     /**
-    * 输入图像质量检测开关，默认开启。
+    * 输入人像图的质量检测开关，默认开启，仅在人像模式下生效。
 1：开启
 0：关闭
 建议开启检测，可提升生成效果，关闭检测可能因输入图像质量较差导致生成效果受损。
@@ -88,20 +98,48 @@ Base64 和 Url 必须提供一个，如果都提供以 Url 为准。
     private String RspImgType;
 
     /**
-     * Get 头像风格。
-请在  [百变头像风格列表](https://cloud.tencent.com/document/product/1668/107741) 中选择期望的风格，必须传入风格编号。 
-     * @return Style 头像风格。
-请在  [百变头像风格列表](https://cloud.tencent.com/document/product/1668/107741) 中选择期望的风格，必须传入风格编号。
+     * Get 图像类型，默认为人像。
+human：人像头像，仅支持人像图片输入，建议避免上传无人、多人、人像过小的图片。
+pet：萌宠贴纸，仅支持动物图片输入，建议避免上传无动物、多动物、动物过小的图片。 
+     * @return Type 图像类型，默认为人像。
+human：人像头像，仅支持人像图片输入，建议避免上传无人、多人、人像过小的图片。
+pet：萌宠贴纸，仅支持动物图片输入，建议避免上传无动物、多动物、动物过小的图片。
+     */
+    public String getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set 图像类型，默认为人像。
+human：人像头像，仅支持人像图片输入，建议避免上传无人、多人、人像过小的图片。
+pet：萌宠贴纸，仅支持动物图片输入，建议避免上传无动物、多动物、动物过小的图片。
+     * @param Type 图像类型，默认为人像。
+human：人像头像，仅支持人像图片输入，建议避免上传无人、多人、人像过小的图片。
+pet：萌宠贴纸，仅支持动物图片输入，建议避免上传无动物、多动物、动物过小的图片。
+     */
+    public void setType(String Type) {
+        this.Type = Type;
+    }
+
+    /**
+     * Get 头像风格，仅在人像模式下生效。
+若使用人像模式，请在  [百变头像风格列表](https://cloud.tencent.com/document/product/1668/107741) 中选择期望的风格，传入风格编号，不传默认使用 flower 风格。
+若使用萌宠贴纸模式，无需选择风格，该参数不生效。 
+     * @return Style 头像风格，仅在人像模式下生效。
+若使用人像模式，请在  [百变头像风格列表](https://cloud.tencent.com/document/product/1668/107741) 中选择期望的风格，传入风格编号，不传默认使用 flower 风格。
+若使用萌宠贴纸模式，无需选择风格，该参数不生效。
      */
     public String getStyle() {
         return this.Style;
     }
 
     /**
-     * Set 头像风格。
-请在  [百变头像风格列表](https://cloud.tencent.com/document/product/1668/107741) 中选择期望的风格，必须传入风格编号。
-     * @param Style 头像风格。
-请在  [百变头像风格列表](https://cloud.tencent.com/document/product/1668/107741) 中选择期望的风格，必须传入风格编号。
+     * Set 头像风格，仅在人像模式下生效。
+若使用人像模式，请在  [百变头像风格列表](https://cloud.tencent.com/document/product/1668/107741) 中选择期望的风格，传入风格编号，不传默认使用 flower 风格。
+若使用萌宠贴纸模式，无需选择风格，该参数不生效。
+     * @param Style 头像风格，仅在人像模式下生效。
+若使用人像模式，请在  [百变头像风格列表](https://cloud.tencent.com/document/product/1668/107741) 中选择期望的风格，传入风格编号，不传默认使用 flower 风格。
+若使用萌宠贴纸模式，无需选择风格，该参数不生效。
      */
     public void setStyle(String Style) {
         this.Style = Style;
@@ -156,13 +194,13 @@ Base64 和 Url 必须提供一个，如果都提供以 Url 为准。
     }
 
     /**
-     * Get 输入图像质量检测开关，默认开启。
+     * Get 输入人像图的质量检测开关，默认开启，仅在人像模式下生效。
 1：开启
 0：关闭
 建议开启检测，可提升生成效果，关闭检测可能因输入图像质量较差导致生成效果受损。
 开启后，将增强对输入图像的质量要求，如果输入图像单边分辨率<500、图像中人脸占比较小、存在多人、没有检测到人脸、人脸不完整、人脸遮挡等，将被拦截。
 关闭后，将降低对输入图像的质量要求，如果图像中没有检测到人脸或人脸占比过小等，将被拦截。 
-     * @return Filter 输入图像质量检测开关，默认开启。
+     * @return Filter 输入人像图的质量检测开关，默认开启，仅在人像模式下生效。
 1：开启
 0：关闭
 建议开启检测，可提升生成效果，关闭检测可能因输入图像质量较差导致生成效果受损。
@@ -174,13 +212,13 @@ Base64 和 Url 必须提供一个，如果都提供以 Url 为准。
     }
 
     /**
-     * Set 输入图像质量检测开关，默认开启。
+     * Set 输入人像图的质量检测开关，默认开启，仅在人像模式下生效。
 1：开启
 0：关闭
 建议开启检测，可提升生成效果，关闭检测可能因输入图像质量较差导致生成效果受损。
 开启后，将增强对输入图像的质量要求，如果输入图像单边分辨率<500、图像中人脸占比较小、存在多人、没有检测到人脸、人脸不完整、人脸遮挡等，将被拦截。
 关闭后，将降低对输入图像的质量要求，如果图像中没有检测到人脸或人脸占比过小等，将被拦截。
-     * @param Filter 输入图像质量检测开关，默认开启。
+     * @param Filter 输入人像图的质量检测开关，默认开启，仅在人像模式下生效。
 1：开启
 0：关闭
 建议开启检测，可提升生成效果，关闭检测可能因输入图像质量较差导致生成效果受损。
@@ -267,6 +305,9 @@ Base64 和 Url 必须提供一个，如果都提供以 Url 为准。
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public GenerateAvatarRequest(GenerateAvatarRequest source) {
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
         if (source.Style != null) {
             this.Style = new String(source.Style);
         }
@@ -295,6 +336,7 @@ Base64 和 Url 必须提供一个，如果都提供以 Url 为准。
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "Style", this.Style);
         this.setParamSimple(map, prefix + "InputImage", this.InputImage);
         this.setParamSimple(map, prefix + "InputUrl", this.InputUrl);

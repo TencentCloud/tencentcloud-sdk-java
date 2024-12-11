@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DeployCertificateRecordRetryRequest extends AbstractModel {
 
     /**
-    * 待重试部署记录ID
+    * 待重试部署记录ID，通过DeployCertificateInstance获得
     */
     @SerializedName("DeployRecordId")
     @Expose
     private Long DeployRecordId;
 
     /**
-    * 待重试部署记录详情ID
+    * 待重试部署记录详情ID，通过DescribeHostDeployRecordDetail获得
     */
     @SerializedName("DeployRecordDetailId")
     @Expose
     private Long DeployRecordDetailId;
 
     /**
-     * Get 待重试部署记录ID 
-     * @return DeployRecordId 待重试部署记录ID
+     * Get 待重试部署记录ID，通过DeployCertificateInstance获得 
+     * @return DeployRecordId 待重试部署记录ID，通过DeployCertificateInstance获得
      */
     public Long getDeployRecordId() {
         return this.DeployRecordId;
     }
 
     /**
-     * Set 待重试部署记录ID
-     * @param DeployRecordId 待重试部署记录ID
+     * Set 待重试部署记录ID，通过DeployCertificateInstance获得
+     * @param DeployRecordId 待重试部署记录ID，通过DeployCertificateInstance获得
      */
     public void setDeployRecordId(Long DeployRecordId) {
         this.DeployRecordId = DeployRecordId;
     }
 
     /**
-     * Get 待重试部署记录详情ID 
-     * @return DeployRecordDetailId 待重试部署记录详情ID
+     * Get 待重试部署记录详情ID，通过DescribeHostDeployRecordDetail获得 
+     * @return DeployRecordDetailId 待重试部署记录详情ID，通过DescribeHostDeployRecordDetail获得
      */
     public Long getDeployRecordDetailId() {
         return this.DeployRecordDetailId;
     }
 
     /**
-     * Set 待重试部署记录详情ID
-     * @param DeployRecordDetailId 待重试部署记录详情ID
+     * Set 待重试部署记录详情ID，通过DescribeHostDeployRecordDetail获得
+     * @param DeployRecordDetailId 待重试部署记录详情ID，通过DescribeHostDeployRecordDetail获得
      */
     public void setDeployRecordDetailId(Long DeployRecordDetailId) {
         this.DeployRecordDetailId = DeployRecordDetailId;

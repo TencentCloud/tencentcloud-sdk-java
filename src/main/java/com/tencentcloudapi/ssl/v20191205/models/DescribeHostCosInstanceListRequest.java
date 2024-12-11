@@ -73,7 +73,7 @@ public class DescribeHostCosInstanceListRequest extends AbstractModel {
     private Long Limit;
 
     /**
-    * 是否异步	
+    * 是否异步，0表示否，1表示是
     */
     @SerializedName("AsyncCache")
     @Expose
@@ -192,16 +192,16 @@ public class DescribeHostCosInstanceListRequest extends AbstractModel {
     }
 
     /**
-     * Get 是否异步	 
-     * @return AsyncCache 是否异步	
+     * Get 是否异步，0表示否，1表示是 
+     * @return AsyncCache 是否异步，0表示否，1表示是
      */
     public Long getAsyncCache() {
         return this.AsyncCache;
     }
 
     /**
-     * Set 是否异步	
-     * @param AsyncCache 是否异步	
+     * Set 是否异步，0表示否，1表示是
+     * @param AsyncCache 是否异步，0表示否，1表示是
      */
     public void setAsyncCache(Long AsyncCache) {
         this.AsyncCache = AsyncCache;

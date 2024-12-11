@@ -987,6 +987,17 @@ public class CamClient extends AbstractClient{
     }
 
     /**
+     *修改角色会话时长 
+     * @param req UpdateRoleSessionDurationRequest
+     * @return UpdateRoleSessionDurationResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateRoleSessionDurationResponse UpdateRoleSessionDuration(UpdateRoleSessionDurationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateRoleSessionDuration", UpdateRoleSessionDurationResponse.class);
+    }
+
+    /**
      *更新SAML身份提供商信息
      * @param req UpdateSAMLProviderRequest
      * @return UpdateSAMLProviderResponse

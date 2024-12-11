@@ -38,6 +38,13 @@ public class CreateAddressTemplateGroupRequest extends AbstractModel {
     private String [] AddressTemplateIds;
 
     /**
+    * 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get IP地址模板集合名称。 
      * @return AddressTemplateGroupName IP地址模板集合名称。
      */
@@ -69,6 +76,22 @@ public class CreateAddressTemplateGroupRequest extends AbstractModel {
         this.AddressTemplateIds = AddressTemplateIds;
     }
 
+    /**
+     * Get 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。 
+     * @return Tags 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
+     * @param Tags 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public CreateAddressTemplateGroupRequest() {
     }
 
@@ -86,6 +109,12 @@ public class CreateAddressTemplateGroupRequest extends AbstractModel {
                 this.AddressTemplateIds[i] = new String(source.AddressTemplateIds[i]);
             }
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -95,6 +124,7 @@ public class CreateAddressTemplateGroupRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AddressTemplateGroupName", this.AddressTemplateGroupName);
         this.setParamArraySimple(map, prefix + "AddressTemplateIds.", this.AddressTemplateIds);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

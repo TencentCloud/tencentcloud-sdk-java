@@ -129,6 +129,14 @@ public class FlowApproverDetail extends AbstractModel {
     private String ApproverRoleName;
 
     /**
+    * 签署参与人在本流程中的编号ID（每个流程不同），可用此ID来定位签署参与人在本流程的签署节点。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SignId")
+    @Expose
+    private String SignId;
+
+    /**
      * Get 模板配置时候的签署人角色ID(用PDF文件发起也可以指定,如果不指定则自动生成此角色ID), 所有的填写控件和签署控件都归属不同的角色 
      * @return ReceiptId 模板配置时候的签署人角色ID(用PDF文件发起也可以指定,如果不指定则自动生成此角色ID), 所有的填写控件和签署控件都归属不同的角色
      */
@@ -404,6 +412,26 @@ public class FlowApproverDetail extends AbstractModel {
         this.ApproverRoleName = ApproverRoleName;
     }
 
+    /**
+     * Get 签署参与人在本流程中的编号ID（每个流程不同），可用此ID来定位签署参与人在本流程的签署节点。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SignId 签署参与人在本流程中的编号ID（每个流程不同），可用此ID来定位签署参与人在本流程的签署节点。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSignId() {
+        return this.SignId;
+    }
+
+    /**
+     * Set 签署参与人在本流程中的编号ID（每个流程不同），可用此ID来定位签署参与人在本流程的签署节点。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SignId 签署参与人在本流程中的编号ID（每个流程不同），可用此ID来定位签署参与人在本流程的签署节点。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSignId(String SignId) {
+        this.SignId = SignId;
+    }
+
     public FlowApproverDetail() {
     }
 
@@ -448,6 +476,9 @@ public class FlowApproverDetail extends AbstractModel {
         if (source.ApproverRoleName != null) {
             this.ApproverRoleName = new String(source.ApproverRoleName);
         }
+        if (source.SignId != null) {
+            this.SignId = new String(source.SignId);
+        }
     }
 
 
@@ -467,6 +498,7 @@ public class FlowApproverDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "ApproveTime", this.ApproveTime);
         this.setParamSimple(map, prefix + "ApproveType", this.ApproveType);
         this.setParamSimple(map, prefix + "ApproverRoleName", this.ApproverRoleName);
+        this.setParamSimple(map, prefix + "SignId", this.SignId);
 
     }
 }

@@ -24,12 +24,20 @@ import java.util.HashMap;
 public class DescribeHostDdosInstanceListResponse extends AbstractModel {
 
     /**
-    * DDOS实例列表
+    * DDOS实例列表,取不到值返回空数组
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceList")
     @Expose
     private DdosInstanceDetail [] InstanceList;
+
+    /**
+    * 总数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TotalCount")
+    @Expose
+    private Long TotalCount;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -39,9 +47,9 @@ public class DescribeHostDdosInstanceListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get DDOS实例列表
+     * Get DDOS实例列表,取不到值返回空数组
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InstanceList DDOS实例列表
+     * @return InstanceList DDOS实例列表,取不到值返回空数组
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DdosInstanceDetail [] getInstanceList() {
@@ -49,13 +57,33 @@ public class DescribeHostDdosInstanceListResponse extends AbstractModel {
     }
 
     /**
-     * Set DDOS实例列表
+     * Set DDOS实例列表,取不到值返回空数组
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InstanceList DDOS实例列表
+     * @param InstanceList DDOS实例列表,取不到值返回空数组
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceList(DdosInstanceDetail [] InstanceList) {
         this.InstanceList = InstanceList;
+    }
+
+    /**
+     * Get 总数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TotalCount 总数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getTotalCount() {
+        return this.TotalCount;
+    }
+
+    /**
+     * Set 总数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TotalCount 总数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
     }
 
     /**
@@ -88,6 +116,9 @@ public class DescribeHostDdosInstanceListResponse extends AbstractModel {
                 this.InstanceList[i] = new DdosInstanceDetail(source.InstanceList[i]);
             }
         }
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -99,6 +130,7 @@ public class DescribeHostDdosInstanceListResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "InstanceList.", this.InstanceList);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

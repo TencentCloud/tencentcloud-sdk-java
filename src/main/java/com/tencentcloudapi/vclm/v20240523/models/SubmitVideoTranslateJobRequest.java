@@ -25,11 +25,11 @@ public class SubmitVideoTranslateJobRequest extends AbstractModel {
 
     /**
     * 视频地址URL。
-格式要求：支持 mp4、mov 。
+格式要求：支持 mp4、mov、avi 。
 时长要求：【5-600】秒。
 fps 要求：【15-60】fps
 分辨率要求：单边像素要求在 【360~4096】 之间。
-大小要求：不超过500Mb
+大小要求：不超过500MB
 
     */
     @SerializedName("VideoUrl")
@@ -48,7 +48,7 @@ fps 要求：【15-60】fps
     * 当音频 URL 不为空时，不经过语音AI处理，直接以视频为素材用音频内容做视频口型驱动。
 格式要求：支持 mp3、m4a、aac、wav 格式。
 时长要求：【5~600】秒，音频时长要匹配视频时长。
-大小要求：不超过 100Mb。
+大小要求：不超过 100MB。
     */
     @SerializedName("AudioUrl")
     @Expose
@@ -105,18 +105,18 @@ fps 要求：【15-60】fps
 
     /**
      * Get 视频地址URL。
-格式要求：支持 mp4、mov 。
+格式要求：支持 mp4、mov、avi 。
 时长要求：【5-600】秒。
 fps 要求：【15-60】fps
 分辨率要求：单边像素要求在 【360~4096】 之间。
-大小要求：不超过500Mb
+大小要求：不超过500MB
  
      * @return VideoUrl 视频地址URL。
-格式要求：支持 mp4、mov 。
+格式要求：支持 mp4、mov、avi 。
 时长要求：【5-600】秒。
 fps 要求：【15-60】fps
 分辨率要求：单边像素要求在 【360~4096】 之间。
-大小要求：不超过500Mb
+大小要求：不超过500MB
 
      */
     public String getVideoUrl() {
@@ -125,18 +125,18 @@ fps 要求：【15-60】fps
 
     /**
      * Set 视频地址URL。
-格式要求：支持 mp4、mov 。
+格式要求：支持 mp4、mov、avi 。
 时长要求：【5-600】秒。
 fps 要求：【15-60】fps
 分辨率要求：单边像素要求在 【360~4096】 之间。
-大小要求：不超过500Mb
+大小要求：不超过500MB
 
      * @param VideoUrl 视频地址URL。
-格式要求：支持 mp4、mov 。
+格式要求：支持 mp4、mov、avi 。
 时长要求：【5-600】秒。
 fps 要求：【15-60】fps
 分辨率要求：单边像素要求在 【360~4096】 之间。
-大小要求：不超过500Mb
+大小要求：不超过500MB
 
      */
     public void setVideoUrl(String VideoUrl) {
@@ -167,11 +167,11 @@ fps 要求：【15-60】fps
      * Get 当音频 URL 不为空时，不经过语音AI处理，直接以视频为素材用音频内容做视频口型驱动。
 格式要求：支持 mp3、m4a、aac、wav 格式。
 时长要求：【5~600】秒，音频时长要匹配视频时长。
-大小要求：不超过 100Mb。 
+大小要求：不超过 100MB。 
      * @return AudioUrl 当音频 URL 不为空时，不经过语音AI处理，直接以视频为素材用音频内容做视频口型驱动。
 格式要求：支持 mp3、m4a、aac、wav 格式。
 时长要求：【5~600】秒，音频时长要匹配视频时长。
-大小要求：不超过 100Mb。
+大小要求：不超过 100MB。
      */
     public String getAudioUrl() {
         return this.AudioUrl;
@@ -181,11 +181,11 @@ fps 要求：【15-60】fps
      * Set 当音频 URL 不为空时，不经过语音AI处理，直接以视频为素材用音频内容做视频口型驱动。
 格式要求：支持 mp3、m4a、aac、wav 格式。
 时长要求：【5~600】秒，音频时长要匹配视频时长。
-大小要求：不超过 100Mb。
+大小要求：不超过 100MB。
      * @param AudioUrl 当音频 URL 不为空时，不经过语音AI处理，直接以视频为素材用音频内容做视频口型驱动。
 格式要求：支持 mp3、m4a、aac、wav 格式。
 时长要求：【5~600】秒，音频时长要匹配视频时长。
-大小要求：不超过 100Mb。
+大小要求：不超过 100MB。
      */
     public void setAudioUrl(String AudioUrl) {
         this.AudioUrl = AudioUrl;

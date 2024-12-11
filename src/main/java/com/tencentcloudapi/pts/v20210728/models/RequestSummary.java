@@ -108,6 +108,13 @@ public class RequestSummary extends AbstractModel {
     private String Result;
 
     /**
+    * 平均rps, 单位req/s
+    */
+    @SerializedName("RPS")
+    @Expose
+    private Float RPS;
+
+    /**
      * Get 请求URL 
      * @return Service 请求URL
      */
@@ -299,6 +306,22 @@ public class RequestSummary extends AbstractModel {
         this.Result = Result;
     }
 
+    /**
+     * Get 平均rps, 单位req/s 
+     * @return RPS 平均rps, 单位req/s
+     */
+    public Float getRPS() {
+        return this.RPS;
+    }
+
+    /**
+     * Set 平均rps, 单位req/s
+     * @param RPS 平均rps, 单位req/s
+     */
+    public void setRPS(Float RPS) {
+        this.RPS = RPS;
+    }
+
     public RequestSummary() {
     }
 
@@ -343,6 +366,9 @@ public class RequestSummary extends AbstractModel {
         if (source.Result != null) {
             this.Result = new String(source.Result);
         }
+        if (source.RPS != null) {
+            this.RPS = new Float(source.RPS);
+        }
     }
 
 
@@ -362,6 +388,7 @@ public class RequestSummary extends AbstractModel {
         this.setParamSimple(map, prefix + "P99", this.P99);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "Result", this.Result);
+        this.setParamSimple(map, prefix + "RPS", this.RPS);
 
     }
 }

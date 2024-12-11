@@ -127,6 +127,17 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *关闭数据库代理连接地址
+     * @param req CloseProxyEndPointRequest
+     * @return CloseProxyEndPointResponse
+     * @throws TencentCloudSDKException
+     */
+    public CloseProxyEndPointResponse CloseProxyEndPoint(CloseProxyEndPointRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CloseProxyEndPoint", CloseProxyEndPointResponse.class);
+    }
+
+    /**
      *本接口（CloseWan）用于关闭外网。
      * @param req CloseWanRequest
      * @return CloseWanResponse
@@ -732,6 +743,17 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *本接口(DescribeInstancesWithinSameCluster)用于查询同一集群下实例列表
+     * @param req DescribeInstancesWithinSameClusterRequest
+     * @return DescribeInstancesWithinSameClusterResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstancesWithinSameClusterResponse DescribeInstancesWithinSameCluster(DescribeInstancesWithinSameClusterRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeInstancesWithinSameCluster", DescribeInstancesWithinSameClusterResponse.class);
+    }
+
+    /**
      *本接口(DescribeIsolatedInstances)用于查询回收站实例列表。
      * @param req DescribeIsolatedInstancesRequest
      * @return DescribeIsolatedInstancesResponse
@@ -872,6 +894,17 @@ public class CynosdbClient extends AbstractClient{
     public DescribeRollbackTimeRangeResponse DescribeRollbackTimeRange(DescribeRollbackTimeRangeRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeRollbackTimeRange", DescribeRollbackTimeRangeResponse.class);
+    }
+
+    /**
+     *查询Serverless实例可选规格
+     * @param req DescribeServerlessInstanceSpecsRequest
+     * @return DescribeServerlessInstanceSpecsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeServerlessInstanceSpecsResponse DescribeServerlessInstanceSpecs(DescribeServerlessInstanceSpecsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeServerlessInstanceSpecs", DescribeServerlessInstanceSpecsResponse.class);
     }
 
     /**

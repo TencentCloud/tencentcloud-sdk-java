@@ -24,7 +24,10 @@ import java.util.HashMap;
 public class DescribeInstanceListRequest extends AbstractModel {
 
     /**
-    * 查询条件列表
+    * 查询条件列表,支持以下子弹
+InstanceName：集群名模糊搜索
+InstanceId：集群id精确搜索
+InstanceStatus：集群状态搜索
     */
     @SerializedName("Filters")
     @Expose
@@ -52,16 +55,28 @@ public class DescribeInstanceListRequest extends AbstractModel {
     private TagFilter [] TagFilters;
 
     /**
-     * Get 查询条件列表 
-     * @return Filters 查询条件列表
+     * Get 查询条件列表,支持以下子弹
+InstanceName：集群名模糊搜索
+InstanceId：集群id精确搜索
+InstanceStatus：集群状态搜索 
+     * @return Filters 查询条件列表,支持以下子弹
+InstanceName：集群名模糊搜索
+InstanceId：集群id精确搜索
+InstanceStatus：集群状态搜索
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 查询条件列表
-     * @param Filters 查询条件列表
+     * Set 查询条件列表,支持以下子弹
+InstanceName：集群名模糊搜索
+InstanceId：集群id精确搜索
+InstanceStatus：集群状态搜索
+     * @param Filters 查询条件列表,支持以下子弹
+InstanceName：集群名模糊搜索
+InstanceId：集群id精确搜索
+InstanceStatus：集群状态搜索
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

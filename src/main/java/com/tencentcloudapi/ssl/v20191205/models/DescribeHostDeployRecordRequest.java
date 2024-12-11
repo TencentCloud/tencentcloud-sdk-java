@@ -45,7 +45,7 @@ public class DescribeHostDeployRecordRequest extends AbstractModel {
     private Long Limit;
 
     /**
-    * 资源类型
+    * 支持的资源类型如下,clb,cdn,ddos,waf,apigateway,teo,tke,cos,lighthouse,vod,tcb,tse
     */
     @SerializedName("ResourceType")
     @Expose
@@ -100,16 +100,16 @@ public class DescribeHostDeployRecordRequest extends AbstractModel {
     }
 
     /**
-     * Get 资源类型 
-     * @return ResourceType 资源类型
+     * Get 支持的资源类型如下,clb,cdn,ddos,waf,apigateway,teo,tke,cos,lighthouse,vod,tcb,tse 
+     * @return ResourceType 支持的资源类型如下,clb,cdn,ddos,waf,apigateway,teo,tke,cos,lighthouse,vod,tcb,tse
      */
     public String getResourceType() {
         return this.ResourceType;
     }
 
     /**
-     * Set 资源类型
-     * @param ResourceType 资源类型
+     * Set 支持的资源类型如下,clb,cdn,ddos,waf,apigateway,teo,tke,cos,lighthouse,vod,tcb,tse
+     * @param ResourceType 支持的资源类型如下,clb,cdn,ddos,waf,apigateway,teo,tke,cos,lighthouse,vod,tcb,tse
      */
     public void setResourceType(String ResourceType) {
         this.ResourceType = ResourceType;

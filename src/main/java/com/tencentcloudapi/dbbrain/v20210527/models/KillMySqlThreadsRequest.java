@@ -59,7 +59,7 @@ public class KillMySqlThreadsRequest extends AbstractModel {
     private String Product;
 
     /**
-    * 默认是ture, 记录下kill的记录，为了加快kill，可设置为false。
+    * 默认是true，会记录下kill的记录；该参数为true, 则在kill操作前校验目标会话是否存在，存在则继续kill，否则取消kill。为了加快kill速度，可设置为false。
     */
     @SerializedName("RecordHistory")
     @Expose
@@ -146,16 +146,16 @@ public class KillMySqlThreadsRequest extends AbstractModel {
     }
 
     /**
-     * Get 默认是ture, 记录下kill的记录，为了加快kill，可设置为false。 
-     * @return RecordHistory 默认是ture, 记录下kill的记录，为了加快kill，可设置为false。
+     * Get 默认是true，会记录下kill的记录；该参数为true, 则在kill操作前校验目标会话是否存在，存在则继续kill，否则取消kill。为了加快kill速度，可设置为false。 
+     * @return RecordHistory 默认是true，会记录下kill的记录；该参数为true, 则在kill操作前校验目标会话是否存在，存在则继续kill，否则取消kill。为了加快kill速度，可设置为false。
      */
     public Boolean getRecordHistory() {
         return this.RecordHistory;
     }
 
     /**
-     * Set 默认是ture, 记录下kill的记录，为了加快kill，可设置为false。
-     * @param RecordHistory 默认是ture, 记录下kill的记录，为了加快kill，可设置为false。
+     * Set 默认是true，会记录下kill的记录；该参数为true, 则在kill操作前校验目标会话是否存在，存在则继续kill，否则取消kill。为了加快kill速度，可设置为false。
+     * @param RecordHistory 默认是true，会记录下kill的记录；该参数为true, 则在kill操作前校验目标会话是否存在，存在则继续kill，否则取消kill。为了加快kill速度，可设置为false。
      */
     public void setRecordHistory(Boolean RecordHistory) {
         this.RecordHistory = RecordHistory;

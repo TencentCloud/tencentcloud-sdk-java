@@ -18,6 +18,9 @@ public enum CamErrorCode {
     // 凭据操作失败。
      FAILEDOPERATION_FLOWAUTHILLEGAL("FailedOperation.FlowAuthIllegal"),
      
+    // 获取用户地域信息失败
+     FAILEDOPERATION_GETUSERAREAERROR("FailedOperation.GetUserAreaError"),
+     
     // 集团策略不允许操作。
      FAILEDOPERATION_ORGANIZATIONPOLICYOPERATEERROR("FailedOperation.OrganizationPolicyOperateError"),
      

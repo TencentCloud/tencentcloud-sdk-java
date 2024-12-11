@@ -88,6 +88,13 @@ Config = {"CropIdCard":true,"CropPortrait":true}
     private Boolean EnableReflectDetail;
 
     /**
+    * 用于控制是否开启日期校验，默认值为true，打开会进行日期校验。
+    */
+    @SerializedName("EnableDateVerify")
+    @Expose
+    private Boolean EnableDateVerify;
+
+    /**
      * Get 图片的 Base64 值。要求图片经Base64编码后不超过 7M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。
 图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。 
      * @return ImageBase64 图片的 Base64 值。要求图片经Base64编码后不超过 7M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。
@@ -271,6 +278,22 @@ Config = {"CropIdCard":true,"CropPortrait":true}
         this.EnableReflectDetail = EnableReflectDetail;
     }
 
+    /**
+     * Get 用于控制是否开启日期校验，默认值为true，打开会进行日期校验。 
+     * @return EnableDateVerify 用于控制是否开启日期校验，默认值为true，打开会进行日期校验。
+     */
+    public Boolean getEnableDateVerify() {
+        return this.EnableDateVerify;
+    }
+
+    /**
+     * Set 用于控制是否开启日期校验，默认值为true，打开会进行日期校验。
+     * @param EnableDateVerify 用于控制是否开启日期校验，默认值为true，打开会进行日期校验。
+     */
+    public void setEnableDateVerify(Boolean EnableDateVerify) {
+        this.EnableDateVerify = EnableDateVerify;
+    }
+
     public IDCardOCRRequest() {
     }
 
@@ -297,6 +320,9 @@ Config = {"CropIdCard":true,"CropPortrait":true}
         if (source.EnableReflectDetail != null) {
             this.EnableReflectDetail = new Boolean(source.EnableReflectDetail);
         }
+        if (source.EnableDateVerify != null) {
+            this.EnableDateVerify = new Boolean(source.EnableDateVerify);
+        }
     }
 
 
@@ -310,6 +336,7 @@ Config = {"CropIdCard":true,"CropPortrait":true}
         this.setParamSimple(map, prefix + "Config", this.Config);
         this.setParamSimple(map, prefix + "EnableRecognitionRectify", this.EnableRecognitionRectify);
         this.setParamSimple(map, prefix + "EnableReflectDetail", this.EnableReflectDetail);
+        this.setParamSimple(map, prefix + "EnableDateVerify", this.EnableDateVerify);
 
     }
 }

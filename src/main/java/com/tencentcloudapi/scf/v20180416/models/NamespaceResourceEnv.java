@@ -32,6 +32,13 @@ public class NamespaceResourceEnv extends AbstractModel {
     private NamespaceResourceEnvTKE TKE;
 
     /**
+    * 近离线计算类型的命名空间
+    */
+    @SerializedName("OFFLINE")
+    @Expose
+    private Boolean OFFLINE;
+
+    /**
      * Get 基于TKE集群的资源池
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TKE 基于TKE集群的资源池
@@ -51,6 +58,22 @@ public class NamespaceResourceEnv extends AbstractModel {
         this.TKE = TKE;
     }
 
+    /**
+     * Get 近离线计算类型的命名空间 
+     * @return OFFLINE 近离线计算类型的命名空间
+     */
+    public Boolean getOFFLINE() {
+        return this.OFFLINE;
+    }
+
+    /**
+     * Set 近离线计算类型的命名空间
+     * @param OFFLINE 近离线计算类型的命名空间
+     */
+    public void setOFFLINE(Boolean OFFLINE) {
+        this.OFFLINE = OFFLINE;
+    }
+
     public NamespaceResourceEnv() {
     }
 
@@ -62,6 +85,9 @@ public class NamespaceResourceEnv extends AbstractModel {
         if (source.TKE != null) {
             this.TKE = new NamespaceResourceEnvTKE(source.TKE);
         }
+        if (source.OFFLINE != null) {
+            this.OFFLINE = new Boolean(source.OFFLINE);
+        }
     }
 
 
@@ -70,6 +96,7 @@ public class NamespaceResourceEnv extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "TKE.", this.TKE);
+        this.setParamSimple(map, prefix + "OFFLINE", this.OFFLINE);
 
     }
 }

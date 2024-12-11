@@ -43,6 +43,14 @@ public class AddOnSubtitle extends AbstractModel {
     private MediaInputInfo Subtitle;
 
     /**
+    * 字幕名称	
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SubtitleName")
+    @Expose
+    private String SubtitleName;
+
+    /**
      * Get 插入形式，可选值：
 <li>subtitle-stream：插入字幕轨道</li>
 <li>close-caption-708：CEA-708字幕编码到SEI帧</li>
@@ -94,6 +102,26 @@ public class AddOnSubtitle extends AbstractModel {
         this.Subtitle = Subtitle;
     }
 
+    /**
+     * Get 字幕名称	
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SubtitleName 字幕名称	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSubtitleName() {
+        return this.SubtitleName;
+    }
+
+    /**
+     * Set 字幕名称	
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SubtitleName 字幕名称	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSubtitleName(String SubtitleName) {
+        this.SubtitleName = SubtitleName;
+    }
+
     public AddOnSubtitle() {
     }
 
@@ -108,6 +136,9 @@ public class AddOnSubtitle extends AbstractModel {
         if (source.Subtitle != null) {
             this.Subtitle = new MediaInputInfo(source.Subtitle);
         }
+        if (source.SubtitleName != null) {
+            this.SubtitleName = new String(source.SubtitleName);
+        }
     }
 
 
@@ -117,6 +148,7 @@ public class AddOnSubtitle extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamObj(map, prefix + "Subtitle.", this.Subtitle);
+        this.setParamSimple(map, prefix + "SubtitleName", this.SubtitleName);
 
     }
 }

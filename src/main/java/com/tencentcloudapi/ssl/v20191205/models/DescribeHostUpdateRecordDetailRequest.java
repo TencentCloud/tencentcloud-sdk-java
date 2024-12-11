@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeHostUpdateRecordDetailRequest extends AbstractModel {
 
     /**
-    * 一键更新记录ID
+    * 一键更新记录ID,从接口UpdateCertificateInstance获得
     */
     @SerializedName("DeployRecordId")
     @Expose
@@ -45,16 +45,16 @@ public class DescribeHostUpdateRecordDetailRequest extends AbstractModel {
     private String Offset;
 
     /**
-     * Get 一键更新记录ID 
-     * @return DeployRecordId 一键更新记录ID
+     * Get 一键更新记录ID,从接口UpdateCertificateInstance获得 
+     * @return DeployRecordId 一键更新记录ID,从接口UpdateCertificateInstance获得
      */
     public String getDeployRecordId() {
         return this.DeployRecordId;
     }
 
     /**
-     * Set 一键更新记录ID
-     * @param DeployRecordId 一键更新记录ID
+     * Set 一键更新记录ID,从接口UpdateCertificateInstance获得
+     * @param DeployRecordId 一键更新记录ID,从接口UpdateCertificateInstance获得
      */
     public void setDeployRecordId(String DeployRecordId) {
         this.DeployRecordId = DeployRecordId;

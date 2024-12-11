@@ -82,6 +82,14 @@ public class DescribeBatchProductionResponse extends AbstractModel {
     private String LastFailedReason;
 
     /**
+    * 量产状态  0：任务创建，未量产；1：处理中；2：量产结束上传结果中；3：任务完成
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Status")
+    @Expose
+    private Long Status;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -225,6 +233,26 @@ public class DescribeBatchProductionResponse extends AbstractModel {
     }
 
     /**
+     * Get 量产状态  0：任务创建，未量产；1：处理中；2：量产结束上传结果中；3：任务完成
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Status 量产状态  0：任务创建，未量产；1：处理中；2：量产结束上传结果中；3：任务完成
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 量产状态  0：任务创建，未量产；1：处理中；2：量产结束上传结果中；3：任务完成
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Status 量产状态  0：任务创建，未量产；1：处理中；2：量产结束上传结果中；3：任务完成
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStatus(Long Status) {
+        this.Status = Status;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -272,6 +300,9 @@ public class DescribeBatchProductionResponse extends AbstractModel {
         if (source.LastFailedReason != null) {
             this.LastFailedReason = new String(source.LastFailedReason);
         }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -290,6 +321,7 @@ public class DescribeBatchProductionResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "UploadUrl", this.UploadUrl);
         this.setParamSimple(map, prefix + "SuccessCount", this.SuccessCount);
         this.setParamSimple(map, prefix + "LastFailedReason", this.LastFailedReason);
+        this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

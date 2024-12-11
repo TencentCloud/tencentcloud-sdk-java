@@ -38,7 +38,9 @@ public class ModifyJWTAuthenticatorRequest extends AbstractModel {
     private String Algorithm;
 
     /**
-    * 设备连接时传递jwt的key；username-使用用户名字段传递；password-使用密码字段传递
+    * 设备连接时传递jwt的key；
+username-使用用户名字段传递；
+password-使用密码字段传递
     */
     @SerializedName("From")
     @Expose
@@ -105,16 +107,24 @@ public class ModifyJWTAuthenticatorRequest extends AbstractModel {
     }
 
     /**
-     * Get 设备连接时传递jwt的key；username-使用用户名字段传递；password-使用密码字段传递 
-     * @return From 设备连接时传递jwt的key；username-使用用户名字段传递；password-使用密码字段传递
+     * Get 设备连接时传递jwt的key；
+username-使用用户名字段传递；
+password-使用密码字段传递 
+     * @return From 设备连接时传递jwt的key；
+username-使用用户名字段传递；
+password-使用密码字段传递
      */
     public String getFrom() {
         return this.From;
     }
 
     /**
-     * Set 设备连接时传递jwt的key；username-使用用户名字段传递；password-使用密码字段传递
-     * @param From 设备连接时传递jwt的key；username-使用用户名字段传递；password-使用密码字段传递
+     * Set 设备连接时传递jwt的key；
+username-使用用户名字段传递；
+password-使用密码字段传递
+     * @param From 设备连接时传递jwt的key；
+username-使用用户名字段传递；
+password-使用密码字段传递
      */
     public void setFrom(String From) {
         this.From = From;

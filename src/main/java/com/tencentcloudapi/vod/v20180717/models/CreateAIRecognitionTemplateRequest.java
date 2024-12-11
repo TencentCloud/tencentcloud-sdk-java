@@ -81,6 +81,7 @@ public class CreateAIRecognitionTemplateRequest extends AbstractModel {
 
     /**
     * 语音全文识别控制参数。
+<font color=red>注意：本参数已不再维护，推荐使用 AsrTranslateConfigure 参数发起语音翻译识别（当 DstLanguage 不填或填空字符串时，则不进行翻译，计费项和语音全文识别一致）。</font> 
     */
     @SerializedName("AsrFullTextConfigure")
     @Expose
@@ -94,7 +95,7 @@ public class CreateAIRecognitionTemplateRequest extends AbstractModel {
     private AsrWordsConfigureInfo AsrWordsConfigure;
 
     /**
-    * 语音翻译控制参数。
+    * 语音翻译识别控制参数。
     */
     @SerializedName("AsrTranslateConfigure")
     @Expose
@@ -243,8 +244,10 @@ public class CreateAIRecognitionTemplateRequest extends AbstractModel {
     }
 
     /**
-     * Get 语音全文识别控制参数。 
+     * Get 语音全文识别控制参数。
+<font color=red>注意：本参数已不再维护，推荐使用 AsrTranslateConfigure 参数发起语音翻译识别（当 DstLanguage 不填或填空字符串时，则不进行翻译，计费项和语音全文识别一致）。</font>  
      * @return AsrFullTextConfigure 语音全文识别控制参数。
+<font color=red>注意：本参数已不再维护，推荐使用 AsrTranslateConfigure 参数发起语音翻译识别（当 DstLanguage 不填或填空字符串时，则不进行翻译，计费项和语音全文识别一致）。</font> 
      */
     public AsrFullTextConfigureInfo getAsrFullTextConfigure() {
         return this.AsrFullTextConfigure;
@@ -252,7 +255,9 @@ public class CreateAIRecognitionTemplateRequest extends AbstractModel {
 
     /**
      * Set 语音全文识别控制参数。
+<font color=red>注意：本参数已不再维护，推荐使用 AsrTranslateConfigure 参数发起语音翻译识别（当 DstLanguage 不填或填空字符串时，则不进行翻译，计费项和语音全文识别一致）。</font> 
      * @param AsrFullTextConfigure 语音全文识别控制参数。
+<font color=red>注意：本参数已不再维护，推荐使用 AsrTranslateConfigure 参数发起语音翻译识别（当 DstLanguage 不填或填空字符串时，则不进行翻译，计费项和语音全文识别一致）。</font> 
      */
     public void setAsrFullTextConfigure(AsrFullTextConfigureInfo AsrFullTextConfigure) {
         this.AsrFullTextConfigure = AsrFullTextConfigure;
@@ -275,16 +280,16 @@ public class CreateAIRecognitionTemplateRequest extends AbstractModel {
     }
 
     /**
-     * Get 语音翻译控制参数。 
-     * @return AsrTranslateConfigure 语音翻译控制参数。
+     * Get 语音翻译识别控制参数。 
+     * @return AsrTranslateConfigure 语音翻译识别控制参数。
      */
     public AsrTranslateConfigureInfo getAsrTranslateConfigure() {
         return this.AsrTranslateConfigure;
     }
 
     /**
-     * Set 语音翻译控制参数。
-     * @param AsrTranslateConfigure 语音翻译控制参数。
+     * Set 语音翻译识别控制参数。
+     * @param AsrTranslateConfigure 语音翻译识别控制参数。
      */
     public void setAsrTranslateConfigure(AsrTranslateConfigureInfo AsrTranslateConfigure) {
         this.AsrTranslateConfigure = AsrTranslateConfigure;

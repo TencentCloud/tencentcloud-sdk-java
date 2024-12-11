@@ -24,7 +24,8 @@ import java.util.HashMap;
 public class PutEvaluationsRequest extends AbstractModel {
 
     /**
-    * 回调令牌。从自定义规则所选的scf云函数Context中取参数ResultToken值
+    * 回调令牌。从自定义规则所选的scf云函数入参中取参数ResultToken值
+<a href="https://cloud.tencent.com/document/product/583/9210#.E5.87.BD.E6.95.B0.E5.85.A5.E5.8F.82.3Ca-id.3D.22input.22.3E.3C.2Fa.3E" target="_blank">云函数入参说明</a>
     */
     @SerializedName("ResultToken")
     @Expose
@@ -38,16 +39,20 @@ public class PutEvaluationsRequest extends AbstractModel {
     private Evaluation [] Evaluations;
 
     /**
-     * Get 回调令牌。从自定义规则所选的scf云函数Context中取参数ResultToken值 
-     * @return ResultToken 回调令牌。从自定义规则所选的scf云函数Context中取参数ResultToken值
+     * Get 回调令牌。从自定义规则所选的scf云函数入参中取参数ResultToken值
+<a href="https://cloud.tencent.com/document/product/583/9210#.E5.87.BD.E6.95.B0.E5.85.A5.E5.8F.82.3Ca-id.3D.22input.22.3E.3C.2Fa.3E" target="_blank">云函数入参说明</a> 
+     * @return ResultToken 回调令牌。从自定义规则所选的scf云函数入参中取参数ResultToken值
+<a href="https://cloud.tencent.com/document/product/583/9210#.E5.87.BD.E6.95.B0.E5.85.A5.E5.8F.82.3Ca-id.3D.22input.22.3E.3C.2Fa.3E" target="_blank">云函数入参说明</a>
      */
     public String getResultToken() {
         return this.ResultToken;
     }
 
     /**
-     * Set 回调令牌。从自定义规则所选的scf云函数Context中取参数ResultToken值
-     * @param ResultToken 回调令牌。从自定义规则所选的scf云函数Context中取参数ResultToken值
+     * Set 回调令牌。从自定义规则所选的scf云函数入参中取参数ResultToken值
+<a href="https://cloud.tencent.com/document/product/583/9210#.E5.87.BD.E6.95.B0.E5.85.A5.E5.8F.82.3Ca-id.3D.22input.22.3E.3C.2Fa.3E" target="_blank">云函数入参说明</a>
+     * @param ResultToken 回调令牌。从自定义规则所选的scf云函数入参中取参数ResultToken值
+<a href="https://cloud.tencent.com/document/product/583/9210#.E5.87.BD.E6.95.B0.E5.85.A5.E5.8F.82.3Ca-id.3D.22input.22.3E.3C.2Fa.3E" target="_blank">云函数入参说明</a>
      */
     public void setResultToken(String ResultToken) {
         this.ResultToken = ResultToken;

@@ -38,7 +38,7 @@ public class DeployCertificateInstanceRequest extends AbstractModel {
     private String [] InstanceIdList;
 
     /**
-    * 部署的云资源类型
+    * 部署的云资源类型,如clb，cos
     */
     @SerializedName("ResourceType")
     @Expose
@@ -95,16 +95,16 @@ public class DeployCertificateInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get 部署的云资源类型 
-     * @return ResourceType 部署的云资源类型
+     * Get 部署的云资源类型,如clb，cos 
+     * @return ResourceType 部署的云资源类型,如clb，cos
      */
     public String getResourceType() {
         return this.ResourceType;
     }
 
     /**
-     * Set 部署的云资源类型
-     * @param ResourceType 部署的云资源类型
+     * Set 部署的云资源类型,如clb，cos
+     * @param ResourceType 部署的云资源类型,如clb，cos
      */
     public void setResourceType(String ResourceType) {
         this.ResourceType = ResourceType;

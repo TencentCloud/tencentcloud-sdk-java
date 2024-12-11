@@ -25,7 +25,6 @@ public class IPSECOptionsSpecification extends AbstractModel {
 
     /**
     * 加密算法，可选值：'3DES-CBC', 'AES-CBC-128', 'AES-CBC-192', 'AES-CBC-256', 'DES-CBC', 'SM4', 'NULL'， 默认为AES-CBC-128
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EncryptAlgorithm")
     @Expose
@@ -41,7 +40,6 @@ public class IPSECOptionsSpecification extends AbstractModel {
 
     /**
     * IPsec SA lifetime(s)：单位秒，取值范围：180-604800
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IPSECSaLifetimeSeconds")
     @Expose
@@ -49,7 +47,6 @@ public class IPSECOptionsSpecification extends AbstractModel {
 
     /**
     * PFS：可选值：'NULL', 'DH-GROUP1', 'DH-GROUP2', 'DH-GROUP5', 'DH-GROUP14', 'DH-GROUP24'，默认为NULL
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PfsDhGroup")
     @Expose
@@ -57,7 +54,6 @@ public class IPSECOptionsSpecification extends AbstractModel {
 
     /**
     * IPsec SA lifetime(KB)：单位KB，取值范围：2560-604800
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IPSECSaLifetimeTraffic")
     @Expose
@@ -65,17 +61,14 @@ public class IPSECOptionsSpecification extends AbstractModel {
 
     /**
     * 认证算法：可选值：'MD5', 'SHA1'，'SHA-256' 默认为
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IntegrityAlgorithm")
     @Expose
     private String IntegrityAlgorithm;
 
     /**
-     * Get 加密算法，可选值：'3DES-CBC', 'AES-CBC-128', 'AES-CBC-192', 'AES-CBC-256', 'DES-CBC', 'SM4', 'NULL'， 默认为AES-CBC-128
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 加密算法，可选值：'3DES-CBC', 'AES-CBC-128', 'AES-CBC-192', 'AES-CBC-256', 'DES-CBC', 'SM4', 'NULL'， 默认为AES-CBC-128 
      * @return EncryptAlgorithm 加密算法，可选值：'3DES-CBC', 'AES-CBC-128', 'AES-CBC-192', 'AES-CBC-256', 'DES-CBC', 'SM4', 'NULL'， 默认为AES-CBC-128
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEncryptAlgorithm() {
         return this.EncryptAlgorithm;
@@ -83,9 +76,7 @@ public class IPSECOptionsSpecification extends AbstractModel {
 
     /**
      * Set 加密算法，可选值：'3DES-CBC', 'AES-CBC-128', 'AES-CBC-192', 'AES-CBC-256', 'DES-CBC', 'SM4', 'NULL'， 默认为AES-CBC-128
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EncryptAlgorithm 加密算法，可选值：'3DES-CBC', 'AES-CBC-128', 'AES-CBC-192', 'AES-CBC-256', 'DES-CBC', 'SM4', 'NULL'， 默认为AES-CBC-128
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEncryptAlgorithm(String EncryptAlgorithm) {
         this.EncryptAlgorithm = EncryptAlgorithm;
@@ -116,10 +107,8 @@ public class IPSECOptionsSpecification extends AbstractModel {
     }
 
     /**
-     * Get IPsec SA lifetime(s)：单位秒，取值范围：180-604800
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get IPsec SA lifetime(s)：单位秒，取值范围：180-604800 
      * @return IPSECSaLifetimeSeconds IPsec SA lifetime(s)：单位秒，取值范围：180-604800
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIPSECSaLifetimeSeconds() {
         return this.IPSECSaLifetimeSeconds;
@@ -127,19 +116,15 @@ public class IPSECOptionsSpecification extends AbstractModel {
 
     /**
      * Set IPsec SA lifetime(s)：单位秒，取值范围：180-604800
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IPSECSaLifetimeSeconds IPsec SA lifetime(s)：单位秒，取值范围：180-604800
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIPSECSaLifetimeSeconds(Long IPSECSaLifetimeSeconds) {
         this.IPSECSaLifetimeSeconds = IPSECSaLifetimeSeconds;
     }
 
     /**
-     * Get PFS：可选值：'NULL', 'DH-GROUP1', 'DH-GROUP2', 'DH-GROUP5', 'DH-GROUP14', 'DH-GROUP24'，默认为NULL
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get PFS：可选值：'NULL', 'DH-GROUP1', 'DH-GROUP2', 'DH-GROUP5', 'DH-GROUP14', 'DH-GROUP24'，默认为NULL 
      * @return PfsDhGroup PFS：可选值：'NULL', 'DH-GROUP1', 'DH-GROUP2', 'DH-GROUP5', 'DH-GROUP14', 'DH-GROUP24'，默认为NULL
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPfsDhGroup() {
         return this.PfsDhGroup;
@@ -147,19 +132,15 @@ public class IPSECOptionsSpecification extends AbstractModel {
 
     /**
      * Set PFS：可选值：'NULL', 'DH-GROUP1', 'DH-GROUP2', 'DH-GROUP5', 'DH-GROUP14', 'DH-GROUP24'，默认为NULL
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PfsDhGroup PFS：可选值：'NULL', 'DH-GROUP1', 'DH-GROUP2', 'DH-GROUP5', 'DH-GROUP14', 'DH-GROUP24'，默认为NULL
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPfsDhGroup(String PfsDhGroup) {
         this.PfsDhGroup = PfsDhGroup;
     }
 
     /**
-     * Get IPsec SA lifetime(KB)：单位KB，取值范围：2560-604800
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get IPsec SA lifetime(KB)：单位KB，取值范围：2560-604800 
      * @return IPSECSaLifetimeTraffic IPsec SA lifetime(KB)：单位KB，取值范围：2560-604800
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIPSECSaLifetimeTraffic() {
         return this.IPSECSaLifetimeTraffic;
@@ -167,19 +148,15 @@ public class IPSECOptionsSpecification extends AbstractModel {
 
     /**
      * Set IPsec SA lifetime(KB)：单位KB，取值范围：2560-604800
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IPSECSaLifetimeTraffic IPsec SA lifetime(KB)：单位KB，取值范围：2560-604800
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIPSECSaLifetimeTraffic(Long IPSECSaLifetimeTraffic) {
         this.IPSECSaLifetimeTraffic = IPSECSaLifetimeTraffic;
     }
 
     /**
-     * Get 认证算法：可选值：'MD5', 'SHA1'，'SHA-256' 默认为
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 认证算法：可选值：'MD5', 'SHA1'，'SHA-256' 默认为 
      * @return IntegrityAlgorithm 认证算法：可选值：'MD5', 'SHA1'，'SHA-256' 默认为
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIntegrityAlgorithm() {
         return this.IntegrityAlgorithm;
@@ -187,9 +164,7 @@ public class IPSECOptionsSpecification extends AbstractModel {
 
     /**
      * Set 认证算法：可选值：'MD5', 'SHA1'，'SHA-256' 默认为
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IntegrityAlgorithm 认证算法：可选值：'MD5', 'SHA1'，'SHA-256' 默认为
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIntegrityAlgorithm(String IntegrityAlgorithm) {
         this.IntegrityAlgorithm = IntegrityAlgorithm;

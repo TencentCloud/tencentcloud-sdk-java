@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeHostWafInstanceListResponse extends AbstractModel {
 
     /**
-    * WAF实例列表
+    * WAF实例列表，如果没有取到值返回空数组
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceList")
@@ -39,9 +39,9 @@ public class DescribeHostWafInstanceListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get WAF实例列表
+     * Get WAF实例列表，如果没有取到值返回空数组
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InstanceList WAF实例列表
+     * @return InstanceList WAF实例列表，如果没有取到值返回空数组
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public LiveInstanceDetail [] getInstanceList() {
@@ -49,9 +49,9 @@ public class DescribeHostWafInstanceListResponse extends AbstractModel {
     }
 
     /**
-     * Set WAF实例列表
+     * Set WAF实例列表，如果没有取到值返回空数组
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InstanceList WAF实例列表
+     * @param InstanceList WAF实例列表，如果没有取到值返回空数组
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceList(LiveInstanceDetail [] InstanceList) {

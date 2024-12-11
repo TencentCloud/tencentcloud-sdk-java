@@ -31,7 +31,8 @@ public class DescribeTopicListRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * 查询条件列表
+    * 查询条件列表:
+支持TopicName模糊查询
     */
     @SerializedName("Filters")
     @Expose
@@ -68,16 +69,20 @@ public class DescribeTopicListRequest extends AbstractModel {
     }
 
     /**
-     * Get 查询条件列表 
-     * @return Filters 查询条件列表
+     * Get 查询条件列表:
+支持TopicName模糊查询 
+     * @return Filters 查询条件列表:
+支持TopicName模糊查询
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 查询条件列表
-     * @param Filters 查询条件列表
+     * Set 查询条件列表:
+支持TopicName模糊查询
+     * @param Filters 查询条件列表:
+支持TopicName模糊查询
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

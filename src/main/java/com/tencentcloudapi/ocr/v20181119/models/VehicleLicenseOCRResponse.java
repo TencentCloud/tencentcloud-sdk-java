@@ -73,6 +73,14 @@ WARN_DRIVER_LICENSE_BORDER_INCOMPLETE 边框不完整告警
     private String VehicleLicenseType;
 
     /**
+    * 拖拉机行驶证副页正面的识别结果，CardSide 为 BACK。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TractorBackInfo")
+    @Expose
+    private TextTractorVehicleBack TractorBackInfo;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -216,6 +224,26 @@ WARN_DRIVER_LICENSE_BORDER_INCOMPLETE 边框不完整告警
     }
 
     /**
+     * Get 拖拉机行驶证副页正面的识别结果，CardSide 为 BACK。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TractorBackInfo 拖拉机行驶证副页正面的识别结果，CardSide 为 BACK。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public TextTractorVehicleBack getTractorBackInfo() {
+        return this.TractorBackInfo;
+    }
+
+    /**
+     * Set 拖拉机行驶证副页正面的识别结果，CardSide 为 BACK。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TractorBackInfo 拖拉机行驶证副页正面的识别结果，CardSide 为 BACK。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTractorBackInfo(TextTractorVehicleBack TractorBackInfo) {
+        this.TractorBackInfo = TractorBackInfo;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -260,6 +288,9 @@ WARN_DRIVER_LICENSE_BORDER_INCOMPLETE 边框不完整告警
         if (source.VehicleLicenseType != null) {
             this.VehicleLicenseType = new String(source.VehicleLicenseType);
         }
+        if (source.TractorBackInfo != null) {
+            this.TractorBackInfo = new TextTractorVehicleBack(source.TractorBackInfo);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -275,6 +306,7 @@ WARN_DRIVER_LICENSE_BORDER_INCOMPLETE 边框不完整告警
         this.setParamArraySimple(map, prefix + "RecognizeWarnCode.", this.RecognizeWarnCode);
         this.setParamArraySimple(map, prefix + "RecognizeWarnMsg.", this.RecognizeWarnMsg);
         this.setParamSimple(map, prefix + "VehicleLicenseType", this.VehicleLicenseType);
+        this.setParamObj(map, prefix + "TractorBackInfo.", this.TractorBackInfo);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

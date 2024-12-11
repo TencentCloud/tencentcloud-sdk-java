@@ -121,7 +121,6 @@ public class CcnAttachedInstance extends AbstractModel {
 
     /**
     * 路由表ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RouteTableId")
     @Expose
@@ -129,7 +128,6 @@ public class CcnAttachedInstance extends AbstractModel {
 
     /**
     * 路由表名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RouteTableName")
     @Expose
@@ -376,10 +374,8 @@ public class CcnAttachedInstance extends AbstractModel {
     }
 
     /**
-     * Get 路由表ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 路由表ID 
      * @return RouteTableId 路由表ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRouteTableId() {
         return this.RouteTableId;
@@ -387,19 +383,15 @@ public class CcnAttachedInstance extends AbstractModel {
 
     /**
      * Set 路由表ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RouteTableId 路由表ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRouteTableId(String RouteTableId) {
         this.RouteTableId = RouteTableId;
     }
 
     /**
-     * Get 路由表名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 路由表名称 
      * @return RouteTableName 路由表名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRouteTableName() {
         return this.RouteTableName;
@@ -407,9 +399,7 @@ public class CcnAttachedInstance extends AbstractModel {
 
     /**
      * Set 路由表名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RouteTableName 路由表名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRouteTableName(String RouteTableName) {
         this.RouteTableName = RouteTableName;

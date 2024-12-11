@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeManagerDetailRequest extends AbstractModel {
 
     /**
-    * 管理人ID
+    * 管理人ID,可以从describeManagers接口获得
     */
     @SerializedName("ManagerId")
     @Expose
@@ -45,16 +45,16 @@ public class DescribeManagerDetailRequest extends AbstractModel {
     private Long Offset;
 
     /**
-     * Get 管理人ID 
-     * @return ManagerId 管理人ID
+     * Get 管理人ID,可以从describeManagers接口获得 
+     * @return ManagerId 管理人ID,可以从describeManagers接口获得
      */
     public Long getManagerId() {
         return this.ManagerId;
     }
 
     /**
-     * Set 管理人ID
-     * @param ManagerId 管理人ID
+     * Set 管理人ID,可以从describeManagers接口获得
+     * @param ManagerId 管理人ID,可以从describeManagers接口获得
      */
     public void setManagerId(Long ManagerId) {
         this.ManagerId = ManagerId;

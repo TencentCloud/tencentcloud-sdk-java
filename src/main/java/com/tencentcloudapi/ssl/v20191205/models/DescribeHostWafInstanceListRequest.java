@@ -31,13 +31,6 @@ public class DescribeHostWafInstanceListRequest extends AbstractModel {
     private String CertificateId;
 
     /**
-    * 部署资源类型
-    */
-    @SerializedName("ResourceType")
-    @Expose
-    private String ResourceType;
-
-    /**
     * 是否查询缓存，1：是； 0：否， 默认为查询缓存，缓存半小时
     */
     @SerializedName("IsCache")
@@ -50,6 +43,13 @@ public class DescribeHostWafInstanceListRequest extends AbstractModel {
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
+
+    /**
+    * 部署资源类型，如waf
+    */
+    @SerializedName("ResourceType")
+    @Expose
+    private String ResourceType;
 
     /**
     * 已部署的证书ID
@@ -72,22 +72,6 @@ public class DescribeHostWafInstanceListRequest extends AbstractModel {
      */
     public void setCertificateId(String CertificateId) {
         this.CertificateId = CertificateId;
-    }
-
-    /**
-     * Get 部署资源类型 
-     * @return ResourceType 部署资源类型
-     */
-    public String getResourceType() {
-        return this.ResourceType;
-    }
-
-    /**
-     * Set 部署资源类型
-     * @param ResourceType 部署资源类型
-     */
-    public void setResourceType(String ResourceType) {
-        this.ResourceType = ResourceType;
     }
 
     /**
@@ -123,6 +107,26 @@ public class DescribeHostWafInstanceListRequest extends AbstractModel {
     }
 
     /**
+     * Get 部署资源类型，如waf 
+     * @return ResourceType 部署资源类型，如waf
+     * @deprecated
+     */
+    @Deprecated
+    public String getResourceType() {
+        return this.ResourceType;
+    }
+
+    /**
+     * Set 部署资源类型，如waf
+     * @param ResourceType 部署资源类型，如waf
+     * @deprecated
+     */
+    @Deprecated
+    public void setResourceType(String ResourceType) {
+        this.ResourceType = ResourceType;
+    }
+
+    /**
      * Get 已部署的证书ID 
      * @return OldCertificateId 已部署的证书ID
      */
@@ -149,9 +153,6 @@ public class DescribeHostWafInstanceListRequest extends AbstractModel {
         if (source.CertificateId != null) {
             this.CertificateId = new String(source.CertificateId);
         }
-        if (source.ResourceType != null) {
-            this.ResourceType = new String(source.ResourceType);
-        }
         if (source.IsCache != null) {
             this.IsCache = new Long(source.IsCache);
         }
@@ -160,6 +161,9 @@ public class DescribeHostWafInstanceListRequest extends AbstractModel {
             for (int i = 0; i < source.Filters.length; i++) {
                 this.Filters[i] = new Filter(source.Filters[i]);
             }
+        }
+        if (source.ResourceType != null) {
+            this.ResourceType = new String(source.ResourceType);
         }
         if (source.OldCertificateId != null) {
             this.OldCertificateId = new String(source.OldCertificateId);
@@ -172,9 +176,9 @@ public class DescribeHostWafInstanceListRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "CertificateId", this.CertificateId);
-        this.setParamSimple(map, prefix + "ResourceType", this.ResourceType);
         this.setParamSimple(map, prefix + "IsCache", this.IsCache);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
+        this.setParamSimple(map, prefix + "ResourceType", this.ResourceType);
         this.setParamSimple(map, prefix + "OldCertificateId", this.OldCertificateId);
 
     }

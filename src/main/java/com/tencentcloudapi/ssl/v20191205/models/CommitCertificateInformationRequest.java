@@ -31,7 +31,7 @@ public class CommitCertificateInformationRequest extends AbstractModel {
     private String CertificateId;
 
     /**
-    * 域名验证方式
+    * 域名验证方式，如 DNS,DNS_AUTO,FILE
     */
     @SerializedName("VerifyType")
     @Expose
@@ -54,16 +54,16 @@ public class CommitCertificateInformationRequest extends AbstractModel {
     }
 
     /**
-     * Get 域名验证方式 
-     * @return VerifyType 域名验证方式
+     * Get 域名验证方式，如 DNS,DNS_AUTO,FILE 
+     * @return VerifyType 域名验证方式，如 DNS,DNS_AUTO,FILE
      */
     public String getVerifyType() {
         return this.VerifyType;
     }
 
     /**
-     * Set 域名验证方式
-     * @param VerifyType 域名验证方式
+     * Set 域名验证方式，如 DNS,DNS_AUTO,FILE
+     * @param VerifyType 域名验证方式，如 DNS,DNS_AUTO,FILE
      */
     public void setVerifyType(String VerifyType) {
         this.VerifyType = VerifyType;

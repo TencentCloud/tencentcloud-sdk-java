@@ -24,30 +24,34 @@ import java.util.HashMap;
 public class ListConfigRulesRequest extends AbstractModel {
 
     /**
-    * 每页限制
+    * 每页数量。
+取值范围：1~200
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 偏移量
+    * 偏移量。
+取值范围：最小值为0
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 排序类型, 倒序：desc，顺序：asc
+    * 排序类型(规则名称)。
+倒序：desc，
+顺序：asc
     */
     @SerializedName("OrderType")
     @Expose
     private String OrderType;
 
     /**
-    * 风险等级
-1：高风险。
-2：中风险。
+    * 风险等级。
+1：高风险，
+2：中风险，
 3：低风险。
     */
     @SerializedName("RiskLevel")
@@ -55,14 +59,19 @@ public class ListConfigRulesRequest extends AbstractModel {
     private Long [] RiskLevel;
 
     /**
-    * 规则状态
+    * 规则状态。
+ACTIVE：启用
+UN_ACTIVE：停用
+
     */
     @SerializedName("State")
     @Expose
     private String State;
 
     /**
-    * 评估结果
+    * 评估结果。
+COMPLIANT：合规
+NON_COMPLIANT：不合规
     */
     @SerializedName("ComplianceResult")
     @Expose
@@ -76,61 +85,77 @@ public class ListConfigRulesRequest extends AbstractModel {
     private String RuleName;
 
     /**
-     * Get 每页限制 
-     * @return Limit 每页限制
+     * Get 每页数量。
+取值范围：1~200 
+     * @return Limit 每页数量。
+取值范围：1~200
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 每页限制
-     * @param Limit 每页限制
+     * Set 每页数量。
+取值范围：1~200
+     * @param Limit 每页数量。
+取值范围：1~200
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get 偏移量 
-     * @return Offset 偏移量
+     * Get 偏移量。
+取值范围：最小值为0 
+     * @return Offset 偏移量。
+取值范围：最小值为0
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 偏移量
-     * @param Offset 偏移量
+     * Set 偏移量。
+取值范围：最小值为0
+     * @param Offset 偏移量。
+取值范围：最小值为0
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get 排序类型, 倒序：desc，顺序：asc 
-     * @return OrderType 排序类型, 倒序：desc，顺序：asc
+     * Get 排序类型(规则名称)。
+倒序：desc，
+顺序：asc 
+     * @return OrderType 排序类型(规则名称)。
+倒序：desc，
+顺序：asc
      */
     public String getOrderType() {
         return this.OrderType;
     }
 
     /**
-     * Set 排序类型, 倒序：desc，顺序：asc
-     * @param OrderType 排序类型, 倒序：desc，顺序：asc
+     * Set 排序类型(规则名称)。
+倒序：desc，
+顺序：asc
+     * @param OrderType 排序类型(规则名称)。
+倒序：desc，
+顺序：asc
      */
     public void setOrderType(String OrderType) {
         this.OrderType = OrderType;
     }
 
     /**
-     * Get 风险等级
-1：高风险。
-2：中风险。
+     * Get 风险等级。
+1：高风险，
+2：中风险，
 3：低风险。 
-     * @return RiskLevel 风险等级
-1：高风险。
-2：中风险。
+     * @return RiskLevel 风险等级。
+1：高风险，
+2：中风险，
 3：低风险。
      */
     public Long [] getRiskLevel() {
@@ -138,13 +163,13 @@ public class ListConfigRulesRequest extends AbstractModel {
     }
 
     /**
-     * Set 风险等级
-1：高风险。
-2：中风险。
+     * Set 风险等级。
+1：高风险，
+2：中风险，
 3：低风险。
-     * @param RiskLevel 风险等级
-1：高风险。
-2：中风险。
+     * @param RiskLevel 风险等级。
+1：高风险，
+2：中风险，
 3：低风险。
      */
     public void setRiskLevel(Long [] RiskLevel) {
@@ -152,32 +177,52 @@ public class ListConfigRulesRequest extends AbstractModel {
     }
 
     /**
-     * Get 规则状态 
-     * @return State 规则状态
+     * Get 规则状态。
+ACTIVE：启用
+UN_ACTIVE：停用
+ 
+     * @return State 规则状态。
+ACTIVE：启用
+UN_ACTIVE：停用
+
      */
     public String getState() {
         return this.State;
     }
 
     /**
-     * Set 规则状态
-     * @param State 规则状态
+     * Set 规则状态。
+ACTIVE：启用
+UN_ACTIVE：停用
+
+     * @param State 规则状态。
+ACTIVE：启用
+UN_ACTIVE：停用
+
      */
     public void setState(String State) {
         this.State = State;
     }
 
     /**
-     * Get 评估结果 
-     * @return ComplianceResult 评估结果
+     * Get 评估结果。
+COMPLIANT：合规
+NON_COMPLIANT：不合规 
+     * @return ComplianceResult 评估结果。
+COMPLIANT：合规
+NON_COMPLIANT：不合规
      */
     public String [] getComplianceResult() {
         return this.ComplianceResult;
     }
 
     /**
-     * Set 评估结果
-     * @param ComplianceResult 评估结果
+     * Set 评估结果。
+COMPLIANT：合规
+NON_COMPLIANT：不合规
+     * @param ComplianceResult 评估结果。
+COMPLIANT：合规
+NON_COMPLIANT：不合规
      */
     public void setComplianceResult(String [] ComplianceResult) {
         this.ComplianceResult = ComplianceResult;

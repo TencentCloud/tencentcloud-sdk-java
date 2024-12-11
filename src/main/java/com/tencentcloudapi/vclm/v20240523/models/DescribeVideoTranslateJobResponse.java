@@ -209,7 +209,9 @@ public class DescribeVideoTranslateJobResponse extends AbstractModel {
     /**
      * Get 是否需要确认翻译结果。0：不需要，1：需要。	 
      * @return JobConfirm 是否需要确认翻译结果。0：不需要，1：需要。	
+     * @deprecated
      */
+    @Deprecated
     public Long getJobConfirm() {
         return this.JobConfirm;
     }
@@ -217,7 +219,9 @@ public class DescribeVideoTranslateJobResponse extends AbstractModel {
     /**
      * Set 是否需要确认翻译结果。0：不需要，1：需要。	
      * @param JobConfirm 是否需要确认翻译结果。0：不需要，1：需要。	
+     * @deprecated
      */
+    @Deprecated
     public void setJobConfirm(Long JobConfirm) {
         this.JobConfirm = JobConfirm;
     }
@@ -225,7 +229,9 @@ public class DescribeVideoTranslateJobResponse extends AbstractModel {
     /**
      * Get 音频任务 ID。	 
      * @return JobAudioTaskId 音频任务 ID。	
+     * @deprecated
      */
+    @Deprecated
     public String getJobAudioTaskId() {
         return this.JobAudioTaskId;
     }
@@ -233,7 +239,9 @@ public class DescribeVideoTranslateJobResponse extends AbstractModel {
     /**
      * Set 音频任务 ID。	
      * @param JobAudioTaskId 音频任务 ID。	
+     * @deprecated
      */
+    @Deprecated
     public void setJobAudioTaskId(String JobAudioTaskId) {
         this.JobAudioTaskId = JobAudioTaskId;
     }
@@ -241,7 +249,9 @@ public class DescribeVideoTranslateJobResponse extends AbstractModel {
     /**
      * Get 视频审核任务ID。 
      * @return JobVideoModerationId 视频审核任务ID。
+     * @deprecated
      */
+    @Deprecated
     public String getJobVideoModerationId() {
         return this.JobVideoModerationId;
     }
@@ -249,7 +259,9 @@ public class DescribeVideoTranslateJobResponse extends AbstractModel {
     /**
      * Set 视频审核任务ID。
      * @param JobVideoModerationId 视频审核任务ID。
+     * @deprecated
      */
+    @Deprecated
     public void setJobVideoModerationId(String JobVideoModerationId) {
         this.JobVideoModerationId = JobVideoModerationId;
     }
@@ -257,7 +269,9 @@ public class DescribeVideoTranslateJobResponse extends AbstractModel {
     /**
      * Get 音频审核任务 ID。 
      * @return JobAudioModerationId 音频审核任务 ID。
+     * @deprecated
      */
+    @Deprecated
     public String getJobAudioModerationId() {
         return this.JobAudioModerationId;
     }
@@ -265,7 +279,9 @@ public class DescribeVideoTranslateJobResponse extends AbstractModel {
     /**
      * Set 音频审核任务 ID。
      * @param JobAudioModerationId 音频审核任务 ID。
+     * @deprecated
      */
+    @Deprecated
     public void setJobAudioModerationId(String JobAudioModerationId) {
         this.JobAudioModerationId = JobAudioModerationId;
     }
@@ -273,7 +289,9 @@ public class DescribeVideoTranslateJobResponse extends AbstractModel {
     /**
      * Get 口型驱动任务 ID。 
      * @return JobVideoId 口型驱动任务 ID。
+     * @deprecated
      */
+    @Deprecated
     public String getJobVideoId() {
         return this.JobVideoId;
     }
@@ -281,7 +299,9 @@ public class DescribeVideoTranslateJobResponse extends AbstractModel {
     /**
      * Set 口型驱动任务 ID。
      * @param JobVideoId 口型驱动任务 ID。
+     * @deprecated
      */
+    @Deprecated
     public void setJobVideoId(String JobVideoId) {
         this.JobVideoId = JobVideoId;
     }
@@ -289,7 +309,9 @@ public class DescribeVideoTranslateJobResponse extends AbstractModel {
     /**
      * Get 视频素材原始 URL。 
      * @return OriginalVideoUrl 视频素材原始 URL。
+     * @deprecated
      */
+    @Deprecated
     public String getOriginalVideoUrl() {
         return this.OriginalVideoUrl;
     }
@@ -297,7 +319,9 @@ public class DescribeVideoTranslateJobResponse extends AbstractModel {
     /**
      * Set 视频素材原始 URL。
      * @param OriginalVideoUrl 视频素材原始 URL。
+     * @deprecated
      */
+    @Deprecated
     public void setOriginalVideoUrl(String OriginalVideoUrl) {
         this.OriginalVideoUrl = OriginalVideoUrl;
     }
@@ -321,7 +345,9 @@ public class DescribeVideoTranslateJobResponse extends AbstractModel {
     /**
      * Get 提交视频转译任务时的 requestId。 
      * @return JobSubmitReqId 提交视频转译任务时的 requestId。
+     * @deprecated
      */
+    @Deprecated
     public String getJobSubmitReqId() {
         return this.JobSubmitReqId;
     }
@@ -329,7 +355,9 @@ public class DescribeVideoTranslateJobResponse extends AbstractModel {
     /**
      * Set 提交视频转译任务时的 requestId。
      * @param JobSubmitReqId 提交视频转译任务时的 requestId。
+     * @deprecated
      */
+    @Deprecated
     public void setJobSubmitReqId(String JobSubmitReqId) {
         this.JobSubmitReqId = JobSubmitReqId;
     }

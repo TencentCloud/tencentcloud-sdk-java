@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class AiRecognitionTaskAsrTranslateSegmentItem extends AbstractModel {
 
     /**
-    * 语音翻译片段置信度。取值：0~100。
+    * 语音翻译识别片段置信度。取值：0~100。
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-    * 语音翻译片段起始的偏移时间，单位：秒。
+    * 语音翻译识别片段起始的偏移时间，单位：秒。
     */
     @SerializedName("StartTimeOffset")
     @Expose
     private Float StartTimeOffset;
 
     /**
-    * 语音翻译片段终止的偏移时间，单位：秒。
+    * 语音翻译识别片段终止的偏移时间，单位：秒。
     */
     @SerializedName("EndTimeOffset")
     @Expose
@@ -59,48 +59,48 @@ public class AiRecognitionTaskAsrTranslateSegmentItem extends AbstractModel {
     private String Translation;
 
     /**
-     * Get 语音翻译片段置信度。取值：0~100。 
-     * @return Confidence 语音翻译片段置信度。取值：0~100。
+     * Get 语音翻译识别片段置信度。取值：0~100。 
+     * @return Confidence 语音翻译识别片段置信度。取值：0~100。
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set 语音翻译片段置信度。取值：0~100。
-     * @param Confidence 语音翻译片段置信度。取值：0~100。
+     * Set 语音翻译识别片段置信度。取值：0~100。
+     * @param Confidence 语音翻译识别片段置信度。取值：0~100。
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
     }
 
     /**
-     * Get 语音翻译片段起始的偏移时间，单位：秒。 
-     * @return StartTimeOffset 语音翻译片段起始的偏移时间，单位：秒。
+     * Get 语音翻译识别片段起始的偏移时间，单位：秒。 
+     * @return StartTimeOffset 语音翻译识别片段起始的偏移时间，单位：秒。
      */
     public Float getStartTimeOffset() {
         return this.StartTimeOffset;
     }
 
     /**
-     * Set 语音翻译片段起始的偏移时间，单位：秒。
-     * @param StartTimeOffset 语音翻译片段起始的偏移时间，单位：秒。
+     * Set 语音翻译识别片段起始的偏移时间，单位：秒。
+     * @param StartTimeOffset 语音翻译识别片段起始的偏移时间，单位：秒。
      */
     public void setStartTimeOffset(Float StartTimeOffset) {
         this.StartTimeOffset = StartTimeOffset;
     }
 
     /**
-     * Get 语音翻译片段终止的偏移时间，单位：秒。 
-     * @return EndTimeOffset 语音翻译片段终止的偏移时间，单位：秒。
+     * Get 语音翻译识别片段终止的偏移时间，单位：秒。 
+     * @return EndTimeOffset 语音翻译识别片段终止的偏移时间，单位：秒。
      */
     public Float getEndTimeOffset() {
         return this.EndTimeOffset;
     }
 
     /**
-     * Set 语音翻译片段终止的偏移时间，单位：秒。
-     * @param EndTimeOffset 语音翻译片段终止的偏移时间，单位：秒。
+     * Set 语音翻译识别片段终止的偏移时间，单位：秒。
+     * @param EndTimeOffset 语音翻译识别片段终止的偏移时间，单位：秒。
      */
     public void setEndTimeOffset(Float EndTimeOffset) {
         this.EndTimeOffset = EndTimeOffset;

@@ -104,6 +104,13 @@ MyKid 儿童卡
     private String Birthday;
 
     /**
+    * 马来身份证背面号码
+    */
+    @SerializedName("MyKadNumber")
+    @Expose
+    private String MyKadNumber;
+
+    /**
     * 告警码
 -9101 证件边框不完整告警
 -9102 证件复印件告警
@@ -341,6 +348,22 @@ MyKid 儿童卡
     }
 
     /**
+     * Get 马来身份证背面号码 
+     * @return MyKadNumber 马来身份证背面号码
+     */
+    public String getMyKadNumber() {
+        return this.MyKadNumber;
+    }
+
+    /**
+     * Set 马来身份证背面号码
+     * @param MyKadNumber 马来身份证背面号码
+     */
+    public void setMyKadNumber(String MyKadNumber) {
+        this.MyKadNumber = MyKadNumber;
+    }
+
+    /**
      * Get 告警码
 -9101 证件边框不完整告警
 -9102 证件复印件告警
@@ -438,6 +461,9 @@ MyKid 儿童卡
         if (source.Birthday != null) {
             this.Birthday = new String(source.Birthday);
         }
+        if (source.MyKadNumber != null) {
+            this.MyKadNumber = new String(source.MyKadNumber);
+        }
         if (source.WarnCardInfos != null) {
             this.WarnCardInfos = new Long[source.WarnCardInfos.length];
             for (int i = 0; i < source.WarnCardInfos.length; i++) {
@@ -463,6 +489,7 @@ MyKid 儿童卡
         this.setParamSimple(map, prefix + "AdvancedInfo", this.AdvancedInfo);
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "Birthday", this.Birthday);
+        this.setParamSimple(map, prefix + "MyKadNumber", this.MyKadNumber);
         this.setParamArraySimple(map, prefix + "WarnCardInfos.", this.WarnCardInfos);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 

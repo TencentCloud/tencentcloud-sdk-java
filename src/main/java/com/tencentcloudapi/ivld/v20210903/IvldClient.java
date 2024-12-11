@@ -257,8 +257,6 @@ Bucket的格式参考为 `bucketName-123456.cos.ap-shanghai.myqcloud.com`
 
     /**
      *批量描述自定义人物
-
-
      * @param req DescribeCustomPersonsRequest
      * @return DescribeCustomPersonsResponse
      * @throws TencentCloudSDKException

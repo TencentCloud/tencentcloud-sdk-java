@@ -59,6 +59,38 @@ public class EsDictionaryInfo extends AbstractModel {
     private String UpdateType;
 
     /**
+    * ansj启用词词典列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AnsjMain")
+    @Expose
+    private DictInfo [] AnsjMain;
+
+    /**
+    * ansj停用词词典列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AnsjStop")
+    @Expose
+    private DictInfo [] AnsjStop;
+
+    /**
+    * ansj歧义词库列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AnsjAmbiguity")
+    @Expose
+    private DictInfo [] AnsjAmbiguity;
+
+    /**
+    * ansj同义词词典列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AnsjSynonyms")
+    @Expose
+    private DictInfo [] AnsjSynonyms;
+
+    /**
      * Get 启用词词典列表 
      * @return MainDict 启用词词典列表
      */
@@ -138,6 +170,86 @@ public class EsDictionaryInfo extends AbstractModel {
         this.UpdateType = UpdateType;
     }
 
+    /**
+     * Get ansj启用词词典列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AnsjMain ansj启用词词典列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public DictInfo [] getAnsjMain() {
+        return this.AnsjMain;
+    }
+
+    /**
+     * Set ansj启用词词典列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AnsjMain ansj启用词词典列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAnsjMain(DictInfo [] AnsjMain) {
+        this.AnsjMain = AnsjMain;
+    }
+
+    /**
+     * Get ansj停用词词典列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AnsjStop ansj停用词词典列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public DictInfo [] getAnsjStop() {
+        return this.AnsjStop;
+    }
+
+    /**
+     * Set ansj停用词词典列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AnsjStop ansj停用词词典列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAnsjStop(DictInfo [] AnsjStop) {
+        this.AnsjStop = AnsjStop;
+    }
+
+    /**
+     * Get ansj歧义词库列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AnsjAmbiguity ansj歧义词库列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public DictInfo [] getAnsjAmbiguity() {
+        return this.AnsjAmbiguity;
+    }
+
+    /**
+     * Set ansj歧义词库列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AnsjAmbiguity ansj歧义词库列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAnsjAmbiguity(DictInfo [] AnsjAmbiguity) {
+        this.AnsjAmbiguity = AnsjAmbiguity;
+    }
+
+    /**
+     * Get ansj同义词词典列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AnsjSynonyms ansj同义词词典列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public DictInfo [] getAnsjSynonyms() {
+        return this.AnsjSynonyms;
+    }
+
+    /**
+     * Set ansj同义词词典列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AnsjSynonyms ansj同义词词典列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAnsjSynonyms(DictInfo [] AnsjSynonyms) {
+        this.AnsjSynonyms = AnsjSynonyms;
+    }
+
     public EsDictionaryInfo() {
     }
 
@@ -173,6 +285,30 @@ public class EsDictionaryInfo extends AbstractModel {
         if (source.UpdateType != null) {
             this.UpdateType = new String(source.UpdateType);
         }
+        if (source.AnsjMain != null) {
+            this.AnsjMain = new DictInfo[source.AnsjMain.length];
+            for (int i = 0; i < source.AnsjMain.length; i++) {
+                this.AnsjMain[i] = new DictInfo(source.AnsjMain[i]);
+            }
+        }
+        if (source.AnsjStop != null) {
+            this.AnsjStop = new DictInfo[source.AnsjStop.length];
+            for (int i = 0; i < source.AnsjStop.length; i++) {
+                this.AnsjStop[i] = new DictInfo(source.AnsjStop[i]);
+            }
+        }
+        if (source.AnsjAmbiguity != null) {
+            this.AnsjAmbiguity = new DictInfo[source.AnsjAmbiguity.length];
+            for (int i = 0; i < source.AnsjAmbiguity.length; i++) {
+                this.AnsjAmbiguity[i] = new DictInfo(source.AnsjAmbiguity[i]);
+            }
+        }
+        if (source.AnsjSynonyms != null) {
+            this.AnsjSynonyms = new DictInfo[source.AnsjSynonyms.length];
+            for (int i = 0; i < source.AnsjSynonyms.length; i++) {
+                this.AnsjSynonyms[i] = new DictInfo(source.AnsjSynonyms[i]);
+            }
+        }
     }
 
 
@@ -185,6 +321,10 @@ public class EsDictionaryInfo extends AbstractModel {
         this.setParamArrayObj(map, prefix + "QQDict.", this.QQDict);
         this.setParamArrayObj(map, prefix + "Synonym.", this.Synonym);
         this.setParamSimple(map, prefix + "UpdateType", this.UpdateType);
+        this.setParamArrayObj(map, prefix + "AnsjMain.", this.AnsjMain);
+        this.setParamArrayObj(map, prefix + "AnsjStop.", this.AnsjStop);
+        this.setParamArrayObj(map, prefix + "AnsjAmbiguity.", this.AnsjAmbiguity);
+        this.setParamArrayObj(map, prefix + "AnsjSynonyms.", this.AnsjSynonyms);
 
     }
 }

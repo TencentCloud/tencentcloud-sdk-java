@@ -64,6 +64,30 @@ public class AiartClient extends AbstractClient{
     }
 
     /**
+     *消除补全接口通过图像 mask 指定需要消除的人、物、文字等区域，在选定区域对图像内容进行消除与重绘补全。
+默认提供1个并发，代表最多能同时处理1个已提交的任务。
+     * @param req ImageInpaintingRemovalRequest
+     * @return ImageInpaintingRemovalResponse
+     * @throws TencentCloudSDKException
+     */
+    public ImageInpaintingRemovalResponse ImageInpaintingRemoval(ImageInpaintingRemovalRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ImageInpaintingRemoval", ImageInpaintingRemovalResponse.class);
+    }
+
+    /**
+     *扩图接口支持对输入图像按指定宽高比实现智能扩图。
+默认提供1个并发，代表最多能同时处理1个已提交的任务。
+     * @param req ImageOutpaintingRequest
+     * @return ImageOutpaintingResponse
+     * @throws TencentCloudSDKException
+     */
+    public ImageOutpaintingResponse ImageOutpainting(ImageOutpaintingRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ImageOutpainting", ImageOutpaintingResponse.class);
+    }
+
+    /**
      *图像风格化（图生图）接口提供生成式的图生图风格转化能力，将根据输入的图像及文本描述，智能生成风格转化后的图像。建议避免输入人像过小、姿势复杂、人数较多的人像图片。
 图像风格化（图生图）默认提供3个并发任务数，代表最多能同时处理3个已提交的任务，上一个任务处理完毕后才能开始处理下一个任务。
      * @param req ImageToImageRequest
