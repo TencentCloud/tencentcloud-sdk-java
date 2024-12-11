@@ -232,6 +232,54 @@ public class DatasetGroup extends AbstractModel {
     private String ContentType;
 
     /**
+    * 数据集建模类别。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DatasetScene")
+    @Expose
+    private String DatasetScene;
+
+    /**
+    * CFS配置
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CFSConfig")
+    @Expose
+    private CFSConfig CFSConfig;
+
+    /**
+    * 数据集标签
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SceneTags")
+    @Expose
+    private String [] SceneTags;
+
+    /**
+    * 已标注数量
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NumAnnotated")
+    @Expose
+    private Long NumAnnotated;
+
+    /**
+    * 标注规范
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AnnotationSpecification")
+    @Expose
+    private String AnnotationSpecification;
+
+    /**
+    * 标注Schema是否配置
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AnnotationSchemaConfigured")
+    @Expose
+    private Boolean AnnotationSchemaConfigured;
+
+    /**
      * Get 数据集ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return DatasetId 数据集ID
@@ -751,6 +799,126 @@ public class DatasetGroup extends AbstractModel {
         this.ContentType = ContentType;
     }
 
+    /**
+     * Get 数据集建模类别。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DatasetScene 数据集建模类别。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDatasetScene() {
+        return this.DatasetScene;
+    }
+
+    /**
+     * Set 数据集建模类别。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DatasetScene 数据集建模类别。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDatasetScene(String DatasetScene) {
+        this.DatasetScene = DatasetScene;
+    }
+
+    /**
+     * Get CFS配置
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CFSConfig CFS配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public CFSConfig getCFSConfig() {
+        return this.CFSConfig;
+    }
+
+    /**
+     * Set CFS配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CFSConfig CFS配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCFSConfig(CFSConfig CFSConfig) {
+        this.CFSConfig = CFSConfig;
+    }
+
+    /**
+     * Get 数据集标签
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SceneTags 数据集标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getSceneTags() {
+        return this.SceneTags;
+    }
+
+    /**
+     * Set 数据集标签
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SceneTags 数据集标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSceneTags(String [] SceneTags) {
+        this.SceneTags = SceneTags;
+    }
+
+    /**
+     * Get 已标注数量
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NumAnnotated 已标注数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getNumAnnotated() {
+        return this.NumAnnotated;
+    }
+
+    /**
+     * Set 已标注数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NumAnnotated 已标注数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNumAnnotated(Long NumAnnotated) {
+        this.NumAnnotated = NumAnnotated;
+    }
+
+    /**
+     * Get 标注规范
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AnnotationSpecification 标注规范
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAnnotationSpecification() {
+        return this.AnnotationSpecification;
+    }
+
+    /**
+     * Set 标注规范
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AnnotationSpecification 标注规范
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAnnotationSpecification(String AnnotationSpecification) {
+        this.AnnotationSpecification = AnnotationSpecification;
+    }
+
+    /**
+     * Get 标注Schema是否配置
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AnnotationSchemaConfigured 标注Schema是否配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getAnnotationSchemaConfigured() {
+        return this.AnnotationSchemaConfigured;
+    }
+
+    /**
+     * Set 标注Schema是否配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AnnotationSchemaConfigured 标注Schema是否配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAnnotationSchemaConfigured(Boolean AnnotationSchemaConfigured) {
+        this.AnnotationSchemaConfigured = AnnotationSchemaConfigured;
+    }
+
     public DatasetGroup() {
     }
 
@@ -843,6 +1011,27 @@ public class DatasetGroup extends AbstractModel {
         if (source.ContentType != null) {
             this.ContentType = new String(source.ContentType);
         }
+        if (source.DatasetScene != null) {
+            this.DatasetScene = new String(source.DatasetScene);
+        }
+        if (source.CFSConfig != null) {
+            this.CFSConfig = new CFSConfig(source.CFSConfig);
+        }
+        if (source.SceneTags != null) {
+            this.SceneTags = new String[source.SceneTags.length];
+            for (int i = 0; i < source.SceneTags.length; i++) {
+                this.SceneTags[i] = new String(source.SceneTags[i]);
+            }
+        }
+        if (source.NumAnnotated != null) {
+            this.NumAnnotated = new Long(source.NumAnnotated);
+        }
+        if (source.AnnotationSpecification != null) {
+            this.AnnotationSpecification = new String(source.AnnotationSpecification);
+        }
+        if (source.AnnotationSchemaConfigured != null) {
+            this.AnnotationSchemaConfigured = new Boolean(source.AnnotationSchemaConfigured);
+        }
     }
 
 
@@ -876,6 +1065,12 @@ public class DatasetGroup extends AbstractModel {
         this.setParamSimple(map, prefix + "OcrScene", this.OcrScene);
         this.setParamSimple(map, prefix + "AnnotationKeyStatus", this.AnnotationKeyStatus);
         this.setParamSimple(map, prefix + "ContentType", this.ContentType);
+        this.setParamSimple(map, prefix + "DatasetScene", this.DatasetScene);
+        this.setParamObj(map, prefix + "CFSConfig.", this.CFSConfig);
+        this.setParamArraySimple(map, prefix + "SceneTags.", this.SceneTags);
+        this.setParamSimple(map, prefix + "NumAnnotated", this.NumAnnotated);
+        this.setParamSimple(map, prefix + "AnnotationSpecification", this.AnnotationSpecification);
+        this.setParamSimple(map, prefix + "AnnotationSchemaConfigured", this.AnnotationSchemaConfigured);
 
     }
 }

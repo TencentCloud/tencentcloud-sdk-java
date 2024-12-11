@@ -102,7 +102,7 @@ public class CreateLaunchTemplateRequest extends AbstractModel {
     private String InstanceName;
 
     /**
-    * 实例登录设置。通过该参数可以设置实例的登录方式密码、密钥或保持镜像的原始登录设置。默认情况下会随机生成密码，并以站内信方式知会到用户。
+    * 实例登录设置。通过该参数可以设置实例的登录方式为密钥或保持镜像的原始登录设置。
     */
     @SerializedName("LoginSettings")
     @Expose
@@ -398,16 +398,16 @@ false（默认）：发送正常请求，通过检查后直接创建实例。
     }
 
     /**
-     * Get 实例登录设置。通过该参数可以设置实例的登录方式密码、密钥或保持镜像的原始登录设置。默认情况下会随机生成密码，并以站内信方式知会到用户。 
-     * @return LoginSettings 实例登录设置。通过该参数可以设置实例的登录方式密码、密钥或保持镜像的原始登录设置。默认情况下会随机生成密码，并以站内信方式知会到用户。
+     * Get 实例登录设置。通过该参数可以设置实例的登录方式为密钥或保持镜像的原始登录设置。 
+     * @return LoginSettings 实例登录设置。通过该参数可以设置实例的登录方式为密钥或保持镜像的原始登录设置。
      */
     public LoginSettings getLoginSettings() {
         return this.LoginSettings;
     }
 
     /**
-     * Set 实例登录设置。通过该参数可以设置实例的登录方式密码、密钥或保持镜像的原始登录设置。默认情况下会随机生成密码，并以站内信方式知会到用户。
-     * @param LoginSettings 实例登录设置。通过该参数可以设置实例的登录方式密码、密钥或保持镜像的原始登录设置。默认情况下会随机生成密码，并以站内信方式知会到用户。
+     * Set 实例登录设置。通过该参数可以设置实例的登录方式为密钥或保持镜像的原始登录设置。
+     * @param LoginSettings 实例登录设置。通过该参数可以设置实例的登录方式为密钥或保持镜像的原始登录设置。
      */
     public void setLoginSettings(LoginSettings LoginSettings) {
         this.LoginSettings = LoginSettings;

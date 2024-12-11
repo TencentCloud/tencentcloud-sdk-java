@@ -52,6 +52,14 @@ public class InstanceNodeDistribution extends AbstractModel {
     private Boolean NodePermWipeFlag;
 
     /**
+    * 可用区状态
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ZoneStatus")
+    @Expose
+    private String ZoneStatus;
+
+    /**
      * Get 可用区 
      * @return ZoneName 可用区
      */
@@ -115,6 +123,26 @@ public class InstanceNodeDistribution extends AbstractModel {
         this.NodePermWipeFlag = NodePermWipeFlag;
     }
 
+    /**
+     * Get 可用区状态
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ZoneStatus 可用区状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getZoneStatus() {
+        return this.ZoneStatus;
+    }
+
+    /**
+     * Set 可用区状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ZoneStatus 可用区状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setZoneStatus(String ZoneStatus) {
+        this.ZoneStatus = ZoneStatus;
+    }
+
     public InstanceNodeDistribution() {
     }
 
@@ -135,6 +163,9 @@ public class InstanceNodeDistribution extends AbstractModel {
         if (source.NodePermWipeFlag != null) {
             this.NodePermWipeFlag = new Boolean(source.NodePermWipeFlag);
         }
+        if (source.ZoneStatus != null) {
+            this.ZoneStatus = new String(source.ZoneStatus);
+        }
     }
 
 
@@ -146,6 +177,7 @@ public class InstanceNodeDistribution extends AbstractModel {
         this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
         this.setParamSimple(map, prefix + "NodeCount", this.NodeCount);
         this.setParamSimple(map, prefix + "NodePermWipeFlag", this.NodePermWipeFlag);
+        this.setParamSimple(map, prefix + "ZoneStatus", this.ZoneStatus);
 
     }
 }

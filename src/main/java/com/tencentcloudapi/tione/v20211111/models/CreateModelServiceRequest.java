@@ -278,6 +278,20 @@ HYBRID_PAID:
     private Long ServicePort;
 
     /**
+    * 服务的部署类型 [STANDARD 标准部署，DIST 分布式多机部署] 默认STANDARD
+    */
+    @SerializedName("DeployType")
+    @Expose
+    private String DeployType;
+
+    /**
+    * 单副本下的实例数，仅在部署类型为DIST时生效，默认1
+    */
+    @SerializedName("InstancePerReplicas")
+    @Expose
+    private Long InstancePerReplicas;
+
+    /**
      * Get 新增版本时需要填写 
      * @return ServiceGroupId 新增版本时需要填写
      */
@@ -897,6 +911,38 @@ HYBRID_PAID:
         this.ServicePort = ServicePort;
     }
 
+    /**
+     * Get 服务的部署类型 [STANDARD 标准部署，DIST 分布式多机部署] 默认STANDARD 
+     * @return DeployType 服务的部署类型 [STANDARD 标准部署，DIST 分布式多机部署] 默认STANDARD
+     */
+    public String getDeployType() {
+        return this.DeployType;
+    }
+
+    /**
+     * Set 服务的部署类型 [STANDARD 标准部署，DIST 分布式多机部署] 默认STANDARD
+     * @param DeployType 服务的部署类型 [STANDARD 标准部署，DIST 分布式多机部署] 默认STANDARD
+     */
+    public void setDeployType(String DeployType) {
+        this.DeployType = DeployType;
+    }
+
+    /**
+     * Get 单副本下的实例数，仅在部署类型为DIST时生效，默认1 
+     * @return InstancePerReplicas 单副本下的实例数，仅在部署类型为DIST时生效，默认1
+     */
+    public Long getInstancePerReplicas() {
+        return this.InstancePerReplicas;
+    }
+
+    /**
+     * Set 单副本下的实例数，仅在部署类型为DIST时生效，默认1
+     * @param InstancePerReplicas 单副本下的实例数，仅在部署类型为DIST时生效，默认1
+     */
+    public void setInstancePerReplicas(Long InstancePerReplicas) {
+        this.InstancePerReplicas = InstancePerReplicas;
+    }
+
     public CreateModelServiceRequest() {
     }
 
@@ -1013,6 +1059,12 @@ HYBRID_PAID:
         if (source.ServicePort != null) {
             this.ServicePort = new Long(source.ServicePort);
         }
+        if (source.DeployType != null) {
+            this.DeployType = new String(source.DeployType);
+        }
+        if (source.InstancePerReplicas != null) {
+            this.InstancePerReplicas = new Long(source.InstancePerReplicas);
+        }
     }
 
 
@@ -1053,6 +1105,8 @@ HYBRID_PAID:
         this.setParamObj(map, prefix + "ServiceEIP.", this.ServiceEIP);
         this.setParamSimple(map, prefix + "CommandBase64", this.CommandBase64);
         this.setParamSimple(map, prefix + "ServicePort", this.ServicePort);
+        this.setParamSimple(map, prefix + "DeployType", this.DeployType);
+        this.setParamSimple(map, prefix + "InstancePerReplicas", this.InstancePerReplicas);
 
     }
 }

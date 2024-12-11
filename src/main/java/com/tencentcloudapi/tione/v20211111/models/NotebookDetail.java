@@ -328,6 +328,34 @@ public class NotebookDetail extends AbstractModel {
     private GooseFS VolumeSourceGooseFS;
 
     /**
+    * 子用户ID
+    */
+    @SerializedName("SubUin")
+    @Expose
+    private String SubUin;
+
+    /**
+    * 调度节点ID
+    */
+    @SerializedName("ResourceGroupInstanceId")
+    @Expose
+    private String ResourceGroupInstanceId;
+
+    /**
+    * 子用户名称
+    */
+    @SerializedName("SubUinName")
+    @Expose
+    private String SubUinName;
+
+    /**
+    * 任务实例创建时间
+    */
+    @SerializedName("JobCreateTime")
+    @Expose
+    private String JobCreateTime;
+
+    /**
      * Get notebook  ID 
      * @return Id notebook  ID
      */
@@ -1075,6 +1103,70 @@ public class NotebookDetail extends AbstractModel {
         this.VolumeSourceGooseFS = VolumeSourceGooseFS;
     }
 
+    /**
+     * Get 子用户ID 
+     * @return SubUin 子用户ID
+     */
+    public String getSubUin() {
+        return this.SubUin;
+    }
+
+    /**
+     * Set 子用户ID
+     * @param SubUin 子用户ID
+     */
+    public void setSubUin(String SubUin) {
+        this.SubUin = SubUin;
+    }
+
+    /**
+     * Get 调度节点ID 
+     * @return ResourceGroupInstanceId 调度节点ID
+     */
+    public String getResourceGroupInstanceId() {
+        return this.ResourceGroupInstanceId;
+    }
+
+    /**
+     * Set 调度节点ID
+     * @param ResourceGroupInstanceId 调度节点ID
+     */
+    public void setResourceGroupInstanceId(String ResourceGroupInstanceId) {
+        this.ResourceGroupInstanceId = ResourceGroupInstanceId;
+    }
+
+    /**
+     * Get 子用户名称 
+     * @return SubUinName 子用户名称
+     */
+    public String getSubUinName() {
+        return this.SubUinName;
+    }
+
+    /**
+     * Set 子用户名称
+     * @param SubUinName 子用户名称
+     */
+    public void setSubUinName(String SubUinName) {
+        this.SubUinName = SubUinName;
+    }
+
+    /**
+     * Get 任务实例创建时间 
+     * @return JobCreateTime 任务实例创建时间
+     */
+    public String getJobCreateTime() {
+        return this.JobCreateTime;
+    }
+
+    /**
+     * Set 任务实例创建时间
+     * @param JobCreateTime 任务实例创建时间
+     */
+    public void setJobCreateTime(String JobCreateTime) {
+        this.JobCreateTime = JobCreateTime;
+    }
+
     public NotebookDetail() {
     }
 
@@ -1212,6 +1304,18 @@ public class NotebookDetail extends AbstractModel {
         if (source.VolumeSourceGooseFS != null) {
             this.VolumeSourceGooseFS = new GooseFS(source.VolumeSourceGooseFS);
         }
+        if (source.SubUin != null) {
+            this.SubUin = new String(source.SubUin);
+        }
+        if (source.ResourceGroupInstanceId != null) {
+            this.ResourceGroupInstanceId = new String(source.ResourceGroupInstanceId);
+        }
+        if (source.SubUinName != null) {
+            this.SubUinName = new String(source.SubUinName);
+        }
+        if (source.JobCreateTime != null) {
+            this.JobCreateTime = new String(source.JobCreateTime);
+        }
     }
 
 
@@ -1258,6 +1362,10 @@ public class NotebookDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "ImageType", this.ImageType);
         this.setParamObj(map, prefix + "SSHConfig.", this.SSHConfig);
         this.setParamObj(map, prefix + "VolumeSourceGooseFS.", this.VolumeSourceGooseFS);
+        this.setParamSimple(map, prefix + "SubUin", this.SubUin);
+        this.setParamSimple(map, prefix + "ResourceGroupInstanceId", this.ResourceGroupInstanceId);
+        this.setParamSimple(map, prefix + "SubUinName", this.SubUinName);
+        this.setParamSimple(map, prefix + "JobCreateTime", this.JobCreateTime);
 
     }
 }

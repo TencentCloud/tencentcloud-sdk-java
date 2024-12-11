@@ -77,6 +77,8 @@ ANNOTATION_TYPE_CLASSIFICATION，图片分类
 ANNOTATION_TYPE_DETECTION，目标检测
 ANNOTATION_TYPE_SEGMENTATION，图片分割
 ANNOTATION_TYPE_TRACKING，目标跟踪
+ANNOTATION_TYPE_OCR，OCR
+ANNOTATION_TYPE_TEXT_CLASSIFICATION，文本分类
     */
     @SerializedName("AnnotationType")
     @Expose
@@ -88,6 +90,10 @@ ANNOTATION_FORMAT_TI，TI平台格式
 ANNOTATION_FORMAT_PASCAL，Pascal Voc
 ANNOTATION_FORMAT_COCO，COCO
 ANNOTATION_FORMAT_FILE，文件目录结构
+ANNOTATION_FORMAT_TEXT_TI，文本类型TI平台格式
+ANNOTATION_FORMAT_TXT，文本类型TXT格式
+ANNOTATION_FORMAT_CSV，文本类型CSV格式
+ANNOTATION_FORMAT_JSON，文本类型JSON格式
     */
     @SerializedName("AnnotationFormat")
     @Expose
@@ -108,11 +114,34 @@ ANNOTATION_FORMAT_FILE，文件目录结构
     private Boolean IsSchemaExisted;
 
     /**
-    * 导入文件粒度，按行或者按文件
+    * 导入文件粒度
+TYPE_TEXT_LINE，按行
+TYPE_TEXT_FILE，按文件
     */
     @SerializedName("ContentType")
     @Expose
     private String ContentType;
+
+    /**
+    * 数据集建模一级类别。LLM,CV,STRUCTURE,OTHER
+    */
+    @SerializedName("DatasetScene")
+    @Expose
+    private String DatasetScene;
+
+    /**
+    * 数据集标签。
+    */
+    @SerializedName("SceneTags")
+    @Expose
+    private String [] SceneTags;
+
+    /**
+    * 数据集CFS配置。仅支持LLM场景
+    */
+    @SerializedName("CFSConfig")
+    @Expose
+    private CFSConfig CFSConfig;
 
     /**
      * Get 数据集名称，不超过60个字符，仅支持中英文、数字、下划线"_"、短横"-"，只能以中英文、数字开头 
@@ -239,12 +268,16 @@ STATUS_ANNOTATED，已标注
 ANNOTATION_TYPE_CLASSIFICATION，图片分类
 ANNOTATION_TYPE_DETECTION，目标检测
 ANNOTATION_TYPE_SEGMENTATION，图片分割
-ANNOTATION_TYPE_TRACKING，目标跟踪 
+ANNOTATION_TYPE_TRACKING，目标跟踪
+ANNOTATION_TYPE_OCR，OCR
+ANNOTATION_TYPE_TEXT_CLASSIFICATION，文本分类 
      * @return AnnotationType 标注类型:
 ANNOTATION_TYPE_CLASSIFICATION，图片分类
 ANNOTATION_TYPE_DETECTION，目标检测
 ANNOTATION_TYPE_SEGMENTATION，图片分割
 ANNOTATION_TYPE_TRACKING，目标跟踪
+ANNOTATION_TYPE_OCR，OCR
+ANNOTATION_TYPE_TEXT_CLASSIFICATION，文本分类
      */
     public String getAnnotationType() {
         return this.AnnotationType;
@@ -256,11 +289,15 @@ ANNOTATION_TYPE_CLASSIFICATION，图片分类
 ANNOTATION_TYPE_DETECTION，目标检测
 ANNOTATION_TYPE_SEGMENTATION，图片分割
 ANNOTATION_TYPE_TRACKING，目标跟踪
+ANNOTATION_TYPE_OCR，OCR
+ANNOTATION_TYPE_TEXT_CLASSIFICATION，文本分类
      * @param AnnotationType 标注类型:
 ANNOTATION_TYPE_CLASSIFICATION，图片分类
 ANNOTATION_TYPE_DETECTION，目标检测
 ANNOTATION_TYPE_SEGMENTATION，图片分割
 ANNOTATION_TYPE_TRACKING，目标跟踪
+ANNOTATION_TYPE_OCR，OCR
+ANNOTATION_TYPE_TEXT_CLASSIFICATION，文本分类
      */
     public void setAnnotationType(String AnnotationType) {
         this.AnnotationType = AnnotationType;
@@ -271,12 +308,20 @@ ANNOTATION_TYPE_TRACKING，目标跟踪
 ANNOTATION_FORMAT_TI，TI平台格式
 ANNOTATION_FORMAT_PASCAL，Pascal Voc
 ANNOTATION_FORMAT_COCO，COCO
-ANNOTATION_FORMAT_FILE，文件目录结构 
+ANNOTATION_FORMAT_FILE，文件目录结构
+ANNOTATION_FORMAT_TEXT_TI，文本类型TI平台格式
+ANNOTATION_FORMAT_TXT，文本类型TXT格式
+ANNOTATION_FORMAT_CSV，文本类型CSV格式
+ANNOTATION_FORMAT_JSON，文本类型JSON格式 
      * @return AnnotationFormat 标注格式:
 ANNOTATION_FORMAT_TI，TI平台格式
 ANNOTATION_FORMAT_PASCAL，Pascal Voc
 ANNOTATION_FORMAT_COCO，COCO
 ANNOTATION_FORMAT_FILE，文件目录结构
+ANNOTATION_FORMAT_TEXT_TI，文本类型TI平台格式
+ANNOTATION_FORMAT_TXT，文本类型TXT格式
+ANNOTATION_FORMAT_CSV，文本类型CSV格式
+ANNOTATION_FORMAT_JSON，文本类型JSON格式
      */
     public String getAnnotationFormat() {
         return this.AnnotationFormat;
@@ -288,11 +333,19 @@ ANNOTATION_FORMAT_TI，TI平台格式
 ANNOTATION_FORMAT_PASCAL，Pascal Voc
 ANNOTATION_FORMAT_COCO，COCO
 ANNOTATION_FORMAT_FILE，文件目录结构
+ANNOTATION_FORMAT_TEXT_TI，文本类型TI平台格式
+ANNOTATION_FORMAT_TXT，文本类型TXT格式
+ANNOTATION_FORMAT_CSV，文本类型CSV格式
+ANNOTATION_FORMAT_JSON，文本类型JSON格式
      * @param AnnotationFormat 标注格式:
 ANNOTATION_FORMAT_TI，TI平台格式
 ANNOTATION_FORMAT_PASCAL，Pascal Voc
 ANNOTATION_FORMAT_COCO，COCO
 ANNOTATION_FORMAT_FILE，文件目录结构
+ANNOTATION_FORMAT_TEXT_TI，文本类型TI平台格式
+ANNOTATION_FORMAT_TXT，文本类型TXT格式
+ANNOTATION_FORMAT_CSV，文本类型CSV格式
+ANNOTATION_FORMAT_JSON，文本类型JSON格式
      */
     public void setAnnotationFormat(String AnnotationFormat) {
         this.AnnotationFormat = AnnotationFormat;
@@ -331,19 +384,75 @@ ANNOTATION_FORMAT_FILE，文件目录结构
     }
 
     /**
-     * Get 导入文件粒度，按行或者按文件 
-     * @return ContentType 导入文件粒度，按行或者按文件
+     * Get 导入文件粒度
+TYPE_TEXT_LINE，按行
+TYPE_TEXT_FILE，按文件 
+     * @return ContentType 导入文件粒度
+TYPE_TEXT_LINE，按行
+TYPE_TEXT_FILE，按文件
      */
     public String getContentType() {
         return this.ContentType;
     }
 
     /**
-     * Set 导入文件粒度，按行或者按文件
-     * @param ContentType 导入文件粒度，按行或者按文件
+     * Set 导入文件粒度
+TYPE_TEXT_LINE，按行
+TYPE_TEXT_FILE，按文件
+     * @param ContentType 导入文件粒度
+TYPE_TEXT_LINE，按行
+TYPE_TEXT_FILE，按文件
      */
     public void setContentType(String ContentType) {
         this.ContentType = ContentType;
+    }
+
+    /**
+     * Get 数据集建模一级类别。LLM,CV,STRUCTURE,OTHER 
+     * @return DatasetScene 数据集建模一级类别。LLM,CV,STRUCTURE,OTHER
+     */
+    public String getDatasetScene() {
+        return this.DatasetScene;
+    }
+
+    /**
+     * Set 数据集建模一级类别。LLM,CV,STRUCTURE,OTHER
+     * @param DatasetScene 数据集建模一级类别。LLM,CV,STRUCTURE,OTHER
+     */
+    public void setDatasetScene(String DatasetScene) {
+        this.DatasetScene = DatasetScene;
+    }
+
+    /**
+     * Get 数据集标签。 
+     * @return SceneTags 数据集标签。
+     */
+    public String [] getSceneTags() {
+        return this.SceneTags;
+    }
+
+    /**
+     * Set 数据集标签。
+     * @param SceneTags 数据集标签。
+     */
+    public void setSceneTags(String [] SceneTags) {
+        this.SceneTags = SceneTags;
+    }
+
+    /**
+     * Get 数据集CFS配置。仅支持LLM场景 
+     * @return CFSConfig 数据集CFS配置。仅支持LLM场景
+     */
+    public CFSConfig getCFSConfig() {
+        return this.CFSConfig;
+    }
+
+    /**
+     * Set 数据集CFS配置。仅支持LLM场景
+     * @param CFSConfig 数据集CFS配置。仅支持LLM场景
+     */
+    public void setCFSConfig(CFSConfig CFSConfig) {
+        this.CFSConfig = CFSConfig;
     }
 
     public CreateDatasetRequest() {
@@ -393,6 +502,18 @@ ANNOTATION_FORMAT_FILE，文件目录结构
         if (source.ContentType != null) {
             this.ContentType = new String(source.ContentType);
         }
+        if (source.DatasetScene != null) {
+            this.DatasetScene = new String(source.DatasetScene);
+        }
+        if (source.SceneTags != null) {
+            this.SceneTags = new String[source.SceneTags.length];
+            for (int i = 0; i < source.SceneTags.length; i++) {
+                this.SceneTags[i] = new String(source.SceneTags[i]);
+            }
+        }
+        if (source.CFSConfig != null) {
+            this.CFSConfig = new CFSConfig(source.CFSConfig);
+        }
     }
 
 
@@ -411,6 +532,9 @@ ANNOTATION_FORMAT_FILE，文件目录结构
         this.setParamArrayObj(map, prefix + "SchemaInfos.", this.SchemaInfos);
         this.setParamSimple(map, prefix + "IsSchemaExisted", this.IsSchemaExisted);
         this.setParamSimple(map, prefix + "ContentType", this.ContentType);
+        this.setParamSimple(map, prefix + "DatasetScene", this.DatasetScene);
+        this.setParamArraySimple(map, prefix + "SceneTags.", this.SceneTags);
+        this.setParamObj(map, prefix + "CFSConfig.", this.CFSConfig);
 
     }
 }

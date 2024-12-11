@@ -236,6 +236,13 @@ public class NotebookSetItem extends AbstractModel {
     private GooseFS VolumeSourceGooseFS;
 
     /**
+    * 子用户名称
+    */
+    @SerializedName("SubUinName")
+    @Expose
+    private String SubUinName;
+
+    /**
      * Get notebook ID 
      * @return Id notebook ID
      */
@@ -759,6 +766,22 @@ public class NotebookSetItem extends AbstractModel {
         this.VolumeSourceGooseFS = VolumeSourceGooseFS;
     }
 
+    /**
+     * Get 子用户名称 
+     * @return SubUinName 子用户名称
+     */
+    public String getSubUinName() {
+        return this.SubUinName;
+    }
+
+    /**
+     * Set 子用户名称
+     * @param SubUinName 子用户名称
+     */
+    public void setSubUinName(String SubUinName) {
+        this.SubUinName = SubUinName;
+    }
+
     public NotebookSetItem() {
     }
 
@@ -857,6 +880,9 @@ public class NotebookSetItem extends AbstractModel {
         if (source.VolumeSourceGooseFS != null) {
             this.VolumeSourceGooseFS = new GooseFS(source.VolumeSourceGooseFS);
         }
+        if (source.SubUinName != null) {
+            this.SubUinName = new String(source.SubUinName);
+        }
     }
 
 
@@ -891,6 +917,7 @@ public class NotebookSetItem extends AbstractModel {
         this.setParamArraySimple(map, prefix + "UserTypes.", this.UserTypes);
         this.setParamObj(map, prefix + "SSHConfig.", this.SSHConfig);
         this.setParamObj(map, prefix + "VolumeSourceGooseFS.", this.VolumeSourceGooseFS);
+        this.setParamSimple(map, prefix + "SubUinName", this.SubUinName);
 
     }
 }

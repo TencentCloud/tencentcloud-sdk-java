@@ -75,6 +75,20 @@ DatasetScope，数据集范围，SCOPE_DATASET_PRIVATE或SCOPE_DATASET_PUBLIC
     private Long Limit;
 
     /**
+    * 是否检查CFS。若开启，则在CFS挂载好之前，不会返回数据集列表。
+    */
+    @SerializedName("CFSChecking")
+    @Expose
+    private Boolean CFSChecking;
+
+    /**
+    * 是否返回CFS详情。
+    */
+    @SerializedName("CFSDetail")
+    @Expose
+    private Boolean CFSDetail;
+
+    /**
      * Get 数据集id列表 
      * @return DatasetIds 数据集id列表
      */
@@ -194,6 +208,38 @@ DatasetScope，数据集范围，SCOPE_DATASET_PRIVATE或SCOPE_DATASET_PUBLIC
         this.Limit = Limit;
     }
 
+    /**
+     * Get 是否检查CFS。若开启，则在CFS挂载好之前，不会返回数据集列表。 
+     * @return CFSChecking 是否检查CFS。若开启，则在CFS挂载好之前，不会返回数据集列表。
+     */
+    public Boolean getCFSChecking() {
+        return this.CFSChecking;
+    }
+
+    /**
+     * Set 是否检查CFS。若开启，则在CFS挂载好之前，不会返回数据集列表。
+     * @param CFSChecking 是否检查CFS。若开启，则在CFS挂载好之前，不会返回数据集列表。
+     */
+    public void setCFSChecking(Boolean CFSChecking) {
+        this.CFSChecking = CFSChecking;
+    }
+
+    /**
+     * Get 是否返回CFS详情。 
+     * @return CFSDetail 是否返回CFS详情。
+     */
+    public Boolean getCFSDetail() {
+        return this.CFSDetail;
+    }
+
+    /**
+     * Set 是否返回CFS详情。
+     * @param CFSDetail 是否返回CFS详情。
+     */
+    public void setCFSDetail(Boolean CFSDetail) {
+        this.CFSDetail = CFSDetail;
+    }
+
     public DescribeDatasetsRequest() {
     }
 
@@ -232,6 +278,12 @@ DatasetScope，数据集范围，SCOPE_DATASET_PRIVATE或SCOPE_DATASET_PUBLIC
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
+        if (source.CFSChecking != null) {
+            this.CFSChecking = new Boolean(source.CFSChecking);
+        }
+        if (source.CFSDetail != null) {
+            this.CFSDetail = new Boolean(source.CFSDetail);
+        }
     }
 
 
@@ -246,6 +298,8 @@ DatasetScope，数据集范围，SCOPE_DATASET_PRIVATE或SCOPE_DATASET_PUBLIC
         this.setParamSimple(map, prefix + "OrderField", this.OrderField);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "CFSChecking", this.CFSChecking);
+        this.setParamSimple(map, prefix + "CFSDetail", this.CFSDetail);
 
     }
 }

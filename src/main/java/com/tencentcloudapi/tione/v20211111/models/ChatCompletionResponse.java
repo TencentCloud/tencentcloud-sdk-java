@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ChatCompletionResponse extends AbstractModel {
 
     /**
-    * 部署好的服务Id
+    * 对话的模型服务组ID
     */
     @SerializedName("Model")
     @Expose
@@ -39,7 +39,6 @@ public class ChatCompletionResponse extends AbstractModel {
 
     /**
     * 会话Id。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
     @Expose
@@ -47,7 +46,6 @@ public class ChatCompletionResponse extends AbstractModel {
 
     /**
     * token统计
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Usage")
     @Expose
@@ -61,16 +59,16 @@ public class ChatCompletionResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 部署好的服务Id 
-     * @return Model 部署好的服务Id
+     * Get 对话的模型服务组ID 
+     * @return Model 对话的模型服务组ID
      */
     public String getModel() {
         return this.Model;
     }
 
     /**
-     * Set 部署好的服务Id
-     * @param Model 部署好的服务Id
+     * Set 对话的模型服务组ID
+     * @param Model 对话的模型服务组ID
      */
     public void setModel(String Model) {
         this.Model = Model;
@@ -93,10 +91,8 @@ public class ChatCompletionResponse extends AbstractModel {
     }
 
     /**
-     * Get 会话Id。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 会话Id。 
      * @return Id 会话Id。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getId() {
         return this.Id;
@@ -104,19 +100,15 @@ public class ChatCompletionResponse extends AbstractModel {
 
     /**
      * Set 会话Id。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Id 会话Id。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get token统计
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get token统计 
      * @return Usage token统计
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Usage getUsage() {
         return this.Usage;
@@ -124,9 +116,7 @@ public class ChatCompletionResponse extends AbstractModel {
 
     /**
      * Set token统计
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Usage token统计
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUsage(Usage Usage) {
         this.Usage = Usage;

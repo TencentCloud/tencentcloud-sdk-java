@@ -52,6 +52,14 @@ public class TrainingTaskDetail extends AbstractModel {
     private String SubUin;
 
     /**
+    * 创建者名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SubUinName")
+    @Expose
+    private String SubUinName;
+
+    /**
     * 地域
     */
     @SerializedName("Region")
@@ -382,6 +390,26 @@ public class TrainingTaskDetail extends AbstractModel {
      */
     public void setSubUin(String SubUin) {
         this.SubUin = SubUin;
+    }
+
+    /**
+     * Get 创建者名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SubUinName 创建者名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSubUinName() {
+        return this.SubUinName;
+    }
+
+    /**
+     * Set 创建者名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SubUinName 创建者名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSubUinName(String SubUinName) {
+        this.SubUinName = SubUinName;
     }
 
     /**
@@ -1060,6 +1088,9 @@ public class TrainingTaskDetail extends AbstractModel {
         if (source.SubUin != null) {
             this.SubUin = new String(source.SubUin);
         }
+        if (source.SubUinName != null) {
+            this.SubUinName = new String(source.SubUinName);
+        }
         if (source.Region != null) {
             this.Region = new String(source.Region);
         }
@@ -1185,6 +1216,7 @@ public class TrainingTaskDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Uin", this.Uin);
         this.setParamSimple(map, prefix + "SubUin", this.SubUin);
+        this.setParamSimple(map, prefix + "SubUinName", this.SubUinName);
         this.setParamSimple(map, prefix + "Region", this.Region);
         this.setParamSimple(map, prefix + "FrameworkName", this.FrameworkName);
         this.setParamSimple(map, prefix + "FrameworkVersion", this.FrameworkVersion);

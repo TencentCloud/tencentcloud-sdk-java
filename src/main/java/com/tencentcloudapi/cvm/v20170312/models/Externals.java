@@ -32,7 +32,7 @@ public class Externals extends AbstractModel {
     private Boolean ReleaseAddress;
 
     /**
-    * 不支持的网络类型，取值范围：<br><li>BASIC：基础网络<br><li>VPC1.0：私有网络VPC1.0
+    * 不支持的网络类型，取值范围：<br><li>BASIC：基础网络</li><li>VPC1.0：私有网络VPC1.0</li>
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UnsupportNetworks")
@@ -68,9 +68,9 @@ public class Externals extends AbstractModel {
     }
 
     /**
-     * Get 不支持的网络类型，取值范围：<br><li>BASIC：基础网络<br><li>VPC1.0：私有网络VPC1.0
+     * Get 不支持的网络类型，取值范围：<br><li>BASIC：基础网络</li><li>VPC1.0：私有网络VPC1.0</li>
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return UnsupportNetworks 不支持的网络类型，取值范围：<br><li>BASIC：基础网络<br><li>VPC1.0：私有网络VPC1.0
+     * @return UnsupportNetworks 不支持的网络类型，取值范围：<br><li>BASIC：基础网络</li><li>VPC1.0：私有网络VPC1.0</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getUnsupportNetworks() {
@@ -78,9 +78,9 @@ public class Externals extends AbstractModel {
     }
 
     /**
-     * Set 不支持的网络类型，取值范围：<br><li>BASIC：基础网络<br><li>VPC1.0：私有网络VPC1.0
+     * Set 不支持的网络类型，取值范围：<br><li>BASIC：基础网络</li><li>VPC1.0：私有网络VPC1.0</li>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param UnsupportNetworks 不支持的网络类型，取值范围：<br><li>BASIC：基础网络<br><li>VPC1.0：私有网络VPC1.0
+     * @param UnsupportNetworks 不支持的网络类型，取值范围：<br><li>BASIC：基础网络</li><li>VPC1.0：私有网络VPC1.0</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUnsupportNetworks(String [] UnsupportNetworks) {

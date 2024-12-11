@@ -48,6 +48,13 @@ public class DescribeDatasetsResponse extends AbstractModel {
     private Long DatasetIdNums;
 
     /**
+    * 若开启了CFSChecking，则检查CFS是否准备完毕。若CFS未准备完毕，则返回true，并且TotalCount为0，DatasetGroups为空。
+    */
+    @SerializedName("CFSNotReady")
+    @Expose
+    private Boolean CFSNotReady;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -115,6 +122,22 @@ public class DescribeDatasetsResponse extends AbstractModel {
     }
 
     /**
+     * Get 若开启了CFSChecking，则检查CFS是否准备完毕。若CFS未准备完毕，则返回true，并且TotalCount为0，DatasetGroups为空。 
+     * @return CFSNotReady 若开启了CFSChecking，则检查CFS是否准备完毕。若CFS未准备完毕，则返回true，并且TotalCount为0，DatasetGroups为空。
+     */
+    public Boolean getCFSNotReady() {
+        return this.CFSNotReady;
+    }
+
+    /**
+     * Set 若开启了CFSChecking，则检查CFS是否准备完毕。若CFS未准备完毕，则返回true，并且TotalCount为0，DatasetGroups为空。
+     * @param CFSNotReady 若开启了CFSChecking，则检查CFS是否准备完毕。若CFS未准备完毕，则返回true，并且TotalCount为0，DatasetGroups为空。
+     */
+    public void setCFSNotReady(Boolean CFSNotReady) {
+        this.CFSNotReady = CFSNotReady;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -150,6 +173,9 @@ public class DescribeDatasetsResponse extends AbstractModel {
         if (source.DatasetIdNums != null) {
             this.DatasetIdNums = new Long(source.DatasetIdNums);
         }
+        if (source.CFSNotReady != null) {
+            this.CFSNotReady = new Boolean(source.CFSNotReady);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -163,6 +189,7 @@ public class DescribeDatasetsResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
         this.setParamArrayObj(map, prefix + "DatasetGroups.", this.DatasetGroups);
         this.setParamSimple(map, prefix + "DatasetIdNums", this.DatasetIdNums);
+        this.setParamSimple(map, prefix + "CFSNotReady", this.CFSNotReady);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

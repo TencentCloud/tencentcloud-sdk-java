@@ -25,7 +25,6 @@ public class CreateModelServiceResponse extends AbstractModel {
 
     /**
     * 生成的模型服务
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Service")
     @Expose
@@ -39,10 +38,8 @@ public class CreateModelServiceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 生成的模型服务
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 生成的模型服务 
      * @return Service 生成的模型服务
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Service getService() {
         return this.Service;
@@ -50,9 +47,7 @@ public class CreateModelServiceResponse extends AbstractModel {
 
     /**
      * Set 生成的模型服务
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Service 生成的模型服务
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setService(Service Service) {
         this.Service = Service;

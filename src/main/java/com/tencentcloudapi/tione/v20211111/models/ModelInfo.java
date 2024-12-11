@@ -99,6 +99,13 @@ public class ModelInfo extends AbstractModel {
     private Boolean IsPrivateModel;
 
     /**
+    * 模型的类别 多模态MultiModal, 文本大模型 LLM
+    */
+    @SerializedName("ModelCategory")
+    @Expose
+    private String ModelCategory;
+
+    /**
      * Get 模型版本id, DescribeTrainingModelVersion查询模型接口时的id
 自动学习类型的模型填写自动学习的任务id 
      * @return ModelVersionId 模型版本id, DescribeTrainingModelVersion查询模型接口时的id
@@ -278,6 +285,22 @@ public class ModelInfo extends AbstractModel {
         this.IsPrivateModel = IsPrivateModel;
     }
 
+    /**
+     * Get 模型的类别 多模态MultiModal, 文本大模型 LLM 
+     * @return ModelCategory 模型的类别 多模态MultiModal, 文本大模型 LLM
+     */
+    public String getModelCategory() {
+        return this.ModelCategory;
+    }
+
+    /**
+     * Set 模型的类别 多模态MultiModal, 文本大模型 LLM
+     * @param ModelCategory 模型的类别 多模态MultiModal, 文本大模型 LLM
+     */
+    public void setModelCategory(String ModelCategory) {
+        this.ModelCategory = ModelCategory;
+    }
+
     public ModelInfo() {
     }
 
@@ -316,6 +339,9 @@ public class ModelInfo extends AbstractModel {
         if (source.IsPrivateModel != null) {
             this.IsPrivateModel = new Boolean(source.IsPrivateModel);
         }
+        if (source.ModelCategory != null) {
+            this.ModelCategory = new String(source.ModelCategory);
+        }
     }
 
 
@@ -333,6 +359,7 @@ public class ModelInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "ModelType", this.ModelType);
         this.setParamSimple(map, prefix + "ModelFormat", this.ModelFormat);
         this.setParamSimple(map, prefix + "IsPrivateModel", this.IsPrivateModel);
+        this.setParamSimple(map, prefix + "ModelCategory", this.ModelCategory);
 
     }
 }

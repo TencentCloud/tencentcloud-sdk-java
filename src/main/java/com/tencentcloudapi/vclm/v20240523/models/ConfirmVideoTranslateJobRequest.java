@@ -31,7 +31,8 @@ public class ConfirmVideoTranslateJobRequest extends AbstractModel {
     private String JobId;
 
     /**
-    * 待确认文本
+    * 待确认文本。
+如果文本中含有数字，支持将数字配置为SSML语言
     */
     @SerializedName("TranslateResults")
     @Expose
@@ -54,16 +55,20 @@ public class ConfirmVideoTranslateJobRequest extends AbstractModel {
     }
 
     /**
-     * Get 待确认文本 
-     * @return TranslateResults 待确认文本
+     * Get 待确认文本。
+如果文本中含有数字，支持将数字配置为SSML语言 
+     * @return TranslateResults 待确认文本。
+如果文本中含有数字，支持将数字配置为SSML语言
      */
     public TranslateResult [] getTranslateResults() {
         return this.TranslateResults;
     }
 
     /**
-     * Set 待确认文本
-     * @param TranslateResults 待确认文本
+     * Set 待确认文本。
+如果文本中含有数字，支持将数字配置为SSML语言
+     * @param TranslateResults 待确认文本。
+如果文本中含有数字，支持将数字配置为SSML语言
      */
     public void setTranslateResults(TranslateResult [] TranslateResults) {
         this.TranslateResults = TranslateResults;

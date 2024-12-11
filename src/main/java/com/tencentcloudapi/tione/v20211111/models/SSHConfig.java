@@ -56,6 +56,14 @@ public class SSHConfig extends AbstractModel {
     private String LoginCommand;
 
     /**
+    * 登录地址是否改变
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsAddressChanged")
+    @Expose
+    private Boolean IsAddressChanged;
+
+    /**
      * Get 是否开启ssh
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Enable 是否开启ssh
@@ -135,6 +143,26 @@ public class SSHConfig extends AbstractModel {
         this.LoginCommand = LoginCommand;
     }
 
+    /**
+     * Get 登录地址是否改变
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsAddressChanged 登录地址是否改变
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getIsAddressChanged() {
+        return this.IsAddressChanged;
+    }
+
+    /**
+     * Set 登录地址是否改变
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsAddressChanged 登录地址是否改变
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsAddressChanged(Boolean IsAddressChanged) {
+        this.IsAddressChanged = IsAddressChanged;
+    }
+
     public SSHConfig() {
     }
 
@@ -155,6 +183,9 @@ public class SSHConfig extends AbstractModel {
         if (source.LoginCommand != null) {
             this.LoginCommand = new String(source.LoginCommand);
         }
+        if (source.IsAddressChanged != null) {
+            this.IsAddressChanged = new Boolean(source.IsAddressChanged);
+        }
     }
 
 
@@ -166,6 +197,7 @@ public class SSHConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "PublicKey", this.PublicKey);
         this.setParamSimple(map, prefix + "Port", this.Port);
         this.setParamSimple(map, prefix + "LoginCommand", this.LoginCommand);
+        this.setParamSimple(map, prefix + "IsAddressChanged", this.IsAddressChanged);
 
     }
 }

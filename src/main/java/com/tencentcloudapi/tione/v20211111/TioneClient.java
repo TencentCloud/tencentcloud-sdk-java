@@ -204,6 +204,28 @@ public class TioneClient extends AbstractClient{
     }
 
     /**
+     *本接口(DescribeBillingSpecs) 提供查询计费项列表
+     * @param req DescribeBillingSpecsRequest
+     * @return DescribeBillingSpecsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBillingSpecsResponse DescribeBillingSpecs(DescribeBillingSpecsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBillingSpecs", DescribeBillingSpecsResponse.class);
+    }
+
+    /**
+     *本接口(DescribeBillingSpecsPrice)用于查询按量计费计费项价格。
+     * @param req DescribeBillingSpecsPriceRequest
+     * @return DescribeBillingSpecsPriceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBillingSpecsPriceResponse DescribeBillingSpecsPrice(DescribeBillingSpecsPriceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBillingSpecsPrice", DescribeBillingSpecsPriceResponse.class);
+    }
+
+    /**
      *获取内置镜像列表
      * @param req DescribeBuildInImagesRequest
      * @return DescribeBuildInImagesResponse
@@ -410,17 +432,6 @@ public class TioneClient extends AbstractClient{
     public PushTrainingMetricsResponse PushTrainingMetrics(PushTrainingMetricsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "PushTrainingMetrics", PushTrainingMetricsResponse.class);
-    }
-
-    /**
-     *这是一个供您体验大模型聊天的接口。
-     * @param req SendChatMessageRequest
-     * @return SendChatMessageResponse
-     * @throws TencentCloudSDKException
-     */
-    public SendChatMessageResponse SendChatMessage(SendChatMessageRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "SendChatMessage", SendChatMessageResponse.class);
     }
 
     /**

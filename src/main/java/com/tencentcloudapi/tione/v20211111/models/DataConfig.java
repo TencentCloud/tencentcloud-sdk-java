@@ -31,6 +31,15 @@ public class DataConfig extends AbstractModel {
     private String MappingPath;
 
     /**
+    * 存储用途
+可选值为 BUILTIN_CODE, BUILTIN_DATA, BUILTIN_MODEL, USER_DATA, USER_CODE, USER_MODEL, OUTPUT, OTHER
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DataSourceUsage")
+    @Expose
+    private String DataSourceUsage;
+
+    /**
     * DATASET、COS、CFS、CFSTurbo、GooseFSx、HDFS、WEDATA_HDFS
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -116,6 +125,30 @@ public class DataConfig extends AbstractModel {
      */
     public void setMappingPath(String MappingPath) {
         this.MappingPath = MappingPath;
+    }
+
+    /**
+     * Get 存储用途
+可选值为 BUILTIN_CODE, BUILTIN_DATA, BUILTIN_MODEL, USER_DATA, USER_CODE, USER_MODEL, OUTPUT, OTHER
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DataSourceUsage 存储用途
+可选值为 BUILTIN_CODE, BUILTIN_DATA, BUILTIN_MODEL, USER_DATA, USER_CODE, USER_MODEL, OUTPUT, OTHER
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDataSourceUsage() {
+        return this.DataSourceUsage;
+    }
+
+    /**
+     * Set 存储用途
+可选值为 BUILTIN_CODE, BUILTIN_DATA, BUILTIN_MODEL, USER_DATA, USER_CODE, USER_MODEL, OUTPUT, OTHER
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DataSourceUsage 存储用途
+可选值为 BUILTIN_CODE, BUILTIN_DATA, BUILTIN_MODEL, USER_DATA, USER_CODE, USER_MODEL, OUTPUT, OTHER
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDataSourceUsage(String DataSourceUsage) {
+        this.DataSourceUsage = DataSourceUsage;
     }
 
     /**
@@ -309,6 +342,9 @@ public class DataConfig extends AbstractModel {
         if (source.MappingPath != null) {
             this.MappingPath = new String(source.MappingPath);
         }
+        if (source.DataSourceUsage != null) {
+            this.DataSourceUsage = new String(source.DataSourceUsage);
+        }
         if (source.DataSourceType != null) {
             this.DataSourceType = new String(source.DataSourceType);
         }
@@ -344,6 +380,7 @@ public class DataConfig extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "MappingPath", this.MappingPath);
+        this.setParamSimple(map, prefix + "DataSourceUsage", this.DataSourceUsage);
         this.setParamSimple(map, prefix + "DataSourceType", this.DataSourceType);
         this.setParamObj(map, prefix + "DataSetSource.", this.DataSetSource);
         this.setParamObj(map, prefix + "COSSource.", this.COSSource);

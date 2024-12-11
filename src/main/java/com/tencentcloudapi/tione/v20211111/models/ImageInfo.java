@@ -78,14 +78,6 @@ public class ImageInfo extends AbstractModel {
     private Boolean SupportDataPipeline;
 
     /**
-    * 镜像仓库用户名密码信息(仅当ImageType为CUSTOM第三方镜像的时候需要)
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("ImageSecret")
-    @Expose
-    private ImageSecret ImageSecret;
-
-    /**
      * Get 镜像类型：TCR为腾讯云TCR镜像; CCR为腾讯云TCR个人版镜像，PreSet为平台预置镜像，CUSTOM为第三方自定义镜像 
      * @return ImageType 镜像类型：TCR为腾讯云TCR镜像; CCR为腾讯云TCR个人版镜像，PreSet为平台预置镜像，CUSTOM为第三方自定义镜像
      */
@@ -217,26 +209,6 @@ public class ImageInfo extends AbstractModel {
         this.SupportDataPipeline = SupportDataPipeline;
     }
 
-    /**
-     * Get 镜像仓库用户名密码信息(仅当ImageType为CUSTOM第三方镜像的时候需要)
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ImageSecret 镜像仓库用户名密码信息(仅当ImageType为CUSTOM第三方镜像的时候需要)
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public ImageSecret getImageSecret() {
-        return this.ImageSecret;
-    }
-
-    /**
-     * Set 镜像仓库用户名密码信息(仅当ImageType为CUSTOM第三方镜像的时候需要)
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param ImageSecret 镜像仓库用户名密码信息(仅当ImageType为CUSTOM第三方镜像的时候需要)
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setImageSecret(ImageSecret ImageSecret) {
-        this.ImageSecret = ImageSecret;
-    }
-
     public ImageInfo() {
     }
 
@@ -266,9 +238,6 @@ public class ImageInfo extends AbstractModel {
         if (source.SupportDataPipeline != null) {
             this.SupportDataPipeline = new Boolean(source.SupportDataPipeline);
         }
-        if (source.ImageSecret != null) {
-            this.ImageSecret = new ImageSecret(source.ImageSecret);
-        }
     }
 
 
@@ -283,7 +252,6 @@ public class ImageInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "AllowSaveAllContent", this.AllowSaveAllContent);
         this.setParamSimple(map, prefix + "ImageName", this.ImageName);
         this.setParamSimple(map, prefix + "SupportDataPipeline", this.SupportDataPipeline);
-        this.setParamObj(map, prefix + "ImageSecret.", this.ImageSecret);
 
     }
 }

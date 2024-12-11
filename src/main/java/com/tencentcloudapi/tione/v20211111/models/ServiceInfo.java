@@ -167,6 +167,13 @@ HYBRID_PAID:
     private Boolean ModelHotUpdateEnable;
 
     /**
+    * 服务的规格别名
+    */
+    @SerializedName("InstanceAlias")
+    @Expose
+    private String InstanceAlias;
+
+    /**
     * 实例数量调节方式,默认为手动
 支持：自动 - "AUTO", 手动 - "MANUAL"
 注意：此字段可能返回 null，表示取不到有效值。
@@ -648,6 +655,22 @@ HYBRID_PAID:
     }
 
     /**
+     * Get 服务的规格别名 
+     * @return InstanceAlias 服务的规格别名
+     */
+    public String getInstanceAlias() {
+        return this.InstanceAlias;
+    }
+
+    /**
+     * Set 服务的规格别名
+     * @param InstanceAlias 服务的规格别名
+     */
+    public void setInstanceAlias(String InstanceAlias) {
+        this.InstanceAlias = InstanceAlias;
+    }
+
+    /**
      * Get 实例数量调节方式,默认为手动
 支持：自动 - "AUTO", 手动 - "MANUAL"
 注意：此字段可能返回 null，表示取不到有效值。 
@@ -1001,6 +1024,9 @@ HYBRID_PAID:
         if (source.ModelHotUpdateEnable != null) {
             this.ModelHotUpdateEnable = new Boolean(source.ModelHotUpdateEnable);
         }
+        if (source.InstanceAlias != null) {
+            this.InstanceAlias = new String(source.InstanceAlias);
+        }
         if (source.ScaleMode != null) {
             this.ScaleMode = new String(source.ScaleMode);
         }
@@ -1076,6 +1102,7 @@ HYBRID_PAID:
         this.setParamSimple(map, prefix + "HybridBillingPrepaidReplicas", this.HybridBillingPrepaidReplicas);
         this.setParamSimple(map, prefix + "OldHybridBillingPrepaidReplicas", this.OldHybridBillingPrepaidReplicas);
         this.setParamSimple(map, prefix + "ModelHotUpdateEnable", this.ModelHotUpdateEnable);
+        this.setParamSimple(map, prefix + "InstanceAlias", this.InstanceAlias);
         this.setParamSimple(map, prefix + "ScaleMode", this.ScaleMode);
         this.setParamArrayObj(map, prefix + "CronScaleJobs.", this.CronScaleJobs);
         this.setParamSimple(map, prefix + "ScaleStrategy", this.ScaleStrategy);

@@ -33,10 +33,7 @@ public class DescribeBillingResourceGroupsRequest extends AbstractModel {
     private String Type;
 
     /**
-    * Filter.Name: 枚举值: ResourceGroupId (资源组id列表)
-                    ResourceGroupName (资源组名称列表)
-Filter.Values: 长度为1且Filter.Fuzzy=true时，支持模糊查询; 不为1时，精确查询
-每次请求的Filters的上限为5，Filter.Values的上限为100
+    * Filter.Name: 枚举值: ResourceGroupId (资源组id列表)                    ResourceGroupName (资源组名称列表)                    AvailableNodeCount（资源组中可用节点数量）Filter.Values: 长度为1且Filter.Fuzzy=true时，支持模糊查询; 不为1时，精确查询每次请求的Filters的上限为5，Filter.Values的上限为100
     */
     @SerializedName("Filters")
     @Expose
@@ -104,28 +101,16 @@ true: 不展示，false 展示；
     }
 
     /**
-     * Get Filter.Name: 枚举值: ResourceGroupId (资源组id列表)
-                    ResourceGroupName (资源组名称列表)
-Filter.Values: 长度为1且Filter.Fuzzy=true时，支持模糊查询; 不为1时，精确查询
-每次请求的Filters的上限为5，Filter.Values的上限为100 
-     * @return Filters Filter.Name: 枚举值: ResourceGroupId (资源组id列表)
-                    ResourceGroupName (资源组名称列表)
-Filter.Values: 长度为1且Filter.Fuzzy=true时，支持模糊查询; 不为1时，精确查询
-每次请求的Filters的上限为5，Filter.Values的上限为100
+     * Get Filter.Name: 枚举值: ResourceGroupId (资源组id列表)                    ResourceGroupName (资源组名称列表)                    AvailableNodeCount（资源组中可用节点数量）Filter.Values: 长度为1且Filter.Fuzzy=true时，支持模糊查询; 不为1时，精确查询每次请求的Filters的上限为5，Filter.Values的上限为100 
+     * @return Filters Filter.Name: 枚举值: ResourceGroupId (资源组id列表)                    ResourceGroupName (资源组名称列表)                    AvailableNodeCount（资源组中可用节点数量）Filter.Values: 长度为1且Filter.Fuzzy=true时，支持模糊查询; 不为1时，精确查询每次请求的Filters的上限为5，Filter.Values的上限为100
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filter.Name: 枚举值: ResourceGroupId (资源组id列表)
-                    ResourceGroupName (资源组名称列表)
-Filter.Values: 长度为1且Filter.Fuzzy=true时，支持模糊查询; 不为1时，精确查询
-每次请求的Filters的上限为5，Filter.Values的上限为100
-     * @param Filters Filter.Name: 枚举值: ResourceGroupId (资源组id列表)
-                    ResourceGroupName (资源组名称列表)
-Filter.Values: 长度为1且Filter.Fuzzy=true时，支持模糊查询; 不为1时，精确查询
-每次请求的Filters的上限为5，Filter.Values的上限为100
+     * Set Filter.Name: 枚举值: ResourceGroupId (资源组id列表)                    ResourceGroupName (资源组名称列表)                    AvailableNodeCount（资源组中可用节点数量）Filter.Values: 长度为1且Filter.Fuzzy=true时，支持模糊查询; 不为1时，精确查询每次请求的Filters的上限为5，Filter.Values的上限为100
+     * @param Filters Filter.Name: 枚举值: ResourceGroupId (资源组id列表)                    ResourceGroupName (资源组名称列表)                    AvailableNodeCount（资源组中可用节点数量）Filter.Values: 长度为1且Filter.Fuzzy=true时，支持模糊查询; 不为1时，精确查询每次请求的Filters的上限为5，Filter.Values的上限为100
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

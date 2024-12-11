@@ -25,7 +25,6 @@ public class Message extends AbstractModel {
 
     /**
     * 角色名。支持三个角色：system、user、assistant，其中system仅开头可出现一次，也可忽略。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Role")
     @Expose
@@ -33,17 +32,21 @@ public class Message extends AbstractModel {
 
     /**
     * 对话输入内容。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Content")
     @Expose
     private String Content;
 
     /**
-     * Get 角色名。支持三个角色：system、user、assistant，其中system仅开头可出现一次，也可忽略。
-注意：此字段可能返回 null，表示取不到有效值。 
+    * 多模态对话输入内容，Content与MultiModalContents两者只需要填写其中一个即可，当对话中包含多模态对话信息时，则填写本参数
+    */
+    @SerializedName("MultiModalContents")
+    @Expose
+    private MultiModalContent [] MultiModalContents;
+
+    /**
+     * Get 角色名。支持三个角色：system、user、assistant，其中system仅开头可出现一次，也可忽略。 
      * @return Role 角色名。支持三个角色：system、user、assistant，其中system仅开头可出现一次，也可忽略。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRole() {
         return this.Role;
@@ -51,19 +54,15 @@ public class Message extends AbstractModel {
 
     /**
      * Set 角色名。支持三个角色：system、user、assistant，其中system仅开头可出现一次，也可忽略。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Role 角色名。支持三个角色：system、user、assistant，其中system仅开头可出现一次，也可忽略。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRole(String Role) {
         this.Role = Role;
     }
 
     /**
-     * Get 对话输入内容。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 对话输入内容。 
      * @return Content 对话输入内容。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getContent() {
         return this.Content;
@@ -71,12 +70,26 @@ public class Message extends AbstractModel {
 
     /**
      * Set 对话输入内容。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Content 对话输入内容。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContent(String Content) {
         this.Content = Content;
+    }
+
+    /**
+     * Get 多模态对话输入内容，Content与MultiModalContents两者只需要填写其中一个即可，当对话中包含多模态对话信息时，则填写本参数 
+     * @return MultiModalContents 多模态对话输入内容，Content与MultiModalContents两者只需要填写其中一个即可，当对话中包含多模态对话信息时，则填写本参数
+     */
+    public MultiModalContent [] getMultiModalContents() {
+        return this.MultiModalContents;
+    }
+
+    /**
+     * Set 多模态对话输入内容，Content与MultiModalContents两者只需要填写其中一个即可，当对话中包含多模态对话信息时，则填写本参数
+     * @param MultiModalContents 多模态对话输入内容，Content与MultiModalContents两者只需要填写其中一个即可，当对话中包含多模态对话信息时，则填写本参数
+     */
+    public void setMultiModalContents(MultiModalContent [] MultiModalContents) {
+        this.MultiModalContents = MultiModalContents;
     }
 
     public Message() {
@@ -93,6 +106,12 @@ public class Message extends AbstractModel {
         if (source.Content != null) {
             this.Content = new String(source.Content);
         }
+        if (source.MultiModalContents != null) {
+            this.MultiModalContents = new MultiModalContent[source.MultiModalContents.length];
+            for (int i = 0; i < source.MultiModalContents.length; i++) {
+                this.MultiModalContents[i] = new MultiModalContent(source.MultiModalContents[i]);
+            }
+        }
     }
 
 
@@ -102,6 +121,7 @@ public class Message extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Role", this.Role);
         this.setParamSimple(map, prefix + "Content", this.Content);
+        this.setParamArrayObj(map, prefix + "MultiModalContents.", this.MultiModalContents);
 
     }
 }

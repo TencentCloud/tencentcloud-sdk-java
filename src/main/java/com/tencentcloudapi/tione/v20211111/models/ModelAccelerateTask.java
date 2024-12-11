@@ -256,6 +256,30 @@ public class ModelAccelerateTask extends AbstractModel {
     private String FrameworkVersion;
 
     /**
+    * 模型版本ID
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ModelVersionId")
+    @Expose
+    private String ModelVersionId;
+
+    /**
+    * 资源组id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ResourceGroupId")
+    @Expose
+    private String ResourceGroupId;
+
+    /**
+    * 资源组名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ResourceGroupName")
+    @Expose
+    private String ResourceGroupName;
+
+    /**
      * Get 模型加速任务ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ModelAccTaskId 模型加速任务ID
@@ -835,6 +859,66 @@ public class ModelAccelerateTask extends AbstractModel {
         this.FrameworkVersion = FrameworkVersion;
     }
 
+    /**
+     * Get 模型版本ID
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ModelVersionId 模型版本ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getModelVersionId() {
+        return this.ModelVersionId;
+    }
+
+    /**
+     * Set 模型版本ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ModelVersionId 模型版本ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setModelVersionId(String ModelVersionId) {
+        this.ModelVersionId = ModelVersionId;
+    }
+
+    /**
+     * Get 资源组id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ResourceGroupId 资源组id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getResourceGroupId() {
+        return this.ResourceGroupId;
+    }
+
+    /**
+     * Set 资源组id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ResourceGroupId 资源组id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setResourceGroupId(String ResourceGroupId) {
+        this.ResourceGroupId = ResourceGroupId;
+    }
+
+    /**
+     * Get 资源组名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ResourceGroupName 资源组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getResourceGroupName() {
+        return this.ResourceGroupName;
+    }
+
+    /**
+     * Set 资源组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ResourceGroupName 资源组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setResourceGroupName(String ResourceGroupName) {
+        this.ResourceGroupName = ResourceGroupName;
+    }
+
     public ModelAccelerateTask() {
     }
 
@@ -939,6 +1023,15 @@ public class ModelAccelerateTask extends AbstractModel {
         if (source.FrameworkVersion != null) {
             this.FrameworkVersion = new String(source.FrameworkVersion);
         }
+        if (source.ModelVersionId != null) {
+            this.ModelVersionId = new String(source.ModelVersionId);
+        }
+        if (source.ResourceGroupId != null) {
+            this.ResourceGroupId = new String(source.ResourceGroupId);
+        }
+        if (source.ResourceGroupName != null) {
+            this.ResourceGroupName = new String(source.ResourceGroupName);
+        }
     }
 
 
@@ -975,6 +1068,9 @@ public class ModelAccelerateTask extends AbstractModel {
         this.setParamSimple(map, prefix + "ModelSignature", this.ModelSignature);
         this.setParamSimple(map, prefix + "QATModel", this.QATModel);
         this.setParamSimple(map, prefix + "FrameworkVersion", this.FrameworkVersion);
+        this.setParamSimple(map, prefix + "ModelVersionId", this.ModelVersionId);
+        this.setParamSimple(map, prefix + "ResourceGroupId", this.ResourceGroupId);
+        this.setParamSimple(map, prefix + "ResourceGroupName", this.ResourceGroupName);
 
     }
 }

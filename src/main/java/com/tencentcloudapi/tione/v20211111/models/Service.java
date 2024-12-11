@@ -271,6 +271,30 @@ DEFAULT: 其他来源
     private String ResourceGroupSWType;
 
     /**
+    * 服务的归档状态  Waiting 等待归档中，Archived 已归档
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ArchiveStatus")
+    @Expose
+    private String ArchiveStatus;
+
+    /**
+    * 服务的部署类型 [STANDARD 标准部署，DIST 分布式多机部署] 默认STANDARD
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DeployType")
+    @Expose
+    private String DeployType;
+
+    /**
+    * 单副本下的实例数，仅在部署类型为DIST时生效，默认1
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("InstancePerReplicas")
+    @Expose
+    private String InstancePerReplicas;
+
+    /**
      * Get 服务组id 
      * @return ServiceGroupId 服务组id
      */
@@ -906,6 +930,66 @@ DEFAULT: 其他来源
         this.ResourceGroupSWType = ResourceGroupSWType;
     }
 
+    /**
+     * Get 服务的归档状态  Waiting 等待归档中，Archived 已归档
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ArchiveStatus 服务的归档状态  Waiting 等待归档中，Archived 已归档
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getArchiveStatus() {
+        return this.ArchiveStatus;
+    }
+
+    /**
+     * Set 服务的归档状态  Waiting 等待归档中，Archived 已归档
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ArchiveStatus 服务的归档状态  Waiting 等待归档中，Archived 已归档
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setArchiveStatus(String ArchiveStatus) {
+        this.ArchiveStatus = ArchiveStatus;
+    }
+
+    /**
+     * Get 服务的部署类型 [STANDARD 标准部署，DIST 分布式多机部署] 默认STANDARD
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DeployType 服务的部署类型 [STANDARD 标准部署，DIST 分布式多机部署] 默认STANDARD
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDeployType() {
+        return this.DeployType;
+    }
+
+    /**
+     * Set 服务的部署类型 [STANDARD 标准部署，DIST 分布式多机部署] 默认STANDARD
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DeployType 服务的部署类型 [STANDARD 标准部署，DIST 分布式多机部署] 默认STANDARD
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDeployType(String DeployType) {
+        this.DeployType = DeployType;
+    }
+
+    /**
+     * Get 单副本下的实例数，仅在部署类型为DIST时生效，默认1
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return InstancePerReplicas 单副本下的实例数，仅在部署类型为DIST时生效，默认1
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getInstancePerReplicas() {
+        return this.InstancePerReplicas;
+    }
+
+    /**
+     * Set 单副本下的实例数，仅在部署类型为DIST时生效，默认1
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param InstancePerReplicas 单副本下的实例数，仅在部署类型为DIST时生效，默认1
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setInstancePerReplicas(String InstancePerReplicas) {
+        this.InstancePerReplicas = InstancePerReplicas;
+    }
+
     public Service() {
     }
 
@@ -1007,6 +1091,15 @@ DEFAULT: 其他来源
         if (source.ResourceGroupSWType != null) {
             this.ResourceGroupSWType = new String(source.ResourceGroupSWType);
         }
+        if (source.ArchiveStatus != null) {
+            this.ArchiveStatus = new String(source.ArchiveStatus);
+        }
+        if (source.DeployType != null) {
+            this.DeployType = new String(source.DeployType);
+        }
+        if (source.InstancePerReplicas != null) {
+            this.InstancePerReplicas = new String(source.InstancePerReplicas);
+        }
     }
 
 
@@ -1044,6 +1137,9 @@ DEFAULT: 其他来源
         this.setParamSimple(map, prefix + "Version", this.Version);
         this.setParamSimple(map, prefix + "LatestVersion", this.LatestVersion);
         this.setParamSimple(map, prefix + "ResourceGroupSWType", this.ResourceGroupSWType);
+        this.setParamSimple(map, prefix + "ArchiveStatus", this.ArchiveStatus);
+        this.setParamSimple(map, prefix + "DeployType", this.DeployType);
+        this.setParamSimple(map, prefix + "InstancePerReplicas", this.InstancePerReplicas);
 
     }
 }

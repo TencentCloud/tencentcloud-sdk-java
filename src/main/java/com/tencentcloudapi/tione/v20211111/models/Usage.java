@@ -25,7 +25,6 @@ public class Usage extends AbstractModel {
 
     /**
     * 生成的token数目
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CompletionTokens")
     @Expose
@@ -33,7 +32,6 @@ public class Usage extends AbstractModel {
 
     /**
     * 输入的token数目
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PromptTokens")
     @Expose
@@ -41,17 +39,14 @@ public class Usage extends AbstractModel {
 
     /**
     * 总共token数目
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalTokens")
     @Expose
     private Long TotalTokens;
 
     /**
-     * Get 生成的token数目
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 生成的token数目 
      * @return CompletionTokens 生成的token数目
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCompletionTokens() {
         return this.CompletionTokens;
@@ -59,19 +54,15 @@ public class Usage extends AbstractModel {
 
     /**
      * Set 生成的token数目
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CompletionTokens 生成的token数目
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCompletionTokens(Long CompletionTokens) {
         this.CompletionTokens = CompletionTokens;
     }
 
     /**
-     * Get 输入的token数目
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 输入的token数目 
      * @return PromptTokens 输入的token数目
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPromptTokens() {
         return this.PromptTokens;
@@ -79,19 +70,15 @@ public class Usage extends AbstractModel {
 
     /**
      * Set 输入的token数目
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PromptTokens 输入的token数目
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPromptTokens(Long PromptTokens) {
         this.PromptTokens = PromptTokens;
     }
 
     /**
-     * Get 总共token数目
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 总共token数目 
      * @return TotalTokens 总共token数目
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalTokens() {
         return this.TotalTokens;
@@ -99,9 +86,7 @@ public class Usage extends AbstractModel {
 
     /**
      * Set 总共token数目
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalTokens 总共token数目
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalTokens(Long TotalTokens) {
         this.TotalTokens = TotalTokens;

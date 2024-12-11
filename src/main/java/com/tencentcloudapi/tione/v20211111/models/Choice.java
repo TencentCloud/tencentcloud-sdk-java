@@ -25,7 +25,6 @@ public class Choice extends AbstractModel {
 
     /**
     * 对话结果
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Message")
     @Expose
@@ -46,10 +45,8 @@ public class Choice extends AbstractModel {
     private Long Index;
 
     /**
-     * Get 对话结果
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 对话结果 
      * @return Message 对话结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Message getMessage() {
         return this.Message;
@@ -57,9 +54,7 @@ public class Choice extends AbstractModel {
 
     /**
      * Set 对话结果
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Message 对话结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMessage(Message Message) {
         this.Message = Message;

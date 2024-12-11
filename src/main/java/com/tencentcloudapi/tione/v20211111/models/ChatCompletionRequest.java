@@ -25,7 +25,7 @@ public class ChatCompletionRequest extends AbstractModel {
 
     /**
     * 对话的目标模型ID。
-自行部署的开源大模型聊天：部署的模型服务组ID，形如ms-xxyyzz。
+自行部署的开源大模型聊天：部署的模型服务组ID，形如ms-q7pfr29p。
     */
     @SerializedName("Model")
     @Expose
@@ -39,7 +39,7 @@ public class ChatCompletionRequest extends AbstractModel {
     private Message [] Messages;
 
     /**
-    * 仅当模型为自行部署的开源大模型时生效。采样随机值，默认值为1.0，取值范围[0,2]。较高的值(如0.8)将使输出更加随机，而较低的值(如0.2)将使输出更加确定。建议仅修改此参数或TopP，但不建议两者都修改。
+    * 仅当模型为自行部署的开源大模型时生效。采样随机值，默认值为0.7，取值范围[0,2]。较高的值(如0.8)将使输出更加随机，而较低的值(如0.2)将使输出更加确定。建议仅修改此参数或TopP，但不建议两者都修改。
     */
     @SerializedName("Temperature")
     @Expose
@@ -53,7 +53,7 @@ public class ChatCompletionRequest extends AbstractModel {
     private Float TopP;
 
     /**
-    * 仅当模型为自行部署的开源大模型时生效。最大生成的token数目。默认为无限大。
+    * 仅当模型为自行部署的开源大模型时生效。默认 512，模型可生成内容的最长 token 数量，最大不能超过模型支持的上下文长度。
     */
     @SerializedName("MaxTokens")
     @Expose
@@ -61,9 +61,9 @@ public class ChatCompletionRequest extends AbstractModel {
 
     /**
      * Get 对话的目标模型ID。
-自行部署的开源大模型聊天：部署的模型服务组ID，形如ms-xxyyzz。 
+自行部署的开源大模型聊天：部署的模型服务组ID，形如ms-q7pfr29p。 
      * @return Model 对话的目标模型ID。
-自行部署的开源大模型聊天：部署的模型服务组ID，形如ms-xxyyzz。
+自行部署的开源大模型聊天：部署的模型服务组ID，形如ms-q7pfr29p。
      */
     public String getModel() {
         return this.Model;
@@ -71,9 +71,9 @@ public class ChatCompletionRequest extends AbstractModel {
 
     /**
      * Set 对话的目标模型ID。
-自行部署的开源大模型聊天：部署的模型服务组ID，形如ms-xxyyzz。
+自行部署的开源大模型聊天：部署的模型服务组ID，形如ms-q7pfr29p。
      * @param Model 对话的目标模型ID。
-自行部署的开源大模型聊天：部署的模型服务组ID，形如ms-xxyyzz。
+自行部署的开源大模型聊天：部署的模型服务组ID，形如ms-q7pfr29p。
      */
     public void setModel(String Model) {
         this.Model = Model;
@@ -96,16 +96,16 @@ public class ChatCompletionRequest extends AbstractModel {
     }
 
     /**
-     * Get 仅当模型为自行部署的开源大模型时生效。采样随机值，默认值为1.0，取值范围[0,2]。较高的值(如0.8)将使输出更加随机，而较低的值(如0.2)将使输出更加确定。建议仅修改此参数或TopP，但不建议两者都修改。 
-     * @return Temperature 仅当模型为自行部署的开源大模型时生效。采样随机值，默认值为1.0，取值范围[0,2]。较高的值(如0.8)将使输出更加随机，而较低的值(如0.2)将使输出更加确定。建议仅修改此参数或TopP，但不建议两者都修改。
+     * Get 仅当模型为自行部署的开源大模型时生效。采样随机值，默认值为0.7，取值范围[0,2]。较高的值(如0.8)将使输出更加随机，而较低的值(如0.2)将使输出更加确定。建议仅修改此参数或TopP，但不建议两者都修改。 
+     * @return Temperature 仅当模型为自行部署的开源大模型时生效。采样随机值，默认值为0.7，取值范围[0,2]。较高的值(如0.8)将使输出更加随机，而较低的值(如0.2)将使输出更加确定。建议仅修改此参数或TopP，但不建议两者都修改。
      */
     public Float getTemperature() {
         return this.Temperature;
     }
 
     /**
-     * Set 仅当模型为自行部署的开源大模型时生效。采样随机值，默认值为1.0，取值范围[0,2]。较高的值(如0.8)将使输出更加随机，而较低的值(如0.2)将使输出更加确定。建议仅修改此参数或TopP，但不建议两者都修改。
-     * @param Temperature 仅当模型为自行部署的开源大模型时生效。采样随机值，默认值为1.0，取值范围[0,2]。较高的值(如0.8)将使输出更加随机，而较低的值(如0.2)将使输出更加确定。建议仅修改此参数或TopP，但不建议两者都修改。
+     * Set 仅当模型为自行部署的开源大模型时生效。采样随机值，默认值为0.7，取值范围[0,2]。较高的值(如0.8)将使输出更加随机，而较低的值(如0.2)将使输出更加确定。建议仅修改此参数或TopP，但不建议两者都修改。
+     * @param Temperature 仅当模型为自行部署的开源大模型时生效。采样随机值，默认值为0.7，取值范围[0,2]。较高的值(如0.8)将使输出更加随机，而较低的值(如0.2)将使输出更加确定。建议仅修改此参数或TopP，但不建议两者都修改。
      */
     public void setTemperature(Float Temperature) {
         this.Temperature = Temperature;
@@ -128,16 +128,16 @@ public class ChatCompletionRequest extends AbstractModel {
     }
 
     /**
-     * Get 仅当模型为自行部署的开源大模型时生效。最大生成的token数目。默认为无限大。 
-     * @return MaxTokens 仅当模型为自行部署的开源大模型时生效。最大生成的token数目。默认为无限大。
+     * Get 仅当模型为自行部署的开源大模型时生效。默认 512，模型可生成内容的最长 token 数量，最大不能超过模型支持的上下文长度。 
+     * @return MaxTokens 仅当模型为自行部署的开源大模型时生效。默认 512，模型可生成内容的最长 token 数量，最大不能超过模型支持的上下文长度。
      */
     public Long getMaxTokens() {
         return this.MaxTokens;
     }
 
     /**
-     * Set 仅当模型为自行部署的开源大模型时生效。最大生成的token数目。默认为无限大。
-     * @param MaxTokens 仅当模型为自行部署的开源大模型时生效。最大生成的token数目。默认为无限大。
+     * Set 仅当模型为自行部署的开源大模型时生效。默认 512，模型可生成内容的最长 token 数量，最大不能超过模型支持的上下文长度。
+     * @param MaxTokens 仅当模型为自行部署的开源大模型时生效。默认 512，模型可生成内容的最长 token 数量，最大不能超过模型支持的上下文长度。
      */
     public void setMaxTokens(Long MaxTokens) {
         this.MaxTokens = MaxTokens;
