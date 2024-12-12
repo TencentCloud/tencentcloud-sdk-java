@@ -31,6 +31,13 @@ public class CreateSnapshotPoliciesRequest extends AbstractModel {
     private SnapshotPolicy [] SnapshotPolicies;
 
     /**
+    * 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get 快照策略详情。 
      * @return SnapshotPolicies 快照策略详情。
      */
@@ -44,6 +51,22 @@ public class CreateSnapshotPoliciesRequest extends AbstractModel {
      */
     public void setSnapshotPolicies(SnapshotPolicy [] SnapshotPolicies) {
         this.SnapshotPolicies = SnapshotPolicies;
+    }
+
+    /**
+     * Get 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。 
+     * @return Tags 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
+     * @param Tags 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
     }
 
     public CreateSnapshotPoliciesRequest() {
@@ -60,6 +83,12 @@ public class CreateSnapshotPoliciesRequest extends AbstractModel {
                 this.SnapshotPolicies[i] = new SnapshotPolicy(source.SnapshotPolicies[i]);
             }
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -68,6 +97,7 @@ public class CreateSnapshotPoliciesRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "SnapshotPolicies.", this.SnapshotPolicies);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

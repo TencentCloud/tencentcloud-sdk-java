@@ -24,11 +24,9 @@ import java.util.HashMap;
 public class DescribeInstanceResponse extends AbstractModel {
 
     /**
-    * 实例类型，
-EXPERIMENT 体验版
+    * 实例类型
 BASIC 基础版
 PRO  专业版
-PLATINUM 铂金版
     */
     @SerializedName("InstanceType")
     @Expose
@@ -119,7 +117,9 @@ PLATINUM 铂金版
     private Long ClientNumLimit;
 
     /**
-    * 客户端证书注册方式：JITP，API
+    * 客户端证书注册方式：
+JITP：自动注册
+API：通过API手动注册
     */
     @SerializedName("DeviceCertificateProvisionType")
     @Expose
@@ -161,9 +161,7 @@ PLATINUM 铂金版
     private Long DestroyTime;
 
     /**
-    *     TLS,单向认证
-    mTLS,双向认证
-    BYOC;一机一证
+    * TLS,单向认证    mTLS,双向认证    BYOC;一机一证
     */
     @SerializedName("X509Mode")
     @Expose
@@ -198,32 +196,24 @@ PLATINUM 铂金版
     private String RequestId;
 
     /**
-     * Get 实例类型，
-EXPERIMENT 体验版
+     * Get 实例类型
+BASIC 基础版
+PRO  专业版 
+     * @return InstanceType 实例类型
 BASIC 基础版
 PRO  专业版
-PLATINUM 铂金版 
-     * @return InstanceType 实例类型，
-EXPERIMENT 体验版
-BASIC 基础版
-PRO  专业版
-PLATINUM 铂金版
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set 实例类型，
-EXPERIMENT 体验版
+     * Set 实例类型
 BASIC 基础版
 PRO  专业版
-PLATINUM 铂金版
-     * @param InstanceType 实例类型，
-EXPERIMENT 体验版
+     * @param InstanceType 实例类型
 BASIC 基础版
 PRO  专业版
-PLATINUM 铂金版
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
@@ -422,16 +412,24 @@ PLATINUM 铂金版
     }
 
     /**
-     * Get 客户端证书注册方式：JITP，API 
-     * @return DeviceCertificateProvisionType 客户端证书注册方式：JITP，API
+     * Get 客户端证书注册方式：
+JITP：自动注册
+API：通过API手动注册 
+     * @return DeviceCertificateProvisionType 客户端证书注册方式：
+JITP：自动注册
+API：通过API手动注册
      */
     public String getDeviceCertificateProvisionType() {
         return this.DeviceCertificateProvisionType;
     }
 
     /**
-     * Set 客户端证书注册方式：JITP，API
-     * @param DeviceCertificateProvisionType 客户端证书注册方式：JITP，API
+     * Set 客户端证书注册方式：
+JITP：自动注册
+API：通过API手动注册
+     * @param DeviceCertificateProvisionType 客户端证书注册方式：
+JITP：自动注册
+API：通过API手动注册
      */
     public void setDeviceCertificateProvisionType(String DeviceCertificateProvisionType) {
         this.DeviceCertificateProvisionType = DeviceCertificateProvisionType;
@@ -518,24 +516,16 @@ PLATINUM 铂金版
     }
 
     /**
-     * Get     TLS,单向认证
-    mTLS,双向认证
-    BYOC;一机一证 
-     * @return X509Mode     TLS,单向认证
-    mTLS,双向认证
-    BYOC;一机一证
+     * Get TLS,单向认证    mTLS,双向认证    BYOC;一机一证 
+     * @return X509Mode TLS,单向认证    mTLS,双向认证    BYOC;一机一证
      */
     public String getX509Mode() {
         return this.X509Mode;
     }
 
     /**
-     * Set     TLS,单向认证
-    mTLS,双向认证
-    BYOC;一机一证
-     * @param X509Mode     TLS,单向认证
-    mTLS,双向认证
-    BYOC;一机一证
+     * Set TLS,单向认证    mTLS,双向认证    BYOC;一机一证
+     * @param X509Mode TLS,单向认证    mTLS,双向认证    BYOC;一机一证
      */
     public void setX509Mode(String X509Mode) {
         this.X509Mode = X509Mode;

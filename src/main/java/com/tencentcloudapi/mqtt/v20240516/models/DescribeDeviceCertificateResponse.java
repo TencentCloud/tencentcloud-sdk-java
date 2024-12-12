@@ -66,28 +66,28 @@ public class DescribeDeviceCertificateResponse extends AbstractModel {
     private String Status;
 
     /**
-    * 证书序列号
+    * Ca证书序列号
     */
     @SerializedName("CaSn")
     @Expose
     private String CaSn;
 
     /**
-    * 设备证书sn
+    * 设备证书序列号
     */
     @SerializedName("DeviceCertificateSn")
     @Expose
     private String DeviceCertificateSn;
 
     /**
-    * 证书内容
+    * 设备证书内容
     */
     @SerializedName("DeviceCertificate")
     @Expose
     private String DeviceCertificate;
 
     /**
-    * 设备证书cn
+    * 设备证书common name
     */
     @SerializedName("DeviceCertificateCn")
     @Expose
@@ -227,64 +227,64 @@ public class DescribeDeviceCertificateResponse extends AbstractModel {
     }
 
     /**
-     * Get 证书序列号 
-     * @return CaSn 证书序列号
+     * Get Ca证书序列号 
+     * @return CaSn Ca证书序列号
      */
     public String getCaSn() {
         return this.CaSn;
     }
 
     /**
-     * Set 证书序列号
-     * @param CaSn 证书序列号
+     * Set Ca证书序列号
+     * @param CaSn Ca证书序列号
      */
     public void setCaSn(String CaSn) {
         this.CaSn = CaSn;
     }
 
     /**
-     * Get 设备证书sn 
-     * @return DeviceCertificateSn 设备证书sn
+     * Get 设备证书序列号 
+     * @return DeviceCertificateSn 设备证书序列号
      */
     public String getDeviceCertificateSn() {
         return this.DeviceCertificateSn;
     }
 
     /**
-     * Set 设备证书sn
-     * @param DeviceCertificateSn 设备证书sn
+     * Set 设备证书序列号
+     * @param DeviceCertificateSn 设备证书序列号
      */
     public void setDeviceCertificateSn(String DeviceCertificateSn) {
         this.DeviceCertificateSn = DeviceCertificateSn;
     }
 
     /**
-     * Get 证书内容 
-     * @return DeviceCertificate 证书内容
+     * Get 设备证书内容 
+     * @return DeviceCertificate 设备证书内容
      */
     public String getDeviceCertificate() {
         return this.DeviceCertificate;
     }
 
     /**
-     * Set 证书内容
-     * @param DeviceCertificate 证书内容
+     * Set 设备证书内容
+     * @param DeviceCertificate 设备证书内容
      */
     public void setDeviceCertificate(String DeviceCertificate) {
         this.DeviceCertificate = DeviceCertificate;
     }
 
     /**
-     * Get 设备证书cn 
-     * @return DeviceCertificateCn 设备证书cn
+     * Get 设备证书common name 
+     * @return DeviceCertificateCn 设备证书common name
      */
     public String getDeviceCertificateCn() {
         return this.DeviceCertificateCn;
     }
 
     /**
-     * Set 设备证书cn
-     * @param DeviceCertificateCn 设备证书cn
+     * Set 设备证书common name
+     * @param DeviceCertificateCn 设备证书common name
      */
     public void setDeviceCertificateCn(String DeviceCertificateCn) {
         this.DeviceCertificateCn = DeviceCertificateCn;

@@ -31,7 +31,10 @@ public class DeleteAuthenticatorRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * 认证器类型
+    * 认证器类型:
+JWT：JWT认证器
+JWKS：JWKS认证器
+BYOC：一端一证认证器
     */
     @SerializedName("Type")
     @Expose
@@ -54,16 +57,28 @@ public class DeleteAuthenticatorRequest extends AbstractModel {
     }
 
     /**
-     * Get 认证器类型 
-     * @return Type 认证器类型
+     * Get 认证器类型:
+JWT：JWT认证器
+JWKS：JWKS认证器
+BYOC：一端一证认证器 
+     * @return Type 认证器类型:
+JWT：JWT认证器
+JWKS：JWKS认证器
+BYOC：一端一证认证器
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 认证器类型
-     * @param Type 认证器类型
+     * Set 认证器类型:
+JWT：JWT认证器
+JWKS：JWKS认证器
+BYOC：一端一证认证器
+     * @param Type 认证器类型:
+JWT：JWT认证器
+JWKS：JWKS认证器
+BYOC：一端一证认证器
      */
     public void setType(String Type) {
         this.Type = Type;

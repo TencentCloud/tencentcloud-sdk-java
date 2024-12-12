@@ -221,6 +221,24 @@ MobileCheck：手机号验证，用户手机号和参与方手机号（ApproverM
     private Long FlowDisplayType;
 
     /**
+    * 是否为预览模式，取值如下： <ul><li> **false**：非预览模式（默认），会产生合同流程并返回合同流程编号FlowId。</li> <li> **true**：预览模式，不产生合同流程，不返回合同流程编号FlowId，而是返回预览链接PreviewUrl，有效期为300秒，用于查看真实发起后合同的样子。</li></ul>
+    */
+    @SerializedName("NeedPreview")
+    @Expose
+    private Boolean NeedPreview;
+
+    /**
+    * 预览模式下产生的预览链接类型 
+<ul><li> **0** :(默认) 文件流 ,点开后下载预览的合同PDF文件 </li>
+<li> **1** :H5链接 ,点开后在浏览器中展示合同的样子</li></ul>
+注: `此参数在NeedPreview 为true时有效`
+
+    */
+    @SerializedName("PreviewType")
+    @Expose
+    private Long PreviewType;
+
+    /**
      * Get 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
 
 此接口下面信息必填。
@@ -776,6 +794,54 @@ MobileCheck：手机号验证，用户手机号和参与方手机号（ApproverM
         this.FlowDisplayType = FlowDisplayType;
     }
 
+    /**
+     * Get 是否为预览模式，取值如下： <ul><li> **false**：非预览模式（默认），会产生合同流程并返回合同流程编号FlowId。</li> <li> **true**：预览模式，不产生合同流程，不返回合同流程编号FlowId，而是返回预览链接PreviewUrl，有效期为300秒，用于查看真实发起后合同的样子。</li></ul> 
+     * @return NeedPreview 是否为预览模式，取值如下： <ul><li> **false**：非预览模式（默认），会产生合同流程并返回合同流程编号FlowId。</li> <li> **true**：预览模式，不产生合同流程，不返回合同流程编号FlowId，而是返回预览链接PreviewUrl，有效期为300秒，用于查看真实发起后合同的样子。</li></ul>
+     */
+    public Boolean getNeedPreview() {
+        return this.NeedPreview;
+    }
+
+    /**
+     * Set 是否为预览模式，取值如下： <ul><li> **false**：非预览模式（默认），会产生合同流程并返回合同流程编号FlowId。</li> <li> **true**：预览模式，不产生合同流程，不返回合同流程编号FlowId，而是返回预览链接PreviewUrl，有效期为300秒，用于查看真实发起后合同的样子。</li></ul>
+     * @param NeedPreview 是否为预览模式，取值如下： <ul><li> **false**：非预览模式（默认），会产生合同流程并返回合同流程编号FlowId。</li> <li> **true**：预览模式，不产生合同流程，不返回合同流程编号FlowId，而是返回预览链接PreviewUrl，有效期为300秒，用于查看真实发起后合同的样子。</li></ul>
+     */
+    public void setNeedPreview(Boolean NeedPreview) {
+        this.NeedPreview = NeedPreview;
+    }
+
+    /**
+     * Get 预览模式下产生的预览链接类型 
+<ul><li> **0** :(默认) 文件流 ,点开后下载预览的合同PDF文件 </li>
+<li> **1** :H5链接 ,点开后在浏览器中展示合同的样子</li></ul>
+注: `此参数在NeedPreview 为true时有效`
+ 
+     * @return PreviewType 预览模式下产生的预览链接类型 
+<ul><li> **0** :(默认) 文件流 ,点开后下载预览的合同PDF文件 </li>
+<li> **1** :H5链接 ,点开后在浏览器中展示合同的样子</li></ul>
+注: `此参数在NeedPreview 为true时有效`
+
+     */
+    public Long getPreviewType() {
+        return this.PreviewType;
+    }
+
+    /**
+     * Set 预览模式下产生的预览链接类型 
+<ul><li> **0** :(默认) 文件流 ,点开后下载预览的合同PDF文件 </li>
+<li> **1** :H5链接 ,点开后在浏览器中展示合同的样子</li></ul>
+注: `此参数在NeedPreview 为true时有效`
+
+     * @param PreviewType 预览模式下产生的预览链接类型 
+<ul><li> **0** :(默认) 文件流 ,点开后下载预览的合同PDF文件 </li>
+<li> **1** :H5链接 ,点开后在浏览器中展示合同的样子</li></ul>
+注: `此参数在NeedPreview 为true时有效`
+
+     */
+    public void setPreviewType(Long PreviewType) {
+        this.PreviewType = PreviewType;
+    }
+
     public ChannelCreateFlowByFilesRequest() {
     }
 
@@ -856,6 +922,12 @@ MobileCheck：手机号验证，用户手机号和参与方手机号（ApproverM
         if (source.FlowDisplayType != null) {
             this.FlowDisplayType = new Long(source.FlowDisplayType);
         }
+        if (source.NeedPreview != null) {
+            this.NeedPreview = new Boolean(source.NeedPreview);
+        }
+        if (source.PreviewType != null) {
+            this.PreviewType = new Long(source.PreviewType);
+        }
     }
 
 
@@ -883,6 +955,8 @@ MobileCheck：手机号验证，用户手机号和参与方手机号（ApproverM
         this.setParamSimple(map, prefix + "AutoSignScene", this.AutoSignScene);
         this.setParamObj(map, prefix + "Operator.", this.Operator);
         this.setParamSimple(map, prefix + "FlowDisplayType", this.FlowDisplayType);
+        this.setParamSimple(map, prefix + "NeedPreview", this.NeedPreview);
+        this.setParamSimple(map, prefix + "PreviewType", this.PreviewType);
 
     }
 }
