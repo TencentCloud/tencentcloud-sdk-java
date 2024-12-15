@@ -50,7 +50,9 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
-     *分配License
+     *微信VOIP功能调整下线
+
+分配License
      * @param req AssignTWeCallLicenseRequest
      * @return AssignTWeCallLicenseResponse
      * @throws TencentCloudSDKException
@@ -1183,7 +1185,9 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
-     *查询TWeCall包列表
+     *微信VOIP功能调整下线
+
+查询TWeCall包列表
      * @param req GetTWeCallPkgListRequest
      * @return GetTWeCallPkgListResponse
      * @throws TencentCloudSDKException

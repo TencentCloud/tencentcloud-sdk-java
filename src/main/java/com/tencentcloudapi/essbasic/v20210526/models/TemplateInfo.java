@@ -46,6 +46,8 @@ public class TemplateInfo extends AbstractModel {
 
     /**
     * 模板的填充控件列表
+
+[点击查看在模板中配置的填充控件的样子](https://qcloudimg.tencent-cloud.cn/raw/cb2f58529fca8d909258f9d45a56f7f4.png)
     */
     @SerializedName("Components")
     @Expose
@@ -53,6 +55,10 @@ public class TemplateInfo extends AbstractModel {
 
     /**
     * 此模块需要签署的各个参与方的角色列表。RecipientId标识每个参与方角色对应的唯一标识符，用于确定此角色的信息。
+
+[点击查看在模板中配置的签署参与方角色列表的样子](https://qcloudimg.tencent-cloud.cn/raw/e082bbcc0d923f8cb723d98382410aa2.png)
+
+
     */
     @SerializedName("Recipients")
     @Expose
@@ -60,13 +66,18 @@ public class TemplateInfo extends AbstractModel {
 
     /**
     * 此模板中的签署控件列表
+
+[点击查看在模板中配置的签署控件的样子](https://qcloudimg.tencent-cloud.cn/raw/29bc6ed753a5a0fce4a3ab02e2c0d955.png)
     */
     @SerializedName("SignComponents")
     @Expose
     private Component [] SignComponents;
 
     /**
-    * 模板类型：1-静默签；3-普通模板
+    * 模板类型可以分为以下两种：
+
+<b>1</b>：带有<b>本企业自动签署</b>的模板，即签署过程无需签署人手动操作，系统自动完成签署。
+<b>3</b>：普通模板，即签署人需要手动进行签署操作。
     */
     @SerializedName("TemplateType")
     @Expose
@@ -94,8 +105,10 @@ public class TemplateInfo extends AbstractModel {
     private Long CreatedOn;
 
     /**
-    * 模板的H5预览链接,有效期5分钟。
-可以通过浏览器打开此链接预览模板，或者嵌入到iframe中预览模板。
+    * 模板的 H5 预览链接，有效期为 5 分钟。
+您可以通过浏览器直接打开此链接预览模板，或将其嵌入到 iframe 中进行预览。
+
+注意：只有在请求接口时将 <b>WithPreviewUrl </b>参数设置为 true，才会生成预览链接。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PreviewUrl")
@@ -205,8 +218,12 @@ public class TemplateInfo extends AbstractModel {
     }
 
     /**
-     * Get 模板的填充控件列表 
+     * Get 模板的填充控件列表
+
+[点击查看在模板中配置的填充控件的样子](https://qcloudimg.tencent-cloud.cn/raw/cb2f58529fca8d909258f9d45a56f7f4.png) 
      * @return Components 模板的填充控件列表
+
+[点击查看在模板中配置的填充控件的样子](https://qcloudimg.tencent-cloud.cn/raw/cb2f58529fca8d909258f9d45a56f7f4.png)
      */
     public Component [] getComponents() {
         return this.Components;
@@ -214,15 +231,27 @@ public class TemplateInfo extends AbstractModel {
 
     /**
      * Set 模板的填充控件列表
+
+[点击查看在模板中配置的填充控件的样子](https://qcloudimg.tencent-cloud.cn/raw/cb2f58529fca8d909258f9d45a56f7f4.png)
      * @param Components 模板的填充控件列表
+
+[点击查看在模板中配置的填充控件的样子](https://qcloudimg.tencent-cloud.cn/raw/cb2f58529fca8d909258f9d45a56f7f4.png)
      */
     public void setComponents(Component [] Components) {
         this.Components = Components;
     }
 
     /**
-     * Get 此模块需要签署的各个参与方的角色列表。RecipientId标识每个参与方角色对应的唯一标识符，用于确定此角色的信息。 
+     * Get 此模块需要签署的各个参与方的角色列表。RecipientId标识每个参与方角色对应的唯一标识符，用于确定此角色的信息。
+
+[点击查看在模板中配置的签署参与方角色列表的样子](https://qcloudimg.tencent-cloud.cn/raw/e082bbcc0d923f8cb723d98382410aa2.png)
+
+ 
      * @return Recipients 此模块需要签署的各个参与方的角色列表。RecipientId标识每个参与方角色对应的唯一标识符，用于确定此角色的信息。
+
+[点击查看在模板中配置的签署参与方角色列表的样子](https://qcloudimg.tencent-cloud.cn/raw/e082bbcc0d923f8cb723d98382410aa2.png)
+
+
      */
     public Recipient [] getRecipients() {
         return this.Recipients;
@@ -230,15 +259,27 @@ public class TemplateInfo extends AbstractModel {
 
     /**
      * Set 此模块需要签署的各个参与方的角色列表。RecipientId标识每个参与方角色对应的唯一标识符，用于确定此角色的信息。
+
+[点击查看在模板中配置的签署参与方角色列表的样子](https://qcloudimg.tencent-cloud.cn/raw/e082bbcc0d923f8cb723d98382410aa2.png)
+
+
      * @param Recipients 此模块需要签署的各个参与方的角色列表。RecipientId标识每个参与方角色对应的唯一标识符，用于确定此角色的信息。
+
+[点击查看在模板中配置的签署参与方角色列表的样子](https://qcloudimg.tencent-cloud.cn/raw/e082bbcc0d923f8cb723d98382410aa2.png)
+
+
      */
     public void setRecipients(Recipient [] Recipients) {
         this.Recipients = Recipients;
     }
 
     /**
-     * Get 此模板中的签署控件列表 
+     * Get 此模板中的签署控件列表
+
+[点击查看在模板中配置的签署控件的样子](https://qcloudimg.tencent-cloud.cn/raw/29bc6ed753a5a0fce4a3ab02e2c0d955.png) 
      * @return SignComponents 此模板中的签署控件列表
+
+[点击查看在模板中配置的签署控件的样子](https://qcloudimg.tencent-cloud.cn/raw/29bc6ed753a5a0fce4a3ab02e2c0d955.png)
      */
     public Component [] getSignComponents() {
         return this.SignComponents;
@@ -246,23 +287,39 @@ public class TemplateInfo extends AbstractModel {
 
     /**
      * Set 此模板中的签署控件列表
+
+[点击查看在模板中配置的签署控件的样子](https://qcloudimg.tencent-cloud.cn/raw/29bc6ed753a5a0fce4a3ab02e2c0d955.png)
      * @param SignComponents 此模板中的签署控件列表
+
+[点击查看在模板中配置的签署控件的样子](https://qcloudimg.tencent-cloud.cn/raw/29bc6ed753a5a0fce4a3ab02e2c0d955.png)
      */
     public void setSignComponents(Component [] SignComponents) {
         this.SignComponents = SignComponents;
     }
 
     /**
-     * Get 模板类型：1-静默签；3-普通模板 
-     * @return TemplateType 模板类型：1-静默签；3-普通模板
+     * Get 模板类型可以分为以下两种：
+
+<b>1</b>：带有<b>本企业自动签署</b>的模板，即签署过程无需签署人手动操作，系统自动完成签署。
+<b>3</b>：普通模板，即签署人需要手动进行签署操作。 
+     * @return TemplateType 模板类型可以分为以下两种：
+
+<b>1</b>：带有<b>本企业自动签署</b>的模板，即签署过程无需签署人手动操作，系统自动完成签署。
+<b>3</b>：普通模板，即签署人需要手动进行签署操作。
      */
     public Long getTemplateType() {
         return this.TemplateType;
     }
 
     /**
-     * Set 模板类型：1-静默签；3-普通模板
-     * @param TemplateType 模板类型：1-静默签；3-普通模板
+     * Set 模板类型可以分为以下两种：
+
+<b>1</b>：带有<b>本企业自动签署</b>的模板，即签署过程无需签署人手动操作，系统自动完成签署。
+<b>3</b>：普通模板，即签署人需要手动进行签署操作。
+     * @param TemplateType 模板类型可以分为以下两种：
+
+<b>1</b>：带有<b>本企业自动签署</b>的模板，即签署过程无需签署人手动操作，系统自动完成签署。
+<b>3</b>：普通模板，即签署人需要手动进行签署操作。
      */
     public void setTemplateType(Long TemplateType) {
         this.TemplateType = TemplateType;
@@ -321,11 +378,15 @@ public class TemplateInfo extends AbstractModel {
     }
 
     /**
-     * Get 模板的H5预览链接,有效期5分钟。
-可以通过浏览器打开此链接预览模板，或者嵌入到iframe中预览模板。
+     * Get 模板的 H5 预览链接，有效期为 5 分钟。
+您可以通过浏览器直接打开此链接预览模板，或将其嵌入到 iframe 中进行预览。
+
+注意：只有在请求接口时将 <b>WithPreviewUrl </b>参数设置为 true，才会生成预览链接。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PreviewUrl 模板的H5预览链接,有效期5分钟。
-可以通过浏览器打开此链接预览模板，或者嵌入到iframe中预览模板。
+     * @return PreviewUrl 模板的 H5 预览链接，有效期为 5 分钟。
+您可以通过浏览器直接打开此链接预览模板，或将其嵌入到 iframe 中进行预览。
+
+注意：只有在请求接口时将 <b>WithPreviewUrl </b>参数设置为 true，才会生成预览链接。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPreviewUrl() {
@@ -333,11 +394,15 @@ public class TemplateInfo extends AbstractModel {
     }
 
     /**
-     * Set 模板的H5预览链接,有效期5分钟。
-可以通过浏览器打开此链接预览模板，或者嵌入到iframe中预览模板。
+     * Set 模板的 H5 预览链接，有效期为 5 分钟。
+您可以通过浏览器直接打开此链接预览模板，或将其嵌入到 iframe 中进行预览。
+
+注意：只有在请求接口时将 <b>WithPreviewUrl </b>参数设置为 true，才会生成预览链接。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PreviewUrl 模板的H5预览链接,有效期5分钟。
-可以通过浏览器打开此链接预览模板，或者嵌入到iframe中预览模板。
+     * @param PreviewUrl 模板的 H5 预览链接，有效期为 5 分钟。
+您可以通过浏览器直接打开此链接预览模板，或将其嵌入到 iframe 中进行预览。
+
+注意：只有在请求接口时将 <b>WithPreviewUrl </b>参数设置为 true，才会生成预览链接。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPreviewUrl(String PreviewUrl) {

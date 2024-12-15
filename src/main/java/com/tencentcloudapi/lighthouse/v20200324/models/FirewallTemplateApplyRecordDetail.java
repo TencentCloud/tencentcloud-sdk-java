@@ -32,6 +32,9 @@ public class FirewallTemplateApplyRecordDetail extends AbstractModel {
 
     /**
     * 防火墙模板应用状态。
+
+- SUCCESS：成功
+- FAILED：失败
     */
     @SerializedName("ApplyState")
     @Expose
@@ -61,8 +64,14 @@ public class FirewallTemplateApplyRecordDetail extends AbstractModel {
     }
 
     /**
-     * Get 防火墙模板应用状态。 
+     * Get 防火墙模板应用状态。
+
+- SUCCESS：成功
+- FAILED：失败 
      * @return ApplyState 防火墙模板应用状态。
+
+- SUCCESS：成功
+- FAILED：失败
      */
     public String getApplyState() {
         return this.ApplyState;
@@ -70,7 +79,13 @@ public class FirewallTemplateApplyRecordDetail extends AbstractModel {
 
     /**
      * Set 防火墙模板应用状态。
+
+- SUCCESS：成功
+- FAILED：失败
      * @param ApplyState 防火墙模板应用状态。
+
+- SUCCESS：成功
+- FAILED：失败
      */
     public void setApplyState(String ApplyState) {
         this.ApplyState = ApplyState;

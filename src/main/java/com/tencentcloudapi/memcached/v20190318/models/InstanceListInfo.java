@@ -67,7 +67,6 @@ public class InstanceListInfo extends AbstractModel {
 
     /**
     * 实例关联的标签信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tags")
     @Expose
@@ -289,10 +288,8 @@ public class InstanceListInfo extends AbstractModel {
     }
 
     /**
-     * Get 实例关联的标签信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例关联的标签信息 
      * @return Tags 实例关联的标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TagInfo [] getTags() {
         return this.Tags;
@@ -300,9 +297,7 @@ public class InstanceListInfo extends AbstractModel {
 
     /**
      * Set 实例关联的标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tags 实例关联的标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTags(TagInfo [] Tags) {
         this.Tags = Tags;

@@ -38,6 +38,14 @@ public class Pair extends AbstractModel {
     private String Value;
 
     /**
+    *  唯一标识
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Id")
+    @Expose
+    private String Id;
+
+    /**
      * Get 键名 
      * @return Key 键名
      */
@@ -69,6 +77,26 @@ public class Pair extends AbstractModel {
         this.Value = Value;
     }
 
+    /**
+     * Get  唯一标识
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Id  唯一标识
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getId() {
+        return this.Id;
+    }
+
+    /**
+     * Set  唯一标识
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Id  唯一标识
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setId(String Id) {
+        this.Id = Id;
+    }
+
     public Pair() {
     }
 
@@ -83,6 +111,9 @@ public class Pair extends AbstractModel {
         if (source.Value != null) {
             this.Value = new String(source.Value);
         }
+        if (source.Id != null) {
+            this.Id = new String(source.Id);
+        }
     }
 
 
@@ -92,6 +123,7 @@ public class Pair extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Key", this.Key);
         this.setParamSimple(map, prefix + "Value", this.Value);
+        this.setParamSimple(map, prefix + "Id", this.Id);
 
     }
 }
