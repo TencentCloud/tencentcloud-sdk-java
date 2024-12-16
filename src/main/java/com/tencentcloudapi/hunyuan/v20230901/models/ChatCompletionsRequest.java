@@ -197,6 +197,13 @@ public class ChatCompletionsRequest extends AbstractModel {
     private Boolean ForceSearchEnhancement;
 
     /**
+    * 自定义结束生成字符串
+    */
+    @SerializedName("Stop")
+    @Expose
+    private String [] Stop;
+
+    /**
      * Get 模型名称，可选值包括 hunyuan-lite、hunyuan-standard、hunyuan-standard-256K、hunyuan-pro、 hunyuan-code、 hunyuan-role、 hunyuan-functioncall、 hunyuan-vision、 hunyuan-turbo、 hunyuan-turbo-latest、 hunyuan-large、 hunyuan-large-longcontext、 hunyuan-turbo-vision。
 各模型介绍请阅读 [产品概述](https://cloud.tencent.com/document/product/1729/104753) 中的说明。
 
@@ -684,6 +691,22 @@ public class ChatCompletionsRequest extends AbstractModel {
         this.ForceSearchEnhancement = ForceSearchEnhancement;
     }
 
+    /**
+     * Get 自定义结束生成字符串 
+     * @return Stop 自定义结束生成字符串
+     */
+    public String [] getStop() {
+        return this.Stop;
+    }
+
+    /**
+     * Set 自定义结束生成字符串
+     * @param Stop 自定义结束生成字符串
+     */
+    public void setStop(String [] Stop) {
+        this.Stop = Stop;
+    }
+
     public ChatCompletionsRequest() {
     }
 
@@ -749,6 +772,12 @@ public class ChatCompletionsRequest extends AbstractModel {
         if (source.ForceSearchEnhancement != null) {
             this.ForceSearchEnhancement = new Boolean(source.ForceSearchEnhancement);
         }
+        if (source.Stop != null) {
+            this.Stop = new String[source.Stop.length];
+            for (int i = 0; i < source.Stop.length; i++) {
+                this.Stop[i] = new String(source.Stop[i]);
+            }
+        }
     }
 
 
@@ -773,6 +802,7 @@ public class ChatCompletionsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "EnableDeepSearch", this.EnableDeepSearch);
         this.setParamSimple(map, prefix + "Seed", this.Seed);
         this.setParamSimple(map, prefix + "ForceSearchEnhancement", this.ForceSearchEnhancement);
+        this.setParamArraySimple(map, prefix + "Stop.", this.Stop);
 
     }
 }

@@ -352,6 +352,14 @@ public class ContainerGroupDeploy extends AbstractModel {
     private GroupContainerInfo [] InternalContainerList;
 
     /**
+    * service列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ServiceSettingList")
+    @Expose
+    private ServiceSetting [] ServiceSettingList;
+
+    /**
      * Get 部署组id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return GroupId 部署组id
@@ -1171,6 +1179,26 @@ public class ContainerGroupDeploy extends AbstractModel {
         this.InternalContainerList = InternalContainerList;
     }
 
+    /**
+     * Get service列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ServiceSettingList service列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public ServiceSetting [] getServiceSettingList() {
+        return this.ServiceSettingList;
+    }
+
+    /**
+     * Set service列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ServiceSettingList service列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setServiceSettingList(ServiceSetting [] ServiceSettingList) {
+        this.ServiceSettingList = ServiceSettingList;
+    }
+
     public ContainerGroupDeploy() {
     }
 
@@ -1320,6 +1348,12 @@ public class ContainerGroupDeploy extends AbstractModel {
                 this.InternalContainerList[i] = new GroupContainerInfo(source.InternalContainerList[i]);
             }
         }
+        if (source.ServiceSettingList != null) {
+            this.ServiceSettingList = new ServiceSetting[source.ServiceSettingList.length];
+            for (int i = 0; i < source.ServiceSettingList.length; i++) {
+                this.ServiceSettingList[i] = new ServiceSetting(source.ServiceSettingList[i]);
+            }
+        }
     }
 
 
@@ -1368,6 +1402,7 @@ public class ContainerGroupDeploy extends AbstractModel {
         this.setParamSimple(map, prefix + "ContainerName", this.ContainerName);
         this.setParamArrayObj(map, prefix + "AdditionalContainerList.", this.AdditionalContainerList);
         this.setParamArrayObj(map, prefix + "InternalContainerList.", this.InternalContainerList);
+        this.setParamArrayObj(map, prefix + "ServiceSettingList.", this.ServiceSettingList);
 
     }
 }

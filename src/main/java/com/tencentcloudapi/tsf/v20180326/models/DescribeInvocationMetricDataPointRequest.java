@@ -38,14 +38,14 @@ public class DescribeInvocationMetricDataPointRequest extends AbstractModel {
     private String EndTime;
 
     /**
-    * 维度
+    * 维度，并且 维度 key value 不能为空
     */
     @SerializedName("MetricDimensionValues")
     @Expose
     private MetricDimensionValue [] MetricDimensionValues;
 
     /**
-    * 指标
+    * 指标，并且 key, value 不能为空
     */
     @SerializedName("Metrics")
     @Expose
@@ -91,32 +91,32 @@ public class DescribeInvocationMetricDataPointRequest extends AbstractModel {
     }
 
     /**
-     * Get 维度 
-     * @return MetricDimensionValues 维度
+     * Get 维度，并且 维度 key value 不能为空 
+     * @return MetricDimensionValues 维度，并且 维度 key value 不能为空
      */
     public MetricDimensionValue [] getMetricDimensionValues() {
         return this.MetricDimensionValues;
     }
 
     /**
-     * Set 维度
-     * @param MetricDimensionValues 维度
+     * Set 维度，并且 维度 key value 不能为空
+     * @param MetricDimensionValues 维度，并且 维度 key value 不能为空
      */
     public void setMetricDimensionValues(MetricDimensionValue [] MetricDimensionValues) {
         this.MetricDimensionValues = MetricDimensionValues;
     }
 
     /**
-     * Get 指标 
-     * @return Metrics 指标
+     * Get 指标，并且 key, value 不能为空 
+     * @return Metrics 指标，并且 key, value 不能为空
      */
     public Metric [] getMetrics() {
         return this.Metrics;
     }
 
     /**
-     * Set 指标
-     * @param Metrics 指标
+     * Set 指标，并且 key, value 不能为空
+     * @param Metrics 指标，并且 key, value 不能为空
      */
     public void setMetrics(Metric [] Metrics) {
         this.Metrics = Metrics;

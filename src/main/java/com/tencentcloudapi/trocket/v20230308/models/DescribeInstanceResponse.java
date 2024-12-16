@@ -243,6 +243,13 @@ PLATINUM 铂金版
     private Long TopicNumUpperLimit;
 
     /**
+    * 可用区列表
+    */
+    @SerializedName("ZoneIds")
+    @Expose
+    private Long [] ZoneIds;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -766,6 +773,22 @@ PLATINUM 铂金版
     }
 
     /**
+     * Get 可用区列表 
+     * @return ZoneIds 可用区列表
+     */
+    public Long [] getZoneIds() {
+        return this.ZoneIds;
+    }
+
+    /**
+     * Set 可用区列表
+     * @param ZoneIds 可用区列表
+     */
+    public void setZoneIds(Long [] ZoneIds) {
+        this.ZoneIds = ZoneIds;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -885,6 +908,12 @@ PLATINUM 铂金版
         if (source.TopicNumUpperLimit != null) {
             this.TopicNumUpperLimit = new Long(source.TopicNumUpperLimit);
         }
+        if (source.ZoneIds != null) {
+            this.ZoneIds = new Long[source.ZoneIds.length];
+            for (int i = 0; i < source.ZoneIds.length; i++) {
+                this.ZoneIds[i] = new Long(source.ZoneIds[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -925,6 +954,7 @@ PLATINUM 铂金版
         this.setParamSimple(map, prefix + "AclEnabled", this.AclEnabled);
         this.setParamSimple(map, prefix + "TopicNumLowerLimit", this.TopicNumLowerLimit);
         this.setParamSimple(map, prefix + "TopicNumUpperLimit", this.TopicNumUpperLimit);
+        this.setParamArraySimple(map, prefix + "ZoneIds.", this.ZoneIds);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

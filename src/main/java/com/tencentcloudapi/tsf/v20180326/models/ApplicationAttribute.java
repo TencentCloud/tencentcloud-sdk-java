@@ -48,6 +48,22 @@ public class ApplicationAttribute extends AbstractModel {
     private Long GroupCount;
 
     /**
+    * 运行中部署组个数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("RunningGroupCount")
+    @Expose
+    private String RunningGroupCount;
+
+    /**
+    * 异常部署组个数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AbnormalCount")
+    @Expose
+    private String AbnormalCount;
+
+    /**
      * Get 总实例个数
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return InstanceCount 总实例个数
@@ -107,6 +123,46 @@ public class ApplicationAttribute extends AbstractModel {
         this.GroupCount = GroupCount;
     }
 
+    /**
+     * Get 运行中部署组个数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return RunningGroupCount 运行中部署组个数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getRunningGroupCount() {
+        return this.RunningGroupCount;
+    }
+
+    /**
+     * Set 运行中部署组个数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param RunningGroupCount 运行中部署组个数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setRunningGroupCount(String RunningGroupCount) {
+        this.RunningGroupCount = RunningGroupCount;
+    }
+
+    /**
+     * Get 异常部署组个数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AbnormalCount 异常部署组个数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAbnormalCount() {
+        return this.AbnormalCount;
+    }
+
+    /**
+     * Set 异常部署组个数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AbnormalCount 异常部署组个数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAbnormalCount(String AbnormalCount) {
+        this.AbnormalCount = AbnormalCount;
+    }
+
     public ApplicationAttribute() {
     }
 
@@ -124,6 +180,12 @@ public class ApplicationAttribute extends AbstractModel {
         if (source.GroupCount != null) {
             this.GroupCount = new Long(source.GroupCount);
         }
+        if (source.RunningGroupCount != null) {
+            this.RunningGroupCount = new String(source.RunningGroupCount);
+        }
+        if (source.AbnormalCount != null) {
+            this.AbnormalCount = new String(source.AbnormalCount);
+        }
     }
 
 
@@ -134,6 +196,8 @@ public class ApplicationAttribute extends AbstractModel {
         this.setParamSimple(map, prefix + "InstanceCount", this.InstanceCount);
         this.setParamSimple(map, prefix + "RunInstanceCount", this.RunInstanceCount);
         this.setParamSimple(map, prefix + "GroupCount", this.GroupCount);
+        this.setParamSimple(map, prefix + "RunningGroupCount", this.RunningGroupCount);
+        this.setParamSimple(map, prefix + "AbnormalCount", this.AbnormalCount);
 
     }
 }

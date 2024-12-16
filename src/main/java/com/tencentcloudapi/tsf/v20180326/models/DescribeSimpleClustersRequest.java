@@ -59,7 +59,7 @@ public class DescribeSimpleClustersRequest extends AbstractModel {
     private String SearchWord;
 
     /**
-    * 无
+    * 是否关闭鉴权
     */
     @SerializedName("DisableProgramAuthCheck")
     @Expose
@@ -146,16 +146,16 @@ public class DescribeSimpleClustersRequest extends AbstractModel {
     }
 
     /**
-     * Get 无 
-     * @return DisableProgramAuthCheck 无
+     * Get 是否关闭鉴权 
+     * @return DisableProgramAuthCheck 是否关闭鉴权
      */
     public Boolean getDisableProgramAuthCheck() {
         return this.DisableProgramAuthCheck;
     }
 
     /**
-     * Set 无
-     * @param DisableProgramAuthCheck 无
+     * Set 是否关闭鉴权
+     * @param DisableProgramAuthCheck 是否关闭鉴权
      */
     public void setDisableProgramAuthCheck(Boolean DisableProgramAuthCheck) {
         this.DisableProgramAuthCheck = DisableProgramAuthCheck;

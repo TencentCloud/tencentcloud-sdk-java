@@ -296,6 +296,14 @@ public class DataSourceInfo extends AbstractModel {
     private String DevelopmentParams;
 
     /**
+    * 数据源连接状态
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ConnectStatus")
+    @Expose
+    private DataSourceConnectStatus ConnectStatus;
+
+    /**
      * Get 若数据源列表为绑定数据库，则为db名称
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return DatabaseName 若数据源列表为绑定数据库，则为db名称
@@ -975,6 +983,26 @@ public class DataSourceInfo extends AbstractModel {
         this.DevelopmentParams = DevelopmentParams;
     }
 
+    /**
+     * Get 数据源连接状态
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ConnectStatus 数据源连接状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public DataSourceConnectStatus getConnectStatus() {
+        return this.ConnectStatus;
+    }
+
+    /**
+     * Set 数据源连接状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ConnectStatus 数据源连接状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setConnectStatus(DataSourceConnectStatus ConnectStatus) {
+        this.ConnectStatus = ConnectStatus;
+    }
+
     public DataSourceInfo() {
     }
 
@@ -1085,6 +1113,9 @@ public class DataSourceInfo extends AbstractModel {
         if (source.DevelopmentParams != null) {
             this.DevelopmentParams = new String(source.DevelopmentParams);
         }
+        if (source.ConnectStatus != null) {
+            this.ConnectStatus = new DataSourceConnectStatus(source.ConnectStatus);
+        }
     }
 
 
@@ -1126,6 +1157,7 @@ public class DataSourceInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "ProductId", this.ProductId);
         this.setParamSimple(map, prefix + "DevelopmentId", this.DevelopmentId);
         this.setParamSimple(map, prefix + "DevelopmentParams", this.DevelopmentParams);
+        this.setParamObj(map, prefix + "ConnectStatus.", this.ConnectStatus);
 
     }
 }

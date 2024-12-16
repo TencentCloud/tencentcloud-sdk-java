@@ -94,7 +94,7 @@ public class CreateApplicationRequest extends AbstractModel {
     private Boolean IgnoreCreateImageRepository;
 
     /**
-    * 无
+    * 数据集id列表
     */
     @SerializedName("ProgramIdList")
     @Expose
@@ -108,14 +108,19 @@ public class CreateApplicationRequest extends AbstractModel {
     private String ApmInstanceId;
 
     /**
-    * 编程语言
+    * 编程语言;
+J - JAVA；
+C - C/C++；
+P - Python；
+G - Go；
+O - Other；
     */
     @SerializedName("ProgramLanguage")
     @Expose
     private String ProgramLanguage;
 
     /**
-    * 开发框架
+    * 开发框架-SpringCloud/Dubbo/Go-GRPC/Other
     */
     @SerializedName("FrameworkType")
     @Expose
@@ -296,16 +301,16 @@ public class CreateApplicationRequest extends AbstractModel {
     }
 
     /**
-     * Get 无 
-     * @return ProgramIdList 无
+     * Get 数据集id列表 
+     * @return ProgramIdList 数据集id列表
      */
     public String [] getProgramIdList() {
         return this.ProgramIdList;
     }
 
     /**
-     * Set 无
-     * @param ProgramIdList 无
+     * Set 数据集id列表
+     * @param ProgramIdList 数据集id列表
      */
     public void setProgramIdList(String [] ProgramIdList) {
         this.ProgramIdList = ProgramIdList;
@@ -328,32 +333,52 @@ public class CreateApplicationRequest extends AbstractModel {
     }
 
     /**
-     * Get 编程语言 
-     * @return ProgramLanguage 编程语言
+     * Get 编程语言;
+J - JAVA；
+C - C/C++；
+P - Python；
+G - Go；
+O - Other； 
+     * @return ProgramLanguage 编程语言;
+J - JAVA；
+C - C/C++；
+P - Python；
+G - Go；
+O - Other；
      */
     public String getProgramLanguage() {
         return this.ProgramLanguage;
     }
 
     /**
-     * Set 编程语言
-     * @param ProgramLanguage 编程语言
+     * Set 编程语言;
+J - JAVA；
+C - C/C++；
+P - Python；
+G - Go；
+O - Other；
+     * @param ProgramLanguage 编程语言;
+J - JAVA；
+C - C/C++；
+P - Python；
+G - Go；
+O - Other；
      */
     public void setProgramLanguage(String ProgramLanguage) {
         this.ProgramLanguage = ProgramLanguage;
     }
 
     /**
-     * Get 开发框架 
-     * @return FrameworkType 开发框架
+     * Get 开发框架-SpringCloud/Dubbo/Go-GRPC/Other 
+     * @return FrameworkType 开发框架-SpringCloud/Dubbo/Go-GRPC/Other
      */
     public String getFrameworkType() {
         return this.FrameworkType;
     }
 
     /**
-     * Set 开发框架
-     * @param FrameworkType 开发框架
+     * Set 开发框架-SpringCloud/Dubbo/Go-GRPC/Other
+     * @param FrameworkType 开发框架-SpringCloud/Dubbo/Go-GRPC/Other
      */
     public void setFrameworkType(String FrameworkType) {
         this.FrameworkType = FrameworkType;

@@ -133,6 +133,13 @@ PLATINUM 铂金版
     private Long MaxTopicNum;
 
     /**
+    * 部署可用区列表
+    */
+    @SerializedName("ZoneIds")
+    @Expose
+    private Long [] ZoneIds;
+
+    /**
      * Get 实例类型，
 EXPERIMENT 体验版
 BASIC 基础版
@@ -388,6 +395,22 @@ PLATINUM 铂金版
         this.MaxTopicNum = MaxTopicNum;
     }
 
+    /**
+     * Get 部署可用区列表 
+     * @return ZoneIds 部署可用区列表
+     */
+    public Long [] getZoneIds() {
+        return this.ZoneIds;
+    }
+
+    /**
+     * Set 部署可用区列表
+     * @param ZoneIds 部署可用区列表
+     */
+    public void setZoneIds(Long [] ZoneIds) {
+        this.ZoneIds = ZoneIds;
+    }
+
     public CreateInstanceRequest() {
     }
 
@@ -450,6 +473,12 @@ PLATINUM 铂金版
         if (source.MaxTopicNum != null) {
             this.MaxTopicNum = new Long(source.MaxTopicNum);
         }
+        if (source.ZoneIds != null) {
+            this.ZoneIds = new Long[source.ZoneIds.length];
+            for (int i = 0; i < source.ZoneIds.length; i++) {
+                this.ZoneIds[i] = new Long(source.ZoneIds[i]);
+            }
+        }
     }
 
 
@@ -472,6 +501,7 @@ PLATINUM 铂金版
         this.setParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
         this.setParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
         this.setParamSimple(map, prefix + "MaxTopicNum", this.MaxTopicNum);
+        this.setParamArraySimple(map, prefix + "ZoneIds.", this.ZoneIds);
 
     }
 }

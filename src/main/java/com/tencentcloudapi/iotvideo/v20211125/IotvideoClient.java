@@ -204,6 +204,17 @@ public class IotvideoClient extends AbstractClient{
     }
 
     /**
+     *创建设备通道
+     * @param req CreateDeviceChannelRequest
+     * @return CreateDeviceChannelResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDeviceChannelResponse CreateDeviceChannel(CreateDeviceChannelRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateDeviceChannel", CreateDeviceChannelResponse.class);
+    }
+
+    /**
      *创建转发规则
      * @param req CreateForwardRuleRequest
      * @return CreateForwardRuleResponse
@@ -212,6 +223,17 @@ public class IotvideoClient extends AbstractClient{
     public CreateForwardRuleResponse CreateForwardRule(CreateForwardRuleRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateForwardRule", CreateForwardRuleResponse.class);
+    }
+
+    /**
+     *开通免费云存服务
+     * @param req CreateFreeCloudStorageRequest
+     * @return CreateFreeCloudStorageResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateFreeCloudStorageResponse CreateFreeCloudStorage(CreateFreeCloudStorageRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateFreeCloudStorage", CreateFreeCloudStorageResponse.class);
     }
 
     /**

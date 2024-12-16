@@ -59,7 +59,7 @@ public class CreateGroupRequest extends AbstractModel {
     private String GroupDesc;
 
     /**
-    * 部署组资源类型
+    * 部署组资源类型；DEF 表示默认资源类型；GW 表示网关资源类型
     */
     @SerializedName("GroupResourceType")
     @Expose
@@ -160,16 +160,16 @@ public class CreateGroupRequest extends AbstractModel {
     }
 
     /**
-     * Get 部署组资源类型 
-     * @return GroupResourceType 部署组资源类型
+     * Get 部署组资源类型；DEF 表示默认资源类型；GW 表示网关资源类型 
+     * @return GroupResourceType 部署组资源类型；DEF 表示默认资源类型；GW 表示网关资源类型
      */
     public String getGroupResourceType() {
         return this.GroupResourceType;
     }
 
     /**
-     * Set 部署组资源类型
-     * @param GroupResourceType 部署组资源类型
+     * Set 部署组资源类型；DEF 表示默认资源类型；GW 表示网关资源类型
+     * @param GroupResourceType 部署组资源类型；DEF 表示默认资源类型；GW 表示网关资源类型
      */
     public void setGroupResourceType(String GroupResourceType) {
         this.GroupResourceType = GroupResourceType;

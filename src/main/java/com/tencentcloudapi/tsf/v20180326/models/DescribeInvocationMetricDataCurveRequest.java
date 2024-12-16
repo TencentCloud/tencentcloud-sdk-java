@@ -45,14 +45,14 @@ public class DescribeInvocationMetricDataCurveRequest extends AbstractModel {
     private Long Period;
 
     /**
-    * 查询指标维度
+    * 查询指标维度，不能为空，支持 ServiceName, OperationName, PeerServiceName, PeerOperationName
     */
     @SerializedName("MetricDimensions")
     @Expose
     private MetricDimension [] MetricDimensions;
 
     /**
-    * 查询指标名
+    * 查询指标名，不能为空.
     */
     @SerializedName("Metrics")
     @Expose
@@ -121,32 +121,32 @@ public class DescribeInvocationMetricDataCurveRequest extends AbstractModel {
     }
 
     /**
-     * Get 查询指标维度 
-     * @return MetricDimensions 查询指标维度
+     * Get 查询指标维度，不能为空，支持 ServiceName, OperationName, PeerServiceName, PeerOperationName 
+     * @return MetricDimensions 查询指标维度，不能为空，支持 ServiceName, OperationName, PeerServiceName, PeerOperationName
      */
     public MetricDimension [] getMetricDimensions() {
         return this.MetricDimensions;
     }
 
     /**
-     * Set 查询指标维度
-     * @param MetricDimensions 查询指标维度
+     * Set 查询指标维度，不能为空，支持 ServiceName, OperationName, PeerServiceName, PeerOperationName
+     * @param MetricDimensions 查询指标维度，不能为空，支持 ServiceName, OperationName, PeerServiceName, PeerOperationName
      */
     public void setMetricDimensions(MetricDimension [] MetricDimensions) {
         this.MetricDimensions = MetricDimensions;
     }
 
     /**
-     * Get 查询指标名 
-     * @return Metrics 查询指标名
+     * Get 查询指标名，不能为空. 
+     * @return Metrics 查询指标名，不能为空.
      */
     public Metric [] getMetrics() {
         return this.Metrics;
     }
 
     /**
-     * Set 查询指标名
-     * @param Metrics 查询指标名
+     * Set 查询指标名，不能为空.
+     * @param Metrics 查询指标名，不能为空.
      */
     public void setMetrics(Metric [] Metrics) {
         this.Metrics = Metrics;

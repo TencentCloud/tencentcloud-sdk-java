@@ -66,7 +66,7 @@ public class CreateNamespaceRequest extends AbstractModel {
     private String NamespaceId;
 
     /**
-    * 是否开启高可用
+    * 是否开启高可用，1 表示开启，0 表示不开启
     */
     @SerializedName("IsHaEnable")
     @Expose
@@ -80,7 +80,7 @@ public class CreateNamespaceRequest extends AbstractModel {
     private String ProgramId;
 
     /**
-    * 无
+    * 需要绑定的数据集ID
     */
     @SerializedName("ProgramIdList")
     @Expose
@@ -183,16 +183,16 @@ public class CreateNamespaceRequest extends AbstractModel {
     }
 
     /**
-     * Get 是否开启高可用 
-     * @return IsHaEnable 是否开启高可用
+     * Get 是否开启高可用，1 表示开启，0 表示不开启 
+     * @return IsHaEnable 是否开启高可用，1 表示开启，0 表示不开启
      */
     public String getIsHaEnable() {
         return this.IsHaEnable;
     }
 
     /**
-     * Set 是否开启高可用
-     * @param IsHaEnable 是否开启高可用
+     * Set 是否开启高可用，1 表示开启，0 表示不开启
+     * @param IsHaEnable 是否开启高可用，1 表示开启，0 表示不开启
      */
     public void setIsHaEnable(String IsHaEnable) {
         this.IsHaEnable = IsHaEnable;
@@ -215,16 +215,16 @@ public class CreateNamespaceRequest extends AbstractModel {
     }
 
     /**
-     * Get 无 
-     * @return ProgramIdList 无
+     * Get 需要绑定的数据集ID 
+     * @return ProgramIdList 需要绑定的数据集ID
      */
     public String [] getProgramIdList() {
         return this.ProgramIdList;
     }
 
     /**
-     * Set 无
-     * @param ProgramIdList 无
+     * Set 需要绑定的数据集ID
+     * @param ProgramIdList 需要绑定的数据集ID
      */
     public void setProgramIdList(String [] ProgramIdList) {
         this.ProgramIdList = ProgramIdList;

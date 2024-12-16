@@ -63,6 +63,15 @@ Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
     private Encryption Encryption;
 
     /**
+    * 自定义描述字段。
+- 用于描述调用业务信息，出参中将返回此描述字段。 
+- 每个自定义描述字段支持[1,10]个字符。
+    */
+    @SerializedName("Extra")
+    @Expose
+    private String Extra;
+
+    /**
      * Get 身份证号。 
      * @return IdCard 身份证号。
      */
@@ -158,6 +167,30 @@ Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
         this.Encryption = Encryption;
     }
 
+    /**
+     * Get 自定义描述字段。
+- 用于描述调用业务信息，出参中将返回此描述字段。 
+- 每个自定义描述字段支持[1,10]个字符。 
+     * @return Extra 自定义描述字段。
+- 用于描述调用业务信息，出参中将返回此描述字段。 
+- 每个自定义描述字段支持[1,10]个字符。
+     */
+    public String getExtra() {
+        return this.Extra;
+    }
+
+    /**
+     * Set 自定义描述字段。
+- 用于描述调用业务信息，出参中将返回此描述字段。 
+- 每个自定义描述字段支持[1,10]个字符。
+     * @param Extra 自定义描述字段。
+- 用于描述调用业务信息，出参中将返回此描述字段。 
+- 每个自定义描述字段支持[1,10]个字符。
+     */
+    public void setExtra(String Extra) {
+        this.Extra = Extra;
+    }
+
     public ImageRecognitionV2Request() {
     }
 
@@ -181,6 +214,9 @@ Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
         if (source.Encryption != null) {
             this.Encryption = new Encryption(source.Encryption);
         }
+        if (source.Extra != null) {
+            this.Extra = new String(source.Extra);
+        }
     }
 
 
@@ -193,6 +229,7 @@ Base64编码后的图片数据大小不超过3M，仅支持jpg、png格式。
         this.setParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
         this.setParamSimple(map, prefix + "Optional", this.Optional);
         this.setParamObj(map, prefix + "Encryption.", this.Encryption);
+        this.setParamSimple(map, prefix + "Extra", this.Extra);
 
     }
 }

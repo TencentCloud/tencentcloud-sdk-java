@@ -647,6 +647,17 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
+     *删除漏洞防御白名单
+     * @param req DeleteRaspRulesRequest
+     * @return DeleteRaspRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteRaspRulesResponse DeleteRaspRules(DeleteRaspRulesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteRaspRules", DeleteRaspRulesResponse.class);
+    }
+
+    /**
      *根据Ids删除反弹Shell事件
      * @param req DeleteReverseShellEventsRequest
      * @return DeleteReverseShellEventsResponse
@@ -3033,6 +3044,39 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
+     *查看漏洞防御最大cpu限制
+     * @param req DescribeRaspMaxCpuRequest
+     * @return DescribeRaspMaxCpuResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRaspMaxCpuResponse DescribeRaspMaxCpu(DescribeRaspMaxCpuRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRaspMaxCpu", DescribeRaspMaxCpuResponse.class);
+    }
+
+    /**
+     *获取漏洞防御白名单漏洞列表
+     * @param req DescribeRaspRuleVulsRequest
+     * @return DescribeRaspRuleVulsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRaspRuleVulsResponse DescribeRaspRuleVuls(DescribeRaspRuleVulsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRaspRuleVuls", DescribeRaspRuleVulsResponse.class);
+    }
+
+    /**
+     *查询漏洞防御白名单
+     * @param req DescribeRaspRulesRequest
+     * @return DescribeRaspRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRaspRulesResponse DescribeRaspRules(DescribeRaspRulesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRaspRules", DescribeRaspRulesResponse.class);
+    }
+
+    /**
      *查询推荐购买防护核数
      * @param req DescribeRecommendedProtectCpuRequest
      * @return DescribeRecommendedProtectCpuResponse
@@ -5188,6 +5232,28 @@ public class CwpClient extends AbstractClient{
     public ModifyRansomDefenseStrategyStatusResponse ModifyRansomDefenseStrategyStatus(ModifyRansomDefenseStrategyStatusRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyRansomDefenseStrategyStatus", ModifyRansomDefenseStrategyStatusResponse.class);
+    }
+
+    /**
+     *编辑漏洞防御最大cpu配置
+     * @param req ModifyRaspMaxCpuRequest
+     * @return ModifyRaspMaxCpuResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyRaspMaxCpuResponse ModifyRaspMaxCpu(ModifyRaspMaxCpuRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyRaspMaxCpu", ModifyRaspMaxCpuResponse.class);
+    }
+
+    /**
+     *添加漏洞防御白名单
+     * @param req ModifyRaspRulesRequest
+     * @return ModifyRaspRulesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyRaspRulesResponse ModifyRaspRules(ModifyRaspRulesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyRaspRules", ModifyRaspRulesResponse.class);
     }
 
     /**

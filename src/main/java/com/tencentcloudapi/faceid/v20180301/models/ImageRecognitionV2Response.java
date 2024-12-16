@@ -49,6 +49,13 @@ public class ImageRecognitionV2Response extends AbstractModel {
     private String Description;
 
     /**
+    * 调用接口中自定义的描述字段。
+    */
+    @SerializedName("Extra")
+    @Expose
+    private String Extra;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -120,6 +127,22 @@ public class ImageRecognitionV2Response extends AbstractModel {
     }
 
     /**
+     * Get 调用接口中自定义的描述字段。 
+     * @return Extra 调用接口中自定义的描述字段。
+     */
+    public String getExtra() {
+        return this.Extra;
+    }
+
+    /**
+     * Set 调用接口中自定义的描述字段。
+     * @param Extra 调用接口中自定义的描述字段。
+     */
+    public void setExtra(String Extra) {
+        this.Extra = Extra;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -152,6 +175,9 @@ public class ImageRecognitionV2Response extends AbstractModel {
         if (source.Description != null) {
             this.Description = new String(source.Description);
         }
+        if (source.Extra != null) {
+            this.Extra = new String(source.Extra);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -165,6 +191,7 @@ public class ImageRecognitionV2Response extends AbstractModel {
         this.setParamSimple(map, prefix + "Sim", this.Sim);
         this.setParamSimple(map, prefix + "Result", this.Result);
         this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "Extra", this.Extra);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

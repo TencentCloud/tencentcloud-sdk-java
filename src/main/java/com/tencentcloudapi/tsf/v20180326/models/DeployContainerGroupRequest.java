@@ -356,7 +356,9 @@ public class DeployContainerGroupRequest extends AbstractModel {
     /**
      * Get 旧版镜像名，如/tsf/nginx 
      * @return Reponame 旧版镜像名，如/tsf/nginx
+     * @deprecated
      */
+    @Deprecated
     public String getReponame() {
         return this.Reponame;
     }
@@ -364,7 +366,9 @@ public class DeployContainerGroupRequest extends AbstractModel {
     /**
      * Set 旧版镜像名，如/tsf/nginx
      * @param Reponame 旧版镜像名，如/tsf/nginx
+     * @deprecated
      */
+    @Deprecated
     public void setReponame(String Reponame) {
         this.Reponame = Reponame;
     }

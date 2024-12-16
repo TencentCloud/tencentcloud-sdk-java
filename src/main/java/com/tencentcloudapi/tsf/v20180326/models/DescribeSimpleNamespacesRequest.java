@@ -94,7 +94,7 @@ public class DescribeSimpleNamespacesRequest extends AbstractModel {
     private String IsDefault;
 
     /**
-    * 无
+    * 是否关闭鉴权查询
     */
     @SerializedName("DisableProgramAuthCheck")
     @Expose
@@ -261,16 +261,16 @@ public class DescribeSimpleNamespacesRequest extends AbstractModel {
     }
 
     /**
-     * Get 无 
-     * @return DisableProgramAuthCheck 无
+     * Get 是否关闭鉴权查询 
+     * @return DisableProgramAuthCheck 是否关闭鉴权查询
      */
     public Boolean getDisableProgramAuthCheck() {
         return this.DisableProgramAuthCheck;
     }
 
     /**
-     * Set 无
-     * @param DisableProgramAuthCheck 无
+     * Set 是否关闭鉴权查询
+     * @param DisableProgramAuthCheck 是否关闭鉴权查询
      */
     public void setDisableProgramAuthCheck(Boolean DisableProgramAuthCheck) {
         this.DisableProgramAuthCheck = DisableProgramAuthCheck;

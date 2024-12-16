@@ -150,11 +150,18 @@ public class BashEventNew extends AbstractModel {
     private Long RuleCategory;
 
     /**
-    * 自动生成的正则表达式
+    * 转义后的正则表达式
     */
     @SerializedName("RegexBashCmd")
     @Expose
     private String RegexBashCmd;
+
+    /**
+    * 转义后的正则表达式
+    */
+    @SerializedName("RegexExe")
+    @Expose
+    private String RegexExe;
 
     /**
     * 0:普通 1:专业版 2:旗舰版
@@ -459,19 +466,35 @@ public class BashEventNew extends AbstractModel {
     }
 
     /**
-     * Get 自动生成的正则表达式 
-     * @return RegexBashCmd 自动生成的正则表达式
+     * Get 转义后的正则表达式 
+     * @return RegexBashCmd 转义后的正则表达式
      */
     public String getRegexBashCmd() {
         return this.RegexBashCmd;
     }
 
     /**
-     * Set 自动生成的正则表达式
-     * @param RegexBashCmd 自动生成的正则表达式
+     * Set 转义后的正则表达式
+     * @param RegexBashCmd 转义后的正则表达式
      */
     public void setRegexBashCmd(String RegexBashCmd) {
         this.RegexBashCmd = RegexBashCmd;
+    }
+
+    /**
+     * Get 转义后的正则表达式 
+     * @return RegexExe 转义后的正则表达式
+     */
+    public String getRegexExe() {
+        return this.RegexExe;
+    }
+
+    /**
+     * Set 转义后的正则表达式
+     * @param RegexExe 转义后的正则表达式
+     */
+    public void setRegexExe(String RegexExe) {
+        this.RegexExe = RegexExe;
     }
 
     /**
@@ -571,6 +594,9 @@ public class BashEventNew extends AbstractModel {
         if (source.RegexBashCmd != null) {
             this.RegexBashCmd = new String(source.RegexBashCmd);
         }
+        if (source.RegexExe != null) {
+            this.RegexExe = new String(source.RegexExe);
+        }
         if (source.MachineType != null) {
             this.MachineType = new Long(source.MachineType);
         }
@@ -603,6 +629,7 @@ public class BashEventNew extends AbstractModel {
         this.setParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
         this.setParamSimple(map, prefix + "RuleCategory", this.RuleCategory);
         this.setParamSimple(map, prefix + "RegexBashCmd", this.RegexBashCmd);
+        this.setParamSimple(map, prefix + "RegexExe", this.RegexExe);
         this.setParamSimple(map, prefix + "MachineType", this.MachineType);
         this.setParamObj(map, prefix + "MachineExtraInfo.", this.MachineExtraInfo);
 

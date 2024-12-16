@@ -206,6 +206,13 @@ public class SubmitCertificateInformationRequest extends AbstractModel {
     private String ContactPosition;
 
     /**
+    * 是否DV证书。默认false
+    */
+    @SerializedName("IsDV")
+    @Expose
+    private Boolean IsDV;
+
+    /**
      * Get 证书 ID。 
      * @return CertificateId 证书 ID。
      */
@@ -621,6 +628,22 @@ public class SubmitCertificateInformationRequest extends AbstractModel {
         this.ContactPosition = ContactPosition;
     }
 
+    /**
+     * Get 是否DV证书。默认false 
+     * @return IsDV 是否DV证书。默认false
+     */
+    public Boolean getIsDV() {
+        return this.IsDV;
+    }
+
+    /**
+     * Set 是否DV证书。默认false
+     * @param IsDV 是否DV证书。默认false
+     */
+    public void setIsDV(Boolean IsDV) {
+        this.IsDV = IsDV;
+    }
+
     public SubmitCertificateInformationRequest() {
     }
 
@@ -710,6 +733,9 @@ public class SubmitCertificateInformationRequest extends AbstractModel {
         if (source.ContactPosition != null) {
             this.ContactPosition = new String(source.ContactPosition);
         }
+        if (source.IsDV != null) {
+            this.IsDV = new Boolean(source.IsDV);
+        }
     }
 
 
@@ -743,6 +769,7 @@ public class SubmitCertificateInformationRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ContactEmail", this.ContactEmail);
         this.setParamSimple(map, prefix + "ContactNumber", this.ContactNumber);
         this.setParamSimple(map, prefix + "ContactPosition", this.ContactPosition);
+        this.setParamSimple(map, prefix + "IsDV", this.IsDV);
 
     }
 }

@@ -989,7 +989,7 @@ public class TsfClient extends AbstractClient{
     }
 
     /**
-     * 获取部署组详情
+     *获取部署组详情
      * @param req DescribeContainerGroupDeployInfoRequest
      * @return DescribeContainerGroupDeployInfoResponse
      * @throws TencentCloudSDKException
@@ -1000,7 +1000,7 @@ public class TsfClient extends AbstractClient{
     }
 
     /**
-     * 容器部署组详情（已废弃，请使用  DescribeContainerGroupDeployInfo）
+     *容器部署组详情（已废弃，请使用  DescribeContainerGroupDeployInfo）
      * @param req DescribeContainerGroupDetailRequest
      * @return DescribeContainerGroupDetailResponse
      * @throws TencentCloudSDKException

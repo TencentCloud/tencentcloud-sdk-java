@@ -25,7 +25,6 @@ public class OnlineVersionInfo extends AbstractModel {
 
     /**
     * 版本名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VersionName")
     @Expose
@@ -33,7 +32,6 @@ public class OnlineVersionInfo extends AbstractModel {
 
     /**
     * 镜像url
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ImageUrl")
     @Expose
@@ -41,17 +39,14 @@ public class OnlineVersionInfo extends AbstractModel {
 
     /**
     * 流量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FlowRatio")
     @Expose
     private String FlowRatio;
 
     /**
-     * Get 版本名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 版本名 
      * @return VersionName 版本名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVersionName() {
         return this.VersionName;
@@ -59,19 +54,15 @@ public class OnlineVersionInfo extends AbstractModel {
 
     /**
      * Set 版本名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VersionName 版本名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVersionName(String VersionName) {
         this.VersionName = VersionName;
     }
 
     /**
-     * Get 镜像url
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 镜像url 
      * @return ImageUrl 镜像url
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getImageUrl() {
         return this.ImageUrl;
@@ -79,19 +70,15 @@ public class OnlineVersionInfo extends AbstractModel {
 
     /**
      * Set 镜像url
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ImageUrl 镜像url
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setImageUrl(String ImageUrl) {
         this.ImageUrl = ImageUrl;
     }
 
     /**
-     * Get 流量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 流量 
      * @return FlowRatio 流量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFlowRatio() {
         return this.FlowRatio;
@@ -99,9 +86,7 @@ public class OnlineVersionInfo extends AbstractModel {
 
     /**
      * Set 流量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FlowRatio 流量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFlowRatio(String FlowRatio) {
         this.FlowRatio = FlowRatio;

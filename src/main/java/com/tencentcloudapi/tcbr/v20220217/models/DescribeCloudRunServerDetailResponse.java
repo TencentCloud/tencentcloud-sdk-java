@@ -25,7 +25,6 @@ public class DescribeCloudRunServerDetailResponse extends AbstractModel {
 
     /**
     * 服务基本信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BaseInfo")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeCloudRunServerDetailResponse extends AbstractModel {
 
     /**
     * 服务配置信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ServerConfig")
     @Expose
@@ -41,7 +39,6 @@ public class DescribeCloudRunServerDetailResponse extends AbstractModel {
 
     /**
     * 在线版本信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OnlineVersionInfos")
     @Expose
@@ -55,10 +52,8 @@ public class DescribeCloudRunServerDetailResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 服务基本信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 服务基本信息 
      * @return BaseInfo 服务基本信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ServerBaseInfo getBaseInfo() {
         return this.BaseInfo;
@@ -66,19 +61,15 @@ public class DescribeCloudRunServerDetailResponse extends AbstractModel {
 
     /**
      * Set 服务基本信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BaseInfo 服务基本信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBaseInfo(ServerBaseInfo BaseInfo) {
         this.BaseInfo = BaseInfo;
     }
 
     /**
-     * Get 服务配置信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 服务配置信息 
      * @return ServerConfig 服务配置信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ServerBaseConfig getServerConfig() {
         return this.ServerConfig;
@@ -86,19 +77,15 @@ public class DescribeCloudRunServerDetailResponse extends AbstractModel {
 
     /**
      * Set 服务配置信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ServerConfig 服务配置信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setServerConfig(ServerBaseConfig ServerConfig) {
         this.ServerConfig = ServerConfig;
     }
 
     /**
-     * Get 在线版本信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 在线版本信息 
      * @return OnlineVersionInfos 在线版本信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public OnlineVersionInfo [] getOnlineVersionInfos() {
         return this.OnlineVersionInfos;
@@ -106,9 +93,7 @@ public class DescribeCloudRunServerDetailResponse extends AbstractModel {
 
     /**
      * Set 在线版本信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OnlineVersionInfos 在线版本信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOnlineVersionInfos(OnlineVersionInfo [] OnlineVersionInfos) {
         this.OnlineVersionInfos = OnlineVersionInfos;

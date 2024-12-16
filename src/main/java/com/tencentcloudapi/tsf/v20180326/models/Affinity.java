@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class Affinity extends AbstractModel {
 
     /**
-    * -
+    * 亲和性范围
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Scope")
@@ -32,7 +32,7 @@ public class Affinity extends AbstractModel {
     private String Scope;
 
     /**
-    * -
+    * 亲和规则的权重
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Weight")
@@ -48,9 +48,9 @@ public class Affinity extends AbstractModel {
     private CommonOption [] Paths;
 
     /**
-     * Get -
+     * Get 亲和性范围
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Scope -
+     * @return Scope 亲和性范围
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getScope() {
@@ -58,9 +58,9 @@ public class Affinity extends AbstractModel {
     }
 
     /**
-     * Set -
+     * Set 亲和性范围
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Scope -
+     * @param Scope 亲和性范围
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScope(String Scope) {
@@ -68,9 +68,9 @@ public class Affinity extends AbstractModel {
     }
 
     /**
-     * Get -
+     * Get 亲和规则的权重
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Weight -
+     * @return Weight 亲和规则的权重
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWeight() {
@@ -78,9 +78,9 @@ public class Affinity extends AbstractModel {
     }
 
     /**
-     * Set -
+     * Set 亲和规则的权重
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Weight -
+     * @param Weight 亲和规则的权重
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWeight(String Weight) {

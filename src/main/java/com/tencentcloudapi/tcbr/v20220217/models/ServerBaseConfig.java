@@ -165,7 +165,6 @@ public class ServerBaseConfig extends AbstractModel {
 
     /**
     * 服务标签, function: 函数托管
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tag")
     @Expose
@@ -492,10 +491,8 @@ public class ServerBaseConfig extends AbstractModel {
     }
 
     /**
-     * Get 服务标签, function: 函数托管
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 服务标签, function: 函数托管 
      * @return Tag 服务标签, function: 函数托管
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTag() {
         return this.Tag;
@@ -503,9 +500,7 @@ public class ServerBaseConfig extends AbstractModel {
 
     /**
      * Set 服务标签, function: 函数托管
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tag 服务标签, function: 函数托管
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTag(String Tag) {
         this.Tag = Tag;

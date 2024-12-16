@@ -184,6 +184,17 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
+     *创建设备通道
+     * @param req CreateDeviceChannelRequest
+     * @return CreateDeviceChannelResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDeviceChannelResponse CreateDeviceChannel(CreateDeviceChannelRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateDeviceChannel", CreateDeviceChannelResponse.class);
+    }
+
+    /**
      *创建外部视频 AI 分析任务
      * @param req CreateExternalSourceAIServiceTaskRequest
      * @return CreateExternalSourceAIServiceTaskResponse
@@ -203,6 +214,17 @@ public class IotexplorerClient extends AbstractClient{
     public CreateFenceBindResponse CreateFenceBind(CreateFenceBindRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateFenceBind", CreateFenceBindResponse.class);
+    }
+
+    /**
+     *开通免费云存服务
+     * @param req CreateFreeCloudStorageRequest
+     * @return CreateFreeCloudStorageResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateFreeCloudStorageResponse CreateFreeCloudStorage(CreateFreeCloudStorageRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateFreeCloudStorage", CreateFreeCloudStorageResponse.class);
     }
 
     /**
