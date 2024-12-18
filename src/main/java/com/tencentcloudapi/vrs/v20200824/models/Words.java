@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class Words extends AbstractModel {
 
     /**
-    * 准确度 (<75则认为不合格)
+    * 准确度 (小于75则认为不合格)
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PronAccuracy")
@@ -32,7 +32,7 @@ public class Words extends AbstractModel {
     private Float PronAccuracy;
 
     /**
-    * 流畅度 (<0.95则认为不合格)
+    * 流畅度 (小于0.95则认为不合格)
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PronFluency")
@@ -62,9 +62,9 @@ public class Words extends AbstractModel {
     private String Word;
 
     /**
-     * Get 准确度 (<75则认为不合格)
+     * Get 准确度 (小于75则认为不合格)
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PronAccuracy 准确度 (<75则认为不合格)
+     * @return PronAccuracy 准确度 (小于75则认为不合格)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getPronAccuracy() {
@@ -72,9 +72,9 @@ public class Words extends AbstractModel {
     }
 
     /**
-     * Set 准确度 (<75则认为不合格)
+     * Set 准确度 (小于75则认为不合格)
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PronAccuracy 准确度 (<75则认为不合格)
+     * @param PronAccuracy 准确度 (小于75则认为不合格)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPronAccuracy(Float PronAccuracy) {
@@ -82,9 +82,9 @@ public class Words extends AbstractModel {
     }
 
     /**
-     * Get 流畅度 (<0.95则认为不合格)
+     * Get 流畅度 (小于0.95则认为不合格)
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PronFluency 流畅度 (<0.95则认为不合格)
+     * @return PronFluency 流畅度 (小于0.95则认为不合格)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getPronFluency() {
@@ -92,9 +92,9 @@ public class Words extends AbstractModel {
     }
 
     /**
-     * Set 流畅度 (<0.95则认为不合格)
+     * Set 流畅度 (小于0.95则认为不合格)
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PronFluency 流畅度 (<0.95则认为不合格)
+     * @param PronFluency 流畅度 (小于0.95则认为不合格)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPronFluency(Float PronFluency) {

@@ -173,6 +173,17 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
+     *创建设备云存 AI 分析任务
+     * @param req CreateCloudStorageAIServiceTaskRequest
+     * @return CreateCloudStorageAIServiceTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCloudStorageAIServiceTaskResponse CreateCloudStorageAIServiceTask(CreateCloudStorageAIServiceTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateCloudStorageAIServiceTask", CreateCloudStorageAIServiceTaskResponse.class);
+    }
+
+    /**
      *创建设备
      * @param req CreateDeviceRequest
      * @return CreateDeviceResponse
@@ -1462,7 +1473,9 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
-     *发布广播消息
+     *发布广播消息、发布RRPC消息属于早期服务，目前已停止维护，需要从官网下线。
+
+发布广播消息
      * @param req PublishBroadcastMessageRequest
      * @return PublishBroadcastMessageResponse
      * @throws TencentCloudSDKException
@@ -1495,7 +1508,9 @@ public class IotexplorerClient extends AbstractClient{
     }
 
     /**
-     *下发RRPC消息
+     *发布广播消息、发布RRPC消息属于早期服务，目前已停止维护，需要从官网下线。
+
+下发RRPC消息
      * @param req PublishRRPCMessageRequest
      * @return PublishRRPCMessageResponse
      * @throws TencentCloudSDKException

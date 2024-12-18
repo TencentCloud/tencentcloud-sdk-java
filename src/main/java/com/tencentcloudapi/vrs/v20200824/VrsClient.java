@@ -117,6 +117,17 @@ public class VrsClient extends AbstractClient{
     }
 
     /**
+     *该接口用于查询复刻音色详细信息。
+     * @param req GetVRSVoiceTypeInfoRequest
+     * @return GetVRSVoiceTypeInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetVRSVoiceTypeInfoResponse GetVRSVoiceTypeInfo(GetVRSVoiceTypeInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetVRSVoiceTypeInfo", GetVRSVoiceTypeInfoResponse.class);
+    }
+
+    /**
      *查询复刻音色
      * @param req GetVRSVoiceTypesRequest
      * @return GetVRSVoiceTypesResponse
