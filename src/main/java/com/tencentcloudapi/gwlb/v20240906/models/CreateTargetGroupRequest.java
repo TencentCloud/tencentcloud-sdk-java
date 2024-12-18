@@ -38,7 +38,7 @@ public class CreateTargetGroupRequest extends AbstractModel {
     private String VpcId;
 
     /**
-    * 目标组的默认端口， 后续添加服务器时可使用该默认端口。Port和TargetGroupInstances.N中的port二者必填其一。
+    * 目标组的默认端口， 后续添加服务器时可使用该默认端口。Port和TargetGroupInstances.N中的port二者必填其一。仅支持6081。
     */
     @SerializedName("Port")
     @Expose
@@ -54,7 +54,7 @@ public class CreateTargetGroupRequest extends AbstractModel {
     /**
     * 网关负载均衡目标组协议。
 - TENCENT_GENEVE ：GENEVE 标准协议
-- AWS_GENEVE：GENEVE 兼容协议（需要提交工单申请开白）
+- AWS_GENEVE：GENEVE 兼容协议
     */
     @SerializedName("Protocol")
     @Expose
@@ -115,16 +115,16 @@ public class CreateTargetGroupRequest extends AbstractModel {
     }
 
     /**
-     * Get 目标组的默认端口， 后续添加服务器时可使用该默认端口。Port和TargetGroupInstances.N中的port二者必填其一。 
-     * @return Port 目标组的默认端口， 后续添加服务器时可使用该默认端口。Port和TargetGroupInstances.N中的port二者必填其一。
+     * Get 目标组的默认端口， 后续添加服务器时可使用该默认端口。Port和TargetGroupInstances.N中的port二者必填其一。仅支持6081。 
+     * @return Port 目标组的默认端口， 后续添加服务器时可使用该默认端口。Port和TargetGroupInstances.N中的port二者必填其一。仅支持6081。
      */
     public Long getPort() {
         return this.Port;
     }
 
     /**
-     * Set 目标组的默认端口， 后续添加服务器时可使用该默认端口。Port和TargetGroupInstances.N中的port二者必填其一。
-     * @param Port 目标组的默认端口， 后续添加服务器时可使用该默认端口。Port和TargetGroupInstances.N中的port二者必填其一。
+     * Set 目标组的默认端口， 后续添加服务器时可使用该默认端口。Port和TargetGroupInstances.N中的port二者必填其一。仅支持6081。
+     * @param Port 目标组的默认端口， 后续添加服务器时可使用该默认端口。Port和TargetGroupInstances.N中的port二者必填其一。仅支持6081。
      */
     public void setPort(Long Port) {
         this.Port = Port;
@@ -149,10 +149,10 @@ public class CreateTargetGroupRequest extends AbstractModel {
     /**
      * Get 网关负载均衡目标组协议。
 - TENCENT_GENEVE ：GENEVE 标准协议
-- AWS_GENEVE：GENEVE 兼容协议（需要提交工单申请开白） 
+- AWS_GENEVE：GENEVE 兼容协议 
      * @return Protocol 网关负载均衡目标组协议。
 - TENCENT_GENEVE ：GENEVE 标准协议
-- AWS_GENEVE：GENEVE 兼容协议（需要提交工单申请开白）
+- AWS_GENEVE：GENEVE 兼容协议
      */
     public String getProtocol() {
         return this.Protocol;
@@ -161,10 +161,10 @@ public class CreateTargetGroupRequest extends AbstractModel {
     /**
      * Set 网关负载均衡目标组协议。
 - TENCENT_GENEVE ：GENEVE 标准协议
-- AWS_GENEVE：GENEVE 兼容协议（需要提交工单申请开白）
+- AWS_GENEVE：GENEVE 兼容协议
      * @param Protocol 网关负载均衡目标组协议。
 - TENCENT_GENEVE ：GENEVE 标准协议
-- AWS_GENEVE：GENEVE 兼容协议（需要提交工单申请开白）
+- AWS_GENEVE：GENEVE 兼容协议
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;

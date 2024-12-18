@@ -199,6 +199,13 @@ public class DescribeOperateOpsTasksRequest extends AbstractModel {
     private String [] RequestResourceTypes;
 
     /**
+    * 项目ID列表
+    */
+    @SerializedName("ProjectIds")
+    @Expose
+    private String [] ProjectIds;
+
+    /**
      * Get 项目id 
      * @return ProjectId 项目id
      */
@@ -598,6 +605,22 @@ public class DescribeOperateOpsTasksRequest extends AbstractModel {
         this.RequestResourceTypes = RequestResourceTypes;
     }
 
+    /**
+     * Get 项目ID列表 
+     * @return ProjectIds 项目ID列表
+     */
+    public String [] getProjectIds() {
+        return this.ProjectIds;
+    }
+
+    /**
+     * Set 项目ID列表
+     * @param ProjectIds 项目ID列表
+     */
+    public void setProjectIds(String [] ProjectIds) {
+        this.ProjectIds = ProjectIds;
+    }
+
     public DescribeOperateOpsTasksRequest() {
     }
 
@@ -687,6 +710,12 @@ public class DescribeOperateOpsTasksRequest extends AbstractModel {
                 this.RequestResourceTypes[i] = new String(source.RequestResourceTypes[i]);
             }
         }
+        if (source.ProjectIds != null) {
+            this.ProjectIds = new String[source.ProjectIds.length];
+            for (int i = 0; i < source.ProjectIds.length; i++) {
+                this.ProjectIds[i] = new String(source.ProjectIds[i]);
+            }
+        }
     }
 
 
@@ -719,6 +748,7 @@ public class DescribeOperateOpsTasksRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "KeyWord", this.KeyWord);
         this.setParamSimple(map, prefix + "InitStrategy", this.InitStrategy);
         this.setParamArraySimple(map, prefix + "RequestResourceTypes.", this.RequestResourceTypes);
+        this.setParamArraySimple(map, prefix + "ProjectIds.", this.ProjectIds);
 
     }
 }

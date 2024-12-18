@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class SetPasswordRequest extends AbstractModel {
 
     /**
-    * 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
+    * 实例ID，格式如：cmgo-p8vn****。与云数据库控制台页面中显示的实例ID相同
     */
     @SerializedName("InstanceId")
     @Expose
@@ -38,23 +38,23 @@ public class SetPasswordRequest extends AbstractModel {
     private String UserName;
 
     /**
-    * 实例新密码，至少包含字母、数字和字符（!@#%^*()）中的两种，长度为8-16个字符
+    * 指定账户的新密码， 密码格式为8-32个字符长度，至少包含字母、数字和字符（!@#%^*()_）中的两种
     */
     @SerializedName("Password")
     @Expose
     private String Password;
 
     /**
-     * Get 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同 
-     * @return InstanceId 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
+     * Get 实例ID，格式如：cmgo-p8vn****。与云数据库控制台页面中显示的实例ID相同 
+     * @return InstanceId 实例ID，格式如：cmgo-p8vn****。与云数据库控制台页面中显示的实例ID相同
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
-     * @param InstanceId 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
+     * Set 实例ID，格式如：cmgo-p8vn****。与云数据库控制台页面中显示的实例ID相同
+     * @param InstanceId 实例ID，格式如：cmgo-p8vn****。与云数据库控制台页面中显示的实例ID相同
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -77,16 +77,16 @@ public class SetPasswordRequest extends AbstractModel {
     }
 
     /**
-     * Get 实例新密码，至少包含字母、数字和字符（!@#%^*()）中的两种，长度为8-16个字符 
-     * @return Password 实例新密码，至少包含字母、数字和字符（!@#%^*()）中的两种，长度为8-16个字符
+     * Get 指定账户的新密码， 密码格式为8-32个字符长度，至少包含字母、数字和字符（!@#%^*()_）中的两种 
+     * @return Password 指定账户的新密码， 密码格式为8-32个字符长度，至少包含字母、数字和字符（!@#%^*()_）中的两种
      */
     public String getPassword() {
         return this.Password;
     }
 
     /**
-     * Set 实例新密码，至少包含字母、数字和字符（!@#%^*()）中的两种，长度为8-16个字符
-     * @param Password 实例新密码，至少包含字母、数字和字符（!@#%^*()）中的两种，长度为8-16个字符
+     * Set 指定账户的新密码， 密码格式为8-32个字符长度，至少包含字母、数字和字符（!@#%^*()_）中的两种
+     * @param Password 指定账户的新密码， 密码格式为8-32个字符长度，至少包含字母、数字和字符（!@#%^*()_）中的两种
      */
     public void setPassword(String Password) {
         this.Password = Password;

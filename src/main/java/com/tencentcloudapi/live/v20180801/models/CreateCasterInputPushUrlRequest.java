@@ -32,7 +32,7 @@ public class CreateCasterInputPushUrlRequest extends AbstractModel {
 
     /**
     * 请求生成推流地址的输入Index。
-允许范围[1,20]。
+允许范围[1,24]。
     */
     @SerializedName("InputIndex")
     @Expose
@@ -65,9 +65,9 @@ public class CreateCasterInputPushUrlRequest extends AbstractModel {
 
     /**
      * Get 请求生成推流地址的输入Index。
-允许范围[1,20]。 
+允许范围[1,24]。 
      * @return InputIndex 请求生成推流地址的输入Index。
-允许范围[1,20]。
+允许范围[1,24]。
      */
     public Long getInputIndex() {
         return this.InputIndex;
@@ -75,9 +75,9 @@ public class CreateCasterInputPushUrlRequest extends AbstractModel {
 
     /**
      * Set 请求生成推流地址的输入Index。
-允许范围[1,20]。
+允许范围[1,24]。
      * @param InputIndex 请求生成推流地址的输入Index。
-允许范围[1,20]。
+允许范围[1,24]。
      */
     public void setInputIndex(Long InputIndex) {
         this.InputIndex = InputIndex;

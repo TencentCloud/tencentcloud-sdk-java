@@ -59,6 +59,20 @@ public class DescribeSchedulerTaskCntByStatusRequest extends AbstractModel {
     private String WorkflowId;
 
     /**
+    * 项目ID列表，如果传了 ProjectIds ，ProjectId 不会生效
+    */
+    @SerializedName("ProjectIds")
+    @Expose
+    private String [] ProjectIds;
+
+    /**
+    * 资源组ID筛选
+    */
+    @SerializedName("ResourceGroupIds")
+    @Expose
+    private String [] ResourceGroupIds;
+
+    /**
      * Get 1 
      * @return TaskType 1
      */
@@ -138,6 +152,38 @@ public class DescribeSchedulerTaskCntByStatusRequest extends AbstractModel {
         this.WorkflowId = WorkflowId;
     }
 
+    /**
+     * Get 项目ID列表，如果传了 ProjectIds ，ProjectId 不会生效 
+     * @return ProjectIds 项目ID列表，如果传了 ProjectIds ，ProjectId 不会生效
+     */
+    public String [] getProjectIds() {
+        return this.ProjectIds;
+    }
+
+    /**
+     * Set 项目ID列表，如果传了 ProjectIds ，ProjectId 不会生效
+     * @param ProjectIds 项目ID列表，如果传了 ProjectIds ，ProjectId 不会生效
+     */
+    public void setProjectIds(String [] ProjectIds) {
+        this.ProjectIds = ProjectIds;
+    }
+
+    /**
+     * Get 资源组ID筛选 
+     * @return ResourceGroupIds 资源组ID筛选
+     */
+    public String [] getResourceGroupIds() {
+        return this.ResourceGroupIds;
+    }
+
+    /**
+     * Set 资源组ID筛选
+     * @param ResourceGroupIds 资源组ID筛选
+     */
+    public void setResourceGroupIds(String [] ResourceGroupIds) {
+        this.ResourceGroupIds = ResourceGroupIds;
+    }
+
     public DescribeSchedulerTaskCntByStatusRequest() {
     }
 
@@ -161,6 +207,18 @@ public class DescribeSchedulerTaskCntByStatusRequest extends AbstractModel {
         if (source.WorkflowId != null) {
             this.WorkflowId = new String(source.WorkflowId);
         }
+        if (source.ProjectIds != null) {
+            this.ProjectIds = new String[source.ProjectIds.length];
+            for (int i = 0; i < source.ProjectIds.length; i++) {
+                this.ProjectIds[i] = new String(source.ProjectIds[i]);
+            }
+        }
+        if (source.ResourceGroupIds != null) {
+            this.ResourceGroupIds = new String[source.ResourceGroupIds.length];
+            for (int i = 0; i < source.ResourceGroupIds.length; i++) {
+                this.ResourceGroupIds[i] = new String(source.ResourceGroupIds[i]);
+            }
+        }
     }
 
 
@@ -173,6 +231,8 @@ public class DescribeSchedulerTaskCntByStatusRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "InCharge", this.InCharge);
         this.setParamSimple(map, prefix + "WorkflowId", this.WorkflowId);
+        this.setParamArraySimple(map, prefix + "ProjectIds.", this.ProjectIds);
+        this.setParamArraySimple(map, prefix + "ResourceGroupIds.", this.ResourceGroupIds);
 
     }
 }

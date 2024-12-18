@@ -25,6 +25,7 @@ public class KeyMetadata extends AbstractModel {
 
     /**
     * 作为密钥更容易辨识，更容易被人看懂的别名
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Alias")
     @Expose
@@ -32,14 +33,17 @@ public class KeyMetadata extends AbstractModel {
 
     /**
     * CMK的全局唯一标识
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KeyId")
     @Expose
     private String KeyId;
 
     /**
-     * Get 作为密钥更容易辨识，更容易被人看懂的别名 
+     * Get 作为密钥更容易辨识，更容易被人看懂的别名
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Alias 作为密钥更容易辨识，更容易被人看懂的别名
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAlias() {
         return this.Alias;
@@ -47,15 +51,19 @@ public class KeyMetadata extends AbstractModel {
 
     /**
      * Set 作为密钥更容易辨识，更容易被人看懂的别名
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Alias 作为密钥更容易辨识，更容易被人看懂的别名
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAlias(String Alias) {
         this.Alias = Alias;
     }
 
     /**
-     * Get CMK的全局唯一标识 
+     * Get CMK的全局唯一标识
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return KeyId CMK的全局唯一标识
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKeyId() {
         return this.KeyId;
@@ -63,7 +71,9 @@ public class KeyMetadata extends AbstractModel {
 
     /**
      * Set CMK的全局唯一标识
+注意：此字段可能返回 null，表示取不到有效值。
      * @param KeyId CMK的全局唯一标识
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKeyId(String KeyId) {
         this.KeyId = KeyId;

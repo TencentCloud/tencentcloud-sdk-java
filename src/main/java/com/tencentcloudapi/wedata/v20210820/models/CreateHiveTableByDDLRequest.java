@@ -80,6 +80,13 @@ public class CreateHiveTableByDDLRequest extends AbstractModel {
     private String SchemaName;
 
     /**
+    * 是否异步建表
+    */
+    @SerializedName("Async")
+    @Expose
+    private Boolean Async;
+
+    /**
      * Get 数据源ID 
      * @return DatasourceId 数据源ID
      */
@@ -207,6 +214,22 @@ public class CreateHiveTableByDDLRequest extends AbstractModel {
         this.SchemaName = SchemaName;
     }
 
+    /**
+     * Get 是否异步建表 
+     * @return Async 是否异步建表
+     */
+    public Boolean getAsync() {
+        return this.Async;
+    }
+
+    /**
+     * Set 是否异步建表
+     * @param Async 是否异步建表
+     */
+    public void setAsync(Boolean Async) {
+        this.Async = Async;
+    }
+
     public CreateHiveTableByDDLRequest() {
     }
 
@@ -239,6 +262,9 @@ public class CreateHiveTableByDDLRequest extends AbstractModel {
         if (source.SchemaName != null) {
             this.SchemaName = new String(source.SchemaName);
         }
+        if (source.Async != null) {
+            this.Async = new Boolean(source.Async);
+        }
     }
 
 
@@ -254,6 +280,7 @@ public class CreateHiveTableByDDLRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "Incharge", this.Incharge);
         this.setParamSimple(map, prefix + "SchemaName", this.SchemaName);
+        this.setParamSimple(map, prefix + "Async", this.Async);
 
     }
 }

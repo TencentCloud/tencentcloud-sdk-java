@@ -48,6 +48,14 @@ public class BatchOperateResultOpsDto extends AbstractModel {
     private String ErrorDesc;
 
     /**
+    * 异步操作id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AsyncActionId")
+    @Expose
+    private String AsyncActionId;
+
+    /**
      * Get 结果
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Result 结果
@@ -107,6 +115,26 @@ public class BatchOperateResultOpsDto extends AbstractModel {
         this.ErrorDesc = ErrorDesc;
     }
 
+    /**
+     * Get 异步操作id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AsyncActionId 异步操作id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAsyncActionId() {
+        return this.AsyncActionId;
+    }
+
+    /**
+     * Set 异步操作id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AsyncActionId 异步操作id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAsyncActionId(String AsyncActionId) {
+        this.AsyncActionId = AsyncActionId;
+    }
+
     public BatchOperateResultOpsDto() {
     }
 
@@ -124,6 +152,9 @@ public class BatchOperateResultOpsDto extends AbstractModel {
         if (source.ErrorDesc != null) {
             this.ErrorDesc = new String(source.ErrorDesc);
         }
+        if (source.AsyncActionId != null) {
+            this.AsyncActionId = new String(source.AsyncActionId);
+        }
     }
 
 
@@ -134,6 +165,7 @@ public class BatchOperateResultOpsDto extends AbstractModel {
         this.setParamSimple(map, prefix + "Result", this.Result);
         this.setParamSimple(map, prefix + "ErrorId", this.ErrorId);
         this.setParamSimple(map, prefix + "ErrorDesc", this.ErrorDesc);
+        this.setParamSimple(map, prefix + "AsyncActionId", this.AsyncActionId);
 
     }
 }

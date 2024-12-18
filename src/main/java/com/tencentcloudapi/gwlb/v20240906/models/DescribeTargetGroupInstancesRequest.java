@@ -25,6 +25,10 @@ public class DescribeTargetGroupInstancesRequest extends AbstractModel {
 
     /**
     * 过滤条件，当前仅支持TargetGroupId，BindIP，InstanceId过滤。
+
+- TargetGroupId - String - 是否必填：否 - （过滤条件）目标组ID，如“lbtg-5xunivs0”。
+- BindIP - String - 是否必填：否 - （过滤条件）目标组绑定实例的IP地址，如“10.1.1.1”
+- InstanceId - String - 是否必填：否 - （过滤条件）目标组绑定实例的名称，如“ins_name”
     */
     @SerializedName("Filters")
     @Expose
@@ -45,8 +49,16 @@ public class DescribeTargetGroupInstancesRequest extends AbstractModel {
     private Long Offset;
 
     /**
-     * Get 过滤条件，当前仅支持TargetGroupId，BindIP，InstanceId过滤。 
+     * Get 过滤条件，当前仅支持TargetGroupId，BindIP，InstanceId过滤。
+
+- TargetGroupId - String - 是否必填：否 - （过滤条件）目标组ID，如“lbtg-5xunivs0”。
+- BindIP - String - 是否必填：否 - （过滤条件）目标组绑定实例的IP地址，如“10.1.1.1”
+- InstanceId - String - 是否必填：否 - （过滤条件）目标组绑定实例的名称，如“ins_name” 
      * @return Filters 过滤条件，当前仅支持TargetGroupId，BindIP，InstanceId过滤。
+
+- TargetGroupId - String - 是否必填：否 - （过滤条件）目标组ID，如“lbtg-5xunivs0”。
+- BindIP - String - 是否必填：否 - （过滤条件）目标组绑定实例的IP地址，如“10.1.1.1”
+- InstanceId - String - 是否必填：否 - （过滤条件）目标组绑定实例的名称，如“ins_name”
      */
     public Filter [] getFilters() {
         return this.Filters;
@@ -54,7 +66,15 @@ public class DescribeTargetGroupInstancesRequest extends AbstractModel {
 
     /**
      * Set 过滤条件，当前仅支持TargetGroupId，BindIP，InstanceId过滤。
+
+- TargetGroupId - String - 是否必填：否 - （过滤条件）目标组ID，如“lbtg-5xunivs0”。
+- BindIP - String - 是否必填：否 - （过滤条件）目标组绑定实例的IP地址，如“10.1.1.1”
+- InstanceId - String - 是否必填：否 - （过滤条件）目标组绑定实例的名称，如“ins_name”
      * @param Filters 过滤条件，当前仅支持TargetGroupId，BindIP，InstanceId过滤。
+
+- TargetGroupId - String - 是否必填：否 - （过滤条件）目标组ID，如“lbtg-5xunivs0”。
+- BindIP - String - 是否必填：否 - （过滤条件）目标组绑定实例的IP地址，如“10.1.1.1”
+- InstanceId - String - 是否必填：否 - （过滤条件）目标组绑定实例的名称，如“ins_name”
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

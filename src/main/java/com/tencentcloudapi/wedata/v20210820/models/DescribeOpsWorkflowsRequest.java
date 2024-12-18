@@ -115,6 +115,13 @@ public class DescribeOpsWorkflowsRequest extends AbstractModel {
     private String SortType;
 
     /**
+    * 项目ID列表，用于多项目工作流筛选
+    */
+    @SerializedName("ProjectIds")
+    @Expose
+    private String [] ProjectIds;
+
+    /**
      * Get 项目id 
      * @return ProjectId 项目id
      */
@@ -322,6 +329,22 @@ public class DescribeOpsWorkflowsRequest extends AbstractModel {
         this.SortType = SortType;
     }
 
+    /**
+     * Get 项目ID列表，用于多项目工作流筛选 
+     * @return ProjectIds 项目ID列表，用于多项目工作流筛选
+     */
+    public String [] getProjectIds() {
+        return this.ProjectIds;
+    }
+
+    /**
+     * Set 项目ID列表，用于多项目工作流筛选
+     * @param ProjectIds 项目ID列表，用于多项目工作流筛选
+     */
+    public void setProjectIds(String [] ProjectIds) {
+        this.ProjectIds = ProjectIds;
+    }
+
     public DescribeOpsWorkflowsRequest() {
     }
 
@@ -369,6 +392,12 @@ public class DescribeOpsWorkflowsRequest extends AbstractModel {
         if (source.SortType != null) {
             this.SortType = new String(source.SortType);
         }
+        if (source.ProjectIds != null) {
+            this.ProjectIds = new String[source.ProjectIds.length];
+            for (int i = 0; i < source.ProjectIds.length; i++) {
+                this.ProjectIds[i] = new String(source.ProjectIds[i]);
+            }
+        }
     }
 
 
@@ -389,6 +418,7 @@ public class DescribeOpsWorkflowsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "PageSize", this.PageSize);
         this.setParamSimple(map, prefix + "SortItem", this.SortItem);
         this.setParamSimple(map, prefix + "SortType", this.SortType);
+        this.setParamArraySimple(map, prefix + "ProjectIds.", this.ProjectIds);
 
     }
 }

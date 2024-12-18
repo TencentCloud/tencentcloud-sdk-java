@@ -24,43 +24,46 @@ import java.util.HashMap;
 public class DescribeCurrentOpRequest extends AbstractModel {
 
     /**
-    * 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
+    * 指定要查询的实例 ID，例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 筛选条件，操作所属的命名空间namespace，格式为db.collection
+    * 操作所属的命名空间 namespace，格式为 db.collection。
     */
     @SerializedName("Ns")
     @Expose
     private String Ns;
 
     /**
-    * 筛选条件，操作已经执行的时间（单位：毫秒），结果将返回超过设置时间的操作，默认值为0，取值范围为[0, 3600000]
+    * 设置查询筛选条件为操作任务已经执行的时间。
+- 默认值为0，取值范围为[0, 3600000]，单位：毫秒。
+- 结果将返回超过设置时间的操作。
     */
     @SerializedName("MillisecondRunning")
     @Expose
     private Long MillisecondRunning;
 
     /**
-    * 筛选条件，操作类型，可能的取值：none，update，insert，query，command，getmore，remove和killcursors
+    * 设置查询筛选条件为操作任务类型。取值包括：none、update、insert，query、command、getmore、remove 和 killcursors。
     */
     @SerializedName("Op")
     @Expose
     private String Op;
 
     /**
-    * 筛选条件，分片名称
+    * 筛选条件，分片名称。
     */
     @SerializedName("ReplicaSetName")
     @Expose
     private String ReplicaSetName;
 
     /**
-    * 筛选条件，节点状态，可能的取值为：primary
-secondary
+    * 设置查询筛选条件为节点角色。
+- primary：主节点。
+- secondary：从节点。
     */
     @SerializedName("State")
     @Expose
@@ -95,100 +98,112 @@ secondary
     private String OrderByType;
 
     /**
-     * Get 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同 
-     * @return InstanceId 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
+     * Get 指定要查询的实例 ID，例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。 
+     * @return InstanceId 指定要查询的实例 ID，例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
-     * @param InstanceId 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
+     * Set 指定要查询的实例 ID，例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
+     * @param InstanceId 指定要查询的实例 ID，例如：cmgo-p8vn****。请登录 [MongoDB 控制台](https://console.cloud.tencent.com/mongodb)在实例列表复制实例 ID。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 筛选条件，操作所属的命名空间namespace，格式为db.collection 
-     * @return Ns 筛选条件，操作所属的命名空间namespace，格式为db.collection
+     * Get 操作所属的命名空间 namespace，格式为 db.collection。 
+     * @return Ns 操作所属的命名空间 namespace，格式为 db.collection。
      */
     public String getNs() {
         return this.Ns;
     }
 
     /**
-     * Set 筛选条件，操作所属的命名空间namespace，格式为db.collection
-     * @param Ns 筛选条件，操作所属的命名空间namespace，格式为db.collection
+     * Set 操作所属的命名空间 namespace，格式为 db.collection。
+     * @param Ns 操作所属的命名空间 namespace，格式为 db.collection。
      */
     public void setNs(String Ns) {
         this.Ns = Ns;
     }
 
     /**
-     * Get 筛选条件，操作已经执行的时间（单位：毫秒），结果将返回超过设置时间的操作，默认值为0，取值范围为[0, 3600000] 
-     * @return MillisecondRunning 筛选条件，操作已经执行的时间（单位：毫秒），结果将返回超过设置时间的操作，默认值为0，取值范围为[0, 3600000]
+     * Get 设置查询筛选条件为操作任务已经执行的时间。
+- 默认值为0，取值范围为[0, 3600000]，单位：毫秒。
+- 结果将返回超过设置时间的操作。 
+     * @return MillisecondRunning 设置查询筛选条件为操作任务已经执行的时间。
+- 默认值为0，取值范围为[0, 3600000]，单位：毫秒。
+- 结果将返回超过设置时间的操作。
      */
     public Long getMillisecondRunning() {
         return this.MillisecondRunning;
     }
 
     /**
-     * Set 筛选条件，操作已经执行的时间（单位：毫秒），结果将返回超过设置时间的操作，默认值为0，取值范围为[0, 3600000]
-     * @param MillisecondRunning 筛选条件，操作已经执行的时间（单位：毫秒），结果将返回超过设置时间的操作，默认值为0，取值范围为[0, 3600000]
+     * Set 设置查询筛选条件为操作任务已经执行的时间。
+- 默认值为0，取值范围为[0, 3600000]，单位：毫秒。
+- 结果将返回超过设置时间的操作。
+     * @param MillisecondRunning 设置查询筛选条件为操作任务已经执行的时间。
+- 默认值为0，取值范围为[0, 3600000]，单位：毫秒。
+- 结果将返回超过设置时间的操作。
      */
     public void setMillisecondRunning(Long MillisecondRunning) {
         this.MillisecondRunning = MillisecondRunning;
     }
 
     /**
-     * Get 筛选条件，操作类型，可能的取值：none，update，insert，query，command，getmore，remove和killcursors 
-     * @return Op 筛选条件，操作类型，可能的取值：none，update，insert，query，command，getmore，remove和killcursors
+     * Get 设置查询筛选条件为操作任务类型。取值包括：none、update、insert，query、command、getmore、remove 和 killcursors。 
+     * @return Op 设置查询筛选条件为操作任务类型。取值包括：none、update、insert，query、command、getmore、remove 和 killcursors。
      */
     public String getOp() {
         return this.Op;
     }
 
     /**
-     * Set 筛选条件，操作类型，可能的取值：none，update，insert，query，command，getmore，remove和killcursors
-     * @param Op 筛选条件，操作类型，可能的取值：none，update，insert，query，command，getmore，remove和killcursors
+     * Set 设置查询筛选条件为操作任务类型。取值包括：none、update、insert，query、command、getmore、remove 和 killcursors。
+     * @param Op 设置查询筛选条件为操作任务类型。取值包括：none、update、insert，query、command、getmore、remove 和 killcursors。
      */
     public void setOp(String Op) {
         this.Op = Op;
     }
 
     /**
-     * Get 筛选条件，分片名称 
-     * @return ReplicaSetName 筛选条件，分片名称
+     * Get 筛选条件，分片名称。 
+     * @return ReplicaSetName 筛选条件，分片名称。
      */
     public String getReplicaSetName() {
         return this.ReplicaSetName;
     }
 
     /**
-     * Set 筛选条件，分片名称
-     * @param ReplicaSetName 筛选条件，分片名称
+     * Set 筛选条件，分片名称。
+     * @param ReplicaSetName 筛选条件，分片名称。
      */
     public void setReplicaSetName(String ReplicaSetName) {
         this.ReplicaSetName = ReplicaSetName;
     }
 
     /**
-     * Get 筛选条件，节点状态，可能的取值为：primary
-secondary 
-     * @return State 筛选条件，节点状态，可能的取值为：primary
-secondary
+     * Get 设置查询筛选条件为节点角色。
+- primary：主节点。
+- secondary：从节点。 
+     * @return State 设置查询筛选条件为节点角色。
+- primary：主节点。
+- secondary：从节点。
      */
     public String getState() {
         return this.State;
     }
 
     /**
-     * Set 筛选条件，节点状态，可能的取值为：primary
-secondary
-     * @param State 筛选条件，节点状态，可能的取值为：primary
-secondary
+     * Set 设置查询筛选条件为节点角色。
+- primary：主节点。
+- secondary：从节点。
+     * @param State 设置查询筛选条件为节点角色。
+- primary：主节点。
+- secondary：从节点。
      */
     public void setState(String State) {
         this.State = State;

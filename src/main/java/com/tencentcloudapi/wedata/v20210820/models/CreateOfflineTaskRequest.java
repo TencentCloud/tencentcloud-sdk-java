@@ -94,6 +94,13 @@ public class CreateOfflineTaskRequest extends AbstractModel {
     private String TaskMode;
 
     /**
+    * 导入编排空间配置
+    */
+    @SerializedName("TaskImportInfo")
+    @Expose
+    private TaskImportInfo TaskImportInfo;
+
+    /**
      * Get 项目ID 
      * @return ProjectId 项目ID
      */
@@ -253,6 +260,22 @@ public class CreateOfflineTaskRequest extends AbstractModel {
         this.TaskMode = TaskMode;
     }
 
+    /**
+     * Get 导入编排空间配置 
+     * @return TaskImportInfo 导入编排空间配置
+     */
+    public TaskImportInfo getTaskImportInfo() {
+        return this.TaskImportInfo;
+    }
+
+    /**
+     * Set 导入编排空间配置
+     * @param TaskImportInfo 导入编排空间配置
+     */
+    public void setTaskImportInfo(TaskImportInfo TaskImportInfo) {
+        this.TaskImportInfo = TaskImportInfo;
+    }
+
     public CreateOfflineTaskRequest() {
     }
 
@@ -291,6 +314,9 @@ public class CreateOfflineTaskRequest extends AbstractModel {
         if (source.TaskMode != null) {
             this.TaskMode = new String(source.TaskMode);
         }
+        if (source.TaskImportInfo != null) {
+            this.TaskImportInfo = new TaskImportInfo(source.TaskImportInfo);
+        }
     }
 
 
@@ -308,6 +334,7 @@ public class CreateOfflineTaskRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "TypeId", this.TypeId);
         this.setParamSimple(map, prefix + "TaskAction", this.TaskAction);
         this.setParamSimple(map, prefix + "TaskMode", this.TaskMode);
+        this.setParamObj(map, prefix + "TaskImportInfo.", this.TaskImportInfo);
 
     }
 }

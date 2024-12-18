@@ -138,6 +138,13 @@ public class License extends AbstractModel {
     private String LifeSpanUnit;
 
     /**
+    * 授权的类型：Standard正式版/Development开发版/Trial体验版
+    */
+    @SerializedName("LicenseType")
+    @Expose
+    private String LicenseType;
+
+    /**
      * Get License ID 
      * @return LicenseId License ID
      */
@@ -401,6 +408,22 @@ public class License extends AbstractModel {
         this.LifeSpanUnit = LifeSpanUnit;
     }
 
+    /**
+     * Get 授权的类型：Standard正式版/Development开发版/Trial体验版 
+     * @return LicenseType 授权的类型：Standard正式版/Development开发版/Trial体验版
+     */
+    public String getLicenseType() {
+        return this.LicenseType;
+    }
+
+    /**
+     * Set 授权的类型：Standard正式版/Development开发版/Trial体验版
+     * @param LicenseType 授权的类型：Standard正式版/Development开发版/Trial体验版
+     */
+    public void setLicenseType(String LicenseType) {
+        this.LicenseType = LicenseType;
+    }
+
     public License() {
     }
 
@@ -460,6 +483,9 @@ public class License extends AbstractModel {
         if (source.LifeSpanUnit != null) {
             this.LifeSpanUnit = new String(source.LifeSpanUnit);
         }
+        if (source.LicenseType != null) {
+            this.LicenseType = new String(source.LicenseType);
+        }
     }
 
 
@@ -483,6 +509,7 @@ public class License extends AbstractModel {
         this.setParamSimple(map, prefix + "ActivationDate", this.ActivationDate);
         this.setParamSimple(map, prefix + "ExpirationDate", this.ExpirationDate);
         this.setParamSimple(map, prefix + "LifeSpanUnit", this.LifeSpanUnit);
+        this.setParamSimple(map, prefix + "LicenseType", this.LicenseType);
 
     }
 }

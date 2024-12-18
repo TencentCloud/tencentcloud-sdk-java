@@ -1607,6 +1607,17 @@ public class EssClient extends AbstractClient{
     }
 
     /**
+     *仅且仅能查询企业本身在电子签的认证状态
+     * @param req DescribeOrganizationVerifyStatusRequest
+     * @return DescribeOrganizationVerifyStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeOrganizationVerifyStatusResponse DescribeOrganizationVerifyStatus(DescribeOrganizationVerifyStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeOrganizationVerifyStatus", DescribeOrganizationVerifyStatusResponse.class);
+    }
+
+    /**
      *此接口（DescribePersonCertificate）用于查询个人数字证书信息。<br />注：`1.目前仅用于查询开通了医疗自动签署功能的个人数字证书。`<br />`2.调用此接口需要开通白名单，使用前请联系相关人员开通白名单。`
      * @param req DescribePersonCertificateRequest
      * @return DescribePersonCertificateResponse

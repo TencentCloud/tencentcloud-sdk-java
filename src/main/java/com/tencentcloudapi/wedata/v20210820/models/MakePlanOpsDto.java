@@ -227,6 +227,22 @@ public class MakePlanOpsDto extends AbstractModel {
     private String CheckParentType;
 
     /**
+    * 是否和原任务保持相同工作流自依赖属性
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SameSelfWorkflowDependType")
+    @Expose
+    private Boolean SameSelfWorkflowDependType;
+
+    /**
+    * 工作流自依赖类型
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SelfWorkflowDependency")
+    @Expose
+    private String SelfWorkflowDependency;
+
+    /**
      * Get 补录计划ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return PlanId 补录计划ID
@@ -738,6 +754,46 @@ public class MakePlanOpsDto extends AbstractModel {
         this.CheckParentType = CheckParentType;
     }
 
+    /**
+     * Get 是否和原任务保持相同工作流自依赖属性
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SameSelfWorkflowDependType 是否和原任务保持相同工作流自依赖属性
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getSameSelfWorkflowDependType() {
+        return this.SameSelfWorkflowDependType;
+    }
+
+    /**
+     * Set 是否和原任务保持相同工作流自依赖属性
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SameSelfWorkflowDependType 是否和原任务保持相同工作流自依赖属性
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSameSelfWorkflowDependType(Boolean SameSelfWorkflowDependType) {
+        this.SameSelfWorkflowDependType = SameSelfWorkflowDependType;
+    }
+
+    /**
+     * Get 工作流自依赖类型
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SelfWorkflowDependency 工作流自依赖类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSelfWorkflowDependency() {
+        return this.SelfWorkflowDependency;
+    }
+
+    /**
+     * Set 工作流自依赖类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SelfWorkflowDependency 工作流自依赖类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSelfWorkflowDependency(String SelfWorkflowDependency) {
+        this.SelfWorkflowDependency = SelfWorkflowDependency;
+    }
+
     public MakePlanOpsDto() {
     }
 
@@ -830,6 +886,12 @@ public class MakePlanOpsDto extends AbstractModel {
         if (source.CheckParentType != null) {
             this.CheckParentType = new String(source.CheckParentType);
         }
+        if (source.SameSelfWorkflowDependType != null) {
+            this.SameSelfWorkflowDependType = new Boolean(source.SameSelfWorkflowDependType);
+        }
+        if (source.SelfWorkflowDependency != null) {
+            this.SelfWorkflowDependency = new String(source.SelfWorkflowDependency);
+        }
     }
 
 
@@ -862,6 +924,8 @@ public class MakePlanOpsDto extends AbstractModel {
         this.setParamSimple(map, prefix + "CompletePercent", this.CompletePercent);
         this.setParamSimple(map, prefix + "SuccessPercent", this.SuccessPercent);
         this.setParamSimple(map, prefix + "CheckParentType", this.CheckParentType);
+        this.setParamSimple(map, prefix + "SameSelfWorkflowDependType", this.SameSelfWorkflowDependType);
+        this.setParamSimple(map, prefix + "SelfWorkflowDependency", this.SelfWorkflowDependency);
 
     }
 }

@@ -164,6 +164,13 @@ public class VpnGateway extends AbstractModel {
     private Long MaxConnection;
 
     /**
+    * Bgp ASN
+    */
+    @SerializedName("BgpAsn")
+    @Expose
+    private Long BgpAsn;
+
+    /**
      * Get 网关实例ID。 
      * @return VpnGatewayId 网关实例ID。
      */
@@ -483,6 +490,22 @@ public class VpnGateway extends AbstractModel {
         this.MaxConnection = MaxConnection;
     }
 
+    /**
+     * Get Bgp ASN 
+     * @return BgpAsn Bgp ASN
+     */
+    public Long getBgpAsn() {
+        return this.BgpAsn;
+    }
+
+    /**
+     * Set Bgp ASN
+     * @param BgpAsn Bgp ASN
+     */
+    public void setBgpAsn(Long BgpAsn) {
+        this.BgpAsn = BgpAsn;
+    }
+
     public VpnGateway() {
     }
 
@@ -554,6 +577,9 @@ public class VpnGateway extends AbstractModel {
         if (source.MaxConnection != null) {
             this.MaxConnection = new Long(source.MaxConnection);
         }
+        if (source.BgpAsn != null) {
+            this.BgpAsn = new Long(source.BgpAsn);
+        }
     }
 
 
@@ -581,6 +607,7 @@ public class VpnGateway extends AbstractModel {
         this.setParamSimple(map, prefix + "NetworkInstanceId", this.NetworkInstanceId);
         this.setParamSimple(map, prefix + "CdcId", this.CdcId);
         this.setParamSimple(map, prefix + "MaxConnection", this.MaxConnection);
+        this.setParamSimple(map, prefix + "BgpAsn", this.BgpAsn);
 
     }
 }

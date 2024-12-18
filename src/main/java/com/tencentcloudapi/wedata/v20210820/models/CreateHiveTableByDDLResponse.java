@@ -24,11 +24,18 @@ import java.util.HashMap;
 public class CreateHiveTableByDDLResponse extends AbstractModel {
 
     /**
-    * 表名称
+    * 返回表名称，无论是否异步都有值
     */
     @SerializedName("Data")
     @Expose
     private String Data;
+
+    /**
+    * 异步任务轮询 id，只有异步才有值
+    */
+    @SerializedName("TaskId")
+    @Expose
+    private String TaskId;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,19 +45,35 @@ public class CreateHiveTableByDDLResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 表名称 
-     * @return Data 表名称
+     * Get 返回表名称，无论是否异步都有值 
+     * @return Data 返回表名称，无论是否异步都有值
      */
     public String getData() {
         return this.Data;
     }
 
     /**
-     * Set 表名称
-     * @param Data 表名称
+     * Set 返回表名称，无论是否异步都有值
+     * @param Data 返回表名称，无论是否异步都有值
      */
     public void setData(String Data) {
         this.Data = Data;
+    }
+
+    /**
+     * Get 异步任务轮询 id，只有异步才有值 
+     * @return TaskId 异步任务轮询 id，只有异步才有值
+     */
+    public String getTaskId() {
+        return this.TaskId;
+    }
+
+    /**
+     * Set 异步任务轮询 id，只有异步才有值
+     * @param TaskId 异步任务轮询 id，只有异步才有值
+     */
+    public void setTaskId(String TaskId) {
+        this.TaskId = TaskId;
     }
 
     /**
@@ -80,6 +103,9 @@ public class CreateHiveTableByDDLResponse extends AbstractModel {
         if (source.Data != null) {
             this.Data = new String(source.Data);
         }
+        if (source.TaskId != null) {
+            this.TaskId = new String(source.TaskId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -91,6 +117,7 @@ public class CreateHiveTableByDDLResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Data", this.Data);
+        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

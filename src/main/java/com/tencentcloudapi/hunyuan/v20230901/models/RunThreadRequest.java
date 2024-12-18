@@ -31,7 +31,7 @@ public class RunThreadRequest extends AbstractModel {
     private String ThreadID;
 
     /**
-    * 助手 ID
+    * 助手 ID（目前未使用，留空）
     */
     @SerializedName("AssistantID")
     @Expose
@@ -117,16 +117,16 @@ public class RunThreadRequest extends AbstractModel {
     }
 
     /**
-     * Get 助手 ID 
-     * @return AssistantID 助手 ID
+     * Get 助手 ID（目前未使用，留空） 
+     * @return AssistantID 助手 ID（目前未使用，留空）
      */
     public String getAssistantID() {
         return this.AssistantID;
     }
 
     /**
-     * Set 助手 ID
-     * @param AssistantID 助手 ID
+     * Set 助手 ID（目前未使用，留空）
+     * @param AssistantID 助手 ID（目前未使用，留空）
      */
     public void setAssistantID(String AssistantID) {
         this.AssistantID = AssistantID;

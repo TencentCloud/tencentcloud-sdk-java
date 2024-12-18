@@ -48,6 +48,14 @@ public class BatchOperationOpsDto extends AbstractModel {
     private Long TotalCount;
 
     /**
+    * 异步操作记录的唯一id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("AsyncActionId")
+    @Expose
+    private String AsyncActionId;
+
+    /**
      * Get 批量操作成功数
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return SuccessCount 批量操作成功数
@@ -107,6 +115,26 @@ public class BatchOperationOpsDto extends AbstractModel {
         this.TotalCount = TotalCount;
     }
 
+    /**
+     * Get 异步操作记录的唯一id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return AsyncActionId 异步操作记录的唯一id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getAsyncActionId() {
+        return this.AsyncActionId;
+    }
+
+    /**
+     * Set 异步操作记录的唯一id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AsyncActionId 异步操作记录的唯一id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setAsyncActionId(String AsyncActionId) {
+        this.AsyncActionId = AsyncActionId;
+    }
+
     public BatchOperationOpsDto() {
     }
 
@@ -124,6 +152,9 @@ public class BatchOperationOpsDto extends AbstractModel {
         if (source.TotalCount != null) {
             this.TotalCount = new Long(source.TotalCount);
         }
+        if (source.AsyncActionId != null) {
+            this.AsyncActionId = new String(source.AsyncActionId);
+        }
     }
 
 
@@ -134,6 +165,7 @@ public class BatchOperationOpsDto extends AbstractModel {
         this.setParamSimple(map, prefix + "SuccessCount", this.SuccessCount);
         this.setParamSimple(map, prefix + "FailedCount", this.FailedCount);
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamSimple(map, prefix + "AsyncActionId", this.AsyncActionId);
 
     }
 }

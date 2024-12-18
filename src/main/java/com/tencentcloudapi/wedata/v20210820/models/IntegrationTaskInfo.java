@@ -413,6 +413,30 @@ public class IntegrationTaskInfo extends AbstractModel {
     private Long OfflineTaskStatus;
 
     /**
+    * 导入到编排空间配置
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TaskImportInfo")
+    @Expose
+    private TaskImportInfo TaskImportInfo;
+
+    /**
+    * 业务延迟
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BusinessLatency")
+    @Expose
+    private Long BusinessLatency;
+
+    /**
+    * 当前同步位点
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CurrentSyncPosition")
+    @Expose
+    private Long CurrentSyncPosition;
+
+    /**
      * Get 任务名称 
      * @return TaskName 任务名称
      */
@@ -1380,6 +1404,66 @@ public class IntegrationTaskInfo extends AbstractModel {
         this.OfflineTaskStatus = OfflineTaskStatus;
     }
 
+    /**
+     * Get 导入到编排空间配置
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TaskImportInfo 导入到编排空间配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public TaskImportInfo getTaskImportInfo() {
+        return this.TaskImportInfo;
+    }
+
+    /**
+     * Set 导入到编排空间配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TaskImportInfo 导入到编排空间配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTaskImportInfo(TaskImportInfo TaskImportInfo) {
+        this.TaskImportInfo = TaskImportInfo;
+    }
+
+    /**
+     * Get 业务延迟
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BusinessLatency 业务延迟
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getBusinessLatency() {
+        return this.BusinessLatency;
+    }
+
+    /**
+     * Set 业务延迟
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BusinessLatency 业务延迟
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBusinessLatency(Long BusinessLatency) {
+        this.BusinessLatency = BusinessLatency;
+    }
+
+    /**
+     * Get 当前同步位点
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CurrentSyncPosition 当前同步位点
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getCurrentSyncPosition() {
+        return this.CurrentSyncPosition;
+    }
+
+    /**
+     * Set 当前同步位点
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CurrentSyncPosition 当前同步位点
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCurrentSyncPosition(Long CurrentSyncPosition) {
+        this.CurrentSyncPosition = CurrentSyncPosition;
+    }
+
     public IntegrationTaskInfo() {
     }
 
@@ -1556,6 +1640,15 @@ public class IntegrationTaskInfo extends AbstractModel {
         if (source.OfflineTaskStatus != null) {
             this.OfflineTaskStatus = new Long(source.OfflineTaskStatus);
         }
+        if (source.TaskImportInfo != null) {
+            this.TaskImportInfo = new TaskImportInfo(source.TaskImportInfo);
+        }
+        if (source.BusinessLatency != null) {
+            this.BusinessLatency = new Long(source.BusinessLatency);
+        }
+        if (source.CurrentSyncPosition != null) {
+            this.CurrentSyncPosition = new Long(source.CurrentSyncPosition);
+        }
     }
 
 
@@ -1612,6 +1705,9 @@ public class IntegrationTaskInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "InstanceVersion", this.InstanceVersion);
         this.setParamSimple(map, prefix + "ArrangeSpaceTaskId", this.ArrangeSpaceTaskId);
         this.setParamSimple(map, prefix + "OfflineTaskStatus", this.OfflineTaskStatus);
+        this.setParamObj(map, prefix + "TaskImportInfo.", this.TaskImportInfo);
+        this.setParamSimple(map, prefix + "BusinessLatency", this.BusinessLatency);
+        this.setParamSimple(map, prefix + "CurrentSyncPosition", this.CurrentSyncPosition);
 
     }
 }

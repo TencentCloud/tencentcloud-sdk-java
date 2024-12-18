@@ -61,6 +61,13 @@ public class DescribeDsParentFolderTreeRequest extends AbstractModel {
     private String DisplayType;
 
     /**
+    * 是否新模式展示目录树
+    */
+    @SerializedName("NewFolderTreeMode")
+    @Expose
+    private Boolean NewFolderTreeMode;
+
+    /**
      * Get 项目id 
      * @return ProjectId 项目id
      */
@@ -148,6 +155,22 @@ public class DescribeDsParentFolderTreeRequest extends AbstractModel {
         this.DisplayType = DisplayType;
     }
 
+    /**
+     * Get 是否新模式展示目录树 
+     * @return NewFolderTreeMode 是否新模式展示目录树
+     */
+    public Boolean getNewFolderTreeMode() {
+        return this.NewFolderTreeMode;
+    }
+
+    /**
+     * Set 是否新模式展示目录树
+     * @param NewFolderTreeMode 是否新模式展示目录树
+     */
+    public void setNewFolderTreeMode(Boolean NewFolderTreeMode) {
+        this.NewFolderTreeMode = NewFolderTreeMode;
+    }
+
     public DescribeDsParentFolderTreeRequest() {
     }
 
@@ -171,6 +194,9 @@ public class DescribeDsParentFolderTreeRequest extends AbstractModel {
         if (source.DisplayType != null) {
             this.DisplayType = new String(source.DisplayType);
         }
+        if (source.NewFolderTreeMode != null) {
+            this.NewFolderTreeMode = new Boolean(source.NewFolderTreeMode);
+        }
     }
 
 
@@ -183,6 +209,7 @@ public class DescribeDsParentFolderTreeRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "WorkflowId", this.WorkflowId);
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "DisplayType", this.DisplayType);
+        this.setParamSimple(map, prefix + "NewFolderTreeMode", this.NewFolderTreeMode);
 
     }
 }

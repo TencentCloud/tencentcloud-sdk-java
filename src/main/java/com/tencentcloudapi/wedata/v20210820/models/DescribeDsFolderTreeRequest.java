@@ -105,6 +105,20 @@ false 否
     private Boolean IncludeTaskFolder;
 
     /**
+    * 是否使用最新模式展示目录树
+    */
+    @SerializedName("NewFolderTreeMode")
+    @Expose
+    private Boolean NewFolderTreeMode;
+
+    /**
+    * 节点分类ID
+    */
+    @SerializedName("TaskNodeId")
+    @Expose
+    private String TaskNodeId;
+
+    /**
      * Get 项目id 
      * @return ProjectId 项目id
      */
@@ -296,6 +310,38 @@ false 否
         this.IncludeTaskFolder = IncludeTaskFolder;
     }
 
+    /**
+     * Get 是否使用最新模式展示目录树 
+     * @return NewFolderTreeMode 是否使用最新模式展示目录树
+     */
+    public Boolean getNewFolderTreeMode() {
+        return this.NewFolderTreeMode;
+    }
+
+    /**
+     * Set 是否使用最新模式展示目录树
+     * @param NewFolderTreeMode 是否使用最新模式展示目录树
+     */
+    public void setNewFolderTreeMode(Boolean NewFolderTreeMode) {
+        this.NewFolderTreeMode = NewFolderTreeMode;
+    }
+
+    /**
+     * Get 节点分类ID 
+     * @return TaskNodeId 节点分类ID
+     */
+    public String getTaskNodeId() {
+        return this.TaskNodeId;
+    }
+
+    /**
+     * Set 节点分类ID
+     * @param TaskNodeId 节点分类ID
+     */
+    public void setTaskNodeId(String TaskNodeId) {
+        this.TaskNodeId = TaskNodeId;
+    }
+
     public DescribeDsFolderTreeRequest() {
     }
 
@@ -337,6 +383,12 @@ false 否
         if (source.IncludeTaskFolder != null) {
             this.IncludeTaskFolder = new Boolean(source.IncludeTaskFolder);
         }
+        if (source.NewFolderTreeMode != null) {
+            this.NewFolderTreeMode = new Boolean(source.NewFolderTreeMode);
+        }
+        if (source.TaskNodeId != null) {
+            this.TaskNodeId = new String(source.TaskNodeId);
+        }
     }
 
 
@@ -355,6 +407,8 @@ false 否
         this.setParamSimple(map, prefix + "TaskFolderId", this.TaskFolderId);
         this.setParamSimple(map, prefix + "DisplayType", this.DisplayType);
         this.setParamSimple(map, prefix + "IncludeTaskFolder", this.IncludeTaskFolder);
+        this.setParamSimple(map, prefix + "NewFolderTreeMode", this.NewFolderTreeMode);
+        this.setParamSimple(map, prefix + "TaskNodeId", this.TaskNodeId);
 
     }
 }

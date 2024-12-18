@@ -138,6 +138,13 @@ public class TemplateGroupAction extends AbstractModel {
     private String ActionRisk;
 
     /**
+    * 故障表现
+    */
+    @SerializedName("FailurePerformance")
+    @Expose
+    private String FailurePerformance;
+
+    /**
      * Get 经验库分组动作ID 
      * @return TemplateGroupActionId 经验库分组动作ID
      */
@@ -413,6 +420,22 @@ public class TemplateGroupAction extends AbstractModel {
         this.ActionRisk = ActionRisk;
     }
 
+    /**
+     * Get 故障表现 
+     * @return FailurePerformance 故障表现
+     */
+    public String getFailurePerformance() {
+        return this.FailurePerformance;
+    }
+
+    /**
+     * Set 故障表现
+     * @param FailurePerformance 故障表现
+     */
+    public void setFailurePerformance(String FailurePerformance) {
+        this.FailurePerformance = FailurePerformance;
+    }
+
     public TemplateGroupAction() {
     }
 
@@ -466,6 +489,9 @@ public class TemplateGroupAction extends AbstractModel {
         if (source.ActionRisk != null) {
             this.ActionRisk = new String(source.ActionRisk);
         }
+        if (source.FailurePerformance != null) {
+            this.FailurePerformance = new String(source.FailurePerformance);
+        }
     }
 
 
@@ -488,6 +514,7 @@ public class TemplateGroupAction extends AbstractModel {
         this.setParamSimple(map, prefix + "ActionAttribute", this.ActionAttribute);
         this.setParamSimple(map, prefix + "ActionType", this.ActionType);
         this.setParamSimple(map, prefix + "ActionRisk", this.ActionRisk);
+        this.setParamSimple(map, prefix + "FailurePerformance", this.FailurePerformance);
 
     }
 }

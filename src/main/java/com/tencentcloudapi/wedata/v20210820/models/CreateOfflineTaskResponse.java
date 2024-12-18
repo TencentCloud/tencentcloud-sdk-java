@@ -32,6 +32,14 @@ public class CreateOfflineTaskResponse extends AbstractModel {
     private String TaskId;
 
     /**
+    * 导入到编排空间的任务id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ArrangeSpaceTaskId")
+    @Expose
+    private String ArrangeSpaceTaskId;
+
+    /**
     * 结果
     */
     @SerializedName("Data")
@@ -63,6 +71,26 @@ public class CreateOfflineTaskResponse extends AbstractModel {
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
+    }
+
+    /**
+     * Get 导入到编排空间的任务id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ArrangeSpaceTaskId 导入到编排空间的任务id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getArrangeSpaceTaskId() {
+        return this.ArrangeSpaceTaskId;
+    }
+
+    /**
+     * Set 导入到编排空间的任务id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ArrangeSpaceTaskId 导入到编排空间的任务id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setArrangeSpaceTaskId(String ArrangeSpaceTaskId) {
+        this.ArrangeSpaceTaskId = ArrangeSpaceTaskId;
     }
 
     /**
@@ -108,6 +136,9 @@ public class CreateOfflineTaskResponse extends AbstractModel {
         if (source.TaskId != null) {
             this.TaskId = new String(source.TaskId);
         }
+        if (source.ArrangeSpaceTaskId != null) {
+            this.ArrangeSpaceTaskId = new String(source.ArrangeSpaceTaskId);
+        }
         if (source.Data != null) {
             this.Data = new String(source.Data);
         }
@@ -122,6 +153,7 @@ public class CreateOfflineTaskResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
+        this.setParamSimple(map, prefix + "ArrangeSpaceTaskId", this.ArrangeSpaceTaskId);
         this.setParamSimple(map, prefix + "Data", this.Data);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 

@@ -56,6 +56,13 @@ public class OperationOpsDto extends AbstractModel {
     private String ErrorDesc;
 
     /**
+    * 异步操作记录id
+    */
+    @SerializedName("AsyncActionId")
+    @Expose
+    private String AsyncActionId;
+
+    /**
      * Get 操作是否成功
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Result 操作是否成功
@@ -135,6 +142,22 @@ public class OperationOpsDto extends AbstractModel {
         this.ErrorDesc = ErrorDesc;
     }
 
+    /**
+     * Get 异步操作记录id 
+     * @return AsyncActionId 异步操作记录id
+     */
+    public String getAsyncActionId() {
+        return this.AsyncActionId;
+    }
+
+    /**
+     * Set 异步操作记录id
+     * @param AsyncActionId 异步操作记录id
+     */
+    public void setAsyncActionId(String AsyncActionId) {
+        this.AsyncActionId = AsyncActionId;
+    }
+
     public OperationOpsDto() {
     }
 
@@ -155,6 +178,9 @@ public class OperationOpsDto extends AbstractModel {
         if (source.ErrorDesc != null) {
             this.ErrorDesc = new String(source.ErrorDesc);
         }
+        if (source.AsyncActionId != null) {
+            this.AsyncActionId = new String(source.AsyncActionId);
+        }
     }
 
 
@@ -166,6 +192,7 @@ public class OperationOpsDto extends AbstractModel {
         this.setParamSimple(map, prefix + "ResultMsg", this.ResultMsg);
         this.setParamSimple(map, prefix + "ErrorId", this.ErrorId);
         this.setParamSimple(map, prefix + "ErrorDesc", this.ErrorDesc);
+        this.setParamSimple(map, prefix + "AsyncActionId", this.AsyncActionId);
 
     }
 }

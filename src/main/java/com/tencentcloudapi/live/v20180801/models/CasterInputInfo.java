@@ -25,7 +25,7 @@ public class CasterInputInfo extends AbstractModel {
 
     /**
     * 输入源Index。
-范围[1, 20]
+范围[1, 24]
     */
     @SerializedName("InputIndex")
     @Expose
@@ -117,9 +117,9 @@ public class CasterInputInfo extends AbstractModel {
 
     /**
      * Get 输入源Index。
-范围[1, 20] 
+范围[1, 24] 
      * @return InputIndex 输入源Index。
-范围[1, 20]
+范围[1, 24]
      */
     public Long getInputIndex() {
         return this.InputIndex;
@@ -127,9 +127,9 @@ public class CasterInputInfo extends AbstractModel {
 
     /**
      * Set 输入源Index。
-范围[1, 20]
+范围[1, 24]
      * @param InputIndex 输入源Index。
-范围[1, 20]
+范围[1, 24]
      */
     public void setInputIndex(Long InputIndex) {
         this.InputIndex = InputIndex;

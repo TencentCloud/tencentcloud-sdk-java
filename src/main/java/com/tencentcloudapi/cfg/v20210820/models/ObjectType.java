@@ -84,6 +84,13 @@ public class ObjectType extends AbstractModel {
     private Long ObjectSupportType;
 
     /**
+    * 1.接入层 2.逻辑层 3. 数据层
+    */
+    @SerializedName("ArchLayer")
+    @Expose
+    private Long ArchLayer;
+
+    /**
      * Get 对象类型ID 
      * @return ObjectTypeId 对象类型ID
      */
@@ -227,6 +234,22 @@ public class ObjectType extends AbstractModel {
         this.ObjectSupportType = ObjectSupportType;
     }
 
+    /**
+     * Get 1.接入层 2.逻辑层 3. 数据层 
+     * @return ArchLayer 1.接入层 2.逻辑层 3. 数据层
+     */
+    public Long getArchLayer() {
+        return this.ArchLayer;
+    }
+
+    /**
+     * Set 1.接入层 2.逻辑层 3. 数据层
+     * @param ArchLayer 1.接入层 2.逻辑层 3. 数据层
+     */
+    public void setArchLayer(Long ArchLayer) {
+        this.ArchLayer = ArchLayer;
+    }
+
     public ObjectType() {
     }
 
@@ -259,6 +282,9 @@ public class ObjectType extends AbstractModel {
         if (source.ObjectSupportType != null) {
             this.ObjectSupportType = new Long(source.ObjectSupportType);
         }
+        if (source.ArchLayer != null) {
+            this.ArchLayer = new Long(source.ArchLayer);
+        }
     }
 
 
@@ -274,6 +300,7 @@ public class ObjectType extends AbstractModel {
         this.setParamSimple(map, prefix + "ObjectHasNewAction", this.ObjectHasNewAction);
         this.setParamSimple(map, prefix + "ObjectPlatformName", this.ObjectPlatformName);
         this.setParamSimple(map, prefix + "ObjectSupportType", this.ObjectSupportType);
+        this.setParamSimple(map, prefix + "ArchLayer", this.ArchLayer);
 
     }
 }

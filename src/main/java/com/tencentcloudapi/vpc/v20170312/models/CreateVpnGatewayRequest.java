@@ -94,6 +94,13 @@ public class CreateVpnGatewayRequest extends AbstractModel {
     private Long MaxConnection;
 
     /**
+    * BGP ASN。
+    */
+    @SerializedName("BgpAsn")
+    @Expose
+    private Long BgpAsn;
+
+    /**
      * Get VPC实例ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口返回值中的VpcId获取。 
      * @return VpcId VPC实例ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口返回值中的VpcId获取。
      */
@@ -253,6 +260,22 @@ public class CreateVpnGatewayRequest extends AbstractModel {
         this.MaxConnection = MaxConnection;
     }
 
+    /**
+     * Get BGP ASN。 
+     * @return BgpAsn BGP ASN。
+     */
+    public Long getBgpAsn() {
+        return this.BgpAsn;
+    }
+
+    /**
+     * Set BGP ASN。
+     * @param BgpAsn BGP ASN。
+     */
+    public void setBgpAsn(Long BgpAsn) {
+        this.BgpAsn = BgpAsn;
+    }
+
     public CreateVpnGatewayRequest() {
     }
 
@@ -294,6 +317,9 @@ public class CreateVpnGatewayRequest extends AbstractModel {
         if (source.MaxConnection != null) {
             this.MaxConnection = new Long(source.MaxConnection);
         }
+        if (source.BgpAsn != null) {
+            this.BgpAsn = new Long(source.BgpAsn);
+        }
     }
 
 
@@ -311,6 +337,7 @@ public class CreateVpnGatewayRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "CdcId", this.CdcId);
         this.setParamSimple(map, prefix + "MaxConnection", this.MaxConnection);
+        this.setParamSimple(map, prefix + "BgpAsn", this.BgpAsn);
 
     }
 }

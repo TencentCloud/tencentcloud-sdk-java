@@ -252,7 +252,9 @@ public class DescribeAccountBalanceResponse extends AbstractModel {
     /**
      * Get 是否允许欠费消费 
      * @return IsAllowArrears 是否允许欠费消费
+     * @deprecated
      */
+    @Deprecated
     public Boolean getIsAllowArrears() {
         return this.IsAllowArrears;
     }
@@ -260,7 +262,9 @@ public class DescribeAccountBalanceResponse extends AbstractModel {
     /**
      * Set 是否允许欠费消费
      * @param IsAllowArrears 是否允许欠费消费
+     * @deprecated
      */
+    @Deprecated
     public void setIsAllowArrears(Boolean IsAllowArrears) {
         this.IsAllowArrears = IsAllowArrears;
     }
@@ -268,7 +272,9 @@ public class DescribeAccountBalanceResponse extends AbstractModel {
     /**
      * Get 是否限制信用额度 
      * @return IsCreditLimited 是否限制信用额度
+     * @deprecated
      */
+    @Deprecated
     public Boolean getIsCreditLimited() {
         return this.IsCreditLimited;
     }
@@ -276,7 +282,9 @@ public class DescribeAccountBalanceResponse extends AbstractModel {
     /**
      * Set 是否限制信用额度
      * @param IsCreditLimited 是否限制信用额度
+     * @deprecated
      */
+    @Deprecated
     public void setIsCreditLimited(Boolean IsCreditLimited) {
         this.IsCreditLimited = IsCreditLimited;
     }

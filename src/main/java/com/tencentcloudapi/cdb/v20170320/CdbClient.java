@@ -1600,6 +1600,17 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
+     *该接口（ModifyProtectMode）用于修改实例的同步方式。
+     * @param req ModifyProtectModeRequest
+     * @return ModifyProtectModeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyProtectModeResponse ModifyProtectMode(ModifyProtectModeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyProtectMode", ModifyProtectModeResponse.class);
+    }
+
+    /**
      *本接口(ModifyRemoteBackupConfig)用于修改数据库异地备份配置信息。
      * @param req ModifyRemoteBackupConfigRequest
      * @return ModifyRemoteBackupConfigResponse

@@ -66,6 +66,13 @@ public class CreateCustomFunctionRequest extends AbstractModel {
     private String ProjectId;
 
     /**
+    * 函数资源文件类型
+    */
+    @SerializedName("FunctionResourceFileType")
+    @Expose
+    private String FunctionResourceFileType;
+
+    /**
      * Get 枚举值：HIVE、SPARK、DLC 
      * @return Type 枚举值：HIVE、SPARK、DLC
      */
@@ -161,6 +168,22 @@ public class CreateCustomFunctionRequest extends AbstractModel {
         this.ProjectId = ProjectId;
     }
 
+    /**
+     * Get 函数资源文件类型 
+     * @return FunctionResourceFileType 函数资源文件类型
+     */
+    public String getFunctionResourceFileType() {
+        return this.FunctionResourceFileType;
+    }
+
+    /**
+     * Set 函数资源文件类型
+     * @param FunctionResourceFileType 函数资源文件类型
+     */
+    public void setFunctionResourceFileType(String FunctionResourceFileType) {
+        this.FunctionResourceFileType = FunctionResourceFileType;
+    }
+
     public CreateCustomFunctionRequest() {
     }
 
@@ -187,6 +210,9 @@ public class CreateCustomFunctionRequest extends AbstractModel {
         if (source.ProjectId != null) {
             this.ProjectId = new String(source.ProjectId);
         }
+        if (source.FunctionResourceFileType != null) {
+            this.FunctionResourceFileType = new String(source.FunctionResourceFileType);
+        }
     }
 
 
@@ -200,6 +226,7 @@ public class CreateCustomFunctionRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ClusterIdentifier", this.ClusterIdentifier);
         this.setParamSimple(map, prefix + "DbName", this.DbName);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
+        this.setParamSimple(map, prefix + "FunctionResourceFileType", this.FunctionResourceFileType);
 
     }
 }

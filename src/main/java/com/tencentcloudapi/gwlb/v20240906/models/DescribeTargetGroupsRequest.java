@@ -45,7 +45,10 @@ public class DescribeTargetGroupsRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * 过滤条件数组，支持TargetGroupVpcId和TargetGroupName。
+    * 过滤条件数组。
+
+- TargetGroupVpcId - String - 是否必填：否 - （过滤条件）按照目标组所属的私有网络过滤，如“vpc-bhqk****”。
+- TargetGroupName - String - 是否必填：否 - （过滤条件）按照目标组的名称过滤，如“tg_name”
     */
     @SerializedName("Filters")
     @Expose
@@ -100,16 +103,28 @@ public class DescribeTargetGroupsRequest extends AbstractModel {
     }
 
     /**
-     * Get 过滤条件数组，支持TargetGroupVpcId和TargetGroupName。 
-     * @return Filters 过滤条件数组，支持TargetGroupVpcId和TargetGroupName。
+     * Get 过滤条件数组。
+
+- TargetGroupVpcId - String - 是否必填：否 - （过滤条件）按照目标组所属的私有网络过滤，如“vpc-bhqk****”。
+- TargetGroupName - String - 是否必填：否 - （过滤条件）按照目标组的名称过滤，如“tg_name” 
+     * @return Filters 过滤条件数组。
+
+- TargetGroupVpcId - String - 是否必填：否 - （过滤条件）按照目标组所属的私有网络过滤，如“vpc-bhqk****”。
+- TargetGroupName - String - 是否必填：否 - （过滤条件）按照目标组的名称过滤，如“tg_name”
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤条件数组，支持TargetGroupVpcId和TargetGroupName。
-     * @param Filters 过滤条件数组，支持TargetGroupVpcId和TargetGroupName。
+     * Set 过滤条件数组。
+
+- TargetGroupVpcId - String - 是否必填：否 - （过滤条件）按照目标组所属的私有网络过滤，如“vpc-bhqk****”。
+- TargetGroupName - String - 是否必填：否 - （过滤条件）按照目标组的名称过滤，如“tg_name”
+     * @param Filters 过滤条件数组。
+
+- TargetGroupVpcId - String - 是否必填：否 - （过滤条件）按照目标组所属的私有网络过滤，如“vpc-bhqk****”。
+- TargetGroupName - String - 是否必填：否 - （过滤条件）按照目标组的名称过滤，如“tg_name”
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

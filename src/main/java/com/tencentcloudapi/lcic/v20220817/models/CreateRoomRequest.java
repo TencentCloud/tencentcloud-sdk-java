@@ -140,7 +140,7 @@ video 纯视频
     private Long AudienceType;
 
     /**
-    * 录制模板。房间子类型为视频+白板（SubType=videodoc）时默认为3，房间子类型为纯视频（SubType=video）时默认为0。录制模板枚举值参考：https://cloud.tencent.com/document/product/1639/89744
+    * 录制模板。未配置时默认取值0。录制模板枚举值参考：https://cloud.tencent.com/document/product/1639/89744
     */
     @SerializedName("RecordLayout")
     @Expose
@@ -229,7 +229,8 @@ video 纯视频
     private String RecordBackground;
 
     /**
-    * 录制自定义场景，仅recordlayout=9的时候此参数有效,数据内容为用户自定义场景参数，数据格式为json键值对方式，其中键值对的value为string类型。
+    * 录制自定义场景。注意：仅recordlayout=9的时候此参数有效。需注意各类参数配置正确能够生效。不然会造成录制失败，失败后无法补救。
+数据内容为用户自定义场景参数，数据格式为json键值对方式，其中键值对的value为string类型。
     */
     @SerializedName("RecordScene")
     @Expose
@@ -538,16 +539,16 @@ video 纯视频
     }
 
     /**
-     * Get 录制模板。房间子类型为视频+白板（SubType=videodoc）时默认为3，房间子类型为纯视频（SubType=video）时默认为0。录制模板枚举值参考：https://cloud.tencent.com/document/product/1639/89744 
-     * @return RecordLayout 录制模板。房间子类型为视频+白板（SubType=videodoc）时默认为3，房间子类型为纯视频（SubType=video）时默认为0。录制模板枚举值参考：https://cloud.tencent.com/document/product/1639/89744
+     * Get 录制模板。未配置时默认取值0。录制模板枚举值参考：https://cloud.tencent.com/document/product/1639/89744 
+     * @return RecordLayout 录制模板。未配置时默认取值0。录制模板枚举值参考：https://cloud.tencent.com/document/product/1639/89744
      */
     public Long getRecordLayout() {
         return this.RecordLayout;
     }
 
     /**
-     * Set 录制模板。房间子类型为视频+白板（SubType=videodoc）时默认为3，房间子类型为纯视频（SubType=video）时默认为0。录制模板枚举值参考：https://cloud.tencent.com/document/product/1639/89744
-     * @param RecordLayout 录制模板。房间子类型为视频+白板（SubType=videodoc）时默认为3，房间子类型为纯视频（SubType=video）时默认为0。录制模板枚举值参考：https://cloud.tencent.com/document/product/1639/89744
+     * Set 录制模板。未配置时默认取值0。录制模板枚举值参考：https://cloud.tencent.com/document/product/1639/89744
+     * @param RecordLayout 录制模板。未配置时默认取值0。录制模板枚举值参考：https://cloud.tencent.com/document/product/1639/89744
      */
     public void setRecordLayout(Long RecordLayout) {
         this.RecordLayout = RecordLayout;
@@ -750,16 +751,20 @@ video 纯视频
     }
 
     /**
-     * Get 录制自定义场景，仅recordlayout=9的时候此参数有效,数据内容为用户自定义场景参数，数据格式为json键值对方式，其中键值对的value为string类型。 
-     * @return RecordScene 录制自定义场景，仅recordlayout=9的时候此参数有效,数据内容为用户自定义场景参数，数据格式为json键值对方式，其中键值对的value为string类型。
+     * Get 录制自定义场景。注意：仅recordlayout=9的时候此参数有效。需注意各类参数配置正确能够生效。不然会造成录制失败，失败后无法补救。
+数据内容为用户自定义场景参数，数据格式为json键值对方式，其中键值对的value为string类型。 
+     * @return RecordScene 录制自定义场景。注意：仅recordlayout=9的时候此参数有效。需注意各类参数配置正确能够生效。不然会造成录制失败，失败后无法补救。
+数据内容为用户自定义场景参数，数据格式为json键值对方式，其中键值对的value为string类型。
      */
     public String getRecordScene() {
         return this.RecordScene;
     }
 
     /**
-     * Set 录制自定义场景，仅recordlayout=9的时候此参数有效,数据内容为用户自定义场景参数，数据格式为json键值对方式，其中键值对的value为string类型。
-     * @param RecordScene 录制自定义场景，仅recordlayout=9的时候此参数有效,数据内容为用户自定义场景参数，数据格式为json键值对方式，其中键值对的value为string类型。
+     * Set 录制自定义场景。注意：仅recordlayout=9的时候此参数有效。需注意各类参数配置正确能够生效。不然会造成录制失败，失败后无法补救。
+数据内容为用户自定义场景参数，数据格式为json键值对方式，其中键值对的value为string类型。
+     * @param RecordScene 录制自定义场景。注意：仅recordlayout=9的时候此参数有效。需注意各类参数配置正确能够生效。不然会造成录制失败，失败后无法补救。
+数据内容为用户自定义场景参数，数据格式为json键值对方式，其中键值对的value为string类型。
      */
     public void setRecordScene(String RecordScene) {
         this.RecordScene = RecordScene;

@@ -94,6 +94,20 @@ public class DescribeOpsMakePlansRequest extends AbstractModel {
     private String MaxCreateTime;
 
     /**
+    * 实例状态过滤条件
+    */
+    @SerializedName("StateList")
+    @Expose
+    private Long [] StateList;
+
+    /**
+    * 模糊查询关键字
+    */
+    @SerializedName("Keyword")
+    @Expose
+    private String Keyword;
+
+    /**
      * Get 项目ID 
      * @return ProjectId 项目ID
      */
@@ -253,6 +267,38 @@ public class DescribeOpsMakePlansRequest extends AbstractModel {
         this.MaxCreateTime = MaxCreateTime;
     }
 
+    /**
+     * Get 实例状态过滤条件 
+     * @return StateList 实例状态过滤条件
+     */
+    public Long [] getStateList() {
+        return this.StateList;
+    }
+
+    /**
+     * Set 实例状态过滤条件
+     * @param StateList 实例状态过滤条件
+     */
+    public void setStateList(Long [] StateList) {
+        this.StateList = StateList;
+    }
+
+    /**
+     * Get 模糊查询关键字 
+     * @return Keyword 模糊查询关键字
+     */
+    public String getKeyword() {
+        return this.Keyword;
+    }
+
+    /**
+     * Set 模糊查询关键字
+     * @param Keyword 模糊查询关键字
+     */
+    public void setKeyword(String Keyword) {
+        this.Keyword = Keyword;
+    }
+
     public DescribeOpsMakePlansRequest() {
     }
 
@@ -291,6 +337,15 @@ public class DescribeOpsMakePlansRequest extends AbstractModel {
         if (source.MaxCreateTime != null) {
             this.MaxCreateTime = new String(source.MaxCreateTime);
         }
+        if (source.StateList != null) {
+            this.StateList = new Long[source.StateList.length];
+            for (int i = 0; i < source.StateList.length; i++) {
+                this.StateList[i] = new Long(source.StateList[i]);
+            }
+        }
+        if (source.Keyword != null) {
+            this.Keyword = new String(source.Keyword);
+        }
     }
 
 
@@ -308,6 +363,8 @@ public class DescribeOpsMakePlansRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Creator", this.Creator);
         this.setParamSimple(map, prefix + "MinCreateTime", this.MinCreateTime);
         this.setParamSimple(map, prefix + "MaxCreateTime", this.MaxCreateTime);
+        this.setParamArraySimple(map, prefix + "StateList.", this.StateList);
+        this.setParamSimple(map, prefix + "Keyword", this.Keyword);
 
     }
 }

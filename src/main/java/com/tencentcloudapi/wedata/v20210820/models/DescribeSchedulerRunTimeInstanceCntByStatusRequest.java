@@ -94,6 +94,13 @@ public class DescribeSchedulerRunTimeInstanceCntByStatusRequest extends Abstract
     private String SortType;
 
     /**
+    * 项目ID列表，如果传了 ProjectIds，则 ProjectId 不会生效，用于多项目筛选
+    */
+    @SerializedName("ProjectIds")
+    @Expose
+    private String [] ProjectIds;
+
+    /**
      * Get 项目ID 
      * @return ProjectId 项目ID
      */
@@ -253,6 +260,22 @@ public class DescribeSchedulerRunTimeInstanceCntByStatusRequest extends Abstract
         this.SortType = SortType;
     }
 
+    /**
+     * Get 项目ID列表，如果传了 ProjectIds，则 ProjectId 不会生效，用于多项目筛选 
+     * @return ProjectIds 项目ID列表，如果传了 ProjectIds，则 ProjectId 不会生效，用于多项目筛选
+     */
+    public String [] getProjectIds() {
+        return this.ProjectIds;
+    }
+
+    /**
+     * Set 项目ID列表，如果传了 ProjectIds，则 ProjectId 不会生效，用于多项目筛选
+     * @param ProjectIds 项目ID列表，如果传了 ProjectIds，则 ProjectId 不会生效，用于多项目筛选
+     */
+    public void setProjectIds(String [] ProjectIds) {
+        this.ProjectIds = ProjectIds;
+    }
+
     public DescribeSchedulerRunTimeInstanceCntByStatusRequest() {
     }
 
@@ -291,6 +314,12 @@ public class DescribeSchedulerRunTimeInstanceCntByStatusRequest extends Abstract
         if (source.SortType != null) {
             this.SortType = new String(source.SortType);
         }
+        if (source.ProjectIds != null) {
+            this.ProjectIds = new String[source.ProjectIds.length];
+            for (int i = 0; i < source.ProjectIds.length; i++) {
+                this.ProjectIds[i] = new String(source.ProjectIds[i]);
+            }
+        }
     }
 
 
@@ -308,6 +337,7 @@ public class DescribeSchedulerRunTimeInstanceCntByStatusRequest extends Abstract
         this.setParamSimple(map, prefix + "WorkflowId", this.WorkflowId);
         this.setParamSimple(map, prefix + "SortItem", this.SortItem);
         this.setParamSimple(map, prefix + "SortType", this.SortType);
+        this.setParamArraySimple(map, prefix + "ProjectIds.", this.ProjectIds);
 
     }
 }

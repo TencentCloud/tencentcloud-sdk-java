@@ -45,6 +45,13 @@ public class FreezeTasksByWorkflowIdsRequest extends AbstractModel {
     private Boolean KillInstance;
 
     /**
+    * 是否异步模式
+    */
+    @SerializedName("AsyncMode")
+    @Expose
+    private Boolean AsyncMode;
+
+    /**
      * Get 工作流id列表 
      * @return WorkflowIds 工作流id列表
      */
@@ -92,6 +99,22 @@ public class FreezeTasksByWorkflowIdsRequest extends AbstractModel {
         this.KillInstance = KillInstance;
     }
 
+    /**
+     * Get 是否异步模式 
+     * @return AsyncMode 是否异步模式
+     */
+    public Boolean getAsyncMode() {
+        return this.AsyncMode;
+    }
+
+    /**
+     * Set 是否异步模式
+     * @param AsyncMode 是否异步模式
+     */
+    public void setAsyncMode(Boolean AsyncMode) {
+        this.AsyncMode = AsyncMode;
+    }
+
     public FreezeTasksByWorkflowIdsRequest() {
     }
 
@@ -112,6 +135,9 @@ public class FreezeTasksByWorkflowIdsRequest extends AbstractModel {
         if (source.KillInstance != null) {
             this.KillInstance = new Boolean(source.KillInstance);
         }
+        if (source.AsyncMode != null) {
+            this.AsyncMode = new Boolean(source.AsyncMode);
+        }
     }
 
 
@@ -122,6 +148,7 @@ public class FreezeTasksByWorkflowIdsRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "WorkflowIds.", this.WorkflowIds);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "KillInstance", this.KillInstance);
+        this.setParamSimple(map, prefix + "AsyncMode", this.AsyncMode);
 
     }
 }

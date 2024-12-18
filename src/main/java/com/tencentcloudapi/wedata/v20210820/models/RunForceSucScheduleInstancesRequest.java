@@ -150,6 +150,13 @@ public class RunForceSucScheduleInstancesRequest extends AbstractModel {
     private Boolean IsCount;
 
     /**
+    * 是否异步模式
+    */
+    @SerializedName("AsyncMode")
+    @Expose
+    private Boolean AsyncMode;
+
+    /**
      * Get 实例列表 
      * @return Instances 实例列表
      */
@@ -437,6 +444,22 @@ public class RunForceSucScheduleInstancesRequest extends AbstractModel {
         this.IsCount = IsCount;
     }
 
+    /**
+     * Get 是否异步模式 
+     * @return AsyncMode 是否异步模式
+     */
+    public Boolean getAsyncMode() {
+        return this.AsyncMode;
+    }
+
+    /**
+     * Set 是否异步模式
+     * @param AsyncMode 是否异步模式
+     */
+    public void setAsyncMode(Boolean AsyncMode) {
+        this.AsyncMode = AsyncMode;
+    }
+
     public RunForceSucScheduleInstancesRequest() {
     }
 
@@ -502,6 +525,9 @@ public class RunForceSucScheduleInstancesRequest extends AbstractModel {
         if (source.IsCount != null) {
             this.IsCount = new Boolean(source.IsCount);
         }
+        if (source.AsyncMode != null) {
+            this.AsyncMode = new Boolean(source.AsyncMode);
+        }
     }
 
 
@@ -527,6 +553,7 @@ public class RunForceSucScheduleInstancesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Count", this.Count);
         this.setParamObj(map, prefix + "RequestBaseInfo.", this.RequestBaseInfo);
         this.setParamSimple(map, prefix + "IsCount", this.IsCount);
+        this.setParamSimple(map, prefix + "AsyncMode", this.AsyncMode);
 
     }
 }

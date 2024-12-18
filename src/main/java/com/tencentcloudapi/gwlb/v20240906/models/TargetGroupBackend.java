@@ -52,7 +52,7 @@ public class TargetGroupBackend extends AbstractModel {
     private Long Port;
 
     /**
-    * 后端服务的转发权重，取值范围：[0, 100]，默认为 10。
+    * 后端服务的转发权重，取值为0或16
     */
     @SerializedName("Weight")
     @Expose
@@ -171,16 +171,16 @@ public class TargetGroupBackend extends AbstractModel {
     }
 
     /**
-     * Get 后端服务的转发权重，取值范围：[0, 100]，默认为 10。 
-     * @return Weight 后端服务的转发权重，取值范围：[0, 100]，默认为 10。
+     * Get 后端服务的转发权重，取值为0或16 
+     * @return Weight 后端服务的转发权重，取值为0或16
      */
     public Long getWeight() {
         return this.Weight;
     }
 
     /**
-     * Set 后端服务的转发权重，取值范围：[0, 100]，默认为 10。
-     * @param Weight 后端服务的转发权重，取值范围：[0, 100]，默认为 10。
+     * Set 后端服务的转发权重，取值为0或16
+     * @param Weight 后端服务的转发权重，取值为0或16
      */
     public void setWeight(Long Weight) {
         this.Weight = Weight;

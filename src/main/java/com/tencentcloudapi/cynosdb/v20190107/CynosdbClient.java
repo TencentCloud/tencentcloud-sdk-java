@@ -534,6 +534,17 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *获取table列表
+     * @param req DescribeClusterDatabaseTablesRequest
+     * @return DescribeClusterDatabaseTablesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClusterDatabaseTablesResponse DescribeClusterDatabaseTables(DescribeClusterDatabaseTablesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeClusterDatabaseTables", DescribeClusterDatabaseTablesResponse.class);
+    }
+
+    /**
      *本接口（DescribeClusterDatabases）用于获取集群数据库列表。
      * @param req DescribeClusterDatabasesRequest
      * @return DescribeClusterDatabasesResponse

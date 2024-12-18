@@ -45,6 +45,27 @@ public class DescribeTaskByCycleRequest extends AbstractModel {
     private String WorkflowId;
 
     /**
+    * 项目ID列表筛选
+    */
+    @SerializedName("ProjectIds")
+    @Expose
+    private String [] ProjectIds;
+
+    /**
+    * 资源组ID列表筛选
+    */
+    @SerializedName("ResourceGroupIds")
+    @Expose
+    private String [] ResourceGroupIds;
+
+    /**
+    * 任务类型ID筛选
+    */
+    @SerializedName("TaskTypeIdList")
+    @Expose
+    private String [] TaskTypeIdList;
+
+    /**
      * Get 项目ID 
      * @return ProjectId 项目ID
      */
@@ -92,6 +113,54 @@ public class DescribeTaskByCycleRequest extends AbstractModel {
         this.WorkflowId = WorkflowId;
     }
 
+    /**
+     * Get 项目ID列表筛选 
+     * @return ProjectIds 项目ID列表筛选
+     */
+    public String [] getProjectIds() {
+        return this.ProjectIds;
+    }
+
+    /**
+     * Set 项目ID列表筛选
+     * @param ProjectIds 项目ID列表筛选
+     */
+    public void setProjectIds(String [] ProjectIds) {
+        this.ProjectIds = ProjectIds;
+    }
+
+    /**
+     * Get 资源组ID列表筛选 
+     * @return ResourceGroupIds 资源组ID列表筛选
+     */
+    public String [] getResourceGroupIds() {
+        return this.ResourceGroupIds;
+    }
+
+    /**
+     * Set 资源组ID列表筛选
+     * @param ResourceGroupIds 资源组ID列表筛选
+     */
+    public void setResourceGroupIds(String [] ResourceGroupIds) {
+        this.ResourceGroupIds = ResourceGroupIds;
+    }
+
+    /**
+     * Get 任务类型ID筛选 
+     * @return TaskTypeIdList 任务类型ID筛选
+     */
+    public String [] getTaskTypeIdList() {
+        return this.TaskTypeIdList;
+    }
+
+    /**
+     * Set 任务类型ID筛选
+     * @param TaskTypeIdList 任务类型ID筛选
+     */
+    public void setTaskTypeIdList(String [] TaskTypeIdList) {
+        this.TaskTypeIdList = TaskTypeIdList;
+    }
+
     public DescribeTaskByCycleRequest() {
     }
 
@@ -109,6 +178,24 @@ public class DescribeTaskByCycleRequest extends AbstractModel {
         if (source.WorkflowId != null) {
             this.WorkflowId = new String(source.WorkflowId);
         }
+        if (source.ProjectIds != null) {
+            this.ProjectIds = new String[source.ProjectIds.length];
+            for (int i = 0; i < source.ProjectIds.length; i++) {
+                this.ProjectIds[i] = new String(source.ProjectIds[i]);
+            }
+        }
+        if (source.ResourceGroupIds != null) {
+            this.ResourceGroupIds = new String[source.ResourceGroupIds.length];
+            for (int i = 0; i < source.ResourceGroupIds.length; i++) {
+                this.ResourceGroupIds[i] = new String(source.ResourceGroupIds[i]);
+            }
+        }
+        if (source.TaskTypeIdList != null) {
+            this.TaskTypeIdList = new String[source.TaskTypeIdList.length];
+            for (int i = 0; i < source.TaskTypeIdList.length; i++) {
+                this.TaskTypeIdList[i] = new String(source.TaskTypeIdList[i]);
+            }
+        }
     }
 
 
@@ -119,6 +206,9 @@ public class DescribeTaskByCycleRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "InCharge", this.InCharge);
         this.setParamSimple(map, prefix + "WorkflowId", this.WorkflowId);
+        this.setParamArraySimple(map, prefix + "ProjectIds.", this.ProjectIds);
+        this.setParamArraySimple(map, prefix + "ResourceGroupIds.", this.ResourceGroupIds);
+        this.setParamArraySimple(map, prefix + "TaskTypeIdList.", this.TaskTypeIdList);
 
     }
 }

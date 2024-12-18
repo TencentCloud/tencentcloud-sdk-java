@@ -245,6 +245,13 @@ HoaiMy
     private String NotifyMessage;
 
     /**
+    * 最大触发AI提示音次数，默认为不限制
+    */
+    @SerializedName("NotifyMaxCount")
+    @Expose
+    private Long NotifyMaxCount;
+
+    /**
     * <p>和VoiceType字段需要选填一个，这里是使用自己自定义的TTS，VoiceType是系统内置的一些音色</p>
 <ul>
 <li>Tencent TTS<br>
@@ -986,6 +993,22 @@ HoaiMy
     }
 
     /**
+     * Get 最大触发AI提示音次数，默认为不限制 
+     * @return NotifyMaxCount 最大触发AI提示音次数，默认为不限制
+     */
+    public Long getNotifyMaxCount() {
+        return this.NotifyMaxCount;
+    }
+
+    /**
+     * Set 最大触发AI提示音次数，默认为不限制
+     * @param NotifyMaxCount 最大触发AI提示音次数，默认为不限制
+     */
+    public void setNotifyMaxCount(Long NotifyMaxCount) {
+        this.NotifyMaxCount = NotifyMaxCount;
+    }
+
+    /**
      * Get <p>和VoiceType字段需要选填一个，这里是使用自己自定义的TTS，VoiceType是系统内置的一些音色</p>
 <ul>
 <li>Tencent TTS<br>
@@ -1384,6 +1407,9 @@ HoaiMy
         if (source.NotifyMessage != null) {
             this.NotifyMessage = new String(source.NotifyMessage);
         }
+        if (source.NotifyMaxCount != null) {
+            this.NotifyMaxCount = new Long(source.NotifyMaxCount);
+        }
         if (source.CustomTTSConfig != null) {
             this.CustomTTSConfig = new String(source.CustomTTSConfig);
         }
@@ -1413,6 +1439,7 @@ HoaiMy
         this.setParamSimple(map, prefix + "EndFunctionDesc", this.EndFunctionDesc);
         this.setParamSimple(map, prefix + "NotifyDuration", this.NotifyDuration);
         this.setParamSimple(map, prefix + "NotifyMessage", this.NotifyMessage);
+        this.setParamSimple(map, prefix + "NotifyMaxCount", this.NotifyMaxCount);
         this.setParamSimple(map, prefix + "CustomTTSConfig", this.CustomTTSConfig);
 
     }

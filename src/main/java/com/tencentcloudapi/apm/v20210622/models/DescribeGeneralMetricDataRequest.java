@@ -24,24 +24,7 @@ import java.util.HashMap;
 public class DescribeGeneralMetricDataRequest extends AbstractModel {
 
     /**
-    * 要过滤的维度信息：
-service_metric视图支持：service.name（服务名）、span.kind（客户端/服务端视角）为维度进行过滤，service.name（服务名）必填。
-span.kind:
-	server:服务端视角
-	client:客户端视角
-默认为服务端视角进行查询。
-runtime_metric视图支持：service.name（服务名）维度进行过滤，service.name（服务名）必填。
-sql_metric视图支持：service.name（服务名）、db.instance（数据库名称）、db.ip（数据库实例ip）维度进行过滤，查询service_slow_sql_count（慢sql）指标时service.name必填，查询sql_duration_avg（耗时）指标时db.instance（数据库名称）必填。
-    */
-    @SerializedName("Filters")
-    @Expose
-    private GeneralFilter [] Filters;
-
-    /**
-    * 需要查询的指标，不可自定义输入。
-service_metric视图支持：service_request_count（总请求）、service_duration（平均响应时间）、service_error_req_rate（平均错误率）、service_slow_call_count（慢调用）、service_error_request_count（异常数量）。
-runtime_metric视图支持：service_gc_full_count（Full GC）。
-sql_metric视图支持：service_slow_sql_count（慢sql）、sql_duration_avg（耗时）。
+    * 需要查询的指标名称，不可自定义输入，[详情请见。](https://cloud.tencent.com/document/product/248/101681)
     */
     @SerializedName("Metrics")
     @Expose
@@ -55,17 +38,21 @@ sql_metric视图支持：service_slow_sql_count（慢sql）、sql_duration_avg�
     private String InstanceId;
 
     /**
-    * 视图名称，不可自定义输入。支持：service_metric、runtime_metric、sql_metric。
+    * 视图名称，不可自定义输入。[详情请见。](https://cloud.tencent.com/document/product/248/101681)
     */
     @SerializedName("ViewName")
     @Expose
     private String ViewName;
 
     /**
-    * 聚合维度：
-service_metric视图支持：service.name（服务名）、span.kind （客户端/服务端视角）维度进行聚合，service.name（服务名）必填。
-runtime_metric视图支持：service.name（服务名）维度进行聚合，service.name（服务名）必填。
-sql_metric视图支持：service.name（服务名）、db.statement（sql语句）维度进行聚合，查询service_slow_sql_count（慢sql）时service.name（服务名）必填，查询sql_duration_avg（耗时）指标时service.name（服务名）、db.statement（sql语句）必填。
+    * 要过滤的维度信息，不同视图有对应的指标维度，[详情请见。](https://cloud.tencent.com/document/product/248/101681)
+    */
+    @SerializedName("Filters")
+    @Expose
+    private GeneralFilter [] Filters;
+
+    /**
+    * 聚合维度，不同视图有对应的指标维度，[详情请见。](https://cloud.tencent.com/document/product/248/101681)
     */
     @SerializedName("GroupBy")
     @Expose
@@ -94,11 +81,10 @@ sql_metric视图支持：service.name（服务名）、db.statement（sql语句�
 
     /**
     * 对查询指标进行排序：
-service_metric视图支持：service_request_count（总请求）、service_duration（平均响应时间）、service_error_req_rate（平均错误率）、service_slow_call_count（慢调用）、service_error_request_count（异常数量）。
-runtime_metric视图支持：service_gc_full_count（Full GC）。
-sql_metric视图支持：service_slow_sql_count（慢sql）、sql_duration_avg（耗时）。
-asc:对查询指标进行升序排序
-desc：对查询指标进行降序排序
+Key 填写云 API 指标名称，[详情请见。](https://cloud.tencent.com/document/product/248/101681)
+Value 填写排序方式：     
+- asc:对查询指标进行升序排序
+- desc：对查询指标进行降序排序
     */
     @SerializedName("OrderBy")
     @Expose
@@ -112,72 +98,16 @@ desc：对查询指标进行降序排序
     private Long PageSize;
 
     /**
-     * Get 要过滤的维度信息：
-service_metric视图支持：service.name（服务名）、span.kind（客户端/服务端视角）为维度进行过滤，service.name（服务名）必填。
-span.kind:
-	server:服务端视角
-	client:客户端视角
-默认为服务端视角进行查询。
-runtime_metric视图支持：service.name（服务名）维度进行过滤，service.name（服务名）必填。
-sql_metric视图支持：service.name（服务名）、db.instance（数据库名称）、db.ip（数据库实例ip）维度进行过滤，查询service_slow_sql_count（慢sql）指标时service.name必填，查询sql_duration_avg（耗时）指标时db.instance（数据库名称）必填。 
-     * @return Filters 要过滤的维度信息：
-service_metric视图支持：service.name（服务名）、span.kind（客户端/服务端视角）为维度进行过滤，service.name（服务名）必填。
-span.kind:
-	server:服务端视角
-	client:客户端视角
-默认为服务端视角进行查询。
-runtime_metric视图支持：service.name（服务名）维度进行过滤，service.name（服务名）必填。
-sql_metric视图支持：service.name（服务名）、db.instance（数据库名称）、db.ip（数据库实例ip）维度进行过滤，查询service_slow_sql_count（慢sql）指标时service.name必填，查询sql_duration_avg（耗时）指标时db.instance（数据库名称）必填。
-     */
-    public GeneralFilter [] getFilters() {
-        return this.Filters;
-    }
-
-    /**
-     * Set 要过滤的维度信息：
-service_metric视图支持：service.name（服务名）、span.kind（客户端/服务端视角）为维度进行过滤，service.name（服务名）必填。
-span.kind:
-	server:服务端视角
-	client:客户端视角
-默认为服务端视角进行查询。
-runtime_metric视图支持：service.name（服务名）维度进行过滤，service.name（服务名）必填。
-sql_metric视图支持：service.name（服务名）、db.instance（数据库名称）、db.ip（数据库实例ip）维度进行过滤，查询service_slow_sql_count（慢sql）指标时service.name必填，查询sql_duration_avg（耗时）指标时db.instance（数据库名称）必填。
-     * @param Filters 要过滤的维度信息：
-service_metric视图支持：service.name（服务名）、span.kind（客户端/服务端视角）为维度进行过滤，service.name（服务名）必填。
-span.kind:
-	server:服务端视角
-	client:客户端视角
-默认为服务端视角进行查询。
-runtime_metric视图支持：service.name（服务名）维度进行过滤，service.name（服务名）必填。
-sql_metric视图支持：service.name（服务名）、db.instance（数据库名称）、db.ip（数据库实例ip）维度进行过滤，查询service_slow_sql_count（慢sql）指标时service.name必填，查询sql_duration_avg（耗时）指标时db.instance（数据库名称）必填。
-     */
-    public void setFilters(GeneralFilter [] Filters) {
-        this.Filters = Filters;
-    }
-
-    /**
-     * Get 需要查询的指标，不可自定义输入。
-service_metric视图支持：service_request_count（总请求）、service_duration（平均响应时间）、service_error_req_rate（平均错误率）、service_slow_call_count（慢调用）、service_error_request_count（异常数量）。
-runtime_metric视图支持：service_gc_full_count（Full GC）。
-sql_metric视图支持：service_slow_sql_count（慢sql）、sql_duration_avg（耗时）。 
-     * @return Metrics 需要查询的指标，不可自定义输入。
-service_metric视图支持：service_request_count（总请求）、service_duration（平均响应时间）、service_error_req_rate（平均错误率）、service_slow_call_count（慢调用）、service_error_request_count（异常数量）。
-runtime_metric视图支持：service_gc_full_count（Full GC）。
-sql_metric视图支持：service_slow_sql_count（慢sql）、sql_duration_avg（耗时）。
+     * Get 需要查询的指标名称，不可自定义输入，[详情请见。](https://cloud.tencent.com/document/product/248/101681) 
+     * @return Metrics 需要查询的指标名称，不可自定义输入，[详情请见。](https://cloud.tencent.com/document/product/248/101681)
      */
     public String [] getMetrics() {
         return this.Metrics;
     }
 
     /**
-     * Set 需要查询的指标，不可自定义输入。
-service_metric视图支持：service_request_count（总请求）、service_duration（平均响应时间）、service_error_req_rate（平均错误率）、service_slow_call_count（慢调用）、service_error_request_count（异常数量）。
-runtime_metric视图支持：service_gc_full_count（Full GC）。
-sql_metric视图支持：service_slow_sql_count（慢sql）、sql_duration_avg（耗时）。
-     * @param Metrics 需要查询的指标，不可自定义输入。
-service_metric视图支持：service_request_count（总请求）、service_duration（平均响应时间）、service_error_req_rate（平均错误率）、service_slow_call_count（慢调用）、service_error_request_count（异常数量）。
-runtime_metric视图支持：service_gc_full_count（Full GC）。
-sql_metric视图支持：service_slow_sql_count（慢sql）、sql_duration_avg（耗时）。
+     * Set 需要查询的指标名称，不可自定义输入，[详情请见。](https://cloud.tencent.com/document/product/248/101681)
+     * @param Metrics 需要查询的指标名称，不可自定义输入，[详情请见。](https://cloud.tencent.com/document/product/248/101681)
      */
     public void setMetrics(String [] Metrics) {
         this.Metrics = Metrics;
@@ -200,44 +130,48 @@ sql_metric视图支持：service_slow_sql_count（慢sql）、sql_duration_avg�
     }
 
     /**
-     * Get 视图名称，不可自定义输入。支持：service_metric、runtime_metric、sql_metric。 
-     * @return ViewName 视图名称，不可自定义输入。支持：service_metric、runtime_metric、sql_metric。
+     * Get 视图名称，不可自定义输入。[详情请见。](https://cloud.tencent.com/document/product/248/101681) 
+     * @return ViewName 视图名称，不可自定义输入。[详情请见。](https://cloud.tencent.com/document/product/248/101681)
      */
     public String getViewName() {
         return this.ViewName;
     }
 
     /**
-     * Set 视图名称，不可自定义输入。支持：service_metric、runtime_metric、sql_metric。
-     * @param ViewName 视图名称，不可自定义输入。支持：service_metric、runtime_metric、sql_metric。
+     * Set 视图名称，不可自定义输入。[详情请见。](https://cloud.tencent.com/document/product/248/101681)
+     * @param ViewName 视图名称，不可自定义输入。[详情请见。](https://cloud.tencent.com/document/product/248/101681)
      */
     public void setViewName(String ViewName) {
         this.ViewName = ViewName;
     }
 
     /**
-     * Get 聚合维度：
-service_metric视图支持：service.name（服务名）、span.kind （客户端/服务端视角）维度进行聚合，service.name（服务名）必填。
-runtime_metric视图支持：service.name（服务名）维度进行聚合，service.name（服务名）必填。
-sql_metric视图支持：service.name（服务名）、db.statement（sql语句）维度进行聚合，查询service_slow_sql_count（慢sql）时service.name（服务名）必填，查询sql_duration_avg（耗时）指标时service.name（服务名）、db.statement（sql语句）必填。 
-     * @return GroupBy 聚合维度：
-service_metric视图支持：service.name（服务名）、span.kind （客户端/服务端视角）维度进行聚合，service.name（服务名）必填。
-runtime_metric视图支持：service.name（服务名）维度进行聚合，service.name（服务名）必填。
-sql_metric视图支持：service.name（服务名）、db.statement（sql语句）维度进行聚合，查询service_slow_sql_count（慢sql）时service.name（服务名）必填，查询sql_duration_avg（耗时）指标时service.name（服务名）、db.statement（sql语句）必填。
+     * Get 要过滤的维度信息，不同视图有对应的指标维度，[详情请见。](https://cloud.tencent.com/document/product/248/101681) 
+     * @return Filters 要过滤的维度信息，不同视图有对应的指标维度，[详情请见。](https://cloud.tencent.com/document/product/248/101681)
+     */
+    public GeneralFilter [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * Set 要过滤的维度信息，不同视图有对应的指标维度，[详情请见。](https://cloud.tencent.com/document/product/248/101681)
+     * @param Filters 要过滤的维度信息，不同视图有对应的指标维度，[详情请见。](https://cloud.tencent.com/document/product/248/101681)
+     */
+    public void setFilters(GeneralFilter [] Filters) {
+        this.Filters = Filters;
+    }
+
+    /**
+     * Get 聚合维度，不同视图有对应的指标维度，[详情请见。](https://cloud.tencent.com/document/product/248/101681) 
+     * @return GroupBy 聚合维度，不同视图有对应的指标维度，[详情请见。](https://cloud.tencent.com/document/product/248/101681)
      */
     public String [] getGroupBy() {
         return this.GroupBy;
     }
 
     /**
-     * Set 聚合维度：
-service_metric视图支持：service.name（服务名）、span.kind （客户端/服务端视角）维度进行聚合，service.name（服务名）必填。
-runtime_metric视图支持：service.name（服务名）维度进行聚合，service.name（服务名）必填。
-sql_metric视图支持：service.name（服务名）、db.statement（sql语句）维度进行聚合，查询service_slow_sql_count（慢sql）时service.name（服务名）必填，查询sql_duration_avg（耗时）指标时service.name（服务名）、db.statement（sql语句）必填。
-     * @param GroupBy 聚合维度：
-service_metric视图支持：service.name（服务名）、span.kind （客户端/服务端视角）维度进行聚合，service.name（服务名）必填。
-runtime_metric视图支持：service.name（服务名）维度进行聚合，service.name（服务名）必填。
-sql_metric视图支持：service.name（服务名）、db.statement（sql语句）维度进行聚合，查询service_slow_sql_count（慢sql）时service.name（服务名）必填，查询sql_duration_avg（耗时）指标时service.name（服务名）、db.statement（sql语句）必填。
+     * Set 聚合维度，不同视图有对应的指标维度，[详情请见。](https://cloud.tencent.com/document/product/248/101681)
+     * @param GroupBy 聚合维度，不同视图有对应的指标维度，[详情请见。](https://cloud.tencent.com/document/product/248/101681)
      */
     public void setGroupBy(String [] GroupBy) {
         this.GroupBy = GroupBy;
@@ -293,17 +227,15 @@ sql_metric视图支持：service.name（服务名）、db.statement（sql语句�
 
     /**
      * Get 对查询指标进行排序：
-service_metric视图支持：service_request_count（总请求）、service_duration（平均响应时间）、service_error_req_rate（平均错误率）、service_slow_call_count（慢调用）、service_error_request_count（异常数量）。
-runtime_metric视图支持：service_gc_full_count（Full GC）。
-sql_metric视图支持：service_slow_sql_count（慢sql）、sql_duration_avg（耗时）。
-asc:对查询指标进行升序排序
-desc：对查询指标进行降序排序 
+Key 填写云 API 指标名称，[详情请见。](https://cloud.tencent.com/document/product/248/101681)
+Value 填写排序方式：     
+- asc:对查询指标进行升序排序
+- desc：对查询指标进行降序排序 
      * @return OrderBy 对查询指标进行排序：
-service_metric视图支持：service_request_count（总请求）、service_duration（平均响应时间）、service_error_req_rate（平均错误率）、service_slow_call_count（慢调用）、service_error_request_count（异常数量）。
-runtime_metric视图支持：service_gc_full_count（Full GC）。
-sql_metric视图支持：service_slow_sql_count（慢sql）、sql_duration_avg（耗时）。
-asc:对查询指标进行升序排序
-desc：对查询指标进行降序排序
+Key 填写云 API 指标名称，[详情请见。](https://cloud.tencent.com/document/product/248/101681)
+Value 填写排序方式：     
+- asc:对查询指标进行升序排序
+- desc：对查询指标进行降序排序
      */
     public OrderBy getOrderBy() {
         return this.OrderBy;
@@ -311,17 +243,15 @@ desc：对查询指标进行降序排序
 
     /**
      * Set 对查询指标进行排序：
-service_metric视图支持：service_request_count（总请求）、service_duration（平均响应时间）、service_error_req_rate（平均错误率）、service_slow_call_count（慢调用）、service_error_request_count（异常数量）。
-runtime_metric视图支持：service_gc_full_count（Full GC）。
-sql_metric视图支持：service_slow_sql_count（慢sql）、sql_duration_avg（耗时）。
-asc:对查询指标进行升序排序
-desc：对查询指标进行降序排序
+Key 填写云 API 指标名称，[详情请见。](https://cloud.tencent.com/document/product/248/101681)
+Value 填写排序方式：     
+- asc:对查询指标进行升序排序
+- desc：对查询指标进行降序排序
      * @param OrderBy 对查询指标进行排序：
-service_metric视图支持：service_request_count（总请求）、service_duration（平均响应时间）、service_error_req_rate（平均错误率）、service_slow_call_count（慢调用）、service_error_request_count（异常数量）。
-runtime_metric视图支持：service_gc_full_count（Full GC）。
-sql_metric视图支持：service_slow_sql_count（慢sql）、sql_duration_avg（耗时）。
-asc:对查询指标进行升序排序
-desc：对查询指标进行降序排序
+Key 填写云 API 指标名称，[详情请见。](https://cloud.tencent.com/document/product/248/101681)
+Value 填写排序方式：     
+- asc:对查询指标进行升序排序
+- desc：对查询指标进行降序排序
      */
     public void setOrderBy(OrderBy OrderBy) {
         this.OrderBy = OrderBy;
@@ -351,12 +281,6 @@ desc：对查询指标进行降序排序
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeGeneralMetricDataRequest(DescribeGeneralMetricDataRequest source) {
-        if (source.Filters != null) {
-            this.Filters = new GeneralFilter[source.Filters.length];
-            for (int i = 0; i < source.Filters.length; i++) {
-                this.Filters[i] = new GeneralFilter(source.Filters[i]);
-            }
-        }
         if (source.Metrics != null) {
             this.Metrics = new String[source.Metrics.length];
             for (int i = 0; i < source.Metrics.length; i++) {
@@ -368,6 +292,12 @@ desc：对查询指标进行降序排序
         }
         if (source.ViewName != null) {
             this.ViewName = new String(source.ViewName);
+        }
+        if (source.Filters != null) {
+            this.Filters = new GeneralFilter[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new GeneralFilter(source.Filters[i]);
+            }
         }
         if (source.GroupBy != null) {
             this.GroupBy = new String[source.GroupBy.length];
@@ -397,10 +327,10 @@ desc：对查询指标进行降序排序
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamArraySimple(map, prefix + "Metrics.", this.Metrics);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "ViewName", this.ViewName);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamArraySimple(map, prefix + "GroupBy.", this.GroupBy);
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);

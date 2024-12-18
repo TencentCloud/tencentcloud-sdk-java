@@ -75,7 +75,9 @@ public class TargetGroupInfo extends AbstractModel {
     private AssociationItem [] AssociatedRule;
 
     /**
-    * 后端协议类型。
+    * 网关负载均衡目标组协议。
+- tencent_geneve ：GENEVE 标准协议
+- aws_geneve：GENEVE 兼容协议
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Protocol")
@@ -83,8 +85,8 @@ public class TargetGroupInfo extends AbstractModel {
     private String Protocol;
 
     /**
-    * 调度算法。
-ip_hash_3：弹性哈希
+    * 均衡算法。
+- ip_hash_3_elastic：弹性哈希
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScheduleAlgorithm")
@@ -244,9 +246,13 @@ ip_hash_3：弹性哈希
     }
 
     /**
-     * Get 后端协议类型。
+     * Get 网关负载均衡目标组协议。
+- tencent_geneve ：GENEVE 标准协议
+- aws_geneve：GENEVE 兼容协议
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Protocol 后端协议类型。
+     * @return Protocol 网关负载均衡目标组协议。
+- tencent_geneve ：GENEVE 标准协议
+- aws_geneve：GENEVE 兼容协议
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProtocol() {
@@ -254,9 +260,13 @@ ip_hash_3：弹性哈希
     }
 
     /**
-     * Set 后端协议类型。
+     * Set 网关负载均衡目标组协议。
+- tencent_geneve ：GENEVE 标准协议
+- aws_geneve：GENEVE 兼容协议
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Protocol 后端协议类型。
+     * @param Protocol 网关负载均衡目标组协议。
+- tencent_geneve ：GENEVE 标准协议
+- aws_geneve：GENEVE 兼容协议
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProtocol(String Protocol) {
@@ -264,11 +274,11 @@ ip_hash_3：弹性哈希
     }
 
     /**
-     * Get 调度算法。
-ip_hash_3：弹性哈希
+     * Get 均衡算法。
+- ip_hash_3_elastic：弹性哈希
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ScheduleAlgorithm 调度算法。
-ip_hash_3：弹性哈希
+     * @return ScheduleAlgorithm 均衡算法。
+- ip_hash_3_elastic：弹性哈希
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getScheduleAlgorithm() {
@@ -276,11 +286,11 @@ ip_hash_3：弹性哈希
     }
 
     /**
-     * Set 调度算法。
-ip_hash_3：弹性哈希
+     * Set 均衡算法。
+- ip_hash_3_elastic：弹性哈希
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ScheduleAlgorithm 调度算法。
-ip_hash_3：弹性哈希
+     * @param ScheduleAlgorithm 均衡算法。
+- ip_hash_3_elastic：弹性哈希
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScheduleAlgorithm(String ScheduleAlgorithm) {

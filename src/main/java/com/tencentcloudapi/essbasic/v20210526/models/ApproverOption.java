@@ -38,7 +38,10 @@ public class ApproverOption extends AbstractModel {
     private Boolean NoTransfer;
 
     /**
-    * 是否隐藏一键签署 默认false-不隐藏true-隐藏
+    * 当签署方有多个签署区时候，是否隐藏一键所有的签署区
+
+false：（默认）不隐藏
+true：隐藏，每个签署区要单独选择印章或者签名
     */
     @SerializedName("HideOneKeySign")
     @Expose
@@ -103,16 +106,28 @@ public class ApproverOption extends AbstractModel {
     }
 
     /**
-     * Get 是否隐藏一键签署 默认false-不隐藏true-隐藏 
-     * @return HideOneKeySign 是否隐藏一键签署 默认false-不隐藏true-隐藏
+     * Get 当签署方有多个签署区时候，是否隐藏一键所有的签署区
+
+false：（默认）不隐藏
+true：隐藏，每个签署区要单独选择印章或者签名 
+     * @return HideOneKeySign 当签署方有多个签署区时候，是否隐藏一键所有的签署区
+
+false：（默认）不隐藏
+true：隐藏，每个签署区要单独选择印章或者签名
      */
     public Boolean getHideOneKeySign() {
         return this.HideOneKeySign;
     }
 
     /**
-     * Set 是否隐藏一键签署 默认false-不隐藏true-隐藏
-     * @param HideOneKeySign 是否隐藏一键签署 默认false-不隐藏true-隐藏
+     * Set 当签署方有多个签署区时候，是否隐藏一键所有的签署区
+
+false：（默认）不隐藏
+true：隐藏，每个签署区要单独选择印章或者签名
+     * @param HideOneKeySign 当签署方有多个签署区时候，是否隐藏一键所有的签署区
+
+false：（默认）不隐藏
+true：隐藏，每个签署区要单独选择印章或者签名
      */
     public void setHideOneKeySign(Boolean HideOneKeySign) {
         this.HideOneKeySign = HideOneKeySign;

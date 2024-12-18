@@ -80,6 +80,13 @@ public class DescribeSchedulerInstanceStatusRequest extends AbstractModel {
     private String WorkflowId;
 
     /**
+    * 任务ID列表
+    */
+    @SerializedName("ProjectIds")
+    @Expose
+    private String [] ProjectIds;
+
+    /**
      * Get 项目ID 
      * @return ProjectId 项目ID
      */
@@ -207,6 +214,22 @@ public class DescribeSchedulerInstanceStatusRequest extends AbstractModel {
         this.WorkflowId = WorkflowId;
     }
 
+    /**
+     * Get 任务ID列表 
+     * @return ProjectIds 任务ID列表
+     */
+    public String [] getProjectIds() {
+        return this.ProjectIds;
+    }
+
+    /**
+     * Set 任务ID列表
+     * @param ProjectIds 任务ID列表
+     */
+    public void setProjectIds(String [] ProjectIds) {
+        this.ProjectIds = ProjectIds;
+    }
+
     public DescribeSchedulerInstanceStatusRequest() {
     }
 
@@ -239,6 +262,12 @@ public class DescribeSchedulerInstanceStatusRequest extends AbstractModel {
         if (source.WorkflowId != null) {
             this.WorkflowId = new String(source.WorkflowId);
         }
+        if (source.ProjectIds != null) {
+            this.ProjectIds = new String[source.ProjectIds.length];
+            for (int i = 0; i < source.ProjectIds.length; i++) {
+                this.ProjectIds[i] = new String(source.ProjectIds[i]);
+            }
+        }
     }
 
 
@@ -254,6 +283,7 @@ public class DescribeSchedulerInstanceStatusRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "InCharge", this.InCharge);
         this.setParamSimple(map, prefix + "WorkflowId", this.WorkflowId);
+        this.setParamArraySimple(map, prefix + "ProjectIds.", this.ProjectIds);
 
     }
 }

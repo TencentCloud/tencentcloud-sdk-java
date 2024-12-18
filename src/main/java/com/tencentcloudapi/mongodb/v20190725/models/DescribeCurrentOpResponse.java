@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeCurrentOpResponse extends AbstractModel {
 
     /**
-    * 符合查询条件的操作总数
+    * 符合查询条件的操作总数。
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 当前操作列表
+    * 当前操作列表。
     */
     @SerializedName("CurrentOps")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeCurrentOpResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 符合查询条件的操作总数 
-     * @return TotalCount 符合查询条件的操作总数
+     * Get 符合查询条件的操作总数。 
+     * @return TotalCount 符合查询条件的操作总数。
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 符合查询条件的操作总数
-     * @param TotalCount 符合查询条件的操作总数
+     * Set 符合查询条件的操作总数。
+     * @param TotalCount 符合查询条件的操作总数。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 当前操作列表 
-     * @return CurrentOps 当前操作列表
+     * Get 当前操作列表。 
+     * @return CurrentOps 当前操作列表。
      */
     public CurrentOp [] getCurrentOps() {
         return this.CurrentOps;
     }
 
     /**
-     * Set 当前操作列表
-     * @param CurrentOps 当前操作列表
+     * Set 当前操作列表。
+     * @param CurrentOps 当前操作列表。
      */
     public void setCurrentOps(CurrentOp [] CurrentOps) {
         this.CurrentOps = CurrentOps;

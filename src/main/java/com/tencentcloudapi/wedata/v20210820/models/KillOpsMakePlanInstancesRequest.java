@@ -38,6 +38,20 @@ public class KillOpsMakePlanInstancesRequest extends AbstractModel {
     private String PlanId;
 
     /**
+    * 是否异步模式
+    */
+    @SerializedName("AsyncMode")
+    @Expose
+    private Boolean AsyncMode;
+
+    /**
+    * 补录计划名
+    */
+    @SerializedName("PlanName")
+    @Expose
+    private String PlanName;
+
+    /**
      * Get 项目ID 
      * @return ProjectId 项目ID
      */
@@ -69,6 +83,38 @@ public class KillOpsMakePlanInstancesRequest extends AbstractModel {
         this.PlanId = PlanId;
     }
 
+    /**
+     * Get 是否异步模式 
+     * @return AsyncMode 是否异步模式
+     */
+    public Boolean getAsyncMode() {
+        return this.AsyncMode;
+    }
+
+    /**
+     * Set 是否异步模式
+     * @param AsyncMode 是否异步模式
+     */
+    public void setAsyncMode(Boolean AsyncMode) {
+        this.AsyncMode = AsyncMode;
+    }
+
+    /**
+     * Get 补录计划名 
+     * @return PlanName 补录计划名
+     */
+    public String getPlanName() {
+        return this.PlanName;
+    }
+
+    /**
+     * Set 补录计划名
+     * @param PlanName 补录计划名
+     */
+    public void setPlanName(String PlanName) {
+        this.PlanName = PlanName;
+    }
+
     public KillOpsMakePlanInstancesRequest() {
     }
 
@@ -83,6 +129,12 @@ public class KillOpsMakePlanInstancesRequest extends AbstractModel {
         if (source.PlanId != null) {
             this.PlanId = new String(source.PlanId);
         }
+        if (source.AsyncMode != null) {
+            this.AsyncMode = new Boolean(source.AsyncMode);
+        }
+        if (source.PlanName != null) {
+            this.PlanName = new String(source.PlanName);
+        }
     }
 
 
@@ -92,6 +144,8 @@ public class KillOpsMakePlanInstancesRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "PlanId", this.PlanId);
+        this.setParamSimple(map, prefix + "AsyncMode", this.AsyncMode);
+        this.setParamSimple(map, prefix + "PlanName", this.PlanName);
 
     }
 }

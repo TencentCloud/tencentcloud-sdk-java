@@ -40,7 +40,6 @@ public class MongodbClient extends AbstractClient{
 
     /**
      *本接口(AssignProject)用于指定云数据库实例的所属项目。
-
      * @param req AssignProjectRequest
      * @return AssignProjectResponse
      * @throws TencentCloudSDKException
@@ -140,7 +139,7 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
-     *查询异步任务状态接口
+     *本接口（DescribeAsyncRequestInfo）用于查询异步任务状态接口。
      * @param req DescribeAsyncRequestInfoRequest
      * @return DescribeAsyncRequestInfoResponse
      * @throws TencentCloudSDKException
@@ -184,7 +183,7 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
-     *本接口(DescribeCurrentOp)用于查询MongoDB云数据库实例的当前正在执行的操作。
+     *本接口（DescribeCurrentOp）用于查询云数据库实例的当前正在执行的操作。
      * @param req DescribeCurrentOpRequest
      * @return DescribeCurrentOpResponse
      * @throws TencentCloudSDKException

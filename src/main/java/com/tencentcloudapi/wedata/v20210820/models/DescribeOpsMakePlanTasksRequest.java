@@ -38,6 +38,13 @@ public class DescribeOpsMakePlanTasksRequest extends AbstractModel {
     private String PlanId;
 
     /**
+    * 实例状态过滤条件
+    */
+    @SerializedName("StateList")
+    @Expose
+    private Long [] StateList;
+
+    /**
     * 分页页码，默认值1
     */
     @SerializedName("PageNumber")
@@ -81,6 +88,22 @@ public class DescribeOpsMakePlanTasksRequest extends AbstractModel {
      */
     public void setPlanId(String PlanId) {
         this.PlanId = PlanId;
+    }
+
+    /**
+     * Get 实例状态过滤条件 
+     * @return StateList 实例状态过滤条件
+     */
+    public Long [] getStateList() {
+        return this.StateList;
+    }
+
+    /**
+     * Set 实例状态过滤条件
+     * @param StateList 实例状态过滤条件
+     */
+    public void setStateList(Long [] StateList) {
+        this.StateList = StateList;
     }
 
     /**
@@ -129,6 +152,12 @@ public class DescribeOpsMakePlanTasksRequest extends AbstractModel {
         if (source.PlanId != null) {
             this.PlanId = new String(source.PlanId);
         }
+        if (source.StateList != null) {
+            this.StateList = new Long[source.StateList.length];
+            for (int i = 0; i < source.StateList.length; i++) {
+                this.StateList[i] = new Long(source.StateList[i]);
+            }
+        }
         if (source.PageNumber != null) {
             this.PageNumber = new Long(source.PageNumber);
         }
@@ -144,6 +173,7 @@ public class DescribeOpsMakePlanTasksRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "PlanId", this.PlanId);
+        this.setParamArraySimple(map, prefix + "StateList.", this.StateList);
         this.setParamSimple(map, prefix + "PageNumber", this.PageNumber);
         this.setParamSimple(map, prefix + "PageSize", this.PageSize);
 

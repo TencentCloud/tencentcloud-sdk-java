@@ -45,14 +45,14 @@ public class CreateDBInstanceRequest extends AbstractModel {
     private Long Volume;
 
     /**
-    * 版本号，当前支持 MONGO_3_WT、MONGO_3_ROCKS、MONGO_36_WT
+    * 指版本信息。具体支持的版本信息 ，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。 - MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本。 - MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本。 - MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。 - MONGO_44_WT：MongoDB 4.4 WiredTiger存储引擎版本。 - MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。 - MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
     */
     @SerializedName("MongoVersion")
     @Expose
     private String MongoVersion;
 
     /**
-    * 机器类型，GIO：高IO版；TGIO：高IO万兆
+    * 机器类型，HIO10G：高IO万兆。
     */
     @SerializedName("MachineCode")
     @Expose
@@ -115,6 +115,13 @@ public class CreateDBInstanceRequest extends AbstractModel {
     private String UniqSubnetId;
 
     /**
+    * 实例类型，REPLSET-副本集，SHARD-分片集群，默认为REPLSET
+    */
+    @SerializedName("InstanceType")
+    @Expose
+    private String InstanceType;
+
+    /**
      * Get 每个副本集内从节点个数 
      * @return SecondaryNum 每个副本集内从节点个数
      */
@@ -163,32 +170,32 @@ public class CreateDBInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get 版本号，当前支持 MONGO_3_WT、MONGO_3_ROCKS、MONGO_36_WT 
-     * @return MongoVersion 版本号，当前支持 MONGO_3_WT、MONGO_3_ROCKS、MONGO_36_WT
+     * Get 指版本信息。具体支持的版本信息 ，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。 - MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本。 - MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本。 - MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。 - MONGO_44_WT：MongoDB 4.4 WiredTiger存储引擎版本。 - MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。 - MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。 
+     * @return MongoVersion 指版本信息。具体支持的版本信息 ，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。 - MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本。 - MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本。 - MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。 - MONGO_44_WT：MongoDB 4.4 WiredTiger存储引擎版本。 - MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。 - MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
      */
     public String getMongoVersion() {
         return this.MongoVersion;
     }
 
     /**
-     * Set 版本号，当前支持 MONGO_3_WT、MONGO_3_ROCKS、MONGO_36_WT
-     * @param MongoVersion 版本号，当前支持 MONGO_3_WT、MONGO_3_ROCKS、MONGO_36_WT
+     * Set 指版本信息。具体支持的版本信息 ，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。 - MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本。 - MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本。 - MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。 - MONGO_44_WT：MongoDB 4.4 WiredTiger存储引擎版本。 - MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。 - MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
+     * @param MongoVersion 指版本信息。具体支持的版本信息 ，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。 - MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本。 - MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本。 - MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。 - MONGO_44_WT：MongoDB 4.4 WiredTiger存储引擎版本。 - MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。 - MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
      */
     public void setMongoVersion(String MongoVersion) {
         this.MongoVersion = MongoVersion;
     }
 
     /**
-     * Get 机器类型，GIO：高IO版；TGIO：高IO万兆 
-     * @return MachineCode 机器类型，GIO：高IO版；TGIO：高IO万兆
+     * Get 机器类型，HIO10G：高IO万兆。 
+     * @return MachineCode 机器类型，HIO10G：高IO万兆。
      */
     public String getMachineCode() {
         return this.MachineCode;
     }
 
     /**
-     * Set 机器类型，GIO：高IO版；TGIO：高IO万兆
-     * @param MachineCode 机器类型，GIO：高IO版；TGIO：高IO万兆
+     * Set 机器类型，HIO10G：高IO万兆。
+     * @param MachineCode 机器类型，HIO10G：高IO万兆。
      */
     public void setMachineCode(String MachineCode) {
         this.MachineCode = MachineCode;
@@ -322,6 +329,22 @@ public class CreateDBInstanceRequest extends AbstractModel {
         this.UniqSubnetId = UniqSubnetId;
     }
 
+    /**
+     * Get 实例类型，REPLSET-副本集，SHARD-分片集群，默认为REPLSET 
+     * @return InstanceType 实例类型，REPLSET-副本集，SHARD-分片集群，默认为REPLSET
+     */
+    public String getInstanceType() {
+        return this.InstanceType;
+    }
+
+    /**
+     * Set 实例类型，REPLSET-副本集，SHARD-分片集群，默认为REPLSET
+     * @param InstanceType 实例类型，REPLSET-副本集，SHARD-分片集群，默认为REPLSET
+     */
+    public void setInstanceType(String InstanceType) {
+        this.InstanceType = InstanceType;
+    }
+
     public CreateDBInstanceRequest() {
     }
 
@@ -372,6 +395,9 @@ public class CreateDBInstanceRequest extends AbstractModel {
         if (source.UniqSubnetId != null) {
             this.UniqSubnetId = new String(source.UniqSubnetId);
         }
+        if (source.InstanceType != null) {
+            this.InstanceType = new String(source.InstanceType);
+        }
     }
 
 
@@ -392,6 +418,7 @@ public class CreateDBInstanceRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "SecurityGroup.", this.SecurityGroup);
         this.setParamSimple(map, prefix + "UniqVpcId", this.UniqVpcId);
         this.setParamSimple(map, prefix + "UniqSubnetId", this.UniqSubnetId);
+        this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
 
     }
 }
