@@ -48,6 +48,13 @@ public class SignQrCode extends AbstractModel {
     private Long ExpiredTime;
 
     /**
+    * 微信小程序二维码
+    */
+    @SerializedName("WeixinQrCodeUrl")
+    @Expose
+    private String WeixinQrCodeUrl;
+
+    /**
      * Get 二维码ID，为32位字符串。	
 
 注: 需要保留此二维码ID, 用于后序通过<a href="https://qian.tencent.com/developers/partnerApis/templates/ChannelCancelMultiFlowSignQRCode" target="_blank">取消一码多扫二维码</a>关闭这个二维码的签署功能。	 
@@ -107,6 +114,22 @@ public class SignQrCode extends AbstractModel {
         this.ExpiredTime = ExpiredTime;
     }
 
+    /**
+     * Get 微信小程序二维码 
+     * @return WeixinQrCodeUrl 微信小程序二维码
+     */
+    public String getWeixinQrCodeUrl() {
+        return this.WeixinQrCodeUrl;
+    }
+
+    /**
+     * Set 微信小程序二维码
+     * @param WeixinQrCodeUrl 微信小程序二维码
+     */
+    public void setWeixinQrCodeUrl(String WeixinQrCodeUrl) {
+        this.WeixinQrCodeUrl = WeixinQrCodeUrl;
+    }
+
     public SignQrCode() {
     }
 
@@ -124,6 +147,9 @@ public class SignQrCode extends AbstractModel {
         if (source.ExpiredTime != null) {
             this.ExpiredTime = new Long(source.ExpiredTime);
         }
+        if (source.WeixinQrCodeUrl != null) {
+            this.WeixinQrCodeUrl = new String(source.WeixinQrCodeUrl);
+        }
     }
 
 
@@ -134,6 +160,7 @@ public class SignQrCode extends AbstractModel {
         this.setParamSimple(map, prefix + "QrCodeId", this.QrCodeId);
         this.setParamSimple(map, prefix + "QrCodeUrl", this.QrCodeUrl);
         this.setParamSimple(map, prefix + "ExpiredTime", this.ExpiredTime);
+        this.setParamSimple(map, prefix + "WeixinQrCodeUrl", this.WeixinQrCodeUrl);
 
     }
 }

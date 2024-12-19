@@ -24,13 +24,6 @@ import java.util.HashMap;
 public class DeleteOrgServiceAssignRequest extends AbstractModel {
 
     /**
-    * 集团服务ID。可以通过[ListOrganizationService](https://cloud.tencent.com/document/product/850/109561)获取
-    */
-    @SerializedName("ServiceId")
-    @Expose
-    private Long ServiceId;
-
-    /**
     * 委派管理员Uin。
     */
     @SerializedName("MemberUin")
@@ -38,20 +31,18 @@ public class DeleteOrgServiceAssignRequest extends AbstractModel {
     private Long MemberUin;
 
     /**
-     * Get 集团服务ID。可以通过[ListOrganizationService](https://cloud.tencent.com/document/product/850/109561)获取 
-     * @return ServiceId 集团服务ID。可以通过[ListOrganizationService](https://cloud.tencent.com/document/product/850/109561)获取
-     */
-    public Long getServiceId() {
-        return this.ServiceId;
-    }
+    * 集团服务ID。和集团服务产品标识二选一必填，可以通过[ListOrganizationService](https://cloud.tencent.com/document/product/850/109561)获取
+    */
+    @SerializedName("ServiceId")
+    @Expose
+    private Long ServiceId;
 
     /**
-     * Set 集团服务ID。可以通过[ListOrganizationService](https://cloud.tencent.com/document/product/850/109561)获取
-     * @param ServiceId 集团服务ID。可以通过[ListOrganizationService](https://cloud.tencent.com/document/product/850/109561)获取
-     */
-    public void setServiceId(Long ServiceId) {
-        this.ServiceId = ServiceId;
-    }
+    * 集团服务产品标识。和集团服务ID二选一必填，可以通过[ListOrganizationService](https://cloud.tencent.com/document/product/850/109561)获取
+    */
+    @SerializedName("Product")
+    @Expose
+    private String Product;
 
     /**
      * Get 委派管理员Uin。 
@@ -69,6 +60,38 @@ public class DeleteOrgServiceAssignRequest extends AbstractModel {
         this.MemberUin = MemberUin;
     }
 
+    /**
+     * Get 集团服务ID。和集团服务产品标识二选一必填，可以通过[ListOrganizationService](https://cloud.tencent.com/document/product/850/109561)获取 
+     * @return ServiceId 集团服务ID。和集团服务产品标识二选一必填，可以通过[ListOrganizationService](https://cloud.tencent.com/document/product/850/109561)获取
+     */
+    public Long getServiceId() {
+        return this.ServiceId;
+    }
+
+    /**
+     * Set 集团服务ID。和集团服务产品标识二选一必填，可以通过[ListOrganizationService](https://cloud.tencent.com/document/product/850/109561)获取
+     * @param ServiceId 集团服务ID。和集团服务产品标识二选一必填，可以通过[ListOrganizationService](https://cloud.tencent.com/document/product/850/109561)获取
+     */
+    public void setServiceId(Long ServiceId) {
+        this.ServiceId = ServiceId;
+    }
+
+    /**
+     * Get 集团服务产品标识。和集团服务ID二选一必填，可以通过[ListOrganizationService](https://cloud.tencent.com/document/product/850/109561)获取 
+     * @return Product 集团服务产品标识。和集团服务ID二选一必填，可以通过[ListOrganizationService](https://cloud.tencent.com/document/product/850/109561)获取
+     */
+    public String getProduct() {
+        return this.Product;
+    }
+
+    /**
+     * Set 集团服务产品标识。和集团服务ID二选一必填，可以通过[ListOrganizationService](https://cloud.tencent.com/document/product/850/109561)获取
+     * @param Product 集团服务产品标识。和集团服务ID二选一必填，可以通过[ListOrganizationService](https://cloud.tencent.com/document/product/850/109561)获取
+     */
+    public void setProduct(String Product) {
+        this.Product = Product;
+    }
+
     public DeleteOrgServiceAssignRequest() {
     }
 
@@ -77,11 +100,14 @@ public class DeleteOrgServiceAssignRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DeleteOrgServiceAssignRequest(DeleteOrgServiceAssignRequest source) {
+        if (source.MemberUin != null) {
+            this.MemberUin = new Long(source.MemberUin);
+        }
         if (source.ServiceId != null) {
             this.ServiceId = new Long(source.ServiceId);
         }
-        if (source.MemberUin != null) {
-            this.MemberUin = new Long(source.MemberUin);
+        if (source.Product != null) {
+            this.Product = new String(source.Product);
         }
     }
 
@@ -90,8 +116,9 @@ public class DeleteOrgServiceAssignRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ServiceId", this.ServiceId);
         this.setParamSimple(map, prefix + "MemberUin", this.MemberUin);
+        this.setParamSimple(map, prefix + "ServiceId", this.ServiceId);
+        this.setParamSimple(map, prefix + "Product", this.Product);
 
     }
 }

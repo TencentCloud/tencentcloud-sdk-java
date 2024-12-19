@@ -150,14 +150,14 @@ public class DescribeDBInstancesRequest extends AbstractModel {
     private String FilterInstanceType;
 
     /**
-    * 按照实例状态进行筛选
+    * 按照实例状态进行筛选。状态值 -2：已删除； -1：已隔离；0：创建中；1：流程处理中；2：运行中
     */
     @SerializedName("Status")
     @Expose
     private Long [] Status;
 
     /**
-    * 排除实例状态
+    * 排除实例状态。状态值 -2：已删除； -1：已隔离；0：创建中；1：流程处理中；2：运行中
     */
     @SerializedName("ExcludeStatus")
     @Expose
@@ -452,32 +452,32 @@ public class DescribeDBInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get 按照实例状态进行筛选 
-     * @return Status 按照实例状态进行筛选
+     * Get 按照实例状态进行筛选。状态值 -2：已删除； -1：已隔离；0：创建中；1：流程处理中；2：运行中 
+     * @return Status 按照实例状态进行筛选。状态值 -2：已删除； -1：已隔离；0：创建中；1：流程处理中；2：运行中
      */
     public Long [] getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 按照实例状态进行筛选
-     * @param Status 按照实例状态进行筛选
+     * Set 按照实例状态进行筛选。状态值 -2：已删除； -1：已隔离；0：创建中；1：流程处理中；2：运行中
+     * @param Status 按照实例状态进行筛选。状态值 -2：已删除； -1：已隔离；0：创建中；1：流程处理中；2：运行中
      */
     public void setStatus(Long [] Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 排除实例状态 
-     * @return ExcludeStatus 排除实例状态
+     * Get 排除实例状态。状态值 -2：已删除； -1：已隔离；0：创建中；1：流程处理中；2：运行中 
+     * @return ExcludeStatus 排除实例状态。状态值 -2：已删除； -1：已隔离；0：创建中；1：流程处理中；2：运行中
      */
     public Long [] getExcludeStatus() {
         return this.ExcludeStatus;
     }
 
     /**
-     * Set 排除实例状态
-     * @param ExcludeStatus 排除实例状态
+     * Set 排除实例状态。状态值 -2：已删除； -1：已隔离；0：创建中；1：流程处理中；2：运行中
+     * @param ExcludeStatus 排除实例状态。状态值 -2：已删除； -1：已隔离；0：创建中；1：流程处理中；2：运行中
      */
     public void setExcludeStatus(Long [] ExcludeStatus) {
         this.ExcludeStatus = ExcludeStatus;

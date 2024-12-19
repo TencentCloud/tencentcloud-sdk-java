@@ -25,6 +25,7 @@ public class InputMapping extends AbstractModel {
 
     /**
     * 源端路径
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SourcePath")
     @Expose
@@ -32,6 +33,7 @@ public class InputMapping extends AbstractModel {
 
     /**
     * 目的端路径
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DestinationPath")
     @Expose
@@ -39,14 +41,17 @@ public class InputMapping extends AbstractModel {
 
     /**
     * 挂载配置项参数
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MountOptionParameter")
     @Expose
     private String MountOptionParameter;
 
     /**
-     * Get 源端路径 
+     * Get 源端路径
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return SourcePath 源端路径
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSourcePath() {
         return this.SourcePath;
@@ -54,15 +59,19 @@ public class InputMapping extends AbstractModel {
 
     /**
      * Set 源端路径
+注意：此字段可能返回 null，表示取不到有效值。
      * @param SourcePath 源端路径
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSourcePath(String SourcePath) {
         this.SourcePath = SourcePath;
     }
 
     /**
-     * Get 目的端路径 
+     * Get 目的端路径
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return DestinationPath 目的端路径
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDestinationPath() {
         return this.DestinationPath;
@@ -70,15 +79,19 @@ public class InputMapping extends AbstractModel {
 
     /**
      * Set 目的端路径
+注意：此字段可能返回 null，表示取不到有效值。
      * @param DestinationPath 目的端路径
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDestinationPath(String DestinationPath) {
         this.DestinationPath = DestinationPath;
     }
 
     /**
-     * Get 挂载配置项参数 
+     * Get 挂载配置项参数
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return MountOptionParameter 挂载配置项参数
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMountOptionParameter() {
         return this.MountOptionParameter;
@@ -86,7 +99,9 @@ public class InputMapping extends AbstractModel {
 
     /**
      * Set 挂载配置项参数
+注意：此字段可能返回 null，表示取不到有效值。
      * @param MountOptionParameter 挂载配置项参数
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMountOptionParameter(String MountOptionParameter) {
         this.MountOptionParameter = MountOptionParameter;

@@ -25,6 +25,26 @@ public class CreateTaskFromMultiActionRequest extends AbstractModel {
 
     /**
     * 参与演练的实例ID
+CVM ins-xxx
+MySQL cdb-xxx
+CLB lb-xxx
+Redis crs-xxx
+NAT网关 nat-xxx
+Redis crs-xxx
+专线-独享专用通道 dcx-xxx
+标准集群普通节点 {"ClusterId":"cls-xxx","InstanceId":"ins-xxx","LanIP":"1.1.1.1"}
+标准集群Pod {"ClusterId":"cls-xxx","PodName":"podname","NodeName":"1.1.1.1","NameSpace":"ns","Workload":"workload"}
+TDSQL-MySQL(InnoDB) tdsqlshard-xxx
+TDSQL-C cynosdbmysql-xxx
+VPC子网 subnet-xxxx
+CKafka ckafka-xxx
+MariaDB tdsql-xxxx
+PostgreSQL postgres-xxx
+云原生网关 gateway-xxx
+标准集群超级节点 {"ClusterId":"cls-xxx","InstanceId":"eklet-xxx","LanIP":"1.1.1.1,"NodePoolId":"np-xxx"}
+Serverless集群超级节点 {"ClusterId":"cls-xxxx","InstanceId":"eklet-xxxx","LanIP":"1.1.1.1"}
+Elasticsearch集群 es-xxxx
+RabbitMQ amqp-xxxx
     */
     @SerializedName("TaskInstances")
     @Expose
@@ -59,8 +79,48 @@ public class CreateTaskFromMultiActionRequest extends AbstractModel {
     private TaskGroupForAction [] TaskAction;
 
     /**
-     * Get 参与演练的实例ID 
+     * Get 参与演练的实例ID
+CVM ins-xxx
+MySQL cdb-xxx
+CLB lb-xxx
+Redis crs-xxx
+NAT网关 nat-xxx
+Redis crs-xxx
+专线-独享专用通道 dcx-xxx
+标准集群普通节点 {"ClusterId":"cls-xxx","InstanceId":"ins-xxx","LanIP":"1.1.1.1"}
+标准集群Pod {"ClusterId":"cls-xxx","PodName":"podname","NodeName":"1.1.1.1","NameSpace":"ns","Workload":"workload"}
+TDSQL-MySQL(InnoDB) tdsqlshard-xxx
+TDSQL-C cynosdbmysql-xxx
+VPC子网 subnet-xxxx
+CKafka ckafka-xxx
+MariaDB tdsql-xxxx
+PostgreSQL postgres-xxx
+云原生网关 gateway-xxx
+标准集群超级节点 {"ClusterId":"cls-xxx","InstanceId":"eklet-xxx","LanIP":"1.1.1.1,"NodePoolId":"np-xxx"}
+Serverless集群超级节点 {"ClusterId":"cls-xxxx","InstanceId":"eklet-xxxx","LanIP":"1.1.1.1"}
+Elasticsearch集群 es-xxxx
+RabbitMQ amqp-xxxx 
      * @return TaskInstances 参与演练的实例ID
+CVM ins-xxx
+MySQL cdb-xxx
+CLB lb-xxx
+Redis crs-xxx
+NAT网关 nat-xxx
+Redis crs-xxx
+专线-独享专用通道 dcx-xxx
+标准集群普通节点 {"ClusterId":"cls-xxx","InstanceId":"ins-xxx","LanIP":"1.1.1.1"}
+标准集群Pod {"ClusterId":"cls-xxx","PodName":"podname","NodeName":"1.1.1.1","NameSpace":"ns","Workload":"workload"}
+TDSQL-MySQL(InnoDB) tdsqlshard-xxx
+TDSQL-C cynosdbmysql-xxx
+VPC子网 subnet-xxxx
+CKafka ckafka-xxx
+MariaDB tdsql-xxxx
+PostgreSQL postgres-xxx
+云原生网关 gateway-xxx
+标准集群超级节点 {"ClusterId":"cls-xxx","InstanceId":"eklet-xxx","LanIP":"1.1.1.1,"NodePoolId":"np-xxx"}
+Serverless集群超级节点 {"ClusterId":"cls-xxxx","InstanceId":"eklet-xxxx","LanIP":"1.1.1.1"}
+Elasticsearch集群 es-xxxx
+RabbitMQ amqp-xxxx
      */
     public String [] getTaskInstances() {
         return this.TaskInstances;
@@ -68,7 +128,47 @@ public class CreateTaskFromMultiActionRequest extends AbstractModel {
 
     /**
      * Set 参与演练的实例ID
+CVM ins-xxx
+MySQL cdb-xxx
+CLB lb-xxx
+Redis crs-xxx
+NAT网关 nat-xxx
+Redis crs-xxx
+专线-独享专用通道 dcx-xxx
+标准集群普通节点 {"ClusterId":"cls-xxx","InstanceId":"ins-xxx","LanIP":"1.1.1.1"}
+标准集群Pod {"ClusterId":"cls-xxx","PodName":"podname","NodeName":"1.1.1.1","NameSpace":"ns","Workload":"workload"}
+TDSQL-MySQL(InnoDB) tdsqlshard-xxx
+TDSQL-C cynosdbmysql-xxx
+VPC子网 subnet-xxxx
+CKafka ckafka-xxx
+MariaDB tdsql-xxxx
+PostgreSQL postgres-xxx
+云原生网关 gateway-xxx
+标准集群超级节点 {"ClusterId":"cls-xxx","InstanceId":"eklet-xxx","LanIP":"1.1.1.1,"NodePoolId":"np-xxx"}
+Serverless集群超级节点 {"ClusterId":"cls-xxxx","InstanceId":"eklet-xxxx","LanIP":"1.1.1.1"}
+Elasticsearch集群 es-xxxx
+RabbitMQ amqp-xxxx
      * @param TaskInstances 参与演练的实例ID
+CVM ins-xxx
+MySQL cdb-xxx
+CLB lb-xxx
+Redis crs-xxx
+NAT网关 nat-xxx
+Redis crs-xxx
+专线-独享专用通道 dcx-xxx
+标准集群普通节点 {"ClusterId":"cls-xxx","InstanceId":"ins-xxx","LanIP":"1.1.1.1"}
+标准集群Pod {"ClusterId":"cls-xxx","PodName":"podname","NodeName":"1.1.1.1","NameSpace":"ns","Workload":"workload"}
+TDSQL-MySQL(InnoDB) tdsqlshard-xxx
+TDSQL-C cynosdbmysql-xxx
+VPC子网 subnet-xxxx
+CKafka ckafka-xxx
+MariaDB tdsql-xxxx
+PostgreSQL postgres-xxx
+云原生网关 gateway-xxx
+标准集群超级节点 {"ClusterId":"cls-xxx","InstanceId":"eklet-xxx","LanIP":"1.1.1.1,"NodePoolId":"np-xxx"}
+Serverless集群超级节点 {"ClusterId":"cls-xxxx","InstanceId":"eklet-xxxx","LanIP":"1.1.1.1"}
+Elasticsearch集群 es-xxxx
+RabbitMQ amqp-xxxx
      */
     public void setTaskInstances(String [] TaskInstances) {
         this.TaskInstances = TaskInstances;

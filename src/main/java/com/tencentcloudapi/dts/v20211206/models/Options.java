@@ -104,6 +104,14 @@ public class Options extends AbstractModel {
     private Long AutoRetryTimeRangeMinutes;
 
     /**
+    * 同步到kafka链路指定位点。目前只支持时间格式：yyyy-mm-dd hh:mm:ss。如果没有指定位点，为空。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("StartPosition")
+    @Expose
+    private String StartPosition;
+
+    /**
     * 同步到kafka链路是否过滤掉begin和commit消息。目前仅mysql2kafka链路支持
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -320,6 +328,26 @@ public class Options extends AbstractModel {
     }
 
     /**
+     * Get 同步到kafka链路指定位点。目前只支持时间格式：yyyy-mm-dd hh:mm:ss。如果没有指定位点，为空。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return StartPosition 同步到kafka链路指定位点。目前只支持时间格式：yyyy-mm-dd hh:mm:ss。如果没有指定位点，为空。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getStartPosition() {
+        return this.StartPosition;
+    }
+
+    /**
+     * Set 同步到kafka链路指定位点。目前只支持时间格式：yyyy-mm-dd hh:mm:ss。如果没有指定位点，为空。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param StartPosition 同步到kafka链路指定位点。目前只支持时间格式：yyyy-mm-dd hh:mm:ss。如果没有指定位点，为空。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setStartPosition(String StartPosition) {
+        this.StartPosition = StartPosition;
+    }
+
+    /**
      * Get 同步到kafka链路是否过滤掉begin和commit消息。目前仅mysql2kafka链路支持
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return FilterBeginCommit 同步到kafka链路是否过滤掉begin和commit消息。目前仅mysql2kafka链路支持
@@ -403,6 +431,9 @@ public class Options extends AbstractModel {
         if (source.AutoRetryTimeRangeMinutes != null) {
             this.AutoRetryTimeRangeMinutes = new Long(source.AutoRetryTimeRangeMinutes);
         }
+        if (source.StartPosition != null) {
+            this.StartPosition = new String(source.StartPosition);
+        }
         if (source.FilterBeginCommit != null) {
             this.FilterBeginCommit = new Boolean(source.FilterBeginCommit);
         }
@@ -426,6 +457,7 @@ public class Options extends AbstractModel {
         this.setParamObj(map, prefix + "KafkaOption.", this.KafkaOption);
         this.setParamObj(map, prefix + "RateLimitOption.", this.RateLimitOption);
         this.setParamSimple(map, prefix + "AutoRetryTimeRangeMinutes", this.AutoRetryTimeRangeMinutes);
+        this.setParamSimple(map, prefix + "StartPosition", this.StartPosition);
         this.setParamSimple(map, prefix + "FilterBeginCommit", this.FilterBeginCommit);
         this.setParamSimple(map, prefix + "FilterCheckpoint", this.FilterCheckpoint);
 

@@ -1396,6 +1396,22 @@ Web链接访问后，会根据子客企业(**Agent中ProxyOrganizationOpenId表�
     }
 
     /**
+     *生成合成后的各类企业授权书，包括：
+- 企业认证超管授权书
+- 超管变更授权书
+- 企业注销授权书
+
+注: 需自行保证传入真实的企业/法人/超管信息，否则后续的审核将会拒绝。
+     * @param req CreateOrganizationAuthFileRequest
+     * @return CreateOrganizationAuthFileResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateOrganizationAuthFileResponse CreateOrganizationAuthFile(CreateOrganizationAuthFileRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateOrganizationAuthFile", CreateOrganizationAuthFileResponse.class);
+    }
+
+    /**
      *创建一个用于他方自动签授权的链接（可选择他方授权或我方授权）。通过这个链接，合作方企业可以直接进入小程序，进行自动签授权操作。
 
 如果授权企业尚未开通企业自动签功能，该链接还将引导他们首先开通本企业的自动签服务

@@ -59,6 +59,13 @@ public class DescribeProjectListRequest extends AbstractModel {
     private String ModuleCollection;
 
     /**
+    * moduleId集合
+    */
+    @SerializedName("ModuleIdList")
+    @Expose
+    private String [] ModuleIdList;
+
+    /**
      * Get 页容，初版默认20，将来可能根据屏幕宽度动态变化 
      * @return PageSize 页容，初版默认20，将来可能根据屏幕宽度动态变化
      */
@@ -138,6 +145,22 @@ public class DescribeProjectListRequest extends AbstractModel {
         this.ModuleCollection = ModuleCollection;
     }
 
+    /**
+     * Get moduleId集合 
+     * @return ModuleIdList moduleId集合
+     */
+    public String [] getModuleIdList() {
+        return this.ModuleIdList;
+    }
+
+    /**
+     * Set moduleId集合
+     * @param ModuleIdList moduleId集合
+     */
+    public void setModuleIdList(String [] ModuleIdList) {
+        this.ModuleIdList = ModuleIdList;
+    }
+
     public DescribeProjectListRequest() {
     }
 
@@ -161,6 +184,12 @@ public class DescribeProjectListRequest extends AbstractModel {
         if (source.ModuleCollection != null) {
             this.ModuleCollection = new String(source.ModuleCollection);
         }
+        if (source.ModuleIdList != null) {
+            this.ModuleIdList = new String[source.ModuleIdList.length];
+            for (int i = 0; i < source.ModuleIdList.length; i++) {
+                this.ModuleIdList[i] = new String(source.ModuleIdList[i]);
+            }
+        }
     }
 
 
@@ -173,6 +202,7 @@ public class DescribeProjectListRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Keyword", this.Keyword);
         this.setParamSimple(map, prefix + "AllPage", this.AllPage);
         this.setParamSimple(map, prefix + "ModuleCollection", this.ModuleCollection);
+        this.setParamArraySimple(map, prefix + "ModuleIdList.", this.ModuleIdList);
 
     }
 }

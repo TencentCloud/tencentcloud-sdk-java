@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeDatabasesRequest extends AbstractModel {
 
     /**
-    * 实例 ID，形如：dcdbt-ow7t8lmc。
+    * 实例 ID，形如：tdsql-e9tklsgz。
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-     * Get 实例 ID，形如：dcdbt-ow7t8lmc。 
-     * @return InstanceId 实例 ID，形如：dcdbt-ow7t8lmc。
+     * Get 实例 ID，形如：tdsql-e9tklsgz。 
+     * @return InstanceId 实例 ID，形如：tdsql-e9tklsgz。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例 ID，形如：dcdbt-ow7t8lmc。
-     * @param InstanceId 实例 ID，形如：dcdbt-ow7t8lmc。
+     * Set 实例 ID，形如：tdsql-e9tklsgz。
+     * @param InstanceId 实例 ID，形如：tdsql-e9tklsgz。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

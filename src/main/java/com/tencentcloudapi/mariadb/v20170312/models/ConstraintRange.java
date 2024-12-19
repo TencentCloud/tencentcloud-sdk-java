@@ -25,6 +25,7 @@ public class ConstraintRange extends AbstractModel {
 
     /**
     * 约束类型为section时的最小值
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Min")
     @Expose
@@ -32,14 +33,17 @@ public class ConstraintRange extends AbstractModel {
 
     /**
     * 约束类型为section时的最大值
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Max")
     @Expose
     private String Max;
 
     /**
-     * Get 约束类型为section时的最小值 
+     * Get 约束类型为section时的最小值
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Min 约束类型为section时的最小值
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMin() {
         return this.Min;
@@ -47,15 +51,19 @@ public class ConstraintRange extends AbstractModel {
 
     /**
      * Set 约束类型为section时的最小值
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Min 约束类型为section时的最小值
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMin(String Min) {
         this.Min = Min;
     }
 
     /**
-     * Get 约束类型为section时的最大值 
+     * Get 约束类型为section时的最大值
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Max 约束类型为section时的最大值
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMax() {
         return this.Max;
@@ -63,7 +71,9 @@ public class ConstraintRange extends AbstractModel {
 
     /**
      * Set 约束类型为section时的最大值
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Max 约束类型为section时的最大值
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMax(String Max) {
         this.Max = Max;

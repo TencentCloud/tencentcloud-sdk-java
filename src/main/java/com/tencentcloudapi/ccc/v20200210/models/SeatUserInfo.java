@@ -83,6 +83,13 @@ else:自定义角色ID
     private Long Role;
 
     /**
+    * 座席分机号（1 到 8 打头，4 - 6 位）
+    */
+    @SerializedName("ExtensionNumber")
+    @Expose
+    private String ExtensionNumber;
+
+    /**
      * Get 座席名称 
      * @return Name 座席名称
      */
@@ -222,6 +229,22 @@ else:自定义角色ID
         this.Role = Role;
     }
 
+    /**
+     * Get 座席分机号（1 到 8 打头，4 - 6 位） 
+     * @return ExtensionNumber 座席分机号（1 到 8 打头，4 - 6 位）
+     */
+    public String getExtensionNumber() {
+        return this.ExtensionNumber;
+    }
+
+    /**
+     * Set 座席分机号（1 到 8 打头，4 - 6 位）
+     * @param ExtensionNumber 座席分机号（1 到 8 打头，4 - 6 位）
+     */
+    public void setExtensionNumber(String ExtensionNumber) {
+        this.ExtensionNumber = ExtensionNumber;
+    }
+
     public SeatUserInfo() {
     }
 
@@ -257,6 +280,9 @@ else:自定义角色ID
         if (source.Role != null) {
             this.Role = new Long(source.Role);
         }
+        if (source.ExtensionNumber != null) {
+            this.ExtensionNumber = new String(source.ExtensionNumber);
+        }
     }
 
 
@@ -272,6 +298,7 @@ else:自定义角色ID
         this.setParamSimple(map, prefix + "UserId", this.UserId);
         this.setParamArraySimple(map, prefix + "SkillGroupNameList.", this.SkillGroupNameList);
         this.setParamSimple(map, prefix + "Role", this.Role);
+        this.setParamSimple(map, prefix + "ExtensionNumber", this.ExtensionNumber);
 
     }
 }

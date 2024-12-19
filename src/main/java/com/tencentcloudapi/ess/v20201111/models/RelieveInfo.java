@@ -53,7 +53,7 @@ public class RelieveInfo extends AbstractModel {
     private String OriginalOtherSettlement;
 
     /**
-    * 其他约定，长度不能超过200，只能由中文、字母、数字、中文标点和英文标点组成(不支持表情)。
+    * 其他约定（如约定的与解除协议存在冲突的，以【其他约定】为准），最大支持200个字，只能由中文、字母、数字、中文标点和英文标点组成(不支持表情)。
     */
     @SerializedName("OtherDeals")
     @Expose
@@ -128,16 +128,16 @@ public class RelieveInfo extends AbstractModel {
     }
 
     /**
-     * Get 其他约定，长度不能超过200，只能由中文、字母、数字、中文标点和英文标点组成(不支持表情)。 
-     * @return OtherDeals 其他约定，长度不能超过200，只能由中文、字母、数字、中文标点和英文标点组成(不支持表情)。
+     * Get 其他约定（如约定的与解除协议存在冲突的，以【其他约定】为准），最大支持200个字，只能由中文、字母、数字、中文标点和英文标点组成(不支持表情)。 
+     * @return OtherDeals 其他约定（如约定的与解除协议存在冲突的，以【其他约定】为准），最大支持200个字，只能由中文、字母、数字、中文标点和英文标点组成(不支持表情)。
      */
     public String getOtherDeals() {
         return this.OtherDeals;
     }
 
     /**
-     * Set 其他约定，长度不能超过200，只能由中文、字母、数字、中文标点和英文标点组成(不支持表情)。
-     * @param OtherDeals 其他约定，长度不能超过200，只能由中文、字母、数字、中文标点和英文标点组成(不支持表情)。
+     * Set 其他约定（如约定的与解除协议存在冲突的，以【其他约定】为准），最大支持200个字，只能由中文、字母、数字、中文标点和英文标点组成(不支持表情)。
+     * @param OtherDeals 其他约定（如约定的与解除协议存在冲突的，以【其他约定】为准），最大支持200个字，只能由中文、字母、数字、中文标点和英文标点组成(不支持表情)。
      */
     public void setOtherDeals(String OtherDeals) {
         this.OtherDeals = OtherDeals;

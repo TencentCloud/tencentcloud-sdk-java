@@ -927,6 +927,22 @@ public class EssClient extends AbstractClient{
     }
 
     /**
+     *生成合成后的各类企业授权书，包括：
+- 企业认证超管授权书
+- 超管变更授权书
+- 企业注销授权书
+
+注: 需自行保证传入真实的企业/法人/超管信息，否则后续的审核将会拒绝。
+     * @param req CreateOrganizationAuthFileRequest
+     * @return CreateOrganizationAuthFileResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateOrganizationAuthFileResponse CreateOrganizationAuthFile(CreateOrganizationAuthFileRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateOrganizationAuthFile", CreateOrganizationAuthFileResponse.class);
+    }
+
+    /**
      *本接口（CreateOrganizationAuthUrl）的主要功能是生成合作企业的认证链接。
 
 在生成链接的过程中，可以提供一部分已知信息，以便为对方进行认证流程提供便利。

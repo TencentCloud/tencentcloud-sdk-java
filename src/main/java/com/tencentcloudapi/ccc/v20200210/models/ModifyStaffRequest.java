@@ -87,6 +87,13 @@ public class ModifyStaffRequest extends AbstractModel {
     private Long UseMobileAccept;
 
     /**
+    * 座席分机号（1 到 8 打头，4 - 6 位）
+    */
+    @SerializedName("ExtensionNumber")
+    @Expose
+    private String ExtensionNumber;
+
+    /**
      * Get 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc 
      * @return SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      */
@@ -230,6 +237,22 @@ public class ModifyStaffRequest extends AbstractModel {
         this.UseMobileAccept = UseMobileAccept;
     }
 
+    /**
+     * Get 座席分机号（1 到 8 打头，4 - 6 位） 
+     * @return ExtensionNumber 座席分机号（1 到 8 打头，4 - 6 位）
+     */
+    public String getExtensionNumber() {
+        return this.ExtensionNumber;
+    }
+
+    /**
+     * Set 座席分机号（1 到 8 打头，4 - 6 位）
+     * @param ExtensionNumber 座席分机号（1 到 8 打头，4 - 6 位）
+     */
+    public void setExtensionNumber(String ExtensionNumber) {
+        this.ExtensionNumber = ExtensionNumber;
+    }
+
     public ModifyStaffRequest() {
     }
 
@@ -268,6 +291,9 @@ public class ModifyStaffRequest extends AbstractModel {
         if (source.UseMobileAccept != null) {
             this.UseMobileAccept = new Long(source.UseMobileAccept);
         }
+        if (source.ExtensionNumber != null) {
+            this.ExtensionNumber = new String(source.ExtensionNumber);
+        }
     }
 
 
@@ -284,6 +310,7 @@ public class ModifyStaffRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "SkillGroupIds.", this.SkillGroupIds);
         this.setParamSimple(map, prefix + "UseMobileCallOut", this.UseMobileCallOut);
         this.setParamSimple(map, prefix + "UseMobileAccept", this.UseMobileAccept);
+        this.setParamSimple(map, prefix + "ExtensionNumber", this.ExtensionNumber);
 
     }
 }

@@ -24,7 +24,8 @@ import java.util.HashMap;
 public class RedirectInfo extends AbstractModel {
 
     /**
-    * 标准输出重定向路径
+    * 标准输出重定向路径; 
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StdoutRedirectPath")
     @Expose
@@ -32,6 +33,7 @@ public class RedirectInfo extends AbstractModel {
 
     /**
     * 标准错误重定向路径
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StderrRedirectPath")
     @Expose
@@ -39,6 +41,7 @@ public class RedirectInfo extends AbstractModel {
 
     /**
     * 标准输出重定向文件名，支持三个占位符${BATCH_JOB_ID}、${BATCH_TASK_NAME}、${BATCH_TASK_INSTANCE_INDEX}
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StdoutRedirectFileName")
     @Expose
@@ -46,30 +49,37 @@ public class RedirectInfo extends AbstractModel {
 
     /**
     * 标准错误重定向文件名，支持三个占位符${BATCH_JOB_ID}、${BATCH_TASK_NAME}、${BATCH_TASK_INSTANCE_INDEX}
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StderrRedirectFileName")
     @Expose
     private String StderrRedirectFileName;
 
     /**
-     * Get 标准输出重定向路径 
-     * @return StdoutRedirectPath 标准输出重定向路径
+     * Get 标准输出重定向路径; 
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return StdoutRedirectPath 标准输出重定向路径; 
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStdoutRedirectPath() {
         return this.StdoutRedirectPath;
     }
 
     /**
-     * Set 标准输出重定向路径
-     * @param StdoutRedirectPath 标准输出重定向路径
+     * Set 标准输出重定向路径; 
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param StdoutRedirectPath 标准输出重定向路径; 
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStdoutRedirectPath(String StdoutRedirectPath) {
         this.StdoutRedirectPath = StdoutRedirectPath;
     }
 
     /**
-     * Get 标准错误重定向路径 
+     * Get 标准错误重定向路径
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return StderrRedirectPath 标准错误重定向路径
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStderrRedirectPath() {
         return this.StderrRedirectPath;
@@ -77,15 +87,19 @@ public class RedirectInfo extends AbstractModel {
 
     /**
      * Set 标准错误重定向路径
+注意：此字段可能返回 null，表示取不到有效值。
      * @param StderrRedirectPath 标准错误重定向路径
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStderrRedirectPath(String StderrRedirectPath) {
         this.StderrRedirectPath = StderrRedirectPath;
     }
 
     /**
-     * Get 标准输出重定向文件名，支持三个占位符${BATCH_JOB_ID}、${BATCH_TASK_NAME}、${BATCH_TASK_INSTANCE_INDEX} 
+     * Get 标准输出重定向文件名，支持三个占位符${BATCH_JOB_ID}、${BATCH_TASK_NAME}、${BATCH_TASK_INSTANCE_INDEX}
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return StdoutRedirectFileName 标准输出重定向文件名，支持三个占位符${BATCH_JOB_ID}、${BATCH_TASK_NAME}、${BATCH_TASK_INSTANCE_INDEX}
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStdoutRedirectFileName() {
         return this.StdoutRedirectFileName;
@@ -93,15 +107,19 @@ public class RedirectInfo extends AbstractModel {
 
     /**
      * Set 标准输出重定向文件名，支持三个占位符${BATCH_JOB_ID}、${BATCH_TASK_NAME}、${BATCH_TASK_INSTANCE_INDEX}
+注意：此字段可能返回 null，表示取不到有效值。
      * @param StdoutRedirectFileName 标准输出重定向文件名，支持三个占位符${BATCH_JOB_ID}、${BATCH_TASK_NAME}、${BATCH_TASK_INSTANCE_INDEX}
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStdoutRedirectFileName(String StdoutRedirectFileName) {
         this.StdoutRedirectFileName = StdoutRedirectFileName;
     }
 
     /**
-     * Get 标准错误重定向文件名，支持三个占位符${BATCH_JOB_ID}、${BATCH_TASK_NAME}、${BATCH_TASK_INSTANCE_INDEX} 
+     * Get 标准错误重定向文件名，支持三个占位符${BATCH_JOB_ID}、${BATCH_TASK_NAME}、${BATCH_TASK_INSTANCE_INDEX}
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return StderrRedirectFileName 标准错误重定向文件名，支持三个占位符${BATCH_JOB_ID}、${BATCH_TASK_NAME}、${BATCH_TASK_INSTANCE_INDEX}
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStderrRedirectFileName() {
         return this.StderrRedirectFileName;
@@ -109,7 +127,9 @@ public class RedirectInfo extends AbstractModel {
 
     /**
      * Set 标准错误重定向文件名，支持三个占位符${BATCH_JOB_ID}、${BATCH_TASK_NAME}、${BATCH_TASK_INSTANCE_INDEX}
+注意：此字段可能返回 null，表示取不到有效值。
      * @param StderrRedirectFileName 标准错误重定向文件名，支持三个占位符${BATCH_JOB_ID}、${BATCH_TASK_NAME}、${BATCH_TASK_INSTANCE_INDEX}
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStderrRedirectFileName(String StderrRedirectFileName) {
         this.StderrRedirectFileName = StderrRedirectFileName;

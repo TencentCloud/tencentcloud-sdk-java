@@ -43,7 +43,8 @@ public class AddOnSubtitle extends AbstractModel {
     private MediaInputInfo Subtitle;
 
     /**
-    * 字幕名称	
+    * 字幕名称	。
+注意：仅支持中文、英文、数字、空格、下划线(_)、短横线(-)、句点(.)和中英文括号，长度不能超过64个字符。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubtitleName")
@@ -103,9 +104,11 @@ public class AddOnSubtitle extends AbstractModel {
     }
 
     /**
-     * Get 字幕名称	
+     * Get 字幕名称	。
+注意：仅支持中文、英文、数字、空格、下划线(_)、短横线(-)、句点(.)和中英文括号，长度不能超过64个字符。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SubtitleName 字幕名称	
+     * @return SubtitleName 字幕名称	。
+注意：仅支持中文、英文、数字、空格、下划线(_)、短横线(-)、句点(.)和中英文括号，长度不能超过64个字符。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubtitleName() {
@@ -113,9 +116,11 @@ public class AddOnSubtitle extends AbstractModel {
     }
 
     /**
-     * Set 字幕名称	
+     * Set 字幕名称	。
+注意：仅支持中文、英文、数字、空格、下划线(_)、短横线(-)、句点(.)和中英文括号，长度不能超过64个字符。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SubtitleName 字幕名称	
+     * @param SubtitleName 字幕名称	。
+注意：仅支持中文、英文、数字、空格、下划线(_)、短横线(-)、句点(.)和中英文括号，长度不能超过64个字符。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubtitleName(String SubtitleName) {

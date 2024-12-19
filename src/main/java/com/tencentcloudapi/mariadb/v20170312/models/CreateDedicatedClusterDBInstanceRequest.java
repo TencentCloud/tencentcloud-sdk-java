@@ -94,7 +94,7 @@ public class CreateDedicatedClusterDBInstanceRequest extends AbstractModel {
     private String SubnetId;
 
     /**
-    * db类型，不传默认0
+    * db类型，不传默认8.0
     */
     @SerializedName("DbVersionId")
     @Expose
@@ -366,16 +366,16 @@ public class CreateDedicatedClusterDBInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get db类型，不传默认0 
-     * @return DbVersionId db类型，不传默认0
+     * Get db类型，不传默认8.0 
+     * @return DbVersionId db类型，不传默认8.0
      */
     public String getDbVersionId() {
         return this.DbVersionId;
     }
 
     /**
-     * Set db类型，不传默认0
-     * @param DbVersionId db类型，不传默认0
+     * Set db类型，不传默认8.0
+     * @param DbVersionId db类型，不传默认8.0
      */
     public void setDbVersionId(String DbVersionId) {
         this.DbVersionId = DbVersionId;

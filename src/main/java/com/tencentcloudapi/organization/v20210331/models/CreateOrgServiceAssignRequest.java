@@ -24,18 +24,25 @@ import java.util.HashMap;
 public class CreateOrgServiceAssignRequest extends AbstractModel {
 
     /**
-    * 集团服务ID。可以通过[ListOrganizationService](https://cloud.tencent.com/document/product/850/109561)获取
+    * 委派管理员Uin列表。 最大长度20个
+    */
+    @SerializedName("MemberUins")
+    @Expose
+    private Long [] MemberUins;
+
+    /**
+    * 集团服务ID。和集团服务产品标识二选一必填，可以通过[ListOrganizationService](https://cloud.tencent.com/document/product/850/109561)获取
     */
     @SerializedName("ServiceId")
     @Expose
     private Long ServiceId;
 
     /**
-    * 委派管理员Uin列表。 最大长度20个
+    * 集团服务产品标识。和集团服务ID二选一必填，可以通过[ListOrganizationService](https://cloud.tencent.com/document/product/850/109561)获取
     */
-    @SerializedName("MemberUins")
+    @SerializedName("Product")
     @Expose
-    private Long [] MemberUins;
+    private String Product;
 
     /**
     * 委派管理员管理范围。 取值：1-全部成员 2-部分成员，默认值1
@@ -59,22 +66,6 @@ public class CreateOrgServiceAssignRequest extends AbstractModel {
     private Long [] ManagementScopeNodeIds;
 
     /**
-     * Get 集团服务ID。可以通过[ListOrganizationService](https://cloud.tencent.com/document/product/850/109561)获取 
-     * @return ServiceId 集团服务ID。可以通过[ListOrganizationService](https://cloud.tencent.com/document/product/850/109561)获取
-     */
-    public Long getServiceId() {
-        return this.ServiceId;
-    }
-
-    /**
-     * Set 集团服务ID。可以通过[ListOrganizationService](https://cloud.tencent.com/document/product/850/109561)获取
-     * @param ServiceId 集团服务ID。可以通过[ListOrganizationService](https://cloud.tencent.com/document/product/850/109561)获取
-     */
-    public void setServiceId(Long ServiceId) {
-        this.ServiceId = ServiceId;
-    }
-
-    /**
      * Get 委派管理员Uin列表。 最大长度20个 
      * @return MemberUins 委派管理员Uin列表。 最大长度20个
      */
@@ -88,6 +79,38 @@ public class CreateOrgServiceAssignRequest extends AbstractModel {
      */
     public void setMemberUins(Long [] MemberUins) {
         this.MemberUins = MemberUins;
+    }
+
+    /**
+     * Get 集团服务ID。和集团服务产品标识二选一必填，可以通过[ListOrganizationService](https://cloud.tencent.com/document/product/850/109561)获取 
+     * @return ServiceId 集团服务ID。和集团服务产品标识二选一必填，可以通过[ListOrganizationService](https://cloud.tencent.com/document/product/850/109561)获取
+     */
+    public Long getServiceId() {
+        return this.ServiceId;
+    }
+
+    /**
+     * Set 集团服务ID。和集团服务产品标识二选一必填，可以通过[ListOrganizationService](https://cloud.tencent.com/document/product/850/109561)获取
+     * @param ServiceId 集团服务ID。和集团服务产品标识二选一必填，可以通过[ListOrganizationService](https://cloud.tencent.com/document/product/850/109561)获取
+     */
+    public void setServiceId(Long ServiceId) {
+        this.ServiceId = ServiceId;
+    }
+
+    /**
+     * Get 集团服务产品标识。和集团服务ID二选一必填，可以通过[ListOrganizationService](https://cloud.tencent.com/document/product/850/109561)获取 
+     * @return Product 集团服务产品标识。和集团服务ID二选一必填，可以通过[ListOrganizationService](https://cloud.tencent.com/document/product/850/109561)获取
+     */
+    public String getProduct() {
+        return this.Product;
+    }
+
+    /**
+     * Set 集团服务产品标识。和集团服务ID二选一必填，可以通过[ListOrganizationService](https://cloud.tencent.com/document/product/850/109561)获取
+     * @param Product 集团服务产品标识。和集团服务ID二选一必填，可以通过[ListOrganizationService](https://cloud.tencent.com/document/product/850/109561)获取
+     */
+    public void setProduct(String Product) {
+        this.Product = Product;
     }
 
     /**
@@ -146,14 +169,17 @@ public class CreateOrgServiceAssignRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CreateOrgServiceAssignRequest(CreateOrgServiceAssignRequest source) {
-        if (source.ServiceId != null) {
-            this.ServiceId = new Long(source.ServiceId);
-        }
         if (source.MemberUins != null) {
             this.MemberUins = new Long[source.MemberUins.length];
             for (int i = 0; i < source.MemberUins.length; i++) {
                 this.MemberUins[i] = new Long(source.MemberUins[i]);
             }
+        }
+        if (source.ServiceId != null) {
+            this.ServiceId = new Long(source.ServiceId);
+        }
+        if (source.Product != null) {
+            this.Product = new String(source.Product);
         }
         if (source.ManagementScope != null) {
             this.ManagementScope = new Long(source.ManagementScope);
@@ -177,8 +203,9 @@ public class CreateOrgServiceAssignRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ServiceId", this.ServiceId);
         this.setParamArraySimple(map, prefix + "MemberUins.", this.MemberUins);
+        this.setParamSimple(map, prefix + "ServiceId", this.ServiceId);
+        this.setParamSimple(map, prefix + "Product", this.Product);
         this.setParamSimple(map, prefix + "ManagementScope", this.ManagementScope);
         this.setParamArraySimple(map, prefix + "ManagementScopeUins.", this.ManagementScopeUins);
         this.setParamArraySimple(map, prefix + "ManagementScopeNodeIds.", this.ManagementScopeNodeIds);

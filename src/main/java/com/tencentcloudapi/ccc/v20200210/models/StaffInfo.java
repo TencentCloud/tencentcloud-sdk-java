@@ -80,6 +80,13 @@ public class StaffInfo extends AbstractModel {
     private Long LastModifyTimestamp;
 
     /**
+    * 座席分机号（1 到 8 打头，4 - 6 位）
+    */
+    @SerializedName("ExtensionNumber")
+    @Expose
+    private String ExtensionNumber;
+
+    /**
      * Get 座席名称 
      * @return Name 座席名称
      */
@@ -207,6 +214,22 @@ public class StaffInfo extends AbstractModel {
         this.LastModifyTimestamp = LastModifyTimestamp;
     }
 
+    /**
+     * Get 座席分机号（1 到 8 打头，4 - 6 位） 
+     * @return ExtensionNumber 座席分机号（1 到 8 打头，4 - 6 位）
+     */
+    public String getExtensionNumber() {
+        return this.ExtensionNumber;
+    }
+
+    /**
+     * Set 座席分机号（1 到 8 打头，4 - 6 位）
+     * @param ExtensionNumber 座席分机号（1 到 8 打头，4 - 6 位）
+     */
+    public void setExtensionNumber(String ExtensionNumber) {
+        this.ExtensionNumber = ExtensionNumber;
+    }
+
     public StaffInfo() {
     }
 
@@ -242,6 +265,9 @@ public class StaffInfo extends AbstractModel {
         if (source.LastModifyTimestamp != null) {
             this.LastModifyTimestamp = new Long(source.LastModifyTimestamp);
         }
+        if (source.ExtensionNumber != null) {
+            this.ExtensionNumber = new String(source.ExtensionNumber);
+        }
     }
 
 
@@ -257,6 +283,7 @@ public class StaffInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "RoleId", this.RoleId);
         this.setParamArrayObj(map, prefix + "SkillGroupList.", this.SkillGroupList);
         this.setParamSimple(map, prefix + "LastModifyTimestamp", this.LastModifyTimestamp);
+        this.setParamSimple(map, prefix + "ExtensionNumber", this.ExtensionNumber);
 
     }
 }

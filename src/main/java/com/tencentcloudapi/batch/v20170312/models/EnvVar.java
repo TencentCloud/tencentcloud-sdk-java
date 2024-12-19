@@ -25,6 +25,7 @@ public class EnvVar extends AbstractModel {
 
     /**
     * 环境变量名称
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -32,14 +33,17 @@ public class EnvVar extends AbstractModel {
 
     /**
     * 环境变量取值
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Value")
     @Expose
     private String Value;
 
     /**
-     * Get 环境变量名称 
+     * Get 环境变量名称
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Name 环境变量名称
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -47,15 +51,19 @@ public class EnvVar extends AbstractModel {
 
     /**
      * Set 环境变量名称
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 环境变量名称
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 环境变量取值 
+     * Get 环境变量取值
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Value 环境变量取值
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getValue() {
         return this.Value;
@@ -63,7 +71,9 @@ public class EnvVar extends AbstractModel {
 
     /**
      * Set 环境变量取值
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Value 环境变量取值
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValue(String Value) {
         this.Value = Value;

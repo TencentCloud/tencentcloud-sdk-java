@@ -66,7 +66,9 @@ public class ModifyAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
 
     /**
     * 转自适应码流输入流参数信息，最多输入10路流。
-注意：各个流的帧率必须保持一致；如果不一致，采用第一个流的帧率作为输出帧率。
+注意：
+1、各个流的帧率必须保持一致；如果不一致，采用第一个流的帧率作为输出帧率。
+2、修改子流信息时需要全量修改添加所有字段值，否则没填字段会使用默认值。
     */
     @SerializedName("StreamInfos")
     @Expose
@@ -80,16 +82,16 @@ public class ModifyAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
     private String Comment;
 
     /**
-    * 是否为纯音频，0表示视频模版，1表示纯音频模版
+    * 是否为纯音频，0表示视频模板，1表示纯音频模板
 当值为1：
 1. StreamInfos.N.RemoveVideo=1
 2. StreamInfos.N.RemoveAudio=0
 3. StreamInfos.N.Video.Codec=copy
-
 当值为0：
-
 1. StreamInfos.N.Video.Codec不能为copy
 2. StreamInfos.N.Video.Fps不能为null
+注意：
+此值只是区分模板类型，任务使用RemoveAudio和RemoveVideo的值
     */
     @SerializedName("PureAudio")
     @Expose
@@ -209,9 +211,13 @@ public class ModifyAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
 
     /**
      * Get 转自适应码流输入流参数信息，最多输入10路流。
-注意：各个流的帧率必须保持一致；如果不一致，采用第一个流的帧率作为输出帧率。 
+注意：
+1、各个流的帧率必须保持一致；如果不一致，采用第一个流的帧率作为输出帧率。
+2、修改子流信息时需要全量修改添加所有字段值，否则没填字段会使用默认值。 
      * @return StreamInfos 转自适应码流输入流参数信息，最多输入10路流。
-注意：各个流的帧率必须保持一致；如果不一致，采用第一个流的帧率作为输出帧率。
+注意：
+1、各个流的帧率必须保持一致；如果不一致，采用第一个流的帧率作为输出帧率。
+2、修改子流信息时需要全量修改添加所有字段值，否则没填字段会使用默认值。
      */
     public AdaptiveStreamTemplate [] getStreamInfos() {
         return this.StreamInfos;
@@ -219,9 +225,13 @@ public class ModifyAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
 
     /**
      * Set 转自适应码流输入流参数信息，最多输入10路流。
-注意：各个流的帧率必须保持一致；如果不一致，采用第一个流的帧率作为输出帧率。
+注意：
+1、各个流的帧率必须保持一致；如果不一致，采用第一个流的帧率作为输出帧率。
+2、修改子流信息时需要全量修改添加所有字段值，否则没填字段会使用默认值。
      * @param StreamInfos 转自适应码流输入流参数信息，最多输入10路流。
-注意：各个流的帧率必须保持一致；如果不一致，采用第一个流的帧率作为输出帧率。
+注意：
+1、各个流的帧率必须保持一致；如果不一致，采用第一个流的帧率作为输出帧率。
+2、修改子流信息时需要全量修改添加所有字段值，否则没填字段会使用默认值。
      */
     public void setStreamInfos(AdaptiveStreamTemplate [] StreamInfos) {
         this.StreamInfos = StreamInfos;
@@ -244,52 +254,52 @@ public class ModifyAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
     }
 
     /**
-     * Get 是否为纯音频，0表示视频模版，1表示纯音频模版
+     * Get 是否为纯音频，0表示视频模板，1表示纯音频模板
 当值为1：
 1. StreamInfos.N.RemoveVideo=1
 2. StreamInfos.N.RemoveAudio=0
 3. StreamInfos.N.Video.Codec=copy
-
 当值为0：
-
-1. StreamInfos.N.Video.Codec不能为copy
-2. StreamInfos.N.Video.Fps不能为null 
-     * @return PureAudio 是否为纯音频，0表示视频模版，1表示纯音频模版
-当值为1：
-1. StreamInfos.N.RemoveVideo=1
-2. StreamInfos.N.RemoveAudio=0
-3. StreamInfos.N.Video.Codec=copy
-
-当值为0：
-
 1. StreamInfos.N.Video.Codec不能为copy
 2. StreamInfos.N.Video.Fps不能为null
+注意：
+此值只是区分模板类型，任务使用RemoveAudio和RemoveVideo的值 
+     * @return PureAudio 是否为纯音频，0表示视频模板，1表示纯音频模板
+当值为1：
+1. StreamInfos.N.RemoveVideo=1
+2. StreamInfos.N.RemoveAudio=0
+3. StreamInfos.N.Video.Codec=copy
+当值为0：
+1. StreamInfos.N.Video.Codec不能为copy
+2. StreamInfos.N.Video.Fps不能为null
+注意：
+此值只是区分模板类型，任务使用RemoveAudio和RemoveVideo的值
      */
     public Long getPureAudio() {
         return this.PureAudio;
     }
 
     /**
-     * Set 是否为纯音频，0表示视频模版，1表示纯音频模版
+     * Set 是否为纯音频，0表示视频模板，1表示纯音频模板
 当值为1：
 1. StreamInfos.N.RemoveVideo=1
 2. StreamInfos.N.RemoveAudio=0
 3. StreamInfos.N.Video.Codec=copy
-
 当值为0：
-
 1. StreamInfos.N.Video.Codec不能为copy
 2. StreamInfos.N.Video.Fps不能为null
-     * @param PureAudio 是否为纯音频，0表示视频模版，1表示纯音频模版
+注意：
+此值只是区分模板类型，任务使用RemoveAudio和RemoveVideo的值
+     * @param PureAudio 是否为纯音频，0表示视频模板，1表示纯音频模板
 当值为1：
 1. StreamInfos.N.RemoveVideo=1
 2. StreamInfos.N.RemoveAudio=0
 3. StreamInfos.N.Video.Codec=copy
-
 当值为0：
-
 1. StreamInfos.N.Video.Codec不能为copy
 2. StreamInfos.N.Video.Fps不能为null
+注意：
+此值只是区分模板类型，任务使用RemoveAudio和RemoveVideo的值
      */
     public void setPureAudio(Long PureAudio) {
         this.PureAudio = PureAudio;

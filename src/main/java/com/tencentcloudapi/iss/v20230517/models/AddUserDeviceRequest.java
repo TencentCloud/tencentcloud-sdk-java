@@ -31,7 +31,7 @@ public class AddUserDeviceRequest extends AbstractModel {
     private String Name;
 
     /**
-    * 设备接入协议（1:RTMP,2:GB,3:GW,4:IVCP）
+    * 设备接入协议（1:RTMP,2:GB,3:GW,6:ISUP）
     */
     @SerializedName("AccessProtocol")
     @Expose
@@ -152,16 +152,16 @@ public class AddUserDeviceRequest extends AbstractModel {
     }
 
     /**
-     * Get 设备接入协议（1:RTMP,2:GB,3:GW,4:IVCP） 
-     * @return AccessProtocol 设备接入协议（1:RTMP,2:GB,3:GW,4:IVCP）
+     * Get 设备接入协议（1:RTMP,2:GB,3:GW,6:ISUP） 
+     * @return AccessProtocol 设备接入协议（1:RTMP,2:GB,3:GW,6:ISUP）
      */
     public Long getAccessProtocol() {
         return this.AccessProtocol;
     }
 
     /**
-     * Set 设备接入协议（1:RTMP,2:GB,3:GW,4:IVCP）
-     * @param AccessProtocol 设备接入协议（1:RTMP,2:GB,3:GW,4:IVCP）
+     * Set 设备接入协议（1:RTMP,2:GB,3:GW,6:ISUP）
+     * @param AccessProtocol 设备接入协议（1:RTMP,2:GB,3:GW,6:ISUP）
      */
     public void setAccessProtocol(Long AccessProtocol) {
         this.AccessProtocol = AccessProtocol;

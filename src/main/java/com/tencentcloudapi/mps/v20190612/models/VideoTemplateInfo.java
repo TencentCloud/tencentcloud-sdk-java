@@ -125,19 +125,16 @@ second：表示秒
 <li>gauss：高斯模糊，保持视频宽高比不变，边缘剩余部分使用高斯模糊填充。</li>
 <li>smarttailor：智能剪裁：智能选取视频画面，来保证画面比例裁剪。</li>
 默认值：black 。
-注意：自适应码流只支持 stretch、black。
     */
     @SerializedName("FillType")
     @Expose
     private String FillType;
 
     /**
-    * 视频恒定码率控制因子，取值范围为[0, 51]。
-如果指定该参数，将使用 CRF 的码率控制方式做转码（视频码率将不再生效）。
-如果没有特殊需求，不建议指定该参数。
-注意：
-若Mode选择ABR，无需配置Vcrf值
-若Mode选择CBR，无需配置Vcrf值
+    * 视频的恒定码率控制因子，取值范围为[0, 51]，不填表示“自动”。如果没有特殊需求，建议不指定该参数。
+当Mode参数设置为VBR时，如果同时配置了Vcrf值，MPS将在VBR模式下处理视频，同时考虑Vcrf和Bitrate参数的设置，以平衡视频质量、码率、转码效率和文件大小。
+当Mode参数设置为CRF，Bitrate设置将失效，编码将根据Vcrf值进行。
+当Mode参数选择ABR或CBR时，无需配置Vcrf值。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Vcrf")
@@ -146,7 +143,7 @@ second：表示秒
 
     /**
     * 分片平均时长，范围：（0-10]，单位：秒
-默认值：10
+不填表示自动，将根据视频的GOP等特征自动选择合适的分片时长。
 注意：只能在封装格式hls的情况下使用
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -161,6 +158,7 @@ second：表示秒
 <li>7：HLS+MP4 切片</li>
 <li>5：HLS+MP4 byte range</li>
 默认值：0
+注意：该字段用于普通/极速高清转码设置，对自适应码流不生效，如需给自适应码流配置分片类型，可以使用外层字段
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SegmentType")
@@ -282,7 +280,7 @@ VCRF（Constant Rate Factor）：恒定质量因子，通过设定一个质量�
     private Long Compress;
 
     /**
-    * 切片特殊配置
+    * 启动时分片时长
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SegmentSpecificInfo")
@@ -290,10 +288,11 @@ VCRF（Constant Rate Factor）：恒定质量因子，通过设定一个质量�
     private SegmentSpecificInfo SegmentSpecificInfo;
 
     /**
-    * 模版是否开启场景化 
+    * 模板是否开启场景化 
 0：不开启 
 1：开启 
 默认值：0	
+注意：只有此字段值为1时，SceneType和CompressType字段的值才会生效
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScenarioBased")
@@ -309,6 +308,7 @@ ugc：UGC内容：适用于广泛的UGC/短视频场景，针对短视频的特�
 e-commerce_video：秀场/电商类：压缩时会强调细节清晰度和ROI区域提升，尤其注重保持人脸区域的画质。 
 educational_video：教育类：压缩时会强调文字和图像的清晰度和可读性，以便学生更好地理解内容，确保讲解内容清晰传达。 
 默认值：normal
+注意：要使用此值ScenarioBased的值必须为1，否则此值不生效
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SceneType")
@@ -323,6 +323,7 @@ high_compress：码率优先：优先保证降低文件体积大小，可能有�
 low_compress：画质优先：优先保证画质，压缩出来的文件体积可能相对较大。该策略仅收取音视频极速高清转码费用。 
 默认值：standard_compress 
 注：若需要在电视上观看视频，不建议使用ultra_compress策略。ultra_compress策略计费标准为极速高清转码 + 音视频增强-去毛刺。
+注意：要使用此值ScenarioBased的值必须为1，否则此值不生效
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CompressType")
@@ -616,8 +617,7 @@ second：表示秒
 <li>white：留白，保持视频宽高比不变，边缘剩余部分使用白色填充。</li>
 <li>gauss：高斯模糊，保持视频宽高比不变，边缘剩余部分使用高斯模糊填充。</li>
 <li>smarttailor：智能剪裁：智能选取视频画面，来保证画面比例裁剪。</li>
-默认值：black 。
-注意：自适应码流只支持 stretch、black。 
+默认值：black 。 
      * @return FillType 填充方式，当视频流配置宽高参数与原始视频的宽高比不一致时，对转码的处理方式，即为“填充”。可选填充方式：
 <li> stretch：拉伸，对每一帧进行拉伸，填满整个画面，可能导致转码后的视频被“压扁“或者“拉长“；</li>
 <li>black：留黑，保持视频宽高比不变，边缘剩余部分使用黑色填充。</li>
@@ -625,7 +625,6 @@ second：表示秒
 <li>gauss：高斯模糊，保持视频宽高比不变，边缘剩余部分使用高斯模糊填充。</li>
 <li>smarttailor：智能剪裁：智能选取视频画面，来保证画面比例裁剪。</li>
 默认值：black 。
-注意：自适应码流只支持 stretch、black。
      */
     public String getFillType() {
         return this.FillType;
@@ -639,7 +638,6 @@ second：表示秒
 <li>gauss：高斯模糊，保持视频宽高比不变，边缘剩余部分使用高斯模糊填充。</li>
 <li>smarttailor：智能剪裁：智能选取视频画面，来保证画面比例裁剪。</li>
 默认值：black 。
-注意：自适应码流只支持 stretch、black。
      * @param FillType 填充方式，当视频流配置宽高参数与原始视频的宽高比不一致时，对转码的处理方式，即为“填充”。可选填充方式：
 <li> stretch：拉伸，对每一帧进行拉伸，填满整个画面，可能导致转码后的视频被“压扁“或者“拉长“；</li>
 <li>black：留黑，保持视频宽高比不变，边缘剩余部分使用黑色填充。</li>
@@ -647,26 +645,21 @@ second：表示秒
 <li>gauss：高斯模糊，保持视频宽高比不变，边缘剩余部分使用高斯模糊填充。</li>
 <li>smarttailor：智能剪裁：智能选取视频画面，来保证画面比例裁剪。</li>
 默认值：black 。
-注意：自适应码流只支持 stretch、black。
      */
     public void setFillType(String FillType) {
         this.FillType = FillType;
     }
 
     /**
-     * Get 视频恒定码率控制因子，取值范围为[0, 51]。
-如果指定该参数，将使用 CRF 的码率控制方式做转码（视频码率将不再生效）。
-如果没有特殊需求，不建议指定该参数。
-注意：
-若Mode选择ABR，无需配置Vcrf值
-若Mode选择CBR，无需配置Vcrf值
+     * Get 视频的恒定码率控制因子，取值范围为[0, 51]，不填表示“自动”。如果没有特殊需求，建议不指定该参数。
+当Mode参数设置为VBR时，如果同时配置了Vcrf值，MPS将在VBR模式下处理视频，同时考虑Vcrf和Bitrate参数的设置，以平衡视频质量、码率、转码效率和文件大小。
+当Mode参数设置为CRF，Bitrate设置将失效，编码将根据Vcrf值进行。
+当Mode参数选择ABR或CBR时，无需配置Vcrf值。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Vcrf 视频恒定码率控制因子，取值范围为[0, 51]。
-如果指定该参数，将使用 CRF 的码率控制方式做转码（视频码率将不再生效）。
-如果没有特殊需求，不建议指定该参数。
-注意：
-若Mode选择ABR，无需配置Vcrf值
-若Mode选择CBR，无需配置Vcrf值
+     * @return Vcrf 视频的恒定码率控制因子，取值范围为[0, 51]，不填表示“自动”。如果没有特殊需求，建议不指定该参数。
+当Mode参数设置为VBR时，如果同时配置了Vcrf值，MPS将在VBR模式下处理视频，同时考虑Vcrf和Bitrate参数的设置，以平衡视频质量、码率、转码效率和文件大小。
+当Mode参数设置为CRF，Bitrate设置将失效，编码将根据Vcrf值进行。
+当Mode参数选择ABR或CBR时，无需配置Vcrf值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getVcrf() {
@@ -674,19 +667,15 @@ second：表示秒
     }
 
     /**
-     * Set 视频恒定码率控制因子，取值范围为[0, 51]。
-如果指定该参数，将使用 CRF 的码率控制方式做转码（视频码率将不再生效）。
-如果没有特殊需求，不建议指定该参数。
-注意：
-若Mode选择ABR，无需配置Vcrf值
-若Mode选择CBR，无需配置Vcrf值
+     * Set 视频的恒定码率控制因子，取值范围为[0, 51]，不填表示“自动”。如果没有特殊需求，建议不指定该参数。
+当Mode参数设置为VBR时，如果同时配置了Vcrf值，MPS将在VBR模式下处理视频，同时考虑Vcrf和Bitrate参数的设置，以平衡视频质量、码率、转码效率和文件大小。
+当Mode参数设置为CRF，Bitrate设置将失效，编码将根据Vcrf值进行。
+当Mode参数选择ABR或CBR时，无需配置Vcrf值。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Vcrf 视频恒定码率控制因子，取值范围为[0, 51]。
-如果指定该参数，将使用 CRF 的码率控制方式做转码（视频码率将不再生效）。
-如果没有特殊需求，不建议指定该参数。
-注意：
-若Mode选择ABR，无需配置Vcrf值
-若Mode选择CBR，无需配置Vcrf值
+     * @param Vcrf 视频的恒定码率控制因子，取值范围为[0, 51]，不填表示“自动”。如果没有特殊需求，建议不指定该参数。
+当Mode参数设置为VBR时，如果同时配置了Vcrf值，MPS将在VBR模式下处理视频，同时考虑Vcrf和Bitrate参数的设置，以平衡视频质量、码率、转码效率和文件大小。
+当Mode参数设置为CRF，Bitrate设置将失效，编码将根据Vcrf值进行。
+当Mode参数选择ABR或CBR时，无需配置Vcrf值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVcrf(Long Vcrf) {
@@ -695,11 +684,11 @@ second：表示秒
 
     /**
      * Get 分片平均时长，范围：（0-10]，单位：秒
-默认值：10
+不填表示自动，将根据视频的GOP等特征自动选择合适的分片时长。
 注意：只能在封装格式hls的情况下使用
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return HlsTime 分片平均时长，范围：（0-10]，单位：秒
-默认值：10
+不填表示自动，将根据视频的GOP等特征自动选择合适的分片时长。
 注意：只能在封装格式hls的情况下使用
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -709,11 +698,11 @@ second：表示秒
 
     /**
      * Set 分片平均时长，范围：（0-10]，单位：秒
-默认值：10
+不填表示自动，将根据视频的GOP等特征自动选择合适的分片时长。
 注意：只能在封装格式hls的情况下使用
 注意：此字段可能返回 null，表示取不到有效值。
      * @param HlsTime 分片平均时长，范围：（0-10]，单位：秒
-默认值：10
+不填表示自动，将根据视频的GOP等特征自动选择合适的分片时长。
 注意：只能在封装格式hls的情况下使用
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -728,6 +717,7 @@ second：表示秒
 <li>7：HLS+MP4 切片</li>
 <li>5：HLS+MP4 byte range</li>
 默认值：0
+注意：该字段用于普通/极速高清转码设置，对自适应码流不生效，如需给自适应码流配置分片类型，可以使用外层字段
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return SegmentType hls 分片类型，可选值 ：
 <li>0：HLS+TS 切片</li>
@@ -735,6 +725,7 @@ second：表示秒
 <li>7：HLS+MP4 切片</li>
 <li>5：HLS+MP4 byte range</li>
 默认值：0
+注意：该字段用于普通/极速高清转码设置，对自适应码流不生效，如需给自适应码流配置分片类型，可以使用外层字段
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSegmentType() {
@@ -748,6 +739,7 @@ second：表示秒
 <li>7：HLS+MP4 切片</li>
 <li>5：HLS+MP4 byte range</li>
 默认值：0
+注意：该字段用于普通/极速高清转码设置，对自适应码流不生效，如需给自适应码流配置分片类型，可以使用外层字段
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SegmentType hls 分片类型，可选值 ：
 <li>0：HLS+TS 切片</li>
@@ -755,6 +747,7 @@ second：表示秒
 <li>7：HLS+MP4 切片</li>
 <li>5：HLS+MP4 byte range</li>
 默认值：0
+注意：该字段用于普通/极速高清转码设置，对自适应码流不生效，如需给自适应码流配置分片类型，可以使用外层字段
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSegmentType(Long SegmentType) {
@@ -1086,9 +1079,9 @@ VCRF（Constant Rate Factor）：恒定质量因子，通过设定一个质量�
     }
 
     /**
-     * Get 切片特殊配置
+     * Get 启动时分片时长
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SegmentSpecificInfo 切片特殊配置
+     * @return SegmentSpecificInfo 启动时分片时长
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public SegmentSpecificInfo getSegmentSpecificInfo() {
@@ -1096,9 +1089,9 @@ VCRF（Constant Rate Factor）：恒定质量因子，通过设定一个质量�
     }
 
     /**
-     * Set 切片特殊配置
+     * Set 启动时分片时长
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SegmentSpecificInfo 切片特殊配置
+     * @param SegmentSpecificInfo 启动时分片时长
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSegmentSpecificInfo(SegmentSpecificInfo SegmentSpecificInfo) {
@@ -1106,15 +1099,17 @@ VCRF（Constant Rate Factor）：恒定质量因子，通过设定一个质量�
     }
 
     /**
-     * Get 模版是否开启场景化 
+     * Get 模板是否开启场景化 
 0：不开启 
 1：开启 
 默认值：0	
+注意：只有此字段值为1时，SceneType和CompressType字段的值才会生效
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ScenarioBased 模版是否开启场景化 
+     * @return ScenarioBased 模板是否开启场景化 
 0：不开启 
 1：开启 
 默认值：0	
+注意：只有此字段值为1时，SceneType和CompressType字段的值才会生效
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getScenarioBased() {
@@ -1122,15 +1117,17 @@ VCRF（Constant Rate Factor）：恒定质量因子，通过设定一个质量�
     }
 
     /**
-     * Set 模版是否开启场景化 
+     * Set 模板是否开启场景化 
 0：不开启 
 1：开启 
 默认值：0	
+注意：只有此字段值为1时，SceneType和CompressType字段的值才会生效
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param ScenarioBased 模版是否开启场景化 
+     * @param ScenarioBased 模板是否开启场景化 
 0：不开启 
 1：开启 
 默认值：0	
+注意：只有此字段值为1时，SceneType和CompressType字段的值才会生效
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScenarioBased(Long ScenarioBased) {
@@ -1146,6 +1143,7 @@ ugc：UGC内容：适用于广泛的UGC/短视频场景，针对短视频的特�
 e-commerce_video：秀场/电商类：压缩时会强调细节清晰度和ROI区域提升，尤其注重保持人脸区域的画质。 
 educational_video：教育类：压缩时会强调文字和图像的清晰度和可读性，以便学生更好地理解内容，确保讲解内容清晰传达。 
 默认值：normal
+注意：要使用此值ScenarioBased的值必须为1，否则此值不生效
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return SceneType 视频场景化，可选值： 
 normal：通用转码场景：通用转码压缩场景。
@@ -1155,6 +1153,7 @@ ugc：UGC内容：适用于广泛的UGC/短视频场景，针对短视频的特�
 e-commerce_video：秀场/电商类：压缩时会强调细节清晰度和ROI区域提升，尤其注重保持人脸区域的画质。 
 educational_video：教育类：压缩时会强调文字和图像的清晰度和可读性，以便学生更好地理解内容，确保讲解内容清晰传达。 
 默认值：normal
+注意：要使用此值ScenarioBased的值必须为1，否则此值不生效
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSceneType() {
@@ -1170,6 +1169,7 @@ ugc：UGC内容：适用于广泛的UGC/短视频场景，针对短视频的特�
 e-commerce_video：秀场/电商类：压缩时会强调细节清晰度和ROI区域提升，尤其注重保持人脸区域的画质。 
 educational_video：教育类：压缩时会强调文字和图像的清晰度和可读性，以便学生更好地理解内容，确保讲解内容清晰传达。 
 默认值：normal
+注意：要使用此值ScenarioBased的值必须为1，否则此值不生效
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SceneType 视频场景化，可选值： 
 normal：通用转码场景：通用转码压缩场景。
@@ -1179,6 +1179,7 @@ ugc：UGC内容：适用于广泛的UGC/短视频场景，针对短视频的特�
 e-commerce_video：秀场/电商类：压缩时会强调细节清晰度和ROI区域提升，尤其注重保持人脸区域的画质。 
 educational_video：教育类：压缩时会强调文字和图像的清晰度和可读性，以便学生更好地理解内容，确保讲解内容清晰传达。 
 默认值：normal
+注意：要使用此值ScenarioBased的值必须为1，否则此值不生效
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSceneType(String SceneType) {
@@ -1193,6 +1194,7 @@ high_compress：码率优先：优先保证降低文件体积大小，可能有�
 low_compress：画质优先：优先保证画质，压缩出来的文件体积可能相对较大。该策略仅收取音视频极速高清转码费用。 
 默认值：standard_compress 
 注：若需要在电视上观看视频，不建议使用ultra_compress策略。ultra_compress策略计费标准为极速高清转码 + 音视频增强-去毛刺。
+注意：要使用此值ScenarioBased的值必须为1，否则此值不生效
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return CompressType 转码策略，可选值： 
 ultra_compress：极致压缩：相比标准压缩，该策略能在保证一定画质的基础上最大限度压缩码率，极大节约带宽和存储成本。 
@@ -1201,6 +1203,7 @@ high_compress：码率优先：优先保证降低文件体积大小，可能有�
 low_compress：画质优先：优先保证画质，压缩出来的文件体积可能相对较大。该策略仅收取音视频极速高清转码费用。 
 默认值：standard_compress 
 注：若需要在电视上观看视频，不建议使用ultra_compress策略。ultra_compress策略计费标准为极速高清转码 + 音视频增强-去毛刺。
+注意：要使用此值ScenarioBased的值必须为1，否则此值不生效
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCompressType() {
@@ -1215,6 +1218,7 @@ high_compress：码率优先：优先保证降低文件体积大小，可能有�
 low_compress：画质优先：优先保证画质，压缩出来的文件体积可能相对较大。该策略仅收取音视频极速高清转码费用。 
 默认值：standard_compress 
 注：若需要在电视上观看视频，不建议使用ultra_compress策略。ultra_compress策略计费标准为极速高清转码 + 音视频增强-去毛刺。
+注意：要使用此值ScenarioBased的值必须为1，否则此值不生效
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CompressType 转码策略，可选值： 
 ultra_compress：极致压缩：相比标准压缩，该策略能在保证一定画质的基础上最大限度压缩码率，极大节约带宽和存储成本。 
@@ -1223,6 +1227,7 @@ high_compress：码率优先：优先保证降低文件体积大小，可能有�
 low_compress：画质优先：优先保证画质，压缩出来的文件体积可能相对较大。该策略仅收取音视频极速高清转码费用。 
 默认值：standard_compress 
 注：若需要在电视上观看视频，不建议使用ultra_compress策略。ultra_compress策略计费标准为极速高清转码 + 音视频增强-去毛刺。
+注意：要使用此值ScenarioBased的值必须为1，否则此值不生效
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCompressType(String CompressType) {

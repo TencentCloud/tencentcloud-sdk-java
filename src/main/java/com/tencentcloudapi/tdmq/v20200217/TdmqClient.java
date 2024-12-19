@@ -1343,6 +1343,17 @@ RabbitMQ专享版查询虚拟主机列表
     }
 
     /**
+     *修改pulsar专业版公网安全策略
+     * @param req ModifyPublicNetworkSecurityPolicyRequest
+     * @return ModifyPublicNetworkSecurityPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyPublicNetworkSecurityPolicyResponse ModifyPublicNetworkSecurityPolicy(ModifyPublicNetworkSecurityPolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyPublicNetworkSecurityPolicy", ModifyPublicNetworkSecurityPolicyResponse.class);
+    }
+
+    /**
      *修改RabbitMQ的用户
      * @param req ModifyRabbitMQUserRequest
      * @return ModifyRabbitMQUserResponse

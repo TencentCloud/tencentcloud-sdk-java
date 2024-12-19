@@ -25,6 +25,7 @@ public class RedirectLocalInfo extends AbstractModel {
 
     /**
     * 标准输出重定向本地路径
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StdoutLocalPath")
     @Expose
@@ -32,6 +33,7 @@ public class RedirectLocalInfo extends AbstractModel {
 
     /**
     * 标准错误重定向本地路径
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StderrLocalPath")
     @Expose
@@ -39,6 +41,7 @@ public class RedirectLocalInfo extends AbstractModel {
 
     /**
     * 标准输出重定向本地文件名，支持三个占位符${BATCH_JOB_ID}、${BATCH_TASK_NAME}、${BATCH_TASK_INSTANCE_INDEX}
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StdoutLocalFileName")
     @Expose
@@ -46,14 +49,17 @@ public class RedirectLocalInfo extends AbstractModel {
 
     /**
     * 标准错误重定向本地文件名，支持三个占位符${BATCH_JOB_ID}、${BATCH_TASK_NAME}、${BATCH_TASK_INSTANCE_INDEX}
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StderrLocalFileName")
     @Expose
     private String StderrLocalFileName;
 
     /**
-     * Get 标准输出重定向本地路径 
+     * Get 标准输出重定向本地路径
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return StdoutLocalPath 标准输出重定向本地路径
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStdoutLocalPath() {
         return this.StdoutLocalPath;
@@ -61,15 +67,19 @@ public class RedirectLocalInfo extends AbstractModel {
 
     /**
      * Set 标准输出重定向本地路径
+注意：此字段可能返回 null，表示取不到有效值。
      * @param StdoutLocalPath 标准输出重定向本地路径
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStdoutLocalPath(String StdoutLocalPath) {
         this.StdoutLocalPath = StdoutLocalPath;
     }
 
     /**
-     * Get 标准错误重定向本地路径 
+     * Get 标准错误重定向本地路径
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return StderrLocalPath 标准错误重定向本地路径
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStderrLocalPath() {
         return this.StderrLocalPath;
@@ -77,15 +87,19 @@ public class RedirectLocalInfo extends AbstractModel {
 
     /**
      * Set 标准错误重定向本地路径
+注意：此字段可能返回 null，表示取不到有效值。
      * @param StderrLocalPath 标准错误重定向本地路径
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStderrLocalPath(String StderrLocalPath) {
         this.StderrLocalPath = StderrLocalPath;
     }
 
     /**
-     * Get 标准输出重定向本地文件名，支持三个占位符${BATCH_JOB_ID}、${BATCH_TASK_NAME}、${BATCH_TASK_INSTANCE_INDEX} 
+     * Get 标准输出重定向本地文件名，支持三个占位符${BATCH_JOB_ID}、${BATCH_TASK_NAME}、${BATCH_TASK_INSTANCE_INDEX}
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return StdoutLocalFileName 标准输出重定向本地文件名，支持三个占位符${BATCH_JOB_ID}、${BATCH_TASK_NAME}、${BATCH_TASK_INSTANCE_INDEX}
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStdoutLocalFileName() {
         return this.StdoutLocalFileName;
@@ -93,15 +107,19 @@ public class RedirectLocalInfo extends AbstractModel {
 
     /**
      * Set 标准输出重定向本地文件名，支持三个占位符${BATCH_JOB_ID}、${BATCH_TASK_NAME}、${BATCH_TASK_INSTANCE_INDEX}
+注意：此字段可能返回 null，表示取不到有效值。
      * @param StdoutLocalFileName 标准输出重定向本地文件名，支持三个占位符${BATCH_JOB_ID}、${BATCH_TASK_NAME}、${BATCH_TASK_INSTANCE_INDEX}
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStdoutLocalFileName(String StdoutLocalFileName) {
         this.StdoutLocalFileName = StdoutLocalFileName;
     }
 
     /**
-     * Get 标准错误重定向本地文件名，支持三个占位符${BATCH_JOB_ID}、${BATCH_TASK_NAME}、${BATCH_TASK_INSTANCE_INDEX} 
+     * Get 标准错误重定向本地文件名，支持三个占位符${BATCH_JOB_ID}、${BATCH_TASK_NAME}、${BATCH_TASK_INSTANCE_INDEX}
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return StderrLocalFileName 标准错误重定向本地文件名，支持三个占位符${BATCH_JOB_ID}、${BATCH_TASK_NAME}、${BATCH_TASK_INSTANCE_INDEX}
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStderrLocalFileName() {
         return this.StderrLocalFileName;
@@ -109,7 +127,9 @@ public class RedirectLocalInfo extends AbstractModel {
 
     /**
      * Set 标准错误重定向本地文件名，支持三个占位符${BATCH_JOB_ID}、${BATCH_TASK_NAME}、${BATCH_TASK_INSTANCE_INDEX}
+注意：此字段可能返回 null，表示取不到有效值。
      * @param StderrLocalFileName 标准错误重定向本地文件名，支持三个占位符${BATCH_JOB_ID}、${BATCH_TASK_NAME}、${BATCH_TASK_INSTANCE_INDEX}
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStderrLocalFileName(String StderrLocalFileName) {
         this.StderrLocalFileName = StderrLocalFileName;
