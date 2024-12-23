@@ -25,7 +25,6 @@ public class DescribeDSPADiscoveryTaskResultResponse extends AbstractModel {
 
     /**
     * 扫描任务结果项
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Items")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeDSPADiscoveryTaskResultResponse extends AbstractModel {
 
     /**
     * 符合条件的扫描任务结果记录数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeDSPADiscoveryTaskResultResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 扫描任务结果项
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 扫描任务结果项 
      * @return Items 扫描任务结果项
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DspaDiscoveryTaskDbResult [] getItems() {
         return this.Items;
@@ -58,19 +54,15 @@ public class DescribeDSPADiscoveryTaskResultResponse extends AbstractModel {
 
     /**
      * Set 扫描任务结果项
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Items 扫描任务结果项
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setItems(DspaDiscoveryTaskDbResult [] Items) {
         this.Items = Items;
     }
 
     /**
-     * Get 符合条件的扫描任务结果记录数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 符合条件的扫描任务结果记录数 
      * @return TotalCount 符合条件的扫描任务结果记录数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -78,9 +70,7 @@ public class DescribeDSPADiscoveryTaskResultResponse extends AbstractModel {
 
     /**
      * Set 符合条件的扫描任务结果记录数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 符合条件的扫描任务结果记录数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

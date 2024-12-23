@@ -25,7 +25,6 @@ public class SuggestRiskLevelMatrixItem extends AbstractModel {
 
     /**
     * 分类分级等级
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SensitiveLevel")
     @Expose
@@ -33,7 +32,6 @@ public class SuggestRiskLevelMatrixItem extends AbstractModel {
 
     /**
     * 脆弱项等级
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VulnerabilityLevel")
     @Expose
@@ -41,7 +39,6 @@ public class SuggestRiskLevelMatrixItem extends AbstractModel {
 
     /**
     * 风险名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RiskName")
     @Expose
@@ -49,17 +46,14 @@ public class SuggestRiskLevelMatrixItem extends AbstractModel {
 
     /**
     * 分数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RiskScore")
     @Expose
     private Float RiskScore;
 
     /**
-     * Get 分类分级等级
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分类分级等级 
      * @return SensitiveLevel 分类分级等级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RiskMatrixLevel getSensitiveLevel() {
         return this.SensitiveLevel;
@@ -67,19 +61,15 @@ public class SuggestRiskLevelMatrixItem extends AbstractModel {
 
     /**
      * Set 分类分级等级
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SensitiveLevel 分类分级等级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSensitiveLevel(RiskMatrixLevel SensitiveLevel) {
         this.SensitiveLevel = SensitiveLevel;
     }
 
     /**
-     * Get 脆弱项等级
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 脆弱项等级 
      * @return VulnerabilityLevel 脆弱项等级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RiskMatrixLevel getVulnerabilityLevel() {
         return this.VulnerabilityLevel;
@@ -87,19 +77,15 @@ public class SuggestRiskLevelMatrixItem extends AbstractModel {
 
     /**
      * Set 脆弱项等级
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VulnerabilityLevel 脆弱项等级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVulnerabilityLevel(RiskMatrixLevel VulnerabilityLevel) {
         this.VulnerabilityLevel = VulnerabilityLevel;
     }
 
     /**
-     * Get 风险名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 风险名 
      * @return RiskName 风险名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRiskName() {
         return this.RiskName;
@@ -107,19 +93,15 @@ public class SuggestRiskLevelMatrixItem extends AbstractModel {
 
     /**
      * Set 风险名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RiskName 风险名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRiskName(String RiskName) {
         this.RiskName = RiskName;
     }
 
     /**
-     * Get 分数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分数 
      * @return RiskScore 分数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getRiskScore() {
         return this.RiskScore;
@@ -127,9 +109,7 @@ public class SuggestRiskLevelMatrixItem extends AbstractModel {
 
     /**
      * Set 分数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RiskScore 分数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRiskScore(Float RiskScore) {
         this.RiskScore = RiskScore;

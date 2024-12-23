@@ -26,7 +26,6 @@ public class DescribeDSPALevelGroupsResponse extends AbstractModel {
     /**
     * 符合条件的敏感数据分级标识记录
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Items")
     @Expose
@@ -34,7 +33,6 @@ public class DescribeDSPALevelGroupsResponse extends AbstractModel {
 
     /**
     * 符合条件的敏感数据分级标识记录数
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
@@ -50,10 +48,8 @@ public class DescribeDSPALevelGroupsResponse extends AbstractModel {
 
     /**
      * Get 符合条件的敏感数据分级标识记录
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Items 符合条件的敏感数据分级标识记录
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public DspaDiscoveryLevelDetail [] getItems() {
@@ -63,9 +59,7 @@ public class DescribeDSPALevelGroupsResponse extends AbstractModel {
     /**
      * Set 符合条件的敏感数据分级标识记录
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Items 符合条件的敏感数据分级标识记录
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setItems(DspaDiscoveryLevelDetail [] Items) {
@@ -74,10 +68,8 @@ public class DescribeDSPALevelGroupsResponse extends AbstractModel {
 
     /**
      * Get 符合条件的敏感数据分级标识记录数
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return TotalCount 符合条件的敏感数据分级标识记录数
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
@@ -87,9 +79,7 @@ public class DescribeDSPALevelGroupsResponse extends AbstractModel {
     /**
      * Set 符合条件的敏感数据分级标识记录数
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 符合条件的敏感数据分级标识记录数
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {

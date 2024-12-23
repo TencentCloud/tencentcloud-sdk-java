@@ -32,7 +32,6 @@ public class ListDSPACosMetaResourcesResponse extends AbstractModel {
 
     /**
     * COS元数据信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Items")
     @Expose
@@ -40,7 +39,6 @@ public class ListDSPACosMetaResourcesResponse extends AbstractModel {
 
     /**
     * DSPA实例ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DspaId")
     @Expose
@@ -70,10 +68,8 @@ public class ListDSPACosMetaResourcesResponse extends AbstractModel {
     }
 
     /**
-     * Get COS元数据信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get COS元数据信息 
      * @return Items COS元数据信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DSPACosMetaDataInfo [] getItems() {
         return this.Items;
@@ -81,19 +77,15 @@ public class ListDSPACosMetaResourcesResponse extends AbstractModel {
 
     /**
      * Set COS元数据信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Items COS元数据信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setItems(DSPACosMetaDataInfo [] Items) {
         this.Items = Items;
     }
 
     /**
-     * Get DSPA实例ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get DSPA实例ID 
      * @return DspaId DSPA实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDspaId() {
         return this.DspaId;
@@ -101,9 +93,7 @@ public class ListDSPACosMetaResourcesResponse extends AbstractModel {
 
     /**
      * Set DSPA实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DspaId DSPA实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDspaId(String DspaId) {
         this.DspaId = DspaId;

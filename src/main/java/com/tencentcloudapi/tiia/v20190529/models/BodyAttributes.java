@@ -25,7 +25,6 @@ public class BodyAttributes extends AbstractModel {
 
     /**
     * 属性值。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Label")
     @Expose
@@ -33,7 +32,6 @@ public class BodyAttributes extends AbstractModel {
 
     /**
     * 置信度，取值0-1之间。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Confidence")
     @Expose
@@ -41,17 +39,14 @@ public class BodyAttributes extends AbstractModel {
 
     /**
     * 属性名称。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-     * Get 属性值。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 属性值。 
      * @return Label 属性值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLabel() {
         return this.Label;
@@ -59,19 +54,15 @@ public class BodyAttributes extends AbstractModel {
 
     /**
      * Set 属性值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Label 属性值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLabel(String Label) {
         this.Label = Label;
     }
 
     /**
-     * Get 置信度，取值0-1之间。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 置信度，取值0-1之间。 
      * @return Confidence 置信度，取值0-1之间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getConfidence() {
         return this.Confidence;
@@ -79,19 +70,15 @@ public class BodyAttributes extends AbstractModel {
 
     /**
      * Set 置信度，取值0-1之间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Confidence 置信度，取值0-1之间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
     }
 
     /**
-     * Get 属性名称。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 属性名称。 
      * @return Name 属性名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -99,9 +86,7 @@ public class BodyAttributes extends AbstractModel {
 
     /**
      * Set 属性名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 属性名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;

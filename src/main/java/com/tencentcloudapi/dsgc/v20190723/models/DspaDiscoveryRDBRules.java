@@ -25,7 +25,6 @@ public class DspaDiscoveryRDBRules extends AbstractModel {
 
     /**
     * 规则状态；0 不启用, 1 启用
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -33,7 +32,6 @@ public class DspaDiscoveryRDBRules extends AbstractModel {
 
     /**
     * 只能取and 、or两个值其中之一，and：字段和内容同时满足，or：字段和内容满足其一
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MatchOperator")
     @Expose
@@ -41,7 +39,6 @@ public class DspaDiscoveryRDBRules extends AbstractModel {
 
     /**
     * 字段名包含规则，最大支持选择9项
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MetaRule")
     @Expose
@@ -49,17 +46,14 @@ public class DspaDiscoveryRDBRules extends AbstractModel {
 
     /**
     * 内容包含规则，最大支持选择9项
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ContentRule")
     @Expose
     private DspaDiscoveryDataRules ContentRule;
 
     /**
-     * Get 规则状态；0 不启用, 1 启用
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则状态；0 不启用, 1 启用 
      * @return Status 规则状态；0 不启用, 1 启用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
         return this.Status;
@@ -67,19 +61,15 @@ public class DspaDiscoveryRDBRules extends AbstractModel {
 
     /**
      * Set 规则状态；0 不启用, 1 启用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 规则状态；0 不启用, 1 启用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 只能取and 、or两个值其中之一，and：字段和内容同时满足，or：字段和内容满足其一
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 只能取and 、or两个值其中之一，and：字段和内容同时满足，or：字段和内容满足其一 
      * @return MatchOperator 只能取and 、or两个值其中之一，and：字段和内容同时满足，or：字段和内容满足其一
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMatchOperator() {
         return this.MatchOperator;
@@ -87,19 +77,15 @@ public class DspaDiscoveryRDBRules extends AbstractModel {
 
     /**
      * Set 只能取and 、or两个值其中之一，and：字段和内容同时满足，or：字段和内容满足其一
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MatchOperator 只能取and 、or两个值其中之一，and：字段和内容同时满足，or：字段和内容满足其一
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMatchOperator(String MatchOperator) {
         this.MatchOperator = MatchOperator;
     }
 
     /**
-     * Get 字段名包含规则，最大支持选择9项
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 字段名包含规则，最大支持选择9项 
      * @return MetaRule 字段名包含规则，最大支持选择9项
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DspaDiscoveryDataRules getMetaRule() {
         return this.MetaRule;
@@ -107,19 +93,15 @@ public class DspaDiscoveryRDBRules extends AbstractModel {
 
     /**
      * Set 字段名包含规则，最大支持选择9项
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MetaRule 字段名包含规则，最大支持选择9项
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMetaRule(DspaDiscoveryDataRules MetaRule) {
         this.MetaRule = MetaRule;
     }
 
     /**
-     * Get 内容包含规则，最大支持选择9项
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 内容包含规则，最大支持选择9项 
      * @return ContentRule 内容包含规则，最大支持选择9项
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DspaDiscoveryDataRules getContentRule() {
         return this.ContentRule;
@@ -127,9 +109,7 @@ public class DspaDiscoveryRDBRules extends AbstractModel {
 
     /**
      * Set 内容包含规则，最大支持选择9项
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ContentRule 内容包含规则，最大支持选择9项
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContentRule(DspaDiscoveryDataRules ContentRule) {
         this.ContentRule = ContentRule;

@@ -25,7 +25,6 @@ public class DBInstanceInfo extends AbstractModel {
 
     /**
     * 数据源id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceId")
     @Expose
@@ -33,17 +32,14 @@ public class DBInstanceInfo extends AbstractModel {
 
     /**
     * 数据源绑定的db信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DbInfos")
     @Expose
     private DbInfo [] DbInfos;
 
     /**
-     * Get 数据源id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据源id 
      * @return ResourceId 数据源id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceId() {
         return this.ResourceId;
@@ -51,19 +47,15 @@ public class DBInstanceInfo extends AbstractModel {
 
     /**
      * Set 数据源id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceId 数据源id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
     }
 
     /**
-     * Get 数据源绑定的db信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据源绑定的db信息 
      * @return DbInfos 数据源绑定的db信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DbInfo [] getDbInfos() {
         return this.DbInfos;
@@ -71,9 +63,7 @@ public class DBInstanceInfo extends AbstractModel {
 
     /**
      * Set 数据源绑定的db信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DbInfos 数据源绑定的db信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDbInfos(DbInfo [] DbInfos) {
         this.DbInfos = DbInfos;

@@ -32,7 +32,6 @@ public class DspaCOSDiscoveryTaskDataSourceInfo extends AbstractModel {
 
     /**
     * 代理地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProxyAddress")
     @Expose
@@ -40,7 +39,6 @@ public class DspaCOSDiscoveryTaskDataSourceInfo extends AbstractModel {
 
     /**
     * 数据源名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataSourceName")
     @Expose
@@ -48,7 +46,6 @@ public class DspaCOSDiscoveryTaskDataSourceInfo extends AbstractModel {
 
     /**
     * 扫描任务条件
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Condition")
     @Expose
@@ -56,7 +53,6 @@ public class DspaCOSDiscoveryTaskDataSourceInfo extends AbstractModel {
 
     /**
     * 资源所在地域
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceRegion")
     @Expose
@@ -79,10 +75,8 @@ public class DspaCOSDiscoveryTaskDataSourceInfo extends AbstractModel {
     }
 
     /**
-     * Get 代理地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 代理地址 
      * @return ProxyAddress 代理地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getProxyAddress() {
         return this.ProxyAddress;
@@ -90,19 +84,15 @@ public class DspaCOSDiscoveryTaskDataSourceInfo extends AbstractModel {
 
     /**
      * Set 代理地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProxyAddress 代理地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProxyAddress(String [] ProxyAddress) {
         this.ProxyAddress = ProxyAddress;
     }
 
     /**
-     * Get 数据源名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据源名称 
      * @return DataSourceName 数据源名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDataSourceName() {
         return this.DataSourceName;
@@ -110,19 +100,15 @@ public class DspaCOSDiscoveryTaskDataSourceInfo extends AbstractModel {
 
     /**
      * Set 数据源名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DataSourceName 数据源名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataSourceName(String DataSourceName) {
         this.DataSourceName = DataSourceName;
     }
 
     /**
-     * Get 扫描任务条件
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 扫描任务条件 
      * @return Condition 扫描任务条件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DspaDiscoveryTaskCOSCondition getCondition() {
         return this.Condition;
@@ -130,19 +116,15 @@ public class DspaCOSDiscoveryTaskDataSourceInfo extends AbstractModel {
 
     /**
      * Set 扫描任务条件
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Condition 扫描任务条件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCondition(DspaDiscoveryTaskCOSCondition Condition) {
         this.Condition = Condition;
     }
 
     /**
-     * Get 资源所在地域
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源所在地域 
      * @return ResourceRegion 资源所在地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceRegion() {
         return this.ResourceRegion;
@@ -150,9 +132,7 @@ public class DspaCOSDiscoveryTaskDataSourceInfo extends AbstractModel {
 
     /**
      * Set 资源所在地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceRegion 资源所在地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceRegion(String ResourceRegion) {
         this.ResourceRegion = ResourceRegion;

@@ -25,7 +25,6 @@ public class ProcessHistory extends AbstractModel {
 
     /**
     * 处理时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Time")
     @Expose
@@ -33,7 +32,6 @@ public class ProcessHistory extends AbstractModel {
 
     /**
     * 状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -41,7 +39,6 @@ public class ProcessHistory extends AbstractModel {
 
     /**
     * 处理人
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Handler")
     @Expose
@@ -49,17 +46,14 @@ public class ProcessHistory extends AbstractModel {
 
     /**
     * 备注
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Note")
     @Expose
     private String Note;
 
     /**
-     * Get 处理时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 处理时间 
      * @return Time 处理时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTime() {
         return this.Time;
@@ -67,19 +61,15 @@ public class ProcessHistory extends AbstractModel {
 
     /**
      * Set 处理时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Time 处理时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTime(String Time) {
         this.Time = Time;
     }
 
     /**
-     * Get 状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 状态 
      * @return Status 状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
         return this.Status;
@@ -87,19 +77,15 @@ public class ProcessHistory extends AbstractModel {
 
     /**
      * Set 状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 处理人
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 处理人 
      * @return Handler 处理人
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHandler() {
         return this.Handler;
@@ -107,19 +93,15 @@ public class ProcessHistory extends AbstractModel {
 
     /**
      * Set 处理人
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Handler 处理人
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHandler(String Handler) {
         this.Handler = Handler;
     }
 
     /**
-     * Get 备注
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 备注 
      * @return Note 备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNote() {
         return this.Note;
@@ -127,9 +109,7 @@ public class ProcessHistory extends AbstractModel {
 
     /**
      * Set 备注
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Note 备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNote(String Note) {
         this.Note = Note;

@@ -25,7 +25,6 @@ public class DbInfo extends AbstractModel {
 
     /**
     * 数据库名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DbName")
     @Expose
@@ -33,7 +32,6 @@ public class DbInfo extends AbstractModel {
 
     /**
     * 绑定的状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ValidStatus")
     @Expose
@@ -41,17 +39,14 @@ public class DbInfo extends AbstractModel {
 
     /**
     * 绑定的类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BindType")
     @Expose
     private String BindType;
 
     /**
-     * Get 数据库名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据库名称 
      * @return DbName 数据库名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDbName() {
         return this.DbName;
@@ -59,19 +54,15 @@ public class DbInfo extends AbstractModel {
 
     /**
      * Set 数据库名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DbName 数据库名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDbName(String DbName) {
         this.DbName = DbName;
     }
 
     /**
-     * Get 绑定的状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 绑定的状态 
      * @return ValidStatus 绑定的状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getValidStatus() {
         return this.ValidStatus;
@@ -79,19 +70,15 @@ public class DbInfo extends AbstractModel {
 
     /**
      * Set 绑定的状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ValidStatus 绑定的状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValidStatus(String ValidStatus) {
         this.ValidStatus = ValidStatus;
     }
 
     /**
-     * Get 绑定的类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 绑定的类型 
      * @return BindType 绑定的类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBindType() {
         return this.BindType;
@@ -99,9 +86,7 @@ public class DbInfo extends AbstractModel {
 
     /**
      * Set 绑定的类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BindType 绑定的类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBindType(String BindType) {
         this.BindType = BindType;

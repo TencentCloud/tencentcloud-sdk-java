@@ -25,7 +25,6 @@ public class AssessmentRiskItem extends AbstractModel {
 
     /**
     * 脆弱项id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
     @Expose
@@ -33,7 +32,6 @@ public class AssessmentRiskItem extends AbstractModel {
 
     /**
     * 名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RiskName")
     @Expose
@@ -41,7 +39,6 @@ public class AssessmentRiskItem extends AbstractModel {
 
     /**
     * 脆弱性级别
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Level")
     @Expose
@@ -49,7 +46,6 @@ public class AssessmentRiskItem extends AbstractModel {
 
     /**
     * 说明
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
     @Expose
@@ -57,7 +53,6 @@ public class AssessmentRiskItem extends AbstractModel {
 
     /**
     * 风险类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RiskType")
     @Expose
@@ -65,7 +60,6 @@ public class AssessmentRiskItem extends AbstractModel {
 
     /**
     * 关联模板个数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReferTemplateCount")
     @Expose
@@ -73,7 +67,6 @@ public class AssessmentRiskItem extends AbstractModel {
 
     /**
     * 支持的数据源
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SupportDataSource")
     @Expose
@@ -81,7 +74,6 @@ public class AssessmentRiskItem extends AbstractModel {
 
     /**
     * 风险面
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RiskSide")
     @Expose
@@ -89,17 +81,14 @@ public class AssessmentRiskItem extends AbstractModel {
 
     /**
     * 关联模板列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReferTemplateList")
     @Expose
     private TemplateInfo [] ReferTemplateList;
 
     /**
-     * Get 脆弱项id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 脆弱项id 
      * @return Id 脆弱项id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getId() {
         return this.Id;
@@ -107,19 +96,15 @@ public class AssessmentRiskItem extends AbstractModel {
 
     /**
      * Set 脆弱项id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Id 脆弱项id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 名称 
      * @return RiskName 名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRiskName() {
         return this.RiskName;
@@ -127,19 +112,15 @@ public class AssessmentRiskItem extends AbstractModel {
 
     /**
      * Set 名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RiskName 名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRiskName(String RiskName) {
         this.RiskName = RiskName;
     }
 
     /**
-     * Get 脆弱性级别
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 脆弱性级别 
      * @return Level 脆弱性级别
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLevel() {
         return this.Level;
@@ -147,19 +128,15 @@ public class AssessmentRiskItem extends AbstractModel {
 
     /**
      * Set 脆弱性级别
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Level 脆弱性级别
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLevel(String Level) {
         this.Level = Level;
     }
 
     /**
-     * Get 说明
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 说明 
      * @return Description 说明
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
         return this.Description;
@@ -167,19 +144,15 @@ public class AssessmentRiskItem extends AbstractModel {
 
     /**
      * Set 说明
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Description 说明
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 风险类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 风险类型 
      * @return RiskType 风险类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRiskType() {
         return this.RiskType;
@@ -187,19 +160,15 @@ public class AssessmentRiskItem extends AbstractModel {
 
     /**
      * Set 风险类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RiskType 风险类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRiskType(String RiskType) {
         this.RiskType = RiskType;
     }
 
     /**
-     * Get 关联模板个数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 关联模板个数 
      * @return ReferTemplateCount 关联模板个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getReferTemplateCount() {
         return this.ReferTemplateCount;
@@ -207,19 +176,15 @@ public class AssessmentRiskItem extends AbstractModel {
 
     /**
      * Set 关联模板个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReferTemplateCount 关联模板个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReferTemplateCount(Long ReferTemplateCount) {
         this.ReferTemplateCount = ReferTemplateCount;
     }
 
     /**
-     * Get 支持的数据源
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 支持的数据源 
      * @return SupportDataSource 支持的数据源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getSupportDataSource() {
         return this.SupportDataSource;
@@ -227,19 +192,15 @@ public class AssessmentRiskItem extends AbstractModel {
 
     /**
      * Set 支持的数据源
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SupportDataSource 支持的数据源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSupportDataSource(String [] SupportDataSource) {
         this.SupportDataSource = SupportDataSource;
     }
 
     /**
-     * Get 风险面
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 风险面 
      * @return RiskSide 风险面
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRiskSide() {
         return this.RiskSide;
@@ -247,19 +208,15 @@ public class AssessmentRiskItem extends AbstractModel {
 
     /**
      * Set 风险面
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RiskSide 风险面
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRiskSide(String RiskSide) {
         this.RiskSide = RiskSide;
     }
 
     /**
-     * Get 关联模板列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 关联模板列表 
      * @return ReferTemplateList 关联模板列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TemplateInfo [] getReferTemplateList() {
         return this.ReferTemplateList;
@@ -267,9 +224,7 @@ public class AssessmentRiskItem extends AbstractModel {
 
     /**
      * Set 关联模板列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReferTemplateList 关联模板列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReferTemplateList(TemplateInfo [] ReferTemplateList) {
         this.ReferTemplateList = ReferTemplateList;

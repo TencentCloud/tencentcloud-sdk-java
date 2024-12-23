@@ -25,7 +25,6 @@ public class DescribeESAssetSensitiveDistributionResponse extends AbstractModel 
 
     /**
     * ES的资产统计数据
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ESAsset")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeESAssetSensitiveDistributionResponse extends AbstractModel 
 
     /**
     * 涉敏top数据
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TopAsset")
     @Expose
@@ -41,7 +39,6 @@ public class DescribeESAssetSensitiveDistributionResponse extends AbstractModel 
 
     /**
     * ES的详情列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ESDetail")
     @Expose
@@ -55,10 +52,8 @@ public class DescribeESAssetSensitiveDistributionResponse extends AbstractModel 
     private String RequestId;
 
     /**
-     * Get ES的资产统计数据
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get ES的资产统计数据 
      * @return ESAsset ES的资产统计数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ESAsset getESAsset() {
         return this.ESAsset;
@@ -66,19 +61,15 @@ public class DescribeESAssetSensitiveDistributionResponse extends AbstractModel 
 
     /**
      * Set ES的资产统计数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ESAsset ES的资产统计数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setESAsset(ESAsset ESAsset) {
         this.ESAsset = ESAsset;
     }
 
     /**
-     * Get 涉敏top数据
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 涉敏top数据 
      * @return TopAsset 涉敏top数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TopAsset [] getTopAsset() {
         return this.TopAsset;
@@ -86,19 +77,15 @@ public class DescribeESAssetSensitiveDistributionResponse extends AbstractModel 
 
     /**
      * Set 涉敏top数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TopAsset 涉敏top数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTopAsset(TopAsset [] TopAsset) {
         this.TopAsset = TopAsset;
     }
 
     /**
-     * Get ES的详情列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get ES的详情列表 
      * @return ESDetail ES的详情列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ESAssetDBDetail [] getESDetail() {
         return this.ESDetail;
@@ -106,9 +93,7 @@ public class DescribeESAssetSensitiveDistributionResponse extends AbstractModel 
 
     /**
      * Set ES的详情列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ESDetail ES的详情列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setESDetail(ESAssetDBDetail [] ESDetail) {
         this.ESDetail = ESDetail;

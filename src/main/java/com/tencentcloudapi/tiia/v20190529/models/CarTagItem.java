@@ -82,7 +82,6 @@ public class CarTagItem extends AbstractModel {
 
     /**
     * 车牌信息置信度，0-100，仅车辆识别（增强版）支持
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PlateConfidence")
     @Expose
@@ -90,7 +89,6 @@ public class CarTagItem extends AbstractModel {
 
     /**
     * 车辆类型置信度，0-100，仅车辆识别（增强版）支持
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TypeConfidence")
     @Expose
@@ -98,7 +96,6 @@ public class CarTagItem extends AbstractModel {
 
     /**
     * 车辆颜色置信度，0-100，仅车辆识别（增强版）支持
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ColorConfidence")
     @Expose
@@ -106,7 +103,6 @@ public class CarTagItem extends AbstractModel {
 
     /**
     * 车辆朝向，仅车辆识别（增强版）支持
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Orientation")
     @Expose
@@ -114,7 +110,6 @@ public class CarTagItem extends AbstractModel {
 
     /**
     * 车辆朝向置信度，0-100，仅车辆识别（增强版）支持
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OrientationConfidence")
     @Expose
@@ -253,10 +248,8 @@ public class CarTagItem extends AbstractModel {
     }
 
     /**
-     * Get 车牌信息置信度，0-100，仅车辆识别（增强版）支持
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 车牌信息置信度，0-100，仅车辆识别（增强版）支持 
      * @return PlateConfidence 车牌信息置信度，0-100，仅车辆识别（增强版）支持
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPlateConfidence() {
         return this.PlateConfidence;
@@ -264,19 +257,15 @@ public class CarTagItem extends AbstractModel {
 
     /**
      * Set 车牌信息置信度，0-100，仅车辆识别（增强版）支持
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PlateConfidence 车牌信息置信度，0-100，仅车辆识别（增强版）支持
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPlateConfidence(Long PlateConfidence) {
         this.PlateConfidence = PlateConfidence;
     }
 
     /**
-     * Get 车辆类型置信度，0-100，仅车辆识别（增强版）支持
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 车辆类型置信度，0-100，仅车辆识别（增强版）支持 
      * @return TypeConfidence 车辆类型置信度，0-100，仅车辆识别（增强版）支持
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTypeConfidence() {
         return this.TypeConfidence;
@@ -284,19 +273,15 @@ public class CarTagItem extends AbstractModel {
 
     /**
      * Set 车辆类型置信度，0-100，仅车辆识别（增强版）支持
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TypeConfidence 车辆类型置信度，0-100，仅车辆识别（增强版）支持
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTypeConfidence(Long TypeConfidence) {
         this.TypeConfidence = TypeConfidence;
     }
 
     /**
-     * Get 车辆颜色置信度，0-100，仅车辆识别（增强版）支持
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 车辆颜色置信度，0-100，仅车辆识别（增强版）支持 
      * @return ColorConfidence 车辆颜色置信度，0-100，仅车辆识别（增强版）支持
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getColorConfidence() {
         return this.ColorConfidence;
@@ -304,19 +289,15 @@ public class CarTagItem extends AbstractModel {
 
     /**
      * Set 车辆颜色置信度，0-100，仅车辆识别（增强版）支持
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ColorConfidence 车辆颜色置信度，0-100，仅车辆识别（增强版）支持
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setColorConfidence(Long ColorConfidence) {
         this.ColorConfidence = ColorConfidence;
     }
 
     /**
-     * Get 车辆朝向，仅车辆识别（增强版）支持
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 车辆朝向，仅车辆识别（增强版）支持 
      * @return Orientation 车辆朝向，仅车辆识别（增强版）支持
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOrientation() {
         return this.Orientation;
@@ -324,19 +305,15 @@ public class CarTagItem extends AbstractModel {
 
     /**
      * Set 车辆朝向，仅车辆识别（增强版）支持
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Orientation 车辆朝向，仅车辆识别（增强版）支持
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOrientation(String Orientation) {
         this.Orientation = Orientation;
     }
 
     /**
-     * Get 车辆朝向置信度，0-100，仅车辆识别（增强版）支持
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 车辆朝向置信度，0-100，仅车辆识别（增强版）支持 
      * @return OrientationConfidence 车辆朝向置信度，0-100，仅车辆识别（增强版）支持
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getOrientationConfidence() {
         return this.OrientationConfidence;
@@ -344,9 +321,7 @@ public class CarTagItem extends AbstractModel {
 
     /**
      * Set 车辆朝向置信度，0-100，仅车辆识别（增强版）支持
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OrientationConfidence 车辆朝向置信度，0-100，仅车辆识别（增强版）支持
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOrientationConfidence(Long OrientationConfidence) {
         this.OrientationConfidence = OrientationConfidence;

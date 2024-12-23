@@ -25,7 +25,6 @@ public class TopAsset extends AbstractModel {
 
     /**
     * 分级名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LevelName")
     @Expose
@@ -33,17 +32,14 @@ public class TopAsset extends AbstractModel {
 
     /**
     * top数据信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TopStat")
     @Expose
     private TopAssetStat [] TopStat;
 
     /**
-     * Get 分级名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分级名称 
      * @return LevelName 分级名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLevelName() {
         return this.LevelName;
@@ -51,19 +47,15 @@ public class TopAsset extends AbstractModel {
 
     /**
      * Set 分级名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LevelName 分级名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLevelName(String LevelName) {
         this.LevelName = LevelName;
     }
 
     /**
-     * Get top数据信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get top数据信息 
      * @return TopStat top数据信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TopAssetStat [] getTopStat() {
         return this.TopStat;
@@ -71,9 +63,7 @@ public class TopAsset extends AbstractModel {
 
     /**
      * Set top数据信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TopStat top数据信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTopStat(TopAssetStat [] TopStat) {
         this.TopStat = TopStat;

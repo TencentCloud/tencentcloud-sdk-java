@@ -39,7 +39,6 @@ public class DescribeDSPAAssessmentRiskTemplateDetailResponse extends AbstractMo
 
     /**
     * 模板的描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TemplateDescription")
     @Expose
@@ -61,7 +60,6 @@ public class DescribeDSPAAssessmentRiskTemplateDetailResponse extends AbstractMo
 
     /**
     * 脆弱项配置列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RiskItemList")
     @Expose
@@ -69,7 +67,6 @@ public class DescribeDSPAAssessmentRiskTemplateDetailResponse extends AbstractMo
 
     /**
     * 脆弱项配置条数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -77,7 +74,6 @@ public class DescribeDSPAAssessmentRiskTemplateDetailResponse extends AbstractMo
 
     /**
     * 被任务引用次数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskCitations")
     @Expose
@@ -123,10 +119,8 @@ public class DescribeDSPAAssessmentRiskTemplateDetailResponse extends AbstractMo
     }
 
     /**
-     * Get 模板的描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 模板的描述 
      * @return TemplateDescription 模板的描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTemplateDescription() {
         return this.TemplateDescription;
@@ -134,9 +128,7 @@ public class DescribeDSPAAssessmentRiskTemplateDetailResponse extends AbstractMo
 
     /**
      * Set 模板的描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TemplateDescription 模板的描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTemplateDescription(String TemplateDescription) {
         this.TemplateDescription = TemplateDescription;
@@ -175,10 +167,8 @@ public class DescribeDSPAAssessmentRiskTemplateDetailResponse extends AbstractMo
     }
 
     /**
-     * Get 脆弱项配置列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 脆弱项配置列表 
      * @return RiskItemList 脆弱项配置列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AssessmentRiskItem [] getRiskItemList() {
         return this.RiskItemList;
@@ -186,19 +176,15 @@ public class DescribeDSPAAssessmentRiskTemplateDetailResponse extends AbstractMo
 
     /**
      * Set 脆弱项配置列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RiskItemList 脆弱项配置列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRiskItemList(AssessmentRiskItem [] RiskItemList) {
         this.RiskItemList = RiskItemList;
     }
 
     /**
-     * Get 脆弱项配置条数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 脆弱项配置条数 
      * @return TotalCount 脆弱项配置条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -206,19 +192,15 @@ public class DescribeDSPAAssessmentRiskTemplateDetailResponse extends AbstractMo
 
     /**
      * Set 脆弱项配置条数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 脆弱项配置条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 被任务引用次数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 被任务引用次数 
      * @return TaskCitations 被任务引用次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTaskCitations() {
         return this.TaskCitations;
@@ -226,9 +208,7 @@ public class DescribeDSPAAssessmentRiskTemplateDetailResponse extends AbstractMo
 
     /**
      * Set 被任务引用次数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskCitations 被任务引用次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskCitations(Long TaskCitations) {
         this.TaskCitations = TaskCitations;

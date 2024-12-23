@@ -25,7 +25,6 @@ public class CreateAssetSortingReportTaskResponse extends AbstractModel {
 
     /**
     * 报表任务id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReportTaskId")
     @Expose
@@ -33,7 +32,6 @@ public class CreateAssetSortingReportTaskResponse extends AbstractModel {
 
     /**
     * 提示信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Remark")
     @Expose
@@ -47,10 +45,8 @@ public class CreateAssetSortingReportTaskResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 报表任务id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 报表任务id 
      * @return ReportTaskId 报表任务id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getReportTaskId() {
         return this.ReportTaskId;
@@ -58,19 +54,15 @@ public class CreateAssetSortingReportTaskResponse extends AbstractModel {
 
     /**
      * Set 报表任务id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReportTaskId 报表任务id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReportTaskId(Long ReportTaskId) {
         this.ReportTaskId = ReportTaskId;
     }
 
     /**
-     * Get 提示信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 提示信息 
      * @return Remark 提示信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRemark() {
         return this.Remark;
@@ -78,9 +70,7 @@ public class CreateAssetSortingReportTaskResponse extends AbstractModel {
 
     /**
      * Set 提示信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Remark 提示信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;

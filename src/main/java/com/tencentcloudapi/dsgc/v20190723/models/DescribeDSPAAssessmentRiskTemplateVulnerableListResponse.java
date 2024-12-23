@@ -25,7 +25,6 @@ public class DescribeDSPAAssessmentRiskTemplateVulnerableListResponse extends Ab
 
     /**
     * 脆弱项列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RiskItemList")
     @Expose
@@ -46,10 +45,8 @@ public class DescribeDSPAAssessmentRiskTemplateVulnerableListResponse extends Ab
     private String RequestId;
 
     /**
-     * Get 脆弱项列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 脆弱项列表 
      * @return RiskItemList 脆弱项列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AssessmentRiskItem [] getRiskItemList() {
         return this.RiskItemList;
@@ -57,9 +54,7 @@ public class DescribeDSPAAssessmentRiskTemplateVulnerableListResponse extends Ab
 
     /**
      * Set 脆弱项列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RiskItemList 脆弱项列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRiskItemList(AssessmentRiskItem [] RiskItemList) {
         this.RiskItemList = RiskItemList;

@@ -1176,6 +1176,17 @@ public class MonitorClient extends AbstractClient{
     }
 
     /**
+     *获取多写配置详情
+     * @param req DescribeRemoteURLsRequest
+     * @return DescribeRemoteURLsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRemoteURLsResponse DescribeRemoteURLs(DescribeRemoteURLsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRemoteURLs", DescribeRemoteURLsResponse.class);
+    }
+
+    /**
      *列出当前grafana实例的所有授权账号
      * @param req DescribeSSOAccountRequest
      * @return DescribeSSOAccountResponse
@@ -1470,6 +1481,17 @@ public class MonitorClient extends AbstractClient{
     public ModifyPrometheusTempResponse ModifyPrometheusTemp(ModifyPrometheusTempRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyPrometheusTemp", ModifyPrometheusTempResponse.class);
+    }
+
+    /**
+     *修改多写配置
+     * @param req ModifyRemoteURLsRequest
+     * @return ModifyRemoteURLsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyRemoteURLsResponse ModifyRemoteURLs(ModifyRemoteURLsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyRemoteURLs", ModifyRemoteURLsResponse.class);
     }
 
     /**

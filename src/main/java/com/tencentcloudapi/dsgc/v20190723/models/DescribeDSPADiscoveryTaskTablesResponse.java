@@ -25,7 +25,6 @@ public class DescribeDSPADiscoveryTaskTablesResponse extends AbstractModel {
 
     /**
     * 分类分级扫描表集合
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Items")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeDSPADiscoveryTaskTablesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 分类分级扫描表集合
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分类分级扫描表集合 
      * @return Items 分类分级扫描表集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DSPATableInfo [] getItems() {
         return this.Items;
@@ -50,9 +47,7 @@ public class DescribeDSPADiscoveryTaskTablesResponse extends AbstractModel {
 
     /**
      * Set 分类分级扫描表集合
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Items 分类分级扫描表集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setItems(DSPATableInfo [] Items) {
         this.Items = Items;

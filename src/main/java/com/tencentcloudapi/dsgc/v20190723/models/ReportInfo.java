@@ -39,7 +39,6 @@ public class ReportInfo extends AbstractModel {
 
     /**
     * 报告类型（AssetSorting:资产梳理）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReportType")
     @Expose
@@ -47,7 +46,6 @@ public class ReportInfo extends AbstractModel {
 
     /**
     * 报告周期（0单次 1每天 2每周 3每月）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReportPeriod")
     @Expose
@@ -55,7 +53,6 @@ public class ReportInfo extends AbstractModel {
 
     /**
     * 执行计划 （0:单次报告 1:定时报告）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReportPlan")
     @Expose
@@ -63,7 +60,6 @@ public class ReportInfo extends AbstractModel {
 
     /**
     * 报告导出状态（Success 成功, Failed 失败, InProgress 进行中）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReportStatus")
     @Expose
@@ -71,7 +67,6 @@ public class ReportInfo extends AbstractModel {
 
     /**
     * 任务下次启动时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TimingStartTime")
     @Expose
@@ -79,7 +74,6 @@ public class ReportInfo extends AbstractModel {
 
     /**
     * 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -87,7 +81,6 @@ public class ReportInfo extends AbstractModel {
 
     /**
     * 完成时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FinishedTime")
     @Expose
@@ -95,7 +88,6 @@ public class ReportInfo extends AbstractModel {
 
     /**
     * 子账号uin
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubUin")
     @Expose
@@ -103,7 +95,6 @@ public class ReportInfo extends AbstractModel {
 
     /**
     * 失败信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FailedMessage")
     @Expose
@@ -111,7 +102,6 @@ public class ReportInfo extends AbstractModel {
 
     /**
     * 是否启用（0：否 1：是）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Enable")
     @Expose
@@ -119,7 +109,6 @@ public class ReportInfo extends AbstractModel {
 
     /**
     * 识别模板名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ComplianceName")
     @Expose
@@ -127,7 +116,6 @@ public class ReportInfo extends AbstractModel {
 
     /**
     * 进度百分比
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProgressPercent")
     @Expose
@@ -135,7 +123,6 @@ public class ReportInfo extends AbstractModel {
 
     /**
     * 报告模版名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReportTemplateName")
     @Expose
@@ -174,10 +161,8 @@ public class ReportInfo extends AbstractModel {
     }
 
     /**
-     * Get 报告类型（AssetSorting:资产梳理）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 报告类型（AssetSorting:资产梳理） 
      * @return ReportType 报告类型（AssetSorting:资产梳理）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getReportType() {
         return this.ReportType;
@@ -185,19 +170,15 @@ public class ReportInfo extends AbstractModel {
 
     /**
      * Set 报告类型（AssetSorting:资产梳理）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReportType 报告类型（AssetSorting:资产梳理）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReportType(String ReportType) {
         this.ReportType = ReportType;
     }
 
     /**
-     * Get 报告周期（0单次 1每天 2每周 3每月）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 报告周期（0单次 1每天 2每周 3每月） 
      * @return ReportPeriod 报告周期（0单次 1每天 2每周 3每月）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getReportPeriod() {
         return this.ReportPeriod;
@@ -205,19 +186,15 @@ public class ReportInfo extends AbstractModel {
 
     /**
      * Set 报告周期（0单次 1每天 2每周 3每月）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReportPeriod 报告周期（0单次 1每天 2每周 3每月）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReportPeriod(Long ReportPeriod) {
         this.ReportPeriod = ReportPeriod;
     }
 
     /**
-     * Get 执行计划 （0:单次报告 1:定时报告）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 执行计划 （0:单次报告 1:定时报告） 
      * @return ReportPlan 执行计划 （0:单次报告 1:定时报告）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getReportPlan() {
         return this.ReportPlan;
@@ -225,19 +202,15 @@ public class ReportInfo extends AbstractModel {
 
     /**
      * Set 执行计划 （0:单次报告 1:定时报告）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReportPlan 执行计划 （0:单次报告 1:定时报告）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReportPlan(Long ReportPlan) {
         this.ReportPlan = ReportPlan;
     }
 
     /**
-     * Get 报告导出状态（Success 成功, Failed 失败, InProgress 进行中）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 报告导出状态（Success 成功, Failed 失败, InProgress 进行中） 
      * @return ReportStatus 报告导出状态（Success 成功, Failed 失败, InProgress 进行中）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getReportStatus() {
         return this.ReportStatus;
@@ -245,19 +218,15 @@ public class ReportInfo extends AbstractModel {
 
     /**
      * Set 报告导出状态（Success 成功, Failed 失败, InProgress 进行中）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReportStatus 报告导出状态（Success 成功, Failed 失败, InProgress 进行中）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReportStatus(String ReportStatus) {
         this.ReportStatus = ReportStatus;
     }
 
     /**
-     * Get 任务下次启动时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务下次启动时间 
      * @return TimingStartTime 任务下次启动时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTimingStartTime() {
         return this.TimingStartTime;
@@ -265,19 +234,15 @@ public class ReportInfo extends AbstractModel {
 
     /**
      * Set 任务下次启动时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TimingStartTime 任务下次启动时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimingStartTime(String TimingStartTime) {
         this.TimingStartTime = TimingStartTime;
     }
 
     /**
-     * Get 创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间 
      * @return CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -285,19 +250,15 @@ public class ReportInfo extends AbstractModel {
 
     /**
      * Set 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 完成时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 完成时间 
      * @return FinishedTime 完成时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFinishedTime() {
         return this.FinishedTime;
@@ -305,19 +266,15 @@ public class ReportInfo extends AbstractModel {
 
     /**
      * Set 完成时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FinishedTime 完成时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFinishedTime(String FinishedTime) {
         this.FinishedTime = FinishedTime;
     }
 
     /**
-     * Get 子账号uin
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子账号uin 
      * @return SubUin 子账号uin
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubUin() {
         return this.SubUin;
@@ -325,19 +282,15 @@ public class ReportInfo extends AbstractModel {
 
     /**
      * Set 子账号uin
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubUin 子账号uin
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubUin(String SubUin) {
         this.SubUin = SubUin;
     }
 
     /**
-     * Get 失败信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 失败信息 
      * @return FailedMessage 失败信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFailedMessage() {
         return this.FailedMessage;
@@ -345,19 +298,15 @@ public class ReportInfo extends AbstractModel {
 
     /**
      * Set 失败信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FailedMessage 失败信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFailedMessage(String FailedMessage) {
         this.FailedMessage = FailedMessage;
     }
 
     /**
-     * Get 是否启用（0：否 1：是）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否启用（0：否 1：是） 
      * @return Enable 是否启用（0：否 1：是）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getEnable() {
         return this.Enable;
@@ -365,19 +314,15 @@ public class ReportInfo extends AbstractModel {
 
     /**
      * Set 是否启用（0：否 1：是）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Enable 是否启用（0：否 1：是）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnable(Long Enable) {
         this.Enable = Enable;
     }
 
     /**
-     * Get 识别模板名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 识别模板名称 
      * @return ComplianceName 识别模板名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getComplianceName() {
         return this.ComplianceName;
@@ -385,19 +330,15 @@ public class ReportInfo extends AbstractModel {
 
     /**
      * Set 识别模板名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ComplianceName 识别模板名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setComplianceName(String ComplianceName) {
         this.ComplianceName = ComplianceName;
     }
 
     /**
-     * Get 进度百分比
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 进度百分比 
      * @return ProgressPercent 进度百分比
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getProgressPercent() {
         return this.ProgressPercent;
@@ -405,19 +346,15 @@ public class ReportInfo extends AbstractModel {
 
     /**
      * Set 进度百分比
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProgressPercent 进度百分比
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProgressPercent(Long ProgressPercent) {
         this.ProgressPercent = ProgressPercent;
     }
 
     /**
-     * Get 报告模版名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 报告模版名称 
      * @return ReportTemplateName 报告模版名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getReportTemplateName() {
         return this.ReportTemplateName;
@@ -425,9 +362,7 @@ public class ReportInfo extends AbstractModel {
 
     /**
      * Set 报告模版名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReportTemplateName 报告模版名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReportTemplateName(String ReportTemplateName) {
         this.ReportTemplateName = ReportTemplateName;

@@ -32,7 +32,6 @@ public class CreateDSPACOSDiscoveryTaskResponse extends AbstractModel {
 
     /**
     * 扫描结果ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResultId")
     @Expose
@@ -62,10 +61,8 @@ public class CreateDSPACOSDiscoveryTaskResponse extends AbstractModel {
     }
 
     /**
-     * Get 扫描结果ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 扫描结果ID 
      * @return ResultId 扫描结果ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getResultId() {
         return this.ResultId;
@@ -73,9 +70,7 @@ public class CreateDSPACOSDiscoveryTaskResponse extends AbstractModel {
 
     /**
      * Set 扫描结果ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResultId 扫描结果ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResultId(Long ResultId) {
         this.ResultId = ResultId;

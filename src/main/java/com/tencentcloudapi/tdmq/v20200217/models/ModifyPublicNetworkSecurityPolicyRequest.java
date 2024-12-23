@@ -23,6 +23,52 @@ import java.util.HashMap;
 
 public class ModifyPublicNetworkSecurityPolicyRequest extends AbstractModel {
 
+    /**
+    * 集群id
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
+    * 策略列表
+    */
+    @SerializedName("PolicyList")
+    @Expose
+    private SecurityPolicy [] PolicyList;
+
+    /**
+     * Get 集群id 
+     * @return InstanceId 集群id
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set 集群id
+     * @param InstanceId 集群id
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
+    /**
+     * Get 策略列表 
+     * @return PolicyList 策略列表
+     */
+    public SecurityPolicy [] getPolicyList() {
+        return this.PolicyList;
+    }
+
+    /**
+     * Set 策略列表
+     * @param PolicyList 策略列表
+     */
+    public void setPolicyList(SecurityPolicy [] PolicyList) {
+        this.PolicyList = PolicyList;
+    }
+
     public ModifyPublicNetworkSecurityPolicyRequest() {
     }
 
@@ -31,6 +77,15 @@ public class ModifyPublicNetworkSecurityPolicyRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ModifyPublicNetworkSecurityPolicyRequest(ModifyPublicNetworkSecurityPolicyRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.PolicyList != null) {
+            this.PolicyList = new SecurityPolicy[source.PolicyList.length];
+            for (int i = 0; i < source.PolicyList.length; i++) {
+                this.PolicyList[i] = new SecurityPolicy(source.PolicyList[i]);
+            }
+        }
     }
 
 
@@ -38,6 +93,8 @@ public class ModifyPublicNetworkSecurityPolicyRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamArrayObj(map, prefix + "PolicyList.", this.PolicyList);
 
     }
 }

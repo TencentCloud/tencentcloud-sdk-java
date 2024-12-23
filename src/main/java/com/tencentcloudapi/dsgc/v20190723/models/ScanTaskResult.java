@@ -52,6 +52,20 @@ public class ScanTaskResult extends AbstractModel {
     private String Result;
 
     /**
+    * 结果描述
+    */
+    @SerializedName("ResultDescription")
+    @Expose
+    private String ResultDescription;
+
+    /**
+    * 结果建议
+    */
+    @SerializedName("Suggestion")
+    @Expose
+    private String Suggestion;
+
+    /**
      * Get 任务最新一次运行结果ID 
      * @return Id 任务最新一次运行结果ID
      */
@@ -115,6 +129,38 @@ public class ScanTaskResult extends AbstractModel {
         this.Result = Result;
     }
 
+    /**
+     * Get 结果描述 
+     * @return ResultDescription 结果描述
+     */
+    public String getResultDescription() {
+        return this.ResultDescription;
+    }
+
+    /**
+     * Set 结果描述
+     * @param ResultDescription 结果描述
+     */
+    public void setResultDescription(String ResultDescription) {
+        this.ResultDescription = ResultDescription;
+    }
+
+    /**
+     * Get 结果建议 
+     * @return Suggestion 结果建议
+     */
+    public String getSuggestion() {
+        return this.Suggestion;
+    }
+
+    /**
+     * Set 结果建议
+     * @param Suggestion 结果建议
+     */
+    public void setSuggestion(String Suggestion) {
+        this.Suggestion = Suggestion;
+    }
+
     public ScanTaskResult() {
     }
 
@@ -135,6 +181,12 @@ public class ScanTaskResult extends AbstractModel {
         if (source.Result != null) {
             this.Result = new String(source.Result);
         }
+        if (source.ResultDescription != null) {
+            this.ResultDescription = new String(source.ResultDescription);
+        }
+        if (source.Suggestion != null) {
+            this.Suggestion = new String(source.Suggestion);
+        }
     }
 
 
@@ -146,6 +198,8 @@ public class ScanTaskResult extends AbstractModel {
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "Result", this.Result);
+        this.setParamSimple(map, prefix + "ResultDescription", this.ResultDescription);
+        this.setParamSimple(map, prefix + "Suggestion", this.Suggestion);
 
     }
 }

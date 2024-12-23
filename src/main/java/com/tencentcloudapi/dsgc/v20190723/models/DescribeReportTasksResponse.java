@@ -25,7 +25,6 @@ public class DescribeReportTasksResponse extends AbstractModel {
 
     /**
     * 总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeReportTasksResponse extends AbstractModel {
 
     /**
     * 报表信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ItemSet")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeReportTasksResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 总数 
      * @return TotalCount 总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -58,19 +54,15 @@ public class DescribeReportTasksResponse extends AbstractModel {
 
     /**
      * Set 总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 报表信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 报表信息 
      * @return ItemSet 报表信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ReportInfo [] getItemSet() {
         return this.ItemSet;
@@ -78,9 +70,7 @@ public class DescribeReportTasksResponse extends AbstractModel {
 
     /**
      * Set 报表信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ItemSet 报表信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setItemSet(ReportInfo [] ItemSet) {
         this.ItemSet = ItemSet;

@@ -25,7 +25,6 @@ public class DescribeCOSAssetSensitiveDistributionResponse extends AbstractModel
 
     /**
     * cos的涉敏资产
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CosAsset")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeCOSAssetSensitiveDistributionResponse extends AbstractModel
 
     /**
     * 涉敏top
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TopAsset")
     @Expose
@@ -41,7 +39,6 @@ public class DescribeCOSAssetSensitiveDistributionResponse extends AbstractModel
 
     /**
     * cos资产详情列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CosDetail")
     @Expose
@@ -55,10 +52,8 @@ public class DescribeCOSAssetSensitiveDistributionResponse extends AbstractModel
     private String RequestId;
 
     /**
-     * Get cos的涉敏资产
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get cos的涉敏资产 
      * @return CosAsset cos的涉敏资产
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CosAsset getCosAsset() {
         return this.CosAsset;
@@ -66,19 +61,15 @@ public class DescribeCOSAssetSensitiveDistributionResponse extends AbstractModel
 
     /**
      * Set cos的涉敏资产
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CosAsset cos的涉敏资产
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCosAsset(CosAsset CosAsset) {
         this.CosAsset = CosAsset;
     }
 
     /**
-     * Get 涉敏top
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 涉敏top 
      * @return TopAsset 涉敏top
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TopAsset [] getTopAsset() {
         return this.TopAsset;
@@ -86,19 +77,15 @@ public class DescribeCOSAssetSensitiveDistributionResponse extends AbstractModel
 
     /**
      * Set 涉敏top
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TopAsset 涉敏top
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTopAsset(TopAsset [] TopAsset) {
         this.TopAsset = TopAsset;
     }
 
     /**
-     * Get cos资产详情列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get cos资产详情列表 
      * @return CosDetail cos资产详情列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AssetCosDetail [] getCosDetail() {
         return this.CosDetail;
@@ -106,9 +93,7 @@ public class DescribeCOSAssetSensitiveDistributionResponse extends AbstractModel
 
     /**
      * Set cos资产详情列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CosDetail cos资产详情列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCosDetail(AssetCosDetail [] CosDetail) {
         this.CosDetail = CosDetail;

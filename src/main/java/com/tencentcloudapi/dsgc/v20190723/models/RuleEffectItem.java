@@ -25,7 +25,6 @@ public class RuleEffectItem extends AbstractModel {
 
     /**
     * 规则描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -33,17 +32,14 @@ public class RuleEffectItem extends AbstractModel {
 
     /**
     * 规则值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Value")
     @Expose
     private Long Value;
 
     /**
-     * Get 规则描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则描述 
      * @return Name 规则描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -51,19 +47,15 @@ public class RuleEffectItem extends AbstractModel {
 
     /**
      * Set 规则描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 规则描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 规则值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则值 
      * @return Value 规则值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getValue() {
         return this.Value;
@@ -71,9 +63,7 @@ public class RuleEffectItem extends AbstractModel {
 
     /**
      * Set 规则值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Value 规则值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValue(Long Value) {
         this.Value = Value;

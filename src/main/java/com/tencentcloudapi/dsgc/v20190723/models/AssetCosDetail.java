@@ -25,7 +25,6 @@ public class AssetCosDetail extends AbstractModel {
 
     /**
     * 桶的名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Bucket")
     @Expose
@@ -33,7 +32,6 @@ public class AssetCosDetail extends AbstractModel {
 
     /**
     * 数据源类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataType")
     @Expose
@@ -41,7 +39,6 @@ public class AssetCosDetail extends AbstractModel {
 
     /**
     * 文件的个数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileNums")
     @Expose
@@ -49,7 +46,6 @@ public class AssetCosDetail extends AbstractModel {
 
     /**
     * 敏感的文件个数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SensitiveFileNums")
     @Expose
@@ -57,7 +53,6 @@ public class AssetCosDetail extends AbstractModel {
 
     /**
     * 敏感分布
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DistributionData")
     @Expose
@@ -65,17 +60,14 @@ public class AssetCosDetail extends AbstractModel {
 
     /**
     * cos文件的敏感数据个数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MatchedNum")
     @Expose
     private Long MatchedNum;
 
     /**
-     * Get 桶的名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 桶的名 
      * @return Bucket 桶的名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBucket() {
         return this.Bucket;
@@ -83,19 +75,15 @@ public class AssetCosDetail extends AbstractModel {
 
     /**
      * Set 桶的名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Bucket 桶的名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBucket(String Bucket) {
         this.Bucket = Bucket;
     }
 
     /**
-     * Get 数据源类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据源类型 
      * @return DataType 数据源类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDataType() {
         return this.DataType;
@@ -103,19 +91,15 @@ public class AssetCosDetail extends AbstractModel {
 
     /**
      * Set 数据源类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DataType 数据源类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataType(String DataType) {
         this.DataType = DataType;
     }
 
     /**
-     * Get 文件的个数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文件的个数 
      * @return FileNums 文件的个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFileNums() {
         return this.FileNums;
@@ -123,19 +107,15 @@ public class AssetCosDetail extends AbstractModel {
 
     /**
      * Set 文件的个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FileNums 文件的个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileNums(Long FileNums) {
         this.FileNums = FileNums;
     }
 
     /**
-     * Get 敏感的文件个数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 敏感的文件个数 
      * @return SensitiveFileNums 敏感的文件个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSensitiveFileNums() {
         return this.SensitiveFileNums;
@@ -143,19 +123,15 @@ public class AssetCosDetail extends AbstractModel {
 
     /**
      * Set 敏感的文件个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SensitiveFileNums 敏感的文件个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSensitiveFileNums(Long SensitiveFileNums) {
         this.SensitiveFileNums = SensitiveFileNums;
     }
 
     /**
-     * Get 敏感分布
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 敏感分布 
      * @return DistributionData 敏感分布
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Note [] getDistributionData() {
         return this.DistributionData;
@@ -163,19 +139,15 @@ public class AssetCosDetail extends AbstractModel {
 
     /**
      * Set 敏感分布
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DistributionData 敏感分布
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDistributionData(Note [] DistributionData) {
         this.DistributionData = DistributionData;
     }
 
     /**
-     * Get cos文件的敏感数据个数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get cos文件的敏感数据个数 
      * @return MatchedNum cos文件的敏感数据个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMatchedNum() {
         return this.MatchedNum;
@@ -183,9 +155,7 @@ public class AssetCosDetail extends AbstractModel {
 
     /**
      * Set cos文件的敏感数据个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MatchedNum cos文件的敏感数据个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMatchedNum(Long MatchedNum) {
         this.MatchedNum = MatchedNum;

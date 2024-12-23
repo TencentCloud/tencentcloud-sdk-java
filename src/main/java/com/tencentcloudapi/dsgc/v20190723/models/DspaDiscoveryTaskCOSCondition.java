@@ -25,7 +25,6 @@ public class DspaDiscoveryTaskCOSCondition extends AbstractModel {
 
     /**
     * 数据桶名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Bucket")
     @Expose
@@ -33,7 +32,6 @@ public class DspaDiscoveryTaskCOSCondition extends AbstractModel {
 
     /**
     * 文件类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileTypes")
     @Expose
@@ -41,17 +39,14 @@ public class DspaDiscoveryTaskCOSCondition extends AbstractModel {
 
     /**
     * 文件大小上限，单位为KB，如1000, 目前单个文件最大只支持1GB（1048576KB）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileSizeLimit")
     @Expose
     private Long FileSizeLimit;
 
     /**
-     * Get 数据桶名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据桶名称 
      * @return Bucket 数据桶名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBucket() {
         return this.Bucket;
@@ -59,19 +54,15 @@ public class DspaDiscoveryTaskCOSCondition extends AbstractModel {
 
     /**
      * Set 数据桶名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Bucket 数据桶名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBucket(String Bucket) {
         this.Bucket = Bucket;
     }
 
     /**
-     * Get 文件类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文件类型 
      * @return FileTypes 文件类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getFileTypes() {
         return this.FileTypes;
@@ -79,19 +70,15 @@ public class DspaDiscoveryTaskCOSCondition extends AbstractModel {
 
     /**
      * Set 文件类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FileTypes 文件类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileTypes(String [] FileTypes) {
         this.FileTypes = FileTypes;
     }
 
     /**
-     * Get 文件大小上限，单位为KB，如1000, 目前单个文件最大只支持1GB（1048576KB）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文件大小上限，单位为KB，如1000, 目前单个文件最大只支持1GB（1048576KB） 
      * @return FileSizeLimit 文件大小上限，单位为KB，如1000, 目前单个文件最大只支持1GB（1048576KB）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFileSizeLimit() {
         return this.FileSizeLimit;
@@ -99,9 +86,7 @@ public class DspaDiscoveryTaskCOSCondition extends AbstractModel {
 
     /**
      * Set 文件大小上限，单位为KB，如1000, 目前单个文件最大只支持1GB（1048576KB）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FileSizeLimit 文件大小上限，单位为KB，如1000, 目前单个文件最大只支持1GB（1048576KB）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileSizeLimit(Long FileSizeLimit) {
         this.FileSizeLimit = FileSizeLimit;

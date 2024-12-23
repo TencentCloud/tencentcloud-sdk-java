@@ -31,7 +31,7 @@ public class DescribeDSPAAssessmentRiskProcessHistoryRequest extends AbstractMod
     private String DspaId;
 
     /**
-    * xxx
+    * 风险id
     */
     @SerializedName("RiskId")
     @Expose
@@ -54,16 +54,16 @@ public class DescribeDSPAAssessmentRiskProcessHistoryRequest extends AbstractMod
     }
 
     /**
-     * Get xxx 
-     * @return RiskId xxx
+     * Get 风险id 
+     * @return RiskId 风险id
      */
     public Long getRiskId() {
         return this.RiskId;
     }
 
     /**
-     * Set xxx
-     * @param RiskId xxx
+     * Set 风险id
+     * @param RiskId 风险id
      */
     public void setRiskId(Long RiskId) {
         this.RiskId = RiskId;

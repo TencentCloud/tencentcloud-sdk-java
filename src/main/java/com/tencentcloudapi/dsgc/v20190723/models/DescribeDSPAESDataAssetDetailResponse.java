@@ -25,7 +25,6 @@ public class DescribeDSPAESDataAssetDetailResponse extends AbstractModel {
 
     /**
     * 总的个数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeDSPAESDataAssetDetailResponse extends AbstractModel {
 
     /**
     * 概览详情列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Details")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeDSPAESDataAssetDetailResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 总的个数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 总的个数 
      * @return TotalCount 总的个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -58,19 +54,15 @@ public class DescribeDSPAESDataAssetDetailResponse extends AbstractModel {
 
     /**
      * Set 总的个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 总的个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 概览详情列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 概览详情列表 
      * @return Details 概览详情列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ESDataAssetDetail [] getDetails() {
         return this.Details;
@@ -78,9 +70,7 @@ public class DescribeDSPAESDataAssetDetailResponse extends AbstractModel {
 
     /**
      * Set 概览详情列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Details 概览详情列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDetails(ESDataAssetDetail [] Details) {
         this.Details = Details;

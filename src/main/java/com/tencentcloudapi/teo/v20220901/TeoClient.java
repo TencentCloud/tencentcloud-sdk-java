@@ -152,6 +152,17 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     }
 
     /**
+     *创建内容标识符，可以设置描述、标签等信息，同时需要绑定企业版套餐用于统计计费数据；一个内容标识符只能绑定一个计费套餐，一个计费套餐可以绑定多个内容标识符。该功能仅限白名单开放。
+     * @param req CreateContentIdentifierRequest
+     * @return CreateContentIdentifierResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateContentIdentifierResponse CreateContentIdentifier(CreateContentIdentifierRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateContentIdentifier", CreateContentIdentifierResponse.class);
+    }
+
+    /**
      *创建自定义错误页面。
      * @param req CreateCustomizeErrorPageRequest
      * @return CreateCustomizeErrorPageResponse
@@ -160,6 +171,17 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     public CreateCustomizeErrorPageResponse CreateCustomizeErrorPage(CreateCustomizeErrorPageRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateCustomizeErrorPage", CreateCustomizeErrorPageResponse.class);
+    }
+
+    /**
+     *在创建完站点后，并且站点为 NS 模式接入时，您可以通过本接口创建 DNS 记录。
+     * @param req CreateDnsRecordRequest
+     * @return CreateDnsRecordResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDnsRecordResponse CreateDnsRecord(CreateDnsRecordRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateDnsRecord", CreateDnsRecordResponse.class);
     }
 
     /**
@@ -379,6 +401,17 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     }
 
     /**
+     *删除指定的内容标识符。该功能仅白名单开放。
+     * @param req DeleteContentIdentifierRequest
+     * @return DeleteContentIdentifierResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteContentIdentifierResponse DeleteContentIdentifier(DeleteContentIdentifierRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteContentIdentifier", DeleteContentIdentifierResponse.class);
+    }
+
+    /**
      *删除自定义错误页面。
      * @param req DeleteCustomErrorPageRequest
      * @return DeleteCustomErrorPageResponse
@@ -387,6 +420,17 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     public DeleteCustomErrorPageResponse DeleteCustomErrorPage(DeleteCustomErrorPageRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteCustomErrorPage", DeleteCustomErrorPageResponse.class);
+    }
+
+    /**
+     *您可以用本接口批量删除 DNS 记录。
+     * @param req DeleteDnsRecordsRequest
+     * @return DeleteDnsRecordsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteDnsRecordsResponse DeleteDnsRecords(DeleteDnsRecordsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteDnsRecords", DeleteDnsRecordsResponse.class);
     }
 
     /**
@@ -599,6 +643,17 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     }
 
     /**
+     *批量查询内容标识符，可以根据 ID、描述、状态或者标签过滤。按照状态查询被删除的内容标识符仅保留三个月。该功能仅白名单开放。
+     * @param req DescribeContentIdentifiersRequest
+     * @return DescribeContentIdentifiersResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeContentIdentifiersResponse DescribeContentIdentifiers(DescribeContentIdentifiersRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeContentIdentifiers", DescribeContentIdentifiersResponse.class);
+    }
+
+    /**
      *查询内容管理接口配额
      * @param req DescribeContentQuotaRequest
      * @return DescribeContentQuotaResponse
@@ -673,6 +728,17 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     public DescribeDeployHistoryResponse DescribeDeployHistory(DescribeDeployHistoryRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeDeployHistory", DescribeDeployHistoryResponse.class);
+    }
+
+    /**
+     *您可以用过本接口查看站点下的 DNS 记录信息，包括 DNS 记录名、记录类型以及记录内容等信息。您可以查看站点下全部 DNS 记录的信息，也可以指定过滤条件查询对应的 DNS 记录信息。
+     * @param req DescribeDnsRecordsRequest
+     * @return DescribeDnsRecordsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDnsRecordsResponse DescribeDnsRecords(DescribeDnsRecordsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDnsRecords", DescribeDnsRecordsResponse.class);
     }
 
     /**
@@ -1197,6 +1263,17 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     }
 
     /**
+     *修改内容标识符，仅支持修改描述。该功能仅白名单开放。
+     * @param req ModifyContentIdentifierRequest
+     * @return ModifyContentIdentifierResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyContentIdentifierResponse ModifyContentIdentifier(ModifyContentIdentifierRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyContentIdentifier", ModifyContentIdentifierResponse.class);
+    }
+
+    /**
      *修改自定义错误页面。
      * @param req ModifyCustomErrorPageRequest
      * @return ModifyCustomErrorPageResponse
@@ -1205,6 +1282,28 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
     public ModifyCustomErrorPageResponse ModifyCustomErrorPage(ModifyCustomErrorPageRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyCustomErrorPage", ModifyCustomErrorPageResponse.class);
+    }
+
+    /**
+     *您可以通过本接口批量修改 DNS 记录。
+     * @param req ModifyDnsRecordsRequest
+     * @return ModifyDnsRecordsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDnsRecordsResponse ModifyDnsRecords(ModifyDnsRecordsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDnsRecords", ModifyDnsRecordsResponse.class);
+    }
+
+    /**
+     *您可以通过本接口批量修改 DNS 记录的状态，批量对记录进行开启和停用。
+     * @param req ModifyDnsRecordsStatusRequest
+     * @return ModifyDnsRecordsStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDnsRecordsStatusResponse ModifyDnsRecordsStatus(ModifyDnsRecordsStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDnsRecordsStatus", ModifyDnsRecordsStatusResponse.class);
     }
 
     /**

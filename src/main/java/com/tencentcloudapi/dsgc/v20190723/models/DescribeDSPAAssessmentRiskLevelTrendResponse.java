@@ -25,7 +25,6 @@ public class DescribeDSPAAssessmentRiskLevelTrendResponse extends AbstractModel 
 
     /**
     * 结果集
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Items")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeDSPAAssessmentRiskLevelTrendResponse extends AbstractModel 
     private String RequestId;
 
     /**
-     * Get 结果集
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 结果集 
      * @return Items 结果集
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RiskLevelTrendItem [] getItems() {
         return this.Items;
@@ -50,9 +47,7 @@ public class DescribeDSPAAssessmentRiskLevelTrendResponse extends AbstractModel 
 
     /**
      * Set 结果集
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Items 结果集
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setItems(RiskLevelTrendItem [] Items) {
         this.Items = Items;

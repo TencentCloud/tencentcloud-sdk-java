@@ -25,7 +25,6 @@ public class CreateIdentifyRuleAnotherNameResponse extends AbstractModel {
 
     /**
     * 创建的别名规则id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AliasRuleId")
     @Expose
@@ -33,7 +32,6 @@ public class CreateIdentifyRuleAnotherNameResponse extends AbstractModel {
 
     /**
     * 别名规则名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AliasRuleName")
     @Expose
@@ -47,10 +45,8 @@ public class CreateIdentifyRuleAnotherNameResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 创建的别名规则id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建的别名规则id 
      * @return AliasRuleId 创建的别名规则id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAliasRuleId() {
         return this.AliasRuleId;
@@ -58,19 +54,15 @@ public class CreateIdentifyRuleAnotherNameResponse extends AbstractModel {
 
     /**
      * Set 创建的别名规则id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AliasRuleId 创建的别名规则id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAliasRuleId(Long AliasRuleId) {
         this.AliasRuleId = AliasRuleId;
     }
 
     /**
-     * Get 别名规则名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 别名规则名称 
      * @return AliasRuleName 别名规则名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAliasRuleName() {
         return this.AliasRuleName;
@@ -78,9 +70,7 @@ public class CreateIdentifyRuleAnotherNameResponse extends AbstractModel {
 
     /**
      * Set 别名规则名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AliasRuleName 别名规则名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAliasRuleName(String AliasRuleName) {
         this.AliasRuleName = AliasRuleName;

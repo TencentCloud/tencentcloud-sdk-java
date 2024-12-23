@@ -39,7 +39,6 @@ public class ComplianceGroupDetail extends AbstractModel {
 
     /**
     * 描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
     @Expose
@@ -47,7 +46,6 @@ public class ComplianceGroupDetail extends AbstractModel {
 
     /**
     * 模板类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ComplianceGroupType")
     @Expose
@@ -69,7 +67,6 @@ public class ComplianceGroupDetail extends AbstractModel {
 
     /**
     * 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -77,7 +74,6 @@ public class ComplianceGroupDetail extends AbstractModel {
 
     /**
     * 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ModifyTime")
     @Expose
@@ -85,7 +81,6 @@ public class ComplianceGroupDetail extends AbstractModel {
 
     /**
     * 是否开启别名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsAlias")
     @Expose
@@ -124,10 +119,8 @@ public class ComplianceGroupDetail extends AbstractModel {
     }
 
     /**
-     * Get 描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 描述 
      * @return Description 描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
         return this.Description;
@@ -135,19 +128,15 @@ public class ComplianceGroupDetail extends AbstractModel {
 
     /**
      * Set 描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Description 描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 模板类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 模板类型 
      * @return ComplianceGroupType 模板类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getComplianceGroupType() {
         return this.ComplianceGroupType;
@@ -155,9 +144,7 @@ public class ComplianceGroupDetail extends AbstractModel {
 
     /**
      * Set 模板类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ComplianceGroupType 模板类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setComplianceGroupType(Long ComplianceGroupType) {
         this.ComplianceGroupType = ComplianceGroupType;
@@ -196,10 +183,8 @@ public class ComplianceGroupDetail extends AbstractModel {
     }
 
     /**
-     * Get 创建时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间 
      * @return CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -207,19 +192,15 @@ public class ComplianceGroupDetail extends AbstractModel {
 
     /**
      * Set 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 更新时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 更新时间 
      * @return ModifyTime 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getModifyTime() {
         return this.ModifyTime;
@@ -227,19 +208,15 @@ public class ComplianceGroupDetail extends AbstractModel {
 
     /**
      * Set 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ModifyTime 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModifyTime(String ModifyTime) {
         this.ModifyTime = ModifyTime;
     }
 
     /**
-     * Get 是否开启别名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否开启别名 
      * @return IsAlias 是否开启别名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsAlias() {
         return this.IsAlias;
@@ -247,9 +224,7 @@ public class ComplianceGroupDetail extends AbstractModel {
 
     /**
      * Set 是否开启别名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsAlias 是否开启别名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsAlias(Boolean IsAlias) {
         this.IsAlias = IsAlias;

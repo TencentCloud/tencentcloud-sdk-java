@@ -25,7 +25,6 @@ public class HighRiskAssetsDetail extends AbstractModel {
 
     /**
     * 实例id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -33,7 +32,6 @@ public class HighRiskAssetsDetail extends AbstractModel {
 
     /**
     * 数据源类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataSourceType")
     @Expose
@@ -41,7 +39,6 @@ public class HighRiskAssetsDetail extends AbstractModel {
 
     /**
     * 数据源名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataSourceName")
     @Expose
@@ -49,7 +46,6 @@ public class HighRiskAssetsDetail extends AbstractModel {
 
     /**
     * 资产对象名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AssetsName")
     @Expose
@@ -57,7 +53,6 @@ public class HighRiskAssetsDetail extends AbstractModel {
 
     /**
     * 高风险个数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HighRiskCount")
     @Expose
@@ -65,7 +60,6 @@ public class HighRiskAssetsDetail extends AbstractModel {
 
     /**
     * 风险类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RiskType")
     @Expose
@@ -73,7 +67,6 @@ public class HighRiskAssetsDetail extends AbstractModel {
 
     /**
     * 总的风险个数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalRiskCount")
     @Expose
@@ -81,7 +74,6 @@ public class HighRiskAssetsDetail extends AbstractModel {
 
     /**
     * 风险面
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RiskSide")
     @Expose
@@ -89,17 +81,14 @@ public class HighRiskAssetsDetail extends AbstractModel {
 
     /**
     * 地域
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceRegion")
     @Expose
     private String ResourceRegion;
 
     /**
-     * Get 实例id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例id 
      * @return InstanceId 实例id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceId() {
         return this.InstanceId;
@@ -107,19 +96,15 @@ public class HighRiskAssetsDetail extends AbstractModel {
 
     /**
      * Set 实例id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceId 实例id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 数据源类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据源类型 
      * @return DataSourceType 数据源类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDataSourceType() {
         return this.DataSourceType;
@@ -127,19 +112,15 @@ public class HighRiskAssetsDetail extends AbstractModel {
 
     /**
      * Set 数据源类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DataSourceType 数据源类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataSourceType(String DataSourceType) {
         this.DataSourceType = DataSourceType;
     }
 
     /**
-     * Get 数据源名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据源名称 
      * @return DataSourceName 数据源名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDataSourceName() {
         return this.DataSourceName;
@@ -147,19 +128,15 @@ public class HighRiskAssetsDetail extends AbstractModel {
 
     /**
      * Set 数据源名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DataSourceName 数据源名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataSourceName(String DataSourceName) {
         this.DataSourceName = DataSourceName;
     }
 
     /**
-     * Get 资产对象名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资产对象名称 
      * @return AssetsName 资产对象名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAssetsName() {
         return this.AssetsName;
@@ -167,19 +144,15 @@ public class HighRiskAssetsDetail extends AbstractModel {
 
     /**
      * Set 资产对象名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AssetsName 资产对象名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAssetsName(String AssetsName) {
         this.AssetsName = AssetsName;
     }
 
     /**
-     * Get 高风险个数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 高风险个数 
      * @return HighRiskCount 高风险个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getHighRiskCount() {
         return this.HighRiskCount;
@@ -187,19 +160,15 @@ public class HighRiskAssetsDetail extends AbstractModel {
 
     /**
      * Set 高风险个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HighRiskCount 高风险个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHighRiskCount(Long HighRiskCount) {
         this.HighRiskCount = HighRiskCount;
     }
 
     /**
-     * Get 风险类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 风险类型 
      * @return RiskType 风险类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRiskType() {
         return this.RiskType;
@@ -207,19 +176,15 @@ public class HighRiskAssetsDetail extends AbstractModel {
 
     /**
      * Set 风险类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RiskType 风险类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRiskType(String RiskType) {
         this.RiskType = RiskType;
     }
 
     /**
-     * Get 总的风险个数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 总的风险个数 
      * @return TotalRiskCount 总的风险个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalRiskCount() {
         return this.TotalRiskCount;
@@ -227,19 +192,15 @@ public class HighRiskAssetsDetail extends AbstractModel {
 
     /**
      * Set 总的风险个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalRiskCount 总的风险个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalRiskCount(Long TotalRiskCount) {
         this.TotalRiskCount = TotalRiskCount;
     }
 
     /**
-     * Get 风险面
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 风险面 
      * @return RiskSide 风险面
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRiskSide() {
         return this.RiskSide;
@@ -247,19 +208,15 @@ public class HighRiskAssetsDetail extends AbstractModel {
 
     /**
      * Set 风险面
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RiskSide 风险面
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRiskSide(String RiskSide) {
         this.RiskSide = RiskSide;
     }
 
     /**
-     * Get 地域
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地域 
      * @return ResourceRegion 地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceRegion() {
         return this.ResourceRegion;
@@ -267,9 +224,7 @@ public class HighRiskAssetsDetail extends AbstractModel {
 
     /**
      * Set 地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceRegion 地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceRegion(String ResourceRegion) {
         this.ResourceRegion = ResourceRegion;

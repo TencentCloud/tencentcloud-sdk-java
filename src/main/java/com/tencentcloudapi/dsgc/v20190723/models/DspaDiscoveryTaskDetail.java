@@ -32,7 +32,6 @@ public class DspaDiscoveryTaskDetail extends AbstractModel {
 
     /**
     * 任务描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
     @Expose
@@ -61,7 +60,6 @@ public class DspaDiscoveryTaskDetail extends AbstractModel {
 
     /**
     * 元数据对象信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataSourceInfo")
     @Expose
@@ -69,7 +67,6 @@ public class DspaDiscoveryTaskDetail extends AbstractModel {
 
     /**
     * 通用规则集开关，0 关闭，1 启用
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("GeneralRuleSetEnable")
     @Expose
@@ -77,7 +74,6 @@ public class DspaDiscoveryTaskDetail extends AbstractModel {
 
     /**
     * 当创建任务时，用户打开了通用规则集开关，则该字段就会保存默认合规组信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DefaultComplianceInfo")
     @Expose
@@ -85,7 +81,6 @@ public class DspaDiscoveryTaskDetail extends AbstractModel {
 
     /**
     * 该任务中用户选择的合规组信息列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CustomComplianceInfo")
     @Expose
@@ -93,7 +88,6 @@ public class DspaDiscoveryTaskDetail extends AbstractModel {
 
     /**
     * 定时开始时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TimingStartTime")
     @Expose
@@ -116,10 +110,8 @@ public class DspaDiscoveryTaskDetail extends AbstractModel {
     }
 
     /**
-     * Get 任务描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务描述 
      * @return Description 任务描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
         return this.Description;
@@ -127,9 +119,7 @@ public class DspaDiscoveryTaskDetail extends AbstractModel {
 
     /**
      * Set 任务描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Description 任务描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
         this.Description = Description;
@@ -184,10 +174,8 @@ public class DspaDiscoveryTaskDetail extends AbstractModel {
     }
 
     /**
-     * Get 元数据对象信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 元数据对象信息 
      * @return DataSourceInfo 元数据对象信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DspaDiscoveryTaskDataSource getDataSourceInfo() {
         return this.DataSourceInfo;
@@ -195,19 +183,15 @@ public class DspaDiscoveryTaskDetail extends AbstractModel {
 
     /**
      * Set 元数据对象信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DataSourceInfo 元数据对象信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataSourceInfo(DspaDiscoveryTaskDataSource DataSourceInfo) {
         this.DataSourceInfo = DataSourceInfo;
     }
 
     /**
-     * Get 通用规则集开关，0 关闭，1 启用
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 通用规则集开关，0 关闭，1 启用 
      * @return GeneralRuleSetEnable 通用规则集开关，0 关闭，1 启用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getGeneralRuleSetEnable() {
         return this.GeneralRuleSetEnable;
@@ -215,19 +199,15 @@ public class DspaDiscoveryTaskDetail extends AbstractModel {
 
     /**
      * Set 通用规则集开关，0 关闭，1 启用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GeneralRuleSetEnable 通用规则集开关，0 关闭，1 启用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGeneralRuleSetEnable(Long GeneralRuleSetEnable) {
         this.GeneralRuleSetEnable = GeneralRuleSetEnable;
     }
 
     /**
-     * Get 当创建任务时，用户打开了通用规则集开关，则该字段就会保存默认合规组信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当创建任务时，用户打开了通用规则集开关，则该字段就会保存默认合规组信息 
      * @return DefaultComplianceInfo 当创建任务时，用户打开了通用规则集开关，则该字段就会保存默认合规组信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ScanTaskComplianceInfo [] getDefaultComplianceInfo() {
         return this.DefaultComplianceInfo;
@@ -235,19 +215,15 @@ public class DspaDiscoveryTaskDetail extends AbstractModel {
 
     /**
      * Set 当创建任务时，用户打开了通用规则集开关，则该字段就会保存默认合规组信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DefaultComplianceInfo 当创建任务时，用户打开了通用规则集开关，则该字段就会保存默认合规组信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDefaultComplianceInfo(ScanTaskComplianceInfo [] DefaultComplianceInfo) {
         this.DefaultComplianceInfo = DefaultComplianceInfo;
     }
 
     /**
-     * Get 该任务中用户选择的合规组信息列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该任务中用户选择的合规组信息列表 
      * @return CustomComplianceInfo 该任务中用户选择的合规组信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ScanTaskComplianceInfo [] getCustomComplianceInfo() {
         return this.CustomComplianceInfo;
@@ -255,19 +231,15 @@ public class DspaDiscoveryTaskDetail extends AbstractModel {
 
     /**
      * Set 该任务中用户选择的合规组信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CustomComplianceInfo 该任务中用户选择的合规组信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCustomComplianceInfo(ScanTaskComplianceInfo [] CustomComplianceInfo) {
         this.CustomComplianceInfo = CustomComplianceInfo;
     }
 
     /**
-     * Get 定时开始时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 定时开始时间 
      * @return TimingStartTime 定时开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTimingStartTime() {
         return this.TimingStartTime;
@@ -275,9 +247,7 @@ public class DspaDiscoveryTaskDetail extends AbstractModel {
 
     /**
      * Set 定时开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TimingStartTime 定时开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimingStartTime(String TimingStartTime) {
         this.TimingStartTime = TimingStartTime;

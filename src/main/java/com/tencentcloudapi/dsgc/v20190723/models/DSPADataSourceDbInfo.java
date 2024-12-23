@@ -25,17 +25,14 @@ public class DSPADataSourceDbInfo extends AbstractModel {
 
     /**
     * 数据库名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DbName")
     @Expose
     private String DbName;
 
     /**
-     * Get 数据库名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据库名称 
      * @return DbName 数据库名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDbName() {
         return this.DbName;
@@ -43,9 +40,7 @@ public class DSPADataSourceDbInfo extends AbstractModel {
 
     /**
      * Set 数据库名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DbName 数据库名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDbName(String DbName) {
         this.DbName = DbName;

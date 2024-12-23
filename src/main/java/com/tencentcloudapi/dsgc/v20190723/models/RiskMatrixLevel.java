@@ -25,7 +25,6 @@ public class RiskMatrixLevel extends AbstractModel {
 
     /**
     * 名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -33,7 +32,6 @@ public class RiskMatrixLevel extends AbstractModel {
 
     /**
     * 就是id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
     @Expose
@@ -41,17 +39,14 @@ public class RiskMatrixLevel extends AbstractModel {
 
     /**
     * 分数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Score")
     @Expose
     private Float Score;
 
     /**
-     * Get 名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 名称 
      * @return Name 名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -59,19 +54,15 @@ public class RiskMatrixLevel extends AbstractModel {
 
     /**
      * Set 名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 就是id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 就是id 
      * @return Id 就是id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getId() {
         return this.Id;
@@ -79,19 +70,15 @@ public class RiskMatrixLevel extends AbstractModel {
 
     /**
      * Set 就是id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Id 就是id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 分数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分数 
      * @return Score 分数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getScore() {
         return this.Score;
@@ -99,9 +86,7 @@ public class RiskMatrixLevel extends AbstractModel {
 
     /**
      * Set 分数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Score 分数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScore(Float Score) {
         this.Score = Score;

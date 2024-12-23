@@ -25,7 +25,6 @@ public class DetectChefDressResponse extends AbstractModel {
 
     /**
     * 识别到的人体属性信息。单个人体属性信息包括人体检测置信度，属性信息，人体检测框。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Bodies")
     @Expose
@@ -39,10 +38,8 @@ public class DetectChefDressResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 识别到的人体属性信息。单个人体属性信息包括人体检测置信度，属性信息，人体检测框。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 识别到的人体属性信息。单个人体属性信息包括人体检测置信度，属性信息，人体检测框。 
      * @return Bodies 识别到的人体属性信息。单个人体属性信息包括人体检测置信度，属性信息，人体检测框。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AttributesForBody [] getBodies() {
         return this.Bodies;
@@ -50,9 +47,7 @@ public class DetectChefDressResponse extends AbstractModel {
 
     /**
      * Set 识别到的人体属性信息。单个人体属性信息包括人体检测置信度，属性信息，人体检测框。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Bodies 识别到的人体属性信息。单个人体属性信息包括人体检测置信度，属性信息，人体检测框。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBodies(AttributesForBody [] Bodies) {
         this.Bodies = Bodies;

@@ -59,13 +59,6 @@ public class CreateDSPACOSDiscoveryTaskRequest extends AbstractModel {
     private String Bucket;
 
     /**
-    * 通用规则集开关，0 关闭，1 启用
-    */
-    @SerializedName("GeneralRuleSetEnable")
-    @Expose
-    private Long GeneralRuleSetEnable;
-
-    /**
     * 执行计划， 0立即 1定时，选择“立即”时，扫描周期只能选择单次。
     */
     @SerializedName("Plan")
@@ -106,6 +99,13 @@ public class CreateDSPACOSDiscoveryTaskRequest extends AbstractModel {
     @SerializedName("Description")
     @Expose
     private String Description;
+
+    /**
+    * 通用规则集开关，0 关闭，1 启用
+    */
+    @SerializedName("GeneralRuleSetEnable")
+    @Expose
+    private Long GeneralRuleSetEnable;
 
     /**
     * 合规组ID列表，最多支持添加5个
@@ -200,22 +200,6 @@ public class CreateDSPACOSDiscoveryTaskRequest extends AbstractModel {
      */
     public void setBucket(String Bucket) {
         this.Bucket = Bucket;
-    }
-
-    /**
-     * Get 通用规则集开关，0 关闭，1 启用 
-     * @return GeneralRuleSetEnable 通用规则集开关，0 关闭，1 启用
-     */
-    public Long getGeneralRuleSetEnable() {
-        return this.GeneralRuleSetEnable;
-    }
-
-    /**
-     * Set 通用规则集开关，0 关闭，1 启用
-     * @param GeneralRuleSetEnable 通用规则集开关，0 关闭，1 启用
-     */
-    public void setGeneralRuleSetEnable(Long GeneralRuleSetEnable) {
-        this.GeneralRuleSetEnable = GeneralRuleSetEnable;
     }
 
     /**
@@ -315,6 +299,22 @@ public class CreateDSPACOSDiscoveryTaskRequest extends AbstractModel {
     }
 
     /**
+     * Get 通用规则集开关，0 关闭，1 启用 
+     * @return GeneralRuleSetEnable 通用规则集开关，0 关闭，1 启用
+     */
+    public Long getGeneralRuleSetEnable() {
+        return this.GeneralRuleSetEnable;
+    }
+
+    /**
+     * Set 通用规则集开关，0 关闭，1 启用
+     * @param GeneralRuleSetEnable 通用规则集开关，0 关闭，1 启用
+     */
+    public void setGeneralRuleSetEnable(Long GeneralRuleSetEnable) {
+        this.GeneralRuleSetEnable = GeneralRuleSetEnable;
+    }
+
+    /**
      * Get 合规组ID列表，最多支持添加5个 
      * @return ComplianceGroupIds 合规组ID列表，最多支持添加5个
      */
@@ -373,9 +373,6 @@ public class CreateDSPACOSDiscoveryTaskRequest extends AbstractModel {
         if (source.Bucket != null) {
             this.Bucket = new String(source.Bucket);
         }
-        if (source.GeneralRuleSetEnable != null) {
-            this.GeneralRuleSetEnable = new Long(source.GeneralRuleSetEnable);
-        }
         if (source.Plan != null) {
             this.Plan = new Long(source.Plan);
         }
@@ -396,6 +393,9 @@ public class CreateDSPACOSDiscoveryTaskRequest extends AbstractModel {
         }
         if (source.Description != null) {
             this.Description = new String(source.Description);
+        }
+        if (source.GeneralRuleSetEnable != null) {
+            this.GeneralRuleSetEnable = new Long(source.GeneralRuleSetEnable);
         }
         if (source.ComplianceGroupIds != null) {
             this.ComplianceGroupIds = new Long[source.ComplianceGroupIds.length];
@@ -418,13 +418,13 @@ public class CreateDSPACOSDiscoveryTaskRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "DataSourceId", this.DataSourceId);
         this.setParamSimple(map, prefix + "Enable", this.Enable);
         this.setParamSimple(map, prefix + "Bucket", this.Bucket);
-        this.setParamSimple(map, prefix + "GeneralRuleSetEnable", this.GeneralRuleSetEnable);
         this.setParamSimple(map, prefix + "Plan", this.Plan);
         this.setParamSimple(map, prefix + "Period", this.Period);
         this.setParamArraySimple(map, prefix + "FileTypes.", this.FileTypes);
         this.setParamSimple(map, prefix + "FileSizeLimit", this.FileSizeLimit);
         this.setParamSimple(map, prefix + "ResourceRegion", this.ResourceRegion);
         this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "GeneralRuleSetEnable", this.GeneralRuleSetEnable);
         this.setParamArraySimple(map, prefix + "ComplianceGroupIds.", this.ComplianceGroupIds);
         this.setParamSimple(map, prefix + "TimingStartTime", this.TimingStartTime);
 

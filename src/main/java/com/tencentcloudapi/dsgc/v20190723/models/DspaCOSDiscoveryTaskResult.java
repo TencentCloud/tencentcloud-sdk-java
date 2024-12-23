@@ -88,7 +88,6 @@ public class DspaCOSDiscoveryTaskResult extends AbstractModel {
 
     /**
     * 数据源名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataSourceName")
     @Expose
@@ -103,7 +102,6 @@ public class DspaCOSDiscoveryTaskResult extends AbstractModel {
 
     /**
     * Bucket扫描结果错误信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ErrorInfo")
     @Expose
@@ -111,7 +109,6 @@ public class DspaCOSDiscoveryTaskResult extends AbstractModel {
 
     /**
     * 资源所在地域
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceRegion")
     @Expose
@@ -119,7 +116,6 @@ public class DspaCOSDiscoveryTaskResult extends AbstractModel {
 
     /**
     * 是否超额
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OverSize")
     @Expose
@@ -270,10 +266,8 @@ public class DspaCOSDiscoveryTaskResult extends AbstractModel {
     }
 
     /**
-     * Get 数据源名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据源名称 
      * @return DataSourceName 数据源名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDataSourceName() {
         return this.DataSourceName;
@@ -281,9 +275,7 @@ public class DspaCOSDiscoveryTaskResult extends AbstractModel {
 
     /**
      * Set 数据源名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DataSourceName 数据源名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataSourceName(String DataSourceName) {
         this.DataSourceName = DataSourceName;
@@ -306,10 +298,8 @@ public class DspaCOSDiscoveryTaskResult extends AbstractModel {
     }
 
     /**
-     * Get Bucket扫描结果错误信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Bucket扫描结果错误信息 
      * @return ErrorInfo Bucket扫描结果错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getErrorInfo() {
         return this.ErrorInfo;
@@ -317,19 +307,15 @@ public class DspaCOSDiscoveryTaskResult extends AbstractModel {
 
     /**
      * Set Bucket扫描结果错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ErrorInfo Bucket扫描结果错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrorInfo(String ErrorInfo) {
         this.ErrorInfo = ErrorInfo;
     }
 
     /**
-     * Get 资源所在地域
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源所在地域 
      * @return ResourceRegion 资源所在地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceRegion() {
         return this.ResourceRegion;
@@ -337,19 +323,15 @@ public class DspaCOSDiscoveryTaskResult extends AbstractModel {
 
     /**
      * Set 资源所在地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceRegion 资源所在地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceRegion(String ResourceRegion) {
         this.ResourceRegion = ResourceRegion;
     }
 
     /**
-     * Get 是否超额
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否超额 
      * @return OverSize 是否超额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOverSize() {
         return this.OverSize;
@@ -357,9 +339,7 @@ public class DspaCOSDiscoveryTaskResult extends AbstractModel {
 
     /**
      * Set 是否超额
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OverSize 是否超额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOverSize(String OverSize) {
         this.OverSize = OverSize;

@@ -25,7 +25,6 @@ public class DspaDiscoveryCOSRules extends AbstractModel {
 
     /**
     * 规则状态；0 不启用, 1 启用
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -33,7 +32,6 @@ public class DspaDiscoveryCOSRules extends AbstractModel {
 
     /**
     * regex规则内容
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RegexRule")
     @Expose
@@ -41,7 +39,6 @@ public class DspaDiscoveryCOSRules extends AbstractModel {
 
     /**
     * 关键词规则内容组，最大支持5个关键词。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KeywordRule")
     @Expose
@@ -49,7 +46,6 @@ public class DspaDiscoveryCOSRules extends AbstractModel {
 
     /**
     * 忽略词规则内容组，最大支持5个忽略词。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IgnoreStringRule")
     @Expose
@@ -57,17 +53,14 @@ public class DspaDiscoveryCOSRules extends AbstractModel {
 
     /**
     * 最大匹配距离，默认值为100。上限为500.
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxMatch")
     @Expose
     private Long MaxMatch;
 
     /**
-     * Get 规则状态；0 不启用, 1 启用
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则状态；0 不启用, 1 启用 
      * @return Status 规则状态；0 不启用, 1 启用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
         return this.Status;
@@ -75,19 +68,15 @@ public class DspaDiscoveryCOSRules extends AbstractModel {
 
     /**
      * Set 规则状态；0 不启用, 1 启用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 规则状态；0 不启用, 1 启用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get regex规则内容
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get regex规则内容 
      * @return RegexRule regex规则内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DspaDiscoveryCOSDataRule getRegexRule() {
         return this.RegexRule;
@@ -95,19 +84,15 @@ public class DspaDiscoveryCOSRules extends AbstractModel {
 
     /**
      * Set regex规则内容
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RegexRule regex规则内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegexRule(DspaDiscoveryCOSDataRule RegexRule) {
         this.RegexRule = RegexRule;
     }
 
     /**
-     * Get 关键词规则内容组，最大支持5个关键词。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 关键词规则内容组，最大支持5个关键词。 
      * @return KeywordRule 关键词规则内容组，最大支持5个关键词。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DspaDiscoveryCOSDataRule getKeywordRule() {
         return this.KeywordRule;
@@ -115,19 +100,15 @@ public class DspaDiscoveryCOSRules extends AbstractModel {
 
     /**
      * Set 关键词规则内容组，最大支持5个关键词。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param KeywordRule 关键词规则内容组，最大支持5个关键词。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKeywordRule(DspaDiscoveryCOSDataRule KeywordRule) {
         this.KeywordRule = KeywordRule;
     }
 
     /**
-     * Get 忽略词规则内容组，最大支持5个忽略词。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 忽略词规则内容组，最大支持5个忽略词。 
      * @return IgnoreStringRule 忽略词规则内容组，最大支持5个忽略词。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DspaDiscoveryCOSDataRule getIgnoreStringRule() {
         return this.IgnoreStringRule;
@@ -135,19 +116,15 @@ public class DspaDiscoveryCOSRules extends AbstractModel {
 
     /**
      * Set 忽略词规则内容组，最大支持5个忽略词。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IgnoreStringRule 忽略词规则内容组，最大支持5个忽略词。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIgnoreStringRule(DspaDiscoveryCOSDataRule IgnoreStringRule) {
         this.IgnoreStringRule = IgnoreStringRule;
     }
 
     /**
-     * Get 最大匹配距离，默认值为100。上限为500.
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最大匹配距离，默认值为100。上限为500. 
      * @return MaxMatch 最大匹配距离，默认值为100。上限为500.
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaxMatch() {
         return this.MaxMatch;
@@ -155,9 +132,7 @@ public class DspaDiscoveryCOSRules extends AbstractModel {
 
     /**
      * Set 最大匹配距离，默认值为100。上限为500.
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MaxMatch 最大匹配距离，默认值为100。上限为500.
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxMatch(Long MaxMatch) {
         this.MaxMatch = MaxMatch;

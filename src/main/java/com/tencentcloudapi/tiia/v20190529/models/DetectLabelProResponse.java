@@ -25,7 +25,6 @@ public class DetectLabelProResponse extends AbstractModel {
 
     /**
     * 返回标签数组。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Labels")
     @Expose
@@ -39,10 +38,8 @@ public class DetectLabelProResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 返回标签数组。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 返回标签数组。 
      * @return Labels 返回标签数组。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DetectLabelItem [] getLabels() {
         return this.Labels;
@@ -50,9 +47,7 @@ public class DetectLabelProResponse extends AbstractModel {
 
     /**
      * Set 返回标签数组。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Labels 返回标签数组。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLabels(DetectLabelItem [] Labels) {
         this.Labels = Labels;

@@ -25,7 +25,6 @@ public class RDBAsset extends AbstractModel {
 
     /**
     * DB总数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DbNums")
     @Expose
@@ -33,7 +32,6 @@ public class RDBAsset extends AbstractModel {
 
     /**
     * 敏感DB数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SensitiveDbNums")
     @Expose
@@ -41,7 +39,6 @@ public class RDBAsset extends AbstractModel {
 
     /**
     * 表数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TableNums")
     @Expose
@@ -49,7 +46,6 @@ public class RDBAsset extends AbstractModel {
 
     /**
     * 敏感表的数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SensitiveTableNums")
     @Expose
@@ -57,7 +53,6 @@ public class RDBAsset extends AbstractModel {
 
     /**
     * 字段数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FieldNums")
     @Expose
@@ -65,17 +60,14 @@ public class RDBAsset extends AbstractModel {
 
     /**
     * 敏感的字段数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SensitiveFieldNums")
     @Expose
     private Long SensitiveFieldNums;
 
     /**
-     * Get DB总数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get DB总数量 
      * @return DbNums DB总数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDbNums() {
         return this.DbNums;
@@ -83,19 +75,15 @@ public class RDBAsset extends AbstractModel {
 
     /**
      * Set DB总数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DbNums DB总数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDbNums(Long DbNums) {
         this.DbNums = DbNums;
     }
 
     /**
-     * Get 敏感DB数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 敏感DB数量 
      * @return SensitiveDbNums 敏感DB数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSensitiveDbNums() {
         return this.SensitiveDbNums;
@@ -103,19 +91,15 @@ public class RDBAsset extends AbstractModel {
 
     /**
      * Set 敏感DB数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SensitiveDbNums 敏感DB数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSensitiveDbNums(Long SensitiveDbNums) {
         this.SensitiveDbNums = SensitiveDbNums;
     }
 
     /**
-     * Get 表数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 表数量 
      * @return TableNums 表数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTableNums() {
         return this.TableNums;
@@ -123,19 +107,15 @@ public class RDBAsset extends AbstractModel {
 
     /**
      * Set 表数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TableNums 表数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTableNums(Long TableNums) {
         this.TableNums = TableNums;
     }
 
     /**
-     * Get 敏感表的数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 敏感表的数量 
      * @return SensitiveTableNums 敏感表的数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSensitiveTableNums() {
         return this.SensitiveTableNums;
@@ -143,19 +123,15 @@ public class RDBAsset extends AbstractModel {
 
     /**
      * Set 敏感表的数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SensitiveTableNums 敏感表的数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSensitiveTableNums(Long SensitiveTableNums) {
         this.SensitiveTableNums = SensitiveTableNums;
     }
 
     /**
-     * Get 字段数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 字段数量 
      * @return FieldNums 字段数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFieldNums() {
         return this.FieldNums;
@@ -163,19 +139,15 @@ public class RDBAsset extends AbstractModel {
 
     /**
      * Set 字段数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FieldNums 字段数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFieldNums(Long FieldNums) {
         this.FieldNums = FieldNums;
     }
 
     /**
-     * Get 敏感的字段数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 敏感的字段数量 
      * @return SensitiveFieldNums 敏感的字段数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSensitiveFieldNums() {
         return this.SensitiveFieldNums;
@@ -183,9 +155,7 @@ public class RDBAsset extends AbstractModel {
 
     /**
      * Set 敏感的字段数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SensitiveFieldNums 敏感的字段数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSensitiveFieldNums(Long SensitiveFieldNums) {
         this.SensitiveFieldNums = SensitiveFieldNums;

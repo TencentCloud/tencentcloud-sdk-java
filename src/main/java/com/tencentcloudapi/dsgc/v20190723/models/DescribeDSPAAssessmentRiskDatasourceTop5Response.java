@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class DescribeDSPAAssessmentRiskDatasourceTop5Response extends AbstractModel {
 
     /**
-    * 无
-注意：此字段可能返回 null，表示取不到有效值。
+    * 风险值
     */
     @SerializedName("Items")
     @Expose
@@ -39,20 +38,16 @@ public class DescribeDSPAAssessmentRiskDatasourceTop5Response extends AbstractMo
     private String RequestId;
 
     /**
-     * Get 无
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Items 无
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 风险值 
+     * @return Items 风险值
      */
     public RiskItem [] getItems() {
         return this.Items;
     }
 
     /**
-     * Set 无
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Items 无
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 风险值
+     * @param Items 风险值
      */
     public void setItems(RiskItem [] Items) {
         this.Items = Items;

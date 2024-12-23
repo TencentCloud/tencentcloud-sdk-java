@@ -66,6 +66,13 @@ public class DescribeDSPAComplianceGroupsRequest extends AbstractModel {
     private Long [] ComplianceGroupTypeList;
 
     /**
+    * 是否仅显示已开启模版
+    */
+    @SerializedName("IsFilterCloseComplianceGroup")
+    @Expose
+    private Boolean IsFilterCloseComplianceGroup;
+
+    /**
      * Get DSPA实例ID 
      * @return DspaId DSPA实例ID
      */
@@ -161,6 +168,22 @@ public class DescribeDSPAComplianceGroupsRequest extends AbstractModel {
         this.ComplianceGroupTypeList = ComplianceGroupTypeList;
     }
 
+    /**
+     * Get 是否仅显示已开启模版 
+     * @return IsFilterCloseComplianceGroup 是否仅显示已开启模版
+     */
+    public Boolean getIsFilterCloseComplianceGroup() {
+        return this.IsFilterCloseComplianceGroup;
+    }
+
+    /**
+     * Set 是否仅显示已开启模版
+     * @param IsFilterCloseComplianceGroup 是否仅显示已开启模版
+     */
+    public void setIsFilterCloseComplianceGroup(Boolean IsFilterCloseComplianceGroup) {
+        this.IsFilterCloseComplianceGroup = IsFilterCloseComplianceGroup;
+    }
+
     public DescribeDSPAComplianceGroupsRequest() {
     }
 
@@ -190,6 +213,9 @@ public class DescribeDSPAComplianceGroupsRequest extends AbstractModel {
                 this.ComplianceGroupTypeList[i] = new Long(source.ComplianceGroupTypeList[i]);
             }
         }
+        if (source.IsFilterCloseComplianceGroup != null) {
+            this.IsFilterCloseComplianceGroup = new Boolean(source.IsFilterCloseComplianceGroup);
+        }
     }
 
 
@@ -203,6 +229,7 @@ public class DescribeDSPAComplianceGroupsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamArraySimple(map, prefix + "ComplianceGroupTypeList.", this.ComplianceGroupTypeList);
+        this.setParamSimple(map, prefix + "IsFilterCloseComplianceGroup", this.IsFilterCloseComplianceGroup);
 
     }
 }

@@ -25,7 +25,6 @@ public class DescribeDSPAComplianceGroupsResponse extends AbstractModel {
 
     /**
     * 合规组列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Items")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeDSPAComplianceGroupsResponse extends AbstractModel {
 
     /**
     * 符合条件的合规组列表数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeDSPAComplianceGroupsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 合规组列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 合规组列表 
      * @return Items 合规组列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DspaDiscoveryComplianceGroupInfo [] getItems() {
         return this.Items;
@@ -58,19 +54,15 @@ public class DescribeDSPAComplianceGroupsResponse extends AbstractModel {
 
     /**
      * Set 合规组列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Items 合规组列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setItems(DspaDiscoveryComplianceGroupInfo [] Items) {
         this.Items = Items;
     }
 
     /**
-     * Get 符合条件的合规组列表数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 符合条件的合规组列表数 
      * @return TotalCount 符合条件的合规组列表数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -78,9 +70,7 @@ public class DescribeDSPAComplianceGroupsResponse extends AbstractModel {
 
     /**
      * Set 符合条件的合规组列表数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 符合条件的合规组列表数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

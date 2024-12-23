@@ -26,7 +26,6 @@ public class DspaDiscoveryDataContent extends AbstractModel {
     /**
     * 规则内容，可以是正则规则，关键词，
 忽略词扥
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleContent")
     @Expose
@@ -36,7 +35,6 @@ public class DspaDiscoveryDataContent extends AbstractModel {
     * 是否区分大小写
 false: 不区分大小写
 true:区分大小写
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsIgnoreCase")
     @Expose
@@ -44,11 +42,9 @@ true:区分大小写
 
     /**
      * Get 规则内容，可以是正则规则，关键词，
-忽略词扥
-注意：此字段可能返回 null，表示取不到有效值。 
+忽略词扥 
      * @return RuleContent 规则内容，可以是正则规则，关键词，
 忽略词扥
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRuleContent() {
         return this.RuleContent;
@@ -57,10 +53,8 @@ true:区分大小写
     /**
      * Set 规则内容，可以是正则规则，关键词，
 忽略词扥
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RuleContent 规则内容，可以是正则规则，关键词，
 忽略词扥
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleContent(String RuleContent) {
         this.RuleContent = RuleContent;
@@ -69,12 +63,10 @@ true:区分大小写
     /**
      * Get 是否区分大小写
 false: 不区分大小写
-true:区分大小写
-注意：此字段可能返回 null，表示取不到有效值。 
+true:区分大小写 
      * @return IsIgnoreCase 是否区分大小写
 false: 不区分大小写
 true:区分大小写
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsIgnoreCase() {
         return this.IsIgnoreCase;
@@ -84,11 +76,9 @@ true:区分大小写
      * Set 是否区分大小写
 false: 不区分大小写
 true:区分大小写
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsIgnoreCase 是否区分大小写
 false: 不区分大小写
 true:区分大小写
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsIgnoreCase(Boolean IsIgnoreCase) {
         this.IsIgnoreCase = IsIgnoreCase;

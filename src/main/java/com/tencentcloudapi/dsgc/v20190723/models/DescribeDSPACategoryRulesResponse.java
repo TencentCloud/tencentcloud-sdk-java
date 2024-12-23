@@ -25,7 +25,6 @@ public class DescribeDSPACategoryRulesResponse extends AbstractModel {
 
     /**
     * 分类规则信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CategoryRules")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeDSPACategoryRulesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 分类规则信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分类规则信息 
      * @return CategoryRules 分类规则信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CategoryRule [] getCategoryRules() {
         return this.CategoryRules;
@@ -50,9 +47,7 @@ public class DescribeDSPACategoryRulesResponse extends AbstractModel {
 
     /**
      * Set 分类规则信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CategoryRules 分类规则信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCategoryRules(CategoryRule [] CategoryRules) {
         this.CategoryRules = CategoryRules;

@@ -25,7 +25,6 @@ public class DescribeDSPAAssessmentRiskDealedTrendResponse extends AbstractModel
 
     /**
     * 趋势统计结果
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Items")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeDSPAAssessmentRiskDealedTrendResponse extends AbstractModel
     private String RequestId;
 
     /**
-     * Get 趋势统计结果
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 趋势统计结果 
      * @return Items 趋势统计结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RiskDealedTrendItem [] getItems() {
         return this.Items;
@@ -50,9 +47,7 @@ public class DescribeDSPAAssessmentRiskDealedTrendResponse extends AbstractModel
 
     /**
      * Set 趋势统计结果
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Items 趋势统计结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setItems(RiskDealedTrendItem [] Items) {
         this.Items = Items;

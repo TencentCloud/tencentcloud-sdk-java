@@ -32,7 +32,6 @@ public class DisableDSPAMetaResourceAuthResponse extends AbstractModel {
 
     /**
     * 授权结果。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Results")
     @Expose
@@ -62,10 +61,8 @@ public class DisableDSPAMetaResourceAuthResponse extends AbstractModel {
     }
 
     /**
-     * Get 授权结果。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 授权结果。 
      * @return Results 授权结果。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DspaTaskResult [] getResults() {
         return this.Results;
@@ -73,9 +70,7 @@ public class DisableDSPAMetaResourceAuthResponse extends AbstractModel {
 
     /**
      * Set 授权结果。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Results 授权结果。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResults(DspaTaskResult [] Results) {
         this.Results = Results;

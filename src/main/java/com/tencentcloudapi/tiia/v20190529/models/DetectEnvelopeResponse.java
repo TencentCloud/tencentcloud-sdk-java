@@ -25,7 +25,6 @@ public class DetectEnvelopeResponse extends AbstractModel {
 
     /**
     * 一级标签结果数组。识别是否文件封。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FirstTags")
     @Expose
@@ -33,7 +32,6 @@ public class DetectEnvelopeResponse extends AbstractModel {
 
     /**
     * 二级标签结果数组。识别文件封正反面。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SecondTags")
     @Expose
@@ -47,10 +45,8 @@ public class DetectEnvelopeResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 一级标签结果数组。识别是否文件封。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 一级标签结果数组。识别是否文件封。 
      * @return FirstTags 一级标签结果数组。识别是否文件封。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ImageTag [] getFirstTags() {
         return this.FirstTags;
@@ -58,19 +54,15 @@ public class DetectEnvelopeResponse extends AbstractModel {
 
     /**
      * Set 一级标签结果数组。识别是否文件封。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FirstTags 一级标签结果数组。识别是否文件封。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFirstTags(ImageTag [] FirstTags) {
         this.FirstTags = FirstTags;
     }
 
     /**
-     * Get 二级标签结果数组。识别文件封正反面。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 二级标签结果数组。识别文件封正反面。 
      * @return SecondTags 二级标签结果数组。识别文件封正反面。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ImageTag [] getSecondTags() {
         return this.SecondTags;
@@ -78,9 +70,7 @@ public class DetectEnvelopeResponse extends AbstractModel {
 
     /**
      * Set 二级标签结果数组。识别文件封正反面。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SecondTags 二级标签结果数组。识别文件封正反面。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSecondTags(ImageTag [] SecondTags) {
         this.SecondTags = SecondTags;

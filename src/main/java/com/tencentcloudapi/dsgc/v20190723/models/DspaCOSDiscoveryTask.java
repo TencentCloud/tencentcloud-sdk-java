@@ -74,7 +74,6 @@ public class DspaCOSDiscoveryTask extends AbstractModel {
 
     /**
     * 任务最新的一次执行结果信息，该字段用于查询任务列表接口
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Result")
     @Expose
@@ -82,7 +81,6 @@ public class DspaCOSDiscoveryTask extends AbstractModel {
 
     /**
     * 定时开始时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TimingStartTime")
     @Expose
@@ -90,7 +88,6 @@ public class DspaCOSDiscoveryTask extends AbstractModel {
 
     /**
     * 关联分类模板是否更新
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ComplianceUpdate")
     @Expose
@@ -209,10 +206,8 @@ public class DspaCOSDiscoveryTask extends AbstractModel {
     }
 
     /**
-     * Get 任务最新的一次执行结果信息，该字段用于查询任务列表接口
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务最新的一次执行结果信息，该字段用于查询任务列表接口 
      * @return Result 任务最新的一次执行结果信息，该字段用于查询任务列表接口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ScanTaskResult getResult() {
         return this.Result;
@@ -220,19 +215,15 @@ public class DspaCOSDiscoveryTask extends AbstractModel {
 
     /**
      * Set 任务最新的一次执行结果信息，该字段用于查询任务列表接口
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Result 任务最新的一次执行结果信息，该字段用于查询任务列表接口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResult(ScanTaskResult Result) {
         this.Result = Result;
     }
 
     /**
-     * Get 定时开始时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 定时开始时间 
      * @return TimingStartTime 定时开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTimingStartTime() {
         return this.TimingStartTime;
@@ -240,19 +231,15 @@ public class DspaCOSDiscoveryTask extends AbstractModel {
 
     /**
      * Set 定时开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TimingStartTime 定时开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimingStartTime(String TimingStartTime) {
         this.TimingStartTime = TimingStartTime;
     }
 
     /**
-     * Get 关联分类模板是否更新
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 关联分类模板是否更新 
      * @return ComplianceUpdate 关联分类模板是否更新
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getComplianceUpdate() {
         return this.ComplianceUpdate;
@@ -260,9 +247,7 @@ public class DspaCOSDiscoveryTask extends AbstractModel {
 
     /**
      * Set 关联分类模板是否更新
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ComplianceUpdate 关联分类模板是否更新
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setComplianceUpdate(Boolean ComplianceUpdate) {
         this.ComplianceUpdate = ComplianceUpdate;

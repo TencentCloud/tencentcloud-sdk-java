@@ -25,7 +25,6 @@ public class DescribeDSPAAssessmentRiskProcessHistoryResponse extends AbstractMo
 
     /**
     * 处理的历史
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProcessHistory")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeDSPAAssessmentRiskProcessHistoryResponse extends AbstractMo
     private String RequestId;
 
     /**
-     * Get 处理的历史
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 处理的历史 
      * @return ProcessHistory 处理的历史
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ProcessHistory [] getProcessHistory() {
         return this.ProcessHistory;
@@ -50,9 +47,7 @@ public class DescribeDSPAAssessmentRiskProcessHistoryResponse extends AbstractMo
 
     /**
      * Set 处理的历史
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProcessHistory 处理的历史
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProcessHistory(ProcessHistory [] ProcessHistory) {
         this.ProcessHistory = ProcessHistory;

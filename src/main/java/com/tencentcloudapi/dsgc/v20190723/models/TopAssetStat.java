@@ -25,7 +25,6 @@ public class TopAssetStat extends AbstractModel {
 
     /**
     * 数据源id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataSourceId")
     @Expose
@@ -33,7 +32,6 @@ public class TopAssetStat extends AbstractModel {
 
     /**
     * db_name
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubData")
     @Expose
@@ -41,17 +39,14 @@ public class TopAssetStat extends AbstractModel {
 
     /**
     * 敏感个数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SensitiveCnt")
     @Expose
     private Long SensitiveCnt;
 
     /**
-     * Get 数据源id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据源id 
      * @return DataSourceId 数据源id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDataSourceId() {
         return this.DataSourceId;
@@ -59,19 +54,15 @@ public class TopAssetStat extends AbstractModel {
 
     /**
      * Set 数据源id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DataSourceId 数据源id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataSourceId(String DataSourceId) {
         this.DataSourceId = DataSourceId;
     }
 
     /**
-     * Get db_name
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get db_name 
      * @return SubData db_name
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubData() {
         return this.SubData;
@@ -79,19 +70,15 @@ public class TopAssetStat extends AbstractModel {
 
     /**
      * Set db_name
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubData db_name
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubData(String SubData) {
         this.SubData = SubData;
     }
 
     /**
-     * Get 敏感个数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 敏感个数 
      * @return SensitiveCnt 敏感个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSensitiveCnt() {
         return this.SensitiveCnt;
@@ -99,9 +86,7 @@ public class TopAssetStat extends AbstractModel {
 
     /**
      * Set 敏感个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SensitiveCnt 敏感个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSensitiveCnt(Long SensitiveCnt) {
         this.SensitiveCnt = SensitiveCnt;

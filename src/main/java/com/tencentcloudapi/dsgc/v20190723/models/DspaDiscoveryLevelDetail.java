@@ -25,7 +25,6 @@ public class DspaDiscoveryLevelDetail extends AbstractModel {
 
     /**
     * 分级组名称，唯一性约束，最多60个字符，仅允许输入中文、英文字母、数字、'_'、'-'，并且开头和结尾需为中文、英文字母或者数字，Name不可重复
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LevelGroupName")
     @Expose
@@ -33,7 +32,6 @@ public class DspaDiscoveryLevelDetail extends AbstractModel {
 
     /**
     * 分级组来源，0为内置，1为自定义
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Source")
     @Expose
@@ -41,7 +39,6 @@ public class DspaDiscoveryLevelDetail extends AbstractModel {
 
     /**
     * 分级组描述，最多1024字符
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LevelGroupDesc")
     @Expose
@@ -49,7 +46,6 @@ public class DspaDiscoveryLevelDetail extends AbstractModel {
 
     /**
     * 具体分级标识详情
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LevelDetail")
     @Expose
@@ -57,7 +53,6 @@ public class DspaDiscoveryLevelDetail extends AbstractModel {
 
     /**
     * 引用合规组次数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RefComplianceCnt")
     @Expose
@@ -65,7 +60,6 @@ public class DspaDiscoveryLevelDetail extends AbstractModel {
 
     /**
     * 引用合规组
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RefCompliance")
     @Expose
@@ -73,17 +67,14 @@ public class DspaDiscoveryLevelDetail extends AbstractModel {
 
     /**
     * 分级组ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LevelGroupId")
     @Expose
     private Long LevelGroupId;
 
     /**
-     * Get 分级组名称，唯一性约束，最多60个字符，仅允许输入中文、英文字母、数字、'_'、'-'，并且开头和结尾需为中文、英文字母或者数字，Name不可重复
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分级组名称，唯一性约束，最多60个字符，仅允许输入中文、英文字母、数字、'_'、'-'，并且开头和结尾需为中文、英文字母或者数字，Name不可重复 
      * @return LevelGroupName 分级组名称，唯一性约束，最多60个字符，仅允许输入中文、英文字母、数字、'_'、'-'，并且开头和结尾需为中文、英文字母或者数字，Name不可重复
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLevelGroupName() {
         return this.LevelGroupName;
@@ -91,19 +82,15 @@ public class DspaDiscoveryLevelDetail extends AbstractModel {
 
     /**
      * Set 分级组名称，唯一性约束，最多60个字符，仅允许输入中文、英文字母、数字、'_'、'-'，并且开头和结尾需为中文、英文字母或者数字，Name不可重复
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LevelGroupName 分级组名称，唯一性约束，最多60个字符，仅允许输入中文、英文字母、数字、'_'、'-'，并且开头和结尾需为中文、英文字母或者数字，Name不可重复
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLevelGroupName(String LevelGroupName) {
         this.LevelGroupName = LevelGroupName;
     }
 
     /**
-     * Get 分级组来源，0为内置，1为自定义
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分级组来源，0为内置，1为自定义 
      * @return Source 分级组来源，0为内置，1为自定义
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSource() {
         return this.Source;
@@ -111,19 +98,15 @@ public class DspaDiscoveryLevelDetail extends AbstractModel {
 
     /**
      * Set 分级组来源，0为内置，1为自定义
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Source 分级组来源，0为内置，1为自定义
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSource(Long Source) {
         this.Source = Source;
     }
 
     /**
-     * Get 分级组描述，最多1024字符
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分级组描述，最多1024字符 
      * @return LevelGroupDesc 分级组描述，最多1024字符
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLevelGroupDesc() {
         return this.LevelGroupDesc;
@@ -131,19 +114,15 @@ public class DspaDiscoveryLevelDetail extends AbstractModel {
 
     /**
      * Set 分级组描述，最多1024字符
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LevelGroupDesc 分级组描述，最多1024字符
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLevelGroupDesc(String LevelGroupDesc) {
         this.LevelGroupDesc = LevelGroupDesc;
     }
 
     /**
-     * Get 具体分级标识详情
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 具体分级标识详情 
      * @return LevelDetail 具体分级标识详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public LevelItem [] getLevelDetail() {
         return this.LevelDetail;
@@ -151,19 +130,15 @@ public class DspaDiscoveryLevelDetail extends AbstractModel {
 
     /**
      * Set 具体分级标识详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LevelDetail 具体分级标识详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLevelDetail(LevelItem [] LevelDetail) {
         this.LevelDetail = LevelDetail;
     }
 
     /**
-     * Get 引用合规组次数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 引用合规组次数 
      * @return RefComplianceCnt 引用合规组次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRefComplianceCnt() {
         return this.RefComplianceCnt;
@@ -171,19 +146,15 @@ public class DspaDiscoveryLevelDetail extends AbstractModel {
 
     /**
      * Set 引用合规组次数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RefComplianceCnt 引用合规组次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRefComplianceCnt(Long RefComplianceCnt) {
         this.RefComplianceCnt = RefComplianceCnt;
     }
 
     /**
-     * Get 引用合规组
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 引用合规组 
      * @return RefCompliance 引用合规组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DspaDiscoveryComplianceGroup [] getRefCompliance() {
         return this.RefCompliance;
@@ -191,19 +162,15 @@ public class DspaDiscoveryLevelDetail extends AbstractModel {
 
     /**
      * Set 引用合规组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RefCompliance 引用合规组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRefCompliance(DspaDiscoveryComplianceGroup [] RefCompliance) {
         this.RefCompliance = RefCompliance;
     }
 
     /**
-     * Get 分级组ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分级组ID 
      * @return LevelGroupId 分级组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLevelGroupId() {
         return this.LevelGroupId;
@@ -211,9 +178,7 @@ public class DspaDiscoveryLevelDetail extends AbstractModel {
 
     /**
      * Set 分级组ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LevelGroupId 分级组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLevelGroupId(Long LevelGroupId) {
         this.LevelGroupId = LevelGroupId;

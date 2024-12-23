@@ -32,7 +32,6 @@ public class DataRules extends AbstractModel {
 
     /**
     * 规则
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Contents")
     @Expose
@@ -55,10 +54,8 @@ public class DataRules extends AbstractModel {
     }
 
     /**
-     * Get 规则
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则 
      * @return Contents 规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DataRule [] getContents() {
         return this.Contents;
@@ -66,9 +63,7 @@ public class DataRules extends AbstractModel {
 
     /**
      * Set 规则
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Contents 规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContents(DataRule [] Contents) {
         this.Contents = Contents;

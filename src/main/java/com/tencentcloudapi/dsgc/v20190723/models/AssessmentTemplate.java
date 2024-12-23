@@ -25,7 +25,6 @@ public class AssessmentTemplate extends AbstractModel {
 
     /**
     * id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
     @Expose
@@ -47,7 +46,6 @@ public class AssessmentTemplate extends AbstractModel {
 
     /**
     * 描述信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
     @Expose
@@ -97,7 +95,6 @@ public class AssessmentTemplate extends AbstractModel {
 
     /**
     * 支持的数据源类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SupportDataSource")
     @Expose
@@ -105,7 +102,6 @@ public class AssessmentTemplate extends AbstractModel {
 
     /**
     * 是否包含攻击面风险
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsASMTemplate")
     @Expose
@@ -113,17 +109,14 @@ public class AssessmentTemplate extends AbstractModel {
 
     /**
     * 合规组id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IdentifyComplianceId")
     @Expose
     private Long IdentifyComplianceId;
 
     /**
-     * Get id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get id 
      * @return Id id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getId() {
         return this.Id;
@@ -131,9 +124,7 @@ public class AssessmentTemplate extends AbstractModel {
 
     /**
      * Set id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Id id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(Long Id) {
         this.Id = Id;
@@ -172,10 +163,8 @@ public class AssessmentTemplate extends AbstractModel {
     }
 
     /**
-     * Get 描述信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 描述信息 
      * @return Description 描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
         return this.Description;
@@ -183,9 +172,7 @@ public class AssessmentTemplate extends AbstractModel {
 
     /**
      * Set 描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Description 描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
         this.Description = Description;
@@ -288,10 +275,8 @@ public class AssessmentTemplate extends AbstractModel {
     }
 
     /**
-     * Get 支持的数据源类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 支持的数据源类型 
      * @return SupportDataSource 支持的数据源类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getSupportDataSource() {
         return this.SupportDataSource;
@@ -299,19 +284,15 @@ public class AssessmentTemplate extends AbstractModel {
 
     /**
      * Set 支持的数据源类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SupportDataSource 支持的数据源类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSupportDataSource(String [] SupportDataSource) {
         this.SupportDataSource = SupportDataSource;
     }
 
     /**
-     * Get 是否包含攻击面风险
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否包含攻击面风险 
      * @return IsASMTemplate 是否包含攻击面风险
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsASMTemplate() {
         return this.IsASMTemplate;
@@ -319,19 +300,15 @@ public class AssessmentTemplate extends AbstractModel {
 
     /**
      * Set 是否包含攻击面风险
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsASMTemplate 是否包含攻击面风险
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsASMTemplate(Boolean IsASMTemplate) {
         this.IsASMTemplate = IsASMTemplate;
     }
 
     /**
-     * Get 合规组id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 合规组id 
      * @return IdentifyComplianceId 合规组id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIdentifyComplianceId() {
         return this.IdentifyComplianceId;
@@ -339,9 +316,7 @@ public class AssessmentTemplate extends AbstractModel {
 
     /**
      * Set 合规组id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IdentifyComplianceId 合规组id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIdentifyComplianceId(Long IdentifyComplianceId) {
         this.IdentifyComplianceId = IdentifyComplianceId;

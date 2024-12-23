@@ -25,7 +25,6 @@ public class ESDataAssetDetail extends AbstractModel {
 
     /**
     * id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FieldResultId")
     @Expose
@@ -33,7 +32,6 @@ public class ESDataAssetDetail extends AbstractModel {
 
     /**
     * 数据源id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataSourceId")
     @Expose
@@ -41,7 +39,6 @@ public class ESDataAssetDetail extends AbstractModel {
 
     /**
     * 数据源名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataSourceName")
     @Expose
@@ -49,7 +46,6 @@ public class ESDataAssetDetail extends AbstractModel {
 
     /**
     * 类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataSourceType")
     @Expose
@@ -57,7 +53,6 @@ public class ESDataAssetDetail extends AbstractModel {
 
     /**
     * 地域信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceRegion")
     @Expose
@@ -65,7 +60,6 @@ public class ESDataAssetDetail extends AbstractModel {
 
     /**
     * 索引名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IndexName")
     @Expose
@@ -73,7 +67,6 @@ public class ESDataAssetDetail extends AbstractModel {
 
     /**
     * 字段名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FieldName")
     @Expose
@@ -81,7 +74,6 @@ public class ESDataAssetDetail extends AbstractModel {
 
     /**
     * 分类id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CategoryId")
     @Expose
@@ -89,7 +81,6 @@ public class ESDataAssetDetail extends AbstractModel {
 
     /**
     * 分类名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CategoryName")
     @Expose
@@ -97,7 +88,6 @@ public class ESDataAssetDetail extends AbstractModel {
 
     /**
     * 分类路径数组
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CategoryArr")
     @Expose
@@ -105,7 +95,6 @@ public class ESDataAssetDetail extends AbstractModel {
 
     /**
     * 等级id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LevelId")
     @Expose
@@ -113,7 +102,6 @@ public class ESDataAssetDetail extends AbstractModel {
 
     /**
     * 分级名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LevelRiskName")
     @Expose
@@ -121,7 +109,6 @@ public class ESDataAssetDetail extends AbstractModel {
 
     /**
     * 分级分数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LevelRiskScore")
     @Expose
@@ -129,7 +116,6 @@ public class ESDataAssetDetail extends AbstractModel {
 
     /**
     * 可信分
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TrustedScore")
     @Expose
@@ -137,7 +123,6 @@ public class ESDataAssetDetail extends AbstractModel {
 
     /**
     * 规则id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleId")
     @Expose
@@ -145,7 +130,6 @@ public class ESDataAssetDetail extends AbstractModel {
 
     /**
     * 规则名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleName")
     @Expose
@@ -166,10 +150,8 @@ public class ESDataAssetDetail extends AbstractModel {
     private Long CheckStatus;
 
     /**
-     * Get id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get id 
      * @return FieldResultId id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFieldResultId() {
         return this.FieldResultId;
@@ -177,19 +159,15 @@ public class ESDataAssetDetail extends AbstractModel {
 
     /**
      * Set id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FieldResultId id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFieldResultId(Long FieldResultId) {
         this.FieldResultId = FieldResultId;
     }
 
     /**
-     * Get 数据源id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据源id 
      * @return DataSourceId 数据源id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDataSourceId() {
         return this.DataSourceId;
@@ -197,19 +175,15 @@ public class ESDataAssetDetail extends AbstractModel {
 
     /**
      * Set 数据源id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DataSourceId 数据源id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataSourceId(String DataSourceId) {
         this.DataSourceId = DataSourceId;
     }
 
     /**
-     * Get 数据源名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据源名称 
      * @return DataSourceName 数据源名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDataSourceName() {
         return this.DataSourceName;
@@ -217,19 +191,15 @@ public class ESDataAssetDetail extends AbstractModel {
 
     /**
      * Set 数据源名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DataSourceName 数据源名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataSourceName(String DataSourceName) {
         this.DataSourceName = DataSourceName;
     }
 
     /**
-     * Get 类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 类型 
      * @return DataSourceType 类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDataSourceType() {
         return this.DataSourceType;
@@ -237,19 +207,15 @@ public class ESDataAssetDetail extends AbstractModel {
 
     /**
      * Set 类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DataSourceType 类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataSourceType(String DataSourceType) {
         this.DataSourceType = DataSourceType;
     }
 
     /**
-     * Get 地域信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地域信息 
      * @return ResourceRegion 地域信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceRegion() {
         return this.ResourceRegion;
@@ -257,19 +223,15 @@ public class ESDataAssetDetail extends AbstractModel {
 
     /**
      * Set 地域信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceRegion 地域信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceRegion(String ResourceRegion) {
         this.ResourceRegion = ResourceRegion;
     }
 
     /**
-     * Get 索引名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 索引名称 
      * @return IndexName 索引名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIndexName() {
         return this.IndexName;
@@ -277,19 +239,15 @@ public class ESDataAssetDetail extends AbstractModel {
 
     /**
      * Set 索引名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IndexName 索引名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIndexName(String IndexName) {
         this.IndexName = IndexName;
     }
 
     /**
-     * Get 字段名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 字段名称 
      * @return FieldName 字段名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFieldName() {
         return this.FieldName;
@@ -297,19 +255,15 @@ public class ESDataAssetDetail extends AbstractModel {
 
     /**
      * Set 字段名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FieldName 字段名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFieldName(String FieldName) {
         this.FieldName = FieldName;
     }
 
     /**
-     * Get 分类id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分类id 
      * @return CategoryId 分类id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCategoryId() {
         return this.CategoryId;
@@ -317,19 +271,15 @@ public class ESDataAssetDetail extends AbstractModel {
 
     /**
      * Set 分类id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CategoryId 分类id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCategoryId(Long CategoryId) {
         this.CategoryId = CategoryId;
     }
 
     /**
-     * Get 分类名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分类名称 
      * @return CategoryName 分类名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCategoryName() {
         return this.CategoryName;
@@ -337,19 +287,15 @@ public class ESDataAssetDetail extends AbstractModel {
 
     /**
      * Set 分类名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CategoryName 分类名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCategoryName(String CategoryName) {
         this.CategoryName = CategoryName;
     }
 
     /**
-     * Get 分类路径数组
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分类路径数组 
      * @return CategoryArr 分类路径数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getCategoryArr() {
         return this.CategoryArr;
@@ -357,19 +303,15 @@ public class ESDataAssetDetail extends AbstractModel {
 
     /**
      * Set 分类路径数组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CategoryArr 分类路径数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCategoryArr(String [] CategoryArr) {
         this.CategoryArr = CategoryArr;
     }
 
     /**
-     * Get 等级id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 等级id 
      * @return LevelId 等级id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLevelId() {
         return this.LevelId;
@@ -377,19 +319,15 @@ public class ESDataAssetDetail extends AbstractModel {
 
     /**
      * Set 等级id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LevelId 等级id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLevelId(Long LevelId) {
         this.LevelId = LevelId;
     }
 
     /**
-     * Get 分级名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分级名称 
      * @return LevelRiskName 分级名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLevelRiskName() {
         return this.LevelRiskName;
@@ -397,19 +335,15 @@ public class ESDataAssetDetail extends AbstractModel {
 
     /**
      * Set 分级名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LevelRiskName 分级名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLevelRiskName(String LevelRiskName) {
         this.LevelRiskName = LevelRiskName;
     }
 
     /**
-     * Get 分级分数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分级分数 
      * @return LevelRiskScore 分级分数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLevelRiskScore() {
         return this.LevelRiskScore;
@@ -417,19 +351,15 @@ public class ESDataAssetDetail extends AbstractModel {
 
     /**
      * Set 分级分数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LevelRiskScore 分级分数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLevelRiskScore(Long LevelRiskScore) {
         this.LevelRiskScore = LevelRiskScore;
     }
 
     /**
-     * Get 可信分
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 可信分 
      * @return TrustedScore 可信分
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getTrustedScore() {
         return this.TrustedScore;
@@ -437,19 +367,15 @@ public class ESDataAssetDetail extends AbstractModel {
 
     /**
      * Set 可信分
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TrustedScore 可信分
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTrustedScore(Float TrustedScore) {
         this.TrustedScore = TrustedScore;
     }
 
     /**
-     * Get 规则id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则id 
      * @return RuleId 规则id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRuleId() {
         return this.RuleId;
@@ -457,19 +383,15 @@ public class ESDataAssetDetail extends AbstractModel {
 
     /**
      * Set 规则id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RuleId 规则id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleId(Long RuleId) {
         this.RuleId = RuleId;
     }
 
     /**
-     * Get 规则名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则名称 
      * @return RuleName 规则名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRuleName() {
         return this.RuleName;
@@ -477,9 +399,7 @@ public class ESDataAssetDetail extends AbstractModel {
 
     /**
      * Set 规则名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RuleName 规则名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleName(String RuleName) {
         this.RuleName = RuleName;

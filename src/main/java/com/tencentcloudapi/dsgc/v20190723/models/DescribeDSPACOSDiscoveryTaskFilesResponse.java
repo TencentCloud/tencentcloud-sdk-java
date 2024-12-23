@@ -25,7 +25,6 @@ public class DescribeDSPACOSDiscoveryTaskFilesResponse extends AbstractModel {
 
     /**
     * 文件列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Files")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeDSPACOSDiscoveryTaskFilesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 文件列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文件列表 
      * @return Files 文件列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getFiles() {
         return this.Files;
@@ -50,9 +47,7 @@ public class DescribeDSPACOSDiscoveryTaskFilesResponse extends AbstractModel {
 
     /**
      * Set 文件列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Files 文件列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFiles(String [] Files) {
         this.Files = Files;

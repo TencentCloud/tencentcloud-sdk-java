@@ -25,7 +25,6 @@ public class DeleteCosMetaResourceResponse extends AbstractModel {
 
     /**
     * 结果集合。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Results")
     @Expose
@@ -46,10 +45,8 @@ public class DeleteCosMetaResourceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 结果集合。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 结果集合。 
      * @return Results 结果集合。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DspaTaskResult [] getResults() {
         return this.Results;
@@ -57,9 +54,7 @@ public class DeleteCosMetaResourceResponse extends AbstractModel {
 
     /**
      * Set 结果集合。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Results 结果集合。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResults(DspaTaskResult [] Results) {
         this.Results = Results;

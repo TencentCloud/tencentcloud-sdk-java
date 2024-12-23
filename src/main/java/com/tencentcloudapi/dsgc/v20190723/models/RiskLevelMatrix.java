@@ -25,7 +25,6 @@ public class RiskLevelMatrix extends AbstractModel {
 
     /**
     * 存储id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
     @Expose
@@ -33,7 +32,6 @@ public class RiskLevelMatrix extends AbstractModel {
 
     /**
     * 分类分级levelID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SensitiveLevelId")
     @Expose
@@ -41,7 +39,6 @@ public class RiskLevelMatrix extends AbstractModel {
 
     /**
     * 分类分级名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SensitiveLevelName")
     @Expose
@@ -49,7 +46,6 @@ public class RiskLevelMatrix extends AbstractModel {
 
     /**
     * 漏洞级别
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VulnerabilityLevel")
     @Expose
@@ -57,17 +53,14 @@ public class RiskLevelMatrix extends AbstractModel {
 
     /**
     * 风险级别
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RiskLevel")
     @Expose
     private String RiskLevel;
 
     /**
-     * Get 存储id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 存储id 
      * @return Id 存储id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getId() {
         return this.Id;
@@ -75,19 +68,15 @@ public class RiskLevelMatrix extends AbstractModel {
 
     /**
      * Set 存储id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Id 存储id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 分类分级levelID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分类分级levelID 
      * @return SensitiveLevelId 分类分级levelID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSensitiveLevelId() {
         return this.SensitiveLevelId;
@@ -95,19 +84,15 @@ public class RiskLevelMatrix extends AbstractModel {
 
     /**
      * Set 分类分级levelID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SensitiveLevelId 分类分级levelID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSensitiveLevelId(Long SensitiveLevelId) {
         this.SensitiveLevelId = SensitiveLevelId;
     }
 
     /**
-     * Get 分类分级名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分类分级名称 
      * @return SensitiveLevelName 分类分级名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSensitiveLevelName() {
         return this.SensitiveLevelName;
@@ -115,19 +100,15 @@ public class RiskLevelMatrix extends AbstractModel {
 
     /**
      * Set 分类分级名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SensitiveLevelName 分类分级名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSensitiveLevelName(String SensitiveLevelName) {
         this.SensitiveLevelName = SensitiveLevelName;
     }
 
     /**
-     * Get 漏洞级别
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 漏洞级别 
      * @return VulnerabilityLevel 漏洞级别
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVulnerabilityLevel() {
         return this.VulnerabilityLevel;
@@ -135,19 +116,15 @@ public class RiskLevelMatrix extends AbstractModel {
 
     /**
      * Set 漏洞级别
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VulnerabilityLevel 漏洞级别
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVulnerabilityLevel(String VulnerabilityLevel) {
         this.VulnerabilityLevel = VulnerabilityLevel;
     }
 
     /**
-     * Get 风险级别
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 风险级别 
      * @return RiskLevel 风险级别
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRiskLevel() {
         return this.RiskLevel;
@@ -155,9 +132,7 @@ public class RiskLevelMatrix extends AbstractModel {
 
     /**
      * Set 风险级别
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RiskLevel 风险级别
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRiskLevel(String RiskLevel) {
         this.RiskLevel = RiskLevel;

@@ -67,7 +67,6 @@ public class CategoryRule extends AbstractModel {
 
     /**
     * 别名ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AliasRuleId")
     @Expose
@@ -75,7 +74,6 @@ public class CategoryRule extends AbstractModel {
 
     /**
     * 别名规则名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AliasRuleName")
     @Expose
@@ -83,7 +81,6 @@ public class CategoryRule extends AbstractModel {
 
     /**
     * 各类分类分级规则数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleEffectItems")
     @Expose
@@ -91,7 +88,6 @@ public class CategoryRule extends AbstractModel {
 
     /**
     * 规则状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleStatus")
     @Expose
@@ -194,10 +190,8 @@ public class CategoryRule extends AbstractModel {
     }
 
     /**
-     * Get 别名ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 别名ID 
      * @return AliasRuleId 别名ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAliasRuleId() {
         return this.AliasRuleId;
@@ -205,19 +199,15 @@ public class CategoryRule extends AbstractModel {
 
     /**
      * Set 别名ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AliasRuleId 别名ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAliasRuleId(Long AliasRuleId) {
         this.AliasRuleId = AliasRuleId;
     }
 
     /**
-     * Get 别名规则名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 别名规则名称 
      * @return AliasRuleName 别名规则名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAliasRuleName() {
         return this.AliasRuleName;
@@ -225,19 +215,15 @@ public class CategoryRule extends AbstractModel {
 
     /**
      * Set 别名规则名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AliasRuleName 别名规则名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAliasRuleName(String AliasRuleName) {
         this.AliasRuleName = AliasRuleName;
     }
 
     /**
-     * Get 各类分类分级规则数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 各类分类分级规则数量 
      * @return RuleEffectItems 各类分类分级规则数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RuleEffectItem [] getRuleEffectItems() {
         return this.RuleEffectItems;
@@ -245,19 +231,15 @@ public class CategoryRule extends AbstractModel {
 
     /**
      * Set 各类分类分级规则数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RuleEffectItems 各类分类分级规则数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleEffectItems(RuleEffectItem [] RuleEffectItems) {
         this.RuleEffectItems = RuleEffectItems;
     }
 
     /**
-     * Get 规则状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则状态 
      * @return RuleStatus 规则状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRuleStatus() {
         return this.RuleStatus;
@@ -265,9 +247,7 @@ public class CategoryRule extends AbstractModel {
 
     /**
      * Set 规则状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RuleStatus 规则状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleStatus(Long RuleStatus) {
         this.RuleStatus = RuleStatus;

@@ -32,7 +32,6 @@ public class GetResourceConnectionStatusResponse extends AbstractModel {
 
     /**
     * 连接状态的描述信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConnectionDesc")
     @Expose
@@ -62,10 +61,8 @@ public class GetResourceConnectionStatusResponse extends AbstractModel {
     }
 
     /**
-     * Get 连接状态的描述信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 连接状态的描述信息。 
      * @return ConnectionDesc 连接状态的描述信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getConnectionDesc() {
         return this.ConnectionDesc;
@@ -73,9 +70,7 @@ public class GetResourceConnectionStatusResponse extends AbstractModel {
 
     /**
      * Set 连接状态的描述信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ConnectionDesc 连接状态的描述信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConnectionDesc(String ConnectionDesc) {
         this.ConnectionDesc = ConnectionDesc;

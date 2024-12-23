@@ -26,7 +26,6 @@ public class DspaDiscoveryCOSDataRule extends AbstractModel {
     /**
     * 只能取and 、or两个值其中之一，and：字段和内容同时满足，or：字段和内容满足其一.
 默认值为or
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Operator")
     @Expose
@@ -34,7 +33,6 @@ public class DspaDiscoveryCOSDataRule extends AbstractModel {
 
     /**
     * 规则内容
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Contents")
     @Expose
@@ -42,11 +40,9 @@ public class DspaDiscoveryCOSDataRule extends AbstractModel {
 
     /**
      * Get 只能取and 、or两个值其中之一，and：字段和内容同时满足，or：字段和内容满足其一.
-默认值为or
-注意：此字段可能返回 null，表示取不到有效值。 
+默认值为or 
      * @return Operator 只能取and 、or两个值其中之一，and：字段和内容同时满足，or：字段和内容满足其一.
 默认值为or
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOperator() {
         return this.Operator;
@@ -55,20 +51,16 @@ public class DspaDiscoveryCOSDataRule extends AbstractModel {
     /**
      * Set 只能取and 、or两个值其中之一，and：字段和内容同时满足，or：字段和内容满足其一.
 默认值为or
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Operator 只能取and 、or两个值其中之一，and：字段和内容同时满足，or：字段和内容满足其一.
 默认值为or
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOperator(String Operator) {
         this.Operator = Operator;
     }
 
     /**
-     * Get 规则内容
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则内容 
      * @return Contents 规则内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DspaDiscoveryDataContent [] getContents() {
         return this.Contents;
@@ -76,9 +68,7 @@ public class DspaDiscoveryCOSDataRule extends AbstractModel {
 
     /**
      * Set 规则内容
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Contents 规则内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContents(DspaDiscoveryDataContent [] Contents) {
         this.Contents = Contents;

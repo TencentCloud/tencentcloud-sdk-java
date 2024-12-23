@@ -25,7 +25,6 @@ public class DspaCOSDataAssetCount extends AbstractModel {
 
     /**
     * 数组资产类型，0代表关系型数据库资产，1代表对象存储COS资产
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataAssetType")
     @Expose
@@ -33,7 +32,6 @@ public class DspaCOSDataAssetCount extends AbstractModel {
 
     /**
     * 已扫描的存储桶的个数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalBucketCnt")
     @Expose
@@ -41,7 +39,6 @@ public class DspaCOSDataAssetCount extends AbstractModel {
 
     /**
     * 对象总数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalObjectCnt")
     @Expose
@@ -49,7 +46,6 @@ public class DspaCOSDataAssetCount extends AbstractModel {
 
     /**
     * 敏感数据类型个数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SensitiveCategoryCnt")
     @Expose
@@ -57,7 +53,6 @@ public class DspaCOSDataAssetCount extends AbstractModel {
 
     /**
     * 敏感数据条数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SensitiveDataCnt")
     @Expose
@@ -65,7 +60,6 @@ public class DspaCOSDataAssetCount extends AbstractModel {
 
     /**
     * 敏感等级分布
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SensitiveLevel")
     @Expose
@@ -73,7 +67,6 @@ public class DspaCOSDataAssetCount extends AbstractModel {
 
     /**
     * 敏感存储桶个数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SensitiveBucketCnt")
     @Expose
@@ -81,7 +74,6 @@ public class DspaCOSDataAssetCount extends AbstractModel {
 
     /**
     * 敏感对象个数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SensitiveObjectCnt")
     @Expose
@@ -89,17 +81,14 @@ public class DspaCOSDataAssetCount extends AbstractModel {
 
     /**
     * 数据分类分布
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CategoryDistributed")
     @Expose
     private DspaDataCategoryDistributed [] CategoryDistributed;
 
     /**
-     * Get 数组资产类型，0代表关系型数据库资产，1代表对象存储COS资产
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数组资产类型，0代表关系型数据库资产，1代表对象存储COS资产 
      * @return DataAssetType 数组资产类型，0代表关系型数据库资产，1代表对象存储COS资产
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDataAssetType() {
         return this.DataAssetType;
@@ -107,19 +96,15 @@ public class DspaCOSDataAssetCount extends AbstractModel {
 
     /**
      * Set 数组资产类型，0代表关系型数据库资产，1代表对象存储COS资产
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DataAssetType 数组资产类型，0代表关系型数据库资产，1代表对象存储COS资产
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataAssetType(Long DataAssetType) {
         this.DataAssetType = DataAssetType;
     }
 
     /**
-     * Get 已扫描的存储桶的个数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 已扫描的存储桶的个数 
      * @return TotalBucketCnt 已扫描的存储桶的个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalBucketCnt() {
         return this.TotalBucketCnt;
@@ -127,19 +112,15 @@ public class DspaCOSDataAssetCount extends AbstractModel {
 
     /**
      * Set 已扫描的存储桶的个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalBucketCnt 已扫描的存储桶的个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalBucketCnt(Long TotalBucketCnt) {
         this.TotalBucketCnt = TotalBucketCnt;
     }
 
     /**
-     * Get 对象总数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 对象总数 
      * @return TotalObjectCnt 对象总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalObjectCnt() {
         return this.TotalObjectCnt;
@@ -147,19 +128,15 @@ public class DspaCOSDataAssetCount extends AbstractModel {
 
     /**
      * Set 对象总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalObjectCnt 对象总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalObjectCnt(Long TotalObjectCnt) {
         this.TotalObjectCnt = TotalObjectCnt;
     }
 
     /**
-     * Get 敏感数据类型个数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 敏感数据类型个数 
      * @return SensitiveCategoryCnt 敏感数据类型个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSensitiveCategoryCnt() {
         return this.SensitiveCategoryCnt;
@@ -167,19 +144,15 @@ public class DspaCOSDataAssetCount extends AbstractModel {
 
     /**
      * Set 敏感数据类型个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SensitiveCategoryCnt 敏感数据类型个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSensitiveCategoryCnt(Long SensitiveCategoryCnt) {
         this.SensitiveCategoryCnt = SensitiveCategoryCnt;
     }
 
     /**
-     * Get 敏感数据条数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 敏感数据条数 
      * @return SensitiveDataCnt 敏感数据条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSensitiveDataCnt() {
         return this.SensitiveDataCnt;
@@ -187,19 +160,15 @@ public class DspaCOSDataAssetCount extends AbstractModel {
 
     /**
      * Set 敏感数据条数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SensitiveDataCnt 敏感数据条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSensitiveDataCnt(Long SensitiveDataCnt) {
         this.SensitiveDataCnt = SensitiveDataCnt;
     }
 
     /**
-     * Get 敏感等级分布
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 敏感等级分布 
      * @return SensitiveLevel 敏感等级分布
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SensitiveLevel [] getSensitiveLevel() {
         return this.SensitiveLevel;
@@ -207,19 +176,15 @@ public class DspaCOSDataAssetCount extends AbstractModel {
 
     /**
      * Set 敏感等级分布
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SensitiveLevel 敏感等级分布
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSensitiveLevel(SensitiveLevel [] SensitiveLevel) {
         this.SensitiveLevel = SensitiveLevel;
     }
 
     /**
-     * Get 敏感存储桶个数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 敏感存储桶个数 
      * @return SensitiveBucketCnt 敏感存储桶个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSensitiveBucketCnt() {
         return this.SensitiveBucketCnt;
@@ -227,19 +192,15 @@ public class DspaCOSDataAssetCount extends AbstractModel {
 
     /**
      * Set 敏感存储桶个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SensitiveBucketCnt 敏感存储桶个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSensitiveBucketCnt(Long SensitiveBucketCnt) {
         this.SensitiveBucketCnt = SensitiveBucketCnt;
     }
 
     /**
-     * Get 敏感对象个数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 敏感对象个数 
      * @return SensitiveObjectCnt 敏感对象个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSensitiveObjectCnt() {
         return this.SensitiveObjectCnt;
@@ -247,19 +208,15 @@ public class DspaCOSDataAssetCount extends AbstractModel {
 
     /**
      * Set 敏感对象个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SensitiveObjectCnt 敏感对象个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSensitiveObjectCnt(Long SensitiveObjectCnt) {
         this.SensitiveObjectCnt = SensitiveObjectCnt;
     }
 
     /**
-     * Get 数据分类分布
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据分类分布 
      * @return CategoryDistributed 数据分类分布
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DspaDataCategoryDistributed [] getCategoryDistributed() {
         return this.CategoryDistributed;
@@ -267,9 +224,7 @@ public class DspaCOSDataAssetCount extends AbstractModel {
 
     /**
      * Set 数据分类分布
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CategoryDistributed 数据分类分布
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCategoryDistributed(DspaDataCategoryDistributed [] CategoryDistributed) {
         this.CategoryDistributed = CategoryDistributed;

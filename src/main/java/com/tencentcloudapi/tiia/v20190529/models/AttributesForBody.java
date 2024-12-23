@@ -33,7 +33,6 @@ public class AttributesForBody extends AbstractModel {
 
     /**
     * 人体检测置信度。取值0-1之间，当不开启人体检测开关时默认为0。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DetectConfidence")
     @Expose
@@ -68,10 +67,8 @@ public class AttributesForBody extends AbstractModel {
     }
 
     /**
-     * Get 人体检测置信度。取值0-1之间，当不开启人体检测开关时默认为0。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 人体检测置信度。取值0-1之间，当不开启人体检测开关时默认为0。 
      * @return DetectConfidence 人体检测置信度。取值0-1之间，当不开启人体检测开关时默认为0。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getDetectConfidence() {
         return this.DetectConfidence;
@@ -79,9 +76,7 @@ public class AttributesForBody extends AbstractModel {
 
     /**
      * Set 人体检测置信度。取值0-1之间，当不开启人体检测开关时默认为0。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DetectConfidence 人体检测置信度。取值0-1之间，当不开启人体检测开关时默认为0。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDetectConfidence(Float DetectConfidence) {
         this.DetectConfidence = DetectConfidence;

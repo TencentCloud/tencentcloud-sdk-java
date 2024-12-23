@@ -25,7 +25,6 @@ public class DspaDiscoveryRuleDetail extends AbstractModel {
 
     /**
     * 规则ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleId")
     @Expose
@@ -33,7 +32,6 @@ public class DspaDiscoveryRuleDetail extends AbstractModel {
 
     /**
     * 规则名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -41,7 +39,6 @@ public class DspaDiscoveryRuleDetail extends AbstractModel {
 
     /**
     * 规则描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
     @Expose
@@ -49,7 +46,6 @@ public class DspaDiscoveryRuleDetail extends AbstractModel {
 
     /**
     * 规则来源，取值：0 内置, 1 自定义
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Source")
     @Expose
@@ -57,7 +53,6 @@ public class DspaDiscoveryRuleDetail extends AbstractModel {
 
     /**
     * RDB规则详情
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RDBRules")
     @Expose
@@ -65,7 +60,6 @@ public class DspaDiscoveryRuleDetail extends AbstractModel {
 
     /**
     * COS规则详情
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("COSRules")
     @Expose
@@ -73,17 +67,14 @@ public class DspaDiscoveryRuleDetail extends AbstractModel {
 
     /**
     * 0关闭，1开启
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-     * Get 规则ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则ID 
      * @return RuleId 规则ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRuleId() {
         return this.RuleId;
@@ -91,19 +82,15 @@ public class DspaDiscoveryRuleDetail extends AbstractModel {
 
     /**
      * Set 规则ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RuleId 规则ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleId(Long RuleId) {
         this.RuleId = RuleId;
     }
 
     /**
-     * Get 规则名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则名称 
      * @return Name 规则名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -111,19 +98,15 @@ public class DspaDiscoveryRuleDetail extends AbstractModel {
 
     /**
      * Set 规则名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 规则名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 规则描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则描述 
      * @return Description 规则描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
         return this.Description;
@@ -131,19 +114,15 @@ public class DspaDiscoveryRuleDetail extends AbstractModel {
 
     /**
      * Set 规则描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Description 规则描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 规则来源，取值：0 内置, 1 自定义
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则来源，取值：0 内置, 1 自定义 
      * @return Source 规则来源，取值：0 内置, 1 自定义
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSource() {
         return this.Source;
@@ -151,19 +130,15 @@ public class DspaDiscoveryRuleDetail extends AbstractModel {
 
     /**
      * Set 规则来源，取值：0 内置, 1 自定义
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Source 规则来源，取值：0 内置, 1 自定义
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSource(Long Source) {
         this.Source = Source;
     }
 
     /**
-     * Get RDB规则详情
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get RDB规则详情 
      * @return RDBRules RDB规则详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DspaDiscoveryRDBRules getRDBRules() {
         return this.RDBRules;
@@ -171,19 +146,15 @@ public class DspaDiscoveryRuleDetail extends AbstractModel {
 
     /**
      * Set RDB规则详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RDBRules RDB规则详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRDBRules(DspaDiscoveryRDBRules RDBRules) {
         this.RDBRules = RDBRules;
     }
 
     /**
-     * Get COS规则详情
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get COS规则详情 
      * @return COSRules COS规则详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DspaDiscoveryCOSRules getCOSRules() {
         return this.COSRules;
@@ -191,19 +162,15 @@ public class DspaDiscoveryRuleDetail extends AbstractModel {
 
     /**
      * Set COS规则详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param COSRules COS规则详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCOSRules(DspaDiscoveryCOSRules COSRules) {
         this.COSRules = COSRules;
     }
 
     /**
-     * Get 0关闭，1开启
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 0关闭，1开启 
      * @return Status 0关闭，1开启
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
         return this.Status;
@@ -211,9 +178,7 @@ public class DspaDiscoveryRuleDetail extends AbstractModel {
 
     /**
      * Set 0关闭，1开启
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 0关闭，1开启
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
         this.Status = Status;

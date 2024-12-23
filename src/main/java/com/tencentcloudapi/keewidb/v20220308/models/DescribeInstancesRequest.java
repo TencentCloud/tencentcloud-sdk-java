@@ -116,7 +116,7 @@ public class DescribeInstancesRequest extends AbstractModel {
     private Long [] Status;
 
     /**
-    * 包年包月计费的续费模式。<ul><li>0：默认状态，指手动续费。</li><li>1：自动续费。</li><li>2：到期不再续费。</ul>
+    * 续费模式。- 0：手动续费。- 1：自动续费。- 2：到期不再续费。
     */
     @SerializedName("AutoRenew")
     @Expose
@@ -384,16 +384,16 @@ public class DescribeInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get 包年包月计费的续费模式。<ul><li>0：默认状态，指手动续费。</li><li>1：自动续费。</li><li>2：到期不再续费。</ul> 
-     * @return AutoRenew 包年包月计费的续费模式。<ul><li>0：默认状态，指手动续费。</li><li>1：自动续费。</li><li>2：到期不再续费。</ul>
+     * Get 续费模式。- 0：手动续费。- 1：自动续费。- 2：到期不再续费。 
+     * @return AutoRenew 续费模式。- 0：手动续费。- 1：自动续费。- 2：到期不再续费。
      */
     public Long [] getAutoRenew() {
         return this.AutoRenew;
     }
 
     /**
-     * Set 包年包月计费的续费模式。<ul><li>0：默认状态，指手动续费。</li><li>1：自动续费。</li><li>2：到期不再续费。</ul>
-     * @param AutoRenew 包年包月计费的续费模式。<ul><li>0：默认状态，指手动续费。</li><li>1：自动续费。</li><li>2：到期不再续费。</ul>
+     * Set 续费模式。- 0：手动续费。- 1：自动续费。- 2：到期不再续费。
+     * @param AutoRenew 续费模式。- 0：手动续费。- 1：自动续费。- 2：到期不再续费。
      */
     public void setAutoRenew(Long [] AutoRenew) {
         this.AutoRenew = AutoRenew;

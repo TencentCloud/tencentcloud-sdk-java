@@ -25,7 +25,6 @@ public class RiskLevelRisk extends AbstractModel {
 
     /**
     * 风险id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
     @Expose
@@ -33,7 +32,6 @@ public class RiskLevelRisk extends AbstractModel {
 
     /**
     * 风险等级列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RiskLevelName")
     @Expose
@@ -41,7 +39,6 @@ public class RiskLevelRisk extends AbstractModel {
 
     /**
     * 风险级别描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RiskLevelDescription")
     @Expose
@@ -49,7 +46,6 @@ public class RiskLevelRisk extends AbstractModel {
 
     /**
     * 引用的分类分级模板
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IdentifyComplianceName")
     @Expose
@@ -57,17 +53,14 @@ public class RiskLevelRisk extends AbstractModel {
 
     /**
     * 类型，区分自定义还是系统内置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-     * Get 风险id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 风险id 
      * @return Id 风险id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getId() {
         return this.Id;
@@ -75,19 +68,15 @@ public class RiskLevelRisk extends AbstractModel {
 
     /**
      * Set 风险id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Id 风险id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 风险等级列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 风险等级列表 
      * @return RiskLevelName 风险等级列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRiskLevelName() {
         return this.RiskLevelName;
@@ -95,19 +84,15 @@ public class RiskLevelRisk extends AbstractModel {
 
     /**
      * Set 风险等级列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RiskLevelName 风险等级列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRiskLevelName(String RiskLevelName) {
         this.RiskLevelName = RiskLevelName;
     }
 
     /**
-     * Get 风险级别描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 风险级别描述 
      * @return RiskLevelDescription 风险级别描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRiskLevelDescription() {
         return this.RiskLevelDescription;
@@ -115,19 +100,15 @@ public class RiskLevelRisk extends AbstractModel {
 
     /**
      * Set 风险级别描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RiskLevelDescription 风险级别描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRiskLevelDescription(String RiskLevelDescription) {
         this.RiskLevelDescription = RiskLevelDescription;
     }
 
     /**
-     * Get 引用的分类分级模板
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 引用的分类分级模板 
      * @return IdentifyComplianceName 引用的分类分级模板
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIdentifyComplianceName() {
         return this.IdentifyComplianceName;
@@ -135,19 +116,15 @@ public class RiskLevelRisk extends AbstractModel {
 
     /**
      * Set 引用的分类分级模板
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IdentifyComplianceName 引用的分类分级模板
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIdentifyComplianceName(String IdentifyComplianceName) {
         this.IdentifyComplianceName = IdentifyComplianceName;
     }
 
     /**
-     * Get 类型，区分自定义还是系统内置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 类型，区分自定义还是系统内置 
      * @return Type 类型，区分自定义还是系统内置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
         return this.Type;
@@ -155,9 +132,7 @@ public class RiskLevelRisk extends AbstractModel {
 
     /**
      * Set 类型，区分自定义还是系统内置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 类型，区分自定义还是系统内置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
         this.Type = Type;

@@ -50,7 +50,7 @@ public class PrivatednsClient extends AbstractClient{
     }
 
     /**
-     *创建私有域解析账号
+     *跨账号关联VPC时绑定其他账号
      * @param req CreatePrivateDNSAccountRequest
      * @return CreatePrivateDNSAccountResponse
      * @throws TencentCloudSDKException

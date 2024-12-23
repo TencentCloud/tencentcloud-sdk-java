@@ -73,7 +73,7 @@ public class DescribeDSPAESDiscoveryTaskResultDetailRequest extends AbstractMode
     private Long LevelId;
 
     /**
-    * 索引名称
+    * 数据库名称
     */
     @SerializedName("DbName")
     @Expose
@@ -192,16 +192,16 @@ public class DescribeDSPAESDiscoveryTaskResultDetailRequest extends AbstractMode
     }
 
     /**
-     * Get 索引名称 
-     * @return DbName 索引名称
+     * Get 数据库名称 
+     * @return DbName 数据库名称
      */
     public String getDbName() {
         return this.DbName;
     }
 
     /**
-     * Set 索引名称
-     * @param DbName 索引名称
+     * Set 数据库名称
+     * @param DbName 数据库名称
      */
     public void setDbName(String DbName) {
         this.DbName = DbName;

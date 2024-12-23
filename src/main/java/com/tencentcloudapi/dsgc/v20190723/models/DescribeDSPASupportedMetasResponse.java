@@ -25,7 +25,6 @@ public class DescribeDSPASupportedMetasResponse extends AbstractModel {
 
     /**
     * 支持的元数据类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Metas")
     @Expose
@@ -46,10 +45,8 @@ public class DescribeDSPASupportedMetasResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 支持的元数据类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 支持的元数据类型 
      * @return Metas 支持的元数据类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DSPAMetaType [] getMetas() {
         return this.Metas;
@@ -57,9 +54,7 @@ public class DescribeDSPASupportedMetasResponse extends AbstractModel {
 
     /**
      * Set 支持的元数据类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Metas 支持的元数据类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMetas(DSPAMetaType [] Metas) {
         this.Metas = Metas;

@@ -25,7 +25,6 @@ public class CosAsset extends AbstractModel {
 
     /**
     * 桶的个数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BucketNums")
     @Expose
@@ -33,7 +32,6 @@ public class CosAsset extends AbstractModel {
 
     /**
     * 敏感桶的个数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SensitiveBucketNums")
     @Expose
@@ -41,7 +39,6 @@ public class CosAsset extends AbstractModel {
 
     /**
     * 文件个数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileNums")
     @Expose
@@ -49,17 +46,14 @@ public class CosAsset extends AbstractModel {
 
     /**
     * 敏感文件的个数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SensitiveFileNums")
     @Expose
     private Long SensitiveFileNums;
 
     /**
-     * Get 桶的个数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 桶的个数 
      * @return BucketNums 桶的个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBucketNums() {
         return this.BucketNums;
@@ -67,19 +61,15 @@ public class CosAsset extends AbstractModel {
 
     /**
      * Set 桶的个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BucketNums 桶的个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBucketNums(Long BucketNums) {
         this.BucketNums = BucketNums;
     }
 
     /**
-     * Get 敏感桶的个数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 敏感桶的个数 
      * @return SensitiveBucketNums 敏感桶的个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSensitiveBucketNums() {
         return this.SensitiveBucketNums;
@@ -87,19 +77,15 @@ public class CosAsset extends AbstractModel {
 
     /**
      * Set 敏感桶的个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SensitiveBucketNums 敏感桶的个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSensitiveBucketNums(Long SensitiveBucketNums) {
         this.SensitiveBucketNums = SensitiveBucketNums;
     }
 
     /**
-     * Get 文件个数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文件个数 
      * @return FileNums 文件个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFileNums() {
         return this.FileNums;
@@ -107,19 +93,15 @@ public class CosAsset extends AbstractModel {
 
     /**
      * Set 文件个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FileNums 文件个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileNums(Long FileNums) {
         this.FileNums = FileNums;
     }
 
     /**
-     * Get 敏感文件的个数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 敏感文件的个数 
      * @return SensitiveFileNums 敏感文件的个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSensitiveFileNums() {
         return this.SensitiveFileNums;
@@ -127,9 +109,7 @@ public class CosAsset extends AbstractModel {
 
     /**
      * Set 敏感文件的个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SensitiveFileNums 敏感文件的个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSensitiveFileNums(Long SensitiveFileNums) {
         this.SensitiveFileNums = SensitiveFileNums;

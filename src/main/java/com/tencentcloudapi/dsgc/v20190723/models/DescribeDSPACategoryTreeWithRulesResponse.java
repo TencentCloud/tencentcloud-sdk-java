@@ -25,7 +25,6 @@ public class DescribeDSPACategoryTreeWithRulesResponse extends AbstractModel {
 
     /**
     * 分类树json
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResultJson")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeDSPACategoryTreeWithRulesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 分类树json
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分类树json 
      * @return ResultJson 分类树json
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResultJson() {
         return this.ResultJson;
@@ -50,9 +47,7 @@ public class DescribeDSPACategoryTreeWithRulesResponse extends AbstractModel {
 
     /**
      * Set 分类树json
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResultJson 分类树json
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResultJson(String ResultJson) {
         this.ResultJson = ResultJson;

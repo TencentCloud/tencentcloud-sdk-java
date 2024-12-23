@@ -25,7 +25,6 @@ public class DescribeMongoAssetSensitiveDistributionResponse extends AbstractMod
 
     /**
     * mongo的资产统计数据
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MongoAsset")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeMongoAssetSensitiveDistributionResponse extends AbstractMod
 
     /**
     * 涉敏top数据
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TopAsset")
     @Expose
@@ -41,7 +39,6 @@ public class DescribeMongoAssetSensitiveDistributionResponse extends AbstractMod
 
     /**
     * mongo的详情列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MongoDetail")
     @Expose
@@ -55,10 +52,8 @@ public class DescribeMongoAssetSensitiveDistributionResponse extends AbstractMod
     private String RequestId;
 
     /**
-     * Get mongo的资产统计数据
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get mongo的资产统计数据 
      * @return MongoAsset mongo的资产统计数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public MongoAsset getMongoAsset() {
         return this.MongoAsset;
@@ -66,19 +61,15 @@ public class DescribeMongoAssetSensitiveDistributionResponse extends AbstractMod
 
     /**
      * Set mongo的资产统计数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MongoAsset mongo的资产统计数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMongoAsset(MongoAsset MongoAsset) {
         this.MongoAsset = MongoAsset;
     }
 
     /**
-     * Get 涉敏top数据
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 涉敏top数据 
      * @return TopAsset 涉敏top数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TopAsset [] getTopAsset() {
         return this.TopAsset;
@@ -86,19 +77,15 @@ public class DescribeMongoAssetSensitiveDistributionResponse extends AbstractMod
 
     /**
      * Set 涉敏top数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TopAsset 涉敏top数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTopAsset(TopAsset [] TopAsset) {
         this.TopAsset = TopAsset;
     }
 
     /**
-     * Get mongo的详情列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get mongo的详情列表 
      * @return MongoDetail mongo的详情列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public MongoAssetDBDetail [] getMongoDetail() {
         return this.MongoDetail;
@@ -106,9 +93,7 @@ public class DescribeMongoAssetSensitiveDistributionResponse extends AbstractMod
 
     /**
      * Set mongo的详情列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MongoDetail mongo的详情列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMongoDetail(MongoAssetDBDetail [] MongoDetail) {
         this.MongoDetail = MongoDetail;

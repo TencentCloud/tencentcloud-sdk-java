@@ -27,7 +27,6 @@ public class DatagovRuleExtendParameter extends AbstractModel {
     * 扩展参数名称，目前支持如下两个扩展属性名称：
 IsFullWordMatch，表示是否全文匹配，该Name对应的Value可取值为"true"或"false":，默认值为"false"，
 IsIgnoreCase，表示是否忽略大小写，该Name对应的Value可取值为"true"或"false"，默认值为"true"
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -35,7 +34,6 @@ IsIgnoreCase，表示是否忽略大小写，该Name对应的Value可取值为"t
 
     /**
     * 扩展参数值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Value")
     @Expose
@@ -44,12 +42,10 @@ IsIgnoreCase，表示是否忽略大小写，该Name对应的Value可取值为"t
     /**
      * Get 扩展参数名称，目前支持如下两个扩展属性名称：
 IsFullWordMatch，表示是否全文匹配，该Name对应的Value可取值为"true"或"false":，默认值为"false"，
-IsIgnoreCase，表示是否忽略大小写，该Name对应的Value可取值为"true"或"false"，默认值为"true"
-注意：此字段可能返回 null，表示取不到有效值。 
+IsIgnoreCase，表示是否忽略大小写，该Name对应的Value可取值为"true"或"false"，默认值为"true" 
      * @return Name 扩展参数名称，目前支持如下两个扩展属性名称：
 IsFullWordMatch，表示是否全文匹配，该Name对应的Value可取值为"true"或"false":，默认值为"false"，
 IsIgnoreCase，表示是否忽略大小写，该Name对应的Value可取值为"true"或"false"，默认值为"true"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -59,21 +55,17 @@ IsIgnoreCase，表示是否忽略大小写，该Name对应的Value可取值为"t
      * Set 扩展参数名称，目前支持如下两个扩展属性名称：
 IsFullWordMatch，表示是否全文匹配，该Name对应的Value可取值为"true"或"false":，默认值为"false"，
 IsIgnoreCase，表示是否忽略大小写，该Name对应的Value可取值为"true"或"false"，默认值为"true"
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 扩展参数名称，目前支持如下两个扩展属性名称：
 IsFullWordMatch，表示是否全文匹配，该Name对应的Value可取值为"true"或"false":，默认值为"false"，
 IsIgnoreCase，表示是否忽略大小写，该Name对应的Value可取值为"true"或"false"，默认值为"true"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 扩展参数值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 扩展参数值 
      * @return Value 扩展参数值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getValue() {
         return this.Value;
@@ -81,9 +73,7 @@ IsIgnoreCase，表示是否忽略大小写，该Name对应的Value可取值为"t
 
     /**
      * Set 扩展参数值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Value 扩展参数值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValue(String Value) {
         this.Value = Value;

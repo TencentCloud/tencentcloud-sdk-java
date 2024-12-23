@@ -25,7 +25,6 @@ public class DescribeDSPAAssessmentHighRiskTop10OverviewResponse extends Abstrac
 
     /**
     * 含高风险资产TOP10的列表数据
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AssetsList")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeDSPAAssessmentHighRiskTop10OverviewResponse extends Abstrac
     private String RequestId;
 
     /**
-     * Get 含高风险资产TOP10的列表数据
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 含高风险资产TOP10的列表数据 
      * @return AssetsList 含高风险资产TOP10的列表数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public HighRiskAssetsDetail [] getAssetsList() {
         return this.AssetsList;
@@ -50,9 +47,7 @@ public class DescribeDSPAAssessmentHighRiskTop10OverviewResponse extends Abstrac
 
     /**
      * Set 含高风险资产TOP10的列表数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AssetsList 含高风险资产TOP10的列表数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAssetsList(HighRiskAssetsDetail [] AssetsList) {
         this.AssetsList = AssetsList;

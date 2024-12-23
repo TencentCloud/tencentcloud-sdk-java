@@ -25,7 +25,6 @@ public class DescribeDSPAESDataSampleResponse extends AbstractModel {
 
     /**
     * 数据样本列表，最多10条数据
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Items")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeDSPAESDataSampleResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 数据样本列表，最多10条数据
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据样本列表，最多10条数据 
      * @return Items 数据样本列表，最多10条数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getItems() {
         return this.Items;
@@ -50,9 +47,7 @@ public class DescribeDSPAESDataSampleResponse extends AbstractModel {
 
     /**
      * Set 数据样本列表，最多10条数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Items 数据样本列表，最多10条数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setItems(String [] Items) {
         this.Items = Items;

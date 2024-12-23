@@ -25,7 +25,6 @@ public class PrivilegeRisk extends AbstractModel {
 
     /**
     * 账户名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AccountName")
     @Expose
@@ -33,7 +32,6 @@ public class PrivilegeRisk extends AbstractModel {
 
     /**
     * 表名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TableName")
     @Expose
@@ -41,17 +39,14 @@ public class PrivilegeRisk extends AbstractModel {
 
     /**
     * 说明
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-     * Get 账户名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 账户名 
      * @return AccountName 账户名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getAccountName() {
         return this.AccountName;
@@ -59,19 +54,15 @@ public class PrivilegeRisk extends AbstractModel {
 
     /**
      * Set 账户名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AccountName 账户名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAccountName(String [] AccountName) {
         this.AccountName = AccountName;
     }
 
     /**
-     * Get 表名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 表名称 
      * @return TableName 表名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTableName() {
         return this.TableName;
@@ -79,19 +70,15 @@ public class PrivilegeRisk extends AbstractModel {
 
     /**
      * Set 表名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TableName 表名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTableName(String TableName) {
         this.TableName = TableName;
     }
 
     /**
-     * Get 说明
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 说明 
      * @return Description 说明
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
         return this.Description;
@@ -99,9 +86,7 @@ public class PrivilegeRisk extends AbstractModel {
 
     /**
      * Set 说明
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Description 说明
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
         this.Description = Description;

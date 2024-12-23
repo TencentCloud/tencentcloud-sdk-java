@@ -32,7 +32,6 @@ public class RiskItemInfo extends AbstractModel {
 
     /**
     * 数据源id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataSourceId")
     @Expose
@@ -40,7 +39,6 @@ public class RiskItemInfo extends AbstractModel {
 
     /**
     * 数据源名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataSourceName")
     @Expose
@@ -48,7 +46,6 @@ public class RiskItemInfo extends AbstractModel {
 
     /**
     * 数据源类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataSourceType")
     @Expose
@@ -56,7 +53,6 @@ public class RiskItemInfo extends AbstractModel {
 
     /**
     * 资源地域
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceRegion")
     @Expose
@@ -64,7 +60,6 @@ public class RiskItemInfo extends AbstractModel {
 
     /**
     * 资产名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AssetName")
     @Expose
@@ -72,7 +67,6 @@ public class RiskItemInfo extends AbstractModel {
 
     /**
     * 风险类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RiskType")
     @Expose
@@ -80,7 +74,6 @@ public class RiskItemInfo extends AbstractModel {
 
     /**
     * 风险项
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RiskName")
     @Expose
@@ -88,7 +81,6 @@ public class RiskItemInfo extends AbstractModel {
 
     /**
     * 风险级别
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RiskLevel")
     @Expose
@@ -96,7 +88,6 @@ public class RiskItemInfo extends AbstractModel {
 
     /**
     * 风险描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RiskDescription")
     @Expose
@@ -104,7 +95,6 @@ public class RiskItemInfo extends AbstractModel {
 
     /**
     * 建议措施
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SuggestAction")
     @Expose
@@ -112,7 +102,6 @@ public class RiskItemInfo extends AbstractModel {
 
     /**
     * 安全产品（可能有多个）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SecurityProduct")
     @Expose
@@ -120,7 +109,6 @@ public class RiskItemInfo extends AbstractModel {
 
     /**
     * 状态(waiting:待处理，processing:处理中，finished:已处理，ignored:已忽略)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -128,7 +116,6 @@ public class RiskItemInfo extends AbstractModel {
 
     /**
     * 扫描时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ScanTime")
     @Expose
@@ -136,7 +123,6 @@ public class RiskItemInfo extends AbstractModel {
 
     /**
     * 最后处置时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LastProcessTime")
     @Expose
@@ -144,7 +130,6 @@ public class RiskItemInfo extends AbstractModel {
 
     /**
     * 分类分级合规组Id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IdentifyComplianceId")
     @Expose
@@ -152,7 +137,6 @@ public class RiskItemInfo extends AbstractModel {
 
     /**
     * 类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ItemSubType")
     @Expose
@@ -160,7 +144,6 @@ public class RiskItemInfo extends AbstractModel {
 
     /**
     * 风险面
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RiskSide")
     @Expose
@@ -168,7 +151,6 @@ public class RiskItemInfo extends AbstractModel {
 
     /**
     * API安全风险链接
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("APIRiskLinkURL")
     @Expose
@@ -176,7 +158,6 @@ public class RiskItemInfo extends AbstractModel {
 
     /**
     * 备注
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Remark")
     @Expose
@@ -199,10 +180,8 @@ public class RiskItemInfo extends AbstractModel {
     }
 
     /**
-     * Get 数据源id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据源id 
      * @return DataSourceId 数据源id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDataSourceId() {
         return this.DataSourceId;
@@ -210,19 +189,15 @@ public class RiskItemInfo extends AbstractModel {
 
     /**
      * Set 数据源id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DataSourceId 数据源id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataSourceId(String DataSourceId) {
         this.DataSourceId = DataSourceId;
     }
 
     /**
-     * Get 数据源名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据源名称 
      * @return DataSourceName 数据源名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDataSourceName() {
         return this.DataSourceName;
@@ -230,19 +205,15 @@ public class RiskItemInfo extends AbstractModel {
 
     /**
      * Set 数据源名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DataSourceName 数据源名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataSourceName(String DataSourceName) {
         this.DataSourceName = DataSourceName;
     }
 
     /**
-     * Get 数据源类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据源类型 
      * @return DataSourceType 数据源类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDataSourceType() {
         return this.DataSourceType;
@@ -250,19 +221,15 @@ public class RiskItemInfo extends AbstractModel {
 
     /**
      * Set 数据源类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DataSourceType 数据源类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataSourceType(String DataSourceType) {
         this.DataSourceType = DataSourceType;
     }
 
     /**
-     * Get 资源地域
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源地域 
      * @return ResourceRegion 资源地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceRegion() {
         return this.ResourceRegion;
@@ -270,19 +237,15 @@ public class RiskItemInfo extends AbstractModel {
 
     /**
      * Set 资源地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceRegion 资源地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceRegion(String ResourceRegion) {
         this.ResourceRegion = ResourceRegion;
     }
 
     /**
-     * Get 资产名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资产名称 
      * @return AssetName 资产名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAssetName() {
         return this.AssetName;
@@ -290,19 +253,15 @@ public class RiskItemInfo extends AbstractModel {
 
     /**
      * Set 资产名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AssetName 资产名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAssetName(String AssetName) {
         this.AssetName = AssetName;
     }
 
     /**
-     * Get 风险类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 风险类型 
      * @return RiskType 风险类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRiskType() {
         return this.RiskType;
@@ -310,19 +269,15 @@ public class RiskItemInfo extends AbstractModel {
 
     /**
      * Set 风险类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RiskType 风险类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRiskType(String RiskType) {
         this.RiskType = RiskType;
     }
 
     /**
-     * Get 风险项
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 风险项 
      * @return RiskName 风险项
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRiskName() {
         return this.RiskName;
@@ -330,19 +285,15 @@ public class RiskItemInfo extends AbstractModel {
 
     /**
      * Set 风险项
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RiskName 风险项
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRiskName(String RiskName) {
         this.RiskName = RiskName;
     }
 
     /**
-     * Get 风险级别
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 风险级别 
      * @return RiskLevel 风险级别
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRiskLevel() {
         return this.RiskLevel;
@@ -350,19 +301,15 @@ public class RiskItemInfo extends AbstractModel {
 
     /**
      * Set 风险级别
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RiskLevel 风险级别
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRiskLevel(String RiskLevel) {
         this.RiskLevel = RiskLevel;
     }
 
     /**
-     * Get 风险描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 风险描述 
      * @return RiskDescription 风险描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRiskDescription() {
         return this.RiskDescription;
@@ -370,19 +317,15 @@ public class RiskItemInfo extends AbstractModel {
 
     /**
      * Set 风险描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RiskDescription 风险描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRiskDescription(String RiskDescription) {
         this.RiskDescription = RiskDescription;
     }
 
     /**
-     * Get 建议措施
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 建议措施 
      * @return SuggestAction 建议措施
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSuggestAction() {
         return this.SuggestAction;
@@ -390,19 +333,15 @@ public class RiskItemInfo extends AbstractModel {
 
     /**
      * Set 建议措施
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SuggestAction 建议措施
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSuggestAction(String SuggestAction) {
         this.SuggestAction = SuggestAction;
     }
 
     /**
-     * Get 安全产品（可能有多个）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 安全产品（可能有多个） 
      * @return SecurityProduct 安全产品（可能有多个）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SecurityProduct [] getSecurityProduct() {
         return this.SecurityProduct;
@@ -410,19 +349,15 @@ public class RiskItemInfo extends AbstractModel {
 
     /**
      * Set 安全产品（可能有多个）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SecurityProduct 安全产品（可能有多个）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSecurityProduct(SecurityProduct [] SecurityProduct) {
         this.SecurityProduct = SecurityProduct;
     }
 
     /**
-     * Get 状态(waiting:待处理，processing:处理中，finished:已处理，ignored:已忽略)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 状态(waiting:待处理，processing:处理中，finished:已处理，ignored:已忽略) 
      * @return Status 状态(waiting:待处理，processing:处理中，finished:已处理，ignored:已忽略)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
         return this.Status;
@@ -430,19 +365,15 @@ public class RiskItemInfo extends AbstractModel {
 
     /**
      * Set 状态(waiting:待处理，processing:处理中，finished:已处理，ignored:已忽略)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 状态(waiting:待处理，processing:处理中，finished:已处理，ignored:已忽略)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 扫描时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 扫描时间 
      * @return ScanTime 扫描时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getScanTime() {
         return this.ScanTime;
@@ -450,19 +381,15 @@ public class RiskItemInfo extends AbstractModel {
 
     /**
      * Set 扫描时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ScanTime 扫描时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setScanTime(String ScanTime) {
         this.ScanTime = ScanTime;
     }
 
     /**
-     * Get 最后处置时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最后处置时间 
      * @return LastProcessTime 最后处置时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLastProcessTime() {
         return this.LastProcessTime;
@@ -470,19 +397,15 @@ public class RiskItemInfo extends AbstractModel {
 
     /**
      * Set 最后处置时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LastProcessTime 最后处置时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLastProcessTime(String LastProcessTime) {
         this.LastProcessTime = LastProcessTime;
     }
 
     /**
-     * Get 分类分级合规组Id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分类分级合规组Id 
      * @return IdentifyComplianceId 分类分级合规组Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIdentifyComplianceId() {
         return this.IdentifyComplianceId;
@@ -490,19 +413,15 @@ public class RiskItemInfo extends AbstractModel {
 
     /**
      * Set 分类分级合规组Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IdentifyComplianceId 分类分级合规组Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIdentifyComplianceId(Long IdentifyComplianceId) {
         this.IdentifyComplianceId = IdentifyComplianceId;
     }
 
     /**
-     * Get 类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 类型 
      * @return ItemSubType 类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getItemSubType() {
         return this.ItemSubType;
@@ -510,19 +429,15 @@ public class RiskItemInfo extends AbstractModel {
 
     /**
      * Set 类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ItemSubType 类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setItemSubType(String ItemSubType) {
         this.ItemSubType = ItemSubType;
     }
 
     /**
-     * Get 风险面
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 风险面 
      * @return RiskSide 风险面
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRiskSide() {
         return this.RiskSide;
@@ -530,19 +445,15 @@ public class RiskItemInfo extends AbstractModel {
 
     /**
      * Set 风险面
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RiskSide 风险面
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRiskSide(String RiskSide) {
         this.RiskSide = RiskSide;
     }
 
     /**
-     * Get API安全风险链接
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get API安全风险链接 
      * @return APIRiskLinkURL API安全风险链接
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAPIRiskLinkURL() {
         return this.APIRiskLinkURL;
@@ -550,19 +461,15 @@ public class RiskItemInfo extends AbstractModel {
 
     /**
      * Set API安全风险链接
-注意：此字段可能返回 null，表示取不到有效值。
      * @param APIRiskLinkURL API安全风险链接
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAPIRiskLinkURL(String APIRiskLinkURL) {
         this.APIRiskLinkURL = APIRiskLinkURL;
     }
 
     /**
-     * Get 备注
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 备注 
      * @return Remark 备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRemark() {
         return this.Remark;
@@ -570,9 +477,7 @@ public class RiskItemInfo extends AbstractModel {
 
     /**
      * Set 备注
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Remark 备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;

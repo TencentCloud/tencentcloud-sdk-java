@@ -25,7 +25,6 @@ public class DescribeDSPACOSTaskResultDetailResponse extends AbstractModel {
 
     /**
     * 扫描结果详情列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Items")
     @Expose
@@ -46,10 +45,8 @@ public class DescribeDSPACOSTaskResultDetailResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 扫描结果详情列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 扫描结果详情列表 
      * @return Items 扫描结果详情列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DspaDiscoveryCOSTaskResultDetail [] getItems() {
         return this.Items;
@@ -57,9 +54,7 @@ public class DescribeDSPACOSTaskResultDetailResponse extends AbstractModel {
 
     /**
      * Set 扫描结果详情列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Items 扫描结果详情列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setItems(DspaDiscoveryCOSTaskResultDetail [] Items) {
         this.Items = Items;

@@ -25,7 +25,6 @@ public class DescribeBindDBListResponse extends AbstractModel {
 
     /**
     * 绑定的DB列表（已废弃）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BindDBList")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeBindDBListResponse extends AbstractModel {
 
     /**
     * 绑定信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BindList")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeBindDBListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 绑定的DB列表（已废弃）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 绑定的DB列表（已废弃） 
      * @return BindDBList 绑定的DB列表（已废弃）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getBindDBList() {
         return this.BindDBList;
@@ -58,19 +54,15 @@ public class DescribeBindDBListResponse extends AbstractModel {
 
     /**
      * Set 绑定的DB列表（已废弃）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BindDBList 绑定的DB列表（已废弃）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBindDBList(String [] BindDBList) {
         this.BindDBList = BindDBList;
     }
 
     /**
-     * Get 绑定信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 绑定信息 
      * @return BindList 绑定信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DBInstanceInfo [] getBindList() {
         return this.BindList;
@@ -78,9 +70,7 @@ public class DescribeBindDBListResponse extends AbstractModel {
 
     /**
      * Set 绑定信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BindList 绑定信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBindList(DBInstanceInfo [] BindList) {
         this.BindList = BindList;

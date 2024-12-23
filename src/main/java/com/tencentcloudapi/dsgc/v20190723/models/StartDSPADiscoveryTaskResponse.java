@@ -25,7 +25,6 @@ public class StartDSPADiscoveryTaskResponse extends AbstractModel {
 
     /**
     * 任务扫描结果ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResultId")
     @Expose
@@ -39,10 +38,8 @@ public class StartDSPADiscoveryTaskResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 任务扫描结果ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务扫描结果ID 
      * @return ResultId 任务扫描结果ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getResultId() {
         return this.ResultId;
@@ -50,9 +47,7 @@ public class StartDSPADiscoveryTaskResponse extends AbstractModel {
 
     /**
      * Set 任务扫描结果ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResultId 任务扫描结果ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResultId(Long ResultId) {
         this.ResultId = ResultId;

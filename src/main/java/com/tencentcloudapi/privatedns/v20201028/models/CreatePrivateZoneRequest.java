@@ -162,7 +162,9 @@ public class CreatePrivateZoneRequest extends AbstractModel {
     /**
      * Get 创建私有域的同时，将其关联至VPC 
      * @return Vpcs 创建私有域的同时，将其关联至VPC
+     * @deprecated
      */
+    @Deprecated
     public VpcInfo [] getVpcs() {
         return this.Vpcs;
     }
@@ -170,7 +172,9 @@ public class CreatePrivateZoneRequest extends AbstractModel {
     /**
      * Set 创建私有域的同时，将其关联至VPC
      * @param Vpcs 创建私有域的同时，将其关联至VPC
+     * @deprecated
      */
+    @Deprecated
     public void setVpcs(VpcInfo [] Vpcs) {
         this.Vpcs = Vpcs;
     }

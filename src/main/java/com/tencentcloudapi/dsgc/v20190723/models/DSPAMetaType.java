@@ -25,7 +25,6 @@ public class DSPAMetaType extends AbstractModel {
 
     /**
     * 元数据类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MetaType")
     @Expose
@@ -33,7 +32,6 @@ public class DSPAMetaType extends AbstractModel {
 
     /**
     * 支持的此元数据类型的地域列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Regions")
     @Expose
@@ -44,17 +42,14 @@ public class DSPAMetaType extends AbstractModel {
 account    -- 账户名密码授权，账户的最高只读权限需要由用户自行赋予；
 automatic -- 一键授权，由DSPA自动生成账户名密码并自动在实例中给账户名赋予最高只读权限；
 如果此列表为空，表明此类资源不支持以上的授权机制，无法通过后台进行授权。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SupportedAuthTypes")
     @Expose
     private String [] SupportedAuthTypes;
 
     /**
-     * Get 元数据类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 元数据类型 
      * @return MetaType 元数据类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMetaType() {
         return this.MetaType;
@@ -62,19 +57,15 @@ automatic -- 一键授权，由DSPA自动生成账户名密码并自动在实例
 
     /**
      * Set 元数据类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MetaType 元数据类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMetaType(String MetaType) {
         this.MetaType = MetaType;
     }
 
     /**
-     * Get 支持的此元数据类型的地域列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 支持的此元数据类型的地域列表 
      * @return Regions 支持的此元数据类型的地域列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getRegions() {
         return this.Regions;
@@ -82,9 +73,7 @@ automatic -- 一键授权，由DSPA自动生成账户名密码并自动在实例
 
     /**
      * Set 支持的此元数据类型的地域列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Regions 支持的此元数据类型的地域列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegions(String [] Regions) {
         this.Regions = Regions;
@@ -94,13 +83,11 @@ automatic -- 一键授权，由DSPA自动生成账户名密码并自动在实例
      * Get 此元数据类型支持的授权类型：
 account    -- 账户名密码授权，账户的最高只读权限需要由用户自行赋予；
 automatic -- 一键授权，由DSPA自动生成账户名密码并自动在实例中给账户名赋予最高只读权限；
-如果此列表为空，表明此类资源不支持以上的授权机制，无法通过后台进行授权。
-注意：此字段可能返回 null，表示取不到有效值。 
+如果此列表为空，表明此类资源不支持以上的授权机制，无法通过后台进行授权。 
      * @return SupportedAuthTypes 此元数据类型支持的授权类型：
 account    -- 账户名密码授权，账户的最高只读权限需要由用户自行赋予；
 automatic -- 一键授权，由DSPA自动生成账户名密码并自动在实例中给账户名赋予最高只读权限；
 如果此列表为空，表明此类资源不支持以上的授权机制，无法通过后台进行授权。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getSupportedAuthTypes() {
         return this.SupportedAuthTypes;
@@ -111,12 +98,10 @@ automatic -- 一键授权，由DSPA自动生成账户名密码并自动在实例
 account    -- 账户名密码授权，账户的最高只读权限需要由用户自行赋予；
 automatic -- 一键授权，由DSPA自动生成账户名密码并自动在实例中给账户名赋予最高只读权限；
 如果此列表为空，表明此类资源不支持以上的授权机制，无法通过后台进行授权。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SupportedAuthTypes 此元数据类型支持的授权类型：
 account    -- 账户名密码授权，账户的最高只读权限需要由用户自行赋予；
 automatic -- 一键授权，由DSPA自动生成账户名密码并自动在实例中给账户名赋予最高只读权限；
 如果此列表为空，表明此类资源不支持以上的授权机制，无法通过后台进行授权。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSupportedAuthTypes(String [] SupportedAuthTypes) {
         this.SupportedAuthTypes = SupportedAuthTypes;

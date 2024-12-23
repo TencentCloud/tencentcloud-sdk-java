@@ -25,7 +25,6 @@ public class DescribeDSPAComplianceGroupDetailResponse extends AbstractModel {
 
     /**
     * 模板详情
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Detail")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeDSPAComplianceGroupDetailResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 模板详情
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 模板详情 
      * @return Detail 模板详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ComplianceGroupDetail getDetail() {
         return this.Detail;
@@ -50,9 +47,7 @@ public class DescribeDSPAComplianceGroupDetailResponse extends AbstractModel {
 
     /**
      * Set 模板详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Detail 模板详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDetail(ComplianceGroupDetail Detail) {
         this.Detail = Detail;

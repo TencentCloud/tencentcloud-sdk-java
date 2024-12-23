@@ -32,7 +32,6 @@ public class DescribeDSPAAssessmentRiskLevelDetailResponse extends AbstractModel
 
     /**
     * 风险级别描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RiskLevelDescription")
     @Expose
@@ -40,7 +39,6 @@ public class DescribeDSPAAssessmentRiskLevelDetailResponse extends AbstractModel
 
     /**
     * 分类分级id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IdentifyComplianceId")
     @Expose
@@ -55,7 +53,6 @@ public class DescribeDSPAAssessmentRiskLevelDetailResponse extends AbstractModel
 
     /**
     * 风险数据
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RiskLevelMatrix")
     @Expose
@@ -85,10 +82,8 @@ public class DescribeDSPAAssessmentRiskLevelDetailResponse extends AbstractModel
     }
 
     /**
-     * Get 风险级别描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 风险级别描述 
      * @return RiskLevelDescription 风险级别描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRiskLevelDescription() {
         return this.RiskLevelDescription;
@@ -96,19 +91,15 @@ public class DescribeDSPAAssessmentRiskLevelDetailResponse extends AbstractModel
 
     /**
      * Set 风险级别描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RiskLevelDescription 风险级别描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRiskLevelDescription(String RiskLevelDescription) {
         this.RiskLevelDescription = RiskLevelDescription;
     }
 
     /**
-     * Get 分类分级id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分类分级id 
      * @return IdentifyComplianceId 分类分级id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIdentifyComplianceId() {
         return this.IdentifyComplianceId;
@@ -116,9 +107,7 @@ public class DescribeDSPAAssessmentRiskLevelDetailResponse extends AbstractModel
 
     /**
      * Set 分类分级id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IdentifyComplianceId 分类分级id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIdentifyComplianceId(Long IdentifyComplianceId) {
         this.IdentifyComplianceId = IdentifyComplianceId;
@@ -141,10 +130,8 @@ public class DescribeDSPAAssessmentRiskLevelDetailResponse extends AbstractModel
     }
 
     /**
-     * Get 风险数据
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 风险数据 
      * @return RiskLevelMatrix 风险数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RiskLevelMatrix [] getRiskLevelMatrix() {
         return this.RiskLevelMatrix;
@@ -152,9 +139,7 @@ public class DescribeDSPAAssessmentRiskLevelDetailResponse extends AbstractModel
 
     /**
      * Set 风险数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RiskLevelMatrix 风险数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRiskLevelMatrix(RiskLevelMatrix [] RiskLevelMatrix) {
         this.RiskLevelMatrix = RiskLevelMatrix;

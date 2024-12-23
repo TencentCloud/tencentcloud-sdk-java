@@ -25,7 +25,6 @@ public class DspaDiscoveryComplianceGroup extends AbstractModel {
 
     /**
     * 合规组ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ComplianceGroupId")
     @Expose
@@ -33,7 +32,6 @@ public class DspaDiscoveryComplianceGroup extends AbstractModel {
 
     /**
     * 合规组名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -41,7 +39,6 @@ public class DspaDiscoveryComplianceGroup extends AbstractModel {
 
     /**
     * 合规组描述信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
     @Expose
@@ -49,7 +46,6 @@ public class DspaDiscoveryComplianceGroup extends AbstractModel {
 
     /**
     * 合规组类型；0 默认合规组，1 系统合规组（除默认合规组外）, 2 自定义合规组
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ComplianceGroupType")
     @Expose
@@ -57,7 +53,6 @@ public class DspaDiscoveryComplianceGroup extends AbstractModel {
 
     /**
     * 合规组对应的规则项
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ComplianceGroupRules")
     @Expose
@@ -65,17 +60,14 @@ public class DspaDiscoveryComplianceGroup extends AbstractModel {
 
     /**
     * 合规组对应的分级组ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LevelGroupId")
     @Expose
     private Long LevelGroupId;
 
     /**
-     * Get 合规组ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 合规组ID 
      * @return ComplianceGroupId 合规组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getComplianceGroupId() {
         return this.ComplianceGroupId;
@@ -83,19 +75,15 @@ public class DspaDiscoveryComplianceGroup extends AbstractModel {
 
     /**
      * Set 合规组ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ComplianceGroupId 合规组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setComplianceGroupId(Long ComplianceGroupId) {
         this.ComplianceGroupId = ComplianceGroupId;
     }
 
     /**
-     * Get 合规组名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 合规组名称 
      * @return Name 合规组名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -103,19 +91,15 @@ public class DspaDiscoveryComplianceGroup extends AbstractModel {
 
     /**
      * Set 合规组名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 合规组名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 合规组描述信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 合规组描述信息 
      * @return Description 合规组描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
         return this.Description;
@@ -123,19 +107,15 @@ public class DspaDiscoveryComplianceGroup extends AbstractModel {
 
     /**
      * Set 合规组描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Description 合规组描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 合规组类型；0 默认合规组，1 系统合规组（除默认合规组外）, 2 自定义合规组
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 合规组类型；0 默认合规组，1 系统合规组（除默认合规组外）, 2 自定义合规组 
      * @return ComplianceGroupType 合规组类型；0 默认合规组，1 系统合规组（除默认合规组外）, 2 自定义合规组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getComplianceGroupType() {
         return this.ComplianceGroupType;
@@ -143,19 +123,15 @@ public class DspaDiscoveryComplianceGroup extends AbstractModel {
 
     /**
      * Set 合规组类型；0 默认合规组，1 系统合规组（除默认合规组外）, 2 自定义合规组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ComplianceGroupType 合规组类型；0 默认合规组，1 系统合规组（除默认合规组外）, 2 自定义合规组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setComplianceGroupType(Long ComplianceGroupType) {
         this.ComplianceGroupType = ComplianceGroupType;
     }
 
     /**
-     * Get 合规组对应的规则项
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 合规组对应的规则项 
      * @return ComplianceGroupRules 合规组对应的规则项
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DspaDiscoveryComplianceGroupRuleInfo [] getComplianceGroupRules() {
         return this.ComplianceGroupRules;
@@ -163,19 +139,15 @@ public class DspaDiscoveryComplianceGroup extends AbstractModel {
 
     /**
      * Set 合规组对应的规则项
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ComplianceGroupRules 合规组对应的规则项
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setComplianceGroupRules(DspaDiscoveryComplianceGroupRuleInfo [] ComplianceGroupRules) {
         this.ComplianceGroupRules = ComplianceGroupRules;
     }
 
     /**
-     * Get 合规组对应的分级组ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 合规组对应的分级组ID 
      * @return LevelGroupId 合规组对应的分级组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLevelGroupId() {
         return this.LevelGroupId;
@@ -183,9 +155,7 @@ public class DspaDiscoveryComplianceGroup extends AbstractModel {
 
     /**
      * Set 合规组对应的分级组ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LevelGroupId 合规组对应的分级组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLevelGroupId(Long LevelGroupId) {
         this.LevelGroupId = LevelGroupId;

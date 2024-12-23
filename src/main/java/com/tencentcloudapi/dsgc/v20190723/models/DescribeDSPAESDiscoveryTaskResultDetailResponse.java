@@ -25,7 +25,6 @@ public class DescribeDSPAESDiscoveryTaskResultDetailResponse extends AbstractMod
 
     /**
     * ES扫描结果详情列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Items")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeDSPAESDiscoveryTaskResultDetailResponse extends AbstractMod
 
     /**
     * 符合条件的扫描结果详情记录数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeDSPAESDiscoveryTaskResultDetailResponse extends AbstractMod
     private String RequestId;
 
     /**
-     * Get ES扫描结果详情列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get ES扫描结果详情列表 
      * @return Items ES扫描结果详情列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ESTaskResultDetail [] getItems() {
         return this.Items;
@@ -58,19 +54,15 @@ public class DescribeDSPAESDiscoveryTaskResultDetailResponse extends AbstractMod
 
     /**
      * Set ES扫描结果详情列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Items ES扫描结果详情列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setItems(ESTaskResultDetail [] Items) {
         this.Items = Items;
     }
 
     /**
-     * Get 符合条件的扫描结果详情记录数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 符合条件的扫描结果详情记录数 
      * @return TotalCount 符合条件的扫描结果详情记录数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -78,9 +70,7 @@ public class DescribeDSPAESDiscoveryTaskResultDetailResponse extends AbstractMod
 
     /**
      * Set 符合条件的扫描结果详情记录数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 符合条件的扫描结果详情记录数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

@@ -398,6 +398,14 @@ public class InstanceInfo extends AbstractModel {
     private Long DiskReplicasNum;
 
     /**
+    * 数据压缩开关。<ul><li>ON：开启。</li><li>OFF：关闭。</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Compression")
+    @Expose
+    private String Compression;
+
+    /**
      * Get 实例名称。 
      * @return InstanceName 实例名称。
      */
@@ -1281,6 +1289,26 @@ public class InstanceInfo extends AbstractModel {
         this.DiskReplicasNum = DiskReplicasNum;
     }
 
+    /**
+     * Get 数据压缩开关。<ul><li>ON：开启。</li><li>OFF：关闭。</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Compression 数据压缩开关。<ul><li>ON：开启。</li><li>OFF：关闭。</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getCompression() {
+        return this.Compression;
+    }
+
+    /**
+     * Set 数据压缩开关。<ul><li>ON：开启。</li><li>OFF：关闭。</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Compression 数据压缩开关。<ul><li>ON：开启。</li><li>OFF：关闭。</li></ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCompression(String Compression) {
+        this.Compression = Compression;
+    }
+
     public InstanceInfo() {
     }
 
@@ -1451,6 +1479,9 @@ public class InstanceInfo extends AbstractModel {
         if (source.DiskReplicasNum != null) {
             this.DiskReplicasNum = new Long(source.DiskReplicasNum);
         }
+        if (source.Compression != null) {
+            this.Compression = new String(source.Compression);
+        }
     }
 
 
@@ -1509,6 +1540,7 @@ public class InstanceInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "DiskShardSize", this.DiskShardSize);
         this.setParamSimple(map, prefix + "DiskShardNum", this.DiskShardNum);
         this.setParamSimple(map, prefix + "DiskReplicasNum", this.DiskReplicasNum);
+        this.setParamSimple(map, prefix + "Compression", this.Compression);
 
     }
 }

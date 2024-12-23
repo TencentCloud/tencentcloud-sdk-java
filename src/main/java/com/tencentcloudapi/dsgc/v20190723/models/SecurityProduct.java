@@ -25,7 +25,6 @@ public class SecurityProduct extends AbstractModel {
 
     /**
     * 产品名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProductName")
     @Expose
@@ -33,17 +32,14 @@ public class SecurityProduct extends AbstractModel {
 
     /**
     * 产品链接
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReferUrl")
     @Expose
     private String ReferUrl;
 
     /**
-     * Get 产品名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 产品名称 
      * @return ProductName 产品名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProductName() {
         return this.ProductName;
@@ -51,19 +47,15 @@ public class SecurityProduct extends AbstractModel {
 
     /**
      * Set 产品名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProductName 产品名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProductName(String ProductName) {
         this.ProductName = ProductName;
     }
 
     /**
-     * Get 产品链接
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 产品链接 
      * @return ReferUrl 产品链接
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getReferUrl() {
         return this.ReferUrl;
@@ -71,9 +63,7 @@ public class SecurityProduct extends AbstractModel {
 
     /**
      * Set 产品链接
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReferUrl 产品链接
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReferUrl(String ReferUrl) {
         this.ReferUrl = ReferUrl;

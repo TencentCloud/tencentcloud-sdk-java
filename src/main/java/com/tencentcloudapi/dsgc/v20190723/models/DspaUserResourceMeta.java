@@ -158,7 +158,6 @@ public class DspaUserResourceMeta extends AbstractModel {
 
     /**
     * 实例类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceType")
     @Expose
@@ -166,7 +165,6 @@ public class DspaUserResourceMeta extends AbstractModel {
 
     /**
     * 实例值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceValue")
     @Expose
@@ -181,7 +179,6 @@ public class DspaUserResourceMeta extends AbstractModel {
 
     /**
     * 授权范围：all - 授权整个数据源 manual:手动指定数据源
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AuthRange")
     @Expose
@@ -492,10 +489,8 @@ public class DspaUserResourceMeta extends AbstractModel {
     }
 
     /**
-     * Get 实例类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例类型 
      * @return InstanceType 实例类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceType() {
         return this.InstanceType;
@@ -503,19 +498,15 @@ public class DspaUserResourceMeta extends AbstractModel {
 
     /**
      * Set 实例类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceType 实例类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get 实例值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例值 
      * @return InstanceValue 实例值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceValue() {
         return this.InstanceValue;
@@ -523,9 +514,7 @@ public class DspaUserResourceMeta extends AbstractModel {
 
     /**
      * Set 实例值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceValue 实例值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceValue(String InstanceValue) {
         this.InstanceValue = InstanceValue;
@@ -548,10 +537,8 @@ public class DspaUserResourceMeta extends AbstractModel {
     }
 
     /**
-     * Get 授权范围：all - 授权整个数据源 manual:手动指定数据源
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 授权范围：all - 授权整个数据源 manual:手动指定数据源 
      * @return AuthRange 授权范围：all - 授权整个数据源 manual:手动指定数据源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAuthRange() {
         return this.AuthRange;
@@ -559,9 +546,7 @@ public class DspaUserResourceMeta extends AbstractModel {
 
     /**
      * Set 授权范围：all - 授权整个数据源 manual:手动指定数据源
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AuthRange 授权范围：all - 授权整个数据源 manual:手动指定数据源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAuthRange(String AuthRange) {
         this.AuthRange = AuthRange;

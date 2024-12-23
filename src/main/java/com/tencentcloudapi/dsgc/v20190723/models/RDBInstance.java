@@ -46,7 +46,6 @@ public class RDBInstance extends AbstractModel {
 
     /**
     * 若未来扩展到DBName粒度，可采用
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DBs")
     @Expose
@@ -101,10 +100,8 @@ public class RDBInstance extends AbstractModel {
     }
 
     /**
-     * Get 若未来扩展到DBName粒度，可采用
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 若未来扩展到DBName粒度，可采用 
      * @return DBs 若未来扩展到DBName粒度，可采用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DBStatements [] getDBs() {
         return this.DBs;
@@ -112,9 +109,7 @@ public class RDBInstance extends AbstractModel {
 
     /**
      * Set 若未来扩展到DBName粒度，可采用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DBs 若未来扩展到DBName粒度，可采用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDBs(DBStatements [] DBs) {
         this.DBs = DBs;

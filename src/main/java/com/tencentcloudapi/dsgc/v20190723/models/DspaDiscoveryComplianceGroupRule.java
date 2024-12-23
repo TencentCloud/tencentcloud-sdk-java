@@ -25,7 +25,6 @@ public class DspaDiscoveryComplianceGroupRule extends AbstractModel {
 
     /**
     * 敏感数据识别规则ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleId")
     @Expose
@@ -33,7 +32,6 @@ public class DspaDiscoveryComplianceGroupRule extends AbstractModel {
 
     /**
     * 敏感数据识别规则名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleName")
     @Expose
@@ -41,7 +39,6 @@ public class DspaDiscoveryComplianceGroupRule extends AbstractModel {
 
     /**
     * 敏感数据分类ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CategoryId")
     @Expose
@@ -49,7 +46,6 @@ public class DspaDiscoveryComplianceGroupRule extends AbstractModel {
 
     /**
     * 敏感数据分级ID, 目前只支持高、中、低三级
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LevelId")
     @Expose
@@ -57,7 +53,6 @@ public class DspaDiscoveryComplianceGroupRule extends AbstractModel {
 
     /**
     * 合规组对应的分类信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CategoryName")
     @Expose
@@ -65,17 +60,14 @@ public class DspaDiscoveryComplianceGroupRule extends AbstractModel {
 
     /**
     * 分级名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LevelRiskName")
     @Expose
     private String LevelRiskName;
 
     /**
-     * Get 敏感数据识别规则ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 敏感数据识别规则ID 
      * @return RuleId 敏感数据识别规则ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRuleId() {
         return this.RuleId;
@@ -83,19 +75,15 @@ public class DspaDiscoveryComplianceGroupRule extends AbstractModel {
 
     /**
      * Set 敏感数据识别规则ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RuleId 敏感数据识别规则ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleId(Long RuleId) {
         this.RuleId = RuleId;
     }
 
     /**
-     * Get 敏感数据识别规则名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 敏感数据识别规则名称 
      * @return RuleName 敏感数据识别规则名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRuleName() {
         return this.RuleName;
@@ -103,19 +91,15 @@ public class DspaDiscoveryComplianceGroupRule extends AbstractModel {
 
     /**
      * Set 敏感数据识别规则名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RuleName 敏感数据识别规则名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleName(String RuleName) {
         this.RuleName = RuleName;
     }
 
     /**
-     * Get 敏感数据分类ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 敏感数据分类ID 
      * @return CategoryId 敏感数据分类ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCategoryId() {
         return this.CategoryId;
@@ -123,19 +107,15 @@ public class DspaDiscoveryComplianceGroupRule extends AbstractModel {
 
     /**
      * Set 敏感数据分类ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CategoryId 敏感数据分类ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCategoryId(Long CategoryId) {
         this.CategoryId = CategoryId;
     }
 
     /**
-     * Get 敏感数据分级ID, 目前只支持高、中、低三级
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 敏感数据分级ID, 目前只支持高、中、低三级 
      * @return LevelId 敏感数据分级ID, 目前只支持高、中、低三级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLevelId() {
         return this.LevelId;
@@ -143,19 +123,15 @@ public class DspaDiscoveryComplianceGroupRule extends AbstractModel {
 
     /**
      * Set 敏感数据分级ID, 目前只支持高、中、低三级
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LevelId 敏感数据分级ID, 目前只支持高、中、低三级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLevelId(Long LevelId) {
         this.LevelId = LevelId;
     }
 
     /**
-     * Get 合规组对应的分类信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 合规组对应的分类信息 
      * @return CategoryName 合规组对应的分类信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCategoryName() {
         return this.CategoryName;
@@ -163,19 +139,15 @@ public class DspaDiscoveryComplianceGroupRule extends AbstractModel {
 
     /**
      * Set 合规组对应的分类信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CategoryName 合规组对应的分类信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCategoryName(String CategoryName) {
         this.CategoryName = CategoryName;
     }
 
     /**
-     * Get 分级名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分级名称 
      * @return LevelRiskName 分级名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLevelRiskName() {
         return this.LevelRiskName;
@@ -183,9 +155,7 @@ public class DspaDiscoveryComplianceGroupRule extends AbstractModel {
 
     /**
      * Set 分级名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LevelRiskName 分级名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLevelRiskName(String LevelRiskName) {
         this.LevelRiskName = LevelRiskName;

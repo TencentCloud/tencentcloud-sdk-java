@@ -81,7 +81,6 @@ public class DspaRDBDataAssetDetail extends AbstractModel {
 
     /**
     * 分级风险分数，1-10，最小值为1，最大值为10
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LevelRiskScore")
     @Expose
@@ -89,7 +88,6 @@ public class DspaRDBDataAssetDetail extends AbstractModel {
 
     /**
     * 可信分
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TrustedScore")
     @Expose
@@ -97,7 +95,6 @@ public class DspaRDBDataAssetDetail extends AbstractModel {
 
     /**
     * 资源所在地域
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceRegion")
     @Expose
@@ -105,7 +102,6 @@ public class DspaRDBDataAssetDetail extends AbstractModel {
 
     /**
     * 字段扫描结果ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FieldResultId")
     @Expose
@@ -113,7 +109,6 @@ public class DspaRDBDataAssetDetail extends AbstractModel {
 
     /**
     * 规则ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleId")
     @Expose
@@ -121,7 +116,6 @@ public class DspaRDBDataAssetDetail extends AbstractModel {
 
     /**
     * 分级ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LevelId")
     @Expose
@@ -129,7 +123,6 @@ public class DspaRDBDataAssetDetail extends AbstractModel {
 
     /**
     * 分类ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CategoryId")
     @Expose
@@ -137,7 +130,6 @@ public class DspaRDBDataAssetDetail extends AbstractModel {
 
     /**
     * 数据源名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataSourceName")
     @Expose
@@ -145,7 +137,6 @@ public class DspaRDBDataAssetDetail extends AbstractModel {
 
     /**
     * 保护措施
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SafeGuard")
     @Expose
@@ -153,7 +144,6 @@ public class DspaRDBDataAssetDetail extends AbstractModel {
 
     /**
     * 分类路径
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CategoryFullPath")
     @Expose
@@ -161,7 +151,6 @@ public class DspaRDBDataAssetDetail extends AbstractModel {
 
     /**
     * 0.系统识别，1人工打标
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IdentifyType")
     @Expose
@@ -169,7 +158,6 @@ public class DspaRDBDataAssetDetail extends AbstractModel {
 
     /**
     * 0未核查 1已核查
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CheckStatus")
     @Expose
@@ -177,11 +165,17 @@ public class DspaRDBDataAssetDetail extends AbstractModel {
 
     /**
     * 0非敏感，1敏感
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsSensitiveData")
     @Expose
     private Long IsSensitiveData;
+
+    /**
+    * 模式名
+    */
+    @SerializedName("SchemaName")
+    @Expose
+    private String SchemaName;
 
     /**
      * Get 数据源ID 
@@ -312,10 +306,8 @@ public class DspaRDBDataAssetDetail extends AbstractModel {
     }
 
     /**
-     * Get 分级风险分数，1-10，最小值为1，最大值为10
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分级风险分数，1-10，最小值为1，最大值为10 
      * @return LevelRiskScore 分级风险分数，1-10，最小值为1，最大值为10
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLevelRiskScore() {
         return this.LevelRiskScore;
@@ -323,19 +315,15 @@ public class DspaRDBDataAssetDetail extends AbstractModel {
 
     /**
      * Set 分级风险分数，1-10，最小值为1，最大值为10
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LevelRiskScore 分级风险分数，1-10，最小值为1，最大值为10
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLevelRiskScore(Long LevelRiskScore) {
         this.LevelRiskScore = LevelRiskScore;
     }
 
     /**
-     * Get 可信分
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 可信分 
      * @return TrustedScore 可信分
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTrustedScore() {
         return this.TrustedScore;
@@ -343,19 +331,15 @@ public class DspaRDBDataAssetDetail extends AbstractModel {
 
     /**
      * Set 可信分
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TrustedScore 可信分
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTrustedScore(String TrustedScore) {
         this.TrustedScore = TrustedScore;
     }
 
     /**
-     * Get 资源所在地域
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源所在地域 
      * @return ResourceRegion 资源所在地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceRegion() {
         return this.ResourceRegion;
@@ -363,19 +347,15 @@ public class DspaRDBDataAssetDetail extends AbstractModel {
 
     /**
      * Set 资源所在地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceRegion 资源所在地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceRegion(String ResourceRegion) {
         this.ResourceRegion = ResourceRegion;
     }
 
     /**
-     * Get 字段扫描结果ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 字段扫描结果ID 
      * @return FieldResultId 字段扫描结果ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFieldResultId() {
         return this.FieldResultId;
@@ -383,19 +363,15 @@ public class DspaRDBDataAssetDetail extends AbstractModel {
 
     /**
      * Set 字段扫描结果ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FieldResultId 字段扫描结果ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFieldResultId(String FieldResultId) {
         this.FieldResultId = FieldResultId;
     }
 
     /**
-     * Get 规则ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则ID 
      * @return RuleId 规则ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRuleId() {
         return this.RuleId;
@@ -403,19 +379,15 @@ public class DspaRDBDataAssetDetail extends AbstractModel {
 
     /**
      * Set 规则ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RuleId 规则ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleId(Long RuleId) {
         this.RuleId = RuleId;
     }
 
     /**
-     * Get 分级ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分级ID 
      * @return LevelId 分级ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLevelId() {
         return this.LevelId;
@@ -423,19 +395,15 @@ public class DspaRDBDataAssetDetail extends AbstractModel {
 
     /**
      * Set 分级ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LevelId 分级ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLevelId(Long LevelId) {
         this.LevelId = LevelId;
     }
 
     /**
-     * Get 分类ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分类ID 
      * @return CategoryId 分类ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCategoryId() {
         return this.CategoryId;
@@ -443,19 +411,15 @@ public class DspaRDBDataAssetDetail extends AbstractModel {
 
     /**
      * Set 分类ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CategoryId 分类ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCategoryId(Long CategoryId) {
         this.CategoryId = CategoryId;
     }
 
     /**
-     * Get 数据源名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据源名称 
      * @return DataSourceName 数据源名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDataSourceName() {
         return this.DataSourceName;
@@ -463,19 +427,15 @@ public class DspaRDBDataAssetDetail extends AbstractModel {
 
     /**
      * Set 数据源名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DataSourceName 数据源名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataSourceName(String DataSourceName) {
         this.DataSourceName = DataSourceName;
     }
 
     /**
-     * Get 保护措施
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 保护措施 
      * @return SafeGuard 保护措施
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DspaSafeGuard getSafeGuard() {
         return this.SafeGuard;
@@ -483,19 +443,15 @@ public class DspaRDBDataAssetDetail extends AbstractModel {
 
     /**
      * Set 保护措施
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SafeGuard 保护措施
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSafeGuard(DspaSafeGuard SafeGuard) {
         this.SafeGuard = SafeGuard;
     }
 
     /**
-     * Get 分类路径
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分类路径 
      * @return CategoryFullPath 分类路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCategoryFullPath() {
         return this.CategoryFullPath;
@@ -503,19 +459,15 @@ public class DspaRDBDataAssetDetail extends AbstractModel {
 
     /**
      * Set 分类路径
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CategoryFullPath 分类路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCategoryFullPath(String CategoryFullPath) {
         this.CategoryFullPath = CategoryFullPath;
     }
 
     /**
-     * Get 0.系统识别，1人工打标
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 0.系统识别，1人工打标 
      * @return IdentifyType 0.系统识别，1人工打标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIdentifyType() {
         return this.IdentifyType;
@@ -523,19 +475,15 @@ public class DspaRDBDataAssetDetail extends AbstractModel {
 
     /**
      * Set 0.系统识别，1人工打标
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IdentifyType 0.系统识别，1人工打标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIdentifyType(Long IdentifyType) {
         this.IdentifyType = IdentifyType;
     }
 
     /**
-     * Get 0未核查 1已核查
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 0未核查 1已核查 
      * @return CheckStatus 0未核查 1已核查
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCheckStatus() {
         return this.CheckStatus;
@@ -543,19 +491,15 @@ public class DspaRDBDataAssetDetail extends AbstractModel {
 
     /**
      * Set 0未核查 1已核查
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CheckStatus 0未核查 1已核查
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCheckStatus(Long CheckStatus) {
         this.CheckStatus = CheckStatus;
     }
 
     /**
-     * Get 0非敏感，1敏感
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 0非敏感，1敏感 
      * @return IsSensitiveData 0非敏感，1敏感
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsSensitiveData() {
         return this.IsSensitiveData;
@@ -563,12 +507,26 @@ public class DspaRDBDataAssetDetail extends AbstractModel {
 
     /**
      * Set 0非敏感，1敏感
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsSensitiveData 0非敏感，1敏感
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsSensitiveData(Long IsSensitiveData) {
         this.IsSensitiveData = IsSensitiveData;
+    }
+
+    /**
+     * Get 模式名 
+     * @return SchemaName 模式名
+     */
+    public String getSchemaName() {
+        return this.SchemaName;
+    }
+
+    /**
+     * Set 模式名
+     * @param SchemaName 模式名
+     */
+    public void setSchemaName(String SchemaName) {
+        this.SchemaName = SchemaName;
     }
 
     public DspaRDBDataAssetDetail() {
@@ -642,6 +600,9 @@ public class DspaRDBDataAssetDetail extends AbstractModel {
         if (source.IsSensitiveData != null) {
             this.IsSensitiveData = new Long(source.IsSensitiveData);
         }
+        if (source.SchemaName != null) {
+            this.SchemaName = new String(source.SchemaName);
+        }
     }
 
 
@@ -670,6 +631,7 @@ public class DspaRDBDataAssetDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "IdentifyType", this.IdentifyType);
         this.setParamSimple(map, prefix + "CheckStatus", this.CheckStatus);
         this.setParamSimple(map, prefix + "IsSensitiveData", this.IsSensitiveData);
+        this.setParamSimple(map, prefix + "SchemaName", this.SchemaName);
 
     }
 }

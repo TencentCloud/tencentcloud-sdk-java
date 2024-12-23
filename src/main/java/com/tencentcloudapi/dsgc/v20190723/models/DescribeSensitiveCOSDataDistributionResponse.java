@@ -25,7 +25,6 @@ public class DescribeSensitiveCOSDataDistributionResponse extends AbstractModel 
 
     /**
     * 分级分布
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LevelDistribution")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeSensitiveCOSDataDistributionResponse extends AbstractModel 
 
     /**
     * 分类分布
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CategoryDistribution")
     @Expose
@@ -41,7 +39,6 @@ public class DescribeSensitiveCOSDataDistributionResponse extends AbstractModel 
 
     /**
     * 规则分布详情
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleDistribution")
     @Expose
@@ -49,7 +46,6 @@ public class DescribeSensitiveCOSDataDistributionResponse extends AbstractModel 
 
     /**
     * 计算占比
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SensitiveDataNum")
     @Expose
@@ -63,10 +59,8 @@ public class DescribeSensitiveCOSDataDistributionResponse extends AbstractModel 
     private String RequestId;
 
     /**
-     * Get 分级分布
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分级分布 
      * @return LevelDistribution 分级分布
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Note [] getLevelDistribution() {
         return this.LevelDistribution;
@@ -74,19 +68,15 @@ public class DescribeSensitiveCOSDataDistributionResponse extends AbstractModel 
 
     /**
      * Set 分级分布
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LevelDistribution 分级分布
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLevelDistribution(Note [] LevelDistribution) {
         this.LevelDistribution = LevelDistribution;
     }
 
     /**
-     * Get 分类分布
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分类分布 
      * @return CategoryDistribution 分类分布
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Note [] getCategoryDistribution() {
         return this.CategoryDistribution;
@@ -94,19 +84,15 @@ public class DescribeSensitiveCOSDataDistributionResponse extends AbstractModel 
 
     /**
      * Set 分类分布
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CategoryDistribution 分类分布
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCategoryDistribution(Note [] CategoryDistribution) {
         this.CategoryDistribution = CategoryDistribution;
     }
 
     /**
-     * Get 规则分布详情
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则分布详情 
      * @return RuleDistribution 规则分布详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RuleDistribution [] getRuleDistribution() {
         return this.RuleDistribution;
@@ -114,19 +100,15 @@ public class DescribeSensitiveCOSDataDistributionResponse extends AbstractModel 
 
     /**
      * Set 规则分布详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RuleDistribution 规则分布详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleDistribution(RuleDistribution [] RuleDistribution) {
         this.RuleDistribution = RuleDistribution;
     }
 
     /**
-     * Get 计算占比
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 计算占比 
      * @return SensitiveDataNum 计算占比
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSensitiveDataNum() {
         return this.SensitiveDataNum;
@@ -134,9 +116,7 @@ public class DescribeSensitiveCOSDataDistributionResponse extends AbstractModel 
 
     /**
      * Set 计算占比
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SensitiveDataNum 计算占比
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSensitiveDataNum(Long SensitiveDataNum) {
         this.SensitiveDataNum = SensitiveDataNum;

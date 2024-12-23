@@ -25,7 +25,6 @@ public class DescribeGroupsResponse extends AbstractModel {
 
     /**
     * 图库信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Groups")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeGroupsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 图库信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 图库信息 
      * @return Groups 图库信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public GroupInfo [] getGroups() {
         return this.Groups;
@@ -50,9 +47,7 @@ public class DescribeGroupsResponse extends AbstractModel {
 
     /**
      * Set 图库信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Groups 图库信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setGroups(GroupInfo [] Groups) {
         this.Groups = Groups;

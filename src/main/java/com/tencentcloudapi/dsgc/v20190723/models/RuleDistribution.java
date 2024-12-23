@@ -25,7 +25,6 @@ public class RuleDistribution extends AbstractModel {
 
     /**
     * 规则id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleId")
     @Expose
@@ -33,7 +32,6 @@ public class RuleDistribution extends AbstractModel {
 
     /**
     * 规则名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleName")
     @Expose
@@ -41,7 +39,6 @@ public class RuleDistribution extends AbstractModel {
 
     /**
     * 分级id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LevelId")
     @Expose
@@ -49,7 +46,6 @@ public class RuleDistribution extends AbstractModel {
 
     /**
     * 分级名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LevelName")
     @Expose
@@ -57,17 +53,14 @@ public class RuleDistribution extends AbstractModel {
 
     /**
     * 规则数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleCnt")
     @Expose
     private Long RuleCnt;
 
     /**
-     * Get 规则id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则id 
      * @return RuleId 规则id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRuleId() {
         return this.RuleId;
@@ -75,19 +68,15 @@ public class RuleDistribution extends AbstractModel {
 
     /**
      * Set 规则id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RuleId 规则id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleId(Long RuleId) {
         this.RuleId = RuleId;
     }
 
     /**
-     * Get 规则名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则名称 
      * @return RuleName 规则名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRuleName() {
         return this.RuleName;
@@ -95,19 +84,15 @@ public class RuleDistribution extends AbstractModel {
 
     /**
      * Set 规则名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RuleName 规则名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleName(String RuleName) {
         this.RuleName = RuleName;
     }
 
     /**
-     * Get 分级id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分级id 
      * @return LevelId 分级id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLevelId() {
         return this.LevelId;
@@ -115,19 +100,15 @@ public class RuleDistribution extends AbstractModel {
 
     /**
      * Set 分级id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LevelId 分级id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLevelId(Long LevelId) {
         this.LevelId = LevelId;
     }
 
     /**
-     * Get 分级名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分级名称 
      * @return LevelName 分级名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLevelName() {
         return this.LevelName;
@@ -135,19 +116,15 @@ public class RuleDistribution extends AbstractModel {
 
     /**
      * Set 分级名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LevelName 分级名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLevelName(String LevelName) {
         this.LevelName = LevelName;
     }
 
     /**
-     * Get 规则数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则数量 
      * @return RuleCnt 规则数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRuleCnt() {
         return this.RuleCnt;
@@ -155,9 +132,7 @@ public class RuleDistribution extends AbstractModel {
 
     /**
      * Set 规则数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RuleCnt 规则数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleCnt(Long RuleCnt) {
         this.RuleCnt = RuleCnt;

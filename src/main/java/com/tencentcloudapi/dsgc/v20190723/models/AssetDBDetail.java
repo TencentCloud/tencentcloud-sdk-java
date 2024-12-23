@@ -25,7 +25,6 @@ public class AssetDBDetail extends AbstractModel {
 
     /**
     * 数据源id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataSourceId")
     @Expose
@@ -33,7 +32,6 @@ public class AssetDBDetail extends AbstractModel {
 
     /**
     * 数据库名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DdName")
     @Expose
@@ -41,7 +39,6 @@ public class AssetDBDetail extends AbstractModel {
 
     /**
     * 数据库类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataType")
     @Expose
@@ -49,7 +46,6 @@ public class AssetDBDetail extends AbstractModel {
 
     /**
     * 表的数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TableNums")
     @Expose
@@ -57,7 +53,6 @@ public class AssetDBDetail extends AbstractModel {
 
     /**
     * 敏感表数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SensitiveTableNums")
     @Expose
@@ -65,7 +60,6 @@ public class AssetDBDetail extends AbstractModel {
 
     /**
     * 字段的数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FieldNums")
     @Expose
@@ -73,7 +67,6 @@ public class AssetDBDetail extends AbstractModel {
 
     /**
     * 敏感字段的数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SensitiveFieldNums")
     @Expose
@@ -81,17 +74,14 @@ public class AssetDBDetail extends AbstractModel {
 
     /**
     * 敏感数据分布
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DistributionData")
     @Expose
     private Note [] DistributionData;
 
     /**
-     * Get 数据源id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据源id 
      * @return DataSourceId 数据源id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDataSourceId() {
         return this.DataSourceId;
@@ -99,19 +89,15 @@ public class AssetDBDetail extends AbstractModel {
 
     /**
      * Set 数据源id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DataSourceId 数据源id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataSourceId(String DataSourceId) {
         this.DataSourceId = DataSourceId;
     }
 
     /**
-     * Get 数据库名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据库名称 
      * @return DdName 数据库名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDdName() {
         return this.DdName;
@@ -119,19 +105,15 @@ public class AssetDBDetail extends AbstractModel {
 
     /**
      * Set 数据库名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DdName 数据库名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDdName(String DdName) {
         this.DdName = DdName;
     }
 
     /**
-     * Get 数据库类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据库类型 
      * @return DataType 数据库类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDataType() {
         return this.DataType;
@@ -139,19 +121,15 @@ public class AssetDBDetail extends AbstractModel {
 
     /**
      * Set 数据库类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DataType 数据库类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataType(String DataType) {
         this.DataType = DataType;
     }
 
     /**
-     * Get 表的数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 表的数量 
      * @return TableNums 表的数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTableNums() {
         return this.TableNums;
@@ -159,19 +137,15 @@ public class AssetDBDetail extends AbstractModel {
 
     /**
      * Set 表的数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TableNums 表的数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTableNums(Long TableNums) {
         this.TableNums = TableNums;
     }
 
     /**
-     * Get 敏感表数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 敏感表数量 
      * @return SensitiveTableNums 敏感表数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSensitiveTableNums() {
         return this.SensitiveTableNums;
@@ -179,19 +153,15 @@ public class AssetDBDetail extends AbstractModel {
 
     /**
      * Set 敏感表数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SensitiveTableNums 敏感表数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSensitiveTableNums(Long SensitiveTableNums) {
         this.SensitiveTableNums = SensitiveTableNums;
     }
 
     /**
-     * Get 字段的数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 字段的数量 
      * @return FieldNums 字段的数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFieldNums() {
         return this.FieldNums;
@@ -199,19 +169,15 @@ public class AssetDBDetail extends AbstractModel {
 
     /**
      * Set 字段的数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FieldNums 字段的数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFieldNums(Long FieldNums) {
         this.FieldNums = FieldNums;
     }
 
     /**
-     * Get 敏感字段的数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 敏感字段的数量 
      * @return SensitiveFieldNums 敏感字段的数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSensitiveFieldNums() {
         return this.SensitiveFieldNums;
@@ -219,19 +185,15 @@ public class AssetDBDetail extends AbstractModel {
 
     /**
      * Set 敏感字段的数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SensitiveFieldNums 敏感字段的数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSensitiveFieldNums(Long SensitiveFieldNums) {
         this.SensitiveFieldNums = SensitiveFieldNums;
     }
 
     /**
-     * Get 敏感数据分布
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 敏感数据分布 
      * @return DistributionData 敏感数据分布
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Note [] getDistributionData() {
         return this.DistributionData;
@@ -239,9 +201,7 @@ public class AssetDBDetail extends AbstractModel {
 
     /**
      * Set 敏感数据分布
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DistributionData 敏感数据分布
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDistributionData(Note [] DistributionData) {
         this.DistributionData = DistributionData;

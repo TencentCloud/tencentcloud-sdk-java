@@ -25,7 +25,6 @@ public class DescribeDSPACOSDiscoveryTasksResponse extends AbstractModel {
 
     /**
     * 任务列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Items")
     @Expose
@@ -46,10 +45,8 @@ public class DescribeDSPACOSDiscoveryTasksResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 任务列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务列表 
      * @return Items 任务列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DspaCOSDiscoveryTask [] getItems() {
         return this.Items;
@@ -57,9 +54,7 @@ public class DescribeDSPACOSDiscoveryTasksResponse extends AbstractModel {
 
     /**
      * Set 任务列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Items 任务列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setItems(DspaCOSDiscoveryTask [] Items) {
         this.Items = Items;

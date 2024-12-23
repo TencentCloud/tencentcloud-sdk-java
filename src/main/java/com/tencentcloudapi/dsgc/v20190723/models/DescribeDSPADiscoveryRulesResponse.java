@@ -32,7 +32,6 @@ public class DescribeDSPADiscoveryRulesResponse extends AbstractModel {
 
     /**
     * 规则集合
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Items")
     @Expose
@@ -62,10 +61,8 @@ public class DescribeDSPADiscoveryRulesResponse extends AbstractModel {
     }
 
     /**
-     * Get 规则集合
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则集合 
      * @return Items 规则集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DspaDiscoveryRuleDetail [] getItems() {
         return this.Items;
@@ -73,9 +70,7 @@ public class DescribeDSPADiscoveryRulesResponse extends AbstractModel {
 
     /**
      * Set 规则集合
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Items 规则集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setItems(DspaDiscoveryRuleDetail [] Items) {
         this.Items = Items;

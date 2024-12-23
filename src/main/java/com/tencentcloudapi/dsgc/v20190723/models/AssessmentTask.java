@@ -33,7 +33,6 @@ public class AssessmentTask extends AbstractModel {
     /**
     * 评估任务的自增ID
 
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskUid")
     @Expose
@@ -111,7 +110,6 @@ public class AssessmentTask extends AbstractModel {
 
     /**
     * 评估任务完成时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FinishedTime")
     @Expose
@@ -140,7 +138,6 @@ public class AssessmentTask extends AbstractModel {
 
     /**
     * 数据源信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiscoveryCondition")
     @Expose
@@ -155,7 +152,6 @@ public class AssessmentTask extends AbstractModel {
 
     /**
     * 模板主键id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TemplateUid")
     @Expose
@@ -163,7 +159,6 @@ public class AssessmentTask extends AbstractModel {
 
     /**
     * 进度百分比
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProgressPercent")
     @Expose
@@ -187,11 +182,9 @@ public class AssessmentTask extends AbstractModel {
 
     /**
      * Get 评估任务的自增ID
-
-注意：此字段可能返回 null，表示取不到有效值。 
+ 
      * @return TaskUid 评估任务的自增ID
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTaskUid() {
         return this.TaskUid;
@@ -200,10 +193,8 @@ public class AssessmentTask extends AbstractModel {
     /**
      * Set 评估任务的自增ID
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskUid 评估任务的自增ID
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskUid(Long TaskUid) {
         this.TaskUid = TaskUid;
@@ -370,10 +361,8 @@ public class AssessmentTask extends AbstractModel {
     }
 
     /**
-     * Get 评估任务完成时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 评估任务完成时间 
      * @return FinishedTime 评估任务完成时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFinishedTime() {
         return this.FinishedTime;
@@ -381,9 +370,7 @@ public class AssessmentTask extends AbstractModel {
 
     /**
      * Set 评估任务完成时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FinishedTime 评估任务完成时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFinishedTime(String FinishedTime) {
         this.FinishedTime = FinishedTime;
@@ -438,10 +425,8 @@ public class AssessmentTask extends AbstractModel {
     }
 
     /**
-     * Get 数据源信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据源信息 
      * @return DiscoveryCondition 数据源信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DiscoveryCondition getDiscoveryCondition() {
         return this.DiscoveryCondition;
@@ -449,9 +434,7 @@ public class AssessmentTask extends AbstractModel {
 
     /**
      * Set 数据源信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DiscoveryCondition 数据源信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiscoveryCondition(DiscoveryCondition DiscoveryCondition) {
         this.DiscoveryCondition = DiscoveryCondition;
@@ -474,10 +457,8 @@ public class AssessmentTask extends AbstractModel {
     }
 
     /**
-     * Get 模板主键id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 模板主键id 
      * @return TemplateUid 模板主键id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTemplateUid() {
         return this.TemplateUid;
@@ -485,19 +466,15 @@ public class AssessmentTask extends AbstractModel {
 
     /**
      * Set 模板主键id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TemplateUid 模板主键id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTemplateUid(Long TemplateUid) {
         this.TemplateUid = TemplateUid;
     }
 
     /**
-     * Get 进度百分比
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 进度百分比 
      * @return ProgressPercent 进度百分比
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getProgressPercent() {
         return this.ProgressPercent;
@@ -505,9 +482,7 @@ public class AssessmentTask extends AbstractModel {
 
     /**
      * Set 进度百分比
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProgressPercent 进度百分比
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProgressPercent(Long ProgressPercent) {
         this.ProgressPercent = ProgressPercent;

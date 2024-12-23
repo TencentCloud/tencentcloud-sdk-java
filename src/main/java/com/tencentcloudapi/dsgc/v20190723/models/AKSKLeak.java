@@ -25,7 +25,6 @@ public class AKSKLeak extends AbstractModel {
 
     /**
     * AK编码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AK")
     @Expose
@@ -33,7 +32,6 @@ public class AKSKLeak extends AbstractModel {
 
     /**
     * SK编码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SK")
     @Expose
@@ -41,17 +39,14 @@ public class AKSKLeak extends AbstractModel {
 
     /**
     * URL编码
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("URL")
     @Expose
     private String URL;
 
     /**
-     * Get AK编码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get AK编码 
      * @return AK AK编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAK() {
         return this.AK;
@@ -59,19 +54,15 @@ public class AKSKLeak extends AbstractModel {
 
     /**
      * Set AK编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AK AK编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAK(String AK) {
         this.AK = AK;
     }
 
     /**
-     * Get SK编码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get SK编码 
      * @return SK SK编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSK() {
         return this.SK;
@@ -79,19 +70,15 @@ public class AKSKLeak extends AbstractModel {
 
     /**
      * Set SK编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SK SK编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSK(String SK) {
         this.SK = SK;
     }
 
     /**
-     * Get URL编码
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get URL编码 
      * @return URL URL编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getURL() {
         return this.URL;
@@ -99,9 +86,7 @@ public class AKSKLeak extends AbstractModel {
 
     /**
      * Set URL编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param URL URL编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setURL(String URL) {
         this.URL = URL;

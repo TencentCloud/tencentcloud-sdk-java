@@ -52,13 +52,6 @@ public class CreateDSPADiscoveryTaskRequest extends AbstractModel {
     private Long Enable;
 
     /**
-    * 通用规则集开关，0 关闭，1 启用
-    */
-    @SerializedName("GeneralRuleSetEnable")
-    @Expose
-    private Long GeneralRuleSetEnable;
-
-    /**
     * 执行计划， 0立即 1定时，选择“立即”时，扫描周期只能选择单次
     */
     @SerializedName("Plan")
@@ -92,6 +85,13 @@ selfbuilt-db 表示自建数据库
     @SerializedName("DataSourceType")
     @Expose
     private String DataSourceType;
+
+    /**
+    * 通用规则集开关，0 关闭，1 启用
+    */
+    @SerializedName("GeneralRuleSetEnable")
+    @Expose
+    private Long GeneralRuleSetEnable;
 
     /**
     * 任务描述，最大长度为1024个字符
@@ -208,22 +208,6 @@ selfbuilt-db 表示自建数据库
     }
 
     /**
-     * Get 通用规则集开关，0 关闭，1 启用 
-     * @return GeneralRuleSetEnable 通用规则集开关，0 关闭，1 启用
-     */
-    public Long getGeneralRuleSetEnable() {
-        return this.GeneralRuleSetEnable;
-    }
-
-    /**
-     * Set 通用规则集开关，0 关闭，1 启用
-     * @param GeneralRuleSetEnable 通用规则集开关，0 关闭，1 启用
-     */
-    public void setGeneralRuleSetEnable(Long GeneralRuleSetEnable) {
-        this.GeneralRuleSetEnable = GeneralRuleSetEnable;
-    }
-
-    /**
      * Get 执行计划， 0立即 1定时，选择“立即”时，扫描周期只能选择单次 
      * @return Plan 执行计划， 0立即 1定时，选择“立即”时，扫描周期只能选择单次
      */
@@ -313,6 +297,26 @@ selfbuilt-db 表示自建数据库
      */
     public void setDataSourceType(String DataSourceType) {
         this.DataSourceType = DataSourceType;
+    }
+
+    /**
+     * Get 通用规则集开关，0 关闭，1 启用 
+     * @return GeneralRuleSetEnable 通用规则集开关，0 关闭，1 启用
+     * @deprecated
+     */
+    @Deprecated
+    public Long getGeneralRuleSetEnable() {
+        return this.GeneralRuleSetEnable;
+    }
+
+    /**
+     * Set 通用规则集开关，0 关闭，1 启用
+     * @param GeneralRuleSetEnable 通用规则集开关，0 关闭，1 启用
+     * @deprecated
+     */
+    @Deprecated
+    public void setGeneralRuleSetEnable(Long GeneralRuleSetEnable) {
+        this.GeneralRuleSetEnable = GeneralRuleSetEnable;
     }
 
     /**
@@ -451,9 +455,6 @@ selfbuilt-db 表示自建数据库
         if (source.Enable != null) {
             this.Enable = new Long(source.Enable);
         }
-        if (source.GeneralRuleSetEnable != null) {
-            this.GeneralRuleSetEnable = new Long(source.GeneralRuleSetEnable);
-        }
         if (source.Plan != null) {
             this.Plan = new Long(source.Plan);
         }
@@ -465,6 +466,9 @@ selfbuilt-db 表示自建数据库
         }
         if (source.DataSourceType != null) {
             this.DataSourceType = new String(source.DataSourceType);
+        }
+        if (source.GeneralRuleSetEnable != null) {
+            this.GeneralRuleSetEnable = new Long(source.GeneralRuleSetEnable);
         }
         if (source.Description != null) {
             this.Description = new String(source.Description);
@@ -501,11 +505,11 @@ selfbuilt-db 表示自建数据库
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "DataSourceId", this.DataSourceId);
         this.setParamSimple(map, prefix + "Enable", this.Enable);
-        this.setParamSimple(map, prefix + "GeneralRuleSetEnable", this.GeneralRuleSetEnable);
         this.setParamSimple(map, prefix + "Plan", this.Plan);
         this.setParamSimple(map, prefix + "Period", this.Period);
         this.setParamSimple(map, prefix + "ResourceRegion", this.ResourceRegion);
         this.setParamSimple(map, prefix + "DataSourceType", this.DataSourceType);
+        this.setParamSimple(map, prefix + "GeneralRuleSetEnable", this.GeneralRuleSetEnable);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "Condition", this.Condition);
         this.setParamArraySimple(map, prefix + "ComplianceGroupIds.", this.ComplianceGroupIds);

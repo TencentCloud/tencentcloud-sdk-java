@@ -25,7 +25,6 @@ public class DescribeDSPAAssessmentLatestRiskListResponse extends AbstractModel 
 
     /**
     * 最新风险详情列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LatestRiskList")
     @Expose
@@ -46,10 +45,8 @@ public class DescribeDSPAAssessmentLatestRiskListResponse extends AbstractModel 
     private String RequestId;
 
     /**
-     * Get 最新风险详情列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最新风险详情列表 
      * @return LatestRiskList 最新风险详情列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RiskItemInfo [] getLatestRiskList() {
         return this.LatestRiskList;
@@ -57,9 +54,7 @@ public class DescribeDSPAAssessmentLatestRiskListResponse extends AbstractModel 
 
     /**
      * Set 最新风险详情列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LatestRiskList 最新风险详情列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLatestRiskList(RiskItemInfo [] LatestRiskList) {
         this.LatestRiskList = LatestRiskList;

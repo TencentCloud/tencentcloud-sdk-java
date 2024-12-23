@@ -25,7 +25,6 @@ public class AccountRisk extends AbstractModel {
 
     /**
     * id（可不参考）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
     @Expose
@@ -33,17 +32,14 @@ public class AccountRisk extends AbstractModel {
 
     /**
     * 风险账户
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RiskAccount")
     @Expose
     private String RiskAccount;
 
     /**
-     * Get id（可不参考）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get id（可不参考） 
      * @return Id id（可不参考）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getId() {
         return this.Id;
@@ -51,19 +47,15 @@ public class AccountRisk extends AbstractModel {
 
     /**
      * Set id（可不参考）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Id id（可不参考）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 风险账户
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 风险账户 
      * @return RiskAccount 风险账户
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRiskAccount() {
         return this.RiskAccount;
@@ -71,9 +63,7 @@ public class AccountRisk extends AbstractModel {
 
     /**
      * Set 风险账户
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RiskAccount 风险账户
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRiskAccount(String RiskAccount) {
         this.RiskAccount = RiskAccount;

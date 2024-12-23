@@ -25,7 +25,6 @@ public class DescribeDSPAAssessmentRiskDistributionOverviewResponse extends Abst
 
     /**
     * 风险类型分布
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RiskTypeDistribution")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeDSPAAssessmentRiskDistributionOverviewResponse extends Abst
 
     /**
     * 风险详情分布
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RiskDetailDistribution")
     @Expose
@@ -41,7 +39,6 @@ public class DescribeDSPAAssessmentRiskDistributionOverviewResponse extends Abst
 
     /**
     * 风险资产详情
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RiskAssetsDistribution")
     @Expose
@@ -55,10 +52,8 @@ public class DescribeDSPAAssessmentRiskDistributionOverviewResponse extends Abst
     private String RequestId;
 
     /**
-     * Get 风险类型分布
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 风险类型分布 
      * @return RiskTypeDistribution 风险类型分布
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Note [] getRiskTypeDistribution() {
         return this.RiskTypeDistribution;
@@ -66,19 +61,15 @@ public class DescribeDSPAAssessmentRiskDistributionOverviewResponse extends Abst
 
     /**
      * Set 风险类型分布
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RiskTypeDistribution 风险类型分布
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRiskTypeDistribution(Note [] RiskTypeDistribution) {
         this.RiskTypeDistribution = RiskTypeDistribution;
     }
 
     /**
-     * Get 风险详情分布
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 风险详情分布 
      * @return RiskDetailDistribution 风险详情分布
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Note [] getRiskDetailDistribution() {
         return this.RiskDetailDistribution;
@@ -86,19 +77,15 @@ public class DescribeDSPAAssessmentRiskDistributionOverviewResponse extends Abst
 
     /**
      * Set 风险详情分布
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RiskDetailDistribution 风险详情分布
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRiskDetailDistribution(Note [] RiskDetailDistribution) {
         this.RiskDetailDistribution = RiskDetailDistribution;
     }
 
     /**
-     * Get 风险资产详情
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 风险资产详情 
      * @return RiskAssetsDistribution 风险资产详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Note [] getRiskAssetsDistribution() {
         return this.RiskAssetsDistribution;
@@ -106,9 +93,7 @@ public class DescribeDSPAAssessmentRiskDistributionOverviewResponse extends Abst
 
     /**
      * Set 风险资产详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RiskAssetsDistribution 风险资产详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRiskAssetsDistribution(Note [] RiskAssetsDistribution) {
         this.RiskAssetsDistribution = RiskAssetsDistribution;

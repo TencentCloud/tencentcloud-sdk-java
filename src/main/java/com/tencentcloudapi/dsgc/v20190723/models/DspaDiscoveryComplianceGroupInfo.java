@@ -25,7 +25,6 @@ public class DspaDiscoveryComplianceGroupInfo extends AbstractModel {
 
     /**
     * 合规组ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ComplianceGroupId")
     @Expose
@@ -33,7 +32,6 @@ public class DspaDiscoveryComplianceGroupInfo extends AbstractModel {
 
     /**
     * 合规组名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -41,7 +39,6 @@ public class DspaDiscoveryComplianceGroupInfo extends AbstractModel {
 
     /**
     * 合规组描述信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
     @Expose
@@ -49,7 +46,6 @@ public class DspaDiscoveryComplianceGroupInfo extends AbstractModel {
 
     /**
     * 合规组类型；0 默认合规组，1 系统合规组（除默认合规组外）, 2 自定义合规组
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ComplianceGroupType")
     @Expose
@@ -57,7 +53,6 @@ public class DspaDiscoveryComplianceGroupInfo extends AbstractModel {
 
     /**
     * 合规组对应的规则项
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ComplianceGroupRules")
     @Expose
@@ -65,7 +60,6 @@ public class DspaDiscoveryComplianceGroupInfo extends AbstractModel {
 
     /**
     * 合规组对应的分级组ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LevelGroupId")
     @Expose
@@ -73,7 +67,6 @@ public class DspaDiscoveryComplianceGroupInfo extends AbstractModel {
 
     /**
     * 是否禁止使用（true，禁止使用，false，可以使用）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Disabled")
     @Expose
@@ -81,17 +74,28 @@ public class DspaDiscoveryComplianceGroupInfo extends AbstractModel {
 
     /**
     * 是否别名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsAlias")
     @Expose
     private Boolean IsAlias;
 
     /**
-     * Get 合规组ID
-注意：此字段可能返回 null，表示取不到有效值。 
+    * 1代表模版开启，0代表模版关闭
+    */
+    @SerializedName("Status")
+    @Expose
+    private Long Status;
+
+    /**
+    * 模版最后修改时间
+    */
+    @SerializedName("ModifyTime")
+    @Expose
+    private String ModifyTime;
+
+    /**
+     * Get 合规组ID 
      * @return ComplianceGroupId 合规组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getComplianceGroupId() {
         return this.ComplianceGroupId;
@@ -99,19 +103,15 @@ public class DspaDiscoveryComplianceGroupInfo extends AbstractModel {
 
     /**
      * Set 合规组ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ComplianceGroupId 合规组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setComplianceGroupId(Long ComplianceGroupId) {
         this.ComplianceGroupId = ComplianceGroupId;
     }
 
     /**
-     * Get 合规组名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 合规组名称 
      * @return Name 合规组名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -119,19 +119,15 @@ public class DspaDiscoveryComplianceGroupInfo extends AbstractModel {
 
     /**
      * Set 合规组名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 合规组名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 合规组描述信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 合规组描述信息 
      * @return Description 合规组描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
         return this.Description;
@@ -139,19 +135,15 @@ public class DspaDiscoveryComplianceGroupInfo extends AbstractModel {
 
     /**
      * Set 合规组描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Description 合规组描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 合规组类型；0 默认合规组，1 系统合规组（除默认合规组外）, 2 自定义合规组
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 合规组类型；0 默认合规组，1 系统合规组（除默认合规组外）, 2 自定义合规组 
      * @return ComplianceGroupType 合规组类型；0 默认合规组，1 系统合规组（除默认合规组外）, 2 自定义合规组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getComplianceGroupType() {
         return this.ComplianceGroupType;
@@ -159,19 +151,15 @@ public class DspaDiscoveryComplianceGroupInfo extends AbstractModel {
 
     /**
      * Set 合规组类型；0 默认合规组，1 系统合规组（除默认合规组外）, 2 自定义合规组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ComplianceGroupType 合规组类型；0 默认合规组，1 系统合规组（除默认合规组外）, 2 自定义合规组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setComplianceGroupType(Long ComplianceGroupType) {
         this.ComplianceGroupType = ComplianceGroupType;
     }
 
     /**
-     * Get 合规组对应的规则项
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 合规组对应的规则项 
      * @return ComplianceGroupRules 合规组对应的规则项
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DspaDiscoveryComplianceGroupRule [] getComplianceGroupRules() {
         return this.ComplianceGroupRules;
@@ -179,19 +167,15 @@ public class DspaDiscoveryComplianceGroupInfo extends AbstractModel {
 
     /**
      * Set 合规组对应的规则项
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ComplianceGroupRules 合规组对应的规则项
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setComplianceGroupRules(DspaDiscoveryComplianceGroupRule [] ComplianceGroupRules) {
         this.ComplianceGroupRules = ComplianceGroupRules;
     }
 
     /**
-     * Get 合规组对应的分级组ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 合规组对应的分级组ID 
      * @return LevelGroupId 合规组对应的分级组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLevelGroupId() {
         return this.LevelGroupId;
@@ -199,19 +183,15 @@ public class DspaDiscoveryComplianceGroupInfo extends AbstractModel {
 
     /**
      * Set 合规组对应的分级组ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LevelGroupId 合规组对应的分级组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLevelGroupId(Long LevelGroupId) {
         this.LevelGroupId = LevelGroupId;
     }
 
     /**
-     * Get 是否禁止使用（true，禁止使用，false，可以使用）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否禁止使用（true，禁止使用，false，可以使用） 
      * @return Disabled 是否禁止使用（true，禁止使用，false，可以使用）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getDisabled() {
         return this.Disabled;
@@ -219,19 +199,15 @@ public class DspaDiscoveryComplianceGroupInfo extends AbstractModel {
 
     /**
      * Set 是否禁止使用（true，禁止使用，false，可以使用）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Disabled 是否禁止使用（true，禁止使用，false，可以使用）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDisabled(Boolean Disabled) {
         this.Disabled = Disabled;
     }
 
     /**
-     * Get 是否别名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否别名 
      * @return IsAlias 是否别名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsAlias() {
         return this.IsAlias;
@@ -239,12 +215,42 @@ public class DspaDiscoveryComplianceGroupInfo extends AbstractModel {
 
     /**
      * Set 是否别名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsAlias 是否别名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsAlias(Boolean IsAlias) {
         this.IsAlias = IsAlias;
+    }
+
+    /**
+     * Get 1代表模版开启，0代表模版关闭 
+     * @return Status 1代表模版开启，0代表模版关闭
+     */
+    public Long getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 1代表模版开启，0代表模版关闭
+     * @param Status 1代表模版开启，0代表模版关闭
+     */
+    public void setStatus(Long Status) {
+        this.Status = Status;
+    }
+
+    /**
+     * Get 模版最后修改时间 
+     * @return ModifyTime 模版最后修改时间
+     */
+    public String getModifyTime() {
+        return this.ModifyTime;
+    }
+
+    /**
+     * Set 模版最后修改时间
+     * @param ModifyTime 模版最后修改时间
+     */
+    public void setModifyTime(String ModifyTime) {
+        this.ModifyTime = ModifyTime;
     }
 
     public DspaDiscoveryComplianceGroupInfo() {
@@ -282,6 +288,12 @@ public class DspaDiscoveryComplianceGroupInfo extends AbstractModel {
         if (source.IsAlias != null) {
             this.IsAlias = new Boolean(source.IsAlias);
         }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.ModifyTime != null) {
+            this.ModifyTime = new String(source.ModifyTime);
+        }
     }
 
 
@@ -297,6 +309,8 @@ public class DspaDiscoveryComplianceGroupInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "LevelGroupId", this.LevelGroupId);
         this.setParamSimple(map, prefix + "Disabled", this.Disabled);
         this.setParamSimple(map, prefix + "IsAlias", this.IsAlias);
+        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
 
     }
 }

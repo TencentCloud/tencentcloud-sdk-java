@@ -25,17 +25,14 @@ public class DspaFieldResultDataSample extends AbstractModel {
 
     /**
     * 数据样本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataSample")
     @Expose
     private String DataSample;
 
     /**
-     * Get 数据样本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据样本 
      * @return DataSample 数据样本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDataSample() {
         return this.DataSample;
@@ -43,9 +40,7 @@ public class DspaFieldResultDataSample extends AbstractModel {
 
     /**
      * Set 数据样本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DataSample 数据样本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataSample(String DataSample) {
         this.DataSample = DataSample;

@@ -39,7 +39,6 @@ public class DspaDiscoveryTaskDataSource extends AbstractModel {
 
     /**
     * 代理地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProxyAddress")
     @Expose
@@ -47,7 +46,6 @@ public class DspaDiscoveryTaskDataSource extends AbstractModel {
 
     /**
     * 数据源名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataSourceName")
     @Expose
@@ -55,7 +53,6 @@ public class DspaDiscoveryTaskDataSource extends AbstractModel {
 
     /**
     * 资源所在地域
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceRegion")
     @Expose
@@ -63,7 +60,6 @@ public class DspaDiscoveryTaskDataSource extends AbstractModel {
 
     /**
     * 数据源类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataSourceType")
     @Expose
@@ -102,10 +98,8 @@ public class DspaDiscoveryTaskDataSource extends AbstractModel {
     }
 
     /**
-     * Get 代理地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 代理地址 
      * @return ProxyAddress 代理地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getProxyAddress() {
         return this.ProxyAddress;
@@ -113,19 +107,15 @@ public class DspaDiscoveryTaskDataSource extends AbstractModel {
 
     /**
      * Set 代理地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProxyAddress 代理地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProxyAddress(String [] ProxyAddress) {
         this.ProxyAddress = ProxyAddress;
     }
 
     /**
-     * Get 数据源名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据源名称 
      * @return DataSourceName 数据源名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDataSourceName() {
         return this.DataSourceName;
@@ -133,19 +123,15 @@ public class DspaDiscoveryTaskDataSource extends AbstractModel {
 
     /**
      * Set 数据源名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DataSourceName 数据源名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataSourceName(String DataSourceName) {
         this.DataSourceName = DataSourceName;
     }
 
     /**
-     * Get 资源所在地域
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源所在地域 
      * @return ResourceRegion 资源所在地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceRegion() {
         return this.ResourceRegion;
@@ -153,19 +139,15 @@ public class DspaDiscoveryTaskDataSource extends AbstractModel {
 
     /**
      * Set 资源所在地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceRegion 资源所在地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceRegion(String ResourceRegion) {
         this.ResourceRegion = ResourceRegion;
     }
 
     /**
-     * Get 数据源类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据源类型 
      * @return DataSourceType 数据源类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDataSourceType() {
         return this.DataSourceType;
@@ -173,9 +155,7 @@ public class DspaDiscoveryTaskDataSource extends AbstractModel {
 
     /**
      * Set 数据源类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DataSourceType 数据源类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataSourceType(String DataSourceType) {
         this.DataSourceType = DataSourceType;

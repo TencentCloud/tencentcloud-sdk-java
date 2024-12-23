@@ -39,7 +39,6 @@ public class DbTaskResult extends AbstractModel {
 
     /**
     * 错误信息描述。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ErrDescription")
     @Expose
@@ -92,10 +91,8 @@ public class DbTaskResult extends AbstractModel {
     }
 
     /**
-     * Get 错误信息描述。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 错误信息描述。 
      * @return ErrDescription 错误信息描述。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ErrDescription getErrDescription() {
         return this.ErrDescription;
@@ -103,9 +100,7 @@ public class DbTaskResult extends AbstractModel {
 
     /**
      * Set 错误信息描述。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ErrDescription 错误信息描述。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrDescription(ErrDescription ErrDescription) {
         this.ErrDescription = ErrDescription;

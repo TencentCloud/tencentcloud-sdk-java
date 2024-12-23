@@ -45,13 +45,7 @@ public class DescribeDSPAAssessmentTasksRequest extends AbstractModel {
     private Long Limit;
 
     /**
-    * 过滤项。
-支持模糊搜索：TaskId，TaskName
-支持过滤：
-BusinessName：业务名称
-BusinessDept：业务部门名称
-TemplateName：评估模版名称
-Status：评估状态 (waiting待评估，processing评估中, , finished已评估, failed评估失败)
+    * 过滤项。支持模糊搜索：TaskId，TaskName支持过滤：BusinessName：业务名称BusinessDept：业务部门名称TemplateName：评估模板名称Status：评估状态 (waiting待评估，processing评估中, , finished已评估, failed评估失败)
     */
     @SerializedName("Filters")
     @Expose
@@ -106,40 +100,16 @@ Status：评估状态 (waiting待评估，processing评估中, , finished已评�
     }
 
     /**
-     * Get 过滤项。
-支持模糊搜索：TaskId，TaskName
-支持过滤：
-BusinessName：业务名称
-BusinessDept：业务部门名称
-TemplateName：评估模版名称
-Status：评估状态 (waiting待评估，processing评估中, , finished已评估, failed评估失败) 
-     * @return Filters 过滤项。
-支持模糊搜索：TaskId，TaskName
-支持过滤：
-BusinessName：业务名称
-BusinessDept：业务部门名称
-TemplateName：评估模版名称
-Status：评估状态 (waiting待评估，processing评估中, , finished已评估, failed评估失败)
+     * Get 过滤项。支持模糊搜索：TaskId，TaskName支持过滤：BusinessName：业务名称BusinessDept：业务部门名称TemplateName：评估模板名称Status：评估状态 (waiting待评估，processing评估中, , finished已评估, failed评估失败) 
+     * @return Filters 过滤项。支持模糊搜索：TaskId，TaskName支持过滤：BusinessName：业务名称BusinessDept：业务部门名称TemplateName：评估模板名称Status：评估状态 (waiting待评估，processing评估中, , finished已评估, failed评估失败)
      */
     public DspaAssessmentFilter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set 过滤项。
-支持模糊搜索：TaskId，TaskName
-支持过滤：
-BusinessName：业务名称
-BusinessDept：业务部门名称
-TemplateName：评估模版名称
-Status：评估状态 (waiting待评估，processing评估中, , finished已评估, failed评估失败)
-     * @param Filters 过滤项。
-支持模糊搜索：TaskId，TaskName
-支持过滤：
-BusinessName：业务名称
-BusinessDept：业务部门名称
-TemplateName：评估模版名称
-Status：评估状态 (waiting待评估，processing评估中, , finished已评估, failed评估失败)
+     * Set 过滤项。支持模糊搜索：TaskId，TaskName支持过滤：BusinessName：业务名称BusinessDept：业务部门名称TemplateName：评估模板名称Status：评估状态 (waiting待评估，processing评估中, , finished已评估, failed评估失败)
+     * @param Filters 过滤项。支持模糊搜索：TaskId，TaskName支持过滤：BusinessName：业务名称BusinessDept：业务部门名称TemplateName：评估模板名称Status：评估状态 (waiting待评估，processing评估中, , finished已评估, failed评估失败)
      */
     public void setFilters(DspaAssessmentFilter [] Filters) {
         this.Filters = Filters;

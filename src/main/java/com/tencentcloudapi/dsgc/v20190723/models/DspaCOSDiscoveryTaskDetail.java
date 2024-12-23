@@ -74,7 +74,6 @@ public class DspaCOSDiscoveryTaskDetail extends AbstractModel {
 
     /**
     * 当创建任务时，用户打开了通用规则集开关，则该字段就会保存默认合规组信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DefaultComplianceInfo")
     @Expose
@@ -82,7 +81,6 @@ public class DspaCOSDiscoveryTaskDetail extends AbstractModel {
 
     /**
     * 该任务中用户选择的合规组信息列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CustomComplianceInfo")
     @Expose
@@ -90,7 +88,6 @@ public class DspaCOSDiscoveryTaskDetail extends AbstractModel {
 
     /**
     * 定时开始时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TimingStartTime")
     @Expose
@@ -209,10 +206,8 @@ public class DspaCOSDiscoveryTaskDetail extends AbstractModel {
     }
 
     /**
-     * Get 当创建任务时，用户打开了通用规则集开关，则该字段就会保存默认合规组信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当创建任务时，用户打开了通用规则集开关，则该字段就会保存默认合规组信息 
      * @return DefaultComplianceInfo 当创建任务时，用户打开了通用规则集开关，则该字段就会保存默认合规组信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ScanTaskComplianceInfo [] getDefaultComplianceInfo() {
         return this.DefaultComplianceInfo;
@@ -220,19 +215,15 @@ public class DspaCOSDiscoveryTaskDetail extends AbstractModel {
 
     /**
      * Set 当创建任务时，用户打开了通用规则集开关，则该字段就会保存默认合规组信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DefaultComplianceInfo 当创建任务时，用户打开了通用规则集开关，则该字段就会保存默认合规组信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDefaultComplianceInfo(ScanTaskComplianceInfo [] DefaultComplianceInfo) {
         this.DefaultComplianceInfo = DefaultComplianceInfo;
     }
 
     /**
-     * Get 该任务中用户选择的合规组信息列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该任务中用户选择的合规组信息列表 
      * @return CustomComplianceInfo 该任务中用户选择的合规组信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ScanTaskComplianceInfo [] getCustomComplianceInfo() {
         return this.CustomComplianceInfo;
@@ -240,19 +231,15 @@ public class DspaCOSDiscoveryTaskDetail extends AbstractModel {
 
     /**
      * Set 该任务中用户选择的合规组信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CustomComplianceInfo 该任务中用户选择的合规组信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCustomComplianceInfo(ScanTaskComplianceInfo [] CustomComplianceInfo) {
         this.CustomComplianceInfo = CustomComplianceInfo;
     }
 
     /**
-     * Get 定时开始时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 定时开始时间 
      * @return TimingStartTime 定时开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTimingStartTime() {
         return this.TimingStartTime;
@@ -260,9 +247,7 @@ public class DspaCOSDiscoveryTaskDetail extends AbstractModel {
 
     /**
      * Set 定时开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TimingStartTime 定时开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimingStartTime(String TimingStartTime) {
         this.TimingStartTime = TimingStartTime;

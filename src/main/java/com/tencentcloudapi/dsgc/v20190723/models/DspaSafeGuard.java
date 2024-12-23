@@ -28,7 +28,6 @@ public class DspaSafeGuard extends AbstractModel {
 UNSET 未设置
 DISABLE 规则设置未启用
 ENABLE 规则设置并启用
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Encrypt")
     @Expose
@@ -39,7 +38,6 @@ ENABLE 规则设置并启用
 UNSET 未设置
 DISABLE 规则设置未启用
 ENABLE 规则设置并启用
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Desensitization")
     @Expose
@@ -49,13 +47,11 @@ ENABLE 规则设置并启用
      * Get 加密状态，可取值如下：
 UNSET 未设置
 DISABLE 规则设置未启用
-ENABLE 规则设置并启用
-注意：此字段可能返回 null，表示取不到有效值。 
+ENABLE 规则设置并启用 
      * @return Encrypt 加密状态，可取值如下：
 UNSET 未设置
 DISABLE 规则设置未启用
 ENABLE 规则设置并启用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEncrypt() {
         return this.Encrypt;
@@ -66,12 +62,10 @@ ENABLE 规则设置并启用
 UNSET 未设置
 DISABLE 规则设置未启用
 ENABLE 规则设置并启用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Encrypt 加密状态，可取值如下：
 UNSET 未设置
 DISABLE 规则设置未启用
 ENABLE 规则设置并启用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEncrypt(String Encrypt) {
         this.Encrypt = Encrypt;
@@ -81,13 +75,11 @@ ENABLE 规则设置并启用
      * Get 脱敏状态，可取值如下：
 UNSET 未设置
 DISABLE 规则设置未启用
-ENABLE 规则设置并启用
-注意：此字段可能返回 null，表示取不到有效值。 
+ENABLE 规则设置并启用 
      * @return Desensitization 脱敏状态，可取值如下：
 UNSET 未设置
 DISABLE 规则设置未启用
 ENABLE 规则设置并启用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDesensitization() {
         return this.Desensitization;
@@ -98,12 +90,10 @@ ENABLE 规则设置并启用
 UNSET 未设置
 DISABLE 规则设置未启用
 ENABLE 规则设置并启用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Desensitization 脱敏状态，可取值如下：
 UNSET 未设置
 DISABLE 规则设置未启用
 ENABLE 规则设置并启用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDesensitization(String Desensitization) {
         this.Desensitization = Desensitization;

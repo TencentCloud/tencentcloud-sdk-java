@@ -25,7 +25,6 @@ public class DescribeDSPAComplianceUpdateNotificationResponse extends AbstractMo
 
     /**
     * 模板是否更新
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsUpdated")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeDSPAComplianceUpdateNotificationResponse extends AbstractMo
 
     /**
     * 任务名称集合
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskNameSet")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeDSPAComplianceUpdateNotificationResponse extends AbstractMo
     private String RequestId;
 
     /**
-     * Get 模板是否更新
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 模板是否更新 
      * @return IsUpdated 模板是否更新
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsUpdated() {
         return this.IsUpdated;
@@ -58,19 +54,15 @@ public class DescribeDSPAComplianceUpdateNotificationResponse extends AbstractMo
 
     /**
      * Set 模板是否更新
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsUpdated 模板是否更新
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsUpdated(Boolean IsUpdated) {
         this.IsUpdated = IsUpdated;
     }
 
     /**
-     * Get 任务名称集合
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务名称集合 
      * @return TaskNameSet 任务名称集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getTaskNameSet() {
         return this.TaskNameSet;
@@ -78,9 +70,7 @@ public class DescribeDSPAComplianceUpdateNotificationResponse extends AbstractMo
 
     /**
      * Set 任务名称集合
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskNameSet 任务名称集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskNameSet(String [] TaskNameSet) {
         this.TaskNameSet = TaskNameSet;

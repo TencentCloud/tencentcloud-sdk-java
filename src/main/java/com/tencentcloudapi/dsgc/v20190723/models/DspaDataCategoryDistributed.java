@@ -25,7 +25,6 @@ public class DspaDataCategoryDistributed extends AbstractModel {
 
     /**
     * 数据分类ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CategoryId")
     @Expose
@@ -33,7 +32,6 @@ public class DspaDataCategoryDistributed extends AbstractModel {
 
     /**
     * 数据分类名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CategoryName")
     @Expose
@@ -41,7 +39,6 @@ public class DspaDataCategoryDistributed extends AbstractModel {
 
     /**
     * 数据分类统计个数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Count")
     @Expose
@@ -49,17 +46,14 @@ public class DspaDataCategoryDistributed extends AbstractModel {
 
     /**
     * 分类路径
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CategoryFullPath")
     @Expose
     private String CategoryFullPath;
 
     /**
-     * Get 数据分类ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据分类ID 
      * @return CategoryId 数据分类ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCategoryId() {
         return this.CategoryId;
@@ -67,19 +61,15 @@ public class DspaDataCategoryDistributed extends AbstractModel {
 
     /**
      * Set 数据分类ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CategoryId 数据分类ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCategoryId(Long CategoryId) {
         this.CategoryId = CategoryId;
     }
 
     /**
-     * Get 数据分类名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据分类名称 
      * @return CategoryName 数据分类名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCategoryName() {
         return this.CategoryName;
@@ -87,19 +77,15 @@ public class DspaDataCategoryDistributed extends AbstractModel {
 
     /**
      * Set 数据分类名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CategoryName 数据分类名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCategoryName(String CategoryName) {
         this.CategoryName = CategoryName;
     }
 
     /**
-     * Get 数据分类统计个数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据分类统计个数 
      * @return Count 数据分类统计个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCount() {
         return this.Count;
@@ -107,19 +93,15 @@ public class DspaDataCategoryDistributed extends AbstractModel {
 
     /**
      * Set 数据分类统计个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Count 数据分类统计个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCount(Long Count) {
         this.Count = Count;
     }
 
     /**
-     * Get 分类路径
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分类路径 
      * @return CategoryFullPath 分类路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCategoryFullPath() {
         return this.CategoryFullPath;
@@ -127,9 +109,7 @@ public class DspaDataCategoryDistributed extends AbstractModel {
 
     /**
      * Set 分类路径
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CategoryFullPath 分类路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCategoryFullPath(String CategoryFullPath) {
         this.CategoryFullPath = CategoryFullPath;

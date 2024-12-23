@@ -25,7 +25,6 @@ public class DescribeDSPAAssessmentLatestRiskDetailInfoResponse extends Abstract
 
     /**
     * 数据源id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataSourceId")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeDSPAAssessmentLatestRiskDetailInfoResponse extends Abstract
 
     /**
     * 数据源name
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataSourceName")
     @Expose
@@ -41,7 +39,6 @@ public class DescribeDSPAAssessmentLatestRiskDetailInfoResponse extends Abstract
 
     /**
     * 资产对象名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AssetName")
     @Expose
@@ -49,7 +46,6 @@ public class DescribeDSPAAssessmentLatestRiskDetailInfoResponse extends Abstract
 
     /**
     * 风险评估模板id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AssessmentTemplateId")
     @Expose
@@ -57,7 +53,6 @@ public class DescribeDSPAAssessmentLatestRiskDetailInfoResponse extends Abstract
 
     /**
     * 分类分级的模板id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IdentifyTemplateId")
     @Expose
@@ -65,7 +60,6 @@ public class DescribeDSPAAssessmentLatestRiskDetailInfoResponse extends Abstract
 
     /**
     * 风险类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RiskType")
     @Expose
@@ -73,7 +67,6 @@ public class DescribeDSPAAssessmentLatestRiskDetailInfoResponse extends Abstract
 
     /**
     * 风险项
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RiskName")
     @Expose
@@ -81,7 +74,6 @@ public class DescribeDSPAAssessmentLatestRiskDetailInfoResponse extends Abstract
 
     /**
     * 风险的描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RiskDescription")
     @Expose
@@ -89,7 +81,6 @@ public class DescribeDSPAAssessmentLatestRiskDetailInfoResponse extends Abstract
 
     /**
     * 风险的级别
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RiskLevel")
     @Expose
@@ -97,7 +88,6 @@ public class DescribeDSPAAssessmentLatestRiskDetailInfoResponse extends Abstract
 
     /**
     * 处置的建议
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SuggestAction")
     @Expose
@@ -105,7 +95,6 @@ public class DescribeDSPAAssessmentLatestRiskDetailInfoResponse extends Abstract
 
     /**
     * 处置状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -113,7 +102,6 @@ public class DescribeDSPAAssessmentLatestRiskDetailInfoResponse extends Abstract
 
     /**
     * 备注
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Remark")
     @Expose
@@ -121,7 +109,6 @@ public class DescribeDSPAAssessmentLatestRiskDetailInfoResponse extends Abstract
 
     /**
     * 安全产品
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SecurityProduct")
     @Expose
@@ -129,7 +116,6 @@ public class DescribeDSPAAssessmentLatestRiskDetailInfoResponse extends Abstract
 
     /**
     * 风险归属
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RiskDimension")
     @Expose
@@ -137,7 +123,6 @@ public class DescribeDSPAAssessmentLatestRiskDetailInfoResponse extends Abstract
 
     /**
     * 关联数据库（如果风险归属是instance）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RelationAsset")
     @Expose
@@ -145,7 +130,6 @@ public class DescribeDSPAAssessmentLatestRiskDetailInfoResponse extends Abstract
 
     /**
     * 风险账号详情
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AccountRiskDetail")
     @Expose
@@ -153,7 +137,6 @@ public class DescribeDSPAAssessmentLatestRiskDetailInfoResponse extends Abstract
 
     /**
     * 权限风险详情
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PrivilegeRiskDetail")
     @Expose
@@ -161,7 +144,6 @@ public class DescribeDSPAAssessmentLatestRiskDetailInfoResponse extends Abstract
 
     /**
     * 策略风险的cos风险文件列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PolicyRiskCosFileList")
     @Expose
@@ -169,7 +151,6 @@ public class DescribeDSPAAssessmentLatestRiskDetailInfoResponse extends Abstract
 
     /**
     * AKSK泄漏列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AKSKLeak")
     @Expose
@@ -183,10 +164,8 @@ public class DescribeDSPAAssessmentLatestRiskDetailInfoResponse extends Abstract
     private String RequestId;
 
     /**
-     * Get 数据源id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据源id 
      * @return DataSourceId 数据源id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDataSourceId() {
         return this.DataSourceId;
@@ -194,19 +173,15 @@ public class DescribeDSPAAssessmentLatestRiskDetailInfoResponse extends Abstract
 
     /**
      * Set 数据源id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DataSourceId 数据源id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataSourceId(String DataSourceId) {
         this.DataSourceId = DataSourceId;
     }
 
     /**
-     * Get 数据源name
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据源name 
      * @return DataSourceName 数据源name
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDataSourceName() {
         return this.DataSourceName;
@@ -214,19 +189,15 @@ public class DescribeDSPAAssessmentLatestRiskDetailInfoResponse extends Abstract
 
     /**
      * Set 数据源name
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DataSourceName 数据源name
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataSourceName(String DataSourceName) {
         this.DataSourceName = DataSourceName;
     }
 
     /**
-     * Get 资产对象名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资产对象名称 
      * @return AssetName 资产对象名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAssetName() {
         return this.AssetName;
@@ -234,19 +205,15 @@ public class DescribeDSPAAssessmentLatestRiskDetailInfoResponse extends Abstract
 
     /**
      * Set 资产对象名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AssetName 资产对象名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAssetName(String AssetName) {
         this.AssetName = AssetName;
     }
 
     /**
-     * Get 风险评估模板id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 风险评估模板id 
      * @return AssessmentTemplateId 风险评估模板id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAssessmentTemplateId() {
         return this.AssessmentTemplateId;
@@ -254,19 +221,15 @@ public class DescribeDSPAAssessmentLatestRiskDetailInfoResponse extends Abstract
 
     /**
      * Set 风险评估模板id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AssessmentTemplateId 风险评估模板id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAssessmentTemplateId(Long AssessmentTemplateId) {
         this.AssessmentTemplateId = AssessmentTemplateId;
     }
 
     /**
-     * Get 分类分级的模板id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分类分级的模板id 
      * @return IdentifyTemplateId 分类分级的模板id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIdentifyTemplateId() {
         return this.IdentifyTemplateId;
@@ -274,19 +237,15 @@ public class DescribeDSPAAssessmentLatestRiskDetailInfoResponse extends Abstract
 
     /**
      * Set 分类分级的模板id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IdentifyTemplateId 分类分级的模板id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIdentifyTemplateId(Long IdentifyTemplateId) {
         this.IdentifyTemplateId = IdentifyTemplateId;
     }
 
     /**
-     * Get 风险类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 风险类型 
      * @return RiskType 风险类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRiskType() {
         return this.RiskType;
@@ -294,19 +253,15 @@ public class DescribeDSPAAssessmentLatestRiskDetailInfoResponse extends Abstract
 
     /**
      * Set 风险类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RiskType 风险类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRiskType(String RiskType) {
         this.RiskType = RiskType;
     }
 
     /**
-     * Get 风险项
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 风险项 
      * @return RiskName 风险项
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRiskName() {
         return this.RiskName;
@@ -314,19 +269,15 @@ public class DescribeDSPAAssessmentLatestRiskDetailInfoResponse extends Abstract
 
     /**
      * Set 风险项
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RiskName 风险项
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRiskName(String RiskName) {
         this.RiskName = RiskName;
     }
 
     /**
-     * Get 风险的描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 风险的描述 
      * @return RiskDescription 风险的描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRiskDescription() {
         return this.RiskDescription;
@@ -334,19 +285,15 @@ public class DescribeDSPAAssessmentLatestRiskDetailInfoResponse extends Abstract
 
     /**
      * Set 风险的描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RiskDescription 风险的描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRiskDescription(String RiskDescription) {
         this.RiskDescription = RiskDescription;
     }
 
     /**
-     * Get 风险的级别
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 风险的级别 
      * @return RiskLevel 风险的级别
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRiskLevel() {
         return this.RiskLevel;
@@ -354,19 +301,15 @@ public class DescribeDSPAAssessmentLatestRiskDetailInfoResponse extends Abstract
 
     /**
      * Set 风险的级别
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RiskLevel 风险的级别
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRiskLevel(String RiskLevel) {
         this.RiskLevel = RiskLevel;
     }
 
     /**
-     * Get 处置的建议
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 处置的建议 
      * @return SuggestAction 处置的建议
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSuggestAction() {
         return this.SuggestAction;
@@ -374,19 +317,15 @@ public class DescribeDSPAAssessmentLatestRiskDetailInfoResponse extends Abstract
 
     /**
      * Set 处置的建议
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SuggestAction 处置的建议
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSuggestAction(String SuggestAction) {
         this.SuggestAction = SuggestAction;
     }
 
     /**
-     * Get 处置状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 处置状态 
      * @return Status 处置状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
         return this.Status;
@@ -394,19 +333,15 @@ public class DescribeDSPAAssessmentLatestRiskDetailInfoResponse extends Abstract
 
     /**
      * Set 处置状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 处置状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 备注
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 备注 
      * @return Remark 备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRemark() {
         return this.Remark;
@@ -414,19 +349,15 @@ public class DescribeDSPAAssessmentLatestRiskDetailInfoResponse extends Abstract
 
     /**
      * Set 备注
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Remark 备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get 安全产品
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 安全产品 
      * @return SecurityProduct 安全产品
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SecurityProduct [] getSecurityProduct() {
         return this.SecurityProduct;
@@ -434,19 +365,15 @@ public class DescribeDSPAAssessmentLatestRiskDetailInfoResponse extends Abstract
 
     /**
      * Set 安全产品
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SecurityProduct 安全产品
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSecurityProduct(SecurityProduct [] SecurityProduct) {
         this.SecurityProduct = SecurityProduct;
     }
 
     /**
-     * Get 风险归属
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 风险归属 
      * @return RiskDimension 风险归属
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRiskDimension() {
         return this.RiskDimension;
@@ -454,19 +381,15 @@ public class DescribeDSPAAssessmentLatestRiskDetailInfoResponse extends Abstract
 
     /**
      * Set 风险归属
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RiskDimension 风险归属
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRiskDimension(String RiskDimension) {
         this.RiskDimension = RiskDimension;
     }
 
     /**
-     * Get 关联数据库（如果风险归属是instance）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 关联数据库（如果风险归属是instance） 
      * @return RelationAsset 关联数据库（如果风险归属是instance）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getRelationAsset() {
         return this.RelationAsset;
@@ -474,19 +397,15 @@ public class DescribeDSPAAssessmentLatestRiskDetailInfoResponse extends Abstract
 
     /**
      * Set 关联数据库（如果风险归属是instance）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RelationAsset 关联数据库（如果风险归属是instance）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRelationAsset(String [] RelationAsset) {
         this.RelationAsset = RelationAsset;
     }
 
     /**
-     * Get 风险账号详情
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 风险账号详情 
      * @return AccountRiskDetail 风险账号详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AccountRisk [] getAccountRiskDetail() {
         return this.AccountRiskDetail;
@@ -494,19 +413,15 @@ public class DescribeDSPAAssessmentLatestRiskDetailInfoResponse extends Abstract
 
     /**
      * Set 风险账号详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AccountRiskDetail 风险账号详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAccountRiskDetail(AccountRisk [] AccountRiskDetail) {
         this.AccountRiskDetail = AccountRiskDetail;
     }
 
     /**
-     * Get 权限风险详情
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 权限风险详情 
      * @return PrivilegeRiskDetail 权限风险详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public PrivilegeRisk [] getPrivilegeRiskDetail() {
         return this.PrivilegeRiskDetail;
@@ -514,19 +429,15 @@ public class DescribeDSPAAssessmentLatestRiskDetailInfoResponse extends Abstract
 
     /**
      * Set 权限风险详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PrivilegeRiskDetail 权限风险详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPrivilegeRiskDetail(PrivilegeRisk [] PrivilegeRiskDetail) {
         this.PrivilegeRiskDetail = PrivilegeRiskDetail;
     }
 
     /**
-     * Get 策略风险的cos风险文件列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 策略风险的cos风险文件列表 
      * @return PolicyRiskCosFileList 策略风险的cos风险文件列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getPolicyRiskCosFileList() {
         return this.PolicyRiskCosFileList;
@@ -534,19 +445,15 @@ public class DescribeDSPAAssessmentLatestRiskDetailInfoResponse extends Abstract
 
     /**
      * Set 策略风险的cos风险文件列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PolicyRiskCosFileList 策略风险的cos风险文件列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPolicyRiskCosFileList(String [] PolicyRiskCosFileList) {
         this.PolicyRiskCosFileList = PolicyRiskCosFileList;
     }
 
     /**
-     * Get AKSK泄漏列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get AKSK泄漏列表 
      * @return AKSKLeak AKSK泄漏列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AKSKLeak [] getAKSKLeak() {
         return this.AKSKLeak;
@@ -554,9 +461,7 @@ public class DescribeDSPAAssessmentLatestRiskDetailInfoResponse extends Abstract
 
     /**
      * Set AKSK泄漏列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AKSKLeak AKSK泄漏列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAKSKLeak(AKSKLeak [] AKSKLeak) {
         this.AKSKLeak = AKSKLeak;

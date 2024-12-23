@@ -88,7 +88,6 @@ public class DspaDiscoveryTaskDbResult extends AbstractModel {
 
     /**
     * 数据源名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataSourceName")
     @Expose
@@ -103,7 +102,6 @@ public class DspaDiscoveryTaskDbResult extends AbstractModel {
 
     /**
     * DB扫描结果错误信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ErrorInfo")
     @Expose
@@ -111,7 +109,6 @@ public class DspaDiscoveryTaskDbResult extends AbstractModel {
 
     /**
     * 资源所在地域
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceRegion")
     @Expose
@@ -119,7 +116,6 @@ public class DspaDiscoveryTaskDbResult extends AbstractModel {
 
     /**
     * 敏感字段数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SensitiveField")
     @Expose
@@ -127,7 +123,6 @@ public class DspaDiscoveryTaskDbResult extends AbstractModel {
 
     /**
     * 总的字段数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalField")
     @Expose
@@ -278,10 +273,8 @@ public class DspaDiscoveryTaskDbResult extends AbstractModel {
     }
 
     /**
-     * Get 数据源名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据源名称 
      * @return DataSourceName 数据源名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDataSourceName() {
         return this.DataSourceName;
@@ -289,9 +282,7 @@ public class DspaDiscoveryTaskDbResult extends AbstractModel {
 
     /**
      * Set 数据源名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DataSourceName 数据源名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataSourceName(String DataSourceName) {
         this.DataSourceName = DataSourceName;
@@ -314,10 +305,8 @@ public class DspaDiscoveryTaskDbResult extends AbstractModel {
     }
 
     /**
-     * Get DB扫描结果错误信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get DB扫描结果错误信息 
      * @return ErrorInfo DB扫描结果错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getErrorInfo() {
         return this.ErrorInfo;
@@ -325,19 +314,15 @@ public class DspaDiscoveryTaskDbResult extends AbstractModel {
 
     /**
      * Set DB扫描结果错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ErrorInfo DB扫描结果错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrorInfo(String ErrorInfo) {
         this.ErrorInfo = ErrorInfo;
     }
 
     /**
-     * Get 资源所在地域
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源所在地域 
      * @return ResourceRegion 资源所在地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceRegion() {
         return this.ResourceRegion;
@@ -345,19 +330,15 @@ public class DspaDiscoveryTaskDbResult extends AbstractModel {
 
     /**
      * Set 资源所在地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceRegion 资源所在地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceRegion(String ResourceRegion) {
         this.ResourceRegion = ResourceRegion;
     }
 
     /**
-     * Get 敏感字段数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 敏感字段数 
      * @return SensitiveField 敏感字段数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSensitiveField() {
         return this.SensitiveField;
@@ -365,19 +346,15 @@ public class DspaDiscoveryTaskDbResult extends AbstractModel {
 
     /**
      * Set 敏感字段数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SensitiveField 敏感字段数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSensitiveField(Long SensitiveField) {
         this.SensitiveField = SensitiveField;
     }
 
     /**
-     * Get 总的字段数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 总的字段数 
      * @return TotalField 总的字段数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalField() {
         return this.TotalField;
@@ -385,9 +362,7 @@ public class DspaDiscoveryTaskDbResult extends AbstractModel {
 
     /**
      * Set 总的字段数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalField 总的字段数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalField(Long TotalField) {
         this.TotalField = TotalField;

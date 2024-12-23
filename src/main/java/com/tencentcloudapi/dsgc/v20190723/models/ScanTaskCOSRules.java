@@ -25,7 +25,6 @@ public class ScanTaskCOSRules extends AbstractModel {
 
     /**
     * regex规则内容
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RegexRule")
     @Expose
@@ -40,7 +39,6 @@ public class ScanTaskCOSRules extends AbstractModel {
 
     /**
     * 关键词规则内容组，最大支持5个关键词。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KeywordRule")
     @Expose
@@ -48,7 +46,6 @@ public class ScanTaskCOSRules extends AbstractModel {
 
     /**
     * 忽略词规则内容组，最大支持5个忽略词。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IgnoreStringRule")
     @Expose
@@ -62,10 +59,8 @@ public class ScanTaskCOSRules extends AbstractModel {
     private Long MaxMatch;
 
     /**
-     * Get regex规则内容
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get regex规则内容 
      * @return RegexRule regex规则内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public COSDataRule getRegexRule() {
         return this.RegexRule;
@@ -73,9 +68,7 @@ public class ScanTaskCOSRules extends AbstractModel {
 
     /**
      * Set regex规则内容
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RegexRule regex规则内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegexRule(COSDataRule RegexRule) {
         this.RegexRule = RegexRule;
@@ -98,10 +91,8 @@ public class ScanTaskCOSRules extends AbstractModel {
     }
 
     /**
-     * Get 关键词规则内容组，最大支持5个关键词。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 关键词规则内容组，最大支持5个关键词。 
      * @return KeywordRule 关键词规则内容组，最大支持5个关键词。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public COSDataRule getKeywordRule() {
         return this.KeywordRule;
@@ -109,19 +100,15 @@ public class ScanTaskCOSRules extends AbstractModel {
 
     /**
      * Set 关键词规则内容组，最大支持5个关键词。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param KeywordRule 关键词规则内容组，最大支持5个关键词。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKeywordRule(COSDataRule KeywordRule) {
         this.KeywordRule = KeywordRule;
     }
 
     /**
-     * Get 忽略词规则内容组，最大支持5个忽略词。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 忽略词规则内容组，最大支持5个忽略词。 
      * @return IgnoreStringRule 忽略词规则内容组，最大支持5个忽略词。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public COSDataRule getIgnoreStringRule() {
         return this.IgnoreStringRule;
@@ -129,9 +116,7 @@ public class ScanTaskCOSRules extends AbstractModel {
 
     /**
      * Set 忽略词规则内容组，最大支持5个忽略词。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IgnoreStringRule 忽略词规则内容组，最大支持5个忽略词。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIgnoreStringRule(COSDataRule IgnoreStringRule) {
         this.IgnoreStringRule = IgnoreStringRule;

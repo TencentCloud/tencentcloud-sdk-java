@@ -25,7 +25,6 @@ public class DiscoveryCondition extends AbstractModel {
 
     /**
     * RDB实例列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RDBInstances")
     @Expose
@@ -33,7 +32,6 @@ public class DiscoveryCondition extends AbstractModel {
 
     /**
     * COS实例列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("COSInstances")
     @Expose
@@ -41,7 +39,6 @@ public class DiscoveryCondition extends AbstractModel {
 
     /**
     * Mongo实例列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NOSQLInstances")
     @Expose
@@ -49,17 +46,14 @@ public class DiscoveryCondition extends AbstractModel {
 
     /**
     * ES实例列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ESInstances")
     @Expose
     private ESInstance [] ESInstances;
 
     /**
-     * Get RDB实例列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get RDB实例列表 
      * @return RDBInstances RDB实例列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RDBInstance [] getRDBInstances() {
         return this.RDBInstances;
@@ -67,19 +61,15 @@ public class DiscoveryCondition extends AbstractModel {
 
     /**
      * Set RDB实例列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RDBInstances RDB实例列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRDBInstances(RDBInstance [] RDBInstances) {
         this.RDBInstances = RDBInstances;
     }
 
     /**
-     * Get COS实例列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get COS实例列表 
      * @return COSInstances COS实例列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public COSInstance [] getCOSInstances() {
         return this.COSInstances;
@@ -87,19 +77,15 @@ public class DiscoveryCondition extends AbstractModel {
 
     /**
      * Set COS实例列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param COSInstances COS实例列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCOSInstances(COSInstance [] COSInstances) {
         this.COSInstances = COSInstances;
     }
 
     /**
-     * Get Mongo实例列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Mongo实例列表 
      * @return NOSQLInstances Mongo实例列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public NOSQLInstance [] getNOSQLInstances() {
         return this.NOSQLInstances;
@@ -107,19 +93,15 @@ public class DiscoveryCondition extends AbstractModel {
 
     /**
      * Set Mongo实例列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NOSQLInstances Mongo实例列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNOSQLInstances(NOSQLInstance [] NOSQLInstances) {
         this.NOSQLInstances = NOSQLInstances;
     }
 
     /**
-     * Get ES实例列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get ES实例列表 
      * @return ESInstances ES实例列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ESInstance [] getESInstances() {
         return this.ESInstances;
@@ -127,9 +109,7 @@ public class DiscoveryCondition extends AbstractModel {
 
     /**
      * Set ES实例列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ESInstances ES实例列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setESInstances(ESInstance [] ESInstances) {
         this.ESInstances = ESInstances;

@@ -39,7 +39,6 @@ public class RiskCountInfo extends AbstractModel {
 
     /**
     * 风险等级名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RiskLevelName")
     @Expose
@@ -78,10 +77,8 @@ public class RiskCountInfo extends AbstractModel {
     }
 
     /**
-     * Get 风险等级名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 风险等级名称 
      * @return RiskLevelName 风险等级名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRiskLevelName() {
         return this.RiskLevelName;
@@ -89,9 +86,7 @@ public class RiskCountInfo extends AbstractModel {
 
     /**
      * Set 风险等级名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RiskLevelName 风险等级名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRiskLevelName(String RiskLevelName) {
         this.RiskLevelName = RiskLevelName;

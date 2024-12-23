@@ -25,11 +25,17 @@ public class DescribeDSPADataSourceDbInfoResponse extends AbstractModel {
 
     /**
     * 数据库信息列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Items")
     @Expose
     private DSPADataSourceDbInfo [] Items;
+
+    /**
+    * 数据源id
+    */
+    @SerializedName("DataSourceId")
+    @Expose
+    private String DataSourceId;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -39,10 +45,8 @@ public class DescribeDSPADataSourceDbInfoResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 数据库信息列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据库信息列表 
      * @return Items 数据库信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DSPADataSourceDbInfo [] getItems() {
         return this.Items;
@@ -50,12 +54,26 @@ public class DescribeDSPADataSourceDbInfoResponse extends AbstractModel {
 
     /**
      * Set 数据库信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Items 数据库信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setItems(DSPADataSourceDbInfo [] Items) {
         this.Items = Items;
+    }
+
+    /**
+     * Get 数据源id 
+     * @return DataSourceId 数据源id
+     */
+    public String getDataSourceId() {
+        return this.DataSourceId;
+    }
+
+    /**
+     * Set 数据源id
+     * @param DataSourceId 数据源id
+     */
+    public void setDataSourceId(String DataSourceId) {
+        this.DataSourceId = DataSourceId;
     }
 
     /**
@@ -88,6 +106,9 @@ public class DescribeDSPADataSourceDbInfoResponse extends AbstractModel {
                 this.Items[i] = new DSPADataSourceDbInfo(source.Items[i]);
             }
         }
+        if (source.DataSourceId != null) {
+            this.DataSourceId = new String(source.DataSourceId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -99,6 +120,7 @@ public class DescribeDSPADataSourceDbInfoResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "Items.", this.Items);
+        this.setParamSimple(map, prefix + "DataSourceId", this.DataSourceId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

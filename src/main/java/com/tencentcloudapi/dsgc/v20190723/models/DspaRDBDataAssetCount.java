@@ -25,7 +25,6 @@ public class DspaRDBDataAssetCount extends AbstractModel {
 
     /**
     * 数组资产类型，0代表关系型数据库资产，1代表对象存储COS资产
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataAssetType")
     @Expose
@@ -33,7 +32,6 @@ public class DspaRDBDataAssetCount extends AbstractModel {
 
     /**
     * 已扫描的数据库的个数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalDbCnt")
     @Expose
@@ -41,7 +39,6 @@ public class DspaRDBDataAssetCount extends AbstractModel {
 
     /**
     * 数据库表的个数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalTableCnt")
     @Expose
@@ -49,7 +46,6 @@ public class DspaRDBDataAssetCount extends AbstractModel {
 
     /**
     * 敏感数据类型个数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SensitiveCategoryCnt")
     @Expose
@@ -57,7 +53,6 @@ public class DspaRDBDataAssetCount extends AbstractModel {
 
     /**
     * 敏感字段的个数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SensitiveFieldCnt")
     @Expose
@@ -65,7 +60,6 @@ public class DspaRDBDataAssetCount extends AbstractModel {
 
     /**
     * 敏感等级分布
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SensitiveLevel")
     @Expose
@@ -73,7 +67,6 @@ public class DspaRDBDataAssetCount extends AbstractModel {
 
     /**
     * 敏感数据库的个数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SensitiveDbCnt")
     @Expose
@@ -81,7 +74,6 @@ public class DspaRDBDataAssetCount extends AbstractModel {
 
     /**
     * 敏感数据库表的个数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SensitiveTableCnt")
     @Expose
@@ -89,7 +81,6 @@ public class DspaRDBDataAssetCount extends AbstractModel {
 
     /**
     * 扫描字段的个数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalFieldCnt")
     @Expose
@@ -97,17 +88,14 @@ public class DspaRDBDataAssetCount extends AbstractModel {
 
     /**
     * 数据分类分布
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CategoryDistributed")
     @Expose
     private DspaDataCategoryDistributed [] CategoryDistributed;
 
     /**
-     * Get 数组资产类型，0代表关系型数据库资产，1代表对象存储COS资产
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数组资产类型，0代表关系型数据库资产，1代表对象存储COS资产 
      * @return DataAssetType 数组资产类型，0代表关系型数据库资产，1代表对象存储COS资产
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDataAssetType() {
         return this.DataAssetType;
@@ -115,19 +103,15 @@ public class DspaRDBDataAssetCount extends AbstractModel {
 
     /**
      * Set 数组资产类型，0代表关系型数据库资产，1代表对象存储COS资产
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DataAssetType 数组资产类型，0代表关系型数据库资产，1代表对象存储COS资产
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataAssetType(Long DataAssetType) {
         this.DataAssetType = DataAssetType;
     }
 
     /**
-     * Get 已扫描的数据库的个数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 已扫描的数据库的个数 
      * @return TotalDbCnt 已扫描的数据库的个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalDbCnt() {
         return this.TotalDbCnt;
@@ -135,19 +119,15 @@ public class DspaRDBDataAssetCount extends AbstractModel {
 
     /**
      * Set 已扫描的数据库的个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalDbCnt 已扫描的数据库的个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalDbCnt(Long TotalDbCnt) {
         this.TotalDbCnt = TotalDbCnt;
     }
 
     /**
-     * Get 数据库表的个数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据库表的个数 
      * @return TotalTableCnt 数据库表的个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalTableCnt() {
         return this.TotalTableCnt;
@@ -155,19 +135,15 @@ public class DspaRDBDataAssetCount extends AbstractModel {
 
     /**
      * Set 数据库表的个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalTableCnt 数据库表的个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalTableCnt(Long TotalTableCnt) {
         this.TotalTableCnt = TotalTableCnt;
     }
 
     /**
-     * Get 敏感数据类型个数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 敏感数据类型个数 
      * @return SensitiveCategoryCnt 敏感数据类型个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSensitiveCategoryCnt() {
         return this.SensitiveCategoryCnt;
@@ -175,19 +151,15 @@ public class DspaRDBDataAssetCount extends AbstractModel {
 
     /**
      * Set 敏感数据类型个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SensitiveCategoryCnt 敏感数据类型个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSensitiveCategoryCnt(Long SensitiveCategoryCnt) {
         this.SensitiveCategoryCnt = SensitiveCategoryCnt;
     }
 
     /**
-     * Get 敏感字段的个数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 敏感字段的个数 
      * @return SensitiveFieldCnt 敏感字段的个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSensitiveFieldCnt() {
         return this.SensitiveFieldCnt;
@@ -195,19 +167,15 @@ public class DspaRDBDataAssetCount extends AbstractModel {
 
     /**
      * Set 敏感字段的个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SensitiveFieldCnt 敏感字段的个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSensitiveFieldCnt(Long SensitiveFieldCnt) {
         this.SensitiveFieldCnt = SensitiveFieldCnt;
     }
 
     /**
-     * Get 敏感等级分布
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 敏感等级分布 
      * @return SensitiveLevel 敏感等级分布
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SensitiveLevel [] getSensitiveLevel() {
         return this.SensitiveLevel;
@@ -215,19 +183,15 @@ public class DspaRDBDataAssetCount extends AbstractModel {
 
     /**
      * Set 敏感等级分布
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SensitiveLevel 敏感等级分布
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSensitiveLevel(SensitiveLevel [] SensitiveLevel) {
         this.SensitiveLevel = SensitiveLevel;
     }
 
     /**
-     * Get 敏感数据库的个数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 敏感数据库的个数 
      * @return SensitiveDbCnt 敏感数据库的个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSensitiveDbCnt() {
         return this.SensitiveDbCnt;
@@ -235,19 +199,15 @@ public class DspaRDBDataAssetCount extends AbstractModel {
 
     /**
      * Set 敏感数据库的个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SensitiveDbCnt 敏感数据库的个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSensitiveDbCnt(Long SensitiveDbCnt) {
         this.SensitiveDbCnt = SensitiveDbCnt;
     }
 
     /**
-     * Get 敏感数据库表的个数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 敏感数据库表的个数 
      * @return SensitiveTableCnt 敏感数据库表的个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSensitiveTableCnt() {
         return this.SensitiveTableCnt;
@@ -255,19 +215,15 @@ public class DspaRDBDataAssetCount extends AbstractModel {
 
     /**
      * Set 敏感数据库表的个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SensitiveTableCnt 敏感数据库表的个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSensitiveTableCnt(Long SensitiveTableCnt) {
         this.SensitiveTableCnt = SensitiveTableCnt;
     }
 
     /**
-     * Get 扫描字段的个数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 扫描字段的个数 
      * @return TotalFieldCnt 扫描字段的个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalFieldCnt() {
         return this.TotalFieldCnt;
@@ -275,19 +231,15 @@ public class DspaRDBDataAssetCount extends AbstractModel {
 
     /**
      * Set 扫描字段的个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalFieldCnt 扫描字段的个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalFieldCnt(Long TotalFieldCnt) {
         this.TotalFieldCnt = TotalFieldCnt;
     }
 
     /**
-     * Get 数据分类分布
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据分类分布 
      * @return CategoryDistributed 数据分类分布
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DspaDataCategoryDistributed [] getCategoryDistributed() {
         return this.CategoryDistributed;
@@ -295,9 +247,7 @@ public class DspaRDBDataAssetCount extends AbstractModel {
 
     /**
      * Set 数据分类分布
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CategoryDistributed 数据分类分布
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCategoryDistributed(DspaDataCategoryDistributed [] CategoryDistributed) {
         this.CategoryDistributed = CategoryDistributed;

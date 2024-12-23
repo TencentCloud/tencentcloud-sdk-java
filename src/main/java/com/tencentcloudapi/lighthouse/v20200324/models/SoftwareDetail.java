@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class SoftwareDetail extends AbstractModel {
 
     /**
-    * 详情唯一键。
+    * 软件的属性标识
     */
     @SerializedName("Key")
     @Expose
     private String Key;
 
     /**
-    * 详情标题。
+    * 软件的属性标识描述
     */
     @SerializedName("Title")
     @Expose
     private String Title;
 
     /**
-    * 详情值。
+    * 软件的属性值
     */
     @SerializedName("Value")
     @Expose
     private String Value;
 
     /**
-     * Get 详情唯一键。 
-     * @return Key 详情唯一键。
+     * Get 软件的属性标识 
+     * @return Key 软件的属性标识
      */
     public String getKey() {
         return this.Key;
     }
 
     /**
-     * Set 详情唯一键。
-     * @param Key 详情唯一键。
+     * Set 软件的属性标识
+     * @param Key 软件的属性标识
      */
     public void setKey(String Key) {
         this.Key = Key;
     }
 
     /**
-     * Get 详情标题。 
-     * @return Title 详情标题。
+     * Get 软件的属性标识描述 
+     * @return Title 软件的属性标识描述
      */
     public String getTitle() {
         return this.Title;
     }
 
     /**
-     * Set 详情标题。
-     * @param Title 详情标题。
+     * Set 软件的属性标识描述
+     * @param Title 软件的属性标识描述
      */
     public void setTitle(String Title) {
         this.Title = Title;
     }
 
     /**
-     * Get 详情值。 
-     * @return Value 详情值。
+     * Get 软件的属性值 
+     * @return Value 软件的属性值
      */
     public String getValue() {
         return this.Value;
     }
 
     /**
-     * Set 详情值。
-     * @param Value 详情值。
+     * Set 软件的属性值
+     * @param Value 软件的属性值
      */
     public void setValue(String Value) {
         this.Value = Value;

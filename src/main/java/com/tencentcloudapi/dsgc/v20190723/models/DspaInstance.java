@@ -132,7 +132,6 @@ public class DspaInstance extends AbstractModel {
 
     /**
     * 实例渠道
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Channel")
     @Expose
@@ -140,7 +139,6 @@ public class DspaInstance extends AbstractModel {
 
     /**
     * 已授权的实例数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InsAuthCount")
     @Expose
@@ -148,7 +146,6 @@ public class DspaInstance extends AbstractModel {
 
     /**
     * 已购买的实例数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InsTotalQuota")
     @Expose
@@ -403,10 +400,8 @@ public class DspaInstance extends AbstractModel {
     }
 
     /**
-     * Get 实例渠道
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例渠道 
      * @return Channel 实例渠道
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getChannel() {
         return this.Channel;
@@ -414,19 +409,15 @@ public class DspaInstance extends AbstractModel {
 
     /**
      * Set 实例渠道
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Channel 实例渠道
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setChannel(String Channel) {
         this.Channel = Channel;
     }
 
     /**
-     * Get 已授权的实例数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 已授权的实例数量 
      * @return InsAuthCount 已授权的实例数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getInsAuthCount() {
         return this.InsAuthCount;
@@ -434,19 +425,15 @@ public class DspaInstance extends AbstractModel {
 
     /**
      * Set 已授权的实例数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InsAuthCount 已授权的实例数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInsAuthCount(Long InsAuthCount) {
         this.InsAuthCount = InsAuthCount;
     }
 
     /**
-     * Get 已购买的实例数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 已购买的实例数量 
      * @return InsTotalQuota 已购买的实例数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getInsTotalQuota() {
         return this.InsTotalQuota;
@@ -454,9 +441,7 @@ public class DspaInstance extends AbstractModel {
 
     /**
      * Set 已购买的实例数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InsTotalQuota 已购买的实例数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInsTotalQuota(Long InsTotalQuota) {
         this.InsTotalQuota = InsTotalQuota;

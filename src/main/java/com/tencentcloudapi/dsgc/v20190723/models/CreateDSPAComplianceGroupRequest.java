@@ -59,6 +59,20 @@ public class CreateDSPAComplianceGroupRequest extends AbstractModel {
     private Long LevelGroupId;
 
     /**
+    * 1代表模版开启，0代表模版关闭
+    */
+    @SerializedName("Status")
+    @Expose
+    private Long Status;
+
+    /**
+    * 该complianceId的开启状态将被关闭
+    */
+    @SerializedName("CloseComplianceId")
+    @Expose
+    private Long CloseComplianceId;
+
+    /**
      * Get DSPA实例ID 
      * @return DspaId DSPA实例ID
      */
@@ -138,6 +152,38 @@ public class CreateDSPAComplianceGroupRequest extends AbstractModel {
         this.LevelGroupId = LevelGroupId;
     }
 
+    /**
+     * Get 1代表模版开启，0代表模版关闭 
+     * @return Status 1代表模版开启，0代表模版关闭
+     */
+    public Long getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 1代表模版开启，0代表模版关闭
+     * @param Status 1代表模版开启，0代表模版关闭
+     */
+    public void setStatus(Long Status) {
+        this.Status = Status;
+    }
+
+    /**
+     * Get 该complianceId的开启状态将被关闭 
+     * @return CloseComplianceId 该complianceId的开启状态将被关闭
+     */
+    public Long getCloseComplianceId() {
+        return this.CloseComplianceId;
+    }
+
+    /**
+     * Set 该complianceId的开启状态将被关闭
+     * @param CloseComplianceId 该complianceId的开启状态将被关闭
+     */
+    public void setCloseComplianceId(Long CloseComplianceId) {
+        this.CloseComplianceId = CloseComplianceId;
+    }
+
     public CreateDSPAComplianceGroupRequest() {
     }
 
@@ -164,6 +210,12 @@ public class CreateDSPAComplianceGroupRequest extends AbstractModel {
         if (source.LevelGroupId != null) {
             this.LevelGroupId = new Long(source.LevelGroupId);
         }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.CloseComplianceId != null) {
+            this.CloseComplianceId = new Long(source.CloseComplianceId);
+        }
     }
 
 
@@ -176,6 +228,8 @@ public class CreateDSPAComplianceGroupRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamArrayObj(map, prefix + "ComplianceGroupRules.", this.ComplianceGroupRules);
         this.setParamSimple(map, prefix + "LevelGroupId", this.LevelGroupId);
+        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "CloseComplianceId", this.CloseComplianceId);
 
     }
 }

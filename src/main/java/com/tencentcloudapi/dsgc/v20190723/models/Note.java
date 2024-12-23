@@ -25,7 +25,6 @@ public class Note extends AbstractModel {
 
     /**
     * 通用key，例如分类名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Key")
     @Expose
@@ -33,17 +32,14 @@ public class Note extends AbstractModel {
 
     /**
     * 通用value，例如分类个数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Value")
     @Expose
     private Long Value;
 
     /**
-     * Get 通用key，例如分类名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 通用key，例如分类名称 
      * @return Key 通用key，例如分类名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKey() {
         return this.Key;
@@ -51,19 +47,15 @@ public class Note extends AbstractModel {
 
     /**
      * Set 通用key，例如分类名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Key 通用key，例如分类名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKey(String Key) {
         this.Key = Key;
     }
 
     /**
-     * Get 通用value，例如分类个数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 通用value，例如分类个数 
      * @return Value 通用value，例如分类个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getValue() {
         return this.Value;
@@ -71,9 +63,7 @@ public class Note extends AbstractModel {
 
     /**
      * Set 通用value，例如分类个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Value 通用value，例如分类个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValue(Long Value) {
         this.Value = Value;

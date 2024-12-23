@@ -25,7 +25,6 @@ public class DescribeDSPACategoriesResponse extends AbstractModel {
 
     /**
     * 敏感数据分类列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Items")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeDSPACategoriesResponse extends AbstractModel {
 
     /**
     * 符合条件的敏感数据分类数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeDSPACategoriesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 敏感数据分类列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 敏感数据分类列表 
      * @return Items 敏感数据分类列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DataCategory [] getItems() {
         return this.Items;
@@ -58,19 +54,15 @@ public class DescribeDSPACategoriesResponse extends AbstractModel {
 
     /**
      * Set 敏感数据分类列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Items 敏感数据分类列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setItems(DataCategory [] Items) {
         this.Items = Items;
     }
 
     /**
-     * Get 符合条件的敏感数据分类数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 符合条件的敏感数据分类数 
      * @return TotalCount 符合条件的敏感数据分类数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -78,9 +70,7 @@ public class DescribeDSPACategoriesResponse extends AbstractModel {
 
     /**
      * Set 符合条件的敏感数据分类数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 符合条件的敏感数据分类数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

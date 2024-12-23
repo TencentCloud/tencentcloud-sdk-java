@@ -25,7 +25,6 @@ public class RiskSideDistributed extends AbstractModel {
 
     /**
     * 风险面
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AssessmentRiskSide")
     @Expose
@@ -33,17 +32,14 @@ public class RiskSideDistributed extends AbstractModel {
 
     /**
     * 风险类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AssessmentRisk")
     @Expose
     private Note [] AssessmentRisk;
 
     /**
-     * Get 风险面
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 风险面 
      * @return AssessmentRiskSide 风险面
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Note getAssessmentRiskSide() {
         return this.AssessmentRiskSide;
@@ -51,19 +47,15 @@ public class RiskSideDistributed extends AbstractModel {
 
     /**
      * Set 风险面
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AssessmentRiskSide 风险面
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAssessmentRiskSide(Note AssessmentRiskSide) {
         this.AssessmentRiskSide = AssessmentRiskSide;
     }
 
     /**
-     * Get 风险类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 风险类型 
      * @return AssessmentRisk 风险类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Note [] getAssessmentRisk() {
         return this.AssessmentRisk;
@@ -71,9 +63,7 @@ public class RiskSideDistributed extends AbstractModel {
 
     /**
      * Set 风险类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AssessmentRisk 风险类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAssessmentRisk(Note [] AssessmentRisk) {
         this.AssessmentRisk = AssessmentRisk;

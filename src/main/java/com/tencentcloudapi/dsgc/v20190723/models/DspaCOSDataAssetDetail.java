@@ -109,7 +109,6 @@ public class DspaCOSDataAssetDetail extends AbstractModel {
 
     /**
     * 资源所在地域
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResourceRegion")
     @Expose
@@ -117,7 +116,6 @@ public class DspaCOSDataAssetDetail extends AbstractModel {
 
     /**
     * 分类ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CategoryId")
     @Expose
@@ -125,7 +123,6 @@ public class DspaCOSDataAssetDetail extends AbstractModel {
 
     /**
     * 分级ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LevelId")
     @Expose
@@ -133,7 +130,6 @@ public class DspaCOSDataAssetDetail extends AbstractModel {
 
     /**
     * 文件扫描结果ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileResultId")
     @Expose
@@ -141,7 +137,6 @@ public class DspaCOSDataAssetDetail extends AbstractModel {
 
     /**
     * 数据源名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataSourceName")
     @Expose
@@ -149,7 +144,6 @@ public class DspaCOSDataAssetDetail extends AbstractModel {
 
     /**
     * 分类路径
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CategoryFullPath")
     @Expose
@@ -158,7 +152,6 @@ public class DspaCOSDataAssetDetail extends AbstractModel {
     /**
     * 0-系统识别
 1-人工识别
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IdentifyType")
     @Expose
@@ -167,7 +160,6 @@ public class DspaCOSDataAssetDetail extends AbstractModel {
     /**
     * 0-系统识别
 1-人工识别
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CheckStatus")
     @Expose
@@ -366,10 +358,8 @@ public class DspaCOSDataAssetDetail extends AbstractModel {
     }
 
     /**
-     * Get 资源所在地域
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源所在地域 
      * @return ResourceRegion 资源所在地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResourceRegion() {
         return this.ResourceRegion;
@@ -377,19 +367,15 @@ public class DspaCOSDataAssetDetail extends AbstractModel {
 
     /**
      * Set 资源所在地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceRegion 资源所在地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResourceRegion(String ResourceRegion) {
         this.ResourceRegion = ResourceRegion;
     }
 
     /**
-     * Get 分类ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分类ID 
      * @return CategoryId 分类ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCategoryId() {
         return this.CategoryId;
@@ -397,19 +383,15 @@ public class DspaCOSDataAssetDetail extends AbstractModel {
 
     /**
      * Set 分类ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CategoryId 分类ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCategoryId(Long CategoryId) {
         this.CategoryId = CategoryId;
     }
 
     /**
-     * Get 分级ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分级ID 
      * @return LevelId 分级ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLevelId() {
         return this.LevelId;
@@ -417,19 +399,15 @@ public class DspaCOSDataAssetDetail extends AbstractModel {
 
     /**
      * Set 分级ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LevelId 分级ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLevelId(Long LevelId) {
         this.LevelId = LevelId;
     }
 
     /**
-     * Get 文件扫描结果ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文件扫描结果ID 
      * @return FileResultId 文件扫描结果ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFileResultId() {
         return this.FileResultId;
@@ -437,19 +415,15 @@ public class DspaCOSDataAssetDetail extends AbstractModel {
 
     /**
      * Set 文件扫描结果ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FileResultId 文件扫描结果ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileResultId(Long FileResultId) {
         this.FileResultId = FileResultId;
     }
 
     /**
-     * Get 数据源名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据源名称 
      * @return DataSourceName 数据源名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDataSourceName() {
         return this.DataSourceName;
@@ -457,19 +431,15 @@ public class DspaCOSDataAssetDetail extends AbstractModel {
 
     /**
      * Set 数据源名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DataSourceName 数据源名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataSourceName(String DataSourceName) {
         this.DataSourceName = DataSourceName;
     }
 
     /**
-     * Get 分类路径
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分类路径 
      * @return CategoryFullPath 分类路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCategoryFullPath() {
         return this.CategoryFullPath;
@@ -477,9 +447,7 @@ public class DspaCOSDataAssetDetail extends AbstractModel {
 
     /**
      * Set 分类路径
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CategoryFullPath 分类路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCategoryFullPath(String CategoryFullPath) {
         this.CategoryFullPath = CategoryFullPath;
@@ -487,11 +455,9 @@ public class DspaCOSDataAssetDetail extends AbstractModel {
 
     /**
      * Get 0-系统识别
-1-人工识别
-注意：此字段可能返回 null，表示取不到有效值。 
+1-人工识别 
      * @return IdentifyType 0-系统识别
 1-人工识别
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIdentifyType() {
         return this.IdentifyType;
@@ -500,10 +466,8 @@ public class DspaCOSDataAssetDetail extends AbstractModel {
     /**
      * Set 0-系统识别
 1-人工识别
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IdentifyType 0-系统识别
 1-人工识别
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIdentifyType(Long IdentifyType) {
         this.IdentifyType = IdentifyType;
@@ -511,11 +475,9 @@ public class DspaCOSDataAssetDetail extends AbstractModel {
 
     /**
      * Get 0-系统识别
-1-人工识别
-注意：此字段可能返回 null，表示取不到有效值。 
+1-人工识别 
      * @return CheckStatus 0-系统识别
 1-人工识别
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCheckStatus() {
         return this.CheckStatus;
@@ -524,10 +486,8 @@ public class DspaCOSDataAssetDetail extends AbstractModel {
     /**
      * Set 0-系统识别
 1-人工识别
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CheckStatus 0-系统识别
 1-人工识别
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCheckStatus(Long CheckStatus) {
         this.CheckStatus = CheckStatus;

@@ -25,7 +25,6 @@ public class TemplateInfo extends AbstractModel {
 
     /**
     * 模板id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TemplateId")
     @Expose
@@ -33,17 +32,14 @@ public class TemplateInfo extends AbstractModel {
 
     /**
     * 模板名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TemplateName")
     @Expose
     private String TemplateName;
 
     /**
-     * Get 模板id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 模板id 
      * @return TemplateId 模板id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTemplateId() {
         return this.TemplateId;
@@ -51,19 +47,15 @@ public class TemplateInfo extends AbstractModel {
 
     /**
      * Set 模板id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TemplateId 模板id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTemplateId(Long TemplateId) {
         this.TemplateId = TemplateId;
     }
 
     /**
-     * Get 模板名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 模板名称 
      * @return TemplateName 模板名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTemplateName() {
         return this.TemplateName;
@@ -71,9 +63,7 @@ public class TemplateInfo extends AbstractModel {
 
     /**
      * Set 模板名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TemplateName 模板名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTemplateName(String TemplateName) {
         this.TemplateName = TemplateName;

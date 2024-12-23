@@ -25,7 +25,6 @@ public class DescribeReportTaskDownloadUrlResponse extends AbstractModel {
 
     /**
     * 下载链接集合
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DownloadUrlSet")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeReportTaskDownloadUrlResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 下载链接集合
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 下载链接集合 
      * @return DownloadUrlSet 下载链接集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getDownloadUrlSet() {
         return this.DownloadUrlSet;
@@ -50,9 +47,7 @@ public class DescribeReportTaskDownloadUrlResponse extends AbstractModel {
 
     /**
      * Set 下载链接集合
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DownloadUrlSet 下载链接集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDownloadUrlSet(String [] DownloadUrlSet) {
         this.DownloadUrlSet = DownloadUrlSet;

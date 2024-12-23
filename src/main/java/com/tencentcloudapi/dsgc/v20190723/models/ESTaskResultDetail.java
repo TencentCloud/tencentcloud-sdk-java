@@ -25,7 +25,6 @@ public class ESTaskResultDetail extends AbstractModel {
 
     /**
     * id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Id")
     @Expose
@@ -33,7 +32,6 @@ public class ESTaskResultDetail extends AbstractModel {
 
     /**
     * 任务id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskId")
     @Expose
@@ -41,7 +39,6 @@ public class ESTaskResultDetail extends AbstractModel {
 
     /**
     * 字段名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FieldName")
     @Expose
@@ -49,7 +46,6 @@ public class ESTaskResultDetail extends AbstractModel {
 
     /**
     * 规则id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleId")
     @Expose
@@ -57,7 +53,6 @@ public class ESTaskResultDetail extends AbstractModel {
 
     /**
     * 规则名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleName")
     @Expose
@@ -65,7 +60,6 @@ public class ESTaskResultDetail extends AbstractModel {
 
     /**
     * 分类id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CategoryId")
     @Expose
@@ -73,7 +67,6 @@ public class ESTaskResultDetail extends AbstractModel {
 
     /**
     * 分类名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CategoryName")
     @Expose
@@ -81,7 +74,6 @@ public class ESTaskResultDetail extends AbstractModel {
 
     /**
     * 多级分类的路径
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CategoryArr")
     @Expose
@@ -89,7 +81,6 @@ public class ESTaskResultDetail extends AbstractModel {
 
     /**
     * 分级id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LevelId")
     @Expose
@@ -97,7 +88,6 @@ public class ESTaskResultDetail extends AbstractModel {
 
     /**
     * 分级名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LevelName")
     @Expose
@@ -105,17 +95,14 @@ public class ESTaskResultDetail extends AbstractModel {
 
     /**
     * 分级分数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LevelRiskScore")
     @Expose
     private Long LevelRiskScore;
 
     /**
-     * Get id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get id 
      * @return Id id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getId() {
         return this.Id;
@@ -123,19 +110,15 @@ public class ESTaskResultDetail extends AbstractModel {
 
     /**
      * Set id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Id id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get 任务id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务id 
      * @return TaskId 任务id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTaskId() {
         return this.TaskId;
@@ -143,19 +126,15 @@ public class ESTaskResultDetail extends AbstractModel {
 
     /**
      * Set 任务id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskId 任务id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get 字段名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 字段名称 
      * @return FieldName 字段名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFieldName() {
         return this.FieldName;
@@ -163,19 +142,15 @@ public class ESTaskResultDetail extends AbstractModel {
 
     /**
      * Set 字段名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FieldName 字段名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFieldName(String FieldName) {
         this.FieldName = FieldName;
     }
 
     /**
-     * Get 规则id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则id 
      * @return RuleId 规则id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRuleId() {
         return this.RuleId;
@@ -183,19 +158,15 @@ public class ESTaskResultDetail extends AbstractModel {
 
     /**
      * Set 规则id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RuleId 规则id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleId(Long RuleId) {
         this.RuleId = RuleId;
     }
 
     /**
-     * Get 规则名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则名称 
      * @return RuleName 规则名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRuleName() {
         return this.RuleName;
@@ -203,19 +174,15 @@ public class ESTaskResultDetail extends AbstractModel {
 
     /**
      * Set 规则名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RuleName 规则名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleName(String RuleName) {
         this.RuleName = RuleName;
     }
 
     /**
-     * Get 分类id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分类id 
      * @return CategoryId 分类id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCategoryId() {
         return this.CategoryId;
@@ -223,19 +190,15 @@ public class ESTaskResultDetail extends AbstractModel {
 
     /**
      * Set 分类id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CategoryId 分类id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCategoryId(Long CategoryId) {
         this.CategoryId = CategoryId;
     }
 
     /**
-     * Get 分类名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分类名称 
      * @return CategoryName 分类名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCategoryName() {
         return this.CategoryName;
@@ -243,19 +206,15 @@ public class ESTaskResultDetail extends AbstractModel {
 
     /**
      * Set 分类名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CategoryName 分类名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCategoryName(String CategoryName) {
         this.CategoryName = CategoryName;
     }
 
     /**
-     * Get 多级分类的路径
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 多级分类的路径 
      * @return CategoryArr 多级分类的路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getCategoryArr() {
         return this.CategoryArr;
@@ -263,19 +222,15 @@ public class ESTaskResultDetail extends AbstractModel {
 
     /**
      * Set 多级分类的路径
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CategoryArr 多级分类的路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCategoryArr(String [] CategoryArr) {
         this.CategoryArr = CategoryArr;
     }
 
     /**
-     * Get 分级id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分级id 
      * @return LevelId 分级id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLevelId() {
         return this.LevelId;
@@ -283,19 +238,15 @@ public class ESTaskResultDetail extends AbstractModel {
 
     /**
      * Set 分级id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LevelId 分级id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLevelId(Long LevelId) {
         this.LevelId = LevelId;
     }
 
     /**
-     * Get 分级名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分级名称 
      * @return LevelName 分级名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLevelName() {
         return this.LevelName;
@@ -303,19 +254,15 @@ public class ESTaskResultDetail extends AbstractModel {
 
     /**
      * Set 分级名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LevelName 分级名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLevelName(String LevelName) {
         this.LevelName = LevelName;
     }
 
     /**
-     * Get 分级分数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分级分数 
      * @return LevelRiskScore 分级分数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLevelRiskScore() {
         return this.LevelRiskScore;
@@ -323,9 +270,7 @@ public class ESTaskResultDetail extends AbstractModel {
 
     /**
      * Set 分级分数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LevelRiskScore 分级分数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLevelRiskScore(Long LevelRiskScore) {
         this.LevelRiskScore = LevelRiskScore;

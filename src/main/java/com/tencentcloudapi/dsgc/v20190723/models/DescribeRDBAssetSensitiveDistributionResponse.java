@@ -25,7 +25,6 @@ public class DescribeRDBAssetSensitiveDistributionResponse extends AbstractModel
 
     /**
     * rdb的资产统计数据
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RDBAsset")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeRDBAssetSensitiveDistributionResponse extends AbstractModel
 
     /**
     * 涉敏top数据
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TopAsset")
     @Expose
@@ -41,7 +39,6 @@ public class DescribeRDBAssetSensitiveDistributionResponse extends AbstractModel
 
     /**
     * rdb的详情列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RDBDetail")
     @Expose
@@ -55,10 +52,8 @@ public class DescribeRDBAssetSensitiveDistributionResponse extends AbstractModel
     private String RequestId;
 
     /**
-     * Get rdb的资产统计数据
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get rdb的资产统计数据 
      * @return RDBAsset rdb的资产统计数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RDBAsset getRDBAsset() {
         return this.RDBAsset;
@@ -66,19 +61,15 @@ public class DescribeRDBAssetSensitiveDistributionResponse extends AbstractModel
 
     /**
      * Set rdb的资产统计数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RDBAsset rdb的资产统计数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRDBAsset(RDBAsset RDBAsset) {
         this.RDBAsset = RDBAsset;
     }
 
     /**
-     * Get 涉敏top数据
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 涉敏top数据 
      * @return TopAsset 涉敏top数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TopAsset [] getTopAsset() {
         return this.TopAsset;
@@ -86,19 +77,15 @@ public class DescribeRDBAssetSensitiveDistributionResponse extends AbstractModel
 
     /**
      * Set 涉敏top数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TopAsset 涉敏top数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTopAsset(TopAsset [] TopAsset) {
         this.TopAsset = TopAsset;
     }
 
     /**
-     * Get rdb的详情列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get rdb的详情列表 
      * @return RDBDetail rdb的详情列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AssetDBDetail [] getRDBDetail() {
         return this.RDBDetail;
@@ -106,9 +93,7 @@ public class DescribeRDBAssetSensitiveDistributionResponse extends AbstractModel
 
     /**
      * Set rdb的详情列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RDBDetail rdb的详情列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRDBDetail(AssetDBDetail [] RDBDetail) {
         this.RDBDetail = RDBDetail;

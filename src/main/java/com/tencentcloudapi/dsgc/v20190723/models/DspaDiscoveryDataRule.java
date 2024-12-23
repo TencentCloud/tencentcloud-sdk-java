@@ -27,7 +27,6 @@ public class DspaDiscoveryDataRule extends AbstractModel {
     * 规则类型；取值：
 keyword 关键字, 
 regex 正则
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleType")
     @Expose
@@ -35,7 +34,6 @@ regex 正则
 
     /**
     * 内容
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleContent")
     @Expose
@@ -43,7 +41,6 @@ regex 正则
 
     /**
     * 该字段是针对规则类型RuleType为keyword类型时的一个扩展属性
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExtendParameters")
     @Expose
@@ -52,12 +49,10 @@ regex 正则
     /**
      * Get 规则类型；取值：
 keyword 关键字, 
-regex 正则
-注意：此字段可能返回 null，表示取不到有效值。 
+regex 正则 
      * @return RuleType 规则类型；取值：
 keyword 关键字, 
 regex 正则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRuleType() {
         return this.RuleType;
@@ -67,21 +62,17 @@ regex 正则
      * Set 规则类型；取值：
 keyword 关键字, 
 regex 正则
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RuleType 规则类型；取值：
 keyword 关键字, 
 regex 正则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleType(String RuleType) {
         this.RuleType = RuleType;
     }
 
     /**
-     * Get 内容
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 内容 
      * @return RuleContent 内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRuleContent() {
         return this.RuleContent;
@@ -89,19 +80,15 @@ regex 正则
 
     /**
      * Set 内容
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RuleContent 内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleContent(String RuleContent) {
         this.RuleContent = RuleContent;
     }
 
     /**
-     * Get 该字段是针对规则类型RuleType为keyword类型时的一个扩展属性
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该字段是针对规则类型RuleType为keyword类型时的一个扩展属性 
      * @return ExtendParameters 该字段是针对规则类型RuleType为keyword类型时的一个扩展属性
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DatagovRuleExtendParameter [] getExtendParameters() {
         return this.ExtendParameters;
@@ -109,9 +96,7 @@ regex 正则
 
     /**
      * Set 该字段是针对规则类型RuleType为keyword类型时的一个扩展属性
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExtendParameters 该字段是针对规则类型RuleType为keyword类型时的一个扩展属性
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExtendParameters(DatagovRuleExtendParameter [] ExtendParameters) {
         this.ExtendParameters = ExtendParameters;

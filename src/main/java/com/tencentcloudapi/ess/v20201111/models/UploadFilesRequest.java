@@ -42,7 +42,9 @@ public class UploadFilesRequest extends AbstractModel {
     private Caller Caller;
 
     /**
-    * 上传文件内容数组，最多支持上传20个文件。
+    * 请上传文件内容数组，最多可上传20个文件。
+
+<b>所有文件必须符合<font color="red">FileType</font>指定的文件类型。</b>
     */
     @SerializedName("FileInfos")
     @Expose
@@ -150,16 +152,24 @@ public class UploadFilesRequest extends AbstractModel {
     }
 
     /**
-     * Get 上传文件内容数组，最多支持上传20个文件。 
-     * @return FileInfos 上传文件内容数组，最多支持上传20个文件。
+     * Get 请上传文件内容数组，最多可上传20个文件。
+
+<b>所有文件必须符合<font color="red">FileType</font>指定的文件类型。</b> 
+     * @return FileInfos 请上传文件内容数组，最多可上传20个文件。
+
+<b>所有文件必须符合<font color="red">FileType</font>指定的文件类型。</b>
      */
     public UploadFile [] getFileInfos() {
         return this.FileInfos;
     }
 
     /**
-     * Set 上传文件内容数组，最多支持上传20个文件。
-     * @param FileInfos 上传文件内容数组，最多支持上传20个文件。
+     * Set 请上传文件内容数组，最多可上传20个文件。
+
+<b>所有文件必须符合<font color="red">FileType</font>指定的文件类型。</b>
+     * @param FileInfos 请上传文件内容数组，最多可上传20个文件。
+
+<b>所有文件必须符合<font color="red">FileType</font>指定的文件类型。</b>
      */
     public void setFileInfos(UploadFile [] FileInfos) {
         this.FileInfos = FileInfos;

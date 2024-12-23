@@ -32,7 +32,6 @@ public class DescribeDSPAAssessmentRiskLevelListResponse extends AbstractModel {
 
     /**
     * 风险等级列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RiskLevelList")
     @Expose
@@ -62,10 +61,8 @@ public class DescribeDSPAAssessmentRiskLevelListResponse extends AbstractModel {
     }
 
     /**
-     * Get 风险等级列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 风险等级列表 
      * @return RiskLevelList 风险等级列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RiskLevelRisk [] getRiskLevelList() {
         return this.RiskLevelList;
@@ -73,9 +70,7 @@ public class DescribeDSPAAssessmentRiskLevelListResponse extends AbstractModel {
 
     /**
      * Set 风险等级列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RiskLevelList 风险等级列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRiskLevelList(RiskLevelRisk [] RiskLevelList) {
         this.RiskLevelList = RiskLevelList;

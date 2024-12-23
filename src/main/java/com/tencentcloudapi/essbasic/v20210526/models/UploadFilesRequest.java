@@ -49,7 +49,9 @@ public class UploadFilesRequest extends AbstractModel {
     private String BusinessType;
 
     /**
-    * 上传文件内容数组，最多支持上传20个文件。
+    * 上传文件内容数组，一次最多可上传20个文件。
+
+<b>若上传多个文件，所有文件必须为相同类型</b>，例如全部为PDF或全部为Word文件。不支持混合文件类型的上传。
     */
     @SerializedName("FileInfos")
     @Expose
@@ -139,16 +141,24 @@ public class UploadFilesRequest extends AbstractModel {
     }
 
     /**
-     * Get 上传文件内容数组，最多支持上传20个文件。 
-     * @return FileInfos 上传文件内容数组，最多支持上传20个文件。
+     * Get 上传文件内容数组，一次最多可上传20个文件。
+
+<b>若上传多个文件，所有文件必须为相同类型</b>，例如全部为PDF或全部为Word文件。不支持混合文件类型的上传。 
+     * @return FileInfos 上传文件内容数组，一次最多可上传20个文件。
+
+<b>若上传多个文件，所有文件必须为相同类型</b>，例如全部为PDF或全部为Word文件。不支持混合文件类型的上传。
      */
     public UploadFile [] getFileInfos() {
         return this.FileInfos;
     }
 
     /**
-     * Set 上传文件内容数组，最多支持上传20个文件。
-     * @param FileInfos 上传文件内容数组，最多支持上传20个文件。
+     * Set 上传文件内容数组，一次最多可上传20个文件。
+
+<b>若上传多个文件，所有文件必须为相同类型</b>，例如全部为PDF或全部为Word文件。不支持混合文件类型的上传。
+     * @param FileInfos 上传文件内容数组，一次最多可上传20个文件。
+
+<b>若上传多个文件，所有文件必须为相同类型</b>，例如全部为PDF或全部为Word文件。不支持混合文件类型的上传。
      */
     public void setFileInfos(UploadFile [] FileInfos) {
         this.FileInfos = FileInfos;

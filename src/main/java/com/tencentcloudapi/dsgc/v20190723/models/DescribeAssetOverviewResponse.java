@@ -25,7 +25,6 @@ public class DescribeAssetOverviewResponse extends AbstractModel {
 
     /**
     * 数据库实例id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DBInstanceNums")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeAssetOverviewResponse extends AbstractModel {
 
     /**
     * 数据库个数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DBNums")
     @Expose
@@ -41,7 +39,6 @@ public class DescribeAssetOverviewResponse extends AbstractModel {
 
     /**
     * 表的个数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TableNums")
     @Expose
@@ -49,7 +46,6 @@ public class DescribeAssetOverviewResponse extends AbstractModel {
 
     /**
     * 字段个数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FieldNums")
     @Expose
@@ -57,7 +53,6 @@ public class DescribeAssetOverviewResponse extends AbstractModel {
 
     /**
     * 数据库实例的分布情况
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DBInstanceDistribution")
     @Expose
@@ -65,7 +60,6 @@ public class DescribeAssetOverviewResponse extends AbstractModel {
 
     /**
     * db分布情况
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DBDistribution")
     @Expose
@@ -73,7 +67,6 @@ public class DescribeAssetOverviewResponse extends AbstractModel {
 
     /**
     * cos桶的数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BucketNums")
     @Expose
@@ -81,7 +74,6 @@ public class DescribeAssetOverviewResponse extends AbstractModel {
 
     /**
     * 文件个数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileNums")
     @Expose
@@ -89,7 +81,6 @@ public class DescribeAssetOverviewResponse extends AbstractModel {
 
     /**
     * 用于对用户进行提示信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Remark")
     @Expose
@@ -97,7 +88,6 @@ public class DescribeAssetOverviewResponse extends AbstractModel {
 
     /**
     * es实例数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EsInstanceNums")
     @Expose
@@ -105,7 +95,6 @@ public class DescribeAssetOverviewResponse extends AbstractModel {
 
     /**
     * es索引数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EsIndexNums")
     @Expose
@@ -113,7 +102,6 @@ public class DescribeAssetOverviewResponse extends AbstractModel {
 
     /**
     * es字段数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EsFieldNums")
     @Expose
@@ -121,7 +109,6 @@ public class DescribeAssetOverviewResponse extends AbstractModel {
 
     /**
     * mongo实例数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MongoInstanceNums")
     @Expose
@@ -129,7 +116,6 @@ public class DescribeAssetOverviewResponse extends AbstractModel {
 
     /**
     * mongo数据库数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MongoDbNums")
     @Expose
@@ -137,7 +123,6 @@ public class DescribeAssetOverviewResponse extends AbstractModel {
 
     /**
     * mongo集合数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MongoColNums")
     @Expose
@@ -145,7 +130,6 @@ public class DescribeAssetOverviewResponse extends AbstractModel {
 
     /**
     * mongo字段数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MongoFieldNums")
     @Expose
@@ -159,10 +143,8 @@ public class DescribeAssetOverviewResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 数据库实例id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据库实例id 
      * @return DBInstanceNums 数据库实例id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDBInstanceNums() {
         return this.DBInstanceNums;
@@ -170,19 +152,15 @@ public class DescribeAssetOverviewResponse extends AbstractModel {
 
     /**
      * Set 数据库实例id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DBInstanceNums 数据库实例id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDBInstanceNums(Long DBInstanceNums) {
         this.DBInstanceNums = DBInstanceNums;
     }
 
     /**
-     * Get 数据库个数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据库个数 
      * @return DBNums 数据库个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDBNums() {
         return this.DBNums;
@@ -190,19 +168,15 @@ public class DescribeAssetOverviewResponse extends AbstractModel {
 
     /**
      * Set 数据库个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DBNums 数据库个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDBNums(Long DBNums) {
         this.DBNums = DBNums;
     }
 
     /**
-     * Get 表的个数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 表的个数 
      * @return TableNums 表的个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTableNums() {
         return this.TableNums;
@@ -210,19 +184,15 @@ public class DescribeAssetOverviewResponse extends AbstractModel {
 
     /**
      * Set 表的个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TableNums 表的个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTableNums(Long TableNums) {
         this.TableNums = TableNums;
     }
 
     /**
-     * Get 字段个数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 字段个数 
      * @return FieldNums 字段个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFieldNums() {
         return this.FieldNums;
@@ -230,19 +200,15 @@ public class DescribeAssetOverviewResponse extends AbstractModel {
 
     /**
      * Set 字段个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FieldNums 字段个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFieldNums(Long FieldNums) {
         this.FieldNums = FieldNums;
     }
 
     /**
-     * Get 数据库实例的分布情况
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据库实例的分布情况 
      * @return DBInstanceDistribution 数据库实例的分布情况
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Note [] getDBInstanceDistribution() {
         return this.DBInstanceDistribution;
@@ -250,19 +216,15 @@ public class DescribeAssetOverviewResponse extends AbstractModel {
 
     /**
      * Set 数据库实例的分布情况
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DBInstanceDistribution 数据库实例的分布情况
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDBInstanceDistribution(Note [] DBInstanceDistribution) {
         this.DBInstanceDistribution = DBInstanceDistribution;
     }
 
     /**
-     * Get db分布情况
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get db分布情况 
      * @return DBDistribution db分布情况
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Note [] getDBDistribution() {
         return this.DBDistribution;
@@ -270,19 +232,15 @@ public class DescribeAssetOverviewResponse extends AbstractModel {
 
     /**
      * Set db分布情况
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DBDistribution db分布情况
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDBDistribution(Note [] DBDistribution) {
         this.DBDistribution = DBDistribution;
     }
 
     /**
-     * Get cos桶的数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get cos桶的数量 
      * @return BucketNums cos桶的数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBucketNums() {
         return this.BucketNums;
@@ -290,19 +248,15 @@ public class DescribeAssetOverviewResponse extends AbstractModel {
 
     /**
      * Set cos桶的数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BucketNums cos桶的数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBucketNums(Long BucketNums) {
         this.BucketNums = BucketNums;
     }
 
     /**
-     * Get 文件个数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文件个数 
      * @return FileNums 文件个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFileNums() {
         return this.FileNums;
@@ -310,19 +264,15 @@ public class DescribeAssetOverviewResponse extends AbstractModel {
 
     /**
      * Set 文件个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FileNums 文件个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileNums(Long FileNums) {
         this.FileNums = FileNums;
     }
 
     /**
-     * Get 用于对用户进行提示信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用于对用户进行提示信息 
      * @return Remark 用于对用户进行提示信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRemark() {
         return this.Remark;
@@ -330,19 +280,15 @@ public class DescribeAssetOverviewResponse extends AbstractModel {
 
     /**
      * Set 用于对用户进行提示信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Remark 用于对用户进行提示信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get es实例数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get es实例数量 
      * @return EsInstanceNums es实例数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getEsInstanceNums() {
         return this.EsInstanceNums;
@@ -350,19 +296,15 @@ public class DescribeAssetOverviewResponse extends AbstractModel {
 
     /**
      * Set es实例数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EsInstanceNums es实例数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEsInstanceNums(Long EsInstanceNums) {
         this.EsInstanceNums = EsInstanceNums;
     }
 
     /**
-     * Get es索引数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get es索引数量 
      * @return EsIndexNums es索引数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getEsIndexNums() {
         return this.EsIndexNums;
@@ -370,19 +312,15 @@ public class DescribeAssetOverviewResponse extends AbstractModel {
 
     /**
      * Set es索引数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EsIndexNums es索引数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEsIndexNums(Long EsIndexNums) {
         this.EsIndexNums = EsIndexNums;
     }
 
     /**
-     * Get es字段数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get es字段数量 
      * @return EsFieldNums es字段数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getEsFieldNums() {
         return this.EsFieldNums;
@@ -390,19 +328,15 @@ public class DescribeAssetOverviewResponse extends AbstractModel {
 
     /**
      * Set es字段数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EsFieldNums es字段数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEsFieldNums(Long EsFieldNums) {
         this.EsFieldNums = EsFieldNums;
     }
 
     /**
-     * Get mongo实例数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get mongo实例数量 
      * @return MongoInstanceNums mongo实例数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMongoInstanceNums() {
         return this.MongoInstanceNums;
@@ -410,19 +344,15 @@ public class DescribeAssetOverviewResponse extends AbstractModel {
 
     /**
      * Set mongo实例数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MongoInstanceNums mongo实例数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMongoInstanceNums(Long MongoInstanceNums) {
         this.MongoInstanceNums = MongoInstanceNums;
     }
 
     /**
-     * Get mongo数据库数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get mongo数据库数量 
      * @return MongoDbNums mongo数据库数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMongoDbNums() {
         return this.MongoDbNums;
@@ -430,19 +360,15 @@ public class DescribeAssetOverviewResponse extends AbstractModel {
 
     /**
      * Set mongo数据库数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MongoDbNums mongo数据库数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMongoDbNums(Long MongoDbNums) {
         this.MongoDbNums = MongoDbNums;
     }
 
     /**
-     * Get mongo集合数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get mongo集合数量 
      * @return MongoColNums mongo集合数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMongoColNums() {
         return this.MongoColNums;
@@ -450,19 +376,15 @@ public class DescribeAssetOverviewResponse extends AbstractModel {
 
     /**
      * Set mongo集合数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MongoColNums mongo集合数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMongoColNums(Long MongoColNums) {
         this.MongoColNums = MongoColNums;
     }
 
     /**
-     * Get mongo字段数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get mongo字段数量 
      * @return MongoFieldNums mongo字段数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMongoFieldNums() {
         return this.MongoFieldNums;
@@ -470,9 +392,7 @@ public class DescribeAssetOverviewResponse extends AbstractModel {
 
     /**
      * Set mongo字段数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MongoFieldNums mongo字段数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMongoFieldNums(Long MongoFieldNums) {
         this.MongoFieldNums = MongoFieldNums;

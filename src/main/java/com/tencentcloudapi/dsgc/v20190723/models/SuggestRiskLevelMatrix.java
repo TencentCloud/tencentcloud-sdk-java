@@ -25,17 +25,14 @@ public class SuggestRiskLevelMatrix extends AbstractModel {
 
     /**
     * 矩阵
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RiskLevelMatrix")
     @Expose
     private SuggestRiskLevelMatrixItem [] RiskLevelMatrix;
 
     /**
-     * Get 矩阵
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 矩阵 
      * @return RiskLevelMatrix 矩阵
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SuggestRiskLevelMatrixItem [] getRiskLevelMatrix() {
         return this.RiskLevelMatrix;
@@ -43,9 +40,7 @@ public class SuggestRiskLevelMatrix extends AbstractModel {
 
     /**
      * Set 矩阵
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RiskLevelMatrix 矩阵
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRiskLevelMatrix(SuggestRiskLevelMatrixItem [] RiskLevelMatrix) {
         this.RiskLevelMatrix = RiskLevelMatrix;

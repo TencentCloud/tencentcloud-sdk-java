@@ -25,7 +25,6 @@ public class DescribeDSPACOSDataAssetBucketsResponse extends AbstractModel {
 
     /**
     * COS对象存储敏感数据资产已扫描的桶集合。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Buckets")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeDSPACOSDataAssetBucketsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get COS对象存储敏感数据资产已扫描的桶集合。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get COS对象存储敏感数据资产已扫描的桶集合。 
      * @return Buckets COS对象存储敏感数据资产已扫描的桶集合。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getBuckets() {
         return this.Buckets;
@@ -50,9 +47,7 @@ public class DescribeDSPACOSDataAssetBucketsResponse extends AbstractModel {
 
     /**
      * Set COS对象存储敏感数据资产已扫描的桶集合。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Buckets COS对象存储敏感数据资产已扫描的桶集合。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBuckets(String [] Buckets) {
         this.Buckets = Buckets;

@@ -25,7 +25,6 @@ public class DescribeDSPACOSDataAssetDetailResponse extends AbstractModel {
 
     /**
     * COS对象存储敏感数据资产详情列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Details")
     @Expose
@@ -46,10 +45,8 @@ public class DescribeDSPACOSDataAssetDetailResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get COS对象存储敏感数据资产详情列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get COS对象存储敏感数据资产详情列表 
      * @return Details COS对象存储敏感数据资产详情列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DspaCOSDataAssetDetail [] getDetails() {
         return this.Details;
@@ -57,9 +54,7 @@ public class DescribeDSPACOSDataAssetDetailResponse extends AbstractModel {
 
     /**
      * Set COS对象存储敏感数据资产详情列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Details COS对象存储敏感数据资产详情列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDetails(DspaCOSDataAssetDetail [] Details) {
         this.Details = Details;

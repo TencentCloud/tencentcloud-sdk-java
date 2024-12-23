@@ -25,7 +25,6 @@ public class DspaDiscoveryDataRules extends AbstractModel {
 
     /**
     * 操作符；只能取and, or的其中一种
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Operator")
     @Expose
@@ -33,17 +32,14 @@ public class DspaDiscoveryDataRules extends AbstractModel {
 
     /**
     * 规则
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Contents")
     @Expose
     private DspaDiscoveryDataRule [] Contents;
 
     /**
-     * Get 操作符；只能取and, or的其中一种
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 操作符；只能取and, or的其中一种 
      * @return Operator 操作符；只能取and, or的其中一种
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOperator() {
         return this.Operator;
@@ -51,19 +47,15 @@ public class DspaDiscoveryDataRules extends AbstractModel {
 
     /**
      * Set 操作符；只能取and, or的其中一种
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Operator 操作符；只能取and, or的其中一种
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOperator(String Operator) {
         this.Operator = Operator;
     }
 
     /**
-     * Get 规则
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则 
      * @return Contents 规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DspaDiscoveryDataRule [] getContents() {
         return this.Contents;
@@ -71,9 +63,7 @@ public class DspaDiscoveryDataRules extends AbstractModel {
 
     /**
      * Set 规则
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Contents 规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContents(DspaDiscoveryDataRule [] Contents) {
         this.Contents = Contents;

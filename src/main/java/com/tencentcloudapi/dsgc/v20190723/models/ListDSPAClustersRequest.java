@@ -39,10 +39,11 @@ public class ListDSPAClustersRequest extends AbstractModel {
 
     /**
     * 过滤项。
-支持的过滤项包括：DspaId、Status、Version、DspaName。
+支持的过滤项包括：DspaId、Status、Version、DspaName、Channel。
 DspaId和DspaName支持模糊搜索。
 Status支持的可选值：enabled、disabled。
 Version支持的可选值：trial、official。
+Channel支持的可选值：sp_cds_dsgc_pre（代表dsgc实例）、sp_cds_dsgc_wedata_dc（代表wedata实例）
     */
     @SerializedName("Filters")
     @Expose
@@ -50,6 +51,12 @@ Version支持的可选值：trial、official。
 
     /**
     * 展示模式。
+
+目前只有两个值的处理逻辑：
+
+空值：需要查询每个实例的配额信息，因为是串行查询，所以速度很慢，limit最大为100
+
+"simple"：不需要查询每个实例的配额信息，速度快，limit最大为1000
     */
     @SerializedName("ListMode")
     @Expose
@@ -89,15 +96,17 @@ Version支持的可选值：trial、official。
 
     /**
      * Get 过滤项。
-支持的过滤项包括：DspaId、Status、Version、DspaName。
-DspaId和DspaName支持模糊搜索。
-Status支持的可选值：enabled、disabled。
-Version支持的可选值：trial、official。 
-     * @return Filters 过滤项。
-支持的过滤项包括：DspaId、Status、Version、DspaName。
+支持的过滤项包括：DspaId、Status、Version、DspaName、Channel。
 DspaId和DspaName支持模糊搜索。
 Status支持的可选值：enabled、disabled。
 Version支持的可选值：trial、official。
+Channel支持的可选值：sp_cds_dsgc_pre（代表dsgc实例）、sp_cds_dsgc_wedata_dc（代表wedata实例） 
+     * @return Filters 过滤项。
+支持的过滤项包括：DspaId、Status、Version、DspaName、Channel。
+DspaId和DspaName支持模糊搜索。
+Status支持的可选值：enabled、disabled。
+Version支持的可选值：trial、official。
+Channel支持的可选值：sp_cds_dsgc_pre（代表dsgc实例）、sp_cds_dsgc_wedata_dc（代表wedata实例）
      */
     public DspaDataSourceMngFilter [] getFilters() {
         return this.Filters;
@@ -105,23 +114,37 @@ Version支持的可选值：trial、official。
 
     /**
      * Set 过滤项。
-支持的过滤项包括：DspaId、Status、Version、DspaName。
+支持的过滤项包括：DspaId、Status、Version、DspaName、Channel。
 DspaId和DspaName支持模糊搜索。
 Status支持的可选值：enabled、disabled。
 Version支持的可选值：trial、official。
+Channel支持的可选值：sp_cds_dsgc_pre（代表dsgc实例）、sp_cds_dsgc_wedata_dc（代表wedata实例）
      * @param Filters 过滤项。
-支持的过滤项包括：DspaId、Status、Version、DspaName。
+支持的过滤项包括：DspaId、Status、Version、DspaName、Channel。
 DspaId和DspaName支持模糊搜索。
 Status支持的可选值：enabled、disabled。
 Version支持的可选值：trial、official。
+Channel支持的可选值：sp_cds_dsgc_pre（代表dsgc实例）、sp_cds_dsgc_wedata_dc（代表wedata实例）
      */
     public void setFilters(DspaDataSourceMngFilter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get 展示模式。 
+     * Get 展示模式。
+
+目前只有两个值的处理逻辑：
+
+空值：需要查询每个实例的配额信息，因为是串行查询，所以速度很慢，limit最大为100
+
+"simple"：不需要查询每个实例的配额信息，速度快，limit最大为1000 
      * @return ListMode 展示模式。
+
+目前只有两个值的处理逻辑：
+
+空值：需要查询每个实例的配额信息，因为是串行查询，所以速度很慢，limit最大为100
+
+"simple"：不需要查询每个实例的配额信息，速度快，limit最大为1000
      */
     public String getListMode() {
         return this.ListMode;
@@ -129,7 +152,19 @@ Version支持的可选值：trial、official。
 
     /**
      * Set 展示模式。
+
+目前只有两个值的处理逻辑：
+
+空值：需要查询每个实例的配额信息，因为是串行查询，所以速度很慢，limit最大为100
+
+"simple"：不需要查询每个实例的配额信息，速度快，limit最大为1000
      * @param ListMode 展示模式。
+
+目前只有两个值的处理逻辑：
+
+空值：需要查询每个实例的配额信息，因为是串行查询，所以速度很慢，limit最大为100
+
+"simple"：不需要查询每个实例的配额信息，速度快，limit最大为1000
      */
     public void setListMode(String ListMode) {
         this.ListMode = ListMode;

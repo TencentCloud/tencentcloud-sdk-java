@@ -102,7 +102,6 @@ public class DspaDiscoveryTaskResultDetail extends AbstractModel {
 
     /**
     * 保护措施
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SafeGuard")
     @Expose
@@ -110,11 +109,17 @@ public class DspaDiscoveryTaskResultDetail extends AbstractModel {
 
     /**
     * 分类路径
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CategoryFullPath")
     @Expose
     private String CategoryFullPath;
+
+    /**
+    * 模式名
+    */
+    @SerializedName("SchemaName")
+    @Expose
+    private String SchemaName;
 
     /**
      * Get 任务ID 
@@ -293,10 +298,8 @@ public class DspaDiscoveryTaskResultDetail extends AbstractModel {
     }
 
     /**
-     * Get 保护措施
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 保护措施 
      * @return SafeGuard 保护措施
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DspaSafeGuard getSafeGuard() {
         return this.SafeGuard;
@@ -304,19 +307,15 @@ public class DspaDiscoveryTaskResultDetail extends AbstractModel {
 
     /**
      * Set 保护措施
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SafeGuard 保护措施
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSafeGuard(DspaSafeGuard SafeGuard) {
         this.SafeGuard = SafeGuard;
     }
 
     /**
-     * Get 分类路径
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分类路径 
      * @return CategoryFullPath 分类路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCategoryFullPath() {
         return this.CategoryFullPath;
@@ -324,12 +323,26 @@ public class DspaDiscoveryTaskResultDetail extends AbstractModel {
 
     /**
      * Set 分类路径
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CategoryFullPath 分类路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCategoryFullPath(String CategoryFullPath) {
         this.CategoryFullPath = CategoryFullPath;
+    }
+
+    /**
+     * Get 模式名 
+     * @return SchemaName 模式名
+     */
+    public String getSchemaName() {
+        return this.SchemaName;
+    }
+
+    /**
+     * Set 模式名
+     * @param SchemaName 模式名
+     */
+    public void setSchemaName(String SchemaName) {
+        this.SchemaName = SchemaName;
     }
 
     public DspaDiscoveryTaskResultDetail() {
@@ -379,6 +392,9 @@ public class DspaDiscoveryTaskResultDetail extends AbstractModel {
         if (source.CategoryFullPath != null) {
             this.CategoryFullPath = new String(source.CategoryFullPath);
         }
+        if (source.SchemaName != null) {
+            this.SchemaName = new String(source.SchemaName);
+        }
     }
 
 
@@ -399,6 +415,7 @@ public class DspaDiscoveryTaskResultDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "LevelRiskScore", this.LevelRiskScore);
         this.setParamObj(map, prefix + "SafeGuard.", this.SafeGuard);
         this.setParamSimple(map, prefix + "CategoryFullPath", this.CategoryFullPath);
+        this.setParamSimple(map, prefix + "SchemaName", this.SchemaName);
 
     }
 }

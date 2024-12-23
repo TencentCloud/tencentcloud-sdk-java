@@ -25,7 +25,6 @@ public class DescribeDSPAESDataAssetByComplianceIdResponse extends AbstractModel
 
     /**
     * 概览统计结果
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Stats")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeDSPAESDataAssetByComplianceIdResponse extends AbstractModel
     private String RequestId;
 
     /**
-     * Get 概览统计结果
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 概览统计结果 
      * @return Stats 概览统计结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ESDataAssetCountDto getStats() {
         return this.Stats;
@@ -50,9 +47,7 @@ public class DescribeDSPAESDataAssetByComplianceIdResponse extends AbstractModel
 
     /**
      * Set 概览统计结果
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Stats 概览统计结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStats(ESDataAssetCountDto Stats) {
         this.Stats = Stats;

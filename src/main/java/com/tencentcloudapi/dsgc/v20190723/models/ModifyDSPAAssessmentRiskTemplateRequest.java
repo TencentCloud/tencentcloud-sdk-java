@@ -38,13 +38,6 @@ public class ModifyDSPAAssessmentRiskTemplateRequest extends AbstractModel {
     private String TemplateName;
 
     /**
-    * 模板的描述
-    */
-    @SerializedName("TemplateDescription")
-    @Expose
-    private String TemplateDescription;
-
-    /**
     * 模板id
     */
     @SerializedName("TemplateId")
@@ -57,6 +50,13 @@ public class ModifyDSPAAssessmentRiskTemplateRequest extends AbstractModel {
     @SerializedName("RiskLevelId")
     @Expose
     private Long RiskLevelId;
+
+    /**
+    * 模板的描述
+    */
+    @SerializedName("TemplateDescription")
+    @Expose
+    private String TemplateDescription;
 
     /**
     * 脆弱项列表
@@ -98,22 +98,6 @@ public class ModifyDSPAAssessmentRiskTemplateRequest extends AbstractModel {
     }
 
     /**
-     * Get 模板的描述 
-     * @return TemplateDescription 模板的描述
-     */
-    public String getTemplateDescription() {
-        return this.TemplateDescription;
-    }
-
-    /**
-     * Set 模板的描述
-     * @param TemplateDescription 模板的描述
-     */
-    public void setTemplateDescription(String TemplateDescription) {
-        this.TemplateDescription = TemplateDescription;
-    }
-
-    /**
      * Get 模板id 
      * @return TemplateId 模板id
      */
@@ -146,6 +130,22 @@ public class ModifyDSPAAssessmentRiskTemplateRequest extends AbstractModel {
     }
 
     /**
+     * Get 模板的描述 
+     * @return TemplateDescription 模板的描述
+     */
+    public String getTemplateDescription() {
+        return this.TemplateDescription;
+    }
+
+    /**
+     * Set 模板的描述
+     * @param TemplateDescription 模板的描述
+     */
+    public void setTemplateDescription(String TemplateDescription) {
+        this.TemplateDescription = TemplateDescription;
+    }
+
+    /**
      * Get 脆弱项列表 
      * @return RiskIdList 脆弱项列表
      */
@@ -175,14 +175,14 @@ public class ModifyDSPAAssessmentRiskTemplateRequest extends AbstractModel {
         if (source.TemplateName != null) {
             this.TemplateName = new String(source.TemplateName);
         }
-        if (source.TemplateDescription != null) {
-            this.TemplateDescription = new String(source.TemplateDescription);
-        }
         if (source.TemplateId != null) {
             this.TemplateId = new Long(source.TemplateId);
         }
         if (source.RiskLevelId != null) {
             this.RiskLevelId = new Long(source.RiskLevelId);
+        }
+        if (source.TemplateDescription != null) {
+            this.TemplateDescription = new String(source.TemplateDescription);
         }
         if (source.RiskIdList != null) {
             this.RiskIdList = new Long[source.RiskIdList.length];
@@ -199,9 +199,9 @@ public class ModifyDSPAAssessmentRiskTemplateRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DspaId", this.DspaId);
         this.setParamSimple(map, prefix + "TemplateName", this.TemplateName);
-        this.setParamSimple(map, prefix + "TemplateDescription", this.TemplateDescription);
         this.setParamSimple(map, prefix + "TemplateId", this.TemplateId);
         this.setParamSimple(map, prefix + "RiskLevelId", this.RiskLevelId);
+        this.setParamSimple(map, prefix + "TemplateDescription", this.TemplateDescription);
         this.setParamArraySimple(map, prefix + "RiskIdList.", this.RiskIdList);
 
     }

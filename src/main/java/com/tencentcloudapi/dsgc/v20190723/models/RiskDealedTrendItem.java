@@ -46,7 +46,6 @@ public class RiskDealedTrendItem extends AbstractModel {
 
     /**
     * 新发现
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NewDiscoveryHandled")
     @Expose
@@ -101,10 +100,8 @@ public class RiskDealedTrendItem extends AbstractModel {
     }
 
     /**
-     * Get 新发现
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 新发现 
      * @return NewDiscoveryHandled 新发现
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getNewDiscoveryHandled() {
         return this.NewDiscoveryHandled;
@@ -112,9 +109,7 @@ public class RiskDealedTrendItem extends AbstractModel {
 
     /**
      * Set 新发现
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NewDiscoveryHandled 新发现
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNewDiscoveryHandled(Long NewDiscoveryHandled) {
         this.NewDiscoveryHandled = NewDiscoveryHandled;

@@ -25,7 +25,6 @@ public class DescribeDSPAAssessmentRiskSideDistributedResponse extends AbstractM
 
     /**
     * 风险面的分布
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RiskSideDistributed")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeDSPAAssessmentRiskSideDistributedResponse extends AbstractM
     private String RequestId;
 
     /**
-     * Get 风险面的分布
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 风险面的分布 
      * @return RiskSideDistributed 风险面的分布
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RiskSideDistributed [] getRiskSideDistributed() {
         return this.RiskSideDistributed;
@@ -50,9 +47,7 @@ public class DescribeDSPAAssessmentRiskSideDistributedResponse extends AbstractM
 
     /**
      * Set 风险面的分布
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RiskSideDistributed 风险面的分布
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRiskSideDistributed(RiskSideDistributed [] RiskSideDistributed) {
         this.RiskSideDistributed = RiskSideDistributed;

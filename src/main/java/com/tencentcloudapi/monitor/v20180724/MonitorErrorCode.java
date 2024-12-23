@@ -153,6 +153,9 @@ public enum MonitorErrorCode {
     // 地区不可用。
      FAILEDOPERATION_REGIONUNAVAILABLE("FailedOperation.RegionUnavailable"),
      
+    // 资源冲突
+     FAILEDOPERATION_RESOURCECONFLICT("FailedOperation.ResourceConflict"),
+     
     // 资源已经存在。
      FAILEDOPERATION_RESOURCEEXIST("FailedOperation.ResourceExist"),
      

@@ -32,7 +32,6 @@ public class DspaDiscoveryCOSTaskResultDetail extends AbstractModel {
 
     /**
     * 扫描File结果详情ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileResultId")
     @Expose
@@ -40,7 +39,6 @@ public class DspaDiscoveryCOSTaskResultDetail extends AbstractModel {
 
     /**
     * 所属桶名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BucketName")
     @Expose
@@ -48,7 +46,6 @@ public class DspaDiscoveryCOSTaskResultDetail extends AbstractModel {
 
     /**
     * 所属文件名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileName")
     @Expose
@@ -56,7 +53,6 @@ public class DspaDiscoveryCOSTaskResultDetail extends AbstractModel {
 
     /**
     * 敏感数据分类ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CategoryId")
     @Expose
@@ -64,7 +60,6 @@ public class DspaDiscoveryCOSTaskResultDetail extends AbstractModel {
 
     /**
     * 敏感数据分类名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CategoryName")
     @Expose
@@ -72,7 +67,6 @@ public class DspaDiscoveryCOSTaskResultDetail extends AbstractModel {
 
     /**
     * 敏感数据分级ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LevelId")
     @Expose
@@ -80,7 +74,6 @@ public class DspaDiscoveryCOSTaskResultDetail extends AbstractModel {
 
     /**
     * 敏感数据分级名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LevelName")
     @Expose
@@ -88,7 +81,6 @@ public class DspaDiscoveryCOSTaskResultDetail extends AbstractModel {
 
     /**
     * KMS加密，true or false
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KMSEncrypted")
     @Expose
@@ -96,7 +88,6 @@ public class DspaDiscoveryCOSTaskResultDetail extends AbstractModel {
 
     /**
     * 规则名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleName")
     @Expose
@@ -104,7 +95,6 @@ public class DspaDiscoveryCOSTaskResultDetail extends AbstractModel {
 
     /**
     * 规则ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleId")
     @Expose
@@ -112,7 +102,6 @@ public class DspaDiscoveryCOSTaskResultDetail extends AbstractModel {
 
     /**
     * 敏感数据分级分数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LevelRiskScore")
     @Expose
@@ -120,7 +109,6 @@ public class DspaDiscoveryCOSTaskResultDetail extends AbstractModel {
 
     /**
     * 文件大小，单位为KB
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileSize")
     @Expose
@@ -128,7 +116,6 @@ public class DspaDiscoveryCOSTaskResultDetail extends AbstractModel {
 
     /**
     * 文件类型，如csv，txt
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileType")
     @Expose
@@ -136,7 +123,6 @@ public class DspaDiscoveryCOSTaskResultDetail extends AbstractModel {
 
     /**
     * 敏感数据出现次数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SensitiveDataCount")
     @Expose
@@ -144,15 +130,20 @@ public class DspaDiscoveryCOSTaskResultDetail extends AbstractModel {
 
     /**
     * 分类树路径
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CategoryFullPath")
     @Expose
     private String [] CategoryFullPath;
 
     /**
+    * 分类树路径
+    */
+    @SerializedName("CategoryArr")
+    @Expose
+    private String [] CategoryArr;
+
+    /**
     * 合规组ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ComplianceId")
     @Expose
@@ -160,7 +151,6 @@ public class DspaDiscoveryCOSTaskResultDetail extends AbstractModel {
 
     /**
     * 结果id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResultId")
     @Expose
@@ -183,10 +173,8 @@ public class DspaDiscoveryCOSTaskResultDetail extends AbstractModel {
     }
 
     /**
-     * Get 扫描File结果详情ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 扫描File结果详情ID 
      * @return FileResultId 扫描File结果详情ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFileResultId() {
         return this.FileResultId;
@@ -194,19 +182,15 @@ public class DspaDiscoveryCOSTaskResultDetail extends AbstractModel {
 
     /**
      * Set 扫描File结果详情ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FileResultId 扫描File结果详情ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileResultId(Long FileResultId) {
         this.FileResultId = FileResultId;
     }
 
     /**
-     * Get 所属桶名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 所属桶名 
      * @return BucketName 所属桶名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBucketName() {
         return this.BucketName;
@@ -214,19 +198,15 @@ public class DspaDiscoveryCOSTaskResultDetail extends AbstractModel {
 
     /**
      * Set 所属桶名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BucketName 所属桶名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBucketName(String BucketName) {
         this.BucketName = BucketName;
     }
 
     /**
-     * Get 所属文件名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 所属文件名 
      * @return FileName 所属文件名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFileName() {
         return this.FileName;
@@ -234,19 +214,15 @@ public class DspaDiscoveryCOSTaskResultDetail extends AbstractModel {
 
     /**
      * Set 所属文件名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FileName 所属文件名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileName(String FileName) {
         this.FileName = FileName;
     }
 
     /**
-     * Get 敏感数据分类ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 敏感数据分类ID 
      * @return CategoryId 敏感数据分类ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCategoryId() {
         return this.CategoryId;
@@ -254,19 +230,15 @@ public class DspaDiscoveryCOSTaskResultDetail extends AbstractModel {
 
     /**
      * Set 敏感数据分类ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CategoryId 敏感数据分类ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCategoryId(Long CategoryId) {
         this.CategoryId = CategoryId;
     }
 
     /**
-     * Get 敏感数据分类名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 敏感数据分类名称 
      * @return CategoryName 敏感数据分类名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCategoryName() {
         return this.CategoryName;
@@ -274,19 +246,15 @@ public class DspaDiscoveryCOSTaskResultDetail extends AbstractModel {
 
     /**
      * Set 敏感数据分类名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CategoryName 敏感数据分类名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCategoryName(String CategoryName) {
         this.CategoryName = CategoryName;
     }
 
     /**
-     * Get 敏感数据分级ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 敏感数据分级ID 
      * @return LevelId 敏感数据分级ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLevelId() {
         return this.LevelId;
@@ -294,19 +262,15 @@ public class DspaDiscoveryCOSTaskResultDetail extends AbstractModel {
 
     /**
      * Set 敏感数据分级ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LevelId 敏感数据分级ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLevelId(Long LevelId) {
         this.LevelId = LevelId;
     }
 
     /**
-     * Get 敏感数据分级名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 敏感数据分级名称 
      * @return LevelName 敏感数据分级名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLevelName() {
         return this.LevelName;
@@ -314,19 +278,15 @@ public class DspaDiscoveryCOSTaskResultDetail extends AbstractModel {
 
     /**
      * Set 敏感数据分级名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LevelName 敏感数据分级名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLevelName(String LevelName) {
         this.LevelName = LevelName;
     }
 
     /**
-     * Get KMS加密，true or false
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get KMS加密，true or false 
      * @return KMSEncrypted KMS加密，true or false
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getKMSEncrypted() {
         return this.KMSEncrypted;
@@ -334,19 +294,15 @@ public class DspaDiscoveryCOSTaskResultDetail extends AbstractModel {
 
     /**
      * Set KMS加密，true or false
-注意：此字段可能返回 null，表示取不到有效值。
      * @param KMSEncrypted KMS加密，true or false
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKMSEncrypted(Boolean KMSEncrypted) {
         this.KMSEncrypted = KMSEncrypted;
     }
 
     /**
-     * Get 规则名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则名称 
      * @return RuleName 规则名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRuleName() {
         return this.RuleName;
@@ -354,19 +310,15 @@ public class DspaDiscoveryCOSTaskResultDetail extends AbstractModel {
 
     /**
      * Set 规则名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RuleName 规则名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleName(String RuleName) {
         this.RuleName = RuleName;
     }
 
     /**
-     * Get 规则ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则ID 
      * @return RuleId 规则ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRuleId() {
         return this.RuleId;
@@ -374,19 +326,15 @@ public class DspaDiscoveryCOSTaskResultDetail extends AbstractModel {
 
     /**
      * Set 规则ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RuleId 规则ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleId(Long RuleId) {
         this.RuleId = RuleId;
     }
 
     /**
-     * Get 敏感数据分级分数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 敏感数据分级分数 
      * @return LevelRiskScore 敏感数据分级分数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLevelRiskScore() {
         return this.LevelRiskScore;
@@ -394,19 +342,15 @@ public class DspaDiscoveryCOSTaskResultDetail extends AbstractModel {
 
     /**
      * Set 敏感数据分级分数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LevelRiskScore 敏感数据分级分数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLevelRiskScore(Long LevelRiskScore) {
         this.LevelRiskScore = LevelRiskScore;
     }
 
     /**
-     * Get 文件大小，单位为KB
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文件大小，单位为KB 
      * @return FileSize 文件大小，单位为KB
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFileSize() {
         return this.FileSize;
@@ -414,19 +358,15 @@ public class DspaDiscoveryCOSTaskResultDetail extends AbstractModel {
 
     /**
      * Set 文件大小，单位为KB
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FileSize 文件大小，单位为KB
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileSize(Long FileSize) {
         this.FileSize = FileSize;
     }
 
     /**
-     * Get 文件类型，如csv，txt
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文件类型，如csv，txt 
      * @return FileType 文件类型，如csv，txt
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFileType() {
         return this.FileType;
@@ -434,19 +374,15 @@ public class DspaDiscoveryCOSTaskResultDetail extends AbstractModel {
 
     /**
      * Set 文件类型，如csv，txt
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FileType 文件类型，如csv，txt
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileType(String FileType) {
         this.FileType = FileType;
     }
 
     /**
-     * Get 敏感数据出现次数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 敏感数据出现次数 
      * @return SensitiveDataCount 敏感数据出现次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSensitiveDataCount() {
         return this.SensitiveDataCount;
@@ -454,19 +390,15 @@ public class DspaDiscoveryCOSTaskResultDetail extends AbstractModel {
 
     /**
      * Set 敏感数据出现次数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SensitiveDataCount 敏感数据出现次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSensitiveDataCount(Long SensitiveDataCount) {
         this.SensitiveDataCount = SensitiveDataCount;
     }
 
     /**
-     * Get 分类树路径
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分类树路径 
      * @return CategoryFullPath 分类树路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getCategoryFullPath() {
         return this.CategoryFullPath;
@@ -474,19 +406,31 @@ public class DspaDiscoveryCOSTaskResultDetail extends AbstractModel {
 
     /**
      * Set 分类树路径
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CategoryFullPath 分类树路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCategoryFullPath(String [] CategoryFullPath) {
         this.CategoryFullPath = CategoryFullPath;
     }
 
     /**
-     * Get 合规组ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分类树路径 
+     * @return CategoryArr 分类树路径
+     */
+    public String [] getCategoryArr() {
+        return this.CategoryArr;
+    }
+
+    /**
+     * Set 分类树路径
+     * @param CategoryArr 分类树路径
+     */
+    public void setCategoryArr(String [] CategoryArr) {
+        this.CategoryArr = CategoryArr;
+    }
+
+    /**
+     * Get 合规组ID 
      * @return ComplianceId 合规组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getComplianceId() {
         return this.ComplianceId;
@@ -494,19 +438,15 @@ public class DspaDiscoveryCOSTaskResultDetail extends AbstractModel {
 
     /**
      * Set 合规组ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ComplianceId 合规组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setComplianceId(Long ComplianceId) {
         this.ComplianceId = ComplianceId;
     }
 
     /**
-     * Get 结果id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 结果id 
      * @return ResultId 结果id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getResultId() {
         return this.ResultId;
@@ -514,9 +454,7 @@ public class DspaDiscoveryCOSTaskResultDetail extends AbstractModel {
 
     /**
      * Set 结果id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResultId 结果id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResultId(Long ResultId) {
         this.ResultId = ResultId;
@@ -581,6 +519,12 @@ public class DspaDiscoveryCOSTaskResultDetail extends AbstractModel {
                 this.CategoryFullPath[i] = new String(source.CategoryFullPath[i]);
             }
         }
+        if (source.CategoryArr != null) {
+            this.CategoryArr = new String[source.CategoryArr.length];
+            for (int i = 0; i < source.CategoryArr.length; i++) {
+                this.CategoryArr[i] = new String(source.CategoryArr[i]);
+            }
+        }
         if (source.ComplianceId != null) {
             this.ComplianceId = new Long(source.ComplianceId);
         }
@@ -610,6 +554,7 @@ public class DspaDiscoveryCOSTaskResultDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "FileType", this.FileType);
         this.setParamSimple(map, prefix + "SensitiveDataCount", this.SensitiveDataCount);
         this.setParamArraySimple(map, prefix + "CategoryFullPath.", this.CategoryFullPath);
+        this.setParamArraySimple(map, prefix + "CategoryArr.", this.CategoryArr);
         this.setParamSimple(map, prefix + "ComplianceId", this.ComplianceId);
         this.setParamSimple(map, prefix + "ResultId", this.ResultId);
 

@@ -185,6 +185,13 @@ public class ElectronicFlightTicketFull extends AbstractModel {
     private FlightItemInfo [] FlightItems;
 
     /**
+    * 机票开具状态
+    */
+    @SerializedName("InvoiceStatus")
+    @Expose
+    private String InvoiceStatus;
+
+    /**
      * Get 旅客姓名 
      * @return UserName 旅客姓名
      */
@@ -552,6 +559,22 @@ public class ElectronicFlightTicketFull extends AbstractModel {
         this.FlightItems = FlightItems;
     }
 
+    /**
+     * Get 机票开具状态 
+     * @return InvoiceStatus 机票开具状态
+     */
+    public String getInvoiceStatus() {
+        return this.InvoiceStatus;
+    }
+
+    /**
+     * Set 机票开具状态
+     * @param InvoiceStatus 机票开具状态
+     */
+    public void setInvoiceStatus(String InvoiceStatus) {
+        this.InvoiceStatus = InvoiceStatus;
+    }
+
     public ElectronicFlightTicketFull() {
     }
 
@@ -632,6 +655,9 @@ public class ElectronicFlightTicketFull extends AbstractModel {
                 this.FlightItems[i] = new FlightItemInfo(source.FlightItems[i]);
             }
         }
+        if (source.InvoiceStatus != null) {
+            this.InvoiceStatus = new String(source.InvoiceStatus);
+        }
     }
 
 
@@ -662,6 +688,7 @@ public class ElectronicFlightTicketFull extends AbstractModel {
         this.setParamSimple(map, prefix + "Seller", this.Seller);
         this.setParamSimple(map, prefix + "BuyerTaxID", this.BuyerTaxID);
         this.setParamArrayObj(map, prefix + "FlightItems.", this.FlightItems);
+        this.setParamSimple(map, prefix + "InvoiceStatus", this.InvoiceStatus);
 
     }
 }

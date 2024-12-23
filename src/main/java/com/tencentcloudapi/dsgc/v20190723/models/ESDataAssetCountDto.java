@@ -25,7 +25,6 @@ public class ESDataAssetCountDto extends AbstractModel {
 
     /**
     * es
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataAssetType")
     @Expose
@@ -33,7 +32,6 @@ public class ESDataAssetCountDto extends AbstractModel {
 
     /**
     * 敏感索引个数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SensitiveIndexCnt")
     @Expose
@@ -41,7 +39,6 @@ public class ESDataAssetCountDto extends AbstractModel {
 
     /**
     * 总的索引个数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalIndexCnt")
     @Expose
@@ -49,7 +46,6 @@ public class ESDataAssetCountDto extends AbstractModel {
 
     /**
     * 敏感字段个数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SensitiveFieldCnt")
     @Expose
@@ -57,7 +53,6 @@ public class ESDataAssetCountDto extends AbstractModel {
 
     /**
     * 总的字段个数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalFieldCnt")
     @Expose
@@ -65,7 +60,6 @@ public class ESDataAssetCountDto extends AbstractModel {
 
     /**
     * 敏感分类的个数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SensitiveCategoryCnt")
     @Expose
@@ -73,7 +67,6 @@ public class ESDataAssetCountDto extends AbstractModel {
 
     /**
     * 敏感分级的分布
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SensitiveLevel")
     @Expose
@@ -81,17 +74,14 @@ public class ESDataAssetCountDto extends AbstractModel {
 
     /**
     * 敏感分类的分布
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CategoryDistributed")
     @Expose
     private DspaDataCategoryDistributed [] CategoryDistributed;
 
     /**
-     * Get es
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get es 
      * @return DataAssetType es
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDataAssetType() {
         return this.DataAssetType;
@@ -99,19 +89,15 @@ public class ESDataAssetCountDto extends AbstractModel {
 
     /**
      * Set es
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DataAssetType es
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataAssetType(Long DataAssetType) {
         this.DataAssetType = DataAssetType;
     }
 
     /**
-     * Get 敏感索引个数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 敏感索引个数 
      * @return SensitiveIndexCnt 敏感索引个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSensitiveIndexCnt() {
         return this.SensitiveIndexCnt;
@@ -119,19 +105,15 @@ public class ESDataAssetCountDto extends AbstractModel {
 
     /**
      * Set 敏感索引个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SensitiveIndexCnt 敏感索引个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSensitiveIndexCnt(Long SensitiveIndexCnt) {
         this.SensitiveIndexCnt = SensitiveIndexCnt;
     }
 
     /**
-     * Get 总的索引个数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 总的索引个数 
      * @return TotalIndexCnt 总的索引个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalIndexCnt() {
         return this.TotalIndexCnt;
@@ -139,19 +121,15 @@ public class ESDataAssetCountDto extends AbstractModel {
 
     /**
      * Set 总的索引个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalIndexCnt 总的索引个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalIndexCnt(Long TotalIndexCnt) {
         this.TotalIndexCnt = TotalIndexCnt;
     }
 
     /**
-     * Get 敏感字段个数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 敏感字段个数 
      * @return SensitiveFieldCnt 敏感字段个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSensitiveFieldCnt() {
         return this.SensitiveFieldCnt;
@@ -159,19 +137,15 @@ public class ESDataAssetCountDto extends AbstractModel {
 
     /**
      * Set 敏感字段个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SensitiveFieldCnt 敏感字段个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSensitiveFieldCnt(Long SensitiveFieldCnt) {
         this.SensitiveFieldCnt = SensitiveFieldCnt;
     }
 
     /**
-     * Get 总的字段个数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 总的字段个数 
      * @return TotalFieldCnt 总的字段个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalFieldCnt() {
         return this.TotalFieldCnt;
@@ -179,19 +153,15 @@ public class ESDataAssetCountDto extends AbstractModel {
 
     /**
      * Set 总的字段个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalFieldCnt 总的字段个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalFieldCnt(Long TotalFieldCnt) {
         this.TotalFieldCnt = TotalFieldCnt;
     }
 
     /**
-     * Get 敏感分类的个数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 敏感分类的个数 
      * @return SensitiveCategoryCnt 敏感分类的个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSensitiveCategoryCnt() {
         return this.SensitiveCategoryCnt;
@@ -199,19 +169,15 @@ public class ESDataAssetCountDto extends AbstractModel {
 
     /**
      * Set 敏感分类的个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SensitiveCategoryCnt 敏感分类的个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSensitiveCategoryCnt(Long SensitiveCategoryCnt) {
         this.SensitiveCategoryCnt = SensitiveCategoryCnt;
     }
 
     /**
-     * Get 敏感分级的分布
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 敏感分级的分布 
      * @return SensitiveLevel 敏感分级的分布
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SensitiveLevel [] getSensitiveLevel() {
         return this.SensitiveLevel;
@@ -219,19 +185,15 @@ public class ESDataAssetCountDto extends AbstractModel {
 
     /**
      * Set 敏感分级的分布
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SensitiveLevel 敏感分级的分布
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSensitiveLevel(SensitiveLevel [] SensitiveLevel) {
         this.SensitiveLevel = SensitiveLevel;
     }
 
     /**
-     * Get 敏感分类的分布
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 敏感分类的分布 
      * @return CategoryDistributed 敏感分类的分布
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DspaDataCategoryDistributed [] getCategoryDistributed() {
         return this.CategoryDistributed;
@@ -239,9 +201,7 @@ public class ESDataAssetCountDto extends AbstractModel {
 
     /**
      * Set 敏感分类的分布
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CategoryDistributed 敏感分类的分布
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCategoryDistributed(DspaDataCategoryDistributed [] CategoryDistributed) {
         this.CategoryDistributed = CategoryDistributed;
