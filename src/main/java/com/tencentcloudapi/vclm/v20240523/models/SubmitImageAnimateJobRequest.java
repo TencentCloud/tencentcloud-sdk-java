@@ -67,8 +67,9 @@ public class SubmitImageAnimateJobRequest extends AbstractModel {
     private Boolean EnableBodyJoins;
 
     /**
-    * 最终视频是否保留原图的背景，默认不保留。
-
+    * 是否对结果视频背景进行分割，默认值为false。
+true：分割结果视频，结果视频（ResultVideoUrl）将为去除背景的绿幕视频，并返回掩码视频（MaskVideoUrl）；
+false：不分割结果视频，结果视频（ResultVideoUrl）为带背景的视频，掩码视频（MaskVideoUrl）为空字符串。
     */
     @SerializedName("EnableSegment")
     @Expose
@@ -206,20 +207,24 @@ public class SubmitImageAnimateJobRequest extends AbstractModel {
     }
 
     /**
-     * Get 最终视频是否保留原图的背景，默认不保留。
- 
-     * @return EnableSegment 最终视频是否保留原图的背景，默认不保留。
-
+     * Get 是否对结果视频背景进行分割，默认值为false。
+true：分割结果视频，结果视频（ResultVideoUrl）将为去除背景的绿幕视频，并返回掩码视频（MaskVideoUrl）；
+false：不分割结果视频，结果视频（ResultVideoUrl）为带背景的视频，掩码视频（MaskVideoUrl）为空字符串。 
+     * @return EnableSegment 是否对结果视频背景进行分割，默认值为false。
+true：分割结果视频，结果视频（ResultVideoUrl）将为去除背景的绿幕视频，并返回掩码视频（MaskVideoUrl）；
+false：不分割结果视频，结果视频（ResultVideoUrl）为带背景的视频，掩码视频（MaskVideoUrl）为空字符串。
      */
     public Boolean getEnableSegment() {
         return this.EnableSegment;
     }
 
     /**
-     * Set 最终视频是否保留原图的背景，默认不保留。
-
-     * @param EnableSegment 最终视频是否保留原图的背景，默认不保留。
-
+     * Set 是否对结果视频背景进行分割，默认值为false。
+true：分割结果视频，结果视频（ResultVideoUrl）将为去除背景的绿幕视频，并返回掩码视频（MaskVideoUrl）；
+false：不分割结果视频，结果视频（ResultVideoUrl）为带背景的视频，掩码视频（MaskVideoUrl）为空字符串。
+     * @param EnableSegment 是否对结果视频背景进行分割，默认值为false。
+true：分割结果视频，结果视频（ResultVideoUrl）将为去除背景的绿幕视频，并返回掩码视频（MaskVideoUrl）；
+false：不分割结果视频，结果视频（ResultVideoUrl）为带背景的视频，掩码视频（MaskVideoUrl）为空字符串。
      */
     public void setEnableSegment(Boolean EnableSegment) {
         this.EnableSegment = EnableSegment;

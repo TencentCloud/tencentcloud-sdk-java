@@ -178,6 +178,54 @@ public class NotebookSessionInfo extends AbstractModel {
     private Long ExecutorMaxNumbers;
 
     /**
+    * session类型，group：资源组下session independent：独立资源session， 不依赖资源组
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SessionType")
+    @Expose
+    private String SessionType;
+
+    /**
+    * 引擎id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DataEngineId")
+    @Expose
+    private String DataEngineId;
+
+    /**
+    * 资源组id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ResourceGroupId")
+    @Expose
+    private String ResourceGroupId;
+
+    /**
+    * 资源组名称
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ResourceGroupName")
+    @Expose
+    private String ResourceGroupName;
+
+    /**
+    * session，pod大小
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PodSize")
+    @Expose
+    private Long PodSize;
+
+    /**
+    * pod数量
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("PodNumbers")
+    @Expose
+    private Long PodNumbers;
+
+    /**
      * Get Session名称 
      * @return Name Session名称
      */
@@ -553,6 +601,126 @@ public class NotebookSessionInfo extends AbstractModel {
         this.ExecutorMaxNumbers = ExecutorMaxNumbers;
     }
 
+    /**
+     * Get session类型，group：资源组下session independent：独立资源session， 不依赖资源组
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SessionType session类型，group：资源组下session independent：独立资源session， 不依赖资源组
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSessionType() {
+        return this.SessionType;
+    }
+
+    /**
+     * Set session类型，group：资源组下session independent：独立资源session， 不依赖资源组
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SessionType session类型，group：资源组下session independent：独立资源session， 不依赖资源组
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSessionType(String SessionType) {
+        this.SessionType = SessionType;
+    }
+
+    /**
+     * Get 引擎id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DataEngineId 引擎id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getDataEngineId() {
+        return this.DataEngineId;
+    }
+
+    /**
+     * Set 引擎id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DataEngineId 引擎id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDataEngineId(String DataEngineId) {
+        this.DataEngineId = DataEngineId;
+    }
+
+    /**
+     * Get 资源组id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ResourceGroupId 资源组id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getResourceGroupId() {
+        return this.ResourceGroupId;
+    }
+
+    /**
+     * Set 资源组id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ResourceGroupId 资源组id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setResourceGroupId(String ResourceGroupId) {
+        this.ResourceGroupId = ResourceGroupId;
+    }
+
+    /**
+     * Get 资源组名称
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ResourceGroupName 资源组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getResourceGroupName() {
+        return this.ResourceGroupName;
+    }
+
+    /**
+     * Set 资源组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ResourceGroupName 资源组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setResourceGroupName(String ResourceGroupName) {
+        this.ResourceGroupName = ResourceGroupName;
+    }
+
+    /**
+     * Get session，pod大小
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PodSize session，pod大小
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getPodSize() {
+        return this.PodSize;
+    }
+
+    /**
+     * Set session，pod大小
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PodSize session，pod大小
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPodSize(Long PodSize) {
+        this.PodSize = PodSize;
+    }
+
+    /**
+     * Get pod数量
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return PodNumbers pod数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getPodNumbers() {
+        return this.PodNumbers;
+    }
+
+    /**
+     * Set pod数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PodNumbers pod数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setPodNumbers(Long PodNumbers) {
+        this.PodNumbers = PodNumbers;
+    }
+
     public NotebookSessionInfo() {
     }
 
@@ -639,6 +807,24 @@ public class NotebookSessionInfo extends AbstractModel {
         if (source.ExecutorMaxNumbers != null) {
             this.ExecutorMaxNumbers = new Long(source.ExecutorMaxNumbers);
         }
+        if (source.SessionType != null) {
+            this.SessionType = new String(source.SessionType);
+        }
+        if (source.DataEngineId != null) {
+            this.DataEngineId = new String(source.DataEngineId);
+        }
+        if (source.ResourceGroupId != null) {
+            this.ResourceGroupId = new String(source.ResourceGroupId);
+        }
+        if (source.ResourceGroupName != null) {
+            this.ResourceGroupName = new String(source.ResourceGroupName);
+        }
+        if (source.PodSize != null) {
+            this.PodSize = new Long(source.PodSize);
+        }
+        if (source.PodNumbers != null) {
+            this.PodNumbers = new Long(source.PodNumbers);
+        }
     }
 
 
@@ -666,6 +852,12 @@ public class NotebookSessionInfo extends AbstractModel {
         this.setParamArrayObj(map, prefix + "AppInfo.", this.AppInfo);
         this.setParamSimple(map, prefix + "SparkUiUrl", this.SparkUiUrl);
         this.setParamSimple(map, prefix + "ExecutorMaxNumbers", this.ExecutorMaxNumbers);
+        this.setParamSimple(map, prefix + "SessionType", this.SessionType);
+        this.setParamSimple(map, prefix + "DataEngineId", this.DataEngineId);
+        this.setParamSimple(map, prefix + "ResourceGroupId", this.ResourceGroupId);
+        this.setParamSimple(map, prefix + "ResourceGroupName", this.ResourceGroupName);
+        this.setParamSimple(map, prefix + "PodSize", this.PodSize);
+        this.setParamSimple(map, prefix + "PodNumbers", this.PodNumbers);
 
     }
 }

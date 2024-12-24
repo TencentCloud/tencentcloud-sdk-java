@@ -51,7 +51,9 @@ public class DescribeFlowTemplatesRequest extends AbstractModel {
 
     /**
     * 搜索条件，本字段用于指定模板Id进行查询。
-Key：template-id Values：需要查询的模板Id列表
+- Key：template-id Values：需要查询的模板Id列表
+- Key：template-name Values：需要查询的模板名称列表
+
     */
     @SerializedName("Filters")
     @Expose
@@ -184,9 +186,13 @@ Key：template-id Values：需要查询的模板Id列表
 
     /**
      * Get 搜索条件，本字段用于指定模板Id进行查询。
-Key：template-id Values：需要查询的模板Id列表 
+- Key：template-id Values：需要查询的模板Id列表
+- Key：template-name Values：需要查询的模板名称列表
+ 
      * @return Filters 搜索条件，本字段用于指定模板Id进行查询。
-Key：template-id Values：需要查询的模板Id列表
+- Key：template-id Values：需要查询的模板Id列表
+- Key：template-name Values：需要查询的模板名称列表
+
      */
     public Filter [] getFilters() {
         return this.Filters;
@@ -194,9 +200,13 @@ Key：template-id Values：需要查询的模板Id列表
 
     /**
      * Set 搜索条件，本字段用于指定模板Id进行查询。
-Key：template-id Values：需要查询的模板Id列表
+- Key：template-id Values：需要查询的模板Id列表
+- Key：template-name Values：需要查询的模板名称列表
+
      * @param Filters 搜索条件，本字段用于指定模板Id进行查询。
-Key：template-id Values：需要查询的模板Id列表
+- Key：template-id Values：需要查询的模板Id列表
+- Key：template-name Values：需要查询的模板名称列表
+
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

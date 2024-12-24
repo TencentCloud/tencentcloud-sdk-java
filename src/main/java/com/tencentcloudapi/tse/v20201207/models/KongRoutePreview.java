@@ -144,6 +144,20 @@ public class KongRoutePreview extends AbstractModel {
     private KVMapping [] Headers;
 
     /**
+    * 是否缓存请求body，默认true
+    */
+    @SerializedName("RequestBuffering")
+    @Expose
+    private Boolean RequestBuffering;
+
+    /**
+    * 是否缓存响应body，默认true
+    */
+    @SerializedName("ResponseBuffering")
+    @Expose
+    private Boolean ResponseBuffering;
+
+    /**
      * Get 服务ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ID 服务ID
@@ -447,6 +461,38 @@ public class KongRoutePreview extends AbstractModel {
         this.Headers = Headers;
     }
 
+    /**
+     * Get 是否缓存请求body，默认true 
+     * @return RequestBuffering 是否缓存请求body，默认true
+     */
+    public Boolean getRequestBuffering() {
+        return this.RequestBuffering;
+    }
+
+    /**
+     * Set 是否缓存请求body，默认true
+     * @param RequestBuffering 是否缓存请求body，默认true
+     */
+    public void setRequestBuffering(Boolean RequestBuffering) {
+        this.RequestBuffering = RequestBuffering;
+    }
+
+    /**
+     * Get 是否缓存响应body，默认true 
+     * @return ResponseBuffering 是否缓存响应body，默认true
+     */
+    public Boolean getResponseBuffering() {
+        return this.ResponseBuffering;
+    }
+
+    /**
+     * Set 是否缓存响应body，默认true
+     * @param ResponseBuffering 是否缓存响应body，默认true
+     */
+    public void setResponseBuffering(Boolean ResponseBuffering) {
+        this.ResponseBuffering = ResponseBuffering;
+    }
+
     public KongRoutePreview() {
     }
 
@@ -518,6 +564,12 @@ public class KongRoutePreview extends AbstractModel {
                 this.Headers[i] = new KVMapping(source.Headers[i]);
             }
         }
+        if (source.RequestBuffering != null) {
+            this.RequestBuffering = new Boolean(source.RequestBuffering);
+        }
+        if (source.ResponseBuffering != null) {
+            this.ResponseBuffering = new Boolean(source.ResponseBuffering);
+        }
     }
 
 
@@ -540,6 +592,8 @@ public class KongRoutePreview extends AbstractModel {
         this.setParamSimple(map, prefix + "ServiceID", this.ServiceID);
         this.setParamArraySimple(map, prefix + "DestinationPorts.", this.DestinationPorts);
         this.setParamArrayObj(map, prefix + "Headers.", this.Headers);
+        this.setParamSimple(map, prefix + "RequestBuffering", this.RequestBuffering);
+        this.setParamSimple(map, prefix + "ResponseBuffering", this.ResponseBuffering);
 
     }
 }

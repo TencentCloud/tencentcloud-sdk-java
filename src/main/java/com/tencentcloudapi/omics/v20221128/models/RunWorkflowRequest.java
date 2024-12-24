@@ -114,6 +114,13 @@ public class RunWorkflowRequest extends AbstractModel {
     private String [] VolumeIds;
 
     /**
+    * 工作流入口文件，不填使用默认入口文件。
+    */
+    @SerializedName("Entrypoint")
+    @Expose
+    private String Entrypoint;
+
+    /**
      * Get 任务批次名称。 
      * @return Name 任务批次名称。
      */
@@ -329,6 +336,22 @@ public class RunWorkflowRequest extends AbstractModel {
         this.VolumeIds = VolumeIds;
     }
 
+    /**
+     * Get 工作流入口文件，不填使用默认入口文件。 
+     * @return Entrypoint 工作流入口文件，不填使用默认入口文件。
+     */
+    public String getEntrypoint() {
+        return this.Entrypoint;
+    }
+
+    /**
+     * Set 工作流入口文件，不填使用默认入口文件。
+     * @param Entrypoint 工作流入口文件，不填使用默认入口文件。
+     */
+    public void setEntrypoint(String Entrypoint) {
+        this.Entrypoint = Entrypoint;
+    }
+
     public RunWorkflowRequest() {
     }
 
@@ -376,6 +399,9 @@ public class RunWorkflowRequest extends AbstractModel {
                 this.VolumeIds[i] = new String(source.VolumeIds[i]);
             }
         }
+        if (source.Entrypoint != null) {
+            this.Entrypoint = new String(source.Entrypoint);
+        }
     }
 
 
@@ -395,6 +421,7 @@ public class RunWorkflowRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "CacheClearDelay", this.CacheClearDelay);
         this.setParamSimple(map, prefix + "WorkDir", this.WorkDir);
         this.setParamArraySimple(map, prefix + "VolumeIds.", this.VolumeIds);
+        this.setParamSimple(map, prefix + "Entrypoint", this.Entrypoint);
 
     }
 }

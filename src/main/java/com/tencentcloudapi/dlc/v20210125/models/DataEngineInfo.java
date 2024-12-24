@@ -443,6 +443,46 @@ public class DataEngineInfo extends AbstractModel {
     private String IsPoolMode;
 
     /**
+    * 是否支持AI，false: 不支持；true：支持
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsSupportAI")
+    @Expose
+    private Boolean IsSupportAI;
+
+    /**
+    * 网关id
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("GatewayId")
+    @Expose
+    private String GatewayId;
+
+    /**
+    * 网关状态
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("GatewayState")
+    @Expose
+    private Long GatewayState;
+
+    /**
+    * 是否能执行AI任务
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsAIGateway")
+    @Expose
+    private Boolean IsAIGateway;
+
+    /**
+    * 1:AI引擎，0:非AI引擎
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsAIEngine")
+    @Expose
+    private Long IsAIEngine;
+
+    /**
      * Get DataEngine名称 
      * @return DataEngineName DataEngine名称
      */
@@ -1470,6 +1510,106 @@ public class DataEngineInfo extends AbstractModel {
         this.IsPoolMode = IsPoolMode;
     }
 
+    /**
+     * Get 是否支持AI，false: 不支持；true：支持
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsSupportAI 是否支持AI，false: 不支持；true：支持
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getIsSupportAI() {
+        return this.IsSupportAI;
+    }
+
+    /**
+     * Set 是否支持AI，false: 不支持；true：支持
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsSupportAI 是否支持AI，false: 不支持；true：支持
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsSupportAI(Boolean IsSupportAI) {
+        this.IsSupportAI = IsSupportAI;
+    }
+
+    /**
+     * Get 网关id
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return GatewayId 网关id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getGatewayId() {
+        return this.GatewayId;
+    }
+
+    /**
+     * Set 网关id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param GatewayId 网关id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setGatewayId(String GatewayId) {
+        this.GatewayId = GatewayId;
+    }
+
+    /**
+     * Get 网关状态
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return GatewayState 网关状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getGatewayState() {
+        return this.GatewayState;
+    }
+
+    /**
+     * Set 网关状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param GatewayState 网关状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setGatewayState(Long GatewayState) {
+        this.GatewayState = GatewayState;
+    }
+
+    /**
+     * Get 是否能执行AI任务
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsAIGateway 是否能执行AI任务
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getIsAIGateway() {
+        return this.IsAIGateway;
+    }
+
+    /**
+     * Set 是否能执行AI任务
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsAIGateway 是否能执行AI任务
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsAIGateway(Boolean IsAIGateway) {
+        this.IsAIGateway = IsAIGateway;
+    }
+
+    /**
+     * Get 1:AI引擎，0:非AI引擎
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsAIEngine 1:AI引擎，0:非AI引擎
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getIsAIEngine() {
+        return this.IsAIEngine;
+    }
+
+    /**
+     * Set 1:AI引擎，0:非AI引擎
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsAIEngine 1:AI引擎，0:非AI引擎
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsAIEngine(Long IsAIEngine) {
+        this.IsAIEngine = IsAIEngine;
+    }
+
     public DataEngineInfo() {
     }
 
@@ -1652,6 +1792,21 @@ public class DataEngineInfo extends AbstractModel {
         if (source.IsPoolMode != null) {
             this.IsPoolMode = new String(source.IsPoolMode);
         }
+        if (source.IsSupportAI != null) {
+            this.IsSupportAI = new Boolean(source.IsSupportAI);
+        }
+        if (source.GatewayId != null) {
+            this.GatewayId = new String(source.GatewayId);
+        }
+        if (source.GatewayState != null) {
+            this.GatewayState = new Long(source.GatewayState);
+        }
+        if (source.IsAIGateway != null) {
+            this.IsAIGateway = new Boolean(source.IsAIGateway);
+        }
+        if (source.IsAIEngine != null) {
+            this.IsAIEngine = new Long(source.IsAIEngine);
+        }
     }
 
 
@@ -1713,6 +1868,11 @@ public class DataEngineInfo extends AbstractModel {
         this.setParamArrayObj(map, prefix + "AccessInfos.", this.AccessInfos);
         this.setParamSimple(map, prefix + "EngineNetworkName", this.EngineNetworkName);
         this.setParamSimple(map, prefix + "IsPoolMode", this.IsPoolMode);
+        this.setParamSimple(map, prefix + "IsSupportAI", this.IsSupportAI);
+        this.setParamSimple(map, prefix + "GatewayId", this.GatewayId);
+        this.setParamSimple(map, prefix + "GatewayState", this.GatewayState);
+        this.setParamSimple(map, prefix + "IsAIGateway", this.IsAIGateway);
+        this.setParamSimple(map, prefix + "IsAIEngine", this.IsAIEngine);
 
     }
 }

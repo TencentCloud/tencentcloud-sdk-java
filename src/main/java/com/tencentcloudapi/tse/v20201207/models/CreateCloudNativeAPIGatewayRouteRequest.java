@@ -133,6 +133,20 @@ public class CreateCloudNativeAPIGatewayRouteRequest extends AbstractModel {
     private KVMapping [] Headers;
 
     /**
+    * 是否缓存请求body，默认true
+    */
+    @SerializedName("RequestBuffering")
+    @Expose
+    private Boolean RequestBuffering;
+
+    /**
+    * 是否缓存响应body，默认true
+    */
+    @SerializedName("ResponseBuffering")
+    @Expose
+    private Boolean ResponseBuffering;
+
+    /**
      * Get 网关ID 
      * @return GatewayId 网关ID
      */
@@ -416,6 +430,38 @@ public class CreateCloudNativeAPIGatewayRouteRequest extends AbstractModel {
         this.Headers = Headers;
     }
 
+    /**
+     * Get 是否缓存请求body，默认true 
+     * @return RequestBuffering 是否缓存请求body，默认true
+     */
+    public Boolean getRequestBuffering() {
+        return this.RequestBuffering;
+    }
+
+    /**
+     * Set 是否缓存请求body，默认true
+     * @param RequestBuffering 是否缓存请求body，默认true
+     */
+    public void setRequestBuffering(Boolean RequestBuffering) {
+        this.RequestBuffering = RequestBuffering;
+    }
+
+    /**
+     * Get 是否缓存响应body，默认true 
+     * @return ResponseBuffering 是否缓存响应body，默认true
+     */
+    public Boolean getResponseBuffering() {
+        return this.ResponseBuffering;
+    }
+
+    /**
+     * Set 是否缓存响应body，默认true
+     * @param ResponseBuffering 是否缓存响应body，默认true
+     */
+    public void setResponseBuffering(Boolean ResponseBuffering) {
+        this.ResponseBuffering = ResponseBuffering;
+    }
+
     public CreateCloudNativeAPIGatewayRouteRequest() {
     }
 
@@ -481,6 +527,12 @@ public class CreateCloudNativeAPIGatewayRouteRequest extends AbstractModel {
                 this.Headers[i] = new KVMapping(source.Headers[i]);
             }
         }
+        if (source.RequestBuffering != null) {
+            this.RequestBuffering = new Boolean(source.RequestBuffering);
+        }
+        if (source.ResponseBuffering != null) {
+            this.ResponseBuffering = new Boolean(source.ResponseBuffering);
+        }
     }
 
 
@@ -501,6 +553,8 @@ public class CreateCloudNativeAPIGatewayRouteRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ForceHttps", this.ForceHttps);
         this.setParamArraySimple(map, prefix + "DestinationPorts.", this.DestinationPorts);
         this.setParamArrayObj(map, prefix + "Headers.", this.Headers);
+        this.setParamSimple(map, prefix + "RequestBuffering", this.RequestBuffering);
+        this.setParamSimple(map, prefix + "ResponseBuffering", this.ResponseBuffering);
 
     }
 }

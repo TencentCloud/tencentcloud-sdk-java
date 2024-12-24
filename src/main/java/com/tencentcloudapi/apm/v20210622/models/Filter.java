@@ -25,6 +25,7 @@ public class Filter extends AbstractModel {
 
     /**
     * 过滤方式（=, !=, in）
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -32,6 +33,7 @@ public class Filter extends AbstractModel {
 
     /**
     * 过滤维度名
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Key")
     @Expose
@@ -39,14 +41,17 @@ public class Filter extends AbstractModel {
 
     /**
     * 过滤值，in过滤方式用逗号分割多个值
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Value")
     @Expose
     private String Value;
 
     /**
-     * Get 过滤方式（=, !=, in） 
+     * Get 过滤方式（=, !=, in）
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Type 过滤方式（=, !=, in）
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
         return this.Type;
@@ -54,15 +59,19 @@ public class Filter extends AbstractModel {
 
     /**
      * Set 过滤方式（=, !=, in）
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 过滤方式（=, !=, in）
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 过滤维度名 
+     * Get 过滤维度名
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Key 过滤维度名
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKey() {
         return this.Key;
@@ -70,15 +79,19 @@ public class Filter extends AbstractModel {
 
     /**
      * Set 过滤维度名
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Key 过滤维度名
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKey(String Key) {
         this.Key = Key;
     }
 
     /**
-     * Get 过滤值，in过滤方式用逗号分割多个值 
+     * Get 过滤值，in过滤方式用逗号分割多个值
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Value 过滤值，in过滤方式用逗号分割多个值
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getValue() {
         return this.Value;
@@ -86,7 +99,9 @@ public class Filter extends AbstractModel {
 
     /**
      * Set 过滤值，in过滤方式用逗号分割多个值
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Value 过滤值，in过滤方式用逗号分割多个值
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValue(String Value) {
         this.Value = Value;

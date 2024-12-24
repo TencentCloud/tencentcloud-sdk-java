@@ -239,6 +239,16 @@ MobileCheck：手机号验证，用户手机号和参与方手机号（ApproverM
     private Long PreviewType;
 
     /**
+    * 是否开启动态合同（动态签署人2.0）
+<ul><li> **false** :(默认) 不开启动态合同（动态签署人2.0）</li>
+<li> **true** :开启动态合同（动态签署人2.0）,发起后可继续追加合同签署人</li></ul>
+
+    */
+    @SerializedName("OpenDynamicFlow")
+    @Expose
+    private Boolean OpenDynamicFlow;
+
+    /**
      * Get 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
 
 此接口下面信息必填。
@@ -842,6 +852,34 @@ MobileCheck：手机号验证，用户手机号和参与方手机号（ApproverM
         this.PreviewType = PreviewType;
     }
 
+    /**
+     * Get 是否开启动态合同（动态签署人2.0）
+<ul><li> **false** :(默认) 不开启动态合同（动态签署人2.0）</li>
+<li> **true** :开启动态合同（动态签署人2.0）,发起后可继续追加合同签署人</li></ul>
+ 
+     * @return OpenDynamicFlow 是否开启动态合同（动态签署人2.0）
+<ul><li> **false** :(默认) 不开启动态合同（动态签署人2.0）</li>
+<li> **true** :开启动态合同（动态签署人2.0）,发起后可继续追加合同签署人</li></ul>
+
+     */
+    public Boolean getOpenDynamicFlow() {
+        return this.OpenDynamicFlow;
+    }
+
+    /**
+     * Set 是否开启动态合同（动态签署人2.0）
+<ul><li> **false** :(默认) 不开启动态合同（动态签署人2.0）</li>
+<li> **true** :开启动态合同（动态签署人2.0）,发起后可继续追加合同签署人</li></ul>
+
+     * @param OpenDynamicFlow 是否开启动态合同（动态签署人2.0）
+<ul><li> **false** :(默认) 不开启动态合同（动态签署人2.0）</li>
+<li> **true** :开启动态合同（动态签署人2.0）,发起后可继续追加合同签署人</li></ul>
+
+     */
+    public void setOpenDynamicFlow(Boolean OpenDynamicFlow) {
+        this.OpenDynamicFlow = OpenDynamicFlow;
+    }
+
     public ChannelCreateFlowByFilesRequest() {
     }
 
@@ -928,6 +966,9 @@ MobileCheck：手机号验证，用户手机号和参与方手机号（ApproverM
         if (source.PreviewType != null) {
             this.PreviewType = new Long(source.PreviewType);
         }
+        if (source.OpenDynamicFlow != null) {
+            this.OpenDynamicFlow = new Boolean(source.OpenDynamicFlow);
+        }
     }
 
 
@@ -957,6 +998,7 @@ MobileCheck：手机号验证，用户手机号和参与方手机号（ApproverM
         this.setParamSimple(map, prefix + "FlowDisplayType", this.FlowDisplayType);
         this.setParamSimple(map, prefix + "NeedPreview", this.NeedPreview);
         this.setParamSimple(map, prefix + "PreviewType", this.PreviewType);
+        this.setParamSimple(map, prefix + "OpenDynamicFlow", this.OpenDynamicFlow);
 
     }
 }

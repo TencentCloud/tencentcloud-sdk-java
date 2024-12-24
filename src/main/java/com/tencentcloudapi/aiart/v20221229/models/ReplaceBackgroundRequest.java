@@ -40,6 +40,14 @@ public class ReplaceBackgroundRequest extends AbstractModel {
     private String Prompt;
 
     /**
+    * 反向提示词。
+最多支持256个 utf-8 字符，支持中、英文。
+    */
+    @SerializedName("NegativePrompt")
+    @Expose
+    private String NegativePrompt;
+
+    /**
     * 商品图中的商品主体名称。
 建议说明商品主体，否则影响生成效果。
     */
@@ -131,6 +139,26 @@ public class ReplaceBackgroundRequest extends AbstractModel {
      */
     public void setPrompt(String Prompt) {
         this.Prompt = Prompt;
+    }
+
+    /**
+     * Get 反向提示词。
+最多支持256个 utf-8 字符，支持中、英文。 
+     * @return NegativePrompt 反向提示词。
+最多支持256个 utf-8 字符，支持中、英文。
+     */
+    public String getNegativePrompt() {
+        return this.NegativePrompt;
+    }
+
+    /**
+     * Set 反向提示词。
+最多支持256个 utf-8 字符，支持中、英文。
+     * @param NegativePrompt 反向提示词。
+最多支持256个 utf-8 字符，支持中、英文。
+     */
+    public void setNegativePrompt(String NegativePrompt) {
+        this.NegativePrompt = NegativePrompt;
     }
 
     /**
@@ -291,6 +319,9 @@ public class ReplaceBackgroundRequest extends AbstractModel {
         if (source.Prompt != null) {
             this.Prompt = new String(source.Prompt);
         }
+        if (source.NegativePrompt != null) {
+            this.NegativePrompt = new String(source.NegativePrompt);
+        }
         if (source.Product != null) {
             this.Product = new String(source.Product);
         }
@@ -318,6 +349,7 @@ public class ReplaceBackgroundRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ProductUrl", this.ProductUrl);
         this.setParamSimple(map, prefix + "Prompt", this.Prompt);
+        this.setParamSimple(map, prefix + "NegativePrompt", this.NegativePrompt);
         this.setParamSimple(map, prefix + "Product", this.Product);
         this.setParamSimple(map, prefix + "MaskUrl", this.MaskUrl);
         this.setParamSimple(map, prefix + "Resolution", this.Resolution);

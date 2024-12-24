@@ -31,6 +31,14 @@ public class BatchDeregisterTargetsResponse extends AbstractModel {
     private String [] FailListenerIdSet;
 
     /**
+    * 解绑失败错误原因信息。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Message")
+    @Expose
+    private String Message;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -51,6 +59,26 @@ public class BatchDeregisterTargetsResponse extends AbstractModel {
      */
     public void setFailListenerIdSet(String [] FailListenerIdSet) {
         this.FailListenerIdSet = FailListenerIdSet;
+    }
+
+    /**
+     * Get 解绑失败错误原因信息。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Message 解绑失败错误原因信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getMessage() {
+        return this.Message;
+    }
+
+    /**
+     * Set 解绑失败错误原因信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Message 解绑失败错误原因信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMessage(String Message) {
+        this.Message = Message;
     }
 
     /**
@@ -83,6 +111,9 @@ public class BatchDeregisterTargetsResponse extends AbstractModel {
                 this.FailListenerIdSet[i] = new String(source.FailListenerIdSet[i]);
             }
         }
+        if (source.Message != null) {
+            this.Message = new String(source.Message);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -94,6 +125,7 @@ public class BatchDeregisterTargetsResponse extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "FailListenerIdSet.", this.FailListenerIdSet);
+        this.setParamSimple(map, prefix + "Message", this.Message);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

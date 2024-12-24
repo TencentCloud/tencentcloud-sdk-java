@@ -39,7 +39,9 @@ public class MspClient extends AbstractClient{
     }
 
     /**
-     *取消注册迁移任务
+     *接口已经废弃不再使用
+
+取消注册迁移任务
      * @param req DeregisterMigrationTaskRequest
      * @return DeregisterMigrationTaskResponse
      * @throws TencentCloudSDKException

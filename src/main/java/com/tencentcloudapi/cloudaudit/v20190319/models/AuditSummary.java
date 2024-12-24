@@ -25,6 +25,7 @@ public class AuditSummary extends AbstractModel {
 
     /**
     * 跟踪集状态，1：开启，0：关闭
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AuditStatus")
     @Expose
@@ -32,6 +33,7 @@ public class AuditSummary extends AbstractModel {
 
     /**
     * COS存储桶名称
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CosBucketName")
     @Expose
@@ -39,6 +41,7 @@ public class AuditSummary extends AbstractModel {
 
     /**
     * 跟踪集名称
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AuditName")
     @Expose
@@ -46,14 +49,17 @@ public class AuditSummary extends AbstractModel {
 
     /**
     * 日志前缀
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LogFilePrefix")
     @Expose
     private String LogFilePrefix;
 
     /**
-     * Get 跟踪集状态，1：开启，0：关闭 
+     * Get 跟踪集状态，1：开启，0：关闭
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return AuditStatus 跟踪集状态，1：开启，0：关闭
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAuditStatus() {
         return this.AuditStatus;
@@ -61,15 +67,19 @@ public class AuditSummary extends AbstractModel {
 
     /**
      * Set 跟踪集状态，1：开启，0：关闭
+注意：此字段可能返回 null，表示取不到有效值。
      * @param AuditStatus 跟踪集状态，1：开启，0：关闭
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAuditStatus(Long AuditStatus) {
         this.AuditStatus = AuditStatus;
     }
 
     /**
-     * Get COS存储桶名称 
+     * Get COS存储桶名称
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return CosBucketName COS存储桶名称
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCosBucketName() {
         return this.CosBucketName;
@@ -77,15 +87,19 @@ public class AuditSummary extends AbstractModel {
 
     /**
      * Set COS存储桶名称
+注意：此字段可能返回 null，表示取不到有效值。
      * @param CosBucketName COS存储桶名称
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCosBucketName(String CosBucketName) {
         this.CosBucketName = CosBucketName;
     }
 
     /**
-     * Get 跟踪集名称 
+     * Get 跟踪集名称
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return AuditName 跟踪集名称
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAuditName() {
         return this.AuditName;
@@ -93,15 +107,19 @@ public class AuditSummary extends AbstractModel {
 
     /**
      * Set 跟踪集名称
+注意：此字段可能返回 null，表示取不到有效值。
      * @param AuditName 跟踪集名称
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAuditName(String AuditName) {
         this.AuditName = AuditName;
     }
 
     /**
-     * Get 日志前缀 
+     * Get 日志前缀
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return LogFilePrefix 日志前缀
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLogFilePrefix() {
         return this.LogFilePrefix;
@@ -109,7 +127,9 @@ public class AuditSummary extends AbstractModel {
 
     /**
      * Set 日志前缀
+注意：此字段可能返回 null，表示取不到有效值。
      * @param LogFilePrefix 日志前缀
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLogFilePrefix(String LogFilePrefix) {
         this.LogFilePrefix = LogFilePrefix;
