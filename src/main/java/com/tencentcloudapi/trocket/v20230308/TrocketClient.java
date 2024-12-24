@@ -438,6 +438,17 @@ public class TrocketClient extends AbstractClient{
     }
 
     /**
+     *根据消息 ID 查询消息轨迹。
+     * @param req DescribeMessageTraceRequest
+     * @return DescribeMessageTraceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMessageTraceResponse DescribeMessageTrace(DescribeMessageTraceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMessageTrace", DescribeMessageTraceResponse.class);
+    }
+
+    /**
      *查询产品售卖规格，针对 RocketMQ 5.x 集群。
      * @param req DescribeProductSKUsRequest
      * @return DescribeProductSKUsResponse

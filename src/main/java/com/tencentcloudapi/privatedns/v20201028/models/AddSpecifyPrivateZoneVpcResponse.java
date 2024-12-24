@@ -46,7 +46,6 @@ public class AddSpecifyPrivateZoneVpcResponse extends AbstractModel {
 
     /**
     * 唯一id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UniqId")
     @Expose
@@ -108,10 +107,8 @@ public class AddSpecifyPrivateZoneVpcResponse extends AbstractModel {
     }
 
     /**
-     * Get 唯一id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 唯一id 
      * @return UniqId 唯一id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUniqId() {
         return this.UniqId;
@@ -119,9 +116,7 @@ public class AddSpecifyPrivateZoneVpcResponse extends AbstractModel {
 
     /**
      * Set 唯一id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UniqId 唯一id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUniqId(String UniqId) {
         this.UniqId = UniqId;

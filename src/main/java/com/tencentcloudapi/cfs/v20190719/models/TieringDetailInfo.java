@@ -25,7 +25,6 @@ public class TieringDetailInfo extends AbstractModel {
 
     /**
     * 低频存储容量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TieringSizeInBytes")
     @Expose
@@ -39,10 +38,8 @@ public class TieringDetailInfo extends AbstractModel {
     private Long SecondaryTieringSizeInBytes;
 
     /**
-     * Get 低频存储容量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 低频存储容量 
      * @return TieringSizeInBytes 低频存储容量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTieringSizeInBytes() {
         return this.TieringSizeInBytes;
@@ -50,9 +47,7 @@ public class TieringDetailInfo extends AbstractModel {
 
     /**
      * Set 低频存储容量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TieringSizeInBytes 低频存储容量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTieringSizeInBytes(Long TieringSizeInBytes) {
         this.TieringSizeInBytes = TieringSizeInBytes;

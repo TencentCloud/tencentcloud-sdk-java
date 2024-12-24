@@ -52,7 +52,7 @@ public class CreateInstanceNewRequest extends AbstractModel {
     private String UserSubnetId;
 
     /**
-    * 版本
+    * 系统版本
     */
     @SerializedName("ProductVersion")
     @Expose
@@ -102,7 +102,7 @@ SpecName从DescribeSpec接口中返回的DataSpec.Name获取
     private String CosBucketName;
 
     /**
-    * 是否是裸盘挂载
+    * 是否是裸盘挂载，默认值 0 为 未挂载，1 为挂载。
     */
     @SerializedName("MountDiskType")
     @Expose
@@ -195,16 +195,16 @@ SpecName从DescribeSpec接口中返回的CommonSpec.Name（ZK节点）获取
     }
 
     /**
-     * Get 版本 
-     * @return ProductVersion 版本
+     * Get 系统版本 
+     * @return ProductVersion 系统版本
      */
     public String getProductVersion() {
         return this.ProductVersion;
     }
 
     /**
-     * Set 版本
-     * @param ProductVersion 版本
+     * Set 系统版本
+     * @param ProductVersion 系统版本
      */
     public void setProductVersion(String ProductVersion) {
         this.ProductVersion = ProductVersion;
@@ -315,16 +315,16 @@ SpecName从DescribeSpec接口中返回的DataSpec.Name获取
     }
 
     /**
-     * Get 是否是裸盘挂载 
-     * @return MountDiskType 是否是裸盘挂载
+     * Get 是否是裸盘挂载，默认值 0 为 未挂载，1 为挂载。 
+     * @return MountDiskType 是否是裸盘挂载，默认值 0 为 未挂载，1 为挂载。
      */
     public Long getMountDiskType() {
         return this.MountDiskType;
     }
 
     /**
-     * Set 是否是裸盘挂载
-     * @param MountDiskType 是否是裸盘挂载
+     * Set 是否是裸盘挂载，默认值 0 为 未挂载，1 为挂载。
+     * @param MountDiskType 是否是裸盘挂载，默认值 0 为 未挂载，1 为挂载。
      */
     public void setMountDiskType(Long MountDiskType) {
         this.MountDiskType = MountDiskType;

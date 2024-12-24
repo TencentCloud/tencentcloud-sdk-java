@@ -75,6 +75,17 @@ public class FusionUltraParam extends AbstractModel {
     private Float TeethEnhanceRadio;
 
     /**
+    * 妆容迁移开关，默认取值为0。
+将素材模板的妆容迁移到融合结果上。即：如果希望妆容效果与模板图保持一致，可以打开此开关。
+0：妆容迁移关闭
+1：妆容迁移打开
+该参数仅对SwapModelType（模型类型）取值1-5生效
+    */
+    @SerializedName("MakeupTransferRadio")
+    @Expose
+    private Float MakeupTransferRadio;
+
+    /**
      * Get 拉脸强度。主要用于调整生成结果人脸脸型更像素材模板还是用户人脸。取值越大越像用户人脸。
 取值范围：0-1之间。默认取值0.7。
 
@@ -218,6 +229,38 @@ public class FusionUltraParam extends AbstractModel {
         this.TeethEnhanceRadio = TeethEnhanceRadio;
     }
 
+    /**
+     * Get 妆容迁移开关，默认取值为0。
+将素材模板的妆容迁移到融合结果上。即：如果希望妆容效果与模板图保持一致，可以打开此开关。
+0：妆容迁移关闭
+1：妆容迁移打开
+该参数仅对SwapModelType（模型类型）取值1-5生效 
+     * @return MakeupTransferRadio 妆容迁移开关，默认取值为0。
+将素材模板的妆容迁移到融合结果上。即：如果希望妆容效果与模板图保持一致，可以打开此开关。
+0：妆容迁移关闭
+1：妆容迁移打开
+该参数仅对SwapModelType（模型类型）取值1-5生效
+     */
+    public Float getMakeupTransferRadio() {
+        return this.MakeupTransferRadio;
+    }
+
+    /**
+     * Set 妆容迁移开关，默认取值为0。
+将素材模板的妆容迁移到融合结果上。即：如果希望妆容效果与模板图保持一致，可以打开此开关。
+0：妆容迁移关闭
+1：妆容迁移打开
+该参数仅对SwapModelType（模型类型）取值1-5生效
+     * @param MakeupTransferRadio 妆容迁移开关，默认取值为0。
+将素材模板的妆容迁移到融合结果上。即：如果希望妆容效果与模板图保持一致，可以打开此开关。
+0：妆容迁移关闭
+1：妆容迁移打开
+该参数仅对SwapModelType（模型类型）取值1-5生效
+     */
+    public void setMakeupTransferRadio(Float MakeupTransferRadio) {
+        this.MakeupTransferRadio = MakeupTransferRadio;
+    }
+
     public FusionUltraParam() {
     }
 
@@ -241,6 +284,9 @@ public class FusionUltraParam extends AbstractModel {
         if (source.TeethEnhanceRadio != null) {
             this.TeethEnhanceRadio = new Float(source.TeethEnhanceRadio);
         }
+        if (source.MakeupTransferRadio != null) {
+            this.MakeupTransferRadio = new Float(source.MakeupTransferRadio);
+        }
     }
 
 
@@ -253,6 +299,7 @@ public class FusionUltraParam extends AbstractModel {
         this.setParamSimple(map, prefix + "MpRadio", this.MpRadio);
         this.setParamSimple(map, prefix + "BlurRadio", this.BlurRadio);
         this.setParamSimple(map, prefix + "TeethEnhanceRadio", this.TeethEnhanceRadio);
+        this.setParamSimple(map, prefix + "MakeupTransferRadio", this.MakeupTransferRadio);
 
     }
 }

@@ -208,6 +208,25 @@ rtmp、rtmps、rtsp、rtp、srt。
     private String ToUrl;
 
     /**
+    * 指定播放文件索引。
+注意： 1. 从1开始，不大于SourceUrls中文件个数。
+2. 该偏移仅在首次轮播时有效。
+3. 提前创建的任务指定的偏移最长有效期为24小时，24小时后未开始的任务偏移失效。
+    */
+    @SerializedName("FileIndex")
+    @Expose
+    private Long FileIndex;
+
+    /**
+    * 指定播放文件偏移。
+注意：
+1. 单位：秒，配合FileIndex使用。
+    */
+    @SerializedName("OffsetTime")
+    @Expose
+    private Long OffsetTime;
+
+    /**
     * 备源的类型：
 PullLivePushLive -直播，
 PullVodPushLive -点播。
@@ -803,6 +822,58 @@ rtmp、rtmps、rtsp、rtp、srt。
     }
 
     /**
+     * Get 指定播放文件索引。
+注意： 1. 从1开始，不大于SourceUrls中文件个数。
+2. 该偏移仅在首次轮播时有效。
+3. 提前创建的任务指定的偏移最长有效期为24小时，24小时后未开始的任务偏移失效。 
+     * @return FileIndex 指定播放文件索引。
+注意： 1. 从1开始，不大于SourceUrls中文件个数。
+2. 该偏移仅在首次轮播时有效。
+3. 提前创建的任务指定的偏移最长有效期为24小时，24小时后未开始的任务偏移失效。
+     */
+    public Long getFileIndex() {
+        return this.FileIndex;
+    }
+
+    /**
+     * Set 指定播放文件索引。
+注意： 1. 从1开始，不大于SourceUrls中文件个数。
+2. 该偏移仅在首次轮播时有效。
+3. 提前创建的任务指定的偏移最长有效期为24小时，24小时后未开始的任务偏移失效。
+     * @param FileIndex 指定播放文件索引。
+注意： 1. 从1开始，不大于SourceUrls中文件个数。
+2. 该偏移仅在首次轮播时有效。
+3. 提前创建的任务指定的偏移最长有效期为24小时，24小时后未开始的任务偏移失效。
+     */
+    public void setFileIndex(Long FileIndex) {
+        this.FileIndex = FileIndex;
+    }
+
+    /**
+     * Get 指定播放文件偏移。
+注意：
+1. 单位：秒，配合FileIndex使用。 
+     * @return OffsetTime 指定播放文件偏移。
+注意：
+1. 单位：秒，配合FileIndex使用。
+     */
+    public Long getOffsetTime() {
+        return this.OffsetTime;
+    }
+
+    /**
+     * Set 指定播放文件偏移。
+注意：
+1. 单位：秒，配合FileIndex使用。
+     * @param OffsetTime 指定播放文件偏移。
+注意：
+1. 单位：秒，配合FileIndex使用。
+     */
+    public void setOffsetTime(Long OffsetTime) {
+        this.OffsetTime = OffsetTime;
+    }
+
+    /**
      * Get 备源的类型：
 PullLivePushLive -直播，
 PullVodPushLive -点播。
@@ -1035,6 +1106,12 @@ PullVodPushLive -点播。
         if (source.ToUrl != null) {
             this.ToUrl = new String(source.ToUrl);
         }
+        if (source.FileIndex != null) {
+            this.FileIndex = new Long(source.FileIndex);
+        }
+        if (source.OffsetTime != null) {
+            this.OffsetTime = new Long(source.OffsetTime);
+        }
         if (source.BackupSourceType != null) {
             this.BackupSourceType = new String(source.BackupSourceType);
         }
@@ -1083,6 +1160,8 @@ PullVodPushLive -点播。
         this.setParamSimple(map, prefix + "SpecifyTaskId", this.SpecifyTaskId);
         this.setParamSimple(map, prefix + "Comment", this.Comment);
         this.setParamSimple(map, prefix + "ToUrl", this.ToUrl);
+        this.setParamSimple(map, prefix + "FileIndex", this.FileIndex);
+        this.setParamSimple(map, prefix + "OffsetTime", this.OffsetTime);
         this.setParamSimple(map, prefix + "BackupSourceType", this.BackupSourceType);
         this.setParamSimple(map, prefix + "BackupSourceUrl", this.BackupSourceUrl);
         this.setParamArrayObj(map, prefix + "WatermarkList.", this.WatermarkList);

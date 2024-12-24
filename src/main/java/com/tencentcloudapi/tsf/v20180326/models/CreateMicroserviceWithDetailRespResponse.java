@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateMicroserviceWithDetailRespResponse extends AbstractModel {
 
     /**
-    * id
+    * 微服务ID
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +38,16 @@ public class CreateMicroserviceWithDetailRespResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get id 
-     * @return Result id
+     * Get 微服务ID 
+     * @return Result 微服务ID
      */
     public String getResult() {
         return this.Result;
     }
 
     /**
-     * Set id
-     * @param Result id
+     * Set 微服务ID
+     * @param Result 微服务ID
      */
     public void setResult(String Result) {
         this.Result = Result;

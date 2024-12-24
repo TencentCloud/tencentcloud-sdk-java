@@ -53,7 +53,6 @@ public class MigrationTaskInfo extends AbstractModel {
 
     /**
     * 数据源桶名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BucketName")
     @Expose
@@ -61,7 +60,6 @@ public class MigrationTaskInfo extends AbstractModel {
 
     /**
     * 数据源桶地域
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BucketRegion")
     @Expose
@@ -69,7 +67,6 @@ public class MigrationTaskInfo extends AbstractModel {
 
     /**
     * 数据源桶地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BucketAddress")
     @Expose
@@ -77,7 +74,6 @@ public class MigrationTaskInfo extends AbstractModel {
 
     /**
     * 清单地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ListAddress")
     @Expose
@@ -85,7 +81,6 @@ public class MigrationTaskInfo extends AbstractModel {
 
     /**
     * 文件系统实例名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FsName")
     @Expose
@@ -121,7 +116,6 @@ public class MigrationTaskInfo extends AbstractModel {
 
     /**
     * 完成/终止时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndTime")
     @Expose
@@ -136,7 +130,6 @@ public class MigrationTaskInfo extends AbstractModel {
 
     /**
     * 文件数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileTotalCount")
     @Expose
@@ -144,7 +137,6 @@ public class MigrationTaskInfo extends AbstractModel {
 
     /**
     * 已迁移文件数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileMigratedCount")
     @Expose
@@ -152,7 +144,6 @@ public class MigrationTaskInfo extends AbstractModel {
 
     /**
     * 迁移失败文件数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileFailedCount")
     @Expose
@@ -160,7 +151,6 @@ public class MigrationTaskInfo extends AbstractModel {
 
     /**
     * 文件容量，单位Byte
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileTotalSize")
     @Expose
@@ -168,7 +158,6 @@ public class MigrationTaskInfo extends AbstractModel {
 
     /**
     * 已迁移文件容量，单位Byte
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileMigratedSize")
     @Expose
@@ -176,7 +165,6 @@ public class MigrationTaskInfo extends AbstractModel {
 
     /**
     * 迁移失败文件容量，单位Byte
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileFailedSize")
     @Expose
@@ -184,7 +172,6 @@ public class MigrationTaskInfo extends AbstractModel {
 
     /**
     * 全部清单
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileTotalList")
     @Expose
@@ -192,7 +179,6 @@ public class MigrationTaskInfo extends AbstractModel {
 
     /**
     * 已完成文件清单
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileCompletedList")
     @Expose
@@ -200,7 +186,6 @@ public class MigrationTaskInfo extends AbstractModel {
 
     /**
     * 失败文件清单
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileFailedList")
     @Expose
@@ -208,7 +193,6 @@ public class MigrationTaskInfo extends AbstractModel {
 
     /**
     * 源桶路径
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BucketPath")
     @Expose
@@ -286,10 +270,8 @@ public class MigrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 数据源桶名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据源桶名称 
      * @return BucketName 数据源桶名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBucketName() {
         return this.BucketName;
@@ -297,19 +279,15 @@ public class MigrationTaskInfo extends AbstractModel {
 
     /**
      * Set 数据源桶名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BucketName 数据源桶名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBucketName(String BucketName) {
         this.BucketName = BucketName;
     }
 
     /**
-     * Get 数据源桶地域
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据源桶地域 
      * @return BucketRegion 数据源桶地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBucketRegion() {
         return this.BucketRegion;
@@ -317,19 +295,15 @@ public class MigrationTaskInfo extends AbstractModel {
 
     /**
      * Set 数据源桶地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BucketRegion 数据源桶地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBucketRegion(String BucketRegion) {
         this.BucketRegion = BucketRegion;
     }
 
     /**
-     * Get 数据源桶地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据源桶地址 
      * @return BucketAddress 数据源桶地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBucketAddress() {
         return this.BucketAddress;
@@ -337,19 +311,15 @@ public class MigrationTaskInfo extends AbstractModel {
 
     /**
      * Set 数据源桶地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BucketAddress 数据源桶地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBucketAddress(String BucketAddress) {
         this.BucketAddress = BucketAddress;
     }
 
     /**
-     * Get 清单地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 清单地址 
      * @return ListAddress 清单地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getListAddress() {
         return this.ListAddress;
@@ -357,19 +327,15 @@ public class MigrationTaskInfo extends AbstractModel {
 
     /**
      * Set 清单地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ListAddress 清单地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setListAddress(String ListAddress) {
         this.ListAddress = ListAddress;
     }
 
     /**
-     * Get 文件系统实例名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文件系统实例名称 
      * @return FsName 文件系统实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFsName() {
         return this.FsName;
@@ -377,9 +343,7 @@ public class MigrationTaskInfo extends AbstractModel {
 
     /**
      * Set 文件系统实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FsName 文件系统实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFsName(String FsName) {
         this.FsName = FsName;
@@ -450,10 +414,8 @@ public class MigrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 完成/终止时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 完成/终止时间 
      * @return EndTime 完成/终止时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getEndTime() {
         return this.EndTime;
@@ -461,9 +423,7 @@ public class MigrationTaskInfo extends AbstractModel {
 
     /**
      * Set 完成/终止时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EndTime 完成/终止时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;
@@ -486,10 +446,8 @@ public class MigrationTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get 文件数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文件数量 
      * @return FileTotalCount 文件数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFileTotalCount() {
         return this.FileTotalCount;
@@ -497,19 +455,15 @@ public class MigrationTaskInfo extends AbstractModel {
 
     /**
      * Set 文件数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FileTotalCount 文件数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileTotalCount(Long FileTotalCount) {
         this.FileTotalCount = FileTotalCount;
     }
 
     /**
-     * Get 已迁移文件数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 已迁移文件数量 
      * @return FileMigratedCount 已迁移文件数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFileMigratedCount() {
         return this.FileMigratedCount;
@@ -517,19 +471,15 @@ public class MigrationTaskInfo extends AbstractModel {
 
     /**
      * Set 已迁移文件数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FileMigratedCount 已迁移文件数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileMigratedCount(Long FileMigratedCount) {
         this.FileMigratedCount = FileMigratedCount;
     }
 
     /**
-     * Get 迁移失败文件数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 迁移失败文件数量 
      * @return FileFailedCount 迁移失败文件数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFileFailedCount() {
         return this.FileFailedCount;
@@ -537,19 +487,15 @@ public class MigrationTaskInfo extends AbstractModel {
 
     /**
      * Set 迁移失败文件数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FileFailedCount 迁移失败文件数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileFailedCount(Long FileFailedCount) {
         this.FileFailedCount = FileFailedCount;
     }
 
     /**
-     * Get 文件容量，单位Byte
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文件容量，单位Byte 
      * @return FileTotalSize 文件容量，单位Byte
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFileTotalSize() {
         return this.FileTotalSize;
@@ -557,19 +503,15 @@ public class MigrationTaskInfo extends AbstractModel {
 
     /**
      * Set 文件容量，单位Byte
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FileTotalSize 文件容量，单位Byte
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileTotalSize(Long FileTotalSize) {
         this.FileTotalSize = FileTotalSize;
     }
 
     /**
-     * Get 已迁移文件容量，单位Byte
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 已迁移文件容量，单位Byte 
      * @return FileMigratedSize 已迁移文件容量，单位Byte
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFileMigratedSize() {
         return this.FileMigratedSize;
@@ -577,19 +519,15 @@ public class MigrationTaskInfo extends AbstractModel {
 
     /**
      * Set 已迁移文件容量，单位Byte
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FileMigratedSize 已迁移文件容量，单位Byte
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileMigratedSize(Long FileMigratedSize) {
         this.FileMigratedSize = FileMigratedSize;
     }
 
     /**
-     * Get 迁移失败文件容量，单位Byte
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 迁移失败文件容量，单位Byte 
      * @return FileFailedSize 迁移失败文件容量，单位Byte
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFileFailedSize() {
         return this.FileFailedSize;
@@ -597,19 +535,15 @@ public class MigrationTaskInfo extends AbstractModel {
 
     /**
      * Set 迁移失败文件容量，单位Byte
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FileFailedSize 迁移失败文件容量，单位Byte
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileFailedSize(Long FileFailedSize) {
         this.FileFailedSize = FileFailedSize;
     }
 
     /**
-     * Get 全部清单
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 全部清单 
      * @return FileTotalList 全部清单
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFileTotalList() {
         return this.FileTotalList;
@@ -617,19 +551,15 @@ public class MigrationTaskInfo extends AbstractModel {
 
     /**
      * Set 全部清单
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FileTotalList 全部清单
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileTotalList(String FileTotalList) {
         this.FileTotalList = FileTotalList;
     }
 
     /**
-     * Get 已完成文件清单
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 已完成文件清单 
      * @return FileCompletedList 已完成文件清单
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFileCompletedList() {
         return this.FileCompletedList;
@@ -637,19 +567,15 @@ public class MigrationTaskInfo extends AbstractModel {
 
     /**
      * Set 已完成文件清单
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FileCompletedList 已完成文件清单
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileCompletedList(String FileCompletedList) {
         this.FileCompletedList = FileCompletedList;
     }
 
     /**
-     * Get 失败文件清单
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 失败文件清单 
      * @return FileFailedList 失败文件清单
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFileFailedList() {
         return this.FileFailedList;
@@ -657,19 +583,15 @@ public class MigrationTaskInfo extends AbstractModel {
 
     /**
      * Set 失败文件清单
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FileFailedList 失败文件清单
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileFailedList(String FileFailedList) {
         this.FileFailedList = FileFailedList;
     }
 
     /**
-     * Get 源桶路径
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 源桶路径 
      * @return BucketPath 源桶路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBucketPath() {
         return this.BucketPath;
@@ -677,9 +599,7 @@ public class MigrationTaskInfo extends AbstractModel {
 
     /**
      * Set 源桶路径
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BucketPath 源桶路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBucketPath(String BucketPath) {
         this.BucketPath = BucketPath;

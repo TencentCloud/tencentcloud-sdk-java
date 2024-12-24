@@ -138,6 +138,17 @@ public class MpsClient extends AbstractClient{
     }
 
     /**
+     *创建直播录制模板
+     * @param req CreateLiveRecordTemplateRequest
+     * @return CreateLiveRecordTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateLiveRecordTemplateResponse CreateLiveRecordTemplate(CreateLiveRecordTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateLiveRecordTemplate", CreateLiveRecordTemplateResponse.class);
+    }
+
+    /**
      *该接口用于创建素材样本，用于通过五官定位等技术，进行内容识别、内容不适宜等视频处理。
      * @param req CreatePersonSampleRequest
      * @return CreatePersonSampleResponse
@@ -394,6 +405,17 @@ public class MpsClient extends AbstractClient{
     }
 
     /**
+     *删除直播录制模板
+     * @param req DeleteLiveRecordTemplateRequest
+     * @return DeleteLiveRecordTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteLiveRecordTemplateResponse DeleteLiveRecordTemplate(DeleteLiveRecordTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteLiveRecordTemplate", DeleteLiveRecordTemplateResponse.class);
+    }
+
+    /**
      *该接口用于根据素材 ID，删除素材样本。
      * @param req DeletePersonSampleRequest
      * @return DeletePersonSampleResponse
@@ -589,6 +611,17 @@ public class MpsClient extends AbstractClient{
     public DescribeImageSpriteTemplatesResponse DescribeImageSpriteTemplates(DescribeImageSpriteTemplatesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeImageSpriteTemplates", DescribeImageSpriteTemplatesResponse.class);
+    }
+
+    /**
+     *获取直播录制模板
+     * @param req DescribeLiveRecordTemplatesRequest
+     * @return DescribeLiveRecordTemplatesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLiveRecordTemplatesResponse DescribeLiveRecordTemplates(DescribeLiveRecordTemplatesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLiveRecordTemplates", DescribeLiveRecordTemplatesResponse.class);
     }
 
     /**
@@ -1036,6 +1069,17 @@ public class MpsClient extends AbstractClient{
     public ModifyImageSpriteTemplateResponse ModifyImageSpriteTemplate(ModifyImageSpriteTemplateRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyImageSpriteTemplate", ModifyImageSpriteTemplateResponse.class);
+    }
+
+    /**
+     *修改直播录制模板
+     * @param req ModifyLiveRecordTemplateRequest
+     * @return ModifyLiveRecordTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLiveRecordTemplateResponse ModifyLiveRecordTemplate(ModifyLiveRecordTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyLiveRecordTemplate", ModifyLiveRecordTemplateResponse.class);
     }
 
     /**

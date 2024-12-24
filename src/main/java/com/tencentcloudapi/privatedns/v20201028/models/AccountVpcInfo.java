@@ -32,7 +32,6 @@ public class AccountVpcInfo extends AbstractModel {
 
     /**
     * Vpc所属地区: ap-guangzhou, ap-shanghai
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Region")
     @Expose
@@ -40,7 +39,6 @@ public class AccountVpcInfo extends AbstractModel {
 
     /**
     * Vpc所属账号: 123456789
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Uin")
     @Expose
@@ -48,7 +46,6 @@ public class AccountVpcInfo extends AbstractModel {
 
     /**
     * vpc资源名称：testname
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VpcName")
     @Expose
@@ -71,10 +68,8 @@ public class AccountVpcInfo extends AbstractModel {
     }
 
     /**
-     * Get Vpc所属地区: ap-guangzhou, ap-shanghai
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Vpc所属地区: ap-guangzhou, ap-shanghai 
      * @return Region Vpc所属地区: ap-guangzhou, ap-shanghai
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegion() {
         return this.Region;
@@ -82,19 +77,15 @@ public class AccountVpcInfo extends AbstractModel {
 
     /**
      * Set Vpc所属地区: ap-guangzhou, ap-shanghai
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Region Vpc所属地区: ap-guangzhou, ap-shanghai
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get Vpc所属账号: 123456789
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Vpc所属账号: 123456789 
      * @return Uin Vpc所属账号: 123456789
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUin() {
         return this.Uin;
@@ -102,19 +93,15 @@ public class AccountVpcInfo extends AbstractModel {
 
     /**
      * Set Vpc所属账号: 123456789
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Uin Vpc所属账号: 123456789
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUin(String Uin) {
         this.Uin = Uin;
     }
 
     /**
-     * Get vpc资源名称：testname
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get vpc资源名称：testname 
      * @return VpcName vpc资源名称：testname
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVpcName() {
         return this.VpcName;
@@ -122,9 +109,7 @@ public class AccountVpcInfo extends AbstractModel {
 
     /**
      * Set vpc资源名称：testname
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VpcName vpc资源名称：testname
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVpcName(String VpcName) {
         this.VpcName = VpcName;

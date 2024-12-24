@@ -195,7 +195,6 @@ Available:可用
 
     /**
     * 分层存储详情
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TieringDetail")
     @Expose
@@ -203,7 +202,6 @@ Available:可用
 
     /**
     * 文件系统自动扩容策略
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AutoScaleUpRule")
     @Expose
@@ -211,7 +209,6 @@ Available:可用
 
     /**
     * 文件系统版本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Version")
     @Expose
@@ -622,10 +619,8 @@ Available:可用
     }
 
     /**
-     * Get 分层存储详情
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 分层存储详情 
      * @return TieringDetail 分层存储详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TieringDetailInfo getTieringDetail() {
         return this.TieringDetail;
@@ -633,19 +628,15 @@ Available:可用
 
     /**
      * Set 分层存储详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TieringDetail 分层存储详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTieringDetail(TieringDetailInfo TieringDetail) {
         this.TieringDetail = TieringDetail;
     }
 
     /**
-     * Get 文件系统自动扩容策略
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文件系统自动扩容策略 
      * @return AutoScaleUpRule 文件系统自动扩容策略
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AutoScaleUpRule getAutoScaleUpRule() {
         return this.AutoScaleUpRule;
@@ -653,19 +644,15 @@ Available:可用
 
     /**
      * Set 文件系统自动扩容策略
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AutoScaleUpRule 文件系统自动扩容策略
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAutoScaleUpRule(AutoScaleUpRule AutoScaleUpRule) {
         this.AutoScaleUpRule = AutoScaleUpRule;
     }
 
     /**
-     * Get 文件系统版本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文件系统版本 
      * @return Version 文件系统版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVersion() {
         return this.Version;
@@ -673,9 +660,7 @@ Available:可用
 
     /**
      * Set 文件系统版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Version 文件系统版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVersion(String Version) {
         this.Version = Version;

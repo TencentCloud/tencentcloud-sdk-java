@@ -141,6 +141,20 @@ public class EnvBillingInfoItem extends AbstractModel {
     private String ExtPackageType;
 
     /**
+    * 是否付费期环境，可取值：yes/no。
+    */
+    @SerializedName("EnvCharged")
+    @Expose
+    private String EnvCharged;
+
+    /**
+    * 是否已激活，可取值：yes/no。
+    */
+    @SerializedName("EnvActivated")
+    @Expose
+    private String EnvActivated;
+
+    /**
      * Get 环境ID 
      * @return EnvId 环境ID
      */
@@ -428,6 +442,38 @@ public class EnvBillingInfoItem extends AbstractModel {
         this.ExtPackageType = ExtPackageType;
     }
 
+    /**
+     * Get 是否付费期环境，可取值：yes/no。 
+     * @return EnvCharged 是否付费期环境，可取值：yes/no。
+     */
+    public String getEnvCharged() {
+        return this.EnvCharged;
+    }
+
+    /**
+     * Set 是否付费期环境，可取值：yes/no。
+     * @param EnvCharged 是否付费期环境，可取值：yes/no。
+     */
+    public void setEnvCharged(String EnvCharged) {
+        this.EnvCharged = EnvCharged;
+    }
+
+    /**
+     * Get 是否已激活，可取值：yes/no。 
+     * @return EnvActivated 是否已激活，可取值：yes/no。
+     */
+    public String getEnvActivated() {
+        return this.EnvActivated;
+    }
+
+    /**
+     * Set 是否已激活，可取值：yes/no。
+     * @param EnvActivated 是否已激活，可取值：yes/no。
+     */
+    public void setEnvActivated(String EnvActivated) {
+        this.EnvActivated = EnvActivated;
+    }
+
     public EnvBillingInfoItem() {
     }
 
@@ -481,6 +527,12 @@ public class EnvBillingInfoItem extends AbstractModel {
         if (source.ExtPackageType != null) {
             this.ExtPackageType = new String(source.ExtPackageType);
         }
+        if (source.EnvCharged != null) {
+            this.EnvCharged = new String(source.EnvCharged);
+        }
+        if (source.EnvActivated != null) {
+            this.EnvActivated = new String(source.EnvActivated);
+        }
     }
 
 
@@ -503,6 +555,8 @@ public class EnvBillingInfoItem extends AbstractModel {
         this.setParamSimple(map, prefix + "FreeQuota", this.FreeQuota);
         this.setParamSimple(map, prefix + "EnableOverrun", this.EnableOverrun);
         this.setParamSimple(map, prefix + "ExtPackageType", this.ExtPackageType);
+        this.setParamSimple(map, prefix + "EnvCharged", this.EnvCharged);
+        this.setParamSimple(map, prefix + "EnvActivated", this.EnvActivated);
 
     }
 }

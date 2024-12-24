@@ -117,7 +117,6 @@ public class TaskDetail extends AbstractModel {
 
     /**
     * 任务的附加信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskAttachInfo")
     @Expose
@@ -372,10 +371,8 @@ public class TaskDetail extends AbstractModel {
     }
 
     /**
-     * Get 任务的附加信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务的附加信息。 
      * @return TaskAttachInfo 任务的附加信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TaskAttachInfo [] getTaskAttachInfo() {
         return this.TaskAttachInfo;
@@ -383,9 +380,7 @@ public class TaskDetail extends AbstractModel {
 
     /**
      * Set 任务的附加信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskAttachInfo 任务的附加信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskAttachInfo(TaskAttachInfo [] TaskAttachInfo) {
         this.TaskAttachInfo = TaskAttachInfo;

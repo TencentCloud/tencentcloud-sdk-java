@@ -52,7 +52,7 @@ public class DescribeAuditLogsRequest extends AbstractModel {
     private Long Limit;
 
     /**
-    * 分页偏移量。
+    * 日志偏移量，最多支持偏移查询65535条日志。可填写范围：0 - 65535。
     */
     @SerializedName("Offset")
     @Expose
@@ -147,16 +147,16 @@ public class DescribeAuditLogsRequest extends AbstractModel {
     }
 
     /**
-     * Get 分页偏移量。 
-     * @return Offset 分页偏移量。
+     * Get 日志偏移量，最多支持偏移查询65535条日志。可填写范围：0 - 65535。 
+     * @return Offset 日志偏移量，最多支持偏移查询65535条日志。可填写范围：0 - 65535。
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 分页偏移量。
-     * @param Offset 分页偏移量。
+     * Set 日志偏移量，最多支持偏移查询65535条日志。可填写范围：0 - 65535。
+     * @param Offset 日志偏移量，最多支持偏移查询65535条日志。可填写范围：0 - 65535。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

@@ -26,7 +26,6 @@ public class TaskAttachInfo extends AbstractModel {
     /**
     * 升级任务：
 ”FastUpgradeStatus“：表示升级类型。1-原地升级；0-普通升级。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AttachKey")
     @Expose
@@ -35,7 +34,6 @@ public class TaskAttachInfo extends AbstractModel {
     /**
     * 升级任务：
 ”FastUpgradeStatus“：表示升级类型。1-原地升级；0-普通升级。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AttachValue")
     @Expose
@@ -43,11 +41,9 @@ public class TaskAttachInfo extends AbstractModel {
 
     /**
      * Get 升级任务：
-”FastUpgradeStatus“：表示升级类型。1-原地升级；0-普通升级。
-注意：此字段可能返回 null，表示取不到有效值。 
+”FastUpgradeStatus“：表示升级类型。1-原地升级；0-普通升级。 
      * @return AttachKey 升级任务：
 ”FastUpgradeStatus“：表示升级类型。1-原地升级；0-普通升级。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAttachKey() {
         return this.AttachKey;
@@ -56,10 +52,8 @@ public class TaskAttachInfo extends AbstractModel {
     /**
      * Set 升级任务：
 ”FastUpgradeStatus“：表示升级类型。1-原地升级；0-普通升级。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AttachKey 升级任务：
 ”FastUpgradeStatus“：表示升级类型。1-原地升级；0-普通升级。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAttachKey(String AttachKey) {
         this.AttachKey = AttachKey;
@@ -67,11 +61,9 @@ public class TaskAttachInfo extends AbstractModel {
 
     /**
      * Get 升级任务：
-”FastUpgradeStatus“：表示升级类型。1-原地升级；0-普通升级。
-注意：此字段可能返回 null，表示取不到有效值。 
+”FastUpgradeStatus“：表示升级类型。1-原地升级；0-普通升级。 
      * @return AttachValue 升级任务：
 ”FastUpgradeStatus“：表示升级类型。1-原地升级；0-普通升级。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAttachValue() {
         return this.AttachValue;
@@ -80,10 +72,8 @@ public class TaskAttachInfo extends AbstractModel {
     /**
      * Set 升级任务：
 ”FastUpgradeStatus“：表示升级类型。1-原地升级；0-普通升级。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AttachValue 升级任务：
 ”FastUpgradeStatus“：表示升级类型。1-原地升级；0-普通升级。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAttachValue(String AttachValue) {
         this.AttachValue = AttachValue;

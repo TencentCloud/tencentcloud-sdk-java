@@ -82,6 +82,13 @@ public class NodeInfos extends AbstractModel {
     private String Zone;
 
     /**
+    * 创建时间
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private String CreateTime;
+
+    /**
      * Get 节点名称 
      * @return NodeName 节点名称
      */
@@ -217,6 +224,22 @@ public class NodeInfos extends AbstractModel {
         this.Zone = Zone;
     }
 
+    /**
+     * Get 创建时间 
+     * @return CreateTime 创建时间
+     */
+    public String getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set 创建时间
+     * @param CreateTime 创建时间
+     */
+    public void setCreateTime(String CreateTime) {
+        this.CreateTime = CreateTime;
+    }
+
     public NodeInfos() {
     }
 
@@ -249,6 +272,9 @@ public class NodeInfos extends AbstractModel {
         if (source.Zone != null) {
             this.Zone = new String(source.Zone);
         }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
     }
 
 
@@ -264,6 +290,7 @@ public class NodeInfos extends AbstractModel {
         this.setParamSimple(map, prefix + "LastRestartTime", this.LastRestartTime);
         this.setParamSimple(map, prefix + "Id", this.Id);
         this.setParamSimple(map, prefix + "Zone", this.Zone);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
 
     }
 }

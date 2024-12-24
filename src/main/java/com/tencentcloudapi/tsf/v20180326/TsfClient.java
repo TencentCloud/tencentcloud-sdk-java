@@ -678,7 +678,9 @@ public class TsfClient extends AbstractClient{
     }
 
     /**
-     *删除Serverless部署组
+     *serverless 能力已下线。下线对应接口。
+
+删除Serverless部署组
      * @param req DeleteServerlessGroupRequest
      * @return DeleteServerlessGroupResponse
      * @throws TencentCloudSDKException

@@ -31,18 +31,18 @@ public class InquiryPriceRenewInstanceRequest extends AbstractModel {
     private Long TimeSpan;
 
     /**
-    * 待续费节点的资源ID列表。资源ID形如：emr-vm-xxxxxxxx。有效的资源ID可通过登录[控制台](https://console.cloud.tencent.com/emr)查询。
-    */
-    @SerializedName("ResourceIds")
-    @Expose
-    private String [] ResourceIds;
-
-    /**
     * 实例计费模式。此处只支持取值为1，表示包年包月。
     */
     @SerializedName("PayMode")
     @Expose
     private Long PayMode;
+
+    /**
+    * 待续费节点的资源ID列表。资源ID形如：emr-vm-xxxxxxxx。有效的资源ID可通过登录[控制台](https://console.cloud.tencent.com/emr)查询。
+    */
+    @SerializedName("ResourceIds")
+    @Expose
+    private String [] ResourceIds;
 
     /**
     * 实例续费的时间单位。取值范围：
@@ -75,6 +75,20 @@ public class InquiryPriceRenewInstanceRequest extends AbstractModel {
     private Long ModifyPayMode;
 
     /**
+    * 是否需要每个节点续费价格
+    */
+    @SerializedName("NeedDetail")
+    @Expose
+    private Boolean NeedDetail;
+
+    /**
+    * 集群id，如果需要集群所有包年包月节点续费信息，可以填写该参数
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
      * Get 实例续费的时长。需要结合TimeUnit一起使用。1表示续费一个月 
      * @return TimeSpan 实例续费的时长。需要结合TimeUnit一起使用。1表示续费一个月
      */
@@ -91,22 +105,6 @@ public class InquiryPriceRenewInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get 待续费节点的资源ID列表。资源ID形如：emr-vm-xxxxxxxx。有效的资源ID可通过登录[控制台](https://console.cloud.tencent.com/emr)查询。 
-     * @return ResourceIds 待续费节点的资源ID列表。资源ID形如：emr-vm-xxxxxxxx。有效的资源ID可通过登录[控制台](https://console.cloud.tencent.com/emr)查询。
-     */
-    public String [] getResourceIds() {
-        return this.ResourceIds;
-    }
-
-    /**
-     * Set 待续费节点的资源ID列表。资源ID形如：emr-vm-xxxxxxxx。有效的资源ID可通过登录[控制台](https://console.cloud.tencent.com/emr)查询。
-     * @param ResourceIds 待续费节点的资源ID列表。资源ID形如：emr-vm-xxxxxxxx。有效的资源ID可通过登录[控制台](https://console.cloud.tencent.com/emr)查询。
-     */
-    public void setResourceIds(String [] ResourceIds) {
-        this.ResourceIds = ResourceIds;
-    }
-
-    /**
      * Get 实例计费模式。此处只支持取值为1，表示包年包月。 
      * @return PayMode 实例计费模式。此处只支持取值为1，表示包年包月。
      */
@@ -120,6 +118,22 @@ public class InquiryPriceRenewInstanceRequest extends AbstractModel {
      */
     public void setPayMode(Long PayMode) {
         this.PayMode = PayMode;
+    }
+
+    /**
+     * Get 待续费节点的资源ID列表。资源ID形如：emr-vm-xxxxxxxx。有效的资源ID可通过登录[控制台](https://console.cloud.tencent.com/emr)查询。 
+     * @return ResourceIds 待续费节点的资源ID列表。资源ID形如：emr-vm-xxxxxxxx。有效的资源ID可通过登录[控制台](https://console.cloud.tencent.com/emr)查询。
+     */
+    public String [] getResourceIds() {
+        return this.ResourceIds;
+    }
+
+    /**
+     * Set 待续费节点的资源ID列表。资源ID形如：emr-vm-xxxxxxxx。有效的资源ID可通过登录[控制台](https://console.cloud.tencent.com/emr)查询。
+     * @param ResourceIds 待续费节点的资源ID列表。资源ID形如：emr-vm-xxxxxxxx。有效的资源ID可通过登录[控制台](https://console.cloud.tencent.com/emr)查询。
+     */
+    public void setResourceIds(String [] ResourceIds) {
+        this.ResourceIds = ResourceIds;
     }
 
     /**
@@ -194,6 +208,38 @@ public class InquiryPriceRenewInstanceRequest extends AbstractModel {
         this.ModifyPayMode = ModifyPayMode;
     }
 
+    /**
+     * Get 是否需要每个节点续费价格 
+     * @return NeedDetail 是否需要每个节点续费价格
+     */
+    public Boolean getNeedDetail() {
+        return this.NeedDetail;
+    }
+
+    /**
+     * Set 是否需要每个节点续费价格
+     * @param NeedDetail 是否需要每个节点续费价格
+     */
+    public void setNeedDetail(Boolean NeedDetail) {
+        this.NeedDetail = NeedDetail;
+    }
+
+    /**
+     * Get 集群id，如果需要集群所有包年包月节点续费信息，可以填写该参数 
+     * @return InstanceId 集群id，如果需要集群所有包年包月节点续费信息，可以填写该参数
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set 集群id，如果需要集群所有包年包月节点续费信息，可以填写该参数
+     * @param InstanceId 集群id，如果需要集群所有包年包月节点续费信息，可以填写该参数
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
     public InquiryPriceRenewInstanceRequest() {
     }
 
@@ -205,14 +251,14 @@ public class InquiryPriceRenewInstanceRequest extends AbstractModel {
         if (source.TimeSpan != null) {
             this.TimeSpan = new Long(source.TimeSpan);
         }
+        if (source.PayMode != null) {
+            this.PayMode = new Long(source.PayMode);
+        }
         if (source.ResourceIds != null) {
             this.ResourceIds = new String[source.ResourceIds.length];
             for (int i = 0; i < source.ResourceIds.length; i++) {
                 this.ResourceIds[i] = new String(source.ResourceIds[i]);
             }
-        }
-        if (source.PayMode != null) {
-            this.PayMode = new Long(source.PayMode);
         }
         if (source.TimeUnit != null) {
             this.TimeUnit = new String(source.TimeUnit);
@@ -226,6 +272,12 @@ public class InquiryPriceRenewInstanceRequest extends AbstractModel {
         if (source.ModifyPayMode != null) {
             this.ModifyPayMode = new Long(source.ModifyPayMode);
         }
+        if (source.NeedDetail != null) {
+            this.NeedDetail = new Boolean(source.NeedDetail);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
     }
 
 
@@ -234,12 +286,14 @@ public class InquiryPriceRenewInstanceRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
-        this.setParamArraySimple(map, prefix + "ResourceIds.", this.ResourceIds);
         this.setParamSimple(map, prefix + "PayMode", this.PayMode);
+        this.setParamArraySimple(map, prefix + "ResourceIds.", this.ResourceIds);
         this.setParamSimple(map, prefix + "TimeUnit", this.TimeUnit);
         this.setParamSimple(map, prefix + "Currency", this.Currency);
         this.setParamObj(map, prefix + "Placement.", this.Placement);
         this.setParamSimple(map, prefix + "ModifyPayMode", this.ModifyPayMode);
+        this.setParamSimple(map, prefix + "NeedDetail", this.NeedDetail);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
 
     }
 }

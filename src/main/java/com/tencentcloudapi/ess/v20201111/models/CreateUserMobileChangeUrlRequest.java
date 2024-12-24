@@ -73,7 +73,7 @@ public class CreateUserMobileChangeUrlRequest extends AbstractModel {
 
 <ul><li><b>ID_CARD </b>: （默认）中国大陆居民身份证 </li>
 <li><b>HONGKONG_AND_MACAO</b> : 港澳居民来往内地通行证</li>
-<li><b>HONGKONG_MACAO_AND_TAIWAN </b>: 港澳台居民居住证(格式同居民身份证)</li></ul>
+<li><b>HONGKONG_MACAO_AND_TAIWAN </b>: 港澳台居民居住证(格式同中国大陆居民身份证)</li></ul>
 
     */
     @SerializedName("IdCardType")
@@ -82,7 +82,7 @@ public class CreateUserMobileChangeUrlRequest extends AbstractModel {
 
     /**
     * 要修改手机号用户的身份证号码，应符合以下规则
-<ul><li>居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li>
+<ul><li>中国大陆居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li>
 <li>港澳居民来往内地通行证号码共11位。第1位为字母，“H”字头签发给中国香港居民，“M”字头签发给中国澳门居民；第2位至第11位为数字。</li>
 <li>港澳台居民居住证号码编码规则与中国大陆身份证相同，应为18位字符串。</li></ul>
 如果没有传递 userId且 userAccountType 是 0 或者没有传递， 此参数为<b>必填项。</b>
@@ -238,14 +238,14 @@ public class CreateUserMobileChangeUrlRequest extends AbstractModel {
 
 <ul><li><b>ID_CARD </b>: （默认）中国大陆居民身份证 </li>
 <li><b>HONGKONG_AND_MACAO</b> : 港澳居民来往内地通行证</li>
-<li><b>HONGKONG_MACAO_AND_TAIWAN </b>: 港澳台居民居住证(格式同居民身份证)</li></ul>
+<li><b>HONGKONG_MACAO_AND_TAIWAN </b>: 港澳台居民居住证(格式同中国大陆居民身份证)</li></ul>
  
      * @return IdCardType 要修改手机号用户的证件类型，
 目前支持的账号类型如下：
 
 <ul><li><b>ID_CARD </b>: （默认）中国大陆居民身份证 </li>
 <li><b>HONGKONG_AND_MACAO</b> : 港澳居民来往内地通行证</li>
-<li><b>HONGKONG_MACAO_AND_TAIWAN </b>: 港澳台居民居住证(格式同居民身份证)</li></ul>
+<li><b>HONGKONG_MACAO_AND_TAIWAN </b>: 港澳台居民居住证(格式同中国大陆居民身份证)</li></ul>
 
      */
     public String getIdCardType() {
@@ -258,14 +258,14 @@ public class CreateUserMobileChangeUrlRequest extends AbstractModel {
 
 <ul><li><b>ID_CARD </b>: （默认）中国大陆居民身份证 </li>
 <li><b>HONGKONG_AND_MACAO</b> : 港澳居民来往内地通行证</li>
-<li><b>HONGKONG_MACAO_AND_TAIWAN </b>: 港澳台居民居住证(格式同居民身份证)</li></ul>
+<li><b>HONGKONG_MACAO_AND_TAIWAN </b>: 港澳台居民居住证(格式同中国大陆居民身份证)</li></ul>
 
      * @param IdCardType 要修改手机号用户的证件类型，
 目前支持的账号类型如下：
 
 <ul><li><b>ID_CARD </b>: （默认）中国大陆居民身份证 </li>
 <li><b>HONGKONG_AND_MACAO</b> : 港澳居民来往内地通行证</li>
-<li><b>HONGKONG_MACAO_AND_TAIWAN </b>: 港澳台居民居住证(格式同居民身份证)</li></ul>
+<li><b>HONGKONG_MACAO_AND_TAIWAN </b>: 港澳台居民居住证(格式同中国大陆居民身份证)</li></ul>
 
      */
     public void setIdCardType(String IdCardType) {
@@ -274,12 +274,12 @@ public class CreateUserMobileChangeUrlRequest extends AbstractModel {
 
     /**
      * Get 要修改手机号用户的身份证号码，应符合以下规则
-<ul><li>居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li>
+<ul><li>中国大陆居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li>
 <li>港澳居民来往内地通行证号码共11位。第1位为字母，“H”字头签发给中国香港居民，“M”字头签发给中国澳门居民；第2位至第11位为数字。</li>
 <li>港澳台居民居住证号码编码规则与中国大陆身份证相同，应为18位字符串。</li></ul>
 如果没有传递 userId且 userAccountType 是 0 或者没有传递， 此参数为<b>必填项。</b> 
      * @return IdCardNumber 要修改手机号用户的身份证号码，应符合以下规则
-<ul><li>居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li>
+<ul><li>中国大陆居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li>
 <li>港澳居民来往内地通行证号码共11位。第1位为字母，“H”字头签发给中国香港居民，“M”字头签发给中国澳门居民；第2位至第11位为数字。</li>
 <li>港澳台居民居住证号码编码规则与中国大陆身份证相同，应为18位字符串。</li></ul>
 如果没有传递 userId且 userAccountType 是 0 或者没有传递， 此参数为<b>必填项。</b>
@@ -290,12 +290,12 @@ public class CreateUserMobileChangeUrlRequest extends AbstractModel {
 
     /**
      * Set 要修改手机号用户的身份证号码，应符合以下规则
-<ul><li>居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li>
+<ul><li>中国大陆居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li>
 <li>港澳居民来往内地通行证号码共11位。第1位为字母，“H”字头签发给中国香港居民，“M”字头签发给中国澳门居民；第2位至第11位为数字。</li>
 <li>港澳台居民居住证号码编码规则与中国大陆身份证相同，应为18位字符串。</li></ul>
 如果没有传递 userId且 userAccountType 是 0 或者没有传递， 此参数为<b>必填项。</b>
      * @param IdCardNumber 要修改手机号用户的身份证号码，应符合以下规则
-<ul><li>居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li>
+<ul><li>中国大陆居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li>
 <li>港澳居民来往内地通行证号码共11位。第1位为字母，“H”字头签发给中国香港居民，“M”字头签发给中国澳门居民；第2位至第11位为数字。</li>
 <li>港澳台居民居住证号码编码规则与中国大陆身份证相同，应为18位字符串。</li></ul>
 如果没有传递 userId且 userAccountType 是 0 或者没有传递， 此参数为<b>必填项。</b>

@@ -710,6 +710,17 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
+     *查询实例秒级备份信息
+     * @param req DescribeSecondLevelBackupInfoRequest
+     * @return DescribeSecondLevelBackupInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSecondLevelBackupInfoResponse DescribeSecondLevelBackupInfo(DescribeSecondLevelBackupInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSecondLevelBackupInfo", DescribeSecondLevelBackupInfoResponse.class);
+    }
+
+    /**
      *本接口（DescribeSlowLog）查询实例慢查询记录。
      * @param req DescribeSlowLogRequest
      * @return DescribeSlowLogResponse
@@ -951,6 +962,17 @@ public class RedisClient extends AbstractClient{
     public ModifyInstanceAvailabilityZonesResponse ModifyInstanceAvailabilityZones(ModifyInstanceAvailabilityZonesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyInstanceAvailabilityZones", ModifyInstanceAvailabilityZonesResponse.class);
+    }
+
+    /**
+     *修改实例的备份模式
+     * @param req ModifyInstanceBackupModeRequest
+     * @return ModifyInstanceBackupModeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyInstanceBackupModeResponse ModifyInstanceBackupMode(ModifyInstanceBackupModeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyInstanceBackupMode", ModifyInstanceBackupModeResponse.class);
     }
 
     /**

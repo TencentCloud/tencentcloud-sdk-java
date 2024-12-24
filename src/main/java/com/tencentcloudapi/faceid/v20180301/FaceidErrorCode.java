@@ -225,6 +225,9 @@ public enum FaceidErrorCode {
     // 视频解码异常
      FAILEDOPERATION_VIDEODECODEFAILED("FailedOperation.VideoDecodeFailed"),
      
+    // 视频时长过长，当前接口最大支持的视频时长为20s。
+     FAILEDOPERATION_VIDEODURATIONEXCEEDED("FailedOperation.VideoDurationExceeded"),
+     
     // 内部错误。
      INTERNALERROR("InternalError"),
      

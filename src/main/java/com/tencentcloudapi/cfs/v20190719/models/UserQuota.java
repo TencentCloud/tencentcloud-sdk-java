@@ -60,7 +60,6 @@ public class UserQuota extends AbstractModel {
 
     /**
     * 容量使用，单位GiB
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CapacityUsed")
     @Expose
@@ -68,7 +67,6 @@ public class UserQuota extends AbstractModel {
 
     /**
     * 文件使用个数，单位个
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileUsed")
     @Expose
@@ -84,7 +82,6 @@ public class UserQuota extends AbstractModel {
 
     /**
     * 配置规则状态，inavailable---配置中，available --已生效，deleting--删除中，deleted 已删除，failed--配置失败
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -171,10 +168,8 @@ public class UserQuota extends AbstractModel {
     }
 
     /**
-     * Get 容量使用，单位GiB
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 容量使用，单位GiB 
      * @return CapacityUsed 容量使用，单位GiB
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCapacityUsed() {
         return this.CapacityUsed;
@@ -182,19 +177,15 @@ public class UserQuota extends AbstractModel {
 
     /**
      * Set 容量使用，单位GiB
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CapacityUsed 容量使用，单位GiB
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCapacityUsed(Long CapacityUsed) {
         this.CapacityUsed = CapacityUsed;
     }
 
     /**
-     * Get 文件使用个数，单位个
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文件使用个数，单位个 
      * @return FileUsed 文件使用个数，单位个
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFileUsed() {
         return this.FileUsed;
@@ -202,9 +193,7 @@ public class UserQuota extends AbstractModel {
 
     /**
      * Set 文件使用个数，单位个
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FileUsed 文件使用个数，单位个
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileUsed(Long FileUsed) {
         this.FileUsed = FileUsed;
@@ -231,10 +220,8 @@ public class UserQuota extends AbstractModel {
     }
 
     /**
-     * Get 配置规则状态，inavailable---配置中，available --已生效，deleting--删除中，deleted 已删除，failed--配置失败
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 配置规则状态，inavailable---配置中，available --已生效，deleting--删除中，deleted 已删除，failed--配置失败 
      * @return Status 配置规则状态，inavailable---配置中，available --已生效，deleting--删除中，deleted 已删除，failed--配置失败
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
         return this.Status;
@@ -242,9 +229,7 @@ public class UserQuota extends AbstractModel {
 
     /**
      * Set 配置规则状态，inavailable---配置中，available --已生效，deleting--删除中，deleted 已删除，failed--配置失败
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 配置规则状态，inavailable---配置中，available --已生效，deleting--删除中，deleted 已删除，failed--配置失败
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
         this.Status = Status;

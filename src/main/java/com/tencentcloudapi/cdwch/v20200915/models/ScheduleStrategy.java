@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ScheduleStrategy extends AbstractModel {
 
     /**
-    * 备份桶列表
+    * 备份桶名称
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CosBucketName")
@@ -68,9 +68,9 @@ public class ScheduleStrategy extends AbstractModel {
     private String NextBackupTime;
 
     /**
-     * Get 备份桶列表
+     * Get 备份桶名称
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CosBucketName 备份桶列表
+     * @return CosBucketName 备份桶名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCosBucketName() {
@@ -78,9 +78,9 @@ public class ScheduleStrategy extends AbstractModel {
     }
 
     /**
-     * Set 备份桶列表
+     * Set 备份桶名称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param CosBucketName 备份桶列表
+     * @param CosBucketName 备份桶名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCosBucketName(String CosBucketName) {

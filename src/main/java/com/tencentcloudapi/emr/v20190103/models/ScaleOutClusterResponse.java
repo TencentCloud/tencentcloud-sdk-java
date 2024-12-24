@@ -55,6 +55,22 @@ public class ScaleOutClusterResponse extends AbstractModel {
     private String TraceId;
 
     /**
+    * 订单号。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("DealNames")
+    @Expose
+    private String [] DealNames;
+
+    /**
+    * 大订单号。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("BillId")
+    @Expose
+    private String BillId;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -138,6 +154,46 @@ public class ScaleOutClusterResponse extends AbstractModel {
     }
 
     /**
+     * Get 订单号。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return DealNames 订单号。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getDealNames() {
+        return this.DealNames;
+    }
+
+    /**
+     * Set 订单号。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param DealNames 订单号。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setDealNames(String [] DealNames) {
+        this.DealNames = DealNames;
+    }
+
+    /**
+     * Get 大订单号。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return BillId 大订单号。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getBillId() {
+        return this.BillId;
+    }
+
+    /**
+     * Set 大订单号。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BillId 大订单号。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setBillId(String BillId) {
+        this.BillId = BillId;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -173,6 +229,15 @@ public class ScaleOutClusterResponse extends AbstractModel {
         if (source.TraceId != null) {
             this.TraceId = new String(source.TraceId);
         }
+        if (source.DealNames != null) {
+            this.DealNames = new String[source.DealNames.length];
+            for (int i = 0; i < source.DealNames.length; i++) {
+                this.DealNames[i] = new String(source.DealNames[i]);
+            }
+        }
+        if (source.BillId != null) {
+            this.BillId = new String(source.BillId);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -187,6 +252,8 @@ public class ScaleOutClusterResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "ClientToken", this.ClientToken);
         this.setParamSimple(map, prefix + "FlowId", this.FlowId);
         this.setParamSimple(map, prefix + "TraceId", this.TraceId);
+        this.setParamArraySimple(map, prefix + "DealNames.", this.DealNames);
+        this.setParamSimple(map, prefix + "BillId", this.BillId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

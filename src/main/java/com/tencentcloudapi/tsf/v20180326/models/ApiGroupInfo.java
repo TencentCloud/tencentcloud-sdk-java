@@ -168,6 +168,14 @@ public class ApiGroupInfo extends AbstractModel {
     private String ServiceNameKeyPosition;
 
     /**
+    * 网关实例ID列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("GatewayInstanceIdList")
+    @Expose
+    private String [] GatewayInstanceIdList;
+
+    /**
      * Get Api Group Id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return GroupId Api Group Id
@@ -527,6 +535,26 @@ public class ApiGroupInfo extends AbstractModel {
         this.ServiceNameKeyPosition = ServiceNameKeyPosition;
     }
 
+    /**
+     * Get 网关实例ID列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return GatewayInstanceIdList 网关实例ID列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getGatewayInstanceIdList() {
+        return this.GatewayInstanceIdList;
+    }
+
+    /**
+     * Set 网关实例ID列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param GatewayInstanceIdList 网关实例ID列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setGatewayInstanceIdList(String [] GatewayInstanceIdList) {
+        this.GatewayInstanceIdList = GatewayInstanceIdList;
+    }
+
     public ApiGroupInfo() {
     }
 
@@ -592,6 +620,12 @@ public class ApiGroupInfo extends AbstractModel {
         if (source.ServiceNameKeyPosition != null) {
             this.ServiceNameKeyPosition = new String(source.ServiceNameKeyPosition);
         }
+        if (source.GatewayInstanceIdList != null) {
+            this.GatewayInstanceIdList = new String[source.GatewayInstanceIdList.length];
+            for (int i = 0; i < source.GatewayInstanceIdList.length; i++) {
+                this.GatewayInstanceIdList[i] = new String(source.GatewayInstanceIdList[i]);
+            }
+        }
     }
 
 
@@ -617,6 +651,7 @@ public class ApiGroupInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "ServiceNameKey", this.ServiceNameKey);
         this.setParamSimple(map, prefix + "NamespaceNameKeyPosition", this.NamespaceNameKeyPosition);
         this.setParamSimple(map, prefix + "ServiceNameKeyPosition", this.ServiceNameKeyPosition);
+        this.setParamArraySimple(map, prefix + "GatewayInstanceIdList.", this.GatewayInstanceIdList);
 
     }
 }

@@ -25,6 +25,7 @@ public class TablePrivilege extends AbstractModel {
 
     /**
     * 数据库名
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Database")
     @Expose
@@ -32,6 +33,7 @@ public class TablePrivilege extends AbstractModel {
 
     /**
     * 数据库表名
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Table")
     @Expose
@@ -39,14 +41,17 @@ public class TablePrivilege extends AbstractModel {
 
     /**
     * 权限信息
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Privileges")
     @Expose
     private String [] Privileges;
 
     /**
-     * Get 数据库名 
+     * Get 数据库名
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Database 数据库名
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDatabase() {
         return this.Database;
@@ -54,15 +59,19 @@ public class TablePrivilege extends AbstractModel {
 
     /**
      * Set 数据库名
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Database 数据库名
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDatabase(String Database) {
         this.Database = Database;
     }
 
     /**
-     * Get 数据库表名 
+     * Get 数据库表名
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Table 数据库表名
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTable() {
         return this.Table;
@@ -70,15 +79,19 @@ public class TablePrivilege extends AbstractModel {
 
     /**
      * Set 数据库表名
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Table 数据库表名
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTable(String Table) {
         this.Table = Table;
     }
 
     /**
-     * Get 权限信息 
+     * Get 权限信息
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Privileges 权限信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getPrivileges() {
         return this.Privileges;
@@ -86,7 +99,9 @@ public class TablePrivilege extends AbstractModel {
 
     /**
      * Set 权限信息
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Privileges 权限信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPrivileges(String [] Privileges) {
         this.Privileges = Privileges;

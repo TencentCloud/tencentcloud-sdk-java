@@ -162,7 +162,7 @@ public class CreateConsoleLoginUrlRequest extends AbstractModel {
 
     /**
     * 子客经办人身份证
-注意：`如果已同步，这里非空会更新同步的经办人身份证号，暂时只支持居民身份证类型`。
+注意：`如果已同步，这里非空会更新同步的经办人身份证号，暂时只支持中国大陆居民身份证类型`。
     */
     @SerializedName("ProxyOperatorIdCardNumber")
     @Expose
@@ -609,9 +609,9 @@ public class CreateConsoleLoginUrlRequest extends AbstractModel {
 
     /**
      * Get 子客经办人身份证
-注意：`如果已同步，这里非空会更新同步的经办人身份证号，暂时只支持居民身份证类型`。 
+注意：`如果已同步，这里非空会更新同步的经办人身份证号，暂时只支持中国大陆居民身份证类型`。 
      * @return ProxyOperatorIdCardNumber 子客经办人身份证
-注意：`如果已同步，这里非空会更新同步的经办人身份证号，暂时只支持居民身份证类型`。
+注意：`如果已同步，这里非空会更新同步的经办人身份证号，暂时只支持中国大陆居民身份证类型`。
      */
     public String getProxyOperatorIdCardNumber() {
         return this.ProxyOperatorIdCardNumber;
@@ -619,9 +619,9 @@ public class CreateConsoleLoginUrlRequest extends AbstractModel {
 
     /**
      * Set 子客经办人身份证
-注意：`如果已同步，这里非空会更新同步的经办人身份证号，暂时只支持居民身份证类型`。
+注意：`如果已同步，这里非空会更新同步的经办人身份证号，暂时只支持中国大陆居民身份证类型`。
      * @param ProxyOperatorIdCardNumber 子客经办人身份证
-注意：`如果已同步，这里非空会更新同步的经办人身份证号，暂时只支持居民身份证类型`。
+注意：`如果已同步，这里非空会更新同步的经办人身份证号，暂时只支持中国大陆居民身份证类型`。
      */
     public void setProxyOperatorIdCardNumber(String ProxyOperatorIdCardNumber) {
         this.ProxyOperatorIdCardNumber = ProxyOperatorIdCardNumber;
