@@ -108,6 +108,15 @@ public class RecoverBackUpJobRequest extends AbstractModel {
     private String RecoverDatabase;
 
     /**
+    * 1:恢复后，不保留降冷策略，数据变为热数据；
+2:恢复后，沿用备份表的降冷策略；
+0:默认值，该版本没有这个配置（2.1版本2.1.8之前；2.0版本2.0.16之前）
+    */
+    @SerializedName("ReserveStoragePolicy")
+    @Expose
+    private Long ReserveStoragePolicy;
+
+    /**
      * Get 集群id 
      * @return InstanceId 集群id
      */
@@ -174,7 +183,9 @@ public class RecoverBackUpJobRequest extends AbstractModel {
     /**
      * Get 0默认 1cos恢复 
      * @return RecoverType 0默认 1cos恢复
+     * @deprecated
      */
+    @Deprecated
     public Long getRecoverType() {
         return this.RecoverType;
     }
@@ -182,7 +193,9 @@ public class RecoverBackUpJobRequest extends AbstractModel {
     /**
      * Set 0默认 1cos恢复
      * @param RecoverType 0默认 1cos恢复
+     * @deprecated
      */
+    @Deprecated
     public void setRecoverType(Long RecoverType) {
         this.RecoverType = RecoverType;
     }
@@ -190,7 +203,9 @@ public class RecoverBackUpJobRequest extends AbstractModel {
     /**
      * Get CosSourceInfo对象 
      * @return CosSourceInfo CosSourceInfo对象
+     * @deprecated
      */
+    @Deprecated
     public CosSourceInfo getCosSourceInfo() {
         return this.CosSourceInfo;
     }
@@ -198,7 +213,9 @@ public class RecoverBackUpJobRequest extends AbstractModel {
     /**
      * Set CosSourceInfo对象
      * @param CosSourceInfo CosSourceInfo对象
+     * @deprecated
      */
+    @Deprecated
     public void setCosSourceInfo(CosSourceInfo CosSourceInfo) {
         this.CosSourceInfo = CosSourceInfo;
     }
@@ -206,7 +223,9 @@ public class RecoverBackUpJobRequest extends AbstractModel {
     /**
      * Get 0默认 1定期执行 
      * @return ScheduleType 0默认 1定期执行
+     * @deprecated
      */
+    @Deprecated
     public Long getScheduleType() {
         return this.ScheduleType;
     }
@@ -214,7 +233,9 @@ public class RecoverBackUpJobRequest extends AbstractModel {
     /**
      * Set 0默认 1定期执行
      * @param ScheduleType 0默认 1定期执行
+     * @deprecated
      */
+    @Deprecated
     public void setScheduleType(Long ScheduleType) {
         this.ScheduleType = ScheduleType;
     }
@@ -222,7 +243,9 @@ public class RecoverBackUpJobRequest extends AbstractModel {
     /**
      * Get 年-月-日 时:分:秒 
      * @return NextTime 年-月-日 时:分:秒
+     * @deprecated
      */
+    @Deprecated
     public String getNextTime() {
         return this.NextTime;
     }
@@ -230,7 +253,9 @@ public class RecoverBackUpJobRequest extends AbstractModel {
     /**
      * Set 年-月-日 时:分:秒
      * @param NextTime 年-月-日 时:分:秒
+     * @deprecated
      */
+    @Deprecated
     public void setNextTime(String NextTime) {
         this.NextTime = NextTime;
     }
@@ -238,7 +263,9 @@ public class RecoverBackUpJobRequest extends AbstractModel {
     /**
      * Get 调度名称 
      * @return ScheduleName 调度名称
+     * @deprecated
      */
+    @Deprecated
     public String getScheduleName() {
         return this.ScheduleName;
     }
@@ -246,7 +273,9 @@ public class RecoverBackUpJobRequest extends AbstractModel {
     /**
      * Set 调度名称
      * @param ScheduleName 调度名称
+     * @deprecated
      */
+    @Deprecated
     public void setScheduleName(String ScheduleName) {
         this.ScheduleName = ScheduleName;
     }
@@ -254,7 +283,9 @@ public class RecoverBackUpJobRequest extends AbstractModel {
     /**
      * Get create update 
      * @return OperationType create update
+     * @deprecated
      */
+    @Deprecated
     public String getOperationType() {
         return this.OperationType;
     }
@@ -262,7 +293,9 @@ public class RecoverBackUpJobRequest extends AbstractModel {
     /**
      * Set create update
      * @param OperationType create update
+     * @deprecated
      */
+    @Deprecated
     public void setOperationType(String OperationType) {
         this.OperationType = OperationType;
     }
@@ -297,6 +330,30 @@ public class RecoverBackUpJobRequest extends AbstractModel {
      */
     public void setRecoverDatabase(String RecoverDatabase) {
         this.RecoverDatabase = RecoverDatabase;
+    }
+
+    /**
+     * Get 1:恢复后，不保留降冷策略，数据变为热数据；
+2:恢复后，沿用备份表的降冷策略；
+0:默认值，该版本没有这个配置（2.1版本2.1.8之前；2.0版本2.0.16之前） 
+     * @return ReserveStoragePolicy 1:恢复后，不保留降冷策略，数据变为热数据；
+2:恢复后，沿用备份表的降冷策略；
+0:默认值，该版本没有这个配置（2.1版本2.1.8之前；2.0版本2.0.16之前）
+     */
+    public Long getReserveStoragePolicy() {
+        return this.ReserveStoragePolicy;
+    }
+
+    /**
+     * Set 1:恢复后，不保留降冷策略，数据变为热数据；
+2:恢复后，沿用备份表的降冷策略；
+0:默认值，该版本没有这个配置（2.1版本2.1.8之前；2.0版本2.0.16之前）
+     * @param ReserveStoragePolicy 1:恢复后，不保留降冷策略，数据变为热数据；
+2:恢复后，沿用备份表的降冷策略；
+0:默认值，该版本没有这个配置（2.1版本2.1.8之前；2.0版本2.0.16之前）
+     */
+    public void setReserveStoragePolicy(Long ReserveStoragePolicy) {
+        this.ReserveStoragePolicy = ReserveStoragePolicy;
     }
 
     public RecoverBackUpJobRequest() {
@@ -343,6 +400,9 @@ public class RecoverBackUpJobRequest extends AbstractModel {
         if (source.RecoverDatabase != null) {
             this.RecoverDatabase = new String(source.RecoverDatabase);
         }
+        if (source.ReserveStoragePolicy != null) {
+            this.ReserveStoragePolicy = new Long(source.ReserveStoragePolicy);
+        }
     }
 
 
@@ -362,6 +422,7 @@ public class RecoverBackUpJobRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "OperationType", this.OperationType);
         this.setParamSimple(map, prefix + "RecoverScope", this.RecoverScope);
         this.setParamSimple(map, prefix + "RecoverDatabase", this.RecoverDatabase);
+        this.setParamSimple(map, prefix + "ReserveStoragePolicy", this.ReserveStoragePolicy);
 
     }
 }

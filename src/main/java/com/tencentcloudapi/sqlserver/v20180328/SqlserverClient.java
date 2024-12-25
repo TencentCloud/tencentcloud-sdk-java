@@ -259,7 +259,7 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
-     *本接口(CutXEvents)用于手动切割阻塞日志和死锁日志。
+     *本接口（CutXEvents）用于手动切割阻塞日志和死锁日志。
      * @param req CutXEventsRequest
      * @return CutXEventsResponse
      * @throws TencentCloudSDKException
@@ -413,7 +413,7 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
-     *本接口(DescribeBackupFiles)用于查询单库备份明细
+     *本接口（DescribeBackupFiles）用于查询单库备份明细。
      * @param req DescribeBackupFilesRequest
      * @return DescribeBackupFilesResponse
      * @throws TencentCloudSDKException

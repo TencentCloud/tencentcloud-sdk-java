@@ -72,6 +72,13 @@ public class KMSInfoDetail extends AbstractModel {
     private String KeyOrigin;
 
     /**
+    * kms所在地域。
+    */
+    @SerializedName("KmsRegion")
+    @Expose
+    private String KmsRegion;
+
+    /**
      * Get 主密钥 ID。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return KeyId 主密钥 ID。
@@ -191,6 +198,22 @@ public class KMSInfoDetail extends AbstractModel {
         this.KeyOrigin = KeyOrigin;
     }
 
+    /**
+     * Get kms所在地域。 
+     * @return KmsRegion kms所在地域。
+     */
+    public String getKmsRegion() {
+        return this.KmsRegion;
+    }
+
+    /**
+     * Set kms所在地域。
+     * @param KmsRegion kms所在地域。
+     */
+    public void setKmsRegion(String KmsRegion) {
+        this.KmsRegion = KmsRegion;
+    }
+
     public KMSInfoDetail() {
     }
 
@@ -217,6 +240,9 @@ public class KMSInfoDetail extends AbstractModel {
         if (source.KeyOrigin != null) {
             this.KeyOrigin = new String(source.KeyOrigin);
         }
+        if (source.KmsRegion != null) {
+            this.KmsRegion = new String(source.KmsRegion);
+        }
     }
 
 
@@ -230,6 +256,7 @@ public class KMSInfoDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "KeyUsage", this.KeyUsage);
         this.setParamSimple(map, prefix + "KeyOrigin", this.KeyOrigin);
+        this.setParamSimple(map, prefix + "KmsRegion", this.KmsRegion);
 
     }
 }

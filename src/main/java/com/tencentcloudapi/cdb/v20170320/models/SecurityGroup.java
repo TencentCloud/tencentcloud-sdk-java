@@ -25,6 +25,7 @@ public class SecurityGroup extends AbstractModel {
 
     /**
     * 项目ID
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProjectId")
     @Expose
@@ -32,6 +33,7 @@ public class SecurityGroup extends AbstractModel {
 
     /**
     * 创建时间，时间格式：yyyy-mm-dd hh:mm:ss
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -39,6 +41,7 @@ public class SecurityGroup extends AbstractModel {
 
     /**
     * 入站规则
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Inbound")
     @Expose
@@ -46,6 +49,7 @@ public class SecurityGroup extends AbstractModel {
 
     /**
     * 出站规则
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Outbound")
     @Expose
@@ -53,6 +57,7 @@ public class SecurityGroup extends AbstractModel {
 
     /**
     * 安全组ID
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SecurityGroupId")
     @Expose
@@ -60,6 +65,7 @@ public class SecurityGroup extends AbstractModel {
 
     /**
     * 安全组名称
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SecurityGroupName")
     @Expose
@@ -67,14 +73,17 @@ public class SecurityGroup extends AbstractModel {
 
     /**
     * 安全组备注
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SecurityGroupRemark")
     @Expose
     private String SecurityGroupRemark;
 
     /**
-     * Get 项目ID 
+     * Get 项目ID
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return ProjectId 项目ID
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getProjectId() {
         return this.ProjectId;
@@ -82,15 +91,19 @@ public class SecurityGroup extends AbstractModel {
 
     /**
      * Set 项目ID
+注意：此字段可能返回 null，表示取不到有效值。
      * @param ProjectId 项目ID
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 创建时间，时间格式：yyyy-mm-dd hh:mm:ss 
+     * Get 创建时间，时间格式：yyyy-mm-dd hh:mm:ss
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return CreateTime 创建时间，时间格式：yyyy-mm-dd hh:mm:ss
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -98,15 +111,19 @@ public class SecurityGroup extends AbstractModel {
 
     /**
      * Set 创建时间，时间格式：yyyy-mm-dd hh:mm:ss
+注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 创建时间，时间格式：yyyy-mm-dd hh:mm:ss
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 入站规则 
+     * Get 入站规则
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Inbound 入站规则
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Inbound [] getInbound() {
         return this.Inbound;
@@ -114,15 +131,19 @@ public class SecurityGroup extends AbstractModel {
 
     /**
      * Set 入站规则
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Inbound 入站规则
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInbound(Inbound [] Inbound) {
         this.Inbound = Inbound;
     }
 
     /**
-     * Get 出站规则 
+     * Get 出站规则
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Outbound 出站规则
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Outbound [] getOutbound() {
         return this.Outbound;
@@ -130,15 +151,19 @@ public class SecurityGroup extends AbstractModel {
 
     /**
      * Set 出站规则
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Outbound 出站规则
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutbound(Outbound [] Outbound) {
         this.Outbound = Outbound;
     }
 
     /**
-     * Get 安全组ID 
+     * Get 安全组ID
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return SecurityGroupId 安全组ID
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSecurityGroupId() {
         return this.SecurityGroupId;
@@ -146,15 +171,19 @@ public class SecurityGroup extends AbstractModel {
 
     /**
      * Set 安全组ID
+注意：此字段可能返回 null，表示取不到有效值。
      * @param SecurityGroupId 安全组ID
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSecurityGroupId(String SecurityGroupId) {
         this.SecurityGroupId = SecurityGroupId;
     }
 
     /**
-     * Get 安全组名称 
+     * Get 安全组名称
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return SecurityGroupName 安全组名称
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSecurityGroupName() {
         return this.SecurityGroupName;
@@ -162,15 +191,19 @@ public class SecurityGroup extends AbstractModel {
 
     /**
      * Set 安全组名称
+注意：此字段可能返回 null，表示取不到有效值。
      * @param SecurityGroupName 安全组名称
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSecurityGroupName(String SecurityGroupName) {
         this.SecurityGroupName = SecurityGroupName;
     }
 
     /**
-     * Get 安全组备注 
+     * Get 安全组备注
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return SecurityGroupRemark 安全组备注
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSecurityGroupRemark() {
         return this.SecurityGroupRemark;
@@ -178,7 +211,9 @@ public class SecurityGroup extends AbstractModel {
 
     /**
      * Set 安全组备注
+注意：此字段可能返回 null，表示取不到有效值。
      * @param SecurityGroupRemark 安全组备注
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSecurityGroupRemark(String SecurityGroupRemark) {
         this.SecurityGroupRemark = SecurityGroupRemark;

@@ -25,7 +25,6 @@ public class LogToCLSConfig extends AbstractModel {
 
     /**
     * 投递状态打开或者关闭
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -33,7 +32,6 @@ public class LogToCLSConfig extends AbstractModel {
 
     /**
     * CLS日志集ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LogSetId")
     @Expose
@@ -41,7 +39,6 @@ public class LogToCLSConfig extends AbstractModel {
 
     /**
     * 日志主题ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LogTopicId")
     @Expose
@@ -49,17 +46,14 @@ public class LogToCLSConfig extends AbstractModel {
 
     /**
     * CLS服务所在地域
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClsRegion")
     @Expose
     private String ClsRegion;
 
     /**
-     * Get 投递状态打开或者关闭
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 投递状态打开或者关闭 
      * @return Status 投递状态打开或者关闭
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
         return this.Status;
@@ -67,19 +61,15 @@ public class LogToCLSConfig extends AbstractModel {
 
     /**
      * Set 投递状态打开或者关闭
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 投递状态打开或者关闭
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get CLS日志集ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get CLS日志集ID 
      * @return LogSetId CLS日志集ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLogSetId() {
         return this.LogSetId;
@@ -87,19 +77,15 @@ public class LogToCLSConfig extends AbstractModel {
 
     /**
      * Set CLS日志集ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LogSetId CLS日志集ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLogSetId(String LogSetId) {
         this.LogSetId = LogSetId;
     }
 
     /**
-     * Get 日志主题ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 日志主题ID 
      * @return LogTopicId 日志主题ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLogTopicId() {
         return this.LogTopicId;
@@ -107,19 +93,15 @@ public class LogToCLSConfig extends AbstractModel {
 
     /**
      * Set 日志主题ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LogTopicId 日志主题ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLogTopicId(String LogTopicId) {
         this.LogTopicId = LogTopicId;
     }
 
     /**
-     * Get CLS服务所在地域
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get CLS服务所在地域 
      * @return ClsRegion CLS服务所在地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getClsRegion() {
         return this.ClsRegion;
@@ -127,9 +109,7 @@ public class LogToCLSConfig extends AbstractModel {
 
     /**
      * Set CLS服务所在地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClsRegion CLS服务所在地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClsRegion(String ClsRegion) {
         this.ClsRegion = ClsRegion;

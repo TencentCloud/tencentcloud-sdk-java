@@ -148,6 +148,17 @@ public class CreateBatchSignUrlRequest extends AbstractModel {
     private Boolean AutoJumpBack;
 
     /**
+    * 签署完成后，如需“返回应用”功能，在获取签署链接接口的 UrlUseEnv 参数需设置为 **WeChatOfficialAccounts**，小程序签署成功的结果页面中才会出现“返回应用”按钮。
+
+在用户点击“返回应用”按钮之后，会返回到公众号 H5。 此时，公众号 H5 可以处理页面的 [visibilitychange](https://developer.mozilla.org/en-US/docs/Web/API/Document/visibilitychange_event) 事件 与 [visibilityState](https://developer.mozilla.org/en-US/docs/Web/API/Document/visibilityState) 属性 来判断已经返回到当前页面。再通过电子签后台接口查询合同的签署状态，继续自己的业务流程。
+
+参考 [微信网页开发-开放标签跳转小程序](https://developers.weixin.qq.com/doc/offiaccount/OA_Web_Apps/Wechat_Open_Tag.html#%E5%BC%80%E6%94%BE%E6%A0%87%E7%AD%BE) 或 [自有 H5 跳转电子签小程序](https://test.qian.tencent.cn/developers/company/openwxminiprogram/#4%E8%87%AA%E6%9C%89-h5-%E8%B7%B3%E8%BD%AC%E7%94%B5%E5%AD%90%E7%AD%BE%E5%B0%8F%E7%A8%8B%E5%BA%8F)。
+    */
+    @SerializedName("UrlUseEnv")
+    @Expose
+    private String UrlUseEnv;
+
+    /**
      * Get 执行本接口操作的员工信息。
 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。` 
      * @return Operator 执行本接口操作的员工信息。
@@ -499,6 +510,38 @@ public class CreateBatchSignUrlRequest extends AbstractModel {
         this.AutoJumpBack = AutoJumpBack;
     }
 
+    /**
+     * Get 签署完成后，如需“返回应用”功能，在获取签署链接接口的 UrlUseEnv 参数需设置为 **WeChatOfficialAccounts**，小程序签署成功的结果页面中才会出现“返回应用”按钮。
+
+在用户点击“返回应用”按钮之后，会返回到公众号 H5。 此时，公众号 H5 可以处理页面的 [visibilitychange](https://developer.mozilla.org/en-US/docs/Web/API/Document/visibilitychange_event) 事件 与 [visibilityState](https://developer.mozilla.org/en-US/docs/Web/API/Document/visibilityState) 属性 来判断已经返回到当前页面。再通过电子签后台接口查询合同的签署状态，继续自己的业务流程。
+
+参考 [微信网页开发-开放标签跳转小程序](https://developers.weixin.qq.com/doc/offiaccount/OA_Web_Apps/Wechat_Open_Tag.html#%E5%BC%80%E6%94%BE%E6%A0%87%E7%AD%BE) 或 [自有 H5 跳转电子签小程序](https://test.qian.tencent.cn/developers/company/openwxminiprogram/#4%E8%87%AA%E6%9C%89-h5-%E8%B7%B3%E8%BD%AC%E7%94%B5%E5%AD%90%E7%AD%BE%E5%B0%8F%E7%A8%8B%E5%BA%8F)。 
+     * @return UrlUseEnv 签署完成后，如需“返回应用”功能，在获取签署链接接口的 UrlUseEnv 参数需设置为 **WeChatOfficialAccounts**，小程序签署成功的结果页面中才会出现“返回应用”按钮。
+
+在用户点击“返回应用”按钮之后，会返回到公众号 H5。 此时，公众号 H5 可以处理页面的 [visibilitychange](https://developer.mozilla.org/en-US/docs/Web/API/Document/visibilitychange_event) 事件 与 [visibilityState](https://developer.mozilla.org/en-US/docs/Web/API/Document/visibilityState) 属性 来判断已经返回到当前页面。再通过电子签后台接口查询合同的签署状态，继续自己的业务流程。
+
+参考 [微信网页开发-开放标签跳转小程序](https://developers.weixin.qq.com/doc/offiaccount/OA_Web_Apps/Wechat_Open_Tag.html#%E5%BC%80%E6%94%BE%E6%A0%87%E7%AD%BE) 或 [自有 H5 跳转电子签小程序](https://test.qian.tencent.cn/developers/company/openwxminiprogram/#4%E8%87%AA%E6%9C%89-h5-%E8%B7%B3%E8%BD%AC%E7%94%B5%E5%AD%90%E7%AD%BE%E5%B0%8F%E7%A8%8B%E5%BA%8F)。
+     */
+    public String getUrlUseEnv() {
+        return this.UrlUseEnv;
+    }
+
+    /**
+     * Set 签署完成后，如需“返回应用”功能，在获取签署链接接口的 UrlUseEnv 参数需设置为 **WeChatOfficialAccounts**，小程序签署成功的结果页面中才会出现“返回应用”按钮。
+
+在用户点击“返回应用”按钮之后，会返回到公众号 H5。 此时，公众号 H5 可以处理页面的 [visibilitychange](https://developer.mozilla.org/en-US/docs/Web/API/Document/visibilitychange_event) 事件 与 [visibilityState](https://developer.mozilla.org/en-US/docs/Web/API/Document/visibilityState) 属性 来判断已经返回到当前页面。再通过电子签后台接口查询合同的签署状态，继续自己的业务流程。
+
+参考 [微信网页开发-开放标签跳转小程序](https://developers.weixin.qq.com/doc/offiaccount/OA_Web_Apps/Wechat_Open_Tag.html#%E5%BC%80%E6%94%BE%E6%A0%87%E7%AD%BE) 或 [自有 H5 跳转电子签小程序](https://test.qian.tencent.cn/developers/company/openwxminiprogram/#4%E8%87%AA%E6%9C%89-h5-%E8%B7%B3%E8%BD%AC%E7%94%B5%E5%AD%90%E7%AD%BE%E5%B0%8F%E7%A8%8B%E5%BA%8F)。
+     * @param UrlUseEnv 签署完成后，如需“返回应用”功能，在获取签署链接接口的 UrlUseEnv 参数需设置为 **WeChatOfficialAccounts**，小程序签署成功的结果页面中才会出现“返回应用”按钮。
+
+在用户点击“返回应用”按钮之后，会返回到公众号 H5。 此时，公众号 H5 可以处理页面的 [visibilitychange](https://developer.mozilla.org/en-US/docs/Web/API/Document/visibilitychange_event) 事件 与 [visibilityState](https://developer.mozilla.org/en-US/docs/Web/API/Document/visibilityState) 属性 来判断已经返回到当前页面。再通过电子签后台接口查询合同的签署状态，继续自己的业务流程。
+
+参考 [微信网页开发-开放标签跳转小程序](https://developers.weixin.qq.com/doc/offiaccount/OA_Web_Apps/Wechat_Open_Tag.html#%E5%BC%80%E6%94%BE%E6%A0%87%E7%AD%BE) 或 [自有 H5 跳转电子签小程序](https://test.qian.tencent.cn/developers/company/openwxminiprogram/#4%E8%87%AA%E6%9C%89-h5-%E8%B7%B3%E8%BD%AC%E7%94%B5%E5%AD%90%E7%AD%BE%E5%B0%8F%E7%A8%8B%E5%BA%8F)。
+     */
+    public void setUrlUseEnv(String UrlUseEnv) {
+        this.UrlUseEnv = UrlUseEnv;
+    }
+
     public CreateBatchSignUrlRequest() {
     }
 
@@ -546,6 +589,9 @@ public class CreateBatchSignUrlRequest extends AbstractModel {
         if (source.AutoJumpBack != null) {
             this.AutoJumpBack = new Boolean(source.AutoJumpBack);
         }
+        if (source.UrlUseEnv != null) {
+            this.UrlUseEnv = new String(source.UrlUseEnv);
+        }
     }
 
 
@@ -565,6 +611,7 @@ public class CreateBatchSignUrlRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "JumpToDetail", this.JumpToDetail);
         this.setParamObj(map, prefix + "FlowBatchUrlInfo.", this.FlowBatchUrlInfo);
         this.setParamSimple(map, prefix + "AutoJumpBack", this.AutoJumpBack);
+        this.setParamSimple(map, prefix + "UrlUseEnv", this.UrlUseEnv);
 
     }
 }

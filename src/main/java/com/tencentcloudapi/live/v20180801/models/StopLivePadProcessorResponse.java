@@ -25,7 +25,6 @@ public class StopLivePadProcessorResponse extends AbstractModel {
 
     /**
     * 处理结果信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResultMessage")
     @Expose
@@ -39,10 +38,8 @@ public class StopLivePadProcessorResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 处理结果信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 处理结果信息。 
      * @return ResultMessage 处理结果信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getResultMessage() {
         return this.ResultMessage;
@@ -50,9 +47,7 @@ public class StopLivePadProcessorResponse extends AbstractModel {
 
     /**
      * Set 处理结果信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResultMessage 处理结果信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResultMessage(String ResultMessage) {
         this.ResultMessage = ResultMessage;

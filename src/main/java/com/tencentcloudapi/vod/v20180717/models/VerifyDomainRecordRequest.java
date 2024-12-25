@@ -31,6 +31,13 @@ public class VerifyDomainRecordRequest extends AbstractModel {
     private String Domain;
 
     /**
+    * <b>点播[应用](/document/product/266/14574) ID。从2024年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>	
+    */
+    @SerializedName("SubAppId")
+    @Expose
+    private Long SubAppId;
+
+    /**
     * 验证方式：
 <li>dns：DNS 解析验证；</li>
 <li>fIle：文件验证。</li>
@@ -55,6 +62,22 @@ public class VerifyDomainRecordRequest extends AbstractModel {
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
+    }
+
+    /**
+     * Get <b>点播[应用](/document/product/266/14574) ID。从2024年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>	 
+     * @return SubAppId <b>点播[应用](/document/product/266/14574) ID。从2024年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>	
+     */
+    public Long getSubAppId() {
+        return this.SubAppId;
+    }
+
+    /**
+     * Set <b>点播[应用](/document/product/266/14574) ID。从2024年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>	
+     * @param SubAppId <b>点播[应用](/document/product/266/14574) ID。从2024年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>	
+     */
+    public void setSubAppId(Long SubAppId) {
+        this.SubAppId = SubAppId;
     }
 
     /**
@@ -100,6 +123,9 @@ public class VerifyDomainRecordRequest extends AbstractModel {
         if (source.Domain != null) {
             this.Domain = new String(source.Domain);
         }
+        if (source.SubAppId != null) {
+            this.SubAppId = new Long(source.SubAppId);
+        }
         if (source.VerifyType != null) {
             this.VerifyType = new String(source.VerifyType);
         }
@@ -111,6 +137,7 @@ public class VerifyDomainRecordRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Domain", this.Domain);
+        this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
         this.setParamSimple(map, prefix + "VerifyType", this.VerifyType);
 
     }

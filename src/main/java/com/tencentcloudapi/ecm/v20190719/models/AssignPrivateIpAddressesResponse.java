@@ -25,7 +25,6 @@ public class AssignPrivateIpAddressesResponse extends AbstractModel {
 
     /**
     * 内网IP详细信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PrivateIpAddressSet")
     @Expose
@@ -39,10 +38,8 @@ public class AssignPrivateIpAddressesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 内网IP详细信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 内网IP详细信息。 
      * @return PrivateIpAddressSet 内网IP详细信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public PrivateIpAddressSpecification [] getPrivateIpAddressSet() {
         return this.PrivateIpAddressSet;
@@ -50,9 +47,7 @@ public class AssignPrivateIpAddressesResponse extends AbstractModel {
 
     /**
      * Set 内网IP详细信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PrivateIpAddressSet 内网IP详细信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPrivateIpAddressSet(PrivateIpAddressSpecification [] PrivateIpAddressSet) {
         this.PrivateIpAddressSet = PrivateIpAddressSet;

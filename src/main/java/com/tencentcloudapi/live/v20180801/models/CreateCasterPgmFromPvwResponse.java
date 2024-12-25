@@ -33,7 +33,6 @@ public class CreateCasterPgmFromPvwResponse extends AbstractModel {
 
     /**
     * 注：该字段已废弃，请结合腾讯云直播播放地址生成策略生成cdn播放地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CdnPlayUrl")
     @Expose
@@ -84,10 +83,8 @@ public class CreateCasterPgmFromPvwResponse extends AbstractModel {
     }
 
     /**
-     * Get 注：该字段已废弃，请结合腾讯云直播播放地址生成策略生成cdn播放地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 注：该字段已废弃，请结合腾讯云直播播放地址生成策略生成cdn播放地址 
      * @return CdnPlayUrl 注：该字段已废弃，请结合腾讯云直播播放地址生成策略生成cdn播放地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCdnPlayUrl() {
         return this.CdnPlayUrl;
@@ -95,9 +92,7 @@ public class CreateCasterPgmFromPvwResponse extends AbstractModel {
 
     /**
      * Set 注：该字段已废弃，请结合腾讯云直播播放地址生成策略生成cdn播放地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CdnPlayUrl 注：该字段已废弃，请结合腾讯云直播播放地址生成策略生成cdn播放地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCdnPlayUrl(String CdnPlayUrl) {
         this.CdnPlayUrl = CdnPlayUrl;

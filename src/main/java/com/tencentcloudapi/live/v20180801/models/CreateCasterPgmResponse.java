@@ -26,7 +26,6 @@ public class CreateCasterPgmResponse extends AbstractModel {
     /**
     * 主监任务的rtmp协议预览地址。
 注：该地址仅供预览，不可分发。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PgmPlayUrl")
     @Expose
@@ -34,7 +33,6 @@ public class CreateCasterPgmResponse extends AbstractModel {
 
     /**
     * 注：该字段已废弃，请结合腾讯云直播播放地址生成策略生成cdn播放地址。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CdnPlayUrl")
     @Expose
@@ -42,7 +40,6 @@ public class CreateCasterPgmResponse extends AbstractModel {
 
     /**
     * 主监任务在腾讯云直播侧的流ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CdnStreamId")
     @Expose
@@ -53,7 +50,6 @@ public class CreateCasterPgmResponse extends AbstractModel {
 注：
 1. 该预览地址仅作为预览，不可分发。
 2. webrtc播放地址需配合腾讯云快直播播放sdk使用。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PgmWebRTCPlayUrl")
     @Expose
@@ -68,11 +64,9 @@ public class CreateCasterPgmResponse extends AbstractModel {
 
     /**
      * Get 主监任务的rtmp协议预览地址。
-注：该地址仅供预览，不可分发。
-注意：此字段可能返回 null，表示取不到有效值。 
+注：该地址仅供预览，不可分发。 
      * @return PgmPlayUrl 主监任务的rtmp协议预览地址。
 注：该地址仅供预览，不可分发。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPgmPlayUrl() {
         return this.PgmPlayUrl;
@@ -81,20 +75,16 @@ public class CreateCasterPgmResponse extends AbstractModel {
     /**
      * Set 主监任务的rtmp协议预览地址。
 注：该地址仅供预览，不可分发。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PgmPlayUrl 主监任务的rtmp协议预览地址。
 注：该地址仅供预览，不可分发。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPgmPlayUrl(String PgmPlayUrl) {
         this.PgmPlayUrl = PgmPlayUrl;
     }
 
     /**
-     * Get 注：该字段已废弃，请结合腾讯云直播播放地址生成策略生成cdn播放地址。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 注：该字段已废弃，请结合腾讯云直播播放地址生成策略生成cdn播放地址。 
      * @return CdnPlayUrl 注：该字段已废弃，请结合腾讯云直播播放地址生成策略生成cdn播放地址。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCdnPlayUrl() {
         return this.CdnPlayUrl;
@@ -102,19 +92,15 @@ public class CreateCasterPgmResponse extends AbstractModel {
 
     /**
      * Set 注：该字段已废弃，请结合腾讯云直播播放地址生成策略生成cdn播放地址。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CdnPlayUrl 注：该字段已废弃，请结合腾讯云直播播放地址生成策略生成cdn播放地址。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCdnPlayUrl(String CdnPlayUrl) {
         this.CdnPlayUrl = CdnPlayUrl;
     }
 
     /**
-     * Get 主监任务在腾讯云直播侧的流ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主监任务在腾讯云直播侧的流ID。 
      * @return CdnStreamId 主监任务在腾讯云直播侧的流ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCdnStreamId() {
         return this.CdnStreamId;
@@ -122,9 +108,7 @@ public class CreateCasterPgmResponse extends AbstractModel {
 
     /**
      * Set 主监任务在腾讯云直播侧的流ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CdnStreamId 主监任务在腾讯云直播侧的流ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCdnStreamId(String CdnStreamId) {
         this.CdnStreamId = CdnStreamId;
@@ -134,13 +118,11 @@ public class CreateCasterPgmResponse extends AbstractModel {
      * Get 主监任务的webrtc协议播放地址。
 注：
 1. 该预览地址仅作为预览，不可分发。
-2. webrtc播放地址需配合腾讯云快直播播放sdk使用。
-注意：此字段可能返回 null，表示取不到有效值。 
+2. webrtc播放地址需配合腾讯云快直播播放sdk使用。 
      * @return PgmWebRTCPlayUrl 主监任务的webrtc协议播放地址。
 注：
 1. 该预览地址仅作为预览，不可分发。
 2. webrtc播放地址需配合腾讯云快直播播放sdk使用。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPgmWebRTCPlayUrl() {
         return this.PgmWebRTCPlayUrl;
@@ -151,12 +133,10 @@ public class CreateCasterPgmResponse extends AbstractModel {
 注：
 1. 该预览地址仅作为预览，不可分发。
 2. webrtc播放地址需配合腾讯云快直播播放sdk使用。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PgmWebRTCPlayUrl 主监任务的webrtc协议播放地址。
 注：
 1. 该预览地址仅作为预览，不可分发。
 2. webrtc播放地址需配合腾讯云快直播播放sdk使用。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPgmWebRTCPlayUrl(String PgmWebRTCPlayUrl) {
         this.PgmWebRTCPlayUrl = PgmWebRTCPlayUrl;

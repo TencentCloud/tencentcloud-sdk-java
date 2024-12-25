@@ -149,7 +149,6 @@ public class ProxyAddress extends AbstractModel {
 
     /**
     * 接入模式
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AccessMode")
     @Expose
@@ -157,7 +156,6 @@ public class ProxyAddress extends AbstractModel {
 
     /**
     * 是否开启自动负载均衡
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AutoLoadBalance")
     @Expose
@@ -468,10 +466,8 @@ public class ProxyAddress extends AbstractModel {
     }
 
     /**
-     * Get 接入模式
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 接入模式 
      * @return AccessMode 接入模式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAccessMode() {
         return this.AccessMode;
@@ -479,19 +475,15 @@ public class ProxyAddress extends AbstractModel {
 
     /**
      * Set 接入模式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AccessMode 接入模式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAccessMode(String AccessMode) {
         this.AccessMode = AccessMode;
     }
 
     /**
-     * Get 是否开启自动负载均衡
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否开启自动负载均衡 
      * @return AutoLoadBalance 是否开启自动负载均衡
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getAutoLoadBalance() {
         return this.AutoLoadBalance;
@@ -499,9 +491,7 @@ public class ProxyAddress extends AbstractModel {
 
     /**
      * Set 是否开启自动负载均衡
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AutoLoadBalance 是否开启自动负载均衡
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAutoLoadBalance(Boolean AutoLoadBalance) {
         this.AutoLoadBalance = AutoLoadBalance;

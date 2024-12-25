@@ -25,7 +25,6 @@ public class DescribeAuditRuleTemplateModifyHistoryResponse extends AbstractMode
 
     /**
     * 总的条数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeAuditRuleTemplateModifyHistoryResponse extends AbstractMode
 
     /**
     * 变更详情。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Items")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeAuditRuleTemplateModifyHistoryResponse extends AbstractMode
     private String RequestId;
 
     /**
-     * Get 总的条数。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 总的条数。 
      * @return TotalCount 总的条数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -58,19 +54,15 @@ public class DescribeAuditRuleTemplateModifyHistoryResponse extends AbstractMode
 
     /**
      * Set 总的条数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 总的条数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get 变更详情。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 变更详情。 
      * @return Items 变更详情。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RuleTemplateRecordInfo [] getItems() {
         return this.Items;
@@ -78,9 +70,7 @@ public class DescribeAuditRuleTemplateModifyHistoryResponse extends AbstractMode
 
     /**
      * Set 变更详情。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Items 变更详情。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setItems(RuleTemplateRecordInfo [] Items) {
         this.Items = Items;

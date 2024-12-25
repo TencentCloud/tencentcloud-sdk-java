@@ -25,6 +25,7 @@ public class InstanceRollbackRangeTime extends AbstractModel {
 
     /**
     * 查询数据库错误码
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Code")
     @Expose
@@ -32,6 +33,7 @@ public class InstanceRollbackRangeTime extends AbstractModel {
 
     /**
     * 查询数据库错误信息
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Message")
     @Expose
@@ -39,6 +41,7 @@ public class InstanceRollbackRangeTime extends AbstractModel {
 
     /**
     * 实例ID列表，单个实例Id的格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例ID相同
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -46,14 +49,17 @@ public class InstanceRollbackRangeTime extends AbstractModel {
 
     /**
     * 可回档时间范围
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Times")
     @Expose
     private RollbackTimeRange [] Times;
 
     /**
-     * Get 查询数据库错误码 
+     * Get 查询数据库错误码
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Code 查询数据库错误码
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCode() {
         return this.Code;
@@ -61,15 +67,19 @@ public class InstanceRollbackRangeTime extends AbstractModel {
 
     /**
      * Set 查询数据库错误码
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Code 查询数据库错误码
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCode(Long Code) {
         this.Code = Code;
     }
 
     /**
-     * Get 查询数据库错误信息 
+     * Get 查询数据库错误信息
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Message 查询数据库错误信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMessage() {
         return this.Message;
@@ -77,15 +87,19 @@ public class InstanceRollbackRangeTime extends AbstractModel {
 
     /**
      * Set 查询数据库错误信息
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Message 查询数据库错误信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMessage(String Message) {
         this.Message = Message;
     }
 
     /**
-     * Get 实例ID列表，单个实例Id的格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例ID相同 
+     * Get 实例ID列表，单个实例Id的格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例ID相同
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return InstanceId 实例ID列表，单个实例Id的格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例ID相同
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceId() {
         return this.InstanceId;
@@ -93,15 +107,19 @@ public class InstanceRollbackRangeTime extends AbstractModel {
 
     /**
      * Set 实例ID列表，单个实例Id的格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例ID相同
+注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceId 实例ID列表，单个实例Id的格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例ID相同
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 可回档时间范围 
+     * Get 可回档时间范围
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Times 可回档时间范围
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public RollbackTimeRange [] getTimes() {
         return this.Times;
@@ -109,7 +127,9 @@ public class InstanceRollbackRangeTime extends AbstractModel {
 
     /**
      * Set 可回档时间范围
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Times 可回档时间范围
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimes(RollbackTimeRange [] Times) {
         this.Times = Times;

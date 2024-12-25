@@ -32,7 +32,6 @@ public class CreateRoutesResponse extends AbstractModel {
 
     /**
     * 路由表对象。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RouteTableSet")
     @Expose
@@ -62,10 +61,8 @@ public class CreateRoutesResponse extends AbstractModel {
     }
 
     /**
-     * Get 路由表对象。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 路由表对象。 
      * @return RouteTableSet 路由表对象。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RouteTable [] getRouteTableSet() {
         return this.RouteTableSet;
@@ -73,9 +70,7 @@ public class CreateRoutesResponse extends AbstractModel {
 
     /**
      * Set 路由表对象。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RouteTableSet 路由表对象。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRouteTableSet(RouteTable [] RouteTableSet) {
         this.RouteTableSet = RouteTableSet;

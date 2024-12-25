@@ -66,32 +66,28 @@ public class AccessPoint extends AbstractModel {
     private String RegionId;
 
     /**
-    * 接入点可用的端口类型列表。1000BASE-T代表千兆电口，1000BASE-LX代表千兆单模光口10km，1000BASE-ZX代表千兆单模光口80km,10GBASE-LR代表万兆单模光口10km,10GBASE-ZR代表万兆单模光口80km,10GBASE-LH代表万兆单模光口40km,100GBASE-LR4代表100G单模光口10km
-注意：此字段可能返回 null，表示取不到有效值。
+    * 接入点可用的端口类型列表。1000BASE-T代表千兆电口，1000BASE-LX代表千兆单模光口10km，1000BASE-ZX代表千兆单模光口80km,10GBASE-LR代表万兆单模光口10km,10GBASE-ZR代表万兆单模光口80km,10GBASE-LH代表万兆单模光口40km,100GBASE-LR4代表100G单模光口10km。
     */
     @SerializedName("AvailablePortType")
     @Expose
     private String [] AvailablePortType;
 
     /**
-    * 接入点经纬度
-注意：此字段可能返回 null，表示取不到有效值。
+    * 接入点经纬度。
     */
     @SerializedName("Coordinate")
     @Expose
     private Coordinate Coordinate;
 
     /**
-    * 接入点所在城市
-注意：此字段可能返回 null，表示取不到有效值。
+    * 接入点所在城市。
     */
     @SerializedName("City")
     @Expose
     private String City;
 
     /**
-    * 接入点地域名称
-注意：此字段可能返回 null，表示取不到有效值。
+    * 接入点地域名称。
     */
     @SerializedName("Area")
     @Expose
@@ -99,11 +95,17 @@ public class AccessPoint extends AbstractModel {
 
     /**
     * 接入点类型。VXLAN/QCPL/QCAR
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AccessPointType")
     @Expose
     private String AccessPointType;
+
+    /**
+    * 端口规格信息。
+    */
+    @SerializedName("AvailablePortInfo")
+    @Expose
+    private PortSpecification [] AvailablePortInfo;
 
     /**
      * Get 接入点的名称。 
@@ -202,90 +204,72 @@ public class AccessPoint extends AbstractModel {
     }
 
     /**
-     * Get 接入点可用的端口类型列表。1000BASE-T代表千兆电口，1000BASE-LX代表千兆单模光口10km，1000BASE-ZX代表千兆单模光口80km,10GBASE-LR代表万兆单模光口10km,10GBASE-ZR代表万兆单模光口80km,10GBASE-LH代表万兆单模光口40km,100GBASE-LR4代表100G单模光口10km
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AvailablePortType 接入点可用的端口类型列表。1000BASE-T代表千兆电口，1000BASE-LX代表千兆单模光口10km，1000BASE-ZX代表千兆单模光口80km,10GBASE-LR代表万兆单模光口10km,10GBASE-ZR代表万兆单模光口80km,10GBASE-LH代表万兆单模光口40km,100GBASE-LR4代表100G单模光口10km
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 接入点可用的端口类型列表。1000BASE-T代表千兆电口，1000BASE-LX代表千兆单模光口10km，1000BASE-ZX代表千兆单模光口80km,10GBASE-LR代表万兆单模光口10km,10GBASE-ZR代表万兆单模光口80km,10GBASE-LH代表万兆单模光口40km,100GBASE-LR4代表100G单模光口10km。 
+     * @return AvailablePortType 接入点可用的端口类型列表。1000BASE-T代表千兆电口，1000BASE-LX代表千兆单模光口10km，1000BASE-ZX代表千兆单模光口80km,10GBASE-LR代表万兆单模光口10km,10GBASE-ZR代表万兆单模光口80km,10GBASE-LH代表万兆单模光口40km,100GBASE-LR4代表100G单模光口10km。
      */
     public String [] getAvailablePortType() {
         return this.AvailablePortType;
     }
 
     /**
-     * Set 接入点可用的端口类型列表。1000BASE-T代表千兆电口，1000BASE-LX代表千兆单模光口10km，1000BASE-ZX代表千兆单模光口80km,10GBASE-LR代表万兆单模光口10km,10GBASE-ZR代表万兆单模光口80km,10GBASE-LH代表万兆单模光口40km,100GBASE-LR4代表100G单模光口10km
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param AvailablePortType 接入点可用的端口类型列表。1000BASE-T代表千兆电口，1000BASE-LX代表千兆单模光口10km，1000BASE-ZX代表千兆单模光口80km,10GBASE-LR代表万兆单模光口10km,10GBASE-ZR代表万兆单模光口80km,10GBASE-LH代表万兆单模光口40km,100GBASE-LR4代表100G单模光口10km
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 接入点可用的端口类型列表。1000BASE-T代表千兆电口，1000BASE-LX代表千兆单模光口10km，1000BASE-ZX代表千兆单模光口80km,10GBASE-LR代表万兆单模光口10km,10GBASE-ZR代表万兆单模光口80km,10GBASE-LH代表万兆单模光口40km,100GBASE-LR4代表100G单模光口10km。
+     * @param AvailablePortType 接入点可用的端口类型列表。1000BASE-T代表千兆电口，1000BASE-LX代表千兆单模光口10km，1000BASE-ZX代表千兆单模光口80km,10GBASE-LR代表万兆单模光口10km,10GBASE-ZR代表万兆单模光口80km,10GBASE-LH代表万兆单模光口40km,100GBASE-LR4代表100G单模光口10km。
      */
     public void setAvailablePortType(String [] AvailablePortType) {
         this.AvailablePortType = AvailablePortType;
     }
 
     /**
-     * Get 接入点经纬度
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Coordinate 接入点经纬度
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 接入点经纬度。 
+     * @return Coordinate 接入点经纬度。
      */
     public Coordinate getCoordinate() {
         return this.Coordinate;
     }
 
     /**
-     * Set 接入点经纬度
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Coordinate 接入点经纬度
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 接入点经纬度。
+     * @param Coordinate 接入点经纬度。
      */
     public void setCoordinate(Coordinate Coordinate) {
         this.Coordinate = Coordinate;
     }
 
     /**
-     * Get 接入点所在城市
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return City 接入点所在城市
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 接入点所在城市。 
+     * @return City 接入点所在城市。
      */
     public String getCity() {
         return this.City;
     }
 
     /**
-     * Set 接入点所在城市
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param City 接入点所在城市
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 接入点所在城市。
+     * @param City 接入点所在城市。
      */
     public void setCity(String City) {
         this.City = City;
     }
 
     /**
-     * Get 接入点地域名称
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Area 接入点地域名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 接入点地域名称。 
+     * @return Area 接入点地域名称。
      */
     public String getArea() {
         return this.Area;
     }
 
     /**
-     * Set 接入点地域名称
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Area 接入点地域名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 接入点地域名称。
+     * @param Area 接入点地域名称。
      */
     public void setArea(String Area) {
         this.Area = Area;
     }
 
     /**
-     * Get 接入点类型。VXLAN/QCPL/QCAR
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 接入点类型。VXLAN/QCPL/QCAR 
      * @return AccessPointType 接入点类型。VXLAN/QCPL/QCAR
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAccessPointType() {
         return this.AccessPointType;
@@ -293,12 +277,26 @@ public class AccessPoint extends AbstractModel {
 
     /**
      * Set 接入点类型。VXLAN/QCPL/QCAR
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AccessPointType 接入点类型。VXLAN/QCPL/QCAR
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAccessPointType(String AccessPointType) {
         this.AccessPointType = AccessPointType;
+    }
+
+    /**
+     * Get 端口规格信息。 
+     * @return AvailablePortInfo 端口规格信息。
+     */
+    public PortSpecification [] getAvailablePortInfo() {
+        return this.AvailablePortInfo;
+    }
+
+    /**
+     * Set 端口规格信息。
+     * @param AvailablePortInfo 端口规格信息。
+     */
+    public void setAvailablePortInfo(PortSpecification [] AvailablePortInfo) {
+        this.AvailablePortInfo = AvailablePortInfo;
     }
 
     public AccessPoint() {
@@ -348,6 +346,12 @@ public class AccessPoint extends AbstractModel {
         if (source.AccessPointType != null) {
             this.AccessPointType = new String(source.AccessPointType);
         }
+        if (source.AvailablePortInfo != null) {
+            this.AvailablePortInfo = new PortSpecification[source.AvailablePortInfo.length];
+            for (int i = 0; i < source.AvailablePortInfo.length; i++) {
+                this.AvailablePortInfo[i] = new PortSpecification(source.AvailablePortInfo[i]);
+            }
+        }
     }
 
 
@@ -366,6 +370,7 @@ public class AccessPoint extends AbstractModel {
         this.setParamSimple(map, prefix + "City", this.City);
         this.setParamSimple(map, prefix + "Area", this.Area);
         this.setParamSimple(map, prefix + "AccessPointType", this.AccessPointType);
+        this.setParamArrayObj(map, prefix + "AvailablePortInfo.", this.AvailablePortInfo);
 
     }
 }

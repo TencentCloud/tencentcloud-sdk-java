@@ -54,6 +54,27 @@ wait_doing-等待维护时间内执行
     private Long SSLValidity;
 
     /**
+    * 是否是KMS的CMK证书
+    */
+    @SerializedName("IsKMS")
+    @Expose
+    private Long IsKMS;
+
+    /**
+    * KMS中购买的用户主密钥ID（CMK）
+    */
+    @SerializedName("CMKId")
+    @Expose
+    private String CMKId;
+
+    /**
+    * CMK所属的地域，不同地域的CMK数据不互通
+    */
+    @SerializedName("CMKRegion")
+    @Expose
+    private String CMKRegion;
+
+    /**
      * Get SSL加密状态，
 enable-已开启
 disable-未开启
@@ -137,6 +158,54 @@ wait_doing-等待维护时间内执行
         this.SSLValidity = SSLValidity;
     }
 
+    /**
+     * Get 是否是KMS的CMK证书 
+     * @return IsKMS 是否是KMS的CMK证书
+     */
+    public Long getIsKMS() {
+        return this.IsKMS;
+    }
+
+    /**
+     * Set 是否是KMS的CMK证书
+     * @param IsKMS 是否是KMS的CMK证书
+     */
+    public void setIsKMS(Long IsKMS) {
+        this.IsKMS = IsKMS;
+    }
+
+    /**
+     * Get KMS中购买的用户主密钥ID（CMK） 
+     * @return CMKId KMS中购买的用户主密钥ID（CMK）
+     */
+    public String getCMKId() {
+        return this.CMKId;
+    }
+
+    /**
+     * Set KMS中购买的用户主密钥ID（CMK）
+     * @param CMKId KMS中购买的用户主密钥ID（CMK）
+     */
+    public void setCMKId(String CMKId) {
+        this.CMKId = CMKId;
+    }
+
+    /**
+     * Get CMK所属的地域，不同地域的CMK数据不互通 
+     * @return CMKRegion CMK所属的地域，不同地域的CMK数据不互通
+     */
+    public String getCMKRegion() {
+        return this.CMKRegion;
+    }
+
+    /**
+     * Set CMK所属的地域，不同地域的CMK数据不互通
+     * @param CMKRegion CMK所属的地域，不同地域的CMK数据不互通
+     */
+    public void setCMKRegion(String CMKRegion) {
+        this.CMKRegion = CMKRegion;
+    }
+
     public SSLConfig() {
     }
 
@@ -154,6 +223,15 @@ wait_doing-等待维护时间内执行
         if (source.SSLValidity != null) {
             this.SSLValidity = new Long(source.SSLValidity);
         }
+        if (source.IsKMS != null) {
+            this.IsKMS = new Long(source.IsKMS);
+        }
+        if (source.CMKId != null) {
+            this.CMKId = new String(source.CMKId);
+        }
+        if (source.CMKRegion != null) {
+            this.CMKRegion = new String(source.CMKRegion);
+        }
     }
 
 
@@ -164,6 +242,9 @@ wait_doing-等待维护时间内执行
         this.setParamSimple(map, prefix + "Encryption", this.Encryption);
         this.setParamSimple(map, prefix + "SSLValidityPeriod", this.SSLValidityPeriod);
         this.setParamSimple(map, prefix + "SSLValidity", this.SSLValidity);
+        this.setParamSimple(map, prefix + "IsKMS", this.IsKMS);
+        this.setParamSimple(map, prefix + "CMKId", this.CMKId);
+        this.setParamSimple(map, prefix + "CMKRegion", this.CMKRegion);
 
     }
 }

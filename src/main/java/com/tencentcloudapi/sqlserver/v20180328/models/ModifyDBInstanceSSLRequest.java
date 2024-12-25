@@ -45,6 +45,27 @@ public class ModifyDBInstanceSSLRequest extends AbstractModel {
     private Long WaitSwitch;
 
     /**
+    * 是否被KMS加密保护，0-表示否，1表示被KMS保护，默认取值0
+    */
+    @SerializedName("IsKMS")
+    @Expose
+    private Long IsKMS;
+
+    /**
+    * IsKMS为1时必填
+    */
+    @SerializedName("KeyId")
+    @Expose
+    private String KeyId;
+
+    /**
+    * IsKMS为1时必填
+    */
+    @SerializedName("KeyRegion")
+    @Expose
+    private String KeyRegion;
+
+    /**
      * Get 实例ID 
      * @return InstanceId 实例ID
      */
@@ -92,6 +113,54 @@ public class ModifyDBInstanceSSLRequest extends AbstractModel {
         this.WaitSwitch = WaitSwitch;
     }
 
+    /**
+     * Get 是否被KMS加密保护，0-表示否，1表示被KMS保护，默认取值0 
+     * @return IsKMS 是否被KMS加密保护，0-表示否，1表示被KMS保护，默认取值0
+     */
+    public Long getIsKMS() {
+        return this.IsKMS;
+    }
+
+    /**
+     * Set 是否被KMS加密保护，0-表示否，1表示被KMS保护，默认取值0
+     * @param IsKMS 是否被KMS加密保护，0-表示否，1表示被KMS保护，默认取值0
+     */
+    public void setIsKMS(Long IsKMS) {
+        this.IsKMS = IsKMS;
+    }
+
+    /**
+     * Get IsKMS为1时必填 
+     * @return KeyId IsKMS为1时必填
+     */
+    public String getKeyId() {
+        return this.KeyId;
+    }
+
+    /**
+     * Set IsKMS为1时必填
+     * @param KeyId IsKMS为1时必填
+     */
+    public void setKeyId(String KeyId) {
+        this.KeyId = KeyId;
+    }
+
+    /**
+     * Get IsKMS为1时必填 
+     * @return KeyRegion IsKMS为1时必填
+     */
+    public String getKeyRegion() {
+        return this.KeyRegion;
+    }
+
+    /**
+     * Set IsKMS为1时必填
+     * @param KeyRegion IsKMS为1时必填
+     */
+    public void setKeyRegion(String KeyRegion) {
+        this.KeyRegion = KeyRegion;
+    }
+
     public ModifyDBInstanceSSLRequest() {
     }
 
@@ -109,6 +178,15 @@ public class ModifyDBInstanceSSLRequest extends AbstractModel {
         if (source.WaitSwitch != null) {
             this.WaitSwitch = new Long(source.WaitSwitch);
         }
+        if (source.IsKMS != null) {
+            this.IsKMS = new Long(source.IsKMS);
+        }
+        if (source.KeyId != null) {
+            this.KeyId = new String(source.KeyId);
+        }
+        if (source.KeyRegion != null) {
+            this.KeyRegion = new String(source.KeyRegion);
+        }
     }
 
 
@@ -119,6 +197,9 @@ public class ModifyDBInstanceSSLRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "WaitSwitch", this.WaitSwitch);
+        this.setParamSimple(map, prefix + "IsKMS", this.IsKMS);
+        this.setParamSimple(map, prefix + "KeyId", this.KeyId);
+        this.setParamSimple(map, prefix + "KeyRegion", this.KeyRegion);
 
     }
 }

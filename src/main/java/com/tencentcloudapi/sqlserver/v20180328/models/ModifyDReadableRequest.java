@@ -52,11 +52,18 @@ public class ModifyDReadableRequest extends AbstractModel {
     private String SubnetId;
 
     /**
-    * 指定的备机只读vip，不填自动分配
+    * 指定的备机只读vip，不填自动分配。多节点SingleReadOnly模式不支持指定vip。
     */
     @SerializedName("Vip")
     @Expose
     private String Vip;
+
+    /**
+    * 备机只读模式，多节点架构默认取值BalancedReadOnly。SingleReadOnly-每个备机各对应一个只读地址（多节点架构），BalancedReadOnly-所有备机共用一个只读地址。当实例是双节点架构时，固定取值SingleReadOnly。
+    */
+    @SerializedName("ReadMode")
+    @Expose
+    private String ReadMode;
 
     /**
      * Get 实例ID 
@@ -123,19 +130,35 @@ public class ModifyDReadableRequest extends AbstractModel {
     }
 
     /**
-     * Get 指定的备机只读vip，不填自动分配 
-     * @return Vip 指定的备机只读vip，不填自动分配
+     * Get 指定的备机只读vip，不填自动分配。多节点SingleReadOnly模式不支持指定vip。 
+     * @return Vip 指定的备机只读vip，不填自动分配。多节点SingleReadOnly模式不支持指定vip。
      */
     public String getVip() {
         return this.Vip;
     }
 
     /**
-     * Set 指定的备机只读vip，不填自动分配
-     * @param Vip 指定的备机只读vip，不填自动分配
+     * Set 指定的备机只读vip，不填自动分配。多节点SingleReadOnly模式不支持指定vip。
+     * @param Vip 指定的备机只读vip，不填自动分配。多节点SingleReadOnly模式不支持指定vip。
      */
     public void setVip(String Vip) {
         this.Vip = Vip;
+    }
+
+    /**
+     * Get 备机只读模式，多节点架构默认取值BalancedReadOnly。SingleReadOnly-每个备机各对应一个只读地址（多节点架构），BalancedReadOnly-所有备机共用一个只读地址。当实例是双节点架构时，固定取值SingleReadOnly。 
+     * @return ReadMode 备机只读模式，多节点架构默认取值BalancedReadOnly。SingleReadOnly-每个备机各对应一个只读地址（多节点架构），BalancedReadOnly-所有备机共用一个只读地址。当实例是双节点架构时，固定取值SingleReadOnly。
+     */
+    public String getReadMode() {
+        return this.ReadMode;
+    }
+
+    /**
+     * Set 备机只读模式，多节点架构默认取值BalancedReadOnly。SingleReadOnly-每个备机各对应一个只读地址（多节点架构），BalancedReadOnly-所有备机共用一个只读地址。当实例是双节点架构时，固定取值SingleReadOnly。
+     * @param ReadMode 备机只读模式，多节点架构默认取值BalancedReadOnly。SingleReadOnly-每个备机各对应一个只读地址（多节点架构），BalancedReadOnly-所有备机共用一个只读地址。当实例是双节点架构时，固定取值SingleReadOnly。
+     */
+    public void setReadMode(String ReadMode) {
+        this.ReadMode = ReadMode;
     }
 
     public ModifyDReadableRequest() {
@@ -161,6 +184,9 @@ public class ModifyDReadableRequest extends AbstractModel {
         if (source.Vip != null) {
             this.Vip = new String(source.Vip);
         }
+        if (source.ReadMode != null) {
+            this.ReadMode = new String(source.ReadMode);
+        }
     }
 
 
@@ -173,6 +199,7 @@ public class ModifyDReadableRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
         this.setParamSimple(map, prefix + "Vip", this.Vip);
+        this.setParamSimple(map, prefix + "ReadMode", this.ReadMode);
 
     }
 }

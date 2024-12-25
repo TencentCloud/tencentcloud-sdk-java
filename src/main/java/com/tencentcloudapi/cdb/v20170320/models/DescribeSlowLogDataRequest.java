@@ -31,14 +31,16 @@ public class DescribeSlowLogDataRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * 开始时间戳。例如 1585142640 。
+    * 开始时间戳。例如 1585142640。
+说明：此参数单位为秒的时间戳。
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * 结束时间戳。例如 1585142640 。
+    * 结束时间戳。例如 1585142640。
+说明：此参数单位为秒的时间戳。
     */
     @SerializedName("EndTime")
     @Expose
@@ -124,32 +126,40 @@ public class DescribeSlowLogDataRequest extends AbstractModel {
     }
 
     /**
-     * Get 开始时间戳。例如 1585142640 。 
-     * @return StartTime 开始时间戳。例如 1585142640 。
+     * Get 开始时间戳。例如 1585142640。
+说明：此参数单位为秒的时间戳。 
+     * @return StartTime 开始时间戳。例如 1585142640。
+说明：此参数单位为秒的时间戳。
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 开始时间戳。例如 1585142640 。
-     * @param StartTime 开始时间戳。例如 1585142640 。
+     * Set 开始时间戳。例如 1585142640。
+说明：此参数单位为秒的时间戳。
+     * @param StartTime 开始时间戳。例如 1585142640。
+说明：此参数单位为秒的时间戳。
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 结束时间戳。例如 1585142640 。 
-     * @return EndTime 结束时间戳。例如 1585142640 。
+     * Get 结束时间戳。例如 1585142640。
+说明：此参数单位为秒的时间戳。 
+     * @return EndTime 结束时间戳。例如 1585142640。
+说明：此参数单位为秒的时间戳。
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 结束时间戳。例如 1585142640 。
-     * @param EndTime 结束时间戳。例如 1585142640 。
+     * Set 结束时间戳。例如 1585142640。
+说明：此参数单位为秒的时间戳。
+     * @param EndTime 结束时间戳。例如 1585142640。
+说明：此参数单位为秒的时间戳。
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;

@@ -104,7 +104,7 @@ public class Options extends AbstractModel {
     private Long AutoRetryTimeRangeMinutes;
 
     /**
-    * 同步到kafka链路指定位点。目前只支持时间格式：yyyy-mm-dd hh:mm:ss。如果没有指定位点，为空。
+    * 同步到kafka链路指定位点。目前只支持时间格式：2023-12-20T19:24:23+08:00。如果没有指定位点，为空。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartPosition")
@@ -328,9 +328,9 @@ public class Options extends AbstractModel {
     }
 
     /**
-     * Get 同步到kafka链路指定位点。目前只支持时间格式：yyyy-mm-dd hh:mm:ss。如果没有指定位点，为空。
+     * Get 同步到kafka链路指定位点。目前只支持时间格式：2023-12-20T19:24:23+08:00。如果没有指定位点，为空。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return StartPosition 同步到kafka链路指定位点。目前只支持时间格式：yyyy-mm-dd hh:mm:ss。如果没有指定位点，为空。
+     * @return StartPosition 同步到kafka链路指定位点。目前只支持时间格式：2023-12-20T19:24:23+08:00。如果没有指定位点，为空。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStartPosition() {
@@ -338,9 +338,9 @@ public class Options extends AbstractModel {
     }
 
     /**
-     * Set 同步到kafka链路指定位点。目前只支持时间格式：yyyy-mm-dd hh:mm:ss。如果没有指定位点，为空。
+     * Set 同步到kafka链路指定位点。目前只支持时间格式：2023-12-20T19:24:23+08:00。如果没有指定位点，为空。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param StartPosition 同步到kafka链路指定位点。目前只支持时间格式：yyyy-mm-dd hh:mm:ss。如果没有指定位点，为空。
+     * @param StartPosition 同步到kafka链路指定位点。目前只支持时间格式：2023-12-20T19:24:23+08:00。如果没有指定位点，为空。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartPosition(String StartPosition) {

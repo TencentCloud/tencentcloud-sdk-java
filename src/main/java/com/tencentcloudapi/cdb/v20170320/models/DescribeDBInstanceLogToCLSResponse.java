@@ -25,7 +25,6 @@ public class DescribeDBInstanceLogToCLSResponse extends AbstractModel {
 
     /**
     * 错误日志投递CLS配置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ErrorLog")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeDBInstanceLogToCLSResponse extends AbstractModel {
 
     /**
     * 慢日志投递CLS配置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SlowLog")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeDBInstanceLogToCLSResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 错误日志投递CLS配置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 错误日志投递CLS配置 
      * @return ErrorLog 错误日志投递CLS配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public LogToCLSConfig getErrorLog() {
         return this.ErrorLog;
@@ -58,19 +54,15 @@ public class DescribeDBInstanceLogToCLSResponse extends AbstractModel {
 
     /**
      * Set 错误日志投递CLS配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ErrorLog 错误日志投递CLS配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrorLog(LogToCLSConfig ErrorLog) {
         this.ErrorLog = ErrorLog;
     }
 
     /**
-     * Get 慢日志投递CLS配置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 慢日志投递CLS配置 
      * @return SlowLog 慢日志投递CLS配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public LogToCLSConfig getSlowLog() {
         return this.SlowLog;
@@ -78,9 +70,7 @@ public class DescribeDBInstanceLogToCLSResponse extends AbstractModel {
 
     /**
      * Set 慢日志投递CLS配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SlowLog 慢日志投递CLS配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSlowLog(LogToCLSConfig SlowLog) {
         this.SlowLog = SlowLog;

@@ -1560,6 +1560,17 @@ BatchReceivePolicy 的接口会一次性返回多条消息：
     }
 
     /**
+     *重发RocketMQ死信消息
+     * @param req RetryRocketMQDlqMessageRequest
+     * @return RetryRocketMQDlqMessageResponse
+     * @throws TencentCloudSDKException
+     */
+    public RetryRocketMQDlqMessageResponse RetryRocketMQDlqMessage(RetryRocketMQDlqMessageRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RetryRocketMQDlqMessage", RetryRocketMQDlqMessageResponse.class);
+    }
+
+    /**
      *回溯cmq队列
      * @param req RewindCmqQueueRequest
      * @return RewindCmqQueueResponse

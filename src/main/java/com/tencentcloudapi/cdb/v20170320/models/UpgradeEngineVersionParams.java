@@ -25,7 +25,6 @@ public class UpgradeEngineVersionParams extends AbstractModel {
 
     /**
     * 参数名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -33,17 +32,14 @@ public class UpgradeEngineVersionParams extends AbstractModel {
 
     /**
     * 参数值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Value")
     @Expose
     private String Value;
 
     /**
-     * Get 参数名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 参数名称 
      * @return Name 参数名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -51,19 +47,15 @@ public class UpgradeEngineVersionParams extends AbstractModel {
 
     /**
      * Set 参数名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 参数名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 参数值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 参数值 
      * @return Value 参数值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getValue() {
         return this.Value;
@@ -71,9 +63,7 @@ public class UpgradeEngineVersionParams extends AbstractModel {
 
     /**
      * Set 参数值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Value 参数值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValue(String Value) {
         this.Value = Value;

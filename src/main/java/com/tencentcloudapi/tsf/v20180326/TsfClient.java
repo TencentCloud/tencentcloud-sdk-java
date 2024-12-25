@@ -2094,7 +2094,9 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
     }
 
     /**
-     *重关联业务日志配置
+     *后端服务已经删除这个接口,  API 接口下线处理
+
+重关联业务日志配置
      * @param req ReassociateBusinessLogConfigRequest
      * @return ReassociateBusinessLogConfigResponse
      * @throws TencentCloudSDKException

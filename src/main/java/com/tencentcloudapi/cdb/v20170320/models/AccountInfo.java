@@ -73,6 +73,13 @@ public class AccountInfo extends AbstractModel {
     private Long MaxUserConnections;
 
     /**
+    * 用户账号是否开启了密码轮转
+    */
+    @SerializedName("OpenCam")
+    @Expose
+    private Boolean OpenCam;
+
+    /**
      * Get 账号备注信息 
      * @return Notes 账号备注信息
      */
@@ -184,6 +191,22 @@ public class AccountInfo extends AbstractModel {
         this.MaxUserConnections = MaxUserConnections;
     }
 
+    /**
+     * Get 用户账号是否开启了密码轮转 
+     * @return OpenCam 用户账号是否开启了密码轮转
+     */
+    public Boolean getOpenCam() {
+        return this.OpenCam;
+    }
+
+    /**
+     * Set 用户账号是否开启了密码轮转
+     * @param OpenCam 用户账号是否开启了密码轮转
+     */
+    public void setOpenCam(Boolean OpenCam) {
+        this.OpenCam = OpenCam;
+    }
+
     public AccountInfo() {
     }
 
@@ -213,6 +236,9 @@ public class AccountInfo extends AbstractModel {
         if (source.MaxUserConnections != null) {
             this.MaxUserConnections = new Long(source.MaxUserConnections);
         }
+        if (source.OpenCam != null) {
+            this.OpenCam = new Boolean(source.OpenCam);
+        }
     }
 
 
@@ -227,6 +253,7 @@ public class AccountInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "ModifyPasswordTime", this.ModifyPasswordTime);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "MaxUserConnections", this.MaxUserConnections);
+        this.setParamSimple(map, prefix + "OpenCam", this.OpenCam);
 
     }
 }

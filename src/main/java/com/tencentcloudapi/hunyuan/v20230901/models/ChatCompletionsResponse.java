@@ -93,6 +93,13 @@ public class ChatCompletionsResponse extends SSEResponseModel {
     private Replace [] Replaces;
 
     /**
+    * 推荐问答。
+    */
+    @SerializedName("RecommendedQuestions")
+    @Expose
+    private String [] RecommendedQuestions;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。本接口为流式响应接口，当请求成功时，RequestId 会被放在 HTTP 响应的 Header "X-TC-RequestId" 中。
     */
     @SerializedName("RequestId")
@@ -268,6 +275,22 @@ public class ChatCompletionsResponse extends SSEResponseModel {
     }
 
     /**
+     * Get 推荐问答。 
+     * @return RecommendedQuestions 推荐问答。
+     */
+    public String [] getRecommendedQuestions() {
+        return this.RecommendedQuestions;
+    }
+
+    /**
+     * Set 推荐问答。
+     * @param RecommendedQuestions 推荐问答。
+     */
+    public void setRecommendedQuestions(String [] RecommendedQuestions) {
+        this.RecommendedQuestions = RecommendedQuestions;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。本接口为流式响应接口，当请求成功时，RequestId 会被放在 HTTP 响应的 Header "X-TC-RequestId" 中。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。本接口为流式响应接口，当请求成功时，RequestId 会被放在 HTTP 响应的 Header "X-TC-RequestId" 中。
      */
@@ -324,6 +347,12 @@ public class ChatCompletionsResponse extends SSEResponseModel {
                 this.Replaces[i] = new Replace(source.Replaces[i]);
             }
         }
+        if (source.RecommendedQuestions != null) {
+            this.RecommendedQuestions = new String[source.RecommendedQuestions.length];
+            for (int i = 0; i < source.RecommendedQuestions.length; i++) {
+                this.RecommendedQuestions[i] = new String(source.RecommendedQuestions[i]);
+            }
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -343,6 +372,7 @@ public class ChatCompletionsResponse extends SSEResponseModel {
         this.setParamSimple(map, prefix + "ModerationLevel", this.ModerationLevel);
         this.setParamObj(map, prefix + "SearchInfo.", this.SearchInfo);
         this.setParamArrayObj(map, prefix + "Replaces.", this.Replaces);
+        this.setParamArraySimple(map, prefix + "RecommendedQuestions.", this.RecommendedQuestions);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

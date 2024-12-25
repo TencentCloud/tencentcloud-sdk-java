@@ -32,7 +32,6 @@ public class DescribeHaVipsResponse extends AbstractModel {
 
     /**
     * HAVIP对象数组。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HaVipSet")
     @Expose
@@ -62,10 +61,8 @@ public class DescribeHaVipsResponse extends AbstractModel {
     }
 
     /**
-     * Get HAVIP对象数组。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get HAVIP对象数组。 
      * @return HaVipSet HAVIP对象数组。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public HaVip [] getHaVipSet() {
         return this.HaVipSet;
@@ -73,9 +70,7 @@ public class DescribeHaVipsResponse extends AbstractModel {
 
     /**
      * Set HAVIP对象数组。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HaVipSet HAVIP对象数组。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHaVipSet(HaVip [] HaVipSet) {
         this.HaVipSet = HaVipSet;

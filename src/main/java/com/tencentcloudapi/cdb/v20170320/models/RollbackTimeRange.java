@@ -25,6 +25,7 @@ public class RollbackTimeRange extends AbstractModel {
 
     /**
     * 实例可回档开始时间，时间格式：2016-10-29 01:06:04
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Begin")
     @Expose
@@ -32,14 +33,17 @@ public class RollbackTimeRange extends AbstractModel {
 
     /**
     * 实例可回档结束时间，时间格式：2016-11-02 11:44:47
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("End")
     @Expose
     private String End;
 
     /**
-     * Get 实例可回档开始时间，时间格式：2016-10-29 01:06:04 
+     * Get 实例可回档开始时间，时间格式：2016-10-29 01:06:04
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Begin 实例可回档开始时间，时间格式：2016-10-29 01:06:04
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBegin() {
         return this.Begin;
@@ -47,15 +51,19 @@ public class RollbackTimeRange extends AbstractModel {
 
     /**
      * Set 实例可回档开始时间，时间格式：2016-10-29 01:06:04
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Begin 实例可回档开始时间，时间格式：2016-10-29 01:06:04
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBegin(String Begin) {
         this.Begin = Begin;
     }
 
     /**
-     * Get 实例可回档结束时间，时间格式：2016-11-02 11:44:47 
+     * Get 实例可回档结束时间，时间格式：2016-11-02 11:44:47
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return End 实例可回档结束时间，时间格式：2016-11-02 11:44:47
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEnd() {
         return this.End;
@@ -63,7 +71,9 @@ public class RollbackTimeRange extends AbstractModel {
 
     /**
      * Set 实例可回档结束时间，时间格式：2016-11-02 11:44:47
+注意：此字段可能返回 null，表示取不到有效值。
      * @param End 实例可回档结束时间，时间格式：2016-11-02 11:44:47
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnd(String End) {
         this.End = End;

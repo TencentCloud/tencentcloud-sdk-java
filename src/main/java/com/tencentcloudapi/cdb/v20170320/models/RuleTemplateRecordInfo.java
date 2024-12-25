@@ -25,7 +25,6 @@ public class RuleTemplateRecordInfo extends AbstractModel {
 
     /**
     * 任务ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskId")
     @Expose
@@ -33,7 +32,6 @@ public class RuleTemplateRecordInfo extends AbstractModel {
 
     /**
     * 修改前规则模板的详情。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ModifyBeforeInfo")
     @Expose
@@ -41,7 +39,6 @@ public class RuleTemplateRecordInfo extends AbstractModel {
 
     /**
     * 修改后规则模板的详情。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ModifyAfterInfo")
     @Expose
@@ -49,7 +46,6 @@ public class RuleTemplateRecordInfo extends AbstractModel {
 
     /**
     * 影响的实例。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AffectedInstances")
     @Expose
@@ -57,7 +53,6 @@ public class RuleTemplateRecordInfo extends AbstractModel {
 
     /**
     * 操作人，账号uin。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Operator")
     @Expose
@@ -65,17 +60,14 @@ public class RuleTemplateRecordInfo extends AbstractModel {
 
     /**
     * 变更的时间。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-     * Get 任务ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务ID 
      * @return TaskId 任务ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTaskId() {
         return this.TaskId;
@@ -83,19 +75,15 @@ public class RuleTemplateRecordInfo extends AbstractModel {
 
     /**
      * Set 任务ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskId 任务ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get 修改前规则模板的详情。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 修改前规则模板的详情。 
      * @return ModifyBeforeInfo 修改前规则模板的详情。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RuleTemplateInfo getModifyBeforeInfo() {
         return this.ModifyBeforeInfo;
@@ -103,19 +91,15 @@ public class RuleTemplateRecordInfo extends AbstractModel {
 
     /**
      * Set 修改前规则模板的详情。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ModifyBeforeInfo 修改前规则模板的详情。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModifyBeforeInfo(RuleTemplateInfo ModifyBeforeInfo) {
         this.ModifyBeforeInfo = ModifyBeforeInfo;
     }
 
     /**
-     * Get 修改后规则模板的详情。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 修改后规则模板的详情。 
      * @return ModifyAfterInfo 修改后规则模板的详情。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RuleTemplateInfo getModifyAfterInfo() {
         return this.ModifyAfterInfo;
@@ -123,19 +107,15 @@ public class RuleTemplateRecordInfo extends AbstractModel {
 
     /**
      * Set 修改后规则模板的详情。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ModifyAfterInfo 修改后规则模板的详情。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setModifyAfterInfo(RuleTemplateInfo ModifyAfterInfo) {
         this.ModifyAfterInfo = ModifyAfterInfo;
     }
 
     /**
-     * Get 影响的实例。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 影响的实例。 
      * @return AffectedInstances 影响的实例。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getAffectedInstances() {
         return this.AffectedInstances;
@@ -143,19 +123,15 @@ public class RuleTemplateRecordInfo extends AbstractModel {
 
     /**
      * Set 影响的实例。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AffectedInstances 影响的实例。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAffectedInstances(String [] AffectedInstances) {
         this.AffectedInstances = AffectedInstances;
     }
 
     /**
-     * Get 操作人，账号uin。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 操作人，账号uin。 
      * @return Operator 操作人，账号uin。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOperator() {
         return this.Operator;
@@ -163,19 +139,15 @@ public class RuleTemplateRecordInfo extends AbstractModel {
 
     /**
      * Set 操作人，账号uin。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Operator 操作人，账号uin。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOperator(String Operator) {
         this.Operator = Operator;
     }
 
     /**
-     * Get 变更的时间。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 变更的时间。 
      * @return UpdateTime 变更的时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUpdateTime() {
         return this.UpdateTime;
@@ -183,9 +155,7 @@ public class RuleTemplateRecordInfo extends AbstractModel {
 
     /**
      * Set 变更的时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UpdateTime 变更的时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;

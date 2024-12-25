@@ -25,6 +25,7 @@ public class ImportRecord extends AbstractModel {
 
     /**
     * 状态值
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -32,6 +33,7 @@ public class ImportRecord extends AbstractModel {
 
     /**
     * 状态值
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Code")
     @Expose
@@ -39,6 +41,7 @@ public class ImportRecord extends AbstractModel {
 
     /**
     * 执行时间
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CostTime")
     @Expose
@@ -46,6 +49,7 @@ public class ImportRecord extends AbstractModel {
 
     /**
     * 实例ID
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -53,6 +57,7 @@ public class ImportRecord extends AbstractModel {
 
     /**
     * 后端任务ID
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WorkId")
     @Expose
@@ -60,6 +65,7 @@ public class ImportRecord extends AbstractModel {
 
     /**
     * 导入文件名
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileName")
     @Expose
@@ -67,6 +73,7 @@ public class ImportRecord extends AbstractModel {
 
     /**
     * 执行进度
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Process")
     @Expose
@@ -74,6 +81,7 @@ public class ImportRecord extends AbstractModel {
 
     /**
     * 任务创建时间
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
@@ -81,6 +89,7 @@ public class ImportRecord extends AbstractModel {
 
     /**
     * 文件大小
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileSize")
     @Expose
@@ -88,6 +97,7 @@ public class ImportRecord extends AbstractModel {
 
     /**
     * 任务执行信息
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Message")
     @Expose
@@ -95,6 +105,7 @@ public class ImportRecord extends AbstractModel {
 
     /**
     * 任务ID
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("JobId")
     @Expose
@@ -102,6 +113,7 @@ public class ImportRecord extends AbstractModel {
 
     /**
     * 导入库表名
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DbName")
     @Expose
@@ -109,14 +121,17 @@ public class ImportRecord extends AbstractModel {
 
     /**
     * 异步任务的请求ID
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AsyncRequestId")
     @Expose
     private String AsyncRequestId;
 
     /**
-     * Get 状态值 
+     * Get 状态值
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Status 状态值
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
         return this.Status;
@@ -124,15 +139,19 @@ public class ImportRecord extends AbstractModel {
 
     /**
      * Set 状态值
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 状态值
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 状态值 
+     * Get 状态值
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Code 状态值
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCode() {
         return this.Code;
@@ -140,15 +159,19 @@ public class ImportRecord extends AbstractModel {
 
     /**
      * Set 状态值
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Code 状态值
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCode(Long Code) {
         this.Code = Code;
     }
 
     /**
-     * Get 执行时间 
+     * Get 执行时间
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return CostTime 执行时间
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCostTime() {
         return this.CostTime;
@@ -156,15 +179,19 @@ public class ImportRecord extends AbstractModel {
 
     /**
      * Set 执行时间
+注意：此字段可能返回 null，表示取不到有效值。
      * @param CostTime 执行时间
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCostTime(Long CostTime) {
         this.CostTime = CostTime;
     }
 
     /**
-     * Get 实例ID 
+     * Get 实例ID
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return InstanceId 实例ID
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceId() {
         return this.InstanceId;
@@ -172,15 +199,19 @@ public class ImportRecord extends AbstractModel {
 
     /**
      * Set 实例ID
+注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceId 实例ID
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 后端任务ID 
+     * Get 后端任务ID
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return WorkId 后端任务ID
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWorkId() {
         return this.WorkId;
@@ -188,15 +219,19 @@ public class ImportRecord extends AbstractModel {
 
     /**
      * Set 后端任务ID
+注意：此字段可能返回 null，表示取不到有效值。
      * @param WorkId 后端任务ID
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWorkId(String WorkId) {
         this.WorkId = WorkId;
     }
 
     /**
-     * Get 导入文件名 
+     * Get 导入文件名
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return FileName 导入文件名
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFileName() {
         return this.FileName;
@@ -204,15 +239,19 @@ public class ImportRecord extends AbstractModel {
 
     /**
      * Set 导入文件名
+注意：此字段可能返回 null，表示取不到有效值。
      * @param FileName 导入文件名
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileName(String FileName) {
         this.FileName = FileName;
     }
 
     /**
-     * Get 执行进度 
+     * Get 执行进度
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Process 执行进度
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getProcess() {
         return this.Process;
@@ -220,15 +259,19 @@ public class ImportRecord extends AbstractModel {
 
     /**
      * Set 执行进度
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Process 执行进度
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProcess(Long Process) {
         this.Process = Process;
     }
 
     /**
-     * Get 任务创建时间 
+     * Get 任务创建时间
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return CreateTime 任务创建时间
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -236,15 +279,19 @@ public class ImportRecord extends AbstractModel {
 
     /**
      * Set 任务创建时间
+注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 任务创建时间
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get 文件大小 
+     * Get 文件大小
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return FileSize 文件大小
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFileSize() {
         return this.FileSize;
@@ -252,15 +299,19 @@ public class ImportRecord extends AbstractModel {
 
     /**
      * Set 文件大小
+注意：此字段可能返回 null，表示取不到有效值。
      * @param FileSize 文件大小
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileSize(String FileSize) {
         this.FileSize = FileSize;
     }
 
     /**
-     * Get 任务执行信息 
+     * Get 任务执行信息
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return Message 任务执行信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMessage() {
         return this.Message;
@@ -268,15 +319,19 @@ public class ImportRecord extends AbstractModel {
 
     /**
      * Set 任务执行信息
+注意：此字段可能返回 null，表示取不到有效值。
      * @param Message 任务执行信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMessage(String Message) {
         this.Message = Message;
     }
 
     /**
-     * Get 任务ID 
+     * Get 任务ID
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return JobId 任务ID
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getJobId() {
         return this.JobId;
@@ -284,15 +339,19 @@ public class ImportRecord extends AbstractModel {
 
     /**
      * Set 任务ID
+注意：此字段可能返回 null，表示取不到有效值。
      * @param JobId 任务ID
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setJobId(Long JobId) {
         this.JobId = JobId;
     }
 
     /**
-     * Get 导入库表名 
+     * Get 导入库表名
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return DbName 导入库表名
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDbName() {
         return this.DbName;
@@ -300,15 +359,19 @@ public class ImportRecord extends AbstractModel {
 
     /**
      * Set 导入库表名
+注意：此字段可能返回 null，表示取不到有效值。
      * @param DbName 导入库表名
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDbName(String DbName) {
         this.DbName = DbName;
     }
 
     /**
-     * Get 异步任务的请求ID 
+     * Get 异步任务的请求ID
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return AsyncRequestId 异步任务的请求ID
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAsyncRequestId() {
         return this.AsyncRequestId;
@@ -316,7 +379,9 @@ public class ImportRecord extends AbstractModel {
 
     /**
      * Set 异步任务的请求ID
+注意：此字段可能返回 null，表示取不到有效值。
      * @param AsyncRequestId 异步任务的请求ID
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAsyncRequestId(String AsyncRequestId) {
         this.AsyncRequestId = AsyncRequestId;

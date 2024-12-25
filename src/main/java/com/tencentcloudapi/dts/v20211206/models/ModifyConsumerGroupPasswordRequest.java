@@ -45,18 +45,18 @@ public class ModifyConsumerGroupPasswordRequest extends AbstractModel {
     private String ConsumerGroupName;
 
     /**
-    * 旧密码
-    */
-    @SerializedName("OldPassword")
-    @Expose
-    private String OldPassword;
-
-    /**
     * 新密码。字符长度不小于3，不大于32
     */
     @SerializedName("NewPassword")
     @Expose
     private String NewPassword;
+
+    /**
+    * 旧密码，非必选
+    */
+    @SerializedName("OldPassword")
+    @Expose
+    private String OldPassword;
 
     /**
      * Get 数据订阅实例的 ID 
@@ -107,22 +107,6 @@ public class ModifyConsumerGroupPasswordRequest extends AbstractModel {
     }
 
     /**
-     * Get 旧密码 
-     * @return OldPassword 旧密码
-     */
-    public String getOldPassword() {
-        return this.OldPassword;
-    }
-
-    /**
-     * Set 旧密码
-     * @param OldPassword 旧密码
-     */
-    public void setOldPassword(String OldPassword) {
-        this.OldPassword = OldPassword;
-    }
-
-    /**
      * Get 新密码。字符长度不小于3，不大于32 
      * @return NewPassword 新密码。字符长度不小于3，不大于32
      */
@@ -136,6 +120,22 @@ public class ModifyConsumerGroupPasswordRequest extends AbstractModel {
      */
     public void setNewPassword(String NewPassword) {
         this.NewPassword = NewPassword;
+    }
+
+    /**
+     * Get 旧密码，非必选 
+     * @return OldPassword 旧密码，非必选
+     */
+    public String getOldPassword() {
+        return this.OldPassword;
+    }
+
+    /**
+     * Set 旧密码，非必选
+     * @param OldPassword 旧密码，非必选
+     */
+    public void setOldPassword(String OldPassword) {
+        this.OldPassword = OldPassword;
     }
 
     public ModifyConsumerGroupPasswordRequest() {
@@ -155,11 +155,11 @@ public class ModifyConsumerGroupPasswordRequest extends AbstractModel {
         if (source.ConsumerGroupName != null) {
             this.ConsumerGroupName = new String(source.ConsumerGroupName);
         }
-        if (source.OldPassword != null) {
-            this.OldPassword = new String(source.OldPassword);
-        }
         if (source.NewPassword != null) {
             this.NewPassword = new String(source.NewPassword);
+        }
+        if (source.OldPassword != null) {
+            this.OldPassword = new String(source.OldPassword);
         }
     }
 
@@ -171,8 +171,8 @@ public class ModifyConsumerGroupPasswordRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SubscribeId", this.SubscribeId);
         this.setParamSimple(map, prefix + "AccountName", this.AccountName);
         this.setParamSimple(map, prefix + "ConsumerGroupName", this.ConsumerGroupName);
-        this.setParamSimple(map, prefix + "OldPassword", this.OldPassword);
         this.setParamSimple(map, prefix + "NewPassword", this.NewPassword);
+        this.setParamSimple(map, prefix + "OldPassword", this.OldPassword);
 
     }
 }

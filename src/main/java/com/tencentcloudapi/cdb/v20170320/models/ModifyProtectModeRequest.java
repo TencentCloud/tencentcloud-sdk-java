@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyProtectModeRequest extends AbstractModel {
 
     /**
-    * 无
+    * 数据复制方式，默认为 0，支持值包括：0 - 表示异步复制，1 - 表示半同步复制，2 - 表示强同步复制。
     */
     @SerializedName("ProtectMode")
     @Expose
@@ -38,16 +38,16 @@ public class ModifyProtectModeRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-     * Get 无 
-     * @return ProtectMode 无
+     * Get 数据复制方式，默认为 0，支持值包括：0 - 表示异步复制，1 - 表示半同步复制，2 - 表示强同步复制。 
+     * @return ProtectMode 数据复制方式，默认为 0，支持值包括：0 - 表示异步复制，1 - 表示半同步复制，2 - 表示强同步复制。
      */
     public Long getProtectMode() {
         return this.ProtectMode;
     }
 
     /**
-     * Set 无
-     * @param ProtectMode 无
+     * Set 数据复制方式，默认为 0，支持值包括：0 - 表示异步复制，1 - 表示半同步复制，2 - 表示强同步复制。
+     * @param ProtectMode 数据复制方式，默认为 0，支持值包括：0 - 表示异步复制，1 - 表示半同步复制，2 - 表示强同步复制。
      */
     public void setProtectMode(Long ProtectMode) {
         this.ProtectMode = ProtectMode;

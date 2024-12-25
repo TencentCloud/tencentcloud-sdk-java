@@ -25,7 +25,6 @@ public class DescribeRouteConflictsResponse extends AbstractModel {
 
     /**
     * 路由策略冲突列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RouteConflictSet")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeRouteConflictsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 路由策略冲突列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 路由策略冲突列表 
      * @return RouteConflictSet 路由策略冲突列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RouteConflict [] getRouteConflictSet() {
         return this.RouteConflictSet;
@@ -50,9 +47,7 @@ public class DescribeRouteConflictsResponse extends AbstractModel {
 
     /**
      * Set 路由策略冲突列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RouteConflictSet 路由策略冲突列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRouteConflictSet(RouteConflict [] RouteConflictSet) {
         this.RouteConflictSet = RouteConflictSet;

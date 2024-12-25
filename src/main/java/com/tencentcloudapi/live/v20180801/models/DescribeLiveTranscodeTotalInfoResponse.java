@@ -25,7 +25,6 @@ public class DescribeLiveTranscodeTotalInfoResponse extends AbstractModel {
 
     /**
     * 统计数据列表。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataInfoList")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeLiveTranscodeTotalInfoResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 统计数据列表。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 统计数据列表。 
      * @return DataInfoList 统计数据列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TranscodeTotalInfo [] getDataInfoList() {
         return this.DataInfoList;
@@ -50,9 +47,7 @@ public class DescribeLiveTranscodeTotalInfoResponse extends AbstractModel {
 
     /**
      * Set 统计数据列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DataInfoList 统计数据列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataInfoList(TranscodeTotalInfo [] DataInfoList) {
         this.DataInfoList = DataInfoList;

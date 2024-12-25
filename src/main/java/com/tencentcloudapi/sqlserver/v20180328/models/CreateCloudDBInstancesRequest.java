@@ -185,6 +185,20 @@ public class CreateCloudDBInstancesRequest extends AbstractModel {
     private String TimeZone;
 
     /**
+    * 是否多节点架构实例，默认值为false。当MultiNodes = true时，参数MultiZones必须取值为true。
+    */
+    @SerializedName("MultiNodes")
+    @Expose
+    private Boolean MultiNodes;
+
+    /**
+    * 备节点可用区，默认为空。当MultiNodes = true时，主节点和备节点可用区不能全部相同。备机可用区集合最小为2个，最大不超过5个。
+    */
+    @SerializedName("DrZones")
+    @Expose
+    private String [] DrZones;
+
+    /**
      * Get 实例可用区，类似ap-guangzhou-1（广州一区）；实例可售卖区域可以通过接口DescribeZones获取 
      * @return Zone 实例可用区，类似ap-guangzhou-1（广州一区）；实例可售卖区域可以通过接口DescribeZones获取
      */
@@ -552,6 +566,38 @@ public class CreateCloudDBInstancesRequest extends AbstractModel {
         this.TimeZone = TimeZone;
     }
 
+    /**
+     * Get 是否多节点架构实例，默认值为false。当MultiNodes = true时，参数MultiZones必须取值为true。 
+     * @return MultiNodes 是否多节点架构实例，默认值为false。当MultiNodes = true时，参数MultiZones必须取值为true。
+     */
+    public Boolean getMultiNodes() {
+        return this.MultiNodes;
+    }
+
+    /**
+     * Set 是否多节点架构实例，默认值为false。当MultiNodes = true时，参数MultiZones必须取值为true。
+     * @param MultiNodes 是否多节点架构实例，默认值为false。当MultiNodes = true时，参数MultiZones必须取值为true。
+     */
+    public void setMultiNodes(Boolean MultiNodes) {
+        this.MultiNodes = MultiNodes;
+    }
+
+    /**
+     * Get 备节点可用区，默认为空。当MultiNodes = true时，主节点和备节点可用区不能全部相同。备机可用区集合最小为2个，最大不超过5个。 
+     * @return DrZones 备节点可用区，默认为空。当MultiNodes = true时，主节点和备节点可用区不能全部相同。备机可用区集合最小为2个，最大不超过5个。
+     */
+    public String [] getDrZones() {
+        return this.DrZones;
+    }
+
+    /**
+     * Set 备节点可用区，默认为空。当MultiNodes = true时，主节点和备节点可用区不能全部相同。备机可用区集合最小为2个，最大不超过5个。
+     * @param DrZones 备节点可用区，默认为空。当MultiNodes = true时，主节点和备节点可用区不能全部相同。备机可用区集合最小为2个，最大不超过5个。
+     */
+    public void setDrZones(String [] DrZones) {
+        this.DrZones = DrZones;
+    }
+
     public CreateCloudDBInstancesRequest() {
     }
 
@@ -641,6 +687,15 @@ public class CreateCloudDBInstancesRequest extends AbstractModel {
         if (source.TimeZone != null) {
             this.TimeZone = new String(source.TimeZone);
         }
+        if (source.MultiNodes != null) {
+            this.MultiNodes = new Boolean(source.MultiNodes);
+        }
+        if (source.DrZones != null) {
+            this.DrZones = new String[source.DrZones.length];
+            for (int i = 0; i < source.DrZones.length; i++) {
+                this.DrZones[i] = new String(source.DrZones[i]);
+            }
+        }
     }
 
 
@@ -671,6 +726,8 @@ public class CreateCloudDBInstancesRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
         this.setParamSimple(map, prefix + "Collation", this.Collation);
         this.setParamSimple(map, prefix + "TimeZone", this.TimeZone);
+        this.setParamSimple(map, prefix + "MultiNodes", this.MultiNodes);
+        this.setParamArraySimple(map, prefix + "DrZones.", this.DrZones);
 
     }
 }

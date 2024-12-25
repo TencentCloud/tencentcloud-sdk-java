@@ -204,6 +204,16 @@ public class ChatCompletionsRequest extends AbstractModel {
     private String [] Stop;
 
     /**
+    * 推荐问答开关。
+说明：
+1. 未传值时默认关闭。
+2. 开启后，返回值里将增加 RecommendedQuestions 字段返回推荐问答， 最多只返回3条。
+    */
+    @SerializedName("EnableRecommendedQuestions")
+    @Expose
+    private Boolean EnableRecommendedQuestions;
+
+    /**
      * Get 模型名称，可选值包括 hunyuan-lite、hunyuan-standard、hunyuan-standard-256K、hunyuan-pro、 hunyuan-code、 hunyuan-role、 hunyuan-functioncall、 hunyuan-vision、 hunyuan-turbo、 hunyuan-turbo-latest、 hunyuan-large、 hunyuan-large-longcontext、 hunyuan-turbo-vision。
 各模型介绍请阅读 [产品概述](https://cloud.tencent.com/document/product/1729/104753) 中的说明。
 
@@ -707,6 +717,34 @@ public class ChatCompletionsRequest extends AbstractModel {
         this.Stop = Stop;
     }
 
+    /**
+     * Get 推荐问答开关。
+说明：
+1. 未传值时默认关闭。
+2. 开启后，返回值里将增加 RecommendedQuestions 字段返回推荐问答， 最多只返回3条。 
+     * @return EnableRecommendedQuestions 推荐问答开关。
+说明：
+1. 未传值时默认关闭。
+2. 开启后，返回值里将增加 RecommendedQuestions 字段返回推荐问答， 最多只返回3条。
+     */
+    public Boolean getEnableRecommendedQuestions() {
+        return this.EnableRecommendedQuestions;
+    }
+
+    /**
+     * Set 推荐问答开关。
+说明：
+1. 未传值时默认关闭。
+2. 开启后，返回值里将增加 RecommendedQuestions 字段返回推荐问答， 最多只返回3条。
+     * @param EnableRecommendedQuestions 推荐问答开关。
+说明：
+1. 未传值时默认关闭。
+2. 开启后，返回值里将增加 RecommendedQuestions 字段返回推荐问答， 最多只返回3条。
+     */
+    public void setEnableRecommendedQuestions(Boolean EnableRecommendedQuestions) {
+        this.EnableRecommendedQuestions = EnableRecommendedQuestions;
+    }
+
     public ChatCompletionsRequest() {
     }
 
@@ -778,6 +816,9 @@ public class ChatCompletionsRequest extends AbstractModel {
                 this.Stop[i] = new String(source.Stop[i]);
             }
         }
+        if (source.EnableRecommendedQuestions != null) {
+            this.EnableRecommendedQuestions = new Boolean(source.EnableRecommendedQuestions);
+        }
     }
 
 
@@ -803,6 +844,7 @@ public class ChatCompletionsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Seed", this.Seed);
         this.setParamSimple(map, prefix + "ForceSearchEnhancement", this.ForceSearchEnhancement);
         this.setParamArraySimple(map, prefix + "Stop.", this.Stop);
+        this.setParamSimple(map, prefix + "EnableRecommendedQuestions", this.EnableRecommendedQuestions);
 
     }
 }

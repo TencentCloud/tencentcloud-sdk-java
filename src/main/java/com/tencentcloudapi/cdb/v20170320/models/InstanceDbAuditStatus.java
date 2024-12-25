@@ -135,7 +135,6 @@ public class InstanceDbAuditStatus extends AbstractModel {
 
     /**
     * 实例所应用的规则模板。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleTemplateIds")
     @Expose
@@ -414,10 +413,8 @@ public class InstanceDbAuditStatus extends AbstractModel {
     }
 
     /**
-     * Get 实例所应用的规则模板。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例所应用的规则模板。 
      * @return RuleTemplateIds 实例所应用的规则模板。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getRuleTemplateIds() {
         return this.RuleTemplateIds;
@@ -425,9 +422,7 @@ public class InstanceDbAuditStatus extends AbstractModel {
 
     /**
      * Set 实例所应用的规则模板。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RuleTemplateIds 实例所应用的规则模板。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleTemplateIds(String [] RuleTemplateIds) {
         this.RuleTemplateIds = RuleTemplateIds;

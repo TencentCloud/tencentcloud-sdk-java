@@ -438,6 +438,28 @@ public class TrocketClient extends AbstractClient{
     }
 
     /**
+     *查询消息详情
+     * @param req DescribeMessageRequest
+     * @return DescribeMessageResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMessageResponse DescribeMessage(DescribeMessageRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMessage", DescribeMessageResponse.class);
+    }
+
+    /**
+     *查询消息列表。如果查询死信消息，请设置ConsumerGroup参数。
+     * @param req DescribeMessageListRequest
+     * @return DescribeMessageListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMessageListResponse DescribeMessageList(DescribeMessageListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMessageList", DescribeMessageListResponse.class);
+    }
+
+    /**
      *根据消息 ID 查询消息轨迹。
      * @param req DescribeMessageTraceRequest
      * @return DescribeMessageTraceResponse
@@ -619,6 +641,17 @@ ConsumerGroup，消费组名称过滤
     public ModifyTopicResponse ModifyTopic(ModifyTopicRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyTopic", ModifyTopicResponse.class);
+    }
+
+    /**
+     *重新发送死信消息
+     * @param req ResendDeadLetterMessageRequest
+     * @return ResendDeadLetterMessageResponse
+     * @throws TencentCloudSDKException
+     */
+    public ResendDeadLetterMessageResponse ResendDeadLetterMessage(ResendDeadLetterMessageRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ResendDeadLetterMessage", ResendDeadLetterMessageResponse.class);
     }
 
 }

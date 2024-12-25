@@ -46,6 +46,13 @@ public class DescribeAccessPointsRequest extends AbstractModel {
     private Long Limit;
 
     /**
+    * 过滤参数，支持：access-point-id、isp
+    */
+    @SerializedName("Filters")
+    @Expose
+    private Filter [] Filters;
+
+    /**
      * Get 接入点所在的地域。使用DescribeRegions查询。
 您可以通过调用 DescribeRegions接口获取地域ID。 
      * @return RegionId 接入点所在的地域。使用DescribeRegions查询。
@@ -97,6 +104,22 @@ public class DescribeAccessPointsRequest extends AbstractModel {
         this.Limit = Limit;
     }
 
+    /**
+     * Get 过滤参数，支持：access-point-id、isp 
+     * @return Filters 过滤参数，支持：access-point-id、isp
+     */
+    public Filter [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * Set 过滤参数，支持：access-point-id、isp
+     * @param Filters 过滤参数，支持：access-point-id、isp
+     */
+    public void setFilters(Filter [] Filters) {
+        this.Filters = Filters;
+    }
+
     public DescribeAccessPointsRequest() {
     }
 
@@ -114,6 +137,12 @@ public class DescribeAccessPointsRequest extends AbstractModel {
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
+        if (source.Filters != null) {
+            this.Filters = new Filter[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new Filter(source.Filters[i]);
+            }
+        }
     }
 
 
@@ -124,6 +153,7 @@ public class DescribeAccessPointsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "RegionId", this.RegionId);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
 
     }
 }

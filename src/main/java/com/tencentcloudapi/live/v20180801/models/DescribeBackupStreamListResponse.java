@@ -25,7 +25,6 @@ public class DescribeBackupStreamListResponse extends AbstractModel {
 
     /**
     * 主备流分组信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StreamInfoList")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeBackupStreamListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 主备流分组信息列表。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主备流分组信息列表。 
      * @return StreamInfoList 主备流分组信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BackupStreamGroupInfo [] getStreamInfoList() {
         return this.StreamInfoList;
@@ -50,9 +47,7 @@ public class DescribeBackupStreamListResponse extends AbstractModel {
 
     /**
      * Set 主备流分组信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StreamInfoList 主备流分组信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStreamInfoList(BackupStreamGroupInfo [] StreamInfoList) {
         this.StreamInfoList = StreamInfoList;

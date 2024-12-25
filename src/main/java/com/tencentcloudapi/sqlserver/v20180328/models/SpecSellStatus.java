@@ -45,7 +45,7 @@ public class SpecSellStatus extends AbstractModel {
     private String PayModeStatus;
 
     /**
-    * 产品类型
+    * 产品类型，购买实例的类型 HA-本地盘高可用(包括双机高可用，alwaysOn集群)，RO-本地盘只读副本，SI-云盘版单节点,BI-商业智能服务，cvmHA-云盘版高可用，cvmRO-云盘版只读副本，MultiHA-多节点，cvmMultiHA-云盘多节点
     */
     @SerializedName("InstanceType")
     @Expose
@@ -59,7 +59,8 @@ public class SpecSellStatus extends AbstractModel {
     private String MultiZonesStatus;
 
     /**
-    * 架构标识，SINGLE-单节点 DOUBLE-双节点 TRIPLE-三节点
+    * 架构标识，SINGLE-单节点 DOUBLE-双节点 TRIPLE-三节点 MULTI-多节点
+示例值：SINGLE
     */
     @SerializedName("Architecture")
     @Expose
@@ -149,16 +150,16 @@ public class SpecSellStatus extends AbstractModel {
     }
 
     /**
-     * Get 产品类型 
-     * @return InstanceType 产品类型
+     * Get 产品类型，购买实例的类型 HA-本地盘高可用(包括双机高可用，alwaysOn集群)，RO-本地盘只读副本，SI-云盘版单节点,BI-商业智能服务，cvmHA-云盘版高可用，cvmRO-云盘版只读副本，MultiHA-多节点，cvmMultiHA-云盘多节点 
+     * @return InstanceType 产品类型，购买实例的类型 HA-本地盘高可用(包括双机高可用，alwaysOn集群)，RO-本地盘只读副本，SI-云盘版单节点,BI-商业智能服务，cvmHA-云盘版高可用，cvmRO-云盘版只读副本，MultiHA-多节点，cvmMultiHA-云盘多节点
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set 产品类型
-     * @param InstanceType 产品类型
+     * Set 产品类型，购买实例的类型 HA-本地盘高可用(包括双机高可用，alwaysOn集群)，RO-本地盘只读副本，SI-云盘版单节点,BI-商业智能服务，cvmHA-云盘版高可用，cvmRO-云盘版只读副本，MultiHA-多节点，cvmMultiHA-云盘多节点
+     * @param InstanceType 产品类型，购买实例的类型 HA-本地盘高可用(包括双机高可用，alwaysOn集群)，RO-本地盘只读副本，SI-云盘版单节点,BI-商业智能服务，cvmHA-云盘版高可用，cvmRO-云盘版只读副本，MultiHA-多节点，cvmMultiHA-云盘多节点
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
@@ -181,16 +182,20 @@ public class SpecSellStatus extends AbstractModel {
     }
 
     /**
-     * Get 架构标识，SINGLE-单节点 DOUBLE-双节点 TRIPLE-三节点 
-     * @return Architecture 架构标识，SINGLE-单节点 DOUBLE-双节点 TRIPLE-三节点
+     * Get 架构标识，SINGLE-单节点 DOUBLE-双节点 TRIPLE-三节点 MULTI-多节点
+示例值：SINGLE 
+     * @return Architecture 架构标识，SINGLE-单节点 DOUBLE-双节点 TRIPLE-三节点 MULTI-多节点
+示例值：SINGLE
      */
     public String getArchitecture() {
         return this.Architecture;
     }
 
     /**
-     * Set 架构标识，SINGLE-单节点 DOUBLE-双节点 TRIPLE-三节点
-     * @param Architecture 架构标识，SINGLE-单节点 DOUBLE-双节点 TRIPLE-三节点
+     * Set 架构标识，SINGLE-单节点 DOUBLE-双节点 TRIPLE-三节点 MULTI-多节点
+示例值：SINGLE
+     * @param Architecture 架构标识，SINGLE-单节点 DOUBLE-双节点 TRIPLE-三节点 MULTI-多节点
+示例值：SINGLE
      */
     public void setArchitecture(String Architecture) {
         this.Architecture = Architecture;

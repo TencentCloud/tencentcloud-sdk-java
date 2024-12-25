@@ -2126,7 +2126,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
     }
 
     /**
-     *更新拉流配置。该接口为已下线接口，请使用新接口 ModifyLivePullStreamTask。 
+     *更新拉流配置。该接口为已下线接口，请使用新接口 ModifyLivePullStreamTask。
      * @param req ModifyPullStreamConfigRequest
      * @return ModifyPullStreamConfigResponse
      * @throws TencentCloudSDKException

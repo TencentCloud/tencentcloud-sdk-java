@@ -25,6 +25,7 @@ public class UploadInfo extends AbstractModel {
 
     /**
     * 文件所有分片数
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AllSliceNum")
     @Expose
@@ -32,14 +33,17 @@ public class UploadInfo extends AbstractModel {
 
     /**
     * 已完成分片数
+注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CompleteNum")
     @Expose
     private Long CompleteNum;
 
     /**
-     * Get 文件所有分片数 
+     * Get 文件所有分片数
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return AllSliceNum 文件所有分片数
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getAllSliceNum() {
         return this.AllSliceNum;
@@ -47,15 +51,19 @@ public class UploadInfo extends AbstractModel {
 
     /**
      * Set 文件所有分片数
+注意：此字段可能返回 null，表示取不到有效值。
      * @param AllSliceNum 文件所有分片数
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAllSliceNum(Long AllSliceNum) {
         this.AllSliceNum = AllSliceNum;
     }
 
     /**
-     * Get 已完成分片数 
+     * Get 已完成分片数
+注意：此字段可能返回 null，表示取不到有效值。 
      * @return CompleteNum 已完成分片数
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCompleteNum() {
         return this.CompleteNum;
@@ -63,7 +71,9 @@ public class UploadInfo extends AbstractModel {
 
     /**
      * Set 已完成分片数
+注意：此字段可能返回 null，表示取不到有效值。
      * @param CompleteNum 已完成分片数
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCompleteNum(Long CompleteNum) {
         this.CompleteNum = CompleteNum;

@@ -80,7 +80,8 @@ public class RoomItem extends AbstractModel {
     private Long RealEndTime;
 
     /**
-    * 分辨率。1 标清
+    * 头像区域，摄像头视频画面的分辨率。可以有如下取值：
+1 标清
 2 高清
 3 全高清
 注意：此字段可能返回 null，表示取不到有效值。
@@ -358,11 +359,13 @@ public class RoomItem extends AbstractModel {
     }
 
     /**
-     * Get 分辨率。1 标清
+     * Get 头像区域，摄像头视频画面的分辨率。可以有如下取值：
+1 标清
 2 高清
 3 全高清
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Resolution 分辨率。1 标清
+     * @return Resolution 头像区域，摄像头视频画面的分辨率。可以有如下取值：
+1 标清
 2 高清
 3 全高清
 注意：此字段可能返回 null，表示取不到有效值。
@@ -372,11 +375,13 @@ public class RoomItem extends AbstractModel {
     }
 
     /**
-     * Set 分辨率。1 标清
+     * Set 头像区域，摄像头视频画面的分辨率。可以有如下取值：
+1 标清
 2 高清
 3 全高清
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Resolution 分辨率。1 标清
+     * @param Resolution 头像区域，摄像头视频画面的分辨率。可以有如下取值：
+1 标清
 2 高清
 3 全高清
 注意：此字段可能返回 null，表示取不到有效值。

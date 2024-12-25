@@ -25,7 +25,6 @@ public class ClusterInfo extends AbstractModel {
 
     /**
     * 节点id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NodeId")
     @Expose
@@ -33,7 +32,6 @@ public class ClusterInfo extends AbstractModel {
 
     /**
     * 节点类型：主节点，从节点
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Role")
     @Expose
@@ -41,17 +39,14 @@ public class ClusterInfo extends AbstractModel {
 
     /**
     * 地域
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-     * Get 节点id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 节点id 
      * @return NodeId 节点id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNodeId() {
         return this.NodeId;
@@ -59,19 +54,15 @@ public class ClusterInfo extends AbstractModel {
 
     /**
      * Set 节点id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NodeId 节点id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNodeId(String NodeId) {
         this.NodeId = NodeId;
     }
 
     /**
-     * Get 节点类型：主节点，从节点
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 节点类型：主节点，从节点 
      * @return Role 节点类型：主节点，从节点
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRole() {
         return this.Role;
@@ -79,19 +70,15 @@ public class ClusterInfo extends AbstractModel {
 
     /**
      * Set 节点类型：主节点，从节点
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Role 节点类型：主节点，从节点
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRole(String Role) {
         this.Role = Role;
     }
 
     /**
-     * Get 地域
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 地域 
      * @return Zone 地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getZone() {
         return this.Zone;
@@ -99,9 +86,7 @@ public class ClusterInfo extends AbstractModel {
 
     /**
      * Set 地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Zone 地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZone(String Zone) {
         this.Zone = Zone;

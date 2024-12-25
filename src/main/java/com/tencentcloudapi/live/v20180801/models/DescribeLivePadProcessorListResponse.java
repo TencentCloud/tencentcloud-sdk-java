@@ -25,7 +25,6 @@ public class DescribeLivePadProcessorListResponse extends AbstractModel {
 
     /**
     * 当前正在拉取垫片的流名称列表。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StreamNameList")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeLivePadProcessorListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 当前正在拉取垫片的流名称列表。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当前正在拉取垫片的流名称列表。 
      * @return StreamNameList 当前正在拉取垫片的流名称列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getStreamNameList() {
         return this.StreamNameList;
@@ -50,9 +47,7 @@ public class DescribeLivePadProcessorListResponse extends AbstractModel {
 
     /**
      * Set 当前正在拉取垫片的流名称列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StreamNameList 当前正在拉取垫片的流名称列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStreamNameList(String [] StreamNameList) {
         this.StreamNameList = StreamNameList;

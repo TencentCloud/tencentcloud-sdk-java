@@ -39,7 +39,7 @@ public class CreateBackupRequest extends AbstractModel {
 
     /**
     * 需要备份的库表信息，如果不设置该参数，则默认整实例备份。在 BackupMethod=logical 逻辑备份中才可设置该参数。指定的库表必须存在，否则可能导致备份失败。
-例：如果需要备份 db1 库的 tb1、tb2 表 和 db2 库。则该参数设置为 [{"Db": "db1", "Table": "tb1"}, {"Db": "db1", "Table": "tb2"}, {"Db": "db2"} ]。
+例：如果需要备份 db1 库的 tb1、tb2 表 和 db2 库。则该参数设置为 [{"Db": "db1", "Table": "tb1"}, {"Db": "db1", "Table": "tb2"}, {"Db": "db2"}]。
     */
     @SerializedName("BackupDBTableList")
     @Expose
@@ -51,6 +51,13 @@ public class CreateBackupRequest extends AbstractModel {
     @SerializedName("ManualBackupName")
     @Expose
     private String ManualBackupName;
+
+    /**
+    * 是否需要加密物理备份， 当BackupMethod为physical 时，该值才有意义。 不指定则使用实例备份默认加密策略。
+    */
+    @SerializedName("EncryptionFlag")
+    @Expose
+    private String EncryptionFlag;
 
     /**
      * Get 实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。 
@@ -86,9 +93,9 @@ public class CreateBackupRequest extends AbstractModel {
 
     /**
      * Get 需要备份的库表信息，如果不设置该参数，则默认整实例备份。在 BackupMethod=logical 逻辑备份中才可设置该参数。指定的库表必须存在，否则可能导致备份失败。
-例：如果需要备份 db1 库的 tb1、tb2 表 和 db2 库。则该参数设置为 [{"Db": "db1", "Table": "tb1"}, {"Db": "db1", "Table": "tb2"}, {"Db": "db2"} ]。 
+例：如果需要备份 db1 库的 tb1、tb2 表 和 db2 库。则该参数设置为 [{"Db": "db1", "Table": "tb1"}, {"Db": "db1", "Table": "tb2"}, {"Db": "db2"}]。 
      * @return BackupDBTableList 需要备份的库表信息，如果不设置该参数，则默认整实例备份。在 BackupMethod=logical 逻辑备份中才可设置该参数。指定的库表必须存在，否则可能导致备份失败。
-例：如果需要备份 db1 库的 tb1、tb2 表 和 db2 库。则该参数设置为 [{"Db": "db1", "Table": "tb1"}, {"Db": "db1", "Table": "tb2"}, {"Db": "db2"} ]。
+例：如果需要备份 db1 库的 tb1、tb2 表 和 db2 库。则该参数设置为 [{"Db": "db1", "Table": "tb1"}, {"Db": "db1", "Table": "tb2"}, {"Db": "db2"}]。
      */
     public BackupItem [] getBackupDBTableList() {
         return this.BackupDBTableList;
@@ -96,9 +103,9 @@ public class CreateBackupRequest extends AbstractModel {
 
     /**
      * Set 需要备份的库表信息，如果不设置该参数，则默认整实例备份。在 BackupMethod=logical 逻辑备份中才可设置该参数。指定的库表必须存在，否则可能导致备份失败。
-例：如果需要备份 db1 库的 tb1、tb2 表 和 db2 库。则该参数设置为 [{"Db": "db1", "Table": "tb1"}, {"Db": "db1", "Table": "tb2"}, {"Db": "db2"} ]。
+例：如果需要备份 db1 库的 tb1、tb2 表 和 db2 库。则该参数设置为 [{"Db": "db1", "Table": "tb1"}, {"Db": "db1", "Table": "tb2"}, {"Db": "db2"}]。
      * @param BackupDBTableList 需要备份的库表信息，如果不设置该参数，则默认整实例备份。在 BackupMethod=logical 逻辑备份中才可设置该参数。指定的库表必须存在，否则可能导致备份失败。
-例：如果需要备份 db1 库的 tb1、tb2 表 和 db2 库。则该参数设置为 [{"Db": "db1", "Table": "tb1"}, {"Db": "db1", "Table": "tb2"}, {"Db": "db2"} ]。
+例：如果需要备份 db1 库的 tb1、tb2 表 和 db2 库。则该参数设置为 [{"Db": "db1", "Table": "tb1"}, {"Db": "db1", "Table": "tb2"}, {"Db": "db2"}]。
      */
     public void setBackupDBTableList(BackupItem [] BackupDBTableList) {
         this.BackupDBTableList = BackupDBTableList;
@@ -118,6 +125,22 @@ public class CreateBackupRequest extends AbstractModel {
      */
     public void setManualBackupName(String ManualBackupName) {
         this.ManualBackupName = ManualBackupName;
+    }
+
+    /**
+     * Get 是否需要加密物理备份， 当BackupMethod为physical 时，该值才有意义。 不指定则使用实例备份默认加密策略。 
+     * @return EncryptionFlag 是否需要加密物理备份， 当BackupMethod为physical 时，该值才有意义。 不指定则使用实例备份默认加密策略。
+     */
+    public String getEncryptionFlag() {
+        return this.EncryptionFlag;
+    }
+
+    /**
+     * Set 是否需要加密物理备份， 当BackupMethod为physical 时，该值才有意义。 不指定则使用实例备份默认加密策略。
+     * @param EncryptionFlag 是否需要加密物理备份， 当BackupMethod为physical 时，该值才有意义。 不指定则使用实例备份默认加密策略。
+     */
+    public void setEncryptionFlag(String EncryptionFlag) {
+        this.EncryptionFlag = EncryptionFlag;
     }
 
     public CreateBackupRequest() {
@@ -143,6 +166,9 @@ public class CreateBackupRequest extends AbstractModel {
         if (source.ManualBackupName != null) {
             this.ManualBackupName = new String(source.ManualBackupName);
         }
+        if (source.EncryptionFlag != null) {
+            this.EncryptionFlag = new String(source.EncryptionFlag);
+        }
     }
 
 
@@ -154,6 +180,7 @@ public class CreateBackupRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "BackupMethod", this.BackupMethod);
         this.setParamArrayObj(map, prefix + "BackupDBTableList.", this.BackupDBTableList);
         this.setParamSimple(map, prefix + "ManualBackupName", this.ManualBackupName);
+        this.setParamSimple(map, prefix + "EncryptionFlag", this.EncryptionFlag);
 
     }
 }

@@ -166,7 +166,6 @@ public class BackupInfo extends AbstractModel {
 
     /**
     * 备份GTID点位
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExecutedGTIDSet")
     @Expose
@@ -497,10 +496,8 @@ public class BackupInfo extends AbstractModel {
     }
 
     /**
-     * Get 备份GTID点位
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 备份GTID点位 
      * @return ExecutedGTIDSet 备份GTID点位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExecutedGTIDSet() {
         return this.ExecutedGTIDSet;
@@ -508,9 +505,7 @@ public class BackupInfo extends AbstractModel {
 
     /**
      * Set 备份GTID点位
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExecutedGTIDSet 备份GTID点位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExecutedGTIDSet(String ExecutedGTIDSet) {
         this.ExecutedGTIDSet = ExecutedGTIDSet;
