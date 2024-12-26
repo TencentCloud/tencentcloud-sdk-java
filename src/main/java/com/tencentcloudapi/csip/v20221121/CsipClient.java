@@ -149,6 +149,17 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *集群列表
+     * @param req DescribeClusterAssetsRequest
+     * @return DescribeClusterAssetsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClusterAssetsResponse DescribeClusterAssets(DescribeClusterAssetsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeClusterAssets", DescribeClusterAssetsResponse.class);
+    }
+
+    /**
      *集群pod列表
      * @param req DescribeClusterPodAssetsRequest
      * @return DescribeClusterPodAssetsResponse
@@ -223,6 +234,17 @@ public class CsipClient extends AbstractClient{
     public DescribeNICAssetsResponse DescribeNICAssets(DescribeNICAssetsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeNICAssets", DescribeNICAssetsResponse.class);
+    }
+
+    /**
+     *查询集团账号详情
+     * @param req DescribeOrganizationInfoRequest
+     * @return DescribeOrganizationInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeOrganizationInfoResponse DescribeOrganizationInfo(DescribeOrganizationInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeOrganizationInfo", DescribeOrganizationInfoResponse.class);
     }
 
     /**
@@ -369,6 +391,17 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *查询集团的子账号列表
+     * @param req DescribeSubUserInfoRequest
+     * @return DescribeSubUserInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSubUserInfoResponse DescribeSubUserInfo(DescribeSubUserInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSubUserInfo", DescribeSubUserInfoResponse.class);
+    }
+
+    /**
      *获取子网列表
      * @param req DescribeSubnetAssetsRequest
      * @return DescribeSubnetAssetsResponse
@@ -410,6 +443,17 @@ public class CsipClient extends AbstractClient{
     public DescribeTopAttackInfoResponse DescribeTopAttackInfo(DescribeTopAttackInfoRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeTopAttackInfo", DescribeTopAttackInfoResponse.class);
+    }
+
+    /**
+     *查询用户行为分析策略列表
+     * @param req DescribeUebaRuleRequest
+     * @return DescribeUebaRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUebaRuleResponse DescribeUebaRule(DescribeUebaRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeUebaRule", DescribeUebaRuleResponse.class);
     }
 
     /**
@@ -487,6 +531,17 @@ public class CsipClient extends AbstractClient{
     public ModifyRiskCenterScanTaskResponse ModifyRiskCenterScanTask(ModifyRiskCenterScanTaskRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyRiskCenterScanTask", ModifyRiskCenterScanTaskResponse.class);
+    }
+
+    /**
+     *更新自定义策略的开关
+     * @param req ModifyUebaRuleSwitchRequest
+     * @return ModifyUebaRuleSwitchResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyUebaRuleSwitchResponse ModifyUebaRuleSwitch(ModifyUebaRuleSwitchRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyUebaRuleSwitch", ModifyUebaRuleSwitchResponse.class);
     }
 
     /**
