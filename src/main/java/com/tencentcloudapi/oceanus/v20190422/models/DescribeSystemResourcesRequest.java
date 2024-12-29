@@ -66,6 +66,13 @@ public class DescribeSystemResourcesRequest extends AbstractModel {
     private String FlinkVersion;
 
     /**
+    * 空间
+    */
+    @SerializedName("WorkSpaceId")
+    @Expose
+    private String WorkSpaceId;
+
+    /**
      * Get 需要查询的资源ID数组 
      * @return ResourceIds 需要查询的资源ID数组
      */
@@ -161,6 +168,22 @@ public class DescribeSystemResourcesRequest extends AbstractModel {
         this.FlinkVersion = FlinkVersion;
     }
 
+    /**
+     * Get 空间 
+     * @return WorkSpaceId 空间
+     */
+    public String getWorkSpaceId() {
+        return this.WorkSpaceId;
+    }
+
+    /**
+     * Set 空间
+     * @param WorkSpaceId 空间
+     */
+    public void setWorkSpaceId(String WorkSpaceId) {
+        this.WorkSpaceId = WorkSpaceId;
+    }
+
     public DescribeSystemResourcesRequest() {
     }
 
@@ -193,6 +216,9 @@ public class DescribeSystemResourcesRequest extends AbstractModel {
         if (source.FlinkVersion != null) {
             this.FlinkVersion = new String(source.FlinkVersion);
         }
+        if (source.WorkSpaceId != null) {
+            this.WorkSpaceId = new String(source.WorkSpaceId);
+        }
     }
 
 
@@ -206,6 +232,7 @@ public class DescribeSystemResourcesRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "FlinkVersion", this.FlinkVersion);
+        this.setParamSimple(map, prefix + "WorkSpaceId", this.WorkSpaceId);
 
     }
 }

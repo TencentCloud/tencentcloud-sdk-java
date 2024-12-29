@@ -227,6 +227,34 @@ public class CreateJobConfigRequest extends AbstractModel {
     private String FlinkVersion;
 
     /**
+    * JobManager cpu
+    */
+    @SerializedName("JobManagerCpu")
+    @Expose
+    private Float JobManagerCpu;
+
+    /**
+    * JobManager 内存
+    */
+    @SerializedName("JobManagerMem")
+    @Expose
+    private Float JobManagerMem;
+
+    /**
+    * TaskManager cpu
+    */
+    @SerializedName("TaskManagerCpu")
+    @Expose
+    private Float TaskManagerCpu;
+
+    /**
+    * TaskManager 内存
+    */
+    @SerializedName("TaskManagerMem")
+    @Expose
+    private Float TaskManagerMem;
+
+    /**
      * Get 作业Id 
      * @return JobId 作业Id
      */
@@ -690,6 +718,70 @@ public class CreateJobConfigRequest extends AbstractModel {
         this.FlinkVersion = FlinkVersion;
     }
 
+    /**
+     * Get JobManager cpu 
+     * @return JobManagerCpu JobManager cpu
+     */
+    public Float getJobManagerCpu() {
+        return this.JobManagerCpu;
+    }
+
+    /**
+     * Set JobManager cpu
+     * @param JobManagerCpu JobManager cpu
+     */
+    public void setJobManagerCpu(Float JobManagerCpu) {
+        this.JobManagerCpu = JobManagerCpu;
+    }
+
+    /**
+     * Get JobManager 内存 
+     * @return JobManagerMem JobManager 内存
+     */
+    public Float getJobManagerMem() {
+        return this.JobManagerMem;
+    }
+
+    /**
+     * Set JobManager 内存
+     * @param JobManagerMem JobManager 内存
+     */
+    public void setJobManagerMem(Float JobManagerMem) {
+        this.JobManagerMem = JobManagerMem;
+    }
+
+    /**
+     * Get TaskManager cpu 
+     * @return TaskManagerCpu TaskManager cpu
+     */
+    public Float getTaskManagerCpu() {
+        return this.TaskManagerCpu;
+    }
+
+    /**
+     * Set TaskManager cpu
+     * @param TaskManagerCpu TaskManager cpu
+     */
+    public void setTaskManagerCpu(Float TaskManagerCpu) {
+        this.TaskManagerCpu = TaskManagerCpu;
+    }
+
+    /**
+     * Get TaskManager 内存 
+     * @return TaskManagerMem TaskManager 内存
+     */
+    public Float getTaskManagerMem() {
+        return this.TaskManagerMem;
+    }
+
+    /**
+     * Set TaskManager 内存
+     * @param TaskManagerMem TaskManager 内存
+     */
+    public void setTaskManagerMem(Float TaskManagerMem) {
+        this.TaskManagerMem = TaskManagerMem;
+    }
+
     public CreateJobConfigRequest() {
     }
 
@@ -794,6 +886,18 @@ public class CreateJobConfigRequest extends AbstractModel {
         if (source.FlinkVersion != null) {
             this.FlinkVersion = new String(source.FlinkVersion);
         }
+        if (source.JobManagerCpu != null) {
+            this.JobManagerCpu = new Float(source.JobManagerCpu);
+        }
+        if (source.JobManagerMem != null) {
+            this.JobManagerMem = new Float(source.JobManagerMem);
+        }
+        if (source.TaskManagerCpu != null) {
+            this.TaskManagerCpu = new Float(source.TaskManagerCpu);
+        }
+        if (source.TaskManagerMem != null) {
+            this.TaskManagerMem = new Float(source.TaskManagerMem);
+        }
     }
 
 
@@ -830,6 +934,10 @@ public class CreateJobConfigRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "EsServerlessIndex", this.EsServerlessIndex);
         this.setParamSimple(map, prefix + "EsServerlessSpace", this.EsServerlessSpace);
         this.setParamSimple(map, prefix + "FlinkVersion", this.FlinkVersion);
+        this.setParamSimple(map, prefix + "JobManagerCpu", this.JobManagerCpu);
+        this.setParamSimple(map, prefix + "JobManagerMem", this.JobManagerMem);
+        this.setParamSimple(map, prefix + "TaskManagerCpu", this.TaskManagerCpu);
+        this.setParamSimple(map, prefix + "TaskManagerMem", this.TaskManagerMem);
 
     }
 }

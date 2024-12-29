@@ -32,7 +32,6 @@ public class CreateBusinessDBInstancesResponse extends AbstractModel {
 
     /**
     * 流程ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FlowId")
     @Expose
@@ -40,7 +39,6 @@ public class CreateBusinessDBInstancesResponse extends AbstractModel {
 
     /**
     * 实例ID集合
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceIdSet")
     @Expose
@@ -70,10 +68,8 @@ public class CreateBusinessDBInstancesResponse extends AbstractModel {
     }
 
     /**
-     * Get 流程ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 流程ID 
      * @return FlowId 流程ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFlowId() {
         return this.FlowId;
@@ -81,19 +77,15 @@ public class CreateBusinessDBInstancesResponse extends AbstractModel {
 
     /**
      * Set 流程ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FlowId 流程ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFlowId(Long FlowId) {
         this.FlowId = FlowId;
     }
 
     /**
-     * Get 实例ID集合
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例ID集合 
      * @return InstanceIdSet 实例ID集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getInstanceIdSet() {
         return this.InstanceIdSet;
@@ -101,9 +93,7 @@ public class CreateBusinessDBInstancesResponse extends AbstractModel {
 
     /**
      * Set 实例ID集合
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceIdSet 实例ID集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceIdSet(String [] InstanceIdSet) {
         this.InstanceIdSet = InstanceIdSet;

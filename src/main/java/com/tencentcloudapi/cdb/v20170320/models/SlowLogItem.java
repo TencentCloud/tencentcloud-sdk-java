@@ -25,7 +25,6 @@ public class SlowLogItem extends AbstractModel {
 
     /**
     * Sql的执行时间。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Timestamp")
     @Expose
@@ -33,7 +32,6 @@ public class SlowLogItem extends AbstractModel {
 
     /**
     * Sql的执行时长（秒）。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("QueryTime")
     @Expose
@@ -41,7 +39,6 @@ public class SlowLogItem extends AbstractModel {
 
     /**
     * Sql语句。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SqlText")
     @Expose
@@ -49,7 +46,6 @@ public class SlowLogItem extends AbstractModel {
 
     /**
     * 客户端地址。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserHost")
     @Expose
@@ -57,7 +53,6 @@ public class SlowLogItem extends AbstractModel {
 
     /**
     * 用户名。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UserName")
     @Expose
@@ -65,7 +60,6 @@ public class SlowLogItem extends AbstractModel {
 
     /**
     * 数据库名。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Database")
     @Expose
@@ -73,7 +67,6 @@ public class SlowLogItem extends AbstractModel {
 
     /**
     * 锁时长（秒）。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LockTime")
     @Expose
@@ -81,7 +74,6 @@ public class SlowLogItem extends AbstractModel {
 
     /**
     * 扫描行数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RowsExamined")
     @Expose
@@ -89,7 +81,6 @@ public class SlowLogItem extends AbstractModel {
 
     /**
     * 结果集行数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RowsSent")
     @Expose
@@ -97,7 +88,6 @@ public class SlowLogItem extends AbstractModel {
 
     /**
     * Sql模板。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SqlTemplate")
     @Expose
@@ -105,17 +95,14 @@ public class SlowLogItem extends AbstractModel {
 
     /**
     * Sql语句的md5。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Md5")
     @Expose
     private String Md5;
 
     /**
-     * Get Sql的执行时间。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Sql的执行时间。 
      * @return Timestamp Sql的执行时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTimestamp() {
         return this.Timestamp;
@@ -123,19 +110,15 @@ public class SlowLogItem extends AbstractModel {
 
     /**
      * Set Sql的执行时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Timestamp Sql的执行时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimestamp(Long Timestamp) {
         this.Timestamp = Timestamp;
     }
 
     /**
-     * Get Sql的执行时长（秒）。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Sql的执行时长（秒）。 
      * @return QueryTime Sql的执行时长（秒）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getQueryTime() {
         return this.QueryTime;
@@ -143,19 +126,15 @@ public class SlowLogItem extends AbstractModel {
 
     /**
      * Set Sql的执行时长（秒）。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param QueryTime Sql的执行时长（秒）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQueryTime(Float QueryTime) {
         this.QueryTime = QueryTime;
     }
 
     /**
-     * Get Sql语句。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Sql语句。 
      * @return SqlText Sql语句。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSqlText() {
         return this.SqlText;
@@ -163,19 +142,15 @@ public class SlowLogItem extends AbstractModel {
 
     /**
      * Set Sql语句。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SqlText Sql语句。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSqlText(String SqlText) {
         this.SqlText = SqlText;
     }
 
     /**
-     * Get 客户端地址。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 客户端地址。 
      * @return UserHost 客户端地址。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUserHost() {
         return this.UserHost;
@@ -183,19 +158,15 @@ public class SlowLogItem extends AbstractModel {
 
     /**
      * Set 客户端地址。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UserHost 客户端地址。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserHost(String UserHost) {
         this.UserHost = UserHost;
     }
 
     /**
-     * Get 用户名。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户名。 
      * @return UserName 用户名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUserName() {
         return this.UserName;
@@ -203,19 +174,15 @@ public class SlowLogItem extends AbstractModel {
 
     /**
      * Set 用户名。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UserName 用户名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;
     }
 
     /**
-     * Get 数据库名。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据库名。 
      * @return Database 数据库名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDatabase() {
         return this.Database;
@@ -223,19 +190,15 @@ public class SlowLogItem extends AbstractModel {
 
     /**
      * Set 数据库名。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Database 数据库名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDatabase(String Database) {
         this.Database = Database;
     }
 
     /**
-     * Get 锁时长（秒）。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 锁时长（秒）。 
      * @return LockTime 锁时长（秒）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getLockTime() {
         return this.LockTime;
@@ -243,19 +206,15 @@ public class SlowLogItem extends AbstractModel {
 
     /**
      * Set 锁时长（秒）。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LockTime 锁时长（秒）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLockTime(Float LockTime) {
         this.LockTime = LockTime;
     }
 
     /**
-     * Get 扫描行数。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 扫描行数。 
      * @return RowsExamined 扫描行数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRowsExamined() {
         return this.RowsExamined;
@@ -263,19 +222,15 @@ public class SlowLogItem extends AbstractModel {
 
     /**
      * Set 扫描行数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RowsExamined 扫描行数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRowsExamined(Long RowsExamined) {
         this.RowsExamined = RowsExamined;
     }
 
     /**
-     * Get 结果集行数。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 结果集行数。 
      * @return RowsSent 结果集行数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRowsSent() {
         return this.RowsSent;
@@ -283,19 +238,15 @@ public class SlowLogItem extends AbstractModel {
 
     /**
      * Set 结果集行数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RowsSent 结果集行数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRowsSent(Long RowsSent) {
         this.RowsSent = RowsSent;
     }
 
     /**
-     * Get Sql模板。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Sql模板。 
      * @return SqlTemplate Sql模板。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSqlTemplate() {
         return this.SqlTemplate;
@@ -303,19 +254,15 @@ public class SlowLogItem extends AbstractModel {
 
     /**
      * Set Sql模板。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SqlTemplate Sql模板。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSqlTemplate(String SqlTemplate) {
         this.SqlTemplate = SqlTemplate;
     }
 
     /**
-     * Get Sql语句的md5。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Sql语句的md5。 
      * @return Md5 Sql语句的md5。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMd5() {
         return this.Md5;
@@ -323,9 +270,7 @@ public class SlowLogItem extends AbstractModel {
 
     /**
      * Set Sql语句的md5。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Md5 Sql语句的md5。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMd5(String Md5) {
         this.Md5 = Md5;

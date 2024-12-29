@@ -101,6 +101,20 @@ public class VoucherInfos extends AbstractModel {
     private ExcludedProducts [] ExcludedProducts;
 
     /**
+    * 使用说明/批次备注
+    */
+    @SerializedName("PolicyRemark")
+    @Expose
+    private String PolicyRemark;
+
+    /**
+    * 发券时间
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private String CreateTime;
+
+    /**
      * Get 代金券拥有者 
      * @return OwnerUin 代金券拥有者
      */
@@ -276,6 +290,38 @@ public class VoucherInfos extends AbstractModel {
         this.ExcludedProducts = ExcludedProducts;
     }
 
+    /**
+     * Get 使用说明/批次备注 
+     * @return PolicyRemark 使用说明/批次备注
+     */
+    public String getPolicyRemark() {
+        return this.PolicyRemark;
+    }
+
+    /**
+     * Set 使用说明/批次备注
+     * @param PolicyRemark 使用说明/批次备注
+     */
+    public void setPolicyRemark(String PolicyRemark) {
+        this.PolicyRemark = PolicyRemark;
+    }
+
+    /**
+     * Get 发券时间 
+     * @return CreateTime 发券时间
+     */
+    public String getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set 发券时间
+     * @param CreateTime 发券时间
+     */
+    public void setCreateTime(String CreateTime) {
+        this.CreateTime = CreateTime;
+    }
+
     public VoucherInfos() {
     }
 
@@ -320,6 +366,12 @@ public class VoucherInfos extends AbstractModel {
                 this.ExcludedProducts[i] = new ExcludedProducts(source.ExcludedProducts[i]);
             }
         }
+        if (source.PolicyRemark != null) {
+            this.PolicyRemark = new String(source.PolicyRemark);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
     }
 
 
@@ -338,6 +390,8 @@ public class VoucherInfos extends AbstractModel {
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamObj(map, prefix + "ApplicableProducts.", this.ApplicableProducts);
         this.setParamArrayObj(map, prefix + "ExcludedProducts.", this.ExcludedProducts);
+        this.setParamSimple(map, prefix + "PolicyRemark", this.PolicyRemark);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
 
     }
 }

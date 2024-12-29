@@ -96,6 +96,20 @@ public class SqlGatewayItem extends AbstractModel {
     private Property [] Properties;
 
     /**
+    * Cpu
+    */
+    @SerializedName("Cpu")
+    @Expose
+    private Float Cpu;
+
+    /**
+    * Mem
+    */
+    @SerializedName("Mem")
+    @Expose
+    private Float Mem;
+
+    /**
      * Get 唯一标识
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return SerialId 唯一标识
@@ -275,6 +289,38 @@ public class SqlGatewayItem extends AbstractModel {
         this.Properties = Properties;
     }
 
+    /**
+     * Get Cpu 
+     * @return Cpu Cpu
+     */
+    public Float getCpu() {
+        return this.Cpu;
+    }
+
+    /**
+     * Set Cpu
+     * @param Cpu Cpu
+     */
+    public void setCpu(Float Cpu) {
+        this.Cpu = Cpu;
+    }
+
+    /**
+     * Get Mem 
+     * @return Mem Mem
+     */
+    public Float getMem() {
+        return this.Mem;
+    }
+
+    /**
+     * Set Mem
+     * @param Mem Mem
+     */
+    public void setMem(Float Mem) {
+        this.Mem = Mem;
+    }
+
     public SqlGatewayItem() {
     }
 
@@ -316,6 +362,12 @@ public class SqlGatewayItem extends AbstractModel {
                 this.Properties[i] = new Property(source.Properties[i]);
             }
         }
+        if (source.Cpu != null) {
+            this.Cpu = new Float(source.Cpu);
+        }
+        if (source.Mem != null) {
+            this.Mem = new Float(source.Mem);
+        }
     }
 
 
@@ -332,6 +384,8 @@ public class SqlGatewayItem extends AbstractModel {
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamArrayObj(map, prefix + "Properties.", this.Properties);
+        this.setParamSimple(map, prefix + "Cpu", this.Cpu);
+        this.setParamSimple(map, prefix + "Mem", this.Mem);
 
     }
 }

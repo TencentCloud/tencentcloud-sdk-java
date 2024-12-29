@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class CreateApmInstanceRequest extends AbstractModel {
 
     /**
-    * 实例名
+    * 业务系统名
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 实例描述信息
+    * 业务系统描述信息
     */
     @SerializedName("Description")
     @Expose
@@ -52,14 +52,14 @@ public class CreateApmInstanceRequest extends AbstractModel {
     private ApmTag [] Tags;
 
     /**
-    * 实例上报额度值，默认赋值为0表示不限制上报额度
+    * 业务系统上报额度值，默认赋值为0表示不限制上报额度
     */
     @SerializedName("SpanDailyCounters")
     @Expose
     private Long SpanDailyCounters;
 
     /**
-    * 实例的计费模式
+    * 业务系统的计费模式
     */
     @SerializedName("PayMode")
     @Expose
@@ -73,32 +73,32 @@ public class CreateApmInstanceRequest extends AbstractModel {
     private Long Free;
 
     /**
-     * Get 实例名 
-     * @return Name 实例名
+     * Get 业务系统名 
+     * @return Name 业务系统名
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 实例名
-     * @param Name 实例名
+     * Set 业务系统名
+     * @param Name 业务系统名
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 实例描述信息 
-     * @return Description 实例描述信息
+     * Get 业务系统描述信息 
+     * @return Description 业务系统描述信息
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 实例描述信息
-     * @param Description 实例描述信息
+     * Set 业务系统描述信息
+     * @param Description 业务系统描述信息
      */
     public void setDescription(String Description) {
         this.Description = Description;
@@ -137,32 +137,32 @@ public class CreateApmInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get 实例上报额度值，默认赋值为0表示不限制上报额度 
-     * @return SpanDailyCounters 实例上报额度值，默认赋值为0表示不限制上报额度
+     * Get 业务系统上报额度值，默认赋值为0表示不限制上报额度 
+     * @return SpanDailyCounters 业务系统上报额度值，默认赋值为0表示不限制上报额度
      */
     public Long getSpanDailyCounters() {
         return this.SpanDailyCounters;
     }
 
     /**
-     * Set 实例上报额度值，默认赋值为0表示不限制上报额度
-     * @param SpanDailyCounters 实例上报额度值，默认赋值为0表示不限制上报额度
+     * Set 业务系统上报额度值，默认赋值为0表示不限制上报额度
+     * @param SpanDailyCounters 业务系统上报额度值，默认赋值为0表示不限制上报额度
      */
     public void setSpanDailyCounters(Long SpanDailyCounters) {
         this.SpanDailyCounters = SpanDailyCounters;
     }
 
     /**
-     * Get 实例的计费模式 
-     * @return PayMode 实例的计费模式
+     * Get 业务系统的计费模式 
+     * @return PayMode 业务系统的计费模式
      */
     public Long getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set 实例的计费模式
-     * @param PayMode 实例的计费模式
+     * Set 业务系统的计费模式
+     * @param PayMode 业务系统的计费模式
      */
     public void setPayMode(Long PayMode) {
         this.PayMode = PayMode;

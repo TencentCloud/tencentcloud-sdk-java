@@ -149,6 +149,17 @@ public class WafClient extends AbstractClient{
     }
 
     /**
+     *添加（编辑）地域封禁中的地域信息
+     * @param req CreateAreaBanRuleRequest
+     * @return CreateAreaBanRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAreaBanRuleResponse CreateAreaBanRule(CreateAreaBanRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateAreaBanRule", CreateAreaBanRuleResponse.class);
+    }
+
+    /**
      *计费资源购买、续费下单接口
      * @param req CreateDealsRequest
      * @return CreateDealsResponse
@@ -432,6 +443,17 @@ public class WafClient extends AbstractClient{
     public DescribeAreaBanAreasResponse DescribeAreaBanAreas(DescribeAreaBanAreasRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeAreaBanAreas", DescribeAreaBanAreasResponse.class);
+    }
+
+    /**
+     *获取地域封禁规则配置
+     * @param req DescribeAreaBanRuleRequest
+     * @return DescribeAreaBanRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAreaBanRuleResponse DescribeAreaBanRule(DescribeAreaBanRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAreaBanRule", DescribeAreaBanRuleResponse.class);
     }
 
     /**
@@ -1183,6 +1205,17 @@ public class WafClient extends AbstractClient{
     }
 
     /**
+     *添加（编辑）地域封禁中的地域信息
+     * @param req ModifyAreaBanRuleRequest
+     * @return ModifyAreaBanRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAreaBanRuleResponse ModifyAreaBanRule(ModifyAreaBanRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyAreaBanRule", ModifyAreaBanRuleResponse.class);
+    }
+
+    /**
      *修改防护域名的地域封禁状态
      * @param req ModifyAreaBanStatusRequest
      * @return ModifyAreaBanStatusResponse
@@ -1437,7 +1470,7 @@ public class WafClient extends AbstractClient{
     }
 
     /**
-     *获取基础安全防护（WAF开关）状态
+     *开启、关闭WAF开关
      * @param req ModifyProtectionStatusRequest
      * @return ModifyProtectionStatusResponse
      * @throws TencentCloudSDKException

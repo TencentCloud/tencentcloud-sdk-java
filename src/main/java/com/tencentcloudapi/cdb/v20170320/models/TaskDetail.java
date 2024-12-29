@@ -102,7 +102,6 @@ public class TaskDetail extends AbstractModel {
 
     /**
     * 任务关联的实例 ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceIds")
     @Expose
@@ -335,10 +334,8 @@ public class TaskDetail extends AbstractModel {
     }
 
     /**
-     * Get 任务关联的实例 ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 任务关联的实例 ID。 
      * @return InstanceIds 任务关联的实例 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
@@ -346,9 +343,7 @@ public class TaskDetail extends AbstractModel {
 
     /**
      * Set 任务关联的实例 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceIds 任务关联的实例 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;

@@ -25,7 +25,6 @@ public class CustomConfig extends AbstractModel {
 
     /**
     * 设备
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Device")
     @Expose
@@ -33,7 +32,6 @@ public class CustomConfig extends AbstractModel {
 
     /**
     * 类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -41,7 +39,6 @@ public class CustomConfig extends AbstractModel {
 
     /**
     * 设备类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeviceType")
     @Expose
@@ -49,7 +46,6 @@ public class CustomConfig extends AbstractModel {
 
     /**
     * 内存
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Memory")
     @Expose
@@ -57,17 +53,14 @@ public class CustomConfig extends AbstractModel {
 
     /**
     * 核数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Cpu")
     @Expose
     private Long Cpu;
 
     /**
-     * Get 设备
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备 
      * @return Device 设备
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDevice() {
         return this.Device;
@@ -75,19 +68,15 @@ public class CustomConfig extends AbstractModel {
 
     /**
      * Set 设备
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Device 设备
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDevice(String Device) {
         this.Device = Device;
     }
 
     /**
-     * Get 类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 类型 
      * @return Type 类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
         return this.Type;
@@ -95,19 +84,15 @@ public class CustomConfig extends AbstractModel {
 
     /**
      * Set 类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 设备类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 设备类型 
      * @return DeviceType 设备类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDeviceType() {
         return this.DeviceType;
@@ -115,19 +100,15 @@ public class CustomConfig extends AbstractModel {
 
     /**
      * Set 设备类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeviceType 设备类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeviceType(String DeviceType) {
         this.DeviceType = DeviceType;
     }
 
     /**
-     * Get 内存
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 内存 
      * @return Memory 内存
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMemory() {
         return this.Memory;
@@ -135,19 +116,15 @@ public class CustomConfig extends AbstractModel {
 
     /**
      * Set 内存
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Memory 内存
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * Get 核数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 核数 
      * @return Cpu 核数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCpu() {
         return this.Cpu;
@@ -155,9 +132,7 @@ public class CustomConfig extends AbstractModel {
 
     /**
      * Set 核数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Cpu 核数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;

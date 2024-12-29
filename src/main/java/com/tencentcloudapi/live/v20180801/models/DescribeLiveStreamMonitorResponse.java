@@ -25,7 +25,6 @@ public class DescribeLiveStreamMonitorResponse extends AbstractModel {
 
     /**
     * 直播监播任务相关信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LiveStreamMonitor")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeLiveStreamMonitorResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 直播监播任务相关信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 直播监播任务相关信息。 
      * @return LiveStreamMonitor 直播监播任务相关信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public LiveStreamMonitorInfo getLiveStreamMonitor() {
         return this.LiveStreamMonitor;
@@ -50,9 +47,7 @@ public class DescribeLiveStreamMonitorResponse extends AbstractModel {
 
     /**
      * Set 直播监播任务相关信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LiveStreamMonitor 直播监播任务相关信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLiveStreamMonitor(LiveStreamMonitorInfo LiveStreamMonitor) {
         this.LiveStreamMonitor = LiveStreamMonitor;

@@ -25,7 +25,6 @@ public class DBSwitchInfo extends AbstractModel {
 
     /**
     * 切换时间，格式为：2017-09-03 01:34:31
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SwitchTime")
     @Expose
@@ -33,17 +32,14 @@ public class DBSwitchInfo extends AbstractModel {
 
     /**
     * 切换类型，可能的返回值为：TRANSFER - 数据迁移；MASTER2SLAVE - 主备切换；RECOVERY - 主从恢复
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SwitchType")
     @Expose
     private String SwitchType;
 
     /**
-     * Get 切换时间，格式为：2017-09-03 01:34:31
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 切换时间，格式为：2017-09-03 01:34:31 
      * @return SwitchTime 切换时间，格式为：2017-09-03 01:34:31
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSwitchTime() {
         return this.SwitchTime;
@@ -51,19 +47,15 @@ public class DBSwitchInfo extends AbstractModel {
 
     /**
      * Set 切换时间，格式为：2017-09-03 01:34:31
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SwitchTime 切换时间，格式为：2017-09-03 01:34:31
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSwitchTime(String SwitchTime) {
         this.SwitchTime = SwitchTime;
     }
 
     /**
-     * Get 切换类型，可能的返回值为：TRANSFER - 数据迁移；MASTER2SLAVE - 主备切换；RECOVERY - 主从恢复
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 切换类型，可能的返回值为：TRANSFER - 数据迁移；MASTER2SLAVE - 主备切换；RECOVERY - 主从恢复 
      * @return SwitchType 切换类型，可能的返回值为：TRANSFER - 数据迁移；MASTER2SLAVE - 主备切换；RECOVERY - 主从恢复
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSwitchType() {
         return this.SwitchType;
@@ -71,9 +63,7 @@ public class DBSwitchInfo extends AbstractModel {
 
     /**
      * Set 切换类型，可能的返回值为：TRANSFER - 数据迁移；MASTER2SLAVE - 主备切换；RECOVERY - 主从恢复
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SwitchType 切换类型，可能的返回值为：TRANSFER - 数据迁移；MASTER2SLAVE - 主备切换；RECOVERY - 主从恢复
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSwitchType(String SwitchType) {
         this.SwitchType = SwitchType;

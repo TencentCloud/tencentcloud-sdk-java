@@ -25,7 +25,6 @@ public class DescribeCpuExpandStrategyResponse extends AbstractModel {
 
     /**
     * 策略类型。可选值 auto、manual。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeCpuExpandStrategyResponse extends AbstractModel {
 
     /**
     * 手动扩容的 CPU 。Type为 manual 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExpandCpu")
     @Expose
@@ -41,7 +39,6 @@ public class DescribeCpuExpandStrategyResponse extends AbstractModel {
 
     /**
     * 自动扩容策略。Type 为 auto 时有效
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AutoStrategy")
     @Expose
@@ -55,10 +52,8 @@ public class DescribeCpuExpandStrategyResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 策略类型。可选值 auto、manual。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 策略类型。可选值 auto、manual。 
      * @return Type 策略类型。可选值 auto、manual。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getType() {
         return this.Type;
@@ -66,19 +61,15 @@ public class DescribeCpuExpandStrategyResponse extends AbstractModel {
 
     /**
      * Set 策略类型。可选值 auto、manual。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 策略类型。可选值 auto、manual。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get 手动扩容的 CPU 。Type为 manual 时有效。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 手动扩容的 CPU 。Type为 manual 时有效。 
      * @return ExpandCpu 手动扩容的 CPU 。Type为 manual 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExpandCpu() {
         return this.ExpandCpu;
@@ -86,30 +77,28 @@ public class DescribeCpuExpandStrategyResponse extends AbstractModel {
 
     /**
      * Set 手动扩容的 CPU 。Type为 manual 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExpandCpu 手动扩容的 CPU 。Type为 manual 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExpandCpu(String ExpandCpu) {
         this.ExpandCpu = ExpandCpu;
     }
 
     /**
-     * Get 自动扩容策略。Type 为 auto 时有效
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 自动扩容策略。Type 为 auto 时有效 
      * @return AutoStrategy 自动扩容策略。Type 为 auto 时有效
-注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public String getAutoStrategy() {
         return this.AutoStrategy;
     }
 
     /**
      * Set 自动扩容策略。Type 为 auto 时有效
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AutoStrategy 自动扩容策略。Type 为 auto 时有效
-注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
+    @Deprecated
     public void setAutoStrategy(String AutoStrategy) {
         this.AutoStrategy = AutoStrategy;
     }

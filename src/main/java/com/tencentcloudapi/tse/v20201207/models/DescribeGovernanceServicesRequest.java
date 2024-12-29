@@ -94,6 +94,13 @@ public class DescribeGovernanceServicesRequest extends AbstractModel {
     private Boolean OnlyExistHealthyInstance;
 
     /**
+    * 是否开启同步到全局注册中心	
+    */
+    @SerializedName("SyncToGlobalRegistry")
+    @Expose
+    private String SyncToGlobalRegistry;
+
+    /**
      * Get 按照服务名过滤，精确匹配。 
      * @return Name 按照服务名过滤，精确匹配。
      */
@@ -253,6 +260,22 @@ public class DescribeGovernanceServicesRequest extends AbstractModel {
         this.OnlyExistHealthyInstance = OnlyExistHealthyInstance;
     }
 
+    /**
+     * Get 是否开启同步到全局注册中心	 
+     * @return SyncToGlobalRegistry 是否开启同步到全局注册中心	
+     */
+    public String getSyncToGlobalRegistry() {
+        return this.SyncToGlobalRegistry;
+    }
+
+    /**
+     * Set 是否开启同步到全局注册中心	
+     * @param SyncToGlobalRegistry 是否开启同步到全局注册中心	
+     */
+    public void setSyncToGlobalRegistry(String SyncToGlobalRegistry) {
+        this.SyncToGlobalRegistry = SyncToGlobalRegistry;
+    }
+
     public DescribeGovernanceServicesRequest() {
     }
 
@@ -294,6 +317,9 @@ public class DescribeGovernanceServicesRequest extends AbstractModel {
         if (source.OnlyExistHealthyInstance != null) {
             this.OnlyExistHealthyInstance = new Boolean(source.OnlyExistHealthyInstance);
         }
+        if (source.SyncToGlobalRegistry != null) {
+            this.SyncToGlobalRegistry = new String(source.SyncToGlobalRegistry);
+        }
     }
 
 
@@ -311,6 +337,7 @@ public class DescribeGovernanceServicesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Business", this.Business);
         this.setParamSimple(map, prefix + "Host", this.Host);
         this.setParamSimple(map, prefix + "OnlyExistHealthyInstance", this.OnlyExistHealthyInstance);
+        this.setParamSimple(map, prefix + "SyncToGlobalRegistry", this.SyncToGlobalRegistry);
 
     }
 }

@@ -25,7 +25,6 @@ public class ProxyNode extends AbstractModel {
 
     /**
     * 代理节点ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProxyId")
     @Expose
@@ -33,7 +32,6 @@ public class ProxyNode extends AbstractModel {
 
     /**
     * CPU核数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Cpu")
     @Expose
@@ -41,7 +39,6 @@ public class ProxyNode extends AbstractModel {
 
     /**
     * 内存大小
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Mem")
     @Expose
@@ -49,7 +46,6 @@ public class ProxyNode extends AbstractModel {
 
     /**
     * 节点状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -57,7 +53,6 @@ public class ProxyNode extends AbstractModel {
 
     /**
     * 代理节点可用区
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Zone")
     @Expose
@@ -65,7 +60,6 @@ public class ProxyNode extends AbstractModel {
 
     /**
     * 代理节点地域
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Region")
     @Expose
@@ -73,17 +67,14 @@ public class ProxyNode extends AbstractModel {
 
     /**
     * 连接数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Connection")
     @Expose
     private Long Connection;
 
     /**
-     * Get 代理节点ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 代理节点ID 
      * @return ProxyId 代理节点ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProxyId() {
         return this.ProxyId;
@@ -91,19 +82,15 @@ public class ProxyNode extends AbstractModel {
 
     /**
      * Set 代理节点ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProxyId 代理节点ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProxyId(String ProxyId) {
         this.ProxyId = ProxyId;
     }
 
     /**
-     * Get CPU核数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get CPU核数 
      * @return Cpu CPU核数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCpu() {
         return this.Cpu;
@@ -111,19 +98,15 @@ public class ProxyNode extends AbstractModel {
 
     /**
      * Set CPU核数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Cpu CPU核数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;
     }
 
     /**
-     * Get 内存大小
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 内存大小 
      * @return Mem 内存大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMem() {
         return this.Mem;
@@ -131,19 +114,15 @@ public class ProxyNode extends AbstractModel {
 
     /**
      * Set 内存大小
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Mem 内存大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMem(Long Mem) {
         this.Mem = Mem;
     }
 
     /**
-     * Get 节点状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 节点状态 
      * @return Status 节点状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
         return this.Status;
@@ -151,19 +130,15 @@ public class ProxyNode extends AbstractModel {
 
     /**
      * Set 节点状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 节点状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 代理节点可用区
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 代理节点可用区 
      * @return Zone 代理节点可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getZone() {
         return this.Zone;
@@ -171,19 +146,15 @@ public class ProxyNode extends AbstractModel {
 
     /**
      * Set 代理节点可用区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Zone 代理节点可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get 代理节点地域
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 代理节点地域 
      * @return Region 代理节点地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegion() {
         return this.Region;
@@ -191,19 +162,15 @@ public class ProxyNode extends AbstractModel {
 
     /**
      * Set 代理节点地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Region 代理节点地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get 连接数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 连接数 
      * @return Connection 连接数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getConnection() {
         return this.Connection;
@@ -211,9 +178,7 @@ public class ProxyNode extends AbstractModel {
 
     /**
      * Set 连接数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Connection 连接数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConnection(Long Connection) {
         this.Connection = Connection;

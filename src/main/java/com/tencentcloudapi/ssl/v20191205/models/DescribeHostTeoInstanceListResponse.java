@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeHostTeoInstanceListResponse extends AbstractModel {
 
     /**
-    * teo实例列表
+    * teo实例列表，如取不到值返回空数组
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceList")
@@ -46,9 +46,9 @@ public class DescribeHostTeoInstanceListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get teo实例列表
+     * Get teo实例列表，如取不到值返回空数组
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InstanceList teo实例列表
+     * @return InstanceList teo实例列表，如取不到值返回空数组
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public TeoInstanceDetail [] getInstanceList() {
@@ -56,9 +56,9 @@ public class DescribeHostTeoInstanceListResponse extends AbstractModel {
     }
 
     /**
-     * Set teo实例列表
+     * Set teo实例列表，如取不到值返回空数组
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param InstanceList teo实例列表
+     * @param InstanceList teo实例列表，如取不到值返回空数组
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceList(TeoInstanceDetail [] InstanceList) {

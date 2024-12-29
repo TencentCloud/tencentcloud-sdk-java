@@ -25,7 +25,6 @@ public class DescribeCasterMarkWordInfosResponse extends AbstractModel {
 
     /**
     * 导播台的文本信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MarkWordInfos")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeCasterMarkWordInfosResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 导播台的文本信息列表。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 导播台的文本信息列表。 
      * @return MarkWordInfos 导播台的文本信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CasterMarkWordInfo [] getMarkWordInfos() {
         return this.MarkWordInfos;
@@ -50,9 +47,7 @@ public class DescribeCasterMarkWordInfosResponse extends AbstractModel {
 
     /**
      * Set 导播台的文本信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MarkWordInfos 导播台的文本信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMarkWordInfos(CasterMarkWordInfo [] MarkWordInfos) {
         this.MarkWordInfos = MarkWordInfos;

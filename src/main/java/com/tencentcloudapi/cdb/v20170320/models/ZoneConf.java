@@ -25,7 +25,6 @@ public class ZoneConf extends AbstractModel {
 
     /**
     * 可用区部署方式，可能的值为：0-单可用区；1-多可用区
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeployMode")
     @Expose
@@ -33,7 +32,6 @@ public class ZoneConf extends AbstractModel {
 
     /**
     * 主实例所在的可用区
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MasterZone")
     @Expose
@@ -41,7 +39,6 @@ public class ZoneConf extends AbstractModel {
 
     /**
     * 实例为多可用区部署时，备库1所在的可用区
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SlaveZone")
     @Expose
@@ -49,17 +46,14 @@ public class ZoneConf extends AbstractModel {
 
     /**
     * 实例为多可用区部署时，备库2所在的可用区
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BackupZone")
     @Expose
     private String [] BackupZone;
 
     /**
-     * Get 可用区部署方式，可能的值为：0-单可用区；1-多可用区
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 可用区部署方式，可能的值为：0-单可用区；1-多可用区 
      * @return DeployMode 可用区部署方式，可能的值为：0-单可用区；1-多可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long [] getDeployMode() {
         return this.DeployMode;
@@ -67,19 +61,15 @@ public class ZoneConf extends AbstractModel {
 
     /**
      * Set 可用区部署方式，可能的值为：0-单可用区；1-多可用区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeployMode 可用区部署方式，可能的值为：0-单可用区；1-多可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeployMode(Long [] DeployMode) {
         this.DeployMode = DeployMode;
     }
 
     /**
-     * Get 主实例所在的可用区
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主实例所在的可用区 
      * @return MasterZone 主实例所在的可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getMasterZone() {
         return this.MasterZone;
@@ -87,19 +77,15 @@ public class ZoneConf extends AbstractModel {
 
     /**
      * Set 主实例所在的可用区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MasterZone 主实例所在的可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMasterZone(String [] MasterZone) {
         this.MasterZone = MasterZone;
     }
 
     /**
-     * Get 实例为多可用区部署时，备库1所在的可用区
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例为多可用区部署时，备库1所在的可用区 
      * @return SlaveZone 实例为多可用区部署时，备库1所在的可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getSlaveZone() {
         return this.SlaveZone;
@@ -107,19 +93,15 @@ public class ZoneConf extends AbstractModel {
 
     /**
      * Set 实例为多可用区部署时，备库1所在的可用区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SlaveZone 实例为多可用区部署时，备库1所在的可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSlaveZone(String [] SlaveZone) {
         this.SlaveZone = SlaveZone;
     }
 
     /**
-     * Get 实例为多可用区部署时，备库2所在的可用区
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例为多可用区部署时，备库2所在的可用区 
      * @return BackupZone 实例为多可用区部署时，备库2所在的可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getBackupZone() {
         return this.BackupZone;
@@ -127,9 +109,7 @@ public class ZoneConf extends AbstractModel {
 
     /**
      * Set 实例为多可用区部署时，备库2所在的可用区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BackupZone 实例为多可用区部署时，备库2所在的可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBackupZone(String [] BackupZone) {
         this.BackupZone = BackupZone;

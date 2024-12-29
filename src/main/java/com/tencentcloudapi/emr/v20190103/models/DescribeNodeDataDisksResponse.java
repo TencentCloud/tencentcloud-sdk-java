@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cvm.v20170312.models;
+package com.tencentcloudapi.emr.v20190103.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,14 +21,22 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class InquirePricePurchaseReservedInstancesOfferingResponse extends AbstractModel {
+public class DescribeNodeDataDisksResponse extends AbstractModel {
 
     /**
-    * 该参数表示对应配置预留实例的价格。
+    * 总数量
     */
-    @SerializedName("Price")
+    @SerializedName("TotalCount")
     @Expose
-    private ReservedInstancePrice Price;
+    private Long TotalCount;
+
+    /**
+    * 云盘列表
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("CBSList")
+    @Expose
+    private CBSInstance [] CBSList;
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,19 +46,39 @@ public class InquirePricePurchaseReservedInstancesOfferingResponse extends Abstr
     private String RequestId;
 
     /**
-     * Get 该参数表示对应配置预留实例的价格。 
-     * @return Price 该参数表示对应配置预留实例的价格。
+     * Get 总数量 
+     * @return TotalCount 总数量
      */
-    public ReservedInstancePrice getPrice() {
-        return this.Price;
+    public Long getTotalCount() {
+        return this.TotalCount;
     }
 
     /**
-     * Set 该参数表示对应配置预留实例的价格。
-     * @param Price 该参数表示对应配置预留实例的价格。
+     * Set 总数量
+     * @param TotalCount 总数量
      */
-    public void setPrice(ReservedInstancePrice Price) {
-        this.Price = Price;
+    public void setTotalCount(Long TotalCount) {
+        this.TotalCount = TotalCount;
+    }
+
+    /**
+     * Get 云盘列表
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CBSList 云盘列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public CBSInstance [] getCBSList() {
+        return this.CBSList;
+    }
+
+    /**
+     * Set 云盘列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CBSList 云盘列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCBSList(CBSInstance [] CBSList) {
+        this.CBSList = CBSList;
     }
 
     /**
@@ -69,16 +97,22 @@ public class InquirePricePurchaseReservedInstancesOfferingResponse extends Abstr
         this.RequestId = RequestId;
     }
 
-    public InquirePricePurchaseReservedInstancesOfferingResponse() {
+    public DescribeNodeDataDisksResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public InquirePricePurchaseReservedInstancesOfferingResponse(InquirePricePurchaseReservedInstancesOfferingResponse source) {
-        if (source.Price != null) {
-            this.Price = new ReservedInstancePrice(source.Price);
+    public DescribeNodeDataDisksResponse(DescribeNodeDataDisksResponse source) {
+        if (source.TotalCount != null) {
+            this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.CBSList != null) {
+            this.CBSList = new CBSInstance[source.CBSList.length];
+            for (int i = 0; i < source.CBSList.length; i++) {
+                this.CBSList[i] = new CBSInstance(source.CBSList[i]);
+            }
         }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
@@ -90,7 +124,8 @@ public class InquirePricePurchaseReservedInstancesOfferingResponse extends Abstr
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamObj(map, prefix + "Price.", this.Price);
+        this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamArrayObj(map, prefix + "CBSList.", this.CBSList);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

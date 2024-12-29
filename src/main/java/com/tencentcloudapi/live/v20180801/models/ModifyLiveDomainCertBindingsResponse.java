@@ -32,7 +32,6 @@ public class ModifyLiveDomainCertBindingsResponse extends AbstractModel {
 
     /**
     * 操作失败的域名及错误码，错误信息，包括MismatchedDomainNames中的域名。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Errors")
     @Expose
@@ -62,10 +61,8 @@ public class ModifyLiveDomainCertBindingsResponse extends AbstractModel {
     }
 
     /**
-     * Get 操作失败的域名及错误码，错误信息，包括MismatchedDomainNames中的域名。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 操作失败的域名及错误码，错误信息，包括MismatchedDomainNames中的域名。 
      * @return Errors 操作失败的域名及错误码，错误信息，包括MismatchedDomainNames中的域名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BatchDomainOperateErrors [] getErrors() {
         return this.Errors;
@@ -73,9 +70,7 @@ public class ModifyLiveDomainCertBindingsResponse extends AbstractModel {
 
     /**
      * Set 操作失败的域名及错误码，错误信息，包括MismatchedDomainNames中的域名。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Errors 操作失败的域名及错误码，错误信息，包括MismatchedDomainNames中的域名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrors(BatchDomainOperateErrors [] Errors) {
         this.Errors = Errors;

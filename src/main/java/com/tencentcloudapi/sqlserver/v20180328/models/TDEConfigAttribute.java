@@ -39,7 +39,6 @@ public class TDEConfigAttribute extends AbstractModel {
 
     /**
     * 开通TDE加密时引用的其他主账号ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("QuoteUin")
     @Expose
@@ -92,10 +91,8 @@ public class TDEConfigAttribute extends AbstractModel {
     }
 
     /**
-     * Get 开通TDE加密时引用的其他主账号ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 开通TDE加密时引用的其他主账号ID 
      * @return QuoteUin 开通TDE加密时引用的其他主账号ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getQuoteUin() {
         return this.QuoteUin;
@@ -103,9 +100,7 @@ public class TDEConfigAttribute extends AbstractModel {
 
     /**
      * Set 开通TDE加密时引用的其他主账号ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param QuoteUin 开通TDE加密时引用的其他主账号ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setQuoteUin(String QuoteUin) {
         this.QuoteUin = QuoteUin;

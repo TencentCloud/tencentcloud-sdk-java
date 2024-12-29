@@ -53,7 +53,6 @@ public class DeployGroupInfo extends AbstractModel {
 
     /**
     * 置放群组亲和性策略，目前仅支持策略1，即在物理机纬度打散实例的分布。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Affinity")
     @Expose
@@ -61,7 +60,6 @@ public class DeployGroupInfo extends AbstractModel {
 
     /**
     * 置放群组亲和性策略1中，同台物理机上同个置放群组实例的限制个数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LimitNum")
     @Expose
@@ -76,7 +74,6 @@ public class DeployGroupInfo extends AbstractModel {
 
     /**
     * 置放群组物理机型属性。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DevClass")
     @Expose
@@ -147,10 +144,8 @@ public class DeployGroupInfo extends AbstractModel {
     }
 
     /**
-     * Get 置放群组亲和性策略，目前仅支持策略1，即在物理机纬度打散实例的分布。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 置放群组亲和性策略，目前仅支持策略1，即在物理机纬度打散实例的分布。 
      * @return Affinity 置放群组亲和性策略，目前仅支持策略1，即在物理机纬度打散实例的分布。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAffinity() {
         return this.Affinity;
@@ -158,19 +153,15 @@ public class DeployGroupInfo extends AbstractModel {
 
     /**
      * Set 置放群组亲和性策略，目前仅支持策略1，即在物理机纬度打散实例的分布。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Affinity 置放群组亲和性策略，目前仅支持策略1，即在物理机纬度打散实例的分布。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAffinity(String Affinity) {
         this.Affinity = Affinity;
     }
 
     /**
-     * Get 置放群组亲和性策略1中，同台物理机上同个置放群组实例的限制个数。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 置放群组亲和性策略1中，同台物理机上同个置放群组实例的限制个数。 
      * @return LimitNum 置放群组亲和性策略1中，同台物理机上同个置放群组实例的限制个数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLimitNum() {
         return this.LimitNum;
@@ -178,9 +169,7 @@ public class DeployGroupInfo extends AbstractModel {
 
     /**
      * Set 置放群组亲和性策略1中，同台物理机上同个置放群组实例的限制个数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LimitNum 置放群组亲和性策略1中，同台物理机上同个置放群组实例的限制个数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLimitNum(Long LimitNum) {
         this.LimitNum = LimitNum;
@@ -203,10 +192,8 @@ public class DeployGroupInfo extends AbstractModel {
     }
 
     /**
-     * Get 置放群组物理机型属性。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 置放群组物理机型属性。 
      * @return DevClass 置放群组物理机型属性。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDevClass() {
         return this.DevClass;
@@ -214,9 +201,7 @@ public class DeployGroupInfo extends AbstractModel {
 
     /**
      * Set 置放群组物理机型属性。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DevClass 置放群组物理机型属性。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDevClass(String DevClass) {
         this.DevClass = DevClass;

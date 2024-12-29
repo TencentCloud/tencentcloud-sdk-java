@@ -25,7 +25,6 @@ public class DescribeMonitorReportResponse extends AbstractModel {
 
     /**
     * 媒体处理结果信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MPSResult")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeMonitorReportResponse extends AbstractModel {
 
     /**
     * 媒体诊断结果信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DiagnoseResult")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeMonitorReportResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 媒体处理结果信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 媒体处理结果信息。 
      * @return MPSResult 媒体处理结果信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public MPSResult getMPSResult() {
         return this.MPSResult;
@@ -58,19 +54,15 @@ public class DescribeMonitorReportResponse extends AbstractModel {
 
     /**
      * Set 媒体处理结果信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MPSResult 媒体处理结果信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMPSResult(MPSResult MPSResult) {
         this.MPSResult = MPSResult;
     }
 
     /**
-     * Get 媒体诊断结果信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 媒体诊断结果信息。 
      * @return DiagnoseResult 媒体诊断结果信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DiagnoseResult getDiagnoseResult() {
         return this.DiagnoseResult;
@@ -78,9 +70,7 @@ public class DescribeMonitorReportResponse extends AbstractModel {
 
     /**
      * Set 媒体诊断结果信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DiagnoseResult 媒体诊断结果信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDiagnoseResult(DiagnoseResult DiagnoseResult) {
         this.DiagnoseResult = DiagnoseResult;

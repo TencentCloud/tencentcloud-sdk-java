@@ -25,7 +25,6 @@ public class LogRuleTemplateInfo extends AbstractModel {
 
     /**
     * 模板ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleTemplateId")
     @Expose
@@ -33,7 +32,6 @@ public class LogRuleTemplateInfo extends AbstractModel {
 
     /**
     * 规则模板名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleTemplateName")
     @Expose
@@ -41,7 +39,6 @@ public class LogRuleTemplateInfo extends AbstractModel {
 
     /**
     * 告警等级。1-低风险，2-中风险，3-高风险。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AlarmLevel")
     @Expose
@@ -49,17 +46,14 @@ public class LogRuleTemplateInfo extends AbstractModel {
 
     /**
     * 规则模板变更状态：0-未变更；1-已变更；2-已删除
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleTemplateStatus")
     @Expose
     private Long RuleTemplateStatus;
 
     /**
-     * Get 模板ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 模板ID。 
      * @return RuleTemplateId 模板ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRuleTemplateId() {
         return this.RuleTemplateId;
@@ -67,19 +61,15 @@ public class LogRuleTemplateInfo extends AbstractModel {
 
     /**
      * Set 模板ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RuleTemplateId 模板ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleTemplateId(String RuleTemplateId) {
         this.RuleTemplateId = RuleTemplateId;
     }
 
     /**
-     * Get 规则模板名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则模板名 
      * @return RuleTemplateName 规则模板名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRuleTemplateName() {
         return this.RuleTemplateName;
@@ -87,19 +77,15 @@ public class LogRuleTemplateInfo extends AbstractModel {
 
     /**
      * Set 规则模板名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RuleTemplateName 规则模板名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleTemplateName(String RuleTemplateName) {
         this.RuleTemplateName = RuleTemplateName;
     }
 
     /**
-     * Get 告警等级。1-低风险，2-中风险，3-高风险。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 告警等级。1-低风险，2-中风险，3-高风险。 
      * @return AlarmLevel 告警等级。1-低风险，2-中风险，3-高风险。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAlarmLevel() {
         return this.AlarmLevel;
@@ -107,19 +93,15 @@ public class LogRuleTemplateInfo extends AbstractModel {
 
     /**
      * Set 告警等级。1-低风险，2-中风险，3-高风险。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AlarmLevel 告警等级。1-低风险，2-中风险，3-高风险。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAlarmLevel(String AlarmLevel) {
         this.AlarmLevel = AlarmLevel;
     }
 
     /**
-     * Get 规则模板变更状态：0-未变更；1-已变更；2-已删除
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则模板变更状态：0-未变更；1-已变更；2-已删除 
      * @return RuleTemplateStatus 规则模板变更状态：0-未变更；1-已变更；2-已删除
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRuleTemplateStatus() {
         return this.RuleTemplateStatus;
@@ -127,9 +109,7 @@ public class LogRuleTemplateInfo extends AbstractModel {
 
     /**
      * Set 规则模板变更状态：0-未变更；1-已变更；2-已删除
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RuleTemplateStatus 规则模板变更状态：0-未变更；1-已变更；2-已删除
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleTemplateStatus(Long RuleTemplateStatus) {
         this.RuleTemplateStatus = RuleTemplateStatus;

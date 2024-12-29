@@ -891,6 +891,9 @@ public enum CvmErrorCode {
     // 不支持混合付费模式。
      UNSUPPORTEDOPERATION_INSTANCEMIXEDPRICINGMODEL("UnsupportedOperation.InstanceMixedPricingModel"),
      
+    // 不支持混合升配和降配实例。
+     UNSUPPORTEDOPERATION_INSTANCEMIXEDRESETINSTANCETYPE("UnsupportedOperation.InstanceMixedResetInstanceType"),
+     
     // 中心可用区和边缘可用区实例不能混用批量操作。
      UNSUPPORTEDOPERATION_INSTANCEMIXEDZONETYPE("UnsupportedOperation.InstanceMixedZoneType"),
      
@@ -1002,9 +1005,6 @@ public enum CvmErrorCode {
     // 用户无权限操作当前实例。
      UNSUPPORTEDOPERATION_INVALIDINSTANCESOWNER("UnsupportedOperation.InvalidInstancesOwner"),
      
-    // 当前操作只支持国际版用户。
-     UNSUPPORTEDOPERATION_INVALIDPERMISSIONNONINTERNATIONALACCOUNT("UnsupportedOperation.InvalidPermissionNonInternationalAccount"),
-     
     // 指定的地域不支持加密盘。
      UNSUPPORTEDOPERATION_INVALIDREGIONDISKENCRYPT("UnsupportedOperation.InvalidRegionDiskEncrypt"),
      
@@ -1082,12 +1082,6 @@ public enum CvmErrorCode {
      
     // 不支持该地域
      UNSUPPORTEDOPERATION_REGION("UnsupportedOperation.Region"),
-     
-    // 当前用户暂不支持购买预留实例计费。
-     UNSUPPORTEDOPERATION_RESERVEDINSTANCEINVISIBLEFORUSER("UnsupportedOperation.ReservedInstanceInvisibleForUser"),
-     
-    // 用户预留实例计费配额已达上限。
-     UNSUPPORTEDOPERATION_RESERVEDINSTANCEOUTOFQUATA("UnsupportedOperation.ReservedInstanceOutofQuata"),
      
     // 共享镜像不支持导出。
      UNSUPPORTEDOPERATION_SHAREDIMAGEEXPORTUNSUPPORTED("UnsupportedOperation.SharedImageExportUnsupported"),

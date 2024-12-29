@@ -285,6 +285,46 @@ public class JobConfig extends AbstractModel {
     private String FlinkVersion;
 
     /**
+    * jm使用cpu数目
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("JobManagerCpu")
+    @Expose
+    private Float JobManagerCpu;
+
+    /**
+    * jm使用内存数目
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("JobManagerMem")
+    @Expose
+    private Float JobManagerMem;
+
+    /**
+    * tm使用cpu数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TaskManagerCpu")
+    @Expose
+    private Float TaskManagerCpu;
+
+    /**
+    * tm使用mem数
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("TaskManagerMem")
+    @Expose
+    private Float TaskManagerMem;
+
+    /**
+    * 运行中配置
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("JobConfigItem")
+    @Expose
+    private JobConfig JobConfigItem;
+
+    /**
      * Get 作业Id 
      * @return JobId 作业Id
      */
@@ -932,6 +972,106 @@ public class JobConfig extends AbstractModel {
         this.FlinkVersion = FlinkVersion;
     }
 
+    /**
+     * Get jm使用cpu数目
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return JobManagerCpu jm使用cpu数目
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float getJobManagerCpu() {
+        return this.JobManagerCpu;
+    }
+
+    /**
+     * Set jm使用cpu数目
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param JobManagerCpu jm使用cpu数目
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setJobManagerCpu(Float JobManagerCpu) {
+        this.JobManagerCpu = JobManagerCpu;
+    }
+
+    /**
+     * Get jm使用内存数目
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return JobManagerMem jm使用内存数目
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float getJobManagerMem() {
+        return this.JobManagerMem;
+    }
+
+    /**
+     * Set jm使用内存数目
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param JobManagerMem jm使用内存数目
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setJobManagerMem(Float JobManagerMem) {
+        this.JobManagerMem = JobManagerMem;
+    }
+
+    /**
+     * Get tm使用cpu数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TaskManagerCpu tm使用cpu数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float getTaskManagerCpu() {
+        return this.TaskManagerCpu;
+    }
+
+    /**
+     * Set tm使用cpu数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TaskManagerCpu tm使用cpu数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTaskManagerCpu(Float TaskManagerCpu) {
+        this.TaskManagerCpu = TaskManagerCpu;
+    }
+
+    /**
+     * Get tm使用mem数
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return TaskManagerMem tm使用mem数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Float getTaskManagerMem() {
+        return this.TaskManagerMem;
+    }
+
+    /**
+     * Set tm使用mem数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TaskManagerMem tm使用mem数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTaskManagerMem(Float TaskManagerMem) {
+        this.TaskManagerMem = TaskManagerMem;
+    }
+
+    /**
+     * Get 运行中配置
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return JobConfigItem 运行中配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public JobConfig getJobConfigItem() {
+        return this.JobConfigItem;
+    }
+
+    /**
+     * Set 运行中配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param JobConfigItem 运行中配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setJobConfigItem(JobConfig JobConfigItem) {
+        this.JobConfigItem = JobConfigItem;
+    }
+
     public JobConfig() {
     }
 
@@ -1048,6 +1188,21 @@ public class JobConfig extends AbstractModel {
         if (source.FlinkVersion != null) {
             this.FlinkVersion = new String(source.FlinkVersion);
         }
+        if (source.JobManagerCpu != null) {
+            this.JobManagerCpu = new Float(source.JobManagerCpu);
+        }
+        if (source.JobManagerMem != null) {
+            this.JobManagerMem = new Float(source.JobManagerMem);
+        }
+        if (source.TaskManagerCpu != null) {
+            this.TaskManagerCpu = new Float(source.TaskManagerCpu);
+        }
+        if (source.TaskManagerMem != null) {
+            this.TaskManagerMem = new Float(source.TaskManagerMem);
+        }
+        if (source.JobConfigItem != null) {
+            this.JobConfigItem = new JobConfig(source.JobConfigItem);
+        }
     }
 
 
@@ -1088,6 +1243,11 @@ public class JobConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "IndexName", this.IndexName);
         this.setParamSimple(map, prefix + "WorkspaceName", this.WorkspaceName);
         this.setParamSimple(map, prefix + "FlinkVersion", this.FlinkVersion);
+        this.setParamSimple(map, prefix + "JobManagerCpu", this.JobManagerCpu);
+        this.setParamSimple(map, prefix + "JobManagerMem", this.JobManagerMem);
+        this.setParamSimple(map, prefix + "TaskManagerCpu", this.TaskManagerCpu);
+        this.setParamSimple(map, prefix + "TaskManagerMem", this.TaskManagerMem);
+        this.setParamObj(map, prefix + "JobConfigItem.", this.JobConfigItem);
 
     }
 }

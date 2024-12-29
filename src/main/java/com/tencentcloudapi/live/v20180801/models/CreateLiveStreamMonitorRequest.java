@@ -120,6 +120,20 @@ public class CreateLiveStreamMonitorRequest extends AbstractModel {
     private Long AiQualityControl;
 
     /**
+    * 导播台监播对应的导播台场次id。
+    */
+    @SerializedName("CasterId")
+    @Expose
+    private String CasterId;
+
+    /**
+    * 拉流转推监播任务对应的拉流转推场次id
+    */
+    @SerializedName("PullPushTaskId")
+    @Expose
+    private String PullPushTaskId;
+
+    /**
      * Get 监播任务的输出信息。 
      * @return OutputInfo 监播任务的输出信息。
      */
@@ -347,6 +361,38 @@ public class CreateLiveStreamMonitorRequest extends AbstractModel {
         this.AiQualityControl = AiQualityControl;
     }
 
+    /**
+     * Get 导播台监播对应的导播台场次id。 
+     * @return CasterId 导播台监播对应的导播台场次id。
+     */
+    public String getCasterId() {
+        return this.CasterId;
+    }
+
+    /**
+     * Set 导播台监播对应的导播台场次id。
+     * @param CasterId 导播台监播对应的导播台场次id。
+     */
+    public void setCasterId(String CasterId) {
+        this.CasterId = CasterId;
+    }
+
+    /**
+     * Get 拉流转推监播任务对应的拉流转推场次id 
+     * @return PullPushTaskId 拉流转推监播任务对应的拉流转推场次id
+     */
+    public String getPullPushTaskId() {
+        return this.PullPushTaskId;
+    }
+
+    /**
+     * Set 拉流转推监播任务对应的拉流转推场次id
+     * @param PullPushTaskId 拉流转推监播任务对应的拉流转推场次id
+     */
+    public void setPullPushTaskId(String PullPushTaskId) {
+        this.PullPushTaskId = PullPushTaskId;
+    }
+
     public CreateLiveStreamMonitorRequest() {
     }
 
@@ -403,6 +449,12 @@ public class CreateLiveStreamMonitorRequest extends AbstractModel {
         if (source.AiQualityControl != null) {
             this.AiQualityControl = new Long(source.AiQualityControl);
         }
+        if (source.CasterId != null) {
+            this.CasterId = new String(source.CasterId);
+        }
+        if (source.PullPushTaskId != null) {
+            this.PullPushTaskId = new String(source.PullPushTaskId);
+        }
     }
 
 
@@ -423,6 +475,8 @@ public class CreateLiveStreamMonitorRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "AllowMonitorReport", this.AllowMonitorReport);
         this.setParamSimple(map, prefix + "AiFormatDiagnose", this.AiFormatDiagnose);
         this.setParamSimple(map, prefix + "AiQualityControl", this.AiQualityControl);
+        this.setParamSimple(map, prefix + "CasterId", this.CasterId);
+        this.setParamSimple(map, prefix + "PullPushTaskId", this.PullPushTaskId);
 
     }
 }

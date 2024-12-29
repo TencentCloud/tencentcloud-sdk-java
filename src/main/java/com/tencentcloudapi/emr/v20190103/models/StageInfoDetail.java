@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class StageInfoDetail extends AbstractModel {
 
     /**
-    * 步骤id
+    * 步骤
     */
     @SerializedName("Stage")
     @Expose
@@ -140,16 +140,16 @@ public class StageInfoDetail extends AbstractModel {
     private String TimeConsuming;
 
     /**
-     * Get 步骤id 
-     * @return Stage 步骤id
+     * Get 步骤 
+     * @return Stage 步骤
      */
     public String getStage() {
         return this.Stage;
     }
 
     /**
-     * Set 步骤id
-     * @param Stage 步骤id
+     * Set 步骤
+     * @param Stage 步骤
      */
     public void setStage(String Stage) {
         this.Stage = Stage;

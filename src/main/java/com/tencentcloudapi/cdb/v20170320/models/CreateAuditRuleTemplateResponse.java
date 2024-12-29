@@ -25,7 +25,6 @@ public class CreateAuditRuleTemplateResponse extends AbstractModel {
 
     /**
     * 生成的规则模板ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleTemplateId")
     @Expose
@@ -39,10 +38,8 @@ public class CreateAuditRuleTemplateResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 生成的规则模板ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 生成的规则模板ID。 
      * @return RuleTemplateId 生成的规则模板ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRuleTemplateId() {
         return this.RuleTemplateId;
@@ -50,9 +47,7 @@ public class CreateAuditRuleTemplateResponse extends AbstractModel {
 
     /**
      * Set 生成的规则模板ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RuleTemplateId 生成的规则模板ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleTemplateId(String RuleTemplateId) {
         this.RuleTemplateId = RuleTemplateId;

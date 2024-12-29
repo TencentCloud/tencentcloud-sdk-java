@@ -25,7 +25,6 @@ public class CreateLiveStreamMonitorResponse extends AbstractModel {
 
     /**
     * 监播任务ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MonitorId")
     @Expose
@@ -39,10 +38,8 @@ public class CreateLiveStreamMonitorResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 监播任务ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 监播任务ID。 
      * @return MonitorId 监播任务ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMonitorId() {
         return this.MonitorId;
@@ -50,9 +47,7 @@ public class CreateLiveStreamMonitorResponse extends AbstractModel {
 
     /**
      * Set 监播任务ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MonitorId 监播任务ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMonitorId(String MonitorId) {
         this.MonitorId = MonitorId;

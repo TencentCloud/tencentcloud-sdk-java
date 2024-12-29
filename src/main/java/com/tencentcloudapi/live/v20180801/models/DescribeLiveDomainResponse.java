@@ -25,7 +25,6 @@ public class DescribeLiveDomainResponse extends AbstractModel {
 
     /**
     * 域名信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DomainInfo")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeLiveDomainResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 域名信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 域名信息。 
      * @return DomainInfo 域名信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DomainInfo getDomainInfo() {
         return this.DomainInfo;
@@ -50,9 +47,7 @@ public class DescribeLiveDomainResponse extends AbstractModel {
 
     /**
      * Set 域名信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DomainInfo 域名信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDomainInfo(DomainInfo DomainInfo) {
         this.DomainInfo = DomainInfo;

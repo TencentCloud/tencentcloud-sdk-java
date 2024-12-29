@@ -46,7 +46,6 @@ public class InstanceInfo extends AbstractModel {
 
     /**
     * 只读vip信息。单独开通只读实例访问的只读实例才有该字段
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RoVipInfo")
     @Expose
@@ -75,7 +74,6 @@ public class InstanceInfo extends AbstractModel {
 
     /**
     * 备机信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SlaveInfo")
     @Expose
@@ -111,7 +109,6 @@ public class InstanceInfo extends AbstractModel {
 
     /**
     * 只读组详细信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RoGroups")
     @Expose
@@ -168,7 +165,6 @@ public class InstanceInfo extends AbstractModel {
 
     /**
     * 主实例详细信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MasterInfo")
     @Expose
@@ -197,7 +193,6 @@ public class InstanceInfo extends AbstractModel {
 
     /**
     * 灾备实例详细信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DrInfo")
     @Expose
@@ -296,7 +291,6 @@ public class InstanceInfo extends AbstractModel {
 
     /**
     * 物理机型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeviceClass")
     @Expose
@@ -304,7 +298,6 @@ public class InstanceInfo extends AbstractModel {
 
     /**
     * 置放群组 ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeployGroupId")
     @Expose
@@ -312,7 +305,6 @@ public class InstanceInfo extends AbstractModel {
 
     /**
     * 可用区 ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ZoneId")
     @Expose
@@ -327,7 +319,6 @@ public class InstanceInfo extends AbstractModel {
 
     /**
     * 标签列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TagList")
     @Expose
@@ -335,7 +326,6 @@ public class InstanceInfo extends AbstractModel {
 
     /**
     * 引擎类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EngineType")
     @Expose
@@ -343,7 +333,6 @@ public class InstanceInfo extends AbstractModel {
 
     /**
     * 最大延迟阈值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxDelayTime")
     @Expose
@@ -358,7 +347,6 @@ public class InstanceInfo extends AbstractModel {
 
     /**
     * 当前扩容的CPU核心数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExpandCpu")
     @Expose
@@ -366,7 +354,6 @@ public class InstanceInfo extends AbstractModel {
 
     /**
     * 实例集群版节点信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClusterInfo")
     @Expose
@@ -421,10 +408,8 @@ public class InstanceInfo extends AbstractModel {
     }
 
     /**
-     * Get 只读vip信息。单独开通只读实例访问的只读实例才有该字段
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 只读vip信息。单独开通只读实例访问的只读实例才有该字段 
      * @return RoVipInfo 只读vip信息。单独开通只读实例访问的只读实例才有该字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RoVipInfo getRoVipInfo() {
         return this.RoVipInfo;
@@ -432,9 +417,7 @@ public class InstanceInfo extends AbstractModel {
 
     /**
      * Set 只读vip信息。单独开通只读实例访问的只读实例才有该字段
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RoVipInfo 只读vip信息。单独开通只读实例访问的只读实例才有该字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRoVipInfo(RoVipInfo RoVipInfo) {
         this.RoVipInfo = RoVipInfo;
@@ -489,10 +472,8 @@ public class InstanceInfo extends AbstractModel {
     }
 
     /**
-     * Get 备机信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 备机信息 
      * @return SlaveInfo 备机信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SlaveInfo getSlaveInfo() {
         return this.SlaveInfo;
@@ -500,9 +481,7 @@ public class InstanceInfo extends AbstractModel {
 
     /**
      * Set 备机信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SlaveInfo 备机信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSlaveInfo(SlaveInfo SlaveInfo) {
         this.SlaveInfo = SlaveInfo;
@@ -573,10 +552,8 @@ public class InstanceInfo extends AbstractModel {
     }
 
     /**
-     * Get 只读组详细信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 只读组详细信息 
      * @return RoGroups 只读组详细信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RoGroup [] getRoGroups() {
         return this.RoGroups;
@@ -584,9 +561,7 @@ public class InstanceInfo extends AbstractModel {
 
     /**
      * Set 只读组详细信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RoGroups 只读组详细信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRoGroups(RoGroup [] RoGroups) {
         this.RoGroups = RoGroups;
@@ -705,10 +680,8 @@ public class InstanceInfo extends AbstractModel {
     }
 
     /**
-     * Get 主实例详细信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主实例详细信息 
      * @return MasterInfo 主实例详细信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public MasterInfo getMasterInfo() {
         return this.MasterInfo;
@@ -716,9 +689,7 @@ public class InstanceInfo extends AbstractModel {
 
     /**
      * Set 主实例详细信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MasterInfo 主实例详细信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMasterInfo(MasterInfo MasterInfo) {
         this.MasterInfo = MasterInfo;
@@ -773,10 +744,8 @@ public class InstanceInfo extends AbstractModel {
     }
 
     /**
-     * Get 灾备实例详细信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 灾备实例详细信息 
      * @return DrInfo 灾备实例详细信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DrInfo [] getDrInfo() {
         return this.DrInfo;
@@ -784,9 +753,7 @@ public class InstanceInfo extends AbstractModel {
 
     /**
      * Set 灾备实例详细信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DrInfo 灾备实例详细信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDrInfo(DrInfo [] DrInfo) {
         this.DrInfo = DrInfo;
@@ -1001,10 +968,8 @@ public class InstanceInfo extends AbstractModel {
     }
 
     /**
-     * Get 物理机型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 物理机型 
      * @return DeviceClass 物理机型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDeviceClass() {
         return this.DeviceClass;
@@ -1012,19 +977,15 @@ public class InstanceInfo extends AbstractModel {
 
     /**
      * Set 物理机型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeviceClass 物理机型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeviceClass(String DeviceClass) {
         this.DeviceClass = DeviceClass;
     }
 
     /**
-     * Get 置放群组 ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 置放群组 ID 
      * @return DeployGroupId 置放群组 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDeployGroupId() {
         return this.DeployGroupId;
@@ -1032,19 +993,15 @@ public class InstanceInfo extends AbstractModel {
 
     /**
      * Set 置放群组 ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeployGroupId 置放群组 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeployGroupId(String DeployGroupId) {
         this.DeployGroupId = DeployGroupId;
     }
 
     /**
-     * Get 可用区 ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 可用区 ID 
      * @return ZoneId 可用区 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getZoneId() {
         return this.ZoneId;
@@ -1052,9 +1009,7 @@ public class InstanceInfo extends AbstractModel {
 
     /**
      * Set 可用区 ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ZoneId 可用区 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZoneId(Long ZoneId) {
         this.ZoneId = ZoneId;
@@ -1077,10 +1032,8 @@ public class InstanceInfo extends AbstractModel {
     }
 
     /**
-     * Get 标签列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标签列表 
      * @return TagList 标签列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TagInfoItem [] getTagList() {
         return this.TagList;
@@ -1088,19 +1041,15 @@ public class InstanceInfo extends AbstractModel {
 
     /**
      * Set 标签列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TagList 标签列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTagList(TagInfoItem [] TagList) {
         this.TagList = TagList;
     }
 
     /**
-     * Get 引擎类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 引擎类型 
      * @return EngineType 引擎类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEngineType() {
         return this.EngineType;
@@ -1108,19 +1057,15 @@ public class InstanceInfo extends AbstractModel {
 
     /**
      * Set 引擎类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EngineType 引擎类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEngineType(String EngineType) {
         this.EngineType = EngineType;
     }
 
     /**
-     * Get 最大延迟阈值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最大延迟阈值 
      * @return MaxDelayTime 最大延迟阈值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaxDelayTime() {
         return this.MaxDelayTime;
@@ -1128,9 +1073,7 @@ public class InstanceInfo extends AbstractModel {
 
     /**
      * Set 最大延迟阈值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MaxDelayTime 最大延迟阈值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxDelayTime(Long MaxDelayTime) {
         this.MaxDelayTime = MaxDelayTime;
@@ -1153,10 +1096,8 @@ public class InstanceInfo extends AbstractModel {
     }
 
     /**
-     * Get 当前扩容的CPU核心数。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当前扩容的CPU核心数。 
      * @return ExpandCpu 当前扩容的CPU核心数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getExpandCpu() {
         return this.ExpandCpu;
@@ -1164,19 +1105,15 @@ public class InstanceInfo extends AbstractModel {
 
     /**
      * Set 当前扩容的CPU核心数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExpandCpu 当前扩容的CPU核心数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExpandCpu(Long ExpandCpu) {
         this.ExpandCpu = ExpandCpu;
     }
 
     /**
-     * Get 实例集群版节点信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例集群版节点信息 
      * @return ClusterInfo 实例集群版节点信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ClusterInfo [] getClusterInfo() {
         return this.ClusterInfo;
@@ -1184,9 +1121,7 @@ public class InstanceInfo extends AbstractModel {
 
     /**
      * Set 实例集群版节点信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterInfo 实例集群版节点信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClusterInfo(ClusterInfo [] ClusterInfo) {
         this.ClusterInfo = ClusterInfo;

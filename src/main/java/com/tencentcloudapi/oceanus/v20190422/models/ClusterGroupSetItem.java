@@ -173,6 +173,34 @@ public class ClusterGroupSetItem extends AbstractModel {
     private String BillingResourceMode;
 
     /**
+    * TotalCpu
+    */
+    @SerializedName("TotalCpu")
+    @Expose
+    private Float TotalCpu;
+
+    /**
+    * TotalMem
+    */
+    @SerializedName("TotalMem")
+    @Expose
+    private Float TotalMem;
+
+    /**
+    * RunningCpu
+    */
+    @SerializedName("RunningCpu")
+    @Expose
+    private Float RunningCpu;
+
+    /**
+    * RunningMem
+    */
+    @SerializedName("RunningMem")
+    @Expose
+    private Float RunningMem;
+
+    /**
      * Get clusterGroup 的 SerialId 
      * @return ClusterId clusterGroup 的 SerialId
      */
@@ -516,6 +544,70 @@ public class ClusterGroupSetItem extends AbstractModel {
         this.BillingResourceMode = BillingResourceMode;
     }
 
+    /**
+     * Get TotalCpu 
+     * @return TotalCpu TotalCpu
+     */
+    public Float getTotalCpu() {
+        return this.TotalCpu;
+    }
+
+    /**
+     * Set TotalCpu
+     * @param TotalCpu TotalCpu
+     */
+    public void setTotalCpu(Float TotalCpu) {
+        this.TotalCpu = TotalCpu;
+    }
+
+    /**
+     * Get TotalMem 
+     * @return TotalMem TotalMem
+     */
+    public Float getTotalMem() {
+        return this.TotalMem;
+    }
+
+    /**
+     * Set TotalMem
+     * @param TotalMem TotalMem
+     */
+    public void setTotalMem(Float TotalMem) {
+        this.TotalMem = TotalMem;
+    }
+
+    /**
+     * Get RunningCpu 
+     * @return RunningCpu RunningCpu
+     */
+    public Float getRunningCpu() {
+        return this.RunningCpu;
+    }
+
+    /**
+     * Set RunningCpu
+     * @param RunningCpu RunningCpu
+     */
+    public void setRunningCpu(Float RunningCpu) {
+        this.RunningCpu = RunningCpu;
+    }
+
+    /**
+     * Get RunningMem 
+     * @return RunningMem RunningMem
+     */
+    public Float getRunningMem() {
+        return this.RunningMem;
+    }
+
+    /**
+     * Set RunningMem
+     * @param RunningMem RunningMem
+     */
+    public void setRunningMem(Float RunningMem) {
+        this.RunningMem = RunningMem;
+    }
+
     public ClusterGroupSetItem() {
     }
 
@@ -587,6 +679,18 @@ public class ClusterGroupSetItem extends AbstractModel {
         if (source.BillingResourceMode != null) {
             this.BillingResourceMode = new String(source.BillingResourceMode);
         }
+        if (source.TotalCpu != null) {
+            this.TotalCpu = new Float(source.TotalCpu);
+        }
+        if (source.TotalMem != null) {
+            this.TotalMem = new Float(source.TotalMem);
+        }
+        if (source.RunningCpu != null) {
+            this.RunningCpu = new Float(source.RunningCpu);
+        }
+        if (source.RunningMem != null) {
+            this.RunningMem = new Float(source.RunningMem);
+        }
     }
 
 
@@ -615,6 +719,10 @@ public class ClusterGroupSetItem extends AbstractModel {
         this.setParamSimple(map, prefix + "PayMode", this.PayMode);
         this.setParamObj(map, prefix + "SubEks.", this.SubEks);
         this.setParamSimple(map, prefix + "BillingResourceMode", this.BillingResourceMode);
+        this.setParamSimple(map, prefix + "TotalCpu", this.TotalCpu);
+        this.setParamSimple(map, prefix + "TotalMem", this.TotalMem);
+        this.setParamSimple(map, prefix + "RunningCpu", this.RunningCpu);
+        this.setParamSimple(map, prefix + "RunningMem", this.RunningMem);
 
     }
 }

@@ -25,7 +25,6 @@ public class InstanceRebootTime extends AbstractModel {
 
     /**
     * 实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -33,17 +32,14 @@ public class InstanceRebootTime extends AbstractModel {
 
     /**
     * 预期重启时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TimeInSeconds")
     @Expose
     private Long TimeInSeconds;
 
     /**
-     * Get 实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同 
      * @return InstanceId 实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceId() {
         return this.InstanceId;
@@ -51,19 +47,15 @@ public class InstanceRebootTime extends AbstractModel {
 
     /**
      * Set 实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceId 实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 预期重启时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 预期重启时间 
      * @return TimeInSeconds 预期重启时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTimeInSeconds() {
         return this.TimeInSeconds;
@@ -71,9 +63,7 @@ public class InstanceRebootTime extends AbstractModel {
 
     /**
      * Set 预期重启时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TimeInSeconds 预期重启时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimeInSeconds(Long TimeInSeconds) {
         this.TimeInSeconds = TimeInSeconds;

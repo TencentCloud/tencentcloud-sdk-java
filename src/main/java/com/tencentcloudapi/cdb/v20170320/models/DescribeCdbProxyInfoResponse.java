@@ -25,7 +25,6 @@ public class DescribeCdbProxyInfoResponse extends AbstractModel {
 
     /**
     * 代理组数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Count")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeCdbProxyInfoResponse extends AbstractModel {
 
     /**
     * 代理组信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProxyInfos")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeCdbProxyInfoResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 代理组数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 代理组数量 
      * @return Count 代理组数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCount() {
         return this.Count;
@@ -58,19 +54,15 @@ public class DescribeCdbProxyInfoResponse extends AbstractModel {
 
     /**
      * Set 代理组数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Count 代理组数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCount(Long Count) {
         this.Count = Count;
     }
 
     /**
-     * Get 代理组信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 代理组信息 
      * @return ProxyInfos 代理组信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ProxyGroupInfo [] getProxyInfos() {
         return this.ProxyInfos;
@@ -78,9 +70,7 @@ public class DescribeCdbProxyInfoResponse extends AbstractModel {
 
     /**
      * Set 代理组信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProxyInfos 代理组信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProxyInfos(ProxyGroupInfo [] ProxyInfos) {
         this.ProxyInfos = ProxyInfos;

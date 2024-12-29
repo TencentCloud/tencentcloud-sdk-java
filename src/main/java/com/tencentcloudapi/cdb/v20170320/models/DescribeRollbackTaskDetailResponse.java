@@ -32,7 +32,6 @@ public class DescribeRollbackTaskDetailResponse extends AbstractModel {
 
     /**
     * 回档任务详情。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Items")
     @Expose
@@ -62,10 +61,8 @@ public class DescribeRollbackTaskDetailResponse extends AbstractModel {
     }
 
     /**
-     * Get 回档任务详情。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 回档任务详情。 
      * @return Items 回档任务详情。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public RollbackTask [] getItems() {
         return this.Items;
@@ -73,9 +70,7 @@ public class DescribeRollbackTaskDetailResponse extends AbstractModel {
 
     /**
      * Set 回档任务详情。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Items 回档任务详情。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setItems(RollbackTask [] Items) {
         this.Items = Items;

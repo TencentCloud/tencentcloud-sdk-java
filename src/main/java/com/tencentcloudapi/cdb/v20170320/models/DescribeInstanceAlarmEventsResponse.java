@@ -32,7 +32,6 @@ public class DescribeInstanceAlarmEventsResponse extends AbstractModel {
 
     /**
     * 事件信息。查询不到信息时，Items为null。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Items")
     @Expose
@@ -62,10 +61,8 @@ public class DescribeInstanceAlarmEventsResponse extends AbstractModel {
     }
 
     /**
-     * Get 事件信息。查询不到信息时，Items为null。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 事件信息。查询不到信息时，Items为null。 
      * @return Items 事件信息。查询不到信息时，Items为null。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public InstEventInfo [] getItems() {
         return this.Items;
@@ -73,9 +70,7 @@ public class DescribeInstanceAlarmEventsResponse extends AbstractModel {
 
     /**
      * Set 事件信息。查询不到信息时，Items为null。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Items 事件信息。查询不到信息时，Items为null。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setItems(InstEventInfo [] Items) {
         this.Items = Items;

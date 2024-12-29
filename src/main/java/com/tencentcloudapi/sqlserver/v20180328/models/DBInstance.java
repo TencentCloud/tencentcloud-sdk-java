@@ -164,7 +164,7 @@ public class DBInstance extends AbstractModel {
     private Long RenewFlag;
 
     /**
-    * 实例高可用， 1-双机高可用，2-单机，3-跨可用区，4-集群跨可用区，5-集群，9-自研机房
+    * 实例高可用， 1-双机高可用，2-单机，3-跨可用区，4-集群跨可用区，5-集群，6-多节点集群，7-多节点集群跨可用区，9-自研机房
     */
     @SerializedName("Model")
     @Expose
@@ -249,7 +249,6 @@ public class DBInstance extends AbstractModel {
 
     /**
     * 实例隔离操作
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsolateOperator")
     @Expose
@@ -257,7 +256,6 @@ public class DBInstance extends AbstractModel {
 
     /**
     * 发布订阅标识，SUB-订阅实例，PUB-发布实例，空值-没有发布订阅的普通实例
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SubFlag")
     @Expose
@@ -265,7 +263,6 @@ public class DBInstance extends AbstractModel {
 
     /**
     * 只读标识，RO-只读实例，MASTER-有RO实例的主实例，空值-没有只读组的非RO实例
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ROFlag")
     @Expose
@@ -273,7 +270,6 @@ public class DBInstance extends AbstractModel {
 
     /**
     * 容灾类型，MIRROR-镜像，ALWAYSON-AlwaysOn, SINGLE-单例
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HAFlag")
     @Expose
@@ -289,7 +285,6 @@ public class DBInstance extends AbstractModel {
 
     /**
     * 备份模式，master_pkg-主节点打包备份(默认) ；master_no_pkg-主节点不打包备份；slave_pkg-从节点打包备份(always on集群有效)；slave_no_pkg-从节点不打包备份(always on集群有效)；只读副本对该值无效。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BackupModel")
     @Expose
@@ -297,7 +292,6 @@ public class DBInstance extends AbstractModel {
 
     /**
     * 实例备份信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceNote")
     @Expose
@@ -325,7 +319,8 @@ public class DBInstance extends AbstractModel {
     private Long BackupSaveDays;
 
     /**
-    * 实例类型 HA-高可用 RO-只读实例 SI-基础版 BI-商业智能服务
+    * 实例类型 HA-高可用，RO-只读实例，SI-基础版，BI-商业智能服务，cvmHA-云盘高可用，cvmRO-云盘只读实例，MultiHA-多节点，cvmMultiHA-云盘多节点
+
     */
     @SerializedName("InstanceType")
     @Expose
@@ -388,8 +383,7 @@ public class DBInstance extends AbstractModel {
     private Boolean IsDrZone;
 
     /**
-    * 备可用区信息
-注意：此字段可能返回 null，表示取不到有效值。
+    * 双节点实例备可用区信息
     */
     @SerializedName("SlaveZones")
     @Expose
@@ -397,7 +391,6 @@ public class DBInstance extends AbstractModel {
 
     /**
     * 架构标识，SINGLE-单节点 DOUBLE-双节点
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Architecture")
     @Expose
@@ -405,11 +398,17 @@ public class DBInstance extends AbstractModel {
 
     /**
     * 类型标识，EXCLUSIVE-独享型，SHARED-共享型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Style")
     @Expose
     private String Style;
+
+    /**
+    * 多节点实例备可用区信息
+    */
+    @SerializedName("MultiSlaveZones")
+    @Expose
+    private SlaveZones [] MultiSlaveZones;
 
     /**
      * Get 实例ID 
@@ -732,16 +731,16 @@ public class DBInstance extends AbstractModel {
     }
 
     /**
-     * Get 实例高可用， 1-双机高可用，2-单机，3-跨可用区，4-集群跨可用区，5-集群，9-自研机房 
-     * @return Model 实例高可用， 1-双机高可用，2-单机，3-跨可用区，4-集群跨可用区，5-集群，9-自研机房
+     * Get 实例高可用， 1-双机高可用，2-单机，3-跨可用区，4-集群跨可用区，5-集群，6-多节点集群，7-多节点集群跨可用区，9-自研机房 
+     * @return Model 实例高可用， 1-双机高可用，2-单机，3-跨可用区，4-集群跨可用区，5-集群，6-多节点集群，7-多节点集群跨可用区，9-自研机房
      */
     public Long getModel() {
         return this.Model;
     }
 
     /**
-     * Set 实例高可用， 1-双机高可用，2-单机，3-跨可用区，4-集群跨可用区，5-集群，9-自研机房
-     * @param Model 实例高可用， 1-双机高可用，2-单机，3-跨可用区，4-集群跨可用区，5-集群，9-自研机房
+     * Set 实例高可用， 1-双机高可用，2-单机，3-跨可用区，4-集群跨可用区，5-集群，6-多节点集群，7-多节点集群跨可用区，9-自研机房
+     * @param Model 实例高可用， 1-双机高可用，2-单机，3-跨可用区，4-集群跨可用区，5-集群，6-多节点集群，7-多节点集群跨可用区，9-自研机房
      */
     public void setModel(Long Model) {
         this.Model = Model;
@@ -924,10 +923,8 @@ public class DBInstance extends AbstractModel {
     }
 
     /**
-     * Get 实例隔离操作
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例隔离操作 
      * @return IsolateOperator 实例隔离操作
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIsolateOperator() {
         return this.IsolateOperator;
@@ -935,19 +932,15 @@ public class DBInstance extends AbstractModel {
 
     /**
      * Set 实例隔离操作
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsolateOperator 实例隔离操作
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsolateOperator(String IsolateOperator) {
         this.IsolateOperator = IsolateOperator;
     }
 
     /**
-     * Get 发布订阅标识，SUB-订阅实例，PUB-发布实例，空值-没有发布订阅的普通实例
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 发布订阅标识，SUB-订阅实例，PUB-发布实例，空值-没有发布订阅的普通实例 
      * @return SubFlag 发布订阅标识，SUB-订阅实例，PUB-发布实例，空值-没有发布订阅的普通实例
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSubFlag() {
         return this.SubFlag;
@@ -955,19 +948,15 @@ public class DBInstance extends AbstractModel {
 
     /**
      * Set 发布订阅标识，SUB-订阅实例，PUB-发布实例，空值-没有发布订阅的普通实例
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SubFlag 发布订阅标识，SUB-订阅实例，PUB-发布实例，空值-没有发布订阅的普通实例
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSubFlag(String SubFlag) {
         this.SubFlag = SubFlag;
     }
 
     /**
-     * Get 只读标识，RO-只读实例，MASTER-有RO实例的主实例，空值-没有只读组的非RO实例
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 只读标识，RO-只读实例，MASTER-有RO实例的主实例，空值-没有只读组的非RO实例 
      * @return ROFlag 只读标识，RO-只读实例，MASTER-有RO实例的主实例，空值-没有只读组的非RO实例
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getROFlag() {
         return this.ROFlag;
@@ -975,19 +964,15 @@ public class DBInstance extends AbstractModel {
 
     /**
      * Set 只读标识，RO-只读实例，MASTER-有RO实例的主实例，空值-没有只读组的非RO实例
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ROFlag 只读标识，RO-只读实例，MASTER-有RO实例的主实例，空值-没有只读组的非RO实例
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setROFlag(String ROFlag) {
         this.ROFlag = ROFlag;
     }
 
     /**
-     * Get 容灾类型，MIRROR-镜像，ALWAYSON-AlwaysOn, SINGLE-单例
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 容灾类型，MIRROR-镜像，ALWAYSON-AlwaysOn, SINGLE-单例 
      * @return HAFlag 容灾类型，MIRROR-镜像，ALWAYSON-AlwaysOn, SINGLE-单例
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getHAFlag() {
         return this.HAFlag;
@@ -995,9 +980,7 @@ public class DBInstance extends AbstractModel {
 
     /**
      * Set 容灾类型，MIRROR-镜像，ALWAYSON-AlwaysOn, SINGLE-单例
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HAFlag 容灾类型，MIRROR-镜像，ALWAYSON-AlwaysOn, SINGLE-单例
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHAFlag(String HAFlag) {
         this.HAFlag = HAFlag;
@@ -1024,10 +1007,8 @@ public class DBInstance extends AbstractModel {
     }
 
     /**
-     * Get 备份模式，master_pkg-主节点打包备份(默认) ；master_no_pkg-主节点不打包备份；slave_pkg-从节点打包备份(always on集群有效)；slave_no_pkg-从节点不打包备份(always on集群有效)；只读副本对该值无效。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 备份模式，master_pkg-主节点打包备份(默认) ；master_no_pkg-主节点不打包备份；slave_pkg-从节点打包备份(always on集群有效)；slave_no_pkg-从节点不打包备份(always on集群有效)；只读副本对该值无效。 
      * @return BackupModel 备份模式，master_pkg-主节点打包备份(默认) ；master_no_pkg-主节点不打包备份；slave_pkg-从节点打包备份(always on集群有效)；slave_no_pkg-从节点不打包备份(always on集群有效)；只读副本对该值无效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getBackupModel() {
         return this.BackupModel;
@@ -1035,19 +1016,15 @@ public class DBInstance extends AbstractModel {
 
     /**
      * Set 备份模式，master_pkg-主节点打包备份(默认) ；master_no_pkg-主节点不打包备份；slave_pkg-从节点打包备份(always on集群有效)；slave_no_pkg-从节点不打包备份(always on集群有效)；只读副本对该值无效。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BackupModel 备份模式，master_pkg-主节点打包备份(默认) ；master_no_pkg-主节点不打包备份；slave_pkg-从节点打包备份(always on集群有效)；slave_no_pkg-从节点不打包备份(always on集群有效)；只读副本对该值无效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBackupModel(String BackupModel) {
         this.BackupModel = BackupModel;
     }
 
     /**
-     * Get 实例备份信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例备份信息 
      * @return InstanceNote 实例备份信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceNote() {
         return this.InstanceNote;
@@ -1055,9 +1032,7 @@ public class DBInstance extends AbstractModel {
 
     /**
      * Set 实例备份信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceNote 实例备份信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceNote(String InstanceNote) {
         this.InstanceNote = InstanceNote;
@@ -1112,16 +1087,20 @@ public class DBInstance extends AbstractModel {
     }
 
     /**
-     * Get 实例类型 HA-高可用 RO-只读实例 SI-基础版 BI-商业智能服务 
-     * @return InstanceType 实例类型 HA-高可用 RO-只读实例 SI-基础版 BI-商业智能服务
+     * Get 实例类型 HA-高可用，RO-只读实例，SI-基础版，BI-商业智能服务，cvmHA-云盘高可用，cvmRO-云盘只读实例，MultiHA-多节点，cvmMultiHA-云盘多节点
+ 
+     * @return InstanceType 实例类型 HA-高可用，RO-只读实例，SI-基础版，BI-商业智能服务，cvmHA-云盘高可用，cvmRO-云盘只读实例，MultiHA-多节点，cvmMultiHA-云盘多节点
+
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set 实例类型 HA-高可用 RO-只读实例 SI-基础版 BI-商业智能服务
-     * @param InstanceType 实例类型 HA-高可用 RO-只读实例 SI-基础版 BI-商业智能服务
+     * Set 实例类型 HA-高可用，RO-只读实例，SI-基础版，BI-商业智能服务，cvmHA-云盘高可用，cvmRO-云盘只读实例，MultiHA-多节点，cvmMultiHA-云盘多节点
+
+     * @param InstanceType 实例类型 HA-高可用，RO-只读实例，SI-基础版，BI-商业智能服务，cvmHA-云盘高可用，cvmRO-云盘只读实例，MultiHA-多节点，cvmMultiHA-云盘多节点
+
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
@@ -1256,30 +1235,24 @@ public class DBInstance extends AbstractModel {
     }
 
     /**
-     * Get 备可用区信息
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SlaveZones 备可用区信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 双节点实例备可用区信息 
+     * @return SlaveZones 双节点实例备可用区信息
      */
     public SlaveZones getSlaveZones() {
         return this.SlaveZones;
     }
 
     /**
-     * Set 备可用区信息
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param SlaveZones 备可用区信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 双节点实例备可用区信息
+     * @param SlaveZones 双节点实例备可用区信息
      */
     public void setSlaveZones(SlaveZones SlaveZones) {
         this.SlaveZones = SlaveZones;
     }
 
     /**
-     * Get 架构标识，SINGLE-单节点 DOUBLE-双节点
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 架构标识，SINGLE-单节点 DOUBLE-双节点 
      * @return Architecture 架构标识，SINGLE-单节点 DOUBLE-双节点
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getArchitecture() {
         return this.Architecture;
@@ -1287,19 +1260,15 @@ public class DBInstance extends AbstractModel {
 
     /**
      * Set 架构标识，SINGLE-单节点 DOUBLE-双节点
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Architecture 架构标识，SINGLE-单节点 DOUBLE-双节点
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setArchitecture(String Architecture) {
         this.Architecture = Architecture;
     }
 
     /**
-     * Get 类型标识，EXCLUSIVE-独享型，SHARED-共享型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 类型标识，EXCLUSIVE-独享型，SHARED-共享型 
      * @return Style 类型标识，EXCLUSIVE-独享型，SHARED-共享型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStyle() {
         return this.Style;
@@ -1307,12 +1276,26 @@ public class DBInstance extends AbstractModel {
 
     /**
      * Set 类型标识，EXCLUSIVE-独享型，SHARED-共享型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Style 类型标识，EXCLUSIVE-独享型，SHARED-共享型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStyle(String Style) {
         this.Style = Style;
+    }
+
+    /**
+     * Get 多节点实例备可用区信息 
+     * @return MultiSlaveZones 多节点实例备可用区信息
+     */
+    public SlaveZones [] getMultiSlaveZones() {
+        return this.MultiSlaveZones;
+    }
+
+    /**
+     * Set 多节点实例备可用区信息
+     * @param MultiSlaveZones 多节点实例备可用区信息
+     */
+    public void setMultiSlaveZones(SlaveZones [] MultiSlaveZones) {
+        this.MultiSlaveZones = MultiSlaveZones;
     }
 
     public DBInstance() {
@@ -1494,6 +1477,12 @@ public class DBInstance extends AbstractModel {
         if (source.Style != null) {
             this.Style = new String(source.Style);
         }
+        if (source.MultiSlaveZones != null) {
+            this.MultiSlaveZones = new SlaveZones[source.MultiSlaveZones.length];
+            for (int i = 0; i < source.MultiSlaveZones.length; i++) {
+                this.MultiSlaveZones[i] = new SlaveZones(source.MultiSlaveZones[i]);
+            }
+        }
     }
 
 
@@ -1555,6 +1544,7 @@ public class DBInstance extends AbstractModel {
         this.setParamObj(map, prefix + "SlaveZones.", this.SlaveZones);
         this.setParamSimple(map, prefix + "Architecture", this.Architecture);
         this.setParamSimple(map, prefix + "Style", this.Style);
+        this.setParamArrayObj(map, prefix + "MultiSlaveZones.", this.MultiSlaveZones);
 
     }
 }

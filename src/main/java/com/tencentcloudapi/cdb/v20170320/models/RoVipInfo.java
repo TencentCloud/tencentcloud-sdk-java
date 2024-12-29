@@ -25,7 +25,6 @@ public class RoVipInfo extends AbstractModel {
 
     /**
     * 只读vip状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RoVipStatus")
     @Expose
@@ -33,7 +32,6 @@ public class RoVipInfo extends AbstractModel {
 
     /**
     * 只读vip的子网
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RoSubnetId")
     @Expose
@@ -41,7 +39,6 @@ public class RoVipInfo extends AbstractModel {
 
     /**
     * 只读vip的私有网络
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RoVpcId")
     @Expose
@@ -49,7 +46,6 @@ public class RoVipInfo extends AbstractModel {
 
     /**
     * 只读vip的端口号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RoVport")
     @Expose
@@ -57,17 +53,14 @@ public class RoVipInfo extends AbstractModel {
 
     /**
     * 只读vip
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RoVip")
     @Expose
     private String RoVip;
 
     /**
-     * Get 只读vip状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 只读vip状态 
      * @return RoVipStatus 只读vip状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRoVipStatus() {
         return this.RoVipStatus;
@@ -75,19 +68,15 @@ public class RoVipInfo extends AbstractModel {
 
     /**
      * Set 只读vip状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RoVipStatus 只读vip状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRoVipStatus(Long RoVipStatus) {
         this.RoVipStatus = RoVipStatus;
     }
 
     /**
-     * Get 只读vip的子网
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 只读vip的子网 
      * @return RoSubnetId 只读vip的子网
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRoSubnetId() {
         return this.RoSubnetId;
@@ -95,19 +84,15 @@ public class RoVipInfo extends AbstractModel {
 
     /**
      * Set 只读vip的子网
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RoSubnetId 只读vip的子网
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRoSubnetId(Long RoSubnetId) {
         this.RoSubnetId = RoSubnetId;
     }
 
     /**
-     * Get 只读vip的私有网络
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 只读vip的私有网络 
      * @return RoVpcId 只读vip的私有网络
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRoVpcId() {
         return this.RoVpcId;
@@ -115,19 +100,15 @@ public class RoVipInfo extends AbstractModel {
 
     /**
      * Set 只读vip的私有网络
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RoVpcId 只读vip的私有网络
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRoVpcId(Long RoVpcId) {
         this.RoVpcId = RoVpcId;
     }
 
     /**
-     * Get 只读vip的端口号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 只读vip的端口号 
      * @return RoVport 只读vip的端口号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getRoVport() {
         return this.RoVport;
@@ -135,19 +116,15 @@ public class RoVipInfo extends AbstractModel {
 
     /**
      * Set 只读vip的端口号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RoVport 只读vip的端口号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRoVport(Long RoVport) {
         this.RoVport = RoVport;
     }
 
     /**
-     * Get 只读vip
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 只读vip 
      * @return RoVip 只读vip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRoVip() {
         return this.RoVip;
@@ -155,9 +132,7 @@ public class RoVipInfo extends AbstractModel {
 
     /**
      * Set 只读vip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RoVip 只读vip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRoVip(String RoVip) {
         this.RoVip = RoVip;

@@ -49,7 +49,6 @@ public class AuditLogFile extends AbstractModel {
 
     /**
     * 文件大小，单位为 KB。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FileSize")
     @Expose
@@ -57,7 +56,6 @@ public class AuditLogFile extends AbstractModel {
 
     /**
     * 审计日志下载地址。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DownloadUrl")
     @Expose
@@ -65,7 +63,6 @@ public class AuditLogFile extends AbstractModel {
 
     /**
     * 错误信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ErrMsg")
     @Expose
@@ -132,10 +129,8 @@ public class AuditLogFile extends AbstractModel {
     }
 
     /**
-     * Get 文件大小，单位为 KB。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 文件大小，单位为 KB。 
      * @return FileSize 文件大小，单位为 KB。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFileSize() {
         return this.FileSize;
@@ -143,19 +138,15 @@ public class AuditLogFile extends AbstractModel {
 
     /**
      * Set 文件大小，单位为 KB。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FileSize 文件大小，单位为 KB。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFileSize(Long FileSize) {
         this.FileSize = FileSize;
     }
 
     /**
-     * Get 审计日志下载地址。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 审计日志下载地址。 
      * @return DownloadUrl 审计日志下载地址。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDownloadUrl() {
         return this.DownloadUrl;
@@ -163,19 +154,15 @@ public class AuditLogFile extends AbstractModel {
 
     /**
      * Set 审计日志下载地址。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DownloadUrl 审计日志下载地址。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDownloadUrl(String DownloadUrl) {
         this.DownloadUrl = DownloadUrl;
     }
 
     /**
-     * Get 错误信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 错误信息。 
      * @return ErrMsg 错误信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getErrMsg() {
         return this.ErrMsg;
@@ -183,9 +170,7 @@ public class AuditLogFile extends AbstractModel {
 
     /**
      * Set 错误信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ErrMsg 错误信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrMsg(String ErrMsg) {
         this.ErrMsg = ErrMsg;

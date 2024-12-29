@@ -74,7 +74,6 @@ public class DescribeParamTemplateInfoResponse extends AbstractModel {
 
     /**
     * 参数模板引擎。支持值包括："InnoDB"，"RocksDB"。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EngineType")
     @Expose
@@ -200,10 +199,8 @@ public class DescribeParamTemplateInfoResponse extends AbstractModel {
     }
 
     /**
-     * Get 参数模板引擎。支持值包括："InnoDB"，"RocksDB"。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 参数模板引擎。支持值包括："InnoDB"，"RocksDB"。 
      * @return EngineType 参数模板引擎。支持值包括："InnoDB"，"RocksDB"。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEngineType() {
         return this.EngineType;
@@ -211,9 +208,7 @@ public class DescribeParamTemplateInfoResponse extends AbstractModel {
 
     /**
      * Set 参数模板引擎。支持值包括："InnoDB"，"RocksDB"。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EngineType 参数模板引擎。支持值包括："InnoDB"，"RocksDB"。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEngineType(String EngineType) {
         this.EngineType = EngineType;

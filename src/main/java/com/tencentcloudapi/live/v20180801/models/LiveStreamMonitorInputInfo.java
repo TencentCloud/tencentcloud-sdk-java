@@ -64,6 +64,20 @@ public class LiveStreamMonitorInputInfo extends AbstractModel {
     private String Description;
 
     /**
+    * 导播台输入源索引（10000 pvw， 10001 pgm， 其余代表输入下标）
+    */
+    @SerializedName("CasterInputIndex")
+    @Expose
+    private Long CasterInputIndex;
+
+    /**
+    * 该输入源是否正在监播
+    */
+    @SerializedName("NeedMonitor")
+    @Expose
+    private Boolean NeedMonitor;
+
+    /**
      * Get 待监播的输入流名称。256字节以内，只允许包含字母、数字、‘-’，‘_’，'.'字符。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return InputStreamName 待监播的输入流名称。256字节以内，只允许包含字母、数字、‘-’，‘_’，'.'字符。
@@ -163,6 +177,38 @@ public class LiveStreamMonitorInputInfo extends AbstractModel {
         this.Description = Description;
     }
 
+    /**
+     * Get 导播台输入源索引（10000 pvw， 10001 pgm， 其余代表输入下标） 
+     * @return CasterInputIndex 导播台输入源索引（10000 pvw， 10001 pgm， 其余代表输入下标）
+     */
+    public Long getCasterInputIndex() {
+        return this.CasterInputIndex;
+    }
+
+    /**
+     * Set 导播台输入源索引（10000 pvw， 10001 pgm， 其余代表输入下标）
+     * @param CasterInputIndex 导播台输入源索引（10000 pvw， 10001 pgm， 其余代表输入下标）
+     */
+    public void setCasterInputIndex(Long CasterInputIndex) {
+        this.CasterInputIndex = CasterInputIndex;
+    }
+
+    /**
+     * Get 该输入源是否正在监播 
+     * @return NeedMonitor 该输入源是否正在监播
+     */
+    public Boolean getNeedMonitor() {
+        return this.NeedMonitor;
+    }
+
+    /**
+     * Set 该输入源是否正在监播
+     * @param NeedMonitor 该输入源是否正在监播
+     */
+    public void setNeedMonitor(Boolean NeedMonitor) {
+        this.NeedMonitor = NeedMonitor;
+    }
+
     public LiveStreamMonitorInputInfo() {
     }
 
@@ -186,6 +232,12 @@ public class LiveStreamMonitorInputInfo extends AbstractModel {
         if (source.Description != null) {
             this.Description = new String(source.Description);
         }
+        if (source.CasterInputIndex != null) {
+            this.CasterInputIndex = new Long(source.CasterInputIndex);
+        }
+        if (source.NeedMonitor != null) {
+            this.NeedMonitor = new Boolean(source.NeedMonitor);
+        }
     }
 
 
@@ -198,6 +250,8 @@ public class LiveStreamMonitorInputInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "InputApp", this.InputApp);
         this.setParamSimple(map, prefix + "InputUrl", this.InputUrl);
         this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "CasterInputIndex", this.CasterInputIndex);
+        this.setParamSimple(map, prefix + "NeedMonitor", this.NeedMonitor);
 
     }
 }

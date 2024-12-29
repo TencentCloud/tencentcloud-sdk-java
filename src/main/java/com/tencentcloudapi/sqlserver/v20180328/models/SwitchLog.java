@@ -25,7 +25,6 @@ public class SwitchLog extends AbstractModel {
 
     /**
     * 切换事件ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EventId")
     @Expose
@@ -33,7 +32,6 @@ public class SwitchLog extends AbstractModel {
 
     /**
     * 切换模式 0-系统自动切换，1-手动切换
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SwitchType")
     @Expose
@@ -41,7 +39,6 @@ public class SwitchLog extends AbstractModel {
 
     /**
     * 切换开始时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartTime")
     @Expose
@@ -49,7 +46,6 @@ public class SwitchLog extends AbstractModel {
 
     /**
     * 切换结束时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EndTime")
     @Expose
@@ -57,17 +53,14 @@ public class SwitchLog extends AbstractModel {
 
     /**
     * 机器故障导致自动切换
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Reason")
     @Expose
     private String Reason;
 
     /**
-     * Get 切换事件ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 切换事件ID 
      * @return EventId 切换事件ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEventId() {
         return this.EventId;
@@ -75,19 +68,15 @@ public class SwitchLog extends AbstractModel {
 
     /**
      * Set 切换事件ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EventId 切换事件ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEventId(String EventId) {
         this.EventId = EventId;
     }
 
     /**
-     * Get 切换模式 0-系统自动切换，1-手动切换
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 切换模式 0-系统自动切换，1-手动切换 
      * @return SwitchType 切换模式 0-系统自动切换，1-手动切换
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSwitchType() {
         return this.SwitchType;
@@ -95,19 +84,15 @@ public class SwitchLog extends AbstractModel {
 
     /**
      * Set 切换模式 0-系统自动切换，1-手动切换
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SwitchType 切换模式 0-系统自动切换，1-手动切换
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSwitchType(Long SwitchType) {
         this.SwitchType = SwitchType;
     }
 
     /**
-     * Get 切换开始时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 切换开始时间 
      * @return StartTime 切换开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStartTime() {
         return this.StartTime;
@@ -115,19 +100,15 @@ public class SwitchLog extends AbstractModel {
 
     /**
      * Set 切换开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StartTime 切换开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 切换结束时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 切换结束时间 
      * @return EndTime 切换结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEndTime() {
         return this.EndTime;
@@ -135,19 +116,15 @@ public class SwitchLog extends AbstractModel {
 
     /**
      * Set 切换结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EndTime 切换结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get 机器故障导致自动切换
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 机器故障导致自动切换 
      * @return Reason 机器故障导致自动切换
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getReason() {
         return this.Reason;
@@ -155,9 +132,7 @@ public class SwitchLog extends AbstractModel {
 
     /**
      * Set 机器故障导致自动切换
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Reason 机器故障导致自动切换
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReason(String Reason) {
         this.Reason = Reason;

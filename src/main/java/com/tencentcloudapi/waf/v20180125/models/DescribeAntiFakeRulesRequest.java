@@ -59,7 +59,7 @@ public class DescribeAntiFakeRulesRequest extends AbstractModel {
     private String Order;
 
     /**
-    * 目前支持根据ts排序
+    * 目前支持根据create_time、modify_time、id排序
     */
     @SerializedName("By")
     @Expose
@@ -146,16 +146,16 @@ public class DescribeAntiFakeRulesRequest extends AbstractModel {
     }
 
     /**
-     * Get 目前支持根据ts排序 
-     * @return By 目前支持根据ts排序
+     * Get 目前支持根据create_time、modify_time、id排序 
+     * @return By 目前支持根据create_time、modify_time、id排序
      */
     public String getBy() {
         return this.By;
     }
 
     /**
-     * Set 目前支持根据ts排序
-     * @param By 目前支持根据ts排序
+     * Set 目前支持根据create_time、modify_time、id排序
+     * @param By 目前支持根据create_time、modify_time、id排序
      */
     public void setBy(String By) {
         this.By = By;

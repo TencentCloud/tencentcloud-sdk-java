@@ -128,6 +128,14 @@ public class GovernanceNamespace extends AbstractModel {
     private String [] RemoveGroupIds;
 
     /**
+    * 该命名空间下的服务对哪些命名空间可见
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ServiceExportTo")
+    @Expose
+    private String [] ServiceExportTo;
+
+    /**
      * Get 命名空间名称。
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Name 命名空间名称。
@@ -387,6 +395,26 @@ public class GovernanceNamespace extends AbstractModel {
         this.RemoveGroupIds = RemoveGroupIds;
     }
 
+    /**
+     * Get 该命名空间下的服务对哪些命名空间可见
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ServiceExportTo 该命名空间下的服务对哪些命名空间可见
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getServiceExportTo() {
+        return this.ServiceExportTo;
+    }
+
+    /**
+     * Set 该命名空间下的服务对哪些命名空间可见
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ServiceExportTo 该命名空间下的服务对哪些命名空间可见
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setServiceExportTo(String [] ServiceExportTo) {
+        this.ServiceExportTo = ServiceExportTo;
+    }
+
     public GovernanceNamespace() {
     }
 
@@ -446,6 +474,12 @@ public class GovernanceNamespace extends AbstractModel {
                 this.RemoveGroupIds[i] = new String(source.RemoveGroupIds[i]);
             }
         }
+        if (source.ServiceExportTo != null) {
+            this.ServiceExportTo = new String[source.ServiceExportTo.length];
+            for (int i = 0; i < source.ServiceExportTo.length; i++) {
+                this.ServiceExportTo[i] = new String(source.ServiceExportTo[i]);
+            }
+        }
     }
 
 
@@ -466,6 +500,7 @@ public class GovernanceNamespace extends AbstractModel {
         this.setParamArraySimple(map, prefix + "GroupIds.", this.GroupIds);
         this.setParamArraySimple(map, prefix + "RemoveUserIds.", this.RemoveUserIds);
         this.setParamArraySimple(map, prefix + "RemoveGroupIds.", this.RemoveGroupIds);
+        this.setParamArraySimple(map, prefix + "ServiceExportTo.", this.ServiceExportTo);
 
     }
 }

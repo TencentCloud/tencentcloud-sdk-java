@@ -59,11 +59,20 @@ RESET：对原有不健康实例进行重装系统操作，可保持数据盘、
     private String ReplaceMode;
 
     /**
-    * 自动更新实例标签。默认取值为 false，配置后如伸缩组标签发生更新，会同步更新（同步更新仅支持新增、修改标签，暂不支持删除标签）伸缩组内运行中状态实例的标签，同步更新非立即生效，存在一定延迟。
+    * 自动更新实例标签。默认取值为 False，配置后如伸缩组标签发生更新，会同步更新（同步更新仅支持新增、修改标签，暂不支持删除标签）伸缩组内运行中状态实例的标签，同步更新非立即生效，存在一定延迟。
     */
     @SerializedName("AutoUpdateInstanceTags")
     @Expose
     private Boolean AutoUpdateInstanceTags;
+
+    /**
+    * 期望实例数同步最大最小值。默认值为 False。该参数仅对修改伸缩组接口未传入期望数的场景生效。
+<li>True: 修改最大值或最小值时，如与当前期望数存在冲突，则同步调整期望数。例如修改时传入最小值 2，当前期望数为 1，则同步调整期望数为 2。</li>
+<li>False: 修改最大值或最小值时，如与当前期望数存在冲突，报错提示不允许修改。</li>
+    */
+    @SerializedName("DesiredCapacitySyncWithMaxMinSize")
+    @Expose
+    private Boolean DesiredCapacitySyncWithMaxMinSize;
 
     /**
      * Get 开启监控不健康替换服务。若开启则对于云监控标记为不健康的实例，弹性伸缩服务会进行替换。若不指定该参数，则默认为 False。 
@@ -158,19 +167,43 @@ RESET：对原有不健康实例进行重装系统操作，可保持数据盘、
     }
 
     /**
-     * Get 自动更新实例标签。默认取值为 false，配置后如伸缩组标签发生更新，会同步更新（同步更新仅支持新增、修改标签，暂不支持删除标签）伸缩组内运行中状态实例的标签，同步更新非立即生效，存在一定延迟。 
-     * @return AutoUpdateInstanceTags 自动更新实例标签。默认取值为 false，配置后如伸缩组标签发生更新，会同步更新（同步更新仅支持新增、修改标签，暂不支持删除标签）伸缩组内运行中状态实例的标签，同步更新非立即生效，存在一定延迟。
+     * Get 自动更新实例标签。默认取值为 False，配置后如伸缩组标签发生更新，会同步更新（同步更新仅支持新增、修改标签，暂不支持删除标签）伸缩组内运行中状态实例的标签，同步更新非立即生效，存在一定延迟。 
+     * @return AutoUpdateInstanceTags 自动更新实例标签。默认取值为 False，配置后如伸缩组标签发生更新，会同步更新（同步更新仅支持新增、修改标签，暂不支持删除标签）伸缩组内运行中状态实例的标签，同步更新非立即生效，存在一定延迟。
      */
     public Boolean getAutoUpdateInstanceTags() {
         return this.AutoUpdateInstanceTags;
     }
 
     /**
-     * Set 自动更新实例标签。默认取值为 false，配置后如伸缩组标签发生更新，会同步更新（同步更新仅支持新增、修改标签，暂不支持删除标签）伸缩组内运行中状态实例的标签，同步更新非立即生效，存在一定延迟。
-     * @param AutoUpdateInstanceTags 自动更新实例标签。默认取值为 false，配置后如伸缩组标签发生更新，会同步更新（同步更新仅支持新增、修改标签，暂不支持删除标签）伸缩组内运行中状态实例的标签，同步更新非立即生效，存在一定延迟。
+     * Set 自动更新实例标签。默认取值为 False，配置后如伸缩组标签发生更新，会同步更新（同步更新仅支持新增、修改标签，暂不支持删除标签）伸缩组内运行中状态实例的标签，同步更新非立即生效，存在一定延迟。
+     * @param AutoUpdateInstanceTags 自动更新实例标签。默认取值为 False，配置后如伸缩组标签发生更新，会同步更新（同步更新仅支持新增、修改标签，暂不支持删除标签）伸缩组内运行中状态实例的标签，同步更新非立即生效，存在一定延迟。
      */
     public void setAutoUpdateInstanceTags(Boolean AutoUpdateInstanceTags) {
         this.AutoUpdateInstanceTags = AutoUpdateInstanceTags;
+    }
+
+    /**
+     * Get 期望实例数同步最大最小值。默认值为 False。该参数仅对修改伸缩组接口未传入期望数的场景生效。
+<li>True: 修改最大值或最小值时，如与当前期望数存在冲突，则同步调整期望数。例如修改时传入最小值 2，当前期望数为 1，则同步调整期望数为 2。</li>
+<li>False: 修改最大值或最小值时，如与当前期望数存在冲突，报错提示不允许修改。</li> 
+     * @return DesiredCapacitySyncWithMaxMinSize 期望实例数同步最大最小值。默认值为 False。该参数仅对修改伸缩组接口未传入期望数的场景生效。
+<li>True: 修改最大值或最小值时，如与当前期望数存在冲突，则同步调整期望数。例如修改时传入最小值 2，当前期望数为 1，则同步调整期望数为 2。</li>
+<li>False: 修改最大值或最小值时，如与当前期望数存在冲突，报错提示不允许修改。</li>
+     */
+    public Boolean getDesiredCapacitySyncWithMaxMinSize() {
+        return this.DesiredCapacitySyncWithMaxMinSize;
+    }
+
+    /**
+     * Set 期望实例数同步最大最小值。默认值为 False。该参数仅对修改伸缩组接口未传入期望数的场景生效。
+<li>True: 修改最大值或最小值时，如与当前期望数存在冲突，则同步调整期望数。例如修改时传入最小值 2，当前期望数为 1，则同步调整期望数为 2。</li>
+<li>False: 修改最大值或最小值时，如与当前期望数存在冲突，报错提示不允许修改。</li>
+     * @param DesiredCapacitySyncWithMaxMinSize 期望实例数同步最大最小值。默认值为 False。该参数仅对修改伸缩组接口未传入期望数的场景生效。
+<li>True: 修改最大值或最小值时，如与当前期望数存在冲突，则同步调整期望数。例如修改时传入最小值 2，当前期望数为 1，则同步调整期望数为 2。</li>
+<li>False: 修改最大值或最小值时，如与当前期望数存在冲突，报错提示不允许修改。</li>
+     */
+    public void setDesiredCapacitySyncWithMaxMinSize(Boolean DesiredCapacitySyncWithMaxMinSize) {
+        this.DesiredCapacitySyncWithMaxMinSize = DesiredCapacitySyncWithMaxMinSize;
     }
 
     public ServiceSettings() {
@@ -196,6 +229,9 @@ RESET：对原有不健康实例进行重装系统操作，可保持数据盘、
         if (source.AutoUpdateInstanceTags != null) {
             this.AutoUpdateInstanceTags = new Boolean(source.AutoUpdateInstanceTags);
         }
+        if (source.DesiredCapacitySyncWithMaxMinSize != null) {
+            this.DesiredCapacitySyncWithMaxMinSize = new Boolean(source.DesiredCapacitySyncWithMaxMinSize);
+        }
     }
 
 
@@ -208,6 +244,7 @@ RESET：对原有不健康实例进行重装系统操作，可保持数据盘、
         this.setParamSimple(map, prefix + "ReplaceLoadBalancerUnhealthy", this.ReplaceLoadBalancerUnhealthy);
         this.setParamSimple(map, prefix + "ReplaceMode", this.ReplaceMode);
         this.setParamSimple(map, prefix + "AutoUpdateInstanceTags", this.AutoUpdateInstanceTags);
+        this.setParamSimple(map, prefix + "DesiredCapacitySyncWithMaxMinSize", this.DesiredCapacitySyncWithMaxMinSize);
 
     }
 }

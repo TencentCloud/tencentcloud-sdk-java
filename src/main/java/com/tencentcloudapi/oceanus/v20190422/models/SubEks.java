@@ -64,6 +64,34 @@ public class SubEks extends AbstractModel {
     private Float RunningCu;
 
     /**
+    * 总的CPU
+    */
+    @SerializedName("TotalCpu")
+    @Expose
+    private Float TotalCpu;
+
+    /**
+    * 总的内存
+    */
+    @SerializedName("TotalMem")
+    @Expose
+    private Float TotalMem;
+
+    /**
+    * 运行的CPU
+    */
+    @SerializedName("RunningCpu")
+    @Expose
+    private Float RunningCpu;
+
+    /**
+    * 运行的内存
+    */
+    @SerializedName("RunningMem")
+    @Expose
+    private Float RunningMem;
+
+    /**
      * Get 集群id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return SerialId 集群id
@@ -163,6 +191,70 @@ public class SubEks extends AbstractModel {
         this.RunningCu = RunningCu;
     }
 
+    /**
+     * Get 总的CPU 
+     * @return TotalCpu 总的CPU
+     */
+    public Float getTotalCpu() {
+        return this.TotalCpu;
+    }
+
+    /**
+     * Set 总的CPU
+     * @param TotalCpu 总的CPU
+     */
+    public void setTotalCpu(Float TotalCpu) {
+        this.TotalCpu = TotalCpu;
+    }
+
+    /**
+     * Get 总的内存 
+     * @return TotalMem 总的内存
+     */
+    public Float getTotalMem() {
+        return this.TotalMem;
+    }
+
+    /**
+     * Set 总的内存
+     * @param TotalMem 总的内存
+     */
+    public void setTotalMem(Float TotalMem) {
+        this.TotalMem = TotalMem;
+    }
+
+    /**
+     * Get 运行的CPU 
+     * @return RunningCpu 运行的CPU
+     */
+    public Float getRunningCpu() {
+        return this.RunningCpu;
+    }
+
+    /**
+     * Set 运行的CPU
+     * @param RunningCpu 运行的CPU
+     */
+    public void setRunningCpu(Float RunningCpu) {
+        this.RunningCpu = RunningCpu;
+    }
+
+    /**
+     * Get 运行的内存 
+     * @return RunningMem 运行的内存
+     */
+    public Float getRunningMem() {
+        return this.RunningMem;
+    }
+
+    /**
+     * Set 运行的内存
+     * @param RunningMem 运行的内存
+     */
+    public void setRunningMem(Float RunningMem) {
+        this.RunningMem = RunningMem;
+    }
+
     public SubEks() {
     }
 
@@ -186,6 +278,18 @@ public class SubEks extends AbstractModel {
         if (source.RunningCu != null) {
             this.RunningCu = new Float(source.RunningCu);
         }
+        if (source.TotalCpu != null) {
+            this.TotalCpu = new Float(source.TotalCpu);
+        }
+        if (source.TotalMem != null) {
+            this.TotalMem = new Float(source.TotalMem);
+        }
+        if (source.RunningCpu != null) {
+            this.RunningCpu = new Float(source.RunningCpu);
+        }
+        if (source.RunningMem != null) {
+            this.RunningMem = new Float(source.RunningMem);
+        }
     }
 
 
@@ -198,6 +302,10 @@ public class SubEks extends AbstractModel {
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "StatusDesc", this.StatusDesc);
         this.setParamSimple(map, prefix + "RunningCu", this.RunningCu);
+        this.setParamSimple(map, prefix + "TotalCpu", this.TotalCpu);
+        this.setParamSimple(map, prefix + "TotalMem", this.TotalMem);
+        this.setParamSimple(map, prefix + "RunningCpu", this.RunningCpu);
+        this.setParamSimple(map, prefix + "RunningMem", this.RunningMem);
 
     }
 }

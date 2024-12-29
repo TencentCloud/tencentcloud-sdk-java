@@ -109,7 +109,6 @@ public class AuditLog extends AbstractModel {
 
     /**
     * 扫描行数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CheckRows")
     @Expose
@@ -117,7 +116,6 @@ public class AuditLog extends AbstractModel {
 
     /**
     * cpu执行时间，微秒。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CpuTime")
     @Expose
@@ -125,7 +123,6 @@ public class AuditLog extends AbstractModel {
 
     /**
     * IO等待时间，微秒。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IoWaitTime")
     @Expose
@@ -133,7 +130,6 @@ public class AuditLog extends AbstractModel {
 
     /**
     * 锁等待时间，微秒。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LockWaitTime")
     @Expose
@@ -141,7 +137,6 @@ public class AuditLog extends AbstractModel {
 
     /**
     * 开始时间，与timestamp构成一个精确到纳秒的时间。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NsTime")
     @Expose
@@ -149,7 +144,6 @@ public class AuditLog extends AbstractModel {
 
     /**
     * 事物持续时间，微秒。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TrxLivingTime")
     @Expose
@@ -362,10 +356,8 @@ public class AuditLog extends AbstractModel {
     }
 
     /**
-     * Get 扫描行数。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 扫描行数。 
      * @return CheckRows 扫描行数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCheckRows() {
         return this.CheckRows;
@@ -373,19 +365,15 @@ public class AuditLog extends AbstractModel {
 
     /**
      * Set 扫描行数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CheckRows 扫描行数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCheckRows(Long CheckRows) {
         this.CheckRows = CheckRows;
     }
 
     /**
-     * Get cpu执行时间，微秒。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get cpu执行时间，微秒。 
      * @return CpuTime cpu执行时间，微秒。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getCpuTime() {
         return this.CpuTime;
@@ -393,19 +381,15 @@ public class AuditLog extends AbstractModel {
 
     /**
      * Set cpu执行时间，微秒。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CpuTime cpu执行时间，微秒。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCpuTime(Float CpuTime) {
         this.CpuTime = CpuTime;
     }
 
     /**
-     * Get IO等待时间，微秒。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get IO等待时间，微秒。 
      * @return IoWaitTime IO等待时间，微秒。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIoWaitTime() {
         return this.IoWaitTime;
@@ -413,19 +397,15 @@ public class AuditLog extends AbstractModel {
 
     /**
      * Set IO等待时间，微秒。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IoWaitTime IO等待时间，微秒。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIoWaitTime(Long IoWaitTime) {
         this.IoWaitTime = IoWaitTime;
     }
 
     /**
-     * Get 锁等待时间，微秒。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 锁等待时间，微秒。 
      * @return LockWaitTime 锁等待时间，微秒。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getLockWaitTime() {
         return this.LockWaitTime;
@@ -433,19 +413,15 @@ public class AuditLog extends AbstractModel {
 
     /**
      * Set 锁等待时间，微秒。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LockWaitTime 锁等待时间，微秒。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLockWaitTime(Long LockWaitTime) {
         this.LockWaitTime = LockWaitTime;
     }
 
     /**
-     * Get 开始时间，与timestamp构成一个精确到纳秒的时间。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 开始时间，与timestamp构成一个精确到纳秒的时间。 
      * @return NsTime 开始时间，与timestamp构成一个精确到纳秒的时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getNsTime() {
         return this.NsTime;
@@ -453,19 +429,15 @@ public class AuditLog extends AbstractModel {
 
     /**
      * Set 开始时间，与timestamp构成一个精确到纳秒的时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NsTime 开始时间，与timestamp构成一个精确到纳秒的时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNsTime(Long NsTime) {
         this.NsTime = NsTime;
     }
 
     /**
-     * Get 事物持续时间，微秒。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 事物持续时间，微秒。 
      * @return TrxLivingTime 事物持续时间，微秒。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTrxLivingTime() {
         return this.TrxLivingTime;
@@ -473,9 +445,7 @@ public class AuditLog extends AbstractModel {
 
     /**
      * Set 事物持续时间，微秒。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TrxLivingTime 事物持续时间，微秒。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTrxLivingTime(Long TrxLivingTime) {
         this.TrxLivingTime = TrxLivingTime;

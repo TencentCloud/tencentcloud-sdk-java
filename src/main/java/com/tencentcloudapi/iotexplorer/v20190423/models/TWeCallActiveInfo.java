@@ -48,6 +48,13 @@ public class TWeCallActiveInfo extends AbstractModel {
     private Long ExpireTime;
 
     /**
+    * 类型
+    */
+    @SerializedName("PkgType")
+    @Expose
+    private Long PkgType;
+
+    /**
      * Get 小程序ID
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return ModelId 小程序ID
@@ -111,6 +118,22 @@ public class TWeCallActiveInfo extends AbstractModel {
         this.ExpireTime = ExpireTime;
     }
 
+    /**
+     * Get 类型 
+     * @return PkgType 类型
+     */
+    public Long getPkgType() {
+        return this.PkgType;
+    }
+
+    /**
+     * Set 类型
+     * @param PkgType 类型
+     */
+    public void setPkgType(Long PkgType) {
+        this.PkgType = PkgType;
+    }
+
     public TWeCallActiveInfo() {
     }
 
@@ -128,6 +151,9 @@ public class TWeCallActiveInfo extends AbstractModel {
         if (source.ExpireTime != null) {
             this.ExpireTime = new Long(source.ExpireTime);
         }
+        if (source.PkgType != null) {
+            this.PkgType = new Long(source.PkgType);
+        }
     }
 
 
@@ -138,6 +164,7 @@ public class TWeCallActiveInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "ModelId", this.ModelId);
         this.setParamSimple(map, prefix + "Sn", this.Sn);
         this.setParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
+        this.setParamSimple(map, prefix + "PkgType", this.PkgType);
 
     }
 }

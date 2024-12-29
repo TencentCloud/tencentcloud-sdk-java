@@ -25,7 +25,6 @@ public class DescribeCasterListResponse extends AbstractModel {
 
     /**
     * 用户对应的导播台简要信息列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CasterList")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeCasterListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 用户对应的导播台简要信息列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户对应的导播台简要信息列表 
      * @return CasterList 用户对应的导播台简要信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CasterBriefInfo [] getCasterList() {
         return this.CasterList;
@@ -50,9 +47,7 @@ public class DescribeCasterListResponse extends AbstractModel {
 
     /**
      * Set 用户对应的导播台简要信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CasterList 用户对应的导播台简要信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCasterList(CasterBriefInfo [] CasterList) {
         this.CasterList = CasterList;

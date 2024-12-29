@@ -38,6 +38,13 @@ public class DescribeGovernanceNamespacesRequest extends AbstractModel {
     private String Name;
 
     /**
+    * 是否开启同步到全局注册中心	
+    */
+    @SerializedName("SyncToGlobalRegistry")
+    @Expose
+    private String SyncToGlobalRegistry;
+
+    /**
     * 偏移量，默认为0。
     */
     @SerializedName("Offset")
@@ -81,6 +88,22 @@ public class DescribeGovernanceNamespacesRequest extends AbstractModel {
      */
     public void setName(String Name) {
         this.Name = Name;
+    }
+
+    /**
+     * Get 是否开启同步到全局注册中心	 
+     * @return SyncToGlobalRegistry 是否开启同步到全局注册中心	
+     */
+    public String getSyncToGlobalRegistry() {
+        return this.SyncToGlobalRegistry;
+    }
+
+    /**
+     * Set 是否开启同步到全局注册中心	
+     * @param SyncToGlobalRegistry 是否开启同步到全局注册中心	
+     */
+    public void setSyncToGlobalRegistry(String SyncToGlobalRegistry) {
+        this.SyncToGlobalRegistry = SyncToGlobalRegistry;
     }
 
     /**
@@ -129,6 +152,9 @@ public class DescribeGovernanceNamespacesRequest extends AbstractModel {
         if (source.Name != null) {
             this.Name = new String(source.Name);
         }
+        if (source.SyncToGlobalRegistry != null) {
+            this.SyncToGlobalRegistry = new String(source.SyncToGlobalRegistry);
+        }
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
         }
@@ -144,6 +170,7 @@ public class DescribeGovernanceNamespacesRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "SyncToGlobalRegistry", this.SyncToGlobalRegistry);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
 

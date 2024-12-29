@@ -105,7 +105,9 @@ public class MnaClient extends AbstractClient{
     }
 
     /**
-     *移动网络发起Qos加速过程
+     *产品下线
+
+移动网络发起Qos加速过程
      * @param req CreateQosRequest
      * @return CreateQosResponse
      * @throws TencentCloudSDKException
@@ -149,7 +151,9 @@ public class MnaClient extends AbstractClient{
     }
 
     /**
-     *移动网络停止Qos加速过程
+     *产品下线
+
+移动网络停止Qos加速过程
      * @param req DeleteQosRequest
      * @return DeleteQosResponse
      * @throws TencentCloudSDKException
@@ -160,7 +164,9 @@ public class MnaClient extends AbstractClient{
     }
 
     /**
-     *获取Qos加速状态
+     *产品下线
+
+获取Qos加速状态
      * @param req DescribeQosRequest
      * @return DescribeQosResponse
      * @throws TencentCloudSDKException

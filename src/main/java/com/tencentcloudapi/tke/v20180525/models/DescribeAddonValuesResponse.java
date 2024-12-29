@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeAddonValuesResponse extends AbstractModel {
 
     /**
-    * 参数列表，如果addon已安装，会使用已设置的参数做渲染，是一个json格式的字符串
+    * 参数列表，如果addon已安装，会使用已设置的参数和chart里的默认参数做渲染，是一个json格式的字符串，未安装addon时返回为空值。
     */
     @SerializedName("Values")
     @Expose
     private String Values;
 
     /**
-    * addon支持的参数列表，使用默认值，是一个json格式的字符串
+    * addon支持的参数列表，值为chart的默认值，是一个json格式的字符串。
     */
     @SerializedName("DefaultValues")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeAddonValuesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 参数列表，如果addon已安装，会使用已设置的参数做渲染，是一个json格式的字符串 
-     * @return Values 参数列表，如果addon已安装，会使用已设置的参数做渲染，是一个json格式的字符串
+     * Get 参数列表，如果addon已安装，会使用已设置的参数和chart里的默认参数做渲染，是一个json格式的字符串，未安装addon时返回为空值。 
+     * @return Values 参数列表，如果addon已安装，会使用已设置的参数和chart里的默认参数做渲染，是一个json格式的字符串，未安装addon时返回为空值。
      */
     public String getValues() {
         return this.Values;
     }
 
     /**
-     * Set 参数列表，如果addon已安装，会使用已设置的参数做渲染，是一个json格式的字符串
-     * @param Values 参数列表，如果addon已安装，会使用已设置的参数做渲染，是一个json格式的字符串
+     * Set 参数列表，如果addon已安装，会使用已设置的参数和chart里的默认参数做渲染，是一个json格式的字符串，未安装addon时返回为空值。
+     * @param Values 参数列表，如果addon已安装，会使用已设置的参数和chart里的默认参数做渲染，是一个json格式的字符串，未安装addon时返回为空值。
      */
     public void setValues(String Values) {
         this.Values = Values;
     }
 
     /**
-     * Get addon支持的参数列表，使用默认值，是一个json格式的字符串 
-     * @return DefaultValues addon支持的参数列表，使用默认值，是一个json格式的字符串
+     * Get addon支持的参数列表，值为chart的默认值，是一个json格式的字符串。 
+     * @return DefaultValues addon支持的参数列表，值为chart的默认值，是一个json格式的字符串。
      */
     public String getDefaultValues() {
         return this.DefaultValues;
     }
 
     /**
-     * Set addon支持的参数列表，使用默认值，是一个json格式的字符串
-     * @param DefaultValues addon支持的参数列表，使用默认值，是一个json格式的字符串
+     * Set addon支持的参数列表，值为chart的默认值，是一个json格式的字符串。
+     * @param DefaultValues addon支持的参数列表，值为chart的默认值，是一个json格式的字符串。
      */
     public void setDefaultValues(String DefaultValues) {
         this.DefaultValues = DefaultValues;

@@ -102,7 +102,6 @@ public class RoGroup extends AbstractModel {
 
     /**
     * 私有网络 ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UniqVpcId")
     @Expose
@@ -110,7 +109,6 @@ public class RoGroup extends AbstractModel {
 
     /**
     * 子网 ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UniqSubnetId")
     @Expose
@@ -118,7 +116,6 @@ public class RoGroup extends AbstractModel {
 
     /**
     * 只读组所在的地域。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RoGroupRegion")
     @Expose
@@ -126,7 +123,6 @@ public class RoGroup extends AbstractModel {
 
     /**
     * 只读组所在的可用区。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RoGroupZone")
     @Expose
@@ -134,7 +130,6 @@ public class RoGroup extends AbstractModel {
 
     /**
     * 延迟复制时间。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DelayReplicationTime")
     @Expose
@@ -317,10 +312,8 @@ public class RoGroup extends AbstractModel {
     }
 
     /**
-     * Get 私有网络 ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 私有网络 ID。 
      * @return UniqVpcId 私有网络 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUniqVpcId() {
         return this.UniqVpcId;
@@ -328,19 +321,15 @@ public class RoGroup extends AbstractModel {
 
     /**
      * Set 私有网络 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UniqVpcId 私有网络 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUniqVpcId(String UniqVpcId) {
         this.UniqVpcId = UniqVpcId;
     }
 
     /**
-     * Get 子网 ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 子网 ID。 
      * @return UniqSubnetId 子网 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUniqSubnetId() {
         return this.UniqSubnetId;
@@ -348,19 +337,15 @@ public class RoGroup extends AbstractModel {
 
     /**
      * Set 子网 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UniqSubnetId 子网 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUniqSubnetId(String UniqSubnetId) {
         this.UniqSubnetId = UniqSubnetId;
     }
 
     /**
-     * Get 只读组所在的地域。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 只读组所在的地域。 
      * @return RoGroupRegion 只读组所在的地域。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRoGroupRegion() {
         return this.RoGroupRegion;
@@ -368,19 +353,15 @@ public class RoGroup extends AbstractModel {
 
     /**
      * Set 只读组所在的地域。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RoGroupRegion 只读组所在的地域。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRoGroupRegion(String RoGroupRegion) {
         this.RoGroupRegion = RoGroupRegion;
     }
 
     /**
-     * Get 只读组所在的可用区。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 只读组所在的可用区。 
      * @return RoGroupZone 只读组所在的可用区。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRoGroupZone() {
         return this.RoGroupZone;
@@ -388,19 +369,15 @@ public class RoGroup extends AbstractModel {
 
     /**
      * Set 只读组所在的可用区。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RoGroupZone 只读组所在的可用区。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRoGroupZone(String RoGroupZone) {
         this.RoGroupZone = RoGroupZone;
     }
 
     /**
-     * Get 延迟复制时间。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 延迟复制时间。 
      * @return DelayReplicationTime 延迟复制时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDelayReplicationTime() {
         return this.DelayReplicationTime;
@@ -408,9 +385,7 @@ public class RoGroup extends AbstractModel {
 
     /**
      * Set 延迟复制时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DelayReplicationTime 延迟复制时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDelayReplicationTime(Long DelayReplicationTime) {
         this.DelayReplicationTime = DelayReplicationTime;

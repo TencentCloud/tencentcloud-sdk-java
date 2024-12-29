@@ -38,7 +38,7 @@ public class Resource extends AbstractModel {
 <li>5：表示高效云盘。</li>
 <li>6：表示增强型SSD云硬盘。</li>
 <li>11：表示吞吐型云硬盘。</li>
-<li>12：表示极速型SSD云硬盘。</li>
+<li>12：表示极速型SSD云硬盘。</li>：创建时该类型无效，会根据数据盘类型和节点类型自动判断
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StorageType")
@@ -156,7 +156,7 @@ public class Resource extends AbstractModel {
 <li>5：表示高效云盘。</li>
 <li>6：表示增强型SSD云硬盘。</li>
 <li>11：表示吞吐型云硬盘。</li>
-<li>12：表示极速型SSD云硬盘。</li>
+<li>12：表示极速型SSD云硬盘。</li>：创建时该类型无效，会根据数据盘类型和节点类型自动判断
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return StorageType 存储类型
 取值范围：
@@ -164,7 +164,7 @@ public class Resource extends AbstractModel {
 <li>5：表示高效云盘。</li>
 <li>6：表示增强型SSD云硬盘。</li>
 <li>11：表示吞吐型云硬盘。</li>
-<li>12：表示极速型SSD云硬盘。</li>
+<li>12：表示极速型SSD云硬盘。</li>：创建时该类型无效，会根据数据盘类型和节点类型自动判断
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStorageType() {
@@ -178,7 +178,7 @@ public class Resource extends AbstractModel {
 <li>5：表示高效云盘。</li>
 <li>6：表示增强型SSD云硬盘。</li>
 <li>11：表示吞吐型云硬盘。</li>
-<li>12：表示极速型SSD云硬盘。</li>
+<li>12：表示极速型SSD云硬盘。</li>：创建时该类型无效，会根据数据盘类型和节点类型自动判断
 注意：此字段可能返回 null，表示取不到有效值。
      * @param StorageType 存储类型
 取值范围：
@@ -186,7 +186,7 @@ public class Resource extends AbstractModel {
 <li>5：表示高效云盘。</li>
 <li>6：表示增强型SSD云硬盘。</li>
 <li>11：表示吞吐型云硬盘。</li>
-<li>12：表示极速型SSD云硬盘。</li>
+<li>12：表示极速型SSD云硬盘。</li>：创建时该类型无效，会根据数据盘类型和节点类型自动判断
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStorageType(Long StorageType) {

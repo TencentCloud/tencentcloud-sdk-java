@@ -25,7 +25,6 @@ public class AuditInstanceInfo extends AbstractModel {
 
     /**
     * 项目ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProjectId")
     @Expose
@@ -33,7 +32,6 @@ public class AuditInstanceInfo extends AbstractModel {
 
     /**
     * 标签信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TagList")
     @Expose
@@ -41,7 +39,6 @@ public class AuditInstanceInfo extends AbstractModel {
 
     /**
     * 数据库内核类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DbType")
     @Expose
@@ -49,17 +46,14 @@ public class AuditInstanceInfo extends AbstractModel {
 
     /**
     * 数据库内核版本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DbVersion")
     @Expose
     private String DbVersion;
 
     /**
-     * Get 项目ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 项目ID 
      * @return ProjectId 项目ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getProjectId() {
         return this.ProjectId;
@@ -67,19 +61,15 @@ public class AuditInstanceInfo extends AbstractModel {
 
     /**
      * Set 项目ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProjectId 项目ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get 标签信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标签信息 
      * @return TagList 标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TagInfoUnit [] getTagList() {
         return this.TagList;
@@ -87,19 +77,15 @@ public class AuditInstanceInfo extends AbstractModel {
 
     /**
      * Set 标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TagList 标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTagList(TagInfoUnit [] TagList) {
         this.TagList = TagList;
     }
 
     /**
-     * Get 数据库内核类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据库内核类型 
      * @return DbType 数据库内核类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDbType() {
         return this.DbType;
@@ -107,19 +93,15 @@ public class AuditInstanceInfo extends AbstractModel {
 
     /**
      * Set 数据库内核类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DbType 数据库内核类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDbType(String DbType) {
         this.DbType = DbType;
     }
 
     /**
-     * Get 数据库内核版本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据库内核版本 
      * @return DbVersion 数据库内核版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDbVersion() {
         return this.DbVersion;
@@ -127,9 +109,7 @@ public class AuditInstanceInfo extends AbstractModel {
 
     /**
      * Set 数据库内核版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DbVersion 数据库内核版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDbVersion(String DbVersion) {
         this.DbVersion = DbVersion;

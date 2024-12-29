@@ -31,7 +31,6 @@ enable_doing-开启中
 disable_doing-关闭中
 renew_doing-更新中
 wait_doing-等待维护时间内执行
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Encryption")
     @Expose
@@ -39,7 +38,6 @@ wait_doing-等待维护时间内执行
 
     /**
     * SSL证书有效期，时间格式 YYYY-MM-DD HH:MM:SS
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SSLValidityPeriod")
     @Expose
@@ -47,7 +45,6 @@ wait_doing-等待维护时间内执行
 
     /**
     * SSL证书有效性，0-无效，1-有效
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SSLValidity")
     @Expose
@@ -81,8 +78,7 @@ disable-未开启
 enable_doing-开启中
 disable_doing-关闭中
 renew_doing-更新中
-wait_doing-等待维护时间内执行
-注意：此字段可能返回 null，表示取不到有效值。 
+wait_doing-等待维护时间内执行 
      * @return Encryption SSL加密状态，
 enable-已开启
 disable-未开启
@@ -90,7 +86,6 @@ enable_doing-开启中
 disable_doing-关闭中
 renew_doing-更新中
 wait_doing-等待维护时间内执行
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEncryption() {
         return this.Encryption;
@@ -104,7 +99,6 @@ enable_doing-开启中
 disable_doing-关闭中
 renew_doing-更新中
 wait_doing-等待维护时间内执行
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Encryption SSL加密状态，
 enable-已开启
 disable-未开启
@@ -112,17 +106,14 @@ enable_doing-开启中
 disable_doing-关闭中
 renew_doing-更新中
 wait_doing-等待维护时间内执行
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEncryption(String Encryption) {
         this.Encryption = Encryption;
     }
 
     /**
-     * Get SSL证书有效期，时间格式 YYYY-MM-DD HH:MM:SS
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get SSL证书有效期，时间格式 YYYY-MM-DD HH:MM:SS 
      * @return SSLValidityPeriod SSL证书有效期，时间格式 YYYY-MM-DD HH:MM:SS
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSSLValidityPeriod() {
         return this.SSLValidityPeriod;
@@ -130,19 +121,15 @@ wait_doing-等待维护时间内执行
 
     /**
      * Set SSL证书有效期，时间格式 YYYY-MM-DD HH:MM:SS
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SSLValidityPeriod SSL证书有效期，时间格式 YYYY-MM-DD HH:MM:SS
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSSLValidityPeriod(String SSLValidityPeriod) {
         this.SSLValidityPeriod = SSLValidityPeriod;
     }
 
     /**
-     * Get SSL证书有效性，0-无效，1-有效
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get SSL证书有效性，0-无效，1-有效 
      * @return SSLValidity SSL证书有效性，0-无效，1-有效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSSLValidity() {
         return this.SSLValidity;
@@ -150,9 +137,7 @@ wait_doing-等待维护时间内执行
 
     /**
      * Set SSL证书有效性，0-无效，1-有效
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SSLValidity SSL证书有效性，0-无效，1-有效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSSLValidity(Long SSLValidity) {
         this.SSLValidity = SSLValidity;

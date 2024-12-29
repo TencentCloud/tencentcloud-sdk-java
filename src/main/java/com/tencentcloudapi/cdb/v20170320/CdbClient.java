@@ -864,7 +864,7 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
-     *本接口(DescribeDBInstances)用于查询云数据库实例列表，支持通过项目 ID、实例 ID、访问地址、实例状态等过滤条件来筛选实例。支持查询主实例、灾备实例和只读实例信息列表。
+     *本接口（DescribeDBInstances）用于查询云数据库实例列表，支持通过项目 ID、实例 ID、访问地址、实例状态等过滤条件来筛选实例。支持查询主实例、灾备实例和只读实例信息列表。
      * @param req DescribeDBInstancesRequest
      * @return DescribeDBInstancesResponse
      * @throws TencentCloudSDKException

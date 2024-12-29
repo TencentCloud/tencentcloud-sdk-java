@@ -32,7 +32,6 @@ public class Ability extends AbstractModel {
 
     /**
     * 不支持从可用区的原因
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NonsupportSlaveZoneReason")
     @Expose
@@ -47,7 +46,6 @@ public class Ability extends AbstractModel {
 
     /**
     * 不支持RO实例的原因
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NonsupportRoReason")
     @Expose
@@ -55,7 +53,6 @@ public class Ability extends AbstractModel {
 
     /**
     * 是否支持手动发起快照备份
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsSupportManualSnapshot")
     @Expose
@@ -63,7 +60,6 @@ public class Ability extends AbstractModel {
 
     /**
     * 是否支持透明数据加密
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsSupportTransparentDataEncryption")
     @Expose
@@ -71,7 +67,6 @@ public class Ability extends AbstractModel {
 
     /**
     * 不支持透明数据加密原因
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NoSupportTransparentDataEncryptionReason")
     @Expose
@@ -79,7 +74,6 @@ public class Ability extends AbstractModel {
 
     /**
     * 是否支持手动发起逻辑备份
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsSupportManualLogic")
     @Expose
@@ -102,10 +96,8 @@ public class Ability extends AbstractModel {
     }
 
     /**
-     * Get 不支持从可用区的原因
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 不支持从可用区的原因 
      * @return NonsupportSlaveZoneReason 不支持从可用区的原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNonsupportSlaveZoneReason() {
         return this.NonsupportSlaveZoneReason;
@@ -113,9 +105,7 @@ public class Ability extends AbstractModel {
 
     /**
      * Set 不支持从可用区的原因
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NonsupportSlaveZoneReason 不支持从可用区的原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNonsupportSlaveZoneReason(String NonsupportSlaveZoneReason) {
         this.NonsupportSlaveZoneReason = NonsupportSlaveZoneReason;
@@ -138,10 +128,8 @@ public class Ability extends AbstractModel {
     }
 
     /**
-     * Get 不支持RO实例的原因
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 不支持RO实例的原因 
      * @return NonsupportRoReason 不支持RO实例的原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNonsupportRoReason() {
         return this.NonsupportRoReason;
@@ -149,19 +137,15 @@ public class Ability extends AbstractModel {
 
     /**
      * Set 不支持RO实例的原因
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NonsupportRoReason 不支持RO实例的原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNonsupportRoReason(String NonsupportRoReason) {
         this.NonsupportRoReason = NonsupportRoReason;
     }
 
     /**
-     * Get 是否支持手动发起快照备份
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否支持手动发起快照备份 
      * @return IsSupportManualSnapshot 是否支持手动发起快照备份
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIsSupportManualSnapshot() {
         return this.IsSupportManualSnapshot;
@@ -169,19 +153,15 @@ public class Ability extends AbstractModel {
 
     /**
      * Set 是否支持手动发起快照备份
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsSupportManualSnapshot 是否支持手动发起快照备份
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsSupportManualSnapshot(String IsSupportManualSnapshot) {
         this.IsSupportManualSnapshot = IsSupportManualSnapshot;
     }
 
     /**
-     * Get 是否支持透明数据加密
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否支持透明数据加密 
      * @return IsSupportTransparentDataEncryption 是否支持透明数据加密
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIsSupportTransparentDataEncryption() {
         return this.IsSupportTransparentDataEncryption;
@@ -189,19 +169,15 @@ public class Ability extends AbstractModel {
 
     /**
      * Set 是否支持透明数据加密
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsSupportTransparentDataEncryption 是否支持透明数据加密
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsSupportTransparentDataEncryption(String IsSupportTransparentDataEncryption) {
         this.IsSupportTransparentDataEncryption = IsSupportTransparentDataEncryption;
     }
 
     /**
-     * Get 不支持透明数据加密原因
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 不支持透明数据加密原因 
      * @return NoSupportTransparentDataEncryptionReason 不支持透明数据加密原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNoSupportTransparentDataEncryptionReason() {
         return this.NoSupportTransparentDataEncryptionReason;
@@ -209,19 +185,15 @@ public class Ability extends AbstractModel {
 
     /**
      * Set 不支持透明数据加密原因
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NoSupportTransparentDataEncryptionReason 不支持透明数据加密原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNoSupportTransparentDataEncryptionReason(String NoSupportTransparentDataEncryptionReason) {
         this.NoSupportTransparentDataEncryptionReason = NoSupportTransparentDataEncryptionReason;
     }
 
     /**
-     * Get 是否支持手动发起逻辑备份
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否支持手动发起逻辑备份 
      * @return IsSupportManualLogic 是否支持手动发起逻辑备份
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIsSupportManualLogic() {
         return this.IsSupportManualLogic;
@@ -229,9 +201,7 @@ public class Ability extends AbstractModel {
 
     /**
      * Set 是否支持手动发起逻辑备份
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsSupportManualLogic 是否支持手动发起逻辑备份
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsSupportManualLogic(String IsSupportManualLogic) {
         this.IsSupportManualLogic = IsSupportManualLogic;

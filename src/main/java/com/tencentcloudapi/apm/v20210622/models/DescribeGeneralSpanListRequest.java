@@ -52,7 +52,7 @@ public class DescribeGeneralSpanListRequest extends AbstractModel {
     private Long StartTime;
 
     /**
-    * 实例名
+    * 业务系统ID
     */
     @SerializedName("InstanceId")
     @Expose
@@ -144,16 +144,16 @@ public class DescribeGeneralSpanListRequest extends AbstractModel {
     }
 
     /**
-     * Get 实例名 
-     * @return InstanceId 实例名
+     * Get 业务系统ID 
+     * @return InstanceId 业务系统ID
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例名
-     * @param InstanceId 实例名
+     * Set 业务系统ID
+     * @param InstanceId 业务系统ID
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

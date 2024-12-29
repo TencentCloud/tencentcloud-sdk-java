@@ -113,6 +113,13 @@ public class InstanceNode extends AbstractModel {
     private String Zone;
 
     /**
+    * 创建时间
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private String CreateTime;
+
+    /**
      * Get IP地址 
      * @return Ip IP地址
      */
@@ -324,6 +331,22 @@ public class InstanceNode extends AbstractModel {
         this.Zone = Zone;
     }
 
+    /**
+     * Get 创建时间 
+     * @return CreateTime 创建时间
+     */
+    public String getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set 创建时间
+     * @param CreateTime 创建时间
+     */
+    public void setCreateTime(String CreateTime) {
+        this.CreateTime = CreateTime;
+    }
+
     public InstanceNode() {
     }
 
@@ -368,6 +391,9 @@ public class InstanceNode extends AbstractModel {
         if (source.Zone != null) {
             this.Zone = new String(source.Zone);
         }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
     }
 
 
@@ -387,6 +413,7 @@ public class InstanceNode extends AbstractModel {
         this.setParamSimple(map, prefix + "FeRole", this.FeRole);
         this.setParamSimple(map, prefix + "UUID", this.UUID);
         this.setParamSimple(map, prefix + "Zone", this.Zone);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
 
     }
 }

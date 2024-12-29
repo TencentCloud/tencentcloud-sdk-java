@@ -32,7 +32,6 @@ public class ProxyGroupInfo extends AbstractModel {
 
     /**
     * 代理版本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProxyVersion")
     @Expose
@@ -40,7 +39,6 @@ public class ProxyGroupInfo extends AbstractModel {
 
     /**
     * 代理支持升级版本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SupportUpgradeProxyVersion")
     @Expose
@@ -48,7 +46,6 @@ public class ProxyGroupInfo extends AbstractModel {
 
     /**
     * 代理状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -56,7 +53,6 @@ public class ProxyGroupInfo extends AbstractModel {
 
     /**
     * 代理任务状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TaskStatus")
     @Expose
@@ -64,7 +60,6 @@ public class ProxyGroupInfo extends AbstractModel {
 
     /**
     * 代理组节点信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProxyNode")
     @Expose
@@ -72,7 +67,6 @@ public class ProxyGroupInfo extends AbstractModel {
 
     /**
     * 代理组地址信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProxyAddress")
     @Expose
@@ -80,7 +74,6 @@ public class ProxyGroupInfo extends AbstractModel {
 
     /**
     * 连接池阈值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConnectionPoolLimit")
     @Expose
@@ -88,7 +81,6 @@ public class ProxyGroupInfo extends AbstractModel {
 
     /**
     * 支持创建地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SupportCreateProxyAddress")
     @Expose
@@ -96,7 +88,6 @@ public class ProxyGroupInfo extends AbstractModel {
 
     /**
     * 支持升级代理版本所需的cdb版本
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SupportUpgradeProxyMysqlVersion")
     @Expose
@@ -119,10 +110,8 @@ public class ProxyGroupInfo extends AbstractModel {
     }
 
     /**
-     * Get 代理版本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 代理版本 
      * @return ProxyVersion 代理版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getProxyVersion() {
         return this.ProxyVersion;
@@ -130,19 +119,15 @@ public class ProxyGroupInfo extends AbstractModel {
 
     /**
      * Set 代理版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProxyVersion 代理版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProxyVersion(String ProxyVersion) {
         this.ProxyVersion = ProxyVersion;
     }
 
     /**
-     * Get 代理支持升级版本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 代理支持升级版本 
      * @return SupportUpgradeProxyVersion 代理支持升级版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSupportUpgradeProxyVersion() {
         return this.SupportUpgradeProxyVersion;
@@ -150,19 +135,15 @@ public class ProxyGroupInfo extends AbstractModel {
 
     /**
      * Set 代理支持升级版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SupportUpgradeProxyVersion 代理支持升级版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSupportUpgradeProxyVersion(String SupportUpgradeProxyVersion) {
         this.SupportUpgradeProxyVersion = SupportUpgradeProxyVersion;
     }
 
     /**
-     * Get 代理状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 代理状态 
      * @return Status 代理状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
         return this.Status;
@@ -170,19 +151,15 @@ public class ProxyGroupInfo extends AbstractModel {
 
     /**
      * Set 代理状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 代理状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 代理任务状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 代理任务状态 
      * @return TaskStatus 代理任务状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTaskStatus() {
         return this.TaskStatus;
@@ -190,19 +167,15 @@ public class ProxyGroupInfo extends AbstractModel {
 
     /**
      * Set 代理任务状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskStatus 代理任务状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTaskStatus(String TaskStatus) {
         this.TaskStatus = TaskStatus;
     }
 
     /**
-     * Get 代理组节点信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 代理组节点信息 
      * @return ProxyNode 代理组节点信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ProxyNode [] getProxyNode() {
         return this.ProxyNode;
@@ -210,19 +183,15 @@ public class ProxyGroupInfo extends AbstractModel {
 
     /**
      * Set 代理组节点信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProxyNode 代理组节点信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProxyNode(ProxyNode [] ProxyNode) {
         this.ProxyNode = ProxyNode;
     }
 
     /**
-     * Get 代理组地址信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 代理组地址信息 
      * @return ProxyAddress 代理组地址信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ProxyAddress [] getProxyAddress() {
         return this.ProxyAddress;
@@ -230,19 +199,15 @@ public class ProxyGroupInfo extends AbstractModel {
 
     /**
      * Set 代理组地址信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProxyAddress 代理组地址信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProxyAddress(ProxyAddress [] ProxyAddress) {
         this.ProxyAddress = ProxyAddress;
     }
 
     /**
-     * Get 连接池阈值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 连接池阈值 
      * @return ConnectionPoolLimit 连接池阈值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getConnectionPoolLimit() {
         return this.ConnectionPoolLimit;
@@ -250,19 +215,15 @@ public class ProxyGroupInfo extends AbstractModel {
 
     /**
      * Set 连接池阈值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ConnectionPoolLimit 连接池阈值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConnectionPoolLimit(Long ConnectionPoolLimit) {
         this.ConnectionPoolLimit = ConnectionPoolLimit;
     }
 
     /**
-     * Get 支持创建地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 支持创建地址 
      * @return SupportCreateProxyAddress 支持创建地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getSupportCreateProxyAddress() {
         return this.SupportCreateProxyAddress;
@@ -270,19 +231,15 @@ public class ProxyGroupInfo extends AbstractModel {
 
     /**
      * Set 支持创建地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SupportCreateProxyAddress 支持创建地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSupportCreateProxyAddress(Boolean SupportCreateProxyAddress) {
         this.SupportCreateProxyAddress = SupportCreateProxyAddress;
     }
 
     /**
-     * Get 支持升级代理版本所需的cdb版本
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 支持升级代理版本所需的cdb版本 
      * @return SupportUpgradeProxyMysqlVersion 支持升级代理版本所需的cdb版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSupportUpgradeProxyMysqlVersion() {
         return this.SupportUpgradeProxyMysqlVersion;
@@ -290,9 +247,7 @@ public class ProxyGroupInfo extends AbstractModel {
 
     /**
      * Set 支持升级代理版本所需的cdb版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SupportUpgradeProxyMysqlVersion 支持升级代理版本所需的cdb版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSupportUpgradeProxyMysqlVersion(String SupportUpgradeProxyMysqlVersion) {
         this.SupportUpgradeProxyMysqlVersion = SupportUpgradeProxyMysqlVersion;

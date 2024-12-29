@@ -25,7 +25,6 @@ public class Price extends AbstractModel {
 
     /**
     * 包年包月参考价格，单位-分
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PrepaidPrice")
     @Expose
@@ -33,7 +32,6 @@ public class Price extends AbstractModel {
 
     /**
     * 包年包月价格单位，M-月
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PrepaidPriceUnit")
     @Expose
@@ -41,7 +39,6 @@ public class Price extends AbstractModel {
 
     /**
     * 按量付费价格，单位-分
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PostpaidPrice")
     @Expose
@@ -49,17 +46,14 @@ public class Price extends AbstractModel {
 
     /**
     * 按量付费价格单位，H-小时
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PostpaidPriceUnit")
     @Expose
     private String PostpaidPriceUnit;
 
     /**
-     * Get 包年包月参考价格，单位-分
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 包年包月参考价格，单位-分 
      * @return PrepaidPrice 包年包月参考价格，单位-分
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPrepaidPrice() {
         return this.PrepaidPrice;
@@ -67,19 +61,15 @@ public class Price extends AbstractModel {
 
     /**
      * Set 包年包月参考价格，单位-分
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PrepaidPrice 包年包月参考价格，单位-分
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPrepaidPrice(Long PrepaidPrice) {
         this.PrepaidPrice = PrepaidPrice;
     }
 
     /**
-     * Get 包年包月价格单位，M-月
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 包年包月价格单位，M-月 
      * @return PrepaidPriceUnit 包年包月价格单位，M-月
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPrepaidPriceUnit() {
         return this.PrepaidPriceUnit;
@@ -87,19 +77,15 @@ public class Price extends AbstractModel {
 
     /**
      * Set 包年包月价格单位，M-月
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PrepaidPriceUnit 包年包月价格单位，M-月
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPrepaidPriceUnit(String PrepaidPriceUnit) {
         this.PrepaidPriceUnit = PrepaidPriceUnit;
     }
 
     /**
-     * Get 按量付费价格，单位-分
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 按量付费价格，单位-分 
      * @return PostpaidPrice 按量付费价格，单位-分
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPostpaidPrice() {
         return this.PostpaidPrice;
@@ -107,19 +93,15 @@ public class Price extends AbstractModel {
 
     /**
      * Set 按量付费价格，单位-分
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PostpaidPrice 按量付费价格，单位-分
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPostpaidPrice(Long PostpaidPrice) {
         this.PostpaidPrice = PostpaidPrice;
     }
 
     /**
-     * Get 按量付费价格单位，H-小时
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 按量付费价格单位，H-小时 
      * @return PostpaidPriceUnit 按量付费价格单位，H-小时
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPostpaidPriceUnit() {
         return this.PostpaidPriceUnit;
@@ -127,9 +109,7 @@ public class Price extends AbstractModel {
 
     /**
      * Set 按量付费价格单位，H-小时
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PostpaidPriceUnit 按量付费价格单位，H-小时
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPostpaidPriceUnit(String PostpaidPriceUnit) {
         this.PostpaidPriceUnit = PostpaidPriceUnit;

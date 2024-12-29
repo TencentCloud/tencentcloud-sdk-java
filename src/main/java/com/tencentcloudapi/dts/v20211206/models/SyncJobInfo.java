@@ -288,6 +288,14 @@ public class SyncJobInfo extends AbstractModel {
     private String OfflineTime;
 
     /**
+    * 动态修改对象，修改任务的状态等
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("OptObjStatus")
+    @Expose
+    private String OptObjStatus;
+
+    /**
     * 自动重试时间段设置
 注意：此字段可能返回 null，表示取不到有效值。
     */
@@ -964,6 +972,26 @@ public class SyncJobInfo extends AbstractModel {
     }
 
     /**
+     * Get 动态修改对象，修改任务的状态等
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return OptObjStatus 动态修改对象，修改任务的状态等
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getOptObjStatus() {
+        return this.OptObjStatus;
+    }
+
+    /**
+     * Set 动态修改对象，修改任务的状态等
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param OptObjStatus 动态修改对象，修改任务的状态等
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setOptObjStatus(String OptObjStatus) {
+        this.OptObjStatus = OptObjStatus;
+    }
+
+    /**
      * Get 自动重试时间段设置
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return AutoRetryTimeRangeMinutes 自动重试时间段设置
@@ -1119,6 +1147,9 @@ public class SyncJobInfo extends AbstractModel {
         if (source.OfflineTime != null) {
             this.OfflineTime = new String(source.OfflineTime);
         }
+        if (source.OptObjStatus != null) {
+            this.OptObjStatus = new String(source.OptObjStatus);
+        }
         if (source.AutoRetryTimeRangeMinutes != null) {
             this.AutoRetryTimeRangeMinutes = new Long(source.AutoRetryTimeRangeMinutes);
         }
@@ -1165,6 +1196,7 @@ public class SyncJobInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "InstanceClass", this.InstanceClass);
         this.setParamSimple(map, prefix + "AutoRenew", this.AutoRenew);
         this.setParamSimple(map, prefix + "OfflineTime", this.OfflineTime);
+        this.setParamSimple(map, prefix + "OptObjStatus", this.OptObjStatus);
         this.setParamSimple(map, prefix + "AutoRetryTimeRangeMinutes", this.AutoRetryTimeRangeMinutes);
         this.setParamSimple(map, prefix + "DumperResumeCtrl", this.DumperResumeCtrl);
 

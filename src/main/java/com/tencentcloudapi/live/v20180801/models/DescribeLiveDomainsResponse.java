@@ -39,7 +39,6 @@ public class DescribeLiveDomainsResponse extends AbstractModel {
 
     /**
     * 可继续添加域名数量。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateLimitCount")
     @Expose
@@ -47,7 +46,6 @@ public class DescribeLiveDomainsResponse extends AbstractModel {
 
     /**
     * 启用的播放域名加速区域统计，数组元素分别为：中国大陆（境内），全球地区，国际/港澳台（境外）域名数量。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PlayTypeCount")
     @Expose
@@ -93,10 +91,8 @@ public class DescribeLiveDomainsResponse extends AbstractModel {
     }
 
     /**
-     * Get 可继续添加域名数量。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 可继续添加域名数量。 
      * @return CreateLimitCount 可继续添加域名数量。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCreateLimitCount() {
         return this.CreateLimitCount;
@@ -104,19 +100,15 @@ public class DescribeLiveDomainsResponse extends AbstractModel {
 
     /**
      * Set 可继续添加域名数量。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateLimitCount 可继续添加域名数量。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateLimitCount(Long CreateLimitCount) {
         this.CreateLimitCount = CreateLimitCount;
     }
 
     /**
-     * Get 启用的播放域名加速区域统计，数组元素分别为：中国大陆（境内），全球地区，国际/港澳台（境外）域名数量。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 启用的播放域名加速区域统计，数组元素分别为：中国大陆（境内），全球地区，国际/港澳台（境外）域名数量。 
      * @return PlayTypeCount 启用的播放域名加速区域统计，数组元素分别为：中国大陆（境内），全球地区，国际/港澳台（境外）域名数量。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long [] getPlayTypeCount() {
         return this.PlayTypeCount;
@@ -124,9 +116,7 @@ public class DescribeLiveDomainsResponse extends AbstractModel {
 
     /**
      * Set 启用的播放域名加速区域统计，数组元素分别为：中国大陆（境内），全球地区，国际/港澳台（境外）域名数量。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PlayTypeCount 启用的播放域名加速区域统计，数组元素分别为：中国大陆（境内），全球地区，国际/港澳台（境外）域名数量。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPlayTypeCount(Long [] PlayTypeCount) {
         this.PlayTypeCount = PlayTypeCount;

@@ -29,7 +29,6 @@ public class DescribeCasterDisplayInfoResponse extends AbstractModel {
 1：无预监，有主监 
 2：有预监，无主监 
 3：有预监，有主监
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -37,7 +36,6 @@ public class DescribeCasterDisplayInfoResponse extends AbstractModel {
 
     /**
     * 预监使用的展示参数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PvwDisplayInfo")
     @Expose
@@ -45,7 +43,6 @@ public class DescribeCasterDisplayInfoResponse extends AbstractModel {
 
     /**
     * 主监使用的展示参数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PgmDisplayInfo")
     @Expose
@@ -53,7 +50,6 @@ public class DescribeCasterDisplayInfoResponse extends AbstractModel {
 
     /**
     * 启动直播的时间，值为unix时间戳。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartLiveTime")
     @Expose
@@ -71,14 +67,12 @@ public class DescribeCasterDisplayInfoResponse extends AbstractModel {
 0：停止状态，无预监，无主监 
 1：无预监，有主监 
 2：有预监，无主监 
-3：有预监，有主监
-注意：此字段可能返回 null，表示取不到有效值。 
+3：有预监，有主监 
      * @return Status 导播台状态
 0：停止状态，无预监，无主监 
 1：无预监，有主监 
 2：有预监，无主监 
 3：有预监，有主监
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
         return this.Status;
@@ -90,23 +84,19 @@ public class DescribeCasterDisplayInfoResponse extends AbstractModel {
 1：无预监，有主监 
 2：有预监，无主监 
 3：有预监，有主监
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 导播台状态
 0：停止状态，无预监，无主监 
 1：无预监，有主监 
 2：有预监，无主监 
 3：有预监，有主监
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 预监使用的展示参数。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 预监使用的展示参数。 
      * @return PvwDisplayInfo 预监使用的展示参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CasterDisplayInfo getPvwDisplayInfo() {
         return this.PvwDisplayInfo;
@@ -114,19 +104,15 @@ public class DescribeCasterDisplayInfoResponse extends AbstractModel {
 
     /**
      * Set 预监使用的展示参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PvwDisplayInfo 预监使用的展示参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPvwDisplayInfo(CasterDisplayInfo PvwDisplayInfo) {
         this.PvwDisplayInfo = PvwDisplayInfo;
     }
 
     /**
-     * Get 主监使用的展示参数。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 主监使用的展示参数。 
      * @return PgmDisplayInfo 主监使用的展示参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CasterDisplayInfo getPgmDisplayInfo() {
         return this.PgmDisplayInfo;
@@ -134,19 +120,15 @@ public class DescribeCasterDisplayInfoResponse extends AbstractModel {
 
     /**
      * Set 主监使用的展示参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PgmDisplayInfo 主监使用的展示参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPgmDisplayInfo(CasterDisplayInfo PgmDisplayInfo) {
         this.PgmDisplayInfo = PgmDisplayInfo;
     }
 
     /**
-     * Get 启动直播的时间，值为unix时间戳。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 启动直播的时间，值为unix时间戳。 
      * @return StartLiveTime 启动直播的时间，值为unix时间戳。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStartLiveTime() {
         return this.StartLiveTime;
@@ -154,9 +136,7 @@ public class DescribeCasterDisplayInfoResponse extends AbstractModel {
 
     /**
      * Set 启动直播的时间，值为unix时间戳。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StartLiveTime 启动直播的时间，值为unix时间戳。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartLiveTime(Long StartLiveTime) {
         this.StartLiveTime = StartLiveTime;

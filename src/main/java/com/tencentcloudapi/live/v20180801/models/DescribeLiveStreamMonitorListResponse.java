@@ -25,7 +25,6 @@ public class DescribeLiveStreamMonitorListResponse extends AbstractModel {
 
     /**
     * 账号下的直播流监播任务个数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalNum")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeLiveStreamMonitorListResponse extends AbstractModel {
 
     /**
     * 直播流监播任务列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LiveStreamMonitors")
     @Expose
@@ -47,10 +45,8 @@ public class DescribeLiveStreamMonitorListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 账号下的直播流监播任务个数。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 账号下的直播流监播任务个数。 
      * @return TotalNum 账号下的直播流监播任务个数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalNum() {
         return this.TotalNum;
@@ -58,19 +54,15 @@ public class DescribeLiveStreamMonitorListResponse extends AbstractModel {
 
     /**
      * Set 账号下的直播流监播任务个数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalNum 账号下的直播流监播任务个数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalNum(Long TotalNum) {
         this.TotalNum = TotalNum;
     }
 
     /**
-     * Get 直播流监播任务列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 直播流监播任务列表 
      * @return LiveStreamMonitors 直播流监播任务列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public LiveStreamMonitorInfo [] getLiveStreamMonitors() {
         return this.LiveStreamMonitors;
@@ -78,9 +70,7 @@ public class DescribeLiveStreamMonitorListResponse extends AbstractModel {
 
     /**
      * Set 直播流监播任务列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LiveStreamMonitors 直播流监播任务列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLiveStreamMonitors(LiveStreamMonitorInfo [] LiveStreamMonitors) {
         this.LiveStreamMonitors = LiveStreamMonitors;

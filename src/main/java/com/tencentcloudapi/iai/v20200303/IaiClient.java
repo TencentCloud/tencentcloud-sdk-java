@@ -252,6 +252,22 @@ public class IaiClient extends AbstractClient{
     }
 
     /**
+     *对两张图片中的人脸进行相似度比对，返回人脸相似度分数。
+
+若您需要判断 “此人是否是某人”，即验证某张图片中的人是否是已知身份的某人，如常见的人脸登录场景，建议使用[人脸验证](https://www.tencentcloud.com/document/product/1059/36972)或[人员验证](https://www.tencentcloud.com/document/product/1059/36971)接口。
+
+>     
+- 公共参数中的签名方式请使用V3版本，即配置SignatureMethod参数为TC3-HMAC-SHA256。
+     * @param req DetectFaceSimilarityRequest
+     * @return DetectFaceSimilarityResponse
+     * @throws TencentCloudSDKException
+     */
+    public DetectFaceSimilarityResponse DetectFaceSimilarity(DetectFaceSimilarityRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DetectFaceSimilarity", DetectFaceSimilarityResponse.class);
+    }
+
+    /**
      *用于对用户上传的静态图片进行人脸活体检测。与动态活体检测的区别是：静态活体检测中，用户不需要通过唇语或摇头眨眼等动作来识别。
 
 静态活体检测适用于手机自拍的场景，或对防攻击要求不高的场景。如果对活体检测有更高安全性要求，请使用[人脸核身·云智慧眼](https://cloud.tencent.com/product/faceid)产品。

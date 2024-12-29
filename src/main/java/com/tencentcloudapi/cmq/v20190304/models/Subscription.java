@@ -24,52 +24,12 @@ import java.util.HashMap;
 public class Subscription extends AbstractModel {
 
     /**
-    * 订阅名字，在单个地域同一帐号的同一主题下唯一。订阅名称是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)。
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("SubscriptionName")
-    @Expose
-    private String SubscriptionName;
-
-    /**
-    * 订阅 ID。订阅 ID 在拉取监控数据时会用到。
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("SubscriptionId")
-    @Expose
-    private String SubscriptionId;
-
-    /**
-    * 订阅拥有者的 APPID。
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("TopicOwner")
-    @Expose
-    private Long TopicOwner;
-
-    /**
     * 该订阅待投递的消息数。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MsgCount")
     @Expose
     private Long MsgCount;
-
-    /**
-    * 最后一次修改订阅属性的时间。返回 Unix 时间戳，精确到秒。
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("LastModifyTime")
-    @Expose
-    private Long LastModifyTime;
-
-    /**
-    * 订阅的创建时间。返回 Unix 时间戳，精确到秒。
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("CreateTime")
-    @Expose
-    private Long CreateTime;
 
     /**
     * 表示订阅接收消息的过滤策略。
@@ -88,22 +48,12 @@ public class Subscription extends AbstractModel {
     private String Endpoint;
 
     /**
-    * 描述用户创建订阅时选择的过滤策略：
-filterType = 1表示用户使用 filterTag 标签过滤
-filterType = 2表示用户使用 bindingKey 过滤。
+    * 订阅拥有者的 APPID。
 注意：此字段可能返回 null，表示取不到有效值。
     */
-    @SerializedName("FilterTags")
+    @SerializedName("TopicOwner")
     @Expose
-    private String [] FilterTags;
-
-    /**
-    * 订阅的协议，目前支持两种协议：HTTP、queue。使用 HTTP 协议，用户需自己搭建接受消息的 Web Server。使用 queue，消息会自动推送到 CMQ queue，用户可以并发地拉取消息。
-注意：此字段可能返回 null，表示取不到有效值。
-    */
-    @SerializedName("Protocol")
-    @Expose
-    private String Protocol;
+    private Long TopicOwner;
 
     /**
     * 向 endpoint 推送消息出现错误时，CMQ 推送服务器的重试策略。取值有：
@@ -124,64 +74,54 @@ filterType = 2表示用户使用 bindingKey 过滤。
     private String NotifyContentFormat;
 
     /**
-     * Get 订阅名字，在单个地域同一帐号的同一主题下唯一。订阅名称是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SubscriptionName 订阅名字，在单个地域同一帐号的同一主题下唯一。订阅名称是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)。
+    * 最后一次修改订阅属性的时间。返回 Unix 时间戳，精确到秒。
 注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getSubscriptionName() {
-        return this.SubscriptionName;
-    }
+    */
+    @SerializedName("LastModifyTime")
+    @Expose
+    private Long LastModifyTime;
 
     /**
-     * Set 订阅名字，在单个地域同一帐号的同一主题下唯一。订阅名称是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)。
+    * 描述用户创建订阅时选择的过滤策略：
+filterType = 1表示用户使用 filterTag 标签过滤
+filterType = 2表示用户使用 bindingKey 过滤。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SubscriptionName 订阅名字，在单个地域同一帐号的同一主题下唯一。订阅名称是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setSubscriptionName(String SubscriptionName) {
-        this.SubscriptionName = SubscriptionName;
-    }
+    */
+    @SerializedName("FilterTags")
+    @Expose
+    private String [] FilterTags;
 
     /**
-     * Get 订阅 ID。订阅 ID 在拉取监控数据时会用到。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SubscriptionId 订阅 ID。订阅 ID 在拉取监控数据时会用到。
+    * 订阅名字，在单个地域同一账号的同一主题下唯一。订阅名称是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)。
 注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getSubscriptionId() {
-        return this.SubscriptionId;
-    }
+    */
+    @SerializedName("SubscriptionName")
+    @Expose
+    private String SubscriptionName;
 
     /**
-     * Set 订阅 ID。订阅 ID 在拉取监控数据时会用到。
+    * 订阅的协议，目前支持两种协议：HTTP、queue。使用 HTTP 协议，用户需自己搭建接受消息的 Web Server。使用 queue，消息会自动推送到 CMQ queue，用户可以并发地拉取消息。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SubscriptionId 订阅 ID。订阅 ID 在拉取监控数据时会用到。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setSubscriptionId(String SubscriptionId) {
-        this.SubscriptionId = SubscriptionId;
-    }
+    */
+    @SerializedName("Protocol")
+    @Expose
+    private String Protocol;
 
     /**
-     * Get 订阅拥有者的 APPID。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TopicOwner 订阅拥有者的 APPID。
+    * 订阅 ID。订阅 ID 在拉取监控数据时会用到。
 注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public Long getTopicOwner() {
-        return this.TopicOwner;
-    }
+    */
+    @SerializedName("SubscriptionId")
+    @Expose
+    private String SubscriptionId;
 
     /**
-     * Set 订阅拥有者的 APPID。
+    * 订阅的创建时间。返回 Unix 时间戳，精确到秒。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TopicOwner 订阅拥有者的 APPID。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setTopicOwner(Long TopicOwner) {
-        this.TopicOwner = TopicOwner;
-    }
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private Long CreateTime;
 
     /**
      * Get 该订阅待投递的消息数。
@@ -201,46 +141,6 @@ filterType = 2表示用户使用 bindingKey 过滤。
      */
     public void setMsgCount(Long MsgCount) {
         this.MsgCount = MsgCount;
-    }
-
-    /**
-     * Get 最后一次修改订阅属性的时间。返回 Unix 时间戳，精确到秒。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LastModifyTime 最后一次修改订阅属性的时间。返回 Unix 时间戳，精确到秒。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public Long getLastModifyTime() {
-        return this.LastModifyTime;
-    }
-
-    /**
-     * Set 最后一次修改订阅属性的时间。返回 Unix 时间戳，精确到秒。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param LastModifyTime 最后一次修改订阅属性的时间。返回 Unix 时间戳，精确到秒。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setLastModifyTime(Long LastModifyTime) {
-        this.LastModifyTime = LastModifyTime;
-    }
-
-    /**
-     * Get 订阅的创建时间。返回 Unix 时间戳，精确到秒。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreateTime 订阅的创建时间。返回 Unix 时间戳，精确到秒。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public Long getCreateTime() {
-        return this.CreateTime;
-    }
-
-    /**
-     * Set 订阅的创建时间。返回 Unix 时间戳，精确到秒。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreateTime 订阅的创建时间。返回 Unix 时间戳，精确到秒。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setCreateTime(Long CreateTime) {
-        this.CreateTime = CreateTime;
     }
 
     /**
@@ -284,51 +184,23 @@ filterType = 2表示用户使用 bindingKey 过滤。
     }
 
     /**
-     * Get 描述用户创建订阅时选择的过滤策略：
-filterType = 1表示用户使用 filterTag 标签过滤
-filterType = 2表示用户使用 bindingKey 过滤。
+     * Get 订阅拥有者的 APPID。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FilterTags 描述用户创建订阅时选择的过滤策略：
-filterType = 1表示用户使用 filterTag 标签过滤
-filterType = 2表示用户使用 bindingKey 过滤。
+     * @return TopicOwner 订阅拥有者的 APPID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public String [] getFilterTags() {
-        return this.FilterTags;
+    public Long getTopicOwner() {
+        return this.TopicOwner;
     }
 
     /**
-     * Set 描述用户创建订阅时选择的过滤策略：
-filterType = 1表示用户使用 filterTag 标签过滤
-filterType = 2表示用户使用 bindingKey 过滤。
+     * Set 订阅拥有者的 APPID。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FilterTags 描述用户创建订阅时选择的过滤策略：
-filterType = 1表示用户使用 filterTag 标签过滤
-filterType = 2表示用户使用 bindingKey 过滤。
+     * @param TopicOwner 订阅拥有者的 APPID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public void setFilterTags(String [] FilterTags) {
-        this.FilterTags = FilterTags;
-    }
-
-    /**
-     * Get 订阅的协议，目前支持两种协议：HTTP、queue。使用 HTTP 协议，用户需自己搭建接受消息的 Web Server。使用 queue，消息会自动推送到 CMQ queue，用户可以并发地拉取消息。
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Protocol 订阅的协议，目前支持两种协议：HTTP、queue。使用 HTTP 协议，用户需自己搭建接受消息的 Web Server。使用 queue，消息会自动推送到 CMQ queue，用户可以并发地拉取消息。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public String getProtocol() {
-        return this.Protocol;
-    }
-
-    /**
-     * Set 订阅的协议，目前支持两种协议：HTTP、queue。使用 HTTP 协议，用户需自己搭建接受消息的 Web Server。使用 queue，消息会自动推送到 CMQ queue，用户可以并发地拉取消息。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Protocol 订阅的协议，目前支持两种协议：HTTP、queue。使用 HTTP 协议，用户需自己搭建接受消息的 Web Server。使用 queue，消息会自动推送到 CMQ queue，用户可以并发地拉取消息。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public void setProtocol(String Protocol) {
-        this.Protocol = Protocol;
+    public void setTopicOwner(Long TopicOwner) {
+        this.TopicOwner = TopicOwner;
     }
 
     /**
@@ -379,6 +251,134 @@ filterType = 2表示用户使用 bindingKey 过滤。
         this.NotifyContentFormat = NotifyContentFormat;
     }
 
+    /**
+     * Get 最后一次修改订阅属性的时间。返回 Unix 时间戳，精确到秒。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return LastModifyTime 最后一次修改订阅属性的时间。返回 Unix 时间戳，精确到秒。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getLastModifyTime() {
+        return this.LastModifyTime;
+    }
+
+    /**
+     * Set 最后一次修改订阅属性的时间。返回 Unix 时间戳，精确到秒。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LastModifyTime 最后一次修改订阅属性的时间。返回 Unix 时间戳，精确到秒。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setLastModifyTime(Long LastModifyTime) {
+        this.LastModifyTime = LastModifyTime;
+    }
+
+    /**
+     * Get 描述用户创建订阅时选择的过滤策略：
+filterType = 1表示用户使用 filterTag 标签过滤
+filterType = 2表示用户使用 bindingKey 过滤。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return FilterTags 描述用户创建订阅时选择的过滤策略：
+filterType = 1表示用户使用 filterTag 标签过滤
+filterType = 2表示用户使用 bindingKey 过滤。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String [] getFilterTags() {
+        return this.FilterTags;
+    }
+
+    /**
+     * Set 描述用户创建订阅时选择的过滤策略：
+filterType = 1表示用户使用 filterTag 标签过滤
+filterType = 2表示用户使用 bindingKey 过滤。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param FilterTags 描述用户创建订阅时选择的过滤策略：
+filterType = 1表示用户使用 filterTag 标签过滤
+filterType = 2表示用户使用 bindingKey 过滤。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setFilterTags(String [] FilterTags) {
+        this.FilterTags = FilterTags;
+    }
+
+    /**
+     * Get 订阅名字，在单个地域同一账号的同一主题下唯一。订阅名称是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SubscriptionName 订阅名字，在单个地域同一账号的同一主题下唯一。订阅名称是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSubscriptionName() {
+        return this.SubscriptionName;
+    }
+
+    /**
+     * Set 订阅名字，在单个地域同一账号的同一主题下唯一。订阅名称是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SubscriptionName 订阅名字，在单个地域同一账号的同一主题下唯一。订阅名称是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSubscriptionName(String SubscriptionName) {
+        this.SubscriptionName = SubscriptionName;
+    }
+
+    /**
+     * Get 订阅的协议，目前支持两种协议：HTTP、queue。使用 HTTP 协议，用户需自己搭建接受消息的 Web Server。使用 queue，消息会自动推送到 CMQ queue，用户可以并发地拉取消息。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Protocol 订阅的协议，目前支持两种协议：HTTP、queue。使用 HTTP 协议，用户需自己搭建接受消息的 Web Server。使用 queue，消息会自动推送到 CMQ queue，用户可以并发地拉取消息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getProtocol() {
+        return this.Protocol;
+    }
+
+    /**
+     * Set 订阅的协议，目前支持两种协议：HTTP、queue。使用 HTTP 协议，用户需自己搭建接受消息的 Web Server。使用 queue，消息会自动推送到 CMQ queue，用户可以并发地拉取消息。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Protocol 订阅的协议，目前支持两种协议：HTTP、queue。使用 HTTP 协议，用户需自己搭建接受消息的 Web Server。使用 queue，消息会自动推送到 CMQ queue，用户可以并发地拉取消息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setProtocol(String Protocol) {
+        this.Protocol = Protocol;
+    }
+
+    /**
+     * Get 订阅 ID。订阅 ID 在拉取监控数据时会用到。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SubscriptionId 订阅 ID。订阅 ID 在拉取监控数据时会用到。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSubscriptionId() {
+        return this.SubscriptionId;
+    }
+
+    /**
+     * Set 订阅 ID。订阅 ID 在拉取监控数据时会用到。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SubscriptionId 订阅 ID。订阅 ID 在拉取监控数据时会用到。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSubscriptionId(String SubscriptionId) {
+        this.SubscriptionId = SubscriptionId;
+    }
+
+    /**
+     * Get 订阅的创建时间。返回 Unix 时间戳，精确到秒。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return CreateTime 订阅的创建时间。返回 Unix 时间戳，精确到秒。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set 订阅的创建时间。返回 Unix 时间戳，精确到秒。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CreateTime 订阅的创建时间。返回 Unix 时间戳，精确到秒。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setCreateTime(Long CreateTime) {
+        this.CreateTime = CreateTime;
+    }
+
     public Subscription() {
     }
 
@@ -387,23 +387,8 @@ filterType = 2表示用户使用 bindingKey 过滤。
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public Subscription(Subscription source) {
-        if (source.SubscriptionName != null) {
-            this.SubscriptionName = new String(source.SubscriptionName);
-        }
-        if (source.SubscriptionId != null) {
-            this.SubscriptionId = new String(source.SubscriptionId);
-        }
-        if (source.TopicOwner != null) {
-            this.TopicOwner = new Long(source.TopicOwner);
-        }
         if (source.MsgCount != null) {
             this.MsgCount = new Long(source.MsgCount);
-        }
-        if (source.LastModifyTime != null) {
-            this.LastModifyTime = new Long(source.LastModifyTime);
-        }
-        if (source.CreateTime != null) {
-            this.CreateTime = new Long(source.CreateTime);
         }
         if (source.BindingKey != null) {
             this.BindingKey = new String[source.BindingKey.length];
@@ -414,20 +399,35 @@ filterType = 2表示用户使用 bindingKey 过滤。
         if (source.Endpoint != null) {
             this.Endpoint = new String(source.Endpoint);
         }
-        if (source.FilterTags != null) {
-            this.FilterTags = new String[source.FilterTags.length];
-            for (int i = 0; i < source.FilterTags.length; i++) {
-                this.FilterTags[i] = new String(source.FilterTags[i]);
-            }
-        }
-        if (source.Protocol != null) {
-            this.Protocol = new String(source.Protocol);
+        if (source.TopicOwner != null) {
+            this.TopicOwner = new Long(source.TopicOwner);
         }
         if (source.NotifyStrategy != null) {
             this.NotifyStrategy = new String(source.NotifyStrategy);
         }
         if (source.NotifyContentFormat != null) {
             this.NotifyContentFormat = new String(source.NotifyContentFormat);
+        }
+        if (source.LastModifyTime != null) {
+            this.LastModifyTime = new Long(source.LastModifyTime);
+        }
+        if (source.FilterTags != null) {
+            this.FilterTags = new String[source.FilterTags.length];
+            for (int i = 0; i < source.FilterTags.length; i++) {
+                this.FilterTags[i] = new String(source.FilterTags[i]);
+            }
+        }
+        if (source.SubscriptionName != null) {
+            this.SubscriptionName = new String(source.SubscriptionName);
+        }
+        if (source.Protocol != null) {
+            this.Protocol = new String(source.Protocol);
+        }
+        if (source.SubscriptionId != null) {
+            this.SubscriptionId = new String(source.SubscriptionId);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new Long(source.CreateTime);
         }
     }
 
@@ -436,18 +436,18 @@ filterType = 2表示用户使用 bindingKey 过滤。
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "SubscriptionName", this.SubscriptionName);
-        this.setParamSimple(map, prefix + "SubscriptionId", this.SubscriptionId);
-        this.setParamSimple(map, prefix + "TopicOwner", this.TopicOwner);
         this.setParamSimple(map, prefix + "MsgCount", this.MsgCount);
-        this.setParamSimple(map, prefix + "LastModifyTime", this.LastModifyTime);
-        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamArraySimple(map, prefix + "BindingKey.", this.BindingKey);
         this.setParamSimple(map, prefix + "Endpoint", this.Endpoint);
-        this.setParamArraySimple(map, prefix + "FilterTags.", this.FilterTags);
-        this.setParamSimple(map, prefix + "Protocol", this.Protocol);
+        this.setParamSimple(map, prefix + "TopicOwner", this.TopicOwner);
         this.setParamSimple(map, prefix + "NotifyStrategy", this.NotifyStrategy);
         this.setParamSimple(map, prefix + "NotifyContentFormat", this.NotifyContentFormat);
+        this.setParamSimple(map, prefix + "LastModifyTime", this.LastModifyTime);
+        this.setParamArraySimple(map, prefix + "FilterTags.", this.FilterTags);
+        this.setParamSimple(map, prefix + "SubscriptionName", this.SubscriptionName);
+        this.setParamSimple(map, prefix + "Protocol", this.Protocol);
+        this.setParamSimple(map, prefix + "SubscriptionId", this.SubscriptionId);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
 
     }
 }

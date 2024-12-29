@@ -25,7 +25,6 @@ public class DescribeProxyCustomConfResponse extends AbstractModel {
 
     /**
     * 代理配置数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Count")
     @Expose
@@ -33,7 +32,6 @@ public class DescribeProxyCustomConfResponse extends AbstractModel {
 
     /**
     * 代理配置
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CustomConf")
     @Expose
@@ -41,7 +39,6 @@ public class DescribeProxyCustomConfResponse extends AbstractModel {
 
     /**
     * 权重限制
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WeightRule")
     @Expose
@@ -55,10 +52,8 @@ public class DescribeProxyCustomConfResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 代理配置数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 代理配置数 
      * @return Count 代理配置数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getCount() {
         return this.Count;
@@ -66,19 +61,15 @@ public class DescribeProxyCustomConfResponse extends AbstractModel {
 
     /**
      * Set 代理配置数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Count 代理配置数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCount(Long Count) {
         this.Count = Count;
     }
 
     /**
-     * Get 代理配置
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 代理配置 
      * @return CustomConf 代理配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CustomConfig getCustomConf() {
         return this.CustomConf;
@@ -86,19 +77,15 @@ public class DescribeProxyCustomConfResponse extends AbstractModel {
 
     /**
      * Set 代理配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CustomConf 代理配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCustomConf(CustomConfig CustomConf) {
         this.CustomConf = CustomConf;
     }
 
     /**
-     * Get 权重限制
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 权重限制 
      * @return WeightRule 权重限制
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Rule getWeightRule() {
         return this.WeightRule;
@@ -106,9 +93,7 @@ public class DescribeProxyCustomConfResponse extends AbstractModel {
 
     /**
      * Set 权重限制
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WeightRule 权重限制
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWeightRule(Rule WeightRule) {
         this.WeightRule = WeightRule;

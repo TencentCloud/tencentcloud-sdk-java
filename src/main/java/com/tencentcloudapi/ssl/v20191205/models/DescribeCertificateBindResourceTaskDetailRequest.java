@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeCertificateBindResourceTaskDetailRequest extends AbstractModel {
 
     /**
-    * 任务ID，根据任务ID查询绑定云资源结果
+    * 任务ID，根据CreateCertificateBindResourceSyncTask得到的任务ID查询绑定云资源结果
     */
     @SerializedName("TaskId")
     @Expose
@@ -59,16 +59,16 @@ public class DescribeCertificateBindResourceTaskDetailRequest extends AbstractMo
     private String [] Regions;
 
     /**
-     * Get 任务ID，根据任务ID查询绑定云资源结果 
-     * @return TaskId 任务ID，根据任务ID查询绑定云资源结果
+     * Get 任务ID，根据CreateCertificateBindResourceSyncTask得到的任务ID查询绑定云资源结果 
+     * @return TaskId 任务ID，根据CreateCertificateBindResourceSyncTask得到的任务ID查询绑定云资源结果
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 任务ID，根据任务ID查询绑定云资源结果
-     * @param TaskId 任务ID，根据任务ID查询绑定云资源结果
+     * Set 任务ID，根据CreateCertificateBindResourceSyncTask得到的任务ID查询绑定云资源结果
+     * @param TaskId 任务ID，根据CreateCertificateBindResourceSyncTask得到的任务ID查询绑定云资源结果
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

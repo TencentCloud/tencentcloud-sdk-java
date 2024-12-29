@@ -25,7 +25,6 @@ public class RollbackTableName extends AbstractModel {
 
     /**
     * 回档前的原数据库表名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TableName")
     @Expose
@@ -33,17 +32,14 @@ public class RollbackTableName extends AbstractModel {
 
     /**
     * 回档后的新数据库表名
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NewTableName")
     @Expose
     private String NewTableName;
 
     /**
-     * Get 回档前的原数据库表名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 回档前的原数据库表名 
      * @return TableName 回档前的原数据库表名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTableName() {
         return this.TableName;
@@ -51,19 +47,15 @@ public class RollbackTableName extends AbstractModel {
 
     /**
      * Set 回档前的原数据库表名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TableName 回档前的原数据库表名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTableName(String TableName) {
         this.TableName = TableName;
     }
 
     /**
-     * Get 回档后的新数据库表名
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 回档后的新数据库表名 
      * @return NewTableName 回档后的新数据库表名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNewTableName() {
         return this.NewTableName;
@@ -71,9 +63,7 @@ public class RollbackTableName extends AbstractModel {
 
     /**
      * Set 回档后的新数据库表名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NewTableName 回档后的新数据库表名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNewTableName(String NewTableName) {
         this.NewTableName = NewTableName;

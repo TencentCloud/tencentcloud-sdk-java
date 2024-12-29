@@ -25,7 +25,6 @@ public class UpgradeCDBProxyVersionResponse extends AbstractModel {
 
     /**
     * 异步处理ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AsyncRequestId")
     @Expose
@@ -39,10 +38,8 @@ public class UpgradeCDBProxyVersionResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 异步处理ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 异步处理ID 
      * @return AsyncRequestId 异步处理ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAsyncRequestId() {
         return this.AsyncRequestId;
@@ -50,9 +47,7 @@ public class UpgradeCDBProxyVersionResponse extends AbstractModel {
 
     /**
      * Set 异步处理ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AsyncRequestId 异步处理ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAsyncRequestId(String AsyncRequestId) {
         this.AsyncRequestId = AsyncRequestId;

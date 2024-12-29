@@ -158,7 +158,6 @@ public class DbNormalDetail extends AbstractModel {
 
     /**
     * 是否全文启用 0：否 1：是
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsFullTextEnabled")
     @Expose
@@ -473,10 +472,8 @@ public class DbNormalDetail extends AbstractModel {
     }
 
     /**
-     * Get 是否全文启用 0：否 1：是
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否全文启用 0：否 1：是 
      * @return IsFullTextEnabled 是否全文启用 0：否 1：是
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getIsFullTextEnabled() {
         return this.IsFullTextEnabled;
@@ -484,9 +481,7 @@ public class DbNormalDetail extends AbstractModel {
 
     /**
      * Set 是否全文启用 0：否 1：是
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsFullTextEnabled 是否全文启用 0：否 1：是
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsFullTextEnabled(String IsFullTextEnabled) {
         this.IsFullTextEnabled = IsFullTextEnabled;

@@ -25,7 +25,6 @@ public class Bucket extends AbstractModel {
 
     /**
     * 无
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Key")
     @Expose
@@ -39,10 +38,8 @@ public class Bucket extends AbstractModel {
     private Long Count;
 
     /**
-     * Get 无
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 无 
      * @return Key 无
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKey() {
         return this.Key;
@@ -50,9 +47,7 @@ public class Bucket extends AbstractModel {
 
     /**
      * Set 无
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Key 无
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKey(String Key) {
         this.Key = Key;

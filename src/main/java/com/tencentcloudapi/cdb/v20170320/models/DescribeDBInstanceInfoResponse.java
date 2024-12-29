@@ -46,7 +46,6 @@ public class DescribeDBInstanceInfoResponse extends AbstractModel {
 
     /**
     * 加密使用的密钥 ID 。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KeyId")
     @Expose
@@ -54,7 +53,6 @@ public class DescribeDBInstanceInfoResponse extends AbstractModel {
 
     /**
     * 密钥所在地域。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("KeyRegion")
     @Expose
@@ -62,7 +60,6 @@ public class DescribeDBInstanceInfoResponse extends AbstractModel {
 
     /**
     * 当前 CDB 后端服务使用的 KMS 服务的默认地域。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DefaultKmsRegion")
     @Expose
@@ -124,10 +121,8 @@ public class DescribeDBInstanceInfoResponse extends AbstractModel {
     }
 
     /**
-     * Get 加密使用的密钥 ID 。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 加密使用的密钥 ID 。 
      * @return KeyId 加密使用的密钥 ID 。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKeyId() {
         return this.KeyId;
@@ -135,19 +130,15 @@ public class DescribeDBInstanceInfoResponse extends AbstractModel {
 
     /**
      * Set 加密使用的密钥 ID 。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param KeyId 加密使用的密钥 ID 。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKeyId(String KeyId) {
         this.KeyId = KeyId;
     }
 
     /**
-     * Get 密钥所在地域。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 密钥所在地域。 
      * @return KeyRegion 密钥所在地域。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getKeyRegion() {
         return this.KeyRegion;
@@ -155,19 +146,15 @@ public class DescribeDBInstanceInfoResponse extends AbstractModel {
 
     /**
      * Set 密钥所在地域。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param KeyRegion 密钥所在地域。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setKeyRegion(String KeyRegion) {
         this.KeyRegion = KeyRegion;
     }
 
     /**
-     * Get 当前 CDB 后端服务使用的 KMS 服务的默认地域。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 当前 CDB 后端服务使用的 KMS 服务的默认地域。 
      * @return DefaultKmsRegion 当前 CDB 后端服务使用的 KMS 服务的默认地域。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDefaultKmsRegion() {
         return this.DefaultKmsRegion;
@@ -175,9 +162,7 @@ public class DescribeDBInstanceInfoResponse extends AbstractModel {
 
     /**
      * Set 当前 CDB 后端服务使用的 KMS 服务的默认地域。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DefaultKmsRegion 当前 CDB 后端服务使用的 KMS 服务的默认地域。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDefaultKmsRegion(String DefaultKmsRegion) {
         this.DefaultKmsRegion = DefaultKmsRegion;

@@ -39,7 +39,6 @@ public class OldVip extends AbstractModel {
 
     /**
     * 旧IP保留时间小时数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OldIpRetainTime")
     @Expose
@@ -78,10 +77,8 @@ public class OldVip extends AbstractModel {
     }
 
     /**
-     * Get 旧IP保留时间小时数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 旧IP保留时间小时数 
      * @return OldIpRetainTime 旧IP保留时间小时数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getOldIpRetainTime() {
         return this.OldIpRetainTime;
@@ -89,9 +86,7 @@ public class OldVip extends AbstractModel {
 
     /**
      * Set 旧IP保留时间小时数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OldIpRetainTime 旧IP保留时间小时数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOldIpRetainTime(Long OldIpRetainTime) {
         this.OldIpRetainTime = OldIpRetainTime;

@@ -3281,6 +3281,17 @@ LimitTypes取值范围：
     }
 
     /**
+     *本接口（InquiryPriceAllocateAddresses）用于新购弹性公网IP询价。
+     * @param req InquiryPriceAllocateAddressesRequest
+     * @return InquiryPriceAllocateAddressesResponse
+     * @throws TencentCloudSDKException
+     */
+    public InquiryPriceAllocateAddressesResponse InquiryPriceAllocateAddresses(InquiryPriceAllocateAddressesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "InquiryPriceAllocateAddresses", InquiryPriceAllocateAddressesResponse.class);
+    }
+
+    /**
      *本接口（InquiryPriceCreateVpnGateway）用于创建VPN网关询价。
      * @param req InquiryPriceCreateVpnGatewayRequest
      * @return InquiryPriceCreateVpnGatewayResponse
@@ -3289,6 +3300,28 @@ LimitTypes取值范围：
     public InquiryPriceCreateVpnGatewayResponse InquiryPriceCreateVpnGateway(InquiryPriceCreateVpnGatewayRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "InquiryPriceCreateVpnGateway", InquiryPriceCreateVpnGatewayResponse.class);
+    }
+
+    /**
+     *EIP修改带宽询价
+     * @param req InquiryPriceModifyAddressesBandwidthRequest
+     * @return InquiryPriceModifyAddressesBandwidthResponse
+     * @throws TencentCloudSDKException
+     */
+    public InquiryPriceModifyAddressesBandwidthResponse InquiryPriceModifyAddressesBandwidth(InquiryPriceModifyAddressesBandwidthRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "InquiryPriceModifyAddressesBandwidth", InquiryPriceModifyAddressesBandwidthResponse.class);
+    }
+
+    /**
+     *本接口（InquiryPriceRenewAddresses）用于续费预付费弹性公网IP询价。
+     * @param req InquiryPriceRenewAddressesRequest
+     * @return InquiryPriceRenewAddressesResponse
+     * @throws TencentCloudSDKException
+     */
+    public InquiryPriceRenewAddressesResponse InquiryPriceRenewAddresses(InquiryPriceRenewAddressesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "InquiryPriceRenewAddresses", InquiryPriceRenewAddressesResponse.class);
     }
 
     /**

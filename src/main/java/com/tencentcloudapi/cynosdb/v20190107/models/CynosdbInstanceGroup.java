@@ -66,7 +66,7 @@ public class CynosdbInstanceGroup extends AbstractModel {
     private String Status;
 
     /**
-    * 实例组类型。ha-ha组；ro-只读组
+    * 实例组（网络）类型。ha-ha组；ro-只读组；proxy-代理；singleRo-只读实例独占
     */
     @SerializedName("Type")
     @Expose
@@ -270,16 +270,16 @@ public class CynosdbInstanceGroup extends AbstractModel {
     }
 
     /**
-     * Get 实例组类型。ha-ha组；ro-只读组 
-     * @return Type 实例组类型。ha-ha组；ro-只读组
+     * Get 实例组（网络）类型。ha-ha组；ro-只读组；proxy-代理；singleRo-只读实例独占 
+     * @return Type 实例组（网络）类型。ha-ha组；ro-只读组；proxy-代理；singleRo-只读实例独占
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 实例组类型。ha-ha组；ro-只读组
-     * @param Type 实例组类型。ha-ha组；ro-只读组
+     * Set 实例组（网络）类型。ha-ha组；ro-只读组；proxy-代理；singleRo-只读实例独占
+     * @param Type 实例组（网络）类型。ha-ha组；ro-只读组；proxy-代理；singleRo-只读实例独占
      */
     public void setType(String Type) {
         this.Type = Type;

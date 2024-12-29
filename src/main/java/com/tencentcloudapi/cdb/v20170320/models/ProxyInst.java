@@ -25,7 +25,6 @@ public class ProxyInst extends AbstractModel {
 
     /**
     * 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -33,7 +32,6 @@ public class ProxyInst extends AbstractModel {
 
     /**
     * 实例名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceName")
     @Expose
@@ -41,7 +39,6 @@ public class ProxyInst extends AbstractModel {
 
     /**
     * 实例类型：1 master 主实例; 2 ro 只读实例; 3 dr 灾备实例; 4 sdr 小灾备实例
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceType")
     @Expose
@@ -49,7 +46,6 @@ public class ProxyInst extends AbstractModel {
 
     /**
     * 实例状态，可能的返回值：0-创建中；1-运行中；4-隔离中；5-已隔离
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -57,7 +53,6 @@ public class ProxyInst extends AbstractModel {
 
     /**
     * 只读权重,如果权重为系统自动分配，改值不生效，只代表是否启用该实例
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Weight")
     @Expose
@@ -65,7 +60,6 @@ public class ProxyInst extends AbstractModel {
 
     /**
     * 实例所属地域
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Region")
     @Expose
@@ -73,7 +67,6 @@ public class ProxyInst extends AbstractModel {
 
     /**
     * 实例所属可用区
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Zone")
     @Expose
@@ -94,10 +87,8 @@ public class ProxyInst extends AbstractModel {
     private String InstNodeRole;
 
     /**
-     * Get 实例ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例ID 
      * @return InstanceId 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceId() {
         return this.InstanceId;
@@ -105,19 +96,15 @@ public class ProxyInst extends AbstractModel {
 
     /**
      * Set 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceId 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 实例名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例名称 
      * @return InstanceName 实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceName() {
         return this.InstanceName;
@@ -125,19 +112,15 @@ public class ProxyInst extends AbstractModel {
 
     /**
      * Set 实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceName 实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get 实例类型：1 master 主实例; 2 ro 只读实例; 3 dr 灾备实例; 4 sdr 小灾备实例
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例类型：1 master 主实例; 2 ro 只读实例; 3 dr 灾备实例; 4 sdr 小灾备实例 
      * @return InstanceType 实例类型：1 master 主实例; 2 ro 只读实例; 3 dr 灾备实例; 4 sdr 小灾备实例
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getInstanceType() {
         return this.InstanceType;
@@ -145,19 +128,15 @@ public class ProxyInst extends AbstractModel {
 
     /**
      * Set 实例类型：1 master 主实例; 2 ro 只读实例; 3 dr 灾备实例; 4 sdr 小灾备实例
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceType 实例类型：1 master 主实例; 2 ro 只读实例; 3 dr 灾备实例; 4 sdr 小灾备实例
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceType(Long InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get 实例状态，可能的返回值：0-创建中；1-运行中；4-隔离中；5-已隔离
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例状态，可能的返回值：0-创建中；1-运行中；4-隔离中；5-已隔离 
      * @return Status 实例状态，可能的返回值：0-创建中；1-运行中；4-隔离中；5-已隔离
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStatus() {
         return this.Status;
@@ -165,19 +144,15 @@ public class ProxyInst extends AbstractModel {
 
     /**
      * Set 实例状态，可能的返回值：0-创建中；1-运行中；4-隔离中；5-已隔离
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 实例状态，可能的返回值：0-创建中；1-运行中；4-隔离中；5-已隔离
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 只读权重,如果权重为系统自动分配，改值不生效，只代表是否启用该实例
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 只读权重,如果权重为系统自动分配，改值不生效，只代表是否启用该实例 
      * @return Weight 只读权重,如果权重为系统自动分配，改值不生效，只代表是否启用该实例
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getWeight() {
         return this.Weight;
@@ -185,19 +160,15 @@ public class ProxyInst extends AbstractModel {
 
     /**
      * Set 只读权重,如果权重为系统自动分配，改值不生效，只代表是否启用该实例
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Weight 只读权重,如果权重为系统自动分配，改值不生效，只代表是否启用该实例
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWeight(Long Weight) {
         this.Weight = Weight;
     }
 
     /**
-     * Get 实例所属地域
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例所属地域 
      * @return Region 实例所属地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegion() {
         return this.Region;
@@ -205,19 +176,15 @@ public class ProxyInst extends AbstractModel {
 
     /**
      * Set 实例所属地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Region 实例所属地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get 实例所属可用区
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例所属可用区 
      * @return Zone 实例所属可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getZone() {
         return this.Zone;
@@ -225,9 +192,7 @@ public class ProxyInst extends AbstractModel {
 
     /**
      * Set 实例所属可用区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Zone 实例所属可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZone(String Zone) {
         this.Zone = Zone;

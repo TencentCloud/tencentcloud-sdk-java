@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cvm.v20170312.models;
+package com.tencentcloudapi.emr.v20190103.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,14 +21,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class PurchaseReservedInstancesOfferingResponse extends AbstractModel {
-
-    /**
-    * 已购买预留实例计费ID
-    */
-    @SerializedName("ReservedInstanceId")
-    @Expose
-    private String ReservedInstanceId;
+public class SetNodeResourceConfigDefaultResponse extends AbstractModel {
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -36,22 +29,6 @@ public class PurchaseReservedInstancesOfferingResponse extends AbstractModel {
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get 已购买预留实例计费ID 
-     * @return ReservedInstanceId 已购买预留实例计费ID
-     */
-    public String getReservedInstanceId() {
-        return this.ReservedInstanceId;
-    }
-
-    /**
-     * Set 已购买预留实例计费ID
-     * @param ReservedInstanceId 已购买预留实例计费ID
-     */
-    public void setReservedInstanceId(String ReservedInstanceId) {
-        this.ReservedInstanceId = ReservedInstanceId;
-    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -69,17 +46,14 @@ public class PurchaseReservedInstancesOfferingResponse extends AbstractModel {
         this.RequestId = RequestId;
     }
 
-    public PurchaseReservedInstancesOfferingResponse() {
+    public SetNodeResourceConfigDefaultResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public PurchaseReservedInstancesOfferingResponse(PurchaseReservedInstancesOfferingResponse source) {
-        if (source.ReservedInstanceId != null) {
-            this.ReservedInstanceId = new String(source.ReservedInstanceId);
-        }
+    public SetNodeResourceConfigDefaultResponse(SetNodeResourceConfigDefaultResponse source) {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -90,7 +64,6 @@ public class PurchaseReservedInstancesOfferingResponse extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "ReservedInstanceId", this.ReservedInstanceId);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

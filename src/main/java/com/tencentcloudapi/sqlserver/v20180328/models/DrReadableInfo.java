@@ -24,8 +24,30 @@ import java.util.HashMap;
 public class DrReadableInfo extends AbstractModel {
 
     /**
-    * 备机状态，enable-运行中，disable-不可用
-注意：此字段可能返回 null，表示取不到有效值。
+    * 备机资源ID
+    */
+    @SerializedName("DrInstanceId")
+    @Expose
+    private String DrInstanceId;
+
+    /**
+    * 备机可用区
+    */
+    @SerializedName("Zone")
+    @Expose
+    private String Zone;
+
+    /**
+    * 备机状态
+DR_CREATING-备机创建中
+DR_RUNNING-备机运行中
+DR_UNAVAILABLE-备机不可用
+DR_ISOLATED-备机已隔离
+DR_RECYCLING-备机回收中
+DR_RECYCLED-备机已回收
+DR_JOB_RUNNING-备机执行任务中
+DR_OFFLINE-备机已下线
+DR_FAIL_OVER-备机只读故障转移中
     */
     @SerializedName("SlaveStatus")
     @Expose
@@ -33,7 +55,6 @@ public class DrReadableInfo extends AbstractModel {
 
     /**
     * 备机可读状态，enable-已开启，disable-已关闭
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReadableStatus")
     @Expose
@@ -41,7 +62,6 @@ public class DrReadableInfo extends AbstractModel {
 
     /**
     * 备机只读vip
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Vip")
     @Expose
@@ -49,7 +69,6 @@ public class DrReadableInfo extends AbstractModel {
 
     /**
     * 备机只读端口
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("VPort")
     @Expose
@@ -57,7 +76,6 @@ public class DrReadableInfo extends AbstractModel {
 
     /**
     * 备机所在私有网络ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UniqVpcId")
     @Expose
@@ -65,37 +83,112 @@ public class DrReadableInfo extends AbstractModel {
 
     /**
     * 备机所在私有网络子网ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("UniqSubnetId")
     @Expose
     private String UniqSubnetId;
 
     /**
-     * Get 备机状态，enable-运行中，disable-不可用
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SlaveStatus 备机状态，enable-运行中，disable-不可用
-注意：此字段可能返回 null，表示取不到有效值。
+    * 备机只读权重
+    */
+    @SerializedName("RoWeight")
+    @Expose
+    private Long RoWeight;
+
+    /**
+    * 备机只读模式，BalancedReadOnly-多备一读模式，SingleReadOnly-一备一读模式
+    */
+    @SerializedName("ReadMode")
+    @Expose
+    private String ReadMode;
+
+    /**
+     * Get 备机资源ID 
+     * @return DrInstanceId 备机资源ID
+     */
+    public String getDrInstanceId() {
+        return this.DrInstanceId;
+    }
+
+    /**
+     * Set 备机资源ID
+     * @param DrInstanceId 备机资源ID
+     */
+    public void setDrInstanceId(String DrInstanceId) {
+        this.DrInstanceId = DrInstanceId;
+    }
+
+    /**
+     * Get 备机可用区 
+     * @return Zone 备机可用区
+     */
+    public String getZone() {
+        return this.Zone;
+    }
+
+    /**
+     * Set 备机可用区
+     * @param Zone 备机可用区
+     */
+    public void setZone(String Zone) {
+        this.Zone = Zone;
+    }
+
+    /**
+     * Get 备机状态
+DR_CREATING-备机创建中
+DR_RUNNING-备机运行中
+DR_UNAVAILABLE-备机不可用
+DR_ISOLATED-备机已隔离
+DR_RECYCLING-备机回收中
+DR_RECYCLED-备机已回收
+DR_JOB_RUNNING-备机执行任务中
+DR_OFFLINE-备机已下线
+DR_FAIL_OVER-备机只读故障转移中 
+     * @return SlaveStatus 备机状态
+DR_CREATING-备机创建中
+DR_RUNNING-备机运行中
+DR_UNAVAILABLE-备机不可用
+DR_ISOLATED-备机已隔离
+DR_RECYCLING-备机回收中
+DR_RECYCLED-备机已回收
+DR_JOB_RUNNING-备机执行任务中
+DR_OFFLINE-备机已下线
+DR_FAIL_OVER-备机只读故障转移中
      */
     public String getSlaveStatus() {
         return this.SlaveStatus;
     }
 
     /**
-     * Set 备机状态，enable-运行中，disable-不可用
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param SlaveStatus 备机状态，enable-运行中，disable-不可用
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 备机状态
+DR_CREATING-备机创建中
+DR_RUNNING-备机运行中
+DR_UNAVAILABLE-备机不可用
+DR_ISOLATED-备机已隔离
+DR_RECYCLING-备机回收中
+DR_RECYCLED-备机已回收
+DR_JOB_RUNNING-备机执行任务中
+DR_OFFLINE-备机已下线
+DR_FAIL_OVER-备机只读故障转移中
+     * @param SlaveStatus 备机状态
+DR_CREATING-备机创建中
+DR_RUNNING-备机运行中
+DR_UNAVAILABLE-备机不可用
+DR_ISOLATED-备机已隔离
+DR_RECYCLING-备机回收中
+DR_RECYCLED-备机已回收
+DR_JOB_RUNNING-备机执行任务中
+DR_OFFLINE-备机已下线
+DR_FAIL_OVER-备机只读故障转移中
      */
     public void setSlaveStatus(String SlaveStatus) {
         this.SlaveStatus = SlaveStatus;
     }
 
     /**
-     * Get 备机可读状态，enable-已开启，disable-已关闭
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 备机可读状态，enable-已开启，disable-已关闭 
      * @return ReadableStatus 备机可读状态，enable-已开启，disable-已关闭
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getReadableStatus() {
         return this.ReadableStatus;
@@ -103,19 +196,15 @@ public class DrReadableInfo extends AbstractModel {
 
     /**
      * Set 备机可读状态，enable-已开启，disable-已关闭
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReadableStatus 备机可读状态，enable-已开启，disable-已关闭
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReadableStatus(String ReadableStatus) {
         this.ReadableStatus = ReadableStatus;
     }
 
     /**
-     * Get 备机只读vip
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 备机只读vip 
      * @return Vip 备机只读vip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getVip() {
         return this.Vip;
@@ -123,19 +212,15 @@ public class DrReadableInfo extends AbstractModel {
 
     /**
      * Set 备机只读vip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Vip 备机只读vip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVip(String Vip) {
         this.Vip = Vip;
     }
 
     /**
-     * Get 备机只读端口
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 备机只读端口 
      * @return VPort 备机只读端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getVPort() {
         return this.VPort;
@@ -143,19 +228,15 @@ public class DrReadableInfo extends AbstractModel {
 
     /**
      * Set 备机只读端口
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VPort 备机只读端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVPort(Long VPort) {
         this.VPort = VPort;
     }
 
     /**
-     * Get 备机所在私有网络ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 备机所在私有网络ID 
      * @return UniqVpcId 备机所在私有网络ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUniqVpcId() {
         return this.UniqVpcId;
@@ -163,19 +244,15 @@ public class DrReadableInfo extends AbstractModel {
 
     /**
      * Set 备机所在私有网络ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UniqVpcId 备机所在私有网络ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUniqVpcId(String UniqVpcId) {
         this.UniqVpcId = UniqVpcId;
     }
 
     /**
-     * Get 备机所在私有网络子网ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 备机所在私有网络子网ID 
      * @return UniqSubnetId 备机所在私有网络子网ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUniqSubnetId() {
         return this.UniqSubnetId;
@@ -183,12 +260,42 @@ public class DrReadableInfo extends AbstractModel {
 
     /**
      * Set 备机所在私有网络子网ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param UniqSubnetId 备机所在私有网络子网ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUniqSubnetId(String UniqSubnetId) {
         this.UniqSubnetId = UniqSubnetId;
+    }
+
+    /**
+     * Get 备机只读权重 
+     * @return RoWeight 备机只读权重
+     */
+    public Long getRoWeight() {
+        return this.RoWeight;
+    }
+
+    /**
+     * Set 备机只读权重
+     * @param RoWeight 备机只读权重
+     */
+    public void setRoWeight(Long RoWeight) {
+        this.RoWeight = RoWeight;
+    }
+
+    /**
+     * Get 备机只读模式，BalancedReadOnly-多备一读模式，SingleReadOnly-一备一读模式 
+     * @return ReadMode 备机只读模式，BalancedReadOnly-多备一读模式，SingleReadOnly-一备一读模式
+     */
+    public String getReadMode() {
+        return this.ReadMode;
+    }
+
+    /**
+     * Set 备机只读模式，BalancedReadOnly-多备一读模式，SingleReadOnly-一备一读模式
+     * @param ReadMode 备机只读模式，BalancedReadOnly-多备一读模式，SingleReadOnly-一备一读模式
+     */
+    public void setReadMode(String ReadMode) {
+        this.ReadMode = ReadMode;
     }
 
     public DrReadableInfo() {
@@ -199,6 +306,12 @@ public class DrReadableInfo extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DrReadableInfo(DrReadableInfo source) {
+        if (source.DrInstanceId != null) {
+            this.DrInstanceId = new String(source.DrInstanceId);
+        }
+        if (source.Zone != null) {
+            this.Zone = new String(source.Zone);
+        }
         if (source.SlaveStatus != null) {
             this.SlaveStatus = new String(source.SlaveStatus);
         }
@@ -217,6 +330,12 @@ public class DrReadableInfo extends AbstractModel {
         if (source.UniqSubnetId != null) {
             this.UniqSubnetId = new String(source.UniqSubnetId);
         }
+        if (source.RoWeight != null) {
+            this.RoWeight = new Long(source.RoWeight);
+        }
+        if (source.ReadMode != null) {
+            this.ReadMode = new String(source.ReadMode);
+        }
     }
 
 
@@ -224,12 +343,16 @@ public class DrReadableInfo extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "DrInstanceId", this.DrInstanceId);
+        this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamSimple(map, prefix + "SlaveStatus", this.SlaveStatus);
         this.setParamSimple(map, prefix + "ReadableStatus", this.ReadableStatus);
         this.setParamSimple(map, prefix + "Vip", this.Vip);
         this.setParamSimple(map, prefix + "VPort", this.VPort);
         this.setParamSimple(map, prefix + "UniqVpcId", this.UniqVpcId);
         this.setParamSimple(map, prefix + "UniqSubnetId", this.UniqSubnetId);
+        this.setParamSimple(map, prefix + "RoWeight", this.RoWeight);
+        this.setParamSimple(map, prefix + "ReadMode", this.ReadMode);
 
     }
 }

@@ -61,7 +61,6 @@ public class ProxyAddress extends AbstractModel {
     /**
     * 权重分配模式；
 系统自动分配："system"， 自定义："custom"
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WeightMode")
     @Expose
@@ -69,7 +68,6 @@ public class ProxyAddress extends AbstractModel {
 
     /**
     * 是否开启延迟剔除，取值："true" | "false"
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsKickOut")
     @Expose
@@ -77,7 +75,6 @@ public class ProxyAddress extends AbstractModel {
 
     /**
     * 最小保留数量，最小取值：0
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MinCount")
     @Expose
@@ -85,7 +82,6 @@ public class ProxyAddress extends AbstractModel {
 
     /**
     * 延迟剔除阈值，最小取值：0
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MaxDelay")
     @Expose
@@ -93,7 +89,6 @@ public class ProxyAddress extends AbstractModel {
 
     /**
     * 是否自动添加RO，取值："true" | "false"
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AutoAddRo")
     @Expose
@@ -101,7 +96,6 @@ public class ProxyAddress extends AbstractModel {
 
     /**
     * 是否是只读，取值："true" | "false"
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReadOnly")
     @Expose
@@ -109,7 +103,6 @@ public class ProxyAddress extends AbstractModel {
 
     /**
     * 是否开启事务分离
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TransSplit")
     @Expose
@@ -117,7 +110,6 @@ public class ProxyAddress extends AbstractModel {
 
     /**
     * 是否开启故障转移
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FailOver")
     @Expose
@@ -125,7 +117,6 @@ public class ProxyAddress extends AbstractModel {
 
     /**
     * 是否开启连接池
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ConnectionPool")
     @Expose
@@ -133,7 +124,6 @@ public class ProxyAddress extends AbstractModel {
 
     /**
     * 描述
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Desc")
     @Expose
@@ -141,7 +131,6 @@ public class ProxyAddress extends AbstractModel {
 
     /**
     * 实例读权重分配
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ProxyAllocation")
     @Expose
@@ -243,11 +232,9 @@ public class ProxyAddress extends AbstractModel {
 
     /**
      * Get 权重分配模式；
-系统自动分配："system"， 自定义："custom"
-注意：此字段可能返回 null，表示取不到有效值。 
+系统自动分配："system"， 自定义："custom" 
      * @return WeightMode 权重分配模式；
 系统自动分配："system"， 自定义："custom"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWeightMode() {
         return this.WeightMode;
@@ -256,20 +243,16 @@ public class ProxyAddress extends AbstractModel {
     /**
      * Set 权重分配模式；
 系统自动分配："system"， 自定义："custom"
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WeightMode 权重分配模式；
 系统自动分配："system"， 自定义："custom"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWeightMode(String WeightMode) {
         this.WeightMode = WeightMode;
     }
 
     /**
-     * Get 是否开启延迟剔除，取值："true" | "false"
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否开启延迟剔除，取值："true" | "false" 
      * @return IsKickOut 是否开启延迟剔除，取值："true" | "false"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsKickOut() {
         return this.IsKickOut;
@@ -277,19 +260,15 @@ public class ProxyAddress extends AbstractModel {
 
     /**
      * Set 是否开启延迟剔除，取值："true" | "false"
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsKickOut 是否开启延迟剔除，取值："true" | "false"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsKickOut(Boolean IsKickOut) {
         this.IsKickOut = IsKickOut;
     }
 
     /**
-     * Get 最小保留数量，最小取值：0
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 最小保留数量，最小取值：0 
      * @return MinCount 最小保留数量，最小取值：0
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMinCount() {
         return this.MinCount;
@@ -297,19 +276,15 @@ public class ProxyAddress extends AbstractModel {
 
     /**
      * Set 最小保留数量，最小取值：0
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MinCount 最小保留数量，最小取值：0
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMinCount(Long MinCount) {
         this.MinCount = MinCount;
     }
 
     /**
-     * Get 延迟剔除阈值，最小取值：0
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 延迟剔除阈值，最小取值：0 
      * @return MaxDelay 延迟剔除阈值，最小取值：0
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getMaxDelay() {
         return this.MaxDelay;
@@ -317,19 +292,15 @@ public class ProxyAddress extends AbstractModel {
 
     /**
      * Set 延迟剔除阈值，最小取值：0
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MaxDelay 延迟剔除阈值，最小取值：0
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMaxDelay(Long MaxDelay) {
         this.MaxDelay = MaxDelay;
     }
 
     /**
-     * Get 是否自动添加RO，取值："true" | "false"
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否自动添加RO，取值："true" | "false" 
      * @return AutoAddRo 是否自动添加RO，取值："true" | "false"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getAutoAddRo() {
         return this.AutoAddRo;
@@ -337,19 +308,15 @@ public class ProxyAddress extends AbstractModel {
 
     /**
      * Set 是否自动添加RO，取值："true" | "false"
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AutoAddRo 是否自动添加RO，取值："true" | "false"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAutoAddRo(Boolean AutoAddRo) {
         this.AutoAddRo = AutoAddRo;
     }
 
     /**
-     * Get 是否是只读，取值："true" | "false"
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否是只读，取值："true" | "false" 
      * @return ReadOnly 是否是只读，取值："true" | "false"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getReadOnly() {
         return this.ReadOnly;
@@ -357,19 +324,15 @@ public class ProxyAddress extends AbstractModel {
 
     /**
      * Set 是否是只读，取值："true" | "false"
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReadOnly 是否是只读，取值："true" | "false"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReadOnly(Boolean ReadOnly) {
         this.ReadOnly = ReadOnly;
     }
 
     /**
-     * Get 是否开启事务分离
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否开启事务分离 
      * @return TransSplit 是否开启事务分离
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getTransSplit() {
         return this.TransSplit;
@@ -377,19 +340,15 @@ public class ProxyAddress extends AbstractModel {
 
     /**
      * Set 是否开启事务分离
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TransSplit 是否开启事务分离
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTransSplit(Boolean TransSplit) {
         this.TransSplit = TransSplit;
     }
 
     /**
-     * Get 是否开启故障转移
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否开启故障转移 
      * @return FailOver 是否开启故障转移
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getFailOver() {
         return this.FailOver;
@@ -397,19 +356,15 @@ public class ProxyAddress extends AbstractModel {
 
     /**
      * Set 是否开启故障转移
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FailOver 是否开启故障转移
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFailOver(Boolean FailOver) {
         this.FailOver = FailOver;
     }
 
     /**
-     * Get 是否开启连接池
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否开启连接池 
      * @return ConnectionPool 是否开启连接池
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getConnectionPool() {
         return this.ConnectionPool;
@@ -417,19 +372,15 @@ public class ProxyAddress extends AbstractModel {
 
     /**
      * Set 是否开启连接池
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ConnectionPool 是否开启连接池
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setConnectionPool(Boolean ConnectionPool) {
         this.ConnectionPool = ConnectionPool;
     }
 
     /**
-     * Get 描述
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 描述 
      * @return Desc 描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDesc() {
         return this.Desc;
@@ -437,19 +388,15 @@ public class ProxyAddress extends AbstractModel {
 
     /**
      * Set 描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Desc 描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDesc(String Desc) {
         this.Desc = Desc;
     }
 
     /**
-     * Get 实例读权重分配
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例读权重分配 
      * @return ProxyAllocation 实例读权重分配
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ProxyAllocation [] getProxyAllocation() {
         return this.ProxyAllocation;
@@ -457,9 +404,7 @@ public class ProxyAddress extends AbstractModel {
 
     /**
      * Set 实例读权重分配
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProxyAllocation 实例读权重分配
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProxyAllocation(ProxyAllocation [] ProxyAllocation) {
         this.ProxyAllocation = ProxyAllocation;

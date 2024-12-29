@@ -52,7 +52,7 @@ public class DescribeInstanceTradeParameterRequest extends AbstractModel {
     private Long Storage;
 
     /**
-    * 购买实例的类型 HA-高可用型(包括双机高可用，alwaysOn集群)，RO-只读副本型，SI-单节点型,BI-商业智能服务,cvmHA-新版高可用,cvmRO-新版只读
+    * 购买实例的类型 HA-高可用型(包括双机高可用，alwaysOn集群)，RO-只读副本型，SI-单节点型,BI-商业智能服务,cvmHA-新版高可用,cvmRO-新版只读，MultiHA-多节点，cvmMultiHA-云盘多节点
     */
     @SerializedName("InstanceType")
     @Expose
@@ -178,6 +178,20 @@ public class DescribeInstanceTradeParameterRequest extends AbstractModel {
     private String Collation;
 
     /**
+    * 是否多节点架构，默认值为false
+    */
+    @SerializedName("MultiNodes")
+    @Expose
+    private Boolean MultiNodes;
+
+    /**
+    * 备节点可用区，默认为空。如果是多节点架构时必传，并且当MultiZones=true时备节点可用区不能全部相同。备机可用区集合最小为2个，最大不超过5个。
+    */
+    @SerializedName("DrZones")
+    @Expose
+    private String [] DrZones;
+
+    /**
      * Get 实例可用区，类似ap-guangzhou-1（广州一区）；实例可售卖区域可以通过接口DescribeZones获取 
      * @return Zone 实例可用区，类似ap-guangzhou-1（广州一区）；实例可售卖区域可以通过接口DescribeZones获取
      */
@@ -242,16 +256,16 @@ public class DescribeInstanceTradeParameterRequest extends AbstractModel {
     }
 
     /**
-     * Get 购买实例的类型 HA-高可用型(包括双机高可用，alwaysOn集群)，RO-只读副本型，SI-单节点型,BI-商业智能服务,cvmHA-新版高可用,cvmRO-新版只读 
-     * @return InstanceType 购买实例的类型 HA-高可用型(包括双机高可用，alwaysOn集群)，RO-只读副本型，SI-单节点型,BI-商业智能服务,cvmHA-新版高可用,cvmRO-新版只读
+     * Get 购买实例的类型 HA-高可用型(包括双机高可用，alwaysOn集群)，RO-只读副本型，SI-单节点型,BI-商业智能服务,cvmHA-新版高可用,cvmRO-新版只读，MultiHA-多节点，cvmMultiHA-云盘多节点 
+     * @return InstanceType 购买实例的类型 HA-高可用型(包括双机高可用，alwaysOn集群)，RO-只读副本型，SI-单节点型,BI-商业智能服务,cvmHA-新版高可用,cvmRO-新版只读，MultiHA-多节点，cvmMultiHA-云盘多节点
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set 购买实例的类型 HA-高可用型(包括双机高可用，alwaysOn集群)，RO-只读副本型，SI-单节点型,BI-商业智能服务,cvmHA-新版高可用,cvmRO-新版只读
-     * @param InstanceType 购买实例的类型 HA-高可用型(包括双机高可用，alwaysOn集群)，RO-只读副本型，SI-单节点型,BI-商业智能服务,cvmHA-新版高可用,cvmRO-新版只读
+     * Set 购买实例的类型 HA-高可用型(包括双机高可用，alwaysOn集群)，RO-只读副本型，SI-单节点型,BI-商业智能服务,cvmHA-新版高可用,cvmRO-新版只读，MultiHA-多节点，cvmMultiHA-云盘多节点
+     * @param InstanceType 购买实例的类型 HA-高可用型(包括双机高可用，alwaysOn集群)，RO-只读副本型，SI-单节点型,BI-商业智能服务,cvmHA-新版高可用,cvmRO-新版只读，MultiHA-多节点，cvmMultiHA-云盘多节点
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
@@ -529,6 +543,38 @@ public class DescribeInstanceTradeParameterRequest extends AbstractModel {
         this.Collation = Collation;
     }
 
+    /**
+     * Get 是否多节点架构，默认值为false 
+     * @return MultiNodes 是否多节点架构，默认值为false
+     */
+    public Boolean getMultiNodes() {
+        return this.MultiNodes;
+    }
+
+    /**
+     * Set 是否多节点架构，默认值为false
+     * @param MultiNodes 是否多节点架构，默认值为false
+     */
+    public void setMultiNodes(Boolean MultiNodes) {
+        this.MultiNodes = MultiNodes;
+    }
+
+    /**
+     * Get 备节点可用区，默认为空。如果是多节点架构时必传，并且当MultiZones=true时备节点可用区不能全部相同。备机可用区集合最小为2个，最大不超过5个。 
+     * @return DrZones 备节点可用区，默认为空。如果是多节点架构时必传，并且当MultiZones=true时备节点可用区不能全部相同。备机可用区集合最小为2个，最大不超过5个。
+     */
+    public String [] getDrZones() {
+        return this.DrZones;
+    }
+
+    /**
+     * Set 备节点可用区，默认为空。如果是多节点架构时必传，并且当MultiZones=true时备节点可用区不能全部相同。备机可用区集合最小为2个，最大不超过5个。
+     * @param DrZones 备节点可用区，默认为空。如果是多节点架构时必传，并且当MultiZones=true时备节点可用区不能全部相同。备机可用区集合最小为2个，最大不超过5个。
+     */
+    public void setDrZones(String [] DrZones) {
+        this.DrZones = DrZones;
+    }
+
     public DescribeInstanceTradeParameterRequest() {
     }
 
@@ -612,6 +658,15 @@ public class DescribeInstanceTradeParameterRequest extends AbstractModel {
         if (source.Collation != null) {
             this.Collation = new String(source.Collation);
         }
+        if (source.MultiNodes != null) {
+            this.MultiNodes = new Boolean(source.MultiNodes);
+        }
+        if (source.DrZones != null) {
+            this.DrZones = new String[source.DrZones.length];
+            for (int i = 0; i < source.DrZones.length; i++) {
+                this.DrZones[i] = new String(source.DrZones[i]);
+            }
+        }
     }
 
 
@@ -641,6 +696,8 @@ public class DescribeInstanceTradeParameterRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
         this.setParamSimple(map, prefix + "TimeZone", this.TimeZone);
         this.setParamSimple(map, prefix + "Collation", this.Collation);
+        this.setParamSimple(map, prefix + "MultiNodes", this.MultiNodes);
+        this.setParamArraySimple(map, prefix + "DrZones.", this.DrZones);
 
     }
 }

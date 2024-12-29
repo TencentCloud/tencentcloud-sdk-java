@@ -60,6 +60,13 @@ public class DescribeResourcesRequest extends AbstractModel {
     private String WorkSpaceId;
 
     /**
+    * 资源类型，0=用户，1系统connector，2=用户自定义connector
+    */
+    @SerializedName("SystemResource")
+    @Expose
+    private Long SystemResource;
+
+    /**
      * Get 需要查询的资源ID数组，数量不超过100个。如果填写了该参数则忽略Filters参数。 
      * @return ResourceIds 需要查询的资源ID数组，数量不超过100个。如果填写了该参数则忽略Filters参数。
      */
@@ -143,6 +150,22 @@ public class DescribeResourcesRequest extends AbstractModel {
         this.WorkSpaceId = WorkSpaceId;
     }
 
+    /**
+     * Get 资源类型，0=用户，1系统connector，2=用户自定义connector 
+     * @return SystemResource 资源类型，0=用户，1系统connector，2=用户自定义connector
+     */
+    public Long getSystemResource() {
+        return this.SystemResource;
+    }
+
+    /**
+     * Set 资源类型，0=用户，1系统connector，2=用户自定义connector
+     * @param SystemResource 资源类型，0=用户，1系统connector，2=用户自定义connector
+     */
+    public void setSystemResource(Long SystemResource) {
+        this.SystemResource = SystemResource;
+    }
+
     public DescribeResourcesRequest() {
     }
 
@@ -172,6 +195,9 @@ public class DescribeResourcesRequest extends AbstractModel {
         if (source.WorkSpaceId != null) {
             this.WorkSpaceId = new String(source.WorkSpaceId);
         }
+        if (source.SystemResource != null) {
+            this.SystemResource = new Long(source.SystemResource);
+        }
     }
 
 
@@ -184,6 +210,7 @@ public class DescribeResourcesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
         this.setParamSimple(map, prefix + "WorkSpaceId", this.WorkSpaceId);
+        this.setParamSimple(map, prefix + "SystemResource", this.SystemResource);
 
     }
 }

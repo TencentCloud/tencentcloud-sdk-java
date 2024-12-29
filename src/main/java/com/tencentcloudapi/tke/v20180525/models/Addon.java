@@ -62,6 +62,13 @@ public class Addon extends AbstractModel {
     private String Reason;
 
     /**
+    * addon的创建时间
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private String CreateTime;
+
+    /**
      * Get addon名称 
      * @return AddonName addon名称
      */
@@ -153,6 +160,22 @@ public class Addon extends AbstractModel {
         this.Reason = Reason;
     }
 
+    /**
+     * Get addon的创建时间 
+     * @return CreateTime addon的创建时间
+     */
+    public String getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set addon的创建时间
+     * @param CreateTime addon的创建时间
+     */
+    public void setCreateTime(String CreateTime) {
+        this.CreateTime = CreateTime;
+    }
+
     public Addon() {
     }
 
@@ -176,6 +199,9 @@ public class Addon extends AbstractModel {
         if (source.Reason != null) {
             this.Reason = new String(source.Reason);
         }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
     }
 
 
@@ -188,6 +214,7 @@ public class Addon extends AbstractModel {
         this.setParamSimple(map, prefix + "RawValues", this.RawValues);
         this.setParamSimple(map, prefix + "Phase", this.Phase);
         this.setParamSimple(map, prefix + "Reason", this.Reason);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
 
     }
 }

@@ -170,7 +170,7 @@ public class CreatePrepareFlowRequest extends AbstractModel {
     */
     @SerializedName("CcInfos")
     @Expose
-    private CcInfo CcInfos;
+    private CcInfo [] CcInfos;
 
     /**
     * 合同Id：用于通过一个已发起的合同快速生成一个发起流程web链接
@@ -593,7 +593,7 @@ public class CreatePrepareFlowRequest extends AbstractModel {
      * @return CcInfos 合同流程的抄送人列表，最多可支持50个抄送人，抄送人可查看合同内容及签署进度，但无需参与合同签署。
 
      */
-    public CcInfo getCcInfos() {
+    public CcInfo [] getCcInfos() {
         return this.CcInfos;
     }
 
@@ -603,7 +603,7 @@ public class CreatePrepareFlowRequest extends AbstractModel {
      * @param CcInfos 合同流程的抄送人列表，最多可支持50个抄送人，抄送人可查看合同内容及签署进度，但无需参与合同签署。
 
      */
-    public void setCcInfos(CcInfo CcInfos) {
+    public void setCcInfos(CcInfo [] CcInfos) {
         this.CcInfos = CcInfos;
     }
 
@@ -740,7 +740,10 @@ public class CreatePrepareFlowRequest extends AbstractModel {
             this.UserData = new String(source.UserData);
         }
         if (source.CcInfos != null) {
-            this.CcInfos = new CcInfo(source.CcInfos);
+            this.CcInfos = new CcInfo[source.CcInfos.length];
+            for (int i = 0; i < source.CcInfos.length; i++) {
+                this.CcInfos[i] = new CcInfo(source.CcInfos[i]);
+            }
         }
         if (source.FlowId != null) {
             this.FlowId = new String(source.FlowId);
@@ -779,7 +782,7 @@ public class CreatePrepareFlowRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "NeedSignReview", this.NeedSignReview);
         this.setParamSimple(map, prefix + "NeedCreateReview", this.NeedCreateReview);
         this.setParamSimple(map, prefix + "UserData", this.UserData);
-        this.setParamObj(map, prefix + "CcInfos.", this.CcInfos);
+        this.setParamArrayObj(map, prefix + "CcInfos.", this.CcInfos);
         this.setParamSimple(map, prefix + "FlowId", this.FlowId);
         this.setParamObj(map, prefix + "Agent.", this.Agent);
         this.setParamArrayObj(map, prefix + "InitiatorComponents.", this.InitiatorComponents);

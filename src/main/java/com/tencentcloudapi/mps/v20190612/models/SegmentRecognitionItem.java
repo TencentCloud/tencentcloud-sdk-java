@@ -100,6 +100,34 @@ public class SegmentRecognitionItem extends AbstractModel {
     private String EndTime;
 
     /**
+    * 直播拆条用，音频url。
+    */
+    @SerializedName("AudioUrl")
+    @Expose
+    private String AudioUrl;
+
+    /**
+    * 直播拆条用，音频对应起始时间戳；
+    */
+    @SerializedName("AudioBeginTime")
+    @Expose
+    private Float AudioBeginTime;
+
+    /**
+    * 直播拆条用，音频对应结束时间戳。
+    */
+    @SerializedName("AudioEndTime")
+    @Expose
+    private Float AudioEndTime;
+
+    /**
+    * 直播拆条用，人物位置参考信息用于横转竖。
+    */
+    @SerializedName("PersonPositionUrl")
+    @Expose
+    private String PersonPositionUrl;
+
+    /**
      * Get 置信度。 
      * @return Confidence 置信度。
      */
@@ -283,6 +311,70 @@ public class SegmentRecognitionItem extends AbstractModel {
         this.EndTime = EndTime;
     }
 
+    /**
+     * Get 直播拆条用，音频url。 
+     * @return AudioUrl 直播拆条用，音频url。
+     */
+    public String getAudioUrl() {
+        return this.AudioUrl;
+    }
+
+    /**
+     * Set 直播拆条用，音频url。
+     * @param AudioUrl 直播拆条用，音频url。
+     */
+    public void setAudioUrl(String AudioUrl) {
+        this.AudioUrl = AudioUrl;
+    }
+
+    /**
+     * Get 直播拆条用，音频对应起始时间戳； 
+     * @return AudioBeginTime 直播拆条用，音频对应起始时间戳；
+     */
+    public Float getAudioBeginTime() {
+        return this.AudioBeginTime;
+    }
+
+    /**
+     * Set 直播拆条用，音频对应起始时间戳；
+     * @param AudioBeginTime 直播拆条用，音频对应起始时间戳；
+     */
+    public void setAudioBeginTime(Float AudioBeginTime) {
+        this.AudioBeginTime = AudioBeginTime;
+    }
+
+    /**
+     * Get 直播拆条用，音频对应结束时间戳。 
+     * @return AudioEndTime 直播拆条用，音频对应结束时间戳。
+     */
+    public Float getAudioEndTime() {
+        return this.AudioEndTime;
+    }
+
+    /**
+     * Set 直播拆条用，音频对应结束时间戳。
+     * @param AudioEndTime 直播拆条用，音频对应结束时间戳。
+     */
+    public void setAudioEndTime(Float AudioEndTime) {
+        this.AudioEndTime = AudioEndTime;
+    }
+
+    /**
+     * Get 直播拆条用，人物位置参考信息用于横转竖。 
+     * @return PersonPositionUrl 直播拆条用，人物位置参考信息用于横转竖。
+     */
+    public String getPersonPositionUrl() {
+        return this.PersonPositionUrl;
+    }
+
+    /**
+     * Set 直播拆条用，人物位置参考信息用于横转竖。
+     * @param PersonPositionUrl 直播拆条用，人物位置参考信息用于横转竖。
+     */
+    public void setPersonPositionUrl(String PersonPositionUrl) {
+        this.PersonPositionUrl = PersonPositionUrl;
+    }
+
     public SegmentRecognitionItem() {
     }
 
@@ -324,6 +416,18 @@ public class SegmentRecognitionItem extends AbstractModel {
         if (source.EndTime != null) {
             this.EndTime = new String(source.EndTime);
         }
+        if (source.AudioUrl != null) {
+            this.AudioUrl = new String(source.AudioUrl);
+        }
+        if (source.AudioBeginTime != null) {
+            this.AudioBeginTime = new Float(source.AudioBeginTime);
+        }
+        if (source.AudioEndTime != null) {
+            this.AudioEndTime = new Float(source.AudioEndTime);
+        }
+        if (source.PersonPositionUrl != null) {
+            this.PersonPositionUrl = new String(source.PersonPositionUrl);
+        }
     }
 
 
@@ -341,6 +445,10 @@ public class SegmentRecognitionItem extends AbstractModel {
         this.setParamArraySimple(map, prefix + "Keywords.", this.Keywords);
         this.setParamSimple(map, prefix + "BeginTime", this.BeginTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
+        this.setParamSimple(map, prefix + "AudioUrl", this.AudioUrl);
+        this.setParamSimple(map, prefix + "AudioBeginTime", this.AudioBeginTime);
+        this.setParamSimple(map, prefix + "AudioEndTime", this.AudioEndTime);
+        this.setParamSimple(map, prefix + "PersonPositionUrl", this.PersonPositionUrl);
 
     }
 }

@@ -25,7 +25,6 @@ public class AnalyzeAuditLogsResponse extends AbstractModel {
 
     /**
     * 返回的聚合桶信息集
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Items")
     @Expose
@@ -33,7 +32,6 @@ public class AnalyzeAuditLogsResponse extends AbstractModel {
 
     /**
     * 扫描的日志条数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -47,10 +45,8 @@ public class AnalyzeAuditLogsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 返回的聚合桶信息集
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 返回的聚合桶信息集 
      * @return Items 返回的聚合桶信息集
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AuditLogAggregationResult [] getItems() {
         return this.Items;
@@ -58,19 +54,15 @@ public class AnalyzeAuditLogsResponse extends AbstractModel {
 
     /**
      * Set 返回的聚合桶信息集
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Items 返回的聚合桶信息集
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setItems(AuditLogAggregationResult [] Items) {
         this.Items = Items;
     }
 
     /**
-     * Get 扫描的日志条数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 扫描的日志条数 
      * @return TotalCount 扫描的日志条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -78,9 +70,7 @@ public class AnalyzeAuditLogsResponse extends AbstractModel {
 
     /**
      * Set 扫描的日志条数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 扫描的日志条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

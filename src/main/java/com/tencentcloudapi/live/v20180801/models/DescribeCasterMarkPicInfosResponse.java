@@ -25,7 +25,6 @@ public class DescribeCasterMarkPicInfosResponse extends AbstractModel {
 
     /**
     * 导播台的水印信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MarkPicInfos")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeCasterMarkPicInfosResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 导播台的水印信息列表。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 导播台的水印信息列表。 
      * @return MarkPicInfos 导播台的水印信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CasterMarkPicInfo [] getMarkPicInfos() {
         return this.MarkPicInfos;
@@ -50,9 +47,7 @@ public class DescribeCasterMarkPicInfosResponse extends AbstractModel {
 
     /**
      * Set 导播台的水印信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MarkPicInfos 导播台的水印信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMarkPicInfos(CasterMarkPicInfo [] MarkPicInfos) {
         this.MarkPicInfos = MarkPicInfos;

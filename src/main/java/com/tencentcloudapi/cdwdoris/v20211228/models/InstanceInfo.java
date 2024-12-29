@@ -431,6 +431,21 @@ Modify 集群变更中；
     private Long AccountType;
 
     /**
+    * 监控模式 0: 老监控 1：新监控
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("MonitorMode")
+    @Expose
+    private Long MonitorMode;
+
+    /**
+    * cn节点信息
+    */
+    @SerializedName("CNSummary")
+    @Expose
+    private NodesSummary CNSummary;
+
+    /**
      * Get 集群实例ID, "cdw-xxxx" 字符串类型
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return InstanceId 集群实例ID, "cdw-xxxx" 字符串类型
@@ -1462,6 +1477,42 @@ Modify 集群变更中；
         this.AccountType = AccountType;
     }
 
+    /**
+     * Get 监控模式 0: 老监控 1：新监控
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return MonitorMode 监控模式 0: 老监控 1：新监控
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getMonitorMode() {
+        return this.MonitorMode;
+    }
+
+    /**
+     * Set 监控模式 0: 老监控 1：新监控
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MonitorMode 监控模式 0: 老监控 1：新监控
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setMonitorMode(Long MonitorMode) {
+        this.MonitorMode = MonitorMode;
+    }
+
+    /**
+     * Get cn节点信息 
+     * @return CNSummary cn节点信息
+     */
+    public NodesSummary getCNSummary() {
+        return this.CNSummary;
+    }
+
+    /**
+     * Set cn节点信息
+     * @param CNSummary cn节点信息
+     */
+    public void setCNSummary(NodesSummary CNSummary) {
+        this.CNSummary = CNSummary;
+    }
+
     public InstanceInfo() {
     }
 
@@ -1629,6 +1680,12 @@ Modify 集群变更中；
         if (source.AccountType != null) {
             this.AccountType = new Long(source.AccountType);
         }
+        if (source.MonitorMode != null) {
+            this.MonitorMode = new Long(source.MonitorMode);
+        }
+        if (source.CNSummary != null) {
+            this.CNSummary = new NodesSummary(source.CNSummary);
+        }
     }
 
 
@@ -1686,6 +1743,8 @@ Modify 集群变更中；
         this.setParamObj(map, prefix + "Details.", this.Details);
         this.setParamSimple(map, prefix + "EnableDlc", this.EnableDlc);
         this.setParamSimple(map, prefix + "AccountType", this.AccountType);
+        this.setParamSimple(map, prefix + "MonitorMode", this.MonitorMode);
+        this.setParamObj(map, prefix + "CNSummary.", this.CNSummary);
 
     }
 }

@@ -158,7 +158,6 @@ public class BackupInfo extends AbstractModel {
 
     /**
     * 备份文件是否加密， on-加密， off-未加密
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EncryptionFlag")
     @Expose
@@ -476,10 +475,8 @@ public class BackupInfo extends AbstractModel {
     }
 
     /**
-     * Get 备份文件是否加密， on-加密， off-未加密
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 备份文件是否加密， on-加密， off-未加密 
      * @return EncryptionFlag 备份文件是否加密， on-加密， off-未加密
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEncryptionFlag() {
         return this.EncryptionFlag;
@@ -487,9 +484,7 @@ public class BackupInfo extends AbstractModel {
 
     /**
      * Set 备份文件是否加密， on-加密， off-未加密
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EncryptionFlag 备份文件是否加密， on-加密， off-未加密
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEncryptionFlag(String EncryptionFlag) {
         this.EncryptionFlag = EncryptionFlag;

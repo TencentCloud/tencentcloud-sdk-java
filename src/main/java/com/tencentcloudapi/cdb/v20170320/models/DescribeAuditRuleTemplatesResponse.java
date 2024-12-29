@@ -32,7 +32,6 @@ public class DescribeAuditRuleTemplatesResponse extends AbstractModel {
 
     /**
     * 规则模板详细信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Items")
     @Expose
@@ -62,10 +61,8 @@ public class DescribeAuditRuleTemplatesResponse extends AbstractModel {
     }
 
     /**
-     * Get 规则模板详细信息列表。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 规则模板详细信息列表。 
      * @return Items 规则模板详细信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AuditRuleTemplateInfo [] getItems() {
         return this.Items;
@@ -73,9 +70,7 @@ public class DescribeAuditRuleTemplatesResponse extends AbstractModel {
 
     /**
      * Set 规则模板详细信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Items 规则模板详细信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setItems(AuditRuleTemplateInfo [] Items) {
         this.Items = Items;

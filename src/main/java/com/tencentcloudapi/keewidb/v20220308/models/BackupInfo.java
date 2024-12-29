@@ -38,7 +38,7 @@ public class BackupInfo extends AbstractModel {
     private String BackupId;
 
     /**
-    * 备份类型。<ul><li>1：手动备份，指根据业务运维排障需求，立即执行备份任务的操作。</li> <li>0：自动备份，指根据自动备份策略定时自动发起的备份任务。</li></ul>
+    * 备份类型。<ul><li>1：手动备份，指根据业务运维排障需求，立即执行备份任务的操作。</li> <li>0：自动备份，指根据自动备份策略定时自动发起的备份任务。</li><li>2：生成RDB，指根据业务需求，发起的生成文件为rdb类型的备份任务。</li></ul>
     */
     @SerializedName("BackupType")
     @Expose
@@ -98,16 +98,16 @@ public class BackupInfo extends AbstractModel {
     }
 
     /**
-     * Get 备份类型。<ul><li>1：手动备份，指根据业务运维排障需求，立即执行备份任务的操作。</li> <li>0：自动备份，指根据自动备份策略定时自动发起的备份任务。</li></ul> 
-     * @return BackupType 备份类型。<ul><li>1：手动备份，指根据业务运维排障需求，立即执行备份任务的操作。</li> <li>0：自动备份，指根据自动备份策略定时自动发起的备份任务。</li></ul>
+     * Get 备份类型。<ul><li>1：手动备份，指根据业务运维排障需求，立即执行备份任务的操作。</li> <li>0：自动备份，指根据自动备份策略定时自动发起的备份任务。</li><li>2：生成RDB，指根据业务需求，发起的生成文件为rdb类型的备份任务。</li></ul> 
+     * @return BackupType 备份类型。<ul><li>1：手动备份，指根据业务运维排障需求，立即执行备份任务的操作。</li> <li>0：自动备份，指根据自动备份策略定时自动发起的备份任务。</li><li>2：生成RDB，指根据业务需求，发起的生成文件为rdb类型的备份任务。</li></ul>
      */
     public String getBackupType() {
         return this.BackupType;
     }
 
     /**
-     * Set 备份类型。<ul><li>1：手动备份，指根据业务运维排障需求，立即执行备份任务的操作。</li> <li>0：自动备份，指根据自动备份策略定时自动发起的备份任务。</li></ul>
-     * @param BackupType 备份类型。<ul><li>1：手动备份，指根据业务运维排障需求，立即执行备份任务的操作。</li> <li>0：自动备份，指根据自动备份策略定时自动发起的备份任务。</li></ul>
+     * Set 备份类型。<ul><li>1：手动备份，指根据业务运维排障需求，立即执行备份任务的操作。</li> <li>0：自动备份，指根据自动备份策略定时自动发起的备份任务。</li><li>2：生成RDB，指根据业务需求，发起的生成文件为rdb类型的备份任务。</li></ul>
+     * @param BackupType 备份类型。<ul><li>1：手动备份，指根据业务运维排障需求，立即执行备份任务的操作。</li> <li>0：自动备份，指根据自动备份策略定时自动发起的备份任务。</li><li>2：生成RDB，指根据业务需求，发起的生成文件为rdb类型的备份任务。</li></ul>
      */
     public void setBackupType(String BackupType) {
         this.BackupType = BackupType;

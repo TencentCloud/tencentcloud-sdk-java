@@ -39,7 +39,7 @@ public class RenewInstancesRequest extends AbstractModel {
     private InstanceChargePrepaid InstanceChargePrepaid;
 
     /**
-    * 是否续费弹性数据盘。取值范围：<br><li>true：表示续费包年包月实例同时续费其挂载的弹性数据盘<br><li>false：表示续费包年包月实例同时不再续费其挂载的弹性数据盘<br><br>默认取值：true。
+    * 是否续费弹性数据盘。取值范围：<br><li>true：表示续费包年包月实例同时续费其挂载的弹性数据盘</li><li>false：表示续费包年包月实例同时不再续费其挂载的弹性数据盘</li><br>默认取值：true。
     */
     @SerializedName("RenewPortableDataDisk")
     @Expose
@@ -82,16 +82,16 @@ public class RenewInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get 是否续费弹性数据盘。取值范围：<br><li>true：表示续费包年包月实例同时续费其挂载的弹性数据盘<br><li>false：表示续费包年包月实例同时不再续费其挂载的弹性数据盘<br><br>默认取值：true。 
-     * @return RenewPortableDataDisk 是否续费弹性数据盘。取值范围：<br><li>true：表示续费包年包月实例同时续费其挂载的弹性数据盘<br><li>false：表示续费包年包月实例同时不再续费其挂载的弹性数据盘<br><br>默认取值：true。
+     * Get 是否续费弹性数据盘。取值范围：<br><li>true：表示续费包年包月实例同时续费其挂载的弹性数据盘</li><li>false：表示续费包年包月实例同时不再续费其挂载的弹性数据盘</li><br>默认取值：true。 
+     * @return RenewPortableDataDisk 是否续费弹性数据盘。取值范围：<br><li>true：表示续费包年包月实例同时续费其挂载的弹性数据盘</li><li>false：表示续费包年包月实例同时不再续费其挂载的弹性数据盘</li><br>默认取值：true。
      */
     public Boolean getRenewPortableDataDisk() {
         return this.RenewPortableDataDisk;
     }
 
     /**
-     * Set 是否续费弹性数据盘。取值范围：<br><li>true：表示续费包年包月实例同时续费其挂载的弹性数据盘<br><li>false：表示续费包年包月实例同时不再续费其挂载的弹性数据盘<br><br>默认取值：true。
-     * @param RenewPortableDataDisk 是否续费弹性数据盘。取值范围：<br><li>true：表示续费包年包月实例同时续费其挂载的弹性数据盘<br><li>false：表示续费包年包月实例同时不再续费其挂载的弹性数据盘<br><br>默认取值：true。
+     * Set 是否续费弹性数据盘。取值范围：<br><li>true：表示续费包年包月实例同时续费其挂载的弹性数据盘</li><li>false：表示续费包年包月实例同时不再续费其挂载的弹性数据盘</li><br>默认取值：true。
+     * @param RenewPortableDataDisk 是否续费弹性数据盘。取值范围：<br><li>true：表示续费包年包月实例同时续费其挂载的弹性数据盘</li><li>false：表示续费包年包月实例同时不再续费其挂载的弹性数据盘</li><br>默认取值：true。
      */
     public void setRenewPortableDataDisk(Boolean RenewPortableDataDisk) {
         this.RenewPortableDataDisk = RenewPortableDataDisk;

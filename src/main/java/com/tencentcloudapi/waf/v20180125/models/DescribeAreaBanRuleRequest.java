@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cwp.v20180228.models;
+package com.tencentcloudapi.waf.v20180125.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,16 +21,42 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeIndexListRequest extends AbstractModel {
+public class DescribeAreaBanRuleRequest extends AbstractModel {
 
-    public DescribeIndexListRequest() {
+    /**
+    * 需要查询的域名
+    */
+    @SerializedName("Domain")
+    @Expose
+    private String Domain;
+
+    /**
+     * Get 需要查询的域名 
+     * @return Domain 需要查询的域名
+     */
+    public String getDomain() {
+        return this.Domain;
+    }
+
+    /**
+     * Set 需要查询的域名
+     * @param Domain 需要查询的域名
+     */
+    public void setDomain(String Domain) {
+        this.Domain = Domain;
+    }
+
+    public DescribeAreaBanRuleRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeIndexListRequest(DescribeIndexListRequest source) {
+    public DescribeAreaBanRuleRequest(DescribeAreaBanRuleRequest source) {
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
     }
 
 
@@ -38,6 +64,7 @@ public class DescribeIndexListRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Domain", this.Domain);
 
     }
 }

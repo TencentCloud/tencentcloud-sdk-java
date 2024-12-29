@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeAuditLogsRequest extends AbstractModel {
 
     /**
-    * 实例ID
+    * 实例 ID。
     */
     @SerializedName("InstanceId")
     @Expose
@@ -77,6 +77,7 @@ public class DescribeAuditLogsRequest extends AbstractModel {
 
     /**
     * 分页偏移量。
+说明：Limit 和 Offset 的取值之和需小于等于65536。
     */
     @SerializedName("Offset")
     @Expose
@@ -90,16 +91,16 @@ public class DescribeAuditLogsRequest extends AbstractModel {
     private InstanceAuditLogFilter [] LogFilter;
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+     * Get 实例 ID。 
+     * @return InstanceId 实例 ID。
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set 实例 ID。
+     * @param InstanceId 实例 ID。
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -214,8 +215,10 @@ public class DescribeAuditLogsRequest extends AbstractModel {
     }
 
     /**
-     * Get 分页偏移量。 
+     * Get 分页偏移量。
+说明：Limit 和 Offset 的取值之和需小于等于65536。 
      * @return Offset 分页偏移量。
+说明：Limit 和 Offset 的取值之和需小于等于65536。
      */
     public Long getOffset() {
         return this.Offset;
@@ -223,7 +226,9 @@ public class DescribeAuditLogsRequest extends AbstractModel {
 
     /**
      * Set 分页偏移量。
+说明：Limit 和 Offset 的取值之和需小于等于65536。
      * @param Offset 分页偏移量。
+说明：Limit 和 Offset 的取值之和需小于等于65536。
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

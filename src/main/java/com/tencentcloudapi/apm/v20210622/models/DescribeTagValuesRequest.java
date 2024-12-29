@@ -31,7 +31,7 @@ public class DescribeTagValuesRequest extends AbstractModel {
     private String TagKey;
 
     /**
-    * 实例ID
+    * 业务系统ID
     */
     @SerializedName("InstanceId")
     @Expose
@@ -89,16 +89,16 @@ public class DescribeTagValuesRequest extends AbstractModel {
     }
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+     * Get 业务系统ID 
+     * @return InstanceId 业务系统ID
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set 业务系统ID
+     * @param InstanceId 业务系统ID
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

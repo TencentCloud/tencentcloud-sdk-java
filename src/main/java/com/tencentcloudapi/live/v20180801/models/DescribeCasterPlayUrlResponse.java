@@ -26,7 +26,6 @@ public class DescribeCasterPlayUrlResponse extends AbstractModel {
     /**
     * 播放url。
 当导播台不存在预监或主监时，若请求预监或主监的播放地址，该字段为空。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PlayUrl")
     @Expose
@@ -36,7 +35,6 @@ public class DescribeCasterPlayUrlResponse extends AbstractModel {
     * webrtc协议播放地址。
 当导播台不存在预监或主监时，若请求预监或主监的webrtc播放地址，该字段为空。
 注：webrtc协议播放地址需配合腾讯云快直播播放sdk方可使用。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("WebRTCPlayUrl")
     @Expose
@@ -51,11 +49,9 @@ public class DescribeCasterPlayUrlResponse extends AbstractModel {
 
     /**
      * Get 播放url。
-当导播台不存在预监或主监时，若请求预监或主监的播放地址，该字段为空。
-注意：此字段可能返回 null，表示取不到有效值。 
+当导播台不存在预监或主监时，若请求预监或主监的播放地址，该字段为空。 
      * @return PlayUrl 播放url。
 当导播台不存在预监或主监时，若请求预监或主监的播放地址，该字段为空。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPlayUrl() {
         return this.PlayUrl;
@@ -64,10 +60,8 @@ public class DescribeCasterPlayUrlResponse extends AbstractModel {
     /**
      * Set 播放url。
 当导播台不存在预监或主监时，若请求预监或主监的播放地址，该字段为空。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PlayUrl 播放url。
 当导播台不存在预监或主监时，若请求预监或主监的播放地址，该字段为空。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPlayUrl(String PlayUrl) {
         this.PlayUrl = PlayUrl;
@@ -76,12 +70,10 @@ public class DescribeCasterPlayUrlResponse extends AbstractModel {
     /**
      * Get webrtc协议播放地址。
 当导播台不存在预监或主监时，若请求预监或主监的webrtc播放地址，该字段为空。
-注：webrtc协议播放地址需配合腾讯云快直播播放sdk方可使用。
-注意：此字段可能返回 null，表示取不到有效值。 
+注：webrtc协议播放地址需配合腾讯云快直播播放sdk方可使用。 
      * @return WebRTCPlayUrl webrtc协议播放地址。
 当导播台不存在预监或主监时，若请求预监或主监的webrtc播放地址，该字段为空。
 注：webrtc协议播放地址需配合腾讯云快直播播放sdk方可使用。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getWebRTCPlayUrl() {
         return this.WebRTCPlayUrl;
@@ -91,11 +83,9 @@ public class DescribeCasterPlayUrlResponse extends AbstractModel {
      * Set webrtc协议播放地址。
 当导播台不存在预监或主监时，若请求预监或主监的webrtc播放地址，该字段为空。
 注：webrtc协议播放地址需配合腾讯云快直播播放sdk方可使用。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WebRTCPlayUrl webrtc协议播放地址。
 当导播台不存在预监或主监时，若请求预监或主监的webrtc播放地址，该字段为空。
 注：webrtc协议播放地址需配合腾讯云快直播播放sdk方可使用。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setWebRTCPlayUrl(String WebRTCPlayUrl) {
         this.WebRTCPlayUrl = WebRTCPlayUrl;

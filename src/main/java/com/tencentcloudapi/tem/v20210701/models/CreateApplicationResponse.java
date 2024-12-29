@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateApplicationResponse extends AbstractModel {
 
     /**
-    * 服务code
+    * 应用ID
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +38,16 @@ public class CreateApplicationResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 服务code 
-     * @return Result 服务code
+     * Get 应用ID 
+     * @return Result 应用ID
      */
     public String getResult() {
         return this.Result;
     }
 
     /**
-     * Set 服务code
-     * @param Result 服务code
+     * Set 应用ID
+     * @param Result 应用ID
      */
     public void setResult(String Result) {
         this.Result = Result;

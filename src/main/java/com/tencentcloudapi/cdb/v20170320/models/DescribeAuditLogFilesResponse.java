@@ -32,7 +32,6 @@ public class DescribeAuditLogFilesResponse extends AbstractModel {
 
     /**
     * 审计日志文件详情。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Items")
     @Expose
@@ -62,10 +61,8 @@ public class DescribeAuditLogFilesResponse extends AbstractModel {
     }
 
     /**
-     * Get 审计日志文件详情。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 审计日志文件详情。 
      * @return Items 审计日志文件详情。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public AuditLogFile [] getItems() {
         return this.Items;
@@ -73,9 +70,7 @@ public class DescribeAuditLogFilesResponse extends AbstractModel {
 
     /**
      * Set 审计日志文件详情。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Items 审计日志文件详情。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setItems(AuditLogFile [] Items) {
         this.Items = Items;

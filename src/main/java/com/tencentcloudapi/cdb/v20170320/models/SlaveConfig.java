@@ -25,7 +25,6 @@ public class SlaveConfig extends AbstractModel {
 
     /**
     * 从库复制方式，可能的返回值：aysnc-异步，semisync-半同步
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ReplicationMode")
     @Expose
@@ -33,17 +32,14 @@ public class SlaveConfig extends AbstractModel {
 
     /**
     * 从库可用区的正式名称，如ap-shanghai-1
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-     * Get 从库复制方式，可能的返回值：aysnc-异步，semisync-半同步
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 从库复制方式，可能的返回值：aysnc-异步，semisync-半同步 
      * @return ReplicationMode 从库复制方式，可能的返回值：aysnc-异步，semisync-半同步
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getReplicationMode() {
         return this.ReplicationMode;
@@ -51,19 +47,15 @@ public class SlaveConfig extends AbstractModel {
 
     /**
      * Set 从库复制方式，可能的返回值：aysnc-异步，semisync-半同步
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ReplicationMode 从库复制方式，可能的返回值：aysnc-异步，semisync-半同步
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReplicationMode(String ReplicationMode) {
         this.ReplicationMode = ReplicationMode;
     }
 
     /**
-     * Get 从库可用区的正式名称，如ap-shanghai-1
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 从库可用区的正式名称，如ap-shanghai-1 
      * @return Zone 从库可用区的正式名称，如ap-shanghai-1
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getZone() {
         return this.Zone;
@@ -71,9 +63,7 @@ public class SlaveConfig extends AbstractModel {
 
     /**
      * Set 从库可用区的正式名称，如ap-shanghai-1
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Zone 从库可用区的正式名称，如ap-shanghai-1
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setZone(String Zone) {
         this.Zone = Zone;

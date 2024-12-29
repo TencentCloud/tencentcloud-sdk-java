@@ -126,7 +126,6 @@ public class ResourceItem extends AbstractModel {
 
     /**
     * 作业运行状态
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsJobRun")
     @Expose
@@ -155,6 +154,55 @@ public class ResourceItem extends AbstractModel {
     @SerializedName("RefJobStatusCountSet")
     @Expose
     private RefJobStatusCountItem [] RefJobStatusCountSet;
+
+    /**
+    * 连接器名称
+    */
+    @SerializedName("Connector")
+    @Expose
+    private String Connector;
+
+    /**
+    * 连接器版本
+    */
+    @SerializedName("ConnectorVersion")
+    @Expose
+    private String ConnectorVersion;
+
+    /**
+    * 连接方式
+    */
+    @SerializedName("ConnectionMethod")
+    @Expose
+    private String ConnectionMethod;
+
+    /**
+    * connector关联的资源id
+    */
+    @SerializedName("RelatedResourceId")
+    @Expose
+    private String RelatedResourceId;
+
+    /**
+    * 图标
+    */
+    @SerializedName("Icon")
+    @Expose
+    private String Icon;
+
+    /**
+    * 连接器中文名
+    */
+    @SerializedName("ConnectorName")
+    @Expose
+    private String ConnectorName;
+
+    /**
+    * 连接器官网链接
+    */
+    @SerializedName("ConnectorUrl")
+    @Expose
+    private String ConnectorUrl;
 
     /**
      * Get 资源ID 
@@ -393,10 +441,8 @@ public class ResourceItem extends AbstractModel {
     }
 
     /**
-     * Get 作业运行状态
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 作业运行状态 
      * @return IsJobRun 作业运行状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsJobRun() {
         return this.IsJobRun;
@@ -404,9 +450,7 @@ public class ResourceItem extends AbstractModel {
 
     /**
      * Set 作业运行状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsJobRun 作业运行状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsJobRun(Long IsJobRun) {
         this.IsJobRun = IsJobRun;
@@ -470,6 +514,118 @@ public class ResourceItem extends AbstractModel {
      */
     public void setRefJobStatusCountSet(RefJobStatusCountItem [] RefJobStatusCountSet) {
         this.RefJobStatusCountSet = RefJobStatusCountSet;
+    }
+
+    /**
+     * Get 连接器名称 
+     * @return Connector 连接器名称
+     */
+    public String getConnector() {
+        return this.Connector;
+    }
+
+    /**
+     * Set 连接器名称
+     * @param Connector 连接器名称
+     */
+    public void setConnector(String Connector) {
+        this.Connector = Connector;
+    }
+
+    /**
+     * Get 连接器版本 
+     * @return ConnectorVersion 连接器版本
+     */
+    public String getConnectorVersion() {
+        return this.ConnectorVersion;
+    }
+
+    /**
+     * Set 连接器版本
+     * @param ConnectorVersion 连接器版本
+     */
+    public void setConnectorVersion(String ConnectorVersion) {
+        this.ConnectorVersion = ConnectorVersion;
+    }
+
+    /**
+     * Get 连接方式 
+     * @return ConnectionMethod 连接方式
+     */
+    public String getConnectionMethod() {
+        return this.ConnectionMethod;
+    }
+
+    /**
+     * Set 连接方式
+     * @param ConnectionMethod 连接方式
+     */
+    public void setConnectionMethod(String ConnectionMethod) {
+        this.ConnectionMethod = ConnectionMethod;
+    }
+
+    /**
+     * Get connector关联的资源id 
+     * @return RelatedResourceId connector关联的资源id
+     */
+    public String getRelatedResourceId() {
+        return this.RelatedResourceId;
+    }
+
+    /**
+     * Set connector关联的资源id
+     * @param RelatedResourceId connector关联的资源id
+     */
+    public void setRelatedResourceId(String RelatedResourceId) {
+        this.RelatedResourceId = RelatedResourceId;
+    }
+
+    /**
+     * Get 图标 
+     * @return Icon 图标
+     */
+    public String getIcon() {
+        return this.Icon;
+    }
+
+    /**
+     * Set 图标
+     * @param Icon 图标
+     */
+    public void setIcon(String Icon) {
+        this.Icon = Icon;
+    }
+
+    /**
+     * Get 连接器中文名 
+     * @return ConnectorName 连接器中文名
+     */
+    public String getConnectorName() {
+        return this.ConnectorName;
+    }
+
+    /**
+     * Set 连接器中文名
+     * @param ConnectorName 连接器中文名
+     */
+    public void setConnectorName(String ConnectorName) {
+        this.ConnectorName = ConnectorName;
+    }
+
+    /**
+     * Get 连接器官网链接 
+     * @return ConnectorUrl 连接器官网链接
+     */
+    public String getConnectorUrl() {
+        return this.ConnectorUrl;
+    }
+
+    /**
+     * Set 连接器官网链接
+     * @param ConnectorUrl 连接器官网链接
+     */
+    public void setConnectorUrl(String ConnectorUrl) {
+        this.ConnectorUrl = ConnectorUrl;
     }
 
     public ResourceItem() {
@@ -537,6 +693,27 @@ public class ResourceItem extends AbstractModel {
                 this.RefJobStatusCountSet[i] = new RefJobStatusCountItem(source.RefJobStatusCountSet[i]);
             }
         }
+        if (source.Connector != null) {
+            this.Connector = new String(source.Connector);
+        }
+        if (source.ConnectorVersion != null) {
+            this.ConnectorVersion = new String(source.ConnectorVersion);
+        }
+        if (source.ConnectionMethod != null) {
+            this.ConnectionMethod = new String(source.ConnectionMethod);
+        }
+        if (source.RelatedResourceId != null) {
+            this.RelatedResourceId = new String(source.RelatedResourceId);
+        }
+        if (source.Icon != null) {
+            this.Icon = new String(source.Icon);
+        }
+        if (source.ConnectorName != null) {
+            this.ConnectorName = new String(source.ConnectorName);
+        }
+        if (source.ConnectorUrl != null) {
+            this.ConnectorUrl = new String(source.ConnectorUrl);
+        }
     }
 
 
@@ -562,6 +739,13 @@ public class ResourceItem extends AbstractModel {
         this.setParamSimple(map, prefix + "FileName", this.FileName);
         this.setParamSimple(map, prefix + "WorkSpaceId", this.WorkSpaceId);
         this.setParamArrayObj(map, prefix + "RefJobStatusCountSet.", this.RefJobStatusCountSet);
+        this.setParamSimple(map, prefix + "Connector", this.Connector);
+        this.setParamSimple(map, prefix + "ConnectorVersion", this.ConnectorVersion);
+        this.setParamSimple(map, prefix + "ConnectionMethod", this.ConnectionMethod);
+        this.setParamSimple(map, prefix + "RelatedResourceId", this.RelatedResourceId);
+        this.setParamSimple(map, prefix + "Icon", this.Icon);
+        this.setParamSimple(map, prefix + "ConnectorName", this.ConnectorName);
+        this.setParamSimple(map, prefix + "ConnectorUrl", this.ConnectorUrl);
 
     }
 }

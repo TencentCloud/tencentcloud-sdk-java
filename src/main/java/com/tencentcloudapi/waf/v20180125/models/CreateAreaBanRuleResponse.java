@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cvm.v20170312.models;
+package com.tencentcloudapi.waf.v20180125.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,14 +21,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeReservedInstancesConfigInfosResponse extends AbstractModel {
-
-    /**
-    * 预留实例静态配置信息列表。
-    */
-    @SerializedName("ReservedInstanceConfigInfos")
-    @Expose
-    private ReservedInstanceConfigInfoItem [] ReservedInstanceConfigInfos;
+public class CreateAreaBanRuleResponse extends AbstractModel {
 
     /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -36,22 +29,6 @@ public class DescribeReservedInstancesConfigInfosResponse extends AbstractModel 
     @SerializedName("RequestId")
     @Expose
     private String RequestId;
-
-    /**
-     * Get 预留实例静态配置信息列表。 
-     * @return ReservedInstanceConfigInfos 预留实例静态配置信息列表。
-     */
-    public ReservedInstanceConfigInfoItem [] getReservedInstanceConfigInfos() {
-        return this.ReservedInstanceConfigInfos;
-    }
-
-    /**
-     * Set 预留实例静态配置信息列表。
-     * @param ReservedInstanceConfigInfos 预留实例静态配置信息列表。
-     */
-    public void setReservedInstanceConfigInfos(ReservedInstanceConfigInfoItem [] ReservedInstanceConfigInfos) {
-        this.ReservedInstanceConfigInfos = ReservedInstanceConfigInfos;
-    }
 
     /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
@@ -69,20 +46,14 @@ public class DescribeReservedInstancesConfigInfosResponse extends AbstractModel 
         this.RequestId = RequestId;
     }
 
-    public DescribeReservedInstancesConfigInfosResponse() {
+    public CreateAreaBanRuleResponse() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeReservedInstancesConfigInfosResponse(DescribeReservedInstancesConfigInfosResponse source) {
-        if (source.ReservedInstanceConfigInfos != null) {
-            this.ReservedInstanceConfigInfos = new ReservedInstanceConfigInfoItem[source.ReservedInstanceConfigInfos.length];
-            for (int i = 0; i < source.ReservedInstanceConfigInfos.length; i++) {
-                this.ReservedInstanceConfigInfos[i] = new ReservedInstanceConfigInfoItem(source.ReservedInstanceConfigInfos[i]);
-            }
-        }
+    public CreateAreaBanRuleResponse(CreateAreaBanRuleResponse source) {
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -93,7 +64,6 @@ public class DescribeReservedInstancesConfigInfosResponse extends AbstractModel 
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "ReservedInstanceConfigInfos.", this.ReservedInstanceConfigInfos);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

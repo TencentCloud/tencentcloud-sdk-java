@@ -54,6 +54,13 @@ public class ObjectTypeConfigFields extends AbstractModel {
     private String JsonParse;
 
     /**
+    * 字段类型 0:str 1:list
+    */
+    @SerializedName("Type")
+    @Expose
+    private Long Type;
+
+    /**
      * Get instanceId 
      * @return Key instanceId
      */
@@ -125,6 +132,22 @@ public class ObjectTypeConfigFields extends AbstractModel {
         this.JsonParse = JsonParse;
     }
 
+    /**
+     * Get 字段类型 0:str 1:list 
+     * @return Type 字段类型 0:str 1:list
+     */
+    public Long getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set 字段类型 0:str 1:list
+     * @param Type 字段类型 0:str 1:list
+     */
+    public void setType(Long Type) {
+        this.Type = Type;
+    }
+
     public ObjectTypeConfigFields() {
     }
 
@@ -145,6 +168,9 @@ public class ObjectTypeConfigFields extends AbstractModel {
         if (source.JsonParse != null) {
             this.JsonParse = new String(source.JsonParse);
         }
+        if (source.Type != null) {
+            this.Type = new Long(source.Type);
+        }
     }
 
 
@@ -156,6 +182,7 @@ public class ObjectTypeConfigFields extends AbstractModel {
         this.setParamSimple(map, prefix + "Header", this.Header);
         this.setParamSimple(map, prefix + "Transfer", this.Transfer);
         this.setParamSimple(map, prefix + "JsonParse", this.JsonParse);
+        this.setParamSimple(map, prefix + "Type", this.Type);
 
     }
 }

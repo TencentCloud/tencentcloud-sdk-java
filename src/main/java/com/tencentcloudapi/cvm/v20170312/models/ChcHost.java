@@ -196,12 +196,133 @@ TENANT: 租赁
     private String TenantType;
 
     /**
-    * chc dhcp选项，用于minios调试
+    * chc dhcp选项，用于minios调试。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DeployExtraConfig")
     @Expose
     private ChcDeployExtraConfig DeployExtraConfig;
+
+    /**
+    * GPU型号。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Gpu")
+    @Expose
+    private String Gpu;
+
+    /**
+    * 网卡型号。主要指RDMA网卡。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("NetworkCard")
+    @Expose
+    private String NetworkCard;
+
+    /**
+    * 是否是预定义机型。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("IsPredefinedType")
+    @Expose
+    private Boolean IsPredefinedType;
+
+    /**
+    * CHC云主机机型。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ChcInstanceType")
+    @Expose
+    private String ChcInstanceType;
+
+    /**
+    * CHC云主机机型簇。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ChcInstanceFamily")
+    @Expose
+    private String ChcInstanceFamily;
+
+    /**
+    * CHC云主机机型簇名称。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ChcInstanceFamilyName")
+    @Expose
+    private String ChcInstanceFamilyName;
+
+    /**
+    * 转售客户的AppId。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ResaleAppId")
+    @Expose
+    private String ResaleAppId;
+
+    /**
+    * 转售客户的账号ID。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ResaleAccountId")
+    @Expose
+    private String ResaleAccountId;
+
+    /**
+    * 售卖状态。<br/>
+<ul>
+<li>NOT_FOR_SALE:不可售卖</li>
+<li>AVAILABLE: 可售卖</li>
+<li>SOLD: 已售卖</li>
+</ul>
+
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("SaleStatus")
+    @Expose
+    private String SaleStatus;
+
+    /**
+    * CHC物理服务器关联的标签列表。
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
+    * 最近操作
+    */
+    @SerializedName("LatestOperation")
+    @Expose
+    private String LatestOperation;
+
+    /**
+    * 最近操作错误码
+    */
+    @SerializedName("LatestOperationErrorCode")
+    @Expose
+    private String LatestOperationErrorCode;
+
+    /**
+    * 最近操作错误详情和建议项
+    */
+    @SerializedName("LatestOperationErrorMsg")
+    @Expose
+    private String LatestOperationErrorMsg;
+
+    /**
+    * 最近操作名称
+    */
+    @SerializedName("LatestOperationName")
+    @Expose
+    private String LatestOperationName;
+
+    /**
+    * 最近操作状态
+    */
+    @SerializedName("LatestOperationState")
+    @Expose
+    private String LatestOperationState;
 
     /**
      * Get CHC物理服务器ID。 
@@ -640,9 +761,9 @@ TENANT: 租赁
     }
 
     /**
-     * Get chc dhcp选项，用于minios调试
+     * Get chc dhcp选项，用于minios调试。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DeployExtraConfig chc dhcp选项，用于minios调试
+     * @return DeployExtraConfig chc dhcp选项，用于minios调试。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public ChcDeployExtraConfig getDeployExtraConfig() {
@@ -650,13 +771,317 @@ TENANT: 租赁
     }
 
     /**
-     * Set chc dhcp选项，用于minios调试
+     * Set chc dhcp选项，用于minios调试。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param DeployExtraConfig chc dhcp选项，用于minios调试
+     * @param DeployExtraConfig chc dhcp选项，用于minios调试。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDeployExtraConfig(ChcDeployExtraConfig DeployExtraConfig) {
         this.DeployExtraConfig = DeployExtraConfig;
+    }
+
+    /**
+     * Get GPU型号。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Gpu GPU型号。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getGpu() {
+        return this.Gpu;
+    }
+
+    /**
+     * Set GPU型号。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Gpu GPU型号。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setGpu(String Gpu) {
+        this.Gpu = Gpu;
+    }
+
+    /**
+     * Get 网卡型号。主要指RDMA网卡。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return NetworkCard 网卡型号。主要指RDMA网卡。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getNetworkCard() {
+        return this.NetworkCard;
+    }
+
+    /**
+     * Set 网卡型号。主要指RDMA网卡。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param NetworkCard 网卡型号。主要指RDMA网卡。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setNetworkCard(String NetworkCard) {
+        this.NetworkCard = NetworkCard;
+    }
+
+    /**
+     * Get 是否是预定义机型。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return IsPredefinedType 是否是预定义机型。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Boolean getIsPredefinedType() {
+        return this.IsPredefinedType;
+    }
+
+    /**
+     * Set 是否是预定义机型。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param IsPredefinedType 是否是预定义机型。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setIsPredefinedType(Boolean IsPredefinedType) {
+        this.IsPredefinedType = IsPredefinedType;
+    }
+
+    /**
+     * Get CHC云主机机型。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ChcInstanceType CHC云主机机型。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getChcInstanceType() {
+        return this.ChcInstanceType;
+    }
+
+    /**
+     * Set CHC云主机机型。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ChcInstanceType CHC云主机机型。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setChcInstanceType(String ChcInstanceType) {
+        this.ChcInstanceType = ChcInstanceType;
+    }
+
+    /**
+     * Get CHC云主机机型簇。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ChcInstanceFamily CHC云主机机型簇。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getChcInstanceFamily() {
+        return this.ChcInstanceFamily;
+    }
+
+    /**
+     * Set CHC云主机机型簇。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ChcInstanceFamily CHC云主机机型簇。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setChcInstanceFamily(String ChcInstanceFamily) {
+        this.ChcInstanceFamily = ChcInstanceFamily;
+    }
+
+    /**
+     * Get CHC云主机机型簇名称。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ChcInstanceFamilyName CHC云主机机型簇名称。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getChcInstanceFamilyName() {
+        return this.ChcInstanceFamilyName;
+    }
+
+    /**
+     * Set CHC云主机机型簇名称。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ChcInstanceFamilyName CHC云主机机型簇名称。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setChcInstanceFamilyName(String ChcInstanceFamilyName) {
+        this.ChcInstanceFamilyName = ChcInstanceFamilyName;
+    }
+
+    /**
+     * Get 转售客户的AppId。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ResaleAppId 转售客户的AppId。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getResaleAppId() {
+        return this.ResaleAppId;
+    }
+
+    /**
+     * Set 转售客户的AppId。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ResaleAppId 转售客户的AppId。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setResaleAppId(String ResaleAppId) {
+        this.ResaleAppId = ResaleAppId;
+    }
+
+    /**
+     * Get 转售客户的账号ID。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ResaleAccountId 转售客户的账号ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getResaleAccountId() {
+        return this.ResaleAccountId;
+    }
+
+    /**
+     * Set 转售客户的账号ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ResaleAccountId 转售客户的账号ID。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setResaleAccountId(String ResaleAccountId) {
+        this.ResaleAccountId = ResaleAccountId;
+    }
+
+    /**
+     * Get 售卖状态。<br/>
+<ul>
+<li>NOT_FOR_SALE:不可售卖</li>
+<li>AVAILABLE: 可售卖</li>
+<li>SOLD: 已售卖</li>
+</ul>
+
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return SaleStatus 售卖状态。<br/>
+<ul>
+<li>NOT_FOR_SALE:不可售卖</li>
+<li>AVAILABLE: 可售卖</li>
+<li>SOLD: 已售卖</li>
+</ul>
+
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public String getSaleStatus() {
+        return this.SaleStatus;
+    }
+
+    /**
+     * Set 售卖状态。<br/>
+<ul>
+<li>NOT_FOR_SALE:不可售卖</li>
+<li>AVAILABLE: 可售卖</li>
+<li>SOLD: 已售卖</li>
+</ul>
+
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SaleStatus 售卖状态。<br/>
+<ul>
+<li>NOT_FOR_SALE:不可售卖</li>
+<li>AVAILABLE: 可售卖</li>
+<li>SOLD: 已售卖</li>
+</ul>
+
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setSaleStatus(String SaleStatus) {
+        this.SaleStatus = SaleStatus;
+    }
+
+    /**
+     * Get CHC物理服务器关联的标签列表。
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return Tags CHC物理服务器关联的标签列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set CHC物理服务器关联的标签列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param Tags CHC物理服务器关联的标签列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
+     * Get 最近操作 
+     * @return LatestOperation 最近操作
+     */
+    public String getLatestOperation() {
+        return this.LatestOperation;
+    }
+
+    /**
+     * Set 最近操作
+     * @param LatestOperation 最近操作
+     */
+    public void setLatestOperation(String LatestOperation) {
+        this.LatestOperation = LatestOperation;
+    }
+
+    /**
+     * Get 最近操作错误码 
+     * @return LatestOperationErrorCode 最近操作错误码
+     */
+    public String getLatestOperationErrorCode() {
+        return this.LatestOperationErrorCode;
+    }
+
+    /**
+     * Set 最近操作错误码
+     * @param LatestOperationErrorCode 最近操作错误码
+     */
+    public void setLatestOperationErrorCode(String LatestOperationErrorCode) {
+        this.LatestOperationErrorCode = LatestOperationErrorCode;
+    }
+
+    /**
+     * Get 最近操作错误详情和建议项 
+     * @return LatestOperationErrorMsg 最近操作错误详情和建议项
+     */
+    public String getLatestOperationErrorMsg() {
+        return this.LatestOperationErrorMsg;
+    }
+
+    /**
+     * Set 最近操作错误详情和建议项
+     * @param LatestOperationErrorMsg 最近操作错误详情和建议项
+     */
+    public void setLatestOperationErrorMsg(String LatestOperationErrorMsg) {
+        this.LatestOperationErrorMsg = LatestOperationErrorMsg;
+    }
+
+    /**
+     * Get 最近操作名称 
+     * @return LatestOperationName 最近操作名称
+     */
+    public String getLatestOperationName() {
+        return this.LatestOperationName;
+    }
+
+    /**
+     * Set 最近操作名称
+     * @param LatestOperationName 最近操作名称
+     */
+    public void setLatestOperationName(String LatestOperationName) {
+        this.LatestOperationName = LatestOperationName;
+    }
+
+    /**
+     * Get 最近操作状态 
+     * @return LatestOperationState 最近操作状态
+     */
+    public String getLatestOperationState() {
+        return this.LatestOperationState;
+    }
+
+    /**
+     * Set 最近操作状态
+     * @param LatestOperationState 最近操作状态
+     */
+    public void setLatestOperationState(String LatestOperationState) {
+        this.LatestOperationState = LatestOperationState;
     }
 
     public ChcHost() {
@@ -739,6 +1164,54 @@ TENANT: 租赁
         if (source.DeployExtraConfig != null) {
             this.DeployExtraConfig = new ChcDeployExtraConfig(source.DeployExtraConfig);
         }
+        if (source.Gpu != null) {
+            this.Gpu = new String(source.Gpu);
+        }
+        if (source.NetworkCard != null) {
+            this.NetworkCard = new String(source.NetworkCard);
+        }
+        if (source.IsPredefinedType != null) {
+            this.IsPredefinedType = new Boolean(source.IsPredefinedType);
+        }
+        if (source.ChcInstanceType != null) {
+            this.ChcInstanceType = new String(source.ChcInstanceType);
+        }
+        if (source.ChcInstanceFamily != null) {
+            this.ChcInstanceFamily = new String(source.ChcInstanceFamily);
+        }
+        if (source.ChcInstanceFamilyName != null) {
+            this.ChcInstanceFamilyName = new String(source.ChcInstanceFamilyName);
+        }
+        if (source.ResaleAppId != null) {
+            this.ResaleAppId = new String(source.ResaleAppId);
+        }
+        if (source.ResaleAccountId != null) {
+            this.ResaleAccountId = new String(source.ResaleAccountId);
+        }
+        if (source.SaleStatus != null) {
+            this.SaleStatus = new String(source.SaleStatus);
+        }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
+        if (source.LatestOperation != null) {
+            this.LatestOperation = new String(source.LatestOperation);
+        }
+        if (source.LatestOperationErrorCode != null) {
+            this.LatestOperationErrorCode = new String(source.LatestOperationErrorCode);
+        }
+        if (source.LatestOperationErrorMsg != null) {
+            this.LatestOperationErrorMsg = new String(source.LatestOperationErrorMsg);
+        }
+        if (source.LatestOperationName != null) {
+            this.LatestOperationName = new String(source.LatestOperationName);
+        }
+        if (source.LatestOperationState != null) {
+            this.LatestOperationState = new String(source.LatestOperationState);
+        }
     }
 
 
@@ -768,6 +1241,21 @@ TENANT: 租赁
         this.setParamSimple(map, prefix + "DeployMAC", this.DeployMAC);
         this.setParamSimple(map, prefix + "TenantType", this.TenantType);
         this.setParamObj(map, prefix + "DeployExtraConfig.", this.DeployExtraConfig);
+        this.setParamSimple(map, prefix + "Gpu", this.Gpu);
+        this.setParamSimple(map, prefix + "NetworkCard", this.NetworkCard);
+        this.setParamSimple(map, prefix + "IsPredefinedType", this.IsPredefinedType);
+        this.setParamSimple(map, prefix + "ChcInstanceType", this.ChcInstanceType);
+        this.setParamSimple(map, prefix + "ChcInstanceFamily", this.ChcInstanceFamily);
+        this.setParamSimple(map, prefix + "ChcInstanceFamilyName", this.ChcInstanceFamilyName);
+        this.setParamSimple(map, prefix + "ResaleAppId", this.ResaleAppId);
+        this.setParamSimple(map, prefix + "ResaleAccountId", this.ResaleAccountId);
+        this.setParamSimple(map, prefix + "SaleStatus", this.SaleStatus);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "LatestOperation", this.LatestOperation);
+        this.setParamSimple(map, prefix + "LatestOperationErrorCode", this.LatestOperationErrorCode);
+        this.setParamSimple(map, prefix + "LatestOperationErrorMsg", this.LatestOperationErrorMsg);
+        this.setParamSimple(map, prefix + "LatestOperationName", this.LatestOperationName);
+        this.setParamSimple(map, prefix + "LatestOperationState", this.LatestOperationState);
 
     }
 }

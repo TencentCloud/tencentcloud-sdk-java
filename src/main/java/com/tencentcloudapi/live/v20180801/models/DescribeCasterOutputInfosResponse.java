@@ -25,7 +25,6 @@ public class DescribeCasterOutputInfosResponse extends AbstractModel {
 
     /**
     * 导播台的推流信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OutputInfos")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeCasterOutputInfosResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 导播台的推流信息列表。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 导播台的推流信息列表。 
      * @return OutputInfos 导播台的推流信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CasterOutputInfo [] getOutputInfos() {
         return this.OutputInfos;
@@ -50,9 +47,7 @@ public class DescribeCasterOutputInfosResponse extends AbstractModel {
 
     /**
      * Set 导播台的推流信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OutputInfos 导播台的推流信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOutputInfos(CasterOutputInfo [] OutputInfos) {
         this.OutputInfos = OutputInfos;

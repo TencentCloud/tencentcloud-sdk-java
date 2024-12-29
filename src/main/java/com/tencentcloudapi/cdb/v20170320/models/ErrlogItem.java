@@ -25,7 +25,6 @@ public class ErrlogItem extends AbstractModel {
 
     /**
     * 错误发生时间。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Timestamp")
     @Expose
@@ -33,17 +32,14 @@ public class ErrlogItem extends AbstractModel {
 
     /**
     * 错误详情
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Content")
     @Expose
     private String Content;
 
     /**
-     * Get 错误发生时间。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 错误发生时间。 
      * @return Timestamp 错误发生时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTimestamp() {
         return this.Timestamp;
@@ -51,19 +47,15 @@ public class ErrlogItem extends AbstractModel {
 
     /**
      * Set 错误发生时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Timestamp 错误发生时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimestamp(Long Timestamp) {
         this.Timestamp = Timestamp;
     }
 
     /**
-     * Get 错误详情
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 错误详情 
      * @return Content 错误详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getContent() {
         return this.Content;
@@ -71,9 +63,7 @@ public class ErrlogItem extends AbstractModel {
 
     /**
      * Set 错误详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Content 错误详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setContent(String Content) {
         this.Content = Content;

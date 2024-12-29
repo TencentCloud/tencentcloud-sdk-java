@@ -2250,19 +2250,6 @@ public class CwpClient extends AbstractClient{
     }
 
     /**
-     *接口已废弃
-
-获取索引列表
-     * @param req DescribeIndexListRequest
-     * @return DescribeIndexListResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeIndexListResponse DescribeIndexList(DescribeIndexListRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeIndexList", DescribeIndexListResponse.class);
-    }
-
-    /**
      *查询java内存马事件详细信息
      * @param req DescribeJavaMemShellInfoRequest
      * @return DescribeJavaMemShellInfoResponse

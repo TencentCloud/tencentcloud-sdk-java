@@ -66,6 +66,16 @@ public class GovernanceNamespaceInput extends AbstractModel {
     private String [] RemoveGroupIds;
 
     /**
+    * 该命名空间下的服务对哪些命名空间下可见，
+1、为空或者不填写，表示仅当前命名空间可见
+2、列表内容仅一个元素，且为字符 *，表示所有命名空间可见（包括新增）
+3、列表内容为部份命名空间名称，则只对这些命名空间下可见
+    */
+    @SerializedName("ServiceExportTo")
+    @Expose
+    private String [] ServiceExportTo;
+
+    /**
      * Get 命名空间名。 
      * @return Name 命名空间名。
      */
@@ -161,6 +171,34 @@ public class GovernanceNamespaceInput extends AbstractModel {
         this.RemoveGroupIds = RemoveGroupIds;
     }
 
+    /**
+     * Get 该命名空间下的服务对哪些命名空间下可见，
+1、为空或者不填写，表示仅当前命名空间可见
+2、列表内容仅一个元素，且为字符 *，表示所有命名空间可见（包括新增）
+3、列表内容为部份命名空间名称，则只对这些命名空间下可见 
+     * @return ServiceExportTo 该命名空间下的服务对哪些命名空间下可见，
+1、为空或者不填写，表示仅当前命名空间可见
+2、列表内容仅一个元素，且为字符 *，表示所有命名空间可见（包括新增）
+3、列表内容为部份命名空间名称，则只对这些命名空间下可见
+     */
+    public String [] getServiceExportTo() {
+        return this.ServiceExportTo;
+    }
+
+    /**
+     * Set 该命名空间下的服务对哪些命名空间下可见，
+1、为空或者不填写，表示仅当前命名空间可见
+2、列表内容仅一个元素，且为字符 *，表示所有命名空间可见（包括新增）
+3、列表内容为部份命名空间名称，则只对这些命名空间下可见
+     * @param ServiceExportTo 该命名空间下的服务对哪些命名空间下可见，
+1、为空或者不填写，表示仅当前命名空间可见
+2、列表内容仅一个元素，且为字符 *，表示所有命名空间可见（包括新增）
+3、列表内容为部份命名空间名称，则只对这些命名空间下可见
+     */
+    public void setServiceExportTo(String [] ServiceExportTo) {
+        this.ServiceExportTo = ServiceExportTo;
+    }
+
     public GovernanceNamespaceInput() {
     }
 
@@ -199,6 +237,12 @@ public class GovernanceNamespaceInput extends AbstractModel {
                 this.RemoveGroupIds[i] = new String(source.RemoveGroupIds[i]);
             }
         }
+        if (source.ServiceExportTo != null) {
+            this.ServiceExportTo = new String[source.ServiceExportTo.length];
+            for (int i = 0; i < source.ServiceExportTo.length; i++) {
+                this.ServiceExportTo[i] = new String(source.ServiceExportTo[i]);
+            }
+        }
     }
 
 
@@ -212,6 +256,7 @@ public class GovernanceNamespaceInput extends AbstractModel {
         this.setParamArraySimple(map, prefix + "GroupIds.", this.GroupIds);
         this.setParamArraySimple(map, prefix + "RemoveUserIds.", this.RemoveUserIds);
         this.setParamArraySimple(map, prefix + "RemoveGroupIds.", this.RemoveGroupIds);
+        this.setParamArraySimple(map, prefix + "ServiceExportTo.", this.ServiceExportTo);
 
     }
 }

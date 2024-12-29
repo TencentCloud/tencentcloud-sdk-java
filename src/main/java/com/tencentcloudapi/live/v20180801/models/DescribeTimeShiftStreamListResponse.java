@@ -32,7 +32,6 @@ public class DescribeTimeShiftStreamListResponse extends AbstractModel {
 
     /**
     * 流列表。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StreamList")
     @Expose
@@ -62,10 +61,8 @@ public class DescribeTimeShiftStreamListResponse extends AbstractModel {
     }
 
     /**
-     * Get 流列表。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 流列表。 
      * @return StreamList 流列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TimeShiftStreamInfo [] getStreamList() {
         return this.StreamList;
@@ -73,9 +70,7 @@ public class DescribeTimeShiftStreamListResponse extends AbstractModel {
 
     /**
      * Set 流列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StreamList 流列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStreamList(TimeShiftStreamInfo [] StreamList) {
         this.StreamList = StreamList;

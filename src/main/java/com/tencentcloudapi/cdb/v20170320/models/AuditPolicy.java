@@ -78,7 +78,6 @@ public class AuditPolicy extends AbstractModel {
 
     /**
     * 审计规则名称。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RuleName")
     @Expose
@@ -86,7 +85,6 @@ public class AuditPolicy extends AbstractModel {
 
     /**
     * 数据库实例名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstanceName")
     @Expose
@@ -221,10 +219,8 @@ public class AuditPolicy extends AbstractModel {
     }
 
     /**
-     * Get 审计规则名称。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 审计规则名称。 
      * @return RuleName 审计规则名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRuleName() {
         return this.RuleName;
@@ -232,19 +228,15 @@ public class AuditPolicy extends AbstractModel {
 
     /**
      * Set 审计规则名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RuleName 审计规则名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRuleName(String RuleName) {
         this.RuleName = RuleName;
     }
 
     /**
-     * Get 数据库实例名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据库实例名称 
      * @return InstanceName 数据库实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getInstanceName() {
         return this.InstanceName;
@@ -252,9 +244,7 @@ public class AuditPolicy extends AbstractModel {
 
     /**
      * Set 数据库实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceName 数据库实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;

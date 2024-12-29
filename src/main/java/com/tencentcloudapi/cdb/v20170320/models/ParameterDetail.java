@@ -102,7 +102,6 @@ public class ParameterDetail extends AbstractModel {
 
     /**
     * 参数是否不支持修改
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsNotSupportEdit")
     @Expose
@@ -285,10 +284,8 @@ public class ParameterDetail extends AbstractModel {
     }
 
     /**
-     * Get 参数是否不支持修改
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 参数是否不支持修改 
      * @return IsNotSupportEdit 参数是否不支持修改
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getIsNotSupportEdit() {
         return this.IsNotSupportEdit;
@@ -296,9 +293,7 @@ public class ParameterDetail extends AbstractModel {
 
     /**
      * Set 参数是否不支持修改
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsNotSupportEdit 参数是否不支持修改
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsNotSupportEdit(Boolean IsNotSupportEdit) {
         this.IsNotSupportEdit = IsNotSupportEdit;

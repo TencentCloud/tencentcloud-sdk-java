@@ -154,7 +154,7 @@ public class AuditLog extends AbstractModel {
     private Long LockWaitTime;
 
     /**
-    * 事物持续等待时间，微秒。
+    * 事务持续等待时间，微秒。
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TrxLivingTime")
@@ -490,9 +490,9 @@ public class AuditLog extends AbstractModel {
     }
 
     /**
-     * Get 事物持续等待时间，微秒。
+     * Get 事务持续等待时间，微秒。
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TrxLivingTime 事物持续等待时间，微秒。
+     * @return TrxLivingTime 事务持续等待时间，微秒。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTrxLivingTime() {
@@ -500,9 +500,9 @@ public class AuditLog extends AbstractModel {
     }
 
     /**
-     * Set 事物持续等待时间，微秒。
+     * Set 事务持续等待时间，微秒。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param TrxLivingTime 事物持续等待时间，微秒。
+     * @param TrxLivingTime 事务持续等待时间，微秒。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTrxLivingTime(Long TrxLivingTime) {

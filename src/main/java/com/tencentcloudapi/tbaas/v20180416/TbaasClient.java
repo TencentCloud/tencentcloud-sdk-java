@@ -105,7 +105,7 @@ public class TbaasClient extends AbstractClient{
     }
 
     /**
-     *获取区块内的交易列表
+     *获取区块内交易列表
      * @param req GetBlockTransactionListForUserRequest
      * @return GetBlockTransactionListForUserResponse
      * @throws TencentCloudSDKException
@@ -160,7 +160,7 @@ public class TbaasClient extends AbstractClient{
     }
 
     /**
-     *获取交易详情
+     *获取交易的详情
      * @param req GetTransactionDetailForUserRequest
      * @return GetTransactionDetailForUserResponse
      * @throws TencentCloudSDKException

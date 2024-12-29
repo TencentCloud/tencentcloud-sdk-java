@@ -765,7 +765,7 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
-     *本接口（DescribeInstanceTradeParameter）用于查询实例的计费参数，当前接口默认返回创建实例时需要的计费参数。内部接口用于活动页售卖场景。
+     *本接口（DescribeInstanceTradeParameter）用于查询实例的计费参数
      * @param req DescribeInstanceTradeParameterRequest
      * @return DescribeInstanceTradeParameterResponse
      * @throws TencentCloudSDKException

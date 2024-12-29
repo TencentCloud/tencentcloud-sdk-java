@@ -25,7 +25,6 @@ public class DescribeCasterTransitionTypesResponse extends AbstractModel {
 
     /**
     * 转场信息列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TransitionTypes")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeCasterTransitionTypesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 转场信息列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 转场信息列表 
      * @return TransitionTypes 转场信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TransitionTypeInfo [] getTransitionTypes() {
         return this.TransitionTypes;
@@ -50,9 +47,7 @@ public class DescribeCasterTransitionTypesResponse extends AbstractModel {
 
     /**
      * Set 转场信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TransitionTypes 转场信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTransitionTypes(TransitionTypeInfo [] TransitionTypes) {
         this.TransitionTypes = TransitionTypes;

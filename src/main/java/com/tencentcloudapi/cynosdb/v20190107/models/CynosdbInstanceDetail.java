@@ -265,7 +265,6 @@ pause
 
     /**
     * Db类型:<li>NORMAL</li><li>SERVERLESS</li>
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DbMode")
     @Expose
@@ -824,10 +823,8 @@ pause
     }
 
     /**
-     * Get Db类型:<li>NORMAL</li><li>SERVERLESS</li>
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Db类型:<li>NORMAL</li><li>SERVERLESS</li> 
      * @return DbMode Db类型:<li>NORMAL</li><li>SERVERLESS</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDbMode() {
         return this.DbMode;
@@ -835,9 +832,7 @@ pause
 
     /**
      * Set Db类型:<li>NORMAL</li><li>SERVERLESS</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DbMode Db类型:<li>NORMAL</li><li>SERVERLESS</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDbMode(String DbMode) {
         this.DbMode = DbMode;

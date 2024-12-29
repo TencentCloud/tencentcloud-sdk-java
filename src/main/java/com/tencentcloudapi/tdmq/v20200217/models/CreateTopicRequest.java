@@ -89,6 +89,13 @@ public class CreateTopicRequest extends AbstractModel {
     private Long MsgTTL;
 
     /**
+    * 不传默认是原生策略，DefaultPolicy表示当订阅下达到最大未确认消息数 5000 时，服务端将不再向当前订阅下的所有消费者推送消息，DynamicPolicy表示动态调整订阅下的最大未确认消息数，具体配额是在 5000 和消费者数量*20之间取最大值。每个消费者默认最大 unack 消息数为 20，超过该限制时仅影响该消费者，不影响其他消费者。
+    */
+    @SerializedName("UnackPolicy")
+    @Expose
+    private String UnackPolicy;
+
+    /**
      * Get 环境（命名空间）名称。 
      * @return EnvironmentId 环境（命名空间）名称。
      */
@@ -252,6 +259,22 @@ public class CreateTopicRequest extends AbstractModel {
         this.MsgTTL = MsgTTL;
     }
 
+    /**
+     * Get 不传默认是原生策略，DefaultPolicy表示当订阅下达到最大未确认消息数 5000 时，服务端将不再向当前订阅下的所有消费者推送消息，DynamicPolicy表示动态调整订阅下的最大未确认消息数，具体配额是在 5000 和消费者数量*20之间取最大值。每个消费者默认最大 unack 消息数为 20，超过该限制时仅影响该消费者，不影响其他消费者。 
+     * @return UnackPolicy 不传默认是原生策略，DefaultPolicy表示当订阅下达到最大未确认消息数 5000 时，服务端将不再向当前订阅下的所有消费者推送消息，DynamicPolicy表示动态调整订阅下的最大未确认消息数，具体配额是在 5000 和消费者数量*20之间取最大值。每个消费者默认最大 unack 消息数为 20，超过该限制时仅影响该消费者，不影响其他消费者。
+     */
+    public String getUnackPolicy() {
+        return this.UnackPolicy;
+    }
+
+    /**
+     * Set 不传默认是原生策略，DefaultPolicy表示当订阅下达到最大未确认消息数 5000 时，服务端将不再向当前订阅下的所有消费者推送消息，DynamicPolicy表示动态调整订阅下的最大未确认消息数，具体配额是在 5000 和消费者数量*20之间取最大值。每个消费者默认最大 unack 消息数为 20，超过该限制时仅影响该消费者，不影响其他消费者。
+     * @param UnackPolicy 不传默认是原生策略，DefaultPolicy表示当订阅下达到最大未确认消息数 5000 时，服务端将不再向当前订阅下的所有消费者推送消息，DynamicPolicy表示动态调整订阅下的最大未确认消息数，具体配额是在 5000 和消费者数量*20之间取最大值。每个消费者默认最大 unack 消息数为 20，超过该限制时仅影响该消费者，不影响其他消费者。
+     */
+    public void setUnackPolicy(String UnackPolicy) {
+        this.UnackPolicy = UnackPolicy;
+    }
+
     public CreateTopicRequest() {
     }
 
@@ -284,6 +307,9 @@ public class CreateTopicRequest extends AbstractModel {
         if (source.MsgTTL != null) {
             this.MsgTTL = new Long(source.MsgTTL);
         }
+        if (source.UnackPolicy != null) {
+            this.UnackPolicy = new String(source.UnackPolicy);
+        }
     }
 
 
@@ -299,6 +325,7 @@ public class CreateTopicRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "TopicType", this.TopicType);
         this.setParamSimple(map, prefix + "PulsarTopicType", this.PulsarTopicType);
         this.setParamSimple(map, prefix + "MsgTTL", this.MsgTTL);
+        this.setParamSimple(map, prefix + "UnackPolicy", this.UnackPolicy);
 
     }
 }

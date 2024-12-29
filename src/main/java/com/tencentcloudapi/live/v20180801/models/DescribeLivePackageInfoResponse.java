@@ -25,7 +25,6 @@ public class DescribeLivePackageInfoResponse extends AbstractModel {
 
     /**
     * 套餐包信息。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LivePackageInfoList")
     @Expose
@@ -42,7 +41,6 @@ public class DescribeLivePackageInfoResponse extends AbstractModel {
 205: 日结时长
 206: 月结时长
 304: 日结流量。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PackageBillMode")
     @Expose
@@ -86,7 +84,6 @@ public class DescribeLivePackageInfoResponse extends AbstractModel {
 标准直播，国际/港澳台（境外多地区）计费方式。
 快直播，中国大陆（境内全地区）计费方式。
 快直播，国际/港澳台（境外多地区）计费方式。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FluxPackageBillMode")
     @Expose
@@ -100,10 +97,8 @@ public class DescribeLivePackageInfoResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 套餐包信息。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 套餐包信息。 
      * @return LivePackageInfoList 套餐包信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public LivePackageInfo [] getLivePackageInfoList() {
         return this.LivePackageInfoList;
@@ -111,9 +106,7 @@ public class DescribeLivePackageInfoResponse extends AbstractModel {
 
     /**
      * Set 套餐包信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LivePackageInfoList 套餐包信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLivePackageInfoList(LivePackageInfo [] LivePackageInfoList) {
         this.LivePackageInfoList = LivePackageInfoList;
@@ -129,8 +122,7 @@ public class DescribeLivePackageInfoResponse extends AbstractModel {
 204: 日结流量
 205: 日结时长
 206: 月结时长
-304: 日结流量。
-注意：此字段可能返回 null，表示取不到有效值。 
+304: 日结流量。 
      * @return PackageBillMode 套餐包当前计费方式:
 -1: 无计费方式或获取失败
 0: 无计费方式
@@ -141,7 +133,6 @@ public class DescribeLivePackageInfoResponse extends AbstractModel {
 205: 日结时长
 206: 月结时长
 304: 日结流量。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPackageBillMode() {
         return this.PackageBillMode;
@@ -158,7 +149,6 @@ public class DescribeLivePackageInfoResponse extends AbstractModel {
 205: 日结时长
 206: 月结时长
 304: 日结流量。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PackageBillMode 套餐包当前计费方式:
 -1: 无计费方式或获取失败
 0: 无计费方式
@@ -169,7 +159,6 @@ public class DescribeLivePackageInfoResponse extends AbstractModel {
 205: 日结时长
 206: 月结时长
 304: 日结流量。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPackageBillMode(Long PackageBillMode) {
         this.PackageBillMode = PackageBillMode;
@@ -260,14 +249,12 @@ public class DescribeLivePackageInfoResponse extends AbstractModel {
 标准直播，中国大陆（境内全地区）计费方式。
 标准直播，国际/港澳台（境外多地区）计费方式。
 快直播，中国大陆（境内全地区）计费方式。
-快直播，国际/港澳台（境外多地区）计费方式。
-注意：此字段可能返回 null，表示取不到有效值。 
+快直播，国际/港澳台（境外多地区）计费方式。 
      * @return FluxPackageBillMode 当请求参数 PackageType = 0 时生效，逗号分隔，从第一个到最后一个分别表示：
 标准直播，中国大陆（境内全地区）计费方式。
 标准直播，国际/港澳台（境外多地区）计费方式。
 快直播，中国大陆（境内全地区）计费方式。
 快直播，国际/港澳台（境外多地区）计费方式。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFluxPackageBillMode() {
         return this.FluxPackageBillMode;
@@ -279,13 +266,11 @@ public class DescribeLivePackageInfoResponse extends AbstractModel {
 标准直播，国际/港澳台（境外多地区）计费方式。
 快直播，中国大陆（境内全地区）计费方式。
 快直播，国际/港澳台（境外多地区）计费方式。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FluxPackageBillMode 当请求参数 PackageType = 0 时生效，逗号分隔，从第一个到最后一个分别表示：
 标准直播，中国大陆（境内全地区）计费方式。
 标准直播，国际/港澳台（境外多地区）计费方式。
 快直播，中国大陆（境内全地区）计费方式。
 快直播，国际/港澳台（境外多地区）计费方式。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFluxPackageBillMode(String FluxPackageBillMode) {
         this.FluxPackageBillMode = FluxPackageBillMode;

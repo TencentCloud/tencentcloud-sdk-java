@@ -25,7 +25,6 @@ public class CheckItem extends AbstractModel {
 
     /**
     * 检查项目名称，CK_CPU-变配后CPU风险检查；CK_MASTER_STORAGE-只读副本变配下，只读副本磁盘空间不小于主实例空间检查；CK_MEMORY-变配后内存风险检查；CK_STORAGE-变配后磁盘空间风险检查；CK_UPGRATE-变配是否需要迁移检查；
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CheckName")
     @Expose
@@ -68,10 +67,8 @@ CK_STORAGE-当前磁盘近7天最大的使用值（GB)；CK_UPGRATE- 当前变�
     private Long MsgCode;
 
     /**
-     * Get 检查项目名称，CK_CPU-变配后CPU风险检查；CK_MASTER_STORAGE-只读副本变配下，只读副本磁盘空间不小于主实例空间检查；CK_MEMORY-变配后内存风险检查；CK_STORAGE-变配后磁盘空间风险检查；CK_UPGRATE-变配是否需要迁移检查；
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 检查项目名称，CK_CPU-变配后CPU风险检查；CK_MASTER_STORAGE-只读副本变配下，只读副本磁盘空间不小于主实例空间检查；CK_MEMORY-变配后内存风险检查；CK_STORAGE-变配后磁盘空间风险检查；CK_UPGRATE-变配是否需要迁移检查； 
      * @return CheckName 检查项目名称，CK_CPU-变配后CPU风险检查；CK_MASTER_STORAGE-只读副本变配下，只读副本磁盘空间不小于主实例空间检查；CK_MEMORY-变配后内存风险检查；CK_STORAGE-变配后磁盘空间风险检查；CK_UPGRATE-变配是否需要迁移检查；
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCheckName() {
         return this.CheckName;
@@ -79,9 +76,7 @@ CK_STORAGE-当前磁盘近7天最大的使用值（GB)；CK_UPGRATE- 当前变�
 
     /**
      * Set 检查项目名称，CK_CPU-变配后CPU风险检查；CK_MASTER_STORAGE-只读副本变配下，只读副本磁盘空间不小于主实例空间检查；CK_MEMORY-变配后内存风险检查；CK_STORAGE-变配后磁盘空间风险检查；CK_UPGRATE-变配是否需要迁移检查；
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CheckName 检查项目名称，CK_CPU-变配后CPU风险检查；CK_MASTER_STORAGE-只读副本变配下，只读副本磁盘空间不小于主实例空间检查；CK_MEMORY-变配后内存风险检查；CK_STORAGE-变配后磁盘空间风险检查；CK_UPGRATE-变配是否需要迁移检查；
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCheckName(String CheckName) {
         this.CheckName = CheckName;

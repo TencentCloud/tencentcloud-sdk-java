@@ -77,6 +77,18 @@ public class ApproverOption extends AbstractModel {
     private String FlowReadLimit;
 
     /**
+    * 禁止在签署过程中添加签署日期控件
+ <br/>前置条件：文件发起合同时，指定SignBeanTag=1（可以在签署过程中添加签署控件）：
+<ul>
+<li> 默认值：false，在开启：签署过程中添加签署控件时，添加签署控件会默认自带签署日期控件</li>
+<li> 可选值：true，在开启：签署过程中添加签署控件时，添加签署控件不会自带签署日期控件</li>
+</ul>
+    */
+    @SerializedName("ForbidAddSignDate")
+    @Expose
+    private Boolean ForbidAddSignDate;
+
+    /**
      * Get 签署方是否可以拒签
 
 <ul><li> **false** : ( 默认)可以拒签</li>
@@ -228,6 +240,42 @@ public class ApproverOption extends AbstractModel {
         this.FlowReadLimit = FlowReadLimit;
     }
 
+    /**
+     * Get 禁止在签署过程中添加签署日期控件
+ <br/>前置条件：文件发起合同时，指定SignBeanTag=1（可以在签署过程中添加签署控件）：
+<ul>
+<li> 默认值：false，在开启：签署过程中添加签署控件时，添加签署控件会默认自带签署日期控件</li>
+<li> 可选值：true，在开启：签署过程中添加签署控件时，添加签署控件不会自带签署日期控件</li>
+</ul> 
+     * @return ForbidAddSignDate 禁止在签署过程中添加签署日期控件
+ <br/>前置条件：文件发起合同时，指定SignBeanTag=1（可以在签署过程中添加签署控件）：
+<ul>
+<li> 默认值：false，在开启：签署过程中添加签署控件时，添加签署控件会默认自带签署日期控件</li>
+<li> 可选值：true，在开启：签署过程中添加签署控件时，添加签署控件不会自带签署日期控件</li>
+</ul>
+     */
+    public Boolean getForbidAddSignDate() {
+        return this.ForbidAddSignDate;
+    }
+
+    /**
+     * Set 禁止在签署过程中添加签署日期控件
+ <br/>前置条件：文件发起合同时，指定SignBeanTag=1（可以在签署过程中添加签署控件）：
+<ul>
+<li> 默认值：false，在开启：签署过程中添加签署控件时，添加签署控件会默认自带签署日期控件</li>
+<li> 可选值：true，在开启：签署过程中添加签署控件时，添加签署控件不会自带签署日期控件</li>
+</ul>
+     * @param ForbidAddSignDate 禁止在签署过程中添加签署日期控件
+ <br/>前置条件：文件发起合同时，指定SignBeanTag=1（可以在签署过程中添加签署控件）：
+<ul>
+<li> 默认值：false，在开启：签署过程中添加签署控件时，添加签署控件会默认自带签署日期控件</li>
+<li> 可选值：true，在开启：签署过程中添加签署控件时，添加签署控件不会自带签署日期控件</li>
+</ul>
+     */
+    public void setForbidAddSignDate(Boolean ForbidAddSignDate) {
+        this.ForbidAddSignDate = ForbidAddSignDate;
+    }
+
     public ApproverOption() {
     }
 
@@ -251,6 +299,9 @@ public class ApproverOption extends AbstractModel {
         if (source.FlowReadLimit != null) {
             this.FlowReadLimit = new String(source.FlowReadLimit);
         }
+        if (source.ForbidAddSignDate != null) {
+            this.ForbidAddSignDate = new Boolean(source.ForbidAddSignDate);
+        }
     }
 
 
@@ -263,6 +314,7 @@ public class ApproverOption extends AbstractModel {
         this.setParamSimple(map, prefix + "CanEditApprover", this.CanEditApprover);
         this.setParamSimple(map, prefix + "FillType", this.FillType);
         this.setParamSimple(map, prefix + "FlowReadLimit", this.FlowReadLimit);
+        this.setParamSimple(map, prefix + "ForbidAddSignDate", this.ForbidAddSignDate);
 
     }
 }

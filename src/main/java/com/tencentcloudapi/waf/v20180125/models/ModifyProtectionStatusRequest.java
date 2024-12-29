@@ -31,7 +31,7 @@ public class ModifyProtectionStatusRequest extends AbstractModel {
     private String Domain;
 
     /**
-    * 状态
+    * 1：开启WAF开关，0：关闭WAF开关
     */
     @SerializedName("Status")
     @Expose
@@ -61,16 +61,16 @@ public class ModifyProtectionStatusRequest extends AbstractModel {
     }
 
     /**
-     * Get 状态 
-     * @return Status 状态
+     * Get 1：开启WAF开关，0：关闭WAF开关 
+     * @return Status 1：开启WAF开关，0：关闭WAF开关
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 状态
-     * @param Status 状态
+     * Set 1：开启WAF开关，0：关闭WAF开关
+     * @param Status 1：开启WAF开关，0：关闭WAF开关
      */
     public void setStatus(Long Status) {
         this.Status = Status;

@@ -64,6 +64,29 @@ public class TreeJobSets extends AbstractModel {
     private Long Status;
 
     /**
+    * 0:代表没开启调优任务，1:开启智能调优，2:代表定时调优
+
+注意：此字段可能返回 null，表示取不到有效值。
+    */
+    @SerializedName("ScalingType")
+    @Expose
+    private Long ScalingType;
+
+    /**
+    * RunningCpu
+    */
+    @SerializedName("RunningCpu")
+    @Expose
+    private Float RunningCpu;
+
+    /**
+    * RunningMem
+    */
+    @SerializedName("RunningMem")
+    @Expose
+    private Float RunningMem;
+
+    /**
      * Get 作业Id
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return JobId 作业Id
@@ -163,6 +186,62 @@ public class TreeJobSets extends AbstractModel {
         this.Status = Status;
     }
 
+    /**
+     * Get 0:代表没开启调优任务，1:开启智能调优，2:代表定时调优
+
+注意：此字段可能返回 null，表示取不到有效值。 
+     * @return ScalingType 0:代表没开启调优任务，1:开启智能调优，2:代表定时调优
+
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public Long getScalingType() {
+        return this.ScalingType;
+    }
+
+    /**
+     * Set 0:代表没开启调优任务，1:开启智能调优，2:代表定时调优
+
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ScalingType 0:代表没开启调优任务，1:开启智能调优，2:代表定时调优
+
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public void setScalingType(Long ScalingType) {
+        this.ScalingType = ScalingType;
+    }
+
+    /**
+     * Get RunningCpu 
+     * @return RunningCpu RunningCpu
+     */
+    public Float getRunningCpu() {
+        return this.RunningCpu;
+    }
+
+    /**
+     * Set RunningCpu
+     * @param RunningCpu RunningCpu
+     */
+    public void setRunningCpu(Float RunningCpu) {
+        this.RunningCpu = RunningCpu;
+    }
+
+    /**
+     * Get RunningMem 
+     * @return RunningMem RunningMem
+     */
+    public Float getRunningMem() {
+        return this.RunningMem;
+    }
+
+    /**
+     * Set RunningMem
+     * @param RunningMem RunningMem
+     */
+    public void setRunningMem(Float RunningMem) {
+        this.RunningMem = RunningMem;
+    }
+
     public TreeJobSets() {
     }
 
@@ -186,6 +265,15 @@ public class TreeJobSets extends AbstractModel {
         if (source.Status != null) {
             this.Status = new Long(source.Status);
         }
+        if (source.ScalingType != null) {
+            this.ScalingType = new Long(source.ScalingType);
+        }
+        if (source.RunningCpu != null) {
+            this.RunningCpu = new Float(source.RunningCpu);
+        }
+        if (source.RunningMem != null) {
+            this.RunningMem = new Float(source.RunningMem);
+        }
     }
 
 
@@ -198,6 +286,9 @@ public class TreeJobSets extends AbstractModel {
         this.setParamSimple(map, prefix + "JobType", this.JobType);
         this.setParamSimple(map, prefix + "RunningCu", this.RunningCu);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "ScalingType", this.ScalingType);
+        this.setParamSimple(map, prefix + "RunningCpu", this.RunningCpu);
+        this.setParamSimple(map, prefix + "RunningMem", this.RunningMem);
 
     }
 }

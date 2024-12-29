@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class InstallAddonRequest extends AbstractModel {
 
     /**
-    * 集群ID
+    * 集群ID（仅支持标准tke集群）
     */
     @SerializedName("ClusterId")
     @Expose
@@ -52,16 +52,16 @@ public class InstallAddonRequest extends AbstractModel {
     private String RawValues;
 
     /**
-     * Get 集群ID 
-     * @return ClusterId 集群ID
+     * Get 集群ID（仅支持标准tke集群） 
+     * @return ClusterId 集群ID（仅支持标准tke集群）
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set 集群ID
-     * @param ClusterId 集群ID
+     * Set 集群ID（仅支持标准tke集群）
+     * @param ClusterId 集群ID（仅支持标准tke集群）
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;

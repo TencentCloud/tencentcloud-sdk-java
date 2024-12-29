@@ -109,7 +109,6 @@ public class SpecInfo extends AbstractModel {
 
     /**
     * 此规格对应的按量计费Pid列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PostPid")
     @Expose
@@ -330,10 +329,8 @@ public class SpecInfo extends AbstractModel {
     }
 
     /**
-     * Get 此规格对应的按量计费Pid列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 此规格对应的按量计费Pid列表 
      * @return PostPid 此规格对应的按量计费Pid列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long [] getPostPid() {
         return this.PostPid;
@@ -341,9 +338,7 @@ public class SpecInfo extends AbstractModel {
 
     /**
      * Set 此规格对应的按量计费Pid列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PostPid 此规格对应的按量计费Pid列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPostPid(Long [] PostPid) {
         this.PostPid = PostPid;

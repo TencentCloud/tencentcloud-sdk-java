@@ -504,7 +504,9 @@ public class TemClient extends AbstractClient{
     }
 
     /**
-     *创建或者更新 Ingress 规则
+     *此接口没有被使用了
+
+创建或者更新 Ingress 规则
      * @param req ModifyIngressRequest
      * @return ModifyIngressResponse
      * @throws TencentCloudSDKException

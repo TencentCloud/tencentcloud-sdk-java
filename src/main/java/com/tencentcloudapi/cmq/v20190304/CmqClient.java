@@ -39,7 +39,9 @@ public class CmqClient extends AbstractClient{
     }
 
     /**
-     *清除queue中的所有消息
+     *下线老cmq云API 3.0 无调用量接口
+
+清除queue中的所有消息
      * @param req ClearQueueRequest
      * @return ClearQueueResponse
      * @throws TencentCloudSDKException
@@ -50,7 +52,9 @@ public class CmqClient extends AbstractClient{
     }
 
     /**
-     *清空订阅者消息标签
+     *下线老cmq云API 3.0 无调用量接口
+
+清空订阅者消息标签
      * @param req ClearSubscriptionFilterTagsRequest
      * @return ClearSubscriptionFilterTagsResponse
      * @throws TencentCloudSDKException
@@ -73,7 +77,9 @@ public class CmqClient extends AbstractClient{
     }
 
     /**
-     *创建订阅接口
+     *下线老cmq云API 3.0 无调用量接口
+
+创建订阅接口
      * @param req CreateSubscribeRequest
      * @return CreateSubscribeResponse
      * @throws TencentCloudSDKException
@@ -106,7 +112,9 @@ public class CmqClient extends AbstractClient{
     }
 
     /**
-     *删除订阅
+     *下线老cmq云API 3.0 无调用量接口
+
+删除订阅
      * @param req DeleteSubscribeRequest
      * @return DeleteSubscribeResponse
      * @throws TencentCloudSDKException
@@ -117,7 +125,9 @@ public class CmqClient extends AbstractClient{
     }
 
     /**
-     *删除主题
+     *下线老cmq云API 3.0 无调用量接口
+
+删除主题
      * @param req DeleteTopicRequest
      * @return DeleteTopicResponse
      * @throws TencentCloudSDKException
@@ -128,7 +138,9 @@ public class CmqClient extends AbstractClient{
     }
 
     /**
-     *枚举死信队列源队列
+     *下线老cmq云API 3.0 无调用量接口
+
+枚举死信队列源队列
      * @param req DescribeDeadLetterSourceQueuesRequest
      * @return DescribeDeadLetterSourceQueuesResponse
      * @throws TencentCloudSDKException
@@ -183,7 +195,9 @@ public class CmqClient extends AbstractClient{
     }
 
     /**
-     *修改订阅属性
+     *下线老cmq云API 3.0 无调用量接口
+
+修改订阅属性
      * @param req ModifySubscriptionAttributeRequest
      * @return ModifySubscriptionAttributeResponse
      * @throws TencentCloudSDKException
@@ -194,7 +208,9 @@ public class CmqClient extends AbstractClient{
     }
 
     /**
-     *修改主题属性
+     *下线老cmq云API 3.0 无调用量接口
+
+修改主题属性
      * @param req ModifyTopicAttributeRequest
      * @return ModifyTopicAttributeResponse
      * @throws TencentCloudSDKException
@@ -205,7 +221,9 @@ public class CmqClient extends AbstractClient{
     }
 
     /**
-     *回溯队列
+     *下线老cmq云API 3.0 无调用量接口
+
+回溯队列
      * @param req RewindQueueRequest
      * @return RewindQueueResponse
      * @throws TencentCloudSDKException
@@ -216,7 +234,9 @@ public class CmqClient extends AbstractClient{
     }
 
     /**
-     *解绑死信队列
+     *下线老cmq云API 3.0 无调用量接口
+
+解绑死信队列
      * @param req UnbindDeadLetterRequest
      * @return UnbindDeadLetterResponse
      * @throws TencentCloudSDKException

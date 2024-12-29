@@ -59,6 +59,13 @@ public class ConfigureChcAssistVpcRequest extends AbstractModel {
     private String [] DeploySecurityGroupIds;
 
     /**
+    * 部署网络的附加参数，用于指定minios类型、bios引导模式等
+    */
+    @SerializedName("ChcDeployExtraConfig")
+    @Expose
+    private ChcDeployExtraConfig ChcDeployExtraConfig;
+
+    /**
      * Get CHC物理服务器的实例Id。 
      * @return ChcIds CHC物理服务器的实例Id。
      */
@@ -138,6 +145,22 @@ public class ConfigureChcAssistVpcRequest extends AbstractModel {
         this.DeploySecurityGroupIds = DeploySecurityGroupIds;
     }
 
+    /**
+     * Get 部署网络的附加参数，用于指定minios类型、bios引导模式等 
+     * @return ChcDeployExtraConfig 部署网络的附加参数，用于指定minios类型、bios引导模式等
+     */
+    public ChcDeployExtraConfig getChcDeployExtraConfig() {
+        return this.ChcDeployExtraConfig;
+    }
+
+    /**
+     * Set 部署网络的附加参数，用于指定minios类型、bios引导模式等
+     * @param ChcDeployExtraConfig 部署网络的附加参数，用于指定minios类型、bios引导模式等
+     */
+    public void setChcDeployExtraConfig(ChcDeployExtraConfig ChcDeployExtraConfig) {
+        this.ChcDeployExtraConfig = ChcDeployExtraConfig;
+    }
+
     public ConfigureChcAssistVpcRequest() {
     }
 
@@ -170,6 +193,9 @@ public class ConfigureChcAssistVpcRequest extends AbstractModel {
                 this.DeploySecurityGroupIds[i] = new String(source.DeploySecurityGroupIds[i]);
             }
         }
+        if (source.ChcDeployExtraConfig != null) {
+            this.ChcDeployExtraConfig = new ChcDeployExtraConfig(source.ChcDeployExtraConfig);
+        }
     }
 
 
@@ -182,6 +208,7 @@ public class ConfigureChcAssistVpcRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "BmcSecurityGroupIds.", this.BmcSecurityGroupIds);
         this.setParamObj(map, prefix + "DeployVirtualPrivateCloud.", this.DeployVirtualPrivateCloud);
         this.setParamArraySimple(map, prefix + "DeploySecurityGroupIds.", this.DeploySecurityGroupIds);
+        this.setParamObj(map, prefix + "ChcDeployExtraConfig.", this.ChcDeployExtraConfig);
 
     }
 }

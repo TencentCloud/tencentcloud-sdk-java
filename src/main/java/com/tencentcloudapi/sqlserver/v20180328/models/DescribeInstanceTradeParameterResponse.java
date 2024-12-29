@@ -25,7 +25,6 @@ public class DescribeInstanceTradeParameterResponse extends AbstractModel {
 
     /**
     * 计费参数
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Parameter")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeInstanceTradeParameterResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 计费参数
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 计费参数 
      * @return Parameter 计费参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getParameter() {
         return this.Parameter;
@@ -50,9 +47,7 @@ public class DescribeInstanceTradeParameterResponse extends AbstractModel {
 
     /**
      * Set 计费参数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Parameter 计费参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setParameter(String Parameter) {
         this.Parameter = Parameter;

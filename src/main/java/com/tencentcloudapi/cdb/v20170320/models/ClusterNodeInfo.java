@@ -53,7 +53,6 @@ public class ClusterNodeInfo extends AbstractModel {
 
     /**
     * 节点状态。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Status")
     @Expose
@@ -124,10 +123,8 @@ public class ClusterNodeInfo extends AbstractModel {
     }
 
     /**
-     * Get 节点状态。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 节点状态。 
      * @return Status 节点状态。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStatus() {
         return this.Status;
@@ -135,9 +132,7 @@ public class ClusterNodeInfo extends AbstractModel {
 
     /**
      * Set 节点状态。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Status 节点状态。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStatus(String Status) {
         this.Status = Status;

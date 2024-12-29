@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ModifyApmInstanceRequest extends AbstractModel {
 
     /**
-    * 实例ID
+    * 业务系统ID
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 实例名
+    * 业务系统名
     */
     @SerializedName("Name")
     @Expose
@@ -45,7 +45,7 @@ public class ModifyApmInstanceRequest extends AbstractModel {
     private ApmTag [] Tags;
 
     /**
-    * 实例详情
+    * 业务系统详情
     */
     @SerializedName("Description")
     @Expose
@@ -66,7 +66,7 @@ public class ModifyApmInstanceRequest extends AbstractModel {
     private Boolean OpenBilling;
 
     /**
-    * 实例上报额度
+    * 业务系统上报额度
     */
     @SerializedName("SpanDailyCounters")
     @Expose
@@ -194,32 +194,32 @@ public class ModifyApmInstanceRequest extends AbstractModel {
     private Long IsInstrumentationVulnerabilityScan;
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+     * Get 业务系统ID 
+     * @return InstanceId 业务系统ID
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set 业务系统ID
+     * @param InstanceId 业务系统ID
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 实例名 
-     * @return Name 实例名
+     * Get 业务系统名 
+     * @return Name 业务系统名
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 实例名
-     * @param Name 实例名
+     * Set 业务系统名
+     * @param Name 业务系统名
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -242,16 +242,16 @@ public class ModifyApmInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get 实例详情 
-     * @return Description 实例详情
+     * Get 业务系统详情 
+     * @return Description 业务系统详情
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 实例详情
-     * @param Description 实例详情
+     * Set 业务系统详情
+     * @param Description 业务系统详情
      */
     public void setDescription(String Description) {
         this.Description = Description;
@@ -290,16 +290,16 @@ public class ModifyApmInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get 实例上报额度 
-     * @return SpanDailyCounters 实例上报额度
+     * Get 业务系统上报额度 
+     * @return SpanDailyCounters 业务系统上报额度
      */
     public Long getSpanDailyCounters() {
         return this.SpanDailyCounters;
     }
 
     /**
-     * Set 实例上报额度
-     * @param SpanDailyCounters 实例上报额度
+     * Set 业务系统上报额度
+     * @param SpanDailyCounters 业务系统上报额度
      */
     public void setSpanDailyCounters(Long SpanDailyCounters) {
         this.SpanDailyCounters = SpanDailyCounters;

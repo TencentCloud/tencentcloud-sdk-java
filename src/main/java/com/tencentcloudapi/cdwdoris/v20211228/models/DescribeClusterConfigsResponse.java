@@ -46,6 +46,13 @@ public class DescribeClusterConfigsResponse extends AbstractModel {
     private String ErrorMsg;
 
     /**
+    * 是否包含CN节点
+    */
+    @SerializedName("HasCN")
+    @Expose
+    private Boolean HasCN;
+
+    /**
     * 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
     */
     @SerializedName("RequestId")
@@ -105,6 +112,22 @@ public class DescribeClusterConfigsResponse extends AbstractModel {
     }
 
     /**
+     * Get 是否包含CN节点 
+     * @return HasCN 是否包含CN节点
+     */
+    public Boolean getHasCN() {
+        return this.HasCN;
+    }
+
+    /**
+     * Set 是否包含CN节点
+     * @param HasCN 是否包含CN节点
+     */
+    public void setHasCN(Boolean HasCN) {
+        this.HasCN = HasCN;
+    }
+
+    /**
      * Get 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。 
      * @return RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -140,6 +163,9 @@ public class DescribeClusterConfigsResponse extends AbstractModel {
         if (source.ErrorMsg != null) {
             this.ErrorMsg = new String(source.ErrorMsg);
         }
+        if (source.HasCN != null) {
+            this.HasCN = new Boolean(source.HasCN);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -153,6 +179,7 @@ public class DescribeClusterConfigsResponse extends AbstractModel {
         this.setParamArrayObj(map, prefix + "ClusterConfList.", this.ClusterConfList);
         this.setParamSimple(map, prefix + "BuildVersion", this.BuildVersion);
         this.setParamSimple(map, prefix + "ErrorMsg", this.ErrorMsg);
+        this.setParamSimple(map, prefix + "HasCN", this.HasCN);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

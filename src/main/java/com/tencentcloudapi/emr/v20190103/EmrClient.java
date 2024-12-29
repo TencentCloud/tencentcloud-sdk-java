@@ -50,6 +50,17 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
+     *增加当前集群的节点规格配置
+     * @param req AddNodeResourceConfigRequest
+     * @return AddNodeResourceConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddNodeResourceConfigResponse AddNodeResourceConfig(AddNodeResourceConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AddNodeResourceConfig", AddNodeResourceConfigResponse.class);
+    }
+
+    /**
      *该接口支持安装了OpenLdap组件的集群。
 新增用户列表（用户管理）。
      * @param req AddUsersForUserManagerRequest
@@ -59,6 +70,17 @@ public class EmrClient extends AbstractClient{
     public AddUsersForUserManagerResponse AddUsersForUserManager(AddUsersForUserManagerRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "AddUsersForUserManager", AddUsersForUserManagerResponse.class);
+    }
+
+    /**
+     *云盘挂载
+     * @param req AttachDisksRequest
+     * @return AttachDisksResponse
+     * @throws TencentCloudSDKException
+     */
+    public AttachDisksResponse AttachDisks(AttachDisksRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AttachDisks", AttachDisksResponse.class);
     }
 
     /**
@@ -116,6 +138,17 @@ public class EmrClient extends AbstractClient{
     public DeleteAutoScaleStrategyResponse DeleteAutoScaleStrategy(DeleteAutoScaleStrategyRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteAutoScaleStrategy", DeleteAutoScaleStrategyResponse.class);
+    }
+
+    /**
+     *删除当前集群的节点规格配置
+     * @param req DeleteNodeResourceConfigRequest
+     * @return DeleteNodeResourceConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteNodeResourceConfigResponse DeleteNodeResourceConfig(DeleteNodeResourceConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteNodeResourceConfig", DeleteNodeResourceConfigResponse.class);
     }
 
     /**
@@ -350,6 +383,28 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
+     *查询节点数据盘信息
+     * @param req DescribeNodeDataDisksRequest
+     * @return DescribeNodeDataDisksResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeNodeDataDisksResponse DescribeNodeDataDisks(DescribeNodeDataDisksRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeNodeDataDisks", DescribeNodeDataDisksResponse.class);
+    }
+
+    /**
+     *快速获取当前集群的节点规格配置
+     * @param req DescribeNodeResourceConfigFastRequest
+     * @return DescribeNodeResourceConfigFastResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeNodeResourceConfigFastResponse DescribeNodeResourceConfigFast(DescribeNodeResourceConfigFastRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeNodeResourceConfigFast", DescribeNodeResourceConfigFastResponse.class);
+    }
+
+    /**
      *查询YARN资源调度数据信息。已废弃，请使用`DescribeYarnQueue`去查询队列信息。
      * @param req DescribeResourceScheduleRequest
      * @return DescribeResourceScheduleResponse
@@ -572,6 +627,17 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
+     *修改集群名称
+     * @param req ModifyInstanceBasicRequest
+     * @return ModifyInstanceBasicResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyInstanceBasicResponse ModifyInstanceBasic(ModifyInstanceBasicRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyInstanceBasic", ModifyInstanceBasicResponse.class);
+    }
+
+    /**
      *调整Pod数量
      * @param req ModifyPodNumRequest
      * @return ModifyPodNumResponse
@@ -580,6 +646,17 @@ public class EmrClient extends AbstractClient{
     public ModifyPodNumResponse ModifyPodNum(ModifyPodNumRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyPodNum", ModifyPodNumResponse.class);
+    }
+
+    /**
+     *变配实例
+     * @param req ModifyResourceRequest
+     * @return ModifyResourceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyResourceResponse ModifyResource(ModifyResourceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyResource", ModifyResourceResponse.class);
     }
 
     /**
@@ -684,6 +761,17 @@ public class EmrClient extends AbstractClient{
     }
 
     /**
+     *云盘扩容
+     * @param req ResizeDataDisksRequest
+     * @return ResizeDataDisksResponse
+     * @throws TencentCloudSDKException
+     */
+    public ResizeDataDisksResponse ResizeDataDisks(ResizeDataDisksRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ResizeDataDisks", ResizeDataDisksResponse.class);
+    }
+
+    /**
      *创建流程作业
      * @param req RunJobFlowRequest
      * @return RunJobFlowResponse
@@ -714,6 +802,17 @@ public class EmrClient extends AbstractClient{
     public ScaleOutInstanceResponse ScaleOutInstance(ScaleOutInstanceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ScaleOutInstance", ScaleOutInstanceResponse.class);
+    }
+
+    /**
+     *设置当前集群的某个节点规格配置为默认或取消默认
+     * @param req SetNodeResourceConfigDefaultRequest
+     * @return SetNodeResourceConfigDefaultResponse
+     * @throws TencentCloudSDKException
+     */
+    public SetNodeResourceConfigDefaultResponse SetNodeResourceConfigDefault(SetNodeResourceConfigDefaultRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SetNodeResourceConfigDefault", SetNodeResourceConfigDefaultResponse.class);
     }
 
     /**

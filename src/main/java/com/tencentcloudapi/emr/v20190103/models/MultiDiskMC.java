@@ -33,6 +33,18 @@ public class MultiDiskMC extends AbstractModel {
 
     /**
     * 磁盘类型
+1  :本地盘
+2  :云硬盘
+3  : 本地SSD
+4  : 云SSD
+5  : 高效云盘
+6  : 增强型SSD云硬盘
+11 : 吞吐型云硬盘
+12 : 极速型SSD云硬盘
+13 : 通用型SSD云硬盘
+14 : 大数据型云硬盘
+15 : 高IO型云硬盘
+16 : 远端SSD盘
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Type")
@@ -48,7 +60,7 @@ public class MultiDiskMC extends AbstractModel {
     private String Size;
 
     /**
-    * 云盘大小
+    * 云盘大小,单位b
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Volume")
@@ -77,8 +89,32 @@ public class MultiDiskMC extends AbstractModel {
 
     /**
      * Get 磁盘类型
+1  :本地盘
+2  :云硬盘
+3  : 本地SSD
+4  : 云SSD
+5  : 高效云盘
+6  : 增强型SSD云硬盘
+11 : 吞吐型云硬盘
+12 : 极速型SSD云硬盘
+13 : 通用型SSD云硬盘
+14 : 大数据型云硬盘
+15 : 高IO型云硬盘
+16 : 远端SSD盘
 注意：此字段可能返回 null，表示取不到有效值。 
      * @return Type 磁盘类型
+1  :本地盘
+2  :云硬盘
+3  : 本地SSD
+4  : 云SSD
+5  : 高效云盘
+6  : 增强型SSD云硬盘
+11 : 吞吐型云硬盘
+12 : 极速型SSD云硬盘
+13 : 通用型SSD云硬盘
+14 : 大数据型云硬盘
+15 : 高IO型云硬盘
+16 : 远端SSD盘
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getType() {
@@ -87,8 +123,32 @@ public class MultiDiskMC extends AbstractModel {
 
     /**
      * Set 磁盘类型
+1  :本地盘
+2  :云硬盘
+3  : 本地SSD
+4  : 云SSD
+5  : 高效云盘
+6  : 增强型SSD云硬盘
+11 : 吞吐型云硬盘
+12 : 极速型SSD云硬盘
+13 : 通用型SSD云硬盘
+14 : 大数据型云硬盘
+15 : 高IO型云硬盘
+16 : 远端SSD盘
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Type 磁盘类型
+1  :本地盘
+2  :云硬盘
+3  : 本地SSD
+4  : 云SSD
+5  : 高效云盘
+6  : 增强型SSD云硬盘
+11 : 吞吐型云硬盘
+12 : 极速型SSD云硬盘
+13 : 通用型SSD云硬盘
+14 : 大数据型云硬盘
+15 : 高IO型云硬盘
+16 : 远端SSD盘
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setType(Long Type) {
@@ -116,9 +176,9 @@ public class MultiDiskMC extends AbstractModel {
     }
 
     /**
-     * Get 云盘大小
+     * Get 云盘大小,单位b
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Volume 云盘大小
+     * @return Volume 云盘大小,单位b
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getVolume() {
@@ -126,9 +186,9 @@ public class MultiDiskMC extends AbstractModel {
     }
 
     /**
-     * Set 云盘大小
+     * Set 云盘大小,单位b
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Volume 云盘大小
+     * @param Volume 云盘大小,单位b
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setVolume(Long Volume) {

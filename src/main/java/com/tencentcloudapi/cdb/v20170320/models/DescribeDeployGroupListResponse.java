@@ -32,7 +32,6 @@ public class DescribeDeployGroupListResponse extends AbstractModel {
 
     /**
     * 返回列表。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Items")
     @Expose
@@ -62,10 +61,8 @@ public class DescribeDeployGroupListResponse extends AbstractModel {
     }
 
     /**
-     * Get 返回列表。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 返回列表。 
      * @return Items 返回列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public DeployGroupInfo [] getItems() {
         return this.Items;
@@ -73,9 +70,7 @@ public class DescribeDeployGroupListResponse extends AbstractModel {
 
     /**
      * Set 返回列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Items 返回列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setItems(DeployGroupInfo [] Items) {
         this.Items = Items;

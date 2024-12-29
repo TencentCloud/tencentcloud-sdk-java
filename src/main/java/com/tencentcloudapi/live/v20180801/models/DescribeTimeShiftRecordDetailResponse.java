@@ -25,7 +25,6 @@ public class DescribeTimeShiftRecordDetailResponse extends AbstractModel {
 
     /**
     * 时移录制会话数组。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RecordList")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeTimeShiftRecordDetailResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 时移录制会话数组。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 时移录制会话数组。 
      * @return RecordList 时移录制会话数组。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public TimeShiftRecord [] getRecordList() {
         return this.RecordList;
@@ -50,9 +47,7 @@ public class DescribeTimeShiftRecordDetailResponse extends AbstractModel {
 
     /**
      * Set 时移录制会话数组。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RecordList 时移录制会话数组。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRecordList(TimeShiftRecord [] RecordList) {
         this.RecordList = RecordList;

@@ -80,6 +80,13 @@ public class AccountCreateInfo extends AbstractModel {
     private Boolean IsCam;
 
     /**
+    * 加密密钥版本号，0表示不使用加密
+    */
+    @SerializedName("EncryptedVersion")
+    @Expose
+    private Long EncryptedVersion;
+
+    /**
      * Get 实例用户名 
      * @return UserName 实例用户名
      */
@@ -207,6 +214,22 @@ public class AccountCreateInfo extends AbstractModel {
         this.IsCam = IsCam;
     }
 
+    /**
+     * Get 加密密钥版本号，0表示不使用加密 
+     * @return EncryptedVersion 加密密钥版本号，0表示不使用加密
+     */
+    public Long getEncryptedVersion() {
+        return this.EncryptedVersion;
+    }
+
+    /**
+     * Set 加密密钥版本号，0表示不使用加密
+     * @param EncryptedVersion 加密密钥版本号，0表示不使用加密
+     */
+    public void setEncryptedVersion(Long EncryptedVersion) {
+        this.EncryptedVersion = EncryptedVersion;
+    }
+
     public AccountCreateInfo() {
     }
 
@@ -242,6 +265,9 @@ public class AccountCreateInfo extends AbstractModel {
         if (source.IsCam != null) {
             this.IsCam = new Boolean(source.IsCam);
         }
+        if (source.EncryptedVersion != null) {
+            this.EncryptedVersion = new Long(source.EncryptedVersion);
+        }
     }
 
 
@@ -257,6 +283,7 @@ public class AccountCreateInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Authentication", this.Authentication);
         this.setParamSimple(map, prefix + "AccountType", this.AccountType);
         this.setParamSimple(map, prefix + "IsCam", this.IsCam);
+        this.setParamSimple(map, prefix + "EncryptedVersion", this.EncryptedVersion);
 
     }
 }
