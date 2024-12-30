@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class WhoisContactAddress extends AbstractModel {
 
     /**
-    * 无
+    * 城市
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("City")
@@ -32,7 +32,7 @@ public class WhoisContactAddress extends AbstractModel {
     private String City;
 
     /**
-    * 无
+    * 国家
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Country")
@@ -40,7 +40,7 @@ public class WhoisContactAddress extends AbstractModel {
     private String Country;
 
     /**
-    * 无
+    * 电子邮箱
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Email")
@@ -48,7 +48,7 @@ public class WhoisContactAddress extends AbstractModel {
     private String Email;
 
     /**
-    * 无
+    * 传真
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Fax")
@@ -56,7 +56,7 @@ public class WhoisContactAddress extends AbstractModel {
     private String Fax;
 
     /**
-    * 无
+    * 传真分机号
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("FaxExt")
@@ -72,7 +72,7 @@ public class WhoisContactAddress extends AbstractModel {
     private String Handle;
 
     /**
-    * 无
+    * 名称
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
@@ -80,7 +80,7 @@ public class WhoisContactAddress extends AbstractModel {
     private String Name;
 
     /**
-    * 无
+    * 组织机构
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Organization")
@@ -88,7 +88,7 @@ public class WhoisContactAddress extends AbstractModel {
     private String Organization;
 
     /**
-    * 无
+    * 电话
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Phone")
@@ -96,7 +96,7 @@ public class WhoisContactAddress extends AbstractModel {
     private String Phone;
 
     /**
-    * 无
+    * 邮编
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PostalCode")
@@ -104,7 +104,7 @@ public class WhoisContactAddress extends AbstractModel {
     private String PostalCode;
 
     /**
-    * 无
+    * 省份/州
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("State")
@@ -112,7 +112,7 @@ public class WhoisContactAddress extends AbstractModel {
     private String State;
 
     /**
-    * 无
+    * 街道地址
 注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Street")
@@ -120,9 +120,9 @@ public class WhoisContactAddress extends AbstractModel {
     private String Street;
 
     /**
-     * Get 无
+     * Get 城市
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return City 无
+     * @return City 城市
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCity() {
@@ -130,9 +130,9 @@ public class WhoisContactAddress extends AbstractModel {
     }
 
     /**
-     * Set 无
+     * Set 城市
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param City 无
+     * @param City 城市
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCity(String City) {
@@ -140,9 +140,9 @@ public class WhoisContactAddress extends AbstractModel {
     }
 
     /**
-     * Get 无
+     * Get 国家
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Country 无
+     * @return Country 国家
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCountry() {
@@ -150,9 +150,9 @@ public class WhoisContactAddress extends AbstractModel {
     }
 
     /**
-     * Set 无
+     * Set 国家
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Country 无
+     * @param Country 国家
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCountry(String Country) {
@@ -160,9 +160,9 @@ public class WhoisContactAddress extends AbstractModel {
     }
 
     /**
-     * Get 无
+     * Get 电子邮箱
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Email 无
+     * @return Email 电子邮箱
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getEmail() {
@@ -170,9 +170,9 @@ public class WhoisContactAddress extends AbstractModel {
     }
 
     /**
-     * Set 无
+     * Set 电子邮箱
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Email 无
+     * @param Email 电子邮箱
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEmail(String Email) {
@@ -180,9 +180,9 @@ public class WhoisContactAddress extends AbstractModel {
     }
 
     /**
-     * Get 无
+     * Get 传真
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Fax 无
+     * @return Fax 传真
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFax() {
@@ -190,9 +190,9 @@ public class WhoisContactAddress extends AbstractModel {
     }
 
     /**
-     * Set 无
+     * Set 传真
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Fax 无
+     * @param Fax 传真
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFax(String Fax) {
@@ -200,9 +200,9 @@ public class WhoisContactAddress extends AbstractModel {
     }
 
     /**
-     * Get 无
+     * Get 传真分机号
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return FaxExt 无
+     * @return FaxExt 传真分机号
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getFaxExt() {
@@ -210,9 +210,9 @@ public class WhoisContactAddress extends AbstractModel {
     }
 
     /**
-     * Set 无
+     * Set 传真分机号
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param FaxExt 无
+     * @param FaxExt 传真分机号
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFaxExt(String FaxExt) {
@@ -240,9 +240,9 @@ public class WhoisContactAddress extends AbstractModel {
     }
 
     /**
-     * Get 无
+     * Get 名称
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Name 无
+     * @return Name 名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
@@ -250,9 +250,9 @@ public class WhoisContactAddress extends AbstractModel {
     }
 
     /**
-     * Set 无
+     * Set 名称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Name 无
+     * @param Name 名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
@@ -260,9 +260,9 @@ public class WhoisContactAddress extends AbstractModel {
     }
 
     /**
-     * Get 无
+     * Get 组织机构
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Organization 无
+     * @return Organization 组织机构
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOrganization() {
@@ -270,9 +270,9 @@ public class WhoisContactAddress extends AbstractModel {
     }
 
     /**
-     * Set 无
+     * Set 组织机构
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Organization 无
+     * @param Organization 组织机构
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOrganization(String Organization) {
@@ -280,9 +280,9 @@ public class WhoisContactAddress extends AbstractModel {
     }
 
     /**
-     * Get 无
+     * Get 电话
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Phone 无
+     * @return Phone 电话
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPhone() {
@@ -290,9 +290,9 @@ public class WhoisContactAddress extends AbstractModel {
     }
 
     /**
-     * Set 无
+     * Set 电话
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Phone 无
+     * @param Phone 电话
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPhone(String Phone) {
@@ -300,9 +300,9 @@ public class WhoisContactAddress extends AbstractModel {
     }
 
     /**
-     * Get 无
+     * Get 邮编
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PostalCode 无
+     * @return PostalCode 邮编
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPostalCode() {
@@ -310,9 +310,9 @@ public class WhoisContactAddress extends AbstractModel {
     }
 
     /**
-     * Set 无
+     * Set 邮编
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param PostalCode 无
+     * @param PostalCode 邮编
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPostalCode(String PostalCode) {
@@ -320,9 +320,9 @@ public class WhoisContactAddress extends AbstractModel {
     }
 
     /**
-     * Get 无
+     * Get 省份/州
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return State 无
+     * @return State 省份/州
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getState() {
@@ -330,9 +330,9 @@ public class WhoisContactAddress extends AbstractModel {
     }
 
     /**
-     * Set 无
+     * Set 省份/州
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param State 无
+     * @param State 省份/州
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setState(String State) {
@@ -340,9 +340,9 @@ public class WhoisContactAddress extends AbstractModel {
     }
 
     /**
-     * Get 无
+     * Get 街道地址
 注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Street 无
+     * @return Street 街道地址
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getStreet() {
@@ -350,9 +350,9 @@ public class WhoisContactAddress extends AbstractModel {
     }
 
     /**
-     * Set 无
+     * Set 街道地址
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param Street 无
+     * @param Street 街道地址
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStreet(String Street) {

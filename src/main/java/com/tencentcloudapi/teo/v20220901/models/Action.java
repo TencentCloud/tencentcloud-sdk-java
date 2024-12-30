@@ -41,6 +41,7 @@ public class Action extends AbstractModel {
 <li> Host Header 重写（HostHeader）；</li>
 <li> 强制 HTTPS（ForceRedirect）；</li>
 <li> 回源 HTTPS（OriginPullProtocol）；</li>
+<li> 单连接下载限速（ResponseSpeedLimit）；</li>
 <li> 缓存预刷新（CachePrefresh）；</li>
 <li> 智能压缩（Compression）；</li>
 <li> Hsts；</li>
@@ -96,6 +97,7 @@ public class Action extends AbstractModel {
 <li> Host Header 重写（HostHeader）；</li>
 <li> 强制 HTTPS（ForceRedirect）；</li>
 <li> 回源 HTTPS（OriginPullProtocol）；</li>
+<li> 单连接下载限速（ResponseSpeedLimit）；</li>
 <li> 缓存预刷新（CachePrefresh）；</li>
 <li> 智能压缩（Compression）；</li>
 <li> Hsts；</li>
@@ -125,6 +127,7 @@ public class Action extends AbstractModel {
 <li> Host Header 重写（HostHeader）；</li>
 <li> 强制 HTTPS（ForceRedirect）；</li>
 <li> 回源 HTTPS（OriginPullProtocol）；</li>
+<li> 单连接下载限速（ResponseSpeedLimit）；</li>
 <li> 缓存预刷新（CachePrefresh）；</li>
 <li> 智能压缩（Compression）；</li>
 <li> Hsts；</li>
@@ -160,6 +163,7 @@ public class Action extends AbstractModel {
 <li> Host Header 重写（HostHeader）；</li>
 <li> 强制 HTTPS（ForceRedirect）；</li>
 <li> 回源 HTTPS（OriginPullProtocol）；</li>
+<li> 单连接下载限速（ResponseSpeedLimit）；</li>
 <li> 缓存预刷新（CachePrefresh）；</li>
 <li> 智能压缩（Compression）；</li>
 <li> Hsts；</li>
@@ -189,6 +193,7 @@ public class Action extends AbstractModel {
 <li> Host Header 重写（HostHeader）；</li>
 <li> 强制 HTTPS（ForceRedirect）；</li>
 <li> 回源 HTTPS（OriginPullProtocol）；</li>
+<li> 单连接下载限速（ResponseSpeedLimit）；</li>
 <li> 缓存预刷新（CachePrefresh）；</li>
 <li> 智能压缩（Compression）；</li>
 <li> Hsts；</li>

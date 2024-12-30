@@ -46,7 +46,6 @@ public class CcnRegionBandwidthLimit extends AbstractModel {
 
     /**
     * 目的地域，例如：ap-shanghai
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DstRegion")
     @Expose
@@ -108,10 +107,8 @@ public class CcnRegionBandwidthLimit extends AbstractModel {
     }
 
     /**
-     * Get 目的地域，例如：ap-shanghai
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 目的地域，例如：ap-shanghai 
      * @return DstRegion 目的地域，例如：ap-shanghai
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDstRegion() {
         return this.DstRegion;
@@ -119,9 +116,7 @@ public class CcnRegionBandwidthLimit extends AbstractModel {
 
     /**
      * Set 目的地域，例如：ap-shanghai
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DstRegion 目的地域，例如：ap-shanghai
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDstRegion(String DstRegion) {
         this.DstRegion = DstRegion;

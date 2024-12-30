@@ -87,6 +87,13 @@ public class DescribeAclsRequest extends AbstractModel {
     private String DepartmentId;
 
     /**
+    * 是否根据AuthorizedDeviceIdSet,对资产账号进行精确匹配，默认false, 设置true时，确保AuthorizedDeviceIdSet只有一个元素
+    */
+    @SerializedName("ExactAccount")
+    @Expose
+    private Boolean ExactAccount;
+
+    /**
     * 过滤数组
     */
     @SerializedName("Filters")
@@ -238,6 +245,22 @@ public class DescribeAclsRequest extends AbstractModel {
     }
 
     /**
+     * Get 是否根据AuthorizedDeviceIdSet,对资产账号进行精确匹配，默认false, 设置true时，确保AuthorizedDeviceIdSet只有一个元素 
+     * @return ExactAccount 是否根据AuthorizedDeviceIdSet,对资产账号进行精确匹配，默认false, 设置true时，确保AuthorizedDeviceIdSet只有一个元素
+     */
+    public Boolean getExactAccount() {
+        return this.ExactAccount;
+    }
+
+    /**
+     * Set 是否根据AuthorizedDeviceIdSet,对资产账号进行精确匹配，默认false, 设置true时，确保AuthorizedDeviceIdSet只有一个元素
+     * @param ExactAccount 是否根据AuthorizedDeviceIdSet,对资产账号进行精确匹配，默认false, 设置true时，确保AuthorizedDeviceIdSet只有一个元素
+     */
+    public void setExactAccount(Boolean ExactAccount) {
+        this.ExactAccount = ExactAccount;
+    }
+
+    /**
      * Get 过滤数组 
      * @return Filters 过滤数组
      */
@@ -297,6 +320,9 @@ public class DescribeAclsRequest extends AbstractModel {
         if (source.DepartmentId != null) {
             this.DepartmentId = new String(source.DepartmentId);
         }
+        if (source.ExactAccount != null) {
+            this.ExactAccount = new Boolean(source.ExactAccount);
+        }
         if (source.Filters != null) {
             this.Filters = new Filter[source.Filters.length];
             for (int i = 0; i < source.Filters.length; i++) {
@@ -319,6 +345,7 @@ public class DescribeAclsRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "AuthorizedDeviceIdSet.", this.AuthorizedDeviceIdSet);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "DepartmentId", this.DepartmentId);
+        this.setParamSimple(map, prefix + "ExactAccount", this.ExactAccount);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
 
     }

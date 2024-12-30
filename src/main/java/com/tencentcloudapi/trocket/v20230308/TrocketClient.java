@@ -215,6 +215,17 @@ public class TrocketClient extends AbstractClient{
     }
 
     /**
+     *查询消费者客户端详情
+     * @param req DescribeConsumerClientRequest
+     * @return DescribeConsumerClientResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeConsumerClientResponse DescribeConsumerClient(DescribeConsumerClientRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeConsumerClient", DescribeConsumerClientResponse.class);
+    }
+
+    /**
      *查询消费组详情
      * @param req DescribeConsumerGroupRequest
      * @return DescribeConsumerGroupResponse

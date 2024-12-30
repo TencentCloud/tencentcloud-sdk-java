@@ -116,7 +116,6 @@ public class CcnRoute extends AbstractModel {
 
     /**
     * 实例类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AliasType")
     @Expose
@@ -124,7 +123,6 @@ public class CcnRoute extends AbstractModel {
 
     /**
     * 实例id
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AliasInstanceId")
     @Expose
@@ -339,10 +337,8 @@ public class CcnRoute extends AbstractModel {
     }
 
     /**
-     * Get 实例类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例类型 
      * @return AliasType 实例类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAliasType() {
         return this.AliasType;
@@ -350,19 +346,15 @@ public class CcnRoute extends AbstractModel {
 
     /**
      * Set 实例类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AliasType 实例类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAliasType(String AliasType) {
         this.AliasType = AliasType;
     }
 
     /**
-     * Get 实例id
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例id 
      * @return AliasInstanceId 实例id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAliasInstanceId() {
         return this.AliasInstanceId;
@@ -370,9 +362,7 @@ public class CcnRoute extends AbstractModel {
 
     /**
      * Set 实例id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AliasInstanceId 实例id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAliasInstanceId(String AliasInstanceId) {
         this.AliasInstanceId = AliasInstanceId;

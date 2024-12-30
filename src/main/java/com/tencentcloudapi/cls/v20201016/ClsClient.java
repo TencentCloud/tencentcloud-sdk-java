@@ -332,6 +332,17 @@ public class ClsClient extends AbstractClient{
     }
 
     /**
+     *该接口用于创建告警渠道回调配置。
+     * @param req CreateWebCallbackRequest
+     * @return CreateWebCallbackResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateWebCallbackResponse CreateWebCallback(CreateWebCallbackRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateWebCallback", CreateWebCallbackResponse.class);
+    }
+
+    /**
      *本接口用于删除告警策略。
      * @param req DeleteAlarmRequest
      * @return DeleteAlarmResponse
@@ -560,6 +571,17 @@ public class ClsClient extends AbstractClient{
     public DeleteTopicResponse DeleteTopic(DeleteTopicRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteTopic", DeleteTopicResponse.class);
+    }
+
+    /**
+     *该接口用于删除告警渠道回调配置。
+     * @param req DeleteWebCallbackRequest
+     * @return DeleteWebCallbackResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteWebCallbackResponse DeleteWebCallback(DeleteWebCallbackRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteWebCallback", DeleteWebCallbackResponse.class);
     }
 
     /**
@@ -894,6 +916,17 @@ API返回数据包最大49MB，建议启用 gzip 压缩（HTTP Request Header Ac
     }
 
     /**
+     *获取告警渠道回调配置列表。
+     * @param req DescribeWebCallbacksRequest
+     * @return DescribeWebCallbacksResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeWebCallbacksResponse DescribeWebCallbacks(DescribeWebCallbacksRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeWebCallbacks", DescribeWebCallbacksResponse.class);
+    }
+
+    /**
      *本接口用于获取告警策略执行详情
      * @param req GetAlarmLogRequest
      * @return GetAlarmLogResponse
@@ -1133,6 +1166,17 @@ API返回数据包最大49MB，建议启用 gzip 压缩（HTTP Request Header Ac
     public ModifyTopicResponse ModifyTopic(ModifyTopicRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyTopic", ModifyTopicResponse.class);
+    }
+
+    /**
+     *该接口用于修改告警渠道回调配置。
+     * @param req ModifyWebCallbackRequest
+     * @return ModifyWebCallbackResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyWebCallbackResponse ModifyWebCallback(ModifyWebCallbackRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyWebCallback", ModifyWebCallbackResponse.class);
     }
 
     /**

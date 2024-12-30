@@ -32,7 +32,6 @@ public class DescribeVpnGatewayRoutesResponse extends AbstractModel {
 
     /**
     * 路由条数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -62,10 +61,8 @@ public class DescribeVpnGatewayRoutesResponse extends AbstractModel {
     }
 
     /**
-     * Get 路由条数。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 路由条数。 
      * @return TotalCount 路由条数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -73,9 +70,7 @@ public class DescribeVpnGatewayRoutesResponse extends AbstractModel {
 
     /**
      * Set 路由条数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 路由条数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

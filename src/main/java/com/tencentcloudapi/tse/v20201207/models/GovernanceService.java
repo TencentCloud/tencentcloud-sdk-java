@@ -166,6 +166,13 @@ public class GovernanceService extends AbstractModel {
     private String Revision;
 
     /**
+    * 是否开启同步到全局注册中心
+    */
+    @SerializedName("SyncToGlobalRegistry")
+    @Expose
+    private Boolean SyncToGlobalRegistry;
+
+    /**
      * Get 服务名称。 
      * @return Name 服务名称。
      */
@@ -517,6 +524,22 @@ public class GovernanceService extends AbstractModel {
         this.Revision = Revision;
     }
 
+    /**
+     * Get 是否开启同步到全局注册中心 
+     * @return SyncToGlobalRegistry 是否开启同步到全局注册中心
+     */
+    public Boolean getSyncToGlobalRegistry() {
+        return this.SyncToGlobalRegistry;
+    }
+
+    /**
+     * Set 是否开启同步到全局注册中心
+     * @param SyncToGlobalRegistry 是否开启同步到全局注册中心
+     */
+    public void setSyncToGlobalRegistry(Boolean SyncToGlobalRegistry) {
+        this.SyncToGlobalRegistry = SyncToGlobalRegistry;
+    }
+
     public GovernanceService() {
     }
 
@@ -597,6 +620,9 @@ public class GovernanceService extends AbstractModel {
         if (source.Revision != null) {
             this.Revision = new String(source.Revision);
         }
+        if (source.SyncToGlobalRegistry != null) {
+            this.SyncToGlobalRegistry = new Boolean(source.SyncToGlobalRegistry);
+        }
     }
 
 
@@ -622,6 +648,7 @@ public class GovernanceService extends AbstractModel {
         this.setParamArraySimple(map, prefix + "RemoveGroupIds.", this.RemoveGroupIds);
         this.setParamArraySimple(map, prefix + "ExportTo.", this.ExportTo);
         this.setParamSimple(map, prefix + "Revision", this.Revision);
+        this.setParamSimple(map, prefix + "SyncToGlobalRegistry", this.SyncToGlobalRegistry);
 
     }
 }

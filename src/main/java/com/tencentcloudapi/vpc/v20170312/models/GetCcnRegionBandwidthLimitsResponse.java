@@ -25,7 +25,6 @@ public class GetCcnRegionBandwidthLimitsResponse extends AbstractModel {
 
     /**
     * 云联网（CCN）各地域出带宽详情。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CcnBandwidthSet")
     @Expose
@@ -33,7 +32,6 @@ public class GetCcnRegionBandwidthLimitsResponse extends AbstractModel {
 
     /**
     * 符合条件的对象数。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
@@ -47,10 +45,8 @@ public class GetCcnRegionBandwidthLimitsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 云联网（CCN）各地域出带宽详情。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 云联网（CCN）各地域出带宽详情。 
      * @return CcnBandwidthSet 云联网（CCN）各地域出带宽详情。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CcnBandwidthInfo [] getCcnBandwidthSet() {
         return this.CcnBandwidthSet;
@@ -58,19 +54,15 @@ public class GetCcnRegionBandwidthLimitsResponse extends AbstractModel {
 
     /**
      * Set 云联网（CCN）各地域出带宽详情。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CcnBandwidthSet 云联网（CCN）各地域出带宽详情。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCcnBandwidthSet(CcnBandwidthInfo [] CcnBandwidthSet) {
         this.CcnBandwidthSet = CcnBandwidthSet;
     }
 
     /**
-     * Get 符合条件的对象数。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 符合条件的对象数。 
      * @return TotalCount 符合条件的对象数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -78,9 +70,7 @@ public class GetCcnRegionBandwidthLimitsResponse extends AbstractModel {
 
     /**
      * Set 符合条件的对象数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 符合条件的对象数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

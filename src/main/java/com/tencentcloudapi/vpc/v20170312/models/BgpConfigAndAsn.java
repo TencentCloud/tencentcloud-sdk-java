@@ -25,7 +25,6 @@ public class BgpConfigAndAsn extends AbstractModel {
 
     /**
     * BGP通道CIDR
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TunnelCidr")
     @Expose
@@ -33,7 +32,6 @@ public class BgpConfigAndAsn extends AbstractModel {
 
     /**
     * 本端BGP IP
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LocalBgpIp")
     @Expose
@@ -41,7 +39,6 @@ public class BgpConfigAndAsn extends AbstractModel {
 
     /**
     * 对端BGP IP
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RemoteBgpIp")
     @Expose
@@ -49,7 +46,6 @@ public class BgpConfigAndAsn extends AbstractModel {
 
     /**
     * 本端BGP ASN号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LocalBgpAsn")
     @Expose
@@ -57,17 +53,14 @@ public class BgpConfigAndAsn extends AbstractModel {
 
     /**
     * 对端BGP ASN号
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RemoteBgpAsn")
     @Expose
     private String RemoteBgpAsn;
 
     /**
-     * Get BGP通道CIDR
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get BGP通道CIDR 
      * @return TunnelCidr BGP通道CIDR
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getTunnelCidr() {
         return this.TunnelCidr;
@@ -75,19 +68,15 @@ public class BgpConfigAndAsn extends AbstractModel {
 
     /**
      * Set BGP通道CIDR
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TunnelCidr BGP通道CIDR
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTunnelCidr(String TunnelCidr) {
         this.TunnelCidr = TunnelCidr;
     }
 
     /**
-     * Get 本端BGP IP
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 本端BGP IP 
      * @return LocalBgpIp 本端BGP IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLocalBgpIp() {
         return this.LocalBgpIp;
@@ -95,19 +84,15 @@ public class BgpConfigAndAsn extends AbstractModel {
 
     /**
      * Set 本端BGP IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LocalBgpIp 本端BGP IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLocalBgpIp(String LocalBgpIp) {
         this.LocalBgpIp = LocalBgpIp;
     }
 
     /**
-     * Get 对端BGP IP
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 对端BGP IP 
      * @return RemoteBgpIp 对端BGP IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRemoteBgpIp() {
         return this.RemoteBgpIp;
@@ -115,19 +100,15 @@ public class BgpConfigAndAsn extends AbstractModel {
 
     /**
      * Set 对端BGP IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RemoteBgpIp 对端BGP IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemoteBgpIp(String RemoteBgpIp) {
         this.RemoteBgpIp = RemoteBgpIp;
     }
 
     /**
-     * Get 本端BGP ASN号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 本端BGP ASN号 
      * @return LocalBgpAsn 本端BGP ASN号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLocalBgpAsn() {
         return this.LocalBgpAsn;
@@ -135,19 +116,15 @@ public class BgpConfigAndAsn extends AbstractModel {
 
     /**
      * Set 本端BGP ASN号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LocalBgpAsn 本端BGP ASN号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLocalBgpAsn(String LocalBgpAsn) {
         this.LocalBgpAsn = LocalBgpAsn;
     }
 
     /**
-     * Get 对端BGP ASN号
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 对端BGP ASN号 
      * @return RemoteBgpAsn 对端BGP ASN号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRemoteBgpAsn() {
         return this.RemoteBgpAsn;
@@ -155,9 +132,7 @@ public class BgpConfigAndAsn extends AbstractModel {
 
     /**
      * Set 对端BGP ASN号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RemoteBgpAsn 对端BGP ASN号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRemoteBgpAsn(String RemoteBgpAsn) {
         this.RemoteBgpAsn = RemoteBgpAsn;

@@ -66,7 +66,7 @@ public class AddDeviceRequest extends AbstractModel {
     * license付费方式： 
 0，月度授权 
 1，永久授权 
-若不传则默认为月度授权
+若不传则默认为月度授权，永久授权设备需要调用OrderPerLicense接口支付授权费，否则设备无法使用
     */
     @SerializedName("LicensePayMode")
     @Expose
@@ -193,11 +193,11 @@ public class AddDeviceRequest extends AbstractModel {
      * Get license付费方式： 
 0，月度授权 
 1，永久授权 
-若不传则默认为月度授权 
+若不传则默认为月度授权，永久授权设备需要调用OrderPerLicense接口支付授权费，否则设备无法使用 
      * @return LicensePayMode license付费方式： 
 0，月度授权 
 1，永久授权 
-若不传则默认为月度授权
+若不传则默认为月度授权，永久授权设备需要调用OrderPerLicense接口支付授权费，否则设备无法使用
      */
     public Long getLicensePayMode() {
         return this.LicensePayMode;
@@ -207,11 +207,11 @@ public class AddDeviceRequest extends AbstractModel {
      * Set license付费方式： 
 0，月度授权 
 1，永久授权 
-若不传则默认为月度授权
+若不传则默认为月度授权，永久授权设备需要调用OrderPerLicense接口支付授权费，否则设备无法使用
      * @param LicensePayMode license付费方式： 
 0，月度授权 
 1，永久授权 
-若不传则默认为月度授权
+若不传则默认为月度授权，永久授权设备需要调用OrderPerLicense接口支付授权费，否则设备无法使用
      */
     public void setLicensePayMode(Long LicensePayMode) {
         this.LicensePayMode = LicensePayMode;

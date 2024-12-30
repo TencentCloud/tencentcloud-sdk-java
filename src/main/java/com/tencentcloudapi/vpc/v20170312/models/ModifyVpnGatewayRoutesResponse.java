@@ -25,7 +25,6 @@ public class ModifyVpnGatewayRoutesResponse extends AbstractModel {
 
     /**
     * VPN路由信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Routes")
     @Expose
@@ -39,10 +38,8 @@ public class ModifyVpnGatewayRoutesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get VPN路由信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get VPN路由信息 
      * @return Routes VPN路由信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public VpnGatewayRoute [] getRoutes() {
         return this.Routes;
@@ -50,9 +47,7 @@ public class ModifyVpnGatewayRoutesResponse extends AbstractModel {
 
     /**
      * Set VPN路由信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Routes VPN路由信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRoutes(VpnGatewayRoute [] Routes) {
         this.Routes = Routes;

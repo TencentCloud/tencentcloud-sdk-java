@@ -24,56 +24,46 @@ import java.util.HashMap;
 public class APMKV extends AbstractModel {
 
     /**
-    * Key值定义
-注意：此字段可能返回 null，表示取不到有效值。
+    * Key 值定义
     */
     @SerializedName("Key")
     @Expose
     private String Key;
 
     /**
-    * Value值定义
-注意：此字段可能返回 null，表示取不到有效值。
+    * Value 值定义
     */
     @SerializedName("Value")
     @Expose
     private Float Value;
 
     /**
-     * Get Key值定义
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Key Key值定义
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get Key 值定义 
+     * @return Key Key 值定义
      */
     public String getKey() {
         return this.Key;
     }
 
     /**
-     * Set Key值定义
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Key Key值定义
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set Key 值定义
+     * @param Key Key 值定义
      */
     public void setKey(String Key) {
         this.Key = Key;
     }
 
     /**
-     * Get Value值定义
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Value Value值定义
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get Value 值定义 
+     * @return Value Value 值定义
      */
     public Float getValue() {
         return this.Value;
     }
 
     /**
-     * Set Value值定义
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Value Value值定义
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set Value 值定义
+     * @param Value Value 值定义
      */
     public void setValue(Float Value) {
         this.Value = Value;

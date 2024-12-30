@@ -110,7 +110,7 @@ public class CreateConfigExtraRequest extends AbstractModel {
     private ContainerStdoutInfo ContainerStdout;
 
     /**
-    * 日志格式化方式，用于容器采集场景。
+    * 日志格式化方式，用于容器采集场景。 - 已废弃
 - stdout-docker-json：用于docker容器采集场景
 - stdout-containerd：用于containerd容器采集场景
     */
@@ -387,10 +387,10 @@ public class CreateConfigExtraRequest extends AbstractModel {
     }
 
     /**
-     * Get 日志格式化方式，用于容器采集场景。
+     * Get 日志格式化方式，用于容器采集场景。 - 已废弃
 - stdout-docker-json：用于docker容器采集场景
 - stdout-containerd：用于containerd容器采集场景 
-     * @return LogFormat 日志格式化方式，用于容器采集场景。
+     * @return LogFormat 日志格式化方式，用于容器采集场景。 - 已废弃
 - stdout-docker-json：用于docker容器采集场景
 - stdout-containerd：用于containerd容器采集场景
      */
@@ -399,10 +399,10 @@ public class CreateConfigExtraRequest extends AbstractModel {
     }
 
     /**
-     * Set 日志格式化方式，用于容器采集场景。
+     * Set 日志格式化方式，用于容器采集场景。 - 已废弃
 - stdout-docker-json：用于docker容器采集场景
 - stdout-containerd：用于containerd容器采集场景
-     * @param LogFormat 日志格式化方式，用于容器采集场景。
+     * @param LogFormat 日志格式化方式，用于容器采集场景。 - 已废弃
 - stdout-docker-json：用于docker容器采集场景
 - stdout-containerd：用于containerd容器采集场景
      */

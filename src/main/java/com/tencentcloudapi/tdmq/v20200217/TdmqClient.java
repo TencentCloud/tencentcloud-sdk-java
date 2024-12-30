@@ -391,6 +391,17 @@ public class TdmqClient extends AbstractClient{
     }
 
     /**
+     *删除RabbitMQ的权限
+     * @param req DeleteRabbitMQPermissionRequest
+     * @return DeleteRabbitMQPermissionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteRabbitMQPermissionResponse DeleteRabbitMQPermission(DeleteRabbitMQPermissionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteRabbitMQPermission", DeleteRabbitMQPermissionResponse.class);
+    }
+
+    /**
      *删除RabbitMQ的用户
      * @param req DeleteRabbitMQUserRequest
      * @return DeleteRabbitMQUserResponse
@@ -819,6 +830,17 @@ public class TdmqClient extends AbstractClient{
     public DescribeRabbitMQNodeListResponse DescribeRabbitMQNodeList(DescribeRabbitMQNodeListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeRabbitMQNodeList", DescribeRabbitMQNodeListResponse.class);
+    }
+
+    /**
+     *查询RabbitMQ权限列表
+     * @param req DescribeRabbitMQPermissionRequest
+     * @return DescribeRabbitMQPermissionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRabbitMQPermissionResponse DescribeRabbitMQPermission(DescribeRabbitMQPermissionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRabbitMQPermission", DescribeRabbitMQPermissionResponse.class);
     }
 
     /**
@@ -1351,6 +1373,17 @@ RabbitMQ专享版查询虚拟主机列表
     public ModifyPublicNetworkSecurityPolicyResponse ModifyPublicNetworkSecurityPolicy(ModifyPublicNetworkSecurityPolicyRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyPublicNetworkSecurityPolicy", ModifyPublicNetworkSecurityPolicyResponse.class);
+    }
+
+    /**
+     *修改RabbitMQ的权限
+     * @param req ModifyRabbitMQPermissionRequest
+     * @return ModifyRabbitMQPermissionResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyRabbitMQPermissionResponse ModifyRabbitMQPermission(ModifyRabbitMQPermissionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyRabbitMQPermission", ModifyRabbitMQPermissionResponse.class);
     }
 
     /**

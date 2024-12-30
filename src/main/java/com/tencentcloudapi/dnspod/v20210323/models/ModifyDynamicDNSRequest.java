@@ -45,13 +45,6 @@ public class ModifyDynamicDNSRequest extends AbstractModel {
     private String RecordLine;
 
     /**
-    * 记录值，如 IP : 200.200.200.200， CNAME : cname.dnspod.com.， MX : mail.dnspod.com.。
-    */
-    @SerializedName("Value")
-    @Expose
-    private String Value;
-
-    /**
     * 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId
     */
     @SerializedName("DomainId")
@@ -71,6 +64,13 @@ public class ModifyDynamicDNSRequest extends AbstractModel {
     @SerializedName("RecordLineId")
     @Expose
     private String RecordLineId;
+
+    /**
+    * IP 地址，支持 IPv4、IPv6，例如 119.29.29.29 或者 2402:4e00::
+    */
+    @SerializedName("Value")
+    @Expose
+    private String Value;
 
     /**
     * TTL值，如果不传，默认为域名的TTL值。
@@ -128,22 +128,6 @@ public class ModifyDynamicDNSRequest extends AbstractModel {
     }
 
     /**
-     * Get 记录值，如 IP : 200.200.200.200， CNAME : cname.dnspod.com.， MX : mail.dnspod.com.。 
-     * @return Value 记录值，如 IP : 200.200.200.200， CNAME : cname.dnspod.com.， MX : mail.dnspod.com.。
-     */
-    public String getValue() {
-        return this.Value;
-    }
-
-    /**
-     * Set 记录值，如 IP : 200.200.200.200， CNAME : cname.dnspod.com.， MX : mail.dnspod.com.。
-     * @param Value 记录值，如 IP : 200.200.200.200， CNAME : cname.dnspod.com.， MX : mail.dnspod.com.。
-     */
-    public void setValue(String Value) {
-        this.Value = Value;
-    }
-
-    /**
      * Get 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId 
      * @return DomainId 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId
      */
@@ -192,6 +176,22 @@ public class ModifyDynamicDNSRequest extends AbstractModel {
     }
 
     /**
+     * Get IP 地址，支持 IPv4、IPv6，例如 119.29.29.29 或者 2402:4e00:: 
+     * @return Value IP 地址，支持 IPv4、IPv6，例如 119.29.29.29 或者 2402:4e00::
+     */
+    public String getValue() {
+        return this.Value;
+    }
+
+    /**
+     * Set IP 地址，支持 IPv4、IPv6，例如 119.29.29.29 或者 2402:4e00::
+     * @param Value IP 地址，支持 IPv4、IPv6，例如 119.29.29.29 或者 2402:4e00::
+     */
+    public void setValue(String Value) {
+        this.Value = Value;
+    }
+
+    /**
      * Get TTL值，如果不传，默认为域名的TTL值。 
      * @return Ttl TTL值，如果不传，默认为域名的TTL值。
      */
@@ -224,9 +224,6 @@ public class ModifyDynamicDNSRequest extends AbstractModel {
         if (source.RecordLine != null) {
             this.RecordLine = new String(source.RecordLine);
         }
-        if (source.Value != null) {
-            this.Value = new String(source.Value);
-        }
         if (source.DomainId != null) {
             this.DomainId = new Long(source.DomainId);
         }
@@ -235,6 +232,9 @@ public class ModifyDynamicDNSRequest extends AbstractModel {
         }
         if (source.RecordLineId != null) {
             this.RecordLineId = new String(source.RecordLineId);
+        }
+        if (source.Value != null) {
+            this.Value = new String(source.Value);
         }
         if (source.Ttl != null) {
             this.Ttl = new Long(source.Ttl);
@@ -249,10 +249,10 @@ public class ModifyDynamicDNSRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Domain", this.Domain);
         this.setParamSimple(map, prefix + "RecordId", this.RecordId);
         this.setParamSimple(map, prefix + "RecordLine", this.RecordLine);
-        this.setParamSimple(map, prefix + "Value", this.Value);
         this.setParamSimple(map, prefix + "DomainId", this.DomainId);
         this.setParamSimple(map, prefix + "SubDomain", this.SubDomain);
         this.setParamSimple(map, prefix + "RecordLineId", this.RecordLineId);
+        this.setParamSimple(map, prefix + "Value", this.Value);
         this.setParamSimple(map, prefix + "Ttl", this.Ttl);
 
     }

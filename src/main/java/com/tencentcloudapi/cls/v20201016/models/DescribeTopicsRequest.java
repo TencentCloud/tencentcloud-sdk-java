@@ -64,8 +64,8 @@ public class DescribeTopicsRequest extends AbstractModel {
 
     /**
     * 主题类型
-<ul><li>0:日志主题，默认值</li>
-<li>1:指标主题</li></ul>
+- 0:日志主题，默认值
+- 1:指标主题
     */
     @SerializedName("BizType")
     @Expose
@@ -181,11 +181,11 @@ public class DescribeTopicsRequest extends AbstractModel {
 
     /**
      * Get 主题类型
-<ul><li>0:日志主题，默认值</li>
-<li>1:指标主题</li></ul> 
+- 0:日志主题，默认值
+- 1:指标主题 
      * @return BizType 主题类型
-<ul><li>0:日志主题，默认值</li>
-<li>1:指标主题</li></ul>
+- 0:日志主题，默认值
+- 1:指标主题
      */
     public Long getBizType() {
         return this.BizType;
@@ -193,11 +193,11 @@ public class DescribeTopicsRequest extends AbstractModel {
 
     /**
      * Set 主题类型
-<ul><li>0:日志主题，默认值</li>
-<li>1:指标主题</li></ul>
+- 0:日志主题，默认值
+- 1:指标主题
      * @param BizType 主题类型
-<ul><li>0:日志主题，默认值</li>
-<li>1:指标主题</li></ul>
+- 0:日志主题，默认值
+- 1:指标主题
      */
     public void setBizType(Long BizType) {
         this.BizType = BizType;

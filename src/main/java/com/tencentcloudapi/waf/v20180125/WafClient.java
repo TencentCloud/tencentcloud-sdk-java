@@ -1018,7 +1018,9 @@ public class WafClient extends AbstractClient{
     }
 
     /**
-     *描述WAF自动封禁模块详情
+     *废弃接口
+
+描述WAF自动封禁模块详情
      * @param req DescribeWafAutoDenyStatusRequest
      * @return DescribeWafAutoDenyStatusResponse
      * @throws TencentCloudSDKException

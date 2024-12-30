@@ -82,6 +82,13 @@ public class AgentConfig extends AbstractModel {
     private Long TurnDetectionMode;
 
     /**
+    * 是否过滤掉用户只说了一个字的句子，true表示过滤，false表示不过滤，默认值为true
+    */
+    @SerializedName("FilterOneWord")
+    @Expose
+    private Boolean FilterOneWord;
+
+    /**
      * Get 机器人的UserId，用于进房发起任务。【注意】这个UserId不能与当前房间内的主播观众[UserId](https://cloud.tencent.com/document/product/647/46351#userid)重复。如果一个房间发起多个任务时，机器人的UserId也不能相互重复，否则会中断前一个任务。需要保证机器人UserId在房间内唯一。 
      * @return UserId 机器人的UserId，用于进房发起任务。【注意】这个UserId不能与当前房间内的主播观众[UserId](https://cloud.tencent.com/document/product/647/46351#userid)重复。如果一个房间发起多个任务时，机器人的UserId也不能相互重复，否则会中断前一个任务。需要保证机器人UserId在房间内唯一。
      */
@@ -217,6 +224,22 @@ public class AgentConfig extends AbstractModel {
         this.TurnDetectionMode = TurnDetectionMode;
     }
 
+    /**
+     * Get 是否过滤掉用户只说了一个字的句子，true表示过滤，false表示不过滤，默认值为true 
+     * @return FilterOneWord 是否过滤掉用户只说了一个字的句子，true表示过滤，false表示不过滤，默认值为true
+     */
+    public Boolean getFilterOneWord() {
+        return this.FilterOneWord;
+    }
+
+    /**
+     * Set 是否过滤掉用户只说了一个字的句子，true表示过滤，false表示不过滤，默认值为true
+     * @param FilterOneWord 是否过滤掉用户只说了一个字的句子，true表示过滤，false表示不过滤，默认值为true
+     */
+    public void setFilterOneWord(Boolean FilterOneWord) {
+        this.FilterOneWord = FilterOneWord;
+    }
+
     public AgentConfig() {
     }
 
@@ -249,6 +272,9 @@ public class AgentConfig extends AbstractModel {
         if (source.TurnDetectionMode != null) {
             this.TurnDetectionMode = new Long(source.TurnDetectionMode);
         }
+        if (source.FilterOneWord != null) {
+            this.FilterOneWord = new Boolean(source.FilterOneWord);
+        }
     }
 
 
@@ -264,6 +290,7 @@ public class AgentConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "InterruptMode", this.InterruptMode);
         this.setParamSimple(map, prefix + "InterruptSpeechDuration", this.InterruptSpeechDuration);
         this.setParamSimple(map, prefix + "TurnDetectionMode", this.TurnDetectionMode);
+        this.setParamSimple(map, prefix + "FilterOneWord", this.FilterOneWord);
 
     }
 }

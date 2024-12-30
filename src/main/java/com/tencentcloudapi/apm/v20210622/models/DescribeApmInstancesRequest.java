@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class DescribeApmInstancesRequest extends AbstractModel {
 
     /**
-    * Tag列表
+    * Tag 列表
     */
     @SerializedName("Tags")
     @Expose
     private ApmTag [] Tags;
 
     /**
-    * 搜索实例名
+    * 搜索业务系统名
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * 过滤实例ID
+    * 过滤业务系统 ID
     */
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
 
     /**
-    * 是否查询官方demo实例
+    * 是否查询官方 Demo 业务系统
     */
     @SerializedName("DemoInstanceFlag")
     @Expose
     private Long DemoInstanceFlag;
 
     /**
-    * 是否查询全地域实例
+    * 是否查询全地域业务系统
     */
     @SerializedName("AllRegionsFlag")
     @Expose
     private Long AllRegionsFlag;
 
     /**
-     * Get Tag列表 
-     * @return Tags Tag列表
+     * Get Tag 列表 
+     * @return Tags Tag 列表
      */
     public ApmTag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set Tag列表
-     * @param Tags Tag列表
+     * Set Tag 列表
+     * @param Tags Tag 列表
      */
     public void setTags(ApmTag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 搜索实例名 
-     * @return InstanceName 搜索实例名
+     * Get 搜索业务系统名 
+     * @return InstanceName 搜索业务系统名
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set 搜索实例名
-     * @param InstanceName 搜索实例名
+     * Set 搜索业务系统名
+     * @param InstanceName 搜索业务系统名
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get 过滤实例ID 
-     * @return InstanceIds 过滤实例ID
+     * Get 过滤业务系统 ID 
+     * @return InstanceIds 过滤业务系统 ID
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set 过滤实例ID
-     * @param InstanceIds 过滤实例ID
+     * Set 过滤业务系统 ID
+     * @param InstanceIds 过滤业务系统 ID
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
     }
 
     /**
-     * Get 是否查询官方demo实例 
-     * @return DemoInstanceFlag 是否查询官方demo实例
+     * Get 是否查询官方 Demo 业务系统 
+     * @return DemoInstanceFlag 是否查询官方 Demo 业务系统
      */
     public Long getDemoInstanceFlag() {
         return this.DemoInstanceFlag;
     }
 
     /**
-     * Set 是否查询官方demo实例
-     * @param DemoInstanceFlag 是否查询官方demo实例
+     * Set 是否查询官方 Demo 业务系统
+     * @param DemoInstanceFlag 是否查询官方 Demo 业务系统
      */
     public void setDemoInstanceFlag(Long DemoInstanceFlag) {
         this.DemoInstanceFlag = DemoInstanceFlag;
     }
 
     /**
-     * Get 是否查询全地域实例 
-     * @return AllRegionsFlag 是否查询全地域实例
+     * Get 是否查询全地域业务系统 
+     * @return AllRegionsFlag 是否查询全地域业务系统
      */
     public Long getAllRegionsFlag() {
         return this.AllRegionsFlag;
     }
 
     /**
-     * Set 是否查询全地域实例
-     * @param AllRegionsFlag 是否查询全地域实例
+     * Set 是否查询全地域业务系统
+     * @param AllRegionsFlag 是否查询全地域业务系统
      */
     public void setAllRegionsFlag(Long AllRegionsFlag) {
         this.AllRegionsFlag = AllRegionsFlag;

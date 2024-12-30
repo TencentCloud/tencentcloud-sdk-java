@@ -929,7 +929,6 @@ RecordId和StartTime/EndTime互斥
 
     /**
      *本接口(GetRecordPlanByDev)用于根据设备ID查询其绑定的录制计划.
-
      * @param req GetRecordPlanByDevRequest
      * @return GetRecordPlanByDevResponse
      * @throws TencentCloudSDKException
@@ -1109,7 +1108,6 @@ RecordId和StartTime/EndTime互斥
 
     /**
      *本接口(ModifyRecordingPlan)用于更新录制计划。
-
      * @param req ModifyRecordingPlanRequest
      * @return ModifyRecordingPlanResponse
      * @throws TencentCloudSDKException

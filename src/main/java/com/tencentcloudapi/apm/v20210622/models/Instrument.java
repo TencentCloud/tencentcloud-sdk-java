@@ -25,7 +25,6 @@ public class Instrument extends AbstractModel {
 
     /**
     * 组件名称
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Name")
     @Expose
@@ -33,17 +32,14 @@ public class Instrument extends AbstractModel {
 
     /**
     * 组件开关
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Enable")
     @Expose
     private Boolean Enable;
 
     /**
-     * Get 组件名称
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 组件名称 
      * @return Name 组件名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getName() {
         return this.Name;
@@ -51,19 +47,15 @@ public class Instrument extends AbstractModel {
 
     /**
      * Set 组件名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Name 组件名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 组件开关
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 组件开关 
      * @return Enable 组件开关
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getEnable() {
         return this.Enable;
@@ -71,9 +63,7 @@ public class Instrument extends AbstractModel {
 
     /**
      * Set 组件开关
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Enable 组件开关
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEnable(Boolean Enable) {
         this.Enable = Enable;

@@ -45,14 +45,14 @@ public class DescribeGeneralSpanListRequest extends AbstractModel {
     private OrderBy OrderBy;
 
     /**
-    * span查询开始时间戳（单位:秒）
+    * Span查询开始时间戳（单位:秒）
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * 业务系统ID
+    * 业务系统 ID
     */
     @SerializedName("InstanceId")
     @Expose
@@ -73,7 +73,7 @@ public class DescribeGeneralSpanListRequest extends AbstractModel {
     private String BusinessName;
 
     /**
-    * span查询结束时间戳（单位:秒）
+    * Span查询结束时间戳（单位:秒）
     */
     @SerializedName("EndTime")
     @Expose
@@ -128,32 +128,32 @@ public class DescribeGeneralSpanListRequest extends AbstractModel {
     }
 
     /**
-     * Get span查询开始时间戳（单位:秒） 
-     * @return StartTime span查询开始时间戳（单位:秒）
+     * Get Span查询开始时间戳（单位:秒） 
+     * @return StartTime Span查询开始时间戳（单位:秒）
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set span查询开始时间戳（单位:秒）
-     * @param StartTime span查询开始时间戳（单位:秒）
+     * Set Span查询开始时间戳（单位:秒）
+     * @param StartTime Span查询开始时间戳（单位:秒）
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 业务系统ID 
-     * @return InstanceId 业务系统ID
+     * Get 业务系统 ID 
+     * @return InstanceId 业务系统 ID
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 业务系统ID
-     * @param InstanceId 业务系统ID
+     * Set 业务系统 ID
+     * @param InstanceId 业务系统 ID
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -192,16 +192,16 @@ public class DescribeGeneralSpanListRequest extends AbstractModel {
     }
 
     /**
-     * Get span查询结束时间戳（单位:秒） 
-     * @return EndTime span查询结束时间戳（单位:秒）
+     * Get Span查询结束时间戳（单位:秒） 
+     * @return EndTime Span查询结束时间戳（单位:秒）
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set span查询结束时间戳（单位:秒）
-     * @param EndTime span查询结束时间戳（单位:秒）
+     * Set Span查询结束时间戳（单位:秒）
+     * @param EndTime Span查询结束时间戳（单位:秒）
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;

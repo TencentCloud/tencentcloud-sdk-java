@@ -31,7 +31,7 @@ public class DescribeGeneralSpanListResponse extends AbstractModel {
     private Long TotalCount;
 
     /**
-    * Span分页列表
+    * Span 分页列表
     */
     @SerializedName("Spans")
     @Expose
@@ -61,16 +61,16 @@ public class DescribeGeneralSpanListResponse extends AbstractModel {
     }
 
     /**
-     * Get Span分页列表 
-     * @return Spans Span分页列表
+     * Get Span 分页列表 
+     * @return Spans Span 分页列表
      */
     public Span [] getSpans() {
         return this.Spans;
     }
 
     /**
-     * Set Span分页列表
-     * @param Spans Span分页列表
+     * Set Span 分页列表
+     * @param Spans Span 分页列表
      */
     public void setSpans(Span [] Spans) {
         this.Spans = Spans;

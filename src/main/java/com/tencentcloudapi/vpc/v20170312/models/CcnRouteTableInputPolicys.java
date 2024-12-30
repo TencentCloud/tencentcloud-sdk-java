@@ -25,7 +25,6 @@ public class CcnRouteTableInputPolicys extends AbstractModel {
 
     /**
     * 策略列表。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Policys")
     @Expose
@@ -33,7 +32,6 @@ public class CcnRouteTableInputPolicys extends AbstractModel {
 
     /**
     * 版本号。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PolicyVersion")
     @Expose
@@ -41,17 +39,14 @@ public class CcnRouteTableInputPolicys extends AbstractModel {
 
     /**
     * 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-     * Get 策略列表。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 策略列表。 
      * @return Policys 策略列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CcnRouteTableInputPolicy [] getPolicys() {
         return this.Policys;
@@ -59,19 +54,15 @@ public class CcnRouteTableInputPolicys extends AbstractModel {
 
     /**
      * Set 策略列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Policys 策略列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPolicys(CcnRouteTableInputPolicy [] Policys) {
         this.Policys = Policys;
     }
 
     /**
-     * Get 版本号。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 版本号。 
      * @return PolicyVersion 版本号。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPolicyVersion() {
         return this.PolicyVersion;
@@ -79,19 +70,15 @@ public class CcnRouteTableInputPolicys extends AbstractModel {
 
     /**
      * Set 版本号。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PolicyVersion 版本号。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPolicyVersion(Long PolicyVersion) {
         this.PolicyVersion = PolicyVersion;
     }
 
     /**
-     * Get 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 创建时间。 
      * @return CreateTime 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -99,9 +86,7 @@ public class CcnRouteTableInputPolicys extends AbstractModel {
 
     /**
      * Set 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateTime 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;

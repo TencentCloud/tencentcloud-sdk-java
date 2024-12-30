@@ -53,7 +53,6 @@ public class CcnRouteTableBroadcastPolicy extends AbstractModel {
 
     /**
     * as-path操作
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OperateAsPath")
     @Expose
@@ -61,7 +60,6 @@ public class CcnRouteTableBroadcastPolicy extends AbstractModel {
 
     /**
     * as-path操作模式
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("AsPathOperateMode")
     @Expose
@@ -69,7 +67,6 @@ public class CcnRouteTableBroadcastPolicy extends AbstractModel {
 
     /**
     * community操作
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OperateCommunitySet")
     @Expose
@@ -77,7 +74,6 @@ public class CcnRouteTableBroadcastPolicy extends AbstractModel {
 
     /**
     * community操作模式
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CommunityOperateMode")
     @Expose
@@ -148,10 +144,8 @@ public class CcnRouteTableBroadcastPolicy extends AbstractModel {
     }
 
     /**
-     * Get as-path操作
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get as-path操作 
      * @return OperateAsPath as-path操作
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOperateAsPath() {
         return this.OperateAsPath;
@@ -159,19 +153,15 @@ public class CcnRouteTableBroadcastPolicy extends AbstractModel {
 
     /**
      * Set as-path操作
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OperateAsPath as-path操作
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOperateAsPath(String OperateAsPath) {
         this.OperateAsPath = OperateAsPath;
     }
 
     /**
-     * Get as-path操作模式
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get as-path操作模式 
      * @return AsPathOperateMode as-path操作模式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getAsPathOperateMode() {
         return this.AsPathOperateMode;
@@ -179,19 +169,15 @@ public class CcnRouteTableBroadcastPolicy extends AbstractModel {
 
     /**
      * Set as-path操作模式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AsPathOperateMode as-path操作模式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setAsPathOperateMode(String AsPathOperateMode) {
         this.AsPathOperateMode = AsPathOperateMode;
     }
 
     /**
-     * Get community操作
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get community操作 
      * @return OperateCommunitySet community操作
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getOperateCommunitySet() {
         return this.OperateCommunitySet;
@@ -199,19 +185,15 @@ public class CcnRouteTableBroadcastPolicy extends AbstractModel {
 
     /**
      * Set community操作
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OperateCommunitySet community操作
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOperateCommunitySet(String [] OperateCommunitySet) {
         this.OperateCommunitySet = OperateCommunitySet;
     }
 
     /**
-     * Get community操作模式
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get community操作模式 
      * @return CommunityOperateMode community操作模式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCommunityOperateMode() {
         return this.CommunityOperateMode;
@@ -219,9 +201,7 @@ public class CcnRouteTableBroadcastPolicy extends AbstractModel {
 
     /**
      * Set community操作模式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CommunityOperateMode community操作模式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCommunityOperateMode(String CommunityOperateMode) {
         this.CommunityOperateMode = CommunityOperateMode;

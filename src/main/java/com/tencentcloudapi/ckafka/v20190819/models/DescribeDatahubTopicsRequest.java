@@ -45,6 +45,27 @@ public class DescribeDatahubTopicsRequest extends AbstractModel {
     private Long Limit;
 
     /**
+    * 是否从连接查询topic列表
+    */
+    @SerializedName("QueryFromConnectResource")
+    @Expose
+    private Boolean QueryFromConnectResource;
+
+    /**
+    * 连接的ID
+    */
+    @SerializedName("ConnectResourceId")
+    @Expose
+    private String ConnectResourceId;
+
+    /**
+    * topic资源表达式
+    */
+    @SerializedName("TopicRegularExpression")
+    @Expose
+    private String TopicRegularExpression;
+
+    /**
      * Get 搜索词 
      * @return SearchWord 搜索词
      */
@@ -92,6 +113,54 @@ public class DescribeDatahubTopicsRequest extends AbstractModel {
         this.Limit = Limit;
     }
 
+    /**
+     * Get 是否从连接查询topic列表 
+     * @return QueryFromConnectResource 是否从连接查询topic列表
+     */
+    public Boolean getQueryFromConnectResource() {
+        return this.QueryFromConnectResource;
+    }
+
+    /**
+     * Set 是否从连接查询topic列表
+     * @param QueryFromConnectResource 是否从连接查询topic列表
+     */
+    public void setQueryFromConnectResource(Boolean QueryFromConnectResource) {
+        this.QueryFromConnectResource = QueryFromConnectResource;
+    }
+
+    /**
+     * Get 连接的ID 
+     * @return ConnectResourceId 连接的ID
+     */
+    public String getConnectResourceId() {
+        return this.ConnectResourceId;
+    }
+
+    /**
+     * Set 连接的ID
+     * @param ConnectResourceId 连接的ID
+     */
+    public void setConnectResourceId(String ConnectResourceId) {
+        this.ConnectResourceId = ConnectResourceId;
+    }
+
+    /**
+     * Get topic资源表达式 
+     * @return TopicRegularExpression topic资源表达式
+     */
+    public String getTopicRegularExpression() {
+        return this.TopicRegularExpression;
+    }
+
+    /**
+     * Set topic资源表达式
+     * @param TopicRegularExpression topic资源表达式
+     */
+    public void setTopicRegularExpression(String TopicRegularExpression) {
+        this.TopicRegularExpression = TopicRegularExpression;
+    }
+
     public DescribeDatahubTopicsRequest() {
     }
 
@@ -109,6 +178,15 @@ public class DescribeDatahubTopicsRequest extends AbstractModel {
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
+        if (source.QueryFromConnectResource != null) {
+            this.QueryFromConnectResource = new Boolean(source.QueryFromConnectResource);
+        }
+        if (source.ConnectResourceId != null) {
+            this.ConnectResourceId = new String(source.ConnectResourceId);
+        }
+        if (source.TopicRegularExpression != null) {
+            this.TopicRegularExpression = new String(source.TopicRegularExpression);
+        }
     }
 
 
@@ -119,6 +197,9 @@ public class DescribeDatahubTopicsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "SearchWord", this.SearchWord);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "QueryFromConnectResource", this.QueryFromConnectResource);
+        this.setParamSimple(map, prefix + "ConnectResourceId", this.ConnectResourceId);
+        this.setParamSimple(map, prefix + "TopicRegularExpression", this.TopicRegularExpression);
 
     }
 }

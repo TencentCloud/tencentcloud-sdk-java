@@ -109,6 +109,13 @@ public class ModifyOutputInfo extends AbstractModel {
     private CreateOutputRistSettings RISTSettings;
 
     /**
+    * 输出类型：Internet/TencentCSS/StreamLive
+    */
+    @SerializedName("OutputType")
+    @Expose
+    private String OutputType;
+
+    /**
      * Get 需要修改的Output的Id。 
      * @return OutputId 需要修改的Output的Id。
      */
@@ -304,6 +311,22 @@ public class ModifyOutputInfo extends AbstractModel {
         this.RISTSettings = RISTSettings;
     }
 
+    /**
+     * Get 输出类型：Internet/TencentCSS/StreamLive 
+     * @return OutputType 输出类型：Internet/TencentCSS/StreamLive
+     */
+    public String getOutputType() {
+        return this.OutputType;
+    }
+
+    /**
+     * Set 输出类型：Internet/TencentCSS/StreamLive
+     * @param OutputType 输出类型：Internet/TencentCSS/StreamLive
+     */
+    public void setOutputType(String OutputType) {
+        this.OutputType = OutputType;
+    }
+
     public ModifyOutputInfo() {
     }
 
@@ -357,6 +380,9 @@ public class ModifyOutputInfo extends AbstractModel {
         if (source.RISTSettings != null) {
             this.RISTSettings = new CreateOutputRistSettings(source.RISTSettings);
         }
+        if (source.OutputType != null) {
+            this.OutputType = new String(source.OutputType);
+        }
     }
 
 
@@ -376,6 +402,7 @@ public class ModifyOutputInfo extends AbstractModel {
         this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
         this.setParamArraySimple(map, prefix + "Zones.", this.Zones);
         this.setParamObj(map, prefix + "RISTSettings.", this.RISTSettings);
+        this.setParamSimple(map, prefix + "OutputType", this.OutputType);
 
     }
 }

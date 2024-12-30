@@ -25,7 +25,6 @@ public class DescribeCrossBorderFlowMonitorResponse extends AbstractModel {
 
     /**
     * 云联网跨境带宽监控数据
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CrossBorderFlowMonitorData")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeCrossBorderFlowMonitorResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 云联网跨境带宽监控数据
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 云联网跨境带宽监控数据 
      * @return CrossBorderFlowMonitorData 云联网跨境带宽监控数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CrossBorderFlowMonitorData [] getCrossBorderFlowMonitorData() {
         return this.CrossBorderFlowMonitorData;
@@ -50,9 +47,7 @@ public class DescribeCrossBorderFlowMonitorResponse extends AbstractModel {
 
     /**
      * Set 云联网跨境带宽监控数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CrossBorderFlowMonitorData 云联网跨境带宽监控数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCrossBorderFlowMonitorData(CrossBorderFlowMonitorData [] CrossBorderFlowMonitorData) {
         this.CrossBorderFlowMonitorData = CrossBorderFlowMonitorData;

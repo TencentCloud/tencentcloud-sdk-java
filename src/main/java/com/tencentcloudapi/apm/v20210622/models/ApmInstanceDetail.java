@@ -24,110 +24,98 @@ import java.util.HashMap;
 public class ApmInstanceDetail extends AbstractModel {
 
     /**
-    * 存储使用量(MB)
-注意：此字段可能返回 null，表示取不到有效值。
+    * 存储使用量( MB )
     */
     @SerializedName("AmountOfUsedStorage")
     @Expose
     private Float AmountOfUsedStorage;
 
     /**
-    * 实例名
-注意：此字段可能返回 null，表示取不到有效值。
+    * 业务系统名
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 实例所属tag列表
-注意：此字段可能返回 null，表示取不到有效值。
+    * 业务系统所属 Tag 列表
     */
     @SerializedName("Tags")
     @Expose
     private ApmTag [] Tags;
 
     /**
-    * 实例ID
+    * 业务系统 ID
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 创建人Uin
-注意：此字段可能返回 null，表示取不到有效值。
+    * 创建人 Uin
     */
     @SerializedName("CreateUin")
     @Expose
     private String CreateUin;
 
     /**
-    * 该实例已上报的服务端应用数量
-注意：此字段可能返回 null，表示取不到有效值。
+    * 该业务系统已上报的服务端应用数量
     */
     @SerializedName("ServiceCount")
     @Expose
     private Long ServiceCount;
 
     /**
-    * 日均上报Span数
-注意：此字段可能返回 null，表示取不到有效值。
+    * 日均上报 Span 数
     */
     @SerializedName("CountOfReportSpanPerDay")
     @Expose
     private Long CountOfReportSpanPerDay;
 
     /**
-    * AppId信息
+    * AppID 信息
     */
     @SerializedName("AppId")
     @Expose
     private Long AppId;
 
     /**
-    * Trace数据保存时长
-注意：此字段可能返回 null，表示取不到有效值。
+    * Trace 数据保存时长
     */
     @SerializedName("TraceDuration")
     @Expose
     private Long TraceDuration;
 
     /**
-    * 实例描述信息
-注意：此字段可能返回 null，表示取不到有效值。
+    * 业务系统描述信息
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 实例状态
-注意：此字段可能返回 null，表示取不到有效值。
+    * 业务系统状态
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 实例所属地域
-注意：此字段可能返回 null，表示取不到有效值。
+    * 业务系统所属地域
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * 实例上报额度
-注意：此字段可能返回 null，表示取不到有效值。
+    * 业务系统上报额度
     */
     @SerializedName("SpanDailyCounters")
     @Expose
     private Long SpanDailyCounters;
 
     /**
-    * 实例是否开通计费
-注意：此字段可能返回 null，表示取不到有效值。
+    * 业务系统是否开通计费
     */
     @SerializedName("BillingInstance")
     @Expose
@@ -135,7 +123,6 @@ public class ApmInstanceDetail extends AbstractModel {
 
     /**
     * 错误率阈值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ErrRateThreshold")
     @Expose
@@ -143,7 +130,6 @@ public class ApmInstanceDetail extends AbstractModel {
 
     /**
     * 采样率阈值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SampleRate")
     @Expose
@@ -151,7 +137,6 @@ public class ApmInstanceDetail extends AbstractModel {
 
     /**
     * 是否开启错误采样 0  关 1 开
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ErrorSample")
     @Expose
@@ -159,15 +144,13 @@ public class ApmInstanceDetail extends AbstractModel {
 
     /**
     * 慢调用保存阈值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SlowRequestSavedThreshold")
     @Expose
     private Long SlowRequestSavedThreshold;
 
     /**
-    * cls日志所在地域
-注意：此字段可能返回 null，表示取不到有效值。
+    * CLS 日志所在地域
     */
     @SerializedName("LogRegion")
     @Expose
@@ -175,7 +158,6 @@ public class ApmInstanceDetail extends AbstractModel {
 
     /**
     * 日志来源
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LogSource")
     @Expose
@@ -183,7 +165,6 @@ public class ApmInstanceDetail extends AbstractModel {
 
     /**
     * 日志功能开关 0 关 | 1 开
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsRelatedLog")
     @Expose
@@ -191,7 +172,6 @@ public class ApmInstanceDetail extends AbstractModel {
 
     /**
     * 日志主题ID
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LogTopicID")
     @Expose
@@ -199,7 +179,6 @@ public class ApmInstanceDetail extends AbstractModel {
 
     /**
     * 该实例已上报的客户端应用数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ClientCount")
     @Expose
@@ -207,23 +186,20 @@ public class ApmInstanceDetail extends AbstractModel {
 
     /**
     * 该实例已上报的总应用数量
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * CLS日志集 | ES集群ID
-注意：此字段可能返回 null，表示取不到有效值。
+    * CLS 日志集 | ES 集群ID
     */
     @SerializedName("LogSet")
     @Expose
     private String LogSet;
 
     /**
-    * Metric数据保存时长
-注意：此字段可能返回 null，表示取不到有效值。
+    * Metric 数据保存时长
     */
     @SerializedName("MetricDuration")
     @Expose
@@ -231,25 +207,22 @@ public class ApmInstanceDetail extends AbstractModel {
 
     /**
     * 用户自定义展示标签列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CustomShowTags")
     @Expose
     private String [] CustomShowTags;
 
     /**
-    * 实例计费模式
+    * 业务系统计费模式
 1为预付费
 0为按量付费
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PayMode")
     @Expose
     private Long PayMode;
 
     /**
-    * 实例计费模式是否生效
-注意：此字段可能返回 null，表示取不到有效值。
+    * 业务系统计费模式是否生效
     */
     @SerializedName("PayModeEffective")
     @Expose
@@ -257,7 +230,6 @@ public class ApmInstanceDetail extends AbstractModel {
 
     /**
     * 响应时间满意阈值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ResponseDurationWarningThreshold")
     @Expose
@@ -265,31 +237,27 @@ public class ApmInstanceDetail extends AbstractModel {
 
     /**
     * 是否免费（0=否，1=限额免费，2=完全免费），默认0
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Free")
     @Expose
     private Long Free;
 
     /**
-    * 是否tsf默认业务系统（0=否，1-是）
-注意：此字段可能返回 null，表示取不到有效值。
+    * 是否 tsf 默认业务系统（0=否，1-是）
     */
     @SerializedName("DefaultTSF")
     @Expose
     private Long DefaultTSF;
 
     /**
-    * 是否关联dashboard： 0 关 1 开
-注意：此字段可能返回 null，表示取不到有效值。
+    * 是否关联 Dashboard： 0 关 1 开
     */
     @SerializedName("IsRelatedDashboard")
     @Expose
     private Long IsRelatedDashboard;
 
     /**
-    * dashboard ID
-注意：此字段可能返回 null，表示取不到有效值。
+    * Dashboard ID
     */
     @SerializedName("DashboardTopicID")
     @Expose
@@ -297,297 +265,245 @@ public class ApmInstanceDetail extends AbstractModel {
 
     /**
     * 是否开启组件漏洞检测
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("IsInstrumentationVulnerabilityScan")
     @Expose
     private Long IsInstrumentationVulnerabilityScan;
 
     /**
-    * 是否开启SQL注入分析
-注意：此字段可能返回 null，表示取不到有效值。
+    * 是否开启 SQL 注入分析
     */
     @SerializedName("IsSqlInjectionAnalysis")
     @Expose
     private Long IsSqlInjectionAnalysis;
 
     /**
-     * Get 存储使用量(MB)
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AmountOfUsedStorage 存储使用量(MB)
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 存储使用量( MB ) 
+     * @return AmountOfUsedStorage 存储使用量( MB )
      */
     public Float getAmountOfUsedStorage() {
         return this.AmountOfUsedStorage;
     }
 
     /**
-     * Set 存储使用量(MB)
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param AmountOfUsedStorage 存储使用量(MB)
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 存储使用量( MB )
+     * @param AmountOfUsedStorage 存储使用量( MB )
      */
     public void setAmountOfUsedStorage(Float AmountOfUsedStorage) {
         this.AmountOfUsedStorage = AmountOfUsedStorage;
     }
 
     /**
-     * Get 实例名
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Name 实例名
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 业务系统名 
+     * @return Name 业务系统名
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 实例名
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Name 实例名
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 业务系统名
+     * @param Name 业务系统名
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get 实例所属tag列表
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Tags 实例所属tag列表
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 业务系统所属 Tag 列表 
+     * @return Tags 业务系统所属 Tag 列表
      */
     public ApmTag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 实例所属tag列表
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Tags 实例所属tag列表
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 业务系统所属 Tag 列表
+     * @param Tags 业务系统所属 Tag 列表
      */
     public void setTags(ApmTag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 实例ID 
-     * @return InstanceId 实例ID
+     * Get 业务系统 ID 
+     * @return InstanceId 业务系统 ID
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 实例ID
-     * @param InstanceId 实例ID
+     * Set 业务系统 ID
+     * @param InstanceId 业务系统 ID
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get 创建人Uin
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CreateUin 创建人Uin
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 创建人 Uin 
+     * @return CreateUin 创建人 Uin
      */
     public String getCreateUin() {
         return this.CreateUin;
     }
 
     /**
-     * Set 创建人Uin
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param CreateUin 创建人Uin
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 创建人 Uin
+     * @param CreateUin 创建人 Uin
      */
     public void setCreateUin(String CreateUin) {
         this.CreateUin = CreateUin;
     }
 
     /**
-     * Get 该实例已上报的服务端应用数量
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ServiceCount 该实例已上报的服务端应用数量
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 该业务系统已上报的服务端应用数量 
+     * @return ServiceCount 该业务系统已上报的服务端应用数量
      */
     public Long getServiceCount() {
         return this.ServiceCount;
     }
 
     /**
-     * Set 该实例已上报的服务端应用数量
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param ServiceCount 该实例已上报的服务端应用数量
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 该业务系统已上报的服务端应用数量
+     * @param ServiceCount 该业务系统已上报的服务端应用数量
      */
     public void setServiceCount(Long ServiceCount) {
         this.ServiceCount = ServiceCount;
     }
 
     /**
-     * Get 日均上报Span数
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CountOfReportSpanPerDay 日均上报Span数
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 日均上报 Span 数 
+     * @return CountOfReportSpanPerDay 日均上报 Span 数
      */
     public Long getCountOfReportSpanPerDay() {
         return this.CountOfReportSpanPerDay;
     }
 
     /**
-     * Set 日均上报Span数
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param CountOfReportSpanPerDay 日均上报Span数
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 日均上报 Span 数
+     * @param CountOfReportSpanPerDay 日均上报 Span 数
      */
     public void setCountOfReportSpanPerDay(Long CountOfReportSpanPerDay) {
         this.CountOfReportSpanPerDay = CountOfReportSpanPerDay;
     }
 
     /**
-     * Get AppId信息 
-     * @return AppId AppId信息
+     * Get AppID 信息 
+     * @return AppId AppID 信息
      */
     public Long getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set AppId信息
-     * @param AppId AppId信息
+     * Set AppID 信息
+     * @param AppId AppID 信息
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get Trace数据保存时长
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TraceDuration Trace数据保存时长
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get Trace 数据保存时长 
+     * @return TraceDuration Trace 数据保存时长
      */
     public Long getTraceDuration() {
         return this.TraceDuration;
     }
 
     /**
-     * Set Trace数据保存时长
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param TraceDuration Trace数据保存时长
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set Trace 数据保存时长
+     * @param TraceDuration Trace 数据保存时长
      */
     public void setTraceDuration(Long TraceDuration) {
         this.TraceDuration = TraceDuration;
     }
 
     /**
-     * Get 实例描述信息
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Description 实例描述信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 业务系统描述信息 
+     * @return Description 业务系统描述信息
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 实例描述信息
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Description 实例描述信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 业务系统描述信息
+     * @param Description 业务系统描述信息
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get 实例状态
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Status 实例状态
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 业务系统状态 
+     * @return Status 业务系统状态
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 实例状态
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Status 实例状态
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 业务系统状态
+     * @param Status 业务系统状态
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get 实例所属地域
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Region 实例所属地域
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 业务系统所属地域 
+     * @return Region 业务系统所属地域
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set 实例所属地域
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Region 实例所属地域
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 业务系统所属地域
+     * @param Region 业务系统所属地域
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get 实例上报额度
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SpanDailyCounters 实例上报额度
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 业务系统上报额度 
+     * @return SpanDailyCounters 业务系统上报额度
      */
     public Long getSpanDailyCounters() {
         return this.SpanDailyCounters;
     }
 
     /**
-     * Set 实例上报额度
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param SpanDailyCounters 实例上报额度
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 业务系统上报额度
+     * @param SpanDailyCounters 业务系统上报额度
      */
     public void setSpanDailyCounters(Long SpanDailyCounters) {
         this.SpanDailyCounters = SpanDailyCounters;
     }
 
     /**
-     * Get 实例是否开通计费
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return BillingInstance 实例是否开通计费
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 业务系统是否开通计费 
+     * @return BillingInstance 业务系统是否开通计费
      */
     public Long getBillingInstance() {
         return this.BillingInstance;
     }
 
     /**
-     * Set 实例是否开通计费
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param BillingInstance 实例是否开通计费
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 业务系统是否开通计费
+     * @param BillingInstance 业务系统是否开通计费
      */
     public void setBillingInstance(Long BillingInstance) {
         this.BillingInstance = BillingInstance;
     }
 
     /**
-     * Get 错误率阈值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 错误率阈值 
      * @return ErrRateThreshold 错误率阈值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getErrRateThreshold() {
         return this.ErrRateThreshold;
@@ -595,19 +511,15 @@ public class ApmInstanceDetail extends AbstractModel {
 
     /**
      * Set 错误率阈值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ErrRateThreshold 错误率阈值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrRateThreshold(Long ErrRateThreshold) {
         this.ErrRateThreshold = ErrRateThreshold;
     }
 
     /**
-     * Get 采样率阈值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 采样率阈值 
      * @return SampleRate 采样率阈值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSampleRate() {
         return this.SampleRate;
@@ -615,19 +527,15 @@ public class ApmInstanceDetail extends AbstractModel {
 
     /**
      * Set 采样率阈值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SampleRate 采样率阈值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSampleRate(Long SampleRate) {
         this.SampleRate = SampleRate;
     }
 
     /**
-     * Get 是否开启错误采样 0  关 1 开
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否开启错误采样 0  关 1 开 
      * @return ErrorSample 是否开启错误采样 0  关 1 开
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getErrorSample() {
         return this.ErrorSample;
@@ -635,19 +543,15 @@ public class ApmInstanceDetail extends AbstractModel {
 
     /**
      * Set 是否开启错误采样 0  关 1 开
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ErrorSample 是否开启错误采样 0  关 1 开
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setErrorSample(Long ErrorSample) {
         this.ErrorSample = ErrorSample;
     }
 
     /**
-     * Get 慢调用保存阈值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 慢调用保存阈值 
      * @return SlowRequestSavedThreshold 慢调用保存阈值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getSlowRequestSavedThreshold() {
         return this.SlowRequestSavedThreshold;
@@ -655,39 +559,31 @@ public class ApmInstanceDetail extends AbstractModel {
 
     /**
      * Set 慢调用保存阈值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SlowRequestSavedThreshold 慢调用保存阈值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSlowRequestSavedThreshold(Long SlowRequestSavedThreshold) {
         this.SlowRequestSavedThreshold = SlowRequestSavedThreshold;
     }
 
     /**
-     * Get cls日志所在地域
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LogRegion cls日志所在地域
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get CLS 日志所在地域 
+     * @return LogRegion CLS 日志所在地域
      */
     public String getLogRegion() {
         return this.LogRegion;
     }
 
     /**
-     * Set cls日志所在地域
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param LogRegion cls日志所在地域
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set CLS 日志所在地域
+     * @param LogRegion CLS 日志所在地域
      */
     public void setLogRegion(String LogRegion) {
         this.LogRegion = LogRegion;
     }
 
     /**
-     * Get 日志来源
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 日志来源 
      * @return LogSource 日志来源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLogSource() {
         return this.LogSource;
@@ -695,19 +591,15 @@ public class ApmInstanceDetail extends AbstractModel {
 
     /**
      * Set 日志来源
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LogSource 日志来源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLogSource(String LogSource) {
         this.LogSource = LogSource;
     }
 
     /**
-     * Get 日志功能开关 0 关 | 1 开
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 日志功能开关 0 关 | 1 开 
      * @return IsRelatedLog 日志功能开关 0 关 | 1 开
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsRelatedLog() {
         return this.IsRelatedLog;
@@ -715,19 +607,15 @@ public class ApmInstanceDetail extends AbstractModel {
 
     /**
      * Set 日志功能开关 0 关 | 1 开
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsRelatedLog 日志功能开关 0 关 | 1 开
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsRelatedLog(Long IsRelatedLog) {
         this.IsRelatedLog = IsRelatedLog;
     }
 
     /**
-     * Get 日志主题ID
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 日志主题ID 
      * @return LogTopicID 日志主题ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLogTopicID() {
         return this.LogTopicID;
@@ -735,19 +623,15 @@ public class ApmInstanceDetail extends AbstractModel {
 
     /**
      * Set 日志主题ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LogTopicID 日志主题ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLogTopicID(String LogTopicID) {
         this.LogTopicID = LogTopicID;
     }
 
     /**
-     * Get 该实例已上报的客户端应用数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该实例已上报的客户端应用数量 
      * @return ClientCount 该实例已上报的客户端应用数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getClientCount() {
         return this.ClientCount;
@@ -755,19 +639,15 @@ public class ApmInstanceDetail extends AbstractModel {
 
     /**
      * Set 该实例已上报的客户端应用数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClientCount 该实例已上报的客户端应用数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setClientCount(Long ClientCount) {
         this.ClientCount = ClientCount;
     }
 
     /**
-     * Get 该实例已上报的总应用数量
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 该实例已上报的总应用数量 
      * @return TotalCount 该实例已上报的总应用数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -775,59 +655,47 @@ public class ApmInstanceDetail extends AbstractModel {
 
     /**
      * Set 该实例已上报的总应用数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalCount 该实例已上报的总应用数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get CLS日志集 | ES集群ID
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return LogSet CLS日志集 | ES集群ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get CLS 日志集 | ES 集群ID 
+     * @return LogSet CLS 日志集 | ES 集群ID
      */
     public String getLogSet() {
         return this.LogSet;
     }
 
     /**
-     * Set CLS日志集 | ES集群ID
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param LogSet CLS日志集 | ES集群ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set CLS 日志集 | ES 集群ID
+     * @param LogSet CLS 日志集 | ES 集群ID
      */
     public void setLogSet(String LogSet) {
         this.LogSet = LogSet;
     }
 
     /**
-     * Get Metric数据保存时长
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return MetricDuration Metric数据保存时长
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get Metric 数据保存时长 
+     * @return MetricDuration Metric 数据保存时长
      */
     public Long getMetricDuration() {
         return this.MetricDuration;
     }
 
     /**
-     * Set Metric数据保存时长
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param MetricDuration Metric数据保存时长
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set Metric 数据保存时长
+     * @param MetricDuration Metric 数据保存时长
      */
     public void setMetricDuration(Long MetricDuration) {
         this.MetricDuration = MetricDuration;
     }
 
     /**
-     * Get 用户自定义展示标签列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 用户自定义展示标签列表 
      * @return CustomShowTags 用户自定义展示标签列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String [] getCustomShowTags() {
         return this.CustomShowTags;
@@ -835,67 +703,55 @@ public class ApmInstanceDetail extends AbstractModel {
 
     /**
      * Set 用户自定义展示标签列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CustomShowTags 用户自定义展示标签列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCustomShowTags(String [] CustomShowTags) {
         this.CustomShowTags = CustomShowTags;
     }
 
     /**
-     * Get 实例计费模式
+     * Get 业务系统计费模式
+1为预付费
+0为按量付费 
+     * @return PayMode 业务系统计费模式
 1为预付费
 0为按量付费
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PayMode 实例计费模式
-1为预付费
-0为按量付费
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set 实例计费模式
+     * Set 业务系统计费模式
 1为预付费
 0为按量付费
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param PayMode 实例计费模式
+     * @param PayMode 业务系统计费模式
 1为预付费
 0为按量付费
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPayMode(Long PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get 实例计费模式是否生效
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PayModeEffective 实例计费模式是否生效
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 业务系统计费模式是否生效 
+     * @return PayModeEffective 业务系统计费模式是否生效
      */
     public Boolean getPayModeEffective() {
         return this.PayModeEffective;
     }
 
     /**
-     * Set 实例计费模式是否生效
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param PayModeEffective 实例计费模式是否生效
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 业务系统计费模式是否生效
+     * @param PayModeEffective 业务系统计费模式是否生效
      */
     public void setPayModeEffective(Boolean PayModeEffective) {
         this.PayModeEffective = PayModeEffective;
     }
 
     /**
-     * Get 响应时间满意阈值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 响应时间满意阈值 
      * @return ResponseDurationWarningThreshold 响应时间满意阈值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getResponseDurationWarningThreshold() {
         return this.ResponseDurationWarningThreshold;
@@ -903,19 +759,15 @@ public class ApmInstanceDetail extends AbstractModel {
 
     /**
      * Set 响应时间满意阈值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResponseDurationWarningThreshold 响应时间满意阈值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setResponseDurationWarningThreshold(Long ResponseDurationWarningThreshold) {
         this.ResponseDurationWarningThreshold = ResponseDurationWarningThreshold;
     }
 
     /**
-     * Get 是否免费（0=否，1=限额免费，2=完全免费），默认0
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否免费（0=否，1=限额免费，2=完全免费），默认0 
      * @return Free 是否免费（0=否，1=限额免费，2=完全免费），默认0
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getFree() {
         return this.Free;
@@ -923,79 +775,63 @@ public class ApmInstanceDetail extends AbstractModel {
 
     /**
      * Set 是否免费（0=否，1=限额免费，2=完全免费），默认0
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Free 是否免费（0=否，1=限额免费，2=完全免费），默认0
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setFree(Long Free) {
         this.Free = Free;
     }
 
     /**
-     * Get 是否tsf默认业务系统（0=否，1-是）
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DefaultTSF 是否tsf默认业务系统（0=否，1-是）
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 是否 tsf 默认业务系统（0=否，1-是） 
+     * @return DefaultTSF 是否 tsf 默认业务系统（0=否，1-是）
      */
     public Long getDefaultTSF() {
         return this.DefaultTSF;
     }
 
     /**
-     * Set 是否tsf默认业务系统（0=否，1-是）
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param DefaultTSF 是否tsf默认业务系统（0=否，1-是）
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 是否 tsf 默认业务系统（0=否，1-是）
+     * @param DefaultTSF 是否 tsf 默认业务系统（0=否，1-是）
      */
     public void setDefaultTSF(Long DefaultTSF) {
         this.DefaultTSF = DefaultTSF;
     }
 
     /**
-     * Get 是否关联dashboard： 0 关 1 开
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IsRelatedDashboard 是否关联dashboard： 0 关 1 开
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 是否关联 Dashboard： 0 关 1 开 
+     * @return IsRelatedDashboard 是否关联 Dashboard： 0 关 1 开
      */
     public Long getIsRelatedDashboard() {
         return this.IsRelatedDashboard;
     }
 
     /**
-     * Set 是否关联dashboard： 0 关 1 开
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param IsRelatedDashboard 是否关联dashboard： 0 关 1 开
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 是否关联 Dashboard： 0 关 1 开
+     * @param IsRelatedDashboard 是否关联 Dashboard： 0 关 1 开
      */
     public void setIsRelatedDashboard(Long IsRelatedDashboard) {
         this.IsRelatedDashboard = IsRelatedDashboard;
     }
 
     /**
-     * Get dashboard ID
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return DashboardTopicID dashboard ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get Dashboard ID 
+     * @return DashboardTopicID Dashboard ID
      */
     public String getDashboardTopicID() {
         return this.DashboardTopicID;
     }
 
     /**
-     * Set dashboard ID
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param DashboardTopicID dashboard ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set Dashboard ID
+     * @param DashboardTopicID Dashboard ID
      */
     public void setDashboardTopicID(String DashboardTopicID) {
         this.DashboardTopicID = DashboardTopicID;
     }
 
     /**
-     * Get 是否开启组件漏洞检测
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 是否开启组件漏洞检测 
      * @return IsInstrumentationVulnerabilityScan 是否开启组件漏洞检测
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getIsInstrumentationVulnerabilityScan() {
         return this.IsInstrumentationVulnerabilityScan;
@@ -1003,29 +839,23 @@ public class ApmInstanceDetail extends AbstractModel {
 
     /**
      * Set 是否开启组件漏洞检测
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IsInstrumentationVulnerabilityScan 是否开启组件漏洞检测
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setIsInstrumentationVulnerabilityScan(Long IsInstrumentationVulnerabilityScan) {
         this.IsInstrumentationVulnerabilityScan = IsInstrumentationVulnerabilityScan;
     }
 
     /**
-     * Get 是否开启SQL注入分析
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return IsSqlInjectionAnalysis 是否开启SQL注入分析
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 是否开启 SQL 注入分析 
+     * @return IsSqlInjectionAnalysis 是否开启 SQL 注入分析
      */
     public Long getIsSqlInjectionAnalysis() {
         return this.IsSqlInjectionAnalysis;
     }
 
     /**
-     * Set 是否开启SQL注入分析
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param IsSqlInjectionAnalysis 是否开启SQL注入分析
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 是否开启 SQL 注入分析
+     * @param IsSqlInjectionAnalysis 是否开启 SQL 注入分析
      */
     public void setIsSqlInjectionAnalysis(Long IsSqlInjectionAnalysis) {
         this.IsSqlInjectionAnalysis = IsSqlInjectionAnalysis;

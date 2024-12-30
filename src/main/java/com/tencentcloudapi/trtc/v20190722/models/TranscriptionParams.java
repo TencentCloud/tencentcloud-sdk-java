@@ -75,6 +75,7 @@ https://cloud.tencent.com/document/product/269/31999#app-.E7.AE.A1.E7.90.86.E5.9
 
     /**
     * 机器人订阅的用户列表
+仅 TranscriptionMode 为 1或者 TranscriptionMode 为无限上麦模式支持传入多个用户列表
     */
     @SerializedName("TargetUserIdList")
     @Expose
@@ -205,8 +206,10 @@ https://cloud.tencent.com/document/product/269/31999#app-.E7.AE.A1.E7.90.86.E5.9
     }
 
     /**
-     * Get 机器人订阅的用户列表 
+     * Get 机器人订阅的用户列表
+仅 TranscriptionMode 为 1或者 TranscriptionMode 为无限上麦模式支持传入多个用户列表 
      * @return TargetUserIdList 机器人订阅的用户列表
+仅 TranscriptionMode 为 1或者 TranscriptionMode 为无限上麦模式支持传入多个用户列表
      */
     public String [] getTargetUserIdList() {
         return this.TargetUserIdList;
@@ -214,7 +217,9 @@ https://cloud.tencent.com/document/product/269/31999#app-.E7.AE.A1.E7.90.86.E5.9
 
     /**
      * Set 机器人订阅的用户列表
+仅 TranscriptionMode 为 1或者 TranscriptionMode 为无限上麦模式支持传入多个用户列表
      * @param TargetUserIdList 机器人订阅的用户列表
+仅 TranscriptionMode 为 1或者 TranscriptionMode 为无限上麦模式支持传入多个用户列表
      */
     public void setTargetUserIdList(String [] TargetUserIdList) {
         this.TargetUserIdList = TargetUserIdList;

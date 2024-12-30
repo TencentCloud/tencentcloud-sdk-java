@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class DescribeApmAgentResponse extends AbstractModel {
 
     /**
-    * Agent信息
-注意：此字段可能返回 null，表示取不到有效值。
+    * Agent 信息
     */
     @SerializedName("ApmAgent")
     @Expose
@@ -39,20 +38,16 @@ public class DescribeApmAgentResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Agent信息
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ApmAgent Agent信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get Agent 信息 
+     * @return ApmAgent Agent 信息
      */
     public ApmAgentInfo getApmAgent() {
         return this.ApmAgent;
     }
 
     /**
-     * Set Agent信息
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param ApmAgent Agent信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set Agent 信息
+     * @param ApmAgent Agent 信息
      */
     public void setApmAgent(ApmAgentInfo ApmAgent) {
         this.ApmAgent = ApmAgent;

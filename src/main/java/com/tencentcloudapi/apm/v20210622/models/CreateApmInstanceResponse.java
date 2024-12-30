@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class CreateApmInstanceResponse extends AbstractModel {
 
     /**
-    * 业务系统ID
-注意：此字段可能返回 null，表示取不到有效值。
+    * 业务系统 ID
     */
     @SerializedName("InstanceId")
     @Expose
@@ -39,20 +38,16 @@ public class CreateApmInstanceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 业务系统ID
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InstanceId 业务系统ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 业务系统 ID 
+     * @return InstanceId 业务系统 ID
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 业务系统ID
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param InstanceId 业务系统ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 业务系统 ID
+     * @param InstanceId 业务系统 ID
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

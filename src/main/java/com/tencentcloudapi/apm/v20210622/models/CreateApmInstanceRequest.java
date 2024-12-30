@@ -38,7 +38,7 @@ public class CreateApmInstanceRequest extends AbstractModel {
     private String Description;
 
     /**
-    * Trace数据保存时长，单位为天默认存储为3天
+    * Trace 数据保存时长，单位为天默认存储为3天
     */
     @SerializedName("TraceDuration")
     @Expose
@@ -66,7 +66,7 @@ public class CreateApmInstanceRequest extends AbstractModel {
     private Long PayMode;
 
     /**
-    * （0=付费版；1=tsf受限免费版；2=免费版）
+    * （0=付费版；1=tsf 受限免费版；2=免费版）
     */
     @SerializedName("Free")
     @Expose
@@ -105,16 +105,16 @@ public class CreateApmInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get Trace数据保存时长，单位为天默认存储为3天 
-     * @return TraceDuration Trace数据保存时长，单位为天默认存储为3天
+     * Get Trace 数据保存时长，单位为天默认存储为3天 
+     * @return TraceDuration Trace 数据保存时长，单位为天默认存储为3天
      */
     public Long getTraceDuration() {
         return this.TraceDuration;
     }
 
     /**
-     * Set Trace数据保存时长，单位为天默认存储为3天
-     * @param TraceDuration Trace数据保存时长，单位为天默认存储为3天
+     * Set Trace 数据保存时长，单位为天默认存储为3天
+     * @param TraceDuration Trace 数据保存时长，单位为天默认存储为3天
      */
     public void setTraceDuration(Long TraceDuration) {
         this.TraceDuration = TraceDuration;
@@ -169,16 +169,16 @@ public class CreateApmInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get （0=付费版；1=tsf受限免费版；2=免费版） 
-     * @return Free （0=付费版；1=tsf受限免费版；2=免费版）
+     * Get （0=付费版；1=tsf 受限免费版；2=免费版） 
+     * @return Free （0=付费版；1=tsf 受限免费版；2=免费版）
      */
     public Long getFree() {
         return this.Free;
     }
 
     /**
-     * Set （0=付费版；1=tsf受限免费版；2=免费版）
-     * @param Free （0=付费版；1=tsf受限免费版；2=免费版）
+     * Set （0=付费版；1=tsf 受限免费版；2=免费版）
+     * @param Free （0=付费版；1=tsf 受限免费版；2=免费版）
      */
     public void setFree(Long Free) {
         this.Free = Free;

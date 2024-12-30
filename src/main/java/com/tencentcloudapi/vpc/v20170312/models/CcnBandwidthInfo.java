@@ -25,7 +25,6 @@ public class CcnBandwidthInfo extends AbstractModel {
 
     /**
     * 带宽所属的云联网ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CcnId")
     @Expose
@@ -33,7 +32,6 @@ public class CcnBandwidthInfo extends AbstractModel {
 
     /**
     * 实例的创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CreatedTime")
     @Expose
@@ -41,7 +39,6 @@ public class CcnBandwidthInfo extends AbstractModel {
 
     /**
     * 实例的过期时间
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("ExpiredTime")
     @Expose
@@ -49,7 +46,6 @@ public class CcnBandwidthInfo extends AbstractModel {
 
     /**
     * 带宽实例的唯一ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RegionFlowControlId")
     @Expose
@@ -57,7 +53,6 @@ public class CcnBandwidthInfo extends AbstractModel {
 
     /**
     * 带宽是否自动续费的标记。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RenewFlag")
     @Expose
@@ -65,7 +60,6 @@ public class CcnBandwidthInfo extends AbstractModel {
 
     /**
     * 描述带宽的地域和限速上限信息。在地域间限速的情况下才会返回参数，出口限速模式不返回。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CcnRegionBandwidthLimit")
     @Expose
@@ -73,7 +67,6 @@ public class CcnBandwidthInfo extends AbstractModel {
 
     /**
     * 云市场实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("MarketId")
     @Expose
@@ -81,17 +74,28 @@ public class CcnBandwidthInfo extends AbstractModel {
 
     /**
     * 资源绑定的标签列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("TagSet")
     @Expose
     private Tag [] TagSet;
 
     /**
-     * Get 带宽所属的云联网ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+    * `true表示`Qos默认带宽；`false`表示非Qos默认带宽；
+    */
+    @SerializedName("DefaultQosBandwidthFlag")
+    @Expose
+    private Boolean DefaultQosBandwidthFlag;
+
+    /**
+    * 服务等级信息。
+    */
+    @SerializedName("QosLevel")
+    @Expose
+    private String QosLevel;
+
+    /**
+     * Get 带宽所属的云联网ID。 
      * @return CcnId 带宽所属的云联网ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCcnId() {
         return this.CcnId;
@@ -99,19 +103,15 @@ public class CcnBandwidthInfo extends AbstractModel {
 
     /**
      * Set 带宽所属的云联网ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CcnId 带宽所属的云联网ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCcnId(String CcnId) {
         this.CcnId = CcnId;
     }
 
     /**
-     * Get 实例的创建时间。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例的创建时间。 
      * @return CreatedTime 实例的创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCreatedTime() {
         return this.CreatedTime;
@@ -119,19 +119,15 @@ public class CcnBandwidthInfo extends AbstractModel {
 
     /**
      * Set 实例的创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CreatedTime 实例的创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCreatedTime(String CreatedTime) {
         this.CreatedTime = CreatedTime;
     }
 
     /**
-     * Get 实例的过期时间
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例的过期时间 
      * @return ExpiredTime 实例的过期时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getExpiredTime() {
         return this.ExpiredTime;
@@ -139,19 +135,15 @@ public class CcnBandwidthInfo extends AbstractModel {
 
     /**
      * Set 实例的过期时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExpiredTime 实例的过期时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setExpiredTime(String ExpiredTime) {
         this.ExpiredTime = ExpiredTime;
     }
 
     /**
-     * Get 带宽实例的唯一ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 带宽实例的唯一ID。 
      * @return RegionFlowControlId 带宽实例的唯一ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRegionFlowControlId() {
         return this.RegionFlowControlId;
@@ -159,19 +151,15 @@ public class CcnBandwidthInfo extends AbstractModel {
 
     /**
      * Set 带宽实例的唯一ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RegionFlowControlId 带宽实例的唯一ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRegionFlowControlId(String RegionFlowControlId) {
         this.RegionFlowControlId = RegionFlowControlId;
     }
 
     /**
-     * Get 带宽是否自动续费的标记。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 带宽是否自动续费的标记。 
      * @return RenewFlag 带宽是否自动续费的标记。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRenewFlag() {
         return this.RenewFlag;
@@ -179,19 +167,15 @@ public class CcnBandwidthInfo extends AbstractModel {
 
     /**
      * Set 带宽是否自动续费的标记。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RenewFlag 带宽是否自动续费的标记。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRenewFlag(String RenewFlag) {
         this.RenewFlag = RenewFlag;
     }
 
     /**
-     * Get 描述带宽的地域和限速上限信息。在地域间限速的情况下才会返回参数，出口限速模式不返回。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 描述带宽的地域和限速上限信息。在地域间限速的情况下才会返回参数，出口限速模式不返回。 
      * @return CcnRegionBandwidthLimit 描述带宽的地域和限速上限信息。在地域间限速的情况下才会返回参数，出口限速模式不返回。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CcnRegionBandwidthLimit getCcnRegionBandwidthLimit() {
         return this.CcnRegionBandwidthLimit;
@@ -199,19 +183,15 @@ public class CcnBandwidthInfo extends AbstractModel {
 
     /**
      * Set 描述带宽的地域和限速上限信息。在地域间限速的情况下才会返回参数，出口限速模式不返回。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CcnRegionBandwidthLimit 描述带宽的地域和限速上限信息。在地域间限速的情况下才会返回参数，出口限速模式不返回。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCcnRegionBandwidthLimit(CcnRegionBandwidthLimit CcnRegionBandwidthLimit) {
         this.CcnRegionBandwidthLimit = CcnRegionBandwidthLimit;
     }
 
     /**
-     * Get 云市场实例ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 云市场实例ID。 
      * @return MarketId 云市场实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getMarketId() {
         return this.MarketId;
@@ -219,19 +199,15 @@ public class CcnBandwidthInfo extends AbstractModel {
 
     /**
      * Set 云市场实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MarketId 云市场实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setMarketId(String MarketId) {
         this.MarketId = MarketId;
     }
 
     /**
-     * Get 资源绑定的标签列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 资源绑定的标签列表 
      * @return TagSet 资源绑定的标签列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Tag [] getTagSet() {
         return this.TagSet;
@@ -239,12 +215,42 @@ public class CcnBandwidthInfo extends AbstractModel {
 
     /**
      * Set 资源绑定的标签列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TagSet 资源绑定的标签列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTagSet(Tag [] TagSet) {
         this.TagSet = TagSet;
+    }
+
+    /**
+     * Get `true表示`Qos默认带宽；`false`表示非Qos默认带宽； 
+     * @return DefaultQosBandwidthFlag `true表示`Qos默认带宽；`false`表示非Qos默认带宽；
+     */
+    public Boolean getDefaultQosBandwidthFlag() {
+        return this.DefaultQosBandwidthFlag;
+    }
+
+    /**
+     * Set `true表示`Qos默认带宽；`false`表示非Qos默认带宽；
+     * @param DefaultQosBandwidthFlag `true表示`Qos默认带宽；`false`表示非Qos默认带宽；
+     */
+    public void setDefaultQosBandwidthFlag(Boolean DefaultQosBandwidthFlag) {
+        this.DefaultQosBandwidthFlag = DefaultQosBandwidthFlag;
+    }
+
+    /**
+     * Get 服务等级信息。 
+     * @return QosLevel 服务等级信息。
+     */
+    public String getQosLevel() {
+        return this.QosLevel;
+    }
+
+    /**
+     * Set 服务等级信息。
+     * @param QosLevel 服务等级信息。
+     */
+    public void setQosLevel(String QosLevel) {
+        this.QosLevel = QosLevel;
     }
 
     public CcnBandwidthInfo() {
@@ -282,6 +288,12 @@ public class CcnBandwidthInfo extends AbstractModel {
                 this.TagSet[i] = new Tag(source.TagSet[i]);
             }
         }
+        if (source.DefaultQosBandwidthFlag != null) {
+            this.DefaultQosBandwidthFlag = new Boolean(source.DefaultQosBandwidthFlag);
+        }
+        if (source.QosLevel != null) {
+            this.QosLevel = new String(source.QosLevel);
+        }
     }
 
 
@@ -297,6 +309,8 @@ public class CcnBandwidthInfo extends AbstractModel {
         this.setParamObj(map, prefix + "CcnRegionBandwidthLimit.", this.CcnRegionBandwidthLimit);
         this.setParamSimple(map, prefix + "MarketId", this.MarketId);
         this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
+        this.setParamSimple(map, prefix + "DefaultQosBandwidthFlag", this.DefaultQosBandwidthFlag);
+        this.setParamSimple(map, prefix + "QosLevel", this.QosLevel);
 
     }
 }

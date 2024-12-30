@@ -158,7 +158,6 @@ public class VpnConnection extends AbstractModel {
 
     /**
     * DPD探测开关。默认为0，表示关闭DPD探测。可选值：0（关闭），1（开启）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DpdEnable")
     @Expose
@@ -166,7 +165,6 @@ public class VpnConnection extends AbstractModel {
 
     /**
     * DPD超时时间。即探测确认对端不存在需要的时间。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DpdTimeout")
     @Expose
@@ -174,7 +172,6 @@ public class VpnConnection extends AbstractModel {
 
     /**
     * DPD超时后的动作。默认为clear。dpdEnable为1（开启）时有效。可取值为clear（断开）和restart（重试）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DpdAction")
     @Expose
@@ -189,7 +186,6 @@ public class VpnConnection extends AbstractModel {
 
     /**
     * 协商类型
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("NegotiationType")
     @Expose
@@ -197,7 +193,6 @@ public class VpnConnection extends AbstractModel {
 
     /**
     * Bgp配置信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BgpConfig")
     @Expose
@@ -205,7 +200,6 @@ public class VpnConnection extends AbstractModel {
 
     /**
     * Nqa配置信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("HealthCheckConfig")
     @Expose
@@ -516,10 +510,8 @@ public class VpnConnection extends AbstractModel {
     }
 
     /**
-     * Get DPD探测开关。默认为0，表示关闭DPD探测。可选值：0（关闭），1（开启）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get DPD探测开关。默认为0，表示关闭DPD探测。可选值：0（关闭），1（开启） 
      * @return DpdEnable DPD探测开关。默认为0，表示关闭DPD探测。可选值：0（关闭），1（开启）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDpdEnable() {
         return this.DpdEnable;
@@ -527,19 +519,15 @@ public class VpnConnection extends AbstractModel {
 
     /**
      * Set DPD探测开关。默认为0，表示关闭DPD探测。可选值：0（关闭），1（开启）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DpdEnable DPD探测开关。默认为0，表示关闭DPD探测。可选值：0（关闭），1（开启）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDpdEnable(Long DpdEnable) {
         this.DpdEnable = DpdEnable;
     }
 
     /**
-     * Get DPD超时时间。即探测确认对端不存在需要的时间。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get DPD超时时间。即探测确认对端不存在需要的时间。 
      * @return DpdTimeout DPD超时时间。即探测确认对端不存在需要的时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDpdTimeout() {
         return this.DpdTimeout;
@@ -547,19 +535,15 @@ public class VpnConnection extends AbstractModel {
 
     /**
      * Set DPD超时时间。即探测确认对端不存在需要的时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DpdTimeout DPD超时时间。即探测确认对端不存在需要的时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDpdTimeout(String DpdTimeout) {
         this.DpdTimeout = DpdTimeout;
     }
 
     /**
-     * Get DPD超时后的动作。默认为clear。dpdEnable为1（开启）时有效。可取值为clear（断开）和restart（重试）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get DPD超时后的动作。默认为clear。dpdEnable为1（开启）时有效。可取值为clear（断开）和restart（重试） 
      * @return DpdAction DPD超时后的动作。默认为clear。dpdEnable为1（开启）时有效。可取值为clear（断开）和restart（重试）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDpdAction() {
         return this.DpdAction;
@@ -567,9 +551,7 @@ public class VpnConnection extends AbstractModel {
 
     /**
      * Set DPD超时后的动作。默认为clear。dpdEnable为1（开启）时有效。可取值为clear（断开）和restart（重试）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DpdAction DPD超时后的动作。默认为clear。dpdEnable为1（开启）时有效。可取值为clear（断开）和restart（重试）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDpdAction(String DpdAction) {
         this.DpdAction = DpdAction;
@@ -592,10 +574,8 @@ public class VpnConnection extends AbstractModel {
     }
 
     /**
-     * Get 协商类型
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 协商类型 
      * @return NegotiationType 协商类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getNegotiationType() {
         return this.NegotiationType;
@@ -603,19 +583,15 @@ public class VpnConnection extends AbstractModel {
 
     /**
      * Set 协商类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NegotiationType 协商类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setNegotiationType(String NegotiationType) {
         this.NegotiationType = NegotiationType;
     }
 
     /**
-     * Get Bgp配置信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Bgp配置信息 
      * @return BgpConfig Bgp配置信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public BgpConfigAndAsn getBgpConfig() {
         return this.BgpConfig;
@@ -623,19 +599,15 @@ public class VpnConnection extends AbstractModel {
 
     /**
      * Set Bgp配置信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BgpConfig Bgp配置信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBgpConfig(BgpConfigAndAsn BgpConfig) {
         this.BgpConfig = BgpConfig;
     }
 
     /**
-     * Get Nqa配置信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get Nqa配置信息 
      * @return HealthCheckConfig Nqa配置信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public HealthCheckConfig getHealthCheckConfig() {
         return this.HealthCheckConfig;
@@ -643,9 +615,7 @@ public class VpnConnection extends AbstractModel {
 
     /**
      * Set Nqa配置信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HealthCheckConfig Nqa配置信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setHealthCheckConfig(HealthCheckConfig HealthCheckConfig) {
         this.HealthCheckConfig = HealthCheckConfig;

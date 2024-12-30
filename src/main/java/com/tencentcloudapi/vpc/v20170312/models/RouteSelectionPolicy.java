@@ -67,7 +67,6 @@ public class RouteSelectionPolicy extends AbstractModel {
 
     /**
     * 路由表描述。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Description")
     @Expose
@@ -184,10 +183,8 @@ public class RouteSelectionPolicy extends AbstractModel {
     }
 
     /**
-     * Get 路由表描述。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 路由表描述。 
      * @return Description 路由表描述。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDescription() {
         return this.Description;
@@ -195,9 +192,7 @@ public class RouteSelectionPolicy extends AbstractModel {
 
     /**
      * Set 路由表描述。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Description 路由表描述。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDescription(String Description) {
         this.Description = Description;

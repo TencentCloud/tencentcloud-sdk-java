@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeApmAgentRequest extends AbstractModel {
 
     /**
-    * 业务系统ID
+    * 业务系统 ID
     */
     @SerializedName("InstanceId")
     @Expose
@@ -59,16 +59,16 @@ public class DescribeApmAgentRequest extends AbstractModel {
     private String ReportMethod;
 
     /**
-     * Get 业务系统ID 
-     * @return InstanceId 业务系统ID
+     * Get 业务系统 ID 
+     * @return InstanceId 业务系统 ID
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 业务系统ID
-     * @param InstanceId 业务系统ID
+     * Set 业务系统 ID
+     * @param InstanceId 业务系统 ID
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

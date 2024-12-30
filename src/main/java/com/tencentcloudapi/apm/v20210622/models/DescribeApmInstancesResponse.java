@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class DescribeApmInstancesResponse extends AbstractModel {
 
     /**
-    * apm实例列表
-注意：此字段可能返回 null，表示取不到有效值。
+    * APM 业务系统列表
     */
     @SerializedName("Instances")
     @Expose
@@ -39,20 +38,16 @@ public class DescribeApmInstancesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get apm实例列表
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Instances apm实例列表
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get APM 业务系统列表 
+     * @return Instances APM 业务系统列表
      */
     public ApmInstanceDetail [] getInstances() {
         return this.Instances;
     }
 
     /**
-     * Set apm实例列表
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Instances apm实例列表
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set APM 业务系统列表
+     * @param Instances APM 业务系统列表
      */
     public void setInstances(ApmInstanceDetail [] Instances) {
         this.Instances = Instances;

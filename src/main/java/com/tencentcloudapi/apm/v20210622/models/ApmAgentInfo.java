@@ -24,24 +24,21 @@ import java.util.HashMap;
 public class ApmAgentInfo extends AbstractModel {
 
     /**
-    * Agent下载地址
-注意：此字段可能返回 null，表示取不到有效值。
+    * Agent 下载地址
     */
     @SerializedName("AgentDownloadURL")
     @Expose
     private String AgentDownloadURL;
 
     /**
-    * Collector上报地址
-注意：此字段可能返回 null，表示取不到有效值。
+    * Collector 上报地址
     */
     @SerializedName("CollectorURL")
     @Expose
     private String CollectorURL;
 
     /**
-    * Token信息
-注意：此字段可能返回 null，表示取不到有效值。
+    * Token 信息
     */
     @SerializedName("Token")
     @Expose
@@ -49,93 +46,76 @@ public class ApmAgentInfo extends AbstractModel {
 
     /**
     * 外网上报地址
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("PublicCollectorURL")
     @Expose
     private String PublicCollectorURL;
 
     /**
-    * 自研VPC上报地址
-注意：此字段可能返回 null，表示取不到有效值。
+    * 自研 VPC 上报地址
     */
     @SerializedName("InnerCollectorURL")
     @Expose
     private String InnerCollectorURL;
 
     /**
-    * 内网上报地址(Private Link上报地址)
-注意：此字段可能返回 null，表示取不到有效值。
+    * 内网上报地址( Private Link 上报地址)
     */
     @SerializedName("PrivateLinkCollectorURL")
     @Expose
     private String PrivateLinkCollectorURL;
 
     /**
-     * Get Agent下载地址
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return AgentDownloadURL Agent下载地址
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get Agent 下载地址 
+     * @return AgentDownloadURL Agent 下载地址
      */
     public String getAgentDownloadURL() {
         return this.AgentDownloadURL;
     }
 
     /**
-     * Set Agent下载地址
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param AgentDownloadURL Agent下载地址
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set Agent 下载地址
+     * @param AgentDownloadURL Agent 下载地址
      */
     public void setAgentDownloadURL(String AgentDownloadURL) {
         this.AgentDownloadURL = AgentDownloadURL;
     }
 
     /**
-     * Get Collector上报地址
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return CollectorURL Collector上报地址
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get Collector 上报地址 
+     * @return CollectorURL Collector 上报地址
      */
     public String getCollectorURL() {
         return this.CollectorURL;
     }
 
     /**
-     * Set Collector上报地址
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param CollectorURL Collector上报地址
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set Collector 上报地址
+     * @param CollectorURL Collector 上报地址
      */
     public void setCollectorURL(String CollectorURL) {
         this.CollectorURL = CollectorURL;
     }
 
     /**
-     * Get Token信息
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return Token Token信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get Token 信息 
+     * @return Token Token 信息
      */
     public String getToken() {
         return this.Token;
     }
 
     /**
-     * Set Token信息
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param Token Token信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set Token 信息
+     * @param Token Token 信息
      */
     public void setToken(String Token) {
         this.Token = Token;
     }
 
     /**
-     * Get 外网上报地址
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 外网上报地址 
      * @return PublicCollectorURL 外网上报地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getPublicCollectorURL() {
         return this.PublicCollectorURL;
@@ -143,49 +123,39 @@ public class ApmAgentInfo extends AbstractModel {
 
     /**
      * Set 外网上报地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PublicCollectorURL 外网上报地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setPublicCollectorURL(String PublicCollectorURL) {
         this.PublicCollectorURL = PublicCollectorURL;
     }
 
     /**
-     * Get 自研VPC上报地址
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return InnerCollectorURL 自研VPC上报地址
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 自研 VPC 上报地址 
+     * @return InnerCollectorURL 自研 VPC 上报地址
      */
     public String getInnerCollectorURL() {
         return this.InnerCollectorURL;
     }
 
     /**
-     * Set 自研VPC上报地址
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param InnerCollectorURL 自研VPC上报地址
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 自研 VPC 上报地址
+     * @param InnerCollectorURL 自研 VPC 上报地址
      */
     public void setInnerCollectorURL(String InnerCollectorURL) {
         this.InnerCollectorURL = InnerCollectorURL;
     }
 
     /**
-     * Get 内网上报地址(Private Link上报地址)
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return PrivateLinkCollectorURL 内网上报地址(Private Link上报地址)
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get 内网上报地址( Private Link 上报地址) 
+     * @return PrivateLinkCollectorURL 内网上报地址( Private Link 上报地址)
      */
     public String getPrivateLinkCollectorURL() {
         return this.PrivateLinkCollectorURL;
     }
 
     /**
-     * Set 内网上报地址(Private Link上报地址)
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param PrivateLinkCollectorURL 内网上报地址(Private Link上报地址)
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set 内网上报地址( Private Link 上报地址)
+     * @param PrivateLinkCollectorURL 内网上报地址( Private Link 上报地址)
      */
     public void setPrivateLinkCollectorURL(String PrivateLinkCollectorURL) {
         this.PrivateLinkCollectorURL = PrivateLinkCollectorURL;

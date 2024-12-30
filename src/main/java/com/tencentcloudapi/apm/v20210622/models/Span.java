@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class Span extends AbstractModel {
 
     /**
-    * Trace Id
-注意：此字段可能返回 null，表示取不到有效值。
+    * Trace ID
     */
     @SerializedName("TraceID")
     @Expose
@@ -33,7 +32,6 @@ public class Span extends AbstractModel {
 
     /**
     * 日志
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Logs")
     @Expose
@@ -41,7 +39,6 @@ public class Span extends AbstractModel {
 
     /**
     * 标签
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tags")
     @Expose
@@ -49,7 +46,6 @@ public class Span extends AbstractModel {
 
     /**
     * 上报应用服务信息
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Process")
     @Expose
@@ -57,15 +53,13 @@ public class Span extends AbstractModel {
 
     /**
     * 产生时间戳(毫秒)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Timestamp")
     @Expose
     private Long Timestamp;
 
     /**
-    * Span名称
-注意：此字段可能返回 null，表示取不到有效值。
+    * Span 名称
     */
     @SerializedName("OperationName")
     @Expose
@@ -73,7 +67,6 @@ public class Span extends AbstractModel {
 
     /**
     * 关联关系
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("References")
     @Expose
@@ -81,7 +74,6 @@ public class Span extends AbstractModel {
 
     /**
     * 产生时间戳(微秒)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartTime")
     @Expose
@@ -89,15 +81,13 @@ public class Span extends AbstractModel {
 
     /**
     * 持续耗时(微妙)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Duration")
     @Expose
     private Long Duration;
 
     /**
-    * Span Id
-注意：此字段可能返回 null，表示取不到有效值。
+    * Span ID
     */
     @SerializedName("SpanID")
     @Expose
@@ -105,45 +95,37 @@ public class Span extends AbstractModel {
 
     /**
     * 产生时间戳(毫秒)
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("StartTimeMillis")
     @Expose
     private Long StartTimeMillis;
 
     /**
-    * Parent Span Id
-注意：此字段可能返回 null，表示取不到有效值。
+    * Parent Span ID
     */
     @SerializedName("ParentSpanID")
     @Expose
     private String ParentSpanID;
 
     /**
-     * Get Trace Id
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return TraceID Trace Id
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get Trace ID 
+     * @return TraceID Trace ID
      */
     public String getTraceID() {
         return this.TraceID;
     }
 
     /**
-     * Set Trace Id
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param TraceID Trace Id
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set Trace ID
+     * @param TraceID Trace ID
      */
     public void setTraceID(String TraceID) {
         this.TraceID = TraceID;
     }
 
     /**
-     * Get 日志
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 日志 
      * @return Logs 日志
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SpanLog [] getLogs() {
         return this.Logs;
@@ -151,19 +133,15 @@ public class Span extends AbstractModel {
 
     /**
      * Set 日志
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Logs 日志
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLogs(SpanLog [] Logs) {
         this.Logs = Logs;
     }
 
     /**
-     * Get 标签
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 标签 
      * @return Tags 标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SpanTag [] getTags() {
         return this.Tags;
@@ -171,19 +149,15 @@ public class Span extends AbstractModel {
 
     /**
      * Set 标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tags 标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTags(SpanTag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get 上报应用服务信息
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 上报应用服务信息 
      * @return Process 上报应用服务信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SpanProcess getProcess() {
         return this.Process;
@@ -191,19 +165,15 @@ public class Span extends AbstractModel {
 
     /**
      * Set 上报应用服务信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Process 上报应用服务信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setProcess(SpanProcess Process) {
         this.Process = Process;
     }
 
     /**
-     * Get 产生时间戳(毫秒)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 产生时间戳(毫秒) 
      * @return Timestamp 产生时间戳(毫秒)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getTimestamp() {
         return this.Timestamp;
@@ -211,39 +181,31 @@ public class Span extends AbstractModel {
 
     /**
      * Set 产生时间戳(毫秒)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Timestamp 产生时间戳(毫秒)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTimestamp(Long Timestamp) {
         this.Timestamp = Timestamp;
     }
 
     /**
-     * Get Span名称
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return OperationName Span名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get Span 名称 
+     * @return OperationName Span 名称
      */
     public String getOperationName() {
         return this.OperationName;
     }
 
     /**
-     * Set Span名称
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param OperationName Span名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set Span 名称
+     * @param OperationName Span 名称
      */
     public void setOperationName(String OperationName) {
         this.OperationName = OperationName;
     }
 
     /**
-     * Get 关联关系
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 关联关系 
      * @return References 关联关系
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public SpanReference [] getReferences() {
         return this.References;
@@ -251,19 +213,15 @@ public class Span extends AbstractModel {
 
     /**
      * Set 关联关系
-注意：此字段可能返回 null，表示取不到有效值。
      * @param References 关联关系
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setReferences(SpanReference [] References) {
         this.References = References;
     }
 
     /**
-     * Get 产生时间戳(微秒)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 产生时间戳(微秒) 
      * @return StartTime 产生时间戳(微秒)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStartTime() {
         return this.StartTime;
@@ -271,19 +229,15 @@ public class Span extends AbstractModel {
 
     /**
      * Set 产生时间戳(微秒)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StartTime 产生时间戳(微秒)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get 持续耗时(微妙)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 持续耗时(微妙) 
      * @return Duration 持续耗时(微妙)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getDuration() {
         return this.Duration;
@@ -291,39 +245,31 @@ public class Span extends AbstractModel {
 
     /**
      * Set 持续耗时(微妙)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Duration 持续耗时(微妙)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDuration(Long Duration) {
         this.Duration = Duration;
     }
 
     /**
-     * Get Span Id
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return SpanID Span Id
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get Span ID 
+     * @return SpanID Span ID
      */
     public String getSpanID() {
         return this.SpanID;
     }
 
     /**
-     * Set Span Id
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param SpanID Span Id
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set Span ID
+     * @param SpanID Span ID
      */
     public void setSpanID(String SpanID) {
         this.SpanID = SpanID;
     }
 
     /**
-     * Get 产生时间戳(毫秒)
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 产生时间戳(毫秒) 
      * @return StartTimeMillis 产生时间戳(毫秒)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getStartTimeMillis() {
         return this.StartTimeMillis;
@@ -331,29 +277,23 @@ public class Span extends AbstractModel {
 
     /**
      * Set 产生时间戳(毫秒)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StartTimeMillis 产生时间戳(毫秒)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setStartTimeMillis(Long StartTimeMillis) {
         this.StartTimeMillis = StartTimeMillis;
     }
 
     /**
-     * Get Parent Span Id
-注意：此字段可能返回 null，表示取不到有效值。 
-     * @return ParentSpanID Parent Span Id
-注意：此字段可能返回 null，表示取不到有效值。
+     * Get Parent Span ID 
+     * @return ParentSpanID Parent Span ID
      */
     public String getParentSpanID() {
         return this.ParentSpanID;
     }
 
     /**
-     * Set Parent Span Id
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param ParentSpanID Parent Span Id
-注意：此字段可能返回 null，表示取不到有效值。
+     * Set Parent Span ID
+     * @param ParentSpanID Parent Span ID
      */
     public void setParentSpanID(String ParentSpanID) {
         this.ParentSpanID = ParentSpanID;

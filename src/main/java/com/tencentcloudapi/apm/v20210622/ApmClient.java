@@ -61,7 +61,7 @@ public class ApmClient extends AbstractClient{
     }
 
     /**
-     *APM实例列表拉取
+     *拉取 APM 业务系统列表
      * @param req DescribeApmInstancesRequest
      * @return DescribeApmInstancesResponse
      * @throws TencentCloudSDKException

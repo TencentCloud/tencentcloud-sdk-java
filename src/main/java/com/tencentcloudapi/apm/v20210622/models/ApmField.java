@@ -25,7 +25,6 @@ public class ApmField extends AbstractModel {
 
     /**
     * 昨日同比指标值，已弃用，不建议使用
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CompareVal")
     @Expose
@@ -41,7 +40,6 @@ public class ApmField extends AbstractModel {
 
     /**
     * 指标值
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Value")
     @Expose
@@ -49,7 +47,6 @@ public class ApmField extends AbstractModel {
 
     /**
     * 指标所对应的单位
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Unit")
     @Expose
@@ -71,10 +68,8 @@ public class ApmField extends AbstractModel {
     private APMKV [] LastPeriodValue;
 
     /**
-     * Get 昨日同比指标值，已弃用，不建议使用
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 昨日同比指标值，已弃用，不建议使用 
      * @return CompareVal 昨日同比指标值，已弃用，不建议使用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getCompareVal() {
         return this.CompareVal;
@@ -82,9 +77,7 @@ public class ApmField extends AbstractModel {
 
     /**
      * Set 昨日同比指标值，已弃用，不建议使用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CompareVal 昨日同比指标值，已弃用，不建议使用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCompareVal(String CompareVal) {
         this.CompareVal = CompareVal;
@@ -111,10 +104,8 @@ public class ApmField extends AbstractModel {
     }
 
     /**
-     * Get 指标值
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 指标值 
      * @return Value 指标值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float getValue() {
         return this.Value;
@@ -122,19 +113,15 @@ public class ApmField extends AbstractModel {
 
     /**
      * Set 指标值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Value 指标值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setValue(Float Value) {
         this.Value = Value;
     }
 
     /**
-     * Get 指标所对应的单位
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 指标所对应的单位 
      * @return Unit 指标所对应的单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getUnit() {
         return this.Unit;
@@ -142,9 +129,7 @@ public class ApmField extends AbstractModel {
 
     /**
      * Set 指标所对应的单位
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Unit 指标所对应的单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setUnit(String Unit) {
         this.Unit = Unit;

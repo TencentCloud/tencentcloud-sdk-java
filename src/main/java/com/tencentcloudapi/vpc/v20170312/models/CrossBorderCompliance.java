@@ -179,7 +179,6 @@ public class CrossBorderCompliance extends AbstractModel {
 
     /**
     * 法定代表人身份证号。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LegalPersonId")
     @Expose
@@ -187,7 +186,6 @@ public class CrossBorderCompliance extends AbstractModel {
 
     /**
     * 法定代表人身份证。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LegalPersonIdCard")
     @Expose
@@ -546,10 +544,8 @@ public class CrossBorderCompliance extends AbstractModel {
     }
 
     /**
-     * Get 法定代表人身份证号。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 法定代表人身份证号。 
      * @return LegalPersonId 法定代表人身份证号。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLegalPersonId() {
         return this.LegalPersonId;
@@ -557,19 +553,15 @@ public class CrossBorderCompliance extends AbstractModel {
 
     /**
      * Set 法定代表人身份证号。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LegalPersonId 法定代表人身份证号。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLegalPersonId(String LegalPersonId) {
         this.LegalPersonId = LegalPersonId;
     }
 
     /**
-     * Get 法定代表人身份证。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 法定代表人身份证。 
      * @return LegalPersonIdCard 法定代表人身份证。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLegalPersonIdCard() {
         return this.LegalPersonIdCard;
@@ -577,9 +569,7 @@ public class CrossBorderCompliance extends AbstractModel {
 
     /**
      * Set 法定代表人身份证。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LegalPersonIdCard 法定代表人身份证。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLegalPersonIdCard(String LegalPersonIdCard) {
         this.LegalPersonIdCard = LegalPersonIdCard;

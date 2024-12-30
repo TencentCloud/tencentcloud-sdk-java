@@ -200,6 +200,44 @@ public class CreateConsoleLoginUrlRequest extends AbstractModel {
     private Boolean AutoActive;
 
     /**
+    * 营业执照正面照（支持PNG或JPG格式）需以base64格式提供，且文件大小不得超过5MB。
+    */
+    @SerializedName("BusinessLicense")
+    @Expose
+    private String BusinessLicense;
+
+    /**
+    * 组织机构企业注册地址。 请确认该企业注册地址与企业营业执照中注册的地址一致。	
+    */
+    @SerializedName("ProxyAddress")
+    @Expose
+    private String ProxyAddress;
+
+    /**
+    * 组织机构法人的姓名。 请确认该企业统一社会信用代码与企业营业执照中注册的法人姓名一致。	
+    */
+    @SerializedName("ProxyLegalName")
+    @Expose
+    private String ProxyLegalName;
+
+    /**
+    * 授权书(PNG或JPG或PDF) base64格式, 大小不超过8M 。
+ p.s. 如果上传授权书 ，需遵循以下条件 
+1. 超管的信息（超管姓名，超管手机号）必须为必填参数。 
+2. 认证方式AuthorizationTypes必须只能是上传授权书方式	
+    */
+    @SerializedName("PowerOfAttorneys")
+    @Expose
+    private String [] PowerOfAttorneys;
+
+    /**
+    * 企业认证时个性化能力信息
+    */
+    @SerializedName("OrganizationAuthorizationOptions")
+    @Expose
+    private OrganizationAuthorizationOptions OrganizationAuthorizationOptions;
+
+    /**
      * Get 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容
 此接口下面信息必填。
 <ul>
@@ -715,6 +753,98 @@ public class CreateConsoleLoginUrlRequest extends AbstractModel {
         this.AutoActive = AutoActive;
     }
 
+    /**
+     * Get 营业执照正面照（支持PNG或JPG格式）需以base64格式提供，且文件大小不得超过5MB。 
+     * @return BusinessLicense 营业执照正面照（支持PNG或JPG格式）需以base64格式提供，且文件大小不得超过5MB。
+     */
+    public String getBusinessLicense() {
+        return this.BusinessLicense;
+    }
+
+    /**
+     * Set 营业执照正面照（支持PNG或JPG格式）需以base64格式提供，且文件大小不得超过5MB。
+     * @param BusinessLicense 营业执照正面照（支持PNG或JPG格式）需以base64格式提供，且文件大小不得超过5MB。
+     */
+    public void setBusinessLicense(String BusinessLicense) {
+        this.BusinessLicense = BusinessLicense;
+    }
+
+    /**
+     * Get 组织机构企业注册地址。 请确认该企业注册地址与企业营业执照中注册的地址一致。	 
+     * @return ProxyAddress 组织机构企业注册地址。 请确认该企业注册地址与企业营业执照中注册的地址一致。	
+     */
+    public String getProxyAddress() {
+        return this.ProxyAddress;
+    }
+
+    /**
+     * Set 组织机构企业注册地址。 请确认该企业注册地址与企业营业执照中注册的地址一致。	
+     * @param ProxyAddress 组织机构企业注册地址。 请确认该企业注册地址与企业营业执照中注册的地址一致。	
+     */
+    public void setProxyAddress(String ProxyAddress) {
+        this.ProxyAddress = ProxyAddress;
+    }
+
+    /**
+     * Get 组织机构法人的姓名。 请确认该企业统一社会信用代码与企业营业执照中注册的法人姓名一致。	 
+     * @return ProxyLegalName 组织机构法人的姓名。 请确认该企业统一社会信用代码与企业营业执照中注册的法人姓名一致。	
+     */
+    public String getProxyLegalName() {
+        return this.ProxyLegalName;
+    }
+
+    /**
+     * Set 组织机构法人的姓名。 请确认该企业统一社会信用代码与企业营业执照中注册的法人姓名一致。	
+     * @param ProxyLegalName 组织机构法人的姓名。 请确认该企业统一社会信用代码与企业营业执照中注册的法人姓名一致。	
+     */
+    public void setProxyLegalName(String ProxyLegalName) {
+        this.ProxyLegalName = ProxyLegalName;
+    }
+
+    /**
+     * Get 授权书(PNG或JPG或PDF) base64格式, 大小不超过8M 。
+ p.s. 如果上传授权书 ，需遵循以下条件 
+1. 超管的信息（超管姓名，超管手机号）必须为必填参数。 
+2. 认证方式AuthorizationTypes必须只能是上传授权书方式	 
+     * @return PowerOfAttorneys 授权书(PNG或JPG或PDF) base64格式, 大小不超过8M 。
+ p.s. 如果上传授权书 ，需遵循以下条件 
+1. 超管的信息（超管姓名，超管手机号）必须为必填参数。 
+2. 认证方式AuthorizationTypes必须只能是上传授权书方式	
+     */
+    public String [] getPowerOfAttorneys() {
+        return this.PowerOfAttorneys;
+    }
+
+    /**
+     * Set 授权书(PNG或JPG或PDF) base64格式, 大小不超过8M 。
+ p.s. 如果上传授权书 ，需遵循以下条件 
+1. 超管的信息（超管姓名，超管手机号）必须为必填参数。 
+2. 认证方式AuthorizationTypes必须只能是上传授权书方式	
+     * @param PowerOfAttorneys 授权书(PNG或JPG或PDF) base64格式, 大小不超过8M 。
+ p.s. 如果上传授权书 ，需遵循以下条件 
+1. 超管的信息（超管姓名，超管手机号）必须为必填参数。 
+2. 认证方式AuthorizationTypes必须只能是上传授权书方式	
+     */
+    public void setPowerOfAttorneys(String [] PowerOfAttorneys) {
+        this.PowerOfAttorneys = PowerOfAttorneys;
+    }
+
+    /**
+     * Get 企业认证时个性化能力信息 
+     * @return OrganizationAuthorizationOptions 企业认证时个性化能力信息
+     */
+    public OrganizationAuthorizationOptions getOrganizationAuthorizationOptions() {
+        return this.OrganizationAuthorizationOptions;
+    }
+
+    /**
+     * Set 企业认证时个性化能力信息
+     * @param OrganizationAuthorizationOptions 企业认证时个性化能力信息
+     */
+    public void setOrganizationAuthorizationOptions(OrganizationAuthorizationOptions OrganizationAuthorizationOptions) {
+        this.OrganizationAuthorizationOptions = OrganizationAuthorizationOptions;
+    }
+
     public CreateConsoleLoginUrlRequest() {
     }
 
@@ -774,6 +904,24 @@ public class CreateConsoleLoginUrlRequest extends AbstractModel {
         if (source.AutoActive != null) {
             this.AutoActive = new Boolean(source.AutoActive);
         }
+        if (source.BusinessLicense != null) {
+            this.BusinessLicense = new String(source.BusinessLicense);
+        }
+        if (source.ProxyAddress != null) {
+            this.ProxyAddress = new String(source.ProxyAddress);
+        }
+        if (source.ProxyLegalName != null) {
+            this.ProxyLegalName = new String(source.ProxyLegalName);
+        }
+        if (source.PowerOfAttorneys != null) {
+            this.PowerOfAttorneys = new String[source.PowerOfAttorneys.length];
+            for (int i = 0; i < source.PowerOfAttorneys.length; i++) {
+                this.PowerOfAttorneys[i] = new String(source.PowerOfAttorneys[i]);
+            }
+        }
+        if (source.OrganizationAuthorizationOptions != null) {
+            this.OrganizationAuthorizationOptions = new OrganizationAuthorizationOptions(source.OrganizationAuthorizationOptions);
+        }
     }
 
 
@@ -797,6 +945,11 @@ public class CreateConsoleLoginUrlRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "AutoJumpUrl", this.AutoJumpUrl);
         this.setParamSimple(map, prefix + "TopNavigationStatus", this.TopNavigationStatus);
         this.setParamSimple(map, prefix + "AutoActive", this.AutoActive);
+        this.setParamSimple(map, prefix + "BusinessLicense", this.BusinessLicense);
+        this.setParamSimple(map, prefix + "ProxyAddress", this.ProxyAddress);
+        this.setParamSimple(map, prefix + "ProxyLegalName", this.ProxyLegalName);
+        this.setParamArraySimple(map, prefix + "PowerOfAttorneys.", this.PowerOfAttorneys);
+        this.setParamObj(map, prefix + "OrganizationAuthorizationOptions.", this.OrganizationAuthorizationOptions);
 
     }
 }

@@ -23,6 +23,29 @@ import java.util.HashMap;
 
 public class CcnInstanceInfo extends AbstractModel {
 
+    /**
+    * 云联网唯一ID。
+    */
+    @SerializedName("CcnId")
+    @Expose
+    private String CcnId;
+
+    /**
+     * Get 云联网唯一ID。 
+     * @return CcnId 云联网唯一ID。
+     */
+    public String getCcnId() {
+        return this.CcnId;
+    }
+
+    /**
+     * Set 云联网唯一ID。
+     * @param CcnId 云联网唯一ID。
+     */
+    public void setCcnId(String CcnId) {
+        this.CcnId = CcnId;
+    }
+
     public CcnInstanceInfo() {
     }
 
@@ -31,6 +54,9 @@ public class CcnInstanceInfo extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public CcnInstanceInfo(CcnInstanceInfo source) {
+        if (source.CcnId != null) {
+            this.CcnId = new String(source.CcnId);
+        }
     }
 
 
@@ -38,6 +64,7 @@ public class CcnInstanceInfo extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "CcnId", this.CcnId);
 
     }
 }

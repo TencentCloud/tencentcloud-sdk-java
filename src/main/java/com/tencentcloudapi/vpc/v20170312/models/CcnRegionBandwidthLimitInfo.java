@@ -25,7 +25,6 @@ public class CcnRegionBandwidthLimitInfo extends AbstractModel {
 
     /**
     * 源地域，例如：ap-shanghai
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("SourceRegion")
     @Expose
@@ -33,7 +32,6 @@ public class CcnRegionBandwidthLimitInfo extends AbstractModel {
 
     /**
     * 目的地域， 例如：ap-shanghai
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DestinationRegion")
     @Expose
@@ -41,17 +39,14 @@ public class CcnRegionBandwidthLimitInfo extends AbstractModel {
 
     /**
     * 出带宽上限，单位：Mbps。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("BandwidthLimit")
     @Expose
     private Long BandwidthLimit;
 
     /**
-     * Get 源地域，例如：ap-shanghai
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 源地域，例如：ap-shanghai 
      * @return SourceRegion 源地域，例如：ap-shanghai
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getSourceRegion() {
         return this.SourceRegion;
@@ -59,19 +54,15 @@ public class CcnRegionBandwidthLimitInfo extends AbstractModel {
 
     /**
      * Set 源地域，例如：ap-shanghai
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SourceRegion 源地域，例如：ap-shanghai
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setSourceRegion(String SourceRegion) {
         this.SourceRegion = SourceRegion;
     }
 
     /**
-     * Get 目的地域， 例如：ap-shanghai
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 目的地域， 例如：ap-shanghai 
      * @return DestinationRegion 目的地域， 例如：ap-shanghai
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getDestinationRegion() {
         return this.DestinationRegion;
@@ -79,19 +70,15 @@ public class CcnRegionBandwidthLimitInfo extends AbstractModel {
 
     /**
      * Set 目的地域， 例如：ap-shanghai
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DestinationRegion 目的地域， 例如：ap-shanghai
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDestinationRegion(String DestinationRegion) {
         this.DestinationRegion = DestinationRegion;
     }
 
     /**
-     * Get 出带宽上限，单位：Mbps。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 出带宽上限，单位：Mbps。 
      * @return BandwidthLimit 出带宽上限，单位：Mbps。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Long getBandwidthLimit() {
         return this.BandwidthLimit;
@@ -99,9 +86,7 @@ public class CcnRegionBandwidthLimitInfo extends AbstractModel {
 
     /**
      * Set 出带宽上限，单位：Mbps。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BandwidthLimit 出带宽上限，单位：Mbps。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setBandwidthLimit(Long BandwidthLimit) {
         this.BandwidthLimit = BandwidthLimit;

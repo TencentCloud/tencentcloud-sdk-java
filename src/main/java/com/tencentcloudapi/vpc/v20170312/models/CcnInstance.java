@@ -57,7 +57,6 @@ public class CcnInstance extends AbstractModel {
 
     /**
     * 实例关联的路由表ID。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("RouteTableId")
     @Expose
@@ -65,7 +64,6 @@ public class CcnInstance extends AbstractModel {
 
     /**
     * 实例付费方式
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("OrderType")
     @Expose
@@ -152,10 +150,8 @@ public class CcnInstance extends AbstractModel {
     }
 
     /**
-     * Get 实例关联的路由表ID。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例关联的路由表ID。 
      * @return RouteTableId 实例关联的路由表ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getRouteTableId() {
         return this.RouteTableId;
@@ -163,19 +159,15 @@ public class CcnInstance extends AbstractModel {
 
     /**
      * Set 实例关联的路由表ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RouteTableId 实例关联的路由表ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRouteTableId(String RouteTableId) {
         this.RouteTableId = RouteTableId;
     }
 
     /**
-     * Get 实例付费方式
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 实例付费方式 
      * @return OrderType 实例付费方式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getOrderType() {
         return this.OrderType;
@@ -183,9 +175,7 @@ public class CcnInstance extends AbstractModel {
 
     /**
      * Set 实例付费方式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OrderType 实例付费方式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setOrderType(String OrderType) {
         this.OrderType = OrderType;

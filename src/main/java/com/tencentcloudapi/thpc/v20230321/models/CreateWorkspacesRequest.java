@@ -45,7 +45,7 @@ public class CreateWorkspacesRequest extends AbstractModel {
     private SpaceChargePrepaid SpaceChargePrepaid;
 
     /**
-    * 工作空间计费类型
+    * 工作空间计费类型，包括：PREPAID，UNDERWRITE。工作空间计费类型，包括：PREPAID，UNDERWRITE。
     */
     @SerializedName("SpaceChargeType")
     @Expose
@@ -226,16 +226,16 @@ public class CreateWorkspacesRequest extends AbstractModel {
     }
 
     /**
-     * Get 工作空间计费类型 
-     * @return SpaceChargeType 工作空间计费类型
+     * Get 工作空间计费类型，包括：PREPAID，UNDERWRITE。工作空间计费类型，包括：PREPAID，UNDERWRITE。 
+     * @return SpaceChargeType 工作空间计费类型，包括：PREPAID，UNDERWRITE。工作空间计费类型，包括：PREPAID，UNDERWRITE。
      */
     public String getSpaceChargeType() {
         return this.SpaceChargeType;
     }
 
     /**
-     * Set 工作空间计费类型
-     * @param SpaceChargeType 工作空间计费类型
+     * Set 工作空间计费类型，包括：PREPAID，UNDERWRITE。工作空间计费类型，包括：PREPAID，UNDERWRITE。
+     * @param SpaceChargeType 工作空间计费类型，包括：PREPAID，UNDERWRITE。工作空间计费类型，包括：PREPAID，UNDERWRITE。
      */
     public void setSpaceChargeType(String SpaceChargeType) {
         this.SpaceChargeType = SpaceChargeType;

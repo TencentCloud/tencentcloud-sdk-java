@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ApmApplicationConfigView extends AbstractModel {
 
     /**
-    * 业务系统ID	
+    * 业务系统 ID
     */
     @SerializedName("InstanceKey")
     @Expose
@@ -52,7 +52,7 @@ public class ApmApplicationConfigView extends AbstractModel {
     private String ExceptionFilter;
 
     /**
-    * HTTP状态码过滤
+    * HTTP 状态码过滤
     */
     @SerializedName("ErrorCodeFilter")
     @Expose
@@ -60,35 +60,34 @@ public class ApmApplicationConfigView extends AbstractModel {
 
     /**
     * 应用诊断开关（已废弃）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("EventEnable")
     @Expose
     private Boolean EventEnable;
 
     /**
-    * URL收敛开关 0 关 1 开
+    * URL 收敛开关 0 关 1 开
     */
     @SerializedName("UrlConvergenceSwitch")
     @Expose
     private Long UrlConvergenceSwitch;
 
     /**
-    * URL收敛阈值	
+    * URL 收敛阈值	
     */
     @SerializedName("UrlConvergenceThreshold")
     @Expose
     private Long UrlConvergenceThreshold;
 
     /**
-    * URL收敛规则正则	
+    * URL 收敛规则正则	
     */
     @SerializedName("UrlConvergence")
     @Expose
     private String UrlConvergence;
 
     /**
-    * URL排除规则正则
+    * URL 排除规则正则
     */
     @SerializedName("UrlExclude")
     @Expose
@@ -103,7 +102,6 @@ public class ApmApplicationConfigView extends AbstractModel {
 
     /**
     * 日志源	
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("LogSource")
     @Expose
@@ -146,7 +144,6 @@ public class ApmApplicationConfigView extends AbstractModel {
 
     /**
     * 组件列表开关（已废弃）
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("InstrumentList")
     @Expose
@@ -160,16 +157,16 @@ public class ApmApplicationConfigView extends AbstractModel {
     private Boolean TraceSquash;
 
     /**
-     * Get 业务系统ID	 
-     * @return InstanceKey 业务系统ID	
+     * Get 业务系统 ID 
+     * @return InstanceKey 业务系统 ID
      */
     public String getInstanceKey() {
         return this.InstanceKey;
     }
 
     /**
-     * Set 业务系统ID	
-     * @param InstanceKey 业务系统ID	
+     * Set 业务系统 ID
+     * @param InstanceKey 业务系统 ID
      */
     public void setInstanceKey(String InstanceKey) {
         this.InstanceKey = InstanceKey;
@@ -224,26 +221,24 @@ public class ApmApplicationConfigView extends AbstractModel {
     }
 
     /**
-     * Get HTTP状态码过滤 
-     * @return ErrorCodeFilter HTTP状态码过滤
+     * Get HTTP 状态码过滤 
+     * @return ErrorCodeFilter HTTP 状态码过滤
      */
     public String getErrorCodeFilter() {
         return this.ErrorCodeFilter;
     }
 
     /**
-     * Set HTTP状态码过滤
-     * @param ErrorCodeFilter HTTP状态码过滤
+     * Set HTTP 状态码过滤
+     * @param ErrorCodeFilter HTTP 状态码过滤
      */
     public void setErrorCodeFilter(String ErrorCodeFilter) {
         this.ErrorCodeFilter = ErrorCodeFilter;
     }
 
     /**
-     * Get 应用诊断开关（已废弃）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 应用诊断开关（已废弃） 
      * @return EventEnable 应用诊断开关（已废弃）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Boolean getEventEnable() {
         return this.EventEnable;
@@ -251,73 +246,71 @@ public class ApmApplicationConfigView extends AbstractModel {
 
     /**
      * Set 应用诊断开关（已废弃）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EventEnable 应用诊断开关（已废弃）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setEventEnable(Boolean EventEnable) {
         this.EventEnable = EventEnable;
     }
 
     /**
-     * Get URL收敛开关 0 关 1 开 
-     * @return UrlConvergenceSwitch URL收敛开关 0 关 1 开
+     * Get URL 收敛开关 0 关 1 开 
+     * @return UrlConvergenceSwitch URL 收敛开关 0 关 1 开
      */
     public Long getUrlConvergenceSwitch() {
         return this.UrlConvergenceSwitch;
     }
 
     /**
-     * Set URL收敛开关 0 关 1 开
-     * @param UrlConvergenceSwitch URL收敛开关 0 关 1 开
+     * Set URL 收敛开关 0 关 1 开
+     * @param UrlConvergenceSwitch URL 收敛开关 0 关 1 开
      */
     public void setUrlConvergenceSwitch(Long UrlConvergenceSwitch) {
         this.UrlConvergenceSwitch = UrlConvergenceSwitch;
     }
 
     /**
-     * Get URL收敛阈值	 
-     * @return UrlConvergenceThreshold URL收敛阈值	
+     * Get URL 收敛阈值	 
+     * @return UrlConvergenceThreshold URL 收敛阈值	
      */
     public Long getUrlConvergenceThreshold() {
         return this.UrlConvergenceThreshold;
     }
 
     /**
-     * Set URL收敛阈值	
-     * @param UrlConvergenceThreshold URL收敛阈值	
+     * Set URL 收敛阈值	
+     * @param UrlConvergenceThreshold URL 收敛阈值	
      */
     public void setUrlConvergenceThreshold(Long UrlConvergenceThreshold) {
         this.UrlConvergenceThreshold = UrlConvergenceThreshold;
     }
 
     /**
-     * Get URL收敛规则正则	 
-     * @return UrlConvergence URL收敛规则正则	
+     * Get URL 收敛规则正则	 
+     * @return UrlConvergence URL 收敛规则正则	
      */
     public String getUrlConvergence() {
         return this.UrlConvergence;
     }
 
     /**
-     * Set URL收敛规则正则	
-     * @param UrlConvergence URL收敛规则正则	
+     * Set URL 收敛规则正则	
+     * @param UrlConvergence URL 收敛规则正则	
      */
     public void setUrlConvergence(String UrlConvergence) {
         this.UrlConvergence = UrlConvergence;
     }
 
     /**
-     * Get URL排除规则正则 
-     * @return UrlExclude URL排除规则正则
+     * Get URL 排除规则正则 
+     * @return UrlExclude URL 排除规则正则
      */
     public String getUrlExclude() {
         return this.UrlExclude;
     }
 
     /**
-     * Set URL排除规则正则
-     * @param UrlExclude URL排除规则正则
+     * Set URL 排除规则正则
+     * @param UrlExclude URL 排除规则正则
      */
     public void setUrlExclude(String UrlExclude) {
         this.UrlExclude = UrlExclude;
@@ -340,10 +333,8 @@ public class ApmApplicationConfigView extends AbstractModel {
     }
 
     /**
-     * Get 日志源	
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 日志源	 
      * @return LogSource 日志源	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public String getLogSource() {
         return this.LogSource;
@@ -351,9 +342,7 @@ public class ApmApplicationConfigView extends AbstractModel {
 
     /**
      * Set 日志源	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LogSource 日志源	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setLogSource(String LogSource) {
         this.LogSource = LogSource;
@@ -440,10 +429,8 @@ public class ApmApplicationConfigView extends AbstractModel {
     }
 
     /**
-     * Get 组件列表开关（已废弃）
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 组件列表开关（已废弃） 
      * @return InstrumentList 组件列表开关（已废弃）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Instrument [] getInstrumentList() {
         return this.InstrumentList;
@@ -451,9 +438,7 @@ public class ApmApplicationConfigView extends AbstractModel {
 
     /**
      * Set 组件列表开关（已废弃）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstrumentList 组件列表开关（已废弃）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setInstrumentList(Instrument [] InstrumentList) {
         this.InstrumentList = InstrumentList;

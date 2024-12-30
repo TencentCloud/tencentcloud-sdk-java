@@ -126,6 +126,8 @@ public class CreateOrganizationAuthUrlRequest extends AbstractModel {
 
     /**
     * 对方打开链接认证时，法人姓名是否要与接口传递上来的保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul>
+
+p.s. 仅在法人姓名不为空时有效
     */
     @SerializedName("LegalNameSame")
     @Expose
@@ -133,6 +135,8 @@ public class CreateOrganizationAuthUrlRequest extends AbstractModel {
 
     /**
     * 对方打开链接认证时，认证人姓名是否要与接口传递上来的保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul>
+
+p.s. 仅在认证人姓名不为空时有效
     */
     @SerializedName("AdminNameSame")
     @Expose
@@ -140,6 +144,9 @@ public class CreateOrganizationAuthUrlRequest extends AbstractModel {
 
     /**
     * 对方打开链接认证时，认证人居民身份证件号是否要与接口传递上来的保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul>
+
+p.s. 仅在认证人身份证号不为空时有效
+
     */
     @SerializedName("AdminIdCardNumberSame")
     @Expose
@@ -150,6 +157,8 @@ public class CreateOrganizationAuthUrlRequest extends AbstractModel {
 <li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li>
 <li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li>
 </ul>
+
+p.s. 仅在认证人手机号不为空时有效
     */
     @SerializedName("AdminMobileSame")
     @Expose
@@ -157,6 +166,9 @@ public class CreateOrganizationAuthUrlRequest extends AbstractModel {
 
     /**
     * 对方打开链接认证时，企业名称是否要与接口传递上来的保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul>
+
+
+p.s. 仅在企业名称不为空时有效
     */
     @SerializedName("OrganizationNameSame")
     @Expose
@@ -194,6 +206,17 @@ public class CreateOrganizationAuthUrlRequest extends AbstractModel {
     @SerializedName("Initialization")
     @Expose
     private Long [] Initialization;
+
+    /**
+    * 授权书(PNG或JPG或PDF) base64格式, 大小不超过8M 。 
+授权书可以通过接口[生成企业授权书](https://qian.tencent.com/developers/companyApis/organizations/CreateOrganizationAuthFile) 来获得。
+p.s. 如果上传授权书 ，需遵循以下条件 
+1.  超管的信息（超管姓名，超管手机号）必须为必填参数。
+2.  认证方式AuthorizationTypes必须只能是上传授权书方式 
+    */
+    @SerializedName("PowerOfAttorneys")
+    @Expose
+    private String [] PowerOfAttorneys;
 
     /**
      * Get 操作人信息 
@@ -456,8 +479,12 @@ public class CreateOrganizationAuthUrlRequest extends AbstractModel {
     }
 
     /**
-     * Get 对方打开链接认证时，法人姓名是否要与接口传递上来的保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul> 
+     * Get 对方打开链接认证时，法人姓名是否要与接口传递上来的保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul>
+
+p.s. 仅在法人姓名不为空时有效 
      * @return LegalNameSame 对方打开链接认证时，法人姓名是否要与接口传递上来的保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul>
+
+p.s. 仅在法人姓名不为空时有效
      */
     public Boolean getLegalNameSame() {
         return this.LegalNameSame;
@@ -465,15 +492,23 @@ public class CreateOrganizationAuthUrlRequest extends AbstractModel {
 
     /**
      * Set 对方打开链接认证时，法人姓名是否要与接口传递上来的保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul>
+
+p.s. 仅在法人姓名不为空时有效
      * @param LegalNameSame 对方打开链接认证时，法人姓名是否要与接口传递上来的保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul>
+
+p.s. 仅在法人姓名不为空时有效
      */
     public void setLegalNameSame(Boolean LegalNameSame) {
         this.LegalNameSame = LegalNameSame;
     }
 
     /**
-     * Get 对方打开链接认证时，认证人姓名是否要与接口传递上来的保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul> 
+     * Get 对方打开链接认证时，认证人姓名是否要与接口传递上来的保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul>
+
+p.s. 仅在认证人姓名不为空时有效 
      * @return AdminNameSame 对方打开链接认证时，认证人姓名是否要与接口传递上来的保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul>
+
+p.s. 仅在认证人姓名不为空时有效
      */
     public Boolean getAdminNameSame() {
         return this.AdminNameSame;
@@ -481,15 +516,25 @@ public class CreateOrganizationAuthUrlRequest extends AbstractModel {
 
     /**
      * Set 对方打开链接认证时，认证人姓名是否要与接口传递上来的保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul>
+
+p.s. 仅在认证人姓名不为空时有效
      * @param AdminNameSame 对方打开链接认证时，认证人姓名是否要与接口传递上来的保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul>
+
+p.s. 仅在认证人姓名不为空时有效
      */
     public void setAdminNameSame(Boolean AdminNameSame) {
         this.AdminNameSame = AdminNameSame;
     }
 
     /**
-     * Get 对方打开链接认证时，认证人居民身份证件号是否要与接口传递上来的保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul> 
+     * Get 对方打开链接认证时，认证人居民身份证件号是否要与接口传递上来的保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul>
+
+p.s. 仅在认证人身份证号不为空时有效
+ 
      * @return AdminIdCardNumberSame 对方打开链接认证时，认证人居民身份证件号是否要与接口传递上来的保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul>
+
+p.s. 仅在认证人身份证号不为空时有效
+
      */
     public Boolean getAdminIdCardNumberSame() {
         return this.AdminIdCardNumberSame;
@@ -497,7 +542,13 @@ public class CreateOrganizationAuthUrlRequest extends AbstractModel {
 
     /**
      * Set 对方打开链接认证时，认证人居民身份证件号是否要与接口传递上来的保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul>
+
+p.s. 仅在认证人身份证号不为空时有效
+
      * @param AdminIdCardNumberSame 对方打开链接认证时，认证人居民身份证件号是否要与接口传递上来的保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul>
+
+p.s. 仅在认证人身份证号不为空时有效
+
      */
     public void setAdminIdCardNumberSame(Boolean AdminIdCardNumberSame) {
         this.AdminIdCardNumberSame = AdminIdCardNumberSame;
@@ -507,11 +558,15 @@ public class CreateOrganizationAuthUrlRequest extends AbstractModel {
      * Get 对方打开链接认证时，认证人手机号是否要与接口传递上来的保持一致。<ul>
 <li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li>
 <li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li>
-</ul> 
+</ul>
+
+p.s. 仅在认证人手机号不为空时有效 
      * @return AdminMobileSame 对方打开链接认证时，认证人手机号是否要与接口传递上来的保持一致。<ul>
 <li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li>
 <li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li>
 </ul>
+
+p.s. 仅在认证人手机号不为空时有效
      */
     public Boolean getAdminMobileSame() {
         return this.AdminMobileSame;
@@ -522,18 +577,28 @@ public class CreateOrganizationAuthUrlRequest extends AbstractModel {
 <li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li>
 <li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li>
 </ul>
+
+p.s. 仅在认证人手机号不为空时有效
      * @param AdminMobileSame 对方打开链接认证时，认证人手机号是否要与接口传递上来的保持一致。<ul>
 <li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li>
 <li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li>
 </ul>
+
+p.s. 仅在认证人手机号不为空时有效
      */
     public void setAdminMobileSame(Boolean AdminMobileSame) {
         this.AdminMobileSame = AdminMobileSame;
     }
 
     /**
-     * Get 对方打开链接认证时，企业名称是否要与接口传递上来的保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul> 
+     * Get 对方打开链接认证时，企业名称是否要与接口传递上来的保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul>
+
+
+p.s. 仅在企业名称不为空时有效 
      * @return OrganizationNameSame 对方打开链接认证时，企业名称是否要与接口传递上来的保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul>
+
+
+p.s. 仅在企业名称不为空时有效
      */
     public Boolean getOrganizationNameSame() {
         return this.OrganizationNameSame;
@@ -541,7 +606,13 @@ public class CreateOrganizationAuthUrlRequest extends AbstractModel {
 
     /**
      * Set 对方打开链接认证时，企业名称是否要与接口传递上来的保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul>
+
+
+p.s. 仅在企业名称不为空时有效
      * @param OrganizationNameSame 对方打开链接认证时，企业名称是否要与接口传递上来的保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul>
+
+
+p.s. 仅在企业名称不为空时有效
      */
     public void setOrganizationNameSame(Boolean OrganizationNameSame) {
         this.OrganizationNameSame = OrganizationNameSame;
@@ -643,6 +714,38 @@ public class CreateOrganizationAuthUrlRequest extends AbstractModel {
         this.Initialization = Initialization;
     }
 
+    /**
+     * Get 授权书(PNG或JPG或PDF) base64格式, 大小不超过8M 。 
+授权书可以通过接口[生成企业授权书](https://qian.tencent.com/developers/companyApis/organizations/CreateOrganizationAuthFile) 来获得。
+p.s. 如果上传授权书 ，需遵循以下条件 
+1.  超管的信息（超管姓名，超管手机号）必须为必填参数。
+2.  认证方式AuthorizationTypes必须只能是上传授权书方式  
+     * @return PowerOfAttorneys 授权书(PNG或JPG或PDF) base64格式, 大小不超过8M 。 
+授权书可以通过接口[生成企业授权书](https://qian.tencent.com/developers/companyApis/organizations/CreateOrganizationAuthFile) 来获得。
+p.s. 如果上传授权书 ，需遵循以下条件 
+1.  超管的信息（超管姓名，超管手机号）必须为必填参数。
+2.  认证方式AuthorizationTypes必须只能是上传授权书方式 
+     */
+    public String [] getPowerOfAttorneys() {
+        return this.PowerOfAttorneys;
+    }
+
+    /**
+     * Set 授权书(PNG或JPG或PDF) base64格式, 大小不超过8M 。 
+授权书可以通过接口[生成企业授权书](https://qian.tencent.com/developers/companyApis/organizations/CreateOrganizationAuthFile) 来获得。
+p.s. 如果上传授权书 ，需遵循以下条件 
+1.  超管的信息（超管姓名，超管手机号）必须为必填参数。
+2.  认证方式AuthorizationTypes必须只能是上传授权书方式 
+     * @param PowerOfAttorneys 授权书(PNG或JPG或PDF) base64格式, 大小不超过8M 。 
+授权书可以通过接口[生成企业授权书](https://qian.tencent.com/developers/companyApis/organizations/CreateOrganizationAuthFile) 来获得。
+p.s. 如果上传授权书 ，需遵循以下条件 
+1.  超管的信息（超管姓名，超管手机号）必须为必填参数。
+2.  认证方式AuthorizationTypes必须只能是上传授权书方式 
+     */
+    public void setPowerOfAttorneys(String [] PowerOfAttorneys) {
+        this.PowerOfAttorneys = PowerOfAttorneys;
+    }
+
     public CreateOrganizationAuthUrlRequest() {
     }
 
@@ -717,6 +820,12 @@ public class CreateOrganizationAuthUrlRequest extends AbstractModel {
                 this.Initialization[i] = new Long(source.Initialization[i]);
             }
         }
+        if (source.PowerOfAttorneys != null) {
+            this.PowerOfAttorneys = new String[source.PowerOfAttorneys.length];
+            for (int i = 0; i < source.PowerOfAttorneys.length; i++) {
+                this.PowerOfAttorneys[i] = new String(source.PowerOfAttorneys[i]);
+            }
+        }
     }
 
 
@@ -744,6 +853,7 @@ public class CreateOrganizationAuthUrlRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "BusinessLicense", this.BusinessLicense);
         this.setParamSimple(map, prefix + "Endpoint", this.Endpoint);
         this.setParamArraySimple(map, prefix + "Initialization.", this.Initialization);
+        this.setParamArraySimple(map, prefix + "PowerOfAttorneys.", this.PowerOfAttorneys);
 
     }
 }

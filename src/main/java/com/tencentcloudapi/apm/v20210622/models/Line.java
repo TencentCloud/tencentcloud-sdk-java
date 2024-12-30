@@ -46,7 +46,6 @@ public class Line extends AbstractModel {
 
     /**
     * 数据序列
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("DataSerial")
     @Expose
@@ -54,7 +53,6 @@ public class Line extends AbstractModel {
 
     /**
     * 维度列表
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Tags")
     @Expose
@@ -109,10 +107,8 @@ public class Line extends AbstractModel {
     }
 
     /**
-     * Get 数据序列
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 数据序列 
      * @return DataSerial 数据序列
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Float [] getDataSerial() {
         return this.DataSerial;
@@ -120,19 +116,15 @@ public class Line extends AbstractModel {
 
     /**
      * Set 数据序列
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DataSerial 数据序列
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setDataSerial(Float [] DataSerial) {
         this.DataSerial = DataSerial;
     }
 
     /**
-     * Get 维度列表
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 维度列表 
      * @return Tags 维度列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public ApmTag [] getTags() {
         return this.Tags;
@@ -140,9 +132,7 @@ public class Line extends AbstractModel {
 
     /**
      * Set 维度列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Tags 维度列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setTags(ApmTag [] Tags) {
         this.Tags = Tags;

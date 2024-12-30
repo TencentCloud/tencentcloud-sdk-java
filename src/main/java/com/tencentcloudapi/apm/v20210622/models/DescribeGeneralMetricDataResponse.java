@@ -25,7 +25,6 @@ public class DescribeGeneralMetricDataResponse extends AbstractModel {
 
     /**
     * 指标结果集
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("Records")
     @Expose
@@ -39,10 +38,8 @@ public class DescribeGeneralMetricDataResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 指标结果集
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 指标结果集 
      * @return Records 指标结果集
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public Line [] getRecords() {
         return this.Records;
@@ -50,9 +47,7 @@ public class DescribeGeneralMetricDataResponse extends AbstractModel {
 
     /**
      * Set 指标结果集
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Records 指标结果集
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setRecords(Line [] Records) {
         this.Records = Records;

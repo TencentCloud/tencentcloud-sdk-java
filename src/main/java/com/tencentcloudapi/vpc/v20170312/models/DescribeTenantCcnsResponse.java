@@ -25,7 +25,6 @@ public class DescribeTenantCcnsResponse extends AbstractModel {
 
     /**
     * 云联网（CCN）对象。
-注意：此字段可能返回 null，表示取不到有效值。
     */
     @SerializedName("CcnSet")
     @Expose
@@ -46,10 +45,8 @@ public class DescribeTenantCcnsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 云联网（CCN）对象。
-注意：此字段可能返回 null，表示取不到有效值。 
+     * Get 云联网（CCN）对象。 
      * @return CcnSet 云联网（CCN）对象。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public CcnInstanceInfo [] getCcnSet() {
         return this.CcnSet;
@@ -57,9 +54,7 @@ public class DescribeTenantCcnsResponse extends AbstractModel {
 
     /**
      * Set 云联网（CCN）对象。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CcnSet 云联网（CCN）对象。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public void setCcnSet(CcnInstanceInfo [] CcnSet) {
         this.CcnSet = CcnSet;
